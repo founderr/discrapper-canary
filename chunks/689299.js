@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return o
   }
 });
 var l = n("884691"),
   i = n("974667"),
-  r = n("942367"),
-  o = n("244201"),
-  s = n("851745");
+  a = n("942367"),
+  s = n("244201"),
+  r = n("851745");
 
-function a(e) {
-  var t, n, a;
+function o(e) {
+  var t, n, o;
   let {
     navId: u,
     scrollerRef: d,
@@ -19,11 +19,11 @@ function a(e) {
     onFocus: f
   } = e, {
     renderWindow: p
-  } = l.useContext(o.default), m = (e, t) => {
+  } = l.useContext(s.default), m = (e, t) => {
     var n;
     if (null === (n = d.current) || void 0 === n || n.scrollToTop(), e && null != c.query) {
       let e = c.query.typeInfo.focusMode,
-        n = !(e === s.FocusMode.MANUAL || e === s.FocusMode.AUTO_WHEN_FILTERED && 0 === c.query.queryText.length);
+        n = !(e === r.FocusMode.MANUAL || e === r.FocusMode.AUTO_WHEN_FILTERED && 0 === c.query.queryText.length);
       c.isVisible && (!0 !== t || !1 !== n) ? (E.setFocus("0"), null == f || f(0)) : (E.setFocus(null), null == f || f(null))
     }
   }, h = e => {
@@ -35,7 +35,7 @@ function a(e) {
   }, E = (0, i.default)({
     id: u,
     isEnabled: c.isVisible,
-    orientation: r.Orientations.VERTICAL,
+    orientation: a.Orientations.VERTICAL,
     useVirtualFocus: !0,
     setFocus: (e, t) => {
       let n = p.document.querySelector(e);
@@ -54,5 +54,5 @@ function a(e) {
   });
   return l.useEffect(() => {
     m(!0, !0)
-  }, [null === (t = c.query) || void 0 === t ? void 0 : t.type, null === (n = c.query) || void 0 === n ? void 0 : n.queryText, null === (a = c.query) || void 0 === a ? void 0 : a.isLoading, c.isVisible]), E
+  }, [null === (t = c.query) || void 0 === t ? void 0 : t.type, null === (n = c.query) || void 0 === n ? void 0 : n.queryText, null === (o = c.query) || void 0 === o ? void 0 : o.isLoading, c.isVisible]), E
 }

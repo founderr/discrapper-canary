@@ -1,38 +1,38 @@
 "use strict";
-t.r(A), t.d(A, {
+n.r(t), n.d(t, {
   default: function() {
-    return u
+    return c
   }
 });
-var a = t("37983"),
-  n = t("884691"),
-  l = t("414456"),
-  r = t.n(l),
-  s = t("77078"),
-  o = t("931164"),
-  i = t("289162"),
-  d = t("632215");
+var s = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  i = n.n(a),
+  r = n("77078"),
+  o = n("931164"),
+  u = n("289162"),
+  d = n("632215");
 
-function u(e) {
+function c(e) {
   let {
-    color: A,
-    className: t,
-    variant: l,
-    text: u,
-    lineClamp: c
-  } = e, f = (0, s.usePrivateHeadingLevel)(), C = n.useMemo(() => null == u ? null : (0, o.default)(u, !0, {
-    allowHeading: null == c,
-    allowList: null == c,
+    color: t,
+    className: n,
+    variant: a,
+    text: c,
+    lineClamp: E
+  } = e, f = (0, r.usePrivateHeadingLevel)(), _ = l.useMemo(() => null == c ? null : (0, o.default)(c, !0, {
+    allowHeading: null == E,
+    allowList: null == E,
     initialHeaderLevel: f
-  }), [u, c, f]);
-  return (0, a.jsx)(s.Text, {
-    className: r(t, d.markup, {
-      [i.lineClamp2Plus]: null != c && c > 1,
-      [i.lineClamp1]: 1 === c
+  }), [c, E, f]);
+  return (0, s.jsx)(r.Text, {
+    className: i(n, d.markup, {
+      [u.lineClamp2Plus]: null != E && E > 1,
+      [u.lineClamp1]: 1 === E
     }),
-    color: A,
-    variant: l,
-    lineClamp: c,
-    children: C
+    color: t,
+    variant: a,
+    lineClamp: E,
+    children: _
   })
 }

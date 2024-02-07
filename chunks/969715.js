@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   UnfeatureItemConfirmationModal: function() {
-    return m
+    return E
   },
   FeatureItemConfirmationModal: function() {
-    return p
-  },
-  FeatureMessageConfirmationModal: function() {
     return I
   },
+  FeatureMessageConfirmationModal: function() {
+    return m
+  },
   FeatureForumPostConfirmationModal: function() {
-    return v
+    return _
   }
 }), n("222007");
-var i = n("37983"),
-  s = n("884691"),
-  r = n("866227"),
-  l = n.n(r),
-  a = n("611221"),
+var s = n("37983"),
+  i = n("884691"),
+  a = n("866227"),
+  l = n.n(a),
+  r = n("611221"),
   u = n("77078"),
   o = n("599417"),
   d = n("699473"),
@@ -25,14 +25,14 @@ var i = n("37983"),
   h = n("782340"),
   f = n("690187");
 
-function m(e) {
+function E(e) {
   let {
     featureableItem: t,
     header: n,
-    body: r,
+    body: a,
     ...l
-  } = e, [a, d] = s.useState(null), [f, m] = s.useState(!1);
-  return (0, i.jsxs)(u.ConfirmModal, {
+  } = e, [r, d] = i.useState(null), [f, E] = i.useState(!1);
+  return (0, s.jsxs)(u.ConfirmModal, {
     header: n,
     confirmText: h.default.Messages.GUILD_FEED_UNFEATURE_BUTTON_TEXT,
     confirmButtonColor: u.Button.Colors.RED,
@@ -40,88 +40,88 @@ function m(e) {
     loading: f,
     onConfirm: async () => {
       try {
-        m(!0), await (0, c.unfeatureGuildFeedItem)(t), m(!1)
+        E(!0), await (0, c.unfeatureGuildFeedItem)(t), E(!1)
       } catch (e) {
-        throw d(new o.default(e)), m(!1), e
+        throw d(new o.default(e)), E(!1), e
       }
     },
     ...l,
-    children: [(0, i.jsx)(u.Text, {
+    children: [(0, s.jsx)(u.Text, {
       variant: "text-md/normal",
-      children: r
-    }), null != a && (0, i.jsx)(u.Text, {
+      children: a
+    }), null != r && (0, s.jsx)(u.Text, {
       color: "text-danger",
       variant: "text-xs/normal",
-      children: a.message
+      children: r.message
     })]
-  })
-}
-
-function p(e) {
-  let {
-    featureableItem: t,
-    expiresSeconds: n,
-    header: r,
-    children: a,
-    options: d,
-    ...m
-  } = e, [p, I] = s.useState(null), [v, E] = s.useState(!1);
-  return (0, i.jsxs)(u.ConfirmModal, {
-    header: r,
-    confirmText: h.default.Messages.GUILD_FEED_FEATURE_BUTTON_TEXT,
-    cancelText: h.default.Messages.CANCEL,
-    confirmButtonColor: u.Button.Colors.BRAND,
-    loading: v,
-    onConfirm: async () => {
-      try {
-        let e = l().add(n, "second").toDate();
-        E(!0), await (0, c.featureGuildFeedItem)(t, e, d)
-      } catch (e) {
-        throw I(new o.default(e)), e
-      } finally {
-        E(!1)
-      }
-    },
-    ...m,
-    children: [null != p && (0, i.jsx)(u.Text, {
-      className: f.featureModalError,
-      color: "text-danger",
-      variant: "text-xs/normal",
-      children: p.message
-    }), a]
   })
 }
 
 function I(e) {
   let {
+    featureableItem: t,
+    expiresSeconds: n,
+    header: a,
+    children: r,
+    options: d,
+    ...E
+  } = e, [I, m] = i.useState(null), [_, p] = i.useState(!1);
+  return (0, s.jsxs)(u.ConfirmModal, {
+    header: a,
+    confirmText: h.default.Messages.GUILD_FEED_FEATURE_BUTTON_TEXT,
+    cancelText: h.default.Messages.CANCEL,
+    confirmButtonColor: u.Button.Colors.BRAND,
+    loading: _,
+    onConfirm: async () => {
+      try {
+        let e = l().add(n, "second").toDate();
+        p(!0), await (0, c.featureGuildFeedItem)(t, e, d)
+      } catch (e) {
+        throw m(new o.default(e)), e
+      } finally {
+        p(!1)
+      }
+    },
+    ...E,
+    children: [null != I && (0, s.jsx)(u.Text, {
+      className: f.featureModalError,
+      color: "text-danger",
+      variant: "text-xs/normal",
+      children: I.message
+    }), r]
+  })
+}
+
+function m(e) {
+  let {
     message: t,
     guildId: n,
-    channel: s,
-    expiresSeconds: r,
+    channel: i,
+    expiresSeconds: a,
     timePeriod: l,
     options: o,
     ...c
   } = e;
-  return (0, i.jsxs)(p, {
+  return (0, s.jsxs)(I, {
     ...c,
     featureableItem: {
       guildId: n,
       entity: t,
-      entityType: a.GuildFeedItemTypes.MESSAGE
+      entityType: r.GuildFeedItemTypes.MESSAGE
     },
     header: h.default.Messages.GUILD_FEED_FEATURED_MESSAGE_MODAL_HEADER,
-    expiresSeconds: r,
+    expiresSeconds: a,
     options: o,
-    children: [(0, i.jsx)(u.Text, {
+    children: [(0, s.jsx)(u.Text, {
       className: f.featureModalText,
       variant: "text-md/normal",
       children: h.default.Messages.GUILD_FEED_FEATURE_MESSAGE_MODAL_BODY.format({
         timePeriod: l
       })
-    }), (0, i.jsx)("div", {
+    }), (0, s.jsx)("div", {
       className: f.featureModalMessage,
-      children: (0, i.jsx)(d.default, {
-        channel: s,
+      children: (0, s.jsx)(d.default, {
+        channel: i,
         message: t,
         disableInteraction: !0
       })
@@ -129,31 +129,31 @@ function I(e) {
   })
 }
 
-function v(e) {
+function _(e) {
   let {
     thread: t,
     guildId: n,
-    expiresSeconds: s,
-    timePeriod: r,
+    expiresSeconds: i,
+    timePeriod: a,
     options: l,
     ...o
   } = e;
-  return (0, i.jsx)(p, {
+  return (0, s.jsx)(I, {
     ...o,
     featureableItem: {
       guildId: n,
       entity: t,
-      entityType: a.GuildFeedItemTypes.FORUM_POST
+      entityType: r.GuildFeedItemTypes.FORUM_POST
     },
     header: h.default.Messages.GUILD_FEED_FEATURED_FORUM_POST_MODAL_HEADER,
-    expiresSeconds: s,
+    expiresSeconds: i,
     options: l,
-    children: (0, i.jsx)(u.Text, {
+    children: (0, s.jsx)(u.Text, {
       className: f.featureModalText,
       variant: "text-md/normal",
       children: h.default.Messages.GUILD_FEED_FEATURE_FORUM_POST_MODAL_BODY.format({
         threadName: t.name,
-        timePeriod: r
+        timePeriod: a
       })
     })
   })

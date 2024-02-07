@@ -8,24 +8,24 @@ var l = n("37983");
 n("884691");
 var u = n("446674"),
   a = n("77078"),
-  i = n("817963"),
-  d = n("244480"),
-  r = n("398604"),
-  s = n("322224"),
+  d = n("817963"),
+  i = n("244480"),
+  s = n("398604"),
+  r = n("322224"),
   o = n("745049"),
   c = n("782340");
 
 function E(e, t, n) {
   let {
     canManageGuildEvent: E
-  } = (0, i.useManageResourcePermissions)(null != n ? n : t), f = (0, u.useStateFromStores)([r.default], () => r.default.isActive(e)), _ = (0, u.useStateFromStores)([r.default], () => r.default.getGuildScheduledEvent(e), [e]), T = E(_);
+  } = (0, d.useManageResourcePermissions)(null != n ? n : t), f = (0, u.useStateFromStores)([s.default], () => s.default.isActive(e)), _ = (0, u.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(e), [e]), T = E(_);
   if (null == e || !T || !f || (null == _ ? void 0 : _.entity_type) === o.GuildScheduledEventEntityTypes.EXTERNAL) return null;
-  let v = () => {
+  let S = () => {
     if (null == n ? void 0 : n.isGuildStageVoice()) {
-      (0, d.endStage)(n);
+      (0, i.endStage)(n);
       return
     }
-    null != e && s.default.endEvent(e, t.id), (0, a.closeAllModals)()
+    null != e && r.default.endEvent(e, t.id), (0, a.closeAllModals)()
   };
   return (0, l.jsx)(a.MenuItem, {
     id: c.default.Messages.END_EVENT,
@@ -36,7 +36,7 @@ function E(e, t, n) {
         header: c.default.Messages.END_EVENT,
         confirmText: c.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
         cancelText: c.default.Messages.CANCEL,
-        onConfirm: v,
+        onConfirm: S,
         children: (0, l.jsx)(a.Text, {
           variant: "text-md/normal",
           children: c.default.Messages.GUILD_EVENT_EXTERNAL_END_PROMPT_TITLE

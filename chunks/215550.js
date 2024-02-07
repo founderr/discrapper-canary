@@ -1,64 +1,64 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return g
   }
 });
-var n = i("37983"),
-  s = i("884691"),
-  l = i("917351"),
-  r = i.n(l),
-  a = i("77078"),
-  o = i("867805"),
-  u = i("993244"),
-  c = i("315102"),
-  d = i("958706"),
-  f = i("593115");
-let E = r.memoize(e => "".concat(e * d.EmojiSprites.NonDiversityPerRow, "px ").concat(e * Math.ceil(o.default.numNonDiversitySprites / d.EmojiSprites.NonDiversityPerRow), "px")),
-  m = r.memoize(e => "".concat(e * d.EmojiSprites.DiversityPerRow, "px ").concat(e * Math.ceil(o.default.numDiversitySprites / d.EmojiSprites.DiversityPerRow), "px")),
-  I = (e, t, n) => {
-    let s, l, r;
+var l = n("37983"),
+  i = n("884691"),
+  a = n("917351"),
+  s = n.n(a),
+  r = n("77078"),
+  o = n("867805"),
+  u = n("993244"),
+  d = n("315102"),
+  c = n("958706"),
+  f = n("593115");
+let p = s.memoize(e => "".concat(e * c.EmojiSprites.NonDiversityPerRow, "px ").concat(e * Math.ceil(o.default.numNonDiversitySprites / c.EmojiSprites.NonDiversityPerRow), "px")),
+  m = s.memoize(e => "".concat(e * c.EmojiSprites.DiversityPerRow, "px ").concat(e * Math.ceil(o.default.numDiversitySprites / c.EmojiSprites.DiversityPerRow), "px")),
+  h = (e, t, l) => {
+    let i, a, s;
     if (!e.useSpriteSheet) return;
-    let a = null != e.index ? e.index : 0;
-    e.hasDiversity ? (s = i("110126")("./images/spritesheet-".concat(t, "-").concat(n, ".png").replace("./images/", "./")), l = m(n), r = d.EmojiSprites.DiversityPerRow) : (s = i("996542")("./images/spritesheet-emoji-".concat(n, ".png").replace("./images/", "./")), l = E(n), r = d.EmojiSprites.NonDiversityPerRow);
-    let o = -a % r * n,
-      u = -Math.floor(a / r) * n;
+    let r = null != e.index ? e.index : 0;
+    e.hasDiversity ? (i = n("110126")("./images/spritesheet-".concat(t, "-").concat(l, ".png").replace("./images/", "./")), a = m(l), s = c.EmojiSprites.DiversityPerRow) : (i = n("996542")("./images/spritesheet-emoji-".concat(l, ".png").replace("./images/", "./")), a = p(l), s = c.EmojiSprites.NonDiversityPerRow);
+    let o = -r % s * l,
+      u = -Math.floor(r / s) * l;
     return {
-      backgroundImage: "url('".concat(s, "')"),
+      backgroundImage: "url('".concat(i, "')"),
       backgroundPosition: "".concat(o, "px ").concat(u, "px"),
-      backgroundSize: l,
-      height: n,
-      width: n
+      backgroundSize: a,
+      height: l,
+      width: l
     }
   },
-  p = s.memo(function(e) {
+  E = i.memo(function(e) {
     let {
       emoji: t,
-      size: i,
-      surrogateCodePoint: s,
-      allowAnimatedEmoji: l,
-      "aria-label": r
+      size: n,
+      surrogateCodePoint: i,
+      allowAnimatedEmoji: a,
+      "aria-label": s
     } = e;
     if (!t.useSpriteSheet) {
       var o;
-      let e = null == t.id ? t.url : c.default.getEmojiURL({
+      let e = null == t.id ? t.url : d.default.getEmojiURL({
         id: t.id,
-        animated: l && t.animated,
+        animated: a && t.animated,
         size: 48
       });
-      return null != e ? (0, n.jsx)(u.default, {
-        "aria-label": r,
+      return null != e ? (0, l.jsx)(u.default, {
+        "aria-label": s,
         src: e,
-        size: i,
+        size: n,
         alt: null !== (o = t.allNamesString) && void 0 !== o ? o : ""
       }) : null
     }
-    return (0, n.jsx)("div", {
+    return (0, l.jsx)("div", {
       className: f.emojiSpriteImage,
-      style: I(t, s, i),
-      children: (0, n.jsx)(a.HiddenVisually, {
-        children: r
+      style: h(t, i, n),
+      children: (0, l.jsx)(r.HiddenVisually, {
+        children: s
       })
     })
   });
-var g = p
+var g = E

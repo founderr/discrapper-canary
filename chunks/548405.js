@@ -22,15 +22,15 @@ function E(e) {
   let {
     isEmptyBecauseQuery: t,
     closePopout: l
-  } = e, i = (0, r.default)([d.default], () => d.default.getKeybindForAction(p.GlobalKeybindActions.SAVE_CLIP)), E = (0, r.default)([f.default], () => f.default.getSettings().clipsEnabled), v = t ? h.noSearchResultsImage : h.noClipsImage, C = n.useCallback(() => {
+  } = e, i = (0, r.default)([d.default], () => d.default.getKeybindForAction(p.GlobalKeybindActions.SAVE_CLIP)), E = (0, r.default)([f.default], () => f.default.getSettings().clipsEnabled), C = t ? h.noSearchResultsImage : h.noClipsImage, v = n.useCallback(() => {
     l(), u.default.open(p.UserSettingsSections.CLIPS)
   }, [l]), _ = (() => {
     if (!E) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format({
-      onClick: C
+      onClick: v
     });
     if (t) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_MATCH_QUERY;
     if (null == i) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_NO_KEYBIND_SET.format({
-      onClick: C
+      onClick: v
     });
     {
       let e = c.toString(i.shortcut, !0);
@@ -51,7 +51,7 @@ function E(e) {
     children: (0, a.jsxs)("div", {
       className: h.content,
       children: [(0, a.jsx)("div", {
-        className: v
+        className: C
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         className: s(h.noClipsText, {

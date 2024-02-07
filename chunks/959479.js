@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return C
+    return O
   }
 }), n("222007"), n("70102");
 var i, a, l = n("37983"),
@@ -137,13 +137,13 @@ class y extends s.Component {
     let {
       width: g,
       height: m
-    } = S(n, this.size), E = t - h, y = e - f, C = (0, u.fitFullCoordsToContainer)((0, u.getFullCoordsFromAnchorCoords)({
+    } = S(n, this.size), E = t - h, y = e - f, O = (0, u.fitFullCoordsToContainer)((0, u.getFullCoordsFromAnchorCoords)({
       top: E,
       left: y,
       bottom: null,
       right: null
-    }, a, l, g, m)), N = c ? (0, u.getAnchorCoordsFromFullCoords)(C) : v("RESIZE_SOUTH_EAST", C);
-    this.setDOMPositions(N), !p && (null != r && r(), this.setState({
+    }, a, l, g, m)), C = c ? (0, u.getAnchorCoordsFromFullCoords)(O) : v("RESIZE_SOUTH_EAST", O);
+    this.setDOMPositions(C), !p && (null != r && r(), this.setState({
       operationStarted: !0
     })), null != d && d(i, "MOVE", this.anchor, this.size)
   }
@@ -467,4 +467,4 @@ y.Operations = i, y.defaultProps = {
   dragAnywhere: !0,
   active: !0
 };
-var C = y
+var O = y

@@ -21,13 +21,13 @@ function a(e) {
     defaultPaymentSourceId: s.default.defaultPaymentSourceId,
     paymentSources: s.default.paymentSources,
     hasFetchedPaymentSources: s.default.hasFetchedPaymentSources
-  })), c = (e, t, n) => e || (null == t ? void 0 : t.paymentSourceId) == null ? n : t.paymentSourceId, [d, f] = i.useState(() => c(t, n, a));
+  })), d = (e, t, n) => e || (null == t ? void 0 : t.paymentSourceId) == null ? n : t.paymentSourceId, [c, f] = i.useState(() => d(t, n, a));
   return i.useEffect(() => {
-    u ? f(c(t, n, a)) : (0, l.fetchPaymentSources)()
+    u ? f(d(t, n, a)) : (0, l.fetchPaymentSources)()
   }, [u, t, n, a]), {
     paymentSources: o,
     hasPaymentSources: Object.keys(o).length > 0,
-    paymentSourceId: d,
+    paymentSourceId: c,
     setPaymentSourceId: f,
     hasFetchedPaymentSources: u
   }

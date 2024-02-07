@@ -1,30 +1,30 @@
 "use strict";
-t.r(A), t.d(A, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return E
   }
 });
-var a = t("917351"),
-  n = t.n(a),
-  l = t("270926"),
-  r = t("888198"),
-  s = t("367376");
-let o = n.omit(r.default.RULES, ["codeBlock", "heading"]),
-  i = {
-    ...l.default,
-    parse: function(e, A, t) {
-      var a;
-      let n = l.default.parse(e, A, t),
-        r = null !== (a = t.initialHeaderLevel) && void 0 !== a ? a : 3,
-        s = Math.min(6, r + n.level);
+var s = n("917351"),
+  l = n.n(s),
+  a = n("270926"),
+  i = n("888198"),
+  r = n("367376");
+let o = l.omit(i.default.RULES, ["codeBlock", "heading"]),
+  u = {
+    ...a.default,
+    parse: function(e, t, n) {
+      var s;
+      let l = a.default.parse(e, t, n),
+        i = null !== (s = n.initialHeaderLevel) && void 0 !== s ? s : 3,
+        r = Math.min(6, i + l.level);
       return {
-        ...n,
-        level: s
+        ...l,
+        level: r
       }
     }
   },
-  d = s.default.combineAndInjectMentionRule(o, [s.default.createReactRules(s.default.defaultReactRuleOptions), {
-    header: i
+  d = r.default.combineAndInjectMentionRule(o, [r.default.createReactRules(r.default.defaultReactRuleOptions), {
+    header: u
   }]),
-  u = s.default.reactParserFor(d);
-var c = u
+  c = r.default.reactParserFor(d);
+var E = c

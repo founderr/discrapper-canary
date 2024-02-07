@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   TWITCH_APPLICATION_ID_PREFIX: function() {
     return a
   },
   default: function() {
-    return i
+    return r
   }
 });
-var i, r = n("376556"),
-  s = n("653047"),
-  l = n("782340");
+var r, s = i("376556"),
+  n = i("653047"),
+  l = i("782340");
 let a = "twitch:";
-i = class extends s.default {
+r = class extends n.default {
   getIconURL() {
-    return r.default.get("twitch").icon.lightPNG
+    return s.default.get("twitch").icon.lightPNG
   }
   constructor(e) {
     super(e), this.id = "".concat(a).concat(e.url), this.name = l.default.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983"),
   r = n("884691"),
   l = n("93332"),
-  a = n("913491");
-let s = r.memo(l.default);
+  s = n("913491");
+let u = r.memo(l.default);
 
 function o(e) {
   let {
@@ -17,19 +17,19 @@ function o(e) {
     author: r,
     compact: l,
     animateAvatar: o,
-    guildId: u,
-    isGroupStart: c = !0,
-    roleIcon: d,
+    guildId: a,
+    isGroupStart: d = !0,
+    roleIcon: c,
     hideTimestamp: f
   } = e;
-  return !(0, a.default)(t) && (c || l) ? (0, i.jsx)(s, {
+  return !(0, s.default)(t) && (d || l) ? (0, i.jsx)(u, {
     message: t,
     channel: n,
     author: r,
-    guildId: u,
+    guildId: a,
     compact: l,
     animate: o,
-    roleIcon: d,
+    roleIcon: c,
     hideTimestamp: f
   }) : void 0
 }

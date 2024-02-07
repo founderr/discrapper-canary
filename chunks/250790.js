@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("37983"),
   a = n("884691"),
-  r = n("483366"),
-  l = n.n(r),
+  l = n("483366"),
+  r = n.n(l),
   i = n("458960"),
   o = n("394846"),
   u = n("769846"),
@@ -90,7 +90,7 @@ var g = function(e) {
         !this.state.shouldAnimate && e && this.anim.setValue(_.END), this.setState({
           shouldAnimate: e
         })
-      }, this.handleResizeDebounced = l(this.handleResize, 60)
+      }, this.handleResizeDebounced = r(this.handleResize, 60)
     }
   }
 }

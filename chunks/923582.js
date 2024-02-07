@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("551305"),
-  a = n("164424"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("551305"),
+  o = n("164424"),
   u = n("782340"),
   d = n("67046"),
   c = i.memo(function(e) {
@@ -21,10 +21,10 @@ var l = n("37983"),
       className: d.separator,
       children: (0, l.jsx)("div", {
         className: d.buttonContainer,
-        children: (0, l.jsx)(s.default, {
+        children: (0, l.jsx)(r.default, {
           className: d.button,
           innerClassName: d.innerButton,
-          childClassName: o(d.buttonChild, {
+          childClassName: s(d.buttonChild, {
             [d.disabled]: n,
             [d.activeButtonChild]: !n
           }),
@@ -32,7 +32,7 @@ var l = n("37983"),
           disabled: n,
           isActive: !1,
           "aria-label": u.default.Messages.SEND_MESSAGE,
-          children: (0, l.jsx)(a.default, {
+          children: (0, l.jsx)(o.default, {
             className: d.sendIcon
           })
         })

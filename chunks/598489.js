@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983");
 n("884691");
 var a = n("414456"),
-  r = n.n(a),
-  l = n("124969"),
+  l = n.n(a),
+  r = n("124969"),
   i = n("328763");
 
 function o(e) {
@@ -17,9 +17,9 @@ function o(e) {
     className: n,
     ...a
   } = e, o = t();
-  return (0, s.jsx)(l.default, {
+  return (0, s.jsx)(r.default, {
     ...a,
-    className: r(n, i.container),
+    className: l(n, i.container),
     contentClassName: i.content,
     children: o.map((e, t) => (0, s.jsx)("div", {
       className: i.column,

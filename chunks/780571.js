@@ -33,8 +33,8 @@ var r = i("414456"),
       },
       hasThread: p,
       isSystemMessage: v,
-      hasReply: N,
-      ...C
+      hasReply: C,
+      ...N
     } = t, y = (0, l.jsx)(a.FocusRing, {
       ...w,
       children: (0, l.jsxs)("div", {
@@ -46,10 +46,10 @@ var r = i("414456"),
           [s.zalgo]: o,
           [s.hasThread]: p,
           [s.isSystemMessage]: v,
-          [s.hasReply]: N
+          [s.hasReply]: C
         }),
         ref: j,
-        ...C,
+        ...N,
         role: "article",
         children: [c, h, (0, l.jsxs)("div", {
           className: s.contents,

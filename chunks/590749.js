@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return I
   }
 });
-var r = n("37983");
+var a = n("37983");
 n("884691");
-var i = n("85336"),
-  s = n("262683"),
-  l = n("946359"),
-  u = n("724269"),
-  a = n("559362"),
+var l = n("85336"),
+  i = n("262683"),
+  r = n("946359"),
+  s = n("724269"),
+  u = n("559362"),
   o = n("671672"),
   c = n("101432"),
   d = n("458985"),
@@ -22,17 +22,17 @@ function I(e) {
     eligibleApplicationSubscriptionGuilds: n,
     application: I,
     listing: _,
-    showBenefitsFirst: E
-  } = e, S = [{
+    showBenefitsFirst: S
+  } = e, T = [{
     key: null,
-    renderStep: e => (0, r.jsx)(c.default, {
-      initialStep: E ? i.Step.BENEFITS : i.Step.REVIEW,
+    renderStep: e => (0, a.jsx)(c.default, {
+      initialStep: S ? l.Step.BENEFITS : l.Step.REVIEW,
       guildId: t,
       ...e
     })
   }, {
-    key: i.Step.BENEFITS,
-    renderStep: e => (0, r.jsx)(a.default, {
+    key: l.Step.BENEFITS,
+    renderStep: e => (0, a.jsx)(u.default, {
       application: I,
       listing: _,
       ...e
@@ -41,28 +41,28 @@ function I(e) {
       useBreadcrumbLabel: () => f.default.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS
     }
   }, {
-    key: i.Step.ADD_PAYMENT_STEPS,
-    renderStep: e => (0, r.jsx)(r.Fragment, {
-      children: (0, r.jsx)(s.PaymentModalAddPaymentStep, {
+    key: l.Step.ADD_PAYMENT_STEPS,
+    renderStep: e => (0, a.jsx)(a.Fragment, {
+      children: (0, a.jsx)(i.PaymentModalAddPaymentStep, {
         ...e,
-        breadcrumbSteps: [i.Step.ADD_PAYMENT_STEPS, i.Step.REVIEW, i.Step.CONFIRM]
+        breadcrumbSteps: [l.Step.ADD_PAYMENT_STEPS, l.Step.REVIEW, l.Step.CONFIRM]
       })
     }),
     options: {
       renderHeader: !0
     }
   }, {
-    key: i.Step.AWAITING_PURCHASE_TOKEN_AUTH,
-    renderStep: () => (0, r.jsx)(u.default, {})
+    key: l.Step.AWAITING_PURCHASE_TOKEN_AUTH,
+    renderStep: () => (0, a.jsx)(s.default, {})
   }, {
-    key: i.Step.AWAITING_AUTHENTICATION,
-    renderStep: () => (0, r.jsx)(l.default, {})
+    key: l.Step.AWAITING_AUTHENTICATION,
+    renderStep: () => (0, a.jsx)(r.default, {})
   }, {
-    key: i.Step.REVIEW,
-    renderStep: e => (0, r.jsx)(d.default, {
+    key: l.Step.REVIEW,
+    renderStep: e => (0, a.jsx)(d.default, {
       application: I,
-      backButtonEligible: !!E || void 0,
-      prevStep: E ? i.Step.BENEFITS : void 0,
+      backButtonEligible: !!S || void 0,
+      prevStep: S ? l.Step.BENEFITS : void 0,
       listing: _,
       showGuildPicker: null == t,
       eligibleApplicationSubscriptionGuilds: n,
@@ -73,13 +73,13 @@ function I(e) {
       useBreadcrumbLabel: () => f.default.Messages.BILLING_STEP_REVIEW
     }
   }, {
-    key: i.Step.CONFIRM,
-    renderStep: e => (0, r.jsx)(o.default, {
+    key: l.Step.CONFIRM,
+    renderStep: e => (0, a.jsx)(o.default, {
       application: I,
       listing: _,
-      showBenefits: !E,
+      showBenefits: !S,
       ...e
     })
   }];
-  return S
+  return T
 }

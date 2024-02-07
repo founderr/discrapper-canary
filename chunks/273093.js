@@ -8,28 +8,28 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("37983"),
-  s = n("884691"),
-  u = n("627445"),
-  o = n.n(u),
+  u = n("884691"),
+  i = n("627445"),
+  a = n.n(i),
   l = n("446674"),
-  i = n("565559");
-let a = s.createContext(void 0);
+  s = n("565559");
+let o = u.createContext(void 0);
 
 function c() {
-  let e = s.useContext(a);
-  return o(null != e, "GuildProductPurchaseContext not found"), e
+  let e = u.useContext(o);
+  return a(null != e, "GuildProductPurchaseContext not found"), e
 }
 
 function d(e) {
   let {
     children: t,
     guildProductListingId: n,
-    ...s
-  } = e, u = (0, l.useStateFromStores)([i.default], () => i.default.getGuildProduct(n));
-  return o(null != u, "guildProductListing cannot be null"), (0, r.jsx)(a.Provider, {
+    ...u
+  } = e, i = (0, l.useStateFromStores)([s.default], () => s.default.getGuildProduct(n));
+  return a(null != i, "guildProductListing cannot be null"), (0, r.jsx)(o.Provider, {
     value: {
-      guildProductListing: u,
-      ...s
+      guildProductListing: i,
+      ...u
     },
     children: t
   })

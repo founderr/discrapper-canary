@@ -1,39 +1,39 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return o
   }
 });
-var n = l("446674"),
-  a = l("650509"),
-  s = l("90592"),
-  i = l("713135"),
-  r = l("49111");
+var l = n("446674"),
+  i = n("650509"),
+  a = n("90592"),
+  s = n("713135"),
+  r = n("49111");
 
 function o(e) {
   var t;
   let {
-    user: l,
+    user: n,
     guildId: o
-  } = e, u = (0, n.useStateFromStores)([i.default], () => {
+  } = e, u = (0, l.useStateFromStores)([s.default], () => {
     var e;
-    return null === (e = i.default.getUserProfile(l.id)) || void 0 === e ? void 0 : e.application
-  }, [l]), {
+    return null === (e = s.default.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application
+  }, [n]), {
     applicationSubscriptionListingsShown: d
-  } = (0, a.default)({
+  } = (0, i.default)({
     applicationId: null == u ? void 0 : u.id,
     groupListingId: null == u ? void 0 : u.primarySkuId,
     guildId: o
   }), {
     activeSubscriptionListing: c,
     activeEntitlement: f,
-    subscriptionGroupListing: m
-  } = (0, a.useActiveSubscriptionListingForApplication)(null == u ? void 0 : u.id, o), p = null !== (t = null == m ? void 0 : m.sku_flags) && void 0 !== t ? t : 0, h = (0, s.isApplicationUserSubscription)(p) || null != o && o !== r.ME && (0, s.isApplicationGuildSubscription)(p), T = null != f;
+    subscriptionGroupListing: p
+  } = (0, i.useActiveSubscriptionListingForApplication)(null == u ? void 0 : u.id, o), m = null !== (t = null == p ? void 0 : p.sku_flags) && void 0 !== t ? t : 0, h = (0, a.isApplicationUserSubscription)(m) || null != o && o !== r.ME && (0, a.isApplicationGuildSubscription)(m), E = null != f;
   return d ? {
-    botUpgraded: T,
-    botUpgradeable: !T && d && h,
+    botUpgraded: E,
+    botUpgradeable: !E && d && h,
     activeSubscriptionListing: c,
-    subscriptionGroupListing: m
+    subscriptionGroupListing: p
   } : {
     botUpgraded: !1,
     botUpgradeable: !1,

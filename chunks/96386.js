@@ -1,34 +1,34 @@
 "use strict";
-i.r(t), i.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return a
   }
 });
-var n = i("37983");
-i("884691");
-var s = i("414456"),
-  l = i.n(s),
-  r = i("691870"),
+var r = s("37983");
+s("884691");
+var n = s("414456"),
+  l = s.n(n),
+  i = s("691870"),
   a = e => {
     let {
       message: t,
-      className: i,
-      noResultsImageURL: s,
+      className: s,
+      noResultsImageURL: n,
       forceLightTheme: a,
       suggestions: o
     } = e;
-    return (0, n.jsx)("div", {
+    return (0, r.jsx)("div", {
       className: l({
-        [r.forceLightTheme]: a
-      }, i),
-      children: (0, n.jsxs)("div", {
-        className: r.wrapper,
-        children: [(0, n.jsx)("div", {
-          className: r.sadImage,
-          style: null != s ? {
-            backgroundImage: "url(".concat(s, ")")
+        [i.forceLightTheme]: a
+      }, s),
+      children: (0, r.jsxs)("div", {
+        className: i.wrapper,
+        children: [(0, r.jsx)("div", {
+          className: i.sadImage,
+          style: null != n ? {
+            backgroundImage: "url(".concat(n, ")")
           } : {}
-        }), (0, n.jsx)("div", {
+        }), (0, r.jsx)("div", {
           children: t
         }), o]
       })

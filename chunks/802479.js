@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("151426"),
   i = n("120363"),
   r = n("708402"),
-  o = n("155207"),
-  u = n("645266"),
+  u = n("155207"),
+  o = n("645266"),
   d = n("782340");
 
 function c(e) {
@@ -18,12 +18,12 @@ function c(e) {
     guild: t,
     selected: n
   } = e, c = a.useCallback(() => {
-    (0, u.goToMemberSafetyDashboard)(t.id)
+    (0, o.goToMemberSafetyDashboard)(t.id)
   }, [t.id]), f = (0, i.useChannelListUpsellLocationTrackerRef)(t.id, s.DismissibleContent.MEMBERS_LAUNCH_UPSELL);
   return (0, l.jsx)("div", {
     ref: f,
     children: (0, l.jsx)(r.default, {
-      renderIcon: e => (0, l.jsx)(o.default, {
+      renderIcon: e => (0, l.jsx)(u.default, {
         className: e
       }),
       text: d.default.Messages.MEMBER_SAFETY_CHANNEL_TITLE,

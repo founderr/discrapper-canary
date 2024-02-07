@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ITEM_HEIGHT: function() {
-    return k
+    return P
   },
   default: function() {
     return U
@@ -9,10 +9,10 @@ n.r(t), n.d(t, {
 }), n("222007"), n("808653");
 var l = n("37983"),
   i = n("884691"),
-  r = n("414456"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("917351"),
   o = n.n(r),
-  s = n("917351"),
-  a = n.n(s),
   u = n("96386"),
   d = n("798609"),
   c = n("716241"),
@@ -21,112 +21,112 @@ var l = n("37983"),
   m = n("45961"),
   h = n("515059"),
   E = n("501536"),
-  S = n("124299"),
-  g = n("476765"),
+  g = n("124299"),
+  S = n("476765"),
   C = n("507217"),
   T = n("240249"),
   v = n("972620"),
-  y = n("524768"),
-  x = n("389153"),
-  I = n("586450"),
-  N = n("41884"),
-  _ = n("355263"),
-  A = n("317041"),
-  R = n("49111"),
-  O = n("782340"),
+  I = n("524768"),
+  _ = n("389153"),
+  y = n("586450"),
+  A = n("41884"),
+  N = n("355263"),
+  x = n("317041"),
+  O = n("49111"),
+  R = n("782340"),
   M = n("253184"),
-  b = n("327769");
-let k = 56,
-  P = [8, 8, 0, 8],
-  L = a.debounce(() => {
-    (0, c.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
+  L = n("327769");
+let P = 56,
+  b = [8, 8, 0, 8],
+  j = o.debounce(() => {
+    (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
   }, 300);
 var U = i.forwardRef(function(e, t) {
   let {
     channel: n,
-    canOnlyUseTextCommands: r
-  } = e, s = i.useRef(!1), a = i.useRef(0), [U, D] = i.useState(0), w = i.useRef(null), [B, H] = i.useState(!1), F = p.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
+    canOnlyUseTextCommands: a
+  } = e, r = i.useRef(!1), o = i.useRef(0), [U, k] = i.useState(0), w = i.useRef(null), [F, G] = i.useState(!1), B = p.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
   i.useEffect(() => {
-    (0, c.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
+    (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
   let {
-    sectionDescriptors: G,
-    activeSections: K,
-    commandsByActiveSection: V,
+    sectionDescriptors: H,
+    activeSections: V,
+    commandsByActiveSection: K,
     hasMoreAfter: W,
     commands: Y,
-    filteredSectionId: q,
-    scrollDown: z,
-    filterSection: Q
+    filteredSectionId: z,
+    scrollDown: J,
+    filterSection: q
   } = T.useDiscovery(n, {
     commandType: d.ApplicationCommandType.CHAT,
-    builtIns: r ? v.BuiltInCommandFilter.ONLY_TEXT : v.BuiltInCommandFilter.ALLOW,
-    applicationCommands: !r
+    builtIns: a ? v.BuiltInCommandFilter.ONLY_TEXT : v.BuiltInCommandFilter.ALLOW,
+    applicationCommands: !a
   }, {
     placeholderCount: 7,
-    limit: A.DISCOVERY_COMMANDS_QUERY_LIMIT,
+    limit: x.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
-  }), X = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
-    activeCategoryIndex: F,
-    isScrolling: s,
+  }), Z = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
+    activeCategoryIndex: B,
+    isScrolling: r,
     listRef: w,
     onActiveCategoryIndexChange: e => {
-      let t = K[e];
+      let t = V[e];
       if (null != t) {
-        let e = G.findIndex(e => e.id === t.id);
+        let e = H.findIndex(e => e.id === t.id);
         p.ApplicationCommandDiscoveryPickerStore.setActiveCategoryIndex(e)
       }
     },
     scrollOffset: 20,
     searchQuery: ""
-  }), Z = e => {
-    let t = K.length,
-      n = V.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
-      l = 48 * t + n * k - 512;
-    W && e + 420 > l && z(), X(e), L(), a.current = e
+  }), Q = e => {
+    let t = V.length,
+      n = K.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
+      l = 48 * t + n * P - 512;
+    W && e + 420 > l && J(), Z(e), j(), o.current = e
   };
   i.useEffect(() => {
-    Z(a.current)
+    Q(o.current)
   }, [Y]);
-  let J = i.useCallback(e => {
-      let t = e === K.length - 1;
+  let X = i.useCallback(e => {
+      let t = e === V.length - 1;
       return t && !W ? 0 : 16
-    }, [K.length, W]),
-    $ = V.map(e => e.data.length);
+    }, [V.length, W]),
+    $ = K.map(e => e.data.length);
   i.useEffect(() => {
-    null != w.current && B && null != U && w.current.scrollRowIntoView(U)
-  }, [B, U]), i.useLayoutEffect(() => {
-    if (null != q) {
+    null != w.current && F && null != U && w.current.scrollRowIntoView(U)
+  }, [F, U]), i.useLayoutEffect(() => {
+    if (null != z) {
       var e;
       null === (e = w.current) || void 0 === e || e.scrollToSectionTop(0)
     }
-  }, [Y, q]);
+  }, [Y, z]);
   let ee = i.useCallback(e => {
-      if (e.id === q || e.id === A.BuiltInSectionId.FRECENCY) {
+      if (e.id === z || e.id === x.BuiltInSectionId.FRECENCY) {
         var t;
-        Q(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
-      } else Q(e.id)
-    }, [Q, q]),
+        q(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
+      } else q(e.id)
+    }, [q, z]),
     et = i.useCallback((e, t, l) => {
       C.setActiveCommand({
         channelId: n.id,
         command: e,
         section: t,
-        location: y.ApplicationCommandTriggerLocations.DISCOVERY,
+        location: I.ApplicationCommandTriggerLocations.DISCOVERY,
         triggerSection: l
       })
     }, [n.id]);
   i.useImperativeHandle(t, () => ({
     onTabOrEnter: e => {
-      if (null == U) return !e && (D(0), !0);
+      if (null == U) return !e && (k(0), !0);
       if (null == U) return !1;
       let t = 0,
         n = 0;
-      for (let e of V)
+      for (let e of K)
         if (t = n, U < (n += e.data.length)) {
           let n = e.data[U - t],
-            l = G.find(e => e.id === n.applicationId);
-          et(n, l, (0, x.getCommandTriggerSection)(e.section));
+            l = H.find(e => e.id === n.applicationId);
+          et(n, l, (0, _.getCommandTriggerSection)(e.section));
           break
         } return !0
     },
@@ -135,14 +135,14 @@ var U = i.forwardRef(function(e, t) {
       let t = W ? 7 : 0,
         n = Y.length + t,
         l = null == U ? 0 : U + e;
-      return l >= n ? l = n - 1 : l < 0 && (l = 0), D(l), H(!0), !0
+      return l >= n ? l = n - 1 : l < 0 && (l = 0), k(l), G(!0), !0
     }
-  }), [Y.length, V, W, G, et, U]);
+  }), [Y.length, K, W, H, et, U]);
   let en = i.useCallback(e => {
-      let t = K[e];
+      let t = V[e];
       if (null == t) return null;
-      let i = (0, _.getIconComponent)(t),
-        r = (0, l.jsx)(i, {
+      let i = (0, N.getIconComponent)(t),
+        a = (0, l.jsx)(i, {
           channel: n,
           section: t,
           width: 16,
@@ -151,87 +151,87 @@ var U = i.forwardRef(function(e, t) {
         });
       return (0, l.jsx)(h.default, {
         className: M.categoryHeader,
-        icon: r,
+        icon: a,
         children: t.name
       }, e)
-    }, [n, K]),
+    }, [n, V]),
     el = i.useCallback((e, t) => {
-      let n = e === K.length - 1,
-        i = K[e],
+      let n = e === V.length - 1,
+        i = V[e],
         {
-          data: r
-        } = V[e];
+          data: a
+        } = K[e];
       return (0, l.jsxs)("ul", {
         role: "group",
         "aria-label": i.name,
-        className: o(M.categorySection, {
+        className: s(M.categorySection, {
           [M.categorySectionLast]: n
         }),
-        children: [t, 0 === r.length && (0, l.jsx)(u.default, {
-          message: O.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
+        children: [t, 0 === a.length && (0, l.jsx)(u.default, {
+          message: R.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
             applicationName: i.name
           }),
-          noResultsImageURL: b,
+          noResultsImageURL: L,
           className: M.noSearchResults
         })]
       }, e)
-    }, [K, V]),
+    }, [V, K]),
     ei = i.useCallback((e, t) => {
       var i;
-      let r = V[t.sectionIndex],
-        o = r.data[t.sectionRowIndex],
-        s = "".concat(r.section.id, ":").concat(null !== (i = null == o ? void 0 : o.id) && void 0 !== i ? i : e);
-      if (null == o || r.section.id !== o.applicationId && r.section.id !== A.BuiltInSectionId.FRECENCY || o.inputType === y.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(N.default, {}, s);
-      let a = G.find(e => e.id === o.applicationId);
+      let a = K[t.sectionIndex],
+        s = a.data[t.sectionRowIndex],
+        r = "".concat(a.section.id, ":").concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
+      if (null == s || a.section.id !== s.applicationId && a.section.id !== x.BuiltInSectionId.FRECENCY || s.inputType === I.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(A.default, {}, r);
+      let o = H.find(e => e.id === s.applicationId);
       return (0, l.jsx)(E.default.NewCommand, {
         index: e,
-        command: o,
+        command: s,
         channel: n,
         className: M.itemWrapper,
         selected: U === e,
-        showImage: r.section.id !== o.applicationId,
-        section: a,
-        onClick: () => et(o, a, (0, x.getCommandTriggerSection)(r.section)),
+        showImage: a.section.id !== s.applicationId,
+        section: o,
+        onClick: () => et(s, o, (0, _.getCommandTriggerSection)(a.section)),
         onHover: () => {
-          D(null), H(!1)
+          k(null), G(!1)
         }
-      }, s)
-    }, [n, V, et, G, U]),
-    er = (0, g.useUID)();
-  return (0, f.useChannelEditorPopup)(er, !0, (0, E.getAutocompleteRowId)(U)), i.useEffect(() => () => {
+      }, r)
+    }, [n, K, et, H, U]),
+    ea = (0, S.useUID)();
+  return (0, f.useChannelEditorPopup)(ea, !0, (0, E.getAutocompleteRowId)(U)), i.useEffect(() => () => {
     (0, f.dismissChannelEditorPopup)()
   }, []), (0, l.jsxs)(E.default, {
-    id: er,
+    id: ea,
     className: M.outerWrapper,
     innerClassName: M.wrapper,
-    onMouseDown: j,
-    children: [(0, l.jsx)(I.default, {
+    onMouseDown: D,
+    children: [(0, l.jsx)(y.default, {
       className: M.rail,
       channel: n,
-      sections: G,
-      filteredSectionId: q,
-      activeCategoryIndex: F,
+      sections: H,
+      filteredSectionId: z,
+      activeCategoryIndex: B,
       onSectionClick: ee,
       applicationCommandListRef: w
-    }), (0, l.jsx)(S.default, {
+    }), (0, l.jsx)(g.default, {
       role: "listbox",
       className: M.list,
-      listPadding: P,
-      onScroll: Z,
+      listPadding: b,
+      onScroll: Q,
       renderRow: ei,
       renderSection: el,
       renderSectionHeader: en,
-      rowCount: K.length,
+      rowCount: V.length,
       rowCountBySection: $,
-      rowHeight: k,
+      rowHeight: P,
       sectionHeaderHeight: 32,
-      sectionMarginBottom: J,
+      sectionMarginBottom: X,
       ref: w,
       stickyHeaders: !0
     })]
   })
 });
 
-function j(e) {
+function D(e) {
   e.preventDefault()
 }

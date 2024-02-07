@@ -7,19 +7,19 @@ n.r(t), n.d(t, {
     return _
   },
   resetPendingProfileChanges: function() {
-    return I
+    return S
   },
   setPendingBanner: function() {
-    return h
+    return T
   },
   setPendingBio: function() {
-    return S
+    return A
   },
   setPendingPronouns: function() {
     return p
   },
   setPendingAccentColor: function() {
-    return T
+    return I
   },
   setPendingThemeColors: function() {
     return N
@@ -28,57 +28,57 @@ n.r(t), n.d(t, {
     return C
   },
   setTryItOutAvatarDecoration: function() {
-    return R
+    return g
   },
   setTryItOutBanner: function() {
-    return v
+    return O
   },
   setTryItOutThemeColors: function() {
-    return A
+    return h
   }
 });
-var i = n("872717"),
-  r = n("913144"),
-  o = n("448993"),
-  s = n("884351"),
-  l = n("845579"),
-  a = n("697218"),
-  u = n("599110"),
-  c = n("49111"),
-  d = n("646718");
+var u = n("872717"),
+  i = n("913144"),
+  a = n("448993"),
+  l = n("884351"),
+  r = n("845579"),
+  d = n("697218"),
+  o = n("599110"),
+  s = n("49111"),
+  c = n("646718");
 
 function f(e) {
-  u.default.track(c.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
+  o.default.track(s.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
     feature_name: e,
-    feature_tier: d.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
+    feature_tier: c.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
   })
 }
 async function E(e, t) {
-  var n, u;
-  let d = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-  if (null == d) return;
-  let f = l.UseLegacyChatInput.getSetting();
-  null != e.bio && f && (e.bio = s.default.parse(void 0, e.bio).content);
+  var n, o;
+  let c = null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+  if (null == c) return;
+  let f = r.UseLegacyChatInput.getSetting();
+  null != e.bio && f && (e.bio = l.default.parse(void 0, e.bio).content);
   try {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "USER_PROFILE_UPDATE_START",
-      userId: d
+      userId: c
     });
-    let n = await i.default.patch({
-      url: null != t ? c.Endpoints.GUILD_PROFILE(t, c.ME) : c.Endpoints.USER_PROFILE(c.ME),
+    let n = await u.default.patch({
+      url: null != t ? s.Endpoints.GUILD_PROFILE(t, s.ME) : s.Endpoints.USER_PROFILE(s.ME),
       body: e
     });
     if (n.ok) {
-      let e = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.id;
-      r.default.dispatch({
+      let e = null === (o = n.body.profile_effect) || void 0 === o ? void 0 : o.id;
+      i.default.dispatch({
         type: "USER_PROFILE_UPDATE_SUCCESS",
-        userId: d,
+        userId: c,
         profileEffectId: e,
         ...n.body
       })
     } else {
-      let e = new o.APIError(n);
-      r.default.dispatch({
+      let e = new a.APIError(n);
+      i.default.dispatch({
         type: "USER_PROFILE_UPDATE_FAILURE",
         errors: n.body,
         apiError: e
@@ -86,8 +86,8 @@ async function E(e, t) {
     }
     return n
   } catch (t) {
-    let e = new o.APIError(t);
-    r.default.dispatch({
+    let e = new a.APIError(t);
+    i.default.dispatch({
       type: "USER_PROFILE_UPDATE_FAILURE",
       errors: {},
       apiError: e
@@ -96,76 +96,76 @@ async function E(e, t) {
 }
 
 function _() {
-  r.default.dispatch({
+  i.default.dispatch({
     type: "USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED"
   })
 }
 
-function I() {
-  r.default.dispatch({
+function S() {
+  i.default.dispatch({
     type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
   })
 }
 
-function h(e) {
-  r.default.dispatch({
+function T(e) {
+  i.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER",
     banner: e
   })
 }
 
-function S(e) {
-  r.default.dispatch({
+function A(e) {
+  i.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
     bio: e
   })
 }
 
 function p(e) {
-  r.default.dispatch({
+  i.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
     pronouns: e
   })
 }
 
-function T(e) {
-  r.default.dispatch({
+function I(e) {
+  i.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
     color: e
   })
 }
 
 function N(e) {
-  r.default.dispatch({
+  i.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
     themeColors: e
   })
 }
 
 function C(e) {
-  r.default.dispatch({
+  i.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
     avatar: e
-  }), f(d.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
+  }), f(c.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
 }
 
-function R(e) {
-  r.default.dispatch({
+function g(e) {
+  i.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
     avatarDecoration: e
-  }), f(d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
+  }), f(c.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
 }
 
-function v(e) {
-  r.default.dispatch({
+function O(e) {
+  i.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
     banner: e
-  }), f(d.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
+  }), f(c.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
 }
 
-function A(e) {
-  r.default.dispatch({
+function h(e) {
+  i.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
     themeColors: e
-  }), f(d.AnalyticsPremiumFeatureNames.PROFILE_THEME_COLOR)
+  }), f(c.AnalyticsPremiumFeatureNames.PROFILE_THEME_COLOR)
 }

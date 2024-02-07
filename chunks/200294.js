@@ -1,42 +1,42 @@
 "use strict";
 n.r(t), n.d(t, {
   renderHeader: function() {
-    return o
+    return s
   },
   renderAutocompleteGroup: function() {
-    return s
+    return r
   }
 });
 var l = n("37983"),
   i = n("884691");
 n("41170");
-var r = n("501536");
+var a = n("501536");
 
-function o(e) {
+function s(e) {
   let {
     titleWithQuery: t,
     titleWithoutQuery: n,
     query: i,
-    getQuery: o,
-    headerClassName: s,
-    headerTrailingContent: a
+    getQuery: s,
+    headerClassName: r,
+    headerTrailingContent: o
   } = e, u = i.length > 0 ? t.format({
-    prefix: o(i)
+    prefix: s(i)
   }) : n;
-  return (0, l.jsx)(r.default.Title, {
-    className: s,
+  return (0, l.jsx)(a.default.Title, {
+    className: r,
     title: u,
-    children: a
+    children: o
   }, "autocomplete-title-".concat(u))
 }
 
-function s(e) {
+function r(e) {
   let {
     query: t,
     selectedIndex: n,
-    autocompletes: r,
-    onHover: s,
-    onClick: a,
+    autocompletes: a,
+    onHover: r,
+    onClick: o,
     titleWithQuery: u,
     titleWithoutQuery: d,
     Component: c,
@@ -45,30 +45,30 @@ function s(e) {
     key: m,
     indexOffset: h = 0,
     headerClassName: E,
-    headerTrailingContent: S,
-    footer: g
+    headerTrailingContent: g,
+    footer: S
   } = e;
-  if (null == g && (null == r || 0 === r.length)) return null;
-  let C = null == r ? void 0 : r.map((e, t) => {
+  if (null == S && (null == a || 0 === a.length)) return null;
+  let C = null == a ? void 0 : a.map((e, t) => {
     let l = t + h,
-      r = f(e, l);
+      a = f(e, l);
     return (0, i.createElement)(c, {
-      onClick: a,
-      onHover: s,
+      onClick: o,
+      onHover: r,
       selected: n === l,
       index: l,
-      ...r,
-      key: r.key
+      ...a,
+      key: a.key
     })
   });
   return (0, l.jsxs)(i.Fragment, {
-    children: [null != u && null != d ? o({
+    children: [null != u && null != d ? s({
       titleWithQuery: u,
       titleWithoutQuery: d,
       query: t,
       getQuery: p,
       headerClassName: E,
-      headerTrailingContent: S
-    }) : null, C, g]
+      headerTrailingContent: g
+    }) : null, C, S]
   }, m)
 }

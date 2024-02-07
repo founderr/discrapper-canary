@@ -7,39 +7,39 @@ n.r(t), n.d(t, {
     return f
   },
   MultipleChoiceFormField: function() {
-    return E
+    return p
   }
 });
-var i = n("37983"),
-  r = n("884691"),
-  l = n("414456"),
-  s = n.n(l),
-  o = n("77078"),
-  u = n("272460"),
-  a = n("621115"),
+var r = n("37983"),
+  i = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
+  l = n("77078"),
+  o = n("272460"),
+  u = n("621115"),
   c = n("847121");
 
 function d(e) {
   let {
     disabled: t,
     field: n,
-    value: l,
-    radioItemClassName: u,
-    radioItemIconClassName: a,
+    value: s,
+    radioItemClassName: o,
+    radioItemIconClassName: u,
     onChange: d
   } = e, {
     choices: f
-  } = n, E = r.useMemo(() => f.map((e, t) => ({
+  } = n, p = i.useMemo(() => f.map((e, t) => ({
     name: e,
     value: t,
-    radioItemIconClassName: s(c.multipleChoiceIcon, a)
-  })), [f, a]);
-  return (0, i.jsx)(o.RadioGroup, {
+    radioItemIconClassName: a(c.multipleChoiceIcon, u)
+  })), [f, u]);
+  return (0, r.jsx)(l.RadioGroup, {
     disabled: t,
-    options: E,
-    value: l,
+    options: p,
+    value: s,
     onChange: d,
-    radioItemClassName: u,
+    radioItemClassName: o,
     withTransparentBackground: !0
   })
 }
@@ -48,9 +48,9 @@ function f(e) {
   let {
     formField: t
   } = e, n = null != t.response ? t.choices[t.response] : "";
-  return (0, i.jsx)(u.QuestionRenderer, {
+  return (0, r.jsx)(o.QuestionRenderer, {
     title: t.label,
-    children: (0, i.jsx)(a.TextInputFieldBody, {
+    children: (0, r.jsx)(u.TextInputFieldBody, {
       className: c.fieldBackground,
       value: n,
       disabled: !0
@@ -58,14 +58,14 @@ function f(e) {
   })
 }
 
-function E(e) {
+function p(e) {
   let {
     formField: t,
     onChange: n
   } = e;
-  return (0, i.jsx)(u.QuestionRenderer, {
+  return (0, r.jsx)(o.QuestionRenderer, {
     title: t.label,
-    children: (0, i.jsx)(d, {
+    children: (0, r.jsx)(d, {
       radioItemClassName: c.fieldBackground,
       field: t,
       value: t.response,

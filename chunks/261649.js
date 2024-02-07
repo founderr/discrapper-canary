@@ -41,8 +41,8 @@ var i = n("118810"),
   G = n("514705"),
   D = n("321456"),
   P = n("470254"),
-  L = n("678803"),
-  F = n("782340");
+  F = n("678803"),
+  L = n("782340");
 
 function U(e) {
   var t, n;
@@ -81,7 +81,7 @@ function U(e) {
     onSelect: m,
     onClose: s.closeContextMenu,
     navId: "message",
-    ariaLabel: F.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
+    ariaLabel: L.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
     shouldHideMediaOptions: E
   })
 }
@@ -100,8 +100,8 @@ function w(e) {
     itemSafeSrc: H,
     itemTextContent: Y,
     canReport: B,
-    onHeightUpdate: Z,
-    onSelect: X,
+    onHeightUpdate: X,
+    onSelect: Z,
     onClose: z,
     navId: W,
     ariaLabel: J,
@@ -114,9 +114,9 @@ function w(e) {
     shouldHideMediaOptions: q
   }), eg = (0, o.default)(H, t, {
     shouldHideMediaOptions: q
-  }), ep = (0, L.default)(t, i), eI = (0, r.default)({
+  }), ep = (0, F.default)(t, i), eI = (0, r.default)({
     id: t.id,
-    label: F.default.Messages.COPY_ID_MESSAGE,
+    label: L.default.Messages.COPY_ID_MESSAGE,
     shiftId: "".concat(t.channel_id, "-").concat(t.id)
   }), eS = (0, b.default)(t, n), ev = (0, P.default)(t, n), eh = (0, g.default)(t, n, {
     hoist: !0
@@ -125,13 +125,13 @@ function w(e) {
     commandTargetId: t.id,
     channel: n,
     guildId: void 0,
-    onHeightUpdate: Z
+    onHeightUpdate: X
   }), eR = (0, E.default)(t, n);
   return (0, a.jsxs)(l.Menu, {
     navId: W,
     onClose: z,
     "aria-label": J,
-    onSelect: X,
+    onSelect: Z,
     children: [(0, a.jsx)(l.MenuGroup, {
       children: $
     }), (0, a.jsx)(l.MenuGroup, {

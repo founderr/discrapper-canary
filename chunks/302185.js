@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
-var i = n("884691"),
-  l = n("748820"),
-  s = n("129722"),
-  r = n("89050");
-let a = new Worker(new URL(n.p + n.u("21401"), n.b)),
+var l = n("884691"),
+  i = n("748820"),
+  a = n("129722"),
+  s = n("89050");
+let r = new Worker(new URL(n.p + n.u("21401"), n.b)),
   u = new AudioContext;
 async function o(e) {
   let t = await e.arrayBuffer(),
@@ -20,48 +20,48 @@ async function o(e) {
 }
 
 function d(e) {
-  let [t, n] = i.useState(null), [l, s] = i.useState(null);
-  return i.useEffect(() => {
+  let [t, n] = l.useState(null), [i, a] = l.useState(null);
+  return l.useEffect(() => {
     if (null == e) return;
-    let t = (0, r.getAudioFileId)(e);
-    t !== l && (s(t), n(null), o(e).then(n))
-  }, [l, e]), t
+    let t = (0, s.getAudioFileId)(e);
+    t !== i && (a(t), n(null), o(e).then(n))
+  }, [i, e]), t
 }
 let c = {
-  ...r.defaultWaveformConfig
+  ...s.defaultWaveformConfig
 };
 
 function f(e, t, n) {
-  let [u, o] = i.useState(null), [d, f] = i.useState(null), [h, m] = i.useState(1), {
+  let [u, o] = l.useState(null), [d, f] = l.useState(null), [h, m] = l.useState(1), {
     setMaxVolume: g
-  } = (0, s.useAudioTrimmerStore)(), E = i.useCallback((e, t) => {
-    var i, s, r, u, o;
-    f(null), (i = e, s = t.offsetWidth, r = n, u = c, o = m, new Promise(e => {
-      let t = (0, l.v4)(),
-        n = i => {
+  } = (0, a.useAudioTrimmerStore)(), S = l.useCallback((e, t) => {
+    var l, a, s, u, o;
+    f(null), (l = e, a = t.offsetWidth, s = n, u = c, o = m, new Promise(e => {
+      let t = (0, i.v4)(),
+        n = l => {
           let {
             data: {
-              waveform: l,
-              id: s,
-              normalizedVolumeMultipler: r
+              waveform: i,
+              id: a,
+              normalizedVolumeMultipler: s
             }
-          } = i;
-          t === s && (e(l), o(r)), null == a || a.removeEventListener("message", n)
+          } = l;
+          t === a && (e(i), o(s)), null == r || r.removeEventListener("message", n)
         };
-      null == a || a.addEventListener("message", n), null == a || a.postMessage({
+      null == r || r.addEventListener("message", n), null == r || r.postMessage({
         id: t,
-        options: r,
+        options: s,
         config: u,
-        width: s,
-        rawBufferData: i
+        width: a,
+        rawBufferData: l
       })
     })).then(f)
   }, [n]);
-  return i.useEffect(() => {
+  return l.useEffect(() => {
     if (null == e || null == t) return;
-    let i = (0, r.getWaveformId)(e, n);
-    u !== i && (o(i), E(e, t))
-  }, [e, E, t, n, u]), i.useEffect(() => {
+    let l = (0, s.getWaveformId)(e, n);
+    u !== l && (o(l), S(e, t))
+  }, [e, S, t, n, u]), l.useEffect(() => {
     g(h)
   }, [h, g]), d
 }

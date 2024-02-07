@@ -1,11 +1,11 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   PlayStationVoiceExperiment: function() {
-    return a
+    return i
   }
 });
-var n = l("862205");
-let a = (0, n.createExperiment)({
+var l = n("862205");
+let i = (0, l.createExperiment)({
   kind: "user",
   id: "2022-08_churro_experiment",
   label: "PS5 Voice Experiment",

@@ -1,25 +1,25 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   useCurrentUserGuildBadgeStatus: function() {
     return u
   }
 });
-var n = i("446674"),
-  s = i("26989"),
-  l = i("697218"),
-  r = i("591023"),
-  a = i("520141"),
-  o = i("982527");
+var l = n("446674"),
+  i = n("26989"),
+  a = n("697218"),
+  s = n("591023"),
+  r = n("520141"),
+  o = n("982527");
 
 function u(e) {
-  let t = (0, a.useIsMemberVerificationManualApproval)(null != e ? e : ""),
-    i = (0, n.useStateFromStores)([o.default, l.default, s.default], () => {
+  let t = (0, r.useIsMemberVerificationManualApproval)(null != e ? e : ""),
+    n = (0, l.useStateFromStores)([o.default, a.default, i.default], () => {
       let t = o.default.getRequest(e),
-        i = l.default.getCurrentUser();
-      if (null == i || null == t || t.userId !== i.id) return;
-      let n = s.default.getMember(e, t.userId),
-        a = null != n && !n.isPending;
-      if (!a || (0, r.isActionedAndNotAcked)(t)) return t.applicationStatus
+        n = a.default.getCurrentUser();
+      if (null == n || null == t || t.userId !== n.id) return;
+      let l = i.default.getMember(e, t.userId),
+        r = null != l && !l.isPending;
+      if (!r || (0, s.isActionedAndNotAcked)(t)) return t.applicationStatus
     }, [e]);
-  return t ? i : void 0
+  return t ? n : void 0
 }

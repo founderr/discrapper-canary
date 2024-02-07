@@ -1,44 +1,44 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   SeasonalGiftIcon: function() {
-    return P
+    return B
   },
   default: function() {
-    return R
+    return H
   }
-}), s("222007"), s("424973");
-var o = s("37983"),
-  i = s("884691"),
-  l = s("907002"),
-  n = s("249654"),
-  C = s("446674"),
-  a = s("151426"),
-  r = s("819855"),
-  d = s("77078"),
-  u = s("373807"),
-  c = s("841098"),
-  f = s("812204"),
-  p = s("685665"),
-  x = s("10641"),
-  h = s("384997"),
-  j = s("649844"),
-  F = s("53253"),
-  m = s("977591"),
-  L = s("778588"),
-  M = s("697218"),
-  b = s("551305"),
-  E = s("978679"),
-  _ = s("953957"),
-  N = s("762974"),
-  A = s("718517"),
-  v = s("158998"),
-  g = s("49111"),
-  D = s("994428"),
-  T = s("646718"),
-  B = s("782340"),
-  S = s("426068"),
-  k = s("537461");
-let y = [{
+}), n("222007"), n("424973");
+var l = n("37983"),
+  i = n("884691"),
+  a = n("907002"),
+  s = n("249654"),
+  r = n("446674"),
+  o = n("151426"),
+  u = n("819855"),
+  d = n("77078"),
+  c = n("373807"),
+  f = n("841098"),
+  p = n("812204"),
+  m = n("685665"),
+  h = n("10641"),
+  E = n("384997"),
+  g = n("649844"),
+  S = n("53253"),
+  C = n("977591"),
+  T = n("778588"),
+  v = n("697218"),
+  I = n("551305"),
+  _ = n("978679"),
+  y = n("953957"),
+  A = n("762974"),
+  N = n("718517"),
+  x = n("158998"),
+  O = n("49111"),
+  R = n("994428"),
+  M = n("646718"),
+  L = n("782340"),
+  P = n("426068"),
+  b = n("537461");
+let j = [{
     box: "#FFD89E",
     ribbon: "#FF7476"
   }, {
@@ -60,7 +60,7 @@ let y = [{
     box: "#DB6D6D",
     ribbon: "#67DA9C"
   }],
-  I = [{
+  U = [{
     box: "#EABB75",
     ribbon: "#E4595C"
   }, {
@@ -82,34 +82,34 @@ let y = [{
     box: "#DB6F6F",
     ribbon: "#81C29F"
   }],
-  Z = 1 / 300,
-  O = A.default.Millis.DAYS_30,
-  G = (0, l.animated)(_.default),
-  H = (0, l.animated)(N.default),
-  w = (0, l.animated)(E.default);
+  D = 1 / 300,
+  k = N.default.Millis.DAYS_30,
+  w = (0, a.animated)(y.default),
+  F = (0, a.animated)(A.default),
+  G = (0, a.animated)(_.default);
 
-function P(e) {
+function B(e) {
   let {
     themeOverride: t,
-    hovered: s,
-    isContentDismissed: n,
-    boxColors: C = {
-      dark: y,
-      light: I
+    hovered: n,
+    isContentDismissed: s,
+    boxColors: r = {
+      dark: j,
+      light: U
     }
-  } = e, a = (0, c.default)(), [d, u] = function(e) {
-    let [t, s] = i.useState(!1), [o, l] = i.useState(Math.floor(7 * Math.random()));
+  } = e, o = (0, f.default)(), [d, c] = function(e) {
+    let [t, n] = i.useState(!1), [l, a] = i.useState(Math.floor(7 * Math.random()));
     return i.useEffect(() => {
       if (e) return;
-      let t = Math.random() <= Z;
-      if (s(t), !t) {
+      let t = Math.random() <= D;
+      if (n(t), !t) {
         let e;
-        do e = Math.floor(7 * Math.random()); while (e === o);
-        l(e)
+        do e = Math.floor(7 * Math.random()); while (e === l);
+        a(e)
       }
-    }, [e]), [t, o]
-  }(s), f = (0, l.useSpring)({
-    reverse: !s,
+    }, [e]), [t, l]
+  }(n), p = (0, a.useSpring)({
+    reverse: !n,
     reset: !0,
     from: {
       scale: 1
@@ -121,87 +121,87 @@ function P(e) {
       tension: 800,
       friction: 24
     }
-  }), p = n ? u : 0, x = (0, r.isThemeDark)(null != t ? t : a) ? C.dark[p] : C.light[p];
-  return !s && n ? (0, o.jsx)(w, {}) : n && d ? (0, o.jsx)(H, {
-    isDark: (0, r.isThemeDark)(a),
-    style: f
-  }) : (0, o.jsx)(G, {
-    boxColor: x.box,
-    ribbonColor: x.ribbon,
-    style: f
+  }), m = s ? c : 0, h = (0, u.isThemeDark)(null != t ? t : o) ? r.dark[m] : r.light[m];
+  return !n && s ? (0, l.jsx)(G, {}) : s && d ? (0, l.jsx)(F, {
+    isDark: (0, u.isThemeDark)(o),
+    style: p
+  }) : (0, l.jsx)(w, {
+    boxColor: h.box,
+    ribbonColor: h.ribbon,
+    style: p
   })
 }
-var R = i.memo(function(e) {
+var H = i.memo(function(e) {
   let {
     disabled: t,
-    channel: s
+    channel: n
   } = e, {
-    analyticsLocations: l
-  } = (0, p.default)(f.default.GIFT_BUTTON), [r, c] = i.useState(!1), E = (0, C.useStateFromStores)([L.default], () => !(null === L.default || void 0 === L.default ? void 0 : L.default.hasLayers())), _ = (0, C.useStateFromStores)([M.default], () => M.default.getCurrentUser()), N = null != _ ? n.default.age(_.id) : 0, A = !t && E && N >= O, {
-    enabled: y
-  } = F.SeasonalGiftingMarketingExperiment.useExperiment({
+    analyticsLocations: a
+  } = (0, m.default)(p.default.GIFT_BUTTON), [u, f] = i.useState(!1), _ = (0, r.useStateFromStores)([T.default], () => !(null === T.default || void 0 === T.default ? void 0 : T.default.hasLayers())), y = (0, r.useStateFromStores)([v.default], () => v.default.getCurrentUser()), A = null != y ? s.default.age(y.id) : 0, N = !t && _ && A >= k, {
+    enabled: j
+  } = S.SeasonalGiftingMarketingExperiment.useExperiment({
     location: "ChannelPremiumGiftButton"
   }, {
-    autoTrackExposure: A
-  }), I = [];
-  y && A && I.push(a.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-  let [Z, G] = (0, h.useSelectedDismissibleContent)(I), H = null != Z, w = (0, v.useDirectMessageRecipient)(s), R = null != w, {
-    enabled: U
-  } = m.ExpandedGiftingRevampExperiment.useExperiment({
+    autoTrackExposure: N
+  }), U = [];
+  j && N && U.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
+  let [D, w] = (0, E.useSelectedDismissibleContent)(U), F = null != D, G = (0, x.useDirectMessageRecipient)(n), H = null != G, {
+    enabled: V
+  } = C.ExpandedGiftingRevampExperiment.useExperiment({
     location: "ChannelPremiumGiftButton"
   }, {
     autoTrackExposure: !1
   });
   if (t) return null;
-  let V = () => {
-      (0, j.default)({
+  let K = () => {
+      (0, g.default)({
         isGift: !0,
-        giftRecipient: null == w ? void 0 : w,
+        giftRecipient: null == G ? void 0 : G,
         initialPlanId: null,
-        subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
-        analyticsLocations: l,
+        subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
+        analyticsLocations: a,
         analyticsObject: {
-          page: s.isPrivate() ? g.AnalyticsPages.DM_CHANNEL : g.AnalyticsPages.GUILD_CHANNEL,
-          section: g.AnalyticsSections.CHANNEL_TEXT_AREA,
-          object: g.AnalyticsObjects.SEASONAL_BUTTON_ICON,
-          objectType: g.AnalyticsObjectTypes.GIFT
+          page: n.isPrivate() ? O.AnalyticsPages.DM_CHANNEL : O.AnalyticsPages.GUILD_CHANNEL,
+          section: O.AnalyticsSections.CHANNEL_TEXT_AREA,
+          object: O.AnalyticsObjects.SEASONAL_BUTTON_ICON,
+          objectType: O.AnalyticsObjectTypes.GIFT
         }
       })
     },
-    K = (0, o.jsxs)("div", {
-      className: S.container,
+    W = (0, l.jsxs)("div", {
+      className: P.container,
       onMouseEnter: () => {
-        !r && c(!0)
+        !u && f(!0)
       },
       onMouseLeave: () => {
-        c(!1)
+        f(!1)
       },
-      children: [H && (0, o.jsx)(u.default, {
-        onComplete: () => c(!1),
-        onDMCheckItOutClick: V,
-        markAsDismissed: G,
-        isDM: R
-      }), (0, o.jsx)(b.default, {
-        innerClassName: k.button,
-        "aria-label": B.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+      children: [F && (0, l.jsx)(c.default, {
+        onComplete: () => f(!1),
+        onDMCheckItOutClick: K,
+        markAsDismissed: w,
+        isDM: H
+      }), (0, l.jsx)(I.default, {
+        innerClassName: b.button,
+        "aria-label": L.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
         isActive: !1,
         onClick: () => {
-          c(!1), (0, x.markDismissibleContentAsDismissed)(a.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023, {
-            dismissAction: D.ContentDismissActionType.TAKE_ACTION
-          }), V()
+          f(!1), (0, h.markDismissibleContentAsDismissed)(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023, {
+            dismissAction: R.ContentDismissActionType.TAKE_ACTION
+          }), K()
         },
-        children: (0, o.jsx)("div", {
-          className: S.noPointerEvents,
-          children: (0, o.jsx)(P, {
-            hovered: r,
-            isContentDismissed: !H
+        children: (0, l.jsx)("div", {
+          className: P.noPointerEvents,
+          children: (0, l.jsx)(B, {
+            hovered: u,
+            isContentDismissed: !F
           })
         })
       })]
     });
-  return H ? K : (0, o.jsx)(d.TooltipContainer, {
-    className: S.container,
-    text: (0, u.getSeasonalGiftingBody)(R, U),
-    children: K
+  return F ? W : (0, l.jsx)(d.TooltipContainer, {
+    className: P.container,
+    text: (0, c.getSeasonalGiftingBody)(H, V),
+    children: W
   })
 })

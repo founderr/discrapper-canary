@@ -8,18 +8,18 @@ var l = n("385887");
 
 function i(e, t) {
   if (l.EditorUtils.areStylesDisabled(e)) return [];
-  let [n, i] = t, r = [];
-  if (!l.TextUtils.isText(n)) return r;
-  let [o] = l.EditorUtils.node(e, l.PathUtils.parent(i));
-  return l.NodeUtils.isType(o, "applicationCommand") ? (n === o.children[0] && r.push({
+  let [n, i] = t, a = [];
+  if (!l.TextUtils.isText(n)) return a;
+  let [s] = l.EditorUtils.node(e, l.PathUtils.parent(i));
+  return l.NodeUtils.isType(s, "applicationCommand") ? (n === s.children[0] && a.push({
     anchor: {
       path: i,
       offset: 0
     },
     focus: {
       path: i,
-      offset: 0 + o.command.displayName.length + 1
+      offset: 0 + s.command.displayName.length + 1
     },
     commandName: !0
-  }), r) : r
+  }), a) : a
 }

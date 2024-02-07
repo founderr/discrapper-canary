@@ -1,11 +1,11 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return i
   }
 });
-var n = l("49111");
+var l = n("49111");
 
-function a(e) {
-  return null != e && e.type === n.ActivityTypes.PLAYING
+function i(e) {
+  return null != e && e.type === l.ActivityTypes.PLAYING
 }

@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return I
   }
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("769846"),
-  o = n("917764"),
-  s = n("986632"),
-  a = n("562323"),
+  a = n("769846"),
+  s = n("917764"),
+  r = n("986632"),
+  o = n("562323"),
   u = n("305961"),
   d = n("151185"),
   c = n("159885"),
@@ -18,9 +18,9 @@ var l = n("37983"),
   m = n("24373"),
   h = n("41170"),
   E = n("782340"),
-  S = n("13763");
-let g = (0, c.cssValueToNumber)(r.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-  C = (0, c.cssValueToNumber)(r.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+  g = n("13763");
+let S = (0, c.cssValueToNumber)(a.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+  C = (0, c.cssValueToNumber)(a.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
   T = e => {
     let t = null,
       n = null;
@@ -28,7 +28,7 @@ let g = (0, c.cssValueToNumber)(r.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION
       let i = u.default.getGuild(e.guild_id);
       null != i && (t = E.default.Messages.STICKER_FROM_SOURCE.format({
         source: i.name
-      }), n = (0, l.jsx)(o.default, {
+      }), n = (0, l.jsx)(s.default, {
         guild: i
       }))
     } else if ((0, m.isStandardSticker)(e)) {
@@ -49,37 +49,37 @@ let g = (0, c.cssValueToNumber)(r.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION
   v = i.memo(function(e) {
     let {
       stickersGrid: t
-    } = e, n = s.StickerPickerStore.useStore(e => e.inspectedExpressionPosition), r = i.useMemo(() => {
+    } = e, n = r.StickerPickerStore.useStore(e => e.inspectedExpressionPosition), a = i.useMemo(() => {
       var e;
       let {
         rowIndex: l,
         columnIndex: i
-      } = n, r = null === (e = t[l]) || void 0 === e ? void 0 : e[i];
-      return (null == r ? void 0 : r.type) === p.StickerGridItemTypes.CREATE_STICKER ? {
-        guild_id: r.guild_id,
-        name: r.name
-      } : (null == r ? void 0 : r.type) !== p.StickerGridItemTypes.STICKER ? null : r.sticker
+      } = n, a = null === (e = t[l]) || void 0 === e ? void 0 : e[i];
+      return (null == a ? void 0 : a.type) === p.StickerGridItemTypes.CREATE_STICKER ? {
+        guild_id: a.guild_id,
+        name: a.name
+      } : (null == a ? void 0 : a.type) !== p.StickerGridItemTypes.STICKER ? null : a.sticker
     }, [t, n]);
-    if (null == r) return null;
+    if (null == a) return null;
     let {
-      graphic: o,
+      graphic: s,
       title: u
-    } = T(r), c = (0, m.isStandardSticker)(r) || (0, m.isGuildSticker)(r) ? (0, l.jsx)(h.default, {
+    } = T(a), c = (0, m.isStandardSticker)(a) || (0, m.isGuildSticker)(a) ? (0, l.jsx)(h.default, {
       isInteracting: !0,
-      size: g,
-      sticker: r,
+      size: S,
+      sticker: a,
       disableAnimation: !0
     }) : (0, l.jsx)("div", {
-      className: S.iconWrapper,
+      className: g.iconWrapper,
       children: (0, l.jsx)(d.default, {
-        className: S.icon
+        className: g.icon
       })
     });
-    return (0, l.jsx)(a.default, {
+    return (0, l.jsx)(o.default, {
       graphicPrimary: c,
-      graphicSecondary: o,
-      titlePrimary: r.name,
-      titleSecondary: (0, m.isStandardSticker)(r) || (0, m.isGuildSticker)(r) ? u : null
+      graphicSecondary: s,
+      titlePrimary: a.name,
+      titleSecondary: (0, m.isStandardSticker)(a) || (0, m.isGuildSticker)(a) ? u : null
     })
   });
-var y = v
+var I = v

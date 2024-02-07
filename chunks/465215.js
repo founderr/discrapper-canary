@@ -4,9 +4,9 @@ a.r(t), a.d(t, {
     return r
   }
 });
-var l = a("37983");
+var n = a("37983");
 a("884691");
-var n = a("880114"),
+var l = a("880114"),
   s = a("777003"),
   i = a("814076");
 
@@ -16,8 +16,8 @@ function r(e) {
     guild: a,
     guildMember: r
   } = e;
-  return (0, l.jsx)(s.default, {
-    children: (0, l.jsx)(n.default, {
+  return (0, n.jsx)(s.default, {
+    children: (0, n.jsx)(l.default, {
       userId: t,
       guild: a,
       guildMember: r,

@@ -4,10 +4,10 @@ r.r(t), r.d(t, {
     return d
   },
   getAssetSizeByHeight: function() {
-    return f
+    return E
   },
   getLogoSize: function() {
-    return E
+    return f
   },
   getBackgroundGradient: function() {
     return _
@@ -16,7 +16,7 @@ r.r(t), r.d(t, {
     return p
   },
   CollectiblesDCToDisplayOptions: function() {
-    return m
+    return I
   }
 });
 var n, a = r("151426"),
@@ -27,8 +27,8 @@ var n, a = r("151426"),
   l = r("172858"),
   c = r("782340");
 let d = 1060,
-  f = e => e * (0, o.default)(),
-  E = e => 3.8 * e,
+  E = e => e * (0, o.default)(),
+  f = e => 3.8 * e,
   _ = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
       {
@@ -38,7 +38,7 @@ let d = 1060,
     return "linear-gradient(".concat(t, "deg, ").concat(r.toHslString(), ", ").concat(n.toHslString(), ")")
   },
   A = l.COMMON_CONFETTI_SPRITES.filter((e, t) => 1 !== t && 7 !== t),
-  I = {
+  C = {
     ["".concat(i.CollectiblesCategorySkuId.FANTASY)]: [r("655029"), r("290216")],
     ["".concat(i.CollectiblesCategorySkuId.ANIME)]: [r("597704"), r("714293")],
     ["".concat(i.CollectiblesCategorySkuId.BREAKFAST)]: [r("286642"), r("94646")],
@@ -51,9 +51,9 @@ let d = 1060,
   },
   p = e => {
     var t;
-    return null == e ? A : null !== (t = I[e]) && void 0 !== t ? t : A
+    return null == e ? A : null !== (t = C[e]) && void 0 !== t ? t : A
   },
-  m = {
+  I = {
     [a.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE]: {
       tooltipText: () => c.default.Messages.COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE
     },

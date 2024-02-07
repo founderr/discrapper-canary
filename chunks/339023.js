@@ -1,51 +1,51 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
-}), l("222007");
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  i = l("509043"),
-  r = l("446674"),
-  o = l("669491"),
-  u = l("77078"),
-  d = l("206230"),
-  c = l("83900"),
-  f = l("391866");
+}), n("222007");
+var l = n("37983");
+n("884691");
+var i = n("414456"),
+  a = n.n(i),
+  s = n("509043"),
+  r = n("446674"),
+  o = n("669491"),
+  u = n("77078"),
+  d = n("206230"),
+  c = n("83900"),
+  f = n("391866");
 
-function m(e) {
+function p(e) {
   let t, {
-      color: l,
-      size: a,
-      forcedIconColor: m,
-      className: p,
+      color: n,
+      size: i,
+      forcedIconColor: p,
+      className: m,
       iconClassName: h
     } = e,
-    [T, E] = (0, r.useStateFromStoresArray)([d.default], () => [d.default.desaturateUserColors, d.default.saturation]),
+    [E, g] = (0, r.useStateFromStoresArray)([d.default], () => [d.default.desaturateUserColors, d.default.saturation]),
     S = (0, u.useToken)(o.default.unsafe_rawColors.PRIMARY_300).hex(),
-    _ = (0, i.hex2int)(null != l ? l : S),
-    g = (0, i.int2hsl)(_, !1, T ? E : null);
-  t = null != m ? m : .3 > (0, i.getDarkness)(_) ? o.default.unsafe_rawColors.PRIMARY_630.css : o.default.unsafe_rawColors.WHITE_500.css;
-  let A = a / 8;
-  return (0, n.jsx)("div", {
+    C = (0, s.hex2int)(null != n ? n : S),
+    T = (0, s.int2hsl)(C, !1, E ? g : null);
+  t = null != p ? p : .3 > (0, s.getDarkness)(C) ? o.default.unsafe_rawColors.PRIMARY_630.css : o.default.unsafe_rawColors.WHITE_500.css;
+  let v = i / 8;
+  return (0, l.jsx)("div", {
     style: {
-      background: g,
-      width: a,
-      height: a,
-      borderRadius: a,
-      lineHeight: "".concat(a, "px")
+      background: T,
+      width: i,
+      height: i,
+      borderRadius: i,
+      lineHeight: "".concat(i, "px")
     },
-    className: p,
-    children: (0, n.jsx)(c.default, {
+    className: m,
+    children: (0, l.jsx)(c.default, {
       color: t,
-      className: s(f.linkIcon, h),
-      width: a - 2 * A,
-      height: a - 2 * A,
+      className: a(f.linkIcon, h),
+      width: i - 2 * v,
+      height: i - 2 * v,
       style: {
-        margin: A
+        margin: v
       }
     })
   })

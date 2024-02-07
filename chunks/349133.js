@@ -1,50 +1,50 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 });
 var s = n("37983");
 n("884691");
-var r = n("77078"),
-  l = n("446674"),
-  i = n("87657"),
+var i = n("77078"),
+  r = n("446674"),
+  l = n("87657"),
   a = n("635357"),
-  o = n("27618"),
-  u = n("697218"),
+  u = n("27618"),
+  o = n("697218"),
   d = n("158998"),
   c = n("21526"),
   f = n("782340"),
-  E = e => {
+  p = e => {
     let {
       selectedSkuId: t,
       className: n
-    } = e, E = (0, l.useStateFromStoresArray)([o.default], () => o.default.getFriendIDs()), p = (0, l.useStateFromStoresArray)([u.default], () => u.default.filter(e => E.includes(e.id) && !e.bot), [E]), {
-      giftRecipient: _,
-      setGiftRecipient: I,
-      giftRecipientError: S,
-      setGiftRecipientError: h,
-      setValidatingGiftRecipient: m
+    } = e, p = (0, r.useStateFromStoresArray)([u.default], () => u.default.getFriendIDs()), S = (0, r.useStateFromStoresArray)([o.default], () => o.default.filter(e => p.includes(e.id) && !e.bot), [p]), {
+      giftRecipient: E,
+      setGiftRecipient: m,
+      giftRecipientError: _,
+      setGiftRecipientError: I,
+      setValidatingGiftRecipient: C
     } = (0, a.useGiftContext)();
     if (null == t) return null;
-    let C = async e => {
-      m(!0), null != S && h(), I(e);
+    let T = async e => {
+      C(!0), null != _ && I(), m(e);
       let n = await (0, c.validateCollectiblesRecipient)(e.id, t);
-      !n && h(f.default.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), m(!1)
+      !n && I(f.default.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), C(!1)
     };
     return (0, s.jsxs)("div", {
       className: n,
-      children: [(0, s.jsx)(r.FormTitle, {
+      children: [(0, s.jsx)(i.FormTitle, {
         children: f.default.Messages.FORM_LABEL_SEND_TO
-      }), (0, s.jsx)(r.SearchableSelect, {
+      }), (0, s.jsx)(i.SearchableSelect, {
         placeholder: f.default.Messages.COLLECTIBLES_GIFT_RECIPIENT_PLACEHOLDER,
-        renderOptionPrefix: e => (null == e ? void 0 : e.value) == null ? null : (0, s.jsx)(i.default, {
+        renderOptionPrefix: e => (null == e ? void 0 : e.value) == null ? null : (0, s.jsx)(l.default, {
           user: e.value,
-          size: r.AvatarSizes.SIZE_20
+          size: i.AvatarSizes.SIZE_20
         }),
-        value: _,
-        onChange: C,
-        options: p.map(e => ({
+        value: E,
+        onChange: T,
+        options: S.map(e => ({
           value: e,
           label: "".concat(d.default.getUserTag(e))
         }))

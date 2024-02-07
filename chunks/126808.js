@@ -1,19 +1,19 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var n = l("233069"),
-  a = l("42203"),
-  s = l("800762");
+var l = n("233069"),
+  i = n("42203"),
+  a = n("800762");
 
-function i(e) {
+function s(e) {
   var t;
   let {
-    channelId: l,
-    userId: i,
+    channelId: n,
+    userId: s,
     activity: r
-  } = e, o = a.default.getChannel(l), u = (null == r ? void 0 : r.session_id) == null || null != o && (0, n.isTextChannel)(o.type) ? l : null === (t = s.default.getVoiceStateForSession(i, null == r ? void 0 : r.session_id)) || void 0 === t ? void 0 : t.channelId;
+  } = e, o = i.default.getChannel(n), u = (null == r ? void 0 : r.session_id) == null || null != o && (0, l.isTextChannel)(o.type) ? n : null === (t = a.default.getVoiceStateForSession(s, null == r ? void 0 : r.session_id)) || void 0 === t ? void 0 : t.channelId;
   return null != u ? u : void 0
 }

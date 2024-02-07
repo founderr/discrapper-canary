@@ -1,5 +1,5 @@
 "use strict";
-let l, n;
+let n, l;
 a.r(t), a.d(t, {
   CopiableField: function() {
     return S
@@ -26,34 +26,34 @@ function S(e) {
     copyMetaData: S,
     children: m,
     disableCopy: C,
-    showCopyIcon: N
-  } = e, [g, v] = i.useState(0), [p, I] = i.useState(!1), [h, M] = i.useState(!1);
-  if (i.useEffect(() => (l = new o.Timeout, n = new o.Timeout, function() {
-      l.stop(), n.stop()
+    showCopyIcon: g
+  } = e, [N, v] = i.useState(0), [p, I] = i.useState(!1), [h, M] = i.useState(!1);
+  if (i.useEffect(() => (n = new o.Timeout, l = new o.Timeout, function() {
+      n.stop(), l.stop()
     }), []), !T.SUPPORTS_COPY || C) return (0, s.jsx)(s.Fragment, {
     children: m
   });
   let O = [A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_1, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_2, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_3, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_4, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_5, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_6, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_7, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_8, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_9, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_10, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_11],
-    U = Math.min(Math.max(g - 1, 0), O.length - 1),
-    R = null !== (t = O[U]) && void 0 !== t ? t : O[0],
-    x = g >= O.length - 1,
-    y = x ? c.TooltipColors.RED : c.TooltipColors.GREEN,
+    U = Math.min(Math.max(N - 1, 0), O.length - 1),
+    x = null !== (t = O[U]) && void 0 !== t ? t : O[0],
+    R = N >= O.length - 1,
+    y = R ? c.TooltipColors.RED : c.TooltipColors.GREEN,
     j = p ? y : c.TooltipColors.PRIMARY,
     P = () => {
-      l.stop(), M(!1)
+      n.stop(), M(!1)
     },
     H = e => {
       (0, T.copy)(r), f.default.track(E.AnalyticEvents.TEXT_COPIED, {
         type: S
-      }), "function" == typeof e && e(), !h && v(g + 1), M(!0), I(!0), l.start(1e3, () => M(!1)), n.start(2e3, () => v(0))
+      }), "function" == typeof e && e(), !h && v(N + 1), M(!0), I(!0), n.start(1e3, () => M(!1)), l.start(2e3, () => v(0))
     };
   return (0, s.jsx)(c.Tooltip, {
     delay: 500,
     color: j,
     forceOpen: h,
     text: p ? (0, s.jsx)(c.Shaker, {
-      isShaking: x,
-      children: R
+      isShaking: R,
+      children: x
     }) : A.default.Messages.ACCOUNT_CLICK_TO_COPY,
     onAnimationRest: (e, t) => {
       !h && p && t.phase === E.SpringTransitionPhases.LEAVE && I(!1)
@@ -62,14 +62,14 @@ function S(e) {
     children: e => {
       let {
         onClick: t,
-        onMouseEnter: l,
-        ...n
+        onMouseEnter: n,
+        ...l
       } = e;
       return (0, s.jsx)(c.Clickable, {
-        ...n,
+        ...l,
         className: _.clickTarget,
         onMouseEnter: () => {
-          p ? P() : "function" == typeof l && l()
+          p ? P() : "function" == typeof n && n()
         },
         onClick: () => {
           H(t)
@@ -79,7 +79,7 @@ function S(e) {
           children: [(0, s.jsx)("div", {
             className: _.childWrapper,
             children: m
-          }), N ? (0, s.jsx)("div", {
+          }), g ? (0, s.jsx)("div", {
             className: _.copyIconWrapper,
             children: (0, s.jsx)(d.default, {
               width: 18,

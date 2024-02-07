@@ -1,31 +1,31 @@
 "use strict";
 t.r(A), t.d(A, {
   useGuildProductAttachmentManagerContext: function() {
-    return s
+    return r
   },
   GuildProductAttachmentManagerContextProvider: function() {
-    return o
+    return i
   }
 }), t("70102");
 var a = t("37983"),
-  n = t("884691"),
-  l = t("168804");
-let r = n.createContext(void 0);
+  l = t("884691"),
+  n = t("168804");
+let s = l.createContext(void 0);
 
-function s() {
-  let e = n.useContext(r);
+function r() {
+  let e = l.useContext(s);
   if (null == e) throw Error("No GuildProductAttachmentManagerContextProvider found");
   return e
 }
 
-function o(e) {
+function i(e) {
   let {
     children: A,
     guildId: t,
-    ...n
-  } = e, s = (0, l.default)(t, n);
-  return (0, a.jsx)(r.Provider, {
-    value: s,
+    ...l
+  } = e, r = (0, n.default)(t, l);
+  return (0, a.jsx)(s.Provider, {
+    value: r,
     children: A
   })
 }

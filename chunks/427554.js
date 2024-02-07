@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var l = n("37983");
@@ -15,18 +15,18 @@ var s = n("414456"),
   d = n("782340"),
   c = n("849882");
 
-function f(e) {
+function E(e) {
   let {
     guildId: t,
     recurrenceRule: n,
     guildEventId: s,
-    onRecurrenceClick: f,
-    hideScroller: E = !1,
+    onRecurrenceClick: E,
+    hideScroller: f = !1,
     activeRecurrenceId: h
   } = e, {
     recurrenceStartTimes: C,
-    canViewMoreRecurrences: v,
-    updateRecurrenceStartTimes: N
+    canViewMoreRecurrences: N,
+    updateRecurrenceStartTimes: v
   } = (0, o.default)(s, t, n);
   return (0, l.jsxs)("div", {
     className: c.recurrences,
@@ -36,7 +36,7 @@ function f(e) {
       children: d.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS
     }), (0, l.jsxs)(a.Scroller, {
       className: u(c.scroller, {
-        [c.showScroller]: !E
+        [c.showScroller]: !f
       }),
       children: [C.map(e => {
         let t = i.default.fromTimestamp(e.getTime());
@@ -44,13 +44,13 @@ function f(e) {
           recurrenceId: t,
           originalScheduledStartTime: e,
           guildEventId: s,
-          onClick: f,
+          onClick: E,
           isActive: t === h
         }, t)
-      }), v && (0, l.jsx)(a.Button, {
+      }), N && (0, l.jsx)(a.Button, {
         grow: !1,
         onClick: e => {
-          e.stopPropagation(), N()
+          e.stopPropagation(), v()
         },
         look: a.Button.Looks.LINK,
         size: a.Button.Sizes.MIN,

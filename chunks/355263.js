@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   getIconComponent: function() {
-    return s
+    return r
   },
   pxToRem: function() {
-    return u
+    return s
   },
   getCommandQuery: function() {
-    return o
+    return u
   }
 });
-var i = n("524768"),
-  a = n("991630"),
-  l = n("943161"),
-  r = n("317041");
-let s = e => e.type === i.ApplicationCommandSectionType.BUILT_IN ? l.default : a.default;
+var l = n("524768"),
+  i = n("991630"),
+  o = n("943161"),
+  a = n("317041");
+let r = e => e.type === l.ApplicationCommandSectionType.BUILT_IN ? o.default : i.default;
 
-function u(e) {
+function s(e) {
   return "".concat(e / 16, "rem")
 }
 
-function o(e, t) {
+function u(e, t) {
   let n = t,
-    i = !1,
-    a = t.indexOf(":");
-  if (a >= 0) {
-    let e = t.lastIndexOf(" ", a);
-    e >= 0 ? (t = t.substring(0, e), i = !0) : t = t.substring(0, a)
+    l = !1,
+    i = t.indexOf(":");
+  if (i >= 0) {
+    let e = t.lastIndexOf(" ", i);
+    e >= 0 ? (t = t.substring(0, e), l = !0) : t = t.substring(0, i)
   } else t = t.substring(0, t.length);
-  let l = t.split(" ", r.MAX_SUBCOMMAND_LEVEL + 1);
-  return l.length > r.MAX_SUBCOMMAND_LEVEL && (i = !0, l.pop()), t = l.join(" "), (n.length > t.length || t.endsWith(" ")) && (i = !0, t = t.trimEnd()), {
+  let o = t.split(" ", a.MAX_SUBCOMMAND_LEVEL + 1);
+  return o.length > a.MAX_SUBCOMMAND_LEVEL && (l = !0, o.pop()), t = o.join(" "), (n.length > t.length || t.endsWith(" ")) && (l = !0, t = t.trimEnd()), {
     text: t,
-    parts: l,
-    hasSpaceTerminator: i
+    parts: o,
+    hasSpaceTerminator: l
   }
 }

@@ -1,49 +1,49 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
-}), l("222007");
-var n = l("37983");
-l("884691");
-var a = l("448105"),
-  s = l.n(a),
-  i = l("917351"),
-  r = l.n(i),
-  o = l("509043"),
-  u = l("77078"),
-  d = l("49111"),
-  c = l("782340"),
-  f = l("558062"),
-  m = function(e) {
+}), n("222007");
+var l = n("37983");
+n("884691");
+var i = n("448105"),
+  a = n.n(i),
+  s = n("917351"),
+  r = n.n(s),
+  o = n("509043"),
+  u = n("77078"),
+  d = n("49111"),
+  c = n("782340"),
+  f = n("558062"),
+  p = function(e) {
     let {
       className: t,
-      guild: l,
-      roleStyle: a,
-      roleFilter: i,
-      onSelect: m,
-      onClose: p
-    } = e, h = e => r(l.roles).filter(i).filter(t => s(e.toLowerCase(), t.name.toLowerCase())).value();
-    return (0, n.jsx)(u.ComboboxPopout, {
+      guild: n,
+      roleStyle: i,
+      roleFilter: s,
+      onSelect: p,
+      onClose: m
+    } = e, h = e => r(n.roles).filter(s).filter(t => a(e.toLowerCase(), t.name.toLowerCase())).value();
+    return (0, l.jsx)(u.ComboboxPopout, {
       className: t,
       value: new Set,
-      onChange: m,
+      onChange: p,
       placeholder: c.default.Messages.ADD_ROLE_PLACEHOLDER,
       "aria-label": c.default.Messages.ADD_ROLE_A11Y_LABEL,
-      onClose: p,
+      onClose: m,
       children: e => h(e).map(e => {
-        var t, l;
-        return (0, n.jsxs)(u.ComboboxItem, {
+        var t, n;
+        return (0, l.jsxs)(u.ComboboxItem, {
           value: e.id,
-          children: ["dot" === a ? (0, n.jsx)(u.RoleDot, {
+          children: ["dot" === i ? (0, l.jsx)(u.RoleDot, {
             className: f.popoutRoleDot,
             color: null !== (t = e.colorString) && void 0 !== t ? t : (0, o.int2hex)(d.DEFAULT_ROLE_COLOR),
             background: !1,
             tooltip: !1
-          }) : (0, n.jsx)(u.RoleCircle, {
+          }) : (0, l.jsx)(u.RoleCircle, {
             className: f.popoutRoleCircle,
-            color: null !== (l = e.colorString) && void 0 !== l ? l : (0, o.int2hex)(d.DEFAULT_ROLE_COLOR)
-          }), (0, n.jsx)(u.ComboboxItem.Label, {
+            color: null !== (n = e.colorString) && void 0 !== n ? n : (0, o.int2hex)(d.DEFAULT_ROLE_COLOR)
+          }), (0, l.jsx)(u.ComboboxItem.Label, {
             children: e.name
           })]
         }, e.id)

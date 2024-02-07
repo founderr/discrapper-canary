@@ -1,96 +1,96 @@
 "use strict";
 n.r(t), n.d(t, {
   ClassificationEvidence: function() {
-    return y
+    return x
   }
 }), n("222007"), n("506083");
 var i = n("37983"),
-  r = n("884691"),
-  l = n("917351"),
-  a = n("249654"),
-  s = n("446674"),
+  l = n("884691"),
+  a = n("917351"),
+  s = n("249654"),
+  r = n("446674"),
   o = n("77078"),
   u = n("651693"),
   c = n("692038"),
   d = n("815297"),
   f = n("933629"),
-  E = n("39331"),
-  _ = n("596368"),
-  S = n("227439"),
-  h = n("697218"),
-  p = n("170113"),
-  I = n("780571"),
-  T = n("377502"),
-  C = n("103603"),
-  v = n("736393"),
-  m = n("170213"),
-  N = n("49111"),
-  A = n("719347"),
-  g = n("782340"),
-  L = n("161730");
-let R = (e, t) => {
+  h = n("39331"),
+  p = n("596368"),
+  E = n("227439"),
+  _ = n("697218"),
+  C = n("170113"),
+  S = n("780571"),
+  I = n("377502"),
+  g = n("103603"),
+  A = n("736393"),
+  v = n("170213"),
+  m = n("49111"),
+  T = n("719347"),
+  y = n("782340"),
+  w = n("161730");
+let L = (e, t) => {
     let n = e.attachments.map(e => {
-      var n, i, r, l;
-      let a = {
+      var n, i, l, a;
+      let s = {
         ...e,
-        filename: (0, v.getAttachmentFilename)(e),
+        filename: (0, A.getAttachmentFilename)(e),
         size: 0,
         proxy_url: e.url
       };
-      if (!((0, u.isImageFile)(e.filename) || (0, u.isVideoFile)(e.filename))) return a;
+      if (!((0, u.isImageFile)(e.filename) || (0, u.isVideoFile)(e.filename))) return s;
       return {
-        ...a,
-        width: null !== (r = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== r ? r : m.DEFAULT_MEDIA_MAX_WIDTH,
-        height: null !== (l = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== l ? l : m.DEFAULT_MEDIA_MAX_HEIGHT
+        ...s,
+        width: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== l ? l : v.DEFAULT_MEDIA_MAX_WIDTH,
+        height: null !== (a = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== a ? a : v.DEFAULT_MEDIA_MAX_HEIGHT
       }
     });
     return (0, c.createMessageRecord)({
       ...(0, d.default)({
         nonce: e.id,
         content: e.content,
-        type: N.MessageTypes.DEFAULT,
+        type: m.MessageTypes.DEFAULT,
         channelId: ""
       }),
-      timestamp: new Date(a.default.extractTimestamp(e.id)).toISOString(),
+      timestamp: new Date(s.default.extractTimestamp(e.id)).toISOString(),
       attachments: n,
-      state: N.MessageStates.SENT
+      state: m.MessageStates.SENT
     })
   },
-  U = e => {
+  N = e => {
     let {
       message: t
     } = e, {
       attachments: n
     } = t;
     if (0 === n.length) return null;
-    let r = (e, t, n) => {
-        let r = m.DEFAULT_MEDIA_MAX_WIDTH,
-          a = m.DEFAULT_MEDIA_MAX_HEIGHT;
+    let l = (e, t, n) => {
+        let l = v.DEFAULT_MEDIA_MAX_WIDTH,
+          s = v.DEFAULT_MEDIA_MAX_HEIGHT;
         if (null != t.width && null != t.height) {
-          let e = (0, C.getRatio)({
+          let e = (0, g.getRatio)({
             width: t.width,
             height: t.height,
-            maxWidth: m.DEFAULT_MEDIA_MAX_WIDTH,
-            maxHeight: m.DEFAULT_MEDIA_MAX_HEIGHT
+            maxWidth: v.DEFAULT_MEDIA_MAX_WIDTH,
+            maxHeight: v.DEFAULT_MEDIA_MAX_HEIGHT
           });
-          r = (0, l.clamp)(Math.round(t.width * e), 0, m.DEFAULT_MEDIA_MAX_WIDTH), a = (0, l.clamp)(Math.round(t.height * e), 0, m.DEFAULT_MEDIA_MAX_HEIGHT)
+          l = (0, a.clamp)(Math.round(t.width * e), 0, v.DEFAULT_MEDIA_MAX_WIDTH), s = (0, a.clamp)(Math.round(t.height * e), 0, v.DEFAULT_MEDIA_MAX_HEIGHT)
         }
         return (0, i.jsx)("div", {
           style: {
-            width: n ? r : "100%",
-            height: n ? a : "100%"
+            width: n ? l : "100%",
+            height: n ? s : "100%"
           },
-          children: (0, i.jsx)(p.default, {
+          children: (0, i.jsx)(C.default, {
             className: e.className,
             forceExternal: !1,
             src: t.url,
-            width: n ? r : "100%",
-            height: n ? a : "100%",
+            width: n ? l : "100%",
+            height: n ? s : "100%",
             responsive: !0,
             volume: e.volume,
             autoPlay: !1,
             autoMute: !1,
-            type: p.default.Types.VIDEO,
+            type: C.default.Types.VIDEO,
             mediaLayoutType: e.mediaLayoutType,
             fileName: t.filename,
             fileSize: null == t.size ? void 0 : t.size.toString(),
@@ -105,21 +105,21 @@ let R = (e, t) => {
           })
         })
       },
-      a = 1 === n.length;
+      s = 1 === n.length;
     return (0, i.jsx)("div", {
-      className: L.classificationEvidenceMessageAttachment,
-      children: (0, i.jsx)(T.default, {
+      className: w.classificationEvidenceMessageAttachment,
+      children: (0, i.jsx)(I.default, {
         attachments: n.map(e => ({
           attachment: e,
           spoiler: !0,
           message: t,
-          mediaLayoutType: A.MediaLayoutType.MOSAIC,
+          mediaLayoutType: T.MediaLayoutType.MOSAIC,
           autoPlayGif: !1,
           inlineMedia: !0,
           canRemoveAttachment: !1,
-          isSingleMosaicItem: a,
-          onRemoveAttachment: l.noop,
-          renderVideoComponent: t => r(t, e, a),
+          isSingleMosaicItem: s,
+          onRemoveAttachment: a.noop,
+          renderVideoComponent: t => l(t, e, s),
           renderImageComponent: e => (0, f.renderImageComponent)({
             hiddenSpoilers: !0,
             shouldHideMediaOptions: !0,
@@ -133,19 +133,19 @@ let R = (e, t) => {
       })
     })
   },
-  y = e => {
+  x = e => {
     var t;
     let {
       flaggedContent: n
-    } = e, l = (0, s.useStateFromStores)([h.default], () => h.default.getCurrentUser()), [a, c] = r.useState({}), [d, f] = r.useState(!0), p = n[0], T = R(p, a), C = (0, E.default)(T, {
+    } = e, a = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), [s, c] = l.useState({}), [d, f] = l.useState(!0), C = n[0], I = L(C, s), g = (0, h.default)(I, {
       hideSimpleEmbedContent: !1,
       allowList: !1,
       allowHeading: !1,
       allowLinks: !1,
       previewLinkTarget: !1
     });
-    return (r.useEffect(() => {
-      Promise.all(p.attachments.filter(e => {
+    return (l.useEffect(() => {
+      Promise.all(C.attachments.filter(e => {
         let {
           filename: t
         } = e;
@@ -181,23 +181,23 @@ let R = (e, t) => {
           [e.id]: t
         })))
       })).finally(() => f(!1))
-    }, [p.attachments]), "" === T.content && 0 === T.attachments.length) ? null : (0, i.jsxs)("div", {
-      className: L.classificationEvidenceContainer,
+    }, [C.attachments]), "" === I.content && 0 === I.attachments.length) ? null : (0, i.jsxs)("div", {
+      className: w.classificationEvidenceContainer,
       children: [(0, i.jsx)(o.Text, {
         variant: "eyebrow",
         color: "text-muted",
-        children: g.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
+        children: y.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
       }), d ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsx)("div", {
-        className: L.classificationEvidenceCard,
-        children: (0, i.jsx)(I.default, {
+        className: w.classificationEvidenceCard,
+        children: (0, i.jsx)(S.default, {
           compact: !1,
-          childrenHeader: (0, S.default)({
+          childrenHeader: (0, E.default)({
             author: {
-              ...l,
+              ...a,
               colorString: "",
-              nick: null !== (t = null == l ? void 0 : l.username) && void 0 !== t ? t : ""
+              nick: null !== (t = null == a ? void 0 : a.username) && void 0 !== t ? t : ""
             },
-            message: T,
+            message: I,
             channel: void 0,
             guildId: void 0,
             compact: !1,
@@ -206,12 +206,12 @@ let R = (e, t) => {
             roleIcon: void 0,
             hideTimestamp: !1
           }),
-          childrenAccessories: (0, i.jsx)(U, {
-            message: T
+          childrenAccessories: (0, i.jsx)(N, {
+            message: I
           }),
-          childrenMessageContent: (0, _.default)({
-            message: T
-          }, C.content),
+          childrenMessageContent: (0, p.default)({
+            message: I
+          }, g.content),
           hasThread: !1,
           hasReply: !1
         })

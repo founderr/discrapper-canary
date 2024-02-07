@@ -1,105 +1,105 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
-    return C
+    return A
   }
 });
 var i = n("37983"),
-  r = n("884691"),
-  l = n("627445"),
-  a = n.n(l),
-  s = n("446674"),
-  u = n("913144"),
+  l = n("884691"),
+  a = n("627445"),
+  r = n.n(a),
+  u = n("446674"),
+  s = n("913144"),
   o = n("775433"),
   c = n("685665"),
   d = n("598981"),
   f = n("846286"),
   p = n("697218"),
-  h = n("10514"),
+  I = n("10514"),
   S = n("650509"),
-  m = n("90592"),
-  _ = n("333955"),
-  I = n("599733"),
+  T = n("90592"),
+  h = n("333955"),
+  _ = n("599733"),
   E = n("49111"),
-  T = n("782340"),
-  C = e => {
-    var t;
+  C = n("782340"),
+  A = t => {
+    var e;
     let n, {
-        listing: l,
-        guildId: C,
-        groupListingId: g,
-        analyticsLocation: A,
-        showBenefitsFirst: N,
-        onComplete: v,
-        forcesTransitionToGuild: b
-      } = e,
-      L = null == l ? void 0 : l.subscription_plans[0],
-      O = null == l ? void 0 : l.application_id,
-      P = null == L ? void 0 : L.id,
-      x = (null == l ? void 0 : l.published) === !0,
-      F = null == L ? void 0 : L.sku_id,
-      R = (0, s.useStateFromStores)([h.default], () => null != P ? h.default.get(P) : null),
-      y = (0, S.useApplication)(O),
-      k = (0, S.useSubscriptionListingsForGroup)(g, {
+        listing: a,
+        guildId: A,
+        groupListingId: m,
+        analyticsLocation: N,
+        showBenefitsFirst: g,
+        onComplete: L,
+        forcesTransitionToGuild: O
+      } = t,
+      R = null == a ? void 0 : a.subscription_plans[0],
+      F = null == a ? void 0 : a.application_id,
+      P = null == R ? void 0 : R.id,
+      v = (null == a ? void 0 : a.published) === !0,
+      b = null == R ? void 0 : R.sku_id,
+      y = (0, u.useStateFromStores)([I.default], () => null != P ? I.default.get(P) : null),
+      D = (0, S.useApplication)(F),
+      H = (0, S.useSubscriptionListingsForGroup)(m, {
         includeSoftDeleted: !0
       }),
-      G = k.map(e => e.subscription_plans[0].id),
+      G = H.map(t => t.subscription_plans[0].id),
       {
-        analyticsLocations: H
+        analyticsLocations: x
       } = (0, c.default)(),
       {
         activeSubscription: M,
         activeEntitlement: w
-      } = (0, S.useActiveSubscriptionListingForApplication)(O, C),
-      D = (0, S.useEligibleApplicationSubscriptionGuilds)(O, C),
-      j = (0, d.default)(),
-      U = null != l && (0, m.isApplicationUserSubscription)(l.sku_flags),
-      B = null != w && w.userId === (null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
-      V = null == w || B,
-      K = null == w || G.length > 1,
-      W = null != C || D.length > 0,
-      z = U && B,
-      Z = null != R && null != y && V && K && (W || U) && !z;
-    V ? W ? z && null != R && (n = T.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
-      tierName: R.name
-    })) : n = T.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = T.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, r.useEffect(() => {
-      x && null != F && j && u.default.wait(() => {
-        (0, o.fetchSubscriptionPlansForSKU)(F)
+      } = (0, S.useActiveSubscriptionListingForApplication)(F, A),
+      U = (0, S.useEligibleApplicationSubscriptionGuilds)(F, A),
+      k = (0, d.default)(),
+      j = null != a && (0, T.isApplicationUserSubscription)(a.sku_flags),
+      B = null != w && w.userId === (null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id),
+      Y = null == w || B,
+      V = null == w || G.length > 1,
+      K = null != A || U.length > 0,
+      z = j && B,
+      W = null != y && null != D && Y && V && (K || j) && !z;
+    Y ? K ? z && null != y && (n = C.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
+      tierName: y.name
+    })) : n = C.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = C.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, l.useEffect(() => {
+      v && null != b && k && s.default.wait(() => {
+        (0, o.fetchSubscriptionPlansForSKU)(b)
       })
-    }, [x, F, j]);
-    let Q = r.useCallback(() => {
-      a(null != l, "No subscription listing"), a(null != y, "No application"), a(null != L, "No subscription plan"), a(x, "Cannot purchase this unpublished plan");
-      let e = () => {
+    }, [v, b, k]);
+    let Z = l.useCallback(() => {
+      r(null != a, "No subscription listing"), r(null != D, "No application"), r(null != R, "No subscription plan"), r(v, "Cannot purchase this unpublished plan");
+      let t = () => {
         (0, f.openApplicationSubscriptionPaymentModal)({
           activeSubscription: M,
           analyticsSubscriptionType: E.SubscriptionTypes.APPLICATION,
-          analyticsLocations: H,
-          analyticsLocation: A,
-          renderHeader: (e, t, n) => (0, i.jsx)(_.PurchaseHeader, {
+          analyticsLocations: x,
+          analyticsLocation: N,
+          renderHeader: (t, e, n) => (0, i.jsx)(h.PurchaseHeader, {
             step: n,
-            onClose: () => t(!1)
+            onClose: () => e(!1)
           }),
-          initialPlanId: L.id,
-          skuId: L.sku_id,
-          guildId: C,
-          eligibleApplicationSubscriptionGuilds: D,
+          initialPlanId: R.id,
+          skuId: R.sku_id,
+          guildId: A,
+          eligibleApplicationSubscriptionGuilds: U,
           planGroup: G,
-          listing: l,
-          application: y,
-          showBenefitsFirst: N,
-          onComplete: v,
-          forcesTransitionToGuild: b
+          listing: a,
+          application: D,
+          showBenefitsFirst: g,
+          onComplete: L,
+          forcesTransitionToGuild: O
         })
       };
-      !W && U ? (0, I.confirmNoSharedServerSubscribeWarningModal)({
-        application: y,
-        onConfirm: e,
+      !K && j ? (0, _.confirmNoSharedServerSubscribeWarningModal)({
+        application: D,
+        onConfirm: t,
         onCancel: () => {}
-      }) : e()
-    }, [x, l, L, G, y, C, W, U, H, A, M, N, D, v, b]);
+      }) : t()
+    }, [v, a, R, G, D, A, K, j, x, N, M, g, U, L, O]);
     return {
-      openModal: Q,
-      canOpenModal: Z,
+      openModal: Z,
+      canOpenModal: W,
       cannotOpenReason: n
     }
   }

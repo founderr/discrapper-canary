@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return D
   },
   HeaderGuildBreadcrumb: function() {
-    return b
+    return P
   },
   ChannelEmoji: function() {
-    return P
+    return b
   }
 });
 var s = n("37983"),
@@ -96,7 +96,7 @@ function y(e) {
     children: [null != T ? (0, s.jsxs)(o.HiddenVisually, {
       children: [T, ":"]
     }) : null, " ", n]
-  }), O = (0, s.jsx)(P, {
+  }), O = (0, s.jsx)(b, {
     channel: t
   });
   switch (t.type) {
@@ -169,15 +169,15 @@ function y(e) {
           }), (0, s.jsx)(N.default.Caret, {})]
         })
       }
-      let b = (null == l ? void 0 : l.type) != null && L.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
+      let P = (null == l ? void 0 : l.type) != null && L.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
       return (0, s.jsxs)(a.Fragment, {
-        children: [D, j(b ? null : _, x.default.Messages.THREAD), (0, s.jsx)(N.default.Title, {
+        children: [D, j(P ? null : _, x.default.Messages.THREAD), (0, s.jsx)(N.default.Title, {
           level: I,
           onContextMenu: C,
           onClick: d,
           className: i({
             [R.cursorPointer]: u,
-            [R.forumPostTitle]: b
+            [R.forumPostTitle]: P
           }),
           children: y
         })]
@@ -255,7 +255,7 @@ function j(e, t) {
   })
 }
 
-function b(e) {
+function P(e) {
   let {
     guild: t,
     channel: n,
@@ -281,7 +281,7 @@ function b(e) {
     })]
   })
 }
-let P = a.memo(function(e) {
+let b = a.memo(function(e) {
   let {
     channel: t
   } = e, {

@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsDMsToClydeEnabled: function() {
-    return u
+    return s
   }
 });
-var i = n("446674"),
-  a = n("862205"),
-  l = n("305961"),
-  r = n("980215");
-let s = (0, a.createExperiment)({
+var l = n("446674"),
+  i = n("862205"),
+  o = n("305961"),
+  a = n("980215");
+let r = (0, i.createExperiment)({
   kind: "user",
   id: "2023-05_clyde_ai_dm",
   label: "DMs to Clyde",
@@ -24,13 +24,13 @@ let s = (0, a.createExperiment)({
   }]
 });
 
-function u() {
+function s() {
   let {
     isDMsToClydeEnabled: e
-  } = s.useExperiment({
+  } = r.useExperiment({
     location: "dbd3ac_1"
   }, {
     autoTrackExposure: !1
-  }), t = (0, i.useStateFromStoresArray)([l.default], () => l.default.getGuildIds()), n = t.some(e => (0, r.getClydeExperimentEnabled)(l.default.getGuild(e)));
+  }), t = (0, l.useStateFromStoresArray)([o.default], () => o.default.getGuildIds()), n = t.some(e => (0, a.getClydeExperimentEnabled)(o.default.getGuild(e)));
   return e && n
 }

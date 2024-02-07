@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var l = n("37983");
@@ -10,9 +10,9 @@ var a = n("414456"),
   s = n.n(a),
   i = n("77078"),
   r = n("953109"),
-  o = n("450754");
+  u = n("450754");
 
-function u(e) {
+function o(e) {
   let {
     className: t,
     embeddedApps: n,
@@ -21,23 +21,23 @@ function u(e) {
   if (n.length <= 0) return null;
   {
     if (1 === n.length) return (0, l.jsx)("div", {
-      className: s(o.container, t, a && o.modeMuted),
+      className: s(u.container, t, a && u.modeMuted),
       children: (0, l.jsx)(r.default, {
         game: n[0].application,
-        className: o.icon20px
+        className: u.icon20px
       })
     });
     let e = n.length - 1;
     return (0, l.jsxs)("div", {
-      className: s(o.container, t, a && o.modeMuted),
+      className: s(u.container, t, a && u.modeMuted),
       children: [(0, l.jsx)(r.default, {
         game: n[0].application,
-        className: o.icon20px
+        className: u.icon20px
       }), 2 === n.length ? (0, l.jsx)(r.default, {
         game: n[1].application,
-        className: o.icon20px
+        className: u.icon20px
       }) : (0, l.jsx)(i.Text, {
-        className: o.overflow,
+        className: u.overflow,
         variant: "text-xs/bold",
         color: "interactive-active",
         children: "+".concat(e)

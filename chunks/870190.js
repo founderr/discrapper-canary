@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("42203"),
-  s = n("525065"),
+var s = n("42203"),
+  a = n("525065"),
   l = n("957255"),
   i = n("697218"),
   r = n("49111");
@@ -24,13 +24,13 @@ function d(e) {
 
 function u(e) {
   return null != e && d(e) && function(e) {
-    let t = a.default.getChannel(e);
+    let t = s.default.getChannel(e);
     if (null == t) return !1;
     if (t.type === r.ChannelTypes.DM || t.type === r.ChannelTypes.GROUP_DM) return !0;
     if (l.default.canWithPartialContext(r.Permissions.MANAGE_MESSAGES, {
         channelId: e
       })) {
-      let e = s.default.getMemberCount(t.getGuildId());
+      let e = a.default.getMemberCount(t.getGuildId());
       return null != e && e >= 50
     }
     return !1

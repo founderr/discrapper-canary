@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   default: function() {
-    return N
+    return S
   }
 }), n("222007");
 var s = n("37983"),
@@ -26,34 +26,34 @@ let I = 190,
     type: m.ChannelTypes.DM
   });
 
-function N(e) {
+function S(e) {
   let {
     sectionTitle: t,
     errors: n,
     onTextChange: a,
     pendingText: f,
     placeholder: m,
-    currentText: N,
-    className: S,
-    innerClassName: P,
+    currentText: S,
+    className: P,
+    innerClassName: N,
     disabled: T = !1,
     disableThemedBackground: C = !1
-  } = e, [A, O] = r.useState(null != f ? f : N), [h, R] = r.useState((0, c.toRichValue)(A)), g = r.useRef(!1);
+  } = e, [A, O] = r.useState(null != f ? f : S), [h, R] = r.useState((0, c.toRichValue)(A)), g = r.useRef(!1);
   return r.useEffect(() => {
     g.current = !0
   }, []), r.useEffect(() => {
     if (void 0 === f) {
-      let e = (0, c.toRichValue)(N);
-      O(N), R(e)
+      let e = (0, c.toRichValue)(S);
+      O(S), R(e)
     }
-  }, [f, N]), (0, s.jsx)("div", {
-    className: l(E.body, S),
+  }, [f, S]), (0, s.jsx)("div", {
+    className: l(E.body, P),
     children: (0, s.jsxs)(d.default, {
       title: t,
       errors: n,
       disabled: T,
       children: [(0, s.jsx)(o.default, {
-        innerClassName: l(E.textArea, P),
+        innerClassName: l(E.textArea, N),
         editorClassName: E.editorTextArea,
         maxCharacterCount: I,
         onChange: function(e, t, n) {

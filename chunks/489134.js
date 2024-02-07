@@ -1,20 +1,20 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return n
+    return u
   }
 });
-var n, l = r("407788");
-n = class e extends l.default {
+var u, l = r("407788");
+u = class e extends l.default {
   static fromServer(t) {
     let {
       purchased_at: r,
-      purchase_type: n,
+      purchase_type: u,
       ...l
     } = t;
     return new e({
       ...super.fromServer(l),
-      purchaseType: n,
+      purchaseType: u,
       purchasedAt: null != r ? new Date(r) : r
     })
   }

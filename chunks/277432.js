@@ -1,64 +1,64 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return M
   }
 }), n("222007"), n("424973");
 var i = n("37983"),
   r = n("884691"),
-  s = n("446674"),
-  l = n("95410"),
+  l = n("446674"),
+  s = n("95410"),
   o = n("77078"),
   a = n("430568"),
   u = n("901582"),
   c = n("679653"),
   d = n("419830"),
   f = n("86678"),
-  E = n("145106"),
-  _ = n("385976"),
-  I = n("42203"),
-  h = n("923959"),
-  p = n("27618"),
-  S = n("697218"),
-  T = n("882641"),
-  C = n("145131"),
-  N = n("476765"),
-  v = n("593195"),
-  m = n("991170"),
-  R = n("59811"),
-  A = n("310457"),
-  g = n("805828"),
+  h = n("145106"),
+  p = n("385976"),
+  C = n("42203"),
+  E = n("923959"),
+  _ = n("27618"),
+  v = n("697218"),
+  m = n("882641"),
+  g = n("145131"),
+  I = n("476765"),
+  S = n("593195"),
+  A = n("991170"),
+  N = n("59811"),
+  T = n("310457"),
+  w = n("805828"),
   L = n("49111"),
-  M = n("958706"),
-  U = n("782340"),
-  P = n("306978"),
-  O = e => {
+  x = n("958706"),
+  y = n("782340"),
+  b = n("306978"),
+  M = e => {
     var t, n;
     let {
-      guildId: O,
-      welcomeChannel: D,
-      transitionState: x,
-      onSave: y,
-      onClose: w
-    } = e, G = (0, N.useUID)(), [b, j] = r.useState(null != D ? D.channel_id : null), [F, V] = r.useState(null != D ? D.description : ""), [B, H] = r.useState(null != D ? {
-      id: D.emoji_id,
-      name: D.emoji_name
-    } : null), [k, W] = r.useState(!1), Z = (0, s.useStateFromStores)([_.default], () => (null == B ? void 0 : B.id) != null ? _.default.getUsableCustomEmojiById(B.id) : null), Y = (0, s.useStateFromStores)([h.default], () => h.default.getChannels(O)[h.GUILD_SELECTABLE_CHANNELS_KEY], [O]), z = (0, s.useStateFromStores)([R.default], () => R.default.get(O)), K = null !== (n = null == z ? void 0 : null === (t = z.welcome_channels) || void 0 === t ? void 0 : t.map(e => e.channel_id)) && void 0 !== n ? n : [], [q, X] = r.useState(!1);
+      guildId: M,
+      welcomeChannel: R,
+      transitionState: O,
+      onSave: P,
+      onClose: D
+    } = e, j = (0, I.useUID)(), [U, F] = r.useState(null != R ? R.channel_id : null), [k, V] = r.useState(null != R ? R.description : ""), [B, H] = r.useState(null != R ? {
+      id: R.emoji_id,
+      name: R.emoji_name
+    } : null), [W, G] = r.useState(!1), z = (0, l.useStateFromStores)([p.default], () => (null == B ? void 0 : B.id) != null ? p.default.getUsableCustomEmojiById(B.id) : null), Z = (0, l.useStateFromStores)([E.default], () => E.default.getChannels(M)[E.GUILD_SELECTABLE_CHANNELS_KEY], [M]), K = (0, l.useStateFromStores)([N.default], () => N.default.get(M)), Y = null !== (n = null == K ? void 0 : null === (t = K.welcome_channels) || void 0 === t ? void 0 : t.map(e => e.channel_id)) && void 0 !== n ? n : [], [q, X] = r.useState(!1);
     r.useEffect(() => {
-      !l.default.get(g.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) && setTimeout(() => X(!0), 300)
+      !s.default.get(w.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) && setTimeout(() => X(!0), 300)
     }, []);
     let J = [];
-    Y.forEach(e => {
+    Z.forEach(e => {
       let {
         channel: t
       } = e;
-      m.default.canEveryoneRole(L.Permissions.VIEW_CHANNEL, t) && ((null == D ? void 0 : D.channel_id) === t.id || !K.includes(t.id)) && J.push({
+      A.default.canEveryoneRole(L.Permissions.VIEW_CHANNEL, t) && ((null == R ? void 0 : R.channel_id) === t.id || !Y.includes(t.id)) && J.push({
         value: t.id,
-        label: (0, c.computeChannelName)(t, S.default, p.default)
+        label: (0, c.computeChannelName)(t, v.default, _.default)
       })
     });
     let Q = () => {
-        X(!1), w()
+        X(!1), D()
       },
       $ = r.useCallback(e => V(e), []),
       ee = e => {
@@ -76,37 +76,37 @@ var i = n("37983"),
         })
       },
       et = r.useCallback(() => {
-        l.default.set(g.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY, !0), X(!1)
+        s.default.set(w.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY, !0), X(!1)
       }, []);
     return (0, i.jsx)(u.default, {
       page: L.AnalyticsPages.CHANNEL_WELCOME_CREATE_MODAL,
       children: (0, i.jsxs)(o.ModalRoot, {
-        transitionState: x,
-        "aria-labelledby": G,
+        transitionState: O,
+        "aria-labelledby": j,
         children: [(0, i.jsxs)("div", {
-          className: P.modalContents,
+          className: b.modalContents,
           children: [(0, i.jsx)(o.ModalCloseButton, {
             onClick: Q,
-            className: P.closeButton
+            className: b.closeButton
           }), (0, i.jsx)(o.Heading, {
             variant: "heading-md/semibold",
-            className: P.headerText,
-            id: G,
-            children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SELECT_A_CHANNEL
+            className: b.headerText,
+            id: j,
+            children: y.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SELECT_A_CHANNEL
           }), (0, i.jsxs)(o.FormSection, {
-            className: P.formGroup,
+            className: b.formGroup,
             children: [(0, i.jsx)(o.SearchableSelect, {
               options: J,
-              onChange: e => j(e),
-              value: b,
+              onChange: e => F(e),
+              value: U,
               renderOptionPrefix: e => {
                 var t;
                 if (null === e) return null;
                 let n = e.value,
-                  r = I.default.getChannel(n),
-                  s = null !== (t = (0, d.getChannelIconComponent)(r)) && void 0 !== t ? t : v.default;
-                return (0, i.jsx)(s, {
-                  className: P.channelTitleIcon,
+                  r = C.default.getChannel(n),
+                  l = null !== (t = (0, d.getChannelIconComponent)(r)) && void 0 !== t ? t : S.default;
+                return (0, i.jsx)(l, {
+                  className: b.channelTitleIcon,
                   width: 16,
                   height: 16
                 })
@@ -114,51 +114,51 @@ var i = n("37983"),
             }), (0, i.jsx)(o.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
-              className: P.formDescription,
-              children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ONLY_VIEWABLE_CHANNELS
+              className: b.formDescription,
+              children: y.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ONLY_VIEWABLE_CHANNELS
             })]
           }), (0, i.jsx)(o.FormDivider, {}), (0, i.jsx)(o.Heading, {
             variant: "heading-md/semibold",
-            className: P.headerText,
-            children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SET_DESCRIPTION
+            className: b.headerText,
+            children: y.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SET_DESCRIPTION
           }), (0, i.jsx)(o.FormSection, {
-            className: P.formGroup,
+            className: b.formGroup,
             children: (0, i.jsx)(o.TextInput, {
               maxLength: 42,
-              value: F,
-              inputClassName: P.input,
-              placeholder: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_CHANNEL_DESCRIPTION_PLACEHOLDER,
+              value: k,
+              inputClassName: b.input,
+              placeholder: y.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_CHANNEL_DESCRIPTION_PLACEHOLDER,
               onChange: $
             })
           }), (0, i.jsx)(o.FormDivider, {}), (0, i.jsx)(o.FormSection, {
-            className: P.formGroup,
+            className: b.formGroup,
             children: (0, i.jsxs)("div", {
-              className: P.emojiSectionContainer,
+              className: b.emojiSectionContainer,
               children: [(0, i.jsxs)("div", {
-                className: P.emojiTitleContainer,
+                className: b.emojiTitleContainer,
                 children: [(0, i.jsx)(o.Heading, {
                   variant: "heading-md/semibold",
-                  children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PICK_EMOJI
+                  children: y.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PICK_EMOJI
                 }), (0, i.jsx)(o.Text, {
                   variant: "text-xs/normal",
                   color: "text-muted",
-                  children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PICK_EMOJI_UPSELL
+                  children: y.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PICK_EMOJI_UPSELL
                 })]
-              }), (0, i.jsx)(E.default, {
+              }), (0, i.jsx)(h.default, {
                 hasSetEmoji: null != B,
                 onClick: ee,
                 children: (0, i.jsx)(o.Popout, {
                   renderPopout: e => {
                     let {
                       closePopout: t
-                    } = e, n = h.default.getDefaultChannel(O);
+                    } = e, n = E.default.getDefaultChannel(M);
                     return (0, i.jsx)(f.default, {
-                      guildId: O,
+                      guildId: M,
                       closePopout: t,
                       onSelectEmoji: (e, n) => {
                         ee(e), n && (t(), null == e && Q())
                       },
-                      pickerIntention: M.EmojiIntention.COMMUNITY_CONTENT,
+                      pickerIntention: x.EmojiIntention.COMMUNITY_CONTENT,
                       onNavigateAway: Q,
                       channel: n
                     })
@@ -172,24 +172,24 @@ var i = n("37983"),
                     } = t;
                     return (0, i.jsx)(o.TooltipContainer, {
                       color: o.TooltipColors.BRAND,
-                      tooltipClassName: P.tooltip,
+                      tooltipClassName: b.tooltip,
                       position: "left",
-                      text: q ? U.default.Messages.WELCOME_CHANNEL_EMOJI_PICKER_TOOLTIP : null,
+                      text: q ? y.default.Messages.WELCOME_CHANNEL_EMOJI_PICKER_TOOLTIP : null,
                       forceOpen: q,
-                      children: (0, i.jsx)(T.default, {
+                      children: (0, i.jsx)(m.default, {
                         ...e,
                         onClick: t => {
                           var n;
                           et(), null === (n = e.onClick) || void 0 === n || n.call(e, t)
                         },
                         active: n,
-                        className: P.emojiButton,
+                        className: b.emojiButton,
                         tabIndex: 0,
                         renderButtonContents: null != B && (null != B.id || null != B.name) ? () => (0, i.jsx)(a.default, {
-                          className: P.emoji,
+                          className: b.emoji,
                           emojiId: B.id,
                           emojiName: B.name,
-                          animated: !!(null == Z ? void 0 : Z.animated)
+                          animated: !!(null == z ? void 0 : z.animated)
                         }) : null
                       })
                     })
@@ -199,44 +199,44 @@ var i = n("37983"),
             })
           })]
         }), (0, i.jsxs)(o.ModalFooter, {
-          className: P.footer,
-          justify: C.default.Justify.BETWEEN,
-          children: [(0, i.jsxs)(C.default, {
+          className: b.footer,
+          justify: g.default.Justify.BETWEEN,
+          children: [(0, i.jsxs)(g.default, {
             grow: 0,
-            align: C.default.Align.CENTER,
+            align: g.default.Align.CENTER,
             children: [(0, i.jsx)(o.Button, {
               onClick: Q,
               size: o.Button.Sizes.SMALL,
               look: o.Button.Looks.LINK,
               color: o.Button.Colors.PRIMARY,
-              children: U.default.Messages.CANCEL
+              children: y.default.Messages.CANCEL
             }), (0, i.jsx)(o.Button, {
               onClick: () => {
-                null != b && F.length > 0 && y({
-                  channel_id: b,
-                  description: F,
+                null != U && k.length > 0 && P({
+                  channel_id: U,
+                  description: k,
                   emoji_id: null == B ? void 0 : B.id,
                   emoji_name: null == B ? void 0 : B.name
                 }), Q()
               },
-              disabled: null == b || 0 === F.length,
-              children: U.default.Messages.SAVE
+              disabled: null == U || 0 === k.length,
+              children: y.default.Messages.SAVE
             })]
-          }), null != D && (0, i.jsx)(o.Button, {
+          }), null != R && (0, i.jsx)(o.Button, {
             onClick: () => {
-              W(!0)
+              G(!0)
             },
             size: o.Button.Sizes.MIN,
             look: o.Button.Looks.LINK,
             color: o.Button.Colors.RED,
-            children: U.default.Messages.REMOVE
+            children: y.default.Messages.REMOVE
           })]
-        }), k && (0, i.jsx)(A.default, {
+        }), W && (0, i.jsx)(T.default, {
           onConfirm: () => {
-            y(), Q()
+            P(), Q()
           },
-          onCancel: () => W(!1),
-          channelId: b
+          onCancel: () => G(!1),
+          channelId: U
         })]
       })
     })

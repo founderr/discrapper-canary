@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   resolvePlaintextInlineVoid: function() {
-    return A
+    return g
   },
   resolveApplicationCommandOption: function() {
-    return y
+    return _
   }
 }), n("222007");
 var l = n("679653"),
   i = n("980215"),
   o = n("385976"),
   a = n("867805"),
-  u = n("401690"),
-  r = n("42203"),
-  d = n("923959"),
+  r = n("401690"),
+  s = n("42203"),
+  u = n("923959"),
   c = n("26989"),
-  p = n("305961"),
-  m = n("697218"),
-  s = n("25292"),
+  d = n("305961"),
+  p = n("697218"),
+  m = n("25292"),
   f = n("149022"),
-  g = n("680894");
+  h = n("680894");
 
-function A(e, t, n, m) {
+function g(e, t, n, p) {
   let {
     allowUsers: f = !0,
-    allowRoles: A = !0
-  } = null != m ? m : {};
+    allowRoles: g = !0
+  } = null != p ? p : {};
   switch (e[0]) {
     case "@":
       return function(e, t, n, l, o) {
-        let [a, u] = e.slice(1).split("#", 2), d = null != t ? p.default.getGuild(t) : null, m = (0, i.getClydeExperimentEnabled)(d);
-        if (o && null == u && null != d) {
-          for (let e of Object.values(d.roles))
+        let [a, r] = e.slice(1).split("#", 2), u = null != t ? d.default.getGuild(t) : null, p = (0, i.getClydeExperimentEnabled)(u);
+        if (o && null == r && null != u) {
+          for (let e of Object.values(u.roles))
             if (a === e.name) return {
               type: "roleMention",
               roleId: e.id,
@@ -41,11 +41,11 @@ function A(e, t, n, m) {
             }
         }
         if (l) {
-          let e = null != n ? r.default.getChannel(n) : null;
+          let e = null != n ? s.default.getChannel(n) : null;
           if (null != e) {
             if (e.isPrivate()) {
               for (let t of e.recipients)
-                if (C(a, u, t)) return {
+                if (C(a, r, t)) return {
                   type: "userMention",
                   userId: t,
                   children: [{
@@ -58,16 +58,16 @@ function A(e, t, n, m) {
                   userId: t
                 }
                 of e)
-                if (C(a, u, t)) return {
+                if (C(a, r, t)) return {
                   type: "userMention",
                   userId: t,
                   children: [{
                     text: ""
                   }]
                 };
-              if (m && C(a, u, g.CLYDE_AI_USER_ID)) return {
+              if (p && C(a, r, h.CLYDE_AI_USER_ID)) return {
                 type: "userMention",
-                userId: g.CLYDE_AI_USER_ID,
+                userId: h.CLYDE_AI_USER_ID,
                 children: [{
                   text: ""
                 }]
@@ -76,7 +76,7 @@ function A(e, t, n, m) {
           }
         }
         return null
-      }(e, t, n, f, A);
+      }(e, t, n, f, g);
     case ":":
       return function(e, t) {
         let n = a.default.EMOJI_NAME_RE.exec(e);
@@ -105,7 +105,7 @@ function A(e, t, n, m) {
         let n;
         if (null == t) return null;
         n = e.length > 3 && '"' === e[1] && '"' === e[e.length - 1] ? (0, l.unescapeChannelName)(e.slice(2, e.length - 1)) : e.slice(1);
-        let i = d.default.getTextChannelNameDisambiguations(t);
+        let i = u.default.getTextChannelNameDisambiguations(t);
         for (let e of Object.keys(i))
           if (i[e].name === n) return {
             type: "channelMention",
@@ -114,9 +114,9 @@ function A(e, t, n, m) {
               text: ""
             }]
           };
-        for (let e of s.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS) {
-          if (e === d.GUILD_SELECTABLE_CHANNELS_KEY) continue;
-          let l = d.default.getChannels(t)[e];
+        for (let e of m.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS) {
+          if (e === u.GUILD_SELECTABLE_CHANNELS_KEY) continue;
+          let l = u.default.getChannels(t)[e];
           for (let {
               channel: e
             }
@@ -129,7 +129,7 @@ function A(e, t, n, m) {
               }]
             }
         }
-        let o = u.default.getActiveJoinedThreadsForGuild(t);
+        let o = r.default.getActiveJoinedThreadsForGuild(t);
         for (let e of Object.keys(o))
           for (let t of Object.keys(o[e])) {
             let {
@@ -149,12 +149,12 @@ function A(e, t, n, m) {
   return null
 }
 
-function y(e, t, n, l) {
-  let i = A(e, t, n, l);
+function _(e, t, n, l) {
+  let i = g(e, t, n, l);
   return null == i ? null : (0, f.voidToOptionValue)(i)
 }
 
 function C(e, t, n) {
-  let l = m.default.getUser(n);
-  return null != l && (n === g.CLYDE_AI_USER_ID && "clyde" === e.toLowerCase() || l.username === e && l.discriminator === (null != t ? t : "0"))
+  let l = p.default.getUser(n);
+  return null != l && (n === h.CLYDE_AI_USER_ID && "clyde" === e.toLowerCase() || l.username === e && l.discriminator === (null != t ? t : "0"))
 }

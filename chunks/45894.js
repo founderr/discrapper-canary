@@ -2,15 +2,15 @@
 let r;
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return E
   }
 }), n("222007");
 var i = n("917351"),
   s = n.n(i),
   a = n("446674"),
   l = n("913144"),
-  u = n("611183");
-let o = {},
+  o = n("611183");
+let u = {},
   c = {};
 
 function d(e, t) {
@@ -18,7 +18,7 @@ function d(e, t) {
 }
 
 function f(e) {
-  return null != o[e] ? o[e] : (o[e] = {}, o[e])
+  return null != u[e] ? u[e] : (u[e] = {}, u[e])
 }
 
 function p(e) {
@@ -43,7 +43,7 @@ class _ extends a.default.Store {
   }
 }
 _.displayName = "WebhooksStore";
-var m = new _(l.default, {
+var E = new _(l.default, {
   WEBHOOKS_UPDATE: function(e) {
     let {
       guildId: t,
@@ -52,13 +52,13 @@ var m = new _(l.default, {
       error: a
     } = e;
     if (null == i) {
-      null != a ? (r = a, delete c[d(t, n)]) : null != n && null != o[t] && (r = null, u.default.fetchForChannel(t, n));
+      null != a ? (r = a, delete c[d(t, n)]) : null != n && null != u[t] && (r = null, o.default.fetchForChannel(t, n));
       return
     }
     r = null;
     let l = [];
     null != n && (l = s(f(t)).values().filter(e => e.channel_id !== n).value());
-    let p = o[t] = {};
+    let p = u[t] = {};
     l.concat(i).forEach(e => p[e.id] = e), delete c[d(t, n)]
   },
   WEBHOOKS_FETCHING: function(e) {

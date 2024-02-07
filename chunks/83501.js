@@ -7,43 +7,43 @@ t.r(A), t.d(A, {
     return c
   }
 }), t("222007");
-var a, n, l = t("37983"),
-  r = t("884691"),
-  s = t("77078"),
-  o = t("191814"),
-  i = t("423487"),
+var a, l, n = t("37983"),
+  s = t("884691"),
+  r = t("77078"),
+  i = t("191814"),
+  o = t("423487"),
   d = t("782340"),
   u = t("55472");
-(n = a || (a = {})).DANGER = "danger", n.WARNING = "warning";
+(l = a || (a = {})).DANGER = "danger", l.WARNING = "warning";
 
 function c(e) {
   let {
     transitionState: A,
     onClose: t,
     title: a,
-    body: n,
+    body: l,
     cta: c,
     closeLabel: f,
-    onConfirm: C,
-    iconVariant: g = "warning"
-  } = e, [T, h] = r.useState(!1), m = async () => {
-    h(!0);
+    onConfirm: g,
+    iconVariant: C = "warning"
+  } = e, [h, T] = s.useState(!1), m = async () => {
+    T(!0);
     try {
-      await C(), t()
+      await g(), t()
     } finally {
-      h(!1)
+      T(!1)
     }
   }, U = null != a ? a : d.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
-  return (0, l.jsxs)(s.ModalRoot, {
+  return (0, n.jsxs)(r.ModalRoot, {
     className: u.container,
-    size: s.ModalSize.DYNAMIC,
+    size: r.ModalSize.DYNAMIC,
     transitionState: A,
     "aria-label": U,
-    children: [(0, l.jsxs)(s.ModalContent, {
+    children: [(0, n.jsxs)(r.ModalContent, {
       className: u.content,
-      children: [(0, l.jsxs)("div", {
+      children: [(0, n.jsxs)("div", {
         className: u.header,
-        children: [(0, l.jsx)(i.default, {
+        children: [(0, n.jsx)(o.default, {
           width: 20,
           height: 20,
           className: function(e) {
@@ -53,35 +53,35 @@ function c(e) {
               case "warning":
                 return u.warningIcon
             }
-          }(g)
-        }), (0, l.jsx)(o.default, {
+          }(C)
+        }), (0, n.jsx)(i.default, {
           size: 8,
           horizontal: !0
-        }), (0, l.jsx)(s.Heading, {
+        }), (0, n.jsx)(r.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
           children: U
         })]
-      }), (0, l.jsx)(o.default, {
+      }), (0, n.jsx)(i.default, {
         size: 12
-      }), (0, l.jsx)(s.Text, {
+      }), (0, n.jsx)(r.Text, {
         variant: "text-md/normal",
         color: "text-muted",
         className: u.body,
-        children: n
+        children: l
       })]
-    }), (0, l.jsxs)(s.ModalFooter, {
-      children: [(0, l.jsx)(s.Button, {
-        color: s.Button.Colors.BRAND,
+    }), (0, n.jsxs)(r.ModalFooter, {
+      children: [(0, n.jsx)(r.Button, {
+        color: r.Button.Colors.BRAND,
         onClick: m,
-        submitting: T,
+        submitting: h,
         children: c
-      }), (0, l.jsx)(o.default, {
+      }), (0, n.jsx)(i.default, {
         size: 12,
         horizontal: !0
-      }), null != f && (0, l.jsx)(s.Button, {
-        color: s.Button.Colors.PRIMARY,
-        look: s.Button.Looks.OUTLINED,
+      }), null != f && (0, n.jsx)(r.Button, {
+        color: r.Button.Colors.PRIMARY,
+        look: r.Button.Looks.OUTLINED,
         onClick: t,
         children: f
       })]

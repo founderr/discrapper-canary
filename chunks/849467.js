@@ -1,41 +1,41 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return r
   }
 });
-var r = s("37983");
-s("884691");
-var a = s("469563"),
-  n = s("696675"),
-  l = s("75196"),
-  i = (0, a.replaceIcon)(function(e) {
+var l = n("37983");
+n("884691");
+var u = n("469563"),
+  i = n("696675"),
+  a = n("75196"),
+  r = (0, u.replaceIcon)(function(e) {
     let {
       width: t = 24,
-      height: s = 24,
-      color: a = "currentColor",
-      foreground: n,
-      ...i
+      height: n = 24,
+      color: u = "currentColor",
+      foreground: i,
+      ...r
     } = e;
-    return (0, r.jsxs)("svg", {
-      ...(0, l.default)(i),
+    return (0, l.jsxs)("svg", {
+      ...(0, a.default)(r),
       width: t,
-      height: s,
+      height: n,
       viewBox: "0 0 24 24",
-      children: [(0, r.jsx)("path", {
+      children: [(0, l.jsx)("path", {
         fillRule: "evenodd",
         clipRule: "evenodd",
         d: "M14.99 11C14.99 12.66 13.66 14 12 14C10.34 14 9 12.66 9 11V5C9 3.34 10.34 2 12 2C13.66 2 15 3.34 15 5L14.99 11ZM12 16.1C14.76 16.1 17.3 14 17.3 11H19C19 14.42 16.28 17.24 13 17.72V21H11V17.72C7.72 17.23 5 14.41 5 11H6.7C6.7 14 9.24 16.1 12 16.1ZM12 4C11.2 4 11 4.66667 11 5V11C11 11.3333 11.2 12 12 12C12.8 12 13 11.3333 13 11V5C13 4.66667 12.8 4 12 4Z",
-        className: n,
-        fill: a
-      }), (0, r.jsx)("path", {
+        className: i,
+        fill: u
+      }), (0, l.jsx)("path", {
         fillRule: "evenodd",
         clipRule: "evenodd",
         d: "M14.99 11C14.99 12.66 13.66 14 12 14C10.34 14 9 12.66 9 11V5C9 3.34 10.34 2 12 2C13.66 2 15 3.34 15 5L14.99 11ZM12 16.1C14.76 16.1 17.3 14 17.3 11H19C19 14.42 16.28 17.24 13 17.72V22H11V17.72C7.72 17.23 5 14.41 5 11H6.7C6.7 14 9.24 16.1 12 16.1Z",
-        className: n,
-        fill: a
+        className: i,
+        fill: u
       })]
     })
-  }, n.MicrophoneIcon, void 0, {
+  }, i.MicrophoneIcon, void 0, {
     size: 24
   })

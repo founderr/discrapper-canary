@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var r = n("37983"),
-  s = n("884691"),
-  u = n("627445"),
-  o = n.n(u),
+  u = n("884691"),
+  i = n("627445"),
+  a = n.n(i),
   l = n("245187"),
-  i = n("635357"),
-  a = n("642906"),
+  s = n("635357"),
+  o = n("642906"),
   c = n("85336"),
   d = n("628738"),
   f = n("49111");
@@ -20,33 +20,33 @@ function p(e) {
     handleStepChange: t,
     handleClose: n
   } = e, {
-    blockedPayments: u,
+    blockedPayments: i,
     hasFetchedSkus: p,
-    paymentSources: E,
-    hasFetchedPaymentSources: _,
-    application: I,
-    skusById: h,
-    selectedSkuId: R
-  } = (0, a.usePaymentContext)(), {
-    isGift: v
-  } = (0, i.useGiftContext)(), [S, x] = s.useState(!0);
-  return (s.useEffect(() => {
-    let e = null != I;
-    p && _ && e && x(!1)
-  }, [p, _, I]), s.useEffect(() => {
-    if (S || u) return;
-    o(null != R, "Expected selectedSkuId");
-    let e = h[R];
-    if (v && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
+    paymentSources: P,
+    hasFetchedPaymentSources: S,
+    application: h,
+    skusById: m,
+    selectedSkuId: x
+  } = (0, o.usePaymentContext)(), {
+    isGift: C
+  } = (0, s.useGiftContext)(), [I, E] = u.useState(!0);
+  return (u.useEffect(() => {
+    let e = null != h;
+    p && S && e && E(!1)
+  }, [p, S, h]), u.useEffect(() => {
+    if (I || i) return;
+    a(null != x, "Expected selectedSkuId");
+    let e = m[x];
+    if (C && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
       t(c.Step.GIFT_CUSTOMIZATION);
       return
     }
-    if (0 === Object.keys(E).length) {
+    if (0 === Object.keys(P).length) {
       t(c.Step.ADD_PAYMENT_STEPS);
       return
     }
     t(c.Step.REVIEW)
-  }, [S, u, t, E, v, h, R]), S) ? (0, r.jsx)(d.default, {}) : u ? (0, r.jsx)(l.BlockedPaymentsContentModal, {
+  }, [I, i, t, P, C, m, x]), I) ? (0, r.jsx)(d.default, {}) : i ? (0, r.jsx)(l.BlockedPaymentsContentModal, {
     onClose: n
   }) : null
 }

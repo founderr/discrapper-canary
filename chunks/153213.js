@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("77078"),
-  o = n("86678"),
-  s = n("538282"),
-  a = n("882641"),
+  a = n("77078"),
+  s = n("86678"),
+  r = n("538282"),
+  o = n("882641"),
   u = n("848471"),
   d = n("958706"),
   c = n("223797");
@@ -22,7 +22,7 @@ function f(e) {
     channel: p
   } = e, m = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), h = i.useCallback((e, t) => {
     let l = n.current;
-    null != e && null != l && l.insertEmoji(e, t, !1), t && (0, s.closeExpressionPicker)()
+    null != e && null != l && l.insertEmoji(e, t, !1), t && (0, r.closeExpressionPicker)()
   }, [n]);
   return null == m ? null : (0, l.jsxs)("div", {
     id: "slate-toolbar",
@@ -35,12 +35,12 @@ function f(e) {
         iconClassName: c.staticIcon,
         dividerClassName: c.staticDivider
       })
-    }), (0, l.jsx)(r.Popout, {
+    }), (0, l.jsx)(a.Popout, {
       renderPopout: e => {
         let {
           closePopout: t
         } = e;
-        return (0, l.jsx)(o.default, {
+        return (0, l.jsx)(s.default, {
           persistSearch: !0,
           channel: p,
           closePopout: t,
@@ -51,13 +51,13 @@ function f(e) {
         })
       },
       position: "bottom",
-      animation: r.Popout.Animation.NONE,
+      animation: a.Popout.Animation.NONE,
       align: "left",
       children: (e, t) => {
         let {
           isShown: n
         } = t;
-        return (0, l.jsx)(a.default, {
+        return (0, l.jsx)(o.default, {
           ...e,
           active: n,
           className: c.emojiButton,

@@ -1,34 +1,34 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
-var n = i("37983");
-i("884691");
-var s = i("77078"),
-  l = i("945330"),
-  r = i("51947"),
-  a = i("994428"),
-  o = i("782340"),
-  u = i("580612"),
-  c = e => {
+var l = n("37983");
+n("884691");
+var i = n("77078"),
+  a = n("945330"),
+  s = n("51947"),
+  r = n("994428"),
+  o = n("782340"),
+  u = n("580612"),
+  d = e => {
     let {
       markAsDismissed: t
     } = e;
-    return (0, n.jsxs)("div", {
+    return (0, l.jsxs)("div", {
       className: u.wrapper,
-      children: [(0, n.jsx)(r.default, {
+      children: [(0, l.jsx)(s.default, {
         className: u.icon
-      }), (0, n.jsx)("div", {
+      }), (0, l.jsx)("div", {
         className: u.content,
-        children: (0, n.jsx)(s.Text, {
+        children: (0, l.jsx)(i.Text, {
           variant: "text-xs/normal",
           children: o.default.Messages.EMOJI_PICKER_FAVORITES_TIP
         })
-      }), (0, n.jsx)(s.Clickable, {
-        onClick: () => t(a.ContentDismissActionType.UNKNOWN),
-        children: (0, n.jsx)(l.default, {
+      }), (0, l.jsx)(i.Clickable, {
+        onClick: () => t(r.ContentDismissActionType.UNKNOWN),
+        children: (0, l.jsx)(a.default, {
           className: u.close
         })
       })]

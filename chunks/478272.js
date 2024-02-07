@@ -1,45 +1,45 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return o
   }
 });
-var i = a("37983");
-a("884691");
-var s = a("77078"),
-  r = a("974889"),
-  n = a("954016"),
-  l = a("49111");
+var l = n("37983");
+n("884691");
+var i = n("77078"),
+  a = n("974889"),
+  s = n("954016"),
+  r = n("49111");
 
 function o(e) {
   let {
     channel: t,
     guildId: o,
-    locationObject: d,
-    openInPopout: c,
-    initialSelectedApplicationId: u,
-    initialSlide: h = n.ActivityShelfSlides.DIRECTORY,
-    enableSelectedTextChannelInvite: f = !1,
-    analyticsLocations: p
+    locationObject: u,
+    openInPopout: d,
+    initialSelectedApplicationId: c,
+    initialSlide: f = s.ActivityShelfSlides.DIRECTORY,
+    enableSelectedTextChannelInvite: p = !1,
+    analyticsLocations: m
   } = e;
-  c && (0, r.default)(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  let _ = c ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
-  return (0, s.openModalLazy)(async () => {
+  d && (0, a.default)(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  let h = d ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+  return (0, i.openModalLazy)(async () => {
     let {
       default: e
-    } = await a.el("605455").then(a.bind(a, "605455"));
-    return a => (0, i.jsx)(e, {
-      ...a,
+    } = await n.el("605455").then(n.bind(n, "605455"));
+    return n => (0, l.jsx)(e, {
+      ...n,
       channel: t,
       guildId: o,
-      locationObject: d,
-      initialSlide: h,
-      initialSelectedApplicationId: u,
-      enableSelectedTextChannelInvite: f,
-      analyticsLocations: p
+      locationObject: u,
+      initialSlide: f,
+      initialSelectedApplicationId: c,
+      enableSelectedTextChannelInvite: p,
+      analyticsLocations: m
     })
   }, {
-    modalKey: n.ACTIVITY_SHELF_WEB_MODAL_KEY,
-    contextKey: _
+    modalKey: s.ACTIVITY_SHELF_WEB_MODAL_KEY,
+    contextKey: h
   })
 }

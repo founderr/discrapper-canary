@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return E
   },
   getOptionNames: function() {
-    return S
+    return g
   },
   getOptionValues: function() {
-    return g
+    return S
   },
   optionToValues: function() {
     return C
@@ -22,15 +22,15 @@ n.r(t), n.d(t, {
     return v
   },
   findTextOptions: function() {
-    return y
+    return I
   }
 }), n("424973"), n("222007");
 var l = n("798609"),
   i = n("507217"),
-  r = n("383018"),
-  o = n("343952"),
-  s = n("474643"),
-  a = n("18494"),
+  a = n("383018"),
+  s = n("343952"),
+  r = n("474643"),
+  o = n("18494"),
   u = n("585722"),
   d = n("149022"),
   c = n("970153"),
@@ -58,7 +58,7 @@ function E(e) {
   return i
 }
 
-function S(e) {
+function g(e) {
   let t = h(e),
     n = [],
     l = null == t ? void 0 : t[0].children;
@@ -67,14 +67,14 @@ function S(e) {
   return n
 }
 
-function g(e, t) {
+function S(e, t) {
   let n = {};
   if (null == t.options) return {};
   let l = h(e),
     i = Object.fromEntries(t.options.map(e => [e.name, e])),
-    r = null == l ? void 0 : l[0].children;
-  if (null != r) {
-    for (let t of r)
+    a = null == l ? void 0 : l[0].children;
+  if (null != a) {
+    for (let t of a)
       if (f.NodeUtils.isType(t, "applicationCommandOption")) {
         let l = i[t.optionName];
         null != l && (n[t.optionName] = C(e, l, t))
@@ -84,15 +84,15 @@ function g(e, t) {
 }
 
 function C(e, t, n) {
-  let i = a.default.getCurrentlySelectedChannelId(),
-    r = n.children.map(n => {
+  let i = o.default.getCurrentlySelectedChannelId(),
+    a = n.children.map(n => {
       if (t.type === l.ApplicationCommandOptionType.ATTACHMENT) {
-        let e = u.default.getUpload(i, t.name, s.DraftType.SlashCommand);
+        let e = u.default.getUpload(i, t.name, r.DraftType.SlashCommand);
         if (null != e) {
-          var r;
+          var a;
           return {
             type: "text",
-            text: null !== (r = e.filename) && void 0 !== r ? r : ""
+            text: null !== (a = e.filename) && void 0 !== a ? a : ""
           }
         }
       }
@@ -112,38 +112,38 @@ function C(e, t, n) {
       }
     });
   if (t.type !== l.ApplicationCommandOptionType.STRING) {
-    for (; r.length > 0 && "text" === r[0].type && "" === r[0].text.trim();) r.shift();
-    for (; r.length > 0 && "text" === r[r.length - 1].type && "" === r[r.length - 1].text.trim();) r.pop()
+    for (; a.length > 0 && "text" === a[0].type && "" === a[0].text.trim();) a.shift();
+    for (; a.length > 0 && "text" === a[a.length - 1].type && "" === a[a.length - 1].text.trim();) a.pop()
   }
-  return r
+  return a
 }
 
-function T(e, t, n, l, r) {
+function T(e, t, n, l, a) {
   if (null == e.options) return {};
-  let s = Object.fromEntries(e.options.map(e => {
+  let r = Object.fromEntries(e.options.map(e => {
     var i;
-    return [e.name, o.validateOptionContent({
+    return [e.name, s.validateOptionContent({
       option: e,
       content: null !== (i = l[e.name]) && void 0 !== i ? i : null,
       guildId: t,
       channelId: n,
-      allowEmptyValues: r
+      allowEmptyValues: a
     })]
   }));
-  return i.updateOptionValidationStates(n, s), s
+  return i.updateOptionValidationStates(n, r), r
 }
 
-function v(e, t, n, l, s) {
-  var a;
-  let [u] = l, d = r.default.getActiveCommand(n), c = null == d ? void 0 : null === (a = d.options) || void 0 === a ? void 0 : a.find(e => e.name === u.optionName);
+function v(e, t, n, l, r) {
+  var o;
+  let [u] = l, d = a.default.getActiveCommand(n), c = null == d ? void 0 : null === (o = d.options) || void 0 === o ? void 0 : o.find(e => e.name === u.optionName);
   if (null == c) return;
   let f = C(e, c, u),
-    p = o.validateOptionContent({
+    p = s.validateOptionContent({
       option: c,
       content: f,
       guildId: t,
       channelId: n,
-      allowEmptyValues: s
+      allowEmptyValues: r
     });
   return i.updateOptionStates(n, {
     [u.optionName]: {
@@ -152,15 +152,15 @@ function v(e, t, n, l, s) {
   }), p
 }
 
-function y(e, t) {
+function I(e, t) {
   if (null == t.options || 0 === t.options.length) return [];
   let n = f.EditorUtils.richValue(e),
     l = [],
-    i = new Set(S(e)),
-    r = {},
-    o = new Set;
-  for (let e of t.options) r[e.displayName] = e, !i.has(e.name) && o.add(e.displayName);
-  let s = null;
+    i = new Set(g(e)),
+    a = {},
+    s = new Set;
+  for (let e of t.options) a[e.displayName] = e, !i.has(e.name) && s.add(e.displayName);
+  let r = null;
   for (let t = 0; t < n.length; t++) {
     let i = n[t];
     if ("line" === i.type || "applicationCommand" === i.type)
@@ -169,12 +169,12 @@ function y(e, t) {
         let p = i.children[u],
           h = [t, u];
         if (f.NodeUtils.isType(p, "applicationCommandOption")) {
-          if (null != s) {
-            var a;
-            s.valueRange.focus = null !== (a = f.EditorUtils.before(e, h)) && void 0 !== a ? a : f.EditorUtils.start(e, []), s.text = (0, c.toTextValue)(n, {
+          if (null != r) {
+            var o;
+            r.valueRange.focus = null !== (o = f.EditorUtils.before(e, h)) && void 0 !== o ? o : f.EditorUtils.start(e, []), r.text = (0, c.toTextValue)(n, {
               mode: "raw",
-              range: s.valueRange
-            }).trim(), l.push(s), s = null
+              range: r.valueRange
+            }).trim(), l.push(r), r = null
           }
           continue
         }
@@ -182,21 +182,21 @@ function y(e, t) {
           for (m.lastIndex = 0; null != (d = m.exec(p.text));) {
             if (0 !== d.index && null == p.text.charAt(d.index - 1).match(/(\t|\s)/)) continue;
             let e = d[1];
-            if (!o.has(e)) continue;
-            o.delete(e);
-            let t = r[e];
+            if (!s.has(e)) continue;
+            s.delete(e);
+            let t = a[e];
             if (null == t) continue;
             let i = {
                 path: h,
                 offset: d.index
               },
-              a = {
+              o = {
                 path: h,
                 offset: i.offset + d[0].length
               },
               u = {
                 path: h,
-                offset: a.offset
+                offset: o.offset
               },
               f = {
                 name: t.name,
@@ -204,7 +204,7 @@ function y(e, t) {
                 type: t.type,
                 keyRange: {
                   anchor: i,
-                  focus: a
+                  focus: o
                 },
                 valueRange: {
                   anchor: u,
@@ -212,15 +212,15 @@ function y(e, t) {
                 },
                 text: ""
               };
-            null != s && (s.valueRange.focus = f.keyRange.anchor, s.text = (0, c.toTextValue)(n, {
+            null != r && (r.valueRange.focus = f.keyRange.anchor, r.text = (0, c.toTextValue)(n, {
               mode: "raw",
-              range: s.valueRange
-            }).trim(), l.push(s)), s = f
+              range: r.valueRange
+            }).trim(), l.push(r)), r = f
           }
       }
   }
-  return null != s && (s.valueRange.focus = f.EditorUtils.end(e, []), s.text = (0, c.toTextValue)(n, {
+  return null != r && (r.valueRange.focus = f.EditorUtils.end(e, []), r.text = (0, c.toTextValue)(n, {
     mode: "raw",
-    range: s.valueRange
-  }).trim(), l.push(s)), l
+    range: r.valueRange
+  }).trim(), l.push(r)), l
 }

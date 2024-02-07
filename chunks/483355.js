@@ -61,16 +61,16 @@ function y(e, t) {
         })
       }),
       function() {
-        if (C) return;
+        if (O) return;
         let e = g.default.requireModule("discord_overlay2");
         e.setClickZoneCallback((e, t, n) => {
           let i = v.get(e);
           null != i && (!E && (m.x = t, m.y = n), i.instance.click())
-        }), C = !0
+        }), O = !0
       }()
   }
 }
-let C = !1;
+let O = !1;
 (i = class extends l.PureComponent {
   componentDidMount() {
     this.props.observe ? this.observeZone() : this.updateZone()

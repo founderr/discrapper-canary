@@ -1,43 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return T
   }
 });
-var r = n("597755"),
-  i = n.n(r),
-  s = n("742270"),
-  l = n("815157"),
-  u = n("391679"),
-  a = n("327037"),
+var a = n("597755"),
+  l = n.n(a),
+  i = n("742270"),
+  r = n("815157"),
+  s = n("391679"),
+  u = n("327037"),
   o = n("393414"),
   c = n("271938"),
   d = n("476108"),
   f = n("599110"),
   I = n("65300"),
   _ = n("49111");
-async function E(e) {
+async function S(e) {
   var t, n;
-  let r = null === (t = i.os) || void 0 === t ? void 0 : t.family;
-  if ("Android" === r || "iOS" === r) {
+  let a = null === (t = l.os) || void 0 === t ? void 0 : t.family;
+  if ("Android" === a || "iOS" === a) {
     let t = null !== (n = c.default.getFingerprint()) && void 0 !== n ? n : c.default.getId(),
-      r = (0, l.generateAttemptId)();
+      a = (0, r.generateAttemptId)();
     if (null == t && c.default.isAuthenticated()) try {
-      await (0, a.fetchCurrentUser)(), t = c.default.getId()
+      await (0, u.fetchCurrentUser)(), t = c.default.getId()
     } catch {}
-    return (0, l.default)((0, s.getDefaultDynamicLinkTemplate)(), {
+    return (0, r.default)((0, i.getDefaultDynamicLinkTemplate)(), {
       utmSource: e,
       fingerprint: t,
-      attemptId: r
+      attemptId: a
     })
   }
   return "discord://"
 }
-async function S(e) {
-  let t = await E(e),
-    n = (0, l.parseDynamicLink)(t);
+async function T(e) {
+  let t = await S(e),
+    n = (0, r.parseDynamicLink)(t);
   null != n && f.default.track(_.AnalyticEvents.DEEP_LINK_CLICKED, {
-    fingerprint: (0, u.maybeExtractId)(n.fingerprint),
+    fingerprint: (0, s.maybeExtractId)(n.fingerprint),
     attempt_id: n.attemptId,
     source: n.utmSource
   }), I.default.launch(t, e => {

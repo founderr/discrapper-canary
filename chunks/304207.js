@@ -1,7 +1,7 @@
 "use strict";
 t.r(r), t.d(r, {
   default: function() {
-    return V
+    return z
   }
 }), t("424973"), t("222007");
 var a = t("37983"),
@@ -15,9 +15,9 @@ var a = t("37983"),
   u = t("428958"),
   h = t("368694"),
   p = t("461380"),
-  f = t("945330"),
-  m = t("496657"),
-  g = t("664336"),
+  m = t("945330"),
+  g = t("496657"),
+  f = t("664336"),
   b = t("370492"),
   y = t("584369"),
   x = t("676574");
@@ -36,13 +36,13 @@ var k = t("224249"),
   A = t("79953"),
   R = t("388557"),
   P = t("238161"),
-  O = t("20950"),
-  M = t("724209"),
+  M = t("20950"),
+  O = t("724209"),
   I = t("782340"),
-  B = t("978482"),
-  D = t("694735");
+  D = t("978482"),
+  B = t("694735");
 
-function H(e) {
+function G(e) {
   let {
     resizableNode: r,
     onResize: t,
@@ -56,11 +56,11 @@ function H(e) {
   });
   return (0, a.jsx)("div", {
     onMouseDown: i,
-    className: B.resizeHandle
+    className: D.resizeHandle
   })
 }
 
-function G() {
+function F() {
   var e;
   let r = n.useMemo(() => {
       let e = [{
@@ -70,7 +70,7 @@ function G() {
       }, {
         id: "triggers",
         name: "Triggers",
-        render: () => (0, a.jsx)(O.default, {})
+        render: () => (0, a.jsx)(M.default, {})
       }, {
         id: "stores",
         name: "Stores",
@@ -134,7 +134,7 @@ function G() {
       TabBar: t,
       renderSelectedTab: i,
       selectedTabId: l
-    } = (0, M.default)({
+    } = (0, O.default)({
       tabs: r,
       initialSelectedTabId: null !== (e = y.default.lastOpenTabId) && void 0 !== e ? e : void 0,
       onChangeTab: e => {
@@ -150,26 +150,26 @@ function G() {
       panel: l
     }
   }), (0, a.jsxs)(w.DevToolsLayerProvider, {
-    children: [(0, a.jsxs)(g.default, {
-      className: D.headerBar,
-      toolbar: (0, a.jsx)(g.default.Icon, {
-        icon: f.default,
+    children: [(0, a.jsxs)(f.default, {
+      className: B.headerBar,
+      toolbar: (0, a.jsx)(f.default.Icon, {
+        icon: m.default,
         tooltip: I.default.Messages.CLOSE,
         onClick: b.toggleDisplayDevTools
       }),
-      children: [(0, a.jsx)(g.default.Icon, {
-        icon: m.default,
+      children: [(0, a.jsx)(f.default.Icon, {
+        icon: g.default,
         tooltip: "DevTools"
-      }), (0, a.jsx)(g.default.Title, {
+      }), (0, a.jsx)(f.default.Title, {
         children: "DevTools"
       })]
     }), (0, a.jsx)(t, {}), i(), (0, a.jsx)(w.DevToolsLayerContainer, {
-      className: B.layerContainer
+      className: D.layerContainer
     })]
   })
 }
 
-function F() {
+function U() {
   let e = n.useRef(null),
     r = (0, s.useStateFromStores)([y.default], () => y.default.sidebarWidth),
     [t, i] = n.useState(null),
@@ -180,43 +180,43 @@ function F() {
     null === t && null !== r && i(r)
   }, [r, t]), null === t) ? null : (0, a.jsxs)("div", {
     ref: e,
-    className: l(B.container),
+    className: l(D.container),
     style: {
       minWidth: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: t
     },
-    children: [(0, a.jsx)(H, {
+    children: [(0, a.jsx)(G, {
       resizableNode: e,
       onResize: i,
       onResizeEnd: o
     }), (0, a.jsx)("div", {
-      className: B.sidebarContent,
-      children: (0, a.jsx)(G, {})
+      className: D.sidebarContent,
+      children: (0, a.jsx)(F, {})
     })]
   })
 }
 
-function U() {
+function H() {
   let e = (0, s.useStateFromStores)([y.default], () => y.default.displayTools);
   return e ? (0, a.jsx)("div", {
-    className: l(B.container, B.mobileContainerExpanded),
+    className: l(D.container, D.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
-      className: B.sidebarContent,
-      children: (0, a.jsx)(G, {})
+      className: D.sidebarContent,
+      children: (0, a.jsx)(F, {})
     })
   }) : (0, a.jsx)("div", {
-    className: B.container,
+    className: D.container,
     children: (0, a.jsx)(c.Clickable, {
       onClick: b.toggleDisplayDevTools,
-      children: (0, a.jsxs)(g.default, {
-        className: l(D.headerBar, B.mobileHeaderCollapsed),
+      children: (0, a.jsxs)(f.default, {
+        className: l(B.headerBar, D.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(p.default, {
           direction: p.default.Directions.UP
         }),
-        children: [(0, a.jsx)(g.default.Icon, {
-          icon: m.default,
+        children: [(0, a.jsx)(f.default.Icon, {
+          icon: g.default,
           tooltip: "DevTools"
-        }), (0, a.jsx)(g.default.Title, {
+        }), (0, a.jsx)(f.default.Title, {
           children: "DevTools"
         })]
       })
@@ -224,9 +224,9 @@ function U() {
   })
 }
 
-function V(e) {
+function z(e) {
   let {
     mobile: r
   } = e;
-  return r ? (0, a.jsx)(U, {}) : (0, a.jsx)(F, {})
+  return r ? (0, a.jsx)(H, {}) : (0, a.jsx)(U, {})
 }

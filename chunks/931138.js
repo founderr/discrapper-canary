@@ -6,32 +6,32 @@ n.r(t), n.d(t, {
 });
 var i = n("37983"),
   r = n("884691"),
-  o = n("414456"),
-  s = n.n(o),
-  l = n("77078"),
-  a = n("760607"),
+  l = n("414456"),
+  s = n.n(l),
+  a = n("77078"),
+  o = n("760607"),
   u = n("89976");
 
 function c(e) {
   let {
     children: t,
     size: n = 16,
-    className: o,
+    className: l,
     flowerStarClassName: c,
     ...d
-  } = e, f = r.Children.only(t), E = (0, l.useRedesignIconContext)().enabled;
+  } = e, f = r.Children.only(t), h = (0, a.useRedesignIconContext)().enabled;
   return (0, i.jsxs)("div", {
-    className: s(u.flowerStarContainer, o),
+    className: s(u.flowerStarContainer, l),
     style: {
       width: n,
       height: n
     },
-    children: [(0, i.jsx)(a.default, {
+    children: [(0, i.jsx)(o.default, {
       ...d,
       className: s(c, u.flowerStar)
     }), (0, i.jsx)("div", {
       className: s(u.childContainer, {
-        [u.redesignIconChildContainer]: E
+        [u.redesignIconChildContainer]: h
       }),
       children: f
     })]

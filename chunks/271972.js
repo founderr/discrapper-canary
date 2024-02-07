@@ -1,92 +1,92 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   AttachmentListItemSizes: function() {
-    return s
+    return i
   },
   default: function() {
-    return x
+    return C
   }
 });
-var l, s, n = a("37983"),
-  i = a("884691"),
-  r = a("414456"),
-  o = a.n(r),
-  d = a("974667"),
-  u = a("77078"),
-  c = a("81594"),
-  m = a("149279"),
-  h = a("659500"),
-  p = a("645406"),
-  f = a("49111"),
-  g = a("782340"),
-  v = a("864147");
+var l, i, a = n("37983"),
+  s = n("884691"),
+  r = n("414456"),
+  o = n.n(r),
+  u = n("974667"),
+  d = n("77078"),
+  c = n("81594"),
+  f = n("149279"),
+  p = n("659500"),
+  m = n("645406"),
+  h = n("49111"),
+  E = n("782340"),
+  g = n("864147");
 
-function M(e) {
+function S(e) {
   e.stopPropagation()
-}(l = s || (s = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.CLIP = 2] = "CLIP";
-var x = i.forwardRef(function(e, t) {
+}(l = i || (i = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.CLIP = 2] = "CLIP";
+var C = s.forwardRef(function(e, t) {
   let {
-    id: a,
+    id: n,
     channelId: l,
-    className: s,
-    children: i,
+    className: i,
+    children: s,
     actions: r,
-    handleEditModal: x,
-    keyboardModeEnabled: E,
-    onKeyDown: I,
-    draftType: L,
-    size: A = 1
+    handleEditModal: C,
+    keyboardModeEnabled: T,
+    onKeyDown: v,
+    draftType: I,
+    size: _ = 1
   } = e, {
-    onFocus: S,
-    ...T
-  } = (0, d.useListItem)(a), {
-    handleFocus: j,
-    handleBlur: C
-  } = (0, p.useFocusInside)(S), N = 0 === A, _ = null != r;
-  return (0, n.jsx)(u.FocusRing, {
-    children: (0, n.jsx)("li", {
-      ...T,
-      onFocus: j,
-      onBlur: C,
+    onFocus: y,
+    ...A
+  } = (0, u.useListItem)(n), {
+    handleFocus: N,
+    handleBlur: x
+  } = (0, m.useFocusInside)(y), O = 0 === _, R = null != r;
+  return (0, a.jsx)(d.FocusRing, {
+    children: (0, a.jsx)("li", {
+      ...A,
+      onFocus: N,
+      onBlur: x,
       onKeyDown: e => {
-        if (E) {
+        if (T) {
           switch (e.which) {
-            case f.KeyboardKeys.D:
-              e.preventDefault(), c.default.remove(l, a, L);
+            case h.KeyboardKeys.D:
+              e.preventDefault(), c.default.remove(l, n, I);
               return;
-            case f.KeyboardKeys.E:
-              null != x && (e.preventDefault(), x(e));
+            case h.KeyboardKeys.E:
+              null != C && (e.preventDefault(), C(e));
               return;
-            case f.KeyboardKeys.BACKSPACE:
-              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, L)) : (e.preventDefault(), c.default.remove(l, a, L));
+            case h.KeyboardKeys.BACKSPACE:
+              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, I)) : (e.preventDefault(), c.default.remove(l, n, I));
               return;
-            case f.KeyboardKeys.ARROW_UP:
+            case h.KeyboardKeys.ARROW_UP:
               let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
               if (t) return;
-              e.preventDefault(), h.ComponentDispatch.dispatchToLastSubscribed(f.ComponentActions.FOCUS_MESSAGES, {
+              e.preventDefault(), p.ComponentDispatch.dispatchToLastSubscribed(h.ComponentActions.FOCUS_MESSAGES, {
                 atEnd: !0
               })
           }
-          null == I || I(e)
+          null == v || v(e)
         }
       },
-      className: o(v.upload, s, {
-        [v.sizeClip]: 2 === A
+      className: o(g.upload, i, {
+        [g.sizeClip]: 2 === _
       }),
       ref: t,
-      children: (0, n.jsxs)("div", {
-        className: v.uploadContainer,
-        children: [i, _ ? (0, n.jsx)("div", {
-          className: v.actionBarContainer,
-          children: (0, n.jsx)("div", {
-            className: o(v.actionBar, {
-              [v.smallActionBar]: N
+      children: (0, a.jsxs)("div", {
+        className: g.uploadContainer,
+        children: [s, R ? (0, a.jsx)("div", {
+          className: g.actionBarContainer,
+          children: (0, a.jsx)("div", {
+            className: o(g.actionBar, {
+              [g.smallActionBar]: O
             }),
-            onContextMenu: M,
-            "aria-label": g.default.Messages.ATTACHMENT_UTILITIES,
-            children: (0, n.jsx)(m.default, {
+            onContextMenu: S,
+            "aria-label": E.default.Messages.ATTACHMENT_UTILITIES,
+            children: (0, a.jsx)(f.default, {
               className: o({
-                [v.miniPopover]: N
+                [g.miniPopover]: O
               }),
               children: r
             })

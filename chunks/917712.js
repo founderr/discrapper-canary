@@ -1,16 +1,16 @@
 "use strict";
 r.r(t), r.d(t, {
   scheduler: function() {
-    return d
+    return f
   },
   updateCount: function() {
-    return f
+    return d
   }
 });
 var n = r("812587"),
   u = r("344502"),
-  a = r("118141"),
-  o = 0,
+  o = r("118141"),
+  a = 0,
   i = {
     attributes: !0,
     characterData: !0,
@@ -22,7 +22,7 @@ var n = r("812587"),
     return void 0 === e && (e = 0), Date.now() + e
   },
   c = !1,
-  d = new(function() {
+  f = new(function() {
     function e() {
       var e = this;
       this.stopped = !0, this.listener = function() {
@@ -34,12 +34,12 @@ var n = r("812587"),
       if (void 0 === e && (e = 250), !c) {
         c = !0;
         var r = l(e);
-        (0, a.queueResizeObserver)(function() {
+        (0, o.queueResizeObserver)(function() {
           var u = !1;
           try {
             u = (0, n.process)()
           } finally {
-            if (c = !1, e = r - l(), !o) return;
+            if (c = !1, e = r - l(), !a) return;
             u ? t.run(1e3) : e > 0 ? t.run(e) : t.start()
           }
         })
@@ -64,6 +64,6 @@ var n = r("812587"),
       }), this.stopped = !0)
     }, e
   }()),
-  f = function(e) {
-    !o && e > 0 && d.start(), (o += e) || d.stop()
+  d = function(e) {
+    !a && e > 0 && f.start(), (a += e) || f.stop()
   }

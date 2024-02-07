@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return d
+    return c
   }
 });
 var i, r, l = n("37983"),
@@ -13,7 +13,7 @@ var i, r, l = n("37983"),
   o = n.n(a),
   u = n("623682");
 (i = r || (r = {})).PREMIUM = "premium", i.LIMITED = "limited";
-let c = {
+let d = {
   premium: {
     border: u.premiumFeatureBorder,
     background: u.premiumBackground
@@ -23,14 +23,14 @@ let c = {
     background: u.limitedBackground
   }
 };
-var d = s.forwardRef(function(e, t) {
+var c = s.forwardRef(function(e, t) {
   let {
     children: n,
     type: i = "premium",
     isShown: r,
     hasBackground: s = !1,
     className: a,
-    backgroundClassName: d
+    backgroundClassName: c
   } = e;
   if (!r) return (0, l.jsx)(l.Fragment, {
     children: n
@@ -38,12 +38,12 @@ var d = s.forwardRef(function(e, t) {
   let {
     border: f,
     background: E
-  } = c[i];
+  } = d[i];
   return (0, l.jsx)("div", {
     ref: t,
     className: o(f, a),
     children: (0, l.jsx)("div", {
-      className: o(s ? E : u.background, d),
+      className: o(s ? E : u.background, c),
       children: n
     })
   })

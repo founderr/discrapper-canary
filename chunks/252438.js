@@ -1,7 +1,7 @@
 "use strict";
-var r, i;
+var a, l;
 n.r(t), n.d(t, {
   SKUBenefitTypes: function() {
-    return r
+    return a
   }
-}), n("222007"), (i = r || (r = {}))[i.INTANGIBLE = 1] = "INTANGIBLE", i[i.APPLICATION_PREMIUM_COMMAND = 2] = "APPLICATION_PREMIUM_COMMAND"
+}), n("222007"), (l = a || (a = {}))[l.INTANGIBLE = 1] = "INTANGIBLE", l[l.APPLICATION_PREMIUM_COMMAND = 2] = "APPLICATION_PREMIUM_COMMAND"

@@ -1,17 +1,17 @@
 "use strict";
 t.r(A), t.d(A, {
   PRODUCT_IMAGE_PRESETS: function() {
-    return l
+    return n
   }
 });
 var a = t("410225"),
-  n = t("384188");
-let l = [{
+  l = t("384188");
+let n = [{
   name: "cool-frog",
   alt: "A cool frog",
   data: a.default
 }, {
   name: "cute-bunny",
   alt: "A cute bunny",
-  data: n.default
+  data: l.default
 }]

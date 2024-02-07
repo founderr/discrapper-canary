@@ -17,8 +17,8 @@ var s = n("37983"),
   f = n("523591"),
   I = n("153727"),
   E = n("650484"),
-  m = n("49111"),
-  S = n("646718");
+  S = n("49111"),
+  m = n("646718");
 
 function P(e) {
   let {
@@ -34,11 +34,11 @@ function P(e) {
   return a.useEffect(() => {
     var e;
     !M && (C(!0), (0, i.startBrowserCheckout)(T.loadId), ! function(e, t, n, s) {
-      let a = m.Endpoints.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n),
-        i = new URL(u.default.makeUrl(m.Routes.BILLING_LOGIN_HANDOFF)),
+      let a = S.Endpoints.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n),
+        i = new URL(u.default.makeUrl(S.Routes.BILLING_LOGIN_HANDOFF)),
         o = (0, r.v4)();
       i.searchParams.append("handoff_key", o), i.searchParams.append("redirect_to", a), l.default.post({
-        url: m.Endpoints.HANDOFF,
+        url: S.Endpoints.HANDOFF,
         body: {
           key: o
         },
@@ -48,7 +48,7 @@ function P(e) {
       }, () => {
         s()
       })
-    }(null !== (e = null == n ? void 0 : n.id) && void 0 !== e ? e : S.SubscriptionPlans.PREMIUM_MONTH_TIER_2, N, T.loadId, () => t(c.Step.ADD_PAYMENT_STEPS)))
+    }(null !== (e = null == n ? void 0 : n.id) && void 0 !== e ? e : m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, N, T.loadId, () => t(c.Step.ADD_PAYMENT_STEPS)))
   }, [n, N, M, C, T, t]), a.useEffect(() => {
     p === T.loadId && P === f.BrowserCheckoutState.DONE && t(c.Step.CONFIRM)
   }, [P, p, T, t]), (0, s.jsxs)(s.Fragment, {

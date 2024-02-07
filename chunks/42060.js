@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useForceMigration: function() {
-    return a
+    return l
   },
   getForceMigration: function() {
-    return l
+    return a
   }
 });
 var i = n("862205");
@@ -23,7 +23,7 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  a = () => {
+  l = () => {
     let {
       enabled: e
     } = s.useExperiment({
@@ -33,7 +33,7 @@ let s = (0, i.createExperiment)({
     });
     return e
   },
-  l = () => {
+  a = () => {
     let {
       enabled: e
     } = s.getCurrentConfig({

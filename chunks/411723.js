@@ -1,65 +1,65 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return g
   }
 });
-var i = n("37983");
+var l = n("37983");
 n("884691");
-var r = n("414456"),
-  l = n.n(r),
-  a = n("866227"),
-  s = n.n(a),
+var i = n("414456"),
+  a = n.n(i),
+  s = n("866227"),
+  r = n.n(s),
   o = n("446674"),
   u = n("77078"),
-  c = n("442939"),
-  d = n("730859"),
+  d = n("442939"),
+  c = n("730859"),
   f = n("697218"),
-  E = n("953109"),
-  _ = n("449008"),
-  S = n("782340"),
-  h = n("127789"),
-  p = function(e) {
+  p = n("953109"),
+  m = n("449008"),
+  h = n("782340"),
+  E = n("127789"),
+  g = function(e) {
     let {
       createdAt: t,
       participantIds: n,
-      applicationId: r,
-      title: a,
-      guildId: p,
-      className: I
-    } = e, T = (0, c.useGetOrFetchApplication)(r), C = (0, o.useStateFromStoresArray)([f.default], () => {
+      applicationId: i,
+      title: s,
+      guildId: g,
+      className: S
+    } = e, C = (0, d.useGetOrFetchApplication)(i), T = (0, o.useStateFromStoresArray)([f.default], () => {
       var e;
-      return null !== (e = n.map(e => f.default.getUser(e)).filter(_.isNotNullish)) && void 0 !== e ? e : []
-    }), v = null == T ? void 0 : T.name, m = s(t).fromNow();
-    return null == t ? null : (0, i.jsxs)("div", {
-      className: l(I, h.container),
-      children: [(0, i.jsx)(E.default, {
-        game: T
-      }), (0, i.jsxs)("div", {
-        className: h.textSection,
-        children: [null != a && "" !== a ? (0, i.jsx)(u.Text, {
+      return null !== (e = n.map(e => f.default.getUser(e)).filter(m.isNotNullish)) && void 0 !== e ? e : []
+    }), v = null == C ? void 0 : C.name, I = r(t).fromNow();
+    return null == t ? null : (0, l.jsxs)("div", {
+      className: a(S, E.container),
+      children: [(0, l.jsx)(p.default, {
+        game: C
+      }), (0, l.jsxs)("div", {
+        className: E.textSection,
+        children: [null != s && "" !== s ? (0, l.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "interactive-active",
-          children: a
-        }) : (0, i.jsx)(u.Text, {
+          children: s
+        }) : (0, l.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "text-muted",
-          children: S.default.Messages.CLIPS_UNTITLED
-        }), (0, i.jsxs)(u.Text, {
+          children: h.default.Messages.CLIPS_UNTITLED
+        }), (0, l.jsxs)(u.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          className: h.subtitle,
-          children: [null != v ? "".concat(v, " • ") : null, m]
-        }), (0, i.jsx)(u.Text, {
+          className: E.subtitle,
+          children: [null != v ? "".concat(v, " • ") : null, I]
+        }), (0, l.jsx)(u.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          className: h.subtitle
+          className: E.subtitle
         })]
-      }), null != C && C.length > 0 && (0, i.jsx)(d.default, {
+      }), null != T && T.length > 0 && (0, l.jsx)(c.default, {
         maxUsers: 4,
-        users: C,
-        className: h.facePile,
-        guildId: p
+        users: T,
+        className: E.facePile,
+        guildId: g
       })]
     })
   }

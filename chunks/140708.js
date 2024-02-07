@@ -1,29 +1,29 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   addReactionPickerAnimation: function() {
-    return s
+    return i
   },
   clearReactionPickerAnimation: function() {
-    return l
+    return a
   }
 });
-var n = i("913144");
+var l = n("913144");
 
-function s(e, t, i, s) {
-  n.default.dispatch({
+function i(e, t, n, i) {
+  l.default.dispatch({
     type: "BURST_REACTION_PICKER_ANIMATION_ADD",
     messageId: e,
     emojiName: t,
-    emojiId: i,
-    startPosition: s
+    emojiId: n,
+    startPosition: i
   })
 }
 
-function l(e, t, i) {
-  n.default.dispatch({
+function a(e, t, n) {
+  l.default.dispatch({
     type: "BURST_REACTION_PICKER_ANIMATION_CLEAR",
     messageId: e,
     emojiName: t,
-    emojiId: i
+    emojiId: n
   })
 }

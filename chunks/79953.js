@@ -15,9 +15,9 @@ var a = t("37983"),
   u = t("664336"),
   h = t("50625"),
   p = t("928063"),
-  f = t("637171"),
-  m = t("724209"),
-  g = t("694735"),
+  m = t("637171"),
+  g = t("724209"),
+  f = t("694735"),
   b = t("435275");
 
 function y(e, r) {
@@ -89,7 +89,7 @@ function C(e) {
   } = e, {
     TabBar: n,
     renderSelectedTab: i
-  } = (0, m.default)({
+  } = (0, g.default)({
     tabs: v
   }, []);
   return (0, a.jsxs)(p.default, {
@@ -97,7 +97,7 @@ function C(e) {
     minHeight: 100,
     initialHeight: t,
     children: [(0, a.jsx)(n, {}), (0, a.jsxs)(u.default, {
-      className: l(g.headerBar, b.subPanelHeaderBar),
+      className: l(f.headerBar, b.subPanelHeaderBar),
       children: [(0, a.jsx)(u.default.Icon, {
         icon: d.default,
         tooltip: r.getName()
@@ -125,10 +125,10 @@ function S() {
       return t.getName().toLowerCase().includes(r.toLowerCase())
     })(e, r)),
     [h, p] = n.useState(),
-    m = i.find(e => e._dispatchToken === h);
+    g = i.find(e => e._dispatchToken === h);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: l(g.panel, b.panel),
+    className: l(f.panel, b.panel),
     children: [(0, a.jsx)("div", {
       className: b.toolbar,
       children: (0, a.jsx)(c.default, {
@@ -142,14 +142,14 @@ function S() {
       })
     }), (0, a.jsx)(s.ScrollerThin, {
       className: b.tableContainer,
-      children: (0, a.jsx)(f.default, {
+      children: (0, a.jsx)(m.default, {
         columns: k,
         data: u,
         selectedRowKey: h,
         onClickRow: p
       })
-    }), null != m && (0, a.jsx)(C, {
-      store: m,
+    }), null != g && (0, a.jsx)(C, {
+      store: g,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
     })]
   })

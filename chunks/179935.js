@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return u
   },
   createReferralTrial: function() {
-    return c
+    return d
   },
   resolveReferralTrialOffer: function() {
-    return d
+    return c
   }
 });
 var i = n("872717"),
@@ -52,7 +52,7 @@ let o = () => (r.default.dispatch({
       recipientId: e
     })
   }));
-async function c(e) {
+async function d(e) {
   try {
     var t;
     let n = await i.default.post({
@@ -75,7 +75,7 @@ async function c(e) {
     }
   }
 }
-async function d(e) {
+async function c(e) {
   try {
     var t;
     let n = await i.default.get({

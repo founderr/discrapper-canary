@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   SubscriptionListingBenefits: function() {
     return d
   },
@@ -9,107 +9,107 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var r = n("414456"),
-  l = n.n(r),
-  a = n("77078"),
-  s = n("430568"),
-  u = n("271560"),
+var l = n("414456"),
+  a = n.n(l),
+  r = n("77078"),
+  u = n("430568"),
+  s = n("271560"),
   o = n("692105"),
   c = n("888266");
 
-function d(e) {
-  let t, {
+function d(t) {
+  let e, {
     applicationId: n,
-    storeListingBenefits: r,
-    skuBenefits: a,
-    className: s
-  } = e;
-  return null != r ? t = r.map(e => (0, i.jsx)(p, {
+    storeListingBenefits: l,
+    skuBenefits: r,
+    className: u
+  } = t;
+  return null != l ? e = l.map(t => (0, i.jsx)(p, {
     applicationId: n,
-    benefit: e,
-    className: l(c.benefit, s)
-  }, e.id)) : null != a && (t = a.map((e, t) => (0, i.jsx)(f, {
-    benefit: e,
-    className: l(c.benefit, s)
-  }, t))), (0, i.jsx)(i.Fragment, {
-    children: t
+    benefit: t,
+    className: a(c.benefit, u)
+  }, t.id)) : null != r && (e = r.map((t, e) => (0, i.jsx)(f, {
+    benefit: t,
+    className: a(c.benefit, u)
+  }, e))), (0, i.jsx)(i.Fragment, {
+    children: e
   })
 }
 
-function f(e) {
+function f(t) {
   let {
-    benefit: t,
+    benefit: e,
     className: n,
-    emojiContainerClassName: r,
-    showsDescription: u = !0,
+    emojiContainerClassName: l,
+    showsDescription: s = !0,
     nameTextVariant: o = "text-md/medium",
     nameTextColor: d = "header-primary"
-  } = e;
+  } = t;
   return (0, i.jsxs)("div", {
-    className: l(c.container, n),
-    children: [null != t.emoji && (0, i.jsx)("div", {
-      className: l(c.emojiContainer, r),
-      children: (0, i.jsx)(s.default, {
-        emojiId: t.emoji.id,
-        emojiName: t.emoji.name,
-        animated: t.emoji.animated
+    className: a(c.container, n),
+    children: [null != e.emoji && (0, i.jsx)("div", {
+      className: a(c.emojiContainer, l),
+      children: (0, i.jsx)(u.default, {
+        emojiId: e.emoji.id,
+        emojiName: e.emoji.name,
+        animated: e.emoji.animated
       })
     }), (0, i.jsxs)("div", {
       className: c.infoContainer,
-      children: [(0, i.jsx)(a.Text, {
+      children: [(0, i.jsx)(r.Text, {
         variant: o,
         color: d,
         className: c.name,
-        children: t.name
-      }), u && (0, i.jsx)(a.Text, {
+        children: e.name
+      }), s && (0, i.jsx)(r.Text, {
         color: "interactive-normal",
         variant: "text-sm/normal",
-        children: t.description
+        children: e.description
       })]
     })]
   })
 }
 
-function p(e) {
-  let t, {
+function p(t) {
+  let e, {
     applicationId: n,
-    benefit: r,
+    benefit: l,
     className: d,
     emojiContainerClassName: f,
     showsDescription: p = !0,
-    nameTextVariant: h = "text-md/medium",
+    nameTextVariant: I = "text-md/medium",
     nameTextColor: S = "header-primary"
-  } = e;
-  if (null != r.icon) switch (r.icon.type) {
+  } = t;
+  if (null != l.icon) switch (l.icon.type) {
     case o.IconType.STORE_ASSET:
-      let m = (0, u.getAssetURL)(n, r.icon.store_asset_id);
-      t = (0, i.jsx)("img", {
-        src: m,
+      let T = (0, s.getAssetURL)(n, l.icon.store_asset_id);
+      e = (0, i.jsx)("img", {
+        src: T,
         alt: "",
         className: "emoji"
       });
       break;
     case o.IconType.EMOJI:
-      t = (0, i.jsx)(s.default, {
-        emojiName: r.icon.emoji
+      e = (0, i.jsx)(u.default, {
+        emojiName: l.icon.emoji
       })
   }
   return (0, i.jsxs)("div", {
-    className: l(c.container, d),
+    className: a(c.container, d),
     children: [(0, i.jsx)("div", {
-      className: l(c.emojiContainer, f),
-      children: t
+      className: a(c.emojiContainer, f),
+      children: e
     }), (0, i.jsxs)("div", {
       className: c.infoContainer,
-      children: [(0, i.jsx)(a.Text, {
-        variant: h,
+      children: [(0, i.jsx)(r.Text, {
+        variant: I,
         color: S,
         className: c.name,
-        children: r.name
-      }), p && (0, i.jsx)(a.Text, {
+        children: l.name
+      }), p && (0, i.jsx)(r.Text, {
         color: "interactive-normal",
         variant: "text-sm/normal",
-        children: r.description
+        children: l.description
       })]
     })]
   })

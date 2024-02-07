@@ -1,10 +1,10 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return n
+    return s
   }
 });
-var n = (0, a("862205").createExperiment)({
+var s = (0, n("862205").createExperiment)({
   kind: "user",
   id: "2022-12_localized_pricing_poland_notice",
   label: "Localized Pricing Poland Notice",

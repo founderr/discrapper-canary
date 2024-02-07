@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   ChangePhoneReason: function() {
-    return r
+    return a
   },
   default: function() {
     return f
   }
 });
-var i, r, o = n("759843"),
-  s = n("872717"),
-  l = n("913144"),
-  a = n("271938"),
+var s, a, l = n("759843"),
+  i = n("872717"),
+  r = n("913144"),
+  o = n("271938"),
   u = n("840707"),
-  c = n("482931"),
-  d = n("49111");
-(i = r || (r = {})).USER_ACTION_REQUIRED = "user_action_required", i.USER_SETTINGS_UPDATE = "user_settings_update", i.GUILD_PHONE_REQUIRED = "guild_phone_required", i.MFA_PHONE_UPDATE = "mfa_phone_update", i.CONTACT_SYNC = "contact_sync";
+  d = n("482931"),
+  c = n("49111");
+(s = a || (a = {})).USER_ACTION_REQUIRED = "user_action_required", s.USER_SETTINGS_UPDATE = "user_settings_update", s.GUILD_PHONE_REQUIRED = "guild_phone_required", s.MFA_PHONE_UPDATE = "mfa_phone_update", s.CONTACT_SYNC = "contact_sync";
 var f = {
   setCountryCode(e) {
-    l.default.dispatch({
+    r.default.dispatch({
       type: "PHONE_SET_COUNTRY_CODE",
       countryCode: e
     })
   },
-  removePhone: (e, t) => s.default.delete({
-    url: d.Endpoints.PHONE,
+  removePhone: (e, t) => i.default.delete({
+    url: c.Endpoints.PHONE,
     body: {
       password: e,
       change_phone_reason: t
@@ -32,24 +32,24 @@ var f = {
   }),
   resendCode(e) {
     let t = {},
-      n = a.default.getFingerprint();
-    return null != n && "" !== n && (t["X-Fingerprint"] = n), s.default.post({
-      url: d.Endpoints.RESEND_PHONE,
+      n = o.default.getFingerprint();
+    return null != n && "" !== n && (t["X-Fingerprint"] = n), i.default.post({
+      url: c.Endpoints.RESEND_PHONE,
       headers: t,
       body: {
         phone: e
       }
     })
   },
-  beginAddPhone: (e, t) => s.default.post({
-    url: d.Endpoints.PHONE,
+  beginAddPhone: (e, t) => i.default.post({
+    url: c.Endpoints.PHONE,
     body: {
       phone: e,
       change_phone_reason: t
     }
   }),
-  addPhone: (e, t, n) => s.default.post({
-    url: d.Endpoints.PHONE,
+  addPhone: (e, t, n) => i.default.post({
+    url: c.Endpoints.PHONE,
     body: {
       phone_token: e,
       password: t,
@@ -57,21 +57,21 @@ var f = {
     },
     oldFormErrors: !0
   }),
-  addPhoneWithoutPassword: e => s.default.post({
-    url: d.Endpoints.PHONE_VERIFY_NO_PASSWORD,
+  addPhoneWithoutPassword: e => i.default.post({
+    url: c.Endpoints.PHONE_VERIFY_NO_PASSWORD,
     body: {
       code: e
     }
   }),
-  beginReverifyPhone: (e, t) => s.default.post({
-    url: d.Endpoints.PHONE_REVERIFY,
+  beginReverifyPhone: (e, t) => i.default.post({
+    url: c.Endpoints.PHONE_REVERIFY,
     body: {
       phone: e,
       change_phone_reason: t
     }
   }),
-  reverifyPhone: (e, t, n) => s.default.post({
-    url: d.Endpoints.PHONE_REVERIFY,
+  reverifyPhone: (e, t, n) => i.default.post({
+    url: c.Endpoints.PHONE_REVERIFY,
     body: {
       phone_token: e,
       password: t,
@@ -79,8 +79,8 @@ var f = {
     },
     oldFormErrors: !0
   }),
-  validatePhoneForSupport: e => s.default.post({
-    url: d.Endpoints.VERIFY_PHONE_FOR_TICKET,
+  validatePhoneForSupport: e => i.default.post({
+    url: c.Endpoints.VERIFY_PHONE_FOR_TICKET,
     body: {
       token: e
     },
@@ -88,25 +88,25 @@ var f = {
   }),
   async verifyPhone(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-      i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-      r = {},
-      s = a.default.getFingerprint();
-    null != s && "" !== s && (r["X-Fingerprint"] = s), i && (r.authorization = "");
+      s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+      a = {},
+      i = o.default.getFingerprint();
+    null != i && "" !== i && (a["X-Fingerprint"] = i), s && (a.authorization = "");
     let f = await u.default.post({
-      url: d.Endpoints.VERIFY_PHONE,
-      headers: r,
+      url: c.Endpoints.VERIFY_PHONE,
+      headers: a,
       body: {
         phone: e,
         code: t
       },
       oldFormErrors: !0,
       trackedActionData: {
-        event: o.NetworkActionNames.USER_VERIFY_PHONE
+        event: l.NetworkActionNames.USER_VERIFY_PHONE
       }
     });
-    return n && l.default.dispatch({
+    return n && r.default.dispatch({
       type: "MODAL_POP",
-      key: c.PHONE_VERIFICATION_MODAL_KEY
+      key: d.PHONE_VERIFICATION_MODAL_KEY
     }), f.body
   }
 }

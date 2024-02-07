@@ -1,20 +1,20 @@
 "use strict";
 i.r(t), i.d(t, {
   getMinCounterWidth: function() {
-    return f
+    return T
   },
   default: function() {
-    return s
+    return o
   }
 });
-var a, l, n, s, o = i("37983"),
+var a, n, l, o, s = i("37983"),
   r = i("884691"),
   u = i("917351"),
   d = i.n(u),
   c = i("458960"),
-  p = i("471671");
+  h = i("471671");
 
-function h(e, t) {
+function p(e, t) {
   return {
     toValue: e,
     duration: null != t ? t : 300,
@@ -22,22 +22,22 @@ function h(e, t) {
   }
 }
 
-function f(e, t, i) {
+function T(e, t, i) {
   if (null != t) {
     let a = Math.ceil(Math.log10(e + 1));
     return null != i && i > 0 ? Math.min(a, i) * t : a * t
   }
-}(a = n || (n = {}))[a.ABOVE = 0] = "ABOVE", a[a.VISIBLE = 1] = "VISIBLE", a[a.BELOW = 2] = "BELOW", (l = class extends r.PureComponent {
+}(a = l || (l = {}))[a.ABOVE = 0] = "ABOVE", a[a.VISIBLE = 1] = "VISIBLE", a[a.BELOW = 2] = "BELOW", (n = class extends r.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       prevValue: i,
       currValue: a,
-      nextValue: l
+      nextValue: n
     } = t;
     return null == i && a !== e.value ? {
-      prevValue: p.default.isFocused() ? a : null,
+      prevValue: h.default.isFocused() ? a : null,
       currValue: e.value
-    } : null != l && l !== e.value ? {
+    } : null != n && n !== e.value ? {
       nextValue: e.value
     } : null
   }
@@ -52,9 +52,9 @@ function f(e, t, i) {
     let i;
     let {
       forcePosition: a,
-      animationSpeed: l
+      animationSpeed: n
     } = this.props;
-    this.prevAnimate.setValue(1), null != a ? 0 === a ? (this.currAnimate.setValue(0), i = 2) : 2 === a && (this.currAnimate.setValue(2), i = 0) : e > t ? (this.currAnimate.setValue(0), i = 2) : (this.currAnimate.setValue(2), i = 0), c.default.parallel([c.default.timing(this.prevAnimate, h(i, l)), c.default.timing(this.currAnimate, h(1, l))]).start(this.animateNext)
+    this.prevAnimate.setValue(1), null != a ? 0 === a ? (this.currAnimate.setValue(0), i = 2) : 2 === a && (this.currAnimate.setValue(2), i = 0) : e > t ? (this.currAnimate.setValue(0), i = 2) : (this.currAnimate.setValue(2), i = 0), c.default.parallel([c.default.timing(this.prevAnimate, p(i, n)), c.default.timing(this.currAnimate, p(1, n))]).start(this.animateNext)
   }
   getAnimatedStyle(e) {
     let {
@@ -82,7 +82,7 @@ function f(e, t, i) {
       digitWidth: t,
       padStartLength: i
     } = this.props;
-    return f(e, t, i)
+    return T(e, t, i)
   }
   padValue(e) {
     let {
@@ -97,36 +97,36 @@ function f(e, t, i) {
     } = this.state, {
       color: i,
       formatString: a
-    } = this.props, l = d.omit(this.props, ["value", "digitWidth", "padStartLength", "forcePosition"]);
-    if (null == e) return (0, o.jsx)("div", {
-      ...l,
+    } = this.props, n = d.omit(this.props, ["value", "digitWidth", "padStartLength", "forcePosition"]);
+    if (null == e) return (0, s.jsx)("div", {
+      ...n,
       style: {
         color: i,
         minWidth: this.getMinWidth(t)
       },
       children: null != a ? a(this.padValue(t)) : this.padValue(t)
     });
-    let n = Math.max(e, t);
-    return (0, o.jsxs)("div", {
-      ...l,
+    let l = Math.max(e, t);
+    return (0, s.jsxs)("div", {
+      ...n,
       style: {
         color: i,
         position: "relative",
         overflow: "hidden"
       },
-      children: [(0, o.jsx)("div", {
+      children: [(0, s.jsx)("div", {
         style: {
           visibility: "hidden",
-          minWidth: this.getMinWidth(n)
+          minWidth: this.getMinWidth(l)
         },
-        children: this.padValue(n)
-      }), (0, o.jsx)(c.default.div, {
+        children: this.padValue(l)
+      }), (0, s.jsx)(c.default.div, {
         style: {
           color: i,
           ...this.getAnimatedStyle(this.prevAnimate)
         },
         children: null != a ? a(this.padValue(e)) : this.padValue(e)
-      }), (0, o.jsx)(c.default.div, {
+      }), (0, s.jsx)(c.default.div, {
         style: {
           color: i,
           ...this.getAnimatedStyle(this.currAnimate)
@@ -142,7 +142,7 @@ function f(e, t, i) {
         nextValue: t
       } = this.state;
       null != t ? this.setState({
-        prevValue: p.default.isFocused() ? e : null,
+        prevValue: h.default.isFocused() ? e : null,
         currValue: t,
         nextValue: null
       }) : this.setState({
@@ -154,4 +154,4 @@ function f(e, t, i) {
       nextValue: null
     }, this.prevAnimate = new c.default.Value(0), this.currAnimate = new c.default.Value(1)
   }
-}).Positions = n, s = l
+}).Positions = l, o = n

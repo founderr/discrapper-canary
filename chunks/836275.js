@@ -1,76 +1,76 @@
 "use strict";
-s.r(t), s.d(t, {
+i.r(t), i.d(t, {
   openGuildBannerUpsellModal: function() {
-    return T
+    return p
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("77078"),
-  l = s("366634"),
-  i = s("974755"),
-  r = s("427459"),
-  o = s("379532"),
-  d = s("944305"),
-  u = s("49111"),
-  c = s("782340"),
-  E = s("670362");
+var s = i("37983");
+i("884691");
+var n = i("77078"),
+  l = i("366634"),
+  r = i("974755"),
+  o = i("427459"),
+  a = i("379532"),
+  u = i("944305"),
+  c = i("49111"),
+  d = i("782340"),
+  h = i("670362");
 
-function _(e) {
+function f(e) {
   let {
     guild: t,
-    banner: s
+    banner: i
   } = e;
-  return (0, a.jsx)("div", {
-    className: E.guildBanner,
+  return (0, s.jsx)("div", {
+    className: h.guildBanner,
     style: {
-      backgroundImage: "url(".concat(s)
+      backgroundImage: "url(".concat(i)
     },
-    children: (0, a.jsxs)("div", {
-      className: E.guildHeader,
-      children: [(0, a.jsx)(i.default, {
+    children: (0, s.jsxs)("div", {
+      className: h.guildHeader,
+      children: [(0, s.jsx)(r.default, {
         guild: t,
         isBannerVisible: !0
-      }), (0, a.jsx)(n.Heading, {
-        className: E.guildName,
+      }), (0, s.jsx)(n.Heading, {
+        className: h.guildName,
         variant: "heading-md/semibold",
         children: t.toString()
-      }), (0, a.jsx)(l.default, {
-        className: E.dropdown,
+      }), (0, s.jsx)(l.default, {
+        className: h.dropdown,
         open: !1
       })]
     })
   })
 }
 
-function T(e) {
+function p(e) {
   let {
     analyticsLocations: t,
-    analyticsLocation: s,
+    analyticsLocation: i,
     guild: n,
     isGIF: l,
-    banner: i
-  } = e, E = l ? (0, r.minimumRequiredTierForGuildFeature)(u.GuildFeatures.ANIMATED_BANNER) : (0, r.minimumRequiredTierForGuildFeature)(u.GuildFeatures.BANNER);
-  null != E && (0, o.default)({
+    banner: r
+  } = e, h = l ? (0, o.minimumRequiredTierForGuildFeature)(c.GuildFeatures.ANIMATED_BANNER) : (0, o.minimumRequiredTierForGuildFeature)(c.GuildFeatures.BANNER);
+  null != h && (0, a.default)({
     analyticsLocations: t,
-    analyticsSourceLocation: s,
+    analyticsSourceLocation: i,
     guild: n,
     headerProps: {
-      title: c.default.Messages.GUILD_BANNER_UPSELL_MODAL_TITLE,
+      title: d.default.Messages.GUILD_BANNER_UPSELL_MODAL_TITLE,
       subtitle: function(e, t) {
-        let s = (0, r.getTierName)(e);
-        return t ? c.default.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_ANIMATED.format({
-          targetLevelOrPlan: s
-        }) : c.default.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_STATIC.format({
-          targetLevelOrPlan: s
+        let i = (0, o.getTierName)(e);
+        return t ? d.default.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_ANIMATED.format({
+          targetLevelOrPlan: i
+        }) : d.default.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_STATIC.format({
+          targetLevelOrPlan: i
         })
-      }(E, l),
-      image: (0, a.jsx)(_, {
+      }(h, l),
+      image: (0, s.jsx)(f, {
         guild: n,
-        banner: i
+        banner: r
       })
     },
-    perkIntro: c.default.Messages.GUILD_BANNER_UPSELL_MODAL_PERK_INTRO,
-    perks: l ? (0, d.animatedGuildBannerUpsellPerks)() : (0, d.guildBannerUpsellPerks)()
+    perkIntro: d.default.Messages.GUILD_BANNER_UPSELL_MODAL_PERK_INTRO,
+    perks: l ? (0, u.animatedGuildBannerUpsellPerks)() : (0, u.guildBannerUpsellPerks)()
   })
 }

@@ -1,73 +1,73 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return M
   }
-}), i("222007"), i("843762");
-var n = i("37983"),
-  s = i("884691"),
-  l = i("414456"),
-  r = i.n(l),
-  a = i("917351"),
-  o = i.n(a),
-  u = i("907002"),
-  c = i("974667"),
-  d = i("895547"),
-  f = i("769846"),
-  E = i("77078"),
-  m = i("150021"),
-  I = i("206625"),
-  p = i("302437"),
-  g = i("867805"),
-  _ = i("476765"),
-  S = i("402671"),
-  h = i("159885"),
-  C = i("49111"),
-  T = i("782340"),
-  N = i("576643");
-let v = (0, _.uid)(),
-  A = d.default.convert.fromCodePoint("1f44f"),
-  y = (0, h.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-  R = (0, h.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
-  j = e => {
+}), n("222007"), n("843762");
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("917351"),
+  o = n.n(r),
+  u = n("907002"),
+  d = n("974667"),
+  c = n("895547"),
+  f = n("769846"),
+  p = n("77078"),
+  m = n("150021"),
+  h = n("206625"),
+  E = n("302437"),
+  g = n("867805"),
+  S = n("476765"),
+  C = n("402671"),
+  T = n("159885"),
+  v = n("49111"),
+  I = n("782340"),
+  _ = n("576643");
+let y = (0, S.uid)(),
+  A = c.default.convert.fromCodePoint("1f44f"),
+  N = (0, T.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+  x = (0, T.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
+  O = e => {
     let {
       fade: t,
-      surrogate: i,
-      onClick: s,
-      delay: l,
-      index: r
-    } = e, a = (0, c.useListItem)("item-".concat(r)), o = S.default.getURL(A + i), f = (0, u.useSpring)({
+      surrogate: n,
+      onClick: i,
+      delay: a,
+      index: s
+    } = e, r = (0, d.useListItem)("item-".concat(s)), o = C.default.getURL(A + n), f = (0, u.useSpring)({
       opacity: 1,
       from: {
         opacity: t ? 0 : 1
       },
-      delay: l
+      delay: a
     });
-    return (0, n.jsx)(E.Clickable, {
-      ...a,
+    return (0, l.jsx)(p.Clickable, {
+      ...r,
       role: "option",
-      "aria-selected": 0 === r,
-      onClick: () => s(i),
-      className: N.diversityEmojiItem,
-      children: (0, n.jsx)(u.animated.div, {
+      "aria-selected": 0 === s,
+      onClick: () => i(n),
+      className: _.diversityEmojiItem,
+      children: (0, l.jsx)(u.animated.div, {
         "aria-label": function(e) {
-          let t = d.default.convert.toCodePoint(e);
+          let t = c.default.convert.toCodePoint(e);
           switch (t) {
             case "1f3fb":
-              return T.default.Messages.EMOJI_MODIFIER_LIGHT_SKIN_TONE;
+              return I.default.Messages.EMOJI_MODIFIER_LIGHT_SKIN_TONE;
             case "1f3fc":
-              return T.default.Messages.EMOJI_MODIFIER_MEDIUM_LIGHT_SKIN_TONE;
+              return I.default.Messages.EMOJI_MODIFIER_MEDIUM_LIGHT_SKIN_TONE;
             case "1f3fd":
-              return T.default.Messages.EMOJI_MODIFIER_MEDIUM_SKIN_TONE;
+              return I.default.Messages.EMOJI_MODIFIER_MEDIUM_SKIN_TONE;
             case "1f3fe":
-              return T.default.Messages.EMOJI_MODIFIER_MEDIUM_DARK_SKIN_TONE;
+              return I.default.Messages.EMOJI_MODIFIER_MEDIUM_DARK_SKIN_TONE;
             case "1f3ff":
-              return T.default.Messages.EMOJI_MODIFIER_DARK_SKIN_TONE;
+              return I.default.Messages.EMOJI_MODIFIER_DARK_SKIN_TONE;
             default:
-              return T.default.Messages.EMOJI_MODIFIER_NONE
+              return I.default.Messages.EMOJI_MODIFIER_NONE
           }
-        }(i),
-        className: N.diversityEmojiItemImage,
+        }(n),
+        className: _.diversityEmojiItemImage,
         style: {
           backgroundImage: 'url("'.concat(o, '")'),
           ...f
@@ -75,48 +75,48 @@ let v = (0, _.uid)(),
       })
     })
   },
-  O = e => {
+  R = e => {
     let {
       id: t,
-      selectedSurrogate: i,
-      onClick: l,
-      hasTabWrapper: a
-    } = e, d = (0, p.default)("diversity"), f = (0, u.useSpring)({
-      height: (R + 2 * y) * (g.DIVERSITY_SURROGATES.length + 1),
+      selectedSurrogate: n,
+      onClick: a,
+      hasTabWrapper: r
+    } = e, c = (0, E.default)("diversity"), f = (0, u.useSpring)({
+      height: (x + 2 * N) * (g.DIVERSITY_SURROGATES.length + 1),
       from: {
-        height: R
+        height: x
       },
       config: {
         duration: 125
       }
     });
-    s.useEffect(() => {
-      d.focusFirstVisibleItem()
-    }, [d]);
-    let E = ["", ...g.DIVERSITY_SURROGATES];
-    return o.remove(E, e => e === i), E.unshift(i), (0, n.jsx)(c.ListNavigatorProvider, {
-      navigator: d,
-      children: (0, n.jsx)(c.ListNavigatorContainer, {
+    i.useEffect(() => {
+      c.focusFirstVisibleItem()
+    }, [c]);
+    let p = ["", ...g.DIVERSITY_SURROGATES];
+    return o.remove(p, e => e === n), p.unshift(n), (0, l.jsx)(d.ListNavigatorProvider, {
+      navigator: c,
+      children: (0, l.jsx)(d.ListNavigatorContainer, {
         children: e => {
           let {
-            ref: i,
-            ...s
+            ref: n,
+            ...i
           } = e;
-          return (0, n.jsx)(u.animated.div, {
-            ...s,
+          return (0, l.jsx)(u.animated.div, {
+            ...i,
             id: t,
-            ref: i,
-            className: r(N.diversitySelectorOptions, {
-              [N.diversitySelectorOptionsHasTabWrapper]: a
+            ref: n,
+            className: s(_.diversitySelectorOptions, {
+              [_.diversitySelectorOptionsHasTabWrapper]: r
             }),
             style: f,
             role: "listbox",
-            children: E.map((e, t) => (0, n.jsx)(j, {
+            children: p.map((e, t) => (0, l.jsx)(O, {
               index: t,
               fade: 0 !== t,
               delay: 20 * t,
               surrogate: e,
-              onClick: l
+              onClick: a
             }, t))
           })
         }
@@ -126,41 +126,41 @@ let v = (0, _.uid)(),
 var M = e => {
   let {
     searchBarRef: t,
-    selectedSurrogate: i,
-    className: l,
-    hasTabWrapper: r
-  } = e, a = S.default.getURL(A + i), [o, u] = s.useState(!1), c = (0, I.default)(null, () => u(!1)), d = s.useRef(null);
-  return (0, n.jsxs)("div", {
-    ref: c,
-    className: l,
-    children: [(0, n.jsx)(E.Clickable, {
-      innerRef: d,
-      className: N.diversitySelectorButton,
+    selectedSurrogate: n,
+    className: a,
+    hasTabWrapper: s
+  } = e, r = C.default.getURL(A + n), [o, u] = i.useState(!1), d = (0, h.default)(null, () => u(!1)), c = i.useRef(null);
+  return (0, l.jsxs)("div", {
+    ref: d,
+    className: a,
+    children: [(0, l.jsx)(p.Clickable, {
+      innerRef: c,
+      className: _.diversitySelectorButton,
       onClick: () => {
         u(!0)
       },
-      "aria-label": T.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
+      "aria-label": I.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
       "aria-haspopup": !0,
       "aria-expanded": o,
-      "aria-controls": v,
+      "aria-controls": y,
       tabIndex: o ? -1 : 0,
-      children: (0, n.jsx)("div", {
-        className: N.diversityEmojiItemImage,
+      children: (0, l.jsx)("div", {
+        className: _.diversityEmojiItemImage,
         style: {
-          backgroundImage: 'url("'.concat(a, '")')
+          backgroundImage: 'url("'.concat(r, '")')
         }
       })
-    }), o ? (0, n.jsx)("div", {
+    }), o ? (0, l.jsx)("div", {
       onKeyDown: e => {
-        e.keyCode === C.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus())
+        e.keyCode === v.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
       },
-      children: (0, n.jsx)(O, {
-        id: v,
-        hasTabWrapper: r,
-        selectedSurrogate: i,
+      children: (0, l.jsx)(R, {
+        id: y,
+        hasTabWrapper: s,
+        selectedSurrogate: n,
         onClick: e => {
-          var i;
-          (0, m.setDiversityColor)(e), u(!1), null === (i = t.current) || void 0 === i || i.focus()
+          var n;
+          (0, m.setDiversityColor)(e), u(!1), null === (n = t.current) || void 0 === n || n.focus()
         }
       })
     }) : null]

@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   isImageFile: function() {
-    return s
+    return o
   },
   isAnimatedImageUrl: function() {
-    return u
+    return l
   },
   isVideoUrl: function() {
-    return d
+    return c
   },
   isVideoFile: function() {
-    return c
+    return d
   }
 }), n("222007");
-var l = n("773336");
-let i = (e, t) => {
-    if (null == e) return !1;
-    let [n, l] = e.split(/\?/, 1);
-    return t.test(n)
+var r = n("773336");
+let i = (t, e) => {
+    if (null == t) return !1;
+    let [n, r] = t.split(/\?/, 1);
+    return e.test(n)
   },
-  r = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
-  s = e => null != e && r.test(e),
+  u = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
+  o = t => null != t && u.test(t),
   a = /\.(webp|gif)$/i,
-  u = e => i(e, a),
-  o = (0, l.isIOS)() ? /\.(mp4|mov)$/i : ((0, l.isAndroid)(), /\.(mp4|webm|mov)$/i),
-  d = e => i(e, o),
-  c = e => null != e && o.test(e)
+  l = t => i(t, a),
+  s = (0, r.isIOS)() ? /\.(mp4|mov)$/i : ((0, r.isAndroid)(), /\.(mp4|webm|mov)$/i),
+  c = t => i(t, s),
+  d = t => null != t && s.test(t)

@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+s.r(t), s.d(t, {
   openExpressionPicker: function() {
     return c
   },
@@ -7,26 +7,26 @@ i.r(t), i.d(t, {
     return d
   },
   toggleMultiExpressionPicker: function() {
-    return f
+    return h
   },
   toggleExpressionPicker: function() {
-    return E
+    return f
   },
   setExpressionPickerView: function() {
-    return m
+    return p
   },
   setSearchQuery: function() {
-    return I
+    return m
   },
   useExpressionPickerStore: function() {
-    return p
+    return I
   }
 });
-var n = i("995008"),
-  s = i.n(n),
-  l = i("308503"),
-  r = i("136759"),
-  a = i("13030");
+var r = s("995008"),
+  n = s.n(r),
+  l = s("308503"),
+  i = s("136759"),
+  a = s("13030");
 let o = Object.freeze({
     activeView: null,
     lastActiveView: null,
@@ -35,10 +35,10 @@ let o = Object.freeze({
     isSearchSuggestion: !1,
     pickerId: function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
-      return s(e)
+      return n(e)
     }()
   }),
-  u = (0, l.default)((0, r.persist)((e, t) => o, {
+  u = (0, l.default)((0, i.persist)((e, t) => o, {
     name: "expression-picker-last-active-view",
     partialize: e => ({
       lastActiveView: e.lastActiveView
@@ -59,27 +59,27 @@ let o = Object.freeze({
       lastActiveView: t.activeView
     })
   },
-  f = e => {
+  h = e => {
     let t = u.getState();
     if (null == t.activeView) {
-      var i;
-      c(null !== (i = t.lastActiveView) && void 0 !== i ? i : a.ExpressionPickerViewType.EMOJI, e)
+      var s;
+      c(null !== (s = t.lastActiveView) && void 0 !== s ? s : a.ExpressionPickerViewType.EMOJI, e)
     } else d()
   },
-  E = (e, t) => {
+  f = (e, t) => {
     u.getState().activeView === e ? d() : c(e, t)
   },
-  m = e => {
+  p = e => {
     u.setState({
       activeView: e,
       lastActiveView: u.getState().activeView
     })
   },
-  I = function(e) {
+  m = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     u.setState({
       searchQuery: e,
       isSearchSuggestion: t
     })
   },
-  p = u
+  I = u

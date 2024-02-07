@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var i = n("37983"),
-  a = n("884691"),
-  l = n("917351"),
-  s = n.n(l),
-  o = n("888400"),
-  r = n("782340");
-let d = () => [r.default.Messages.COUNTDOWN_UNITS_SECONDS, r.default.Messages.COUNTDOWN_UNITS_MINUTES, r.default.Messages.COUNTDOWN_UNITS_HOURS, r.default.Messages.COUNTDOWN_UNITS_DAYS];
-class u extends a.PureComponent {
+var s = n("37983"),
+  r = n("884691"),
+  i = n("917351"),
+  a = n.n(i),
+  l = n("888400"),
+  o = n("782340");
+let u = () => [o.default.Messages.COUNTDOWN_UNITS_SECONDS, o.default.Messages.COUNTDOWN_UNITS_MINUTES, o.default.Messages.COUNTDOWN_UNITS_HOURS, o.default.Messages.COUNTDOWN_UNITS_DAYS];
+class d extends r.PureComponent {
   componentDidMount() {
     let {
       intervalDuration: e,
@@ -28,19 +28,19 @@ class u extends a.PureComponent {
     let {
       showDays: t,
       showUnits: n,
-      className: a
-    } = this.props, l = [e.days, e.hours, e.minutes, e.seconds], o = d();
-    if (0 === e.days) l.shift();
+      className: r
+    } = this.props, i = [e.days, e.hours, e.minutes, e.seconds], l = u();
+    if (0 === e.days) i.shift();
     else if (!t) {
-      let e = l.shift();
-      l[0] += 24 * e
+      let e = i.shift();
+      i[0] += 24 * e
     }
-    let r = s(l).map(e => e < 10 ? "0".concat(e) : e).map((e, t) => [t > 0 && !n ? ":" : " ", (0, i.jsxs)("span", {
-      children: [e, n ? o[l.length - t - 1] : null]
+    let o = a(i).map(e => e < 10 ? "0".concat(e) : e).map((e, t) => [t > 0 && !n ? ":" : " ", (0, s.jsxs)("span", {
+      children: [e, n ? l[i.length - t - 1] : null]
     }, t)]).flatten().value();
-    return (0, i.jsx)("span", {
-      className: a,
-      children: r
+    return (0, s.jsx)("span", {
+      className: r,
+      children: o
     })
   }
   render() {
@@ -48,21 +48,21 @@ class u extends a.PureComponent {
       deadline: e,
       children: t,
       className: n,
-      stopAtOneSec: a
+      stopAtOneSec: r
     } = this.props;
-    if (e === 1 / 0) return (0, i.jsx)("span", {
+    if (e === 1 / 0) return (0, s.jsx)("span", {
       className: n,
-      "aria-label": r.default.Messages.MAX_AGE_NEVER,
+      "aria-label": o.default.Messages.MAX_AGE_NEVER,
       children: "∞"
     });
-    let l = (0, o.diffAsUnits)(Date.now(), e, a);
-    return null != t ? t(l, this.defaultRender.bind(this, l)) : this.defaultRender(l)
+    let i = (0, l.diffAsUnits)(Date.now(), e, r);
+    return null != t ? t(i, this.defaultRender.bind(this, i)) : this.defaultRender(i)
   }
 }
-u.defaultProps = {
+d.defaultProps = {
   showDays: !0,
   showUnits: !1,
   stopAtOneSec: !1,
   intervalDuration: 1e3
 };
-var c = u
+var c = d

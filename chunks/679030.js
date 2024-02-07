@@ -26,8 +26,8 @@ var s, a, l = n("37983"),
   C = n("701909"),
   v = n("158998"),
   R = n("404432"),
-  L = n("291850"),
-  O = n("860959"),
+  O = n("291850"),
+  L = n("860959"),
   x = n("49111"),
   M = n("782340"),
   D = n("926622");
@@ -205,12 +205,12 @@ class P extends i.PureComponent {
         let e = this.state.currentUser;
         return o || null == e ? this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e)
       }
-      return "login" === this.getMode() ? (0, l.jsx)(L.default, {
+      return "login" === this.getMode() ? (0, l.jsx)(O.default, {
         giftCodeSKU: t,
         giftCode: s,
         transitionTo: r,
         location: u
-      }) : (0, l.jsx)(O.default, {
+      }) : (0, l.jsx)(L.default, {
         giftCodeSKU: t,
         giftCode: s,
         transitionTo: r,

@@ -1,8 +1,8 @@
 "use strict";
-t.exports = function(t) {
-  return (t = String(t || ""), o.test(t)) ? "rtl" : a.test(t) ? "ltr" : "neutral"
+e.exports = function(e) {
+  return (e = String(e || ""), o.test(e)) ? "rtl" : a.test(e) ? "ltr" : "neutral"
 };
 var n = "֑-߿יִ-﷽ﹰ-ﻼ",
-  i = "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-ʸ̀-֐ࠀ-῿‎Ⰰ-﬜︀-﹯﻽-￿",
-  o = RegExp("^[^" + i + "]*[" + n + "]"),
-  a = RegExp("^[^" + n + "]*[" + i + "]")
+  u = "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-ʸ̀-֐ࠀ-῿‎Ⰰ-﬜︀-﹯﻽-￿",
+  o = RegExp("^[^" + u + "]*[" + n + "]"),
+  a = RegExp("^[^" + n + "]*[" + u + "]")

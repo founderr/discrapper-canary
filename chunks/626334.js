@@ -1,6 +1,6 @@
 "use strict";
 var s, a;
-x.r(t), x.d(t, {
+t.r(x), t.d(x, {
   VoiceChannelEffectAnimationType: function() {
     return s
   },

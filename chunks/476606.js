@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 }), n("222007");
 var l = n("884691"),
   i = n("721698"),
-  r = n("718517"),
-  o = n("482626");
+  a = n("718517"),
+  s = n("482626");
 
-function s(e) {
+function r(e) {
   let {
     sectionId: t,
     commandsByActiveSection: n
-  } = e, [s, a] = l.useState(o.CommandListSortOrder.ALPHABETICAL), u = l.useMemo(() => {
+  } = e, [r, o] = l.useState(s.CommandListSortOrder.ALPHABETICAL), u = l.useMemo(() => {
     var e, l;
     return null !== (l = null === (e = n.find(e => e.section.id === t)) || void 0 === e ? void 0 : e.data) && void 0 !== l ? l : []
   }, [n, t]), {
@@ -59,22 +59,22 @@ function s(e) {
   });
   l.useEffect(() => {
     i.getApplication(t, {
-      dontRefetchMs: r.default.Millis.DAY
+      dontRefetchMs: a.default.Millis.DAY
     })
   }, [t]), l.useEffect(() => {
-    c && a(o.CommandListSortOrder.POPULAR)
+    c && o(s.CommandListSortOrder.POPULAR)
   }, [c]);
   let f = u;
-  switch (s) {
-    case o.CommandListSortOrder.POPULAR:
+  switch (r) {
+    case s.CommandListSortOrder.POPULAR:
       f = d;
       break;
-    case o.CommandListSortOrder.ALPHABETICAL:
+    case s.CommandListSortOrder.ALPHABETICAL:
       f = u
   }
   return {
-    sortOrder: s,
-    setSortOrder: a,
+    sortOrder: r,
+    setSortOrder: o,
     commands: f,
     canSort: c
   }

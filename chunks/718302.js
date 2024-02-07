@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return n
   }
 }), s("222007");
-var r, l, n, a = s("884691"),
-  i = s("49111");
-(n = r || (r = {})).ARROW_UP = "ARROW_UP", n.ARROW_DOWN = "ARROW_DOWN", n.ARROW_LEFT = "ARROW_LEFT", n.ARROW_RIGHT = "ARROW_RIGHT";
-l = class extends a.Component {
+var r, n, l, i = s("884691"),
+  a = s("49111");
+(l = r || (r = {})).ARROW_UP = "ARROW_UP", l.ARROW_DOWN = "ARROW_DOWN", l.ARROW_LEFT = "ARROW_LEFT", l.ARROW_RIGHT = "ARROW_RIGHT";
+n = class extends i.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown, !0)
   }
@@ -20,64 +20,64 @@ l = class extends a.Component {
       onFocus: s
     } = this.props, {
       focusedColumn: r,
-      focusedRow: l
+      focusedRow: n
     } = this.state;
     if (null == e) return;
-    let n = t();
-    if (null == n) return;
-    let a = this.getNext(n, r, l, e);
+    let l = t();
+    if (null == l) return;
+    let i = this.getNext(l, r, n, e);
     this.setState({
-      focusedColumn: a.column,
-      focusedRow: a.row
+      focusedColumn: i.column,
+      focusedRow: i.row
     }, () => {
       let e = this.calculateFocusedItem();
       null != e && null != s && s(e)
     })
   }
   getNext(e, t, s, r) {
-    let l, n, a, i;
-    if (null == t || null == s) n = 0, a = 0, l = {
+    let n, l, i, a;
+    if (null == t || null == s) l = 0, i = 0, n = {
       column: 0,
       row: 0
     };
-    else switch (n = t, a = s, r) {
+    else switch (l = t, i = s, r) {
       case "ARROW_UP":
-        l = {
-          column: n,
-          row: Math.max(a - 1, 0)
+        n = {
+          column: l,
+          row: Math.max(i - 1, 0)
         };
         break;
       case "ARROW_DOWN":
-        l = {
-          column: n,
-          row: Math.min(a + 1, e[n].length - 1)
+        n = {
+          column: l,
+          row: Math.min(i + 1, e[l].length - 1)
         };
         break;
       case "ARROW_LEFT":
-        l = this.wrapPosition(e, n, a, -1);
+        n = this.wrapPosition(e, l, i, -1);
         break;
       case "ARROW_RIGHT":
-        l = this.wrapPosition(e, n, a, 1)
+        n = this.wrapPosition(e, l, i, 1)
     }
-    return null != l && (i = e[l.column][l.row]), (null == i || null == l) && (i = e[(l = {
-      column: n,
-      row: a
-    }).column][l.row]), {
-      column: l.column,
-      row: l.row,
-      id: i
+    return null != n && (a = e[n.column][n.row]), (null == a || null == n) && (a = e[(n = {
+      column: l,
+      row: i
+    }).column][n.row]), {
+      column: n.column,
+      row: n.row,
+      id: a
     }
   }
   calculateClosest(e, t) {
     let s;
     let r = this.props.getCoordsMap()[e];
     if (null == r) return;
-    let l = Number.MAX_SAFE_INTEGER;
+    let n = Number.MAX_SAFE_INTEGER;
     for (let e = 0; e < t.length; e++) {
-      let n = this.props.getCoordsMap()[t[e]];
-      if (null == n) continue;
-      let a = Math.abs(n.top - r.top);
-      if (a < l) l = a, s = e;
+      let l = this.props.getCoordsMap()[t[e]];
+      if (null == l) continue;
+      let i = Math.abs(l.top - r.top);
+      if (i < n) n = i, s = e;
       else break
     }
     return s
@@ -103,38 +103,38 @@ l = class extends a.Component {
         onSelect: t
       } = this.props;
       switch (e.keyCode) {
-        case i.KeyboardKeys.ARROW_DOWN:
-        case i.KeyboardKeys.ARROW_UP:
-        case i.KeyboardKeys.ARROW_LEFT:
-        case i.KeyboardKeys.ARROW_RIGHT:
+        case a.KeyboardKeys.ARROW_DOWN:
+        case a.KeyboardKeys.ARROW_UP:
+        case a.KeyboardKeys.ARROW_LEFT:
+        case a.KeyboardKeys.ARROW_RIGHT:
           this.focusNext(function(e) {
             switch (e) {
-              case i.KeyboardKeys.ARROW_DOWN:
+              case a.KeyboardKeys.ARROW_DOWN:
                 return "ARROW_DOWN";
-              case i.KeyboardKeys.ARROW_UP:
+              case a.KeyboardKeys.ARROW_UP:
                 return "ARROW_UP";
-              case i.KeyboardKeys.ARROW_LEFT:
+              case a.KeyboardKeys.ARROW_LEFT:
                 return "ARROW_LEFT";
-              case i.KeyboardKeys.ARROW_RIGHT:
+              case a.KeyboardKeys.ARROW_RIGHT:
                 return "ARROW_RIGHT";
               default:
                 return null
             }
           }(e.keyCode));
           break;
-        case i.KeyboardKeys.ENTER:
+        case a.KeyboardKeys.ENTER:
           let s = this.calculateFocusedItem();
           null != s && null != t && (e.preventDefault(), e.stopPropagation(), t(s))
       }
     }, this.wrapPosition = (e, t, s, r) => {
-      var l;
-      let n = e.length,
-        a = Math.max(s * n + t + r, 0) % n,
-        i = null !== (l = this.calculateClosest(e[t][s], e[a])) && void 0 !== l ? l : s,
+      var n;
+      let l = e.length,
+        i = Math.max(s * l + t + r, 0) % l,
+        a = null !== (n = this.calculateClosest(e[t][s], e[i])) && void 0 !== n ? n : s,
         o = 0;
-      return r < 0 && a > t && (o = -1), r > 0 && a < t && (o = 1), {
-        column: a,
-        row: i + o
+      return r < 0 && i > t && (o = -1), r > 0 && i < t && (o = 1), {
+        column: i,
+        row: a + o
       }
     }
   }

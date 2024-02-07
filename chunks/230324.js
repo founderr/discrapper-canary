@@ -4,55 +4,55 @@ n.r(t), n.d(t, {
     return c
   },
   getRemoveModeratorTooltipHint: function() {
-    return E
+    return f
   },
   getStageChannelMetadata: function() {
-    return f
+    return E
   }
 }), n("808653"), n("222007"), n("917351");
-var l = n("945956"),
-  u = n("387111"),
+var u = n("945956"),
+  i = n("387111"),
   a = n("991170"),
-  i = n("834052"),
-  d = n("837979"),
-  r = n("49111"),
-  s = n("606762"),
-  o = n("782340");
+  l = n("834052"),
+  r = n("837979"),
+  d = n("49111"),
+  o = n("606762"),
+  s = n("782340");
 
-function c(e, t, n, l) {
+function c(e, t, n, u) {
   let a = t[0],
-    i = u.default.getName(e, n, a),
-    d = null != l ? l : t.length;
-  return 1 === d && null != a ? i : null == a ? o.default.Messages.SPEAKING_COUNT.format({
-    count: d
-  }) : o.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
-    name: i,
-    count: d - 1
+    l = i.default.getName(e, n, a),
+    r = null != u ? u : t.length;
+  return 1 === r && null != a ? l : null == a ? s.default.Messages.SPEAKING_COUNT.format({
+    count: r
+  }) : s.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
+    name: l,
+    count: r - 1
   })
 }
 
-function E(e, t) {
+function f(e, t) {
   switch (e) {
-    case s.RowType.OWNER:
-      return o.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-    case s.RowType.ADMINISTRATOR:
-      return o.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-    case s.RowType.MEMBER:
-    case s.RowType.ROLE:
-      return t ? o.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS : o.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
-    case s.RowType.EMPTY_STATE:
+    case o.RowType.OWNER:
+      return s.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
+    case o.RowType.ADMINISTRATOR:
+      return s.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
+    case o.RowType.MEMBER:
+    case o.RowType.ROLE:
+      return t ? s.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS : s.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
+    case o.RowType.EMPTY_STATE:
   }
   return null
 }
 
-function f(e) {
-  let t = i.default.getStageInstanceByChannel(e.id);
+function E(e) {
+  let t = l.default.getStageInstanceByChannel(e.id);
   return {
     channel_id: e.id,
     guild_id: e.guild_id,
     topic: null == t ? void 0 : t.topic,
-    media_session_id: l.default.getMediaSessionId(),
-    request_to_speak_state: a.default.canEveryoneRole(r.Permissions.REQUEST_TO_SPEAK, e) ? d.RequestToSpeakPermissionStates.EVERYONE : d.RequestToSpeakPermissionStates.NO_ONE,
+    media_session_id: u.default.getMediaSessionId(),
+    request_to_speak_state: a.default.canEveryoneRole(d.Permissions.REQUEST_TO_SPEAK, e) ? r.RequestToSpeakPermissionStates.EVERYONE : r.RequestToSpeakPermissionStates.NO_ONE,
     stage_instance_id: null == t ? void 0 : t.id
   }
 }

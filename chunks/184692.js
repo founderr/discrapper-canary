@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return r
   }
 });
-var i = n("37983"),
-  l = n("884691"),
-  s = n("129722"),
-  r = n("477633"),
-  a = l.memo(function(e) {
+var l = n("37983"),
+  i = n("884691"),
+  a = n("129722"),
+  s = n("477633"),
+  r = i.memo(function(e) {
     let {
       fineTuning: t,
       fineTuningResolution: n,
-      duration: l
+      duration: i
     } = e, {
-      file: a,
+      file: r,
       audio: u
-    } = (0, s.useAudioTrimmerStore)();
-    return (0, i.jsx)(r.default, {
-      file: a,
+    } = (0, a.useAudioTrimmerStore)();
+    return (0, l.jsx)(s.default, {
+      file: r,
       audio: u,
       waveformSettings: {
         fineTuning: t,
         fineTuningResolution: n,
-        duration: l
+        duration: i
       }
     })
   })

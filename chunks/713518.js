@@ -20,8 +20,8 @@ var i = n("884691"),
   a = n("775433"),
   o = n("308592"),
   u = n("10514"),
-  c = n("719923"),
-  d = n("49111"),
+  d = n("719923"),
+  c = n("49111"),
   f = n("646718");
 
 function E(e) {
@@ -37,9 +37,9 @@ function h(e, t, n) {
   let i, r = [],
     s = [],
     a = {
-      purchaseType: n ? d.PriceSetAssignmentPurchaseTypes.GIFT : d.PriceSetAssignmentPurchaseTypes.DEFAULT
+      purchaseType: n ? c.PriceSetAssignmentPurchaseTypes.GIFT : c.PriceSetAssignmentPurchaseTypes.DEFAULT
     };
-  return l(i = "string" == typeof e ? u.default.get(e) : e, "subscription plan not loaded"), null != t && u.default.hasPaymentSourceForSKUId(t, i.skuId) && (a.paymentSourceId = t), (r = (s = (0, c.experimentalGetPrices)(i.id, a)).map(e => e.currency)).length < 1 && (r = [d.CurrencyCodes.USD]), r
+  return l(i = "string" == typeof e ? u.default.get(e) : e, "subscription plan not loaded"), null != t && u.default.hasPaymentSourceForSKUId(t, i.skuId) && (a.paymentSourceId = t), (r = (s = (0, d.experimentalGetPrices)(i.id, a)).map(e => e.currency)).length < 1 && (r = [c.CurrencyCodes.USD]), r
 }
 
 function _(e, t, n) {
@@ -60,7 +60,7 @@ function C(e, t, n, r, l) {
   } : {
     currency: e,
     loaded: !1
-  }), c = (0, o.useSubscriptionPlansLoaded)(l);
+  }), d = (0, o.useSubscriptionPlansLoaded)(l);
   i.useEffect(() => {
     let e = async () => {
       await E(n, l);
@@ -75,16 +75,16 @@ function C(e, t, n, r, l) {
       })
     };
     e()
-  }, [n, JSON.stringify(l), t, r, c]);
-  let d = s.paymentSourceId !== n || null == t || !c || !0 !== s.loaded;
+  }, [n, JSON.stringify(l), t, r, d]);
+  let c = s.paymentSourceId !== n || null == t || !d || !0 !== s.loaded;
   return {
-    hasFetchedSubscriptionPlans: c,
+    hasFetchedSubscriptionPlans: d,
     priceOptions: s,
     setCurrency: e => {
       a({
         currency: e
       })
     },
-    currencyLoading: d
+    currencyLoading: c
   }
 }

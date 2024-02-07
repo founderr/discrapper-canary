@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 });
-var u = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
-  i = n("77078"),
-  l = n("255397"),
-  r = n("191145"),
-  d = n("782340");
+var l = n("446674"),
+  u = n("77078"),
+  i = n("255397"),
+  d = n("191145"),
+  r = n("782340");
 
-function o(e) {
-  let t = (0, a.useStateFromStores)([r.default], () => r.default.getVoiceParticipantsHidden(e));
-  return (0, u.jsx)(i.MenuCheckboxItem, {
+function s(e) {
+  let t = (0, l.useStateFromStores)([d.default], () => d.default.getVoiceParticipantsHidden(e));
+  return (0, a.jsx)(u.MenuCheckboxItem, {
     id: "no-video-hide",
-    label: d.default.Messages.STREAM_SHOW_NON_VIDEO,
+    label: r.default.Messages.STREAM_SHOW_NON_VIDEO,
     checked: !t,
-    action: () => l.default.toggleVoiceParticipantsHidden(e, !t)
+    action: () => i.default.toggleVoiceParticipantsHidden(e, !t)
   })
 }

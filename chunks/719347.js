@@ -14,11 +14,11 @@ n.r(e), n.d(e, {
     return r
   },
   SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE: function() {
-    return s
+    return l
   }
 });
 let u = 550,
   o = 350,
   a = 40;
 (i = r || (r = {})).STATIC = "STATIC", i.RESPONSIVE = "RESPONSIVE", i.MOSAIC = "MOSAIC";
-let s = 20
+let l = 20

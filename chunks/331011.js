@@ -1,31 +1,31 @@
 "use strict";
 i.r(t), i.d(t, {
   getReactionTooltipText: function() {
-    return p
+    return h
   }
 });
 var a = i("917351"),
-  l = i.n(a),
-  n = i("432173"),
-  s = i("42203"),
-  o = i("486996"),
+  n = i.n(a),
+  l = i("432173"),
+  o = i("42203"),
+  s = i("486996"),
   r = i("27618"),
   u = i("387111"),
   d = i("875978"),
   c = i("782340");
 
-function p(e, t) {
+function h(e, t) {
   var i;
   let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.ReactionTypes.NORMAL,
-    p = arguments.length > 3 ? arguments[3] : void 0,
-    h = o.default.getReactions(e.getChannelId(), e.id, t, 3, a),
-    f = s.default.getChannel(e.getChannelId()),
-    T = null == f || f.isPrivate() ? null : f.getGuildId(),
-    m = e.getReaction(t),
+    h = arguments.length > 3 ? arguments[3] : void 0,
+    p = s.default.getReactions(e.getChannelId(), e.id, t, 3, a),
+    T = o.default.getChannel(e.getChannelId()),
+    m = null == T || T.isPrivate() ? null : T.getGuildId(),
+    f = e.getReaction(t),
     E = a === d.ReactionTypes.BURST,
-    _ = l(h).reject(e => r.default.isBlocked(e.id)).take(3).map(e => u.default.getName(T, null == f ? void 0 : f.id, e)).value();
-  if (0 === _.length) return "";
-  let g = {
+    R = n(p).reject(e => r.default.isBlocked(e.id)).take(3).map(e => u.default.getName(m, null == T ? void 0 : T.id, e)).value();
+  if (0 === R.length) return "";
+  let I = {
       standard: {
         reactionTooltip1NInteractive: c.default.Messages.REACTION_TOOLTIP_1_N_INTERACTIVE,
         reactionTooltip1N: c.default.Messages.REACTION_TOOLTIP_1_N,
@@ -53,64 +53,64 @@ function p(e, t) {
         reactionTooltipN: c.default.Messages.BURST_REACTION_TOOLTIP_N
       }
     },
-    R = E ? g.burst : g.standard,
-    I = null !== (i = E ? null == m ? void 0 : m.burst_count : null == m ? void 0 : m.count) && void 0 !== i ? i : 0,
-    C = Math.max(0, I - _.length),
-    O = (0, n.getReactionEmojiName)(t);
-  if (1 === _.length) return C > 0 ? null != p ? R.reactionTooltip1NInteractive.format({
-    a: _[0],
-    n: C,
-    emojiName: O,
-    onClick: p
-  }) : R.reactionTooltip1N.format({
-    a: _[0],
-    n: C,
-    emojiName: O
-  }) : R.reactionTooltip1.format({
-    a: _[0],
-    emojiName: O
+    g = E ? I.burst : I.standard,
+    _ = null !== (i = E ? null == f ? void 0 : f.burst_count : null == f ? void 0 : f.count) && void 0 !== i ? i : 0,
+    N = Math.max(0, _ - R.length),
+    C = (0, l.getReactionEmojiName)(t);
+  if (1 === R.length) return N > 0 ? null != h ? g.reactionTooltip1NInteractive.format({
+    a: R[0],
+    n: N,
+    emojiName: C,
+    onClick: h
+  }) : g.reactionTooltip1N.format({
+    a: R[0],
+    n: N,
+    emojiName: C
+  }) : g.reactionTooltip1.format({
+    a: R[0],
+    emojiName: C
   });
-  if (2 === _.length) return C > 0 ? null != p ? R.reactionTooltip2NInteractive.format({
-    a: _[0],
-    b: _[1],
-    n: C,
-    emojiName: O,
-    onClick: p
-  }) : R.reactionTooltip2N.format({
-    a: _[0],
-    b: _[1],
-    n: C,
-    emojiName: O
-  }) : R.reactionTooltip2.format({
-    a: _[0],
-    b: _[1],
-    emojiName: O
+  if (2 === R.length) return N > 0 ? null != h ? g.reactionTooltip2NInteractive.format({
+    a: R[0],
+    b: R[1],
+    n: N,
+    emojiName: C,
+    onClick: h
+  }) : g.reactionTooltip2N.format({
+    a: R[0],
+    b: R[1],
+    n: N,
+    emojiName: C
+  }) : g.reactionTooltip2.format({
+    a: R[0],
+    b: R[1],
+    emojiName: C
   });
-  if (3 === _.length) return C > 0 ? null != p ? R.reactionTooltip3NInteractive.format({
-    a: _[0],
-    b: _[1],
-    c: _[2],
-    n: C,
-    emojiName: O,
-    onClick: p
-  }) : R.reactionTooltip3N.format({
-    a: _[0],
-    b: _[1],
-    c: _[2],
-    n: C,
-    emojiName: O
-  }) : R.reactionTooltip3.format({
-    a: _[0],
-    b: _[1],
-    c: _[2],
-    emojiName: O
+  if (3 === R.length) return N > 0 ? null != h ? g.reactionTooltip3NInteractive.format({
+    a: R[0],
+    b: R[1],
+    c: R[2],
+    n: N,
+    emojiName: C,
+    onClick: h
+  }) : g.reactionTooltip3N.format({
+    a: R[0],
+    b: R[1],
+    c: R[2],
+    n: N,
+    emojiName: C
+  }) : g.reactionTooltip3.format({
+    a: R[0],
+    b: R[1],
+    c: R[2],
+    emojiName: C
   });
-  else return null != p ? R.reactionTooltipNInteractive.format({
-    n: C,
-    emojiName: O,
-    onClick: p
-  }) : R.reactionTooltipN.format({
-    n: C,
-    emojiName: O
+  else return null != h ? g.reactionTooltipNInteractive.format({
+    n: N,
+    emojiName: C,
+    onClick: h
+  }) : g.reactionTooltipN.format({
+    n: N,
+    emojiName: C
   })
 }

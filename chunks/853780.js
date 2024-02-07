@@ -1,39 +1,39 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("77078"),
-  s = l("970755"),
-  i = l("252063"),
-  r = l("777003"),
-  o = l("782340"),
-  u = l("932741"),
-  d = l("814076");
+var l = n("37983");
+n("884691");
+var i = n("77078"),
+  a = n("970755"),
+  s = n("252063"),
+  r = n("777003"),
+  o = n("782340"),
+  u = n("932741"),
+  d = n("814076");
 
 function c(e) {
   let {
     applicationId: t,
-    channelId: l
+    channelId: n
   } = e, {
     installedIntegrations: c,
     fetched: f
-  } = (0, i.usePrivateChannelIntegrationState)({
-    channelId: l
-  }), m = f && void 0 !== c.find(e => e.application.id === t);
-  return m ? (0, n.jsxs)(r.default, {
-    children: [(0, n.jsx)(a.Heading, {
+  } = (0, s.usePrivateChannelIntegrationState)({
+    channelId: n
+  }), p = f && void 0 !== c.find(e => e.application.id === t);
+  return p ? (0, l.jsxs)(r.default, {
+    children: [(0, l.jsx)(i.Heading, {
       variant: "eyebrow",
       className: d.title,
       children: o.default.Messages.BOT_PROFILE_MANAGE_PRIVATE_CHANNEL_INTEGRATION
-    }), (0, n.jsx)(a.Button, {
-      onClick: () => (0, s.deletePrivateChannelIntegration)(l, t),
-      size: a.Button.Sizes.ICON,
-      color: a.Button.Colors.RED,
-      look: a.Button.Looks.LINK,
+    }), (0, l.jsx)(i.Button, {
+      onClick: () => (0, a.deletePrivateChannelIntegration)(n, t),
+      size: i.Button.Sizes.ICON,
+      color: i.Button.Colors.RED,
+      look: i.Button.Looks.LINK,
       className: u.button,
       children: o.default.Messages.BOT_PROFILE_REMOVE_PRIVATE_CHANNEL_INTEGRATION
     })]

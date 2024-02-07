@@ -1,20 +1,20 @@
-var n = {
+var l = {
   "./spritesheet-emoji-32.png": "61469",
   "./spritesheet-emoji-40.png": "642437",
   "./spritesheet-emoji-48.png": "958327"
 };
 
-function s(e) {
-  return i(l(e))
+function i(e) {
+  return n(a(e))
 }
 
-function l(e) {
-  if (!i.o(n, e)) {
+function a(e) {
+  if (!n.o(l, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
   }
-  return n[e]
+  return l[e]
 }
-s.id = '"996542"', s.keys = function() {
-  return Object.keys(n)
-}, s.resolve = l, e.exports = s
+i.id = '"996542"', i.keys = function() {
+  return Object.keys(l)
+}, i.resolve = a, e.exports = i

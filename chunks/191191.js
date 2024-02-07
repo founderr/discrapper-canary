@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("759843"),
-  a = n("446674"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("759843"),
+  o = n("446674"),
   u = n("77078"),
   d = n("812204"),
   c = n("685665"),
@@ -18,57 +18,57 @@ var l = n("37983"),
   m = n("872173"),
   h = n("945956"),
   E = n("305122"),
-  S = n("235004"),
-  g = n("534108"),
+  g = n("235004"),
+  S = n("534108"),
   C = n("808910");
 
 function T(e) {
   let {
     guildId: t,
     channel: n,
-    containerWidth: r,
+    containerWidth: a,
     onClose: T,
     onSelect: v,
-    analyticsSource: y,
-    suppressPlaySound: x,
-    shouldShowUpsell: I = !0,
-    gridNotice: N,
-    autoWidth: _ = !1,
-    soundButtonOverlay: A,
-    listPadding: R,
-    renderHeader: O,
+    analyticsSource: I,
+    suppressPlaySound: _,
+    shouldShowUpsell: y = !0,
+    gridNotice: A,
+    autoWidth: N = !1,
+    soundButtonOverlay: x,
+    listPadding: O,
+    renderHeader: R,
     defaultSoundsOnly: M
-  } = e, b = (0, a.useStateFromStores)([S.default], () => S.default.isFetchingSounds() || S.default.isFetchingDefaultSounds()), k = (0, a.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
-    AnalyticsLocationProvider: P
+  } = e, L = (0, o.useStateFromStores)([g.default], () => g.default.isFetchingSounds() || g.default.isFetchingDefaultSounds()), P = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
+    AnalyticsLocationProvider: b
   } = (0, c.default)(d.default.SOUNDBOARD_POPOUT);
   return (0, f.default)({
-    type: s.ImpressionTypes.POPOUT,
-    name: s.ImpressionNames.SOUNDBOARD_POPOUT,
+    type: r.ImpressionTypes.POPOUT,
+    name: r.ImpressionNames.SOUNDBOARD_POPOUT,
     properties: {
-      source: y,
+      source: I,
       guild_id: t,
-      media_session_id: k
+      media_session_id: P
     }
   }), i.useEffect(() => {
     E.maybeFetchSoundboardSounds(), m.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, p.setSearchQuery)("")
-  }, []), (0, l.jsx)(P, {
+  }, []), (0, l.jsx)(b, {
     children: (0, l.jsx)("div", {
-      className: o(C.picker, {
-        [C.fetching]: b,
-        [C.autoWidth]: _
+      className: s(C.picker, {
+        [C.fetching]: L,
+        [C.autoWidth]: N
       }),
-      children: b ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(g.default, {
+      children: L ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(S.default, {
         guildId: t,
         channel: n,
         onClose: T,
         onSelect: v,
-        containerWidth: r,
-        suppressPlaySound: x,
-        shouldShowUpsell: I,
-        gridNotice: N,
-        soundButtonOverlay: A,
-        listPadding: R,
-        renderHeader: O,
+        containerWidth: a,
+        suppressPlaySound: _,
+        shouldShowUpsell: y,
+        gridNotice: A,
+        soundButtonOverlay: x,
+        listPadding: O,
+        renderHeader: R,
         defaultSoundsOnly: M
       })
     })

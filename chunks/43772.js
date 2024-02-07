@@ -28,8 +28,8 @@ var s = n("37983"),
   C = n("476108"),
   v = n("337543"),
   R = n("124969"),
-  L = n("599110"),
-  O = n("568734"),
+  O = n("599110"),
+  L = n("568734"),
   x = n("701909"),
   M = n("883029"),
   D = n("65300"),
@@ -44,11 +44,11 @@ var s = n("37983"),
   V = n("926622");
 o.default.initialize();
 let k = "Accept Invite Page",
-  w = {
+  H = {
     REGISTER: "register",
     LOGIN: "login"
   };
-async function H(e) {
+async function w(e) {
   let {
     invite: t
   } = await c.default.resolveInvite(e, k);
@@ -61,7 +61,7 @@ class Y extends a.PureComponent {
       login: t,
       inviteKey: n
     } = this.props;
-    if (L.default.track(G.AnalyticEvents.INVITE_VIEWED, {
+    if (O.default.track(G.AnalyticEvents.INVITE_VIEWED, {
         invite_code: n
       }, {
         flush: !0
@@ -84,9 +84,9 @@ class Y extends a.PureComponent {
       authenticated: s,
       transitionTo: a
     } = this.props, l = this.getInviteKey();
-    if (l !== this.getInviteKey(e)) H(l);
+    if (l !== this.getInviteKey(e)) w(l);
     else if (t.state === G.InviteStates.APP_NOT_OPENED) this.handleContinue();
-    else if (this.getMode() === w.LOGIN && s !== e.authenticated && s) {
+    else if (this.getMode() === H.LOGIN && s !== e.authenticated && s) {
       let e = S.default.getFingerprint();
       if (null != e) {
         let t = (0, u.extractId)(e);
@@ -101,7 +101,7 @@ class Y extends a.PureComponent {
         callback: this.handleContinue
       })
     }
-    if (n !== e.nativeAppState && n === G.NativeAppStates.OPEN && this.track(G.AnalyticEvents.INVITE_APP_INVOKED, !1), this.getMode() === w.REGISTER && s && !e.authenticated) {
+    if (n !== e.nativeAppState && n === G.NativeAppStates.OPEN && this.track(G.AnalyticEvents.INVITE_APP_INVOKED, !1), this.getMode() === H.REGISTER && s && !e.authenticated) {
       let {
         channel: e
       } = t;
@@ -114,7 +114,7 @@ class Y extends a.PureComponent {
   }
   getMode() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
-    return B.CONFERENCE_MODE_ENABLED ? w.REGISTER : e.login ? w.LOGIN : w.REGISTER
+    return B.CONFERENCE_MODE_ENABLED ? H.REGISTER : e.login ? H.LOGIN : H.REGISTER
   }
   track(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
@@ -131,7 +131,7 @@ class Y extends a.PureComponent {
       } : {
         invite_code: l
       };
-    L.default.track(e, {
+    O.default.track(e, {
       ...i,
       ...n
     })
@@ -252,9 +252,9 @@ class Y extends a.PureComponent {
         return this.renderSpinner(F.default.Messages.APP_OPENING);
       case G.InviteStates.RESOLVED:
         var i;
-        if (n && (0, O.hasFlag)(null !== (i = e.flags) && void 0 !== i ? i : 0, r.GuildInviteFlags.IS_GUEST_INVITE)) return c.default.openApp(e.code), d.default.set(T.GUEST_INVITE_KEY, e.code), this.renderAppOpened(() => a(G.Routes.APP));
+        if (n && (0, L.hasFlag)(null !== (i = e.flags) && void 0 !== i ? i : 0, r.GuildInviteFlags.IS_GUEST_INVITE)) return c.default.openApp(e.code), d.default.set(T.GUEST_INVITE_KEY, e.code), this.renderAppOpened(() => a(G.Routes.APP));
         if (n || !b.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
-        else if (this.getMode() === w.LOGIN) return (0, s.jsx)(j.default, {
+        else if (this.getMode() === H.LOGIN) return (0, s.jsx)(j.default, {
           invite: e,
           transitionTo: a,
           location: l

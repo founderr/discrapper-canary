@@ -82,7 +82,7 @@ function R(e) {
       }), (0, s.jsxs)(c.FormItem, {
         className: v.previewSection,
         title: C.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_HEADER,
-        children: [(0, s.jsx)(L, {
+        children: [(0, s.jsx)(O, {
           channels: e.serializedSourceGuild.channels
         }), (0, s.jsxs)(c.Text, {
           variant: "text-xs/normal",
@@ -97,7 +97,7 @@ function R(e) {
         children: (0, s.jsx)(c.FormItem, {
           className: v.previewSection,
           title: C.default.Messages.GUILD_TEMPLATE_MODAL_ROLES_HEADER2,
-          children: (0, s.jsx)(O, {
+          children: (0, s.jsx)(L, {
             roles: h
           })
         })
@@ -110,7 +110,7 @@ function R(e) {
   }
 }
 
-function L(e) {
+function O(e) {
   let {
     channels: t
   } = e, n = u(t).sortBy(e => null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id).map(e => {
@@ -140,7 +140,7 @@ function L(e) {
 }
 n("721247");
 
-function O(e) {
+function L(e) {
   let {
     roles: t
   } = e, n = t.slice().reverse().map(e => (0, s.jsx)(x, {

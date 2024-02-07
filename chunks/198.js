@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("77078"),
-  o = n("812204"),
-  s = n("685665"),
-  a = n("649844"),
+  a = n("77078"),
+  s = n("812204"),
+  r = n("685665"),
+  o = n("649844"),
   u = n("551305"),
   d = n("978679"),
   c = n("158998"),
@@ -23,9 +23,9 @@ var l = n("37983"),
       channel: n
     } = e, {
       analyticsLocations: i
-    } = (0, s.default)(o.default.GIFT_BUTTON), E = (0, c.useDirectMessageRecipient)(n);
+    } = (0, r.default)(s.default.GIFT_BUTTON), E = (0, c.useDirectMessageRecipient)(n);
     if (t) return null;
-    let S = () => (0, a.default)({
+    let g = () => (0, o.default)({
       isGift: !0,
       giftRecipient: null === E ? void 0 : E,
       initialPlanId: null,
@@ -38,7 +38,7 @@ var l = n("37983"),
         objectType: f.AnalyticsObjectTypes.GIFT
       }
     });
-    return (0, l.jsx)(r.Tooltip, {
+    return (0, l.jsx)(a.Tooltip, {
       text: m.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
       children: e => (0, l.jsx)(u.default, {
         ...e,
@@ -46,7 +46,7 @@ var l = n("37983"),
         isActive: !1,
         "aria-label": m.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
         "aria-haspopup": "dialog",
-        onClick: S,
+        onClick: g,
         children: (0, l.jsx)(d.default, {})
       })
     })

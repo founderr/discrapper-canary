@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildEventShareButton: function() {
-    return v
+    return N
   },
   GuildEventInterestedButton: function() {
-    return N
+    return v
   },
   GuildEventLurkerInterestedButton: function() {
     return g
@@ -22,8 +22,8 @@ var l = n("37983"),
   r = n("83900"),
   d = n("433487"),
   c = n("491920"),
-  f = n("745049"),
-  E = n("782340"),
+  E = n("745049"),
+  f = n("782340"),
   h = n("550034");
 
 function C(e) {
@@ -42,23 +42,23 @@ function C(e) {
   })
 }
 
-function v(e) {
+function N(e) {
   let {
     onInviteClick: t,
     canInvite: n,
     isChannelPublic: a
-  } = e, d = new u.Timeout, [f, C] = s.useState(!1);
+  } = e, d = new u.Timeout, [E, C] = s.useState(!1);
   s.useEffect(() => () => {
     d.stop()
   }, []);
-  let v = e => {
+  let N = e => {
     null != t && t(e), C(!0), d.start(1e3, () => C(!1))
   };
   return null == t ? null : (0, l.jsx)(i.Tooltip, {
     text: I(n, a),
     position: "top",
     tooltipClassName: h.tooltips,
-    "aria-label": E.default.Messages.SHARE_LINK,
+    "aria-label": f.default.Messages.SHARE_LINK,
     children: e => n && a ? (0, l.jsxs)(i.Button, {
       ...e,
       className: h.button,
@@ -69,28 +69,28 @@ function v(e) {
       children: [(0, l.jsx)(c.default, {
         width: 16,
         height: 16
-      }), E.default.Messages.SHARE]
+      }), f.default.Messages.SHARE]
     }) : (0, l.jsxs)(i.Button, {
       ...e,
       className: h.button,
       innerClassName: h.innerButton,
       color: i.Button.Colors.PRIMARY,
       size: i.Button.Sizes.SMALL,
-      disabled: f,
-      look: f ? i.Button.Looks.OUTLINED : i.Button.Looks.FILLED,
-      onClick: v,
-      children: [f ? (0, l.jsx)(o.default, {
+      disabled: E,
+      look: E ? i.Button.Looks.OUTLINED : i.Button.Looks.FILLED,
+      onClick: N,
+      children: [E ? (0, l.jsx)(o.default, {
         width: 16,
         height: 16
       }) : (0, l.jsx)(r.default, {
         width: 16,
         height: 16
-      }), f ? E.default.Messages.COPIED : E.default.Messages.SHARE]
+      }), E ? f.default.Messages.COPIED : f.default.Messages.SHARE]
     })
   })
 }
 
-function N(e) {
+function v(e) {
   let {
     isUserRsvped: t,
     isUserLurking: n,
@@ -112,24 +112,24 @@ function N(e) {
     }) : (0, l.jsx)(a.default, {
       width: 16,
       height: 16
-    }), E.default.Messages.INDICATE_RSVP]
+    }), f.default.Messages.INDICATE_RSVP]
   })
 }
 
 function g(e) {
   return (0, l.jsx)(i.Tooltip, {
-    text: E.default.Messages.GUILD_MEMBER_REQUIRED_FOR_EVENT,
+    text: f.default.Messages.GUILD_MEMBER_REQUIRED_FOR_EVENT,
     position: "top",
     tooltipClassName: h.tooltips,
-    "aria-label": E.default.Messages.SHARE_LINK,
-    children: t => (0, l.jsx)(N, {
+    "aria-label": f.default.Messages.SHARE_LINK,
+    children: t => (0, l.jsx)(v, {
       ...t,
       ...e
     })
   })
 }
 let S = e => null == e || e,
-  I = (e, t) => S(e) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE : S(t) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION : E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL;
+  I = (e, t) => S(e) ? f.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE : S(t) ? f.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION : f.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL;
 
 function L(e) {
   let {
@@ -146,13 +146,13 @@ function L(e) {
     onInviteClick: L,
     onEndClick: _,
     isJoined: m = !1
-  } = e, x = void 0 !== c;
+  } = e, T = void 0 !== c;
   return (0, l.jsxs)("div", {
     className: h.container,
     children: [null != r ? (0, l.jsx)(i.Tooltip, {
-      text: E.default.Messages.MORE,
+      text: f.default.Messages.MORE,
       position: "top",
-      "aria-label": E.default.Messages.EDIT,
+      "aria-label": f.default.Messages.EDIT,
       children: e => (0, l.jsx)(i.Clickable, {
         ...e,
         onClick: r,
@@ -163,29 +163,29 @@ function L(e) {
           className: h.icon
         })
       })
-    }) : null, (0, l.jsx)(v, {
+    }) : null, (0, l.jsx)(N, {
       onInviteClick: L,
       canInvite: u,
       isChannelPublic: a
-    }), t && o !== f.GuildScheduledEventEntityTypes.EXTERNAL ? (0, l.jsx)(C, {
+    }), t && o !== E.GuildScheduledEventEntityTypes.EXTERNAL ? (0, l.jsx)(C, {
       text: function(e) {
         let {
           isJoined: t,
           canJoin: n,
           isVoiceChannel: l
         } = e;
-        return n ? t ? E.default.Messages.GO_TO_CHANNEL : l ? E.default.Messages.GUILD_EVENT_JOIN : E.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : E.default.Messages.CHANNEL_LOCKED_SHORT
+        return n ? t ? f.default.Messages.GO_TO_CHANNEL : l ? f.default.Messages.GUILD_EVENT_JOIN : f.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : f.default.Messages.CHANNEL_LOCKED_SHORT
       }({
         isJoined: m,
-        canJoin: x,
-        isVoiceChannel: o === f.GuildScheduledEventEntityTypes.VOICE
+        canJoin: T,
+        isVoiceChannel: o === E.GuildScheduledEventEntityTypes.VOICE
       }),
-      disabled: !x,
+      disabled: !T,
       onJoinClick: c
     }) : null, n && !t && (0, l.jsx)(g, {
       isUserRsvped: s,
       isUserLurking: n
-    }), !n && !t && null != S && (0, l.jsx)(N, {
+    }), !n && !t && null != S && (0, l.jsx)(v, {
       isUserRsvped: s,
       isUserLurking: n,
       onRsvpClick: S
@@ -195,14 +195,14 @@ function L(e) {
       size: i.Button.Sizes.SMALL,
       onClick: I,
       color: i.Button.Colors.GREEN,
-      children: E.default.Messages.START
+      children: f.default.Messages.START
     }), t && null != _ ? (0, l.jsx)(i.Button, {
       className: h.button,
       innerClassName: h.innerButton,
       size: i.Button.Sizes.SMALL,
       onClick: _,
       color: i.Button.Colors.PRIMARY,
-      children: E.default.Messages.END_EVENT
+      children: f.default.Messages.END_EVENT
     }) : null]
   })
 }

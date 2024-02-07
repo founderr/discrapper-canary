@@ -20,8 +20,8 @@ var l = n("414456"),
   m = n("26989"),
   E = n("305961"),
   C = n("957255"),
-  S = n("824563"),
-  g = n("101125"),
+  g = n("824563"),
+  S = n("101125"),
   _ = n("697218"),
   I = n("530346"),
   T = n("109264"),
@@ -43,7 +43,7 @@ function P(e) {
     backgroundColor: n,
     guildId: l,
     onClose: s
-  } = e, o = t.id, u = (0, i.default)([g.default, S.default, p.default], () => o === p.default.getId() ? g.default.getStatus() : S.default.getStatus(o, l), [o, l]);
+  } = e, o = t.id, u = (0, i.default)([S.default, g.default, p.default], () => o === p.default.getId() ? S.default.getStatus() : g.default.getStatus(o, l), [o, l]);
   return (0, a.jsxs)("div", {
     className: b.topRow,
     style: {
@@ -120,8 +120,8 @@ function U(e) {
     member: s,
     guildId: p
   } = e, m = (0, i.default)([E.default], () => E.default.getGuild(p)), {
-    canKickUser: S,
-    canBanUser: g,
+    canKickUser: g,
+    canBanUser: S,
     canModerateMembers: x
   } = (0, i.useStateFromStoresObject)([C.default, _.default, E.default], () => ({
     canKickUser: null != m && C.default.canManageUser(O.Permissions.KICK_MEMBERS, l, m),
@@ -154,7 +154,7 @@ function U(e) {
         children: y.default.Messages.SEND_DM
       })]
     }), (0, a.jsxs)(D, {
-      disabled: !S,
+      disabled: !g,
       "aria-label": y.default.Messages.KICK,
       style: {
         backgroundColor: t
@@ -182,7 +182,7 @@ function U(e) {
         children: y.default.Messages.KICK
       })]
     }), (0, a.jsxs)(D, {
-      disabled: !g,
+      disabled: !S,
       "aria-label": y.default.Messages.BAN,
       style: {
         backgroundColor: t

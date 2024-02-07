@@ -1,4 +1,4 @@
-var n = {
+var l = {
   "./spritesheet--32.png": "588202",
   "./spritesheet--40.png": "955348",
   "./spritesheet--48.png": "259453",
@@ -23,17 +23,17 @@ var n = {
   "./spritesheet-picker-22.png": "819107"
 };
 
-function s(e) {
-  return i(l(e))
+function i(e) {
+  return n(a(e))
 }
 
-function l(e) {
-  if (!i.o(n, e)) {
+function a(e) {
+  if (!n.o(l, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
   }
-  return n[e]
+  return l[e]
 }
-s.id = '"110126"', s.keys = function() {
-  return Object.keys(n)
-}, s.resolve = l, e.exports = s
+i.id = '"110126"', i.keys = function() {
+  return Object.keys(l)
+}, i.resolve = a, e.exports = i

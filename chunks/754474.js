@@ -1,53 +1,53 @@
 "use strict";
 n.r(t), n.d(t, {
   BotTypes: function() {
-    return u.BotTagTypes
+    return a.BotTagTypes
   },
   default: function() {
-    return o
+    return u
   }
 });
-var r = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("414456"),
-  s = n.n(i),
-  l = n("79798"),
-  u = n("988268"),
-  a = n("888770"),
-  o = e => {
+var r = n("414456"),
+  l = n.n(r),
+  s = n("79798"),
+  a = n("988268"),
+  o = n("888770"),
+  u = e => {
     let {
       name: t,
       discriminator: n,
-      invertBotTagColor: i,
-      nameColor: u,
-      className: o,
-      botType: c,
-      usernameClass: d,
+      invertBotTagColor: r,
+      nameColor: a,
+      className: u,
+      botType: d,
+      usernameClass: c,
       discriminatorClass: f,
-      botClass: I,
-      botVerified: _ = !1,
-      style: E,
-      useRemSizes: S = !1,
-      usernameIcon: T
+      botClass: E,
+      botVerified: h = !1,
+      style: _,
+      useRemSizes: C = !1,
+      usernameIcon: p
     } = e;
-    return (0, r.jsxs)("div", {
-      className: s(o, a.nameTag),
-      style: E,
-      children: [(0, r.jsxs)("span", {
-        className: s(a.username, d),
-        style: null != u ? {
-          color: u
+    return (0, i.jsxs)("div", {
+      className: l(u, o.nameTag),
+      style: _,
+      children: [(0, i.jsxs)("span", {
+        className: l(o.username, c),
+        style: null != a ? {
+          color: a
         } : void 0,
-        children: [T, t]
-      }), null != n ? (0, r.jsxs)("span", {
+        children: [p, t]
+      }), null != n ? (0, i.jsxs)("span", {
         className: null != f ? f : void 0,
         children: ["#", n]
-      }) : null, null != c ? (0, r.jsx)(l.default, {
-        type: c,
-        invertColor: i,
-        className: s(I, a.bot),
-        verified: _,
-        useRemSizes: S
+      }) : null, null != d ? (0, i.jsx)(s.default, {
+        type: d,
+        invertColor: r,
+        className: l(E, o.bot),
+        verified: h,
+        useRemSizes: C
       }) : null]
     })
   }

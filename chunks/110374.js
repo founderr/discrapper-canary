@@ -8,18 +8,18 @@ var l = n("37983");
 n("884691");
 var u = n("77078"),
   a = n("272030"),
-  i = n("901582"),
-  d = n("861370"),
-  r = n("455933"),
-  s = n("248900"),
+  d = n("901582"),
+  i = n("861370"),
+  s = n("455933"),
+  r = n("248900"),
   o = n("385752"),
   c = n("222971"),
   E = n("601131"),
   f = n("876725"),
   _ = n("367989"),
   T = n("891603"),
-  v = n("510692"),
-  S = n("49111"),
+  S = n("510692"),
+  v = n("49111"),
   g = n("782340");
 
 function I(e) {
@@ -29,14 +29,14 @@ function I(e) {
     channel: I,
     guild: N,
     analyticsContext: m,
-    isRecurrenceItem: h = !1,
-    onSelect: M
+    isRecurrenceItem: M = !1,
+    onSelect: h
   } = e, p = (0, _.default)({
     guildEventId: t,
     recurrenceId: n,
     guild: N,
     channel: I
-  }), C = (0, o.default)({
+  }), D = (0, o.default)({
     guildEventId: t,
     recurrenceId: n,
     guild: N,
@@ -46,29 +46,29 @@ function I(e) {
     guild: N,
     channel: I,
     recurrenceId: n,
-    isRecurrenceItem: h
-  }), D = (0, E.default)(t, N, I), O = (0, v.default)(t, N, I), A = (0, s.default)(t, N.id, n), L = (0, f.default)(t), y = (0, d.default)({
+    isRecurrenceItem: M
+  }), C = (0, E.default)(t, N, I), O = (0, S.default)(t, N, I), A = (0, r.default)(t, N.id, n), L = (0, f.default)(t), G = (0, i.default)({
     id: null != n ? n : t,
     label: g.default.Messages.COPY_ID_EVENT
-  }), x = (0, r.default)(t, N.id, I, n), G = (0, T.default)({
+  }), y = (0, s.default)(t, N.id, I, n), x = (0, T.default)({
     guildEventId: t,
     guildId: N.id,
     recurrenceId: n
   });
-  return (0, l.jsx)(i.default, {
+  return (0, l.jsx)(d.default, {
     context: m,
-    object: S.AnalyticsObjects.CONTEXT_MENU,
+    object: v.AnalyticsObjects.CONTEXT_MENU,
     children: (0, l.jsxs)(u.Menu, {
       navId: "user-context",
       onClose: a.closeContextMenu,
       "aria-label": g.default.Messages.USER_ACTIONS_MENU_LABEL,
-      onSelect: M,
+      onSelect: h,
       children: [(0, l.jsxs)(u.MenuGroup, {
-        children: [x, !h && O, R, !h && D, C, p, A, h && G]
-      }), !h && (0, l.jsx)(u.MenuGroup, {
+        children: [y, !M && O, R, !M && C, D, p, A, M && x]
+      }), !M && (0, l.jsx)(u.MenuGroup, {
         children: L
       }), (0, l.jsx)(u.MenuGroup, {
-        children: y
+        children: G
       })]
     })
   })

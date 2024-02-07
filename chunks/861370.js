@@ -1,34 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
-var l = n("37983");
+var r = n("37983");
 n("884691");
-var u = n("77078"),
-  a = n("845579"),
-  i = n("662255"),
-  d = n("306160");
+var o = n("77078"),
+  i = n("845579"),
+  u = n("662255"),
+  a = n("306160");
 
-function r(e) {
+function l(e) {
   let {
     id: t,
     label: n,
-    onSuccess: r,
+    onSuccess: l,
     shiftId: s,
-    showIconFirst: o
-  } = e, c = a.DeveloperMode.useSetting();
-  if (__OVERLAY__ || !c || !d.SUPPORTS_COPY) return null;
+    showIconFirst: d
+  } = e, T = i.DeveloperMode.useSetting();
+  if (__OVERLAY__ || !T || !a.SUPPORTS_COPY) return null;
   let E = "devmode-copy-id-".concat(t);
-  return (0, l.jsx)(u.MenuItem, {
+  return (0, r.jsx)(o.MenuItem, {
     id: E,
     label: n,
     action: function(e) {
       let n = null != s && e.shiftKey ? s : t;
-      (0, d.copy)(n), null == r || r()
+      (0, a.copy)(n), null == l || l()
     },
-    icon: i.default,
-    showIconFirst: o
+    icon: u.default,
+    showIconFirst: d
   }, E)
 }

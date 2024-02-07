@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   useShowApplicationInGDM: function() {
     return r
   }
 });
 var i = n("65597"),
-  a = n("42203"),
-  l = n("337026");
+  u = n("42203"),
+  a = n("337026");
 
-function r(e) {
-  let t = (0, i.default)([a.default], () => a.default.getChannel(e)),
+function r(t) {
+  let e = (0, i.default)([u.default], () => u.default.getChannel(t)),
     {
       enabled: n
-    } = l.default.useExperiment({
+    } = a.default.useExperiment({
       location: "baec9c_1"
     });
-  return n && function(e) {
-    return null != e && (!!e.isMultiUserDM() || !!e.isDM() && !e.isSystemDM() && null == e.rawRecipients.find(e => e.bot))
-  }(t)
+  return n && function(t) {
+    return null != t && (!!t.isMultiUserDM() || !!t.isDM() && !t.isSystemDM() && null == t.rawRecipients.find(t => t.bot))
+  }(e)
 }

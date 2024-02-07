@@ -1,166 +1,166 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return b
+    return j
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  i = l("627445"),
-  r = l.n(i),
-  o = l("118810"),
-  u = l("446674"),
-  d = l("77078"),
-  c = l("86621"),
-  f = l("376556"),
-  m = l("118033"),
-  p = l("42203"),
-  h = l("697218"),
-  T = l("800762"),
-  E = l("145131"),
-  S = l("313873"),
-  _ = l("429928"),
-  g = l("36539"),
-  A = l("698372"),
-  I = l("770370"),
-  v = l("667618"),
-  N = l("865677"),
-  C = l("15874"),
-  y = l("774713"),
-  M = l("510788"),
-  x = l("756731"),
-  O = l("762806"),
-  R = l("438278"),
-  L = l("898481"),
-  P = l("49111"),
-  j = l("278433"),
-  b = (0, c.default)(e => {
+var l = n("37983");
+n("884691");
+var i = n("414456"),
+  a = n.n(i),
+  s = n("627445"),
+  r = n.n(s),
+  o = n("118810"),
+  u = n("446674"),
+  d = n("77078"),
+  c = n("86621"),
+  f = n("376556"),
+  p = n("118033"),
+  m = n("42203"),
+  h = n("697218"),
+  E = n("800762"),
+  g = n("145131"),
+  S = n("313873"),
+  C = n("429928"),
+  T = n("36539"),
+  v = n("698372"),
+  I = n("770370"),
+  _ = n("667618"),
+  y = n("865677"),
+  A = n("15874"),
+  N = n("774713"),
+  x = n("510788"),
+  O = n("756731"),
+  R = n("762806"),
+  M = n("438278"),
+  L = n("898481"),
+  P = n("49111"),
+  b = n("278433"),
+  j = (0, c.default)(e => {
     let t, {
-        activity: l,
-        user: a,
-        applicationStream: i,
+        activity: n,
+        user: i,
+        applicationStream: s,
         className: c,
-        guildId: b,
-        channelId: D,
-        source: U,
-        color: w = d.Button.Colors.WHITE,
-        look: F = d.Button.Looks.OUTLINED,
-        type: G,
-        onAction: Y,
-        isEmbedded: k = !1
+        guildId: j,
+        channelId: U,
+        source: D,
+        color: k = d.Button.Colors.WHITE,
+        look: w = d.Button.Looks.OUTLINED,
+        type: F,
+        onAction: G,
+        isEmbedded: B = !1
       } = e,
-      V = (0, A.default)(),
-      B = (0, u.useStateFromStores)([h.default], () => {
+      H = (0, v.default)(),
+      V = (0, u.useStateFromStores)([h.default], () => {
         let e = h.default.getCurrentUser();
         return r(null != e, "UserActivityActions: currentUser cannot be undefined"), e
       }),
-      H = G === S.Types.PROFILE || G === S.Types.PROFILE_V2,
-      W = G === S.Types.STREAM_PREVIEW || null != i,
-      z = (0, _.default)(l),
-      K = (0, m.isStageActivity)(l),
-      Z = H ? E.default.Align.END : E.default.Align.STRETCH,
-      X = z || W ? E.default.Direction.HORIZONTAL : E.default.Direction.VERTICAL,
-      J = (null == l ? void 0 : l.type) === P.ActivityTypes.HANG_STATUS,
-      Q = (0, u.useStateFromStores)([T.default, p.default], () => {
+      K = F === S.Types.PROFILE || F === S.Types.PROFILE_V2,
+      W = F === S.Types.STREAM_PREVIEW || null != s,
+      Y = (0, C.default)(n),
+      z = (0, p.isStageActivity)(n),
+      J = K ? g.default.Align.END : g.default.Align.STRETCH,
+      q = Y || W ? g.default.Direction.HORIZONTAL : g.default.Direction.VERTICAL,
+      Z = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
+      Q = (0, u.useStateFromStores)([E.default, m.default], () => {
         var e;
-        return J ? p.default.getChannel(null === (e = T.default.getVoiceStateForUser(a.id)) || void 0 === e ? void 0 : e.channelId) : null
+        return Z ? m.default.getChannel(null === (e = E.default.getVoiceStateForUser(i.id)) || void 0 === e ? void 0 : e.channelId) : null
       });
-    if ((0, g.default)(l)) t = [(0, n.jsx)(I.default, {
-      look: F,
-      color: w,
+    if ((0, T.default)(n)) t = [(0, l.jsx)(I.default, {
+      look: w,
+      color: k,
       platform: f.default.get(P.PlatformTypes.XBOX)
     }, "ConnectPlatformActivityButton")];
-    else if ((null == l ? void 0 : l.platform) != null && [P.ActivityGamePlatforms.PS4, P.ActivityGamePlatforms.PS5].includes(l.platform)) t = [(0, n.jsx)(I.default, {
-      look: F,
-      color: w,
+    else if ((null == n ? void 0 : n.platform) != null && [P.ActivityGamePlatforms.PS4, P.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, l.jsx)(I.default, {
+      look: w,
+      color: k,
       platform: f.default.get(P.PlatformTypes.PLAYSTATION)
     }, "ConnectPlatformActivityButton")];
-    else if (z) {
-      let e = (0, n.jsx)(O.default, {
-          activity: l,
-          user: a,
-          color: w,
-          look: F,
-          guildId: b,
-          channelId: D,
-          source: U
+    else if (Y) {
+      let e = (0, l.jsx)(R.default, {
+          activity: n,
+          user: i,
+          color: k,
+          look: w,
+          guildId: j,
+          channelId: U,
+          source: D
         }, "spotify-activity-sync-button"),
-        s = (0, n.jsx)(x.default, {
-          activity: l,
-          user: a,
-          color: w,
-          look: F,
-          guildId: b,
-          channelId: D,
-          source: U
+        a = (0, l.jsx)(O.default, {
+          activity: n,
+          user: i,
+          color: k,
+          look: w,
+          guildId: j,
+          channelId: U,
+          source: D
         }, "spotify-activity-play-button");
-      t = [s, e]
-    } else if (K) {
-      let e = (0, m.unpackStageChannelParty)(l);
-      null != e && (t = [(0, n.jsx)(y.default, {
+      t = [a, e]
+    } else if (z) {
+      let e = (0, p.unpackStageChannelParty)(n);
+      null != e && (t = [(0, l.jsx)(N.default, {
         guildId: e.guildId,
         channelId: e.channelId,
-        color: w,
-        look: F,
-        isProfile: H
+        color: k,
+        look: w,
+        isProfile: K
       }, e.channelId)])
     } else if (W) {
-      let e = (0, n.jsx)(L.default, {
-        isCurrentUser: B.id === a.id,
-        color: w,
-        look: F,
-        applicationStream: i
+      let e = (0, l.jsx)(L.default, {
+        isCurrentUser: V.id === i.id,
+        color: k,
+        look: w,
+        applicationStream: s
       }, "watch-button");
       t = [e]
-    } else if (J && null != Q) {
-      let e = (0, n.jsx)(C.default, {
-        color: w,
-        look: F,
+    } else if (Z && null != Q) {
+      let e = (0, l.jsx)(A.default, {
+        color: k,
+        look: w,
         hangStatusChannel: Q
       }, "hang-status-button");
       t = [e]
     } else {
-      let e = (0, n.jsx)(R.default, {
-          activity: l,
-          color: w,
-          look: F
+      let e = (0, l.jsx)(M.default, {
+          activity: n,
+          color: k,
+          look: w
         }, "watch-button"),
-        s = (0, n.jsx)(N.default, {
-          activity: l,
-          currentEmbeddedApplication: V,
-          user: a,
-          isCurrentUser: B.id === a.id,
-          color: w,
-          look: F,
-          channelId: D,
-          isEmbedded: k
+        a = (0, l.jsx)(y.default, {
+          activity: n,
+          currentEmbeddedApplication: H,
+          user: i,
+          isCurrentUser: V.id === i.id,
+          color: k,
+          look: w,
+          channelId: U,
+          isEmbedded: B
         }, "join-activity-button"),
-        i = (0, n.jsx)(M.default, {
-          activity: l,
-          user: a,
-          color: w,
-          look: F
+        s = (0, l.jsx)(x.default, {
+          activity: n,
+          user: i,
+          color: k,
+          look: w
         }, "notify-button"),
-        r = (0, n.jsx)(v.default, {
-          user: a,
-          color: w,
-          look: F,
-          activity: l
+        r = (0, l.jsx)(_.default, {
+          user: i,
+          color: k,
+          look: w,
+          activity: n
         }, "custom-activity-button");
-      if (null == s && null == i && null == e && null == r) return null;
-      t = [s, i, e, r]
+      if (null == a && null == s && null == e && null == r) return null;
+      t = [a, s, e, r]
     }
-    let q = X === E.default.Direction.VERTICAL;
-    return (0, n.jsx)(E.default, {
+    let X = q === g.default.Direction.VERTICAL;
+    return (0, l.jsx)(g.default, {
       grow: 0,
-      align: Z,
-      direction: X,
-      wrap: q ? E.default.Wrap.WRAP : E.default.Wrap.NO_WRAP,
-      className: s(c, j.buttonsWrapper, q ? j.vertical : j.horizontal),
+      align: J,
+      direction: q,
+      wrap: X ? g.default.Wrap.WRAP : g.default.Wrap.NO_WRAP,
+      className: a(c, b.buttonsWrapper, X ? b.vertical : b.horizontal),
       onClick: function(e) {
-        (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == Y || Y())
+        (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == G || G())
       },
       children: t
     })

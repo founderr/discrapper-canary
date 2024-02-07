@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
 var l = n("37983");
 n("884691");
 var i = n("383018"),
-  r = n("501536"),
-  o = n("200294"),
-  s = n("851745"),
-  a = n("782340");
+  a = n("501536"),
+  s = n("200294"),
+  r = n("851745"),
+  o = n("782340");
 let u = {
     results: {
       commandOptions: []
@@ -18,19 +18,19 @@ let u = {
   },
   d = {
     stores: [i.default],
-    focusMode: s.FocusMode.AUTO_WHEN_FILTERED,
-    matches: (e, t, n, l, r) => !(l || null == i.default.getActiveCommand(e.id) || null != i.default.getActiveOption(e.id)),
-    queryResults(e, t, n, l, r) {
-      let o = i.default.getActiveCommand(e.id);
-      if ((null == o ? void 0 : o.options) == null) return u;
-      let s = i.default.getOptionStates(e.id),
-        a = o.options.filter(e => {
+    focusMode: r.FocusMode.AUTO_WHEN_FILTERED,
+    matches: (e, t, n, l, a) => !(l || null == i.default.getActiveCommand(e.id) || null != i.default.getActiveOption(e.id)),
+    queryResults(e, t, n, l, a) {
+      let s = i.default.getActiveCommand(e.id);
+      if ((null == s ? void 0 : s.options) == null) return u;
+      let r = i.default.getOptionStates(e.id),
+        o = s.options.filter(e => {
           var t;
-          return e.displayName.startsWith(n) && !(null === (t = s[e.name]) || void 0 === t ? void 0 : t.hasValue)
+          return e.displayName.startsWith(n) && !(null === (t = r[e.name]) || void 0 === t ? void 0 : t.hasValue)
         });
-      return 0 === a.length ? u : {
+      return 0 === o.length ? u : {
         results: {
-          commandOptions: a
+          commandOptions: o
         }
       }
     },
@@ -41,21 +41,21 @@ let u = {
         },
         selectedIndex: n,
         query: i,
-        onHover: s,
+        onHover: r,
         onClick: u
       } = e, d = [], c = [];
       t.forEach(e => {
         (e.required ? d : c).push(e)
       });
-      let f = d.length > 0 ? (0, o.renderAutocompleteGroup)({
+      let f = d.length > 0 ? (0, s.renderAutocompleteGroup)({
           query: i,
           selectedIndex: n,
           autocompletes: d,
-          onHover: s,
+          onHover: r,
           onClick: u,
-          titleWithQuery: a.default.Messages.REQUIRED_OPTIONS_MATCHING,
-          titleWithoutQuery: a.default.Messages.REQUIRED_OPTIONS,
-          Component: r.default.Generic,
+          titleWithQuery: o.default.Messages.REQUIRED_OPTIONS_MATCHING,
+          titleWithoutQuery: o.default.Messages.REQUIRED_OPTIONS,
+          Component: a.default.Generic,
           getProps: (e, t) => ({
             key: t.toString(),
             text: e.displayName,
@@ -64,15 +64,15 @@ let u = {
           getQuery: e => e,
           key: "required-options"
         }) : null,
-        p = c.length > 0 ? (0, o.renderAutocompleteGroup)({
+        p = c.length > 0 ? (0, s.renderAutocompleteGroup)({
           query: i,
           selectedIndex: n,
           autocompletes: c,
-          onHover: s,
+          onHover: r,
           onClick: u,
-          titleWithQuery: a.default.Messages.OPTIONS_MATCHING,
-          titleWithoutQuery: d.length > 0 ? a.default.Messages.OTHER_OPTIONS : a.default.Messages.OPTIONS,
-          Component: r.default.Generic,
+          titleWithQuery: o.default.Messages.OPTIONS_MATCHING,
+          titleWithoutQuery: d.length > 0 ? o.default.Messages.OTHER_OPTIONS : o.default.Messages.OPTIONS,
+          Component: a.default.Generic,
           getProps: (e, t) => ({
             key: t.toString(),
             text: e.displayName,
@@ -97,7 +97,7 @@ let u = {
       return l.insertText(function(e) {
         return "".concat(e.displayName, ":")
       }(i)), {
-        type: s.AutocompleteSelectionTypes.COMMAND_OPTION
+        type: r.AutocompleteSelectionTypes.COMMAND_OPTION
       }
     }
   };

@@ -4,10 +4,10 @@ n.r(e), n.d(e, {
     return u
   },
   EDITING_CONTAINER_WIDTH: function() {
-    return s
+    return l
   },
   USER_BANNER_MAX_WIDTH: function() {
-    return l
+    return s
   },
   USER_BANNER_MAX_HEIGHT: function() {
     return c
@@ -66,8 +66,8 @@ n.r(e), n.d(e, {
 });
 var r, i, u, o, a = n("917219");
 (r = u || (u = {}))[r.AVATAR = 0] = "AVATAR", r[r.BANNER = 1] = "BANNER", r[r.GUILD_BANNER = 2] = "GUILD_BANNER", r[r.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", r[r.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", r[r.HOME_HEADER = 5] = "HOME_HEADER", r[r.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
-let s = 568,
-  l = 2400,
+let l = 568,
+  s = 2400,
   c = 848,
   d = 2400,
   f = 1350,
@@ -79,10 +79,10 @@ let s = 568,
   T = 16 / 9,
   I = 2.5,
   A = 4,
-  m = s / p,
-  C = s / T,
-  N = s / I,
-  g = s / A,
+  m = l / p,
+  C = l / T,
+  N = l / I,
+  g = l / A,
   R = a.BACKGROUND_REPLACEMENT_SIZE.width / a.BACKGROUND_REPLACEMENT_SIZE.height,
-  v = s / R;
+  v = l / R;
 (i = o || (o = {}))[i.CROP_GIF_START = 0] = "CROP_GIF_START", i[i.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", i[i.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"

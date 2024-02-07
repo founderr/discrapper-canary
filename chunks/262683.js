@@ -26,9 +26,9 @@ function _(e) {
     onReturn: I
   } = e, {
     contextMetadata: p,
-    step: N,
-    paymentSources: S,
-    paymentSourceId: P,
+    step: S,
+    paymentSources: P,
+    paymentSourceId: N,
     setPaymentSourceId: T,
     purchaseError: C,
     setPurchaseError: A,
@@ -39,30 +39,30 @@ function _(e) {
     isGift: g
   } = (0, c.useGiftContext)(), M = {
     ...(0, i.useSharedPaymentModal)(),
-    paymentSources: S,
-    paymentSourceId: P,
+    paymentSources: P,
+    paymentSourceId: N,
     setPaymentSourceId: T,
     purchaseError: C,
     setPurchaseError: A,
     purchaseErrorBlockRef: O,
     paymentAuthenticationState: h
-  }, v = (0, l.usePremiumTrialOffer)(E), x = !g && null != v && null != R && (0, m.SubscriptionTrials)[v.trial_id].skus.includes(R), L = null != I ? I : () => {
-    let e = Object.values(S).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
+  }, x = (0, l.usePremiumTrialOffer)(E), v = !g && null != x && null != R && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(R), y = null != I ? I : () => {
+    let e = Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
     _(e, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
   };
-  r(N, "Step should be set here");
-  let y = (0, a.useStableMemo)(() => Date.now(), [N]);
+  r(S, "Step should be set here");
+  let L = (0, a.useStableMemo)(() => Date.now(), [S]);
   return (0, i.AddPaymentFlow)({
     paymentModalArgs: M,
     initialStep: d.Step.PAYMENT_TYPE,
     prependSteps: [d.Step.PROMOTION_INFO],
     appendSteps: [d.Step.REVIEW, d.Step.CONFIRM],
     breadcrumpSteps: s,
-    currentBreadcrumpStep: N,
+    currentBreadcrumpStep: S,
     usePaymentModalStep: !0,
-    onReturn: L,
+    onReturn: y,
     onComplete: e => {
       _(d.Step.REVIEW, {
         trackedFromStep: e
@@ -77,10 +77,10 @@ function _(e) {
         ...t,
         from_step: n,
         to_step: s,
-        step_duration_ms: r - y,
+        step_duration_ms: r - L,
         flow_duration_ms: r - p.startTime
       })
     },
-    isEligibleForTrial: x
+    isEligibleForTrial: v
   })
 }

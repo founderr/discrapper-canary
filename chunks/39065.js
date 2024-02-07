@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return x
   }
 }), n("222007");
 var s = n("37983"),
@@ -19,9 +19,9 @@ var s = n("37983"),
   E = n("926223"),
   I = n("467292"),
   p = n("622839"),
-  N = n("145131"),
-  S = n("599110"),
-  P = n("719923"),
+  S = n("145131"),
+  P = n("599110"),
+  N = n("719923"),
   T = n("635357"),
   C = n("642906"),
   A = n("605886"),
@@ -31,15 +31,15 @@ var s = n("37983"),
   g = n("49111"),
   M = n("994770");
 
-function v(e) {
+function x(e) {
   let {
     premiumSubscription: t,
     setPurchaseState: n,
     onBack: a,
-    onNext: v,
-    legalTermsNodeRef: x,
-    flashLegalTerms: L,
-    invoiceError: y,
+    onNext: x,
+    legalTermsNodeRef: v,
+    flashLegalTerms: y,
+    invoiceError: L,
     planError: b,
     onPurchaseError: j,
     baseAnalyticsData: G,
@@ -48,9 +48,9 @@ function v(e) {
     planGroup: B,
     analyticsLocation: F,
     purchaseTokenAuthState: k,
-    openInvoiceId: w,
-    metadata: H,
-    backButtonEligible: Y,
+    openInvoiceId: Y,
+    metadata: w,
+    backButtonEligible: H,
     disablePurchase: W,
     isTrial: Z = !1
   } = e, {
@@ -75,9 +75,9 @@ function v(e) {
     giftRecipient: ec
   } = (0, T.useGiftContext)(), eo = null == K ? void 0 : K.id, ed = (0, h.checkNoPaymentTrialEnabled)(U, V.paymentSourceId, eo), ef = (0, i.useStateFromStores)([E.default], () => E.default.popupCallbackCalled), {
     analyticsLocations: em
-  } = (0, o.default)(), e_ = null != q ? Q[q] : null, [eE, eI] = r.useState(ed), [ep, eN] = r.useState(!1), {
-    hasEntitlements: eS
-  } = (0, m.useSubscriptionEntitlements)(eo, er), eP = (0, P.isPrepaidPaymentSource)(V.paymentSourceId), eT = eS || ed, eC = (0, d.useIsPrepaidPaymentPastDue)(), eA = null, eO = null;
+  } = (0, o.default)(), e_ = null != q ? Q[q] : null, [eE, eI] = r.useState(ed), [ep, eS] = r.useState(!1), {
+    hasEntitlements: eP
+  } = (0, m.useSubscriptionEntitlements)(eo, er), eN = (0, N.isPrepaidPaymentSource)(V.paymentSourceId), eT = eP || ed, eC = (0, d.useIsPrepaidPaymentPastDue)(), eA = null, eO = null;
   if (J === g.PurchaseTypes.ONE_TIME) {
     var eh;
     l(null != $, "SKU must be selected for one-time purchases"), l(null != (eA = null !== (eh = ee[$]) && void 0 !== eh ? eh : null), "SKU must exist and be fetched.");
@@ -92,7 +92,7 @@ function v(e) {
       setIsSubmitting: eI,
       setPurchaseError: X,
       hasRedirectURL: ep,
-      setHasRedirectURL: eN,
+      setHasRedirectURL: eS,
       isGift: er,
       giftStyle: ea,
       baseAnalyticsData: G,
@@ -105,10 +105,10 @@ function v(e) {
       priceOptions: V,
       paymentSource: e_,
       isPrepaidPaymentPastDue: eC,
-      openInvoiceId: w,
+      openInvoiceId: Y,
       premiumSubscription: t,
-      onNext: v,
-      metadata: H,
+      onNext: x,
+      metadata: w,
       sku: eA,
       skuPricePreview: eO,
       purchaseType: J,
@@ -124,9 +124,9 @@ function v(e) {
     let e = async () => {
       if (!0 === ef) try {
         if (null == E.default.redirectedPaymentId) return;
-        await (0, c.redirectedPaymentSucceeded)(E.default.redirectedPaymentId), n(O.PurchaseState.COMPLETED), v()
+        await (0, c.redirectedPaymentSucceeded)(E.default.redirectedPaymentId), n(O.PurchaseState.COMPLETED), x()
       } catch (e) {
-        n(O.PurchaseState.FAIL), j(e), S.default.track(g.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+        n(O.PurchaseState.FAIL), j(e), P.default.track(g.AnalyticEvents.PAYMENT_FLOW_FAILED, {
           ...G,
           payment_error_code: null == e ? void 0 : e.code,
           payment_source_id: q,
@@ -141,24 +141,24 @@ function v(e) {
   }, [ef]), r.useEffect(() => {
     ed && !er && null == t && eR()
   }, [ed, er, t]);
-  let eg = null != w || J === g.PurchaseTypes.ONE_TIME && !er;
+  let eg = null != Y || J === g.PurchaseTypes.ONE_TIME && !er;
   return ed ? null : (0, s.jsxs)(u.ModalFooter, {
-    align: N.default.Align.CENTER,
+    align: S.default.Align.CENTER,
     children: [(0, s.jsx)(_.default, {
-      legalTermsNodeRef: x,
-      invoiceError: y,
+      legalTermsNodeRef: v,
+      invoiceError: L,
       planError: b,
       disablePurchase: W,
-      flashLegalTerms: L,
+      flashLegalTerms: y,
       isSubmitting: eE,
       premiumSubscription: t,
       isGift: er,
       planGroup: B,
-      isPrepaid: eP,
+      isPrepaid: eN,
       isTrial: Z,
       makePurchase: eR,
       needsPaymentSource: null == e_ && !eT
-    }), (0, s.jsx)(R.default, {}), Y && !eg ? (0, s.jsx)("div", {
+    }), (0, s.jsx)(R.default, {}), H && !eg ? (0, s.jsx)("div", {
       className: M.back,
       children: (0, s.jsx)(f.default, {
         onClick: a

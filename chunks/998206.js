@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return x
   }
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("446674"),
-  a = n("151426"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("446674"),
+  o = n("151426"),
   u = n("77078"),
   d = n("244201"),
   c = n("206230"),
@@ -18,26 +18,26 @@ var l = n("37983"),
   m = n("292655"),
   h = n("478272"),
   E = n("685665"),
-  S = n("384997"),
-  g = n("128295"),
+  g = n("384997"),
+  S = n("128295"),
   C = n("414868"),
   T = n("49111"),
   v = n("994428"),
-  y = n("13030"),
-  x = n("782340"),
-  I = n("851855");
+  I = n("13030"),
+  _ = n("782340"),
+  y = n("851855");
 
-function N(e) {
+function A(e) {
   let {
     disabled: t,
     channel: n,
-    markAsDismissed: r,
-    visibleContent: S,
-    innerRef: N
-  } = e, _ = (0, d.useAppContext)(), {
-    analyticsLocations: A
-  } = (0, E.default)(), R = _ === T.AppContext.POPOUT, O = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), b = i.useCallback(() => {
-    r(v.ContentDismissActionType.UNKNOWN), (0, h.default)({
+    markAsDismissed: a,
+    visibleContent: g,
+    innerRef: A
+  } = e, N = (0, d.useAppContext)(), {
+    analyticsLocations: x
+  } = (0, E.default)(), O = N === T.AppContext.POPOUT, R = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), L = i.useCallback(() => {
+    a(v.ContentDismissActionType.UNKNOWN), (0, h.default)({
       channel: M ? n : void 0,
       guildId: n.guild_id,
       locationObject: {
@@ -46,35 +46,35 @@ function N(e) {
         object: T.AnalyticsObjects.BUTTON_ICON,
         objectType: T.AnalyticsObjectTypes.ACTIVITY
       },
-      openInPopout: R,
+      openInPopout: O,
       enableSelectedTextChannelInvite: !0,
-      analyticsLocations: A
+      analyticsLocations: x
     }), (0, p.fetchShelf)({
       guildId: n.guild_id
     })
-  }, [A, n, M, r, R]), k = () => {
-    if (S === a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, l.jsxs)("div", {
-      className: I.sparkleContainer,
+  }, [x, n, M, a, O]), P = () => {
+    if (g === o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, l.jsxs)("div", {
+      className: y.sparkleContainer,
       children: [(0, l.jsx)(C.default, {
-        className: o(I.sparkleStar, {
-          [I.noAnimation]: O
+        className: s(y.sparkleStar, {
+          [y.noAnimation]: R
         })
-      }), (0, l.jsx)(g.default, {
-        className: o(I.sparklePlus, {
-          [I.noAnimation]: O
+      }), (0, l.jsx)(S.default, {
+        className: s(y.sparklePlus, {
+          [y.noAnimation]: R
         })
       })]
     });
     return null
   };
   return t ? null : (0, l.jsx)(u.Tooltip, {
-    text: x.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
+    text: _.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
     children: e => (0, l.jsxs)("div", {
       ...e,
-      className: o(y.CHAT_INPUT_BUTTON_CLASSNAME, I.buttonContainer),
-      ref: N,
+      className: s(I.CHAT_INPUT_BUTTON_CLASSNAME, y.buttonContainer),
+      ref: A,
       children: [(0, l.jsx)(m.default, {
-        onClick: b,
+        onClick: L,
         tabIndex: 0,
         focusProps: {
           offset: {
@@ -84,24 +84,24 @@ function N(e) {
             right: -4
           }
         }
-      }), k()]
+      }), P()]
     })
   })
 }
-let _ = [a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
-var A = i.memo(i.forwardRef(function(e, t) {
-  return (0, l.jsx)(S.default, {
-    contentTypes: _,
+let N = [o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
+var x = i.memo(i.forwardRef(function(e, t) {
+  return (0, l.jsx)(g.default, {
+    contentTypes: N,
     children: n => {
       let {
         visibleContent: i,
-        markAsDismissed: r
+        markAsDismissed: a
       } = n;
-      return (0, l.jsx)(N, {
+      return (0, l.jsx)(A, {
         ...e,
         innerRef: t,
         visibleContent: i,
-        markAsDismissed: () => r(v.ContentDismissActionType.UNKNOWN)
+        markAsDismissed: () => a(v.ContentDismissActionType.UNKNOWN)
       })
     }
   })

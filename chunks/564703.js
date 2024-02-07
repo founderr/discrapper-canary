@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   calculateAnalyticsMetadata: function() {
-    return l
+    return n
   }
 });
-var r = n("49111");
+var r = s("49111");
 
-function l(e, t, n) {
-  let l = null != t ? {
+function n(e, t, s) {
+  let n = null != t ? {
       [t]: 1
     } : {},
     {
-      offset: a,
+      offset: l,
       limit: i,
-      results: u,
-      totalResults: s
-    } = null != n ? n : {};
+      results: a,
+      totalResults: o
+    } = null != s ? s : {};
   return {
     search_type: r.SearchTypes.GIF,
     load_id: e,
     limit: i,
-    offset: a,
-    page: null != i && null != a ? Math.floor(a / i) + 1 : 1,
-    total_results: s,
-    page_results: null != u ? u.length : null,
-    num_modifiers: Object.keys(l).length,
-    modifiers: l
+    offset: l,
+    page: null != i && null != l ? Math.floor(l / i) + 1 : 1,
+    total_results: o,
+    page_results: null != a ? a.length : null,
+    num_modifiers: Object.keys(n).length,
+    modifiers: n
   }
 }

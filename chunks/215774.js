@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildPickerDropdown: function() {
-    return u
+    return s
   }
 });
-var r = n("37983");
+var a = n("37983");
 n("884691");
-var i = n("77078"),
-  s = n("782340"),
-  l = n("336859");
+var l = n("77078"),
+  i = n("782340"),
+  r = n("336859");
 
-function u(e) {
+function s(e) {
   let {
     selectedGuildId: t,
     onGuildChange: n,
-    eligibleApplicationSubscriptionGuilds: u
-  } = e, a = u.map(e => ({
+    eligibleApplicationSubscriptionGuilds: s
+  } = e, u = s.map(e => ({
     value: e.id,
     label: e.name
   }));
-  return (0, r.jsx)(i.SearchableSelect, {
-    className: l.select,
+  return (0, a.jsx)(l.SearchableSelect, {
+    className: r.select,
     maxVisibleItems: 5,
     value: t,
-    placeholder: s.default.Messages.APPLICATION_SUBSCRIPTION_GUILD_PICKER_PLACEHOLDER,
-    options: a,
+    placeholder: i.default.Messages.APPLICATION_SUBSCRIPTION_GUILD_PICKER_PLACEHOLDER,
+    options: u,
     onChange: e => {
       n(e)
     }

@@ -1,130 +1,130 @@
 "use strict";
-x.r(t), x.d(t, {
+t.r(x), t.d(x, {
   CUSTOM_CALL_SOUND_ANIMATION_RANGE: function() {
-    return P
+    return F
   },
   AnimationTypeToAnimations: function() {
-    return D
-  },
-  getResizedEmojiData: function() {
-    return M
-  },
-  sampleAnimationId: function() {
-    return H
-  },
-  getEffectUrl: function() {
     return U
   },
+  getResizedEmojiData: function() {
+    return B
+  },
+  sampleAnimationId: function() {
+    return D
+  },
+  getEffectUrl: function() {
+    return V
+  },
   getEffectAnnouncement: function() {
-    return Y
+    return j
   }
 });
-var s = x("917351"),
-  a = x.n(s),
-  o = x("440540"),
-  y = x("811217"),
-  d = x("504936"),
-  k = x("988078"),
-  p = x("939118"),
-  e = x("101559"),
-  r = x("326209"),
-  n = x("610237"),
-  m = x("733261"),
-  c = x("596926"),
-  l = x("761999"),
-  _ = x("189580"),
-  f = x("679126"),
-  I = x("101593"),
-  u = x("414668"),
-  h = x("97656"),
-  w = x("812007"),
-  b = x("721336"),
-  E = x("954877"),
-  T = x("662151"),
-  C = x("155232"),
-  A = x("843093"),
-  g = x("867805"),
-  O = x("407063"),
-  F = x("697218"),
-  R = x("315102"),
-  S = x("402671"),
-  L = x("626334"),
-  N = x("782340");
-let P = {
+var s = t("917351"),
+  a = t.n(s),
+  o = t("440540"),
+  y = t("811217"),
+  k = t("504936"),
+  d = t("988078"),
+  r = t("939118"),
+  p = t("101559"),
+  e = t("326209"),
+  n = t("610237"),
+  m = t("733261"),
+  c = t("596926"),
+  l = t("761999"),
+  f = t("189580"),
+  _ = t("679126"),
+  h = t("101593"),
+  u = t("414668"),
+  I = t("97656"),
+  b = t("812007"),
+  w = t("721336"),
+  E = t("954877"),
+  g = t("662151"),
+  A = t("155232"),
+  R = t("843093"),
+  O = t("867805"),
+  T = t("407063"),
+  N = t("697218"),
+  v = t("315102"),
+  M = t("402671"),
+  S = t("626334"),
+  C = t("782340");
+let F = {
     start: 10,
     end: 15
   },
-  v = {
+  L = {
     BASIC: [o],
-    PREMIUM: [y, d, k, p, e, r, n, m, c, l, _, f, I, u, h, w, b, E, T, C, A]
+    PREMIUM: [y, k, d, r, p, e, n, m, c, l, f, _, h, u, I, b, w, E, g, A, R]
   },
-  D = {
-    [L.VoiceChannelEffectAnimationType.BASIC]: v.BASIC,
-    [L.VoiceChannelEffectAnimationType.PREMIUM]: v.PREMIUM
+  U = {
+    [S.VoiceChannelEffectAnimationType.BASIC]: L.BASIC,
+    [S.VoiceChannelEffectAnimationType.PREMIUM]: L.PREMIUM
   },
-  M = a.memoize(i => new Promise(t => {
-    let x = new Image;
-    x.src = i, x.crossOrigin = "Anonymous", x.onload = () => {
-      let s = L.EMOJI_SIZE * (0, O.getDevicePixelRatio)();
-      if (x.width === s && x.height === s) t(i);
+  B = a.memoize(i => new Promise(x => {
+    let t = new Image;
+    t.src = i, t.crossOrigin = "Anonymous", t.onload = () => {
+      let s = S.EMOJI_SIZE * (0, T.getDevicePixelRatio)();
+      if (t.width === s && t.height === s) x(i);
       else {
         var a;
         let i = document.createElement("canvas");
-        i.width = s, i.height = s, null === (a = i.getContext("2d")) || void 0 === a || a.drawImage(x, 0, 0), t(i.toDataURL("image/png"))
+        i.width = s, i.height = s, null === (a = i.getContext("2d")) || void 0 === a || a.drawImage(t, 0, 0), x(i.toDataURL("image/png"))
       }
     }
   })),
-  H = (i, t) => {
-    let x = D[i];
-    if (null != t && i === L.VoiceChannelEffectAnimationType.PREMIUM) {
-      let i = t.end + 1;
-      return Math.floor(Math.random() * (t.start - i) + i)
+  D = (i, x) => {
+    let t = U[i];
+    if (null != x && i === S.VoiceChannelEffectAnimationType.PREMIUM) {
+      let i = x.end + 1;
+      return Math.floor(Math.random() * (x.start - i) + i)
     }
-    return Math.floor(Math.random() * x.length)
+    return Math.floor(Math.random() * t.length)
   };
 
-function U(i) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L.EMOJI_SIZE;
+function V(i) {
+  let x = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.EMOJI_SIZE;
   if (null != i.id) {
-    var x;
-    return R.default.getEmojiURL({
+    var t;
+    return v.default.getEmojiURL({
       id: i.id,
-      animated: null !== (x = i.animated) && void 0 !== x && x,
-      size: t
+      animated: null !== (t = i.animated) && void 0 !== t && t,
+      size: x
     })
   }
-  let s = g.default.convertSurrogateToName(i.name, !1),
-    a = g.default.getByName(s);
-  return null != a ? S.default.getURL(a.surrogates) : ""
+  let s = O.default.convertSurrogateToName(i.name, !1),
+    a = O.default.getByName(s);
+  return null != a ? M.default.getURL(a.surrogates) : ""
 }
 
-function G(i, t) {
+function Y(i, x) {
   return a(i).map(i => {
-    var x;
-    return null !== (x = i[t]) && void 0 !== x ? x : null
+    var t;
+    return null !== (t = i[x]) && void 0 !== t ? t : null
   }).filter(i => null != i).uniq().value()
 }
 
-function Y(i) {
-  var t, x, s, a, o, y;
+function j(i) {
+  var x, t, s, a, o, y;
   if (i.length < 1) return "";
-  let d = G(i, "userId"),
-    k = G(i, "emojiName"),
-    p = k.length < 2 ? null !== (t = null == k ? void 0 : k[0]) && void 0 !== t ? t : "" : k.join(", ");
-  if (d.length < 1) return "";
-  if (1 === d.length) return N.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
-    firstUsername: null === (x = F.default.getUser(d[0])) || void 0 === x ? void 0 : x.username,
-    emojiNames: p
+  let k = Y(i, "userId"),
+    d = Y(i, "emojiName"),
+    r = d.length < 2 ? null !== (x = null == d ? void 0 : d[0]) && void 0 !== x ? x : "" : d.join(", ");
+  if (k.length < 1) return "";
+  if (1 === k.length) return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
+    firstUsername: null === (t = N.default.getUser(k[0])) || void 0 === t ? void 0 : t.username,
+    emojiNames: r
   });
-  if (2 === d.length) return N.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
-    firstUsername: null === (s = F.default.getUser(d[0])) || void 0 === s ? void 0 : s.username,
-    secondUsername: null === (a = F.default.getUser(d[1])) || void 0 === a ? void 0 : a.username,
-    emojiNames: p
+  if (2 === k.length) return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
+    firstUsername: null === (s = N.default.getUser(k[0])) || void 0 === s ? void 0 : s.username,
+    secondUsername: null === (a = N.default.getUser(k[1])) || void 0 === a ? void 0 : a.username,
+    emojiNames: r
   });
-  else return N.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
-    firstUsername: null === (o = F.default.getUser(d[0])) || void 0 === o ? void 0 : o.username,
-    secondUsername: null === (y = F.default.getUser(d[1])) || void 0 === y ? void 0 : y.username,
-    count: d.length - 2,
-    emojiNames: p
+  else return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
+    firstUsername: null === (o = N.default.getUser(k[0])) || void 0 === o ? void 0 : o.username,
+    secondUsername: null === (y = N.default.getUser(k[1])) || void 0 === y ? void 0 : y.username,
+    count: k.length - 2,
+    emojiNames: r
   })
 }

@@ -18,8 +18,8 @@ var a = l("37983"),
   m = l("685665"),
   h = l("428958"),
   E = l("299039"),
-  v = l("386045"),
-  C = l("803725"),
+  C = l("386045"),
+  v = l("803725"),
   _ = l("142485"),
   g = l("552022"),
   L = l("548405"),
@@ -32,7 +32,7 @@ function S(e) {
     channelId: t,
     onClose: i,
     transitionState: r
-  } = e, [S, N] = n.useState(""), [A, M] = n.useState("descending"), [R, P] = n.useState(!0), [j, y] = n.useState(null), D = n.useDeferredValue(S), O = (0, d.useStateFromStores)([v.default], () => v.default.getClips()), b = (0, d.useStateFromStores)([v.default], () => v.default.getPendingClips()), H = (0, d.useStateFromStores)([v.default], () => v.default.getSettings().storageLocation), w = (0, d.useStateFromStoresArray)([v.default], () => v.default.getNewClipIds()), {
+  } = e, [S, N] = n.useState(""), [A, M] = n.useState("descending"), [R, P] = n.useState(!0), [y, j] = n.useState(null), D = n.useDeferredValue(S), O = (0, d.useStateFromStores)([C.default], () => C.default.getClips()), b = (0, d.useStateFromStores)([C.default], () => C.default.getPendingClips()), H = (0, d.useStateFromStores)([C.default], () => C.default.getSettings().storageLocation), w = (0, d.useStateFromStoresArray)([C.default], () => C.default.getNewClipIds()), {
     AnalyticsLocationProvider: k
   } = (0, m.default)(p.default.CLIPS_GALLERY), U = n.useMemo(() => [...b, ...O], [O, b]);
   (0, h.default)({
@@ -43,8 +43,8 @@ function S(e) {
     }
   }, {
     disableTrack: R
-  }, [U.length, R]), n.useEffect(() => ((0, C.clearClipsSession)(), () => {
-    (0, C.clearClipsSession)(), (0, C.clearNewClipIds)()
+  }, [U.length, R]), n.useEffect(() => ((0, v.clearClipsSession)(), () => {
+    (0, v.clearClipsSession)(), (0, v.clearNewClipIds)()
   }), []);
   let B = n.useMemo(() => o(U).filter(e => {
     if ("" === D.trim()) return !0;
@@ -55,7 +55,7 @@ function S(e) {
     (async function e() {
       P(!0);
       try {
-        await C.loadClipsDirectory(H)
+        await v.loadClipsDirectory(H)
       } finally {
         P(!1)
       }
@@ -79,7 +79,7 @@ function S(e) {
       onShareClick: z
     } = (0, _.default)({
       channelId: t,
-      setExporting: y
+      setExporting: j
     }),
     F = n.useCallback((e, t) => {
       (0, f.openModalLazy)(async () => {
@@ -103,8 +103,8 @@ function S(e) {
         children: l.map(e => {
           let t = 0 === e.length;
           return (0, a.jsx)(g.default, {
-            actionsDisabled: null != j || t,
-            exporting: j === e.id,
+            actionsDisabled: null != y || t,
+            exporting: y === e.id,
             isNew: w.includes(e.id),
             onDelete: F,
             onEdit: V,
@@ -116,7 +116,7 @@ function S(e) {
           }, e.id)
         })
       }, "clips-gallery-".concat(t))
-    }, [B, w, j, z, F, V]),
+    }, [B, w, y, z, F, V]),
     Y = R || 0 !== B.length ? R ? (0, a.jsx)("div", {
       className: I.spinnerContainer,
       children: (0, a.jsx)(f.Spinner, {})

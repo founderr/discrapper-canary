@@ -1,13 +1,13 @@
 "use strict";
 i.r(e), i.d(e, {
   useUsername: function() {
-    return G
+    return V
   },
   useAvatar: function() {
-    return H
+    return F
   },
   BaseMessageHeader: function() {
-    return F
+    return H
   },
   default: function() {
     return W
@@ -31,8 +31,8 @@ var l = i("37983"),
   w = i("256572"),
   p = i("436595"),
   v = i("713135"),
-  N = i("506885"),
-  C = i("106435"),
+  C = i("506885"),
+  N = i("106435"),
   y = i("168973"),
   T = i("305961"),
   E = i("957255"),
@@ -51,7 +51,7 @@ var l = i("37983"),
   U = i("741566"),
   k = i("809764");
 
-function V(t) {
+function G(t) {
   let {
     avatarSrc: e,
     avatarDecorationSrc: i,
@@ -90,7 +90,7 @@ function V(t) {
   })
 }
 
-function G(t, e, i) {
+function V(t, e, i) {
   let {
     message: r,
     channel: n,
@@ -125,7 +125,7 @@ function G(t, e, i) {
   })
 }
 
-function H(t) {
+function F(t) {
   let {
     props: e,
     guildId: i,
@@ -151,7 +151,7 @@ function H(t) {
     avatarSrc: A,
     avatarDecorationSrc: R,
     eventHandlers: P
-  } = (0, C.default)({
+  } = (0, N.default)({
     user: _,
     guildId: i,
     size: f ? 32 : 80,
@@ -163,7 +163,7 @@ function H(t) {
     }, [O, x]), !f || E) {
     if (null != n && null != p) return (0, l.jsx)(d.Popout, {
       preload: I ? void 0 : function() {
-        return (0, N.default)(h.author.id, null != u.guildMemberAvatar && null != i ? (0, M.getGuildMemberAvatarURLSimple)({
+        return (0, C.default)(h.author.id, null != u.guildMemberAvatar && null != i ? (0, M.getGuildMemberAvatarURLSimple)({
           guildId: i,
           userId: h.author.id,
           avatar: u.guildMemberAvatar,
@@ -177,7 +177,7 @@ function H(t) {
       shouldShow: p,
       position: s.isMobile ? "window_center" : "right",
       onRequestClose: w,
-      children: t => V({
+      children: t => G({
         ...P,
         avatarSrc: A,
         avatarDecorationSrc: R,
@@ -190,7 +190,7 @@ function H(t) {
         className: c
       })
     });
-    else return V({
+    else return G({
       ...P,
       avatarSrc: A,
       avatarDecorationSrc: R,
@@ -205,7 +205,7 @@ function H(t) {
   }
 }
 
-function F(t) {
+function H(t) {
   let {
     message: e,
     avatar: i,
@@ -266,7 +266,7 @@ function z(t) {
     text: D.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
       date: r
     }),
-    onTooltipShow: () => (0, N.default)(i.id),
+    onTooltipShow: () => (0, C.default)(i.id),
     children: t => (0, l.jsx)(d.Clickable, {
       className: U.nitroAuthorBadgeContainer,
       onClick: () => Z(e),
@@ -291,11 +291,11 @@ function W(t) {
     renderPopout: s,
     showTimestampOnHover: j,
     roleIcon: v,
-    subscribeToGroupId: N,
-    hideTimestamp: C,
+    subscribeToGroupId: C,
+    hideTimestamp: N,
     className: M,
     channel: S
-  } = t, P = r.useMemo(() => null != s ? t => s(t, e) : void 0, [s, e]), [, k] = (0, h.default)(e.author.id, t.guildId), V = (0, o.useStateFromStores)([T.default], () => T.default.getGuild(t.guildId), [t.guildId]), Z = null != e.author && null != V && E.default.canManageUser(B.Permissions.MODERATE_MEMBERS, e.author, V), W = k && Z, K = H({
+  } = t, P = r.useMemo(() => null != s ? t => s(t, e) : void 0, [s, e]), [, k] = (0, h.default)(e.author.id, t.guildId), G = (0, o.useStateFromStores)([T.default], () => T.default.getGuild(t.guildId), [t.guildId]), Z = null != e.author && null != G && E.default.canManageUser(B.Permissions.MODERATE_MEMBERS, e.author, G), W = k && Z, K = F({
     props: t,
     guildId: t.guildId,
     handleRenderPopout: P,
@@ -303,7 +303,7 @@ function W(t) {
   }), Y = (0, o.useStateFromStores)([y.default], () => {
     var e;
     return null !== (e = t.displayCompactAvatars) && void 0 !== e ? e : y.default.displayCompactAvatars
-  }), X = (!n || Y) && null != v && null != V ? (0, l.jsx)(d.Popout, {
+  }), X = (!n || Y) && null != v && null != G ? (0, l.jsx)(d.Popout, {
     animation: d.Popout.Animation.TRANSLATE,
     align: "center",
     autoInvert: !0,
@@ -311,7 +311,7 @@ function W(t) {
     position: "right",
     renderPopout: () => (0, l.jsx)(m.default, {
       roleIcon: v,
-      guild: V
+      guild: G
     }),
     children: t => {
       let {
@@ -336,11 +336,11 @@ function W(t) {
   (0, f.shouldShowNitroBadge)(null != v, "Message Username") && $ && !n && !te && J.push((0, l.jsx)(z, {
     currentUserIsPremium: tt,
     author: e.author
-  }, "nitro-author")), null != X && J.push(X), null != V && J.push((0, l.jsx)(u.default, {
-    guild: V,
+  }, "nitro-author")), null != X && J.push(X), null != G && J.push((0, l.jsx)(u.default, {
+    guild: G,
     message: e
-  }, "new-member")), null != S && null != V && J.push((0, l.jsx)(c.default, {
-    guild: V,
+  }, "new-member")), null != S && null != G && J.push((0, l.jsx)(c.default, {
+    guild: G,
     channel: S,
     userId: e.author.id
   }, "connections"));
@@ -350,12 +350,12 @@ function W(t) {
   }, "poll"));
   let tl = {};
   tl[L.UsernameDecorationTypes.SYSTEM_TAG] = q, tl[L.UsernameDecorationTypes.BADGES] = J;
-  let tr = G(t, P, tl),
-    tn = (0, x.getMessageUsernameId)(e, N),
+  let tr = V(t, P, tl),
+    tn = (0, x.getMessageUsernameId)(e, C),
     ta = (0, x.getMessageTimestampId)(e),
-    ts = C ? "".concat(tn) : "".concat(tn, " ").concat(ta),
+    ts = N ? "".concat(tn) : "".concat(tn, " ").concat(ta),
     to = (null == i ? void 0 : i.state) === w.ReferencedMessageState.LOADED ? (0, x.getMessageReplyId)(e) : void 0;
-  return (0, l.jsx)(F, {
+  return (0, l.jsx)(H, {
     message: e,
     avatar: K,
     username: (0, l.jsxs)(l.Fragment, {
@@ -373,13 +373,13 @@ function W(t) {
         })
       }), tr]
     }),
-    usernameSpanId: (0, x.getMessageUsernameId)(e, N),
+    usernameSpanId: (0, x.getMessageUsernameId)(e, C),
     usernameClassName: a(U.headerText, {
       [U.hasRoleIcon]: null != X,
       [U.hasBadges]: null != q || ti.length > 0
     }),
     compact: n,
-    showTimestamp: !0 !== C,
+    showTimestamp: !0 !== N,
     showTimestampOnHover: j,
     ariaLabelledBy: ts,
     ariaDescribedBy: to,

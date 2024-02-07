@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("222007"), n("781738");
 var l = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("77078"),
-  a = n("272030"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("77078"),
+  o = n("272030"),
   u = n("507217"),
   d = n("383018"),
   c = n("378765"),
@@ -18,7 +18,7 @@ var l = n("37983"),
   m = n("149022"),
   h = n("49111");
 let E = /(\t|\s)/;
-class S extends i.PureComponent {
+class g extends i.PureComponent {
   componentDidMount() {
     !this.props.disableAutoFocus && (Promise.resolve().then(() => {
       var e;
@@ -79,8 +79,8 @@ class S extends i.PureComponent {
       let t = this._ref;
       if (null == t) return;
       let i = t.value.slice(0, t.selectionStart - l.length),
-        r = t.value.slice(t.selectionEnd);
-      this._insertText(e, i, r, n)
+        a = t.value.slice(t.selectionEnd);
+      this._insertText(e, i, a, n)
     }
   }
   insertText(e, t) {
@@ -88,21 +88,21 @@ class S extends i.PureComponent {
       l = this._ref;
     if (null == l) return;
     let i = l.value.slice(0, l.selectionStart),
-      r = l.value.slice(l.selectionEnd);
-    this._insertText(e, i, r, n)
+      a = l.value.slice(l.selectionEnd);
+    this._insertText(e, i, a, n)
   }
   _insertText(e, t, n, l) {
     let i = this._ref;
     if (null == i) return;
     l && (e += " ");
-    let r = t + e + n,
+    let a = t + e + n,
       {
-        onChange: o
+        onChange: s
       } = this.props;
-    null == o || o(null, r, (0, m.toRichValue)(r));
-    let s = t.length + e.length;
+    null == s || s(null, a, (0, m.toRichValue)(a));
+    let r = t.length + e.length;
     this.setState({
-      nextSelection: s
+      nextSelection: r
     }, () => {
       this.props.maybeShowAutocomplete()
     })
@@ -119,23 +119,23 @@ class S extends i.PureComponent {
       disabled: t,
       placeholder: n,
       required: i,
-      onResize: r,
-      className: a,
+      onResize: a,
+      className: o,
       id: u,
       submitting: d,
       textAreaPaddingClassName: f,
       spellcheckEnabled: p,
       "aria-controls": m,
       "aria-expanded": E,
-      "aria-activedescendant": S
+      "aria-activedescendant": g
     } = this.props;
     return (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(c.ComponentAction, {
         event: h.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
         handler: this.handleGlobalPaste
-      }), (0, l.jsx)(s.TextAreaAutosize, {
+      }), (0, l.jsx)(r.TextAreaAutosize, {
         ref: this.handleSetRef,
-        className: o(a, f),
+        className: s(o, f),
         id: u,
         rows: 1,
         fontWidthEstimate: 6,
@@ -143,7 +143,7 @@ class S extends i.PureComponent {
         disabled: t || d,
         required: i,
         onChange: this.handleOnChange,
-        onResize: r,
+        onResize: a,
         onKeyPress: this.handleKeyPress,
         onKeyDown: this.handleKeyDown,
         onKeyUp: this.handleKeyUp,
@@ -157,7 +157,7 @@ class S extends i.PureComponent {
         spellCheck: p,
         "aria-controls": m,
         "aria-expanded": E,
-        "aria-activedescendant": S,
+        "aria-activedescendant": g,
         "aria-haspopup": "listbox",
         "aria-autocomplete": "list",
         "aria-multiline": !0
@@ -232,10 +232,10 @@ class S extends i.PureComponent {
     }, this.handleClick = () => {
       this.props.maybeShowAutocomplete()
     }, this.handleContextMenu = e => {
-      f.isPlatformEmbedded && (0, a.openContextMenuLazy)(e, async () => {
+      f.isPlatformEmbedded && (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await n.el("188503").then(n.bind(n, "188503"));
+        } = await n.el("604288").then(n.bind(n, "604288"));
         return t => (0, l.jsx)(e, {
           ...t,
           isChannelTextArea: !0,
@@ -254,4 +254,4 @@ class S extends i.PureComponent {
     }
   }
 }
-var g = S
+var S = g

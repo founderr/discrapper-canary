@@ -25,8 +25,8 @@ var E = function(e) {
     image: r,
     type: E,
     imageStyles: C,
-    imageMarginX: S,
-    imageMarginTop: g,
+    imageMarginX: g,
+    imageMarginTop: S,
     trackingSource: _,
     undismissable: I,
     onDismissed: T,
@@ -67,7 +67,7 @@ var E = function(e) {
     }),
     children: n
   }));
-  let j = null != S ? "".concat(S, "px") : "16px";
+  let j = null != g ? "".concat(g, "px") : "16px";
   return (0, a.jsxs)("div", {
     className: p.container,
     children: [!0 === I ? null : (0, a.jsx)(o.Clickable, {
@@ -84,7 +84,7 @@ var E = function(e) {
     }), null != r && (0, a.jsx)("div", {
       className: p.imageContainer,
       style: {
-        marginTop: "".concat(g, "px"),
+        marginTop: "".concat(S, "px"),
         marginLeft: j,
         marginRight: j
       },

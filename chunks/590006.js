@@ -1,13 +1,13 @@
 "use strict";
 a.r(t), a.d(t, {
   BadgeSizes: function() {
-    return l
+    return n
   },
   default: function() {
     return C
   }
 }), a("424973");
-var l, n, s = a("37983");
+var n, l, s = a("37983");
 a("884691");
 var i = a("414456"),
   r = a.n(i),
@@ -27,17 +27,17 @@ function C(e) {
   let {
     user: t,
     guildId: a,
-    className: l,
-    shrinkAtCount: n,
+    className: n,
+    shrinkAtCount: l,
     shrinkToSize: i,
     isTryItOutFlow: C,
-    size: N = 0
-  } = e, g = (0, T.default)(t.id, a), v = (0, f.default)(g).map(e => ({
+    size: g = 0
+  } = e, N = (0, T.default)(t.id, a), v = (0, f.default)(N).map(e => ({
     ...e,
     src: (0, E.getBadgeAsset)(e.icon)
   })), p = (0, c.useWindowDispatch)();
   if (t.isClyde()) return (0, s.jsx)("div", {
-    className: r(l, S.container, S.clydeBadgeList),
+    className: r(n, S.container, S.clydeBadgeList),
     "aria-label": _.default.Messages.PROFILE_USER_BADGES,
     role: "group",
     children: (0, s.jsx)(d.default, {})
@@ -50,9 +50,9 @@ function C(e) {
       date: new Date
     })
   });
-  let I = null != n && null != i && v.length > n ? i : N;
+  let I = null != l && null != i && v.length > l ? i : g;
   return (0, s.jsx)("div", {
-    className: r(l, v.length > 0 ? S.containerWithContent : S.container),
+    className: r(n, v.length > 0 ? S.containerWithContent : S.container),
     "aria-label": _.default.Messages.PROFILE_USER_BADGES,
     role: "group",
     children: v.map(e => (0, s.jsx)(u.Tooltip, {
@@ -62,10 +62,10 @@ function C(e) {
       children: t => (0, s.jsx)(u.Anchor, {
         ...t,
         onClick: a => {
-          var l;
-          null === (l = t.onClick) || void 0 === l || l.call(t);
-          let n = null != e.link ? (0, o.default)(e.link) : null;
-          if (null != n) return p.dispatch(A.ComponentActions.POPOUT_CLOSE), n(a)
+          var n;
+          null === (n = t.onClick) || void 0 === n || n.call(t);
+          let l = null != e.link ? (0, o.default)(e.link) : null;
+          if (null != l) return p.dispatch(A.ComponentActions.POPOUT_CLOSE), l(a)
         },
         href: e.link,
         children: (0, s.jsx)("img", {
@@ -81,4 +81,4 @@ function C(e) {
       })
     }, e.id))
   })
-}(n = l || (l = {}))[n.SIZE_24 = 0] = "SIZE_24", n[n.SIZE_22 = 1] = "SIZE_22", n[n.SIZE_18 = 2] = "SIZE_18"
+}(l = n || (n = {}))[l.SIZE_24 = 0] = "SIZE_24", l[l.SIZE_22 = 1] = "SIZE_22", l[l.SIZE_18 = 2] = "SIZE_18"

@@ -1,27 +1,27 @@
 "use strict";
-let u;
-t.r(n), t.d(n, {
+let l;
+n.r(t), n.d(t, {
   default: function() {
-    return d
+    return o
   }
 });
-var l = t("446674"),
-  i = t("913144"),
-  o = t("626334");
-class a extends l.default.PersistedStore {
+var i = n("446674"),
+  a = n("913144"),
+  s = n("626334");
+class r extends i.default.PersistedStore {
   initialize(e) {
-    var n;
-    u = null !== (n = null == e ? void 0 : e.animationType) && void 0 !== n ? n : o.VoiceChannelEffectAnimationType.PREMIUM
+    var t;
+    l = null !== (t = null == e ? void 0 : e.animationType) && void 0 !== t ? t : s.VoiceChannelEffectAnimationType.PREMIUM
   }
   getState() {
     return {
-      animationType: u
+      animationType: l
     }
   }
 }
-a.displayName = "VoiceChannelEffectsPersistedStore", a.persistKey = "VoiceChannelEffectsPersistedStore";
-var d = new a(i.default, {
+r.displayName = "VoiceChannelEffectsPersistedStore", r.persistKey = "VoiceChannelEffectsPersistedStore";
+var o = new r(a.default, {
   VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: () => {
-    u = u === o.VoiceChannelEffectAnimationType.BASIC ? o.VoiceChannelEffectAnimationType.PREMIUM : o.VoiceChannelEffectAnimationType.BASIC
+    l = l === s.VoiceChannelEffectAnimationType.BASIC ? s.VoiceChannelEffectAnimationType.PREMIUM : s.VoiceChannelEffectAnimationType.BASIC
   }
 })

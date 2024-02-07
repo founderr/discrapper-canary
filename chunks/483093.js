@@ -1,65 +1,65 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return u
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  i = l("77078"),
-  r = l("782340"),
-  o = l("569313");
+var l = n("37983");
+n("884691");
+var i = n("414456"),
+  a = n.n(i),
+  s = n("77078"),
+  r = n("782340"),
+  o = n("569313");
 
 function u(e) {
   let {
     className: t,
-    src: l,
-    unicodeEmoji: a,
+    src: n,
+    unicodeEmoji: i,
     name: u,
     size: d = 20,
     enableTooltip: c = !0,
     enableHeight: f = !0,
-    onClick: m
+    onClick: p
   } = e;
-  if (null == l && null == a) return null;
-  let p = e => {
-    let c = (0, n.jsx)("img", {
+  if (null == n && null == i) return null;
+  let m = e => {
+    let c = (0, l.jsx)("img", {
       alt: "",
       "aria-label": r.default.Messages.ROLE_ICON_ALT_TEXT.format({
         name: u
       }),
-      className: s(o.roleIcon, t, {
-        [o.clickable]: null != m
+      className: a(o.roleIcon, t, {
+        [o.clickable]: null != p
       }),
       height: f ? d : void 0,
-      src: l,
+      src: n,
       width: d,
       ...e
     });
-    return (null != a && (c = (0, n.jsx)("img", {
+    return (null != i && (c = (0, l.jsx)("img", {
       alt: "",
-      "aria-label": a.allNamesString,
-      className: s(o.roleIcon, t, {
-        [o.clickable]: null != m
+      "aria-label": i.allNamesString,
+      className: a(o.roleIcon, t, {
+        [o.clickable]: null != p
       }),
       height: f ? d : void 0,
-      src: a.url,
+      src: i.url,
       width: d,
       ...e
-    })), null == m) ? (0, n.jsx)(i.FocusRing, {
+    })), null == p) ? (0, l.jsx)(s.FocusRing, {
       children: c
-    }) : (0, n.jsx)(i.Clickable, {
-      onClick: m,
+    }) : (0, l.jsx)(s.Clickable, {
+      onClick: p,
       tag: "span",
       children: c
     })
   };
-  return (0, n.jsx)(i.Tooltip, {
+  return (0, l.jsx)(s.Tooltip, {
     text: u,
     "aria-label": !1,
     shouldShow: c,
-    children: e => p(e)
+    children: e => m(e)
   })
 }

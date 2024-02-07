@@ -1,7 +1,7 @@
 "use strict";
 t.r(r), t.d(r, {
   default: function() {
-    return f
+    return m
   }
 }), t("222007");
 var a = t("748820"),
@@ -29,7 +29,7 @@ class p extends i.default.Store {
   }
 }
 p.displayName = "AnalyticsLogStore";
-var f = new p(l.default, {
+var m = new p(l.default, {
   TRACK: function(e) {
     let {
       event: r,

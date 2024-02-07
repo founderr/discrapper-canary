@@ -20,8 +20,8 @@ var a = n("37983"),
   v = n("858944"),
   I = n("191145"),
   P = n("161306"),
-  S = n("836087"),
-  C = n("679653"),
+  C = n("836087"),
+  S = n("679653"),
   g = n("374014"),
   y = n("479788"),
   E = n("430951"),
@@ -169,7 +169,7 @@ class ea extends l.PureComponent {
       streamId: t,
       participantOnScreen: n,
       isVideoEnabled: l
-    } = this.props, i = (0, C.computeChannelName)(e, W.default, F.default), o = this.isEmptyBroadcast(), r = (null == n ? void 0 : n.id) === D.default.getId() && l, s = this.renderStreamState(), d = null;
+    } = this.props, i = (0, S.computeChannelName)(e, W.default, F.default), o = this.isEmptyBroadcast(), r = (null == n ? void 0 : n.id) === D.default.getId() && l, s = this.renderStreamState(), d = null;
     return (null == n ? void 0 : n.type) !== et.ParticipantTypes.ACTIVITY && (null != s ? d = s : ((null == n ? void 0 : n.type) === et.ParticipantTypes.USER || (null == n ? void 0 : n.type) === et.ParticipantTypes.STREAM) && (d = (0, a.jsx)(z.default, {
       paused: this.streamerPaused,
       streamId: t,
@@ -279,7 +279,7 @@ class ea extends l.PureComponent {
         channel: t
       } = this.props;
       return o((0, et.isStreamParticipant)(e) || (null == e ? void 0 : e.type) === et.ParticipantTypes.ACTIVITY, "Cannot render participants for participant type ".concat(null == e ? void 0 : e.type)), (0, a.jsx)(M.default, {
-        children: (0, a.jsx)(S.default, {
+        children: (0, a.jsx)(C.default, {
           channelId: t.id,
           guildId: t.getGuildId(),
           className: en.rightTrayIcon,

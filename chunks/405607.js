@@ -1,84 +1,84 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
 });
-var n = i("37983"),
-  s = i("884691"),
-  l = i("414456"),
-  r = i.n(l),
-  a = i("124299"),
-  o = i("538282"),
-  u = i("49111"),
-  c = i("742773");
-let d = e => {
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("124299"),
+  o = n("538282"),
+  u = n("49111"),
+  d = n("742773");
+let c = e => {
   let {
     activeIndex: t,
-    categoryListRef: i,
-    getScrollOffsetForIndex: n
-  } = e, l = s.useRef(u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), r = s.useRef(t);
-  return s.useEffect(() => {
-    null != t && t !== r.current && (l.current !== u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(l.current), l.current = window.requestAnimationFrame(() => {
+    categoryListRef: n,
+    getScrollOffsetForIndex: l
+  } = e, a = i.useRef(u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), s = i.useRef(t);
+  return i.useEffect(() => {
+    null != t && t !== s.current && (a.current !== u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(a.current), a.current = window.requestAnimationFrame(() => {
       var e;
-      if (null == i.current) return;
-      let s = t > (null !== (e = r.current) && void 0 !== e ? e : -1),
-        a = null != n ? n(t, s) : 0;
-      i.current.scrollRowIntoView(t, {
+      if (null == n.current) return;
+      let i = t > (null !== (e = s.current) && void 0 !== e ? e : -1),
+        r = null != l ? l(t, i) : 0;
+      n.current.scrollRowIntoView(t, {
         animate: !0,
-        offset: a
-      }), l.current = u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID, r.current = t
+        offset: r
+      }), a.current = u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID, s.current = t
     }))
-  }, [t, i, n]), {
-    categoryListRef: i
+  }, [t, n, l]), {
+    categoryListRef: n
   }
 };
 var f = function(e) {
   let {
     categoryListRef: t,
-    expressionsListRef: i,
-    categories: l,
+    expressionsListRef: n,
+    categories: a,
     store: u,
     children: f,
-    className: E,
+    className: p,
     listPadding: m,
-    rowCount: I,
-    getScrollOffsetForIndex: p,
+    rowCount: h,
+    getScrollOffsetForIndex: E,
     categoryHeight: g,
-    onScroll: _,
-    renderCategoryListItem: S,
-    rowCountBySection: h,
-    renderSection: C
-  } = e, T = u.useStore(e => e.activeCategoryIndex);
-  d({
-    activeIndex: T,
+    onScroll: S,
+    renderCategoryListItem: C,
+    rowCountBySection: T,
+    renderSection: v
+  } = e, I = u.useStore(e => e.activeCategoryIndex);
+  c({
+    activeIndex: I,
     categoryListRef: t,
-    getScrollOffsetForIndex: p
+    getScrollOffsetForIndex: E
   });
-  let N = s.useCallback(e => {
+  let _ = i.useCallback(e => {
       let {
         searchQuery: t
       } = o.useExpressionPickerStore.getState();
       if (u.setActiveCategoryIndex(e), "" !== t)(0, o.setSearchQuery)("");
       else {
-        var n;
-        null === (n = i.current) || void 0 === n || n.scrollToSectionTop(e)
+        var l;
+        null === (l = n.current) || void 0 === l || l.scrollToSectionTop(e)
       }
-    }, [i, u]),
-    v = s.useCallback(e => S(l[e], e, () => N(e), T === e), [T, l, N, S]),
-    A = s.useMemo(() => "function" == typeof g ? e => g(l[e], e) : g, [l, g]);
-  return (0, n.jsxs)("div", {
-    className: r(c.wrapper, E),
-    children: [(0, n.jsx)(a.default, {
+    }, [n, u]),
+    y = i.useCallback(e => C(a[e], e, () => _(e), I === e), [I, a, _, C]),
+    A = i.useMemo(() => "function" == typeof g ? e => g(a[e], e) : g, [a, g]);
+  return (0, l.jsxs)("div", {
+    className: s(d.wrapper, p),
+    children: [(0, l.jsx)(r.default, {
       listPadding: m,
-      onScroll: _,
+      onScroll: S,
       ref: t,
-      renderRow: v,
-      rowCount: I,
+      renderRow: y,
+      rowCount: h,
       rowHeight: A,
       hideScrollbar: !0,
-      rowCountBySection: h,
-      renderSection: C
-    }), null == f ? void 0 : f(N)]
+      rowCountBySection: T,
+      renderSection: v
+    }), null == f ? void 0 : f(_)]
   })
 }

@@ -1,88 +1,88 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return x
   }
 }), n("222007");
 var s = n("37983"),
-  r = n("884691"),
-  l = n("516555"),
-  i = n("812204"),
+  i = n("884691"),
+  r = n("516555"),
+  l = n("812204"),
   a = n("685665"),
-  o = n("635357"),
-  u = n("642906"),
+  u = n("635357"),
+  o = n("642906"),
   d = n("85336"),
   c = n("385179"),
   f = n("292215"),
-  E = n("639137"),
-  p = n("526139"),
-  _ = n("158184"),
-  I = n("385890"),
-  S = n("337978"),
-  h = n("49111"),
-  m = n("843455"),
-  C = n("322859");
+  p = n("639137"),
+  S = n("526139"),
+  E = n("158184"),
+  m = n("385890"),
+  _ = n("337978"),
+  I = n("49111"),
+  C = n("843455"),
+  T = n("322859");
 
-function T(e) {
+function x(e) {
   let {
     onClose: t,
     onComplete: n,
-    transitionState: T,
-    loadId: x,
-    skuId: P,
-    isGift: R = !1,
-    giftRecipient: g,
-    giftMessage: v,
-    analyticsLocations: M,
-    returnRef: A
+    transitionState: x,
+    loadId: h,
+    skuId: g,
+    isGift: P = !1,
+    giftRecipient: A,
+    giftMessage: N,
+    analyticsLocations: v,
+    returnRef: O
   } = e, {
-    analyticsLocations: N,
-    AnalyticsLocationProvider: O
-  } = (0, a.default)([...M, i.default.COLLECTIBLES_PAYMENT_MODAL]), L = r.useRef(new l.Environment), [U, j] = r.useState(null), y = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, I.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, p.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
+    analyticsLocations: M,
+    AnalyticsLocationProvider: y
+  } = (0, a.default)([...v, l.default.COLLECTIBLES_PAYMENT_MODAL]), L = i.useRef(new r.Environment), [b, j] = i.useState(null), R = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, m.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, S.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
     key: d.Step.CONFIRM,
-    renderStep: e => (0, s.jsx)(_.CollectiblesPaymentModalConfirmStep, {
+    renderStep: e => (0, s.jsx)(E.CollectiblesPaymentModalConfirmStep, {
       ...e,
-      confettiCanvas: U,
-      analyticsLocations: N
+      confettiCanvas: b,
+      analyticsLocations: M
     }),
     options: {
-      bodyClassName: C.modalOverrideBody,
-      sliderBodyClassName: C.modalOverrideSliderBody
+      bodyClassName: T.modalOverrideBody,
+      sliderBodyClassName: T.modalOverrideSliderBody
     }
   }];
-  return (0, s.jsxs)(O, {
-    children: [(0, s.jsx)(l.ConfettiCanvas, {
+  return (0, s.jsxs)(y, {
+    children: [(0, s.jsx)(r.ConfettiCanvas, {
       ref: j,
-      className: C.confettiCanvas,
+      className: T.confettiCanvas,
       environment: L.current
-    }), (0, s.jsx)(u.PaymentContextProvider, {
-      stepConfigs: y,
-      applicationId: h.COLLECTIBLES_APPLICATION_ID,
-      skuIDs: [P],
-      isGift: R,
+    }), (0, s.jsx)(o.PaymentContextProvider, {
+      stepConfigs: R,
+      applicationId: I.COLLECTIBLES_APPLICATION_ID,
+      skuIDs: [g],
+      isGift: P,
       activeSubscription: null,
-      purchaseType: m.PurchaseTypes.ONE_TIME,
-      children: (0, s.jsx)(o.GiftContextProvider, {
-        isGift: R,
-        giftRecipient: g,
-        giftMessage: v,
+      purchaseType: C.PurchaseTypes.ONE_TIME,
+      children: (0, s.jsx)(u.GiftContextProvider, {
+        isGift: P,
+        giftRecipient: A,
+        giftMessage: N,
         children: (0, s.jsx)(c.PaymentModal, {
           onClose: t,
           onComplete: n,
-          loadId: x,
-          applicationId: h.COLLECTIBLES_APPLICATION_ID,
-          skuId: P,
+          loadId: h,
+          applicationId: I.COLLECTIBLES_APPLICATION_ID,
+          skuId: g,
           initialPlanId: null,
-          analyticsLocations: N,
-          transitionState: T,
-          renderHeader: (e, t, n) => R ? (0, s.jsx)(E.default, {
+          analyticsLocations: M,
+          transitionState: x,
+          renderHeader: (e, t, n) => P ? (0, s.jsx)(p.default, {
             step: n,
             onClose: () => t(!1)
-          }) : (0, s.jsx)(S.default, {
+          }) : (0, s.jsx)(_.default, {
             step: n,
             onClose: () => t(!1)
           }),
-          returnRef: A,
+          returnRef: O,
           hideShadow: !0
         })
       })

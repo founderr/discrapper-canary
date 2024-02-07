@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return a
   }
 });
 var i = n("37983");
@@ -9,13 +9,13 @@ n("884691");
 var r = n("469563"),
   l = n("505088"),
   s = n("75196"),
-  u = (0, r.replaceIcon)(function(e) {
+  a = (0, r.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
       color: r = "currentColor",
       foreground: l,
-      backgroundColor: u,
+      backgroundColor: a,
       ...o
     } = e;
     return (0, i.jsxs)("svg", {
@@ -23,11 +23,11 @@ var r = n("469563"),
       width: t,
       height: n,
       viewBox: "0 0 14 14",
-      children: [null != u ? (0, i.jsx)("circle", {
+      children: [null != a ? (0, i.jsx)("circle", {
         r: 5,
         cx: 7,
         cy: 7,
-        fill: u
+        fill: a
       }) : null, (0, i.jsx)("path", {
         fill: r,
         className: l,

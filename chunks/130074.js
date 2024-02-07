@@ -6,107 +6,107 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var l = n("77078"),
-  r = n("272030"),
-  a = n("838446"),
+var a = n("77078"),
+  l = n("272030"),
+  r = n("838446"),
   s = n("158534"),
   u = n("798609"),
   o = n("846883"),
   d = n("812204"),
   c = n("243288"),
   f = n("321135"),
-  h = n("873254"),
-  E = n("44141"),
-  _ = n("531674"),
-  I = n("861370"),
-  p = n("972701"),
-  C = n("390008"),
-  T = n("936947"),
-  S = n("976127"),
+  E = n("873254"),
+  h = n("44141"),
+  C = n("531674"),
+  p = n("861370"),
+  _ = n("972701"),
+  I = n("390008"),
+  S = n("936947"),
+  T = n("976127"),
   N = n("856030"),
   v = n("726750"),
-  g = n("170990"),
-  m = n("304582"),
-  A = n("72057"),
+  A = n("170990"),
+  g = n("304582"),
+  m = n("72057"),
   R = n("563816"),
-  M = n("489836"),
-  L = n("406703"),
+  y = n("489836"),
+  M = n("406703"),
   O = n("126710"),
-  y = n("502533"),
-  U = n("314838"),
+  U = n("502533"),
+  L = n("314838"),
   G = n("151200"),
   P = n("692986"),
-  D = n("806179"),
-  x = n("816106"),
+  x = n("806179"),
+  F = n("816106"),
   b = n("623879"),
-  F = n("49111"),
+  D = n("49111"),
   w = n("782340"),
-  j = (0, s.default)((0, a.default)(function(e) {
+  j = (0, s.default)((0, r.default)(function(e) {
     let {
       user: t,
       channel: n,
-      channelSelected: a = !1,
+      channelSelected: r = !1,
       showMute: s = !0,
       showMediaItems: d = !1,
-      showChannelCallItems: F = !1,
+      showChannelCallItems: D = !1,
       showModalItems: j = !0,
       targetIsUser: H = !1,
-      context: V,
-      onSelect: B,
-      onHeightUpdate: k
-    } = e, Y = (0, D.default)(t.id, null), Z = (0, L.default)(t, V), W = (0, A.default)({
+      context: k,
+      onSelect: V,
+      onHeightUpdate: W
+    } = e, B = (0, x.default)(t.id, null), Z = (0, M.default)(t, k), K = (0, m.default)({
       user: t,
-      context: V
-    }), K = (0, m.default)(t), z = (0, b.default)(t.id), q = (0, O.default)(n.id, a), X = (0, U.default)(t), Q = (0, o.default)(null, t), J = (0, x.default)(t.id), $ = (0, G.default)(t.id, n.id), ee = (0, g.default)(t), et = (0, P.default)(t.id), en = (0, y.default)(t.id, n.id), ei = (0, M.default)(t), el = (0, _.default)(n), er = (0, I.default)({
+      context: k
+    }), Y = (0, g.default)(t), z = (0, b.default)(t.id), q = (0, O.default)(n.id, r), X = (0, L.default)(t), Q = (0, o.default)(null, t), J = (0, F.default)(t.id), $ = (0, G.default)(t.id, n.id), ee = (0, A.default)(t), et = (0, P.default)(t.id), en = (0, U.default)(t.id, n.id), ei = (0, y.default)(t), ea = (0, C.default)(n), el = (0, p.default)({
       id: t.id,
       label: w.default.Messages.COPY_ID_USER
-    }), ea = (0, I.default)({
+    }), er = (0, p.default)({
       id: n.id,
       label: w.default.Messages.COPY_ID_CHANNEL
-    }), es = (0, E.default)(n), eu = (0, f.default)(t.id), eo = (0, c.default)(n.id), ed = (0, v.default)(t), ec = (0, h.default)(t.id), ef = (0, R.default)({
+    }), es = (0, h.default)(n), eu = (0, f.default)(t.id), eo = (0, c.default)(n.id), ed = (0, v.default)(t), ec = (0, E.default)(t.id), ef = (0, R.default)({
       commandType: u.ApplicationCommandType.USER,
       commandTargetId: t.id,
       channel: n,
       guildId: void 0,
-      onHeightUpdate: k
-    }), eh = (0, p.useAddToFavoritesItem)(n), eE = (0, p.useRemoveFromFavoritesItem)(n), e_ = (0, C.default)(n), eI = (0, T.default)(n), ep = (0, S.useMessageRequestItem)(n), eC = (0, N.useSafetyWarningsItem)(n), eT = n.isManaged(), eS = t.isNonUserBot();
-    return (0, i.jsxs)(l.Menu, {
+      onHeightUpdate: W
+    }), eE = (0, _.useAddToFavoritesItem)(n), eh = (0, _.useRemoveFromFavoritesItem)(n), eC = (0, I.default)(n), ep = (0, S.default)(n), e_ = (0, T.useMessageRequestItem)(n), eI = (0, N.useSafetyWarningsItem)(n), eS = n.isManaged(), eT = t.isNonUserBot();
+    return (0, i.jsxs)(a.Menu, {
       navId: "user-context",
-      onClose: r.closeContextMenu,
+      onClose: l.closeContextMenu,
       "aria-label": w.default.Messages.USER_ACTIONS_MENU_LABEL,
-      onSelect: B,
-      children: [(0, i.jsx)(l.MenuGroup, {
-        children: !eS && es
-      }), (0, i.jsx)(l.MenuGroup, {
-        children: ep
-      }), (0, i.jsx)(l.MenuGroup, {
-        children: eC
-      }), (0, i.jsxs)(l.MenuGroup, {
-        children: [eh, e_, eI]
-      }), (0, i.jsx)(l.MenuGroup, {
-        children: !eS && ed
-      }), (0, i.jsxs)(l.MenuGroup, {
-        children: [!eS && (0, i.jsxs)(i.Fragment, {
-          children: [j && Y, Z, !eT && $, j && W, j && K, z]
+      onSelect: V,
+      children: [(0, i.jsx)(a.MenuGroup, {
+        children: !eT && es
+      }), (0, i.jsx)(a.MenuGroup, {
+        children: e_
+      }), (0, i.jsx)(a.MenuGroup, {
+        children: eI
+      }), (0, i.jsxs)(a.MenuGroup, {
+        children: [eE, eC, ep]
+      }), (0, i.jsx)(a.MenuGroup, {
+        children: !eT && ed
+      }), (0, i.jsxs)(a.MenuGroup, {
+        children: [!eT && (0, i.jsxs)(i.Fragment, {
+          children: [j && B, Z, !eS && $, j && K, j && Y, z]
         }), q]
-      }), !eS && (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(l.MenuGroup, {
+      }), !eT && (0, i.jsxs)(i.Fragment, {
+        children: [(0, i.jsx)(a.MenuGroup, {
           children: d && J
-        }), (0, i.jsx)(l.MenuGroup, {
+        }), (0, i.jsx)(a.MenuGroup, {
           children: j && Q
-        }), (0, i.jsxs)(l.MenuGroup, {
+        }), (0, i.jsxs)(a.MenuGroup, {
           children: [d && et, d && en, ef, j && X, ee, j && ei, d && ec]
-        }), (0, i.jsx)(l.MenuGroup, {
-          children: s && el
-        }), F && (0, i.jsxs)(l.MenuGroup, {
+        }), (0, i.jsx)(a.MenuGroup, {
+          children: s && ea
+        }), D && (0, i.jsxs)(a.MenuGroup, {
           children: [eo, eu]
         })]
-      }), (0, i.jsx)(l.MenuGroup, {
-        children: eE
-      }), (0, i.jsxs)(l.MenuGroup, {
-        children: [er, !H && ea]
+      }), (0, i.jsx)(a.MenuGroup, {
+        children: eh
+      }), (0, i.jsxs)(a.MenuGroup, {
+        children: [el, !H && er]
       })]
     })
   }, {
-    object: F.AnalyticsObjects.CONTEXT_MENU
+    object: D.AnalyticsObjects.CONTEXT_MENU
   }), [d.default.CONTEXT_MENU, d.default.DM_USER_MENU])

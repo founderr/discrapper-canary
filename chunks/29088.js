@@ -4,8 +4,8 @@ a.r(t), a.d(t, {
     return d
   }
 }), a("222007");
-var l = a("808742"),
-  n = a("204947"),
+var n = a("808742"),
+  l = a("204947"),
   s = a("152311"),
   i = a("502651"),
   r = a("49111"),
@@ -27,7 +27,7 @@ function c(e, t) {
   if (null != t) return null == e || e.type !== r.ActivityTypes.PLAYING ? u.default.Messages.SHARING_SCREEN : o(a)[r.ActivityTypes.STREAMING].format({
     name: e.name
   });
-  if (c && null != e && e.type === r.ActivityTypes.HANG_STATUS) return (0, l.getHangStatusText)(e);
+  if (c && null != e && e.type === r.ActivityTypes.HANG_STATUS) return (0, n.getHangStatusText)(e);
   if (null == e || null == e.name) return null;
   if ((0, i.default)(e)) {
     let t = null != e.details && "" !== e.details ? e.details : e.name;
@@ -35,13 +35,13 @@ function c(e, t) {
       name: t
     })
   }
-  return (0, s.default)(e) ? (0, n.default)(e.name) : function(e, t, a) {
-    let l = o(a);
+  return (0, s.default)(e) ? (0, l.default)(e.name) : function(e, t, a) {
+    let n = o(a);
     switch (e) {
       case r.ActivityTypes.LISTENING:
       case r.ActivityTypes.WATCHING:
       case r.ActivityTypes.COMPETING:
-        return l[e].format({
+        return n[e].format({
           name: t
         });
       case r.ActivityTypes.CUSTOM_STATUS:
@@ -60,16 +60,16 @@ function c(e, t) {
 
 function d(e, t) {
   let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    l = arguments.length > 3 ? arguments[3] : void 0;
+    n = arguments.length > 3 ? arguments[3] : void 0;
   if (Array.isArray(e)) {
-    let n = e;
-    null != t && (n = [...n, null]);
+    let l = e;
+    null != t && (l = [...l, null]);
     let s = null;
-    for (let e of n) {
-      let n = c(e, t, a, l);
-      if (null != n) return {
+    for (let e of l) {
+      let l = c(e, t, a, n);
+      if (null != l) return {
         activity: e,
-        activityText: n
+        activityText: l
       };
       (null == e ? void 0 : e.type) === r.ActivityTypes.CUSTOM_STATUS && null != e.emoji && (s = e)
     }
@@ -78,5 +78,5 @@ function d(e, t) {
       activityText: null
     } : null
   }
-  return c(e, t, a, l)
+  return c(e, t, a, n)
 }

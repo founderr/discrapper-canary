@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   validateOptionContent: function() {
-    return a
+    return o
   }
 }), n("222007");
 var l = n("118200"),
   i = n("524768"),
-  r = n("810065"),
-  o = n("317041"),
-  s = n("782340");
+  a = n("810065"),
+  s = n("317041"),
+  r = n("782340");
 
-function a(e) {
+function o(e) {
   let {
     option: t,
     content: n,
-    guildId: a,
+    guildId: o,
     channelId: u,
     allowEmptyValues: d,
     commandOrigin: c = i.CommandOrigin.CHAT
@@ -23,7 +23,7 @@ function a(e) {
   }, "content").trim() : "", p = t.required, m = null != n, h = "" === f;
   if (!m) return p ? {
     success: !1,
-    error: s.default.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
+    error: r.default.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
   } : {
     success: !0
   };
@@ -31,15 +31,15 @@ function a(e) {
     success: !0
   } : p ? {
     success: !1,
-    error: s.default.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
+    error: r.default.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
   } : {
     success: !1,
-    error: (0, o.getValidationErrorText)(t)
+    error: (0, s.getValidationErrorText)(t)
   };
   let E = n.length > 1 ? {
       type: "text",
       text: f
     } : n[0],
-    S = (0, r.default)[t.type](E, t, u, a, c);
-  return !S.success && null == S.error && (S.error = (0, o.getValidationErrorText)(t)), S
+    g = (0, a.default)[t.type](E, t, u, o, c);
+  return !g.success && null == g.error && (g.error = (0, s.getValidationErrorText)(t)), g
 }

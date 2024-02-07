@@ -1,55 +1,55 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
-var s = l("37983"),
-  i = l("884691"),
-  n = l("446674"),
-  u = l("151426"),
-  a = l("79112"),
-  o = l("685665"),
-  r = l("10641"),
-  d = l("5667"),
-  c = l("783142"),
-  f = l("713135"),
-  _ = l("49111"),
-  S = l("994428"),
-  T = l("397336"),
-  E = l("782340"),
-  C = l("393036");
-let p = u.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
-  m = e => {
-    (0, r.markDismissibleContentAsDismissed)(p, {
+var l = n("37983"),
+  i = n("884691"),
+  a = n("446674"),
+  s = n("151426"),
+  r = n("79112"),
+  o = n("685665"),
+  u = n("10641"),
+  d = n("5667"),
+  c = n("783142"),
+  f = n("713135"),
+  p = n("49111"),
+  m = n("994428"),
+  h = n("397336"),
+  E = n("782340"),
+  g = n("393036");
+let S = s.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
+  C = e => {
+    (0, u.markDismissibleContentAsDismissed)(S, {
       dismissAction: e,
       forceTrack: !0
     })
   };
-var I = e => {
+var T = e => {
   let {
     position: t,
-    onClose: l
+    onClose: n
   } = e, {
-    analyticsLocations: u
-  } = (0, o.default)(), r = (0, n.useStateFromStores)([f.default], () => f.default.getIsAccessibilityTooltipViewed());
-  return i.useEffect(() => r ? () => m(S.ContentDismissActionType.AUTO) : () => (0, c.handleProfileAccessibilityTooltipViewed)(), [r]), (0, s.jsx)(d.default, {
-    markAsDismissed: m,
+    analyticsLocations: s
+  } = (0, o.default)(), u = (0, a.useStateFromStores)([f.default], () => f.default.getIsAccessibilityTooltipViewed());
+  return i.useEffect(() => u ? () => C(m.ContentDismissActionType.AUTO) : () => (0, c.handleProfileAccessibilityTooltipViewed)(), [u]), (0, l.jsx)(d.default, {
+    markAsDismissed: C,
     header: E.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_TITLE,
-    headerClassName: C.header,
-    content: (0, s.jsx)("div", {
-      className: C.content,
+    headerClassName: g.header,
+    content: (0, l.jsx)("div", {
+      className: g.content,
       children: E.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_DESCRIPTION
     }),
     buttonCTA: E.default.Messages.TAKE_ME_THERE,
     onClick: () => {
-      null == l || l(), a.default.open(_.UserSettingsSections.ACCESSIBILITY, null, {
-        scrollPosition: T.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME,
-        analyticsLocations: u
+      null == n || n(), r.default.open(p.UserSettingsSections.ACCESSIBILITY, null, {
+        scrollPosition: h.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME,
+        analyticsLocations: s
       })
     },
     secondaryButtonCTA: E.default.Messages.DISMISS,
-    onSecondaryClick: l,
+    onSecondaryClick: n,
     buttonLayout: d.ButtonLayout.STACKED,
     caretPosition: "left" === t ? d.CaretPosition.RIGHT_CENTER : d.CaretPosition.LEFT_CENTER
   })

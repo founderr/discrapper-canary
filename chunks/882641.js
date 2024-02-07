@@ -1,92 +1,92 @@
 "use strict";
 n.r(t), n.d(t, {
   EMOJI_BUTTON_SPRING_CONFIG: function() {
-    return _
+    return m
   },
   default: function() {
-    return I
+    return h
   }
 }), n("222007");
-var r = n("37983"),
+var l = n("37983"),
   i = n("884691"),
-  o = n("414456"),
-  l = n.n(o),
-  a = n("907002"),
-  u = n("77078"),
-  s = n("913144"),
-  c = n("474293"),
-  d = n("958706"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("907002"),
+  o = n("77078"),
+  u = n("913144"),
+  d = n("474293"),
+  c = n("958706"),
   f = n("782340"),
-  E = n("505436");
-let _ = {
+  p = n("505436");
+let m = {
   tension: 800,
   friction: 24
 };
-var I = function(e) {
+var h = function(e) {
   var t;
   let {
     tabIndex: n,
-    className: o,
-    renderButtonContents: I,
-    active: T,
-    onClick: p,
+    className: a,
+    renderButtonContents: h,
+    active: E,
+    onClick: g,
     "aria-controls": S,
-    focusProps: N
-  } = e, [h, C] = i.useState(!1), [v, R] = i.useState(50), A = h || T, g = (0, c.getClass)(E, "emojiButton", A ? "Hovered" : "Normal");
-  let U = (t = v, {
+    focusProps: C
+  } = e, [T, v] = i.useState(!1), [I, _] = i.useState(50), y = T || E, A = (0, d.getClass)(p, "emojiButton", y ? "Hovered" : "Normal");
+  let N = (t = I, {
       "--custom-emoji-sprite-size": "".concat(24, "px"),
       "--custom-emoji-sprite-row": Math.floor(t / 20),
       "--custom-emoji-sprite-col": t % 20
     }),
-    m = i.useCallback(() => {
-      if (!A) C(!0), R(Math.floor(77 * Math.random())), s.default.dispatch({
+    x = i.useCallback(() => {
+      if (!y) v(!0), _(Math.floor(77 * Math.random())), u.default.dispatch({
         type: "EMOJI_INTERACTION_INITIATED",
-        interaction: d.EmojiInteractionPoint.EmojiButtonMouseEntered
+        interaction: c.EmojiInteractionPoint.EmojiButtonMouseEntered
       })
-    }, [A, C, R]),
-    P = i.useCallback(() => {
-      C(!1)
-    }, [C]),
-    L = i.useCallback(() => {
-      s.default.dispatch({
+    }, [y, v, _]),
+    O = i.useCallback(() => {
+      v(!1)
+    }, [v]),
+    R = i.useCallback(() => {
+      u.default.dispatch({
         type: "EMOJI_INTERACTION_INITIATED",
-        interaction: d.EmojiInteractionPoint.EmojiButtonFocused
+        interaction: c.EmojiInteractionPoint.EmojiButtonFocused
       })
     }, []);
-  return (0, r.jsx)(u.Button, {
-    look: u.Button.Looks.BLANK,
-    size: u.Button.Sizes.NONE,
+  return (0, l.jsx)(o.Button, {
+    look: o.Button.Looks.BLANK,
+    size: o.Button.Sizes.NONE,
     tabIndex: n,
-    className: l(g, o),
-    onMouseEnter: m,
-    onMouseOver: m,
-    onMouseLeave: P,
-    onFocus: L,
-    onClick: p,
+    className: s(A, a),
+    onMouseEnter: x,
+    onMouseOver: x,
+    onMouseLeave: O,
+    onFocus: R,
+    onClick: g,
     "aria-label": f.default.Messages.SELECT_EMOJI,
     "aria-controls": S,
-    "aria-expanded": T,
+    "aria-expanded": E,
     "aria-haspopup": "dialog",
-    focusProps: N,
-    children: null != I ? I() : (0, r.jsx)(a.Spring, {
-      config: _,
+    focusProps: C,
+    children: null != h ? h() : (0, l.jsx)(r.Spring, {
+      config: m,
       to: {
-        value: A ? 1 : 0
+        value: y ? 1 : 0
       },
       children: e => {
         let {
           value: t
         } = e;
-        return (0, r.jsxs)(a.animated.div, {
-          className: E.spriteContainer,
+        return (0, l.jsxs)(r.animated.div, {
+          className: p.spriteContainer,
           style: {
-            ...U,
+            ...N,
             transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
           },
-          children: [(0, r.jsx)("div", {
-            className: l(E.sprite, E.spriteColored, A ? E.active : E.inactive)
-          }), (0, r.jsx)("div", {
-            className: l(E.sprite, E.spriteGreyscale, A ? E.inactive : E.active)
+          children: [(0, l.jsx)("div", {
+            className: s(p.sprite, p.spriteColored, y ? p.active : p.inactive)
+          }), (0, l.jsx)("div", {
+            className: s(p.sprite, p.spriteGreyscale, y ? p.inactive : p.active)
           })]
         })
       }

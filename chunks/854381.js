@@ -15,18 +15,18 @@ function o(e) {
   let {
     activeSubscription: o,
     skuIDs: u,
-    paymentSourceId: c,
-    isGift: d
+    paymentSourceId: d,
+    isGift: c
   } = e;
   u = u.filter(e => e !== s.PremiumSubscriptionSKUs.NONE);
   let f = (0, i.useStateFromStores)([r.default], () => {
-      let e = r.default.getPlanIdsForSkus(u).filter(e => !d || s.PREMIUM_PLANS.has(e));
+      let e = r.default.getPlanIdsForSkus(u).filter(e => !c || s.PREMIUM_PLANS.has(e));
       return e.length > 0 ? r.default.get(e[0]) : null
     }),
-    E = null == f ? [] : (0, l.getCurrencies)(f.id, c, d),
+    E = null == f ? [] : (0, l.getCurrencies)(f.id, d, c),
     h = null !== (n = null !== (t = E.find(e => e === (null == o ? void 0 : o.currency))) && void 0 !== t ? t : E[0]) && void 0 !== n ? n : a.CurrencyCodes.USD;
   return {
-    ...(0, l.useCurrencyWithPaymentSourceChange)(h, null == f ? void 0 : f.id, c, d, u),
+    ...(0, l.useCurrencyWithPaymentSourceChange)(h, null == f ? void 0 : f.id, d, c, u),
     currencies: E
   }
 }

@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY: function() {
     return i
   },
   RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY: function() {
-    return r
+    return l
   }
 });
 let i = "(max-width: 485px)",
-  r = "(max-height: 450px)"
+  l = "(max-height: 450px)"

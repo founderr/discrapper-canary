@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
 var s = n("579033"),
   a = n("782340");
 
-function r(e) {
+function l(e) {
   switch (e) {
     case s.InternalTemplateCodes.CLASSROOM:
       return {

@@ -18,8 +18,8 @@ var r = n("884691"),
   u = n("872717"),
   o = n("448993"),
   a = n("195358"),
-  s = n("521012"),
-  l = n("719923"),
+  l = n("521012"),
+  s = n("719923"),
   c = n("49111");
 async function d(t) {
   let {
@@ -27,12 +27,12 @@ async function d(t) {
     paymentSourceId: n,
     trialId: r,
     code: i,
-    applyEntitlements: s = !1,
+    applyEntitlements: l = !1,
     currency: d,
     renewal: f,
     metadata: E
   } = t;
-  e = (0, l.coerceExistingItemsToNewItemInterval)(e);
+  e = (0, s.coerceExistingItemsToNewItemInterval)(e);
   let _ = {
     items: e.map(t => {
       let {
@@ -47,7 +47,7 @@ async function d(t) {
     payment_source_id: n,
     trial_id: r,
     code: i,
-    apply_entitlements: s,
+    apply_entitlements: l,
     currency: d,
     renewal: f,
     metadata: E
@@ -69,12 +69,12 @@ async function f(t) {
     items: n,
     paymentSourceId: r,
     renewal: i,
-    currency: s,
+    currency: l,
     applyEntitlements: d = !1,
     analyticsLocations: f,
     analyticsLocation: E
   } = t;
-  null != n && (n = (0, l.coerceExistingItemsToNewItemInterval)(n));
+  null != n && (n = (0, s.coerceExistingItemsToNewItemInterval)(n));
   let _ = {
     items: null == n ? void 0 : n.map(t => {
       let {
@@ -89,7 +89,7 @@ async function f(t) {
     payment_source_id: r,
     renewal: i,
     apply_entitlements: d,
-    currency: s
+    currency: l
   };
   try {
     let t = await u.default.patch({
@@ -122,16 +122,16 @@ async function E(t) {
 function _(t, e) {
   let {
     preventFetch: n = !1
-  } = t, [u, o] = (0, r.useState)(null), [a, l] = (0, r.useState)(null), c = (0, i.useStateFromStores)([s.default], () => s.default.getSubscriptions());
+  } = t, [u, o] = (0, r.useState)(null), [a, s] = (0, r.useState)(null), c = (0, i.useStateFromStores)([l.default], () => l.default.getSubscriptions());
   return (0, r.useEffect)(() => {
     let t = !1;
     async function r() {
       try {
-        l(null), o(null);
+        s(null), o(null);
         let n = await e();
         !t && o(n)
       } catch (e) {
-        !t && l(e)
+        !t && s(e)
       }
     }
     return !n && r(), () => {

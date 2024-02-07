@@ -1,63 +1,63 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return I
+    return g
   }
 });
-var s = n("37983");
-n("884691");
-var i = n("446674"),
-  r = n("77078"),
-  l = n("685665"),
-  o = n("836275"),
-  a = n("379532"),
-  u = n("305961"),
-  c = n("162771"),
-  d = n("118503"),
-  f = n("49111"),
-  h = n("944305"),
-  p = n("782340"),
-  v = n("323723");
+var s = i("37983");
+i("884691");
+var n = i("446674"),
+  l = i("77078"),
+  r = i("685665"),
+  o = i("836275"),
+  a = i("379532"),
+  u = i("305961"),
+  c = i("162771"),
+  d = i("118503"),
+  h = i("49111"),
+  f = i("944305"),
+  p = i("782340"),
+  v = i("323723");
 
-function I(e) {
+function g(e) {
   let {
     analyticsSection: t,
-    analyticsPage: n,
-    isGIF: I,
-    banner: E
-  } = e, C = (0, i.useStateFromStores)([c.default], () => c.default.getGuildId()), _ = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(C)), {
-    analyticsLocations: R
-  } = (0, l.default)();
-  return null == _ || _.hasFeature(f.GuildFeatures.ANIMATED_BANNER) || !I && _.hasFeature(f.GuildFeatures.BANNER) ? null : (0, s.jsxs)("div", {
+    analyticsPage: i,
+    isGIF: g,
+    banner: m
+  } = e, I = (0, n.useStateFromStores)([c.default], () => c.default.getGuildId()), C = (0, n.useStateFromStores)([u.default], () => u.default.getGuild(I)), {
+    analyticsLocations: x
+  } = (0, r.default)();
+  return null == C || C.hasFeature(h.GuildFeatures.ANIMATED_BANNER) || !g && C.hasFeature(h.GuildFeatures.BANNER) ? null : (0, s.jsxs)("div", {
     className: v.container,
     children: [(0, s.jsx)(d.default, {
       className: v.guildBoostingIcon
-    }), (0, s.jsx)(r.Text, {
+    }), (0, s.jsx)(l.Text, {
       color: "header-primary",
       variant: "text-sm/semibold",
       children: p.default.Messages.PREMIUM_GUILD_PREVIEW
-    }), (0, s.jsx)(r.Button, {
-      look: r.Button.Looks.LINK,
-      color: r.Button.Colors.LINK,
+    }), (0, s.jsx)(l.Button, {
+      look: l.Button.Looks.LINK,
+      color: l.Button.Colors.LINK,
       className: v.subscribeButton,
       onClick: () => {
-        if (null == _) return;
+        if (null == C) return;
         let e = {
           section: t,
-          page: n,
-          object: f.AnalyticsObjects.UPSELL_HEADER
+          page: i,
+          object: h.AnalyticsObjects.UPSELL_HEADER
         };
-        null != E ? (0, o.openGuildBannerUpsellModal)({
-          analyticsLocations: R,
+        null != m ? (0, o.openGuildBannerUpsellModal)({
+          analyticsLocations: x,
           analyticsLocation: e,
-          guild: _,
-          isGIF: I,
-          banner: E
+          guild: C,
+          isGIF: g,
+          banner: m
         }) : (0, a.default)({
-          analyticsLocations: R,
+          analyticsLocations: x,
           analyticsSourceLocation: e,
-          guild: _,
-          perks: I ? (0, h.animatedGuildBannerUpsellPerks)() : (0, h.guildBannerUpsellPerks)()
+          guild: C,
+          perks: g ? (0, f.animatedGuildBannerUpsellPerks)() : (0, f.guildBannerUpsellPerks)()
         })
       },
       children: p.default.Messages.PREMIUM_GUILD_BOOST_SERVER

@@ -11,8 +11,8 @@ var r = s("65597"),
   l = s("206230"),
   o = s("782340"),
   n = s("925804"),
-  d = s("845120"),
-  u = s("710978"),
+  u = s("845120"),
+  d = s("710978"),
   c = s("725019"),
   E = s("723956");
 
@@ -56,7 +56,7 @@ var T = function() {
       }), (0, i.jsx)(_, {
         description: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_DESCRIPTION,
         heading: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_HEADING,
-        imgSrc: e ? u : d
+        imgSrc: e ? d : u
       }), (0, i.jsx)(_, {
         description: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_DESCRIPTION,
         heading: o.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_HEADING,

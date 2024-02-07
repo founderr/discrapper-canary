@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumPaymentWhatYouLoseStep: function() {
-    return S
+    return m
   }
 });
 var s = n("37983");
@@ -18,20 +18,20 @@ var a = n("627445"),
   f = n("85336"),
   I = n("176108"),
   E = n("782340"),
-  m = n("943490");
+  S = n("943490");
 
-function S(e) {
+function m(e) {
   let {
     handleStepChange: t,
     handleClose: n
   } = e, a = (0, u.default)(), {
-    activeSubscription: S,
+    activeSubscription: m,
     selectedSkuId: P,
     setSelectedPlanId: p,
     startedPaymentFlowWithPaymentSourcesRef: T
   } = (0, _.usePaymentContext)(), {
     isGift: N
-  } = (0, c.useGiftContext)(), M = null != S ? (0, d.getPremiumPlanItem)(S) : null, C = null != M ? (0, d.getDisplayPremiumType)(M.planId) : null, L = null != M ? (0, d.getPremiumType)(M.planId) : null, R = (0, I.inOneStepSubscriptionCheckout)({
+  } = (0, c.useGiftContext)(), M = null != m ? (0, d.getPremiumPlanItem)(m) : null, C = null != M ? (0, d.getDisplayPremiumType)(M.planId) : null, L = null != M ? (0, d.getPremiumType)(M.planId) : null, R = (0, I.inOneStepSubscriptionCheckout)({
     isTrial: !1,
     isGift: N,
     selectedSkuId: P,
@@ -44,11 +44,11 @@ function S(e) {
       subscriptionName: C
     }),
     footer: (0, s.jsxs)("div", {
-      className: m.whatYouLoseButtonContainer,
+      className: S.whatYouLoseButtonContainer,
       children: [(0, s.jsx)(i.Button, {
         onClick: () => {
           if (R) {
-            let e = (0, I.getDefaultPlanOneStepCheckout)(P, S);
+            let e = (0, I.getDefaultPlanOneStepCheckout)(P, m);
             p(e), t(f.Step.REVIEW)
           } else t(f.Step.PLAN_SELECT)
         },

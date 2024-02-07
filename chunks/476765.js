@@ -4,23 +4,23 @@ n.r(t), n.d(t, {
     return s
   },
   useUID: function() {
-    return l
+    return a
   },
   UID: function() {
-    return a
+    return o
   }
 });
 var i = n("995008"),
   r = n.n(i),
-  o = n("775560");
+  l = n("775560");
 let s = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
     return r(e)
   },
-  l = () => (0, o.useLazyValue)(() => s()),
-  a = e => {
+  a = () => (0, l.useLazyValue)(() => s()),
+  o = e => {
     let {
       children: t
     } = e;
-    return t(l())
+    return t(a())
   }

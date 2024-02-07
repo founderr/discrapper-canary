@@ -15,9 +15,9 @@ var a = t("37983"),
   u = t("446674"),
   h = t("77078"),
   p = t("913144"),
-  f = t("810567"),
-  m = t("756609"),
-  g = t("228220"),
+  m = t("810567"),
+  g = t("756609"),
+  f = t("228220"),
   b = t("664336"),
   y = t("888400"),
   x = t("398570"),
@@ -76,7 +76,7 @@ let E = [{
         children: [(0, a.jsxs)(b.default, {
           className: l(N.headerBar, w.subPanelHeaderBar),
           children: [(0, a.jsx)(b.default.Icon, {
-            icon: m.default,
+            icon: g.default,
             tooltip: r
           }), (0, a.jsx)(b.default.Title, {
             children: r
@@ -137,7 +137,7 @@ let E = [{
   }];
 
 function _() {
-  let [e, r] = n.useState(""), t = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(r => 0 === e.length || s(e, r.experimentId)).sort((e, r) => r.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), m = o.find(e => e.key === c), {
+  let [e, r] = n.useState(""), t = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(r => 0 === e.length || s(e, r.experimentId)).sort((e, r) => r.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), g = o.find(e => e.key === c), {
     TabBar: b,
     renderSelectedTab: y
   } = (0, j.default)({
@@ -168,11 +168,11 @@ function _() {
         onClick: k.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
           title: T.default.Messages.CLEAR,
-          children: (0, a.jsx)(g.default, {
+          children: (0, a.jsx)(f.default, {
             "aria-label": T.default.Messages.CLEAR
           })
         })
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(m.default, {
         className: w.searchBar,
         query: e,
         onChange: r,
@@ -187,12 +187,12 @@ function _() {
         selectedRowKey: c,
         onClickRow: d
       })
-    }), null != m && (0, a.jsxs)(C.default, {
+    }), null != g && (0, a.jsxs)(C.default, {
       className: w.subPanel,
       minHeight: 100,
       initialHeight: null != t.current ? t.current.clientHeight / 2 : 300,
       children: [(0, a.jsx)(b, {}), y({
-        loggedTrigger: m
+        loggedTrigger: g
       })]
     })]
   })

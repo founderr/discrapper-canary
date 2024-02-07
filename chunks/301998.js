@@ -1,35 +1,35 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("77078"),
-  s = l("910330"),
-  i = l("777003"),
-  r = l("782340"),
-  o = l("920244"),
-  u = l("814076");
+var l = n("37983");
+n("884691");
+var i = n("77078"),
+  a = n("910330"),
+  s = n("777003"),
+  r = n("782340"),
+  o = n("920244"),
+  u = n("814076");
 
 function d(e) {
   let {
     user: t,
-    setNote: l,
+    setNote: n,
     autoFocus: d,
     lastSection: c,
     hideNote: f
   } = e;
-  return f ? null : (0, n.jsxs)(i.default, {
+  return f ? null : (0, l.jsxs)(s.default, {
     lastSection: c,
-    children: [(0, n.jsx)(a.Heading, {
+    children: [(0, l.jsx)(i.Heading, {
       variant: "eyebrow",
       className: u.title,
       children: r.default.Messages.NOTE
-    }), (0, n.jsx)(s.default, {
+    }), (0, l.jsx)(a.default, {
       userId: t.id,
-      autoFocus: l || d,
+      autoFocus: n || d,
       className: o.note
     }, "note")]
   })

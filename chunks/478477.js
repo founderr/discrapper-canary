@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return I
   }
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("308472"),
-  a = n("77078"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("308472"),
+  o = n("77078"),
   u = n("917764"),
   d = n("986632"),
   c = n("405607"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("153769"),
   h = n("671434"),
   E = n("389480"),
-  S = n("782340"),
-  g = n("510585");
+  g = n("782340"),
+  S = n("510585");
 let C = [8, 8, 8, 8];
 
 function T(e) {
@@ -27,51 +27,51 @@ function T(e) {
     icon: t,
     isSelected: n,
     onClick: i,
-    ...r
+    ...a
   } = e;
-  return (0, l.jsx)(a.Clickable, {
-    ...r,
+  return (0, l.jsx)(o.Clickable, {
+    ...a,
     onClick: i,
-    className: o(g.categoryIcon, {
-      [g.selected]: n
+    className: s(S.categoryIcon, {
+      [S.selected]: n
     }),
     children: (0, l.jsx)(t, {
-      className: g.categoryIconIcon
+      className: S.categoryIconIcon
     })
   })
 }
 
 function v(e, t, n, i) {
-  return (0, l.jsx)(a.Tooltip, {
+  return (0, l.jsx)(o.Tooltip, {
     text: function(e) {
       switch (e.categoryInfo.type) {
         case E.SoundboardSoundGridSectionType.FAVORITES:
-          return S.default.Messages.FAVORITES;
+          return g.default.Messages.FAVORITES;
         case E.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-          return S.default.Messages.RECENTLY_HEARD;
+          return g.default.Messages.RECENTLY_HEARD;
         case E.SoundboardSoundGridSectionType.FREQUENTLY_USED:
-          return S.default.Messages.FREQUENTLY_USED;
+          return g.default.Messages.FREQUENTLY_USED;
         case E.SoundboardSoundGridSectionType.GUILD:
           return (0, l.jsx)(f.GuildTooltipText, {
             guild: e.categoryInfo.guild,
             includeActivity: !1
           });
         case E.SoundboardSoundGridSectionType.DEFAULTS:
-          return S.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
+          return g.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
       }
     }(e),
     "aria-label": function(e) {
       switch (e.categoryInfo.type) {
         case E.SoundboardSoundGridSectionType.FAVORITES:
-          return S.default.Messages.FAVORITES;
+          return g.default.Messages.FAVORITES;
         case E.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-          return S.default.Messages.RECENTLY_HEARD;
+          return g.default.Messages.RECENTLY_HEARD;
         case E.SoundboardSoundGridSectionType.FREQUENTLY_USED:
-          return S.default.Messages.FREQUENTLY_USED;
+          return g.default.Messages.FREQUENTLY_USED;
         case E.SoundboardSoundGridSectionType.GUILD:
           return e.categoryInfo.guild.name;
         case E.SoundboardSoundGridSectionType.DEFAULTS:
-          return S.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
+          return g.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
       }
     }(e),
     position: "right",
@@ -94,14 +94,14 @@ function v(e, t, n, i) {
         case E.SoundboardSoundGridSectionType.FREQUENTLY_USED:
           return (0, l.jsx)(T, {
             ...i,
-            icon: s.AnalyticsIcon,
+            icon: r.AnalyticsIcon,
             onClick: t,
             isSelected: n
           }, e.key);
         case E.SoundboardSoundGridSectionType.GUILD:
-          return (0, l.jsx)(a.Clickable, {
+          return (0, l.jsx)(o.Clickable, {
             ...i,
-            className: g.category,
+            className: S.category,
             onClick: t,
             children: (0, l.jsx)(u.default, {
               guild: e.categoryInfo.guild,
@@ -122,19 +122,19 @@ function v(e, t, n, i) {
   })
 }
 
-function y(e) {
+function I(e) {
   let {
     soundboardListRef: t,
     categories: n,
-    listPadding: r = C
-  } = e, o = i.useRef(null);
+    listPadding: a = C
+  } = e, s = i.useRef(null);
   return (0, l.jsx)(c.default, {
-    className: g.categoryList,
-    categoryListRef: o,
+    className: S.categoryList,
+    categoryListRef: s,
     expressionsListRef: t,
     store: d.SoundboardPickerStore,
     categories: n,
-    listPadding: r,
+    listPadding: a,
     renderCategoryListItem: v,
     rowCount: n.length,
     categoryHeight: 40

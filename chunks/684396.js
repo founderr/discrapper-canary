@@ -6,30 +6,30 @@ n.r(t), n.d(t, {
 });
 var l = n("957255"),
   i = n("501536"),
-  r = n("25292"),
-  o = n("200294"),
-  s = n("851745"),
-  a = n("406291"),
+  a = n("25292"),
+  s = n("200294"),
+  r = n("851745"),
+  o = n("406291"),
   u = n("49111"),
   d = n("958706"),
   c = n("782340");
 let f = {
-  sentinel: a.REACTION_START_SENTINEL,
-  matches(e, t, n, i, r) {
-    var o, s;
-    return i && null !== (s = null === (o = r.chatInputType.autocomplete) || void 0 === o ? void 0 : o.addReactionShortcut) && void 0 !== s && s && (l.default.can(u.Permissions.ADD_REACTIONS, e) || e.isPrivate())
+  sentinel: o.REACTION_START_SENTINEL,
+  matches(e, t, n, i, a) {
+    var s, r;
+    return i && null !== (r = null === (s = a.chatInputType.autocomplete) || void 0 === s ? void 0 : s.addReactionShortcut) && void 0 !== r && r && (l.default.can(u.Permissions.ADD_REACTIONS, e) || e.isPrivate())
   },
   queryResults(e, t, n, l, i) {
     let {
-      emojis: o
-    } = r.default.queryEmojiResults({
+      emojis: s
+    } = a.default.queryEmojiResults({
       query: n,
       channel: e,
       intention: d.EmojiIntention.REACTION
     });
     return {
       results: {
-        emojis: o.unlocked
+        emojis: s.unlocked
       }
     }
   },
@@ -40,24 +40,24 @@ let f = {
       },
       selectedIndex: n,
       query: l,
-      onHover: r,
-      onClick: s
+      onHover: a,
+      onClick: r
     } = e;
-    return (0, o.renderAutocompleteGroup)({
+    return (0, s.renderAutocompleteGroup)({
       query: l,
       selectedIndex: n,
       autocompletes: t,
-      onHover: r,
-      onClick: s,
+      onHover: a,
+      onClick: r,
       titleWithQuery: c.default.Messages.REACTIONS_MATCHING,
       titleWithoutQuery: c.default.Messages.EMOJI,
       Component: i.default.Emoji,
       getProps: e => ({
         emoji: e,
         key: e.id || e.uniqueName || e.name,
-        sentinel: a.EMOJI_SENTINEL
+        sentinel: o.EMOJI_SENTINEL
       }),
-      getQuery: e => "".concat(a.REACTION_START_SENTINEL).concat(e),
+      getQuery: e => "".concat(o.REACTION_START_SENTINEL).concat(e),
       key: "reactions"
     })
   },
@@ -70,9 +70,9 @@ let f = {
       options: l
     } = e, i = t[n];
     return l.sendMessage(function(e) {
-      return "".concat(a.REACTION_START_SENTINEL).concat(e.name).concat(a.REACTION_END_SENTINEL)
+      return "".concat(o.REACTION_START_SENTINEL).concat(e.name).concat(o.REACTION_END_SENTINEL)
     }(i)), {
-      type: s.AutocompleteSelectionTypes.REACTION
+      type: r.AutocompleteSelectionTypes.REACTION
     }
   }
 };

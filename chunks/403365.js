@@ -18,8 +18,8 @@ var a = n("414456"),
   f = n("642906"),
   I = n("85336"),
   E = n("176108"),
-  m = n("254350"),
-  S = n("646718"),
+  S = n("254350"),
+  m = n("646718"),
   P = n("782340"),
   p = n("600465");
 
@@ -51,8 +51,8 @@ function T(e) {
       s(n);
       let o = I.Step.PLAN_SELECT,
         d = (0, c.getPremiumSkuIdForSubscription)(t);
-      (d === S.PremiumSubscriptionSKUs.TIER_1 || d === S.PremiumSubscriptionSKUs.TIER_2) && n === S.PremiumSubscriptionSKUs.TIER_0 && !r && (o = I.Step.WHAT_YOU_LOSE);
-      let _ = (0, m.isInTrialRedemption)({
+      (d === m.PremiumSubscriptionSKUs.TIER_1 || d === m.PremiumSubscriptionSKUs.TIER_2) && n === m.PremiumSubscriptionSKUs.TIER_0 && !r && (o = I.Step.WHAT_YOU_LOSE);
+      let _ = (0, S.isInTrialRedemption)({
           userTrialOffer: l,
           isGift: r,
           skuId: n

@@ -1,23 +1,23 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return a
+    return i
   }
 }), s("222007");
-var r, l = s("884691");
+var r, n = s("884691");
 
-function n(e, t, s) {
+function l(e, t, s) {
   return Math.min(Math.max(Math.floor(e / t), 1), s)
 }
-var a = (0, s("737960").default)(((r = class extends l.Component {
+var i = (0, s("737960").default)(((r = class extends n.Component {
   static getDerivedStateFromProps(e, t) {
     let {
       width: s,
       desiredItemWidth: r,
-      maxColumns: l
-    } = e, a = n(s, r, l);
-    return a !== t.columns ? {
-      columns: a
+      maxColumns: n
+    } = e, i = l(s, r, n);
+    return i !== t.columns ? {
+      columns: i
     } : null
   }
   render() {
@@ -32,7 +32,7 @@ var a = (0, s("737960").default)(((r = class extends l.Component {
   }
   constructor(...e) {
     super(...e), this.state = {
-      columns: n(this.props.width, this.props.desiredItemWidth, this.props.maxColumns)
+      columns: l(this.props.width, this.props.desiredItemWidth, this.props.maxColumns)
     }
   }
 }).defaultProps = {

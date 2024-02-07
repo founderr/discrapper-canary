@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   LoginSpinner: function() {
-    return W
+    return Y
   },
   default: function() {
     return K
@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983"),
   a = n("884691"),
-  r = n("414456"),
-  l = n.n(r),
+  l = n("414456"),
+  r = n.n(l),
   i = n("730290"),
   o = n("394846"),
   u = n("446674"),
@@ -22,25 +22,25 @@ var s = n("37983"),
   h = n("21572"),
   g = n("791160"),
   m = n("434824"),
-  p = n("24287"),
-  T = n("382236"),
-  A = n("770032"),
-  R = n("724554"),
+  T = n("24287"),
+  p = n("382236"),
+  I = n("770032"),
+  A = n("724554"),
   S = n("878720"),
-  I = n("25033"),
+  R = n("25033"),
   N = n("589252"),
   C = n("970366"),
-  L = n("271938"),
-  O = n("72177"),
+  O = n("271938"),
+  L = n("72177"),
   M = n("476108"),
   v = n("145131"),
   D = n("124969"),
-  x = n("980428"),
-  U = n("599110"),
+  U = n("980428"),
+  x = n("599110"),
   y = n("659500"),
   G = n("773336"),
-  b = n("404432"),
-  P = n("719451"),
+  P = n("404432"),
+  b = n("719451"),
   F = n("331085"),
   B = n("598489"),
   j = n("49111"),
@@ -49,12 +49,12 @@ var s = n("37983"),
   H = n("741532"),
   V = n("926622");
 
-function W() {
+function Y() {
   return (0, s.jsx)(D.default, {
     children: (0, s.jsx)(d.Spinner, {})
   })
 }
-class Y extends a.PureComponent {
+class W extends a.PureComponent {
   static getDerivedStateFromProps(e) {
     let {
       handoffAvailable: t,
@@ -72,7 +72,7 @@ class Y extends a.PureComponent {
       invite: s,
       location: a
     } = this.props;
-    e && !t ? (0, f.handoffBegin)() : t && this.loginOrSSO(t, a, !0), U.default.track(j.AnalyticEvents.LOGIN_VIEWED, {
+    e && !t ? (0, f.handoffBegin)() : t && this.loginOrSSO(t, a, !0), x.default.track(j.AnalyticEvents.LOGIN_VIEWED, {
       location: null != s ? "Invite Login Page" : "Non-Invite Login Page",
       login_source: this.loginSource,
       authenticated: t,
@@ -89,8 +89,8 @@ class Y extends a.PureComponent {
       checkingHandoff: s
     } = this.state;
     if (t && !e.authenticated && !s && this.loginOrSSO(t, n), e.errors !== this.props.errors) {
-      var a, r, l;
-      this.hasError("password") ? null === (a = this.passwordRef) || void 0 === a || a.focus() : this.hasError("email") || this.hasError("login") ? null === (r = this.loginRef) || void 0 === r || r.focus() : this.hasError("code") && (null === (l = this.codeRef) || void 0 === l || l.focus())
+      var a, l, r;
+      this.hasError("password") ? null === (a = this.passwordRef) || void 0 === a || a.focus() : this.hasError("email") || this.hasError("login") ? null === (l = this.loginRef) || void 0 === l || l.focus() : this.hasError("code") && (null === (r = this.codeRef) || void 0 === r || r.focus())
     }
   }
   get loginSource() {
@@ -138,7 +138,7 @@ class Y extends a.PureComponent {
       let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + j.Endpoints.SSO,
         t = {
           ...a,
-          token: L.default.getToken()
+          token: O.default.getToken()
         };
       window.location = "".concat(e, "?").concat((0, i.stringify)(t))
     }
@@ -218,7 +218,7 @@ class Y extends a.PureComponent {
             type: "submit",
             children: w.default.Messages._RETURN_TO_LOGIN
           }), (0, s.jsx)("div", {
-            className: l(V.marginTop8, H.needAccount),
+            className: r(V.marginTop8, H.needAccount),
             children: w.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({
               onClick: this.handleCancelAccountDeletion
             })
@@ -234,7 +234,7 @@ class Y extends a.PureComponent {
     } = this.props;
     return (0, s.jsxs)(D.default, {
       className: e,
-      children: [(0, s.jsx)(P.InviteResolvingHeader, {}), (0, s.jsxs)(D.Block, {
+      children: [(0, s.jsx)(b.InviteResolvingHeader, {}), (0, s.jsxs)(D.Block, {
         className: V.marginTop20,
         children: [(0, s.jsx)(N.default, {
           className: V.marginBottom20,
@@ -290,14 +290,14 @@ class Y extends a.PureComponent {
     let n;
     let {
       invite: a,
-      giftCode: r,
+      giftCode: l,
       loginStatus: i,
       country: o,
       showMobileWebHandoff: u,
       disableAutofocusOnDefaultForm: c
     } = this.props, E = !this.hasError("email") && this.hasError("password"), f = (null == a ? void 0 : a.stage_instance) != null;
-    return n = null == a || f ? null != r ? (0, s.jsx)(b.default, {
-      giftCode: r
+    return n = null == a || f ? null != l ? (0, s.jsx)(P.default, {
+      giftCode: l
     }) : (0, s.jsxs)("div", {
       className: H.header,
       children: [(0, s.jsx)(D.Title, {
@@ -306,7 +306,7 @@ class Y extends a.PureComponent {
       }, "title"), !1 === (0, G.isAndroidWeb)() ? (0, s.jsx)(D.SubTitle, {
         children: w.default.Messages.AUTH_LOGIN_BODY
       }, "subtitle") : null]
-    }) : (0, s.jsx)(P.default, {
+    }) : (0, s.jsx)(b.default, {
       invite: a
     }), (0, s.jsxs)(v.default, {
       direction: v.default.Direction.HORIZONTAL,
@@ -325,7 +325,7 @@ class Y extends a.PureComponent {
           className: H.goBackButton,
           children: (0, s.jsxs)("div", {
             className: H.content,
-            children: [(0, s.jsx)(x.default, {
+            children: [(0, s.jsx)(U.default, {
               width: 16,
               height: 16,
               className: H.caret
@@ -373,7 +373,7 @@ class Y extends a.PureComponent {
               onClick: this.handleForgotPassword,
               look: D.Button.Looks.LINK,
               color: D.Button.Colors.LINK,
-              className: l(V.marginBottom20, V.marginTop4),
+              className: r(V.marginBottom20, V.marginTop4),
               children: w.default.Messages.FORGOT_PASSWORD
             }), (0, s.jsx)(D.Button, {
               type: "submit",
@@ -416,14 +416,14 @@ class Y extends a.PureComponent {
         className: e,
         expanded: !0,
         children: this.renderDefaultForm(!0)
-      }), t && (0, s.jsx)(T.default, {})]
+      }), t && (0, s.jsx)(p.default, {})]
     })
   }
   renderGuildTemplate(e) {
     return (0, s.jsx)(B.default, {
       onSubmit: this.handleLogin,
       tag: "form",
-      className: l(this.props.authBoxClassName, H.horizontalAuthBox),
+      className: r(this.props.authBoxClassName, H.horizontalAuthBox),
       children: () => [(0, s.jsx)(m.default, {
         guildTemplate: e
       }, "template"), this.renderDefaultForm(!1)]
@@ -438,7 +438,7 @@ class Y extends a.PureComponent {
       style: {
         padding: 0
       },
-      children: (0, s.jsx)(p.MFASlides, {
+      children: (0, s.jsx)(T.MFASlides, {
         mfaFinish: this.handleTokenSubmitMFA,
         request: e,
         onEarlyClose: () => {
@@ -491,7 +491,7 @@ class Y extends a.PureComponent {
     })
   }
   renderChooseAccount() {
-    return (0, s.jsx)(R.default, {
+    return (0, s.jsx)(A.default, {
       onDismiss: () => {
         this.setState(e => ({
           ...e,
@@ -506,14 +506,14 @@ class Y extends a.PureComponent {
       invite: t,
       guildTemplate: n,
       loginStatus: a,
-      handoffAvailable: r
+      handoffAvailable: l
     } = this.props, {
-      checkingHandoff: l,
+      checkingHandoff: r,
       redirecting: i
     } = this.state;
-    if (i || l) return (0, s.jsx)(W, {});
-    if (r) return this.renderHandOffAvailable();
-    if (e && l) return this.renderHandOffContinue();
+    if (i || r) return (0, s.jsx)(Y, {});
+    if (l) return this.renderHandOffAvailable();
+    if (e && r) return this.renderHandOffContinue();
     switch (a) {
       case j.LoginStates.LOGGING_IN_MFA_SMS:
       case j.LoginStates.MFA_SMS_STEP:
@@ -542,7 +542,7 @@ class Y extends a.PureComponent {
   constructor(e) {
     var t, n;
     super(e), this.handleAuthToken = async e => {
-      await E.default.loginToken(e, !1), U.default.track(j.AnalyticEvents.LOGIN_SUCCESSFUL, {
+      await E.default.loginToken(e, !1), x.default.track(j.AnalyticEvents.LOGIN_SUCCESSFUL, {
         source: j.LoginSuccessfulSources.QR_CODE,
         login_source: this.loginSource,
         gift_code_sku_id: this.giftCodeSKUId,
@@ -681,11 +681,11 @@ class Y extends a.PureComponent {
         invite: n,
         giftCode: s,
         guildTemplate: a,
-        location: r,
-        transitionTo: l,
+        location: l,
+        transitionTo: r,
         redirectTo: o
-      } = this.props, u = null != r ? (0, i.parse)(r.search) : {};
-      "" !== t && (u.email = t), null != n ? (u.mode = "register", e = j.Routes.INVITE(n.code)) : null != s ? (u.mode = "register", e = j.Routes.GIFT_CODE(s.code)) : null != a ? e = j.Routes.GUILD_TEMPLATE(a.code) : null != o ? (e = j.Routes.REGISTER, u.redirect_to = o) : e = j.Routes.REGISTER, E.default.loginReset(), l(e, {
+      } = this.props, u = null != l ? (0, i.parse)(l.search) : {};
+      "" !== t && (u.email = t), null != n ? (u.mode = "register", e = j.Routes.INVITE(n.code)) : null != s ? (u.mode = "register", e = j.Routes.GIFT_CODE(s.code)) : null != a ? e = j.Routes.GUILD_TEMPLATE(a.code) : null != o ? (e = j.Routes.REGISTER, u.redirect_to = o) : e = j.Routes.REGISTER, E.default.loginReset(), r(e, {
         search: (0, i.stringify)(u)
       }), y.ComponentDispatch.dispatch(j.ComponentActions.WAVE_EMPHASIZE)
     };
@@ -704,25 +704,25 @@ class Y extends a.PureComponent {
     }
   }
 }
-Y.defaultProps = {
+W.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
 var K = function(e) {
-  let t = (0, u.useStateFromStoresObject)([O.default, M.default, L.default, A.default, I.default], () => ({
-    authenticated: L.default.isAuthenticated(),
-    handoffAvailable: O.default.isHandoffAvailable(),
-    user: O.default.user,
-    loginStatus: L.default.getLoginStatus(),
-    mfaTicket: L.default.getMFATicket(),
-    mfaSMS: L.default.getMFASMS(),
-    mfaMethods: L.default.getMFAMethods(),
-    maskedPhone: L.default.getMaskedPhone(),
-    errors: L.default.getErrors(),
+  let t = (0, u.useStateFromStoresObject)([L.default, M.default, O.default, I.default, R.default], () => ({
+    authenticated: O.default.isAuthenticated(),
+    handoffAvailable: L.default.isHandoffAvailable(),
+    user: L.default.user,
+    loginStatus: O.default.getLoginStatus(),
+    mfaTicket: O.default.getMFATicket(),
+    mfaSMS: O.default.getMFASMS(),
+    mfaMethods: O.default.getMFAMethods(),
+    maskedPhone: O.default.getMaskedPhone(),
+    errors: O.default.getErrors(),
     defaultRoute: M.default.defaultRoute,
-    country: I.default.getCountryCode(),
-    hasLoggedInAccounts: A.default.getHasLoggedInAccounts()
+    country: R.default.getCountryCode(),
+    hasLoggedInAccounts: I.default.getHasLoggedInAccounts()
   }));
-  return (0, s.jsx)(Y, {
+  return (0, s.jsx)(W, {
     ...e,
     ...t
   })

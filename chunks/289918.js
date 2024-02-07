@@ -1,53 +1,53 @@
 "use strict";
-t.r(r), t.d(r, {
+l.r(r), l.d(r, {
   default: function() {
-    return K
+    return J
   }
-}), t("222007");
-var l, n, i = t("37983"),
-  o = t("884691"),
-  a = t("414456"),
-  s = t.n(a),
-  u = t("509043"),
-  f = t("446674"),
-  d = t("669491"),
-  c = t("77078"),
-  P = t("79112"),
-  E = t("812204"),
-  p = t("685665"),
-  T = t("462274"),
-  _ = t("618017"),
-  O = t("190045"),
-  U = t("335031"),
-  I = t("252063"),
-  h = t("38766"),
-  m = t("845579"),
-  y = t("271938"),
-  S = t("42203"),
-  v = t("305961"),
-  N = t("18494"),
-  A = t("697218"),
-  L = t("471671"),
-  g = t("275623"),
-  R = t("945330"),
-  C = t("474571"),
-  M = t("216422"),
-  B = t("987772"),
-  b = t("956089"),
-  D = t("599110"),
-  w = t("315102"),
-  x = t("719923"),
-  H = t("713135"),
-  k = t("581295"),
-  F = t("878569"),
-  G = t("236100"),
-  j = t("590456"),
-  W = t("49111"),
-  z = t("646718"),
-  Y = t("782340"),
-  V = t("220817");
-(n = l || (l = {}))[n.SHOULD_LOAD = 0] = "SHOULD_LOAD", n[n.LOADING = 1] = "LOADING", n[n.COMPLETE = 2] = "COMPLETE";
-let X = {
+}), l("222007");
+var t, o, i = l("37983"),
+  n = l("884691"),
+  a = l("414456"),
+  s = l.n(a),
+  u = l("509043"),
+  f = l("446674"),
+  d = l("669491"),
+  c = l("77078"),
+  P = l("79112"),
+  E = l("812204"),
+  T = l("685665"),
+  p = l("462274"),
+  O = l("618017"),
+  U = l("190045"),
+  _ = l("335031"),
+  h = l("252063"),
+  y = l("38766"),
+  m = l("845579"),
+  v = l("271938"),
+  S = l("42203"),
+  I = l("305961"),
+  N = l("18494"),
+  A = l("697218"),
+  L = l("471671"),
+  g = l("275623"),
+  R = l("945330"),
+  C = l("474571"),
+  M = l("216422"),
+  B = l("987772"),
+  b = l("956089"),
+  D = l("599110"),
+  x = l("315102"),
+  H = l("719923"),
+  w = l("713135"),
+  k = l("581295"),
+  F = l("878569"),
+  G = l("236100"),
+  j = l("590456"),
+  W = l("49111"),
+  z = l("646718"),
+  Y = l("782340"),
+  X = l("220817");
+(o = t || (t = {}))[o.SHOULD_LOAD = 0] = "SHOULD_LOAD", o[o.LOADING = 1] = "LOADING", o[o.COMPLETE = 2] = "COMPLETE";
+let V = {
     [j.UserProfileTypes.POPOUT]: 18,
     [j.UserProfileTypes.MODAL]: 24,
     [j.UserProfileTypes.SETTINGS]: 0,
@@ -64,19 +64,19 @@ let X = {
     [j.UserProfileTypes.CANCEL_MODAL]: W.AnalyticsPages.USER_POPOUT
   };
 
-function q(e) {
+function K(e) {
   let {
     type: r,
-    shown: l,
-    onClick: n
+    shown: t,
+    onClick: o
   } = e, a = (0, f.useStateFromStores)([A.default], () => {
     let e = A.default.getCurrentUser();
-    return x.default.canUsePremiumProfileCustomization(e)
-  }), u = o.useRef(!1), {
+    return H.default.canUsePremiumProfileCustomization(e)
+  }), u = n.useRef(!1), {
     analyticsLocations: d
-  } = (0, p.default)(E.default.BADGE);
-  return o.useEffect(() => {
-    l && !u.current && (u.current = !0, D.default.track(W.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+  } = (0, T.default)(E.default.BADGE);
+  return n.useEffect(() => {
+    t && !u.current && (u.current = !0, D.default.track(W.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: z.PremiumUpsellTypes.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
       location: {
         page: Z[r],
@@ -85,8 +85,8 @@ function q(e) {
       },
       location_stack: d
     }))
-  }, [d, l, r]), (0, i.jsx)(c.Tooltip, {
-    tooltipContentClassName: V.premiumIconTooltipContent,
+  }, [d, t, r]), (0, i.jsx)(c.Tooltip, {
+    tooltipContentClassName: X.premiumIconTooltipContent,
     text: a ? Y.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
     children: e => (0, i.jsx)(c.Clickable, {
       ...e,
@@ -95,99 +95,99 @@ function q(e) {
         e = d, (0, c.openModalLazy)(async () => {
           let {
             default: r
-          } = await t.el("292890").then(t.bind(t, "292890"));
-          return t => {
+          } = await l.el("292890").then(l.bind(l, "292890"));
+          return l => {
             let {
-              onClose: l,
-              ...n
-            } = t;
+              onClose: t,
+              ...o
+            } = l;
             return (0, i.jsx)(r, {
               analyticsLocations: e,
               title: Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
               description: Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
                 onAndMoreWithPremiumClick: () => {
-                  l(), P.default.open(W.UserSettingsSections.PREMIUM, null, {
+                  t(), P.default.open(W.UserSettingsSections.PREMIUM, null, {
                     analyticsLocations: e
                   })
                 }
               }),
-              onClose: l,
-              ...n
+              onClose: t,
+              ...o
             })
           }
-        }), null == n || n()
+        }), null == o || o()
       },
-      className: s(V.premiumIconWrapper, {
-        [V.visible]: l,
-        [V.clickable]: !a
+      className: s(X.premiumIconWrapper, {
+        [X.visible]: t,
+        [X.clickable]: !a
       }),
       children: (0, i.jsx)(b.TextBadge, {
         color: "rgba(32, 34, 37, 0.8)",
         text: (0, i.jsx)(M.default, {
           width: 16,
           height: 16,
-          className: V.premiumIcon
+          className: X.premiumIcon
         })
       })
     })
   })
 }
 
-function J(e) {
+function q(e) {
   let {
     darkenOnHover: r,
-    profileType: t,
-    profileLabel: l,
-    icon: n,
-    ...o
-  } = e, a = X[t], s = "pencil" === n ? B.default : C.default;
+    profileType: l,
+    profileLabel: t,
+    icon: o,
+    ...n
+  } = e, a = V[l], s = "pencil" === o ? B.default : C.default;
   return (0, i.jsx)(c.Clickable, {
-    ...o,
-    "aria-label": l,
-    className: r ? V.pencilContainerDark : V.pencilContainer,
+    ...n,
+    "aria-label": t,
+    className: r ? X.pencilContainerDark : X.pencilContainer,
     children: (0, i.jsx)(c.Tooltip, {
-      text: l,
+      text: t,
       children: e => (0, i.jsx)(s, {
         ...e,
         width: a,
         height: a,
-        className: V.editIcon
+        className: X.editIcon
       })
     })
   })
 }
 
-function K(e) {
-  var r, t, l;
+function J(e) {
+  var r, l, t;
   let {
-    user: n,
+    user: o,
     displayProfile: a,
     bannerSrc: P,
     onClose: E,
-    guildId: p,
+    guildId: T,
     profileType: A = j.UserProfileTypes.POPOUT,
     isHovering: C,
     animateOnHover: M,
     allowEdit: B = !0,
     showPremiumBadgeUpsell: b = !0,
     hasProfileEffect: D = !1
-  } = e, [X, Z] = o.useState((null == a ? void 0 : a.banner) == null ? 2 : 0), K = (0, f.useStateFromStores)([v.default], () => v.default.getGuild(p)), Q = (0, f.useStateFromStores)([y.default], () => y.default.getId()), $ = Q === n.id && B || n.isClyde() && null != K && (0, _.canEditClydeAIProfile)(K), ee = x.default.isPremiumAtLeast(null == a ? void 0 : a.premiumType, z.PremiumTypes.TIER_2), [er, et] = o.useState(!1), el = (0, f.useStateFromStores)([L.default], () => L.default.isFocused()), en = m.GifAutoPlay.getSetting(), ei = (0, c.useToken)(d.default.unsafe_rawColors.PRIMARY_800).hex(), eo = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ea = (0, u.hex2int)((0, T.default)(n.getAvatarURL(p, eo), ei, !1)), es = (0, U.default)(null !== (r = null == a ? void 0 : a.primaryColor) && void 0 !== r ? r : ea).hsl, eu = (0, F.getUserBannerSize)(A), ef = null != P ? P : null == a ? void 0 : a.getBannerURL({
+  } = e, [V, Z] = n.useState((null == a ? void 0 : a.banner) == null ? 2 : 0), J = (0, f.useStateFromStores)([I.default], () => I.default.getGuild(T)), Q = (0, f.useStateFromStores)([v.default], () => v.default.getId()), $ = Q === o.id && B || o.isClyde() && null != J && (0, O.canEditClydeAIProfile)(J), ee = H.default.isPremiumAtLeast(null == a ? void 0 : a.premiumType, z.PremiumTypes.TIER_2), [er, el] = n.useState(!1), et = (0, f.useStateFromStores)([L.default], () => L.default.isFocused()), eo = m.GifAutoPlay.getSetting(), ei = (0, c.useToken)(d.default.unsafe_rawColors.PRIMARY_800).hex(), en = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ea = (0, u.hex2int)((0, p.default)(o.getAvatarURL(T, en), ei, !1)), es = (0, _.default)(null !== (r = null == a ? void 0 : a.primaryColor) && void 0 !== r ? r : ea).hsl, eu = (0, F.getUserBannerSize)(A), ef = null != P ? P : null == a ? void 0 : a.getBannerURL({
     size: eu,
-    canAnimate: M || !en ? er : el
-  }), ed = null != ef, ec = (0, f.useStateFromStores)([H.default], () => H.default.getUserProfile(n.id)), eP = S.default.getChannel(N.default.getChannelId()), {
+    canAnimate: M || !eo ? er : et
+  }), ed = null != ef, ec = (0, f.useStateFromStores)([w.default], () => w.default.getUserProfile(o.id)), eP = S.default.getChannel(N.default.getChannelId()), {
     appsInGDMEnabled: eE,
-    availableApplications: ep
-  } = (0, I.usePrivateChannelIntegrationState)({
-    channelId: null !== (t = null == eP ? void 0 : eP.id) && void 0 !== t ? t : ""
-  }), eT = null == ec ? void 0 : ec.application, e_ = eE && null != ep.find(e => e.id === (null == eT ? void 0 : eT.id));
-  (0, o.useEffect)(() => {
-    if (ed && (ee || n.isClyde()) && 0 === X) {
+    availableApplications: eT
+  } = (0, h.usePrivateChannelIntegrationState)({
+    channelId: null !== (l = null == eP ? void 0 : eP.id) && void 0 !== l ? l : ""
+  }), ep = null == ec ? void 0 : ec.application, eO = eE && null != eT.find(e => e.id === (null == ep ? void 0 : ep.id));
+  (0, n.useEffect)(() => {
+    if (ed && (ee || o.isClyde()) && 0 === V) {
       Z(1);
       let e = new Image;
       e.src = ef, e.onload = () => Z(2)
     }
-  }, [n, ed, ee, ef, X]), o.useEffect(() => {
-    if (en || !ee) return;
+  }, [o, ed, ee, ef, V]), n.useEffect(() => {
+    if (eo || !ee) return;
     let e = null != P ? P : null == a ? void 0 : a.getBannerURL({
       size: eu,
       canAnimate: !0
@@ -195,8 +195,8 @@ function K(e) {
     if (null == e) return;
     let r = new Image;
     r.src = e
-  }, [en, ee, P, a, eu]);
-  let eO = (0, h.default)({
+  }, [eo, ee, P, a, eu]);
+  let eU = (0, y.default)({
     analyticsLocation: {
       page: W.AnalyticsPages.USER_POPOUT,
       section: W.AnalyticsSections.PROFILE_POPOUT
@@ -204,12 +204,12 @@ function K(e) {
   });
   return (0, i.jsx)(k.default, {
     isPremium: ee,
-    hasThemeColors: null !== (l = null == a ? void 0 : a.canEditThemes) && void 0 !== l && l,
+    hasThemeColors: null !== (t = null == a ? void 0 : a.canEditThemes) && void 0 !== t && t,
     profileType: A,
     hasBanner: ed,
     hasProfileEffect: D,
     children: (0, i.jsxs)("div", {
-      className: s(V.banner, (0, F.getUserBannerStyles)({
+      className: s(X.banner, (0, F.getUserBannerStyles)({
         profileType: A,
         user: {
           hasBanner: ed,
@@ -217,22 +217,22 @@ function K(e) {
           hasProfileEffect: D
         }
       }), {
-        [V.reducedMotion]: !en
+        [X.reducedMotion]: !eo
       }),
-      onMouseMove: () => et(!0),
-      onMouseLeave: () => et(!1),
+      onMouseMove: () => el(!0),
+      onMouseLeave: () => el(!1),
       style: {
         backgroundImage: ed && ee ? "url(".concat(ef, ")") : void 0,
-        backgroundColor: 2 !== X ? d.default.unsafe_rawColors.PRIMARY_800.css : es
+        backgroundColor: 2 !== V ? d.default.unsafe_rawColors.PRIMARY_800.css : es
       },
-      children: [$ ? null != K || n.isClyde() ? null != K && n.isClyde() && (0, _.canEditClydeAIProfile)(K) ? (0, i.jsx)(J, {
+      children: [$ ? null != J || o.isClyde() ? null != J && o.isClyde() && (0, O.canEditClydeAIProfile)(J) ? (0, i.jsx)(q, {
         profileType: A,
         profileLabel: Y.default.Messages.CLYDE_SETTINGS,
         icon: "gear",
         onClick: () => {
-          null == E || E(), (0, O.default)(K.id)
+          null == E || E(), (0, U.default)(J.id)
         }
-      }) : null == K ? null : (0, i.jsx)(c.Popout, {
+      }) : null == J ? null : (0, i.jsx)(c.Popout, {
         spacing: 6,
         position: "bottom",
         renderPopout: e => {
@@ -242,45 +242,45 @@ function K(e) {
           return (0, i.jsx)(G.default, {
             onClose: r,
             onSelect: E,
-            guild: K
+            guild: J
           })
         },
-        children: e => (0, i.jsx)(J, {
+        children: e => (0, i.jsx)(q, {
           darkenOnHover: D && C,
           profileLabel: Y.default.Messages.EDIT_PROFILE,
           icon: "pencil",
           ...e,
           profileType: A
         })
-      }) : (0, i.jsx)(J, {
+      }) : (0, i.jsx)(q, {
         darkenOnHover: D && C,
         profileType: A,
         profileLabel: Y.default.Messages.EDIT_PROFILE,
         icon: "pencil",
         onClick: () => {
-          null == E || E(), eO()
+          null == E || E(), eU()
         }
       }) : (() => {
         let e = b && ed && A !== j.UserProfileTypes.SETTINGS;
-        return e ? (0, i.jsx)(q, {
+        return e ? (0, i.jsx)(K, {
           type: A,
           shown: void 0 === C ? er : C,
           onClick: E
         }) : null
-      })(), e_ ? A !== j.UserProfileTypes.MODAL ? null : (0, i.jsx)(c.Clickable, {
+      })(), eO ? A !== j.UserProfileTypes.MODAL ? null : (0, i.jsx)(c.Clickable, {
         onClick: E,
         "aria-label": Y.default.Messages.BACK,
-        className: V.pencilContainer,
+        className: X.pencilContainer,
         children: (0, i.jsx)(c.Tooltip, {
           text: Y.default.Messages.BACK,
           children: e => (0, i.jsx)(R.default, {
             ...e,
-            className: V.closeIcon,
+            className: X.closeIcon,
             color: "white"
           })
         })
-      }) : null, !en && (0, w.isAnimatedImageURL)(ef) && (0, i.jsx)(g.default, {
-        className: V.gifTag
+      }) : null, !eo && (0, x.isAnimatedImageURL)(ef) && (0, i.jsx)(g.default, {
+        className: X.gifTag
       })]
     })
   })

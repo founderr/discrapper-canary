@@ -1,59 +1,59 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return T
+    return E
   }
 });
-var n = l("37983"),
-  a = l("884691"),
-  s = l("77078"),
-  i = l("716241"),
-  r = l("240249"),
-  o = l("781423"),
-  u = l("252063"),
-  d = l("599110"),
-  c = l("777003"),
-  f = l("49111"),
-  m = l("782340"),
-  p = l("640329"),
-  h = l("814076");
+var l = n("37983"),
+  i = n("884691"),
+  a = n("77078"),
+  s = n("716241"),
+  r = n("240249"),
+  o = n("781423"),
+  u = n("252063"),
+  d = n("599110"),
+  c = n("777003"),
+  f = n("49111"),
+  p = n("782340"),
+  m = n("640329"),
+  h = n("814076");
 
-function T(e) {
+function E(e) {
   let {
     applicationId: t,
-    commandIds: l,
-    channel: T,
-    guildId: E,
+    commandIds: n,
+    channel: E,
+    guildId: g,
     onClick: S
   } = e;
   (0, u.usePrivateChannelIntegrationState)({
-    channelId: T.id
+    channelId: E.id
   });
   let {
-    commands: _
-  } = r.useCommandsForApplication(T, t, l), g = a.useMemo(() => null == _ ? void 0 : _.filter(e => !0 !== e.nsfw), [_]), A = a.useCallback(e => {
+    commands: C
+  } = r.useCommandsForApplication(E, t, n), T = i.useMemo(() => null == C ? void 0 : C.filter(e => !0 !== e.nsfw), [C]), v = i.useCallback(e => {
     null == S || S(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
       application_id: t,
       command_id: e,
-      guild_id: E,
-      ...(0, i.collectChannelAnalyticsMetadataFromId)(T.id)
+      guild_id: g,
+      ...(0, s.collectChannelAnalyticsMetadataFromId)(E.id)
     })
-  }, [t, T.id, E, S]);
-  return null == g || 0 === g.length ? null : (0, n.jsxs)(c.default, {
-    children: [(0, n.jsx)(s.Heading, {
+  }, [t, E.id, g, S]);
+  return null == T || 0 === T.length ? null : (0, l.jsxs)(c.default, {
+    children: [(0, l.jsx)(a.Heading, {
       variant: "eyebrow",
       className: h.title,
-      children: m.default.Messages.BOT_PROFILE_SLASH_COMMANDS
-    }), (0, n.jsx)("ul", {
-      className: p.popularApplicationCommandsList,
-      children: g.map(e => (0, n.jsx)("li", {
-        children: (0, n.jsx)(o.CommandClickable, {
+      children: p.default.Messages.BOT_PROFILE_SLASH_COMMANDS
+    }), (0, l.jsx)("ul", {
+      className: m.popularApplicationCommandsList,
+      children: T.map(e => (0, l.jsx)("li", {
+        children: (0, l.jsx)(o.CommandClickable, {
           commandId: e.id,
           commandName: e.displayName,
           commandDescription: e.displayDescription,
-          onClick: A,
-          guildId: E,
-          channelId: T.id
+          onClick: v,
+          guildId: g,
+          channelId: E.id
         })
       }, e.id))
     })]

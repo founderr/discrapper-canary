@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("798609"),
-  o = n("200294"),
-  s = n("851745"),
-  a = n("501536"),
+  a = n("798609"),
+  s = n("200294"),
+  r = n("851745"),
+  o = n("501536"),
   u = n("124299"),
   d = n("240249"),
   c = n("972620"),
@@ -18,47 +18,47 @@ var l = n("37983"),
   m = n("41884"),
   h = n("406291"),
   E = n("782340"),
-  S = n("253184");
+  g = n("253184");
 
-function g(e) {
+function S(e) {
   let {
     query: t,
     onHover: n,
-    onClick: g,
+    onClick: S,
     channel: C,
     selectedIndex: T
   } = e, v = i.useRef(null), {
-    commands: y,
-    sections: x,
-    scrollDown: I
+    commands: I,
+    sections: _,
+    scrollDown: y
   } = d.useQuery(C, {
-    commandType: r.ApplicationCommandType.CHAT,
+    commandType: a.ApplicationCommandType.CHAT,
     text: t
   }, {
-    limit: s.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY,
-    placeholderCount: s.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
+    limit: r.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY,
+    placeholderCount: r.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
     scoreMethod: c.ScoreMethod.COMMAND_OR_APPLICATION
-  }), N = i.useCallback(e => {
+  }), A = i.useCallback(e => {
     var t;
-    if (null == y) return null;
-    let i = y[e],
-      r = null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : e;
-    if (null == i || i.inputType === f.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(m.default, {}, r);
-    let o = x.find(e => e.id === i.applicationId);
-    return (0, l.jsx)(a.default.NewCommand, {
+    if (null == I) return null;
+    let i = I[e],
+      a = null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : e;
+    if (null == i || i.inputType === f.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(m.default, {}, a);
+    let s = _.find(e => e.id === i.applicationId);
+    return (0, l.jsx)(o.default.NewCommand, {
       index: e,
       command: i,
       channel: C,
-      className: S.itemWrapper,
+      className: g.itemWrapper,
       selected: T === e,
       showImage: !0,
-      section: o,
-      onClick: g,
+      section: s,
+      onClick: S,
       onHover: n
-    }, r)
-  }, [C, y, x, g, n, T]);
-  return null == y || 0 === y.length ? null : (0, l.jsxs)(l.Fragment, {
-    children: [(0, o.renderHeader)({
+    }, a)
+  }, [C, I, _, S, n, T]);
+  return null == I || 0 === I.length ? null : (0, l.jsxs)(l.Fragment, {
+    children: [(0, s.renderHeader)({
       titleWithQuery: E.default.Messages.COMMANDS_MATCHING,
       titleWithoutQuery: E.default.Messages.COMMANDS,
       query: t,
@@ -66,16 +66,16 @@ function g(e) {
     }), (0, l.jsx)(u.default, {
       ref: v,
       role: "listbox",
-      className: S.list,
+      className: g.list,
       listPadding: [0, 8, 0, 8],
       onScroll: e => {
-        if (null == y) return;
-        let t = y.length * p.ITEM_HEIGHT,
+        if (null == I) return;
+        let t = I.length * p.ITEM_HEIGHT,
           n = v.current.getListDimensions().height;
-        t - e - n < 9 * p.ITEM_HEIGHT && I()
+        t - e - n < 9 * p.ITEM_HEIGHT && y()
       },
-      renderRow: N,
-      rowCount: y.length,
+      renderRow: A,
+      rowCount: I.length,
       rowHeight: p.ITEM_HEIGHT
     })]
   })

@@ -4,30 +4,30 @@ n.r(t), n.d(t, {
     return a
   },
   updateStageInstance: function() {
-    return i
+    return l
   },
   endStageInstance: function() {
-    return d
+    return r
   }
 });
-var l = n("872717"),
-  u = n("49111");
-async function a(e, t, n, a, i) {
-  let d = await l.default.post({
-    url: u.Endpoints.STAGE_INSTANCES,
+var u = n("872717"),
+  i = n("49111");
+async function a(e, t, n, a, l) {
+  let r = await u.default.post({
+    url: i.Endpoints.STAGE_INSTANCES,
     body: {
       channel_id: e,
       topic: t,
       privacy_level: n,
-      guild_scheduled_event_id: i,
+      guild_scheduled_event_id: l,
       send_start_notification: a
     }
   });
-  return d.body
+  return r.body
 }
-async function i(e, t, n) {
-  let a = await l.default.patch({
-    url: u.Endpoints.STAGE_INSTANCE(e),
+async function l(e, t, n) {
+  let a = await u.default.patch({
+    url: i.Endpoints.STAGE_INSTANCE(e),
     body: {
       topic: t,
       privacy_level: n
@@ -36,6 +36,6 @@ async function i(e, t, n) {
   return a.body
 }
 
-function d(e) {
-  return l.default.delete(u.Endpoints.STAGE_INSTANCE(e))
+function r(e) {
+  return u.default.delete(i.Endpoints.STAGE_INSTANCE(e))
 }

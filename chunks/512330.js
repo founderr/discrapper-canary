@@ -1,22 +1,22 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   TimeUnits: function() {
-    return a
+    return i
   },
   getTimeAndUnit: function() {
-    return g
+    return T
   },
   default: function() {
-    return A
+    return v
   }
-}), l("70102"), l("700225"), l("222007");
-var n, a, s, i, r, o, u = l("37983"),
-  d = l("884691"),
-  c = l("917351"),
-  f = l.n(c),
-  m = l("862337"),
-  p = l("782340");
-(i = n || (n = {})).ACTIVITY_FEED = "ACTIVITY_FEED", i.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW", i.USER_ACTIVITY = "USER_ACTIVITY", i.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED", i.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED", (r = a || (a = {})).NONE = "NONE", r.SECONDS = "SECONDS", r.MINUTES = "MINUTES", r.HOURS = "HOURS", r.DAYS = "DAYS", r.WEEKS = "WEEKS", r.MONTHS = "MONTHS", r.YEARS = "YEARS", (o = s || (s = {})).START = "START", o.END = "END", o.TIME = "TIME";
+}), n("70102"), n("700225"), n("222007");
+var l, i, a, s, r, o, u = n("37983"),
+  d = n("884691"),
+  c = n("917351"),
+  f = n.n(c),
+  p = n("862337"),
+  m = n("782340");
+(s = l || (l = {})).ACTIVITY_FEED = "ACTIVITY_FEED", s.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW", s.USER_ACTIVITY = "USER_ACTIVITY", s.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED", s.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED", (r = i || (i = {})).NONE = "NONE", r.SECONDS = "SECONDS", r.MINUTES = "MINUTES", r.HOURS = "HOURS", r.DAYS = "DAYS", r.WEEKS = "WEEKS", r.MONTHS = "MONTHS", r.YEARS = "YEARS", (o = a || (a = {})).START = "START", o.END = "END", o.TIME = "TIME";
 let h = {
     NONE: e => 0,
     SECONDS: e => 60 * e,
@@ -27,7 +27,7 @@ let h = {
     MONTHS: e => e / 60 / 24 / 31,
     YEARS: e => e / 60 / 24 / 365
   },
-  T = [{
+  E = [{
     unit: "NONE",
     max: 0
   }, {
@@ -52,92 +52,92 @@ let h = {
     unit: "YEARS",
     max: 1 / 0
   }],
-  E = e => (t, l) => null == l ? "" : e().format({
+  g = e => (t, n) => null == n ? "" : e().format({
     time: t,
-    ...l
+    ...n
   }),
   S = {
     ACTIVITY_FEED: {
       START: {
-        SECONDS: () => p.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
-        MINUTES: e => p.default.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({
+        SECONDS: () => m.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
+        MINUTES: e => m.default.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({
           time: e
         }),
-        HOURS: e => p.default.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({
+        HOURS: e => m.default.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({
           time: e
         }),
-        DAYS: e => p.default.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({
+        DAYS: e => m.default.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({
           time: e
         })
       },
       END: {
-        SECONDS: () => p.default.Messages.GAME_FEED_USER_PLAYING_JUST_ENDED,
-        MINUTES: e => p.default.Messages.GAME_FEED_USER_PLAYED_MINUTES_AGO.format({
+        SECONDS: () => m.default.Messages.GAME_FEED_USER_PLAYING_JUST_ENDED,
+        MINUTES: e => m.default.Messages.GAME_FEED_USER_PLAYED_MINUTES_AGO.format({
           time: e
         }),
-        HOURS: e => p.default.Messages.GAME_FEED_USER_PLAYED_HOURS_AGO.format({
+        HOURS: e => m.default.Messages.GAME_FEED_USER_PLAYED_HOURS_AGO.format({
           time: e
         }),
-        DAYS: e => p.default.Messages.GAME_FEED_USER_PLAYED_DAYS_AGO.format({
+        DAYS: e => m.default.Messages.GAME_FEED_USER_PLAYED_DAYS_AGO.format({
           time: e
         }),
-        WEEKS: e => p.default.Messages.GAME_FEED_USER_PLAYED_WEEKS_AGO.format({
+        WEEKS: e => m.default.Messages.GAME_FEED_USER_PLAYED_WEEKS_AGO.format({
           time: e
         }),
-        MONTHS: e => p.default.Messages.GAME_FEED_USER_PLAYED_MONTHS_AGO.format({
+        MONTHS: e => m.default.Messages.GAME_FEED_USER_PLAYED_MONTHS_AGO.format({
           time: e
         }),
-        YEARS: e => p.default.Messages.GAME_FEED_USER_PLAYED_YEARS_AGO.format({
+        YEARS: e => m.default.Messages.GAME_FEED_USER_PLAYED_YEARS_AGO.format({
           time: e
         })
       }
     },
     ACTIVITY_FEED_NEW: {
       START: {
-        SECONDS: E(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-        MINUTES: E(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-        HOURS: E(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-        DAYS: E(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+        SECONDS: g(() => m.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+        MINUTES: g(() => m.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+        HOURS: g(() => m.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+        DAYS: g(() => m.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
       },
       END: {
-        SECONDS: e => p.default.Messages.DURATION_SECONDS_AGO.format({
+        SECONDS: e => m.default.Messages.DURATION_SECONDS_AGO.format({
           seconds: e
         }),
-        MINUTES: e => p.default.Messages.DURATION_MINUTES_AGO.format({
+        MINUTES: e => m.default.Messages.DURATION_MINUTES_AGO.format({
           minutes: e
         }),
-        HOURS: e => p.default.Messages.DURATION_HOURS_AGO.format({
+        HOURS: e => m.default.Messages.DURATION_HOURS_AGO.format({
           hours: e
         }),
-        DAYS: e => p.default.Messages.DURATION_DAYS_AGO.format({
+        DAYS: e => m.default.Messages.DURATION_DAYS_AGO.format({
           days: e
         })
       }
     },
     USER_ACTIVITY: {
       START: {
-        SECONDS: () => p.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
+        SECONDS: () => m.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
         MINUTES: function(e, t) {
-          let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          return l ? p.default.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({
+          let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          return n ? m.default.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({
             time: e
-          }) : p.default.Messages.USER_ACTIVITY_USER_PLAYING_FOR_MINUTES.format({
+          }) : m.default.Messages.USER_ACTIVITY_USER_PLAYING_FOR_MINUTES.format({
             time: e
           })
         },
         HOURS: function(e, t) {
-          let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          return l ? p.default.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({
+          let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          return n ? m.default.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({
             time: e
-          }) : p.default.Messages.USER_ACTIVITY_USER_PLAYING_FOR_HOURS.format({
+          }) : m.default.Messages.USER_ACTIVITY_USER_PLAYING_FOR_HOURS.format({
             time: e
           })
         },
         DAYS: function(e, t) {
-          let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          return l ? p.default.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({
+          let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          return n ? m.default.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({
             time: e
-          }) : p.default.Messages.USER_ACTIVITY_USER_PLAYING_FOR_DAYS.format({
+          }) : m.default.Messages.USER_ACTIVITY_USER_PLAYING_FOR_DAYS.format({
             time: e
           })
         }
@@ -145,78 +145,78 @@ let h = {
     },
     GAME_LIBRARY_TIME_PLAYED: {
       TIME: {
-        NONE: () => p.default.Messages.GAME_LIBRARY_TIME_PLAYED_NONE,
-        SECONDS: e => p.default.Messages.GAME_LIBRARY_TIME_PLAYED_SECONDS.format({
+        NONE: () => m.default.Messages.GAME_LIBRARY_TIME_PLAYED_NONE,
+        SECONDS: e => m.default.Messages.GAME_LIBRARY_TIME_PLAYED_SECONDS.format({
           time: e
         }),
-        MINUTES: e => p.default.Messages.GAME_LIBRARY_TIME_PLAYED_MINUTES.format({
+        MINUTES: e => m.default.Messages.GAME_LIBRARY_TIME_PLAYED_MINUTES.format({
           time: e
         }),
-        HOURS: e => p.default.Messages.GAME_LIBRARY_TIME_PLAYED_HOURS.format({
+        HOURS: e => m.default.Messages.GAME_LIBRARY_TIME_PLAYED_HOURS.format({
           time: e
         })
       }
     },
     GAME_LIBRARY_LAST_PLAYED: {
       END: {
-        NONE: () => p.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE,
-        SECONDS: () => p.default.Messages.GAME_LIBRARY_LAST_PLAYED_JUST_NOW,
-        MINUTES: e => p.default.Messages.GAME_LIBRARY_LAST_PLAYED_MINUTES.format({
+        NONE: () => m.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE,
+        SECONDS: () => m.default.Messages.GAME_LIBRARY_LAST_PLAYED_JUST_NOW,
+        MINUTES: e => m.default.Messages.GAME_LIBRARY_LAST_PLAYED_MINUTES.format({
           time: e
         }),
-        HOURS: e => p.default.Messages.GAME_LIBRARY_LAST_PLAYED_HOURS.format({
+        HOURS: e => m.default.Messages.GAME_LIBRARY_LAST_PLAYED_HOURS.format({
           time: e
         }),
-        DAYS: e => p.default.Messages.GAME_LIBRARY_LAST_PLAYED_DAYS.format({
+        DAYS: e => m.default.Messages.GAME_LIBRARY_LAST_PLAYED_DAYS.format({
           time: e
         }),
-        WEEKS: e => p.default.Messages.GAME_LIBRARY_LAST_PLAYED_WEEKS.format({
+        WEEKS: e => m.default.Messages.GAME_LIBRARY_LAST_PLAYED_WEEKS.format({
           time: e
         }),
-        MONTHS: e => p.default.Messages.GAME_LIBRARY_LAST_PLAYED_MONTHS.format({
+        MONTHS: e => m.default.Messages.GAME_LIBRARY_LAST_PLAYED_MONTHS.format({
           time: e
         }),
-        YEARS: e => p.default.Messages.GAME_LIBRARY_LAST_PLAYED_YEARS.format({
+        YEARS: e => m.default.Messages.GAME_LIBRARY_LAST_PLAYED_YEARS.format({
           time: e
         })
       }
     }
   };
 
-function _(e, t) {
-  let l = T.findIndex(t => {
+function C(e, t) {
+  let n = E.findIndex(t => {
       let {
-        max: l,
-        unit: n
-      } = t;
-      return "NONE" === n && e === l || e < l
-    }),
-    n = f.findLast(T, e => {
-      let {
+        max: n,
         unit: l
+      } = t;
+      return "NONE" === l && e === n || e < n
+    }),
+    l = f.findLast(E, e => {
+      let {
+        unit: n
       } = e;
-      return t(l)
-    }, l);
-  if (null != n) return n.unit;
-  let a = T.find(e => {
+      return t(n)
+    }, n);
+  if (null != l) return l.unit;
+  let i = E.find(e => {
     let {
-      unit: l
+      unit: n
     } = e;
-    return t(l)
+    return t(n)
   });
-  return null != a ? a.unit : null
+  return null != i ? i.unit : null
 }
 
-function g(e, t) {
-  let l = null != e ? _(e, e => t.includes(e)) : "NONE",
-    n = null != l ? h[l] : null;
+function T(e, t) {
+  let n = null != e ? C(e, e => t.includes(e)) : "NONE",
+    l = null != n ? h[n] : null;
   return {
-    unit: l,
-    time: null != e && null != n ? Math.floor(n(e)) : null
+    unit: n,
+    time: null != e && null != l ? Math.floor(l(e)) : null
   }
 }
 
-function A(e) {
+function v(e) {
   var t;
   return (t = class extends d.PureComponent {
     componentDidMount() {
@@ -225,10 +225,10 @@ function A(e) {
     componentDidUpdate(e) {
       let {
         start: t,
-        end: l,
-        time: n
+        end: n,
+        time: l
       } = this.props;
-      (e.start !== t || e.end !== l || e.time !== n) && this.update()
+      (e.start !== t || e.end !== n || e.time !== l) && this.update()
     }
     componentWillUnmount() {
       this.timer.stop()
@@ -237,34 +237,34 @@ function A(e) {
       let {
         start: e,
         end: t,
-        time: l
+        time: n
       } = this.props;
-      if (null != l) return l / 1e3 / 60;
-      let n = Date.now(),
-        a = 0;
-      return null != e ? a = n - e : null != t && (a = n - t), Math.abs(a) / 1e3 / 60
+      if (null != n) return n / 1e3 / 60;
+      let l = Date.now(),
+        i = 0;
+      return null != e ? i = l - e : null != t && (i = l - t), Math.abs(i) / 1e3 / 60
     }
-    getTimeUnit(e, t, l) {
-      let n = _(e, e => (function(e, t, l) {
-        let n = S[l];
-        if (null != n) {
-          let l = n[t];
-          if (null != l) return null != l[e]
+    getTimeUnit(e, t, n) {
+      let l = C(e, e => (function(e, t, n) {
+        let l = S[n];
+        if (null != l) {
+          let n = l[t];
+          if (null != n) return null != n[e]
         }
         return !1
-      })(e, l, t));
-      if (null == n) throw Error("Could not get the time unit in PlayTime with time: ".concat(e, " for type: ").concat(l, " in location: ").concat(t));
-      return n
+      })(e, n, t));
+      if (null == l) throw Error("Could not get the time unit in PlayTime with time: ".concat(e, " for type: ").concat(n, " in location: ").concat(t));
+      return l
     }
     getType() {
       let {
         start: e,
         end: t,
-        time: l
+        time: n
       } = this.props;
       if (null != e) return "START";
       if (null != t) return "END";
-      if (null != l) return "TIME";
+      if (null != n) return "TIME";
       return null
     }
     transformTime(e, t) {
@@ -273,25 +273,25 @@ function A(e) {
     render() {
       let {
         location: t,
-        messageProps: l,
-        isApplicationStreaming: n,
-        ...a
+        messageProps: n,
+        isApplicationStreaming: l,
+        ...i
       } = this.props, {
-        time: s
-      } = this.state, i = this.getType();
-      if (null == i) return null;
-      let r = this.getTimeUnit(s, t, i),
-        o = S[t][i];
+        time: a
+      } = this.state, s = this.getType();
+      if (null == s) return null;
+      let r = this.getTimeUnit(a, t, s),
+        o = S[t][s];
       if (null == o) return null;
       let d = o[r],
-        c = Math.floor(this.transformTime(r, s));
+        c = Math.floor(this.transformTime(r, a));
       return (0, u.jsx)(e, {
-        ...a,
-        children: null == d ? void 0 : d(c, l, n)
+        ...i,
+        children: null == d ? void 0 : d(c, n, l)
       })
     }
     constructor(...e) {
-      super(...e), this.timer = new m.Interval, this.state = {
+      super(...e), this.timer = new p.Interval, this.state = {
         time: this.getDiff()
       }, this.update = () => {
         this.setState({
@@ -299,5 +299,5 @@ function A(e) {
         })
       }
     }
-  }).Locations = n, t.Types = s, t
+  }).Locations = l, t.Types = a, t
 }

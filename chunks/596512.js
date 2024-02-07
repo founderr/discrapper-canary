@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 }), n("222007"), n("424973");
 var i = n("693566"),
   s = n.n(i),
-  a = n("689988"),
-  l = n("599110"),
+  l = n("689988"),
+  a = n("599110"),
   r = n("49111");
-class o extends a.default {
+class o extends l.default {
   handleMessageBecameVisible(e) {
     let {
       messageId: t
@@ -36,7 +36,7 @@ class o extends a.default {
     this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel.clear(), this.drainBuffer()
   }
   drainBuffer() {
-    for (let e of this.batchBuffer) l.default.track(r.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
+    for (let e of this.batchBuffer) a.default.track(r.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
       message_id: e.messageId,
       channel_id: e.channelId,
       guild_id: e.guildId,

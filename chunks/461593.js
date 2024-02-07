@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
 var l = n("37983");
 n("884691");
 var i = n("414456"),
-  r = n.n(i),
-  o = n("835906");
+  a = n.n(i),
+  s = n("835906");
 
-function s(e) {
+function r(e) {
   let {
     attributes: t,
     children: n,
     leaf: i,
-    text: s
+    text: r
   } = e;
   if (i.commandName) {
-    let e = r(o.commandName, {
-      [o.emptyText]: "" === s.text
+    let e = a(s.commandName, {
+      [s.emptyText]: "" === r.text
     });
     return (0, l.jsx)("span", {
       ...t,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return P
   }
 }), n("222007");
 var s = n("37983"),
@@ -36,11 +36,11 @@ var s = n("37983"),
   D = n("782340"),
   j = n("935107");
 
-function b(e) {
+function P(e) {
   let {
     channel: t
-  } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), P = (0, c.useStateFromStores)([_.default], () => _.default.getUser(null == b ? void 0 : b.ownerId)), H = a.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => e.id !== b.id).value() : [], [b]), F = a.useMemo(() => o(H).filter(e => {
-    if (null == b) return !1;
+  } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), P = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), b = (0, c.useStateFromStores)([_.default], () => _.default.getUser(null == P ? void 0 : P.ownerId)), H = a.useMemo(() => null != P ? o(P.roles).sortBy(e => -e.position).filter(e => e.id !== P.id).value() : [], [P]), F = a.useMemo(() => o(H).filter(e => {
+    if (null == P) return !1;
     let n = v.default.computePermissionsForRoles({
       forceRoles: {
         [e.id]: e
@@ -48,9 +48,9 @@ function b(e) {
       context: t
     });
     return u.default.has(n, O.Permissions.ADMINISTRATOR) || u.default.has(n, O.Permissions.VIEW_CHANNEL)
-  }).value(), [t, b, H]), U = (0, c.useStateFromStoresArray)([_.default], () => {
+  }).value(), [t, P, H]), U = (0, c.useStateFromStoresArray)([_.default], () => {
     let e = {};
-    for (let n of (null != P && (e[P.id] = P), Object.values(t.permissionOverwrites))) {
+    for (let n of (null != b && (e[b.id] = b), Object.values(t.permissionOverwrites))) {
       if (n.type !== C.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
       let t = _.default.getUser(n.id);
       null != t && (e[t.id] = t)
@@ -66,7 +66,7 @@ function b(e) {
         l = u.default.has(a.allow, O.Permissions.VIEW_CHANNEL);
       return s || l
     }).value()
-  }, [t, P]), k = A.default.can(O.Permissions.MANAGE_CHANNELS, t) || A.default.can(O.Permissions.MANAGE_ROLES, t);
+  }, [t, b]), k = A.default.can(O.Permissions.MANAGE_CHANNELS, t) || A.default.can(O.Permissions.MANAGE_ROLES, t);
 
   function w() {
     h.default.open(t.id)

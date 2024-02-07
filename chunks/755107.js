@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 }), n("222007");
 var l = n("939563"),
   i = n("385887"),
-  r = n("566819");
+  a = n("566819");
 
-function o(e) {
+function s(e) {
   let {
     apply: t,
     onChange: n
@@ -28,20 +28,20 @@ function o(e) {
         }
         return t
       }(e)), null != e.selection) {
-      let t, n, [o, s] = i.RangeUtils.edges(e.selection),
-        a = !1;
-      for (; null != o && null != (t = i.EditorUtils.getParentVoid(e, o)) && !r.SELECTABLE_VOIDS.includes(t[0].type);) o = i.EditorUtils.before(e, o, {
+      let t, n, [s, r] = i.RangeUtils.edges(e.selection),
+        o = !1;
+      for (; null != s && null != (t = i.EditorUtils.getParentVoid(e, s)) && !a.SELECTABLE_VOIDS.includes(t[0].type);) s = i.EditorUtils.before(e, s, {
         unit: "offset"
-      }), a = !0;
-      for (; null != s && null != (n = i.EditorUtils.getParentVoid(e, s)) && !r.SELECTABLE_VOIDS.includes(n[0].type);) s = i.EditorUtils.after(e, s, {
+      }), o = !0;
+      for (; null != r && null != (n = i.EditorUtils.getParentVoid(e, r)) && !a.SELECTABLE_VOIDS.includes(n[0].type);) r = i.EditorUtils.after(e, r, {
         unit: "offset"
-      }), a = !0;
-      a && null != o && null != s && (i.RangeUtils.isForward(e.selection) ? l.SlateTransforms.select(e, {
-        anchor: o,
-        focus: s
-      }) : l.SlateTransforms.select(e, {
+      }), o = !0;
+      o && null != s && null != r && (i.RangeUtils.isForward(e.selection) ? l.SlateTransforms.select(e, {
         anchor: s,
-        focus: o
+        focus: r
+      }) : l.SlateTransforms.select(e, {
+        anchor: r,
+        focus: s
       }))
     }
     n()

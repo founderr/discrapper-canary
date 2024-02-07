@@ -8,10 +8,10 @@ var l = n("37983");
 n("884691");
 var u = n("446674"),
   a = n("77078"),
-  i = n("817963"),
-  d = n("398604"),
-  r = n("397680"),
-  s = n("466148"),
+  d = n("817963"),
+  i = n("398604"),
+  s = n("397680"),
+  r = n("466148"),
   o = n("842672"),
   c = n("782340");
 
@@ -23,11 +23,11 @@ function E(e) {
     recurrenceId: _,
     isRecurrenceItem: T
   } = e, {
-    canManageGuildEvent: v
-  } = (0, i.useManageResourcePermissions)(null != f ? f : E), S = (0, u.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(t)), g = v(S), I = (0, o.default)(), N = (0, r.default)(_, null == S ? void 0 : S.id), m = (0, s.default)(t, _);
-  if (!g || null == S) return null;
-  let h = null != S.recurrence_rule && !T,
-    M = e => {
+    canManageGuildEvent: S
+  } = (0, d.useManageResourcePermissions)(null != f ? f : E), v = (0, u.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(t)), g = S(v), I = (0, o.default)(), N = (0, s.default)(_, null == v ? void 0 : v.id), m = (0, r.default)(t, _);
+  if (!g || null == v) return null;
+  let M = null != v.recurrence_rule && !T,
+    h = e => {
       (null == _ || e) && !T ? (0, a.openModalLazy)(async () => {
         let {
           default: e
@@ -43,7 +43,7 @@ function E(e) {
         } = await n.el("229798").then(n.bind(n, "229798"));
         return t => (0, l.jsx)(e, {
           ...t,
-          guildEvent: S,
+          guildEvent: v,
           recurrenceId: _
         })
       }, I)
@@ -51,18 +51,18 @@ function E(e) {
   return (0, l.jsx)(a.MenuItem, {
     id: c.default.Messages.EDIT_EVENT,
     label: c.default.Messages.EDIT_EVENT,
-    action: h ? void 0 : () => M(!0),
-    children: h && (0, l.jsxs)(l.Fragment, {
+    action: M ? void 0 : () => h(!0),
+    children: M && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(a.MenuItem, {
         id: c.default.Messages.EDIT_THIS_EVENT,
         label: c.default.Messages.EDIT_THIS_EVENT,
-        action: () => M(!1),
+        action: () => h(!1),
         disabled: (null == N ? void 0 : N.is_canceled) || m.startTime.getTime() < Date.now()
       }), (0, l.jsx)(a.MenuItem, {
         id: c.default.Messages.EDIT_ALL_EVENTS,
         label: c.default.Messages.EDIT_ALL_EVENTS,
-        action: () => M(!0),
-        disabled: new Date(S.scheduled_start_time).getTime() < Date.now()
+        action: () => h(!0),
+        disabled: new Date(v.scheduled_start_time).getTime() < Date.now()
       })]
     })
   })

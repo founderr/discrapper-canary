@@ -19,12 +19,12 @@ function o(e) {
     section: n,
     guildId: o = a.ME,
     channelId: u,
-    friendToken: c,
-    autoFocusNote: d,
+    friendToken: d,
+    autoFocusNote: c,
     analyticsLocation: f
   } = e, E = l.default.getUser(t), h = o !== a.ME ? o : void 0;
   if (null == E) return (0, r.fetchProfile)(t, {
-    friendToken: c,
+    friendToken: d,
     guildId: h
   }).then(() => {
     i.default.dispatch({
@@ -33,14 +33,14 @@ function o(e) {
       section: n,
       guildId: o,
       channelId: u,
-      friendToken: c,
-      autoFocusNote: d,
+      friendToken: d,
+      autoFocusNote: c,
       analyticsLocation: f
     })
   });
   (0, s.default)(t, E.getAvatarURL(void 0, 80), {
     withMutualGuilds: !0,
-    friendToken: c,
+    friendToken: d,
     guildId: h
   }), i.default.dispatch({
     type: "USER_PROFILE_MODAL_OPEN",
@@ -48,8 +48,8 @@ function o(e) {
     section: n,
     guildId: o,
     channelId: u,
-    friendToken: c,
-    autoFocusNote: d,
+    friendToken: d,
+    autoFocusNote: c,
     analyticsLocation: f
   })
 }

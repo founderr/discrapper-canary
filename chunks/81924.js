@@ -1,62 +1,62 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return m
+    return f
   }
 }), i("222007");
 var a = i("37983"),
-  l = i("884691"),
-  n = i("446674"),
-  s = i("913144"),
-  o = i("206230"),
+  n = i("884691"),
+  l = i("446674"),
+  o = i("913144"),
+  s = i("206230"),
   r = i("166257"),
   u = i("845579"),
   d = i("15935"),
   c = i("103475"),
-  p = i("512306"),
-  h = i("941723"),
-  f = i("981937"),
-  T = i("205591"),
-  m = l.memo(function(e) {
+  h = i("512306"),
+  p = i("941723"),
+  T = i("981937"),
+  m = i("205591"),
+  f = n.memo(function(e) {
     let {
       channelId: t,
       messageId: i,
-      emoji: m,
+      emoji: f,
       useChatFontScaling: E,
-      color: _,
-      count: g
-    } = e, R = (0, n.useStateFromStores)([d.default], () => d.default.getEffectForEmojiId(t, i, m)), I = E ? T : f, C = l.useMemo(() => (0, h.buildEffect)(m, _, t, {
-      key: R,
+      color: R,
+      count: I
+    } = e, g = (0, l.useStateFromStores)([d.default], () => d.default.getEffectForEmojiId(t, i, f)), _ = E ? m : T, N = n.useMemo(() => (0, p.buildEffect)(f, R, t, {
+      key: g,
       messageId: i
-    }), [_, R, m, t, i]), [O, A] = l.useState(!1), S = (0, n.useStateFromStores)([o.default], () => o.default.useReducedMotion), v = u.AnimateEmoji.useSetting(), N = l.useCallback(() => {
-      s.default.dispatch({
+    }), [R, g, f, t, i]), [C, v] = n.useState(!1), O = (0, l.useStateFromStores)([s.default], () => s.default.useReducedMotion), S = u.AnimateEmoji.useSetting(), j = n.useCallback(() => {
+      o.default.dispatch({
         type: "BURST_REACTION_EFFECT_CLEAR",
         channelId: t,
         messageId: i,
-        emoji: m
+        emoji: f
       })
-    }, [m, t, i]);
-    return (l.useEffect(() => {
+    }, [f, t, i]);
+    return (n.useEffect(() => {
       let e = () => {
-        if (O) return;
-        let e = (0, c.getBurstAnimationHash)("".concat(Date.now()).concat(t).concat(i).concat(m.name)),
+        if (C) return;
+        let e = (0, c.getBurstAnimationHash)("".concat(Date.now()).concat(t).concat(i).concat(f.name)),
           a = e % 10;
-        (a += g > 4 ? 4 : g - 1) > 7 && (A(!0), (0, r.playBurstReaction)({
+        (a += I > 4 ? 4 : I - 1) > 7 && (v(!0), (0, r.playBurstReaction)({
           channelId: t,
           messageId: i,
-          emoji: m,
+          emoji: f,
           key: d.BurstReactionEffectSource.RANDOM
         }))
       };
-      if (O || S && !v || !v) return;
+      if (C || O && !S || !S) return;
       e();
       let a = setInterval(e, 5e3);
       return () => {
         clearInterval(a)
       }
-    }, [v, t, g, m, m.name, O, i, S]), null == R) ? null : (0, a.jsx)(p.default, {
-      className: I.effect,
-      effect: C,
-      onComplete: N
+    }, [S, t, I, f, f.name, C, i, O]), null == g) ? null : (0, a.jsx)(h.default, {
+      className: _.effect,
+      effect: N,
+      onComplete: j
     })
   })

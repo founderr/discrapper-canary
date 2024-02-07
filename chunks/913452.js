@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   useOpenInPopoutExperiment: function() {
-    return i
+    return l
   }
 });
-var r = n("862205");
-let a = (0, r.createExperiment)({
+var i = n("862205");
+let a = (0, i.createExperiment)({
   kind: "user",
   id: "2023-08-30_open-in-popout",
   label: "Open Channel in Popout",
@@ -21,7 +21,7 @@ let a = (0, r.createExperiment)({
   }]
 });
 
-function i(e) {
+function l(e) {
   return a.useExperiment({
     location: e
   }, {

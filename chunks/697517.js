@@ -20,8 +20,8 @@ var a = n("37983"),
   v = n("784981"),
   I = n("908583"),
   P = n("449501"),
-  S = n("18494"),
-  C = n("697218"),
+  C = n("18494"),
+  S = n("697218"),
   g = n("550766"),
   y = n("191225"),
   E = n("420444"),
@@ -39,7 +39,7 @@ function b(e) {
   let {
     channel: t,
     isLoading: n
-  } = e, [i, x] = l.useState(!1), b = (0, r.useStateFromStores)([y.default], () => y.default.getSelfEmbeddedActivityForChannel(t.id)), O = (0, r.useStateFromStores)([y.default], () => y.default.getActivityPanelMode()), D = null == b ? void 0 : b.instanceId, R = (0, r.useStateFromStores)([S.default], () => S.default.getChannelId() === t.id), {
+  } = e, [i, x] = l.useState(!1), b = (0, r.useStateFromStores)([y.default], () => y.default.getSelfEmbeddedActivityForChannel(t.id)), O = (0, r.useStateFromStores)([y.default], () => y.default.getActivityPanelMode()), D = null == b ? void 0 : b.instanceId, R = (0, r.useStateFromStores)([C.default], () => C.default.getChannelId() === t.id), {
     dockedRect: F,
     isHidden: W
   } = (0, r.useStateFromStoresObject)([P.default], () => {
@@ -80,7 +80,7 @@ function b(e) {
     }
   }, [null == b ? void 0 : b.applicationId, z]);
   if (null == b || null == D || null == k && (0, E.default)(t.id)) return null;
-  let q = Array.from(b.userIds).map(e => C.default.getUser(e)).filter(e => null != e),
+  let q = Array.from(b.userIds).map(e => S.default.getUser(e)).filter(e => null != e),
     Q = {
       instance_id: D,
       channel_id: t.id

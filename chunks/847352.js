@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return _
   }
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("118810"),
-  a = n("446674"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("118810"),
+  o = n("446674"),
   u = n("551042"),
   d = n("77078"),
   c = n("901582"),
@@ -18,51 +18,51 @@ var l = n("37983"),
   m = n("659500"),
   h = n("791776"),
   E = n("82372"),
-  S = n("426969"),
-  g = n("105571"),
+  g = n("426969"),
+  S = n("105571"),
   C = n("634114"),
   T = n("49111"),
   v = n("13030"),
-  y = n("652277"),
-  x = i.memo(function(e) {
+  I = n("652277"),
+  _ = i.memo(function(e) {
     let {
       positionTargetRef: t,
       channel: n,
-      closeOnModalOuterClick: r = !1,
-      parentModalKey: x
-    } = e, I = i.useRef(null), N = i.useRef(null), {
-      renderWindow: _,
-      windowDispatch: A
-    } = i.useContext(f.default), R = null != x, O = (0, u.useIsModalAtTop)(null != x ? x : ""), M = () => {
+      closeOnModalOuterClick: a = !1,
+      parentModalKey: _
+    } = e, y = i.useRef(null), A = i.useRef(null), {
+      renderWindow: N,
+      windowDispatch: x
+    } = i.useContext(f.default), O = null != _, R = (0, u.useIsModalAtTop)(null != _ ? _ : ""), M = () => {
       E.dismissAppLauncherPopup()
-    }, b = i.useCallback(e => {
+    }, L = i.useCallback(e => {
       var t;
-      if (!R && (0, u.hasAnyModalOpen)() || R && !(O && r)) return;
+      if (!O && (0, u.hasAnyModalOpen)() || O && !(R && a)) return;
       let {
         target: n
       } = e;
-      if ((0, s.isElement)(n) && null != n.closest("." + v.CHAT_INPUT_BUTTON_CLASSNAME)) return;
+      if ((0, r.isElement)(n) && null != n.closest("." + v.CHAT_INPUT_BUTTON_CLASSNAME)) return;
       for (;
-        (0, s.isElement)(n);) {
-        if (n === N.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
+        (0, r.isElement)(n);) {
+        if (n === A.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
         n = n.parentNode
       }
       M();
       let l = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
       (null == l || "BODY" === l.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.TEXTAREA_FOCUS)
-    }, [r, O, R]), k = i.useCallback(() => {
+    }, [a, R, O]), P = i.useCallback(() => {
       M()
     }, []);
-    i.useLayoutEffect(() => (_.addEventListener("mousedown", b), _.addEventListener("contextmenu", b), A.subscribe(T.ComponentActions.POPOUT_CLOSE, k), () => {
-      _.removeEventListener("mousedown", b), _.removeEventListener("contextmenu", b), A.unsubscribe(T.ComponentActions.POPOUT_CLOSE, k)
-    }), [k, b, _, A]), (0, d.useFocusLock)(I), i.useEffect(() => {
-      (!R && (0, u.hasAnyModalOpen)() || R && !O) && M()
-    }, [O, R]);
-    let P = (0, a.useStateFromStores)([S.default], () => S.default.getCurrentAppDetail());
+    i.useLayoutEffect(() => (N.addEventListener("mousedown", L), N.addEventListener("contextmenu", L), x.subscribe(T.ComponentActions.POPOUT_CLOSE, P), () => {
+      N.removeEventListener("mousedown", L), N.removeEventListener("contextmenu", L), x.unsubscribe(T.ComponentActions.POPOUT_CLOSE, P)
+    }), [P, L, N, x]), (0, d.useFocusLock)(y), i.useEffect(() => {
+      (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
+    }, [R, O]);
+    let b = (0, o.useStateFromStores)([g.default], () => g.default.getCurrentAppDetail());
     return (0, l.jsx)(c.default, {
       section: T.AnalyticsSections.EXPRESSION_PICKER,
       children: (0, l.jsx)(p.AppReferencePositionLayer, {
-        className: y.positionLayer,
+        className: I.positionLayer,
         reference: t,
         position: "top",
         align: "left",
@@ -73,24 +73,24 @@ var l = n("37983"),
             isPositioned: t
           } = e;
           return (0, l.jsx)("section", {
-            className: o(y.positionContainer),
-            ref: I,
+            className: s(I.positionContainer),
+            ref: y,
             role: "dialog",
             "aria-label": "Application Launcher",
             children: t ? (0, l.jsxs)("div", {
-              className: y.drawerSizingWrapper,
-              ref: N,
+              className: I.drawerSizingWrapper,
+              ref: A,
               children: [(0, l.jsx)("div", {
-                className: y.resizeHandle
+                className: I.resizeHandle
               }), (0, l.jsxs)("div", {
-                className: y.contentWrapper,
+                className: I.contentWrapper,
                 children: [(0, l.jsx)(C.default, {
                   channel: n,
-                  isAppDetailPresent: null != P
-                }), null != P ? (0, l.jsx)(g.default, {
+                  isAppDetailPresent: null != b
+                }), null != b ? (0, l.jsx)(S.default, {
                   channel: n,
-                  appDetail: P
-                }, P.id) : null]
+                  appDetail: b
+                }, b.id) : null]
               })]
             }) : null
           })

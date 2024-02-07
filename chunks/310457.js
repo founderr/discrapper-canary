@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983");
 n("884691");
 var r = n("446674"),
-  s = n("77078"),
-  l = n("679653"),
+  l = n("77078"),
+  s = n("679653"),
   o = n("42203"),
   a = n("782340");
 
@@ -17,15 +17,15 @@ function u(e) {
     onConfirm: t,
     onCancel: n,
     channelId: u
-  } = e, c = (0, r.useStateFromStores)([o.default], () => null != u ? o.default.getChannel(u) : null), d = (0, l.default)(c, !0);
-  return (0, i.jsx)(s.DeclarativeConfirmModal, {
+  } = e, c = (0, r.useStateFromStores)([o.default], () => null != u ? o.default.getChannel(u) : null), d = (0, s.default)(c, !0);
+  return (0, i.jsx)(l.DeclarativeConfirmModal, {
     dismissable: !0,
     header: a.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_TITLE,
     confirmText: a.default.Messages.REMOVE,
     cancelText: a.default.Messages.CANCEL,
     onConfirm: t,
     onCancel: n,
-    children: (0, i.jsx)(s.Text, {
+    children: (0, i.jsx)(l.Text, {
       variant: "text-sm/normal",
       children: null != c ? a.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY.format({
         channelName: d

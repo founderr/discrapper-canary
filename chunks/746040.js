@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return A
   }
 });
 var s = n("37983"),
   a = n("884691"),
-  r = n("414456"),
-  l = n.n(r),
+  l = n("414456"),
+  r = n.n(l),
   i = n("394846"),
   o = n("77078"),
   u = n("2021"),
@@ -19,12 +19,12 @@ var s = n("37983"),
   h = n("49111"),
   g = n("71041");
 let m = (0, f.cssValueToNumber)(g.responsiveWidthMobile),
-  p = [h.Routes.LOGIN, h.Routes.LOGIN_HANDOFF, h.Routes.REGISTER, h.Routes.INVITE(""), h.Routes.GIFT_CODE(""), h.Routes.GUILD_TEMPLATE_LOGIN(""), h.Routes.GUILD_TEMPLATE(""), h.Routes.DISABLE_EMAIL_NOTIFICATIONS, h.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, h.Routes.BILLING_PREMIUM_SUBSCRIBE, h.Routes.BILLING_PAYMENT_SOURCES_CREATE, h.Routes.BILLING_PAYMENTS, h.Routes.BILLING_PREMIUM_SWITCH_PLAN, h.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, h.Routes.VERIFY, h.Routes.VERIFY_HUB_EMAIL, h.Routes.REJECT_IP, h.Routes.REJECT_MFA, h.Routes.AUTHORIZE_IP, h.Routes.AUTHORIZE_PAYMENT, h.Routes.RESET, h.Routes.HANDOFF, h.Routes.REPORT, h.Routes.REPORT_SECOND_LOOK];
+  T = [h.Routes.LOGIN, h.Routes.LOGIN_HANDOFF, h.Routes.REGISTER, h.Routes.INVITE(""), h.Routes.GIFT_CODE(""), h.Routes.GUILD_TEMPLATE_LOGIN(""), h.Routes.GUILD_TEMPLATE(""), h.Routes.DISABLE_EMAIL_NOTIFICATIONS, h.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, h.Routes.BILLING_PREMIUM_SUBSCRIBE, h.Routes.BILLING_PAYMENT_SOURCES_CREATE, h.Routes.BILLING_PAYMENTS, h.Routes.BILLING_PREMIUM_SWITCH_PLAN, h.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, h.Routes.VERIFY, h.Routes.VERIFY_HUB_EMAIL, h.Routes.REJECT_IP, h.Routes.REJECT_MFA, h.Routes.AUTHORIZE_IP, h.Routes.AUTHORIZE_PAYMENT, h.Routes.RESET, h.Routes.HANDOFF, h.Routes.REPORT, h.Routes.REPORT_SECOND_LOOK];
 
-function T(e) {
-  return p.some(t => e.startsWith(t))
+function p(e) {
+  return T.some(t => e.startsWith(t))
 }
-class A extends a.Component {
+class I extends a.Component {
   componentDidMount() {
     window.addEventListener("resize", this.handleResize)
   }
@@ -32,14 +32,14 @@ class A extends a.Component {
     window.removeEventListener("resize", this.handleResize)
   }
   mobileTransitionTo(e, t) {
-    if (T(e))(0, d.transitionTo)(e, t);
+    if (p(e))(0, d.transitionTo)(e, t);
     else {
       let n = null != t && null != t.search ? t.search : null;
       window.location = null == n ? e : "".concat(e, "?").concat(n)
     }
   }
   mobileReplaceWith(e) {
-    T(e) ? (0, d.replaceWith)(e) : window.location = e
+    p(e) ? (0, d.replaceWith)(e) : window.location = e
   }
   renderDefault() {
     let {
@@ -58,7 +58,7 @@ class A extends a.Component {
         children: null != e ? (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(c.default, {
             show: !0,
-            className: l(g.logo)
+            className: r(g.logo)
           }), (0, s.jsx)(E.Splash, {
             splash: e,
             children: t
@@ -97,4 +97,4 @@ class A extends a.Component {
     }
   }
 }
-var R = A
+var A = I

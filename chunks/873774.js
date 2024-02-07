@@ -10,8 +10,8 @@ var a = n("272030"),
   s = n("459736"),
   i = n("393414"),
   r = n("708402"),
-  o = n("49111"),
-  u = n("724210"),
+  u = n("49111"),
+  o = n("724210"),
   d = n("782340");
 
 function c(e) {
@@ -26,7 +26,7 @@ function c(e) {
     text: d.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     selected: c,
     onClick: () => {
-      (0, i.transitionTo)(o.Routes.CHANNEL(t.id, u.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
+      (0, i.transitionTo)(u.Routes.CHANNEL(t.id, o.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
     },
     onContextMenu: e => {
       null != t && (0, a.openContextMenuLazy)(e, async () => {

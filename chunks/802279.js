@@ -4,9 +4,9 @@ a.r(t), a.d(t, {
     return r
   }
 });
-var l = a("37983");
+var n = a("37983");
 a("884691");
-var n = a("775377"),
+var l = a("775377"),
   s = a("777003"),
   i = a("184256");
 
@@ -16,9 +16,9 @@ function r(e) {
     className: a,
     animate: r
   } = e;
-  return null == t ? null : (0, l.jsx)(s.default, {
+  return null == t ? null : (0, n.jsx)(s.default, {
     className: a,
-    children: (0, l.jsx)(n.default, {
+    children: (0, n.jsx)(l.default, {
       activity: t,
       className: i.customStatus,
       animate: r,

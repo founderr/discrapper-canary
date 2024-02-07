@@ -1,7 +1,7 @@
 "use strict";
 t.r(r), t.d(r, {
   componentColorTokens: function() {
-    return m
+    return g
   }
 });
 var a = t("900731"),
@@ -15,8 +15,8 @@ var a = t("900731"),
   u = t("846303"),
   h = t("445077"),
   p = t("5354"),
-  f = t("832609");
-let m = {
+  m = t("832609");
+let g = {
   ...a.default,
   ...l.default,
   ...i.default,
@@ -27,6 +27,6 @@ let m = {
   ...u.default,
   ...h.default,
   ...p.default,
-  ...f.default,
+  ...m.default,
   ...n.default
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.r(e), n.d(e, {
   getDecorationSizeForAvatarSize: function() {
-    return s
+    return l
   },
   openAvatarDecorationModal: function() {
-    return l
+    return s
   }
 });
 var r = n("37983");
@@ -15,14 +15,14 @@ n("103603");
 var o = n("573135"),
   a = n("49111");
 
-function s(t) {
+function l(t) {
   return "number" != typeof t ? (0, i.getAvatarSize)(t) * o.DECORATION_TO_AVATAR_RATIO : t * o.DECORATION_TO_AVATAR_RATIO
 }
-let l = t => {
+let s = t => {
   let {
     analyticsLocations: e,
     initialSelectedDecoration: o,
-    isTryItOutFlow: s
+    isTryItOutFlow: l
   } = t;
   (0, i.openModalLazy)(async () => {
     (0, u.getHistory)().location.pathname === a.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, u.transitionTo)(a.Routes.APP);
@@ -33,7 +33,7 @@ let l = t => {
       ...n,
       analyticsLocations: e,
       initialSelectedDecoration: o,
-      isTryItOutFlow: s
+      isTryItOutFlow: l
     })
   }, {})
 }

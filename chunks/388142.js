@@ -15,8 +15,8 @@ n.r(t), n.d(t, {
 });
 var i = n("872717"),
   s = n("295426"),
-  a = n("819689"),
-  l = n("529805"),
+  l = n("819689"),
+  a = n("529805"),
   r = n("42203"),
   o = n("474643"),
   u = n("377253"),
@@ -51,7 +51,7 @@ async function T(e, t, n) {
         message_id: n
       }
     }
-  }), p(t)
+  }), _(t)
 }
 async function h(e) {
   let t = await i.default.patch({
@@ -59,16 +59,16 @@ async function h(e) {
   });
   if (null != t.text && "" !== t.text) {
     let n = r.default.getChannel(e.channel_id);
-    null != n && ((0, l.createPendingReply)({
+    null != n && ((0, a.createPendingReply)({
       channel: n,
       message: e,
       shouldMention: !1,
       showMentionToggle: !1
-    }), p(n.id)), s.default.saveDraft(e.channel_id, t.text, o.DraftType.ChannelMessage)
+    }), _(n.id)), s.default.saveDraft(e.channel_id, t.text, o.DraftType.ChannelMessage)
   }
 }
 
-function p(e) {
+function _(e) {
   let t = u.default.getMessages(e);
-  t.hasMoreAfter ? a.default.jumpToPresent(e, c.MAX_MESSAGES_PER_CHANNEL) : d.ComponentDispatch.dispatch(c.ComponentActions.SCROLLTO_PRESENT)
+  t.hasMoreAfter ? l.default.jumpToPresent(e, c.MAX_MESSAGES_PER_CHANNEL) : d.ComponentDispatch.dispatch(c.ComponentActions.SCROLLTO_PRESENT)
 }

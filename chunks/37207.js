@@ -40,8 +40,8 @@ var i = n("917351"),
       })
     }
     let y = (0, o.default)(p.default, m.default),
-      C = d.default.getCurrentUserActiveStream(),
-      N = d.default.getStreamerActiveStreamMetadata();
+      O = d.default.getCurrentUserActiveStream(),
+      C = d.default.getStreamerActiveStreamMetadata();
     return {
       title: v,
       context: n,
@@ -57,8 +57,8 @@ var i = n("917351"),
       avatarSizeMode: E.default.getAvatarSizeMode(),
       application: null != y ? s.default.getApplication(null !== (t = null === (e = c.default.getGameByGameData(y)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : "") : null,
       streamApplication: (0, r.default)(y),
-      stream: C,
-      streamMetadata: N,
+      stream: O,
+      streamMetadata: C,
       hasStream: !1
     }
   })(v.VoiceWidget)

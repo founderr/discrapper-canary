@@ -42,7 +42,7 @@ var i = n("37983"),
     }), [D, L] = r.useState(!1), [U, y] = r.useState(1), [P, H] = r.useState({
       x: 0,
       y: 0
-    }), [x, G] = r.useState(null), [B, b] = r.useState(!1), {
+    }), [x, B] = r.useState(null), [G, b] = r.useState(!1), {
       AnalyticsLocationProvider: V
     } = (0, u.default)(s.default.IMAGE_CROPPING_MODAL), j = r.useRef({
       x: 0,
@@ -97,7 +97,7 @@ var i = n("37983"),
           width: n,
           height: i
         } = (0, _.adjustImageDimensionsForAspectRatio)(C, e, t), r = (0, _.calculateOverlaySize)(C, n, i, t);
-        G({
+        B({
           width: n,
           height: i
         }), w(r), v((0, _.calculateDragBoundaries)(n, i, r))
@@ -180,7 +180,7 @@ var i = n("37983"),
                   }
                 })()
               },
-              className: B ? I.imageDisabled : I.imageEnabled,
+              className: G ? I.imageDisabled : I.imageEnabled,
               src: n,
               alt: "avatar",
               ref: W,
@@ -223,7 +223,7 @@ var i = n("37983"),
                 } = j.current;
                 (!(0, a.inRange)(r, i.right, i.left) || !(0, a.inRange)(l, i.top, i.bottom)) && z(r, l, i), y(e), v(i)
               },
-              disabled: B,
+              disabled: G,
               equidistant: !0,
               hideBubble: !0,
               "aria-label": T.default.Messages.FORM_LABEL_AVATAR_SIZE
@@ -260,7 +260,7 @@ var i = n("37983"),
               },
               children: T.default.Messages.AVATAR_UPLOAD_CANCEL
             }), (0, i.jsx)(l.Button, {
-              submitting: B,
+              submitting: G,
               size: l.ButtonSizes.SMALL,
               onClick: Q,
               children: T.default.Messages.AVATAR_UPLOAD_APPLY

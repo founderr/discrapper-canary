@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return y
   }
 }), n("222007");
 var l = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("819855"),
-  a = n("77078"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("819855"),
+  o = n("77078"),
   u = n("997289"),
   d = n("841098"),
   c = n("812204"),
@@ -18,94 +18,94 @@ var l = n("37983"),
   m = n("635956"),
   h = n("599110"),
   E = n("719923"),
-  S = n("23106"),
-  g = n("553372"),
+  g = n("23106"),
+  S = n("553372"),
   C = n("49111"),
   T = n("646718"),
   v = n("782340"),
-  y = n("665946"),
-  x = n("350028");
+  I = n("665946"),
+  _ = n("350028");
 
-function I(e) {
+function y(e) {
   var t;
   let {
-    onClose: r,
-    closePopout: I,
-    sound: N,
-    channel: _
-  } = e, A = (0, d.default)(), [R, O] = i.useState(!1), {
+    onClose: a,
+    closePopout: y,
+    sound: A,
+    channel: N
+  } = e, x = (0, d.default)(), [O, R] = i.useState(!1), {
     location: M
-  } = (0, u.useAnalyticsContext)(), b = i.useMemo(() => ({
+  } = (0, u.useAnalyticsContext)(), L = i.useMemo(() => ({
     ...M,
     section: C.AnalyticsSections.SOUNDBOARD_SOUND_PICKER
   }), [M]), {
-    analyticsLocations: k
+    analyticsLocations: P
   } = (0, f.default)(c.default.PREMIUM_UPSELL), {
-    previewSound: P
-  } = (0, S.default)(N, null !== (t = null == _ ? void 0 : _.id) && void 0 !== t ? t : null), L = (0, g.PreviewButton)({
-    sound: N,
-    previewSound: P,
+    previewSound: b
+  } = (0, g.default)(A, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), j = (0, S.PreviewButton)({
+    sound: A,
+    previewSound: b,
     tooltipPosition: "left"
-  }), U = (0, s.isThemeLight)(A) ? n("602291") : n("609708");
+  }), U = (0, r.isThemeLight)(x) ? n("602291") : n("609708");
   i.useEffect(() => {
     h.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: T.PremiumUpsellTypes.SOUND_PICKER_SOUND_CLICKED,
       is_external: !0,
       location: {
-        ...b,
+        ...L,
         object: C.AnalyticsObjects.SOUNDBOARD_SOUND
       },
-      location_stack: k,
+      location_stack: P,
       sku_id: E.default.getSkuIdForPremiumType(T.PremiumTypes.TIER_2)
     })
-  }, [k, b]);
-  let j = i.useCallback(() => {
+  }, [P, L]);
+  let D = i.useCallback(() => {
     h.default.track(C.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
       location_section: C.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL
-    }), (0, p.navigateToPremiumMarketingPage)(), I()
-  }, [I]);
+    }), (0, p.navigateToPremiumMarketingPage)(), y()
+  }, [y]);
   return (0, l.jsxs)("div", {
-    className: o(x.premiumPromo, y.container),
-    children: [(0, l.jsx)(a.Clickable, {
-      className: x.premiumPromoClose,
-      onClick: r,
+    className: s(_.premiumPromo, I.container),
+    children: [(0, l.jsx)(o.Clickable, {
+      className: _.premiumPromoClose,
+      onClick: a,
       children: v.default.Messages.CLOSE
     }), (0, l.jsx)("img", {
       "aria-hidden": !0,
       alt: "",
-      className: o(x.premiumPromoImage, x.premiumPromoImageSmaller, y.image),
+      className: s(_.premiumPromoImage, _.premiumPromoImageSmaller, I.image),
       src: U
-    }), (0, l.jsx)(a.Heading, {
+    }), (0, l.jsx)(o.Heading, {
       variant: "heading-lg/normal",
       color: "header-primary",
-      className: x.premiumPromoTitle,
+      className: _.premiumPromoTitle,
       children: v.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
-    }), (0, l.jsx)(a.Text, {
+    }), (0, l.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: x.premiumPromoDescription,
+      className: _.premiumPromoDescription,
       children: v.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
-        onClick: j
+        onClick: D
       })
     }), (0, l.jsxs)("div", {
-      className: y.buttonContainer,
+      className: I.buttonContainer,
       children: [(0, l.jsx)("div", {
-        className: y.previewButtonContainer,
-        children: L
+        className: I.previewButtonContainer,
+        children: j
       }), (0, l.jsx)(m.default, {
         subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
-        submitting: R,
+        submitting: O,
         premiumModalAnalyticsLocation: {
           section: C.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
           object: C.AnalyticsObjects.BUTTON_CTA
         },
-        size: a.Button.Sizes.SMALL,
-        color: a.Button.Colors.GREEN,
+        size: o.Button.Sizes.SMALL,
+        color: o.Button.Colors.GREEN,
         onClick: () => {
-          O(!0)
+          R(!0)
         },
         onSubscribeModalClose: e => {
-          O(!1), e && r()
+          R(!1), e && a()
         }
       })]
     })]

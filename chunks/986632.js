@@ -1,10 +1,10 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   INACTIVE_CATEGORY_INDEX: function() {
-    return s
+    return i
   },
   EmojiPickerStore: function() {
-    return a
+    return r
   },
   StickerPickerStore: function() {
     return o
@@ -13,12 +13,12 @@ i.r(t), i.d(t, {
     return u
   },
   ApplicationCommandDiscoveryPickerStore: function() {
-    return c
+    return d
   }
 });
-var n = i("308503");
-let s = -1,
-  l = Object.freeze({
+var l = n("308503");
+let i = -1,
+  a = Object.freeze({
     inspectedExpressionPosition: {
       rowIndex: 0,
       columnIndex: 0
@@ -27,17 +27,17 @@ let s = -1,
     searchPlaceholder: null
   });
 
-function r() {
-  let e = (0, n.default)(e => l);
+function s() {
+  let e = (0, l.default)(e => a);
   return {
     useStore: e,
     getState: () => e.getState(),
-    setInspectedExpressionPosition: (t, i, n) => {
+    setInspectedExpressionPosition: (t, n, l) => {
       e.setState({
         inspectedExpressionPosition: {
-          rowIndex: i,
+          rowIndex: n,
           columnIndex: t,
-          source: n
+          source: l
         }
       })
     },
@@ -52,11 +52,11 @@ function r() {
       })
     },
     resetStoreState: () => {
-      e.setState(l)
+      e.setState(a)
     }
   }
 }
-let a = r(),
-  o = r(),
-  u = r(),
-  c = r()
+let r = s(),
+  o = s(),
+  u = s(),
+  d = s()

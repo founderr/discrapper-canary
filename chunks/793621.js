@@ -22,8 +22,8 @@ var l = i("37983"),
   w = i("401642"),
   p = i("766274"),
   v = i("26989"),
-  N = i("79798"),
-  C = i("36694"),
+  C = i("79798"),
+  N = i("36694"),
   y = i("599110"),
   T = i("535013"),
   E = i("562368"),
@@ -68,7 +68,7 @@ function L(t) {
   });
   return null == e ? null : (0, l.jsxs)("div", {
     className: b.popoutCheck,
-    children: [(0, l.jsx)(C.default, {
+    children: [(0, l.jsx)(N.default, {
       className: b.popoutCheckIcon
     }), (0, l.jsx)(u.Text, {
       variant: "text-xs/medium",
@@ -97,7 +97,7 @@ function B(t) {
         className: b.botTag,
         color: r,
         size: 16
-      }) : null != w && (o = (0, l.jsx)(N.default, {
+      }) : null != w && (o = (0, l.jsx)(C.default, {
         className: b.botTag,
         verified: w.isVerifiedBot()
       })), (0, l.jsxs)("div", {

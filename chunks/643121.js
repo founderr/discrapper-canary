@@ -4,8 +4,8 @@ a.r(t), a.d(t, {
     return o
   }
 });
-var l = a("65597"),
-  n = a("845579"),
+var n = a("65597"),
+  l = a("845579"),
   s = a("102985"),
   i = a("697218"),
   r = a("782340");
@@ -13,9 +13,9 @@ let u = "legacy_username";
 
 function o(e) {
   var t;
-  let a = n.LegacyUsernameDisabled.useSetting(),
-    o = (0, l.default)([i.default], () => i.default.getCurrentUser()),
-    c = (0, l.default)([s.default], () => s.default.hidePersonalInformation);
+  let a = l.LegacyUsernameDisabled.useSetting(),
+    o = (0, n.default)([i.default], () => i.default.getCurrentUser()),
+    c = (0, n.default)([s.default], () => s.default.hidePersonalInformation);
   if (null == e) return [];
   let d = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
   return null != o && o.id === e.userId && a && (d = d.filter(e => e.id !== u)), c && (d = d.map(e => ({

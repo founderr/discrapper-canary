@@ -1,65 +1,65 @@
 "use strict";
 n.r(t), n.d(t, {
   BlockedPaymentsContentSettings: function() {
-    return C
+    return A
   },
   BlockedPaymentsContentModal: function() {
     return m
   },
   BlockedPaymentsWarning: function() {
-    return P
+    return p
   }
 });
-var r = n("37983");
+var a = n("37983");
 n("884691");
-var i = n("414456"),
-  s = n.n(i),
-  l = n("669491"),
-  u = n("819855"),
-  a = n("77078"),
+var l = n("414456"),
+  i = n.n(l),
+  r = n("669491"),
+  s = n("819855"),
+  u = n("77078"),
   o = n("841098"),
   c = n("145131"),
   d = n("423487"),
   f = n("701909"),
   I = n("619935"),
   _ = n("49111"),
-  E = n("782340"),
-  S = n("653842"),
-  T = n("584503"),
-  N = n("45656");
+  S = n("782340"),
+  T = n("653842"),
+  P = n("584503"),
+  E = n("45656");
 
-function p(e) {
+function N(e) {
   let {
     className: t
-  } = e, n = (0, o.default)(), i = (0, u.isThemeDark)(n) ? T : N;
-  return (0, r.jsxs)("div", {
-    className: s(S.container, t),
-    children: [(0, r.jsx)(a.Heading, {
-      className: S.header,
+  } = e, n = (0, o.default)(), l = (0, s.isThemeDark)(n) ? P : E;
+  return (0, a.jsxs)("div", {
+    className: i(T.container, t),
+    children: [(0, a.jsx)(u.Heading, {
+      className: T.header,
       variant: "heading-xl/semibold",
-      children: E.default.Messages.REGION_BLOCKED_PAYMENTS_HEADER
-    }), (0, r.jsxs)(a.Text, {
-      className: S.description,
+      children: S.default.Messages.REGION_BLOCKED_PAYMENTS_HEADER
+    }), (0, a.jsxs)(u.Text, {
+      className: T.description,
       variant: "text-md/normal",
       color: "header-secondary",
-      children: [(0, r.jsx)("p", {
-        children: E.default.Messages.REGION_BLOCKED_PAYMENTS_BODY
-      }), (0, r.jsx)("p", {
-        children: E.default.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
+      children: [(0, a.jsx)("p", {
+        children: S.default.Messages.REGION_BLOCKED_PAYMENTS_BODY
+      }), (0, a.jsx)("p", {
+        children: S.default.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
           helpdeskArticle: f.default.getArticleURL(_.HelpdeskArticles.BLOCKED_PAYMENTS)
         })
       })]
-    }), (0, r.jsx)("img", {
-      src: i,
-      className: S.splashImage,
+    }), (0, a.jsx)("img", {
+      src: l,
+      className: T.splashImage,
       alt: "Blocked Payments"
     })]
   })
 }
 
-function C() {
-  return (0, r.jsx)(p, {
-    className: S.settings
+function A() {
+  return (0, a.jsx)(N, {
+    className: T.settings
   })
 }
 
@@ -67,35 +67,35 @@ function m(e) {
   let {
     onClose: t
   } = e;
-  return (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(a.ModalHeader, {
-      className: S.blockedPaymentsModalHeader,
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(u.ModalHeader, {
+      className: T.blockedPaymentsModalHeader,
       justify: c.default.Justify.END,
-      children: (0, r.jsx)(a.ModalCloseButton, {
+      children: (0, a.jsx)(u.ModalCloseButton, {
         onClick: t
       })
-    }), (0, r.jsx)(a.ModalContent, {
-      className: S.blockedPaymentsModalContent,
-      children: (0, r.jsx)(p, {
-        className: S.modal
+    }), (0, a.jsx)(u.ModalContent, {
+      className: T.blockedPaymentsModalContent,
+      children: (0, a.jsx)(N, {
+        className: T.modal
       })
     })]
   })
 }
 
-function P(e) {
+function p(e) {
   let {
     className: t
   } = e, n = (0, I.useBlockedPaymentsConfig)();
-  return n ? (0, r.jsxs)(a.Card, {
-    className: s(S.blockedPaymentsWarning, t),
-    type: a.Card.Types.CUSTOM,
-    children: [(0, r.jsx)(d.default, {
-      className: S.blockedPaymentsWarningIcon,
-      color: l.default.unsafe_rawColors.YELLOW_300.css
-    }), (0, r.jsx)(a.Text, {
+  return n ? (0, a.jsxs)(u.Card, {
+    className: i(T.blockedPaymentsWarning, t),
+    type: u.Card.Types.CUSTOM,
+    children: [(0, a.jsx)(d.default, {
+      className: T.blockedPaymentsWarningIcon,
+      color: r.default.unsafe_rawColors.YELLOW_300.css
+    }), (0, a.jsx)(u.Text, {
       variant: "text-sm/normal",
-      children: E.default.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
+      children: S.default.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
         helpdeskArticle: f.default.getArticleURL(_.HelpdeskArticles.BLOCKED_PAYMENTS)
       })
     })]

@@ -4,15 +4,15 @@ n.r(t), n.d(t, {
     return h
   },
   serializeDescendant: function() {
-    return S
+    return g
   }
 }), n("222007"), n("424973"), n("781738");
 var l = n("627445"),
   i = n.n(l),
-  r = n("679653"),
-  o = n("646630"),
-  s = n("235004"),
-  a = n("42203"),
+  a = n("679653"),
+  s = n("646630"),
+  r = n("235004"),
+  o = n("42203"),
   u = n("305961"),
   d = n("27618"),
   c = n("162771"),
@@ -25,11 +25,11 @@ function h(e, t) {
     mode: n,
     ignoreTrailingEmptyNodes: l,
     preventEmojiSurrogates: i
-  } = null != t ? t : {}, [r, o] = (null == t ? void 0 : t.range) != null ? m.RangeUtils.edges(t.range) : [void 0, void 0];
+  } = null != t ? t : {}, [a, s] = (null == t ? void 0 : t.range) != null ? m.RangeUtils.edges(t.range) : [void 0, void 0];
   return E(e, {
     mode: n,
-    start: r,
-    end: o,
+    start: a,
+    end: s,
     ignoreTrailingEmptyNodes: l,
     preventEmojiSurrogates: i
   })
@@ -39,16 +39,16 @@ function E(e, t) {
   var n, l;
   let {
     mode: i,
-    start: r,
-    end: o,
-    separator: s,
-    ignoreEmptyNodes: a,
+    start: a,
+    end: s,
+    separator: r,
+    ignoreEmptyNodes: o,
     ignoreTrailingEmptyNodes: u,
     preventEmojiSurrogates: d
   } = null != t ? t : {}, c = e.length > 0 && !m.TextUtils.isText(e[0]);
-  null == s && (s = c ? "\n" : "");
-  let f = null !== (n = null == r ? void 0 : r.path[0]) && void 0 !== n ? n : 0,
-    p = null !== (l = null == o ? void 0 : o.path[0]) && void 0 !== l ? l : e.length - 1;
+  null == r && (r = c ? "\n" : "");
+  let f = null !== (n = null == a ? void 0 : a.path[0]) && void 0 !== n ? n : 0,
+    p = null !== (l = null == s ? void 0 : s.path[0]) && void 0 !== l ? l : e.length - 1;
   if (u)
     for (let t = p; t >= f; t--) {
       let n = e[t];
@@ -65,46 +65,46 @@ function E(e, t) {
     }
   let h = f > 0 && m.NodeUtils.isType(e[f - 1], "blockQuote"),
     E = m.NodeUtils.isType(e[f], "blockQuote"),
-    g = m.NodeUtils.isType(e[p], "blockQuote"),
+    S = m.NodeUtils.isType(e[p], "blockQuote"),
     C = [];
   for (let t = f; t <= p; t++) {
     let n = e[t];
-    if (a && m.TextUtils.isText(n) && 0 === n.text.length) continue;
-    let l = null != r && t === f ? {
-        path: r.path.slice(1),
-        offset: r.offset
+    if (o && m.TextUtils.isText(n) && 0 === n.text.length) continue;
+    let l = null != a && t === f ? {
+        path: a.path.slice(1),
+        offset: a.offset
       } : void 0,
-      s = null != o && t === p ? {
-        path: o.path.slice(1),
-        offset: o.offset
+      r = null != s && t === p ? {
+        path: s.path.slice(1),
+        offset: s.offset
       } : void 0,
-      u = null == r || null == o || !h && (!E || g),
-      c = S(n, {
+      u = null == a || null == s || !h && (!E || S),
+      c = g(n, {
         mode: i,
         start: l,
-        end: s,
+        end: r,
         allowBlockQuotePrefix: u,
         preventEmojiSurrogates: d
       });
-    (!a || c.length > 0) && C.push(c)
+    (!o || c.length > 0) && C.push(c)
   }
-  return C.join(s)
+  return C.join(r)
 }
 
-function S(e, t) {
+function g(e, t) {
   let {
     mode: n,
     start: l,
     allowBlockQuotePrefix: h = !1,
-    preventEmojiSurrogates: S = !1
+    preventEmojiSurrogates: g = !1
   } = null != t ? t : {};
   if (m.TextUtils.isText(e)) return function(e, t) {
     var n, l;
     let {
-      start: r,
-      end: o
+      start: a,
+      end: s
     } = null != t ? t : {};
-    return i(null == r || 0 === r.path.length, "Invalid start provided to serializeText"), i(null == o || 0 === o.path.length, "Invalid end provided to serializeText"), e.substring(null !== (n = null == r ? void 0 : r.offset) && void 0 !== n ? n : 0, null !== (l = null == o ? void 0 : o.offset) && void 0 !== l ? l : e.length)
+    return i(null == a || 0 === a.path.length, "Invalid start provided to serializeText"), i(null == s || 0 === s.path.length, "Invalid end provided to serializeText"), e.substring(null !== (n = null == a ? void 0 : a.offset) && void 0 !== n ? n : 0, null !== (l = null == s ? void 0 : s.offset) && void 0 !== l ? l : e.length)
   }(e.text, t);
   switch (e.type) {
     case "line":
@@ -120,7 +120,7 @@ function S(e, t) {
     }
     case "emoji": {
       let t = e.emoji;
-      if (!S && null != t.surrogate) return t.surrogate;
+      if (!g && null != t.surrogate) return t.surrogate;
       return t.name
     }
     case "customEmoji": {
@@ -137,23 +137,23 @@ function S(e, t) {
     case "channelMention": {
       let t = "<#".concat(e.channelId, ">");
       if ("raw" === n) return t;
-      let l = a.default.getChannel(e.channelId);
+      let l = o.default.getChannel(e.channelId);
       if (null == l) return t;
-      return (0, r.computeChannelName)(l, f.default, d.default, !0, !0)
+      return (0, a.computeChannelName)(l, f.default, d.default, !0, !0)
     }
     case "soundboard": {
       let t = "<sound:".concat(e.soundId, ">");
       if ("raw" === n) return t;
-      let l = s.default.getSoundById(e.soundId);
+      let l = r.default.getSoundById(e.soundId);
       if (null == l) return t;
       return l.name
     }
     case "staticRouteLink": {
       let t = "<id:".concat(e.channelId, ">");
       if ("raw" === n) return t;
-      let l = a.default.getChannel(e.channelId);
+      let l = o.default.getChannel(e.channelId);
       if (null == l) return t;
-      return (0, r.computeChannelName)(l, f.default, d.default, !0, !0)
+      return (0, a.computeChannelName)(l, f.default, d.default, !0, !0)
     }
     case "roleMention": {
       let t = "<@&".concat(e.roleId, ">");
@@ -175,7 +175,7 @@ function S(e, t) {
     case "commandMention":
       return "</".concat(e.commandName, ":").concat(e.commandId, ">");
     case "timestamp":
-      return (0, o.unparseTimestamp)(e.parsed.timestamp, e.parsed.format);
+      return (0, s.unparseTimestamp)(e.parsed.timestamp, e.parsed.format);
     case "applicationCommand":
       return E(e.children, {
         ...t,

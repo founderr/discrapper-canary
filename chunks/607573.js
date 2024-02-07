@@ -9,9 +9,9 @@ i.r(t), i.d(t, {
 }), i("781738");
 var l, a, n = i("798609"),
   r = i("685665"),
-  d = i("773336"),
-  u = i("550766"),
-  o = i("191225"),
+  o = i("773336"),
+  d = i("550766"),
+  u = i("191225"),
   c = i("706508"),
   s = i("986214"),
   f = i("575136"),
@@ -38,16 +38,16 @@ function h(e) {
   } = (0, r.default)(), {
     application: T,
     activity: D
-  } = t, I = D.client_platform_config[(0, p.default)((0, d.getOS)())], N = null != I.label_until && Date.now() < Date.parse(I.label_until), C = (0, A.default)({
+  } = t, I = D.client_platform_config[(0, p.default)((0, o.getOS)())], N = null != I.label_until && Date.now() < Date.parse(I.label_until), C = (0, A.default)({
     applicationId: T.id,
     size: S,
     names: y
-  }), P = null != D.activity_preview_video_asset_id ? (0, v.default)(T.id, D.activity_preview_video_asset_id) : null, L = (0, m.default)(), O = (0, b.default)(), M = (0, f.default)(i), x = M.find(e => {
+  }), P = null != D.activity_preview_video_asset_id ? (0, v.default)(T.id, D.activity_preview_video_asset_id) : null, L = (0, m.default)(), O = (0, b.default)(), M = (0, f.default)(i), w = M.find(e => {
     let {
       embeddedActivity: t
     } = e;
     return T.id === t.applicationId
-  }), w = "START", F = () => {
+  }), x = "START", F = () => {
     (0, s.default)({
       activityItem: t,
       currentActivity: O,
@@ -60,8 +60,8 @@ function h(e) {
       applicationId: T.id
     })))
   };
-  null != i && (null == L ? void 0 : L.channelId) === i.id && (null == O ? void 0 : O.id) === T.id ? (w = "LEAVE", F = () => {
-    !o.default.isLaunchingActivity() && ((0, u.stopEmbeddedActivity)({
+  null != i && (null == L ? void 0 : L.channelId) === i.id && (null == O ? void 0 : O.id) === T.id ? (x = "LEAVE", F = () => {
+    !u.default.isLaunchingActivity() && ((0, d.stopEmbeddedActivity)({
       channelId: i.id,
       applicationId: T.id
     }), g.leaveActivity({
@@ -70,9 +70,9 @@ function h(e) {
     }), null == h || h({
       applicationId: T.id
     }))
-  }) : null != x && (w = "JOIN", F = () => {
-    !o.default.isLaunchingActivity() && (0, c.default)({
-      applicationId: x.embeddedActivity.applicationId,
+  }) : null != w && (x = "JOIN", F = () => {
+    !u.default.isLaunchingActivity() && (0, c.default)({
+      applicationId: w.embeddedActivity.applicationId,
       currentEmbeddedApplication: O,
       activityChannelId: null == i ? void 0 : i.id,
       locationObject: a,
@@ -82,14 +82,14 @@ function h(e) {
       applicationId: T.id
     })))
   });
-  let B = t.activity.client_platform_config[(0, p.default)((0, d.getOS)())].release_phase,
+  let B = t.activity.client_platform_config[(0, p.default)((0, o.getOS)())].release_phase,
     U = E.STAFF_RELEASE_PHASES.includes(B),
     W = U ? B.replace("_", " ").replace(/(^\w|\s\w)/g, e => e.toUpperCase()) : void 0;
   return {
     imageBackground: C,
     videoUrl: P,
-    joinableEmbeddedApp: x,
-    activityAction: w,
+    joinableEmbeddedApp: w,
+    activityAction: x,
     onActivityItemSelected: F,
     labelType: N ? I.label_type : n.EmbeddedActivityLabelTypes.NONE,
     staffReleasePhase: W

@@ -1,79 +1,79 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return m
   }
 }), n("222007");
-var i = n("37983"),
-  r = n("884691"),
-  l = n("414456"),
-  a = n.n(l),
-  s = n("917351"),
-  o = n.n(s),
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("917351"),
+  o = n.n(r),
   u = n("77078"),
-  c = n("272030"),
-  d = n("427302"),
+  d = n("272030"),
+  c = n("427302"),
   f = n("158998"),
-  E = n("393724");
+  p = n("393724");
 
-function _(e) {
+function m(e) {
   let {
     className: t,
-    maxUsers: l,
-    users: s,
-    guildId: _,
-    onFocus: S
-  } = e, [h, p] = r.useState(!1);
+    maxUsers: a,
+    users: r,
+    guildId: m,
+    onFocus: h
+  } = e, [E, g] = i.useState(!1);
 
-  function I() {
-    return (0, i.jsx)(u.Dialog, {
-      className: E.popoutWrapper,
-      children: (0, i.jsx)(u.Scroller, {
-        className: E.scroller,
-        children: s.map(e => (0, i.jsx)(d.default, {
-          guildId: _,
+  function S() {
+    return (0, l.jsx)(u.Dialog, {
+      className: p.popoutWrapper,
+      children: (0, l.jsx)(u.Scroller, {
+        className: p.scroller,
+        children: r.map(e => (0, l.jsx)(c.default, {
+          guildId: m,
           user: e,
           nick: f.default.getName(e),
-          onContextMenu: t => (0, c.openContextMenuLazy)(t, async () => {
+          onContextMenu: t => (0, d.openContextMenuLazy)(t, async () => {
             let {
               default: t
             } = await n.el("406784").then(n.bind(n, "406784"));
-            return n => (0, i.jsx)(t, {
+            return n => (0, l.jsx)(t, {
               ...n,
               user: e
             })
           }, {
-            onClose: () => p(!1)
+            onClose: () => g(!1)
           })
         }, e.id))
       })
     })
   }
-  return s.length <= 0 ? null : (0, i.jsx)("div", {
-    className: a(t, E.avatars),
+  return r.length <= 0 ? null : (0, l.jsx)("div", {
+    className: s(t, p.avatars),
     children: function() {
-      let e = o(s).take(l).map(e => {
+      let e = o(r).take(a).map(e => {
           let t = f.default.getName(e);
-          return (0, i.jsx)(u.TooltipContainer, {
+          return (0, l.jsx)(u.TooltipContainer, {
             text: t,
-            className: E.avatar,
-            children: (0, i.jsx)(u.Avatar, {
-              src: e.getAvatarURL(_, 24),
+            className: p.avatar,
+            children: (0, l.jsx)(u.Avatar, {
+              src: e.getAvatarURL(m, 24),
               "aria-label": t,
               size: u.AvatarSizes.SIZE_24
             })
           }, e.id)
         }).value(),
-        t = s.length - l;
-      return t > 0 && (e[e.length - 1] = (0, i.jsx)(u.Popout, {
-        renderPopout: I,
-        shouldShow: h,
+        t = r.length - a;
+      return t > 0 && (e[e.length - 1] = (0, l.jsx)(u.Popout, {
+        renderPopout: S,
+        shouldShow: E,
         position: "bottom",
-        onRequestClose: () => p(!1),
-        children: () => (0, i.jsxs)(u.Button, {
-          className: a(E.avatar, E.overflow),
-          onFocus: S,
-          onClick: () => p(!0),
+        onRequestClose: () => g(!1),
+        children: () => (0, l.jsxs)(u.Button, {
+          className: s(p.avatar, p.overflow),
+          onFocus: h,
+          onClick: () => g(!0),
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
           children: ["+", t + 1]

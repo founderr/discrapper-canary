@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
 var l = n("872717"),
   i = n("913144"),
-  r = n("318981"),
-  o = n("49111"),
-  s = {
+  a = n("318981"),
+  s = n("49111"),
+  r = {
     search(e, t) {
-      null == r.default.getResults(e, t) && (i.default.dispatch({
+      null == a.default.getResults(e, t) && (i.default.dispatch({
         type: "INTEGRATION_QUERY",
         integration: e,
         query: t
       }), l.default.get({
-        url: o.Endpoints.INTEGRATION_SEARCH("tenor"),
+        url: s.Endpoints.INTEGRATION_SEARCH("tenor"),
         query: {
           q: t
         },

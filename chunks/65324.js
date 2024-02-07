@@ -5,11 +5,11 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("70102");
 var r = n("37983"),
-  i = n("884691"),
-  s = n("446674"),
-  l = n("206230"),
-  u = n("491605"),
-  a = n("210721"),
+  u = n("884691"),
+  i = n("446674"),
+  a = n("206230"),
+  l = n("491605"),
+  s = n("210721"),
   o = n("646718");
 
 function c(e) {
@@ -19,33 +19,33 @@ function c(e) {
     shouldAnimate: c = !0,
     defaultAnimationState: d,
     idleAnimationState: f
-  } = e, I = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion), [_, E] = i.useState(d), S = i.useRef((0, a.getGiftAnimationData)(t, _)), [T, N] = i.useState(null == f), [p, C] = i.useState(!1), [m, P] = i.useState(-1), h = () => {
-    S.current = (0, a.getGiftAnimationData)(t, _), P(e => e + 1)
-  }, R = () => {
-    N(!1), C(!0), P(-1), E(d)
+  } = e, p = (0, i.useStateFromStores)([a.default], () => a.default.useReducedMotion), [P, S] = u.useState(d), h = u.useRef((0, s.getGiftAnimationData)(t, P)), [m, x] = u.useState(null == f), [C, I] = u.useState(!1), [E, v] = u.useState(-1), g = () => {
+    h.current = (0, s.getGiftAnimationData)(t, P), v(e => e + 1)
+  }, T = () => {
+    x(!1), I(!0), v(-1), S(d)
   };
-  i.useEffect(() => {
-    null == f && E(d)
-  }, [f, d]), i.useEffect(() => {
-    if (null != f && m >= 0) {
-      R();
+  u.useEffect(() => {
+    null == f && S(d)
+  }, [f, d]), u.useEffect(() => {
+    if (null != f && E >= 0) {
+      T();
       return
     }
-    h()
-  }, [t, f]), i.useEffect(() => {
-    (!p || null == f) && h()
-  }, [_]), i.useEffect(() => {
-    p && (N(null == f), C(!1), h())
-  }, [p]);
+    g()
+  }, [t, f]), u.useEffect(() => {
+    (!C || null == f) && g()
+  }, [P]), u.useEffect(() => {
+    C && (x(null == f), I(!1), g())
+  }, [C]);
   if (!o.PremiumGiftStyles.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
-  return (0, r.jsx)(u.default, {
-    importData: S.current,
-    shouldAnimate: !I && c,
+  return (0, r.jsx)(l.default, {
+    importData: h.current,
+    shouldAnimate: !p && c,
     className: n,
-    versionKey: m,
+    versionKey: E,
     onComplete: null != f ? () => {
-      null != f && (E(f), N(!0))
+      null != f && (S(f), x(!0))
     } : void 0,
-    loop: T
+    loop: m
   })
 }

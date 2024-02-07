@@ -1,64 +1,64 @@
 "use strict";
 n.r(t), n.d(t, {
   HelpMessageTypes: function() {
-    return u
+    return r
   },
   default: function() {
-    return _
+    return p
   }
 });
-var l, u, a = n("37983");
+var i, r, l = n("37983");
 n("884691");
-var i = n("414456"),
-  d = n.n(i),
-  r = n("77078"),
-  s = n("36694"),
-  o = n("381546"),
-  c = n("68238"),
-  E = n("423487"),
-  f = n("557296");
-(l = u || (u = {}))[l.WARNING = 0] = "WARNING", l[l.INFO = 1] = "INFO", l[l.ERROR = 2] = "ERROR", l[l.POSITIVE = 3] = "POSITIVE";
-var _ = function(e) {
+var s = n("414456"),
+  a = n.n(s),
+  o = n("77078"),
+  u = n("36694"),
+  c = n("381546"),
+  d = n("68238"),
+  f = n("423487"),
+  h = n("557296");
+(i = r || (r = {}))[i.WARNING = 0] = "WARNING", i[i.INFO = 1] = "INFO", i[i.ERROR = 2] = "ERROR", i[i.POSITIVE = 3] = "POSITIVE";
+var p = function(e) {
   let {
     children: t,
     messageType: n,
-    className: l,
-    textColor: u = "text-normal",
-    textVariant: i = "text-sm/medium"
-  } = e, _ = function(e) {
+    className: i,
+    textColor: r = "text-normal",
+    textVariant: s = "text-sm/medium"
+  } = e, p = function(e) {
     switch (e) {
       case 0:
-        return E.default;
+        return f.default;
       case 1:
+        return d.default;
+      case 2:
         return c.default;
-      case 2:
-        return o.default;
       case 3:
-        return s.default
+        return u.default
     }
-  }(n), T = function(e) {
+  }(n), C = function(e) {
     switch (e) {
       case 0:
-        return f.warning;
+        return h.warning;
       case 1:
-        return f.info;
+        return h.info;
       case 2:
-        return f.error;
+        return h.error;
       case 3:
-        return f.positive
+        return h.positive
     }
   }(n);
-  return (0, a.jsxs)("div", {
-    className: d(f.container, T, l),
-    children: [(0, a.jsx)("div", {
-      className: f.iconDiv,
-      children: (0, a.jsx)(_, {
-        className: f.icon
+  return (0, l.jsxs)("div", {
+    className: a(h.container, C, i),
+    children: [(0, l.jsx)("div", {
+      className: h.iconDiv,
+      children: (0, l.jsx)(p, {
+        className: h.icon
       })
-    }), (0, a.jsx)(r.Text, {
-      className: f.text,
-      color: u,
-      variant: i,
+    }), (0, l.jsx)(o.Text, {
+      className: h.text,
+      color: r,
+      variant: s,
       children: t
     })]
   })

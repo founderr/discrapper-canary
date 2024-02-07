@@ -1,43 +1,43 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   usePrivateChannelIntegrationState: function() {
-    return o
+    return d
   }
 }), n("222007");
 var i = n("884691"),
-  a = n("446674"),
-  l = n("201155"),
+  u = n("446674"),
+  a = n("201155"),
   r = n("21121"),
-  s = n("970755"),
-  u = n("140596");
+  l = n("970755"),
+  o = n("140596");
 
-function o(e) {
+function d(t) {
   let {
-    channelId: t
-  } = e;
+    channelId: e
+  } = t;
   (0, r.useInMainTabsExperiment)();
-  let n = (0, l.useShowApplicationInGDM)(t),
+  let n = (0, a.useShowApplicationInGDM)(e),
     {
-      installedIntegrations: o,
-      applicationsShelf: d,
-      integrationsFetchState: c,
-      applicationsShelfFetchState: E
-    } = (0, a.useStateFromStoresObject)([u.default], () => ({
-      installedIntegrations: u.default.getIntegrations(t),
-      applicationsShelf: u.default.getApplicationsShelf(),
-      integrationsFetchState: u.default.getIntegrationsFetchState(t),
-      applicationsShelfFetchState: u.default.getApplicationsShelfFetchState()
+      installedIntegrations: d,
+      applicationsShelf: s,
+      integrationsFetchState: E,
+      applicationsShelfFetchState: c
+    } = (0, u.useStateFromStoresObject)([o.default], () => ({
+      installedIntegrations: o.default.getIntegrations(e),
+      applicationsShelf: o.default.getApplicationsShelf(),
+      integrationsFetchState: o.default.getIntegrationsFetchState(e),
+      applicationsShelfFetchState: o.default.getApplicationsShelfFetchState()
     }));
   i.useEffect(() => {
-    n && ((c === u.FetchState.NOT_FETCHED || c === u.FetchState.FETCH_FAILED) && (0, s.fetchPrivateChannelIntegrations)(t), (E === u.FetchState.NOT_FETCHED || E === u.FetchState.FETCH_FAILED) && (0, s.fetchApplicationsShelf)())
-  }, [n, t, c, E]);
-  let _ = new Set(o.map(e => e.application.id)),
-    I = d.filter(e => !_.has(e.id));
+    n && ((E === o.FetchState.NOT_FETCHED || E === o.FetchState.FETCH_FAILED) && (0, l.fetchPrivateChannelIntegrations)(e), (c === o.FetchState.NOT_FETCHED || c === o.FetchState.FETCH_FAILED) && (0, l.fetchApplicationsShelf)())
+  }, [n, e, E, c]);
+  let _ = new Set(d.map(t => t.application.id)),
+    T = s.filter(t => !_.has(t.id));
   return {
-    installedIntegrations: o,
-    availableApplications: I,
-    applicationsShelf: d,
-    fetched: c !== u.FetchState.NOT_FETCHED && c !== u.FetchState.FETCHING && E !== u.FetchState.NOT_FETCHED && E !== u.FetchState.FETCHING,
+    installedIntegrations: d,
+    availableApplications: T,
+    applicationsShelf: s,
+    fetched: E !== o.FetchState.NOT_FETCHED && E !== o.FetchState.FETCHING && c !== o.FetchState.NOT_FETCHED && c !== o.FetchState.FETCHING,
     appsInGDMEnabled: n
   }
 }

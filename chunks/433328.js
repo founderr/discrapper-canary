@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 }), n("222007");
 var l = n("37983"),
   i = n("884691"),
-  r = n("669491"),
-  o = n("75196");
-let s = "currentColor",
-  a = new Map([
+  a = n("669491"),
+  s = n("75196");
+let r = "currentColor",
+  o = new Map([
     ["url(#birthday_gradient_1)", "url(#birthday_secondary_gradient_1)"],
     ["url(#birthday_gradient_2)", "url(#birthday_secondary_gradient_2)"],
     ["url(#birthday_gradient_3)", "url(#birthday_secondary_gradient_3)"]
@@ -69,10 +69,10 @@ let s = "currentColor",
     })
   },
   f = (e, t, n, l, i) => {
-    if (!t || l) return e ? "url(#nitro_hover)" : s;
-    let r = n ? [...u.keys()].filter(e => e !== i) : [...a.keys()].filter(e => e !== i),
-      o = Math.floor(Math.random() * r.length);
-    return r[o]
+    if (!t || l) return e ? "url(#nitro_hover)" : r;
+    let a = n ? [...u.keys()].filter(e => e !== i) : [...o.keys()].filter(e => e !== i),
+      s = Math.floor(Math.random() * a.length);
+    return a[s]
   };
 
 function p(e) {
@@ -84,21 +84,21 @@ function p(e) {
     isResending: m,
     hovered: h,
     shouldShowBirthdayUX: E,
-    isLightTheme: S,
-    ...g
-  } = e, [C, T] = i.useState(s), v = null !== (t = a.get(C)) && void 0 !== t ? t : null;
+    isLightTheme: g,
+    ...S
+  } = e, [C, T] = i.useState(r), v = null !== (t = o.get(C)) && void 0 !== t ? t : null;
   return i.useEffect(() => {
-    h ? T(e => f(h, E, S, m, e)) : m && T(s)
-  }, [h, E, S, m]), (0, l.jsxs)("svg", {
+    h ? T(e => f(h, E, g, m, e)) : m && T(r)
+  }, [h, E, g, m]), (0, l.jsxs)("svg", {
     width: n,
     height: u,
-    ...(0, o.default)(g),
+    ...(0, s.default)(S),
     xmlns: "http://www.w3.org/2000/svg",
     children: [m ? (0, l.jsx)(c, {
       fillColor: C
     }) : (0, l.jsx)(d, {
       referralsRemaining: p,
-      fillColor: h ? C : s,
+      fillColor: h ? C : r,
       secondaryFillColor: h ? v : null
     }), (0, l.jsxs)("defs", {
       children: [(0, l.jsxs)("linearGradient", {
@@ -109,10 +109,10 @@ function p(e) {
         y2: "11.8026",
         gradientUnits: "userSpaceOnUse",
         children: [(0, l.jsx)("stop", {
-          stopColor: r.default.unsafe_rawColors.PREMIUM_TIER_2_PURPLE.css
+          stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_2_PURPLE.css
         }), (0, l.jsx)("stop", {
           offset: "1",
-          stopColor: r.default.unsafe_rawColors.PREMIUM_TIER_2_PINK.css
+          stopColor: a.default.unsafe_rawColors.PREMIUM_TIER_2_PINK.css
         })]
       }), (0, l.jsxs)("linearGradient", {
         id: "birthday_gradient_1",

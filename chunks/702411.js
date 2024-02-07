@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 }), n("222007");
 var r = n("884691"),
@@ -9,26 +9,26 @@ var r = n("884691"),
   s = n("872717"),
   a = n("913144"),
   l = n("716241"),
-  u = n("305961"),
-  o = n("957255"),
+  o = n("305961"),
+  u = n("957255"),
   c = n("599110"),
   d = n("718517"),
   f = n("15639"),
   p = n("49111");
 let _ = 1 * d.default.Millis.DAY,
-  m = new Map;
-var E = {
+  E = new Map;
+var m = {
   useShouldShowChannelNotice(e) {
-    let t = (0, i.default)([u.default, o.default], () => {
-      let t = u.default.getGuild(e);
-      return null != t && o.default.can(p.Permissions.ADMINISTRATOR, t)
+    let t = (0, i.default)([o.default, u.default], () => {
+      let t = o.default.getGuild(e);
+      return null != t && u.default.can(p.Permissions.ADMINISTRATOR, t)
     });
     r.useEffect(() => {
       t && ! function(e) {
         var t;
         let n = Date.now(),
-          r = null !== (t = m.get(e)) && void 0 !== t ? t : 0;
-        !(n < r + _) && (m.set(e, n), s.default.post({
+          r = null !== (t = E.get(e)) && void 0 !== t ? t : 0;
+        !(n < r + _) && (E.set(e, n), s.default.post({
           url: p.Endpoints.GUILD_MIGRATE_COMMAND_SCOPE(e)
         }).then(t => {
           var n, r;
@@ -38,7 +38,7 @@ var E = {
             integrationIdsWithAppCommands: null !== (r = null === (n = t.body) || void 0 === n ? void 0 : n.integration_ids_with_app_commands) && void 0 !== r ? r : []
           })
         }, () => {
-          m.set(e, r)
+          E.set(e, r)
         }))
       }(e)
     }, [e, t]);

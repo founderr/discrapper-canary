@@ -1,54 +1,54 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
-var i = n("37983");
+var l = n("37983");
 n("884691");
-var a = n("414456"),
-  l = n.n(a),
-  r = n("83910"),
-  s = n("93393"),
-  u = n("317041"),
-  o = n("749296");
-let d = e => {
+var i = n("414456"),
+  o = n.n(i),
+  a = n("83910"),
+  r = n("93393"),
+  s = n("317041"),
+  u = n("749296");
+let c = e => {
   switch (e.id) {
-    case u.BuiltInSectionId.BUILT_IN:
+    case s.BuiltInSectionId.BUILT_IN:
+      return a.default;
+    case s.BuiltInSectionId.FRECENCY:
       return r.default;
-    case u.BuiltInSectionId.FRECENCY:
-      return s.default;
     default:
       return
   }
 };
 
-function c(e) {
+function d(e) {
   let {
     section: t,
     className: n,
-    width: a,
-    height: r,
-    padding: s,
-    isSelected: u,
-    selectable: c = !1,
-    ...E
-  } = e, _ = d(t);
-  return (0, i.jsx)("div", {
-    className: l(o.wrapper, n, {
-      [o.selectable]: c,
-      [o.selected]: c && u
+    width: i,
+    height: a,
+    padding: r,
+    isSelected: s,
+    selectable: d = !1,
+    ...p
+  } = e, m = c(t);
+  return (0, l.jsx)("div", {
+    className: o(u.wrapper, n, {
+      [u.selectable]: d,
+      [u.selected]: d && s
     }),
     style: {
-      width: a,
-      height: r,
-      padding: null != s ? s : 0
+      width: i,
+      height: a,
+      padding: null != r ? r : 0
     },
-    children: null != _ ? (0, i.jsx)(_, {
-      className: o.icon,
-      width: a,
-      height: r,
-      ...E
+    children: null != m ? (0, l.jsx)(m, {
+      className: u.icon,
+      width: i,
+      height: a,
+      ...p
     }) : null
   })
 }

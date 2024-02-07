@@ -8,7 +8,7 @@ var i = n("872717"),
   r = n("913144"),
   l = n("568734"),
   s = n("299285"),
-  u = n("49111"),
+  a = n("49111"),
   o = {
     async createApplication(e) {
       let {
@@ -17,25 +17,25 @@ var i = n("872717"),
         type: l,
         teamId: s
       } = e, o = await i.default.post({
-        url: u.Endpoints.APPLICATIONS,
+        url: a.Endpoints.APPLICATIONS,
         body: {
           name: t,
           type: l,
           guild_id: n,
           team_id: s
         }
-      }), a = o.body;
+      }), u = o.body;
       return null != n && null != l && r.default.dispatch({
         type: "APPLICATION_FETCH_SUCCESS",
-        application: a
-      }), a
+        application: u
+      }), u
     },
     async getApplicationsForGuild(e) {
       let {
         includeTeam: t,
         ...n
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, l = await i.default.get({
-        url: u.Endpoints.GUILD_APPLICATIONS(e),
+        url: a.Endpoints.GUILD_APPLICATIONS(e),
         query: {
           ...n,
           include_team: t
@@ -51,7 +51,7 @@ var i = n("872717"),
         applicationId: t,
         teamId: n
       } = e, l = await i.default.post({
-        url: u.Endpoints.APPLICATION_OWNER_TRANSFER(t),
+        url: a.Endpoints.APPLICATION_OWNER_TRANSFER(t),
         body: {
           team_id: n
         }
@@ -67,7 +67,7 @@ var i = n("872717"),
       if (!t && (n = e.filter(e => {
           var t, n;
           let i = s.default.getApplication(e),
-            r = (0, l.hasFlag)(null !== (n = null == i ? void 0 : i.flags) && void 0 !== n ? n : 0, u.ApplicationFlags.EMBEDDED),
+            r = (0, l.hasFlag)(null !== (n = null == i ? void 0 : i.flags) && void 0 !== n ? n : 0, a.ApplicationFlags.EMBEDDED),
             o = r && (null == i ? void 0 : null === (t = i.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null;
           return !(null != i && !o) && !s.default.isFetchingApplication(e) && !s.default.didFetchingApplicationFail(e) && e.length > 0
         })), n.length > 0) {
@@ -78,7 +78,7 @@ var i = n("872717"),
         });
         try {
           e = await i.default.get({
-            url: u.Endpoints.APPLICATIONS_PUBLIC,
+            url: a.Endpoints.APPLICATIONS_PUBLIC,
             query: new URLSearchParams(n.map(e => ["application_ids", e])).toString(),
             oldFormErrors: !0
           })
@@ -100,7 +100,7 @@ var i = n("872717"),
         type: "APPLICATION_FETCH",
         applicationId: e
       }), i.default.get({
-        url: u.Endpoints.APPLICATION_PUBLIC(e),
+        url: a.Endpoints.APPLICATION_PUBLIC(e),
         query: {
           with_guild: t
         },

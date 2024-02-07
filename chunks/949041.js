@@ -1,39 +1,39 @@
 "use strict";
-r.r(e), r.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return a
   }
-}), r("70102");
-var n = r("884691");
+}), n("70102");
+var i = n("884691");
 
-function i() {
-  let t = (0, n.createContext)(void 0);
+function a() {
+  let e = (0, i.createContext)(void 0);
   return {
-    Provider: e => {
+    Provider: t => {
       let {
-        initialStore: r,
-        createStore: i,
-        children: a
-      } = e, s = (0, n.useRef)();
-      return !s.current && (r && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !i && (i = () => r)), s.current = i()), (0, n.createElement)(t.Provider, {
+        initialStore: n,
+        createStore: a,
+        children: r
+      } = t, s = (0, i.useRef)();
+      return !s.current && (n && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !a && (a = () => n)), s.current = a()), (0, i.createElement)(e.Provider, {
         value: s.current
-      }, a)
+      }, r)
     },
-    useStore: function(e) {
-      let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.is,
-        i = (0, n.useContext)(t);
-      if (!i) throw Error("Seems like you have not used zustand provider as an ancestor.");
-      return i(e, r)
+    useStore: function(t) {
+      let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.is,
+        a = (0, i.useContext)(e);
+      if (!a) throw Error("Seems like you have not used zustand provider as an ancestor.");
+      return a(t, n)
     },
     useStoreApi: () => {
-      let e = (0, n.useContext)(t);
-      if (!e) throw Error("Seems like you have not used zustand provider as an ancestor.");
-      return (0, n.useMemo)(() => ({
-        getState: e.getState,
-        setState: e.setState,
-        subscribe: e.subscribe,
-        destroy: e.destroy
-      }), [e])
+      let t = (0, i.useContext)(e);
+      if (!t) throw Error("Seems like you have not used zustand provider as an ancestor.");
+      return (0, i.useMemo)(() => ({
+        getState: t.getState,
+        setState: t.setState,
+        subscribe: t.subscribe,
+        destroy: t.destroy
+      }), [t])
     }
   }
 }

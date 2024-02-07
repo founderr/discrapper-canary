@@ -25,57 +25,57 @@ n.r(t), n.d(t, {
     return A
   },
   tokenizeQuery: function() {
-    return y
-  },
-  clearTokenCache: function() {
-    return I
-  },
-  showDatePicker: function() {
     return N
   },
+  clearTokenCache: function() {
+    return g
+  },
+  showDatePicker: function() {
+    return y
+  },
   filterHasAnswer: function() {
-    return F
+    return M
   },
   refreshSearchTokens: function() {
-    return L
+    return F
   }
 }), n("222007"), n("808653");
 var a = n("917351"),
   r = n.n(a),
-  l = n("76385"),
-  s = n("955513"),
+  s = n("76385"),
+  l = n("955513"),
   u = n("247013"),
   o = n("697218"),
   E = n("299039"),
-  c = n("49111"),
-  i = n("782340");
+  i = n("49111"),
+  c = n("782340");
 
 function T(e) {
   switch (e) {
-    case c.SearchTokenTypes.FILTER_FROM:
-      return i.default.Messages.SEARCH_ANSWER_FROM;
-    case c.SearchTokenTypes.FILTER_MENTIONS:
-      return i.default.Messages.SEARCH_ANSWER_MENTIONS;
-    case c.SearchTokenTypes.FILTER_HAS:
-      return i.default.Messages.SEARCH_ANSWER_HAS;
-    case c.SearchTokenTypes.FILTER_BEFORE:
-    case c.SearchTokenTypes.FILTER_ON:
-    case c.SearchTokenTypes.FILTER_AFTER:
-      return i.default.Messages.SEARCH_ANSWER_DATE;
-    case c.SearchTokenTypes.FILTER_IN:
-      return i.default.Messages.SEARCH_ANSWER_IN;
-    case c.SearchTokenTypes.FILTER_FILE_TYPE:
-      return i.default.Messages.SEARCH_ANSWER_FILE_TYPE;
-    case c.SearchTokenTypes.FILTER_FILE_NAME:
-      return i.default.Messages.SEARCH_ANSWER_FILE_NAME;
-    case c.SearchTokenTypes.FILTER_PINNED:
-      return i.default.Messages.SEARCH_ANSWER_BOOLEAN
+    case i.SearchTokenTypes.FILTER_FROM:
+      return c.default.Messages.SEARCH_ANSWER_FROM;
+    case i.SearchTokenTypes.FILTER_MENTIONS:
+      return c.default.Messages.SEARCH_ANSWER_MENTIONS;
+    case i.SearchTokenTypes.FILTER_HAS:
+      return c.default.Messages.SEARCH_ANSWER_HAS;
+    case i.SearchTokenTypes.FILTER_BEFORE:
+    case i.SearchTokenTypes.FILTER_ON:
+    case i.SearchTokenTypes.FILTER_AFTER:
+      return c.default.Messages.SEARCH_ANSWER_DATE;
+    case i.SearchTokenTypes.FILTER_IN:
+      return c.default.Messages.SEARCH_ANSWER_IN;
+    case i.SearchTokenTypes.FILTER_FILE_TYPE:
+      return c.default.Messages.SEARCH_ANSWER_FILE_TYPE;
+    case i.SearchTokenTypes.FILTER_FILE_NAME:
+      return c.default.Messages.SEARCH_ANSWER_FILE_NAME;
+    case i.SearchTokenTypes.FILTER_PINNED:
+      return c.default.Messages.SEARCH_ANSWER_BOOLEAN
   }
 }
 let _ = {
-  [c.SearchTokenTypes.FILTER_BEFORE]: !0,
-  [c.SearchTokenTypes.FILTER_AFTER]: !0,
-  [c.SearchTokenTypes.FILTER_ON]: !0
+  [i.SearchTokenTypes.FILTER_BEFORE]: !0,
+  [i.SearchTokenTypes.FILTER_AFTER]: !0,
+  [i.SearchTokenTypes.FILTER_ON]: !0
 };
 
 function f(e, t) {
@@ -91,39 +91,39 @@ function d(e) {
       let {
         type: n
       } = e;
-      if (c.IS_SEARCH_FILTER_TOKEN.test(n)) return;
+      if (i.IS_SEARCH_FILTER_TOKEN.test(n)) return;
       switch (n) {
-        case c.SearchTokenTypes.ANSWER_BEFORE:
-        case c.SearchTokenTypes.ANSWER_ON:
-        case c.SearchTokenTypes.ANSWER_AFTER:
+        case i.SearchTokenTypes.ANSWER_BEFORE:
+        case i.SearchTokenTypes.ANSWER_ON:
+        case i.SearchTokenTypes.ANSWER_AFTER:
           let a = e.getData("start"),
             r = e.getData("end");
           a && (t.min_id = E.default.fromTimestamp(a)), r && (t.max_id = E.default.fromTimestamp(r));
           return
       }
-      let l = function(e) {
-        let t = s.default[e],
+      let s = function(e) {
+        let t = l.default[e],
           n = null != t ? t.queryKey : null;
         return null == n && (n = "content"), n
       }(n);
-      null == t[l] && (t[l] = new Set);
-      let u = t[l];
+      null == t[s] && (t[s] = new Set);
+      let u = t[s];
       switch (n) {
-        case c.SearchTokenTypes.ANSWER_USERNAME_FROM:
-        case c.SearchTokenTypes.ANSWER_USERNAME_MENTIONS:
+        case i.SearchTokenTypes.ANSWER_USERNAME_FROM:
+        case i.SearchTokenTypes.ANSWER_USERNAME_MENTIONS:
           u.add(e.getData("userId"));
           break;
-        case c.SearchTokenTypes.ANSWER_FILE_TYPE:
-        case c.SearchTokenTypes.ANSWER_FILE_NAME:
+        case i.SearchTokenTypes.ANSWER_FILE_TYPE:
+        case i.SearchTokenTypes.ANSWER_FILE_NAME:
           u.add(e.getMatch(1));
           break;
-        case c.SearchTokenTypes.ANSWER_IN:
+        case i.SearchTokenTypes.ANSWER_IN:
           u.add(e.getData("channel").id);
           break;
-        case c.SearchTokenTypes.ANSWER_HAS:
+        case i.SearchTokenTypes.ANSWER_HAS:
           u.add(e.getData("has"));
           break;
-        case c.SearchTokenTypes.ANSWER_PINNED:
+        case i.SearchTokenTypes.ANSWER_PINNED:
           u.add(e.getData("pinned"));
           break;
         default:
@@ -135,10 +135,10 @@ function d(e) {
 
 function R(e, t, n) {
   let a, r;
-  let l = e.find((l, s) => t >= l.start && t <= l.end && n >= l.start && n <= l.end ? (null != e[s + 1] && (r = e[s + 1]), !0) : (a = l, !1));
-  return null == l ? null : {
+  let s = e.find((s, l) => t >= s.start && t <= s.end && n >= s.start && n <= s.end ? (null != e[l + 1] && (r = e[l + 1]), !0) : (a = s, !1));
+  return null == s ? null : {
     previousToken: a,
-    currentToken: l,
+    currentToken: s,
     nextToken: r,
     focusOffset: t,
     anchorOffset: n
@@ -151,36 +151,36 @@ function S(e, t) {
   let {
     currentToken: a,
     nextToken: r,
-    previousToken: s
+    previousToken: l
   } = e;
   if (0 === t.length) return {
-    type: c.SearchPopoutModes.EMPTY,
+    type: i.SearchPopoutModes.EMPTY,
     filter: null,
     token: null
   };
   if (null == a) return {
-    type: c.SearchPopoutModes.FILTER_ALL,
+    type: i.SearchPopoutModes.FILTER_ALL,
     filter: null,
     token: null
   };
-  if (c.IS_SEARCH_FILTER_TOKEN.test(a.type)) {
-    if (null == r || r.type === l.default.NON_TOKEN_TYPE) return {
-      type: c.SearchPopoutModes.FILTER,
+  if (i.IS_SEARCH_FILTER_TOKEN.test(a.type)) {
+    if (null == r || r.type === s.default.NON_TOKEN_TYPE) return {
+      type: i.SearchPopoutModes.FILTER,
       filter: a.type,
       token: r
     };
-    if (null != r && !c.IS_SEARCH_ANSWER_TOKEN.test(r.type)) return {
-      type: c.SearchPopoutModes.FILTER,
+    if (null != r && !i.IS_SEARCH_ANSWER_TOKEN.test(r.type)) return {
+      type: i.SearchPopoutModes.FILTER,
       filter: a.type,
       token: null
     }
   }
-  return a.type === l.default.NON_TOKEN_TYPE && null != s && c.IS_SEARCH_FILTER_TOKEN.test(s.type) ? {
-    type: c.SearchPopoutModes.FILTER,
-    filter: s.type,
+  return a.type === s.default.NON_TOKEN_TYPE && null != l && i.IS_SEARCH_FILTER_TOKEN.test(l.type) ? {
+    type: i.SearchPopoutModes.FILTER,
+    filter: l.type,
     token: a
-  } : (a.type === l.default.NON_TOKEN_TYPE && (n = a), {
-    type: c.SearchPopoutModes.FILTER_ALL,
+  } : (a.type === s.default.NON_TOKEN_TYPE && (n = a), {
+    type: i.SearchPopoutModes.FILTER_ALL,
     filter: null,
     token: n
   })
@@ -193,10 +193,10 @@ function h(e, t) {
     let a = e.group;
     n = n.concat(e.results.map(e => {
       let n = e.text;
-      if (t === c.SearchPopoutModes.FILTER_ALL) {
+      if (t === i.SearchPopoutModes.FILTER_ALL) {
         var r;
         a = null !== (r = e.group) && void 0 !== r ? r : a;
-        let t = s.default[a];
+        let t = l.default[a];
         (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== "" && (n = "".concat(t.key, " ").concat(n))
       }
       return n
@@ -211,27 +211,27 @@ function p(e) {
 function A(e) {
   return null == e ? "" : e.map(e => e.getFullMatch()).join("")
 }
-let g = new l.default;
-
-function y(e) {
-  return g.tokenize(e)
-}
-
-function I() {
-  return g.clearCache()
-}
+let I = new s.default;
 
 function N(e) {
+  return I.tokenize(e)
+}
+
+function g() {
+  return I.clearCache()
+}
+
+function y(e) {
   return null != e ? _[e] : null
 }
 
-function F(e, t) {
-  let n = c.IS_SEARCH_FILTER_TOKEN.test(e.type);
-  return (null != t || !n) && (null == t || !n || !!c.IS_SEARCH_ANSWER_TOKEN.test(t.type)) && !0
+function M(e, t) {
+  let n = i.IS_SEARCH_FILTER_TOKEN.test(e.type);
+  return (null != t || !n) && (null == t || !n || !!i.IS_SEARCH_ANSWER_TOKEN.test(t.type)) && !0
 }
 
-function L() {
-  (0, s.refreshSearchTokens)(), g.reset(), r(s.default).forOwn((e, t) => g.addRule({
+function F() {
+  (0, l.refreshSearchTokens)(), I.reset(), r(l.default).forOwn((e, t) => I.addRule({
     type: t,
     ...e
   }))

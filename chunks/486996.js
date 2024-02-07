@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return m
   }
 });
-var a = n("446674"),
-  l = n("913144"),
+var l = n("446674"),
+  a = n("913144"),
   r = n("267567"),
   i = n("166257"),
   o = n("766274"),
@@ -14,9 +14,9 @@ var a = n("446674"),
 let c = {};
 class d {
   static ensure(e, t, n) {
-    var a, l;
-    let r = "".concat(e, ":").concat(t.name, ":").concat(null !== (a = t.id) && void 0 !== a ? a : "", ":").concat(n);
-    return c[r] = null !== (l = c[r]) && void 0 !== l ? l : new d
+    var l, a;
+    let r = "".concat(e, ":").concat(t.name, ":").concat(null !== (l = t.id) && void 0 !== l ? l : "", ":").concat(n);
+    return c[r] = null !== (a = c[r]) && void 0 !== a ? a : new d
   }
   constructor() {
     this.fetched = !1, this.users = {}
@@ -27,18 +27,18 @@ function f(e) {
   let {
     type: t,
     messageId: n,
-    userId: a,
-    emoji: l,
+    userId: l,
+    emoji: a,
     reactionType: r
-  } = e, i = d.ensure(n, l, r);
+  } = e, i = d.ensure(n, a, r);
   if ("MESSAGE_REACTION_ADD" === t) {
-    let e = u.default.getUser(a);
-    null != e && (i.users[a] = e)
-  } else delete i.users[a]
+    let e = u.default.getUser(l);
+    null != e && (i.users[l] = e)
+  } else delete i.users[l]
 }
-class R extends a.default.Store {
-  getReactions(e, t, n, a, l) {
-    let o = d.ensure(t, n, l);
+class h extends l.default.Store {
+  getReactions(e, t, n, l, a) {
+    let o = d.ensure(t, n, a);
     if (!o.fetched) {
       let u = s.default.getChannel(e),
         c = null != u ? u.getGuildId() : null;
@@ -47,15 +47,15 @@ class R extends a.default.Store {
         channelId: e,
         messageId: t,
         emoji: n,
-        limit: a,
-        type: l
+        limit: l,
+        type: a
       }), o.fetched = !0
     }
     return o.users
   }
 }
-R.displayName = "MessageReactionsStore";
-var m = new R(l.default, {
+h.displayName = "MessageReactionsStore";
+var m = new h(a.default, {
   CONNECTION_OPEN: function() {
     c = {}
   },
@@ -65,9 +65,9 @@ var m = new R(l.default, {
     let {
       messageId: t,
       users: n,
-      emoji: a,
-      reactionType: l
-    } = e, r = d.ensure(t, a, l);
+      emoji: l,
+      reactionType: a
+    } = e, r = d.ensure(t, l, a);
     n.forEach(e => r.users[e.id] = new o.default(e))
   }
 })

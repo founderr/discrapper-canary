@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   UsagePill: function() {
-    return p
+    return T
   },
   default: function() {
-    return T
+    return p
   }
 });
 var s = n("37983");
 n("884691");
 var a = n("414456"),
-  r = n.n(a),
-  l = n("77078"),
+  l = n.n(a),
+  r = n("77078"),
   i = n("931138"),
   o = n("124969"),
   u = n("486952"),
@@ -47,21 +47,21 @@ function m(e) {
   })
 }
 
-function p(e) {
+function T(e) {
   let {
     className: t,
     count: n,
     creator: a,
-    verifiedName: l
+    verifiedName: r
   } = e;
   return (0, s.jsx)("div", {
-    className: r(_.usagePill, t, _.userText),
-    children: null != a || null != l ? f.default.Messages.GUILD_TEMPLATE_USAGES_BY_CREATOR2.format({
+    className: l(_.usagePill, t, _.userText),
+    children: null != a || null != r ? f.default.Messages.GUILD_TEMPLATE_USAGES_BY_CREATOR2.format({
       usageCount: n,
-      creator: null != l ? l : a,
+      creator: null != r ? r : a,
       creatorHook: (e, t) => (0, s.jsx)(m, {
         text: e,
-        verified: null != l
+        verified: null != r
       }, t)
     }) : f.default.Messages.GUILD_TEMPLATE_USAGES.format({
       usageCount: n
@@ -69,7 +69,7 @@ function p(e) {
   })
 }
 
-function T(e) {
+function p(e) {
   var t;
   let {
     guildTemplate: n,
@@ -87,7 +87,7 @@ function T(e) {
   });
   if (n.state === E.GuildTemplateStates.RESOLVING) return (0, s.jsx)("div", {
     className: _.container,
-    children: (0, s.jsx)(l.Spinner, {})
+    children: (0, s.jsx)(r.Spinner, {})
   });
   let g = (0, c.default)(n.code).header;
   if (!i) return (0, s.jsxs)("div", {
@@ -96,7 +96,7 @@ function T(e) {
       className: _.title,
       children: g
     }), (0, s.jsx)(o.SubTitle, {
-      className: r(_.subtitle, _.userText),
+      className: l(_.subtitle, _.userText),
       children: n.name
     })]
   });
@@ -106,15 +106,15 @@ function T(e) {
       className: _.title,
       children: g
     }), (0, s.jsx)(o.SubTitle, {
-      className: r(_.subtitle, h.marginTop2),
+      className: l(_.subtitle, h.marginTop2),
       children: f.default.Messages.GUILD_TEMPLATE_BASED_ON
     }), (0, s.jsx)(o.Title, {
-      className: r(_.title, _.userText),
+      className: l(_.title, _.userText),
       children: n.name
     }), null != n.description && "" !== n.description && (0, s.jsx)(o.SubTitle, {
-      className: r(_.subtitle, _.userText, h.marginTop8),
+      className: l(_.subtitle, _.userText, h.marginTop8),
       children: n.description
-    }), (0, s.jsx)(p, {
+    }), (0, s.jsx)(T, {
       className: u,
       count: null !== (t = n.usageCount) && void 0 !== t ? t : 0,
       creator: n.creator.username,

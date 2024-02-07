@@ -1,47 +1,47 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return n
+    return u
   }
 }), r("808653"), r("794252"), r("424973");
-var n, l = r("506838"),
-  i = r("265586"),
-  s = r("797647"),
-  a = r("730297"),
-  u = r("792382"),
-  o = r("806410"),
+var u, l = r("506838"),
+  n = r("265586"),
+  i = r("797647"),
+  s = r("730297"),
+  o = r("792382"),
+  a = r("806410"),
   c = r("49111");
-n = class e extends u.default {
+u = class e extends o.default {
   static fromServer(t) {
     var r;
     let {
-      type: n,
-      premium_type: u,
+      type: u,
+      premium_type: o,
       category_sku_id: d,
-      prices: f,
+      prices: E,
       ...C
     } = t;
     return new e({
       ...super.fromServer(C),
-      type: n,
-      premiumType: u === c.PREMIUM_TYPE_NONE ? null : u,
+      type: u,
+      premiumType: o === c.PREMIUM_TYPE_NONE ? null : o,
       categorySkuId: d,
-      prices: null == (r = f) ? {} : Object.keys(r).reduce((e, t) => {
+      prices: null == (r = E) ? {} : Object.keys(r).reduce((e, t) => {
         if (null == r) return e;
-        let n = r[t];
+        let u = r[t];
         return e[t] = {
           countryPrices: {
-            countryCode: n.country_prices.country_code,
-            prices: n.country_prices.prices.map(e => (0, s.getPriceFromServer)(e, !0))
+            countryCode: u.country_prices.country_code,
+            prices: u.country_prices.prices.map(e => (0, i.getPriceFromServer)(e, !0))
           },
           paymentSourcePrices: {}
         }, e
       }, {}),
       items: C.items.reduce((e, t) => (0, l.match)(t).with({
-        type: i.CollectiblesItemType.AVATAR_DECORATION
-      }, t => (e.push(a.default.fromServer(t)), e)).with({
-        type: i.CollectiblesItemType.PROFILE_EFFECT
-      }, t => (e.push(o.default.fromServer(t)), e)).otherwise(() => e), [])
+        type: n.CollectiblesItemType.AVATAR_DECORATION
+      }, t => (e.push(s.default.fromServer(t)), e)).with({
+        type: n.CollectiblesItemType.PROFILE_EFFECT
+      }, t => (e.push(a.default.fromServer(t)), e)).otherwise(() => e), [])
     })
   }
   constructor(e) {

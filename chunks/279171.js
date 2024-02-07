@@ -1,63 +1,63 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useShouldShowLegacyPricingNotice: function() {
     return I
   },
   default: function() {
-    return C
+    return p
   }
 });
-var n = a("37983");
-a("884691");
-var l = a("414456"),
-  s = a.n(l),
-  r = a("627445"),
-  i = a.n(r),
-  o = a("423487"),
-  u = a("701909"),
-  d = a("35188"),
-  c = a("391533"),
-  _ = a("296253"),
-  E = a("49111"),
-  f = a("782340"),
-  m = a("712109");
+var s = n("37983");
+n("884691");
+var r = n("414456"),
+  a = n.n(r),
+  l = n("627445"),
+  i = n.n(l),
+  u = n("423487"),
+  c = n("701909"),
+  o = n("35188"),
+  d = n("391533"),
+  f = n("296253"),
+  m = n("49111"),
+  _ = n("782340"),
+  E = n("712109");
 
 function I() {
-  let e = (0, _.default)(),
+  let e = (0, f.default)(),
     {
       enabled: t
-    } = d.default.useExperiment({
+    } = o.default.useExperiment({
       location: "5ebfcf_1"
     }, {
       autoTrackExposure: !1
     }),
     {
-      enabled: a
-    } = c.default.useExperiment({
+      enabled: n
+    } = d.default.useExperiment({
       location: "5ebfcf_2"
     }, {
       autoTrackExposure: !1
     });
-  return null != e && ("PL" === e ? t : "TR" === e && a)
+  return null != e && ("PL" === e ? t : "TR" === e && n)
 }
-var C = e => {
-  var t, a;
+var p = e => {
+  var t, n;
   let {
-    fromBoostCancelModal: l,
-    className: r
-  } = e, d = (0, _.default)(), c = I();
-  if (!c) return null;
-  return i(null != d, "Subscription billing country should not be null"), (0, n.jsxs)("div", {
-    className: s(m.noticeRoot, r),
-    children: [(0, n.jsx)("div", {
-      className: m.iconContainer,
-      children: (0, n.jsx)(o.default, {
-        className: m.infoIcon
+    fromBoostCancelModal: r,
+    className: l
+  } = e, o = (0, f.default)(), d = I();
+  if (!d) return null;
+  return i(null != o, "Subscription billing country should not be null"), (0, s.jsxs)("div", {
+    className: a(E.noticeRoot, l),
+    children: [(0, s.jsx)("div", {
+      className: E.iconContainer,
+      children: (0, s.jsx)(u.default, {
+        className: E.infoIcon
       })
-    }), (0, n.jsx)("div", {
-      className: m.text,
-      children: (t = d, a = l, "PL" === t ? a ? f.default.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : f.default.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING : "TR" === t ? a ? f.default.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : f.default.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING : a ? f.default.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : f.default.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({
-        helpCenterLink: u.default.getArticleURL(E.HelpdeskArticles.LOCALIZED_PRICING)
+    }), (0, s.jsx)("div", {
+      className: E.text,
+      children: (t = o, n = r, "PL" === t ? n ? _.default.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : _.default.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING : "TR" === t ? n ? _.default.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : _.default.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING : n ? _.default.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : _.default.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({
+        helpCenterLink: c.default.getArticleURL(m.HelpdeskArticles.LOCALIZED_PRICING)
       })
     })]
   })

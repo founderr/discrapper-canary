@@ -4,8 +4,8 @@ a.r(t), a.d(t, {
     return m
   }
 }), a("222007");
-var n = a("37983"),
-  l = a("884691"),
+var l = a("37983"),
+  n = a("884691"),
   i = a("446674"),
   r = a("77078"),
   s = a("442939"),
@@ -19,42 +19,42 @@ function m(e) {
   var t, a;
   let {
     clip: m
-  } = e, [v] = (0, s.default)([null !== (t = m.applicationId) && void 0 !== t ? t : ""]), E = (0, i.useStateFromStores)([u.default], () => u.default.locale), p = l.useMemo(() => new Date(d.default.extractTimestamp(m.id)), [m.id]);
-  return (0, n.jsxs)("div", {
+  } = e, [v] = (0, s.default)([null !== (t = m.applicationId) && void 0 !== t ? t : ""]), p = (0, i.useStateFromStores)([u.default], () => u.default.locale), h = n.useMemo(() => new Date(d.default.extractTimestamp(m.id)), [m.id]);
+  return (0, l.jsxs)("div", {
     className: f.root,
-    children: [(0, n.jsxs)("div", {
+    children: [(0, l.jsxs)("div", {
       className: f.nameSection,
-      children: [(0, n.jsx)(o.default, {
+      children: [(0, l.jsx)(o.default, {
         game: v
-      }), (0, n.jsx)(r.Text, {
+      }), (0, l.jsx)(r.Text, {
         className: f.name,
         variant: "text-md/medium",
         color: "interactive-active",
         children: null !== (a = null == v ? void 0 : v.name) && void 0 !== a ? a : m.applicationName
       })]
-    }), (0, n.jsxs)("div", {
+    }), (0, l.jsxs)("div", {
       className: f.timeContainer,
-      children: [(0, n.jsxs)("div", {
-        children: [(0, n.jsx)(r.FormTitle, {
+      children: [(0, l.jsxs)("div", {
+        children: [(0, l.jsx)(r.FormTitle, {
           className: f.timeTitle,
           children: c.default.Messages.CLIPS_EDIT_DATE_TITLE
-        }), (0, n.jsx)(r.Text, {
+        }), (0, l.jsx)(r.Text, {
           variant: "text-sm/normal",
           color: "interactive-active",
-          children: p.toLocaleDateString(E, {
+          children: h.toLocaleDateString(p, {
             year: "2-digit",
             month: "2-digit",
             day: "2-digit"
           })
         })]
-      }), (0, n.jsxs)("div", {
-        children: [(0, n.jsx)(r.FormTitle, {
+      }), (0, l.jsxs)("div", {
+        children: [(0, l.jsx)(r.FormTitle, {
           className: f.timeTitle,
           children: c.default.Messages.CLIPS_EDIT_TIME_TITLE
-        }), (0, n.jsx)(r.Text, {
+        }), (0, l.jsx)(r.Text, {
           variant: "text-sm/normal",
           color: "interactive-active",
-          children: p.toLocaleTimeString(E, {
+          children: h.toLocaleTimeString(p, {
             hour: "numeric",
             minute: "numeric"
           })

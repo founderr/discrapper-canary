@@ -1,40 +1,40 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
 });
-var u = t("42203"),
-  l = t("945956"),
-  i = t("568307"),
-  o = t("18494"),
-  a = t("599110"),
-  d = t("846325"),
-  r = t("49111"),
-  s = t("646718");
+var l = n("42203"),
+  i = n("945956"),
+  a = n("568307"),
+  s = n("18494"),
+  r = n("599110"),
+  o = n("846325"),
+  u = n("49111"),
+  d = n("646718");
 
-function c(e, n, t, c) {
-  var _, f, E;
-  let S = u.default.getChannel(o.default.getVoiceChannelId()),
-    C = null == S ? void 0 : S.getGuildId(),
-    y = l.default.getMediaSessionId(),
-    m = l.default.getRTCConnectionId(),
-    A = null === (_ = i.default.getCurrentGameForAnalytics()) || void 0 === _ ? void 0 : _.name,
-    g = C !== t.guildId && t.guildId !== d.DEFAULT_SOUND_GUILD_ID;
-  let U = (f = t, E = g, f.guildId === d.DEFAULT_SOUND_GUILD_ID ? "default" : E ? "custom-external" : "custom");
-  a.default.track(r.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
-    feature_name: s.AnalyticsPremiumFeatureNames.SOUNDBOARD_PLAY,
-    feature_tier: g ? s.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD : s.AnalyticsPremiumFeatureTiers.FREE,
-    guild_id: C,
+function c(e, t, n, c) {
+  var f, p, m;
+  let h = l.default.getChannel(s.default.getVoiceChannelId()),
+    E = null == h ? void 0 : h.getGuildId(),
+    g = i.default.getMediaSessionId(),
+    S = i.default.getRTCConnectionId(),
+    C = null === (f = a.default.getCurrentGameForAnalytics()) || void 0 === f ? void 0 : f.name,
+    T = E !== n.guildId && n.guildId !== o.DEFAULT_SOUND_GUILD_ID;
+  let v = (p = n, m = T, p.guildId === o.DEFAULT_SOUND_GUILD_ID ? "default" : m ? "custom-external" : "custom");
+  r.default.track(u.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
+    feature_name: d.AnalyticsPremiumFeatureNames.SOUNDBOARD_PLAY,
+    feature_tier: T ? d.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD : d.AnalyticsPremiumFeatureTiers.FREE,
+    guild_id: E,
     location_stack: e,
-    rtc_connection_id: m,
-    media_session_id: y,
-    in_overlay: n,
-    application_name: A,
-    emoji_count: null != t.emojiId || null != t.emojiName ? 1 : 0,
-    feature_selection: U,
-    feature_selection_id: t.soundId,
+    rtc_connection_id: S,
+    media_session_id: g,
+    in_overlay: t,
+    application_name: C,
+    emoji_count: null != n.emojiId || null != n.emojiName ? 1 : 0,
+    feature_selection: v,
+    feature_selection_id: n.soundId,
     sound_type: c,
-    is_broadcast: null != S && S.isBroadcastChannel()
+    is_broadcast: null != h && h.isBroadcastChannel()
   })
 }

@@ -11,8 +11,8 @@ var r = s("627445"),
   l = s("446674"),
   o = s("812204"),
   n = s("685665"),
-  d = s("305961"),
-  u = s("697218"),
+  u = s("305961"),
+  d = s("697218"),
   c = s("708169"),
   E = s("783121");
 let _ = e => {
@@ -20,9 +20,9 @@ let _ = e => {
     guildId: t,
     close: s,
     location: r
-  } = e, c = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser());
+  } = e, c = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser());
   a(null != c, "PremiumGuildPerksModalConnected: currentUser cannot be undefined");
-  let _ = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(t), [t]),
+  let _ = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]),
     {
       AnalyticsLocationProvider: T
     } = (0, n.default)(o.default.BOOSTED_GUILD_PERKS_MODAL);

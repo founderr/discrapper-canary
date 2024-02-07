@@ -1,7 +1,7 @@
 "use strict";
 t.r(r), t.d(r, {
   default: function() {
-    return f
+    return m
   }
 }), t("222007");
 var a = t("37983"),
@@ -36,13 +36,13 @@ class p extends n.PureComponent {
       sortKey: n,
       headerCellClassName: i,
       headerClassName: p,
-      sortedHeaderCellClassName: f,
-      stickyHeader: m
-    } = this.props, g = e.map(e => {
+      sortedHeaderCellClassName: m,
+      stickyHeader: g
+    } = this.props, f = e.map(e => {
       let h = null != e.renderHeader ? e.renderHeader(e, r) : e.key,
         p = t === d.TableSortDirections.ASCENDING ? c.default : s.default;
       return (0, a.jsx)(o.Clickable, {
-        className: l(u.headerCell, i, e.headerCellClassName, e.cellClassName, n === e.key && f, {
+        className: l(u.headerCell, i, e.headerCellClassName, e.cellClassName, n === e.key && m, {
           [u.clickable]: this.isSortable(e)
         }),
         onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
@@ -56,9 +56,9 @@ class p extends n.PureComponent {
     });
     return (0, a.jsx)(h, {
       className: l(p, u.row, {
-        [u.stickyHeader]: m
+        [u.stickyHeader]: g
       }),
-      children: g
+      children: f
     })
   }
   renderBody() {
@@ -73,8 +73,8 @@ class p extends n.PureComponent {
       cellProps: c,
       rowProps: h,
       rowComponent: p,
-      cellComponent: f
-    } = this.props, m = r;
+      cellComponent: m
+    } = this.props, g = r;
     if (t) {
       let t = null != a ? e.find(e => {
           let {
@@ -85,10 +85,10 @@ class p extends n.PureComponent {
         n = [...r],
         l = null != t && t.sort,
         o = null != t && null != a && this.isSortable(t) ? n.sort("function" == typeof l ? (e, r) => l(e, r, i) : this.getDefaultSort(a)) : n;
-      m = null != t && i === d.TableSortDirections.DESCENDING ? o.reverse() : o
+      g = null != t && i === d.TableSortDirections.DESCENDING ? o.reverse() : o
     }
-    return m.map((r, t) => {
-      let a = e.map(e => (0, n.createElement)(f, {
+    return g.map((r, t) => {
+      let a = e.map(e => (0, n.createElement)(m, {
         ...c,
         key: e.key,
         item: r,
@@ -138,4 +138,4 @@ p.SortDirection = d.TableSortDirections, p.defaultProps = {
   sortData: !0,
   stickyHeader: !1
 };
-var f = p
+var m = p

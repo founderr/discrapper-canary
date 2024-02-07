@@ -54,12 +54,12 @@ let L = {
     width: 1280,
     height: 720
   },
-  P = e => (0, h.renderVideoComponent)({
+  y = e => (0, h.renderVideoComponent)({
     ...e,
     className: v.videoWrapper,
     mediaPlayerClassName: v.mediaPlayer
   }),
-  y = e => (0, a.jsx)(f.default, {
+  P = e => (0, a.jsx)(f.default, {
     ...e
   }),
   M = e => {
@@ -113,8 +113,8 @@ let L = {
       autoMute: C,
       onMute: I,
       autoPlay: c,
-      renderVideoComponent: P,
-      renderImageComponent: y,
+      renderVideoComponent: y,
+      renderImageComponent: P,
       renderLinkComponent: h.renderMaskedLinkComponent
     });
     return c ? x : (0, a.jsx)(d.Clickable, {

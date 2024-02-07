@@ -1,12 +1,12 @@
-var n = r("890022"),
-  i = r("566040"),
-  a = r("846165"),
-  s = Math.ceil,
-  o = Math.max;
-t.exports = function(t, e, r) {
-  e = (r ? i(t, e, r) : void 0 === e) ? 1 : o(a(e), 0);
-  var u = null == t ? 0 : t.length;
-  if (!u || e < 1) return [];
-  for (var c = 0, l = 0, h = Array(s(u / e)); c < u;) h[l++] = n(t, c, c += e);
-  return h
+var i = n("890022"),
+  a = n("566040"),
+  l = n("846165"),
+  r = Math.ceil,
+  u = Math.max;
+e.exports = function(e, t, n) {
+  t = (n ? a(e, t, n) : void 0 === t) ? 1 : u(l(t), 0);
+  var s = null == e ? 0 : e.length;
+  if (!s || t < 1) return [];
+  for (var o = 0, d = 0, c = Array(r(s / t)); o < s;) c[d++] = i(e, o, o += t);
+  return c
 }

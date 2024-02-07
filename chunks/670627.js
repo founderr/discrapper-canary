@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   MoreVerticalIcon: function() {
-    return a
+    return s
   }
 });
 var i = n("37983");
 n("884691");
 var r = n("669491"),
   l = n("82169");
-let a = e => {
+let s = e => {
   let {
     width: t = 24,
     height: n = 24,
-    color: a = r.default.colors.INTERACTIVE_NORMAL,
-    colorClass: s = "",
+    color: s = r.default.colors.INTERACTIVE_NORMAL,
+    colorClass: a = "",
     ...o
   } = e;
   return (0, i.jsx)("svg", {
@@ -24,11 +24,11 @@ let a = e => {
     fill: "none",
     viewBox: "0 0 24 24",
     children: (0, i.jsx)("path", {
-      fill: "string" == typeof a ? a : a.css,
+      fill: "string" == typeof s ? s : s.css,
       fillRule: "evenodd",
       d: "M10 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z",
       clipRule: "evenodd",
-      className: s
+      className: a
     })
   })
 }

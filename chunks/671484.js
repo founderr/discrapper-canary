@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return i
   }
 }), n("702976");
-var s, r = n("866227"),
-  l = n.n(r),
-  i = n("666038"),
+var i, s = n("866227"),
+  l = n.n(s),
+  r = n("666038"),
   a = n("568734"),
-  o = n("797647"),
-  u = n("646718");
+  u = n("797647"),
+  o = n("646718");
 let d = Object.freeze({
   PAYMENT_SOURCE_REQUIRED: 1,
   EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
   NOT_SELF_REDEEMABLE: 4
 });
-s = class e extends i.default {
+i = class e extends r.default {
   static createFromServer(t) {
     return new e({
       userId: null != t.user ? t.user.id : null,
@@ -28,7 +28,7 @@ s = class e extends i.default {
       expiresAt: null != t.expires_at ? l(t.expires_at) : null,
       redeemed: t.redeemed,
       subscriptionPlanId: null != t.subscription_plan ? t.subscription_plan.id : t.subscription_plan_id,
-      subscriptionPlan: null != t.subscription_plan ? o.default.createFromServer(t.subscription_plan) : null,
+      subscriptionPlan: null != t.subscription_plan ? u.default.createFromServer(t.subscription_plan) : null,
       revoked: !1,
       entitlementBranches: null != t.entitlement_branches ? t.entitlement_branches : null,
       flags: null != t.flags ? t.flags : 0,
@@ -66,7 +66,7 @@ s = class e extends i.default {
     return null != this.subscriptionPlanId
   }
   get premiumSubscriptionType() {
-    return this.isSubscription && u.PremiumSubscriptionSKUToPremiumType[this.skuId] || null
+    return this.isSubscription && o.PremiumSubscriptionSKUToPremiumType[this.skuId] || null
   }
   get isSelfRedeemable() {
     return !(0, a.hasFlag)(this.flags, d.NOT_SELF_REDEEMABLE)

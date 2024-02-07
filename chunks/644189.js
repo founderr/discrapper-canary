@@ -19,12 +19,12 @@ function r(e) {
     rsvped: r,
     onContextMenu: d,
     onRsvpClick: c,
-    onGoToGuildClick: f,
-    isDetailsView: E = !1,
+    onGoToGuildClick: E,
+    isDetailsView: f = !1,
     isMember: h,
     onJoinGuildClick: C,
-    guildName: v,
-    onInviteClick: N,
+    guildName: N,
+    onInviteClick: v,
     canInvite: g,
     isChannelPublic: S
   } = e;
@@ -45,7 +45,7 @@ function r(e) {
         })
       })
     }) : null, h && (0, l.jsx)(i.GuildEventShareButton, {
-      onInviteClick: N,
+      onInviteClick: v,
       canInvite: g,
       isChannelPublic: S
     }), n && !t && (0, l.jsx)(i.GuildEventLurkerInterestedButton, {
@@ -55,11 +55,11 @@ function r(e) {
       isUserRsvped: r,
       isUserLurking: n,
       onRsvpClick: c
-    }), h && !n && (!E || t) ? (0, l.jsx)(s.Button, {
+    }), h && !n && (!f || t) ? (0, l.jsx)(s.Button, {
       className: o.button,
       innerClassName: o.innerButton,
       size: s.Button.Sizes.SMALL,
-      onClick: f,
+      onClick: E,
       color: s.Button.Colors.GREEN,
       children: a.default.Messages.HUB_EVENTS_GO_TO_GUILD
     }) : null, h ? null : (0, l.jsx)(s.Button, {
@@ -69,7 +69,7 @@ function r(e) {
       onClick: C,
       color: s.Button.Colors.GREEN,
       children: a.default.Messages.HUB_EVENTS_JOIN_GUILD.format({
-        guildName: v
+        guildName: N
       })
     })]
   })

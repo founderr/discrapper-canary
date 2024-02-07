@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   fetchAllStoreListingsForApplication: function() {
     return d
   },
@@ -10,109 +10,109 @@ n.r(t), n.d(t, {
     return p
   },
   fetchStoreListingForApplication: function() {
-    return h
+    return I
   },
   matureAgree: function() {
     return S
   },
   matureDisagree: function() {
-    return m
+    return T
   },
   joinPublishedStoreListingSkuGuild: function() {
-    return _
+    return h
   },
   goToSKUStoreListing: function() {
-    return I
+    return _
   },
   goToApplicationStoreListing: function() {
     return E
   }
 });
 var i = n("872717"),
-  r = n("913144"),
-  l = n("84460");
+  l = n("913144"),
+  a = n("84460");
 n("299285");
-var a = n("393414"),
-  s = n("552712");
+var r = n("393414"),
+  u = n("552712");
 n("698041");
-var u = n("167726"),
+var s = n("167726"),
   o = n("271560"),
   c = n("49111");
 
-function d(e) {
+function d(t) {
   return (0, o.httpGetWithCountryCodeQuery)({
     url: c.Endpoints.STORE_PUBLISHED_LISTINGS_SKUS,
     query: {
-      application_id: e
+      application_id: t
     },
     oldFormErrors: !0
-  }).then(e => (r.default.dispatch({
+  }).then(t => (l.default.dispatch({
     type: "STORE_LISTINGS_FETCH_SUCCESS",
-    storeListings: e.body
-  }), e.body))
+    storeListings: t.body
+  }), t.body))
 }
 
-function f(e) {
-  let t = s.default.get(e),
-    n = null != t && (u.default.inTestModeForApplication(t.applicationId) || l.default.inDevModeForApplication(t.applicationId));
-  return (0, o.httpGetWithCountryCodeQuery)(n ? c.Endpoints.STORE_LISTINGS_SKU(e) : c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(e)).then(e => {
-    n ? r.default.dispatch({
+function f(t) {
+  let e = u.default.get(t),
+    n = null != e && (s.default.inTestModeForApplication(e.applicationId) || a.default.inDevModeForApplication(e.applicationId));
+  return (0, o.httpGetWithCountryCodeQuery)(n ? c.Endpoints.STORE_LISTINGS_SKU(t) : c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(t)).then(t => {
+    n ? l.default.dispatch({
       type: "STORE_LISTINGS_FETCH_SUCCESS",
-      storeListings: e.body
-    }) : r.default.dispatch({
+      storeListings: t.body
+    }) : l.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
-      storeListing: e.body
+      storeListing: t.body
     })
   })
 }
 
-function p(e) {
-  return (0, o.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_LISTING(e)).then(e => {
-    r.default.dispatch({
+function p(t) {
+  return (0, o.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_LISTING(t)).then(t => {
+    l.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
-      storeListing: e.body
+      storeListing: t.body
     })
   })
 }
 
-function h(e) {
-  return (0, o.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then(e => {
-    r.default.dispatch({
+function I(t) {
+  return (0, o.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(t)).then(t => {
+    l.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
-      storeListing: e.body
+      storeListing: t.body
     })
   })
 }
 
 function S() {
-  r.default.dispatch({
+  l.default.dispatch({
     type: "APPLICATION_STORE_MATURE_AGREE"
   })
 }
 
-function m() {
-  (0, a.transitionTo)(c.Routes.APPLICATION_STORE)
+function T() {
+  (0, r.transitionTo)(c.Routes.APPLICATION_STORE)
 }
 
-function _(e) {
+function h(t) {
   return i.default.post({
-    url: c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
+    url: c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(t),
     oldFormErrors: !0
   })
 }
 
-function I(e, t) {
+function _(t, e) {
   let {
     pathname: n,
     ...i
-  } = (0, o.getStoreListingLocation)(e, t);
-  (0, a.transitionTo)(n, i)
+  } = (0, o.getStoreListingLocation)(t, e);
+  (0, r.transitionTo)(n, i)
 }
 
-function E(e, t) {
+function E(t, e) {
   let {
     pathname: n,
     ...i
-  } = (0, o.getApplicationStoreListingLocation)(e, t);
-  (0, a.transitionTo)(n, i)
+  } = (0, o.getApplicationStoreListingLocation)(t, e);
+  (0, r.transitionTo)(n, i)
 }

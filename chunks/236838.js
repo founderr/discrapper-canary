@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return S
   }
 });
 var s = n("37983");
@@ -18,13 +18,13 @@ var a = n("907002"),
   f = n("782340"),
   I = n("526380"),
   E = n("34125"),
-  m = e => {
+  S = e => {
     let {
       onClose: t
     } = e, {
       analyticsLocations: n
-    } = (0, o.default)(), m = (0, r.default)([i.default], () => i.default.useReducedMotion), S = (0, a.useSpring)({
-      immediate: m,
+    } = (0, o.default)(), S = (0, r.default)([i.default], () => i.default.useReducedMotion), m = (0, a.useSpring)({
+      immediate: S,
       delay: 800,
       from: {
         transform: "translate(0, -100%)"
@@ -40,7 +40,7 @@ var a = n("907002"),
       })
     };
     return (0, s.jsxs)(a.animated.div, {
-      style: S,
+      style: m,
       className: I.container,
       children: [(0, s.jsx)("img", {
         className: I.image,

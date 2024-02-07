@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return r
   }
 });
-var s = n("37983");
+var a = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
-  a = n("561445"),
-  l = e => {
+var s = n("414456"),
+  l = n.n(s),
+  i = n("561445"),
+  r = e => {
     let {
       aspectRatio: t,
       style: n,
-      className: i,
-      children: l
+      className: s,
+      children: r
     } = e;
-    return (0, s.jsx)("div", {
-      className: r(a.outer, i),
+    return (0, a.jsx)("div", {
+      className: l(i.outer, s),
       style: {
         paddingTop: "".concat(1 / t * 100, "%"),
         ...n
       },
-      children: (0, s.jsx)("div", {
-        className: a.inner,
-        children: l
+      children: (0, a.jsx)("div", {
+        className: i.inner,
+        children: r
       })
     })
   }

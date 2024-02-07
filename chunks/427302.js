@@ -1,49 +1,49 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 }), n("222007");
-var i = n("37983"),
-  r = n("884691"),
-  l = n("414456"),
-  a = n.n(l),
-  s = n("77078"),
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("77078"),
   o = n("145079"),
   u = n("86621"),
-  c = n("506885"),
-  d = n("981601"),
+  d = n("506885"),
+  c = n("981601"),
   f = n("145131"),
-  E = n("49111"),
-  _ = n("123106");
-class S extends r.Component {
+  p = n("49111"),
+  m = n("123106");
+class h extends i.Component {
   render() {
     let {
       popoutOpen: e
     } = this.state, {
       user: t,
       analyticsContext: n,
-      disablePopout: r,
-      guildId: l
-    } = this.props, a = {
+      disablePopout: i,
+      guildId: a
+    } = this.props, s = {
       location: {
         ...n.location,
-        object: E.AnalyticsObjects.LIST_ITEM
+        object: p.AnalyticsObjects.LIST_ITEM
       }
     };
-    return (0, i.jsx)(s.Popout, {
-      preload: () => (0, c.default)(t.id, t.getAvatarURL(l, 80), {
-        guildId: l
+    return (0, l.jsx)(r.Popout, {
+      preload: () => (0, d.default)(t.id, t.getAvatarURL(a, 80), {
+        guildId: a
       }),
-      renderPopout: e => (0, i.jsx)(d.default, {
+      renderPopout: e => (0, l.jsx)(c.default, {
         ...e,
-        guildId: l,
+        guildId: a,
         userId: t.id,
-        analyticsParams: a
+        analyticsParams: s
       }),
       position: "left",
       onRequestClose: this.handleUserPopoutClose,
-      shouldShow: !r && e,
+      shouldShow: !i && e,
       children: e => this.renderUserPopout(e)
     })
   }
@@ -68,35 +68,35 @@ class S extends r.Component {
       let {
         className: t,
         disablePopout: n,
-        onContextMenu: r,
-        user: l,
+        onContextMenu: i,
+        user: a,
         status: u,
-        textClassName: c,
-        nick: d,
-        guildId: E
+        textClassName: d,
+        nick: c,
+        guildId: p
       } = this.props;
-      return (0, i.jsxs)(f.default, {
+      return (0, l.jsxs)(f.default, {
         align: f.default.Align.CENTER,
-        className: a(_.memberListItem, t, {
-          [_.popoutDisabled]: n
+        className: s(m.memberListItem, t, {
+          [m.popoutDisabled]: n
         }),
-        onContextMenu: r,
+        onContextMenu: i,
         onMouseDown: e.onMouseDown,
         onKeyDown: e.onKeyDown,
         onClick: this.handleClickUser,
-        children: [(0, i.jsx)(s.Avatar, {
-          src: l.getAvatarURL(E, 24),
-          className: _.avatar,
-          "aria-label": l.username,
-          size: s.AvatarSizes.SIZE_24,
+        children: [(0, l.jsx)(r.Avatar, {
+          src: a.getAvatarURL(p, 24),
+          className: m.avatar,
+          "aria-label": a.username,
+          size: r.AvatarSizes.SIZE_24,
           status: u
-        }), (0, i.jsx)(s.Text, {
-          className: a(_.memberListItemTag, c),
+        }), (0, l.jsx)(r.Text, {
+          className: s(m.memberListItemTag, d),
           variant: "text-sm/normal",
-          children: (0, i.jsx)(o.default, {
-            user: l,
-            nick: d,
-            usernameClass: _.username,
+          children: (0, l.jsx)(o.default, {
+            user: a,
+            nick: c,
+            usernameClass: m.username,
             hideDiscriminator: !0
           })
         })]
@@ -104,7 +104,7 @@ class S extends r.Component {
     }
   }
 }
-S.defaultProps = {
+h.defaultProps = {
   disablePopout: !1
 };
-var h = (0, u.default)(S)
+var E = (0, u.default)(h)

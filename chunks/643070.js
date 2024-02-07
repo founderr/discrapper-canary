@@ -10,7 +10,7 @@ r.r(t), r.d(t, {
     return A
   },
   default: function() {
-    return I
+    return C
   }
 }), r("222007"), r("808653"), r("424973");
 var n, a, i = r("884691"),
@@ -20,8 +20,8 @@ var n, a, i = r("884691"),
   l = r("775416"),
   c = r("491232"),
   d = r("697218"),
-  f = r("719923"),
-  E = r("782340");
+  E = r("719923"),
+  f = r("782340");
 (a = n || (n = {})).PURCHASE = "purchase", a.PREMIUM_PURCHASE = "premium_purchase", a.PREVIEW = "preview", a.PREMIUM_PREVIEW = "premium_preview";
 let _ = {
     id: "None"
@@ -29,9 +29,9 @@ let _ = {
   A = {
     id: "Shop"
   };
-var I = () => {
+var C = () => {
   let e = (0, u.default)([d.default], () => d.default.getCurrentUser()),
-    t = f.default.canUseCollectibles(e),
+    t = E.default.canUseCollectibles(e),
     r = (0, u.default)([l.default], () => l.default.purchases),
     [n, a] = (0, u.useStateFromStoresArray)([o.default], () => [o.default.categories, o.default.products]);
   return (0, i.useMemo)(() => {
@@ -56,17 +56,17 @@ var I = () => {
       section: "purchase",
       items: [_, A, ...i.purchase],
       height: 12,
-      header: E.default.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER
+      header: f.default.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER
     }, {
       section: i.premium_purchase.length > 0 ? "premium_purchase" : "premium_preview",
       items: i.premium_purchase.length > 0 ? i.premium_purchase : i.premium_preview,
       height: 12,
-      header: E.default.Messages.CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER
+      header: f.default.Messages.CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER
     }, {
       section: "preview",
       items: i.preview,
       height: 12,
-      header: E.default.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
+      header: f.default.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
     }].filter(e => {
       let {
         items: t

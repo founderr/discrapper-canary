@@ -1,176 +1,176 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   GuildTooltipText: function() {
-    return X
+    return Q
   },
   default: function() {
-    return q
+    return X
   }
-}), i("881410"), i("222007");
-var n = i("37983"),
-  s = i("884691"),
-  l = i("414456"),
-  r = i.n(l),
-  a = i("917351"),
-  o = i.n(a),
-  u = i("446674"),
-  c = i("769846"),
-  d = i("77078"),
-  f = i("191225"),
-  E = i("51565"),
-  m = i("567054"),
-  I = i("5367"),
-  p = i("100835"),
-  g = i("38654"),
-  _ = i("319165"),
-  S = i("488464"),
-  h = i("998716"),
-  C = i("170183"),
-  T = i("689275"),
-  N = i("373469"),
-  v = i("546463"),
-  A = i("923959"),
-  y = i("824563"),
-  R = i("282109"),
-  j = i("697218"),
-  O = i("316133"),
-  M = i("580357"),
-  x = i("40469"),
-  L = i("351368"),
-  P = i("272339"),
-  D = i("82636"),
-  b = i("368121"),
-  U = i("228427"),
-  w = i("619911"),
-  G = i("811305"),
-  k = i("159885"),
-  V = i("471374"),
-  F = i("49111"),
-  H = i("782340"),
-  K = i("455547"),
-  B = i("805959");
-let J = (0, k.cssValueToNumber)(c.default.GUILD_TOOLTIP_ICON_SIZE),
-  z = (0, k.cssValueToNumber)(c.default.GUILD_TOOLTIP_ICON_SIZE_V_2);
+}), n("881410"), n("222007");
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("917351"),
+  o = n.n(r),
+  u = n("446674"),
+  d = n("769846"),
+  c = n("77078"),
+  f = n("191225"),
+  p = n("51565"),
+  m = n("567054"),
+  h = n("5367"),
+  E = n("100835"),
+  g = n("38654"),
+  S = n("319165"),
+  C = n("488464"),
+  T = n("998716"),
+  v = n("170183"),
+  I = n("689275"),
+  _ = n("373469"),
+  y = n("546463"),
+  A = n("923959"),
+  N = n("824563"),
+  x = n("282109"),
+  O = n("697218"),
+  R = n("316133"),
+  M = n("580357"),
+  L = n("40469"),
+  P = n("351368"),
+  b = n("272339"),
+  j = n("82636"),
+  U = n("368121"),
+  D = n("228427"),
+  k = n("619911"),
+  w = n("811305"),
+  F = n("159885"),
+  G = n("471374"),
+  B = n("49111"),
+  H = n("782340"),
+  V = n("455547"),
+  K = n("805959");
+let W = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE),
+  Y = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE_V_2);
 
-function W(e, t, i) {
-  return 0 === t.length ? null : (0, n.jsxs)("div", {
-    className: K.row,
-    children: [(0, n.jsx)(e, {
-      className: K.activityIcon
-    }), (0, n.jsx)(G.default, {
-      guildId: i,
+function z(e, t, n) {
+  return 0 === t.length ? null : (0, l.jsxs)("div", {
+    className: V.row,
+    children: [(0, l.jsx)(e, {
+      className: V.activityIcon
+    }), (0, l.jsx)(w.default, {
+      guildId: n,
       users: t,
       max: 6
     })]
   })
 }
 
-function Z(e) {
+function J(e) {
   let {
     muteConfig: t,
-    className: i
+    className: n
   } = e;
-  return (null == t ? void 0 : t.end_time) == null ? (0, n.jsx)(d.Text, {
+  return (null == t ? void 0 : t.end_time) == null ? (0, l.jsx)(c.Text, {
     variant: "text-xs/normal",
     color: "text-muted",
-    className: i,
+    className: n,
     children: H.default.Messages.FORM_LABEL_MUTED
-  }) : (0, n.jsx)(_.default, {
+  }) : (0, l.jsx)(S.default, {
     muteConfig: t,
-    className: i
+    className: n
   })
 }
 
-function Y(e) {
-  var t, i, l;
+function q(e) {
+  var t, n, a;
   let {
-    guild: a
-  } = e, c = a.id, E = (0, u.useStateFromStoresArray)([A.default, T.default], () => {
-    let e = A.default.getChannels(c)[A.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
+    guild: r
+  } = e, d = r.id, p = (0, u.useStateFromStoresArray)([A.default, I.default], () => {
+    let e = A.default.getChannels(d)[A.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
         let {
           channel: t
         } = e;
-        return t.type === F.ChannelTypes.GUILD_VOICE
+        return t.type === B.ChannelTypes.GUILD_VOICE
       }).map(e => {
         let {
           channel: t
         } = e;
         return t.id
       }),
-      t = Object.values(T.default.getThreadsForGuild(c)).flatMap(e => Object.keys(e));
+      t = Object.values(I.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
     return [...e, ...t]
-  }, [c]), m = (0, C.default)(c), I = s.useMemo(() => m.map(e => e.id), [m]), p = (0, u.useStateFromStores)([O.default], () => O.default.getVoiceStates(c), [c]), g = o.flatMap(E, e => {
+  }, [d]), m = (0, v.default)(d), h = i.useMemo(() => m.map(e => e.id), [m]), E = (0, u.useStateFromStores)([R.default], () => R.default.getVoiceStates(d), [d]), g = o.flatMap(p, e => {
     var t;
-    if (e === a.afkChannelId) return [];
-    let i = null !== (t = p[e]) && void 0 !== t ? t : [];
-    return i.map(e => {
+    if (e === r.afkChannelId) return [];
+    let n = null !== (t = E[e]) && void 0 !== t ? t : [];
+    return n.map(e => {
       let {
         user: t
       } = e;
       return t
     })
-  }), _ = (0, u.useStateFromStoresArray)([S.default], () => o.flatMap(I, e => {
-    if (e === a.afkChannelId) return [];
-    let t = S.default.getMutableParticipants(e, h.StageChannelParticipantNamedIndex.SPEAKER);
-    return t.filter(e => e.type === h.StageChannelParticipantTypes.VOICE).map(e => {
+  }), S = (0, u.useStateFromStoresArray)([C.default], () => o.flatMap(h, e => {
+    if (e === r.afkChannelId) return [];
+    let t = C.default.getMutableParticipants(e, T.StageChannelParticipantNamedIndex.SPEAKER);
+    return t.filter(e => e.type === T.StageChannelParticipantTypes.VOICE).map(e => {
       let {
         user: t
       } = e;
       return t
     })
-  })), M = (0, u.useStateFromStores)([S.default], () => {
+  })), M = (0, u.useStateFromStores)([C.default], () => {
     let e = 0;
-    for (let t of I) e += S.default.getParticipantCount(t, h.StageChannelParticipantNamedIndex.AUDIENCE);
+    for (let t of h) e += C.default.getParticipantCount(t, T.StageChannelParticipantNamedIndex.AUDIENCE);
     return e
-  }), x = (0, u.useStateFromStoresArray)([N.default], () => N.default.getAllApplicationStreams().filter(e => e.guildId === c).map(e => e.ownerId), [c]), k = (0, V.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([y.default, v.default], () => g.filter(e => y.default.getActivities(e.id, c).some(e => (null == e ? void 0 : e.application_id) != null && null != v.default.getDetectableGame(null == e ? void 0 : e.application_id)))), B = W(L.default, H, c), J = k ? H.map(e => e.id) : [], z = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(c).flatMap(e => Array.from(e.userIds)), [c]), Y = (0, u.useStateFromStoresArray)([j.default], () => z.map(e => j.default.getUser(e)), [z]), Q = (0, u.useStateFromStoresArray)([j.default], () => x.map(e => j.default.getUser(e)), [x]), X = W(b.default, g.filter(e => !x.includes(e.id) && !z.includes(e.id) && !J.includes(e.id)), c);
-  let q = (t = c, i = _, l = M, 0 === i.length ? null : (0, n.jsxs)("div", {
-      className: K.row,
-      children: [(0, n.jsx)(U.default, {
-        className: K.activityIcon
-      }), (0, n.jsx)(G.default, {
+  }), L = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([N.default, y.default], () => g.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != y.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(P.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), q = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), Z = (0, u.useStateFromStoresArray)([O.default], () => L.map(e => O.default.getUser(e)), [L]), Q = z(U.default, g.filter(e => !L.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
+  let X = (t = d, n = S, a = M, 0 === n.length ? null : (0, l.jsxs)("div", {
+      className: V.row,
+      children: [(0, l.jsx)(D.default, {
+        className: V.activityIcon
+      }), (0, l.jsx)(w.default, {
         guildId: t,
-        users: i,
+        users: n,
         max: 3
-      }), (0, n.jsxs)("div", {
-        className: K.stageListenerPill,
-        children: [(0, n.jsx)(P.default, {
+      }), (0, l.jsxs)("div", {
+        className: V.stageListenerPill,
+        children: [(0, l.jsx)(b.default, {
           width: 16,
           height: 16
-        }), (0, n.jsx)(d.Text, {
-          className: K.stageListenerCount,
+        }), (0, l.jsx)(c.Text, {
+          className: V.stageListenerCount,
           color: "text-normal",
           variant: "text-xs/normal",
-          children: l
+          children: a
         })]
       })]
     })),
-    $ = W(w.default, Q.filter(e => null != e && !z.includes(e.id)), c),
-    ee = W(D.default, Y, c),
+    $ = z(k.default, Z.filter(e => null != e && !Y.includes(e.id)), d),
+    ee = z(j.default, q, d),
     {
       isMuted: et,
-      muteConfig: ei
-    } = (0, u.useStateFromStoresObject)([R.default], () => ({
-      isMuted: R.default.isMuted(c),
-      muteConfig: R.default.getMuteConfig(c)
-    }), [c]);
-  return null != B && V.default.trackExposure({
+      muteConfig: en
+    } = (0, u.useStateFromStoresObject)([x.default], () => ({
+      isMuted: x.default.isMuted(d),
+      muteConfig: x.default.getMuteConfig(d)
+    }), [d]);
+  return null != K && G.default.trackExposure({
     location: "Guild Tooltip"
-  }), (0, n.jsxs)(n.Fragment, {
-    children: [q, X, $, k && B, ee, et ? (0, n.jsx)(Z, {
-      muteConfig: ei,
-      className: r(K.muteText, {
-        [K.muteTextWithActivity]: null != X || null != $
+  }), (0, l.jsxs)(l.Fragment, {
+    children: [X, Q, $, F && K, ee, et ? (0, l.jsx)(J, {
+      muteConfig: en,
+      className: s(V.muteText, {
+        [V.muteTextWithActivity]: null != Q || null != $
       })
     }) : null]
   })
 }
 
-function Q(e) {
+function Z(e) {
   let {
     guildJoinRequestStatus: t
   } = e;
-  return (0, n.jsx)(d.Text, {
-    className: K.viewAsRolesWarning,
+  return (0, l.jsx)(c.Text, {
+    className: V.viewAsRolesWarning,
     color: "text-normal",
     variant: "text-xs/normal",
     children: function(e) {
@@ -188,75 +188,75 @@ function Q(e) {
   })
 }
 
-function X(e) {
+function Q(e) {
   let {
     guild: t,
-    includeActivity: i = !0
-  } = e, s = (0, E.default)(t), l = (0, I.useCurrentUserGuildBadgeStatus)(t.id), a = null != l ? (0, n.jsx)(Q, {
-    guildJoinRequestStatus: l
-  }) : null, o = i ? (0, n.jsx)(Y, {
+    includeActivity: n = !0
+  } = e, i = (0, p.default)(t), a = (0, h.useCurrentUserGuildBadgeStatus)(t.id), r = null != a ? (0, l.jsx)(Z, {
+    guildJoinRequestStatus: a
+  }) : null, o = n ? (0, l.jsx)(q, {
     guild: t
-  }) : null, c = (0, u.useStateFromStores)([g.default], () => g.default.isViewingRoles(t.id)), f = (0, p.useShouldShowInvitesDisabledNotif)(t);
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsxs)("div", {
-      className: r(K.row, K.rowGuildName),
-      children: [s ? (0, n.jsx)(x.default, {
+  }) : null, d = (0, u.useStateFromStores)([g.default], () => g.default.isViewingRoles(t.id)), f = (0, E.useShouldShowInvitesDisabledNotif)(t);
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsxs)("div", {
+      className: s(V.row, V.rowGuildName),
+      children: [i ? (0, l.jsx)(L.default, {
         guild: t,
-        size: z,
-        className: K.rowIconV2
-      }) : (0, n.jsx)(M.default, {
+        size: Y,
+        className: V.rowIconV2
+      }) : (0, l.jsx)(M.default, {
         guild: t,
-        size: J,
-        className: K.rowIcon
-      }), (0, n.jsx)("span", {
-        className: r(K.guildNameText, {
-          [K.guildNameTextLimitedSize]: null != o
+        size: W,
+        className: V.rowIcon
+      }), (0, l.jsx)("span", {
+        className: s(V.guildNameText, {
+          [V.guildNameTextLimitedSize]: null != o
         }),
         children: t.toString()
       })]
-    }), f ? (0, n.jsx)(d.Text, {
-      className: K.invitesDisabledTooltip,
+    }), f ? (0, l.jsx)(c.Text, {
+      className: V.invitesDisabledTooltip,
       color: "header-secondary",
       variant: "text-sm/medium",
       children: H.default.Messages.INVITES_DISABLED_TOOLTIP
-    }) : null, c ? (0, n.jsx)(d.Text, {
-      className: K.viewAsRolesWarning,
+    }) : null, d ? (0, l.jsx)(c.Text, {
+      className: V.viewAsRolesWarning,
       color: "text-normal",
       variant: "text-xs/normal",
       children: H.default.Messages.VIEW_AS_ROLES_MENTIONS_WARNING
-    }) : null != a ? a : o]
+    }) : null != r ? r : o]
   })
 }
 
-function q(e) {
+function X(e) {
   let {
     guild: t,
-    disabled: i = !1,
-    "aria-label": l = !1,
-    children: r,
-    includeActivity: a
+    disabled: n = !1,
+    "aria-label": a = !1,
+    children: s,
+    includeActivity: r
   } = e;
-  return (0, n.jsx)(d.Tooltip, {
+  return (0, l.jsx)(c.Tooltip, {
     hideOnClick: !0,
     spacing: 20,
     position: "right",
-    text: i ? null : (0, n.jsx)(X, {
+    text: n ? null : (0, l.jsx)(Q, {
       guild: t,
-      includeActivity: a
+      includeActivity: r
     }),
-    "aria-label": l,
-    tooltipClassName: B.listItemTooltip,
+    "aria-label": a,
+    tooltipClassName: K.listItemTooltip,
     children: e => {
       let {
         onFocus: t,
-        onBlur: i,
-        ...l
+        onBlur: n,
+        ...a
       } = e;
-      return (0, n.jsx)("div", {
+      return (0, l.jsx)("div", {
         onFocus: t,
-        onBlur: i,
-        children: s.cloneElement(s.Children.only(r), {
-          ...l
+        onBlur: n,
+        children: i.cloneElement(i.Children.only(s), {
+          ...a
         })
       })
     }

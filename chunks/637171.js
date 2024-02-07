@@ -21,7 +21,7 @@ function d(e) {
     onClickRow: u,
     selectedRowKey: h,
     ...p
-  } = e, f = n.useMemo(() => r.map(e => ({
+  } = e, m = n.useMemo(() => r.map(e => ({
     renderHeader: () => (0, a.jsx)(o.Text, {
       variant: "text-sm/semibold",
       children: e.key
@@ -30,7 +30,7 @@ function d(e) {
   })), [r]);
   return (0, a.jsx)(s.default, {
     ...p,
-    columns: f,
+    columns: m,
     rowComponent: null != t ? t : e => {
       let {
         item: r,

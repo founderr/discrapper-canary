@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("222007");
 var l = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("16470"),
-  a = n("77078"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("16470"),
+  o = n("77078"),
   u = n("200197"),
   d = n("538282"),
   c = n("551305"),
@@ -18,16 +18,16 @@ var l = n("37983"),
   m = n("13030"),
   h = n("782340"),
   E = n("537461"),
-  S = i.memo(i.forwardRef(function(e, t) {
+  g = i.memo(i.forwardRef(function(e, t) {
     let n, {
-        disabled: r,
+        disabled: a,
         type: p
       } = e,
-      [S, g] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], s.default),
+      [g, S] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default),
       C = i.useContext(u.default),
       [T, v] = i.useState(!1),
-      y = S === m.ExpressionPickerViewType.STICKER,
-      x = i.useCallback(() => {
+      I = g === m.ExpressionPickerViewType.STICKER,
+      _ = i.useCallback(() => {
         (0, d.toggleExpressionPicker)(m.ExpressionPickerViewType.STICKER, p)
       }, [p]);
     i.useEffect(() => {
@@ -45,25 +45,25 @@ var l = n("37983"),
         C.removeListener("sticker-suggestions-shown", e), C.removeListener("sticker-suggestions-hidden", t)
       }
     }, [C]);
-    let I = (0, a.useRedesignIconContext)().enabled;
-    return r ? null : (n = (0, l.jsx)(f.default, {
-      className: I ? "" : E.stickerIcon,
+    let y = (0, o.useRedesignIconContext)().enabled;
+    return a ? null : (n = (0, l.jsx)(f.default, {
+      className: y ? "" : E.stickerIcon,
       winking: T,
       color: "currentColor"
     }), (0, l.jsx)("div", {
-      className: o(m.CHAT_INPUT_BUTTON_CLASSNAME, E.buttonContainer),
+      className: s(m.CHAT_INPUT_BUTTON_CLASSNAME, E.buttonContainer),
       ref: t,
       children: (0, l.jsx)(c.default, {
-        innerClassName: o(E.button, E.stickerButton, {
+        innerClassName: s(E.button, E.stickerButton, {
           [E.stickerButtonWithNotification]: !1,
-          [E.stickerButtonTilted]: T && !y
+          [E.stickerButtonTilted]: T && !I
         }),
-        onClick: x,
-        isActive: y,
+        onClick: _,
+        isActive: I,
         "aria-label": h.default.Messages.STICKER_BUTTON_LABEL,
-        "aria-expanded": y,
+        "aria-expanded": I,
         "aria-haspopup": "dialog",
-        "aria-controls": g,
+        "aria-controls": S,
         sparkle: !1,
         notification: null,
         children: n

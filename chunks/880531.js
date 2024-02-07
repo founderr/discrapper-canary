@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   renderGuildProductPurchaseHeader: function() {
-    return a
+    return o
   }
 });
 var r = n("37983");
 n("884691");
-var s = n("85336"),
-  u = n("891328"),
-  o = n("273093"),
+var u = n("85336"),
+  i = n("891328"),
+  a = n("273093"),
   l = n("780022");
 
-function i(e) {
+function s(e) {
   let {
     onClose: t
   } = e, {
     guildProductListing: n
-  } = (0, o.useGuildProductPurchaseContext)();
-  return (0, r.jsx)(u.default, {
+  } = (0, a.useGuildProductPurchaseContext)();
+  return (0, r.jsx)(i.default, {
     guildProductListing: n,
     className: l.header,
     onClose: t
   })
 }
-let a = (e, t, n) => n === s.Step.CONFIRM ? null : (0, r.jsx)(i, {
+let o = (e, t, n) => n === u.Step.CONFIRM ? null : (0, r.jsx)(s, {
   onClose: () => t(!1)
 })

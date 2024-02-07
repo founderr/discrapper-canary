@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var r = n("77078"),
-  a = n("945330"),
-  i = n("959097"),
-  s = n("557872"),
+var l = n("77078"),
+  r = n("945330"),
+  s = n("959097"),
+  i = n("557872"),
   u = n("967241"),
   o = n("648564"),
   d = n("782340"),
@@ -21,30 +21,30 @@ function f(e) {
     onClose: n,
     transitionState: f
   } = e;
-  return (0, l.jsx)(r.ModalRoot, {
+  return (0, a.jsx)(l.ModalRoot, {
     className: c.modal,
     transitionState: f,
     "aria-label": d.default.Messages.THREADS,
-    size: r.ModalSize.DYNAMIC,
-    children: (0, l.jsxs)("div", {
+    size: l.ModalSize.DYNAMIC,
+    children: (0, a.jsxs)("div", {
       className: c.container,
-      children: [(0, l.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: c.header,
-        children: [(0, l.jsx)(i.default, {
+        children: [(0, a.jsx)(s.default, {
           className: c.threadIcon
-        }), (0, l.jsx)(r.Heading, {
+        }), (0, a.jsx)(l.Heading, {
           variant: "heading-md/semibold",
           className: c.title,
           children: d.default.Messages.ALL_ACTIVE_THREADS
-        }), (0, l.jsx)("div", {
+        }), (0, a.jsx)("div", {
           className: c.spacer
-        }), (0, l.jsx)(r.Clickable, {
+        }), (0, a.jsx)(l.Clickable, {
           className: c.closeIcon,
           onClick: n,
           "aria-label": d.default.Messages.CLOSE,
-          children: (0, l.jsx)(a.default, {})
+          children: (0, a.jsx)(r.default, {})
         })]
-      }), (0, l.jsx)(s.default, {
+      }), (0, a.jsx)(i.default, {
         guildId: t,
         goToThread: (e, t) => {
           n(), (0, u.openThreadSidebarForViewing)(e, !t, o.OpenThreadAnalyticsLocations.GUILD_ACTIVE_THREADS_MODAL)

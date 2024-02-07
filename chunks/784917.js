@@ -1,33 +1,33 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
-var i = s("37983");
-s("884691");
-var r = s("469563"),
-  a = s("773785"),
-  l = s("75196"),
-  o = (0, r.replaceIcon)(function(e) {
+var s = n("37983");
+n("884691");
+var r = n("469563"),
+  l = n("773785"),
+  i = n("75196"),
+  a = (0, r.replaceIcon)(function(e) {
     let {
       width: t = 6,
-      height: s = 11,
+      height: n = 11,
       color: r = "currentColor",
-      foreground: a,
-      ...o
+      foreground: l,
+      ...a
     } = e;
-    return (0, i.jsx)("svg", {
-      ...(0, l.default)(o),
+    return (0, s.jsx)("svg", {
+      ...(0, i.default)(a),
       width: t,
-      height: s,
+      height: n,
       viewBox: "0 0 6 11",
-      children: (0, i.jsx)("path", {
+      children: (0, s.jsx)("path", {
         fill: r,
-        className: a,
+        className: l,
         d: "M3 0.625244L0 3.62524V7.62524L3 10.6252L6 7.62524V3.62524L3 0.625244ZM5 7.24524L3 9.24524L1 7.24524V4.04524L3 2.04524L5 4.04524V7.24524Z"
       })
     })
-  }, a.BoostTier1SimpleIcon, void 0, {
+  }, l.BoostTier1SimpleIcon, void 0, {
     size: 11
   })

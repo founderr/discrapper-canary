@@ -1,74 +1,74 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return g
   }
-}), i("222007");
-var n = i("37983"),
-  s = i("884691"),
-  l = i("414456"),
-  r = i.n(l),
-  a = i("16470"),
-  o = i("74139"),
-  u = i("137223"),
-  c = i("986632"),
-  d = i("538282"),
-  f = i("115279"),
-  E = i("49111"),
-  m = i("782340"),
-  I = i("431364");
-let p = s.forwardRef(function(e, t) {
+}), n("222007");
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("16470"),
+  o = n("74139"),
+  u = n("137223"),
+  d = n("986632"),
+  c = n("538282"),
+  f = n("115279"),
+  p = n("49111"),
+  m = n("782340"),
+  h = n("431364");
+let E = i.forwardRef(function(e, t) {
   let {
-    emojiListRef: i,
-    gridNavigatorId: l,
-    isFullRow: p,
+    emojiListRef: n,
+    gridNavigatorId: a,
+    isFullRow: E,
     onKeyDown: g,
-    onFocus: _,
-    autoFocus: S,
-    className: h,
-    defaultSearchPlaceholder: C
-  } = e, T = s.useRef(null), N = (0, d.useExpressionPickerStore)(e => e.searchQuery), [v, A] = c.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], a.default), y = s.useCallback(e => {
+    onFocus: S,
+    autoFocus: C,
+    className: T,
+    defaultSearchPlaceholder: v
+  } = e, I = i.useRef(null), _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), [y, A] = d.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), N = i.useCallback(e => {
     var t;
-    c.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), c.EmojiPickerStore.setInspectedExpressionPosition(0, 0), c.EmojiPickerStore.setSearchPlaceholder(null), (0, d.setSearchQuery)(e), null === (t = i.current) || void 0 === t || t.scrollTo(0)
-  }, [i]), R = s.useCallback(() => {
-    (0, d.setSearchQuery)("")
+    d.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), d.EmojiPickerStore.setInspectedExpressionPosition(0, 0), d.EmojiPickerStore.setSearchPlaceholder(null), (0, c.setSearchQuery)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0)
+  }, [n]), x = i.useCallback(() => {
+    (0, c.setSearchQuery)("")
   }, []);
-  return s.useImperativeHandle(t, () => ({
+  return i.useImperativeHandle(t, () => ({
     focus: () => {
       var e;
-      return null === (e = T.current) || void 0 === e ? void 0 : e.focus()
+      return null === (e = I.current) || void 0 === e ? void 0 : e.focus()
     }
-  })), (0, n.jsx)(u.default, {
-    autoFocus: S,
-    query: N,
-    ref: T,
+  })), (0, l.jsx)(u.default, {
+    autoFocus: C,
+    query: _,
+    ref: I,
     size: u.default.Sizes.MEDIUM,
-    placeholder: null != A ? A : C,
-    onClear: R,
+    placeholder: null != A ? A : v,
+    onClear: x,
     onKeyDown: e => {
       switch (e.keyCode) {
-        case E.KeyboardKeys.ARROW_LEFT:
-        case E.KeyboardKeys.ARROW_RIGHT:
-        case E.KeyboardKeys.ARROW_UP:
-        case E.KeyboardKeys.ARROW_DOWN:
+        case p.KeyboardKeys.ARROW_LEFT:
+        case p.KeyboardKeys.ARROW_RIGHT:
+        case p.KeyboardKeys.ARROW_UP:
+        case p.KeyboardKeys.ARROW_DOWN:
           document.activeElement !== e.target && e.preventDefault()
       }
       g(e)
     },
-    onFocus: _,
-    onQueryChange: y,
-    className: r(h, {
-      [I.searchBarFullRow]: p
+    onFocus: S,
+    onQueryChange: N,
+    className: s(T, {
+      [h.searchBarFullRow]: E
     }),
     preventEscapePropagation: !1,
     useKeyboardNavigation: !1,
     inputProps: {
       "aria-label": m.default.Messages.SEARCH_EMOJIS,
       "aria-haspopup": "grid",
-      "aria-controls": l,
+      "aria-controls": a,
       "aria-expanded": !0,
-      "aria-activedescendant": (0, o.makeGridId)(l, v.columnIndex, v.rowIndex)
+      "aria-activedescendant": (0, o.makeGridId)(a, y.columnIndex, y.rowIndex)
     }
   })
 });
-var g = s.memo(p)
+var g = i.memo(E)

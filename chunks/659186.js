@@ -1,19 +1,19 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   ChatLayerContainer: function() {
-    return l
+    return r
   },
   ChatLayerProvider: function() {
     return o
   },
   default: function() {
-    return d
+    return u
   }
 });
-var i = a("228256");
+var l = n("228256");
 let {
-  Layer: s,
-  LayerContainer: r,
-  LayerProvider: n
-} = (0, i.createLayer)("Chat"), l = r, o = n;
-var d = s
+  Layer: i,
+  LayerContainer: a,
+  LayerProvider: s
+} = (0, l.createLayer)("Chat"), r = a, o = s;
+var u = i

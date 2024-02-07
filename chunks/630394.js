@@ -1,83 +1,83 @@
 "use strict";
 n.r(t), n.d(t, {
   ProductCard: function() {
-    return l
+    return r
   },
   ProductCardBenefit: function() {
-    return a
+    return s
   }
 });
 var i = n("37983");
 n("884691");
-var r = n("441490");
+var a = n("441490");
 
-function l(e) {
+function r(e) {
   let {
     imgSrc: t,
     title: n,
-    description: l,
-    price: a,
-    priceLabel: s,
+    description: r,
+    price: s,
+    priceLabel: l,
     purchaseButton: o,
-    benefits: u
+    benefits: c
   } = e;
   return (0, i.jsxs)("div", {
-    className: r.productCard,
+    className: a.productCard,
     children: [(0, i.jsx)("div", {
-      className: r.cardHeaderImg,
+      className: a.cardHeaderImg,
       style: null != t ? {
         backgroundImage: "url(".concat(t.toString(), ")")
       } : void 0
     }), (0, i.jsxs)("div", {
-      className: r.cardTitleWrapper,
+      className: a.cardTitleWrapper,
       children: [(0, i.jsx)("div", {
-        className: r.cardTitleName,
+        className: a.cardTitleName,
         children: n
-      }), null != l && (0, i.jsx)("div", {
-        className: r.cardTitleDesc,
-        children: l
+      }), null != r && (0, i.jsx)("div", {
+        className: a.cardTitleDesc,
+        children: r
       })]
     }), (0, i.jsxs)("div", {
-      className: r.cardPrice,
+      className: a.cardPrice,
       children: [(0, i.jsxs)("div", {
         children: [(0, i.jsx)("div", {
-          children: a
-        }), (0, i.jsx)("div", {
-          className: r.cardPriceLabel,
           children: s
+        }), (0, i.jsx)("div", {
+          className: a.cardPriceLabel,
+          children: l
         })]
       }), o]
-    }), null != u && (0, i.jsxs)("div", {
-      className: r.cardBenefitsWrapper,
+    }), null != c && (0, i.jsxs)("div", {
+      className: a.cardBenefitsWrapper,
       children: [(0, i.jsx)("div", {
-        className: r.cardBenefitTitle,
-        children: u.title
-      }), u.items]
+        className: a.cardBenefitTitle,
+        children: c.title
+      }), c.items]
     })]
   })
 }
 
-function a(e) {
+function s(e) {
   let {
     icon: t,
     name: n,
-    description: l
+    description: r
   } = e;
   return (0, i.jsxs)("div", {
-    className: r.cardBenefit,
+    className: a.cardBenefit,
     children: [null != t && (0, i.jsx)("div", {
-      className: r.cardBenefitIcon,
+      className: a.cardBenefitIcon,
       children: "string" == typeof t ? t : (0, i.jsx)("img", {
         src: t.toString(),
         alt: ""
       })
     }), (0, i.jsxs)("div", {
       children: [(0, i.jsx)("div", {
-        className: r.cardBenefitName,
+        className: a.cardBenefitName,
         children: n
       }), (0, i.jsx)("div", {
-        className: r.cardBenefitDesc,
-        children: l
+        className: a.cardBenefitDesc,
+        children: r
       })]
     })]
   })

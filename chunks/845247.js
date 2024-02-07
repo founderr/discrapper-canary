@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
 var l = n("37983");
 n("884691");
 var i = n("798609"),
-  r = n("240249"),
-  o = n("972620"),
-  s = n("524768"),
-  a = n("355263"),
+  a = n("240249"),
+  s = n("972620"),
+  r = n("524768"),
+  o = n("355263"),
   u = n("845579"),
   d = n("697218"),
   c = n("501536"),
@@ -19,9 +19,9 @@ var i = n("798609"),
   m = n("200294"),
   h = n("851745"),
   E = n("825871"),
-  S = n("782340");
+  g = n("782340");
 
-function g(e) {
+function S(e) {
   let t = p.PREFIX_COMMAND_REGEX.exec(e);
   if (null != t) return {
     type: "prefix",
@@ -45,37 +45,37 @@ let C = {
   focusMode: h.FocusMode.MANUAL,
   matches(e, t, n, l, i) {
     if (i.commands === h.CommandMode.DISABLED || i.commands === h.CommandMode.OLD_BUILT_INS || n.length < 2 || !u.ShowCommandSuggestions.getSetting()) return !1;
-    let r = g(n);
-    return null != r && r.cleanedQuery.length > 0
+    let a = S(n);
+    return null != a && a.cleanedQuery.length > 0
   },
-  queryResults(e, t, n, l, s) {
+  queryResults(e, t, n, l, r) {
     if (!u.ShowCommandSuggestions.getSetting()) return E.EMPTY_RESULTS;
-    let d = g(n);
+    let d = S(n);
     if (null == d) return E.EMPTY_RESULTS;
     let c = (0, E.getLimit)("LegacyCommandAutocompletes"),
-      f = (0, a.getCommandQuery)(e, d.cleanedQuery),
+      f = (0, o.getCommandQuery)(e, d.cleanedQuery),
       {
         commands: p,
         sections: m
-      } = r.executeQuery(e, {
+      } = a.executeQuery(e, {
         commandType: i.ApplicationCommandType.CHAT,
         text: f.text
       }, {
         limit: c,
         placeholderCount: h.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
-        scoreMethod: o.ScoreMethod.COMMAND_OR_APPLICATION,
-        allowFetch: s
+        scoreMethod: s.ScoreMethod.COMMAND_OR_APPLICATION,
+        allowFetch: r
       });
     if (null == p) return E.EMPTY_RESULTS;
-    let S = p;
+    let g = p;
     if (f.hasSpaceTerminator) {
       let e = f.text.trim(),
         t = e + " ";
-      S = S.filter(n => n.name === e || n.name.startsWith(t))
+      g = g.filter(n => n.name === e || n.name.startsWith(t))
     }
-    return 0 === S.length ? E.EMPTY_RESULTS : {
+    return 0 === g.length ? E.EMPTY_RESULTS : {
       results: {
-        entries: S.slice(0, c).map(e => ({
+        entries: g.slice(0, c).map(e => ({
           command: e,
           section: null == m ? void 0 : m.find(t => t.id === e.applicationId)
         }))
@@ -89,21 +89,21 @@ let C = {
       },
       selectedIndex: n,
       guild: i,
-      channel: r,
-      query: o,
-      options: s,
-      onHover: a,
+      channel: a,
+      query: s,
+      options: r,
+      onHover: o,
       onClick: u
     } = e;
     return (0, m.renderAutocompleteGroup)({
-      query: o,
+      query: s,
       selectedIndex: n,
       autocompletes: t,
-      onHover: a,
+      onHover: o,
       onClick: u,
-      titleWithQuery: S.default.Messages.COMMANDS_MATCHING,
-      titleWithoutQuery: S.default.Messages.COMMANDS,
-      Component: s.commands === h.CommandMode.OLD_BUILT_INS ? c.default.Command : c.default.NewCommand,
+      titleWithQuery: g.default.Messages.COMMANDS_MATCHING,
+      titleWithoutQuery: g.default.Messages.COMMANDS,
+      Component: r.commands === h.CommandMode.OLD_BUILT_INS ? c.default.Command : c.default.NewCommand,
       getProps: e => {
         let {
           command: t,
@@ -112,16 +112,16 @@ let C = {
         return {
           key: t.id,
           command: t,
-          channel: r,
-          guildId: r.guild_id,
+          channel: a,
+          guildId: a.guild_id,
           showImage: !0,
           section: n
         }
       },
       getQuery: e => {
-        let t = g(e);
+        let t = S(e);
         if ("mention" !== t.type) return e;
-        let n = f.default.getName(null == i ? void 0 : i.id, r.id, t.user);
+        let n = f.default.getName(null == i ? void 0 : i.id, a.id, t.user);
         return e.replace(p.BOT_MENTION_COMMAND_REGEX, "@".concat(n))
       },
       key: "commands",
@@ -134,17 +134,17 @@ let C = {
       index: n,
       type: l,
       options: i,
-      channel: r
-    } = e, o = E.default.onSelect({
+      channel: a
+    } = e, s = E.default.onSelect({
       results: t,
       index: n,
       type: l,
       options: i,
-      channel: r,
-      location: s.ApplicationCommandTriggerLocations.SUGGESTION
+      channel: a,
+      location: r.ApplicationCommandTriggerLocations.SUGGESTION
     });
-    return null == o ? null : {
-      ...o,
+    return null == s ? null : {
+      ...s,
       type: h.AutocompleteSelectionTypes.COMMAND_SUGGESTION
     }
   }

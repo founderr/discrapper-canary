@@ -11,8 +11,8 @@ var r = s("907002"),
   l = s("77078"),
   o = s("206230"),
   n = s("476263"),
-  d = s("617917"),
-  u = s("49111"),
+  u = s("617917"),
+  d = s("49111"),
   c = s("825697"),
   E = function(e) {
     let {
@@ -44,14 +44,14 @@ var r = s("907002"),
             variant: "text-lg/bold",
             children: s.name
           })]
-        }), (0, i.jsx)(d.default, {
+        }), (0, i.jsx)(u.default, {
           className: c.ctaButton,
           guild: s,
           analyticsLocation: {
-            page: u.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-            section: u.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
-            object: u.AnalyticsObjects.BUTTON_CTA,
-            objectType: u.AnalyticsObjectTypes.BUY
+            page: d.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+            section: d.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
+            object: d.AnalyticsObjects.BUTTON_CTA,
+            objectType: d.AnalyticsObjectTypes.BUY
           },
           closeLayer: t,
           pauseAnimation: !E,

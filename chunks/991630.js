@@ -1,74 +1,74 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 }), n("222007");
-var i = n("37983"),
-  a = n("884691"),
-  l = n("414456"),
-  r = n.n(l),
-  s = n("587974"),
-  u = n("315102"),
-  o = n("524768"),
-  d = n("616674"),
-  c = n("363577");
+var l = n("37983"),
+  i = n("884691"),
+  o = n("414456"),
+  a = n.n(o),
+  r = n("587974"),
+  s = n("315102"),
+  u = n("524768"),
+  c = n("616674"),
+  d = n("363577");
 
-function E(e) {
+function p(e) {
   let {
     section: t,
     isSelected: n,
-    width: l,
-    height: E,
-    className: _,
-    selectable: I = !1,
-    onFocus: T,
-    onBlur: f,
-    onMouseOver: S,
-    onMouseLeave: N,
-    ...p
-  } = e, [h, A] = a.useState(!1), m = a.useCallback(() => {
-    A(!0), null == T || T()
-  }, [T]), C = a.useCallback(() => {
-    A(!1), null == f || f()
-  }, [f]), g = a.useCallback(() => {
-    A(!0), null == S || S()
-  }, [S]), G = a.useCallback(() => {
-    A(!1), null == N || N()
-  }, [N]), O = a.useMemo(() => {
-    if (t.type === o.ApplicationCommandSectionType.APPLICATION) {
+    width: o,
+    height: p,
+    className: m,
+    selectable: f = !1,
+    onFocus: h,
+    onBlur: g,
+    onMouseOver: _,
+    onMouseLeave: C,
+    ...v
+  } = e, [A, E] = i.useState(!1), y = i.useCallback(() => {
+    E(!0), null == h || h()
+  }, [h]), I = i.useCallback(() => {
+    E(!1), null == g || g()
+  }, [g]), T = i.useCallback(() => {
+    E(!0), null == _ || _()
+  }, [_]), M = i.useCallback(() => {
+    E(!1), null == C || C()
+  }, [C]), O = i.useMemo(() => {
+    if (t.type === u.ApplicationCommandSectionType.APPLICATION) {
       var e;
-      return u.default.getApplicationIconURL({
+      return s.default.getApplicationIconURL({
         id: t.id,
         icon: t.icon,
         bot: null === (e = t.application) || void 0 === e ? void 0 : e.bot,
         botIconFirst: !0,
-        size: l
+        size: o
       })
     }
-    return c
-  }, [t, l]);
-  return (0, i.jsx)("div", {
-    ...p,
-    className: r(d.wrapper, _, {
-      [d.selectable]: I,
-      [d.selected]: I && n
+    return d
+  }, [t, o]);
+  return (0, l.jsx)("div", {
+    ...v,
+    className: a(c.wrapper, m, {
+      [c.selectable]: f,
+      [c.selected]: f && n
     }),
-    onFocus: m,
-    onBlur: C,
-    onMouseOver: g,
-    onMouseLeave: G,
-    children: (0, i.jsx)(s.default, {
-      className: d.mask,
-      mask: I && (n || h) ? s.MaskIDs.SQUIRCLE : s.MaskIDs.AVATAR_DEFAULT,
-      width: l,
-      height: E,
-      children: (0, i.jsx)("img", {
+    onFocus: y,
+    onBlur: I,
+    onMouseOver: T,
+    onMouseLeave: M,
+    children: (0, l.jsx)(r.default, {
+      className: c.mask,
+      mask: f && (n || A) ? r.MaskIDs.SQUIRCLE : r.MaskIDs.AVATAR_DEFAULT,
+      width: o,
+      height: p,
+      children: (0, l.jsx)("img", {
         alt: "",
-        className: d.icon,
+        className: c.icon,
         style: {
-          width: l,
-          height: E
+          width: o,
+          height: p
         },
         src: O
       })

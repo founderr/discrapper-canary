@@ -16,9 +16,9 @@ var n = t("37983"),
   u = t.n(d),
   h = t("703809"),
   p = t("95410"),
-  f = t("497991"),
-  m = t("928114"),
-  g = t("111940"),
+  m = t("497991"),
+  g = t("928114"),
+  f = t("111940"),
   b = t("133198"),
   y = t("77078"),
   x = t("841098"),
@@ -42,12 +42,12 @@ function T() {
 }
 let w = {
     ...b.semanticColorTokens,
-    ...f.componentColorTokens,
-    ...m.gradients
+    ...m.componentColorTokens,
+    ...g.gradients
   },
   N = {
     ...A(b.semanticColorTokens),
-    ...A(f.componentColorTokens)
+    ...A(m.componentColorTokens)
   },
   E = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
 
@@ -108,10 +108,10 @@ function P() {
       }, [n, l]), u = n < t.length - 1, h = n > 0;
       return [o, s, c, d, u, h]
     }("color-override-03-03-23", {
-      rawPalette: g.rawPalette,
+      rawPalette: f.rawPalette,
       semanticTokens: N
     }),
-    [f, m] = i.useState(""),
+    [m, g] = i.useState(""),
     [b, w] = i.useState({}),
     [L, _] = i.useState({}),
     A = i.useMemo(() => {
@@ -131,7 +131,7 @@ function P() {
         semanticTokens: o
       })
     }, [t, r, a]),
-    O = i.useMemo(() => {
+    M = i.useMemo(() => {
       let a = Object.keys(t).map(r => {
           let a = t[r],
             {
@@ -159,7 +159,7 @@ function P() {
         });
       return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(b).filter(e => b[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(L).filter(e => L[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(n.join("\n"), "\n      }\n    ")
     }, [e, t, r, b, L]),
-    M = i.useCallback(e => {
+    O = i.useCallback(e => {
       let r = "",
         t = "",
         a = !1;
@@ -186,7 +186,7 @@ function P() {
       }).join(",\n"))
     }, []),
     I = i.useCallback(e => c(T(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
-    B = i.useCallback(e => {
+    D = i.useCallback(e => {
       let r = {};
       Object.keys(e).forEach(t => {
         Object.keys(e[t]).map(a => {
@@ -236,7 +236,7 @@ function P() {
           size: y.Button.Sizes.MIN,
           onClick: () => {
             navigator.clipboard.readText().then(e => {
-              B(JSON.parse(e))
+              D(JSON.parse(e))
             })
           },
           children: "Import"
@@ -257,7 +257,7 @@ function P() {
         }), (0, n.jsx)(y.Button, {
           size: y.Button.Sizes.MIN,
           onClick: () => {
-            navigator.clipboard.writeText(M(t))
+            navigator.clipboard.writeText(O(t))
           },
           children: "Export"
         })]
@@ -271,7 +271,7 @@ function P() {
           color: y.Button.Colors.RED,
           onClick: () => {
             a({
-              rawPalette: g.rawPalette,
+              rawPalette: f.rawPalette,
               semanticTokens: N
             })
           },
@@ -286,9 +286,9 @@ function P() {
         },
         children: [(0, n.jsx)(k.default, {
           size: k.default.Sizes.SMALL,
-          query: f,
-          onChange: m,
-          onClear: () => m(""),
+          query: m,
+          onChange: g,
+          onClear: () => g(""),
           placeholder: "Search tokens",
           "aria-label": "Search tokens"
         }), " "]
@@ -302,7 +302,7 @@ function P() {
           margin: 8,
           alignItems: "center"
         },
-        children: Object.keys(N).filter(e => "" === f || e.toLowerCase().includes(f)).map(r => {
+        children: Object.keys(N).filter(e => "" === m || e.toLowerCase().includes(m)).map(r => {
           var a;
           let l = N[r][e],
             o = null == t[r] ? {
@@ -379,7 +379,7 @@ function P() {
     }), (0, n.jsx)(h.Helmet, {
       children: (0, n.jsx)("style", {
         id: "devtools-color-overrides",
-        children: O
+        children: M
       })
     })]
   })

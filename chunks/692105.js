@@ -1,7 +1,7 @@
 "use strict";
-var i, r;
-n.r(t), n.d(t, {
+var i, l;
+n.r(e), n.d(e, {
   IconType: function() {
     return i
   }
-}), (r = i || (i = {}))[r.STORE_ASSET = 1] = "STORE_ASSET", r[r.EMOJI = 2] = "EMOJI"
+}), (l = i || (i = {}))[l.STORE_ASSET = 1] = "STORE_ASSET", l[l.EMOJI = 2] = "EMOJI"

@@ -1,19 +1,19 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return r
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("213736"),
-  s = l("777003"),
-  i = l("814076");
+var l = n("37983");
+n("884691");
+var i = n("213736"),
+  a = n("777003"),
+  s = n("814076");
 
 function r(e) {
   let {} = e;
-  return (0, n.jsx)(s.default, {
-    className: i.clydeMoreInfo,
-    children: (0, n.jsx)(a.default, {})
+  return (0, l.jsx)(a.default, {
+    className: s.clydeMoreInfo,
+    children: (0, l.jsx)(i.default, {})
   })
 }

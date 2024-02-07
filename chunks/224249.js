@@ -15,9 +15,9 @@ var a = t("37983"),
   u = t("145079"),
   h = t("697218"),
   p = t("756609"),
-  f = t("228220"),
-  m = t("664336"),
-  g = t("888400"),
+  m = t("228220"),
+  g = t("664336"),
+  f = t("888400"),
   b = t("398570"),
   y = t("370492"),
   x = t("332814"),
@@ -87,12 +87,12 @@ let L = [{
         }
       } = e, o = h.default.getUser(i), c = s(n);
       return (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsxs)(m.default, {
+        children: [(0, a.jsxs)(g.default, {
           className: l(T.headerBar, j.subPanelHeaderBar),
-          children: [(0, a.jsx)(m.default.Icon, {
+          children: [(0, a.jsx)(g.default.Icon, {
             icon: p.default,
             tooltip: r
-          }), (0, a.jsx)(m.default.Title, {
+          }), (0, a.jsx)(g.default.Title, {
             children: r
           })]
         }), (0, a.jsxs)(x.Properties, {
@@ -101,8 +101,8 @@ let L = [{
             name: "Timestamp (local)",
             children: (0, a.jsx)("time", {
               dateTime: n.toISOString(),
-              title: (0, g.dateFormat)(c, "LLLL"),
-              children: (0, g.calendarFormat)(c)
+              title: (0, f.dateFormat)(c, "LLLL"),
+              children: (0, f.calendarFormat)(c)
             })
           }), null != o && (0, a.jsx)(x.Property, {
             name: "User",
@@ -172,7 +172,7 @@ function A() {
     h = o.find(e => e.key === s),
     {
       TabBar: p,
-      renderSelectedTab: m
+      renderSelectedTab: g
     } = (0, C.default)({
       tabs: L
     }, []);
@@ -188,7 +188,7 @@ function A() {
         onClick: y.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
           title: S.default.Messages.CLEAR,
-          children: (0, a.jsx)(f.default, {
+          children: (0, a.jsx)(m.default, {
             "aria-label": S.default.Messages.CLEAR
           })
         })
@@ -220,7 +220,7 @@ function A() {
       className: j.subPanel,
       minHeight: 100,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
-      children: [(0, a.jsx)(p, {}), m({
+      children: [(0, a.jsx)(p, {}), g({
         loggedEvent: h
       })]
     })]

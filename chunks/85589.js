@@ -1,63 +1,63 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return f
+    return T
   },
   openBurstReactionsUpsellModal: function() {
-    return T
+    return m
   }
 });
 var a = i("37983");
 i("884691");
-var l = i("77078"),
-  n = i("79112"),
-  s = i("154889"),
-  o = i("917247"),
+var n = i("77078"),
+  l = i("79112"),
+  o = i("154889"),
+  s = i("917247"),
   r = i("789946"),
   u = i("646718"),
   d = i("49111"),
   c = i("782340"),
-  p = i("61791"),
-  h = i("277064");
+  h = i("61791"),
+  p = i("277064");
 
-function f(e) {
+function T(e) {
   var t, i;
   let {
-    onClose: l,
-    analyticsSource: f,
-    ...T
-  } = e, m = c.default.Messages.SUPER_REACTIONS_UPSELL_UNLIMITED_BODY.format({
+    onClose: n,
+    analyticsSource: T,
+    ...m
+  } = e, f = c.default.Messages.SUPER_REACTIONS_UPSELL_UNLIMITED_BODY.format({
     onClick: () => {
-      n.default.open(d.UserSettingsSections.PREMIUM), l()
+      l.default.open(d.UserSettingsSections.PREMIUM), n()
     }
-  }), E = (0, o.usePremiumTrialOffer)(), _ = (0, s.usePremiumDiscountOffer)();
+  }), E = (0, s.usePremiumTrialOffer)(), R = (0, o.usePremiumDiscountOffer)();
   return (0, a.jsx)(r.default, {
-    artURL: h,
-    artContainerClassName: p.artContainer,
-    modalClassName: p.modalContainer,
-    bodyClassName: p.bodyContainer,
+    artURL: p,
+    artContainerClassName: h.artContainer,
+    modalClassName: h.modalContainer,
+    bodyClassName: h.bodyContainer,
     type: u.PremiumUpsellTypes.BURST_REACTION_UPSELL,
     title: c.default.Messages.SUPER_REACTIONS_UPSELL_TITLE,
-    body: m,
-    glowUp: m,
-    analyticsSource: f,
+    body: f,
+    glowUp: f,
+    analyticsSource: T,
     analyticsLocation: {
       page: d.AnalyticsPages.PREMIUM_UPSELL_BURST_REACTIONS,
       object: d.AnalyticsObjects.BUTTON_CTA
     },
-    onClose: l,
-    subscribeButtonText: null != E || null != _ ? void 0 : c.default.Messages.PREMIUM_SETTINGS_GET,
+    onClose: n,
+    subscribeButtonText: null != E || null != R ? void 0 : c.default.Messages.PREMIUM_SETTINGS_GET,
     subscriptionTier: null !== (i = null == E ? void 0 : null === (t = E.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== i ? i : u.PremiumSubscriptionSKUs.TIER_2,
     backButtonText: c.default.Messages.NO_THANKS,
-    ...T
+    ...m
   })
 }
 
-function T(e) {
+function m(e) {
   let {
     analytics: t
   } = e;
-  (0, l.openModalLazy)(async () => {
+  (0, n.openModalLazy)(async () => {
     let {
       default: e
     } = await i.el("85589").then(i.bind(i, "85589"));

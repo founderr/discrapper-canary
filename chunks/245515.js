@@ -15,9 +15,9 @@ var a = t("37983"),
   u = t("561703"),
   h = t("315585"),
   p = t("664336"),
-  f = t("888400"),
-  m = t("50625"),
-  g = t("332814"),
+  m = t("888400"),
+  g = t("50625"),
+  f = t("332814"),
   b = t("928063"),
   y = t("637171"),
   x = t("724209"),
@@ -70,22 +70,22 @@ let T = [{
       actionLog: t
     } = e, n = s(t.createdAt);
     return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsxs)(g.Properties, {
+      children: [(0, a.jsxs)(f.Properties, {
         className: k.actionProperties,
-        children: [(0, a.jsx)(g.Property, {
+        children: [(0, a.jsx)(f.Property, {
           name: "Created at",
           children: (0, a.jsx)("time", {
             dateTime: null === (r = t.createdAt) || void 0 === r ? void 0 : r.toISOString(),
-            title: (0, f.dateFormat)(n, "LLLL"),
-            children: (0, f.calendarFormat)(n)
+            title: (0, m.dateFormat)(n, "LLLL"),
+            children: (0, m.calendarFormat)(n)
           })
-        }), (0, a.jsxs)(g.Property, {
+        }), (0, a.jsxs)(f.Property, {
           name: "Total Time",
           children: [C(t.totalTime), " ms"]
         })]
       }), (0, a.jsx)(c.ScrollerThin, {
         className: k.inspectorContainer,
-        children: (0, a.jsx)(m.default, {
+        children: (0, a.jsx)(g.default, {
           data: t.action
         })
       })]
@@ -133,7 +133,7 @@ function w(e) {
           })
         }), (0, a.jsx)(c.ScrollerThin, {
           className: k.inspectorContainer,
-          children: (0, a.jsx)(m.default, {
+          children: (0, a.jsx)(g.default, {
             data: r.error
           })
         })]

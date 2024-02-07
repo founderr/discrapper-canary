@@ -1,95 +1,95 @@
 "use strict";
 n.r(t), n.d(t, {
   Sizes: function() {
-    return p
+    return S
   },
   default: function() {
-    return C
+    return v
   }
 }), n("424973"), n("222007");
-var i = n("37983"),
-  r = n("884691"),
-  l = n("414456"),
-  s = n.n(l),
-  u = n("627445"),
-  o = n.n(u),
-  a = n("77078"),
-  c = n("506885"),
-  d = n("981601"),
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("627445"),
+  o = n.n(r),
+  u = n("77078"),
+  d = n("506885"),
+  c = n("981601"),
   f = n("766274"),
-  E = n("697218"),
-  _ = n("368121"),
-  I = n("523096"),
-  S = n("587974"),
-  h = n("494101");
-let p = {
+  p = n("697218"),
+  m = n("368121"),
+  h = n("523096"),
+  E = n("587974"),
+  g = n("494101");
+let S = {
   SIZE_16: 16,
   SIZE_24: 24,
   SIZE_32: 32,
   SIZE_56: 56
 };
 
-function T(e, t) {
+function C(e, t) {
   let n = e instanceof f.default ? e : null != e ? e.user : null;
   return null != n ? n.id : "user-".concat(t)
 }
-class N extends r.PureComponent {
+class T extends i.PureComponent {
   renderUsers() {
     let {
       users: e,
       max: t,
       renderUser: n = this.defaultRenderUser,
-      size: r,
-      extraDetail: l
-    } = this.props, s = [], u = e.length === t ? e.length : t - 1, o = this.renderMoreUsers(u), a = 0;
-    for (; a < u && a < e.length;) {
-      var c;
-      let t = null == o && null == l && a === e.length - 1,
-        u = n(e[a], t, a);
-      s.push(t ? (0, i.jsx)("div", {
-        className: h.avatarContainer,
-        children: u
-      }, T(null !== (c = e[a]) && void 0 !== c ? c : null, a)) : (0, i.jsx)(S.default, {
-        className: h.avatarContainerMasked,
-        height: r,
-        width: r,
-        mask: S.default.Masks.VOICE_USER_SUMMARY_ITEM,
-        children: u
-      }, T(e[a], a))), a++
+      size: i,
+      extraDetail: a
+    } = this.props, s = [], r = e.length === t ? e.length : t - 1, o = this.renderMoreUsers(r), u = 0;
+    for (; u < r && u < e.length;) {
+      var d;
+      let t = null == o && null == a && u === e.length - 1,
+        r = n(e[u], t, u);
+      s.push(t ? (0, l.jsx)("div", {
+        className: g.avatarContainer,
+        children: r
+      }, C(null !== (d = e[u]) && void 0 !== d ? d : null, u)) : (0, l.jsx)(E.default, {
+        className: g.avatarContainerMasked,
+        height: i,
+        width: i,
+        mask: E.default.Masks.VOICE_USER_SUMMARY_ITEM,
+        children: r
+      }, C(e[u], u))), u++
     }
-    return null != l ? s.push(l) : null != o && s.push(o), s
+    return null != a ? s.push(a) : null != o && s.push(o), s
   }
   renderMoreUsers(e) {
     let {
       max: t,
       count: n,
-      hideMoreUsers: l,
+      hideMoreUsers: a,
       renderMoreUsers: s,
-      users: u
-    } = this.props, o = Math.min(e, u.length);
-    if (!l) {
+      users: r
+    } = this.props, o = Math.min(e, r.length);
+    if (!a) {
       if (null != n) {
-        if (n >= t) return (0, i.jsx)(r.Fragment, {
+        if (n >= t) return (0, l.jsx)(i.Fragment, {
           children: s("".concat(t, "+"), t)
         }, "more-users");
-        if (n > u.length) {
-          let e = n - u.length;
-          return (0, i.jsx)(r.Fragment, {
+        if (n > r.length) {
+          let e = n - r.length;
+          return (0, l.jsx)(i.Fragment, {
             children: s("+".concat(e), e)
           }, "more-users")
         }
-      } else if (o < u.length) {
-        let e = Math.min(u.length - o, 99);
-        return (0, i.jsx)(r.Fragment, {
+      } else if (o < r.length) {
+        let e = Math.min(r.length - o, 99);
+        return (0, l.jsx)(i.Fragment, {
           children: s("+".concat(e), e)
         }, "more-users")
       }
     }
   }
   renderIcon() {
-    return this.props.renderIcon ? (0, i.jsx)(_.default, {
-      foreground: h.foreground,
-      className: h.icon
+    return this.props.renderIcon ? (0, l.jsx)(m.default, {
+      foreground: g.foreground,
+      className: g.icon
     }) : null
   }
   render() {
@@ -97,22 +97,22 @@ class N extends r.PureComponent {
       className: e,
       size: t,
       users: n,
-      guildId: r,
-      showUserPopout: l,
-      useFallbackUserForPopout: u
+      guildId: i,
+      showUserPopout: a,
+      useFallbackUserForPopout: r
     } = this.props, {
       popoutUserId: f
-    } = this.state, _ = n.find(e => null != e && e.id === f), I = u && null == E.default.getUser(f);
-    return (0, i.jsx)(a.Popout, {
+    } = this.state, m = n.find(e => null != e && e.id === f), h = r && null == p.default.getUser(f);
+    return (0, l.jsx)(u.Popout, {
       position: "right",
-      preload: null == _ ? void 0 : () => (0, c.default)(_.id, _.getAvatarURL(r, 80), {
-        guildId: r
+      preload: null == m ? void 0 : () => (0, d.default)(m.id, m.getAvatarURL(i, 80), {
+        guildId: i
       }),
-      shouldShow: !0 === l && null != f,
+      shouldShow: !0 === a && null != f,
       fixed: !0,
-      renderPopout: e => (o(null != f, "UserSummaryItem.render - renderPopout: popoutUserId cannot be null"), (0, i.jsx)(d.default, {
+      renderPopout: e => (o(null != f, "UserSummaryItem.render - renderPopout: popoutUserId cannot be null"), (0, l.jsx)(c.default, {
         ...this.props,
-        user: I && null != _ ? _ : void 0,
+        user: h && null != m ? m : void 0,
         ...e,
         userId: f,
         guildId: this.props.guildId
@@ -120,20 +120,20 @@ class N extends r.PureComponent {
       onRequestClose: () => this.setState({
         popoutUserId: null
       }),
-      children: n => (0, i.jsxs)("div", {
-        className: s(e, h.container, function() {
-          let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.SIZE_24;
+      children: n => (0, l.jsxs)("div", {
+        className: s(e, g.container, function() {
+          let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.SIZE_24;
           switch (e) {
-            case p.SIZE_16:
-              return h.size16;
-            case p.SIZE_24:
-              return h.size24;
-            case p.SIZE_32:
-              return h.size32;
-            case p.SIZE_56:
-              return h.size56;
+            case S.SIZE_16:
+              return g.size16;
+            case S.SIZE_24:
+              return g.size24;
+            case S.SIZE_32:
+              return g.size32;
+            case S.SIZE_56:
+              return g.size56;
             default:
-              return h.size24
+              return g.size24
           }
         }(t)),
         ref: this._ref,
@@ -145,54 +145,54 @@ class N extends r.PureComponent {
   constructor(...e) {
     super(...e), this.state = {
       popoutUserId: null
-    }, this._ref = r.createRef(), this.defaultRenderUser = (e, t, n) => {
+    }, this._ref = i.createRef(), this.defaultRenderUser = (e, t, n) => {
       let {
-        showUserPopout: r,
-        guildId: l,
+        showUserPopout: i,
+        guildId: a,
         size: s
       } = this.props;
       if (null == e) {
-        if (!this.props.showDefaultAvatarsForNullUsers) return (0, i.jsx)("div", {
-          className: h.emptyUser
+        if (!this.props.showDefaultAvatarsForNullUsers) return (0, l.jsx)("div", {
+          className: g.emptyUser
         });
         {
-          let e = (null != n ? n : 0) % I.default.DEFAULT_AVATARS.length,
-            t = I.default.DEFAULT_AVATARS[e];
-          return (0, i.jsx)("img", {
+          let e = (null != n ? n : 0) % h.default.DEFAULT_AVATARS.length,
+            t = h.default.DEFAULT_AVATARS[e];
+          return (0, l.jsx)("img", {
             src: t,
             alt: "",
-            className: h.avatar
+            className: g.avatar
           })
         }
       }
-      let u = (0, i.jsx)("img", {
-        src: e.getAvatarURL(l, s),
+      let r = (0, l.jsx)("img", {
+        src: e.getAvatarURL(a, s),
         alt: e.username,
-        className: h.avatar
+        className: g.avatar
       }, e.id);
-      return r ? (0, i.jsx)(a.Clickable, {
-        className: h.clickableAvatar,
+      return i ? (0, l.jsx)(u.Clickable, {
+        className: g.clickableAvatar,
         onClick: () => {
           null != this._ref.current && null != e && this.setState({
             popoutUserId: e.id
           })
         },
         tabIndex: -1,
-        children: u
-      }, e.id) : u
+        children: r
+      }, e.id) : r
     }
   }
 }
-N.defaultProps = {
+T.defaultProps = {
   max: 10,
   renderMoreUsers: function(e) {
-    return (0, i.jsx)("div", {
-      className: h.moreUsers,
+    return (0, l.jsx)("div", {
+      className: g.moreUsers,
       children: e
     })
   },
   renderIcon: !1,
   showDefaultAvatarsForNullUsers: !1,
-  size: p.SIZE_24
+  size: S.SIZE_24
 };
-var C = N
+var v = T

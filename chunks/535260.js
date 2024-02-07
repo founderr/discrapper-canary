@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("95045"),
   E = n("393414"),
   C = n("144491"),
-  S = n("845579"),
-  g = n("42203"),
+  g = n("845579"),
+  S = n("42203"),
   _ = n("305961"),
   I = n("957255"),
   T = n("27618"),
@@ -44,7 +44,7 @@ function b(e) {
     scrollTo: p,
     searchResults: m,
     blockCount: C,
-    onChangePage: S
+    onChangePage: g
   } = e, {
     offset: _,
     totalResults: I,
@@ -53,8 +53,8 @@ function b(e) {
   } = n, A = l.useCallback(e => {
     if (x) return;
     let t = e - 1;
-    null == S || S(t), u.changePage(f, t)
-  }, [f, x, S]), M = l.useCallback(e => {
+    null == g || g(t), u.changePage(f, t)
+  }, [f, x, g]), M = l.useCallback(e => {
     if (e.blocked) r.default.show({
       title: O.default.Messages.UNBLOCK_TO_JUMP_TITLE,
       body: O.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
@@ -63,7 +63,7 @@ function b(e) {
       confirmText: O.default.Messages.OKAY
     });
     else {
-      let t = g.default.getChannel(e.channel_id),
+      let t = S.default.getChannel(e.channel_id),
         n = null != t ? t.getGuildId() : null;
       o.default.trackJump(e.channel_id, e.id, "Search Results", {
         search_id: v.default.getAnalyticsId(f)
@@ -76,7 +76,7 @@ function b(e) {
     return m.reduce((n, a) => {
       let l = a.find(e => e.isSearchHit);
       if (!N && null != l && T.default.isBlocked(l.author.id)) return n;
-      let s = g.default.getChannel(a[0].channel_id);
+      let s = S.default.getChannel(a[0].channel_id);
       return null == s ? n : ((null == e || e !== s.id) && n.push({
         channel: s,
         results: [],
@@ -178,11 +178,11 @@ function P(e) {
     jumpToMessage: b,
     listNavigator: P,
     favoriteSearch: D
-  } = e, U = S.RenderSpoilers.useSetting(), w = l.useCallback(e => {
+  } = e, U = g.RenderSpoilers.useSetting(), w = l.useCallback(e => {
     if (e === x.default.getChannelId()) return;
-    let t = g.default.getChannel(e);
+    let t = S.default.getChannel(e);
     if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, C.transitionToChannel)(t.id)
-  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == s ? void 0 : s.parent_id) != null ? g.default.getChannel(s.parent_id) : null, B = null != V ? V.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != V ? (0, h.default)(V) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
+  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == s ? void 0 : s.parent_id) != null ? S.default.getChannel(s.parent_id) : null, B = null != V ? V.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != V ? (0, h.default)(V) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
     content: Y
   } = (0, m.default)({
     content: F,

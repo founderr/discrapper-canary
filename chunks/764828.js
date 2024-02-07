@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   SafetyWarningTypes: function() {
-    return r
+    return l
   },
   SafetyWarningFeedbackTypes: function() {
-    return a
+    return r
   },
   default: function() {
-    return _
+    return C
   }
 });
-var i, l, r, a, s = n("446674"),
+var i, a, l, r, s = n("446674"),
   u = n("913144"),
   o = n("42203");
-(i = r || (r = {}))[i.STRANGER_DANGER = 1] = "STRANGER_DANGER", i[i.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", i[i.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (l = a || (a = {}))[l.UPVOTE = 0] = "UPVOTE", l[l.DOWNVOTE = 1] = "DOWNVOTE";
+(i = l || (l = {}))[i.STRANGER_DANGER = 1] = "STRANGER_DANGER", i[i.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", i[i.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (a = r || (r = {}))[a.UPVOTE = 0] = "UPVOTE", a[a.DOWNVOTE = 1] = "DOWNVOTE";
 let d = [],
   c = {};
 
@@ -24,12 +24,12 @@ function f(e) {
   null != t && (c[e.id] = t), null == t && null != c[e.id] && delete c[e.id]
 }
 
-function h() {
+function E() {
   c = {}, Object.values(o.default.getMutablePrivateChannels()).forEach(e => {
     f(e)
   })
 }
-class E extends s.default.Store {
+class h extends s.default.Store {
   initialize() {
     this.waitFor(o.default)
   }
@@ -42,7 +42,7 @@ class E extends s.default.Store {
     return null !== (t = c[e]) && void 0 !== t ? t : d
   }
 }
-var _ = new E(u.default, {
+var C = new h(u.default, {
   CHANNEL_CREATE: function(e) {
     f(e.channel)
   },
@@ -54,15 +54,15 @@ var _ = new E(u.default, {
       f(e)
     })
   },
-  CONNECTION_OPEN: h,
-  CONNECTION_OPEN_SUPPLEMENTAL: h,
+  CONNECTION_OPEN: E,
+  CONNECTION_OPEN_SUPPLEMENTAL: E,
   CHANNEL_SAFETY_WARNING_FEEDBACK: function(e) {
     let {
       channelId: t,
       warningId: n,
       feedbackType: i
-    } = e, l = c[t];
-    null != l && (c[t] = l.map(e => e.id === n ? {
+    } = e, a = c[t];
+    null != a && (c[t] = a.map(e => e.id === n ? {
       ...e,
       feedback_type: i
     } : e))
@@ -82,10 +82,10 @@ var _ = new E(u.default, {
       warningIds: n
     } = e, i = c[t];
     if (null == i) return;
-    let l = Date.now().toString();
+    let a = Date.now().toString();
     c[t] = i.map(e => n.includes(e.id) ? {
       ...e,
-      dismiss_timestamp: l
+      dismiss_timestamp: a
     } : e)
   }
 })

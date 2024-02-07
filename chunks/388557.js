@@ -15,9 +15,9 @@ var a = t("37983"),
   u = t("521012"),
   h = t("811199"),
   p = t("49111"),
-  f = t("694735"),
-  m = t("186720");
-let g = [{
+  m = t("694735"),
+  g = t("186720");
+let f = [{
     label: "Nitro Monthly",
     value: "511651880837840896"
   }, {
@@ -96,9 +96,9 @@ function k() {
     await s.default.delete("/debug/subscription"), await (0, d.fetchSubscriptions)()
   };
   return (0, a.jsx)(c.ScrollerThin, {
-    className: l(f.panel),
+    className: l(m.panel),
     children: (0, a.jsxs)("div", {
-      className: m.panelInner,
+      className: g.panelInner,
       children: [(0, a.jsx)(c.Text, {
         style: {
           marginBottom: "16px"
@@ -106,7 +106,7 @@ function k() {
         variant: "text-lg/bold",
         children: "Manage Subscription"
       }), (0, a.jsxs)("section", {
-        className: m.buttons,
+        className: g.buttons,
         children: [null == t && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(c.Text, {
             variant: "text-md/normal",
@@ -114,7 +114,7 @@ function k() {
           }), (0, a.jsx)(c.Select, {
             serialize: e => e,
             isSelected: r => r === e,
-            options: g,
+            options: f,
             select: r,
             popoutLayerContext: h.devToolsLayerContext
           }), (0, a.jsx)(c.Button, {
@@ -159,7 +159,7 @@ function v(e) {
       variant: "text-md/normal",
       children: "Existing Subscription"
     }), (0, a.jsxs)("div", {
-      className: l(m.card, i ? m.gradientWrapperTier0 : m.gradientWrapperTier2),
+      className: l(g.card, i ? g.gradientWrapperTier0 : g.gradientWrapperTier2),
       children: [(0, a.jsxs)(c.Text, {
         variant: "text-md/normal",
         children: [" Subscription Type: ", (() => {

@@ -1,25 +1,25 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return n
+    return u
   }
 }), r("808653"), r("424973");
-var n, l = r("407788"),
-  i = r("792382");
-n = class e extends i.default {
+var u, l = r("407788"),
+  n = r("792382");
+u = class e extends n.default {
   static fromServer(t) {
     let {
       products: r,
-      logo: n,
-      ...i
+      logo: u,
+      ...n
     } = t;
     return new e({
-      ...super.fromServer(i),
+      ...super.fromServer(n),
       products: r.reduce((e, t) => {
         let r = l.default.fromServer(t);
         return 0 === r.items.length ? e : (e.push(r), e)
       }, []),
-      logo: n
+      logo: u
     })
   }
   constructor(e) {

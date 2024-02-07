@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return I
   }
 }), n("222007");
-var r = n("37983"),
-  i = n("884691"),
-  s = n("245187"),
-  l = n("10514"),
-  u = n("599110"),
-  a = n("719923"),
+var a = n("37983"),
+  l = n("884691"),
+  i = n("245187"),
+  r = n("10514"),
+  s = n("599110"),
+  u = n("719923"),
   o = n("635357"),
   c = n("642906"),
   d = n("628738"),
@@ -21,42 +21,42 @@ function I(e) {
     initialPlanId: n,
     guildId: I,
     setAnalyticsData: _,
-    handleClose: E
+    handleClose: S
   } = e, {
-    blockedPayments: S,
-    setStep: T,
-    hasFetchedSubscriptions: N,
-    hasFetchedSubscriptionPlans: p,
-    currencyLoading: C,
+    blockedPayments: T,
+    setStep: P,
+    hasFetchedSubscriptions: E,
+    hasFetchedSubscriptionPlans: N,
+    currencyLoading: A,
     selectedSkuId: m,
-    setSelectedSkuId: P,
-    setSelectedPlanId: h,
-    priceOptions: R,
-    setSubscriptionMetadataRequest: L
+    setSelectedSkuId: p,
+    setSelectedPlanId: C,
+    priceOptions: O,
+    setSubscriptionMetadataRequest: R
   } = (0, c.usePaymentContext)(), {
-    isGift: M
-  } = (0, o.useGiftContext)(), [v, A] = i.useState(!N || !p || C);
-  return (i.useEffect(() => {
-    A(!N || !p || C)
-  }, [C, p, N]), i.useEffect(() => {
-    null != I && L({
+    isGift: g
+  } = (0, o.useGiftContext)(), [M, L] = l.useState(!E || !N || A);
+  return (l.useEffect(() => {
+    L(!E || !N || A)
+  }, [A, N, E]), l.useEffect(() => {
+    null != I && R({
       guild_id: I
     })
-  }, [I, L]), i.useEffect(() => {
-    h(n);
-    let e = null != n ? l.default.get(n) : null;
-    !v && !S && (_(t => {
-      let n = null != e ? (0, a.getPrice)(e.id, !1, M, R) : void 0,
-        r = {
+  }, [I, R]), l.useEffect(() => {
+    C(n);
+    let e = null != n ? r.default.get(n) : null;
+    !M && !T && (_(t => {
+      let n = null != e ? (0, u.getPrice)(e.id, !1, g, O) : void 0,
+        a = {
           ...t,
           subscription_plan_id: null == e ? void 0 : e.id,
           price: null == n ? void 0 : n.amount,
           regular_price: null == e ? void 0 : e.price,
-          currency: R.currency
+          currency: O.currency
         };
-      return u.default.track(f.AnalyticEvents.PAYMENT_FLOW_STARTED, r), r
-    }), null != e && (P(null == e ? void 0 : e.skuId), T(t)))
-  }, [S, n, M, v, R, m, _, h, P, T, t]), v) ? (0, r.jsx)(d.default, {}) : S ? (0, r.jsx)(s.BlockedPaymentsContentModal, {
-    onClose: E
+      return s.default.track(f.AnalyticEvents.PAYMENT_FLOW_STARTED, a), a
+    }), null != e && (p(null == e ? void 0 : e.skuId), P(t)))
+  }, [T, n, g, M, O, m, _, C, p, P, t]), M) ? (0, a.jsx)(d.default, {}) : T ? (0, a.jsx)(i.BlockedPaymentsContentModal, {
+    onClose: S
   }) : null
 }

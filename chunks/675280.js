@@ -1,61 +1,61 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return h
+    return T
   }
 });
-var n = i("37983"),
-  s = i("884691"),
-  l = i("23411"),
-  r = i("811986"),
-  a = i("648439"),
-  o = i("841811"),
-  u = i("432335"),
-  c = i("849976"),
-  d = i("742223"),
-  f = i("877220"),
-  E = i("258752"),
-  m = i("216422"),
-  I = i("290581"),
-  p = i("742219"),
-  g = i("115279");
-let _ = e => {
+var l = n("37983"),
+  i = n("884691"),
+  a = n("23411"),
+  s = n("811986"),
+  r = n("648439"),
+  o = n("841811"),
+  u = n("432335"),
+  d = n("849976"),
+  c = n("742223"),
+  f = n("877220"),
+  p = n("258752"),
+  m = n("216422"),
+  h = n("290581"),
+  E = n("742219"),
+  g = n("115279");
+let S = e => {
     switch (e) {
       case g.EmojiCategories.RECENT:
         return o.default;
       case g.EmojiCategories.FAVORITES:
-        return I.default;
+        return h.default;
       case g.EmojiCategories.TOP_GUILD_EMOJI:
-        return p.default;
+        return E.default;
       case g.EmojiCategories.PEOPLE:
-        return d.default;
+        return c.default;
       case g.EmojiCategories.NATURE:
         return u.default;
       case g.EmojiCategories.FOOD:
-        return a.default;
+        return r.default;
       case g.EmojiCategories.ACTIVITY:
-        return l.default;
+        return a.default;
       case g.EmojiCategories.TRAVEL:
-        return E.default;
+        return p.default;
       case g.EmojiCategories.OBJECTS:
-        return c.default;
+        return d.default;
       case g.EmojiCategories.SYMBOLS:
         return f.default;
       case g.EmojiCategories.FLAGS:
-        return r.default;
+        return s.default;
       case g.EmojiCategories.PREMIUM_UPSELL:
         return m.default;
       default:
         return
     }
   },
-  S = s.memo(function(e) {
+  C = i.memo(function(e) {
     let {
       categoryId: t,
-      ...i
-    } = e, s = _(t);
-    return null == s ? null : (0, n.jsx)(s, {
-      ...i
+      ...n
+    } = e, i = S(t);
+    return null == i ? null : (0, l.jsx)(i, {
+      ...n
     })
   });
-var h = S
+var T = C

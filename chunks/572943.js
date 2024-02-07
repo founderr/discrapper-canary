@@ -1,80 +1,80 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   usePlatformAllowed: function() {
-    return E
+    return g
   },
   usePlatforms: function() {
     return S
   },
   useLegacyPlatformType: function() {
-    return _
+    return C
   }
-}), l("222007");
-var n = l("884691"),
-  a = l("917351"),
-  s = l.n(a),
-  i = l("446674"),
-  r = l("376556"),
-  o = l("695702"),
-  u = l("47319"),
-  d = l("697218"),
-  c = l("718517"),
-  f = l("49111"),
-  m = l("894282");
-let p = {
+}), n("222007");
+var l = n("884691"),
+  i = n("917351"),
+  a = n.n(i),
+  s = n("446674"),
+  r = n("376556"),
+  o = n("695702"),
+  u = n("47319"),
+  d = n("697218"),
+  c = n("718517"),
+  f = n("49111"),
+  p = n("894282");
+let m = {
     [f.PlatformTypes.INSTAGRAM]: ["1036753656588017764"]
   },
   h = new Map([
     [f.PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()]
   ]),
-  T = 30 * c.default.Millis.DAY;
+  E = 30 * c.default.Millis.DAY;
 
-function E(e) {
+function g(e) {
   let {
     forUserProfile: t
-  } = e, l = (0, i.useStateFromStores)([d.default], () => d.default.getCurrentUser()), n = o.PlayStationVoiceExperiment.useExperiment({
+  } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), l = o.PlayStationVoiceExperiment.useExperiment({
     location: "f2f7ef_1"
   }, {
     autoTrackExposure: !1
   }).allowPlayStationStaging;
   return e => {
-    var a;
-    return e.type === f.PlatformTypes.PLAYSTATION_STAGING ? n : !!(void 0 !== l && (null === (a = p[e.type]) || void 0 === a ? void 0 : a.includes(l.id))) || !!t || e.enabled
+    var i;
+    return e.type === f.PlatformTypes.PLAYSTATION_STAGING ? l : !!(void 0 !== n && (null === (i = m[e.type]) || void 0 === i ? void 0 : i.includes(n.id))) || !!t || e.enabled
   }
 }
 
 function S() {
-  let e = (0, i.useStateFromStores)([u.default], () => u.default.getAccounts()),
-    t = E({
+  let e = (0, s.useStateFromStores)([u.default], () => u.default.getAccounts()),
+    t = g({
       forUserProfile: !1
     }),
-    l = n.useMemo(() => {
+    n = l.useMemo(() => {
       let t = new Set;
       return e.forEach(e => t.add(e.type)), t
     }, [e]);
-  return s.sortBy(r.default.filter(t), [e => {
+  return a.sortBy(r.default.filter(t), [e => {
     var t;
-    return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + T)
-  }, e => l.has(e.type), e => e.hasMetadata, e => !f.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
+    return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + E)
+  }, e => n.has(e.type), e => e.hasMetadata, e => !f.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
 }
 
-function _(e) {
-  let [t, l] = n.useState(!1);
+function C(e) {
+  let [t, n] = l.useState(!1);
+
+  function i(e) {
+    let {
+      key: t
+    } = e;
+    t === p.KeyboardKeysUpdated.SHIFT && n(!0)
+  }
 
   function a(e) {
     let {
       key: t
     } = e;
-    t === m.KeyboardKeysUpdated.SHIFT && l(!0)
+    t === p.KeyboardKeysUpdated.SHIFT && n(!1)
   }
-
-  function s(e) {
-    let {
-      key: t
-    } = e;
-    t === m.KeyboardKeysUpdated.SHIFT && l(!1)
-  }
-  return (n.useEffect(() => (window.addEventListener("keydown", a), window.addEventListener("keyup", s), () => {
-    window.removeEventListener("keydown", a), window.removeEventListener("keyup", s)
+  return (l.useEffect(() => (window.addEventListener("keydown", i), window.addEventListener("keyup", a), () => {
+    window.removeEventListener("keydown", i), window.removeEventListener("keyup", a)
   }), []), t && e === f.PlatformTypes.TWITTER) ? f.PlatformTypes.TWITTER_LEGACY : e
 }

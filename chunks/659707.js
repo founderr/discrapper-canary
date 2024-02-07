@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return U
+    return y
   }
 });
 var l = n("37983"),
-  i = n("884691"),
-  u = n("917351"),
-  a = n.n(u),
+  u = n("884691"),
+  i = n("917351"),
+  a = n.n(i),
   r = n("249654"),
   s = n("446674"),
   d = n("77078"),
@@ -21,69 +21,69 @@ var l = n("37983"),
   h = n("476765"),
   m = n("943232"),
   N = n("945330"),
-  p = n("599110"),
-  C = n("449008"),
-  T = n("933326"),
+  C = n("599110"),
+  p = n("449008"),
+  _ = n("933326"),
   I = n("334683"),
-  _ = n("534222"),
+  T = n("534222"),
   x = n("473031"),
   D = n("266763"),
-  R = n("842672"),
-  G = n("745049"),
-  M = n("49111"),
-  y = n("133335"),
-  L = n("782340"),
-  A = n("639480");
+  G = n("842672"),
+  R = n("745049"),
+  L = n("49111"),
+  M = n("133335"),
+  A = n("782340"),
+  U = n("639480");
 
-function U(e) {
+function y(e) {
   let {
     transitionState: t,
-    onClose: u,
-    guildId: U
-  } = e, j = (0, h.useUID)(), V = (0, s.useStateFromStores)([g.default], () => g.default.getGuild(U)), O = (0, I.default)(null == V ? void 0 : V.id), P = (0, _.default)(U), b = i.useRef(S.default.ackMessageId(U, y.ReadStateTypes.GUILD_EVENT)), k = (0, R.default)();
-  return i.useEffect(() => {
-    P.forEach(e => T.default.getGuildEventUserCounts(U, e.id, [])), T.default.getGuildEventsForCurrentUser(U)
-  }, [P, U]), i.useEffect(() => {
-    let e = g.default.getGuild(U);
-    if (!(null == e ? void 0 : e.hasFeature(M.GuildFeatures.HUB))) return;
+    onClose: i,
+    guildId: y
+  } = e, V = (0, h.useUID)(), O = (0, s.useStateFromStores)([g.default], () => g.default.getGuild(y)), P = (0, I.default)(null == O ? void 0 : O.id), j = (0, T.default)(y), k = u.useRef(S.default.ackMessageId(y, M.ReadStateTypes.GUILD_EVENT)), F = (0, G.default)();
+  return u.useEffect(() => {
+    j.forEach(e => _.default.getGuildEventUserCounts(y, e.id, [])), _.default.getGuildEventsForCurrentUser(y)
+  }, [j, y]), u.useEffect(() => {
+    let e = g.default.getGuild(y);
+    if (!(null == e ? void 0 : e.hasFeature(L.GuildFeatures.HUB))) return;
     let {
       showHubEventsList: t
     } = f.default.getCurrentConfig({
-      guildId: U,
+      guildId: y,
       location: "d3755f_1"
     });
     if (!t) return;
-    let n = E.default.getDefaultChannel(U);
+    let n = E.default.getDefaultChannel(y);
     null != n && c.fetchDirectoryEntries(n.id)
-  }, [U]), i.useEffect(() => {
-    p.default.track(M.AnalyticEvents.OPEN_MODAL, {
-      type: G.ANALYTICS_GUILD_EVENTS_MODAL_NAME,
-      guild_id: U,
-      guild_events_count: P.length
+  }, [y]), u.useEffect(() => {
+    C.default.track(L.AnalyticEvents.OPEN_MODAL, {
+      type: R.ANALYTICS_GUILD_EVENTS_MODAL_NAME,
+      guild_id: y,
+      guild_events_count: j.length
     })
-  }, []), i.useEffect(() => {
-    a(P).map(e => e.creator_id).filter(C.isNotNullish).uniq().forEach(e => {
-      v.default.requestMember(U, e)
+  }, []), u.useEffect(() => {
+    a(j).map(e => e.creator_id).filter(p.isNotNullish).uniq().forEach(e => {
+      v.default.requestMember(y, e)
     })
-  }, [U, P]), i.useEffect(() => {
-    null != U && (0, o.ackGuildFeature)(U, y.ReadStateTypes.GUILD_EVENT)
-  }, [U]), (0, l.jsxs)(d.ModalRoot, {
+  }, [y, j]), u.useEffect(() => {
+    null != y && (0, o.ackGuildFeature)(y, M.ReadStateTypes.GUILD_EVENT)
+  }, [y]), (0, l.jsxs)(d.ModalRoot, {
     size: d.ModalSize.MEDIUM,
     transitionState: t,
-    "aria-labelledby": j,
+    "aria-labelledby": V,
     children: [(0, l.jsxs)(d.ModalHeader, {
-      className: A.header,
+      className: U.header,
       children: [(0, l.jsx)(m.default, {
-        className: A.icon
+        className: U.icon
       }), (0, l.jsx)(d.Heading, {
-        id: j,
+        id: V,
         variant: "heading-md/semibold",
-        children: P.length > 0 ? L.default.Messages.GUILD_EVENTS_PLURAL.format({
-          number: P.length
-        }) : L.default.Messages.GUILD_EVENTS
-      }), O && (0, l.jsxs)(l.Fragment, {
+        children: j.length > 0 ? A.default.Messages.GUILD_EVENTS_PLURAL.format({
+          number: j.length
+        }) : A.default.Messages.GUILD_EVENTS
+      }), P && (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)("div", {
-          className: A.divider,
+          className: U.divider,
           children: "|"
         }), (0, l.jsx)(d.Button, {
           size: d.Button.Sizes.MIN,
@@ -94,31 +94,31 @@ function U(e) {
               } = await n.el("590942").then(n.bind(n, "590942"));
               return t => (0, l.jsx)(e, {
                 ...t,
-                guildId: U
+                guildId: y
               })
-            }, k)
+            }, F)
           },
-          innerClassName: A.button,
-          children: L.default.Messages.SCHEDULE_EVENT
+          innerClassName: U.button,
+          children: A.default.Messages.SCHEDULE_EVENT
         })]
       }), (0, l.jsx)(d.Clickable, {
-        onClick: u,
-        className: A.iconButton,
-        "aria-label": L.default.Messages.CLOSE,
+        onClick: i,
+        className: U.iconButton,
+        "aria-label": A.default.Messages.CLOSE,
         children: (0, l.jsx)(N.default, {
-          className: A.icon
+          className: U.icon
         })
       })]
     }), (0, l.jsx)(d.ModalContent, {
-      className: A.content,
-      children: P.length > 0 ? P.map(e => (0, l.jsx)(x.default, {
+      className: U.content,
+      children: j.length > 0 ? j.map(e => (0, l.jsx)(x.default, {
         guildEvent: e,
-        guildId: U,
-        onActionTaken: u,
-        isNew: null != b.current && r.default.compare(e.id, b.current) > 0
+        guildId: y,
+        onActionTaken: i,
+        isNew: null != k.current && r.default.compare(e.id, k.current) > 0
       }, e.id)) : (0, l.jsx)(D.default, {
-        guildId: U,
-        onClose: u
+        guildId: y,
+        onClose: i
       })
     })]
   })

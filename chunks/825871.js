@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   EMPTY_RESULTS: function() {
-    return A
+    return x
   },
   FakeFooter: function() {
-    return R
+    return O
   },
   getLimit: function() {
     return M
   },
   default: function() {
-    return k
+    return P
   }
 });
 var l = n("37983");
 n("884691");
 var i = n("271841"),
-  r = n("551042"),
-  o = n("798609"),
-  s = n("507217"),
-  a = n("589777"),
+  a = n("551042"),
+  s = n("798609"),
+  r = n("507217"),
+  o = n("589777"),
   u = n("988721"),
   d = n("240249"),
   c = n("972620"),
@@ -28,28 +28,28 @@ var i = n("271841"),
   m = n("524768"),
   h = n("389153"),
   E = n("396465"),
-  S = n("355263"),
-  g = n("957255"),
+  g = n("355263"),
+  S = n("957255"),
   C = n("501536"),
   T = n("655518"),
   v = n("200294"),
-  y = n("851745"),
-  x = n("406291"),
-  I = n("317041"),
-  N = n("782340"),
-  _ = n("94885");
-let A = {
+  I = n("851745"),
+  _ = n("406291"),
+  y = n("317041"),
+  A = n("782340"),
+  N = n("94885");
+let x = {
   results: {
     entries: []
   }
 };
 
-function R() {
+function O() {
   return d.useSearchOpenState(), null
 }
 
-function O() {
-  (0, r.openModalLazy)(async () => {
+function R() {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("496896").then(n.bind(n, "496896"));
@@ -62,55 +62,55 @@ function O() {
 function M(e) {
   return d.isInIndexExperiment({
     location: e
-  }) ? y.MAX_COMMAND_AUTOCOMPLETE_RESULTS : y.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
+  }) ? I.MAX_COMMAND_AUTOCOMPLETE_RESULTS : I.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
 }
-let b = {
-  sentinel: x.COMMAND_SENTINEL,
-  stores: [p.default, f.default, u.default, g.default],
-  matches: (e, t, n, l, i) => i.commands !== y.CommandMode.DISABLED && null == p.default.getActiveCommand(e.id) && (l || i.commands !== y.CommandMode.OLD_BUILT_INS),
+let L = {
+  sentinel: _.COMMAND_SENTINEL,
+  stores: [p.default, f.default, u.default, S.default],
+  matches: (e, t, n, l, i) => i.commands !== I.CommandMode.DISABLED && null == p.default.getActiveCommand(e.id) && (l || i.commands !== I.CommandMode.OLD_BUILT_INS),
   queryResults(e, t, n, l, i) {
-    if (0 === n.length && l.commands !== y.CommandMode.OLD_BUILT_INS) return A;
-    let r = M("CommandAutocompletes");
-    if (l.commands === y.CommandMode.OLD_BUILT_INS) {
-      let l = (0, a.getBuiltInCommands)(o.ApplicationCommandType.CHAT, !1, !1),
+    if (0 === n.length && l.commands !== I.CommandMode.OLD_BUILT_INS) return x;
+    let a = M("CommandAutocompletes");
+    if (l.commands === I.CommandMode.OLD_BUILT_INS) {
+      let l = (0, o.getBuiltInCommands)(s.ApplicationCommandType.CHAT, !1, !1),
         i = RegExp("^".concat(T.default.escape(n)), "i"),
-        s = (0, h.getMatchingGroupCommands)(l, i, {
+        r = (0, h.getMatchingGroupCommands)(l, i, {
           channel: e,
           guild: t
-        }, r),
-        u = a.BUILT_IN_SECTIONS[I.BuiltInSectionId.BUILT_IN];
-      return 0 === s.length ? A : {
+        }, a),
+        u = o.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN];
+      return 0 === r.length ? x : {
         results: {
-          entries: s.map(e => ({
+          entries: r.map(e => ({
             command: e,
             section: u
           }))
         }
       }
     }
-    let s = (0, S.getCommandQuery)(e, n),
+    let r = (0, g.getCommandQuery)(e, n),
       {
         commands: u,
         sections: f
       } = d.executeQuery(e, {
-        commandType: o.ApplicationCommandType.CHAT,
-        text: s.text
+        commandType: s.ApplicationCommandType.CHAT,
+        text: r.text
       }, {
-        limit: r,
-        placeholderCount: y.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
+        limit: a,
+        placeholderCount: I.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
         scoreMethod: c.ScoreMethod.COMMAND_OR_APPLICATION,
         allowFetch: i
       });
-    if (null == u) return A;
+    if (null == u) return x;
     let p = u;
-    if (s.hasSpaceTerminator) {
-      let e = s.text.trim(),
+    if (r.hasSpaceTerminator) {
+      let e = r.text.trim(),
         t = e + " ";
       p = p.filter(n => n.name === e || n.name.startsWith(t))
     }
-    return 0 === p.length ? A : {
+    return 0 === p.length ? x : {
       results: {
-        entries: p.slice(0, r).map(e => ({
+        entries: p.slice(0, a).map(e => ({
           command: e,
           section: null == f ? void 0 : f.find(t => t.id === e.applicationId)
         }))
@@ -123,31 +123,31 @@ let b = {
         entries: t
       },
       selectedIndex: n,
-      channel: r,
-      query: o,
-      options: s,
-      onHover: a,
+      channel: a,
+      query: s,
+      options: r,
+      onHover: o,
       onClick: u
-    } = e, c = (0, S.getCommandQuery)(r, o);
-    if (s.commands !== y.CommandMode.OLD_BUILT_INS && !d.isInIndexExperiment({
+    } = e, c = (0, g.getCommandQuery)(a, s);
+    if (r.commands !== I.CommandMode.OLD_BUILT_INS && !d.isInIndexExperiment({
         location: "CommandAutocompletes"
       })) return (0, l.jsx)(E.default, {
-      channel: r,
+      channel: a,
       query: c.text,
       selectedIndex: n,
-      onHover: a,
+      onHover: o,
       onClick: u
     });
-    let f = s.commands === y.CommandMode.OLD_BUILT_INS;
+    let f = r.commands === I.CommandMode.OLD_BUILT_INS;
     return (0, v.renderAutocompleteGroup)({
       query: c.text,
       selectedIndex: n,
       autocompletes: t,
-      onHover: a,
+      onHover: o,
       onClick: u,
-      titleWithQuery: N.default.Messages.COMMANDS_MATCHING,
-      titleWithoutQuery: N.default.Messages.COMMANDS,
-      getQuery: e => "".concat(x.COMMAND_SENTINEL).concat(e),
+      titleWithQuery: A.default.Messages.COMMANDS_MATCHING,
+      titleWithoutQuery: A.default.Messages.COMMANDS,
+      getQuery: e => "".concat(_.COMMAND_SENTINEL).concat(e),
       Component: f ? C.default.Command : C.default.NewCommand,
       getProps: e => {
         let {
@@ -157,23 +157,23 @@ let b = {
         return {
           key: t.id,
           command: t,
-          channel: r,
-          guildId: r.guild_id,
+          channel: a,
+          guildId: a.guild_id,
           showImage: !0,
           section: n
         }
       },
       key: "commands",
-      headerClassName: f ? _.legacyInputCommandHeader : null,
+      headerClassName: f ? N.legacyInputCommandHeader : null,
       headerTrailingContent: f ? (0, l.jsx)(i.Button, {
         type: "button",
         look: i.Button.Looks.LINK,
         color: i.Button.Colors.BRAND,
         size: i.Button.Sizes.MIN,
-        onClick: O,
-        children: N.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
+        onClick: R,
+        children: A.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
       }) : null,
-      footer: (0, l.jsx)(R, {})
+      footer: (0, l.jsx)(O, {})
     })
   },
   onSelect(e) {
@@ -184,21 +184,21 @@ let b = {
       index: n,
       queryText: l,
       options: i,
-      channel: r,
-      location: o,
-      tabOrEnter: a
+      channel: a,
+      location: s,
+      tabOrEnter: o
     } = e, {
       command: u,
       section: d
     } = t[n];
     if (u.inputType === m.ApplicationCommandInputType.PLACEHOLDER) return null;
-    if (i.commands === y.CommandMode.OLD_BUILT_INS) i.insertText(function(e) {
-      return "".concat(x.COMMAND_SENTINEL).concat(e.name)
+    if (i.commands === I.CommandMode.OLD_BUILT_INS) i.insertText(function(e) {
+      return "".concat(_.COMMAND_SENTINEL).concat(e.name)
     }(u));
     else {
-      let e = o;
-      null == e && (e = a ? m.ApplicationCommandTriggerLocations.QUERY : m.ApplicationCommandTriggerLocations.DISCOVERY), s.setActiveCommand({
-        channelId: r.id,
+      let e = s;
+      null == e && (e = o ? m.ApplicationCommandTriggerLocations.QUERY : m.ApplicationCommandTriggerLocations.DISCOVERY), r.setActiveCommand({
+        channelId: a.id,
         command: u,
         section: null != d ? d : null,
         location: e,
@@ -206,8 +206,8 @@ let b = {
       })
     }
     return {
-      type: y.AutocompleteSelectionTypes.COMMAND
+      type: I.AutocompleteSelectionTypes.COMMAND
     }
   }
 };
-var k = b
+var P = L

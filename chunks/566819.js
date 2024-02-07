@@ -7,20 +7,20 @@ n.r(t), n.d(t, {
     return i
   },
   FIRST_TEXT_POINT: function() {
-    return r
+    return a
   },
   WHITESPACE_RE: function() {
-    return o
+    return s
   },
   SELECTABLE_VOIDS: function() {
-    return s
+    return r
   }
 });
 let l = [0],
   i = [0, 0],
-  r = {
+  a = {
     path: [0, 0],
     offset: 0
   },
-  o = /(\t|\s)/,
-  s = ["applicationCommandOption"]
+  s = /(\t|\s)/,
+  r = ["applicationCommandOption"]

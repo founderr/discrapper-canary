@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return y
   }
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("917351"),
-  o = n.n(r),
-  s = n("77078"),
-  a = n("822637"),
+  a = n("917351"),
+  s = n.n(a),
+  r = n("77078"),
+  o = n("822637"),
   u = n("716241"),
   d = n("383018"),
   c = n("524768"),
@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("145131"),
   h = n("851745"),
   E = n("406291"),
-  S = n("49111"),
-  g = n("782340"),
+  g = n("49111"),
+  S = n("782340"),
   C = n("567484");
 let T = {
   results: {
@@ -31,30 +31,30 @@ let T = {
 
 function v(e, t, n) {
   var l, i;
-  let r;
-  return n.commands === h.CommandMode.OLD_BUILT_INS ? (r = t.split(" ")[0].substring(E.COMMAND_SENTINEL.length), t = t.substring((null !== (l = r.length) && void 0 !== l ? l : 0) + E.COMMAND_SENTINEL.length)) : r = null === (i = d.default.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.name, {
-    command: r,
+  let a;
+  return n.commands === h.CommandMode.OLD_BUILT_INS ? (a = t.split(" ")[0].substring(E.COMMAND_SENTINEL.length), t = t.substring((null !== (l = a.length) && void 0 !== l ? l : 0) + E.COMMAND_SENTINEL.length)) : a = null === (i = d.default.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.name, {
+    command: a,
     query: t.trim()
   }
 }
-let y = {
+let I = {
   stores: [d.default, f.default],
   matches(e, t, n, l, i) {
-    var r;
-    return i.commands !== h.CommandMode.DISABLED && (i.commands === h.CommandMode.OLD_BUILT_INS ? n.startsWith(E.COMMAND_SENTINEL + "gif") || n.startsWith(E.COMMAND_SENTINEL + "tenor") : (null === (r = d.default.getActiveCommand(e.id)) || void 0 === r ? void 0 : r.integrationType) === S.ChannelTextAreaIntegrationTypes.GIF && d.default.getOptionStates(e.id).query.hasValue)
+    var a;
+    return i.commands !== h.CommandMode.DISABLED && (i.commands === h.CommandMode.OLD_BUILT_INS ? n.startsWith(E.COMMAND_SENTINEL + "gif") || n.startsWith(E.COMMAND_SENTINEL + "tenor") : (null === (a = d.default.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === g.ChannelTextAreaIntegrationTypes.GIF && d.default.getOptionStates(e.id).query.hasValue)
   },
   queryResults(e, t, n, l, i) {
     let {
-      command: r,
-      query: s
+      command: a,
+      query: r
     } = v(e, n, l);
-    if (null == r) return T;
-    let u = o.findKey(S.ChannelTextAreaIntegrations, e => e.command === r);
-    i && null != u && s.length > 0 && a.default.search(u, s);
-    let d = f.default.getResults(u, s);
+    if (null == a) return T;
+    let u = s.findKey(g.ChannelTextAreaIntegrations, e => e.command === a);
+    i && null != u && r.length > 0 && o.default.search(u, r);
+    let d = f.default.getResults(u, r);
     return null == d ? T : {
       results: {
-        command: r,
+        command: a,
         integrations: d.results,
         isLoading: d.loading
       }
@@ -66,48 +66,48 @@ let y = {
         integrations: t,
         isLoading: n
       },
-      selectedIndex: r,
-      channel: o,
-      query: a,
+      selectedIndex: a,
+      channel: s,
+      query: o,
       options: u,
       onHover: c,
       onClick: f
     } = e, {
       command: E,
       query: T
-    } = v(o, a, u);
+    } = v(s, o, u);
     if (null == E || 0 === T.length) return null;
-    if (n) return (0, l.jsx)(s.Spinner, {
+    if (n) return (0, l.jsx)(r.Spinner, {
       className: C.spinner,
-      type: s.Spinner.Type.SPINNING_CIRCLE
+      type: r.Spinner.Type.SPINNING_CIRCLE
     });
     if (null != t) {
-      var y, x;
+      var I, _;
       let e = !1,
         n = t.map((t, n) => {
-          if (t.type === S.ChannelTextAreaIntegrationTypes.GIF) {
-            var i, o, s;
+          if (t.type === g.ChannelTextAreaIntegrationTypes.GIF) {
+            var i, s, r;
             return e = !0, (0, l.jsx)(p.default.GIFIntegration, {
               className: C.horizontalAutocomplete,
               onClick: f,
               onHover: c,
-              selected: r === n,
+              selected: a === n,
               index: n,
               width: null !== (i = t.meta.width) && void 0 !== i ? i : 0,
-              height: null !== (o = t.meta.height) && void 0 !== o ? o : 0,
-              src: null !== (s = t.meta.src) && void 0 !== s ? s : "",
+              height: null !== (s = t.meta.height) && void 0 !== s ? s : 0,
+              src: null !== (r = t.meta.src) && void 0 !== r ? r : "",
               url: t.meta.url
             }, "".concat(t.meta.url).concat(t.meta.src))
           }
         }),
-        s = u.commands === h.CommandMode.OLD_BUILT_INS ? E : null !== (x = null === (y = d.default.getActiveCommand(o.id)) || void 0 === y ? void 0 : y.integrationTitle) && void 0 !== x ? x : E,
-        a = T.length > 0 && null != s ? g.default.Messages.CONTENT_MATCHING.format({
+        r = u.commands === h.CommandMode.OLD_BUILT_INS ? E : null !== (_ = null === (I = d.default.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== _ ? _ : E,
+        o = T.length > 0 && null != r ? S.default.Messages.CONTENT_MATCHING.format({
           query: T,
-          command: s
-        }) : null != s ? s : E;
+          command: r
+        }) : null != r ? r : E;
       return (0, l.jsxs)(i.Fragment, {
         children: [(0, l.jsx)(p.default.Title, {
-          title: a
+          title: o
         }), e ? (0, l.jsx)(m.default, {
           className: C.horizontalAutocompletes,
           children: n
@@ -123,24 +123,24 @@ let y = {
       },
       index: l,
       type: i,
-      options: r,
-      channel: o
+      options: a,
+      channel: s
     } = e;
     if (null == t) return {
       type: null
     };
-    let s = n[l];
-    if (i === h.SelectType.INSERT ? r.replaceText(function(e) {
+    let r = n[l];
+    if (i === h.SelectType.INSERT ? a.replaceText(function(e) {
         return e.meta.url
-      }(s)) : r.sendMessage(function(e) {
+      }(r)) : a.sendMessage(function(e) {
         return e.meta.url
-      }(s)), u.default.trackWithMetadata(S.AnalyticEvents.SEARCH_RESULT_SELECTED, {
-        search_type: S.SearchTypes.GIF,
+      }(r)), u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_RESULT_SELECTED, {
+        search_type: g.SearchTypes.GIF,
         index_num: l,
         source_object: "/".concat(t)
-      }), r.commands !== h.CommandMode.OLD_BUILT_INS) {
-      let e = d.default.getActiveCommand(o.id);
-      (null == e ? void 0 : e.inputType) === c.ApplicationCommandInputType.BUILT_IN_INTEGRATION && u.default.trackWithMetadata(S.AnalyticEvents.APPLICATION_COMMAND_USED, {
+      }), a.commands !== h.CommandMode.OLD_BUILT_INS) {
+      let e = d.default.getActiveCommand(s.id);
+      (null == e ? void 0 : e.inputType) === c.ApplicationCommandInputType.BUILT_IN_INTEGRATION && u.default.trackWithMetadata(g.AnalyticEvents.APPLICATION_COMMAND_USED, {
         command_id: e.id,
         application_id: e.applicationId,
         command_type: e.type
@@ -152,7 +152,7 @@ let y = {
   }
 };
 
-function x(e) {
+function _(e) {
   return e.meta.url
 }
-var I = y
+var y = I

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("506083");
 var s = n("37983"),
   a = n("884691"),
-  r = n("730290"),
-  l = n("803182"),
+  l = n("730290"),
+  r = n("803182"),
   i = n("446674"),
   o = n("437822"),
   u = n("697796"),
@@ -22,7 +22,7 @@ function g(e) {
   let t = a.useCallback(t => {
       if (function(e) {
           var t;
-          let n = (0, l.matchPath)(e, {
+          let n = (0, r.matchPath)(e, {
             path: _.Routes.CHANNEL(":guildId", ":channelId")
           });
           return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === h.StaticChannelRoute.ROLE_SUBSCRIPTIONS || !1
@@ -41,11 +41,11 @@ function g(e) {
     })),
     {
       location: m,
-      redirectTo: p
+      redirectTo: T
     } = e,
-    [T, A] = a.useState(n);
+    [p, I] = a.useState(n);
 
-  function R(e) {
+  function A(e) {
     let {
       handoffKey: t,
       handoffToken: n,
@@ -55,30 +55,30 @@ function g(e) {
       handoffKey: t,
       handoffToken: n,
       handoffSource: s
-    }), A(!1)
+    }), I(!1)
   }
   return (a.useEffect(() => {
     if (null != m) {
       let {
         handoff_key: e,
         handoff_token: t
-      } = (0, r.parse)(m.search);
+      } = (0, l.parse)(m.search);
       if (null != e && null != t) {
-        let n = null != p ? (0, d.getLoginHandoffSourceFromRedirectTo)(p) : void 0;
-        T ? o.default.logout(null).finally(() => {
-          R({
+        let n = null != T ? (0, d.getLoginHandoffSourceFromRedirectTo)(T) : void 0;
+        p ? o.default.logout(null).finally(() => {
+          A({
             handoffKey: e,
             handoffToken: t,
             handoffSource: n
           })
-        }) : R({
+        }) : A({
           handoffKey: e,
           handoffToken: t,
           handoffSource: n
         })
       }
     }
-  }, []), T || g === _.LoginStates.LOGGING_IN) ? (0, s.jsx)(f.LoginSpinner, {}) : (0, s.jsx)(f.default, {
+  }, []), p || g === _.LoginStates.LOGGING_IN) ? (0, s.jsx)(f.LoginSpinner, {}) : (0, s.jsx)(f.default, {
     ...e,
     transitionTo: t
   })

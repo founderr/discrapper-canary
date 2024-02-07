@@ -1,72 +1,72 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   GiftContextProvider: function() {
-    return _
+    return h
   },
   useGiftContext: function() {
     return S
   }
 }), n("222007");
 var i = n("37983"),
-  r = n("884691"),
-  l = n("210721"),
-  a = n("53253"),
-  s = n("105097"),
-  u = n("659632"),
+  l = n("884691"),
+  a = n("210721"),
+  r = n("53253"),
+  u = n("105097"),
+  s = n("659632"),
   o = n("642906"),
   c = n("646718"),
   d = n("782340");
 let f = c.PremiumGiftStyles.STANDARD_BOX,
   p = void 0,
-  [h, S, m] = (0, s.default)();
+  [I, S, T] = (0, u.default)();
 
-function _(e) {
+function h(t) {
   let {
-    isGift: t = !1,
+    isGift: e = !1,
     giftRecipient: n,
-    giftMessage: s,
+    giftMessage: u,
     children: S
-  } = e, {
-    selectedSkuId: m
-  } = (0, o.usePaymentContext)(), [_, I] = r.useState(n), [E, T] = r.useState(), [C, g] = r.useState(!1), A = (0, u.shouldShowCustomGiftExperience)(_), N = (0, a.useIsSeasonalGiftingActive)(), {
-    enabled: v
-  } = a.default.useExperiment({
+  } = t, {
+    selectedSkuId: T
+  } = (0, o.usePaymentContext)(), [h, _] = l.useState(n), [E, C] = l.useState(), [A, m] = l.useState(!1), N = (0, s.shouldShowCustomGiftExperience)(h), g = (0, r.useIsSeasonalGiftingActive)(), {
+    enabled: L
+  } = r.default.useExperiment({
     location: "PaymentContextProvider"
   }, {
-    autoTrackExposure: A && N
-  }), [b, L] = r.useState(A ? v && N ? c.PremiumGiftStyles.SEASONAL_STANDARD_BOX : f : p), [O, P] = r.useState(t && u.GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING.has((0, u.getGiftExperience)(_)) ? d.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : s), [x, F] = r.useState(void 0), [R, y] = r.useState(void 0), k = (0, u.useGetGiftCode)(m, t), [G, H] = r.useState(!1), [M, w] = r.useState(!1), [D, j] = r.useState(), U = r.useCallback(e => {
+    autoTrackExposure: N && g
+  }), [O, R] = l.useState(N ? L && g ? c.PremiumGiftStyles.SEASONAL_STANDARD_BOX : f : p), [F, P] = l.useState(e && s.GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING.has((0, s.getGiftExperience)(h)) ? d.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : u), [v, b] = l.useState(void 0), [y, D] = l.useState(void 0), H = (0, s.useGetGiftCode)(T, e), [G, x] = l.useState(!1), [M, w] = l.useState(!1), [U, k] = l.useState(), j = l.useCallback(t => {
     let {
-      onSubscriptionConfirmation: t
-    } = e;
-    return w(!0), (0, l.sendGiftMessage)(_, k).then(() => {
-      w(!1), null == t || t(), H(!0)
-    }).catch(e => {
-      w(!1), j(e), H(!0)
+      onSubscriptionConfirmation: e
+    } = t;
+    return w(!0), (0, a.sendGiftMessage)(h, H).then(() => {
+      w(!1), null == e || e(), x(!0)
+    }).catch(t => {
+      w(!1), k(t), x(!0)
     })
-  }, [_, k, w, H, j]);
-  return (0, i.jsx)(h.Provider, {
+  }, [h, H, w, x, k]);
+  return (0, i.jsx)(I.Provider, {
     value: {
-      isGift: t,
-      giftCode: k,
-      giftMessage: s,
-      giftRecipient: _,
-      setGiftRecipient: I,
+      isGift: e,
+      giftCode: H,
+      giftMessage: u,
+      giftRecipient: h,
+      setGiftRecipient: _,
       giftRecipientError: E,
-      setGiftRecipientError: T,
-      validatingGiftRecipient: C,
-      setValidatingGiftRecipient: g,
-      soundEffect: x,
-      setSoundEffect: F,
-      emojiConfetti: R,
-      setEmojiConfetti: y,
-      customGiftMessage: O,
+      setGiftRecipientError: C,
+      validatingGiftRecipient: A,
+      setValidatingGiftRecipient: m,
+      soundEffect: v,
+      setSoundEffect: b,
+      emojiConfetti: y,
+      setEmojiConfetti: D,
+      customGiftMessage: F,
       setCustomGiftMessage: P,
-      selectedGiftStyle: b,
-      setSelectedGiftStyle: L,
-      sendGiftMessage: U,
+      selectedGiftStyle: O,
+      setSelectedGiftStyle: R,
+      sendGiftMessage: j,
       hasSentMessage: G,
       isSendingMessage: M,
-      giftMessageError: D
+      giftMessageError: U
     },
     children: S
   })

@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   PHONE_VERIFICATION_MODAL_KEY: function() {
-    return i
+    return s
   },
   PHONE_VERIFICATION_CODE_NUM_DIGITS: function() {
-    return r
+    return a
   }
 });
-let i = "PHONE_VERIFICATION_MODAL_KEY",
-  r = 6
+let s = "PHONE_VERIFICATION_MODAL_KEY",
+  a = 6

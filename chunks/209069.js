@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
 var l = n("37983");
 n("884691");
 var i = n("77078"),
-  r = n("599110"),
-  o = n("49111");
+  a = n("599110"),
+  s = n("49111");
 
-function s(e) {
+function r(e) {
   let {
     stickerPack: t,
-    sourceSticker: s,
-    analyticsLocations: a,
+    sourceSticker: r,
+    analyticsLocations: o,
     analyticsLocation: u
   } = e;
-  return r.default.track(o.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
-    sticker_id: null == s ? void 0 : s.id,
+  return a.default.track(s.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
+    sticker_id: null == r ? void 0 : r.id,
     sticker_pack_id: t.id,
     location: u,
-    location_stack: a
-  }), r.default.track(o.AnalyticEvents.OPEN_MODAL, {
-    type: o.AnalyticsSections.STICKER_PACK_VIEW_ALL,
+    location_stack: o
+  }), a.default.track(s.AnalyticEvents.OPEN_MODAL, {
+    type: s.AnalyticsSections.STICKER_PACK_VIEW_ALL,
     location: u
   }), (0, i.openModalLazy)(async () => {
     let {

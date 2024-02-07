@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
 var i = n("37983");
 n("884691");
 var r = n("469563"),
-  o = n("287083"),
+  l = n("287083"),
   s = n("75196"),
-  l = (0, r.replaceIcon)(function(e) {
+  a = (0, r.replaceIcon)(function(e) {
     let {
       width: t = 32,
       height: n = 32,
       color: r = "currentColor",
-      ...o
+      ...l
     } = e;
     return (0, i.jsx)("svg", {
-      ...(0, s.default)(o),
+      ...(0, s.default)(l),
       width: t,
       height: n,
       viewBox: "0 0 24 24",
@@ -29,6 +29,6 @@ var r = n("469563"),
         fill: r
       })
     })
-  }, o.StageIcon, void 0, {
+  }, l.StageIcon, void 0, {
     size: 32
   })

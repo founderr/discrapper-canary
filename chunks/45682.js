@@ -1,116 +1,116 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return N
+    return _
   }
-}), i("222007");
-var n = i("37983"),
-  s = i("884691"),
-  l = i("414456"),
-  r = i.n(l),
-  a = i("907002"),
-  o = i("446674"),
-  u = i("151426"),
-  c = i("856567"),
-  d = i("77078"),
-  f = i("206230"),
-  E = i("384997"),
-  m = i("697218"),
-  I = i("181114"),
-  p = i("216422"),
-  g = i("719923"),
-  _ = i("994428"),
-  S = i("782340"),
-  h = i("985330");
-let C = {
+}), n("222007");
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("907002"),
+  o = n("446674"),
+  u = n("151426"),
+  d = n("856567"),
+  c = n("77078"),
+  f = n("206230"),
+  p = n("384997"),
+  m = n("697218"),
+  h = n("181114"),
+  E = n("216422"),
+  g = n("719923"),
+  S = n("994428"),
+  C = n("782340"),
+  T = n("985330");
+let v = {
   tension: 750,
   mass: 2.5,
   friction: 70
 };
 
-function T(e) {
+function I(e) {
   let {
     tooltipText: t,
-    headingText: i,
-    textColor: s
-  } = e, l = null != i;
-  return (0, n.jsxs)("span", {
-    className: l ? void 0 : h.tooltipContainer,
-    children: [(0, n.jsxs)("span", {
-      className: h.tooltipContainer,
-      children: [(0, n.jsx)(p.default, {
-        className: h.nitroWheel
-      }), l ? (0, n.jsx)(d.Heading, {
-        color: null != s ? s : "text-normal",
+    headingText: n,
+    textColor: i
+  } = e, a = null != n;
+  return (0, l.jsxs)("span", {
+    className: a ? void 0 : T.tooltipContainer,
+    children: [(0, l.jsxs)("span", {
+      className: T.tooltipContainer,
+      children: [(0, l.jsx)(E.default, {
+        className: T.nitroWheel
+      }), a ? (0, l.jsx)(c.Heading, {
+        color: null != i ? i : "text-normal",
         variant: "heading-sm/semibold",
-        children: i
+        children: n
       }) : null]
-    }), (0, n.jsx)(d.Text, {
-      variant: l ? "text-xs/normal" : "text-sm/medium",
-      color: null != s ? s : "text-normal",
+    }), (0, l.jsx)(c.Text, {
+      variant: a ? "text-xs/normal" : "text-sm/medium",
+      color: null != i ? i : "text-normal",
       children: t
     })]
   })
 }
 
-function N(e) {
+function _(e) {
   let {
     checked: t,
-    onClick: i,
-    id: l = "burst-reaction-toggle-button"
-  } = e, p = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), N = m.default.getCurrentUser(), v = null != N && !(0, g.isPremium)(N), A = v ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [y, R] = (0, E.useSelectedDismissibleContent)(A), [j, O] = s.useState(!1), [M, x] = (0, a.useSpring)(() => ({})), L = (0, a.animated)(c.SuperReactionIcon);
-  s.useEffect(() => {
-    let e = y === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-    e && (R(_.ContentDismissActionType.DISMISS), setTimeout(() => O(e), 200))
-  }, [y, R]);
-  let P = j ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? S.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : S.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-    D = j ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
-  return (0, n.jsxs)(d.TooltipContainer, {
+    onClick: n,
+    id: a = "burst-reaction-toggle-button"
+  } = e, E = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), _ = m.default.getCurrentUser(), y = null != _ && !(0, g.isPremium)(_), A = y ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [N, x] = (0, p.useSelectedDismissibleContent)(A), [O, R] = i.useState(!1), [M, L] = (0, r.useSpring)(() => ({})), P = (0, r.animated)(d.SuperReactionIcon);
+  i.useEffect(() => {
+    let e = N === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+    e && (x(S.ContentDismissActionType.DISMISS), setTimeout(() => R(e), 200))
+  }, [N, x]);
+  let b = O ? C.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? C.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : C.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+    j = O ? C.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+  return (0, l.jsxs)(c.TooltipContainer, {
     position: "top",
-    text: (0, n.jsx)(T, {
+    text: (0, l.jsx)(I, {
       textColor: "always-white",
-      tooltipText: P,
-      headingText: D
+      tooltipText: b,
+      headingText: j
     }),
-    color: d.Tooltip.Colors.BRAND,
-    forceOpen: j,
-    "aria-label": P,
-    tooltipClassName: h.tooltip,
-    children: [(0, n.jsx)("input", {
-      className: h.visuallyHidden,
+    color: c.Tooltip.Colors.BRAND,
+    forceOpen: O,
+    "aria-label": b,
+    tooltipClassName: T.tooltip,
+    children: [(0, l.jsx)("input", {
+      className: T.visuallyHidden,
       checked: t,
       onChange: function() {
-        x({
+        L({
           from: {
             rotate: t ? "360deg" : "0deg"
           },
           to: {
             rotate: t ? "0deg" : "360deg"
           },
-          config: C
-        }), null == i || i(), O(!1)
+          config: v
+        }), null == n || n(), R(!1)
       },
-      id: l,
+      id: a,
       type: "checkbox"
-    }), (0, n.jsxs)("label", {
-      htmlFor: l,
-      className: r(h.label, {
-        [h.labelChecked]: t
+    }), (0, l.jsxs)("label", {
+      htmlFor: a,
+      className: s(T.label, {
+        [T.labelChecked]: t
       }),
-      children: [t ? (0, n.jsx)(I.Shine, {
-        className: h.shine,
-        shinePaused: p
-      }) : null, (0, n.jsx)(L, {
-        style: p ? void 0 : M,
+      children: [t ? (0, l.jsx)(h.Shine, {
+        className: T.shine,
+        shinePaused: E
+      }) : null, (0, l.jsx)(P, {
+        style: E ? void 0 : M,
         width: 20,
         height: 20,
         color: t ? "white" : void 0,
-        className: h.icon
-      }), (0, n.jsx)("span", {
-        children: (0, n.jsx)(d.Text, {
-          className: h.visuallyHidden,
+        className: T.icon
+      }), (0, l.jsx)("span", {
+        children: (0, l.jsx)(c.Text, {
+          className: T.visuallyHidden,
           variant: "text-sm/semibold",
-          children: S.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
+          children: C.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
         })
       })]
     })]

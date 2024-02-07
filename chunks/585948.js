@@ -1,39 +1,39 @@
 "use strict";
 n.r(t), n.d(t, {
   useKeyboardNavigation: function() {
-    return a
+    return o
   }
 });
 var l = n("884691"),
   i = n("880317"),
-  r = n("997289"),
-  o = n("246511"),
-  s = n("45961");
-let a = e => {
+  a = n("997289"),
+  s = n("246511"),
+  r = n("45961");
+let o = e => {
   let {
     columnCounts: t,
     stickersGrid: n,
-    stickersListRef: a,
+    stickersListRef: o,
     store: u,
     gridNavigatorId: d,
     setInspectedStickerPosition: c,
     onGridItemSelect: f
-  } = e, p = (0, r.useAnalyticsContext)(), m = l.useCallback(e => {
+  } = e, p = (0, a.useAnalyticsContext)(), m = l.useCallback(e => {
     f(e, p)
   }, [f, p]), h = l.useCallback((e, t) => {
-    c(e, t, o.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
+    c(e, t, s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
   }, [c]), {
     gridDispatch: E,
-    getItemProps: S,
-    getRowProps: g,
+    getItemProps: g,
+    getRowProps: S,
     gridContainerProps: C,
     handleGridContainerKeyDown: T,
     isUsingKeyboardNavigation: v
-  } = (0, s.useExpressionPickerGridKeyboardNavigation)({
+  } = (0, r.useExpressionPickerGridKeyboardNavigation)({
     columnCounts: t,
     gridNavigatorId: d,
     itemGrid: n,
-    itemList: a,
+    itemList: o,
     onGridNavigatorItemSelect: m,
     onGridNavigatorPositionChange: h
   });
@@ -44,14 +44,14 @@ let a = e => {
       rowIndex: n,
       source: l
     } = e;
-    l !== o.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && E({
+    l !== s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && E({
       type: i.GridActionType.SET_FOCUSED_POSITION,
       x: t,
       y: n
     })
   }, e => e.inspectedExpressionPosition), [E, u]), {
-    getItemProps: S,
-    getRowProps: g,
+    getItemProps: g,
+    getRowProps: S,
     gridContainerProps: C,
     handleGridContainerKeyDown: T,
     isUsingKeyboardNavigation: v

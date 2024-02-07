@@ -1,18 +1,18 @@
 "use strict";
-t.r(A), t.d(A, {
+n.r(t), n.d(t, {
   default: function() {
-    return r
+    return u
   }
 });
-var a = t("336522"),
-  n = t("254490"),
-  l = t("782340");
+var r = n("336522"),
+  a = n("254490"),
+  i = n("782340");
 
-function r(e) {
-  (0, a.openUploadError)({
-    title: l.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-    help: l.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-      maxSize: (0, n.sizeString)(e)
+function u(e) {
+  (0, r.openUploadError)({
+    title: i.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+    help: i.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+      maxSize: (0, a.sizeString)(e)
     })
   })
 }

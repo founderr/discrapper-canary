@@ -14,21 +14,21 @@ var r = s("414456"),
   l = s("907002"),
   o = s("65597"),
   n = s("77078"),
-  d = s("206230"),
-  u = s("685665"),
+  u = s("206230"),
+  d = s("685665"),
   c = s("206453"),
   E = s("36694"),
   _ = s("427459"),
   T = s("954296"),
   I = s("651971"),
-  N = s("49111"),
-  f = s("782340"),
+  f = s("49111"),
+  N = s("782340"),
   R = s("633640");
 let g = {
-  [N.BoostedGuildTiers.NONE]: 0,
-  [N.BoostedGuildTiers.TIER_1]: 1 / 3,
-  [N.BoostedGuildTiers.TIER_2]: 2 / 3,
-  [N.BoostedGuildTiers.TIER_3]: 1
+  [f.BoostedGuildTiers.NONE]: 0,
+  [f.BoostedGuildTiers.TIER_1]: 1 / 3,
+  [f.BoostedGuildTiers.TIER_2]: 2 / 3,
+  [f.BoostedGuildTiers.TIER_3]: 1
 };
 var m = function(e) {
   let {
@@ -36,20 +36,20 @@ var m = function(e) {
     confettiTriggerRef: s,
     guild: r,
     isProgressBarAnimationComplete: m,
-    setConfettiCount: M,
-    setShouldFireConfetti: S,
-    tier: G,
-    tierMarkerAnimationPosition: h
-  } = e, p = (0, o.default)([d.default], () => d.default.useReducedMotion), {
-    analyticsLocations: B
-  } = (0, u.default)(), O = N.AppliedGuildBoostsRequiredForBoostedGuildTier[G], x = O - r.premiumSubscriberCount, A = G <= h || m, v = A && G <= r.premiumTier, C = A && G < r.premiumTier, P = A && G === r.premiumTier, {
+    setConfettiCount: S,
+    setShouldFireConfetti: M,
+    tier: h,
+    tierMarkerAnimationPosition: G
+  } = e, p = (0, o.default)([u.default], () => u.default.useReducedMotion), {
+    analyticsLocations: x
+  } = (0, d.default)(), v = f.AppliedGuildBoostsRequiredForBoostedGuildTier[h], A = v - r.premiumSubscriberCount, B = h <= G || m, C = B && h <= r.premiumTier, O = B && h < r.premiumTier, P = B && h === r.premiumTier, {
     scaleFactor: L
   } = (0, l.useSpring)({
     from: {
       scaleFactor: 0
     },
     to: {
-      scaleFactor: h >= G || m && h + 1 === G || m && -1 === h && G === N.BoostedGuildTiers.NONE ? 1 : 0
+      scaleFactor: G >= h || m && G + 1 === h || m && -1 === G && h === f.BoostedGuildTiers.NONE ? 1 : 0
     },
     config: {
       tension: 360,
@@ -62,71 +62,71 @@ var m = function(e) {
       style: {
         transform: L.to(e => "translate(-50%, -50%) scale(".concat(e, ")"))
       }
-    }), G !== N.BoostedGuildTiers.NONE && (0, i.jsx)(c.default, {
-      tier: G,
+    }), h !== f.BoostedGuildTiers.NONE && (0, i.jsx)(c.default, {
+      tier: h,
       className: R.boostedTierIcon
     })]
-  }), D = v ? "div" : n.Clickable, w = v ? {} : {
+  }), D = C ? "div" : n.Clickable, w = C ? {} : {
     onClick: function() {
-      A && (0, T.addAppliedGuildBoosts)({
-        analyticsLocations: B,
+      B && (0, T.addAppliedGuildBoosts)({
+        analyticsLocations: x,
         analyticsLocation: {
-          page: N.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-          section: N.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
-          object: N.AnalyticsObjects.SUBSCRIBE_TO_TIER_BUTTON,
+          page: f.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+          section: f.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
+          object: f.AnalyticsObjects.SUBSCRIBE_TO_TIER_BUTTON,
           objectType: function(e) {
             switch (e) {
-              case N.BoostedGuildTiers.TIER_3:
-                return N.AnalyticsObjectTypes.TIER_3;
-              case N.BoostedGuildTiers.TIER_2:
-                return N.AnalyticsObjectTypes.TIER_2;
-              case N.BoostedGuildTiers.TIER_1:
-                return N.AnalyticsObjectTypes.TIER_1;
+              case f.BoostedGuildTiers.TIER_3:
+                return f.AnalyticsObjectTypes.TIER_3;
+              case f.BoostedGuildTiers.TIER_2:
+                return f.AnalyticsObjectTypes.TIER_2;
+              case f.BoostedGuildTiers.TIER_1:
+                return f.AnalyticsObjectTypes.TIER_1;
               default:
                 throw Error("Unsupported Boosting tier: ".concat(e))
             }
-          }(G)
+          }(h)
         },
-        numberOfBoostsToAdd: x,
+        numberOfBoostsToAdd: A,
         guild: r
       })
     }
   };
   return (0, i.jsx)(n.Tooltip, {
-    text: v ? f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({
-      tierName: (0, _.getTierName)(G, {
+    text: C ? N.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({
+      tierName: (0, _.getTierName)(h, {
         useLevels: !1
       })
-    }) : f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format({
-      numBoostsRequired: x,
-      tierName: (0, _.getTierName)(G, {
+    }) : N.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format({
+      numBoostsRequired: A,
+      tierName: (0, _.getTierName)(h, {
         useLevels: !1
       })
     }),
-    shouldShow: G !== N.BoostedGuildTiers.NONE,
+    shouldShow: h !== f.BoostedGuildTiers.NONE,
     children: e => (0, i.jsxs)(D, {
       className: a(R.progressBarMarker, {
-        [R.progressBarMarkerUnlocked]: v,
-        [R.progressBarMarkerLocked]: !v,
-        [R.progressBarMarkerLower]: C,
+        [R.progressBarMarkerUnlocked]: C,
+        [R.progressBarMarkerLocked]: !C,
+        [R.progressBarMarkerLower]: O,
         [R.progressBarMarkerCurrent]: P
       }),
       style: {
-        left: "".concat(100 * g[G], "%")
+        left: "".concat(100 * g[h], "%")
       },
       ...e,
       ...w,
-      children: [!v && (0, i.jsx)("div", {
+      children: [!C && (0, i.jsx)("div", {
         className: R.boostedTierIconBackground
-      }), v && G === N.BoostedGuildTiers.TIER_3 ? (0, i.jsx)(I.ProgressBarConfettiTrigger, {
+      }), C && h === f.BoostedGuildTiers.TIER_3 ? (0, i.jsx)(I.ProgressBarConfettiTrigger, {
         confettiTriggerRef: s,
-        setConfettiCount: M,
-        setShouldFireConfetti: S,
+        setConfettiCount: S,
+        setShouldFireConfetti: M,
         children: j
       }) : j, (0, i.jsxs)(n.Text, {
         className: R.progressBarMarkerLabel,
         variant: "text-md/normal",
-        children: [v && G !== N.BoostedGuildTiers.NONE && (0, i.jsx)(E.default, {
+        children: [C && h !== f.BoostedGuildTiers.NONE && (0, i.jsx)(E.default, {
           className: R.progressBarMarkerUnlockedIcon
         }), t]
       })]

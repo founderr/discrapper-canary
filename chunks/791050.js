@@ -13,105 +13,105 @@ var n = r("37983"),
   l = r("685665"),
   c = r("21526"),
   d = r("491232"),
-  f = r("984002"),
-  E = r("235898"),
+  E = r("984002"),
+  f = r("235898"),
   _ = r("170313"),
   A = r("635956"),
-  I = r("91653"),
+  C = r("91653"),
   p = r("697218"),
-  m = r("599110"),
-  C = r("719923"),
-  S = r("234251"),
-  T = r("659117"),
+  I = r("599110"),
+  m = r("719923"),
+  T = r("234251"),
+  S = r("659117"),
   N = r("765221"),
-  R = r("49111"),
-  h = r("646718"),
-  v = r("782340"),
-  O = r("705057");
+  g = r("49111"),
+  R = r("646718"),
+  O = r("782340"),
+  h = r("705057");
 
-function g(e) {
+function v(e) {
   let {
     user: t,
     categories: r,
     analyticsLocations: i,
     onClose: s,
     initialSelectedDecoration: l,
-    isTryItOutFlow: E
+    isTryItOutFlow: f
   } = e, {
     pendingAvatarDecoration: p,
-    setPendingAvatarDecoration: m
-  } = (0, I.default)({
+    setPendingAvatarDecoration: I
+  } = (0, C.default)({
     analyticsLocations: i,
-    isTryItOut: E
-  }), [R, g] = a.useState(() => {
+    isTryItOut: f
+  }), [g, v] = a.useState(() => {
     var e;
     if (null != l) return l;
     if (void 0 !== p) return p;
     if ((null == t ? void 0 : t.avatarDecoration) == null || 0 === r.size) return null;
     let n = (0, d.getAvatarDecorationsFromCategories)(r);
-    return null !== (e = n.find(e => (0, S.isEqualAvatarDecoration)(e, t.avatarDecoration))) && void 0 !== e ? e : null
+    return null !== (e = n.find(e => (0, T.isEqualAvatarDecoration)(e, t.avatarDecoration))) && void 0 !== e ? e : null
   }), {
     product: M,
     purchase: D
-  } = (0, f.default)(null == R ? void 0 : R.skuId), x = C.default.canUseCollectibles(t), P = a.useRef(null), b = (0, _.default)(i), L = (0, S.isEqualAvatarDecoration)(R, void 0 === p ? null == t ? void 0 : t.avatarDecoration : p), H = () => {
-    m(R), s()
+  } = (0, E.default)(null == g ? void 0 : g.skuId), x = m.default.canUseCollectibles(t), b = a.useRef(null), P = (0, _.default)(i), L = (0, T.isEqualAvatarDecoration)(g, void 0 === p ? null == t ? void 0 : t.avatarDecoration : p), H = () => {
+    I(g), s()
   }, U = a.useCallback(() => {
     s(), (0, c.openCollectiblesShop)({
       analyticsLocations: i,
       analyticsSource: o.default.EDIT_AVATAR_DECORATION_MODAL,
-      initialProductSkuId: null != R ? R.skuId : void 0
+      initialProductSkuId: null != g ? g.skuId : void 0
     })
-  }, [i, s, R]);
+  }, [i, s, g]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(u.ModalHeader, {
       separator: !1,
-      className: O.modalHeader,
+      className: h.modalHeader,
       children: [(0, n.jsx)(u.Heading, {
         variant: "heading-lg/semibold",
-        children: v.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+        children: O.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), (0, n.jsx)(u.ModalCloseButton, {
-        className: O.modalCloseButton,
+        className: h.modalCloseButton,
         onClick: s
       })]
     }), (0, n.jsxs)(u.ModalContent, {
-      className: O.modalContent,
+      className: h.modalContent,
       scrollbarType: "none",
       children: [(0, n.jsx)(N.default, {
         user: t,
-        pendingAvatarDecoration: R,
-        selectedAvatarDecorationRef: P,
+        pendingAvatarDecoration: g,
+        selectedAvatarDecorationRef: b,
         onSelect: e => {
-          g(e), null != e && b(e)
+          v(e), null != e && P(e)
         },
         onOpenShop: U
-      }), (0, n.jsx)(T.default, {
-        className: O.modalPreview,
+      }), (0, n.jsx)(S.default, {
+        className: h.modalPreview,
         user: t,
-        avatarDecorationOverride: R
+        avatarDecorationOverride: g
       })]
     }), (0, n.jsxs)(u.ModalFooter, {
-      className: O.modalFooter,
+      className: h.modalFooter,
       children: [(() => {
         let e = null != D && (!(0, d.isPremiumCollectiblesPurchase)(D) || x);
-        if (e || null === R) return (0, n.jsx)(u.Button, {
+        if (e || null === g) return (0, n.jsx)(u.Button, {
           onClick: H,
           disabled: L,
-          children: v.default.Messages.AVATAR_DECORATION_MODAL_APPLY
+          children: O.default.Messages.AVATAR_DECORATION_MODAL_APPLY
         });
         let r = x || !(0, d.isPremiumCollectiblesProduct)(M);
         return r ? (0, n.jsx)(u.Button, {
-          className: O.modalFooterShopButton,
+          className: h.modalFooterShopButton,
           onClick: U,
-          children: v.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+          children: O.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
         }) : (0, n.jsx)(A.default, {
-          subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
-          buttonText: C.default.isPremium(t) ? v.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : v.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+          subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
+          buttonText: m.default.isPremium(t) ? O.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : O.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
         })
       })(), (0, n.jsx)(u.Button, {
         look: u.Button.Looks.LINK,
         color: u.Button.Colors.PRIMARY,
         onClick: s,
-        children: v.default.Messages.CANCEL
+        children: O.default.Messages.CANCEL
       })]
     })]
   })
@@ -122,40 +122,40 @@ function M(e) {
     transitionState: t,
     analyticsLocations: r,
     onClose: d,
-    initialSelectedDecoration: f,
+    initialSelectedDecoration: E,
     isTryItOutFlow: _
   } = e, A = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), {
-    AnalyticsLocationProvider: I,
-    analyticsLocations: C
+    AnalyticsLocationProvider: C,
+    analyticsLocations: m
   } = (0, l.default)(r, o.default.EDIT_AVATAR_DECORATION_MODAL), {
-    categories: S,
-    purchases: T,
+    categories: T,
+    purchases: S,
     isFetchingCategories: N,
-    isFetchingPurchases: h
-  } = (0, E.default)(), v = N || h && 0 === T.size;
+    isFetchingPurchases: R
+  } = (0, f.default)(), O = N || R && 0 === S.size;
   return a.useEffect(() => {
-    m.default.track(R.AnalyticEvents.OPEN_MODAL, {
+    I.default.track(g.AnalyticEvents.OPEN_MODAL, {
       type: "Edit Avatar Decoration Modal",
-      location_stack: C
+      location_stack: m
     })
-  }, [C]), a.useEffect(() => () => {
+  }, [m]), a.useEffect(() => () => {
     (0, c.setCollectiblesCategoryItemsViewed)({
-      categories: [...S.values()],
+      categories: [...T.values()],
       itemTypes: [i.CollectiblesItemType.AVATAR_DECORATION]
     })
-  }, [S]), null == A ? null : (0, n.jsx)(I, {
+  }, [T]), null == A ? null : (0, n.jsx)(C, {
     children: (0, n.jsx)(u.ModalRoot, {
       transitionState: t,
-      className: O.modal,
-      size: v ? u.ModalSize.DYNAMIC : u.ModalSize.MEDIUM,
-      children: v ? (0, n.jsx)(u.Spinner, {
-        className: O.spinner,
+      className: h.modal,
+      size: O ? u.ModalSize.DYNAMIC : u.ModalSize.MEDIUM,
+      children: O ? (0, n.jsx)(u.Spinner, {
+        className: h.spinner,
         type: u.Spinner.Type.SPINNING_CIRCLE
-      }) : (0, n.jsx)(g, {
+      }) : (0, n.jsx)(v, {
         user: A,
-        categories: S,
-        analyticsLocations: C,
-        initialSelectedDecoration: f,
+        categories: T,
+        analyticsLocations: m,
+        initialSelectedDecoration: E,
         onClose: d,
         isTryItOutFlow: _
       })

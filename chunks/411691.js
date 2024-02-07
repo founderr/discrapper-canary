@@ -1,15 +1,15 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   CollectiblesShopMarketingVariants: function() {
     return i
   },
   default: function() {
-    return a
+    return r
   }
 });
-var s, i, n = l("862205");
-(s = i || (i = {}))[s.DEFAULT = 0] = "DEFAULT", s[s.WINTER_2023_DROP = 1] = "WINTER_2023_DROP", s[s.MONSTER_DROP = 2] = "MONSTER_DROP";
-let u = (0, n.createExperiment)({
+var l, i, a = n("862205");
+(l = i || (i = {}))[l.DEFAULT = 0] = "DEFAULT", l[l.WINTER_2023_DROP = 1] = "WINTER_2023_DROP", l[l.MONSTER_DROP = 2] = "MONSTER_DROP";
+let s = (0, a.createExperiment)({
   kind: "user",
   id: "2023-12_collectibles_shop_marketing",
   label: "Collectibles Shop Marketing Variations",
@@ -30,6 +30,6 @@ let u = (0, n.createExperiment)({
     }
   }]
 });
-var a = e => u.useExperiment({
+var r = e => s.useExperiment({
   location: e
 }).variant

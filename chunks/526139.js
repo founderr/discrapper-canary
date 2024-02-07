@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG: function() {
-    return o
+    return u
   }
 });
 var s = n("37983");
 n("884691");
-var r = n("357957"),
-  l = n("635357"),
-  i = n("85336"),
+var i = n("357957"),
+  r = n("635357"),
+  l = n("85336"),
   a = n("262683");
-let o = {
-  key: i.Step.ADD_PAYMENT_STEPS,
-  renderStep: e => (0, s.jsx)(u, {
+let u = {
+  key: l.Step.ADD_PAYMENT_STEPS,
+  renderStep: e => (0, s.jsx)(o, {
     ...e
   }),
   options: {
@@ -20,24 +20,24 @@ let o = {
   }
 };
 
-function u(e) {
+function o(e) {
   let {
     isGift: t
-  } = (0, l.useGiftContext)();
+  } = (0, r.useGiftContext)();
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsx)(a.PaymentModalAddPaymentStep, {
       ...e,
-      breadcrumbSteps: [i.Step.ADD_PAYMENT_STEPS, i.Step.REVIEW, i.Step.CONFIRM],
+      breadcrumbSteps: [l.Step.ADD_PAYMENT_STEPS, l.Step.REVIEW, l.Step.CONFIRM],
       onReturn: () => {
-        let n = r.default.paymentSources;
+        let n = i.default.paymentSources;
         if (0 === Object.keys(n).length) {
           if (t) {
-            e.handleStepChange(i.Step.GIFT_CUSTOMIZATION);
+            e.handleStepChange(l.Step.GIFT_CUSTOMIZATION);
             return
           }
           e.handleClose()
-        } else e.handleStepChange(i.Step.REVIEW, {
-          trackedFromStep: i.Step.ADD_PAYMENT_STEPS
+        } else e.handleStepChange(l.Step.REVIEW, {
+          trackedFromStep: l.Step.ADD_PAYMENT_STEPS
         })
       }
     })

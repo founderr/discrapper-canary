@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   SeasonalGiftingMarketingExperiment: function() {
     return d
   },
@@ -11,13 +11,13 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("884691"),
-  r = n("866227"),
-  l = n.n(r),
-  a = n("862337"),
-  s = n("296892");
-let u = new Date("2024-01-04T07:59:59.000Z"),
-  o = l(u),
-  c = (0, s.default)({
+  l = n("866227"),
+  a = n.n(l),
+  r = n("862337"),
+  u = n("296892");
+let s = new Date("2024-01-04T07:59:59.000Z"),
+  o = a(s),
+  c = (0, u.default)({
     id: "2023-11_seasonal_gifting",
     label: "Seasonal Gifting 2023",
     kind: "user",
@@ -32,7 +32,7 @@ let u = new Date("2024-01-04T07:59:59.000Z"),
       }
     }]
   }),
-  d = (0, s.default)({
+  d = (0, u.default)({
     id: "2023-11_seasonal_gifting_marketing_2023",
     label: "Seasonal Gifting Marketing 2023",
     kind: "user",
@@ -49,16 +49,16 @@ let u = new Date("2024-01-04T07:59:59.000Z"),
   });
 
 function f() {
-  let [e, t] = i.useState(() => o.isAfter(Date.now()));
+  let [t, e] = i.useState(() => o.isAfter(Date.now()));
   return i.useEffect(() => {
-    let n = new a.Timeout,
+    let n = new r.Timeout,
       i = () => {
-        let e = Math.min(o.diff(Date.now(), "millisecond"), 864e5);
-        null == n || n.start(e, () => {
-          o.isBefore(Date.now()) ? t(!1) : i()
+        let t = Math.min(o.diff(Date.now(), "millisecond"), 864e5);
+        null == n || n.start(t, () => {
+          o.isBefore(Date.now()) ? e(!1) : i()
         })
       };
-    return e && i(), () => n.stop()
-  }), e
+    return t && i(), () => n.stop()
+  }), t
 }
 var p = c

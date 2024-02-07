@@ -4,7 +4,7 @@ n.r(e), n.d(e, {
     return a
   },
   default: function() {
-    return s
+    return l
   }
 });
 var r = n("862205"),
@@ -58,4 +58,4 @@ function a() {
   } = (0, i.default)();
   return t || e && "RU" === n
 }
-var s = u
+var l = u

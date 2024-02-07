@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getNowPlayingAnalytics: function() {
-    return o
+    return u
   }
 }), n("808653"), n("446674");
 var l = n("350522"),
@@ -10,7 +10,7 @@ var l = n("350522"),
   i = n("49111"),
   r = n("988268");
 
-function o() {
+function u() {
   let e = s.default.windowSize().width,
     t = l.default.hasConsented(i.Consents.PERSONALIZATION),
     n = a.default.nowPlayingCards;

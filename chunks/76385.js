@@ -13,18 +13,18 @@ n.r(t), n.d(t, {
 let a = /.+/g,
   r = "NON_TOKEN";
 
-function l(e, t, n) {
+function s(e, t, n) {
   if (null == t) return null;
   for (let a = 0; a < t.length; a++) {
     let r;
-    let l = t[a],
-      u = s(e.match(l.regex), n);
+    let s = t[a],
+      u = l(e.match(s.regex), n);
     if (null != u) {
       let {
         cache: e
-      } = l;
+      } = s;
       if (null != e && null != (r = e.get(u[0])) && ((r = new o(r)).start = u.index), null == r) {
-        if (r = new o(u, l.type), null != l.validator && !l.validator(r)) continue;
+        if (r = new o(u, s.type), null != s.validator && !s.validator(r)) continue;
         null != e && !(null == e ? void 0 : e.has(u[0])) && e.set(u[0], r)
       }
       return r
@@ -33,7 +33,7 @@ function l(e, t, n) {
   return null
 }
 
-function s(e, t) {
+function l(e, t) {
   if (null == e) return null;
   let n = [...e];
   return n.index = t, n
@@ -49,11 +49,11 @@ class u {
       follows: a,
       validator: r
     } = e, {
-      regex: l
+      regex: s
     } = e;
-    if ("^" !== l.source.charAt(0) && (l = new RegExp("^".concat(l.source), l.flags)), null != r && (t = new Map), null == a) {
+    if ("^" !== s.source.charAt(0) && (s = new RegExp("^".concat(s.source), s.flags)), null != r && (t = new Map), null == a) {
       this._rules.push({
-        regex: l,
+        regex: s,
         type: n,
         validator: r,
         cache: t
@@ -62,7 +62,7 @@ class u {
     }
     a.forEach(e => {
       null == this._followers[e] && (this._followers[e] = []), this._followers[e].push({
-        regex: l,
+        regex: s,
         type: n,
         validator: r,
         cache: t
@@ -72,13 +72,13 @@ class u {
   tokenize(e) {
     let t, n = e,
       r = "",
-      l = 0,
+      s = 0,
       u = [];
     for (; n.length > 0;) {
-      let e = this._getMatch(n, t, l + r.length);
-      null != e ? (null != r && "" !== r && u.push(new o(s(r.match(a), l), this._nonTokenType)), t = e, u.push(e), l += t.length + r.length, n = n.substring(t.length), r = "") : (r += n[0], n = n.substring(1))
+      let e = this._getMatch(n, t, s + r.length);
+      null != e ? (null != r && "" !== r && u.push(new o(l(r.match(a), s), this._nonTokenType)), t = e, u.push(e), s += t.length + r.length, n = n.substring(t.length), r = "") : (r += n[0], n = n.substring(1))
     }
-    return null != r && "" !== r && u.push(new o(s(r.match(a), l), this._nonTokenType)), u
+    return null != r && "" !== r && u.push(new o(l(r.match(a), s), this._nonTokenType)), u
   }
   clearCache() {
     for (let e in this._rules.forEach(e => {
@@ -95,7 +95,7 @@ class u {
   _getMatch(e, t, n) {
     let a;
     let r = null != t ? t.type : null;
-    return (null == t ? void 0 : t.end) === n && (a = l(e, this._followers[String(r)], n)), null == a && (a = l(e, this._rules, n)), a
+    return (null == t ? void 0 : t.end) === n && (a = s(e, this._followers[String(r)], n)), null == a && (a = s(e, this._rules, n)), a
   }
   constructor(e = [], t) {
     this._rules = [], this._followers = {}, this._nonTokenType = r, this.reset(t), e.forEach(e => this.addRule(e))

@@ -11,8 +11,8 @@ var i = n("37983"),
   a = n("570697"),
   o = n("826432"),
   u = n("204203"),
-  c = n("599110"),
-  d = n("335189"),
+  d = n("599110"),
+  c = n("335189"),
   f = n("473591"),
   E = n("680894"),
   h = n("49111"),
@@ -25,11 +25,11 @@ function p(e) {
     settings: n
   } = e, [p, S] = r.useState(!1), [I, R] = r.useState(), {
     pendingPersonality: m,
-    errors: g
+    errors: v
   } = (0, l.useStateFromStoresObject)([f.default], () => ({
     pendingPersonality: f.default.getPendingPersonality(),
     errors: f.default.getErrors()
-  })), [v, L] = r.useState(), T = null != m && I === m, N = null != g && Number(g.code) === h.AbortCodes.CLYDE_UNSAFE_PERSONALITY ? g.message : void 0, A = T ? _.default.Messages.CLYDE_GENERATE_PERSONALITY_UNDO : _.default.Messages.CLYDE_GENERATE_PERSONALITY_HINT;
+  })), [g, T] = r.useState(), L = null != m && I === m, N = null != v && Number(v.code) === h.AbortCodes.CLYDE_UNSAFE_PERSONALITY ? v.message : void 0, A = L ? _.default.Messages.CLYDE_GENERATE_PERSONALITY_UNDO : _.default.Messages.CLYDE_GENERATE_PERSONALITY_HINT;
   return (0, i.jsxs)(a.default, {
     title: _.default.Messages.PERSONALITY_CLYDE_SECTION,
     children: [(0, i.jsxs)(s.FormText, {
@@ -42,7 +42,7 @@ function p(e) {
     }), (0, i.jsx)(s.TextArea, {
       value: null !== (t = null != m ? m : n.personality) && void 0 !== t ? t : "",
       onChange: e => {
-        (0, d.setPendingPersonality)(e)
+        (0, c.setPendingPersonality)(e)
       },
       placeholder: _.default.Messages.PERSONALITY_PLACEHOLDER,
       maxLength: E.CLYDE_PERSONALITY_MAX_LENGTH,
@@ -54,22 +54,22 @@ function p(e) {
     }) : null, (0, i.jsxs)("div", {
       className: C.generateButtonContainer,
       children: [(0, i.jsx)(s.Button, {
-        color: T ? s.ButtonColors.PRIMARY : s.ButtonColors.BRAND,
+        color: L ? s.ButtonColors.PRIMARY : s.ButtonColors.BRAND,
         innerClassName: C.generateButton,
         onClick: () => {
-          if (T && null != v) {
-            (0, d.setPendingPersonality)(v), L(void 0);
+          if (L && null != g) {
+            (0, c.setPendingPersonality)(g), T(void 0);
             return
           }
-          null != m && "" !== m.trim() && (c.default.track(h.AnalyticEvents.CLYDE_AI_GENERATE_PERSONALITY_CLICKED, {
+          null != m && "" !== m.trim() && (d.default.track(h.AnalyticEvents.CLYDE_AI_GENERATE_PERSONALITY_CLICKED, {
             guild_id: n.guild_id
-          }), S(!0), (0, d.generatePersonality)(m).then(e => {
-            null != e && (L(m), R(e), (0, d.setPendingPersonality)(e, !0)), S(!1)
+          }), S(!0), (0, c.generatePersonality)(m).then(e => {
+            null != e && (T(m), R(e), (0, c.setPendingPersonality)(e, !0)), S(!1)
           }))
         },
         disabled: null == m || "" === m.trim(),
         submitting: p,
-        children: T ? (0, i.jsxs)(i.Fragment, {
+        children: L ? (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(u.default, {
             className: C.buttonIcon
           }), _.default.Messages.UNDO]

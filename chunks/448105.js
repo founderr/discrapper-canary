@@ -4,9 +4,9 @@ e.exports = function(e, t) {
     i = e.length;
   if (i > n) return !1;
   if (i === n) return e === t;
-  e: for (var r = 0, o = 0; r < i; r++) {
-    for (var s = e.charCodeAt(r); o < n;)
-      if (t.charCodeAt(o++) === s) continue e;
+  e: for (var r = 0, l = 0; r < i; r++) {
+    for (var s = e.charCodeAt(r); l < n;)
+      if (t.charCodeAt(l++) === s) continue e;
     return !1
   }
   return !0

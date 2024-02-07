@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return i
   },
   dismissAppLauncherPopup: function() {
-    return r
+    return a
   },
   showAppDetail: function() {
-    return o
+    return s
   },
   dismissAppDetail: function() {
-    return s
+    return r
   }
 });
 var l = n("913144");
@@ -21,20 +21,20 @@ function i() {
   })
 }
 
-function r() {
+function a() {
   l.default.dispatch({
     type: "APP_LAUNCHER_DISMISS_POPUP"
   })
 }
 
-function o(e) {
+function s(e) {
   l.default.dispatch({
     type: "APP_LAUNCHER_SHOW_APP_DETAIL",
     appDetail: e
   })
 }
 
-function s() {
+function r() {
   l.default.dispatch({
     type: "APP_LAUNCHER_DISMISS_APP_DETAIL"
   })

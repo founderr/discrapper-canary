@@ -1,66 +1,66 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   STANDARD_ONE_TIME_PAYMENT_STEPS: function() {
-    return d
+    return E
   },
   default: function() {
-    return p
+    return S
   }
 }), n("222007");
 var r = n("37983");
 n("884691");
-var i = n("812204"),
-  u = n("685665"),
-  o = n("635357"),
-  a = n("642906"),
-  c = n("385179"),
-  l = n("292215"),
-  s = n("843455");
+var u = n("812204"),
+  a = n("685665"),
+  i = n("635357"),
+  l = n("642906"),
+  s = n("385179"),
+  o = n("292215"),
+  c = n("843455");
 
-function f(t) {
+function d(e) {
   let {
-    onClose: e,
+    onClose: t,
     onComplete: n,
-    transitionState: i,
-    loadId: o,
-    applicationId: l,
-    analyticsLocationObject: s,
-    skuId: f
-  } = t, {} = (0, a.usePaymentContext)(), {
-    analyticsLocations: d
-  } = (0, u.default)();
-  return (0, r.jsx)(c.PaymentModal, {
-    onClose: e,
+    transitionState: u,
+    loadId: i,
+    applicationId: o,
+    analyticsLocationObject: c,
+    skuId: d
+  } = e, {} = (0, l.usePaymentContext)(), {
+    analyticsLocations: E
+  } = (0, a.default)();
+  return (0, r.jsx)(s.PaymentModal, {
+    onClose: t,
     onComplete: n,
-    loadId: o,
-    applicationId: l,
-    skuId: f,
+    loadId: i,
+    applicationId: o,
+    skuId: d,
     initialPlanId: null,
-    analyticsObject: s,
-    analyticsLocations: d,
-    transitionState: i
+    analyticsObject: c,
+    analyticsLocations: E,
+    transitionState: u
   })
 }
-let d = [l.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, l.ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG, ...l.SHARED_STEP_CONFIGS, l.REVIEW_STEP_CONFIG, l.ONE_TIME_PAYMENT_CONFIRM_STEP_CONFIG];
+let E = [o.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, o.ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG, ...o.SHARED_STEP_CONFIGS, o.REVIEW_STEP_CONFIG, o.ONE_TIME_PAYMENT_CONFIRM_STEP_CONFIG];
 
-function p(t) {
+function S(e) {
   let {
-    applicationId: e,
+    applicationId: t,
     skuId: n,
-    analyticsLocations: c
-  } = t, {
-    AnalyticsLocationProvider: l
-  } = (0, u.default)(c, i.default.PREMIUM_PAYMENT_MODAL);
-  return (0, r.jsx)(l, {
-    children: (0, r.jsx)(a.PaymentContextProvider, {
-      stepConfigs: d,
-      applicationId: e,
+    analyticsLocations: s
+  } = e, {
+    AnalyticsLocationProvider: o
+  } = (0, a.default)(s, u.default.PREMIUM_PAYMENT_MODAL);
+  return (0, r.jsx)(o, {
+    children: (0, r.jsx)(l.PaymentContextProvider, {
+      stepConfigs: E,
+      applicationId: t,
       skuIDs: [n],
       activeSubscription: null,
-      purchaseType: s.PurchaseTypes.ONE_TIME,
-      children: (0, r.jsx)(o.GiftContextProvider, {
-        children: (0, r.jsx)(f, {
-          ...t
+      purchaseType: c.PurchaseTypes.ONE_TIME,
+      children: (0, r.jsx)(i.GiftContextProvider, {
+        children: (0, r.jsx)(d, {
+          ...e
         })
       })
     })

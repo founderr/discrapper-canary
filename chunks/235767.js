@@ -1,35 +1,35 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  i = l("446674"),
-  r = l("77078"),
-  o = l("697218"),
-  u = l("987772"),
-  d = l("158998"),
-  c = l("473591"),
-  f = l("782340"),
-  m = l("189590");
+var l = n("37983");
+n("884691");
+var i = n("414456"),
+  a = n.n(i),
+  s = n("446674"),
+  r = n("77078"),
+  o = n("697218"),
+  u = n("987772"),
+  d = n("158998"),
+  c = n("473591"),
+  f = n("782340"),
+  p = n("189590");
 
-function p(e) {
+function m(e) {
   let {
     userId: t,
-    guildId: l,
-    className: a
-  } = e, p = (0, i.useStateFromStores)([c.default], () => c.default.getSettings(l)), h = (0, i.useStateFromStores)([o.default], () => o.default.getUser(null != t ? t : null == p ? void 0 : p.last_edited_by));
-  return null == h ? null : (0, n.jsxs)("div", {
-    className: s(a, m.container),
-    children: [(0, n.jsx)(u.default, {
+    guildId: n,
+    className: i
+  } = e, m = (0, s.useStateFromStores)([c.default], () => c.default.getSettings(n)), h = (0, s.useStateFromStores)([o.default], () => o.default.getUser(null != t ? t : null == m ? void 0 : m.last_edited_by));
+  return null == h ? null : (0, l.jsxs)("div", {
+    className: a(i, p.container),
+    children: [(0, l.jsx)(u.default, {
       color: "var(--interactive-active)",
       width: 12,
       height: 12
-    }), (0, n.jsx)(r.Text, {
+    }), (0, l.jsx)(r.Text, {
       color: "text-normal",
       variant: "text-xs/medium",
       children: f.default.Messages.CLYDE_LAST_EDITED_BY_TAG.format({

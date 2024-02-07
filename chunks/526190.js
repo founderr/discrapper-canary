@@ -1,41 +1,41 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
-}), l("222007");
-var n = l("37983");
-l("884691");
-var a = l("509043"),
-  s = l("446674"),
-  i = l("669491"),
-  r = l("77078"),
-  o = l("206230"),
-  u = l("931138"),
-  d = l("486952"),
-  c = l("782340");
+}), n("222007");
+var l = n("37983");
+n("884691");
+var i = n("509043"),
+  a = n("446674"),
+  s = n("669491"),
+  r = n("77078"),
+  o = n("206230"),
+  u = n("931138"),
+  d = n("486952"),
+  c = n("782340");
 
 function f(e) {
   let t, {
-      color: l,
+      color: n,
       size: f,
-      forcedIconColor: m,
-      className: p,
+      forcedIconColor: p,
+      className: m,
       iconClassName: h,
-      tooltipText: T
+      tooltipText: E
     } = e,
-    [E, S] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
-    _ = (0, r.useToken)(i.default.unsafe_rawColors.PRIMARY_300).hex(),
-    g = (0, a.hex2int)(null != l ? l : _),
-    A = (0, a.int2hsl)(g, !1, E ? S : null);
-  return t = null != m ? m : .3 > (0, a.getDarkness)(g) ? i.default.unsafe_rawColors.PRIMARY_630.css : i.default.unsafe_rawColors.WHITE_500.css, (0, n.jsx)(r.Tooltip, {
-    text: null != T ? T : c.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
-    children: e => (0, n.jsx)(u.default, {
+    [g, S] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
+    C = (0, r.useToken)(s.default.unsafe_rawColors.PRIMARY_300).hex(),
+    T = (0, i.hex2int)(null != n ? n : C),
+    v = (0, i.int2hsl)(T, !1, g ? S : null);
+  return t = null != p ? p : .3 > (0, i.getDarkness)(T) ? s.default.unsafe_rawColors.PRIMARY_630.css : s.default.unsafe_rawColors.WHITE_500.css, (0, l.jsx)(r.Tooltip, {
+    text: null != E ? E : c.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
+    children: e => (0, l.jsx)(u.default, {
       ...e,
-      className: p,
-      color: A,
+      className: m,
+      color: v,
       size: f,
-      children: (0, n.jsx)(d.default, {
+      children: (0, l.jsx)(d.default, {
         color: t,
         height: f,
         width: f,

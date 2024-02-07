@@ -1,47 +1,47 @@
 "use strict";
-i.r(e), i.d(e, {
+n.r(t), n.d(t, {
   MODAL_KEY: function() {
-    return o
+    return c
   },
   openGuildRoleConnectionsModal: function() {
-    return d
+    return r
   },
   default: function() {
-    return c
+    return u
   }
 });
-var l = i("37983");
-i("884691");
-var r = i("77078"),
-  n = i("83900"),
-  a = i("535013"),
-  s = i("782340");
-let o = "guild-connection-roles";
+var l = n("37983");
+n("884691");
+var a = n("77078"),
+  o = n("83900"),
+  s = n("535013"),
+  i = n("782340");
+let c = "guild-connection-roles";
 
-function d(t) {
-  (0, r.openModalLazy)(async () => {
+function r(e) {
+  (0, a.openModalLazy)(async () => {
     let {
-      default: e
-    } = await i.el("918771").then(i.bind(i, "918771"));
-    return i => (0, l.jsx)(e, {
-      ...i,
-      guildId: t
+      default: t
+    } = await n.el("918771").then(n.bind(n, "918771"));
+    return n => (0, l.jsx)(t, {
+      ...n,
+      guildId: e
     })
   }, {
-    modalKey: o,
-    contextKey: r.DEFAULT_MODAL_CONTEXT,
+    modalKey: c,
+    contextKey: a.DEFAULT_MODAL_CONTEXT,
     onCloseRequest: () => {
-      (0, r.closeModal)(o, r.DEFAULT_MODAL_CONTEXT)
+      (0, a.closeModal)(c, a.DEFAULT_MODAL_CONTEXT)
     }
   })
 }
 
-function c(t) {
-  let e = (0, a.isVerifiedRolesChannelVisible)(t);
-  return e ? (0, l.jsx)(r.MenuItem, {
+function u(e) {
+  let t = (0, s.isVerifiedRolesChannelVisible)(e);
+  return t ? (0, l.jsx)(a.MenuItem, {
     id: "guild-connection-roles",
-    label: s.default.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
-    icon: n.default,
-    action: () => d(t.id)
+    label: i.default.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
+    icon: o.default,
+    action: () => r(e.id)
   }) : null
 }

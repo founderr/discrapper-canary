@@ -1,7 +1,7 @@
 "use strict";
 i.r(e), i.d(e, {
   default: function() {
-    return C
+    return N
   }
 });
 var l = i("37983"),
@@ -22,13 +22,13 @@ var l = i("37983"),
   w = i("49111"),
   p = i("724210"),
   v = i("782340"),
-  N = i("422389"),
-  C = t => {
+  C = i("422389"),
+  N = t => {
     let {
       roleIcon: e,
       guild: i
     } = t, {
-      name: C
+      name: N
     } = e;
     r.useEffect(() => {
       g.default.track(w.AnalyticEvents.OPEN_POPOUT, {
@@ -40,9 +40,9 @@ var l = i("37983"),
     let y = null != e.roleId ? i.roles[e.roleId] : void 0,
       T = (0, d.isSubscriptionRole)(y),
       E = T ? v.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({
-        name: C
+        name: N
       }) : v.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({
-        name: C
+        name: N
       }),
       I = {
         ...e,
@@ -52,24 +52,24 @@ var l = i("37983"),
     return (0, l.jsx)(n.Dialog, {
       children: (0, l.jsx)(j.MessagePopoutContent, {
         children: (0, l.jsxs)("div", {
-          className: N.popoutContainer,
+          className: C.popoutContainer,
           children: [(0, l.jsxs)("div", {
-            className: N.mainContent,
+            className: C.mainContent,
             children: [(0, l.jsx)("div", {
-              className: N.roleIconContainer,
+              className: C.roleIconContainer,
               children: (0, l.jsx)(m.default, {
                 ...I,
                 enableTooltip: !1,
-                className: N.roleIcon,
+                className: C.roleIcon,
                 enableHeight: !1
               })
             }), (0, l.jsxs)("div", {
-              className: N.truncatingText,
+              className: C.truncatingText,
               children: [(0, l.jsx)(n.Heading, {
                 variant: "heading-md/semibold",
-                className: N.roleName,
+                className: C.roleName,
                 children: (0, l.jsx)(f.default, {
-                  children: C
+                  children: N
                 })
               }), (0, l.jsx)(n.Text, {
                 variant: "text-sm/normal",
@@ -79,8 +79,8 @@ var l = i("37983"),
           }), (0, l.jsxs)(n.Button, {
             size: n.Button.Sizes.SMALL,
             color: n.Button.Colors.PRIMARY,
-            className: N.ctaButton,
-            innerClassName: N.ctaButtonContent,
+            className: C.ctaButton,
+            innerClassName: C.ctaButtonContent,
             fullWidth: !0,
             onClick: T ? () => {
               (0, c.transitionTo)(w.Routes.CHANNEL(i.id, p.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
@@ -96,7 +96,7 @@ var l = i("37983"),
             children: [(0, l.jsx)(x.default, {
               width: 14,
               height: 14,
-              className: N.boosterBadge
+              className: C.boosterBadge
             }), v.default.Messages.ROLE_ICON_POPOUT_CTA]
           })]
         })

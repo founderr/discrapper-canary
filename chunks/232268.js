@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var i = n("37983");
+var l = n("37983");
 n("884691");
-var r = n("65597"),
-  o = n("880731");
+var i = n("65597"),
+  a = n("880731");
 
 function s(e) {
   let {
     children: t,
     confettiLocation: n
-  } = e, s = (0, r.default)([o.default], () => o.default.isEnabled({
+  } = e, s = (0, i.default)([a.default], () => a.default.isEnabled({
     confettiLocation: n
   }));
-  return s ? (0, i.jsx)(i.Fragment, {
+  return s ? (0, l.jsx)(l.Fragment, {
     children: t
   }) : null
 }

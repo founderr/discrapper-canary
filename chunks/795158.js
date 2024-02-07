@@ -20,8 +20,8 @@ var l = e => {
     "aria-hidden": c = !1
   } = e, {
     avatarDecorationSrc: d,
-    avatarSrc: f,
-    eventHandlers: E
+    avatarSrc: E,
+    eventHandlers: f
   } = (0, i.default)({
     user: t,
     size: l,
@@ -30,11 +30,11 @@ var l = e => {
   });
   return (0, n.jsx)(o, {
     avatarDecoration: d,
-    src: f,
+    src: E,
     size: l,
     status: s,
     "aria-label": c ? void 0 : u.default.Messages.USER_SETTINGS_AVATAR,
     "aria-hidden": c,
-    ...E
+    ...f
   })
 }

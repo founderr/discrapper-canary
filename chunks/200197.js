@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EventEmitterProvider: function() {
-    return s
+    return r
   },
   default: function() {
     return u
@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
 }), n("70102");
 var l = n("884691"),
   i = n("44170");
-class r extends i.EventEmitter {
+class a extends i.EventEmitter {
   on() {
     return this
   }
@@ -26,9 +26,9 @@ class r extends i.EventEmitter {
     return !1
   }
 }
-let o = l.createContext(new r),
+let s = l.createContext(new a),
   {
-    Provider: s,
-    Consumer: a
-  } = o;
-var u = o
+    Provider: r,
+    Consumer: o
+  } = s;
+var u = s

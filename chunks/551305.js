@@ -1,24 +1,24 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   NotificationTypes: function() {
     return i
   },
   default: function() {
-    return h
+    return E
   }
 });
-var o, i, l = s("37983"),
-  n = s("884691"),
-  C = s("414456"),
-  a = s.n(C),
-  r = s("907002"),
-  d = s("77078"),
-  u = s("128295"),
-  c = s("414868"),
-  f = s("587974"),
-  p = s("299341");
-(o = i || (i = {}))[o.UPDATE = 0] = "UPDATE", o[o.NEW = 1] = "NEW";
-let x = {
+var l, i, a = n("37983"),
+  s = n("884691"),
+  r = n("414456"),
+  o = n.n(r),
+  u = n("907002"),
+  d = n("77078"),
+  c = n("128295"),
+  f = n("414868"),
+  p = n("587974"),
+  m = n("299341");
+(l = i || (i = {}))[l.UPDATE = 0] = "UPDATE", l[l.NEW = 1] = "NEW";
+let h = {
   config: {
     friction: 26,
     tension: 700,
@@ -41,100 +41,100 @@ let x = {
     opacity: 0
   }
 };
-var h = n.memo(function(e) {
+var E = s.memo(function(e) {
   let {
     className: t,
-    disabled: s = !1,
-    innerClassName: o,
+    disabled: n = !1,
+    innerClassName: l,
     childClassName: i,
-    iconClassName: n,
-    icon: C,
-    children: h,
-    onClick: j,
-    isActive: F,
-    onMouseEnter: m,
-    onMouseLeave: L,
-    onFocus: M,
-    onBlur: b,
-    pulse: E,
-    sparkle: _,
-    notification: N,
-    "aria-label": A,
-    "aria-expanded": v,
-    "aria-haspopup": g,
-    "aria-controls": D
-  } = e, T = (0, r.useTransition)(null != h, {
-    ...x,
+    iconClassName: s,
+    icon: r,
+    children: E,
+    onClick: g,
+    isActive: S,
+    onMouseEnter: C,
+    onMouseLeave: T,
+    onFocus: v,
+    onBlur: I,
+    pulse: _,
+    sparkle: y,
+    notification: A,
+    "aria-label": N,
+    "aria-expanded": x,
+    "aria-haspopup": O,
+    "aria-controls": R
+  } = e, M = (0, u.useTransition)(null != E, {
+    ...h,
     keys: e => e ? "children" : "icon"
-  }), B = e => {
+  }), L = e => {
     let {
       component: t
     } = e;
-    return null != N ? (0, l.jsxs)("div", {
-      className: p.buttonContent,
-      children: [(0, l.jsx)(f.default, {
-        className: p.iconMask,
-        mask: f.MaskIDs.CHAT_INPUT_BUTTON_NOTIFICATION,
+    return null != A ? (0, a.jsxs)("div", {
+      className: m.buttonContent,
+      children: [(0, a.jsx)(p.default, {
+        className: m.iconMask,
+        mask: p.MaskIDs.CHAT_INPUT_BUTTON_NOTIFICATION,
         width: 24,
         height: 24,
         children: t
-      }), (0, l.jsx)("span", {
-        className: p.notificationDot
+      }), (0, a.jsx)("span", {
+        className: m.notificationDot
       })]
     }) : t
   };
-  return (0, l.jsxs)(d.Button, {
+  return (0, a.jsxs)(d.Button, {
     look: d.Button.Looks.BLANK,
     size: d.Button.Sizes.NONE,
-    "aria-label": A,
-    "aria-expanded": v,
-    "aria-haspopup": g,
-    "aria-controls": D,
-    disabled: s,
-    className: a(t, {
-      [p.active]: F
+    "aria-label": N,
+    "aria-expanded": x,
+    "aria-haspopup": O,
+    "aria-controls": R,
+    disabled: n,
+    className: o(t, {
+      [m.active]: S
     }),
-    innerClassName: a(p.button, o, {
-      [p.pulseButton]: E
+    innerClassName: o(m.button, l, {
+      [m.pulseButton]: _
     }),
-    onClick: j,
-    onMouseEnter: m,
-    onMouseLeave: L,
-    onFocus: M,
-    onBlur: b,
+    onClick: g,
+    onMouseEnter: C,
+    onMouseLeave: T,
+    onFocus: v,
+    onBlur: I,
     focusProps: {
       offset: {
         top: 4,
         bottom: 4
       }
     },
-    children: [T((e, t, s) => {
+    children: [M((e, t, n) => {
       let {
-        key: o
-      } = s;
-      return t ? (0, l.jsx)(r.animated.div, {
+        key: l
+      } = n;
+      return t ? (0, a.jsx)(u.animated.div, {
         style: e,
-        className: a(p.buttonWrapper, i),
-        children: B({
-          component: h
+        className: o(m.buttonWrapper, i),
+        children: L({
+          component: E
         })
-      }, o) : null != C ? (0, l.jsx)(r.animated.div, {
+      }, l) : null != r ? (0, a.jsx)(u.animated.div, {
         style: e,
-        className: a(p.buttonWrapper, i),
-        children: B({
-          component: (0, l.jsx)(C, {
-            className: a(p.icon, n, {
-              [p.pulseIcon]: E
+        className: o(m.buttonWrapper, i),
+        children: L({
+          component: (0, a.jsx)(r, {
+            className: o(m.icon, s, {
+              [m.pulseIcon]: _
             })
           })
         })
-      }, o) : void 0
-    }), _ && (0, l.jsxs)("div", {
-      className: p.sparkleContainer,
-      children: [(0, l.jsx)(c.default, {
-        className: p.sparkleStar
-      }), (0, l.jsx)(u.default, {
-        className: p.sparklePlus
+      }, l) : void 0
+    }), y && (0, a.jsxs)("div", {
+      className: m.sparkleContainer,
+      children: [(0, a.jsx)(f.default, {
+        className: m.sparkleStar
+      }), (0, a.jsx)(c.default, {
+        className: m.sparklePlus
       })]
     })]
   })

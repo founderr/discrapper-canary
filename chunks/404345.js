@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("685665"),
-  o = n("563911"),
-  s = n("587974"),
-  a = n("599110"),
+  a = n("685665"),
+  s = n("563911"),
+  r = n("587974"),
+  o = n("599110"),
   u = n("49111"),
   d = n("646718"),
   c = n("782340"),
@@ -19,9 +19,9 @@ var l = n("37983"),
       emojis: t
     } = e, {
       analyticsLocations: n
-    } = (0, r.default)();
+    } = (0, a.default)();
     i.useEffect(() => {
-      a.default.track(u.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      o.default.track(u.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: d.PremiumUpsellTypes.EMOJI_AUTOCOMPLETE_INLINE,
         location_stack: n
       })
@@ -38,22 +38,22 @@ var l = n("37983"),
             src: e.url
           })
         }, e.id);
-        return 2 === t ? n : (0, l.jsx)(s.default, {
+        return 2 === t ? n : (0, l.jsx)(r.default, {
           className: f.emojiMask,
-          mask: s.default.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI,
+          mask: r.default.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI,
           children: n
         }, e.id)
       })
     });
-    return (0, l.jsxs)(o.AutocompleteRowContent, {
+    return (0, l.jsxs)(s.AutocompleteRowContent, {
       className: f.upsell,
-      children: [(0, l.jsx)(o.AutocompleteRowContentPrimary, {
-        children: (0, l.jsx)(o.AutocompleteRowHeading, {
+      children: [(0, l.jsx)(s.AutocompleteRowContentPrimary, {
+        children: (0, l.jsx)(s.AutocompleteRowHeading, {
           children: c.default.Messages.AUTOCOMPLETE_EMOJI_UPSELL.format({
             count: t.length
           })
         })
-      }), (0, l.jsx)(o.AutocompleteRowContentSecondary, {
+      }), (0, l.jsx)(s.AutocompleteRowContentSecondary, {
         children: p
       })]
     })

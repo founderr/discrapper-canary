@@ -1,42 +1,42 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return u
   }
-}), i("222007");
-var n = i("37983"),
-  s = i("884691"),
-  l = i("414456"),
-  r = i.n(l),
-  a = i("587974"),
-  o = i("333380"),
+}), n("222007");
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("587974"),
+  o = n("333380"),
   u = e => {
     let {
       className: t,
-      guild: i,
-      isSelected: l = !0,
+      guild: n,
+      isSelected: a = !0,
       width: u = 32,
-      height: c = 32,
-      shouldAnimate: d = !0
-    } = e, [f, E] = s.useState(!1), m = i.getIconURL(32, d && l), I = () => E(!0), p = () => E(!1);
-    return (0, n.jsx)("div", {
-      onFocus: I,
-      onBlur: p,
-      onMouseOver: I,
-      onMouseLeave: p,
-      children: (0, n.jsx)(a.default, {
-        className: r(o.mask, t),
-        mask: l || f ? a.MaskIDs.SQUIRCLE : a.MaskIDs.AVATAR_DEFAULT,
+      height: d = 32,
+      shouldAnimate: c = !0
+    } = e, [f, p] = i.useState(!1), m = n.getIconURL(32, c && a), h = () => p(!0), E = () => p(!1);
+    return (0, l.jsx)("div", {
+      onFocus: h,
+      onBlur: E,
+      onMouseOver: h,
+      onMouseLeave: E,
+      children: (0, l.jsx)(r.default, {
+        className: s(o.mask, t),
+        mask: a || f ? r.MaskIDs.SQUIRCLE : r.MaskIDs.AVATAR_DEFAULT,
         width: u,
-        height: c,
-        children: null == m ? (0, n.jsx)("div", {
-          className: r(o.guildIcon, o.guildIconWithoutImage),
-          children: (0, n.jsx)("div", {
+        height: d,
+        children: null == m ? (0, l.jsx)("div", {
+          className: s(o.guildIcon, o.guildIconWithoutImage),
+          children: (0, l.jsx)("div", {
             className: o.guildAcronym,
-            children: i.acronym
+            children: n.acronym
           })
-        }) : (0, n.jsx)("img", {
-          alt: i.toString(),
+        }) : (0, l.jsx)("img", {
+          alt: n.toString(),
           src: m,
           className: o.guildIcon
         })

@@ -30,8 +30,8 @@ var l = n("414456"),
   v = n("598873"),
   I = n("981913"),
   P = n("576242"),
-  S = n("336971"),
-  C = n("109489"),
+  C = n("336971"),
+  S = n("109489"),
   g = n("116439"),
   y = n("42887"),
   E = n("145131"),
@@ -67,7 +67,7 @@ function O(e) {
     applicationId: i,
     onMouseDown: r,
     onMouseMove: I,
-    onMouseLeave: C,
+    onMouseLeave: S,
     onJumpToChannel: T,
     idle: A,
     selectedParticipant: x
@@ -78,7 +78,7 @@ function O(e) {
     className: w.videoControls,
     onMouseMove: I,
     onMouseDown: r,
-    onMouseLeave: C,
+    onMouseLeave: S,
     children: [(0, a.jsx)("div", {
       className: w.topControls,
       children: (0, a.jsx)(v.PictureInPictureHeader, {
@@ -118,7 +118,7 @@ function O(e) {
         justify: E.default.Justify.END,
         basis: "50%",
         align: E.default.Align.CENTER,
-        children: [b ? null : (0, a.jsx)(S.default, {
+        children: [b ? null : (0, a.jsx)(C.default, {
           className: L.rightPipIcon,
           popoutOpen: !1,
           onOpenPopout: () => {
@@ -185,7 +185,7 @@ function R(e) {
     participantsOpen: n,
     showToggleParticipants: l
   } = e;
-  return l ? (0, a.jsx)(C.default, {
+  return l ? (0, a.jsx)(S.default, {
     channelId: t,
     isParticipantsOpen: n,
     className: L.participantsButton

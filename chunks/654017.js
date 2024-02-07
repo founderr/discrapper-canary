@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   isSpamSupported: function() {
-    return l
+    return s
   },
   isSpammer: function() {
-    return s
+    return l
   },
   isSpam: function() {
     return u
@@ -13,15 +13,15 @@ n.r(t), n.d(t, {
 var a = n("697218"),
   r = n("49111");
 
-function l(e) {
+function s(e) {
   return void 0 !== e && e.type !== r.ChannelTypes.DM
 }
 
-function s(e) {
+function l(e) {
   var t, n;
   return null !== (n = null === (t = a.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(r.UserFlags.SPAMMER)) && void 0 !== n && n
 }
 
 function u(e) {
-  return s(e.author.id)
+  return l(e.author.id)
 }

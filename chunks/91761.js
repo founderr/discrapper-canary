@@ -1,27 +1,27 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return u
+    return d
   }
 }), i("222007");
 var l = i("446674"),
   a = i("84460"),
   n = i("807106"),
   r = i("119420"),
-  d = i("243244");
+  o = i("243244");
 
-function u(e) {
+function d(e) {
   let {
     guildId: t,
     isWatchTogetherPromoEnabled: i = !1,
-    disableFilter: u = !1
+    disableFilter: d = !1
   } = e, {
-    filter: o
+    filter: u
   } = (0, l.useStateFromStoresObject)([a.default], () => ({
     filter: a.default.getFilter()
-  })), c = (0, d.default)(t, i), s = (0, n.default)(c), f = (0, r.useDeveloperActivityShelfItems)();
+  })), c = (0, o.default)(t, i), s = (0, n.default)(c), f = (0, r.useDeveloperActivityShelfItems)();
   return [...f, ...s].map(e => {
     let [t, i] = e;
-    return [t, i.filter(e => u || "" === o || e.application.name.toLocaleLowerCase().includes(o.toLocaleLowerCase()))]
+    return [t, i.filter(e => d || "" === u || e.application.name.toLocaleLowerCase().includes(u.toLocaleLowerCase()))]
   })
 }

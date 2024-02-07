@@ -1,69 +1,69 @@
 "use strict";
-t.r(A), t.d(A, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
-}), t("424973");
-var a, n = t("872717"),
-  l = t("448993"),
-  r = t("981112"),
-  s = t("966724"),
-  o = t("980134"),
-  i = t("782340");
-a = class extends r.default {
-  async uploadFiles(e, A) {
+}), n("424973");
+var l, i = n("872717"),
+  a = n("448993"),
+  s = n("981112"),
+  r = n("966724"),
+  o = n("980134"),
+  u = n("782340");
+l = class extends s.default {
+  async uploadFiles(e, t) {
     let {
-      addFilesTo: t
+      addFilesTo: n
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     super.upload({
-      name: i.default.Messages.ATTACHMENT_PROCESSING
-    }, A, e);
-    let a = new AbortController;
+      name: u.default.Messages.ATTACHMENT_PROCESSING
+    }, t, e);
+    let l = new AbortController;
     try {
       if (this.files = e, this._aborted) return;
-      if (this._handleStart(() => a.abort()), !await this.compressAndCheckFileSize()) return;
-      this.setUploadingTextForUI(), await (0, r.stageAttachmentFiles)(this.files, !0, this._recomputeProgress.bind(this))
+      if (this._handleStart(() => l.abort()), !await this.compressAndCheckFileSize()) return;
+      this.setUploadingTextForUI(), await (0, s.stageAttachmentFiles)(this.files, !0, this._recomputeProgress.bind(this))
     } catch (e) {
       this._handleException(e)
     }
     try {
-      return await this._createMessage(a.signal, A, t)
+      return await this._createMessage(l.signal, t, n)
     } catch (e) {
       if (this._raiseEndpointErrors) throw e;
       this._handleException(e)
     }
   }
-  async _createMessage(e, A, t) {
-    let a;
-    let r = [];
-    this.files.forEach((e, A) => {
-      let t = (0, o.getAttachmentPayload)(e, A);
-      e.item.platform === s.UploadPlatform.WEB && r.push({
-        ...t
+  async _createMessage(e, t, n) {
+    let l;
+    let s = [];
+    this.files.forEach((e, t) => {
+      let n = (0, o.getAttachmentPayload)(e, t);
+      e.item.platform === r.UploadPlatform.WEB && s.push({
+        ...n
       })
-    }), a = null != t && null != A ? this._addAttachmentsToPayload(A, t, r) : {
-      ...A,
-      attachments: r
+    }), l = null != n && null != t ? this._addAttachmentsToPayload(t, n, s) : {
+      ...t,
+      attachments: s
     };
-    let i = {
+    let u = {
         url: this._url,
-        body: a,
+        body: l,
         signal: e
       },
-      d = "POST" === this._method ? n.default.post : n.default.patch;
+      d = "POST" === this._method ? i.default.post : i.default.patch;
     try {
-      let e = await d(i);
+      let e = await d(u);
       return this._handleComplete(e.body), e.body
     } catch (e) {
-      var u;
-      if (this._raiseEndpointErrors) throw new l.APIError(e);
+      var c;
+      if (this._raiseEndpointErrors) throw new a.APIError(e);
       this._handleError({
-        code: null == e ? void 0 : null === (u = e.body) || void 0 === u ? void 0 : u.code,
+        code: null == e ? void 0 : null === (c = e.body) || void 0 === c ? void 0 : c.code,
         body: null == e ? void 0 : e.body
       })
     }
   }
-  constructor(e, A = "POST", t) {
-    super(e, A, t)
+  constructor(e, t = "POST", n) {
+    super(e, t, n)
   }
 }

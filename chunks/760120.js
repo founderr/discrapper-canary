@@ -7,33 +7,33 @@ n.r(t), n.d(t, {
 var l = n("37983");
 n("884691");
 var i = n("414456"),
-  r = n.n(i),
-  o = n("186188"),
-  s = n("328634"),
-  a = n("835906"),
+  a = n.n(i),
+  s = n("186188"),
+  r = n("328634"),
+  o = n("835906"),
   u = n("632215");
 
 function d(e, t, n) {
   let {
     attributes: i,
-    children: a,
+    children: o,
     element: d
   } = e;
   switch (d.type) {
     case "line":
       var f;
       if (null === (f = d.codeBlockState) || void 0 === f ? void 0 : f.isInCodeBlock) return (0, l.jsx)("div", {
-        className: s.codeLine,
+        className: r.codeLine,
         spellCheck: null == d.codeBlockState || null == d.codeBlockState.lang,
         ...i,
-        children: a
+        children: o
       });
       return (0, l.jsx)("div", {
         ...i,
-        children: a
+        children: o
       });
     case "blockQuote": {
-      let e = r(u.blockquoteContainer, u.slateBlockquoteContainer);
+      let e = a(u.blockquoteContainer, u.slateBlockquoteContainer);
       return (0, l.jsxs)("div", {
         ...i,
         className: e,
@@ -41,85 +41,85 @@ function d(e, t, n) {
           contentEditable: !1,
           className: u.blockquoteDivider
         }), (0, l.jsx)("blockquote", {
-          children: a
+          children: o
         })]
       })
     }
     case "emoji":
       return (0, l.jsxs)(c, {
         attributes: i,
-        children: [(0, l.jsx)(o.Emoji, {
+        children: [(0, l.jsx)(s.Emoji, {
           emoji: d.emoji
-        }), a]
+        }), o]
       });
     case "customEmoji":
       return (0, l.jsxs)(c, {
         attributes: i,
-        children: [(0, l.jsx)(o.CustomEmoji, {
+        children: [(0, l.jsx)(s.CustomEmoji, {
           emoji: d.emoji
-        }), a]
+        }), o]
       });
     case "textMention":
       return (0, l.jsxs)(c, {
         attributes: i,
-        children: [(0, l.jsx)(o.TextMention, {
+        children: [(0, l.jsx)(s.TextMention, {
           text: d.name,
           channelId: n,
           guildId: t
-        }), a]
+        }), o]
       });
     case "userMention":
       return (0, l.jsxs)(c, {
         attributes: i,
-        children: [(0, l.jsx)(o.UserMention, {
+        children: [(0, l.jsx)(s.UserMention, {
           id: d.userId,
           channelId: n,
           guildId: t
-        }), a]
+        }), o]
       });
     case "roleMention":
       return (0, l.jsxs)(c, {
         attributes: i,
-        children: [(0, l.jsx)(o.RoleMention, {
+        children: [(0, l.jsx)(s.RoleMention, {
           id: d.roleId,
           guildId: t
-        }), a]
+        }), o]
       });
     case "channelMention":
       return (0, l.jsxs)(c, {
         attributes: i,
-        children: [(0, l.jsx)(o.ChannelMention, {
+        children: [(0, l.jsx)(s.ChannelMention, {
           id: d.channelId
-        }), a]
+        }), o]
       });
     case "staticRouteLink":
       return (0, l.jsxs)(c, {
         attributes: i,
-        children: [(0, l.jsx)(o.StaticRouteMention, {
+        children: [(0, l.jsx)(s.StaticRouteMention, {
           id: d.channelId
-        }), a]
+        }), o]
       });
     case "soundboard":
       return (0, l.jsxs)(c, {
         attributes: i,
-        children: [(0, l.jsx)(o.SoundboardMention, {
+        children: [(0, l.jsx)(s.SoundboardMention, {
           id: d.soundId
-        }), a]
+        }), o]
       });
     case "commandMention":
       return (0, l.jsxs)(c, {
         attributes: i,
-        children: [(0, l.jsx)(o.CommandMention, {
+        children: [(0, l.jsx)(s.CommandMention, {
           text: d.commandName,
           id: d.commandId
-        }), a]
+        }), o]
       });
     case "timestamp":
       return (0, l.jsxs)(c, {
         attributes: i,
-        children: [(0, l.jsx)(o.Timestamp, {
+        children: [(0, l.jsx)(s.Timestamp, {
           timestamp: d.parsed
-        }), a]
+        }), o]
       });
     default:
       return null
@@ -130,10 +130,10 @@ let c = e => {
     className: t,
     attributes: n,
     children: i
-  } = e, o = r(a.inlineElement, a.inlineVoid, t);
+  } = e, s = a(o.inlineElement, o.inlineVoid, t);
   return (0, l.jsx)("span", {
     ...n,
-    className: o,
+    className: s,
     contentEditable: !1,
     children: i
   })
