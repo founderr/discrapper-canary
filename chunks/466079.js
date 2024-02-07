@@ -1,23 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return f
   }
 }), n("222007");
 var a = n("37983"),
   l = n("884691"),
   s = n("414456"),
   i = n.n(s),
-  r = n("944832"),
-  o = n("124299"),
-  u = n("127868");
-let d = 16 / 9;
+  r = n("124299"),
+  o = n("127868");
+let u = 16 / 9;
 
-function c(e, t) {
+function d(e, t) {
   return Math.floor((t - e) / (8 + e)) + 1
 }
 
-function f(e, t, n) {
+function c(e, t, n) {
   let a = t - e;
   for (; a > 0;) {
     let t = e,
@@ -27,25 +26,25 @@ function f(e, t, n) {
   return e
 }
 
-function h(e) {
+function f(e) {
   var t;
   let {
     className: n,
     children: s,
-    keyExtractor: h,
-    paddingTop: p = 0,
-    paddingBottom: m = 0
-  } = e, [E, C] = l.useState({
+    keyExtractor: f,
+    paddingTop: h = 0,
+    paddingBottom: p = 0
+  } = e, [m, E] = l.useState({
     width: 0,
     height: 0
   }), {
-    width: S,
+    width: C,
     height: g
-  } = E, _ = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = S - 16, T = g - (p + m), {
-    tileStyle: v,
-    tileWidth: x,
-    rows: N,
-    columns: A
+  } = m, S = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, _ = C - 16, I = g - (h + p), {
+    tileStyle: T,
+    tileWidth: v,
+    rows: x,
+    columns: N
   } = l.useMemo(() => (function(e, t, n) {
     let {
       rows: a,
@@ -54,22 +53,22 @@ function h(e) {
     } = function(e, t, n) {
       let a;
       let l = Math.floor(t / 25);
-      a = e > 25 ? f(l, t, e => {
-        let a = c(e, t),
+      a = e > 25 ? c(l, t, e => {
+        let a = d(e, t),
           l = function(e, t) {
-            let n = e / d;
+            let n = e / u;
             return Math.ceil((t - n) / (8 + n)) + 1
           }(e, n);
         return a * l > 25
-      }) : f(l, t, a => {
-        let l = c(a, t),
+      }) : c(l, t, a => {
+        let l = d(a, t),
           s = function(e, t) {
-            let n = e / d;
+            let n = e / u;
             return Math.floor((t - n) / (8 + n)) + 1
           }(a, n);
         return l * s >= e
       }) - 1;
-      let s = c(a, t),
+      let s = d(a, t),
         i = Math.ceil(e / s);
       return {
         tileWidth: a,
@@ -85,38 +84,37 @@ function h(e) {
       rows: a,
       columns: l
     }
-  })(_, I, T), [_, I, T]), M = A + 1, R = M * x + (M - 1) * 8, j = R <= S, L = Math.floor(x / d) + 8, O = Math.max(0, T - L * N) / 2;
-  return (0, a.jsx)(o.default, {
+  })(S, _, I), [S, _, I]), A = N + 1, M = A * v + (A - 1) * 8, R = M <= C, j = Math.floor(v / u) + 8, L = Math.max(0, I - j * x) / 2;
+  return (0, a.jsx)(r.default, {
     fade: !0,
     className: n,
-    listPadding: [p + O, 0, m + O - 8, 8],
+    listPadding: [h + L, 0, p + L - 8, 8],
     renderRow: function(e) {
       var t;
-      let n = e * A;
+      let n = e * N;
       return (0, a.jsx)("div", {
-        className: u.row,
-        children: null == s ? void 0 : null === (t = s.slice(n, n + A)) || void 0 === t ? void 0 : t.map((e, t) => {
+        className: o.row,
+        children: null == s ? void 0 : null === (t = s.slice(n, n + N)) || void 0 === t ? void 0 : t.map((e, t) => {
           var l;
           let s = n + t;
           return (0, a.jsx)("div", {
-            style: v,
-            className: i(u.tile, {
-              [u.padColumn]: j,
-              [u.noVerticalMargin]: s >= (N - 1) * A,
-              [u.noHorizontalMargin]: (s + 1) % A == 0 || s === _ - 1
+            style: T,
+            className: i(o.tile, {
+              [o.padColumn]: R,
+              [o.noVerticalMargin]: s >= (x - 1) * N,
+              [o.noHorizontalMargin]: (s + 1) % N == 0 || s === S - 1
             }),
-            children: (0, a.jsx)(r.default, {
-              className: u.tileSizer,
-              aspectRatio: d,
-              children: e(x)
+            children: (0, a.jsx)("div", {
+              className: o.tileSizer,
+              children: e(v)
             })
-          }, null !== (l = null == h ? void 0 : h(s)) && void 0 !== l ? l : s)
+          }, null !== (l = null == f ? void 0 : f(s)) && void 0 !== l ? l : s)
         })
       }, e)
     },
-    rowCount: N,
-    rowCountBySection: [N],
-    rowHeight: L,
-    onResize: C
+    rowCount: x,
+    rowCountBySection: [x],
+    rowHeight: j,
+    onResize: E
   })
 }

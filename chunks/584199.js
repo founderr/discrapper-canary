@@ -1,64 +1,65 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return r
   }
 });
 var a = n("37983");
 n("884691");
 var l = n("679243"),
   s = n("42887"),
-  i = n("944832"),
-  r = n("929018");
+  i = n("929018");
 
-function o(e) {
+function r(e) {
   let {
     aspectRatio: t,
     blocked: n,
-    channel: o,
-    className: u,
-    focused: d,
-    children: c,
-    inCall: f,
-    inPopout: h,
-    noBorder: p,
-    onClick: m,
-    onContextMenu: E,
-    onDoubleClick: C,
-    onVideoResize: S,
+    channel: r,
+    className: o,
+    focused: u,
+    children: d,
+    inCall: c,
+    inPopout: f,
+    noBorder: h,
+    onClick: p,
+    onContextMenu: m,
+    onDoubleClick: E,
+    onVideoResize: C,
     paused: g,
-    pulseSpeakingIndicator: _,
-    participant: I,
-    width: T,
-    ...v
-  } = e, x = s.default.getVideoComponent();
+    pulseSpeakingIndicator: S,
+    participant: _,
+    width: I,
+    ...T
+  } = e, v = s.default.getVideoComponent();
   return (0, a.jsx)("div", {
     style: {
-      width: T
+      width: I
     },
-    className: r.spaceBetweenTiles,
-    children: (0, a.jsxs)(i.default, {
-      className: r.tileSizer,
-      aspectRatio: t,
+    className: i.spaceBetweenTiles,
+    children: (0, a.jsxs)("div", {
+      className: i.tileSizer,
+      style: {
+        aspectRatio: t
+      },
       children: [(0, a.jsx)(l.default, {
         blocked: n,
-        channel: o,
-        className: u,
-        focused: d,
-        inCall: f,
-        inPopout: h,
-        noBorder: p,
-        onClick: m,
-        onContextMenu: E,
-        onDoubleClick: C,
-        onVideoResize: S,
-        participant: I,
+        channel: r,
+        className: o,
+        focused: u,
+        inCall: c,
+        inPopout: f,
+        noBorder: h,
+        onClick: p,
+        onContextMenu: m,
+        onDoubleClick: E,
+        onVideoResize: C,
+        participant: _,
         paused: g,
-        pulseSpeakingIndicator: _,
-        videoComponent: x,
-        width: T,
-        ...v
-      }), c]
+        pulseSpeakingIndicator: S,
+        videoComponent: v,
+        width: I,
+        ...T
+      }), d]
     })
   })
 }

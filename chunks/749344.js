@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return E
   }
 }), s("222007");
 var n = s("37983"),
@@ -14,22 +14,21 @@ var n = s("37983"),
   u = s("77078"),
   h = s("659500"),
   c = s("137215"),
-  p = s("944832"),
-  m = s("16594"),
-  g = s("49111"),
-  C = s("782340"),
-  f = s("561567");
-let I = {
+  p = s("16594"),
+  m = s("49111"),
+  g = s("782340"),
+  C = s("561567");
+let f = {
   JUMP: "jump",
   NEXT: "next",
   PREVIOUS: "previous"
 };
-class x extends a.PureComponent {
+class I extends a.PureComponent {
   componentDidMount() {
-    h.ComponentDispatch.subscribe(g.ComponentActions.CAROUSEL_PREV, this.handlePrevious), h.ComponentDispatch.subscribe(g.ComponentActions.CAROUSEL_NEXT, this.handleNext)
+    h.ComponentDispatch.subscribe(m.ComponentActions.CAROUSEL_PREV, this.handlePrevious), h.ComponentDispatch.subscribe(m.ComponentActions.CAROUSEL_NEXT, this.handleNext)
   }
   componentWillUnmount() {
-    h.ComponentDispatch.unsubscribe(g.ComponentActions.CAROUSEL_PREV, this.handlePrevious), h.ComponentDispatch.unsubscribe(g.ComponentActions.CAROUSEL_NEXT, this.handleNext)
+    h.ComponentDispatch.unsubscribe(m.ComponentActions.CAROUSEL_PREV, this.handlePrevious), h.ComponentDispatch.unsubscribe(m.ComponentActions.CAROUSEL_NEXT, this.handleNext)
   }
   render() {
     let {
@@ -37,28 +36,28 @@ class x extends a.PureComponent {
       count: t,
       includeHitboxPadding: s,
       arrowClassName: a
-    } = this.props, i = r(f.arrowHitbox, a, {
-      [f.arrowHitboxPadding]: s
+    } = this.props, i = r(C.arrowHitbox, a, {
+      [C.arrowHitboxPadding]: s
     });
     return (0, n.jsxs)("div", {
-      className: r(f.controls, this.props.className),
+      className: r(C.controls, this.props.className),
       children: [(0, n.jsx)(u.Button, {
         look: u.Button.Looks.BLANK,
         className: i,
         onClick: this.handlePrevious,
-        "aria-label": C.default.Messages.PAGINATION_PREVIOUS,
+        "aria-label": g.default.Messages.PAGINATION_PREVIOUS,
         children: (0, n.jsx)(c.default, {
-          className: f.arrow,
+          className: C.arrow,
           direction: c.default.Directions.LEFT
         })
       }), (0, n.jsx)("div", {
-        className: f.dots,
+        className: C.dots,
         children: o.times(t, t => (0, n.jsx)(u.Button, {
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
           onClick: () => this.handleDotClick(t),
-          className: t === e ? f.dotSelected : f.dotNormal,
-          "aria-label": C.default.Messages.PAGINATION_SLIDE_LABEL.format({
+          className: t === e ? C.dotSelected : C.dotNormal,
+          "aria-label": g.default.Messages.PAGINATION_SLIDE_LABEL.format({
             pageNumber: t + 1
           })
         }, "dot-".concat(t)))
@@ -66,9 +65,9 @@ class x extends a.PureComponent {
         look: u.Button.Looks.BLANK,
         className: i,
         onClick: this.handleNext,
-        "aria-label": C.default.Messages.PAGINATION_NEXT,
+        "aria-label": g.default.Messages.PAGINATION_NEXT,
         children: (0, n.jsx)(c.default, {
-          className: f.arrow,
+          className: C.arrow,
           direction: c.default.Directions.RIGHT
         })
       })]
@@ -81,28 +80,28 @@ class x extends a.PureComponent {
         onIntentionalChange: s,
         current: n
       } = this.props;
-      null == s || s(n, e, I.JUMP), t(e)
+      null == s || s(n, e, f.JUMP), t(e)
     }, this.handleNext = () => {
       let {
         onIntentionalChange: e,
         current: t,
         onChangePage: s
       } = this.props, n = s(1);
-      null == e || e(t, n, I.NEXT)
+      null == e || e(t, n, f.NEXT)
     }, this.handlePrevious = () => {
       let {
         onIntentionalChange: e,
         current: t,
         onChangePage: s
       } = this.props, n = s(-1);
-      null == e || e(t, n, I.PREVIOUS)
+      null == e || e(t, n, f.PREVIOUS)
     }
   }
 }
-x.defaultProps = {
+I.defaultProps = {
   includeHitboxPadding: !0
 };
-class E extends a.PureComponent {
+class x extends a.PureComponent {
   componentDidMount() {
     !this.props.paused && !this.state.hovered && this.startTimer()
   }
@@ -134,7 +133,7 @@ class E extends a.PureComponent {
       onChangeItem: n
     } = this.props;
     null == n || n(e[s], this.state.visibleIndex, s);
-    let a = t > 0 ? m.SlideDirection.LEFT : m.SlideDirection.RIGHT;
+    let a = t > 0 ? p.SlideDirection.LEFT : p.SlideDirection.RIGHT;
     return this.setState({
       visibleIndex: s,
       direction: a
@@ -155,20 +154,22 @@ class E extends a.PureComponent {
       visibleIndex: h
     } = this.state;
     return (0, n.jsxs)("div", {
-      className: r(f.root, s),
+      className: r(C.root, s),
       style: d,
       onMouseEnter: this.handleMouseEnter,
       onMouseLeave: this.handleMouseLeave,
-      children: [(0, n.jsx)(p.default, {
-        aspectRatio: u,
-        children: (0, n.jsx)(m.default, {
+      children: [(0, n.jsx)("div", {
+        style: {
+          aspectRatio: u
+        },
+        children: (0, n.jsx)(p.default, {
           step: h,
           direction: this.getCurrentDirection(),
-          className: f.carousel,
+          className: C.carousel,
           children: t(e[h], h)
         })
-      }), e.length > 1 && (0, n.jsx)(x, {
-        className: r(a, l ? f.themedPagination : f.pagination),
+      }), e.length > 1 && (0, n.jsx)(I, {
+        className: r(a, l ? C.themedPagination : C.pagination),
         arrowClassName: i,
         includeHitboxPadding: o,
         current: h,
@@ -213,12 +214,12 @@ class E extends a.PureComponent {
       return null == a ? void 0 : a(n[t], e, t, s)
     }, this.state = {
       visibleIndex: !0 === e.randomize ? o.random(0, e.items.length - 1) : 0,
-      direction: m.SlideDirection.LEFT,
+      direction: p.SlideDirection.LEFT,
       hovered: !1
     }
   }
 }
-E.defaultProps = {
+x.defaultProps = {
   aspectRatio: 16 / 9
 };
-var v = E
+var E = x

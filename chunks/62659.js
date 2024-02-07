@@ -453,23 +453,19 @@ es.Header = ea, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(i.channelId)), [f, E] = (0, L.useCanWatchStream)(d), _ = (0, l.jsx)(x.default, {
+  } = e, d = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(i.channelId)), [f, E] = (0, L.useCanWatchStream)(d), _ = (0, l.jsxs)(c.Clickable, {
+    onClick: f ? r : void 0,
     className: q.applicationStreamingPreviewWrapper,
-    aspectRatio: 16 / 9,
-    children: (0, l.jsxs)(c.Clickable, {
-      onClick: f ? r : void 0,
-      className: q.applicationStreamingPreviewSize,
-      children: [(0, l.jsx)(v.default, {
-        stream: i,
-        className: q.applicationStreamingPreviewSize
-      }), (0, l.jsx)("div", {
-        className: q.applicationStreamingHoverWrapper,
-        children: (0, l.jsx)("div", {
-          className: q.applicationStreamingHoverText,
-          children: (0, L.getStreamCTAString)(E)
-        })
-      })]
-    })
+    children: [(0, l.jsx)(v.default, {
+      stream: i,
+      className: q.applicationStreamingPreviewSize
+    }), (0, l.jsx)("div", {
+      className: q.applicationStreamingHoverWrapper,
+      children: (0, l.jsx)("div", {
+        className: q.applicationStreamingHoverText,
+        children: (0, L.getStreamCTAString)(E)
+      })
+    })]
   }), h = null !== (n = null === (t = (0, m.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
@@ -534,39 +530,36 @@ es.Header = ea, es.Body = e => {
           })
         })
       }) : null]
-    }), (0, l.jsx)(x.default, {
-      aspectRatio: 16 / 9,
-      children: (0, l.jsxs)("div", {
-        className: q.embeddedActivityPlayerContainer,
-        children: [null != p ? (0, l.jsx)("img", {
-          src: p,
-          alt: T.name,
-          className: q.embeddedActivityImage
-        }) : null, (0, l.jsxs)("div", {
-          className: q.embeddedActivityImageOverlay,
-          children: [(0, l.jsx)(M.Avatars, {
-            users: _,
-            guildId: a,
-            channelId: n.id
-          }), (0, l.jsx)("div", {
-            className: q.embeddedActivityJoinWrapper,
-            children: (0, l.jsx)(c.Button, {
-              size: c.Button.Sizes.SMALL,
-              onClick: e => {
-                e.stopPropagation(), (0, h.default)({
-                  applicationId: f,
-                  currentEmbeddedApplication: r,
-                  activityChannelId: n.id,
-                  locationObject: C.location,
-                  embeddedActivitiesManager: g.default,
-                  analyticsLocations: I
-                })
-              },
-              children: z.default.Messages.JOIN
-            })
-          })]
+    }), (0, l.jsxs)("div", {
+      className: q.embeddedActivityPlayerContainer,
+      children: [null != p ? (0, l.jsx)("img", {
+        src: p,
+        alt: T.name,
+        className: q.embeddedActivityImage
+      }) : null, (0, l.jsxs)("div", {
+        className: q.embeddedActivityImageOverlay,
+        children: [(0, l.jsx)(M.Avatars, {
+          users: _,
+          guildId: a,
+          channelId: n.id
+        }), (0, l.jsx)("div", {
+          className: q.embeddedActivityJoinWrapper,
+          children: (0, l.jsx)(c.Button, {
+            size: c.Button.Sizes.SMALL,
+            onClick: e => {
+              e.stopPropagation(), (0, h.default)({
+                applicationId: f,
+                currentEmbeddedApplication: r,
+                activityChannelId: n.id,
+                locationObject: C.location,
+                embeddedActivitiesManager: g.default,
+                analyticsLocations: I
+              })
+            },
+            children: z.default.Messages.JOIN
+          })
         })]
-      })
+      })]
     })]
   })
 };
