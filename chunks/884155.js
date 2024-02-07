@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return P
   }
 }), n("222007"), n("424973");
 var a = n("37983"),
@@ -88,104 +88,85 @@ let b = l.memo(e => {
   })
 });
 b.displayName = "ConnectedVoiceUser";
-class P extends l.Component {
-  renderVoiceUsers() {
-    let {
-      channel: e,
-      allowDragging: t,
-      voiceStates: n,
-      collapsed: l,
-      collapsedMax: s = 6,
-      tabIndex: i,
-      location: r,
-      numAudience: o
-    } = this.props, {
-      previewUserId: u,
-      previewIsOpen: d
-    } = this.state;
-    if (null == n || 0 === n.length) return null;
-    let c = l && n.length > s + 1 ? n.slice(0, s) : n,
-      f = c.map(n => {
-        var s;
-        let {
-          user: o,
-          nick: c,
-          voiceState: f
-        } = n;
-        return (0, a.jsx)(b, {
-          user: o,
-          nick: c,
-          isSelfOnOtherClient: C.default.getId() === o.id && f.sessionId !== C.default.getSessionId(),
-          mute: f.isVoiceMuted(),
-          deaf: f.isVoiceDeafened(),
-          video: f.selfVideo,
-          serverMute: f.mute,
-          serverDeaf: f.deaf,
-          sessionId: null !== (s = f.sessionId) && void 0 !== s ? s : "",
-          channel: e,
-          collapsed: l,
-          canDrag: t && _.default.can(L.Permissions.MOVE_MEMBERS, e),
-          showPreview: this.handleShowPreview,
-          hidePreview: this.handleHidePreview,
-          previewIsOpen: d,
-          shouldShowPreview: u === o.id,
-          tabIndex: i,
-          location: r
-        }, o.id)
-      });
-    return null != o && o > 0 ? f.push((0, a.jsx)(j.AudienceVoiceUser, {
-      collapsed: l,
-      numAudience: o
-    })) : l && n.length > s + 1 && f.push((0, a.jsx)(j.MoreVoiceUser, {
-      numUsers: n.length - s
-    })), f
-  }
-  render() {
-    let e = this.renderVoiceUsers(),
-      {
-        collapsed: t,
-        className: n,
-        children: l,
-        withGuildIcon: s
-      } = this.props;
-    return null == e && null == l ? null : (0, a.jsxs)(A.VoiceUserList, {
-      className: i(n, y.list, {
-        [y.collapsed]: t,
-        [y.withGuildIcon]: s
-      }),
-      collapsed: t,
-      children: [e, l]
-    })
-  }
-  constructor(...e) {
-    super(...e), this.showPreview = new o.DelayedCall(50, () => {
-      this.setState({
-        previewUserId: this.previewUserIdAfterDelay
-      }), this.previewUserIdAfterDelay = null
-    }), this.hidePreview = new o.DelayedCall(175, () => {
-      this.setState({
-        previewUserId: null
-      })
-    }), this.previewUserIdAfterDelay = null, this.state = {
-      previewUserId: null,
-      previewIsOpen: !1
-    }, this.handleShowPreview = e => {
-      this.props.allowPreviews && (this.setState({
-        previewIsOpen: !0
-      }), this.hidePreview.cancel(), this.previewUserIdAfterDelay = e, this.showPreview.delay())
-    }, this.handleHidePreview = e => {
-      if (!this.props.allowPreviews) return;
+var P = function(e) {
+  let {
+    allowPreviews: t = !0,
+    allowDragging: n = !0,
+    channel: s,
+    voiceStates: u,
+    collapsed: d,
+    collapsedMax: c = 6,
+    tabIndex: h,
+    location: p,
+    numAudience: m,
+    withGuildIcon: E = !1,
+    className: g,
+    children: S
+  } = e, [T, v] = l.useState(null), [x, N] = l.useState(!1), M = l.useRef(null), R = l.useRef(new o.DelayedCall(50, () => {
+    v(M.current), M.current = null
+  })), O = l.useRef(new o.DelayedCall(175, () => {
+    v(null)
+  })), P = l.useCallback(e => {
+    t && (N(!0), O.current.cancel(), M.current = e, R.current.delay())
+  }, [t]), D = l.useCallback(e => {
+    t && (R.current.cancel(), T === e && (N(!1), O.current.delay()))
+  }, [t, T]), U = (0, r.useStateFromStoresArray)([I.default], () => {
+    if (d) return [];
+    let e = new Set;
+    return null == u || u.forEach(t => {
       let {
-        previewUserId: t
-      } = this.state;
-      this.showPreview.cancel(), t === e && (this.setState({
-        previewIsOpen: !1
-      }), this.hidePreview.delay())
-    }
-  }
+        user: n
+      } = t, a = I.default.getActivities(n.id, s.guild_id);
+      a.forEach(t => {
+        null != t.application_id && e.add(t.application_id)
+      })
+    }), Array.from(e)
+  });
+  (0, f.default)(U);
+  let w = (() => {
+    if (null == u || 0 === u.length) return null;
+    let e = d && u.length > c + 1 ? u.slice(0, c) : u,
+      t = e.map(e => {
+        var t;
+        let {
+          user: l,
+          nick: i,
+          voiceState: r
+        } = e;
+        return (0, a.jsx)(b, {
+          user: l,
+          nick: i,
+          isSelfOnOtherClient: C.default.getId() === l.id && r.sessionId !== C.default.getSessionId(),
+          mute: r.isVoiceMuted(),
+          deaf: r.isVoiceDeafened(),
+          video: r.selfVideo,
+          serverMute: r.mute,
+          serverDeaf: r.deaf,
+          sessionId: null !== (t = r.sessionId) && void 0 !== t ? t : "",
+          channel: s,
+          collapsed: d,
+          canDrag: n && _.default.can(L.Permissions.MOVE_MEMBERS, s),
+          showPreview: P,
+          hidePreview: D,
+          previewIsOpen: x,
+          shouldShowPreview: T === l.id,
+          tabIndex: h,
+          location: p
+        }, l.id)
+      });
+    return null != m && m > 0 ? t.push((0, a.jsx)(j.AudienceVoiceUser, {
+      collapsed: d,
+      numAudience: m
+    })) : d && u.length > c + 1 && t.push((0, a.jsx)(j.MoreVoiceUser, {
+      numUsers: u.length - c
+    })), t
+  })();
+  return null == w && null == S ? null : (0, a.jsxs)(A.VoiceUserList, {
+    className: i(g, y.list, {
+      [y.collapsed]: d,
+      [y.withGuildIcon]: E
+    }),
+    collapsed: d,
+    children: [w, S]
+  })
 }
-P.defaultProps = {
-  allowPreviews: !0,
-  allowDragging: !0
-};
-var D = P

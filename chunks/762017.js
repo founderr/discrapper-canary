@@ -322,7 +322,7 @@ let o = {
     neverLoadBeforeConnectionOpen: !0
   },
   VoiceChannelGameActivityManager: {
-    actions: ["PRESENCE_UPDATES", "VOICE_STATE_UPDATES", "RUNNING_GAMES_CHANGE", "VOICE_CHANNEL_SELECT"],
+    actions: ["RUNNING_GAMES_CHANGE", "VOICE_CHANNEL_SELECT"],
     inlineRequire: () => E("282655").default,
     neverLoadBeforeConnectionOpen: !0
   }
