@@ -87,7 +87,10 @@ var S = () => {
       withAnalyticsToken: !0
     }).then(() => c(!1)).catch(() => c(!1))) : c(!1)
   }, [e]), a.useEffect(() => {
-    !t && !n && u.default.getExperiments()
+    let e = async () => {
+      !t && !n && (await u.default.getLocationMetadata(), u.default.getExperiments())
+    };
+    e()
   }, [t, n]), l ? (0, s.jsx)(p.default, {
     children: (0, s.jsx)(r.Spinner, {})
   }) : n && (0, s.jsxs)(p.default, {
