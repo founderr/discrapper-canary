@@ -45,6 +45,7 @@ function C(e) {
     },
     disabled: v,
     iconComponent: x,
-    label: null == S ? m.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : T || _ ? I ? void 0 : m.default.Messages.CLIPS_SAVE : m.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP
+    label: null == S ? m.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : T || _ ? I ? void 0 : m.default.Messages.CLIPS_SAVE : m.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
+    grow: !1
   })
 }
