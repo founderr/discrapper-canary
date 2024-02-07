@@ -2,44 +2,44 @@
 let i;
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return S
   }
 }), n("222007"), n("781738");
-var s = n("446674"),
-  r = n("913144"),
+var r = n("446674"),
+  s = n("913144"),
   a = n("49671"),
   o = n("773336"),
   l = n("535974"),
   u = n("782340");
-let d = {},
-  c = (0, o.isWindows)() ? "".concat(a.default.process.env.LOCALAPPDATA, "\\DiscordGames") : (0, o.isMac)() ? "/Applications/DiscordGames" : "/tmp";
+let c = {},
+  d = (0, o.isWindows)() ? "".concat(a.default.process.env.LOCALAPPDATA, "\\DiscordGames") : (0, o.isMac)() ? "/Applications/DiscordGames" : "/tmp";
 
 function f(e, t) {
   var n;
-  d = {
-    ...d,
+  c = {
+    ...c,
     [e]: {
-      ...null !== (n = d[e]) && void 0 !== n ? n : {},
+      ...null !== (n = c[e]) && void 0 !== n ? n : {},
       ...t
     }
   }
 }
 
-function _(e) {
+function E(e) {
   let {
     applicationId: t,
     branchId: n,
-    installationPath: s
+    installationPath: r
   } = e;
   null == i.installations[t] && (i.installations[t] = {}), i.installations[t][n] = {
-    installationPath: s
-  }, !i.installationPaths.has(s) && g({
-    path: s,
+    installationPath: r
+  }, !i.installationPaths.has(r) && h({
+    path: r,
     metadata: {}
   })
 }
 
-function h(e) {
+function p(e) {
   let {
     applicationId: t,
     branchId: n
@@ -48,18 +48,18 @@ function h(e) {
   delete i.installations[t][n], 0 === Object.keys(i.installations[t]).length && delete i.installations[t]
 }
 
-function g(e) {
+function h(e) {
   if (i.installationPaths.has(e.path)) return !1;
   f(e.path, e.metadata);
   let t = new Set(i.installationPaths);
   t.add(e.path), i.installationPaths = t
 }
-class m extends s.default.PersistedStore {
+class _ extends r.default.PersistedStore {
   initialize(e) {
     let t = {
       ...e
     };
-    null == t.installations && (t.installations = {}), null == t.defaultInstallationPath && (t.defaultInstallationPath = c), null == t.installationPaths ? t.installationPaths = new Set([t.defaultInstallationPath]) : t.installationPaths = new Set(Array.from(t.installationPaths)), null == t.pathLabels && (t.pathLabels = {}), i = t
+    null == t.installations && (t.installations = {}), null == t.defaultInstallationPath && (t.defaultInstallationPath = d), null == t.installationPaths ? t.installationPaths = new Set([t.defaultInstallationPath]) : t.installationPaths = new Set(Array.from(t.installationPaths)), null == t.pathLabels && (t.pathLabels = {}), i = t
   }
   getState() {
     return i
@@ -74,7 +74,7 @@ class m extends s.default.PersistedStore {
     }))
   }
   get installationPathsMetadata() {
-    return d
+    return c
   }
   hasGamesInstalledInPath(e) {
     let {
@@ -93,34 +93,34 @@ class m extends s.default.PersistedStore {
   }
   getLabelFromPath(e) {
     var t, n;
-    return e === c ? u.default.Messages.INSTALL_LOCATION_MAIN : null !== (n = null !== (t = a.default.fileManager.basename(e)) && void 0 !== t ? t : e.replace(/[/\\]+$/, "").split(/[/\\]+/g).slice(-1)[0]) && void 0 !== n ? n : "?"
+    return e === d ? u.default.Messages.INSTALL_LOCATION_MAIN : null !== (n = null !== (t = a.default.fileManager.basename(e)) && void 0 !== t ? t : e.replace(/[/\\]+$/, "").split(/[/\\]+/g).slice(-1)[0]) && void 0 !== n ? n : "?"
   }
 }
-m.displayName = "InstallationManagerStore", m.persistKey = "InstallationManagerStore";
-var E = new m(r.default, {
-  DISPATCH_APPLICATION_INSTALL: _,
-  DISPATCH_APPLICATION_UNINSTALL: h,
+_.displayName = "InstallationManagerStore", _.persistKey = "InstallationManagerStore";
+var S = new _(s.default, {
+  DISPATCH_APPLICATION_INSTALL: E,
+  DISPATCH_APPLICATION_UNINSTALL: p,
   DISPATCH_APPLICATION_CANCEL: function(e) {
     let {
       applicationId: t,
       branchId: n
     } = e, i = l.default.getState(t, n);
-    null != i && null == i.buildId && null == i.manifestIds && h({
+    null != i && null == i.buildId && null == i.manifestIds && p({
       applicationId: t,
       branchId: n
     })
   },
-  INSTALLATION_LOCATION_ADD: g,
+  INSTALLATION_LOCATION_ADD: h,
   INSTALLATION_LOCATION_REMOVE: function(e) {
     var t;
     let {
       path: n
     } = e;
     if (!i.installationPaths.has(n) || i.defaultInstallationPath === n) return !1;
-    let s = new Set(i.installationPaths);
-    s.delete(n), i.installationPaths = s, t = n, d = {
-      ...d
-    }, delete d[t], ! function(e) {
+    let r = new Set(i.installationPaths);
+    r.delete(n), i.installationPaths = r, t = n, c = {
+      ...c
+    }, delete c[t], ! function(e) {
       if (null == i.pathLabels[e]) return;
       i.pathLabels = {
         ...i.pathLabels
@@ -131,17 +131,17 @@ var E = new m(r.default, {
     let {
       path: t,
       label: n,
-      isDefault: s
+      isDefault: r
     } = e;
     if (!i.installationPaths.has(t)) return !1;
     if (null != n && "" !== n && i.pathLabels[t] !== n) {
-      var r, a;
-      r = t, a = n, i.pathLabels = {
+      var s, a;
+      s = t, a = n, i.pathLabels = {
         ...i.pathLabels,
-        [r]: a
+        [s]: a
       }
     }
-    s && i.defaultInstallationPath !== t && (i.defaultInstallationPath = t)
+    r && i.defaultInstallationPath !== t && (i.defaultInstallationPath = t)
   },
   INSTALLATION_LOCATION_FETCH_METADATA: function(e) {
     let {
@@ -149,5 +149,5 @@ var E = new m(r.default, {
     } = e;
     for (let e in t) f(e, t[e])
   },
-  DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: _
+  DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: E
 })

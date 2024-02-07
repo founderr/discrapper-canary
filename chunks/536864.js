@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   MenuSeparator: function() {
-    return r
+    return s
   }
 });
 var i = n("37983");
 n("884691");
-var s = n("946032");
+var r = n("946032");
 
-function r() {
+function s() {
   return (0, i.jsx)("div", {
     role: "separator",
-    className: s.separator
+    className: r.separator
   })
 }

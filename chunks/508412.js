@@ -15,12 +15,12 @@ var t = E("627445"),
   T = E("42887"),
   S = E("945956"),
   N = E("235660"),
-  O = E("800762"),
-  A = E("449008"),
+  A = E("800762"),
+  O = E("449008"),
   R = E("700507"),
   l = E("893243"),
-  L = E("76393"),
-  u = E("209969"),
+  u = E("76393"),
+  L = E("209969"),
   C = E("201615"),
   D = E("171644"),
   c = E("353927"),
@@ -48,17 +48,17 @@ class h extends i.default {
       REMOTE_SESSION_DISCONNECT: () => this.handleRemoteSessionDisconnect()
     }, this.maybeConnect = e => {
       let _ = function(e) {
-        let _ = L.default.getAwaitingRemoteSessionInfo();
+        let _ = u.default.getAwaitingRemoteSessionInfo();
         return e.find(e => {
           let E = D.GAME_CONSOLE_SESSIONS.has(e.clientInfo.os),
-            t = null != O.default.getVoiceStateForSession(s.default.getId(), e.sessionId),
-            o = null == _ || (0, u.coercePlatformTypeToConsoleType)(_.type) === e.clientInfo.os;
+            t = null != A.default.getVoiceStateForSession(s.default.getId(), e.sessionId),
+            o = null == _ || (0, L.coercePlatformTypeToConsoleType)(_.type) === e.clientInfo.os;
           return E && o && t
         })
       }(e);
       if (null == _) return null;
       this.awaitRemoteTimeout.stop(), (0, R.connectToRemote)(_.sessionId);
-      let E = O.default.getVoiceStateForSession(s.default.getId(), _.sessionId);
+      let E = A.default.getVoiceStateForSession(s.default.getId(), _.sessionId);
       null != E && M(E)
     }, this.handleAudioStateToggle = e => {
       let {
@@ -69,9 +69,9 @@ class h extends i.default {
       let t = T.default.isSelfDeaf(),
         o = T.default.isSelfMute(),
         n = s.default.getId(),
-        r = L.default.getRemoteSessionId();
+        r = u.default.getRemoteSessionId();
       if (null == r) return;
-      let a = O.default.getVoiceStateForSession(n, r);
+      let a = A.default.getVoiceStateForSession(n, r);
       if (null != a)(a.selfDeaf !== t || a.selfMute !== o) && ((0, R.remoteVoiceStateUpdate)(r, {
         selfDeaf: t,
         selfMute: o
@@ -81,14 +81,14 @@ class h extends i.default {
     }, this.handleVoiceStateUpdates = e => {
       var _;
       let E = null !== (_ = e.voiceStates) && void 0 !== _ ? _ : [],
-        t = L.default.getRemoteSessionId();
+        t = u.default.getRemoteSessionId();
       if (null == t) {
         let e = E.map(e => {
           let {
             sessionId: _
           } = e;
           return null != _ ? N.default.getSessionById(_) : null
-        }).filter(A.isNotNullish);
+        }).filter(O.isNotNullish);
         return this.maybeConnect(e)
       }
       let o = E.find(e => {
@@ -99,7 +99,7 @@ class h extends i.default {
       });
       null != o && (this.rollbackCommandTimeout.stop(), M(o))
     }, this.handleSessionsChanged = () => {
-      let e = L.default.getRemoteSessionId();
+      let e = u.default.getRemoteSessionId();
       null != e && null == N.default.getSessionById(e) && (0, R.disconnectRemote)(), null == e && this.maybeConnect(Object.values(N.default.getSessions()))
     }, this.handleWaitForRemoteSession = () => {
       this.awaitRemoteTimeout.start(6e4, () => {
@@ -117,9 +117,9 @@ class h extends i.default {
       } = e;
       if ("failed" !== t && "n/a" !== t || null == o) return;
       U.info("Console command Error result:", t, o);
-      let n = L.default.getAwaitingRemoteSessionInfo();
+      let n = u.default.getAwaitingRemoteSessionInfo();
       if ((null == n ? void 0 : n.commandId) !== E) return;
-      let r = L.default.getDevice(n.type, null !== (_ = n.deviceId) && void 0 !== _ ? _ : ""),
+      let r = u.default.getDevice(n.type, null !== (_ = n.deviceId) && void 0 !== _ ? _ : ""),
         a = (0, C.default)(null != r ? r : {
           id: "id",
           platform: d.default.Messages.STATUS_UNKNOWN,

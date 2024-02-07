@@ -17,18 +17,18 @@ var i = n("37983"),
   E = n("39331"),
   _ = n("596368"),
   S = n("227439"),
-  p = n("697218"),
-  I = n("170113"),
-  h = n("780571"),
+  h = n("697218"),
+  p = n("170113"),
+  I = n("780571"),
   T = n("377502"),
   C = n("103603"),
   v = n("736393"),
-  A = n("170213"),
+  m = n("170213"),
   N = n("49111"),
-  m = n("719347"),
+  A = n("719347"),
   g = n("782340"),
   L = n("161730");
-let U = (e, t) => {
+let R = (e, t) => {
     let n = e.attachments.map(e => {
       var n, i, r, l;
       let a = {
@@ -40,8 +40,8 @@ let U = (e, t) => {
       if (!((0, u.isImageFile)(e.filename) || (0, u.isVideoFile)(e.filename))) return a;
       return {
         ...a,
-        width: null !== (r = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== r ? r : A.DEFAULT_MEDIA_MAX_WIDTH,
-        height: null !== (l = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== l ? l : A.DEFAULT_MEDIA_MAX_HEIGHT
+        width: null !== (r = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== r ? r : m.DEFAULT_MEDIA_MAX_WIDTH,
+        height: null !== (l = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== l ? l : m.DEFAULT_MEDIA_MAX_HEIGHT
       }
     });
     return (0, c.createMessageRecord)({
@@ -56,7 +56,7 @@ let U = (e, t) => {
       state: N.MessageStates.SENT
     })
   },
-  R = e => {
+  U = e => {
     let {
       message: t
     } = e, {
@@ -64,23 +64,23 @@ let U = (e, t) => {
     } = t;
     if (0 === n.length) return null;
     let r = (e, t, n) => {
-        let r = A.DEFAULT_MEDIA_MAX_WIDTH,
-          a = A.DEFAULT_MEDIA_MAX_HEIGHT;
+        let r = m.DEFAULT_MEDIA_MAX_WIDTH,
+          a = m.DEFAULT_MEDIA_MAX_HEIGHT;
         if (null != t.width && null != t.height) {
           let e = (0, C.getRatio)({
             width: t.width,
             height: t.height,
-            maxWidth: A.DEFAULT_MEDIA_MAX_WIDTH,
-            maxHeight: A.DEFAULT_MEDIA_MAX_HEIGHT
+            maxWidth: m.DEFAULT_MEDIA_MAX_WIDTH,
+            maxHeight: m.DEFAULT_MEDIA_MAX_HEIGHT
           });
-          r = (0, l.clamp)(Math.round(t.width * e), 0, A.DEFAULT_MEDIA_MAX_WIDTH), a = (0, l.clamp)(Math.round(t.height * e), 0, A.DEFAULT_MEDIA_MAX_HEIGHT)
+          r = (0, l.clamp)(Math.round(t.width * e), 0, m.DEFAULT_MEDIA_MAX_WIDTH), a = (0, l.clamp)(Math.round(t.height * e), 0, m.DEFAULT_MEDIA_MAX_HEIGHT)
         }
         return (0, i.jsx)("div", {
           style: {
             width: n ? r : "100%",
             height: n ? a : "100%"
           },
-          children: (0, i.jsx)(I.default, {
+          children: (0, i.jsx)(p.default, {
             className: e.className,
             forceExternal: !1,
             src: t.url,
@@ -90,7 +90,7 @@ let U = (e, t) => {
             volume: e.volume,
             autoPlay: !1,
             autoMute: !1,
-            type: I.default.Types.VIDEO,
+            type: p.default.Types.VIDEO,
             mediaLayoutType: e.mediaLayoutType,
             fileName: t.filename,
             fileSize: null == t.size ? void 0 : t.size.toString(),
@@ -113,7 +113,7 @@ let U = (e, t) => {
           attachment: e,
           spoiler: !0,
           message: t,
-          mediaLayoutType: m.MediaLayoutType.MOSAIC,
+          mediaLayoutType: A.MediaLayoutType.MOSAIC,
           autoPlayGif: !1,
           inlineMedia: !0,
           canRemoveAttachment: !1,
@@ -137,7 +137,7 @@ let U = (e, t) => {
     var t;
     let {
       flaggedContent: n
-    } = e, l = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), [a, c] = r.useState({}), [d, f] = r.useState(!0), I = n[0], T = U(I, a), C = (0, E.default)(T, {
+    } = e, l = (0, s.useStateFromStores)([h.default], () => h.default.getCurrentUser()), [a, c] = r.useState({}), [d, f] = r.useState(!0), p = n[0], T = R(p, a), C = (0, E.default)(T, {
       hideSimpleEmbedContent: !1,
       allowList: !1,
       allowHeading: !1,
@@ -145,7 +145,7 @@ let U = (e, t) => {
       previewLinkTarget: !1
     });
     return (r.useEffect(() => {
-      Promise.all(I.attachments.filter(e => {
+      Promise.all(p.attachments.filter(e => {
         let {
           filename: t
         } = e;
@@ -181,7 +181,7 @@ let U = (e, t) => {
           [e.id]: t
         })))
       })).finally(() => f(!1))
-    }, [I.attachments]), "" === T.content && 0 === T.attachments.length) ? null : (0, i.jsxs)("div", {
+    }, [p.attachments]), "" === T.content && 0 === T.attachments.length) ? null : (0, i.jsxs)("div", {
       className: L.classificationEvidenceContainer,
       children: [(0, i.jsx)(o.Text, {
         variant: "eyebrow",
@@ -189,7 +189,7 @@ let U = (e, t) => {
         children: g.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
       }), d ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsx)("div", {
         className: L.classificationEvidenceCard,
-        children: (0, i.jsx)(h.default, {
+        children: (0, i.jsx)(I.default, {
           compact: !1,
           childrenHeader: (0, S.default)({
             author: {
@@ -206,7 +206,7 @@ let U = (e, t) => {
             roleIcon: void 0,
             hideTimestamp: !1
           }),
-          childrenAccessories: (0, i.jsx)(R, {
+          childrenAccessories: (0, i.jsx)(U, {
             message: T
           }),
           childrenMessageContent: (0, _.default)({

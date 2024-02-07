@@ -27,8 +27,8 @@ var s = n("37983"),
   C = n("965381"),
   p = n("393414"),
   m = n("506885"),
-  E = n("27618"),
-  g = n("162771"),
+  g = n("27618"),
+  E = n("162771"),
   S = n("697218"),
   A = n("79798"),
   _ = n("476263"),
@@ -52,7 +52,7 @@ function y(e) {
     handleContextMenu: C,
     handleParentClick: p,
     handleParentContextMenu: m,
-    renderFollowButton: g,
+    renderFollowButton: E,
     channelEmojiLeftOfIcon: A
   } = e, _ = (0, h.default)(t, r), {
     prefix: T,
@@ -133,7 +133,7 @@ function y(e) {
           onContextMenu: C,
           onClick: d,
           children: y
-        }), null != g ? g() : null]
+        }), null != E ? E() : null]
       });
     case L.ChannelTypes.GUILD_VOICE:
       return (0, s.jsxs)(a.Fragment, {
@@ -165,7 +165,7 @@ function y(e) {
             onContextMenu: m,
             onClick: p,
             className: i(R.parentChannelName, R.cursorPointer),
-            children: (0, f.computeChannelName)(l, S.default, E.default)
+            children: (0, f.computeChannelName)(l, S.default, g.default)
           }), (0, s.jsx)(N.default.Caret, {})]
         })
       }
@@ -183,7 +183,7 @@ function y(e) {
         })]
       });
     case L.ChannelTypes.GUILD_DIRECTORY:
-      let F = (null == r ? void 0 : r.hasFeature(L.GuildFeatures.HUB)) ? x.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
+      let H = (null == r ? void 0 : r.hasFeature(L.GuildFeatures.HUB)) ? x.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
         guildName: n
       }) : n;
       return (0, s.jsxs)(a.Fragment, {
@@ -197,7 +197,7 @@ function y(e) {
           onClick: d,
           children: [null != T ? (0, s.jsxs)(o.HiddenVisually, {
             children: [T, ":"]
-          }) : null, " ", F]
+          }) : null, " ", H]
         })]
       });
     default:
@@ -260,7 +260,7 @@ function b(e) {
     guild: t,
     channel: n,
     caretPosition: a = "left"
-  } = e, l = (0, r.useStateFromStores)([g.default], () => g.default.getGuildId());
+  } = e, l = (0, r.useStateFromStores)([E.default], () => E.default.getGuildId());
   return l !== L.FAVORITES || null == t ? null : (0, s.jsxs)("div", {
     className: R.guildBreadcrumbContainer,
     children: ["left" === a && (0, s.jsx)(N.default.Caret, {

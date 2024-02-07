@@ -4,43 +4,43 @@ n.r(t), n.d(t, {
     return o
   },
   isEligibleForMidjourneyRedirect: function() {
-    return l
+    return d
   },
   hasRedirectedToGuild: function() {
     return u
   }
 }), n("446674");
-var i = n("305961"),
-  s = n("162771"),
+var s = n("305961"),
+  i = n("162771"),
   r = n("256896"),
   a = n("760797");
 
 function o(e) {
   let {
     guildStore: t
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = null != t ? t : i.default, s = n.getGuild(a.MIDJOURNEY_GUILD_ID), o = (null == s ? void 0 : s.joinedAt) instanceof Date && Date.now() - s.joinedAt.getTime() <= 36e5;
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = null != t ? t : s.default, i = n.getGuild(a.MIDJOURNEY_GUILD_ID), o = (null == i ? void 0 : i.joinedAt) instanceof Date && Date.now() - i.joinedAt.getTime() <= 36e5;
   return 1 === n.getGuildCount() && o && (0, r.isEligibleForMidjourneyOnboarding)(e)
 }
 
-function l(e) {
+function d(e) {
   return e.isDM() && 1 === e.rawRecipients.length && e.rawRecipients[0].id === a.MIDJOURNEY_BOT_ID && o("app")
 }
 
 function u(e) {
   return new Promise((t, n) => {
-    if (s.default.getGuildId() === e) {
+    if (i.default.getGuildId() === e) {
       t();
       return
     }
-    let i = setTimeout(() => {
+    let s = setTimeout(() => {
         a(), n()
       }, 3e3),
       r = () => {
-        s.default.getGuildId() === e && (a(), t())
+        i.default.getGuildId() === e && (a(), t())
       },
       a = () => {
-        s.default.removeChangeListener(r), clearTimeout(i)
+        i.default.removeChangeListener(r), clearTimeout(s)
       };
-    s.default.addChangeListener(r)
+    i.default.addChangeListener(r)
   })
 }

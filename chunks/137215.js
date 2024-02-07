@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var s = n("37983"),
+var r = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
-  l = n("546671"),
+  s = n("414456"),
+  l = n.n(s),
+  a = n("546671"),
   u = n("341417");
 let o = {
     UP: "up",
@@ -28,8 +28,8 @@ class d extends i.PureComponent {
       direction: e,
       className: t
     } = this.props;
-    return (0, s.jsx)(l.default, {
-      className: a(u.arrow, t, {
+    return (0, r.jsx)(a.default, {
+      className: l(u.arrow, t, {
         [c[e]]: !0
       })
     })

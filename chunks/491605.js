@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("222007");
-var i, s, r = n("37983"),
+var i, r, s = n("37983"),
   a = n("884691"),
   o = n("862337");
-(s = i || (i = {})).SVG = "svg", s.CANVAS = "canvas", s.HYBRID = "hybrid";
+(r = i || (i = {})).SVG = "svg", r.CANVAS = "canvas", r.HYBRID = "hybrid";
 class l extends a.Component {
   componentDidMount() {
     (null == this.props.versionKey || !(this.props.versionKey < 0)) && this.loadAnimation()
@@ -22,7 +22,7 @@ class l extends a.Component {
     null != this.animation && (this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play() : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0)))
   }
   render() {
-    return (0, r.jsx)("div", {
+    return (0, s.jsx)("div", {
       className: this.props.className,
       ref: this.animationRef
     })
@@ -33,8 +33,8 @@ class l extends a.Component {
         importData: e,
         loop: t,
         autoplay: i,
-        delay: s,
-        renderer: r,
+        delay: r,
+        renderer: s,
         shouldAnimate: a
       } = this.props;
       null != this.animation && this.animation.destroy();
@@ -43,11 +43,11 @@ class l extends a.Component {
       }] = await Promise.all([e(), n.el("865981").then(n.t.bind(n, "865981", 23))]);
       null != this.animationRef.current && (this.animation = l.loadAnimation({
         container: this.animationRef.current,
-        renderer: r,
+        renderer: s,
         loop: t,
-        autoplay: i && null == s && a,
+        autoplay: i && null == r && a,
         animationData: o
-      }), null != s ? this.delayTimeout.start(s, () => {
+      }), null != r ? this.delayTimeout.start(r, () => {
         var e;
         null === (e = this.animation) || void 0 === e || e.play()
       }) : this.playOrPauseAnimation(), this.animation.addEventListener("complete", this.handleComplete))

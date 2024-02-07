@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   doesThreadMembersActionAffectMe: function() {
-    return s
+    return r
   }
 });
 var i = n("271938");
 
-function s(e) {
+function r(e) {
   var t, n;
-  let s = i.default.getId();
-  return null != s && (!!((null === (t = e.removedMemberIds) || void 0 === t ? void 0 : t.includes(s)) || (null === (n = e.addedMembers) || void 0 === n ? void 0 : n.some(e => e.userId === s))) || !1)
+  let r = i.default.getId();
+  return null != r && (!!((null === (t = e.removedMemberIds) || void 0 === t ? void 0 : t.includes(r)) || (null === (n = e.addedMembers) || void 0 === n ? void 0 : n.some(e => e.userId === r))) || !1)
 }

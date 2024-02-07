@@ -63,17 +63,17 @@ var O = {
   "./zh-TW.json": "391977"
 };
 
-function T(N) {
-  return A(_(N))
+function T(I) {
+  return A(_(I))
 }
 
-function _(N) {
-  if (!A.o(O, N)) {
-    var I = Error("Cannot find module '" + N + "'");
-    throw I.code = "MODULE_NOT_FOUND", I
+function _(I) {
+  if (!A.o(O, I)) {
+    var N = Error("Cannot find module '" + I + "'");
+    throw N.code = "MODULE_NOT_FOUND", N
   }
-  return O[N]
+  return O[I]
 }
 T.id = '"826507"', T.keys = function() {
   return Object.keys(O)
-}, T.resolve = _, N.exports = T
+}, T.resolve = _, I.exports = T

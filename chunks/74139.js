@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   },
   LIST_ID_ATTRIBUTE: function() {
-    return s
+    return r
   },
   createListItemId: function() {
-    return r
+    return s
   },
   getItemId: function() {
     return a
@@ -22,16 +22,16 @@ n.r(t), n.d(t, {
     return u
   },
   throttle: function() {
-    return d
+    return c
   },
   HandlerMemoizer: function() {
-    return c
+    return d
   }
 }), n("222007");
 let i = "data-list-item-id",
-  s = "data-list-id";
+  r = "data-list-id";
 
-function r(e, t) {
+function s(e, t) {
   return "".concat(e).concat("___").concat(t)
 }
 
@@ -52,14 +52,14 @@ function u(e, t, n) {
   return "".concat(e, "-").concat(t, "-").concat(n)
 }
 
-function d(e, t) {
+function c(e, t) {
   let n = !1;
   return function() {
-    for (var i = arguments.length, s = Array(i), r = 0; r < i; r++) s[r] = arguments[r];
-    !n && (e(...s), n = !0, setTimeout(() => n = !1, t))
+    for (var i = arguments.length, r = Array(i), s = 0; s < i; s++) r[s] = arguments[s];
+    !n && (e(...r), n = !0, setTimeout(() => n = !1, t))
   }
 }
-class c {
+class d {
   get(e) {
     let t = this.handlers.get(e);
     return null == t && (t = this.makeHandler(e), this.handlers.set(e, t)), t

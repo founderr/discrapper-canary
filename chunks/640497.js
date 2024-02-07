@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   NotificationsExperiment: function() {
-    return s
+    return r
   },
   UnreadsEntryPointExperiment: function() {
-    return r
+    return s
   }
 });
 var i = n("862205");
-let s = (0, i.createExperiment)({
+let r = (0, i.createExperiment)({
     kind: "user",
     id: "2023-11_totally_benign_and_non_controversial_notification_tweaks",
     label: "Notification Changes",
@@ -23,7 +23,7 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  r = (0, i.createExperiment)({
+  s = (0, i.createExperiment)({
     kind: "user",
     id: "2024-01_unreads",
     label: "Unreads Experiment (grey-dot mode)",

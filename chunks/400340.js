@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   Host: function() {
-    return r
+    return s
   }
 });
 var i = n("350798"),
-  s = n("30773");
-class r {
+  r = n("30773");
+class s {
   static open(e, t) {
-    return s.Runtime.executeAsync("database_open", n => {
-      var s;
+    return r.Runtime.executeAsync("database_open", n => {
+      var r;
       return i.KV_RAW.databaseOpen(n, {
         database: e,
-        invalidateDisabledHandles: null !== (s = null == t ? void 0 : t.invalidateDisabledHandles) && void 0 !== s && s
+        invalidateDisabledHandles: null !== (r = null == t ? void 0 : t.invalidateDisabledHandles) && void 0 !== r && r
       })
     })
   }
@@ -26,16 +26,16 @@ class r {
     })
   }
   static delete(e) {
-    return s.Runtime.executeAsync("database_delete", t => i.KV_RAW.databaseDelete(t, {
+    return r.Runtime.executeAsync("database_delete", t => i.KV_RAW.databaseDelete(t, {
       database: e
     }))
   }
   static async list() {
-    let e = await s.Runtime.executeAsync("database_list", e => i.KV_RAW.databaseList(e));
+    let e = await r.Runtime.executeAsync("database_list", e => i.KV_RAW.databaseList(e));
     return e.map(e => e.data)
   }
   static optimize(e) {
-    return s.Runtime.executeAsync("database_optimize", t => i.KV_RAW.databaseOptimize(t, {
+    return r.Runtime.executeAsync("database_optimize", t => i.KV_RAW.databaseOptimize(t, {
       aggressive: e
     }))
   }

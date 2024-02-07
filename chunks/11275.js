@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("605250"),
-  s = n("374363"),
+var s = n("605250"),
+  i = n("374363"),
   r = n("802493");
-let a = new i.default("NonGuildVersions");
+let a = new s.default("NonGuildVersions");
 var o = new class e {
   async getCommittedVersions() {
     try {
@@ -21,10 +21,10 @@ var o = new class e {
   }
   handleUserSettingsProtoChange(e) {
     var t, n;
-    let i = null !== (n = null === (t = s.default.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
+    let s = null !== (n = null === (t = i.default.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
     r.default.nonGuildVersionsTransaction(e).put({
       id: "user_settings_version",
-      version: i
+      version: s
     })
   }
   handleClear(e) {

@@ -18,8 +18,8 @@ var s = n("884691"),
   C = n("88093"),
   p = n("377253"),
   m = n("957255"),
-  E = n("306160"),
-  g = n("659500"),
+  g = n("306160"),
+  E = n("659500"),
   S = n("773336"),
   A = n("61400"),
   _ = n("913491"),
@@ -40,28 +40,28 @@ var v = function(e, t, n) {
       j = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
       b = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
       P = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
-      F = p.default.getMessage(t, e),
-      H = c.default.getChannel(t);
-    if (null == F || null == H) return;
+      H = p.default.getMessage(t, e),
+      F = c.default.getChannel(t);
+    if (null == H || null == F) return;
     let U = d.default.getId(),
-      k = F.author.id === U;
+      k = H.author.id === U;
     switch (n.key.toLowerCase()) {
       case "backspace":
-        O && (N(H) || k) && (n.preventDefault(), (0, M.deleteMessage)(H, F, n));
+        O && (N(F) || k) && (n.preventDefault(), (0, M.deleteMessage)(F, H, n));
         break;
       case "c":
-        ((0, S.isMac)() ? b : j) && E.SUPPORTS_COPY && (n.preventDefault(), (0, E.copy)(F.content));
+        ((0, S.isMac)() ? b : j) && g.SUPPORTS_COPY && (n.preventDefault(), (0, g.copy)(H.content));
         break;
       case "e":
         if (O) {
           ;
-          if (s = U, L = H, x = F, !L.isSystemDM() && (0, A.default)(x, s)) n.preventDefault(), (0, M.editMessage)(H, F)
+          if (s = U, L = F, x = H, !L.isSystemDM() && (0, A.default)(x, s)) n.preventDefault(), (0, M.editMessage)(F, H)
         }
         break;
       case "p":
         if (O || P) {
           ;
-          if (R = H, y = F, !R.isSystemDM() && !(0, _.default)(y) && (N(R) || R.isPrivate())) n.preventDefault(), (0, M.pinMessage)(H, F, n)
+          if (R = F, y = H, !R.isSystemDM() && !(0, _.default)(y) && (N(R) || R.isPrivate())) n.preventDefault(), (0, M.pinMessage)(F, H, n)
         }
         break;
       case "+":
@@ -80,25 +80,25 @@ var v = function(e, t, n) {
               isActiveChannelOrUnarchivableThread: (0, r.getIsActiveChannelOrUnarchivableThread)(e)
             });
           return !s && n
-        }(H) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(I.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, F.id, {
+        }(F) && (n.preventDefault(), E.ComponentDispatch.dispatchKeyed(I.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, H.id, {
           emojiPicker: !0
         }));
         break;
       case "r":
-        (O || P) && (0, i.canReplyToMessage)(H, F) && (n.preventDefault(), (0, M.replyToMessage)(H, F, n));
+        (O || P) && (0, i.canReplyToMessage)(F, H) && (n.preventDefault(), (0, M.replyToMessage)(F, H, n));
         break;
       case "t":
-        if (O && (0, r.computeCanStartPublicThread)(H, F)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(H, F, "Message Shortcut");
-        else if (F.hasFlag(I.MessageFlags.HAS_THREAD)) {
-          let e = c.default.getChannel(F.id);
+        if (O && (0, r.computeCanStartPublicThread)(F, H)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(F, H, "Message Shortcut");
+        else if (H.hasFlag(I.MessageFlags.HAS_THREAD)) {
+          let e = c.default.getChannel(H.id);
           null != e && (O || P) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, P))
         }
         break;
       case "enter":
-        D && (n.preventDefault(), (0, M.markMessageUnread)(H, F));
+        D && (n.preventDefault(), (0, M.markMessageUnread)(F, H));
         break;
       case "escape":
-        f.default.isEditing(H.id, F.id) ? a.default.endEditMessage(H.id) : g.ComponentDispatch.dispatch(I.ComponentActions.TEXTAREA_FOCUS)
+        f.default.isEditing(F.id, H.id) ? a.default.endEditMessage(F.id) : E.ComponentDispatch.dispatch(I.ComponentActions.TEXTAREA_FOCUS)
     }
   }, [e, t])
 }

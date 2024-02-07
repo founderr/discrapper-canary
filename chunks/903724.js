@@ -1,49 +1,49 @@
 "use strict";
 n.r(t), n.d(t, {
   areRoleSubscriptionsVisibleInGuild: function() {
-    return f
-  },
-  useRoleSubscriptionsVisibleInGuild: function() {
     return _
   },
+  useRoleSubscriptionsVisibleInGuild: function() {
+    return c
+  },
   useShowRoleSubscriptionsInChannelList: function() {
-    return h
+    return g
   }
 }), n("222007");
-var i = n("446674"),
-  s = n("551254"),
+var s = n("446674"),
+  i = n("551254"),
   r = n("250666"),
   a = n("465869"),
   o = n("38654"),
-  l = n("305961"),
+  d = n("305961"),
   u = n("638779"),
-  d = n("49111");
+  l = n("49111");
 
-function c(e) {
-  let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.default, o.default], i = t.getGuild(e);
-  if (null == i) return !1;
-  let s = (0, r.isCreatorMonetizationEnabledGuild)(i),
-    a = i.hasFeature(d.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
-  if (s && a) return !0;
+function f(e) {
+  let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [d.default, o.default], s = t.getGuild(e);
+  if (null == s) return !1;
+  let i = (0, r.isCreatorMonetizationEnabledGuild)(s),
+    a = s.hasFeature(l.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+  if (i && a) return !0;
   let u = n.isViewingServerShop(e);
   return !!u || !1
 }
 
-function f(e) {
-  return !!c(e) || (0, u.computeHasRoleSubscriptionsInGuild)(e)
-}
-
 function _(e) {
-  let t = (0, u.default)(e),
-    n = (0, i.useStateFromStores)([l.default, o.default], () => c(e, [l.default, o.default]), [e]),
-    {
-      shouldHideGuildPurchaseEntryPoints: s
-    } = (0, a.useShouldHideGuildPurchaseEntryPoints)(e);
-  return !s && (n || t)
+  return !!f(e) || (0, u.computeHasRoleSubscriptionsInGuild)(e)
 }
 
-function h(e) {
-  let t = _(e),
-    n = (0, s.useIsEligibleForSubscriptionsInGuildShop)(e, "useShowRoleSubscriptionsInChannelList");
+function c(e) {
+  let t = (0, u.default)(e),
+    n = (0, s.useStateFromStores)([d.default, o.default], () => f(e, [d.default, o.default]), [e]),
+    {
+      shouldHideGuildPurchaseEntryPoints: i
+    } = (0, a.useShouldHideGuildPurchaseEntryPoints)(e);
+  return !i && (n || t)
+}
+
+function g(e) {
+  let t = c(e),
+    n = (0, i.useIsEligibleForSubscriptionsInGuildShop)(e, "useShowRoleSubscriptionsInChannelList");
   return t && !n
 }

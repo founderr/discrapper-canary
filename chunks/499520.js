@@ -27,11 +27,11 @@ function p(e) {
   } = (0, d.useFavoriteAdded)(), E = (0, l.useStateFromStores)([o.default], () => o.default.isFavorite(t.id));
   if (!n || p) return null;
   let C = E ? i.default : s.default,
-    S = E ? h.default.Messages.UNFAVORITE_CHANNEL : h.default.Messages.FAVORITE_CHANNEL;
+    g = E ? h.default.Messages.UNFAVORITE_CHANNEL : h.default.Messages.FAVORITE_CHANNEL;
   return (0, a.jsx)(r.default.Icon, {
     icon: C,
-    tooltip: S,
-    "aria-label": S,
+    tooltip: g,
+    "aria-label": g,
     onClick: () => {
       E ? (0, u.removeFavoriteChannel)(t.id) : (m(), (0, u.addFavoriteChannel)(t.id))
     }

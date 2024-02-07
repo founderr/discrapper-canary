@@ -16,7 +16,7 @@ var t = E("862337"),
   S = E("782340");
 let N = 18e4;
 
-function O() {
+function A() {
   let e = s.default.getCurrentClientVoiceChannelId(null);
   if (null == e) return !1;
   let _ = i.default.getChannel(e);
@@ -31,8 +31,8 @@ function O() {
   return !n && !0
 }
 
-function A() {
-  if (!O()) return;
+function O() {
+  if (!A()) return;
   let e = s.default.getCurrentClientVoiceChannelId(null);
   null != e && (o.default.sendBotMessage(e, S.default.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({
     number: 3
@@ -43,13 +43,13 @@ class R extends r.default {
     super(...e), this.idleTimeout = new t.Timeout, this.handleConnectionClosed = () => {
       this.idleTimeout.stop()
     }, this.handleEmbeddedActivityDisconnect = () => {
-      O() && this.idleTimeout.start(N, A, !0)
+      A() && this.idleTimeout.start(N, O, !0)
     }, this.handleVoiceStateUpdates = () => {
-      if (!O()) {
+      if (!A()) {
         this.idleTimeout.stop();
         return
       }
-      this.idleTimeout.start(N, A, !1)
+      this.idleTimeout.start(N, O, !1)
     }, this.actions = {
       VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
       CONNECTION_CLOSED: this.handleConnectionClosed,

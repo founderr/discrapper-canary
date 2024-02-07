@@ -1,5 +1,5 @@
 "use strict";
-N.exports = {
+I.exports = {
   COMMON_OPEN_DISCORD: "打开 Discord",
   COMMON_SIGN_UP_NOW: "点我注册",
   FOOTER_READY_TO_TRY_DISCORD: "要试用看看 Discord 吗？免费的哟！",

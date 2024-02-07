@@ -1,13 +1,13 @@
 "use strict";
-a.r(e), a.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return l
   }
 });
-var n = a("446674"),
-  i = a("646356");
+var i = n("446674"),
+  r = n("646356");
 
-function s() {
-  let t = (0, n.useStateFromStores)([i.default], () => i.default.isFetching());
-  return t
+function l() {
+  let e = (0, i.useStateFromStores)([r.default], () => r.default.isFetching());
+  return e
 }

@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return b
   }
 }), n("424973"), n("222007"), n("808653");
 var i = n("446674"),
   l = n("913144"),
   u = n("320954"),
-  s = n("379881"),
-  o = n("271938"),
-  d = n("42203"),
+  o = n("379881"),
+  s = n("271938"),
+  r = n("42203"),
   a = n("923959"),
-  _ = n("305961"),
-  r = n("49111");
-let c = null,
+  d = n("305961"),
+  c = n("49111");
+let _ = null,
   f = {},
-  g = null;
+  h = null;
 
-function h() {
+function g() {
   return {
     _categories: [],
     null: []
   }
 }
-let p = h();
+let p = g();
 
-function E(e, t) {
+function m(e, t) {
   e.index = t
 }
 
-function m(e) {
+function E(e) {
   let t = a.default.getChannels(e),
-    n = h(),
+    n = g(),
     i = e => {
       var t;
       let {
@@ -42,7 +42,7 @@ function m(e) {
         index: -1
       })
     };
-  return t[r.ChannelTypes.GUILD_CATEGORY].forEach(e => {
+  return t[c.ChannelTypes.GUILD_CATEGORY].forEach(e => {
     let {
       channel: t
     } = e;
@@ -50,73 +50,73 @@ function m(e) {
       channel: t,
       index: -1
     }), n[t.id] = []
-  }), t[0, a.GUILD_SELECTABLE_CHANNELS_KEY].forEach(i), t[0, a.GUILD_VOCAL_CHANNELS_KEY].forEach(i), (0, u.default)(n._categories, n).forEach(E), f[e] = n, n
+  }), t[0, a.GUILD_SELECTABLE_CHANNELS_KEY].forEach(i), t[0, a.GUILD_VOCAL_CHANNELS_KEY].forEach(i), (0, u.default)(n._categories, n).forEach(m), f[e] = n, n
 }
 
-function N() {
-  f = {}, null != c && m(c)
+function v() {
+  f = {}, null != _ && E(_)
 }
 
-function v(e) {
+function A(e) {
   let {
     guild: {
       id: t
     }
   } = e;
-  f[t] = void 0, c === t && m(t)
+  f[t] = void 0, _ === t && E(t)
 }
 
-function A(e) {
+function N(e) {
   let {
     channel: {
       guild_id: t
     }
   } = e;
   if (null == t) return !1;
-  f[t] = void 0, c === t && m(t)
+  f[t] = void 0, _ === t && E(t)
 }
 
-function C(e) {
+function S(e) {
   let {
     guildId: t
   } = e;
-  f[t] = void 0, t === c && m(t)
+  f[t] = void 0, t === _ && E(t)
 }
 
-function S(e, t) {
-  if (g = t, null == e || null == e.getGuildId()) return !1;
+function T(e, t) {
+  if (h = t, null == e || null == e.getGuildId()) return !1;
   let n = e.getGuildId();
-  return null != n && (f[n] = void 0, n === c && m(n), !0)
+  return null != n && (f[n] = void 0, n === _ && E(n), !0)
 }
 
-function T() {
-  m(r.FAVORITES)
+function I() {
+  E(c.FAVORITES)
 }
-class O extends i.default.Store {
+class C extends i.default.Store {
   initialize() {
-    this.waitFor(a.default, _.default, o.default, d.default, s.default), this.syncWith([s.default], T)
+    this.waitFor(a.default, d.default, s.default, r.default, o.default), this.syncWith([o.default], I)
   }
   getCategories(e) {
     return null != e ? function(e) {
       let t = f[e];
-      return null != t ? t : m(e)
+      return null != t ? t : E(e)
     }(e) : p
   }
 }
-O.displayName = "GuildCategoryStore";
-var I = new O(l.default, {
+C.displayName = "GuildCategoryStore";
+var b = new C(l.default, {
   CHANNEL_SELECT: function(e) {
     let {
       guildId: t
     } = e;
-    if (c = null != t ? t : null, null == t || null != f[t]) return !1;
-    m(t)
+    if (_ = null != t ? t : null, null == t || null != f[t]) return !1;
+    E(t)
   },
-  CONNECTION_OPEN: N,
-  OVERLAY_INITIALIZE: N,
-  CACHE_LOADED_LAZY: N,
-  GUILD_CREATE: v,
-  GUILD_UPDATE: v,
+  CONNECTION_OPEN: v,
+  OVERLAY_INITIALIZE: v,
+  CACHE_LOADED_LAZY: v,
+  GUILD_CREATE: A,
+  GUILD_UPDATE: A,
   GUILD_DELETE: function(e) {
     let {
       guild: {
@@ -125,8 +125,8 @@ var I = new O(l.default, {
     } = e;
     delete f[t]
   },
-  CHANNEL_CREATE: A,
-  CHANNEL_DELETE: A,
+  CHANNEL_CREATE: N,
+  CHANNEL_DELETE: N,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
@@ -134,7 +134,7 @@ var I = new O(l.default, {
     for (let {
         guild_id: e
       }
-      of t) null != e && (f[e] = void 0, n = !0, c === e && m(e));
+      of t) null != e && (f[e] = void 0, n = !0, _ === e && E(e));
     return n
   },
   GUILD_MEMBER_UPDATE: function(e) {
@@ -142,23 +142,23 @@ var I = new O(l.default, {
       guildId: t,
       user: n
     } = e;
-    if (o.default.getId() !== n.id) return !1;
-    f[t] = void 0, t === c && m(t)
+    if (s.default.getId() !== n.id) return !1;
+    f[t] = void 0, t === _ && E(t)
   },
   CURRENT_USER_UPDATE: function() {
-    if (null == c) return !1;
-    m(c)
+    if (null == _) return !1;
+    E(_)
   },
-  GUILD_ROLE_CREATE: C,
-  GUILD_ROLE_UPDATE: C,
-  GUILD_ROLE_DELETE: C,
-  IMPERSONATE_UPDATE: C,
-  IMPERSONATE_STOP: C,
+  GUILD_ROLE_CREATE: S,
+  GUILD_ROLE_UPDATE: S,
+  GUILD_ROLE_DELETE: S,
+  IMPERSONATE_UPDATE: S,
+  IMPERSONATE_STOP: S,
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return null == t && null != g ? S(d.default.getChannel(g), null) : S(d.default.getChannel(t), t)
+    return null == t && null != h ? T(r.default.getChannel(h), null) : T(r.default.getChannel(t), t)
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -169,7 +169,7 @@ var I = new O(l.default, {
         channelId: n,
         sessionId: i
       } = t;
-      return o.default.getSessionId() !== i ? e : S(d.default.getChannel(n), n) || e
+      return s.default.getSessionId() !== i ? e : T(r.default.getChannel(n), n) || e
     }, !1)
   }
 })

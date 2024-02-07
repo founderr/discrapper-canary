@@ -21,8 +21,8 @@ var s = n("37983"),
   C = n("299285"),
   p = n("850391"),
   m = n("149022"),
-  E = n("681060"),
-  g = n("884351"),
+  g = n("681060"),
+  E = n("884351"),
   S = n("671071"),
   A = n("401848"),
   _ = n("718422"),
@@ -74,7 +74,7 @@ class v extends a.PureComponent {
       cooldown: h,
       application: C,
       transitionState: m,
-      onClose: g
+      onClose: E
     } = this.props, S = h > 0, A = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
       seconds: Math.round((h + 1e3) / 1e3)
     }) : null;
@@ -121,7 +121,7 @@ class v extends a.PureComponent {
               ...a
             })
           },
-          children: () => (0, s.jsx)(E.default, {
+          children: () => (0, s.jsx)(g.default, {
             className: I.textArea,
             textValue: e,
             richValue: t,
@@ -148,7 +148,7 @@ class v extends a.PureComponent {
         }), (0, s.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
           color: o.Button.Colors.PRIMARY,
-          onClick: g,
+          onClick: E,
           children: M.default.Messages.CANCEL
         })]
       })]
@@ -205,7 +205,7 @@ class v extends a.PureComponent {
         shouldClear: !1,
         shouldRefocus: !0
       });
-      let r = g.default.parse(e, l),
+      let r = E.default.parse(e, l),
         o = {
           activity: t,
           type: n

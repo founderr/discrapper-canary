@@ -22,10 +22,10 @@ E.r(_), E.d(_, {
     return N
   },
   getGameTileAssetUrl: function() {
-    return O
+    return A
   },
   getGameLogotypeAssetUrl: function() {
-    return A
+    return O
   },
   getQuestForTargetedContent: function() {
     return R
@@ -34,7 +34,7 @@ E.r(_), E.d(_, {
     return l
   },
   calculatePercentComplete: function() {
-    return L
+    return u
   }
 }), E("222007");
 var t = E("588025"),
@@ -115,8 +115,8 @@ function s(e) {
 let T = e => "".concat(n).concat(e).concat("/reward.png"),
   S = e => "".concat(n).concat(e).concat("/hero.png"),
   N = e => "".concat(n).concat(e).concat("/quest_bar_hero.gif"),
-  O = e => "".concat(n).concat(e).concat("/game_tile.png"),
-  A = (e, _) => "".concat(n).concat(e, "/").concat(_).concat("/game_logotype.png");
+  A = e => "".concat(n).concat(e).concat("/game_tile.png"),
+  O = (e, _) => "".concat(n).concat(e, "/").concat(_).concat("/game_logotype.png");
 
 function R(e, _) {
   for (let [E, t] of e)
@@ -138,7 +138,7 @@ let l = e => {
   }
 };
 
-function L(e) {
+function u(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: _,

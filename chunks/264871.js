@@ -1,14 +1,14 @@
 "use strict";
 var r = String.prototype.valueOf,
-  i = function(e) {
+  i = function(t) {
     try {
-      return r.call(e), !0
-    } catch (e) {
+      return r.call(t), !0
+    } catch (t) {
       return !1
     }
   },
-  o = Object.prototype.toString,
-  s = n("149384")();
-e.exports = function(e) {
-  return "string" == typeof e || "object" == typeof e && (s ? i(e) : "[object String]" === o.call(e))
+  n = Object.prototype.toString,
+  c = s("149384")();
+t.exports = function(t) {
+  return "string" == typeof t || "object" == typeof t && (c ? i(t) : "[object String]" === n.call(t))
 }

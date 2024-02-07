@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   useDropTarget: function() {
-    return o
+    return a
   }
 });
 var r = n("884691"),
-  i = n("598085");
+  o = n("598085");
 
-function o(e, t) {
+function a(e, t) {
   var n = (0, r.useMemo)(function() {
-    return new i.DropTargetImpl(e, t)
+    return new o.DropTargetImpl(e, t)
   }, [t]);
   return (0, r.useEffect)(function() {
     n.spec = e

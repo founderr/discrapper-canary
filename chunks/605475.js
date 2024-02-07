@@ -21,12 +21,12 @@ var t = E("917351"),
   T = E("162551"),
   S = E("698060"),
   N = E("541272"),
-  O = E("20995"),
-  A = E("709048"),
+  A = E("20995"),
+  O = E("709048"),
   R = E("91801"),
   l = E("340431"),
-  L = E("538184"),
-  u = E("974893"),
+  u = E("538184"),
+  L = E("974893"),
   C = E("236734"),
   D = E("832254"),
   c = E("514594"),
@@ -51,12 +51,12 @@ let h = 60,
     name: M.default.Messages.APP_ICON_MANGA
   }, {
     id: U.PremiumAppIconIds.MATTE_DARK,
-    iconSource: L,
+    iconSource: u,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_MATTE_DARK
   }, {
     id: U.PremiumAppIconIds.MATTE_LIGHT,
-    iconSource: u,
+    iconSource: L,
     name: M.default.Messages.APP_ICON_MATTE_LIGHT,
     isPremium: !0
   }, {
@@ -81,7 +81,7 @@ let h = 60,
     name: M.default.Messages.APP_ICON_SUNSET
   }, {
     id: U.PremiumAppIconIds.GALAXY,
-    iconSource: O,
+    iconSource: A,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_GALAXY
   }, {
@@ -101,7 +101,7 @@ let h = 60,
     name: M.default.Messages.APP_ICON_BEANIE
   }, {
     id: U.PremiumAppIconIds.GAMING,
-    iconSource: A,
+    iconSource: O,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_GAMING
   }, {

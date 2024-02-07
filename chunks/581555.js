@@ -8,19 +8,19 @@ n.r(t), n.d(t, {
   }
 }), n("70102"), n("424973"), n("808653"), n("222007"), n("843762");
 var r = n("872834"),
-  i = n("884691"),
-  o = n("626619");
-let s = "row-header-column-" + Math.random().toString(36).slice(2),
-  a = "row-header-column-" + Math.random().toString(36).slice(2);
-for (; s === a;) a = "row-header-column-" + Math.random().toString(36).slice(2);
+  o = n("884691"),
+  a = n("626619");
+let i = "row-header-column-" + Math.random().toString(36).slice(2),
+  s = "row-header-column-" + Math.random().toString(36).slice(2);
+for (; i === s;) s = "row-header-column-" + Math.random().toString(36).slice(2);
 
 function c(e, t) {
   if (0 === t.length) return [];
   let n = [],
     r = new Map;
-  for (let i of t) {
-    let t = i.parentKey,
-      o = [i];
+  for (let o of t) {
+    let t = o.parentKey,
+      a = [o];
     for (; t;) {
       let n = e.get(t);
       if (!n) break;
@@ -30,31 +30,31 @@ function c(e, t) {
           column: e,
           index: t
         } = r.get(n);
-        if (t > o.length) break;
-        for (let n = t; n < o.length; n++) e.splice(n, 0, null);
-        for (let t = o.length; t < e.length; t++) e[t] && r.has(e[t]) && (r.get(e[t]).index = t)
-      } else n.colspan = 1, o.push(n), r.set(n, {
-        column: o,
-        index: o.length - 1
+        if (t > a.length) break;
+        for (let n = t; n < a.length; n++) e.splice(n, 0, null);
+        for (let t = a.length; t < e.length; t++) e[t] && r.has(e[t]) && (r.get(e[t]).index = t)
+      } else n.colspan = 1, a.push(n), r.set(n, {
+        column: a,
+        index: a.length - 1
       });
       t = n.parentKey
     }
-    n.push(o), i.index = n.length - 1
+    n.push(a), o.index = n.length - 1
   }
-  let i = Math.max(...n.map(e => e.length)),
-    o = Array(i).fill(0).map(() => []),
-    s = 0;
+  let o = Math.max(...n.map(e => e.length)),
+    a = Array(o).fill(0).map(() => []),
+    i = 0;
   for (let e of n) {
-    let t = i - 1;
+    let t = o - 1;
     for (let n of e) {
       if (n) {
-        let e = o[t],
+        let e = a[t],
           r = e.reduce((e, t) => e + t.colspan, 0);
-        if (r < s) {
-          let i = {
+        if (r < i) {
+          let o = {
             type: "placeholder",
             key: "placeholder-" + n.key,
-            colspan: s - r,
+            colspan: i - r,
             index: r,
             value: null,
             rendered: null,
@@ -63,16 +63,16 @@ function c(e, t) {
             childNodes: [],
             textValue: null
           };
-          e.length > 0 && (e[e.length - 1].nextKey = i.key, i.prevKey = e[e.length - 1].key), e.push(i)
+          e.length > 0 && (e[e.length - 1].nextKey = o.key, o.prevKey = e[e.length - 1].key), e.push(o)
         }
-        e.length > 0 && (e[e.length - 1].nextKey = n.key, n.prevKey = e[e.length - 1].key), n.level = t, n.colIndex = s, e.push(n)
+        e.length > 0 && (e[e.length - 1].nextKey = n.key, n.prevKey = e[e.length - 1].key), n.level = t, n.colIndex = i, e.push(n)
       }
       t--
     }
-    s++
+    i++
   }
-  let a = 0;
-  for (let e of o) {
+  let s = 0;
+  for (let e of a) {
     let n = e.reduce((e, t) => e + t.colspan, 0);
     if (n < t.length) {
       let r = {
@@ -82,7 +82,7 @@ function c(e, t) {
         index: n,
         value: null,
         rendered: null,
-        level: a,
+        level: s,
         hasChildNodes: !1,
         childNodes: [],
         textValue: null,
@@ -90,9 +90,9 @@ function c(e, t) {
       };
       e.push(r)
     }
-    a++
+    s++
   }
-  return o.map((e, t) => ({
+  return a.map((e, t) => ({
     type: "headerrow",
     key: "headerrow-" + t,
     index: t,
@@ -104,7 +104,7 @@ function c(e, t) {
     textValue: null
   }))
 }
-class u extends o.GridCollection {
+class l extends a.GridCollection {
   *[Symbol.iterator]() {
     yield* this.body.childNodes
   }
@@ -153,12 +153,12 @@ class u extends o.GridCollection {
     return ""
   }
   constructor(e, t, n) {
-    let r, i = new Set,
-      o = [];
+    let r, o = new Set,
+      a = [];
     if (null == n ? void 0 : n.showSelectionCheckboxes) {
       let e = {
         type: "column",
-        key: s,
+        key: i,
         value: null,
         textValue: "",
         level: 0,
@@ -170,12 +170,12 @@ class u extends o.GridCollection {
           isSelectionCell: !0
         }
       };
-      o.unshift(e)
+      a.unshift(e)
     }
     if (null == n ? void 0 : n.showDragButtons) {
       let e = {
         type: "column",
-        key: a,
+        key: s,
         value: null,
         textValue: "",
         level: 0,
@@ -187,82 +187,82 @@ class u extends o.GridCollection {
           isDragButtonCell: !0
         }
       };
-      o.unshift(e)
+      a.unshift(e)
     }
-    let u = [],
-      l = new Map,
+    let l = [],
+      u = new Map,
       d = e => {
         switch (e.type) {
           case "body":
             r = e;
             break;
           case "column":
-            l.set(e.key, e), !e.hasChildNodes && (o.push(e), e.props.isRowHeader && i.add(e.key));
+            u.set(e.key, e), !e.hasChildNodes && (a.push(e), e.props.isRowHeader && o.add(e.key));
             break;
           case "item":
-            u.push(e);
+            l.push(e);
             return
         }
         for (let t of e.childNodes) d(t)
       };
     for (let t of e) d(t);
-    let f = c(l, o);
-    f.forEach((e, t) => u.splice(t, 0, e)), super({
-      columnCount: o.length,
-      items: u,
-      visitNode: e => (e.column = o[e.index], e)
-    }), this._size = 0, this.columns = o, this.rowHeaderColumnKeys = i, this.body = r, this.headerRows = f, this._size = [...r.childNodes].length, 0 === this.rowHeaderColumnKeys.size && ((null == n ? void 0 : n.showSelectionCheckboxes) ? (null == n ? void 0 : n.showDragButtons) ? this.rowHeaderColumnKeys.add(this.columns[2].key) : this.rowHeaderColumnKeys.add(this.columns[1].key) : this.rowHeaderColumnKeys.add(this.columns[0].key))
+    let p = c(u, a);
+    p.forEach((e, t) => l.splice(t, 0, e)), super({
+      columnCount: a.length,
+      items: l,
+      visitNode: e => (e.column = a[e.index], e)
+    }), this._size = 0, this.columns = a, this.rowHeaderColumnKeys = o, this.body = r, this.headerRows = p, this._size = [...r.childNodes].length, 0 === this.rowHeaderColumnKeys.size && ((null == n ? void 0 : n.showSelectionCheckboxes) ? (null == n ? void 0 : n.showDragButtons) ? this.rowHeaderColumnKeys.add(this.columns[2].key) : this.rowHeaderColumnKeys.add(this.columns[1].key) : this.rowHeaderColumnKeys.add(this.columns[0].key))
   }
 }
-let l = {
+let u = {
   ascending: "descending",
   descending: "ascending"
 };
 
 function d(e) {
-  let [t, n] = (0, i.useState)(!1), {
-    selectionMode: s = "none",
-    showSelectionCheckboxes: a,
+  let [t, n] = (0, o.useState)(!1), {
+    selectionMode: i = "none",
+    showSelectionCheckboxes: s,
     showDragButtons: c
-  } = e, d = (0, i.useMemo)(() => ({
-    showSelectionCheckboxes: a && "none" !== s,
+  } = e, d = (0, o.useMemo)(() => ({
+    showSelectionCheckboxes: s && "none" !== i,
     showDragButtons: c,
-    selectionMode: s,
+    selectionMode: i,
     columns: []
-  }), [e.children, a, s, c]), f = (0, r.useCollection)(e, (0, i.useCallback)(e => new u(e, null, d), [d]), d), {
-    disabledKeys: p,
+  }), [e.children, s, i, c]), p = (0, r.useCollection)(e, (0, o.useCallback)(e => new l(e, null, d), [d]), d), {
+    disabledKeys: f,
     selectionManager: h
-  } = (0, o.useGridState)({
+  } = (0, a.useGridState)({
     ...e,
-    collection: f,
+    collection: p,
     disabledBehavior: e.disabledBehavior || "selection"
   });
   return {
-    collection: f,
-    disabledKeys: p,
+    collection: p,
+    disabledKeys: f,
     selectionManager: h,
     showSelectionCheckboxes: e.showSelectionCheckboxes || !1,
     sortDescriptor: e.sortDescriptor,
-    isKeyboardNavigationDisabled: 0 === f.size || t,
+    isKeyboardNavigationDisabled: 0 === p.size || t,
     setKeyboardNavigationDisabled: n,
     sort(t, n) {
       var r;
       e.onSortChange({
         column: t,
-        direction: null != n ? n : (null === (r = e.sortDescriptor) || void 0 === r ? void 0 : r.column) === t ? l[e.sortDescriptor.direction] : "ascending"
+        direction: null != n ? n : (null === (r = e.sortDescriptor) || void 0 === r ? void 0 : r.column) === t ? u[e.sortDescriptor.direction] : "ascending"
       })
     }
   }
 }
 
-function f(e) {
+function p(e) {
   return null
 }
-f.getCollectionNode = function*(e, t) {
+p.getCollectionNode = function*(e, t) {
   let {
     children: n,
     textValue: r,
-    UNSTABLE_childItems: o
+    UNSTABLE_childItems: a
   } = e;
   yield {
     type: "item",
@@ -289,16 +289,16 @@ f.getCollectionNode = function*(e, t) {
           element: n(e.key),
           key: e.key
         };
-        if (o)
-          for (let e of o) yield {
+        if (a)
+          for (let e of a) yield {
             type: "item",
             value: e
           }
       } else {
         let e = [],
           r = [];
-        if (i.Children.forEach(n, n => {
-            if (n.type === f) {
+        if (o.Children.forEach(n, n => {
+            if (n.type === p) {
               if (e.length < t.columns.length) throw Error("All of a Row's child Cells must be positioned before any child Rows.");
               r.push({
                 type: "item",

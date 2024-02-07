@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 });
-var i = n("446674"),
-  s = n("233736"),
+var s = n("446674"),
+  i = n("233736"),
   r = n("913144");
 let a = {},
   o = {},
-  l = {
+  d = {
     scrollTop: 0
   };
 
@@ -21,18 +21,18 @@ function u(e) {
   }
 }
 
-function d(e) {
+function l(e) {
   if (null != a[e]) {
     let {
       scrollTop: t,
       scrollHeight: n,
-      offsetHeight: i
+      offsetHeight: s
     } = a[e];
-    return t === n - i
+    return t === n - s
   }
   return !0
 }
-class c extends i.default.Store {
+class f extends s.default.Store {
   percentageScrolled(e) {
     if (null != a[e]) {
       let {
@@ -51,32 +51,32 @@ class c extends i.default.Store {
     return null !== (t = o[e]) && void 0 !== t ? t : u(e)
   }
   getGuildListDimensions() {
-    return l
+    return d
   }
   isAtBottom(e) {
-    return d(e)
+    return l(e)
   }
 }
-c.displayName = "DimensionStore";
-var f = new c(r.default, {
+f.displayName = "DimensionStore";
+var _ = new f(r.default, {
   UPDATE_CHANNEL_DIMENSIONS: function(e) {
     let {
       channelId: t,
       scrollTop: n,
-      scrollHeight: i,
+      scrollHeight: s,
       offsetHeight: r
     } = e, o = a[t];
-    if (null == n || null == i || null == r) {
+    if (null == n || null == s || null == r) {
       if (null == o) return !1;
       delete a[t]
     } else {
       let e = {
         channelId: t,
         scrollTop: n,
-        scrollHeight: i,
+        scrollHeight: s,
         offsetHeight: r
       };
-      if (null != o && (0, s.default)(o, e)) return !1;
+      if (null != o && (0, i.default)(o, e)) return !1;
       a[t] = e
     }
   },
@@ -84,22 +84,22 @@ var f = new c(r.default, {
     let {
       guildId: t,
       scrollTop: n,
-      scrollTo: i
+      scrollTo: s
     } = e;
     null == o[t] && (o[t] = u(t)), void 0 !== n && (o[t].scrollTop = n);
-    let s = !1;
-    return void 0 !== i && (s = o[t].scrollTo !== i, o[t].scrollTo = i), null != i || s
+    let i = !1;
+    return void 0 !== s && (i = o[t].scrollTo !== s, o[t].scrollTo = s), null != s || i
   },
   UPDATE_GUILD_LIST_DIMENSIONS: function(e) {
     let {
       scrollTop: t
     } = e;
-    l.scrollTop = t
+    d.scrollTop = t
   },
   CALL_CREATE: function(e) {
     let {
       channelId: t
     } = e;
-    d(t) && delete a[t]
+    l(t) && delete a[t]
   }
 })

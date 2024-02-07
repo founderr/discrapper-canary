@@ -1,52 +1,52 @@
 "use strict";
 n.r(t), n.d(t, {
   useSingleSelectState: function() {
-    return C
+    return v
   },
   useMultiSelectState: function() {
     return A
   },
   useVariableSelect: function() {
-    return y
+    return R
   },
   multiSelect: function() {
     return N
   },
   toggleSelect: function() {
-    return R
+    return O
   },
   singleSelect: function() {
     return D
   },
   Select: function() {
-    return b
+    return L
   },
   SingleSelect: function() {
     return M
   }
 }), n("222007");
 var i = n("37983"),
-  s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  r = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
   o = n("974667"),
   l = n("227645"),
   u = n("311720"),
-  d = n("442761"),
-  c = n("446662"),
+  c = n("442761"),
+  d = n("446662"),
   f = n("77078"),
-  _ = n("731898"),
-  h = n("811425"),
-  g = n("31695"),
-  m = n("837899"),
-  E = n("425190"),
-  p = n("578706"),
-  v = n("945330"),
-  S = n("178814"),
-  T = n("782340"),
-  I = n("257260");
+  E = n("731898"),
+  p = n("811425"),
+  h = n("31695"),
+  _ = n("837899"),
+  S = n("425190"),
+  m = n("578706"),
+  T = n("945330"),
+  g = n("178814"),
+  I = n("782340"),
+  C = n("257260");
 
-function C(e) {
+function v(e) {
   let {
     value: t,
     onChange: n,
@@ -80,27 +80,27 @@ function A(e) {
   }
 }
 
-function y(e) {
+function R(e) {
   let {
     value: t,
     onChange: n,
     onSelectInteraction: i,
-    serialize: s = e => String(e)
+    serialize: r = e => String(e)
   } = e;
   return {
     select: e => {
       let {
-        newValues: s,
-        updated: r
+        newValues: r,
+        updated: s
       } = i(e, t);
-      r && n(s)
+      s && n(r)
     },
     isSelected: e => {
       var n;
       return null !== (n = null == t ? void 0 : t.has(e)) && void 0 !== n && n
     },
     clear: () => n(new Set),
-    serialize: s
+    serialize: r
   }
 }
 
@@ -112,7 +112,7 @@ function N(e, t) {
   }
 }
 
-function R(e, t) {
+function O(e, t) {
   return t.has(e) ? {
     newValues: new Set,
     updated: !0
@@ -132,68 +132,68 @@ function D(e, t) {
   }
 }
 
-function O(e) {
+function y(e) {
   return null == e ? void 0 : e.label
 }
 
 function P(e) {
-  return e.map(e => O(e)).join(", ")
+  return e.map(e => y(e)).join(", ")
 }
 
-function b(e) {
+function L(e) {
   let {
     options: t,
-    placeholder: n = T.default.Messages.SELECT,
-    className: r,
+    placeholder: n = I.default.Messages.SELECT,
+    className: s,
     isDisabled: o = !1,
     maxVisibleItems: u = 7,
-    autoFocus: c = !1,
-    popoutWidth: g,
-    clearable: p = !1,
-    look: C = S.SelectLooks.FILLED,
+    autoFocus: d = !1,
+    popoutWidth: h,
+    clearable: m = !1,
+    look: v = g.SelectLooks.FILLED,
     onClose: A,
-    onOpen: y,
-    renderOptionLabel: N = O,
-    renderOptionValue: R = P,
+    onOpen: R,
+    renderOptionLabel: N = y,
+    renderOptionValue: O = P,
     popoutClassName: D,
-    popoutPosition: b = "bottom",
+    popoutPosition: L = "bottom",
     popoutLayerContext: M,
     optionClassName: U,
-    closeOnSelect: w,
-    select: k,
-    isSelected: V,
-    serialize: G,
+    closeOnSelect: G,
+    select: w,
+    isSelected: k,
+    serialize: x,
     clear: F,
-    hideIcon: x = !1,
+    hideIcon: V = !1,
     "aria-label": B,
     "aria-labelledby": H
-  } = e, [Y, j] = s.useState(!1), {
+  } = e, [j, Y] = r.useState(!1), {
     ref: W,
     width: K,
     height: z
-  } = (0, _.default)(), q = s.useCallback(e => {
-    Y !== e && !o && (j(e), e ? null == y || y() : null == A || A())
-  }, [o, A, y, Y]), X = s.useCallback(e => {
-    Y && !e && q(!1)
-  }, [q, Y]), Q = (0, h.useIsVisible)(X), Z = s.useCallback(e => {
-    if (k(e), w) {
+  } = (0, E.default)(), q = r.useCallback(e => {
+    j !== e && !o && (Y(e), e ? null == R || R() : null == A || A())
+  }, [o, A, R, j]), X = r.useCallback(e => {
+    j && !e && q(!1)
+  }, [q, j]), Q = (0, p.useIsVisible)(X), Z = r.useCallback(e => {
+    if (w(e), G) {
       var t;
       null === (t = W.current) || void 0 === t || t.focus()
     }
-  }, [k, w]), J = s.useCallback(e => {
+  }, [w, G]), J = r.useCallback(e => {
     e.stopPropagation(), null == F || F()
-  }, [F]), $ = t.filter(e => V(e.value));
-  s.useLayoutEffect(() => {
-    if (c) {
+  }, [F]), $ = t.filter(e => k(e.value));
+  r.useLayoutEffect(() => {
+    if (d) {
       var e;
       null === (e = W.current) || void 0 === e || e.focus()
     }
-  }, [c]);
+  }, [d]);
   let ee = (0, f.useRedesignIconContext)().enabled;
-  return (0, i.jsx)(d.Popout, {
+  return (0, i.jsx)(c.Popout, {
     spacing: 0,
-    animation: d.Popout.Animation.NONE,
-    shouldShow: Y,
+    animation: c.Popout.Animation.NONE,
+    shouldShow: j,
     onRequestOpen: () => {
       q(!0)
     },
@@ -203,37 +203,37 @@ function b(e) {
     renderPopout: e => {
       let {
         closePopout: n,
-        position: s,
-        updatePosition: r
+        position: r,
+        updatePosition: s
       } = e;
-      return (0, i.jsx)(L, {
+      return (0, i.jsx)(b, {
         className: D,
-        closeOnSelect: w,
+        closeOnSelect: G,
         maxVisibleItems: u,
-        width: null != g ? g : K,
-        isSelected: V,
+        width: null != h ? h : K,
+        isSelected: k,
         closePopout: n,
         buttonHeight: null != z ? z : 0,
         onSelect: Z,
         options: t,
-        serialize: G,
+        serialize: x,
         renderOptionLabel: N,
         optionClassName: U,
-        updatePosition: r,
-        popoutPosition: s
+        updatePosition: s,
+        popoutPosition: r
       })
     },
-    position: b,
+    position: L,
     layerContext: M,
     children: (e, t) => {
       let {
-        onClick: s,
+        onClick: r,
         onKeyDown: u,
-        ...d
+        ...c
       } = e, {
-        isShown: c,
+        isShown: d,
         position: f
-      } = t, _ = c ? E.default : m.default, h = ee ? 18 : 24;
+      } = t, E = d ? S.default : _.default, p = ee ? 18 : 24;
       return (0, i.jsxs)(l.Clickable, {
         role: "button",
         "aria-disabled": o,
@@ -241,43 +241,43 @@ function b(e) {
           W.current = e, Q.current = e
         },
         onClick: o ? void 0 : e => {
-          s(e), q(!Y)
+          r(e), q(!j)
         },
         onKeyDown: e => {
           "ArrowDown" === e.key ? q(!0) : "Escape" === e.key && (e.stopPropagation(), q(!1)), u(e)
         },
-        ...d,
-        className: a(I.select, r, {
-          [I.open]: c,
-          [I.disabled]: o,
-          [I.selectPositionTop]: "top" === f,
-          [I.lookFilled]: C === S.SelectLooks.FILLED
+        ...c,
+        className: a(C.select, s, {
+          [C.open]: d,
+          [C.disabled]: o,
+          [C.selectPositionTop]: "top" === f,
+          [C.lookFilled]: v === g.SelectLooks.FILLED
         }),
         "aria-haspopup": "listbox",
-        "aria-expanded": c,
+        "aria-expanded": d,
         "aria-label": B,
         "aria-labelledby": H,
         children: [$.length > 0 ? (0, i.jsx)("span", {
-          className: I.value,
-          children: R($)
+          className: C.value,
+          children: O($)
         }) : (0, i.jsx)("span", {
-          className: I.placeholder,
+          className: C.placeholder,
           children: n
         }), (0, i.jsxs)("div", {
-          className: I.icons,
-          children: [p ? (0, i.jsx)(l.Clickable, {
+          className: C.icons,
+          children: [m ? (0, i.jsx)(l.Clickable, {
             role: "button",
             "aria-disabled": o,
             onClick: J,
-            "aria-label": T.default.Messages.CLEAR,
-            children: (0, i.jsx)(v.default, {
+            "aria-label": I.default.Messages.CLEAR,
+            children: (0, i.jsx)(T.default, {
               width: 16,
               height: 16,
-              className: I.clear
+              className: C.clear
             })
-          }) : null, x ? null : (0, i.jsx)(_, {
-            width: h,
-            height: h
+          }) : null, V ? null : (0, i.jsx)(E, {
+            width: p,
+            height: p
           })]
         })]
       })
@@ -285,87 +285,87 @@ function b(e) {
   })
 }
 
-function L(e) {
+function b(e) {
   let {
     className: t,
     onSelect: n,
-    closePopout: r,
+    closePopout: s,
     closeOnSelect: l = !0,
-    isSelected: d,
+    isSelected: c,
     options: f,
-    width: _,
-    maxVisibleItems: h,
-    renderOptionLabel: m,
-    serialize: E,
-    optionClassName: p,
-    buttonHeight: v,
-    updatePosition: S,
-    popoutPosition: T
-  } = e, [C, A] = s.useState(0), y = s.useRef(null), N = s.useId(), R = (0, o.default)({
+    width: E,
+    maxVisibleItems: p,
+    renderOptionLabel: _,
+    serialize: S,
+    optionClassName: m,
+    buttonHeight: T,
+    updatePosition: g,
+    popoutPosition: I
+  } = e, [v, A] = r.useState(0), R = r.useRef(null), N = r.useId(), O = (0, o.default)({
     id: N,
     async scrollToEnd() {},
     async scrollToStart() {},
     isEnabled: !0,
     wrap: !0
-  }), D = s.useRef(null);
-  (0, u.useFocusLock)(D), s.useLayoutEffect(() => {
+  }), D = r.useRef(null);
+  (0, u.useFocusLock)(D), r.useLayoutEffect(() => {
     var e;
     null === (e = D.current) || void 0 === e || e.focus()
-  }, []), s.useEffect(() => {
-    v > 0 && S()
-  }, [v, S]), (0, g.default)(S), s.useLayoutEffect(() => {
+  }, []), r.useEffect(() => {
+    T > 0 && g()
+  }, [T, g]), (0, h.default)(g), r.useLayoutEffect(() => {
     var e, t;
-    let n = null === (t = y.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
+    let n = null === (t = R.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
     null != n && A(n)
-  }, [h]), s.useEffect(() => {
-    S()
-  }, [S, C]);
-  let O = s.useCallback(e => {
-      n(e), l && r()
-    }, [r, n, l]),
+  }, [p]), r.useEffect(() => {
+    g()
+  }, [g, v]);
+  let y = r.useCallback(e => {
+      n(e), l && s()
+    }, [s, n, l]),
     P = f.map((e, t) => {
       var n;
       return (0, i.jsx)(Option, {
-        isSelected: d(e.value),
+        isSelected: c(e.value),
         value: e.value,
-        label: m(e),
-        onSelect: O,
-        className: p,
+        label: _(e),
+        onSelect: y,
+        className: m,
         isDisabled: e.disabled,
-        serialize: E
+        serialize: S
       }, null !== (n = e.key) && void 0 !== n ? n : t)
     }),
-    b = f.length <= h ? c.AdvancedScrollerNone : c.AdvancedScrollerThin;
+    L = f.length <= p ? d.AdvancedScrollerNone : d.AdvancedScrollerThin;
   return (0, i.jsx)(o.ListNavigatorProvider, {
-    navigator: R,
+    navigator: O,
     children: (0, i.jsx)(o.ListNavigatorContainer, {
       children: e => {
         let {
           ref: n,
-          ...s
+          ...r
         } = e;
         return (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(b, {
-            className: a(I.popout, t, {
-              [I.popoutPositionTop]: "top" === T
+          children: [(0, i.jsx)(L, {
+            className: a(C.popout, t, {
+              [C.popoutPositionTop]: "top" === I
             }),
             style: {
-              width: _,
-              maxHeight: C
+              width: E,
+              maxHeight: v
             },
             ref: e => {
               var t;
               let i = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
               n.current = i, D.current = i
             },
-            ...s,
+            ...r,
             role: "listbox",
             children: P
           }), (0, i.jsx)("div", {
             "aria-hidden": !0,
-            ref: y,
-            className: I.measurement,
-            children: P.slice(0, h)
+            ref: R,
+            className: C.measurement,
+            children: P.slice(0, p)
           })]
         })
       }
@@ -377,25 +377,25 @@ function Option(e) {
   let {
     className: t,
     value: n,
-    label: s,
-    onSelect: r,
+    label: r,
+    onSelect: s,
     isSelected: u,
-    isDisabled: d,
-    serialize: c
-  } = e, f = (0, o.useListItem)(c(n));
+    isDisabled: c,
+    serialize: d
+  } = e, f = (0, o.useListItem)(d(n));
   return (0, i.jsxs)(l.Clickable, {
     focusProps: {
       enabled: !1
     },
-    className: a(I.option, t),
-    onClick: () => !d && r(n),
+    className: a(C.option, t),
+    onClick: () => !c && s(n),
     ...f,
     "aria-selected": u,
-    "aria-disabled": d,
+    "aria-disabled": c,
     role: "option",
-    children: [s, u && (0, i.jsx)(p.default, {
+    children: [r, u && (0, i.jsx)(m.default, {
       backgroundColor: "white",
-      className: I.selectedIcon,
+      className: C.selectedIcon,
       width: 20,
       height: 20
     })]
@@ -406,13 +406,13 @@ function M(e) {
   let {
     value: t,
     onChange: n,
-    ...s
-  } = e, r = C({
+    ...r
+  } = e, s = v({
     value: t,
     onChange: n
   });
-  return (0, i.jsx)(b, {
-    ...s,
-    ...r
+  return (0, i.jsx)(L, {
+    ...r,
+    ...s
   })
 }

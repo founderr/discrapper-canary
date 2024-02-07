@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return o
   }
 }), n("860677"), n("424973");
-var i = n("913144"),
-  s = n("619443");
+var s = n("913144"),
+  i = n("619443");
 let r = [];
 
 function a(e) {
@@ -13,8 +13,8 @@ function a(e) {
 }
 
 function o(e) {
-  s.default.isConnectedOrOverlay() ? a(e) : r.push(e)
+  i.default.isConnectedOrOverlay() ? a(e) : r.push(e)
 }
-i.default.subscribe("CONNECTION_OPEN", () => {
+s.default.subscribe("CONNECTION_OPEN", () => {
   r.forEach(e => a(e)), r = []
 })

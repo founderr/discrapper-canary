@@ -4,45 +4,45 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("222007"), n("424973");
-var i = n("615361"),
-  s = n("872717"),
-  r = n("773336"),
+var s = n("615361"),
+  r = n("872717"),
+  l = n("773336"),
   a = n("827032"),
-  o = n("49111");
-let l = new Set(["darwin", "linux", "win32", "ios", "android"]);
+  i = n("49111");
+let o = new Set(["darwin", "linux", "win32", "ios", "android"]);
 var u = new class e {
   increment(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       {
         name: n,
-        tags: s
+        tags: r
       } = e,
-      o = {
+      i = {
         name: n,
         tags: (0, a.getGlobalTagsArray)()
       };
-    null != s && s.forEach(e => {
-      o.tags.push(e)
+    null != r && r.forEach(e => {
+      i.tags.push(e)
     });
     let u = function() {
-      if ((0, r.isWeb)()) return "web";
+      if ((0, l.isWeb)()) return "web";
       {
-        let e = (0, r.getPlatformName)();
-        return l.has(e) ? e : null
+        let e = (0, l.getPlatformName)();
+        return o.has(e) ? e : null
       }
     }();
-    null != u && o.tags.push("platform:".concat(u));
-    let d = function() {
+    null != u && i.tags.push("platform:".concat(u));
+    let c = function() {
       let e = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
-      return i.ReleaseChannelsSets.ALL.has(e) ? e : null
+      return s.ReleaseChannelsSets.ALL.has(e) ? e : null
     }();
-    null != d && o.tags.push("release_channel:".concat(d)), this._metrics.push(o), (t || this._metrics.length >= 100) && this._flush()
+    null != c && i.tags.push("release_channel:".concat(c)), this._metrics.push(i), (t || this._metrics.length >= 100) && this._flush()
   }
   _flush() {
     if (this._metrics.length > 0) {
       let e = [...this._metrics];
-      s.default.post({
-        url: o.Endpoints.METRICS,
+      r.default.post({
+        url: i.Endpoints.METRICS,
         body: {
           metrics: e
         },

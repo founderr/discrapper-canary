@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   ActivityBookmarkEmbedExperiment: function() {
-    return s
+    return i
   }
 });
-var i = n("862205");
-let s = (0, i.createExperiment)({
+var r = n("862205");
+let i = (0, r.createExperiment)({
   kind: "user",
   id: "2023-04_activity_launcher_embed",
   label: "Activity Launcher Embed",

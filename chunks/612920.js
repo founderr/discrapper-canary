@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SUPPORTED_EMBED_TYPES: function() {
-    return s
+    return i
   },
   EXPLICIT_MEDIA_MIN_WIDTH: function() {
     return r
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return a
   }
 }), n("222007");
-var i = n("246111");
-let s = new Set([i.MessageEmbedTypes.IMAGE, i.MessageEmbedTypes.VIDEO, i.MessageEmbedTypes.GIFV]),
+var s = n("246111");
+let i = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.VIDEO, s.MessageEmbedTypes.GIFV]),
   r = 146,
   a = 212

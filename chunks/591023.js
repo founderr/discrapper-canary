@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   isActionedApplicationStatus: function() {
-    return s
+    return r
   },
   isSubmittedApplicationStatus: function() {
-    return r
+    return s
   },
   isApprovedAndAcked: function() {
     return a
@@ -15,11 +15,11 @@ n.r(t), n.d(t, {
 });
 var i = n("567054");
 
-function s(e) {
+function r(e) {
   return e === i.GuildJoinRequestApplicationStatuses.APPROVED || e === i.GuildJoinRequestApplicationStatuses.REJECTED
 }
 
-function r(e) {
+function s(e) {
   return e === i.GuildJoinRequestApplicationStatuses.SUBMITTED
 }
 
@@ -28,5 +28,5 @@ function a(e) {
 }
 
 function o(e) {
-  return s(e.applicationStatus) && null == e.lastSeen
+  return r(e.applicationStatus) && null == e.lastSeen
 }

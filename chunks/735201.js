@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return h
   }
 }), n("222007");
-var r = n("446674"),
-  s = n("913144");
+var s = n("446674"),
+  r = n("913144");
 let l = {},
-  i = null,
-  a = [],
+  a = null,
+  i = [],
   o = !1,
   u = null,
   c = null;
@@ -16,7 +16,7 @@ let l = {},
 function d() {
   o = !0
 }
-class f extends r.default.Store {
+class f extends s.default.Store {
   getAppliedGuildBoostsForGuild(e) {
     return null != l[e] ? l[e].subscriptions : null
   }
@@ -24,10 +24,10 @@ class f extends r.default.Store {
     return null != l[e] ? l[e].lastFetchedAt : null
   }
   getCurrentUserAppliedBoosts() {
-    return a
+    return i
   }
   getAppliedGuildBoost(e) {
-    return a.find(t => t.id === e)
+    return i.find(t => t.id === e)
   }
   get isModifyingAppliedBoost() {
     return o
@@ -39,11 +39,11 @@ class f extends r.default.Store {
     return c
   }
   get cooldownEndsAt() {
-    return i
+    return a
   }
 }
 f.displayName = "AppliedGuildBoostStore";
-var h = new f(s.default, {
+var h = new f(r.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
@@ -58,13 +58,13 @@ var h = new f(s.default, {
     let {
       appliedGuildBoosts: t
     } = e;
-    a = t
+    i = t
   },
   APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS: function(e) {
     let {
       endsAt: t
     } = e;
-    i = t
+    a = t
   },
   GUILD_UNAPPLY_BOOST_START: d,
   GUILD_APPLY_BOOST_START: d,
@@ -72,7 +72,7 @@ var h = new f(s.default, {
     let {
       appliedGuildBoost: t
     } = e, n = new Set(t.map(e => e.id));
-    a = [...t, ...a.filter(e => !n.has(e.id))], u = null, o = !1
+    i = [...t, ...i.filter(e => !n.has(e.id))], u = null, o = !1
   },
   GUILD_APPLY_BOOST_FAIL: function(e) {
     let {
@@ -84,7 +84,7 @@ var h = new f(s.default, {
     let {
       boostId: t
     } = e;
-    a = a.filter(e => e.id !== t), o = !1
+    i = i.filter(e => e.id !== t), o = !1
   },
   GUILD_UNAPPLY_BOOST_FAIL: function(e) {
     let {

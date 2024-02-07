@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("404118"),
-  s = n("50885"),
-  r = n("426685"),
+  r = n("50885"),
+  s = n("426685"),
   a = n("180524");
-class o extends r.NativePermissionBaseUtils {
+class o extends s.NativePermissionBaseUtils {
   requestPermissionCore(e, t) {
     var n;
     return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionRequestAuthorization, e, t)
@@ -34,27 +34,27 @@ class o extends r.NativePermissionBaseUtils {
     let {
       title: t,
       body: n,
-      onConfirm: s,
-      cancelText: r,
+      onConfirm: r,
+      cancelText: s,
       confirmText: a
     } = e;
     i.default.show({
       title: t,
       body: n,
-      onConfirm: s,
-      cancelText: r,
+      onConfirm: r,
+      cancelText: s,
       confirmText: a
     })
   }
   constructor(...e) {
-    super(...e), this.nativeUtils = s.default.getDiscordUtils()
+    super(...e), this.nativeUtils = r.default.getDiscordUtils()
   }
 }
 o.requestTypeLookup = {
-  [a.NativePermissionTypes.CAMERA]: s.NativePermissionRequestType.Camera,
-  [a.NativePermissionTypes.AUDIO]: s.NativePermissionRequestType.Microphone,
-  [a.NativePermissionTypes.PHOTOS]: s.NativePermissionRequestType.Photo,
-  [a.NativePermissionTypes.INPUT_MONITORING]: s.NativePermissionRequestType.InputMonitoring,
-  [a.NativePermissionTypes.SCREEN_RECORDING]: s.NativePermissionRequestType.ScreenRecording
+  [a.NativePermissionTypes.CAMERA]: r.NativePermissionRequestType.Camera,
+  [a.NativePermissionTypes.AUDIO]: r.NativePermissionRequestType.Microphone,
+  [a.NativePermissionTypes.PHOTOS]: r.NativePermissionRequestType.Photo,
+  [a.NativePermissionTypes.INPUT_MONITORING]: r.NativePermissionRequestType.InputMonitoring,
+  [a.NativePermissionTypes.SCREEN_RECORDING]: r.NativePermissionRequestType.ScreenRecording
 };
 var l = new o

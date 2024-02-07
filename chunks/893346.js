@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   Dispatcher: function() {
-    return O
+    return A
   }
 }), E("222007"), E("424973"), E("70102");
 var t = E("487445"),
@@ -16,7 +16,7 @@ var a = E("811022"),
   T = E("120082");
 let S = new Set(["APP_STATE_UPDATE", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_CONNECTION", "SESSION_START", "UPLOAD_FAIL"]),
   N = new a.default("Flux");
-class O {
+class A {
   isDispatching() {
     return null != this._currentDispatchActionType
   }
@@ -114,12 +114,12 @@ class O {
     this._actionHandlers.addDependencies(e, _)
   }
   constructor(e = 0, _, E) {
-    this._interceptors = [], this._subscriptions = {}, this._waitQueue = [], this._processingWaitQueue = !1, this._currentDispatchActionType = null, this._actionHandlers = new A, this._sentryUtils = void 0, this.functionCache = {}, this._defaultBand = e, this._sentryUtils = E, null != _ ? this.actionLogger = _ : this.actionLogger = new T.ActionLogger, this.actionLogger.on("trace", (e, _, E) => {
+    this._interceptors = [], this._subscriptions = {}, this._waitQueue = [], this._processingWaitQueue = !1, this._currentDispatchActionType = null, this._actionHandlers = new O, this._sentryUtils = void 0, this.functionCache = {}, this._defaultBand = e, this._sentryUtils = E, null != _ ? this.actionLogger = _ : this.actionLogger = new T.ActionLogger, this.actionLogger.on("trace", (e, _, E) => {
       r.default.isTracing && E >= 10 && r.default.mark("\uD83E\uDDA5", _, E)
     })
   }
 }
-class A {
+class O {
   getOrderedActionHandlers(e) {
     var _;
     return null !== (_ = this._orderedActionHandlers[e.type]) && void 0 !== _ ? _ : this._computeOrderedActionHandlers(e.type)

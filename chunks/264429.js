@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("305961"),
   E = n("957255"),
   C = n("824563"),
-  S = n("800762"),
-  g = n("822332"),
+  g = n("800762"),
+  S = n("822332"),
   _ = n("599110"),
   I = n("223913"),
   T = n("582415"),
@@ -99,8 +99,8 @@ class R extends l.PureComponent {
             channelId: n.channelId,
             className: M.activityActions,
             color: M.watchButton
-          }), (0, a.jsx)(g.default, {
-            type: g.default.Types.INLINE,
+          }), (0, a.jsx)(S.default, {
+            type: S.default.Types.INLINE,
             className: M.protip,
             children: __OVERLAY__ ? A.default.Messages.WATCH_STREAM_IN_APP : A.default.Messages.WATCH_STREAM_TIP
           })]
@@ -115,7 +115,7 @@ function j(e) {
     user: t,
     channel: n,
     ...s
-  } = e, [i, o] = (0, r.useStateFromStoresArray)([S.default, m.default, E.default, f.default], () => (0, I.canWatchStream)(n, S.default, m.default, E.default, f.default)), u = (0, r.useStateFromStores)([h.default], () => h.default.getStreamForUser(t.id, n.getGuildId())), c = (0, r.useStateFromStores)([h.default], () => h.default.getActiveStreamForApplicationStream(u)), g = (0, r.useStateFromStores)([p.default], () => p.default.getId()), _ = (0, r.useStateFromStores)([C.default], () => (0, T.getStreamerApplication)(u, C.default)), v = (0, r.useStateFromStores)([C.default], () => (0, T.getStreamerActivity)(u, C.default)), x = l.useMemo(() => ({
+  } = e, [i, o] = (0, r.useStateFromStoresArray)([g.default, m.default, E.default, f.default], () => (0, I.canWatchStream)(n, g.default, m.default, E.default, f.default)), u = (0, r.useStateFromStores)([h.default], () => h.default.getStreamForUser(t.id, n.getGuildId())), c = (0, r.useStateFromStores)([h.default], () => h.default.getActiveStreamForApplicationStream(u)), S = (0, r.useStateFromStores)([p.default], () => p.default.getId()), _ = (0, r.useStateFromStores)([C.default], () => (0, T.getStreamerApplication)(u, C.default)), v = (0, r.useStateFromStores)([C.default], () => (0, T.getStreamerActivity)(u, C.default)), x = l.useMemo(() => ({
     [n.guild_id]: [t.id]
   }), [n.guild_id, t.id]);
   return (0, d.useSubscribeGuildMembers)(x), (0, a.jsx)(R, {
@@ -126,7 +126,7 @@ function j(e) {
     streamApplication: _,
     stream: u,
     activeStream: c,
-    currentUserId: g,
+    currentUserId: S,
     activity: v
   })
 }

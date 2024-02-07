@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return E
   }
 });
 var i = n("446674"),
-  s = n("913144"),
-  r = n("599110"),
+  r = n("913144"),
+  s = n("599110"),
   a = n("271938"),
   o = n("49111");
 
 function l(e, t) {
-  r.default.track(o.AnalyticEvents.STREAMER_MODE_TOGGLE, {
+  s.default.track(o.AnalyticEvents.STREAMER_MODE_TOGGLE, {
     enabled: e,
     automatic: t
   })
@@ -25,16 +25,16 @@ let u = {
     disableNotifications: !0,
     enableContentProtection: !1
   },
-  d = {},
-  c = {
+  c = {},
+  d = {
     ...u
   };
 class f extends i.default.PersistedStore {
   initialize(e) {
-    Object.assign(d, e), this.syncWith([a.default], () => {
+    Object.assign(c, e), this.syncWith([a.default], () => {
       var e;
       let t, n = a.default.getId();
-      c = null != n ? (null == (t = d[e = n]) && (t = d[e] = {
+      d = null != n ? (null == (t = c[e = n]) && (t = c[e] = {
         ...u
       }), t) : {
         ...u
@@ -42,31 +42,31 @@ class f extends i.default.PersistedStore {
     })
   }
   getState() {
-    return d
-  }
-  getSettings() {
     return c
   }
+  getSettings() {
+    return d
+  }
   get enabled() {
-    return c.enabled
+    return d.enabled
   }
   get autoToggle() {
-    return c.autoToggle
+    return d.autoToggle
   }
   get hideInstantInvites() {
-    return this.enabled && c.hideInstantInvites
+    return this.enabled && d.hideInstantInvites
   }
   get hidePersonalInformation() {
-    return this.enabled && c.hidePersonalInformation
+    return this.enabled && d.hidePersonalInformation
   }
   get disableSounds() {
-    return this.enabled && c.disableSounds
+    return this.enabled && d.disableSounds
   }
   get disableNotifications() {
-    return this.enabled && c.disableNotifications
+    return this.enabled && d.disableNotifications
   }
   get enableContentProtection() {
-    return this.enabled && c.enableContentProtection
+    return this.enabled && d.enableContentProtection
   }
 }
 f.displayName = "StreamerModeStore", f.persistKey = "StreamerModeStore", f.migrations = [e => {
@@ -79,25 +79,25 @@ f.displayName = "StreamerModeStore", f.persistKey = "StreamerModeStore", f.migra
   };
   return n
 }];
-var _ = new f(s.default, {
+var E = new f(r.default, {
   LOGOUT: function(e) {
-    !e.isSwitchingAccount && (d = {})
+    !e.isSwitchingAccount && (c = {})
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
-    e.userId in d && delete d[e.userId]
+    e.userId in c && delete c[e.userId]
   },
   STREAMER_MODE_UPDATE: function(e) {
     let t = {
-      ...c
+      ...d
     };
-    return c[e.key] = e.value, "enabled" === e.key ? l(e.value, !1) : r.default.track(o.AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, {
-      enabled: c.enabled,
-      automatic: c.autoToggle,
-      disable_notifications: c.disableNotifications,
-      disable_sounds: c.disableSounds,
-      hide_instant_invites: c.hideInstantInvites,
-      hide_personal_info: c.hidePersonalInformation,
-      enable_content_protection: c.enableContentProtection,
+    return d[e.key] = e.value, "enabled" === e.key ? l(e.value, !1) : s.default.track(o.AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, {
+      enabled: d.enabled,
+      automatic: d.autoToggle,
+      disable_notifications: d.disableNotifications,
+      disable_sounds: d.disableSounds,
+      hide_instant_invites: d.hideInstantInvites,
+      hide_personal_info: d.hidePersonalInformation,
+      enable_content_protection: d.enableContentProtection,
       old_enabled: t.enabled,
       old_automatic: t.autoToggle,
       old_disable_notifications: t.disableNotifications,
@@ -108,10 +108,10 @@ var _ = new f(s.default, {
     }), !0
   },
   RUNNING_STREAMER_TOOLS_CHANGE: function(e) {
-    if (!c.autoToggle) return !1;
+    if (!d.autoToggle) return !1;
     {
       let t = e.count > 0;
-      return c.enabled = t, l(t, !0), !0
+      return d.enabled = t, l(t, !0), !0
     }
   }
 })

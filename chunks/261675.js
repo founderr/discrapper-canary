@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return i
   }
 });
-var a = n("37983");
+var u = n("37983");
 n("884691");
-var l = n("77078"),
-  u = n("306160"),
-  i = n("782340");
+var a = n("77078"),
+  d = n("306160"),
+  l = n("782340");
 
-function d(e) {
-  return u.SUPPORTS_COPY ? (0, a.jsx)(l.MenuItem, {
+function i(e) {
+  return d.SUPPORTS_COPY ? (0, u.jsx)(a.MenuItem, {
     id: "copy-channel-topic",
-    label: i.default.Messages.COPY_CHANNEL_TOPIC,
-    action: () => (0, u.copy)(e.topic)
+    label: l.default.Messages.COPY_CHANNEL_TOPIC,
+    action: () => (0, d.copy)(e.topic)
   }) : null
 }

@@ -32,17 +32,17 @@ var i = {
   "./zh-TW.png": "204827"
 };
 
-function s(e) {
-  return n(r(e))
+function r(e) {
+  return n(s(e))
 }
 
-function r(e) {
+function s(e) {
   if (!n.o(i, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
   }
   return i[e]
 }
-s.id = '"20860"', s.keys = function() {
+r.id = '"20860"', r.keys = function() {
   return Object.keys(i)
-}, s.resolve = r, e.exports = s
+}, r.resolve = s, e.exports = r

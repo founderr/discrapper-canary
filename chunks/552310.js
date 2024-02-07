@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var i = n("866227"),
-  s = n.n(i);
+var s = n("866227"),
+  i = n.n(s);
 
 function r(e) {
   return {
     ...e,
-    expiry: s(e.expiry)
+    expiry: i(e.expiry)
   }
 }

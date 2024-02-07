@@ -1,49 +1,49 @@
 "use strict";
-n("808653");
-var r, i = n("129752").codes,
-  o = i.ERR_MISSING_ARGS,
-  s = i.ERR_STREAM_DESTROYED;
+s("808653");
+var r, i = s("129752").codes,
+  n = i.ERR_MISSING_ARGS,
+  c = i.ERR_STREAM_DESTROYED;
 
-function a(e) {
-  if (e) throw e
+function o(t) {
+  if (t) throw t
 }
 
-function c(e) {
-  e()
+function f(t) {
+  t()
 }
 
-function u(e, t) {
-  return e.pipe(t)
+function u(t, e) {
+  return t.pipe(e)
 }
-e.exports = function() {
-  for (var e, t, i = arguments.length, l = Array(i), d = 0; d < i; d++) l[d] = arguments[d];
-  var f = (e = l).length && "function" == typeof e[e.length - 1] ? e.pop() : a;
-  if (Array.isArray(l[0]) && (l = l[0]), l.length < 2) throw new o("streams");
-  var p = l.map(function(e, i) {
-    var o, a, u, d, h, v, g, b, m = i < l.length - 1;
-    return o = e, a = m, u = i > 0, h = d = function(e) {
-        !t && (t = e), e && p.forEach(c), !m && (p.forEach(c), f(t))
-      }, v = !1, d = function() {
-        !v && (v = !0, h.apply(void 0, arguments))
-      }, g = !1, o.on("close", function() {
+t.exports = function() {
+  for (var t, e, i = arguments.length, a = Array(i), d = 0; d < i; d++) a[d] = arguments[d];
+  var p = (t = a).length && "function" == typeof t[t.length - 1] ? t.pop() : o;
+  if (Array.isArray(a[0]) && (a = a[0]), a.length < 2) throw new n("streams");
+  var b = a.map(function(t, i) {
+    var n, o, u, d, h, l, g, v, x = i < a.length - 1;
+    return n = t, o = x, u = i > 0, h = d = function(t) {
+        !e && (e = t), t && b.forEach(f), !x && (b.forEach(f), p(e))
+      }, l = !1, d = function() {
+        !l && (l = !0, h.apply(void 0, arguments))
+      }, g = !1, n.on("close", function() {
         g = !0
-      }), void 0 === r && (r = n("362796")), r(o, {
-        readable: a,
+      }), void 0 === r && (r = s("362796")), r(n, {
+        readable: o,
         writable: u
-      }, function(e) {
-        if (e) return d(e);
+      }, function(t) {
+        if (t) return d(t);
         g = !0, d()
-      }), b = !1,
-      function(e) {
+      }), v = !1,
+      function(t) {
         if (!g) {
-          if (!b) {
-            var t;
-            if (b = !0, (t = o).setHeader && "function" == typeof t.abort) return o.abort();
-            if ("function" == typeof o.destroy) return o.destroy();
-            d(e || new s("pipe"))
+          if (!v) {
+            var e;
+            if (v = !0, (e = n).setHeader && "function" == typeof e.abort) return n.abort();
+            if ("function" == typeof n.destroy) return n.destroy();
+            d(t || new c("pipe"))
           }
         }
       }
   });
-  return l.reduce(u)
+  return a.reduce(u)
 }

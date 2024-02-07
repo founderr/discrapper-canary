@@ -1,34 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   DnDKeyboardHelpBar: function() {
-    return _
+    return E
   }
 });
 var i = n("37983"),
-  s = n("884691"),
-  r = n("907002"),
+  r = n("884691"),
+  s = n("907002"),
   a = n("446674"),
   o = n("533979"),
   l = n("577776"),
   u = n("206230"),
-  d = n("57406"),
-  c = n("782340"),
+  c = n("57406"),
+  d = n("782340"),
   f = n("157372");
 
-function _() {
+function E() {
   let e = [{
       keybinds: ["Spacebar", "Enter"],
-      name: c.default.Messages.DND_OPERATION_LABEL_DROP
+      name: d.default.Messages.DND_OPERATION_LABEL_DROP
     }, {
       keybinds: ["up", "down"],
-      name: c.default.Messages.DND_OPERATION_LABEL_MOVE
+      name: d.default.Messages.DND_OPERATION_LABEL_MOVE
     }, {
       keybinds: ["ESC"],
-      name: c.default.Messages.DND_OPERATION_LABEL_CANCEL
+      name: d.default.Messages.DND_OPERATION_LABEL_CANCEL
     }],
     t = (0, a.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    n = (0, d.useDndMode)(),
-    _ = (0, r.useTransition)(n, {
+    n = (0, c.useDndMode)(),
+    E = (0, s.useTransition)(n, {
       enter: {
         from: {
           opacity: 0,
@@ -43,24 +43,24 @@ function _() {
         opacity: 0,
         y: t ? 0 : 80
       },
-      config: r.config.stiff
+      config: s.config.stiff
     });
-  return _((t, n) => n ? (0, i.jsx)("div", {
+  return E((t, n) => n ? (0, i.jsx)("div", {
     className: f.positioner,
-    children: (0, i.jsx)(r.animated.div, {
+    children: (0, i.jsx)(s.animated.div, {
       className: f.container,
       style: t,
       children: e.map((t, n) => {
         let {
-          keybinds: r,
+          keybinds: s,
           name: a
         } = t;
-        return (0, i.jsxs)(s.Fragment, {
+        return (0, i.jsxs)(r.Fragment, {
           children: [(0, i.jsx)(l.Text, {
             variant: "text-md/semibold",
             className: f.bindName,
             children: a
-          }), r.map(e => (0, i.jsx)(o.KeyCombo, {
+          }), s.map(e => (0, i.jsx)(o.KeyCombo, {
             shortcut: e,
             className: f.shortcut
           }, e)), n < e.length - 1 ? (0, i.jsx)("span", {

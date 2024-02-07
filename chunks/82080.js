@@ -18,8 +18,8 @@ var s = n("37983"),
   C = n("497880"),
   p = n("851220"),
   m = n("659500"),
-  E = n("568734"),
-  g = n("718422"),
+  g = n("568734"),
+  E = n("718422"),
   S = n("49111"),
   A = n("877671");
 
@@ -28,7 +28,7 @@ function _(e) {
     value: t,
     channel: n
   } = e;
-  return (0, g.applyChatRestrictions)({
+  return (0, E.applyChatRestrictions)({
     type: o.ChatInputTypes.EDIT,
     content: t,
     channel: n,
@@ -45,7 +45,7 @@ function T(e) {
     id: o
   } = t, {
     id: u
-  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, T = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = g && T, {
+  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), E = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, T = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = E && T, {
     editingMessage: N,
     editingTextValue: v,
     editingRichValue: L
@@ -57,7 +57,7 @@ function T(e) {
     let {
       content: a
     } = s, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === x || l);
-    return u && null != N && (0, E.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, a) : i.default.editMessage(e, n, {
+    return u && null != N && (0, g.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, a) : i.default.editMessage(e, n, {
       content: a
     }), Promise.resolve()
   }, [N, I, x, t]), y = a.useCallback(e => (0, a.createElement)(M, {

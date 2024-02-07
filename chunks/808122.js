@@ -1,11 +1,11 @@
 "use strict";
 
 function i() {
-  let e = s();
+  let e = r();
   return null === e || !!(e >= 31) || !1
 }
 
-function s() {
+function r() {
   return null
 }
 n.r(t), n.d(t, {
@@ -13,6 +13,6 @@ n.r(t), n.d(t, {
     return i
   },
   getMediaPerformanceClass: function() {
-    return s
+    return r
   }
 })

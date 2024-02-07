@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   setClientOffset: function() {
-    return i
+    return o
   }
 });
 var r = n("897345");
 
-function i(e, t) {
+function o(e, t) {
   return {
     type: r.INIT_COORDS,
     payload: {

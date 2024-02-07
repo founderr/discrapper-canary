@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("884691"),
-  s = n("995008"),
-  r = n.n(s),
+  r = n("995008"),
+  s = n.n(r),
   a = n("551042"),
   o = n("388495"),
   l = n("516256");
@@ -15,18 +15,18 @@ function u(e) {
   let {
     renderModal: t,
     onCloseRequest: n,
-    onCloseCallback: s
-  } = e, [l] = i.useState(() => r()), u = (0, o.useModalContext)();
+    onCloseCallback: r
+  } = e, [l] = i.useState(() => s()), u = (0, o.useModalContext)();
   i.useLayoutEffect(() => ((0, a.openModal)(t, {
     modalKey: l,
     onCloseRequest: n,
-    onCloseCallback: s
+    onCloseCallback: r
   }, u), () => {
     (0, a.closeModal)(l, u)
   }), []);
-  let d = i.useRef(!0);
+  let c = i.useRef(!0);
   return i.useLayoutEffect(() => {
-    !d.current && (0, a.updateModal)(l, t, n, s, u), d.current = !1
+    !c.current && (0, a.updateModal)(l, t, n, r, u), c.current = !1
   }, [t, n]), null
 }
 n.es(l, t)

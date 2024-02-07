@@ -1,44 +1,44 @@
 "use strict";
 n.r(t), n.d(t, {
   useModalContext: function() {
-    return T
+    return I
   },
   Modals: function() {
-    return C
+    return v
   }
 }), n("222007"), n("70102"), n("700225");
 var i = n("37983"),
-  s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  r = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
   o = n("917351"),
   l = n.n(o),
   u = n("266491"),
-  d = n("244201"),
-  c = n("892974"),
+  c = n("244201"),
+  d = n("892974"),
   f = n("983782"),
-  _ = n("668596"),
-  h = n("659500"),
-  g = n("551042"),
-  m = n("625611"),
-  E = n("49111"),
-  p = n("193608");
-let v = [f.default, _.default];
-class S extends s.PureComponent {
+  E = n("668596"),
+  p = n("659500"),
+  h = n("551042"),
+  _ = n("625611"),
+  S = n("49111"),
+  m = n("193608");
+let T = [f.default, E.default];
+class g extends r.PureComponent {
   render() {
     let {
       render: e,
       LayerComponent: t,
       isTopModal: n,
-      instant: s
+      instant: r
     } = this.props, {
-      transitionState: r
+      transitionState: s
     } = this.state;
-    return (r === m.ModalTransitionState.ENTERING || r === m.ModalTransitionState.ENTERED) && !n && (r = m.ModalTransitionState.HIDDEN), s && (r = m.ModalTransitionState.ENTERED), (0, i.jsx)(t, {
+    return (s === _.ModalTransitionState.ENTERING || s === _.ModalTransitionState.ENTERED) && !n && (s = _.ModalTransitionState.HIDDEN), r && (s = _.ModalTransitionState.ENTERED), (0, i.jsx)(t, {
       children: (0, i.jsx)("div", {
-        className: a(p.layer, !n && p.hidden),
+        className: a(m.layer, !n && m.hidden),
         children: e({
-          transitionState: r,
+          transitionState: s,
           onClose: this.close
         })
       })
@@ -54,87 +54,87 @@ class S extends s.PureComponent {
         instant: t
       } = this.props;
       this.setState({
-        transitionState: m.ModalTransitionState.ENTERING
+        transitionState: _.ModalTransitionState.ENTERING
       }), setTimeout(() => {
         this.setState({
-          transitionState: m.ModalTransitionState.ENTERED
+          transitionState: _.ModalTransitionState.ENTERED
         }), e()
-      }, t ? 0 : m.TRANSITION_DURATION)
+      }, t ? 0 : _.TRANSITION_DURATION)
     }, this.componentWillLeave = e => {
       let {
         instant: t
       } = this.props;
       this.setState({
-        transitionState: m.ModalTransitionState.EXITING
+        transitionState: _.ModalTransitionState.EXITING
       }), setTimeout(() => {
         this.setState({
-          transitionState: m.ModalTransitionState.EXITED
+          transitionState: _.ModalTransitionState.EXITED
         }), e()
-      }, t ? 0 : m.TRANSITION_DURATION)
+      }, t ? 0 : _.TRANSITION_DURATION)
     }, this.close = () => new Promise(e => {
-      this.props.closeModal(this.props.modalKey), setTimeout(() => e(), m.TRANSITION_DURATION)
+      this.props.closeModal(this.props.modalKey), setTimeout(() => e(), _.TRANSITION_DURATION)
     })
   }
 }
 
-function T() {
-  return (0, g.modalContextFromAppContext)((0, d.useAppContext)())
+function I() {
+  return (0, h.modalContextFromAppContext)((0, c.useAppContext)())
 }
-let I = [];
+let C = [];
 
-function C() {
-  let e = T(),
-    t = (0, g.useModalsStore)(t => void 0 !== t[e] ? t[e] : I),
-    n = s.useRef();
-  s.useLayoutEffect(() => {
+function v() {
+  let e = I(),
+    t = (0, h.useModalsStore)(t => void 0 !== t[e] ? t[e] : C),
+    n = r.useRef();
+  r.useLayoutEffect(() => {
     n.current = t[t.length - 1]
   }, [t]);
-  let r = t.length > 0;
-  s.useLayoutEffect(() => {
-    if (!r) return;
+  let s = t.length > 0;
+  r.useLayoutEffect(() => {
+    if (!s) return;
     let e = () => {
       let e = n.current;
       null != e && null != e.onCloseRequest && e.onCloseRequest()
     };
-    return h.ComponentDispatch.subscribe(E.ComponentActions.MODAL_CLOSE, e), () => {
-      h.ComponentDispatch.unsubscribe(E.ComponentActions.MODAL_CLOSE, e)
+    return p.ComponentDispatch.subscribe(S.ComponentActions.MODAL_CLOSE, e), () => {
+      p.ComponentDispatch.unsubscribe(S.ComponentActions.MODAL_CLOSE, e)
     }
-  }, [r]);
-  let a = s.useCallback(() => {
+  }, [s]);
+  let a = r.useCallback(() => {
       let e = n.current;
       null != e && null != e.onCloseRequest && e.onCloseRequest()
     }, []),
-    o = s.useCallback(t => {
-      (0, g.closeModal)(t, e)
+    o = r.useCallback(t => {
+      (0, h.closeModal)(t, e)
     }, [e]),
-    d = v.map(e => t.some(t => t.Layer === e || null == t.Layer && e === f.default));
+    c = T.map(e => t.some(t => t.Layer === e || null == t.Layer && e === f.default));
   return (0, i.jsxs)(u.default, {
-    component: s.Fragment,
-    children: [v.map((e, n) => {
-      var s;
-      let r = l.findLast(t, t => t.Layer === e || null == t.Layer && e === f.default);
-      return (0, i.jsx)(c.default, {
-        isVisible: d[n],
-        backdropStyle: null !== (s = null == r ? void 0 : r.backdropStyle) && void 0 !== s ? s : c.BackdropStyles.DARK,
+    component: r.Fragment,
+    children: [T.map((e, n) => {
+      var r;
+      let s = l.findLast(t, t => t.Layer === e || null == t.Layer && e === f.default);
+      return (0, i.jsx)(d.default, {
+        isVisible: c[n],
+        backdropStyle: null !== (r = null == s ? void 0 : s.backdropStyle) && void 0 !== r ? r : d.BackdropStyles.DARK,
         onClose: a,
         LayerComponent: e,
-        backdropInstant: null == r ? void 0 : r.instant
+        backdropInstant: null == s ? void 0 : s.instant
       }, "layer-".concat(n))
     }), t.map((e, n) => {
       let {
-        key: s,
-        Layer: r,
+        key: r,
+        Layer: s,
         render: a,
         instant: l
       } = e;
-      return (0, i.jsx)(S, {
-        modalKey: s,
-        LayerComponent: null != r ? r : f.default,
+      return (0, i.jsx)(g, {
+        modalKey: r,
+        LayerComponent: null != s ? s : f.default,
         isTopModal: n === t.length - 1,
         render: a,
         closeModal: o,
         instant: l
-      }, s)
+      }, r)
     })]
   })
 }

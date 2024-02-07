@@ -1,7 +1,7 @@
 "use strict";
-var r = n("337404"),
-  i = n("299699"),
-  o = n("865435");
-e.exports = function(e) {
-  return void 0 !== e && r(o, "Property Descriptor", "Desc", e), i(e)
+var r = s("337404"),
+  i = s("299699"),
+  n = s("865435");
+t.exports = function(t) {
+  return void 0 !== t && r(n, "Property Descriptor", "Desc", t), i(t)
 }

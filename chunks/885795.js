@@ -1,22 +1,22 @@
 "use strict";
-n("70102");
-var r = n("966810"),
+s("70102");
+var r = s("966810"),
   i = SyntaxError,
-  o = "object" == typeof StopIteration ? StopIteration : null;
-e.exports = function(e) {
-  if (!o) throw new i("this environment lacks StopIteration");
-  r.set(e, "[[Done]]", !1);
-  var t = {
+  n = "object" == typeof StopIteration ? StopIteration : null;
+t.exports = function(t) {
+  if (!n) throw new i("this environment lacks StopIteration");
+  r.set(t, "[[Done]]", !1);
+  var e = {
     next: function() {
-      var e = r.get(this, "[[Iterator]]"),
-        t = r.get(e, "[[Done]]");
+      var t = r.get(this, "[[Iterator]]"),
+        e = r.get(t, "[[Done]]");
       try {
         return {
-          done: t,
-          value: t ? void 0 : e.next()
+          done: e,
+          value: e ? void 0 : t.next()
         }
-      } catch (t) {
-        if (r.set(e, "[[Done]]", !0), t !== o) throw t;
+      } catch (e) {
+        if (r.set(t, "[[Done]]", !0), e !== n) throw e;
         return {
           done: !0,
           value: void 0
@@ -24,5 +24,5 @@ e.exports = function(e) {
       }
     }
   };
-  return r.set(t, "[[Iterator]]", e), t
+  return r.set(e, "[[Iterator]]", t), e
 }

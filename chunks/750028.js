@@ -13,7 +13,7 @@ E.r(_), E.d(_, {
     return N
   },
   BoolValue: function() {
-    return A
+    return O
   },
   StringValue: function() {
     return l
@@ -296,7 +296,7 @@ class S extends t.MessageType {
   }
 }
 let N = new S;
-class O extends t.MessageType {
+class A extends t.MessageType {
   internalJsonWrite(e, _) {
     return e.value
   }
@@ -341,7 +341,7 @@ class O extends t.MessageType {
     }])
   }
 }
-let A = new O;
+let O = new A;
 class R extends t.MessageType {
   internalJsonWrite(e, _) {
     return e.value
@@ -388,7 +388,7 @@ class R extends t.MessageType {
   }
 }
 let l = new R;
-class L extends t.MessageType {
+class u extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(12, e.value, "value", !1, !0)
   }
@@ -433,4 +433,4 @@ class L extends t.MessageType {
     }])
   }
 }
-new L
+new u

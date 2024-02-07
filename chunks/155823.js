@@ -4,11 +4,11 @@ function i() {
   return null
 }
 
-function s(e) {
+function r(e) {
   return null
 }
 
-function r(e) {
+function s(e) {
   return null
 }
 
@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return i
   },
   MenuGroup: function() {
-    return s
+    return r
   },
   MenuItem: function() {
-    return r
+    return s
   },
   MenuCheckboxItem: function() {
     return a

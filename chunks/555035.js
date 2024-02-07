@@ -1,40 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return f
   }
 }), n("222007"), n("808653");
-var i = n("446674"),
-  s = n("913144"),
+var s = n("446674"),
+  i = n("913144"),
   r = n("353927");
 let a = null,
   o = null,
-  l = {};
+  d = {};
 
 function u(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-    i = l[e];
-  if (null == i) return;
-  let s = i[null != t ? t : "null"];
-  if (null != s) {
-    for (let e of Object.values(r.MediaEngineContextTypes))(n === e || null == n) && delete s[e];
-    l[e][null != t ? t : "null"] = s
+    s = d[e];
+  if (null == s) return;
+  let i = s[null != t ? t : "null"];
+  if (null != i) {
+    for (let e of Object.values(r.MediaEngineContextTypes))(n === e || null == n) && delete i[e];
+    d[e][null != t ? t : "null"] = i
   }
 }
-class d extends i.default.Store {
+class l extends s.default.Store {
   getStreamId(e, t) {
-    var n, i, s;
+    var n, s, i;
     let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.MediaEngineContextTypes.DEFAULT;
-    return null === (s = l[e]) || void 0 === s ? void 0 : null === (i = s[null != t ? t : "null"]) || void 0 === i ? void 0 : null === (n = i[a]) || void 0 === n ? void 0 : n.streamId
+    return null === (i = d[e]) || void 0 === i ? void 0 : null === (s = i[null != t ? t : "null"]) || void 0 === s ? void 0 : null === (n = s[a]) || void 0 === n ? void 0 : n.streamId
   }
   getUserStreamData(e, t) {
-    var n, i;
-    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.MediaEngineContextTypes.DEFAULT;
-    return null === (i = l[e]) || void 0 === i ? void 0 : null === (n = i[null != t ? t : "null"]) || void 0 === n ? void 0 : n[s]
+    var n, s;
+    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.MediaEngineContextTypes.DEFAULT;
+    return null === (s = d[e]) || void 0 === s ? void 0 : null === (n = s[null != t ? t : "null"]) || void 0 === n ? void 0 : n[i]
   }
 }
-d.displayName = "VideoStreamStore";
-var c = new d(s.default, {
+l.displayName = "VideoStreamStore";
+var f = new l(i.default, {
   CONNECTION_OPEN: function(e) {
     let {
       user: t,
@@ -53,20 +53,20 @@ var c = new d(s.default, {
     let {
       userId: t,
       guildId: n,
-      streamId: i,
-      context: s
+      streamId: s,
+      context: i
     } = e;
-    null != i ? ! function(e, t, n, i) {
-      var s;
-      !(e in l) && (l[e] = {});
-      let r = null !== (s = l[e][null != t ? t : "null"]) && void 0 !== s ? s : {};
-      l[e][null != t ? t : "null"] = {
+    null != s ? ! function(e, t, n, s) {
+      var i;
+      !(e in d) && (d[e] = {});
+      let r = null !== (i = d[e][null != t ? t : "null"]) && void 0 !== i ? i : {};
+      d[e][null != t ? t : "null"] = {
         ...r,
-        [i]: {
+        [s]: {
           streamId: n
         }
       }
-    }(t, n, i, s) : u(t, n, s)
+    }(t, n, s, i) : u(t, n, i)
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -75,17 +75,17 @@ var c = new d(s.default, {
     return t.reduce((e, t) => {
       var n;
       let {
-        userId: i,
-        sessionId: s,
+        userId: s,
+        sessionId: i,
         channelId: r,
-        guildId: d
+        guildId: l
       } = t;
-      if (null == r && i === a) {
-        if (s !== o) return e;
-        l = {}
+      if (null == r && s === a) {
+        if (i !== o) return e;
+        d = {}
       } else {
-        if (null != r || (null === (n = l[i]) || void 0 === n ? void 0 : n[null != d ? d : "null"]) == null) return e;
-        u(i, d)
+        if (null != r || (null === (n = d[s]) || void 0 === n ? void 0 : n[null != l ? l : "null"]) == null) return e;
+        u(s, l)
       }
       return !0
     }, !1)

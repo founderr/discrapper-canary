@@ -10,10 +10,10 @@ E.r(_), E.d(_, {
     return N
   },
   b64ToPreloadedUserSettingsProto: function() {
-    return O
+    return A
   },
   protoToB64WithType: function() {
-    return A
+    return O
   },
   protoToB64: function() {
     return R
@@ -22,10 +22,10 @@ E.r(_), E.d(_, {
     return l
   },
   mutateUserGuildSettingsInternal: function() {
-    return L
+    return u
   },
   mutateUserChannelSettings: function() {
-    return u
+    return L
   },
   mutateUserChannelSettingsInternal: function() {
     return C
@@ -66,11 +66,11 @@ function N(e, _) {
   }
 }
 
-function O(e) {
+function A(e) {
   return N(a.PreloadedUserSettings, e)
 }
 
-function A(e, _) {
+function O(e, _) {
   return R(T[e], _)
 }
 
@@ -85,13 +85,13 @@ function l(e, _, E) {
   return e.mergePartial(_, E), _
 }
 
-function L(e, _, E) {
+function u(e, _, E) {
   return (null == _ || "null" === _) && (_ = "0"), !(_ in e.guilds) && (e.guilds[_] = a.GuildSettings.create()), E(e.guilds[_])
 }
 
-function u(e, _, E, t) {
+function L(e, _, E, t) {
   var o, n, r;
-  return o = e, n = _, r = e => C(e, E, t), null == o.guilds && (o.guilds = a.AllGuildSettings.create()), L(o.guilds, n, r)
+  return o = e, n = _, r = e => C(e, E, t), null == o.guilds && (o.guilds = a.AllGuildSettings.create()), u(o.guilds, n, r)
 }
 
 function C(e, _, E) {

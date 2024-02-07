@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   OptionsReader: function() {
-    return o
+    return a
   }
 }), n("70102");
 
@@ -12,7 +12,7 @@ function r(e, t) {
   }
 }
 
-function i(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,15 +20,15 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var o = function() {
+var a = function() {
   var e, t, n;
 
-  function o(e, t) {
+  function a(e, t) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, o), i(this, "ownerDocument", null), i(this, "globalContext", void 0), i(this, "optionsArgs", void 0), this.globalContext = e, this.optionsArgs = t
+    }(this, a), o(this, "ownerDocument", null), o(this, "globalContext", void 0), o(this, "optionsArgs", void 0), this.globalContext = e, this.optionsArgs = t
   }
-  return e = o, t = [{
+  return e = a, t = [{
     key: "window",
     get: function() {
       return this.globalContext ? this.globalContext : "undefined" != typeof window ? window : void 0
@@ -45,5 +45,5 @@ var o = function() {
       var e;
       return (null === (e = this.optionsArgs) || void 0 === e ? void 0 : e.rootElement) || this.window
     }
-  }], r(e.prototype, t), n && r(e, n), o
+  }], r(e.prototype, t), n && r(e, n), a
 }()

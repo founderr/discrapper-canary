@@ -4,23 +4,23 @@ n.r(t), n.d(t, {
     return o
   },
   persist: function() {
-    return l
+    return d
   },
   clear: function() {
     return u
   }
 });
-var i = n("95410"),
-  s = n("548578");
+var s = n("95410"),
+  i = n("548578");
 let r = "ClientStateStore",
-  a = (0, s.getDefaultState)();
-a.version === s.CACHE_VERSION && null != a.cacheCreationDate && a.cacheCreationDate + s.MAX_CACHE_AGE_MS > Date.now() || (a = (0, s.getDefaultState)());
+  a = (0, i.getDefaultState)();
+a.version === i.CACHE_VERSION && null != a.cacheCreationDate && a.cacheCreationDate + i.MAX_CACHE_AGE_MS > Date.now() || (a = (0, i.getDefaultState)());
 let o = a;
 
-function l(e, t) {
-  i.default.set(r, t)
+function d(e, t) {
+  s.default.set(r, t)
 }
 
 function u() {
-  i.default.remove(r)
+  s.default.remove(r)
 }

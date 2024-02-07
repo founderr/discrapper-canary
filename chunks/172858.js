@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return l
   },
   COMMON_CONFETTI_SPRITES: function() {
-    return u
+    return a
   },
   COMMON_CONFETTI_MAX_SPRITE_SIZE: function() {
-    return a
+    return u
   },
   COMMON_CONFETTI_BASE_CONFIG: function() {
     return o
@@ -23,11 +23,11 @@ var r = n("516555"),
   i = n("839491");
 let s = i,
   l = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
-  u = [n("606863"), s, n("164654"), n("540346"), n("526094"), n("367469"), n("23933"), {
+  a = [n("606863"), s, n("164654"), n("540346"), n("526094"), n("367469"), n("23933"), {
     src: n("283397"),
     colorize: !1
   }],
-  a = 28,
+  u = 28,
   o = {
     velocity: {
       type: "static-random",
@@ -50,7 +50,7 @@ let s = i,
     size: {
       type: "static-random",
       minValue: 14,
-      maxValue: a
+      maxValue: u
     }
   },
   c = new r.Environment

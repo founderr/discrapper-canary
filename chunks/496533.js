@@ -4,12 +4,12 @@ function i() {
   return null
 }
 
-function s(e) {}
+function r(e) {}
 n.r(t), n.d(t, {
   getUserId: function() {
     return i
   },
   setUserId: function() {
-    return s
+    return r
   }
 })

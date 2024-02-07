@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
-var i = n("579033");
+var n = l("579033");
 
-function s(e) {
+function r(e) {
   var t;
   return {
     code: e.code,
-    state: i.GuildTemplateStates.RESOLVED,
+    state: n.GuildTemplateStates.RESOLVED,
     name: e.name,
     description: null !== (t = e.description) && void 0 !== t ? t : "",
     creatorId: e.creator_id,

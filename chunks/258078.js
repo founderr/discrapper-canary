@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
 var i = n("37983");
 n("884691");
-var s = n("414456"),
-  r = n.n(s),
+var r = n("414456"),
+  s = n.n(r),
   a = n("426656"),
   o = n("851706");
 let l = Object.freeze({
@@ -35,29 +35,29 @@ let l = Object.freeze({
     SIZE_24: o.size24,
     SIZE_32: o.size32
   }),
-  d = e => {
+  c = e => {
     let {
       className: t,
       color: n = l.STANDARD,
-      size: s = u.SIZE_14,
+      size: r = u.SIZE_14,
       tag: o = "div",
-      selectable: d = !1,
-      strong: c = !1,
+      selectable: c = !1,
+      strong: d = !1,
       children: f,
-      style: _,
-      "aria-label": h,
-      ...g
+      style: E,
+      "aria-label": p,
+      ...h
     } = e;
     return (0, i.jsx)(o, {
-      "aria-label": h,
-      className: r(n, s, t, {
-        [a.selectable]: d,
-        [a.strong]: c
+      "aria-label": p,
+      className: s(n, r, t, {
+        [a.selectable]: c,
+        [a.strong]: d
       }),
-      style: _,
-      ...g,
+      style: E,
+      ...h,
       children: f
     })
   };
-d.Colors = l, d.Sizes = u;
-var c = d
+c.Colors = l, c.Sizes = u;
+var d = c

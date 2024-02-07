@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   StrangerDangerWarningBanner: function() {
-    return g
+    return E
   }
 });
 var s = n("37983"),
@@ -18,24 +18,24 @@ var s = n("37983"),
   C = n("49111"),
   p = n("782340"),
   m = n("921548"),
-  E = n("145680");
+  g = n("145680");
 
-function g(e) {
+function E(e) {
   let {
     channelId: t,
-    warningId: g,
+    warningId: E,
     senderId: S
   } = e, A = a.useCallback(() => {
-    (0, d.dismissChannelSafetyWarnings)(t, [g])
-  }, [t, g]), _ = a.useCallback(() => {
+    (0, d.dismissChannelSafetyWarnings)(t, [E])
+  }, [t, E]), _ = a.useCallback(() => {
     A(), (0, f.trackCtaEvent)({
       channelId: t,
-      warningId: g,
+      warningId: E,
       senderId: S,
       warningType: c.SafetyWarningTypes.STRANGER_DANGER,
       cta: f.CtaEventTypes.DISMISS
     })
-  }, [A, t, g, S]), T = a.useCallback(e => () => {
+  }, [A, t, E, S]), T = a.useCallback(e => () => {
     r.default.addRelationship({
       userId: S,
       context: {
@@ -44,22 +44,22 @@ function g(e) {
       type: C.RelationshipTypes.BLOCKED
     }), A(), (0, i.showToast)((0, i.createToast)(p.default.Messages.STRANGER_DANGER_BLOCK_CONFIRM, i.ToastType.SUCCESS)), (0, f.trackCtaEvent)({
       channelId: t,
-      warningId: g,
+      warningId: E,
       senderId: S,
       warningType: c.SafetyWarningTypes.STRANGER_DANGER,
       cta: e
     })
-  }, [A, t, g, S]);
+  }, [A, t, E, S]);
   a.useEffect(() => {
     (0, f.trackViewedEvent)(C.AnalyticEvents.SAFETY_WARNING_VIEWED, {
       channelId: t,
-      warningId: g,
+      warningId: E,
       senderId: S,
       warningType: c.SafetyWarningTypes.STRANGER_DANGER
     }), o.default.increment({
       name: l.MetricEvents.SAFETY_WARNING_VIEW
     })
-  }, [t, g, S]);
+  }, [t, E, S]);
   let M = () => {
       (0, i.openModalLazy)(async () => {
         let {
@@ -74,7 +74,7 @@ function g(e) {
             transitionState: a,
             onClose: l,
             channelId: t,
-            warningId: g,
+            warningId: E,
             senderId: S,
             handleBlock: () => {
               I(f.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, f.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, M)
@@ -95,7 +95,7 @@ function g(e) {
           onCancel: () => {
             null == l || l(), (0, f.trackCtaEvent)({
               channelId: t,
-              warningId: g,
+              warningId: E,
               senderId: S,
               warningType: c.SafetyWarningTypes.STRANGER_DANGER,
               cta: a
@@ -110,7 +110,7 @@ function g(e) {
       className: m.shieldAndHeading,
       children: [(0, s.jsx)("img", {
         className: m.safetyShieldIcon,
-        src: E,
+        src: g,
         alt: ""
       }), (0, s.jsxs)("div", {
         children: [(0, s.jsx)(i.Heading, {
@@ -132,7 +132,7 @@ function g(e) {
         onClick: () => {
           M(), (0, f.trackCtaEvent)({
             channelId: t,
-            warningId: g,
+            warningId: E,
             senderId: S,
             warningType: c.SafetyWarningTypes.STRANGER_DANGER,
             cta: f.CtaEventTypes.OPEN_MORE_TIPS

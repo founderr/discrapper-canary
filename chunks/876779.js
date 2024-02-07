@@ -1,4 +1,4 @@
-N.exports = {
+I.exports = {
   Common: {
     OPEN_DISCORD: "Open Discord",
     SIGN_UP_NOW: "Sign Up Now"

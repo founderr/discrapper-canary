@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var a = n("37983"),
   r = n("884691"),
   i = n("77078"),
-  c = n("421963"),
-  o = n("659500"),
-  s = n("158945"),
-  p = n("49111"),
-  d = n("782340"),
+  s = n("421963"),
+  c = n("659500"),
+  o = n("158945"),
+  d = n("49111"),
+  p = n("782340"),
   l = n("352630"),
   u = n("954035");
 let h = new Set([i.ModalTransitionState.ENTERING, i.ModalTransitionState.ENTERED]);
@@ -21,16 +21,16 @@ function f(e) {
     onClose: t,
     onCaptchaVerify: n,
     onReject: f,
-    transitionState: v,
-    headerText: m,
-    bodyText: y,
-    rqtoken: E,
+    transitionState: _,
+    headerText: E,
+    bodyText: m,
+    rqtoken: v,
     ...C
-  } = e, R = (0, s.default)(f);
+  } = e, y = (0, o.default)(f);
   return (r.useEffect(() => {
-    o.ComponentDispatch.subscribe(p.ComponentActions.LAYER_POP_ESCAPE_KEY, t)
-  }, [t]), null != v && h.has(v)) ? (0, a.jsx)(i.ModalRoot, {
-    transitionState: v,
+    c.ComponentDispatch.subscribe(d.ComponentActions.LAYER_POP_ESCAPE_KEY, t)
+  }, [t]), null != _ && h.has(_)) ? (0, a.jsx)(i.ModalRoot, {
+    transitionState: _,
     "aria-label": "CAPTCHA",
     className: l.modal,
     children: (0, a.jsxs)(i.ModalContent, {
@@ -40,7 +40,7 @@ function f(e) {
         onClick: t
       }), (0, a.jsx)("div", {
         className: l.content,
-        children: v !== i.ModalTransitionState.ENTERED ? (0, a.jsx)(i.Spinner, {
+        children: _ !== i.ModalTransitionState.ENTERED ? (0, a.jsx)(i.Spinner, {
           type: i.Spinner.Type.SPINNING_CIRCLE
         }) : (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)("div", {
@@ -51,14 +51,14 @@ function f(e) {
           }), (0, a.jsx)("div", {
             className: l.title,
             "aria-hidden": !0,
-            children: null != m ? m : d.default.Messages.GENERIC_CAPTCHA_HEADER
+            children: null != E ? E : p.default.Messages.GENERIC_CAPTCHA_HEADER
           }), (0, a.jsx)("div", {
-            children: null != y ? y : d.default.Messages.GENERIC_CAPTCHA_DESCRIPTION
+            children: null != m ? m : p.default.Messages.GENERIC_CAPTCHA_DESCRIPTION
           }), (0, a.jsx)("div", {
             className: l.captchaContainer,
-            children: (0, a.jsx)(c.default, {
+            children: (0, a.jsx)(s.default, {
               onVerify: e => {
-                R(), n(e, E), t()
+                y(), n(e, v), t()
               },
               ...C
             })

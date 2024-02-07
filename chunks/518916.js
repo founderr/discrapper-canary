@@ -1,65 +1,65 @@
 "use strict";
 n.r(t), n.d(t, {
   socket: function() {
-    return g
-  },
-  localPresenceState: function() {
     return m
   },
+  localPresenceState: function() {
+    return h
+  },
   localVoiceState: function() {
-    return E
+    return v
   },
   localLobbyVoiceStates: function() {
-    return p
+    return E
   }
 });
-var i = n("913144"),
-  s = n("49671"),
+var s = n("913144"),
+  i = n("49671"),
   r = n("605250"),
   a = n("271938"),
   o = n("599110"),
-  l = n("35468"),
+  d = n("35468"),
   u = n("773336"),
-  d = n("447214"),
-  c = n("413196"),
-  f = n("764867"),
-  _ = n("292892");
-let h = new r.default("ConnectionStore"),
-  g = new d.default,
-  m = new f.default(g),
-  E = new _.default(g),
-  p = new c.default(g);
-g.handleIdentify = () => {
+  l = n("447214"),
+  f = n("413196"),
+  _ = n("764867"),
+  c = n("292892");
+let g = new r.default("ConnectionStore"),
+  m = new l.default,
+  h = new _.default(m),
+  v = new c.default(m),
+  E = new f.default(m);
+m.handleIdentify = () => {
   let e = a.default.getToken();
-  return (h.verbose("handleIdentify called", {
+  return (g.verbose("handleIdentify called", {
     hasToken: null != e
   }), null == e) ? null : {
     token: e,
     properties: o.default.getSuperProperties(),
-    presence: m.getState()
+    presence: h.getState()
   }
-}, (0, u.isDesktop)() && s.default.remotePowerMonitor.on("resume", () => {
-  g.expeditedHeartbeat(5e3, "power monitor resumed")
-}), l.default.addOfflineCallback(() => {
-  g.networkStateChange(15e3, "network detected offline.", !1)
-}), l.default.addOnlineCallback(() => {
-  g.networkStateChange(5e3, "network detected online.")
-}), g.on("disconnect", e => {
+}, (0, u.isDesktop)() && i.default.remotePowerMonitor.on("resume", () => {
+  m.expeditedHeartbeat(5e3, "power monitor resumed")
+}), d.default.addOfflineCallback(() => {
+  m.networkStateChange(15e3, "network detected offline.", !1)
+}), d.default.addOnlineCallback(() => {
+  m.networkStateChange(5e3, "network detected online.")
+}), m.on("disconnect", e => {
   let {
     code: t,
     reason: n
   } = e;
-  i.default.dispatch({
+  s.default.dispatch({
     type: "CONNECTION_CLOSED",
     code: t,
     reason: n
   })
-}), g.on("close", e => {
+}), m.on("close", e => {
   let {
     code: t,
     reason: n
   } = e;
-  i.default.dispatch({
+  s.default.dispatch({
     type: "CONNECTION_INTERRUPTED",
     code: t,
     reason: n

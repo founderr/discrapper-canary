@@ -18,8 +18,8 @@ var s = n("37983"),
   C = n("865343"),
   p = n("148337"),
   m = n("701909"),
-  E = n("124297"),
-  g = n("497880"),
+  g = n("124297"),
+  E = n("497880"),
   S = n("587904"),
   A = n("49111"),
   _ = n("782340"),
@@ -57,7 +57,7 @@ let N = a.memo(function(e) {
       className: i(T.ephemeralAccessories, {
         [T.compact]: a
       }),
-      children: (0, s.jsx)(E.default, {
+      children: (0, s.jsx)(g.default, {
         message: t,
         onDeleteMessage: l,
         children: (0, s.jsx)(d.Text, {
@@ -81,13 +81,13 @@ var v = a.memo(function(e) {
     message: d,
     children: p,
     content: m,
-    onUpdate: E
+    onUpdate: g
   } = e, A = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = a.useRef(!1), L = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), x = a.useCallback(() => {
     (null == L ? void 0 : L.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
   }, [d, L]);
   return a.useLayoutEffect(() => {
-    v.current ? null != E && E() : v.current = !0
-  }, [E, d.content, m, A, p]), (0, s.jsxs)("div", {
+    v.current ? null != g && g() : v.current = !0
+  }, [g, d.content, m, A, p]), (0, s.jsxs)("div", {
     id: (0, C.getMessageContentId)(d),
     className: i(l, M.markup, {
       [I.messageContent]: !0,
@@ -95,7 +95,7 @@ var v = a.memo(function(e) {
       [T.blockedEdit]: null == L ? void 0 : L.isBlockedEdit,
       [T.blockedSend]: !(null == L ? void 0 : L.isBlockedEdit)
     }),
-    children: [null != p ? p : (0, g.getContent)(d, m), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, s.jsxs)(s.Fragment, {
+    children: [null != p ? p : (0, E.getContent)(d, m), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, s.jsxs)(s.Fragment, {
       children: [" ", (0, s.jsx)(S.default, {
         timestamp: d.timestamp,
         isEdited: !0,
@@ -112,4 +112,4 @@ var v = a.memo(function(e) {
       onDismiss: x
     })]
   })
-}, g.memoizeMessageProps)
+}, E.memoizeMessageProps)

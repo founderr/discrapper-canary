@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   useCommunicationDisabledNoticeStore: function() {
-    return d
+    return c
   },
   clearCommunicationDisabledNotice: function() {
-    return c
+    return d
   }
 }), n("222007");
 var i = n("308503"),
-  s = n("16470"),
-  r = n("861907"),
+  r = n("16470"),
+  s = n("861907"),
   a = n("95410"),
   o = n("903639");
-let l = (0, r.default)((e, t) => ({
+let l = (0, s.default)((e, t) => ({
     notificationDismissedInGuilds: function() {
       var e;
       let t = null !== (e = a.default.get(o.DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY)) && void 0 !== e ? e : [];
@@ -33,11 +33,11 @@ let l = (0, r.default)((e, t) => ({
   })),
   u = (0, i.default)(l);
 
-function d(e) {
-  let [t, n] = u(e => [e.notificationDismissedInGuilds, e.dismissNotification], s.default);
+function c(e) {
+  let [t, n] = u(e => [e.notificationDismissedInGuilds, e.dismissNotification], r.default);
   return [!t.has(e), n]
 }
 
-function c(e) {
+function d(e) {
   return l.getState().resetNotification(e)
 }

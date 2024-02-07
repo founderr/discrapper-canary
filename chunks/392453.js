@@ -20,8 +20,8 @@ var l = n("917351"),
   m = n("619443"),
   E = n("177589"),
   g = n("67139"),
-  S = n("671071"),
-  I = n("322631"),
+  I = n("671071"),
+  S = n("322631"),
   _ = n("947297"),
   N = n("373469"),
   T = n("42203"),
@@ -68,7 +68,7 @@ function W(e) {
   let t = B[e];
   return null == t && (B = {
     ...B,
-    [e]: new I.default({
+    [e]: new S.default({
       url: e
     })
   }), B[e]
@@ -79,7 +79,7 @@ function Z(e) {
 }
 
 function z(e) {
-  if ((0, d.default)(e)) return S.SpotifyApplication;
+  if ((0, d.default)(e)) return I.SpotifyApplication;
   let t = null != e.application_id ? C.default.getApplication(e.application_id) : null;
   return null != t ? t : (0, c.default)(e) ? K(e.name) : (0, f.default)(e) && null != e.url ? W(e.url) : (null != e.application_id && Z(e.application_id), t)
 }
@@ -117,14 +117,14 @@ function q(e, t, n) {
       }), null == d) continue;
     let c = (0, E.default)(d);
     if (null == c) continue;
-    G = c === S.SPOTIFY_APPLICATION_ID;
+    G = c === I.SPOTIFY_APPLICATION_ID;
     let f = function(e) {
         let t = C.default.getApplication(e);
         return null != t ? t : "string" != typeof e ? (new(0, p.default)("NowPlayingViewStore").error("Unknown type for applicationId: ".concat(typeof e, ", value: ").concat(e), {
           tags: {
             source: "ACTIVITIES"
           }
-        }), null) : e === S.SPOTIFY_APPLICATION_ID ? S.SpotifyApplication : e.startsWith(_.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(_.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(I.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(I.TWITCH_APPLICATION_ID_PREFIX.length)) : (Z(e), null)
+        }), null) : e === I.SPOTIFY_APPLICATION_ID ? I.SpotifyApplication : e.startsWith(_.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(_.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(S.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(S.TWITCH_APPLICATION_ID_PREFIX.length)) : (Z(e), null)
       }(c),
       m = null === (l = d.timestamps) || void 0 === l ? void 0 : l.start;
     if ((0, u.default)(d)) {

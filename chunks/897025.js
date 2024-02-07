@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   TaskFactory: function() {
-    return i
+    return o
   }
 });
 var r = n("732115");
-class i {
+class o {
   create(e) {
     let t = this.freeTasks,
       n = t.length ? t.pop() : new r.RawTask(this.onError, e => t[t.length] = e);

@@ -1,91 +1,91 @@
 "use strict";
 n.r(t), n.d(t, {
   useNumberFieldState: function() {
-    return s
+    return i
   }
 }), n("222007");
 var r = n("679750"),
-  i = n("546262"),
-  o = n("884691");
+  o = n("546262"),
+  a = n("884691");
 
-function s(e) {
+function i(e) {
   let {
     minValue: t,
     maxValue: n,
-    step: s,
+    step: i,
     formatOptions: c,
-    value: u,
-    defaultValue: l,
+    value: l,
+    defaultValue: u,
     onChange: d,
-    locale: f,
-    isDisabled: p,
+    locale: p,
+    isDisabled: f,
     isReadOnly: h
-  } = e, [v, g] = (0, r.useControlledState)(u, isNaN(l) ? NaN : l, d), [b, m] = (0, o.useState)(() => isNaN(v) ? "" : new(0, i.NumberFormatter)(f, c).format(v)), y = (0, o.useMemo)(() => new i.NumberParser(f, c), [f, c]), x = (0, o.useMemo)(() => y.getNumberingSystem(b), [y, b]), w = (0, o.useMemo)(() => new i.NumberFormatter(f, {
+  } = e, [m, v] = (0, r.useControlledState)(l, isNaN(u) ? NaN : u, d), [g, y] = (0, a.useState)(() => isNaN(m) ? "" : new(0, o.NumberFormatter)(p, c).format(m)), b = (0, a.useMemo)(() => new o.NumberParser(p, c), [p, c]), x = (0, a.useMemo)(() => b.getNumberingSystem(g), [b, g]), S = (0, a.useMemo)(() => new o.NumberFormatter(p, {
     ...c,
     numberingSystem: x
-  }), [f, c, x]), S = (0, o.useMemo)(() => w.resolvedOptions(), [w]), k = (0, o.useCallback)(e => isNaN(e) || null === e ? "" : w.format(e), [w]), E = isNaN(s) ? 1 : s;
-  "percent" === S.style && isNaN(s) && (E = .01);
-  let [_, M] = (0, o.useState)(v), [D, C] = (0, o.useState)(f), [P, T] = (0, o.useState)(c);
-  (!Object.is(v, _) || f !== D || c !== P) && (m(k(v)), M(v), C(f), T(c));
-  let A = (0, o.useMemo)(() => y.parse(b), [y, b]),
-    R = (e, i) => {
-      if (isNaN(A)) {
-        let e = isNaN(i) ? 0 : i;
-        return (0, r.snapValueToStep)(e, t, n, E)
+  }), [p, c, x]), w = (0, a.useMemo)(() => S.resolvedOptions(), [S]), D = (0, a.useCallback)(e => isNaN(e) || null === e ? "" : S.format(e), [S]), C = isNaN(i) ? 1 : i;
+  "percent" === w.style && isNaN(i) && (C = .01);
+  let [k, P] = (0, a.useState)(m), [E, T] = (0, a.useState)(p), [M, R] = (0, a.useState)(c);
+  (!Object.is(m, k) || p !== E || c !== M) && (y(D(m)), P(m), T(p), R(c));
+  let I = (0, a.useMemo)(() => b.parse(g), [b, g]),
+    O = (e, o) => {
+      if (isNaN(I)) {
+        let e = isNaN(o) ? 0 : o;
+        return (0, r.snapValueToStep)(e, t, n, C)
       } {
-        let i = (0, r.snapValueToStep)(A, t, n, E);
-        return "+" === e && i > A || "-" === e && i < A ? i : (0, r.snapValueToStep)(a(e, A, E), t, n, E)
+        let o = (0, r.snapValueToStep)(I, t, n, C);
+        return "+" === e && o > I || "-" === e && o < I ? o : (0, r.snapValueToStep)(s(e, I, C), t, n, C)
       }
     },
-    I = (0, o.useMemo)(() => !p && !h && (isNaN(A) || isNaN(n) || (0, r.snapValueToStep)(A, t, n, E) > A || a("+", A, E) <= n), [p, h, t, n, E, A]),
-    O = (0, o.useMemo)(() => !p && !h && (isNaN(A) || isNaN(t) || (0, r.snapValueToStep)(A, t, n, E) < A || a("-", A, E) >= t), [p, h, t, n, E, A]);
+    A = (0, a.useMemo)(() => !f && !h && (isNaN(I) || isNaN(n) || (0, r.snapValueToStep)(I, t, n, C) > I || s("+", I, C) <= n), [f, h, t, n, C, I]),
+    L = (0, a.useMemo)(() => !f && !h && (isNaN(I) || isNaN(t) || (0, r.snapValueToStep)(I, t, n, C) < I || s("-", I, C) >= t), [f, h, t, n, C, I]);
   return {
-    validate: e => y.isValidPartialNumber(e, t, n),
+    validate: e => b.isValidPartialNumber(e, t, n),
     increment: () => {
-      let e = R("+", t);
-      e === v && m(k(e)), g(e)
+      let e = O("+", t);
+      e === m && y(D(e)), v(e)
     },
     incrementToMax: () => {
-      null != n && g((0, r.snapValueToStep)(n, t, n, E))
+      null != n && v((0, r.snapValueToStep)(n, t, n, C))
     },
     decrement: () => {
-      let e = R("-", n);
-      e === v && m(k(e)), g(e)
+      let e = O("-", n);
+      e === m && y(D(e)), v(e)
     },
     decrementToMin: () => {
-      null != t && g(t)
+      null != t && v(t)
     },
-    canIncrement: I,
-    canDecrement: O,
+    canIncrement: A,
+    canDecrement: L,
     minValue: t,
     maxValue: n,
-    numberValue: A,
-    setNumberValue: g,
-    setInputValue: m,
-    inputValue: b,
+    numberValue: I,
+    setNumberValue: v,
+    setInputValue: y,
+    inputValue: g,
     commit: () => {
       let e;
-      if (!b.length) {
-        g(NaN), m(void 0 === u ? "" : k(v));
+      if (!g.length) {
+        v(NaN), y(void 0 === l ? "" : D(m));
         return
       }
-      if (isNaN(A)) {
-        m(k(v));
+      if (isNaN(I)) {
+        y(D(m));
         return
       }
-      e = isNaN(s) ? (0, r.clamp)(A, t, n) : (0, r.snapValueToStep)(A, t, n, s), g(e = y.parse(k(e))), m(k(void 0 === u ? e : v))
+      e = isNaN(i) ? (0, r.clamp)(I, t, n) : (0, r.snapValueToStep)(I, t, n, i), v(e = b.parse(D(e))), y(D(void 0 === l ? e : m))
     }
   }
 }
 
-function a(e, t, n) {
+function s(e, t, n) {
   let r = "+" === e ? t + n : t - n;
   if (t % 1 != 0 || n % 1 != 0) {
-    let i = t.toString().split("."),
-      o = n.toString().split("."),
-      s = i[1] && i[1].length || 0,
-      a = o[1] && o[1].length || 0,
-      c = Math.pow(10, Math.max(s, a));
+    let o = t.toString().split("."),
+      a = n.toString().split("."),
+      i = o[1] && o[1].length || 0,
+      s = a[1] && a[1].length || 0,
+      c = Math.pow(10, Math.max(i, s));
     t = Math.round(t * c), n = Math.round(n * c), r = ("+" === e ? t + n : t - n) / c
   }
   return r

@@ -5,42 +5,42 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("37983"),
-  s = n("884691"),
-  r = n("837443"),
+  r = n("884691"),
+  s = n("837443"),
   a = n("92730");
 let o = e => "".concat(e.toFixed(0), "%"),
-  l = s.forwardRef(function(e, t) {
+  l = r.forwardRef(function(e, t) {
     let {
       value: n,
       minValue: l = 0,
       maxValue: u = 100,
-      onChange: d,
-      renderValue: c = o,
+      onChange: c,
+      renderValue: d = o,
       "aria-label": f
-    } = e, _ = s.useRef(null);
-    return s.useImperativeHandle(t, () => ({
+    } = e, E = r.useRef(null);
+    return r.useImperativeHandle(t, () => ({
       focus: () => {
         var e;
-        return null === (e = _.current) || void 0 === e ? void 0 : e.focus()
+        return null === (e = E.current) || void 0 === e ? void 0 : e.focus()
       },
       blur: () => {
         var e;
-        return null === (e = _.current) || void 0 === e ? void 0 : e.blur()
+        return null === (e = E.current) || void 0 === e ? void 0 : e.blur()
       },
       activate: () => !1
     }), []), (0, i.jsx)("div", {
       className: a.sliderContainer,
-      children: (0, i.jsx)(r.Slider, {
-        ref: _,
+      children: (0, i.jsx)(s.Slider, {
+        ref: E,
         mini: !0,
         handleSize: 16,
         className: a.slider,
         initialValue: n,
         minValue: l,
         maxValue: u,
-        onValueChange: d,
-        asValueChanges: d,
-        onValueRender: c,
+        onValueChange: c,
+        asValueChanges: c,
+        onValueRender: d,
         orientation: "horizontal",
         "aria-label": f
       })

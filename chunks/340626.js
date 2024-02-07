@@ -47,9 +47,9 @@ n.r(t), n.d(t, {
         query: t,
         categoryId: a
       });
-      let S = Object.assign({}, E, n.filters),
-        I = Object.keys(S),
-        _ = I.map(e => "".concat(e).concat(S[e]));
+      let I = Object.assign({}, E, n.filters),
+        S = Object.keys(I),
+        _ = S.map(e => "".concat(e).concat(I[e]));
       a !== C.DISCOVERY_ALL_CATEGORIES_ID && _.push("(primary_category_id=".concat(a, " OR categories.id=").concat(a, ")"));
       let N = _.join(" AND ");
       try {
@@ -110,10 +110,10 @@ n.r(t), n.d(t, {
     }
   },
   getSearchResultsCount: function() {
-    return S
+    return I
   },
   fetchPopularGuildsForCategory: function() {
-    return I
+    return S
   },
   fetchFeaturedOrPopularGuilds: function() {
     return _
@@ -160,7 +160,7 @@ function g() {
   }))
 }
 
-function S(e, t) {
+function I(e, t) {
   let n = d.default.getSearchIndex();
   if (null == n) return;
   let l = Object.assign({}, E, t),
@@ -201,7 +201,7 @@ function S(e, t) {
     })
   }
 }
-async function I(e) {
+async function S(e) {
   o.default.dispatch({
     type: "GUILD_DISCOVERY_POPULAR_FETCH_START",
     categoryId: e

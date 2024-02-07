@@ -1,87 +1,87 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return c
   }
 }), n("222007");
-var i = n("37983"),
-  s = n("884691"),
+var s = n("37983"),
+  i = n("884691"),
   r = n("316693"),
   a = n("685698"),
   o = n("577776"),
-  l = n("945330"),
+  d = n("945330"),
   u = n("991170"),
-  d = n("978970"),
-  c = n("782340"),
-  f = n("190148");
+  l = n("978970"),
+  f = n("782340"),
+  _ = n("190148");
 
-function _(e) {
+function c(e) {
   let {
     application: t,
     permissions: n,
-    deniedPermissions: _,
-    onPermissionsChange: h,
-    guild: g
-  } = e, [m, E] = s.useState(u.default.NONE);
-  s.useEffect(() => {
-    h(!0, n), E(r.default.invert(g.permissions)), h(!1, r.default.invert(g.permissions))
-  }, [g, h, n]);
-  let p = d.OrderedPermissions.filter(e => r.default.has(n, e)),
-    v = p.filter(e => !r.default.has(m, e)).map(e => {
-      let t = (0, d.getPermissionName)(e),
-        n = !r.default.has(_, e);
-      return (0, i.jsx)("li", {
-        className: f.permission,
-        children: (0, i.jsx)(a.Checkbox, {
+    deniedPermissions: c,
+    onPermissionsChange: g,
+    guild: m
+  } = e, [h, v] = i.useState(u.default.NONE);
+  i.useEffect(() => {
+    g(!0, n), v(r.default.invert(m.permissions)), g(!1, r.default.invert(m.permissions))
+  }, [m, g, n]);
+  let E = l.OrderedPermissions.filter(e => r.default.has(n, e)),
+    p = E.filter(e => !r.default.has(h, e)).map(e => {
+      let t = (0, l.getPermissionName)(e),
+        n = !r.default.has(c, e);
+      return (0, s.jsx)("li", {
+        className: _.permission,
+        children: (0, s.jsx)(a.Checkbox, {
           value: n,
-          onChange: (t, n) => h(n, e),
+          onChange: (t, n) => g(n, e),
           type: a.Checkbox.Types.INVERTED,
-          children: (0, i.jsx)(o.Text, {
+          children: (0, s.jsx)(o.Text, {
             variant: "text-md/normal",
             children: t
           })
         })
       }, String(e))
     }),
-    S = p.filter(e => r.default.has(m, e)).map(e => {
-      let t = (0, d.getPermissionName)(e);
-      return (0, i.jsxs)("li", {
-        className: f.permission,
-        children: [(0, i.jsx)("div", {
-          className: f.disabledPermissionIcon,
-          children: (0, i.jsx)(l.default, {
-            className: f.icon
+    y = E.filter(e => r.default.has(h, e)).map(e => {
+      let t = (0, l.getPermissionName)(e);
+      return (0, s.jsxs)("li", {
+        className: _.permission,
+        children: [(0, s.jsx)("div", {
+          className: _.disabledPermissionIcon,
+          children: (0, s.jsx)(d.default, {
+            className: _.icon
           })
-        }), (0, i.jsx)(o.Text, {
+        }), (0, s.jsx)(o.Text, {
           variant: "text-md/normal",
           children: t
         })]
       }, String(e))
     });
-  return (0, i.jsxs)("div", {
-    className: f.botPermissions,
-    children: [(0, i.jsx)(o.Text, {
+  return (0, s.jsxs)("div", {
+    className: _.botPermissions,
+    children: [(0, s.jsx)(o.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
-      className: f.permissionsLabel,
-      children: c.default.Messages.OAUTH2_CONFIRM_BOT_PERMISSIONS.format({
+      className: _.permissionsLabel,
+      children: f.default.Messages.OAUTH2_CONFIRM_BOT_PERMISSIONS.format({
         applicationName: t.name,
-        guildName: g.name
+        guildName: m.name
       })
-    }), (0, i.jsx)("ul", {
-      className: f.permissionsList,
-      children: v
-    }), S.length > 0 ? (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(o.Text, {
+    }), (0, s.jsx)("ul", {
+      className: _.permissionsList,
+      children: p
+    }), y.length > 0 ? (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        className: f.disabledPermissionsLabel,
-        children: c.default.Messages.OAUTH2_DISABLED_PERMISSIONS.format({
+        className: _.disabledPermissionsLabel,
+        children: f.default.Messages.OAUTH2_DISABLED_PERMISSIONS.format({
           applicationName: t.name
         })
-      }), (0, i.jsx)("ul", {
-        className: f.permissionsList,
-        children: S
+      }), (0, s.jsx)("ul", {
+        className: _.permissionsList,
+        children: y
       })]
     }) : null]
   })

@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   SegmentedControl: function() {
-    return c
+    return d
   }
 });
 var i = n("37983"),
-  s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  r = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
   o = n("227645"),
   l = n("577776"),
   u = n("970975");
 
-function d(e) {
+function c(e) {
   let {
     option: t,
     selected: n,
-    onClick: r,
-    look: d,
-    className: c,
+    onClick: s,
+    look: c,
+    className: d,
     selectedClassName: f
-  } = e, _ = {
+  } = e, E = {
     [function(e) {
       switch (e) {
         case "tab":
@@ -29,10 +29,10 @@ function d(e) {
         case "pill":
           return u.pillItemSelected
       }
-    }(d)]: n
+    }(c)]: n
   };
-  null != f && (_[f] = n);
-  let h = s.useCallback(e => r(t, e), [r, t]);
+  null != f && (E[f] = n);
+  let p = r.useCallback(e => s(t, e), [s, t]);
   return (0, i.jsx)(o.Clickable, {
     className: a(function(e) {
       switch (e) {
@@ -42,8 +42,8 @@ function d(e) {
         case "pill":
           return u.pillItem
       }
-    }(d), c, _),
-    onClick: h,
+    }(c), d, E),
+    onClick: p,
     children: (0, i.jsx)(l.Text, {
       variant: "text-sm/medium",
       color: "none",
@@ -52,27 +52,27 @@ function d(e) {
   })
 }
 
-function c(e) {
+function d(e) {
   let {
     options: t,
     value: n,
-    onChange: r,
+    onChange: s,
     look: o = "tab",
     className: l,
-    optionClassName: c,
+    optionClassName: d,
     selectedOptionClassName: f
-  } = e, _ = s.useCallback(e => {
+  } = e, E = r.useCallback(e => {
     var t;
-    let s = n === e.value;
-    return (0, i.jsx)(d, {
-      selected: s,
+    let r = n === e.value;
+    return (0, i.jsx)(c, {
+      selected: r,
       option: e,
       look: o,
-      onClick: r,
-      className: c,
+      onClick: s,
+      className: d,
       selectedClassName: f
     }, null !== (t = e.key) && void 0 !== t ? t : String(e.value))
-  }, [n, o, r, c, f]);
+  }, [n, o, s, d, f]);
   return (0, i.jsx)("div", {
     className: a(function(e) {
       switch (e) {
@@ -83,6 +83,6 @@ function c(e) {
           return u.pillContainer
       }
     }(o), l),
-    children: t.map(_)
+    children: t.map(E)
   })
 }

@@ -10,10 +10,10 @@ E.r(_), E.d(_, {
     return N
   },
   getCurrentlyInteractingAppContext: function() {
-    return O
+    return A
   },
   AppWindowContextProvider: function() {
-    return A
+    return O
   },
   useAppContext: function() {
     return R
@@ -22,7 +22,7 @@ E.r(_), E.d(_, {
     return l
   },
   default: function() {
-    return L
+    return u
   }
 }), E("222007");
 var t = E("37983"),
@@ -52,7 +52,7 @@ function N(e) {
   return T.get(e)
 }
 
-function O() {
+function A() {
   let e = function() {
     var e;
     let _ = (0, a.getCurrentlyInteractingWindowId)();
@@ -61,7 +61,7 @@ function O() {
   return null != e ? e.appContext : null
 }
 
-function A(e) {
+function O(e) {
   let {
     appContext: _,
     renderWindow: E,
@@ -95,4 +95,4 @@ function R() {
 function l() {
   return o.useContext(s).windowDispatch
 }
-var L = s
+var u = s

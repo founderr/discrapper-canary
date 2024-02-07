@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("862205");
-let s = (0, i.createExperiment)({
+var s = n("862205");
+let i = (0, s.createExperiment)({
     kind: "user",
     id: "2023-08_explicit_media_redaction",
     label: "Explicit Media Redaction",
@@ -23,7 +23,7 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  r = (0, i.createExperiment)({
+  r = (0, s.createExperiment)({
     kind: "user",
     id: "2023-08_explicit_media_redaction_teen",
     label: "Explicit Media Redaction for Teens",
@@ -42,7 +42,7 @@ let s = (0, i.createExperiment)({
 function a() {
   let {
     enabled: e
-  } = s.getCurrentConfig({
+  } = i.getCurrentConfig({
     location: "686da2_1"
   }, {
     autoTrackExposure: !0
@@ -59,7 +59,7 @@ function a() {
 function o() {
   let {
     enabled: e
-  } = s.useExperiment({
+  } = i.useExperiment({
     location: "686da2_2"
   }, {
     autoTrackExposure: !0

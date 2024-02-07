@@ -4,12 +4,12 @@ l.r(t), l.d(t, {
     return s
   }
 }), l("222007");
-var a = l("773356"),
-  n = l("686298");
+var n = l("773356"),
+  a = l("686298");
 
 function s(e, t, l) {
-  let s = n.ApplicationStreamPresetValues[e];
-  for (let n of s)
-    if ((0, a.default)(e, n.resolution, n.fps, t, l)) return [n.resolution, n.fps];
+  let s = a.ApplicationStreamPresetValues[e];
+  for (let a of s)
+    if ((0, n.default)(e, a.resolution, a.fps, t, l)) return [a.resolution, a.fps];
   return null
 }

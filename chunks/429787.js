@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return c
+    return d
   }
 }), n("424973"), n("222007"), n("70102");
-var i, s, r = n("942367");
+var i, r, s = n("942367");
 
 function a(e, t) {
   return e.findIndex(e => t === e.key)
@@ -31,79 +31,79 @@ function u(e, t) {
   let n = e,
     i = [];
   for (let e = 0; e < t.length && null != n; e++) {
-    let s = t[e],
-      r = a(n, s);
-    if (r < 0 || r >= n.length) {
+    let r = t[e],
+      s = a(n, r);
+    if (s < 0 || s >= n.length) {
       let e = n[0];
       null != e && i.push(e.key);
       break
     }
-    i.push(s), n = n[r].children
+    i.push(r), n = n[s].children
   }
   return i
-}(s = i || (i = {})).UPDATE_ITEMS = "UPDATE_ITEMS", s.SET_FOCUS_PATH = "SET_FOCUS_PATH";
+}(r = i || (i = {})).UPDATE_ITEMS = "UPDATE_ITEMS", r.SET_FOCUS_PATH = "SET_FOCUS_PATH";
 
-function d(e) {
+function c(e) {
   let t = o(e),
     n = l(e);
   return null == n ? -1 : a(n, t)
 }
 
-function c(e, t) {
+function d(e, t) {
   switch (t.type) {
-    case r.ActionType.NAVIGATE_UP:
+    case s.ActionType.NAVIGATE_UP:
       return function(e, t) {
         let n = o(e),
           i = l(e);
         if (null == i) return e;
-        let s = a(i, n),
-          r = (s - 1) % i.length;
-        if (r < 0 && (r = i.length - 1), null == i[r]) return e;
+        let r = a(i, n),
+          s = (r - 1) % i.length;
+        if (s < 0 && (s = i.length - 1), null == i[s]) return e;
         let u = {
           ...e,
-          focusPath: [...e.focusPath.slice(0, -1), i[r].key]
+          focusPath: [...e.focusPath.slice(0, -1), i[s].key]
         };
         return {
           ...u,
-          focusIndex: d(u)
+          focusIndex: c(u)
         }
       }(e, 0);
-    case r.ActionType.NAVIGATE_DOWN:
+    case s.ActionType.NAVIGATE_DOWN:
       return function(e, t) {
         let n = o(e),
           i = l(e);
         if (null == i) return e;
-        let s = a(i, n),
-          r = (s + 1) % i.length;
-        if (null == i[r]) return e;
+        let r = a(i, n),
+          s = (r + 1) % i.length;
+        if (null == i[s]) return e;
         let u = {
           ...e,
-          focusPath: [...e.focusPath.slice(0, -1), i[r].key]
+          focusPath: [...e.focusPath.slice(0, -1), i[s].key]
         };
         return {
           ...u,
-          focusIndex: d(u)
+          focusIndex: c(u)
         }
       }(e, 0);
-    case r.ActionType.NAVIGATE_IN:
+    case s.ActionType.NAVIGATE_IN:
       return function(e, t) {
         var n;
         let i = o(e),
-          s = l(e);
-        if (null == s) return e;
-        let r = s[a(s, i)],
-          u = null == r ? void 0 : null === (n = r.children) || void 0 === n ? void 0 : n[0];
+          r = l(e);
+        if (null == r) return e;
+        let s = r[a(r, i)],
+          u = null == s ? void 0 : null === (n = s.children) || void 0 === n ? void 0 : n[0];
         if (null == u) return e;
-        let c = {
+        let d = {
           ...e,
           focusPath: [...e.focusPath, u.key]
         };
         return {
-          ...c,
-          focusIndex: d(c)
+          ...d,
+          focusIndex: c(d)
         }
       }(e, 0);
-    case r.ActionType.NAVIGATE_OUT:
+    case s.ActionType.NAVIGATE_OUT:
       return function(e, t) {
         if (e.focusPath.length <= 1) return e;
         let n = {
@@ -112,7 +112,7 @@ function c(e, t) {
         };
         return {
           ...n,
-          focusIndex: d(n)
+          focusIndex: c(n)
         }
       }(e, 0);
     case "UPDATE_ITEMS":
@@ -126,7 +126,7 @@ function c(e, t) {
         };
         return {
           ...i,
-          focusIndex: d(i)
+          focusIndex: c(i)
         }
       }(e, t);
     case "SET_FOCUS_PATH":
@@ -139,10 +139,10 @@ function c(e, t) {
         };
         return {
           ...i,
-          focusIndex: d(i)
+          focusIndex: c(i)
         }
       }(e, t);
-    case r.ActionType.SELECT_FOCUSED_ITEM:
+    case s.ActionType.SELECT_FOCUSED_ITEM:
       break;
     default:
       throw Error("Menu navigator was given an unhandled action ".concat(t.type))

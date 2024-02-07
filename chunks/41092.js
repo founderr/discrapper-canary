@@ -1,5 +1,5 @@
-var r, i;
-e = n.nmd(e), n("854508"), n("424973"), n("222007"), n("70102"), n("808653"), r = this, i = function(e, t) {
+var r, o;
+e = n.nmd(e), n("854508"), n("424973"), n("222007"), n("70102"), n("808653"), r = this, o = function(e, t) {
   "use strict";
 
   function n(e, t) {
@@ -17,7 +17,7 @@ e = n.nmd(e), n("854508"), n("424973"), n("222007"), n("70102"), n("808653"), r 
     for (var t = 1; t < arguments.length; t++) {
       var r = null != arguments[t] ? arguments[t] : {};
       t % 2 ? n(Object(r), !0).forEach(function(t) {
-        o(e, t, r[t])
+        u(e, t, r[t])
       }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : n(Object(r)).forEach(function(t) {
         Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t))
       })
@@ -25,15 +25,15 @@ e = n.nmd(e), n("854508"), n("424973"), n("222007"), n("70102"), n("808653"), r 
     return e
   }
 
-  function i(e) {
-    return (i = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+  function o(e) {
+    return (o = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
       return typeof e
     } : function(e) {
       return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
     })(e)
   }
 
-  function o(e, t, n) {
+  function u(e, t, n) {
     return t in e ? Object.defineProperty(e, t, {
       value: n,
       enumerable: !0,
@@ -42,27 +42,27 @@ e = n.nmd(e), n("854508"), n("424973"), n("222007"), n("70102"), n("808653"), r 
     }) : e[t] = n, e
   }
 
-  function s(e, t) {
+  function c(e, t) {
     return function(e) {
       if (Array.isArray(e)) return e
     }(e) || function(e, t) {
-      var n, r, i = e && ("undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"]);
-      if (null != i) {
-        var o = [],
-          s = !0,
+      var n, r, o = e && ("undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"]);
+      if (null != o) {
+        var u = [],
+          c = !0,
           a = !1;
         try {
-          for (i = i.call(e); !(s = (n = i.next()).done) && (o.push(n.value), !t || o.length !== t); s = !0);
+          for (o = o.call(e); !(c = (n = o.next()).done) && (u.push(n.value), !t || u.length !== t); c = !0);
         } catch (e) {
           a = !0, r = e
         } finally {
           try {
-            !s && null != i.return && i.return()
+            !c && null != o.return && o.return()
           } finally {
             if (a) throw r
           }
         }
-        return o
+        return u
       }
     }(e, t) || function(e, t) {
       if (e) {
@@ -83,15 +83,15 @@ e = n.nmd(e), n("854508"), n("424973"), n("222007"), n("70102"), n("808653"), r 
     return r
   }
 
-  function c() {}
+  function i() {}
 
-  function u() {}
-  u.resetWarningCache = c;
-  var l, d = function() {
-    function e(e, t, n, r, i, o) {
-      if ("SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED" !== o) {
-        var s = Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-        throw s.name = "Invariant Violation", s
+  function s() {}
+  s.resetWarningCache = i;
+  var l, f = function() {
+    function e(e, t, n, r, o, u) {
+      if ("SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED" !== u) {
+        var c = Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+        throw c.name = "Invariant Violation", c
       }
     }
 
@@ -118,60 +118,60 @@ e = n.nmd(e), n("854508"), n("424973"), n("222007"), n("70102"), n("808653"), r 
       oneOfType: t,
       shape: t,
       exact: t,
-      checkPropTypes: u,
-      resetWarningCache: c
+      checkPropTypes: s,
+      resetWarningCache: i
     };
     return n.PropTypes = n, n
   };
-  var f = (function(e) {
-      e.exports = d()
+  var p = (function(e) {
+      e.exports = f()
     }(l = {
       exports: {}
     }, l.exports), l.exports),
-    p = function(e) {
+    d = function(e) {
       var n = t.useRef(e);
       return t.useEffect(function() {
         n.current = e
       }, [e]), n.current
     },
-    h = function(e) {
-      return null !== e && "object" === i(e)
+    m = function(e) {
+      return null !== e && "object" === o(e)
     },
-    v = "[object Object]",
-    g = function e(t, n) {
-      if (!h(t) || !h(n)) return t === n;
+    y = "[object Object]",
+    h = function e(t, n) {
+      if (!m(t) || !m(n)) return t === n;
       var r = Array.isArray(t);
       if (r !== Array.isArray(n)) return !1;
-      var i = Object.prototype.toString.call(t) === v;
-      if (i !== (Object.prototype.toString.call(n) === v)) return !1;
-      if (!i && !r) return t === n;
-      var o = Object.keys(t),
-        s = Object.keys(n);
-      if (o.length !== s.length) return !1;
-      for (var a = {}, c = 0; c < o.length; c += 1) a[o[c]] = !0;
-      for (var u = 0; u < s.length; u += 1) a[s[u]] = !0;
+      var o = Object.prototype.toString.call(t) === y;
+      if (o !== (Object.prototype.toString.call(n) === y)) return !1;
+      if (!o && !r) return t === n;
+      var u = Object.keys(t),
+        c = Object.keys(n);
+      if (u.length !== c.length) return !1;
+      for (var a = {}, i = 0; i < u.length; i += 1) a[u[i]] = !0;
+      for (var s = 0; s < c.length; s += 1) a[c[s]] = !0;
       var l = Object.keys(a);
-      return l.length === o.length && l.every(function(r) {
+      return l.length === u.length && l.every(function(r) {
         return e(t[r], n[r])
       })
     },
-    b = function(e, t, n) {
-      return h(e) ? Object.keys(e).reduce(function(i, s) {
-        var a = !h(t) || !g(e[s], t[s]);
-        return n.includes(s) ? (a && console.warn("Unsupported prop change: options.".concat(s, " is not a mutable property.")), i) : a ? r(r({}, i || {}), {}, o({}, s, e[s])) : i
+    v = function(e, t, n) {
+      return m(e) ? Object.keys(e).reduce(function(o, c) {
+        var a = !m(t) || !h(e[c], t[c]);
+        return n.includes(c) ? (a && console.warn("Unsupported prop change: options.".concat(c, " is not a mutable property.")), o) : a ? r(r({}, o || {}), {}, u({}, c, e[c])) : o
       }, null) : null
     },
-    m = function(e) {
+    g = function(e) {
       var t;
-      if (null === e || h(t = e) && "function" == typeof t.elements && "function" == typeof t.createToken && "function" == typeof t.createPaymentMethod && "function" == typeof t.confirmCardPayment) return e;
+      if (null === e || m(t = e) && "function" == typeof t.elements && "function" == typeof t.createToken && "function" == typeof t.createPaymentMethod && "function" == typeof t.confirmCardPayment) return e;
       throw Error("Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.")
     },
-    y = function(e) {
-      if (h(t = e) && "function" == typeof t.then) return {
+    b = function(e) {
+      if (m(t = e) && "function" == typeof t.then) return {
         tag: "async",
-        stripePromise: Promise.resolve(e).then(m)
+        stripePromise: Promise.resolve(e).then(g)
       };
-      var t, n = m(e);
+      var t, n = g(e);
       return null === n ? {
         tag: "empty"
       } : {
@@ -179,68 +179,68 @@ e = n.nmd(e), n("854508"), n("424973"), n("222007"), n("70102"), n("808653"), r 
         stripe: n
       }
     },
-    x = t.createContext(null);
-  x.displayName = "ElementsContext";
-  var w = function(e, t) {
+    E = t.createContext(null);
+  E.displayName = "ElementsContext";
+  var S = function(e, t) {
       if (!e) throw Error("Could not find Elements context; You need to wrap the part of your app that ".concat(t, " in an <Elements> provider."));
       return e
     },
-    S = t.createContext(null);
-  S.displayName = "CartElementContext";
-  var k = function(e, t) {
+    C = t.createContext(null);
+  C.displayName = "CartElementContext";
+  var j = function(e, t) {
       if (!e) throw Error("Could not find Elements context; You need to wrap the part of your app that ".concat(t, " in an <Elements> provider."));
       return e
     },
-    E = function(e) {
+    w = function(e) {
       var n = e.stripe,
         r = e.options,
-        i = e.children,
-        o = t.useMemo(function() {
-          return y(n)
+        o = e.children,
+        u = t.useMemo(function() {
+          return b(n)
         }, [n]),
-        a = s(t.useState(null), 2),
-        c = a[0],
-        u = a[1],
-        l = s(t.useState(null), 2),
-        d = l[0],
-        f = l[1],
-        h = s(t.useState(function() {
+        a = c(t.useState(null), 2),
+        i = a[0],
+        s = a[1],
+        l = c(t.useState(null), 2),
+        f = l[0],
+        p = l[1],
+        m = c(t.useState(function() {
           return {
-            stripe: "sync" === o.tag ? o.stripe : null,
-            elements: "sync" === o.tag ? o.stripe.elements(r) : null
+            stripe: "sync" === u.tag ? u.stripe : null,
+            elements: "sync" === u.tag ? u.stripe.elements(r) : null
           }
         }), 2),
-        v = h[0],
-        g = h[1];
+        y = m[0],
+        h = m[1];
       t.useEffect(function() {
         var e = !0,
           t = function(e) {
-            g(function(t) {
+            h(function(t) {
               return t.stripe ? t : {
                 stripe: e,
                 elements: e.elements(r)
               }
             })
           };
-        return "async" !== o.tag || v.stripe ? "sync" === o.tag && !v.stripe && t(o.stripe) : o.stripePromise.then(function(n) {
+        return "async" !== u.tag || y.stripe ? "sync" === u.tag && !y.stripe && t(u.stripe) : u.stripePromise.then(function(n) {
             n && e && t(n)
           }),
           function() {
             e = !1
           }
-      }, [o, v, r]);
-      var m = p(n);
+      }, [u, y, r]);
+      var g = d(n);
       t.useEffect(function() {
-        null !== m && m !== n && console.warn("Unsupported prop change on Elements: You cannot change the `stripe` prop after setting it.")
-      }, [m, n]);
-      var w = p(r);
+        null !== g && g !== n && console.warn("Unsupported prop change on Elements: You cannot change the `stripe` prop after setting it.")
+      }, [g, n]);
+      var S = d(r);
       return t.useEffect(function() {
-        if (v.elements) {
-          var e = b(r, w, ["clientSecret", "fonts"]);
-          e && v.elements.update(e)
+        if (y.elements) {
+          var e = v(r, S, ["clientSecret", "fonts"]);
+          e && y.elements.update(e)
         }
-      }, [r, w, v.elements]), t.useEffect(function() {
-        var e = v.stripe;
+      }, [r, S, y.elements]), t.useEffect(function() {
+        var e = y.stripe;
         e && e._registerWrapper && e.registerAppInfo && (e._registerWrapper({
           name: "react-stripe-js",
           version: "2.1.2"
@@ -249,53 +249,53 @@ e = n.nmd(e), n("854508"), n("424973"), n("222007"), n("70102"), n("808653"), r 
           version: "2.1.2",
           url: "https://stripe.com/docs/stripe-js/react"
         }))
-      }, [v.stripe]), t.createElement(x.Provider, {
-        value: v
-      }, t.createElement(S.Provider, {
+      }, [y.stripe]), t.createElement(E.Provider, {
+        value: y
+      }, t.createElement(C.Provider, {
         value: {
-          cart: c,
-          setCart: u,
-          cartState: d,
-          setCartState: f
+          cart: i,
+          setCart: s,
+          cartState: f,
+          setCartState: p
         }
-      }, i))
+      }, o))
     };
-  E.propTypes = {
-    stripe: f.any,
-    options: f.object
+  w.propTypes = {
+    stripe: p.any,
+    options: p.object
   };
-  var _ = function(e) {
-      return w(t.useContext(x), e)
+  var O = function(e) {
+      return S(t.useContext(E), e)
     },
-    M = function(e) {
-      return k(t.useContext(S), e)
+    k = function(e) {
+      return j(t.useContext(C), e)
     },
-    D = function(e) {
-      return (0, e.children)(_("mounts <ElementsConsumer>"))
+    P = function(e) {
+      return (0, e.children)(O("mounts <ElementsConsumer>"))
     };
-  D.propTypes = {
-    children: f.func.isRequired
+  P.propTypes = {
+    children: p.func.isRequired
   };
-  var C = function(e, n, r) {
-      var i = !!r,
-        o = t.useRef(r);
+  var x = function(e, n, r) {
+      var o = !!r,
+        u = t.useRef(r);
       t.useEffect(function() {
-        o.current = r
+        u.current = r
       }, [r]), t.useEffect(function() {
-        if (!i || !e) return function() {};
+        if (!o || !e) return function() {};
         var t = function() {
-          o.current && o.current.apply(o, arguments)
+          u.current && u.current.apply(u, arguments)
         };
         return e.on(n, t),
           function() {
             e.off(n, t)
           }
-      }, [i, n, e, o])
+      }, [o, n, e, u])
     },
-    P = function(e, n) {
-      var r, i = "".concat((r = e).charAt(0).toUpperCase() + r.slice(1), "Element"),
+    A = function(e, n) {
+      var r, o = "".concat((r = e).charAt(0).toUpperCase() + r.slice(1), "Element"),
         Element = n ? function(e) {
-          _("mounts <".concat(i, ">")), M("mounts <".concat(i, ">"));
+          O("mounts <".concat(o, ">")), k("mounts <".concat(o, ">"));
           var n = e.id,
             r = e.className;
           return t.createElement("div", {
@@ -303,117 +303,117 @@ e = n.nmd(e), n("854508"), n("424973"), n("222007"), n("70102"), n("808653"), r 
             className: r
           })
         } : function(n) {
-          var r, o = n.id,
+          var r, u = n.id,
             a = n.className,
-            c = n.options,
-            u = void 0 === c ? {} : c,
+            i = n.options,
+            s = void 0 === i ? {} : i,
             l = n.onBlur,
-            d = n.onFocus,
-            f = n.onReady,
-            h = n.onChange,
-            v = n.onEscape,
-            g = n.onClick,
-            m = n.onLoadError,
-            y = n.onLoaderStart,
-            x = n.onNetworksChange,
-            w = n.onCheckout,
-            S = n.onLineItemClick,
-            k = n.onConfirm,
-            E = n.onCancel,
-            D = n.onShippingAddressChange,
-            P = n.onShippingRateChange,
-            T = _("mounts <".concat(i, ">")).elements,
-            A = s(t.useState(null), 2),
-            R = A[0],
-            I = A[1],
-            O = t.useRef(null),
-            j = t.useRef(null),
-            L = M("mounts <".concat(i, ">")),
-            N = L.setCart,
-            F = L.setCartState;
-          C(R, "blur", l), C(R, "focus", d), C(R, "escape", v), C(R, "click", g), C(R, "loaderror", m), C(R, "loaderstart", y), C(R, "networkschange", x), C(R, "lineitemclick", S), C(R, "confirm", k), C(R, "cancel", E), C(R, "shippingaddresschange", D), C(R, "shippingratechange", P), "cart" === e ? r = function(e) {
-            F(e), f && f(e)
-          } : f && (r = "expressCheckout" === e ? f : function() {
-            f(R)
-          }), C(R, "ready", r), C(R, "change", "cart" === e ? function(e) {
-            F(e), h && h(e)
-          } : h), C(R, "checkout", "cart" === e ? function(e) {
-            F(e), w && w(e)
-          } : w), t.useLayoutEffect(function() {
-            if (null === O.current && T && null !== j.current) {
-              var t = T.create(e, u);
-              "cart" === e && N && N(t), O.current = t, I(t), t.mount(j.current)
+            f = n.onFocus,
+            p = n.onReady,
+            m = n.onChange,
+            y = n.onEscape,
+            h = n.onClick,
+            g = n.onLoadError,
+            b = n.onLoaderStart,
+            E = n.onNetworksChange,
+            S = n.onCheckout,
+            C = n.onLineItemClick,
+            j = n.onConfirm,
+            w = n.onCancel,
+            P = n.onShippingAddressChange,
+            A = n.onShippingRateChange,
+            R = O("mounts <".concat(o, ">")).elements,
+            T = c(t.useState(null), 2),
+            _ = T[0],
+            N = T[1],
+            L = t.useRef(null),
+            B = t.useRef(null),
+            I = k("mounts <".concat(o, ">")),
+            M = I.setCart,
+            D = I.setCartState;
+          x(_, "blur", l), x(_, "focus", f), x(_, "escape", y), x(_, "click", h), x(_, "loaderror", g), x(_, "loaderstart", b), x(_, "networkschange", E), x(_, "lineitemclick", C), x(_, "confirm", j), x(_, "cancel", w), x(_, "shippingaddresschange", P), x(_, "shippingratechange", A), "cart" === e ? r = function(e) {
+            D(e), p && p(e)
+          } : p && (r = "expressCheckout" === e ? p : function() {
+            p(_)
+          }), x(_, "ready", r), x(_, "change", "cart" === e ? function(e) {
+            D(e), m && m(e)
+          } : m), x(_, "checkout", "cart" === e ? function(e) {
+            D(e), S && S(e)
+          } : S), t.useLayoutEffect(function() {
+            if (null === L.current && R && null !== B.current) {
+              var t = R.create(e, s);
+              "cart" === e && M && M(t), L.current = t, N(t), t.mount(B.current)
             }
-          }, [T, u, N]);
-          var B = p(u);
+          }, [R, s, M]);
+          var F = d(s);
           return t.useEffect(function() {
-            if (O.current) {
-              var e = b(u, B, ["paymentRequest"]);
-              e && O.current.update(e)
+            if (L.current) {
+              var e = v(s, F, ["paymentRequest"]);
+              e && L.current.update(e)
             }
-          }, [u, B]), t.useLayoutEffect(function() {
+          }, [s, F]), t.useLayoutEffect(function() {
             return function() {
-              if (O.current && "function" == typeof O.current.destroy) try {
-                O.current.destroy(), O.current = null
+              if (L.current && "function" == typeof L.current.destroy) try {
+                L.current.destroy(), L.current = null
               } catch (e) {}
             }
           }, []), t.createElement("div", {
-            id: o,
+            id: u,
             className: a,
-            ref: j
+            ref: B
           })
         };
       return Element.propTypes = {
-        id: f.string,
-        className: f.string,
-        onChange: f.func,
-        onBlur: f.func,
-        onFocus: f.func,
-        onReady: f.func,
-        onEscape: f.func,
-        onClick: f.func,
-        onLoadError: f.func,
-        onLoaderStart: f.func,
-        onNetworksChange: f.func,
-        onCheckout: f.func,
-        onLineItemClick: f.func,
-        onConfirm: f.func,
-        onCancel: f.func,
-        onShippingAddressChange: f.func,
-        onShippingRateChange: f.func,
-        options: f.object
-      }, Element.displayName = i, Element.__elementType = e, Element
+        id: p.string,
+        className: p.string,
+        onChange: p.func,
+        onBlur: p.func,
+        onFocus: p.func,
+        onReady: p.func,
+        onEscape: p.func,
+        onClick: p.func,
+        onLoadError: p.func,
+        onLoaderStart: p.func,
+        onNetworksChange: p.func,
+        onCheckout: p.func,
+        onLineItemClick: p.func,
+        onConfirm: p.func,
+        onCancel: p.func,
+        onShippingAddressChange: p.func,
+        onShippingRateChange: p.func,
+        options: p.object
+      }, Element.displayName = o, Element.__elementType = e, Element
     },
-    T = "undefined" == typeof window,
-    A = P("auBankAccount", T),
-    R = P("card", T),
-    I = P("cardNumber", T),
-    O = P("cardExpiry", T),
-    j = P("cardCvc", T),
-    L = P("fpxBank", T),
-    N = P("iban", T),
-    F = P("idealBank", T),
-    B = P("p24Bank", T),
-    z = P("epsBank", T),
-    K = P("payment", T),
-    V = P("expressCheckout", T),
-    U = P("paymentRequestButton", T),
-    q = P("linkAuthentication", T),
-    H = P("address", T),
-    G = P("shippingAddress", T),
-    W = P("cart", T),
-    Z = P("paymentMethodMessaging", T),
-    Y = P("affirmMessage", T),
-    X = P("afterpayClearpayMessage", T);
-  e.AddressElement = H, e.AffirmMessageElement = Y, e.AfterpayClearpayMessageElement = X, e.AuBankAccountElement = A, e.CardCvcElement = j, e.CardElement = R, e.CardExpiryElement = O, e.CardNumberElement = I, e.CartElement = W, e.Elements = E, e.ElementsConsumer = D, e.EpsBankElement = z, e.ExpressCheckoutElement = V, e.FpxBankElement = L, e.IbanElement = N, e.IdealBankElement = F, e.LinkAuthenticationElement = q, e.P24BankElement = B, e.PaymentElement = K, e.PaymentMethodMessagingElement = Z, e.PaymentRequestButtonElement = U, e.ShippingAddressElement = G, e.useCartElement = function() {
-    return M("calls useCartElement()").cart
+    R = "undefined" == typeof window,
+    T = A("auBankAccount", R),
+    _ = A("card", R),
+    N = A("cardNumber", R),
+    L = A("cardExpiry", R),
+    B = A("cardCvc", R),
+    I = A("fpxBank", R),
+    M = A("iban", R),
+    D = A("idealBank", R),
+    F = A("p24Bank", R),
+    U = A("epsBank", R),
+    W = A("payment", R),
+    q = A("expressCheckout", R),
+    Y = A("paymentRequestButton", R),
+    V = A("linkAuthentication", R),
+    J = A("address", R),
+    $ = A("shippingAddress", R),
+    z = A("cart", R),
+    G = A("paymentMethodMessaging", R),
+    H = A("affirmMessage", R),
+    K = A("afterpayClearpayMessage", R);
+  e.AddressElement = J, e.AffirmMessageElement = H, e.AfterpayClearpayMessageElement = K, e.AuBankAccountElement = T, e.CardCvcElement = B, e.CardElement = _, e.CardExpiryElement = L, e.CardNumberElement = N, e.CartElement = z, e.Elements = w, e.ElementsConsumer = P, e.EpsBankElement = U, e.ExpressCheckoutElement = q, e.FpxBankElement = I, e.IbanElement = M, e.IdealBankElement = D, e.LinkAuthenticationElement = V, e.P24BankElement = F, e.PaymentElement = W, e.PaymentMethodMessagingElement = G, e.PaymentRequestButtonElement = Y, e.ShippingAddressElement = $, e.useCartElement = function() {
+    return k("calls useCartElement()").cart
   }, e.useCartElementState = function() {
-    return M("calls useCartElementState()").cartState
+    return k("calls useCartElementState()").cartState
   }, e.useElements = function() {
-    return _("calls useElements()").elements
+    return O("calls useElements()").elements
   }, e.useStripe = function() {
-    return _("calls useStripe()").stripe
+    return O("calls useStripe()").stripe
   }, Object.defineProperty(e, "__esModule", {
     value: !0
   })
-}, "object" == typeof t && void 0 !== e ? i(t, n("884691")) : "function" == typeof define && define.amd ? define(["exports", "react"], i) : i((r = r || self).ReactStripe = {}, r.React)
+}, "object" == typeof t && void 0 !== e ? o(t, n("884691")) : "function" == typeof define && define.amd ? define(["exports", "react"], o) : o((r = r || self).ReactStripe = {}, r.React)

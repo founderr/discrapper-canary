@@ -1,17 +1,17 @@
 "use strict";
-var r = n("366400"),
-  i = n("648352"),
-  o = n("812095"),
-  s = n("331543"),
-  a = n("16662"),
-  c = a(),
-  u = n("60426"),
-  l = o("Array.prototype.slice"),
-  d = function(e, t) {
-    return i(e), c.apply(e, l(arguments, 1))
+var r = s("366400"),
+  i = s("648352"),
+  n = s("812095"),
+  c = s("331543"),
+  o = s("16662"),
+  f = o(),
+  u = s("60426"),
+  a = n("Array.prototype.slice"),
+  d = function(t, e) {
+    return i(t), f.apply(t, a(arguments, 1))
   };
 r(d, {
-  getPolyfill: a,
-  implementation: s,
+  getPolyfill: o,
+  implementation: c,
   shim: u
-}), e.exports = d
+}), t.exports = d

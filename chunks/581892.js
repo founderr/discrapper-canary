@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var i = n("446674"),
-  s = n("913144"),
-  r = n("599110"),
+  r = n("913144"),
+  s = n("599110"),
   a = n("180524"),
   o = n("49111");
 let l = {
@@ -28,18 +28,18 @@ class u extends i.default.DeviceSettingsStore {
     let {
       state: t,
       permissionType: n
-    } = e, i = l.permissionStates, s = i[n];
-    i[n] = t, s !== t && r.default.track(o.AnalyticEvents.PERMISSIONS_ACKED, {
+    } = e, i = l.permissionStates, r = i[n];
+    i[n] = t, r !== t && s.default.track(o.AnalyticEvents.PERMISSIONS_ACKED, {
       type: n,
       action: t,
-      previous_action: null != s ? s : a.NativePermissionStates.NONE
+      previous_action: null != r ? r : a.NativePermissionStates.NONE
     })
   }
   constructor() {
-    super(s.default, {
+    super(r.default, {
       SET_NATIVE_PERMISSION: e => this.handleSetNativePermission(e)
     })
   }
 }
 u.displayName = "NativePermissionStore", u.persistKey = "NativePermissionsStore";
-var d = u
+var c = u

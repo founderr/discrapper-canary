@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
 let i = new class e {
@@ -17,4 +17,4 @@ let i = new class e {
     return !1
   }
 };
-var s = i
+var r = i

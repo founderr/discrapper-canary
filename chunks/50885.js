@@ -13,12 +13,12 @@ E.r(_), E.d(_, {
 var t, o, n, r, a, i, I, s, T = E("627445"),
   S = E.n(T),
   N = E("817792"),
-  O = E("872717"),
-  A = E("95410"),
+  A = E("872717"),
+  O = E("95410"),
   R = E("115718"),
   l = E("773336"),
-  L = E("49111"),
-  u = E("446825").Buffer;
+  u = E("49111"),
+  L = E("446825").Buffer;
 let C = window.DiscordNative,
   D = ["jpg", "jpeg", "png"],
   c = null,
@@ -77,7 +77,7 @@ var g = {
     try {
       e = this.requireModule("discord_overlay2")
     } catch (e) {}
-    e && e.reset && e.reset(), e && e.disconnectAllProcesses && e.destroyHostProcess && (e.disconnectAllProcesses(), e.destroyHostProcess()), C.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== A.default.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) && this.supportsFeature(L.NativeFeatures.USER_DATA_CACHE) && C.userDataCache.cacheUserData(A.default.stringify())
+    e && e.reset && e.reset(), e && e.disconnectAllProcesses && e.destroyHostProcess && (e.disconnectAllProcesses(), e.destroyHostProcess()), C.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== O.default.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) && this.supportsFeature(u.NativeFeatures.USER_DATA_CACHE) && C.userDataCache.cacheUserData(O.default.stringify())
   },
   inputEventRegister(e, _, E, t) {
     !Array.isArray(_) && (_ = _.toJS()), this.getDiscordUtils().inputEventRegister(parseInt(e), _.map(e => {
@@ -198,7 +198,7 @@ var g = {
   async copyImage(e) {
     S(l.isPlatformEmbedded, "Copy image method called outside native app"), S("function" == typeof C.clipboard.copyImage, "Copy image not supported");
     let _ = await m(e);
-    C.clipboard.copyImage(u.from(_), e)
+    C.clipboard.copyImage(L.from(_), e)
   },
   async saveImage(e) {
     var _;
@@ -206,7 +206,7 @@ var g = {
     let E = new URL(e),
       t = null !== (_ = E.pathname.split("/").pop()) && void 0 !== _ ? _ : "unknown",
       o = await m(e),
-      n = u.from(o);
+      n = L.from(o);
     C.fileManager.saveWithDialog(n, t)
   },
   async saveFile(e, _) {
@@ -215,7 +215,7 @@ var g = {
     let t = new URL(e),
       o = null !== (E = null != _ ? _ : t.pathname.split("/").pop()) && void 0 !== E ? E : "unknown",
       n = await m(e),
-      r = u.from(n);
+      r = L.from(n);
     C.fileManager.saveWithDialog(r, o)
   },
   canCopyImage() {
@@ -370,7 +370,7 @@ var g = {
     l.isPlatformEmbedded && null != C.remoteApp.relaunch && C.remoteApp.relaunch()
   },
   makeChunkedRequest(e, _, E) {
-    let t = "".concat(O.default.getAPIBaseURL()).concat(e);
+    let t = "".concat(A.default.getAPIBaseURL()).concat(e);
     if (!l.isPlatformEmbedded) return Promise.reject(Error("Not embedded!"));
     if (null == C.http) return Promise.reject(Error("HTTP module not available"));
     let {

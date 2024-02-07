@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
-var i = n("666038");
-class s extends i.default {
+var r = n("666038");
+class i extends r.default {
   static createFromServer(e, t) {
-    return new s({
+    return new i({
       id: e.id,
       subscriptionId: e.subscription_id,
       premiumGuildSubscription: null != e.premium_guild_subscription ? {
@@ -29,4 +29,4 @@ class s extends i.default {
     super(), this.id = e.id, this.subscriptionId = e.subscriptionId, this.premiumGuildSubscription = e.premiumGuildSubscription, this.canceled = e.canceled, this.cooldownEndsAt = e.cooldownEndsAt, this.subscription = e.subscription
   }
 }
-var r = s
+var l = i

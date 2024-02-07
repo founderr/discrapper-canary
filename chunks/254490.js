@@ -1,60 +1,60 @@
 "use strict";
 n.r(t), n.d(t, {
   transformNativeFile: function() {
-    return h
-  },
-  makeFile: function() {
-    return g
-  },
-  classifyFile: function() {
-    return E
-  },
-  classifyFileName: function() {
     return p
   },
-  sizeString: function() {
-    return v
+  makeFile: function() {
+    return h
   },
-  maxFileSize: function() {
+  classifyFile: function() {
     return S
   },
-  anyFileTooLarge: function() {
+  classifyFileName: function() {
+    return m
+  },
+  sizeString: function() {
     return T
   },
-  uploadSumTooLarge: function() {
+  maxFileSize: function() {
+    return g
+  },
+  anyFileTooLarge: function() {
     return I
   },
-  getMaxRequestSize: function() {
+  uploadSumTooLarge: function() {
     return C
+  },
+  getMaxRequestSize: function() {
+    return v
   }
 }), n("222007");
 var i = n("477850"),
-  s = n.n(i),
-  r = n("917351"),
-  a = n.n(r),
+  r = n.n(i),
+  s = n("917351"),
+  a = n.n(s),
   o = n("143068"),
   l = n("700031"),
   u = n("305961"),
-  d = n("697218"),
-  c = n("719923"),
+  c = n("697218"),
+  d = n("719923"),
   f = n("49111"),
-  _ = n("646718");
+  E = n("646718");
 
-function h(e, t) {
-  return e instanceof File ? e : g(e.data, e.filename, t)
+function p(e, t) {
+  return e instanceof File ? e : h(e.data, e.filename, t)
 }
 
-function g(e, t, i) {
-  let s = n("637139");
+function h(e, t, i) {
+  let r = n("637139");
   if (null == t && (t = "unknown", "type" in e)) {
-    let n = s.extension(e.type);
+    let n = r.extension(e.type);
     n && (t += ".".concat(n))
   }
-  return null == i && ("type" in e && (i = e.type), i = null != i ? i : s.lookup(t)), new File([e], t, {
+  return null == i && ("type" in e && (i = e.type), i = null != i ? i : r.lookup(t)), new File([e], t, {
     type: i
   })
 }
-let m = [{
+let _ = [{
   reType: /^image\/vnd.adobe.photoshop/,
   klass: "photoshop"
 }, {
@@ -98,49 +98,49 @@ let m = [{
   klass: "audio"
 }];
 
-function E(e) {
-  return p(e.name, e.type)
+function S(e) {
+  return m(e.name, e.type)
 }
 
-function p(e, t) {
+function m(e, t) {
   var n;
   e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : "";
-  let i = a.find(m, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
+  let i = a.find(_, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
   return null != i ? i.klass : "unknown"
 }
 
-function v(e) {
-  return s.filesize(e)
+function T(e) {
+  return r.filesize(e)
 }
 
-function S(e) {
-  let t = d.default.getCurrentUser();
+function g(e) {
+  let t = c.default.getCurrentUser();
   o.default.trackExposure({
     location: "de18ec_1"
   }), l.default.trackExposure({
     location: "de18ec_2"
   });
-  let n = c.default.getUserMaxFileSize(t);
+  let n = d.default.getUserMaxFileSize(t);
   if (null == e) return n;
   let i = u.default.getGuild(e),
-    s = null != i ? _.BoostedGuildFeatures[i.premiumTier].limits.fileSize : f.MAX_ATTACHMENT_SIZE;
-  return Math.max(s, n)
+    r = null != i ? E.BoostedGuildFeatures[i.premiumTier].limits.fileSize : f.MAX_ATTACHMENT_SIZE;
+  return Math.max(r, n)
 }
 
-function T(e, t) {
-  let n = S(t);
+function I(e, t) {
+  let n = g(t);
   return Array.from(e).some(e => e.size > n)
 }
 
-function I(e) {
+function C(e) {
   return function(e) {
     let t = 0;
     for (let n of e) t += n.size;
     return t
-  }(e) > C()
+  }(e) > v()
 }
 
-function C() {
-  let e = d.default.getCurrentUser();
+function v() {
+  let e = c.default.getCurrentUser();
   return null != e && e.isStaff() ? 524288e3 : 524288e3
 }

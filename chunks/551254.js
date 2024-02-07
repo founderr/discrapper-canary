@@ -10,19 +10,19 @@ n.r(t), n.d(t, {
     return o
   },
   isEligibleForSubscriptionsInGuildShop: function() {
-    return l
+    return d
   },
   useIsEligibleForGuildShopPreview: function() {
     return u
   }
 });
-var i = n("287883"),
-  s = n("599445");
+var s = n("287883"),
+  i = n("599445");
 
 function r() {
   let {
     enabled: e
-  } = s.GuildShopStorefrontExperiment.useExperiment({
+  } = i.GuildShopStorefrontExperiment.useExperiment({
     location: "adf3ea_1"
   });
   return e
@@ -31,7 +31,7 @@ function r() {
 function a() {
   let {
     enabled: e
-  } = s.GuildShopStorefrontExperiment.getCurrentConfig({
+  } = i.GuildShopStorefrontExperiment.getCurrentConfig({
     location: "adf3ea_2"
   });
   return e
@@ -40,25 +40,25 @@ function a() {
 function o(e, t) {
   let {
     enabled: n
-  } = s.ShowGuildRoleSubInGuildShopExperiment.useExperiment({
+  } = i.ShowGuildRoleSubInGuildShopExperiment.useExperiment({
     location: t
-  }), r = (0, i.useGuildEligibleForGuildProducts)(e, t);
+  }), r = (0, s.useGuildEligibleForGuildProducts)(e, t);
   return n && r
 }
 
-function l(e, t) {
+function d(e, t) {
   let {
     enabled: n
-  } = s.ShowGuildRoleSubInGuildShopExperiment.getCurrentConfig({
+  } = i.ShowGuildRoleSubInGuildShopExperiment.getCurrentConfig({
     location: t
-  }), r = (0, i.isGuildEligibleForGuildProducts)(e, t);
+  }), r = (0, s.isGuildEligibleForGuildProducts)(e, t);
   return n && r
 }
 
 function u(e) {
   let {
     enabled: t
-  } = s.GuildShopPreviewExperiment.useExperiment({
+  } = i.GuildShopPreviewExperiment.useExperiment({
     location: e
   });
   return t

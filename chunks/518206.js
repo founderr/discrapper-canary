@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   useCheckboxGroupState: function() {
-    return i
+    return o
   }
 }), n("222007");
 var r = n("679750");
 
-function i() {
+function o() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     [t, n] = (0, r.useControlledState)(e.value, e.defaultValue || [], e.onChange),
-    i = {
+    o = {
       value: t,
       setValue(t) {
         !e.isReadOnly && !e.isDisabled && n(t)
@@ -29,5 +29,5 @@ function i() {
       validationState: e.validationState,
       isInvalid: e.isInvalid || "invalid" === e.validationState
     };
-  return i
+  return o
 }

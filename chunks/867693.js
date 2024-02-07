@@ -7,88 +7,88 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   o = n("884691"),
   a = n("759843"),
-  r = n("446674"),
-  l = n("77078"),
+  l = n("446674"),
+  r = n("77078"),
   i = n("152584"),
-  E = n("697218"),
-  _ = n("330355"),
-  u = n("893044"),
-  d = n("509943"),
-  T = n("457818"),
-  S = n("397336"),
-  N = n("679012"),
-  c = n("92693");
+  u = n("697218"),
+  d = n("330355"),
+  E = n("893044"),
+  _ = n("509943"),
+  c = n("457818"),
+  T = n("397336"),
+  S = n("679012"),
+  N = n("92693");
 
 function C(e) {
   var t;
   let {
     transitionState: n,
     onClose: C
-  } = e, A = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), I = o.useRef(null !== (t = null == A ? void 0 : A.verified) && void 0 !== t && t);
+  } = e, A = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()), f = o.useRef(null !== (t = null == A ? void 0 : A.verified) && void 0 !== t && t);
   o.useEffect(() => () => (0, i.accountDetailsClose)(), []);
-  let f = null == A ? void 0 : A.verified,
-    R = f ? S.ChangeEmailSteps.CONFIRM_START : S.ChangeEmailSteps.EMAIL_AND_PASSWORD,
-    [U, O] = o.useState(R),
-    [m, p] = o.useState(null),
-    [M, h] = o.useState(null),
-    [v, g] = o.useState(null),
-    [G, D] = o.useState(""),
-    L = {
+  let I = null == A ? void 0 : A.verified,
+    h = I ? T.ChangeEmailSteps.CONFIRM_START : T.ChangeEmailSteps.EMAIL_AND_PASSWORD,
+    [R, m] = o.useState(h),
+    [p, U] = o.useState(null),
+    [O, M] = o.useState(null),
+    [g, v] = o.useState(null),
+    [x, G] = o.useState(""),
+    D = {
       impression_group: a.ImpressionGroups.USER_ACCOUNT_EMAIL_CHANGE_FLOW
     };
-  return (0, s.jsxs)(l.ModalRoot, {
+  return (0, s.jsxs)(r.ModalRoot, {
     transitionState: n,
     disableTrack: !0,
     children: [(0, s.jsx)("img", {
       alt: "",
-      className: N.headerImage,
-      src: c
-    }), (0, s.jsxs)(l.Slides, {
-      activeSlide: U,
+      className: S.headerImage,
+      src: N
+    }), (0, s.jsxs)(r.Slides, {
+      activeSlide: R,
       width: 440,
-      onSlideReady: e => p(e),
-      children: [(0, s.jsx)(l.Slide, {
-        id: S.ChangeEmailSteps.CONFIRM_START,
+      onSlideReady: e => U(e),
+      children: [(0, s.jsx)(r.Slide, {
+        id: T.ChangeEmailSteps.CONFIRM_START,
         impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
-        impressionProperties: L,
-        children: (0, s.jsx)(d.default, {
-          onNext: () => O(S.ChangeEmailSteps.CONFIRM_CODE),
+        impressionProperties: D,
+        children: (0, s.jsx)(_.default, {
+          onNext: () => m(T.ChangeEmailSteps.CONFIRM_CODE),
           onClose: C
         })
-      }), (0, s.jsx)(l.Slide, {
-        id: S.ChangeEmailSteps.CONFIRM_CODE,
+      }), (0, s.jsx)(r.Slide, {
+        id: T.ChangeEmailSteps.CONFIRM_CODE,
         impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE,
-        impressionProperties: L,
-        children: (0, s.jsx)(u.default, {
-          error: v,
-          setError: g,
-          setEmailToken: h,
-          isSlideReady: m === S.ChangeEmailSteps.CONFIRM_CODE,
-          onNext: () => O(S.ChangeEmailSteps.EMAIL_AND_PASSWORD),
+        impressionProperties: D,
+        children: (0, s.jsx)(E.default, {
+          error: g,
+          setError: v,
+          setEmailToken: M,
+          isSlideReady: p === T.ChangeEmailSteps.CONFIRM_CODE,
+          onNext: () => m(T.ChangeEmailSteps.EMAIL_AND_PASSWORD),
           onClose: C
         })
-      }), (0, s.jsx)(l.Slide, {
-        id: S.ChangeEmailSteps.EMAIL_AND_PASSWORD,
+      }), (0, s.jsx)(r.Slide, {
+        id: T.ChangeEmailSteps.EMAIL_AND_PASSWORD,
         impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_ENTER_EMAIL,
         impressionProperties: {
-          ...L,
-          email_verified: I.current
+          ...D,
+          email_verified: f.current
         },
-        children: (0, s.jsx)(T.default, {
-          emailToken: M,
-          isSlideReady: m === S.ChangeEmailSteps.EMAIL_AND_PASSWORD,
-          onBack: f ? () => O(S.ChangeEmailSteps.CONFIRM_CODE) : null,
+        children: (0, s.jsx)(c.default, {
+          emailToken: O,
+          isSlideReady: p === T.ChangeEmailSteps.EMAIL_AND_PASSWORD,
+          onBack: I ? () => m(T.ChangeEmailSteps.CONFIRM_CODE) : null,
           onNext: e => {
-            D(e), O(S.ChangeEmailSteps.COMPLETE)
+            G(e), m(T.ChangeEmailSteps.COMPLETE)
           },
           onClose: C
         })
-      }), (0, s.jsx)(l.Slide, {
-        id: S.ChangeEmailSteps.COMPLETE,
+      }), (0, s.jsx)(r.Slide, {
+        id: T.ChangeEmailSteps.COMPLETE,
         impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_COMPLETE,
-        impressionProperties: L,
-        children: (0, s.jsx)(_.default, {
-          email: G,
+        impressionProperties: D,
+        children: (0, s.jsx)(d.default, {
+          email: x,
           onClose: C
         })
       })]

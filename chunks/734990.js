@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   sendConfirmationCode: function() {
-    return r
+    return l
   },
   confirmEmailChange: function() {
-    return l
+    return r
   }
 });
 var s = n("759843"),
   o = n("840707"),
   a = n("49111");
 
-function r() {
+function l() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   return o.default.put({
     url: a.Endpoints.USER_EMAIL,
@@ -23,7 +23,7 @@ function r() {
     }
   })
 }
-async function l(e) {
+async function r(e) {
   let t = await o.default.post({
     url: a.Endpoints.USER_EMAIL_VERIFY_CODE,
     body: {

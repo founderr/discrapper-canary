@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   useSwitch: function() {
-    return i
+    return o
   }
 });
 var r = n("914644");
 
-function i(e, t, n) {
+function o(e, t, n) {
   let {
-    labelProps: i,
-    inputProps: o,
-    isSelected: s,
-    isPressed: a,
+    labelProps: o,
+    inputProps: a,
+    isSelected: i,
+    isPressed: s,
     isDisabled: c,
-    isReadOnly: u
+    isReadOnly: l
   } = (0, r.useToggle)(e, t, n);
   return {
-    labelProps: i,
+    labelProps: o,
     inputProps: {
-      ...o,
+      ...a,
       role: "switch",
-      checked: s
+      checked: i
     },
-    isSelected: s,
-    isPressed: a,
+    isSelected: i,
+    isPressed: s,
     isDisabled: c,
-    isReadOnly: u
+    isReadOnly: l
   }
 }

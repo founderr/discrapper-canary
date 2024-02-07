@@ -1,11 +1,11 @@
-var r = n("785225"),
+var r = s("785225"),
   i = Math.max;
-e.exports = function(e, t, n) {
-  return t = i(void 0 === t ? e.length - 1 : t, 0),
+t.exports = function(t, e, s) {
+  return e = i(void 0 === e ? t.length - 1 : e, 0),
     function() {
-      for (var o = arguments, s = -1, a = i(o.length - t, 0), c = Array(a); ++s < a;) c[s] = o[t + s];
-      s = -1;
-      for (var u = Array(t + 1); ++s < t;) u[s] = o[s];
-      return u[t] = n(c), r(e, this, u)
+      for (var n = arguments, c = -1, o = i(n.length - e, 0), f = Array(o); ++c < o;) f[c] = n[e + c];
+      c = -1;
+      for (var u = Array(e + 1); ++c < e;) u[c] = n[c];
+      return u[e] = s(f), r(t, this, u)
     }
 }

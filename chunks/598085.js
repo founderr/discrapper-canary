@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DropTargetImpl: function() {
-    return o
+    return a
   }
 }), n("70102");
 
@@ -12,7 +12,7 @@ function r(e, t) {
   }
 }
 
-function i(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,15 +20,15 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var o = function() {
+var a = function() {
   var e, t, n;
 
-  function o(e, t) {
+  function a(e, t) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, o), i(this, "spec", void 0), i(this, "monitor", void 0), this.spec = e, this.monitor = t
+    }(this, a), o(this, "spec", void 0), o(this, "monitor", void 0), this.spec = e, this.monitor = t
   }
-  return e = o, t = [{
+  return e = a, t = [{
     key: "canDrop",
     value: function() {
       var e = this.spec,
@@ -49,5 +49,5 @@ var o = function() {
         t = this.monitor;
       if (e.drop) return e.drop(t.getItem(), t)
     }
-  }], r(e.prototype, t), n && r(e, n), o
+  }], r(e.prototype, t), n && r(e, n), a
 }()

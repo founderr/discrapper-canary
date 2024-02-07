@@ -1,13 +1,13 @@
-e.exports = function(e, t, n) {
-  switch (n.length) {
+t.exports = function(t, e, s) {
+  switch (s.length) {
     case 0:
-      return e.call(t);
+      return t.call(e);
     case 1:
-      return e.call(t, n[0]);
+      return t.call(e, s[0]);
     case 2:
-      return e.call(t, n[0], n[1]);
+      return t.call(e, s[0], s[1]);
     case 3:
-      return e.call(t, n[0], n[1], n[2])
+      return t.call(e, s[0], s[1], s[2])
   }
-  return e.apply(t, n)
+  return t.apply(e, s)
 }

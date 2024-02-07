@@ -4,21 +4,21 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("605250"),
-  s = n("802493"),
+var s = n("605250"),
+  i = n("802493"),
   r = n("723939");
 let a = "version";
-new i.default("KvCacheVersion");
+new s.default("KvCacheVersion");
 var o = new class e {
   async okAsync(e) {
-    let t = await s.default.cache(e).get(a);
+    let t = await i.default.cache(e).get(a);
     return null == t ? null : 3 === t
   }
   handleClearGuildCache(e) {
-    s.default.cacheTransaction(e).delete(a), s.default.cacheTransaction(e).delete("CacheStore.Nonce"), r.default.replaceDisableAllDatabases("CLEAR_GUILD_CACHE (via KvCacheVersion)")
+    i.default.cacheTransaction(e).delete(a), i.default.cacheTransaction(e).delete("CacheStore.Nonce"), r.default.replaceDisableAllDatabases("CLEAR_GUILD_CACHE (via KvCacheVersion)")
   }
   handleWrite(e) {
-    s.default.cacheTransaction(e).put("hello", "\uD83D\uDC4B"), s.default.cacheTransaction(e).put(a, 3)
+    i.default.cacheTransaction(e).put("hello", "\uD83D\uDC4B"), i.default.cacheTransaction(e).put(a, 3)
   }
   handleReset() {}
   constructor() {

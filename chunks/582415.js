@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var i = n("49111");
+var s = n("49111");
 
-function s(e) {
-  return e.type === i.ActivityTypes.PLAYING
+function i(e) {
+  return e.type === s.ActivityTypes.PLAYING
 }
 
 function r(e, t) {
   var n;
-  return null != e ? (n = e.ownerId, t.findActivity(n, s)) : null
+  return null != e ? (n = e.ownerId, t.findActivity(n, i)) : null
 }
 
 function a(e, t) {

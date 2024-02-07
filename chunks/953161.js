@@ -1,31 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return s
   }
 }), n("424973"), n("222007");
 var i = n("773364"),
-  s = n("22546");
+  r = n("22546");
 
-function r(e) {
+function s(e) {
   let t = !1;
   e.on(i.MediaEngineEvent.Destroy, () => t = !0);
   let n = async () => {
     if (t) return;
-    let r = [];
-    e.eachConnection(e => r.push({
+    let s = [];
+    e.eachConnection(e => s.push({
       connection: e,
       stats: e.emitStats()
     }));
     let a = [];
-    for (let e of r) {
+    for (let e of s) {
       let t = await e.stats;
       null != t && a.push({
         connection: e.connection,
         stats: t
       })
     }
-    e.emit(i.MediaEngineEvent.ConnectionStats, a), setTimeout(n, s.STATS_INTERVAL)
+    e.emit(i.MediaEngineEvent.ConnectionStats, a), setTimeout(n, r.STATS_INTERVAL)
   };
-  setTimeout(n, s.STATS_INTERVAL)
+  setTimeout(n, r.STATS_INTERVAL)
 }

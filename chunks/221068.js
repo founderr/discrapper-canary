@@ -18,8 +18,8 @@ var s = n("37983"),
   C = n("554393"),
   p = n("120027"),
   m = n("934288"),
-  E = n("144491"),
-  g = n("933152"),
+  g = n("144491"),
+  E = n("933152"),
   S = n("820899"),
   A = n("347738"),
   _ = n("339670"),
@@ -37,8 +37,8 @@ var s = n("37983"),
   j = n("383667"),
   b = n("459776"),
   P = n("921450"),
-  F = n("366757"),
-  H = n("699473"),
+  H = n("366757"),
+  F = n("699473"),
   U = n("556118"),
   k = n("342009"),
   w = n("97810"),
@@ -46,13 +46,13 @@ var s = n("37983"),
   B = n("88243"),
   V = n("753089"),
   W = n("210062"),
-  z = n("321933"),
-  Z = n("894488"),
+  Z = n("321933"),
+  z = n("894488"),
   K = n("49111"),
   Y = n("324252"),
-  q = n("782340");
+  X = n("782340");
 
-function X(e) {
+function q(e) {
   return null != e && e.type === K.ChannelStreamTypes.MESSAGE && e.content.id === e.groupId
 }
 let J = a.memo(function(e) {
@@ -62,7 +62,7 @@ let J = a.memo(function(e) {
     user: a,
     isGroupStart: l
   } = e;
-  return (0, s.jsx)(H.default, {
+  return (0, s.jsx)(F.default, {
     isGroupStart: l,
     channel: n,
     message: new M.default({
@@ -91,7 +91,7 @@ function Q(e) {
   let n, a, l, {
       channel: u,
       messages: x,
-      unreadCount: H,
+      unreadCount: F,
       showNewMessagesBar: Q,
       messageDisplayCompact: $,
       channelStream: ee,
@@ -103,11 +103,11 @@ function Q(e) {
     } = e,
     ei = L.default.getCurrentUser(),
     er = () => en.isInitialized() || x.ready,
-    eo = (0, F.useShowConvoStarterInDM)(u),
+    eo = (0, H.useShowConvoStarterInDM)(u),
     eu = x.length > 0 && (null === (t = x.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(u)),
     ed = (0, d.useChannelSummariesExperiment)(u),
     ec = (0, r.useStateFromStores)([A.default], () => A.default.shouldShowTopicsBar()),
-    ef = (0, g.useStrangerDangerWarning)(u.id, Y.LOCATION_CONTEXT_WEB),
+    ef = (0, E.useStrangerDangerWarning)(u.id, Y.LOCATION_CONTEXT_WEB),
     eh = (0, P.default)();
   u.isDM() && null != ef && (n = (0, s.jsx)(S.StrangerDangerWarningBanner, {
     channelId: u.id,
@@ -120,8 +120,8 @@ function Q(e) {
     ep = (0, m.default)(u.id);
   (0, W.default)();
   let em = null,
-    eE = [],
-    eg = ee.map((e, t) => {
+    eg = [],
+    eE = ee.map((e, t) => {
       if (e.type === K.ChannelStreamTypes.DIVIDER) {
         var n, a;
         let l = null != e.unreadId;
@@ -129,11 +129,11 @@ function Q(e) {
           index: t,
           item: e,
           channel: u,
-          isBeforeGroup: null == e.content && X(ee[t + 1])
+          isBeforeGroup: null == e.content && q(ee[t + 1])
         }) : (0, s.jsx)(w.default, {
           isUnread: l,
-          isBeforeGroup: null == e.content && X(ee[t + 1]),
-          id: l ? Z.NEW_MESSAGE_BAR_ID : void 0,
+          isBeforeGroup: null == e.content && q(ee[t + 1]),
+          id: l ? z.NEW_MESSAGE_BAR_ID : void 0,
           children: e.content
         }, "divider-".concat(null !== (a = null !== (n = e.contentKey) && void 0 !== n ? n : e.unreadId) && void 0 !== a ? a : t))
       }
@@ -145,8 +145,8 @@ function Q(e) {
       }, "forum-post-action-bar-".concat(u.id));
       if (e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED || e.type === K.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER) {
         let t;
-        return t = e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? q.default.Messages.BLOCKED_MESSAGE_COUNT : q.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, s.jsx)(k.default, {
-          unreadId: Z.NEW_MESSAGE_BAR_ID,
+        return t = e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? X.default.Messages.BLOCKED_MESSAGE_COUNT : X.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, s.jsx)(k.default, {
+          unreadId: z.NEW_MESSAGE_BAR_ID,
           messages: e,
           channel: u,
           compact: $,
@@ -170,61 +170,61 @@ function Q(e) {
         renderContentOnly: ep
       }, e.content.id)
     });
-  eE.push(...eg);
+  eg.push(...eE);
   let eS = ee[ee.length - 1];
   if (null != ei && et.forEach((e, t) => {
       let n = 0 === t && (0, b.isNewGroupItem)(u, eS, new M.default({
         type: K.MessageTypes.DEFAULT,
         author: ei
       }));
-      eE.push((0, s.jsx)(J, {
+      eg.push((0, s.jsx)(J, {
         file: e,
         channel: u,
         user: ei,
         isGroupStart: n
       }, "upload-".concat(e.id)))
     }), x.hasMoreBefore && null == ea) {
-    x.length > 0 && eE.unshift((0, s.jsx)("div", {
+    x.length > 0 && eg.unshift((0, s.jsx)("div", {
       style: {
-        height: Z.PLACEHOLDER_BUFFER,
+        height: z.PLACEHOLDER_BUFFER,
         flex: "0 0 auto"
       }
     }, "buffer"));
     let {
       useReducedMotion: e
     } = c.default;
-    (e && er() || !e) && eE.unshift((0, s.jsx)(B.default, {
+    (e && er() || !e) && eg.unshift((0, s.jsx)(B.default, {
       compact: $,
       ...es
     }, "has-more"))
   }
-  if ((!x.hasMoreBefore || null != ea) && eE.unshift((0, s.jsx)(h.default, {
+  if ((!x.hasMoreBefore || null != ea) && eg.unshift((0, s.jsx)(h.default, {
       channel: u,
       showingBanner: el
-    }, "empty-message")), x.hasMoreAfter && eE.push((0, s.jsx)(B.default, {
+    }, "empty-message")), x.hasMoreAfter && eg.push((0, s.jsx)(B.default, {
       compact: $,
       ...es
-    }, "has-more-after")), !el && eo && er() && eE.push((0, s.jsx)(V.default, {
+    }, "has-more-after")), !el && eo && er() && eg.push((0, s.jsx)(V.default, {
       channel: u
-    })), H > 0 && Q && er()) {
+    })), F > 0 && Q && er()) {
     let e, t;
     let n = N.default.getOldestUnreadTimestamp(u.id),
       l = 0 !== n ? n : O.default.extractTimestamp(u.id),
       r = (0, R.isSameDay)(i(), i(new Date(l)));
-    if (N.default.isEstimated(u.id) ? (e = r ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), ed && (0, d.channelEligibleForSummaries)(u) && eh.includes(z.ChatOverlays.SUMMARIES)) {
+    if (N.default.isEstimated(u.id) ? (e = r ? X.default.Messages.NEW_MESSAGES_ESTIMATED : X.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = X.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? X.default.Messages.NEW_MESSAGES : X.default.Messages.NEW_MESSAGES_WITH_DATE, t = X.default.Messages.NEW_MESSAGES_SUMMARIES), ed && (0, d.channelEligibleForSummaries)(u) && eh.includes(Z.ChatOverlays.SUMMARIES)) {
       let n = N.default.ackMessageId(u.id),
         i = (0, _.getUnreadTopicsCount)(u.id, N.default.getOldestUnreadMessageId(u.id));
       if ((0, f.trackWithMetadata)(K.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
           num_unread_summaries: i,
-          num_unread_messages: H,
+          num_unread_messages: F,
           last_ack_message_id: n,
           summaries_enabled_by_user: ec,
           summaries_enabled_for_channel: (0, d.canSeeChannelSummaries)(u)
         }), (0, d.canSeeChannelSummaries)(u)) {
         let n = ec ? t.format({
-          count: H
+          count: F
         }) : e.format({
-          count: H,
+          count: F,
           timestamp: l
         });
         if (ec) {
@@ -237,7 +237,7 @@ function Q(e) {
               left: "40%"
             },
             children: [t.format({
-              count: H
+              count: F
             }), (0, s.jsx)(p.default, {
               style: {
                 paddingLeft: 8,
@@ -245,7 +245,7 @@ function Q(e) {
               },
               height: 4,
               width: 4
-            }), q.default.Messages.NEW_SUMMARIES.format({
+            }), X.default.Messages.NEW_SUMMARIES.format({
               count: i
             })]
           }) : (0, s.jsx)("div", {
@@ -272,7 +272,7 @@ function Q(e) {
             },
             children: i > 0 ? (0, s.jsxs)(s.Fragment, {
               children: [t.format({
-                count: H
+                count: F
               }), (0, s.jsx)(p.default, {
                 style: {
                   paddingLeft: 8,
@@ -280,7 +280,7 @@ function Q(e) {
                 },
                 height: 4,
                 width: 4
-              }), q.default.Messages.NEW_SUMMARIES.format({
+              }), X.default.Messages.NEW_SUMMARIES.format({
                 count: i
               })]
             }) : (0, s.jsx)(s.Fragment, {
@@ -293,15 +293,15 @@ function Q(e) {
           })
         }
       }
-    } else eh.includes(z.ChatOverlays.NEW_MESSAGES) && (a = (0, s.jsx)(G.NewMessagesBar, {
+    } else eh.includes(Z.ChatOverlays.NEW_MESSAGES) && (a = (0, s.jsx)(G.NewMessagesBar, {
       content: e.format({
-        count: H,
+        count: F,
         timestamp: l
       }),
       channelId: u.id
     }))
   }
-  if (null == a && (0, d.canSeeChannelSummaries)(u) && ec && eh.includes(z.ChatOverlays.SUMMARIES) && (a = (0, s.jsx)(G.TopicsPill, {
+  if (null == a && (0, d.canSeeChannelSummaries)(u) && ec && eh.includes(Z.ChatOverlays.SUMMARIES) && (a = (0, s.jsx)(G.TopicsPill, {
       channel: u,
       scrollManager: en
     })), x.error) l = (0, s.jsx)(G.ErrorLoadingBar, {
@@ -333,12 +333,12 @@ function Q(e) {
       onClick: () => (function(e) {
         o.default.jumpToPresent(e.id, K.MAX_MESSAGES_PER_CHANNEL);
         let t = v.default.getChannelId();
-        e.id === t && (0, E.transitionToChannel)(e.id)
+        e.id === t && (0, g.transitionToChannel)(e.id)
       })(u)
     })
   }
   return {
-    channelStreamMarkup: eE,
+    channelStreamMarkup: eg,
     newMessagesBar: a,
     jumpToPresentBar: l,
     forumPostActionBar: eC,

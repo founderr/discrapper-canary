@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return URL
   },
   TEXT: function() {
-    return i
+    return o
   },
   HTML: function() {
-    return o
+    return a
   }
 });
 var r = "__NATIVE_FILE__",
   URL = "__NATIVE_URL__",
-  i = "__NATIVE_TEXT__",
-  o = "__NATIVE_HTML__"
+  o = "__NATIVE_TEXT__",
+  a = "__NATIVE_HTML__"

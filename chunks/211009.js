@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   createManagedReactiveScroller: function() {
-    return d
+    return c
   }
 }), n("222007");
 var i = n("37983"),
-  s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  r = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
   o = n("718776"),
   l = n("462977"),
   u = n("517614");
 
-function d(e, t) {
+function c(e, t) {
   let n = new Map,
-    r = new t(e => {
+    s = new t(e => {
       e.forEach(e => {
         var t;
         let {
@@ -23,64 +23,64 @@ function d(e, t) {
         null === (t = n.get(i)) || void 0 === t || t(e)
       })
     });
-  return s.forwardRef(function(t, d) {
+  return r.forwardRef(function(t, c) {
     let {
-      children: c,
+      children: d,
       className: f,
-      onResize: _,
-      contentClassName: h,
-      onScroll: g,
-      dir: m = "ltr",
-      fade: E = !1,
-      customTheme: p = !1,
-      style: v,
-      ...S
-    } = t, T = s.useRef(null), I = s.useRef(null), [C, A] = s.useState(!1), {
-      scrollerRef: y,
+      onResize: E,
+      contentClassName: p,
+      onScroll: h,
+      dir: _ = "ltr",
+      fade: S = !1,
+      customTheme: m = !1,
+      style: T,
+      ...g
+    } = t, I = r.useRef(null), C = r.useRef(null), [v, A] = r.useState(!1), {
+      scrollerRef: R,
       getScrollerState: N
-    } = (0, l.useUncachedScrollerState)(), R = (0, l.useScrollSpring)(y);
-    s.useImperativeHandle(d, () => ({
-      getScrollerNode: () => y.current,
-      isScrolling: () => null != T.current,
+    } = (0, l.useUncachedScrollerState)(), O = (0, l.useScrollSpring)(R);
+    r.useImperativeHandle(c, () => ({
+      getScrollerNode: () => R.current,
+      isScrolling: () => null != I.current,
       getScrollerState: N,
-      ...(0, l.getAnimatedScrollHelpers)(y, N, R)
-    }), [y, N, R]);
-    let D = s.useCallback(e => {
-      null == T.current ? A(!0) : clearTimeout(T.current), T.current = setTimeout(() => {
-        T.current = null, A(!1)
-      }, 200), null != g && g(e)
-    }, [g]);
-    return s.useEffect(() => () => clearTimeout(T.current), []), (0, l.useResizeObserverSubscription)({
-      ref: y,
+      ...(0, l.getAnimatedScrollHelpers)(R, N, O)
+    }), [R, N, O]);
+    let D = r.useCallback(e => {
+      null == I.current ? A(!0) : clearTimeout(I.current), I.current = setTimeout(() => {
+        I.current = null, A(!1)
+      }, 200), null != h && h(e)
+    }, [h]);
+    return r.useEffect(() => () => clearTimeout(I.current), []), (0, l.useResizeObserverSubscription)({
+      ref: R,
       key: "container",
-      onUpdate: _,
-      resizeObserver: r,
+      onUpdate: E,
+      resizeObserver: s,
       listenerMap: n
     }), (0, l.useResizeObserverSubscription)({
-      ref: I,
+      ref: C,
       key: "content",
-      onUpdate: _,
-      resizeObserver: r,
+      onUpdate: E,
+      resizeObserver: s,
       listenerMap: n
     }), (0, i.jsx)("div", {
-      ref: y,
+      ref: R,
       className: a(f, {
-        [u.fade]: E,
-        [u.customTheme]: p,
+        [u.fade]: S,
+        [u.customTheme]: m,
         [e]: !0,
         [u.managedReactiveScroller]: !0,
-        [u.scrolling]: C && E
+        [u.scrolling]: v && S
       }),
-      style: v,
-      dir: m,
+      style: T,
+      dir: _,
       onScroll: D,
-      ...S,
+      ...g,
       children: (0, i.jsx)(o.FocusRingScope, {
-        containerRef: I,
+        containerRef: C,
         children: (0, i.jsxs)("div", {
-          ref: I,
-          className: a(h, u.content),
-          children: [c, C && (0, i.jsx)("div", {
+          ref: C,
+          className: a(p, u.content),
+          children: [d, v && (0, i.jsx)("div", {
             className: u.pointerCover
           })]
         })

@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return o
   }
 }), n("70102");
-var r = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("784917"),
+var r = n("784917"),
   l = n("326880"),
-  i = n("131777"),
-  a = n("49111");
+  a = n("131777"),
+  i = n("49111");
 
 function o(e) {
   let {
@@ -17,17 +17,17 @@ function o(e) {
     ...n
   } = e;
   switch (t) {
-    case a.BoostedGuildTiers.NONE:
-    case a.BoostedGuildTiers.TIER_1:
-      return (0, r.jsx)(s.default, {
+    case i.BoostedGuildTiers.NONE:
+    case i.BoostedGuildTiers.TIER_1:
+      return (0, s.jsx)(r.default, {
         ...n
       });
-    case a.BoostedGuildTiers.TIER_2:
-      return (0, r.jsx)(l.default, {
+    case i.BoostedGuildTiers.TIER_2:
+      return (0, s.jsx)(l.default, {
         ...n
       });
-    case a.BoostedGuildTiers.TIER_3:
-      return (0, r.jsx)(i.default, {
+    case i.BoostedGuildTiers.TIER_3:
+      return (0, s.jsx)(a.default, {
         ...n
       });
     default:

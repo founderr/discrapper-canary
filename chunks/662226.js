@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   asap: function() {
-    return a
+    return s
   }
 });
 var r = n("576225"),
-  i = n("897025");
-let o = new r.AsapQueue,
-  s = new i.TaskFactory(o.registerPendingError);
+  o = n("897025");
+let a = new r.AsapQueue,
+  i = new o.TaskFactory(a.registerPendingError);
 
-function a(e) {
-  o.enqueueTask(s.create(e))
+function s(e) {
+  a.enqueueTask(i.create(e))
 }

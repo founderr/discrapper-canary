@@ -1,4 +1,4 @@
 "use strict";
-e.exports = function(e) {
-  return null === e || "function" != typeof e && "object" != typeof e
+t.exports = function(t) {
+  return null === t || "function" != typeof t && "object" != typeof t
 }

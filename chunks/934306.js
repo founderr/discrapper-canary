@@ -13,12 +13,12 @@ n.r(t), n.d(t, {
     return u
   },
   shouldHandleNewPanelsRoute: function() {
-    return d
+    return c
   }
 });
 var i = n("21121"),
-  s = n("491246"),
-  r = n("49111");
+  r = n("491246"),
+  s = n("49111");
 
 function a() {
   return (0, i.isInMainTabsExperiment)()
@@ -34,10 +34,10 @@ function l() {
 
 function u() {
   if (!l()) return !1;
-  let e = (0, s.default)();
+  let e = (0, r.default)();
   return (null == e ? void 0 : e.name) === "messages"
 }
 
-function d(e) {
-  return !!a() && null != e && e !== r.ME
+function c(e) {
+  return !!a() && null != e && e !== s.ME
 }

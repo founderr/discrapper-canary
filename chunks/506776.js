@@ -2,19 +2,19 @@
 n("781738"), n("424973");
 e.exports = function(e, t, n, r) {
   t = t || "&", n = n || "=";
-  var i = {};
-  if ("string" != typeof e || 0 === e.length) return i;
-  var o = /\+/g;
+  var o = {};
+  if ("string" != typeof e || 0 === e.length) return o;
+  var a = /\+/g;
   e = e.split(t);
-  var s = 1e3;
-  r && "number" == typeof r.maxKeys && (s = r.maxKeys);
-  var a = e.length;
-  s > 0 && a > s && (a = s);
-  for (var c = 0; c < a; ++c) {
-    var u, l, d, f, p, h, v = e[c].replace(o, "%20"),
-      g = v.indexOf(n);
-    if (g >= 0 ? (d = v.substr(0, g), f = v.substr(g + 1)) : (d = v, f = ""), p = decodeURIComponent(d), h = decodeURIComponent(f), u = i, l = p, Object.prototype.hasOwnProperty.call(u, l)) Array.isArray(i[p]) ? i[p].push(h) : i[p] = [i[p], h];
-    else i[p] = h
+  var i = 1e3;
+  r && "number" == typeof r.maxKeys && (i = r.maxKeys);
+  var s = e.length;
+  i > 0 && s > i && (s = i);
+  for (var c = 0; c < s; ++c) {
+    var l, u, d, p, f, h, m = e[c].replace(a, "%20"),
+      v = m.indexOf(n);
+    if (v >= 0 ? (d = m.substr(0, v), p = m.substr(v + 1)) : (d = m, p = ""), f = decodeURIComponent(d), h = decodeURIComponent(p), l = o, u = f, Object.prototype.hasOwnProperty.call(l, u)) Array.isArray(o[f]) ? o[f].push(h) : o[f] = [o[f], h];
+    else o[f] = h
   }
-  return i
+  return o
 }

@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   AppLauncherDesktopExperiment: function() {
-    return s
+    return i
   },
   AppLauncherOnboardingExperiment: function() {
     return r
   }
 });
-var i = n("862205");
-(0, i.createExperiment)({
+var s = n("862205");
+(0, s.createExperiment)({
   kind: "user",
   id: "2023-06_app_launcher_mobile",
   label: "App Launcher - Mobile",
@@ -35,7 +35,7 @@ var i = n("862205");
     }
   }]
 });
-let s = (0, i.createExperiment)({
+let i = (0, s.createExperiment)({
     kind: "user",
     id: "2023-11_app_launcher_desktop",
     label: "App Launcher - Desktop",
@@ -50,7 +50,7 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  r = (0, i.createExperiment)({
+  r = (0, s.createExperiment)({
     kind: "user",
     id: "2024-01_app_launcher_onboarding",
     label: "App Launcher - Onboarding",

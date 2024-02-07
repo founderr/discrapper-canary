@@ -1,27 +1,27 @@
 "use strict";
-var r = n("934940"),
+var r = s("934940"),
   i = r.define("Time", function() {
     this.choice({
       utcTime: this.utctime(),
       generalTime: this.gentime()
     })
   }),
-  o = r.define("AttributeTypeValue", function() {
+  n = r.define("AttributeTypeValue", function() {
     this.seq().obj(this.key("type").objid(), this.key("value").any())
   }),
-  s = r.define("AlgorithmIdentifier", function() {
+  c = r.define("AlgorithmIdentifier", function() {
     this.seq().obj(this.key("algorithm").objid(), this.key("parameters").optional(), this.key("curve").objid().optional())
   }),
-  a = r.define("SubjectPublicKeyInfo", function() {
-    this.seq().obj(this.key("algorithm").use(s), this.key("subjectPublicKey").bitstr())
+  o = r.define("SubjectPublicKeyInfo", function() {
+    this.seq().obj(this.key("algorithm").use(c), this.key("subjectPublicKey").bitstr())
   }),
-  c = r.define("RelativeDistinguishedName", function() {
-    this.setof(o)
+  f = r.define("RelativeDistinguishedName", function() {
+    this.setof(n)
   }),
   u = r.define("RDNSequence", function() {
-    this.seqof(c)
+    this.seqof(f)
   }),
-  l = r.define("Name", function() {
+  a = r.define("Name", function() {
     this.choice({
       rdnSequence: this.use(u)
     })
@@ -29,13 +29,13 @@ var r = n("934940"),
   d = r.define("Validity", function() {
     this.seq().obj(this.key("notBefore").use(i), this.key("notAfter").use(i))
   }),
-  f = r.define("Extension", function() {
+  p = r.define("Extension", function() {
     this.seq().obj(this.key("extnID").objid(), this.key("critical").bool().def(!1), this.key("extnValue").octstr())
   }),
-  p = r.define("TBSCertificate", function() {
-    this.seq().obj(this.key("version").explicit(0).int().optional(), this.key("serialNumber").int(), this.key("signature").use(s), this.key("issuer").use(l), this.key("validity").use(d), this.key("subject").use(l), this.key("subjectPublicKeyInfo").use(a), this.key("issuerUniqueID").implicit(1).bitstr().optional(), this.key("subjectUniqueID").implicit(2).bitstr().optional(), this.key("extensions").explicit(3).seqof(f).optional())
+  b = r.define("TBSCertificate", function() {
+    this.seq().obj(this.key("version").explicit(0).int().optional(), this.key("serialNumber").int(), this.key("signature").use(c), this.key("issuer").use(a), this.key("validity").use(d), this.key("subject").use(a), this.key("subjectPublicKeyInfo").use(o), this.key("issuerUniqueID").implicit(1).bitstr().optional(), this.key("subjectUniqueID").implicit(2).bitstr().optional(), this.key("extensions").explicit(3).seqof(p).optional())
   }),
   h = r.define("X509Certificate", function() {
-    this.seq().obj(this.key("tbsCertificate").use(p), this.key("signatureAlgorithm").use(s), this.key("signatureValue").bitstr())
+    this.seq().obj(this.key("tbsCertificate").use(b), this.key("signatureAlgorithm").use(c), this.key("signatureValue").bitstr())
   });
-e.exports = h
+t.exports = h

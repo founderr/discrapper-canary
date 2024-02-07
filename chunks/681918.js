@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   EnterLeaveCounter: function() {
-    return s
+    return i
   }
 }), n("70102");
 var r = n("988641");
 
-function i(e, t) {
+function o(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
   }
 }
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,15 +21,15 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var s = function() {
+var i = function() {
   var e, t, n;
 
-  function s(e) {
+  function i(e) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, s), o(this, "entered", []), o(this, "isNodeInDocument", void 0), this.isNodeInDocument = e
+    }(this, i), a(this, "entered", []), a(this, "isNodeInDocument", void 0), this.isNodeInDocument = e
   }
-  return e = s, t = [{
+  return e = i, t = [{
     key: "enter",
     value: function(e) {
       var t = this,
@@ -49,5 +49,5 @@ var s = function() {
     value: function() {
       this.entered = []
     }
-  }], i(e.prototype, t), n && i(e, n), s
+  }], o(e.prototype, t), n && o(e, n), i
 }()

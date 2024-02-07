@@ -1,59 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchCurrentUser: function() {
-    return h
-  },
-  acceptAgreements: function() {
     return g
   },
-  setFlag: function() {
+  acceptAgreements: function() {
     return m
   },
+  setFlag: function() {
+    return h
+  },
   getUser: function() {
-    return E
+    return v
   },
   fetchProfile: function() {
-    return p
+    return E
   },
   fetchMutualFriends: function() {
-    return v
+    return p
   }
 }), n("702976");
-var i = n("627445"),
-  s = n.n(i),
+var s = n("627445"),
+  i = n.n(s),
   r = n("33112"),
   a = n("811022"),
   o = n("872717"),
-  l = n("913144"),
+  d = n("913144"),
   u = n("766274"),
-  d = n("697218"),
-  c = n("840707"),
-  f = n("49111");
-let _ = new a.default("UserProfileModalActionCreators");
+  l = n("697218"),
+  f = n("840707"),
+  _ = n("49111");
+let c = new a.default("UserProfileModalActionCreators");
 
-function h() {
+function g() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     {
       withAnalyticsToken: t = !1
     } = e;
   return o.default.get({
-    url: f.Endpoints.ME,
+    url: _.Endpoints.ME,
     query: {
       with_analytics_token: t
     },
     oldFormErrors: !0
-  }).then(e => (l.default.dispatch({
+  }).then(e => (d.default.dispatch({
     type: "CURRENT_USER_UPDATE",
     user: e.body,
     analyticsToken: t ? e.body.analytics_token : void 0
   }), new u.default(e.body)))
 }
 
-function g() {
+function m() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return c.default.patch({
-    url: f.Endpoints.USER_AGREEMENTS,
+  return f.default.patch({
+    url: _.Endpoints.USER_AGREEMENTS,
     trackedActionData: {
       event: r.NetworkActionNames.USER_ACCEPT_AGREEMENTS
     },
@@ -65,88 +65,88 @@ function g() {
   }).then(() => !0, () => !1)
 }
 
-function m(e, t) {
-  let n = d.default.getCurrentUser();
-  s(null != n, "setFlag: user cannot be undefined");
-  let i = t ? n.flags | e : n.flags & ~e;
+function h(e, t) {
+  let n = l.default.getCurrentUser();
+  i(null != n, "setFlag: user cannot be undefined");
+  let s = t ? n.flags | e : n.flags & ~e;
   return o.default.patch({
-    url: f.Endpoints.ME,
+    url: _.Endpoints.ME,
     oldFormErrors: !0,
     body: {
-      flags: i
+      flags: s
     }
   })
 }
 
-function E(e) {
-  let t = d.default.getUser(e);
+function v(e) {
+  let t = l.default.getUser(e);
   return null != t ? Promise.resolve(t) : o.default.get({
-    url: f.Endpoints.USER(e),
+    url: _.Endpoints.USER(e),
     oldFormErrors: !0
-  }).then(t => (l.default.dispatch({
+  }).then(t => (d.default.dispatch({
     type: "USER_UPDATE",
     user: t.body
-  }), d.default.getUser(e)))
+  }), l.default.getUser(e)))
 }
-async function p(e) {
+async function E(e) {
   let {
     friendToken: t,
     withMutualGuilds: n,
-    withMutualFriendsCount: i,
-    guildId: s,
+    withMutualFriendsCount: s,
+    guildId: i,
     connectionsRoleId: r
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, a = arguments.length > 2 ? arguments[2] : void 0;
-  l.default.dispatch({
+  d.default.dispatch({
     type: "USER_PROFILE_FETCH_START",
     userId: e
   });
   try {
     let u = await o.default.get({
-      url: f.Endpoints.USER_PROFILE(e),
+      url: _.Endpoints.USER_PROFILE(e),
       query: {
         friend_token: t,
         with_mutual_guilds: n,
-        with_mutual_friends_count: i,
-        guild_id: s,
+        with_mutual_friends_count: s,
+        guild_id: i,
         connections_role_id: r
       },
       oldFormErrors: !0
     });
-    return null == a || a(u.body, s), l.default.dispatch({
+    return null == a || a(u.body, i), d.default.dispatch({
       type: "USER_UPDATE",
       user: u.body.user
-    }), l.default.dispatch({
+    }), d.default.dispatch({
       type: "USER_PROFILE_FETCH_SUCCESS",
       ...u.body
-    }), null != s && null != u.body.guild_member && l.default.dispatch({
+    }), null != i && null != u.body.guild_member && d.default.dispatch({
       type: "GUILD_MEMBER_PROFILE_UPDATE",
-      guildId: s,
+      guildId: i,
       guildMember: u.body.guild_member
     }), u.body
   } catch (t) {
-    throw null != t && (null == t ? void 0 : t.body) != null && _.warn("fetchProfile error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
+    throw null != t && (null == t ? void 0 : t.body) != null && c.warn("fetchProfile error: ".concat(t.body.code, " - ").concat(t.body.message)), d.default.dispatch({
       type: "USER_PROFILE_FETCH_FAILURE",
       userId: e
     }), t
   }
 }
-async function v(e) {
-  l.default.dispatch({
+async function p(e) {
+  d.default.dispatch({
     type: "MUTUAL_FRIENDS_FETCH_START",
     userId: e
   });
   try {
     let t = await o.default.get({
-      url: f.Endpoints.USER_RELATIONSHIPS(e),
+      url: _.Endpoints.USER_RELATIONSHIPS(e),
       oldFormErrors: !0
     });
-    l.default.dispatch({
+    d.default.dispatch({
       type: "MUTUAL_FRIENDS_FETCH_SUCCESS",
       userId: e,
       mutualFriends: t.body
     })
   } catch (t) {
-    throw (null == t ? void 0 : t.body) != null && _.warn("fetchMutualFriends error: ".concat(t.body.code, " - ").concat(t.body.message)), l.default.dispatch({
+    throw (null == t ? void 0 : t.body) != null && c.warn("fetchMutualFriends error: ".concat(t.body.code, " - ").concat(t.body.message)), d.default.dispatch({
       type: "MUTUAL_FRIENDS_FETCH_FAILURE",
       userId: e
     }), t

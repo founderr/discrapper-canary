@@ -1,79 +1,79 @@
 "use strict";
 n.r(t), n.d(t, {
   useShouldHideGuildPurchaseEntryPoints: function() {
-    return f
-  },
-  useShouldRestrictUpdatingCreatorMonetizationSettings: function() {
     return _
   },
+  useShouldRestrictUpdatingCreatorMonetizationSettings: function() {
+    return c
+  },
   useIsMonetizationReapplicationDisabled: function() {
-    return h
+    return g
   }
 });
-var i = n("884691"),
-  s = n("446674"),
+var s = n("884691"),
+  i = n("446674"),
   r = n("763898"),
   a = n("371358"),
   o = n("648825"),
-  l = n("305961"),
+  d = n("305961"),
   u = n("736271"),
-  d = n("49111");
-let c = e => {
+  l = n("49111");
+let f = e => {
     let t = (0, r.default)();
-    i.useEffect(() => {
-      if (null != e && !!e.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) o.default.getMonetizationRestrictionsFetchState(e.id) === o.FetchState.NOT_FETCHED && a.fetchMonetizationRestrictions(e.id, {
+    s.useEffect(() => {
+      if (null != e && !!e.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) o.default.getMonetizationRestrictionsFetchState(e.id) === o.FetchState.NOT_FETCHED && a.fetchMonetizationRestrictions(e.id, {
         signal: t
       })
     }, [e, t]);
     let n = null == e ? void 0 : e.id,
-      l = (0, s.useStateFromStoresArray)([o.default], () => {
+      d = (0, i.useStateFromStoresArray)([o.default], () => {
         var e;
         return null !== (e = o.default.getMonetizationRestrictions(null != n ? n : "")) && void 0 !== e ? e : []
       }),
-      u = (0, s.useStateFromStores)([o.default], () => o.default.getMonetizationRestrictionsFetchState(null != n ? n : "") === o.FetchState.FETCHING);
+      u = (0, i.useStateFromStores)([o.default], () => o.default.getMonetizationRestrictionsFetchState(null != n ? n : "") === o.FetchState.FETCHING);
     return {
-      restrictions: l,
+      restrictions: d,
       restrictionsLoading: u
     }
   },
-  f = e => {
+  _ = e => {
     var t;
-    let n = (0, s.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
+    let n = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(e), [e]),
       {
-        restrictions: i,
+        restrictions: s,
         restrictionsLoading: r
-      } = c(n),
-      a = (null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)),
-      o = !a || (r ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromShowingGuildPurchaseEntryPoints)(i));
+      } = f(n),
+      a = (null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)),
+      o = !a || (r ? null === (t = null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromShowingGuildPurchaseEntryPoints)(s));
     return {
       shouldHideGuildPurchaseEntryPoints: o,
       restrictionsLoading: r
     }
   },
-  _ = e => {
+  c = e => {
     var t;
-    let n = (0, s.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
+    let n = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(e), [e]),
       {
-        restrictions: i,
+        restrictions: s,
         restrictionsLoading: r
-      } = c(n),
-      a = r ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromUpdatingCreatorMonetizationSettings)(i),
-      o = !!(null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING));
+      } = f(n),
+      a = r ? null === (t = null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromUpdatingCreatorMonetizationSettings)(s),
+      o = !!(null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING));
     return {
       shouldRestrictUpdatingCreatorMonetizationSettings: a || o,
       allowSelfRemoveMonetization: !a,
       restrictionsLoading: r
     }
   },
-  h = e => {
-    let t = (0, s.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
+  g = e => {
+    let t = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(e), [e]),
       {
         restrictions: n,
-        restrictionsLoading: i
-      } = c(t),
+        restrictionsLoading: s
+      } = f(t),
       r = (0, u.isRestrictedFromMonetizationReapplication)(n);
     return {
       isMonetizationReapplicationDisabled: r,
-      restrictionsLoading: i
+      restrictionsLoading: s
     }
   }

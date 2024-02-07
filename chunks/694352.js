@@ -5,8 +5,8 @@ function i(e) {
     id: t,
     username: n,
     discriminator: i,
-    globalName: s,
-    avatar: r,
+    globalName: r,
+    avatar: s,
     avatarDecoration: a,
     bot: o,
     flags: l,
@@ -16,8 +16,8 @@ function i(e) {
     id: t,
     username: n,
     discriminator: i,
-    global_name: s,
-    avatar: r,
+    global_name: r,
+    avatar: s,
     avatar_decoration_data: null != a ? {
       asset: a.asset,
       sku_id: a.skuId

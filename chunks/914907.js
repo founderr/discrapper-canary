@@ -1,51 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   TabBar: function() {
-    return T
+    return I
   }
 }), n("781738"), n("70102"), n("222007");
-var i, s, r = n("37983"),
+var i, r, s = n("37983"),
   a = n("884691"),
   o = n("414456"),
   l = n.n(o),
   u = n("71185"),
-  d = n("509043"),
-  c = n("669491"),
+  c = n("509043"),
+  d = n("669491"),
   f = n("227645"),
-  _ = n("577776"),
-  h = n("49111"),
-  g = n("672531");
-let m = {
-    side: g.side,
-    top: g.top,
-    "top-pill": g.topPill
+  E = n("577776"),
+  p = n("49111"),
+  h = n("672531");
+let _ = {
+    side: h.side,
+    top: h.top,
+    "top-pill": h.topPill
   },
-  E = a.forwardRef(function(e, t) {
+  S = a.forwardRef(function(e, t) {
     let {
       children: n,
       id: i,
-      ...s
+      ...r
     } = e;
-    return (0, r.jsx)("div", {
-      ...s,
+    return (0, s.jsx)("div", {
+      ...r,
       ref: t,
       role: "tabpanel",
-      id: p(i),
+      id: m(i),
       tabIndex: -1,
       children: n
     })
   });
 
-function p(e) {
+function m(e) {
   return "".concat(e.replace(/\s+/g, "-").toLowerCase(), "-tab")
 }
 
-function v(e, t) {
+function T(e, t) {
   if (null == e) return;
   let n = {};
-  return "Selected" === t ? (n.backgroundColor = e, n.color = c.default.unsafe_rawColors.WHITE_500.css, n) : ("Hover" === t && (n.backgroundColor = (0, d.hex2rgb)(e, .1)), n.color = e, n)
-}(s = i || (i = {})).DEFAULT = "Default", s.HOVER = "Hover", s.SELECTED = "Selected";
-class S extends a.Component {
+  return "Selected" === t ? (n.backgroundColor = e, n.color = d.default.unsafe_rawColors.WHITE_500.css, n) : ("Hover" === t && (n.backgroundColor = (0, c.hex2rgb)(e, .1)), n.color = e, n)
+}(r = i || (i = {})).DEFAULT = "Default", r.HOVER = "Hover", r.SELECTED = "Selected";
+class g extends a.Component {
   getStyle() {
     let {
       color: e,
@@ -53,27 +53,27 @@ class S extends a.Component {
       selectedItem: n,
       itemType: i
     } = this.props, {
-      hover: s,
-      active: r
+      hover: r,
+      active: s
     } = this.state;
     if (null != e) {
-      if ("side" === i) return null != t && n === t || r ? v(e, "Selected") : s ? v(e, "Hover") : v(e);
+      if ("side" === i) return null != t && n === t || s ? T(e, "Selected") : r ? T(e, "Hover") : T(e);
       if ("top" === i) return n === t ? {
         borderColor: e,
         color: e
-      } : s ? {
-        borderColor: (0, d.hex2rgb)(e, .1),
-        color: (0, d.hex2rgb)(e, .6)
+      } : r ? {
+        borderColor: (0, c.hex2rgb)(e, .1),
+        color: (0, c.hex2rgb)(e, .6)
       } : {
         borderColor: "transparent",
-        color: (0, d.hex2rgb)(e, .4)
+        color: (0, c.hex2rgb)(e, .4)
       };
       if ("top-pill" === i) return n === t ? {
-        backgroundColor: (0, d.hex2rgb)(e, .2),
+        backgroundColor: (0, c.hex2rgb)(e, .2),
         color: e
       } : {
         backgroundColor: e,
-        color: c.default.unsafe_rawColors.WHITE_500.css
+        color: d.default.unsafe_rawColors.WHITE_500.css
       }
     }
   }
@@ -83,34 +83,34 @@ class S extends a.Component {
       className: t,
       id: n,
       selectedItem: i,
-      color: s,
+      color: r,
       disabled: a,
       onContextMenu: o,
       clickableRef: u,
-      look: d,
-      disableItemStyles: c
-    } = this.props, _ = this.props["aria-label"], h = i === n;
-    return (0, r.jsx)(f.Clickable, {
+      look: c,
+      disableItemStyles: d
+    } = this.props, E = this.props["aria-label"], p = i === n;
+    return (0, s.jsx)(f.Clickable, {
       className: l(t, {
-        [g.item]: !c,
-        [g.brand]: "brand" === d,
-        [g.selected]: null == s && h,
-        [g.themed]: "grey" === d,
-        [g.disabled]: null == s && a
+        [h.item]: !d,
+        [h.brand]: "brand" === c,
+        [h.selected]: null == r && p,
+        [h.themed]: "grey" === c,
+        [h.disabled]: null == r && a
       }),
       style: this.getStyle(),
       role: "tab",
-      "aria-selected": h,
-      "aria-controls": h ? p("".concat(n)) : void 0,
+      "aria-selected": p,
+      "aria-controls": p ? m("".concat(n)) : void 0,
       "aria-disabled": a,
-      tabIndex: h ? 0 : -1,
-      onMouseEnter: null != s ? this.handleMouseOver : void 0,
+      tabIndex: p ? 0 : -1,
+      onMouseEnter: null != r ? this.handleMouseOver : void 0,
       onClick: this.handleClick,
-      onMouseLeave: null != s ? this.handleMouseOut : void 0,
-      onMouseUp: null != s ? this.handleMouseUp : void 0,
+      onMouseLeave: null != r ? this.handleMouseOut : void 0,
+      onMouseUp: null != r ? this.handleMouseUp : void 0,
       onMouseDown: this.handleMouseDown,
       onContextMenu: o,
-      "aria-label": _,
+      "aria-label": E,
       ref: u,
       children: e
     })
@@ -124,9 +124,9 @@ class S extends a.Component {
         disabled: t,
         onClick: n,
         id: i,
-        onItemSelect: s
+        onItemSelect: r
       } = this.props;
-      !t && (null != n ? n(e) : null != s && s(i))
+      !t && (null != n ? n(e) : null != r && r(i))
     }, this.handleMouseDown = () => {
       let {
         color: e
@@ -150,29 +150,29 @@ class S extends a.Component {
     }
   }
 }
-S.defaultProps = {
+g.defaultProps = {
   disabled: !1,
   look: "grey",
   disableItemStyles: !1
 };
-class T extends a.Component {
+class I extends a.Component {
   render() {
     let {
       className: e,
       children: t,
       type: n = "side",
       style: i,
-      "aria-label": s,
+      "aria-label": r,
       orientation: o = "horizontal"
     } = this.props;
-    return (0, r.jsx)("div", {
+    return (0, s.jsx)("div", {
       ref: this.tabBarRef,
-      className: l(e, m[n]),
+      className: l(e, _[n]),
       style: i,
       role: "tablist",
       "aria-orientation": o,
       onKeyDown: this.handleKeyDown,
-      "aria-label": s,
+      "aria-label": r,
       children: a.Children.map(t, this.renderChildren)
     })
   }
@@ -195,26 +195,26 @@ class T extends a.Component {
         selectedItem: t,
         onItemSelect: n,
         type: i = "side",
-        look: s = "grey"
+        look: r = "grey"
       } = this.props;
       return a.isValidElement(e) ? a.cloneElement(e, {
         selectedItem: t,
         onItemSelect: n,
         itemType: i,
-        look: s
+        look: r
       }) : null
     }, this.getNodeForKeydownEvent = async e => {
       let {
         orientation: t = "horizontal"
-      } = this.props, n = "vertical" === t ? h.KeyboardKeys.ARROW_UP : h.KeyboardKeys.ARROW_LEFT, i = "vertical" === t ? h.KeyboardKeys.ARROW_DOWN : h.KeyboardKeys.ARROW_RIGHT;
+      } = this.props, n = "vertical" === t ? p.KeyboardKeys.ARROW_UP : p.KeyboardKeys.ARROW_LEFT, i = "vertical" === t ? p.KeyboardKeys.ARROW_DOWN : p.KeyboardKeys.ARROW_RIGHT;
       switch (e.which) {
         case n:
           return this.focusManager.getPreviousFocusableElement();
         case i:
           return this.focusManager.getNextFocusableElement();
-        case h.KeyboardKeys.HOME:
+        case p.KeyboardKeys.HOME:
           return this.focusManager.getFirstFocusableElement();
-        case h.KeyboardKeys.END:
+        case p.KeyboardKeys.END:
           return this.focusManager.getLastFocusableElement()
       }
       return null
@@ -224,38 +224,38 @@ class T extends a.Component {
     }
   }
 }
-T.Header = function(e) {
+I.Header = function(e) {
   let {
     className: t,
     onClick: n,
     children: i,
-    "aria-expanded": s,
+    "aria-expanded": r,
     "aria-controls": a
   } = e;
-  return (0, r.jsx)(f.Clickable, {
+  return (0, s.jsx)(f.Clickable, {
     tabIndex: null == n ? -1 : 0,
-    className: l(g.header, t),
+    className: l(h.header, t),
     onClick: n,
-    "aria-expanded": s,
+    "aria-expanded": r,
     "aria-controls": a,
     focusProps: {
       offset: {
         top: -6
       }
     },
-    children: (0, r.jsx)(_.Text, {
+    children: (0, s.jsx)(E.Text, {
       variant: "eyebrow",
       color: "none",
-      className: g.headerText,
+      className: h.headerText,
       children: i
     })
   })
-}, T.Item = S, T.Separator = function(e) {
+}, I.Item = g, I.Separator = function(e) {
   let {
     style: t
   } = e;
-  return (0, r.jsx)("div", {
-    className: g.separator,
+  return (0, s.jsx)("div", {
+    className: h.separator,
     style: t
   })
-}, T.Panel = E
+}, I.Panel = S

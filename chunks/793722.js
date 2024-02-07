@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   registerActiveSink: function() {
-    return r
+    return s
   },
   unregisterActiveSink: function() {
     return a
@@ -11,18 +11,18 @@ n.r(t), n.d(t, {
   }
 });
 let i = {},
-  s = null;
+  r = null;
 
-function r(e) {
+function s(e) {
   var t;
   let n = null !== (t = i[e]) && void 0 !== t ? t : 0;
-  0 === n && (null == s || s(e, !0)), i[e] = n + 1
+  0 === n && (null == r || r(e, !0)), i[e] = n + 1
 }
 
 function a(e) {
-  i[e]--, 0 === i[e] && (null == s || s(e, !1))
+  i[e]--, 0 === i[e] && (null == r || r(e, !1))
 }
 
 function o(e) {
-  s = null != e ? e : null
+  r = null != e ? e : null
 }

@@ -1,38 +1,38 @@
 "use strict";
-let i, s, r;
+let i, r, s;
 n.r(t), n.d(t, {
   transitionTo: function() {
-    return E
-  },
-  transitionToGuild: function() {
-    return p
-  },
-  currentRouteHasBackNavigation: function() {
-    return v
-  },
-  replaceWith: function() {
     return S
   },
-  getHistory: function() {
+  transitionToGuild: function() {
+    return m
+  },
+  currentRouteHasBackNavigation: function() {
     return T
   },
-  getLastRouteChangeSource: function() {
+  replaceWith: function() {
+    return g
+  },
+  getHistory: function() {
     return I
   },
-  getLastRouteChangeSourceLocationStack: function() {
+  getLastRouteChangeSource: function() {
     return C
+  },
+  getLastRouteChangeSourceLocationStack: function() {
+    return v
   },
   isValidFingerprintRoute: function() {
     return A
   },
   getFingerprintLocation: function() {
-    return y
+    return R
   },
   hasNavigated: function() {
     return N
   },
   back: function() {
-    return R
+    return O
   },
   forward: function() {
     return D
@@ -42,58 +42,58 @@ var a = n("294094"),
   o = n("605250"),
   l = n("659500"),
   u = n("877275"),
-  d = n("49111");
-let c = new o.default("Routing/Utils"),
-  f = [d.RelativeMarketingURLs.DEVELOPER_PORTAL];
+  c = n("49111");
+let d = new o.default("Routing/Utils"),
+  f = [c.RelativeMarketingURLs.DEVELOPER_PORTAL];
 i = __OVERLAY__ ? (0, a.createMemoryHistory)() : (0, a.createBrowserHistory)();
-let _ = !1,
-  h = i.listen((e, t) => {
-    "REPLACE" !== t && (_ = !0, h())
+let E = !1,
+  p = i.listen((e, t) => {
+    "REPLACE" !== t && (E = !0, p())
   });
 
-function g() {
-  return !l.ComponentDispatch.hasSubscribers(d.ComponentActions.MODAL_CLOSE) && (n("144747").default.close(), !0)
+function h() {
+  return !l.ComponentDispatch.hasSubscribers(c.ComponentActions.MODAL_CLOSE) && (n("144747").default.close(), !0)
 }
 
-function m(e, t) {
-  return !!("string" == typeof e && f.some(t => e.startsWith(t))) && (c.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
+function _(e, t) {
+  return !!("string" == typeof e && f.some(t => e.startsWith(t))) && (d.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
 }
 
-function E(e, t, n, a) {
-  !m(e, "assign") && (c.log("transitionTo - Transitioning to ".concat(e)), null != n && (null == t ? t = {
+function S(e, t, n, a) {
+  !_(e, "assign") && (d.log("transitionTo - Transitioning to ".concat(e)), null != n && (null == t ? t = {
     source: n
   } : t.source = n), null == t ? i.push(e) : i.push({
     pathname: e,
     ...t
-  }), s = n, r = a)
+  }), r = n, s = a)
 }
 
-function p(e, t, n, i, s) {
-  c.log("transitionToGuild - Transitioning to ".concat(JSON.stringify({
+function m(e, t, n, i, r) {
+  d.log("transitionToGuild - Transitioning to ".concat(JSON.stringify({
     guildId: e,
     channelId: t,
     messageId: n
-  }))), E(d.Routes.CHANNEL(e, t, n), null != s ? s : null, i)
-}
-
-function v() {
-  return null != s && u.ChannelBackNavigationSources.has(s)
-}
-
-function S(e, t, n) {
-  !m(e, "replace") && (c.log("Replacing route with ".concat(e)), "string" == typeof e ? i.replace(e, t) : i.replace(e), s = n)
+  }))), S(c.Routes.CHANNEL(e, t, n), null != r ? r : null, i)
 }
 
 function T() {
-  return i
+  return null != r && u.ChannelBackNavigationSources.has(r)
+}
+
+function g(e, t, n) {
+  !_(e, "replace") && (d.log("Replacing route with ".concat(e)), "string" == typeof e ? i.replace(e, t) : i.replace(e), r = n)
 }
 
 function I() {
-  return s
+  return i
 }
 
 function C() {
   return r
+}
+
+function v() {
+  return s
 }
 
 function A(e) {
@@ -101,38 +101,38 @@ function A(e) {
     var t;
     e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""
   }
-  return !e.startsWith(d.Routes.HANDOFF) && !0
+  return !e.startsWith(c.Routes.HANDOFF) && !0
 }
 
-function y(e) {
+function R(e) {
   if (null == e) {
     var t;
     e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""
   }
-  if (e.startsWith(d.Routes.LOGIN)) return d.PageAnalyticsLocations.LOGIN;
-  if (e.startsWith(d.Routes.REGISTER)) return d.PageAnalyticsLocations.REGISTER;
-  if (e.startsWith(d.Routes.INVITE(""))) return d.PageAnalyticsLocations.INVITE;
-  else if (e.startsWith(d.Routes.VERIFY)) return d.PageAnalyticsLocations.VERIFY;
-  else if (e.startsWith(d.Routes.DISABLE_EMAIL_NOTIFICATIONS)) return d.PageAnalyticsLocations.DISABLE_EMAIL_NOTIFICATIONS;
-  else if (e.startsWith(d.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) return d.PageAnalyticsLocations.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
-  else if (e.startsWith(d.Routes.REJECT_IP)) return d.PageAnalyticsLocations.REJECT_IP;
-  else if (e.startsWith(d.Routes.REJECT_MFA)) return d.PageAnalyticsLocations.REJECT_MFA;
-  else if (e.startsWith(d.Routes.AUTHORIZE_IP)) return d.PageAnalyticsLocations.AUTHORIZE_IP;
-  else if (e.startsWith(d.Routes.AUTHORIZE_PAYMENT)) return d.PageAnalyticsLocations.AUTHORIZE_PAYMENT;
-  else if (e.startsWith(d.Routes.RESET)) return d.PageAnalyticsLocations.RESET;
-  else if (e.startsWith(d.Routes.REPORT)) return d.PageAnalyticsLocations.REPORT;
-  else if (e.startsWith(d.Routes.REPORT_SECOND_LOOK)) return d.PageAnalyticsLocations.REPORT_SECOND_LOOK;
+  if (e.startsWith(c.Routes.LOGIN)) return c.PageAnalyticsLocations.LOGIN;
+  if (e.startsWith(c.Routes.REGISTER)) return c.PageAnalyticsLocations.REGISTER;
+  if (e.startsWith(c.Routes.INVITE(""))) return c.PageAnalyticsLocations.INVITE;
+  else if (e.startsWith(c.Routes.VERIFY)) return c.PageAnalyticsLocations.VERIFY;
+  else if (e.startsWith(c.Routes.DISABLE_EMAIL_NOTIFICATIONS)) return c.PageAnalyticsLocations.DISABLE_EMAIL_NOTIFICATIONS;
+  else if (e.startsWith(c.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) return c.PageAnalyticsLocations.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
+  else if (e.startsWith(c.Routes.REJECT_IP)) return c.PageAnalyticsLocations.REJECT_IP;
+  else if (e.startsWith(c.Routes.REJECT_MFA)) return c.PageAnalyticsLocations.REJECT_MFA;
+  else if (e.startsWith(c.Routes.AUTHORIZE_IP)) return c.PageAnalyticsLocations.AUTHORIZE_IP;
+  else if (e.startsWith(c.Routes.AUTHORIZE_PAYMENT)) return c.PageAnalyticsLocations.AUTHORIZE_PAYMENT;
+  else if (e.startsWith(c.Routes.RESET)) return c.PageAnalyticsLocations.RESET;
+  else if (e.startsWith(c.Routes.REPORT)) return c.PageAnalyticsLocations.REPORT;
+  else if (e.startsWith(c.Routes.REPORT_SECOND_LOOK)) return c.PageAnalyticsLocations.REPORT_SECOND_LOOK;
   return e
 }
 
 function N() {
-  return _
+  return E
 }
 
-function R() {
-  g() && (s = null, i.goBack())
+function O() {
+  h() && (r = null, i.goBack())
 }
 
 function D() {
-  g() && (s = null, i.goForward())
+  h() && (r = null, i.goForward())
 }

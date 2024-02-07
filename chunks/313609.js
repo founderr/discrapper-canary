@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return l
   }
 }), n("70102");
-var i = n("37983"),
-  s = n("884691"),
+var s = n("37983"),
+  i = n("884691"),
   r = n("414456"),
   a = n.n(r),
   o = n("508330");
-let l = e => new Promise((t, n) => {
+let d = e => new Promise((t, n) => {
   null == e && n(Error("No image src passed"));
-  let i = new Image;
-  i.src = e, i.onload = () => t(i), i.onerror = e => n(e)
+  let s = new Image;
+  s.src = e, s.onload = () => t(s), s.onerror = e => n(e)
 });
-class u extends s.PureComponent {
+class u extends i.PureComponent {
   componentDidUpdate(e) {
     e.src !== this.props.src && this.setState({
       loaded: !1
     }, () => this.initialize())
   }
   initialize() {
-    l(this.props.src).then(() => {
+    d(this.props.src).then(() => {
       !this.unmounting && this.setState({
         loaded: !0
       })
@@ -35,30 +35,30 @@ class u extends s.PureComponent {
       className: e,
       src: t,
       alt: n,
-      width: s,
+      width: i,
       height: r,
-      onLoad: l,
+      onLoad: d,
       style: u,
-      imageClassName: d
+      imageClassName: l
     } = this.props, {
-      loaded: c
+      loaded: f
     } = this.state;
-    return (0, i.jsx)("div", {
+    return (0, s.jsx)("div", {
       className: e,
       style: {
         ...u,
-        width: s,
+        width: i,
         height: r
       },
-      children: (0, i.jsx)("img", {
-        className: a(o.image, d, {
-          [o.loaded]: c
+      children: (0, s.jsx)("img", {
+        className: a(o.image, l, {
+          [o.loaded]: f
         }),
-        width: s,
+        width: i,
         height: r,
         src: t,
         alt: n,
-        onLoad: l
+        onLoad: d
       })
     })
   }
@@ -73,4 +73,4 @@ u.defaultProps = {
   height: 0,
   alt: ""
 };
-var d = u
+var l = u

@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return d
   },
   default: function() {
-    return f
+    return _
   }
 });
 var r = n("37983");
 n("884691");
 var i = n("414456"),
   s = n.n(i),
-  u = n("75196"),
-  a = n("956089"),
-  o = n("125835"),
-  l = n("782340"),
+  a = n("75196"),
+  l = n("956089"),
+  u = n("125835"),
+  o = n("782340"),
   c = n("159163");
 
 function d(e) {
   return (0, r.jsx)("svg", {
-    ...(0, u.default)({
+    ...(0, a.default)({
       ...e
     }),
     width: "25",
@@ -34,23 +34,23 @@ function d(e) {
   })
 }
 
-function f(e) {
+function _(e) {
   let {
     className: t,
     forceUseColorForSparkles: n = !1,
     shouldInheritTextColor: i = !1,
-    shouldInheritBackgroundColor: u = !1
+    shouldInheritBackgroundColor: a = !1
   } = e;
-  return (0, r.jsx)(o.default, {
+  return (0, r.jsx)(u.default, {
     className: t,
     forceUseColor: n,
-    children: (0, r.jsx)(a.TextBadge, {
+    children: (0, r.jsx)(l.TextBadge, {
       disableColor: !0,
       className: s(c.tag, {
         [c.inheritTextColor]: i,
-        [c.inheritBackgroundColor]: u
+        [c.inheritBackgroundColor]: a
       }),
-      text: l.default.Messages.NEW
+      text: o.default.Messages.NEW
     })
   })
 }

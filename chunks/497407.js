@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var i, s = n("398183"),
-  r = n("985365"),
+var i, r = n("398183"),
+  s = n("985365"),
   a = n("49111");
 
 function o(e) {
@@ -45,12 +45,12 @@ i = class {
   }
   incrementNetworkStats(e) {
     let t = (e - this._lastSampleTimestamp) / 1e3,
-      n = r.default.getEffectiveConnectionSpeed();
+      n = s.default.getEffectiveConnectionSpeed();
     n === a.NetworkConnectionSpeeds.SLOW_TWO_G && (n = a.NetworkConnectionSpeeds.TWO_G);
-    let i = r.default.getType();
+    let i = s.default.getType();
     i === a.NetworkConnectionTypes.WIMAX && (i = a.NetworkConnectionTypes.WIFI), this._networkStats.effectiveConnectionSpeedBuckets[n] += t, this._networkStats.connectionTypeBuckets[i] += t, this._lastSampleTimestamp = e
   }
   constructor() {
-    this._networkStats = this._initStats(), this._lastSampleTimestamp = (0, s.now)()
+    this._networkStats = this._initStats(), this._lastSampleTimestamp = (0, r.now)()
   }
 }

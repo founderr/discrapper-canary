@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   joinRequestFromServer: function() {
-    return c
+    return d
   },
   default: function() {
-    return h
+    return p
   }
 });
 var i = n("446674"),
-  s = n("913144"),
-  r = n("813006"),
+  r = n("913144"),
+  s = n("813006"),
   a = n("697218"),
   o = n("591023");
 let l = {},
   u = !1,
-  d = {};
+  c = {};
 
-function c(e) {
+function d(e) {
   return {
     id: e.id,
     guildId: e.guild_id,
@@ -38,12 +38,12 @@ function f(e) {
     request: n
   } = e;
   if (null == n) return;
-  let i = c(n),
-    s = a.default.getCurrentUser();
-  if (null != s && i.userId !== s.id) return !1;
+  let i = d(n),
+    r = a.default.getCurrentUser();
+  if (null != r && i.userId !== r.id) return !1;
   (0, o.isApprovedAndAcked)(i) ? delete l[t]: l[t] = i
 }
-class _ extends i.default.Store {
+class E extends i.default.Store {
   getRequest(e) {
     return l[e]
   }
@@ -51,23 +51,23 @@ class _ extends i.default.Store {
     return Object.values(l).map(e => null == e ? void 0 : e.guildId).filter(e => null != e)
   }
   getJoinRequestGuild(e) {
-    return null != d[e] ? new r.default(d[e]) : null
+    return null != c[e] ? new s.default(c[e]) : null
   }
   get hasFetchedRequestToJoinGuilds() {
     return u
   }
 }
-_.displayName = "UserGuildJoinRequestStore";
-var h = new _(s.default, {
+E.displayName = "UserGuildJoinRequestStore";
+var p = new E(r.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guildJoinRequests: t
     } = e;
-    u = !1, d = {}, l = {}, t.forEach(e => {
+    u = !1, c = {}, l = {}, t.forEach(e => {
       let {
         guild_id: t
       } = e;
-      null != t && (l[t] = c(e))
+      null != t && (l[t] = d(e))
     })
   },
   GUILD_JOIN_REQUEST_UPDATE: f,
@@ -81,7 +81,7 @@ var h = new _(s.default, {
       delete l[n];
       return
     }
-    let i = c(t);
+    let i = d(t);
     (0, o.isApprovedAndAcked)(i) ? delete l[n]: l[n] = i
   },
   GUILD_DELETE: function(e) {
@@ -99,13 +99,13 @@ var h = new _(s.default, {
         id: t,
         name: n,
         features: i,
-        icon: s
+        icon: r
       } = e;
-      d[t] = {
+      c[t] = {
         id: t,
         name: n,
         features: i,
-        icon: s
+        icon: r
       }
     })
   },
@@ -118,14 +118,14 @@ var h = new _(s.default, {
       let {
         id: e,
         name: i,
-        icon: s,
-        features: r
+        icon: r,
+        features: s
       } = t.guild;
-      d[n] = {
+      c[n] = {
         id: e,
         name: i,
-        icon: s,
-        features: null != r ? r : []
+        icon: r,
+        features: null != s ? s : []
       }
     }
   },
@@ -140,17 +140,17 @@ var h = new _(s.default, {
       let {
         guild_id: e
       } = i;
-      l[e] = c(i);
+      l[e] = d(i);
       let {
         id: t,
-        name: s,
-        icon: r,
+        name: r,
+        icon: s,
         features: a
       } = n;
-      d[t] = {
+      c[t] = {
         id: t,
-        name: s,
-        icon: r,
+        name: r,
+        icon: s,
         features: null != a ? a : []
       }
     }

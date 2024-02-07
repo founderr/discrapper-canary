@@ -4,17 +4,17 @@ n.r(t), n.d(t, {
     return u
   },
   isActivitiesInTextEnabled: function() {
-    return c
-  },
-  useIsActivitiesInTextEnabled: function() {
     return f
   },
-  useActivitiesInTextButtonVisibility: function() {
+  useIsActivitiesInTextEnabled: function() {
     return _
+  },
+  useActivitiesInTextButtonVisibility: function() {
+    return c
   }
 });
-var i = n("298386"),
-  s = n("446674"),
+var s = n("298386"),
+  i = n("446674"),
   r = n("862205"),
   a = n("42203");
 let o = (0, r.createExperiment)({
@@ -42,7 +42,7 @@ let o = (0, r.createExperiment)({
       }
     }]
   }),
-  l = (0, r.createExperiment)({
+  d = (0, r.createExperiment)({
     kind: "guild",
     id: "2023-11_activities_in_text_guild",
     label: "Activities in Text Guild",
@@ -69,17 +69,17 @@ let o = (0, r.createExperiment)({
   });
 
 function u(e) {
-  return [i.ChannelTypes.GUILD_TEXT, i.ChannelTypes.GROUP_DM, i.ChannelTypes.DM].includes(e)
+  return [s.ChannelTypes.GUILD_TEXT, s.ChannelTypes.GROUP_DM, s.ChannelTypes.DM].includes(e)
 }
 
-function d(e) {
+function l(e) {
   return null != e && u(e.type)
 }
 
-function c(e, t) {
+function f(e, t) {
   if (null == e) return !1;
   let n = u(e.type);
-  return (null == e ? void 0 : e.guild_id) != null ? l.getCurrentConfig({
+  return (null == e ? void 0 : e.guild_id) != null ? d.getCurrentConfig({
     guildId: e.guild_id,
     location: t
   }, {
@@ -91,28 +91,28 @@ function c(e, t) {
   }).enabled && n
 }
 
-function f(e, t) {
-  let n = (0, s.useStateFromStores)([a.default], () => a.default.getChannel(e)),
-    i = d(n),
-    r = (null == n ? void 0 : n.guild_id) != null ? l : o,
+function _(e, t) {
+  let n = (0, i.useStateFromStores)([a.default], () => a.default.getChannel(e)),
+    s = l(n),
+    r = (null == n ? void 0 : n.guild_id) != null ? d : o,
     u = r.useExperiment({
       guildId: null == n ? void 0 : n.guild_id,
       location: t
     }, {
       autoTrackExposure: !1
     });
-  return u.enabled && i
+  return u.enabled && s
 }
 
-function _(e, t) {
-  let n = (0, s.useStateFromStores)([a.default], () => a.default.getChannel(e)),
-    i = d(n),
+function c(e, t) {
+  let n = (0, i.useStateFromStores)([a.default], () => a.default.getChannel(e)),
+    s = l(n),
     r = o.useExperiment({
       location: t
     }, {
       autoTrackExposure: !1
     });
-  return r.enabled && i ? {
+  return r.enabled && s ? {
     showInOmniButtonMenu: r.showInOmniButtonMenu,
     showChatInputButton: r.showChatInputButton
   } : null

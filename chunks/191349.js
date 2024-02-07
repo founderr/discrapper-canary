@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+o.r(e), o.d(e, {
   DEVICE_PUSH_VOIP_PROVIDER: function() {
-    return a
+    return l
   },
   getDevicePushProvider: function() {
-    return o
+    return i
   }
 });
-var i, s, r = n("773336");
-let a = null;
+var n, d, r = o("773336");
+let l = null;
 
-function o() {
+function i() {
   return (0, r.isAndroid)(), null
-}(i = s || (s = {})).REMINDER = "reminder", i.TOP_MESSAGE_PUSH = "top_messages_push", i.TRENDING_CONTENT_PUSH = "trending_content_push"
+}(n = d || (d = {})).REMINDER = "reminder", n.TOP_MESSAGE_PUSH = "top_messages_push", n.TRENDING_CONTENT_PUSH = "trending_content_push"

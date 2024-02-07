@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return L
+    return u
   }
 }), E("222007");
 var t = E("862337"),
@@ -15,8 +15,8 @@ var t = E("862337"),
   T = E("280168"),
   S = E("316133"),
   N = E("718517"),
-  O = E("716241"),
-  A = E("49111");
+  A = E("716241"),
+  O = E("49111");
 let R = 1 * N.default.Millis.MINUTE;
 class l extends o.default {
   _initialize() {
@@ -31,7 +31,7 @@ class l extends o.default {
         _ = i.default.getGuildId(),
         E = r.default.getChannel(e),
         t = null == E ? void 0 : E.isBroadcastChannel();
-      (0, O.trackWithMetadata)(A.AnalyticEvents.START_SPEAKING, {
+      (0, A.trackWithMetadata)(O.AnalyticEvents.START_SPEAKING, {
         mode: a.default.getMode(),
         priority: T.default.isCurrentUserPrioritySpeaking(),
         channel: e,
@@ -53,7 +53,7 @@ class l extends o.default {
       _ = i.default.getGuildId(),
       E = r.default.getChannel(e),
       t = null == E ? void 0 : E.isBroadcastChannel();
-    (0, O.trackWithMetadata)(A.AnalyticEvents.START_LISTENING, {
+    (0, A.trackWithMetadata)(O.AnalyticEvents.START_LISTENING, {
       mute: a.default.isMute(),
       anyone_priority: T.default.isAnyonePrioritySpeaking(),
       channel: e,
@@ -71,7 +71,7 @@ class l extends o.default {
     this._reset(), T.default.removeChangeListener(this._handleSpeakingStoreChanged), i.default.removeChangeListener(this._handleRTCConnectionStoreChanged)
   }
   getGameMetadata() {
-    let e = s.default.findActivity(e => e.type === A.ActivityTypes.PLAYING),
+    let e = s.default.findActivity(e => e.type === O.ActivityTypes.PLAYING),
       _ = I.default.getCurrentGameForAnalytics();
     return {
       game_platform: (0, n.default)(e),
@@ -100,4 +100,4 @@ class l extends o.default {
     }
   }
 }
-var L = new l
+var u = new l

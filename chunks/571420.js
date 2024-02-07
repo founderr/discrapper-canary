@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   getIsPaused: function() {
-    return s
+    return i
   },
   setIsPaused: function() {
     return r
   }
 });
-let i = !1;
+let s = !1;
 
-function s() {
-  return i
+function i() {
+  return s
 }
 
 function r(e) {
-  i = e
+  s = e
 }

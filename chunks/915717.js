@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   reduce: function() {
-    return u
+    return l
   }
 }), n("424973");
 var r = n("234160"),
-  i = n("714413"),
-  o = n("125692");
+  o = n("714413"),
+  a = n("125692");
 
-function s(e, t) {
+function i(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -19,10 +19,10 @@ function s(e, t) {
   return n
 }
 
-function a(e) {
+function s(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
-    t % 2 ? s(Object(n), !0).forEach(function(t) {
+    t % 2 ? i(Object(n), !0).forEach(function(t) {
       (function(e, t, n) {
         t in e ? Object.defineProperty(e, t, {
           value: n,
@@ -31,7 +31,7 @@ function a(e) {
           writable: !0
         }) : e[t] = n
       })(e, t, n[t])
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : s(Object(n)).forEach(function(t) {
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : i(Object(n)).forEach(function(t) {
       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
     })
   }
@@ -47,13 +47,13 @@ var c = {
   isSourcePublic: null
 };
 
-function u() {
+function l() {
   var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
     t = arguments.length > 1 ? arguments[1] : void 0,
     n = t.payload;
   switch (t.type) {
     case r.BEGIN_DRAG:
-      return a(a({}, e), {}, {
+      return s(s({}, e), {}, {
         itemType: n.itemType,
         item: n.item,
         sourceId: n.sourceId,
@@ -62,26 +62,26 @@ function u() {
         didDrop: !1
       });
     case r.PUBLISH_DRAG_SOURCE:
-      return a(a({}, e), {}, {
+      return s(s({}, e), {}, {
         isSourcePublic: !0
       });
     case r.HOVER:
-      return a(a({}, e), {}, {
+      return s(s({}, e), {}, {
         targetIds: n.targetIds
       });
-    case i.REMOVE_TARGET:
+    case o.REMOVE_TARGET:
       if (-1 === e.targetIds.indexOf(n.targetId)) return e;
-      return a(a({}, e), {}, {
-        targetIds: (0, o.without)(e.targetIds, n.targetId)
+      return s(s({}, e), {}, {
+        targetIds: (0, a.without)(e.targetIds, n.targetId)
       });
     case r.DROP:
-      return a(a({}, e), {}, {
+      return s(s({}, e), {}, {
         dropResult: n.dropResult,
         didDrop: !0,
         targetIds: []
       });
     case r.END_DRAG:
-      return a(a({}, e), {}, {
+      return s(s({}, e), {}, {
         itemType: null,
         item: null,
         sourceId: null,

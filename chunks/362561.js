@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   announce: function() {
-    return i
+    return o
   },
   clearAnnouncer: function() {
-    return o
+    return a
   }
 });
 let r = null;
 
-function i(e) {
+function o(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "assertive",
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 7e3;
-  !r && (r = new s), r.announce(e, t, n)
+  !r && (r = new i), r.announce(e, t, n)
 }
 
-function o(e) {
+function a(e) {
   r && r.clear(e)
 }
-class s {
+class i {
   createLog(e) {
     let t = document.createElement("div");
     return t.setAttribute("role", "log"), t.setAttribute("aria-live", e), t.setAttribute("aria-relevant", "additions"), t

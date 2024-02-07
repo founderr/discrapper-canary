@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return s
   },
   default: function() {
-    return u
+    return L
   }
 }), E("424973"), E("222007"), E("808653");
 var t = E("917351"),
@@ -19,9 +19,9 @@ let s = 26,
   T = {},
   S = {},
   N = {},
-  O = {};
+  A = {};
 
-function A(e) {
+function O(e) {
   let _ = S[e];
   if (null == _) return;
   let E = i.default.fromTimestamp(Date.now() - 9e5),
@@ -37,7 +37,7 @@ function A(e) {
 function R(e, _, E, t) {
   T[e].add(_);
   let o = N[_];
-  (null == o || o + 3e5 > Date.now()) && A(_), null == S[_] && (S[_] = []), S[_].push({
+  (null == o || o + 3e5 > Date.now()) && O(_), null == S[_] && (S[_] = []), S[_].push({
     id: E,
     userId: t
   })
@@ -49,9 +49,9 @@ function l(e) {
   } = e;
   delete S[_.id], delete N[_.id]
 }
-class L extends n.default.Store {
+class u extends n.default.Store {
   getActiveChannelsFetchStatus(e) {
-    return O[e]
+    return A[e]
   }
   getActiveChannelIds(e) {
     return T[e]
@@ -61,11 +61,11 @@ class L extends n.default.Store {
   }
   shouldFetch(e) {
     var _;
-    return null == T[e] && !(null === (_ = O[e]) || void 0 === _ ? void 0 : _.loading)
+    return null == T[e] && !(null === (_ = A[e]) || void 0 === _ ? void 0 : _.loading)
   }
 }
-L.displayName = "ActiveChannelsStore";
-var u = new L(r.default, {
+u.displayName = "ActiveChannelsStore";
+var L = new u(r.default, {
   CHANNEL_SELECT: function(e) {
     let {
       channelId: _,
@@ -76,7 +76,7 @@ var u = new L(r.default, {
     if (null == t) return !1;
     t.forEach(e => {
       var _;
-      A(e), (null === (_ = S[e]) || void 0 === _ ? void 0 : _.length) === 0 && delete S[e]
+      O(e), (null === (_ = S[e]) || void 0 === _ ? void 0 : _.length) === 0 && delete S[e]
     });
     let n = o.chain(Array.from(t)).filter(e => e in S).sortBy(e => {
       var _, E;
@@ -111,7 +111,7 @@ var u = new L(r.default, {
     let {
       guildId: _
     } = e;
-    O[_] = {
+    A[_] = {
       loading: !0,
       error: null,
       fetchedAt: Date.now()
@@ -122,7 +122,7 @@ var u = new L(r.default, {
       guildId: _,
       channels: E
     } = e;
-    O[_] = {
+    A[_] = {
       loading: !1,
       error: null,
       fetchedAt: Date.now()
@@ -141,7 +141,7 @@ var u = new L(r.default, {
       guildId: _,
       error: E
     } = e;
-    O[_] = {
+    A[_] = {
       loading: !1,
       error: E,
       fetchedAt: null

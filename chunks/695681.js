@@ -10,15 +10,15 @@ n.r(t), n.d(t, {
     return o
   },
   sendMultiChannelMessagesForScanning: function() {
-    return l
+    return d
   }
 });
-var i = n("872717"),
-  s = n("49111");
+var s = n("872717"),
+  i = n("49111");
 
 function r(e, t, n, r) {
-  return i.default.post({
-    url: s.Endpoints.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
+  return s.default.post({
+    url: i.Endpoints.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
     body: {
       channel_id: e,
       message_id: t,
@@ -29,8 +29,8 @@ function r(e, t, n, r) {
 }
 
 function a(e, t, n, r) {
-  return i.default.post({
-    url: s.Endpoints.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
+  return s.default.post({
+    url: i.Endpoints.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
     body: {
       channel_id: e,
       message_id: t,
@@ -41,21 +41,21 @@ function a(e, t, n, r) {
 }
 
 function o(e, t) {
-  return i.default.patch({
-    url: s.Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
+  return s.default.patch({
+    url: i.Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
     body: {
       message_ids: t
     }
   })
 }
 
-function l(e) {
+function d(e) {
   let t = e.map(e => ({
     channel_id: e.channel_id,
     message_id: e.id
   }));
-  return i.default.patch({
-    url: s.Endpoints.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES,
+  return s.default.patch({
+    url: i.Endpoints.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES,
     body: {
       messages: t
     }

@@ -4,11 +4,11 @@ function i(e) {
   return e
 }
 
-function s(e, t) {
+function r(e, t) {
   return e.hasOwnProperty(t)
 }
 
-function r(e, t) {
+function s(e, t) {
   return Object.setPrototypeOf(e, t.prototype)
 }
 n.r(t), n.d(t, {
@@ -16,9 +16,9 @@ n.r(t), n.d(t, {
     return i
   },
   hasOwnProperty: function() {
-    return s
+    return r
   },
   dangerouslyCast: function() {
-    return r
+    return s
   }
 })

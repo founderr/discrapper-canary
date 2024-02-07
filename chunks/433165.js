@@ -400,14 +400,14 @@ var r = {
     Z̧: "Z",
     z̧: "z"
   },
-  i = Object.keys(r).join("|"),
-  o = RegExp(i, "g"),
-  s = RegExp(i, ""),
-  a = function(e) {
-    return e.replace(o, function(e) {
+  o = Object.keys(r).join("|"),
+  a = RegExp(o, "g"),
+  i = RegExp(o, ""),
+  s = function(e) {
+    return e.replace(a, function(e) {
       return r[e]
     })
   };
-e.exports = a, e.exports.has = function(e) {
-  return !!e.match(s)
-}, e.exports.remove = a
+e.exports = s, e.exports.has = function(e) {
+  return !!e.match(i)
+}, e.exports.remove = s

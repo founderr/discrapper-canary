@@ -10,8 +10,8 @@ n.r(e), n.d(e, {
 var r = n("37983");
 n("884691");
 var i = n("812204"),
-  u = n("685665"),
-  o = n("635357"),
+  o = n("685665"),
+  u = n("635357"),
   a = n("642906"),
   c = n("385179"),
   l = n("292215"),
@@ -22,17 +22,17 @@ function f(t) {
     onClose: e,
     onComplete: n,
     transitionState: i,
-    loadId: o,
+    loadId: u,
     applicationId: l,
     analyticsLocationObject: s,
     skuId: f
   } = t, {} = (0, a.usePaymentContext)(), {
     analyticsLocations: d
-  } = (0, u.default)();
+  } = (0, o.default)();
   return (0, r.jsx)(c.PaymentModal, {
     onClose: e,
     onComplete: n,
-    loadId: o,
+    loadId: u,
     applicationId: l,
     skuId: f,
     initialPlanId: null,
@@ -50,7 +50,7 @@ function p(t) {
     analyticsLocations: c
   } = t, {
     AnalyticsLocationProvider: l
-  } = (0, u.default)(c, i.default.PREMIUM_PAYMENT_MODAL);
+  } = (0, o.default)(c, i.default.PREMIUM_PAYMENT_MODAL);
   return (0, r.jsx)(l, {
     children: (0, r.jsx)(a.PaymentContextProvider, {
       stepConfigs: d,
@@ -58,7 +58,7 @@ function p(t) {
       skuIDs: [n],
       activeSubscription: null,
       purchaseType: s.PurchaseTypes.ONE_TIME,
-      children: (0, r.jsx)(o.GiftContextProvider, {
+      children: (0, r.jsx)(u.GiftContextProvider, {
         children: (0, r.jsx)(f, {
           ...t
         })

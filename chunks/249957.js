@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 });
 var a = n("37983");
@@ -49,15 +49,15 @@ function C(e) {
   })
 }
 
-function S(e) {
+function g(e) {
   let {
     userId: t,
     guildId: n,
     location: l,
     className: r,
     onNavigate: d
-  } = e, S = (0, i.default)([u.default], () => u.default.getUser(t), [t]), g = (0, i.default)([o.default], () => o.default.getMember(n, t), [n, t]), _ = (0, c.useProfileThemedPanelBackground)(t, n);
-  return null == S || null == g ? null : (0, a.jsxs)("div", {
+  } = e, g = (0, i.default)([u.default], () => u.default.getUser(t), [t]), S = (0, i.default)([o.default], () => o.default.getMember(n, t), [n, t]), _ = (0, c.useProfileThemedPanelBackground)(t, n);
+  return null == g || null == S ? null : (0, a.jsxs)("div", {
     className: s(E.container, r),
     style: {
       backgroundColor: _
@@ -68,15 +68,15 @@ function S(e) {
     }), (0, a.jsxs)("div", {
       className: s(E.innerContainer),
       children: [(0, a.jsx)(p.default, {
-        member: g
+        member: S
       }), (0, a.jsx)(m.default, {
         userId: t,
         guildId: n,
         onNavigate: d
       }), (0, a.jsx)(h.default, {
-        member: g
+        member: S
       }), (0, a.jsx)(f.default, {
-        member: g
+        member: S
       })]
     })]
   })

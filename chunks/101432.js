@@ -8,8 +8,8 @@ var r = n("37983"),
   i = n("884691"),
   s = n("245187"),
   l = n("10514"),
-  u = n("599110"),
-  a = n("719923"),
+  a = n("599110"),
+  u = n("719923"),
   o = n("635357"),
   c = n("642906"),
   d = n("628738"),
@@ -23,8 +23,8 @@ function I(e) {
     setAnalyticsData: _,
     handleClose: E
   } = e, {
-    blockedPayments: S,
-    setStep: T,
+    blockedPayments: T,
+    setStep: S,
     hasFetchedSubscriptions: N,
     hasFetchedSubscriptionPlans: p,
     currencyLoading: C,
@@ -45,8 +45,8 @@ function I(e) {
   }, [I, L]), i.useEffect(() => {
     h(n);
     let e = null != n ? l.default.get(n) : null;
-    !v && !S && (_(t => {
-      let n = null != e ? (0, a.getPrice)(e.id, !1, M, R) : void 0,
+    !v && !T && (_(t => {
+      let n = null != e ? (0, u.getPrice)(e.id, !1, M, R) : void 0,
         r = {
           ...t,
           subscription_plan_id: null == e ? void 0 : e.id,
@@ -54,9 +54,9 @@ function I(e) {
           regular_price: null == e ? void 0 : e.price,
           currency: R.currency
         };
-      return u.default.track(f.AnalyticEvents.PAYMENT_FLOW_STARTED, r), r
-    }), null != e && (P(null == e ? void 0 : e.skuId), T(t)))
-  }, [S, n, M, v, R, m, _, h, P, T, t]), v) ? (0, r.jsx)(d.default, {}) : S ? (0, r.jsx)(s.BlockedPaymentsContentModal, {
+      return a.default.track(f.AnalyticEvents.PAYMENT_FLOW_STARTED, r), r
+    }), null != e && (P(null == e ? void 0 : e.skuId), S(t)))
+  }, [T, n, M, v, R, m, _, h, P, S, t]), v) ? (0, r.jsx)(d.default, {}) : T ? (0, r.jsx)(s.BlockedPaymentsContentModal, {
     onClose: E
   }) : null
 }

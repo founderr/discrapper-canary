@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return L
+    return u
   }
 }), E("222007");
 var t = E("37983"),
@@ -15,37 +15,37 @@ var t = E("37983"),
   T = E("578706"),
   S = E("381546"),
   N = E("655804"),
-  O = E("238500"),
-  A = E("983782"),
+  A = E("238500"),
+  O = E("983782"),
   R = E("939011"),
   l = E("953014");
 
-function L() {
+function u() {
   let {
     debugTrackedData: e,
     impressions: _
   } = (0, R.useImpressionStore)(e => ({
     debugTrackedData: e.debugTrackedData,
     impressions: e.impressions
-  })), E = (0, a.useStateFromStores)([s.default], () => s.default.isAnalyticsDebuggerEnabled), n = (0, a.useStateFromStores)([I.default], () => I.default.isDeveloper), [L, u] = o.useState(!1), {
+  })), E = (0, a.useStateFromStores)([s.default], () => s.default.isAnalyticsDebuggerEnabled), n = (0, a.useStateFromStores)([I.default], () => I.default.isDeveloper), [u, L] = o.useState(!1), {
     name: C,
     ...D
   } = null != e ? e : {}, c = null != C;
-  return n && E ? (0, t.jsx)(A.default, {
+  return n && E ? (0, t.jsx)(O.default, {
     children: (0, t.jsxs)("div", {
       className: r(l.container, {
-        [l.containerMinimized]: L,
+        [l.containerMinimized]: u,
         [l.notTracked]: !c
       }),
       children: [(0, t.jsx)(i.Clickable, {
         className: l.minimizeButton,
         onClick: () => {
-          u(!L)
+          L(!u)
         },
-        children: L ? (0, t.jsx)(N.default, {}) : (0, t.jsx)(O.default, {})
+        children: u ? (0, t.jsx)(N.default, {}) : (0, t.jsx)(A.default, {})
       }), (0, t.jsxs)("div", {
         className: r(l.content, {
-          [l.contentMinimized]: L
+          [l.contentMinimized]: u
         }),
         children: [(0, t.jsxs)(i.Text, {
           className: r(l.label, {

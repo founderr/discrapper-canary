@@ -2,15 +2,15 @@
 let r;
 n.r(t), n.d(t, {
   LocalizedStringDictionary: function() {
-    return s
+    return i
   },
   LocalizedStringFormatter: function() {
-    return u
+    return l
   }
 }), n("70102"), n("222007");
-let i = Symbol.for("react-aria.i18n.locale"),
-  o = Symbol.for("react-aria.i18n.strings");
-class s {
+let o = Symbol.for("react-aria.i18n.locale"),
+  a = Symbol.for("react-aria.i18n.strings");
+class i {
   getStringForLocale(e, t) {
     let n = this.getStringsForLocale(t)[e];
     if (!n) throw Error("Could not find intl message ".concat(e, " in ").concat(t, " locale"));
@@ -32,11 +32,11 @@ class s {
   }
   static getGlobalDictionaryForPackage(e) {
     if ("undefined" == typeof window) return null;
-    let t = window[i];
+    let t = window[o];
     if (void 0 === r) {
-      let e = window[o];
+      let e = window[a];
       if (!e) return null;
-      for (let n in r = {}, e) r[n] = new s({
+      for (let n in r = {}, e) r[n] = new i({
         [t]: e[n]
       }, t)
     }
@@ -50,9 +50,9 @@ class s {
     }, this.defaultLocale = t
   }
 }
-let a = new Map,
+let s = new Map,
   c = new Map;
-class u {
+class l {
   format(e, t) {
     let n = this.strings.getStringForLocale(e, this.locale);
     return "function" == typeof n ? n(t, this) : n
@@ -61,11 +61,11 @@ class u {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "cardinal",
       r = t["=" + e];
     if (r) return "function" == typeof r ? r() : r;
-    let i = this.locale + ":" + n,
-      o = a.get(i);
-    return !o && (o = new Intl.PluralRules(this.locale, {
+    let o = this.locale + ":" + n,
+      a = s.get(o);
+    return !a && (a = new Intl.PluralRules(this.locale, {
       type: n
-    }), a.set(i, o)), "function" == typeof(r = t[o.select(e)] || t.other) ? r() : r
+    }), s.set(o, a)), "function" == typeof(r = t[a.select(e)] || t.other) ? r() : r
   }
   number(e) {
     let t = c.get(this.locale);

@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   useFormValidation: function() {
-    return s
+    return i
   }
 });
 var r = n("884691"),
-  i = n("388032"),
-  o = n("240849");
+  o = n("388032"),
+  a = n("240849");
 
-function s(e, t, n) {
+function i(e, t, n) {
   let {
-    validationBehavior: s,
-    focus: a
+    validationBehavior: i,
+    focus: s
   } = e;
-  (0, o.useLayoutEffect)(() => {
-    if ("native" === s && (null == n ? void 0 : n.current)) {
+  (0, a.useLayoutEffect)(() => {
+    if ("native" === i && (null == n ? void 0 : n.current)) {
       let e = t.realtimeValidation.isInvalid ? t.realtimeValidation.validationErrors.join(" ") || "Invalid value." : "";
       n.current.setCustomValidity(e), !n.current.hasAttribute("title") && (n.current.title = ""), !t.realtimeValidation.isInvalid && t.updateValidation(function(e) {
         let t;
@@ -38,30 +38,30 @@ function s(e, t, n) {
       }(n.current))
     }
   });
-  let c = (0, o.useEffectEvent)(() => {
+  let c = (0, a.useEffectEvent)(() => {
       t.resetValidation()
     }),
-    u = (0, o.useEffectEvent)(e => {
-      var r, o;
+    l = (0, a.useEffectEvent)(e => {
+      var r, a;
       !t.displayValidation.isInvalid && t.commitValidation();
-      let s = null == n ? void 0 : null === (r = n.current) || void 0 === r ? void 0 : r.form;
-      !e.defaultPrevented && n && s && function(e) {
+      let i = null == n ? void 0 : null === (r = n.current) || void 0 === r ? void 0 : r.form;
+      !e.defaultPrevented && n && i && function(e) {
         for (let t = 0; t < e.elements.length; t++) {
           let n = e.elements[t];
           if (!n.validity.valid) return n
         }
         return null
-      }(s) === n.current && (a ? a() : null === (o = n.current) || void 0 === o || o.focus(), (0, i.setInteractionModality)("keyboard")), e.preventDefault()
+      }(i) === n.current && (s ? s() : null === (a = n.current) || void 0 === a || a.focus(), (0, o.setInteractionModality)("keyboard")), e.preventDefault()
     }),
-    l = (0, o.useEffectEvent)(() => {
+    u = (0, a.useEffectEvent)(() => {
       t.commitValidation()
     });
   (0, r.useEffect)(() => {
     let e = null == n ? void 0 : n.current;
     if (!e) return;
     let t = e.form;
-    return e.addEventListener("invalid", u), e.addEventListener("change", l), null == t || t.addEventListener("reset", c), () => {
-      e.removeEventListener("invalid", u), e.removeEventListener("change", l), null == t || t.removeEventListener("reset", c)
+    return e.addEventListener("invalid", l), e.addEventListener("change", u), null == t || t.addEventListener("reset", c), () => {
+      e.removeEventListener("invalid", l), e.removeEventListener("change", u), null == t || t.removeEventListener("reset", c)
     }
-  }, [n, u, l, c, s])
+  }, [n, l, u, c, i])
 }

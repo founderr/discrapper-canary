@@ -1,36 +1,36 @@
 "use strict";
 n.r(t), n.d(t, {
   validateDiscordTag: function() {
-    return d
+    return l
   },
   humanizeAbortCode: function() {
-    return c
+    return f
   }
 }), n("222007");
-var i = n("599110"),
-  s = n("340454"),
+var s = n("599110"),
+  i = n("340454"),
   r = n("49111"),
   a = n("782340");
 let o = /^\d+$/,
-  l = /^(.+?@.+?\..+?|.+?#\d{4})$/,
+  d = /^(.+?@.+?\..+?|.+?#\d{4})$/,
   u = /^[a-zA-Z0-9_\\.]+$/;
 
-function d(e) {
-  return u.test(e) || e.includes("#") && l.test(e) ? null : (function(e) {
+function l(e) {
+  return u.test(e) || e.includes("#") && d.test(e) ? null : (function(e) {
     let [t, n] = e.split("#");
-    i.default.track(r.AnalyticEvents.FRIEND_REQUEST_FAILED, {
+    s.default.track(r.AnalyticEvents.FRIEND_REQUEST_FAILED, {
       reason: "Invalid Username",
       query: e,
       discrim_len: (null != n ? n : "").length,
       username_len: t.length,
-      is_email_like: s.default.isEmail(e),
-      is_invite_like: s.default.isInvite(e),
+      is_email_like: i.default.isEmail(e),
+      is_invite_like: i.default.isInvite(e),
       is_num_only: o.test(e)
     })
   }(e), a.default.Messages.POMELO_ADD_FRIEND_ERROR)
 }
 
-function c(e, t) {
+function f(e, t) {
   switch (e) {
     case r.AbortCodes.RELATIONSHIP_INCOMING_DISABLED:
       return a.default.Messages.ADD_FRIEND_ERROR_INVALID_DISCORD_TAG.format({

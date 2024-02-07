@@ -1,13 +1,13 @@
 "use strict";
-n("70102"), n("424973");
+s("70102"), s("424973");
 var r = TypeError;
-e.exports = function(e) {
-  if (!e || "function" != typeof e.next) throw new r("iterator must be an object with a `next` method");
+t.exports = function(t) {
+  if (!t || "function" != typeof t.next) throw new r("iterator must be an object with a `next` method");
   if (arguments.length > 1) {
-    var t, n = arguments[1];
-    if ("function" != typeof n) throw new r("`callback`, if provided, must be a function")
+    var e, s = arguments[1];
+    if ("function" != typeof s) throw new r("`callback`, if provided, must be a function")
   }
-  for (var i = n || [];
-    (t = e.next()) && !t.done;) n ? n(t.value) : i.push(t.value);
-  if (!n) return i
+  for (var i = s || [];
+    (e = t.next()) && !e.done;) s ? s(e.value) : i.push(e.value);
+  if (!s) return i
 }

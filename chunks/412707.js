@@ -7,41 +7,41 @@ n.r(t), n.d(t, {
     return a
   },
   useApplicationDirectoryHistory: function() {
-    return _
+    return c
   },
   getPreviousView: function() {
-    return h
-  },
-  getCurrentView: function() {
     return g
   },
-  setEntrypoint: function() {
+  getCurrentView: function() {
     return m
   },
+  setEntrypoint: function() {
+    return h
+  },
   setGuildId: function() {
-    return E
+    return v
   },
   resetApplicationDirectoryHistory: function() {
-    return p
+    return E
   },
   setTrackedOpenedFromExternalEntrypoint: function() {
-    return v
+    return p
   }
 });
-var i, s, r, a, o = n("803182"),
-  l = n("308503"),
+var s, i, r, a, o = n("803182"),
+  d = n("308503"),
   u = n("393414"),
-  d = n("349503"),
-  c = n("49111");
-(i = r || (r = {})).HOME = "home", i.SEARCH = "search", i.APPLICATION = "application", (s = a || (a = {})).EXTERNAL = "External", s.KEYBOARD_SHORTCUT = "Keyboard Shortcut", s.APPLICATION_DIRECTORY_URL = "Application Directory URL", s.APPLICATION_DIRECTORY_PROFILE_EMBED = "Application Directory Profile Embed", s.APPLICATION_DIRECTORY_UPSELL_MODAL = "Application Directory Upsell Modal", s.GUILD_HEADER_POPOUT = "Guild Header Popout", s.GUILD_SETTINGS = "Guild Settings", s.GUILD_INTEGRATION_SETTINGS = "Guild Integration Settings", s.GUILD_CONTEXT_MENU = "Guild Context Menu";
-let f = (0, l.default)(() => ({
+  l = n("349503"),
+  f = n("49111");
+(s = r || (r = {})).HOME = "home", s.SEARCH = "search", s.APPLICATION = "application", (i = a || (a = {})).EXTERNAL = "External", i.KEYBOARD_SHORTCUT = "Keyboard Shortcut", i.APPLICATION_DIRECTORY_URL = "Application Directory URL", i.APPLICATION_DIRECTORY_PROFILE_EMBED = "Application Directory Profile Embed", i.APPLICATION_DIRECTORY_UPSELL_MODAL = "Application Directory Upsell Modal", i.GUILD_HEADER_POPOUT = "Guild Header Popout", i.GUILD_SETTINGS = "Guild Settings", i.GUILD_INTEGRATION_SETTINGS = "Guild Integration Settings", i.GUILD_CONTEXT_MENU = "Guild Context Menu";
+let _ = (0, d.default)(() => ({
     guildId: null,
     entrypoint: null,
     trackedOpenedFromExternalEntrypoint: !1
   })),
-  _ = f;
+  c = _;
 
-function h() {
+function g() {
   let {
     location: {
       state: e
@@ -50,63 +50,63 @@ function h() {
   return null == e ? void 0 : e.previousView
 }
 
-function g() {
+function m() {
   var e, t;
   let {
     location: {
       pathname: n
     }
-  } = (0, u.getHistory)(), i = (0, o.matchPath)(n, {
-    path: c.Routes.APPLICATION_DIRECTORY,
+  } = (0, u.getHistory)(), s = (0, o.matchPath)(n, {
+    path: f.Routes.APPLICATION_DIRECTORY,
     exact: !0
-  }), s = (0, o.matchPath)(n, {
-    path: c.Routes.APPLICATION_DIRECTORY_SEARCH,
+  }), i = (0, o.matchPath)(n, {
+    path: f.Routes.APPLICATION_DIRECTORY_SEARCH,
     exact: !0
   }), r = (0, o.matchPath)(n, {
-    path: [c.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId"), c.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section")],
+    path: [f.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId"), f.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section")],
     exact: !0
   }), {
     applicationId: a,
-    section: l
+    section: d
   } = null !== (e = null == r ? void 0 : r.params) && void 0 !== e ? e : {};
-  if (null != i) return {
+  if (null != s) return {
     type: "home"
   };
-  if (null != s) return {
+  if (null != i) return {
     type: "search"
   };
   if (null != r && null != a) {
-    let e = null === (t = d.default.getApplication(a)) || void 0 === t ? void 0 : t.name;
+    let e = null === (t = l.default.getApplication(a)) || void 0 === t ? void 0 : t.name;
     return {
       type: "application",
       applicationId: a,
       applicationName: e,
-      section: l
+      section: d
     }
   }
 }
 
-function m(e) {
-  f.setState({
+function h(e) {
+  _.setState({
     entrypoint: e
   })
 }
 
-function E(e) {
-  f.setState({
+function v(e) {
+  _.setState({
     guildId: e
   })
 }
 
-function p() {
-  f.setState({
+function E() {
+  _.setState({
     entrypoint: null,
     guildId: null
   })
 }
 
-function v(e) {
-  f.setState({
+function p(e) {
+  _.setState({
     trackedOpenedFromExternalEntrypoint: e
   })
 }

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("446674"),
-  s = n("913144");
-let r = {
+  r = n("913144");
+let s = {
     use_topic_dividers_in_chat: "Use summary topics as divider content in chat instead of string formatted dates.",
     highlight_redesigned_icons: "Highlight redesigned icons",
     alt_clips_1: "Use alt clip icon 1",
@@ -21,10 +21,10 @@ class o extends i.default.DeviceSettingsStore {
     }
   }
   initialize(e) {
-    for (var t in r) {
+    for (var t in s) {
       var n, i;
-      let s = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
-      a[t] = s
+      let r = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
+      a[t] = r
     }
   }
   get(e) {
@@ -40,12 +40,12 @@ class o extends i.default.DeviceSettingsStore {
   allWithDescriptions() {
     return Object.entries(a).map(e => {
       let [t, n] = e;
-      return [t, n, r[t]]
+      return [t, n, s[t]]
     })
   }
 }
 o.displayName = "DevToolsDesignTogglesStore", o.persistKey = "DevToolsDesignTogglesStore";
-var l = new o(s.default, {
+var l = new o(r.default, {
   DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: function(e) {
     a[e.toggle] = e.value
   }

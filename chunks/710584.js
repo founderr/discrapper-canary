@@ -1,35 +1,35 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return s
   }
 });
 var i = n("37983");
 n("884691");
-var s = n("595432");
+var r = n("595432");
 
-function r(e) {
+function s(e) {
   let {
     disabled: t,
     deviceId: n,
-    width: r,
+    width: s,
     height: a
   } = e;
   return t ? (0, i.jsx)("div", {
     className: "media-engine-video",
     style: {
-      width: r,
+      width: s,
       height: a
     }
-  }) : (0, i.jsx)(s.default, {
+  }) : (0, i.jsx)(r.default, {
     streamId: n,
     style: {
-      width: r,
+      width: s,
       height: a
     }
   })
 }
-r.defaultProps = {
+s.defaultProps = {
   disabled: !1,
   width: 320,
   height: 180

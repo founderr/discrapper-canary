@@ -1,44 +1,44 @@
 "use strict";
 let O, T;
-A.r(I), A.d(I, {
+A.r(N), A.d(N, {
   setLocale: function() {
-    return n
+    return G
   },
   updateLocaleLoadingStatus: function() {
-    return t
+    return R
   }
 }), A("424973"), A("222007"), A("860677");
 var _ = A("913144"),
-  e = A("787910"),
-  E = A("782340");
+  E = A("787910"),
+  e = A("782340");
 O = A("792788").default;
 let V = !1;
 
-function n(N) {
-  T = E.default.loadPromise, O && O.setLocale(N), E.default.setLocale(N), t(N)
+function G(I) {
+  T = e.default.loadPromise, O && O.setLocale(I), e.default.setLocale(I), R(I)
 }
 
-function t(N) {
-  let I = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  if (V && E.default.loadPromise === T) return;
-  V = !0, I ? (0, e.setLocaleHack)(N) : _.default.dispatch({
+function R(I) {
+  let N = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  if (V && e.default.loadPromise === T) return;
+  V = !0, N ? (0, E.setLocaleHack)(I) : _.default.dispatch({
     type: "I18N_LOAD_START",
-    locale: N
+    locale: I
   });
-  let A = [E.default.loadPromise];
+  let A = [e.default.loadPromise];
   O && A.push(O.loadPromise);
-  let n = Promise.all(A);
+  let G = Promise.all(A);
   setImmediate(() => {
-    n.then(() => {
+    G.then(() => {
       _.default.dispatch({
         type: "I18N_LOAD_SUCCESS",
-        locale: N
+        locale: I
       })
-    }).catch(I => {
+    }).catch(N => {
       _.default.dispatch({
         type: "I18N_LOAD_ERROR",
-        error: I,
-        locale: N
+        error: N,
+        locale: I
       })
     })
   })

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return g
   },
   useAutomodEditingRuleState: function() {
-    return S
+    return O
   }
 });
 var r = n("917351"),
@@ -122,7 +122,7 @@ function g() {
   }))
 }
 
-function S() {
+function O() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
     t = I(e => ({
       hasChanges: e.hasChanges,

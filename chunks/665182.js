@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return E
+    return g
   }
 }), n("222007");
 var s, a, l = n("37983"),
@@ -40,14 +40,14 @@ function m(e) {
   })
 }
 
-function E(e) {
+function g(e) {
   let {
     sidebarType: t,
     maxWidth: n,
     onWidthChange: s,
     children: a,
     floatingLayer: r
-  } = e, f = i.useRef(null), E = function(e) {
+  } = e, f = i.useRef(null), g = function(e) {
     switch (e) {
       case 0:
         return "postSidebarWidth";
@@ -60,13 +60,13 @@ function E(e) {
       case 4:
         return "homeSidebarWidth"
     }
-  }(t), [g, S] = i.useState(h.default[E]), A = i.useCallback(e => {
+  }(t), [E, S] = i.useState(h.default[g]), A = i.useCallback(e => {
     c.default.updatedUnsyncedSettings({
-      [E]: e
+      [g]: e
     })
-  }, [E]), _ = (0, C.shouldChannelChatFloat)({
+  }, [g]), _ = (0, C.shouldChannelChatFloat)({
     maxWidth: n
-  }), T = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = _ ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
+  }), T = (0, u.clamp)(E, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = _ ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
   i.useEffect(() => {
     null == s || s(T, _)
   }, [T, s, _]);

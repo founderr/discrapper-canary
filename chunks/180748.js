@@ -1,76 +1,76 @@
 "use strict";
 n.r(t), n.d(t, {
   setFontSize: function() {
-    return d
+    return c
   },
   setMessageGroupSpacing: function() {
-    return c
+    return d
   },
   setZoom: function() {
     return f
   },
   enableKeyboardMode: function() {
-    return _
-  },
-  disableKeyboardMode: function() {
-    return h
-  },
-  toggleDesaturateUserColors: function() {
-    return g
-  },
-  toggleDarkSidebar: function() {
-    return m
-  },
-  keyboardNavigationExplainerModalSeen: function() {
     return E
   },
-  systemPrefersReducedMotionChanged: function() {
+  disableKeyboardMode: function() {
     return p
   },
-  setSaturation: function() {
-    return v
+  toggleDesaturateUserColors: function() {
+    return h
   },
-  setPrefersReducedMotion: function() {
+  toggleDarkSidebar: function() {
+    return _
+  },
+  keyboardNavigationExplainerModalSeen: function() {
     return S
   },
-  setSyncForcedColors: function() {
+  systemPrefersReducedMotionChanged: function() {
+    return m
+  },
+  setSaturation: function() {
     return T
   },
-  systemColorPreferencesChanged: function() {
+  setPrefersReducedMotion: function() {
+    return g
+  },
+  setSyncForcedColors: function() {
     return I
   },
-  systemPrefersContrastChanged: function() {
+  systemColorPreferencesChanged: function() {
     return C
+  },
+  systemPrefersContrastChanged: function() {
+    return v
   },
   setAlwaysShowLinkDecorations: function() {
     return A
   },
   setRoleStyle: function() {
-    return y
+    return R
   },
   toggleSubmitButton: function() {
     return N
   },
   toggleSyncProfileThemeWithUserTheme: function() {
-    return R
+    return O
   }
 });
 var i = n("913144"),
-  s = n("452804"),
-  r = n("599110"),
+  r = n("452804"),
+  s = n("599110"),
   a = n("206230"),
   o = n("49111"),
   l = n("468200"),
   u = n("560241");
 
-function d(e) {
+function c(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_FONT_SIZE",
     fontSize: e
   })
 }
 
-function c() {
+function d() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING",
@@ -85,62 +85,62 @@ function f(e) {
   })
 }
 
-function _() {
+function E() {
   i.default.dispatch({
     type: "ACCESSIBILITY_KEYBOARD_MODE_ENABLE"
-  }), r.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
+  }), s.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
     enabled: !0
+  })
+}
+
+function p() {
+  i.default.dispatch({
+    type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE"
+  }), s.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
+    enabled: !1
   })
 }
 
 function h() {
   i.default.dispatch({
-    type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE"
-  }), r.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
-    enabled: !1
-  })
-}
-
-function g() {
-  i.default.dispatch({
     type: "ACCESSIBILITY_DESATURATE_ROLES_TOGGLE"
   })
 }
 
-function m() {
+function _() {
   i.default.dispatch({
     type: "ACCESSIBILITY_DARK_SIDEBAR_TOGGLE"
   })
 }
 
-function E() {
+function S() {
   i.default.dispatch({
     type: "KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN"
   })
 }
 
-function p(e) {
+function m(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED",
     systemPrefersReducedMotion: e
   })
 }
 
-function v(e) {
+function T(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_SATURATION",
     saturation: e
   })
 }
 
-function S(e) {
+function g(e) {
   let t = a.default.useReducedMotion;
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
     prefersReducedMotion: e
   });
   let n = a.default.useReducedMotion;
-  !t && n ? s.default.applySettingsOverride({
+  !t && n ? r.default.applySettingsOverride({
     gifAutoPlay: {
       value: !1,
       reasonKey: l.SettingsOverrideReasonKeys.REDUCED_MOTION
@@ -153,17 +153,17 @@ function S(e) {
       value: u.StickerAnimationSettings.ANIMATE_ON_INTERACTION,
       reasonKey: l.SettingsOverrideReasonKeys.REDUCED_MOTION_STICKERS
     }
-  }) : t && !n && s.default.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers")
+  }) : t && !n && r.default.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers")
 }
 
-function T(e) {
+function I(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_SYNC_FORCED_COLORS",
     syncForcedColors: e
   })
 }
 
-function I(e, t) {
+function C(e, t) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED",
     systemPrefersColorScheme: e,
@@ -171,7 +171,7 @@ function I(e, t) {
   })
 }
 
-function C(e) {
+function v(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED",
     systemPrefersContrast: e
@@ -185,11 +185,11 @@ function A(e) {
   })
 }
 
-function y(e) {
+function R(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_ROLE_STYLE",
     roleStyle: e
-  }), r.default.track(o.AnalyticEvents.ROLE_STYLE_SETTING_UPDATED, {
+  }), s.default.track(o.AnalyticEvents.ROLE_STYLE_SETTING_UPDATED, {
     role_style: e
   })
 }
@@ -200,7 +200,7 @@ function N() {
   })
 }
 
-function R() {
+function O() {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE"
   })

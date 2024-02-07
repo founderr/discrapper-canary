@@ -1,7 +1,7 @@
 "use strict";
-var r, i;
+var r, o;
 n.r(t), n.d(t, {
   HandlerRole: function() {
     return r
   }
-}), (i = r || (r = {})).SOURCE = "SOURCE", i.TARGET = "TARGET"
+}), (o = r || (r = {})).SOURCE = "SOURCE", o.TARGET = "TARGET"

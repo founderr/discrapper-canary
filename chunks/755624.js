@@ -1,85 +1,85 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("222007"), n("702976");
 var i = n("917351"),
-  s = n.n(i),
-  r = n("446674"),
+  r = n.n(i),
+  s = n("446674"),
   a = n("913144"),
   o = n("668597"),
   l = n("233069"),
   u = n("271938");
-let d = {},
-  c = new o.default,
+let c = {},
+  d = new o.default,
   f = new Set;
 
-function _(e) {
-  d = s(d).reject(t => t.guildId === e).keyBy("threadId").value()
+function E(e) {
+  c = r(c).reject(t => t.guildId === e).keyBy("threadId").value()
+}
+
+function p(e) {
+  var t;
+  null === (t = e.threads) || void 0 === t || t.forEach(h)
 }
 
 function h(e) {
-  var t;
-  null === (t = e.threads) || void 0 === t || t.forEach(g)
-}
-
-function g(e) {
-  l.ALL_CHANNEL_TYPES.has(e.type) && null != e.member && (d[e.id] = {
+  l.ALL_CHANNEL_TYPES.has(e.type) && null != e.member && (c[e.id] = {
     threadId: e.id,
     guildId: e.guild_id,
     flags: e.member.flags,
     muted: e.member.muted,
     muteConfig: e.member.muteConfig,
     joinTimestamp: new Date(e.member.joinTimestamp)
-  }, m(e.id))
+  }, _(e.id))
 }
 
-function m(e) {
-  let t = d[e];
-  if (c.clearTimer(e), !0 === t.muted) {
+function _(e) {
+  let t = c[e];
+  if (d.clearTimer(e), !0 === t.muted) {
     (f = new Set(f)).add(e);
-    let n = c.setTimer(e, t.muteConfig, () => {
-      d[e].muted = !1, (f = new Set(f)).delete(e), v.emitChange()
+    let n = d.setTimer(e, t.muteConfig, () => {
+      c[e].muted = !1, (f = new Set(f)).delete(e), T.emitChange()
     });
-    n && (d[e].muted = !1, (f = new Set(f)).delete(e))
+    n && (c[e].muted = !1, (f = new Set(f)).delete(e))
   } else(f = new Set(f)).delete(e)
 }
 
-function E(e) {
+function S(e) {
   let {
     guildId: t,
     members: n
   } = e;
   null != t && null != n && n.forEach(e => {
-    d[e.id] = {
+    c[e.id] = {
       threadId: e.id,
       guildId: t,
       flags: e.flags,
       muted: e.muted,
       muteConfig: e.muteConfig,
       joinTimestamp: new Date(e.joinTimestamp)
-    }, m(e.id)
+    }, _(e.id)
   })
 }
-class p extends r.default.Store {
+class m extends s.default.Store {
   hasJoined(e) {
-    return e in d
+    return e in c
   }
   joinTimestamp(e) {
     var t;
-    return null === (t = d[e]) || void 0 === t ? void 0 : t.joinTimestamp
+    return null === (t = c[e]) || void 0 === t ? void 0 : t.joinTimestamp
   }
   flags(e) {
     var t;
-    return null === (t = d[e]) || void 0 === t ? void 0 : t.flags
+    return null === (t = c[e]) || void 0 === t ? void 0 : t.flags
   }
   getInitialOverlayState() {
-    return Object.values(d)
+    return Object.values(c)
   }
   getMuteConfig(e) {
     var t;
-    return null === (t = d[e]) || void 0 === t ? void 0 : t.muteConfig
+    return null === (t = c[e]) || void 0 === t ? void 0 : t.muteConfig
   }
   getMutedThreads() {
     return f
@@ -88,18 +88,18 @@ class p extends r.default.Store {
     return f.has(e)
   }
 }
-p.displayName = "JoinedThreadsStore";
-let v = new p(a.default, {
+m.displayName = "JoinedThreadsStore";
+let T = new m(a.default, {
   CONNECTION_OPEN: function(e) {
-    c.reset(), f = new Set, d = {}, e.guilds.forEach(e => {
-      h(e)
+    d.reset(), f = new Set, c = {}, e.guilds.forEach(e => {
+      p(e)
     })
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
       joinedThreads: t
     } = e;
-    d = s(t).map(e => ({
+    c = r(t).map(e => ({
       ...e,
       joinTimestamp: new Date(e.joinTimestamp)
     })).keyBy("threadId").value()
@@ -108,53 +108,53 @@ let v = new p(a.default, {
     let {
       guild: t
     } = e;
-    _(t.id), h(t)
+    E(t.id), p(t)
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    _(t.id)
+    E(t.id)
   },
   THREAD_CREATE: function(e) {
     let {
       channel: t
     } = e;
-    g(t)
+    h(t)
   },
-  THREAD_LIST_SYNC: E,
-  SEARCH_FINISH: E,
-  LOAD_THREADS_SUCCESS: E,
-  LOAD_ARCHIVED_THREADS_SUCCESS: E,
+  THREAD_LIST_SYNC: S,
+  SEARCH_FINISH: S,
+  LOAD_THREADS_SUCCESS: S,
+  LOAD_ARCHIVED_THREADS_SUCCESS: S,
   THREAD_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    if (!(t.id in d)) return !1;
-    d = {
-      ...d
-    }, delete d[t.id]
+    if (!(t.id in c)) return !1;
+    c = {
+      ...c
+    }, delete c[t.id]
   },
   THREAD_MEMBER_UPDATE: function(e) {
     if (u.default.getId() !== e.userId) return !1;
-    d[e.id] = {
+    c[e.id] = {
       threadId: e.id,
       guildId: e.guildId,
       flags: e.flags,
       muted: e.muted,
       muteConfig: e.muteConfig,
       joinTimestamp: new Date(e.joinTimestamp)
-    }, m(e.id)
+    }, _(e.id)
   },
   THREAD_MEMBER_LOCAL_UPDATE: function(e) {
     let {
       id: t,
       userId: n,
       guildId: i,
-      isJoining: s
+      isJoining: r
     } = e;
     if (u.default.getId() !== n || null === i) return !1;
-    s ? d[t] = {
+    r ? c[t] = {
       threadId: t,
       guildId: i,
       flags: 0,
@@ -163,16 +163,16 @@ let v = new p(a.default, {
         end_time: void 0
       },
       joinTimestamp: new Date
-    } : delete d[t]
+    } : delete c[t]
   },
   THREAD_MEMBERS_UPDATE: function(e) {
     var t, n;
     let i = !1;
-    return (null === (t = e.removedMemberIds) || void 0 === t ? void 0 : t.includes(u.default.getId())) && e.id in d && (d = {
-      ...d
-    }, delete d[e.id], i = !0), null === (n = e.addedMembers) || void 0 === n || n.forEach(t => {
-      t.userId === u.default.getId() && ((d = {
-        ...d
+    return (null === (t = e.removedMemberIds) || void 0 === t ? void 0 : t.includes(u.default.getId())) && e.id in c && (c = {
+      ...c
+    }, delete c[e.id], i = !0), null === (n = e.addedMembers) || void 0 === n || n.forEach(t => {
+      t.userId === u.default.getId() && ((c = {
+        ...c
       })[e.id] = {
         threadId: e.id,
         guildId: e.guildId,
@@ -180,8 +180,8 @@ let v = new p(a.default, {
         muted: t.muted,
         muteConfig: t.muteConfig,
         joinTimestamp: new Date(t.joinTimestamp)
-      }, m(e.id), i = !0)
+      }, _(e.id), i = !0)
     }), i
   }
 });
-var S = v
+var g = T

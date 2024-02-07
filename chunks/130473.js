@@ -2,7 +2,7 @@
 let t, o;
 E.r(_), E.d(_, {
   default: function() {
-    return A
+    return O
   }
 }), E("808653");
 var n = E("446674"),
@@ -14,7 +14,7 @@ let s = "hideSuppressWarning",
   T = !1,
   S = !0,
   N = !1;
-class O extends n.default.Store {
+class A extends n.default.Store {
   initialize() {
     N = r.default.get(s) || N
   }
@@ -29,8 +29,8 @@ class O extends n.default.Store {
     return !(null === (e = i.default.getChannel(o)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !S
   }
 }
-O.displayName = "PermissionSpeakStore";
-var A = new O(a.default, {
+A.displayName = "PermissionSpeakStore";
+var O = new A(a.default, {
   CONNECTION_OPEN: function(e) {
     t = e.sessionId, T = !1
   },

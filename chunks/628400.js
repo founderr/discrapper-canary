@@ -4,41 +4,41 @@ n.r(t), n.d(t, {
     return u
   },
   TableColumn: function() {
-    return d
+    return c
   },
   TableRow: function() {
-    return c
+    return d
   },
   TableBody: function() {
     return f
   },
   TableHeader: function() {
-    return _
+    return E
   },
   Table: function() {
-    return h
+    return p
   }
 });
 var i = n("37983"),
-  s = n("884691"),
-  r = n("999013"),
+  r = n("884691"),
+  s = n("999013"),
   a = n("605451"),
   o = n("577776"),
   l = n("262417");
 
 function u(e) {
-  return (0, i.jsx)(r.Cell, {
+  return (0, i.jsx)(s.Cell, {
     ...e,
     className: l.cell
   })
 }
 
-function d(e) {
+function c(e) {
   let {
     children: t,
     ...n
   } = e;
-  return (0, i.jsx)(r.Column, {
+  return (0, i.jsx)(s.Column, {
     ...n,
     className: l.column,
     children: (0, i.jsx)(o.Text, {
@@ -49,34 +49,34 @@ function d(e) {
   })
 }
 
-function c(e) {
-  return (0, i.jsx)(r.Row, {
+function d(e) {
+  return (0, i.jsx)(s.Row, {
     ...e,
     className: l.row
   })
 }
 
 function f(e) {
-  return (0, i.jsx)(r.TableBody, {
+  return (0, i.jsx)(s.TableBody, {
     ...e,
     className: l.body
   })
 }
 
-function _(e) {
-  return (0, i.jsx)(r.TableHeader, {
+function E(e) {
+  return (0, i.jsx)(s.TableHeader, {
     ...e,
     className: l.header
   })
 }
 
-function h(e) {
+function p(e) {
   let {
     title: t,
     header: n,
     footer: o,
     ...u
-  } = e, d = s.useId();
+  } = e, c = r.useId();
   return (0, i.jsxs)("div", {
     className: l.container,
     children: [(0, i.jsxs)("div", {
@@ -84,14 +84,14 @@ function h(e) {
       children: [(0, i.jsx)(a.Heading, {
         className: l.title,
         variant: "heading-md/semibold",
-        id: d,
+        id: c,
         children: t
       }), (0, i.jsx)("div", {
         children: n
       })]
-    }), (0, i.jsx)(r.Table, {
+    }), (0, i.jsx)(s.Table, {
       ...u,
-      "aria-labelledby": d,
+      "aria-labelledby": c,
       className: l.table
     }), null != o && (0, i.jsx)("div", {
       className: l.footer,

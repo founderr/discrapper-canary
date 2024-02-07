@@ -1,28 +1,28 @@
 "use strict";
-var r = n("883506")("%Reflect.construct%", !0),
-  i = n("53503");
+var r = s("883506")("%Reflect.construct%", !0),
+  i = s("53503");
 try {
   i({}, "", {
     "[[Get]]": function() {}
   })
-} catch (e) {
+} catch (t) {
   i = null
 }
 if (i && r) {
-  var o = {},
-    s = {};
-  i(s, "length", {
+  var n = {},
+    c = {};
+  i(c, "length", {
     "[[Get]]": function() {
-      throw o
+      throw n
     },
     "[[Enumerable]]": !0
-  }), e.exports = function(e) {
+  }), t.exports = function(t) {
     try {
-      r(e, s)
-    } catch (e) {
-      return e === o
+      r(t, c)
+    } catch (t) {
+      return t === n
     }
   }
-} else e.exports = function(e) {
-  return "function" == typeof e && !!e.prototype
+} else t.exports = function(t) {
+  return "function" == typeof t && !!t.prototype
 }

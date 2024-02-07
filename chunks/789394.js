@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   ChannelEmojisExperiment: function() {
-    return s
+    return i
   }
 });
 var l = n("862205");
-let s = (0, l.createExperiment)({
+let i = (0, l.createExperiment)({
   kind: "user",
   id: "2023-03_channel_name_emojis",
   label: "Channel Emojis",

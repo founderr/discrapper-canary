@@ -7,14 +7,14 @@ n.r(t), n.d(t, {
     return u
   },
   replaceIcon: function() {
-    return d
+    return c
   }
 }), n("222007");
 var i = n("37983"),
-  s = n("884691"),
-  r = n("619550"),
+  r = n("884691"),
+  s = n("619550"),
   a = n("890503");
-let o = s.createContext({
+let o = r.createContext({
   enabled: !1,
   highlight: !1
 });
@@ -25,53 +25,53 @@ function l(e) {
     overwriteValue: n
   } = e, {
     enabled: l
-  } = r.default.useExperiment({
+  } = s.default.useExperiment({
     location: "web redesign icon context"
-  }), u = (0, a.default)("highlight_redesigned_icons"), d = s.useMemo(() => ({
+  }), u = (0, a.default)("highlight_redesigned_icons"), c = r.useMemo(() => ({
     enabled: l,
     highlight: u
   }), [l, u]);
   return (0, i.jsx)(o.Provider, {
-    value: null != n ? n : d,
+    value: null != n ? n : c,
     children: t
   })
 }
 
 function u() {
-  return s.useContext(o)
+  return r.useContext(o)
 }
 
-function d(e, t) {
+function c(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-    s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+    r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
       size: 24
     };
-  return function(r) {
+  return function(s) {
     let {
       enabled: a,
       highlight: o
     } = u();
     if (!a) return (0, i.jsx)(e, {
-      ...r
+      ...s
     });
     {
-      var l, d;
+      var l, c;
       let e = {
-        ...r
+        ...s
       };
       for (let [t, i] of Object.entries(n = {
           foreground: "colorClass",
           color: "color",
           ...null != n ? n : {}
         })) {
-        let n = r[t];
+        let n = s[t];
         if (null == n && "color" === t && (n = o ? "yellow" : "currentColor"), "remove" === i) {
           delete e[t];
           continue
         }
         e[i] = n
       }
-      return null !== (l = e.width) && void 0 !== l || (e.width = s.size), null !== (d = e.height) && void 0 !== d || (e.height = s.size), (0, i.jsx)(t, {
+      return null !== (l = e.width) && void 0 !== l || (e.width = r.size), null !== (c = e.height) && void 0 !== c || (e.height = r.size), (0, i.jsx)(t, {
         ...e
       })
     }

@@ -1,7 +1,7 @@
 "use strict";
-var i, s;
+var i, r;
 n.r(t), n.d(t, {
   SelectLooks: function() {
     return i
   }
-}), (s = i || (i = {}))[s.FILLED = 0] = "FILLED", s[s.CUSTOM = 1] = "CUSTOM"
+}), (r = i || (i = {}))[r.FILLED = 0] = "FILLED", r[r.CUSTOM = 1] = "CUSTOM"

@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n.d(t, {
   MultiFactory: function() {
-    return i
+    return o
   }
 });
 var r = n("188315");
-let i = (e, t, n) => new r.MultiBackendImpl(e, t, n)
+let o = (e, t, n) => new r.MultiBackendImpl(e, t, n)

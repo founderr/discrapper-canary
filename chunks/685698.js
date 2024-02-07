@@ -1,32 +1,32 @@
 "use strict";
 n.r(t), n.d(t, {
   Checkbox: function() {
-    return T
+    return I
   }
 }), n("222007");
-var i, s, r, a, o = n("37983"),
+var i, r, s, a, o = n("37983"),
   l = n("884691"),
   u = n("414456"),
-  d = n.n(u),
-  c = n("627445"),
-  f = n.n(c),
-  _ = n("509043"),
-  h = n("669491"),
-  g = n("718776"),
-  m = n("36694"),
-  E = n("49111"),
-  p = n("656438");
-(r = i || (i = {})).DEFAULT = "default", r.INVERTED = "inverted", r.GHOST = "ghost", r.ROW = "row", (a = s || (s = {})).TOP = "top", a.CENTER = "center";
-let v = {
-    BOX: p.box,
-    ROUND: p.round,
-    SMALL_BOX: p.smallBox
+  c = n.n(u),
+  d = n("627445"),
+  f = n.n(d),
+  E = n("509043"),
+  p = n("669491"),
+  h = n("718776"),
+  _ = n("36694"),
+  S = n("49111"),
+  m = n("656438");
+(s = i || (i = {})).DEFAULT = "default", s.INVERTED = "inverted", s.GHOST = "ghost", s.ROW = "row", (a = r || (r = {})).TOP = "top", a.CENTER = "center";
+let T = {
+    BOX: m.box,
+    ROUND: m.round,
+    SMALL_BOX: m.smallBox
   },
-  S = {
-    top: p.alignTop,
-    center: p.alignCenter
+  g = {
+    top: m.alignTop,
+    center: m.alignCenter
   };
-class T extends l.PureComponent {
+class I extends l.PureComponent {
   getInputMode() {
     return this.props.disabled ? "disabled" : this.props.readOnly ? "readonly" : "default"
   }
@@ -36,35 +36,35 @@ class T extends l.PureComponent {
       value: t,
       type: n,
       color: i
-    } = this.props, s = null !== (e = this.props.style) && void 0 !== e ? e : {};
-    if (!1 === t) return s;
-    if (s = {
-        ...s
-      }, i === h.default.unsafe_rawColors.BRAND_500.css) switch (n) {
+    } = this.props, r = null !== (e = this.props.style) && void 0 !== e ? e : {};
+    if (!1 === t) return r;
+    if (r = {
+        ...r
+      }, i === p.default.unsafe_rawColors.BRAND_500.css) switch (n) {
       case "default":
-        s.borderColor = "var(--control-brand-foreground)";
+        r.borderColor = "var(--control-brand-foreground)";
         break;
       case "ghost":
-        s.borderColor = "var(--brand-experiment-15a)", s.backgroundColor = "var(--brand-experiment-15a)";
+        r.borderColor = "var(--brand-experiment-15a)", r.backgroundColor = "var(--brand-experiment-15a)";
         break;
       case "row":
       case "inverted":
-        s.borderColor = "var(--brand-experiment-400)", s.backgroundColor = "var(--brand-experiment-500)"
+        r.borderColor = "var(--brand-experiment-400)", r.backgroundColor = "var(--brand-experiment-500)"
     } else switch (n) {
       case "default":
-        s.borderColor = i;
+        r.borderColor = i;
         break;
       case "ghost":
         if (i.startsWith("var(--")) {
           let e = "".concat(i.slice(0, -1), "-hsl)");
-          s.borderColor = "rgba(".concat(e, ", 0.15)"), s.backgroundColor = "rgba(".concat(e, ", 0.15)")
-        } else f((0, _.isValidHex)(i), "Checkbox: ".concat(i, " is not a valid hex color")), s.borderColor = (0, _.hex2rgb)(i, .15), s.backgroundColor = (0, _.hex2rgb)(i, .15);
+          r.borderColor = "rgba(".concat(e, ", 0.15)"), r.backgroundColor = "rgba(".concat(e, ", 0.15)")
+        } else f((0, E.isValidHex)(i), "Checkbox: ".concat(i, " is not a valid hex color")), r.borderColor = (0, E.hex2rgb)(i, .15), r.backgroundColor = (0, E.hex2rgb)(i, .15);
         break;
       case "row":
       case "inverted":
-        s.backgroundColor = i, s.borderColor = i
+        r.backgroundColor = i, r.borderColor = i
     }
-    return s
+    return r
   }
   getColor() {
     let {
@@ -72,7 +72,7 @@ class T extends l.PureComponent {
       type: t,
       color: n
     } = this.props;
-    return e ? "inverted" === t || "row" === t ? h.default.unsafe_rawColors.WHITE_500.css : n : h.default.unsafe_rawColors.TRANSPARENT.css
+    return e ? "inverted" === t || "row" === t ? p.default.unsafe_rawColors.WHITE_500.css : n : p.default.unsafe_rawColors.TRANSPARENT.css
   }
   render() {
     let {
@@ -80,34 +80,34 @@ class T extends l.PureComponent {
       readOnly: t,
       value: n,
       shape: i,
-      align: s = "center",
-      className: r,
+      align: r = "center",
+      className: s,
       innerClassName: a,
       children: l,
       size: u,
-      reverse: c,
+      reverse: d,
       checkboxColor: f,
-      displayOnly: _,
-      type: h,
-      onClick: v
-    } = this.props, T = null != l ? (0, o.jsx)("div", {
-      className: d(p.label, e ? p.labelDisabled : p.labelClickable, c ? p.labelReversed : p.labelForward),
+      displayOnly: E,
+      type: p,
+      onClick: T
+    } = this.props, I = null != l ? (0, o.jsx)("div", {
+      className: c(m.label, e ? m.labelDisabled : m.labelClickable, d ? m.labelReversed : m.labelForward),
       style: {
         lineHeight: "".concat(u, "px")
       },
       children: l
-    }) : null, I = this.props.disabled ? p.inputDisabled : this.props.readOnly ? p.inputReadonly : p.inputDefault;
-    return (0, o.jsxs)(_ ? "span" : "label", {
-      className: d(e ? p.checkboxWrapperDisabled : p.checkboxWrapper, S[s], r, {
-        [p.row]: "row" === h,
-        [p.checked]: n
+    }) : null, C = this.props.disabled ? m.inputDisabled : this.props.readOnly ? m.inputReadonly : m.inputDefault;
+    return (0, o.jsxs)(E ? "span" : "label", {
+      className: c(e ? m.checkboxWrapperDisabled : m.checkboxWrapper, g[r], s, {
+        [m.row]: "row" === p,
+        [m.checked]: n
       }),
-      children: [c ? T : null, !_ && (0, o.jsx)(g.FocusRing, {
+      children: [d ? I : null, !E && (0, o.jsx)(h.FocusRing, {
         children: (0, o.jsx)("input", {
-          className: d(a, I),
+          className: c(a, C),
           type: "checkbox",
-          onClick: v,
-          onChange: e || t ? E.NOOP : this.handleChange,
+          onClick: T,
+          onChange: e || t ? S.NOOP : this.handleChange,
           checked: n,
           style: {
             width: u,
@@ -115,8 +115,8 @@ class T extends l.PureComponent {
           }
         })
       }), (0, o.jsx)("div", {
-        className: d(p.checkbox, i, {
-          [p.checked]: n
+        className: c(m.checkbox, i, {
+          [m.checked]: n
         }),
         style: {
           width: u,
@@ -124,13 +124,13 @@ class T extends l.PureComponent {
           borderColor: f,
           ...this.getStyle()
         },
-        children: (0, o.jsx)(m.default, {
+        children: (0, o.jsx)(_.default, {
           width: 18,
           height: 18,
           color: this.getColor(),
           "aria-hidden": !0
         })
-      }), c ? null : T]
+      }), d ? null : I]
     })
   }
   constructor(...e) {
@@ -142,16 +142,16 @@ class T extends l.PureComponent {
     }
   }
 }
-T.Types = i, T.Shapes = v, T.Aligns = s, T.defaultProps = {
+I.Types = i, I.Shapes = T, I.Aligns = r, I.defaultProps = {
   size: 24,
   disabled: !1,
   readOnly: !1,
   displayOnly: !1,
   value: !1,
   type: "default",
-  color: h.default.unsafe_rawColors.BRAND_500.css,
-  shape: v.BOX,
+  color: p.default.unsafe_rawColors.BRAND_500.css,
+  shape: T.BOX,
   align: "center",
-  onChange: E.NOOP,
+  onChange: S.NOOP,
   reverse: !1
 }

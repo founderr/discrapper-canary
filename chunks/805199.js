@@ -20,13 +20,13 @@ let S = {
   N = {
     client: S
   },
-  O = !1,
-  A = !0,
+  A = !1,
+  O = !0,
   R = () => {
-    A = !a.default.canUsePremiumAppIcons(n.default.getCurrentUser())
+    O = !a.default.canUsePremiumAppIcons(n.default.getCurrentUser())
   },
   l = e => {
-    if (N.client.desktop = e, !A) {
+    if (N.client.desktop = e, !O) {
       var _;
       r.default.track(I.AnalyticEvents.APP_ICON_UPDATED, {
         icon_id: e,
@@ -36,21 +36,21 @@ let S = {
     }
   };
 
-function L() {
-  A && (N.client = {
+function u() {
+  O && (N.client = {
     desktop: i.FreemiumAppIconIds.DEFAULT,
     coachmarkImpressions: 2
-  }), O = !1
+  }), A = !1
 }
-class u extends t.default.PersistedStore {
+class L extends t.default.PersistedStore {
   initialize(e) {
     null != e && (N = e), this.waitFor(n.default), this.syncWith([n.default], R)
   }
   get isEditorOpen() {
-    return O
+    return A
   }
   get isUpsellPreview() {
-    return A
+    return O
   }
   getState() {
     return N
@@ -60,8 +60,8 @@ class u extends t.default.PersistedStore {
     return null == N ? void 0 : null === (e = N.client) || void 0 === e ? void 0 : e.desktop
   }
 }
-u.displayName = "AppIconPersistedStoreState", u.persistKey = "AppIconPersistedStoreState";
-var C = new u(o.default, {
+L.displayName = "AppIconPersistedStoreState", L.persistKey = "AppIconPersistedStoreState";
+var C = new L(o.default, {
   APP_ICON_UPDATED: function(e) {
     let {
       id: _
@@ -69,13 +69,13 @@ var C = new u(o.default, {
     null != _ && l(_)
   },
   APP_ICON_EDITOR_OPEN: function() {
-    O = !0
+    A = !0
   },
-  APP_ICON_EDITOR_CLOSE: L,
+  APP_ICON_EDITOR_CLOSE: u,
   APP_ICON_TRACK_IMPRESSION: function(e) {
     let {
       markAsDismissed: _
     } = e;
-    N.client.coachmarkImpressions += 1, N.client.coachmarkImpressions >= 2 && (null == _ || _(s.ContentDismissActionType.UNKNOWN), L())
+    N.client.coachmarkImpressions += 1, N.client.coachmarkImpressions >= 2 && (null == _ || _(s.ContentDismissActionType.UNKNOWN), u())
   }
 })

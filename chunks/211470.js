@@ -14,12 +14,12 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("913144"),
-  s = n("789563"),
-  r = n("565034");
+  r = n("789563"),
+  s = n("565034");
 
 function a(e, t, n) {
-  var i, r;
-  s.default.trackExposure({
+  var i, s;
+  r.default.trackExposure({
     experimentId: e,
     descriptor: t,
     location: null == n ? void 0 : n.location,
@@ -37,9 +37,9 @@ function o(e) {
     description: i,
     buckets: a
   } = e;
-  return (0, s.registerExperiment)({
+  return (0, r.registerExperiment)({
     experimentId: t,
-    experimentType: r.ExperimentTypes.USER,
+    experimentType: s.ExperimentTypes.USER,
     title: n,
     description: i,
     buckets: a
@@ -55,9 +55,9 @@ function l(e) {
     description: i,
     buckets: a
   } = e;
-  return (0, s.registerExperiment)({
+  return (0, r.registerExperiment)({
     experimentId: t,
-    experimentType: r.ExperimentTypes.GUILD,
+    experimentType: s.ExperimentTypes.GUILD,
     title: n,
     description: i,
     buckets: a

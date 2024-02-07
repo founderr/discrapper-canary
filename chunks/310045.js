@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return l
   },
   default: function() {
-    return u
+    return L
   }
 }), E("222007");
 var t = E("689988"),
@@ -18,13 +18,13 @@ var t = E("689988"),
   T = E("945956"),
   S = E("850296"),
   N = E("49111"),
-  O = E("180524");
-let A = null;
+  A = E("180524");
+let O = null;
 
 function R() {
-  o.default.requestPermission(O.NativePermissionTypes.AUDIO).then(e => {
+  o.default.requestPermission(A.NativePermissionTypes.AUDIO).then(e => {
     e && (0, S.default)(!0)
-  }), s.default.getMode() === N.InputModes.PUSH_TO_TALK && o.default.requestPermission(O.NativePermissionTypes.INPUT_MONITORING)
+  }), s.default.getMode() === N.InputModes.PUSH_TO_TALK && o.default.requestPermission(A.NativePermissionTypes.INPUT_MONITORING)
 }
 
 function l(e, _) {
@@ -34,12 +34,12 @@ function l(e, _) {
   let o = n.default.isSpeaker(e, _);
   return o
 }
-class L extends t.default {
+class u extends t.default {
   handleVoiceChannelSelect(e) {
     let {
       channelId: _
     } = e;
-    null == _ && (A = null)
+    null == _ && (O = null)
   }
   handleVoiceStateUpdates(e) {
     let {
@@ -52,10 +52,10 @@ class L extends t.default {
       } = e;
       if (null == E) return;
       let t = i.default.getId() === _;
-      if (!t || null == T.default.getRTCConnectionId() || A === E) return;
+      if (!t || null == T.default.getRTCConnectionId() || O === E) return;
       let o = l(_, E);
       if (o) {
-        A = E, R();
+        O = E, R();
         return
       }
       let n = function(e) {
@@ -63,7 +63,7 @@ class L extends t.default {
           E = _ === r.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         return E
       }(new a.default(e));
-      n && (A = E, R())
+      n && (O = E, R())
     })
   }
   constructor(...e) {
@@ -73,4 +73,4 @@ class L extends t.default {
     }
   }
 }
-var u = new L
+var L = new u

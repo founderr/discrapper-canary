@@ -1,5 +1,5 @@
 "use strict";
-N.exports = {
+I.exports = {
   COMMON_OPEN_DISCORD: "Abrir Discord",
   COMMON_SIGN_UP_NOW: "Registrarse ahora",
   FOOTER_READY_TO_TRY_DISCORD: "\xbfListo para probar Discord? \xa1Es gratis!",

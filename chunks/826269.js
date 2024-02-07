@@ -1,46 +1,46 @@
 "use strict";
-r.r(n), r.d(n, {
+e.r(r), e.d(r, {
   default: function() {
-    return u
+    return a
   }
 });
-var e = r("37983");
-r("884691");
-var i = r("77078"),
-  a = r("476765"),
-  s = r("782340"),
-  o = r("677029"),
-  u = t => {
+var n = e("37983");
+e("884691");
+var i = e("77078"),
+  u = e("476765"),
+  o = e("782340"),
+  s = e("677029"),
+  a = t => {
     let {
-      onClose: n
-    } = t, r = (0, a.useUID)();
-    return (0, e.jsxs)(i.ModalRoot, {
+      onClose: r
+    } = t, e = (0, u.useUID)();
+    return (0, n.jsxs)(i.ModalRoot, {
       ...t,
-      "aria-labelledby": r,
-      children: [(0, e.jsxs)(i.ModalHeader, {
+      "aria-labelledby": e,
+      children: [(0, n.jsxs)(i.ModalHeader, {
         separator: !1,
-        className: o.modalHeader,
-        children: [(0, e.jsx)(i.Heading, {
-          id: r,
+        className: s.modalHeader,
+        children: [(0, n.jsx)(i.Heading, {
+          id: e,
           variant: "heading-xl/extrabold",
-          children: s.default.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING
-        }), (0, e.jsx)(i.ModalCloseButton, {
-          className: o.closeButton,
-          onClick: n
+          children: o.default.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING
+        }), (0, n.jsx)(i.ModalCloseButton, {
+          className: s.closeButton,
+          onClick: r
         })]
-      }), (0, e.jsx)(i.ModalContent, {
-        className: o.modalContent,
-        children: (0, e.jsx)(i.Text, {
+      }), (0, n.jsx)(i.ModalContent, {
+        className: s.modalContent,
+        children: (0, n.jsx)(i.Text, {
           variant: "text-md/normal",
-          className: o.contentText,
-          children: s.default.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_V2
+          className: s.contentText,
+          children: o.default.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_V2
         })
-      }), (0, e.jsx)(i.ModalFooter, {
-        children: (0, e.jsx)(i.Button, {
-          className: o.button,
+      }), (0, n.jsx)(i.ModalFooter, {
+        children: (0, n.jsx)(i.Button, {
+          className: s.button,
           size: i.Button.Sizes.MIN,
-          onClick: n,
-          children: s.default.Messages.OKAY
+          onClick: r,
+          children: o.default.Messages.OKAY
         })
       })]
     })

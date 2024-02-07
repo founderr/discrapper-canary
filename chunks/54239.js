@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   pushLayer: function() {
-    return s
+    return i
   },
   popLayer: function() {
     return r
@@ -10,23 +10,23 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var i = n("913144");
+var s = n("913144");
 
-function s(e) {
-  i.default.dispatch({
+function i(e) {
+  s.default.dispatch({
     type: "LAYER_PUSH",
     component: e
   })
 }
 
 function r() {
-  i.default.dispatch({
+  s.default.dispatch({
     type: "LAYER_POP"
   })
 }
 
 function a() {
-  i.default.dispatch({
+  s.default.dispatch({
     type: "LAYER_POP_ALL"
   })
 }

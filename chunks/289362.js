@@ -1,21 +1,21 @@
 "use strict";
 
-function i(e) {
+function s(e) {
   let {
     knownGuildVersions: t,
     highestLastMessageId: n,
-    readStateVersion: i,
-    userGuildSettingsVersion: s,
+    readStateVersion: s,
+    userGuildSettingsVersion: i,
     userSettingsVersion: r,
     privateChannelsVersion: a,
     apiCodeVersion: o,
-    lastSelectedGuildId: l
-  } = e, u = null == l || isNaN(Number(l)) ? void 0 : l;
+    lastSelectedGuildId: d
+  } = e, u = null == d || isNaN(Number(d)) ? void 0 : d;
   return {
     guild_versions: t,
     highest_last_message_id: n,
-    read_state_version: i,
-    user_guild_settings_version: s,
+    read_state_version: s,
+    user_guild_settings_version: i,
     user_settings_version: r,
     private_channels_version: a,
     api_code_version: o,
@@ -24,6 +24,6 @@ function i(e) {
 }
 n.r(t), n.d(t, {
   toGatewayClientState: function() {
-    return i
+    return s
   }
 })

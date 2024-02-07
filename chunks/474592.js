@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var l = n("37983");
 n("884691");
-var s = n("414456"),
-  a = n.n(s),
-  i = n("77078"),
-  r = n("841098"),
+var i = n("414456"),
+  r = n.n(i),
+  s = n("77078"),
+  a = n("841098"),
   u = n("825691"),
   o = n("339485"),
   d = n("782340"),
@@ -19,44 +19,44 @@ let h = e => {
   let {
     handleDone: t,
     headerId: n,
-    modalState: s,
+    modalState: i,
     shouldHideTemporaryInviteToggle: h,
     onGenerateNewLink: g,
     onToggleTemporary: I,
-    onSelectMaxAge: E,
-    onSelectMaxUses: v
-  } = e, m = (0, r.default)(), {
-    maxAge: p,
-    maxUses: _,
+    onSelectMaxAge: v,
+    onSelectMaxUses: E
+  } = e, _ = (0, a.default)(), {
+    maxAge: m,
+    maxUses: p,
     temporary: T
-  } = s;
+  } = i;
   return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(i.ModalHeader, {
-      children: [(0, l.jsx)(i.ModalCloseButton, {
+    children: [(0, l.jsxs)(s.ModalHeader, {
+      children: [(0, l.jsx)(s.ModalCloseButton, {
         className: c.closeButton,
         onClick: t
       }), (0, l.jsx)("div", {
         className: c.headerContainer,
-        children: (0, l.jsx)(i.FormTitle, {
+        children: (0, l.jsx)(s.FormTitle, {
           id: n,
           tag: "h2",
-          className: a(f.marginReset, c.headerCloseButtonSpacing, c.headerText),
+          className: r(f.marginReset, c.headerCloseButtonSpacing, c.headerText),
           children: d.default.Messages.INVITE_SETTINGS_TITLE
         })
       })]
     }), (0, l.jsx)(u.default, {
       shouldHideTemporaryInviteToggle: h,
-      maxAge: p,
-      maxUses: _,
+      maxAge: m,
+      maxUses: p,
       temporary: T,
       onToggleTemporary: I,
-      onSelectMaxAge: E,
-      onSelectMaxUses: v,
+      onSelectMaxAge: v,
+      onSelectMaxUses: E,
       onGenerateNewLink: g
-    }), (0, l.jsx)(i.ModalFooter, {
+    }), (0, l.jsx)(s.ModalFooter, {
       className: c.settingsFooter,
       children: (0, l.jsx)(o.default, {
-        theme: m,
+        theme: _,
         onConfirm: () => {
           g(), t()
         },

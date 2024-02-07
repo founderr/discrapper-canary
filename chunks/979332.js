@@ -1,5 +1,5 @@
 "use strict";
-var r = n("303571");
-e.exports = function(e) {
-  return ("number" == typeof e || "bigint" == typeof e) && !r(e) && e !== 1 / 0 && e !== -1 / 0
+var r = s("303571");
+t.exports = function(t) {
+  return ("number" == typeof t || "bigint" == typeof t) && !r(t) && t !== 1 / 0 && t !== -1 / 0
 }

@@ -1,41 +1,41 @@
 "use strict";
 var r = n("859514"),
-  i = n("868822"),
-  o = n("64980"),
-  s = n("590455"),
-  a = n("125359"),
+  o = n("868822"),
+  a = n("64980"),
+  i = n("590455"),
+  s = n("125359"),
   c = n("551544"),
-  u = n("238104"),
-  l = n("998270"),
+  l = n("238104"),
+  u = n("998270"),
   d = n("47361"),
-  f = n("623105"),
-  p = n("87078"),
+  p = n("623105"),
+  f = n("87078"),
   h = n("174669"),
-  v = n("140925"),
-  g = h("replace"),
-  b = TypeError,
-  m = o("".indexOf),
-  y = o("".replace),
-  x = o("".slice),
-  w = Math.max,
-  S = function(e, t, n) {
-    return n > e.length ? -1 : "" === t ? n : m(e, t, n)
+  m = n("140925"),
+  v = h("replace"),
+  g = TypeError,
+  y = a("".indexOf),
+  b = a("".replace),
+  x = a("".slice),
+  S = Math.max,
+  w = function(e, t, n) {
+    return n > e.length ? -1 : "" === t ? n : y(e, t, n)
   };
 r({
   target: "String",
   proto: !0
 }, {
   replaceAll: function(e, t) {
-    var n, r, o, h, k, E, _, M, D = s(this),
-      C = 0,
-      P = 0,
-      T = "";
+    var n, r, a, h, D, C, k, P, E = i(this),
+      T = 0,
+      M = 0,
+      R = "";
     if (!c(e)) {
-      if ((n = u(e)) && !~m(l(s(f(e))), "g")) throw b("`.replaceAll` does not allow non-global regexes");
-      if (r = d(e, g)) return i(r, e, D, t);
-      if (v && n) return y(l(D), e, t)
+      if ((n = l(e)) && !~y(u(i(p(e))), "g")) throw g("`.replaceAll` does not allow non-global regexes");
+      if (r = d(e, v)) return o(r, e, E, t);
+      if (m && n) return b(u(E), e, t)
     }
-    for (o = l(D), h = l(e), !(k = a(t)) && (t = l(t)), _ = w(1, E = h.length), C = S(o, h, 0); - 1 !== C;) M = k ? l(t(h, C, o)) : p(h, o, C, [], void 0, t), T += x(o, P, C) + M, P = C + E, C = S(o, h, C + _);
-    return P < o.length && (T += x(o, P)), T
+    for (a = u(E), h = u(e), !(D = s(t)) && (t = u(t)), k = S(1, C = h.length), T = w(a, h, 0); - 1 !== T;) P = D ? u(t(h, T, a)) : f(h, a, T, [], void 0, t), R += x(a, M, T) + P, M = T + C, T = w(a, h, T + k);
+    return M < a.length && (R += x(a, M)), R
   }
 })

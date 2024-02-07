@@ -10,22 +10,22 @@ n.r(t), n.d(t, {
     return u
   },
   useImpressionStore: function() {
-    return d
+    return c
   },
   getLocation: function() {
-    return c
+    return d
   },
   getImpressionStack: function() {
     return f
   }
 }), n("222007");
 var i = n("308503"),
-  s = n("759843");
-let r = Object.freeze({
+  r = n("759843");
+let s = Object.freeze({
     debugTrackedData: null,
     impressions: []
   }),
-  a = (0, i.default)(e => r),
+  a = (0, i.default)(e => s),
   o = e => {
     a.setState(t => ({
       impressions: [...t.impressions, e]
@@ -44,12 +44,12 @@ let r = Object.freeze({
       }
     }))
   },
-  d = a;
+  c = a;
 
-function c() {
+function d() {
   let e = {};
   return a.getState().impressions.forEach(t => {
-    t.type === s.ImpressionTypes.PAGE ? e.page = t.name : e.section = t.name
+    t.type === r.ImpressionTypes.PAGE ? e.page = t.name : e.section = t.name
   }), e
 }
 

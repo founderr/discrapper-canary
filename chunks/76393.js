@@ -1,39 +1,39 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return h
   }
 }), n("222007");
 var i = n("446674"),
-  s = n("913144"),
-  r = n("235660"),
+  r = n("913144"),
+  s = n("235660"),
   a = n("800762");
 let o = null,
   l = null,
   u = new Set,
-  d = {},
   c = {},
+  d = {},
   f = new Set,
-  _ = Object.freeze({});
-class h extends i.default.DeviceSettingsStore {
+  E = Object.freeze({});
+class p extends i.default.DeviceSettingsStore {
   initialize(e) {
-    null != e && (c = e.lastSelectedDeviceByPlatform), this.waitFor(r.default, a.default)
+    null != e && (d = e.lastSelectedDeviceByPlatform), this.waitFor(s.default, a.default)
   }
   getUserAgnosticState() {
     return {
-      lastSelectedDeviceByPlatform: c
+      lastSelectedDeviceByPlatform: d
     }
   }
   getDevicesForPlatform(e) {
     var t;
-    return null !== (t = d[e]) && void 0 !== t ? t : _
+    return null !== (t = c[e]) && void 0 !== t ? t : E
   }
   getLastSelectedDeviceByPlatform(e) {
-    return c[e]
+    return d[e]
   }
   getDevice(e, t) {
     var n;
-    return null === (n = d[e]) || void 0 === n ? void 0 : n[t]
+    return null === (n = c[e]) || void 0 === n ? void 0 : n[t]
   }
   getFetchingDevices(e) {
     return f.has(e)
@@ -48,8 +48,8 @@ class h extends i.default.DeviceSettingsStore {
     return l
   }
 }
-h.displayName = "GameConsoleStore", h.persistKey = "GameConsoleStore";
-var g = new h(s.default, {
+p.displayName = "GameConsoleStore", p.persistKey = "GameConsoleStore";
+var h = new p(r.default, {
   REMOTE_SESSION_CONNECT: function(e) {
     let {
       sessionId: t
@@ -64,16 +64,16 @@ var g = new h(s.default, {
       sessionType: t,
       nonce: n,
       channelId: i,
-      deviceId: s,
-      commandId: r
+      deviceId: r,
+      commandId: s
     } = e;
     l = {
       type: t,
       nonce: n,
       channelId: i,
       startedAt: Date.now(),
-      deviceId: s,
-      commandId: r
+      deviceId: r,
+      commandId: s
     }
   },
   GAME_CONSOLE_FETCH_DEVICES_START: function(e) {
@@ -88,10 +88,10 @@ var g = new h(s.default, {
       devices: n
     } = e;
     f.delete(t);
-    let i = d[t] = {},
-      s = {};
-    for (let e of n) i[e.id] = e, c[t] === e.id && (s[t] = e.id);
-    c = s
+    let i = c[t] = {},
+      r = {};
+    for (let e of n) i[e.id] = e, d[t] === e.id && (r[t] = e.id);
+    d = r
   },
   GAME_CONSOLE_FETCH_DEVICES_FAIL: function(e) {
     let {
@@ -104,6 +104,6 @@ var g = new h(s.default, {
       platform: t,
       deviceId: n
     } = e;
-    c[t] = n
+    d[t] = n
   }
 })

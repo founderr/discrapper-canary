@@ -1,10 +1,10 @@
 "use strict";
-var i;
+var s;
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
-}), i = class {
+}), s = class {
   setParams(e) {
     this.param !== e && (this.param = e, this.loading = !1, this.loaded = !1)
   }

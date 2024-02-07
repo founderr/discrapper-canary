@@ -21,7 +21,7 @@ var r = n("77078"),
       onClose: n,
       classificationId: E,
       source: _
-    } = e, S = (0, a.default)(), p = () => {
+    } = e, S = (0, a.default)(), h = () => {
       n(), l.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY, o.SafetyHubView.ACCOUNT_STANDING)
     };
     return (0, i.jsxs)(r.ModalRoot, {
@@ -42,14 +42,14 @@ var r = n("77078"),
         children: S ? (0, i.jsx)(r.Spinner, {}) : (0, i.jsx)(s.default, {
           classificationId: E,
           source: _,
-          onError: p
+          onError: h
         })
       }), (0, i.jsx)(r.ModalFooter, {
         children: (0, i.jsx)(r.Button, {
           className: d.button,
           type: "button",
           color: r.Button.Colors.BRAND,
-          onClick: p,
+          onClick: h,
           children: c.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT
         })
       })]

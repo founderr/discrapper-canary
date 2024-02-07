@@ -1,80 +1,80 @@
 "use strict";
 n.r(t), n.d(t, {
   getName: function() {
-    return _
+    return E
   },
   useName: function() {
-    return h
-  },
-  humanizeStatus: function() {
-    return m
-  },
-  ageEligibleForPremiumUpsell: function() {
     return p
   },
-  isNewUser: function() {
-    return v
+  humanizeStatus: function() {
+    return _
   },
-  getUserTag: function() {
+  ageEligibleForPremiumUpsell: function() {
+    return m
+  },
+  isNewUser: function() {
     return T
   },
-  useDirectMessageRecipient: function() {
+  getUserTag: function() {
     return I
   },
-  default: function() {
+  useDirectMessageRecipient: function() {
     return C
+  },
+  default: function() {
+    return v
   }
 }), n("70102");
 var i = n("446674"),
-  s = n("102985"),
-  r = n("697218"),
+  r = n("102985"),
+  s = n("697218"),
   a = n("49111"),
   o = n("782340");
 let l = e => "".concat(e[0], "..."),
   u = e => "@".concat(e),
-  d = {
+  c = {
     mode: "full",
     decoration: "never",
     identifiable: "auto",
     forcePomelo: !1
   };
 
-function c(e) {
+function d(e) {
   return !!(null != e && e.length > 0)
 }
 
 function f(e) {
-  if (c(e.global_name)) return e.global_name;
-  if (c(e.globalName)) return e.globalName;
-  if (c(e.username)) return e.username;
+  if (d(e.global_name)) return e.global_name;
+  if (d(e.globalName)) return e.globalName;
+  if (d(e.username)) return e.username;
   else return "???"
 }
 
-function _(e) {
+function E(e) {
   var t;
   if (null == e) return;
-  let n = s.default.hidePersonalInformation,
+  let n = r.default.hidePersonalInformation,
     i = f(e);
   return n && i.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (i = l(i)), i
 }
 
-function h(e) {
+function p(e) {
   var t;
-  let n = (0, i.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
+  let n = (0, i.useStateFromStores)([r.default], () => r.default.hidePersonalInformation);
   if (null == e) return;
-  let r = f(e);
-  return n && r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (r = l(r)), r
+  let s = f(e);
+  return n && s.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && "0" === e.discriminator && (s = l(s)), s
 }
 
-function g(e) {
+function h(e) {
   if (null != e) {
-    if (c(e.globalName)) return e.globalName;
-    else if (c(e.global_name)) return e.global_name;
+    if (d(e.globalName)) return e.globalName;
+    else if (d(e.global_name)) return e.global_name;
     else return
   }
 }
 
-function m(e) {
+function _(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   switch (e) {
     case a.StatusTypes.ONLINE:
@@ -95,74 +95,74 @@ function m(e) {
   }
 }
 
-function E(e, t) {
+function S(e, t) {
   let {
     maxDaysOld: n,
     minDaysOld: i = 0
   } = t;
   if (null == e) return !1;
-  let s = Date.now() - e.createdAt.getTime();
-  return (null == n || !!(s <= 864e5 * n)) && !!(s >= 864e5 * i) || !1
+  let r = Date.now() - e.createdAt.getTime();
+  return (null == n || !!(r <= 864e5 * n)) && !!(r >= 864e5 * i) || !1
 }
 
-function p(e) {
-  return !E(e, {
+function m(e) {
+  return !S(e, {
     minDaysOld: 0,
     maxDaysOld: 30
   })
 }
 
-function v(e) {
-  return E(e, {
+function T(e) {
+  return S(e, {
     minDaysOld: 0,
     maxDaysOld: 7
   })
 }
 
-function S(e, t, n) {
+function g(e, t, n) {
   if (null == e) return o.default.Messages.UNKNOWN_USER;
-  if (!c(e.username)) return "???";
+  if (!d(e.username)) return "???";
   let i = n;
   if ("always" === t.identifiable ? i = !1 : "never" === t.identifiable && (i = !0), "0" !== e.discriminator && e.discriminator !== a.NON_USER_BOT_DISCRIMINATOR && !t.forcePomelo) return "username" === t.mode ? e.username : i ? e.username : "".concat(e.username, "#").concat(e.discriminator);
-  let s = i ? l(e.username) : e.username;
-  return "never" !== t.decoration ? u(s) : s
+  let r = i ? l(e.username) : e.username;
+  return "never" !== t.decoration ? u(r) : r
 }
 
-function T(e, t) {
+function I(e, t) {
   let n = {
-      ...d,
+      ...c,
       ...t
     },
-    i = "auto" !== n.identifiable || s.default.hidePersonalInformation;
-  return S(e, n, i)
+    i = "auto" !== n.identifiable || r.default.hidePersonalInformation;
+  return g(e, n, i)
 }
 
-function I(e) {
-  return (0, i.useStateFromStores)([r.default], () => {
-    if (null != e) return e.isPrivate() && e.isDM() ? r.default.getUser(e.getRecipientId()) : null
+function C(e) {
+  return (0, i.useStateFromStores)([s.default], () => {
+    if (null != e) return e.isPrivate() && e.isDM() ? s.default.getUser(e.getRecipientId()) : null
   })
 }
-var C = {
-  getName: _,
-  useName: h,
-  getUserTag: T,
+var v = {
+  getName: E,
+  useName: p,
+  getUserTag: I,
   useUserTag: function(e, t) {
     let n = {
-        ...d,
+        ...c,
         ...t
       },
-      r = (0, i.useStateFromStores)([s.default], () => s.default.hidePersonalInformation);
-    return S(e, n, r)
+      s = (0, i.useStateFromStores)([r.default], () => r.default.hidePersonalInformation);
+    return g(e, n, s)
   },
   getFormattedName: function(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == e) return "???";
-    let i = g(e),
-      s = n ? T(e) : null !== (t = e.username) && void 0 !== t ? t : "???";
-    return i === s ? i : null != i ? "".concat(i, " (").concat(s, ")") : s
+    let i = h(e),
+      r = n ? I(e) : null !== (t = e.username) && void 0 !== t ? t : "???";
+    return i === r ? i : null != i ? "".concat(i, " (").concat(r, ")") : r
   },
-  getGlobalName: g,
-  humanizeStatus: m,
-  useDirectMessageRecipient: I
+  getGlobalName: h,
+  humanizeStatus: _,
+  useDirectMessageRecipient: C
 }

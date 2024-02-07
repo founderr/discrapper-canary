@@ -2,7 +2,7 @@
 let t, o;
 E.r(_), E.d(_, {
   default: function() {
-    return O
+    return A
   }
 }), E("222007");
 var n = E("446674"),
@@ -41,7 +41,7 @@ class N extends n.default.Store {
   }
 }
 N.displayName = "PictureInPictureStore";
-var O = new N(a.default, {
+var A = new N(a.default, {
   PICTURE_IN_PICTURE_OPEN: function(e) {
     var _, E;
     let {

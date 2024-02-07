@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return s
   }
 }), n("222007");
 var i = n("862205");
-let s = (0, i.createExperiment)({
+let r = (0, i.createExperiment)({
   kind: "user",
   id: "2023-10_bandwidth_estimation_v1",
   label: "Bandwidth Estimation",
@@ -183,9 +183,9 @@ let s = (0, i.createExperiment)({
     }
   }]
 });
-var r = {
+var s = {
   getConfig(e, t) {
-    let n = s.getCurrentConfig({
+    let n = r.getCurrentConfig({
       location: "e1c55b_1"
     }, {
       autoTrackExposure: e

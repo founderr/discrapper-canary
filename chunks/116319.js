@@ -1,7 +1,7 @@
 "use strict";
-var i, s;
+var i, r;
 n.r(t), n.d(t, {
   SystemThemeState: function() {
     return i
   }
-}), (s = i || (i = {}))[s.UNSET = 0] = "UNSET", s[s.OFF = 1] = "OFF", s[s.ON = 2] = "ON"
+}), (r = i || (i = {}))[r.UNSET = 0] = "UNSET", r[r.OFF = 1] = "OFF", r[r.ON = 2] = "ON"

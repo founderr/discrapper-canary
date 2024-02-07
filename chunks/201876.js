@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 }), n("222007");
-var i, s = n("714617"),
-  r = n.n(s);
-i = class {
+var s, i = n("714617"),
+  r = n.n(i);
+s = class {
   shouldCommit() {
     return !0
   }

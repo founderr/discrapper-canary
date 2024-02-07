@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
   }
 }), n("808653");
 var l = n("37983"),
-  s = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
-  r = n("77078"),
+  i = n("884691"),
+  r = n("414456"),
+  s = n.n(r),
+  a = n("77078"),
   u = n("155996"),
   o = n("41594"),
   d = n("652453"),
@@ -19,27 +19,27 @@ let g = e => {
     let {
       guild: t,
       inviteChannel: n,
-      setInviteChannel: a
-    } = e, i = (0, u.default)(t.id), d = s.useMemo(() => i.reduce((e, t) => ({
+      setInviteChannel: r
+    } = e, s = (0, u.default)(t.id), d = i.useMemo(() => s.reduce((e, t) => ({
       ...e,
       [t.id]: t
-    }), {}), [i]), f = s.useMemo(() => Object.values(d).map(e => ({
+    }), {}), [s]), f = i.useMemo(() => Object.values(d).map(e => ({
       value: e.id,
       label: e.name
     })), [d]);
-    return (0, l.jsx)(r.SearchableSelect, {
+    return (0, l.jsx)(a.SearchableSelect, {
       options: f,
       value: null == n ? void 0 : n.id,
       onChange: e => {
-        a(d[e])
+        r(d[e])
       },
       placeholder: c.default.Messages.INVITE_A_GUEST_SELECT_VOICE_CHANNEL,
       renderOptionPrefix: e => {
         if (null == e) return null;
         let n = e.value,
-          s = d[n];
-        return null == s ? null : (0, l.jsx)(o.ChannelItemIcon, {
-          channel: s,
+          i = d[n];
+        return null == i ? null : (0, l.jsx)(o.ChannelItemIcon, {
+          channel: i,
           guild: t
         })
       }
@@ -49,46 +49,46 @@ let g = e => {
     let {
       handleDone: t,
       headerId: n,
-      inviteChannel: s,
-      copyValue: a
+      inviteChannel: i,
+      copyValue: r
     } = e;
     return (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsxs)(r.ModalHeader, {
-        children: [(0, l.jsx)(r.ModalCloseButton, {
+      children: [(0, l.jsxs)(a.ModalHeader, {
+        children: [(0, l.jsx)(a.ModalCloseButton, {
           className: f.closeButton,
           onClick: t
         }), (0, l.jsx)("div", {
           className: f.headerContainer,
-          children: (0, l.jsx)(r.FormTitle, {
+          children: (0, l.jsx)(a.FormTitle, {
             id: n,
             tag: "h2",
-            className: i(h.marginReset, f.headerCloseButtonSpacing, f.headerText),
+            className: s(h.marginReset, f.headerCloseButtonSpacing, f.headerText),
             children: c.default.Messages.INVITE_A_GUEST_VOICE_ONLY
           })
         })]
-      }), (0, l.jsx)(r.ModalContent, {
+      }), (0, l.jsx)(a.ModalContent, {
         className: f.noScroll,
         children: (0, l.jsxs)("div", {
           className: f.guestBody,
-          children: [(0, l.jsx)(r.Text, {
+          children: [(0, l.jsx)(a.Text, {
             tag: "div",
             variant: "heading-sm/normal",
             color: "header-secondary",
             children: c.default.Messages.INVITE_A_GUEST_EXPLANATION
-          }), (0, l.jsx)(r.FormTitle, {
+          }), (0, l.jsx)(a.FormTitle, {
             tag: "h5",
             className: f.guestSelectChannelHeader,
             children: c.default.Messages.INVITE_A_GUEST_STEP_1
           }), (0, l.jsx)(g, {
             ...e
-          }), (0, l.jsx)(r.FormTitle, {
+          }), (0, l.jsx)(a.FormTitle, {
             tag: "h5",
             className: f.guestSendInviteLinkHeader,
             children: c.default.Messages.INVITE_A_GUEST_STEP_2
           }), (0, l.jsx)(d.InviteCopyInput, {
             ...e,
-            copyValue: null == s ? "" : a,
-            disabled: null == s
+            copyValue: null == i ? "" : r,
+            disabled: null == i
           })]
         })
       })]

@@ -5,47 +5,47 @@ n.r(t), n.d(t, {
   }
 }), n("70102");
 var i = n("37983"),
-  s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  r = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
   o = n("718776"),
   l = n("462977");
 
 function u(e, t) {
   let n = (0, l.getScrollbarSpecs)(e);
-  return s.forwardRef(function(r, u) {
+  return r.forwardRef(function(s, u) {
     let {
-      children: d,
-      className: c,
+      children: c,
+      className: d,
       dir: f = "ltr",
-      orientation: _ = "vertical",
-      paddingFix: h = !0,
-      fade: g = !1,
-      onScroll: m,
-      style: E,
-      ...p
-    } = r, v = s.useRef(null), S = (0, l.usePaddingFixes)({
-      paddingFix: h,
-      orientation: _,
+      orientation: E = "vertical",
+      paddingFix: p = !0,
+      fade: h = !1,
+      onScroll: _,
+      style: S,
+      ...m
+    } = s, T = r.useRef(null), g = (0, l.usePaddingFixes)({
+      paddingFix: p,
+      orientation: E,
       dir: f,
-      className: c,
-      scrollerRef: v,
+      className: d,
+      scrollerRef: T,
       specs: n
     });
     return (0, i.jsx)("div", {
       ref: e => {
-        "function" == typeof u ? u(e) : null != u && (u.current = e), v.current = e
+        "function" == typeof u ? u(e) : null != u && (u.current = e), T.current = e
       },
-      className: a(c, {
+      className: a(d, {
         [e]: !0,
-        [t]: g
+        [t]: h
       }),
-      style: (0, l.getMergedOrientationStyles)(E, _),
+      style: (0, l.getMergedOrientationStyles)(S, E),
       dir: f,
-      ...p,
+      ...m,
       children: (0, i.jsxs)(o.FocusRingScope, {
-        containerRef: v,
-        children: [d, S]
+        containerRef: T,
+        children: [c, g]
       })
     })
   })

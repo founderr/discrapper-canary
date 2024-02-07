@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("222007"), n("424973");
-var i, s, r = n("37983"),
+var i, r, s = n("37983"),
   a = n("884691");
-(s = i || (i = {}))[s.MOUNTED = 0] = "MOUNTED", s[s.ENTERED = 1] = "ENTERED", s[s.YEETED = 2] = "YEETED";
+(r = i || (i = {}))[r.MOUNTED = 0] = "MOUNTED", r[r.ENTERED = 1] = "ENTERED", r[r.YEETED = 2] = "YEETED";
 let o = {};
 
 function l(e) {
@@ -21,73 +21,73 @@ function u(e) {
     items: t,
     renderItem: n,
     getItemKey: i,
-    wrapChildren: s = l,
+    wrapChildren: r = l,
     lazyCleanUpDelay: u
-  } = e, d = a.useRef(-1);
-  a.useLayoutEffect(() => () => clearTimeout(d.current));
-  let [, c] = a.useState(o), f = a.useRef(null), _ = a.useMemo(() => {
+  } = e, c = a.useRef(-1);
+  a.useLayoutEffect(() => () => clearTimeout(c.current));
+  let [, d] = a.useState(o), f = a.useRef(null), E = a.useMemo(() => {
     var e;
-    let s = new Set(null === (e = f.current) || void 0 === e ? void 0 : e.keys()),
-      r = new Map(f.current);
+    let r = new Set(null === (e = f.current) || void 0 === e ? void 0 : e.keys()),
+      s = new Map(f.current);
     for (let e of t) {
       let t = i(e),
-        a = r.get(t);
+        a = s.get(t);
       if (null == a) {
         let i = null != f.current ? 1 : 0,
-          s = () => {
+          r = () => {
             var e, n;
             let i = null === (e = f.current) || void 0 === e ? void 0 : e.get(t);
-            null == i || (2 === i.state ? (null === (n = f.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(d.current), d.current = setTimeout(() => c({}), u)) : c({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)))
+            null == i || (2 === i.state ? (null === (n = f.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(c.current), c.current = setTimeout(() => d({}), u)) : d({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)))
           },
-          r = n(t, e, i, s);
+          s = n(t, e, i, r);
         a = {
           item: e,
-          children: r,
+          children: s,
           state: i,
-          cleanUp: s,
+          cleanUp: r,
           renderItem: n
         }
       } else if (a.item !== e || a.renderItem !== n || 2 === a.state) {
         let {
           cleanUp: i
-        } = a, s = 2 === a.state ? 1 : a.state, r = n(t, e, s, a.cleanUp);
+        } = a, r = 2 === a.state ? 1 : a.state, s = n(t, e, r, a.cleanUp);
         a = {
           item: e,
-          children: r,
-          state: s,
+          children: s,
+          state: r,
           cleanUp: i,
           renderItem: n
         }
       }
-      r.set(t, a), s.delete(t)
+      s.set(t, a), r.delete(t)
     }
-    for (let e of s) {
-      let t = r.get(e);
+    for (let e of r) {
+      let t = s.get(e);
       if (null != t) {
         if (2 !== t.state || t.renderItem !== n) {
           let {
             item: i,
-            cleanUp: s
+            cleanUp: r
           } = t, a = n(e, t.item, 2, t.cleanUp);
           null != (t = {
             item: i,
             children: a,
             state: 2,
-            cleanUp: s,
+            cleanUp: r,
             renderItem: n
-          }).children ? r.set(e, t) : r.delete(e)
-        } else r.set(e, t)
+          }).children ? s.set(e, t) : s.delete(e)
+        } else s.set(e, t)
       }
     }
-    return r
+    return s
   }, [t, i, n, u]);
-  a.useInsertionEffect(() => (f.current = _, () => {
+  a.useInsertionEffect(() => (f.current = E, () => {
     var e;
     return null === (e = f.current) || void 0 === e ? void 0 : e.clear()
-  }), [_]);
-  let h = [];
-  for (let [, e] of _) h.push(e.children);
-  return (0, r.jsx)(r.Fragment, {
-    children: h.length > 0 ? s(h) : null
+  }), [E]);
+  let p = [];
+  for (let [, e] of E) p.push(e.children);
+  return (0, s.jsx)(s.Fragment, {
+    children: p.length > 0 ? r(p) : null
   })
 }

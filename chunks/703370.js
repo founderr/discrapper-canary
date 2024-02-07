@@ -1,15 +1,15 @@
 "use strict";
-let i;
+let s;
 n.r(t), n.d(t, {
   default: function() {
     return u
   }
 });
-var s = n("446674"),
+var i = n("446674"),
   r = n("913144"),
   a = n("546463"),
   o = n("568307");
-class l extends s.default.Store {
+class d extends i.default.Store {
   getGameForPID(e) {
     var t;
     if (__OVERLAY__ || null == e) return null;
@@ -17,15 +17,15 @@ class l extends s.default.Store {
     return a.default.getGameByName(n)
   }
   getGame() {
-    return __OVERLAY__ ? i : null
+    return __OVERLAY__ ? s : null
   }
 }
-l.displayName = "OverlayRunningGameStore";
-var u = new l(r.default, {
+d.displayName = "OverlayRunningGameStore";
+var u = new d(r.default, {
   OVERLAY_INITIALIZE: function(e) {
-    i = e.currentGame
+    s = e.currentGame
   },
   OVERLAY_SET_ASSOCIATED_GAME: function(e) {
-    i = e.associatedGame
+    s = e.associatedGame
   }
 })

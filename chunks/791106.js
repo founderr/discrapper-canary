@@ -1,35 +1,35 @@
 "use strict";
 n.r(t), n.d(t, {
   Gradients: function() {
-    return u
-  },
-  GradientCssUrls: function() {
     return a
   },
+  GradientCssUrls: function() {
+    return u
+  },
   default: function() {
-    return E
+    return I
   }
 });
 var r = n("37983"),
   i = n("884691"),
-  s = n("748820"),
+  o = n("748820"),
   l = n("669491");
-let u = Object.freeze({
-    PREMIUM_TIER_0: (0, s.v4)(),
-    PREMIUM_TIER_1: (0, s.v4)(),
-    PREMIUM_TIER_2: (0, s.v4)(),
-    PREMIUM_GUILD: (0, s.v4)(),
-    PREMIUM_GUILD_BADGE_V2_BACKGROUND: (0, s.v4)()
+let a = Object.freeze({
+    PREMIUM_TIER_0: (0, o.v4)(),
+    PREMIUM_TIER_1: (0, o.v4)(),
+    PREMIUM_TIER_2: (0, o.v4)(),
+    PREMIUM_GUILD: (0, o.v4)(),
+    PREMIUM_GUILD_BADGE_V2_BACKGROUND: (0, o.v4)()
   }),
-  a = {
-    PREMIUM_TIER_0: "url(#".concat(u.PREMIUM_TIER_0, ")"),
-    PREMIUM_TIER_1: "url(#".concat(u.PREMIUM_TIER_1, ")"),
-    PREMIUM_TIER_2: "url(#".concat(u.PREMIUM_TIER_2, ")"),
-    PREMIUM_GUILD: "url(#".concat(u.PREMIUM_GUILD, ")"),
-    PREMIUM_GUILD_BADGE_V2_BACKGROUND: "url(#".concat(u.PREMIUM_GUILD_BADGE_V2_BACKGROUND, ")")
+  u = {
+    PREMIUM_TIER_0: "url(#".concat(a.PREMIUM_TIER_0, ")"),
+    PREMIUM_TIER_1: "url(#".concat(a.PREMIUM_TIER_1, ")"),
+    PREMIUM_TIER_2: "url(#".concat(a.PREMIUM_TIER_2, ")"),
+    PREMIUM_GUILD: "url(#".concat(a.PREMIUM_GUILD, ")"),
+    PREMIUM_GUILD_BADGE_V2_BACKGROUND: "url(#".concat(a.PREMIUM_GUILD_BADGE_V2_BACKGROUND, ")")
   },
-  o = () => (0, r.jsxs)("linearGradient", {
-    id: u.PREMIUM_TIER_0,
+  s = () => (0, r.jsxs)("linearGradient", {
+    id: a.PREMIUM_TIER_0,
     children: [(0, r.jsx)("stop", {
       offset: ".1762",
       stopColor: l.default.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS.css
@@ -42,7 +42,7 @@ let u = Object.freeze({
     })]
   }),
   c = () => (0, r.jsxs)("linearGradient", {
-    id: u.PREMIUM_TIER_1,
+    id: a.PREMIUM_TIER_1,
     children: [(0, r.jsx)("stop", {
       stopColor: l.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css
     }), (0, r.jsx)("stop", {
@@ -51,7 +51,7 @@ let u = Object.freeze({
     })]
   }),
   d = () => (0, r.jsxs)("linearGradient", {
-    id: u.PREMIUM_TIER_2,
+    id: a.PREMIUM_TIER_2,
     children: [(0, r.jsx)("stop", {
       stopColor: l.default.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css
     }), (0, r.jsx)("stop", {
@@ -63,7 +63,7 @@ let u = Object.freeze({
     })]
   }),
   f = () => (0, r.jsxs)("linearGradient", {
-    id: u.PREMIUM_GUILD,
+    id: a.PREMIUM_GUILD,
     children: [(0, r.jsx)("stop", {
       stopColor: l.default.unsafe_rawColors.GUILD_BOOSTING_BLUE.css
     }), (0, r.jsx)("stop", {
@@ -71,8 +71,8 @@ let u = Object.freeze({
       stopColor: l.default.unsafe_rawColors.GUILD_BOOSTING_PURPLE.css
     })]
   }),
-  I = () => (0, r.jsxs)("linearGradient", {
-    id: u.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+  E = () => (0, r.jsxs)("linearGradient", {
+    id: a.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
     gradientTransform: "rotate(45)",
     children: [(0, r.jsx)("stop", {
       offset: "0",
@@ -94,7 +94,7 @@ let u = Object.freeze({
         height: 1
       },
       "aria-hidden": !0,
-      children: [o(), c(), d(), f(), I()]
+      children: [s(), c(), d(), f(), E()]
     })
   }, () => !0);
-var E = _
+var I = _

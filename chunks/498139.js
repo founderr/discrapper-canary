@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   useFavoritesServerExperiment: function() {
-    return r
+    return s
   },
   default: function() {
     return a
   }
 });
 var i = n("862205");
-let s = (0, i.createExperiment)({
+let r = (0, i.createExperiment)({
     kind: "user",
     id: "2021-09_favorites_server",
     label: "Favorites Server",
@@ -56,9 +56,9 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  r = e => s.useExperiment({
+  s = e => r.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0
   });
-var a = s
+var a = r

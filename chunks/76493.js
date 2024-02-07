@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
+o.r(e), o.d(e, {
   default: function() {
-    return i
+    return n
   }
-}), n("424973");
-var i = new class e {
-  enqueue(e) {
-    this.queue.push(e)
+}), o("424973");
+var n = new class t {
+  enqueue(t) {
+    this.queue.push(t)
   }
   flush() {
     for (; this.queue.length > 0;) {
-      var e;
-      null === (e = this.queue.shift()) || void 0 === e || e()
+      var t;
+      null === (t = this.queue.shift()) || void 0 === t || t()
     }
   }
   constructor() {

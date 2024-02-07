@@ -1,11 +1,11 @@
 "use strict";
-var i, s;
+var i, r;
 n.r(t), n.d(t, {
   WebRTCStatsCalculator: function() {
-    return r
+    return s
   }
 }), n("222007");
-class r {
+class s {
   update(e) {
     for (let t in e.rtp.inbound) {
       let n = e.rtp.inbound[t];
@@ -24,26 +24,26 @@ class r {
       }
   }
   static getCalculatorOrCreate(e, t, n, i) {
-    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-      r = e[t.ssrc];
-    return null == r && (r = new o(n, i, s), e[t.ssrc] = r), r
+    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+      s = e[t.ssrc];
+    return null == s && (s = new o(n, i, r), e[t.ssrc] = s), s
   }
   getInboundBytesRecevierCalculator(e) {
-    return r.getCalculatorOrCreate(this.inboundVideoBitrate, e, "bytesReceived", "timestamp", 3)
+    return s.getCalculatorOrCreate(this.inboundVideoBitrate, e, "bytesReceived", "timestamp", 3)
   }
   getInboundFrameDecodeRateCalculator(e) {
-    return r.getCalculatorOrCreate(this.inboundDecodeFps, e, "framesDecoded", "timestamp", 5)
+    return s.getCalculatorOrCreate(this.inboundDecodeFps, e, "framesDecoded", "timestamp", 5)
   }
   getOutboundBytesSentCalculator(e) {
-    return r.getCalculatorOrCreate(this.outboundVideoBitrate, e, "bytesSent", "timestamp", 3)
+    return s.getCalculatorOrCreate(this.outboundVideoBitrate, e, "bytesSent", "timestamp", 3)
   }
   getOutboundEncodeRateCalculator(e) {
-    return r.getCalculatorOrCreate(this.outboundEncodeFps, e, "framesEncoded", "timestamp", 5)
+    return s.getCalculatorOrCreate(this.outboundEncodeFps, e, "framesEncoded", "timestamp", 5)
   }
   constructor() {
     this.inboundVideoBitrate = {}, this.inboundDecodeFps = {}, this.outboundVideoBitrate = {}, this.outboundEncodeFps = {}
   }
-}(s = i || (i = {}))[s.NONE = 0] = "NONE", s[s.MILLISECONDS_FROM_SECONDS = 1] = "MILLISECONDS_FROM_SECONDS", s[s.BYTES_TO_BITS = 2] = "BYTES_TO_BITS", s[s.ROUND = 4] = "ROUND";
+}(r = i || (i = {}))[r.NONE = 0] = "NONE", r[r.MILLISECONDS_FROM_SECONDS = 1] = "MILLISECONDS_FROM_SECONDS", r[r.BYTES_TO_BITS = 2] = "BYTES_TO_BITS", r[r.ROUND = 4] = "ROUND";
 let a = {
   0: {
     multiplier: 1
@@ -65,19 +65,19 @@ class o {
     let n = e.timestamp - t.timestamp;
     if (n <= 0 || "number" != typeof n) return;
     let i = t[this.accumulativeMetricKey],
-      s = e[this.accumulativeMetricKey];
-    if ("number" != typeof i || "number" != typeof s) return;
-    let r = t[this.samplesMetricKey],
+      r = e[this.accumulativeMetricKey];
+    if ("number" != typeof i || "number" != typeof r) return;
+    let s = t[this.samplesMetricKey],
       a = e[this.samplesMetricKey];
-    if ("number" != typeof r || "number" != typeof a) return;
-    let o = (s - i) / (a - r) * this.multiplier;
+    if ("number" != typeof s || "number" != typeof a) return;
+    let o = (r - i) / (a - s) * this.multiplier;
     return this.round ? Math.round(o) : o
   }
   constructor(e, t, n = 0) {
     for (let o in this.accumulativeMetricKey = e, this.samplesMetricKey = t, this.multiplier = 1, this.round = !1, i) {
-      var s, r;
+      var r, s;
       let e = Number(o);
-      !isNaN(e) && (n & e) != 0 && o in a && (this.multiplier *= null !== (r = null === (s = a[o]) || void 0 === s ? void 0 : s.multiplier) && void 0 !== r ? r : 1)
+      !isNaN(e) && (n & e) != 0 && o in a && (this.multiplier *= null !== (s = null === (r = a[o]) || void 0 === r ? void 0 : r.multiplier) && void 0 !== s ? s : 1)
     }
     this.round = (4 & n) != 0
   }

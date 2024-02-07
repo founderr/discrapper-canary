@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   EXAMPLE_DOMAIN: function() {
-    return s
+    return r
   },
   getDnsName: function() {
-    return r
+    return s
   },
   getHttpName: function() {
     return a
@@ -14,8 +14,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("862205");
-let s = "example.com",
-  r = e => "_discord.".concat(e),
+let r = "example.com",
+  s = e => "_discord.".concat(e),
   a = e => "https://".concat(e, "/.well-known/discord"),
   o = (0, i.createExperiment)({
     id: "2023-07_domain_connection",

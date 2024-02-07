@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return u
+    return L
   }
 }), E("222007");
 var t = E("689988"),
@@ -15,10 +15,10 @@ var t = E("689988"),
   T = E("101125"),
   S = E("800762"),
   N = E("774539"),
-  O = E("49111");
+  A = E("49111");
 
-function A(e) {
-  return e.filter(e => e.type === O.ActivityTypes.PLAYING && e.application_id).map(e => e.application_id)
+function O(e) {
+  return e.filter(e => e.type === A.ActivityTypes.PLAYING && e.application_id).map(e => e.application_id)
 }
 async function R(e) {
   await n.default.fetchApplications(e, !1)
@@ -29,17 +29,17 @@ async function l(e) {
   if (null == _ || !(0, N.isVoiceUserGameActivityEnabled)("running_games_change", !1)) return;
   let E = T.default.getActivities();
   if (0 === E.length) return;
-  let t = A([...E]);
+  let t = O([...E]);
   await R([...t]);
   let n = r.default.getApplication(t[0]);
-  null != n && o.default.trackWithMetadata(O.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
+  null != n && o.default.trackWithMetadata(A.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
     channel_id: e,
     guild_id: _.guild_id,
     game_name: n.name,
     user_id: a.default.getId()
   })
 }
-class L extends t.default {
+class u extends t.default {
   handlePresenceUpdates(e) {
     let {
       updates: _
@@ -50,7 +50,7 @@ class L extends t.default {
         activities: t
       } = e, o = S.default.getVoiceStateForUser(_.id);
       if (null == o || !(0, N.isVoiceUserGameActivityEnabled)("presence_update", !1)) return;
-      let n = A([...t]);
+      let n = O([...t]);
       E = new Set([...E, ...n])
     }), R([...E])
   }
@@ -65,7 +65,7 @@ class L extends t.default {
       } = e;
       if (!(0, N.isVoiceUserGameActivityEnabled)("voice_state_update", !1)) return;
       let o = I.default.getActivities(_, t),
-        n = A([...o]);
+        n = O([...o]);
       E = new Set([...E, ...n])
     }), R([...E])
   }
@@ -88,4 +88,4 @@ class L extends t.default {
     }
   }
 }
-var u = new L
+var L = new u

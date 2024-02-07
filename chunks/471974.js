@@ -1,132 +1,132 @@
 "use strict";
-var r, i = n("390493");
+var r, i = s("390493");
 
-function o(e, t, n) {
-  return (t = function(e) {
-    var t = function(e, t) {
-      if ("object" != typeof e || null === e) return e;
-      var n = e[Symbol.toPrimitive];
-      if (void 0 !== n) {
-        var r = n.call(e, t || "default");
+function n(t, e, s) {
+  return (e = function(t) {
+    var e = function(t, e) {
+      if ("object" != typeof t || null === t) return t;
+      var s = t[Symbol.toPrimitive];
+      if (void 0 !== s) {
+        var r = s.call(t, e || "default");
         if ("object" != typeof r) return r;
         throw TypeError("@@toPrimitive must return a primitive value.")
       }
-      return ("string" === t ? String : Number)(e)
-    }(e, "string");
-    return "symbol" == typeof t ? t : String(t)
-  }(t)) in e ? Object.defineProperty(e, t, {
-    value: n,
+      return ("string" === e ? String : Number)(t)
+    }(t, "string");
+    return "symbol" == typeof e ? e : String(e)
+  }(e)) in t ? Object.defineProperty(t, e, {
+    value: s,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = n, e
+  }) : t[e] = s, t
 }
-n("70102");
-var s = n("362796"),
-  a = Symbol("lastResolve"),
-  c = Symbol("lastReject"),
+s("70102");
+var c = s("362796"),
+  o = Symbol("lastResolve"),
+  f = Symbol("lastReject"),
   u = Symbol("error"),
-  l = Symbol("ended"),
+  a = Symbol("ended"),
   d = Symbol("lastPromise"),
-  f = Symbol("handlePromise"),
-  p = Symbol("stream");
+  p = Symbol("handlePromise"),
+  b = Symbol("stream");
 
-function h(e, t) {
+function h(t, e) {
   return {
-    value: e,
-    done: t
+    value: t,
+    done: e
   }
 }
 
-function v(e) {
-  var t = e[a];
-  if (null !== t) {
-    var n = e[p].read();
-    null !== n && (e[d] = null, e[a] = null, e[c] = null, t(h(n, !1)))
+function l(t) {
+  var e = t[o];
+  if (null !== e) {
+    var s = t[b].read();
+    null !== s && (t[d] = null, t[o] = null, t[f] = null, e(h(s, !1)))
   }
 }
 
-function g(e) {
-  i.nextTick(v, e)
+function g(t) {
+  i.nextTick(l, t)
 }
-var b = Object.getPrototypeOf(function() {}),
-  m = Object.setPrototypeOf((o(r = {
+var v = Object.getPrototypeOf(function() {}),
+  x = Object.setPrototypeOf((n(r = {
     get stream() {
-      return this[p]
+      return this[b]
     },
     next: function() {
-      var e, t, n, r = this,
-        o = this[u];
-      if (null !== o) return Promise.reject(o);
-      if (this[l]) return Promise.resolve(h(void 0, !0));
-      if (this[p].destroyed) return new Promise(function(e, t) {
+      var t, e, s, r = this,
+        n = this[u];
+      if (null !== n) return Promise.reject(n);
+      if (this[a]) return Promise.resolve(h(void 0, !0));
+      if (this[b].destroyed) return new Promise(function(t, e) {
         i.nextTick(function() {
-          r[u] ? t(r[u]) : e(h(void 0, !0))
+          r[u] ? e(r[u]) : t(h(void 0, !0))
         })
       });
-      var s = this[d];
-      if (s) {
+      var c = this[d];
+      if (c) {
         ;
-        n = new Promise((e = s, t = this, function(n, r) {
-          e.then(function() {
-            if (t[l]) {
-              n(h(void 0, !0));
+        s = new Promise((t = c, e = this, function(s, r) {
+          t.then(function() {
+            if (e[a]) {
+              s(h(void 0, !0));
               return
             }
-            t[f](n, r)
+            e[p](s, r)
           }, r)
         }))
       } else {
-        var a = this[p].read();
-        if (null !== a) return Promise.resolve(h(a, !1));
-        n = new Promise(this[f])
+        var o = this[b].read();
+        if (null !== o) return Promise.resolve(h(o, !1));
+        s = new Promise(this[p])
       }
-      return this[d] = n, n
+      return this[d] = s, s
     }
   }, Symbol.asyncIterator, function() {
     return this
-  }), o(r, "return", function() {
-    var e = this;
-    return new Promise(function(t, n) {
-      e[p].destroy(null, function(e) {
-        if (e) {
-          n(e);
+  }), n(r, "return", function() {
+    var t = this;
+    return new Promise(function(e, s) {
+      t[b].destroy(null, function(t) {
+        if (t) {
+          s(t);
           return
         }
-        t(h(void 0, !0))
+        e(h(void 0, !0))
       })
     })
-  }), r), b);
-e.exports = function(e) {
-  var t, n = Object.create(m, (o(t = {}, p, {
-    value: e,
+  }), r), v);
+t.exports = function(t) {
+  var e, s = Object.create(x, (n(e = {}, b, {
+    value: t,
     writable: !0
-  }), o(t, a, {
+  }), n(e, o, {
     value: null,
     writable: !0
-  }), o(t, c, {
+  }), n(e, f, {
     value: null,
     writable: !0
-  }), o(t, u, {
+  }), n(e, u, {
     value: null,
     writable: !0
-  }), o(t, l, {
-    value: e._readableState.endEmitted,
+  }), n(e, a, {
+    value: t._readableState.endEmitted,
     writable: !0
-  }), o(t, f, {
-    value: function(e, t) {
-      var r = n[p].read();
-      r ? (n[d] = null, n[a] = null, n[c] = null, e(h(r, !1))) : (n[a] = e, n[c] = t)
+  }), n(e, p, {
+    value: function(t, e) {
+      var r = s[b].read();
+      r ? (s[d] = null, s[o] = null, s[f] = null, t(h(r, !1))) : (s[o] = t, s[f] = e)
     },
     writable: !0
-  }), t));
-  return n[d] = null, s(e, function(e) {
-    if (e && "ERR_STREAM_PREMATURE_CLOSE" !== e.code) {
-      var t = n[c];
-      null !== t && (n[d] = null, n[a] = null, n[c] = null, t(e)), n[u] = e;
+  }), e));
+  return s[d] = null, c(t, function(t) {
+    if (t && "ERR_STREAM_PREMATURE_CLOSE" !== t.code) {
+      var e = s[f];
+      null !== e && (s[d] = null, s[o] = null, s[f] = null, e(t)), s[u] = t;
       return
     }
-    var r = n[a];
-    null !== r && (n[d] = null, n[a] = null, n[c] = null, r(h(void 0, !0))), n[l] = !0
-  }), e.on("readable", g.bind(null, n)), n
+    var r = s[o];
+    null !== r && (s[d] = null, s[o] = null, s[f] = null, r(h(void 0, !0))), s[a] = !0
+  }), t.on("readable", g.bind(null, s)), s
 }

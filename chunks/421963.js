@@ -7,93 +7,93 @@ n.r(t), n.d(t, {
 var a = n("37983"),
   r = n("884691"),
   i = n("912215"),
-  c = n("67164"),
-  o = n("748820"),
-  s = n("432710"),
-  p = n("486196"),
-  d = n("155084"),
+  s = n("67164"),
+  c = n("748820"),
+  o = n("432710"),
+  d = n("486196"),
+  p = n("155084"),
   l = n("599110"),
   u = n("49111"),
   h = e => {
     let {
-      captchaService: t = p.CaptchaTypes.RECAPTCHA,
+      captchaService: t = d.CaptchaTypes.RECAPTCHA,
       sitekey: n,
       rqdata: h,
       onRender: f,
-      onVerify: v,
-      onError: m,
-      onOpen: y,
-      onClose: E,
+      onVerify: _,
+      onError: E,
+      onOpen: m,
+      onClose: v,
       onChalExpired: C,
-      ...R
-    } = e, b = r.useRef(null), _ = (0, o.v4)(), [x, g] = r.useState(!1), w = r.useCallback(e => {
+      ...y
+    } = e, R = r.useRef(null), A = (0, c.v4)(), [b, g] = r.useState(!1), T = r.useCallback(e => {
       l.default.track(u.AnalyticEvents.CAPTCHA_EVENT, {
         captcha_event_name: e,
         captcha_service: t,
         sitekey: n,
-        captcha_flow_key: _
+        captcha_flow_key: A
       })
-    }, [_, t, n]), A = r.useCallback(e => {
-      d.default.increment({
-        name: s.MetricEvents.CAPTCHA_EVENT,
+    }, [A, t, n]), I = r.useCallback(e => {
+      p.default.increment({
+        name: o.MetricEvents.CAPTCHA_EVENT,
         tags: ["event_name:".concat(e), "captcha_service:".concat(t)]
       })
-    }, [t]), k = r.useCallback(() => {
-      !x && (w("initial-load"), A("initial-load"), g(!0))
-    }, [A, x, w]), I = r.useCallback(() => {
-      if (x && null != h && "" !== h) {
+    }, [t]), x = r.useCallback(() => {
+      !b && (T("initial-load"), I("initial-load"), g(!0))
+    }, [I, b, T]), S = r.useCallback(() => {
+      if (b && null != h && "" !== h) {
         var e;
-        null === (e = b.current) || void 0 === e || e.setData({
+        null === (e = R.current) || void 0 === e || e.setData({
           rqdata: h
         })
       }
-    }, [x, h, b]);
+    }, [b, h, R]);
     r.useEffect(() => {
-      I()
-    }, [I]), r.useEffect(() => {
-      k()
-    }, [k]);
-    let S = r.useCallback(() => {
-        w("error"), A("error"), I(), null == m || m()
-      }, [w, A, I, m]),
-      T = r.useCallback(e => {
-        w("verify"), A("verify"), v(e)
-      }, [A, v, w]),
-      j = r.useCallback(() => {
-        w("render"), null == f || f()
-      }, [f, w]),
+      S()
+    }, [S]), r.useEffect(() => {
+      x()
+    }, [x]);
+    let w = r.useCallback(() => {
+        T("error"), I("error"), S(), null == E || E()
+      }, [T, I, S, E]),
+      N = r.useCallback(e => {
+        T("verify"), I("verify"), _(e)
+      }, [I, _, T]),
       O = r.useCallback(() => {
-        w("open"), A("open"), null == y || y()
-      }, [A, y, w]),
+        T("render"), null == f || f()
+      }, [f, T]),
+      k = r.useCallback(() => {
+        T("open"), I("open"), null == m || m()
+      }, [I, m, T]),
+      L = r.useCallback(() => {
+        T("close"), S(), null == v || v()
+      }, [v, T, S]),
       P = r.useCallback(() => {
-        w("close"), I(), null == E || E()
-      }, [E, w, I]),
-      N = r.useCallback(() => {
-        w("chal-expire"), null == C || C()
-      }, [C, w]);
-    return ((null == n || "" === n) && (n = u.RECAPTCHA_SITE_KEY), t === p.CaptchaTypes.RECAPTCHA) ? (0, a.jsx)(c.default, {
-      ...R,
-      onLoad: k,
-      onRender: j,
-      onVerify: T,
-      onError: S,
+        T("chal-expire"), null == C || C()
+      }, [C, T]);
+    return ((null == n || "" === n) && (n = u.RECAPTCHA_SITE_KEY), t === d.CaptchaTypes.RECAPTCHA) ? (0, a.jsx)(s.default, {
+      ...y,
+      onLoad: x,
+      onRender: O,
+      onVerify: N,
+      onError: w,
       sitekey: n
-    }) : t === p.CaptchaTypes.HCAPTCHA ? (0, a.jsx)(i.default, {
-      ref: b,
-      ...R,
+    }) : t === d.CaptchaTypes.HCAPTCHA ? (0, a.jsx)(i.default, {
+      ref: R,
+      ...y,
       sitekey: n,
-      onLoad: k,
-      onError: S,
-      onVerify: T,
-      onChalExpired: N,
-      onOpen: O,
-      onClose: P
-    }) : (0, a.jsx)(c.default, {
-      ...R,
+      onLoad: x,
+      onError: w,
+      onVerify: N,
+      onChalExpired: P,
+      onOpen: k,
+      onClose: L
+    }) : (0, a.jsx)(s.default, {
+      ...y,
       sitekey: n,
-      onLoad: k,
-      onRender: j,
-      onVerify: T,
-      onError: S
+      onLoad: x,
+      onRender: O,
+      onVerify: N,
+      onError: w
     })
   }

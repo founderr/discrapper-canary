@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   setDesignConfig: function() {
-    return s
+    return r
   }
 });
 let i = {
@@ -12,6 +12,6 @@ let i = {
   useTrackNavigatorScreenImpression: () => void 0
 };
 
-function s(e) {
+function r(e) {
   Object.assign(i, e)
 }

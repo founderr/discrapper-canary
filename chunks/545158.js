@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
 var i = n("773336");
-async function s(e, t) {
+async function r(e, t) {
   let {
-    default: s
-  } = await n.el("572544").then(n.bind(n, "572544")), r = s(e, {
+    default: r
+  } = await n.el("572544").then(n.bind(n, "572544")), l = r(e, {
     skipExtensionCheck: t,
     analyticsLocations: []
   });
-  if (null != r) r(null);
+  if (null != l) l(null);
   else if (i.isPlatformEmbedded) window.open(e);
   else {
     let t = document.createElement("a");

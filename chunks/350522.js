@@ -1,52 +1,52 @@
 "use strict";
-n.r(t), n.d(t, {
+o.r(e), o.d(e, {
   default: function() {
-    return d
+    return u
   }
 });
-var i = n("446674"),
-  s = n("913144");
+var n = o("446674"),
+  d = o("913144");
 let r = !1,
-  a = !1,
-  o = {},
-  l = null;
-class u extends i.default.Store {
-  hasConsented(e) {
-    return null != o[e] && o[e].consented
+  l = !1,
+  i = {},
+  a = null;
+class s extends n.default.Store {
+  hasConsented(t) {
+    return null != i[t] && i[t].consented
   }
   get fetchedConsents() {
     return r
   }
   get receivedConsentsInConnectionOpen() {
-    return a
-  }
-  getAuthenticationConsentRequired() {
     return l
   }
+  getAuthenticationConsentRequired() {
+    return a
+  }
 }
-u.displayName = "ConsentStore";
-var d = new u(s.default, {
-  CONNECTION_OPEN: function(e) {
+s.displayName = "ConsentStore";
+var u = new s(d.default, {
+  CONNECTION_OPEN: function(t) {
     let {
-      consents: t
-    } = e;
-    null != t && (o = {
-      ...o,
-      ...t
-    }, a = !0)
+      consents: e
+    } = t;
+    null != e && (i = {
+      ...i,
+      ...e
+    }, l = !0)
   },
-  UPDATE_CONSENTS: function(e) {
+  UPDATE_CONSENTS: function(t) {
     let {
-      consents: t
-    } = e;
-    o = {
-      ...t
+      consents: e
+    } = t;
+    i = {
+      ...e
     }, r = !0
   },
-  SET_CONSENT_REQUIRED: function(e) {
-    l = e.consentRequired
+  SET_CONSENT_REQUIRED: function(t) {
+    a = t.consentRequired
   },
   LOGOUT: function() {
-    l = null
+    a = null
   }
 })

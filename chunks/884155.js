@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("835040"),
   E = n("373469"),
   C = n("271938"),
-  S = n("26989"),
-  g = n("42887"),
+  g = n("26989"),
+  S = n("42887"),
   _ = n("957255"),
   I = n("824563"),
   T = n("101125"),
@@ -43,10 +43,10 @@ let b = l.memo(e => {
     channel: i,
     sessionId: o,
     nick: _
-  } = e, A = s.id, y = (0, r.useStateFromStores)([C.default], () => C.default.getId() === A, [A]), [b, P, D] = (0, r.useStateFromStoresArray)([g.default], () => y ? [!g.default.isSupported() || g.default.isSelfMute() || g.default.isSelfMutedTemporarily(), g.default.isSelfDeaf(), !1] : [!g.default.isSupported() || g.default.isLocalMute(A), !1, g.default.isLocalVideoDisabled(A)], [y, A]), U = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), w = (0, u.default)({
+  } = e, A = s.id, y = (0, r.useStateFromStores)([C.default], () => C.default.getId() === A, [A]), [b, P, D] = (0, r.useStateFromStoresArray)([S.default], () => y ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(A), !1, S.default.isLocalVideoDisabled(A)], [y, A]), U = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), w = (0, u.default)({
     userId: A,
     checkSoundSharing: !0
-  }), F = (0, r.useStateFromStores)([S.default], () => S.default.isGuestOrLurker(i.guild_id, A)), k = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
+  }), F = (0, r.useStateFromStores)([g.default], () => g.default.isGuestOrLurker(i.guild_id, A)), k = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
     let {
       userIds: t
     } = e;

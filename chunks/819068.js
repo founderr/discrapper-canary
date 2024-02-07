@@ -1,5 +1,5 @@
 "use strict";
-let i, s;
+let i, r;
 n.r(t), n.d(t, {
   OVERLAY_VERSION: function() {
     return a
@@ -14,31 +14,31 @@ n.r(t), n.d(t, {
     return u
   },
   DEV_PID: function() {
-    return d
+    return c
   },
   getPID: function() {
     return f
   },
   setPID: function() {
-    return _
-  },
-  getRPCAuthToken: function() {
-    return h
-  },
-  validResolution: function() {
-    return g
-  },
-  setOutOfProcessSupport: function() {
-    return m
-  },
-  supportsOutOfProcess: function() {
     return E
   },
-  isOutOfProcess: function() {
+  getRPCAuthToken: function() {
     return p
+  },
+  validResolution: function() {
+    return h
+  },
+  setOutOfProcessSupport: function() {
+    return _
+  },
+  supportsOutOfProcess: function() {
+    return S
+  },
+  isOutOfProcess: function() {
+    return m
   }
 }), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("121338");
-var r = n("773336");
+var s = n("773336");
 n("49111");
 let a = 2,
   o = {
@@ -50,42 +50,42 @@ let a = 2,
     height: 432
   },
   u = "overlay_default",
-  d = -2,
-  c = !1;
+  c = -2,
+  d = !1;
 
 function f() {
   var e;
   if (void 0 !== i) return i;
   let t = new URLSearchParams(window.location.search),
     n = null !== (e = t.get("pid")) && void 0 !== e ? e : "",
-    s = parseInt(n, 10);
-  return isNaN(s) && (s = -1), i = s
+    r = parseInt(n, 10);
+  return isNaN(r) && (r = -1), i = r
 }
 
-function _(e) {
-  p() && (i = e)
+function E(e) {
+  m() && (i = e)
 }
 
-function h() {
+function p() {
   let e = new URLSearchParams(window.location.search);
   return e.get("rpc_auth_token")
 }
 
-function g(e) {
-  return !r.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
+function h(e) {
+  return !s.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
 }
 
-function m(e) {
-  c = e
+function _(e) {
+  d = e
 }
 
-function E() {
-  return c
+function S() {
+  return d
 }
 
-function p() {
+function m() {
   var e;
-  if (void 0 !== s) return s;
+  if (void 0 !== r) return r;
   let t = new URLSearchParams(window.location.search);
-  return s = (null !== (e = t.get("oop")) && void 0 !== e ? e : "") === "true"
+  return r = (null !== (e = t.get("oop")) && void 0 !== e ? e : "") === "true"
 }

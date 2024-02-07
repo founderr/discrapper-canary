@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var i, s = n("666038");
-i = class extends s.default {
+var i, r = n("666038");
+i = class extends r.default {
   isVoiceMuted() {
     return this.selfMute || this.mute || this.suppress || null != this.requestToSpeakTimestamp
   }

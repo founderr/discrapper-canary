@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   InputError: function() {
-    return g
+    return h
   },
   TextInput: function() {
-    return m
+    return _
   }
 });
 var i = n("37983"),
-  s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  r = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
   o = n("907002"),
   l = n("718776"),
   u = n("516826"),
-  d = n("577776"),
-  c = n("634634"),
+  c = n("577776"),
+  d = n("634634"),
   f = n("782340"),
-  _ = n("905518");
-let h = {
-  DEFAULT: _.inputDefault,
-  MINI: _.inputMini
+  E = n("905518");
+let p = {
+  DEFAULT: E.inputDefault,
+  MINI: E.inputMini
 };
 
-function g(e) {
+function h(e) {
   let {
     error: t
   } = e, n = (0, o.useTransition)(t, {
@@ -49,12 +49,12 @@ function g(e) {
       opacity: 0,
       transform: "translate3d(0, -100%, 0)"
     }
-  }), s = (0, c.default)(t);
+  }), r = (0, d.default)(t);
   return (0, i.jsx)(i.Fragment, {
-    children: n((e, n, r) => {
+    children: n((e, n, s) => {
       let {
         key: a
-      } = r, {
+      } = s, {
         transform: l,
         ...u
       } = e;
@@ -67,54 +67,54 @@ function g(e) {
           style: {
             transform: l
           },
-          children: (0, i.jsx)(d.Text, {
+          children: (0, i.jsx)(c.Text, {
             color: "text-danger",
             variant: "text-xs/normal",
-            children: null != t && "" !== t ? t : s
+            children: null != t && "" !== t ? t : r
           })
         })
       }, a) : null
     })
   })
 }
-class m extends s.Component {
+class _ extends r.Component {
   render() {
     var e, t;
     let {
       className: n,
-      inputClassName: s,
-      inputPrefix: r,
+      inputClassName: r,
+      inputPrefix: s,
       disabled: o,
       size: u,
-      editable: d,
-      inputRef: c,
+      editable: c,
+      inputRef: d,
       prefixElement: f,
-      focusProps: h,
-      ...m
-    } = this.props, E = null !== (t = m["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
+      focusProps: p,
+      ..._
+    } = this.props, S = null !== (t = _["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
     return (0, i.jsxs)("div", {
-      className: a(_.inputWrapper, n),
-      children: [null != f && f, null != r ? (0, i.jsx)("span", {
-        className: _.inputPrefix,
-        children: r
+      className: a(E.inputWrapper, n),
+      children: [null != f && f, null != s ? (0, i.jsx)("span", {
+        className: E.inputPrefix,
+        children: s
       }) : null, (0, i.jsx)(l.FocusRing, {
-        ...h,
+        ...p,
         children: (0, i.jsx)("input", {
-          className: a(u, s, {
-            [_.error]: this.hasError(),
-            [_.disabled]: o,
-            [_.editable]: d
+          className: a(u, r, {
+            [E.error]: this.hasError(),
+            [E.disabled]: o,
+            [E.editable]: c
           }),
           disabled: o,
-          readOnly: !1 === d || void 0,
-          ...m,
-          "aria-labelledby": E,
+          readOnly: !1 === c || void 0,
+          ..._,
+          "aria-labelledby": S,
           onChange: this.onChange,
           onBlur: this.onBlur,
           onFocus: this.onFocus,
-          ref: c
+          ref: d
         })
-      }), (0, i.jsx)(g, {
+      }), (0, i.jsx)(h, {
         error: this.getError()
       })]
     })
@@ -128,10 +128,10 @@ class m extends s.Component {
         maxLength: n
       } = this.props, i = this.getIsUnderFlowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
         minLength: t
-      }) : null, s = this.getIsOverFlowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
+      }) : null, r = this.getIsOverFlowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
         maxLength: n
       }) : null;
-      return null != e && e.length < 1 || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != i ? i : s
+      return null != e && e.length < 1 || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != i ? i : r
     }, this.getIsUnderFlowing = () => {
       var e;
       let {
@@ -162,9 +162,9 @@ class m extends s.Component {
     }
   }
 }
-m.Sizes = h, m.contextType = u.FormContext, m.defaultProps = {
+_.Sizes = p, _.contextType = u.FormContext, _.defaultProps = {
   name: "",
-  size: h.DEFAULT,
+  size: p.DEFAULT,
   disabled: !1,
   type: "text",
   placeholder: "",

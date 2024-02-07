@@ -1,85 +1,85 @@
 "use strict";
 n.r(t), n.d(t, {
   canAccessMemberSafetyPage: function() {
-    return f
+    return _
   },
   useCanAccessMemberSafetyPage: function() {
-    return h
-  },
-  useCanAccessBulkBanningFeature: function() {
     return g
   },
-  useCanAccessInviteCodeFeature: function() {
+  useCanAccessBulkBanningFeature: function() {
     return m
   },
+  useCanAccessInviteCodeFeature: function() {
+    return h
+  },
   useCanBulkBanUser: function() {
-    return E
+    return v
   },
   canBulkBanUser: function() {
-    return p
+    return E
   }
 }), n("222007");
-var i = n("316693"),
-  s = n("446674"),
+var s = n("316693"),
+  i = n("446674"),
   r = n("305961"),
   a = n("957255"),
   o = n("697218"),
-  l = n("991170"),
+  d = n("991170"),
   u = n("562980"),
-  d = n("49111");
-let c = function(e) {
+  l = n("49111");
+let f = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, o.default],
-      [n, i] = t,
-      s = n.getGuild(e),
-      a = i.getCurrentUser();
+      [n, s] = t,
+      i = n.getGuild(e),
+      a = s.getCurrentUser();
     return {
       user: a,
-      guild: s
+      guild: i
     }
   },
-  f = function(e) {
+  _ = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, o.default],
-      n = c(e, t);
+      n = f(e, t);
     if (null == n) return !1;
-    let s = i.default.hasAny(l.default.computePermissions({
+    let i = s.default.hasAny(d.default.computePermissions({
       user: n.user,
       context: n.guild,
       checkElevated: !1
     }), u.MemberSafetyPagePermissions);
-    return s
+    return i
   },
-  _ = function(e) {
+  c = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, o.default],
-      n = c(e, t);
-    return null != n && a.default.can(d.Permissions.MANAGE_GUILD, n.guild) && a.default.can(d.Permissions.BAN_MEMBERS, n.guild)
+      n = f(e, t);
+    return null != n && a.default.can(l.Permissions.MANAGE_GUILD, n.guild) && a.default.can(l.Permissions.BAN_MEMBERS, n.guild)
   };
 
-function h(e) {
-  let t = (0, s.useStateFromStores)([r.default, o.default], () => f(e, [r.default, o.default]), [e]);
+function g(e) {
+  let t = (0, i.useStateFromStores)([r.default, o.default], () => _(e, [r.default, o.default]), [e]);
   return t
 }
 
-function g(e) {
-  let t = h(e),
-    n = (0, s.useStateFromStores)([r.default, o.default], () => _(e, [r.default, o.default]), [e]);
+function m(e) {
+  let t = g(e),
+    n = (0, i.useStateFromStores)([r.default, o.default], () => c(e, [r.default, o.default]), [e]);
   return t && n
 }
 
-function m(e) {
-  return (0, s.useStateFromStores)([r.default, a.default], () => {
+function h(e) {
+  return (0, i.useStateFromStores)([r.default, a.default], () => {
     let t = r.default.getGuild(e);
-    return null != t && a.default.can(d.Permissions.MANAGE_GUILD, t)
+    return null != t && a.default.can(l.Permissions.MANAGE_GUILD, t)
   }, [e])
 }
 
-function E(e, t, n) {
-  return (0, s.useStateFromStores)([a.default, r.default], () => {
-    let i = r.default.getGuild(e);
-    return null != i && t && a.default.canManageUser(d.Permissions.BAN_MEMBERS, n, i)
+function v(e, t, n) {
+  return (0, i.useStateFromStores)([a.default, r.default], () => {
+    let s = r.default.getGuild(e);
+    return null != s && t && a.default.canManageUser(l.Permissions.BAN_MEMBERS, n, s)
   }, [t, e, n])
 }
 
-function p(e, t, n) {
-  let i = r.default.getGuild(e);
-  return null != i && t && a.default.canManageUser(d.Permissions.BAN_MEMBERS, n, i)
+function E(e, t, n) {
+  let s = r.default.getGuild(e);
+  return null != s && t && a.default.canManageUser(l.Permissions.BAN_MEMBERS, n, s)
 }

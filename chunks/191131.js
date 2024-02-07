@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return S
   }
 });
 var r = n("37983");
@@ -15,16 +15,16 @@ var s = n("812204"),
   c = n("262683"),
   d = n("946359"),
   f = n("724269"),
-  p = n("99836"),
-  E = n("217796"),
+  E = n("99836"),
+  p = n("217796"),
   _ = n("357957"),
   I = n("671183"),
   h = n("273093"),
-  R = n("880531"),
-  v = n("843455");
-let S = [{
+  v = n("880531"),
+  R = n("843455");
+let x = [{
   key: null,
-  renderStep: e => (0, r.jsx)(E.OneTimePaymentPredicateStep, {
+  renderStep: e => (0, r.jsx)(p.OneTimePaymentPredicateStep, {
     ...e
   })
 }, {
@@ -46,7 +46,7 @@ let S = [{
   renderStep: () => (0, r.jsx)(d.default, {})
 }, {
   key: i.Step.REVIEW,
-  renderStep: e => (0, r.jsx)(p.PaymentModalReviewStep, {
+  renderStep: e => (0, r.jsx)(E.PaymentModalReviewStep, {
     ...e
   })
 }, {
@@ -56,7 +56,7 @@ let S = [{
   })
 }];
 
-function x(e) {
+function S(e) {
   let {
     guildProductContext: t,
     sourceAnalyticsLocations: n,
@@ -70,16 +70,16 @@ function x(e) {
     ...t,
     children: (0, r.jsx)(d, {
       children: (0, r.jsx)(l.PaymentContextProvider, {
-        stepConfigs: S,
+        stepConfigs: x,
         applicationId: i,
         skuIDs: [c.skuId],
         activeSubscription: null,
-        purchaseType: v.PurchaseTypes.ONE_TIME,
+        purchaseType: R.PurchaseTypes.ONE_TIME,
         children: (0, r.jsx)(o.GiftContextProvider, {
           children: (0, r.jsx)(a.PaymentModal, {
             initialPlanId: null,
             analyticsLocations: f,
-            renderHeader: R.renderGuildProductPurchaseHeader,
+            renderHeader: v.renderGuildProductPurchaseHeader,
             ...c
           })
         })

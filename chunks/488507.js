@@ -13,12 +13,12 @@ var t, o, n = E("811022"),
   T = E("568307"),
   S = E("703370"),
   N = E("860957"),
-  O = E("901165"),
-  A = E("599110"),
+  A = E("901165"),
+  O = E("599110"),
   R = E("50885"),
   l = E("816454"),
-  L = E("360782"),
-  u = E("84970"),
+  u = E("360782"),
+  L = E("84970"),
   C = E("49111"),
   D = E("6791");
 let c = new n.default("OverlayUsageStatsManager");
@@ -194,8 +194,8 @@ class h {
       n = parseInt(o[0], 10),
       r = isNaN(n) ? i.RunningProcessFullscreenType.UNKNOWN : n;
     isNaN(n) && c.error("ScreenTypeAnalytics: Unknown most used screen type: ".concat(o), t);
-    let a = u.GameDisplayModeStorage.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
-    u.GameDisplayModeStorage.setGameDisplayMode(null !== (_ = this.game.name) && void 0 !== _ ? _ : this.game.id, r);
+    let a = L.GameDisplayModeStorage.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
+    L.GameDisplayModeStorage.setGameDisplayMode(null !== (_ = this.game.name) && void 0 !== _ ? _ : this.game.id, r);
     let I = {
       screentype_unknown_duration: t[i.RunningProcessFullscreenType.UNKNOWN],
       screentype_windowed_duration: t[i.RunningProcessFullscreenType.WINDOWED],
@@ -264,7 +264,7 @@ class P {
     if (null != E) {
       E.screenAnalytics.destroy();
       let _ = await E.getAnalytics();
-      for (let e of (A.default.track(C.AnalyticEvents.OVERLAY_USAGE_STATS, _.usage), _.notifications)) A.default.track(C.AnalyticEvents.OVERLAY_USAGE_NOTIFICATION_STATS, e);
+      for (let e of (O.default.track(C.AnalyticEvents.OVERLAY_USAGE_STATS, _.usage), _.notifications)) O.default.track(C.AnalyticEvents.OVERLAY_USAGE_NOTIFICATION_STATS, e);
       c.verbose("OVERLAY_USAGE_STATS: ".concat(e.name), _), delete P.gamesByPid[e.pid]
     }
     delete P.gamesByName[_]
@@ -274,11 +274,11 @@ class P {
     let r = {
         setting_is_enabled: N.default.enabled,
         setting_method: null == this.overlayStatus ? null : D.OverlayMethod[this.overlayStatus.overlayMethod],
-        setting_display_user: O.default.getDisplayUserMode(),
-        setting_display_name: O.default.getDisplayNameMode(),
-        setting_avatar_size: O.default.getAvatarSizeMode(),
-        setting_notification_position: O.default.getNotificationPositionMode(),
-        setting_chat_notification: O.default.getTextChatNotificationMode()
+        setting_display_user: A.default.getDisplayUserMode(),
+        setting_display_name: A.default.getDisplayNameMode(),
+        setting_avatar_size: A.default.getAvatarSizeMode(),
+        setting_notification_position: A.default.getNotificationPositionMode(),
+        setting_chat_notification: A.default.getTextChatNotificationMode()
       },
       a = (0, T.getOverlayGameStatus)(this.game),
       i = {
@@ -448,7 +448,7 @@ function v(e) {
 }
 
 function b(e) {
-  null != (0, L.default)() && (c.verbose("AUDIO_TOGGLE_SELF_MUTE", e), P.handleMuteToggled())
+  null != (0, u.default)() && (c.verbose("AUDIO_TOGGLE_SELF_MUTE", e), P.handleMuteToggled())
 }
 
 function w(e) {

@@ -1,227 +1,227 @@
 "use strict";
 n.r(t), n.d(t, {
   permissionOverwritesForRoles: function() {
-    return A
+    return L
   },
   permissionOverwriteForUser: function() {
-    return y
+    return h
   },
   permissionOverwriteForRole: function() {
-    return N
-  },
-  permissionOverwritesForAnnouncement: function() {
-    return R
-  },
-  isChannelFull: function() {
-    return D
-  },
-  sanitizeGuildTextChannelName: function() {
-    return r.default
-  },
-  getBitrateLimit: function() {
-    return O
-  },
-  computeSummarizedVoiceUsers: function() {
     return P
   },
+  permissionOverwritesForAnnouncement: function() {
+    return g
+  },
+  isChannelFull: function() {
+    return m
+  },
+  sanitizeGuildTextChannelName: function() {
+    return l.default
+  },
+  getBitrateLimit: function() {
+    return y
+  },
+  computeSummarizedVoiceUsers: function() {
+    return D
+  },
   channelTypeString: function() {
-    return b
+    return v
   },
   getMentionIconType: function() {
-    return L
+    return U
   },
   previousTextChannelRouteForGuild: function() {
     return M
   },
   getChannelPermalink: function() {
-    return U
+    return G
   },
   getChannelLinkToCopy: function() {
-    return w
+    return B
   }
 }), n("70102"), n("424973"), n("222007");
-var i = n("316693"),
-  s = n("798609"),
-  r = n("364480"),
-  a = n("89073"),
-  o = n("711326"),
-  l = n("808422"),
-  u = n("233069"),
+var r = n("316693"),
+  i = n("798609"),
+  l = n("364480"),
+  u = n("89073"),
+  a = n("711326"),
+  o = n("808422"),
+  s = n("233069"),
   d = n("42203"),
-  c = n("923959"),
-  f = n("957255"),
-  _ = n("18494"),
-  h = n("316133"),
-  g = n("991170"),
-  m = n("49111"),
-  E = n("646718"),
+  E = n("923959"),
+  _ = n("957255"),
+  c = n("18494"),
+  I = n("316133"),
+  S = n("991170"),
+  T = n("49111"),
+  f = n("646718"),
   p = n("782340");
 let {
-  GUILD_VOICE: v,
-  GUILD_CATEGORY: S,
-  GUILD_STAGE_VOICE: T
-} = m.ChannelTypes;
+  GUILD_VOICE: N,
+  GUILD_CATEGORY: A,
+  GUILD_STAGE_VOICE: R
+} = T.ChannelTypes;
 
-function I(e, t) {
-  return e === t || e === S
+function C(e, t) {
+  return e === t || e === A
 }
 
-function C(e, t, n) {
-  let s = g.default.NONE;
-  return ((0, u.isGuildSelectableChannelType)(t) || t === S) && (s = i.default.add(s, m.Permissions.VIEW_CHANNEL)), (I(t, v) || I(t, T)) && (s = i.default.add(s, m.Permissions.VIEW_CHANNEL), s = i.default.add(s, m.Permissions.CONNECT)), {
+function O(e, t, n) {
+  let i = S.default.NONE;
+  return ((0, s.isGuildSelectableChannelType)(t) || t === A) && (i = r.default.add(i, T.Permissions.VIEW_CHANNEL)), (C(t, N) || C(t, R)) && (i = r.default.add(i, T.Permissions.VIEW_CHANNEL), i = r.default.add(i, T.Permissions.CONNECT)), {
     id: e,
     type: n,
-    deny: g.default.NONE,
-    allow: s
+    deny: S.default.NONE,
+    allow: i
   }
 }
 
-function A(e, t, n) {
-  let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    a = [];
-  if (n.length > 0 || r) {
-    var o, l, d;
+function L(e, t, n) {
+  let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    u = [];
+  if (n.length > 0 || l) {
+    var a, o, d;
     let n;
-    a.push((o = e, l = t, d = s.PermissionOverwriteType.ROLE, n = g.default.NONE, ((0, u.isGuildSelectableChannelType)(l) || l === S) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL)), I(l, v) && (n = i.default.add(n, m.Permissions.VIEW_CHANNEL), n = i.default.add(n, m.Permissions.CONNECT)), {
-      id: o,
+    u.push((a = e, o = t, d = i.PermissionOverwriteType.ROLE, n = S.default.NONE, ((0, s.isGuildSelectableChannelType)(o) || o === A) && (n = r.default.add(n, T.Permissions.VIEW_CHANNEL)), C(o, N) && (n = r.default.add(n, T.Permissions.VIEW_CHANNEL), n = r.default.add(n, T.Permissions.CONNECT)), {
+      id: a,
       type: d,
-      allow: g.default.NONE,
+      allow: S.default.NONE,
       deny: n
     }))
   }
   return n.forEach(e => {
-    a.push(C(e, t, s.PermissionOverwriteType.ROLE))
-  }), a
+    u.push(O(e, t, i.PermissionOverwriteType.ROLE))
+  }), u
 }
 
-function y(e, t) {
-  return C(e, t, s.PermissionOverwriteType.MEMBER)
+function h(e, t) {
+  return O(e, t, i.PermissionOverwriteType.MEMBER)
 }
 
-function N(e, t) {
-  return C(e, t, s.PermissionOverwriteType.ROLE)
+function P(e, t) {
+  return O(e, t, i.PermissionOverwriteType.ROLE)
 }
 
-function R(e) {
+function g(e) {
   return [{
     id: e,
-    type: s.PermissionOverwriteType.ROLE,
-    deny: m.Permissions.SEND_MESSAGES,
-    allow: g.default.NONE
+    type: i.PermissionOverwriteType.ROLE,
+    deny: T.Permissions.SEND_MESSAGES,
+    allow: S.default.NONE
   }]
 }
 
-function D(e, t, n) {
-  var i, s;
-  let r = e.getGuildId(),
-    o = n.getGuild(r),
-    l = null !== (i = null == o ? void 0 : o.maxVideoChannelUsers) && void 0 !== i ? i : -1,
-    u = null !== (s = null == o ? void 0 : o.maxStageVideoChannelUsers) && void 0 !== s ? s : -1,
-    d = h.default.countVoiceStatesForChannel(e.id),
-    c = h.default.getVoiceStatesForChannel(e),
-    _ = f.default.can(m.Permissions.MOVE_MEMBERS, e) && f.default.can(m.Permissions.CONNECT, e),
-    g = !1;
-  g = e.type === T ? null != r && (t.hasVideo(e.id) || (0, a.hasStream)(c)) && u > 0 && d >= u : null != r && t.hasVideo(e.id) && l > 0 && d >= l + (_ ? 1 : 0);
-  let E = e.userLimit > 0 && d >= e.userLimit;
-  return g || E && !_
+function m(e, t, n) {
+  var r, i;
+  let l = e.getGuildId(),
+    a = n.getGuild(l),
+    o = null !== (r = null == a ? void 0 : a.maxVideoChannelUsers) && void 0 !== r ? r : -1,
+    s = null !== (i = null == a ? void 0 : a.maxStageVideoChannelUsers) && void 0 !== i ? i : -1,
+    d = I.default.countVoiceStatesForChannel(e.id),
+    E = I.default.getVoiceStatesForChannel(e),
+    c = _.default.can(T.Permissions.MOVE_MEMBERS, e) && _.default.can(T.Permissions.CONNECT, e),
+    S = !1;
+  S = e.type === R ? null != l && (t.hasVideo(e.id) || (0, u.hasStream)(E)) && s > 0 && d >= s : null != l && t.hasVideo(e.id) && o > 0 && d >= o + (c ? 1 : 0);
+  let f = e.userLimit > 0 && d >= e.userLimit;
+  return S || f && !c
 }
 
-function O(e, t) {
-  return t.isGuildStageVoice() ? m.BITRATE_DEFAULT : null == e ? m.BITRATE_MAX : Math.max(e.hasFeature(m.GuildFeatures.VIP_REGIONS) ? E.BoostedGuildFeatures[m.BoostedGuildTiers.TIER_3].limits.bitrate : m.BITRATE_MAX, E.BoostedGuildFeatures[e.premiumTier].limits.bitrate)
+function y(e, t) {
+  return t.isGuildStageVoice() ? T.BITRATE_DEFAULT : null == e ? T.BITRATE_MAX : Math.max(e.hasFeature(T.GuildFeatures.VIP_REGIONS) ? f.BoostedGuildFeatures[T.BoostedGuildTiers.TIER_3].limits.bitrate : T.BITRATE_MAX, f.BoostedGuildFeatures[e.premiumTier].limits.bitrate)
 }
 
-function P(e) {
+function D(e) {
   let {
     channels: t,
     selectedChannelId: n,
-    selectedVoiceChannelId: i,
-    voiceStates: s
-  } = e, r = function(e) {
+    selectedVoiceChannelId: r,
+    voiceStates: i
+  } = e, l = function(e) {
     let {
       channels: t,
       selectedChannelId: n,
-      selectedVoiceChannelId: i,
-      voiceStates: s
-    } = e, r = [];
+      selectedVoiceChannelId: r,
+      voiceStates: i
+    } = e, l = [];
     return t.forEach(e => {
-      if (e.id === i || e.id === n) return;
-      let t = s[e.id];
+      if (e.id === r || e.id === n) return;
+      let t = i[e.id];
       null != t && (e.isGuildStageVoice() ? t.forEach(e => {
-        (0, l.getAudienceRequestToSpeakState)(e.voiceState) === l.RequestToSpeakStates.ON_STAGE && r.push(e)
-      }) : t.forEach(e => r.push(e)))
-    }), r
+        (0, o.getAudienceRequestToSpeakState)(e.voiceState) === o.RequestToSpeakStates.ON_STAGE && l.push(e)
+      }) : t.forEach(e => l.push(e)))
+    }), l
   }({
     channels: t,
     selectedChannelId: n,
-    selectedVoiceChannelId: i,
-    voiceStates: s
+    selectedVoiceChannelId: r,
+    voiceStates: i
   });
-  return r.map(e => e.user)
+  return l.map(e => e.user)
 }
 
-function b(e) {
+function v(e) {
   let {
     type: t
   } = e;
   switch (t) {
-    case m.ChannelTypes.DM:
+    case T.ChannelTypes.DM:
       return p.default.Messages.DM;
-    case m.ChannelTypes.GROUP_DM:
+    case T.ChannelTypes.GROUP_DM:
       return p.default.Messages.GROUP_DM;
-    case m.ChannelTypes.GUILD_TEXT:
+    case T.ChannelTypes.GUILD_TEXT:
       return p.default.Messages.TEXT_CHANNEL;
-    case m.ChannelTypes.GUILD_FORUM:
+    case T.ChannelTypes.GUILD_FORUM:
       return p.default.Messages.FORUM_CHANNEL;
-    case m.ChannelTypes.GUILD_MEDIA:
+    case T.ChannelTypes.GUILD_MEDIA:
       return p.default.Messages.MEDIA_CHANNEL;
-    case m.ChannelTypes.GUILD_VOICE:
+    case T.ChannelTypes.GUILD_VOICE:
       return p.default.Messages.VOICE_CHANNEL;
-    case m.ChannelTypes.GUILD_STAGE_VOICE:
+    case T.ChannelTypes.GUILD_STAGE_VOICE:
       return p.default.Messages.STAGE_CHANNEL;
-    case m.ChannelTypes.GUILD_ANNOUNCEMENT:
+    case T.ChannelTypes.GUILD_ANNOUNCEMENT:
       return p.default.Messages.NEWS_CHANNEL;
-    case m.ChannelTypes.GUILD_STORE:
+    case T.ChannelTypes.GUILD_STORE:
       return p.default.Messages.STORE_CHANNEL;
-    case m.ChannelTypes.GUILD_CATEGORY:
+    case T.ChannelTypes.GUILD_CATEGORY:
       return p.default.Messages.CATEGORY;
     default:
       return null
   }
 }
 
-function L(e) {
+function U(e) {
   if (null == e) return "text";
   let t = e.isMediaChannel();
-  if (e.type === m.ChannelTypes.GUILD_VOICE) return f.default.can(m.Permissions.CONNECT, e) ? "voice" : "voice-locked";
-  if (e.type === m.ChannelTypes.GUILD_STAGE_VOICE) return f.default.can(m.Permissions.CONNECT, e) ? "stage" : "stage-locked";
-  if (u.THREAD_CHANNEL_TYPES.has(e.type)) return e.isForumPost() ? "post" : "thread";
-  else if (e.type === m.ChannelTypes.GUILD_FORUM) return t ? "media" : "forum";
-  else if (e.type === m.ChannelTypes.GUILD_MEDIA) return "media";
-  else if (u.TEXT_CHANNEL_TYPES.has(e.type)) return "text"
+  if (e.type === T.ChannelTypes.GUILD_VOICE) return _.default.can(T.Permissions.CONNECT, e) ? "voice" : "voice-locked";
+  if (e.type === T.ChannelTypes.GUILD_STAGE_VOICE) return _.default.can(T.Permissions.CONNECT, e) ? "stage" : "stage-locked";
+  if (s.THREAD_CHANNEL_TYPES.has(e.type)) return e.isForumPost() ? "post" : "thread";
+  else if (e.type === T.ChannelTypes.GUILD_FORUM) return t ? "media" : "forum";
+  else if (e.type === T.ChannelTypes.GUILD_MEDIA) return "media";
+  else if (s.TEXT_CHANNEL_TYPES.has(e.type)) return "text"
 }
 
 function M(e) {
   let t;
-  let n = d.default.getChannel(_.default.getLastSelectedChannelId());
-  if (null != n && n.getGuildId() === e && n.type === m.ChannelTypes.GUILD_TEXT) t = n.id;
+  let n = d.default.getChannel(c.default.getLastSelectedChannelId());
+  if (null != n && n.getGuildId() === e && n.type === T.ChannelTypes.GUILD_TEXT) t = n.id;
   else {
-    let n = c.default.getDefaultChannel(e);
+    let n = E.default.getDefaultChannel(e);
     t = null != n ? n.id : null
   }
-  return m.Routes.CHANNEL(e, t)
+  return T.Routes.CHANNEL(e, t)
 }
 
-function U(e, t, n, i) {
-  return "".concat(location.protocol, "//").concat(location.host).concat(m.Routes.CHANNEL(e, t, n)).concat(null == i ? "" : "?summaryId=".concat(i))
+function G(e, t, n, r) {
+  return "".concat(location.protocol, "//").concat(location.host).concat(T.Routes.CHANNEL(e, t, n)).concat(null == r ? "" : "?summaryId=".concat(r))
 }
 
-function w(e, t, n, i) {
-  let s;
-  let r = e.getGuildId(),
-    a = (0, o.canUseMediaPostEmbed)(r, t);
-  if (null != t && a) {
-    var l, u, d, c;
-    l = r, u = t.id, d = e.id, c = e.id, s = null == l || null == u || null == d ? U(l, u, c) : "".concat(location.protocol, "//").concat(location.host).concat(m.Routes.CHANNEL_THREAD_VIEW(l, u, d, c))
-  } else s = null != i ? i : U(r, e.id, n);
-  return s
+function B(e, t, n, r) {
+  let i;
+  let l = e.getGuildId(),
+    u = (0, a.canUseMediaPostEmbed)(l, t);
+  if (null != t && u) {
+    var o, s, d, E;
+    o = l, s = t.id, d = e.id, E = e.id, i = null == o || null == s || null == d ? G(o, s, E) : "".concat(location.protocol, "//").concat(location.host).concat(T.Routes.CHANNEL_THREAD_VIEW(o, s, d, E))
+  } else i = null != r ? r : G(l, e.id, n);
+  return i
 }

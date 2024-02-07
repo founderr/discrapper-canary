@@ -21,8 +21,8 @@ var s = n("37983"),
   C = n("299285"),
   p = n("983444"),
   m = n("592407"),
-  E = n("970700"),
-  g = n("271938"),
+  g = n("970700"),
+  E = n("271938"),
   S = n("305961"),
   A = n("697218"),
   _ = n("461380"),
@@ -77,7 +77,7 @@ function D(e) {
 function j(e) {
   let {
     channel: t
-  } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && v.default.extractTimestamp(l.id) < Date.now() - x.WELCOME_OLD_GUILD_AGE_THRESHOLD, _ = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
+  } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && v.default.extractTimestamp(l.id) < Date.now() - x.WELCOME_OLD_GUILD_AGE_THRESHOLD, _ = (0, u.useStateFromStores)([E.default], () => (null == l ? void 0 : l.ownerId) === E.default.getId(), [l]), {
     canInvite: T,
     canManageGuild: j,
     canMessage: b
@@ -85,8 +85,8 @@ function j(e) {
     var e, t;
     return (null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
   }), {
-    guildPopulated: F,
-    guildMessaged: H,
+    guildPopulated: H,
+    guildMessaged: F,
     guildPersonalized: U
   } = (0, p.useCompletedStates)(l), {
     handleInvite: k,
@@ -169,9 +169,9 @@ function j(e) {
       handleDownload: r,
       handleAddApplication: o
     }
-  }(l), W = !(P || F || H || U), {
-    titleAnimatedStyle: z,
-    opacities: Z
+  }(l), W = !(P || H || F || U), {
+    titleAnimatedStyle: Z,
+    opacities: z
   } = function(e) {
     let t = (0, r.useLazyValue)(() => new o.default.Value(0)),
       n = (0, r.useLazyValue)(() => new o.default.Value(0)),
@@ -213,24 +213,24 @@ function j(e) {
   }(W), K = (0, u.useStateFromStores)([C.default], () => C.default.getGuildApplicationIds(null == l ? void 0 : l.id)), Y = K.length > 0;
   if (a.useEffect(() => {
       var e;
-      (0, E.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : "")
+      (0, g.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : "")
     }, [l]), null == l) return null;
-  let q = [];
-  !f && (T && q.push((0, s.jsx)(o.default.div, {
+  let X = [];
+  !f && (T && X.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: Z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("243826"),
       header: y.default.Messages.WELCOME_CTA_INVITE_TITLE,
-      completed: F,
+      completed: H,
       onClick: k
     })
-  }, "invite")), j && q.push((0, s.jsx)(o.default.div, {
+  }, "invite")), j && X.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: Z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("215036"),
@@ -238,21 +238,21 @@ function j(e) {
       completed: U,
       onClick: G
     })
-  }, "customize")), b && q.push((0, s.jsx)(o.default.div, {
+  }, "customize")), b && X.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: Z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("505873"),
       header: y.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
-      completed: H,
+      completed: F,
       onClick: w
     })
-  }, "message")), (0, N.isWeb)() && q.push((0, s.jsx)(o.default.div, {
+  }, "message")), (0, N.isWeb)() && X.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: Z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("238032"),
@@ -260,10 +260,10 @@ function j(e) {
       completed: P,
       onClick: B
     })
-  }, "download")), q.push((0, s.jsx)(o.default.div, {
+  }, "download")), X.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: Z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("356451"),
@@ -272,8 +272,8 @@ function j(e) {
       onClick: V
     })
   }, "addapp")));
-  let X = _ ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
-  f && (X = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
+  let q = _ ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
+  f && (q = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
   let J = "".concat(I.default.getArticleURL(x.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
   return (0, s.jsx)(L.default, {
     channelId: t.id,
@@ -282,7 +282,7 @@ function j(e) {
       children: (0, s.jsxs)("div", {
         className: O.inner,
         children: [(0, s.jsxs)(o.default.div, {
-          style: z,
+          style: Z,
           children: [(0, s.jsx)(c.Heading, {
             className: O.titleName,
             variant: "heading-xxl/semibold",
@@ -293,14 +293,14 @@ function j(e) {
             color: "header-secondary",
             className: i({
               [O.subtitle]: !0,
-              [O.noChildren]: 0 === q.length
+              [O.noChildren]: 0 === X.length
             }),
             variant: "text-sm/normal",
-            children: [X, " ", q.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
+            children: [q, " ", X.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
               guideURL: J
             }) : null]
           })]
-        }), q]
+        }), X]
       })
     })
   })

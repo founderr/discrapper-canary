@@ -1,26 +1,26 @@
 "use strict";
-var r = n("839309"),
-  i = n("550511"),
-  o = i.assert,
-  s = i.cachedProperty,
-  a = i.parseBytes;
+var r = s("839309"),
+  i = s("550511"),
+  n = i.assert,
+  c = i.cachedProperty,
+  o = i.parseBytes;
 
-function c(e, t) {
-  this.eddsa = e, "object" != typeof t && (t = a(t)), Array.isArray(t) && (t = {
-    R: t.slice(0, e.encodingLength),
-    S: t.slice(e.encodingLength)
-  }), o(t.R && t.S, "Signature without R or S"), e.isPoint(t.R) && (this._R = t.R), t.S instanceof r && (this._S = t.S), this._Rencoded = Array.isArray(t.R) ? t.R : t.Rencoded, this._Sencoded = Array.isArray(t.S) ? t.S : t.Sencoded
+function f(t, e) {
+  this.eddsa = t, "object" != typeof e && (e = o(e)), Array.isArray(e) && (e = {
+    R: e.slice(0, t.encodingLength),
+    S: e.slice(t.encodingLength)
+  }), n(e.R && e.S, "Signature without R or S"), t.isPoint(e.R) && (this._R = e.R), e.S instanceof r && (this._S = e.S), this._Rencoded = Array.isArray(e.R) ? e.R : e.Rencoded, this._Sencoded = Array.isArray(e.S) ? e.S : e.Sencoded
 }
-s(c, "S", function() {
+c(f, "S", function() {
   return this.eddsa.decodeInt(this.Sencoded())
-}), s(c, "R", function() {
+}), c(f, "R", function() {
   return this.eddsa.decodePoint(this.Rencoded())
-}), s(c, "Rencoded", function() {
+}), c(f, "Rencoded", function() {
   return this.eddsa.encodePoint(this.R())
-}), s(c, "Sencoded", function() {
+}), c(f, "Sencoded", function() {
   return this.eddsa.encodeInt(this.S())
-}), c.prototype.toBytes = function() {
+}), f.prototype.toBytes = function() {
   return this.Rencoded().concat(this.Sencoded())
-}, c.prototype.toHex = function() {
+}, f.prototype.toHex = function() {
   return i.encode(this.toBytes(), "hex").toUpperCase()
-}, e.exports = c
+}, t.exports = f

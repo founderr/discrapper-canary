@@ -1,35 +1,35 @@
 "use strict";
-A.r(I), A.d(I, {
+A.r(N), A.d(N, {
   default: function() {
-    return t
+    return R
   }
 });
 var O = A("446674"),
   T = A("913144"),
   _ = A("318696"),
-  e = A("374363");
-let E = A("782340").default.getDefaultLocale();
+  E = A("374363");
+let e = A("782340").default.getDefaultLocale();
 
 function V() {
-  var N, I;
-  let A = null === (I = e.default.settings.localization) || void 0 === I ? void 0 : null === (N = I.locale) || void 0 === N ? void 0 : N.value;
-  return null != A && "" !== A && A !== E && (E = A, _.setLocale(E), !0)
+  var I, N;
+  let A = null === (N = E.default.settings.localization) || void 0 === N ? void 0 : null === (I = N.locale) || void 0 === I ? void 0 : I.value;
+  return null != A && "" !== A && A !== e && (e = A, _.setLocale(e), !0)
 }
-class n extends O.default.Store {
+class G extends O.default.Store {
   initialize() {
-    this.waitFor(e.default), V(), _.setLocale(E)
+    this.waitFor(E.default), V(), _.setLocale(e)
   }
   get locale() {
-    return E
+    return e
   }
 }
-n.displayName = "LocaleStore";
-var t = new n(T.default, {
+G.displayName = "LocaleStore";
+var R = new G(T.default, {
   OVERLAY_INITIALIZE: V,
   CACHE_LOADED: V,
   CONNECTION_OPEN: V,
   USER_SETTINGS_PROTO_UPDATE: V,
-  USER_SETTINGS_LOCALE_OVERRIDE: function(N) {
-    E = N.locale, _.setLocale(E)
+  USER_SETTINGS_LOCALE_OVERRIDE: function(I) {
+    e = I.locale, _.setLocale(e)
   }
 })

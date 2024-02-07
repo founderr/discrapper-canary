@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("679653"),
   E = n("76813"),
   C = n("992207"),
-  S = n("95039"),
-  g = n("539938"),
+  g = n("95039"),
+  S = n("539938"),
   _ = n("557809"),
   I = n("311197"),
   T = n("550410"),
@@ -55,7 +55,7 @@ function K(e) {
     channel: n,
     toggleRequestToSpeakSidebar: s,
     showRequestToSpeakSidebar: o
-  } = e, c = (0, f.useAppContext)(), m = (0, r.useStateFromStores)([h.default], () => h.default.getChatOpen(n.id)), S = (0, w.useCanModerateRequestToSpeak)(n.id), g = (0, D.useStageParticipantsCount)(n.id, U.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
+  } = e, c = (0, f.useAppContext)(), m = (0, r.useStateFromStores)([h.default], () => h.default.getChatOpen(n.id)), g = (0, w.useCanModerateRequestToSpeak)(n.id), S = (0, D.useStageParticipantsCount)(n.id, U.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
     preventIdle: _,
     allowIdle: A
   } = (0, T.usePreventIdle)("popup");
@@ -92,14 +92,14 @@ function K(e) {
       onOpen: _,
       onClose: A,
       className: z.button
-    }, "recents"), !o && S ? (0, a.jsx)("div", {
+    }, "recents"), !o && g ? (0, a.jsx)("div", {
       className: z.button,
       children: (0, a.jsx)(V.default, {
         toggleRequestToSpeakSidebar: () => {
           m && d.default.updateChatOpen(n.id, !1), s()
         },
         showRequestToSpeakSidebar: o,
-        numRequestToSpeak: g
+        numRequestToSpeak: S
       })
     }) : null, (0, a.jsx)(p.CallscopeChannelCallIssueMarker, {
       className: z.button
@@ -156,7 +156,7 @@ function Z(e) {
       showRequestToSpeakSidebar: p,
       channel: f
     }),
-    onDoubleClick: g.handleDoubleClick,
+    onDoubleClick: S.handleDoubleClick,
     transparent: !0,
     className: i((0, P.getThemeClass)(G.ThemeTypes.DARK), z.participants),
     children: [J && q, (0, a.jsx)(y.default.Icon, {
@@ -221,7 +221,7 @@ function Z(e) {
           }), (0, a.jsx)(R.default, {
             size: u.Button.Sizes.SMALL,
             onClick: () => {
-              (0, S.openGuildBoostingMarketingModal)({
+              (0, g.openGuildBoostingMarketingModal)({
                 guildId: f.guild_id,
                 location: {
                   section: G.AnalyticsSections.STAGE_VIDEO_LIMIT

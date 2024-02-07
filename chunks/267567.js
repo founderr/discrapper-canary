@@ -1,41 +1,41 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return _
   }
 }), n("222007"), n("808653");
 var i = n("446674"),
-  s = n("913144"),
-  r = n("26989"),
+  r = n("913144"),
+  s = n("26989"),
   a = n("305961"),
   o = n("697218"),
   l = n("49111");
 let u = [],
-  d = {},
-  c = null,
+  c = {},
+  d = null,
   f = null;
 
-function _(e) {
+function E(e) {
   let t = u.indexOf(e);
   if (t > -1) {
     let n = [...u];
-    return n.splice(t, 1), u = n, delete d[e], !0
+    return n.splice(t, 1), u = n, delete c[e], !0
   }
   return !1
 }
 
-function h(e) {
+function p(e) {
   return !(e === l.ME || u.includes(e)) && (u = [...u, e], !0)
 }
-class g extends i.default.Store {
+class h extends i.default.Store {
   initialize() {
     this.waitFor(a.default, o.default)
   }
   setHistorySnapshot(e) {
-    c = e
+    d = e
   }
   getHistorySnapshot() {
-    return c
+    return d
   }
   lurkingGuildIds() {
     return u
@@ -45,7 +45,7 @@ class g extends i.default.Store {
   }
   isLurking(e) {
     var t;
-    let n = r.default.isCurrentUserGuest(e),
+    let n = s.default.isCurrentUserGuest(e),
       i = null === (t = a.default.getGuild(e)) || void 0 === t ? void 0 : t.isLurker();
     return !!(!n && i)
   }
@@ -53,11 +53,11 @@ class g extends i.default.Store {
     return f
   }
   getLoadId(e) {
-    return null != e ? d[e] : null
+    return null != e ? c[e] : null
   }
 }
-g.displayName = "LurkingStore";
-var m = new g(s.default, {
+h.displayName = "LurkingStore";
+var _ = new h(r.default, {
   CONNECTION_OPEN: function() {
     let e = Object.values(a.default.getGuilds()).reduce((e, t) => {
       let n = t.isLurker();
@@ -70,12 +70,12 @@ var m = new g(s.default, {
       guildId: t,
       lurker: n,
       source: i,
-      directoryChannelId: s,
-      loadId: r
+      directoryChannelId: r,
+      loadId: s
     } = e;
     if (n) {
       var a, o;
-      switch (h(t), a = t, null != (o = r) && (d[a] = o), i) {
+      switch (p(t), a = t, null != (o = s) && (c[a] = o), i) {
         case l.JoinGuildSources.MOBILE_GUILD_DISCOVERY:
           f = {
             type: l.JoinGuildSources.MOBILE_GUILD_DISCOVERY
@@ -84,7 +84,7 @@ var m = new g(s.default, {
         case l.JoinGuildSources.DIRECTORY_ENTRY:
           f = {
             type: l.JoinGuildSources.DIRECTORY_ENTRY,
-            directoryChannelId: s
+            directoryChannelId: r
           };
           break;
         default:
@@ -99,36 +99,36 @@ var m = new g(s.default, {
       ignoredGuildIds: t
     } = e, n = function(e) {
       let t = new Set([...null != e ? e : []]);
-      return [...u].reduce((e, n) => t.has(n) ? e : _(n) || e, !1)
+      return [...u].reduce((e, n) => t.has(n) ? e : E(n) || e, !1)
     }(t);
-    return n && (c = null, f = null), n
+    return n && (d = null, f = null), n
   },
   GUILD_STOP_LURKING_FAILURE: function(e) {
     let {
       lurkingGuildId: t,
       lurkingSource: n
     } = e;
-    return h(t), f = n, !0
+    return p(t), f = n, !0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e, n = null == t.joined_at;
-    return !!(!n && u.includes(t.id)) && (_(t.id), c = null, f = null, !0)
+    return !!(!n && u.includes(t.id)) && (E(t.id), d = null, f = null, !0)
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    return !!u.includes(t.id) && (_(t.id), c = null, f = null, !0)
+    return !!u.includes(t.id) && (E(t.id), d = null, f = null, !0)
   },
   GUILD_MEMBER_ADD: function(e) {
     var t;
     let {
       guildId: n,
       joinedAt: i,
-      user: s
-    } = e, r = s.id === (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
-    return !!(r && null != i && u.includes(n)) && (_(n), c = null, f = null, !0)
+      user: r
+    } = e, s = r.id === (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
+    return !!(s && null != i && u.includes(n)) && (E(n), d = null, f = null, !0)
   }
 })

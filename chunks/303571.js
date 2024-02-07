@@ -1,4 +1,4 @@
 "use strict";
-e.exports = Number.isNaN || function(e) {
-  return e != e
+t.exports = Number.isNaN || function(t) {
+  return t != t
 }

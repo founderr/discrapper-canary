@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("446674"),
-  s = n("913144");
-let r = {},
+  r = n("913144");
+let s = {},
   a = {};
 
 function o(e) {
@@ -21,27 +21,27 @@ function o(e) {
 }
 class l extends i.default.Store {
   getMemberCounts() {
-    return r
+    return s
   }
   getMemberCount(e) {
-    return null != e ? r[e] : null
+    return null != e ? s[e] : null
   }
   getOnlineCount(e) {
     return null != e ? a[e] : null
   }
 }
 l.displayName = "GuildMemberCountStore";
-var u = new l(s.default, {
+var u = new l(r.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guilds: t
     } = e;
-    r = {}, t.forEach(e => {
-      r[e.id] = e.member_count
+    s = {}, t.forEach(e => {
+      s[e.id] = e.member_count
     })
   },
   OVERLAY_INITIALIZE: function(e) {
-    r = {
+    s = {
       ...e.guildMemberCounts
     }
   },
@@ -49,22 +49,22 @@ var u = new l(s.default, {
     let {
       guild: t
     } = e;
-    r[t.id] = t.member_count
+    s[t.id] = t.member_count
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    if (null == r[t.id] && null == a[t.id]) return !1;
-    delete r[t.id], delete a[t.id]
+    if (null == s[t.id] && null == a[t.id]) return !1;
+    delete s[t.id], delete a[t.id]
   },
   GUILD_MEMBER_LIST_UPDATE: function(e) {
     let {
       guildId: t,
       memberCount: n,
       onlineCount: i
-    } = e, s = !1;
-    return r[t] !== n && (r[t] = n, s = !0), a[t] !== i && (a[t] = i, s = !0), s
+    } = e, r = !1;
+    return s[t] !== n && (s[t] = n, r = !0), a[t] !== i && (a[t] = i, r = !0), r
   },
   INVITE_ACCEPT_SUCCESS: o,
   INVITE_RESOLVE_SUCCESS: o,

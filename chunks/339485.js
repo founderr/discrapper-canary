@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("37983"),
-  s = n("884691"),
-  a = n("819855"),
-  i = n("77078"),
-  r = n("782340");
+  i = n("884691"),
+  r = n("819855"),
+  s = n("77078"),
+  a = n("782340");
 
 function u(e) {
   let {
@@ -16,15 +16,15 @@ function u(e) {
     onDismiss: n,
     theme: u
   } = e;
-  return (0, l.jsxs)(s.Fragment, {
-    children: [(0, l.jsx)(i.Button, {
+  return (0, l.jsxs)(i.Fragment, {
+    children: [(0, l.jsx)(s.Button, {
       onClick: t,
-      children: r.default.Messages.GENERATE_A_NEW_LINK
-    }), (0, l.jsx)(i.Button, {
-      look: i.Button.Looks.LINK,
-      color: (0, a.isThemeLight)(u) ? i.Button.Colors.PRIMARY : i.Button.Colors.WHITE,
+      children: a.default.Messages.GENERATE_A_NEW_LINK
+    }), (0, l.jsx)(s.Button, {
+      look: s.Button.Looks.LINK,
+      color: (0, r.isThemeLight)(u) ? s.Button.Colors.PRIMARY : s.Button.Colors.WHITE,
       onClick: n,
-      children: r.default.Messages.CANCEL
+      children: a.default.Messages.CANCEL
     })]
   })
 }

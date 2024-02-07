@@ -6,18 +6,18 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var s = n("669491"),
-  r = n("82169");
+var r = n("669491"),
+  l = n("82169");
 let a = e => {
   let {
     width: t = 24,
     height: n = 24,
-    color: a = s.default.colors.INTERACTIVE_NORMAL,
-    colorClass: o = "",
-    ...l
+    color: a = r.default.colors.INTERACTIVE_NORMAL,
+    colorClass: s = "",
+    ...o
   } = e;
   return (0, i.jsx)("svg", {
-    ...(0, r.default)(l),
+    ...(0, l.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
@@ -28,7 +28,7 @@ let a = e => {
       fillRule: "evenodd",
       d: "M18.7 7.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4l3.3 3.29 7.3-7.3a1 1 0 0 1 1.4 0Z",
       clipRule: "evenodd",
-      className: o
+      className: s
     })
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return u
+    return L
   }
 }), E("222007"), E("702976");
 var t = E("689988"),
@@ -15,11 +15,11 @@ var t = E("689988"),
   T = E("863636"),
   S = E("937692"),
   N = E("49111"),
-  O = E("724210"),
-  A = E("657944");
+  A = E("724210"),
+  O = E("657944");
 let R = null,
   l = null;
-class L extends t.default {
+class u extends t.default {
   constructor(...e) {
     super(...e), this.actions = {
       GUILD_DELETE: e => this.handleGuildDelete(e),
@@ -45,16 +45,16 @@ class L extends t.default {
     }, this._openOnboardingIfIncomplete = async (e, _) => {
       var E, t;
       if ((0, S.isOnboardingActiveForGuild)(e)) {
-        (0, o.transitionTo)(N.Routes.CHANNEL(e, O.StaticChannelRoute.GUILD_ONBOARDING));
+        (0, o.transitionTo)(N.Routes.CHANNEL(e, A.StaticChannelRoute.GUILD_ONBOARDING));
         return
       }
       let a = r.default.getGuild(e);
       if (null == a || !a.hasFeature(N.GuildFeatures.GUILD_ONBOARDING)) return;
       let i = n.default.getSelfMember(e);
-      !(null == i || (0, I.hasFlag)(null !== (E = i.flags) && void 0 !== E ? E : 0, A.GuildMemberFlags.COMPLETED_ONBOARDING)) && (0, I.hasFlag)(null !== (t = i.flags) && void 0 !== t ? t : 0, A.GuildMemberFlags.STARTED_ONBOARDING) && (await (0, S.default)({
+      !(null == i || (0, I.hasFlag)(null !== (E = i.flags) && void 0 !== E ? E : 0, O.GuildMemberFlags.COMPLETED_ONBOARDING)) && (0, I.hasFlag)(null !== (t = i.flags) && void 0 !== t ? t : 0, O.GuildMemberFlags.STARTED_ONBOARDING) && (await (0, S.default)({
         guildId: e
       }), (0, o.transitionTo)(N.Routes.CHANNEL(e, _)))
     }
   }
 }
-var u = new L
+var L = new u

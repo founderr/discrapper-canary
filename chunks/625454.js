@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 }), n("222007");
 var i = n("784063"),
-  s = new class e {
+  r = new class e {
     addSink(e, t, n) {
-      let s = this.streams,
-        r = s[e];
-      if (null == r && (r = s[e] = new Map), 0 === r.size) {
+      let r = this.streams,
+        s = r[e];
+      if (null == s && (s = r[e] = new Map), 0 === s.size) {
         let t = (0, i.getVoiceEngine)();
-        t.setVideoOutputSink(e, this.handleImageData.bind(this, t.signalVideoOutputSinkReady.bind(t, e), r), !0)
+        t.setVideoOutputSink(e, this.handleImageData.bind(this, t.signalVideoOutputSinkReady.bind(t, e), s), !0)
       }
-      r.set(t, n)
+      s.set(t, n)
     }
     removeSink(e, t) {
       let n = this.streams,
-        s = n[e];
-      if (null != s && (s.delete(t), 0 === s.size)) {
+        r = n[e];
+      if (null != r && (r.delete(t), 0 === r.size)) {
         delete n[e];
         let t = (0, i.getVoiceEngine)();
         t.setVideoOutputSink(e)

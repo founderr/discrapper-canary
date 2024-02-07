@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getActionInfo: function() {
-    return p
+    return S
   }
 });
 var r = n("679653"),
@@ -88,7 +88,7 @@ let _ = e => {
       }
     }
   },
-  S = e => {
+  O = e => {
     switch (e) {
       case T.AutomodActionType.BLOCK_MESSAGE:
         return d.default;
@@ -101,13 +101,13 @@ let _ = e => {
     }
   };
 
-function p(e, t, n) {
+function S(e, t, n) {
   var r, o, i, u;
   return c(e) ? {
     headerText: null !== (r = f(e)) && void 0 !== r ? r : "",
     descriptionText: null !== (o = I(e, n)) && void 0 !== o ? o : "",
     helperText: null !== (i = g(e, t)) && void 0 !== i ? i : null,
-    icon: null !== (u = S(e)) && void 0 !== u ? u : d.default,
+    icon: null !== (u = O(e)) && void 0 !== u ? u : d.default,
     isEditable: _(e)
   } : null
 }

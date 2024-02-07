@@ -1,74 +1,74 @@
 "use strict";
 n.r(t), n.d(t, {
   FormSwitch: function() {
-    return _
+    return E
   }
 });
 var i = n("37983"),
-  s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  r = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
   o = n("718776"),
   l = n("980672"),
   u = n("414055"),
-  d = n("370373"),
-  c = n("329272"),
+  c = n("370373"),
+  d = n("329272"),
   f = n("447256");
 
-function _(e) {
+function E(e) {
   let {
     value: t,
     disabled: n = !1,
-    hideBorder: r = !1,
-    tooltipNote: _,
-    onChange: h,
-    className: g,
-    style: m,
-    note: E,
-    children: p
-  } = e, v = s.useRef(null), S = s.useRef(null), T = s.useId(), I = (0, i.jsx)(l.Switch, {
-    id: T,
+    hideBorder: s = !1,
+    tooltipNote: E,
+    onChange: p,
+    className: h,
+    style: _,
+    note: S,
+    children: m
+  } = e, T = r.useRef(null), g = r.useRef(null), I = r.useId(), C = (0, i.jsx)(l.Switch, {
+    id: I,
     checked: t,
-    onChange: h,
+    onChange: p,
     disabled: n,
     focusProps: {
       enabled: !1
     },
-    innerRef: v
+    innerRef: T
   });
   return (0, i.jsxs)("div", {
-    style: m,
-    className: a(f.container, g, {
+    style: _,
+    className: a(f.container, h, {
       [f.disabled]: n
     }),
     children: [(0, i.jsx)(o.FocusRing, {
       within: !0,
       offset: -4,
-      focusTarget: v,
-      ringTarget: S,
+      focusTarget: T,
+      ringTarget: g,
       children: (0, i.jsxs)("div", {
         className: f.labelRow,
-        ref: S,
+        ref: g,
         children: [(0, i.jsx)("label", {
-          htmlFor: T,
+          htmlFor: I,
           className: f.title,
-          children: p
+          children: m
         }), (0, i.jsx)("div", {
           className: f.control,
-          children: null != _ ? (0, i.jsx)(u.TooltipContainer, {
-            text: _,
-            children: I
-          }) : I
+          children: null != E ? (0, i.jsx)(u.TooltipContainer, {
+            text: E,
+            children: C
+          }) : C
         })]
       })
-    }), null != E && (0, i.jsx)("div", {
+    }), null != S && (0, i.jsx)("div", {
       className: f.note,
-      children: (0, i.jsx)(c.FormText, {
+      children: (0, i.jsx)(d.FormText, {
         disabled: n,
-        type: c.FormTextTypes.DESCRIPTION,
-        children: E
+        type: d.FormTextTypes.DESCRIPTION,
+        children: S
       })
-    }), !r && (0, i.jsx)(d.FormDivider, {
+    }), !s && (0, i.jsx)(c.FormDivider, {
       className: f.dividerDefault
     })]
   })

@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return O
+    return A
   }
 }), E("222007");
 var t = E("37983"),
@@ -45,6 +45,6 @@ class N extends o.Component {
     super(e), r.updateLocaleLoadingStatus(e.locale, !0)
   }
 }
-var O = n.default.connectStores([a.default], () => ({
+var A = n.default.connectStores([a.default], () => ({
   locale: a.default.locale
 }))(N)

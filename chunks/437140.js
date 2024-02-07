@@ -1,47 +1,47 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return h
   }
 }), n("70102");
 var i = n("759843"),
   r = n("627929"),
   l = n("913144"),
-  s = n("81732"),
-  u = n("282109"),
+  a = n("81732"),
+  s = n("282109"),
   o = n("34676"),
-  a = n("840707"),
-  d = n("519705"),
-  c = n("49111"),
+  u = n("840707"),
+  c = n("519705"),
+  d = n("49111"),
   f = n("397336"),
-  S = {
+  h = {
     createChannel(e) {
       let {
         guildId: t,
         type: n,
-        name: S,
+        name: h,
         permissionOverwrites: E = [],
-        bitrate: h,
-        userLimit: g,
-        parentId: _,
-        skuId: p,
-        branchId: C
+        bitrate: _,
+        userLimit: p,
+        parentId: I,
+        skuId: S,
+        branchId: v
       } = e;
       l.default.dispatch({
         type: "CREATE_CHANNEL_MODAL_SUBMIT"
       });
-      let I = {
+      let C = {
         type: n,
-        name: S,
+        name: h,
         permission_overwrites: E
       };
-      if (null != h && h !== c.BITRATE_DEFAULT && (I.bitrate = h), null != g && g > 0 && (I.user_limit = g), null != _ && (I.parent_id = _), n === c.ChannelTypes.GUILD_STORE) {
-        if (null == p) throw Error("Unexpected missing SKU");
-        I.sku_id = p, I.branch_id = C
+      if (null != _ && _ !== d.BITRATE_DEFAULT && (C.bitrate = _), null != p && p > 0 && (C.user_limit = p), null != I && (C.parent_id = I), n === d.ChannelTypes.GUILD_STORE) {
+        if (null == S) throw Error("Unexpected missing SKU");
+        C.sku_id = S, C.branch_id = v
       }
-      return a.default.post({
-        url: c.Endpoints.GUILD_CHANNELS(t),
-        body: I,
+      return u.default.post({
+        url: d.Endpoints.GUILD_CHANNELS(t),
+        body: C,
         oldFormErrors: !0,
         trackedActionData: {
           event: i.NetworkActionNames.CHANNEL_CREATE,
@@ -54,17 +54,17 @@ var i = n("759843"),
             })
           }
         }
-      }).then(e => (u.default.isOptInEnabled(t) && d.default.updateChannelOverrideSettings(t, e.body.id, {
+      }).then(e => (s.default.isOptInEnabled(t) && c.default.updateChannelOverrideSettings(t, e.body.id, {
         flags: f.ChannelNotificationSettingsFlags.OPT_IN_ENABLED
-      }, o.NotificationLabels.OptedIn), s.default.checkGuildTemplateDirty(t), e), e => {
+      }, o.NotificationLabels.OptedIn), a.default.checkGuildTemplateDirty(t), e), e => {
         throw l.default.dispatch({
           type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE",
           errors: e.body
         }), e
       })
     },
-    createRoleSubscriptionTemplateChannel: (e, t, n, l) => a.default.post({
-      url: c.Endpoints.GUILD_CHANNELS(e),
+    createRoleSubscriptionTemplateChannel: (e, t, n, l) => u.default.post({
+      url: d.Endpoints.GUILD_CHANNELS(e),
       body: {
         name: t,
         type: n,

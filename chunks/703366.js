@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   nativeTypesConfig: function() {
-    return a
+    return s
   }
 });
-var r, i = n("726764"),
-  o = n("337675");
+var r, o = n("726764"),
+  a = n("337675");
 
-function s(e, t, n) {
+function i(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,7 +15,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var a = (s(r = {}, i.FILE, {
+var s = (i(r = {}, o.FILE, {
   exposeProperties: {
     files: function(e) {
       return Array.prototype.slice.call(e.files)
@@ -25,24 +25,24 @@ var a = (s(r = {}, i.FILE, {
     }
   },
   matchesTypes: ["Files"]
-}), s(r, i.HTML, {
+}), i(r, o.HTML, {
   exposeProperties: {
     html: function(e, t) {
-      return (0, o.getDataFromDataTransfer)(e, t, "")
+      return (0, a.getDataFromDataTransfer)(e, t, "")
     }
   },
   matchesTypes: ["Html", "text/html"]
-}), s(r, i.URL, {
+}), i(r, o.URL, {
   exposeProperties: {
     urls: function(e, t) {
-      return (0, o.getDataFromDataTransfer)(e, t, "").split("\n")
+      return (0, a.getDataFromDataTransfer)(e, t, "").split("\n")
     }
   },
   matchesTypes: ["Url", "text/uri-list"]
-}), s(r, i.TEXT, {
+}), i(r, o.TEXT, {
   exposeProperties: {
     text: function(e, t) {
-      return (0, o.getDataFromDataTransfer)(e, t, "")
+      return (0, a.getDataFromDataTransfer)(e, t, "")
     }
   },
   matchesTypes: ["Text", "text/plain"]

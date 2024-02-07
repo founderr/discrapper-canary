@@ -1,64 +1,64 @@
 "use strict";
 n.r(t), n.d(t, {
   setPageTitleNotificationCount: function() {
-    return d
+    return l
   },
   flashPageTitle: function() {
-    return c
+    return f
   },
   usePageTitle: function() {
-    return _
+    return c
   },
   AppPageTitle: function() {
-    return h
+    return g
   },
   usePageTitleManager: function() {
-    return g
+    return m
   }
 }), n("222007");
-var i = n("884691"),
-  s = n("308503"),
+var s = n("884691"),
+  i = n("308503"),
   r = n("773336");
 let a = {
     base: r.isPlatformEmbedded ? void 0 : "Discord"
   },
   o = 0,
-  l = {
+  d = {
     count: 3,
     onlyWhenBlurred: !1,
     interval: 1e3
   },
-  u = (0, s.default)(() => ({
+  u = (0, i.default)(() => ({
     titles: [a],
     notificationCount: void 0,
     flashQueue: []
   }));
 
-function d(e) {
+function l(e) {
   u.setState({
     notificationCount: e
   })
 }
 
-function c(e) {
+function f(e) {
   let t = {
-    ...l,
+    ...d,
     ...e,
     id: o++
   };
   return t.count = Math.max(t.count, t.messages.length), u.setState(e => ({
     flashQueue: [...e.flashQueue, t]
-  })), () => f(t.id)
+  })), () => _(t.id)
 }
 
-function f(e) {
+function _(e) {
   u.setState(t => ({
     flashQueue: t.flashQueue.filter(t => t.id !== e)
   }))
 }
 
-function _(e) {
-  i.useEffect(() => {
+function c(e) {
+  s.useEffect(() => {
     var t;
     return t = e, u.setState(e => ({
       titles: [t, ...e.titles]
@@ -70,15 +70,15 @@ function _(e) {
   }, [...Object.values(e)])
 }
 
-function h(e) {
-  return _(e), null
+function g(e) {
+  return c(e), null
 }
 
-function g() {
+function m() {
   let {
     skipsSettingDefaultPageTitle: e
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-  i.useEffect(() => {
+  s.useEffect(() => {
     function e() {
       u.setState({
         flashQueue: []
@@ -95,40 +95,40 @@ function g() {
       let {
         flashQueue: t
       } = e, n = (function(e) {
-        let t, n, i;
-        for (let s of e.titles) {
+        let t, n, s;
+        for (let i of e.titles) {
           if (null != t && null != n) break;
-          t = null != t ? t : s.base, n = null != n ? n : s.location, i = null != i ? i : s.subsection
+          t = null != t ? t : i.base, n = null != n ? n : i.location, s = null != s ? s : i.subsection
         }
-        return [t, i, n]
-      })(e).filter(e => null != e).join(" | "), i = function(e) {
+        return [t, s, n]
+      })(e).filter(e => null != e).join(" | "), s = function(e) {
         let {
           notificationCount: t
         } = e;
         return null == t || 0 === t ? "" : t < 0 ? "• " : "(".concat(t, ") ")
       }(e);
-      return ["".concat(i).concat(n), t[0]]
-    }), [n, s] = i.useState(!1), r = i.useRef(0), a = null == t ? void 0 : t.messages[r.current % t.messages.length];
-    return i.useEffect(() => {
+      return ["".concat(s).concat(n), t[0]]
+    }), [n, i] = s.useState(!1), r = s.useRef(0), a = null == t ? void 0 : t.messages[r.current % t.messages.length];
+    return s.useEffect(() => {
       if (null == t) {
-        r.current = 0, s(!1);
+        r.current = 0, i(!1);
         return
       }
       if (document.hasFocus() && t.onlyWhenBlurred) {
-        f(t.id), s(!1);
+        _(t.id), i(!1);
         return
       }
       let e = setInterval(() => {
         if (r.current >= t.count) {
-          f(t.id), s(!1);
+          _(t.id), i(!1);
           return
         }
-        s(e => !e || (r.current += 1, !1))
+        i(e => !e || (r.current += 1, !1))
       }, t.interval);
       return () => clearInterval(e)
     }, [t]), n ? a : e
   }();
-  i.useEffect(() => {
+  s.useEffect(() => {
     let n = t === a.base;
     (!e || !n) && (document.title = t)
   }, [e, t])

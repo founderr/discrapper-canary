@@ -1,52 +1,52 @@
 "use strict";
-A.r(I), A.d(I, {
+A.r(N), A.d(N, {
   setLocaleHack: function() {
     return V
   },
   default: function() {
-    return i
+    return S
   }
 });
 var O = A("446674"),
   T = A("913144");
 let _ = !1,
-  e = null,
-  E = null;
+  E = null,
+  e = null;
 
-function V(N) {
-  n({
-    locale: N
+function V(I) {
+  G({
+    locale: I
   })
 }
 
-function n(N) {
+function G(I) {
   let {
-    locale: I
-  } = N;
-  _ = !0, e = I
+    locale: N
+  } = I;
+  _ = !0, E = N
 }
-class t extends O.default.Store {
+class R extends O.default.Store {
   isLoading() {
     return _
   }
   getError() {
-    return E
+    return e
   }
 }
-t.displayName = "I18nLoaderStore";
-var i = new t(T.default, {
-  I18N_LOAD_START: n,
-  I18N_LOAD_SUCCESS: function(N) {
+R.displayName = "I18nLoaderStore";
+var S = new R(T.default, {
+  I18N_LOAD_START: G,
+  I18N_LOAD_SUCCESS: function(I) {
     let {
-      locale: I
-    } = N;
-    I === e && (_ = !1, E = null, e = null)
+      locale: N
+    } = I;
+    N === E && (_ = !1, e = null, E = null)
   },
-  I18N_LOAD_ERROR: function(N) {
+  I18N_LOAD_ERROR: function(I) {
     let {
-      error: I,
+      error: N,
       locale: A
-    } = N;
-    A === e && (_ = !1, E = null != I ? I : null, e = null)
+    } = I;
+    A === E && (_ = !1, e = null != N ? N : null, E = null)
   }
 })

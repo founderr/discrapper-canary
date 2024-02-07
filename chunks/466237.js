@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var i = n("792788");
+var r = n("792788");
 
 function s() {
-  return i.default.Messages.DynamicLinks.IOS_APP_PREVIEW_DESCRIPTION
+  return r.default.Messages.DynamicLinks.IOS_APP_PREVIEW_DESCRIPTION
 }

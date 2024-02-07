@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useRedesignToggleIgnored: function() {
-    return r
+    return s
   },
   isRedesignToggleIgnored: function() {
     return a
@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
 });
 var i = n("862205");
 n("934306");
-let s = (0, i.createExperiment)({
+let r = (0, i.createExperiment)({
   kind: "user",
   id: "2023-09_mobile_redesign_override_toggles",
   label: "Tabs V2 - redesign opt-out/in for all",
@@ -61,12 +61,12 @@ let s = (0, i.createExperiment)({
     }
   }]
 });
-let r = () => s.useExperiment({
+let s = () => r.useExperiment({
     location: "x"
   }, {
     autoTrackExposure: !1
   }).ignore,
-  a = () => s.getCurrentConfig({
+  a = () => r.getCurrentConfig({
     location: "x"
   }, {
     autoTrackExposure: !1

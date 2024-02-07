@@ -1,80 +1,80 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(e), n.d(e, {
   default: function() {
     return f
   }
 });
-var n = s("37983");
-s("884691");
-var o = s("446674"),
-  i = s("77078"),
-  a = s("387225"),
-  l = s("697218"),
-  r = s("145131"),
-  d = s("782340"),
-  u = s("557573");
+var o = n("37983");
+n("884691");
+var r = n("446674"),
+  u = n("77078"),
+  i = n("387225"),
+  s = n("697218"),
+  a = n("145131"),
+  l = n("782340"),
+  c = n("557573");
 
-function c(e) {
+function d(t) {
   let {
-    onClose: t
-  } = e, r = (0, o.useStateFromStores)([l.default], () => l.default.getCurrentUser());
-
-  function u() {
-    null == t || t()
-  }
+    onClose: e
+  } = t, a = (0, r.useStateFromStores)([s.default], () => s.default.getCurrentUser());
 
   function c() {
-    u(), (0, i.openModalLazy)(async () => {
+    null == e || e()
+  }
+
+  function d() {
+    c(), (0, u.openModalLazy)(async () => {
       let {
-        default: e
-      } = await s.el("867693").then(s.bind(s, "867693"));
-      return t => (0, n.jsx)(e, {
-        ...t
+        default: t
+      } = await n.el("867693").then(n.bind(n, "867693"));
+      return e => (0, o.jsx)(t, {
+        ...e
       })
     })
   }
-  return (null == r ? void 0 : r.email) == null ? (0, n.jsx)(i.Button, {
-    onClick: c,
-    color: i.Button.Colors.BRAND,
-    look: i.Button.Looks.FILLED,
-    children: d.default.Messages.ADD_EMAIL_SHORT
-  }) : (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(i.Button, {
-      onClick: c,
-      color: i.Button.Colors.PRIMARY,
-      look: i.Button.Looks.LINK,
-      children: d.default.Messages.CHANGE_EMAIL_SHORT
-    }), (0, n.jsx)(a.default, {
-      color: i.Button.Colors.BRAND,
-      onClick: u
+  return (null == a ? void 0 : a.email) == null ? (0, o.jsx)(u.Button, {
+    onClick: d,
+    color: u.Button.Colors.BRAND,
+    look: u.Button.Looks.FILLED,
+    children: l.default.Messages.ADD_EMAIL_SHORT
+  }) : (0, o.jsxs)(o.Fragment, {
+    children: [(0, o.jsx)(u.Button, {
+      onClick: d,
+      color: u.Button.Colors.PRIMARY,
+      look: u.Button.Looks.LINK,
+      children: l.default.Messages.CHANGE_EMAIL_SHORT
+    }), (0, o.jsx)(i.default, {
+      color: u.Button.Colors.BRAND,
+      onClick: c
     })]
   })
 }
-var f = function(e) {
+var f = function(t) {
   let {
-    onClose: t,
-    transitionState: s
-  } = e;
-  return (0, n.jsxs)(i.ModalRoot, {
-    transitionState: s,
-    children: [(0, n.jsx)(i.ModalHeader, {
-      children: (0, n.jsx)(i.FormTitle, {
-        tag: i.FormTitleTags.H4,
-        children: d.default.Messages.PREMIUM_NOT_VERIFIED
+    onClose: e,
+    transitionState: n
+  } = t;
+  return (0, o.jsxs)(u.ModalRoot, {
+    transitionState: n,
+    children: [(0, o.jsx)(u.ModalHeader, {
+      children: (0, o.jsx)(u.FormTitle, {
+        tag: u.FormTitleTags.H4,
+        children: l.default.Messages.PREMIUM_NOT_VERIFIED
       })
-    }), (0, n.jsxs)(i.ModalContent, {
-      children: [(0, n.jsx)("div", {
-        className: u.imageUnverified
-      }), (0, n.jsx)(i.Text, {
+    }), (0, o.jsxs)(u.ModalContent, {
+      children: [(0, o.jsx)("div", {
+        className: c.imageUnverified
+      }), (0, o.jsx)(u.Text, {
         variant: "text-md/normal",
-        className: u.message,
-        children: d.default.Messages.PREMIUM_NOT_VERIFIED_BODY
+        className: c.message,
+        children: l.default.Messages.PREMIUM_NOT_VERIFIED_BODY
       })]
-    }), (0, n.jsx)(i.ModalFooter, {
-      children: (0, n.jsx)(r.default, {
-        justify: r.default.Justify.END,
-        children: (0, n.jsx)(c, {
-          onClose: t
+    }), (0, o.jsx)(u.ModalFooter, {
+      children: (0, o.jsx)(a.default, {
+        justify: a.default.Justify.END,
+        children: (0, o.jsx)(d, {
+          onClose: e
         })
       })
     })]

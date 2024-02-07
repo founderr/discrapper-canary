@@ -2,17 +2,17 @@
 
 function r(e, t, n) {
   var r = n.getRegistry(),
-    i = r.addTarget(e, t);
-  return [i, function() {
-    return r.removeTarget(i)
+    o = r.addTarget(e, t);
+  return [o, function() {
+    return r.removeTarget(o)
   }]
 }
 
-function i(e, t, n) {
+function o(e, t, n) {
   var r = n.getRegistry(),
-    i = r.addSource(e, t);
-  return [i, function() {
-    return r.removeSource(i)
+    o = r.addSource(e, t);
+  return [o, function() {
+    return r.removeSource(o)
   }]
 }
 n.r(t), n.d(t, {
@@ -20,6 +20,6 @@ n.r(t), n.d(t, {
     return r
   },
   registerSource: function() {
-    return i
+    return o
   }
 })

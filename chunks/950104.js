@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return h
   }
 });
-var i = n("917351"),
-  s = n.n(i),
+var s = n("917351"),
+  i = n.n(s),
   r = n("446674"),
   a = n("872717"),
   o = n("913144"),
-  l = n("42203"),
+  d = n("42203"),
   u = n("18494"),
-  d = n("162771"),
-  c = n("49111");
-let f = {},
-  _ = {};
+  l = n("162771"),
+  f = n("49111");
+let _ = {},
+  c = {};
 
-function h() {
+function g() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default.getChannelId(),
-    n = l.default.getChannel(t);
-  if (null != n && null == n.getGuildId() && null != t && (null == f[t] || e)) {
-    var i;
-    return f[t] = null !== (i = f[t]) && void 0 !== i ? i : {
+    n = d.default.getChannel(t);
+  if (null != n && null == n.getGuildId() && null != t && (null == _[t] || e)) {
+    var s;
+    return _[t] = null !== (s = _[t]) && void 0 !== s ? s : {
       channelId: t,
       ringing: []
     }, o.default.dispatch({
@@ -32,87 +32,87 @@ function h() {
   }
   return !1
 }
-class g extends r.default.Store {
+class m extends r.default.Store {
   initialize() {
-    this.waitFor(d.default, u.default)
+    this.waitFor(l.default, u.default)
   }
   getCall(e) {
-    return f[e]
+    return _[e]
   }
   getCalls() {
-    return Object.values(f)
+    return Object.values(_)
   }
   getMessageId(e) {
     let t = this.getCall(e);
     return null != t ? t.messageId : null
   }
   isCallActive(e, t) {
-    let n = f[e];
+    let n = _[e];
     return null != n && !n.unavailable && (null != t ? n.messageId === t : null != n.region)
   }
   isCallUnavailable(e) {
-    let t = f[e];
+    let t = _[e];
     return null != t && t.unavailable
   }
   getInternalState() {
     return {
-      calls: f,
-      enqueuedRings: _
+      calls: _,
+      enqueuedRings: c
     }
   }
 }
-g.displayName = "CallStore";
-var m = new g(o.default, {
+m.displayName = "CallStore";
+var h = new m(o.default, {
   CONNECTION_OPEN: function() {
-    return h(!0)
+    return g(!0)
   },
   CONNECTION_CLOSED: function() {
-    f = {}, _ = {}
+    _ = {}, c = {}
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
       callStoreInternalState: t
     } = e;
-    f = {
+    _ = {
       ...t.calls
-    }, _ = {
+    }, c = {
       ...t.enqueuedRings
     }
   },
   CONNECTION_RESUMED: function() {
-    return h(!0)
+    return g(!0)
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return h(!1, t)
+    return g(!1, t)
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    if (null != _[t.id] && delete _[t.id], null == f[t.id]) return !1;
-    delete f[t.id]
+    if (null != c[t.id] && delete c[t.id], null == _[t.id]) return !1;
+    delete _[t.id]
   },
   CALL_CREATE: function(e) {
     let {
       channelId: t,
       messageId: n,
-      region: i,
-      ringing: s
+      region: s,
+      ringing: i
     } = e;
-    if (f[t] = {
+    if (_[t] = {
         channelId: t,
         messageId: n,
-        region: i,
-        ringing: s,
+        region: s,
+        ringing: i,
         unavailable: !1,
         regionUpdated: !1
-      }, null != _[t]) {
-      let e = _[t];
-      delete _[t], 1 !== e.indexOf("all") && (e = null), a.default.post({
-        url: c.Endpoints.CALL_RING(t),
+      }, null != c[t]) {
+      let e = c[t];
+      delete c[t], 1 !== e.indexOf("all") && (e = null), a.default.post({
+        url: f.Endpoints.CALL_RING(t),
         body: {
           recipients: e
         },
@@ -124,14 +124,14 @@ var m = new g(o.default, {
     let {
       channelId: t,
       messageId: n,
-      region: i,
-      ringing: s
-    } = e, r = f[t], a = null != r && (r.regionUpdated || r.region !== i);
-    f[t] = {
-      ...f[t],
+      region: s,
+      ringing: i
+    } = e, r = _[t], a = null != r && (r.regionUpdated || r.region !== s);
+    _[t] = {
+      ..._[t],
       messageId: n,
-      region: i,
-      ringing: s,
+      region: s,
+      ringing: i,
       regionUpdated: a
     }
   },
@@ -139,31 +139,31 @@ var m = new g(o.default, {
     let {
       channelId: t,
       unavailable: n
-    } = e, i = f[t];
-    !0 === n && null != i ? f[t] = {
-      ...i,
+    } = e, s = _[t];
+    !0 === n && null != s ? _[t] = {
+      ...s,
       unavailable: n
-    } : f[t] = {
+    } : _[t] = {
       channelId: t,
       ringing: [],
       messageId: null,
       region: null,
       regionUpdated: !1,
       unavailable: n
-    }, null != _[t] && delete _[t]
+    }, null != c[t] && delete c[t]
   },
   CALL_ENQUEUE_RING: function(e) {
     var t;
     let {
       channelId: n,
-      recipients: i
+      recipients: s
     } = e;
-    _[n] = s.union(null !== (t = _[n]) && void 0 !== t ? t : [], null != i ? i : ["all"])
+    c[n] = i.union(null !== (t = c[n]) && void 0 !== t ? t : [], null != s ? s : ["all"])
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    null == t && (_ = {})
+    null == t && (c = {})
   }
 })

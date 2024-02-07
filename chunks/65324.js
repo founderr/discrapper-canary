@@ -8,8 +8,8 @@ var r = n("37983"),
   i = n("884691"),
   s = n("446674"),
   l = n("206230"),
-  u = n("491605"),
-  a = n("210721"),
+  a = n("491605"),
+  u = n("210721"),
   o = n("646718");
 
 function c(e) {
@@ -19,8 +19,8 @@ function c(e) {
     shouldAnimate: c = !0,
     defaultAnimationState: d,
     idleAnimationState: f
-  } = e, I = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion), [_, E] = i.useState(d), S = i.useRef((0, a.getGiftAnimationData)(t, _)), [T, N] = i.useState(null == f), [p, C] = i.useState(!1), [m, P] = i.useState(-1), h = () => {
-    S.current = (0, a.getGiftAnimationData)(t, _), P(e => e + 1)
+  } = e, I = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion), [_, E] = i.useState(d), T = i.useRef((0, u.getGiftAnimationData)(t, _)), [S, N] = i.useState(null == f), [p, C] = i.useState(!1), [m, P] = i.useState(-1), h = () => {
+    T.current = (0, u.getGiftAnimationData)(t, _), P(e => e + 1)
   }, R = () => {
     N(!1), C(!0), P(-1), E(d)
   };
@@ -38,14 +38,14 @@ function c(e) {
     p && (N(null == f), C(!1), h())
   }, [p]);
   if (!o.PremiumGiftStyles.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
-  return (0, r.jsx)(u.default, {
-    importData: S.current,
+  return (0, r.jsx)(a.default, {
+    importData: T.current,
     shouldAnimate: !I && c,
     className: n,
     versionKey: m,
     onComplete: null != f ? () => {
       null != f && (E(f), N(!0))
     } : void 0,
-    loop: T
+    loop: S
   })
 }

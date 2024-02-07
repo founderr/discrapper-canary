@@ -24,9 +24,9 @@ var l = n("37983"),
     } = e, {
       id: E,
       name: g,
-      color: S,
-      children: I
-    } = t, _ = I.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(E)), A = function(e) {
+      color: I,
+      children: S
+    } = t, _ = S.map(e => e.id), N = (0, o.default)(e => e.guildId), T = (0, s.useStateFromStores)([u.default], () => u.default.isFolderExpanded(E)), A = function(e) {
       let t = e.children.map(e => {
           let t = e.id,
             n = c.default.getGuild(t);
@@ -53,11 +53,11 @@ var l = n("37983"),
           ...t,
           folderId: E,
           folderName: g,
-          folderColor: S,
+          folderColor: I,
           unread: x || v > 0
         })
       })
-    }, [E, g, S, x, v]);
+    }, [E, g, I, x, v]);
     return (0, l.jsx)(h.default, {
       ...m,
       folderNode: t,

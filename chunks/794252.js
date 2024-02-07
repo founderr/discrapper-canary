@@ -1,13 +1,13 @@
 "use strict";
-var r = n("859514"),
-  i = n("960049"),
-  o = n("124852"),
+var n = r("859514"),
+  o = r("960049"),
+  i = r("124852"),
   s = Array;
-r({
+n({
   target: "Array",
   proto: !0
 }, {
   with: function(e, t) {
-    return i(o(this), s, e, t)
+    return o(i(this), s, e, t)
   }
 })

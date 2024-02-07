@@ -1,5 +1,5 @@
 "use strict";
-e.exports = {
+t.exports = {
   name: "elliptic",
   version: "6.5.4",
   description: "EC cryptography",

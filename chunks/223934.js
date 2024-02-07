@@ -1,102 +1,102 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return m
   }
 });
-var i = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("913365"),
+var i = n("913365"),
   r = n("227645"),
   a = n("577776"),
   o = n("79798"),
-  l = n("315102"),
+  d = n("315102"),
   u = n("568734"),
-  d = n("8222"),
-  c = n("49111"),
-  f = n("52904"),
-  _ = n("782340"),
-  h = n("347819");
+  l = n("8222"),
+  f = n("49111"),
+  _ = n("52904"),
+  c = n("782340"),
+  g = n("347819");
 
-function g(e) {
+function m(e) {
   let {
     id: t,
     user: n,
-    application: g,
-    bot: m,
-    accountScopes: E,
-    showLogout: p,
-    location: v,
-    isTrustedName: S
-  } = e, T = l.default.getApplicationIconURL({
-    id: g.id,
-    icon: g.icon
-  }), I = l.default.getUserAvatarURL(n);
-  return (0, i.jsxs)("header", {
+    application: m,
+    bot: h,
+    accountScopes: v,
+    showLogout: E,
+    location: p,
+    isTrustedName: y
+  } = e, T = d.default.getApplicationIconURL({
+    id: m.id,
+    icon: m.icon
+  }), C = d.default.getUserAvatarURL(n);
+  return (0, s.jsxs)("header", {
     id: t,
-    className: h.header,
-    children: [(0, i.jsxs)("div", {
-      className: h.headerIcons,
-      children: [(0, i.jsx)(s.Avatar, {
+    className: g.header,
+    children: [(0, s.jsxs)("div", {
+      className: g.headerIcons,
+      children: [(0, s.jsx)(i.Avatar, {
         src: T,
-        size: f.AvatarSizes.SIZE_80,
-        "aria-label": g.name
-      }), (0, i.jsxs)("div", {
-        className: h.ellipseGroup,
-        children: [(0, i.jsx)("div", {
-          className: h.ellipse
-        }), (0, i.jsx)("div", {
-          className: h.ellipse
-        }), (0, i.jsx)("div", {
-          className: h.ellipse
+        size: _.AvatarSizes.SIZE_80,
+        "aria-label": m.name
+      }), (0, s.jsxs)("div", {
+        className: g.ellipseGroup,
+        children: [(0, s.jsx)("div", {
+          className: g.ellipse
+        }), (0, s.jsx)("div", {
+          className: g.ellipse
+        }), (0, s.jsx)("div", {
+          className: g.ellipse
         })]
-      }), (0, i.jsx)(s.Avatar, {
-        src: I,
-        size: f.AvatarSizes.SIZE_80,
+      }), (0, s.jsx)(i.Avatar, {
+        src: C,
+        size: _.AvatarSizes.SIZE_80,
         "aria-label": n.username
       })]
-    }), !S && (0, i.jsx)(a.Text, {
+    }), !y && (0, s.jsx)(a.Text, {
       variant: "text-md/medium",
       color: "header-secondary",
-      className: h.label,
-      children: _.default.Messages.OAUTH2_THIRD_PARTY_APPLICATION
-    }), (0, i.jsxs)(a.Text, {
+      className: g.label,
+      children: c.default.Messages.OAUTH2_THIRD_PARTY_APPLICATION
+    }), (0, s.jsxs)(a.Text, {
       variant: "text-lg/bold",
       color: "header-primary",
-      children: [g.name, null != m ? (0, i.jsx)(o.default, {
-        className: h.botTag,
-        verified: null != m.public_flags && (0, u.hasFlag)(m.public_flags, c.UserFlags.VERIFIED_BOT)
+      children: [m.name, null != h ? (0, s.jsx)(o.default, {
+        className: g.botTag,
+        verified: null != h.public_flags && (0, u.hasFlag)(h.public_flags, f.UserFlags.VERIFIED_BOT)
       }) : null]
-    }), E.length > 0 ? (0, i.jsx)(a.Text, {
+    }), v.length > 0 ? (0, s.jsx)(a.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: h.label,
-      children: _.default.Messages.OAUTH2_REQUESTS_ACCOUNT_ACCESS
-    }) : (0, i.jsx)(a.Text, {
+      className: g.label,
+      children: c.default.Messages.OAUTH2_REQUESTS_ACCOUNT_ACCESS
+    }) : (0, s.jsx)(a.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: h.label,
-      children: _.default.Messages.OAUTH2_CONNECT_TO_DISCORD
-    }), p ? (0, i.jsx)("div", {
-      className: h.currentUser,
-      children: (0, i.jsxs)(a.Text, {
+      className: g.label,
+      children: c.default.Messages.OAUTH2_CONNECT_TO_DISCORD
+    }), E ? (0, s.jsx)("div", {
+      className: g.currentUser,
+      children: (0, s.jsxs)(a.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        children: [_.default.Messages.OAUTH2_SIGNED_IN_AS.format({
-          userHook: () => (0, i.jsxs)(a.Text, {
-            className: h.currentUserTag,
+        children: [c.default.Messages.OAUTH2_SIGNED_IN_AS.format({
+          userHook: () => (0, s.jsxs)(a.Text, {
+            className: g.currentUserTag,
             variant: "text-sm/normal",
-            children: [n.username, !n.isPomelo() && (0, i.jsx)(a.Text, {
-              className: h.currentUserDiscriminator,
+            children: [n.username, !n.isPomelo() && (0, s.jsx)(a.Text, {
+              className: g.currentUserDiscriminator,
               variant: "text-sm/normal",
               children: "#".concat(n.discriminator)
             })]
           }, n.id)
-        }), (0, i.jsx)(r.Clickable, {
+        }), (0, s.jsx)(r.Clickable, {
           tag: "a",
-          className: h.logoutLink,
-          onClick: () => (0, d.logoutWithRedirect)(v),
-          children: _.default.Messages.OAUTH2_LOGOUT
+          className: g.logoutLink,
+          onClick: () => (0, l.logoutWithRedirect)(p),
+          children: c.default.Messages.OAUTH2_LOGOUT
         })]
       })
     }) : null]

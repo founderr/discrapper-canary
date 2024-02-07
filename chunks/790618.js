@@ -1,50 +1,50 @@
 "use strict";
-let s, o, a, r, l, i, E, _, u, d, T, S, N, c;
+let s, o, a, l, r, i, u, d, E, _, c, T, S, N;
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return G
   }
 });
 var C = n("265586"),
   A = n("446674"),
-  I = n("913144"),
-  f = n("49111");
-let R = f.FormStates.CLOSED,
-  U = {},
-  O = !1;
-
-function m() {
-  R = f.FormStates.OPEN, U = {}
-}
+  f = n("913144"),
+  I = n("49111");
+let h = I.FormStates.CLOSED,
+  R = {},
+  m = !1;
 
 function p() {
-  R = f.FormStates.CLOSED, U = {}
+  h = I.FormStates.OPEN, R = {}
+}
+
+function U() {
+  h = I.FormStates.CLOSED, R = {}
+}
+
+function O() {
+  M(), g(), R = {}
 }
 
 function M() {
-  h(), v(), U = {}
-}
-
-function h() {
-  s = void 0, o = void 0, a = void 0, r = void 0
-}
-
-function v() {
-  l = void 0, i = void 0, E = void 0, _ = void 0, u = void 0, r = void 0
+  s = void 0, o = void 0, a = void 0, l = void 0
 }
 
 function g() {
-  T = void 0, S = void 0, N = void 0, c = void 0, d = void 0
+  r = void 0, i = void 0, u = void 0, d = void 0, E = void 0, l = void 0
 }
-class G extends A.default.Store {
+
+function v() {
+  c = void 0, T = void 0, S = void 0, N = void 0, _ = void 0
+}
+class x extends A.default.Store {
   getFormState() {
-    return R
+    return h
   }
   getErrors() {
-    return U
+    return R
   }
   showNotice() {
-    return void 0 !== s || void 0 !== l || void 0 !== i || void 0 !== E || void 0 !== _ || void 0 !== u || void 0 !== a || void 0 !== r || void 0 !== o
+    return void 0 !== s || void 0 !== r || void 0 !== i || void 0 !== u || void 0 !== d || void 0 !== E || void 0 !== a || void 0 !== l || void 0 !== o
   }
   getPendingAvatar() {
     return s
@@ -53,95 +53,95 @@ class G extends A.default.Store {
     return o
   }
   getPendingBanner() {
-    return l
+    return r
   }
   getPendingBio() {
     return i
   }
   getPendingPronouns() {
-    return E
+    return u
   }
   getPendingAccentColor() {
-    return _
+    return d
   }
   getPendingThemeColors() {
-    return u
+    return E
   }
   getPendingAvatarDecoration() {
     return a
   }
   getPendingProfileEffectId() {
-    return r
+    return l
   }
   getAllPending() {
     return {
       pendingAvatar: s,
-      pendingBanner: l,
+      pendingBanner: r,
       pendingBio: i,
-      pendingPronouns: E,
-      pendingAccentColor: _,
-      pendingThemeColors: u,
+      pendingPronouns: u,
+      pendingAccentColor: d,
+      pendingThemeColors: E,
       pendingAvatarDecoration: a,
-      pendingProfileEffectId: r,
+      pendingProfileEffectId: l,
       pendingGlobalName: o
     }
   }
   getTryItOutThemeColors() {
-    return d
+    return _
   }
   getTryItOutAvatar() {
-    return T
+    return c
   }
   getTryItOutAvatarDecoration() {
-    return S
+    return T
   }
   getTryItOutProfileEffectId() {
-    return N
+    return S
   }
   getTryItOutBanner() {
-    return c
+    return N
   }
   getAllTryItOut() {
     return {
-      tryItOutThemeColors: d,
-      tryItOutAvatar: T,
-      tryItOutAvatarDecoration: S,
-      tryItOutProfileEffectId: N,
-      tryItOutBanner: c
+      tryItOutThemeColors: _,
+      tryItOutAvatar: c,
+      tryItOutAvatarDecoration: T,
+      tryItOutProfileEffectId: S,
+      tryItOutBanner: N
     }
   }
   getIsDisableSubmit() {
-    return O
+    return m
   }
 }
-G.displayName = "UserSettingsAccountStore";
-var D = new G(I.default, {
-  USER_SETTINGS_ACCOUNT_INIT: m,
-  USER_SETTINGS_MODAL_INIT: m,
-  USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: m,
+x.displayName = "UserSettingsAccountStore";
+var G = new x(f.default, {
+  USER_SETTINGS_ACCOUNT_INIT: p,
+  USER_SETTINGS_MODAL_INIT: p,
+  USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: p,
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
     let {
       section: t
     } = e;
-    return t === f.UserSettingsSections.ACCOUNT && m()
+    return t === I.UserSettingsSections.ACCOUNT && p()
   },
-  USER_SETTINGS_ACCOUNT_CLOSE: p,
+  USER_SETTINGS_ACCOUNT_CLOSE: U,
   USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-    M(), g(), p()
+    O(), v(), U()
   },
   USER_SETTINGS_ACCOUNT_SUBMIT: function() {
-    R = f.FormStates.SUBMITTING, U = {}
+    h = I.FormStates.SUBMITTING, R = {}
   },
   USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function(e) {
     var t;
-    if (R !== f.FormStates.SUBMITTING) return !1;
-    R = f.FormStates.OPEN, U = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (h !== I.FormStates.SUBMITTING) return !1;
+    h = I.FormStates.OPEN, R = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function(e) {
     let {
       avatar: t
     } = e;
-    s = t, T = void 0
+    s = t, c = void 0
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: function(e) {
     let {
@@ -159,19 +159,19 @@ var D = new G(I.default, {
     let {
       item: t
     } = e;
-    (null == t ? void 0 : t.type) === C.CollectiblesItemType.PROFILE_EFFECT ? (S = null, N = null == t ? void 0 : t.id) : (N = null, S = t)
+    (null == t ? void 0 : t.type) === C.CollectiblesItemType.PROFILE_EFFECT ? (T = null, S = null == t ? void 0 : t.id) : (S = null, T = t)
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function(e) {
     let {
       profileEffectId: t
     } = e;
-    r = t
+    l = t
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: function(e) {
     let {
       banner: t
     } = e;
-    l = t
+    r = t
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: function(e) {
     let {
@@ -183,57 +183,57 @@ var D = new G(I.default, {
     let {
       pronouns: t
     } = e;
-    E = t
+    u = t
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: function(e) {
     let {
       color: t
     } = e;
-    _ = t
+    d = t
   },
   USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: function(e) {
     let {
       themeColors: t
     } = e;
-    u = t
+    E = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: function(e) {
     let {
       avatar: t
     } = e;
-    T = t
+    c = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: function(e) {
     let {
       avatarDecoration: t
     } = e;
-    S = t
+    T = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: function(e) {
     let {
       profileEffectId: t
     } = e;
-    N = t
+    S = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: function(e) {
     let {
       banner: t
     } = e;
-    c = t
+    N = t
   },
   USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: function(e) {
     let {
       themeColors: t
     } = e;
-    d = t
+    _ = t
   },
   USER_SETTINGS_CLEAR_ERRORS: function() {
-    U = {}
+    R = {}
   },
-  USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: h,
-  USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: v,
-  USER_SETTINGS_RESET_ALL_PENDING: M,
-  USER_SETTINGS_RESET_ALL_TRY_IT_OUT: g,
+  USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: M,
+  USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
+  USER_SETTINGS_RESET_ALL_PENDING: O,
+  USER_SETTINGS_RESET_ALL_TRY_IT_OUT: v,
   USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
     a = void 0
   },
@@ -244,6 +244,6 @@ var D = new G(I.default, {
     let {
       disable: t
     } = e;
-    O = t
+    m = t
   }
 })

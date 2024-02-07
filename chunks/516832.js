@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 });
 var a = n("37983"),
@@ -29,25 +29,25 @@ function C(e, t) {
   }
 }
 
-function S(e) {
+function g(e) {
   var t, n;
   let {
-    userId: S,
-    guildId: g,
+    userId: g,
+    guildId: S,
     onClose: _,
     analyticsLocation: I,
     className: T
-  } = e, v = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(g), [g]), x = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : m.ModViewPanel.INFO, N = (0, o.default)(S);
+  } = e, v = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(S), [S]), x = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : m.ModViewPanel.INFO, N = (0, o.default)(g);
   let A = null == (n = x) ? null : n === m.ModViewPanel.INFO ? "backwards" : "forwards",
     M = (0, c.default)(A),
     {
       reducedMotion: R
     } = l.useContext(r.AccessibilityPreferencesContext),
     j = l.useCallback(e => {
-      null != v && (0, f.openGuildMemberModViewSidebar)(g, S, v.baseChannelId, {
+      null != v && (0, f.openGuildMemberModViewSidebar)(S, g, v.baseChannelId, {
         modViewPanel: e
       })
-    }, [v, g, S]),
+    }, [v, S, g]),
     L = l.useMemo(() => ({
       [E.KeybindActions.CLOSE_MODAL]: {
         binds: ["esc"],
@@ -64,7 +64,7 @@ function S(e) {
     }), [_, x, j]);
   l.useEffect(() => (u.default.enable(), u.default.enableTemp(L), () => u.default.disableTemp()), [L]);
   let O = (0, s.useTransition)(x, {
-    immediate: N !== S,
+    immediate: N !== g,
     value: 0,
     from: {
       value: 1
@@ -107,15 +107,15 @@ function S(e) {
           switch (e) {
             case m.ModViewPanel.INFO:
               return (0, a.jsx)(h.default, {
-                userId: S,
-                guildId: g,
+                userId: g,
+                guildId: S,
                 onNavigate: j,
                 className: T
               });
             case m.ModViewPanel.MESSAGE_HISTORY:
               return (0, a.jsx)(p.default, {
-                userId: S,
-                guildId: g,
+                userId: g,
+                guildId: S,
                 onNavigate: () => j(m.ModViewPanel.INFO),
                 className: T
               });

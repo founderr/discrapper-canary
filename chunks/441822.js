@@ -11,18 +11,18 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("773179"),
-  s = n.n(i);
-let r = {};
+  r = n.n(i);
+let s = {};
 
 function a(e) {
-  let t = s.uniqueId("VideoStream");
-  return r[t] = e, t
+  let t = r.uniqueId("VideoStream");
+  return s[t] = e, t
 }
 
 function o(e) {
-  delete r[e]
+  delete s[e]
 }
 
 function l(e) {
-  return r[e]
+  return s[e]
 }

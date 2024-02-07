@@ -1,78 +1,78 @@
 "use strict";
 n.r(t), n.d(t, {
   openStageChannelSettings: function() {
-    return _
+    return c
   },
   openEndGuildEventConfirmationModal: function() {
-    return h
-  },
-  openStageChannelAudienceNoticeModal: function() {
     return g
   },
-  openStageBlockedUsersSheet: function() {
+  openStageChannelAudienceNoticeModal: function() {
     return m
   },
+  openStageBlockedUsersSheet: function() {
+    return h
+  },
   openEndStageModal: function() {
-    return E
-  },
-  shouldShowBlockedUsers: function() {
-    return p
-  },
-  navigateToStage: function() {
     return v
   },
+  shouldShowBlockedUsers: function() {
+    return E
+  },
+  navigateToStage: function() {
+    return p
+  },
   showChannelChangeConfirmationAlert: function() {
-    return S
+    return y
   }
 });
-var i = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("551042"),
+var i = n("551042"),
   r = n("144491"),
   a = n("271938"),
   o = n("325861"),
-  l = n("834052"),
+  d = n("834052"),
   u = n("534471"),
-  d = n("151642"),
-  c = n("49111"),
-  f = n("625611");
+  l = n("151642"),
+  f = n("49111"),
+  _ = n("625611");
 
-function _(e, t) {
-  (0, s.openModalLazy)(async () => {
+function c(e, t) {
+  (0, i.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("435768").then(n.bind(n, "435768"));
-    return n => (0, i.jsx)(t, {
+    return n => (0, s.jsx)(t, {
       ...n,
       channel: e
     })
   }, {
-    contextKey: t === c.AppContext.POPOUT ? f.POPOUT_MODAL_CONTEXT : f.DEFAULT_MODAL_CONTEXT
+    contextKey: t === f.AppContext.POPOUT ? _.POPOUT_MODAL_CONTEXT : _.DEFAULT_MODAL_CONTEXT
   })
 }
 
-function h(e, t) {
-  (0, s.openModalLazy)(async () => {
+function g(e, t) {
+  (0, i.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("312953").then(n.bind(n, "312953"));
-    return n => (0, i.jsx)(t, {
+    return n => (0, s.jsx)(t, {
       ...n,
       channel: e
     })
   }, {
-    contextKey: t === c.AppContext.POPOUT ? f.POPOUT_MODAL_CONTEXT : f.DEFAULT_MODAL_CONTEXT
+    contextKey: t === f.AppContext.POPOUT ? _.POPOUT_MODAL_CONTEXT : _.DEFAULT_MODAL_CONTEXT
   })
 }
 
-function g(e) {}
+function m(e) {}
 
-function m(e, t) {
-  (0, s.openModalLazy)(async () => {
+function h(e, t) {
+  (0, i.openModalLazy)(async () => {
     let {
-      default: s
+      default: i
     } = await n.el("203966").then(n.bind(n, "203966"));
-    return n => (0, i.jsx)(s, {
+    return n => (0, s.jsx)(i, {
       ...n,
       channel: e,
       onAccept: t
@@ -80,40 +80,40 @@ function m(e, t) {
   })
 }
 
-function E(e, t) {
-  (0, s.openModalLazy)(async () => {
+function v(e, t) {
+  (0, i.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("281645").then(n.bind(n, "281645"));
-    return n => (0, i.jsx)(t, {
+    return n => (0, s.jsx)(t, {
       ...n,
       channel: e
     })
   }, {
-    contextKey: t === c.AppContext.POPOUT ? f.POPOUT_MODAL_CONTEXT : f.DEFAULT_MODAL_CONTEXT
+    contextKey: t === f.AppContext.POPOUT ? _.POPOUT_MODAL_CONTEXT : _.DEFAULT_MODAL_CONTEXT
   })
 }
 
-function p(e) {
+function E(e) {
   let t = a.default.getId(),
-    n = (0, d.getStageBlockedUsersCount)(e),
-    i = o.default.isModerator(t, e);
-  return !i && n > 0
+    n = (0, l.getStageBlockedUsersCount)(e),
+    s = o.default.isModerator(t, e);
+  return !s && n > 0
 }
 
-function v(e, t) {
-  var d;
-  let c = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-  t !== e.id && (0, u.setIsOnStartStageScreen)(!0), d = e, (0, r.transitionToChannel)(d.id), t !== e.id && c && ! function(e) {
+function p(e, t) {
+  var l;
+  let f = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+  t !== e.id && (0, u.setIsOnStartStageScreen)(!0), l = e, (0, r.transitionToChannel)(l.id), t !== e.id && f && ! function(e) {
     let t = a.default.getId(),
       r = o.default.isModerator(t, e.id),
-      u = l.default.isLive(e.id);
-    r && !u ? _(e) : r && u && function(e) {
-      (0, s.openModalLazy)(async () => {
+      u = d.default.isLive(e.id);
+    r && !u ? c(e) : r && u && function(e) {
+      (0, i.openModalLazy)(async () => {
         let {
           default: t
         } = await n.el("337649").then(n.bind(n, "337649"));
-        return n => (0, i.jsx)(t, {
+        return n => (0, s.jsx)(t, {
           ...n,
           channel: e
         })
@@ -122,12 +122,12 @@ function v(e, t) {
   }(e)
 }
 
-function S(e, t) {
-  return (0, s.openModalLazy)(async () => {
+function y(e, t) {
+  return (0, i.openModalLazy)(async () => {
     let {
-      default: s
+      default: i
     } = await n.el("371895").then(n.bind(n, "371895"));
-    return n => (0, i.jsx)(s, {
+    return n => (0, s.jsx)(i, {
       channel: e,
       onConfirm: t,
       ...n

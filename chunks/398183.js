@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   now: function() {
-    return s
+    return r
   },
   TimeStampProducer: function() {
-    return r
+    return s
   },
   StopWatch: function() {
     return o
@@ -14,10 +14,10 @@ n.r(t), n.d(t, {
   }
 }), n("70102"), n("129334");
 var i = n("279295");
-let s = () => Math.floor(i.timeOrigin + i.performance.now()),
-  r = new class {
+let r = () => Math.floor(i.timeOrigin + i.performance.now()),
+  s = new class {
     now() {
-      return s()
+      return r()
     }
   };
 class a {
@@ -60,7 +60,7 @@ class o {
     let e = new o;
     return e.start(), e
   }
-  constructor(e = r) {
+  constructor(e = s) {
     this.timestampProducer = e, this.startTime = void 0, this.timePassed = 0
   }
 }

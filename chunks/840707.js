@@ -4,52 +4,52 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var i = n("872717"),
+var r = n("872717"),
   s = n("599110");
 
-function r(e, t, n) {
+function o(e, t, n) {
   let {
-    trackedActionData: i,
-    ...r
+    trackedActionData: r,
+    ...o
   } = t, a = {
-    url: r.url,
+    url: o.url,
     request_method: n
   };
   return new Promise((t, n) => {
-    e(r).then(e => {
-      let n = i.properties;
-      "function" == typeof i.properties && (n = i.properties(e)), (0, s.trackNetworkAction)(i.event, {
+    e(o).then(e => {
+      let n = r.properties;
+      "function" == typeof r.properties && (n = r.properties(e)), (0, s.trackNetworkAction)(r.event, {
         status_code: e.status,
         ...a,
         ...n
       }), t(e)
     }).catch(e => {
-      var t, r;
-      let o = i.properties;
-      "function" == typeof i.properties && (o = i.properties(e)), (0, s.trackNetworkAction)(i.event, {
+      var t, o;
+      let l = r.properties;
+      "function" == typeof r.properties && (l = r.properties(e)), (0, s.trackNetworkAction)(r.event, {
         status_code: e.status,
         error_code: null === (t = e.body) || void 0 === t ? void 0 : t.code,
-        error_message: null === (r = e.body) || void 0 === r ? void 0 : r.message,
+        error_message: null === (o = e.body) || void 0 === o ? void 0 : o.message,
         ...a,
-        ...o
+        ...l
       }), n(e)
     })
   })
 }
 var a = {
   get: function(e) {
-    return r(i.default.get, e, "get")
+    return o(r.default.get, e, "get")
   },
   post: function(e) {
-    return r(i.default.post, e, "post")
+    return o(r.default.post, e, "post")
   },
   put: function(e) {
-    return r(i.default.put, e, "put")
+    return o(r.default.put, e, "put")
   },
   patch: function(e) {
-    return r(i.default.patch, e, "patch")
+    return o(r.default.patch, e, "patch")
   },
   delete: function(e) {
-    return r(i.default.delete, e, "del")
+    return o(r.default.delete, e, "del")
   }
 }

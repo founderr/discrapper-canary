@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GUILD_SELECTABLE_CHANNELS_KEY: function() {
-    return C
+    return v
   },
   GUILD_VOCAL_CHANNELS_KEY: function() {
     return A
@@ -11,56 +11,56 @@ n.r(t), n.d(t, {
   }
 }), n("424973"), n("222007"), n("808653");
 var i = n("917351"),
-  s = n.n(i),
-  r = n("316693"),
+  r = n.n(i),
+  s = n("316693"),
   a = n("446674"),
   o = n("913144"),
   l = n("203288"),
   u = n("679653"),
-  d = n("379881"),
-  c = n("106682"),
+  c = n("379881"),
+  d = n("106682"),
   f = n("233069"),
-  _ = n("991170"),
-  h = n("271938"),
-  g = n("42203"),
-  m = n("26989"),
-  E = n("305961"),
-  p = n("957255"),
-  v = n("27618"),
-  S = n("697218"),
-  T = n("49111"),
-  I = n("782340");
-let C = "SELECTABLE",
+  E = n("991170"),
+  p = n("271938"),
+  h = n("42203"),
+  _ = n("26989"),
+  S = n("305961"),
+  m = n("957255"),
+  T = n("27618"),
+  g = n("697218"),
+  I = n("49111"),
+  C = n("782340");
+let v = "SELECTABLE",
   A = "VOCAL",
-  y = null,
+  R = null,
   N = {},
-  R = {},
+  O = {},
   D = {},
-  O = null,
+  y = null,
   P = {},
-  b = {
+  L = {
     comparator: -1,
     channel: (0, f.createChannelRecord)({
       id: "null",
-      type: T.ChannelTypes.GUILD_CATEGORY,
-      name: I.default.Messages.UNCATEGORIZED
+      type: I.ChannelTypes.GUILD_CATEGORY,
+      name: C.default.Messages.UNCATEGORIZED
     })
   },
-  L = w("null"),
+  b = G("null"),
   M = [],
   U = {};
 
-function w(e) {
+function G(e) {
   return {
     id: e,
-    [C]: [],
+    [v]: [],
     [A]: [],
-    [T.ChannelTypes.GUILD_CATEGORY]: [b],
+    [I.ChannelTypes.GUILD_CATEGORY]: [L],
     count: 0
   }
 }
 
-function k(e, t) {
+function w(e, t) {
   let {
     comparator: n
   } = e, {
@@ -69,80 +69,80 @@ function k(e, t) {
   return n - i
 }
 
-function V() {
-  N = {}, P = {}, R = {}, D = {}, null != y && G(y)
+function k() {
+  N = {}, P = {}, O = {}, D = {}, null != R && x(R)
 }
 
-function G(e) {
+function x(e) {
   var t;
-  let n = w(e);
+  let n = G(e);
   return N[e] = n, P[e] = [], ! function(e) {
       let {
         id: t
       } = e, n = function(e) {
-        if (e === T.FAVORITES) return function() {
+        if (e === I.FAVORITES) return function() {
           let e = {},
-            t = d.default.getFavoriteChannels();
+            t = c.default.getFavoriteChannels();
           for (let n in t) {
-            let i = g.default.getChannel(n);
+            let i = h.default.getChannel(n);
             if (null == i) continue;
-            let s = t[n],
-              r = (0, c.createFavoritesChannelRecord)(t, s, i);
+            let r = t[n],
+              s = (0, d.createFavoritesChannelRecord)(t, r, i);
             e[n] = {
-              channel: r,
-              comparator: r.position
+              channel: s,
+              comparator: s.position
             }
           }
           return e
         }();
         let t = {},
-          n = g.default.getMutableGuildChannelsForGuild(e);
+          n = h.default.getMutableGuildChannelsForGuild(e);
         for (let e in n) t[e] = {
           channel: n[e],
           comparator: n[e].position
         };
         return t
       }(t);
-      s.forEach(n, n => {
+      r.forEach(n, n => {
         var i;
-        let s = n.channel;
-        if (e.count += 1, f.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(s.type) && !p.default.can(T.Permissions.VIEW_CHANNEL, s) && !l.default.isChannelGated(s.guild_id, s.id) && s.id !== O) return;
-        let r = (i = s.type, (0, f.isGuildSelectableChannelType)(i) ? C : (0, f.isGuildVocalChannelType)(i) ? A : i);
-        s.type === T.ChannelTypes.GUILD_DIRECTORY && (null == P[t] && (P[t] = []), P[t].push(n)), null != e[r] && e[r].push(n)
+        let r = n.channel;
+        if (e.count += 1, f.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(r.type) && !m.default.can(I.Permissions.VIEW_CHANNEL, r) && !l.default.isChannelGated(r.guild_id, r.id) && r.id !== y) return;
+        let s = (i = r.type, (0, f.isGuildSelectableChannelType)(i) ? v : (0, f.isGuildVocalChannelType)(i) ? A : i);
+        r.type === I.ChannelTypes.GUILD_DIRECTORY && (null == P[t] && (P[t] = []), P[t].push(n)), null != e[s] && e[s].push(n)
       })
-    }(n), (t = n)[C].sort(k), t[A].sort(k), t[T.ChannelTypes.GUILD_CATEGORY].sort(k),
+    }(n), (t = n)[v].sort(w), t[A].sort(w), t[I.ChannelTypes.GUILD_CATEGORY].sort(w),
     function(e) {
-      let t = R[e.id] = {},
+      let t = O[e.id] = {},
         n = {};
-      e[C].forEach(e => {
+      e[v].forEach(e => {
         let {
           channel: i
-        } = e, s = (0, u.computeChannelName)(i, S.default, v.default), r = Object.prototype.hasOwnProperty.call(n, s) ? n[s] : null;
-        null == r ? n[s] = 1 : (n[s] = r + 1, s += "~".concat(r)), t[i.id] = {
+        } = e, r = (0, u.computeChannelName)(i, g.default, T.default), s = Object.prototype.hasOwnProperty.call(n, r) ? n[r] : null;
+        null == s ? n[r] = 1 : (n[r] = s + 1, r += "~".concat(s)), t[i.id] = {
           id: i.id,
-          name: s
+          name: r
         }
       })
     }(n),
     function(e) {
-      let t = S.default.getCurrentUser();
+      let t = g.default.getCurrentUser();
       (function(e, t) {
-        let n = E.default.getGuild(t);
+        let n = S.default.getGuild(t);
         if (null != n && H(e, n)) return !0;
         let i = N[t];
-        null == i && (i = G(t));
+        null == i && (i = x(t));
         let {
-          [C]: s, [A]: r
+          [v]: r, [A]: s
         } = i;
         for (let {
             channel: t
           }
-          of s)
+          of r)
           if (H(e, t)) return !0;
         for (let {
             channel: t
           }
-          of r)
+          of s)
           if (H(e, t)) return !0;
         return !1
       })(t, e) ? D[e] = !0: delete D[e]
@@ -156,48 +156,48 @@ function F(e) {
     }
   } = e;
   if (null == t) return !1;
-  N[t] = void 0, y === t && G(t)
+  N[t] = void 0, R === t && x(t)
 }
 
-function x(e) {
+function V(e) {
   let {
     channel: {
       guild_id: t
     }
   } = e;
   if (null == t) return !1;
-  N[t] = void 0, t === y && G(t)
+  N[t] = void 0, t === R && x(t)
 }
 
 function B(e) {
   let {
     guildId: t
   } = e;
-  N[t] = void 0, t === y && G(t)
+  N[t] = void 0, t === R && x(t)
 }
 
 function H(e, t) {
-  return r.default.hasAny(_.default.computePermissions({
+  return s.default.hasAny(E.default.computePermissions({
     user: e,
     context: t,
     checkElevated: !1
-  }), T.ElevatedPermissions)
+  }), I.ElevatedPermissions)
 }
 
-function Y(e, t) {
+function j(e, t) {
   var n;
-  O = t;
+  y = t;
   let i = null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : null;
   if (null == i) return !1;
-  N[i] = void 0, i === y && G(i)
+  N[i] = void 0, i === R && x(i)
 }
 
-function j() {
-  G(T.FAVORITES)
+function Y() {
+  x(I.FAVORITES)
 }
 class W extends a.default.Store {
   initialize() {
-    this.waitFor(E.default, m.default, g.default, p.default, h.default, l.default, d.default), this.syncWith([d.default], j)
+    this.waitFor(S.default, _.default, h.default, m.default, p.default, l.default, c.default), this.syncWith([c.default], Y)
   }
   getAllGuilds() {
     return N
@@ -205,30 +205,30 @@ class W extends a.default.Store {
   getChannels(e) {
     var t;
     let n;
-    return null != e ? (null == (n = N[t = e]) && (n = G(t)), n) : L
+    return null != e ? (null == (n = N[t = e]) && (n = x(t)), n) : b
   }
   getFirstChannelOfType(e, t, n) {
     let i = this.getChannels(e)[n],
-      s = i.find(t);
-    return null != s ? s.channel : null
+      r = i.find(t);
+    return null != r ? r.channel : null
   }
   getFirstChannel(e, t) {
     var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return null !== (n = this.getFirstChannelOfType(e, t, C)) && void 0 !== n ? n : i ? this.getFirstChannelOfType(e, t, A) : null
+    return null !== (n = this.getFirstChannelOfType(e, t, v)) && void 0 !== n ? n : i ? this.getFirstChannelOfType(e, t, A) : null
   }
   getDefaultChannel(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T.Permissions.VIEW_CHANNEL;
-    return this.getFirstChannel(e, e => p.default.can(n, e.channel), t)
+      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : I.Permissions.VIEW_CHANNEL;
+    return this.getFirstChannel(e, e => m.default.can(n, e.channel), t)
   }
   getSFWDefaultChannel(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : T.Permissions.VIEW_CHANNEL;
-    return this.getFirstChannel(e, e => p.default.can(n, e.channel) && !e.channel.nsfw, t)
+      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : I.Permissions.VIEW_CHANNEL;
+    return this.getFirstChannel(e, e => m.default.can(n, e.channel) && !e.channel.nsfw, t)
   }
   getSelectableChannelIds(e) {
-    return this.getChannels(e)[C].map(e => {
+    return this.getChannels(e)[v].map(e => {
       let {
         channel: t
       } = e;
@@ -236,7 +236,7 @@ class W extends a.default.Store {
     })
   }
   getSelectableChannels(e) {
-    return this.getChannels(e)[C]
+    return this.getChannels(e)[v]
   }
   getVocalChannelIds(e) {
     return this.getChannels(e)[A].map(e => {
@@ -265,26 +265,26 @@ class W extends a.default.Store {
     return this.getChannels(e).count > 0
   }
   hasCategories(e) {
-    return this.getChannels(e)[T.ChannelTypes.GUILD_CATEGORY].length > 1
+    return this.getChannels(e)[I.ChannelTypes.GUILD_CATEGORY].length > 1
   }
   getTextChannelNameDisambiguations(e) {
     var t;
-    return null != e && null !== (t = R[e]) && void 0 !== t ? t : U
+    return null != e && null !== (t = O[e]) && void 0 !== t ? t : U
   }
 }
 W.displayName = "GuildChannelStore";
 var K = new W(o.default, {
-  BACKGROUND_SYNC: V,
+  BACKGROUND_SYNC: k,
   CHANNEL_SELECT: function(e) {
     let {
       guildId: t
     } = e;
-    if (y = null != t ? t : null, null == t || null != N[t]) return !1;
-    G(t)
+    if (R = null != t ? t : null, null == t || null != N[t]) return !1;
+    x(t)
   },
-  CONNECTION_OPEN: V,
-  OVERLAY_INITIALIZE: V,
-  CACHE_LOADED_LAZY: V,
+  CONNECTION_OPEN: k,
+  OVERLAY_INITIALIZE: k,
+  CACHE_LOADED_LAZY: k,
   GUILD_CREATE: F,
   GUILD_UPDATE: F,
   GUILD_DELETE: function(e) {
@@ -293,18 +293,18 @@ var K = new W(o.default, {
         id: t
       }
     } = e;
-    return delete N[t], delete R[t], delete D[t], delete P[t], !0
+    return delete N[t], delete O[t], delete D[t], delete P[t], !0
   },
   GUILD_MEMBER_UPDATE: function(e) {
     let {
       guildId: t,
       user: n
     } = e;
-    if (h.default.getId() !== n.id) return !1;
-    N[t] = void 0, t === y && G(t)
+    if (p.default.getId() !== n.id) return !1;
+    N[t] = void 0, t === R && x(t)
   },
-  CHANNEL_CREATE: x,
-  CHANNEL_DELETE: x,
+  CHANNEL_CREATE: V,
+  CHANNEL_DELETE: V,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
@@ -313,7 +313,7 @@ var K = new W(o.default, {
       let {
         guild_id: t
       } = e;
-      null != t && (N[t] = void 0, n = !0, y === t && G(t))
+      null != t && (N[t] = void 0, n = !0, R === t && x(t))
     }
     return n
   },
@@ -326,11 +326,11 @@ var K = new W(o.default, {
     let {
       channelId: t
     } = e;
-    return null == t && null != O ? Y(g.default.getChannel(O), null) : Y(g.default.getChannel(t), t)
+    return null == t && null != y ? j(h.default.getChannel(y), null) : j(h.default.getChannel(t), t)
   },
   VOICE_CHANNEL_STATUS_UPDATE: function(e) {
-    let t = g.default.getBasicChannel(e.id);
-    null != t && null != t.guild_id && G(t.guild_id)
+    let t = h.default.getBasicChannel(e.id);
+    null != t && null != t.guild_id && x(t.guild_id)
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -341,7 +341,7 @@ var K = new W(o.default, {
         channelId: n,
         sessionId: i
       } = t;
-      return h.default.getSessionId() !== i ? e : Y(g.default.getChannel(n), n) || e
+      return p.default.getSessionId() !== i ? e : j(h.default.getChannel(n), n) || e
     }, !1)
   }
 })

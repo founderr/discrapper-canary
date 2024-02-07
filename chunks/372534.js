@@ -1,7 +1,7 @@
 "use strict";
-var i, s;
+var i, r;
 n.r(t), n.d(t, {
   BaseSpeedTesterEvent: function() {
     return i
   }
-}), (s = i || (i = {})).Destroy = "destroy", s.ConnectionStateChange = "connectionstatechange", s.Error = "error", s.Connected = "connected", s.Ping = "ping", s.PingTimeout = "pingtimeout"
+}), (r = i || (i = {})).Destroy = "destroy", r.ConnectionStateChange = "connectionstatechange", r.Error = "error", r.Connected = "connected", r.Ping = "ping", r.PingTimeout = "pingtimeout"

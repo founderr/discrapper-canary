@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
-var s = n("37983");
+var r = n("37983");
 n("884691");
 var i = n("469563"),
-  r = n("7037"),
-  a = n("246053"),
-  l = (0, i.replaceIcon)(function(e) {
-    return (0, s.jsx)(a.default, {
+  s = n("7037"),
+  l = n("246053"),
+  a = (0, i.replaceIcon)(function(e) {
+    return (0, r.jsx)(l.default, {
       ...e,
-      direction: a.default.Directions.UP
+      direction: l.default.Directions.UP
     })
-  }, r.ArrowSmallUpIcon)
+  }, s.ArrowSmallUpIcon)

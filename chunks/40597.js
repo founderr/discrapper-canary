@@ -1,17 +1,17 @@
 "use strict";
-let i, s;
+let i, r;
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return h
   }
 }), n("70102");
-var r = n("446674"),
+var s = n("446674"),
   a = n("872717"),
   o = n("913144"),
   l = n("773336"),
   u = n("49111");
-let d = null,
-  c = null,
+let c = null,
+  d = null,
   f = null;
 (0, l.isDesktop)() && (window.popupBridge = {
   getReturnUrlPrefix: () => {
@@ -19,49 +19,49 @@ let d = null,
     return a.default.getAPIBaseURL() + u.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.PaymentGateways.BRAINTREE, i)
   },
   open: e => {
-    s = e, window.open(e), h.emitChange()
+    r = e, window.open(e), p.emitChange()
   }
 });
-class _ extends r.default.Store {
+class E extends s.default.Store {
   getClient() {
-    return d
+    return c
   }
   getPayPalClient() {
-    return c
+    return d
   }
   getVenmoClient() {
     return f
   }
   getLastURL() {
-    return s
+    return r
   }
 }
-_.displayName = "BraintreeStore";
-let h = new _(o.default, {
+E.displayName = "BraintreeStore";
+let p = new E(o.default, {
   BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
     let {
       client: t
     } = e;
-    d = t
+    c = t
   },
   BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS: function(e) {
     let {
       paypalClient: t
     } = e;
-    c = t
+    d = t
   },
   BILLING_POPUP_BRIDGE_CALLBACK: function(e) {
     let {
       paymentSourceType: t,
       state: n,
-      path: s,
-      query: r
+      path: r,
+      query: s
     } = e;
     if (t !== u.PaymentSourceTypes.PAYPAL || n !== i) return;
     let a = window.popupBridge.onComplete;
     "function" == typeof a && a(null, {
-      path: s,
-      queryItems: r
+      path: r,
+      queryItems: s
     })
   },
   BILLING_POPUP_BRIDGE_STATE_UPDATE: function(e) {
@@ -72,7 +72,7 @@ let h = new _(o.default, {
     t === u.PaymentSourceTypes.PAYPAL && (i = n)
   },
   BRAINTREE_TEARDOWN_PAYPAL_CLIENT: function() {
-    c = null
+    d = null
   },
   BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: function(e) {
     let {
@@ -84,4 +84,4 @@ let h = new _(o.default, {
     f = null
   }
 });
-var g = h
+var h = p

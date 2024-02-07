@@ -1,7 +1,7 @@
 "use strict";
-var i, s;
+var s, i;
 n.r(t), n.d(t, {
   ReactionTypes: function() {
-    return i
+    return s
   }
-}), (s = i || (i = {}))[s.NORMAL = 0] = "NORMAL", s[s.BURST = 1] = "BURST", s[s.VOTE = 2] = "VOTE"
+}), (i = s || (s = {}))[i.NORMAL = 0] = "NORMAL", i[i.BURST = 1] = "BURST", i[i.VOTE = 2] = "VOTE"

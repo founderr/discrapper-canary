@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   isFirefox: function() {
-    return i
+    return o
   },
   isSafari: function() {
-    return o
+    return a
   }
 });
 var r = n("988641"),
-  i = (0, r.memoize)(function() {
+  o = (0, r.memoize)(function() {
     return /firefox/i.test(navigator.userAgent)
   }),
-  o = (0, r.memoize)(function() {
+  a = (0, r.memoize)(function() {
     return !!window.safari
   })

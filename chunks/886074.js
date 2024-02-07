@@ -1,31 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var i = n("37983");
 n("884691");
-var s = n("414456"),
-  r = n.n(s),
+var r = n("414456"),
+  s = n.n(r),
   a = n("65597"),
   o = n("206230"),
   l = n("491605"),
   u = n("962026");
 
-function d(e) {
+function c(e) {
   let {
     className: t
-  } = e, s = (0, a.default)([o.default], () => o.default.useReducedMotion);
-  async function d() {
+  } = e, r = (0, a.default)([o.default], () => o.default.useReducedMotion);
+  async function c() {
     let {
       default: e
     } = await n.el("801926").then(n.t.bind(n, "801926", 19));
     return e
   }
   return (0, i.jsx)(l.default, {
-    importData: d,
-    shouldAnimate: !s,
-    className: r(u.sparkles, t)
+    importData: c,
+    shouldAnimate: !r,
+    className: s(u.sparkles, t)
   })
 }

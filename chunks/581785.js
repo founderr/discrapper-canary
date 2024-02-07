@@ -1,7 +1,7 @@
 "use strict";
 let i;
 
-function s() {
+function r() {
   return null != i ? i : i = (async () => {
     let {
       default: e
@@ -23,6 +23,6 @@ function s() {
 }
 n.r(t), n.d(t, {
   getKrispSDK: function() {
-    return s
+    return r
   }
 })

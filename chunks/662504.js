@@ -1,8 +1,8 @@
-n("222007");
-var Set = n("892933"),
-  r = n("872949"),
-  i = n("531217"),
-  o = Set && 1 / i(new Set([, -0]))[1] == 1 / 0 ? function(e) {
-    return new Set(e)
+s("222007");
+var Set = s("892933"),
+  r = s("872949"),
+  i = s("531217"),
+  n = Set && 1 / i(new Set([, -0]))[1] == 1 / 0 ? function(t) {
+    return new Set(t)
   } : r;
-e.exports = o
+t.exports = n

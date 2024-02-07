@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   coalesceInvoiceItems: function() {
-    return r
+    return s
   },
   createInvoiceItemFromServer: function() {
     return a
   }
 }), n("222007"), n("424973");
 var i = n("917351"),
-  s = n.n(i);
+  r = n.n(i);
 
-function r(e) {
-  let t = (e, t) => e.subscriptionPlanId === t.subscriptionPlanId && e.subscriptionPlanPrice === t.subscriptionPlanPrice && e.amount === t.amount && s.isEqual(e.discounts, t.discounts),
+function s(e) {
+  let t = (e, t) => e.subscriptionPlanId === t.subscriptionPlanId && e.subscriptionPlanPrice === t.subscriptionPlanPrice && e.amount === t.amount && r.isEqual(e.discounts, t.discounts),
     n = [],
     i = new Set;
   e.map(e => {
-    for (let s of n)
-      if (t(s, e)) {
-        i.add(s.subscriptionPlanId), s.quantity += e.quantity;
+    for (let r of n)
+      if (t(r, e)) {
+        i.add(r.subscriptionPlanId), r.quantity += e.quantity;
         return
       } n.push({
       ...e
     })
   });
-  let r = n.map(e => {
+  let s = n.map(e => {
     let t = {
       ...e
     };
@@ -32,7 +32,7 @@ function r(e) {
       amount: e.amount * t.quantity
     }))), t
   });
-  return r
+  return s
 }
 
 function a(e) {

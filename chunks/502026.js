@@ -6,32 +6,32 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var s = n("414456"),
-  r = n.n(s),
+var r = n("414456"),
+  s = n.n(r),
   a = n("773179"),
   o = n.n(a),
   l = n("669491"),
   u = n("383817"),
-  d = n("339010");
-let c = Object.fromEntries(Object.keys(l.default.colors).map(e => [o.kebabCase(e), e])),
+  c = n("339010");
+let d = Object.fromEntries(Object.keys(l.default.colors).map(e => [o.kebabCase(e), e])),
   Text = e => {
     let t, {
         variant: n,
-        tag: s = "div",
+        tag: r = "div",
         selectable: a = !1,
         className: o,
         lineClamp: f,
-        color: _,
-        tabularNumbers: h = !1,
-        scaleFontToUserSetting: g = !1,
-        ...m
+        color: E,
+        tabularNumbers: p = !1,
+        scaleFontToUserSetting: h = !1,
+        ..._
       } = e,
-      E = "",
-      p = {};
-    if (null != f && (1 === f ? E = u.lineClamp1 : (E = u.lineClamp2Plus, p = {
+      S = "",
+      m = {};
+    if (null != f && (1 === f ? S = u.lineClamp1 : (S = u.lineClamp2Plus, m = {
         lineClamp: f,
         WebkitLineClamp: f
-      })), void 0 !== _) switch (_) {
+      })), void 0 !== E) switch (E) {
       case "none":
         t = void 0;
         break;
@@ -39,23 +39,23 @@ let c = Object.fromEntries(Object.keys(l.default.colors).map(e => [o.kebabCase(e
         t = "white";
         break;
       default:
-        var v;
-        t = null === (v = l.default.colors[c[_]]) || void 0 === v ? void 0 : v.css
+        var T;
+        t = null === (T = l.default.colors[d[E]]) || void 0 === T ? void 0 : T.css
     }
-    let S = {
+    let g = {
       color: t,
-      ...p,
-      ...m.style
-    };
-    return (0, i.jsx)(s, {
-      className: r({
-        [u.defaultColor]: void 0 === _,
-        [u.selectable]: a,
-        [u.tabularNumbers]: h,
-        [d.fontScaling]: g
-      }, E, d[n], o),
       ...m,
-      style: Object.values(S).filter(Boolean).length > 0 ? S : void 0,
+      ..._.style
+    };
+    return (0, i.jsx)(r, {
+      className: s({
+        [u.defaultColor]: void 0 === E,
+        [u.selectable]: a,
+        [u.tabularNumbers]: p,
+        [c.fontScaling]: h
+      }, S, c[n], o),
+      ..._,
+      style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
       "data-text-variant": n
     })
   }

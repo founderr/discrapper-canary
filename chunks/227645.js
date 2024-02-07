@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   Clickable: function() {
-    return d
+    return c
   }
 }), n("222007");
 var i = n("37983"),
-  s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  r = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
   o = n("247716"),
   l = n("718776"),
   u = n("49111");
-class d extends s.Component {
+class c extends r.Component {
   renderNonInteractive() {
     let {
       tag: e,
       focusProps: t,
       innerRef: n,
       onClick: i,
-      role: r,
+      role: s,
       tabIndex: a,
       ...o
     } = this.props;
-    return s.createElement(e, {
+    return r.createElement(e, {
       ref: this.setRef,
       ...o
     })
@@ -33,15 +33,15 @@ class d extends s.Component {
       onClick: t,
       className: n,
       children: i,
-      focusProps: r,
+      focusProps: s,
       innerRef: o,
       ...l
     } = this.props;
-    return null == t ? s.createElement(e, {
+    return null == t ? r.createElement(e, {
       ref: this.setRef,
       className: a(n),
       ...l
-    }, i) : s.createElement(e, {
+    }, i) : r.createElement(e, {
       onClick: t,
       ref: this.setRef,
       onKeyPress: this.handleKeyPress,
@@ -62,9 +62,9 @@ class d extends s.Component {
         onClick: t,
         href: n,
         onKeyPress: i,
-        ignoreKeyPress: s
+        ignoreKeyPress: r
       } = this.props;
-      !e.repeat && (!s && null != t && null != this.ref && (e.charCode === u.KeyboardKeys.SPACE || e.charCode === u.KeyboardKeys.ENTER) && (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != i && i(e))
+      !e.repeat && (!r && null != t && null != this.ref && (e.charCode === u.KeyboardKeys.SPACE || e.charCode === u.KeyboardKeys.ENTER) && (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != i && i(e))
     }, this.setRef = e => {
       this.ref = e;
       let {
@@ -74,7 +74,7 @@ class d extends s.Component {
     }
   }
 }
-d.contextType = o.BlockInteractionsContext, d.defaultProps = {
+c.contextType = o.BlockInteractionsContext, c.defaultProps = {
   tag: "div",
   role: "button",
   tabIndex: 0

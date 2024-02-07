@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   usePreview: function() {
-    return a
+    return s
   }
 });
 var r = n("884691"),
-  i = n("476042"),
-  o = n("947990");
-let s = e => {
+  o = n("476042"),
+  a = n("947990");
+let i = e => {
     let t = "translate(".concat(e.x.toFixed(1), "px, ").concat(e.y.toFixed(1), "px)");
     return {
       pointerEvents: "none",
@@ -18,10 +18,10 @@ let s = e => {
       WebkitTransform: t
     }
   },
-  a = () => {
+  s = () => {
     let e = (0, r.useRef)(null),
-      t = (0, i.useDragLayer)(t => ({
-        currentOffset: (0, o.calculatePointerPosition)(t, e),
+      t = (0, o.useDragLayer)(t => ({
+        currentOffset: (0, a.calculatePointerPosition)(t, e),
         isDragging: t.isDragging(),
         itemType: t.getItemType(),
         item: t.getItem(),
@@ -31,7 +31,7 @@ let s = e => {
       display: !0,
       itemType: t.itemType,
       item: t.item,
-      style: s(t.currentOffset),
+      style: i(t.currentOffset),
       monitor: t.monitor,
       ref: e
     } : {

@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return u
+    return L
   }
 }), E("222007");
 var t = E("37983");
@@ -16,11 +16,11 @@ var o = E("77078"),
   T = E("42203"),
   S = E("824563"),
   N = E("945956"),
-  O = E("205817"),
-  A = E("722333"),
+  A = E("205817"),
+  O = E("722333"),
   R = E("200521"),
   l = E("49111");
-class L extends A.default {
+class u extends O.default {
   _initialize() {
     i.default.init()
   }
@@ -51,11 +51,11 @@ class L extends A.default {
       let {
         streamKey: n,
         canShowFeedback: i
-      } = e, I = (0, r.decodeStreamKey)(n), T = (0, a.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
-        media_session_id: O.default.getMediaSessionId(n),
-        rtc_connection_id: O.default.getRtcConnectionId(n),
-        stream_region: O.default.getRegion(n),
-        max_viewers: O.default.getMaxViewers(n),
+      } = e, I = (0, r.decodeStreamKey)(n), T = (0, a.getStreamerApplication)(I, S.default), N = null !== (_ = A.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, O = {
+        media_session_id: A.default.getMediaSessionId(n),
+        rtc_connection_id: A.default.getRtcConnectionId(n),
+        stream_region: A.default.getRegion(n),
+        max_viewers: A.default.getMaxViewers(n),
         ...N
       };
       i && this.possiblyShowFeedbackModal(R.FeedbackType.STREAM, () => {
@@ -68,7 +68,7 @@ class L extends A.default {
             streamApplication: T,
             isStreamer: I.ownerId === s.default.getId(),
             ..._,
-            analyticsData: A
+            analyticsData: O
           })
         })
       })
@@ -95,7 +95,7 @@ class L extends A.default {
       } = e, i = n.default.getApplication(_), s = T.default.getChannel(r), S = {
         rtc_connection_id: N.default.getRTCConnectionId(),
         media_session_id: N.default.getMediaSessionId()
-      }, O = I.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT), A = O ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT;
+      }, A = I.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT), O = A ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT;
       null != i && null != s && a && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
         (0, o.openModalLazy)(async () => {
           let {
@@ -108,7 +108,7 @@ class L extends A.default {
             analyticsData: S
           })
         }, {
-          contextKey: A
+          contextKey: O
         })
       })
     }, this.handleInAppReportsFeedback = e => {
@@ -131,4 +131,4 @@ class L extends A.default {
     }
   }
 }
-var u = new L
+var L = new u

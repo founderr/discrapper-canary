@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("697218"),
   E = n("717018"),
   C = n("811305"),
-  S = n("659500"),
-  g = n("439932"),
+  g = n("659500"),
+  S = n("439932"),
   _ = n("550766"),
   I = n("191225"),
   T = n("575136"),
@@ -77,7 +77,7 @@ function y(e) {
   let en = F.get(null === (n = w[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
     ea = [];
   return null != en && (ea = Array.from(en.embeddedActivity.userIds).map(e => m.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, a.jsxs)("div", {
-    className: i(L.wrapper, O[B], (0, g.getThemeClass)(R.ThemeTypes.DARK)),
+    className: i(L.wrapper, O[B], (0, S.getThemeClass)(R.ThemeTypes.DARK)),
     ref: V,
     style: H && null != G ? {
       minHeight: 200,
@@ -146,12 +146,12 @@ function y(e) {
       maxHeight: y,
       resizableNode: V,
       onResize: e => {
-        S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        g.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0
         }), W(e)
       },
       onResizeEnd: e => {
-        S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        g.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !1
         }), Y(e)
       }

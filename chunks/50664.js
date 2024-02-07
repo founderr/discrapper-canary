@@ -1,64 +1,64 @@
 "use strict";
 n.r(t), n.d(t, {
   useTab: function() {
-    return u
+    return l
   },
   useTabList: function() {
     return d
   }
 }), n("222007"), n("781738");
 var r = n("240849"),
-  i = n("932165"),
-  o = n("884691"),
-  s = n("564341");
-let a = new WeakMap;
+  o = n("932165"),
+  a = n("884691"),
+  i = n("564341");
+let s = new WeakMap;
 
 function c(e, t, n) {
   "string" == typeof t && (t = t.replace(/\s+/g, ""));
-  let r = a.get(e);
+  let r = s.get(e);
   return "".concat(r, "-").concat(n, "-").concat(t)
 }
 
-function u(e, t, n) {
-  var o;
+function l(e, t, n) {
+  var a;
   let {
-    key: s,
-    isDisabled: a,
-    shouldSelectOnPressUp: u
+    key: i,
+    isDisabled: s,
+    shouldSelectOnPressUp: l
   } = e, {
-    selectionManager: l,
+    selectionManager: u,
     selectedKey: d
-  } = t, f = s === d, p = a || t.isDisabled || t.disabledKeys.has(s), {
+  } = t, p = i === d, f = s || t.isDisabled || t.disabledKeys.has(i), {
     itemProps: h,
-    isPressed: v
-  } = (0, i.useSelectableItem)({
-    selectionManager: l,
-    key: s,
+    isPressed: m
+  } = (0, o.useSelectableItem)({
+    selectionManager: u,
+    key: i,
     ref: n,
-    isDisabled: p,
-    shouldSelectOnPressUp: u,
+    isDisabled: f,
+    shouldSelectOnPressUp: l,
     linkBehavior: "selection"
-  }), g = c(t, s, "tab"), b = c(t, s, "tabpanel"), {
-    tabIndex: m
-  } = h, y = t.collection.getItem(s), x = (0, r.filterDOMProps)(null == y ? void 0 : y.props, {
-    isLink: !!(null == y ? void 0 : null === (o = y.props) || void 0 === o ? void 0 : o.href),
+  }), v = c(t, i, "tab"), g = c(t, i, "tabpanel"), {
+    tabIndex: y
+  } = h, b = t.collection.getItem(i), x = (0, r.filterDOMProps)(null == b ? void 0 : b.props, {
+    isLink: !!(null == b ? void 0 : null === (a = b.props) || void 0 === a ? void 0 : a.href),
     labelable: !0
   });
   return delete x.id, {
     tabProps: (0, r.mergeProps)(x, h, {
-      id: g,
-      "aria-selected": f,
-      "aria-disabled": p || void 0,
-      "aria-controls": f ? b : void 0,
-      tabIndex: p ? void 0 : m,
+      id: v,
+      "aria-selected": p,
+      "aria-disabled": f || void 0,
+      "aria-controls": p ? g : void 0,
+      tabIndex: f ? void 0 : y,
       role: "tab"
     }),
-    isSelected: f,
-    isDisabled: p,
-    isPressed: v
+    isSelected: p,
+    isDisabled: f,
+    isPressed: m
   }
 }
-class l {
+class u {
   getKeyLeftOf(e) {
     return this.flipDirection ? this.getNextKey(e) : this.getPreviousKey(e)
   }
@@ -95,32 +95,32 @@ class l {
 function d(e, t, n) {
   let {
     orientation: c = "horizontal",
-    keyboardActivation: u = "automatic"
+    keyboardActivation: l = "automatic"
   } = e, {
     collection: d,
-    selectionManager: f,
-    disabledKeys: p
+    selectionManager: p,
+    disabledKeys: f
   } = t, {
     direction: h
-  } = (0, s.useLocale)(), v = (0, o.useMemo)(() => new l(d, h, c, p), [d, p, c, h]), {
-    collectionProps: g
-  } = (0, i.useSelectableCollection)({
+  } = (0, i.useLocale)(), m = (0, a.useMemo)(() => new u(d, h, c, f), [d, f, c, h]), {
+    collectionProps: v
+  } = (0, o.useSelectableCollection)({
     ref: n,
-    selectionManager: f,
-    keyboardDelegate: v,
-    selectOnFocus: "automatic" === u,
+    selectionManager: p,
+    keyboardDelegate: m,
+    selectOnFocus: "automatic" === l,
     disallowEmptySelection: !0,
     scrollRef: n,
     linkBehavior: "selection"
-  }), b = (0, r.useId)();
-  a.set(t, b);
-  let m = (0, r.useLabels)({
+  }), g = (0, r.useId)();
+  s.set(t, g);
+  let y = (0, r.useLabels)({
     ...e,
-    id: b
+    id: g
   });
   return {
     tabListProps: {
-      ...(0, r.mergeProps)(g, m),
+      ...(0, r.mergeProps)(v, y),
       role: "tablist",
       "aria-orientation": c,
       tabIndex: void 0

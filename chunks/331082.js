@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var i, s = n("666038");
-i = class e extends s.default {
+var i, r = n("666038");
+i = class e extends r.default {
   static createFromServer(t) {
     return new e(t)
   }

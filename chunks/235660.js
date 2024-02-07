@@ -5,19 +5,19 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("917351"),
-  s = n.n(i),
-  r = n("446674"),
+  r = n.n(i),
+  s = n("446674"),
   a = n("913144"),
   o = n("271938");
 let l = Object.freeze([]),
   u = {};
 
-function d(e) {
+function c(e) {
   u = {}, e.sessions.forEach(e => {
     u[e.sessionId] = e
   })
 }
-class c extends r.default.Store {
+class d extends s.default.Store {
   initialize() {
     this.waitFor(o.default)
   }
@@ -30,14 +30,14 @@ class c extends r.default.Store {
   }
   getRemoteActivities() {
     let e = o.default.getSessionId(),
-      t = s.find(u, t => t.active && t.sessionId !== e);
+      t = r.find(u, t => t.active && t.sessionId !== e);
     return null != t ? t.activities : l
   }
   getSessionById(e) {
     return u[e]
   }
   getActiveSession() {
-    return s.find(u, e => {
+    return r.find(u, e => {
       let {
         active: t
       } = e;
@@ -45,8 +45,8 @@ class c extends r.default.Store {
     })
   }
 }
-c.displayName = "SessionsStore";
-var f = new c(a.default, {
-  CONNECTION_OPEN: d,
-  SESSIONS_REPLACE: d
+d.displayName = "SessionsStore";
+var f = new d(a.default, {
+  CONNECTION_OPEN: c,
+  SESSIONS_REPLACE: c
 })

@@ -16,8 +16,8 @@ var o = E("151426"),
   T = E("179803"),
   S = E("49111"),
   N = E("994428");
-let O = "GUILD_ONBOARDING_UPSELL_MODAL",
-  A = (e, _) => {
+let A = "GUILD_ONBOARDING_UPSELL_MODAL",
+  O = (e, _) => {
     if (__OVERLAY__ || null == e || null == _) return;
     let r = (0, T.shouldShowGuildOnboardingUpsell)(e, o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2);
     if (!r) return;
@@ -43,9 +43,9 @@ let O = "GUILD_ONBOARDING_UPSELL_MODAL",
         }
       })
     }, {
-      modalKey: O,
+      modalKey: A,
       onCloseRequest: () => {
-        i(), (0, n.closeModal)(O)
+        i(), (0, n.closeModal)(A)
       }
     })
   };
@@ -55,12 +55,12 @@ class R extends r.default {
       guildId: _,
       channelId: E
     } = e;
-    A(_, E)
+    O(_, E)
   }
   handlePostConnectionOpen() {
     let e = i.default.getCurrentlySelectedChannelId(),
       _ = I.default.getGuildId();
-    A(_, e)
+    O(_, e)
   }
   constructor(...e) {
     super(...e), this.actions = {

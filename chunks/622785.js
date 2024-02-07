@@ -16,7 +16,7 @@ var t = E("446674"),
 let S = !0,
   N = !0;
 
-function O() {
+function A() {
   let e;
   let _ = I.default.getChannelId();
   if (null == _) e = !0;
@@ -32,7 +32,7 @@ function O() {
     hasPermission: S
   })
 }
-class A extends t.default.Store {
+class O extends t.default.Store {
   initialize() {
     this.waitFor(i.default, a.default, I.default, s.default)
   }
@@ -43,17 +43,17 @@ class A extends t.default.Store {
     return S
   }
 }
-A.displayName = "PermissionVADStore";
-var R = new A(o.default, {
-  RTC_CONNECTION_STATE: O,
-  MEDIA_ENGINE_SET_AUDIO_ENABLED: O,
-  AUDIO_SET_MODE: O,
-  CHANNEL_UPDATES: O,
-  THREAD_UPDATE: O,
-  GUILD_ROLE_UPDATE: O,
-  GUILD_MEMBER_UPDATE: O,
-  IMPERSONATE_UPDATE: O,
-  IMPERSONATE_STOP: O,
+O.displayName = "PermissionVADStore";
+var R = new O(o.default, {
+  RTC_CONNECTION_STATE: A,
+  MEDIA_ENGINE_SET_AUDIO_ENABLED: A,
+  AUDIO_SET_MODE: A,
+  CHANNEL_UPDATES: A,
+  THREAD_UPDATE: A,
+  GUILD_ROLE_UPDATE: A,
+  GUILD_MEMBER_UPDATE: A,
+  IMPERSONATE_UPDATE: A,
+  IMPERSONATE_STOP: A,
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: _
@@ -62,7 +62,7 @@ var R = new A(o.default, {
       let {
         userId: _
       } = e;
-      return _ === n.default.getId() && O()
+      return _ === n.default.getId() && A()
     })
   },
   AUDIO_TOGGLE_SELF_MUTE: function() {

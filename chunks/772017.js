@@ -1,68 +1,68 @@
 "use strict";
-n.r(t), n.d(t, {
+o.r(e), o.d(e, {
   default: function() {
-    return c
+    return E
   }
-}), n("424973");
-var i = n("995008"),
-  s = n.n(i),
-  r = n("913144"),
-  a = n("693051"),
-  o = n("153498"),
-  l = n("76493"),
-  u = n("91731"),
-  d = n("49111"),
-  c = {
-    push(e, t) {
-      let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s("modal"),
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : d.AppContext.APP;
-      return (0, o.pushModal)({
-        key: n,
-        modal: (0, u.default)(e, {}, t, n),
-        ...i
+}), o("424973");
+var n = o("995008"),
+  d = o.n(n),
+  r = o("913144"),
+  l = o("693051"),
+  i = o("153498"),
+  a = o("76493"),
+  s = o("91731"),
+  u = o("49111"),
+  E = {
+    push(t, e) {
+      let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d("modal"),
+        n = arguments.length > 3 ? arguments[3] : void 0,
+        l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : u.AppContext.APP;
+      return (0, i.pushModal)({
+        key: o,
+        modal: (0, s.default)(t, {}, e, o),
+        ...n
       }), r.default.dispatch({
         type: "MODAL_PUSH",
-        modal: e,
-        props: t,
-        key: n,
-        appContext: a
-      }), n
+        modal: t,
+        props: e,
+        key: o,
+        appContext: l
+      }), o
     },
-    pushLazy(e, t) {
-      let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s("modal"),
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        r = (0, a.getRootNavigationRef)();
-      return null != r && r.isReady() ? (e instanceof Promise ? e.then(e => {
+    pushLazy(t, e) {
+      let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d("modal"),
+        n = arguments.length > 3 ? arguments[3] : void 0,
+        r = (0, l.getRootNavigationRef)();
+      return null != r && r.isReady() ? (t instanceof Promise ? t.then(t => {
         let {
-          default: t
-        } = e;
-        return t
-      }) : e()).then(e => this.push(e, t, n, i)) : new Promise(s => l.default.enqueue(() => s(this.pushLazy(e, t, n, i))))
+          default: e
+        } = t;
+        return e
+      }) : t()).then(t => this.push(t, e, o, n)) : new Promise(d => a.default.enqueue(() => d(this.pushLazy(t, e, o, n))))
     },
-    updateAnimation(e, t) {
+    updateAnimation(t, e) {
       r.default.dispatch({
         type: "MODAL_UPDATE",
-        key: e,
+        key: t,
         props: {},
         partial: !0,
-        animation: t
+        animation: e
       })
     },
     pop() {
-      (0, o.popModal)(), r.default.dispatch({
+      (0, i.popModal)(), r.default.dispatch({
         type: "MODAL_POP"
       })
     },
-    popWithKey(e, t) {
-      (0, o.popModal)(e, t), r.default.dispatch({
+    popWithKey(t, e) {
+      (0, i.popModal)(t, e), r.default.dispatch({
         type: "MODAL_POP",
-        key: e,
-        onExited: t
+        key: t,
+        onExited: e
       })
     },
     popAll() {
-      (0, o.popAllModals)(), r.default.dispatch({
+      (0, i.popAllModals)(), r.default.dispatch({
         type: "MODAL_POP_ALL"
       }), r.default.dispatch({
         type: "CHANNEL_SETTINGS_CLOSE"

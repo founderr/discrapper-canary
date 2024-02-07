@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var i, s = n("201876"),
+var s, i = n("201876"),
   r = n("260320"),
   a = n("42887");
-i = class extends s.default {
+s = class extends i.default {
   getInitialState() {
     return this.getNextState()
   }

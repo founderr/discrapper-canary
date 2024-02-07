@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getToken: function() {
-    return s
+    return r
   },
   isAuthenticated: function() {
-    return r
+    return s
   },
   getArtForPath: function() {
     return a
@@ -12,11 +12,11 @@ n.r(t), n.d(t, {
 });
 var i = n("171718");
 
-function s() {
+function r() {
   return i.default.getToken()
 }
 
-function r() {
-  return null != s()
+function s() {
+  return null != r()
 }
 let a = e => null != e && /^\/developers/.test(e) ? n("501617") : null

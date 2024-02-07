@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i.MenuCheckboxItem
   },
   ControlItem: function() {
-    return s.MenuControlItem
+    return r.MenuControlItem
   },
   CompositeControlItem: function() {
-    return r.MenuCompositeControlItem
+    return s.MenuCompositeControlItem
   },
   CustomItem: function() {
     return a.MenuCustomItem
@@ -22,22 +22,22 @@ n.r(t), n.d(t, {
     return u.MenuRadioItem
   },
   Separator: function() {
-    return d.MenuSeparator
+    return c.MenuSeparator
   },
   SubmenuItem: function() {
-    return c.MenuSubmenuItem
+    return d.MenuSubmenuItem
   },
   SubmenuListItem: function() {
     return f.MenuSubmenuListItem
   }
 });
 var i = n("964019"),
-  s = n("412256"),
-  r = n("922260"),
+  r = n("412256"),
+  s = n("922260"),
   a = n("916528"),
   o = n("539365"),
   l = n("426264"),
   u = n("146155"),
-  d = n("536864"),
-  c = n("8022"),
+  c = n("536864"),
+  d = n("8022"),
   f = n("967541")

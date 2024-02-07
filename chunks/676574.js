@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   DevSettingsCategory: function() {
-    return i
+    return s
   },
   default: function() {
-    return d
+    return l
   }
 }), n("222007");
-var i, s, r = n("446674"),
+var s, i, r = n("446674"),
   a = n("913144");
-(s = i || (i = {}))[s.MESSAGING = 0] = "MESSAGING", s[s.OVERLAYS = 1] = "OVERLAYS";
+(i = s || (s = {}))[i.MESSAGING = 0] = "MESSAGING", i[i.OVERLAYS = 1] = "OVERLAYS";
 let o = {
     visual_effect_view_overrides: {
       label: "Blur view overrides for designers to test with",
@@ -32,43 +32,43 @@ let o = {
       category: 0
     }
   },
-  l = {};
+  d = {};
 class u extends r.default.DeviceSettingsStore {
   getUserAgnosticState() {
     return {
-      toggleStates: l
+      toggleStates: d
     }
   }
   initialize(e) {
     for (var t in o) {
-      var n, i;
-      let s = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
-      l[t] = s
+      var n, s;
+      let i = null !== (s = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== s && s;
+      d[t] = i
     }
   }
   get(e) {
     var t;
-    return null !== (t = l[e]) && void 0 !== t && t
+    return null !== (t = d[e]) && void 0 !== t && t
   }
   set(e, t) {
-    return l[e] = t, t
+    return d[e] = t, t
   }
   all() {
-    return l
+    return d
   }
   allByCategory(e) {
     return Object.entries(o).filter(t => {
-      let [n, i] = t;
-      return i.category === e
+      let [n, s] = t;
+      return s.category === e
     }).map(e => {
       let [t, n] = e;
-      return [t, l[t], n]
+      return [t, d[t], n]
     })
   }
 }
 u.displayName = "DevToolsDevSettingsStore", u.persistKey = "DevToolsDevSettingsStore";
-var d = new u(a.default, {
+var l = new u(a.default, {
   DEV_TOOLS_DEV_SETTING_SET: function(e) {
-    l[e.toggle] = e.value
+    d[e.toggle] = e.value
   }
 })

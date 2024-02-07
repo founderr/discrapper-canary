@@ -13,17 +13,17 @@ function s(e) {
     width: t = 14,
     height: n = 13,
     color: s = "currentColor",
-    foreground: u,
-    ...a
+    foreground: a,
+    ...l
   } = e;
   return (0, r.jsx)("svg", {
     ...(0, i.default)({
-      ...a
+      ...l
     }),
     width: t,
     height: n,
     viewBox: "0 0 ".concat(t, " ").concat(n),
-    className: u,
+    className: a,
     fill: s,
     xmlns: "http://www.w3.org/2000/svg",
     children: (0, r.jsx)("path", {

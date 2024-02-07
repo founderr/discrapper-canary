@@ -1,5 +1,5 @@
 "use strict";
-N.exports = [{
+I.exports = [{
   name: "English, USA",
   englishName: "English, USA",
   code: "en-US",

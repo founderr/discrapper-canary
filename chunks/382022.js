@@ -15,18 +15,18 @@ var t = E("210696"),
   T = E("364685"),
   S = E("42203"),
   N = E("305961"),
-  O = E("619443");
-let A = new I.default("EntityVersionsManager");
+  A = E("619443");
+let O = new I.default("EntityVersionsManager");
 class R extends a.default {
   _initialize() {
-    r.default.subscribe("CONNECTION_OPEN", L)
+    r.default.subscribe("CONNECTION_OPEN", u)
   }
   _terminate() {
-    r.default.unsubscribe("CONNECTION_OPEN", L)
+    r.default.unsubscribe("CONNECTION_OPEN", u)
   }
   constructor(...e) {
     super(...e), this.actions = {
-      GUILD_CREATE: u,
+      GUILD_CREATE: L,
       DELETED_ENTITY_IDS: l
     }
   }
@@ -35,10 +35,10 @@ class R extends a.default {
 function l(e) {
   var _;
   let E = null === (_ = N.default.getGuild(e.guild_id)) || void 0 === _ ? void 0 : _.name;
-  A.fileOnly("received deleted guild entities (id: ".concat(e.guild_id, ", name: ").concat(E, ")")), n.default.Emitter.batched(() => {
+  O.fileOnly("received deleted guild entities (id: ".concat(e.guild_id, ", name: ").concat(E, ")")), n.default.Emitter.batched(() => {
     null != e.channels && function(e, _) {
       let E = Object.keys(S.default.getMutableBasicGuildChannelsForGuild(e));
-      A.fileOnly("syncChannels", {
+      O.fileOnly("syncChannels", {
         channelIdsInMemory: E,
         channelIdsFromServer: _
       }), E.forEach(E => {
@@ -81,11 +81,11 @@ function l(e) {
   })
 }
 
-function L() {
+function u() {
   i.default.getGuildIdsRequiringDeletedIdsSync().forEach(e => C(e))
 }
 
-function u(e) {
+function L(e) {
   let {
     guild: _
   } = e;
@@ -96,12 +96,12 @@ function C(e) {
   setTimeout(() => (function(e) {
     var _, E, t, o, n;
     let r = null === (_ = N.default.getGuild(e)) || void 0 === _ ? void 0 : _.name;
-    A.fileOnly("requesting deleted guild entities (id: ".concat(e, ", name: ").concat(r, ")"));
+    O.fileOnly("requesting deleted guild entities (id: ".concat(e, ", name: ").concat(r, ")"));
     let a = D(Object.keys(S.default.getMutableBasicGuildChannelsForGuild(e))),
       i = D(Object.keys(null !== (o = null === (E = N.default.getGuild(e)) || void 0 === E ? void 0 : E.roles) && void 0 !== o ? o : {})),
       I = D(s.default.getGuildEmoji(e).map(e => e.id)),
       R = D(null !== (n = null === (t = T.default.getStickersByGuildId(e)) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== n ? n : []);
-    O.default.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, i, I, R)
+    A.default.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, i, I, R)
   })(e), Math.ceil(2e3 * Math.random()))
 }
 

@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   ExperimentRPCServerAnalyticsKillswitch: function() {
-    return s
+    return r
   }
 });
 var i = n("862205");
-let s = (0, i.createExperiment)({
+let r = (0, i.createExperiment)({
   kind: "user",
   id: "2024-01_rpc_analytics_killswitch",
   label: "RPC Server Analytics Killswitch",

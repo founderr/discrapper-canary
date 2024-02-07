@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   makeRequestCallFromTimer: function() {
-    return o
+    return a
   },
   makeRequestCall: function() {
-    return s
+    return i
   }
 }), n("854508");
 let r = "undefined" != typeof global ? global : self,
-  i = r.MutationObserver || r.WebKitMutationObserver;
+  o = r.MutationObserver || r.WebKitMutationObserver;
 
-function o(e) {
+function a(e) {
   return function() {
     let t = setTimeout(r, 0),
       n = setInterval(r, 50);
@@ -20,9 +20,9 @@ function o(e) {
     }
   }
 }
-let s = "function" == typeof i ? function(e) {
+let i = "function" == typeof o ? function(e) {
   let t = 1,
-    n = new i(e),
+    n = new o(e),
     r = document.createTextNode("");
   return n.observe(r, {
       characterData: !0
@@ -30,4 +30,4 @@ let s = "function" == typeof i ? function(e) {
     function() {
       t = -t, r.data = t
     }
-} : o
+} : a

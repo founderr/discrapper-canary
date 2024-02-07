@@ -11,8 +11,8 @@ var r = n("884691"),
   i = n("446674"),
   s = n("404118"),
   l = n("10514"),
-  u = n("437712"),
-  a = n("719923"),
+  a = n("437712"),
+  u = n("719923"),
   o = n("843455"),
   c = n("782340");
 
@@ -24,7 +24,7 @@ function d(e, t, n) {
       }),
       body: c.default.Messages.BILLING_EXTERNAL_MANAGE_ELSEWHERE.format({
         paymentGatewayName: o.PaymentGatewayToFriendlyName[e.paymentGateway],
-        subscriptionManagementLink: (0, a.getExternalSubscriptionMethodUrl)(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
+        subscriptionManagementLink: (0, u.getExternalSubscriptionMethodUrl)(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
       }),
       confirmText: c.default.Messages.OKAY
     }), t())
@@ -34,9 +34,9 @@ let f = [];
 
 function I(e, t) {
   let n = (0, i.useStateFromStores)([l.default], () => null != e ? l.default.get(e) : null),
-    s = (0, i.useStateFromStores)([u.default], () => {
+    s = (0, i.useStateFromStores)([a.default], () => {
       var e;
-      return null != n && null !== (e = u.default.getForSku(n.skuId)) && void 0 !== e ? e : f
+      return null != n && null !== (e = a.default.getForSku(n.skuId)) && void 0 !== e ? e : f
     }),
     o = r.useMemo(() => Array.from(s).filter(e => {
       let {
@@ -45,7 +45,7 @@ function I(e, t) {
       } = e;
       return null != t && !n
     }), [s]),
-    c = !t && null != n && null != o && o.length >= a.default.getIntervalMonths(n.interval, n.intervalCount);
+    c = !t && null != n && null != o && o.length >= u.default.getIntervalMonths(n.interval, n.intervalCount);
   return {
     hasEntitlements: c,
     entitlements: o

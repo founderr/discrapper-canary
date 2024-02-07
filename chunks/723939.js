@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return E
   }
 }), n("222007");
 var i = n("446674"),
-  s = n("705909"),
-  r = n("913144"),
+  r = n("705909"),
+  s = n("913144"),
   a = n("605250"),
   o = n("271938"),
   l = n("496533");
 let u = new a.default("DatabaseManager");
-class d extends i.Store {
+class c extends i.Store {
   initialize() {
     this.waitFor(o.default), this.carefullySpeculativelyOpen(l.getUserId()), this.handleAuthenticationStoreChanged(), o.default.addChangeListener(() => this.handleAuthenticationStoreChanged())
   }
   databaseName(e) {
-    return c(e)
+    return d(e)
   }
   database(e) {
     if (null != e) {
@@ -52,7 +52,7 @@ class d extends i.Store {
     let e = o.default.getId(),
       t = this.databases.get(e),
       n = null == t ? void 0 : t.state();
-    null == t && n !== s.DatabaseState.Open && this.remove(e), this.carefullyOpenDatabase(e)
+    null == t && n !== r.DatabaseState.Open && this.remove(e), this.carefullyOpenDatabase(e)
   }
   handleAuthenticationStoreChanged() {
     let e = o.default.getId(),
@@ -69,20 +69,20 @@ class d extends i.Store {
     }
   }
   constructor() {
-    super(r.default, {
+    super(s.default, {
       CLEAR_CACHES: () => this.handleClearCaches(),
       CONNECTION_CLOSED: () => this.handleAuthenticationStoreChanged(),
       CONNECTION_OPEN: () => this.handleConnectionOpen(),
       LOGOUT: () => this.handleAuthenticationStoreChanged()
-    }, r.DispatchBand.Early), this.databases = new Map, this.activeUserId = null
+    }, s.DispatchBand.Early), this.databases = new Map, this.activeUserId = null
   }
 }
 
-function c(e) {
+function d(e) {
   return "@account.".concat(e)
 }
 async function f(e) {
   var t;
   return null
 }
-var _ = new d
+var E = new c

@@ -26,10 +26,10 @@ E.r(_), E.d(_, {
     return N
   },
   isAndroidWeb: function() {
-    return O
+    return A
   },
   isAndroid: function() {
-    return A
+    return O
   },
   isIOS: function() {
     return R
@@ -38,10 +38,10 @@ E.r(_), E.d(_, {
     return l
   },
   getPlatformName: function() {
-    return L
+    return u
   },
   getNativePlatform: function() {
-    return u
+    return L
   },
   getOS: function() {
     return C
@@ -75,12 +75,12 @@ function N() {
   return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
 }
 
-function O() {
+function A() {
   var e;
   return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null
 }
 
-function A() {
+function O() {
   return "android" === a
 }
 
@@ -92,11 +92,11 @@ function l() {
   return i() ? "WINDOWS" : I() ? "OSX" : s() ? "LINUX" : "WEB"
 }
 
-function L() {
+function u() {
   return a
 }
 
-function u() {
+function L() {
   switch (a) {
     case "ios":
     case "android":

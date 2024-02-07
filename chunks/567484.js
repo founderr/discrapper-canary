@@ -1,6 +1,6 @@
 "use strict";
 e.exports = {
   horizontalAutocomplete: "horizontalAutocomplete__9cb8e",
-  horizontalAutocompletes: "horizontalAutocompletes__7652e " + n("180615").scrollbarGhostHairline,
+  horizontalAutocompletes: "horizontalAutocompletes__7652e " + n("862839").scrollbarGhostHairline,
   spinner: "spinner__44861"
 }

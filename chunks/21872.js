@@ -7,19 +7,19 @@ n.r(t), n.d(t, {
     return l
   }
 }), n("222007"), n("424973");
-var i, s, r = n("884691"),
+var i, r, s = n("884691"),
   a = n("917351"),
   o = n.n(a);
-(s = i || (i = {})).PAGE = "PAGE", s.GAP = "GAP", s.BACK = "BACK", s.NEXT = "NEXT";
-class l extends r.PureComponent {
+(r = i || (i = {})).PAGE = "PAGE", r.GAP = "GAP", r.BACK = "BACK", r.NEXT = "NEXT";
+class l extends s.PureComponent {
   getNeighborBounds() {
     let {
       totalPageCount: e,
       maxVisiblePages: t,
       selectedPage: n
-    } = this.props, i = Math.ceil(t / 2), s = Math.floor(t / 2), r = [1, e];
-    r = n <= i ? [1, t] : n > e - s ? [e - t + 1, e] : [n - i + 1, n + s];
-    let [a, o] = r;
+    } = this.props, i = Math.ceil(t / 2), r = Math.floor(t / 2), s = [1, e];
+    s = n <= i ? [1, t] : n > e - r ? [e - t + 1, e] : [n - i + 1, n + r];
+    let [a, o] = s;
     return [Math.max(a, 1), Math.min(o, e)]
   }
   getPageList() {
@@ -27,7 +27,7 @@ class l extends r.PureComponent {
       totalPageCount: e,
       selectedPage: t,
       hideMaxPage: n
-    } = this.props, [i, s] = this.getNeighborBounds(), r = {
+    } = this.props, [i, r] = this.getNeighborBounds(), s = {
       type: "BACK",
       key: "back",
       disabled: 1 === t,
@@ -48,7 +48,7 @@ class l extends r.PureComponent {
     }, {
       type: "GAP",
       key: "left-gap"
-    }], i += 2), s < e && (u = [{
+    }], i += 2), r < e && (u = [{
       type: "GAP",
       key: "right-gap"
     }], !n && u.push({
@@ -56,8 +56,8 @@ class l extends r.PureComponent {
       key: "page-".concat(e),
       targetPage: e,
       navigateToPage: () => this.handleJump(e)
-    }), s -= 2);
-    let d = o.range(i, s + 1).map(e => ({
+    }), r -= 2);
+    let c = o.range(i, r + 1).map(e => ({
       type: "PAGE",
       key: "page-".concat(e),
       targetPage: e,
@@ -65,7 +65,7 @@ class l extends r.PureComponent {
       disabled: !1,
       navigateToPage: () => this.handleJump(e)
     }));
-    return [r, ...l, ...d, ...u, a]
+    return [s, ...l, ...c, ...u, a]
   }
   render() {
     let {

@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("222007");
-var i, s = n("666038"),
-  r = n("315102"),
+var i, r = n("666038"),
+  s = n("315102"),
   a = n("605136"),
   o = n("299039"),
   l = n("159885"),
   u = n("49111"),
-  d = n("958706"),
-  c = n("646718");
-i = class extends s.default {
+  c = n("958706"),
+  d = n("646718");
+i = class extends r.default {
   getSafetyAlertsChannelId() {
     var e;
     return null !== (e = this.safetyAlertsChannelId) && void 0 !== e ? e : this.publicUpdatesChannelId
   }
   getIconURL(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return r.default.getGuildIconURL({
+    return s.default.getGuildIconURL({
       id: this.id,
       size: e,
       icon: this.icon,
@@ -28,7 +28,7 @@ i = class extends s.default {
   }
   getIconSource(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return r.default.getAnimatableSourceWithFallback(t, t => r.default.getGuildIconSource({
+    return s.default.getAnimatableSourceWithFallback(t, t => s.default.getGuildIconSource({
       id: this.id,
       size: e,
       icon: this.icon,
@@ -67,13 +67,13 @@ i = class extends s.default {
     return this.roles[e]
   }
   getMaxEmojiSlots() {
-    return Math.max(this.hasFeature(u.GuildFeatures.MORE_EMOJI) ? 200 : d.EMOJI_MAX_SLOTS, c.BoostedGuildFeatures[this.premiumTier].limits.emoji)
+    return Math.max(this.hasFeature(u.GuildFeatures.MORE_EMOJI) ? 200 : c.EMOJI_MAX_SLOTS, d.BoostedGuildFeatures[this.premiumTier].limits.emoji)
   }
   getMaxRoleSubscriptionEmojiSlots() {
     return 25
   }
   getMaxSoundboardSlots() {
-    return c.BoostedGuildFeatures[this.premiumTier].limits.soundboardSounds
+    return d.BoostedGuildFeatures[this.premiumTier].limits.soundboardSounds
   }
   isCommunity() {
     return this.hasFeature(u.GuildFeatures.COMMUNITY)

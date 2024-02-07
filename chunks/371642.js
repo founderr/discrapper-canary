@@ -5,14 +5,14 @@ n.r(t), n.d(t, {
   }
 }), n("424973");
 var i = n("37983"),
-  s = n("884691"),
-  r = n("997921"),
+  r = n("884691"),
+  s = n("997921"),
   a = n("49671"),
   o = n("254490"),
   l = n("773336"),
   u = n("980134");
 
-function d(e) {
+function c(e) {
   let t = ["openFile"];
   e.multiple && t.push("multiSelections");
   let n = e.filters;
@@ -39,7 +39,7 @@ function d(e) {
     })
   })
 }
-class c extends s.Component {
+class d extends r.Component {
   activateUploadDialogue() {
     if (null != this._ref) return this._ref.activateUploadDialogue()
   }
@@ -47,15 +47,15 @@ class c extends s.Component {
     this._ref = e
   }
   render() {
-    return (0, i.jsx)(r.default, {
+    return (0, i.jsx)(s.default, {
       ref: this.setRef,
-      handleNativeClick: d,
+      handleNativeClick: c,
       embedded: (0, l.isDesktop)(),
       ...this.props
     })
   }
   constructor(e) {
-    super(e), this._ref = s.createRef(), this.setRef = this.setRef.bind(this)
+    super(e), this._ref = r.createRef(), this.setRef = this.setRef.bind(this)
   }
 }
-var f = c
+var f = d

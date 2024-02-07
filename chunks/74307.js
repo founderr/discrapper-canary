@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   TextArea: function() {
-    return v
+    return T
   }
 }), n("424973");
 var i = n("37983"),
-  s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  r = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
   o = n("748820"),
   l = n("718776"),
   u = n("516826"),
-  d = n("741662"),
-  c = n("324584"),
+  c = n("741662"),
+  d = n("324584"),
   f = n("782340"),
-  _ = n("253469"),
-  h = n("905518"),
-  g = n("180615");
-let m = (0, o.v4)(),
-  E = (0, o.v4)(),
-  p = (0, o.v4)();
-class v extends s.Component {
+  E = n("253469"),
+  p = n("905518"),
+  h = n("862839");
+let _ = (0, o.v4)(),
+  S = (0, o.v4)(),
+  m = (0, o.v4)();
+class T extends r.Component {
   getPaddingRight() {
     let {
       maxLength: e
@@ -57,8 +57,8 @@ class v extends s.Component {
         maxLength: n
       } = this.props;
       return (0, i.jsxs)("div", {
-        className: a(_.maxLength, {
-          [_.errorOverflow]: this.hasError()
+        className: a(E.maxLength, {
+          [E.errorOverflow]: this.hasError()
         }),
         "aria-hidden": "true",
         children: [null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0, " ", null != n && "/ ".concat(n)]
@@ -70,8 +70,8 @@ class v extends s.Component {
     if (this.props.showCharacterCount || !1 === this.props.showRemainingCharacterCount) return null;
     let e = this.getCharsLeftLength();
     return null == e ? null : (0, i.jsx)("div", {
-      className: a(_.maxLength, {
-        [_.errorOverflow]: e < 0
+      className: a(E.maxLength, {
+        [E.errorOverflow]: e < 0
       }),
       "aria-hidden": "true",
       children: e
@@ -87,16 +87,16 @@ class v extends s.Component {
       minLength: n
     } = this.props, i = this.getIsOverflowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
       maxLength: t
-    }) : null, s = this.getIsUnderflowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
+    }) : null, r = this.getIsUnderflowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
       minLength: n
     }) : null;
-    return null != e && e.length < 1 || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != i ? i : s
+    return null != e && e.length < 1 || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != i ? i : r
   }
   renderErrorMessage() {
     let e = this.getErrorMessage();
     return null == e ? null : (0, i.jsx)("div", {
-      id: m,
-      className: _.errorMessage,
+      id: _,
+      className: E.errorMessage,
       children: e
     })
   }
@@ -104,71 +104,71 @@ class v extends s.Component {
     var e, t;
     let {
       disabled: n,
-      value: s,
-      placeholder: r,
+      value: r,
+      placeholder: s,
       autoFocus: o,
       minLength: u,
-      maxLength: m,
-      allowOverflow: v,
-      spellCheck: S,
-      resizeable: T,
-      className: I,
-      id: C,
+      maxLength: _,
+      allowOverflow: T,
+      spellCheck: g,
+      resizeable: I,
+      className: C,
+      id: v,
       rows: A,
-      flex: y,
+      flex: R,
       autosize: N,
-      required: R,
+      required: O,
       onInvalid: D,
-      inputRef: O
-    } = this.props, P = N ? c.TextAreaAutosize : "textarea", b = this.hasError(), L = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, M = this.getAriaDescribedBy();
+      inputRef: y
+    } = this.props, P = N ? d.TextAreaAutosize : "textarea", L = this.hasError(), b = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, M = this.getAriaDescribedBy();
     return (0, i.jsxs)("div", {
-      className: a(h.inputWrapper, {
-        [_.flex]: y
+      className: a(p.inputWrapper, {
+        [E.flex]: R
       }),
       children: [(0, i.jsxs)("div", {
-        className: a(_.inputMaxLength, {
-          [_.flex]: y
+        className: a(E.inputMaxLength, {
+          [E.flex]: R
         }),
         children: [(0, i.jsx)(l.FocusRing, {
           children: (0, i.jsx)(P, {
             type: "text",
-            className: a(h.inputDefault, _.textArea, g.scrollbarDefault, I, {
-              [h.error]: b,
-              [h.disabled]: n,
-              [_.resizeable]: T
+            className: a(p.inputDefault, E.textArea, h.scrollbarDefault, C, {
+              [p.error]: L,
+              [p.disabled]: n,
+              [E.resizeable]: I
             }),
-            "aria-labelledby": L,
+            "aria-labelledby": b,
             "aria-describedby": M,
-            "aria-invalid": b,
+            "aria-invalid": L,
             style: {
               paddingRight: this.getPaddingRight()
             },
-            id: C,
+            id: v,
             disabled: n,
-            placeholder: r,
-            value: s,
+            placeholder: s,
+            value: r,
             autoFocus: o,
             minLength: u,
-            maxLength: v ? void 0 : m,
-            spellCheck: S,
-            required: R,
+            maxLength: T ? void 0 : _,
+            spellCheck: g,
+            required: O,
             onChange: this.onChange,
             onBlur: this.onBlur,
             onFocus: this.onFocus,
             onKeyDown: this.onKeyDown,
             onInvalid: D,
             rows: A,
-            ref: O
+            ref: y
           })
-        }), null != u && (0, i.jsx)(d.HiddenVisually, {
-          id: E,
+        }), null != u && (0, i.jsx)(c.HiddenVisually, {
+          id: S,
           children: f.default.Messages.MINIMUM_LENGTH.format({
             minLength: u
           })
-        }), null != m && (0, i.jsx)(d.HiddenVisually, {
-          id: p,
+        }), null != _ && (0, i.jsx)(c.HiddenVisually, {
+          id: m,
           children: f.default.Messages.MAXIMUM_LENGTH.format({
-            maxLength: m
+            maxLength: _
           })
         }), this.renderCharacterCount(), this.renderMaxLength()]
       }), this.renderErrorMessage()]
@@ -182,8 +182,8 @@ class v extends s.Component {
         maxLength: t,
         minLength: n,
         error: i
-      } = this.props, s = [], r = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-      return null != r && s.push(r), null != i ? s.push(i) : (null != t && s.push(p), null != n && s.push(E)), s.length > 0 ? s.join(" ") : void 0
+      } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
+      return null != s && r.push(s), null != i ? r.push(i) : (null != t && r.push(m), null != n && r.push(S)), r.length > 0 ? r.join(" ") : void 0
     }, this.onChange = e => {
       let {
         onChange: t,
@@ -214,7 +214,7 @@ class v extends s.Component {
     }
   }
 }
-v.contextType = u.FormContext, v.defaultProps = {
+T.contextType = u.FormContext, T.defaultProps = {
   name: "",
   disabled: !1,
   placeholder: "",

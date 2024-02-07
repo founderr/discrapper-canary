@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 }), n("222007");
-var i = {
+var s = {
   makeMemoizer: function(e) {
     let t = new Map;
     return n => {
-      let i = t.get(n);
-      return void 0 === i && (i = e(n), t.set(n, i)), i
+      let s = t.get(n);
+      return void 0 === s && (s = e(n), t.set(n, s)), s
     }
   }
 }

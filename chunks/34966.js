@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return u
+    return L
   }
 }), E("222007");
 var t = E("446674"),
@@ -15,19 +15,19 @@ let i = {},
   T = null,
   S = null,
   N = "lastChangeLogId",
-  O = "lastChangeLogDate",
-  A = null,
+  A = "lastChangeLogDate",
+  O = null,
   R = null,
   l = new Set;
-class L extends t.default.Store {
+class u extends t.default.Store {
   initialize() {
     var e;
-    this.waitFor(r.default), this.syncWith([r.default], () => !0), A = null !== (e = o.default.get(N)) && void 0 !== e ? e : null;
-    let _ = o.default.get(O);
+    this.waitFor(r.default), this.syncWith([r.default], () => !0), O = null !== (e = o.default.get(N)) && void 0 !== e ? e : null;
+    let _ = o.default.get(A);
     if (null != _) try {
       R = new Date(_)
     } catch {
-      o.default.remove(O)
+      o.default.remove(A)
     }
   }
   getChangelog(e, _) {
@@ -51,7 +51,7 @@ class L extends t.default.Store {
     return T
   }
   lastSeenChangelogId() {
-    return A
+    return O
   }
   lastSeenChangelogDate() {
     return R
@@ -60,7 +60,7 @@ class L extends t.default.Store {
     return {
       changelogConfig: S,
       loadedChangelogs: I,
-      lastSeenChangelogId: A,
+      lastSeenChangelogId: O,
       lastSeenChangelogDate: R
     }
   }
@@ -68,8 +68,8 @@ class L extends t.default.Store {
     return l.size > 0
   }
 }
-L.displayName = "ChangelogStore";
-var u = new L(n.default, {
+u.displayName = "ChangelogStore";
+var L = new u(n.default, {
   CHANGE_LOG_LOCK: function(e) {
     let {
       key: _
@@ -124,6 +124,6 @@ var u = new L(n.default, {
       changelogId: _,
       changelogDate: E
     } = e;
-    A = null != _ ? _ : null, R = new Date(E), o.default.set(N, _), o.default.set(O, E)
+    O = null != _ ? _ : null, R = new Date(E), o.default.set(N, _), o.default.set(A, E)
   }
 })

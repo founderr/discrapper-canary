@@ -1,6 +1,6 @@
 "use strict";
 var r, i;
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   MEDIA_MOSAIC_MAX_WIDTH: function() {
     return u
   },
@@ -8,17 +8,17 @@ n.r(t), n.d(t, {
     return o
   },
   MINIMUM_MEDIA_MOSAIC_DIM: function() {
-    return s
+    return a
   },
   MediaLayoutType: function() {
     return r
   },
   SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE: function() {
-    return a
+    return s
   }
 });
 let u = 550,
   o = 350,
-  s = 40;
+  a = 40;
 (i = r || (r = {})).STATIC = "STATIC", i.RESPONSIVE = "RESPONSIVE", i.MOSAIC = "MOSAIC";
-let a = 20
+let s = 20

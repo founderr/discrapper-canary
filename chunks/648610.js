@@ -1,10 +1,10 @@
 "use strict";
-A.r(I), A.d(I, {
+n.r(t), n.d(t, {
   default: function() {
-    return O
+    return i
   }
 });
-var O = {
+var i = {
   aa: "aa-ET",
   af: "af-ZA",
   ak: "ak-GH",

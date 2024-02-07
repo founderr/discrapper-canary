@@ -1,39 +1,39 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return l
   }
 });
-var i = n("35092"),
-  s = n("913144"),
+var s = n("35092"),
+  i = n("913144"),
   r = n("474643");
 let a = {},
   o = {};
-class l extends i.default.Store {
+class d extends s.default.Store {
   getStickerPreview(e, t) {
     let n = t === r.DraftType.FirstThreadMessage ? o : a;
     return n[e]
   }
 }
-l.displayName = "StickerMessagePreviewStore";
-let u = new l(s.default, {
+d.displayName = "StickerMessagePreviewStore";
+let u = new d(i.default, {
   ADD_STICKER_PREVIEW: function(e) {
     let {
       channelId: t,
       sticker: n,
-      draftType: i
-    } = e, s = i === r.DraftType.FirstThreadMessage ? o : a;
-    s[t] = [n]
+      draftType: s
+    } = e, i = s === r.DraftType.FirstThreadMessage ? o : a;
+    i[t] = [n]
   },
   CLEAR_STICKER_PREVIEW: function(e) {
     let {
       channelId: t,
       draftType: n
-    } = e, i = n === r.DraftType.FirstThreadMessage ? o : a;
-    null != i[t] && delete i[t]
+    } = e, s = n === r.DraftType.FirstThreadMessage ? o : a;
+    null != s[t] && delete s[t]
   },
   LOGOUT: function() {
     a = {}, o = {}
   }
 });
-var d = u
+var l = u

@@ -9,16 +9,16 @@ function i(e, t) {
   return !0
 }
 
-function s(e) {
+function r(e) {
   let t = null,
     n = null;
   return function() {
-    for (var s = arguments.length, r = Array(s), a = 0; a < s; a++) r[a] = arguments[a];
-    return !i(t, r) && (n = e(...r)), t = r, n
+    for (var r = arguments.length, s = Array(r), a = 0; a < r; a++) s[a] = arguments[a];
+    return !i(t, s) && (n = e(...s)), t = s, n
   }
 }
 
-function r(e) {
+function s(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 5e3,
     n = -1,
     i = null;
@@ -33,10 +33,10 @@ n.r(t), n.d(t, {
     return i
   },
   cachedFunction: function() {
-    return s
+    return r
   },
   promiseThrottle: function() {
-    return r
+    return s
   },
   clearObject: function() {
     return a

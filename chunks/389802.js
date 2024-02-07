@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   MENU_ITEM_COLORS: function() {
-    return s
+    return r
   }
 });
 var i = n("946032");
-let s = {
+let r = {
   default: i.colorDefault,
   brand: i.colorBrand,
   danger: i.colorDanger,

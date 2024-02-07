@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   },
   deserializeChannelEntries: function() {
-    return r
+    return s
   },
   deserializeChannel: function() {
     return a
@@ -12,7 +12,7 @@ n.r(t), n.d(t, {
 }), n("222007");
 var i = n("316693");
 
-function s(e) {
+function r(e) {
   for (let {
       permissionOverwrites_: t
     }
@@ -24,8 +24,8 @@ function s(e) {
       }
 }
 
-function r(e) {
-  for (let [t, n] of e) s(n)
+function s(e) {
+  for (let [t, n] of e) r(n)
 }
 
 function a(e) {

@@ -1,30 +1,30 @@
 "use strict";
-e.r(t), e.d(t, {
+n.r(e), n.d(e, {
   default: function() {
-    return r
+    return s
   }
 });
-var l = e("37983");
-e("884691");
-var i = e("77078"),
-  o = e("272030"),
-  a = e("773336"),
-  u = e("26051"),
-  c = e("782340");
+var i = n("37983");
+n("884691");
+var r = n("77078"),
+  o = n("272030"),
+  u = n("773336"),
+  a = n("26051"),
+  l = n("782340");
 
-function r(n) {
+function s(t) {
   let {
-    href: t,
-    textContent: e,
-    onSelect: r
-  } = n, s = (0, u.default)(t, e);
-  return a.isPlatformEmbedded && null != s ? (0, l.jsx)(i.Menu, {
+    href: e,
+    textContent: n,
+    onSelect: s
+  } = t, c = (0, a.default)(e, n);
+  return u.isPlatformEmbedded && null != c ? (0, i.jsx)(r.Menu, {
     navId: "image-context",
     onClose: o.closeContextMenu,
-    "aria-label": c.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
-    onSelect: r,
-    children: (0, l.jsx)(i.MenuGroup, {
-      children: s
+    "aria-label": l.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
+    onSelect: s,
+    children: (0, i.jsx)(r.MenuGroup, {
+      children: c
     })
   }) : null
 }

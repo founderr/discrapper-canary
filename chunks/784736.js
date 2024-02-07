@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 });
-var l = n("446674"),
-  r = n("913144");
-let a = {};
-class u extends l.default.Store {
+var r = n("446674"),
+  a = n("913144");
+let l = {};
+class i extends r.default.Store {
   getEULA(e) {
-    return a[e]
+    return l[e]
   }
 }
-u.displayName = "EULAStore";
-var o = new u(r.default, {
+i.displayName = "EULAStore";
+var s = new i(a.default, {
   EULA_FETCH_SUCCESS: function(e) {
     let {
       eula: t
     } = e;
-    a[t.id] = t
+    l[t.id] = t
   }
 })

@@ -1,50 +1,50 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
-    return g
+    return v
   }
 });
-var a = n("37983");
+var i = n("37983");
 n("884691");
-var l = n("77078"),
-  i = n("689226"),
+var r = n("77078"),
+  o = n("689226"),
   u = n("467475"),
-  s = n("24373"),
-  o = n("48703"),
-  c = n("599110"),
-  r = n("128259"),
+  a = n("24373"),
+  l = n("48703"),
+  s = n("599110"),
+  c = n("128259"),
   d = n("773336"),
   f = n("50885"),
-  E = n("146574"),
-  h = n("49111"),
-  _ = n("782340");
+  h = n("146574"),
+  _ = n("49111"),
+  g = n("782340");
 
-function g(e, t, n, g) {
-  let v = (0, u.default)(null == n ? void 0 : n.getChannelId());
-  if (!d.isPlatformEmbedded || null == e || "" === e || v || (null == g ? void 0 : g.shouldHideMediaOptions) === !0 || null != e && null != (0, s.isStickerAssetUrl)(e) || null != e && (0, i.isRoleIconAssetUrl)(e)) return null;
-  let p = (0, o.getHostname)(e),
-    M = n => {
-      c.default.track(h.AnalyticEvents.CONTEXT_MENU_LINK_OPENED, {
-        hostname: p,
-        ...(0, E.getNativeContextMenuChannelAnalytics)()
-      }), (0, r.handleClick)({
-        href: e,
-        trusted: (0, r.isLinkTrusted)(e, t),
+function v(t, e, n, v) {
+  let p = (0, u.default)(null == n ? void 0 : n.getChannelId());
+  if (!d.isPlatformEmbedded || null == t || "" === t || p || (null == v ? void 0 : v.shouldHideMediaOptions) === !0 || null != t && null != (0, a.isStickerAssetUrl)(t) || null != t && (0, o.isRoleIconAssetUrl)(t)) return null;
+  let E = (0, l.getHostname)(t),
+    m = n => {
+      s.default.track(_.AnalyticEvents.CONTEXT_MENU_LINK_OPENED, {
+        hostname: E,
+        ...(0, h.getNativeContextMenuChannelAnalytics)()
+      }), (0, c.handleClick)({
+        href: t,
+        trusted: (0, c.isLinkTrusted)(t, e),
         shouldConfirm: !0
       }, n)
     };
-  return [(0, a.jsx)(l.MenuItem, {
+  return [(0, i.jsx)(r.MenuItem, {
     id: "copy-native-link",
-    label: _.default.Messages.COPY_LINK,
+    label: g.default.Messages.COPY_LINK,
     action: () => {
-      c.default.track(h.AnalyticEvents.CONTEXT_MENU_LINK_COPIED, {
-        hostname: p,
-        ...(0, E.getNativeContextMenuChannelAnalytics)()
-      }), f.default.copy(e)
+      s.default.track(_.AnalyticEvents.CONTEXT_MENU_LINK_COPIED, {
+        hostname: E,
+        ...(0, h.getNativeContextMenuChannelAnalytics)()
+      }), f.default.copy(t)
     }
-  }, "copy-native-link"), (0, a.jsx)(l.MenuItem, {
+  }, "copy-native-link"), (0, i.jsx)(r.MenuItem, {
     id: "open-native-link",
-    label: _.default.Messages.OPEN_LINK,
-    action: e => M(e)
+    label: g.default.Messages.OPEN_LINK,
+    action: t => m(t)
   }, "open-native-link")]
 }

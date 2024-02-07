@@ -1,43 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return f
   }
 }), n("222007"), n("781738");
-var i = n("895547"),
-  s = n("315102"),
+var s = n("895547"),
+  i = n("315102"),
   r = n("284679"),
   a = n("103603"),
   o = n("261742");
-let l = new Set(["™", "™️", "\xa9", "\xa9️", "\xae", "\xae️"]);
+let d = new Set(["™", "™️", "\xa9", "\xa9️", "\xae", "\xae️"]);
 
 function u(e) {
-  if (l.has(e)) return "";
+  if (d.has(e)) return "";
   try {
     let t = 0 > e.indexOf("‍") ? e.replace("️", "") : e;
-    return n("331246")("@discordapp/twemoji/dist/svg/".concat(i.default.convert.toCodePoint(t), ".svg").replace("@discordapp/twemoji/dist/svg/", "./"))
+    return n("331246")("@discordapp/twemoji/dist/svg/".concat(s.default.convert.toCodePoint(t), ".svg").replace("@discordapp/twemoji/dist/svg/", "./"))
   } catch (t) {
     return console.warn(t, "no emoji for", e), ""
   }
 }
-async function d(e) {
+async function l(e) {
   let t;
   let {
     id: n,
-    name: i
+    name: s
   } = e;
-  t = null != n ? s.default.getEmojiURL({
+  t = null != n ? i.default.getEmojiURL({
     id: n,
     size: 32,
     animated: !1
-  }) : u(i);
+  }) : u(s);
   let o = await (0, a.getPaletteForAvatar)(t);
   return null == o ? void 0 : o.map(e => {
-    let [t, n, i] = e;
-    return (0, r.rgbToHex)(t, n, i)
+    let [t, n, s] = e;
+    return (0, r.rgbToHex)(t, n, s)
   })
 }
-var c = {
+var f = {
   getURL: o.default.makeMemoizer(u),
   filterUnsupportedEmojis: function(e) {
     return e
@@ -49,12 +49,12 @@ var c = {
     } = e;
     return t
   },
-  getEmojiColors: d,
+  getEmojiColors: l,
   triggerFullscreenAnimation: function(e) {
     let {
       channelId: t,
       messageId: n,
-      emoji: i
+      emoji: s
     } = e
   }
 }

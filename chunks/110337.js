@@ -1,91 +1,91 @@
 "use strict";
-let n, r;
-l.r(t), l.d(t, {
+let r, i;
+n.r(t), n.d(t, {
   default: function() {
-    return R
+    return L
   }
-}), l("222007");
-var s = l("37983"),
-  a = l("884691"),
-  i = l("414456"),
-  o = l.n(i),
-  u = l("77078"),
-  c = l("970728"),
-  d = l("448993"),
-  I = l("393414"),
-  f = l("145131"),
-  E = l("476765"),
-  p = l("883029"),
-  _ = l("49111"),
-  S = l("782340"),
-  T = l("479030"),
-  C = l("529861"),
-  N = l("156465");
-let m = "hTKzmak",
-  A = (0, E.uid)();
-let L = (n = window.GLOBAL_ENV.INVITE_HOST, r = "", null == n && (n = location.host, r = _.Routes.INVITE("")), "".concat(location.protocol, "//").concat(n).concat(r, "/")),
-  h = [m, "".concat(L).concat(m), "".concat(L).concat("cool-people")],
-  g = e => {
+}), n("222007");
+var l = n("37983"),
+  s = n("884691"),
+  a = n("414456"),
+  o = n.n(a),
+  u = n("77078"),
+  c = n("970728"),
+  d = n("448993"),
+  f = n("393414"),
+  h = n("145131"),
+  _ = n("476765"),
+  p = n("883029"),
+  E = n("49111"),
+  I = n("782340"),
+  m = n("479030"),
+  g = n("529861"),
+  T = n("156465");
+let S = "hTKzmak",
+  A = (0, _.uid)();
+let C = (r = window.GLOBAL_ENV.INVITE_HOST, i = "", null == r && (r = location.host, i = E.Routes.INVITE("")), "".concat(location.protocol, "//").concat(r).concat(i, "/")),
+  N = [S, "".concat(C).concat(S), "".concat(C).concat("cool-people")],
+  v = e => {
     let {
       onClick: t
     } = e;
-    return (0, s.jsxs)(u.Clickable, {
-      className: T.rowContainer,
+    return (0, l.jsxs)(u.Clickable, {
+      className: m.rowContainer,
       onClick: () => {
-        t(), (0, I.transitionTo)(_.Routes.GUILD_DISCOVERY)
+        t(), (0, f.transitionTo)(E.Routes.GUILD_DISCOVERY)
       },
-      children: [(0, s.jsx)("img", {
+      children: [(0, l.jsx)("img", {
         width: 40,
         height: 40,
-        className: T.rowIcon,
+        className: m.rowIcon,
         alt: "",
-        src: N
-      }), (0, s.jsxs)("div", {
-        children: [(0, s.jsx)(u.Heading, {
-          className: T.rowText,
+        src: T
+      }), (0, l.jsxs)("div", {
+        children: [(0, l.jsx)(u.Heading, {
+          className: m.rowText,
           variant: "heading-md/semibold",
-          children: S.default.Messages.DISCOVERY_UPSELL_HEADER
-        }), (0, s.jsx)(u.Text, {
-          className: T.rowText,
+          children: I.default.Messages.DISCOVERY_UPSELL_HEADER
+        }), (0, l.jsx)(u.Text, {
+          className: m.rowText,
           variant: "text-xs/normal",
-          children: S.default.Messages.DISCOVERY_UPSELL_DESCRIPTION
+          children: I.default.Messages.DISCOVERY_UPSELL_DESCRIPTION
         })]
-      }), (0, s.jsx)("img", {
-        className: T.rowArrow,
+      }), (0, l.jsx)("img", {
+        className: m.rowArrow,
         alt: "",
-        src: C
+        src: g
       })]
     })
   };
 
-function R(e) {
+function L(e) {
   let {
     onBack: t,
-    onClose: l,
-    isSlideReady: n
-  } = e, [r, i] = a.useState(""), [I, E] = a.useState(!1), [_, C] = a.useState(null), N = a.useRef(null);
-  a.useEffect(() => {
+    onClose: n,
+    isSlideReady: r
+  } = e, [i, a] = s.useState(""), [f, _] = s.useState(!1), [E, g] = s.useState(null), T = s.useRef(null);
+  s.useEffect(() => {
     var e;
-    n && (null === (e = N.current) || void 0 === e || e.focus())
-  }, [n]);
-  let R = e => {
+    r && (null === (e = T.current) || void 0 === e || e.focus())
+  }, [r]);
+  let L = e => {
     e.preventDefault();
-    let t = r.trim();
+    let t = i.trim();
     if ("" === t) {
-      C(S.default.Messages.INVALID_INVITE_LINK_ERROR);
+      g(I.default.Messages.INVALID_INVITE_LINK_ERROR);
       return
     }
-    C(null), E(!0);
-    let n = t.split("/"),
-      s = n[n.length - 1];
-    c.default.resolveInvite(s, "Join Guild", {
+    g(null), _(!0);
+    let r = t.split("/"),
+      l = r[r.length - 1];
+    c.default.resolveInvite(l, "Join Guild", {
       inputValue: t
     }).then(e => {
       let {
         invite: t
       } = e;
-      if (E(!1), null == t) {
-        C(S.default.Messages.INSTANT_INVITE_EXPIRED);
+      if (_(!1), null == t) {
+        g(I.default.Messages.INSTANT_INVITE_EXPIRED);
         return
       }
       if (null != t.channel) {
@@ -94,89 +94,89 @@ function R(e) {
           inviteKey: t.code,
           context: e,
           callback: e => {
-            l(), c.default.transitionToInvite(e)
+            n(), c.default.transitionToInvite(e)
           }
         }).then(() => {}, e => {
           if (e instanceof d.V6OrEarlierAPIError || e instanceof d.APIError) {
             let t = (0, p.getInviteError)(e.code);
-            C(t)
-          } else C(S.default.Messages.INVITE_MODAL_ERROR_DEFAULT)
+            g(t)
+          } else g(I.default.Messages.INVITE_MODAL_ERROR_DEFAULT)
         })
       }
     }, e => {
-      E(!1);
+      _(!1);
       let t = new d.V6OrEarlierAPIError(e),
-        l = (0, p.getInviteError)(t.code);
-      C(l)
+        n = (0, p.getInviteError)(t.code);
+      g(n)
     })
   };
-  return (0, s.jsxs)("div", {
-    children: [(0, s.jsxs)(u.ModalHeader, {
-      className: T.header,
-      direction: f.default.Direction.VERTICAL,
+  return (0, l.jsxs)("div", {
+    children: [(0, l.jsxs)(u.ModalHeader, {
+      className: m.header,
+      direction: h.default.Direction.VERTICAL,
       separator: !1,
-      children: [(0, s.jsx)(u.Heading, {
-        className: T.title,
+      children: [(0, l.jsx)(u.Heading, {
+        className: m.title,
         variant: "heading-xl/semibold",
-        children: S.default.Messages.JOIN_SERVER_TITLE
-      }), (0, s.jsx)(u.Text, {
+        children: I.default.Messages.JOIN_SERVER_TITLE
+      }), (0, l.jsx)(u.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: S.default.Messages.JOIN_SERVER_DESCRIPTION_NUF
-      }), (0, s.jsx)(u.ModalCloseButton, {
-        className: T.closeButton,
-        onClick: l
+        children: I.default.Messages.JOIN_SERVER_DESCRIPTION_NUF
+      }), (0, l.jsx)(u.ModalCloseButton, {
+        className: m.closeButton,
+        onClick: n
       })]
-    }), (0, s.jsxs)(u.ModalContent, {
-      className: T.content,
-      children: [(0, s.jsx)("form", {
-        onSubmit: R,
-        className: T.inputForm,
-        children: (0, s.jsxs)(u.FormItem, {
-          children: [(0, s.jsx)(u.FormTitle, {
+    }), (0, l.jsxs)(u.ModalContent, {
+      className: m.content,
+      children: [(0, l.jsx)("form", {
+        onSubmit: L,
+        className: m.inputForm,
+        children: (0, l.jsxs)(u.FormItem, {
+          children: [(0, l.jsx)(u.FormTitle, {
             id: A,
-            error: _,
-            className: o(T.formTitle, {
-              [T.error]: null != _
+            error: E,
+            className: o(m.formTitle, {
+              [m.error]: null != E
             }),
             required: !0,
-            children: S.default.Messages.FORM_LABEL_INVITE_LINK
-          }), (0, s.jsx)(u.TextInput, {
-            value: r,
-            onChange: i,
-            className: T.input,
-            inputClassName: T.inputInner,
-            placeholder: "".concat(L).concat(m),
-            inputRef: N,
+            children: I.default.Messages.FORM_LABEL_INVITE_LINK
+          }), (0, l.jsx)(u.TextInput, {
+            value: i,
+            onChange: a,
+            className: m.input,
+            inputClassName: m.inputInner,
+            placeholder: "".concat(C).concat(S),
+            inputRef: T,
             required: !0,
             "aria-labelledby": A
           })]
         })
-      }), (0, s.jsx)(u.FormItem, {
-        title: S.default.Messages.JOIN_SERVER_INVITE_EXAMPLES_HEADER,
-        titleClassName: T.formTitle,
-        className: T.examplesForm,
-        children: h.map(e => (0, s.jsx)(u.Clickable, {
-          className: T.sampleLink,
-          onClick: () => i(e),
+      }), (0, l.jsx)(u.FormItem, {
+        title: I.default.Messages.JOIN_SERVER_INVITE_EXAMPLES_HEADER,
+        titleClassName: m.formTitle,
+        className: m.examplesForm,
+        children: N.map(e => (0, l.jsx)(u.Clickable, {
+          className: m.sampleLink,
+          onClick: () => a(e),
           children: e
         }, e))
-      }), (0, s.jsx)(g, {
-        onClick: l
+      }), (0, l.jsx)(v, {
+        onClick: n
       })]
-    }), (0, s.jsxs)(u.ModalFooter, {
-      className: T.footer,
-      children: [(0, s.jsx)(u.Button, {
+    }), (0, l.jsxs)(u.ModalFooter, {
+      className: m.footer,
+      children: [(0, l.jsx)(u.Button, {
         color: u.Button.Colors.BRAND,
-        submitting: I,
-        onClick: R,
-        children: S.default.Messages.NUF_JOIN_SERVER_BUTTON
-      }), (0, s.jsx)(u.Button, {
+        submitting: f,
+        onClick: L,
+        children: I.default.Messages.NUF_JOIN_SERVER_BUTTON
+      }), (0, l.jsx)(u.Button, {
         color: u.Button.Colors.PRIMARY,
         look: u.Button.Looks.LINK,
         size: u.Button.Sizes.MIN,
         onClick: t,
-        children: S.default.Messages.BACK
+        children: I.default.Messages.BACK
       })]
     })]
   })

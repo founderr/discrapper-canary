@@ -4,21 +4,21 @@ n.r(t), n.d(t, {
     return u
   },
   disconnect: function() {
-    return d
+    return c
   },
   setReceiveEventHandler: function() {
-    return c
+    return d
   },
   setReceiveCommandHandler: function() {
     return f
   },
   send: function() {
-    return _
+    return E
   }
 });
 var i = n("43982"),
-  s = n("861309"),
-  r = n("261131"),
+  r = n("861309"),
+  s = n("261131"),
   a = n("828777"),
   o = n("49111"),
   l = n("492249");
@@ -27,12 +27,12 @@ function u() {
   i.default.connect()
 }
 
-function d() {
+function c() {
   i.default.disconnect()
 }
 
-function c(e, t) {
-  if (!__OVERLAY__) throw new s.default({
+function d(e, t) {
+  if (!__OVERLAY__) throw new r.default({
     errorCode: o.RPCErrors.UNKNOWN_ERROR
   }, "called from wrong app context");
   i.default.subscribe(o.RPCEvents.OVERLAY, {
@@ -41,33 +41,33 @@ function c(e, t) {
 }
 
 function f(e, t) {
-  if (__OVERLAY__) throw new s.default({
+  if (__OVERLAY__) throw new r.default({
     errorCode: o.RPCErrors.UNKNOWN_ERROR
   }, "called from wrong app context");
-  r.default.setCommandHandler(o.RPCCommands.OVERLAY, {
+  s.default.setCommandHandler(o.RPCCommands.OVERLAY, {
     scope: l.RPC_PRIVATE_SCOPE,
     handler(n) {
       let {
         args: i
       } = n;
-      if (!t(i.token)) throw new s.default({
+      if (!t(i.token)) throw new r.default({
         errorCode: o.RPCErrors.INVALID_TOKEN
       }, "Invalid RPC auth token provided");
       e((0, a.deserializeObject)(i))
     }
-  }), r.default.setEventHandler(o.RPCEvents.OVERLAY, {
+  }), s.default.setEventHandler(o.RPCEvents.OVERLAY, {
     scope: l.RPC_PRIVATE_SCOPE,
     handler(e) {
       let {
         args: n
       } = e;
-      if (!t(n.token)) throw new s.default({
+      if (!t(n.token)) throw new r.default({
         errorCode: o.RPCErrors.INVALID_TOKEN
       }, "Invalid RPC auth token provided")
     }
   })
 }
 
-function _(e) {
-  __OVERLAY__ ? i.default.request(o.RPCCommands.OVERLAY, (0, a.serializeObject)(e)) : r.default.dispatchToSubscriptions(o.RPCEvents.OVERLAY, {}, (0, a.serializeObject)(e))
+function E(e) {
+  __OVERLAY__ ? i.default.request(o.RPCCommands.OVERLAY, (0, a.serializeObject)(e)) : s.default.dispatchToSubscriptions(o.RPCEvents.OVERLAY, {}, (0, a.serializeObject)(e))
 }

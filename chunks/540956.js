@@ -4,34 +4,34 @@ var DataView = n("864259"),
   Promise = n("23588"),
   Set = n("892933"),
   WeakMap = n("445269"),
-  r = n("33426"),
-  i = n("6906"),
-  o = "[object Map]",
-  s = "[object Promise]",
-  a = "[object Set]",
-  c = "[object WeakMap]",
-  u = "[object DataView]",
-  l = i(DataView),
-  d = i(Map),
-  f = i(Promise),
-  p = i(Set),
-  h = i(WeakMap),
-  v = r;
-(DataView && v(new DataView(new ArrayBuffer(1))) != u || Map && v(new Map) != o || Promise && v(Promise.resolve()) != s || Set && v(new Set) != a || WeakMap && v(new WeakMap) != c) && (v = function(e) {
-  var t = r(e),
-    n = "[object Object]" == t ? e.constructor : void 0,
-    v = n ? i(n) : "";
-  if (v) switch (v) {
-    case l:
-      return u;
-    case d:
-      return o;
-    case f:
-      return s;
+  e = n("33426"),
+  o = n("6906"),
+  i = "[object Map]",
+  u = "[object Promise]",
+  c = "[object Set]",
+  a = "[object WeakMap]",
+  f = "[object DataView]",
+  s = o(DataView),
+  p = o(Map),
+  v = o(Promise),
+  l = o(Set),
+  h = o(WeakMap),
+  _ = e;
+(DataView && _(new DataView(new ArrayBuffer(1))) != f || Map && _(new Map) != i || Promise && _(Promise.resolve()) != u || Set && _(new Set) != c || WeakMap && _(new WeakMap) != a) && (_ = function(t) {
+  var r = e(t),
+    n = "[object Object]" == r ? t.constructor : void 0,
+    _ = n ? o(n) : "";
+  if (_) switch (_) {
+    case s:
+      return f;
     case p:
-      return a;
+      return i;
+    case v:
+      return u;
+    case l:
+      return c;
     case h:
-      return c
+      return a
   }
-  return t
-}), e.exports = v
+  return r
+}), t.exports = _

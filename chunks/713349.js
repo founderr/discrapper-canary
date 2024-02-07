@@ -13,13 +13,13 @@ E.r(_), E.d(_, {
     return S
   },
   FavoriteStickers: function() {
-    return O
+    return A
   },
   StickerFrecency: function() {
     return R
   },
   FavoriteEmojis: function() {
-    return L
+    return u
   },
   EmojiFrecency: function() {
     return C
@@ -67,13 +67,13 @@ class a extends n.MessageType {
           o.favoriteGifs = s.internalBinaryRead(e, e.uint32(), E, o.favoriteGifs);
           break;
         case 3:
-          o.favoriteStickers = O.internalBinaryRead(e, e.uint32(), E, o.favoriteStickers);
+          o.favoriteStickers = A.internalBinaryRead(e, e.uint32(), E, o.favoriteStickers);
           break;
         case 4:
           o.stickerFrecency = R.internalBinaryRead(e, e.uint32(), E, o.stickerFrecency);
           break;
         case 5:
-          o.favoriteEmojis = L.internalBinaryRead(e, e.uint32(), E, o.favoriteEmojis);
+          o.favoriteEmojis = u.internalBinaryRead(e, e.uint32(), E, o.favoriteEmojis);
           break;
         case 6:
           o.emojiFrecency = C.internalBinaryRead(e, e.uint32(), E, o.emojiFrecency);
@@ -106,7 +106,7 @@ class a extends n.MessageType {
     return o
   }
   internalBinaryWrite(e, _, E) {
-    e.versions && r.Versions.internalBinaryWrite(e.versions, _.tag(1, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteGifs && s.internalBinaryWrite(e.favoriteGifs, _.tag(2, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteStickers && O.internalBinaryWrite(e.favoriteStickers, _.tag(3, n.WireType.LengthDelimited).fork(), E).join(), e.stickerFrecency && R.internalBinaryWrite(e.stickerFrecency, _.tag(4, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteEmojis && L.internalBinaryWrite(e.favoriteEmojis, _.tag(5, n.WireType.LengthDelimited).fork(), E).join(), e.emojiFrecency && C.internalBinaryWrite(e.emojiFrecency, _.tag(6, n.WireType.LengthDelimited).fork(), E).join(), e.applicationCommandFrecency && c.internalBinaryWrite(e.applicationCommandFrecency, _.tag(7, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteSoundboardSounds && h.internalBinaryWrite(e.favoriteSoundboardSounds, _.tag(8, n.WireType.LengthDelimited).fork(), E).join(), e.applicationFrecency && y.internalBinaryWrite(e.applicationFrecency, _.tag(9, n.WireType.LengthDelimited).fork(), E).join(), e.heardSoundFrecency && m.internalBinaryWrite(e.heardSoundFrecency, _.tag(10, n.WireType.LengthDelimited).fork(), E).join(), e.playedSoundFrecency && p.internalBinaryWrite(e.playedSoundFrecency, _.tag(11, n.WireType.LengthDelimited).fork(), E).join(), e.guildAndChannelFrecency && f.internalBinaryWrite(e.guildAndChannelFrecency, _.tag(12, n.WireType.LengthDelimited).fork(), E).join();
+    e.versions && r.Versions.internalBinaryWrite(e.versions, _.tag(1, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteGifs && s.internalBinaryWrite(e.favoriteGifs, _.tag(2, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteStickers && A.internalBinaryWrite(e.favoriteStickers, _.tag(3, n.WireType.LengthDelimited).fork(), E).join(), e.stickerFrecency && R.internalBinaryWrite(e.stickerFrecency, _.tag(4, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteEmojis && u.internalBinaryWrite(e.favoriteEmojis, _.tag(5, n.WireType.LengthDelimited).fork(), E).join(), e.emojiFrecency && C.internalBinaryWrite(e.emojiFrecency, _.tag(6, n.WireType.LengthDelimited).fork(), E).join(), e.applicationCommandFrecency && c.internalBinaryWrite(e.applicationCommandFrecency, _.tag(7, n.WireType.LengthDelimited).fork(), E).join(), e.favoriteSoundboardSounds && h.internalBinaryWrite(e.favoriteSoundboardSounds, _.tag(8, n.WireType.LengthDelimited).fork(), E).join(), e.applicationFrecency && y.internalBinaryWrite(e.applicationFrecency, _.tag(9, n.WireType.LengthDelimited).fork(), E).join(), e.heardSoundFrecency && m.internalBinaryWrite(e.heardSoundFrecency, _.tag(10, n.WireType.LengthDelimited).fork(), E).join(), e.playedSoundFrecency && p.internalBinaryWrite(e.playedSoundFrecency, _.tag(11, n.WireType.LengthDelimited).fork(), E).join(), e.guildAndChannelFrecency && f.internalBinaryWrite(e.guildAndChannelFrecency, _.tag(12, n.WireType.LengthDelimited).fork(), E).join();
     let t = E.writeUnknownFields;
     return !1 !== t && (!0 == t ? n.UnknownFieldHandler.onWrite : t)(this.typeName, e, _), _
   }
@@ -125,7 +125,7 @@ class a extends n.MessageType {
       no: 3,
       name: "favorite_stickers",
       kind: "message",
-      T: () => O
+      T: () => A
     }, {
       no: 4,
       name: "sticker_frecency",
@@ -135,7 +135,7 @@ class a extends n.MessageType {
       no: 5,
       name: "favorite_emojis",
       kind: "message",
-      T: () => L
+      T: () => u
     }, {
       no: 6,
       name: "emoji_frecency",
@@ -377,8 +377,8 @@ class N extends n.MessageType {
     }])
   }
 }
-let O = new N;
-class A extends n.MessageType {
+let A = new N;
+class O extends n.MessageType {
   create(e) {
     let _ = {
       stickers: {}
@@ -440,7 +440,7 @@ class A extends n.MessageType {
     }])
   }
 }
-let R = new A;
+let R = new O;
 class l extends n.MessageType {
   create(e) {
     let _ = {
@@ -481,8 +481,8 @@ class l extends n.MessageType {
     }])
   }
 }
-let L = new l;
-class u extends n.MessageType {
+let u = new l;
+class L extends n.MessageType {
   create(e) {
     let _ = {
       emojis: {}
@@ -544,7 +544,7 @@ class u extends n.MessageType {
     }])
   }
 }
-let C = new u;
+let C = new L;
 class D extends n.MessageType {
   create(e) {
     let _ = {

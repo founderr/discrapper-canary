@@ -10,49 +10,49 @@ n.r(t), n.d(t, {
     return o
   },
   MAX_NUM_RULES: function() {
-    return l
+    return d
   },
   MAX_RULE_LENGTH: function() {
     return u
   },
   MAX_QUESTION_LENGTH: function() {
-    return d
+    return l
   },
   MAX_NUM_CHOICES: function() {
-    return c
-  },
-  MAX_CHOICE_LENGTH: function() {
     return f
   },
-  MAX_TEXT_RESPONSE_LENGTH: function() {
+  MAX_CHOICE_LENGTH: function() {
     return _
   },
-  MAX_PARAGRAPH_RESPONSE_LENGTH: function() {
-    return h
+  MAX_TEXT_RESPONSE_LENGTH: function() {
+    return c
   },
-  MAX_DESCRIPTION_LENGTH: function() {
+  MAX_PARAGRAPH_RESPONSE_LENGTH: function() {
     return g
   },
-  MEMBER_VERIFICATION_TYPE: function() {
+  MAX_DESCRIPTION_LENGTH: function() {
     return m
   },
+  MEMBER_VERIFICATION_TYPE: function() {
+    return h
+  },
   IN_APP_MEMBER_VERIFICATION_MODAL_KEY: function() {
-    return E
+    return v
   }
 }), n("222007");
-var i, s = n("567054");
-s.VerificationFormFieldTypes.VERIFICATION;
-let r = new Set([s.VerificationFormFieldTypes.TERMS]),
-  a = new Set([s.VerificationFormFieldTypes.MULTIPLE_CHOICE, s.VerificationFormFieldTypes.TEXT_INPUT, s.VerificationFormFieldTypes.PARAGRAPH]),
+var s, i = n("567054");
+i.VerificationFormFieldTypes.VERIFICATION;
+let r = new Set([i.VerificationFormFieldTypes.TERMS]),
+  a = new Set([i.VerificationFormFieldTypes.MULTIPLE_CHOICE, i.VerificationFormFieldTypes.TEXT_INPUT, i.VerificationFormFieldTypes.PARAGRAPH]),
   o = 5,
-  l = 16,
+  d = 16,
   u = 300,
-  d = 300,
-  c = 8,
-  f = 150,
+  l = 300,
+  f = 8,
   _ = 150,
-  h = 1e3,
-  g = 300,
-  m = "Membership Gating",
-  E = "in-app-member-verification";
-(i || (i = {})).VERIFICATION_INFO = "VERIFICATION_INFO"
+  c = 150,
+  g = 1e3,
+  m = 300,
+  h = "Membership Gating",
+  v = "in-app-member-verification";
+(s || (s = {})).VERIFICATION_INFO = "VERIFICATION_INFO"

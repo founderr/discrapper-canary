@@ -39,11 +39,11 @@ function N(e, _) {
   }
 }
 
-function O(e) {
+function A(e) {
   let _ = new Set(i);
   _.delete(e), i = _
 }
-class A extends t.default.Store {
+class O extends t.default.Store {
   get quests() {
     return r
   }
@@ -66,8 +66,8 @@ class A extends t.default.Store {
     return T.get(e)
   }
 }
-A.displayName = "QuestsStore";
-var R = new A(o.default, {
+O.displayName = "QuestsStore";
+var R = new O(o.default, {
   LOGOUT: function() {
     n = !1, r = new Map, a = 0, i = new Set
   },
@@ -104,13 +104,13 @@ var R = new A(o.default, {
     } = e;
     S(_.questId, {
       userStatus: _
-    }), O(_.questId)
+    }), A(_.questId)
   },
   QUESTS_ENROLL_FAILURE: function(e) {
     let {
       questId: _
     } = e;
-    O(_)
+    A(_)
   },
   QUESTS_FETCH_REWARD_CODE_BEGIN: function(e) {
     let {

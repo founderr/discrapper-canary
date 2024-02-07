@@ -25,8 +25,8 @@ var a = n("37983"),
   m = n("845038"),
   E = n("374014"),
   C = n("223913"),
-  S = n("709463"),
-  g = n("264429"),
+  g = n("709463"),
+  S = n("264429"),
   _ = n("930291"),
   I = n("506885"),
   T = n("981601"),
@@ -161,7 +161,7 @@ class U extends l.PureComponent {
         channelId: t.id,
         guildId: t.guild_id
       };
-      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, S.default)(l), u.default.selectParticipant(l.channelId, (0, E.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
+      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, g.default)(l), u.default.selectParticipant(l.channelId, (0, E.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
     }, this.handleJoinVoice = () => {
       let {
         user: e,
@@ -205,7 +205,7 @@ class U extends l.PureComponent {
         previewIsOpen: n,
         location: l
       } = this.props;
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(S.default, {
         user: e,
         channel: t,
         onWatch: this.handleWatchStream,
@@ -240,8 +240,8 @@ class U extends l.PureComponent {
         priority: p,
         collapsed: E,
         isStreaming: C,
-        isGuest: S,
-        nick: g,
+        isGuest: g,
+        nick: S,
         video: _,
         serverMute: I,
         serverDeaf: T,
@@ -262,11 +262,11 @@ class U extends l.PureComponent {
         localMute: u,
         localVideoDisabled: d,
         isStreaming: C,
-        isGuest: S,
+        isGuest: g,
         video: _,
         priority: p,
         deaf: h,
-        nick: g,
+        nick: S,
         collapsed: E,
         overlap: E,
         serverMute: I,

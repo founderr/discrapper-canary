@@ -15,12 +15,12 @@ var t = E("37983"),
   T = E("825573"),
   S = E("77078"),
   N = E("206230"),
-  O = E("338733"),
-  A = E("584369"),
+  A = E("338733"),
+  O = E("584369"),
   R = E("915639"),
   l = E("161778"),
-  L = E("471671"),
-  u = E("439932"),
+  u = E("471671"),
+  L = E("439932"),
   C = E("779601"),
   D = E("69927"),
   c = E("983689"),
@@ -39,8 +39,8 @@ var h = o.memo(function(e) {
   let {
     clientThemesClassName: U,
     clientThemesCSS: h
-  } = (0, O.default)(), P = o.createElement("style", {
-    [O.CLIENT_THEMES_DATA_ATTRIBUTE]: !0
+  } = (0, A.default)(), P = o.createElement("style", {
+    [A.CLIENT_THEMES_DATA_ATTRIBUTE]: !0
   }, h);
   return (0, t.jsxs)(a.Helmet, {
     children: [function(e) {
@@ -50,11 +50,11 @@ var h = o.memo(function(e) {
       } = (0, s.useStateFromStoresObject)([l.default, R.default], () => ({
         locale: R.default.locale,
         theme: l.default.theme
-      })), n = (0, s.useStateFromStores)([L.default], () => L.default.isFocused(), []), {
+      })), n = (0, s.useStateFromStores)([u.default], () => u.default.isFocused(), []), {
         reducedMotion: a,
         alwaysShowLinkDecorations: T
       } = o.useContext(S.AccessibilityPreferencesContext), {
-        fontScale: O,
+        fontScale: A,
         fontScaleClass: D,
         keyboardModeEnabled: U,
         saturation: h,
@@ -83,11 +83,11 @@ var h = o.memo(function(e) {
       }), p = (0, i.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
       (0, c.default)(window, g);
       let y = (0, d.default)(window, __OVERLAY__ || n),
-        B = (0, s.useStateFromStores)([A.default], () => A.default.sidebarWidth),
+        B = (0, s.useStateFromStores)([O.default], () => O.default.sidebarWidth),
         f = (0, S.useRedesignIconContext)().enabled;
       return (0, t.jsx)("html", {
         lang: _,
-        style: "font-size: ".concat(O, "%; --saturation-factor: ").concat(h, "; --devtools-sidebar-width: ").concat(B, "px;"),
+        style: "font-size: ".concat(A, "%; --saturation-factor: ").concat(h, "; --devtools-sidebar-width: ").concat(B, "px;"),
         className: r(e, {
           overlay: __OVERLAY__,
           "mouse-mode": y,
@@ -102,7 +102,7 @@ var h = o.memo(function(e) {
           "disable-forced-colors": !m && "active" === G,
           "enable-forced-colors": m,
           "show-redesigned-icons": f
-        }, (0, u.getThemeClass)(E), (0, C.default)(), D)
+        }, (0, L.getThemeClass)(E), (0, C.default)(), D)
       })
     }(U), function() {
       let [e, _] = o.useState([]);

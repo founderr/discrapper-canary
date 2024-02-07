@@ -1,17 +1,17 @@
 "use strict";
 
-function i() {
+function s() {
   return !1
 }
 
-function s() {
+function i() {
   return null
 }
 n.r(t), n.d(t, {
   isSlowNetwork: function() {
-    return i
+    return s
   },
   getSignalStrength: function() {
-    return s
+    return i
   }
 })

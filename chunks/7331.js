@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsUserInCreatorMonetizationEligibleCountry: function() {
-    return r
+    return s
   },
   isUserInCreatorMonetizationEligibleCountry: function() {
     return a
@@ -16,16 +16,16 @@ n.r(t), n.d(t, {
     return u
   },
   isMonetizationWaitlistEnabledForGuild: function() {
-    return d
+    return c
   },
   isCreatorMonetizationNagActivateEnabled: function() {
-    return c
+    return d
   }
 });
 var i = n("615923"),
-  s = n("49111");
+  r = n("49111");
 
-function r() {
+function s() {
   let {
     isUserEligibleForCreatorMonetization: e
   } = i.CreatorMonetizationCountryAllowlistExperiment.useExperiment({
@@ -73,7 +73,7 @@ function o(e) {
       }, {
         autoTrackExposure: !1
       });
-      return null != e && e.hasFeature(s.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE) && t
+      return null != e && e.hasFeature(r.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE) && t
     }(e);
   return t || n
 }
@@ -97,7 +97,7 @@ function l(e) {
     } = i.CreatorMonetizationRavenOnboardingUserExperiment.getCurrentConfig({
       location: "e3bb71_8"
     });
-    return null != e && e.hasFeature(s.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE) && t
+    return null != e && e.hasFeature(r.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE) && t
   }(e)
 }
 
@@ -113,7 +113,7 @@ function u(e) {
   return t
 }
 
-function d(e) {
+function c(e) {
   let {
     enableWaitlist: t
   } = i.CreatorMonetizationOnboardingWaitlistExperiment.getCurrentConfig({
@@ -123,7 +123,7 @@ function d(e) {
   return t
 }
 
-function c() {
+function d() {
   let {
     enableCreatorMonetizationNagActivateForUser: e
   } = i.CreatorMonetizationNagActivateExperiment.getCurrentConfig({

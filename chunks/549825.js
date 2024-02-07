@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
+var r = n("414456"),
+  i = n.n(r),
   a = n("77078"),
   l = n("978970"),
   u = n("36694"),
@@ -18,16 +18,16 @@ function d(e) {
   let {
     grantedPermissions: t,
     disabledPermissions: n,
-    grantedPermissionsHeader: i,
+    grantedPermissionsHeader: r,
     disabledPermissionsHeader: d,
     className: f
   } = e;
   return (0, s.jsxs)("div", {
-    className: r(c.list, f),
+    className: i(c.list, f),
     children: [null != t && t.length > 0 ? (0, s.jsxs)(s.Fragment, {
-      children: [null != i ? (0, s.jsx)(a.FormTitle, {
+      children: [null != r ? (0, s.jsx)(a.FormTitle, {
         className: c.permissionHeader,
-        children: i
+        children: r
       }) : null, (0, s.jsx)("div", {
         className: c.container,
         children: t.map(e => (0, s.jsxs)("div", {

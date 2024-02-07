@@ -21,8 +21,8 @@ var l, a, s = n("917351"),
   m = n("162771"),
   E = n("282109"),
   g = n("316133"),
-  S = n("449008"),
-  I = n("123561"),
+  I = n("449008"),
+  S = n("123561"),
   _ = n("49111");
 (a = l || (l = {})).HIDDEN = "hidden", a.UNREAD = "unread", a.MENTIONS = "mentions", a.VOICE_CHANNELS = "voice-channels";
 let N = {
@@ -62,7 +62,7 @@ function M(e) {
   var t, n, l;
   let {
     guildChannels: a
-  } = I.default.getGuildWithoutChangingCommunityRows(e), s = a.getChannels(null !== (t = L[e]) && void 0 !== t ? t : []);
+  } = S.default.getGuildWithoutChangingCommunityRows(e), s = a.getChannels(null !== (t = L[e]) && void 0 !== t ? t : []);
   if (null == s || 0 === s.length) return !1;
   let r = null,
     o = null,
@@ -73,7 +73,7 @@ function M(e) {
     h = !1,
     C = a.getCategoryFromSection(a.voiceChannelsSectionNumber),
     m = null !== (n = null == C ? void 0 : C.getShownChannelIds()) && void 0 !== n ? n : [],
-    [E, g, S] = a.getSlicedChannels(s);
+    [E, g, I] = a.getSlicedChannels(s);
   for (let e = 0; e < g.length; e++) {
     let t = g[e];
     if ((v(t.id) || i.some(t.threadIds, v)) && (f = !1), (x(t.id) || i.some(t.threadIds, x)) && (c = !1), m.includes(t.id) && (h = !0), !f && !c && h) break
@@ -88,8 +88,8 @@ function M(e) {
       (v(t.id) || i.some(t.threadIds, v)) && (null == o && (o = t.id), T = !0), (x(t.id) || i.some(t.threadIds, x)) && (null == r && (r = t.id), _ += p.default.getMentionCount(t.id) + i.sumBy(t.threadIds, p.default.getMentionCount))
     }
   if (f || c)
-    for (let e = 0; e < S.length; e++) {
-      let t = S[e];
+    for (let e = 0; e < I.length; e++) {
+      let t = I[e];
       if (!f && !c) break;
       (v(t.id) || i.some(t.threadIds, v)) && (null == d && (d = t.id), O = !0), (x(t.id) || i.some(t.threadIds, x)) && (null == u && (u = t.id), M += p.default.getMentionCount(t.id) + i.sumBy(t.threadIds, p.default.getMentionCount))
     }
@@ -168,7 +168,7 @@ function G(e) {
 }
 class U extends r.default.Store {
   initialize() {
-    this.waitFor(I.default, p.default, E.default, f.default, g.default, m.default, C.default)
+    this.waitFor(S.default, p.default, E.default, f.default, g.default, m.default, C.default)
   }
   getUnreadStateForGuildId(e) {
     var t;
@@ -194,7 +194,7 @@ var P = new U(o.default, {
         channelId: n
       } = e;
       return null === (t = h.default.getChannel(n)) || void 0 === t ? void 0 : t.guild_id
-    }).filter(S.isNotNullish).uniq().forEach(e => {
+    }).filter(I.isNotNullish).uniq().forEach(e => {
       let t = C.default.getGuild(e);
       null != t && t.hasFeature(_.GuildFeatures.COMMUNITY) && O(e) && (n = !0)
     }), n

@@ -1,63 +1,63 @@
 "use strict";
 n.r(t), n.d(t, {
   LobbyError: function() {
-    return l
+    return d
   },
   default: function() {
-    return h
+    return g
   }
 }), n("424973");
-var i = n("917351"),
-  s = n.n(i),
+var s = n("917351"),
+  i = n.n(s),
   r = n("446674"),
   a = n("913144"),
   o = n("49111");
-class l {
+class d {
   constructor(e) {
     this.code = e
   }
 }
 let u = {},
-  d = {};
+  l = {};
 
-function c(e, t) {
-  if (null == d[e]) return null;
+function f(e, t) {
+  if (null == l[e]) return null;
   let {
     socketId: n,
-    timeout: i,
-    resolve: s,
+    timeout: s,
+    resolve: i,
     reject: r
-  } = d[e];
-  return delete d[e], null != i && clearTimeout(i), null != s && null != r && t(s, r), n
+  } = l[e];
+  return delete l[e], null != s && clearTimeout(s), null != i && null != r && t(i, r), n
 }
 
-function f(e) {
+function _(e) {
   let {
     lobbyId: t,
     member: {
       user: n,
-      metadata: i
+      metadata: s
     }
-  } = e, s = u[t];
-  if (null == s) return !1;
-  let r = s.members.find(e => e.user.id === n.id);
-  null != r ? (r.user = n, r.metadata = i) : s.members.push({
+  } = e, i = u[t];
+  if (null == i) return !1;
+  let r = i.members.find(e => e.user.id === n.id);
+  null != r ? (r.user = n, r.metadata = s) : i.members.push({
     user: n,
-    metadata: i
+    metadata: s
   })
 }
-class _ extends r.default.Store {
+class c extends r.default.Store {
   getLobbies() {
     return u
   }
   getLobbiesWithVoice() {
-    return s.filter(u, e => e.voice)
+    return i.filter(u, e => e.voice)
   }
   getLobby(e) {
     return u[e]
   }
   getPendingLobbies() {
-    return s.map(d, (e, t) => {
+    return i.map(l, (e, t) => {
       let {
         secret: n
       } = e;
@@ -68,8 +68,8 @@ class _ extends r.default.Store {
     })
   }
 }
-_.displayName = "LobbyStore";
-var h = new _(a.default, {
+c.displayName = "LobbyStore";
+var g = new c(a.default, {
   CONNECTION_OPEN: function() {
     u = {}
   },
@@ -80,18 +80,18 @@ var h = new _(a.default, {
     let {
       socketId: t,
       lobbyId: n,
-      lobbySecret: i,
-      resolve: s,
+      lobbySecret: s,
+      resolve: i,
       reject: r
     } = e;
-    if (null != d[n] || null != u[n]) {
-      null != r && r(new l(o.LobbyErrors.ALREADY_CONNECTING));
+    if (null != l[n] || null != u[n]) {
+      null != r && r(new d(o.LobbyErrors.ALREADY_CONNECTING));
       return
     }
-    d[n] = {
+    l[n] = {
       socketId: t,
-      secret: i,
-      resolve: s,
+      secret: s,
+      resolve: i,
       reject: r,
       timeout: __OVERLAY__ ? null : setTimeout(() => {
         a.default.dispatch({
@@ -106,12 +106,12 @@ var h = new _(a.default, {
     let {
       lobbyId: t
     } = e;
-    c(t, (e, t) => t(new l(o.LobbyErrors.NO_ERROR)))
+    f(t, (e, t) => t(new d(o.LobbyErrors.NO_ERROR)))
   },
   LOBBY_CREATE: function(e) {
     let {
       lobby: t
-    } = e, n = c(t.id, e => e(t));
+    } = e, n = f(t.id, e => e(t));
     null != n && (u[t.id] = {
       socketId: n,
       voice: !1,
@@ -133,19 +133,19 @@ var h = new _(a.default, {
       lobbyId: t,
       reason: n
     } = e;
-    delete u[t], c(t, (e, t) => t(new l(n)))
+    delete u[t], f(t, (e, t) => t(new d(n)))
   },
-  LOBBY_MEMBER_CONNECT: f,
-  LOBBY_MEMBER_UPDATE: f,
+  LOBBY_MEMBER_CONNECT: _,
+  LOBBY_MEMBER_UPDATE: _,
   LOBBY_MEMBER_DISCONNECT: function(e) {
     let {
       lobbyId: t,
       member: {
         user: n
       }
-    } = e, i = u[t];
-    if (null == i) return !1;
-    i.members = i.members.filter(e => e.user.id !== n.id)
+    } = e, s = u[t];
+    if (null == s) return !1;
+    s.members = s.members.filter(e => e.user.id !== n.id)
   },
   LOBBY_VOICE_CONNECT: function(e) {
     let {
@@ -165,7 +165,7 @@ var h = new _(a.default, {
     let {
       socketId: t
     } = e;
-    s.forEach(u, e => {
+    i.forEach(u, e => {
       e.socketId === t && a.default.dispatch({
         type: "LOBBY_DISCONNECT",
         lobbyId: e.id

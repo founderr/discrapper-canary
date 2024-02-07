@@ -4,101 +4,101 @@ n.r(t), n.d(t, {
     return c
   }
 }), n("222007");
-var i = n("37983"),
+var r = n("37983"),
   s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
-  o = n("77078"),
-  l = n("782340"),
-  u = n("347129");
+  o = n("414456"),
+  a = n.n(o),
+  l = n("77078"),
+  u = n("782340"),
+  i = n("347129");
 class d extends s.PureComponent {
   render() {
     var e;
     let {
       title: t,
       actionText: n,
-      children: r,
+      children: o,
       error: d,
       isLoading: c,
-      maxLength: f,
-      transitionState: _,
-      helpMessage: h,
-      retryPrompt: g,
-      retrySuccessMessage: m
+      maxLength: _,
+      transitionState: E,
+      helpMessage: f,
+      retryPrompt: A,
+      retrySuccessMessage: I
     } = this.props, {
-      code: E,
-      errorMessage: p,
-      retrySuccess: v
-    } = this.state, S = s.Children.count(r) > 0 ? (0, i.jsx)(o.Card, {
-      type: o.Card.Types.WARNING,
-      className: u.card,
-      children: (0, i.jsx)(o.Text, {
+      code: R,
+      errorMessage: N,
+      retrySuccess: p
+    } = this.state, S = s.Children.count(o) > 0 ? (0, r.jsx)(l.Card, {
+      type: l.Card.Types.WARNING,
+      className: i.card,
+      children: (0, r.jsx)(l.Text, {
         variant: "text-md/normal",
-        children: r
+        children: o
       })
-    }) : null, T = null != g ? (0, i.jsxs)(o.Text, {
-      className: a(u.submitText, u.spacing),
+    }) : null, T = null != A ? (0, r.jsxs)(l.Text, {
+      className: a(i.submitText, i.spacing),
       variant: "text-sm/normal",
-      children: [(0, i.jsx)("br", {}), (0, i.jsx)(o.Clickable, {
-        className: a(u.spacing, u.link),
+      children: [(0, r.jsx)("br", {}), (0, r.jsx)(l.Clickable, {
+        className: a(i.spacing, i.link),
         onClick: this.handleRetry,
-        children: (0, i.jsx)(o.Anchor, {
-          children: g
+        children: (0, r.jsx)(l.Anchor, {
+          children: A
         })
       })]
-    }) : null, I = v ? (0, i.jsx)(o.Card, {
-      type: o.Card.Types.SUCCESS,
-      className: u.card,
-      children: (0, i.jsx)(o.Text, {
+    }) : null, C = p ? (0, r.jsx)(l.Card, {
+      type: l.Card.Types.SUCCESS,
+      className: i.card,
+      children: (0, r.jsx)(l.Text, {
         variant: "text-md/normal",
-        children: m
+        children: I
       })
     }) : null;
-    return (0, i.jsx)(o.ModalRoot, {
-      transitionState: _,
-      children: (0, i.jsxs)("form", {
+    return (0, r.jsx)(l.ModalRoot, {
+      transitionState: E,
+      children: (0, r.jsxs)("form", {
         onSubmit: this.handleSubmit,
-        children: [(0, i.jsx)(o.ModalHeader, {
+        children: [(0, r.jsx)(l.ModalHeader, {
           separator: !1,
-          children: (0, i.jsx)(o.Heading, {
+          children: (0, r.jsx)(l.Heading, {
             variant: "heading-lg/semibold",
             children: t
           })
-        }), (0, i.jsxs)(o.ModalContent, {
-          children: [null != h ? (0, i.jsx)(o.Text, {
+        }), (0, r.jsxs)(l.ModalContent, {
+          children: [null != f ? (0, r.jsx)(l.Text, {
             color: "text-normal",
             variant: "text-md/normal",
-            className: u.spacing,
-            children: h
-          }) : null, S, I, (0, i.jsxs)(o.FormItem, {
+            className: i.spacing,
+            children: f
+          }) : null, S, C, (0, r.jsxs)(l.FormItem, {
             title: this.getLabelText(),
-            className: u.spacing,
-            children: [(0, i.jsx)(o.TextInput, {
+            className: i.spacing,
+            children: [(0, r.jsx)(l.TextInput, {
               inputRef: this.setRef,
               onChange: this.handleCodeChange,
               placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
-              maxLength: null != f ? f : 10,
-              value: E,
+              maxLength: null != _ ? _ : 10,
+              value: R,
               autoComplete: "one-time-code",
               autoFocus: !0
-            }), this.errorPresent() ? (0, i.jsx)(o.Text, {
+            }), this.errorPresent() ? (0, r.jsx)(l.Text, {
               color: "text-danger",
               variant: "text-xs/normal",
-              className: u.error,
-              children: null != d ? d : p
+              className: i.error,
+              children: null != d ? d : N
             }) : null, T]
           })]
-        }), (0, i.jsxs)(o.ModalFooter, {
-          children: [(0, i.jsx)(o.Button, {
+        }), (0, r.jsxs)(l.ModalFooter, {
+          children: [(0, r.jsx)(l.Button, {
             type: "submit",
-            disabled: c || 0 === E.length,
-            children: null != n ? n : l.default.Messages.CONFIRM
-          }), (0, i.jsx)(o.Button, {
+            disabled: c || 0 === R.length,
+            children: null != n ? n : u.default.Messages.CONFIRM
+          }), (0, r.jsx)(l.Button, {
             onClick: this.handleCancel,
             disabled: c,
-            look: o.Button.Looks.LINK,
-            color: o.Button.Colors.PRIMARY,
-            children: l.default.Messages.CANCEL
+            look: l.Button.Looks.LINK,
+            color: l.Button.Colors.PRIMARY,
+            children: u.default.Messages.CANCEL
           })]
         })]
       })
@@ -113,8 +113,8 @@ class d extends s.PureComponent {
       this._input = e
     }, this.getLabelText = () => {
       var e;
-      return null !== (e = this.props.label) && void 0 !== e ? e : this.props.disallowBackupCodes ? l.default.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL : l.default.Messages.TWO_FA_ENTER_TOKEN_LABEL
-    }, this.getSupportedCodeTypes = () => this.props.disallowBackupCodes ? l.default.Messages.TWO_FA_AUTH_CODE_NO_BACKUP : l.default.Messages.TWO_FA_AUTH_CODE, this.getPlaceholder = () => {
+      return null !== (e = this.props.label) && void 0 !== e ? e : this.props.disallowBackupCodes ? u.default.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL : u.default.Messages.TWO_FA_ENTER_TOKEN_LABEL
+    }, this.getSupportedCodeTypes = () => this.props.disallowBackupCodes ? u.default.Messages.TWO_FA_AUTH_CODE_NO_BACKUP : u.default.Messages.TWO_FA_AUTH_CODE, this.getPlaceholder = () => {
       var e;
       return this.props.forceNoPlaceholder ? null : null !== (e = this.props.placeholder) && void 0 !== e ? e : this.getSupportedCodeTypes()
     }, this.errorPresent = () => null != this.props.error && "" !== this.props.error || null != this.state.errorMessage && "" !== this.state.errorMessage, this.handleRetry = () => {

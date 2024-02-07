@@ -1,5 +1,5 @@
 "use strict";
-e.exports = {
+t.exports = {
   2: "need dictionary",
   1: "stream end",
   0: "",

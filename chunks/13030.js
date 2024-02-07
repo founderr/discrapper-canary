@@ -1,5 +1,5 @@
 "use strict";
-var i, s, r, a;
+var i, r, s, a;
 n.r(t), n.d(t, {
   ExpressionPickerViewType: function() {
     return i
@@ -11,9 +11,9 @@ n.r(t), n.d(t, {
     return l
   },
   ExpressionPickerWidths: function() {
-    return s
+    return r
   }
-}), (r = i || (i = {})).EMOJI = "emoji", r.GIF = "gif", r.STICKER = "sticker", r.SOUNDBOARD = "soundboard", r.CUSTOM_UPLOAD = "custom-upload";
+}), (s = i || (i = {})).EMOJI = "emoji", s.GIF = "gif", s.STICKER = "sticker", s.SOUNDBOARD = "soundboard", s.CUSTOM_UPLOAD = "custom-upload";
 let o = "expression-picker-chat-input-button",
   l = 498;
-(a = s || (s = {})).MIN = "min", a.MAX = "max"
+(a = r || (r = {})).MIN = "min", a.MAX = "max"

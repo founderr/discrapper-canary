@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   LocalizedPricingPromoRecord: function() {
-    return s
+    return r
   }
 });
 var i = n("666038");
-class s extends i.default {
+class r extends i.default {
   static createFromServer(e) {
     var t, n;
-    return new s({
+    return new r({
       planId: e.plan_id,
       countryCode: e.country_code,
       amount: null === (t = e.price) || void 0 === t ? void 0 : t.amount,

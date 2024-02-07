@@ -1,72 +1,72 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return _
   }
 }), n("222007");
 var s = n("37983"),
   o = n("884691"),
   a = n("446674"),
-  r = n("77078"),
-  l = n("599417"),
+  l = n("77078"),
+  r = n("599417"),
   i = n("734990"),
-  E = n("697218"),
-  _ = n("782340"),
-  u = n("679012");
+  u = n("697218"),
+  d = n("782340"),
+  E = n("679012");
 
-function d(e) {
+function _(e) {
   let {
     onNext: t,
     onClose: n
-  } = e, [d, T] = o.useState(!1), S = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), N = async e => {
-    e.preventDefault(), T(!0);
+  } = e, [_, c] = o.useState(!1), T = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), S = async e => {
+    e.preventDefault(), c(!0);
     try {
       await (0, i.sendConfirmationCode)(), t()
     } catch (n) {
-      let e = new l.default(n),
+      let e = new r.default(n),
         t = e.getAnyErrorMessage();
-      null != t && (0, r.showToast)((0, r.createToast)(t, r.ToastType.FAILURE))
+      null != t && (0, l.showToast)((0, l.createToast)(t, l.ToastType.FAILURE))
     } finally {
-      T(!1)
+      c(!1)
     }
   };
   return (0, s.jsxs)("form", {
-    onSubmit: N,
-    children: [(0, s.jsxs)(r.ModalHeader, {
+    onSubmit: S,
+    children: [(0, s.jsxs)(l.ModalHeader, {
       separator: !1,
-      className: u.header,
-      children: [(0, s.jsx)(r.Heading, {
-        className: u.title,
+      className: E.header,
+      children: [(0, s.jsx)(l.Heading, {
+        className: E.title,
         variant: "heading-xl/extrabold",
-        children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_TITLE
-      }), (0, s.jsx)(r.ModalCloseButton, {
+        children: d.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_TITLE
+      }), (0, s.jsx)(l.ModalCloseButton, {
         onClick: n,
-        className: u.modalCloseButton
+        className: E.modalCloseButton
       })]
-    }), (0, s.jsx)(r.ModalContent, {
-      className: u.content,
-      children: (0, s.jsx)(r.Text, {
-        className: u.description,
+    }), (0, s.jsx)(l.ModalContent, {
+      className: E.content,
+      children: (0, s.jsx)(l.Text, {
+        className: E.description,
         variant: "text-md/normal",
-        children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({
-          oldEmail: null == S ? void 0 : S.email
+        children: d.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({
+          oldEmail: null == T ? void 0 : T.email
         })
       })
-    }), (0, s.jsxs)(r.ModalFooter, {
-      className: u.modalFooter,
-      children: [(0, s.jsx)(r.Button, {
+    }), (0, s.jsxs)(l.ModalFooter, {
+      className: E.modalFooter,
+      children: [(0, s.jsx)(l.Button, {
         type: "submit",
-        color: r.Button.Colors.BRAND,
-        size: r.Button.Sizes.MEDIUM,
-        submitting: d,
-        className: u.submit,
-        children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_BUTTON
-      }), (0, s.jsx)(r.Button, {
-        className: u.cancel,
-        look: r.Button.Looks.LINK,
-        color: r.Button.Colors.PRIMARY,
+        color: l.Button.Colors.BRAND,
+        size: l.Button.Sizes.MEDIUM,
+        submitting: _,
+        className: E.submit,
+        children: d.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_BUTTON
+      }), (0, s.jsx)(l.Button, {
+        className: E.cancel,
+        look: l.Button.Looks.LINK,
+        color: l.Button.Colors.PRIMARY,
         onClick: n,
-        children: _.default.Messages.CANCEL
+        children: d.default.Messages.CANCEL
       })]
     })]
   })

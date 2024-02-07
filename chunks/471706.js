@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildOnboardingStatus: function() {
-    return s
+    return r
   },
   isOnboarding: function() {
     return l
@@ -10,16 +10,16 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var i, s, r = n("446674"),
+var i, r, s = n("446674"),
   a = n("913144"),
   o = n("49111");
 
 function l(e) {
   return null != e && ["started", "ready"].includes(e)
-}(i = s || (s = {})).STARTED = "started", i.READY = "ready", i.COMPLETED = "completed", i.NOT_APPLICABLE = "not_applicable";
+}(i = r || (r = {})).STARTED = "started", i.READY = "ready", i.COMPLETED = "completed", i.NOT_APPLICABLE = "not_applicable";
 let u = {},
-  d = {};
-class c extends r.default.Store {
+  c = {};
+class d extends s.default.Store {
   shouldShowOnboarding(e) {
     if (e === o.ME || e === o.FAVORITES) return !1;
     let t = u[e];
@@ -29,23 +29,23 @@ class c extends r.default.Store {
     return u[e]
   }
   resetOnboardingStatus(e) {
-    u[e] = "started", d[e] = "cover"
+    u[e] = "started", c[e] = "cover"
   }
   getCurrentOnboardingStep(e) {
     var t;
-    return null !== (t = d[e]) && void 0 !== t ? t : "cover"
+    return null !== (t = c[e]) && void 0 !== t ? t : "cover"
   }
 }
-c.displayName = "GuildOnboardingStore";
-var f = new c(a.default, {
+d.displayName = "GuildOnboardingStore";
+var f = new d(a.default, {
   LOGOUT: function() {
-    u = {}, d = {}
+    u = {}, c = {}
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    delete u[t.id], delete d[t.id]
+    delete u[t.id], delete c[t.id]
   },
   GUILD_ONBOARDING_START: function(e) {
     let {
@@ -78,9 +78,9 @@ var f = new c(a.default, {
       guildId: t,
       step: n
     } = e;
-    d[t] = n
+    c[t] = n
   },
   CONNECTION_OPEN: function() {
-    d = {}
+    c = {}
   }
 })

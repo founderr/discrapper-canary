@@ -1,36 +1,36 @@
 "use strict";
-n("70102");
+s("70102");
 var r = Object.getOwnPropertySymbols,
   i = Object.prototype.hasOwnProperty,
-  o = Object.prototype.propertyIsEnumerable;
-e.exports = ! function() {
+  n = Object.prototype.propertyIsEnumerable;
+t.exports = ! function() {
   try {
     if (!Object.assign) return !1;
-    var e = new String("abc");
-    if (e[5] = "de", "5" === Object.getOwnPropertyNames(e)[0]) return !1;
-    for (var t = {}, n = 0; n < 10; n++) t["_" + String.fromCharCode(n)] = n;
-    var r = Object.getOwnPropertyNames(t).map(function(e) {
-      return t[e]
+    var t = new String("abc");
+    if (t[5] = "de", "5" === Object.getOwnPropertyNames(t)[0]) return !1;
+    for (var e = {}, s = 0; s < 10; s++) e["_" + String.fromCharCode(s)] = s;
+    var r = Object.getOwnPropertyNames(e).map(function(t) {
+      return e[t]
     });
     if ("0123456789" !== r.join("")) return !1;
     var i = {};
-    if ("abcdefghijklmnopqrst".split("").forEach(function(e) {
-        i[e] = e
+    if ("abcdefghijklmnopqrst".split("").forEach(function(t) {
+        i[t] = t
       }), "abcdefghijklmnopqrst" !== Object.keys(Object.assign({}, i)).join("")) return !1;
     return !0
-  } catch (e) {
+  } catch (t) {
     return !1
   }
-}() ? function(e, t) {
-  for (var n, s, a = function(e) {
-      if (null == e) throw TypeError("Object.assign cannot be called with null or undefined");
-      return Object(e)
-    }(e), c = 1; c < arguments.length; c++) {
-    for (var u in n = Object(arguments[c]), n) i.call(n, u) && (a[u] = n[u]);
+}() ? function(t, e) {
+  for (var s, c, o = function(t) {
+      if (null == t) throw TypeError("Object.assign cannot be called with null or undefined");
+      return Object(t)
+    }(t), f = 1; f < arguments.length; f++) {
+    for (var u in s = Object(arguments[f]), s) i.call(s, u) && (o[u] = s[u]);
     if (r) {
-      s = r(n);
-      for (var l = 0; l < s.length; l++) o.call(n, s[l]) && (a[s[l]] = n[s[l]])
+      c = r(s);
+      for (var a = 0; a < c.length; a++) n.call(s, c[a]) && (o[c[a]] = s[c[a]])
     }
   }
-  return a
+  return o
 } : Object.assign

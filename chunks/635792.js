@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("222007");
 var a = n("37983"),
@@ -19,13 +19,13 @@ var a = n("37983"),
   m = n("978679"),
   E = n("49111"),
   C = n("782340"),
-  S = n("516042"),
-  g = function(e) {
+  g = n("516042"),
+  S = function(e) {
     let {
       subscriptionTier: t,
       onClick: n,
       size: s,
-      className: g,
+      className: S,
       buttonText: _,
       buttonTextClassName: I,
       onSubscribeModalClose: T,
@@ -40,9 +40,9 @@ var a = n("37983"),
     return (0, a.jsxs)(p.default, {
       pauseAnimation: !j || x,
       size: s,
-      className: i(S.giftButton, g),
+      className: i(g.giftButton, S),
       onlyShineOnHover: !0,
-      innerClassName: S.innerGiftButton,
+      innerClassName: g.innerGiftButton,
       color: o.Button.Colors.PRIMARY,
       onClick: e => {
         if (e.preventDefault(), null == R) {
@@ -67,15 +67,15 @@ var a = n("37983"),
       onMouseLeave: () => O(!1),
       ...M,
       children: [(0, a.jsx)("div", {
-        className: i(S.gradientBackground, {
-          [S.gradientBackgroundHover]: L
+        className: i(g.gradientBackground, {
+          [g.gradientBackgroundHover]: L
         })
       }), (0, a.jsx)(m.default, {
-        className: S.giftIcon
+        className: g.giftIcon
       }), (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "none",
-        className: i(S.buttonText, I),
+        className: i(g.buttonText, I),
         children: null != _ ? _ : C.default.Messages.PREMIUM_GIFTING_BUTTON
       })]
     })

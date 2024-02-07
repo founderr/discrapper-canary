@@ -4,16 +4,16 @@ l.r(t), l.d(t, {
     return s
   }
 });
-var a = l("37983");
+var n = l("37983");
 l("884691");
-var n = l("58893");
+var a = l("58893");
 
 function s(e) {
   let {
     children: t
   } = e;
-  return (0, a.jsx)("div", {
-    className: n.card,
+  return (0, n.jsx)("div", {
+    className: a.card,
     children: t
   })
 }

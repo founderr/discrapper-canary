@@ -1,50 +1,50 @@
 "use strict";
 n.r(t), n.d(t, {
   MenuCustomItem: function() {
-    return c
+    return d
   }
 });
 var i = n("37983"),
-  s = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  r = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
   o = n("227645"),
   l = n("697917"),
   u = n("389802"),
-  d = n("946032");
+  c = n("946032");
 
-function c(e) {
+function d(e) {
   let {
     children: t,
     color: n = "default",
-    isFocused: r = !1,
-    disabled: c = !1,
+    isFocused: s = !1,
+    disabled: d = !1,
     keepItemStyles: f = !1,
-    menuItemProps: _,
-    action: h,
-    dontCloseOnActionIfHoldingShiftKey: g,
-    onClose: m
-  } = e, E = s.useRef(null);
-  s.useEffect(() => {
-    r && (0, l.ensureItemVisible)(E)
-  }, [r]);
-  let p = s.useCallback(e => {
-      if (null == h) return !1;
-      !(e.shiftKey && g) && m(), e.persist(), requestAnimationFrame(() => h(e))
-    }, [h, m, g]),
-    v = f ? a(d.item, u.MENU_ITEM_COLORS[n], {
-      [d.focused]: r
-    }) : d.customItem;
+    menuItemProps: E,
+    action: p,
+    dontCloseOnActionIfHoldingShiftKey: h,
+    onClose: _
+  } = e, S = r.useRef(null);
+  r.useEffect(() => {
+    s && (0, l.ensureItemVisible)(S)
+  }, [s]);
+  let m = r.useCallback(e => {
+      if (null == p) return !1;
+      !(e.shiftKey && h) && _(), e.persist(), requestAnimationFrame(() => p(e))
+    }, [p, _, h]),
+    T = f ? a(c.item, u.MENU_ITEM_COLORS[n], {
+      [c.focused]: s
+    }) : c.customItem;
   return (0, i.jsx)(o.Clickable, {
-    innerRef: E,
-    className: v,
-    onClick: c ? void 0 : p,
-    "aria-disabled": c,
-    ..._,
+    innerRef: S,
+    className: T,
+    onClick: d ? void 0 : m,
+    "aria-disabled": d,
+    ...E,
     children: t({
       color: n,
-      disabled: c,
-      isFocused: r
+      disabled: d,
+      isFocused: s
     })
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return O
+    return A
   }
 }), E("222007");
 var t = E("920842"),
@@ -36,4 +36,4 @@ class N extends o.default {
     }
   }
 }
-var O = new N
+var A = new N

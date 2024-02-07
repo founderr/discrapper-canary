@@ -16,12 +16,12 @@ var o = E("77078"),
   T = E("568734"),
   S = E("347895"),
   N = E("698882"),
-  O = E("129092"),
-  A = E("675305"),
+  A = E("129092"),
+  O = E("675305"),
   R = E("290886"),
   l = E("363176"),
-  L = E("657944");
-class u extends n.default {
+  u = E("657944");
+class L extends n.default {
   constructor(...e) {
     super(...e), this.onboardingCompleteGuilds = new Set, this.actions = {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
@@ -40,7 +40,7 @@ class u extends n.default {
         guildId: r
       } = e;
       if (n.id === a.default.getId()) {
-        if (!this.onboardingCompleteGuilds.has(r) && (0, T.hasFlag)(null != _ ? _ : 0, L.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
+        if (!this.onboardingCompleteGuilds.has(r) && (0, T.hasFlag)(null != _ ? _ : 0, u.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
           var i, I;
           this.onboardingCompleteGuilds.add(r);
           let e = null !== (I = null === (i = N.default.getNewMemberActions(r)) || void 0 === i ? void 0 : i.length) && void 0 !== I ? I : 0;
@@ -72,7 +72,7 @@ class u extends n.default {
         memberActions: t,
         completedActions: o
       } = await this._getOrLoadOnboardingMemberActions(_), n = null == t ? void 0 : t.find(e => e.channelId === E);
-      (null == o ? void 0 : o[E]) !== !0 && null != n && n.actionType === O.NewMemberActionTypes.VIEW && (0, S.completeNewMemberAction)(_, E)
+      (null == o ? void 0 : o[E]) !== !0 && null != n && n.actionType === A.NewMemberActionTypes.VIEW && (0, S.completeNewMemberAction)(_, E)
     }, this.handleMessageSend = e => {
       var _;
       let {
@@ -95,7 +95,7 @@ class u extends n.default {
         memberActions: E,
         completedActions: t
       } = await this._getOrLoadOnboardingMemberActions(e), o = null == E ? void 0 : E.find(e => e.channelId === _);
-      (null == t ? void 0 : t[_]) !== !0 && null != o && o.actionType === O.NewMemberActionTypes.CHAT && (0, S.completeNewMemberAction)(e, _)
+      (null == t ? void 0 : t[_]) !== !0 && null != o && o.actionType === A.NewMemberActionTypes.CHAT && (0, S.completeNewMemberAction)(e, _)
     }, this._getOrLoadOnboardingMemberActions = async e => {
       let _ = (0, R.canSeeOnboardingHome)(e),
         E = r.default.isFullServerPreview(e);
@@ -120,8 +120,8 @@ class u extends n.default {
       let {
         completedActions: t,
         loading: o
-      } = A.default.getState(e);
-      if (!(null == t && !o && (0, T.hasFlag)(null !== (E = _.flags) && void 0 !== E ? E : 0, L.GuildMemberFlags.STARTED_HOME_ACTIONS))) return t;
+      } = O.default.getState(e);
+      if (!(null == t && !o && (0, T.hasFlag)(null !== (E = _.flags) && void 0 !== E ? E : 0, u.GuildMemberFlags.STARTED_HOME_ACTIONS))) return t;
       {
         let _ = await (0, S.fetchNewMemberActions)(e);
         return _
@@ -129,4 +129,4 @@ class u extends n.default {
     }
   }
 }
-var C = new u
+var C = new L

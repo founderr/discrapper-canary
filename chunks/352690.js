@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return A
+    return O
   }
 }), E("222007");
 var t = E("771281"),
@@ -54,7 +54,7 @@ function N(e) {
   }
   a.default.setCrashInformation(n, E ? 1 : 0)
 }
-class O extends n.default {
+class A extends n.default {
   constructor(...e) {
     super(...e), this.actions = {
       RTC_CONNECTION_STATE: S,
@@ -63,4 +63,4 @@ class O extends n.default {
     }
   }
 }
-var A = new O
+var O = new A

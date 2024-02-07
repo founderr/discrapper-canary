@@ -1,11 +1,11 @@
 "use strict";
-let i, s;
+let i, r;
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return T
   }
 }), n("222007"), n("808653");
-var r = n("95410"),
+var s = n("95410"),
   a = n("843455");
 let o = "dQw4w9WgXcQ:";
 
@@ -16,23 +16,23 @@ function l(e) {
   }, {})
 }
 let u = null,
-  d = window.DiscordNative;
-null != d && (u = d.safeStorage);
-let c = !1,
+  c = window.DiscordNative;
+null != c && (u = c.safeStorage);
+let d = !1,
   f = {},
-  _ = {},
-  h = !1,
-  g = !1;
+  E = {},
+  p = !1,
+  h = !1;
 
-function m() {
-  if (h) {
-    r.default.remove(a.TOKEN_KEY), r.default.remove(a.TOKENS_KEY);
+function _() {
+  if (p) {
+    s.default.remove(a.TOKEN_KEY), s.default.remove(a.TOKENS_KEY);
     return
   }
-  null != s ? r.default.set(a.TOKEN_KEY, s) : r.default.remove(a.TOKEN_KEY), r.default.set(a.TOKENS_KEY, _)
+  null != r ? s.default.set(a.TOKEN_KEY, r) : s.default.remove(a.TOKEN_KEY), s.default.set(a.TOKENS_KEY, E)
 }
 
-function E(e) {
+function S(e) {
   return null == e || 0 === e.length ? {
     decryptedToken: null,
     wasEncrypted: !1
@@ -45,27 +45,27 @@ function E(e) {
   }
 }
 
-function p(e) {
+function m(e) {
   return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(o) ? "".concat(o).concat(u.encryptString(e)) : e
 }
-var v = {
+var T = {
   init() {
-    if (g) return;
-    s = r.default.get(a.TOKEN_KEY), _ = r.default.get(a.TOKENS_KEY) || {};
+    if (h) return;
+    r = s.default.get(a.TOKEN_KEY), E = s.default.get(a.TOKENS_KEY) || {};
     let {
       decryptedToken: e,
       wasEncrypted: t
-    } = E(s);
-    c = t, i = e, f = l(Object.entries(_).map(e => {
+    } = S(r);
+    d = t, i = e, f = l(Object.entries(E).map(e => {
       let [t, n] = e, {
         decryptedToken: i,
-        wasEncrypted: s
-      } = E(n);
-      return c = s || c, [t, i]
+        wasEncrypted: r
+      } = S(n);
+      return d = r || d, [t, i]
     }).filter(e => {
       let [t, n] = e;
       return null != n
-    })), g = !0
+    })), h = !0
   },
   getToken(e) {
     return (this.init(), null != e) ? f[e] : i
@@ -75,22 +75,22 @@ var v = {
       this.removeToken(t);
       return
     }
-    i = e, null != t && (f[t] = e), c ? this.encryptAndStoreTokens() : (s = i, _ = f, m())
+    i = e, null != t && (f[t] = e), d ? this.encryptAndStoreTokens() : (r = i, E = f, _())
   },
   hideToken() {
-    !h && (h = !0, m())
+    !p && (p = !0, _())
   },
   showToken() {
-    h && (h = !1, m())
+    p && (p = !1, _())
   },
   removeToken(e) {
     let t = i;
-    null != e && (t = f[e], delete f[e], delete _[e]), t === i && (i = null, s = null), m()
+    null != e && (t = f[e], delete f[e], delete E[e]), t === i && (i = null, r = null), _()
   },
   encryptAndStoreTokens() {
-    (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (s = p(i)), _ = l(Object.entries(f).map(e => {
+    (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = m(i)), E = l(Object.entries(f).map(e => {
       let [t, n] = e;
-      return [t, p(n)]
-    })), c = !0) : (s = i, _ = f), m()
+      return [t, m(n)]
+    })), d = !0) : (r = i, E = f), _()
   }
 }

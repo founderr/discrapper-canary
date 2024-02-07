@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 });
-var i = n("446674"),
-  s = n("913144"),
+var s = n("446674"),
+  i = n("913144"),
   r = n("448993");
 let a = null,
   o = null,
-  l = null;
+  d = null;
 
 function u(e) {
   let {
@@ -18,26 +18,26 @@ function u(e) {
   a = t
 }
 
-function d() {
+function l() {
   a = null
 }
-class c extends i.default.Store {
+class f extends s.default.Store {
   get paymentError() {
     return a
   }
   getGiftCode(e) {
-    return e === l ? o : null
+    return e === d ? o : null
   }
 }
-c.displayName = "PremiumPaymentModalStore";
-var f = new c(s.default, {
+f.displayName = "PremiumPaymentModalStore";
+var _ = new f(i.default, {
   PREMIUM_PAYMENT_SUBSCRIBE_FAIL: u,
   PREMIUM_PAYMENT_UPDATE_FAIL: u,
   PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function() {
-    d()
+    l()
   },
-  PREMIUM_PAYMENT_UPDATE_SUCCESS: d,
-  PREMIUM_PAYMENT_ERROR_CLEAR: d,
+  PREMIUM_PAYMENT_UPDATE_SUCCESS: l,
+  PREMIUM_PAYMENT_ERROR_CLEAR: l,
   BRAINTREE_TOKENIZE_PAYPAL_FAIL: function(e) {
     let {
       message: t,
@@ -53,19 +53,19 @@ var f = new c(s.default, {
     a = new r.BillingError(t, n)
   },
   SKU_PURCHASE_SUCCESS: function(e) {
-    o = e.giftCode, l = e.skuId
+    o = e.giftCode, d = e.skuId
   },
   SKU_PURCHASE_FAIL: function(e) {
     a = e.error
   },
   SKU_PURCHASE_AWAIT_CONFIRMATION: function(e) {
-    e.isGift && (l = e.skuId)
+    e.isGift && (d = e.skuId)
   },
   GIFT_CODE_CREATE: function(e) {
     let {
       giftCode: t
     } = e;
-    if (0 !== t.uses || t.sku_id !== l) return !1;
+    if (0 !== t.uses || t.sku_id !== d) return !1;
     o = t.code
   }
 })

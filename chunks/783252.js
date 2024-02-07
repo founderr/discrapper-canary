@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return A
+    return O
   }
 }), E("222007");
 var t = E("913144"),
@@ -53,7 +53,7 @@ function N(e) {
     n.default.getSessionId() === e.sessionId && T()
   })
 }
-class O extends o.default {
+class A extends o.default {
   constructor(...e) {
     super(...e), this.actions = {
       CHANNEL_UPDATES: S,
@@ -61,4 +61,4 @@ class O extends o.default {
     }
   }
 }
-var A = new O
+var O = new A

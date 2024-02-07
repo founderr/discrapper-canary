@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildDao: function() {
-    return r
+    return s
   }
 });
 var i = n("999673"),
-  s = n("429231");
-class r {
+  r = n("429231");
+class s {
   get prefix() {
     return this.table.prefix
   }
   withoutLogging() {
-    return new r(this.originalPrefix, this.table.tableId, this.table.database, !1)
+    return new s(this.originalPrefix, this.table.tableId, this.table.database, !1)
   }
   get(e, t) {
     return this.table.get([e, t])
@@ -38,16 +38,16 @@ class r {
     return this.table.getParentId([null, e])
   }
   put(e, t, n) {
-    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
-    return this.putWithGeneration(e, t, n, null, s)
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
+    return this.putWithGeneration(e, t, n, null, r)
   }
-  putWithGeneration(e, t, n, s) {
-    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
+  putWithGeneration(e, t, n, r) {
+    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
     return this.table.put({
       key: [e, t],
       data: n,
-      generation: s
-    }, r)
+      generation: r
+    }, s)
   }
   delete(e, t) {
     switch (arguments.length) {
@@ -75,24 +75,24 @@ class r {
     return this.table.getMapEntriesSyncUnsafe()
   }
   constructor(e, t, n, i = !0) {
-    this.originalPrefix = e, this.table = new s.Table([e], t, n, i)
+    this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
   }
 }
 class a {
   static fromDatabaseTransaction(e, t, n) {
-    return new a(new s.TableTransaction(e, t, n))
+    return new a(new r.TableTransaction(e, t, n))
   }
   put(e, t, n) {
-    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
-    this.putWithGeneration(e, t, n, null, s)
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
+    this.putWithGeneration(e, t, n, null, r)
   }
-  putWithGeneration(e, t, n, s) {
-    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
+  putWithGeneration(e, t, n, r) {
+    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
     return this.state.put({
       key: [e, t],
       data: n,
-      generation: s
-    }, r)
+      generation: r
+    }, s)
   }
   delete(e, t) {
     switch (arguments.length) {

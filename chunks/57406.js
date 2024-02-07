@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useDndStore: function() {
-    return s
+    return r
   },
   toggleDndMode: function() {
-    return r
+    return s
   },
   useDndMode: function() {
     return a
@@ -14,20 +14,20 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("308503");
-let s = (0, i.default)(e => ({
+let r = (0, i.default)(e => ({
   inDndMode: !1
 }));
 
-function r(e) {
-  s.setState({
+function s(e) {
+  r.setState({
     inDndMode: e
   })
 }
 
 function a() {
-  return s(e => e.inDndMode)
+  return r(e => e.inDndMode)
 }
 
 function o() {
-  return s.getState().inDndMode
+  return r.getState().inDndMode
 }

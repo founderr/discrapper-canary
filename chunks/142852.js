@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   UploadTargets: function() {
-    return s
+    return i
   },
   getUploadTarget: function() {
-    return c
+    return f
   }
 });
-var i, s, r = n("572679"),
+var s, i, r = n("572679"),
   a = n("42203"),
   o = n("254490"),
-  l = n("980134"),
+  d = n("980134"),
   u = n("49111");
-class d {
+class l {
   getCreateAttachmentURL(e) {
     return u.Endpoints.MESSAGE_CREATE_ATTACHMENT_UPLOAD(e)
   }
@@ -27,14 +27,14 @@ class d {
     return u.MAX_UPLOAD_COUNT
   }
   getMaxTotalAttachmentSize() {
-    return l.MAX_TOTAL_ATTACHMENT_SIZE
+    return d.MAX_TOTAL_ATTACHMENT_SIZE
   }
   get shouldReactNativeCompressUploads() {
     return !0
   }
 }
 
-function c(e) {
+function f(e) {
   if (1 === e) return new r.default;
-  return new d
-}(i = s || (s = {}))[i.MESSAGE_ATTACHMENT = 0] = "MESSAGE_ATTACHMENT", i[i.GUILD_PRODUCT_ATTACHMENT = 1] = "GUILD_PRODUCT_ATTACHMENT"
+  return new l
+}(s = i || (i = {}))[s.MESSAGE_ATTACHMENT = 0] = "MESSAGE_ATTACHMENT", s[s.GUILD_PRODUCT_ATTACHMENT = 1] = "GUILD_PRODUCT_ATTACHMENT"

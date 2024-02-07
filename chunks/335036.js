@@ -1,19 +1,19 @@
 "use strict";
 
-function r(e) {
-  let t = {};
-  return Object.keys(e).forEach(function(n) {
-    (0 | n) == n && (n |= 0);
-    let r = e[n];
-    t[r] = n
-  }), t
+function r(t) {
+  let e = {};
+  return Object.keys(t).forEach(function(s) {
+    (0 | s) == s && (s |= 0);
+    let r = t[s];
+    e[r] = s
+  }), e
 }
-t.tagClass = {
+e.tagClass = {
   0: "universal",
   1: "application",
   2: "context",
   3: "private"
-}, t.tagClassByName = r(t.tagClass), t.tag = {
+}, e.tagClassByName = r(e.tagClass), e.tag = {
   0: "end",
   1: "bool",
   2: "int",
@@ -43,4 +43,4 @@ t.tagClass = {
   28: "unistr",
   29: "charstr",
   30: "bmpstr"
-}, t.tagByName = r(t.tag)
+}, e.tagByName = r(e.tag)

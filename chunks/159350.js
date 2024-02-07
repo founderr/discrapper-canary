@@ -1,17 +1,17 @@
 "use strict";
-var i, s, r, a;
+var i, r, s, a;
 n.r(t), n.d(t, {
   ToastType: function() {
     return i
   },
   ToastPosition: function() {
-    return s
+    return r
   },
   TOAST_DEFAULT_OPTIONS: function() {
     return o
   }
 });
-(r = i || (i = {}))[r.MESSAGE = 0] = "MESSAGE", r[r.SUCCESS = 1] = "SUCCESS", r[r.FAILURE = 2] = "FAILURE", r[r.CUSTOM = 3] = "CUSTOM", r[r.CLIP = 4] = "CLIP", (a = s || (s = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM";
+(s = i || (i = {}))[s.MESSAGE = 0] = "MESSAGE", s[s.SUCCESS = 1] = "SUCCESS", s[s.FAILURE = 2] = "FAILURE", s[s.CUSTOM = 3] = "CUSTOM", s[s.CLIP = 4] = "CLIP", (a = r || (r = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM";
 let o = {
   position: 0,
   component: null,

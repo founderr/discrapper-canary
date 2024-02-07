@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   CommunityEndlessInvitesExperiment: function() {
-    return s
+    return i
   }
 });
 var l = n("862205");
-let s = (0, l.createExperiment)({
+let i = (0, l.createExperiment)({
   kind: "guild",
   id: "2023-04_community_endless_invites",
   label: "Community Endless Invites",

@@ -1,25 +1,25 @@
 "use strict";
-var r = n("105195"),
+var r = s("105195"),
   i = "function" == typeof Symbol && "symbol" == typeof Symbol("foo"),
-  o = Object.prototype.toString,
-  s = Array.prototype.concat,
-  a = n("67064"),
-  c = n("407611")(),
-  u = function(e, t, n, r) {
-    if (t in e) {
+  n = Object.prototype.toString,
+  c = Array.prototype.concat,
+  o = s("67064"),
+  f = s("407611")(),
+  u = function(t, e, s, r) {
+    if (e in t) {
       if (!0 === r) {
-        if (e[t] === n) return
+        if (t[e] === s) return
       } else {
         var i;
-        if (!("function" == typeof(i = r) && "[object Function]" === o.call(i)) || !r()) return
+        if (!("function" == typeof(i = r) && "[object Function]" === n.call(i)) || !r()) return
       }
     }
-    c ? a(e, t, n, !0) : a(e, t, n)
+    f ? o(t, e, s, !0) : o(t, e, s)
   },
-  l = function(e, t) {
-    var n = arguments.length > 2 ? arguments[2] : {},
-      o = r(t);
-    i && (o = s.call(o, Object.getOwnPropertySymbols(t)));
-    for (var a = 0; a < o.length; a += 1) u(e, o[a], t[o[a]], n[o[a]])
+  a = function(t, e) {
+    var s = arguments.length > 2 ? arguments[2] : {},
+      n = r(e);
+    i && (n = c.call(n, Object.getOwnPropertySymbols(e)));
+    for (var o = 0; o < n.length; o += 1) u(t, n[o], e[n[o]], s[n[o]])
   };
-l.supportsDescriptors = !!c, e.exports = l
+a.supportsDescriptors = !!f, t.exports = a

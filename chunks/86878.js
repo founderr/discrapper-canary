@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("917351"),
-  s = n.n(i),
-  r = n("446674"),
+  r = n.n(i),
+  s = n("446674"),
   a = n("913144");
 let o = {};
-class l extends r.default.Store {
+class l extends s.default.Store {
   isConnected(e) {
     return null != o[e]
   }
   get connections() {
-    return s.values(o)
+    return r.values(o)
   }
   getApplication(e) {
     return o[e]

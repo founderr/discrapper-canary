@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   acceptWhitelist: function() {
-    return l
+    return d
   },
   authorize: function() {
     return u
   },
   fetchAuthorization: function() {
-    return d
+    return l
   },
   fetchChannels: function() {
-    return c
-  },
-  logoutWithRedirect: function() {
     return f
   },
-  verifyUserCode: function() {
+  logoutWithRedirect: function() {
     return _
   },
+  verifyUserCode: function() {
+    return c
+  },
   finishUserCode: function() {
-    return h
+    return g
   },
   finishUserCodeTwoWayLinkError: function() {
-    return g
+    return m
   }
 });
-var i = n("891189"),
-  s = n("447669"),
+var s = n("891189"),
+  i = n("447669"),
   r = n("872717"),
   a = n("437822"),
   o = n("49111");
 
-function l(e) {
+function d(e) {
   return r.default.post({
     url: o.Endpoints.OAUTH2_WHITELIST_ACCEPT,
     query: {
@@ -44,67 +44,67 @@ async function u(e) {
   let {
     authorize: t,
     clientId: n,
-    scopes: s,
+    scopes: i,
     responseType: a,
-    redirectUri: l,
+    redirectUri: d,
     codeChallenge: u,
-    codeChallengeMethod: d,
-    state: c,
-    permissions: f,
-    guildId: _,
-    channelId: h,
-    userInstall: g
-  } = e, m = await r.default.post({
+    codeChallengeMethod: l,
+    state: f,
+    permissions: _,
+    guildId: c,
+    channelId: g,
+    userInstall: m
+  } = e, h = await r.default.post({
     url: o.Endpoints.OAUTH2_AUTHORIZE,
     query: {
       client_id: n,
       response_type: a,
-      redirect_uri: l,
+      redirect_uri: d,
       code_challenge: u,
-      code_challenge_method: d,
-      scope: s.join(" "),
-      state: c
+      code_challenge_method: l,
+      scope: i.join(" "),
+      state: f
     },
     body: {
-      guild_id: _,
-      webhook_channel_id: null != _ && null != h ? h : void 0,
-      channel_id: null == _ && null != h ? h : void 0,
-      permissions: f,
+      guild_id: c,
+      webhook_channel_id: null != c && null != g ? g : void 0,
+      channel_id: null == c && null != g ? g : void 0,
+      permissions: _,
       authorize: t,
-      integration_type: g ? i.ApplicationIntegrationType.USER_INSTALL : i.ApplicationIntegrationType.GUILD_INSTALL
+      integration_type: m ? s.ApplicationIntegrationType.USER_INSTALL : s.ApplicationIntegrationType.GUILD_INSTALL
     },
     oldFormErrors: !0
   });
-  return m.body
+  return h.body
 }
-async function d(e) {
+async function l(e) {
   let {
     clientId: t,
     scopes: n,
-    responseType: s,
+    responseType: i,
     redirectUri: a,
-    codeChallenge: l,
+    codeChallenge: d,
     codeChallengeMethod: u,
-    state: d,
-    userInstall: c
-  } = e, f = await r.default.get({
+    state: l,
+    userInstall: f
+  } = e, _ = await r.default.get({
     url: o.Endpoints.OAUTH2_AUTHORIZE,
     query: {
       client_id: t,
-      response_type: s,
+      response_type: i,
       redirect_uri: a,
-      code_challenge: l,
+      code_challenge: d,
       code_challenge_method: u,
       scope: n.join(" "),
-      state: d,
-      integration_type: c ? i.ApplicationIntegrationType.USER_INSTALL : i.ApplicationIntegrationType.GUILD_INSTALL
+      state: l,
+      integration_type: f ? s.ApplicationIntegrationType.USER_INSTALL : s.ApplicationIntegrationType.GUILD_INSTALL
     },
     retries: 3,
     oldFormErrors: !0
   });
-  return f.body
+  return _.body
 }
-async function c(e) {
+async function f(e) {
   let {
     body: t
   } = await r.default.get({
@@ -117,10 +117,10 @@ async function c(e) {
   return t
 }
 
-function f(e) {
-  a.default.logout((0, s.getLoginPath)(e.pathname + e.search, !1))
+function _(e) {
+  a.default.logout((0, i.getLoginPath)(e.pathname + e.search, !1))
 }
-async function _(e) {
+async function c(e) {
   return await r.default.post({
     url: o.Endpoints.OAUTH2_DEVICE_VERIFY,
     body: {
@@ -128,7 +128,7 @@ async function _(e) {
     }
   })
 }
-async function h(e, t) {
+async function g(e, t) {
   return await r.default.post({
     url: o.Endpoints.OAUTH2_DEVICE_FINISH,
     body: {
@@ -137,7 +137,7 @@ async function h(e, t) {
     }
   })
 }
-async function g(e, t, n) {
+async function m(e, t, n) {
   return await r.default.post({
     url: o.Endpoints.OAUTH2_DEVICE_FINISH,
     body: {

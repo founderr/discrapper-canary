@@ -15,26 +15,26 @@ var t = E("627445"),
   T = E("913144"),
   S = E("275877"),
   N = E("116949"),
-  O = E("397336");
-let A = {
+  A = E("397336");
+let O = {
     ProtoClass: I.PreloadedUserSettings,
     proto: I.PreloadedUserSettings.create(),
     lazyLoaded: !1,
-    editInfo: (0, O.createEmptyEditInfo)()
+    editInfo: (0, A.createEmptyEditInfo)()
   },
   R = {
     ProtoClass: i.FrecencyUserSettings,
     proto: i.FrecencyUserSettings.create(),
     lazyLoaded: !0,
-    editInfo: (0, O.createEmptyEditInfo)()
+    editInfo: (0, A.createEmptyEditInfo)()
   },
   l = {
-    [O.UserSettingsTypes.PRELOADED_USER_SETTINGS]: A,
-    [O.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: R
+    [A.UserSettingsTypes.PRELOADED_USER_SETTINGS]: O,
+    [A.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: R
   },
-  L = !1;
+  u = !1;
 
-function u() {
+function L() {
   C()
 }
 
@@ -48,7 +48,7 @@ function C() {
 }
 
 function D(e) {
-  null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), e.editInfo = (0, O.createEmptyEditInfo)()
+  null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), e.editInfo = (0, A.createEmptyEditInfo)()
 }
 
 function c(e) {
@@ -61,7 +61,7 @@ function c(e) {
     resetEditInfo: n,
     local: r
   } = e;
-  L = !r;
+  u = !r;
   let a = l[E];
   n && D(a), t ? (a.proto = (0, N.mergeTopLevelFields)(a.ProtoClass, a.proto, _), o("string" != typeof a.proto, "UserSettingsProto cannot be a string")) : (a.proto = _, o("string" != typeof a.proto, "UserSettingsProto cannot be a string"), a.editInfo.loaded = !0, a.editInfo.loading = !1)
 }
@@ -100,20 +100,20 @@ class U extends a.default.PersistedStore {
     return l[e].editInfo.loaded
   }
   get settings() {
-    return A.proto
+    return O.proto
   }
   get frecencyWithoutFetchingLatest() {
     return R.proto
   }
   get wasMostRecentUpdateFromServer() {
-    return L
+    return u
   }
   getFullState() {
     return l
   }
   getGuildFolders() {
     var e;
-    let _ = null === (e = A.proto.guildFolders) || void 0 === e ? void 0 : e.folders;
+    let _ = null === (e = O.proto.guildFolders) || void 0 === e ? void 0 : e.folders;
     return null == _ ? null : _.map(e => {
       var _, E, t;
       let o = null === (_ = e.id) || void 0 === _ ? void 0 : _.value,
@@ -169,27 +169,27 @@ var M = new U(T.default, {
     let {
       userSettingsProto: _
     } = e;
-    null != _ && (A.proto = _, o("string" != typeof A.proto, "UserSettingsProto cannot be a string"));
+    null != _ && (O.proto = _, o("string" != typeof O.proto, "UserSettingsProto cannot be a string"));
     let {
       proto: E,
       isDirty: t,
       cleanupFuncs: n
-    } = (0, N.runMigrations)(A.proto, S.default[O.UserSettingsTypes.PRELOADED_USER_SETTINGS]);
-    t && D(A), A.proto = E, o("string" != typeof A.proto, "UserSettingsProto cannot be a string"), A.editInfo.triggeredMigrations = t, A.editInfo.cleanupFuncs = n, A.editInfo.loaded = !0, Object.values(l).forEach(e => {
+    } = (0, N.runMigrations)(O.proto, S.default[A.UserSettingsTypes.PRELOADED_USER_SETTINGS]);
+    t && D(O), O.proto = E, o("string" != typeof O.proto, "UserSettingsProto cannot be a string"), O.editInfo.triggeredMigrations = t, O.editInfo.cleanupFuncs = n, O.editInfo.loaded = !0, Object.values(l).forEach(e => {
       e.lazyLoaded && (e.editInfo.loaded = !1, e.editInfo.loading = !1)
     }), C()
   },
-  CONNECTION_CLOSED: u,
-  CONNECTION_RESUMED: u,
+  CONNECTION_CLOSED: L,
+  CONNECTION_RESUMED: L,
   OVERLAY_INITIALIZE: function(e) {
     let {
       userSettingsProto: _
     } = e;
-    A.proto = (0, N.b64ToPreloadedUserSettingsProto)(_), o("string" != typeof A.proto, "UserSettingsProto cannot be a string")
+    O.proto = (0, N.b64ToPreloadedUserSettingsProto)(_), o("string" != typeof O.proto, "UserSettingsProto cannot be a string")
   },
   LOGOUT: function() {
     C(), Object.values(l).forEach(e => {
-      e.proto = e.ProtoClass.create(), e.editInfo = (0, O.createEmptyEditInfo)()
+      e.proto = e.ProtoClass.create(), e.editInfo = (0, A.createEmptyEditInfo)()
     })
   }
 })

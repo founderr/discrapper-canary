@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return c
   }
 }), n("702976");
-var i = n("446674"),
-  s = n("913144"),
+var s = n("446674"),
+  i = n("913144"),
   r = n("845579"),
   a = n("568734"),
   o = n("49111");
 
-function l() {
+function d() {
   return {
     lastUsedObject: {},
     useActivityUrlOverride: !1,
@@ -18,13 +18,13 @@ function l() {
     filter: ""
   }
 }
-let u = l(),
-  d = null,
-  c = [];
-class f extends i.default.PersistedStore {
+let u = d(),
+  l = null,
+  f = [];
+class _ extends s.default.PersistedStore {
   initialize(e) {
     u = {
-      ...l(),
+      ...d(),
       ...null != e ? e : {}
     }
   }
@@ -32,7 +32,7 @@ class f extends i.default.PersistedStore {
     return u
   }
   getIsEnabled() {
-    return r.DeveloperMode.getSetting() && c.length > 0
+    return r.DeveloperMode.getSetting() && f.length > 0
   }
   getLastUsedObject() {
     return u.lastUsedObject
@@ -44,24 +44,24 @@ class f extends i.default.PersistedStore {
     return this.getIsEnabled() ? u.activityUrlOverride : null
   }
   getFetchState() {
-    return d
+    return l
   }
   getFilter() {
     return this.getIsEnabled() ? u.filter : ""
   }
   getDeveloperShelfItems() {
-    return this.getIsEnabled() ? c : []
+    return this.getIsEnabled() ? f : []
   }
   inDevModeForApplication(e) {
-    return this.getIsEnabled() && null != c.find(t => t.id === e)
+    return this.getIsEnabled() && null != f.find(t => t.id === e)
   }
 }
-f.displayName = "DeveloperActivityShelfStore", f.persistKey = "DeveloperActivityShelfStore", f.migrations = [e => (delete e.isEnabled, {
+_.displayName = "DeveloperActivityShelfStore", _.persistKey = "DeveloperActivityShelfStore", _.migrations = [e => (delete e.isEnabled, {
   ...e
 })];
-var _ = new f(s.default, {
+var c = new _(i.default, {
   LOGOUT: function() {
-    u = l(), d = null, c = []
+    u = d(), l = null, f = []
   },
   DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: function() {
     u.useActivityUrlOverride = !u.useActivityUrlOverride
@@ -77,23 +77,23 @@ var _ = new f(s.default, {
       applicationId: t,
       timestamp: n
     } = e;
-    if (null == c.find(e => e.id === t)) return !1;
+    if (null == f.find(e => e.id === t)) return !1;
     u.lastUsedObject[t] = n
   },
   DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
-    d = "loading"
+    l = "loading"
   },
   DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function(e) {
     let {
       items: t
     } = e;
-    d = "loaded", c = t.filter(e => null != e.flags && (0, a.hasFlag)(e.flags, o.ApplicationFlags.EMBEDDED))
+    l = "loaded", f = t.filter(e => null != e.flags && (0, a.hasFlag)(e.flags, o.ApplicationFlags.EMBEDDED))
   },
   DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function(e) {
     let {
       type: t
     } = e;
-    d = "errored"
+    l = "errored"
   },
   DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: function(e) {
     let {

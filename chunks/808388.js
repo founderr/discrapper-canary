@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useGuildEligibleForRoleSubscriptions: function() {
-    return r
+    return s
   },
   isGuildEligibleForRoleSubscriptions: function() {
     return a
@@ -13,25 +13,25 @@ n.r(t), n.d(t, {
     return u
   },
   isGuildEligibleForTierTemplates: function() {
-    return d
+    return c
   },
   useGuildEligibleForTierTemplates: function() {
-    return c
+    return d
   },
   useShowCreatorPortalLinkForTierTemplates: function() {
     return f
   },
   isUserEligibleForTierTemplates: function() {
-    return _
+    return E
   },
   useUserEligibleForTierTemplates: function() {
-    return h
+    return p
   }
 }), n("7331");
 var i = n("858560"),
-  s = n("49111");
+  r = n("49111");
 
-function r(e) {
+function s(e) {
   let {
     enableRoleSubscriptionsForGuild: t
   } = i.GuildRoleSubscriptionsExperiment.useExperiment({
@@ -71,10 +71,10 @@ function o(e) {
     location: "504714_7"
   })
 }
-let l = [s.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED, s.GuildFeatures.CREATOR_MONETIZABLE, s.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL],
+let l = [r.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED, r.GuildFeatures.CREATOR_MONETIZABLE, r.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL],
   u = e => null != e && l.some(t => e.hasFeature(t));
 
-function d(e) {
+function c(e) {
   let {
     enabled: t
   } = i.GuildRoleSubscriptionsTierTemplatesExperiment.getCurrentConfig({
@@ -86,7 +86,7 @@ function d(e) {
   return t
 }
 
-function c(e) {
+function d(e) {
   let {
     enabled: t
   } = i.GuildRoleSubscriptionsTierTemplatesExperiment.useExperiment({
@@ -110,7 +110,7 @@ function f(e) {
   return t
 }
 
-function _() {
+function E() {
   let {
     enabled: e
   } = i.GuildRoleSubscriptionsTierTemplatesUserExperiment.getCurrentConfig({
@@ -121,7 +121,7 @@ function _() {
   return e
 }
 
-function h() {
+function p() {
   let {
     enabled: e
   } = i.GuildRoleSubscriptionsTierTemplatesUserExperiment.useExperiment({

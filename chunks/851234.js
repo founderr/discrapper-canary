@@ -1,52 +1,52 @@
 "use strict";
-A.r(I), A.d(I, {
+n.r(t), n.d(t, {
   default: function() {
-    return O
+    return i
   }
-}), A("70102");
-var O, T = A("50885");
-O = class {
+}), n("70102");
+var i, l = n("50885");
+i = class {
   get language() {
     return this._language
   }
-  set language(N) {
-    this._language !== N && (this._language = N, this._onChange(N))
+  set language(e) {
+    this._language !== e && (this._language = e, this._onChange(e))
   }
-  set languageHint(N) {
-    this._languageHint = N
+  set languageHint(e) {
+    this._languageHint = e
   }
-  process(N) {
-    !this._processing && (this._processing = !0, requestIdleCallback(I => {
-      var A, O;
-      let _ = I.timeRemaining();
-      if (_ <= this._minimumTimeRemaining) {
+  process(e) {
+    !this._processing && (this._processing = !0, requestIdleCallback(t => {
+      var n, i;
+      let s = t.timeRemaining();
+      if (s <= this._minimumTimeRemaining) {
         this._processEnd();
         return
       }
-      N.length > 256 && (N = N.slice(0, 256)), (A = N, O = this._languageHint, T.default.ensureModule("discord_spellcheck").then(() => {
+      e.length > 256 && (e = e.slice(0, 256)), (n = e, i = this._languageHint, l.default.ensureModule("discord_spellcheck").then(() => {
         let {
-          cld: N
-        } = T.default.requireModule("discord_spellcheck");
-        return new Promise((I, T) => {
-          N.detect(A, {
-            httpHint: O,
+          cld: e
+        } = l.default.requireModule("discord_spellcheck");
+        return new Promise((t, l) => {
+          e.detect(n, {
+            httpHint: i,
             encodingHint: "UTF8"
-          }, (N, A) => {
-            null != N ? T(Error(N.message)) : !A.reliable || A.languages[0].percent < 90 || A.languages[0].score < 500 ? T(Error("Not enough reliable text.")) : I(A.languages[0].code)
+          }, (e, n) => {
+            null != e ? l(Error(e.message)) : !n.reliable || n.languages[0].percent < 90 || n.languages[0].score < 500 ? l(Error("Not enough reliable text.")) : t(n.languages[0].code)
           })
         })
-      })).then(N => {
-        this.language = N, this._processEnd(I.didTimeout)
+      })).then(e => {
+        this.language = e, this._processEnd(t.didTimeout)
       }, () => {
-        this._processEnd(I.didTimeout)
+        this._processEnd(t.didTimeout)
       })
     }))
   }
   _processEnd() {
-    let N = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    this._processing = !1, N && this._minimumTimeRemaining++
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    this._processing = !1, e && this._minimumTimeRemaining++
   }
-  constructor(N, I) {
-    this._shouldProcess = !1, this._processing = !1, this._minimumTimeRemaining = 5, this._language = N, this._languageHint = N, this._onChange = I, I(N)
+  constructor(e, t) {
+    this._shouldProcess = !1, this._processing = !1, this._minimumTimeRemaining = 5, this._language = e, this._languageHint = e, this._onChange = t, t(e)
   }
 }

@@ -1,70 +1,70 @@
 "use strict";
-let n;
-l.r(t), l.d(t, {
+let r;
+n.r(t), n.d(t, {
   default: function() {
-    return S
+    return I
   }
-}), l("424973");
-var r = l("917351"),
-  s = l.n(r),
-  a = l("693566"),
-  i = l.n(a),
-  o = l("851387"),
-  u = l("305961"),
-  c = l("697218"),
-  d = l("718517"),
-  I = l("158998"),
-  f = l("782340");
-let E = new i({
+}), n("424973");
+var i = n("917351"),
+  l = n.n(i),
+  s = n("693566"),
+  a = n.n(s),
+  o = n("851387"),
+  u = n("305961"),
+  c = n("697218"),
+  d = n("718517"),
+  f = n("158998"),
+  h = n("782340");
+let _ = new a({
   maxAge: 1 * d.default.Millis.MINUTE
 });
 
-function p(e, t, l) {
-  null != n && clearTimeout(n), n = setTimeout(() => {
-    let n = [],
-      r = e => {
-        n.push(e.id)
+function p(e, t, n) {
+  null != r && clearTimeout(r), r = setTimeout(() => {
+    let r = [],
+      i = e => {
+        r.push(e.id)
       };
-    if (null == e) s.forEach(u.default.getGuilds(), r);
+    if (null == e) l.forEach(u.default.getGuilds(), i);
     else if (Array.isArray(e)) e.forEach(e => {
       let t = u.default.getGuild(e);
-      null != t && r(t)
+      null != t && i(t)
     });
     else {
       let t = u.default.getGuild(e);
-      null != t && r(t)
+      null != t && i(t)
     }
-    n.length > 0 && o.default.requestMembers(n, t.toLocaleLowerCase(), l)
+    r.length > 0 && o.default.requestMembers(r, t.toLocaleLowerCase(), n)
   }, 200)
 }
 
-function _(e, t) {
-  let l = "".concat(null != e ? e : "", ":").concat(t),
-    n = E.get(l);
-  if (null != n) return n;
-  E.set(l, !0)
+function E(e, t) {
+  let n = "".concat(null != e ? e : "", ":").concat(t),
+    r = _.get(n);
+  if (null != r) return r;
+  _.set(n, !0)
 }
-var S = {
+var I = {
   getGuildNameSuggestion: function(e) {
     let t = c.default.getCurrentUser(),
-      l = I.getName(t);
-    return null == l || 0 === l.length ? "" : f.default.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
-      username: (null == e ? void 0 : e.truncateUsername) ? l.slice(0, 20) : l
+      n = f.getName(t);
+    return null == n || 0 === n.length ? "" : h.default.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
+      username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n
     })
   },
   requestMembers(e, t) {
-    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
-      n = Array.isArray(e),
-      r = [],
-      s = !1;
-    if (n) e.forEach(e => {
-      let l = _(e, t);
-      null == l && r.push(e)
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
+      r = Array.isArray(e),
+      i = [],
+      l = !1;
+    if (r) e.forEach(e => {
+      let n = E(e, t);
+      null == n && i.push(e)
     });
     else {
-      let l = _(e, t);
-      null == l && (s = !0)
+      let n = E(e, t);
+      null == n && (l = !0)
     }
-    r.length > 0 && n ? p(r, t, l) : s && p(e, t, l)
+    i.length > 0 && r ? p(i, t, n) : l && p(e, t, n)
   }
 }

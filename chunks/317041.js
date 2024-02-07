@@ -4,66 +4,66 @@ n.r(t), n.d(t, {
     return o
   },
   FALSE_OPTION_NAME: function() {
-    return l
+    return d
   },
   BOOLEAN_CHOICES: function() {
     return u
   },
   BuiltInSectionId: function() {
-    return s
+    return i
   },
   DISCOVERY_COMMANDS_QUERY_LIMIT: function() {
-    return d
+    return l
   },
   DISCOVERY_COMMANDS_FRECENCY_LIMIT: function() {
-    return c
-  },
-  DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: function() {
     return f
   },
-  SUB_COMMAND_KEY_SEPARATOR: function() {
+  DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: function() {
     return _
   },
-  APPLICATION_COMMAND_PERMISSIONS_LIMIT: function() {
-    return h
+  SUB_COMMAND_KEY_SEPARATOR: function() {
+    return c
   },
-  MAX_SUBCOMMAND_LEVEL: function() {
+  APPLICATION_COMMAND_PERMISSIONS_LIMIT: function() {
     return g
   },
-  CONTEXT_MENU_COMMANDS_QUERY_LIMIT: function() {
+  MAX_SUBCOMMAND_LEVEL: function() {
     return m
   },
+  CONTEXT_MENU_COMMANDS_QUERY_LIMIT: function() {
+    return h
+  },
   AUTOCOMPLETE_OPTION_DEBOUNCE_TIME: function() {
-    return E
+    return v
   },
   getValidationErrorText: function() {
-    return p
+    return E
   }
 });
-var i, s, r = n("798609"),
+var s, i, r = n("798609"),
   a = n("782340");
 let o = "True",
-  l = "False",
+  d = "False",
   u = [{
     name: o,
     displayName: o,
     value: "true"
   }, {
-    name: l,
-    displayName: l,
+    name: d,
+    displayName: d,
     value: "false"
   }];
-(i = s || (s = {})).BUILT_IN = "-1", i.FRECENCY = "-2";
-let d = 10,
-  c = 5,
-  f = 25,
-  _ = "\x00",
-  h = 100,
-  g = 3,
-  m = 10,
-  E = 500;
+(s = i || (i = {})).BUILT_IN = "-1", s.FRECENCY = "-2";
+let l = 10,
+  f = 5,
+  _ = 25,
+  c = "\x00",
+  g = 100,
+  m = 3,
+  h = 10,
+  v = 500;
 
-function p(e) {
+function E(e) {
   if (null != e.choices) return a.default.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
   switch (e.type) {
     case r.ApplicationCommandOptionType.BOOLEAN:

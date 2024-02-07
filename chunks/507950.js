@@ -1,7 +1,7 @@
 "use strict";
-var i, s;
+var i, r;
 n.r(t), n.d(t, {
   ImpersonateType: function() {
     return i
   }
-}), (s = i || (i = {})).ROLES = "ROLES", s.NEW_MEMBER = "NEW_MEMBER", s.SERVER_SHOP = "SERVER_SHOP"
+}), (r = i || (i = {})).ROLES = "ROLES", r.NEW_MEMBER = "NEW_MEMBER", r.SERVER_SHOP = "SERVER_SHOP"

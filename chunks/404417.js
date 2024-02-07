@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("37983"),
-  s = n("884691"),
-  r = n("551042"),
+  r = n("884691"),
+  s = n("551042"),
   a = n("694187");
-let o = s.forwardRef(function(e, t) {
-  let o = s.useRef(null);
-  return s.useImperativeHandle(t, () => ({
+let o = r.forwardRef(function(e, t) {
+  let o = r.useRef(null);
+  return r.useImperativeHandle(t, () => ({
     focus: () => null,
     activate: () => {
       var e;
@@ -23,14 +23,14 @@ let o = s.forwardRef(function(e, t) {
     children: (0, i.jsx)(a.default, {
       ...e,
       ref: o,
-      onChange: function(t, s) {
-        (0, r.openModalLazy)(async () => {
+      onChange: function(t, r) {
+        (0, s.openModalLazy)(async () => {
           let {
-            default: r
+            default: s
           } = await n.el("57015").then(n.bind(n, "57015"));
-          return n => (0, i.jsx)(r, {
+          return n => (0, i.jsx)(s, {
             imgURI: t,
-            file: s,
+            file: r,
             onCrop: e.onChange,
             ...n
           })

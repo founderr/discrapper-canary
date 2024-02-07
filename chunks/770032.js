@@ -5,7 +5,7 @@ E.r(_), E.d(_, {
     return n
   },
   default: function() {
-    return L
+    return u
   }
 }), E("424973");
 var n, r, a = E("171718"),
@@ -16,9 +16,9 @@ var n, r, a = E("171718"),
   S = E("583374");
 (r = n || (n = {}))[r.INVALID = 0] = "INVALID", r[r.VALIDATING = 1] = "VALIDATING", r[r.VALID = 2] = "VALID";
 let N = [],
-  O = !1;
+  A = !1;
 
-function A(e) {
+function O(e) {
   N = N.filter(_ => {
     let {
       id: E
@@ -83,7 +83,7 @@ class l extends i.default.PersistedStore {
     }).isMultiAccountMobileNotificationsEnabled
   }
   get isSwitchingAccount() {
-    return O
+    return A
   }
 }
 l.displayName = "MultiAccountStore", l.persistKey = "MultiAccountStore", l.migrations = [e => {
@@ -99,12 +99,12 @@ l.displayName = "MultiAccountStore", l.persistKey = "MultiAccountStore", l.migra
     canUseMultiAccountMobile: !1
   }
 }];
-var L = new l(I.default, {
+var u = new l(I.default, {
   CONNECTION_OPEN: function(e) {
     let {
       user: _
     } = e;
-    t = _.id, O = !1;
+    t = _.id, A = !1;
     let E = N.slice(),
       o = E.findIndex(e => {
         let {
@@ -125,12 +125,12 @@ var L = new l(I.default, {
         let {
           id: _
         } = e;
-        A(_)
+        O(_)
       })
     }
   },
   LOGOUT: function(e) {
-    O = !!e.isSwitchingAccount, !e.isSwitchingAccount && (N = N.filter(e => {
+    A = !!e.isSwitchingAccount, !e.isSwitchingAccount && (N = N.filter(e => {
       let {
         id: _
       } = e;
@@ -140,7 +140,7 @@ var L = new l(I.default, {
   MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => R(e.userId, 1),
   MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => R(e.userId, 2),
   MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => R(e.userId, 0),
-  MULTI_ACCOUNT_REMOVE_ACCOUNT: e => A(e.userId),
+  MULTI_ACCOUNT_REMOVE_ACCOUNT: e => O(e.userId),
   MULTI_ACCOUNT_MOVE_ACCOUNT: function(e) {
     let {
       from: _,

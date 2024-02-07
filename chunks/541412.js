@@ -1,5 +1,5 @@
 "use strict";
-e.exports = {
+t.exports = {
   "aes-128-ecb": {
     cipher: "AES",
     key: 128,

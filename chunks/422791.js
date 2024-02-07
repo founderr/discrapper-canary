@@ -1,7 +1,7 @@
 "use strict";
-var i, s;
+var i, r;
 n.r(t), n.d(t, {
   RTCConnectionEvent: function() {
     return i
   }
-}), (s = i || (i = {})).State = "state", s.Speaking = "speaking", s.VideoSourceQualityChanged = "video-source-quality-changed", s.Video = "video", s.Flags = "flags", s.Platform = "platform", s.Ping = "ping", s.OutboundLossRate = "outboundlossrate"
+}), (r = i || (i = {})).State = "state", r.Speaking = "speaking", r.VideoSourceQualityChanged = "video-source-quality-changed", r.Video = "video", r.Flags = "flags", r.Platform = "platform", r.Ping = "ping", r.OutboundLossRate = "outboundlossrate"

@@ -1,15 +1,15 @@
 "use strict";
 var r = function() {
-  for (var e, t = [], n = 0; n < 256; n++) {
-    e = n;
-    for (var r = 0; r < 8; r++) e = 1 & e ? 3988292384 ^ e >>> 1 : e >>> 1;
-    t[n] = e
+  for (var t, e = [], s = 0; s < 256; s++) {
+    t = s;
+    for (var r = 0; r < 8; r++) t = 1 & t ? 3988292384 ^ t >>> 1 : t >>> 1;
+    e[s] = t
   }
-  return t
+  return e
 }();
-e.exports = function(e, t, n, i) {
-  var o = i + n;
-  e ^= -1;
-  for (var s = i; s < o; s++) e = e >>> 8 ^ r[(e ^ t[s]) & 255];
-  return -1 ^ e
+t.exports = function(t, e, s, i) {
+  var n = i + s;
+  t ^= -1;
+  for (var c = i; c < n; c++) t = t >>> 8 ^ r[(t ^ e[c]) & 255];
+  return -1 ^ t
 }

@@ -1,36 +1,36 @@
 "use strict";
 n.r(t), n.d(t, {
   getDevicePixelRatio: function() {
-    return d.default
+    return c.default
   },
   isImageLoaded: function() {
-    return m
+    return _
   },
   loadImage: function() {
-    return E
+    return S
   },
   getBestMediaProxySize: function() {
-    return p
+    return m
   },
   getImageSrc: function() {
-    return v
+    return T
   }
 }), n("222007");
 var i = n("917351"),
-  s = n.n(i),
-  r = n("693566"),
-  a = n.n(r),
+  r = n.n(i),
+  s = n("693566"),
+  a = n.n(s),
   o = n("522632"),
   l = n("981980"),
   u = n("35468"),
-  d = n("547630"),
-  c = n("49111");
+  c = n("547630"),
+  d = n("49111");
 let f = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
-  _ = new a({
+  E = new a({
     max: 1e3
   });
 
-function h(e) {
+function p(e) {
   let t = new Image;
   t.onerror = function(e, t) {
     null == e.backoff && (e.backoff = new l.default);
@@ -39,45 +39,45 @@ function h(e) {
     } = e;
     return async () => {
       await u.default.isOnline(), n.fails < 5 ? n.fail(() => {
-        h(e)
-      }) : g(!0, e, t)
+        p(e)
+      }) : h(!0, e, t)
     }
   }(e, t), t.onload = () => {
     let {
       backoff: n
     } = e;
-    null != n && n.succeed(), g(!1, e, t)
+    null != n && n.succeed(), h(!1, e, t)
   }, t.src = e.url
 }
 
-function g(e, t, n) {
+function h(e, t, n) {
   let {
     callbacks: i,
-    url: s
+    url: r
   } = t;
-  if (e) _.del(s);
+  if (e) E.del(r);
   else {
     let {
       width: e,
       height: i
     } = n;
     t = {
-      url: s,
+      url: r,
       loaded: !0,
       width: e,
       height: i
-    }, _.set(s, t)
+    }, E.set(r, t)
   }
   null != i && i.forEach(n => n(e, t))
 }
 
-function m(e) {
-  let t = _.get(e);
+function _(e) {
+  let t = E.get(e);
   return null != t && t.loaded
 }
 
-function E(e, t) {
-  let n = _.get(e);
+function S(e, t) {
+  let n = E.get(e);
   if (null != n && n.loaded) return null != t && u.default.awaitOnline().then(() => {
     null != n && null != n.callbacks && n.callbacks.forEach(t => {
       null != n ? t(!1, n) : t(!0, {
@@ -85,58 +85,58 @@ function E(e, t) {
         loaded: !0
       })
     })
-  }), c.NOOP;
+  }), d.NOOP;
   {
     let i;
     return null == n && (n = {
       url: e,
       loaded: !1
-    }, _.set(e, n), h(n)), null != t && (i = t.bind(null), null == n.callbacks && (n.callbacks = new Set), n.callbacks.add(i)), () => {
+    }, E.set(e, n), p(n)), null != t && (i = t.bind(null), null == n.callbacks && (n.callbacks = new Set), n.callbacks.add(i)), () => {
       null != i && null != n && (null != n.callbacks && n.callbacks.delete(i), null != n.backoff && n.backoff.cancel())
     }
   }
 }
 
-function p(e) {
+function m(e) {
   var t;
   return null !== (t = f.find(t => e <= t)) && void 0 !== t ? t : f[f.length - 1]
 }
 
-function v(e) {
+function T(e) {
   let {
     src: t,
     width: n,
     height: i,
-    maxWidth: r,
+    maxWidth: s,
     maxHeight: a,
     ratio: l = 1,
     format: u = null,
-    quality: c = null
-  } = e, f = n, _ = i;
-  l < 1 && (f = Math.round(n * l), _ = Math.round(i * l)), null != r && (f = Math.min(f, r)), null != a && (_ = Math.min(_, a));
-  let h = (0, d.default)();
-  return f *= h,
+    quality: d = null
+  } = e, f = n, E = i;
+  l < 1 && (f = Math.round(n * l), E = Math.round(i * l)), null != s && (f = Math.min(f, s)), null != a && (E = Math.min(E, a));
+  let p = (0, c.default)();
+  return f *= p,
     function(e) {
       let {
         src: t,
         sourceWidth: n,
         sourceHeight: i,
-        targetWidth: r,
+        targetWidth: s,
         targetHeight: a,
         format: l = null,
         quality: u = null
-      } = e, [d, c] = function(e) {
+      } = e, [c, d] = function(e) {
         let [t, n] = e.split("?");
         return [t, o.parse(n)]
       }(t);
-      return null != l && (c.format = l), null != u && (c.quality = u), (r !== n || a !== i) && (c.width = 0 | r, c.height = 0 | a), !s.isEmpty(c) && (d += "?" + o.stringify(c)), d
+      return null != l && (d.format = l), null != u && (d.quality = u), (s !== n || a !== i) && (d.width = 0 | s, d.height = 0 | a), !r.isEmpty(d) && (c += "?" + o.stringify(d)), c
     }({
       src: t,
       sourceWidth: n,
       sourceHeight: i,
       targetWidth: f,
-      targetHeight: _ *= h,
+      targetHeight: E *= p,
       format: u,
-      quality: c
+      quality: d
     })
 }

@@ -1,92 +1,92 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 });
 var i = n("37983");
 n("884691");
-var s = n("414456"),
-  r = n.n(s),
+var r = n("414456"),
+  s = n.n(r),
   a = n("271841"),
   o = n("227645"),
   l = n("818810"),
   u = n("516256"),
-  d = n("577776"),
-  c = n("145131"),
+  c = n("577776"),
+  d = n("145131"),
   f = n("782340"),
-  _ = n("525625"),
-  h = e => {
-    let t, n, s, {
-      body: h,
-      cancelText: g,
-      className: m,
-      confirmColor: E,
-      confirmText: p = f.default.Messages.OKAY,
-      secondaryConfirmText: v,
-      onCancel: S,
-      onClose: T,
-      onConfirm: I,
-      onConfirmSecondary: C,
+  E = n("525625"),
+  p = e => {
+    let t, n, r, {
+      body: p,
+      cancelText: h,
+      className: _,
+      confirmColor: S,
+      confirmText: m = f.default.Messages.OKAY,
+      secondaryConfirmText: T,
+      onCancel: g,
+      onClose: I,
+      onConfirm: C,
+      onConfirmSecondary: v,
       title: A,
-      transitionState: y,
+      transitionState: R,
       titleClassName: N
     } = e;
-    return null != g && "" !== g && (t = (0, i.jsx)(a.Button, {
+    return null != h && "" !== h && (t = (0, i.jsx)(a.Button, {
       type: "button",
       size: a.Button.Sizes.XLARGE,
       color: a.Button.Colors.PRIMARY,
       onClick: () => {
-        null == T || T(), null == S || S()
+        null == I || I(), null == g || g()
       },
-      className: _.secondaryButton,
-      children: g
-    })), null != p && "" !== p && (n = (0, i.jsx)(a.Button, {
+      className: E.secondaryButton,
+      children: h
+    })), null != m && "" !== m && (n = (0, i.jsx)(a.Button, {
       type: "submit",
-      color: E,
+      color: S,
       size: a.Button.Sizes.XLARGE,
-      className: r(_.primaryButton, null != t ? _.gutter : null),
+      className: s(E.primaryButton, null != t ? E.gutter : null),
       autoFocus: !0,
-      children: p
-    })), null != v && "" !== v && (s = (0, i.jsx)(o.Clickable, {
+      children: m
+    })), null != T && "" !== T && (r = (0, i.jsx)(o.Clickable, {
       onClick: () => {
-        null == T || T(), null == C || C()
+        null == I || I(), null == v || v()
       },
-      className: _.minorContainer,
-      children: (0, i.jsx)(d.Text, {
-        className: _.secondaryAction,
+      className: E.minorContainer,
+      children: (0, i.jsx)(c.Text, {
+        className: E.secondaryAction,
         variant: "text-xs/normal",
-        children: v
+        children: T
       })
     })), (0, i.jsx)(u.ModalRoot, {
-      transitionState: y,
-      className: r(m, _.container),
+      transitionState: R,
+      className: s(_, E.container),
       "aria-label": A,
       children: (0, i.jsxs)("form", {
         onSubmit: e => {
-          null != e && e.preventDefault(), null == T || T(), null == I || I()
+          null != e && e.preventDefault(), null == I || I(), null == C || C()
         },
-        className: _.form,
+        className: E.form,
         children: [(0, i.jsx)(u.ModalContent, {
-          className: _.modalContent,
-          children: (0, i.jsxs)(c.default, {
-            direction: c.default.Direction.VERTICAL,
-            justify: c.default.Justify.CENTER,
-            className: _.content,
+          className: E.modalContent,
+          children: (0, i.jsxs)(d.default, {
+            direction: d.default.Direction.VERTICAL,
+            justify: d.default.Justify.CENTER,
+            className: E.content,
             children: [null != A && (0, i.jsx)(l.FormTitle, {
               tag: "h2",
-              className: r(_.title, N),
+              className: s(E.title, N),
               children: A
-            }), null != h && (0, i.jsx)(d.Text, {
+            }), null != p && (0, i.jsx)(c.Text, {
               variant: "text-md/normal",
-              className: _.body,
-              children: h
+              className: E.body,
+              children: p
             })]
           })
         }), (0, i.jsxs)(u.ModalFooter, {
-          justify: c.default.Justify.BETWEEN,
-          wrap: c.default.Wrap.WRAP,
-          children: [n, t, s]
+          justify: d.default.Justify.BETWEEN,
+          wrap: d.default.Wrap.WRAP,
+          children: [n, t, r]
         })]
       })
     })

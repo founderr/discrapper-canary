@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   useTooltip: function() {
-    return o
+    return a
   }
 });
 var r = n("240849"),
-  i = n("388032");
+  o = n("388032");
 
-function o(e, t) {
+function a(e, t) {
   let n = (0, r.filterDOMProps)(e, {
       labelable: !0
     }),
     {
-      hoverProps: o
-    } = (0, i.useHover)({
+      hoverProps: a
+    } = (0, o.useHover)({
       onHoverStart: () => null == t ? void 0 : t.open(!0),
       onHoverEnd: () => null == t ? void 0 : t.close()
     });
   return {
-    tooltipProps: (0, r.mergeProps)(n, o, {
+    tooltipProps: (0, r.mergeProps)(n, a, {
       role: "tooltip"
     })
   }

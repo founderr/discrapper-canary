@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var i = n("862205");
-let s = (0, i.createExperiment)({
+var s = n("862205");
+let i = (0, s.createExperiment)({
   kind: "guild",
   id: "2021-11_member_verification_manual_approval",
   label: "Member Verification Manual Approval",
@@ -25,11 +25,11 @@ let s = (0, i.createExperiment)({
 });
 
 function r(e) {
-  s.trackExposure({
+  i.trackExposure({
     guildId: e,
     location: "bda51f_1"
   });
-  let t = s.useExperiment({
+  let t = i.useExperiment({
     guildId: e,
     location: "bda51f_2"
   }, {
@@ -39,7 +39,7 @@ function r(e) {
 }
 
 function a(e) {
-  let t = s.getCurrentConfig({
+  let t = i.getCurrentConfig({
     guildId: e,
     location: "bda51f_3"
   }, {

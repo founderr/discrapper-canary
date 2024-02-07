@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return L
+    return u
   }
 }), E("222007");
 var t = E("689988"),
@@ -15,8 +15,8 @@ var t = E("689988"),
   T = E("2973"),
   S = E("227231"),
   N = E("166604");
-let O = 5 * i.default.Millis.SECOND,
-  A = 12 * i.default.Millis.HOUR,
+let A = 5 * i.default.Millis.SECOND,
+  O = 12 * i.default.Millis.HOUR,
   R = 1 * i.default.Millis.MINUTE;
 class l extends t.default {
   maybeFetchCurrentQuests() {
@@ -61,7 +61,7 @@ class l extends t.default {
         questId: r.id
       })
     }, this.handlePostConnectionOpen = () => {
-      window.setTimeout(this.maybeFetchCurrentQuests, Math.floor(Math.random() * O))
+      window.setTimeout(this.maybeFetchCurrentQuests, Math.floor(Math.random() * A))
     }, this.handleSendHeartbeatSuccess = e => {
       let {
         streamKey: _,
@@ -69,7 +69,7 @@ class l extends t.default {
       } = e;
       null != E.completedAt && this.terminateHeartbeat(_)
     }, this.handleRunningGamesChange = () => {
-      !(this.instantiatedAt + A > Date.now() || T.default.lastFetchedCurrentQuests + A > Date.now()) && this.maybeFetchCurrentQuests()
+      !(this.instantiatedAt + O > Date.now() || T.default.lastFetchedCurrentQuests + O > Date.now()) && this.maybeFetchCurrentQuests()
     }, this.handleStreamStart = e => {
       var _, E;
       let {
@@ -105,4 +105,4 @@ class l extends t.default {
     }
   }
 }
-var L = new l
+var u = new l

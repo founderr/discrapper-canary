@@ -1,147 +1,147 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return C
   }
 }), n("222007");
-var i, s, r = n("872717"),
+var s, i, r = n("872717"),
   a = n("819855"),
   o = n("913144"),
-  l = n("774146"),
+  d = n("774146"),
   u = n("132774"),
-  d = n("258158"),
-  c = n("823348"),
-  f = n("697218"),
-  _ = n("284609"),
-  h = n("158998"),
-  g = n("404118"),
-  m = n("272030"),
-  E = n("49111"),
-  p = n("782340");
+  l = n("258158"),
+  f = n("823348"),
+  _ = n("697218"),
+  c = n("284609"),
+  g = n("158998"),
+  m = n("404118"),
+  h = n("272030"),
+  v = n("49111"),
+  E = n("782340");
 
-function v(e) {
-  (0, m.closeContextMenu)(), g.default.show(e)
+function p(e) {
+  (0, h.closeContextMenu)(), m.default.show(e)
 }
 
-function S(e, t, n) {
+function y(e, t, n) {
   let {
-    status: i,
-    body: s
-  } = e, r = s && s.code;
-  switch (i) {
+    status: s,
+    body: i
+  } = e, r = i && i.code;
+  switch (s) {
     case 429:
-      0 === t && v({
-        title: p.default.Messages.FRIEND_REQUEST_RATE_LIMITED_HEADER,
-        body: p.default.Messages.FRIEND_REQUEST_RATE_LIMITED_BODY,
-        confirmText: p.default.Messages.FRIEND_REQUEST_RATE_LIMITED_BUTTON
+      0 === t && p({
+        title: E.default.Messages.FRIEND_REQUEST_RATE_LIMITED_HEADER,
+        body: E.default.Messages.FRIEND_REQUEST_RATE_LIMITED_BODY,
+        confirmText: E.default.Messages.FRIEND_REQUEST_RATE_LIMITED_BUTTON
       });
       break;
     case 403:
-      if (r === E.AbortCodes.EMAIL_VERIFICATION_REQUIRED) {
-        v({
-          title: p.default.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_HEADER,
-          body: p.default.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_BODY,
-          confirmText: p.default.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_BUTTON,
+      if (r === v.AbortCodes.EMAIL_VERIFICATION_REQUIRED) {
+        p({
+          title: E.default.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_HEADER,
+          body: E.default.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_BODY,
+          confirmText: E.default.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_BUTTON,
           onConfirm: () => {
-            l.openClaimAccountModal()
+            d.openClaimAccountModal()
           }
         });
         break
       }
     default:
-      if (r === E.AbortCodes.USER_QUARANTINED)(0, m.closeContextMenu)(), (0, d.default)();
-      else if ((0, c.isLimitedAccessErrorCode)(i, r)) break;
+      if (r === v.AbortCodes.USER_QUARANTINED)(0, h.closeContextMenu)(), (0, l.default)();
+      else if ((0, f.isLimitedAccessErrorCode)(s, r)) break;
       else if (0 === t) {
-        let e = null != n ? (0, _.humanizeAbortCode)(r || 0, n) : p.default.Messages.POMELO_ADD_FRIEND_ERROR;
-        v({
-          title: p.default.Messages.FRIEND_REQUEST_FAILED_HEADER,
+        let e = null != n ? (0, c.humanizeAbortCode)(r || 0, n) : E.default.Messages.POMELO_ADD_FRIEND_ERROR;
+        p({
+          title: E.default.Messages.FRIEND_REQUEST_FAILED_HEADER,
           body: e,
-          confirmText: p.default.Messages.OKAY
+          confirmText: E.default.Messages.OKAY
         })
       }
   }
   throw e
-}(s = i || (i = {}))[s.SHOW_ALWAYS = 0] = "SHOW_ALWAYS", s[s.SHOW_ONLY_IF_ACTION_NEEDED = 1] = "SHOW_ONLY_IF_ACTION_NEEDED";
+}(i = s || (s = {}))[i.SHOW_ALWAYS = 0] = "SHOW_ALWAYS", i[i.SHOW_ONLY_IF_ACTION_NEEDED = 1] = "SHOW_ONLY_IF_ACTION_NEEDED";
 let T = {
   sendRequest(e) {
     let {
       discordTag: t,
       context: n,
-      captchaPayload: i,
-      errorUxConfig: s = 0
+      captchaPayload: s,
+      errorUxConfig: i = 0
     } = e, [a, o] = t.split("#");
     return r.default.post({
-      url: E.Endpoints.USER_RELATIONSHIPS(),
+      url: v.Endpoints.USER_RELATIONSHIPS(),
       body: {
         username: a,
         discriminator: parseInt(o),
-        ...i
+        ...s
       },
       context: n,
       oldFormErrors: !0
     }).catch(e => {
-      S(e, s, t)
+      y(e, i, t)
     })
   },
   addRelationship(e, t) {
     let {
       userId: n,
-      context: i,
-      type: s,
+      context: s,
+      type: i,
       friendToken: a,
       fromFriendSuggestion: o,
-      captchaPayload: l
-    } = e, u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, d = f.default.getUser(n);
+      captchaPayload: d
+    } = e, u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, l = _.default.getUser(n);
     return r.default.put({
-      url: E.Endpoints.USER_RELATIONSHIP(n),
+      url: v.Endpoints.USER_RELATIONSHIP(n),
       body: {
-        type: s,
+        type: i,
         friend_token: a,
         from_friend_suggestion: o,
-        ...l
+        ...d
       },
-      context: i,
+      context: s,
       oldFormErrors: !0
     }).then(() => {
       null == t || t()
     }).catch(e => {
-      S(e, u, h.default.getUserTag(d))
+      y(e, u, g.default.getUserTag(l))
     })
   },
   acceptFriendRequest: e => T.addRelationship(e, function() {
-    a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST)
+    a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST)
   }),
   cancelFriendRequest: (e, t) => T.removeRelationship(e, t, function() {
-    a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST)
+    a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST)
   }),
   removeFriend(e, t) {
     T.removeRelationship(e, t, function() {
-      a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED)
+      a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED)
     })
   },
   unblockUser(e, t) {
     T.removeRelationship(e, t, function() {
-      a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED)
+      a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED)
     })
   },
   removeRelationship: (e, t, n) => r.default.delete({
-    url: E.Endpoints.USER_RELATIONSHIP(e),
+    url: v.Endpoints.USER_RELATIONSHIP(e),
     context: t,
     oldFormErrors: !0
   }).then(() => {
     null == n || n()
   }).catch(() => {
-    a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
+    a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
   }),
   updateRelationship: (e, t) => r.default.patch({
-    url: E.Endpoints.USER_RELATIONSHIP(e),
+    url: v.Endpoints.USER_RELATIONSHIP(e),
     body: {
       nickname: t
     }
   }),
   fetchRelationships() {
     r.default.get({
-      url: E.Endpoints.USER_RELATIONSHIPS(),
+      url: v.Endpoints.USER_RELATIONSHIPS(),
       oldFormErrors: !0
     }).then(e => o.default.dispatch({
       type: "LOAD_RELATIONSHIPS_SUCCESS",
@@ -154,16 +154,16 @@ let T = {
     (0, u.default)(e)
   },
   clearPendingRelationships: () => r.default.delete({
-    url: E.Endpoints.USER_RELATIONSHIPS(),
+    url: v.Endpoints.USER_RELATIONSHIPS(),
     query: {
-      relationship_type: E.RelationshipTypes.PENDING_INCOMING
+      relationship_type: v.RelationshipTypes.PENDING_INCOMING
     }
   }).then(() => {
     o.default.dispatch({
       type: "RELATIONSHIP_PENDING_INCOMING_REMOVED"
     })
   }).catch(() => {
-    a.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
+    a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
   })
 };
-var I = T
+var C = T

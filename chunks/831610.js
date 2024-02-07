@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 }), n("781738");
 let i = /\\/g;
 
-function s(e) {
+function r(e) {
   return e.replace(i, "/")
 }

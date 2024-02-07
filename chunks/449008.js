@@ -1,17 +1,17 @@
 "use strict";
 
-function O(N) {
-  throw Error("Unhandled value: ".concat(N))
+function O(I) {
+  throw Error("Unhandled value: ".concat(I))
 }
 
-function T(N) {
-  return null != N
+function T(I) {
+  return null != I
 }
 
-function _(N, I) {
-  return N.size === I.size && (0 === N.size && 0 === I.size || Array.from(N).every(N => I.has(N)))
+function _(I, N) {
+  return I.size === N.size && (0 === I.size && 0 === N.size || Array.from(I).every(I => N.has(I)))
 }
-A.r(I), A.d(I, {
+A.r(N), A.d(N, {
   assertNever: function() {
     return O
   },

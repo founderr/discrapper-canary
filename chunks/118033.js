@@ -1,38 +1,38 @@
 "use strict";
 n.r(t), n.d(t, {
   packStageChannelPartyId: function() {
-    return d
+    return l
   },
   unpackStageChannelParty: function() {
-    return c
-  },
-  isStageActivity: function() {
     return f
   },
-  shouldShowActivity: function() {
+  isStageActivity: function() {
     return _
+  },
+  shouldShowActivity: function() {
+    return c
   }
 }), n("222007");
-var i = n("271938"),
-  s = n("42203"),
+var s = n("271938"),
+  i = n("42203"),
   r = n("305961"),
   a = n("325861"),
   o = n("837979"),
-  l = n("49111");
+  d = n("49111");
 let u = "stage:";
 
-function d(e, t) {
+function l(e, t) {
   let n = 0,
-    s = i.default.getId(),
-    o = a.default.isSpeaker(s, e.id);
+    i = s.default.getId(),
+    o = a.default.isSpeaker(i, e.id);
   o && (n |= 1);
-  let d = r.default.getGuild(e.getGuildId());
-  null != d && (d.hasFeature(l.GuildFeatures.PARTNERED) && (n |= 2), d.hasFeature(l.GuildFeatures.VERIFIED) && (n |= 4));
-  let c = n.toString(16);
-  return "".concat(u).concat(e.guild_id, ":").concat(e.id, ":").concat(c, ":").concat(t.id)
+  let l = r.default.getGuild(e.getGuildId());
+  null != l && (l.hasFeature(d.GuildFeatures.PARTNERED) && (n |= 2), l.hasFeature(d.GuildFeatures.VERIFIED) && (n |= 4));
+  let f = n.toString(16);
+  return "".concat(u).concat(e.guild_id, ":").concat(e.id, ":").concat(f, ":").concat(t.id)
 }
 
-function c(e) {
+function f(e) {
   if (null == e || null == e.party) return;
   let {
     id: t,
@@ -40,10 +40,10 @@ function c(e) {
   } = e.party;
   try {
     if (null == t || !t.startsWith(u)) return;
-    let [, e, i, s, r] = t.split(":"), a = parseInt(s, 16);
+    let [, e, s, i, r] = t.split(":"), a = parseInt(i, 16);
     return {
       guildId: e,
-      channelId: i,
+      channelId: s,
       size: n,
       userIsSpeaker: (1 & a) != 0,
       guildIsPartnered: (2 & a) != 0,
@@ -55,15 +55,15 @@ function c(e) {
   }
 }
 
-function f(e) {
+function _(e) {
   return (null == e ? void 0 : e.application_id) === o.STAGE_APPLICATION_ID
 }
 
-function _(e) {
-  let t = c(e);
+function c(e) {
+  let t = f(e);
   if (null == t) return !1;
   let {
     channelId: n
-  } = t, i = s.default.getChannel(n);
-  return null != i
+  } = t, s = i.default.getChannel(n);
+  return null != s
 }
