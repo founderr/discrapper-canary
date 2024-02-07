@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return o
   }
 });
 var a = n("37983");
@@ -12,7 +12,7 @@ var i = n("77078"),
   s = n("907566"),
   d = n("782340");
 
-function r(e) {
+function o(e) {
   let t = u.default.isLive(e.id);
   return e.isGuildStageVoice() && t ? (0, a.jsx)(i.MenuItem, {
     id: "report-stage",

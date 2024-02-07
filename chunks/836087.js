@@ -123,7 +123,7 @@ function N(e) {
     L.current.cancel(), N(!0)
   }, []), P = r.useCallback(() => {
     L.current.delay()
-  }, []), b = r.useCallback((e, t) => {
+  }, []), D = r.useCallback((e, t) => {
     y(), (0, f.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -145,13 +145,13 @@ function N(e) {
     className: C,
     participantType: l.type
   });
-  let D = u(O).take(T).map(e => (0, a.jsx)(c.Avatar, {
+  let b = u(O).take(T).map(e => (0, a.jsx)(c.Avatar, {
     src: e.getAvatarURL(s, 24),
     "aria-label": e.username,
     size: c.AvatarSizes.SIZE_24,
     className: I.viewer
   }, e.id)).value();
-  return O.length > T && (D[D.length - 1] = (0, a.jsxs)("div", {
+  return O.length > T && (b[b.length - 1] = (0, a.jsxs)("div", {
     className: I.overflow,
     children: ["+", O.length - T + 1]
   }, "overflow")), (0, a.jsx)(h.default, {
@@ -162,7 +162,7 @@ function N(e) {
       children: (0, a.jsx)(c.Popout, {
         renderPopout: () => (0, a.jsx)(M, {
           participantType: l.type,
-          handleUserContextMenu: b,
+          handleUserContextMenu: D,
           guildId: s,
           channelId: t,
           users: O,
@@ -172,7 +172,7 @@ function N(e) {
         position: "top",
         children: () => (0, a.jsx)("div", {
           className: i(I.viewers, C),
-          children: D
+          children: b
         })
       })
     })

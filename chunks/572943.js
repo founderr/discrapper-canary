@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   usePlatformAllowed: function() {
-    return T
+    return E
   },
   usePlatforms: function() {
     return S
@@ -27,9 +27,9 @@ let p = {
   h = new Map([
     [f.PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()]
   ]),
-  E = 30 * c.default.Millis.DAY;
+  T = 30 * c.default.Millis.DAY;
 
-function T(e) {
+function E(e) {
   let {
     forUserProfile: t
   } = e, l = (0, i.useStateFromStores)([d.default], () => d.default.getCurrentUser()), n = o.PlayStationVoiceExperiment.useExperiment({
@@ -45,7 +45,7 @@ function T(e) {
 
 function S() {
   let e = (0, i.useStateFromStores)([u.default], () => u.default.getAccounts()),
-    t = T({
+    t = E({
       forUserProfile: !1
     }),
     l = n.useMemo(() => {
@@ -54,7 +54,7 @@ function S() {
     }, [e]);
   return s.sortBy(r.default.filter(t), [e => {
     var t;
-    return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + E)
+    return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + T)
   }, e => l.has(e.type), e => e.hasMetadata, e => !f.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
 }
 

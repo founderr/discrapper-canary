@@ -1,48 +1,48 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return T
   }
-}), s("222007");
-var n = s("37983"),
-  r = s("884691"),
-  l = s("516555"),
-  i = s("812204"),
-  a = s("685665"),
-  o = s("635357"),
-  u = s("642906"),
-  d = s("85336"),
-  c = s("385179"),
-  f = s("292215"),
-  E = s("639137"),
-  _ = s("526139"),
-  p = s("158184"),
-  I = s("385890"),
-  S = s("337978"),
-  h = s("49111"),
-  m = s("843455"),
-  C = s("322859");
+}), n("222007");
+var s = n("37983"),
+  r = n("884691"),
+  l = n("516555"),
+  i = n("812204"),
+  a = n("685665"),
+  o = n("635357"),
+  u = n("642906"),
+  d = n("85336"),
+  c = n("385179"),
+  f = n("292215"),
+  E = n("639137"),
+  p = n("526139"),
+  _ = n("158184"),
+  I = n("385890"),
+  S = n("337978"),
+  h = n("49111"),
+  m = n("843455"),
+  C = n("322859");
 
 function T(e) {
   let {
     onClose: t,
-    onComplete: s,
+    onComplete: n,
     transitionState: T,
     loadId: x,
     skuId: P,
     isGift: R = !1,
-    giftRecipient: v,
-    giftMessage: g,
+    giftRecipient: g,
+    giftMessage: v,
     analyticsLocations: M,
     returnRef: A
   } = e, {
     analyticsLocations: N,
     AnalyticsLocationProvider: O
-  } = (0, a.default)([...M, i.default.COLLECTIBLES_PAYMENT_MODAL]), L = r.useRef(new l.Environment), [j, U] = r.useState(null), D = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, I.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, _.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
+  } = (0, a.default)([...M, i.default.COLLECTIBLES_PAYMENT_MODAL]), L = r.useRef(new l.Environment), [U, j] = r.useState(null), y = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, I.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, p.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
     key: d.Step.CONFIRM,
-    renderStep: e => (0, n.jsx)(p.CollectiblesPaymentModalConfirmStep, {
+    renderStep: e => (0, s.jsx)(_.CollectiblesPaymentModalConfirmStep, {
       ...e,
-      confettiCanvas: j,
+      confettiCanvas: U,
       analyticsLocations: N
     }),
     options: {
@@ -50,36 +50,36 @@ function T(e) {
       sliderBodyClassName: C.modalOverrideSliderBody
     }
   }];
-  return (0, n.jsxs)(O, {
-    children: [(0, n.jsx)(l.ConfettiCanvas, {
-      ref: U,
+  return (0, s.jsxs)(O, {
+    children: [(0, s.jsx)(l.ConfettiCanvas, {
+      ref: j,
       className: C.confettiCanvas,
       environment: L.current
-    }), (0, n.jsx)(u.PaymentContextProvider, {
-      stepConfigs: D,
+    }), (0, s.jsx)(u.PaymentContextProvider, {
+      stepConfigs: y,
       applicationId: h.COLLECTIBLES_APPLICATION_ID,
       skuIDs: [P],
       isGift: R,
       activeSubscription: null,
       purchaseType: m.PurchaseTypes.ONE_TIME,
-      children: (0, n.jsx)(o.GiftContextProvider, {
+      children: (0, s.jsx)(o.GiftContextProvider, {
         isGift: R,
-        giftRecipient: v,
-        giftMessage: g,
-        children: (0, n.jsx)(c.PaymentModal, {
+        giftRecipient: g,
+        giftMessage: v,
+        children: (0, s.jsx)(c.PaymentModal, {
           onClose: t,
-          onComplete: s,
+          onComplete: n,
           loadId: x,
           applicationId: h.COLLECTIBLES_APPLICATION_ID,
           skuId: P,
           initialPlanId: null,
           analyticsLocations: N,
           transitionState: T,
-          renderHeader: (e, t, s) => R ? (0, n.jsx)(E.default, {
-            step: s,
+          renderHeader: (e, t, n) => R ? (0, s.jsx)(E.default, {
+            step: n,
             onClose: () => t(!1)
-          }) : (0, n.jsx)(S.default, {
-            step: s,
+          }) : (0, s.jsx)(S.default, {
+            step: n,
             onClose: () => t(!1)
           }),
           returnRef: A,

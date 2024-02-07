@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("468759"),
   E = n("987772"),
   C = n("956089"),
-  g = n("315102"),
-  S = n("233965"),
+  S = n("315102"),
+  g = n("233965"),
   _ = n("32346"),
   I = n("808742"),
   T = n("342845"),
@@ -51,11 +51,11 @@ let M = e => {
     } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = l.useState(null != t ? t : null), O = (0, u.useStateFromStores)([p.default], () => p.default.getCurrentUser()), y = () => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
     }, b = (e, t) => {
-      e.stopPropagation(), (0, S.updateHangStatus)(t, !0), y()
+      e.stopPropagation(), (0, g.updateHangStatus)(t, !0), y()
     }, P = (e, t) => {
-      e.stopPropagation(), (0, S.updateCustomHangStatus)(t.status, t.emoji, !0), y()
+      e.stopPropagation(), (0, g.updateCustomHangStatus)(t.status, t.emoji, !0), y()
     }, D = l.useCallback(e => {
-      e.stopPropagation(), (0, S.clearHangStatus)(!0)
+      e.stopPropagation(), (0, g.clearHangStatus)(!0)
     }, []), U = e => {
       e.stopPropagation(), (0, c.openModalLazy)(async () => {
         let {
@@ -110,7 +110,7 @@ let M = e => {
               children: [(0, a.jsx)(c.Avatar, {
                 className: A.avatar,
                 size: c.AvatarSizes.SIZE_40,
-                src: (0, g.getUserAvatarURL)(O),
+                src: (0, S.getUserAvatarURL)(O),
                 "aria-hidden": !0
               }), (0, a.jsx)("div", {
                 className: A.outline

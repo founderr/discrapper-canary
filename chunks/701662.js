@@ -27,13 +27,13 @@ var s, a, l = n("37983"),
   v = n("782340"),
   R = n("43730");
 
-function O() {
+function L() {
   return (0, l.jsx)("div", {
     className: R.centerFlex,
     children: (0, l.jsx)(o.Spinner, {})
   })
 }(a = s || (s = {}))[a.LOADING = 0] = "LOADING", a[a.DETAILS = 1] = "DETAILS", a[a.ERROR = 2] = "ERROR";
-let L = e => {
+let O = e => {
   let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
   if (null == e || null == e.state || t) return 0;
   let n = e.state;
@@ -82,7 +82,7 @@ function M(e) {
     ...u
   } = e, {
     invite: o
-  } = u, [d, c] = i.useState(L(o)), {
+  } = u, [d, c] = i.useState(O(o)), {
     ref: E,
     height: _
   } = (0, f.default)(), I = (0, r.useSpring)({
@@ -90,7 +90,7 @@ function M(e) {
     config: r.config.stiff
   });
   return i.useEffect(() => {
-    let e = L(o);
+    let e = O(o);
     e !== d && c(e)
   }, [o, d]), (0, l.jsxs)(r.animated.div, {
     className: R.inviteCard,
@@ -131,7 +131,7 @@ function P(e) {
   let {
     invite: t
   } = e, n = n => {
-    if (null == t) return (0, l.jsx)(O, {});
+    if (null == t) return (0, l.jsx)(L, {});
     switch (n) {
       case 1:
         return (0, l.jsx)(A.default, {
@@ -144,7 +144,7 @@ function P(e) {
           invite: t
         });
       default:
-        return (0, l.jsx)(O, {})
+        return (0, l.jsx)(L, {})
     }
   }, s = {
     1: R.inviteCardInner,

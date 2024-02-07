@@ -18,8 +18,8 @@ var s = n("37983"),
   C = n("871388"),
   p = n("389153"),
   m = n("56947"),
-  g = n("386045"),
-  E = n("734217"),
+  E = n("386045"),
+  g = n("734217"),
   S = n("139321"),
   A = n("562228"),
   _ = n("140596"),
@@ -37,8 +37,8 @@ var s = n("37983"),
   j = n("412861"),
   b = n("79254"),
   P = n("64096"),
-  H = n("49111"),
-  F = n("80028"),
+  F = n("49111"),
+  H = n("80028"),
   U = n("782340"),
   k = n("381769"),
   w = a.memo(function(e) {
@@ -47,16 +47,16 @@ var s = n("37983"),
         className: B,
         channel: V,
         draftType: W,
-        editorTextContent: Z,
-        setValue: z,
+        editorTextContent: z,
+        setValue: Z,
         canOnlyUseTextCommands: K
       } = e,
       Y = (0, f.useAppContext)(),
-      X = a.useRef(null),
-      q = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
-      J = (0, r.useStateFromStores)([g.default], () => g.default.getSettings().clipsEnabled),
-      Q = (0, r.useStateFromStores)([g.default], () => g.default.getLastClipsSession()),
-      $ = (0, r.useStateFromStoresArray)([g.default], () => g.default.getNewClipIds()),
+      q = a.useRef(null),
+      X = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
+      J = (0, r.useStateFromStores)([E.default], () => E.default.getSettings().clipsEnabled),
+      Q = (0, r.useStateFromStores)([E.default], () => E.default.getLastClipsSession()),
+      $ = (0, r.useStateFromStoresArray)([E.default], () => E.default.getNewClipIds()),
       ee = (0, r.useStateFromStores)([I.default], () => null == I.default.getCurrentSidebarChannelId(V.id)),
       {
         showClipsHeaderEntrypoint: et
@@ -66,20 +66,20 @@ var s = n("37983"),
         autoTrackExposure: !1
       }),
       en = (0, r.useStateFromStores)([S.HotspotStore], () => S.HotspotStore.hasHotspot(S.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
-      es = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, F.CLIPS_GALLERY_MODAL_KEY)),
+      es = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, H.CLIPS_GALLERY_MODAL_KEY)),
       ea = (0, r.useStateFromStores)([N.default], () => N.default.hasLayers()),
-      el = (0, r.useStateFromStores)([g.default], () => g.default.hasClips()),
+      el = (0, r.useStateFromStores)([E.default], () => E.default.hasClips()),
       [ei, er] = a.useState(null),
       eo = (0, m.useEnableClips)() && (J || el),
       eu = V.isPrivate(),
-      ed = (0, r.useStateFromStores)([v.default], () => eu || v.default.can(H.Permissions.ATTACH_FILES, V) && v.default.can(H.Permissions.SEND_MESSAGES, V)),
+      ed = (0, r.useStateFromStores)([v.default], () => eu || v.default.can(F.Permissions.ATTACH_FILES, V) && v.default.can(F.Permissions.SEND_MESSAGES, V)),
       ec = (0, c.default)(Q);
     (null == ec ? void 0 : ec.newClipIds.length) !== (null == Q ? void 0 : Q.newClipIds.length) && (null !== (t = null == Q ? void 0 : Q.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ei && en && ee && !es && !et && !ea && er("recentClips");
     let ef = (e, t, n) => {
       null != t && "ETOOLARGE" === t.code ? (0, j.showUploadFileSizeExceededError)(V, []) : (0, j.promptToUpload)(e, V, W, {
         requireConfirm: !0,
         showLargeMessageDialog: n
-      }), O.ComponentDispatch.dispatchToLastSubscribed(H.ComponentActions.TEXTAREA_FOCUS)
+      }), O.ComponentDispatch.dispatchToLastSubscribed(F.ComponentActions.TEXTAREA_FOCUS)
     };
 
     function eh() {
@@ -92,23 +92,23 @@ var s = n("37983"),
           channelId: V.id
         })
       }, {
-        modalKey: F.CLIPS_GALLERY_MODAL_KEY
+        modalKey: H.CLIPS_GALLERY_MODAL_KEY
       }), er(null)
     }
     a.useEffect(() => {
       let e = () => {
         var e;
-        return null === (e = X.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+        return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
       };
-      return O.ComponentDispatch.subscribe(H.ComponentActions.UPLOAD_FILE, e), () => {
-        O.ComponentDispatch.unsubscribe(H.ComponentActions.UPLOAD_FILE, e)
+      return O.ComponentDispatch.subscribe(F.ComponentActions.UPLOAD_FILE, e), () => {
+        O.ComponentDispatch.unsubscribe(F.ComponentActions.UPLOAD_FILE, e)
       }
     });
     let eC = (0, T.useCanStartPublicThread)(V),
       ep = (0, T.useCanStartPrivateThread)(V),
       em = !M.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
-      eg = (0, r.useStateFromStores)([v.default, _.default], () => (0, p.canUseApplicationCommands)(v.default, _.default, K, V)),
-      eE = (0, A.useCanPostPollsInChannel)(null != V ? V : void 0),
+      eE = (0, r.useStateFromStores)([v.default, _.default], () => (0, p.canUseApplicationCommands)(v.default, _.default, K, V)),
+      eg = (0, A.useCanPostPollsInChannel)(null != V ? V : void 0),
       eS = (0, u.useRedesignIconContext)().enabled,
       eA = (0, h.useActivitiesInTextButtonVisibility)(V.id, "ChannelAttachButton"),
       e_ = null !== (l = null == $ ? void 0 : $.length) && void 0 !== l ? l : 0,
@@ -117,17 +117,17 @@ var s = n("37983"),
         canStartThreads: eC || ep,
         useSlate: em,
         hasClips: eo,
-        canUseApplicationCommands: eg,
+        canUseApplicationCommands: eE,
         channel: V,
-        activities: q,
+        activities: X,
         newClipsCount: e_,
-        canPostPolls: eE,
+        canPostPolls: eg,
         canLaunchActivities: null !== (w = null == eA ? void 0 : eA.showInOmniButtonMenu) && void 0 !== w && w,
         appContext: Y
       });
     if (0 === eT.length) return null;
-    let eM = q.some(e => (0, C.default)(e, H.ActivityFlags.SYNC)),
-      eI = q.some(e => (0, C.default)(e, H.ActivityFlags.JOIN) && !(0, C.default)(e, H.ActivityFlags.EMBEDDED)) || eM;
+    let eM = X.some(e => (0, C.default)(e, F.ActivityFlags.SYNC)),
+      eI = X.some(e => (0, C.default)(e, F.ActivityFlags.JOIN) && !(0, C.default)(e, F.ActivityFlags.EMBEDDED)) || eM;
     G = eS ? (0, s.jsx)(o.CirclePlusIcon, {
       className: k.attachButtonIcon,
       colorClass: k.attachButtonPlus
@@ -162,7 +162,7 @@ var s = n("37983"),
       renderPopout: e => {
         switch (ei) {
           case "recentClips":
-            return (0, s.jsx)(E.default, {
+            return (0, s.jsx)(g.default, {
               ...e,
               onOpenClips: eh,
               lastClipsSession: Q
@@ -175,11 +175,11 @@ var s = n("37983"),
               channel: V,
               onFileUpload: () => {
                 var e;
-                return null === (e = X.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+                return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
               },
               draftType: W,
-              editorTextContent: Z,
-              setValue: z,
+              editorTextContent: z,
+              setValue: Z,
               openClips: eh
             });
           default:
@@ -194,7 +194,7 @@ var s = n("37983"),
         "aria-label": U.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
         onDoubleClick: ed ? () => {
           var e;
-          return null === (e = X.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+          return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
         } : void 0,
         ...e,
         children: G
@@ -204,7 +204,7 @@ var s = n("37983"),
       children: [(0, s.jsx)("div", {
         className: k.uploadInput,
         children: (0, s.jsx)(d.default, {
-          ref: X,
+          ref: q,
           onChange: e => {
             ef(e.currentTarget.files, e.currentTarget.err), e.currentTarget.value = ""
           },

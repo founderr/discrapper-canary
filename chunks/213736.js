@@ -17,8 +17,8 @@ var n = l("37983"),
   m = l("837899"),
   p = l("425190"),
   h = l("701909"),
-  E = l("49111"),
-  T = l("782340"),
+  T = l("49111"),
+  E = l("782340"),
   S = l("474963"),
   _ = l("632215");
 
@@ -27,7 +27,7 @@ function g(e) {
     className: t,
     lineClamp: l = 6,
     isExpanded: s = !1
-  } = e, [g, A] = a.useState(s), I = a.useMemo(() => (0, d.parseBioReact)(T.default.Messages.MORE_INFO_CLYDE_LEGAL), []);
+  } = e, [g, A] = a.useState(s), I = a.useMemo(() => (0, d.parseBioReact)(E.default.Messages.MORE_INFO_CLYDE_LEGAL), []);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(o.Collapsible, {
       isExpanded: g,
@@ -59,7 +59,7 @@ function g(e) {
             children: [(0, n.jsx)(o.Heading, {
               variant: "eyebrow",
               className: S.userInfoSectionHeader,
-              children: T.default.Messages.MORE_INFO
+              children: E.default.Messages.MORE_INFO
             }), g ? (0, n.jsx)(p.default, {
               className: S.arrow
             }) : (0, n.jsx)(m.default, {
@@ -75,8 +75,8 @@ function g(e) {
         color: "var(--text-link)",
         className: S.linkIcon
       }), (0, n.jsx)(c.default, {
-        onClick: () => (0, u.default)(h.default.getArticleURL(E.HelpdeskArticles.CLYDE_AI), !0),
-        children: T.default.Messages.MORE_INFO_HELP_CENTER
+        onClick: () => (0, u.default)(h.default.getArticleURL(T.HelpdeskArticles.CLYDE_AI), !0),
+        children: E.default.Messages.MORE_INFO_HELP_CENTER
       })]
     })]
   })

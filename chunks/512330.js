@@ -27,7 +27,7 @@ let h = {
     MONTHS: e => e / 60 / 24 / 31,
     YEARS: e => e / 60 / 24 / 365
   },
-  E = [{
+  T = [{
     unit: "NONE",
     max: 0
   }, {
@@ -52,7 +52,7 @@ let h = {
     unit: "YEARS",
     max: 1 / 0
   }],
-  T = e => (t, l) => null == l ? "" : e().format({
+  E = e => (t, l) => null == l ? "" : e().format({
     time: t,
     ...l
   }),
@@ -94,10 +94,10 @@ let h = {
     },
     ACTIVITY_FEED_NEW: {
       START: {
-        SECONDS: T(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-        MINUTES: T(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-        HOURS: T(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-        DAYS: T(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+        SECONDS: E(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+        MINUTES: E(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+        HOURS: E(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+        DAYS: E(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
       },
       END: {
         SECONDS: e => p.default.Messages.DURATION_SECONDS_AGO.format({
@@ -184,21 +184,21 @@ let h = {
   };
 
 function _(e, t) {
-  let l = E.findIndex(t => {
+  let l = T.findIndex(t => {
       let {
         max: l,
         unit: n
       } = t;
       return "NONE" === n && e === l || e < l
     }),
-    n = f.findLast(E, e => {
+    n = f.findLast(T, e => {
       let {
         unit: l
       } = e;
       return t(l)
     }, l);
   if (null != n) return n.unit;
-  let a = E.find(e => {
+  let a = T.find(e => {
     let {
       unit: l
     } = e;

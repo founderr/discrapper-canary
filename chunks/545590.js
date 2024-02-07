@@ -18,8 +18,8 @@ var a = l("446674"),
   m = l("613676"),
   p = l("713135"),
   h = l("999203"),
-  E = l("609734"),
-  T = l("777003"),
+  T = l("609734"),
+  E = l("777003"),
   S = l("49111"),
   _ = l("782340"),
   g = l("431375");
@@ -42,10 +42,10 @@ function A(e) {
   } = r.appStorefrontExperiment.useExperiment({
     location: "BotButtonsSection"
   });
-  return i || o ? (0, n.jsx)(T.default, {
+  return i || o ? (0, n.jsx)(E.default, {
     children: (0, n.jsxs)("div", {
       className: g.buttonsContainer,
-      children: [(0, n.jsx)(E.default, {
+      children: [(0, n.jsx)(T.default, {
         application: s,
         className: g.button
       }), o && (d ? (0, n.jsx)(v, {

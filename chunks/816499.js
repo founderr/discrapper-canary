@@ -7,10 +7,10 @@ l.r(t), l.d(t, {
     return h
   },
   generateSteamMetadataItems: function() {
-    return E
+    return T
   },
   generatePaypalMetadataItems: function() {
-    return T
+    return E
   },
   generateEbayMetadataItems: function() {
     return S
@@ -72,7 +72,7 @@ function h(e) {
   }, c.MetadataFields.TWITTER_FOLLOWERS_COUNT)), s
 }
 
-function E(e) {
+function T(e) {
   var t, a, s;
   let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     r = [],
@@ -100,7 +100,7 @@ function E(e) {
   }, c.MetadataFields.STEAM_ITEM_COUNT_TF2)), r
 }
 
-function T(e) {
+function E(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     l = [],
     a = "1" === e[c.MetadataFields.PAYPAL_VERIFIED];

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   REVIEW_PAYMENT_STEPS: function() {
-    return b
+    return Y
   },
   ADD_PAYMENT_STEPS: function() {
     return U
@@ -13,10 +13,10 @@ s.r(t), s.d(t, {
     return F
   },
   ADD_PAYMENT_REQUEST_STEPS: function() {
-    return G
+    return k
   },
   ADD_GIROPAY_STEPS: function() {
-    return k
+    return G
   },
   ADD_PAYSAFECARD_STEPS: function() {
     return j
@@ -28,8 +28,8 @@ s.r(t), s.d(t, {
     return W
   }
 }), s("222007");
-var r = s("37983"),
-  n = s("884691"),
+var n = s("37983"),
+  r = s("884691"),
   a = s("41092"),
   i = s("446674"),
   l = s("77078"),
@@ -49,8 +49,8 @@ var r = s("37983"),
   C = s("520713"),
   I = s("814915"),
   T = s("518809"),
-  N = s("195175"),
-  R = s("780569"),
+  R = s("195175"),
+  N = s("780569"),
   y = s("490696"),
   g = s("677987"),
   O = s("393172"),
@@ -59,38 +59,38 @@ var r = s("37983"),
   D = s("49111"),
   B = s("782340"),
   x = s("36662"),
-  Y = s("258179");
-let b = [A.Steps.PAYMENT_TYPE, A.Steps.CREDIT_CARD_INFORMATION, A.Steps.REVIEW],
+  b = s("258179");
+let Y = [A.Steps.PAYMENT_TYPE, A.Steps.CREDIT_CARD_INFORMATION, A.Steps.REVIEW],
   U = [A.Steps.PAYMENT_TYPE, A.Steps.CREDIT_CARD_INFORMATION, A.Steps.REVIEW],
   v = [A.Steps.PAYMENT_TYPE, A.Steps.CREDIT_CARD_INFORMATION, A.Steps.ADDRESS, A.Steps.REVIEW],
   F = [A.Steps.PAYMENT_TYPE, A.Steps.PAYPAL, A.Steps.PAYPAL_ADDRESS, A.Steps.REVIEW],
-  G = [A.Steps.PAYMENT_TYPE, A.Steps.PAYMENT_REQUEST_INFO, A.Steps.REVIEW],
-  k = [A.Steps.PAYMENT_TYPE, A.Steps.ADDRESS, A.Steps.REVIEW],
+  k = [A.Steps.PAYMENT_TYPE, A.Steps.PAYMENT_REQUEST_INFO, A.Steps.REVIEW],
+  G = [A.Steps.PAYMENT_TYPE, A.Steps.ADDRESS, A.Steps.REVIEW],
   j = [A.Steps.PAYMENT_TYPE, A.Steps.ADDRESS, A.Steps.REVIEW],
   w = [A.Steps.PAYMENT_TYPE, A.Steps.VENMO, A.Steps.VENMO_ADDRESS, A.Steps.REVIEW],
-  V = (0, m.cssValueToNumber)(Y.innerPadding);
-class H extends n.PureComponent {
+  V = (0, m.cssValueToNumber)(b.innerPadding);
+class H extends r.PureComponent {
   async componentDidMount() {
     d.createClient();
     let {
       onPaymentSourceChange: e,
       paymentSources: t,
       defaultPaymentSourceId: s,
-      paymentSourceId: r
+      paymentSourceId: n
     } = this.props;
-    null != e && e(null != r && r !== s && null != t[r] ? t[r] : null != s && null != t[s] ? t[s] : null);
-    let n = await (0, C.getStripe)();
+    null != e && e(null != n && n !== s && null != t[n] ? t[n] : null != s && null != t[s] ? t[s] : null);
+    let r = await (0, C.getStripe)();
     this.setState({
-      stripe: n
+      stripe: r
     })
   }
   componentDidUpdate(e) {
     let {
       onPaymentSourceChange: t,
       paymentSources: s,
-      paymentSourceId: r
+      paymentSourceId: n
     } = this.props;
-    e.paymentSourceId !== r && null != r && null != s[r] && (null == t || t(s[r]))
+    e.paymentSourceId !== n && null != n && null != s[n] && (null == t || t(s[n]))
   }
   componentWillUnmount() {
     d.teardownClients(), c.clearCardInfo();
@@ -117,40 +117,40 @@ class H extends n.PureComponent {
       renderHeader: e,
       billingError: t,
       step: s,
-      steps: r
-    } = this.props, n = r.map(e => ({
+      steps: n
+    } = this.props, r = n.map(e => ({
       id: e,
       label: (0, A.getCrumbLabels)(e)
     }));
-    return e(s, n, null == (0, A.errorToStep)(t) ? t : null)
+    return e(s, r, null == (0, A.errorToStep)(t) ? t : null)
   }
   render() {
     let {
       size: e,
       step: t,
       steps: s,
-      className: n,
+      className: r,
       transitionState: i
     } = this.props, o = this.stepRenderer[t], u = o.renderBody();
-    return (0, r.jsx)(a.Elements, {
+    return (0, n.jsx)(a.Elements, {
       options: D.StripeElementsOptions,
       stripe: this.state.stripe,
-      children: (0, r.jsx)(l.ModalRoot, {
+      children: (0, n.jsx)(l.ModalRoot, {
         size: e,
-        className: n,
+        className: r,
         "aria-label": B.default.Messages.SKU_PAYMENT_STEPS_LABEL,
         transitionState: i,
-        children: (0, r.jsx)(l.Scroller, {
-          children: (0, r.jsxs)("form", {
+        children: (0, n.jsx)(l.Scroller, {
+          children: (0, n.jsxs)("form", {
             className: x.form,
             onSubmit: this.preventDefault,
-            children: [this.renderHeader(), t !== A.Steps.CONFIRM ? (0, r.jsx)("div", {
+            children: [this.renderHeader(), t !== A.Steps.CONFIRM ? (0, n.jsx)("div", {
               className: x.divider
-            }) : null, null != u && (0, r.jsx)(l.ModalContent, {
+            }) : null, null != u && (0, n.jsx)(l.ModalContent, {
               className: x.modalContent,
-              children: (0, r.jsx)("div", {
+              children: (0, n.jsx)("div", {
                 className: x.content,
-                children: (0, r.jsx)(l.Sequencer, {
+                children: (0, n.jsx)(l.Sequencer, {
                   step: t,
                   steps: s,
                   sideMargin: V,
@@ -194,8 +194,8 @@ class H extends n.PureComponent {
         token: s
       } = this.state;
       try {
-        let r = await u.confirmCardPaymentSource(t, s, e);
-        this.props.onPaymentSourceAdd(r.id)
+        let n = await u.confirmCardPaymentSource(t, s, e);
+        this.props.onPaymentSourceAdd(n.id)
       } catch (e) {}
     }, this.handleStripePaymentRequestAdd = async e => {
       if (c.updateStripePaymentRequest(e), null == e) {
@@ -231,14 +231,14 @@ class H extends n.PureComponent {
         step: e,
         steps: t,
         paymentSources: s,
-        onBack: n
+        onBack: r
       } = this.props, a = (0, A.getStepIndex)(e, t), i = (0, A.canGoBack)(a, s) ? B.default.Messages.BACK : B.default.Messages.CANCEL;
-      return (0, r.jsx)(l.Button, {
+      return (0, n.jsx)(l.Button, {
         look: l.Button.Looks.LINK,
         className: x.backButton,
         color: x.backButtonColor,
         size: x.backButtonSize,
-        onClick: n,
+        onClick: r,
         children: i
       })
     }, this.stepRenderer = {
@@ -251,46 +251,46 @@ class H extends n.PureComponent {
             needsToBeGift: a,
             isGift: i
           } = this.props;
-          return e ? (0, r.jsx)(l.FormErrorBlock, {
+          return e ? (0, n.jsx)(l.FormErrorBlock, {
             className: x.errorBlock,
             children: B.default.Messages.BILLING_ERROR_ADD_PAYMENT_SOURCE_STREAMER_MODE
-          }) : (0, r.jsxs)(n.Fragment, {
-            children: [(0, r.jsx)(I.default, {
+          }) : (0, n.jsxs)(r.Fragment, {
+            children: [(0, n.jsx)(I.default, {
               className: x.choosePaymentSourceType,
               onChooseType: t,
               allowStripeRequestPayments: !_.isPlatformEmbedded,
               onStripePaymentMethodReceived: this.handleStripePaymentRequestAdd
-            }), s && (0, r.jsx)(l.Checkbox, {
+            }), s && (0, n.jsx)(l.Checkbox, {
               disabled: a,
               className: x.giftToggle,
               type: l.Checkbox.Types.INVERTED,
               value: i,
               onChange: this.handleToggleIsGift,
-              children: (0, r.jsx)("div", {
+              children: (0, n.jsx)("div", {
                 className: x.checkboxLabel,
                 children: B.default.Messages.BILLING_IS_GIFT_PURCHASE
               })
             })]
           })
         },
-        renderFooter: () => (0, r.jsx)(l.ModalFooter, {
+        renderFooter: () => (0, n.jsx)(l.ModalFooter, {
           direction: P.default.Direction.HORIZONTAL,
           children: this.renderBackButton()
         })
       },
       [A.Steps.PAYMENT_REQUEST_INFO]: {
-        renderBody: () => (0, r.jsx)(g.PaymentRequestStepBody, {
+        renderBody: () => (0, n.jsx)(g.PaymentRequestStepBody, {
           className: x.formItem,
           stripePaymentMethod: this.props.stripePaymentMethod,
           submitting: this.props.submitting
         }),
-        renderFooter: () => (0, r.jsx)(l.ModalFooter, {
+        renderFooter: () => (0, n.jsx)(l.ModalFooter, {
           direction: P.default.Direction.HORIZONTAL,
           children: this.renderBackButton()
         })
       },
       [A.Steps.PAYPAL]: {
-        renderBody: () => (0, r.jsx)(T.default, {
+        renderBody: () => (0, n.jsx)(T.default, {
           className: x.formItem
         }),
         renderFooter: () => {
@@ -298,21 +298,21 @@ class H extends n.PureComponent {
             submitting: e,
             braintreeNonce: t,
             braintreeEmail: s,
-            onPaypalContinue: n,
+            onPaypalContinue: r,
             paypalClient: a
           } = this.props;
-          return (0, r.jsx)(O.PaypalStepFooter, {
+          return (0, n.jsx)(O.PaypalStepFooter, {
             submitting: e || null == a,
             braintreeNonce: t,
             braintreeEmail: s,
-            onPaypalContinue: n,
+            onPaypalContinue: r,
             onReopenPaypal: this.handleReopenPaypal,
             renderBackButton: this.renderBackButton
           })
         }
       },
       [A.Steps.VENMO]: {
-        renderBody: () => (0, r.jsx)(N.default, {
+        renderBody: () => (0, n.jsx)(R.default, {
           className: x.formItem
         }),
         renderFooter: () => {
@@ -320,14 +320,14 @@ class H extends n.PureComponent {
             submitting: e,
             braintreeNonce: t,
             venmoUsername: s,
-            onVenmoContinue: n,
+            onVenmoContinue: r,
             venmoClient: a
           } = this.props;
-          return (0, r.jsx)(L.VenmoStepFooter, {
+          return (0, n.jsx)(L.VenmoStepFooter, {
             submitting: e || null == a,
             braintreeNonce: t,
             venmoUsername: s,
-            onVenmoContinue: n,
+            onVenmoContinue: r,
             onReopenVenmo: this.handleReopenVenmo,
             renderBackButton: this.renderBackButton
           })
@@ -338,7 +338,7 @@ class H extends n.PureComponent {
           let {
             billingError: e
           } = this.props;
-          return (0, r.jsx)(y.CreditCardInformationBody, {
+          return (0, n.jsx)(y.CreditCardInformationBody, {
             billingError: e,
             onCardInfoChange: this.handleCardInfoChange
           })
@@ -349,15 +349,15 @@ class H extends n.PureComponent {
             onCreditCardContinue: t
           } = this.props, {
             stripe: s,
-            confirmingCard: n
+            confirmingCard: r
           } = this.state, i = async e => {
             this.setState({
               confirmingCard: !0
             });
             try {
-              let r = await u.createCardToken(s, e);
+              let n = await u.createCardToken(s, e);
               this.setState({
-                token: r
+                token: n
               }), c.clearError(), t()
             } catch (e) {} finally {
               this.setState({
@@ -365,14 +365,14 @@ class H extends n.PureComponent {
               })
             }
           };
-          return (0, r.jsx)(a.ElementsConsumer, {
+          return (0, n.jsx)(a.ElementsConsumer, {
             children: t => {
               let {
                 elements: s
               } = t;
-              return (0, r.jsx)(y.CreditCardInformationFooter, {
+              return (0, n.jsx)(y.CreditCardInformationFooter, {
                 isCardInfoValid: e,
-                submitting: n,
+                submitting: r,
                 renderBackButton: this.renderBackButton,
                 onCreditCardContinue: () => i(s)
               })
@@ -386,7 +386,7 @@ class H extends n.PureComponent {
             billingAddressInfo: e,
             billingError: t
           } = this.props;
-          return (0, r.jsx)(R.AddressStepBody, {
+          return (0, n.jsx)(N.AddressStepBody, {
             billingAddressInfo: e,
             billingError: t,
             onBillingAddressChange: this.handleBillingAddressChange,
@@ -398,7 +398,7 @@ class H extends n.PureComponent {
             isBillingAddressInfoValid: e,
             submitting: t
           } = this.props;
-          return (0, r.jsx)(R.AddressStepFooter, {
+          return (0, n.jsx)(N.AddressStepFooter, {
             isBillingAddressInfoValid: e,
             submitting: t,
             onContinue: this.handlePaypalAdd,
@@ -412,7 +412,7 @@ class H extends n.PureComponent {
             billingAddressInfo: e,
             billingError: t
           } = this.props;
-          return (0, r.jsx)(R.AddressStepBody, {
+          return (0, n.jsx)(N.AddressStepBody, {
             billingAddressInfo: e,
             billingError: t,
             onBillingAddressChange: this.handleBillingAddressChange,
@@ -424,7 +424,7 @@ class H extends n.PureComponent {
             isBillingAddressInfoValid: e,
             submitting: t
           } = this.props;
-          return (0, r.jsx)(R.AddressStepFooter, {
+          return (0, n.jsx)(N.AddressStepFooter, {
             isBillingAddressInfoValid: e,
             submitting: t,
             onContinue: this.handleVenmoAdd,
@@ -439,11 +439,11 @@ class H extends n.PureComponent {
             billingError: t,
             steps: s
           } = this.props;
-          return (0, r.jsx)(R.AddressStepBody, {
+          return (0, n.jsx)(N.AddressStepBody, {
             billingAddressInfo: e,
             billingError: t,
             onBillingAddressChange: this.handleBillingAddressChange,
-            paymentSourceType: s === k ? D.PaymentSourceTypes.GIROPAY : D.PaymentSourceTypes.CARD
+            paymentSourceType: s === G ? D.PaymentSourceTypes.GIROPAY : D.PaymentSourceTypes.CARD
           })
         },
         renderFooter: () => {
@@ -451,7 +451,7 @@ class H extends n.PureComponent {
             isBillingAddressInfoValid: e,
             submitting: t
           } = this.props;
-          return (0, r.jsx)(R.AddressStepFooter, {
+          return (0, n.jsx)(N.AddressStepFooter, {
             isBillingAddressInfoValid: e,
             submitting: t,
             onContinue: this.handleCreditCardAdd,
@@ -465,7 +465,7 @@ class H extends n.PureComponent {
             legalNotice: e,
             paymentSources: t,
             price: s,
-            hidePersonalInformation: n,
+            hidePersonalInformation: r,
             paymentSourceId: a,
             onReviewPaymentSourceChange: i,
             onReviewPaymentSourceAdd: l,
@@ -473,11 +473,11 @@ class H extends n.PureComponent {
             isGift: u,
             needsToBeGift: d
           } = this.props;
-          return (0, r.jsx)(M.ReviewStepBody, {
+          return (0, n.jsx)(M.ReviewStepBody, {
             legalNotice: e,
             paymentSources: t,
             price: s,
-            hidePersonalInformation: n,
+            hidePersonalInformation: r,
             paymentSourceId: a,
             onPaymentSourceChange: i,
             onPaymentSourceAdd: l,
@@ -493,18 +493,18 @@ class H extends n.PureComponent {
             canSubmit: e,
             submitButtonText: t,
             useShinySubmitButton: s,
-            isPurchasing: n,
+            isPurchasing: r,
             paymentSourceId: a,
             onPurchase: i,
             needsToBeGift: l,
             isGift: o,
             paymentSources: u
           } = this.props;
-          return (0, r.jsx)(M.ReviewStepFooter, {
+          return (0, n.jsx)(M.ReviewStepFooter, {
             canSubmit: e,
             submitButtonText: t,
             useShinySubmitButton: s,
-            isPurchasing: n,
+            isPurchasing: r,
             hasAcceptedTerms: this.state.hasAcceptedNeccessaryTerms,
             paymentSource: null != a ? u[a] : null,
             onPurchase: i,
@@ -519,7 +519,7 @@ class H extends n.PureComponent {
         renderFooter: D.NOOP_NULL
       },
       [A.Steps.AWAITING_AUTHENTICATION]: {
-        renderBody: () => (0, r.jsx)(l.FormTitle, {
+        renderBody: () => (0, n.jsx)(l.FormTitle, {
           className: x.formTitle,
           children: B.default.Messages.PAYMENT_WAITING_FOR_AUTHENTICATION
         }),

@@ -17,8 +17,8 @@ var n = l("37983"),
   m = l("860285"),
   p = l("42203"),
   h = l("86878"),
-  E = l("525065"),
-  T = l("305961"),
+  T = l("525065"),
+  E = l("305961"),
   S = l("686470"),
   _ = l("957255"),
   g = l("27618"),
@@ -70,7 +70,7 @@ function G(e) {
       channelId: n
     } = e;
     return l === (null == t ? void 0 : t.application_id) && n === X
-  })), $ = (0, s.useStateFromStores)([N.default], () => null != t && null != t.application_id && N.default.getState(t.application_id, w.ActivityActionTypes.JOIN) === w.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, s.useStateFromStores)([p.default, T.default, E.default, g.default, A.default, v.default, _.default], () => (0, R.default)({
+  })), $ = (0, s.useStateFromStores)([N.default], () => null != t && null != t.application_id && N.default.getState(t.application_id, w.ActivityActionTypes.JOIN) === w.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, s.useStateFromStores)([p.default, E.default, T.default, g.default, A.default, v.default, _.default], () => (0, R.default)({
     user: B,
     activity: t,
     application: ee,
@@ -78,8 +78,8 @@ function G(e) {
     currentUser: J,
     isEmbedded: W,
     ChannelStore: p.default,
-    GuildStore: T.default,
-    GuildMemberCountStore: E.default,
+    GuildStore: E.default,
+    GuildMemberCountStore: T.default,
     RelationshipStore: g.default,
     SelectedChannelStore: A.default,
     VoiceStateStore: v.default,

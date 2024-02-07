@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useMessageRequestActions: function() {
-    return g
+    return E
   }
 }), n("222007");
 var s = n("884691"),
@@ -19,37 +19,37 @@ var s = n("884691"),
   p = n("973199"),
   m = n("49111");
 
-function g(e) {
+function E(e) {
   let {
     user: t,
     onAcceptSuccess: n,
     onRejectSuccess: a,
-    onError: g
-  } = e, E = (0, C.default)(), [S, A] = s.useState(!1), [_, T] = s.useState(!1), [M, I] = s.useState(!1), [N, v] = s.useState(!1), [L, x] = s.useState(!1), R = S || _ || M, y = s.useCallback(async e => {
+    onError: E
+  } = e, g = (0, C.default)(), [S, A] = s.useState(!1), [_, T] = s.useState(!1), [M, I] = s.useState(!1), [N, v] = s.useState(!1), [L, x] = s.useState(!1), R = S || _ || M, y = s.useCallback(async e => {
     if (!R) {
       A(!0);
       try {
         await (0, f.acceptMessageRequest)(e), v(!0), null == n || n()
       } catch (t) {
         let e = new i.APIError(t);
-        null == g || g(e)
+        null == E || E(e)
       } finally {
         A(!1)
       }
     }
-  }, [R, n, g]), O = s.useCallback(async e => {
+  }, [R, n, E]), O = s.useCallback(async e => {
     if (!R) {
       T(!0);
       try {
         await (0, f.rejectMessageRequest)(e), x(!0), null == a || a()
       } catch (t) {
         let e = new i.APIError(t);
-        null == g || g(e)
+        null == E || E(e)
       } finally {
         T(!1)
       }
     }
-  }, [R, a, g]), D = s.useCallback(async e => {
+  }, [R, a, E]), D = s.useCallback(async e => {
     if (R) return;
     T(!0);
     let t = l(e, p.BATCH_REJECT_LIMIT);
@@ -58,11 +58,11 @@ function g(e) {
       x(!0), null == a || a()
     } catch (t) {
       let e = new i.APIError(t);
-      null == g || g(e)
+      null == E || E(e)
     } finally {
       T(!1)
     }
-  }, [R, a, g]), j = s.useCallback(async e => {
+  }, [R, a, E]), j = s.useCallback(async e => {
     if (R) return;
     if (null != t && null == o.default.getMutualGuilds(t.id)) {
       I(!0);
@@ -121,7 +121,7 @@ function g(e) {
     }) : s(a)
   }, [y]);
   return {
-    acceptMessageRequest: E ? j : y,
+    acceptMessageRequest: g ? j : y,
     rejectMessageRequest: O,
     rejectAll: D,
     markAsNotSpam: b,

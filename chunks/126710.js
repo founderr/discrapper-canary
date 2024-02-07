@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var i = n("37983");
@@ -11,7 +11,7 @@ var l = n("77078"),
   a = n("42203"),
   s = n("782340");
 
-function o(e, t) {
+function u(e, t) {
   let n = a.default.getChannel(e);
   return null == n || n.isMultiUserDM() ? null : (0, i.jsx)(l.MenuItem, {
     id: "close-dm",

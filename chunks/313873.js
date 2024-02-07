@@ -18,8 +18,8 @@ var n, a, s = l("37983"),
   m = l("832627"),
   p = l("841098"),
   h = l("376556"),
-  E = l("609030"),
-  T = l("309570"),
+  T = l("609030"),
+  E = l("309570"),
   S = l("985677"),
   _ = l("429928"),
   g = l("36539"),
@@ -128,7 +128,7 @@ class W extends i.PureComponent {
         });
         break;
       case w.ActivityTypes.PLAYING:
-        t = (0, E.default)(u);
+        t = (0, T.default)(u);
         break;
       case w.ActivityTypes.COMPETING:
         t = G.default.Messages.USER_ACTIVITY_HEADER_COMPETING.format({
@@ -278,7 +278,7 @@ class W extends i.PureComponent {
       application: n,
       activityGuild: a
     } = this.props;
-    return null != e.assets || (0, T.default)(e) || e.type !== w.ActivityTypes.PLAYING || "ActivityFeed" === l || t.bot ? null : null == n && null != a ? (0, s.jsx)("div", {
+    return null != e.assets || (0, E.default)(e) || e.type !== w.ActivityTypes.PLAYING || "ActivityFeed" === l || t.bot ? null : null == n && null != a ? (0, s.jsx)("div", {
       className: o(Y.gameIcon, Y.screenshareIcon)
     }) : (0, s.jsx)(P.default, {
       className: Y.gameIcon,
@@ -364,7 +364,7 @@ class W extends i.PureComponent {
     let {
       timestamps: l
     } = e;
-    return null == l ? null : (0, T.default)(e) ? (0, s.jsx)(B, {
+    return null == l ? null : (0, E.default)(e) ? (0, s.jsx)(B, {
       timestamps: l
     }) : (0, s.jsx)(b.default, {
       start: l.start,
@@ -442,19 +442,19 @@ class W extends i.PureComponent {
     let m = this.renderName(i),
       p = this.renderDetails(i),
       h = this.renderState(i, a),
-      E = this.renderTimePlayed(i),
-      T = null != l ? l() : null,
+      T = this.renderTimePlayed(i),
+      E = null != l ? l() : null,
       S = this.renderTimeBar(i),
-      _ = ![e, m, p, h, E, S, T].some(e => null != e);
+      _ = ![e, m, p, h, T, S, E].some(e => null != e);
     return (0, s.jsxs)("div", {
       className: o(this.getTypeClass("activity"), n),
       children: [this.renderHeader(_), (0, s.jsxs)("div", {
         className: f ? Y.bodyAlignCenter : Y.bodyNormal,
         children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(L.default.Child, {
           className: o((0, O.getClass)(Y, "content", f ? "GameImage" : null != e ? "Images" : "NoImages", t)),
-          children: [m, p, h, E, r || c ? null : S, d ? T : null]
-        }), u ? T : null]
-      }), r ? S : null, r || c ? T : null, (0, s.jsx)(H, {
+          children: [m, p, h, T, r || c ? null : S, d ? E : null]
+        }), u ? E : null]
+      }), r ? S : null, r || c ? E : null, (0, s.jsx)(H, {
         activity: i
       })]
     })

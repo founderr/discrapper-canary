@@ -21,9 +21,9 @@ var a = n("414456"),
   m = n("315102"),
   E = n("158998"),
   g = n("938177"),
-  I = n("84059");
+  S = n("84059");
 
-function S(e) {
+function I(e) {
   let {
     guildId: t,
     member: n,
@@ -37,7 +37,7 @@ function S(e) {
       return (0, l.jsx)(r.Avatar, {
         src: null != i ? i : n.user.getAvatarURL(t, 16),
         size: r.AvatarSizes.SIZE_16,
-        className: s(a, I.partyAvatar),
+        className: s(a, S.partyAvatar),
         "aria-label": null !== (o = n.nick) && void 0 !== o ? o : E.default.getName(n.user),
         ...e
       })
@@ -51,17 +51,17 @@ function _(e) {
     guildId: n
   } = e;
   return (0, l.jsx)(p.default, {
-    className: I.partyMembers,
+    className: S.partyMembers,
     guildId: n,
     users: t,
     max: 6,
-    renderUser: (e, t, a) => (0, l.jsx)(S, {
+    renderUser: (e, t, a) => (0, l.jsx)(I, {
       guildId: n,
       member: e,
       className: t
     }, a),
     renderMoreUsers: (e, t, n) => (0, l.jsx)("div", {
-      className: s(I.morePartyMembers, t),
+      className: s(S.morePartyMembers, t),
       children: e
     }, n)
   })
@@ -81,13 +81,13 @@ var N = e => {
     if (p) return C.default.getUser(m[0])
   });
   if (null == E) return null;
-  let S = p || (0, u.default)(n),
+  let I = p || (0, u.default)(n),
     N = (0, f.isVoiceChannel)(t.type);
   return (0, l.jsxs)("div", {
-    className: I.activity,
+    className: S.activity,
     children: [(0, l.jsx)("div", {
-      className: I.channelActivityContainer,
-      children: S ? (0, l.jsx)(g.default, {
+      className: S.channelActivityContainer,
+      children: I ? (0, l.jsx)(g.default, {
         activity: n,
         embeddedApp: s,
         user: E,
@@ -109,14 +109,14 @@ var N = e => {
         isEmbedded: p
       })
     }), (0, l.jsx)("div", {
-      className: I.activityActionsContainer,
+      className: S.activityActionsContainer,
       children: (0, l.jsx)(d.default, {
         type: o.UserActivityTypes.VOICE_CHANNEL,
         activity: n,
         user: E,
         guildId: t.getGuildId(),
         channelId: t.id,
-        color: I.button,
+        color: S.button,
         onAction: r,
         isEmbedded: p
       })

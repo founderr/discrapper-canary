@@ -11,24 +11,24 @@ var i = n("446674"),
   u = n("18054"),
   s = n("843624"),
   d = n("259141"),
-  r = n("957255"),
-  o = n("207273"),
+  o = n("957255"),
+  r = n("207273"),
   c = n("49111"),
   f = n("782340");
 
 function _(e, t) {
-  let _ = (0, i.useStateFromStores)([r.default], () => r.default.can(c.Permissions.MANAGE_CHANNELS, t)),
-    E = (0, i.useStateFromStores)([r.default], () => r.default.can(c.Permissions.SET_VOICE_CHANNEL_STATUS, e)),
-    N = (0, d.useIsConnectedToVoiceChannel)(e),
-    S = (0, i.useStateFromStores)([o.default], () => o.default.getChannelStatus(e)),
-    T = null != S && S.length > 0;
-  return e.isGuildVoice() && (_ || E) ? !N && _ && T ? (0, a.jsx)(l.MenuItem, {
+  let _ = (0, i.useStateFromStores)([o.default], () => o.default.can(c.Permissions.MANAGE_CHANNELS, t)),
+    E = (0, i.useStateFromStores)([o.default], () => o.default.can(c.Permissions.SET_VOICE_CHANNEL_STATUS, e)),
+    S = (0, d.useIsConnectedToVoiceChannel)(e),
+    N = (0, i.useStateFromStores)([r.default], () => r.default.getChannelStatus(e)),
+    g = null != N && N.length > 0;
+  return e.isGuildVoice() && (_ || E) ? !S && _ && g ? (0, a.jsx)(l.MenuItem, {
     id: "clear-status",
     label: f.default.Messages.VOICE_CHANNEL_CLEAR_STATUS,
     action: () => {
       u.default.updateVoiceChannelStatus(e.id, "")
     }
-  }) : N && E ? (0, a.jsx)(l.MenuItem, {
+  }) : S && E ? (0, a.jsx)(l.MenuItem, {
     id: "set-status",
     label: f.default.Messages.VOICE_CHANNEL_SET_STATUS,
     action: () => {

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return E
+    return T
   }
 }), l("222007");
 var n = l("37983"),
@@ -63,7 +63,7 @@ class h extends a.PureComponent {
   }
 }
 
-function E(e) {
+function T(e) {
   let t = (0, r.useStateFromStores)([c.default], () => c.default.hidePersonalInformation),
     l = (0, d.default)(e.userId);
   return (0, n.jsx)(h, {

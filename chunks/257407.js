@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("867805"),
   E = n("5667"),
   C = n("697218"),
-  g = n("402671"),
-  S = n("449008"),
+  S = n("402671"),
+  g = n("449008"),
   _ = n("719923"),
   I = n("229502"),
   T = n("82230"),
@@ -42,15 +42,15 @@ let U = O.EmojiIntention.CHAT,
     section: j.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
     openPopoutType: "voice_channel_effect_emoji_picker"
   },
-  F = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(S.isNotNullish);
+  F = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(g.isNotNullish);
 
 function k(e) {
   var t;
   let {
     channel: n,
     closePopout: m,
-    onFocus: S
-  } = e, O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), V = _.default.canUseFancyVoiceChannelReactions(k), B = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), H = l.useRef(!1), G = (0, p.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...G, ...F], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
+    onFocus: g
+  } = e, O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), V = _.default.canUseFancyVoiceChannelReactions(k), B = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), H = l.useRef(!1), G = (0, p.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...G, ...F], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: n,
     intention: U
@@ -109,7 +109,7 @@ function k(e) {
         "aria-label": P.default.Messages.VOICE_CHANNEL_EFFECTS_MORE,
         shouldShow: s,
         renderPopout: () => (0, a.jsx)("div", {
-          onMouseEnter: S,
+          onMouseEnter: g,
           children: (0, a.jsx)(E.default, {
             className: D.reducedMotionTooltip,
             header: P.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
@@ -131,7 +131,7 @@ function k(e) {
           closePopout: m,
           onSelectEmoji: Z,
           onSelectDisabledEmoji: X,
-          onFocus: S,
+          onFocus: g,
           onExpandedToggle: J,
           analyticsOverride: w,
           emojiSearchProps: {

@@ -17,8 +17,8 @@ var n = l("37983"),
   m = l("190045"),
   p = l("419806"),
   h = l("373469"),
-  E = l("42203"),
-  T = l("26989"),
+  T = l("42203"),
+  E = l("26989"),
   S = l("957255"),
   _ = l("102985"),
   g = l("987772"),
@@ -75,14 +75,14 @@ function X(e) {
     location: "user popout"
   }, {
     autoTrackExposure: ec
-  }), [em, ep] = a.useState(!1), [eh, eE] = a.useState(!1), eT = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(et)), eS = (0, r.useStateFromStores)([S.default], () => S.default.can(H.Permissions.USE_CLYDE_AI, eT)), {
+  }), [em, ep] = a.useState(!1), [eh, eT] = a.useState(!1), eE = (0, r.useStateFromStores)([T.default], () => T.default.getChannel(et)), eS = (0, r.useStateFromStores)([S.default], () => S.default.can(H.Permissions.USE_CLYDE_AI, eE)), {
     profileTheme: e_
   } = (0, y.default)(Q, q), eg = a.useRef(null), [eA, eI] = a.useState(!0), ev = a.useCallback(() => {
     let {
       current: e
     } = eg;
     null != e && eI(0 === e.getScrollerState().scrollTop)
-  }, []), eN = (0, d.canEditClydeAIProfile)($), eC = (0, c.canUseCustomClydeProfiles)($), ey = (0, r.useStateFromStores)([T.default], () => T.default.isMember(null == $ ? void 0 : $.id, Q.id));
+  }, []), eN = (0, d.canEditClydeAIProfile)($), eC = (0, c.canUseCustomClydeProfiles)($), ey = (0, r.useStateFromStores)([E.default], () => E.default.isMember(null == $ ? void 0 : $.id, Q.id));
   if (a.useLayoutEffect(() => {
       var e;
       let {
@@ -132,7 +132,7 @@ function X(e) {
           try {
             await (0, u.addClydeGuildMember)($.id), ep(!1)
           } catch (e) {
-            ep(!1), eE(!0)
+            ep(!1), eT(!0)
           }
         },
         children: W.default.Messages.CLYDE_ADD_CLYDE
@@ -196,10 +196,10 @@ function X(e) {
             guild: $,
             channelId: et,
             onClose: el
-          }), (null == eo ? void 0 : eo.popularApplicationCommandIds) != null && null != eT ? (0, n.jsx)(G.default, {
+          }), (null == eo ? void 0 : eo.popularApplicationCommandIds) != null && null != eE ? (0, n.jsx)(G.default, {
             applicationId: eo.id,
             commandIds: eo.popularApplicationCommandIds,
-            channel: eT,
+            channel: eE,
             guildId: null == $ ? void 0 : $.id,
             onClick: el
           }) : null, (0, n.jsx)(R.default, {

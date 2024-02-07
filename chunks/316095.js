@@ -17,8 +17,8 @@ var n = l("37983"),
   m = l("461380"),
   p = l("713135"),
   h = l("824140"),
-  E = l("401642"),
-  T = l("777003"),
+  T = l("401642"),
+  E = l("777003"),
   S = l("590456"),
   _ = l("49111"),
   g = l("782340"),
@@ -71,7 +71,7 @@ function v(e) {
       className: i(A.connectionsContainer, O),
       children: [F, (0, n.jsxs)(o.Clickable, {
         onClick: function() {
-          (0, E.openUserProfileModal)({
+          (0, T.openUserProfileModal)({
             userId: N,
             guildId: null == y ? void 0 : y.id,
             channelId: C,
@@ -105,7 +105,7 @@ function v(e) {
         locale: w
       }, e.application.id))
     })]
-  })), null == s && null == v) ? null : (0, n.jsxs)(T.default, {
+  })), null == s && null == v) ? null : (0, n.jsxs)(E.default, {
     children: [v, s]
   })
 }

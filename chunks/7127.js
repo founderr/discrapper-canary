@@ -1,50 +1,50 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   PaymentModalConfirmStep: function() {
-    return d
+    return f
   }
 });
-var r = n("37983");
+var s = n("37983");
 n("884691");
-var i = n("627445"),
-  o = n.n(i),
-  u = n("77078"),
+var r = n("627445"),
+  l = n.n(r),
+  i = n("77078"),
   a = n("642906"),
-  c = n("367767"),
-  l = n("650484"),
-  s = n("782340"),
-  f = n("966425");
+  o = n("367767"),
+  u = n("650484"),
+  d = n("782340"),
+  c = n("966425");
 
-function d(t) {
+function f(e) {
   let {
-    handleClose: e
-  } = t, {
+    handleClose: t
+  } = e, {
     skusById: n,
-    selectedSkuId: i,
-    application: d
+    selectedSkuId: r,
+    application: f
   } = (0, a.usePaymentContext)();
-  o(null != i, "Expected selectedSkuId"), o(null != d, "Expected application");
-  let p = n[i];
-  o(null != p, "Expected sku");
-  let E = s.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
-    applicationName: d.name,
-    itemName: p.name
+  l(null != r, "Expected selectedSkuId"), l(null != f, "Expected application");
+  let E = n[r];
+  l(null != E, "Expected sku");
+  let p = d.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+    applicationName: f.name,
+    itemName: E.name
   });
-  return (0, r.jsxs)(l.PaymentPortalBody, {
-    children: [(0, r.jsx)(c.default, {}), (0, r.jsxs)("div", {
-      className: f.confirmation,
-      children: [(0, r.jsx)(u.Heading, {
+  return (0, s.jsxs)(u.PaymentPortalBody, {
+    children: [(0, s.jsx)(o.default, {}), (0, s.jsxs)("div", {
+      className: c.confirmation,
+      children: [(0, s.jsx)(i.Heading, {
         variant: "heading-xxl/bold",
-        className: f.confirmationHeader,
+        className: c.confirmationHeader,
         children: "Success!"
-      }), (0, r.jsx)(u.Text, {
+      }), (0, s.jsx)(i.Text, {
         variant: "text-md/normal",
-        children: E
-      }), (0, r.jsx)("div", {
-        className: f.divider
-      }), (0, r.jsx)(u.Button, {
-        onClick: e,
-        children: s.default.Messages.CLOSE
+        children: p
+      }), (0, s.jsx)("div", {
+        className: c.divider
+      }), (0, s.jsx)(i.Button, {
+        onClick: t,
+        children: d.default.Messages.CLOSE
       })]
     })]
   })

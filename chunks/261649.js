@@ -19,30 +19,30 @@ var i = n("118810"),
   c = n("26051"),
   f = n("667358"),
   E = n("22582"),
-  M = n("563816"),
-  m = n("761136"),
+  m = n("563816"),
+  M = n("761136"),
   g = n("126423"),
-  I = n("175537"),
-  S = n("485598"),
-  p = n("518155"),
-  h = n("355669"),
-  v = n("718381"),
-  _ = n("442711"),
-  A = n("702495"),
+  p = n("175537"),
+  I = n("485598"),
+  S = n("518155"),
+  v = n("355669"),
+  h = n("718381"),
+  A = n("442711"),
+  _ = n("702495"),
   T = n("875834"),
   C = n("780657"),
   R = n("204462"),
-  y = n("487051"),
-  O = n("815384"),
-  x = n("263879"),
+  O = n("487051"),
+  x = n("815384"),
+  y = n("263879"),
   N = n("604179"),
   b = n("167670"),
   j = n("913274"),
   G = n("514705"),
   D = n("321456"),
-  L = n("470254"),
-  F = n("678803"),
-  P = n("782340");
+  P = n("470254"),
+  L = n("678803"),
+  F = n("782340");
 
 function U(e) {
   var t, n;
@@ -52,36 +52,36 @@ function U(e) {
       target: c,
       attachment: f,
       shouldHideMediaOptions: E,
-      onSelect: M,
-      onHeightUpdate: m
+      onSelect: m,
+      onHeightUpdate: M
     } = e,
     g = c,
-    I = c.getAttribute("data-type"),
-    S = c.getAttribute("data-id"),
-    p = c.getAttribute("data-name");
+    p = c.getAttribute("data-type"),
+    I = c.getAttribute("data-id"),
+    S = c.getAttribute("data-name");
   if (null != f) l = a = u = f.url;
   else
     for (;
       (0, i.isElement)(g);)(0, i.isElement)(g, HTMLImageElement) && null != g.src && (l = g.src), (0, i.isElement)(g, HTMLAnchorElement) && null != g.href && (a = g.href, r = g.textContent, null == l && "img" === g.getAttribute("data-role") && (l = a, g.hasAttribute("data-safe-src") && "" !== g.getAttribute("data-safe-src") && (u = g.getAttribute("data-safe-src")))), g = g.parentNode;
-  let h = null !== (n = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== n ? n : "";
+  let v = null !== (n = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== n ? n : "";
   return w({
     message: o,
     channel: d,
     attachment: f,
-    textSelection: h,
-    favoriteableType: I,
-    favoriteableId: S,
-    favoriteableName: p,
+    textSelection: v,
+    favoriteableType: p,
+    favoriteableId: I,
+    favoriteableName: S,
     itemHref: a,
     itemSrc: l,
     itemSafeSrc: u,
     itemTextContent: r,
     canReport: !0,
-    onHeightUpdate: m,
-    onSelect: M,
+    onHeightUpdate: M,
+    onSelect: m,
     onClose: s.closeContextMenu,
     navId: "message",
-    ariaLabel: P.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
+    ariaLabel: F.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
     shouldHideMediaOptions: E
   })
 }
@@ -100,52 +100,52 @@ function w(e) {
     itemSafeSrc: H,
     itemTextContent: Y,
     canReport: B,
-    onHeightUpdate: X,
-    onSelect: Z,
+    onHeightUpdate: Z,
+    onSelect: X,
     onClose: z,
-    navId: J,
-    ariaLabel: W,
+    navId: W,
+    ariaLabel: J,
     shouldHideMediaOptions: q = !1
-  } = e, $ = (0, d.default)(s), Q = (0, f.default)(s), ee = (0, R.default)(t, n), et = (0, I.default)(t, n), en = (0, _.default)(t, n), ea = (0, C.default)(t, n), ei = (0, A.default)({
+  } = e, $ = (0, d.default)(s), Q = (0, f.default)(s), ee = (0, R.default)(t, n), et = (0, p.default)(t, n), en = (0, A.default)(t, n), ea = (0, C.default)(t, n), ei = (0, _.default)({
     type: U,
     id: w,
     name: k
-  }), el = (0, G.default)(t, n), es = (0, T.default)(t, n), eu = (0, y.default)(t), er = (0, S.default)(t, n), ed = (0, p.default)(t, n), eo = (0, x.default)(t, n), ec = (0, N.default)(t, n), ef = (0, v.default)(t, n), eE = (0, j.default)(t), eM = (0, D.default)(t, n), em = (0, c.default)(null != V ? V : K, Y, t, {
+  }), el = (0, G.default)(t, n), es = (0, T.default)(t, n), eu = (0, O.default)(t), er = (0, I.default)(t, n), ed = (0, S.default)(t, n), eo = (0, y.default)(t, n), ec = (0, N.default)(t, n), ef = (0, h.default)(t, n), eE = (0, j.default)(t), em = (0, D.default)(t, n), eM = (0, c.default)(null != V ? V : K, Y, t, {
     shouldHideMediaOptions: q
   }), eg = (0, o.default)(H, t, {
     shouldHideMediaOptions: q
-  }), eI = (0, F.default)(t, i), eS = (0, r.default)({
+  }), ep = (0, L.default)(t, i), eI = (0, r.default)({
     id: t.id,
-    label: P.default.Messages.COPY_ID_MESSAGE,
+    label: F.default.Messages.COPY_ID_MESSAGE,
     shiftId: "".concat(t.channel_id, "-").concat(t.id)
-  }), ep = (0, b.default)(t, n), eh = (0, L.default)(t, n), ev = (0, g.default)(t, n, {
+  }), eS = (0, b.default)(t, n), ev = (0, P.default)(t, n), eh = (0, g.default)(t, n, {
     hoist: !0
-  }), e_ = (0, m.default)(s, n.getGuildId()), eA = (0, O.default)(t), eT = (0, h.default)(t), eC = (0, M.default)({
+  }), eA = (0, M.default)(s, n.getGuildId()), e_ = (0, x.default)(t), eT = (0, v.default)(t), eC = (0, m.default)({
     commandType: u.ApplicationCommandType.MESSAGE,
     commandTargetId: t.id,
     channel: n,
     guildId: void 0,
-    onHeightUpdate: X
+    onHeightUpdate: Z
   }), eR = (0, E.default)(t, n);
   return (0, a.jsxs)(l.Menu, {
-    navId: J,
+    navId: W,
     onClose: z,
-    "aria-label": W,
-    onSelect: Z,
+    "aria-label": J,
+    onSelect: X,
     children: [(0, a.jsx)(l.MenuGroup, {
       children: $
     }), (0, a.jsx)(l.MenuGroup, {
       children: Q
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: ["" === s ? ee : null, et, eu, en, ea, ei, ep, eh, eT, eC, el, es, eA, er, ed, eM, ev, eR, ec, eo, ef, B && eE]
-    }), null != e_ && (0, a.jsx)(l.MenuGroup, {
-      children: e_
+      children: ["" === s ? ee : null, et, eu, en, ea, ei, eS, ev, eT, eC, el, es, e_, er, ed, em, eh, eR, ec, eo, ef, B && eE]
+    }), null != eA && (0, a.jsx)(l.MenuGroup, {
+      children: eA
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [eg, eI]
+      children: [eg, ep]
     }), (0, a.jsx)(l.MenuGroup, {
-      children: em
+      children: eM
     }), (0, a.jsx)(l.MenuGroup, {
-      children: eS
+      children: eI
     })]
   })
 }

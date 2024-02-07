@@ -22,8 +22,8 @@ function m(e) {
   let {
     onClose: t,
     onConfirm: m,
-    onCancel: g,
-    channel: E,
+    onCancel: E,
+    channel: g,
     analyticsType: S,
     popoutText: A,
     animation: _
@@ -31,15 +31,15 @@ function m(e) {
   a.useEffect(() => {
     c.default.track(f.AnalyticEvents.OPEN_POPOUT, {
       type: S,
-      ...(0, o.collectChannelAnalyticsMetadata)(E)
+      ...(0, o.collectChannelAnalyticsMetadata)(g)
     })
-  }, [S, E]);
+  }, [S, g]);
   let T = a.useCallback(() => {
       null == m || m(), t()
     }, [m, t]),
     M = a.useCallback(() => {
-      null == g || g(), t()
-    }, [g, t]),
+      null == E || E(), t()
+    }, [E, t]),
     I = a.useRef(null);
   return a.useEffect(() => {
     let e;

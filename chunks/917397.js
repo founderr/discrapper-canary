@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return C
   },
   useGuildMemberJoinedAtDate: function() {
-    return g
+    return S
   }
 }), n("702976"), n("222007");
 var a, l, s = n("884691"),
@@ -51,7 +51,7 @@ function C(e) {
   }, [e])
 }
 
-function g(e, t) {
+function S(e, t) {
   let n = (0, o.default)([u.default], () => u.default.getMember(t, e), [t, e]),
     a = null == n ? void 0 : n.joinedAt;
   return s.useMemo(() => null == a ? "" : r(new Date(a)).format("MMM DD, YYYY"), [a])

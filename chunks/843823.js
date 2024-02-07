@@ -1,28 +1,28 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
-}), a("222007");
-var n = a("446674"),
-  i = a("913144"),
-  l = a("27618");
+}), n("222007");
+var l = n("446674"),
+  i = n("913144"),
+  r = n("27618");
 let s = !1,
-  r = Object.freeze({
+  a = Object.freeze({
     userAffinities: [],
     affinityUserIds: new Set,
     lastFetched: 0
   }),
   u = {
-    ...r
+    ...a
   };
 
 function o() {
-  u.affinityUserIds = new Set(u.userAffinities.map(e => e.user_id).filter(e => !l.default.isBlocked(e)))
+  u.affinityUserIds = new Set(u.userAffinities.map(e => e.user_id).filter(e => !r.default.isBlocked(e)))
 }
-class d extends n.default.PersistedStore {
+class d extends l.default.PersistedStore {
   initialize(e) {
-    this.waitFor(l.default), null != e && (u.userAffinities = e.userAffinities, u.affinityUserIds = new Set(e.affinityUserIds), u.lastFetched = e.lastFetched), this.syncWith([l.default], o)
+    this.waitFor(r.default), null != e && (u.userAffinities = e.userAffinities, u.affinityUserIds = new Set(e.affinityUserIds), u.lastFetched = e.lastFetched), this.syncWith([r.default], o)
   }
   needsRefresh() {
     return Date.now() - u.lastFetched > 864e5
@@ -45,9 +45,9 @@ var c = new d(i.default, {
   LOAD_USER_AFFINITIES_SUCCESS: function(e) {
     var t;
     let {
-      affinities: a
+      affinities: n
     } = e;
-    u.userAffinities = null !== (t = a.user_affinities) && void 0 !== t ? t : [], u.lastFetched = Date.now(), o(), s = !1
+    u.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : [], u.lastFetched = Date.now(), o(), s = !1
   },
   LOAD_USER_AFFINITIES: function() {
     s = !0
@@ -57,7 +57,7 @@ var c = new d(i.default, {
   },
   LOGOUT: function() {
     u = {
-      ...r
+      ...a
     }
   }
 })

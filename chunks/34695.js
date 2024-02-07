@@ -18,8 +18,8 @@ var s = n("37983"),
   C = n("233069"),
   p = n("923959"),
   m = n("957255"),
-  g = n("697218"),
-  E = n("158998"),
+  E = n("697218"),
+  g = n("158998"),
   S = n("19846"),
   A = n("172554"),
   _ = n("172643"),
@@ -63,7 +63,7 @@ function D(e) {
     showingBanner: u
   } = e, d = (0, o.default)(n), {
     type: C
-  } = n, p = (0, l.useStateFromStores)([g.default], () => n.isPrivate() ? g.default.getUser(n.getRecipientId()) : null), _ = E.default.useUserTag(p), {
+  } = n, p = (0, l.useStateFromStores)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), _ = g.default.useUserTag(p), {
     canManageRoles: M,
     canReadMessageHistory: N
   } = (0, l.useStateFromStoresObject)([m.default], () => ({

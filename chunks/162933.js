@@ -4,27 +4,27 @@ l.r(t), l.d(t, {
     return f
   }
 });
-var n, a, s = l("37983"),
+var a, n, s = l("37983"),
   r = l("884691"),
   i = l("414456"),
   u = l.n(i),
   o = l("145131"),
   d = l("773712");
-(n = a || (a = {})).WRAP = "wrap", n.STACK = "stack";
+(a = n || (n = {})).WRAP = "wrap", a.STACK = "stack";
 class c extends r.PureComponent {
   renderChildren() {
     let e;
     let {
       children: t,
       layout: l,
-      columns: n
+      columns: a
     } = this.props;
     switch (l) {
       case "stack":
         e = "100%";
         break;
       case "wrap":
-        e = "".concat(1 / n * 100, "%")
+        e = "".concat(1 / a * 100, "%")
     }
     return t.map((t, l) => (0, s.jsx)(o.default.Child, {
       className: d.tile,
@@ -44,7 +44,7 @@ class c extends r.PureComponent {
     })
   }
 }
-c.Layout = a, c.defaultProps = {
+c.Layout = n, c.defaultProps = {
   children: [],
   layout: "wrap",
   columns: 4

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("781738"), n("222007");
 var a = n("37983"),
@@ -113,6 +113,6 @@ class C extends l.PureComponent {
     }
   }
 }
-var g = r.default.connectStores([u.default], () => ({
+var S = r.default.connectStores([u.default], () => ({
   regions: u.default.getRegions(null)
 }))(C)

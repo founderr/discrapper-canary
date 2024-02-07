@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return m
   },
   useMessageReminderDurations: function() {
-    return m
+    return M
   }
 });
 var a = n("37983");
@@ -20,14 +20,14 @@ var i = n("866227"),
   f = n("36562"),
   E = n("782340");
 
-function M(e) {
+function m(e) {
   let {
     showReminders: t
   } = d.default.useExperiment({
     location: "a65531_1"
   }, {
     autoTrackExposure: !1
-  }), n = (0, s.useStateFromStores)([o.default], () => null != o.default.getMessageReminders().find(t => t.messageId === e.id)), i = m(e, t => (0, r.addMessageReminders)(e, l().add(t, "millisecond").toDate()));
+  }), n = (0, s.useStateFromStores)([o.default], () => null != o.default.getMessageReminders().find(t => t.messageId === e.id)), i = M(e, t => (0, r.addMessageReminders)(e, l().add(t, "millisecond").toDate()));
   return t ? (0, a.jsx)(u.MenuItem, {
     id: "mark-todo",
     label: n ? E.default.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : E.default.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
@@ -37,7 +37,7 @@ function M(e) {
   }) : null
 }
 
-function m(e, t) {
+function M(e, t) {
   return c.MESSAGE_REMINDER_DURATION_ITEMS.map(e => {
     let {
       duration: n,

@@ -17,8 +17,8 @@ var n = l("37983"),
   m = l("819689"),
   p = l("850391"),
   h = l("884351"),
-  E = l("42203"),
-  T = l("27618"),
+  T = l("42203"),
+  E = l("27618"),
   S = l("158998"),
   _ = l("718422"),
   g = l("49111"),
@@ -32,7 +32,7 @@ function v(e) {
     onClose: s,
     className: r,
     inputClassName: v
-  } = e, N = a.useRef(null), C = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(t.id)), y = a.useCallback(e => {
+  } = e, N = a.useRef(null), C = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(t.id)), y = a.useCallback(e => {
     if ("Enter" === e.key) {
       e.preventDefault(), o(null != N.current, "Keypress on Input when not mounted");
       let l = N.current.value.trim();
@@ -45,7 +45,7 @@ function v(e) {
           valid: n
         } = e;
         n && (c.default.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
-          let t = E.default.getChannel(e);
+          let t = T.default.getChannel(e);
           o(null != t, "Newly created PrivateChannel is null"), m.default.sendMessage(t.id, h.default.parse(t, l)), (0, f.popLayer)()
         }), null == s || s())
       }), !0

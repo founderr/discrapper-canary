@@ -22,8 +22,8 @@ var a = n("37983"),
 function C(e) {
   let {
     channel: t
-  } = e, n = (0, i.useStateFromStores)([h.default], () => h.default.getSelectedParticipant(t.id)), C = (null == n ? void 0 : n.type) === p.ParticipantTypes.STREAM, g = (0, i.useStateFromStores)([c.default], () => C ? c.default.getActiveStreamForStreamKey(n.id) : null), {
-    ignoreSenderPreference: S
+  } = e, n = (0, i.useStateFromStores)([h.default], () => h.default.getSelectedParticipant(t.id)), C = (null == n ? void 0 : n.type) === p.ParticipantTypes.STREAM, S = (0, i.useStateFromStores)([c.default], () => C ? c.default.getActiveStreamForStreamKey(n.id) : null), {
+    ignoreSenderPreference: g
   } = u.default.useExperiment({
     location: "ActionBarClipsButton"
   }, {
@@ -32,9 +32,9 @@ function C(e) {
     viewerClippingAllowed: _,
     isAtMaxSavingClipOperations: I
   } = (0, i.useStateFromStoresObject)([r.default], () => ({
-    viewerClippingAllowed: null != g && (r.default.isViewerClippingAllowedForUser(g.ownerId) || S),
+    viewerClippingAllowed: null != S && (r.default.isViewerClippingAllowedForUser(S.ownerId) || g),
     isAtMaxSavingClipOperations: r.default.getIsAtMaxSaveClipOperations()
-  })), T = (null == g ? void 0 : g.ownerId) === f.default.getId(), v = !(T || _) || I || null == n, x = l.useCallback(e => (0, a.jsx)(s.CameraIcon, {
+  })), T = (null == S ? void 0 : S.ownerId) === f.default.getId(), v = !(T || _) || I || null == n, x = l.useCallback(e => (0, a.jsx)(s.CameraIcon, {
     ...e,
     color: "currentColor"
   }), []);
@@ -45,7 +45,7 @@ function C(e) {
     },
     disabled: v,
     iconComponent: x,
-    label: null == g ? m.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : T || _ ? I ? void 0 : m.default.Messages.CLIPS_SAVE : m.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
+    label: null == S ? m.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : T || _ ? I ? void 0 : m.default.Messages.CLIPS_SAVE : m.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
     grow: !1
   })
 }

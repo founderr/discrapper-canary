@@ -23,12 +23,12 @@ var l = n("37983"),
   m = n("280174"),
   E = n("195812"),
   g = n("964889"),
-  I = n("318042"),
-  S = n("49111"),
+  S = n("318042"),
+  I = n("49111"),
   _ = n("782340"),
   N = n("518837");
 let T = {
-  [S.LocalDispatchApplicationStates.INSTALLING]: {
+  [I.LocalDispatchApplicationStates.INSTALLING]: {
     [m.TimeUnits.NONE]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
@@ -45,7 +45,7 @@ let T = {
       timeRemaining: t
     })
   },
-  [S.LocalDispatchApplicationStates.UPDATING]: {
+  [I.LocalDispatchApplicationStates.UPDATING]: {
     [m.TimeUnits.NONE]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_UPDATING.format({
       name: e
     }),
@@ -62,7 +62,7 @@ let T = {
       timeRemaining: t
     })
   },
-  [S.LocalDispatchApplicationStates.REPAIRING]: {
+  [I.LocalDispatchApplicationStates.REPAIRING]: {
     [m.TimeUnits.NONE]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
       name: e
     }),
@@ -86,9 +86,9 @@ class A extends a.PureComponent {
       state: e,
       isPaused: t
     } = this.props;
-    if (e.type === S.LocalDispatchApplicationStates.UPDATING || e.type === S.LocalDispatchApplicationStates.REPAIRING || e.type === S.LocalDispatchApplicationStates.INSTALLING) {
+    if (e.type === I.LocalDispatchApplicationStates.UPDATING || e.type === I.LocalDispatchApplicationStates.REPAIRING || e.type === I.LocalDispatchApplicationStates.INSTALLING) {
       if (t) return _.default.Messages.APPLICATION_PROGRESS_INDICATOR_PAUSED;
-      if (e.stage === S.DispatchApplicationStages.PATCHING || e.stage === S.DispatchApplicationStages.REPAIRING) return (0, l.jsx)(I.default, {
+      if (e.stage === I.DispatchApplicationStages.PATCHING || e.stage === I.DispatchApplicationStages.REPAIRING) return (0, l.jsx)(S.default, {
         getHistoricalTotalBytes: C.default.getHistoricalTotalBytesWritten,
         updateInterval: 5e3,
         children: this.renderProgressBody
@@ -194,7 +194,7 @@ class L extends a.PureComponent {
       let {
         onClick: t
       } = this.props;
-      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, h.transitionTo)(S.Routes.APPLICATION_LIBRARY)
+      e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, h.transitionTo)(I.Routes.APPLICATION_LIBRARY)
     }
   }
 }

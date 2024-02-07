@@ -1,166 +1,166 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   updateSubscriptionInvoicePreview: function() {
     return f
   },
   useSubscriptionInvoicePreview: function() {
-    return _
+    return h
   },
   useGetSubscriptionInvoice: function() {
     return p
   },
   getItemUnitPriceWithDiscount: function() {
-    return m
+    return S
   }
 }), n("222007");
-var s = n("884691"),
-  r = n("446674"),
-  l = n("872717"),
-  a = n("448993"),
-  i = n("195358"),
-  o = n("521012"),
-  u = n("719923"),
+var r = n("884691"),
+  i = n("446674"),
+  u = n("872717"),
+  o = n("448993"),
+  a = n("195358"),
+  s = n("521012"),
+  l = n("719923"),
   c = n("49111");
-async function d(e) {
+async function d(t) {
   let {
-    items: t,
+    items: e,
     paymentSourceId: n,
-    trialId: s,
-    code: r,
-    applyEntitlements: o = !1,
+    trialId: r,
+    code: i,
+    applyEntitlements: s = !1,
     currency: d,
     renewal: f,
-    metadata: h
-  } = e;
-  t = (0, u.coerceExistingItemsToNewItemInterval)(t);
-  let E = {
-    items: t.map(e => {
+    metadata: E
+  } = t;
+  e = (0, l.coerceExistingItemsToNewItemInterval)(e);
+  let _ = {
+    items: e.map(t => {
       let {
-        planId: t,
+        planId: e,
         ...n
-      } = e;
+      } = t;
       return {
         ...n,
-        plan_id: t
+        plan_id: e
       }
     }),
     payment_source_id: n,
-    trial_id: s,
-    code: r,
-    apply_entitlements: o,
+    trial_id: r,
+    code: i,
+    apply_entitlements: s,
     currency: d,
     renewal: f,
-    metadata: h
+    metadata: E
   };
   try {
-    let e = await l.default.post({
+    let t = await u.default.post({
       url: c.Endpoints.BILLING_SUBSCRIPTIONS_PREVIEW,
-      body: E,
+      body: _,
       oldFormErrors: !0
     });
-    return i.default.createInvoiceFromServer(e.body)
-  } catch (e) {
-    throw new a.BillingError(e)
+    return a.default.createInvoiceFromServer(t.body)
+  } catch (t) {
+    throw new o.BillingError(t)
   }
 }
-async function f(e) {
+async function f(t) {
   let {
-    subscriptionId: t,
+    subscriptionId: e,
     items: n,
-    paymentSourceId: s,
-    renewal: r,
-    currency: o,
+    paymentSourceId: r,
+    renewal: i,
+    currency: s,
     applyEntitlements: d = !1,
     analyticsLocations: f,
-    analyticsLocation: h
-  } = e;
-  null != n && (n = (0, u.coerceExistingItemsToNewItemInterval)(n));
-  let E = {
-    items: null == n ? void 0 : n.map(e => {
+    analyticsLocation: E
+  } = t;
+  null != n && (n = (0, l.coerceExistingItemsToNewItemInterval)(n));
+  let _ = {
+    items: null == n ? void 0 : n.map(t => {
       let {
-        planId: t,
+        planId: e,
         ...n
-      } = e;
+      } = t;
       return {
         ...n,
-        plan_id: t
+        plan_id: e
       }
     }),
-    payment_source_id: s,
-    renewal: r,
+    payment_source_id: r,
+    renewal: i,
     apply_entitlements: d,
-    currency: o
+    currency: s
   };
   try {
-    let e = await l.default.patch({
-      url: c.Endpoints.BILLING_SUBSCRIPTION_PREVIEW(t),
+    let t = await u.default.patch({
+      url: c.Endpoints.BILLING_SUBSCRIPTION_PREVIEW(e),
       query: {
-        location: h,
+        location: E,
         location_stack: f
       },
-      body: E,
+      body: _,
       oldFormErrors: !0
     });
-    return i.default.createInvoiceFromServer(e.body)
-  } catch (e) {
-    throw new a.BillingError(e)
+    return a.default.createInvoiceFromServer(t.body)
+  } catch (t) {
+    throw new o.BillingError(t)
   }
 }
-async function h(e) {
+async function E(t) {
   let {
-    subscriptionId: t,
+    subscriptionId: e,
     preventFetch: n
-  } = e;
+  } = t;
   if (n) return null;
-  let s = await l.default.get({
-    url: c.Endpoints.BILLING_SUBSCRIPTION_INVOICE(t),
+  let r = await u.default.get({
+    url: c.Endpoints.BILLING_SUBSCRIPTION_INVOICE(e),
     oldFormErrors: !0
   });
-  return i.default.createInvoiceFromServer(s.body)
+  return a.default.createInvoiceFromServer(r.body)
 }
 
-function E(e, t) {
+function _(t, e) {
   let {
     preventFetch: n = !1
-  } = e, [l, a] = (0, s.useState)(null), [i, u] = (0, s.useState)(null), c = (0, r.useStateFromStores)([o.default], () => o.default.getSubscriptions());
-  return (0, s.useEffect)(() => {
-    let e = !1;
-    async function s() {
+  } = t, [u, o] = (0, r.useState)(null), [a, l] = (0, r.useState)(null), c = (0, i.useStateFromStores)([s.default], () => s.default.getSubscriptions());
+  return (0, r.useEffect)(() => {
+    let t = !1;
+    async function r() {
       try {
-        u(null), a(null);
-        let n = await t();
-        !e && a(n)
-      } catch (t) {
-        !e && u(t)
+        l(null), o(null);
+        let n = await e();
+        !t && o(n)
+      } catch (e) {
+        !t && l(e)
       }
     }
-    return !n && s(), () => {
-      e = !0
+    return !n && r(), () => {
+      t = !0
     }
-  }, [n, t, c]), [l, i]
+  }, [n, e, c]), [u, a]
 }
 
-function _(e) {
-  if ("subscriptionId" in e && null == e.subscriptionId) {
+function h(t) {
+  if ("subscriptionId" in t && null == t.subscriptionId) {
     let {
-      subscriptionId: t,
+      subscriptionId: e,
       ...n
-    } = e;
-    e = n
+    } = t;
+    t = n
   }
-  let t = (0, s.useCallback)(() => "subscriptionId" in e ? f(e) : "items" in e ? d(e) : null, [JSON.stringify(e)]);
-  return E(e, t)
+  let e = (0, r.useCallback)(() => "subscriptionId" in t ? f(t) : "items" in t ? d(t) : null, [JSON.stringify(t)]);
+  return _(t, e)
 }
 
-function p(e) {
-  let t = (0, s.useCallback)(() => h(e), [JSON.stringify(e)]);
-  return E(e, t)
+function p(t) {
+  let e = (0, r.useCallback)(() => E(t), [JSON.stringify(t)]);
+  return _(t, e)
 }
 
-function m(e) {
-  let t = e.subscriptionPlanPrice;
-  return e.discounts.forEach(n => {
-    let s = n.amount / e.quantity;
-    t -= s
-  }), t
+function S(t) {
+  let e = t.subscriptionPlanPrice;
+  return t.discounts.forEach(n => {
+    let r = n.amount / t.quantity;
+    e -= r
+  }), e
 }

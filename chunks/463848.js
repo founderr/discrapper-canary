@@ -20,8 +20,8 @@ var n = l("37983"),
   m = l("373469"),
   p = l("42203"),
   h = l("305961"),
-  E = l("957255"),
-  T = l("800762"),
+  T = l("957255"),
+  E = l("800762"),
   S = l("313873"),
   _ = l("599110"),
   g = l("474293"),
@@ -65,17 +65,17 @@ var C = function(e) {
     showActions: o = !0,
     hideHeader: u = !1,
     ...g
-  } = e, I = (0, s.useStateFromStores)([T.default, p.default], () => {
+  } = e, I = (0, s.useStateFromStores)([E.default, p.default], () => {
     var e;
-    return p.default.getChannel(null === (e = T.default.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId)
+    return p.default.getChannel(null === (e = E.default.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId)
   }), {
     enableHangStatus: N
   } = c.HangStatusExperiment.useExperiment({
     guildId: null == I ? void 0 : I.guild_id,
     location: "UserActivityContainer"
-  }), C = (0, s.useStateFromStores)([m.default], () => i ? m.default.getAnyStreamForUser(l.id) : null), y = N && E.default.can(A.Permissions.CONNECT, I), M = (null == t ? void 0 : t.type) === A.ActivityTypes.HANG_STATUS && y ? I : null, x = (0, s.useStateFromStores)([h.default, T.default, p.default], () => {
+  }), C = (0, s.useStateFromStores)([m.default], () => i ? m.default.getAnyStreamForUser(l.id) : null), y = N && T.default.can(A.Permissions.CONNECT, I), M = (null == t ? void 0 : t.type) === A.ActivityTypes.HANG_STATUS && y ? I : null, x = (0, s.useStateFromStores)([h.default, E.default, p.default], () => {
     var e, n;
-    return (0, r.default)(t, A.ActivityFlags.EMBEDDED) ? h.default.getGuild(null === (e = p.default.getChannel(null === (n = T.default.getVoiceStateForSession(l.id, null == t ? void 0 : t.session_id)) || void 0 === n ? void 0 : n.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != M ? h.default.getGuild(M.getGuildId()) : null
+    return (0, r.default)(t, A.ActivityFlags.EMBEDDED) ? h.default.getGuild(null === (e = p.default.getChannel(null === (n = E.default.getVoiceStateForSession(l.id, null == t ? void 0 : t.session_id)) || void 0 === n ? void 0 : n.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != M ? h.default.getGuild(M.getGuildId()) : null
   }), O = (0, s.useStateFromStores)([h.default], () => null != C ? h.default.getGuild(C.guildId) : null), R = (0, s.useStateFromStores)([d.default], () => {
     if (null != t) return null != t.application_id ? d.default.getApplication(t.application_id) : d.default.getApplicationByName(t.name);
     return null

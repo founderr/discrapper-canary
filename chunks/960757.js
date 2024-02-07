@@ -7,34 +7,34 @@ n.r(t), n.d(t, {
 var l = n("884691"),
   a = n("446674"),
   s = n("152475"),
-  i = n("42203"),
-  r = n("501030"),
+  r = n("42203"),
+  i = n("501030"),
   u = n("730647"),
-  o = n("49111");
-let d = {
+  d = n("49111");
+let o = {
   can_broadcast: !1
 };
 
 function c(e, t, n) {
-  let [c, E] = l.useState(d), [f, I] = l.useState(!1), _ = l.useRef(!1), h = null == e ? void 0 : e.id, v = null == e ? void 0 : e.hasFeature(o.GuildFeatures.HAS_DIRECTORY_ENTRY);
+  let [c, E] = l.useState(o), [f, I] = l.useState(!1), h = l.useRef(!1), _ = null == e ? void 0 : e.id, T = null == e ? void 0 : e.hasFeature(d.GuildFeatures.HAS_DIRECTORY_ENTRY);
   l.useEffect(() => {
-    if (!v) {
-      E(d);
+    if (!T) {
+      E(o);
       return
     }
-    if (_.current || null == h) return;
+    if (h.current || null == _) return;
     let e = async () => {
-      _.current = !0;
+      h.current = !0;
       try {
-        let e = await (0, r.getDirectoryEntryBroadcastInfo)(h, u.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT, t);
+        let e = await (0, i.getDirectoryEntryBroadcastInfo)(_, u.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT, t);
         E(e)
       } catch (e) {
-        E(d)
+        E(o)
       }
-      _.current = !1
+      h.current = !1
     };
     e()
-  }, [h, v, t]), l.useEffect(() => {
+  }, [_, T, t]), l.useEffect(() => {
     var e;
     if (!c.can_broadcast) {
       I(!1);
@@ -42,11 +42,11 @@ function c(e, t, n) {
     }
     I(null === (e = c.has_broadcast) || void 0 === e || e)
   }, [c]);
-  let T = (0, a.useStateFromStores)([i.default], () => (0, s.canEveryoneRoleViewEvent)(n, [i.default]));
+  let N = (0, a.useStateFromStores)([r.default], () => (0, s.canEveryoneRoleViewEvent)(n, [r.default]));
   return {
     broadcastInfo: c,
-    broadcastToDirectoryChannels: T && f,
+    broadcastToDirectoryChannels: N && f,
     setBroadcastToDirectoryChannels: I,
-    canEveryoneRoleViewEvent: T
+    canEveryoneRoleViewEvent: N
   }
 }

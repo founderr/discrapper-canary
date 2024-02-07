@@ -20,7 +20,7 @@ var s = n("37983"),
   p = n("173791"),
   h = n("926622"),
   T = () => {
-    let [e, t] = a.useState(""), [l, T] = a.useState(""), [N, m] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, R] = a.useState(null), O = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), L = O.code.split(" ")[0], x = async () => {
+    let [e, t] = a.useState(""), [l, T] = a.useState(""), [N, m] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, R] = a.useState(null), L = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), O = L.code.split(" ")[0], x = async () => {
       try {
         await u.default.resendCode(e)
       } catch (e) {
@@ -31,7 +31,7 @@ var s = n("37983"),
       try {
         let {
           token: t
-        } = await u.default.verifyPhone(L + e, l);
+        } = await u.default.verifyPhone(O + e, l);
         C(null), R(null), A(!0), u.default.validatePhoneForSupport(t)
       } catch (e) {
         e.body.message ? (C(null), R(e.body.message)) : (C(e.body.phone), R(e.body.code))
@@ -58,8 +58,8 @@ var s = n("37983"),
         className: h.marginTop20,
         children: [(0, s.jsx)(c.default, {
           label: I.default.Messages.FORM_LABEL_PHONE_NUMBER,
-          alpha2: O.alpha2,
-          countryCode: L,
+          alpha2: L.alpha2,
+          countryCode: O,
           value: e,
           autoComplete: "off",
           spellCheck: "false",

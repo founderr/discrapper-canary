@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("430312"),
   E = n("26989"),
   C = n("697218"),
-  g = n("459824"),
-  S = n("516832"),
+  S = n("459824"),
+  g = n("516832"),
   _ = n("986358"),
   I = n("590456"),
   T = n("623529");
@@ -33,7 +33,7 @@ function v(e) {
     className: v,
     infoPanelClassName: x,
     style: N
-  } = e, A = (0, g.useCanAccessGuildMemberModView)(n), M = (0, r.useStateFromStores)([C.default], () => C.default.getUser(t), [t]), R = (0, r.useStateFromStores)([E.default], () => E.default.getMember(n, t), [n, t]), j = null == M || null == R, {
+  } = e, A = (0, S.useCanAccessGuildMemberModView)(n), M = (0, r.useStateFromStores)([C.default], () => C.default.getUser(t), [t]), R = (0, r.useStateFromStores)([E.default], () => E.default.getMember(n, t), [n, t]), j = null == M || null == R, {
     AnalyticsLocationProvider: L
   } = (0, f.default)(c.default.GUILD_MEMBER_MOD_VIEW);
   return (l.useEffect(() => {
@@ -67,7 +67,7 @@ function v(e) {
             userId: t,
             guildId: n,
             onClose: s
-          }), (0, a.jsx)(S.default, {
+          }), (0, a.jsx)(g.default, {
             userId: t,
             guildId: n,
             onClose: s,

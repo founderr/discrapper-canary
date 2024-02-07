@@ -20,8 +20,8 @@ var n = l("37983"),
   m = l("669491"),
   p = l("77078"),
   h = l("272030"),
-  E = l("851387"),
-  T = l("737960"),
+  T = l("851387"),
+  E = l("737960"),
   S = l("206230"),
   _ = l("339023"),
   g = l("405645"),
@@ -83,8 +83,8 @@ let F = a.forwardRef(function(e, t) {
   var s, r, o;
   let u;
   let {
-    canRemove: E,
-    className: T,
+    canRemove: T,
+    className: E,
     role: A,
     onRemove: I,
     guildId: v,
@@ -111,7 +111,7 @@ let F = a.forwardRef(function(e, t) {
   }, [A.id]), U = (0, p.useToken)(m.default.unsafe_rawColors.PRIMARY_300).hsl(), w = null !== (r = A.colorString) && void 0 !== r ? r : U, F = null !== (o = (0, c.hex2rgb)(w, .6)) && void 0 !== o ? o : void 0, G = m.default.unsafe_rawColors.WHITE_500.css, Y = (0, c.hex2int)(w);
   null != Y && .3 > (0, c.getDarkness)(Y) && (G = m.default.unsafe_rawColors.PRIMARY_630.css), u = P ? (0, n.jsx)(_.default, {
     className: D.roleFlowerStar,
-    iconClassName: E ? D.roleVerifiedIcon : void 0,
+    iconClassName: T ? D.roleVerifiedIcon : void 0,
     color: w,
     size: 14
   }) : "dot" === L ? (0, n.jsx)(p.RoleDot, {
@@ -132,7 +132,7 @@ let F = a.forwardRef(function(e, t) {
   return (0, n.jsx)(p.FocusRing, {
     children: (0, n.jsxs)("div", {
       ref: t,
-      className: i(D.role, T),
+      className: i(D.role, E),
       style: k,
       onContextMenu: j,
       onMouseDown: C,
@@ -141,16 +141,16 @@ let F = a.forwardRef(function(e, t) {
       ...x,
       children: [(0, n.jsxs)(p.Clickable, {
         className: D.roleRemoveButton,
-        onClick: E ? I : void 0,
-        tabIndex: E ? y : -1,
+        onClick: T ? I : void 0,
+        tabIndex: T ? y : -1,
         focusProps: {
           focusClassName: D.roleRemoveIconFocused
         },
-        "aria-hidden": !E,
+        "aria-hidden": !T,
         "aria-label": b.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
           roleName: A.name
         }),
-        children: [u, E ? (0, n.jsx)(M.default, {
+        children: [u, T ? (0, n.jsx)(M.default, {
           color: G,
           className: D.roleRemoveIcon,
           "aria-hidden": !0
@@ -250,11 +250,11 @@ function k(e) {
     className: m,
     readOnly: p,
     roleClassName: h,
-    disableBorderColor: T
+    disableBorderColor: E
   } = e, S = a.useRef({}), _ = a.useCallback(e => {
     var t;
     let n = r.filter(t => t !== e.id);
-    (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? E.default.unassignGuildRoleConnection(s.id, e.id) : A.default.updateMemberRoles(s.id, l.id, n, [], [e.id])
+    (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? T.default.unassignGuildRoleConnection(s.id, e.id) : A.default.updateMemberRoles(s.id, l.id, n, [], [e.id])
   }, [r, s.id, l.id]), g = a.useCallback(e => {
     let t = r; - 1 === t.indexOf(e) && (t = t.concat([e])), A.default.updateMemberRoles(s.id, l.id, t, [e], [])
   }, [r, s.id, l.id]), [I, C] = a.useState(null), y = a.useMemo(() => {
@@ -306,7 +306,7 @@ function k(e) {
           return l = e.id, void(null != (n = t) ? S.current[l] = n : delete S.current[l])
         },
         guildId: s.id,
-        disableBorderColor: T
+        disableBorderColor: E
       }, e.id)
     });
   return null != I && 0 !== M ? t = (0, n.jsx)(G, {
@@ -336,7 +336,7 @@ function k(e) {
     })
   })
 }
-let V = (0, T.default)(k);
+let V = (0, E.default)(k);
 
 function B(e) {
   return (0, f.useStateFromStores)([v.default], () => {

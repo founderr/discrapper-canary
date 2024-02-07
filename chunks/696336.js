@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("77078"),
   E = n("406189"),
   g = n("302437"),
-  I = n("812204"),
-  S = n("685665"),
+  S = n("812204"),
+  I = n("685665"),
   _ = n("191145"),
   N = n("15131"),
   T = n("480376"),
@@ -149,13 +149,13 @@ function es(e) {
     null === (e = eu.current) || void 0 === e || e.calculateState(), null === (t = ed.current) || void 0 === t || t.calculateState()
   })), {
     AnalyticsLocationProvider: eE
-  } = (0, S.default)(I.default.GUILDS_LIST), {
+  } = (0, I.default)(S.default.GUILDS_LIST), {
     pathname: eg
-  } = (0, d.useLocation)(), eI = eg.startsWith(q.Routes.GUILD_DISCOVERY), eS = eg.startsWith(q.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
+  } = (0, d.useLocation)(), eS = eg.startsWith(q.Routes.GUILD_DISCOVERY), eI = eg.startsWith(q.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
   a.useLayoutEffect(() => {
     if (!er.current) {
       if (0 !== o.size) {
-        if (eI) em.scrollToGuild(null, !1);
+        if (eS) em.scrollToGuild(null, !1);
         else {
           let {
             scrollTop: e
@@ -215,12 +215,12 @@ function es(e) {
           ref: em.scrollerRef,
           onScroll: em.handleScroll,
           children: [(0, l.jsx)(k.HomeButton, {}), eT ? (0, l.jsx)(T.default, {}) : null, (0, l.jsx)(F.default, {}), (0, l.jsx)(Y.default, {
-            isOnHubVerificationRoute: eS
+            isOnHubVerificationRoute: eI
           }), (0, l.jsx)(P.default, {}), E.map(e => (0, l.jsx)(Q.default, {
             guildId: e
           }, e)), g ? (0, l.jsx)(X.default, {}) : null, !n && e_ ? (0, l.jsx)(H.default, {
             ref: em.guildDiscoveryRef,
-            selected: eI,
+            selected: eS,
             tooltip: J.default.Messages.GUILD_DISCOVERY_TOOLTIP
           }) : null, (0, l.jsx)(K.default, {}), (0, l.jsx)("div", {
             "aria-label": J.default.Messages.SERVERS,
@@ -254,7 +254,7 @@ function es(e) {
             lastTargetNode: eN[eN.length - 1]
           }), n || e_ ? null : (0, l.jsx)(H.default, {
             ref: em.guildDiscoveryRef,
-            selected: eI
+            selected: eS
           }), (0, l.jsx)(W.default, {}), t ? null : (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(K.default, {}), (0, l.jsx)(w.default, {})]
           })]

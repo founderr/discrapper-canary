@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return o
+    return n
   }
-}), n("70102");
-var s = n("37983");
-n("884691");
-var r = n("784917"),
-  l = n("326880"),
-  a = n("131777"),
-  i = n("49111");
+}), s("70102");
+var i = s("37983");
+s("884691");
+var r = s("784917"),
+  a = s("326880"),
+  l = s("131777"),
+  o = s("49111");
 
-function o(e) {
+function n(e) {
   let {
     tier: t,
-    ...n
+    ...s
   } = e;
   switch (t) {
-    case i.BoostedGuildTiers.NONE:
-    case i.BoostedGuildTiers.TIER_1:
-      return (0, s.jsx)(r.default, {
-        ...n
+    case o.BoostedGuildTiers.NONE:
+    case o.BoostedGuildTiers.TIER_1:
+      return (0, i.jsx)(r.default, {
+        ...s
       });
-    case i.BoostedGuildTiers.TIER_2:
-      return (0, s.jsx)(l.default, {
-        ...n
+    case o.BoostedGuildTiers.TIER_2:
+      return (0, i.jsx)(a.default, {
+        ...s
       });
-    case i.BoostedGuildTiers.TIER_3:
-      return (0, s.jsx)(a.default, {
-        ...n
+    case o.BoostedGuildTiers.TIER_3:
+      return (0, i.jsx)(l.default, {
+        ...s
       });
     default:
       throw Error("Not a valid tier type")

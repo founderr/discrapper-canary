@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
 var s = n("37983"),
-  r = n("884691"),
-  i = n("617258"),
+  i = n("884691"),
+  r = n("617258"),
   a = n("446674"),
   l = n("769846"),
   u = n("77078"),
@@ -18,25 +18,25 @@ var s = n("37983"),
   p = n("153160"),
   I = n("271560"),
   v = n("650509"),
-  C = n("910861"),
-  E = n("899604"),
-  T = n("153335"),
-  A = n("49111"),
-  _ = n("782340"),
-  g = n("208961");
-let S = (0, i.cssValueToNumber)(l.default.APPLICATION_SUBSCRIPTION_CARD_LISTING_IMAGE_SIZE),
-  R = "start_application_subscription",
-  m = e => {
+  E = n("910861"),
+  C = n("899604"),
+  _ = n("153335"),
+  T = n("49111"),
+  A = n("782340"),
+  m = n("208961");
+let S = (0, r.cssValueToNumber)(l.default.APPLICATION_SUBSCRIPTION_CARD_LISTING_IMAGE_SIZE),
+  g = "start_application_subscription",
+  R = e => {
     let {
       listing: t
     } = e, n = t.image_asset;
     if (null == n) return null;
-    let r = (0, I.getAssetURL)(t.application_id, n, S);
+    let i = (0, I.getAssetURL)(t.application_id, n, S);
     return (0, s.jsx)("div", {
       children: (0, s.jsx)("img", {
-        src: r,
+        src: i,
         alt: "",
-        className: g.listingImage
+        className: m.listingImage
       })
     })
   },
@@ -57,85 +57,85 @@ function x(e) {
   let {
     listing: t,
     groupListingId: n,
-    guildId: i,
+    guildId: r,
     analyticsLocation: l,
     onComplete: I,
     forcesTransitionToGuild: S
   } = e, x = (0, a.useStateFromStores)([h.default], () => h.default.isSyncing), {
     activeSubscription: L,
     activeSubscriptionListing: P
-  } = (0, v.useActiveSubscriptionListingForApplication)(t.application_id, i), {
-    openModal: O,
-    canOpenModal: w,
+  } = (0, v.useActiveSubscriptionListingForApplication)(t.application_id, r), {
+    openModal: y,
+    canOpenModal: O,
     cannotOpenReason: M
-  } = (0, T.default)({
+  } = (0, _.default)({
     listing: t,
-    guildId: i,
+    guildId: r,
     groupListingId: n,
     showBenefitsFirst: !1,
     analyticsLocation: l,
     onComplete: I,
     forcesTransitionToGuild: S
-  }), y = t.subscription_plans[0], j = 0 === y.price, U = (null == P ? void 0 : P.id) === t.id, b = (0, o.default)(), D = b && !w || x, V = () => {
-    b ? O() : (0, c.redirectToLogin)({
-      [R]: "true"
+  }), w = t.subscription_plans[0], j = 0 === w.price, U = (null == P ? void 0 : P.id) === t.id, b = (0, o.default)(), D = b && !O || x, V = () => {
+    b ? y() : (0, c.redirectToLogin)({
+      [g]: "true"
     })
   };
-  return r.useEffect(() => {
+  return i.useEffect(() => {
     let e = new URL(location.href);
-    if (b && !D && "true" === e.searchParams.get(R)) {
-      e.searchParams.delete(R);
+    if (b && !D && "true" === e.searchParams.get(g)) {
+      e.searchParams.delete(g);
       let t = e.pathname + e.search;
-      (0, f.replaceWith)(t), O()
+      (0, f.replaceWith)(t), y()
     }
-  }, [b, O, D]), (0, s.jsxs)("div", {
-    className: g.container,
+  }, [b, y, D]), (0, s.jsxs)("div", {
+    className: m.container,
     children: [(0, s.jsxs)("div", {
-      className: g.cardHeader,
-      children: [(0, s.jsx)(m, {
+      className: m.cardHeader,
+      children: [(0, s.jsx)(R, {
         listing: t
       }), (0, s.jsx)(u.Text, {
         variant: "text-lg/medium",
         color: "interactive-active",
         children: t.name
       }), (0, s.jsxs)("div", {
-        className: g.priceAndButtonContainer,
+        className: m.priceAndButtonContainer,
         children: [(0, s.jsx)(u.Text, {
           variant: "text-md/normal",
           color: "interactive-normal",
-          children: j ? _.default.Messages.APPLICATION_SUBSCRIPTION_FREE : _.default.Messages.APPLICATION_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
-            amount: (0, p.formatPrice)(y.price, y.currency),
-            period: (0, d.formatPlanInterval)(y)
+          children: j ? A.default.Messages.APPLICATION_SUBSCRIPTION_FREE : A.default.Messages.APPLICATION_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
+            amount: (0, p.formatPrice)(w.price, w.currency),
+            period: (0, d.formatPlanInterval)(w)
           })
         }), (() => {
           var e;
           if (U) return (0, s.jsx)(N, {
-            children: (null == L ? void 0 : L.status) === A.SubscriptionStatusTypes.CANCELED ? _.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : _.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
+            children: (null == L ? void 0 : L.status) === T.SubscriptionStatusTypes.CANCELED ? A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
           });
           if (j) return null == P ? (0, s.jsx)(N, {
-            children: _.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
+            children: A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
           }) : null;
           return (0, s.jsx)(u.Tooltip, {
-            tooltipClassName: g.subscribeButtonTooltip,
-            text: w || !b ? null : M,
-            "aria-label": null !== (e = !w && M) && void 0 !== e && e,
-            children: e => (0, s.jsx)(C.default, {
+            tooltipClassName: m.subscribeButtonTooltip,
+            text: O || !b ? null : M,
+            "aria-label": null !== (e = !O && M) && void 0 !== e && e,
+            children: e => (0, s.jsx)(E.default, {
               ...e,
               disabled: D,
               submitting: !1,
               onClick: V,
-              children: _.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
+              children: A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
             })
           })
         })()]
       })]
     }), (0, s.jsx)("div", {
-      className: g.benefitsContainer,
-      children: (0, s.jsx)(E.SubscriptionListingBenefits, {
+      className: m.benefitsContainer,
+      children: (0, s.jsx)(C.SubscriptionListingBenefits, {
         applicationId: t.application_id,
         storeListingBenefits: t.store_listing_benefits,
         skuBenefits: t.sku_benefits.benefits,
-        className: g.benefit
+        className: m.benefit
       })
     })]
   })

@@ -18,8 +18,8 @@ var a = l("414456"),
   m = l("191814"),
   p = l("758710"),
   h = l("351825"),
-  E = l("306160"),
-  T = l("253981"),
+  T = l("306160"),
+  E = l("253981"),
   S = l("613676"),
   _ = l("49111"),
   g = l("782340"),
@@ -42,7 +42,7 @@ function I(e) {
     color: i.Button.Colors.PRIMARY,
     look: i.Button.Looks.FILLED,
     size: i.Button.Sizes.SMALL,
-    onContextMenu: E.SUPPORTS_COPY ? e => {
+    onContextMenu: T.SUPPORTS_COPY ? e => {
       var t, a;
       let s = (0, o.getApplicationInstallURL)({
         id: l.id,
@@ -59,7 +59,7 @@ function I(e) {
           children: (0, n.jsx)(i.MenuItem, {
             id: "copy",
             label: g.default.Messages.APPLICATION_ADD_TO_SERVER_ACTIONS_COPY,
-            action: () => (0, E.copy)(s)
+            action: () => (0, T.copy)(s)
           })
         })
       }))
@@ -88,7 +88,7 @@ function I(e) {
       }), (0, n.jsx)("span", {
         className: A.applicationInstallButtonText,
         children: C ? g.default.Messages.ADD : g.default.Messages.APPLICATION_ADD_BUTTON
-      }), null == l.customInstallUrl || T.default.isDiscordUrl(l.customInstallUrl) ? null : (0, n.jsx)(p.default, {
+      }), null == l.customInstallUrl || E.default.isDiscordUrl(l.customInstallUrl) ? null : (0, n.jsx)(p.default, {
         className: A.launchIcon,
         width: 16,
         height: 16

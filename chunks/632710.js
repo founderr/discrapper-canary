@@ -18,8 +18,8 @@ var a = l("414456"),
   m = l("118033"),
   p = l("42203"),
   h = l("697218"),
-  E = l("800762"),
-  T = l("145131"),
+  T = l("800762"),
+  E = l("145131"),
   S = l("313873"),
   _ = l("429928"),
   g = l("36539"),
@@ -60,12 +60,12 @@ var a = l("414456"),
       W = G === S.Types.STREAM_PREVIEW || null != i,
       z = (0, _.default)(l),
       K = (0, m.isStageActivity)(l),
-      Z = H ? T.default.Align.END : T.default.Align.STRETCH,
-      X = z || W ? T.default.Direction.HORIZONTAL : T.default.Direction.VERTICAL,
+      Z = H ? E.default.Align.END : E.default.Align.STRETCH,
+      X = z || W ? E.default.Direction.HORIZONTAL : E.default.Direction.VERTICAL,
       J = (null == l ? void 0 : l.type) === P.ActivityTypes.HANG_STATUS,
-      Q = (0, u.useStateFromStores)([E.default, p.default], () => {
+      Q = (0, u.useStateFromStores)([T.default, p.default], () => {
         var e;
-        return J ? p.default.getChannel(null === (e = E.default.getVoiceStateForUser(a.id)) || void 0 === e ? void 0 : e.channelId) : null
+        return J ? p.default.getChannel(null === (e = T.default.getVoiceStateForUser(a.id)) || void 0 === e ? void 0 : e.channelId) : null
       });
     if ((0, g.default)(l)) t = [(0, n.jsx)(I.default, {
       look: F,
@@ -152,12 +152,12 @@ var a = l("414456"),
       if (null == s && null == i && null == e && null == r) return null;
       t = [s, i, e, r]
     }
-    let q = X === T.default.Direction.VERTICAL;
-    return (0, n.jsx)(T.default, {
+    let q = X === E.default.Direction.VERTICAL;
+    return (0, n.jsx)(E.default, {
       grow: 0,
       align: Z,
       direction: X,
-      wrap: q ? T.default.Wrap.WRAP : T.default.Wrap.NO_WRAP,
+      wrap: q ? E.default.Wrap.WRAP : E.default.Wrap.NO_WRAP,
       className: s(c, j.buttonsWrapper, q ? j.vertical : j.horizontal),
       onClick: function(e) {
         (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == Y || Y())

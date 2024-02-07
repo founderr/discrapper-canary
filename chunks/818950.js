@@ -18,8 +18,8 @@ var s = n("37983"),
   C = n("336696"),
   p = n("38654"),
   m = n("347738"),
-  g = n("845579"),
-  E = n("271938"),
+  E = n("845579"),
+  g = n("271938"),
   S = n("836417"),
   A = n("88093"),
   _ = n("377253"),
@@ -37,8 +37,8 @@ var s = n("37983"),
   j = n("221068"),
   b = n("49111"),
   P = n("782340"),
-  H = n("278224");
-let F = a.memo(function(e) {
+  F = n("278224");
+let H = a.memo(function(e) {
   var t, n;
   let {
     className: l,
@@ -46,8 +46,8 @@ let F = a.memo(function(e) {
     scrollerClassName: h,
     channel: C,
     messages: m,
-    unreadCount: g,
-    showNewMessagesBar: E,
+    unreadCount: E,
+    showNewMessagesBar: g,
     messageDisplayCompact: S,
     channelStream: A,
     uploads: _,
@@ -57,7 +57,7 @@ let F = a.memo(function(e) {
     keyboardModeEnabled: v,
     filterAfterTimestamp: x,
     showingQuarantineBanner: R
-  } = e, [F, U] = a.useState(!1), k = a.useMemo(() => S ? (0, y.generateMessageSpecs)({
+  } = e, [H, U] = a.useState(!1), k = a.useMemo(() => S ? (0, y.generateMessageSpecs)({
     compact: !0,
     messageGroups: 30,
     groupRange: 4,
@@ -94,14 +94,14 @@ let F = a.memo(function(e) {
     {
       channelStreamMarkup: V,
       newMessagesBar: W,
-      jumpToPresentBar: Z,
-      forumPostActionBar: z,
+      jumpToPresentBar: z,
+      forumPostActionBar: Z,
       strangerDangerWarningBanner: K
     } = (0, j.default)({
       channel: C,
       messages: m,
-      unreadCount: g,
-      showNewMessagesBar: E,
+      unreadCount: E,
+      showNewMessagesBar: g,
       messageDisplayCompact: S,
       channelStream: A,
       uploads: _,
@@ -110,7 +110,7 @@ let F = a.memo(function(e) {
       specs: k,
       filterAfterTimestamp: null != x ? x : B,
       showingQuarantineBanner: R,
-      isAtBottom: F,
+      isAtBottom: H,
       jumpToPresent: () => {
         if (m.hasPresent()) {
           var e;
@@ -150,22 +150,22 @@ let F = a.memo(function(e) {
   }(w.ref);
   let Y = (0, u.useFocusJumpSection)(),
     {
-      ref: X,
-      ...q
+      ref: q,
+      ...X
     } = (0, r.getContainerPropsFromNavigator)(G),
     J = a.useCallback(e => {
       var t;
-      w.ref.current = e, X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
+      w.ref.current = e, q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
     }, []);
   return (0, s.jsx)(r.ListNavigatorProvider, {
     navigator: G,
     children: (0, s.jsxs)("div", {
-      className: i(H.messagesWrapper, l, "group-spacing-".concat(c)),
+      className: i(F.messagesWrapper, l, "group-spacing-".concat(c)),
       children: [null != K ? K : W, (0, s.jsxs)(u.PinToBottomScrollerAuto, {
         ref: J,
         customTheme: !0,
-        className: i(h, H.scroller),
-        contentClassName: H.scrollerContent,
+        className: i(h, F.scroller),
+        contentClassName: F.scrollerContent,
         onResize: w.handleResize,
         onScroll: w.handleScroll,
         onMouseDown: w.handleMouseDown,
@@ -173,26 +173,26 @@ let F = a.memo(function(e) {
         ...Y,
         tabIndex: -1,
         role: "group",
-        children: [z, (0, s.jsxs)("ol", {
-          className: H.scrollerInner,
+        children: [Z, (0, s.jsxs)("ol", {
+          className: F.scrollerInner,
           "aria-label": P.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
             channelName: C.name
           }),
-          ...q,
+          ...X,
           children: [(0, s.jsx)("span", {
-            className: H.navigationDescription,
+            className: F.navigationDescription,
             id: "messagesNavigationDescription",
             "aria-hidden": !0,
             children: P.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
           }), V, (0, s.jsx)("div", {
             className: i({
-              [H.scrollerSpacer]: !R,
-              [H.empty]: 0 === m.length && !m.loadingMore,
-              [H.emptyForum]: 1 === m.length && !m.loadingMore && C.isForumPost() && (null === (t = m.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
+              [F.scrollerSpacer]: !R,
+              [F.empty]: 0 === m.length && !m.loadingMore,
+              [F.emptyForum]: 1 === m.length && !m.loadingMore && C.isForumPost() && (null === (t = m.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
             })
           })]
         })]
-      }), Z]
+      }), z]
     })
   })
 }, (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden);
@@ -229,8 +229,8 @@ var U = a.memo(function(e) {
     renderSpoilers: D,
     keyboardModeEnabled: j
   } = function() {
-    let e = g.MessageDisplayCompact.useSetting(),
-      t = g.RenderSpoilers.useSetting(),
+    let e = E.MessageDisplayCompact.useSetting(),
+      t = E.RenderSpoilers.useSetting(),
       {
         messageGroupSpacing: n,
         fontSize: s,
@@ -256,7 +256,7 @@ var U = a.memo(function(e) {
     }
   }(), {
     messages: P,
-    channelStream: H,
+    channelStream: F,
     oldestUnreadMessageId: U,
     editingMessageId: k
   } = function(e) {
@@ -273,7 +273,7 @@ var U = a.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = N.default.getUser(E.default.getId())) || void 0 === t ? void 0 : t.hasFlag(b.UserFlags.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(b.UserFlags.SPAMMER)) && void 0 !== n && n,
       u = (0, c.useChannelSummariesExperiment)(e),
       d = (0, h.default)("use_topic_dividers_in_chat"),
       f = (0, o.useStateFromStoresArray)([m.default], () => {
@@ -281,7 +281,7 @@ var U = a.memo(function(e) {
         return u && d && null !== (t = m.default.summaries(e.id)) && void 0 !== t ? t : []
       }, [u, e.id, d]),
       p = (0, o.useStateFromStores)([m.default], () => u ? m.default.selectedSummary(e.id) : null, [u, e.id]),
-      g = a.useMemo(() => (0, R.default)({
+      E = a.useMemo(() => (0, R.default)({
         channel: e,
         messages: s,
         oldestUnreadMessageId: l,
@@ -295,21 +295,21 @@ var U = a.memo(function(e) {
       });
     return {
       messages: s,
-      channelStream: g,
+      channelStream: E,
       oldestUnreadMessageId: l,
       editingMessageId: A
     }
   }(t);
   return (0, s.jsx)(v.ObscuredDisplayContext.Provider, {
     value: (0, x.default)(D, u),
-    children: (0, s.jsx)(F, {
+    children: (0, s.jsx)(H, {
       ...r,
       messageGroupSpacing: L,
       showNewMessagesBar: !0,
       channel: t,
       messageDisplayCompact: !i && (l || O),
       messages: P,
-      channelStream: H,
+      channelStream: F,
       permissionVersion: d,
       uploads: (0, o.useStateFromStores)([I.default], () => I.default.getFiles(t.id), [t]),
       unreadCount: (0, o.useStateFromStores)([M.default], () => M.default.getUnreadCount(t.id), [t]),

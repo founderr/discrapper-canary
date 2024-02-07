@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   BotTypes: function() {
-    return a.BotTagTypes
+    return u.BotTagTypes
   },
   default: function() {
     return o
@@ -12,14 +12,14 @@ n("884691");
 var i = n("414456"),
   s = n.n(i),
   l = n("79798"),
-  a = n("988268"),
-  u = n("888770"),
+  u = n("988268"),
+  a = n("888770"),
   o = e => {
     let {
       name: t,
       discriminator: n,
       invertBotTagColor: i,
-      nameColor: a,
+      nameColor: u,
       className: o,
       botType: c,
       usernameClass: d,
@@ -27,27 +27,27 @@ var i = n("414456"),
       botClass: I,
       botVerified: _ = !1,
       style: E,
-      useRemSizes: T = !1,
-      usernameIcon: S
+      useRemSizes: S = !1,
+      usernameIcon: T
     } = e;
     return (0, r.jsxs)("div", {
-      className: s(o, u.nameTag),
+      className: s(o, a.nameTag),
       style: E,
       children: [(0, r.jsxs)("span", {
-        className: s(u.username, d),
-        style: null != a ? {
-          color: a
+        className: s(a.username, d),
+        style: null != u ? {
+          color: u
         } : void 0,
-        children: [S, t]
+        children: [T, t]
       }), null != n ? (0, r.jsxs)("span", {
         className: null != f ? f : void 0,
         children: ["#", n]
       }) : null, null != c ? (0, r.jsx)(l.default, {
         type: c,
         invertColor: i,
-        className: s(I, u.bot),
+        className: s(I, a.bot),
         verified: _,
-        useRemSizes: T
+        useRemSizes: S
       }) : null]
     })
   }

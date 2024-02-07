@@ -25,13 +25,13 @@ function c(e) {
     className: p,
     ...h
   } = e, {
-    tooltip: E,
-    loading: T,
+    tooltip: T,
+    loading: E,
     disabled: S,
     onClick: _
   } = (0, u.useSpotifySyncAction)(t, l, f, o.default.getNickname(c, a, l));
   return (0, n.jsx)(i.Tooltip, {
-    text: E,
+    text: T,
     children: e => {
       let {
         onMouseEnter: l,
@@ -45,8 +45,8 @@ function c(e) {
         onMouseEnter: l,
         onMouseLeave: a,
         disabled: S,
-        submitting: T,
-        "aria-label": null != E ? E : t.name,
+        submitting: E,
+        "aria-label": null != T ? T : t.name,
         children: (0, n.jsx)(r.default, {
           className: d.listenAlongIcon
         })

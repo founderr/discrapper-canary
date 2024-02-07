@@ -8,8 +8,8 @@ var r = n("37983"),
   i = n("884691"),
   s = n("627445"),
   l = n.n(s),
-  a = n("252438"),
-  u = n("834897"),
+  u = n("252438"),
+  a = n("834897"),
   o = n("206230"),
   c = n("90592"),
   d = n("333955"),
@@ -17,8 +17,8 @@ var r = n("37983"),
   I = n("526887"),
   _ = n("642906"),
   E = n("85336"),
-  T = n("159149"),
-  S = n("650484"),
+  S = n("159149"),
+  T = n("650484"),
   N = n("367767"),
   p = n("425480"),
   C = n("782340");
@@ -39,7 +39,7 @@ function m(e) {
       readySlideId: g
     } = (0, _.usePaymentContext)();
   l(null != L, "Expected plan to selected"), l(null != M, "Expected selectedSkuId"), l(null != v, "Step should be set");
-  let O = (0, u.default)(p.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
+  let O = (0, a.default)(p.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
     {
       createMultipleConfettiAt: U
     } = i.useContext(I.ConfettiCannonContext),
@@ -51,7 +51,7 @@ function m(e) {
     G = i.useMemo(() => {
       let e = 0,
         t = 0;
-      for (let n of P.sku_benefits.benefits) n.ref_type === a.SKUBenefitTypes.APPLICATION_PREMIUM_COMMAND ? e += 1 : n.ref_type === a.SKUBenefitTypes.INTANGIBLE && (t += 1);
+      for (let n of P.sku_benefits.benefits) n.ref_type === u.SKUBenefitTypes.APPLICATION_PREMIUM_COMMAND ? e += 1 : n.ref_type === u.SKUBenefitTypes.INTANGIBLE && (t += 1);
       let n = [];
       return 0 !== e && n.push(C.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EXCLUSIVE_CHANNELS_SUBTITLE.format({
         commandCount: e
@@ -82,9 +82,9 @@ function m(e) {
     }) : C.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
       tier: P.name
     })
-  }), n = (0, r.jsx)(T.default, {
+  }), n = (0, r.jsx)(S.default, {
     onPrimary: x,
-    primaryCTA: T.CTAType.CONTINUE,
+    primaryCTA: S.CTAType.CONTINUE,
     primaryText: C.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
   })) : t = O ? (0, r.jsx)(f.PurchaseConfirmationLite, {
     tierName: P.name,
@@ -97,9 +97,9 @@ function m(e) {
   }), i.useEffect(() => {
     o.default.useReducedMotion && D && U(window.innerWidth / 2, window.innerHeight / 2)
   }, [U, D]), (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsxs)(S.PaymentPortalBody, {
+    children: [(0, r.jsxs)(T.PaymentPortalBody, {
       children: [(0, r.jsx)(N.default, {}), t]
-    }), null != n && (0, r.jsx)(S.PaymentPortalFooter, {
+    }), null != n && (0, r.jsx)(T.PaymentPortalFooter, {
       children: n
     })]
   })

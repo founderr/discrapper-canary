@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("783735"),
   E = n("41594"),
   g = n("49111"),
-  I = n("133335"),
-  S = n("708995");
+  S = n("133335"),
+  I = n("708995");
 
 function _(e, t) {
   let n = t.getGuildId();
@@ -39,11 +39,11 @@ class N extends m.default {
       canReorderChannel: r
     } = this.props, o = (0, l.jsx)("li", {
       className: i(this.getClassName(), {
-        [S.disabled]: this.isDisabled()
+        [I.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: (0, l.jsxs)(E.default, {
-        className: S.iconVisibility,
+        className: I.iconVisibility,
         channel: e,
         selected: t,
         onClick: this.handleClick,
@@ -53,7 +53,7 @@ class N extends m.default {
         "aria-label": (0, c.default)({
           channel: e
         }),
-        resolvedUnreadSetting: I.UnreadSetting.ONLY_MENTIONS,
+        resolvedUnreadSetting: S.UnreadSetting.ONLY_MENTIONS,
         children: [this.renderInviteButton(), this.renderEditButton()]
       })
     });

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var r = n("90915"),
-  i = n("73749"),
+var i = n("90915"),
+  r = n("73749"),
   a = n("468560"),
   l = n("271081"),
   u = n("298557"),
@@ -19,23 +19,23 @@ let f = function(e) {
     match: t
   } = e, {
     applicationId: n,
-    section: r
-  } = t.params, i = (0, a.default)(c.ApplicationDirectoryProfileSections, r);
+    section: i
+  } = t.params, r = (0, a.default)(c.ApplicationDirectoryProfileSections, i);
   return (0, s.jsx)(u.default, {
     applicationId: n,
-    initialSection: i
+    initialSection: r
   })
 };
 
 function h() {
-  return (0, s.jsxs)(r.Switch, {
-    children: [(0, s.jsx)(i.default, {
+  return (0, s.jsxs)(i.Switch, {
+    children: [(0, s.jsx)(r.default, {
       path: d.Routes.APPLICATION_DIRECTORY_SEARCH,
       component: o.default
-    }), (0, s.jsx)(i.default, {
+    }), (0, s.jsx)(r.default, {
       path: d.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?"),
       render: f
-    }), (0, s.jsx)(i.default, {
+    }), (0, s.jsx)(r.default, {
       path: d.Routes.APPLICATION_DIRECTORY,
       component: l.default
     })]

@@ -20,8 +20,8 @@ var l = n("414456"),
   m = n("305961"),
   E = n("18494"),
   C = n("124969"),
-  g = n("153769"),
-  S = n("994906"),
+  S = n("153769"),
+  g = n("994906"),
   _ = n("136281"),
   I = n("782340"),
   T = n("63893");
@@ -77,7 +77,7 @@ function v(e) {
             color: f.tokens.colors.INFO_DANGER_FOREGROUND
           })
         }), (0, a.jsx)(_.UserModInfoItem, {
-          icon: (0, a.jsx)(g.default, {
+          icon: (0, a.jsx)(S.default, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX
           }),
@@ -127,7 +127,7 @@ function v(e) {
               showInviterAsFooter: !0,
               onClickInviter: e => {
                 let n = E.default.getChannelId();
-                (0, S.openGuildMemberModViewSidebar)(t.guildId, e.id, null != n ? n : "")
+                (0, g.openGuildMemberModViewSidebar)(t.guildId, e.id, null != n ? n : "")
               }
             })
           })

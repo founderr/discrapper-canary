@@ -23,8 +23,8 @@ function h(e) {
     openWarningPopout: t,
     type: l,
     content: h,
-    stickers: E,
-    uploads: T,
+    stickers: T,
+    uploads: E,
     channel: S,
     restrictMentions: _ = !0,
     respectCooldown: g = !0
@@ -34,8 +34,8 @@ function h(e) {
     let {
       openWarningPopout: f,
       type: h,
-      content: E,
-      stickers: T,
+      content: T,
+      stickers: E,
       uploads: S,
       channel: _,
       restrictMentions: g,
@@ -43,7 +43,7 @@ function h(e) {
       userCanUsePremiumMessageLength: I,
       resolve: v
     } = e;
-    if (0 === E.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == T || 0 === T.length) && (null == S || 0 === S.length)) {
+    if (0 === T.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == E || 0 === E.length) && (null == S || 0 === S.length)) {
       v({
         valid: !1,
         failureReason: m.MessageRestrictionTypes.EMPTY_MESSAGE
@@ -51,10 +51,10 @@ function h(e) {
       return
     }
     let N = I ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
-    if (E.length > N) {
+    if (T.length > N) {
       if (I || null == _) {
         ;
-        l = E.length, u = N, (0, a.openModal)(e => (0, n.jsx)(i.default, {
+        l = T.length, u = N, (0, a.openModal)(e => (0, n.jsx)(i.default, {
           title: p.default.Messages.MESSAGE_TOO_LONG_HEADER,
           body: p.default.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
             currentLength: l,
@@ -69,7 +69,7 @@ function h(e) {
       } else s.default.dispatch({
         type: "MESSAGE_LENGTH_UPSELL",
         channel: _,
-        content: E
+        content: T
       });
       v({
         valid: !1,
@@ -92,7 +92,7 @@ function h(e) {
             animation: l
           }
           of c.RESTRICTIONS) {
-          let n = e(E, _, g);
+          let n = e(T, _, g);
           if (!1 !== n) {
             f({
               analyticsType: t,
@@ -132,8 +132,8 @@ function h(e) {
     openWarningPopout: t,
     type: l,
     content: h,
-    stickers: E,
-    uploads: T,
+    stickers: T,
+    uploads: E,
     channel: S,
     restrictMentions: _,
     respectCooldown: g,

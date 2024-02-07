@@ -11,8 +11,8 @@ n.r(t), n.d(t, {
   }
 });
 var i, l, r, a, s = n("446674"),
-  o = n("913144"),
-  u = n("42203");
+  u = n("913144"),
+  o = n("42203");
 (i = r || (r = {}))[i.STRANGER_DANGER = 1] = "STRANGER_DANGER", i[i.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", i[i.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (l = a || (a = {}))[l.UPVOTE = 0] = "UPVOTE", l[l.DOWNVOTE = 1] = "DOWNVOTE";
 let d = [],
   c = {};
@@ -25,13 +25,13 @@ function f(e) {
 }
 
 function h() {
-  c = {}, Object.values(u.default.getMutablePrivateChannels()).forEach(e => {
+  c = {}, Object.values(o.default.getMutablePrivateChannels()).forEach(e => {
     f(e)
   })
 }
 class E extends s.default.Store {
   initialize() {
-    this.waitFor(u.default)
+    this.waitFor(o.default)
   }
   getChannelSafetyWarning(e, t) {
     var n;
@@ -42,7 +42,7 @@ class E extends s.default.Store {
     return null !== (t = c[e]) && void 0 !== t ? t : d
   }
 }
-var _ = new E(o.default, {
+var _ = new E(u.default, {
   CHANNEL_CREATE: function(e) {
     f(e.channel)
   },

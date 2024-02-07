@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return E
+    return T
   }
 });
 var n = l("37983"),
@@ -18,27 +18,27 @@ var n = l("37983"),
   p = l("640329"),
   h = l("814076");
 
-function E(e) {
+function T(e) {
   let {
     applicationId: t,
     commandIds: l,
-    channel: E,
-    guildId: T,
+    channel: T,
+    guildId: E,
     onClick: S
   } = e;
   (0, u.usePrivateChannelIntegrationState)({
-    channelId: E.id
+    channelId: T.id
   });
   let {
     commands: _
-  } = r.useCommandsForApplication(E, t, l), g = a.useMemo(() => null == _ ? void 0 : _.filter(e => !0 !== e.nsfw), [_]), A = a.useCallback(e => {
+  } = r.useCommandsForApplication(T, t, l), g = a.useMemo(() => null == _ ? void 0 : _.filter(e => !0 !== e.nsfw), [_]), A = a.useCallback(e => {
     null == S || S(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
       application_id: t,
       command_id: e,
-      guild_id: T,
-      ...(0, i.collectChannelAnalyticsMetadataFromId)(E.id)
+      guild_id: E,
+      ...(0, i.collectChannelAnalyticsMetadataFromId)(T.id)
     })
-  }, [t, E.id, T, S]);
+  }, [t, T.id, E, S]);
   return null == g || 0 === g.length ? null : (0, n.jsxs)(c.default, {
     children: [(0, n.jsx)(s.Heading, {
       variant: "eyebrow",
@@ -52,8 +52,8 @@ function E(e) {
           commandName: e.displayName,
           commandDescription: e.displayDescription,
           onClick: A,
-          guildId: T,
-          channelId: E.id
+          guildId: E,
+          channelId: T.id
         })
       }, e.id))
     })]

@@ -4,26 +4,26 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return f
+    return _
   }
 });
 var r, i, s = n("37983");
 n("884691");
 var a = n("77078"),
-  l = n("145131"),
-  u = n("181114"),
+  u = n("145131"),
+  l = n("181114"),
   o = n("376641"),
   c = n("782340"),
   d = n("198699");
 (r = i || (i = {}))[r.CONTINUE = 0] = "CONTINUE", r[r.UPGRADE = 1] = "UPGRADE", r[r.PURCHASE = 2] = "PURCHASE";
-let _ = e => {
+let f = e => {
   let {
     onBack: t,
     backText: n,
     primaryIcon: r,
     primaryCTA: i,
-    primaryType: _,
-    primaryText: f,
+    primaryType: f,
+    primaryText: _,
     primaryTooltip: E,
     primaryDisabled: I,
     primarySubmitting: C,
@@ -32,14 +32,14 @@ let _ = e => {
     onSecondary: T
   } = e;
   return (0, s.jsxs)(a.ModalFooter, {
-    justify: l.default.Justify.BETWEEN,
-    align: l.default.Align.CENTER,
+    justify: u.default.Justify.BETWEEN,
+    align: u.default.Align.CENTER,
     children: [(() => {
-      if (null == i || null == f) return null;
-      let e = 2 === i ? u.default : a.Button,
+      if (null == i || null == _) return null;
+      let e = 2 === i ? l.default : a.Button,
         t = {
           innerClassName: d.button,
-          type: _,
+          type: f,
           disabled: I,
           submitting: C,
           color: 0 === i ? a.Button.Colors.BRAND : a.Button.Colors.GREEN,
@@ -52,13 +52,13 @@ let _ = e => {
           ...t,
           children: [null == r ? null : (0, s.jsx)(r, {
             className: d.primaryIcon
-          }), f]
+          }), _]
         })
       }) : (0, s.jsxs)(e, {
         ...t,
         children: [null == r ? null : (0, s.jsx)(r, {
           className: d.primaryIcon
-        }), f]
+        }), _]
       })
     })(), null == A ? null : (0, s.jsx)(a.Button, {
       color: a.Button.Colors.PRIMARY,
@@ -74,5 +74,5 @@ let _ = e => {
     })]
   })
 };
-_.CTAType = i;
-var f = _
+f.CTAType = i;
+var _ = f

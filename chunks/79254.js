@@ -18,8 +18,8 @@ var s = n("37983"),
   C = n("967241"),
   p = n("351825"),
   m = n("956089"),
-  g = n("599110"),
-  E = n("659500"),
+  E = n("599110"),
+  g = n("659500"),
   S = n("254490"),
   A = n("412861"),
   _ = n("149022"),
@@ -60,12 +60,12 @@ function R(e) {
     openClips: P
   } = e;
   (0, f.useMaybeFetchPremiumLikelihood)(h.default);
-  let H = (0, u.useOmnibuttonFileUploadSubtextEnabled)("ChannelAttachMenu"),
+  let F = (0, u.useOmnibuttonFileUploadSubtextEnabled)("ChannelAttachMenu"),
     {
-      analyticsLocations: F
+      analyticsLocations: H
     } = (0, c.default)();
   a.useEffect(() => {
-    g.default.track(M.AnalyticEvents.OPEN_POPOUT, {
+    E.default.track(M.AnalyticEvents.OPEN_POPOUT, {
       type: "Send Attachment",
       channel_id: t.id,
       guild_id: t.guild_id
@@ -77,7 +77,7 @@ function R(e) {
   }
 
   function k() {
-    g.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), b("/", (0, _.toRichValue)("/"))
+    E.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), b("/", (0, _.toRichValue)("/"))
   }
 
   function w() {
@@ -110,7 +110,7 @@ function R(e) {
       },
       openInPopout: !1,
       enableSelectedTextChannelInvite: !0,
-      analyticsLocations: F
+      analyticsLocations: H
     }), (0, o.fetchShelf)({
       guildId: t.guild_id
     })
@@ -123,7 +123,7 @@ function R(e) {
       a = j.match(x);
     null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, A.promptToUpload)([(0, S.makeFile)(new Blob([e], {
       type: "text/plain"
-    }), "message.".concat(n))], t, D), E.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.CLEAR_TEXT), "" !== s && E.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.INSERT_TEXT, {
+    }), "message.".concat(n))], t, D), g.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.CLEAR_TEXT), "" !== s && g.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.INSERT_TEXT, {
       plainText: s
     })
   }
@@ -163,7 +163,7 @@ function R(e) {
           return (0, s.jsx)(i.MenuItem, {
             id: "upload-file",
             label: a,
-            subtext: H ? r : null,
+            subtext: F ? r : null,
             action: R
           }, "upload-file");
         case T.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
@@ -191,11 +191,11 @@ function R(e) {
             label: a,
             action: () => {
               var n;
-              return n = e.activity, void(g.default.track(M.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(E.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Join Invite",
                 application_id: n.application_id,
                 location: M.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), L(n, t, M.ActivityActionTypes.JOIN, F))
+              }), L(n, t, M.ActivityActionTypes.JOIN, H))
             }
           }, "play");
         case T.AttachmentTypes.INVITE_TO_LISTEN:
@@ -204,10 +204,10 @@ function R(e) {
             label: a,
             action: () => {
               var n;
-              return n = e.activity, void(g.default.track(M.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(E.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
                 location: M.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), L(n, t, M.ActivityActionTypes.LISTEN, F))
+              }), L(n, t, M.ActivityActionTypes.LISTEN, H))
             }
           }, "listen");
         case T.AttachmentTypes.INVITE_TO_WATCH:
@@ -216,10 +216,10 @@ function R(e) {
             label: a,
             action: () => {
               var n;
-              return n = e.activity, void(g.default.track(M.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(E.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
                 location: M.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), L(n, t, M.ActivityActionTypes.WATCH, F))
+              }), L(n, t, M.ActivityActionTypes.WATCH, H))
             }
           }, "watch");
         case T.AttachmentTypes.CREATE_THREAD:

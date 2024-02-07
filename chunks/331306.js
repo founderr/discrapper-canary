@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("45029"),
   E = n("599110"),
   g = n("306160"),
-  I = n("701909"),
-  S = n("687609"),
+  S = n("701909"),
+  I = n("687609"),
   _ = n("49111"),
   N = n("353927"),
   T = n("782340"),
@@ -78,7 +78,7 @@ var v = function(e) {
           }), (0, l.jsx)("div", {
             className: A.popoutText,
             children: (0, l.jsx)("strong", {
-              children: S.default.getShortHostname(t)
+              children: I.default.getShortHostname(t)
             })
           })]
         }), (0, l.jsx)("div", {
@@ -120,14 +120,14 @@ var v = function(e) {
       [_.RTCConnectionStates.DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
       [_.RTCConnectionStates.RTC_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
       [_.RTCConnectionStates.ICE_CHECKING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-        url: I.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+        url: S.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
       [_.RTCConnectionStates.DTLS_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-        url: I.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+        url: S.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
       [_.RTCConnectionStates.RTC_CONNECTED]: n,
       [_.RTCConnectionStates.NO_ROUTE]: T.default.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
-        url: I.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+        url: S.default.getArticleURL(_.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
       }),
       [_.RTCConnectionStates.RTC_DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
     } [i];
@@ -171,7 +171,7 @@ var v = function(e) {
           })]
         }), !o && !__OVERLAY__ && (0, l.jsx)(u.Anchor, {
           className: A.debugButton,
-          href: I.default.getArticleURL(_.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
+          href: S.default.getArticleURL(_.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
           children: T.default.Messages.LEARN_MORE
         })]
       })]

@@ -1,44 +1,44 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
-    return d
+    return o
   },
   getEventSchedule: function() {
-    return o
+    return r
   }
 });
-var l = t("627445"),
-  s = t.n(l),
-  i = t("446674"),
-  a = t("398604"),
-  u = t("397680"),
-  r = t("822516");
+var a = n("627445"),
+  i = n.n(a),
+  l = n("446674"),
+  u = n("398604"),
+  s = n("397680"),
+  d = n("822516");
 
-function d(e, n, t) {
-  var l;
-  let d = null !== (l = (0, i.useStateFromStores)([a.default], () => a.default.getGuildScheduledEvent(e))) && void 0 !== l ? l : t;
-  s(null != d, "Event must be defined"), n = null != n ? n : (0, r.getNextRecurrenceIdInEvent)(d);
-  let o = (0, u.default)(n, e);
-  return c(d, o, n)
+function o(e, t, n) {
+  var a;
+  let o = null !== (a = (0, l.useStateFromStores)([u.default], () => u.default.getGuildScheduledEvent(e))) && void 0 !== a ? a : n;
+  i(null != o, "Event must be defined"), t = null != t ? t : (0, d.getNextRecurrenceIdInEvent)(o);
+  let r = (0, s.default)(t, e);
+  return c(o, r, t)
 }
 
-function o(e, n) {
-  let t = (0, u.getEventException)(n, e.id);
-  return c(e, t, n)
+function r(e, t) {
+  let n = (0, s.getEventException)(t, e.id);
+  return c(e, n, t)
 }
 
-function c(e, n, t) {
-  if (null == e.recurrence_rule || null == t) return {
+function c(e, t, n) {
+  if (null == e.recurrence_rule || null == n) return {
     startTime: new Date(e.scheduled_start_time),
     endTime: null != e.scheduled_end_time ? new Date(e.scheduled_end_time) : null
   };
-  let l = (0, r.getBaseScheduleForRecurrence)(t, e),
+  let a = (0, d.getBaseScheduleForRecurrence)(n, e),
     {
-      startDate: s,
-      endDate: i
-    } = (0, r.getScheduleForRecurrenceWithException)(l, n);
+      startDate: i,
+      endDate: l
+    } = (0, d.getScheduleForRecurrenceWithException)(a, t);
   return {
-    startTime: s.toDate(),
-    endTime: null == i ? void 0 : i.toDate()
+    startTime: i.toDate(),
+    endTime: null == l ? void 0 : l.toDate()
   }
 }

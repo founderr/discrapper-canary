@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("635792"),
   E = n("252063"),
   C = n("724110"),
-  g = n("373469"),
-  S = n("42203"),
+  S = n("373469"),
+  g = n("42203"),
   _ = n("957255"),
   I = n("824563"),
   T = n("102985"),
@@ -73,9 +73,9 @@ var a = n("37983"),
         channelId: n.id
       }),
       ef = !el && !s,
-      eh = (0, u.useStateFromStores)([x.default, S.default], () => {
+      eh = (0, u.useStateFromStores)([x.default, g.default], () => {
         var e;
-        return null != es ? S.default.getChannel(null === (e = x.default.getVoiceStateForUser(es.id)) || void 0 === e ? void 0 : e.channelId) : null
+        return null != es ? g.default.getChannel(null === (e = x.default.getVoiceStateForUser(es.id)) || void 0 === e ? void 0 : e.channelId) : null
       }),
       {
         enableHangStatus: ep
@@ -87,11 +87,11 @@ var a = n("37983"),
         activity: em,
         hangStatusActivity: eE,
         customStatusActivity: eC,
-        isApplicationStreaming: eg,
-        isMobile: eS,
+        isApplicationStreaming: eS,
+        isMobile: eg,
         status: e_
-      } = (0, u.useStateFromStoresObject)([g.default, I.default, _.default], () => {
-        let e = null != g.default.getAnyStreamForUser(es.id);
+      } = (0, u.useStateFromStoresObject)([S.default, I.default, _.default], () => {
+        let e = null != S.default.getAnyStreamForUser(es.id);
         return {
           activity: I.default.findActivity(es.id, t => {
             let {
@@ -116,12 +116,12 @@ var a = n("37983"),
           status: ei ? null : I.default.getStatus(es.id)
         }
       }),
-      eI = null != em || null != eE || eg,
+      eI = null != em || null != eE || eS,
       eT = null !== (t = N.default.getNickname(null, n.id, es)) && void 0 !== t ? t : A.default.getName(es),
       ev = (0, u.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
       [ex, eN, eA, eM, eR] = (0, u.useStateFromStoresArray)([M.default], () => [M.default.getMutualFriendsCount(es.id), M.default.getMutualFriends(es.id), M.default.getMutualGuilds(es.id), M.default.isFetchingProfile(es.id), M.default.isFetchingFriends(es.id)]),
       ej = (0, G.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
-      eL = null != ej && !eg,
+      eL = null != ej && !eS,
       {
         showVoiceActivityInProfile: eO
       } = R.VoiceActivityProfileExperiment.useExperiment({
@@ -153,13 +153,13 @@ var a = n("37983"),
     }, [es]), l.useEffect(() => {
       null != er && ef && (0, O.trackProfilePanelViewed)({
         displayProfile: er,
-        isMobile: eS,
+        isMobile: eg,
         loadDurationMs: Date.now() - ea.current,
         activity: em,
         customStatusActivity: eC,
         status: e_
       })
-    }, [er, eS, em, eC, e_, ef]);
+    }, [er, eg, em, eC, e_, ef]);
     let ew = null == eA ? void 0 : eA.map(e => (0, a.jsx)(Z.default, {
         connection: e,
         user: es,

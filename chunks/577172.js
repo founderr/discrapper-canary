@@ -17,14 +17,14 @@ var n = l("37983"),
   m = l("777003"),
   p = l("782340"),
   h = l("242379"),
-  E = l("107680"),
-  T = l("379539"),
+  T = l("107680"),
+  E = l("379539"),
   S = l("714073"),
   _ = l("980923"),
   g = l("779585"),
   A = l("900143"),
   I = l("923337");
-let v = [I, E, _, S, g, T, A];
+let v = [I, T, _, S, g, E, A];
 
 function N(e) {
   let {
@@ -64,11 +64,11 @@ function C(e) {
     inClydeProfilesExperiment: i = !1
   } = e;
   if (t.isNonUserBot() && !t.isClyde() || t.isClyde() && i || !a) return null;
-  let E = a && (0, f.isNewUser)(t) && !t.bot;
+  let T = a && (0, f.isNewUser)(t) && !t.bot;
   return (0, n.jsxs)(m.default, {
     className: h.section,
     lastSection: !0,
-    children: [E && a ? (0, n.jsx)(N, {
+    children: [T && a ? (0, n.jsx)(N, {
       userId: t.id
     }) : null, a && t.isClyde() ? (0, n.jsxs)(o.Button, {
       className: h.messageClydeButton,

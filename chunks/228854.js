@@ -21,9 +21,9 @@ var a = n("65597"),
   m = n("803725"),
   E = n("49111"),
   g = n("782340"),
-  I = n("508170");
+  S = n("508170");
 
-function S(e) {
+function I(e) {
   (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
@@ -56,30 +56,30 @@ let N = e => {
         dismissibleContent: s.DismissibleContent.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
         shouldUseHorizontalButtons: !0,
         inlineArt: !0,
-        artClassName: I.clipsEducationArt,
+        artClassName: S.clipsEducationArt,
         position: "top",
         header: (0, l.jsx)("div", {
-          className: I.header,
+          className: S.header,
           children: g.default.Messages.CLIPS_ONBOARDING_CLIP_BUTTON_ACTIVITY_PANEL_COACHMARK_TITLE.format({
             keybind: t,
             keybindHook: () => (0, l.jsx)("span", {
-              className: I.keybindHintKeys,
+              className: S.keybindHintKeys,
               children: (0, l.jsx)(i.KeyCombo, {
-                className: I.keybindShortcut,
+                className: S.keybindShortcut,
                 shortcut: t
               })
             })
           })
         }),
-        headerClassName: I.clipsEducationHeader,
+        headerClassName: S.clipsEducationHeader,
         body: (0, l.jsx)(l.Fragment, {
           children: (0, l.jsx)(i.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            className: I.bodyText,
+            className: S.bodyText,
             children: g.default.Messages.CLIPS_ONBOARDING_CLIP_BUTTON_ACTIVITY_PANEL_COACHMARK_BODY.format({
               keybindHook: () => (0, l.jsx)("div", {
-                className: I.keyCombo,
+                className: S.keyCombo,
                 children: t
               }),
               keybind: t
@@ -115,7 +115,7 @@ var T = () => {
         hotkey: h.toString(null == i ? void 0 : i.shortcut, !0)
       }) : g.default.Messages.CLIPS_EDIT_SAVE_CLIP,
       onClick: _,
-      onContextMenu: S,
+      onContextMenu: I,
       icon: c.default
     })
   })

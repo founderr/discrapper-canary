@@ -28,8 +28,8 @@ var s = n("37983"),
   C = n("598489"),
   v = n("860959"),
   R = n("49111"),
-  O = n("579033"),
-  L = n("56235"),
+  L = n("579033"),
+  O = n("56235"),
   x = n("149806"),
   M = n("53452"),
   D = n("782340"),
@@ -86,7 +86,7 @@ class U extends a.PureComponent {
     let {
       guildTemplate: e
     } = this.props;
-    return (u(null != e, "guild template must not be null"), e.state === O.GuildTemplateStates.RESOLVING) ? (0, s.jsx)(g.default, {
+    return (u(null != e, "guild template must not be null"), e.state === L.GuildTemplateStates.RESOLVING) ? (0, s.jsx)(g.default, {
       className: P.authBox,
       children: (0, s.jsx)(I.default, {
         guildTemplate: e
@@ -114,9 +114,9 @@ class U extends a.PureComponent {
     if (t === R.NativeAppStates.OPEN) return this.renderAppOpened();
     if (t === R.NativeAppStates.OPENING) return this.renderSpinner(D.default.Messages.APP_OPENING);
     switch (e.state) {
-      case O.GuildTemplateStates.RESOLVING:
+      case L.GuildTemplateStates.RESOLVING:
         return this.renderSpinner(D.default.Messages.APP_OPENING);
-      case O.GuildTemplateStates.RESOLVED:
+      case L.GuildTemplateStates.RESOLVED:
         if (n || !M.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
         if (this.props.login) return (0, s.jsx)(S.default, {
           guildTemplate: e,
@@ -128,10 +128,10 @@ class U extends a.PureComponent {
           transitionTo: a,
           location: l,
           onRegister: () => {
-            (0, p.setNewUser)(L.NewUserTypes.ORGANIC_REGISTERED_GUILD_TEMPLATE), T.default.flowStart(x.FlowType.ORGANIC_GUILD_TEMPLATES, x.RegistrationSteps.NUF_STARTED)
+            (0, p.setNewUser)(O.NewUserTypes.ORGANIC_REGISTERED_GUILD_TEMPLATE), T.default.flowStart(x.FlowType.ORGANIC_GUILD_TEMPLATES, x.RegistrationSteps.NUF_STARTED)
           }
         });
-      case O.GuildTemplateStates.EXPIRED:
+      case L.GuildTemplateStates.EXPIRED:
         return this.renderInvalidGuildTemplate();
       default:
         return null

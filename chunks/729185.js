@@ -22,8 +22,8 @@ var a = n("37983"),
   m = n("673527"),
   E = n("336804"),
   C = n("952221"),
-  g = n("600123"),
-  S = n("373469"),
+  S = n("600123"),
+  g = n("373469"),
   _ = n("271938"),
   I = n("42203"),
   T = n("42887"),
@@ -54,7 +54,7 @@ function H(e) {
     focused: l,
     idle: s,
     width: i
-  } = e, o = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, D.isVideoCompact)(i);
+  } = e, o = (0, r.useStateFromStores)([g.default], () => g.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, D.isVideoCompact)(i);
   return (0, a.jsxs)(a.Fragment, {
     children: [n ? null : (0, a.jsx)(P.default, {
       participant: t
@@ -82,7 +82,7 @@ function G(e) {
     stream: Y,
     user: z,
     streamId: K
-  } = t, Z = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(Y.channelId)), X = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), J = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), q = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), Q = (null == X ? void 0 : X.ownerId) === G, $ = Q && !q && !A, ee = null != X ? (0, p.default)(X, z, z.id === G, $) : null, et = P < 195;
+  } = t, Z = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(Y.channelId)), X = (0, r.useStateFromStores)([g.default], () => g.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), J = (0, r.useStateFromStores)([g.default], () => g.default.getAllActiveStreams().length > 0), q = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), Q = (null == X ? void 0 : X.ownerId) === G, $ = Q && !q && !A, ee = null != X ? (0, p.default)(X, z, z.id === G, $) : null, et = P < 195;
   if (l.useEffect(() => {
       !J && (null == Z ? void 0 : Z.isGuildStageVoice()) && !Q && ((0, d.watchStream)(Y), u.default.updateStageStreamSize(Y.channelId, !1))
     }, []), l.useEffect(() => {
@@ -126,7 +126,7 @@ function G(e) {
       paused: f || $,
       videoSpinnerContext: Q ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,
       userId: z.id
-    }, K), null != ee ? (0, a.jsx)(g.default, {
+    }, K), null != ee ? (0, a.jsx)(S.default, {
       size: (0, R.getSizeForWidth)(P),
       ...ee
     }) : null, (0, a.jsx)(j.default, {

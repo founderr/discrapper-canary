@@ -1,59 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return M
   }
 });
-var u = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
-  d = n("272030"),
-  l = n("158534"),
-  i = n("812204"),
-  r = n("861370"),
-  s = n("47495"),
+var l = n("77078"),
+  u = n("272030"),
+  i = n("158534"),
+  d = n("812204"),
+  s = n("861370"),
+  r = n("47495"),
   o = n("715243"),
-  f = n("261675"),
-  c = n("963150"),
-  E = n("308798"),
-  S = n("47006"),
-  _ = n("878526"),
-  M = n("531674"),
-  A = n("619436"),
-  C = n("625399"),
+  c = n("261675"),
+  f = n("963150"),
+  _ = n("308798"),
+  E = n("47006"),
+  C = n("878526"),
+  p = n("531674"),
+  h = n("619436"),
+  N = n("625399"),
   I = n("731390"),
   T = n("339876"),
-  N = n("49111"),
+  O = n("49111"),
   g = n("782340"),
-  O = (0, l.default)(function(e) {
+  M = (0, i.default)(function(e) {
     let {
       channel: t,
       guild: n,
-      includeTopic: l = !1,
-      onSelect: i
-    } = e, O = (0, T.default)(t), p = (0, M.default)(t), h = (0, A.default)(t), D = (0, f.default)(t), m = (0, S.default)(t), L = (0, _.default)(t, n), v = (0, o.default)(t, n), x = (0, c.default)(t, n, N.ChannelTypes.GUILD_TEXT), V = (0, c.default)(t, n, N.ChannelTypes.GUILD_VOICE), y = (0, E.default)(t), F = (0, r.default)({
+      includeTopic: i = !1,
+      onSelect: d
+    } = e, M = (0, T.default)(t), m = (0, p.default)(t), A = (0, h.default)(t), L = (0, c.default)(t), S = (0, E.default)(t), x = (0, C.default)(t, n), v = (0, o.default)(t, n), U = (0, f.default)(t, n, O.ChannelTypes.GUILD_TEXT), y = (0, f.default)(t, n, O.ChannelTypes.GUILD_VOICE), P = (0, _.default)(t), b = (0, s.default)({
       id: t.id,
       label: g.default.Messages.COPY_ID_CHANNEL
-    }), R = (0, I.default)(t, "title_context_menu"), U = (0, s.useShouldUseNewNotificationSystem)("ChannelTitleContextMenu"), b = (0, C.default)(t);
-    return (0, u.jsxs)(a.Menu, {
+    }), G = (0, I.default)(t, "title_context_menu"), j = (0, r.useShouldUseNewNotificationSystem)("ChannelTitleContextMenu"), V = (0, N.default)(t);
+    return (0, a.jsxs)(l.Menu, {
       navId: "channel-context",
-      onClose: d.closeContextMenu,
+      onClose: u.closeContextMenu,
       "aria-label": g.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-      onSelect: i,
-      children: [(0, u.jsx)(a.MenuGroup, {
-        children: O
-      }), (0, u.jsx)(a.MenuGroup, {
-        children: p
-      }), (0, u.jsxs)(a.MenuGroup, {
-        children: [l ? D : U ? b : h, m]
-      }), (0, u.jsxs)(a.MenuGroup, {
-        children: [L, v, x, V]
-      }), (0, u.jsx)(a.MenuGroup, {
-        children: R
-      }), (0, u.jsx)(a.MenuGroup, {
-        children: y
-      }), (0, u.jsx)(a.MenuGroup, {
-        children: F
+      onSelect: d,
+      children: [(0, a.jsx)(l.MenuGroup, {
+        children: M
+      }), (0, a.jsx)(l.MenuGroup, {
+        children: m
+      }), (0, a.jsxs)(l.MenuGroup, {
+        children: [i ? L : j ? V : A, S]
+      }), (0, a.jsxs)(l.MenuGroup, {
+        children: [x, v, U, y]
+      }), (0, a.jsx)(l.MenuGroup, {
+        children: G
+      }), (0, a.jsx)(l.MenuGroup, {
+        children: P
+      }), (0, a.jsx)(l.MenuGroup, {
+        children: b
       })]
     })
-  }, [i.default.CONTEXT_MENU, i.default.CHANNEL_TITLE_MENU])
+  }, [d.default.CONTEXT_MENU, d.default.CHANNEL_TITLE_MENU])

@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("425190"),
   E = n("368121"),
   g = n("404008"),
-  I = n("268760"),
-  S = n("782340"),
+  S = n("268760"),
+  I = n("782340"),
   _ = n("326944");
 let N = {
   friction: 30,
@@ -53,7 +53,7 @@ function T(e) {
       variant: "text-xs/semibold",
       color: "text-positive",
       className: _.barText,
-      children: S.default.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
+      children: I.default.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({
         count: p.length
       })
     }), (0, l.jsx)(C.default, {
@@ -77,11 +77,11 @@ function A(e) {
   } = e, {
     bottomBar: C,
     topBar: E
-  } = (0, o.useStateFromStoresObject)([I.default], () => I.default.getUnreadStateForGuildId(n.id)), g = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), A = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()), {
+  } = (0, o.useStateFromStoresObject)([S.default], () => S.default.getUnreadStateForGuildId(n.id)), g = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), A = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()), {
     mode: L,
     mentionCount: v,
     targetChannelId: x
-  } = "bottom" === t ? C : E, R = L === I.UnreadBarMode.HIDDEN, M = (0, r.useSpring)({
+  } = "bottom" === t ? C : E, R = L === S.UnreadBarMode.HIDDEN, M = (0, r.useSpring)({
     to: {
       transform: R ? "bottom" === t ? "translateY(180%)" : "translateY(-180%)" : "translateY(0%)"
     },
@@ -99,9 +99,9 @@ function A(e) {
       className: _.containerPadding,
       style: M,
       "aria-hidden": R,
-      children: L === I.UnreadBarMode.HIDDEN ? (0, l.jsx)("div", {
+      children: L === S.UnreadBarMode.HIDDEN ? (0, l.jsx)("div", {
         className: i(_.bar, _.emptyBar)
-      }) : L === I.UnreadBarMode.UNREAD ? (0, l.jsxs)(d.Clickable, {
+      }) : L === S.UnreadBarMode.UNREAD ? (0, l.jsxs)(d.Clickable, {
         className: _.bar,
         onClick: O,
         children: ["bottom" === t ? (0, l.jsx)(p.default, {
@@ -116,20 +116,20 @@ function A(e) {
           variant: "text-xs/semibold",
           color: "interactive-normal",
           className: _.barText,
-          children: S.default.Messages.NEW_UNREADS
+          children: I.default.Messages.NEW_UNREADS
         })]
-      }) : L === I.UnreadBarMode.MENTIONS ? (0, l.jsx)(d.Clickable, {
+      }) : L === S.UnreadBarMode.MENTIONS ? (0, l.jsx)(d.Clickable, {
         className: i(_.bar, _.mentionsBar),
         onClick: O,
         children: (0, l.jsx)(d.Text, {
           variant: "text-xs/semibold",
           color: "status-danger-text",
           className: _.barText,
-          children: S.default.Messages.NEW_MENTIONS_COUNT.format({
+          children: I.default.Messages.NEW_MENTIONS_COUNT.format({
             count: v
           })
         })
-      }) : L === I.UnreadBarMode.VOICE_CHANNELS ? (0, l.jsx)(T, {
+      }) : L === S.UnreadBarMode.VOICE_CHANNELS ? (0, l.jsx)(T, {
         jumpToVoiceChannels: u,
         guildChannels: n,
         guildChannelsVersion: s

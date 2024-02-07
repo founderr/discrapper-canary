@@ -1,49 +1,49 @@
 "use strict";
 n.r(t), n.d(t, {
   getSubscriptionSKUs: function() {
-    return u
+    return o
   },
   subscriptionCanSwitchImmediately: function() {
-    return d
-  },
-  subscriptionCanDowngrade: function() {
     return c
   },
+  subscriptionCanDowngrade: function() {
+    return d
+  },
   getOrFetchSubscriptionPlan: function() {
-    return E
+    return f
   }
 }), n("222007"), n("884691");
-var s = n("627445"),
-  l = n.n(s);
+var r = n("627445"),
+  i = n.n(r);
 n("446674");
-var a = n("775433"),
-  i = n("10514"),
-  r = n("49111"),
-  o = n("646718");
+var s = n("775433"),
+  l = n("10514"),
+  u = n("49111"),
+  a = n("646718");
 
-function u(e) {
+function o(e) {
   return e.items.map(e => {
-    let t = i.default.get(e.planId);
-    return l(null != t, "Unable to fetch plan"), t
+    let t = l.default.get(e.planId);
+    return i(null != t, "Unable to fetch plan"), t
   }).map(e => e.skuId)
 }
 
-function d(e, t, n) {
-  let s = e.getCurrentSubscriptionPlanIdForGroup(n);
-  return e.type === r.SubscriptionTypes.PREMIUM && null == s || (l(null != s, "Current subscription has no plan in group"), l(!(s === o.SubscriptionPlans.PREMIUM_YEAR_TIER_1 && t === o.SubscriptionPlans.PREMIUM_MONTH_TIER_2), "Unexpected plan switch"), n.indexOf(s) < n.indexOf(t))
-}
-
 function c(e, t, n) {
-  return !d(e, t, n)
+  let r = e.getCurrentSubscriptionPlanIdForGroup(n);
+  return e.type === u.SubscriptionTypes.PREMIUM && null == r || (i(null != r, "Current subscription has no plan in group"), i(!(r === a.SubscriptionPlans.PREMIUM_YEAR_TIER_1 && t === a.SubscriptionPlans.PREMIUM_MONTH_TIER_2), "Unexpected plan switch"), n.indexOf(r) < n.indexOf(t))
 }
 
-function E(e, t) {
-  let n = i.default.get(e);
+function d(e, t, n) {
+  return !c(e, t, n)
+}
+
+function f(e, t) {
+  let n = l.default.get(e);
   if (null == n) {
-    let n = o.SubscriptionPlanInfo[e];
-    l(null != n, "Missing hardcoded subscriptionPlan: ".concat(e));
-    let s = n.skuId;
-    !i.default.isFetchingForSKU(s) && (0, a.fetchSubscriptionPlansForSKU)(s, t)
+    let n = a.SubscriptionPlanInfo[e];
+    i(null != n, "Missing hardcoded subscriptionPlan: ".concat(e));
+    let r = n.skuId;
+    !l.default.isFetchingForSKU(r) && (0, s.fetchSubscriptionPlansForSKU)(r, t)
   }
   return n
 }

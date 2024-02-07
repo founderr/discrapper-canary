@@ -24,7 +24,7 @@ l.default.initialize();
 var N = e => {
   let {
     location: t
-  } = e, n = (0, l.useStateFromStores)([E.default], () => E.default.isAuthenticated()), N = (0, l.useStateFromStores)([_.default], () => _.default.hasLoadedExperiments), m = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [g, A] = a.useState(!1), [S, C] = a.useState(h.default.Messages.AUTHORIZING), [v, R] = a.useState(!0), O = e => {
+  } = e, n = (0, l.useStateFromStores)([E.default], () => E.default.isAuthenticated()), N = (0, l.useStateFromStores)([_.default], () => _.default.hasLoadedExperiments), m = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [g, A] = a.useState(!1), [S, C] = a.useState(h.default.Messages.AUTHORIZING), [v, R] = a.useState(!0), L = e => {
     switch (e) {
       case p.AbortCodes.INVALID_FORM_BODY:
       case p.AbortCodes.DSA_RSL_REPORT_NOT_FOUND:
@@ -54,9 +54,9 @@ var N = e => {
       var t, n;
       try {
         let n = null != e ? await (0, d.submitReportSecondLook)(e) : void 0;
-        null != n ? C(h.default.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : O(null === (t = n.body) || void 0 === t ? void 0 : t.code)
+        null != n ? C(h.default.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : L(null === (t = n.body) || void 0 === t ? void 0 : t.code)
       } catch (e) {
-        O(null === (n = e.body) || void 0 === n ? void 0 : n.code)
+        L(null === (n = e.body) || void 0 === n ? void 0 : n.code)
       } finally {
         A(!1)
       }
