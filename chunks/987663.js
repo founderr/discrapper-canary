@@ -1275,7 +1275,7 @@ function e_(e, t) {
                   }), s
                 }(e);
               case p.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS:
-                if (t.targetType === p.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eS(e, e => e.map(e => e.type), e => e.map(I.actionTypeToName).join(","));
+                if (t.targetType === p.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eS(e, e => e.map(e => e.type), e => e.map(I.actionTypeToName).join(", "));
                 break;
               case p.AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE:
                 if (t.targetType === p.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eS(e, I.eventTypeToName);

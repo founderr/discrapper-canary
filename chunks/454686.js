@@ -22,16 +22,16 @@ n.r(t), n.d(t, {
     return g
   },
   validateKeywordsOrThrow: function() {
-    return S
+    return O
   },
   validateRuleBeforeSaveOrThrow: function() {
-    return p
+    return S
   },
   isBackendPersistedRule: function() {
     return N
   },
   eventTypeToName: function() {
-    return O
+    return p
   },
   actionTypeToName: function() {
     return R
@@ -78,7 +78,7 @@ function g(e, t) {
   return s > 0 && (u.name += " ".concat(s + 1)), u
 }
 
-function S(e, t) {
+function O(e, t) {
   if (e.length > t) throw Error(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_KEYWORDS.format({
     limit: t
   }));
@@ -91,13 +91,13 @@ function S(e, t) {
   })
 }
 
-function p(e) {
+function S(e) {
   if (E(e)) {
     var t, n;
     let r = null !== (t = e.triggerMetadata.keywordFilter) && void 0 !== t ? t : [],
       o = null !== (n = e.triggerMetadata.regexPatterns) && void 0 !== n ? n : [];
     if (0 === r.length && 0 === o.length) throw Error(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_NO_KEYWORDS_OR_REGEX);
-    S(r, s.MAX_KEYWORDS_PER_KEYWORD_FILTER), ! function(e) {
+    O(r, s.MAX_KEYWORDS_PER_KEYWORD_FILTER), ! function(e) {
       if (e.length > s.MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER) throw Error(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_REGEX.format({
         limit: s.MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER
       }));
@@ -118,9 +118,15 @@ function N(e) {
   return (0, r.isSnowflake)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "INVALID_SNOWFLAKE")
 }
 
-function O(e) {
-  if (e === s.AutomodEventType.MESSAGE_SEND) return d.default.Messages.GUILD_AUTOMOD_EVENT_TYPE_MESSAGE_SEND;
-  return d.default.Messages.GUILD_AUTOMOD_UNKNOWN
+function p(e) {
+  switch (e) {
+    case s.AutomodEventType.MESSAGE_SEND:
+      return d.default.Messages.GUILD_AUTOMOD_EVENT_TYPE_MESSAGE_SEND;
+    case s.AutomodEventType.GUILD_MEMBER_JOIN_OR_UPDATE:
+      return d.default.Messages.GUILD_AUTOMOD_EVENT_TYPE_GUILD_MEMBER_JOIN_OR_UPDATE;
+    default:
+      return d.default.Messages.GUILD_AUTOMOD_UNKNOWN
+  }
 }
 
 function R(e) {
@@ -129,6 +135,10 @@ function R(e) {
       return d.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
     case s.AutomodActionType.FLAG_TO_CHANNEL:
       return d.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
+    case s.AutomodActionType.USER_COMMUNICATION_DISABLED:
+      return d.default.Messages.GUILD_AUTOMOD_ACTIONS_USER_COMMUNICATION_DISABLED;
+    case s.AutomodActionType.QUARANTINE_USER:
+      return d.default.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER;
     default:
       return d.default.Messages.GUILD_AUTOMOD_UNKNOWN
   }
@@ -142,6 +152,10 @@ function M(e) {
       return d.default.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_NAME;
     case s.AutomodTriggerType.DEFAULT_KEYWORD_LIST:
       return d.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_FILTER_NAME;
+    case s.AutomodTriggerType.MENTION_SPAM:
+      return d.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_NAME;
+    case s.AutomodTriggerType.USER_PROFILE:
+      return d.default.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_NAME;
     default:
       return d.default.Messages.GUILD_AUTOMOD_UNKNOWN
   }
