@@ -4,49 +4,49 @@ n.r(t), n.d(t, {
     return _
   },
   isGuildEventInvitable: function() {
-    return p
+    return I
   },
   default: function() {
-    return m
+    return S
   }
 }), n("222007");
 var i = n("446674"),
   u = n("242757"),
-  l = n("834052"),
-  r = n("42203"),
+  r = n("834052"),
+  l = n("42203"),
   o = n("923959"),
-  c = n("305961"),
-  a = n("957255"),
-  s = n("991170"),
+  a = n("305961"),
+  s = n("957255"),
+  c = n("991170"),
   d = n("398604"),
-  f = n("745049"),
-  E = n("49111");
+  E = n("745049"),
+  f = n("49111");
 
 function _(e) {
   var t;
-  let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default];
+  let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.default];
   let {
     entityType: i,
     channelId: u
   } = "entity_type" in (t = e) ? {
     entityType: t.entity_type,
     channelId: t.channel_id
-  } : t, l = i === f.GuildScheduledEventEntityTypes.EXTERNAL;
-  if (l) return !0;
+  } : t, r = i === E.GuildScheduledEventEntityTypes.EXTERNAL;
+  if (r) return !0;
   let o = n.getChannel(u);
-  return null != o && s.default.canEveryoneRole(E.Permissions.VIEW_CHANNEL, o)
+  return null != o && c.default.canEveryoneRole(f.Permissions.VIEW_CHANNEL, o)
 }
 
-function p(e) {
-  let [t, n, i, s] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.default, r.default, c.default, l.default];
+function I(e) {
+  let [t, n, i, c] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.default, l.default, a.default, r.default];
   if ((0, d.isGuildEventEnded)(e)) return !1;
   let {
-    guild_id: E,
-    channel_id: p
-  } = e, m = e.entity_type === f.GuildScheduledEventEntityTypes.EXTERNAL, v = m ? t.getDefaultChannel(e.guild_id) : n.getChannel(p), I = i.getGuild(E), h = s.getStageInstanceByChannel(p);
-  return !!(0, u.canViewInviteModal)(a.default, I, v, h) && null != v && _(e, [n])
+    guild_id: f,
+    channel_id: I
+  } = e, S = e.entity_type === E.GuildScheduledEventEntityTypes.EXTERNAL, T = S ? t.getDefaultChannel(e.guild_id) : n.getChannel(I), N = i.getGuild(f), v = c.getStageInstanceByChannel(I);
+  return !!(0, u.canViewInviteModal)(s.default, N, T, v) && null != T && _(e, [n])
 }
 
-function m(e) {
-  return (0, i.useStateFromStores)([o.default, r.default, c.default, l.default], () => p(e, [o.default, r.default, c.default, l.default]), [e])
+function S(e) {
+  return (0, i.useStateFromStores)([o.default, l.default, a.default, r.default], () => I(e, [o.default, l.default, a.default, r.default]), [e])
 }
