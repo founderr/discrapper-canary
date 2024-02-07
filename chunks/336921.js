@@ -30,6 +30,8 @@ function l(e) {
       !e.document.hasFocus() && (0, a.focus)(e, !1)
     }), e.addEventListener("unload", function() {
       (0, a.unload)(e)
+    }), e.addEventListener("visibilitychange", function() {
+      (0, a.visibilityChange)(e)
     }), i.INTERACTION_EVENTS)) t.addEventListener(n, l, !0), t.addEventListener(n, u, !1);
   (0, r.subscribeDocumentToFullScreenChange)(t, function() {
     (0, a.fullscreenChange)(e)

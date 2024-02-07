@@ -19,13 +19,18 @@ function u(e) {
     windowSize: {
       width: 0,
       height: 0
-    }
+    },
+    visible: !1
   }) : t
 }
 class c extends l.default.Store {
   isFocused() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.getMainWindowId)();
     return u(e).focused
+  }
+  isVisible() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.getMainWindowId)();
+    return u(e).visible
   }
   getFocusedWindowId() {
     let e = null;
@@ -50,7 +55,8 @@ let d = new c(a.default, {
       width: t,
       height: n,
       isElementFullscreen: i,
-      focused: l
+      focused: l,
+      visible: a
     } = e;
     return o.set(e.windowId, {
       windowSize: {
@@ -58,7 +64,8 @@ let d = new c(a.default, {
         height: n
       },
       isElementFullscreen: i,
-      focused: l
+      focused: l,
+      visible: a
     }), !0
   },
   WINDOW_FULLSCREEN_CHANGE: function(e) {
@@ -87,6 +94,13 @@ let d = new c(a.default, {
   },
   WINDOW_UNLOAD: function(e) {
     return o.delete(e.windowId), !0
+  },
+  WINDOW_VISIBILITY_CHANGE: function(e) {
+    let t = u(e.windowId);
+    return t.visible !== e.visible && (o.set(e.windowId, {
+      ...t,
+      visible: e.visible
+    }), !0)
   }
 });
 n.el("599110").then(n.bind(n, "599110")).then(e => {

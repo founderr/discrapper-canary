@@ -12,11 +12,14 @@ n.r(t), n.d(t, {
   fullscreenChange: function() {
     return f
   },
-  init: function() {
+  visibilityChange: function() {
     return _
   },
-  unload: function() {
+  init: function() {
     return c
+  },
+  unload: function() {
+    return g
   }
 });
 var s = n("917351"),
@@ -63,6 +66,15 @@ function f(e) {
 }
 
 function _(e) {
+  let t = (0, a.getWindowId)(e);
+  i.default.dispatch({
+    type: "WINDOW_VISIBILITY_CHANGE",
+    windowId: t,
+    visible: "visible" === e.document.visibilityState
+  })
+}
+
+function c(e) {
   let t = (0, a.getWindowId)(e),
     n = e.document;
   i.default.dispatch({
@@ -71,11 +83,12 @@ function _(e) {
     isElementFullscreen: (0, r.isFullScreen)(null, n),
     focused: n.hasFocus(),
     width: e.innerWidth,
-    height: e.innerHeight
+    height: e.innerHeight,
+    visible: "visible" === n.visibilityState
   })
 }
 
-function c(e) {
+function g(e) {
   i.default.dispatch({
     type: "WINDOW_UNLOAD",
     windowId: (0, a.getWindowId)(e)

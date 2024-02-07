@@ -112,6 +112,11 @@ class N extends d.default.PersistedStore {
     let s = v[e];
     return null !== (n = null == s ? void 0 : null === (t = s.document) || void 0 === t ? void 0 : t.hasFocus()) && void 0 !== n && n
   }
+  getWindowVisible(e) {
+    var t;
+    let n = v[e];
+    return (null == n ? void 0 : null === (t = n.document) || void 0 === t ? void 0 : t.visibilityState) === "visible"
+  }
   getState() {
     return m
   }
