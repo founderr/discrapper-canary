@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return L
   }
 });
 var s = n("37983"),
@@ -13,19 +13,23 @@ var s = n("37983"),
   u = n("866227"),
   d = n.n(u),
   c = n("77078"),
-  E = n("574073"),
-  f = n("38600"),
-  _ = n("981601"),
-  T = n("315102"),
-  I = n("888400"),
-  m = n("927632"),
-  N = n("195483"),
-  p = n("49111"),
-  A = n("406291"),
-  S = n("782340"),
-  C = n("741566");
+  E = n("427953"),
+  f = n("550766"),
+  _ = n("478272"),
+  T = n("685665"),
+  I = n("574073"),
+  m = n("38600"),
+  N = n("981601"),
+  p = n("315102"),
+  A = n("888400"),
+  S = n("927632"),
+  C = n("195483"),
+  h = n("49111"),
+  g = n("406291"),
+  M = n("782340"),
+  O = n("741566");
 
-function h(e) {
+function R(e) {
   let {
     width: t = 6,
     height: n = 10,
@@ -48,25 +52,27 @@ function h(e) {
   })
 }
 
-function g(e) {
+function L(e) {
   var t;
   let n;
   let {
     message: a,
     channel: r
-  } = e, u = l.useMemo(() => (e, t) => (o(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(_.default, {
+  } = e, u = l.useMemo(() => (e, t) => (o(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(N.default, {
     ...e,
     channelId: r.id,
     guildId: r.guild_id,
     userId: t.id
-  })), [r]), g = l.useMemo(() => e => (o(null != r, "ExecutedCommand: channel cannot be null"), (0, s.jsx)(m.default, {
+  })), [r]), L = l.useMemo(() => e => (o(null != r, "ExecutedCommand: channel cannot be null"), (0, s.jsx)(S.default, {
     ...e,
     channel: r,
     messageId: a.id,
     interactionData: a.interactionData
-  })), [r, a.id, a.interactionData]), M = (0, E.useNullableUserAuthor)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, r), O = l.useMemo(() => e.compact ? (0, f.default)((0, I.dateFormat)(d(), "LT")) : null, [e.compact]), R = a.interaction;
-  if (null == R || null == M) return null;
-  let L = () => {
+  })), [r, a.id, a.interactionData]), v = (0, I.useNullableUserAuthor)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, r), P = l.useMemo(() => e.compact ? (0, m.default)((0, A.dateFormat)(d(), "LT")) : null, [e.compact]), {
+    analyticsLocations: D
+  } = (0, T.default)(), x = (0, E.useIsActivitiesInTextEnabled)(r.id, "ExecutedCommand"), y = a.interaction;
+  if (null == y || null == v) return null;
+  let U = () => {
     let t = function(e, t) {
         let n, {
           message: l,
@@ -75,25 +81,25 @@ function g(e) {
           isInteractionUserBlocked: o,
           showAvatarPopout: u,
           onClickAvatar: d,
-          onUserContextMenu: f,
-          onPopoutRequestClose: _
+          onUserContextMenu: E,
+          onPopoutRequestClose: f
         } = e;
         if (a && null == l.activityInstance || o) return (0, s.jsx)("div", {
-          className: C.replyBadge,
-          children: (0, s.jsx)(h, {
-            className: C.commandIcon
+          className: O.replyBadge,
+          children: (0, s.jsx)(R, {
+            className: O.commandIcon
           })
         });
         if (null != l.interaction) {
-          var I, m, N;
-          let e = (0, E.getUserAuthor)(l.interaction.user, r);
-          n = null !== (N = T.default.getGuildMemberAvatarURL({
-            avatar: null !== (I = e.guildMemberAvatar) && void 0 !== I ? I : void 0,
+          var _, T, m;
+          let e = (0, I.getUserAuthor)(l.interaction.user, r);
+          n = null !== (m = p.default.getGuildMemberAvatarURL({
+            avatar: null !== (_ = e.guildMemberAvatar) && void 0 !== _ ? _ : void 0,
             userId: l.interaction.user.id,
-            guildId: null !== (m = null == r ? void 0 : r.guild_id) && void 0 !== m ? m : ""
-          })) && void 0 !== N ? N : void 0
+            guildId: null !== (T = null == r ? void 0 : r.guild_id) && void 0 !== T ? T : ""
+          })) && void 0 !== m ? m : void 0
         }
-        let p = () => null != l.interaction && function(e) {
+        let N = () => null != l.interaction && function(e) {
           let {
             user: t,
             guildId: n,
@@ -109,8 +115,8 @@ function g(e) {
             onContextMenu: r,
             onMouseDown: o,
             className: i({
-              [C.executedCommandAvatar]: !0,
-              [C.clickable]: null != a
+              [O.executedCommandAvatar]: !0,
+              [O.clickable]: null != a
             })
           })
         }({
@@ -118,16 +124,16 @@ function g(e) {
           guildId: r.guild_id,
           guildAvatar: n,
           onClick: d,
-          onContextMenu: f
+          onContextMenu: E
         });
         return null != t && null != u ? (0, s.jsx)(c.Popout, {
           renderPopout: t,
           shouldShow: u,
           position: "right",
-          onRequestClose: _,
-          children: p
-        }) : p()
-      }(e, e => u(e, R.user)),
+          onRequestClose: f,
+          children: N
+        }) : N()
+      }(e, e => u(e, y.user)),
       n = function(e, t, n) {
         var l;
         let {
@@ -138,7 +144,7 @@ function g(e) {
           onUserContextMenu: u,
           onPopoutRequestClose: d
         } = e;
-        return (0, s.jsx)(N.default, {
+        return (0, s.jsx)(C.default, {
           compact: !0,
           author: t,
           message: a,
@@ -150,15 +156,44 @@ function g(e) {
           onContextMenu: u,
           onPopoutRequestClose: d
         })
-      }(e, M, e => u(e, R.user));
+      }(e, v, e => u(e, y.user));
     return (0, s.jsxs)(l.Fragment, {
       children: [t, n]
     }, "user")
   };
-  return n = (null == a ? void 0 : a.activityInstance) !== null ? S.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
-    userHook: L
-  }) : S.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
-    userHook: L,
+  if ((null == a ? void 0 : a.activityInstance) !== null) {
+    let e = () => {
+      (0, _.default)({
+        channel: r,
+        guildId: r.guild_id,
+        locationObject: {
+          page: r.isPrivate() ? h.AnalyticsPages.DM_CHANNEL : h.AnalyticsPages.GUILD_CHANNEL,
+          section: h.AnalyticsSections.CHANNEL_TEXT_AREA,
+          object: h.AnalyticsObjects.APP_COMMAND,
+          objectType: h.AnalyticsObjectTypes.ACTIVITY
+        },
+        openInPopout: !1,
+        enableSelectedTextChannelInvite: !0,
+        analyticsLocations: D
+      }), (0, f.fetchShelf)({
+        guildId: r.guild_id
+      })
+    };
+    n = x ? M.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+      userHook: U,
+      activityHook: () => (0, s.jsx)(c.Clickable, {
+        tag: "span",
+        onClick: e,
+        children: (0, s.jsx)("div", {
+          className: i(O.commandName, O.clickable),
+          children: M.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
+        })
+      })
+    }) : M.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({
+      userHook: U
+    })
+  } else n = M.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
+    userHook: U,
     commandHook: () => {
       let t = function(e, t) {
         let {
@@ -180,27 +215,28 @@ function g(e) {
               onClick: t,
               ...n
             } = e;
-            return l.type === p.MessageTypes.CHAT_INPUT_COMMAND || l.type === p.MessageTypes.INTERACTION_PREMIUM_UPSELL ? (0, s.jsx)(c.Clickable, {
+            return l.type === h.MessageTypes.CHAT_INPUT_COMMAND || l.type === h.MessageTypes.INTERACTION_PREMIUM_UPSELL ? (0, s.jsx)(c.Clickable, {
               ...n,
               tag: "span",
               onClick: a,
               children: (0, s.jsx)("div", {
-                className: i(C.commandName, C.clickable),
-                children: A.COMMAND_SENTINEL + o
+                className: i(O.commandName, O.clickable),
+                children: g.COMMAND_SENTINEL + o
               })
             }) : (0, s.jsx)("div", {
-              className: C.commandName,
+              className: O.commandName,
               children: o
             })
           }
         })
-      }(e, g);
+      }(e, L);
       return (0, s.jsx)(l.Fragment, {
         children: t
       }, "command")
     }
-  }), (0, s.jsx)("div", {
-    className: i(C.repliedMessage, C.executedCommand, O),
+  });
+  return (0, s.jsx)("div", {
+    className: i(O.repliedMessage, O.executedCommand, P),
     "aria-hidden": !e.compact,
     children: n
   })
