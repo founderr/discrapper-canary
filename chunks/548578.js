@@ -18,12 +18,9 @@ function a() {
   return {
     nonce: "",
     useGuildVersions: !1,
-    highestLastMessageId: "0",
-    readStateVersion: 0,
     userGuildSettingsVersion: -1,
     version: r,
     cacheCreationDate: null,
-    privateChannelsVersion: "0",
     apiCodeVersion: 0,
     guildIdsRequiringDeletedIdsSync: [],
     lastSelectedGuildId: null

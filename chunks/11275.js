@@ -1,34 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var s = n("605250"),
-  i = n("374363"),
-  r = n("802493");
-let a = new s.default("NonGuildVersions");
-var o = new class e {
+  i = n("802493");
+let r = new s.default("NonGuildVersions");
+var a = new class e {
   async getCommittedVersions() {
     try {
-      let e = r.default.nonGuildVersions();
+      let e = i.default.nonGuildVersions();
       if (null == e) return {};
-      let t = (await e.getMany()).map(e => [e.id, e.version]);
+      let t = (await e.getMany()).map(e => [e.id, "version" in e ? e.version : e.versionString]);
       return Object.fromEntries(null != t ? t : [])
     } catch (e) {
-      return a.warn("couldn't load guild versions", e), {}
+      return r.warn("couldn't load guild versions", e), {}
     }
   }
-  handleUserSettingsProtoChange(e) {
-    var t, n;
-    let s = null !== (n = null === (t = i.default.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
-    r.default.nonGuildVersionsTransaction(e).put({
-      id: "user_settings_version",
-      version: s
-    })
-  }
   handleClear(e) {
-    r.default.nonGuildVersionsTransaction(e).delete()
+    i.default.nonGuildVersionsTransaction(e).delete()
   }
   handleReset() {}
   constructor() {

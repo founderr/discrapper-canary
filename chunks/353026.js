@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return c
   }
 }), n("222007");
 var a = n("917351"),
@@ -10,15 +10,14 @@ var a = n("917351"),
   i = n("374363"),
   r = n("271938"),
   o = n("802493"),
-  u = n("723939"),
-  d = n("11275");
-let c = new l.default("UserSettingsProto");
-var f = new class e {
+  u = n("723939");
+let d = new l.default("UserSettingsProto");
+var c = new class e {
   async getAll(e) {
     let t = performance.now(),
       n = await o.default.userSettings(e).getMany(),
       a = performance.now();
-    c.verbose("loaded in ".concat(a - t, "ms (settings: ").concat(n.length, ")"));
+    d.verbose("loaded in ".concat(a - t, "ms (settings: ").concat(n.length, ")"));
     let s = {};
     for (let e of n) s[e.id] = e.value;
     return s
@@ -39,13 +38,18 @@ var f = new class e {
       let e = r.default.getId(),
         t = u.default.database(e);
       null == t || t.transaction(e => {
-        let t = i.default.computeState(),
-          n = o.default.userSettingsTransaction(e);
-        for (let e in t) n.put({
+        var t, n;
+        let a = i.default.computeState(),
+          s = o.default.userSettingsTransaction(e);
+        for (let e in a) s.put({
           id: Number(e),
-          value: t[e]
+          value: a[e]
         });
-        d.default.handleUserSettingsProtoChange(e)
+        let l = null !== (n = null === (t = i.default.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
+        o.default.nonGuildVersionsTransaction(e).put({
+          id: "user_settings_version",
+          version: l
+        })
       }, "handleUserSettingsProtoChange")
     }, this.throttledOnChange = s.debounce(this.handleUserSettingsProtoChange, 0)
   }

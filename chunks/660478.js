@@ -840,7 +840,8 @@ class eq extends l.default.Store {
     return eO.getIfExists(e, t)
   }
   getNotifCenterReadState(e) {
-    return eO._readStates[er.ReadStateTypes.NOTIFICATION_CENTER][e]
+    var t;
+    return null === (t = eO._readStates[er.ReadStateTypes.NOTIFICATION_CENTER]) || void 0 === t ? void 0 : t[e]
   }
   hasUnread(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : er.ReadStateTypes.CHANNEL;
@@ -951,6 +952,19 @@ class eq extends l.default.Store {
 }
 eq.displayName = "ReadStateStore";
 let eX = new eq(g.default, {
+  BACKGROUND_SYNC_CHANNEL_MESSAGES: function(e) {
+    let {
+      changesByChannelId: t
+    } = e;
+    for (let e in t) {
+      var n, s;
+      let i = t[e],
+        r = eO.getIfExists(e);
+      if (null == r) continue;
+      let a = [null === (n = i.new_messages) || void 0 === n ? void 0 : n[0]].concat(null !== (s = i.modified_messages) && void 0 !== s ? s : []).filter(U.isNotNullish);
+      for (let e of a) 1 === F.default.compare(e.id, r.lastMessageId) && (r.lastMessageId = e.id)
+    }
+  },
   CONNECTION_OPEN: function(e) {
     var t, n;
     let {
