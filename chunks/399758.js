@@ -9,19 +9,19 @@ n("884691");
 var r = n("77078"),
   o = n("272030"),
   u = n("773336"),
-  a = n("26051"),
-  l = n("782340");
+  l = n("26051"),
+  a = n("782340");
 
 function s(t) {
   let {
     href: e,
     textContent: n,
     onSelect: s
-  } = t, c = (0, a.default)(e, n);
+  } = t, c = (0, l.default)(e, n);
   return u.isPlatformEmbedded && null != c ? (0, i.jsx)(r.Menu, {
     navId: "image-context",
     onClose: o.closeContextMenu,
-    "aria-label": l.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
+    "aria-label": a.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
     onSelect: s,
     children: (0, i.jsx)(r.MenuGroup, {
       children: c

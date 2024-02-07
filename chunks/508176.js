@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("956089"),
   E = n("299039"),
   g = n("319839"),
-  S = n("708402"),
-  I = n("49111"),
+  I = n("708402"),
+  S = n("49111"),
   _ = n("724210"),
   N = n("133335"),
   T = n("782340"),
@@ -38,7 +38,7 @@ function L(e) {
     let l = E.default.extractTimestamp(n);
     return null != e && e > l
   }), D = a.useCallback(() => {
-    (0, h.transitionTo)(I.Routes.CHANNEL(t.id, v ? _.StaticChannelRoute.CUSTOMIZE_COMMUNITY : _.StaticChannelRoute.CHANNEL_BROWSER))
+    (0, h.transitionTo)(S.Routes.CHANNEL(t.id, v ? _.StaticChannelRoute.CUSTOMIZE_COMMUNITY : _.StaticChannelRoute.CHANNEL_BROWSER))
   }, [t.id, v]), b = a.useCallback(e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
@@ -54,7 +54,7 @@ function L(e) {
     color: r.default.unsafe_rawColors.BRAND_260.css,
     text: T.default.Messages.NEW,
     className: A.newChannel
-  })), (0, l.jsx)(S.default, {
+  })), (0, l.jsx)(I.default, {
     renderIcon: e => (0, l.jsx)(p.default, {
       className: e
     }),

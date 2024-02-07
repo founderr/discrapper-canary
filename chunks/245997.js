@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return w
   }
 }), n("424973"), n("222007"), n("808653");
 var i = n("446674"),
@@ -83,18 +83,18 @@ function S(e) {
   f[t] = void 0, t === _ && E(t)
 }
 
-function T(e, t) {
+function I(e, t) {
   if (h = t, null == e || null == e.getGuildId()) return !1;
   let n = e.getGuildId();
   return null != n && (f[n] = void 0, n === _ && E(n), !0)
 }
 
-function I() {
+function T() {
   E(c.FAVORITES)
 }
-class C extends i.default.Store {
+class b extends i.default.Store {
   initialize() {
-    this.waitFor(a.default, d.default, s.default, r.default, o.default), this.syncWith([o.default], I)
+    this.waitFor(a.default, d.default, s.default, r.default, o.default), this.syncWith([o.default], T)
   }
   getCategories(e) {
     return null != e ? function(e) {
@@ -103,8 +103,8 @@ class C extends i.default.Store {
     }(e) : p
   }
 }
-C.displayName = "GuildCategoryStore";
-var b = new C(l.default, {
+b.displayName = "GuildCategoryStore";
+var w = new b(l.default, {
   CHANNEL_SELECT: function(e) {
     let {
       guildId: t
@@ -158,7 +158,7 @@ var b = new C(l.default, {
     let {
       channelId: t
     } = e;
-    return null == t && null != h ? T(r.default.getChannel(h), null) : T(r.default.getChannel(t), t)
+    return null == t && null != h ? I(r.default.getChannel(h), null) : I(r.default.getChannel(t), t)
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -169,7 +169,7 @@ var b = new C(l.default, {
         channelId: n,
         sessionId: i
       } = t;
-      return s.default.getSessionId() !== i ? e : T(r.default.getChannel(n), n) || e
+      return s.default.getSessionId() !== i ? e : I(r.default.getChannel(n), n) || e
     }, !1)
   }
 })

@@ -150,11 +150,11 @@ var i = function() {
       var A = (h = s, g = C, _ = 1e6, m = 0, p = 1e6, T = 0, S = 1e6, N = 0, h.forEach(function(t) {
           I = t[0] >> e, v = t[1] >> e, E = t[2] >> e, I < _ ? _ = I : I > m && (m = I), v < p ? p = v : v > T && (T = v), E < S ? S = E : E > N && (N = E)
         }), new i(_, m, p, T, S, N, g)),
-        M = new n(function(e, t) {
+        w = new n(function(e, t) {
           return l.naturalOrder(e.count(), t.count())
         });
 
-      function w(e, n) {
+      function M(e, n) {
         for (var i, r = 1, s = 0; s < 1e3;) {
           if (!(i = e.pop()).count()) {
             e.push(i), s++;
@@ -209,11 +209,11 @@ var i = function() {
           if (e.push(u), o && (e.push(o), r++), r >= n || s++ > 1e3) return
         }
       }
-      M.push(A), w(M, .75 * a);
+      w.push(A), M(w, .75 * a);
       for (var R = new n(function(e, t) {
           return l.naturalOrder(e.count() * e.volume(), t.count() * t.volume())
-        }); M.size();) R.push(M.pop());
-      w(R, a - R.size());
+        }); w.size();) R.push(w.pop());
+      M(R, a - R.size());
       for (var y = new r; R.size();) y.push(R.pop());
       return y
     }

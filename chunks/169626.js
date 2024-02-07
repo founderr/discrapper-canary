@@ -29,20 +29,20 @@ function g(e) {
     onClose: g,
     onSlideChange: T,
     hasJoinButton: S
-  } = e, [A, C] = i.useState(n), N = (0, u.default)(A), [v, L] = i.useState(null), [w, R] = i.useState(null), [M, O] = i.useState(null), [D, U] = i.useState(!1);
+  } = e, [A, C] = i.useState(n), N = (0, u.default)(A), [v, L] = i.useState(null), [w, R] = i.useState(null), [M, O] = i.useState(null), [D, b] = i.useState(!1);
   i.useEffect(() => {
     C(n)
   }, [C, n]), i.useEffect(() => {
     A !== N && T(A)
   }, [T, A, N]);
-  let b = i.useCallback(e => {
+  let U = i.useCallback(e => {
       C(E.CreateGuildSlideTypes.CREATION_INTENT), R(e), c.default.track(I.AnalyticEvents.GUILD_TEMPLATE_SELECTED, {
         template_name: e.id,
         template_code: e.code
       })
     }, []),
     G = i.useCallback(e => {
-      U(e), C(E.CreateGuildSlideTypes.CUSTOMIZE_GUILD)
+      b(e), C(E.CreateGuildSlideTypes.CUSTOMIZE_GUILD)
     }, []),
     y = i.useCallback(() => C(E.CreateGuildSlideTypes.JOIN_GUILD), [C]),
     x = i.useCallback(() => {
@@ -78,7 +78,7 @@ function g(e) {
             children: (0, r.jsx)(_.default, {
               isNewUser: !1,
               onJoin: S ? y : void 0,
-              onChooseTemplate: b,
+              onChooseTemplate: U,
               onClose: g
             })
           }), (0, r.jsx)(o.Slide, {

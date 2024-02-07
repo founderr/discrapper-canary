@@ -21,8 +21,8 @@ var a = n("974667"),
   m = n("956089"),
   E = n("708402"),
   g = n("133335"),
-  S = n("782340"),
-  I = n("404135");
+  I = n("782340"),
+  S = n("404135");
 
 function _(e) {
   let {
@@ -34,10 +34,10 @@ function _(e) {
     rowLabel: d,
     mentionCount: c,
     guildId: h
-  } = e, C = (0, a.useListItem)("upcoming-events-".concat(h)), g = (0, f.useCanShowRecurringEventUpsell)(h), S = (0, u.useChannelListUpsellLocationTrackerRef)(h, i.DismissibleContent.RECURRING_EVENT_COACHMARK, !g);
+  } = e, C = (0, a.useListItem)("upcoming-events-".concat(h)), g = (0, f.useCanShowRecurringEventUpsell)(h), I = (0, u.useChannelListUpsellLocationTrackerRef)(h, i.DismissibleContent.RECURRING_EVENT_COACHMARK, !g);
   return (0, l.jsx)(E.default, {
     ...C,
-    ref: S,
+    ref: I,
     renderIcon: e => (0, l.jsx)(p.default, {
       className: e
     }),
@@ -47,7 +47,7 @@ function _(e) {
     onContextMenu: r,
     showUnread: n,
     badge: !o && c > 0 ? (0, l.jsx)(m.NumberBadge, {
-      className: I.numberBadge,
+      className: S.numberBadge,
       disableColor: !0,
       count: c
     }) : null
@@ -77,9 +77,9 @@ function N(e) {
     }), (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)
   }
   let E = (0, c.default)(t.id),
-    I = E.length > 0 ? S.default.Messages.GUILD_EVENTS_PLURAL.format({
+    S = E.length > 0 ? I.default.Messages.GUILD_EVENTS_PLURAL.format({
       number: E.length
-    }) : S.default.Messages.GUILD_EVENTS;
+    }) : I.default.Messages.GUILD_EVENTS;
   return (0, l.jsx)(_, {
     selected: a,
     showUnread: u && !p,
@@ -96,7 +96,7 @@ function N(e) {
       })
     },
     eventsMuted: p,
-    rowLabel: I,
+    rowLabel: S,
     mentionCount: f,
     guildId: t.id
   })

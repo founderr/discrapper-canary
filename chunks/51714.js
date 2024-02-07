@@ -96,10 +96,10 @@ function d(e) {
     n === e.id && (d = b);
     let {
       jumpSequenceId: P,
-      jumpFlash: F,
-      jumpTargetId: H
+      jumpFlash: H,
+      jumpTargetId: F
     } = f;
-    F && e.id === H && null != P && (b.flashKey = P), f.jumpTargetId === e.id && (b.jumpTarget = !0), null != m && e.id === m.startId && m.count > 1 && E.push({
+    H && e.id === F && null != P && (b.flashKey = P), f.jumpTargetId === e.id && (b.jumpTarget = !0), null != m && e.id === m.startId && m.count > 1 && E.push({
       type: u.ChannelStreamTypes.DIVIDER,
       content: m.topic,
       contentKey: m.startId,

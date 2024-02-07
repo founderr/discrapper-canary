@@ -37,8 +37,8 @@ var s = n("37983"),
   j = n("383667"),
   b = n("459776"),
   P = n("921450"),
-  F = n("366757"),
-  H = n("699473"),
+  H = n("366757"),
+  F = n("699473"),
   U = n("556118"),
   k = n("342009"),
   w = n("97810"),
@@ -46,8 +46,8 @@ var s = n("37983"),
   B = n("88243"),
   V = n("753089"),
   W = n("210062"),
-  z = n("321933"),
-  Z = n("894488"),
+  Z = n("321933"),
+  z = n("894488"),
   K = n("49111"),
   Y = n("324252"),
   q = n("782340");
@@ -62,7 +62,7 @@ let J = a.memo(function(e) {
     user: a,
     isGroupStart: l
   } = e;
-  return (0, s.jsx)(H.default, {
+  return (0, s.jsx)(F.default, {
     isGroupStart: l,
     channel: n,
     message: new M.default({
@@ -91,7 +91,7 @@ function Q(e) {
   let n, a, l, {
       channel: u,
       messages: x,
-      unreadCount: H,
+      unreadCount: F,
       showNewMessagesBar: Q,
       messageDisplayCompact: $,
       channelStream: ee,
@@ -103,7 +103,7 @@ function Q(e) {
     } = e,
     ei = L.default.getCurrentUser(),
     er = () => en.isInitialized() || x.ready,
-    eo = (0, F.useShowConvoStarterInDM)(u),
+    eo = (0, H.useShowConvoStarterInDM)(u),
     eu = x.length > 0 && (null === (t = x.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(u)),
     ed = (0, d.useChannelSummariesExperiment)(u),
     ec = (0, r.useStateFromStores)([A.default], () => A.default.shouldShowTopicsBar()),
@@ -133,7 +133,7 @@ function Q(e) {
         }) : (0, s.jsx)(w.default, {
           isUnread: l,
           isBeforeGroup: null == e.content && X(ee[t + 1]),
-          id: l ? Z.NEW_MESSAGE_BAR_ID : void 0,
+          id: l ? z.NEW_MESSAGE_BAR_ID : void 0,
           children: e.content
         }, "divider-".concat(null !== (a = null !== (n = e.contentKey) && void 0 !== n ? n : e.unreadId) && void 0 !== a ? a : t))
       }
@@ -146,7 +146,7 @@ function Q(e) {
       if (e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED || e.type === K.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER) {
         let t;
         return t = e.type === K.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? q.default.Messages.BLOCKED_MESSAGE_COUNT : q.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, s.jsx)(k.default, {
-          unreadId: Z.NEW_MESSAGE_BAR_ID,
+          unreadId: z.NEW_MESSAGE_BAR_ID,
           messages: e,
           channel: u,
           compact: $,
@@ -186,7 +186,7 @@ function Q(e) {
     }), x.hasMoreBefore && null == ea) {
     x.length > 0 && eE.unshift((0, s.jsx)("div", {
       style: {
-        height: Z.PLACEHOLDER_BUFFER,
+        height: z.PLACEHOLDER_BUFFER,
         flex: "0 0 auto"
       }
     }, "buffer"));
@@ -206,25 +206,25 @@ function Q(e) {
       ...es
     }, "has-more-after")), !el && eo && er() && eE.push((0, s.jsx)(V.default, {
       channel: u
-    })), H > 0 && Q && er()) {
+    })), F > 0 && Q && er()) {
     let e, t;
     let n = N.default.getOldestUnreadTimestamp(u.id),
       l = 0 !== n ? n : O.default.extractTimestamp(u.id),
       r = (0, R.isSameDay)(i(), i(new Date(l)));
-    if (N.default.isEstimated(u.id) ? (e = r ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), ed && (0, d.channelEligibleForSummaries)(u) && eh.includes(z.ChatOverlays.SUMMARIES)) {
+    if (N.default.isEstimated(u.id) ? (e = r ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), ed && (0, d.channelEligibleForSummaries)(u) && eh.includes(Z.ChatOverlays.SUMMARIES)) {
       let n = N.default.ackMessageId(u.id),
         i = (0, _.getUnreadTopicsCount)(u.id, N.default.getOldestUnreadMessageId(u.id));
       if ((0, f.trackWithMetadata)(K.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
           num_unread_summaries: i,
-          num_unread_messages: H,
+          num_unread_messages: F,
           last_ack_message_id: n,
           summaries_enabled_by_user: ec,
           summaries_enabled_for_channel: (0, d.canSeeChannelSummaries)(u)
         }), (0, d.canSeeChannelSummaries)(u)) {
         let n = ec ? t.format({
-          count: H
+          count: F
         }) : e.format({
-          count: H,
+          count: F,
           timestamp: l
         });
         if (ec) {
@@ -237,7 +237,7 @@ function Q(e) {
               left: "40%"
             },
             children: [t.format({
-              count: H
+              count: F
             }), (0, s.jsx)(p.default, {
               style: {
                 paddingLeft: 8,
@@ -272,7 +272,7 @@ function Q(e) {
             },
             children: i > 0 ? (0, s.jsxs)(s.Fragment, {
               children: [t.format({
-                count: H
+                count: F
               }), (0, s.jsx)(p.default, {
                 style: {
                   paddingLeft: 8,
@@ -293,15 +293,15 @@ function Q(e) {
           })
         }
       }
-    } else eh.includes(z.ChatOverlays.NEW_MESSAGES) && (a = (0, s.jsx)(G.NewMessagesBar, {
+    } else eh.includes(Z.ChatOverlays.NEW_MESSAGES) && (a = (0, s.jsx)(G.NewMessagesBar, {
       content: e.format({
-        count: H,
+        count: F,
         timestamp: l
       }),
       channelId: u.id
     }))
   }
-  if (null == a && (0, d.canSeeChannelSummaries)(u) && ec && eh.includes(z.ChatOverlays.SUMMARIES) && (a = (0, s.jsx)(G.TopicsPill, {
+  if (null == a && (0, d.canSeeChannelSummaries)(u) && ec && eh.includes(Z.ChatOverlays.SUMMARIES) && (a = (0, s.jsx)(G.TopicsPill, {
       channel: u,
       scrollManager: en
     })), x.error) l = (0, s.jsx)(G.ErrorLoadingBar, {

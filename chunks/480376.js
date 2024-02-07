@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("393027"),
   E = n("373469"),
   g = n("42203"),
-  S = n("18494"),
-  I = n("800762"),
+  I = n("18494"),
+  S = n("800762"),
   _ = n("290581"),
   N = n("15738"),
   T = n("108189"),
@@ -55,7 +55,7 @@ function b() {
       favoriteChannels: A.default.getFavoriteChannels(),
       favoriteServerMuted: A.default.favoriteServerMuted
     })),
-    P = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(M.FAVORITES)),
+    P = (0, o.useStateFromStores)([I.default], () => I.default.getChannelId(M.FAVORITES)),
     w = (0, o.useStateFromStores)([g.default], () => g.default.getChannel(P)),
     F = (0, m.default)(e => e.guildId),
     B = F === M.FAVORITES,
@@ -64,7 +64,7 @@ function b() {
       unread: H
     } = (0, v.default)(U),
     k = function(e) {
-      let t = (0, o.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
+      let t = (0, o.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
         n = null != t && null != e[t],
         l = (0, o.useStateFromStores)([E.default], () => {
           if (!n) return !1;
@@ -72,7 +72,7 @@ function b() {
           return null != t && null != e[t.channelId]
         }),
         a = (0, o.useStateFromStores)([E.default], () => E.default.getAllApplicationStreams().some(t => null != e[t.channelId])),
-        s = (0, o.useStateFromStores)([I.default], () => n && null != t && I.default.hasVideo(t), [n, t]),
+        s = (0, o.useStateFromStores)([S.default], () => n && null != t && S.default.hasVideo(t), [n, t]),
         i = (0, o.useStateFromStoresArray)([f.default], () => Object.keys(e).reduce((e, t) => (e.push(...f.default.getEmbeddedActivitiesForChannel(t)), e), [])),
         r = (0, o.useStateFromStores)([f.default], () => Array.from(f.default.getSelfEmbeddedActivities().values()).some(t => {
           let {

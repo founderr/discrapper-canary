@@ -20,12 +20,12 @@ var i = n("759843"),
         guildId: t,
         type: n,
         name: h,
-        permissionOverwrites: E = [],
-        bitrate: _,
+        permissionOverwrites: _ = [],
+        bitrate: E,
         userLimit: p,
         parentId: I,
-        skuId: S,
-        branchId: v
+        skuId: v,
+        branchId: S
       } = e;
       l.default.dispatch({
         type: "CREATE_CHANNEL_MODAL_SUBMIT"
@@ -33,11 +33,11 @@ var i = n("759843"),
       let C = {
         type: n,
         name: h,
-        permission_overwrites: E
+        permission_overwrites: _
       };
-      if (null != _ && _ !== d.BITRATE_DEFAULT && (C.bitrate = _), null != p && p > 0 && (C.user_limit = p), null != I && (C.parent_id = I), n === d.ChannelTypes.GUILD_STORE) {
-        if (null == S) throw Error("Unexpected missing SKU");
-        C.sku_id = S, C.branch_id = v
+      if (null != E && E !== d.BITRATE_DEFAULT && (C.bitrate = E), null != p && p > 0 && (C.user_limit = p), null != I && (C.parent_id = I), n === d.ChannelTypes.GUILD_STORE) {
+        if (null == v) throw Error("Unexpected missing SKU");
+        C.sku_id = v, C.branch_id = S
       }
       return u.default.post({
         url: d.Endpoints.GUILD_CHANNELS(t),
@@ -48,7 +48,7 @@ var i = n("759843"),
           properties: e => {
             var t, n;
             return (0, r.exact)({
-              is_private: E.length > 0,
+              is_private: _.length > 0,
               channel_id: null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.id,
               channel_type: null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.type
             })

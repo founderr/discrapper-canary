@@ -39,7 +39,7 @@ var s = n("37983"),
 function b(e) {
   let {
     channel: t
-  } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), P = (0, c.useStateFromStores)([_.default], () => _.default.getUser(null == b ? void 0 : b.ownerId)), F = a.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => e.id !== b.id).value() : [], [b]), H = a.useMemo(() => o(F).filter(e => {
+  } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), P = (0, c.useStateFromStores)([_.default], () => _.default.getUser(null == b ? void 0 : b.ownerId)), H = a.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => e.id !== b.id).value() : [], [b]), F = a.useMemo(() => o(H).filter(e => {
     if (null == b) return !1;
     let n = v.default.computePermissionsForRoles({
       forceRoles: {
@@ -48,7 +48,7 @@ function b(e) {
       context: t
     });
     return u.default.has(n, O.Permissions.ADMINISTRATOR) || u.default.has(n, O.Permissions.VIEW_CHANNEL)
-  }).value(), [t, b, F]), U = (0, c.useStateFromStoresArray)([_.default], () => {
+  }).value(), [t, b, H]), U = (0, c.useStateFromStoresArray)([_.default], () => {
     let e = {};
     for (let n of (null != P && (e[P.id] = P), Object.values(t.permissionOverwrites))) {
       if (n.type !== C.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
@@ -108,7 +108,7 @@ function b(e) {
     }) : null, (0, s.jsxs)("div", {
       className: j.members,
       children: [function() {
-        if (1 !== U.length || H.length > 0) return (0, s.jsx)(y.default, {
+        if (1 !== U.length || F.length > 0) return (0, s.jsx)(y.default, {
           guildId: t.guild_id,
           className: j.avatars,
           maxUsers: 5,
@@ -134,13 +134,13 @@ function b(e) {
             children: D.default.Messages.ROLE_REQUIRED_SINGLE_USER_MESSAGE
           })]
         })
-      }(), H.map((e, n) => {
+      }(), F.map((e, n) => {
         var a, l;
         let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(O.DEFAULT_ROLE_COLOR),
           o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
         return k ? (0, s.jsx)(I.default, {
           className: i(j.role, {
-            [j.last]: n === H.length - 1
+            [j.last]: n === F.length - 1
           }),
           roleName: e.name,
           roleColor: r,
@@ -151,7 +151,7 @@ function b(e) {
           }
         }, e.id) : (0, s.jsx)(N.default, {
           className: i(j.role, {
-            [j.last]: n === H.length - 1
+            [j.last]: n === F.length - 1
           }),
           roleName: e.name,
           roleColor: r,

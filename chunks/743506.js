@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return v
   }
 }), n("222007");
 var i, r, o = n("37983"),
-  a = n("884691"),
+  s = n("884691"),
   u = n("77078"),
-  s = n("851387"),
+  a = n("851387"),
   l = n("130037"),
   c = n("772280"),
   d = n("58608"),
@@ -44,46 +44,46 @@ function m() {
 }
 let g = m()[1].value;
 
-function p(e) {
+function v(e) {
   let {
     guildId: t,
     user: i,
     location: r,
     userIds: f,
-    onBanMultiple: p,
-    transitionState: v,
-    onClose: M,
-    canBulkBan: I = !1
-  } = e, [S, T] = a.useState(g), [O, N] = a.useState(""), [b, w] = a.useState(0), [R, C] = a.useState(!1), L = (0, l.useTrackModerationAction)(t, {
+    onBanMultiple: v,
+    transitionState: I,
+    onClose: p,
+    canBulkBan: M = !1
+  } = e, [S, T] = s.useState(g), [O, N] = s.useState(""), [b, w] = s.useState(0), [R, C] = s.useState(!1), L = (0, l.useTrackModerationAction)(t, {
     location: r,
     targetUserId: null == i ? void 0 : i.id,
     targets: f
-  }), x = a.useCallback(() => {
-    if (null != p) {
-      let e = null != f && (null == f ? void 0 : f.size) > 0 && I;
+  }), x = s.useCallback(() => {
+    if (null != v) {
+      let e = null != f && (null == f ? void 0 : f.size) > 0 && M;
       if (!e || R) return;
       if ("" === O.trim() && !R) {
         C(!0);
         return
       }
-      p(t, [...f], S, O)
+      v(t, [...f], S, O)
     } else {
       if (null == i) return;
-      s.default.banUser(t, null == i ? void 0 : i.id, S, O)
+      a.default.banUser(t, null == i ? void 0 : i.id, S, O)
     }
-    L(l.ModerationActionType.BAN), M()
-  }, [p, L, M, f, I, R, O, t, S, i]), D = a.useCallback(e => {
+    L(l.ModerationActionType.BAN), p()
+  }, [v, L, p, f, M, R, O, t, S, i]), D = s.useCallback(e => {
     T(e)
-  }, []), y = a.useCallback(e => {
+  }, []), y = s.useCallback(e => {
     let {
       value: t
     } = e;
     N(t), C(!1)
-  }, []), k = a.useCallback(e => {
+  }, []), k = s.useCallback(e => {
     N(e), R && C(!1)
-  }, [R]), F = a.useCallback(() => {
+  }, [R]), F = s.useCallback(() => {
     N(""), w(1)
-  }, []), U = a.useCallback(() => {
+  }, []), U = s.useCallback(() => {
     w(0)
   }, []), P = [{
     name: E.default.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT,
@@ -94,13 +94,13 @@ function p(e) {
   }, {
     name: E.default.Messages.BAN_REASON_OPTION_BREAKING_RULES,
     value: E.default.Messages.BAN_REASON_OPTION_BREAKING_RULES
-  }], B = null != p && null != f ? E.default.Messages.BAN_MULTIPLE_CONFIRM_TITLE.format({
+  }], B = null != v && null != f ? E.default.Messages.BAN_MULTIPLE_CONFIRM_TITLE.format({
     count: null == f ? void 0 : f.size
   }) : null == i ? "" : E.default.Messages.BAN_CONFIRM_TITLE.format({
     username: "@".concat(_.default.getName(t, null, i))
   });
   return (0, o.jsxs)(u.ModalRoot, {
-    transitionState: v,
+    transitionState: I,
     children: [(0, o.jsx)(u.ModalHeader, {
       separator: !1,
       children: (0, o.jsx)(u.Heading, {
@@ -184,7 +184,7 @@ function p(e) {
               type: "button",
               look: u.Button.Looks.LINK,
               color: u.Button.Colors.PRIMARY,
-              onClick: M,
+              onClick: p,
               children: E.default.Messages.CANCEL
             }), (0, o.jsx)(u.Button, {
               type: "submit",

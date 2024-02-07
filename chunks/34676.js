@@ -22,16 +22,16 @@ n.r(t), n.d(t, {
     return S
   },
   getManyCurrentGuildSettings: function() {
-    return T
-  },
-  getCurrentChannelSettings: function() {
     return I
   },
+  getCurrentChannelSettings: function() {
+    return T
+  },
   getManyCurrentChannelSettings: function() {
-    return C
+    return b
   },
   trackAccountNotificationSettingUpdated: function() {
-    return b
+    return w
   }
 }), n("702976"), n("222007");
 var i, l, u, o, s = n("716241"),
@@ -135,12 +135,12 @@ function N(e, t, n, i, l, u) {
       }
     },
     h = c(i),
-    p = c(I(e, t), n),
+    p = c(T(e, t), n),
     E = v(h, p, "RETURN_PREVIOUS_WHEN_CHANGED"),
     N = a.default.getChannel(t),
     S = null !== (o = E("channel_flags")) && void 0 !== o ? o : 0,
-    T = (null !== (d = p.channel_flags) && void 0 !== d ? d : 0) ^ S,
-    C = 0 === (0, _.removeFlags)(T, g.ChannelNotificationSettingsFlags.FAVORITED, g.ChannelNotificationSettingsFlags.OPT_IN_ENABLED);
+    I = (null !== (d = p.channel_flags) && void 0 !== d ? d : 0) ^ S,
+    b = 0 === (0, _.removeFlags)(I, g.ChannelNotificationSettingsFlags.FAVORITED, g.ChannelNotificationSettingsFlags.OPT_IN_ENABLED);
   s.default.trackWithMetadata(f.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
     ...p,
     ...r.default.getStats(e),
@@ -155,7 +155,7 @@ function N(e, t, n, i, l, u) {
     channel_muted_until_old: E("channel_muted_until"),
     channel_is_overridden_old: E("channel_is_overridden"),
     channel_message_notification_settings_old: E("channel_message_notification_settings"),
-    is_opt_in_only_change: C
+    is_opt_in_only_change: b
   })
 }
 
@@ -175,12 +175,12 @@ function S(e) {
   }
 }
 
-function T(e) {
+function I(e) {
   let t = new Map;
   return e.forEach(e => t.set(e, S(e))), t
 }
 
-function I(e, t) {
+function T(e, t) {
   let n = d.default.isChannelMuted(e, t),
     i = d.default.getChannelMuteConfig(e, t);
   return {
@@ -191,12 +191,12 @@ function I(e, t) {
   }
 }
 
-function C(e, t) {
+function b(e, t) {
   let n = new Map;
-  return t.forEach(t => n.set(t, I(e, t))), n
+  return t.forEach(t => n.set(t, T(e, t))), n
 }
 
-function b(e, t) {
+function w(e, t) {
   c.default.track(f.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
     update_type: "account",
     quiet_mode_enabled: e.quietMode,

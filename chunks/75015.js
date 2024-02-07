@@ -28,10 +28,10 @@ n.r(e), n.d(e, {
     return h
   },
   HOME_HEADER_MAX_HEIGHT: function() {
-    return p
+    return S
   },
   BANNER_ASPECT_RATIO: function() {
-    return S
+    return p
   },
   GUILD_BANNER_ASPECT_RATIO: function() {
     return T
@@ -74,12 +74,12 @@ let s = 568,
   E = 2400,
   _ = 960,
   h = 2400,
-  p = 600,
-  S = 17 / 6,
+  S = 600,
+  p = 17 / 6,
   T = 16 / 9,
   I = 2.5,
   A = 4,
-  m = s / S,
+  m = s / p,
   C = s / T,
   N = s / I,
   g = s / A,

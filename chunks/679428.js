@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return v
   }
 }), n("222007");
 var i = n("872717"),
@@ -21,17 +21,17 @@ function f() {
 }
 
 function h() {
-  !__OVERLAY__ && (clearTimeout(c), c = setTimeout(() => _({}), d))
+  !__OVERLAY__ && (clearTimeout(c), c = setTimeout(() => E({}), d))
 }
-async function E(e, t) {
+async function _(e, t) {
   null == e || e === o.ME ? await i.default.patch({
     url: o.Endpoints.USER_GUILD_SETTINGS(o.ME),
     body: t
-  }) : await _(null != t ? {
+  }) : await E(null != t ? {
     [null != e ? e : o.ME]: t
   } : {})
 }
-async function _(e) {
+async function E(e) {
   clearTimeout(c);
   let t = 0 !== Object.keys(e).length,
     n = l.default.getCollapsedCategories(),
@@ -73,7 +73,7 @@ class I extends r.default {
       CATEGORY_EXPAND_ALL: h,
       POST_CONNECTION_OPEN: f,
       USER_GUILD_SETTINGS_FULL_UPDATE: p
-    }, this.saveUserGuildSettings = E, this.saveUserGuildSettingsBulk = _
+    }, this.saveUserGuildSettings = _, this.saveUserGuildSettingsBulk = E
   }
 }
-var S = new I
+var v = new I

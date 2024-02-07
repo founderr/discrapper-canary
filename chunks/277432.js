@@ -40,10 +40,10 @@ var i = n("37983"),
       transitionState: x,
       onSave: y,
       onClose: w
-    } = e, G = (0, N.useUID)(), [b, j] = r.useState(null != D ? D.channel_id : null), [F, B] = r.useState(null != D ? D.description : ""), [V, H] = r.useState(null != D ? {
+    } = e, G = (0, N.useUID)(), [b, j] = r.useState(null != D ? D.channel_id : null), [F, V] = r.useState(null != D ? D.description : ""), [B, H] = r.useState(null != D ? {
       id: D.emoji_id,
       name: D.emoji_name
-    } : null), [k, W] = r.useState(!1), Z = (0, s.useStateFromStores)([_.default], () => (null == V ? void 0 : V.id) != null ? _.default.getUsableCustomEmojiById(V.id) : null), Y = (0, s.useStateFromStores)([h.default], () => h.default.getChannels(O)[h.GUILD_SELECTABLE_CHANNELS_KEY], [O]), z = (0, s.useStateFromStores)([R.default], () => R.default.get(O)), K = null !== (n = null == z ? void 0 : null === (t = z.welcome_channels) || void 0 === t ? void 0 : t.map(e => e.channel_id)) && void 0 !== n ? n : [], [q, X] = r.useState(!1);
+    } : null), [k, W] = r.useState(!1), Z = (0, s.useStateFromStores)([_.default], () => (null == B ? void 0 : B.id) != null ? _.default.getUsableCustomEmojiById(B.id) : null), Y = (0, s.useStateFromStores)([h.default], () => h.default.getChannels(O)[h.GUILD_SELECTABLE_CHANNELS_KEY], [O]), z = (0, s.useStateFromStores)([R.default], () => R.default.get(O)), K = null !== (n = null == z ? void 0 : null === (t = z.welcome_channels) || void 0 === t ? void 0 : t.map(e => e.channel_id)) && void 0 !== n ? n : [], [q, X] = r.useState(!1);
     r.useEffect(() => {
       !l.default.get(g.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) && setTimeout(() => X(!0), 300)
     }, []);
@@ -60,7 +60,7 @@ var i = n("37983"),
     let Q = () => {
         X(!1), w()
       },
-      $ = r.useCallback(e => B(e), []),
+      $ = r.useCallback(e => V(e), []),
       ee = e => {
         var t, n, i;
         if (null == e) {
@@ -145,7 +145,7 @@ var i = n("37983"),
                   children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PICK_EMOJI_UPSELL
                 })]
               }), (0, i.jsx)(E.default, {
-                hasSetEmoji: null != V,
+                hasSetEmoji: null != B,
                 onClick: ee,
                 children: (0, i.jsx)(o.Popout, {
                   renderPopout: e => {
@@ -185,10 +185,10 @@ var i = n("37983"),
                         active: n,
                         className: P.emojiButton,
                         tabIndex: 0,
-                        renderButtonContents: null != V && (null != V.id || null != V.name) ? () => (0, i.jsx)(a.default, {
+                        renderButtonContents: null != B && (null != B.id || null != B.name) ? () => (0, i.jsx)(a.default, {
                           className: P.emoji,
-                          emojiId: V.id,
-                          emojiName: V.name,
+                          emojiId: B.id,
+                          emojiName: B.name,
                           animated: !!(null == Z ? void 0 : Z.animated)
                         }) : null
                       })
@@ -215,8 +215,8 @@ var i = n("37983"),
                 null != b && F.length > 0 && y({
                   channel_id: b,
                   description: F,
-                  emoji_id: null == V ? void 0 : V.id,
-                  emoji_name: null == V ? void 0 : V.name
+                  emoji_id: null == B ? void 0 : B.id,
+                  emoji_name: null == B ? void 0 : B.name
                 }), Q()
               },
               disabled: null == b || 0 === F.length,

@@ -47,7 +47,7 @@ var i = n("37983"),
     } = (0, u.default)(s.default.IMAGE_CROPPING_MODAL), j = r.useRef({
       x: 0,
       y: 0
-    }), F = r.useRef(null), W = r.useRef(null), k = "image/gif" === t.type;
+    }), W = r.useRef(null), F = r.useRef(null), k = "image/gif" === t.type;
     r.useEffect(() => {
       (0, E.default)()
     }, []), r.useEffect(() => {
@@ -86,14 +86,14 @@ var i = n("37983"),
         }
       },
       z = r.useCallback((e, t, n) => {
-        j.current = (0, _.getBoundedCoordinates)(e, t, n), null != F.current && (F.current.style.transform = "translate3d(".concat(j.current.x, "px, ").concat(j.current.y, "px, 0)"))
-      }, [F]),
+        j.current = (0, _.getBoundedCoordinates)(e, t, n), null != W.current && (W.current.style.transform = "translate3d(".concat(j.current.x, "px, ").concat(j.current.y, "px, 0)"))
+      }, [W]),
       X = r.useCallback(() => {
-        if (null == F.current || U > 1) return;
+        if (null == W.current || U > 1) return;
         let {
           width: e,
           height: t
-        } = F.current.getBoundingClientRect(), {
+        } = W.current.getBoundingClientRect(), {
           width: n,
           height: i
         } = (0, _.adjustImageDimensionsForAspectRatio)(C, e, t), r = (0, _.calculateOverlaySize)(C, n, i, t);
@@ -121,26 +121,26 @@ var i = n("37983"),
       },
       Q = async () => {
         let e;
-        if (null == F.current) return;
+        if (null == W.current) return;
         b(!0);
-        let n = F.current,
+        let n = W.current,
           i = Z();
         if (k) try {
           let {
             result: r,
             cancelFn: a
           } = await (0, _.cropGIF)(t, n, S, j.current, i);
-          W.current = a, e = await r, W.current = null
+          F.current = a, e = await r, F.current = null
         } catch (e) {
           var r;
-          throw null === (r = W.current) || void 0 === r || r.call(W), W.current = null, Error("Error cropping GIF")
+          throw null === (r = F.current) || void 0 === r || r.call(F), F.current = null, Error("Error cropping GIF")
         } else e = (0, _.cropStaticImage)(n, S, j.current, i);
         await m(e, t), b(!1), N()
       };
     return r.useEffect(() => (window.addEventListener("mouseup", K), window.addEventListener("resize", X), () => {
       window.removeEventListener("mouseup", K), window.removeEventListener("resize", X)
     }), [X]), r.useEffect(() => () => {
-      null != W.current && W.current()
+      null != F.current && F.current()
     }, []), r.useEffect(() => {
       if (D) return window.addEventListener("mousemove", Y), () => window.removeEventListener("mousemove", Y)
     }, [Y, D]), (0, i.jsx)(V, {
@@ -183,7 +183,7 @@ var i = n("37983"),
               className: B ? I.imageDisabled : I.imageEnabled,
               src: n,
               alt: "avatar",
-              ref: F,
+              ref: W,
               onMouseDown: e => {
                 let t = e.clientX - j.current.x,
                   n = e.clientY - j.current.y;
@@ -252,8 +252,8 @@ var i = n("37983"),
               color: l.Button.Colors.PRIMARY,
               size: l.ButtonSizes.SMALL,
               onClick: () => {
-                if (null != W.current) {
-                  W.current(), W.current = null, b(!1);
+                if (null != F.current) {
+                  F.current(), F.current = null, b(!1);
                   return
                 }
                 N()

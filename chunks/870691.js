@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return E
   }
 }), n("222007");
 var i = n("446674"),
@@ -22,7 +22,7 @@ function h(e) {
   if (null == c[e]) return !1;
   delete c[e]
 }
-class E extends i.default.PersistedStore {
+class _ extends i.default.PersistedStore {
   initialize(e) {
     this.waitFor(a.default, s.default), this.removeChangeListener(f), this.addChangeListener(f), c = null != e ? e : {}
   }
@@ -39,8 +39,8 @@ class E extends i.default.PersistedStore {
     return d
   }
 }
-E.displayName = "CategoryCollapseStore", E.persistKey = "collapsedCategories";
-var _ = new E(r.default, {
+_.displayName = "CategoryCollapseStore", _.persistKey = "collapsedCategories";
+var E = new _(r.default, {
   CONNECTION_OPEN: function(e) {
     for (let t of (!e.userGuildSettings.partial && (c = {}), e.userGuildSettings.entries))
       if (null != t.channel_overrides)

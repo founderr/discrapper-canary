@@ -183,7 +183,7 @@ function y(e) {
         })]
       });
     case L.ChannelTypes.GUILD_DIRECTORY:
-      let F = (null == r ? void 0 : r.hasFeature(L.GuildFeatures.HUB)) ? x.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
+      let H = (null == r ? void 0 : r.hasFeature(L.GuildFeatures.HUB)) ? x.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
         guildName: n
       }) : n;
       return (0, s.jsxs)(a.Fragment, {
@@ -197,7 +197,7 @@ function y(e) {
           onClick: d,
           children: [null != T ? (0, s.jsxs)(o.HiddenVisually, {
             children: [T, ":"]
-          }) : null, " ", F]
+          }) : null, " ", H]
         })]
       });
     default:
