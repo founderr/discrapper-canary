@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return E
   },
   getRuleInfo: function() {
-    return g
+    return f
   }
 });
 var a = s("116320"),
@@ -60,8 +60,6 @@ let E = e => {
         return c.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_DESCRIPTION_TEXT;
       case u.AutomodTriggerType.MENTION_SPAM:
         return c.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_DESCRIPTION;
-      case u.AutomodTriggerType.SERVER_POLICY:
-        return c.default.Messages.GUILD_AUTOMOD_SERVER_POLICY_FILTER_DESCRIPTION;
       case u.AutomodTriggerType.USER_PROFILE:
         return c.default.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_DESCRIPTION;
       default:
@@ -71,7 +69,7 @@ let E = e => {
   N = e => {
     if (e === u.AutomodTriggerType.KEYWORD) return c.default.Messages.GUILD_AUTOMOD_LINK_FILTER_MATCHING_STRATEGY_DESCRIPTION.format()
   },
-  f = e => {
+  g = e => {
     switch (e) {
       case u.AutomodTriggerType.MENTION_SPAM:
         return a.default;
@@ -85,13 +83,13 @@ let E = e => {
     }
   };
 
-function g(e, t) {
+function f(e, t) {
   var s, a, n, i, r;
   return null != e && _(e) ? {
     headerText: null !== (s = T(e, t)) && void 0 !== s ? s : "",
     headerSubtext: null !== (a = I(e, t)) && void 0 !== a ? a : "",
     descriptionText: null !== (n = S(e)) && void 0 !== n ? n : "",
     descriptionSubtext: null !== (i = N(e)) && void 0 !== i ? i : "",
-    icon: null !== (r = f(e)) && void 0 !== r ? r : l.default
+    icon: null !== (r = g(e)) && void 0 !== r ? r : l.default
   } : null
 }

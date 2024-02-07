@@ -12,38 +12,35 @@ n.r(t), n.d(t, {
   isRuleMentionSpamFilter: function() {
     return c
   },
-  isRuleServerPolicyFilter: function() {
-    return f
-  },
   isRuleUserProfileFilter: function() {
     return I
   },
   createDefaultRule: function() {
-    return g
+    return f
   },
   validateKeywordsOrThrow: function() {
-    return O
+    return g
   },
   validateRuleBeforeSaveOrThrow: function() {
-    return S
+    return O
   },
   isBackendPersistedRule: function() {
     return N
   },
   eventTypeToName: function() {
-    return p
+    return S
   },
   actionTypeToName: function() {
     return R
   },
   triggerTypeToName: function() {
-    return M
+    return p
   }
 }), n("222007"), n("70102");
 var r = n("389153"),
   o = n("271938"),
-  i = n("369035"),
-  u = n("600798"),
+  u = n("369035"),
+  i = n("600798"),
   a = n("353575"),
   l = n("296839"),
   s = n("143460"),
@@ -53,13 +50,12 @@ let T = (e, t) => "".concat(e, "-").concat(t, "-new-rule"),
   A = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.ML_SPAM,
   _ = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.DEFAULT_KEYWORD_LIST,
   c = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.MENTION_SPAM,
-  f = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.SERVER_POLICY,
   I = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.USER_PROFILE;
 
-function g(e, t) {
+function f(e, t) {
   let n = l.triggerConfigs[t],
     r = (0, l.getDefaultTriggerMetadataForTriggerType)(t, e),
-    u = {
+    i = {
       id: T(e, t),
       name: n.getDefaultRuleName(),
       guildId: e,
@@ -68,22 +64,22 @@ function g(e, t) {
       triggerMetadata: r,
       enabled: !0,
       creatorId: o.default.getId(),
-      actions: (0, i.getRuleDefaultActionsFromConfig)(n),
+      actions: (0, u.getRuleDefaultActionsFromConfig)(n),
       position: 0,
       exemptChannels: new Set,
       exemptRoles: new Set
     };
-  if (N(u)) throw Error(d.default.Messages.GUILD_AUTOMOD_NEW_RULE_ERROR);
+  if (N(i)) throw Error(d.default.Messages.GUILD_AUTOMOD_NEW_RULE_ERROR);
   let s = (0, a.getRuleCountByTriggerType)(e, t);
-  return s > 0 && (u.name += " ".concat(s + 1)), u
+  return s > 0 && (i.name += " ".concat(s + 1)), i
 }
 
-function O(e, t) {
+function g(e, t) {
   if (e.length > t) throw Error(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_KEYWORDS.format({
     limit: t
   }));
   e.forEach(e => {
-    if (e.length > s.MAX_CHARACTERS_PER_KEYWORD || e.length < s.MIN_CHARACTERS_PER_KEYWORD) throw new u.InvalidKeywordError(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_INVALID_KEYWORD_LENGTH.format({
+    if (e.length > s.MAX_CHARACTERS_PER_KEYWORD || e.length < s.MIN_CHARACTERS_PER_KEYWORD) throw new i.InvalidKeywordError(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_INVALID_KEYWORD_LENGTH.format({
       keyword: e,
       max: s.MAX_CHARACTERS_PER_KEYWORD,
       min: s.MIN_CHARACTERS_PER_KEYWORD
@@ -91,18 +87,18 @@ function O(e, t) {
   })
 }
 
-function S(e) {
+function O(e) {
   if (E(e)) {
     var t, n;
     let r = null !== (t = e.triggerMetadata.keywordFilter) && void 0 !== t ? t : [],
       o = null !== (n = e.triggerMetadata.regexPatterns) && void 0 !== n ? n : [];
     if (0 === r.length && 0 === o.length) throw Error(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_NO_KEYWORDS_OR_REGEX);
-    O(r, s.MAX_KEYWORDS_PER_KEYWORD_FILTER), ! function(e) {
+    g(r, s.MAX_KEYWORDS_PER_KEYWORD_FILTER), ! function(e) {
       if (e.length > s.MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER) throw Error(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_REGEX.format({
         limit: s.MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER
       }));
       e.forEach(e => {
-        if (e.length > s.MAX_REGEX_PATTERN_LENGTH || e.length < s.MIN_REGEX_PATTERN_LENGTH) throw new u.InvalidRegexPatternError(d.default.Messages.GUILD_AUTOMOD_REGEX_ERROR_INVALID_REGEX_LENGTH.format({
+        if (e.length > s.MAX_REGEX_PATTERN_LENGTH || e.length < s.MIN_REGEX_PATTERN_LENGTH) throw new i.InvalidRegexPatternError(d.default.Messages.GUILD_AUTOMOD_REGEX_ERROR_INVALID_REGEX_LENGTH.format({
           regex: e,
           max: s.MAX_REGEX_PATTERN_LENGTH,
           min: s.MIN_REGEX_PATTERN_LENGTH
@@ -118,7 +114,7 @@ function N(e) {
   return (0, r.isSnowflake)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "INVALID_SNOWFLAKE")
 }
 
-function p(e) {
+function S(e) {
   switch (e) {
     case s.AutomodEventType.MESSAGE_SEND:
       return d.default.Messages.GUILD_AUTOMOD_EVENT_TYPE_MESSAGE_SEND;
@@ -144,7 +140,7 @@ function R(e) {
   }
 }
 
-function M(e) {
+function p(e) {
   switch (e) {
     case s.AutomodTriggerType.KEYWORD:
       return d.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME;
