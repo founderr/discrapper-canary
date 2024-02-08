@@ -126,7 +126,7 @@ class eq extends s.PureComponent {
   renderCopiedSuccess() {
     let {
       copiedStreak: e
-    } = this.state, t = [eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_1, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_2, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_3, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_4, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_5, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_6, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_7, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_8, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_9, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_10, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_11], n = Math.min(Math.max(0, e - 1), t.length - 1);
+    } = this.state, t = [eY.default.Messages.COPY_SUCCESS_1, eY.default.Messages.COPY_SUCCESS_2, eY.default.Messages.COPY_SUCCESS_3, eY.default.Messages.COPY_SUCCESS_4, eY.default.Messages.COPY_SUCCESS_5, eY.default.Messages.COPY_SUCCESS_6, eY.default.Messages.COPY_SUCCESS_7, eY.default.Messages.COPY_SUCCESS_8, eY.default.Messages.COPY_SUCCESS_9, eY.default.Messages.COPY_SUCCESS_10, eY.default.Messages.COPY_SUCCESS_11], n = Math.min(Math.max(0, e - 1), t.length - 1);
     return (0, a.jsx)(S.Shaker, {
       isShaking: this.isCopiedStreakGodlike,
       children: t[n]
