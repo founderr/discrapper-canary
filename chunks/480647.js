@@ -41,6 +41,18 @@ l = class extends i.default {
     } = e;
     this.setContextProperties(), t ? this.context.fillRect(n, l, i, a) : this.context.strokeRect(n, l, i, a)
   }
+  drawRoundedRect(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+      n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+    if (null == this.context) return;
+    let {
+      x: l,
+      y: i,
+      w: a,
+      h: s
+    } = e;
+    this.setContextProperties(), this.context.beginPath(), this.context.roundRect(l, i, a, s, t), n ? this.context.fill() : this.context.stroke()
+  }
   drawText(e, t, n) {
     null != this.context && (this.setContextProperties(), n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y))
   }

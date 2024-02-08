@@ -25,17 +25,17 @@ let c = (e, t, n) => {
       color: s,
       theme: r
     } = (0, u.getProfileInfo)(n, "black");
-    a.setColor(s), a.drawRect({
+    a.setColor(s), a.drawRoundedRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, !0), a.setColor("dark" === r ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), a.drawRect({
+    }, 8, !0), a.setColor("dark" === r ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), a.drawRoundedRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, !0), (null === (l = t.assets) || void 0 === l ? void 0 : l.large_image) != null ? a.drawImage(o.AssetTypes.AssetImage, {
+    }, 8, !0), (null === (l = t.assets) || void 0 === l ? void 0 : l.large_image) != null ? a.drawImage(o.AssetTypes.AssetImage, {
       x: 0,
       y: 8
     }, {
@@ -74,17 +74,17 @@ let c = (e, t, n) => {
       color: a,
       theme: s
     } = (0, u.getProfileInfo)(n, "black");
-    i.setColor(a), i.drawRect({
+    i.setColor(a), i.drawRoundedRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, !0), i.setColor("dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), i.drawRect({
+    }, 8, !0), i.setColor("dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), i.drawRoundedRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.AssetImage)) && i.drawImage(o.AssetTypes.AssetImage, {
+    }, 8, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.AssetImage)) && i.drawImage(o.AssetTypes.AssetImage, {
       x: o.padding,
       y: o.padding
     }, {
@@ -122,17 +122,17 @@ let c = (e, t, n) => {
       color: d,
       theme: c
     } = (0, u.getProfileInfo)(n, "black");
-    l.setColor(d), l.drawRect({
+    l.setColor(d), l.drawRoundedRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
-      w: 320
-    }, !0), l.setColor("dark" === c ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), l.drawRect({
+      w: o.canvasWidth
+    }, 8, !0), l.setColor("dark" === c ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), l.drawRoundedRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
-      w: 320
-    }, !0), null != s && l.drawImage(o.AssetTypes.AssetImage, {
+      w: o.canvasWidth
+    }, 8, !0), null != s && l.drawImage(o.AssetTypes.AssetImage, {
       x: o.padding,
       y: o.padding
     }, {
@@ -157,36 +157,39 @@ let c = (e, t, n) => {
   },
   m = (e, t, n) => {
     var l;
-    e.canvas.setSize({
+    let {
+      canvas: i
+    } = e;
+    i.setSize({
       w: 450,
       h: 300
     });
     let {
-      color: i,
-      theme: a
+      color: a,
+      theme: s
     } = (0, u.getProfileInfo)(n, "black");
-    e.canvas.setColor(i), e.canvas.drawRect({
+    i.setColor(a), i.drawRoundedRect({
       x: 0,
       y: 0,
-      h: 300,
-      w: 450
-    }, !0), e.canvas.setColor("dark" === a ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.canvas.drawRect({
+      h: o.canvasHeight,
+      w: o.canvasWidth
+    }, 8, !0), i.setColor("dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), i.drawRoundedRect({
       x: 0,
       y: 0,
-      h: 300,
-      w: 450
-    }, !0), (null === (l = e.canvas.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.StreamPreview)) && e.canvas.drawImage(o.AssetTypes.StreamPreview, {
+      h: o.canvasHeight,
+      w: o.canvasWidth
+    }, 8, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.StreamPreview)) && i.drawImage(o.AssetTypes.StreamPreview, {
       x: 8,
       y: 54
     }, {
       w: 240,
       h: 180
-    }), e.canvas.setColor("dark" === a ? "white" : "rgb(6, 6, 7)"), e.canvas.setFont({
+    }), i.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), i.setFont({
       size: 16
-    }), e.canvas.drawText("".concat(n.username), {
+    }), i.drawText("".concat(n.username), {
       x: 8,
       y: 22
-    }, !0), e.canvas.drawText("".concat(t.name), {
+    }, !0), i.drawText("".concat(t.name), {
       x: 8,
       y: 38
     }, !0)
