@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return I
   }
 }), n("222007");
 var l = n("37983"),
@@ -15,59 +15,66 @@ var l = n("37983"),
   c = n("233069"),
   f = n("882641"),
   p = n("945330"),
-  m = n("526409"),
-  h = n("314848"),
-  E = n("49111"),
-  S = n("782340"),
-  g = n("619187");
-let C = (0, c.createChannelRecord)({
+  m = n("964261"),
+  h = n("526409"),
+  E = n("314848"),
+  S = n("49111"),
+  g = n("782340"),
+  C = n("619187");
+let T = (0, c.createChannelRecord)({
     id: "1",
-    type: E.ChannelTypes.DM
+    type: S.ChannelTypes.DM
   }),
-  T = i.forwardRef(function(e, t) {
+  v = i.forwardRef(function(e, t) {
     let {
       user: n,
       hide: a,
       onEnter: d
-    } = e, [c, f] = i.useState(""), [m, h] = i.useState((0, o.toRichValue)(""));
+    } = e, [c, f] = i.useState(""), [h, E] = i.useState((0, o.toRichValue)(""));
     return (0, l.jsxs)("div", {
-      className: g.reply,
+      className: C.reply,
       ref: t,
       children: [(0, l.jsxs)("div", {
-        className: g.replyHeader,
+        className: C.replyHeader,
         children: [(0, l.jsxs)(s.Text, {
           variant: "text-md/bold",
           children: ["What do you want to say to ", n.globalName, "?"]
         }), (0, l.jsx)(s.Clickable, {
-          "aria-label": S.default.Messages.QUICK_REPLY_CLOSE_ARIA_LABEL,
+          "aria-label": g.default.Messages.QUICK_REPLY_CLOSE_ARIA_LABEL,
           onClick: a,
           children: (0, l.jsx)(p.default, {})
         })]
       }), (0, l.jsx)(u.default, {
-        className: g.replyInput,
+        className: C.replyInput,
         focused: !0,
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
-        maxCharacterCount: 200,
-        channel: C,
+        maxCharacterCount: m.MAX_CHAR_COUNT,
+        channel: T,
         onChange: (e, t, n) => {
-          f(t), h(n)
+          f(t), E(n)
         },
         type: r.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT,
         textValue: c,
-        richValue: m,
-        onSubmit: () => new Promise(e => {
-          d(c), e({
+        richValue: h,
+        onSubmit: e => {
+          let {
+            value: t
+          } = e;
+          return t.length > m.MAX_CHAR_COUNT ? Promise.resolve({
+            shouldClear: !1,
+            shouldRefocus: !0
+          }) : (d(t), Promise.resolve({
             shouldClear: !1,
             shouldRefocus: !1
-          }), a()
-        }),
+          }))
+        },
         disableThemedBackground: !0,
         emojiPickerCloseOnModalOuterClick: !0
       })]
     })
   });
-var v = e => {
+var I = e => {
   let {
     activity: t,
     user: n,
@@ -75,7 +82,7 @@ var v = e => {
     showReply: r = !0,
     requireConfirmation: o = !1,
     reactor: u
-  } = e, [c, p] = i.useState(!1), [E, S] = i.useState(!1), [v, I] = i.useState(!1), [_, y] = i.useState(), [A, N] = i.useState(""), x = i.useRef(null), O = i.useRef(null), R = (0, h.default)(n);
+  } = e, [c, p] = i.useState(!1), [m, S] = i.useState(!1), [g, I] = i.useState(!1), [_, y] = i.useState(), [A, N] = i.useState(""), x = i.useRef(null), O = i.useRef(null), R = (0, E.default)(n);
 
   function M(e) {
     var t, n;
@@ -90,11 +97,11 @@ var v = e => {
     }
   }, []), R) ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
-      className: g.reactions,
+      className: C.reactions,
       children: [s && (0, l.jsx)(f.default, {
         active: !1,
         tabIndex: 0,
-        className: g.reaction,
+        className: C.reaction,
         onClick: () => {
           S(!0), I(!1)
         }
@@ -104,18 +111,18 @@ var v = e => {
           marginTop: 4,
           marginLeft: 8
         },
-        className: g.reaction,
+        className: C.reaction,
         onClick: () => {
           I(!0)
         },
         children: (0, l.jsx)(a.ArrowAngleLeftUpIcon, {})
       })]
-    }), E && (0, l.jsx)("div", {
-      className: g.picker,
+    }), m && (0, l.jsx)("div", {
+      className: C.picker,
       ref: x,
       children: (0, l.jsx)(d.ReactionPicker, {
         messageId: "",
-        channel: C,
+        channel: T,
         closePopout: () => {
           S(!1)
         },
@@ -123,7 +130,7 @@ var v = e => {
           null != e && (y(e), S(!1), p(!0))
         }
       })
-    }), v && (0, l.jsx)(T, {
+    }), g && (0, l.jsx)(v, {
       ref: O,
       user: n,
       activity: t,
@@ -135,7 +142,7 @@ var v = e => {
       activity: t,
       user: n,
       onComplete: e => {
-        null != _ ? ((0, m.sendReaction)(e, _, n, o), y(void 0)) : null != A && ((0, m.sendReply)(e, A, n, o), N("")), p(!1)
+        null != _ ? ((0, h.sendReaction)(e, _, n, o), y(void 0)) : null != A && ((0, h.sendReply)(e, A, n, o), N("")), p(!1)
       }
     })]
   }) : null
