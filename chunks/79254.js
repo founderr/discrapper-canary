@@ -99,7 +99,11 @@ function R(e) {
   }
 
   function B() {
-    (0, d.default)({
+    E.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+      channel_type: t.type,
+      channel_id: t.id,
+      guild_id: t.guild_id
+    }), (0, d.default)({
       channel: t,
       guildId: t.guild_id,
       locationObject: {
