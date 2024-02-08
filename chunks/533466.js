@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return e4
+    return e2
   }
 }), n("222007"), n("424973");
 var a = n("37983"),
@@ -9,9 +9,9 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
-  o = n.n(r),
-  u = n("917351"),
-  d = n.n(u),
+  u = n.n(r),
+  o = n("917351"),
+  d = n.n(o),
   c = n("90915"),
   f = n("446674"),
   h = n("151426"),
@@ -23,104 +23,103 @@ var a = n("37983"),
   S = n("264732"),
   _ = n("738073"),
   I = n("737960"),
-  T = n("789394"),
-  v = n("734575"),
-  x = n("84339"),
-  N = n("191225"),
-  A = n("169920"),
-  M = n("420444"),
-  R = n("191145"),
-  j = n("494286"),
-  L = n("850391"),
-  O = n("992207"),
-  y = n("269936"),
-  b = n("69927"),
-  P = n("40635"),
-  D = n("10641"),
-  U = n("499520"),
-  w = n("327432"),
-  F = n("336804"),
-  k = n("928265"),
-  V = n("744568"),
-  B = n("257869"),
-  H = n("848848"),
-  G = n("93252"),
-  W = n("661455"),
-  Y = n("230035"),
-  z = n("155832"),
-  K = n("353054"),
-  Z = n("262956"),
-  X = n("723431"),
-  J = n("977983"),
-  q = n("539938"),
-  Q = n("557809"),
-  $ = n("853189"),
-  ee = n("718091"),
-  et = n("922164"),
-  en = n("391751"),
-  ea = n("148205"),
-  el = n("969103"),
-  es = n("361572"),
-  ei = n("267567"),
-  er = n("393414"),
-  eo = n("144491"),
+  T = n("734575"),
+  v = n("84339"),
+  x = n("191225"),
+  N = n("169920"),
+  A = n("420444"),
+  M = n("191145"),
+  R = n("494286"),
+  j = n("850391"),
+  L = n("992207"),
+  O = n("269936"),
+  y = n("69927"),
+  b = n("40635"),
+  P = n("10641"),
+  D = n("499520"),
+  U = n("327432"),
+  w = n("336804"),
+  F = n("928265"),
+  k = n("744568"),
+  V = n("257869"),
+  B = n("848848"),
+  H = n("93252"),
+  G = n("661455"),
+  W = n("230035"),
+  Y = n("155832"),
+  z = n("353054"),
+  K = n("262956"),
+  Z = n("723431"),
+  X = n("977983"),
+  J = n("539938"),
+  q = n("557809"),
+  Q = n("853189"),
+  $ = n("718091"),
+  ee = n("922164"),
+  et = n("391751"),
+  en = n("148205"),
+  ea = n("969103"),
+  el = n("361572"),
+  es = n("267567"),
+  ei = n("393414"),
+  er = n("144491"),
   eu = n("200745"),
-  ed = n("56778"),
-  ec = n("208021"),
-  ef = n("582713"),
-  eh = n("716214"),
-  ep = n("58343"),
-  em = n("445375"),
-  eE = n("38861"),
-  eC = n("31673"),
-  eg = n("338273"),
-  eS = n("861570"),
-  e_ = n("970366"),
-  eI = n("401642"),
-  eT = n("514917"),
-  ev = n("223170"),
-  ex = n("59811"),
-  eN = n("824135"),
-  eA = n("982108"),
-  eM = n("42203"),
-  eR = n("474643"),
-  ej = n("341542"),
-  eL = n("247013"),
-  eO = n("305961"),
-  ey = n("824563"),
-  eb = n("744983"),
-  eP = n("18494"),
-  eD = n("162771"),
-  eU = n("697218"),
-  ew = n("800762"),
-  eF = n("980423"),
-  ek = n("439932"),
-  eV = n("679653"),
-  eB = n("176347"),
-  eH = n("665182"),
-  eG = n("61918"),
-  eW = n("656612"),
-  eY = n("624027"),
-  ez = n("49111"),
-  eK = n("272505"),
-  eZ = n("99795"),
-  eX = n("994428"),
-  eJ = n("237542"),
-  eq = n("837979"),
-  eQ = n("782340"),
-  e$ = n("305794");
-let e0 = (0, y.makeLazy)({
+  eo = n("56778"),
+  ed = n("208021"),
+  ec = n("582713"),
+  ef = n("716214"),
+  eh = n("58343"),
+  ep = n("445375"),
+  em = n("38861"),
+  eE = n("31673"),
+  eC = n("338273"),
+  eg = n("861570"),
+  eS = n("970366"),
+  e_ = n("401642"),
+  eI = n("514917"),
+  eT = n("223170"),
+  ev = n("59811"),
+  ex = n("824135"),
+  eN = n("982108"),
+  eA = n("42203"),
+  eM = n("474643"),
+  eR = n("341542"),
+  ej = n("247013"),
+  eL = n("305961"),
+  eO = n("824563"),
+  ey = n("744983"),
+  eb = n("18494"),
+  eP = n("162771"),
+  eD = n("697218"),
+  eU = n("800762"),
+  ew = n("980423"),
+  eF = n("439932"),
+  ek = n("679653"),
+  eV = n("176347"),
+  eB = n("665182"),
+  eH = n("61918"),
+  eG = n("656612"),
+  eW = n("624027"),
+  eY = n("49111"),
+  ez = n("272505"),
+  eK = n("99795"),
+  eZ = n("994428"),
+  eX = n("237542"),
+  eJ = n("837979"),
+  eq = n("782340"),
+  eQ = n("305794");
+let e$ = (0, O.makeLazy)({
   createPromise: () => n.el("479273").then(n.bind(n, "479273")),
   webpackId: "479273",
   renderLoader: () => (0, a.jsx)("div", {
-    className: e$.loader,
+    className: eQ.loader,
     children: (0, a.jsx)(m.Spinner, {})
   }),
   name: "ForumChannel"
 });
-class e1 extends l.PureComponent {
+class e0 extends l.PureComponent {
   componentDidMount() {
-    (0, e_.trackAppUIViewed)("guild_channel")
+    (0, eS.trackAppUIViewed)("guild_channel")
   }
   componentDidUpdate(e) {
     null != this.props.channel && null != e.channel && this.props.channel.id !== e.channel.id && this.state.topicExpanded && this.setState({
@@ -131,7 +130,7 @@ class e1 extends l.PureComponent {
     let {
       guild: l
     } = this.props;
-    o(null != t, "Missing channel in Channel.openChannelContextMenu"), o(null != l, "Missing guild in Channel.openChannelContextMenu"), (0, E.openContextMenuLazy)(e, async () => {
+    u(null != t, "Missing channel in Channel.openChannelContextMenu"), u(null != l, "Missing guild in Channel.openChannelContextMenu"), (0, E.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("229233").then(n.bind(n, "229233"));
@@ -143,7 +142,7 @@ class e1 extends l.PureComponent {
     })
   }
   openThreadContextMenu(e, t) {
-    o(null != t, "Missing channel in Channel.openChannelContextMenu"), (0, E.openContextMenuLazy)(e, async () => {
+    u(null != t, "Missing channel in Channel.openChannelContextMenu"), (0, E.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("994827").then(n.bind(n, "994827"));
@@ -154,9 +153,9 @@ class e1 extends l.PureComponent {
     })
   }
   openDMContextMenu(e, t) {
-    o(null != t, "Missing channel in Channel.openDMContextMenu");
-    let l = eU.default.getUser(t.getRecipientId());
-    o(null != l, "Missing user in Channel.openDMContextMenu"), (0, E.openContextMenuLazy)(e, async () => {
+    u(null != t, "Missing channel in Channel.openDMContextMenu");
+    let l = eD.default.getUser(t.getRecipientId());
+    u(null != l, "Missing user in Channel.openDMContextMenu"), (0, E.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("130074").then(n.bind(n, "130074"));
@@ -175,19 +174,19 @@ class e1 extends l.PureComponent {
       nsfwAllowed: n,
       nsfwAgree: l
     } = this.props;
-    if (o(null != e, "Missing channel in Channel.renderCall"), (null == e ? void 0 : e.isNSFW()) && (!n || !l) || !t) return null;
+    if (u(null != e, "Missing channel in Channel.renderCall"), (null == e ? void 0 : e.isNSFW()) && (!n || !l) || !t) return null;
     switch (e.type) {
-      case ez.ChannelTypes.GUILD_STAGE_VOICE:
-        return (0, a.jsx)(ep.default, {
+      case eY.ChannelTypes.GUILD_STAGE_VOICE:
+        return (0, a.jsx)(eh.default, {
           channel: e
         }, e.id);
-      case ez.ChannelTypes.GUILD_VOICE:
-      case ez.ChannelTypes.DM:
-      case ez.ChannelTypes.GROUP_DM:
-      case ez.ChannelTypes.PUBLIC_THREAD:
-      case ez.ChannelTypes.PRIVATE_THREAD:
+      case eY.ChannelTypes.GUILD_VOICE:
+      case eY.ChannelTypes.DM:
+      case eY.ChannelTypes.GROUP_DM:
+      case eY.ChannelTypes.PUBLIC_THREAD:
+      case eY.ChannelTypes.PRIVATE_THREAD:
         let s = this.props.height - 200;
-        return (0, a.jsx)(j.default, {
+        return (0, a.jsx)(R.default, {
           channel: e,
           renderExternalHeader: this.renderHeaderBar,
           maxHeight: s
@@ -198,7 +197,7 @@ class e1 extends l.PureComponent {
   }
   renderEmbeddedActivityPanel() {
     let e = this.props.height - 200;
-    return (0, a.jsx)(A.default, {
+    return (0, a.jsx)(N.default, {
       maxHeight: e,
       renderExternalHeader: this.renderHeaderBar
     })
@@ -211,11 +210,11 @@ class e1 extends l.PureComponent {
       nsfwAllowed: l,
       needSubscriptionToAccess: s
     } = this.props;
-    if (o(null != e, "Missing channel in Channel.renderChat"), s) return (o(null != n, "premium channels must exist within a guild"), null == e ? void 0 : e.isRoleSubscriptionTemplatePreviewChannel()) ? (0, a.jsx)(G.default, {
+    if (u(null != e, "Missing channel in Channel.renderChat"), s) return (u(null != n, "premium channels must exist within a guild"), null == e ? void 0 : e.isRoleSubscriptionTemplatePreviewChannel()) ? (0, a.jsx)(H.default, {
       guildId: n.id
-    }) : (0, a.jsx)(B.GroupListingsFetchContextProvider, {
+    }) : (0, a.jsx)(V.GroupListingsFetchContextProvider, {
       guildId: n.id,
-      children: (0, a.jsx)(W.default, {
+      children: (0, a.jsx)(G.default, {
         channelId: e.id,
         guildId: n.id
       })
@@ -224,26 +223,26 @@ class e1 extends l.PureComponent {
       guild: n
     });
     if (e.isGuildVocal()) return null;
-    if (e.isDirectory()) return o(null != n, "directory channels must exist within a guild"), (0, a.jsx)(P.default, {
+    if (e.isDirectory()) return u(null != n, "directory channels must exist within a guild"), (0, a.jsx)(b.default, {
       channel: e,
       guild: n
     });
     if (e.isForumLikeChannel()) {
-      o(null != n, "forum channels must exist within a guild");
+      u(null != n, "forum channels must exist within a guild");
       let t = {
         isThreadSidebarFloating: this.state.isThreadSidebarFloating,
         threadSidebarWidth: this.state.threadSidebarWidth
       };
-      return (0, a.jsx)(e0, {
+      return (0, a.jsx)(e$, {
         channel: e,
         guild: n,
         sidebarState: t
       }, e.id)
     }
-    return (0, a.jsx)(eB.default, {
+    return (0, a.jsx)(eV.default, {
       channel: e,
       guild: n,
-      chatInputType: L.ChatInputTypes.NORMAL
+      chatInputType: j.ChatInputTypes.NORMAL
     }, null != n ? n.id : "home")
   }
   renderSidebar() {
@@ -256,38 +255,38 @@ class e1 extends l.PureComponent {
       section: i,
       showCall: r
     } = this.props;
-    if (o(null != t, "Missing channel in Channel.renderSidebar"), __OVERLAY__ || s);
-    else if (i === ez.ChannelSections.PROFILE && t.isPrivate()) return (0, a.jsx)(eT.default, {
+    if (u(null != t, "Missing channel in Channel.renderSidebar"), __OVERLAY__ || s);
+    else if (i === eY.ChannelSections.PROFILE && t.isPrivate()) return (0, a.jsx)(eI.default, {
       channel: t,
       showCall: r
     }, "private-channel-profile-".concat(t.id));
-    else if (i === ez.ChannelSections.MEMBERS) switch (t.type) {
-      case ez.ChannelTypes.GROUP_DM:
+    else if (i === eY.ChannelSections.MEMBERS) switch (t.type) {
+      case eY.ChannelTypes.GROUP_DM:
         return (0, a.jsx)(C.default, {
           channel: t
         }, "private-channel-recipients-".concat(t.id));
-      case ez.ChannelTypes.GUILD_DIRECTORY:
-      case ez.ChannelTypes.GUILD_FORUM:
-      case ez.ChannelTypes.GUILD_MEDIA:
-      case ez.ChannelTypes.GUILD_ANNOUNCEMENT:
-      case ez.ChannelTypes.GUILD_TEXT:
-        var u;
-        let d = !0 === ez.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? t.id : null !== (u = t.guild_id) && void 0 !== u ? u : t.id;
-        return (0, a.jsx)(eG.default, {
+      case eY.ChannelTypes.GUILD_DIRECTORY:
+      case eY.ChannelTypes.GUILD_FORUM:
+      case eY.ChannelTypes.GUILD_MEDIA:
+      case eY.ChannelTypes.GUILD_ANNOUNCEMENT:
+      case eY.ChannelTypes.GUILD_TEXT:
+        var o;
+        let d = !0 === eY.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? t.id : null !== (o = t.guild_id) && void 0 !== o ? o : t.id;
+        return (0, a.jsx)(eH.default, {
           channel: t
         }, "channel-members-".concat(d));
-      case ez.ChannelTypes.ANNOUNCEMENT_THREAD:
-        if (null != n) return (0, a.jsx)(eG.default, {
+      case eY.ChannelTypes.ANNOUNCEMENT_THREAD:
+        if (null != n) return (0, a.jsx)(eH.default, {
           channel: n
         }, "channel-members-".concat(n.id));
         break;
-      case ez.ChannelTypes.PUBLIC_THREAD:
-      case ez.ChannelTypes.PRIVATE_THREAD:
+      case eY.ChannelTypes.PUBLIC_THREAD:
+      case eY.ChannelTypes.PRIVATE_THREAD:
         if (!t.isArchivedThread() && null != l) return (0, a.jsx)(g.default, {
           channel: t,
           guild: l
         }, "channel-members-".concat(t.id))
-    } else if (i === ez.ChannelSections.SEARCH && null != e) return (0, a.jsx)(ed.default, {
+    } else if (i === eY.ChannelSections.SEARCH && null != e) return (0, a.jsx)(eo.default, {
       searchId: e
     });
     return null
@@ -300,9 +299,9 @@ class e1 extends l.PureComponent {
       showWelcomeModal: s,
       isLurking: i,
       isUnavailable: r,
-      showRealNameModal: o
+      showRealNameModal: u
     } = this.props;
-    return null == e || null == t || r || l ? null : (o && (0, m.openModalLazy)(async () => {
+    return null == e || null == t || r || l ? null : (u && (0, m.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("278999").then(n.bind(n, "278999"));
@@ -311,7 +310,7 @@ class e1 extends l.PureComponent {
         guildId: t
       })
     }, {
-      onCloseCallback: () => k.default.viewPrompt(eJ.GuildPrompts.REAL_NAME_PROMPT, t),
+      onCloseCallback: () => F.default.viewPrompt(eX.GuildPrompts.REAL_NAME_PROMPT, t),
       modalKey: "Guild Hub Real Name Modal"
     }), s && (0, m.openModalLazy)(async () => {
       let {
@@ -322,7 +321,7 @@ class e1 extends l.PureComponent {
         guildId: t
       })
     }, {
-      onCloseCallback: () => (0, ev.welcomeScreenViewed)(t, i),
+      onCloseCallback: () => (0, eT.welcomeScreenViewed)(t, i),
       modalKey: "Guild Welcome Screen Modal"
     }), null)
   }
@@ -335,55 +334,55 @@ class e1 extends l.PureComponent {
       guildSidebarState: s,
       nsfwAgree: i,
       nsfwAllowed: r,
-      width: o
+      width: u
     } = this.props;
     if (null == s && null == l) return null;
-    if (n === ez.ChannelSections.SIDEBAR_CHAT && null != l) {
+    if (n === eY.ChannelSections.SIDEBAR_CHAT && null != l) {
       if ((null == t ? void 0 : t.isNSFW()) && (!r || !i)) return null;
       switch (l.type) {
-        case ef.SidebarType.CREATE_THREAD:
+        case ec.SidebarType.CREATE_THREAD:
           if (null == t ? void 0 : t.isForumLikeChannel()) return null;
-          e = (0, a.jsx)(em.default, {
+          e = (0, a.jsx)(ep.default, {
             parentChannelId: l.parentChannelId,
             parentMessageId: l.parentMessageId,
             location: l.location
           });
           break;
-        case ef.SidebarType.VIEW_THREAD:
-          let n = (null == t ? void 0 : t.isForumLikeChannel()) ? w.default : eS.default;
+        case ec.SidebarType.VIEW_THREAD:
+          let n = (null == t ? void 0 : t.isForumLikeChannel()) ? U.default : eg.default;
           e = (0, a.jsx)(n, {
             channelId: l.channelId
           });
           break;
-        case ef.SidebarType.VIEW_CHANNEL:
-        case ef.SidebarType.VIEW_MESSAGE_REQUEST:
+        case ec.SidebarType.VIEW_CHANNEL:
+        case ec.SidebarType.VIEW_MESSAGE_REQUEST:
         default:
           return null
       }
     }
     if (null != s && null == e) {
-      if (s.type === ef.GuildSidebarType.GUILD_MEMBER_MOD_VIEW) {
+      if (s.type === ec.GuildSidebarType.GUILD_MEMBER_MOD_VIEW) {
         let {
           guildId: e,
           userId: t
         } = s.details;
         return (0, a.jsx)("div", {
           style: {
-            width: ez.DEFAULT_CHAT_SIDEBAR_WIDTH
+            width: eY.DEFAULT_CHAT_SIDEBAR_WIDTH
           },
-          children: (0, a.jsx)(V.default, {
+          children: (0, a.jsx)(k.default, {
             guildId: e,
             userId: t,
-            onClose: () => ec.default.closeGuildSidebar(e)
+            onClose: () => ed.default.closeGuildSidebar(e)
           })
         })
       } else return null
     }
     if (null == e) return null;
-    let u = (null == t ? void 0 : t.type) != null && ez.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? 528 : 450,
-      d = o - ez.CHANNEL_SIDEBAR_WIDTH - u;
-    return (0, a.jsx)(eH.default, {
-      sidebarType: (null == t ? void 0 : t.type) != null && ez.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? eH.ChatSidebarType.PostSidebar : eH.ChatSidebarType.ThreadSidebar,
+    let o = (null == t ? void 0 : t.type) != null && eY.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? 528 : 450,
+      d = u - eY.CHANNEL_SIDEBAR_WIDTH - o;
+    return (0, a.jsx)(eB.default, {
+      sidebarType: (null == t ? void 0 : t.type) != null && eY.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? eB.ChatSidebarType.PostSidebar : eB.ChatSidebarType.ThreadSidebar,
       maxWidth: d,
       onWidthChange: this.handleThreadSidebarResize,
       children: e
@@ -397,44 +396,44 @@ class e1 extends l.PureComponent {
       showCall: l,
       isUnavailable: s,
       layout: r,
-      section: o,
-      hasModalOpen: u,
+      section: u,
+      hasModalOpen: o,
       guildSidebarState: d
     } = this.props, {
       threadSidebarWidth: c,
       isThreadSidebarFloating: f
     } = this.state;
-    if (s) return (0, a.jsx)(eW.default, {});
-    if (null == e) return (0, a.jsx)(eY.default, {
+    if (s) return (0, a.jsx)(eG.default, {});
+    if (null == e) return (0, a.jsx)(eW.default, {
       channelId: this.props.channelId
     });
-    let h = o === ez.ChannelSections.SIDEBAR_CHAT,
+    let h = u === eY.ChannelSections.SIDEBAR_CHAT,
       p = null != d && !h,
-      m = !e.isForumLikeChannel() && !u,
+      m = !e.isForumLikeChannel() && !o,
       E = null == t ? void 0 : t.name;
     return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(b.AppPageTitle, {
+      children: [(0, a.jsx)(y.AppPageTitle, {
         location: E,
         subsection: null != n ? n : void 0
       }), (0, a.jsxs)("div", {
-        className: i(e$.chat, {
-          [e$.threadSidebarOpen]: h || p,
-          [e$.threadSidebarFloating]: h && f
+        className: i(eQ.chat, {
+          [eQ.threadSidebarOpen]: h || p,
+          [eQ.threadSidebarFloating]: h && f
         }),
         children: [m ? (0, a.jsx)(S.default, {
           style: {
             right: h ? c : void 0
           },
-          className: e$.uploadArea,
+          className: eQ.uploadArea,
           channel: e,
-          draftType: eR.DraftType.ChannelMessage
+          draftType: eM.DraftType.ChannelMessage
         }) : null, l ? null : this.renderHeaderBar(), this.renderCall(), this.renderEmbeddedActivityPanel(), (0, a.jsxs)("div", {
-          className: i(e$.content, {
-            [e$.noChat]: r === ez.ChannelLayouts.NO_CHAT
+          className: i(eQ.content, {
+            [eQ.noChat]: r === eY.ChannelLayouts.NO_CHAT
           }),
           children: [this.renderChat(), this.renderSidebar()]
         })]
-      }), this.renderThreadSidebar(), (0, a.jsx)(Y.default, {})]
+      }), this.renderThreadSidebar(), (0, a.jsx)(W.default, {})]
     })
   }
   constructor(...e) {
@@ -446,28 +445,28 @@ class e1 extends l.PureComponent {
       let {
         parentChannel: e
       } = this.props;
-      null != e && (0, eo.transitionToChannel)(e.id)
+      null != e && (0, er.transitionToChannel)(e.id)
     }, this._handleContextMenu = (e, t) => {
       switch (t.type) {
-        case ez.ChannelTypes.GUILD_VOICE:
-        case ez.ChannelTypes.GUILD_ANNOUNCEMENT:
-        case ez.ChannelTypes.GUILD_TEXT:
-        case ez.ChannelTypes.GUILD_FORUM:
-        case ez.ChannelTypes.GUILD_MEDIA:
+        case eY.ChannelTypes.GUILD_VOICE:
+        case eY.ChannelTypes.GUILD_ANNOUNCEMENT:
+        case eY.ChannelTypes.GUILD_TEXT:
+        case eY.ChannelTypes.GUILD_FORUM:
+        case eY.ChannelTypes.GUILD_MEDIA:
           this.openChannelContextMenu(e, t);
           break;
-        case ez.ChannelTypes.ANNOUNCEMENT_THREAD:
-        case ez.ChannelTypes.PUBLIC_THREAD:
-        case ez.ChannelTypes.PRIVATE_THREAD:
+        case eY.ChannelTypes.ANNOUNCEMENT_THREAD:
+        case eY.ChannelTypes.PUBLIC_THREAD:
+        case eY.ChannelTypes.PRIVATE_THREAD:
           this.openThreadContextMenu(e, t);
           break;
-        case ez.ChannelTypes.DM:
+        case eY.ChannelTypes.DM:
           this.openDMContextMenu(e, t)
       }
     }, this.handleContextMenu = e => {
-      o(null != this.props.channel, "Missing channel in Channel.handleContextMenu"), this._handleContextMenu(e, this.props.channel)
+      u(null != this.props.channel, "Missing channel in Channel.handleContextMenu"), this._handleContextMenu(e, this.props.channel)
     }, this.handleParentContextMenu = e => {
-      o(null != this.props.parentChannel, "Missing parentChannel in Channel.handleParentContextMenu"), this._handleContextMenu(e, this.props.parentChannel)
+      u(null != this.props.parentChannel, "Missing parentChannel in Channel.handleParentContextMenu"), this._handleContextMenu(e, this.props.parentChannel)
     }, this.handleThreadSidebarResize = (e, t) => {
       this.setState({
         threadSidebarWidth: e,
@@ -477,12 +476,12 @@ class e1 extends l.PureComponent {
       let {
         channel: e
       } = this.props;
-      o(null == e ? void 0 : e.isPrivate(), "Missing private channel in Channel.openUserProfile"), (0, eI.openUserProfileModal)({
+      u(null == e ? void 0 : e.isPrivate(), "Missing private channel in Channel.openUserProfile"), (0, e_.openUserProfileModal)({
         userId: e.getRecipientId(),
         guildId: e.guild_id,
         channelId: e.id,
         analyticsLocation: {
-          section: ez.AnalyticsSections.CHANNEL_HEADER
+          section: eY.AnalyticsSections.CHANNEL_HEADER
         }
       })
     }, this.renderClipsEnabledIndicatorToolbarItem = () => {
@@ -490,15 +489,15 @@ class e1 extends l.PureComponent {
         inCall: e,
         voiceChannel: t
       } = this.props;
-      return e ? (0, a.jsx)(O.default, {
+      return e ? (0, a.jsx)(L.default, {
         channelId: null != t ? t.id : null
       }) : null
     }, this.renderStreamQualityLiveIndicatorToolbarItem = () => {
       let {
         selectedParticipant: e
       } = this.props;
-      return (null == e ? void 0 : e.type) !== eZ.ParticipantTypes.STREAM ? null : (0, a.jsx)(F.default, {
-        size: eF.default.Sizes.LARGE,
+      return (null == e ? void 0 : e.type) !== eK.ParticipantTypes.STREAM ? null : (0, a.jsx)(w.default, {
+        size: ew.default.Sizes.LARGE,
         participant: e,
         showQuality: !0
       }, "live-indicator")
@@ -509,91 +508,91 @@ class e1 extends l.PureComponent {
         isLurking: n,
         showCall: l
       } = this.props;
-      o(null != e, "Missing channel in Channel.renderHeaderToolbar");
+      u(null != e, "Missing channel in Channel.renderHeaderToolbar");
       let s = [];
       if (e.isSystemDM()) return s;
       switch (e.type) {
-        case ez.ChannelTypes.GUILD_STAGE_VOICE:
-        case ez.ChannelTypes.GUILD_VOICE:
+        case eY.ChannelTypes.GUILD_STAGE_VOICE:
+        case eY.ChannelTypes.GUILD_VOICE:
           break;
-        case ez.ChannelTypes.DM:
-          s.push(this.renderClipsEnabledIndicatorToolbarItem()), s.push(this.renderStreamQualityLiveIndicatorToolbarItem()), s.push((0, a.jsx)($.default, {
+        case eY.ChannelTypes.DM:
+          s.push(this.renderClipsEnabledIndicatorToolbarItem()), s.push(this.renderStreamQualityLiveIndicatorToolbarItem()), s.push((0, a.jsx)(Q.default, {
             channel: e
-          }, "calls")), s.push((0, a.jsx)(Z.default, {
+          }, "calls")), s.push((0, a.jsx)(K.default, {
             channel: e
-          }, "pins")), s.push((0, a.jsx)(ee.default, {
+          }, "pins")), s.push((0, a.jsx)($.default, {
             channel: e,
-            tooltip: eQ.default.Messages.GROUP_DM_ADD_FRIENDS
-          }, "invite")), s.push((0, a.jsx)(et.default, {
+            tooltip: eq.default.Messages.GROUP_DM_ADD_FRIENDS
+          }, "invite")), s.push((0, a.jsx)(ee.default, {
             channel: e,
             showCall: l
-          }, "profile")), s.push((0, a.jsx)(en.default, {
+          }, "profile")), s.push((0, a.jsx)(et.default, {
             channel: e
           }, "safety_tools"));
           break;
-        case ez.ChannelTypes.GROUP_DM:
-          if (s.push(this.renderClipsEnabledIndicatorToolbarItem()), s.push(this.renderStreamQualityLiveIndicatorToolbarItem()), s.push((0, a.jsx)($.default, {
+        case eY.ChannelTypes.GROUP_DM:
+          if (s.push(this.renderClipsEnabledIndicatorToolbarItem()), s.push(this.renderStreamQualityLiveIndicatorToolbarItem()), s.push((0, a.jsx)(Q.default, {
               channel: e
-            }, "calls")), s.push((0, a.jsx)(Z.default, {
+            }, "calls")), s.push((0, a.jsx)(K.default, {
               channel: e
             }, "pins")), !e.isManaged()) {
-            let t = eQ.default.Messages.GROUP_DM_ADD_FRIENDS;
-            s.push((0, a.jsx)(ee.default, {
+            let t = eq.default.Messages.GROUP_DM_ADD_FRIENDS;
+            s.push((0, a.jsx)($.default, {
               channel: e,
               tooltip: t
             }, "invite"))
           }
-          s.push((0, a.jsx)(z.default, {
+          s.push((0, a.jsx)(Y.default, {
             channelId: e.id
           }, "members"));
           break;
-        case ez.ChannelTypes.ANNOUNCEMENT_THREAD:
-        case ez.ChannelTypes.PRIVATE_THREAD:
-        case ez.ChannelTypes.PUBLIC_THREAD:
-          null != t && !t.isForumLikeChannel() && s.push((0, a.jsx)(eE.default, {
+        case eY.ChannelTypes.ANNOUNCEMENT_THREAD:
+        case eY.ChannelTypes.PRIVATE_THREAD:
+        case eY.ChannelTypes.PUBLIC_THREAD:
+          null != t && !t.isForumLikeChannel() && s.push((0, a.jsx)(em.default, {
             channel: t
-          }, "browser")), e.isVocalThread() && s.push((0, a.jsx)(ea.default, {
+          }, "browser")), e.isVocalThread() && s.push((0, a.jsx)(en.default, {
             channel: e
-          }, "thread-call")), s.push((0, a.jsx)(eC.default, {
+          }, "thread-call")), s.push((0, a.jsx)(eE.default, {
             channel: e
-          }, "notifications")), s.push((0, a.jsx)(Z.default, {
+          }, "notifications")), s.push((0, a.jsx)(K.default, {
             channel: e
-          }, "pins")), !e.isArchivedThread() && s.push((0, a.jsx)(z.default, {
+          }, "pins")), !e.isArchivedThread() && s.push((0, a.jsx)(Y.default, {
             channelId: e.id
-          }, "members")), null != t && (0, v.canSeeChannelSummaries)(e) && s.push((0, a.jsx)(X.default, {
+          }, "members")), null != t && (0, T.canSeeChannelSummaries)(e) && s.push((0, a.jsx)(Z.default, {
             channel: e
-          }, "summaries")), s.push((0, a.jsx)(eg.default, {
+          }, "summaries")), s.push((0, a.jsx)(eC.default, {
             channel: e
           }, "threads-overflow"));
           break;
-        case ez.ChannelTypes.GUILD_ANNOUNCEMENT:
-        case ez.ChannelTypes.GUILD_TEXT:
-          s.push((0, a.jsx)(U.default, {
+        case eY.ChannelTypes.GUILD_ANNOUNCEMENT:
+        case eY.ChannelTypes.GUILD_TEXT:
+          s.push((0, a.jsx)(D.default, {
             channel: e
-          }, "favorites")), s.push((0, a.jsx)(eE.default, {
+          }, "favorites")), s.push((0, a.jsx)(em.default, {
             channel: e
-          }, "browser")), !n && s.push((0, a.jsx)(K.default, {
+          }, "browser")), !n && s.push((0, a.jsx)(z.default, {
             channel: e
-          }, "notifications")), s.push((0, a.jsx)(Z.default, {
+          }, "notifications")), s.push((0, a.jsx)(K.default, {
             channel: e
-          }, "pins")), s.push((0, a.jsx)(z.default, {
+          }, "pins")), s.push((0, a.jsx)(Y.default, {
             channelId: e.id
-          }, "members")), (0, v.canSeeChannelSummaries)(e) && s.push((0, a.jsx)(X.default, {
+          }, "members")), (0, T.canSeeChannelSummaries)(e) && s.push((0, a.jsx)(Z.default, {
             channel: e
           }, "summaries"));
           break;
-        case ez.ChannelTypes.GUILD_FORUM:
-        case ez.ChannelTypes.GUILD_MEDIA:
-          !n && (s.push((0, a.jsx)(J.default, {
+        case eY.ChannelTypes.GUILD_FORUM:
+        case eY.ChannelTypes.GUILD_MEDIA:
+          !n && (s.push((0, a.jsx)(X.default, {
             channel: e
-          }, "forum-onboarding")), s.push((0, a.jsx)(K.default, {
+          }, "forum-onboarding")), s.push((0, a.jsx)(z.default, {
             channel: e
-          }, "notifications"))), !__OVERLAY__ && s.push((0, a.jsx)(z.default, {
+          }, "notifications"))), !__OVERLAY__ && s.push((0, a.jsx)(Y.default, {
             channelId: e.id
           }, "members"));
           break;
-        case ez.ChannelTypes.GUILD_DIRECTORY:
-          s.push((0, a.jsx)(z.default, {
+        case eY.ChannelTypes.GUILD_DIRECTORY:
+          s.push((0, a.jsx)(Y.default, {
             channelId: e.id
           }, "members"))
       }
@@ -602,32 +601,32 @@ class e1 extends l.PureComponent {
       let {
         channel: e
       } = this.props;
-      o(null != e, "Missing channel in Channel.renderHeaderToolbar");
+      u(null != e, "Missing channel in Channel.renderHeaderToolbar");
       let t = [];
       if (e.isSystemDM()) return t;
       switch (e.type) {
-        case ez.ChannelTypes.GUILD_STAGE_VOICE:
-        case ez.ChannelTypes.GUILD_VOICE:
-        case ez.ChannelTypes.DM:
+        case eY.ChannelTypes.GUILD_STAGE_VOICE:
+        case eY.ChannelTypes.GUILD_VOICE:
+        case eY.ChannelTypes.DM:
           break;
-        case ez.ChannelTypes.GROUP_DM:
-          t.push((0, a.jsx)(z.default, {
+        case eY.ChannelTypes.GROUP_DM:
+          t.push((0, a.jsx)(Y.default, {
             channelId: e.id
           }, "members"));
           break;
-        case ez.ChannelTypes.ANNOUNCEMENT_THREAD:
-        case ez.ChannelTypes.PRIVATE_THREAD:
-        case ez.ChannelTypes.PUBLIC_THREAD:
-          !e.isArchivedThread() && t.push((0, a.jsx)(z.default, {
+        case eY.ChannelTypes.ANNOUNCEMENT_THREAD:
+        case eY.ChannelTypes.PRIVATE_THREAD:
+        case eY.ChannelTypes.PUBLIC_THREAD:
+          !e.isArchivedThread() && t.push((0, a.jsx)(Y.default, {
             channelId: e.id
           }, "members"));
           break;
-        case ez.ChannelTypes.GUILD_ANNOUNCEMENT:
-        case ez.ChannelTypes.GUILD_TEXT:
-        case ez.ChannelTypes.GUILD_FORUM:
-        case ez.ChannelTypes.GUILD_MEDIA:
-        case ez.ChannelTypes.GUILD_DIRECTORY:
-          t.push((0, a.jsx)(z.default, {
+        case eY.ChannelTypes.GUILD_ANNOUNCEMENT:
+        case eY.ChannelTypes.GUILD_TEXT:
+        case eY.ChannelTypes.GUILD_FORUM:
+        case eY.ChannelTypes.GUILD_MEDIA:
+        case eY.ChannelTypes.GUILD_DIRECTORY:
+          t.push((0, a.jsx)(Y.default, {
             channelId: e.id
           }, "members"))
       }
@@ -640,7 +639,7 @@ class e1 extends l.PureComponent {
       return e ? (0, a.jsx)(m.Button, {
         size: m.Button.Sizes.MIN,
         color: m.Button.Colors.PRIMARY,
-        className: e$.followButton,
+        className: eQ.followButton,
         onClick: () => (0, m.openModalLazy)(async () => {
           let {
             default: e
@@ -650,7 +649,7 @@ class e1 extends l.PureComponent {
             ...n
           })
         }),
-        children: eQ.default.Messages.FOLLOW
+        children: eq.default.Messages.FOLLOW
       }) : null
     }, this.renderHeaderBar = () => {
       let {
@@ -660,136 +659,127 @@ class e1 extends l.PureComponent {
         guild: l,
         guildId: s,
         showCall: r,
-        hasVideo: u,
-        channelEmojiLeftOfIcon: d,
-        headerGuildBreadcrumbPosition: c,
-        isFavorites: f
+        hasVideo: o,
+        headerGuildBreadcrumbPosition: d,
+        isFavorites: c
       } = this.props;
-      o(null != e, "Missing channel in Channel.renderHeaderBar"), o(null != t, "Should not be null if channel is not null.");
-      let h = e.isDM() && !e.isSystemDM() ? this.openUserProfile : void 0,
-        p = (null == n ? void 0 : n.guild_id) != null && (null == n ? void 0 : n.id) != null ? this.handleTitleParentClick : void 0;
-      return (0, a.jsxs)(q.default, {
+      u(null != e, "Missing channel in Channel.renderHeaderBar"), u(null != t, "Should not be null if channel is not null.");
+      let f = e.isDM() && !e.isSystemDM() ? this.openUserProfile : void 0,
+        h = (null == n ? void 0 : n.guild_id) != null && (null == n ? void 0 : n.id) != null ? this.handleTitleParentClick : void 0;
+      return (0, a.jsxs)(J.default, {
         guildId: s,
         channelId: e.id,
         channelType: e.type,
-        hideSearch: e.isDirectory() || f && !(0, eu.isFavoriteSearchEnabled)(),
-        showDivider: f && !(0, eu.isFavoriteSearchEnabled)(),
+        hideSearch: e.isDirectory() || c && !(0, eu.isFavoriteSearchEnabled)(),
+        showDivider: c && !(0, eu.isFavoriteSearchEnabled)(),
         toolbar: this.renderHeaderToolbar(),
         mobileToolbar: this.renderMobileToolbar(),
-        className: i(e$.title, u && r ? (0, ek.getThemeClass)(ez.ThemeTypes.DARK) : null),
+        className: i(eQ.title, o && r ? (0, eF.getThemeClass)(eY.ThemeTypes.DARK) : null),
         transparent: r,
-        "aria-label": eQ.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
-        children: ["left" === c && (0, a.jsx)(Q.HeaderGuildBreadcrumb, {
+        "aria-label": eq.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+        children: ["left" === d && (0, a.jsx)(q.HeaderGuildBreadcrumb, {
           channel: e,
           guild: l,
           caretPosition: "right"
-        }), (0, Q.renderTitle)({
+        }), (0, q.renderTitle)({
           channel: e,
           channelName: t,
           parentChannel: n,
           guild: l,
-          hasVideo: u,
+          hasVideo: o,
           handleContextMenu: this.handleContextMenu,
           handleParentContextMenu: this.handleParentContextMenu,
-          handleClick: h,
-          handleParentClick: p,
-          renderFollowButton: this.renderFollowButton,
-          channelEmojiLeftOfIcon: d
-        }), "right" === c && (0, a.jsx)(Q.HeaderGuildBreadcrumb, {
+          handleClick: f,
+          handleParentClick: h,
+          renderFollowButton: this.renderFollowButton
+        }), "right" === d && (0, a.jsx)(q.HeaderGuildBreadcrumb, {
           channel: e,
           guild: l,
           caretPosition: "left"
-        }), (0, Q.renderTopic)(e, l)]
+        }), (0, q.renderTopic)(e, l)]
       }, "header-".concat(e.id))
     }
   }
 }
-let e2 = (0, I.default)(e1);
-var e4 = l.memo(function(e) {
+let e1 = (0, I.default)(e0);
+var e2 = l.memo(function(e) {
   var t;
   let {
     providedChannel: n
-  } = e, [s, i] = l.useState(null), r = (0, f.useStateFromStores)([eP.default], () => eP.default.getChannelId()), o = (0, f.useStateFromStores)([eP.default], () => eP.default.getVoiceChannelId()), u = (0, f.useStateFromStores)([eM.default], () => null != n ? n : eM.default.getChannel(r), [r, n]), m = (0, f.useStateFromStores)([eM.default], () => eM.default.getChannel(o), [o]), E = null == u ? void 0 : u.parent_id, C = (0, f.useStateFromStores)([eM.default], () => eM.default.getChannel(E), [E]), g = (0, f.useStateFromStores)([eO.default], () => eO.default.getGuild(null == u ? void 0 : u.guild_id), [u]), {
+  } = e, [s, i] = l.useState(null), r = (0, f.useStateFromStores)([eb.default], () => eb.default.getChannelId()), u = (0, f.useStateFromStores)([eb.default], () => eb.default.getVoiceChannelId()), o = (0, f.useStateFromStores)([eA.default], () => null != n ? n : eA.default.getChannel(r), [r, n]), m = (0, f.useStateFromStores)([eA.default], () => eA.default.getChannel(u), [u]), E = null == o ? void 0 : o.parent_id, C = (0, f.useStateFromStores)([eA.default], () => eA.default.getChannel(E), [E]), g = (0, f.useStateFromStores)([eL.default], () => eL.default.getGuild(null == o ? void 0 : o.guild_id), [o]), {
     needSubscriptionToAccess: S
-  } = (0, H.default)(null !== (t = null == u ? void 0 : u.id) && void 0 !== t ? t : void 0), _ = (0, f.useStateFromStores)([R.default], () => {
-    let e = null != r ? R.default.getParticipants(r) : [],
-      t = null != r ? R.default.getActivityParticipants(r) : [];
+  } = (0, B.default)(null !== (t = null == o ? void 0 : o.id) && void 0 !== t ? t : void 0), _ = (0, f.useStateFromStores)([M.default], () => {
+    let e = null != r ? M.default.getParticipants(r) : [],
+      t = null != r ? M.default.getActivityParticipants(r) : [];
     return e.length - t.length > 0
-  }, [r]), I = (0, f.useStateFromStores)([N.default], () => {
+  }, [r]), I = (0, f.useStateFromStores)([x.default], () => {
     var e;
-    return N.default.getSelfEmbeddedActivityForChannel(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : "")
-  }), A = (0, f.useStateFromStores)([N.default], () => N.default.getActivityPanelMode()), j = null != I && !(0, M.default)(null == u ? void 0 : u.id) && A === eK.ActivityPanelModes.PANEL, L = (0, f.useStateFromStores)([ew.default], () => null != u && u.isVocalThread() && !d.isEmpty(ew.default.getVoiceStatesForChannel(u.id)), [u]), O = (null == u ? void 0 : u.isGuildVocal()) || j || _ || L, {
-    welcomeModalChannelId: y
-  } = (0, c.useLocation)(), b = (0, f.useStateFromStores)([ei.default], () => null != u && ei.default.isLurking(u.guild_id), [u]), P = (0, f.useStateFromStores)([ex.default], () => ex.default.hasSeen(null == u ? void 0 : u.guild_id, b), [u, b]), U = (0, f.useStateFromStores)([R.default, N.default], () => null != N.default.getConnectedActivityChannelId() && N.default.getActivityPanelMode() === eK.ActivityPanelModes.PANEL ? N.default.getFocusedLayout() === eK.FocusedActivityLayouts.NO_CHAT ? ez.ChannelLayouts.NO_CHAT : ez.ChannelLayouts.NORMAL : null != r ? R.default.getLayout(r) : ez.ChannelLayouts.NORMAL, [r]), w = (0, f.useStateFromStores)([R.default], () => null != u ? R.default.getSelectedParticipant(u.id) : null), F = (0, f.useStateFromStores)([eU.default], () => eU.default.getCurrentUser()), k = (0, el.default)(g), V = (0, eN.default)(y, null == g ? void 0 : g.id), {
-    section: B,
-    channelSidebarState: G
-  } = (0, f.useStateFromStoresObject)([eA.default], () => ({
-    section: eA.default.getSection(r, null == u ? void 0 : u.isDM()),
-    channelSidebarState: eA.default.getSidebarState(r)
-  }), [r, u]), W = null == g ? void 0 : g.id, Y = (0, f.useStateFromStores)([eA.default], () => eA.default.getGuildSidebarState(W), [W]), z = (0, f.useStateFromStores)([eD.default], () => eD.default.getGuildId()), K = z === ez.FAVORITES, Z = (0, eV.default)(u), X = (0, eV.default)(u, !0), J = null != u && o === u.id, q = null != u && u.isGuildStageVoice();
+    return x.default.getSelfEmbeddedActivityForChannel(null !== (e = null == o ? void 0 : o.id) && void 0 !== e ? e : "")
+  }), N = (0, f.useStateFromStores)([x.default], () => x.default.getActivityPanelMode()), R = null != I && !(0, A.default)(null == o ? void 0 : o.id) && N === ez.ActivityPanelModes.PANEL, j = (0, f.useStateFromStores)([eU.default], () => null != o && o.isVocalThread() && !d.isEmpty(eU.default.getVoiceStatesForChannel(o.id)), [o]), L = (null == o ? void 0 : o.isGuildVocal()) || R || _ || j, {
+    welcomeModalChannelId: O
+  } = (0, c.useLocation)(), y = (0, f.useStateFromStores)([es.default], () => null != o && es.default.isLurking(o.guild_id), [o]), b = (0, f.useStateFromStores)([ev.default], () => ev.default.hasSeen(null == o ? void 0 : o.guild_id, y), [o, y]), D = (0, f.useStateFromStores)([M.default, x.default], () => null != x.default.getConnectedActivityChannelId() && x.default.getActivityPanelMode() === ez.ActivityPanelModes.PANEL ? x.default.getFocusedLayout() === ez.FocusedActivityLayouts.NO_CHAT ? eY.ChannelLayouts.NO_CHAT : eY.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : eY.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != o ? M.default.getSelectedParticipant(o.id) : null), w = (0, f.useStateFromStores)([eD.default], () => eD.default.getCurrentUser()), F = (0, ea.default)(g), k = (0, ex.default)(O, null == g ? void 0 : g.id), {
+    section: V,
+    channelSidebarState: H
+  } = (0, f.useStateFromStoresObject)([eN.default], () => ({
+    section: eN.default.getSection(r, null == o ? void 0 : o.isDM()),
+    channelSidebarState: eN.default.getSidebarState(r)
+  }), [r, o]), G = null == g ? void 0 : g.id, W = (0, f.useStateFromStores)([eN.default], () => eN.default.getGuildSidebarState(G), [G]), Y = (0, f.useStateFromStores)([eP.default], () => eP.default.getGuildId()), z = Y === eY.FAVORITES, K = (0, ek.default)(o), Z = (0, ek.default)(o, !0), X = null != o && u === o.id, J = null != o && o.isGuildStageVoice();
   l.useEffect(() => {
     var e, t, n;
-    let a = (0, er.getHistory)();
-    if ((null == a ? void 0 : null === (e = a.location) || void 0 === e ? void 0 : e.state) === eq.STAGE_INVITE_STATE_KEY) {
+    let a = (0, ei.getHistory)();
+    if ((null == a ? void 0 : null === (e = a.location) || void 0 === e ? void 0 : e.state) === eJ.STAGE_INVITE_STATE_KEY) {
       let {
         channelId: e
-      } = null !== (n = (0, es.tryParseChannelPath)(null == a ? void 0 : null === (t = a.location) || void 0 === t ? void 0 : t.pathname)) && void 0 !== n ? n : {};
+      } = null !== (n = (0, el.tryParseChannelPath)(null == a ? void 0 : null === (t = a.location) || void 0 === t ? void 0 : t.pathname)) && void 0 !== n ? n : {};
       null != e && i(e)
     }
   }, []), l.useEffect(() => {
-    null != s && null != u && q && u.id === s && !J && ((0, eh.connectAndOpen)(u), i(null))
-  }, [s, q]);
-  let Q = (0, v.useChannelSummariesExperiment)(u),
-    $ = null != u && u.isPrivate(),
-    ee = (0, x.default)($),
-    et = (0, x.default)(null == u ? void 0 : u.id);
+    null != s && null != o && J && o.id === s && !X && ((0, ef.connectAndOpen)(o), i(null))
+  }, [s, J]);
+  let q = (0, T.useChannelSummariesExperiment)(o),
+    Q = null != o && o.isPrivate(),
+    $ = (0, v.default)(Q),
+    ee = (0, v.default)(null == o ? void 0 : o.id);
   l.useEffect(() => {
-    let e = ee && !$,
-      t = ee && $ && (null == u ? void 0 : u.id) !== et;
-    (e || t) && (0, D.markDismissibleContentAsDismissed)(h.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, {
-      dismissAction: eX.ContentDismissActionType.AUTO
+    let e = $ && !Q,
+      t = $ && Q && (null == o ? void 0 : o.id) !== ee;
+    (e || t) && (0, P.markDismissibleContentAsDismissed)(h.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, {
+      dismissAction: eZ.ContentDismissActionType.AUTO
     })
-  }, [null == u ? void 0 : u.id, et, $, ee]);
-  let {
-    left: en
-  } = T.ChannelEmojisExperiment.useExperiment({
-    location: "781dc9_2"
-  }, {
-    autoTrackExposure: !1
-  }), ea = (0, p.useHasAnyModalOpen)();
-  return (0, a.jsx)(e2, {
-    guildId: null == u ? void 0 : u.guild_id,
+  }, [null == o ? void 0 : o.id, ee, Q, $]);
+  let et = (0, p.useHasAnyModalOpen)();
+  return (0, a.jsx)(e1, {
+    guildId: null == o ? void 0 : o.guild_id,
     channelId: r,
-    channel: u,
-    channelName: Z,
-    formattedChannelName: X,
+    channel: o,
+    channelName: K,
+    formattedChannelName: Z,
     parentChannel: C,
     voiceChannel: m,
-    layout: U,
+    layout: D,
     needSubscriptionToAccess: S,
-    isLurking: b,
-    hasModalOpen: ea,
-    section: B,
-    channelSidebarState: G,
-    guildSidebarState: Y,
+    isLurking: y,
+    hasModalOpen: et,
+    section: V,
+    channelSidebarState: H,
+    guildSidebarState: W,
     guild: g,
-    searchId: (0, f.useStateFromStores)([eb.default], () => eb.default.getCurrentSearchId()),
-    showCall: !S && O,
-    nsfwAgree: (0, f.useStateFromStores)([eL.default], () => eL.default.didAgree(null == u ? void 0 : u.guild_id)),
-    isMobile: (0, f.useStateFromStores)([ey.default], () => (null == u ? void 0 : u.type) === ez.ChannelTypes.DM && ey.default.isMobileOnline(u.getRecipientId()), [u]),
-    isUnavailable: (0, f.useStateFromStores)([ej.default], () => (null == u ? void 0 : u.guild_id) != null && ej.default.isUnavailable(u.guild_id), [u]),
-    showRealNameModal: k,
-    showWelcomeModal: !P && V,
-    showFollowButton: (null == u ? void 0 : u.type) === ez.ChannelTypes.GUILD_ANNOUNCEMENT && (null == g ? void 0 : g.hasFeature(ez.GuildFeatures.NEWS)) || !1,
-    ...(0, f.useStateFromStoresObject)([ew.default], () => ({
-      hasVideo: null != u && ew.default.hasVideo(u.id)
-    }), [u]),
-    inCall: J,
-    selectedParticipant: w,
-    nsfwAllowed: (null == F ? void 0 : F.nsfwAllowed) === !0,
-    showChannelSummaries: Q,
-    channelEmojiLeftOfIcon: en,
-    isFavorites: K,
-    headerGuildBreadcrumbPosition: K ? "left" : "right"
+    searchId: (0, f.useStateFromStores)([ey.default], () => ey.default.getCurrentSearchId()),
+    showCall: !S && L,
+    nsfwAgree: (0, f.useStateFromStores)([ej.default], () => ej.default.didAgree(null == o ? void 0 : o.guild_id)),
+    isMobile: (0, f.useStateFromStores)([eO.default], () => (null == o ? void 0 : o.type) === eY.ChannelTypes.DM && eO.default.isMobileOnline(o.getRecipientId()), [o]),
+    isUnavailable: (0, f.useStateFromStores)([eR.default], () => (null == o ? void 0 : o.guild_id) != null && eR.default.isUnavailable(o.guild_id), [o]),
+    showRealNameModal: F,
+    showWelcomeModal: !b && k,
+    showFollowButton: (null == o ? void 0 : o.type) === eY.ChannelTypes.GUILD_ANNOUNCEMENT && (null == g ? void 0 : g.hasFeature(eY.GuildFeatures.NEWS)) || !1,
+    ...(0, f.useStateFromStoresObject)([eU.default], () => ({
+      hasVideo: null != o && eU.default.hasVideo(o.id)
+    }), [o]),
+    inCall: X,
+    selectedParticipant: U,
+    nsfwAllowed: (null == w ? void 0 : w.nsfwAllowed) === !0,
+    showChannelSummaries: q,
+    isFavorites: z,
+    headerGuildBreadcrumbPosition: z ? "left" : "right"
   })
 })

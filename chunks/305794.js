@@ -1,9 +1,6 @@
 "use strict";
 e.exports = {
   avatar: "avatar__7c789",
-  channelEmoji: "channelEmoji__234a9",
-  channelEmojiLeftOfIcon: "channelEmojiLeftOfIcon__9c4b0",
-  channelEmojiRightOfIcon: "channelEmojiRightOfIcon__8827e",
   channelName: "channelName__6d16d",
   channelTextArea: "channelTextArea__2e60f",
   chat: "chat__52833",
@@ -24,7 +21,6 @@ e.exports = {
   threadSidebarOpen: "threadSidebarOpen_fa231d",
   title: "title_b7d661",
   titleWrapper: "titleWrapper_aa6737",
-  twemoji: "twemoji__38f4e",
   typing: "typing_db6134",
   uploadArea: "uploadArea__4f70b"
 }

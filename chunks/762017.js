@@ -275,11 +275,6 @@ let o = {
     actions: ["RTC_CONNECTION_STATE", "RTC_CONNECTION_VIDEO", "MEDIA_SESSION_JOINED"],
     inlineRequire: () => E("352690").default
   },
-  ChannelEmojisManager: {
-    actions: ["CHANNEL_SELECT"],
-    inlineRequire: () => E("915633").default,
-    neverLoadBeforeConnectionOpen: !0
-  },
   GuestManager: {
     actions: ["POST_CONNECTION_OPEN"],
     inlineRequire: () => E("129040").default

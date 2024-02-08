@@ -1042,7 +1042,6 @@
                     MESSAGE_LOG_GUILD_CHANNELS: "/messages-log/guild-channels/get",
                     BACKGROUND_SYNC: "/users/@me/background-sync",
                     MESSAGE_PREVIEWS: "/channels/preload-messages",
-                    POPULATE_CHANNEL_EMOJIS: _ => "/guilds/".concat(_, "/populate-channel-emojis"),
                     GUILD_FEED_MESSAGE_REMOVE: (_, E) => "/channels/".concat(_, "/messages/").concat(E, "/hide-guild-feed"),
                     GUILD_FEED_MESSAGE_SET_PREFERENCE: _ => "/guilds/".concat(_, "/guild-feed/preference"),
                     GUILD_FEED_FEATURE_ITEM: _ => "/guilds/".concat(_, "/guild-feed/feature"),

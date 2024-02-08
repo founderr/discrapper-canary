@@ -3,17 +3,14 @@ n.r(t), n.d(t, {
   isOnNewPanels: function() {
     return a
   },
-  useOnNewPanels: function() {
+  isSplitMessagesTab: function() {
     return o
   },
-  isSplitMessagesTab: function() {
+  isSplitMessagesTabAndOnMessagesTab: function() {
     return l
   },
-  isSplitMessagesTabAndOnMessagesTab: function() {
-    return u
-  },
   shouldHandleNewPanelsRoute: function() {
-    return c
+    return u
   }
 });
 var i = n("21121"),
@@ -25,19 +22,15 @@ function a() {
 }
 
 function o() {
-  return (0, i.useInMainTabsExperiment)()
-}
-
-function l() {
   return (0, i.isInMainTabsExperiment)()
 }
 
-function u() {
-  if (!l()) return !1;
+function l() {
+  if (!o()) return !1;
   let e = (0, r.default)();
   return (null == e ? void 0 : e.name) === "messages"
 }
 
-function c(e) {
+function u(e) {
   return !!a() && null != e && e !== s.ME
 }
