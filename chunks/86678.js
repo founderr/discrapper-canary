@@ -52,8 +52,8 @@ var l = n("37983"),
   J = n("282566"),
   q = n("115279"),
   Z = n("49111"),
-  Q = n("994428"),
-  X = n("958706"),
+  X = n("994428"),
+  Q = n("958706"),
   $ = n("431364");
 let ee = (0, k.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
   et = (0, k.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
@@ -227,9 +227,9 @@ var ed = i.memo(i.forwardRef(function(e, t) {
     diversitySurrogate: eY
   } = (0, d.useStateFromStoresObject)([T.default], () => ({
     diversitySurrogate: T.default.diversitySurrogate
-  })), ez = (0, w.useEmojiSearchResults)(eM, u, o), eJ = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eq = P.EmojiPickerCollapsedSections.useSetting(), eZ = i.useMemo(() => new Set(eq), [eq]), eQ = i.useCallback(e => {
+  })), ez = (0, w.useEmojiSearchResults)(eM, u, o), eJ = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eq = P.EmojiPickerCollapsedSections.useSetting(), eZ = i.useMemo(() => new Set(eq), [eq]), eX = i.useCallback(e => {
     P.EmojiPickerCollapsedSections.updateSetting(Array.from(e))
-  }, []), eX = (0, N.useExpressionPickerGridWidth)({
+  }, []), eQ = (0, N.useExpressionPickerGridWidth)({
     gridWrapperRef: eL,
     containerWidth: ed,
     listPaddingLeft: et,
@@ -240,7 +240,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
     emojiGrid: e1,
     columnCounts: e2
   } = (0, K.useEmojiGrid)({
-    gridWidth: eX,
+    gridWidth: eQ,
     channel: u,
     includeCreateEmojiButton: k,
     pickerIntention: o,
@@ -339,7 +339,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
     eR.current = eM
   }, [eM, eK, eJ, ez, o]);
   let tl = null != eg ? eg : O ? "div" : p.Dialog,
-    ti = null != eX;
+    ti = null != eQ;
   (null == ex ? void 0 : ex.type) === K.EmojiUpsellType.PREMIUM ? r = (0, l.jsx)(J.default, {
     onLearnMore: e6,
     emojiDescriptor: ex.emojiDescriptor,
@@ -372,7 +372,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
       renderHeader: eT
     }),
     ts = [];
-  o === X.EmojiIntention.REACTION && ts.push(c.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !T.default.hasFavoriteEmojis(ej) && ts.push(c.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
+  o === Q.EmojiIntention.REACTION && ts.push(c.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !T.default.hasFavoriteEmojis(ej) && ts.push(c.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
   let tr = (0, l.jsx)(h.default, {
     ...eK,
     children: (0, l.jsxs)(tl, {
@@ -400,7 +400,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
                 markAsDismissed: n
               } = e;
               if (t === c.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP) return (0, l.jsx)(H.default, {
-                markAsDismissed: () => n(Q.ContentDismissActionType.UNKNOWN)
+                markAsDismissed: () => n(X.ContentDismissActionType.UNKNOWN)
               })
             }
           }), eS ? null : (0, l.jsx)("div", {
@@ -415,7 +415,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
               emojiSize: A,
               getEmojiItemProps: e7,
               getEmojiRowProps: e5,
-              gridWidth: eX,
+              gridWidth: eQ,
               isUsingKeyboardNavigation: tn,
               onEmojiSelect: (e, t) => {
                 e3(e, {
@@ -426,7 +426,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
               rowCount: e1.length,
               rowCountBySection: e$,
               sectionDescriptors: e0,
-              setCollapsedSections: eQ,
+              setCollapsedSections: eX,
               channelGuildId: ej,
               messageId: eC,
               isBurstReaction: eU,

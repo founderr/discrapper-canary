@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildTooltipText: function() {
-    return Q
+    return X
   },
   default: function() {
-    return X
+    return Q
   }
 }), n("881410"), n("222007");
 var l = n("37983"),
@@ -122,8 +122,8 @@ function q(e) {
     let e = 0;
     for (let t of h) e += C.default.getParticipantCount(t, T.StageChannelParticipantNamedIndex.AUDIENCE);
     return e
-  }), L = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([N.default, y.default], () => g.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != y.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(P.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), q = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), Z = (0, u.useStateFromStoresArray)([O.default], () => L.map(e => O.default.getUser(e)), [L]), Q = z(U.default, g.filter(e => !L.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
-  let X = (t = d, n = S, a = M, 0 === n.length ? null : (0, l.jsxs)("div", {
+  }), L = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([N.default, y.default], () => g.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != y.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(P.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), q = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), Z = (0, u.useStateFromStoresArray)([O.default], () => L.map(e => O.default.getUser(e)), [L]), X = z(U.default, g.filter(e => !L.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
+  let Q = (t = d, n = S, a = M, 0 === n.length ? null : (0, l.jsxs)("div", {
       className: V.row,
       children: [(0, l.jsx)(D.default, {
         className: V.activityIcon
@@ -156,10 +156,10 @@ function q(e) {
   return null != K && G.default.trackExposure({
     location: "Guild Tooltip"
   }), (0, l.jsxs)(l.Fragment, {
-    children: [X, Q, $, F && K, ee, et ? (0, l.jsx)(J, {
+    children: [Q, X, $, F && K, ee, et ? (0, l.jsx)(J, {
       muteConfig: en,
       className: s(V.muteText, {
-        [V.muteTextWithActivity]: null != Q || null != $
+        [V.muteTextWithActivity]: null != X || null != $
       })
     }) : null]
   })
@@ -188,7 +188,7 @@ function Z(e) {
   })
 }
 
-function Q(e) {
+function X(e) {
   let {
     guild: t,
     includeActivity: n = !0
@@ -228,7 +228,7 @@ function Q(e) {
   })
 }
 
-function X(e) {
+function Q(e) {
   let {
     guild: t,
     disabled: n = !1,
@@ -240,7 +240,7 @@ function X(e) {
     hideOnClick: !0,
     spacing: 20,
     position: "right",
-    text: n ? null : (0, l.jsx)(Q, {
+    text: n ? null : (0, l.jsx)(X, {
       guild: t,
       includeActivity: r
     }),

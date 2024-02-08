@@ -157,11 +157,11 @@ var K = e => {
       let l = e + n.height;
       l - k >= Y ? q(!1) : q(!0)
     }, [Y]),
-    Q = i.useCallback(e => {
+    X = i.useCallback(e => {
       var t;
       e(W), null === (t = _.current) || void 0 === t || t.scrollTo(Y)
     }, [Y, W]),
-    X = i.useCallback((e, t) => {
+    Q = i.useCallback((e, t) => {
       let n = v[e];
       if (null == n) return 0;
       let l = J ? D : 0;
@@ -190,7 +190,7 @@ var K = e => {
     renderSection: $,
     rowCount: v.length,
     categoryHeight: U,
-    getScrollOffsetForIndex: X,
+    getScrollOffsetForIndex: Q,
     rowCountBySection: z,
     children: e => K >= 7 && (0, l.jsx)(f.Clickable, {
       "aria-hidden": !J,
@@ -199,7 +199,7 @@ var K = e => {
         [M.unicodeShortcutInvisible]: !J
       }),
       tabIndex: J ? 0 : -1,
-      onClick: () => Q(e),
+      onClick: () => X(e),
       children: (0, l.jsx)(C.default, {
         height: b,
         width: b

@@ -52,8 +52,8 @@ var l = n("37983"),
   J = n("545054"),
   q = n("850391"),
   Z = n("743825"),
-  Q = n("231868"),
-  X = n("834725"),
+  X = n("231868"),
+  Q = n("834725"),
   $ = n("537566"),
   ee = n("912823"),
   et = n("376215"),
@@ -97,8 +97,8 @@ var l = n("37983"),
       maxCharacterCount: eJ,
       showRemainingCharsAfterCount: eq,
       allowNewLines: eZ = !0,
-      characterCountClassName: eQ,
-      "aria-describedby": eX,
+      characterCountClassName: eX,
+      "aria-describedby": eQ,
       "aria-labelledby": e$,
       setEditorRef: e0,
       autoCompletePosition: e1,
@@ -301,7 +301,7 @@ var l = n("37983"),
         } = (0, S.default)();
         return i.useCallback((e, i) => {
           var u, d;
-          !n && ((0, D.shouldAttachSticker)(i, l, a, s.drafts.type) ? ((0, X.trackStickerPreviewSelect)({
+          !n && ((0, D.shouldAttachSticker)(i, l, a, s.drafts.type) ? ((0, Q.trackStickerPreviewSelect)({
             sticker: e,
             stickerSelectLocation: i,
             isReplacement: null != j.default.getStickerPreview(a, s.drafts.type),
@@ -447,7 +447,7 @@ var l = n("37983"),
               [eo.webkit]: "Blink" === platform.layout,
               [eo.hasConnectedBar]: tq
             }),
-            children: [(0, l.jsx)(Q.default, {
+            children: [(0, l.jsx)(X.default, {
               channelId: eL.id,
               chatInputType: eP
             }), eP.hideAttachmentArea ? null : (0, l.jsx)(et.default, {
@@ -482,7 +482,7 @@ var l = n("37983"),
                   uploadPromptCharacterCount: ea.MAX_MESSAGE_LENGTH_PREMIUM,
                   maxCharacterCount: null != eJ ? eJ : tp,
                   allowNewLines: eZ,
-                  "aria-describedby": eX,
+                  "aria-describedby": eQ,
                   onChange: ew,
                   onResize: tL,
                   onBlur: eG,
@@ -542,7 +542,7 @@ var l = n("37983"),
           }), tW ? (0, l.jsx)(en.default, {
             type: eP,
             textValue: ev,
-            className: s(eQ, {
+            className: s(eX, {
               [eo.indentCharacterCount]: tZ
             }),
             maxCharacterCount: eJ,

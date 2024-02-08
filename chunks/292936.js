@@ -90,8 +90,8 @@ var G = s.memo(function(e) {
     onSelectSticker: r,
     stickerIconVisible: c = !1,
     submitButtonVisible: f = !1
-  } = e, I = s.useContext(E.default), [_, x] = s.useState(null), [j, U] = s.useState(!1), [D, G] = s.useState(null), B = (0, g.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, J] = s.useState(!1), [q, Z] = s.useState(!1), Q = (0, R.useStickerSuggestionResults)(V, j, l), {
-    analyticsLocations: X,
+  } = e, I = s.useContext(E.default), [_, x] = s.useState(null), [j, U] = s.useState(!1), [D, G] = s.useState(null), B = (0, g.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, J] = s.useState(!1), [q, Z] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, j, l), {
+    analyticsLocations: Q,
     AnalyticsLocationProvider: $
   } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
     handleTextChange: ee,
@@ -126,7 +126,7 @@ var G = s.memo(function(e) {
       el(i || (null == e ? void 0 : e.contains(null == e ? void 0 : e.ownerDocument.activeElement)) === !0)
     })
   }, [i]);
-  let ei = Q.length > 0,
+  let ei = X.length > 0,
     ea = en && !B && !z && !j && !q && ei,
     {
       stickersNavigator: es
@@ -196,7 +196,7 @@ var G = s.memo(function(e) {
           let t = C.default.getStickerPack(e.pack_id);
           null != t && (0, y.default)({
             stickerPack: t,
-            analyticsLocations: X
+            analyticsLocations: Q
           })
         }
         I.emit("sticker-suggestions-hidden")
@@ -205,10 +205,10 @@ var G = s.memo(function(e) {
     eo = s.useRef([]),
     eu = s.useRef(!1);
   s.useEffect(() => {
-    ea && (eo.current = Q), ea !== eu.current && (I.emit(ea ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), ea && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = ea
-  }, [I, ea, Q, V]);
+    ea && (eo.current = X), ea !== eu.current && (I.emit(ea ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), ea && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = ea
+  }, [I, ea, X, V]);
   let ed = !ea,
-    ec = ea ? Q : eo.current;
+    ec = ea ? X : eo.current;
   return (0, a.jsx)($, {
     children: (0, a.jsxs)(p.Clickable, {
       tabIndex: ed ? -1 : 0,
@@ -279,7 +279,7 @@ var G = s.memo(function(e) {
               },
               variant: "text-sm/normal",
               children: null != D ? P.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_NAME.format({
-                stickerName: null === (t = Q[+D]) || void 0 === t ? void 0 : t.sticker.name
+                stickerName: null === (t = X[+D]) || void 0 === t ? void 0 : t.sticker.name
               }) : P.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_SHORT_NAV_PROMPT.format({
                 upHook: (e, t) => (0, a.jsx)(p.KeyCombo, {
                   shortcut: "up",

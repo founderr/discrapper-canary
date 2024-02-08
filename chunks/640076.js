@@ -65,7 +65,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       messageId: W,
       isBurstReaction: Y,
       listHeaderClassName: z
-    } = e, J = (0, p.useAnalyticsContext)(), q = i.useRef(L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), Z = i.useMemo(() => "" !== n ? d.default.convert.toCodePoint(n) : "", [n]), Q = i.useCallback(function(e) {
+    } = e, J = (0, p.useAnalyticsContext)(), q = i.useRef(L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), Z = i.useMemo(() => "" !== n ? d.default.convert.toCodePoint(n) : "", [n]), X = i.useCallback(function(e) {
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         l = new Set(t),
         i = t.has(e);
@@ -75,7 +75,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         collapsed: !i,
         guild_id: n.id
       }), g(l)
-    }, [J, t, g]), X = i.useCallback(e => {
+    }, [J, t, g]), Q = i.useCallback(e => {
       let {
         columnIndex: t,
         visibleRowIndex: n
@@ -90,7 +90,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         emojiDescriptors: n,
         emojiSize: r,
         surrogateCodePoint: Z,
-        onInspect: X,
+        onInspect: Q,
         onSelect: c,
         getEmojiItemProps: T,
         getEmojiRowProps: v,
@@ -105,7 +105,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         messageId: W,
         isBurstReaction: Y
       }, e)
-    }), [a, h, r, Z, X, c, T, v, _, b, V, $, K, W, Y]);
+    }), [a, h, r, Z, Q, c, T, v, _, b, V, $, K, W, Y]);
     i.useEffect(() => () => {
       var e, t;
       return null === (t = ee.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)
@@ -134,10 +134,10 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           className: s(j.header, z),
           icon: u,
           isCollapsed: t.has(o),
-          onClick: () => Q(o, i),
+          onClick: () => X(o, i),
           children: d
         }, o)
-      }), [h, t, Q, z]),
+      }), [h, t, X, z]),
       en = i.useCallback((e, n) => {
         let i = h[e];
         if (i.type === M.EmojiCategoryTypes.GUILD) {

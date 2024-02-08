@@ -105,8 +105,8 @@ var P = i.forwardRef(function(e, t) {
     emojiId: z,
     emojiName: J
   } = P, q = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), Z = (0, N.useSoundButtonContextMenu)(P, null == b ? void 0 : b.guild_id), {
-    playSoundboardSound: Q,
-    previewSound: X,
+    playSoundboardSound: X,
+    previewSound: Q,
     isPlayingSound: $
   } = (0, A.default)(P, null !== (n = null == b ? void 0 : b.id) && void 0 !== n ? n : null), {
     createMultipleConfettiAt: ee
@@ -155,7 +155,7 @@ var P = i.forwardRef(function(e, t) {
   }
   let eh = L({
       sound: P,
-      previewSound: X,
+      previewSound: Q,
       disabled: ec
     }),
     eE = () => (0, l.jsxs)("div", {
@@ -207,7 +207,7 @@ var P = i.forwardRef(function(e, t) {
           B();
           return
         }
-        F || Q(H)
+        F || X(H)
       },
       onContextMenu: w && !ec ? Z : void 0,
       children: [(0, l.jsxs)("div", {

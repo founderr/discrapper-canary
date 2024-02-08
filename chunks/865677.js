@@ -58,13 +58,13 @@ function F(e) {
     channelId: K,
     userId: V.id,
     activity: t
-  }), Z = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), Q = (0, a.useStateFromStores)([S.default, p.default, A.default, h.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, x.isLaunchable)({
+  }), Z = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), X = (0, a.useStateFromStores)([S.default, p.default, A.default, h.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, x.isLaunchable)({
     LibraryApplicationStore: S.default,
     LaunchableGameStore: p.default,
     DispatchApplicationStore: A.default,
     ConnectedAppsStore: h.default,
     applicationId: t.application_id
-  })), X = (0, a.useStateFromStores)([O.default], () => Array.from(O.default.getSelfEmbeddedActivities().values()).some(e => {
+  })), Q = (0, a.useStateFromStores)([O.default], () => Array.from(O.default.getSelfEmbeddedActivities().values()).some(e => {
     let {
       applicationId: n,
       channelId: l
@@ -86,9 +86,9 @@ function F(e) {
     PermissionStore: C.default
   })), en = (0, d.useAnalyticsContext)(), el = !N.isPlatformEmbedded, ei = (0, P.default)(t, k.ActivityFlags.JOIN) || W;
   if (null == t || !ei || null == t.application_id) return null;
-  let ea = !F && (el || Q) && !z && !X && (!W || et),
+  let ea = !F && (el || X) && !z && !Q && (!W || et),
     es = null;
-  F ? es = w.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : !el && !Q && (es = w.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
+  F ? es = w.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : !el && !X && (es = w.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
     name: t.name
   }));
   let er = async (e, t) => {

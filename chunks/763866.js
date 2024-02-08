@@ -56,8 +56,8 @@ function q(e) {
   let {
     activity: q,
     customStatusActivity: Z,
-    user: Q,
-    displayProfile: X,
+    user: X,
+    displayProfile: Q,
     guild: $,
     guildMember: ee,
     channelId: et,
@@ -68,8 +68,8 @@ function q(e) {
     showCopiableUsername: es = !1
   } = e, er = (0, r.useStateFromStores)([C.default], () => C.default.hidePersonalInformation), eo = (0, r.useStateFromStores)([y.default], () => {
     var e;
-    return null === (e = y.default.getUserProfile(Q.id)) || void 0 === e ? void 0 : e.application
-  }), eu = (0, r.useStateFromStores)([h.default], () => null != h.default.getAnyStreamForUser(Q.id)), ed = (0, V.useGetVoiceChannelInfoForVoiceActivitySection)(Q.id, null == $ ? void 0 : $.id), ec = !eu && null != ed, {
+    return null === (e = y.default.getUserProfile(X.id)) || void 0 === e ? void 0 : e.application
+  }), eu = (0, r.useStateFromStores)([h.default], () => null != h.default.getAnyStreamForUser(X.id)), ed = (0, V.useGetVoiceChannelInfoForVoiceActivitySection)(X.id, null == $ ? void 0 : $.id), ec = !eu && null != ed, {
     showVoiceActivityInProfile: ef
   } = A.VoiceActivityProfileExperiment.useExperiment({
     location: "user popout"
@@ -77,12 +77,12 @@ function q(e) {
     autoTrackExposure: ec
   }), [ep, em] = i.useState(!1), [eh, eE] = i.useState(!1), eg = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(et)), eS = (0, r.useStateFromStores)([S.default], () => S.default.can(K.Permissions.USE_CLYDE_AI, eg)), {
     profileTheme: eC
-  } = (0, N.default)(Q, X), eT = i.useRef(null), [ev, eI] = i.useState(!0), e_ = i.useCallback(() => {
+  } = (0, N.default)(X, Q), eT = i.useRef(null), [ev, eI] = i.useState(!0), e_ = i.useCallback(() => {
     let {
       current: e
     } = eT;
     null != e && eI(0 === e.getScrollerState().scrollTop)
-  }, []), ey = (0, d.canEditClydeAIProfile)($), eA = (0, c.canUseCustomClydeProfiles)($), eN = (0, r.useStateFromStores)([g.default], () => g.default.isMember(null == $ ? void 0 : $.id, Q.id));
+  }, []), ey = (0, d.canEditClydeAIProfile)($), eA = (0, c.canUseCustomClydeProfiles)($), eN = (0, r.useStateFromStores)([g.default], () => g.default.isMember(null == $ ? void 0 : $.id, X.id));
   if (i.useLayoutEffect(() => {
       var e;
       let {
@@ -91,27 +91,27 @@ function q(e) {
       null != t && (null === (e = t.getScrollerNode()) || void 0 === e || e.scrollTo({
         top: 0
       }))
-    }, []), Q.isSystemUser()) return null;
-  if (Q.isNonUserBot() && !Q.isClyde()) return (0, l.jsx)(H.default, {
-    user: Q,
+    }, []), X.isSystemUser()) return null;
+  if (X.isNonUserBot() && !X.isClyde()) return (0, l.jsx)(H.default, {
+    user: X,
     nickname: null,
     pronouns: null,
     className: Y.usernameSection,
     lastSection: !0
   });
-  let ex = null !== (t = I.default.getNickname(null == $ ? void 0 : $.id, et, Q)) && void 0 !== t ? t : _.default.getName(Q);
+  let ex = null !== (t = I.default.getNickname(null == $ ? void 0 : $.id, et, X)) && void 0 !== t ? t : _.default.getName(X);
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(H.default, {
       className: Y.usernameSection,
-      user: Q,
+      user: X,
       nickname: ex,
-      pronouns: null == X ? void 0 : X.pronouns,
-      usernameIcon: Q.hasAvatarForGuild(null == $ ? void 0 : $.id) && (0, l.jsx)(O.default, {
-        user: Q,
+      pronouns: null == Q ? void 0 : Q.pronouns,
+      usernameIcon: X.hasAvatarForGuild(null == $ ? void 0 : $.id) && (0, l.jsx)(O.default, {
+        user: X,
         nickname: ex
       }),
       shouldCopyOnClick: es
-    }), Q.isClyde() ? (0, l.jsx)("div", {
+    }), X.isClyde() ? (0, l.jsx)("div", {
       className: Y.lastEditedByContainer,
       children: (0, l.jsx)(f.default, {
         className: Y.lastEditedByTag,
@@ -123,7 +123,7 @@ function q(e) {
         customStatusActivity: Z
       }), (0, l.jsx)(x.default, {
         className: Y.divider
-      }), Q.isClyde() && ey && null != $ ? !eN && eA ? eS && !eh ? (0, l.jsx)(o.Button, {
+      }), X.isClyde() && ey && null != $ ? !eN && eA ? eS && !eh ? (0, l.jsx)(o.Button, {
         className: Y.editClydeButton,
         innerClassName: Y.editClydeButtonInner,
         submitting: ep,
@@ -173,16 +173,16 @@ function q(e) {
         onScroll: e_,
         ref: eT,
         children: [(0, l.jsx)(P.default, {
-          user: Q,
+          user: X,
           guildId: null == $ ? void 0 : $.id
         }), (0, l.jsx)(L.default, {
-          isUsingGuildBio: null !== (n = null == X ? void 0 : X.isUsingGuildMemberBio()) && void 0 !== n && n,
-          bio: null == X ? void 0 : X.bio,
+          isUsingGuildBio: null !== (n = null == Q ? void 0 : Q.isUsingGuildMemberBio()) && void 0 !== n && n,
+          bio: null == Q ? void 0 : Q.bio,
           guild: $,
           hidePersonalInformation: er
-        }), Q.isClyde() ? (0, l.jsx)(b.default, {}) : (0, l.jsxs)(l.Fragment, {
+        }), X.isClyde() ? (0, l.jsx)(b.default, {}) : (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(k.default, {
-            userId: Q.id,
+            userId: X.id,
             guild: $,
             guildMember: ee
           }), ef && ec && (0, l.jsx)(V.default, {
@@ -192,7 +192,7 @@ function q(e) {
             color: z.buttonColor
           }), (0, l.jsx)(R.default, {
             activity: q,
-            user: Q,
+            user: X,
             guild: $,
             channelId: et,
             onClose: en
@@ -203,15 +203,15 @@ function q(e) {
             guildId: null == $ ? void 0 : $.id,
             onClick: en
           }) : null, (0, l.jsx)(M.default, {
-            user: Q,
+            user: X,
             guildId: null == $ ? void 0 : $.id
           }), (0, l.jsx)(B.default, {
-            user: Q,
+            user: X,
             guild: $,
             guildMember: ee,
-            showBorder: null !== (a = null == X ? void 0 : X.canEditThemes) && void 0 !== a && a
+            showBorder: null !== (a = null == Q ? void 0 : Q.canEditThemes) && void 0 !== a && a
           }), (0, l.jsx)(j.default, {
-            userId: Q.id,
+            userId: X.id,
             channelId: et,
             guild: $,
             onClose: en,
@@ -220,14 +220,14 @@ function q(e) {
             channelId: et,
             applicationId: eo.id
           }), (0, l.jsx)(w.default, {
-            user: Q,
+            user: X,
             setNote: el,
             autoFocus: !ei,
             lastSection: !ei,
             hideNote: er || ea
           })]
         }), (0, l.jsx)(D.default, {
-          user: Q,
+          user: X,
           setNote: el,
           canDM: ei,
           onClose: en,
