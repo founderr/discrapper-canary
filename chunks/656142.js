@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return g
   }
 });
 var a = s("37983");
@@ -14,22 +14,23 @@ var n = s("414456"),
   d = s("697218"),
   u = s("10514"),
   c = s("521012"),
-  E = s("719923"),
-  _ = s("153160"),
-  T = s("646718"),
-  I = s("782340"),
-  S = s("545627"),
-  N = e => {
+  E = s("240481"),
+  _ = s("719923"),
+  T = s("153160"),
+  I = s("646718"),
+  S = s("782340"),
+  N = s("545627"),
+  g = e => {
     var t;
     let {
       className: s
-    } = e, n = (0, i.useStateFromStores)([d.default], () => d.default.getCurrentUser()), N = (0, i.useStateFromStores)([o.default], () => o.default.locale), g = (0, i.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()), f = (0, i.useStateFromStores)([u.default], () => null != g ? u.default.get(g.planId) : void 0), A = null !== (t = (0, i.useStateFromStores)([u.default], () => null != f ? u.default.getForSkuAndInterval(T.PremiumSubscriptionSKUs.GUILD, f.interval, f.intervalCount) : void 0)) && void 0 !== t ? t : T.SubscriptionPlanInfo[T.SubscriptionPlans.PREMIUM_MONTH_GUILD];
+    } = e, n = (0, i.useStateFromStores)([d.default], () => d.default.getCurrentUser()), g = (0, i.useStateFromStores)([o.default], () => o.default.locale), f = (0, i.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()), A = (0, i.useStateFromStores)([u.default], () => null != f ? u.default.get(f.planId) : void 0), L = null !== (t = (0, i.useStateFromStores)([u.default], () => null != A ? u.default.getForSkuAndInterval(I.PremiumSubscriptionSKUs.GUILD, A.interval, A.intervalCount) : void 0)) && void 0 !== t ? t : I.SubscriptionPlanInfo[I.SubscriptionPlans.PREMIUM_MONTH_GUILD];
     return (0, a.jsxs)("div", {
-      className: l(S.wrapper, s),
+      className: l(N.wrapper, s),
       children: [(0, a.jsx)(r.Heading, {
-        className: S.heading,
+        className: N.heading,
         variant: "heading-xl/semibold",
-        children: I.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_HEADING_PRIMARY
+        children: S.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_HEADING_PRIMARY
       }), (0, a.jsx)(r.Text, {
         variant: "text-md/normal",
         children: function(e) {
@@ -39,33 +40,33 @@ var n = s("414456"),
             guildBoostingPlanId: n,
             interval: l,
             intervalCount: i
-          } = e, r = E.default.getDefaultPrice(n, E.default.isPremium(t)), o = E.default.getDefaultPrice(n, !1), d = (0, _.formatRate)((0, _.formatPrice)(r.amount, r.currency), l, i), u = (0, _.formatRate)((0, _.formatPrice)(o.amount, o.currency), l, i);
-          return E.default.isPremium(t, T.PremiumTypes.TIER_2) ? I.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING_TIER_2.format({
+          } = e, r = _.default.getDefaultPrice(n, _.default.isPremium(t)), o = _.default.getDefaultPrice(n, !1), d = (0, T.formatRate)((0, T.formatPrice)(r.amount, r.currency), l, i), u = (0, T.formatRate)((0, T.formatPrice)(o.amount, o.currency), l, i);
+          return _.default.isPremium(t, I.PremiumTypes.TIER_2) ? S.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING_TIER_2.format({
             price: d,
             originalPrice: u,
             originalPriceHook: (e, t) => (0, a.jsx)("span", {
-              className: S.originalPrice,
+              className: N.originalPrice,
               children: e
             }, t),
-            freeSubscriptionCount: T.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-            discountPercent: (0, _.formatPercent)(s, T.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
-          }) : E.default.isPremium(t, T.PremiumTypes.TIER_1) ? I.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING_TIER_1.format({
+            freeSubscriptionCount: I.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
+            discountPercent: (0, E.formatPercent)(s, I.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+          }) : _.default.isPremium(t, I.PremiumTypes.TIER_1) ? S.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING_TIER_1.format({
             price: d,
             originalPrice: u,
             originalPriceHook: (e, t) => (0, a.jsx)("span", {
-              className: S.originalPrice,
+              className: N.originalPrice,
               children: e
             }, t),
-            discountPercent: (0, _.formatPercent)(s, T.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
-          }) : I.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING.format({
+            discountPercent: (0, E.formatPercent)(s, I.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+          }) : S.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING.format({
             price: d
           })
         }({
           currentUser: n,
-          locale: N,
-          guildBoostingPlanId: A.id,
-          interval: A.interval,
-          intervalCount: A.intervalCount
+          locale: g,
+          guildBoostingPlanId: L.id,
+          interval: L.interval,
+          intervalCount: L.intervalCount
         })
       })]
     })

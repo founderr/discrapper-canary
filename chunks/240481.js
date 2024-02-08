@@ -5,6 +5,9 @@ n.r(t), n.d(t, {
   },
   parseInteger: function() {
     return s
+  },
+  formatPercent: function() {
+    return a
   }
 });
 var i = n("782340");
@@ -24,4 +27,13 @@ function s(e) {
   if (null == e) return t;
   let n = parseInt(e);
   return Number.isNaN(n) ? t : n
+}
+
+function a(e, t) {
+  let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+  return Intl.NumberFormat(e, {
+    style: "percent",
+    minimumFractionDigits: 0,
+    ...n
+  }).format(t)
 }

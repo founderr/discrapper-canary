@@ -12,7 +12,7 @@ var a = n("37983"),
   o = n("669491"),
   u = n("77078"),
   d = n("915639"),
-  c = n("153160"),
+  c = n("240481"),
   f = n("227231"),
   E = n("278506"),
   _ = function(e) {
@@ -32,7 +32,9 @@ var a = n("37983"),
           variant: "text-xs/semibold",
           className: E.percentCompleteLabel,
           color: "none",
-          children: (0, c.formatPercent)(_, h)
+          children: (0, c.formatPercent)(_, h, {
+            roundingMode: "floor"
+          })
         }), (0, a.jsx)("div", {
           className: E.percentCompleteLabelOffset,
           style: {
