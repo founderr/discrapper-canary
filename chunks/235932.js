@@ -35,19 +35,19 @@ let c = (e, t, n) => {
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, 8, !0), (null === (l = t.assets) || void 0 === l ? void 0 : l.large_image) != null ? a.drawImage(o.AssetTypes.AssetImage, {
+    }, 8, !0), (null === (l = t.assets) || void 0 === l ? void 0 : l.large_image) != null ? a.drawRoundedImage(o.AssetTypes.AssetImage, {
       x: 0,
       y: 8
     }, {
       w: o.activitySize,
       h: o.activitySize
-    }) : (null === (i = a.assetMap) || void 0 === i ? void 0 : i.has(o.AssetTypes.ApplicationImage)) && a.drawImage("ApplicationImage", {
+    }, 8) : (null === (i = a.assetMap) || void 0 === i ? void 0 : i.has(o.AssetTypes.ApplicationImage)) && a.drawRoundedImage("ApplicationImage", {
       x: 0,
       y: 8
     }, {
       w: o.activitySize,
       h: o.activitySize
-    }), a.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), a.setFont({
+    }, 8), a.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), a.setFont({
       size: 16,
       family: "sans-serif"
     }), a.drawText("".concat(n.username, " is playing"), {
@@ -84,13 +84,13 @@ let c = (e, t, n) => {
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, 8, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.AssetImage)) && i.drawImage(o.AssetTypes.AssetImage, {
+    }, 8, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.AssetImage)) && i.drawRoundedImage(o.AssetTypes.AssetImage, {
       x: o.padding,
       y: o.padding
     }, {
       w: o.activitySize,
       h: o.activitySize
-    });
+    }, 8);
     let r = o.activitySize + o.padding + o.imagePadding;
     i.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), i.setFont({
       size: 16,
@@ -132,13 +132,13 @@ let c = (e, t, n) => {
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, 8, !0), null != s && l.drawImage(o.AssetTypes.AssetImage, {
+    }, 8, !0), null != s && l.drawRoundedImage(o.AssetTypes.AssetImage, {
       x: o.padding,
       y: o.padding
     }, {
       w: o.activitySize,
       h: o.activitySize
-    });
+    }, 8);
     let f = o.activitySize + o.padding + o.imagePadding;
     l.setColor("dark" === c ? "white" : "rgb(6, 6, 7)"), l.setFont({
       size: 16,
@@ -178,13 +178,13 @@ let c = (e, t, n) => {
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, 8, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.StreamPreview)) && i.drawImage(o.AssetTypes.StreamPreview, {
+    }, 8, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.StreamPreview)) && i.drawRoundedImage(o.AssetTypes.StreamPreview, {
       x: 8,
       y: 54
     }, {
       w: 240,
       h: 180
-    }), i.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), i.setFont({
+    }, 8), i.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), i.setFont({
       size: 16
     }), i.drawText("".concat(n.username), {
       x: 8,

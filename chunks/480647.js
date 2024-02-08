@@ -71,6 +71,21 @@ l = class extends i.default {
     let l = this.getLoadedImage(e);
     return null == l ? s.DrawResultStatus.ImageNotLoaded : (null != n ? this.context.drawImage(l, t.x, t.y, n.w, n.h) : this.context.drawImage(l, t.x, t.y), s.DrawResultStatus.Success)
   }
+  drawRoundedImage(e, t, n, l) {
+    if (null == this.context) return s.DrawResultStatus.Failure;
+    let {
+      x: i,
+      y: a
+    } = t, {
+      w: r,
+      h: o
+    } = n;
+    this.context.save();
+    let u = new Path2D;
+    u.roundRect(i, a, r, o, l), this.context.clip(u);
+    let d = this.drawImage(e, t, n);
+    return this.context.restore(), d
+  }
   drawCroppedImage(e, t, n) {
     if (null == this.context) return s.DrawResultStatus.Failure;
     let l = this.getLoadedImage(e);
