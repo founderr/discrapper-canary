@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("635956"),
   h = n("599110"),
   E = n("719923"),
-  g = n("23106"),
-  S = n("553372"),
+  S = n("23106"),
+  g = n("553372"),
   C = n("49111"),
   T = n("646718"),
   v = n("782340"),
@@ -42,7 +42,7 @@ function y(e) {
     analyticsLocations: P
   } = (0, f.default)(c.default.PREMIUM_UPSELL), {
     previewSound: b
-  } = (0, g.default)(A, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), j = (0, S.PreviewButton)({
+  } = (0, S.default)(A, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), j = (0, g.PreviewButton)({
     sound: A,
     previewSound: b,
     tooltipPosition: "left"

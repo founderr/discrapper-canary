@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("222007"), n("860677");
 var l = n("446674"),
@@ -57,7 +57,7 @@ class E extends l.default.Store {
   }
 }
 E.displayName = "UploadStore";
-var g = new E(i.default, {
+var S = new E(i.default, {
   CONNECTION_OPEN: function() {
     c = {}
   },

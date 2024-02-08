@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 });
 var l, i, r = n("450911"),
-  s = n("819689"),
-  a = n("605250"),
+  a = n("819689"),
+  s = n("605250"),
   u = n("42203"),
   o = n("718517"),
   d = n("231987");
@@ -17,7 +17,7 @@ let c = 1 * o.default.Millis.SECOND + 10;
 (l = i || (i = {}))[l.GROUP_DM = 0] = "GROUP_DM", l[l.USER = 1] = "USER", l[l.CHANNEL = 2] = "CHANNEL";
 class f extends d.default {
   _sendInvite(e, t, n, l, i) {
-    s.default.sendInvite(e.id, t, n, l).then(() => i(null, !0), () => i(null, !1))
+    a.default.sendInvite(e.id, t, n, l).then(() => i(null, !0), () => i(null, !1))
   }
   drain(e, t) {
     let {
@@ -37,7 +37,7 @@ class f extends d.default {
     }
   }
   constructor() {
-    super(new a.default("InviteQueue"), c)
+    super(new s.default("InviteQueue"), c)
   }
 }
 var h = new f

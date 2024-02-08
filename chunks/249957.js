@@ -10,8 +10,8 @@ var l = n("414456"),
   s = n.n(l),
   i = n("65597"),
   r = n("77078"),
-  o = n("26989"),
-  u = n("697218"),
+  u = n("26989"),
+  o = n("697218"),
   d = n("339123"),
   c = n("763225"),
   f = n("703433"),
@@ -56,7 +56,7 @@ function g(e) {
     location: l,
     className: r,
     onNavigate: d
-  } = e, g = (0, i.default)([u.default], () => u.default.getUser(t), [t]), S = (0, i.default)([o.default], () => o.default.getMember(n, t), [n, t]), _ = (0, c.useProfileThemedPanelBackground)(t, n);
+  } = e, g = (0, i.default)([o.default], () => o.default.getUser(t), [t]), S = (0, i.default)([u.default], () => u.default.getMember(n, t), [n, t]), _ = (0, c.useProfileThemedPanelBackground)(t, n);
   return null == g || null == S ? null : (0, a.jsxs)("div", {
     className: s(E.container, r),
     style: {

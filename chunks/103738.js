@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("737960"),
-  o = n("141681"),
-  u = n("271938"),
+  u = n("141681"),
+  o = n("271938"),
   d = n("145131"),
   c = n("659500"),
   f = n("119106"),
@@ -47,7 +47,7 @@ var a = n("37983"),
     l.useEffect(() => {
       c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
     }, [L, O]);
-    let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
+    let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(o.default.getId())), [n, r]);
     if ((null == D ? void 0 : D.channelId) === x.id) return (0, a.jsx)(h.default, {
       height: O
     });
@@ -56,7 +56,7 @@ var a = n("37983"),
       participants: t,
       hasConnectPermission: N
     });
-    if (b === C.ChannelModes.VOICE) return (0, a.jsx)(o.default, {
+    if (b === C.ChannelModes.VOICE) return (0, a.jsx)(u.default, {
       guildId: x.guild_id,
       width: L,
       className: S.voiceCallWrapper,

@@ -19,8 +19,8 @@ var i = n("446674"),
   m = n("619911"),
   h = n("659500"),
   E = n("295999"),
-  g = n("49111"),
-  S = n("782340"),
+  S = n("49111"),
+  g = n("782340"),
   C = n("317468");
 
 function T(e) {
@@ -40,14 +40,14 @@ function T(e) {
       } = e;
       return t !== v.ownerId
     }).length > 0
-  })), y = (0, i.useStateFromStores)([f.default], () => f.default.getChannel(null == v ? void 0 : v.channelId)), [A, N] = (0, d.useCanWatchStream)(y), x = (0, u.useWindowDispatch)(), O = null != I && null != v && I.state !== g.ApplicationStreamStates.ENDED && I.ownerId === v.ownerId, R = e => {
+  })), y = (0, i.useStateFromStores)([f.default], () => f.default.getChannel(null == v ? void 0 : v.channelId)), [A, N] = (0, d.useCanWatchStream)(y), x = (0, u.useWindowDispatch)(), O = null != I && null != v && I.state !== S.ApplicationStreamStates.ENDED && I.ownerId === v.ownerId, R = e => {
     null != v && (r.default.selectVoiceChannel(v.channelId), !O && (0, o.watchStreamAndTransitionToStream)(v, {
       forceMultiple: e
-    }), x.dispatch(g.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(g.ComponentActions.MODAL_CLOSE), s.default.popAll())
+    }), x.dispatch(S.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(S.ComponentActions.MODAL_CLOSE), s.default.popAll())
   };
   if (null == v) return null;
   let M = (0, d.getStreamCTAString)(N);
-  t ? M = S.default.Messages.WATCH_STREAM_STREAMING : O && (M = S.default.Messages.WATCH_STREAM_WATCHING);
+  t ? M = g.default.Messages.WATCH_STREAM_STREAMING : O && (M = g.default.Messages.WATCH_STREAM_WATCHING);
   let L = {
     color: n,
     look: T
@@ -62,7 +62,7 @@ function T(e) {
         className: C.streamIcon
       }), M]
     }, "play"), _ && !O ? (0, l.jsx)(a.Tooltip, {
-      text: S.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+      text: g.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
       children: e => (0, l.jsx)(E.default, {
         ...e,
         onClick: () => {

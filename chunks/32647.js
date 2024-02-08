@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("83800"),
   h = n("776574"),
   E = n("970153"),
-  g = n("939563"),
-  S = n("385887"),
+  S = n("939563"),
+  g = n("385887"),
   C = n("755604"),
   T = n("664610"),
   v = n("688893"),
@@ -72,12 +72,12 @@ var l = n("37983"),
       "aria-describedby": ed,
       "aria-labelledby": ec,
       "aria-autocomplete": ef
-    } = e, ep = i.useRef(null), em = i.useRef(null), eh = i.useRef(!0), eE = i.useRef(!0), eg = j || U, eS = i.useCallback((e, t, n) => {
+    } = e, ep = i.useRef(null), em = i.useRef(null), eh = i.useRef(!0), eE = i.useRef(!0), eS = j || U, eg = i.useCallback((e, t, n) => {
       var l;
       let {
         value: i,
         selection: a
-      } = n, s = S.EditorUtils.richValue(e), r = e.selection, o = !1;
+      } = n, s = g.EditorUtils.richValue(e), r = e.selection, o = !1;
       if (void 0 !== i && i !== s) {
         if (e.children = i, "parent" === t && !e.previewMarkdown) {
           try {
@@ -88,14 +88,14 @@ var l = n("37983"),
         }
         "undo" !== t && void 0 !== i && i !== s && m.HistoryUtils.insertEntry(e, "other", !1, s, r), o = !0
       }
-      if (null != a && !S.SelectionUtils.isValid(e, a) && (a = void 0), (o || !S.SelectionUtils.isValid(e, r)) && void 0 === a) {
-        let t = S.EditorUtils.end(e, []);
+      if (null != a && !g.SelectionUtils.isValid(e, a) && (a = void 0), (o || !g.SelectionUtils.isValid(e, r)) && void 0 === a) {
+        let t = g.EditorUtils.end(e, []);
         a = {
           anchor: t,
           focus: t
         }
       }
-      if (null != a && !S.SelectionUtils.equals(a, r)) {
+      if (null != a && !g.SelectionUtils.equals(a, r)) {
         e.selection = a;
         let t = m.HistoryUtils.currentEntry(e);
         null != t && (t.selection = a), o = !0
@@ -104,7 +104,7 @@ var l = n("37983"),
       if (null != d && d[0].command.id !== (null === (l = u.default.getActiveCommand(L.id)) || void 0 === l ? void 0 : l.id) && m.HistoryUtils.withMergedEntry(e, () => {
           (0, A.unsetCommand)(e, L.id, null, !0)
         }), o) {
-        if (!et && S.EditorUtils.focus(e), "parent" === t) try {
+        if (!et && g.EditorUtils.focus(e), "parent" === t) try {
           eE.current = !1, e.onChange()
         } finally {
           eE.current = !0
@@ -121,7 +121,7 @@ var l = n("37983"),
       canOnlyUseTextCommands: ee,
       onChangeStart: eC,
       onChangeEnd: eT,
-      updateState: eS
+      updateState: eg
     }), eI = i.useCallback((e, t) => {
       let n = p.getOptionValues(ev, e),
         l = p.validateOptionValues(e, L.guild_id, L.id, n, t);
@@ -140,11 +140,11 @@ var l = n("37983"),
             var n;
             return (null !== (n = t.options) && void 0 !== n ? n : []).find(t => t.name === e)
           });
-        for (let e of t.options) e.required && !(e.name in i.values) && (g.SlateTransforms.insertCommandOption(ev, e), s.push(e));
+        for (let e of t.options) e.required && !(e.name in i.values) && (S.SlateTransforms.insertCommandOption(ev, e), s.push(e));
         if (s.length > 0) {
           var n, l;
           let e = s[0];
-          g.SlateTransforms.selectCommandOption(ev, e.name), f.ComponentDispatch.dispatch(R.ComponentActions.SHAKE_APP, {
+          S.SlateTransforms.selectCommandOption(ev, e.name), f.ComponentDispatch.dispatch(R.ComponentActions.SHAKE_APP, {
             duration: 200,
             intensity: 2
           }), (0, o.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_VALIDATION_FAILED, {
@@ -156,7 +156,7 @@ var l = n("37983"),
           return
         }
       }
-      null == J || J((0, E.toTextValue)(S.EditorUtils.richValue(ev), {
+      null == J || J((0, E.toTextValue)(g.EditorUtils.richValue(ev), {
         mode: "raw",
         ignoreTrailingEmptyNodes: !0
       }), t, e)
@@ -180,7 +180,7 @@ var l = n("37983"),
     }), {
       handlePaste: eN,
       handleGlobalPaste: ex
-    } = (0, _.default)(ev, eg, G), eO = i.useCallback(e => {
+    } = (0, _.default)(ev, eS, G), eO = i.useCallback(e => {
       null == q || q()
     }, [q]), eR = i.useCallback(e => {
       e !== em.current ? eE.current && (null == F || F(null, (0, E.toTextValue)(e, {
@@ -188,10 +188,10 @@ var l = n("37983"),
       }), e)) : eE.current && q()
     }, [q, F]);
     i.useLayoutEffect(() => {
-      eh.current && (em.current = n, eS(ev, "parent", {
+      eh.current && (em.current = n, eg(ev, "parent", {
         value: n
       }))
-    }, [ev, n, eS]), i.useEffect(() => {
+    }, [ev, n, eg]), i.useEffect(() => {
       let e = () => {
         var e;
         let t = null !== (e = u.default.getActiveCommand(L.id)) && void 0 !== e ? e : null;
@@ -216,7 +216,7 @@ var l = n("37983"),
           guildId: L.guild_id,
           className: s(M.slateTextArea, w),
           placeholder: D,
-          readOnly: eg,
+          readOnly: eS,
           spellCheck: X,
           autoFocus: !et,
           canFocus: !j,

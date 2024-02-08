@@ -197,19 +197,19 @@ var h = e => {
     renderer: u,
     activity: h,
     user: E,
-    onComplete: g,
-    stream: S
+    onComplete: S,
+    stream: g
   } = e;
   {
     let e = n("800044").default;
     r = new e
   }
   let C = new s.default(u, r);
-  null != S ? m(C, h, E) : (0, a.default)(h) ? f(C, h, E) : (0, i.default)(h) && h.name === l.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? p(C, h, E) : c(C, h, E), (null === (t = C.canvas.assetMap) || void 0 === t ? void 0 : t.has(o.AssetTypes.Platform)) && C.canvas.drawImage(o.AssetTypes.Platform, {
+  null != g ? m(C, h, E) : (0, a.default)(h) ? f(C, h, E) : (0, i.default)(h) && h.name === l.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? p(C, h, E) : c(C, h, E), (null === (t = C.canvas.assetMap) || void 0 === t ? void 0 : t.has(o.AssetTypes.Platform)) && C.canvas.drawImage(o.AssetTypes.Platform, {
     x: o.canvasWidth - o.padding - o.platformSize,
     y: o.padding
   }, {
     w: o.platformSize,
     h: o.platformSize
-  }), g(C)
+  }), S(C)
 }

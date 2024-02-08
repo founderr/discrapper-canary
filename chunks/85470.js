@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return v
   }
 });
-var s = n("884691"),
-  a = n("819689"),
+var a = n("884691"),
+  s = n("819689"),
   l = n("267567"),
   i = n("625149"),
   r = n("300322"),
@@ -21,19 +21,19 @@ var s = n("884691"),
   E = n("306160"),
   g = n("659500"),
   S = n("773336"),
-  A = n("61400"),
-  _ = n("913491"),
+  _ = n("61400"),
+  A = n("913491"),
   T = n("583022"),
   M = n("363396"),
-  I = n("49111");
+  N = n("49111");
 
-function N(e) {
-  return m.default.can(I.Permissions.MANAGE_MESSAGES, e)
+function I(e) {
+  return m.default.can(N.Permissions.MANAGE_MESSAGES, e)
 }
 var v = function(e, t, n) {
-  let v = s.useRef(n);
-  return v.current = n, s.useCallback(n => {
-    var s, L, x, R, y;
+  let v = a.useRef(n);
+  return v.current = n, a.useCallback(n => {
+    var a, L, x, R, y;
     if (!v.current || n.target !== n.currentTarget) return;
     let O = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       D = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
@@ -47,7 +47,7 @@ var v = function(e, t, n) {
       k = H.author.id === U;
     switch (n.key.toLowerCase()) {
       case "backspace":
-        O && (N(F) || k) && (n.preventDefault(), (0, M.deleteMessage)(F, H, n));
+        O && (I(F) || k) && (n.preventDefault(), (0, M.deleteMessage)(F, H, n));
         break;
       case "c":
         ((0, S.isMac)() ? P : j) && E.SUPPORTS_COPY && (n.preventDefault(), (0, E.copy)(H.content));
@@ -55,13 +55,13 @@ var v = function(e, t, n) {
       case "e":
         if (O) {
           ;
-          if (s = U, L = F, x = H, !L.isSystemDM() && (0, A.default)(x, s)) n.preventDefault(), (0, M.editMessage)(F, H)
+          if (a = U, L = F, x = H, !L.isSystemDM() && (0, _.default)(x, a)) n.preventDefault(), (0, M.editMessage)(F, H)
         }
         break;
       case "p":
         if (O || b) {
           ;
-          if (R = F, y = H, !R.isSystemDM() && !(0, _.default)(y) && (N(R) || R.isPrivate())) n.preventDefault(), (0, M.pinMessage)(F, H, n)
+          if (R = F, y = H, !R.isSystemDM() && !(0, A.default)(y) && (I(R) || R.isPrivate())) n.preventDefault(), (0, M.pinMessage)(F, H, n)
         }
         break;
       case "+":
@@ -69,18 +69,18 @@ var v = function(e, t, n) {
           let t = null == e.guild_id || C.default.canChatInGuild(e.guild_id),
             n = u.RenderReactions.getSetting(),
             {
-              disableReactionCreates: s
+              disableReactionCreates: a
             } = (0, T.default)({
               channel: e,
               canChat: t,
               renderReactions: n,
-              canAddNewReactions: t && m.default.can(I.Permissions.ADD_REACTIONS, e),
+              canAddNewReactions: t && m.default.can(N.Permissions.ADD_REACTIONS, e),
               isLurking: null != e.guild_id && l.default.isLurking(e.guild_id),
               isGuest: null != e.guild_id && h.default.isCurrentUserGuest(e.guild_id),
               isActiveChannelOrUnarchivableThread: (0, r.getIsActiveChannelOrUnarchivableThread)(e)
             });
-          return !s && n
-        }(F) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(I.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, H.id, {
+          return !a && n
+        }(F) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(N.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, H.id, {
           emojiPicker: !0
         }));
         break;
@@ -89,7 +89,7 @@ var v = function(e, t, n) {
         break;
       case "t":
         if (O && (0, r.computeCanStartPublicThread)(F, H)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(F, H, "Message Shortcut");
-        else if (H.hasFlag(I.MessageFlags.HAS_THREAD)) {
+        else if (H.hasFlag(N.MessageFlags.HAS_THREAD)) {
           let e = c.default.getChannel(H.id);
           null != e && (O || b) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, b))
         }
@@ -98,7 +98,7 @@ var v = function(e, t, n) {
         D && (n.preventDefault(), (0, M.markMessageUnread)(F, H));
         break;
       case "escape":
-        f.default.isEditing(F.id, H.id) ? a.default.endEditMessage(F.id) : g.ComponentDispatch.dispatch(I.ComponentActions.TEXTAREA_FOCUS)
+        f.default.isEditing(F.id, H.id) ? s.default.endEditMessage(F.id) : g.ComponentDispatch.dispatch(N.ComponentActions.TEXTAREA_FOCUS)
     }
   }, [e, t])
 }

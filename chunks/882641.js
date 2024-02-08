@@ -29,8 +29,8 @@ var h = function(e) {
     className: a,
     renderButtonContents: h,
     active: E,
-    onClick: g,
-    "aria-controls": S,
+    onClick: S,
+    "aria-controls": g,
     focusProps: C
   } = e, [T, v] = i.useState(!1), [I, _] = i.useState(50), y = T || E, A = (0, d.getClass)(p, "emojiButton", y ? "Hovered" : "Normal");
   let N = (t = I, {
@@ -62,9 +62,9 @@ var h = function(e) {
     onMouseOver: x,
     onMouseLeave: O,
     onFocus: R,
-    onClick: g,
+    onClick: S,
     "aria-label": f.default.Messages.SELECT_EMOJI,
-    "aria-controls": S,
+    "aria-controls": g,
     "aria-expanded": E,
     "aria-haspopup": "dialog",
     focusProps: C,

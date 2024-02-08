@@ -44,8 +44,8 @@ var i, s, l, a = n("627445"),
   S = n("325796"),
   v = n("364281"),
   y = n("797694"),
-  m = n("512395"),
-  _ = n("15684"),
+  _ = n("512395"),
+  m = n("15684"),
   w = n("401690"),
   N = n("755624"),
   T = n("233069"),
@@ -312,7 +312,7 @@ class $ {
   }
   constructor(e, t) {
     var n, i;
-    this.id = e, this.sortedNamedCategories = null, this.sections = null, this.rows = null, this.firstVoiceChannel = void 0, this.allChannelsById = null, this.version = 0, this.hideMutedChannels = U.default.isGuildCollapsed(this.id), this.mutedChannelIds = U.default.getMutedChannels(this.id), this.optedInChannels = null !== (n = U.default.getOptedInChannelsWithPendingUpdates(this.id)) && void 0 !== n ? n : U.default.getOptedInChannels(this.id), this.optInEnabled = (0, m.isOptInEnabledForGuild)(this.id), this.hideResourceChannels = (0, f.canSeeOnboardingHome)(this.id), this.favoriteChannelIds = new Set(null !== (i = U.default.getGuildFavorites(this.id)) && void 0 !== i ? i : []), this.suggestedFavoriteChannelId = v.default.getSuggestedChannelId(this.id), this.collapsedCategoryIds = L.default.getCollapsedCategories();
+    this.id = e, this.sortedNamedCategories = null, this.sections = null, this.rows = null, this.firstVoiceChannel = void 0, this.allChannelsById = null, this.version = 0, this.hideMutedChannels = U.default.isGuildCollapsed(this.id), this.mutedChannelIds = U.default.getMutedChannels(this.id), this.optedInChannels = null !== (n = U.default.getOptedInChannelsWithPendingUpdates(this.id)) && void 0 !== n ? n : U.default.getOptedInChannels(this.id), this.optInEnabled = (0, _.isOptInEnabledForGuild)(this.id), this.hideResourceChannels = (0, f.canSeeOnboardingHome)(this.id), this.favoriteChannelIds = new Set(null !== (i = U.default.getGuildFavorites(this.id)) && void 0 !== i ? i : []), this.suggestedFavoriteChannelId = v.default.getSuggestedChannelId(this.id), this.collapsedCategoryIds = L.default.getCollapsedCategories();
     let s = R.default.getMutableGuildChannelsForGuild(this.id),
       l = O.default.getGuild(this.id),
       a = {},
@@ -802,7 +802,7 @@ function eE(e, t) {
   for (let t in i[e.id])
     if (D.default.getMentionCount(t) > 0) return !0;
   if (null != n && (n.id === e.id || n.isThread() && n.parent_id === e.id)) return true;
-  let s = _.default.getNewChannelIds(e.category.guild.id);
+  let s = m.default.getNewChannelIds(e.category.guild.id);
   if (s.size > X);
   else if (s.has(e.id)) return !0;
   return !1
@@ -815,7 +815,7 @@ function eS(e, t, n) {
   } = n;
   if (t.type === k.ChannelTypes.GUILD_DIRECTORY || !e.optInEnabled || t.isGuildVocal() || e.optedInChannels.has(t.id) || t.isThread() || null != t.parent_id && e.optedInChannels.has(t.parent_id) || e.hideResourceChannels && t.hasFlag(W.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) return !1;
   if (null != i && !(0, E.isInMainTabsExperiment)() && (i.id === t.id || i.isThread() && i.parent_id === t.id) || D.default.getMentionCount(t.id) > 0) return !0;
-  let l = _.default.getNewChannelIds(e.id),
+  let l = m.default.getNewChannelIds(e.id),
     a = Array.from(l).sort((e, t) => H.default.compare(t, e));
   if (l.has(t.id) && a.indexOf(t.id) < X) return !0;
   for (let e in s[t.id])

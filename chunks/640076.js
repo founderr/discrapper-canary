@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("986632"),
   h = n("538282"),
   E = n("246511"),
-  g = n("45961"),
-  S = n("515059"),
+  S = n("45961"),
+  g = n("515059"),
   C = n("139321"),
   T = n("845579"),
   v = n("124299"),
@@ -55,7 +55,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       onEmojiSelect: c,
       searchQuery: f,
       sectionDescriptors: h,
-      setCollapsedSections: g,
+      setCollapsedSections: S,
       getEmojiItemProps: T,
       getEmojiRowProps: v,
       isScrolling: _,
@@ -74,8 +74,8 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         tab: P.ExpressionPickerViewType.EMOJI,
         collapsed: !i,
         guild_id: n.id
-      }), g(l)
-    }, [J, t, g]), X = i.useCallback(e => {
+      }), S(l)
+    }, [J, t, S]), X = i.useCallback(e => {
       let {
         columnIndex: t,
         visibleRowIndex: n
@@ -130,7 +130,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
             width: 16
           }) : null,
           d = null == i ? void 0 : i.toString();
-        return null != a && (d = (0, y.getStringForEmojiCategory)(a, null == i ? void 0 : i.toString())), (0, l.jsx)(S.default, {
+        return null != a && (d = (0, y.getStringForEmojiCategory)(a, null == i ? void 0 : i.toString())), (0, l.jsx)(g.default, {
           className: s(j.header, z),
           icon: u,
           isCollapsed: t.has(o),
@@ -201,7 +201,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       setCollapsedSections: c,
       getEmojiItemProps: p,
       getEmojiRowProps: E,
-      rowCount: S,
+      rowCount: g,
       isUsingKeyboardNavigation: C,
       channelGuildId: I,
       messageId: _,
@@ -234,7 +234,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       messageId: _,
       isBurstReaction: y,
       listHeaderClassName: A
-    }), G = (0, g.useSynchronizedActiveCategoryIndexForScrollPosition)({
+    }), G = (0, S.useSynchronizedActiveCategoryIndexForScrollPosition)({
       activeCategoryIndex: x,
       isScrolling: N,
       listRef: a,
@@ -242,7 +242,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       scrollOffset: 20,
       searchQuery: O
     });
-    (0, g.useSynchronizedScrollPositionForActiveCategoryIndex)({
+    (0, S.useSynchronizedScrollPositionForActiveCategoryIndex)({
       searchQuery: O,
       activeCategoryIndex: x,
       listRef: a
@@ -259,7 +259,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         renderSection: P,
         renderSectionHeader: U,
         renderSectionFooter: D,
-        rowCount: S,
+        rowCount: g,
         rowCountBySection: u,
         rowHeight: K(s),
         sectionHeaderHeight: w,

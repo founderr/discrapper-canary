@@ -19,8 +19,8 @@ var i = n("446674"),
   m = n("713135"),
   h = n("999203"),
   E = n("609734"),
-  g = n("777003"),
-  S = n("49111"),
+  S = n("777003"),
+  g = n("49111"),
   C = n("782340"),
   T = n("431375");
 
@@ -42,7 +42,7 @@ function v(e) {
   } = r.appStorefrontExperiment.useExperiment({
     location: "BotButtonsSection"
   });
-  return s || o ? (0, l.jsx)(g.default, {
+  return s || o ? (0, l.jsx)(S.default, {
     children: (0, l.jsxs)("div", {
       className: T.buttonsContainer,
       children: [(0, l.jsx)(E.default, {
@@ -71,7 +71,7 @@ function I(e) {
     guildId: n,
     groupListingId: null == t ? void 0 : t.id,
     showBenefitsFirst: !0,
-    analyticsLocation: S.AnalyticsLocations.BOT_PROFILE_POPOUT
+    analyticsLocation: g.AnalyticsLocations.BOT_PROFILE_POPOUT
   });
   return (0, l.jsx)(u.default, {
     onClick: a,

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var s = n("862205");
-let a = (0, s.createExperiment)({
+var a = n("862205");
+let s = (0, a.createExperiment)({
   kind: "user",
   id: "2022-07_system_dm_safety_onboarding",
   label: "System DM Safety Onboarding",
@@ -29,10 +29,10 @@ let a = (0, s.createExperiment)({
     }
   }]
 });
-var l = a;
+var l = s;
 
 function i() {
-  return a.getCurrentConfig({
+  return s.getCurrentConfig({
     location: "0a5674_1"
   }, {
     autoTrackExposure: !1

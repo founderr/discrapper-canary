@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n.n(r),
-  u = n("446674"),
+  u = n.n(r),
+  o = n("446674"),
   d = n("77078"),
   c = n("970728"),
   f = n("378438"),
@@ -46,7 +46,7 @@ class A extends l.Component {
         a = 0,
         l = 0,
         s = 0;
-      null != t.props.searchResults && o(t.props.searchResults).flatten().filter(e => e.isSearchHit).forEach(e => {
+      null != t.props.searchResults && u(t.props.searchResults).flatten().filter(e => e.isSearchHit).forEach(e => {
         null != e.content && "" !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++), null != e.embeds && e.embeds.length > 0 && l++, null != e.attachments && e.attachments.length > 0 && a++
       }), h.default.trackWithMetadata(v.AnalyticEvents.SEARCH_RESULT_VIEWED, {
         search_type: t.props.searchType,
@@ -267,7 +267,7 @@ function j(e) {
   } = e;
   return (0, a.jsx)(R, {
     searchId: t,
-    ...(0, u.useStateFromStoresObject)([E.default], () => ({
+    ...(0, o.useStateFromStoresObject)([E.default], () => ({
       search: E.default.getResultsState(t),
       searchAnalyticsId: E.default.getAnalyticsId(t),
       searchType: E.default.getSearchType()
@@ -275,7 +275,7 @@ function j(e) {
     ...(0, _.default)(t),
     renderEmbeds: m.RenderEmbeds.useSetting(),
     developerMode: m.DeveloperMode.useSetting(),
-    ...(0, u.useStateFromStoresObject)([p.default], () => {
+    ...(0, o.useStateFromStoresObject)([p.default], () => {
       let {
         theme: e
       } = p.default;

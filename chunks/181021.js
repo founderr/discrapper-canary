@@ -19,8 +19,8 @@ var i = n("65597"),
   m = n("227602"),
   h = n("471671"),
   E = n("945330"),
-  g = n("95689"),
-  S = n("423487"),
+  S = n("95689"),
+  g = n("423487"),
   C = n("773336"),
   T = n("13798"),
   v = n("235004"),
@@ -38,7 +38,7 @@ function A(e) {
       emojiId: t.emojiId,
       emojiName: t.emojiName,
       className: y.emoji
-    }) : (0, l.jsx)(g.default, {
+    }) : (0, l.jsx)(S.default, {
       className: y.emoji
     }),
     graphicSecondary: null != O ? (0, l.jsx)(d.default, {
@@ -69,7 +69,7 @@ function A(e) {
     }) : null;
   return null == j ? null : (0, l.jsxs)("div", {
     className: y.keybindHint,
-    children: [(0, l.jsx)(S.default, {
+    children: [(0, l.jsx)(g.default, {
       className: y.warningIcon
     }), (0, l.jsx)(s.Text, {
       variant: "text-sm/medium",

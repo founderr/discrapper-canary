@@ -33,8 +33,8 @@ var a = n("483366"),
   s = n("759843"),
   i = n("872717"),
   r = n("913144"),
-  o = n("840707"),
-  u = n("393467"),
+  u = n("840707"),
+  o = n("393467"),
   d = n("730647"),
   c = n("49111");
 let f = l(async (e, t) => {
@@ -73,7 +73,7 @@ let f = l(async (e, t) => {
   }, 200);
 async function p(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.DirectoryEntryCategories.UNCATEGORIZED,
-    l = await o.default.post({
+    l = await u.default.post({
       url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),
       body: {
         description: n,
@@ -96,7 +96,7 @@ async function p(e, t, n) {
 }
 
 function m(e, t) {
-  o.default.delete({
+  u.default.delete({
     url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),
     trackedActionData: {
       event: s.NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
@@ -112,7 +112,7 @@ function m(e, t) {
   })
 }
 let E = l(async (e, t) => {
-    let n = u.default.shouldFetch(e, t);
+    let n = o.default.shouldFetch(e, t);
     if (!n) {
       r.default.dispatch({
         type: "GUILD_DIRECTORY_CACHED_SEARCH",

@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
-  o = n.n(r),
-  u = n("90915"),
+  u = n.n(r),
+  o = n("90915"),
   d = n("446674"),
   c = n("77078"),
   f = n("988738"),
@@ -72,14 +72,14 @@ class B extends l.Component {
       saturation: e,
       guestWindow: t
     } = this.props, n = t.document.documentElement;
-    o(null != n, "Window document element was null"), n.style.setProperty("--saturation-factor", e.toString())
+    u(null != n, "Window document element was null"), n.style.setProperty("--saturation-factor", e.toString())
   }
   updateLocale() {
     let {
       locale: e,
       guestWindow: t
     } = this.props, n = t.document.documentElement;
-    o(null != n, "Window document element was null"), n.lang = e
+    u(null != n, "Window document element was null"), n.lang = e
   }
   updateTitle() {
     let {
@@ -93,14 +93,14 @@ class B extends l.Component {
       fontScale: e,
       guestWindow: t
     } = this.props, n = t.document.documentElement;
-    o(null != n, "Window document element was null"), n.style.fontSize = "".concat(e, "%")
+    u(null != n, "Window document element was null"), n.style.fontSize = "".concat(e, "%")
   }
   updateClientTheme() {
     let {
       clientThemesCSS: e,
       guestWindow: t
     } = this.props, n = t.document, a = (0, n.head);
-    o(null != a, "Window document ".concat("head", " was null"));
+    u(null != a, "Window document ".concat("head", " was null"));
     let l = a.querySelector("style[".concat(_.CLIENT_THEMES_DATA_ATTRIBUTE, "]"));
     if (null != l) {
       l.textContent = e;
@@ -117,7 +117,7 @@ class B extends l.Component {
       appFocused: l,
       children: s,
       windowKey: r,
-      mouseModeEnabled: o,
+      mouseModeEnabled: u,
       keyboardModeEnabled: d,
       reducedMotionEnabled: p,
       fontScaleClass: E,
@@ -127,14 +127,14 @@ class B extends l.Component {
       clientThemesClassName: _,
       contentClassName: x
     } = this.props, N = (0, b.getPlatform)(), M = i(E, {
-      "mouse-mode": o,
+      "mouse-mode": u,
       "reduce-motion": p,
       "full-motion": !p,
       "keyboard-mode": d,
       "app-focused": n || l,
       "low-saturation": C <= .4
     });
-    return (0, a.jsx)(u.BrowserRouter, {
+    return (0, a.jsx)(o.BrowserRouter, {
       children: (0, a.jsx)(A.default, {
         children: (0, a.jsx)(c.ThemeContextProvider, {
           theme: e,
@@ -198,7 +198,7 @@ let H = l.forwardRef(function(e, t) {
     guestWindow: w.default.getWindow(e.windowKey),
     focused: w.default.getWindowFocused(e.windowKey)
   }));
-  o(null != n, "Missing guestWindow reference");
+  u(null != n, "Missing guestWindow reference");
   let s = (0, d.useStateFromStores)([L.default], () => L.default.isFocused()),
     {
       locale: i,
@@ -207,7 +207,7 @@ let H = l.forwardRef(function(e, t) {
       locale: M.default.locale,
       theme: R.default.theme
     })),
-    u = (0, d.useStateFromStores)([p.default], () => p.default.useForcedColors ? "yes" : "no"),
+    o = (0, d.useStateFromStores)([p.default], () => p.default.useForcedColors ? "yes" : "no"),
     {
       fontScale: f,
       keyboardModeEnabled: h,
@@ -241,7 +241,7 @@ let H = l.forwardRef(function(e, t) {
         appFocused: s,
         locale: i,
         theme: r,
-        forcedColors: u,
+        forcedColors: o,
         fontScale: f,
         keyboardModeEnabled: h,
         mouseModeEnabled: v,

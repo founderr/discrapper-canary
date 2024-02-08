@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("65597"),
   i = n("77078"),
   r = n("509"),
-  o = n("64905"),
-  u = n("178406"),
+  u = n("64905"),
+  o = n("178406"),
   d = n("91551"),
   c = n("4845"),
   f = n("491401"),
@@ -21,10 +21,10 @@ var a = n("37983"),
 function E(e) {
   let {
     member: t
-  } = e, n = t.userId, E = t.guildId, C = (0, s.default)([u.default], () => u.default.getEnhancedMember(E, n), [n, E]), g = null != C ? C : t, S = g.unusualDMActivityUntil, _ = l.useCallback(e => {
+  } = e, n = t.userId, E = t.guildId, C = (0, s.default)([o.default], () => o.default.getEnhancedMember(E, n), [n, E]), g = null != C ? C : t, S = g.unusualDMActivityUntil, _ = l.useCallback(e => {
     if (null == e) return null;
     let t = new Date(e).getTime();
-    return (0, o.formatDateRelativeTime)(t, o.MembersTableDateFormats.JOINED_AT)
+    return (0, u.formatDateRelativeTime)(t, u.MembersTableDateFormats.JOINED_AT)
   }, []), I = l.useMemo(() => null == t ? null : _(S), [t, _, S]), T = l.useMemo(() => (0, r.isCommunicationDisabled)(t.communicationDisabledUntil), [t.communicationDisabledUntil]), v = l.useMemo(() => null == t.communicationDisabledUntil ? new Date : new Date(t.communicationDisabledUntil), [t.communicationDisabledUntil]), x = null == S && !T;
   return x ? null : (0, a.jsx)(i.FormItem, {
     title: p.default.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,

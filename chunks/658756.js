@@ -14,9 +14,9 @@ var o = n("37983"),
   s = n("516555"),
   i = n("627445"),
   c = n.n(i),
-  u = n("65597"),
-  d = n("77078"),
-  f = n("265586"),
+  u = n("265586"),
+  d = n("65597"),
+  f = n("77078"),
   C = n("54239"),
   p = n("206230"),
   g = n("812204"),
@@ -52,15 +52,15 @@ let h = e => {
     background: (0, O.getBackgroundGradient)(R, 135)
   } : {
     backgroundColor: "var(--modal-background)"
-  }, j = (0, u.default)([y.default], () => {
+  }, j = (0, d.default)([y.default], () => {
     let e = y.default.getCurrentUser();
     return c(null != e, "User cannot be undefined"), e
-  }), F = (0, u.default)([p.default], () => p.default.useReducedMotion), [D] = t.items, {
+  }), F = (0, d.default)([p.default], () => p.default.useReducedMotion), [D] = t.items, {
     avatarDecorationSrc: P
   } = (0, T.default)({
     user: j,
-    avatarDecorationOverride: (null == D ? void 0 : D.type) === f.CollectiblesItemType.AVATAR_DECORATION ? D : null,
-    size: (0, b.getDecorationSizeForAvatarSize)(d.AvatarSizes.SIZE_120)
+    avatarDecorationOverride: (null == D ? void 0 : D.type) === u.CollectiblesItemType.AVATAR_DECORATION ? D : null,
+    size: (0, b.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_120)
   }), w = r.useRef(null), {
     analyticsLocations: H,
     AnalyticsLocationProvider: z
@@ -80,13 +80,13 @@ let h = e => {
           asset: t.banner,
           size: (0, O.getAssetSizeByHeight)(440),
           className: L.decorationBanner
-        }), (null == D ? void 0 : D.type) === f.CollectiblesItemType.AVATAR_DECORATION && (0, o.jsx)(d.Avatar, {
-          size: d.AvatarSizes.SIZE_120,
+        }), (null == D ? void 0 : D.type) === u.CollectiblesItemType.AVATAR_DECORATION && (0, o.jsx)(f.Avatar, {
+          size: f.AvatarSizes.SIZE_120,
           src: A,
           avatarDecoration: P,
           className: L.avatarDecoration,
           "aria-label": t.name
-        }), (null == D ? void 0 : D.type) === f.CollectiblesItemType.PROFILE_EFFECT && (0, o.jsx)("div", {
+        }), (null == D ? void 0 : D.type) === u.CollectiblesItemType.PROFILE_EFFECT && (0, o.jsx)("div", {
           className: L.profileEffectShopPreview,
           children: (0, o.jsx)(v.default, {
             forCollectedModal: !0,
@@ -99,26 +99,26 @@ let h = e => {
         }),
         children: [(0, o.jsxs)("div", {
           className: L.collectedTextContainer,
-          children: [(0, o.jsx)(d.Heading, {
+          children: [(0, o.jsx)(f.Heading, {
             variant: "heading-lg/bold",
             color: "always-white",
             children: x.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
               itemName: t.name
             })
-          }), (0, o.jsx)(d.Text, {
+          }), (0, o.jsx)(f.Text, {
             color: "always-white",
             variant: "text-sm/normal",
-            children: (null == D ? void 0 : D.type) === f.CollectiblesItemType.PROFILE_EFFECT ? x.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION : x.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
+            children: (null == D ? void 0 : D.type) === u.CollectiblesItemType.PROFILE_EFFECT ? x.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION : x.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
           })]
-        }), (0, o.jsx)(d.Button, {
+        }), (0, o.jsx)(f.Button, {
           onClick: () => {
-            if (n(), (0, C.popLayer)(), U(), (null == D ? void 0 : D.type) === f.CollectiblesItemType.AVATAR_DECORATION) {
+            if (n(), (0, C.popLayer)(), U(), (null == D ? void 0 : D.type) === u.CollectiblesItemType.AVATAR_DECORATION) {
               (0, b.openAvatarDecorationModal)({
                 initialSelectedDecoration: D,
                 analyticsLocations: H
               });
               return
-            }(null == D ? void 0 : D.type) === f.CollectiblesItemType.PROFILE_EFFECT && (0, _.openProfileEffectModal)({
+            }(null == D ? void 0 : D.type) === u.CollectiblesItemType.PROFILE_EFFECT && (0, _.openProfileEffectModal)({
               initialSelectedEffectId: D.id,
               analyticsLocations: H
             })
@@ -126,7 +126,7 @@ let h = e => {
           style: k,
           children: x.default.Messages.COLLECTIBLES_USE_NOW
         })]
-      }), (0, o.jsx)(d.ModalCloseButton, {
+      }), (0, o.jsx)(f.ModalCloseButton, {
         onClick: n,
         className: L.modalCloseButton,
         withCircleBackground: !0
@@ -151,12 +151,12 @@ var R = e => {
       ref: u,
       className: L.confettiCanvas,
       environment: i.current
-    }), (0, o.jsx)(d.ModalRoot, {
+    }), (0, o.jsx)(f.ModalRoot, {
       hideShadow: !0,
       transitionState: t,
-      size: d.ModalSize.DYNAMIC,
+      size: f.ModalSize.DYNAMIC,
       className: L.modalRoot,
-      children: (0, o.jsx)(d.ModalContent, {
+      children: (0, o.jsx)(f.ModalContent, {
         className: L.modalContent,
         children: (0, o.jsx)(h, {
           product: n,

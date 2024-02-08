@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("37983"),
-  a = n("884691"),
-  s = n("77078"),
-  o = n("592407"),
-  i = n("957255"),
-  r = n("49111"),
-  u = n("782340"),
+  i = n("884691"),
+  r = n("77078"),
+  a = n("592407"),
+  s = n("957255"),
+  u = n("49111"),
+  o = n("782340"),
   d = n("435808");
 
 function c(e) {
@@ -18,31 +18,31 @@ function c(e) {
     guild: t,
     error: n,
     onClose: c
-  } = e, p = t.id, f = a.useCallback(() => {
-    c(), o.default.open(p, r.GuildSettingsSections.INSTANT_INVITES)
-  }, [p, c]), h = a.useCallback(e => (0, l.jsx)(s.Clickable, {
+  } = e, f = t.id, h = i.useCallback(() => {
+    c(), a.default.open(f, u.GuildSettingsSections.INSTANT_INVITES)
+  }, [f, c]), g = i.useCallback(e => (0, l.jsx)(r.Clickable, {
     className: d.errorLink,
-    onClick: f,
-    children: (0, l.jsx)(s.Text, {
+    onClick: h,
+    children: (0, l.jsx)(r.Text, {
       variant: "text-xs/normal",
       color: "text-link",
       tag: "span",
       children: e
     })
-  }), [f]), I = a.useCallback(e => (0, l.jsx)(s.Anchor, {
-    href: r.MarketingURLs.INVITES_HELP,
+  }), [h]), I = i.useCallback(e => (0, l.jsx)(r.Anchor, {
+    href: u.MarketingURLs.INVITES_HELP,
     target: "_blank",
-    children: (0, l.jsx)(s.Text, {
+    children: (0, l.jsx)(r.Text, {
       variant: "text-xs/normal",
       color: "text-link",
       tag: "span",
       children: e
     })
-  }), []), E = n.code !== r.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : i.default.can(r.Permissions.MANAGE_GUILD, t) ? u.default.Messages.TOO_MANY_INVITES_ERROR.format({
-    inviteListHook: h,
+  }), []), E = n.code !== u.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : s.default.can(u.Permissions.MANAGE_GUILD, t) ? o.default.Messages.TOO_MANY_INVITES_ERROR.format({
+    inviteListHook: g,
     inviteHelpHook: I
-  }) : u.default.Messages.TOO_MANY_INVITES_ERROR_MEMBER;
-  return (0, l.jsx)(s.Text, {
+  }) : o.default.Messages.TOO_MANY_INVITES_ERROR_MEMBER;
+  return (0, l.jsx)(r.Text, {
     className: d.errorMessage,
     variant: "text-xs/normal",
     color: "text-danger",

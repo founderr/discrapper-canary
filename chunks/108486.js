@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("685665"),
   h = n("10641"),
   E = n("384997"),
-  g = n("649844"),
-  S = n("53253"),
+  S = n("649844"),
+  g = n("53253"),
   C = n("977591"),
   T = n("778588"),
   v = n("697218"),
@@ -139,7 +139,7 @@ var H = i.memo(function(e) {
     analyticsLocations: a
   } = (0, m.default)(p.default.GIFT_BUTTON), [u, f] = i.useState(!1), _ = (0, r.useStateFromStores)([T.default], () => !(null === T.default || void 0 === T.default ? void 0 : T.default.hasLayers())), y = (0, r.useStateFromStores)([v.default], () => v.default.getCurrentUser()), A = null != y ? s.default.age(y.id) : 0, N = !t && _ && A >= k, {
     enabled: j
-  } = S.SeasonalGiftingMarketingExperiment.useExperiment({
+  } = g.SeasonalGiftingMarketingExperiment.useExperiment({
     location: "ChannelPremiumGiftButton"
   }, {
     autoTrackExposure: N
@@ -154,7 +154,7 @@ var H = i.memo(function(e) {
   });
   if (t) return null;
   let K = () => {
-      (0, g.default)({
+      (0, S.default)({
         isGift: !0,
         giftRecipient: null == G ? void 0 : G,
         initialPlanId: null,

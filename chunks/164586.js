@@ -9,14 +9,14 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n("77078"),
-  u = n("716241"),
+  u = n("77078"),
+  o = n("716241"),
   d = n("945330"),
   c = n("599110"),
   f = n("49111"),
   h = n("782340"),
   p = n("832025");
-let m = (0, r.debounce)(u.default.trackWithMetadata, 500);
+let m = (0, r.debounce)(o.default.trackWithMetadata, 500);
 var E = function(e) {
   let {
     guild: t,
@@ -42,9 +42,9 @@ var E = function(e) {
     })
   }, [t.id, E]);
   let M = null;
-  "function" == typeof x ? M = x() : null != x && (M = (0, a.jsx)(o.Button, {
+  "function" == typeof x ? M = x() : null != x && (M = (0, a.jsx)(u.Button, {
     className: p.button,
-    size: o.Button.Sizes.SMALL,
+    size: u.Button.Sizes.SMALL,
     onClick: () => {
       null != E && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
         source: _,
@@ -57,7 +57,7 @@ var E = function(e) {
     children: x
   }));
   let R = null;
-  "function" == typeof n ? R = n() : null != n && (R = (0, a.jsx)(o.Text, {
+  "function" == typeof n ? R = n() : null != n && (R = (0, a.jsx)(u.Text, {
     variant: "text-md/medium",
     color: "header-primary",
     className: i(p.title, {
@@ -70,9 +70,9 @@ var E = function(e) {
   let j = null != g ? "".concat(g, "px") : "16px";
   return (0, a.jsxs)("div", {
     className: p.container,
-    children: [!0 === I ? null : (0, a.jsx)(o.Clickable, {
+    children: [!0 === I ? null : (0, a.jsx)(u.Clickable, {
       onClick: () => {
-        u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
+        o.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
           notice_type: E
         }), null == T || T()
       },
@@ -96,7 +96,7 @@ var E = function(e) {
       })
     }), (0, a.jsxs)("div", {
       className: p.message,
-      children: [R, (0, a.jsx)(o.Text, {
+      children: [R, (0, a.jsx)(u.Text, {
         className: i({
           [p.center]: A
         }),

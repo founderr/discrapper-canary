@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return E
   }
 }), n("424973"), n("222007");
-var a = n("151426"),
-  s = n("77078"),
-  l = n("446674"),
+var a = n("446674"),
+  s = n("151426"),
+  l = n("77078"),
   i = n("384997"),
   r = n("778588"),
   o = n("697218"),
@@ -15,9 +15,9 @@ var a = n("151426"),
   c = n("351348"),
   f = n("994428"),
   E = () => {
-    let e = (0, l.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
-      t = (0, l.useStateFromStores)([r.default], () => r.default.hasLayers()),
-      n = (0, s.useModalsStore)(s.hasAnyModalOpenSelector),
+    let e = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
+      t = (0, a.useStateFromStores)([r.default], () => r.default.hasLayers()),
+      n = (0, l.useModalsStore)(l.hasAnyModalOpenSelector),
       E = n || t || u.ProcessArgs.isDisallowPopupsSet(),
       {
         coachmarkEnabled: _
@@ -25,12 +25,12 @@ var a = n("151426"),
         location: "useCollectiblesShopTabCoachmarkDismissibleContent"
       }),
       h = [];
-    _ && (0, d.ageEligibleForPremiumUpsell)(e) && h.push(a.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_COACHMARK);
+    _ && (0, d.ageEligibleForPremiumUpsell)(e) && h.push(s.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_COACHMARK);
     let [C, I] = (0, i.useSelectedDismissibleContent)(E ? [] : h, void 0, !0);
     return {
       collectiblesShopTabCoachmark: C,
       dismissCollectiblesShopTabCoachmark: () => {
-        C === a.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_COACHMARK && I(f.ContentDismissActionType.AUTO)
+        C === s.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_COACHMARK && I(f.ContentDismissActionType.AUTO)
       }
     }
   }

@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return E
   },
   useExpressionGrid: function() {
-    return g
+    return S
   },
   useKeyboardNavigation: function() {
-    return S
+    return g
   }
 }), n("222007"), n("424973");
 var l = n("884691"),
@@ -142,7 +142,7 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       dispatch: m,
       getItemProps: h,
       getRowProps: E,
-      getContainerProps: g
+      getContainerProps: S
     } = (0, s.useGridNavigator)({
       navId: n,
       columnCounts: t,
@@ -151,15 +151,15 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       autoFocusElement: !1,
       useVirtualFocus: !0
     }), {
-      gridContainerProps: S,
+      gridContainerProps: g,
       handleGridContainerKeyDown: C
     } = l.useMemo(() => {
-      let e = g();
+      let e = S();
       return {
         gridContainerProps: e,
         handleGridContainerKeyDown: e.onKeyDown
       }
-    }, [g]);
+    }, [S]);
     return l.useEffect(() => {
       let e = () => {
         u.current = !1
@@ -169,13 +169,13 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       gridDispatch: m,
       getItemProps: h,
       getRowProps: E,
-      gridContainerProps: S,
+      gridContainerProps: g,
       handleGridContainerKeyDown: C,
       isUsingKeyboardNavigation: u
     }
   };
 
-function g(e) {
+function S(e) {
   let {
     categories: t,
     collapsedCategories: n,
@@ -229,7 +229,7 @@ function g(e) {
   }, [t, n, i, r, s, a])
 }
 
-function S(e) {
+function g(e) {
   let {
     columnCounts: t,
     expressionsGrid: n,

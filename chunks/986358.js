@@ -10,8 +10,8 @@ var l = n("414456"),
   s = n.n(l),
   i = n("65597"),
   r = n("77078"),
-  o = n("450911"),
-  u = n("685665"),
+  u = n("450911"),
+  o = n("685665"),
   d = n("509"),
   c = n("278483"),
   f = n("700179"),
@@ -43,7 +43,7 @@ function P(e) {
     backgroundColor: n,
     guildId: l,
     onClose: s
-  } = e, o = t.id, u = (0, i.default)([S.default, g.default, p.default], () => o === p.default.getId() ? S.default.getStatus() : g.default.getStatus(o, l), [o, l]);
+  } = e, u = t.id, o = (0, i.default)([S.default, g.default, p.default], () => u === p.default.getId() ? S.default.getStatus() : g.default.getStatus(u, l), [u, l]);
   return (0, a.jsxs)("div", {
     className: b.topRow,
     style: {
@@ -57,7 +57,7 @@ function P(e) {
           src: t.getAvatarURL(l, 48),
           "aria-label": t.username,
           size: r.AvatarSizes.SIZE_48,
-          status: u
+          status: o
         })
       }), (0, a.jsx)("div", {
         className: b.memberName,
@@ -97,10 +97,10 @@ function D(e) {
     disabled: n,
     children: l,
     onClick: i,
-    ...o
+    ...u
   } = e;
   return (0, a.jsx)(r.Clickable, {
-    ...o,
+    ...u,
     tag: t,
     className: s(b.bottomRowAction, {
       [b.bottomRowActionDisabled]: n
@@ -130,7 +130,7 @@ function U(e) {
   }), [l, m]), R = (0, d.isMemberCommunicationDisabled)(s), {
     analyticsLocations: j,
     newestAnalyticsLocation: L
-  } = (0, u.default)(), P = (0, h.useTrackModerationAction)(p, {
+  } = (0, o.default)(), P = (0, h.useTrackModerationAction)(p, {
     targetUserId: l.id,
     location: L,
     locations: j
@@ -143,7 +143,7 @@ function U(e) {
         backgroundColor: t
       },
       onClick: () => {
-        o.default.openPrivateChannel(l.id)
+        u.default.openPrivateChannel(l.id)
       },
       children: [(0, a.jsx)(T.default, {
         width: 22,
@@ -254,19 +254,19 @@ function w(e) {
     userId: t,
     guildId: n,
     onClose: l
-  } = e, s = (0, i.default)([_.default], () => _.default.getUser(t), [t]), o = (0, i.default)([m.default], () => m.default.getMember(n, t), [n, t]), u = (0, L.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
-  return null == s || null == o ? null : (0, a.jsxs)("div", {
+  } = e, s = (0, i.default)([_.default], () => _.default.getUser(t), [t]), u = (0, i.default)([m.default], () => m.default.getMember(n, t), [n, t]), o = (0, L.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
+  return null == s || null == u ? null : (0, a.jsxs)("div", {
     className: b.container,
     children: [(0, a.jsx)(P, {
       user: s,
       guildId: n,
       onClose: l,
-      backgroundColor: u
+      backgroundColor: o
     }), (0, a.jsx)(U, {
       user: s,
-      member: o,
+      member: u,
       guildId: n,
-      backgroundColor: u
+      backgroundColor: o
     })]
   })
 }

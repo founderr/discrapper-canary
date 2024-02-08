@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return v
   }
 }), n("222007");
-var s = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  s = n("884691"),
   l = n("917351"),
   i = n.n(l),
   r = n("446674"),
@@ -21,12 +21,12 @@ var s = n("37983"),
   E = n("664336"),
   g = n("811305"),
   S = n("117362"),
-  A = n("449008"),
-  _ = n("49111"),
+  _ = n("449008"),
+  A = n("49111"),
   T = n("590456"),
   M = n("782340"),
-  I = n("961282");
-class N {
+  N = n("961282");
+class I {
   updateData(e, t) {
     this.userId = e, this.user = t
   }
@@ -35,17 +35,17 @@ class N {
   }
   renderNicknamePairs() {
     return this.getNicknameGuildPairs().map((e, t) => {
-      let [n, l] = e, i = (0, s.jsx)(o.Clickable, {
+      let [n, l] = e, i = (0, a.jsx)(o.Clickable, {
         tag: "span",
         onClick: this.handleClick,
         children: n
       });
-      return l.length > 0 && (i = (0, s.jsx)(o.TooltipContainer, {
-        className: I.tooltip,
+      return l.length > 0 && (i = (0, a.jsx)(o.TooltipContainer, {
+        className: N.tooltip,
         text: l.join(", "),
         position: "bottom",
         children: i
-      })), (0, s.jsxs)(a.Fragment, {
+      })), (0, a.jsxs)(s.Fragment, {
         children: [0 !== t ? ", " : null, i]
       }, t)
     })
@@ -58,17 +58,17 @@ class N {
         return [t, n.map(e => {
           var t;
           return null === (t = f.default.getGuild(e)) || void 0 === t ? void 0 : t.name
-        }).filter(A.isNotNullish)]
+        }).filter(_.isNotNullish)]
       }).value();
       return n
-    }), this.renderMoreAvatars = () => (0, s.jsx)(o.TooltipContainer, {
+    }), this.renderMoreAvatars = () => (0, a.jsx)(o.TooltipContainer, {
       text: M.default.Messages.AKA_MORE_AVATARS_OVERFLOW,
       position: "bottom",
-      children: (0, s.jsx)(o.Clickable, {
-        className: I.moreAvatars,
+      children: (0, a.jsx)(o.Clickable, {
+        className: N.moreAvatars,
         onClick: this.handleClick,
-        children: (0, s.jsx)(p.default, {
-          className: I.plusIcon
+        children: (0, a.jsx)(p.default, {
+          className: N.plusIcon
         })
       })
     }, "more-avatars"), this.handleClick = () => {
@@ -76,7 +76,7 @@ class N {
         userId: this.userId,
         section: T.UserProfileSections.MUTUAL_GUILDS,
         analyticsLocation: {
-          section: _.AnalyticsSections.CHANNEL_HEADER
+          section: A.AnalyticsSections.CHANNEL_HEADER
         }
       })
     }, this.userId = e, this.user = t
@@ -88,30 +88,30 @@ function v(e) {
     channel: t
   } = e, n = t.getRecipientId(), l = (0, u.useAvatarsWithGuilds)(n), i = Array(l.length).fill(null), d = function(e) {
     let t = (0, r.useStateFromStores)([h.default], () => h.default.getUser(e), [e]),
-      [n] = a.useState(() => new N(e, null != t ? t : void 0));
+      [n] = s.useState(() => new I(e, null != t ? t : void 0));
     return n.updateData(e, null != t ? t : void 0), n
   }(n);
-  return 0 === d.getNicknameGuildPairs().length && 0 === l.length ? (0, s.jsx)("div", {
-    className: I.spacer
-  }) : (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(E.Divider, {}), (0, s.jsx)(m.TextBadge, {
+  return 0 === d.getNicknameGuildPairs().length && 0 === l.length ? (0, a.jsx)("div", {
+    className: N.spacer
+  }) : (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(E.Divider, {}), (0, a.jsx)(m.TextBadge, {
       text: M.default.Messages.AKA,
       disableColor: !0,
-      className: I.akaBadge
-    }), l.length > 0 ? (0, s.jsx)(g.default, {
+      className: N.akaBadge
+    }), l.length > 0 ? (0, a.jsx)(g.default, {
       size: 16,
       users: i,
       showUserPopout: !1,
       renderUser: (e, t, n) => {
-        var a;
+        var s;
         let i = d.user,
           r = l[n];
-        return null == r || null == i ? null : (0, s.jsx)(o.TooltipContainer, {
-          text: null === (a = f.default.getGuild(r)) || void 0 === a ? void 0 : a.name,
+        return null == r || null == i ? null : (0, a.jsx)(o.TooltipContainer, {
+          text: null === (s = f.default.getGuild(r)) || void 0 === s ? void 0 : s.name,
           position: "bottom",
-          children: (0, s.jsx)("img", {
+          children: (0, a.jsx)("img", {
             alt: "",
-            className: I.avatar,
+            className: N.avatar,
             onClick: d.handleClick,
             src: i.getAvatarURL(r, 16),
             "aria-hidden": !0
@@ -121,10 +121,10 @@ function v(e) {
       renderMoreUsers: d.renderMoreAvatars,
       guildId: void 0,
       max: 3,
-      className: I.avatars
-    }) : null, d.getNicknameGuildPairs().length > 0 ? (0, s.jsx)(C.default, {
+      className: N.avatars
+    }) : null, d.getNicknameGuildPairs().length > 0 ? (0, a.jsx)(C.default, {
       position: "bottom",
-      className: I.nicknames,
+      className: N.nicknames,
       children: d.renderNicknamePairs()
     }) : null]
   })

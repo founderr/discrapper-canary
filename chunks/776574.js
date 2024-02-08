@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("939563"),
   h = n("385887"),
   E = n("368555"),
-  g = n("30550"),
-  S = n("760120"),
+  S = n("30550"),
+  g = n("760120"),
   C = n("632550"),
   T = n("783059"),
   v = n("632215");
@@ -47,7 +47,7 @@ class I extends i.PureComponent {
       guildId: l,
       decorateExtra: i
     } = this.props;
-    return [...(0, g.default)(n, e, l), ...(0, E.default)(n, e), ...null !== (t = null == i ? void 0 : i(n, e)) && void 0 !== t ? t : []]
+    return [...(0, S.default)(n, e, l), ...(0, E.default)(n, e), ...null !== (t = null == i ? void 0 : i(n, e)) && void 0 !== t ? t : []]
   }
   renderElement(e) {
     var t;
@@ -63,7 +63,7 @@ class I extends i.PureComponent {
       ...s.style,
       textAlign: "right"
     });
-    let o = null !== (t = null == a ? void 0 : a(e)) && void 0 !== t ? t : (0, S.default)(e, n, i);
+    let o = null !== (t = null == a ? void 0 : a(e)) && void 0 !== t ? t : (0, g.default)(e, n, i);
     return null != o ? o : (0, l.jsx)("div", {
       ...s,
       children: r
@@ -297,8 +297,8 @@ class I extends i.PureComponent {
       onKeyDown: m,
       onKeyUp: h,
       decorateExtra: E,
-      renderExtraElement: g,
-      renderExtraLeaf: S,
+      renderExtraElement: S,
+      renderExtraLeaf: g,
       ...C
     } = this.props;
     return (0, l.jsxs)("div", {

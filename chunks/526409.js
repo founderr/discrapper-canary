@@ -24,7 +24,7 @@ var r = n("966724"),
 let E = async e => {
   let t = await e.export(o.DiscordCanvasExporterOutputFormats.File, "png", 1);
   return t
-}, g = e => {
+}, S = e => {
   let t = h.default.getFiles(e),
     n = t[0],
     i = h.default.getMessageForFile(n.id);
@@ -34,7 +34,7 @@ let E = async e => {
     };
     l.default.subscribe("UPLOAD_COMPLETE", i), l.default.subscribe("UPLOAD_FAIL", i)
   })
-}, S = function(e, t) {
+}, g = function(e, t) {
   var l;
   let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     a = p.default.getChannel(t);
@@ -66,8 +66,8 @@ let E = async e => {
   let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     a = await i.default.openPrivateChannel(n.id, !1, !1),
     s = await E(e);
-  S(s, a, l);
-  let r = await g(a);
+  g(s, a, l);
+  let r = await S(a);
   if (null != r) {
     let e = (0, c.toReactionEmoji)(t);
     (0, d.addReaction)(a, r.id, e)
@@ -76,7 +76,7 @@ let E = async e => {
   let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     s = await i.default.openPrivateChannel(n.id, !1, !1),
     r = await E(e);
-  S(r, s, l), await g(s);
+  g(r, s, l), await S(s);
   let o = p.default.getChannel(s),
     d = u.default.parse(o, t);
   a.default.sendMessage(s, d)

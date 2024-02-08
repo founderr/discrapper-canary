@@ -10,8 +10,8 @@ var l = n("77078"),
   s = n("109264"),
   i = n("180968"),
   r = n("136281"),
-  o = n("789150"),
-  u = n("782340"),
+  u = n("789150"),
+  o = n("782340"),
   d = n("63893");
 
 function c(e) {
@@ -23,9 +23,9 @@ function c(e) {
     messageHistoryState: f
   } = (0, i.useServerActivityForUser)(t, n), {
     messageCount: h
-  } = f, p = new Intl.NumberFormat(u.default.getLocale()).format(h);
+  } = f, p = new Intl.NumberFormat(o.default.getLocale()).format(h);
   return (0, a.jsx)(l.FormItem, {
-    title: u.default.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
+    title: o.default.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
     titleClassName: d.infoTitle,
     children: (0, a.jsx)(r.UserModInfoItemContainer, {
       children: (0, a.jsx)(r.UserModInfoItem, {
@@ -36,7 +36,7 @@ function c(e) {
         name: (0, a.jsx)(l.Text, {
           variant: "text-sm/semibold",
           color: "text-normal",
-          children: u.default.Messages.MESSAGES
+          children: o.default.Messages.MESSAGES
         }),
         description: h === i.HAS_NO_COUNT ? (0, a.jsx)(l.Spinner, {
           type: l.SpinnerTypes.SPINNING_CIRCLE,
@@ -46,7 +46,7 @@ function c(e) {
           color: "interactive-normal",
           children: p
         }),
-        onNavigate: h > 0 ? () => null == c ? void 0 : c(o.ModViewPanel.MESSAGE_HISTORY) : void 0
+        onNavigate: h > 0 ? () => null == c ? void 0 : c(u.ModViewPanel.MESSAGE_HISTORY) : void 0
       })
     })
   })

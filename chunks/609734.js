@@ -19,8 +19,8 @@ var i = n("414456"),
   m = n("758710"),
   h = n("351825"),
   E = n("306160"),
-  g = n("253981"),
-  S = n("613676"),
+  S = n("253981"),
+  g = n("613676"),
   C = n("49111"),
   T = n("782340"),
   v = n("834680");
@@ -36,7 +36,7 @@ function I(e) {
   } = (0, d.usePrivateChannelIntegrationState)({
     channelId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : ""
   });
-  if (null == n || !(0, S.canInstallApplication)(n.id, n.customInstallUrl, n.installParams)) return null;
+  if (null == n || !(0, g.canInstallApplication)(n.id, n.customInstallUrl, n.installParams)) return null;
   let A = _ && null != y.find(e => e.id === (null == n ? void 0 : n.id));
   return (0, l.jsx)(s.Button, {
     color: s.Button.Colors.PRIMARY,
@@ -70,7 +70,7 @@ function I(e) {
         scopes: [C.OAuth2Scopes.APPLICATIONS_COMMANDS],
         channelId: I.id,
         disableGuildSelect: !0
-      }) : (0, S.installApplication)({
+      }) : (0, g.installApplication)({
         applicationId: n.id,
         customInstallUrl: n.customInstallUrl,
         installParams: n.installParams
@@ -88,7 +88,7 @@ function I(e) {
       }), (0, l.jsx)("span", {
         className: v.applicationInstallButtonText,
         children: A ? T.default.Messages.ADD : T.default.Messages.APPLICATION_ADD_BUTTON
-      }), null == n.customInstallUrl || g.default.isDiscordUrl(n.customInstallUrl) ? null : (0, l.jsx)(m.default, {
+      }), null == n.customInstallUrl || S.default.isDiscordUrl(n.customInstallUrl) ? null : (0, l.jsx)(m.default, {
         className: v.launchIcon,
         width: 16,
         height: 16

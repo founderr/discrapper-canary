@@ -10,8 +10,8 @@ var l = n("77078"),
   s = n("901582"),
   i = n("252227"),
   r = n("143082"),
-  o = n("832759"),
-  u = n("60787"),
+  u = n("832759"),
+  o = n("60787"),
   d = n("466769"),
   c = n("736747"),
   f = n("49111"),
@@ -27,7 +27,7 @@ function m(e) {
     renderInputVolume: C = !1,
     renderOutputVolume: g = !1,
     onSelect: S
-  } = e, _ = (0, c.default)(), I = (0, u.default)(), T = (0, d.default)(), v = (0, i.default)(), x = (0, r.default)(), N = (0, o.default)();
+  } = e, _ = (0, c.default)(), I = (0, o.default)(), T = (0, d.default)(), v = (0, i.default)(), x = (0, r.default)(), N = (0, u.default)();
   return (0, a.jsx)(s.default, {
     object: f.AnalyticsObjects.CONTEXT_MENU,
     children: (0, a.jsxs)(l.Menu, {

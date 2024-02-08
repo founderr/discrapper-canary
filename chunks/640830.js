@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return E
   },
   getOptionNames: function() {
-    return g
+    return S
   },
   getOptionValues: function() {
-    return S
+    return g
   },
   optionToValues: function() {
     return C
@@ -58,7 +58,7 @@ function E(e) {
   return i
 }
 
-function g(e) {
+function S(e) {
   let t = h(e),
     n = [],
     l = null == t ? void 0 : t[0].children;
@@ -67,7 +67,7 @@ function g(e) {
   return n
 }
 
-function S(e, t) {
+function g(e, t) {
   let n = {};
   if (null == t.options) return {};
   let l = h(e),
@@ -156,7 +156,7 @@ function I(e, t) {
   if (null == t.options || 0 === t.options.length) return [];
   let n = f.EditorUtils.richValue(e),
     l = [],
-    i = new Set(g(e)),
+    i = new Set(S(e)),
     a = {},
     s = new Set;
   for (let e of t.options) a[e.displayName] = e, !i.has(e.name) && s.add(e.displayName);

@@ -9,8 +9,8 @@ var a = n("917351"),
   s = n("249654"),
   i = n("446674"),
   r = n("913144"),
-  o = n("42203"),
-  u = n("26989"),
+  u = n("42203"),
+  o = n("26989"),
   d = n("10802"),
   c = n("824563"),
   f = n("101125"),
@@ -23,7 +23,7 @@ let g = {};
 class S {
   rebuild(e) {
     this.version++, this.sections = {}, null != e && (this.allUserIds = new Set(e));
-    let t = o.default.getChannel(this.parentId);
+    let t = u.default.getChannel(this.parentId);
     l(Array.from(this.allUserIds)).map(e => {
       let [n, a, l] = this.calculateNewState(e, t);
       return {
@@ -41,11 +41,11 @@ class S {
   }
   updateUserId(e) {
     if (!this.allUserIds.has(e)) return !1;
-    let [t, n, a] = this.findOldState(e), [l, s, i] = this.calculateNewState(e, o.default.getChannel(this.parentId));
+    let [t, n, a] = this.findOldState(e), [l, s, i] = this.calculateNewState(e, u.default.getChannel(this.parentId));
     return (t !== l || n !== s || a !== i) && (this.removeUserId(e, t), this.addUser(e, l, s, i), !0)
   }
   addUserId(e) {
-    let [t, n, a] = this.calculateNewState(e, o.default.getChannel(this.parentId));
+    let [t, n, a] = this.calculateNewState(e, u.default.getChannel(this.parentId));
     this.addUser(e, t, n, a)
   }
   removeUserId(e, t) {
@@ -107,17 +107,17 @@ class S {
   }
   calculateNewState(e, t) {
     var n, a;
-    let l = u.default.getMember(this.guildId, e),
+    let l = o.default.getMember(this.guildId, e),
       s = h.default.getUser(e),
       i = h.default.getCurrentUser(),
       r = (null == s ? void 0 : s.id) === (null == i ? void 0 : i.id),
-      o = r ? f.default.getStatus() : c.default.getStatus(e, this.guildId),
+      u = r ? f.default.getStatus() : c.default.getStatus(e, this.guildId),
       d = null != s && null != t && m.default.can({
         permission: C.Permissions.VIEW_CHANNEL,
         user: s,
         context: t
       }),
-      p = o !== C.StatusTypes.OFFLINE && o !== C.StatusTypes.INVISIBLE && o !== C.StatusTypes.UNKNOWN,
+      p = u !== C.StatusTypes.OFFLINE && u !== C.StatusTypes.INVISIBLE && u !== C.StatusTypes.UNKNOWN,
       g = p ? null !== (n = null == l ? void 0 : l.hoistRoleId) && void 0 !== n ? n : "online" : "offline",
       S = null !== (a = null == l ? void 0 : l.nick) && void 0 !== a ? a : E.default.getName(s);
     return [g, null == S ? void 0 : S.toLowerCase(), d]
@@ -147,7 +147,7 @@ function T(e) {
 }
 class v extends i.default.Store {
   initialize() {
-    this.waitFor(o.default, u.default, d.default, c.default, f.default, h.default), this.syncWith([d.default], () => {
+    this.waitFor(u.default, o.default, d.default, c.default, f.default, h.default), this.syncWith([d.default], () => {
       let e = d.default.getSubscribedThreadIds(),
         t = !1;
       for (let n in g) !e.has(n) && (delete g[n], t = !0);
@@ -215,7 +215,7 @@ var x = new v(r.default, {
       threadId: t,
       guildId: n,
       members: a
-    } = e, l = o.default.getChannel(t), s = null == l ? void 0 : l.parent_id;
+    } = e, l = u.default.getChannel(t), s = null == l ? void 0 : l.parent_id;
     null != s && (g[t] = new S(n, s, t), g[t].rebuild(a.map(e => e.user_id)))
   },
   USER_UPDATE: _,

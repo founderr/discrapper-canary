@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("545158"),
-  o = n("206230"),
-  u = n("164586"),
+  u = n("206230"),
+  o = n("164586"),
   d = n("713135"),
   c = n("305961"),
   f = n("145131"),
@@ -30,7 +30,7 @@ function x(e) {
   let {
     channel: t,
     markAsDismissed: n
-  } = e, [x, N] = l.useState(!0), A = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), M = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t.guild_id)), R = (0, s.useStateFromStores)([d.default], () => {
+  } = e, [x, N] = l.useState(!0), A = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion), M = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t.guild_id)), R = (0, s.useStateFromStores)([d.default], () => {
     var e;
     return d.default.getGuildMemberProfile(C.CLYDE_AI_USER_ID, null !== (e = null == M ? void 0 : M.id) && void 0 !== e ? e : "")
   }), j = () => {
@@ -46,7 +46,7 @@ function x(e) {
       } catch {} else N(!1)
     };
     e()
-  }, [R, M]), null == M) ? null : (0, a.jsx)(u.default, {
+  }, [R, M]), null == M) ? null : (0, a.jsx)(o.default, {
     type: g.ChannelNoticeTypes.CLYDE_PERSONALITIES_NUX,
     image: A ? T : v,
     imageStyles: {

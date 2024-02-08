@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("446674"),
   i = n("913144"),
   r = n("255397"),
-  o = n("716241"),
-  u = n("191145"),
+  u = n("716241"),
+  o = n("191145"),
   d = n("383294"),
   c = n("95032"),
   f = n("18494"),
@@ -34,11 +34,11 @@ function _(e) {
   } = e, I = n === C.AppContext.POPOUT, T = l.useRef(null), {
     currentLayout: v,
     mode: x
-  } = (0, s.useStateFromStoresObject)([u.default], () => {
-    let e = u.default.getMode(t.id),
+  } = (0, s.useStateFromStoresObject)([o.default], () => {
+    let e = o.default.getMode(t.id),
       a = n === C.AppContext.POPOUT;
     a && (e = C.ChannelModes.VIDEO);
-    let l = e === C.ChannelModes.VIDEO ? u.default.getLayout(t.id, n) : C.ChannelLayouts.MINIMUM;
+    let l = e === C.ChannelModes.VIDEO ? o.default.getLayout(t.id, n) : C.ChannelLayouts.MINIMUM;
     return a && l !== C.ChannelLayouts.FULL_SCREEN && (l = C.ChannelLayouts.NO_CHAT), {
       currentLayout: l,
       mode: e
@@ -82,7 +82,7 @@ function _(e) {
     }
   }, [M, v, b, R]), l.useEffect(() => (h.default.track(C.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
     video_layout: I ? "popout" : v,
-    ...(0, o.collectVoiceAnalyticsMetadata)(t.id)
+    ...(0, u.collectVoiceAnalyticsMetadata)(t.id)
   }), () => {
     !(I && (0, m.isMac)()) && y(v)
   }), [v, I]), l.useEffect(() => {

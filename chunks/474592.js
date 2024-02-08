@@ -8,8 +8,8 @@ var l = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
-  s = n("77078"),
-  a = n("841098"),
+  a = n("77078"),
+  s = n("841098"),
   u = n("825691"),
   o = n("339485"),
   d = n("782340"),
@@ -23,21 +23,21 @@ let h = e => {
     shouldHideTemporaryInviteToggle: h,
     onGenerateNewLink: g,
     onToggleTemporary: I,
-    onSelectMaxAge: v,
-    onSelectMaxUses: E
-  } = e, _ = (0, a.default)(), {
-    maxAge: m,
-    maxUses: p,
+    onSelectMaxAge: E,
+    onSelectMaxUses: _
+  } = e, p = (0, s.default)(), {
+    maxAge: v,
+    maxUses: m,
     temporary: T
   } = i;
   return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(s.ModalHeader, {
-      children: [(0, l.jsx)(s.ModalCloseButton, {
+    children: [(0, l.jsxs)(a.ModalHeader, {
+      children: [(0, l.jsx)(a.ModalCloseButton, {
         className: c.closeButton,
         onClick: t
       }), (0, l.jsx)("div", {
         className: c.headerContainer,
-        children: (0, l.jsx)(s.FormTitle, {
+        children: (0, l.jsx)(a.FormTitle, {
           id: n,
           tag: "h2",
           className: r(f.marginReset, c.headerCloseButtonSpacing, c.headerText),
@@ -46,17 +46,17 @@ let h = e => {
       })]
     }), (0, l.jsx)(u.default, {
       shouldHideTemporaryInviteToggle: h,
-      maxAge: m,
-      maxUses: p,
+      maxAge: v,
+      maxUses: m,
       temporary: T,
       onToggleTemporary: I,
-      onSelectMaxAge: v,
-      onSelectMaxUses: E,
+      onSelectMaxAge: E,
+      onSelectMaxUses: _,
       onGenerateNewLink: g
-    }), (0, l.jsx)(s.ModalFooter, {
+    }), (0, l.jsx)(a.ModalFooter, {
       className: c.settingsFooter,
       children: (0, l.jsx)(o.default, {
-        theme: _,
+        theme: p,
         onConfirm: () => {
           g(), t()
         },

@@ -16,8 +16,8 @@ var l, i, a = n("37983"),
   m = n("812204"),
   h = n("685665"),
   E = n("200197"),
-  g = n("538282"),
-  S = n("866353"),
+  S = n("538282"),
+  g = n("866353"),
   C = n("364685"),
   T = n("161585"),
   v = n("24373"),
@@ -76,7 +76,7 @@ function F(e) {
       size: U,
       sticker: s,
       className: b.sticker
-    }), l !== S.StickerSendability.SENDABLE && (0, a.jsx)(_.default, {
+    }), l !== g.StickerSendability.SENDABLE && (0, a.jsx)(_.default, {
       size: 14
     })]
   })
@@ -90,7 +90,7 @@ var G = s.memo(function(e) {
     onSelectSticker: r,
     stickerIconVisible: c = !1,
     submitButtonVisible: f = !1
-  } = e, I = s.useContext(E.default), [_, x] = s.useState(null), [j, U] = s.useState(!1), [D, G] = s.useState(null), B = (0, g.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, J] = s.useState(!1), [q, Z] = s.useState(!1), Q = (0, R.useStickerSuggestionResults)(V, j, l), {
+  } = e, I = s.useContext(E.default), [_, x] = s.useState(null), [j, U] = s.useState(!1), [D, G] = s.useState(null), B = (0, S.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, J] = s.useState(!1), [q, Z] = s.useState(!1), Q = (0, R.useStickerSuggestionResults)(V, j, l), {
     analyticsLocations: X,
     AnalyticsLocationProvider: $
   } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
@@ -191,7 +191,7 @@ var G = s.memo(function(e) {
         if (O.default.track(L.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
             sticker_id: e.id,
             suggestion_trigger: W
-          }), t === S.StickerSendability.SENDABLE) U(!0), r(e, T.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
+          }), t === g.StickerSendability.SENDABLE) U(!0), r(e, T.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
         else if ((0, v.isStandardSticker)(e)) {
           let t = C.default.getStickerPack(e.pack_id);
           null != t && (0, y.default)({

@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n.n(r),
-  u = n("446674"),
+  u = n.n(r),
+  o = n("446674"),
   d = n("77078"),
   c = n("777274"),
   f = n("76813"),
@@ -45,7 +45,7 @@ function k(e) {
   let {
     channelId: t,
     guildId: n
-  } = e, l = Date.now(), s = (0, u.useStateFromStores)([M.default, O.default], () => o(M.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, C.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
+  } = e, l = Date.now(), s = (0, o.useStateFromStores)([M.default, O.default], () => u(M.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, C.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
   return 0 === s.length ? null : (0, a.jsx)(a.Fragment, {
     children: s.map((e, t) => (0, a.jsx)(d.Tooltip, {
       position: "bottom",
@@ -74,12 +74,12 @@ function V(e) {
     appContext: s,
     inCall: i,
     isChatOpen: r,
-    exitFullScreen: o
+    exitFullScreen: u
   } = e, C = n.id, {
     voiceParticipantsHidden: M,
     selectedParticipant: j,
     userParticipantCount: w
-  } = (0, u.useStateFromStoresObject)([O.default], () => ({
+  } = (0, o.useStateFromStoresObject)([O.default], () => ({
     selectedParticipant: O.default.getSelectedParticipant(C),
     voiceParticipantsHidden: O.default.getVoiceParticipantsHidden(C),
     userParticipantCount: O.default.getUserParticipantCount(C)
@@ -95,7 +95,7 @@ function V(e) {
       channel: n,
       applicationId: t,
       stream: e,
-      exitFullScreen: o,
+      exitFullScreen: u,
       analyticsLocation: n.type === U.ChannelTypes.GUILD_VOICE ? U.AnalyticsPages.GUILD_CHANNEL : U.AnalyticsPages.DM_CHANNEL
     }, "invite-button"))
   }
@@ -158,7 +158,7 @@ function V(e) {
           channelId: C,
           onClose: t,
           appContext: s,
-          exitFullScreen: o
+          exitFullScreen: u
         })
       })
     },

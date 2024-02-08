@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  r = s("77078"),
-  i = s("290381"),
+  r = s("290381"),
+  i = s("77078"),
   l = s("812204"),
   u = s("685665"),
   o = s("594098"),
@@ -35,7 +35,7 @@ var a = s("37983"),
       } = (0, u.default)(l.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
       [P, O] = n.useState(!1);
     return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(r.AdvancedScrollerAuto, {
+      children: [(0, a.jsx)(i.AdvancedScrollerAuto, {
         className: m.mainPageScroller,
         ref: e,
         children: (0, a.jsx)("div", {
@@ -68,7 +68,7 @@ var a = s("37983"),
               }
             }), (0, a.jsx)("div", {
               className: m.footerSpacing
-            }), (0, a.jsx)(i.VisibilitySensor, {
+            }), (0, a.jsx)(r.VisibilitySensor, {
               onChange: e => {
                 e && !P && (d.default.track(A.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                   location_stack: C

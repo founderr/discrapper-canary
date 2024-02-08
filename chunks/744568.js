@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("851387"),
+  u = n("77078"),
+  o = n("851387"),
   d = n("750560"),
   c = n("812204"),
   f = n("685665"),
@@ -41,15 +41,15 @@ function v(e) {
   }, [A, s]), (0, d.useSubscribeGuildMembers)({
     [n]: [t]
   }), l.useEffect(() => {
-    u.default.requestMembersById(n, [t]), (0, p.default)(t, void 0, {
+    o.default.requestMembersById(n, [t]), (0, p.default)(t, void 0, {
       guildId: n
     }), (0, h.getMemberSupplemental)(n, [t])
   }, [n, t]), A) ? j ? (0, a.jsx)("div", {
     className: i(T.sidebarContianer, T.loadingContainer, v),
     style: N,
-    children: (0, a.jsx)(o.Spinner, {
+    children: (0, a.jsx)(u.Spinner, {
       animated: !0,
-      type: o.Spinner.Type.SPINNING_CIRCLE
+      type: u.Spinner.Type.SPINNING_CIRCLE
     })
   }) : (0, a.jsx)(L, {
     children: (0, a.jsx)("div", {

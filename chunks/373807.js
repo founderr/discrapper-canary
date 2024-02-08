@@ -39,7 +39,7 @@ function m(e) {
     location: "ChannelPremiumGiftButton"
   }, {
     autoTrackExposure: !1
-  }), E = i.useMemo(() => [() => n.el("540902").then(n.t.bind(n, "540902", 19)), () => n.el("915604").then(n.t.bind(n, "915604", 19)), () => n.el("166505").then(n.t.bind(n, "166505", 19))], []), g = m || h, S = g ? c.default.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : c.default.Messages.SEASONAL_GIFTING_POPUP_HEADER, C = g ? c.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.default.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
+  }), E = i.useMemo(() => [() => n.el("540902").then(n.t.bind(n, "540902", 19)), () => n.el("915604").then(n.t.bind(n, "915604", 19)), () => n.el("166505").then(n.t.bind(n, "166505", 19))], []), S = m || h, g = S ? c.default.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : c.default.Messages.SEASONAL_GIFTING_POPUP_HEADER, C = S ? c.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.default.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
   return (0, l.jsxs)("div", {
     className: f.container,
     children: [(0, l.jsx)(r.default, {
@@ -50,7 +50,7 @@ function m(e) {
       children: [(0, l.jsx)(a.Heading, {
         className: f.text,
         variant: "heading-sm/semibold",
-        children: S
+        children: g
       }), (0, l.jsx)(a.Text, {
         className: f.text,
         variant: "text-sm/normal",

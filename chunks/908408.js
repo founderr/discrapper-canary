@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("599110"),
   h = n("719923"),
   E = n("570759"),
-  g = n("281072"),
-  S = n("49111"),
+  S = n("281072"),
+  g = n("49111"),
   C = n("646718"),
   T = n("782340"),
   v = n("416841"),
@@ -33,8 +33,8 @@ let _ = () => (0, E.setShowPremiumUpsell)(!1),
       analyticsLocations: y
     } = (0, u.default)(o.default.PREMIUM_UPSELL);
     i.useEffect(() => {
-      m.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-        location_section: S.AnalyticsSections.STICKER_PICKER_UPSELL,
+      m.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        location_section: g.AnalyticsSections.STICKER_PICKER_UPSELL,
         type: C.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
         location_stack: y
       })
@@ -76,8 +76,8 @@ let _ = () => (0, E.setShowPremiumUpsell)(!1),
             onClick: E
           })
         })]
-      }), !O && (0, l.jsx)(g.default, {
-        analyticsSection: S.AnalyticsSections.EXPRESSION_PICKER,
+      }), !O && (0, l.jsx)(S.default, {
+        analyticsSection: g.AnalyticsSections.EXPRESSION_PICKER,
         buttonText: O ? x ? T.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : T.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
       }), (0, l.jsx)(r.Clickable, {
         className: v.upsellClose,

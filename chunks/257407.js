@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("917351"),
   i = n("446674"),
   r = n("151426"),
-  o = n("77078"),
-  u = n("913144"),
+  u = n("77078"),
+  o = n("913144"),
   d = n("79112"),
   c = n("206230"),
   f = n("716241"),
@@ -58,7 +58,7 @@ function k(e) {
   z.length > 0 && W.splice(W.length - 1, 1, z[0]);
   let K = (0, x.sampleAnimationId)(B),
     Z = e => {
-      u.default.dispatch({
+      o.default.dispatch({
         type: "VOICE_CHANNEL_EFFECT_RECENT_EMOJI",
         emoji: e
       }), (0, I.sendVoiceChannelEffect)({
@@ -104,7 +104,7 @@ function k(e) {
         visibleContent: t,
         markAsDismissed: l
       } = e, s = O && t === r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
-      return (0, a.jsx)(o.Popout, {
+      return (0, a.jsx)(u.Popout, {
         position: "left",
         "aria-label": P.default.Messages.VOICE_CHANNEL_EFFECTS_MORE,
         shouldShow: s,
@@ -143,7 +143,7 @@ function k(e) {
                   channel_id: q,
                   guild_id: Q,
                   enabled: !ee
-                }), u.default.dispatch({
+                }), o.default.dispatch({
                   type: "VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE"
                 })
               },

@@ -10,8 +10,8 @@ var l = n("414456"),
   s = n.n(l),
   i = n("65597"),
   r = n("797350"),
-  o = n("237020"),
-  u = n("352567"),
+  u = n("237020"),
+  o = n("352567"),
   d = n("305861"),
   c = n("715072"),
   f = n("77078"),
@@ -47,11 +47,11 @@ function v(e) {
             color: "text-normal",
             children: I.default.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
           }),
-          description: l ? (0, a.jsx)(o.CheckmarkBoldIcon, {
+          description: l ? (0, a.jsx)(u.CheckmarkBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_POSITIVE_FOREGROUND
-          }) : (0, a.jsx)(u.CloseLargeBoldIcon, {
+          }) : (0, a.jsx)(o.CloseLargeBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_DANGER_FOREGROUND
@@ -67,11 +67,11 @@ function v(e) {
             color: "text-normal",
             children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
           }),
-          description: v === h.UserRulesAgreementLevel.AGREED ? (0, a.jsx)(o.CheckmarkBoldIcon, {
+          description: v === h.UserRulesAgreementLevel.AGREED ? (0, a.jsx)(u.CheckmarkBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_POSITIVE_FOREGROUND
-          }) : (0, a.jsx)(u.CloseLargeBoldIcon, {
+          }) : (0, a.jsx)(o.CloseLargeBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_DANGER_FOREGROUND

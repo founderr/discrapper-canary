@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("65597"),
-  o = n("77078"),
-  u = n("178406"),
+  u = n("77078"),
+  o = n("178406"),
   d = n("553275"),
   c = n("412013"),
   f = n("305961"),
@@ -32,8 +32,8 @@ function S(e) {
       var n, l, s, i;
       return null !== (i = null !== (s = null === (n = a[t]) || void 0 === n ? void 0 : n.position) && void 0 !== s ? s : 0 - (null === (l = a[e]) || void 0 === l ? void 0 : l.position)) && void 0 !== i ? i : 0
     })
-  }, [t.roles, t.highestRoleId, n]), S = (0, r.default)([u.default], () => u.default.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]), _ = (0, d.useHighestRole)(S), I = new Intl.NumberFormat(C.default.getLocale()).format(s.length), T = (0, d.useContextMenuModerateRoles)(t), v = (0, r.default)([h.default], () => h.default.can(E.Permissions.MANAGE_ROLES, n), [n]);
-  return null == n ? null : (0, a.jsx)(o.FormItem, {
+  }, [t.roles, t.highestRoleId, n]), S = (0, r.default)([o.default], () => o.default.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]), _ = (0, d.useHighestRole)(S), I = new Intl.NumberFormat(C.default.getLocale()).format(s.length), T = (0, d.useContextMenuModerateRoles)(t), v = (0, r.default)([h.default], () => h.default.can(E.Permissions.MANAGE_ROLES, n), [n]);
+  return null == n ? null : (0, a.jsx)(u.FormItem, {
     title: C.default.Messages.ROLES,
     titleClassName: g.infoTitle,
     children: (0, a.jsx)(m.UserModInfoItemContainer, {
@@ -44,7 +44,7 @@ function S(e) {
             className: i(g.roleTooltipItem, g.highestRole),
             role: _,
             guildId: t.guildId
-          }), s.length > 0 && (0, a.jsx)(o.Tooltip, {
+          }), s.length > 0 && (0, a.jsx)(u.Tooltip, {
             "aria-label": C.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP,
             tooltipContentClassName: g.roleTooltip,
             allowOverflow: !0,
@@ -61,18 +61,18 @@ function S(e) {
                 onMouseEnter: t,
                 onMouseLeave: n
               } = e;
-              return (0, a.jsx)(o.Clickable, {
+              return (0, a.jsx)(u.Clickable, {
                 className: i(g.otherRoles),
                 onMouseEnter: t,
                 onMouseLeave: n,
-                children: (0, a.jsxs)(o.Text, {
+                children: (0, a.jsxs)(u.Text, {
                   variant: "text-xs/medium",
                   color: "header-primary",
                   children: ["+", I]
                 })
               })
             }
-          }), v && (0, a.jsx)(o.Clickable, {
+          }), v && (0, a.jsx)(u.Clickable, {
             className: i(g.otherRoles, g.addRoleContainer),
             onClick: T,
             children: (0, a.jsx)(p.default, {

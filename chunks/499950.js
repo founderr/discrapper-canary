@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return x
   }
 });
 var l = n("37983");
@@ -11,8 +11,8 @@ var a = n("446674"),
   i = n("9294"),
   r = n("512027"),
   u = n("52393"),
-  d = n("652453"),
-  o = n("119184"),
+  o = n("652453"),
+  d = n("119184"),
   c = n("923959"),
   E = n("305961"),
   f = n("330154"),
@@ -22,54 +22,54 @@ var a = n("446674"),
   T = n("306160"),
   v = n("354023"),
   N = n("841363"),
-  S = n("49111"),
-  m = n("782340"),
+  m = n("49111"),
+  S = n("782340"),
   g = n("131439");
 let {
   INVITE_OPTIONS_7_DAYS: C,
-  INVITE_OPTIONS_UNLIMITED: x
+  INVITE_OPTIONS_UNLIMITED: p
 } = v.default;
 
-function p(e) {
-  var t, n, p;
+function x(e) {
+  var t, n, x;
   let {
     onClose: A,
     event: R
-  } = e, L = null == R ? void 0 : R.guild_id, M = (0, a.useStateFromStores)([c.default], () => {
+  } = e, M = null == R ? void 0 : R.guild_id, L = (0, a.useStateFromStores)([c.default], () => {
     var e;
-    return null != L ? null === (e = c.default.getDefaultChannel(L)) || void 0 === e ? void 0 : e.id : null
-  }, [L]), O = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(L), [L]), D = (null == O ? void 0 : O.vanityURLCode) != null && (null == O ? void 0 : O.vanityURLCode.length) > 0, {
-    enabled: y
+    return null != M ? null === (e = c.default.getDefaultChannel(M)) || void 0 === e ? void 0 : e.id : null
+  }, [M]), y = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(M), [M]), O = (null == y ? void 0 : y.vanityURLCode) != null && (null == y ? void 0 : y.vanityURLCode.length) > 0, {
+    enabled: D
   } = r.default.useExperiment({
-    guildId: null != L ? L : "",
+    guildId: null != M ? M : "",
     location: "bd50e8_1"
   }, {
-    autoTrackExposure: D
+    autoTrackExposure: O
   }), {
     channel_id: j,
-    id: V
-  } = null != R ? R : {}, U = (0, a.useStateFromStores)([f.default], () => {
-    let e = null != j ? j : M;
+    id: U
+  } = null != R ? R : {}, V = (0, a.useStateFromStores)([f.default], () => {
+    let e = null != j ? j : L;
     return null == e ? null : f.default.getInvite(e)
-  }, [j, M]);
+  }, [j, L]);
   if (null == R) return A(), null;
-  let G = y && null !== (t = null == O ? void 0 : O.vanityURLCode) && void 0 !== t ? t : null == U ? void 0 : U.code,
-    P = null != G ? (0, i.generateInviteKeyFromExtraData)({
-      baseCode: G,
-      guildScheduledEventId: V
+  let P = D && null !== (t = null == y ? void 0 : y.vanityURLCode) && void 0 !== t ? t : null == V ? void 0 : V.code,
+    G = null != P ? (0, i.generateInviteKeyFromExtraData)({
+      baseCode: P,
+      guildScheduledEventId: U
     }) : null,
-    w = null == P || null == U,
-    F = (0, u.default)(null != P ? P : ""),
-    H = null !== (n = null == U ? void 0 : U.maxAge) && void 0 !== n ? n : C.value,
-    b = null !== (p = null == U ? void 0 : U.maxUses) && void 0 !== p ? p : x.value;
+    b = null == G || null == V,
+    F = (0, u.default)(null != G ? G : ""),
+    w = null !== (n = null == V ? void 0 : V.maxAge) && void 0 !== n ? n : C.value,
+    k = null !== (x = null == V ? void 0 : V.maxUses) && void 0 !== x ? x : p.value;
   return (0, l.jsxs)("div", {
     className: g.container,
     children: [(0, l.jsx)(s.Clickable, {
       onClick: A,
       className: g.close,
-      "aria-label": m.default.Messages.CLOSE,
+      "aria-label": S.default.Messages.CLOSE,
       children: (0, l.jsx)(_.default, {})
-    }), (0, l.jsx)(o.default, {
+    }), (0, l.jsx)(d.default, {
       children: (0, l.jsx)("div", {
         className: g.iconContainer,
         children: (0, l.jsx)(I.default, {
@@ -81,35 +81,35 @@ function p(e) {
     }), (0, l.jsx)(s.Heading, {
       variant: "heading-xl/semibold",
       className: g.header,
-      children: m.default.Messages.GUILD_EVENT_CREATED_MODAL_HEADER
+      children: S.default.Messages.GUILD_EVENT_CREATED_MODAL_HEADER
     }), (0, l.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: g.body,
-      children: m.default.Messages.GUILD_EVENT_CREATED_MODAL_BODY
+      children: S.default.Messages.GUILD_EVENT_CREATED_MODAL_BODY
     }), (0, l.jsxs)("div", {
       className: g.invite,
-      children: [(0, l.jsx)(d.RawInviteCopyInputConnected, {
+      children: [(0, l.jsx)(o.RawInviteCopyInputConnected, {
         value: F,
         autoFocus: !1,
         onCopy: e => {
-          if (w) return;
+          if (b) return;
           (0, T.copy)(e);
           let t = (0, N.getChannelTypeFromEntity)(R.entity_type);
-          h.default.track(S.AnalyticEvents.COPY_INSTANT_INVITE, {
+          h.default.track(m.AnalyticEvents.COPY_INSTANT_INVITE, {
             server: R.guild_id,
             channel: j,
             channel_type: t,
-            location: S.InstantInviteSources.GUILD_EVENTS,
-            code: U.code,
+            location: m.InstantInviteSources.GUILD_EVENTS,
+            code: V.code,
             guild_scheduled_event_id: null == R ? void 0 : R.id
           })
         }
-      }), (null == O ? void 0 : O.vanityURLCode) == null && (0, l.jsx)(s.Text, {
+      }), (null == y ? void 0 : y.vanityURLCode) == null && (0, l.jsx)(s.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
         className: g.inviteDetail,
-        children: (0, v.maxAgeString)(H, b)
+        children: (0, v.maxAgeString)(w, k)
       })]
     })]
   })

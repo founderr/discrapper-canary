@@ -23,12 +23,12 @@ function p(e) {
   } = e, m = (0, o.getIconComponent)(p), h = i.useMemo(() => {
     var e, t;
     return (0, u.parseBioReactWithoutScrolling)(null !== (t = null === (e = p.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
-  }, [null === (t = p.application) || void 0 === t ? void 0 : t.description]), E = (0, a.useStateFromStores)([c.default], () => c.default.getCurrentAppDetail()), g = i.useCallback(e => {
+  }, [null === (t = p.application) || void 0 === t ? void 0 : t.description]), E = (0, a.useStateFromStores)([c.default], () => c.default.getCurrentAppDetail()), S = i.useCallback(e => {
     e.stopPropagation(), (null == E ? void 0 : E.id) === p.id ? d.dismissAppDetail() : d.showAppDetail(p)
   }, [p, E]);
   return (0, l.jsxs)("li", {
     className: f.application,
-    onClick: g,
+    onClick: S,
     children: [(0, l.jsx)(m, {
       className: f.applicationIcon,
       channel: n,

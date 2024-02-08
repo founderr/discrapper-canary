@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return d
   }
 }), n("424973"), n("222007");
-var s = n("637612"),
-  a = n("336696"),
+var a = n("637612"),
+  s = n("336696"),
   l = n("888400"),
   i = n("299039"),
   r = n("459776"),
@@ -24,29 +24,29 @@ function d(e) {
     E = [],
     g = !1,
     S = null != h ? i.default.extractTimestamp(h) : null,
-    A = null;
+    _ = null;
   return f.forEach(e => {
-    var a, _, T, M, I, N, v, L;
+    var s, A, T, M, N, I, v, L;
     if (null != p && p.length > 0) {
       ;
       let t = i.default.extractTimestamp(e.id);
-      for (let e = 0; a = e < (null == p ? void 0 : p.length), a; e++) {
+      for (let e = 0; s = e < (null == p ? void 0 : p.length), s; e++) {
         if (null == p[e]) continue;
         let n = i.default.extractTimestamp(p[e].startId),
-          s = i.default.extractTimestamp(p[e].endId);
-        if (t >= n && t <= s) {
-          if (A === p[e].id) break;
+          a = i.default.extractTimestamp(p[e].endId);
+        if (t >= n && t <= a) {
+          if (_ === p[e].id) break;
           E.push({
             type: u.ChannelStreamTypes.DIVIDER,
             content: p[e].topic,
             contentKey: p[e].id
-          }), A = p[e].id;
+          }), _ = p[e].id;
           break
         }
       }
     }
     let x = (0, l.dateFormat)(e.timestamp, "LL");
-    x !== t && null == A && (E.push({
+    x !== t && null == _ && (E.push({
       type: u.ChannelStreamTypes.DIVIDER,
       content: x,
       contentKey: x
@@ -56,7 +56,7 @@ function d(e) {
       O = (0, o.isSpam)(e);
     g = g || O;
     let D = function(e, t, n) {
-      if (s.MessageTypesSets.NON_COLLAPSIBLE.has(t.type));
+      if (a.MessageTypesSets.NON_COLLAPSIBLE.has(t.type));
       else if (t.blocked) return u.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED;
       else if ((0, o.isSpamSupported)(e) && n) return u.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER;
       return null
@@ -64,20 +64,20 @@ function d(e) {
     if (null !== D) {
       ;
       let t, n;
-      [y, R] = (_ = E, T = e, M = D, n = I = R, null == I || I.type !== M ? (t = {
+      [y, R] = (A = E, T = e, M = D, n = N = R, null == N || N.type !== M ? (t = {
         type: M,
         content: [],
         key: T.id
-      }, _.push(t)) : n = (t = I).content[t.content.length - 1], [t, n])
+      }, A.push(t)) : n = (t = N).content[t.content.length - 1], [t, n])
     }
     if (h === e.id && null != S) {
       if (null != R && R.type === u.ChannelStreamTypes.DIVIDER) R.unreadId = e.id, S = null;
       else if (null !== y) {
         ;
-        N = y, v = c, (L = e).isFirstMessageInForumPost(v) || N.content.push({
+        I = y, v = c, (L = e).isFirstMessageInForumPost(v) || I.content.push({
           type: u.ChannelStreamTypes.DIVIDER,
           unreadId: L.id
-        }), N.hasUnread = !0, S = null
+        }), I.hasUnread = !0, S = null
       } else !e.isFirstMessageInForumPost(c) && E.push({
         type: u.ChannelStreamTypes.DIVIDER,
         unreadId: e.id
@@ -111,7 +111,7 @@ function d(e) {
       contentKey: m.endId,
       isSummaryDivider: !0
     })
-  }), g && (0, o.isSpamSupported)(c) && a.default.trackExposure({
+  }), g && (0, o.isSpamSupported)(c) && s.default.trackExposure({
     location: "416cc9_1"
   }), E
 }

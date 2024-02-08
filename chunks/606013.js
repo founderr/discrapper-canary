@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("222007"), n("781738");
 var l = n("37983"),
@@ -18,7 +18,7 @@ var l = n("37983"),
   m = n("149022"),
   h = n("49111");
 let E = /(\t|\s)/;
-class g extends i.PureComponent {
+class S extends i.PureComponent {
   componentDidMount() {
     !this.props.disableAutoFocus && (Promise.resolve().then(() => {
       var e;
@@ -127,7 +127,7 @@ class g extends i.PureComponent {
       spellcheckEnabled: p,
       "aria-controls": m,
       "aria-expanded": E,
-      "aria-activedescendant": g
+      "aria-activedescendant": S
     } = this.props;
     return (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(c.ComponentAction, {
@@ -157,7 +157,7 @@ class g extends i.PureComponent {
         spellCheck: p,
         "aria-controls": m,
         "aria-expanded": E,
-        "aria-activedescendant": g,
+        "aria-activedescendant": S,
         "aria-haspopup": "listbox",
         "aria-autocomplete": "list",
         "aria-multiline": !0
@@ -254,4 +254,4 @@ class g extends i.PureComponent {
     }
   }
 }
-var S = g
+var g = S

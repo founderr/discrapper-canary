@@ -46,8 +46,8 @@ function s(e) {
     if (null == m) return;
     let E = f.document.createRange();
     E.setStart(m, h), E.setEnd(m, h);
-    let g = E.getBoundingClientRect();
-    (null == g ? void 0 : g.height) !== 0 && u(null != g ? g : null)
+    let S = E.getBoundingClientRect();
+    (null == S ? void 0 : S.height) !== 0 && u(null != S ? S : null)
   }, [r, f.document, s, c, d, n]);
   return l.useEffect(() => (f.document.addEventListener("selectionchange", p), () => f.document.removeEventListener("selectionchange", p)), [f.document, p]), l.useEffect(() => {
     p()

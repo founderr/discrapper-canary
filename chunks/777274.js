@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("77078"),
   i = n("981913"),
   r = n("697218"),
-  o = n("471654"),
-  u = n("413709"),
+  u = n("471654"),
+  o = n("413709"),
   d = n("50885"),
   c = n("316194"),
   f = n("546206"),
@@ -28,21 +28,21 @@ let p = {
   };
 
 function C() {
-  return (0, a.jsx)(o.default, {
+  return (0, a.jsx)(u.default, {
     width: "1em",
     height: "1em"
   })
 }
 
 function g(e) {
-  let [t, n] = l.useState(""), [i, o] = l.useState(null);
+  let [t, n] = l.useState(""), [i, u] = l.useState(null);
   l.useEffect(() => {
     (async () => {
       let e = (0, f.getCallscopeState)();
-      o(await e.getDescription())
+      u(await e.getDescription())
     })()
   }, []);
-  let u = l.useCallback(() => {
+  let o = l.useCallback(() => {
       console.log("[callscope] Issue marker closed ".concat(t, ".")), (0, f.setCallscopeIssue)(t), e.onClose()
     }, [e, t]),
     d = l.useCallback(() => {
@@ -98,7 +98,7 @@ function g(e) {
       }), c]
     }), (0, a.jsxs)(s.ModalFooter, {
       children: [(0, a.jsx)(s.Button, {
-        onClick: u,
+        onClick: o,
         children: "Submit Issue"
       }), (0, a.jsx)(s.Button, {
         look: s.ButtonLooks.BLANK,
@@ -120,7 +120,7 @@ function S(e) {
     style: E,
     onClick: t,
     title: "Copy to clipboard",
-    children: (0, a.jsx)(u.default, {
+    children: (0, a.jsx)(o.default, {
       width: "1em",
       height: "1em"
     })
@@ -193,7 +193,7 @@ function T(e) {
     }, [t, n]);
   return (0, f.shouldShowCallscopeUI)() ? (0, a.jsx)(i.default, {
     onClick: r,
-    iconComponent: o.default,
+    iconComponent: u.default,
     "aria-label": h.default.Messages.NOTICE_CALLSCOPE_MARK_ISSUE,
     className: e.className,
     label: h.default.Messages.NOTICE_CALLSCOPE_MARK_ISSUE

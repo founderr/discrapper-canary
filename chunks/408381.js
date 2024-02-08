@@ -19,8 +19,8 @@ r.r(t), r.d(t, {
     return I
   }
 });
-var n, a = r("151426"),
-  i = r("635058"),
+var n, a = r("635058"),
+  i = r("151426"),
   s = r("20606"),
   u = r("867805"),
   o = r("547630"),
@@ -39,25 +39,25 @@ let d = 1060,
   },
   A = l.COMMON_CONFETTI_SPRITES.filter((e, t) => 1 !== t && 7 !== t),
   C = {
-    ["".concat(i.CollectiblesCategorySkuId.FANTASY)]: [r("655029"), r("290216")],
-    ["".concat(i.CollectiblesCategorySkuId.ANIME)]: [r("597704"), r("714293")],
-    ["".concat(i.CollectiblesCategorySkuId.BREAKFAST)]: [r("286642"), r("94646")],
-    ["".concat(i.CollectiblesCategorySkuId.HALLOWEEN)]: [r("638538"), r("861485")],
-    ["".concat(i.CollectiblesCategorySkuId.FALL)]: [r("740683"), r("489847")],
-    ["".concat(i.CollectiblesCategorySkuId.WINTER)]: [r("770704"), r("165057")],
-    ["".concat(i.CollectiblesCategorySkuId.MONSTERS)]: [r("330825"), r("125221")],
-    ["".concat(i.CollectiblesCategorySkuId.CYBERPUNK)]: [r("424869"), r("714293")],
-    ["".concat(i.CollectiblesCategorySkuId.LUNAR_NEW_YEAR)]: [r("424869"), r("714293")]
+    ["".concat(a.CollectiblesCategorySkuId.FANTASY)]: [r("655029"), r("290216")],
+    ["".concat(a.CollectiblesCategorySkuId.ANIME)]: [r("597704"), r("714293")],
+    ["".concat(a.CollectiblesCategorySkuId.BREAKFAST)]: [r("286642"), r("94646")],
+    ["".concat(a.CollectiblesCategorySkuId.HALLOWEEN)]: [r("638538"), r("861485")],
+    ["".concat(a.CollectiblesCategorySkuId.FALL)]: [r("740683"), r("489847")],
+    ["".concat(a.CollectiblesCategorySkuId.WINTER)]: [r("770704"), r("165057")],
+    ["".concat(a.CollectiblesCategorySkuId.MONSTERS)]: [r("330825"), r("125221")],
+    ["".concat(a.CollectiblesCategorySkuId.CYBERPUNK)]: [r("424869"), r("714293")],
+    ["".concat(a.CollectiblesCategorySkuId.LUNAR_NEW_YEAR)]: [r("424869"), r("714293")]
   },
   p = e => {
     var t;
     return null == e ? A : null !== (t = C[e]) && void 0 !== t ? t : A
   },
   I = {
-    [a.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE]: {
+    [i.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE]: {
       tooltipText: () => c.default.Messages.COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE
     },
-    [a.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
+    [i.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
       tooltipText: () => c.default.Messages.COLLECTIBLES_LUNAR_NEW_YEAR_TOOLTIP_TEXT,
       tooltipEmojiName: null === (n = u.default.getByName("dragon")) || void 0 === n ? void 0 : n.surrogates,
       badgeColor: s.default.STATUS_DANGER_BACKGROUND

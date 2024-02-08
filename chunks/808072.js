@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   TextAlignments: function() {
-    return a
+    return s
   },
   ArrowAlignments: function() {
     return l
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("222007");
-var s, a, l, i, r, o, u = n("37983"),
+var a, s, l, i, r, o, u = n("37983"),
   d = n("884691"),
   c = n("414456"),
   f = n.n(c),
@@ -21,9 +21,9 @@ var s, a, l, i, r, o, u = n("37983"),
   E = n("145131"),
   g = n("49111"),
   S = n("782340"),
-  A = n("816456");
-(r = a || (a = {})).CENTER = "center", r.LEFT = "left", (o = l || (l = {})).TOP = "top", o.MIDDLE = "middle";
-class _ extends d.PureComponent {
+  _ = n("816456");
+(r = s || (s = {})).CENTER = "center", r.LEFT = "left", (o = l || (l = {})).TOP = "top", o.MIDDLE = "middle";
+class A extends d.PureComponent {
   componentDidMount() {
     let {
       uniqueId: e
@@ -43,32 +43,32 @@ class _ extends d.PureComponent {
       renderMedia: e,
       textAlign: t,
       isLongText: n,
-      title: s,
-      body: a,
+      title: a,
+      body: s,
       className: l,
       forceTheme: i,
       onClickSkipAll: r
     } = this.props, o = "left" === t || n, d = "center" === t || !o;
     return (0, u.jsxs)(C.Dialog, {
-      className: f(A.popoutRoot, l),
+      className: f(_.popoutRoot, l),
       children: [null != e && (0, u.jsx)(E.default, {
-        className: A.mediaContainer,
+        className: _.mediaContainer,
         justify: o ? E.default.Justify.START : E.default.Justify.CENTER,
         children: e()
       }), (0, u.jsx)(C.H, {
         className: f({
-          [A.titleCenter]: d,
-          [A.titleLeft]: o
-        }),
-        children: s
-      }), (0, u.jsx)("string" == typeof a ? "p" : "div", {
-        className: f({
-          [A.bodyCenter]: d,
-          [A.bodyLeft]: o
+          [_.titleCenter]: d,
+          [_.titleLeft]: o
         }),
         children: a
+      }), (0, u.jsx)("string" == typeof s ? "p" : "div", {
+        className: f({
+          [_.bodyCenter]: d,
+          [_.bodyLeft]: o
+        }),
+        children: s
       }), (0, u.jsxs)(E.default, {
-        className: A.buttonContainer,
+        className: _.buttonContainer,
         justify: o ? E.default.Justify.BETWEEN : E.default.Justify.CENTER,
         children: [(0, u.jsx)(C.Button, {
           size: C.ButtonSizes.SMALL,
@@ -79,7 +79,7 @@ class _ extends d.PureComponent {
           look: C.Button.Looks.BLANK,
           onClick: r,
           color: (0, h.isThemeLight)(i) ? C.Button.Colors.PRIMARY : C.Button.Colors.WHITE,
-          className: o ? A.buttonSkipLeftAlign : A.buttonSkipCenterAlign,
+          className: o ? _.buttonSkipLeftAlign : _.buttonSkipCenterAlign,
           children: S.default.Messages.SKIP_ALL_TIPS
         })]
       })]
@@ -97,14 +97,14 @@ class _ extends d.PureComponent {
       }, () => null == e ? void 0 : e())
     }
   }
-}(s = class extends d.PureComponent {
+}(a = class extends d.PureComponent {
   render() {
     let {
       renderMedia: e,
       textAlign: t,
       onComplete: n,
-      onSkipAll: s,
-      isLongText: a,
+      onSkipAll: a,
+      isLongText: s,
       title: l,
       body: i,
       children: r,
@@ -137,31 +137,31 @@ class _ extends d.PureComponent {
         closePopout: t,
         position: n
       } = e, {
-        forceTheme: s,
-        isLongText: a,
+        forceTheme: a,
+        isLongText: s,
         arrowAlignment: l,
         renderMedia: i
       } = this.props, r = null != i;
-      return (0, u.jsx)(_, {
+      return (0, u.jsx)(A, {
         ...this.props,
         className: f({
-          [A.bottom]: "bottom" === n,
-          [A.contentNarrowNoMedia]: !a && !r,
-          [A.contentNarrowWithMedia]: !a && r,
-          [A.contentWideNoMedia]: a && !r,
-          [A.contentWideWithMedia]: a && r,
-          [A.right]: "right" === n,
-          [A.top]: "top" === n,
-          [A.left]: "left" === n,
-          [A.arrowAlignmentTop]: "top" === l,
-          [A.arrowAlignmentMiddle]: "middle" === l,
-          "force-theme": null != s
-        }, (0, m.getThemeClass)(s)),
+          [_.bottom]: "bottom" === n,
+          [_.contentNarrowNoMedia]: !s && !r,
+          [_.contentNarrowWithMedia]: !s && r,
+          [_.contentWideNoMedia]: s && !r,
+          [_.contentWideWithMedia]: s && r,
+          [_.right]: "right" === n,
+          [_.top]: "top" === n,
+          [_.left]: "left" === n,
+          [_.arrowAlignmentTop]: "top" === l,
+          [_.arrowAlignmentMiddle]: "middle" === l,
+          "force-theme": null != a
+        }, (0, m.getThemeClass)(a)),
         onClickComplete: () => this.onClickComplete(t),
         onClickSkipAll: () => this.onClickSkipAll(t)
       })
     }
   }
-}).TextAlignments = a, s.defaultProps = {
+}).TextAlignments = s, a.defaultProps = {
   textAlign: "left"
-}, i = s
+}, i = a

@@ -32,8 +32,8 @@ function d(e) {
     canSendStickers: m,
     hideMentionDescription: h,
     hidePersonalInformation: E,
-    type: g,
-    emojiIntention: S,
+    type: S,
+    emojiIntention: g,
     editorRef: C,
     onSendMessage: T,
     onSendSticker: v,
@@ -51,8 +51,8 @@ function d(e) {
     forNonStringCommandOption: null != n && n.type !== i.ApplicationCommandOptionType.STRING,
     hideMentionDescription: !0 === h,
     hidePersonalInformation: !0 === E,
-    chatInputType: g,
-    emojiIntention: S,
+    chatInputType: S,
+    emojiIntention: g,
     sendMessage: T,
     sendSticker: v,
     insertText: (e, t) => {
@@ -71,7 +71,7 @@ function d(e) {
     let e = (0, a.getApplicationCommandOptionQueryOptions)(n);
     e.canMentionChannels && (_.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), e.canMentionEveryone && (_.mentions.global = e.canMentionHere ? o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE : o.GlobalMentionMode.ALLOW_EVERYONE), e.canMentionRoles && (_.mentions.role = e.canMentionNonMentionableRoles ? o.RoleMentionMode.ALLOW_ALL : o.RoleMentionMode.ALLOW_MENTIONABLE), e.canMentionUsers && (_.mentions.user = e.canMentionAnyGuildUser ? o.UserMentionMode.ALLOW_GUILD : o.UserMentionMode.ALLOW_CHANNEL), _.hideMentionDescription = !0
   } else u && (_.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), r && (_.mentions.role = o.RoleMentionMode.ALLOW_MENTIONABLE), l && (_.mentions.user = o.UserMentionMode.ALLOW_CHANNEL), d && (_.mentions.global = o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE), c && (_.mentions.clyde = o.ClydeMentionMode.ALLOW);
-  return (null === (t = g.commands) || void 0 === t ? void 0 : t.enabled) && (f ? _.commands = p ? o.CommandMode.NEW_TEXT_ONLY : o.CommandMode.NEW : _.commands = o.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (_.allowedChannelTypes = n.channelTypes), _
+  return (null === (t = S.commands) || void 0 === t ? void 0 : t.enabled) && (f ? _.commands = p ? o.CommandMode.NEW_TEXT_ONLY : o.CommandMode.NEW : _.commands = o.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (_.allowedChannelTypes = n.channelTypes), _
 }
 
 function c(e) {
@@ -101,7 +101,7 @@ function f(e) {
     optionText: f
   } = e, p = null;
   for (let e of r.AUTOCOMPLETE_PRIORITY) {
-    var m, h, E, g, S, C;
+    var m, h, E, S, g, C;
     let T = r.AUTOCOMPLETE_OPTIONS[e];
     if (e === o.AutocompleteOptionTypes.GIFS || e === o.AutocompleteOptionTypes.CHOICES) {
       if (i.commands === o.CommandMode.OLD_BUILT_INS) {
@@ -179,7 +179,7 @@ function f(e) {
         p = {
           type: e,
           typeInfo: T,
-          query: a.substring(null !== (g = null === (E = T.sentinel) || void 0 === E ? void 0 : E.length) && void 0 !== g ? g : 0)
+          query: a.substring(null !== (S = null === (E = T.sentinel) || void 0 === E ? void 0 : E.length) && void 0 !== S ? S : 0)
         };
         break
       }
@@ -194,7 +194,7 @@ function f(e) {
       p = {
         type: e,
         typeInfo: T,
-        query: a.substring(null !== (C = null === (S = T.sentinel) || void 0 === S ? void 0 : S.length) && void 0 !== C ? C : 0)
+        query: a.substring(null !== (C = null === (g = T.sentinel) || void 0 === g ? void 0 : g.length) && void 0 !== C ? C : 0)
       };
       break
     }

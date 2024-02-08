@@ -13,8 +13,8 @@ var l = n("414456"),
   s = n.n(l),
   i = n("446674"),
   r = n("819855"),
-  o = n("77078"),
-  u = n("272030"),
+  u = n("77078"),
+  o = n("272030"),
   d = n("54239"),
   c = n("841098"),
   f = n("449918"),
@@ -33,10 +33,10 @@ function I(e) {
     nick: n,
     theme: l,
     onSelect: i,
-    onContextMenu: u,
+    onContextMenu: o,
     user: d
   } = e, c = d.hasAvatarForGuild(t.id);
-  return (0, a.jsxs)(o.Clickable, {
+  return (0, a.jsxs)(u.Clickable, {
     focusProps: {
       offset: {
         right: 8
@@ -44,7 +44,7 @@ function I(e) {
     },
     className: S.listRow,
     onClick: () => i(t.id),
-    onContextMenu: e => u(e, t),
+    onContextMenu: e => o(e, t),
     children: [(0, a.jsx)(p.default, {
       tabIndex: -1,
       guild: t,
@@ -60,9 +60,9 @@ function I(e) {
         children: t.toString()
       }), c || null != n ? (0, a.jsxs)("div", {
         className: _.guildNick,
-        children: [c && (0, a.jsx)(o.Avatar, {
+        children: [c && (0, a.jsx)(u.Avatar, {
           src: d.getAvatarURL(t.id, 16),
-          size: o.AvatarSizes.SIZE_16,
+          size: u.AvatarSizes.SIZE_16,
           className: _.guildAvatar,
           "aria-hidden": !0
         }), null != n ? n : m.default.getName(d)]
@@ -84,7 +84,7 @@ function T(e) {
   }
 
   function m(e, t) {
-    (0, u.openContextMenuLazy)(e, async () => {
+    (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("374705").then(n.bind(n, "374705"));
@@ -115,7 +115,7 @@ function T(e) {
       onSelect: p,
       onContextMenu: m
     }, t.id)
-  }), (0, a.jsx)(o.ScrollerThin, {
+  }), (0, a.jsx)(u.ScrollerThin, {
     className: S.listScroller,
     fade: !0,
     children: t

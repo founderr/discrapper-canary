@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("77078"),
   h = n("295426"),
   E = n("206230"),
-  g = n("812204"),
-  S = n("685665"),
+  S = n("812204"),
+  g = n("685665"),
   C = n("996554"),
   T = n("426969"),
   v = n("847352"),
@@ -65,7 +65,7 @@ var l = n("37983"),
   er = n("13030"),
   eo = n("537461"),
   eu = i.memo(i.forwardRef(function(e, t) {
-    var a, o, eu, ed, ec, ef, ep, em, eh, eE, eg, eS, eC, eT;
+    var a, o, eu, ed, ec, ef, ep, em, eh, eE, eS, eg, eC, eT;
     let {
       textValue: ev,
       richValue: eI,
@@ -110,7 +110,7 @@ var l = n("37983"),
     u(null != eP, "chat input type must be set");
     let {
       AnalyticsLocationProvider: e3
-    } = (0, S.default)(g.default.CHANNEL_TEXT_AREA), e6 = function(e) {
+    } = (0, g.default)(S.default.CHANNEL_TEXT_AREA), e6 = function(e) {
       let t = i.useRef(null);
       if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
       return null == e ? t : e
@@ -192,8 +192,8 @@ var l = n("37983"),
       })
     }(eP, ts);
     let {
-      eventEmitter: tg,
-      handleEditorSelectionChanged: tS
+      eventEmitter: tS,
+      handleEditorSelectionChanged: tg
     } = function(e, t, n) {
       let [l] = i.useState(() => new r.EventEmitter);
       return i.useEffect(() => {
@@ -210,11 +210,11 @@ var l = n("37983"),
       handleSubmit: tv
     } = function(e, t, a, s) {
       let [r, o] = i.useState(!1), u = i.useCallback((i, d, c, f, p) => {
-        var E, g, S;
+        var E, S, g;
         if (r) return;
         o(!0);
-        let C = null !== (g = null === (E = j.default.getStickerPreview(s, t.drafts.type)) || void 0 === E ? void 0 : E.map(e => e.id)) && void 0 !== g ? g : [],
-          T = null !== (S = V.default.getUploads(s, t.drafts.type)) && void 0 !== S ? S : [];
+        let C = null !== (S = null === (E = j.default.getStickerPreview(s, t.drafts.type)) || void 0 === E ? void 0 : E.map(e => e.id)) && void 0 !== S ? S : [],
+          T = null !== (g = V.default.getUploads(s, t.drafts.type)) && void 0 !== g ? g : [];
         if (null == d && !f && !p && (0, M.shouldShowAddMediaToOriginalPostModal)(T, s)) {
           o(!1), (0, m.openModalLazy)(async () => {
             let {
@@ -279,10 +279,10 @@ var l = n("37983"),
         handleHideAutocomplete: n
       }
     }();
-    let tA = (eE = tT, eg = eP, eS = e5, i.useCallback(e => {
+    let tA = (eE = tT, eS = eP, eg = e5, i.useCallback(e => {
       var t, n;
-      eg === q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eS.current) || void 0 === n || n.insertGIF(e) : eE(e.url, void 0, void 0, !0), (0, x.closeExpressionPicker)(), null === (t = eS.current) || void 0 === t || t.focus()
-    }, [eS, eE, eg]));
+      eS === q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eg.current) || void 0 === n || n.insertGIF(e) : eE(e.url, void 0, void 0, !0), (0, x.closeExpressionPicker)(), null === (t = eg.current) || void 0 === t || t.focus()
+    }, [eg, eE, eS]));
     let tN = (eC = e5, i.useCallback(function(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           l = eC.current;
@@ -298,7 +298,7 @@ var l = n("37983"),
           submit: r
         } = e, {
           analyticsLocations: o
-        } = (0, S.default)();
+        } = (0, g.default)();
         return i.useCallback((e, i) => {
           var u, d;
           !n && ((0, D.shouldAttachSticker)(i, l, a, s.drafts.type) ? ((0, X.trackStickerPreviewSelect)({
@@ -387,14 +387,14 @@ var l = n("37983"),
           handleAutocompleteVisibilityChange: s,
           handleOuterClick: r
         }
-      }(eP, tg, e5),
+      }(eP, tS, e5),
       tF = C.AppLauncherDesktopExperiment.useExperiment({
         location: "chat_input"
       }, {
         autoTrackExposure: !1
       }).enabled,
       tG = (0, p.useStateFromStores)([T.default], () => T.default.shouldShowPopup(), []);
-    (0, J.useHereMentionCallback)(tg, eL.guild_id, eL.id);
+    (0, J.useHereMentionCallback)(tS, eL.guild_id, eL.id);
     let tB = null != ek,
       tH = ts && !((ti || ta) && tu) || tC && (null === (o = eP.submit) || void 0 === o ? void 0 : o.useDisabledStylesOnSubmit),
       tV = null,
@@ -413,7 +413,7 @@ var l = n("37983"),
       tq = null != tn || null != ek || tJ,
       tZ = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
     return (0, l.jsx)(N.EventEmitterProvider, {
-      value: tg,
+      value: tS,
       children: (0, l.jsxs)(e3, {
         children: [tY && td ? (0, l.jsx)(ei.default, {
           editorRef: e5,
@@ -492,7 +492,7 @@ var l = n("37983"),
                   onTab: tP,
                   onEnter: tb,
                   onMoveSelection: tj,
-                  onSelectionChanged: tS,
+                  onSelectionChanged: tg,
                   onMaybeShowAutocomplete: t_,
                   onHideAutocomplete: ty,
                   promptToUpload: eK,

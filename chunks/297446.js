@@ -12,8 +12,8 @@ var a = n("37983"),
   s = n("627445"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("255397"),
+  u = n("77078"),
+  o = n("255397"),
   d = n("272030"),
   c = n("990766"),
   f = n("244201"),
@@ -42,17 +42,17 @@ let L = 16 / 9,
       channel: s,
       guildId: i,
       user: r,
-      width: u,
+      width: o,
       isModerator: d,
       onContextMenu: c,
       inPopout: f
     } = e, {
       reducedMotion: h
-    } = l.useContext(o.AccessibilityPreferencesContext), {
+    } = l.useContext(u.AccessibilityPreferencesContext), {
       blocked: p,
       id: m
     } = t;
-    return (0, a.jsx)(o.Popout, {
+    return (0, a.jsx)(u.Popout, {
       preload: null == n ? void 0 : () => (0, C.default)(n.user.id, n.user.getAvatarURL(s.guild_id, 80), {
         guildId: s.guild_id,
         channelId: s.id
@@ -65,7 +65,7 @@ let L = 16 / 9,
       }),
       position: "right",
       spacing: 8,
-      children: e => (0, a.jsx)(o.Clickable, {
+      children: e => (0, a.jsx)(u.Clickable, {
         onContextMenu: e => c(n, e),
         ...e,
         children: (0, a.jsx)(N.default, {
@@ -78,7 +78,7 @@ let L = 16 / 9,
           inPopout: f,
           paused: !1,
           pulseSpeakingIndicator: !h.enabled,
-          width: u,
+          width: o,
           children: d && (0, a.jsx)(A.default, {})
         }, m)
       })
@@ -95,7 +95,7 @@ let L = 16 / 9,
       inPopout: C
     } = e, {
       reducedMotion: g
-    } = l.useContext(o.AccessibilityPreferencesContext), {
+    } = l.useContext(u.AccessibilityPreferencesContext), {
       id: x,
       blocked: O
     } = t, y = (0, r.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams(), []), {
@@ -113,7 +113,7 @@ let L = 16 / 9,
             forceMultiple: t.shiftKey
           })
         }
-      }(null == b ? void 0 : b.id) === e.id ? P ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
+      }(null == b ? void 0 : b.id) === e.id ? P ? (o.default.selectParticipant(s.id, null), o.default.updateStageStreamSize(s.id, !1)) : o.default.updateStageStreamSize(s.id, !0) : (o.default.updateStageStreamSize(s.id, !1), o.default.selectParticipant(s.id, e.id))
     }, [y, s, b, P]);
     return (0, a.jsx)(N.default, {
       participant: n,
@@ -137,8 +137,8 @@ var b = l.memo(function(e) {
   let {
     participant: l,
     channel: s,
-    width: o
-  } = e, u = (0, f.useAppContext)(), c = s.getGuildId();
+    width: u
+  } = e, o = (0, f.useAppContext)(), c = s.getGuildId();
   i(null != c, "Channel cannot be guildless");
   let {
     user: p
@@ -155,11 +155,11 @@ var b = l.memo(function(e) {
             return n => (0, a.jsx)(t, {
               ...n,
               stream: e.stream,
-              appContext: u,
+              appContext: o,
               exitFullscreen: () => {}
             })
           }, {
-            context: u
+            context: o
           });
           return;
         case R.ParticipantTypes.USER:
@@ -178,7 +178,7 @@ var b = l.memo(function(e) {
               showChatItems: !1
             })
           }, {
-            context: u
+            context: o
           })
       }
     },
@@ -190,20 +190,20 @@ var b = l.memo(function(e) {
       channel: s,
       guildId: c,
       user: p,
-      width: o,
+      width: u,
       isModerator: E,
       onContextMenu: C,
-      inPopout: u === M.AppContext.POPOUT
+      inPopout: o === M.AppContext.POPOUT
     }) : (0, a.jsx)(y, {
       stageParticipant: l,
       rtcParticipant: m,
       channel: s,
       guildId: c,
       user: p,
-      width: o,
+      width: u,
       isModerator: E,
       onContextMenu: C,
-      inPopout: u === M.AppContext.POPOUT
+      inPopout: o === M.AppContext.POPOUT
     })
   })
 })

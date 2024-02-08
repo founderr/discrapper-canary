@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useStickerSuggestionResults: function() {
-    return g
+    return S
   },
   useTextChangeHandler: function() {
-    return S
+    return g
   }
 }), n("222007"), n("424973");
 var l = n("884691"),
@@ -21,7 +21,7 @@ var l = n("884691"),
   m = n("171209"),
   h = n("721423");
 let E = (0, p.promiseThrottle)(o.fetchStickerPacks, h.REQUEST_THROTTLE_DURATION_MS),
-  g = (e, t, n) => {
+  S = (e, t, n) => {
     let i = (0, u.useHasSendableSticker)(n),
       a = (0, s.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
       o = l.useMemo(() => {
@@ -46,7 +46,7 @@ let E = (0, p.promiseThrottle)(o.fetchStickerPacks, h.REQUEST_THROTTLE_DURATION_
       }, [e, n, i, t, a]);
     return o
   },
-  S = e => {
+  g = e => {
     let {
       setTextInputValue: t,
       setHasDismissed: n,

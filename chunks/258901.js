@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n("907002"),
-  u = n("77078"),
+  u = n("907002"),
+  o = n("77078"),
   d = n("430568"),
   c = n("252744"),
   f = n("788506"),
@@ -37,11 +37,11 @@ function M(e) {
   } = e, r = l.useRef(null), f = (0, c.default)(r);
   return (0, a.jsx)("span", {
     ref: r,
-    children: (0, a.jsx)(u.Button, {
+    children: (0, a.jsx)(o.Button, {
       onClick: s,
-      look: u.Button.Looks.BLANK,
-      size: u.Button.Sizes.NONE,
-      children: (0, a.jsx)(o.Spring, {
+      look: o.Button.Looks.BLANK,
+      size: o.Button.Sizes.NONE,
+      children: (0, a.jsx)(u.Spring, {
         config: E.EMOJI_BUTTON_SPRING_CONFIG,
         from: {
           value: 0
@@ -53,7 +53,7 @@ function M(e) {
           let {
             value: l
           } = e;
-          return (0, a.jsx)(o.animated.div, {
+          return (0, a.jsx)(u.animated.div, {
             style: {
               transform: l.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
             },
@@ -80,7 +80,7 @@ function R(e) {
     onFocus: s
   } = e;
   return (0, a.jsxs)(a.Fragment, {
-    children: [t, (0, a.jsx)(u.Clickable, {
+    children: [t, (0, a.jsx)(o.Clickable, {
       className: x.dropDownContainer,
       onClick: () => {
         l(!n), s()
@@ -99,7 +99,7 @@ function j(e) {
     channel: t,
     title: n,
     closePopout: s,
-    onFocus: o,
+    onFocus: u,
     onSelectEmoji: d,
     onSelectDisabledEmoji: c,
     onExpandedToggle: p,
@@ -123,12 +123,12 @@ function j(e) {
       null != e && d(e);
       P(!t), t && m.EmojiPickerStore.setSearchPlaceholder(null)
     };
-  return (0, a.jsxs)(u.Dialog, {
+  return (0, a.jsxs)(o.Dialog, {
     "aria-labelledby": j,
-    children: [(0, a.jsx)(u.HeadingLevel, {
+    children: [(0, a.jsx)(o.HeadingLevel, {
       forceLevel: 2,
-      children: (0, a.jsx)(u.HiddenVisually, {
-        children: (0, a.jsx)(u.H, {
+      children: (0, a.jsx)(o.HiddenVisually, {
+        children: (0, a.jsx)(o.H, {
           id: j,
           children: n
         })
@@ -155,7 +155,7 @@ function j(e) {
             otherAccessories: null == E ? void 0 : E.accessory,
             isEmojiPickerExpanded: L,
             onSetExpanded: P,
-            onFocus: o
+            onFocus: u
           }),
           onKeyDown: e => {
             null != e && e.key !== v.KeyboardKeysUpdated.TAB && (e.key !== v.KeyboardKeysUpdated.ENTER || e.shiftKey ? P(!0) : P(!L))
@@ -173,12 +173,12 @@ function j(e) {
             });
             return (0, a.jsx)("div", {
               className: x.slot,
-              children: (0, a.jsx)(u.TooltipContainer, {
+              children: (0, a.jsx)(o.TooltipContainer, {
                 text: e.name,
                 position: "top",
                 "aria-label": e.name,
                 tooltipClassName: x.tooltipContainer,
-                color: u.Tooltip.Colors.BRAND,
+                color: o.Tooltip.Colors.BRAND,
                 children: (0, a.jsx)(M, {
                   emoji: e,
                   isDisabled: n,

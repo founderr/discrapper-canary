@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("819855"),
-  u = n("77078"),
+  u = n("819855"),
+  o = n("77078"),
   d = n("731898"),
   c = n("841098"),
   f = n("206230"),
@@ -34,20 +34,20 @@ function g(e) {
     collapseWhenChecked: x = !0,
     onClick: N,
     disabled: A
-  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = l.useState(!1), L = (0, c.default)(), O = (0, o.isThemeDark)(L) || t ? C : E, {
+  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = l.useState(!1), L = (0, c.default)(), O = (0, u.isThemeDark)(L) || t ? C : E, {
     width: y = 0,
     ref: b
   } = (0, d.default)(), {
     width: P = 0,
     ref: D
   } = (0, d.default)();
-  return (0, a.jsxs)(u.TooltipContainer, {
+  return (0, a.jsxs)(o.TooltipContainer, {
     text: (0, a.jsx)(h.NitroTooltipLabel, {
       textColor: "always-white",
       tooltipText: s
     }),
     position: "top",
-    color: null != I ? I : A ? u.Tooltip.Colors.BLACK : u.Tooltip.Colors.BRAND,
+    color: null != I ? I : A ? o.Tooltip.Colors.BLACK : o.Tooltip.Colors.BRAND,
     "aria-label": s,
     tooltipClassName: m.tooltip,
     className: m.tooltipContainer,
@@ -83,7 +83,7 @@ function g(e) {
         alt: S
       }), (0, a.jsx)("span", {
         ref: D,
-        children: (0, a.jsx)(u.Text, {
+        children: (0, a.jsx)(o.Text, {
           className: i(m.burstText, {
             [m.visuallyHidden]: t && x,
             [m.burstTextChecked]: t

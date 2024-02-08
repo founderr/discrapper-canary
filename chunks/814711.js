@@ -9,16 +9,16 @@ var a = n("37983"),
   s = n("77078"),
   i = n("788220"),
   r = n("894282"),
-  o = n("186503");
+  u = n("186503");
 
-function u(e) {
+function o(e) {
   let {
     renderPopout: t,
     onMouseEnter: n,
     onMouseLeave: s,
     closePopout: i,
     isHovered: r,
-    ...o
+    ...u
   } = e;
   return l.useEffect(() => {
     !r && i()
@@ -27,7 +27,7 @@ function u(e) {
     onMouseLeave: s,
     children: t({
       closePopout: i,
-      ...o
+      ...u
     })
   })
 }
@@ -65,7 +65,7 @@ function d(e) {
     onRequestClose: () => {
       h(!1), c(!1)
     },
-    renderPopout: e => (0, a.jsx)(u, {
+    renderPopout: e => (0, a.jsx)(o, {
       isHovered: _,
       onFocus: () => c(!0),
       onMouseEnter: p,
@@ -85,7 +85,7 @@ function d(e) {
             var t, n;
             return t = e, n = l, void((t.key === r.KeyboardKeysUpdated.ENTER || t.key === r.KeyboardKeysUpdated.SPACE) && S(() => n(t)))
           },
-          className: o.actionBarButton,
+          className: u.actionBarButton,
           onMouseEnter: C,
           onMouseLeave: g,
           isActive: _

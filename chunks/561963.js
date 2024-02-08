@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n.n(r),
-  u = n("974667"),
+  u = n.n(r),
+  o = n("974667"),
   d = n("394846"),
   c = n("446674"),
   f = n("77078"),
@@ -53,10 +53,10 @@ let W = F.default.getEnableHardwareAcceleration(),
       sectionId: s,
       userId: i,
       guildOwnerId: r
-    } = e, o = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), m = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), C = (0, c.useStateFromStores)([x.default], () => {
+    } = e, u = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), m = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), C = (0, c.useStateFromStores)([x.default], () => {
       var e, n;
       return (null == m ? void 0 : m.colorRoleId) != null ? null === (n = x.default.getGuild(t.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(m.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-    }, [t.guild_id, m]), g = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == g ? void 0 : g.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), b = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), P = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, u.useListItem)(i), F = (0, c.useStateFromStores)([S.default], () => S.default.canUserViewChannel(t.id, s, i)), H = (null == g ? void 0 : g.id) != null && g.id === r, G = l.useCallback(e => {
+    }, [t.guild_id, m]), g = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == g ? void 0 : g.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), b = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), P = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, o.useListItem)(i), F = (0, c.useStateFromStores)([S.default], () => S.default.canUserViewChannel(t.id, s, i)), H = (null == g ? void 0 : g.id) != null && g.id === r, G = l.useCallback(e => {
       null != g && (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -117,7 +117,7 @@ let W = F.default.getEnableHardwareAcceleration(),
           activities: b,
           colorString: null == m ? void 0 : m.colorString,
           colorRoleName: C,
-          isTyping: o,
+          isTyping: u,
           channel: t,
           guildId: t.guild_id,
           isMobile: y,
@@ -203,11 +203,11 @@ function X(e) {
         if (null == l) return;
         let s = parseInt(n, 10),
           [i, r] = l.getSectionRowFromIndex(s),
-          o = 0 === i && 0 === r ? t : 0;
+          u = 0 === i && 0 === r ? t : 0;
         l.scrollToIndex({
           section: i,
           row: r,
-          padding: o,
+          padding: u,
           callback: () => {
             requestAnimationFrame(() => {
               var t;
@@ -234,7 +234,7 @@ function X(e) {
           }
         })
       }), []),
-      o = (0, u.default)({
+      u = (0, o.default)({
         id: e,
         setFocus: s,
         isEnabled: n,
@@ -242,7 +242,7 @@ function X(e) {
         scrollToEnd: r
       });
     return {
-      navigator: o,
+      navigator: u,
       listRef: a
     }
   }(s, Y), E = 0 === r.length || r.every(e => 0 === e.userIds.length);
@@ -255,9 +255,9 @@ function X(e) {
     }, [t.guild_id, t.id, t.type]), E) return (0, a.jsx)(J, {
     channel: t
   });
-  let C = o.omit(h.containerProps, ["ref"]),
+  let C = u.omit(h.containerProps, ["ref"]),
     S = U.default.getGuildVisualOwnerId(n);
-  return (0, a.jsx)(u.ListNavigatorProvider, {
+  return (0, a.jsx)(o.ListNavigatorProvider, {
     navigator: h,
     children: (0, a.jsx)(f.FocusJumpSection, {
       children: e => (0, a.jsx)("div", {

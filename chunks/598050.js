@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a, l, s = n("37983"),
   i = n("884691"),
   r = n("446674"),
-  o = n("737960"),
-  u = n("191145"),
+  u = n("737960"),
+  o = n("191145"),
   d = n("488464"),
   c = n("567469"),
   f = n("998716"),
@@ -36,20 +36,20 @@ let T = (e, t) => {
   },
   v = (e, t) => e < I.singleSpeaker ? 1 : e < I.twoSpeakers ? 2 : e < I.threeSpeakers ? 3 : t ? 3 : 4,
   x = e => Math.floor((e - 32) / 102);
-var N = (0, o.default)(e => {
+var N = (0, u.default)(e => {
   var t, n;
   let {
     channel: a,
     width: l,
-    onScroll: o
+    onScroll: u
   } = e, {
     selectedParticipantId: I,
     largeStream: N,
     chatOpen: A
-  } = (0, r.useStateFromStoresObject)([u.default], () => ({
-    selectedParticipantId: u.default.getSelectedParticipantId(a.id),
-    largeStream: u.default.getStageStreamSize(a.id),
-    chatOpen: u.default.getChatOpen(a.id)
+  } = (0, r.useStateFromStoresObject)([o.default], () => ({
+    selectedParticipantId: o.default.getSelectedParticipantId(a.id),
+    largeStream: o.default.getStageStreamSize(a.id),
+    chatOpen: o.default.getChatOpen(a.id)
   }), [a.id]), M = (0, c.useActualStageSpeakerCount)(a.id), R = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), j = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(a.id, I) : null), L = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), O = L.filter(e => e.type === f.StageChannelParticipantTypes.VOICE), y = null != L.find(e => e.type === f.StageChannelParticipantTypes.STREAM), b = x(l), P = v(l, A), D = {
     [f.StageChannelParticipantNamedIndex.SPEAKER]: P,
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: b,
@@ -138,6 +138,6 @@ var N = (0, o.default)(e => {
     footerHeight: e => 1 === e ? 8 : 0 === e ? 12 : G(e) ? 88 : 0,
     className: _.scroller,
     chunkSize: 60,
-    onScroll: o
+    onScroll: u
   })
 })

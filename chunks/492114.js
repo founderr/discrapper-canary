@@ -1,95 +1,95 @@
 "use strict";
-let E, n, l, C, F, i;
-t.r(e), t.d(e, {
+let a, s, l, i, r, o;
+n.r(t), n.d(t, {
   default: function() {
-    return G
+    return H
   }
-}), t("808653"), t("702976"), t("222007");
-var u = t("917351"),
-  a = t.n(u),
-  r = t("866227"),
-  o = t.n(r),
-  D = t("446674"),
-  d = t("872717"),
-  s = t("913144"),
-  A = t("233069"),
-  c = t("813006"),
-  f = t("517763"),
-  _ = t("766274"),
-  N = t("42203"),
-  T = t("49111");
-let h = T.FormStates.CLOSED,
-  m = {},
-  v = {},
+}), n("808653"), n("702976"), n("222007");
+var u = n("917351"),
+  d = n.n(u),
+  c = n("866227"),
+  f = n.n(c),
+  h = n("446674"),
+  C = n("872717"),
+  p = n("913144"),
+  m = n("233069"),
+  E = n("813006"),
+  g = n("517763"),
+  S = n("766274"),
+  _ = n("42203"),
+  A = n("49111");
+let T = A.FormStates.CLOSED,
+  M = {},
+  N = {},
   I = !1,
-  S = !1,
-  p = null,
-  L = ["name", "type", "topic_", "bitrate_", "userLimit_", "nsfw_", "flags_", "rateLimitPerUser_", "defaultThreadRateLimitPerUser", "defaultAutoArchiveDuration", "template", "defaultReactionEmoji", "rtcRegion", "videoQualityMode", "threadMetadata", "banner", "availableTags", "defaultSortOrder", "defaultForumLayout", "iconEmoji", "themeColor"];
+  v = !1,
+  L = null,
+  x = ["name", "type", "topic_", "bitrate_", "userLimit_", "nsfw_", "flags_", "rateLimitPerUser_", "defaultThreadRateLimitPerUser", "defaultAutoArchiveDuration", "template", "defaultReactionEmoji", "rtcRegion", "videoQualityMode", "threadMetadata", "banner", "availableTags", "defaultSortOrder", "defaultForumLayout", "iconEmoji", "themeColor"];
 
-function g(B) {
-  let e = N.default.getChannel(B.channelId);
-  if (null == e) return y();
-  h = T.FormStates.OPEN, C = l = e, p = "location" in B && null != B.location ? B.location : null, n = "subsection" in B ? B.subsection : null, null != C && (C = C.set("nsfw", C.isNSFW())), F = N.default.getChannel(C.parent_id), i = C.getGuildId(), m = {}, O({
+function R(e) {
+  let t = _.default.getChannel(e.channelId);
+  if (null == t) return O();
+  T = A.FormStates.OPEN, i = l = t, L = "location" in e && null != e.location ? e.location : null, s = "subsection" in e ? e.subsection : null, null != i && (i = i.set("nsfw", i.isNSFW())), r = _.default.getChannel(i.parent_id), o = i.getGuildId(), M = {}, y({
     type: "CHANNEL_SETTINGS_SET_SECTION",
-    section: null != E ? E : T.ChannelSettingsSections.OVERVIEW,
-    subsection: n
+    section: null != a ? a : A.ChannelSettingsSections.OVERVIEW,
+    subsection: s
   })
 }
 
-function O(B) {
-  E = B.section, n = B.subsection, null != C && E === T.ChannelSettingsSections.INSTANT_INVITES && (I = !0, d.default.get({
-    url: T.Endpoints.INSTANT_INVITES(C.id),
+function y(e) {
+  a = e.section, s = e.subsection, null != i && a === A.ChannelSettingsSections.INSTANT_INVITES && (I = !0, C.default.get({
+    url: A.Endpoints.INSTANT_INVITES(i.id),
     oldFormErrors: !0
-  }).then(B => {
-    I = !1, s.default.dispatch({
+  }).then(e => {
+    I = !1, p.default.dispatch({
       type: "CHANNEL_SETTINGS_LOADED_INVITES",
-      invites: B.body
+      invites: e.body
     })
   }, () => I = !1))
 }
 
-function y() {
-  S = !1, h = T.FormStates.CLOSED, E = null, C = l = null, F = null, v = {}
+function O() {
+  v = !1, T = A.FormStates.CLOSED, a = null, i = l = null, r = null, N = {}
 }
-let U = a.debounce(() => {
-  if (null == C || null == l) return !1;
-  let B = C.toJS(),
-    e = l.toJS(),
-    t = L.every(t => B[t] === e[t]);
-  t && C !== l && (C = l, j.emitChange())
+let D = d.debounce(() => {
+  if (null == i || null == l) return !1;
+  let e = i.toJS(),
+    t = l.toJS(),
+    n = x.every(n => e[n] === t[n]);
+  n && i !== l && (i = l, b.emitChange())
 }, 500);
 
-function M(B) {
-  return new f.default({
-    code: B.code,
-    temporary: B.temporary,
-    revoked: B.revoked,
-    inviter: null != B.inviter ? new _.default(B.inviter) : null,
-    channel: (0, A.createChannelRecordFromInvite)(B.channel),
-    guild: null != B.guild ? new c.default(B.guild) : null,
-    uses: B.uses,
-    maxUses: B.max_uses,
-    maxAge: B.max_age,
-    createdAt: o(B.created_at),
-    type: B.type
+function j(e) {
+  return new g.default({
+    code: e.code,
+    temporary: e.temporary,
+    revoked: e.revoked,
+    inviter: null != e.inviter ? new S.default(e.inviter) : null,
+    channel: (0, m.createChannelRecordFromInvite)(e.channel),
+    guild: null != e.guild ? new E.default(e.guild) : null,
+    uses: e.uses,
+    maxUses: e.max_uses,
+    maxAge: e.max_age,
+    createdAt: f(e.created_at),
+    type: e.type
   })
 }
-class R extends D.default.Store {
+class P extends h.default.Store {
   initialize() {
-    this.waitFor(N.default)
+    this.waitFor(_.default)
   }
   hasChanges() {
-    return C !== l
+    return i !== l
   }
   isOpen() {
-    return S
+    return v
   }
   getSection() {
-    return E
+    return a
   }
   getInvites() {
     return {
-      invites: v,
+      invites: N,
       loading: I
     }
   }
@@ -97,137 +97,137 @@ class R extends D.default.Store {
     return this.hasChanges()
   }
   getChannel() {
-    return C
+    return i
   }
   getFormState() {
-    return h
+    return T
   }
   getCategory() {
-    return F
+    return r
   }
   getProps() {
     return {
-      submitting: h === T.FormStates.SUBMITTING,
-      errors: m,
-      channel: C,
-      section: E,
-      subsection: n,
-      invites: v,
-      selectedOverwriteId: i,
+      submitting: T === A.FormStates.SUBMITTING,
+      errors: M,
+      channel: i,
+      section: a,
+      subsection: s,
+      invites: N,
+      selectedOverwriteId: o,
       hasChanges: this.hasChanges(),
-      analyticsLocation: p
+      analyticsLocation: L
     }
   }
 }
-R.displayName = "ChannelSettingsStore";
-let j = new R(s.default, {
-  CHANNEL_SETTINGS_INIT: g,
-  CHANNEL_SETTINGS_OPEN: function(B) {
-    S = !0, g(B)
+P.displayName = "ChannelSettingsStore";
+let b = new P(p.default, {
+  CHANNEL_SETTINGS_INIT: R,
+  CHANNEL_SETTINGS_OPEN: function(e) {
+    v = !0, R(e)
   },
   CHANNEL_SETTINGS_SUBMIT: function() {
-    h = T.FormStates.SUBMITTING, m = {}
+    T = A.FormStates.SUBMITTING, M = {}
   },
   CHANNEL_SETTINGS_SUBMIT_SUCCESS: function() {
-    l = C, h = T.FormStates.OPEN
+    l = i, T = A.FormStates.OPEN
   },
-  CHANNEL_SETTINGS_SUBMIT_FAILURE: function(B) {
-    var e;
-    h = T.FormStates.OPEN, m = Object.keys(null !== (e = B.errors) && void 0 !== e ? e : {}).reduce((e, t) => {
-      let E = B.errors[t];
-      return (0, u.isArray)(E) ? e[t] = E.join("\n") : e[t] = E, e
+  CHANNEL_SETTINGS_SUBMIT_FAILURE: function(e) {
+    var t;
+    T = A.FormStates.OPEN, M = Object.keys(null !== (t = e.errors) && void 0 !== t ? t : {}).reduce((t, n) => {
+      let a = e.errors[n];
+      return (0, u.isArray)(a) ? t[n] = a.join("\n") : t[n] = a, t
     }, {})
   },
-  CHANNEL_SETTINGS_CLOSE: y,
-  CHANNEL_SETTINGS_OVERWRITE_SELECT: function(B) {
+  CHANNEL_SETTINGS_CLOSE: O,
+  CHANNEL_SETTINGS_OVERWRITE_SELECT: function(e) {
     let {
-      overwriteId: e
-    } = B;
-    i = e
+      overwriteId: t
+    } = e;
+    o = t
   },
-  CHANNEL_SETTINGS_UPDATE: function(B) {
+  CHANNEL_SETTINGS_UPDATE: function(e) {
     let {
-      name: e,
-      channelType: t,
-      topic: E,
-      bitrate: n,
+      name: t,
+      channelType: n,
+      topic: a,
+      bitrate: s,
       userLimit: l,
-      nsfw: F,
-      flags: i,
+      nsfw: r,
+      flags: o,
       rateLimitPerUser: u,
-      defaultThreadRateLimitPerUser: a,
-      autoArchiveDuration: r,
-      locked: o,
-      invitable: D,
-      defaultAutoArchiveDuration: d,
-      template: s,
-      defaultReactionEmoji: A,
-      rtcRegion: c,
-      videoQualityMode: f,
-      availableTags: _,
-      defaultSortOrder: N,
-      defaultForumLayout: T,
-      iconEmoji: h,
-      themeColor: m
-    } = B;
-    if (null == C) return !1;
-    null != e && (C = C.set("name", e)), null != E && (C = C.set("topic", E)), null != n && (C = C.set("bitrate", n)), null != l && (C = C.set("userLimit", l)), null != F && (C = C.set("nsfw", F)), null != i && (C = C.set("flags", i)), null != u && (C = C.set("rateLimitPerUser", u)), null != a && (C = C.set("defaultThreadRateLimitPerUser", a)), null != r && (C = C.set("threadMetadata", {
-      ...C.threadMetadata,
-      autoArchiveDuration: r
-    })), null != o && (C = C.set("threadMetadata", {
-      ...C.threadMetadata,
-      locked: o
-    })), null != D && (C = C.set("threadMetadata", {
-      ...C.threadMetadata,
-      invitable: D
-    })), null != d && (C = C.set("defaultAutoArchiveDuration", d)), null != s && (C = C.set("template", s)), null != t && (C = C.set("type", t)), void 0 !== c && (C = C.set("rtcRegion", c)), null != f && (C = C.set("videoQualityMode", f)), void 0 !== A && (C = C.set("defaultReactionEmoji", A)), null != _ && (C = C.set("availableTags", _)), null != N && (C = C.set("defaultSortOrder", N)), null != T && (C = C.set("defaultForumLayout", T)), void 0 !== h && (C = C.set("iconEmoji", h)), null != m && (C = C.set("themeColor", m)), U()
+      defaultThreadRateLimitPerUser: d,
+      autoArchiveDuration: c,
+      locked: f,
+      invitable: h,
+      defaultAutoArchiveDuration: C,
+      template: p,
+      defaultReactionEmoji: m,
+      rtcRegion: E,
+      videoQualityMode: g,
+      availableTags: S,
+      defaultSortOrder: _,
+      defaultForumLayout: A,
+      iconEmoji: T,
+      themeColor: M
+    } = e;
+    if (null == i) return !1;
+    null != t && (i = i.set("name", t)), null != a && (i = i.set("topic", a)), null != s && (i = i.set("bitrate", s)), null != l && (i = i.set("userLimit", l)), null != r && (i = i.set("nsfw", r)), null != o && (i = i.set("flags", o)), null != u && (i = i.set("rateLimitPerUser", u)), null != d && (i = i.set("defaultThreadRateLimitPerUser", d)), null != c && (i = i.set("threadMetadata", {
+      ...i.threadMetadata,
+      autoArchiveDuration: c
+    })), null != f && (i = i.set("threadMetadata", {
+      ...i.threadMetadata,
+      locked: f
+    })), null != h && (i = i.set("threadMetadata", {
+      ...i.threadMetadata,
+      invitable: h
+    })), null != C && (i = i.set("defaultAutoArchiveDuration", C)), null != p && (i = i.set("template", p)), null != n && (i = i.set("type", n)), void 0 !== E && (i = i.set("rtcRegion", E)), null != g && (i = i.set("videoQualityMode", g)), void 0 !== m && (i = i.set("defaultReactionEmoji", m)), null != S && (i = i.set("availableTags", S)), null != _ && (i = i.set("defaultSortOrder", _)), null != A && (i = i.set("defaultForumLayout", A)), void 0 !== T && (i = i.set("iconEmoji", T)), null != M && (i = i.set("themeColor", M)), D()
   },
-  CHANNEL_SETTINGS_SET_SECTION: O,
-  CHANNEL_SETTINGS_LOADED_INVITES: function(B) {
-    v = {}, B.invites.forEach(B => {
-      v[B.code] = M(B)
+  CHANNEL_SETTINGS_SET_SECTION: y,
+  CHANNEL_SETTINGS_LOADED_INVITES: function(e) {
+    N = {}, e.invites.forEach(e => {
+      N[e.code] = j(e)
     })
   },
-  CHANNEL_UPDATES: function(B) {
+  CHANNEL_UPDATES: function(e) {
     let {
-      channels: e
-    } = B;
-    if (null == C) return !1;
-    let t = !1;
-    for (let B of e)(function(B) {
-      if (null == l || l.id !== B) return !1;
-      if (l === C) {
-        let e = N.default.getChannel(B);
-        if (null == e) return !1;
-        C = l = e, F = N.default.getChannel(C.parent_id)
+      channels: t
+    } = e;
+    if (null == i) return !1;
+    let n = !1;
+    for (let e of t)(function(e) {
+      if (null == l || l.id !== e) return !1;
+      if (l === i) {
+        let t = _.default.getChannel(e);
+        if (null == t) return !1;
+        i = l = t, r = _.default.getChannel(i.parent_id)
       } else {
-        let e = N.default.getChannel(B);
-        if (null == e) return !1;
-        l = e, null != C && (C = C.set("permissionOverwrites", l.permissionOverwrites), F = N.default.getChannel(C.parent_id))
+        let t = _.default.getChannel(e);
+        if (null == t) return !1;
+        l = t, null != i && (i = i.set("permissionOverwrites", l.permissionOverwrites), r = _.default.getChannel(i.parent_id))
       }
       return !0
-    })(B.id) && null != C && (null != i && null == C.permissionOverwrites[i] && (i = C.getGuildId()), t = !0);
-    return t
+    })(e.id) && null != i && (null != o && null == i.permissionOverwrites[o] && (o = i.getGuildId()), n = !0);
+    return n
   },
-  CHANNEL_DELETE: function(B) {
+  CHANNEL_DELETE: function(e) {
     let {
       channel: {
-        id: e
+        id: t
       }
-    } = B;
-    if (null == C || C.id !== e) return !1;
-    h = T.FormStates.CLOSED
+    } = e;
+    if (null == i || i.id !== t) return !1;
+    T = A.FormStates.CLOSED
   },
-  INSTANT_INVITE_REVOKE_SUCCESS: function(B) {
-    v = {
-      ...v
-    }, delete v[B.code]
+  INSTANT_INVITE_REVOKE_SUCCESS: function(e) {
+    N = {
+      ...N
+    }, delete N[e.code]
   },
-  INSTANT_INVITE_CREATE_SUCCESS: function(B) {
-    v = {
-      ...v,
-      [B.invite.code]: M(B.invite)
+  INSTANT_INVITE_CREATE_SUCCESS: function(e) {
+    N = {
+      ...N,
+      [e.invite.code]: j(e.invite)
     }
   }
 });
-var G = j
+var H = b

@@ -1,7 +1,7 @@
 "use strict";
-var s, a;
+var a, s;
 n.r(t), n.d(t, {
   MessageRequestConsentStatusTypes: function() {
-    return s
+    return a
   }
-}), (a = s || (s = {}))[a.UNSPECIFIED = 0] = "UNSPECIFIED", a[a.PENDING = 1] = "PENDING", a[a.ACCEPTED = 2] = "ACCEPTED", a[a.REJECTED = 3] = "REJECTED"
+}), (s = a || (a = {}))[s.UNSPECIFIED = 0] = "UNSPECIFIED", s[s.PENDING = 1] = "PENDING", s[s.ACCEPTED = 2] = "ACCEPTED", s[s.REJECTED = 3] = "REJECTED"

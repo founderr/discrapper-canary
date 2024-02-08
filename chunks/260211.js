@@ -19,15 +19,15 @@ var i = n("414456"),
   m = n("216422"),
   h = n("58608"),
   E = n("49111"),
-  g = n("646718"),
-  S = n("782340"),
+  S = n("646718"),
+  g = n("782340"),
   C = n("9014");
 
 function T(e) {
   var t, n;
   let {
     onDismiss: i
-  } = e, T = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), v = S.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, I = (0, d.usePremiumTrialOffer)(), _ = (0, u.usePremiumDiscountOffer)(), y = (null == I ? void 0 : I.subscription_trial) != null, A = y || null != _, N = {
+  } = e, T = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), v = g.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, I = (0, d.usePremiumTrialOffer)(), _ = (0, u.usePremiumDiscountOffer)(), y = (null == I ? void 0 : I.subscription_trial) != null, A = y || null != _, N = {
     object: E.AnalyticsObjects.BUTTON_CTA,
     section: E.AnalyticsSections.SUPER_REACTION_PICKER
   };
@@ -36,7 +36,7 @@ function T(e) {
     children: [(0, l.jsx)(r.Clickable, {
       onClick: i,
       className: C.closeButton,
-      "aria-label": S.default.Messages.DISMISS,
+      "aria-label": g.default.Messages.DISMISS,
       children: (0, l.jsx)(p.default, {
         width: 24,
         height: 24
@@ -56,9 +56,9 @@ function T(e) {
           controls: !0
         })
       }), A ? (0, l.jsx)(c.default, {
-        type: g.PremiumUpsellTypes.BURST_REACTION_QUICK_ACTION_UPSELL,
-        subscriptionTier: null !== (n = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : g.PremiumSubscriptionSKUs.TIER_2,
-        headingText: S.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
+        type: S.PremiumUpsellTypes.BURST_REACTION_QUICK_ACTION_UPSELL,
+        subscriptionTier: null !== (n = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : S.PremiumSubscriptionSKUs.TIER_2,
+        headingText: g.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
         analyticsLocationObject: N,
         discountOffer: _,
         trialOffer: I,
@@ -73,7 +73,7 @@ function T(e) {
           }), (0, l.jsx)(r.Heading, {
             className: C.headerText,
             variant: "heading-xl/bold",
-            children: S.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE
+            children: g.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE
           })]
         }), (0, l.jsx)(r.Text, {
           className: C.subheaderText,
@@ -82,8 +82,8 @@ function T(e) {
         }), (0, l.jsx)("div", {
           className: C.ctaActionWrapper,
           children: (0, l.jsx)(f.default, {
-            subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
-            buttonText: S.default.Messages.UNLOCK_WITH_NITRO
+            subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
+            buttonText: g.default.Messages.UNLOCK_WITH_NITRO
           })
         })]
       })]

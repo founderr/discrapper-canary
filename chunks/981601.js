@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("502651"),
   h = n("812204"),
   E = n("685665"),
-  g = n("299285"),
-  S = n("442939"),
+  S = n("299285"),
+  g = n("442939"),
   C = n("373469"),
   T = n("26989"),
   v = n("305961"),
@@ -98,14 +98,14 @@ function B(e) {
     }),
     [eo, eu] = i.useState(!1);
   (0, c.default)(() => eu(!0), er.shouldShow ? 250 : null);
-  let ed = (0, S.useGetOrFetchApplication)(null == X ? void 0 : X.application_id);
+  let ed = (0, g.useGetOrFetchApplication)(null == X ? void 0 : X.application_id);
   return i.useEffect(() => {
     null == B || B(null == K ? void 0 : K.current)
   }, [K, B]), i.useEffect(() => {
     if (!el)((null == X ? void 0 : X.application_id) == null || null != ed) && (null == n || (null == Z ? void 0 : Z.fullProfileLoadedTimestamp) != null) && (function() {
       var e;
       let l, i, s;
-      null != X && (l = X.party, i = X.assets, s = null != X.application_id ? g.default.getApplication(X.application_id) : null);
+      null != X && (l = X.party, i = X.assets, s = null != X.application_id ? S.default.getApplication(X.application_id) : null);
       let r = ee;
       ee === k.StatusTypes.ONLINE && (r = et ? k.AnalyticsUserStatusTypes.ONLINE_MOBILE : k.AnalyticsUserStatusTypes.ONLINE_DESKTOP);
       let o = null != Z ? {

@@ -1,224 +1,224 @@
 "use strict";
-t.r(e), t.d(e, {
+n.r(t), n.d(t, {
   init: function() {
-    return a
-  },
-  close: function() {
-    return r
-  },
-  setSection: function() {
-    return o
-  },
-  updateChannel: function() {
-    return D
-  },
-  saveChannel: function() {
     return d
   },
+  close: function() {
+    return c
+  },
+  setSection: function() {
+    return f
+  },
+  updateChannel: function() {
+    return h
+  },
+  saveChannel: function() {
+    return C
+  },
   deleteChannel: function() {
-    return s
+    return p
   },
   default: function() {
-    return A
+    return m
   }
-}), t("702976");
-var E = t("872717"),
-  n = t("913144"),
-  l = t("81732");
-t("21121"), t("693051");
-var C = t("263024");
-t("492114");
-var F = t("42203"),
-  i = t("54239"),
-  u = t("49111");
+}), n("702976");
+var a = n("872717"),
+  s = n("913144"),
+  l = n("81732");
+n("21121"), n("693051");
+var i = n("263024");
+n("492114");
+var r = n("42203"),
+  o = n("54239"),
+  u = n("49111");
 
-function a(B, e, t) {
-  n.default.dispatch({
+function d(e, t, n) {
+  s.default.dispatch({
     type: "CHANNEL_SETTINGS_INIT",
-    channelId: B,
-    location: e,
-    subsection: t
+    channelId: e,
+    location: t,
+    subsection: n
   })
 }
 
-function r() {
-  n.default.dispatch({
+function c() {
+  s.default.dispatch({
     type: "CHANNEL_SETTINGS_CLOSE"
   })
 }
 
-function o(B) {
-  n.default.dispatch({
+function f(e) {
+  s.default.dispatch({
     type: "CHANNEL_SETTINGS_SET_SECTION",
-    section: B
+    section: e
   })
 }
 
-function D(B) {
-  let {
-    name: e,
-    type: t,
-    topic: E,
-    bitrate: l,
-    userLimit: C,
-    nsfw: F,
-    flags: i,
-    rateLimitPerUser: u,
-    defaultThreadRateLimitPerUser: a,
-    defaultAutoArchiveDuration: r,
-    template: o,
-    defaultReactionEmoji: D,
-    rtcRegion: d,
-    videoQualityMode: s,
-    autoArchiveDuration: A,
-    locked: c,
-    invitable: f,
-    availableTags: _,
-    defaultSortOrder: N,
-    defaultForumLayout: T,
-    iconEmoji: h,
-    themeColor: m
-  } = B;
-  n.default.dispatch({
-    type: "CHANNEL_SETTINGS_UPDATE",
-    name: e,
-    channelType: t,
-    topic: E,
-    bitrate: l,
-    userLimit: C,
-    nsfw: F,
-    flags: i,
-    rateLimitPerUser: u,
-    defaultThreadRateLimitPerUser: a,
-    defaultAutoArchiveDuration: r,
-    template: o,
-    defaultReactionEmoji: D,
-    rtcRegion: d,
-    videoQualityMode: s,
-    autoArchiveDuration: A,
-    locked: c,
-    invitable: f,
-    availableTags: _,
-    defaultSortOrder: N,
-    defaultForumLayout: T,
-    iconEmoji: h,
-    themeColor: m
-  })
-}
-async function d(B, e) {
+function h(e) {
   let {
     name: t,
-    type: i,
-    position: a,
-    topic: r,
-    bitrate: o,
-    userLimit: D,
-    nsfw: d,
-    flags: s,
-    permissionOverwrites: A,
-    rateLimitPerUser: c,
-    defaultThreadRateLimitPerUser: f,
-    defaultAutoArchiveDuration: _,
-    template: N,
-    defaultReactionEmoji: T,
-    rtcRegion: h,
-    videoQualityMode: m,
-    autoArchiveDuration: v,
-    locked: I,
-    invitable: S,
-    availableTags: p,
-    defaultSortOrder: L,
-    defaultForumLayout: g,
-    iconEmoji: O,
-    themeColor: y
-  } = e, U = F.default.getChannel(B);
-  return n.default.dispatch({
-    type: "CHANNEL_SETTINGS_SUBMIT"
-  }), await C.default.unarchiveThreadIfNecessary(B), E.default.patch({
-    url: u.Endpoints.CHANNEL(B),
-    body: {
-      name: t,
-      type: i,
-      position: a,
-      topic: r,
-      bitrate: o,
-      user_limit: D,
-      nsfw: d,
-      flags: s,
-      permission_overwrites: A,
-      rate_limit_per_user: c,
-      default_thread_rate_limit_per_user: f,
-      default_auto_archive_duration: _,
-      template: N,
-      rtc_region: h,
-      video_quality_mode: m,
-      auto_archive_duration: v,
-      locked: I,
-      invitable: S,
-      default_reaction_emoji: null != T ? {
-        emoji_id: null == T ? void 0 : T.emojiId,
-        emoji_name: null == T ? void 0 : T.emojiName
-      } : null === T ? null : void 0,
-      available_tags: null == p ? void 0 : p.map(B => ({
-        id: B.id,
-        name: B.name,
-        emoji_id: B.emojiId,
-        emoji_name: B.emojiName,
-        moderated: B.moderated
-      })),
-      default_sort_order: L,
-      default_forum_layout: g,
-      icon_emoji: null != O ? {
-        id: O.id,
-        name: O.name
-      } : null === O ? null : void 0,
-      theme_color: y
-    },
-    oldFormErrors: !0
-  }).then(e => {
-    n.default.dispatch({
-      type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
-      channelId: B
-    });
-    let t = null == U ? void 0 : U.getGuildId();
-    return null != t && !(null == U ? void 0 : U.isThread()) && l.default.checkGuildTemplateDirty(t), e
-  }, B => (n.default.dispatch({
-    type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
-    errors: B.body
-  }), B))
-}
-
-function s(B) {
-  let e = F.default.getChannel(B);
-  E.default.delete({
-    url: u.Endpoints.CHANNEL(B),
-    oldFormErrors: !0
-  }).then(() => {
-    let B = null == e ? void 0 : e.getGuildId();
-    null != B && !(null == e ? void 0 : e.isThread()) && l.default.checkGuildTemplateDirty(B), r()
+    type: n,
+    topic: a,
+    bitrate: l,
+    userLimit: i,
+    nsfw: r,
+    flags: o,
+    rateLimitPerUser: u,
+    defaultThreadRateLimitPerUser: d,
+    defaultAutoArchiveDuration: c,
+    template: f,
+    defaultReactionEmoji: h,
+    rtcRegion: C,
+    videoQualityMode: p,
+    autoArchiveDuration: m,
+    locked: E,
+    invitable: g,
+    availableTags: S,
+    defaultSortOrder: _,
+    defaultForumLayout: A,
+    iconEmoji: T,
+    themeColor: M
+  } = e;
+  s.default.dispatch({
+    type: "CHANNEL_SETTINGS_UPDATE",
+    name: t,
+    channelType: n,
+    topic: a,
+    bitrate: l,
+    userLimit: i,
+    nsfw: r,
+    flags: o,
+    rateLimitPerUser: u,
+    defaultThreadRateLimitPerUser: d,
+    defaultAutoArchiveDuration: c,
+    template: f,
+    defaultReactionEmoji: h,
+    rtcRegion: C,
+    videoQualityMode: p,
+    autoArchiveDuration: m,
+    locked: E,
+    invitable: g,
+    availableTags: S,
+    defaultSortOrder: _,
+    defaultForumLayout: A,
+    iconEmoji: T,
+    themeColor: M
   })
 }
-var A = {
-  init: a,
-  open: function(B, e, t) {
-    a(B, e, t), (0, i.pushLayer)(u.Layers.CHANNEL_SETTINGS)
+async function C(e, t) {
+  let {
+    name: n,
+    type: o,
+    position: d,
+    topic: c,
+    bitrate: f,
+    userLimit: h,
+    nsfw: C,
+    flags: p,
+    permissionOverwrites: m,
+    rateLimitPerUser: E,
+    defaultThreadRateLimitPerUser: g,
+    defaultAutoArchiveDuration: S,
+    template: _,
+    defaultReactionEmoji: A,
+    rtcRegion: T,
+    videoQualityMode: M,
+    autoArchiveDuration: N,
+    locked: I,
+    invitable: v,
+    availableTags: L,
+    defaultSortOrder: x,
+    defaultForumLayout: R,
+    iconEmoji: y,
+    themeColor: O
+  } = t, D = r.default.getChannel(e);
+  return s.default.dispatch({
+    type: "CHANNEL_SETTINGS_SUBMIT"
+  }), await i.default.unarchiveThreadIfNecessary(e), a.default.patch({
+    url: u.Endpoints.CHANNEL(e),
+    body: {
+      name: n,
+      type: o,
+      position: d,
+      topic: c,
+      bitrate: f,
+      user_limit: h,
+      nsfw: C,
+      flags: p,
+      permission_overwrites: m,
+      rate_limit_per_user: E,
+      default_thread_rate_limit_per_user: g,
+      default_auto_archive_duration: S,
+      template: _,
+      rtc_region: T,
+      video_quality_mode: M,
+      auto_archive_duration: N,
+      locked: I,
+      invitable: v,
+      default_reaction_emoji: null != A ? {
+        emoji_id: null == A ? void 0 : A.emojiId,
+        emoji_name: null == A ? void 0 : A.emojiName
+      } : null === A ? null : void 0,
+      available_tags: null == L ? void 0 : L.map(e => ({
+        id: e.id,
+        name: e.name,
+        emoji_id: e.emojiId,
+        emoji_name: e.emojiName,
+        moderated: e.moderated
+      })),
+      default_sort_order: x,
+      default_forum_layout: R,
+      icon_emoji: null != y ? {
+        id: y.id,
+        name: y.name
+      } : null === y ? null : void 0,
+      theme_color: O
+    },
+    oldFormErrors: !0
+  }).then(t => {
+    s.default.dispatch({
+      type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
+      channelId: e
+    });
+    let n = null == D ? void 0 : D.getGuildId();
+    return null != n && !(null == D ? void 0 : D.isThread()) && l.default.checkGuildTemplateDirty(n), t
+  }, e => (s.default.dispatch({
+    type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
+    errors: e.body
+  }), e))
+}
+
+function p(e) {
+  let t = r.default.getChannel(e);
+  a.default.delete({
+    url: u.Endpoints.CHANNEL(e),
+    oldFormErrors: !0
+  }).then(() => {
+    let e = null == t ? void 0 : t.getGuildId();
+    null != e && !(null == t ? void 0 : t.isThread()) && l.default.checkGuildTemplateDirty(e), c()
+  })
+}
+var m = {
+  init: d,
+  open: function(e, t, n) {
+    d(e, t, n), (0, o.pushLayer)(u.Layers.CHANNEL_SETTINGS)
   },
-  close: r,
-  setSection: o,
-  selectPermissionOverwrite: function(B) {
-    n.default.dispatch({
+  close: c,
+  setSection: f,
+  selectPermissionOverwrite: function(e) {
+    s.default.dispatch({
       type: "CHANNEL_SETTINGS_OVERWRITE_SELECT",
-      overwriteId: B
+      overwriteId: e
     })
   },
-  updateChannel: D,
-  saveChannel: d,
-  deleteChannel: s,
-  updateVoiceChannelStatus: function(B, e) {
-    return E.default.put({
-      url: u.Endpoints.UPDATE_VOICE_CHANNEL_STATUS(B),
+  updateChannel: h,
+  saveChannel: C,
+  deleteChannel: p,
+  updateVoiceChannelStatus: function(e, t) {
+    return a.default.put({
+      url: u.Endpoints.UPDATE_VOICE_CHANNEL_STATUS(e),
       body: {
-        status: e
+        status: t
       }
     })
   }

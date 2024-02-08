@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("255397"),
+  u = n("77078"),
+  o = n("255397"),
   d = n("103723"),
   c = n("191145"),
   f = n("161306"),
@@ -28,15 +28,15 @@ var a = n("37983"),
   x = n("353927"),
   N = n("782340"),
   A = n("146789");
-let M = o.AvatarSizes.SIZE_80,
-  R = o.AvatarSizes.SIZE_40;
+let M = u.AvatarSizes.SIZE_80,
+  R = u.AvatarSizes.SIZE_40;
 
 function j(e) {
   let {
     participant: t,
     channel: n,
     inCall: s,
-    width: o,
+    width: u,
     paused: j,
     selected: L,
     fit: O,
@@ -48,7 +48,7 @@ function j(e) {
     user: F,
     streamId: k,
     speaking: V
-  } = t, B = F.id === w, H = (0, T.default)(t), G = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != F.id && C.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = V && (W || G), X = o < 124 ? R : M, {
+  } = t, B = F.id === w, H = (0, T.default)(t), G = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != F.id && C.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = V && (W || G), X = u < 124 ? R : M, {
     avatarSrc: J,
     avatarDecorationSrc: q
   } = (0, p.default)({
@@ -58,7 +58,7 @@ function j(e) {
     animateOnHover: !Z
   }), Q = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
   return (l.useEffect(() => {
-    n.isGuildStageVoice() && !H && (null == Q ? void 0 : Q.id) === F.id && u.default.selectParticipant(n.id, null)
+    n.isGuildStageVoice() && !H && (null == Q ? void 0 : Q.id) === F.id && o.default.selectParticipant(n.id, null)
   }, [H]), s && !Y && !P && H && !L && null != U && C.default.supports(x.Features.VIDEO)) ? (0, a.jsx)(_.default, {
     onResize: y,
     wrapperClassName: A.videoWrapper,

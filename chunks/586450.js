@@ -24,8 +24,8 @@ function m(e) {
     activeCategoryIndex: m,
     filteredSectionId: h,
     onSectionClick: E,
-    applicationCommandListRef: g
-  } = e, S = i.useRef(null), C = i.useCallback((e, t) => {
+    applicationCommandListRef: S
+  } = e, g = i.useRef(null), C = i.useCallback((e, t) => {
     var n;
     let l = 8;
     return (null === (n = a[t + 1]) || void 0 === n ? void 0 : n.type) === d.ApplicationCommandSectionType.BUILT_IN && (l += 8), 32 + l
@@ -48,7 +48,7 @@ function m(e) {
         height: u,
         selectable: !0
       }),
-      g = i.type !== d.ApplicationCommandSectionType.BUILT_IN && t < a.length - 1 && a[t + 1].type === d.ApplicationCommandSectionType.BUILT_IN;
+      S = i.type !== d.ApplicationCommandSectionType.BUILT_IN && t < a.length - 1 && a[t + 1].type === d.ApplicationCommandSectionType.BUILT_IN;
     return (0, l.jsxs)("div", {
       className: f.section,
       children: [(0, l.jsx)(r.Tooltip, {
@@ -68,7 +68,7 @@ function m(e) {
             children: p
           })
         }
-      }), g ? (0, l.jsx)("hr", {
+      }), S ? (0, l.jsx)("hr", {
         className: f.builtInSeparator
       }) : null]
     }, i.id)
@@ -76,8 +76,8 @@ function m(e) {
   return 0 === a.length ? null : (0, l.jsx)("div", {
     className: s(t, f.wrapper),
     children: (0, l.jsx)(u.default, {
-      categoryListRef: S,
-      expressionsListRef: g,
+      categoryListRef: g,
+      expressionsListRef: S,
       store: o.ApplicationCommandDiscoveryPickerStore,
       categories: a,
       className: f.list,

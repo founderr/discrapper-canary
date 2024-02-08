@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("222007"), n("781738");
 var l = n("884691"),
@@ -142,6 +142,6 @@ function E(e, t, n, l) {
   })
 }
 
-function g(e, t, n, i) {
+function S(e, t, n, i) {
   l.useImperativeHandle(e, () => m(t, n, i), [t, n, i])
 }

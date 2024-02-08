@@ -45,10 +45,10 @@ function r(e) {
     key: m,
     indexOffset: h = 0,
     headerClassName: E,
-    headerTrailingContent: g,
-    footer: S
+    headerTrailingContent: S,
+    footer: g
   } = e;
-  if (null == S && (null == a || 0 === a.length)) return null;
+  if (null == g && (null == a || 0 === a.length)) return null;
   let C = null == a ? void 0 : a.map((e, t) => {
     let l = t + h,
       a = f(e, l);
@@ -68,7 +68,7 @@ function r(e) {
       query: t,
       getQuery: p,
       headerClassName: E,
-      headerTrailingContent: g
-    }) : null, C, S]
+      headerTrailingContent: S
+    }) : null, C, g]
   }, m)
 }

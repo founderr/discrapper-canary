@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
 var a, l, s = n("37983"),
   i = n("884691"),
   r = n("414456"),
-  o = n.n(r),
-  u = n("627445"),
-  d = n.n(u),
+  u = n.n(r),
+  o = n("627445"),
+  d = n.n(o),
   c = n("446674"),
   f = n("77078"),
   h = n("272030"),
@@ -44,7 +44,7 @@ let P = i.memo(function(e) {
     });
     return (0, s.jsxs)(x.default, {
       toolbar: a,
-      className: o(b.headerContainer, {
+      className: u(b.headerContainer, {
         [b.chatOpen]: n
       }),
       children: [(0, s.jsx)(x.default.Icon, {
@@ -61,10 +61,10 @@ let P = i.memo(function(e) {
       channel: t,
       participant: a,
       tempDisableOnInit: l = !1
-    } = e, [r, u] = i.useState(l);
+    } = e, [r, o] = i.useState(l);
     i.useEffect(() => {
       if (!r) return;
-      let e = setTimeout(() => u(!1), 1e3);
+      let e = setTimeout(() => o(!1), 1e3);
       return () => clearTimeout(e)
     }, []);
     let S = t.getGuildId();
@@ -161,7 +161,7 @@ let P = i.memo(function(e) {
         text: y.default.Messages.REQUEST_TO_SPEAK_DECLINE,
         children: e => (0, s.jsx)(f.Button, {
           ...e,
-          innerClassName: o(b.buttonContainer, b.buttonMargin),
+          innerClassName: u(b.buttonContainer, b.buttonMargin),
           look: f.Button.Looks.BLANK,
           size: f.Button.Sizes.NONE,
           onClick: P,
@@ -208,7 +208,7 @@ function F(e) {
     chatOpen: a
   } = e, l = (0, A.useSortedRequestToSpeakParticipants)(t.id), i = (0, c.useStateFromStores)([S.default], () => S.default.can(O.Permissions.MANAGE_CHANNELS, t) || S.default.can(O.Permissions.MANAGE_ROLES, t)), r = [i ? 1 : 0, Math.max(1, l.length)];
   return (0, s.jsxs)("div", {
-    className: o(b.container, {
+    className: u(b.container, {
       [b.chatOpen]: a
     }),
     children: [(0, s.jsx)(P, {

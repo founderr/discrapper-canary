@@ -30,9 +30,9 @@ let E = e => {
     location: E + "auto off",
     autoTrackExposure: !1
   });
-  let g = (0, c.default)(E),
+  let S = (0, c.default)(E),
     {
-      upsellSource: S
+      upsellSource: g
     } = (0, h.useUserPopoutCollectiblesUpsellStore)(),
     C = (0, s.default)([p.default], () => p.default.getCurrentUser());
   a(null != C, "currentUser should not be null");
@@ -42,7 +42,7 @@ let E = e => {
   l.useEffect(() => {
     null == v && (0, o.fetchProfile)(C.id)
   }, [v, C]);
-  let _ = g !== c.CollectiblesShopMarketingVariants.DEFAULT && (null == C ? void 0 : C.id) !== t.id && !T && !(null != S && S !== n),
+  let _ = S !== c.CollectiblesShopMarketingVariants.DEFAULT && (null == C ? void 0 : C.id) !== t.id && !T && !(null != g && g !== n),
     y = _ && (null == C ? void 0 : C.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
     A = _ && null != v && null == v.profileEffectId && (null == I ? void 0 : I.profileEffectId) != null,
     [N, x] = (0, f.useSelectedDismissibleContent)((y, []), void 0, !0);

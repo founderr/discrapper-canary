@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("368639"),
   h = n("945330"),
   E = n("256170"),
-  g = n("315102"),
-  S = n("659500"),
+  S = n("315102"),
+  g = n("659500"),
   C = n("82372"),
   T = n("476606"),
   v = n("540843"),
@@ -40,7 +40,7 @@ function x(e) {
       command: n,
       section: a,
       location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
-    }), S.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+    }), g.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: t.id
     })
   }, [t, n, a]);
@@ -65,7 +65,7 @@ function O(e) {
     appDetail: u
   } = e, {
     filterSection: c,
-    commandsByActiveSection: S
+    commandsByActiveSection: g
   } = d.useDiscovery(a, {
     commandType: o.ApplicationCommandType.CHAT
   }, {
@@ -76,12 +76,12 @@ function O(e) {
     commands: I
   } = (0, T.default)({
     sectionId: u.id,
-    commandsByActiveSection: S
+    commandsByActiveSection: g
   });
   i.useEffect(() => {
     c(u.id)
   }, [u.id, c]);
-  let O = g.default.getApplicationIconSource({
+  let O = S.default.getApplicationIconSource({
       id: u.id,
       icon: u.icon,
       bot: null === (t = u.application) || void 0 === t ? void 0 : t.bot,

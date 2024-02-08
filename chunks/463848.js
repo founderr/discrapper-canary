@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("945701"),
   h = n("285749"),
   E = n("699209"),
-  g = n("769791"),
-  S = n("373469"),
+  S = n("769791"),
+  g = n("373469"),
   C = n("42203"),
   T = n("305961"),
   v = n("957255"),
@@ -78,7 +78,7 @@ var M = function(e) {
   } = E.HangStatusExperiment.useExperiment({
     guildId: null == A ? void 0 : A.guild_id,
     location: "UserActivityContainer"
-  }), M = (0, r.useStateFromStores)([S.default], () => a ? S.default.getAnyStreamForUser(n.id) : null), L = R && v.default.can(N.Permissions.CONNECT, A), P = (null == t ? void 0 : t.type) === N.ActivityTypes.HANG_STATUS && L ? A : null, b = (0, r.useStateFromStores)([T.default, I.default, C.default], () => {
+  }), M = (0, r.useStateFromStores)([g.default], () => a ? g.default.getAnyStreamForUser(n.id) : null), L = R && v.default.can(N.Permissions.CONNECT, A), P = (null == t ? void 0 : t.type) === N.ActivityTypes.HANG_STATUS && L ? A : null, b = (0, r.useStateFromStores)([T.default, I.default, C.default], () => {
     var e, l;
     return (0, u.default)(t, N.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = C.default.getChannel(null === (l = I.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === l ? void 0 : l.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != P ? T.default.getGuild(P.getGuildId()) : null
   }), j = (0, r.useStateFromStores)([T.default], () => null != M ? T.default.getGuild(M.guildId) : null), U = (0, r.useStateFromStores)([f.default], () => {
@@ -113,8 +113,8 @@ var M = function(e) {
         reactor: h.default
       })]
     }) : null,
-    onOpenSpotifyTrack: g.openTrack,
-    onOpenSpotifyArtist: g.openArtist,
-    onOpenSpotifyAlbum: g.openAlbum
+    onOpenSpotifyTrack: S.openTrack,
+    onOpenSpotifyArtist: S.openArtist,
+    onOpenSpotifyAlbum: S.openAlbum
   }) : null
 }

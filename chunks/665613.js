@@ -148,17 +148,17 @@ function* u(e) {
   }
   if (null == f) return;
   let E = a.EditorUtils.range(e, f),
-    [g, S] = a.RangeUtils.edges(E),
+    [S, g] = a.RangeUtils.edges(E),
     C = a.EditorUtils.richValue(e),
     T = m ? -1 : 1,
-    v = null !== (l = null === (t = g.path) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : 0,
-    I = null !== (i = null === (n = S.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : C.length - 1,
+    v = null !== (l = null === (t = S.path) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : 0,
+    I = null !== (i = null === (n = g.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : C.length - 1,
     _ = m ? v : I,
     y = m ? I : v;
   for (;;) {
     let t = C[y],
-      n = null !== (u = y === v ? null === (s = g.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
-      l = null !== (d = y === I ? null === (r = S.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
+      n = null !== (u = y === v ? null === (s = S.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
+      l = null !== (d = y === I ? null === (r = g.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
       i = m ? l : n,
       f = m ? n : l,
       p = i;
@@ -166,7 +166,7 @@ function* u(e) {
       let n, l;
       let i = t.children[p],
         s = [y, p];
-      if (n = a.PathUtils.equals(s, g.path) || a.PathUtils.isAncestor(s, g.path) ? !m && a.EditorUtils.isEnd(e, g, s) ? null : g : a.EditorUtils.start(e, s), l = a.PathUtils.equals(s, S.path) || a.PathUtils.isAncestor(s, S.path) ? m && a.EditorUtils.isStart(e, S, s) ? null : S : a.EditorUtils.end(e, s), null != n && null != l) {
+      if (n = a.PathUtils.equals(s, S.path) || a.PathUtils.isAncestor(s, S.path) ? !m && a.EditorUtils.isEnd(e, S, s) ? null : S : a.EditorUtils.start(e, s), l = a.PathUtils.equals(s, g.path) || a.PathUtils.isAncestor(s, g.path) ? m && a.EditorUtils.isStart(e, g, s) ? null : g : a.EditorUtils.end(e, s), null != n && null != l) {
         if (a.TextUtils.isText(i) && 0 === i.text.length) {
           let e = {
             path: s,

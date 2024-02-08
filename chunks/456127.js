@@ -6,11 +6,11 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   l = n("884691"),
-  s = n("598165"),
-  i = n("446674"),
+  s = n("446674"),
+  i = n("598165"),
   r = n("386045"),
-  o = n("803725"),
-  u = n("103979"),
+  u = n("803725"),
+  o = n("103979"),
   d = n("981913"),
   c = n("373469"),
   f = n("271938"),
@@ -22,26 +22,26 @@ var a = n("37983"),
 function C(e) {
   let {
     channel: t
-  } = e, n = (0, i.useStateFromStores)([h.default], () => h.default.getSelectedParticipant(t.id)), C = (null == n ? void 0 : n.type) === p.ParticipantTypes.STREAM, g = (0, i.useStateFromStores)([c.default], () => C ? c.default.getActiveStreamForStreamKey(n.id) : null), {
+  } = e, n = (0, s.useStateFromStores)([h.default], () => h.default.getSelectedParticipant(t.id)), C = (null == n ? void 0 : n.type) === p.ParticipantTypes.STREAM, g = (0, s.useStateFromStores)([c.default], () => C ? c.default.getActiveStreamForStreamKey(n.id) : null), {
     ignoreSenderPreference: S
-  } = u.default.useExperiment({
+  } = o.default.useExperiment({
     location: "ActionBarClipsButton"
   }, {
     autoTrackExposure: !1
   }), {
     viewerClippingAllowed: _,
     isAtMaxSavingClipOperations: I
-  } = (0, i.useStateFromStoresObject)([r.default], () => ({
+  } = (0, s.useStateFromStoresObject)([r.default], () => ({
     viewerClippingAllowed: null != g && (r.default.isViewerClippingAllowedForUser(g.ownerId) || S),
     isAtMaxSavingClipOperations: r.default.getIsAtMaxSaveClipOperations()
-  })), T = (null == g ? void 0 : g.ownerId) === f.default.getId(), v = !(T || _) || I || null == n, x = l.useCallback(e => (0, a.jsx)(s.CameraIcon, {
+  })), T = (null == g ? void 0 : g.ownerId) === f.default.getId(), v = !(T || _) || I || null == n, x = l.useCallback(e => (0, a.jsx)(i.CameraIcon, {
     ...e,
     color: "currentColor"
   }), []);
   return (0, a.jsx)(d.default, {
     className: E.actionBarButton,
     onClick: () => {
-      !v && (T ? (0, o.saveClip)() : (0, o.saveClip)(n.id))
+      !v && (T ? (0, u.saveClip)() : (0, u.saveClip)(n.id))
     },
     disabled: v,
     iconComponent: x,

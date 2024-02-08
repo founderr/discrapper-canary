@@ -8,9 +8,9 @@ var s = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
-  l = n("77078"),
+  l = n("265586"),
   a = n("446674"),
-  u = n("265586"),
+  u = n("77078"),
   o = n("606292"),
   d = n("688318"),
   c = n("635357"),
@@ -32,7 +32,7 @@ let h = e => {
     } = (0, d.default)({
       user: n,
       avatarDecorationOverride: t,
-      size: (0, o.getDecorationSizeForAvatarSize)(l.AvatarSizes.SIZE_40)
+      size: (0, o.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_40)
     });
     return (0, s.jsx)("img", {
       src: i,
@@ -79,17 +79,17 @@ var P = e => {
     className: i,
     children: [(0, s.jsxs)("div", {
       className: T.previewTitleContainer,
-      children: [(0, s.jsx)(l.FormTitle, {
+      children: [(0, s.jsx)(u.FormTitle, {
         className: T.previewTitle,
         children: C.default.Messages.COLLECTIBLES_GIFT_LABEL
-      }), A && (0, s.jsx)(l.Popout, {
+      }), A && (0, s.jsx)(u.Popout, {
         preload: () => (0, S.default)(d.id, d.getAvatarURL(null, 80)),
         renderPopout: e => (0, s.jsx)(f.default, {
           ...e,
           user: d,
-          pendingAvatar: d.getAvatarURL(null, (0, l.getAvatarSize)(l.AvatarSizes.SIZE_80)),
-          pendingAvatarDecoration: P.type === u.CollectiblesItemType.AVATAR_DECORATION ? P : null,
-          pendingProfileEffectId: P.type === u.CollectiblesItemType.PROFILE_EFFECT ? P.id : null,
+          pendingAvatar: d.getAvatarURL(null, (0, u.getAvatarSize)(u.AvatarSizes.SIZE_80)),
+          pendingAvatarDecoration: P.type === l.CollectiblesItemType.AVATAR_DECORATION ? P : null,
+          pendingProfileEffectId: P.type === l.CollectiblesItemType.PROFILE_EFFECT ? P.id : null,
           canUsePremiumCustomization: !0,
           onAvatarChange: I.NOOP,
           onBannerChange: I.NOOP,
@@ -97,10 +97,10 @@ var P = e => {
         }),
         align: "center",
         position: "right",
-        children: e => (0, s.jsx)(l.Clickable, {
+        children: e => (0, s.jsx)(u.Clickable, {
           ...e,
           className: T.previewLink,
-          children: (0, s.jsx)(l.Text, {
+          children: (0, s.jsx)(u.Text, {
             variant: "text-xs/medium",
             color: "text-link",
             children: C.default.Messages.COLLECTIBLES_PREVIEW_GIFT_PROFILE
@@ -111,25 +111,25 @@ var P = e => {
       className: r(T.previewContainer, {
         [T.previewContainerError]: null != p
       }),
-      children: [P.type === u.CollectiblesItemType.AVATAR_DECORATION && (0, s.jsx)(h, {
+      children: [P.type === l.CollectiblesItemType.AVATAR_DECORATION && (0, s.jsx)(h, {
         avatarDecoration: P
-      }), P.type === u.CollectiblesItemType.PROFILE_EFFECT && (0, s.jsx)(g, {
+      }), P.type === l.CollectiblesItemType.PROFILE_EFFECT && (0, s.jsx)(g, {
         profileEffect: P
       }), (0, s.jsxs)("div", {
         className: T.previewTextContainer,
-        children: [(0, s.jsx)(l.Text, {
+        children: [(0, s.jsx)(u.Text, {
           variant: "text-md/semibold",
           children: o.name
-        }), (0, s.jsx)(l.Heading, {
+        }), (0, s.jsx)(u.Heading, {
           variant: "heading-sm/medium",
           color: "header-secondary",
-          children: P.type === u.CollectiblesItemType.AVATAR_DECORATION ? C.default.Messages.USER_SETTINGS_AVATAR_DECORATION : P.type === u.CollectiblesItemType.PROFILE_EFFECT ? C.default.Messages.USER_SETTINGS_PROFILE_EFFECT : null
+          children: P.type === l.CollectiblesItemType.AVATAR_DECORATION ? C.default.Messages.USER_SETTINGS_AVATAR_DECORATION : P.type === l.CollectiblesItemType.PROFILE_EFFECT ? C.default.Messages.USER_SETTINGS_PROFILE_EFFECT : null
         })]
-      }), (0, s.jsx)(l.Text, {
+      }), (0, s.jsx)(u.Text, {
         variant: "text-md/semibold",
         children: (0, m.formatPrice)(n.amount, n.currency)
       })]
-    }), null != p && (0, s.jsx)(l.Text, {
+    }), null != p && (0, s.jsx)(u.Text, {
       className: T.recipientError,
       variant: "text-sm/normal",
       color: "status-danger-background",

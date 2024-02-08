@@ -24,8 +24,8 @@ var l = n("37983"),
   m = n("535013"),
   h = n("816499"),
   E = n("526190"),
-  g = n("766274"),
-  S = n("246053"),
+  S = n("766274"),
+  g = n("246053"),
   C = n("867544"),
   T = n("128259"),
   v = n("49111"),
@@ -36,7 +36,7 @@ var l = n("37983"),
 function A(e) {
   var t, n;
   let i, a, d, {
-    connectedAccount: g,
+    connectedAccount: S,
     theme: A,
     locale: N,
     userId: x,
@@ -45,11 +45,11 @@ function A(e) {
     showInvisibleIcon: M
   } = e;
   null == R && (R = !0);
-  let L = null !== (n = g.metadata) && void 0 !== n ? n : {},
+  let L = null !== (n = S.metadata) && void 0 !== n ? n : {},
     P = R ? (0, m.getCreatedAtDate)(L[I.MetadataFields.CREATED_AT], N) : null,
     b = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
     j = _.default.Messages.CONNECTION_VERIFIED;
-  if (R) switch (g.type) {
+  if (R) switch (S.type) {
     case v.PlatformTypes.REDDIT:
       i = (0, h.generateRedditMetadataItems)(L);
       break;
@@ -71,8 +71,8 @@ function A(e) {
     case v.PlatformTypes.TIKTOK:
       i = (0, h.generateTikTokMetadataItems)(L)
   }
-  let U = c.default.get((0, p.useLegacyPlatformType)(g.type)),
-    D = null == U ? void 0 : null === (t = U.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(U, g);
+  let U = c.default.get((0, p.useLegacyPlatformType)(S.type)),
+    D = null == U ? void 0 : null === (t = U.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(U, S);
   null != M && M ? d = (0, l.jsx)(C.default, {
     className: s(y.connectedAccountOpenIconContainer, y.connectedAccountHideIcon),
     foregroundColor: "currentColor"
@@ -80,7 +80,7 @@ function A(e) {
     href: D,
     onClick: e => {
       var t, n;
-      t = g.type, n = x, (0, f.trackWithMetadata)(v.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
+      t = S.type, n = x, (0, f.trackWithMetadata)(v.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
         platform_type: t,
         other_user_id: n
       }), (0, T.handleClick)({
@@ -88,14 +88,14 @@ function A(e) {
         trusted: (null == U ? void 0 : U.type) !== v.PlatformTypes.DOMAIN
       }, e)
     },
-    children: (0, l.jsx)(S.default, {
+    children: (0, l.jsx)(g.default, {
       className: y.connectedAccountOpenIcon,
-      direction: S.default.Directions.RIGHT
+      direction: g.default.Directions.RIGHT
     })
   }));
   let k = (0, u.useToken)(r.default.colors.INTERACTIVE_MUTED).hex(),
     w = (0, u.useToken)(r.default.colors.INTERACTIVE_ACTIVE).hex(),
-    F = g.verified ? (0, l.jsx)(E.default, {
+    F = S.verified ? (0, l.jsx)(E.default, {
       className: y.connectedAccountVerifiedIcon,
       color: null != a ? a : k,
       forcedIconColor: w,
@@ -124,13 +124,13 @@ function A(e) {
             className: y.connectedAccountNameTextContainer,
             children: [(0, l.jsx)(u.Tooltip, {
               overflowOnly: !0,
-              text: g.name,
+              text: S.name,
               children: e => (0, l.jsx)(u.Text, {
                 ...e,
                 variant: "text-md/semibold",
                 color: "interactive-active",
                 className: y.connectedAccountNameText,
-                children: g.name
+                children: S.name
               })
             }), F]
           }), d]
@@ -191,7 +191,7 @@ function N(e) {
             applicationHook: () => (0, l.jsxs)("div", {
               className: y.connectedAccountPoweredByText,
               children: [null != t.application.bot ? (0, l.jsx)(d.default, {
-                user: new g.default(t.application.bot),
+                user: new S.default(t.application.bot),
                 size: u.AvatarSizes.SIZE_16
               }) : null, (0, l.jsx)(u.Text, {
                 variant: "text-xs/normal",

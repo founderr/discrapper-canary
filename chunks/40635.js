@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("913144"),
-  o = n("267363"),
-  u = n("27978"),
+  u = n("267363"),
+  o = n("27978"),
   d = n("660478"),
   c = n("599110"),
   f = n("15433"),
@@ -53,7 +53,7 @@ var a = n("37983"),
     l.useEffect(() => () => {
       let e = d.default.lastMessageId(x.id);
       null != e && r.default.wait(() => {
-        (0, o.ack)(x.id, !0, !0, e)
+        (0, u.ack)(x.id, !0, !0, e)
       })
     }, [x.id]);
     let O = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
@@ -76,7 +76,7 @@ var a = n("37983"),
       w = "" !== y,
       {
         showHubEventsList: F
-      } = u.default.useExperiment({
+      } = o.default.useExperiment({
         guildId: null !== (t = N.id) && void 0 !== t ? t : "",
         location: "6f7fb0_1"
       }, {

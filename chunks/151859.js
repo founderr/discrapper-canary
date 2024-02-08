@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 });
 var l = n("37983"),
@@ -10,8 +10,8 @@ var l = n("37983"),
   i = n("77078"),
   r = n("419830"),
   u = n("267567"),
-  d = n("42203"),
-  o = n("305961"),
+  o = n("42203"),
+  d = n("305961"),
   c = n("697218"),
   E = n("718550"),
   f = n("189443"),
@@ -22,37 +22,37 @@ var l = n("37983"),
   v = n("782340"),
   N = n("151990");
 
-function S(e) {
-  var t, n, S;
+function m(e) {
+  var t, n, m;
   let {
-    guildId: m,
+    guildId: S,
     guildEvent: g,
     guildEventId: C,
-    error: x
-  } = e, p = a.useMemo(() => (0, f.convertToFakeGuildEvent)(g, m), [g, m]), {
+    error: p
+  } = e, x = a.useMemo(() => (0, f.convertToFakeGuildEvent)(g, S), [g, S]), {
     channel_id: A,
     name: R,
-    image: L,
-    description: M
-  } = p, O = (0, s.useStateFromStores)([d.default], () => d.default.getChannel(A), [A]), D = (0, s.useStateFromStores)([o.default], () => o.default.getGuild(m), [m]), y = (0, I.getLocationFromEvent)(p), j = (0, s.useStateFromStores)([c.default], () => null != g.creatorId ? c.default.getUser(g.creatorId) : c.default.getCurrentUser(), [g.creatorId]), V = (0, s.useStateFromStores)([u.default], () => u.default.isLurking(m), [m]), U = (0, r.getChannelIconComponent)(O, D);
+    image: M,
+    description: L
+  } = x, y = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(A), [A]), O = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(S), [S]), D = (0, I.getLocationFromEvent)(x), j = (0, s.useStateFromStores)([c.default], () => null != g.creatorId ? c.default.getUser(g.creatorId) : c.default.getCurrentUser(), [g.creatorId]), U = (0, s.useStateFromStores)([u.default], () => u.default.isLurking(S), [S]), V = (0, r.getChannelIconComponent)(y, O);
   return (0, l.jsxs)("div", {
     className: N.content,
     children: [(0, l.jsx)(h.default, {
       className: N.previewCard,
-      guild: D,
-      channel: O,
-      location: null != y ? y : void 0,
+      guild: O,
+      channel: y,
+      location: null != D ? D : void 0,
       creator: j,
       name: R,
-      description: M,
-      imageSource: (n = (0, f.convertToFakeGuildEvent)(g, m, C), null == (S = L) && null == n.image ? null : null != S && /^data:/.test(S) ? S : (0, _.default)(n)),
+      description: L,
+      imageSource: (n = (0, f.convertToFakeGuildEvent)(g, S, C), null == (m = M) && null == n.image ? null : null != m && /^data:/.test(m) ? m : (0, _.default)(n)),
       isActive: !1,
-      isUserLurking: V,
+      isUserLurking: U,
       speakers: [],
       speakerCount: 0,
       rsvped: !0,
       guildEventId: T.FAKE_EVENT_ID,
-      eventPreview: p
+      eventPreview: x
     }), (0, l.jsxs)("div", {
       className: N.textContainer,
       children: [(0, l.jsx)(i.Heading, {
@@ -63,12 +63,12 @@ function S(e) {
         variant: "text-md/normal",
         className: N.subheader,
         children: null != location ? v.default.Messages.GUILD_EVENT_PREVIEW_EXTERNAL_EVENT_BODY : v.default.Messages.GUILD_EVENT_PREVIEW_BODY.format({
-          channelName: null !== (t = null == O ? void 0 : O.name) && void 0 !== t ? t : "",
+          channelName: null !== (t = null == y ? void 0 : y.name) && void 0 !== t ? t : "",
           channelHook: () => {
             var e;
             return (0, l.jsxs)("div", {
               className: N.channelName,
-              children: [null != U ? (0, l.jsx)(U, {
+              children: [null != V ? (0, l.jsx)(V, {
                 width: 20,
                 height: 20,
                 className: N.icon
@@ -76,15 +76,15 @@ function S(e) {
                 height: 18,
                 width: 18,
                 className: N.locationIcon
-              }), null !== (e = null == O ? void 0 : O.name) && void 0 !== e ? e : y]
+              }), null !== (e = null == y ? void 0 : y.name) && void 0 !== e ? e : D]
             })
           }
         })
-      }), null != x && (0, l.jsx)(i.Text, {
+      }), null != p && (0, l.jsx)(i.Text, {
         color: "text-danger",
         variant: "text-xs/normal",
         className: N.subheader,
-        children: x.getAnyErrorMessage()
+        children: p.getAnyErrorMessage()
       })]
     })]
   })

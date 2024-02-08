@@ -8,8 +8,8 @@ var a = s("37983");
 s("884691");
 var n = s("414456"),
   r = s.n(n),
-  i = s("77078"),
-  l = s("446674"),
+  i = s("446674"),
+  l = s("77078"),
   u = s("812204"),
   o = s("685665"),
   d = s("441413"),
@@ -29,7 +29,7 @@ function p(e) {
   let {
     variant: t = "text-lg/normal"
   } = e, s = (0, S.useCheapestMonthlyPrice)();
-  return (0, a.jsx)(i.Text, {
+  return (0, a.jsx)(l.Text, {
     variant: t,
     color: "always-white",
     className: N.description,
@@ -51,7 +51,7 @@ var g = e => {
     location: "HeroHeading"
   }, {
     autoTrackExposure: !1
-  }), M = (0, l.useStateFromStores)([_.default], () => _.default.affinities);
+  }), M = (0, i.useStateFromStores)([_.default], () => _.default.affinities);
   M.length > 0 && c.default.trackExposure({
     location: "HeroHeading"
   });
@@ -65,7 +65,7 @@ var g = e => {
       "data-testid": "v2-marketing-page-hero-header",
       children: [(0, a.jsxs)("div", {
         className: t ? N.fullscreenTextContainer : N.settingsTextContainer,
-        children: [(0, a.jsx)(i.Heading, {
+        children: [(0, a.jsx)(l.Heading, {
           variant: t ? "display-lg" : "display-md",
           color: "always-white",
           children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE

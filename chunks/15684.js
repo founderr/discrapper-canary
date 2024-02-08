@@ -31,7 +31,7 @@ function y(e, t) {
   }
 }
 
-function m(e) {
+function _(e) {
   var t;
   if (null != S[e]) return;
   let n = u.default.getChannels(e),
@@ -46,7 +46,7 @@ function m(e) {
   })), v[e] = Date.now())
 }
 
-function _() {
+function m() {
   Object.keys(S).forEach(e => {
     let t = S[e];
     S[e] = new Set([...t].filter(t => !f.default.isChannelOrParentOptedIn(e, t)))
@@ -54,17 +54,17 @@ function _() {
 }
 class w extends s.default.Store {
   initialize() {
-    this.waitFor(u.default, h.default, c.default, f.default, g.default, d.default), this.syncWith([f.default], _)
+    this.waitFor(u.default, h.default, c.default, f.default, g.default, d.default), this.syncWith([f.default], m)
   }
   getNewChannelIds(e) {
     var t;
-    return null != e && null == S[e] && m(e), null != e && null !== (t = S[e]) && void 0 !== t ? t : E
+    return null != e && null == S[e] && _(e), null != e && null !== (t = S[e]) && void 0 !== t ? t : E
   }
   shouldIndicateNewChannel(e, t) {
     var n;
     if (null == e) return !1;
     let i = C.default.getGuild(e);
-    return !!(null != i && i.hasFeature(I.GuildFeatures.COMMUNITY)) && (null != e && null == S[e] && m(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == g.default.getTrackedAckMessageId(t))
+    return !!(null != i && i.hasFeature(I.GuildFeatures.COMMUNITY)) && (null != e && null == S[e] && _(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == g.default.getTrackedAckMessageId(t))
   }
 }
 w.displayName = "NewChannelsStore";
@@ -85,7 +85,7 @@ var N = new w(l.default, {
     } = e;
     if (null == t) return !1;
     let i = S[t];
-    return null == i || v[t] < Date.now() - p.default.Millis.HOUR ? (m(t), !0) : (null != n && y(t, n), !1)
+    return null == i || v[t] < Date.now() - p.default.Millis.HOUR ? (_(t), !0) : (null != n && y(t, n), !1)
   },
   SIDEBAR_VIEW_CHANNEL: function(e) {
     let {

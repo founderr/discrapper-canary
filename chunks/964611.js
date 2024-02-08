@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("206230"),
   h = n("986632"),
   E = n("405607"),
-  g = n("423080"),
-  S = n("471671"),
+  S = n("423080"),
+  g = n("471671"),
   C = n("46829"),
   T = n("599110"),
   v = n("159885"),
@@ -55,36 +55,36 @@ function V(e) {
     handleCategorySelect: d,
     isWindowFocused: c,
     useReducedMotion: p
-  } = e, m = (0, u.useListItem)("expression-guild-".concat(n)), h = o.type === N.EmojiCategoryTypes.GUILD ? null : o.id, E = t === n, S = o.type === N.EmojiCategoryTypes.GUILD ? o.guild : null, C = (0, l.jsxs)(f.Clickable, {
+  } = e, m = (0, u.useListItem)("expression-guild-".concat(n)), h = o.type === N.EmojiCategoryTypes.GUILD ? null : o.id, E = t === n, g = o.type === N.EmojiCategoryTypes.GUILD ? o.guild : null, C = (0, l.jsxs)(f.Clickable, {
     ...m,
-    "aria-label": (0, I.getAriaIdForEmojiCategory)(o, S),
+    "aria-label": (0, I.getAriaIdForEmojiCategory)(o, g),
     className: s({
-      [M.categoryItemGuildCategory]: null != S,
-      [M.categoryItemDefaultCategory]: null == S,
-      [M.categoryItemDefaultCategorySelected]: null == S && E,
+      [M.categoryItemGuildCategory]: null != g,
+      [M.categoryItemDefaultCategory]: null == g,
+      [M.categoryItemDefaultCategorySelected]: null == g && E,
       [M.categoryItemRecentEmoji]: o.type === N.EmojiCategoryTypes.RECENT
     }),
     onClick: () => {
-      null != S && T.default.track(x.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+      null != g && T.default.track(x.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
         location: null == a ? void 0 : a.location,
         tab: O.ExpressionPickerViewType.EMOJI,
-        guild_id: S.id
+        guild_id: g.id
       }), d(n)
     },
-    children: [null != S ? (0, l.jsx)(y.default, {
-      guild: S,
+    children: [null != g ? (0, l.jsx)(y.default, {
+      guild: g,
       isSelected: E,
       shouldAnimate: !p && c
-    }) : null, null == S && null != h ? (0, l.jsx)(_.default, {
+    }) : null, null == g && null != h ? (0, l.jsx)(_.default, {
       categoryId: h,
       className: M.categoryIcon,
       height: b,
       width: b
     }) : null]
   }), v = r[n + 1], A = null != v && o.type === N.EmojiCategoryTypes.GUILD && v.type !== N.EmojiCategoryTypes.GUILD;
-  return null != S ? (0, l.jsxs)(i.Fragment, {
-    children: [(0, l.jsx)(g.default, {
-      guild: S,
+  return null != g ? (0, l.jsxs)(i.Fragment, {
+    children: [(0, l.jsx)(S.default, {
+      guild: g,
       includeActivity: !1,
       children: (0, l.jsx)("div", {
         children: C
@@ -101,10 +101,10 @@ var K = e => {
     sectionDescriptors: a,
     intention: r,
     channel: u
-  } = e, c = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), g = (0, A.useCategorySelectHandler)({
+  } = e, c = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), S = (0, A.useCategorySelectHandler)({
     sectionDescriptors: a,
     emojiListRef: n
-  }), T = (0, p.useAnalyticsContext)(), v = (0, I.useEmojiCategories)(r, u), _ = i.useRef(null), y = (0, d.useStateFromStores)([S.default], () => S.default.isFocused()), x = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), O = i.useMemo(() => o.memoize((e, t) => {
+  }), T = (0, p.useAnalyticsContext)(), v = (0, I.useEmojiCategories)(r, u), _ = i.useRef(null), y = (0, d.useStateFromStores)([g.default], () => g.default.isFocused()), x = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), O = i.useMemo(() => o.memoize((e, t) => {
     let n = v[t];
     if (null != n) return (0, l.jsx)(V, {
       activeIndex: c,
@@ -112,11 +112,11 @@ var K = e => {
       categories: v,
       category: n,
       categoryIndex: t,
-      handleCategorySelect: g,
+      handleCategorySelect: S,
       isWindowFocused: y,
       useReducedMotion: x
     }, t)
-  }), [c, T, v, g, y, x]), L = i.useMemo(() => [8, 8, 0, 8], []), U = i.useCallback((e, t) => {
+  }), [c, T, v, S, y, x]), L = i.useMemo(() => [8, 8, 0, 8], []), U = i.useCallback((e, t) => {
     let n = v[t];
     if (n.type === N.EmojiCategoryTypes.RECENT) return F;
     if (n.type === N.EmojiCategoryTypes.GUILD) {

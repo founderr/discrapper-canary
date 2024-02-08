@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
 var a = n("37983"),
   l = n("884691"),
   s = n("907002"),
-  i = n("819855"),
-  r = n("446674"),
-  o = n("386045"),
-  u = n("803725"),
+  i = n("446674"),
+  r = n("819855"),
+  u = n("386045"),
+  o = n("803725"),
   d = n("728658"),
   c = n("374014"),
   f = n("983782"),
@@ -38,9 +38,9 @@ function g(e) {
     inPopout: n
   } = e, {
     reducedMotion: g
-  } = l.useContext(i.AccessibilityPreferencesContext), S = (0, l.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, I = (0, c.encodeStreamKey)(t), T = (0, r.useStateFromStores)([o.default], () => o.default.getActiveAnimation()), v = (0, r.useStateFromStoresArray)([o.default], () => o.default.getStreamClipAnimations(I)), x = (0, l.useRef)();
+  } = l.useContext(r.AccessibilityPreferencesContext), S = (0, l.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, I = (0, c.encodeStreamKey)(t), T = (0, i.useStateFromStores)([u.default], () => u.default.getActiveAnimation()), v = (0, i.useStateFromStoresArray)([u.default], () => u.default.getStreamClipAnimations(I)), x = (0, l.useRef)();
   l.useEffect(() => () => {
-    (0, u.dismissSaveClipAnimation)(I)
+    (0, o.dismissSaveClipAnimation)(I)
   }, [I]);
   let N = () => {
       var e;
@@ -108,7 +108,7 @@ function g(e) {
       },
       config: g.enabled ? C : E,
       onRest: (e, t) => {
-        null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, u.dismissSaveClipAnimation)(I, t.item.timestamp)
+        null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, o.dismissSaveClipAnimation)(I, t.item.timestamp)
       }
     });
   return (0, s.useChain)([M, j], [0, .1], 3e3), (0, a.jsxs)(a.Fragment, {

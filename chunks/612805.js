@@ -8,8 +8,8 @@ var l = a("37983"),
   n = a("884691"),
   s = a("414456"),
   r = a.n(s),
-  i = a("77078"),
-  o = a("418009"),
+  i = a("418009"),
+  o = a("77078"),
   u = a("95689"),
   c = a("100300"),
   d = a("782340"),
@@ -21,12 +21,12 @@ function A(e) {
     isSelected: a,
     onClick: n,
     children: s
-  } = e, o = (0, i.useRadioItem)({
+  } = e, i = (0, o.useRadioItem)({
     isSelected: a,
     label: t
   });
-  return (0, l.jsx)(i.Clickable, {
-    ...o,
+  return (0, l.jsx)(o.Clickable, {
+    ...i,
     onClick: n,
     className: r(E.option, a && E.optionSelected),
     children: s
@@ -36,14 +36,14 @@ var _ = function(e) {
   let {
     selectedLayoutType: t,
     onSelectedLayoutType: a
-  } = e, s = (0, i.useRadioGroup)({
+  } = e, s = (0, o.useRadioGroup)({
     orientation: "horizontal"
   }), r = n.useMemo(() => [{
-    name: o.PollLayoutTypes.DEFAULT,
+    name: i.PollLayoutTypes.DEFAULT,
     label: d.default.Messages.CREATE_POLL_LAYOUT_DEFAULT,
     icon: c.default
   }, {
-    name: o.PollLayoutTypes.IMAGE_ONLY_ANSWERS,
+    name: i.PollLayoutTypes.IMAGE_ONLY_ANSWERS,
     label: d.default.Messages.CREATE_POLL_LAYOUT_IMAGE,
     icon: u.default
   }], []), _ = e => {

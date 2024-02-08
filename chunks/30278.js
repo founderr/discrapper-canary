@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("42203"),
   h = n("18494"),
   E = n("791106"),
-  g = n("216422"),
-  S = n("599110"),
+  S = n("216422"),
+  g = n("599110"),
   C = n("49111"),
   T = n("646718"),
   v = n("782340"),
@@ -50,7 +50,7 @@ function y(e) {
     analyticsLocations: N
   } = (0, d.default)(u.default.PREMIUM_UPSELL), x = (0, c.usePremiumDiscountOffer)(), O = (0, f.usePremiumTrialOffer)(), R = (0, c.discountOfferHasTier)(x, T.PremiumSubscriptionSKUs.TIER_2), M = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.PremiumSubscriptionSKUs.TIER_2;
   return (i.useEffect(() => {
-    S.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    g.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: "longer messages inline",
       location: {
         location_page: A,
@@ -73,14 +73,14 @@ function y(e) {
     children: (0, l.jsx)(o.Tooltip, {
       text: v.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
       position: "top",
-      children: e => (0, l.jsx)(g.default, {
+      children: e => (0, l.jsx)(S.default, {
         className: I.premium,
         ...e
       })
     })
   }) : (0, l.jsxs)("div", {
     className: s(I.root, n),
-    children: [(0, l.jsx)(g.default, {
+    children: [(0, l.jsx)(S.default, {
       className: I.premium,
       color: E.GradientCssUrls.PREMIUM_TIER_2
     }), (0, l.jsx)(o.Text, {

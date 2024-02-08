@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("37983"),
   l = n("884691"),
-  a = n("77078"),
-  i = n("446674"),
+  a = n("446674"),
+  i = n("77078"),
   r = n("997289"),
   o = n("550766"),
   u = n("191225"),
@@ -37,16 +37,16 @@ function R(e) {
     guildId: L
   } = e, [v, P] = l.useState(!1), {
     analyticsLocations: D
-  } = (0, I.default)(), x = (0, r.useAnalyticsContext)(), y = (0, _.default)(), U = (0, i.useStateFromStores)([N.default], () => N.default.getId()), {
+  } = (0, I.default)(), x = (0, r.useAnalyticsContext)(), y = (0, _.default)(), U = (0, a.useStateFromStores)([N.default], () => N.default.getId()), {
     embeddedActivity: j,
     currentEmbeddedActivity: b
-  } = (0, i.useStateFromStoresObject)([u.default], () => ({
+  } = (0, a.useStateFromStoresObject)([u.default], () => ({
     embeddedActivity: u.default.getEmbeddedActivitiesForChannel(R).find(e => e.instanceId === n.id),
     currentEmbeddedActivity: u.default.getCurrentEmbeddedActivity()
-  })), G = (0, i.useStateFromStoresArray)([A.default], () => {
+  })), G = (0, a.useStateFromStoresArray)([A.default], () => {
     var e;
     return Array.from(null !== (e = null == j ? void 0 : j.userIds) && void 0 !== e ? e : []).map(e => A.default.getUser(e)).filter(C.isNotNullish)
-  }), B = (0, i.useStateFromStores)([p.default], () => {
+  }), B = (0, a.useStateFromStores)([p.default], () => {
     var e;
     let n = null == j ? void 0 : j.userIds.values().next().value;
     return null == n ? null : null === (e = p.default.findActivity(n, e => e.application_id === t.id)) || void 0 === e ? void 0 : e.details
@@ -104,11 +104,11 @@ function R(e) {
         className: O.headerContainer,
         children: w ? (0, s.jsx)("div", {
           className: O.endedNote,
-          children: (0, s.jsx)(a.Text, {
+          children: (0, s.jsx)(i.Text, {
             variant: "text-md/medium",
             children: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED
           })
-        }) : (0, s.jsx)(a.Text, {
+        }) : (0, s.jsx)(i.Text, {
           variant: "text-md/medium",
           lineClamp: 1,
           color: "text-normal",
@@ -116,20 +116,20 @@ function R(e) {
         })
       }), (0, s.jsxs)("div", {
         className: O.footerContainer,
-        children: [(0, s.jsx)(a.Tooltip, {
+        children: [(0, s.jsx)(i.Tooltip, {
           text: H.tooltip,
           children: e => {
             let {
               onClick: t,
               ...n
             } = e;
-            return (0, l.createElement)(a.Button, {
+            return (0, l.createElement)(i.Button, {
               ...n,
               key: "".concat(H.isJoinAction),
               onClick: () => {
                 V(), null == t || t()
               },
-              color: H.isJoinAction ? a.ButtonColors.GREEN : a.ButtonColors.PRIMARY,
+              color: H.isJoinAction ? i.ButtonColors.GREEN : i.ButtonColors.PRIMARY,
               submitting: v,
               disabled: H.disabled
             }, H.text)

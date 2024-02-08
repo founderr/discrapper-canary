@@ -10,8 +10,8 @@ var l = n("446674"),
   s = n("77078"),
   i = n("191145"),
   r = n("243288"),
-  o = n("769928"),
-  u = n("321135"),
+  u = n("769928"),
+  o = n("321135"),
   d = n("976074"),
   c = n("639537"),
   f = n("99795"),
@@ -24,7 +24,7 @@ function p(e) {
     appContext: p,
     exitFullScreen: m,
     onSelect: E
-  } = e, C = (0, l.useStateFromStores)([i.default], () => i.default.getSelectedParticipant(t)), g = (null == C ? void 0 : C.type) === f.ParticipantTypes.STREAM ? C.stream : null, S = (0, r.default)(t), _ = (0, u.default)(), I = (0, o.default)(t), T = (0, c.default)(t);
+  } = e, C = (0, l.useStateFromStores)([i.default], () => i.default.getSelectedParticipant(t)), g = (null == C ? void 0 : C.type) === f.ParticipantTypes.STREAM ? C.stream : null, S = (0, r.default)(t), _ = (0, o.default)(), I = (0, u.default)(t), T = (0, c.default)(t);
   return (0, a.jsxs)(s.Menu, {
     navId: "channel-call-overflow-popout",
     onClose: n,

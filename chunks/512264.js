@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var a, l, s = n("37983"),
   i = n("884691"),
   r = n("414456"),
-  o = n.n(r),
-  u = n("77078"),
+  u = n.n(r),
+  o = n("77078"),
   d = n("103723"),
   c = n("474293"),
   f = n("391763");
@@ -37,9 +37,9 @@ let h = i.memo(function(e) {
     _(!1)
   }, []);
   return (0, s.jsxs)("div", {
-    className: o(f.wrapper, a),
+    className: u(f.wrapper, a),
     children: [null != t && (0, s.jsx)(l, {
-      className: o(f.video, (0, c.getClass)(f, "video", h), {
+      className: u(f.video, (0, c.getClass)(f, "video", h), {
         [f.mirror]: p
       }, r),
       streamId: t,
@@ -47,7 +47,7 @@ let h = i.memo(function(e) {
       onReady: T,
       paused: m
     }), m ? null : (0, s.jsx)("div", {
-      className: o(f.previewWrapper, {
+      className: u(f.previewWrapper, {
         [f.loading]: S
       }),
       children: S && (0, s.jsxs)(i.Fragment, {
@@ -60,7 +60,7 @@ let h = i.memo(function(e) {
           children: (0, s.jsx)("div", {
             className: f.emptyPreview
           })
-        }), (0, s.jsx)(u.Spinner, {
+        }), (0, s.jsx)(o.Spinner, {
           className: f.spinner
         })]
       })

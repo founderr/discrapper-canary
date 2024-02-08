@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   n = s("884691"),
   l = s("974667"),
-  r = s("77078"),
-  i = s("446674"),
+  r = s("446674"),
+  i = s("77078"),
   o = s("206230"),
   u = s("339792"),
   d = s("680986"),
@@ -29,7 +29,7 @@ function C(e) {
     setPopoutRef: C
   } = e, _ = (0, d.useVisibleForumTags)(t), {
     tagFilter: S
-  } = (0, u.useForumChannelStore)(t.id), T = (0, u.useForumChannelStoreApi)(), p = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
+  } = (0, u.useForumChannelStore)(t.id), T = (0, u.useForumChannelStoreApi)(), p = (0, r.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
     (0, c.trackForumTagFilterClicked)({
       guildId: t.guild_id,
       channelId: t.id,
@@ -58,7 +58,7 @@ function C(e) {
         null != e && e.focus()
       }
     })
-  }, []), (0, a.jsxs)(r.Dialog, {
+  }, []), (0, a.jsxs)(i.Dialog, {
     ref: C,
     "aria-label": f.default.Messages.FORUM_TAG_FILTER_HEADER,
     className: g.container,
@@ -66,14 +66,14 @@ function C(e) {
       className: g.header,
       children: (0, a.jsxs)("div", {
         className: g.headerLeft,
-        children: [(0, a.jsx)(r.Heading, {
+        children: [(0, a.jsx)(i.Heading, {
           color: "interactive-normal",
           variant: "text-xs/bold",
           className: g.headerText,
           children: f.default.Messages.FORUM_TAG_POST_SELECT
         }), (0, a.jsx)("div", {
           className: g.countContainer,
-          children: (0, a.jsx)(r.Text, {
+          children: (0, a.jsx)(i.Text, {
             className: g.countText,
             color: "none",
             variant: "text-xs/medium",
@@ -106,14 +106,14 @@ function C(e) {
       })
     }), (0, a.jsx)("div", {
       className: g.separator
-    }), (0, a.jsx)(r.Button, {
-      look: r.Button.Looks.LINK,
-      size: r.Button.Sizes.MIN,
-      color: r.Button.Colors.CUSTOM,
+    }), (0, a.jsx)(i.Button, {
+      look: i.Button.Looks.LINK,
+      size: i.Button.Sizes.MIN,
+      color: i.Button.Colors.CUSTOM,
       className: g.clear,
       "aria-label": f.default.Messages.FORUM_CLEAR_ALL,
       onClick: N,
-      children: (0, a.jsx)(r.Text, {
+      children: (0, a.jsx)(i.Text, {
         variant: "text-sm/medium",
         color: "text-link",
         children: f.default.Messages.FORUM_CLEAR_ALL

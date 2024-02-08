@@ -21,7 +21,7 @@ let c = i.forwardRef(function(e, t) {
     expressionsListRef: m,
     defaultSearchPlaceholder: h,
     emptySearchPlaceholder: E
-  } = e, g = i.useRef(null), [S, C] = (0, u.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], a.default), T = n.useStore(e => e.searchPlaceholder), v = n.useStore(e => e.inspectedExpressionPosition, a.default), I = i.useCallback(e => {
+  } = e, S = i.useRef(null), [g, C] = (0, u.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], a.default), T = n.useStore(e => e.searchPlaceholder), v = n.useStore(e => e.inspectedExpressionPosition, a.default), I = i.useCallback(e => {
     var t;
     n.setActiveCategoryIndex("" === e ? 0 : o.INACTIVE_CATEGORY_INDEX), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = m.current) || void 0 === t || t.scrollTo(0)
   }, [m, n]), _ = i.useCallback(() => {
@@ -30,20 +30,20 @@ let c = i.forwardRef(function(e, t) {
   return i.useImperativeHandle(t, () => ({
     focus: () => {
       var e;
-      return null === (e = g.current) || void 0 === e ? void 0 : e.focus()
+      return null === (e = S.current) || void 0 === e ? void 0 : e.focus()
     }
   })), i.useLayoutEffect(() => {
     if (C) {
       var e;
-      null === (e = g.current) || void 0 === e || e.focus()
+      null === (e = S.current) || void 0 === e || e.focus()
     }
   }, [C]), (0, l.jsx)("div", {
     className: d.wrapper,
     children: (0, l.jsx)(r.default, {
       autoFocus: c,
       disabled: !c,
-      query: S,
-      ref: g,
+      query: g,
+      ref: S,
       size: r.default.Sizes.MEDIUM,
       placeholder: null != T ? T : c || null == E ? h : E,
       onClear: _,

@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return w
   }
 }), n("222007"), n("70102");
-var s = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  s = n("884691"),
   l = n("414456"),
   i = n.n(l),
   r = n("446674"),
@@ -21,12 +21,12 @@ var s = n("37983"),
   E = n("386045"),
   g = n("734217"),
   S = n("139321"),
-  A = n("562228"),
-  _ = n("140596"),
+  _ = n("562228"),
+  A = n("140596"),
   T = n("300322"),
   M = n("845579"),
-  I = n("982108"),
-  N = n("778588"),
+  N = n("982108"),
+  I = n("778588"),
   v = n("957255"),
   L = n("101125"),
   x = n("351825"),
@@ -41,7 +41,7 @@ var s = n("37983"),
   F = n("80028"),
   U = n("782340"),
   k = n("381769"),
-  w = a.memo(function(e) {
+  w = s.memo(function(e) {
     var t, l, w;
     let G, {
         className: B,
@@ -52,12 +52,12 @@ var s = n("37983"),
         canOnlyUseTextCommands: K
       } = e,
       Y = (0, f.useAppContext)(),
-      q = a.useRef(null),
+      q = s.useRef(null),
       X = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
       J = (0, r.useStateFromStores)([E.default], () => E.default.getSettings().clipsEnabled),
       Q = (0, r.useStateFromStores)([E.default], () => E.default.getLastClipsSession()),
       $ = (0, r.useStateFromStoresArray)([E.default], () => E.default.getNewClipIds()),
-      ee = (0, r.useStateFromStores)([I.default], () => null == I.default.getCurrentSidebarChannelId(V.id)),
+      ee = (0, r.useStateFromStores)([N.default], () => null == N.default.getCurrentSidebarChannelId(V.id)),
       {
         showClipsHeaderEntrypoint: et
       } = m.ClipsExperiment.useExperiment({
@@ -66,15 +66,15 @@ var s = n("37983"),
         autoTrackExposure: !1
       }),
       en = (0, r.useStateFromStores)([S.HotspotStore], () => S.HotspotStore.hasHotspot(S.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
-      es = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, F.CLIPS_GALLERY_MODAL_KEY)),
-      ea = (0, r.useStateFromStores)([N.default], () => N.default.hasLayers()),
+      ea = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, F.CLIPS_GALLERY_MODAL_KEY)),
+      es = (0, r.useStateFromStores)([I.default], () => I.default.hasLayers()),
       el = (0, r.useStateFromStores)([E.default], () => E.default.hasClips()),
-      [ei, er] = a.useState(null),
+      [ei, er] = s.useState(null),
       eo = (0, m.useEnableClips)() && (J || el),
       eu = V.isPrivate(),
       ed = (0, r.useStateFromStores)([v.default], () => eu || v.default.can(H.Permissions.ATTACH_FILES, V) && v.default.can(H.Permissions.SEND_MESSAGES, V)),
       ec = (0, c.default)(Q);
-    (null == ec ? void 0 : ec.newClipIds.length) !== (null == Q ? void 0 : Q.newClipIds.length) && (null !== (t = null == Q ? void 0 : Q.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ei && en && ee && !es && !et && !ea && er("recentClips");
+    (null == ec ? void 0 : ec.newClipIds.length) !== (null == Q ? void 0 : Q.newClipIds.length) && (null !== (t = null == Q ? void 0 : Q.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ei && en && ee && !ea && !et && !es && er("recentClips");
     let ef = (e, t, n) => {
       null != t && "ETOOLARGE" === t.code ? (0, j.showUploadFileSizeExceededError)(V, []) : (0, j.promptToUpload)(e, V, W, {
         requireConfirm: !0,
@@ -87,7 +87,7 @@ var s = n("37983"),
         let {
           default: e
         } = await n.el("167573").then(n.bind(n, "167573"));
-        return t => (0, s.jsx)(e, {
+        return t => (0, a.jsx)(e, {
           ...t,
           channelId: V.id
         })
@@ -95,7 +95,7 @@ var s = n("37983"),
         modalKey: F.CLIPS_GALLERY_MODAL_KEY
       }), er(null)
     }
-    a.useEffect(() => {
+    s.useEffect(() => {
       let e = () => {
         var e;
         return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
@@ -107,11 +107,11 @@ var s = n("37983"),
     let eC = (0, T.useCanStartPublicThread)(V),
       ep = (0, T.useCanStartPrivateThread)(V),
       em = !M.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
-      eE = (0, r.useStateFromStores)([v.default, _.default], () => (0, p.canUseApplicationCommands)(v.default, _.default, K, V)),
-      eg = (0, A.useCanPostPollsInChannel)(null != V ? V : void 0),
+      eE = (0, r.useStateFromStores)([v.default, A.default], () => (0, p.canUseApplicationCommands)(v.default, A.default, K, V)),
+      eg = (0, _.useCanPostPollsInChannel)(null != V ? V : void 0),
       eS = (0, u.useRedesignIconContext)().enabled,
-      eA = (0, h.useActivitiesInTextButtonVisibility)(V.id, "ChannelAttachButton"),
-      e_ = null !== (l = null == $ ? void 0 : $.length) && void 0 !== l ? l : 0,
+      e_ = (0, h.useActivitiesInTextButtonVisibility)(V.id, "ChannelAttachButton"),
+      eA = null !== (l = null == $ ? void 0 : $.length) && void 0 !== l ? l : 0,
       eT = (0, b.default)({
         canAttachFiles: ed,
         canStartThreads: eC || ep,
@@ -120,36 +120,36 @@ var s = n("37983"),
         canUseApplicationCommands: eE,
         channel: V,
         activities: X,
-        newClipsCount: e_,
+        newClipsCount: eA,
         canPostPolls: eg,
-        canLaunchActivities: null !== (w = null == eA ? void 0 : eA.showInOmniButtonMenu) && void 0 !== w && w,
+        canLaunchActivities: null !== (w = null == e_ ? void 0 : e_.showInOmniButtonMenu) && void 0 !== w && w,
         appContext: Y
       });
     if (0 === eT.length) return null;
     let eM = X.some(e => (0, C.default)(e, H.ActivityFlags.SYNC)),
-      eI = X.some(e => (0, C.default)(e, H.ActivityFlags.JOIN) && !(0, C.default)(e, H.ActivityFlags.EMBEDDED)) || eM;
-    G = eS ? (0, s.jsx)(o.CirclePlusIcon, {
+      eN = X.some(e => (0, C.default)(e, H.ActivityFlags.JOIN) && !(0, C.default)(e, H.ActivityFlags.EMBEDDED)) || eM;
+    G = eS ? (0, a.jsx)(o.CirclePlusIcon, {
       className: k.attachButtonIcon,
       colorClass: k.attachButtonPlus
-    }) : eI ? (0, s.jsx)(y.default, {
+    }) : eN ? (0, a.jsx)(y.default, {
       className: k.attachButtonIcon,
       foreground: k.attachButtonPlay,
       background: k.attachButtonPlus,
       width: 24,
       height: 24
-    }) : e_ > 0 ? (0, s.jsx)(R.default, {
+    }) : eA > 0 ? (0, a.jsx)(R.default, {
       className: k.attachButtonIcon,
       foreground: k.attachButtonClip,
       background: k.attachButtonPlus,
       width: 24,
       height: 24
-    }) : (0, s.jsx)(x.default, {
+    }) : (0, a.jsx)(x.default, {
       className: k.attachButtonIcon,
       foreground: k.attachButtonPlus,
       width: 24,
       height: 24
     });
-    let eN = (0, s.jsx)(u.Popout, {
+    let eI = (0, a.jsx)(u.Popout, {
       shouldShow: null != ei,
       animation: u.Popout.Animation.NONE,
       align: "recentClips" === ei ? "center" : "left",
@@ -162,13 +162,13 @@ var s = n("37983"),
       renderPopout: e => {
         switch (ei) {
           case "recentClips":
-            return (0, s.jsx)(g.default, {
+            return (0, a.jsx)(g.default, {
               ...e,
               onOpenClips: eh,
               lastClipsSession: Q
             });
           case "attachMenu":
-            return (0, s.jsx)(P.default, {
+            return (0, a.jsx)(P.default, {
               ...e,
               onClose: () => er(null),
               options: eT,
@@ -186,7 +186,7 @@ var s = n("37983"),
             throw Error("Invalid popout type provided")
         }
       },
-      children: e => (0, s.jsx)(u.Button, {
+      children: e => (0, a.jsx)(u.Button, {
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
         className: i(k.attachButton, B),
@@ -200,10 +200,10 @@ var s = n("37983"),
         children: G
       })
     });
-    return (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)("div", {
+    return (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)("div", {
         className: k.uploadInput,
-        children: (0, s.jsx)(d.default, {
+        children: (0, a.jsx)(d.default, {
           ref: q,
           onChange: e => {
             ef(e.currentTarget.files, e.currentTarget.err), e.currentTarget.value = ""
@@ -212,9 +212,9 @@ var s = n("37983"),
           tabIndex: -1,
           "aria-hidden": !0
         })
-      }), (0, s.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: k.attachWrapper,
-        children: eN
+        children: eI
       })]
     })
   })

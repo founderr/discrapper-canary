@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 }), l("222007");
 var a = l("37983"),
   n = l("884691"),
-  s = l("77078"),
-  o = l("446674"),
+  s = l("446674"),
+  o = l("77078"),
   i = l("430568"),
   u = l("86678"),
   d = l("385976"),
@@ -28,7 +28,7 @@ function p(e) {
     customStatusEmoji: t,
     setCustomStatusEmoji: l,
     onClose: n
-  } = e, d = (0, o.useStateFromStores)([m.default, r.default], () => r.default.getChannel(m.default.getVoiceChannelId())), c = e => {
+  } = e, d = (0, s.useStateFromStores)([m.default, r.default], () => r.default.getChannel(m.default.getVoiceChannelId())), c = e => {
     var t;
     if (null == e) {
       l(null);
@@ -45,7 +45,7 @@ function p(e) {
     };
     l(a)
   };
-  return (0, a.jsx)(s.Popout, {
+  return (0, a.jsx)(o.Popout, {
     renderPopout: e => {
       var t;
       let {
@@ -63,7 +63,7 @@ function p(e) {
       })
     },
     position: "left",
-    animation: s.Popout.Animation.NONE,
+    animation: o.Popout.Animation.NONE,
     align: "top",
     children: (e, l) => {
       let {
@@ -88,7 +88,7 @@ function p(e) {
 function C(e) {
   var t, l;
   let {
-    transitionState: o,
+    transitionState: s,
     onClose: i,
     startingText: u,
     startingEmoji: r
@@ -98,16 +98,16 @@ function C(e) {
     T = e ? r : null
   } else(null == r ? void 0 : r.name) != null && (T = r);
   let [C, N] = n.useState(S), [E, _] = n.useState(T);
-  return (0, a.jsxs)(s.ModalRoot, {
+  return (0, a.jsxs)(o.ModalRoot, {
     className: g.modal,
-    transitionState: o,
-    size: s.ModalSize.DYNAMIC,
-    children: [(0, a.jsxs)(s.ModalContent, {
+    transitionState: s,
+    size: o.ModalSize.DYNAMIC,
+    children: [(0, a.jsxs)(o.ModalContent, {
       className: g.modalContent,
-      children: [(0, a.jsx)(s.Button, {
+      children: [(0, a.jsx)(o.Button, {
         "aria-label": v.default.Messages.CLOSE,
-        look: s.Button.Looks.BLANK,
-        size: s.Button.Sizes.NONE,
+        look: o.Button.Looks.BLANK,
+        size: o.Button.Sizes.NONE,
         onClick: i,
         className: g.closeButton,
         children: (0, a.jsx)(j.default, {
@@ -121,30 +121,30 @@ function C(e) {
         onClose: i
       }), (0, a.jsxs)("div", {
         className: g.customInputGroup,
-        children: [(0, a.jsx)(s.Text, {
+        children: [(0, a.jsx)(o.Text, {
           className: g.leadInText,
           variant: "text-xs/semibold",
           color: "text-muted",
           children: v.default.Messages.STATUS_LEAD_IN_JUST
-        }), (0, a.jsx)(s.TextInput, {
+        }), (0, a.jsx)(o.TextInput, {
           className: g.customInput,
           value: C,
           onChange: e => N(e.substring(0, 60)),
           placeholder: v.default.Messages.CUSTOM_HANG_STATUS_PLACEHOLDER
         })]
       })]
-    }), (0, a.jsxs)(s.ModalFooter, {
+    }), (0, a.jsxs)(o.ModalFooter, {
       className: g.modalFooter,
       children: [(0, a.jsxs)("div", {
-        children: [(0, a.jsx)(s.Heading, {
+        children: [(0, a.jsx)(o.Heading, {
           variant: "heading-md/semibold",
           children: v.default.Messages.SET_STATUS_MODAL_TITLE
-        }), (0, a.jsx)(s.Text, {
+        }), (0, a.jsx)(o.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
           children: v.default.Messages.SET_STATUS_MODAL_SUBTITLE
         })]
-      }), (0, a.jsx)(s.Button, {
+      }), (0, a.jsx)(o.Button, {
         onClick: () => {
           let e = C.trim();
           "" !== e && ((0, f.updateCustomHangStatus)(e, E, !0), i())

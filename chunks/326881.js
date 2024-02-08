@@ -8,9 +8,9 @@ var a = s("37983"),
   n = s("884691"),
   r = s("414456"),
   i = s.n(r),
-  l = s("77078"),
-  u = s("446674"),
-  o = s("290381"),
+  l = s("446674"),
+  u = s("290381"),
+  o = s("77078"),
   d = s("206230"),
   c = s("812204"),
   _ = s("685665"),
@@ -36,8 +36,8 @@ var a = s("37983"),
     }, {}), {
       AnalyticsLocationProvider: M,
       analyticsLocations: h
-    } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [L, x] = n.useState(!1), v = (0, E.default)("perks-discoverability"), D = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion);
-    return (0, a.jsx)(l.AdvancedScrollerAuto, {
+    } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [L, x] = n.useState(!1), v = (0, E.default)("perks-discoverability"), D = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion);
+    return (0, a.jsx)(o.AdvancedScrollerAuto, {
       className: i(p.allPerksScroller, {
         [p.open]: t,
         [p.openCloseReduceMotion]: D
@@ -57,7 +57,7 @@ var a = s("37983"),
             }
           }), (0, a.jsxs)("div", {
             className: p.column,
-            children: [(0, a.jsx)(l.Heading, {
+            children: [(0, a.jsx)(o.Heading, {
               variant: "heading-xxl/extrabold",
               color: "header-primary",
               className: p.heading,
@@ -66,7 +66,7 @@ var a = s("37983"),
               className: p.cardCarousel,
               cards: (0, A.getFilteredPerksDiscoverabilityCards)(O, A.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW, v),
               cardType: A.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW
-            }), (0, a.jsx)(l.Heading, {
+            }), (0, a.jsx)(o.Heading, {
               variant: "heading-xxl/extrabold",
               color: "header-primary",
               className: p.heading,
@@ -75,7 +75,7 @@ var a = s("37983"),
               className: p.cardCarousel,
               cards: (0, A.getFilteredPerksDiscoverabilityCards)(O, A.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW, v),
               cardType: A.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW
-            }), (0, a.jsx)(l.Heading, {
+            }), (0, a.jsx)(o.Heading, {
               variant: "heading-xxl/extrabold",
               color: "header-primary",
               className: p.heading,
@@ -87,7 +87,7 @@ var a = s("37983"),
             })]
           }), (0, a.jsx)("div", {
             className: p.footerSpacing
-          }), (0, a.jsx)(o.VisibilitySensor, {
+          }), (0, a.jsx)(u.VisibilitySensor, {
             onChange: e => {
               e && !L && (T.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                 location_stack: h
