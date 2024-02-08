@@ -19,8 +19,8 @@ var i = n("759843"),
   m = n("191814"),
   h = n("945330"),
   E = n("256941"),
-  S = n("270295"),
-  g = n("49111"),
+  g = n("270295"),
+  S = n("49111"),
   C = n("724210"),
   T = n("782340"),
   v = n("814163");
@@ -89,9 +89,9 @@ function _(e) {
         children: N
       }), (0, l.jsx)(m.default, {
         size: 24
-      }), (0, l.jsx)(S.default, {
+      }), (0, l.jsx)(g.default, {
         onClick: () => {
-          (0, f.transitionTo)(g.Routes.CHANNEL(n, C.StaticChannelRoute.ROLE_SUBSCRIPTIONS), void 0, void 0, _)
+          (0, f.transitionTo)(S.Routes.CHANNEL(n, C.StaticChannelRoute.ROLE_SUBSCRIPTIONS), void 0, void 0, _)
         },
         children: x
       })]

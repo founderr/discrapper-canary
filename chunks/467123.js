@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   },
   isPointInCodeBlock: function() {
     return I
@@ -32,11 +32,11 @@ for (let e of m) {
     for (let t of n) h[t.toLowerCase()] = e
 }
 let E = /^[a-z0-9_+\-.#]+$/,
-  S = /^[a-z0-9_+\-.#]+$/i;
+  g = /^[a-z0-9_+\-.#]+$/i;
 for (let e in h)
   if (null == e.match(E)) throw Error("Language name does not match regex: ".concat(e));
 
-function g(e) {
+function S(e) {
   let {
     onChange: t
   } = e, n = null;
@@ -85,18 +85,18 @@ function g(e) {
                 f = n && 0 === s.length,
                 m = l && 0 === s.length,
                 E = d ? s.slice(1) : s,
-                g = E.length % 2 == 1,
-                C = g && (null == u || "" === u || null != u.match(S)),
+                S = E.length % 2 == 1,
+                C = S && (null == u || "" === u || null != u.match(g)),
                 T = C && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
               return {
                 blockEntry: t,
                 wasInCodeBlock: n,
                 isInCodeBlock: f,
                 isStyledCodeBlockLine: m,
-                lang: g || d ? T : i,
+                lang: S || d ? T : i,
                 hljsTypes: null,
                 closesCodeBlock: d,
-                opensCodeBlock: g,
+                opensCodeBlock: S,
                 opensCodeBlockOnOwnLine: C
               }
             }(e, l, i, a, s), t.push(n)

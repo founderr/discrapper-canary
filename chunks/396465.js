@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var l = n("37983"),
@@ -18,13 +18,13 @@ var l = n("37983"),
   m = n("41884"),
   h = n("406291"),
   E = n("782340"),
-  S = n("253184");
+  g = n("253184");
 
-function g(e) {
+function S(e) {
   let {
     query: t,
     onHover: n,
-    onClick: g,
+    onClick: S,
     channel: C,
     selectedIndex: T
   } = e, v = i.useRef(null), {
@@ -49,14 +49,14 @@ function g(e) {
       index: e,
       command: i,
       channel: C,
-      className: S.itemWrapper,
+      className: g.itemWrapper,
       selected: T === e,
       showImage: !0,
       section: s,
-      onClick: g,
+      onClick: S,
       onHover: n
     }, a)
-  }, [C, I, _, g, n, T]);
+  }, [C, I, _, S, n, T]);
   return null == I || 0 === I.length ? null : (0, l.jsxs)(l.Fragment, {
     children: [(0, s.renderHeader)({
       titleWithQuery: E.default.Messages.COMMANDS_MATCHING,
@@ -66,7 +66,7 @@ function g(e) {
     }), (0, l.jsx)(u.default, {
       ref: v,
       role: "listbox",
-      className: S.list,
+      className: g.list,
       listPadding: [0, 8, 0, 8],
       onScroll: e => {
         if (null == I) return;

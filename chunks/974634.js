@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("222007");
 var l = n("37983"),
@@ -22,8 +22,8 @@ let E = i.forwardRef(function(e, t) {
     emojiListRef: n,
     gridNavigatorId: a,
     isFullRow: E,
-    onKeyDown: S,
-    onFocus: g,
+    onKeyDown: g,
+    onFocus: S,
     autoFocus: C,
     className: T,
     defaultSearchPlaceholder: v
@@ -53,9 +53,9 @@ let E = i.forwardRef(function(e, t) {
         case p.KeyboardKeys.ARROW_DOWN:
           document.activeElement !== e.target && e.preventDefault()
       }
-      S(e)
+      g(e)
     },
-    onFocus: g,
+    onFocus: S,
     onQueryChange: N,
     className: s(T, {
       [h.searchBarFullRow]: E
@@ -71,4 +71,4 @@ let E = i.forwardRef(function(e, t) {
     }
   })
 });
-var S = i.memo(E)
+var g = i.memo(E)

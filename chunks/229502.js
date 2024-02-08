@@ -25,8 +25,8 @@ var l, i, a = n("917351"),
   m = n("718517"),
   h = n("402671"),
   E = n("82230"),
-  S = n("568088"),
-  g = n("397485"),
+  g = n("568088"),
+  S = n("397485"),
   C = n("626334"),
   T = n("49111"),
   v = n("846325");
@@ -49,7 +49,7 @@ function _(e, t, n) {
     onRequestProgress: a
   } = I(e), r = null !== (l = E.default.getState().animationType) && void 0 !== l ? l : C.VoiceChannelEffectAnimationType.BASIC, u = {
     animation_type: r,
-    animation_id: (0, g.sampleAnimationId)(r, g.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
+    animation_id: (0, S.sampleAnimationId)(r, S.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
   };
   s.default.post({
     url: T.Endpoints.CUSTOM_CALL_SOUNDS(e),
@@ -91,7 +91,7 @@ let A = async e => {
     animationId: a,
     isPremium: o
   } = e;
-  if (null == n || S.default.isOnCooldown) return;
+  if (null == n || g.default.isOnCooldown) return;
   let u = o && null != i ? i : C.VoiceChannelEffectAnimationType.BASIC;
   try {
     let e = null != n.id ? {

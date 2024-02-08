@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useShouldShowPTONotice: function() {
-    return S
+    return g
   },
   StaffPTOBar: function() {
-    return g
+    return S
   }
 }), n("222007");
 var l = n("37983");
@@ -33,7 +33,7 @@ class h extends i.default.PersistedStore {
 }
 h.displayName = "PTOStore", h.persistKey = "PTOStore";
 let E = new h(s.default, {}),
-  S = e => (0, i.useStateFromStores)([o.default, d.default, E], () => {
+  g = e => (0, i.useStateFromStores)([o.default, d.default, E], () => {
     let t = d.default.getCurrentUser();
     if (null == t || !t.isStaff() || !e.isDM()) return !1;
     let n = d.default.getUser(e.getRecipientId());
@@ -41,7 +41,7 @@ let E = new h(s.default, {}),
     let l = o.default.getNicknames(n.id).some(e => e.endsWith("[PTO]") || e.endsWith("[OOO]"));
     return l ? !E.hasId(n.id) && l : (m.delete(n.id) && E.emitChange(), !1)
   }),
-  g = () => (0, l.jsxs)("div", {
+  S = () => (0, l.jsxs)("div", {
     className: p.bar,
     children: [f.default.Messages.STAFF_PTO_NOTICE, (0, l.jsx)(a.Clickable, {
       className: p.closeButton,

@@ -118,19 +118,19 @@ l = class extends i.EventEmitter {
     i.allowStickers = i.allowStickers ? h : i.allowStickers;
     let {
       results: E,
-      metadata: S
-    } = f.queryResults(this.props.channel, this.props.guild, p, i, m), g = 0;
-    for (let e of Object.values(E)) Array.isArray(e) && (g += e.length);
+      metadata: g
+    } = f.queryResults(this.props.channel, this.props.guild, p, i, m), S = 0;
+    for (let e of Object.values(E)) Array.isArray(e) && (S += e.length);
     let C = !0 === E.isLoading,
-      T = this.shouldShow(g, C, f),
+      T = this.shouldShow(S, C, f),
       v = this.state.selectedIndex;
-    !T || C ? v = null : null != v && v >= g && (v = g - 1), T && !this.state.isVisible && (0, s.trackAutocompleteOpen)(c, this.props.channel, S), this.setState({
+    !T || C ? v = null : null != v && v >= S && (v = S - 1), T && !this.state.isVisible && (0, s.trackAutocompleteOpen)(c, this.props.channel, g), this.setState({
       query: {
         type: c,
         typeInfo: f,
         queryText: p,
         results: E,
-        resultCount: g,
+        resultCount: S,
         options: i,
         isLoading: C
       },

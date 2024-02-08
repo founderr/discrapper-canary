@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("599110"),
   h = n("256860"),
   E = n("364685"),
-  S = n("41170"),
-  g = n("281072"),
+  g = n("41170"),
+  S = n("281072"),
   C = n("560241"),
   T = n("49111"),
   v = n("646718"),
@@ -72,13 +72,13 @@ function y(e) {
         children: I.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
       }), (0, l.jsx)("div", {
         className: _.stickersRow,
-        children: x.filter(e => null != e).map(e => (0, l.jsx)(S.default, {
+        children: x.filter(e => null != e).map(e => (0, l.jsx)(g.default, {
           sticker: e,
           className: _.sticker,
           size: 80
         }, null == e ? void 0 : e.id))
       })]
-    }), !M && (0, l.jsx)(g.default, {
+    }), !M && (0, l.jsx)(S.default, {
       analyticsSection: T.AnalyticsSections.EXPRESSION_PICKER,
       buttonText: M ? L ? I.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : I.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
     })]

@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("552917"),
   h = n("843647"),
   E = n("154889"),
-  S = n("917247"),
-  g = n("956597"),
+  g = n("917247"),
+  S = n("956597"),
   C = n("635956"),
   T = n("599110"),
   v = n("402671"),
@@ -42,7 +42,7 @@ var l = n("37983"),
       analyticsLocation: D
     } = e, k = (0, u.default)(), [w, F] = i.useState(!1), G = () => {
       (0, _.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), L()
-    }, B = (0, r.isThemeLight)(k) ? n("602291") : n("609708"), H = (0, S.usePremiumTrialOffer)(), V = (0, E.usePremiumDiscountOffer)(), K = null != H || null != V, {
+    }, B = (0, r.isThemeLight)(k) ? n("602291") : n("609708"), H = (0, g.usePremiumTrialOffer)(), V = (0, E.usePremiumDiscountOffer)(), K = null != H || null != V, {
       isLoading: W,
       suggestedPremiumType: Y
     } = (0, h.default)({
@@ -79,7 +79,7 @@ var l = n("37983"),
         onClick: P,
         children: O.default.Messages.CLOSE
       }), W ? (0, l.jsx)(o.Spinner, {}) : (0, l.jsxs)(l.Fragment, {
-        children: [K ? (0, l.jsx)(g.default, {
+        children: [K ? (0, l.jsx)(S.default, {
           type: x.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
           subscriptionTier: null !== (M = null == H ? void 0 : null === (a = H.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== M ? M : x.PremiumSubscriptionSKUs.TIER_2,
           onClose: P,

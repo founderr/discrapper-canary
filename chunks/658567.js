@@ -35,9 +35,9 @@ var p = (e, t) => {
     application_id: E
   } = e;
   l = null != e.application_id ? i.default.getApplication(e.application_id) : i.default.getApplicationByName(e.name);
-  let S = r.default.getAnyStreamForUser(t.id),
-    g = null != S ? s.default.getPreviewURL(S.guildId, S.channelId, S.ownerId) : null,
-    C = null != S ? s.default.getIsPreviewLoading(S.guildId, S.channelId, S.ownerId) : null,
+  let g = r.default.getAnyStreamForUser(t.id),
+    S = null != g ? s.default.getPreviewURL(g.guildId, g.channelId, g.ownerId) : null,
+    C = null != g ? s.default.getIsPreviewLoading(g.guildId, g.channelId, g.ownerId) : null,
     T = (0, o.getAssetImage)(E, null == h ? void 0 : h.large_image, 64),
     v = null == l ? void 0 : l.getIconURL(64),
     I = [];
@@ -53,9 +53,9 @@ var p = (e, t) => {
   }), null != v && I.push({
     name: u.AssetTypes.ApplicationImage,
     url: v
-  }), null != g && !C && I.push({
+  }), null != S && !C && I.push({
     name: u.AssetTypes.StreamPreview,
-    url: g
+    url: S
   });
   let {
     loaded: _,
@@ -64,6 +64,6 @@ var p = (e, t) => {
   return {
     loaded: _,
     assetMap: y,
-    stream: S
+    stream: g
   }
 }

@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("419806"),
   h = n("373469"),
   E = n("42203"),
-  S = n("26989"),
-  g = n("957255"),
+  g = n("26989"),
+  S = n("957255"),
   C = n("102985"),
   T = n("987772"),
   v = n("164424"),
@@ -75,14 +75,14 @@ function q(e) {
     location: "user popout"
   }, {
     autoTrackExposure: ec
-  }), [ep, em] = i.useState(!1), [eh, eE] = i.useState(!1), eS = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(et)), eg = (0, r.useStateFromStores)([g.default], () => g.default.can(K.Permissions.USE_CLYDE_AI, eS)), {
+  }), [ep, em] = i.useState(!1), [eh, eE] = i.useState(!1), eg = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(et)), eS = (0, r.useStateFromStores)([S.default], () => S.default.can(K.Permissions.USE_CLYDE_AI, eg)), {
     profileTheme: eC
   } = (0, N.default)(Q, X), eT = i.useRef(null), [ev, eI] = i.useState(!0), e_ = i.useCallback(() => {
     let {
       current: e
     } = eT;
     null != e && eI(0 === e.getScrollerState().scrollTop)
-  }, []), ey = (0, d.canEditClydeAIProfile)($), eA = (0, c.canUseCustomClydeProfiles)($), eN = (0, r.useStateFromStores)([S.default], () => S.default.isMember(null == $ ? void 0 : $.id, Q.id));
+  }, []), ey = (0, d.canEditClydeAIProfile)($), eA = (0, c.canUseCustomClydeProfiles)($), eN = (0, r.useStateFromStores)([g.default], () => g.default.isMember(null == $ ? void 0 : $.id, Q.id));
   if (i.useLayoutEffect(() => {
       var e;
       let {
@@ -123,7 +123,7 @@ function q(e) {
         customStatusActivity: Z
       }), (0, l.jsx)(x.default, {
         className: Y.divider
-      }), Q.isClyde() && ey && null != $ ? !eN && eA ? eg && !eh ? (0, l.jsx)(o.Button, {
+      }), Q.isClyde() && ey && null != $ ? !eN && eA ? eS && !eh ? (0, l.jsx)(o.Button, {
         className: Y.editClydeButton,
         innerClassName: Y.editClydeButtonInner,
         submitting: ep,
@@ -196,10 +196,10 @@ function q(e) {
             guild: $,
             channelId: et,
             onClose: en
-          }), (null == eo ? void 0 : eo.popularApplicationCommandIds) != null && null != eS ? (0, l.jsx)(F.default, {
+          }), (null == eo ? void 0 : eo.popularApplicationCommandIds) != null && null != eg ? (0, l.jsx)(F.default, {
             applicationId: eo.id,
             commandIds: eo.popularApplicationCommandIds,
-            channel: eS,
+            channel: eg,
             guildId: null == $ ? void 0 : $.id,
             onClick: en
           }) : null, (0, l.jsx)(M.default, {

@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("659500"),
   h = n("791776"),
   E = n("82372"),
-  S = n("426969"),
-  g = n("105571"),
+  g = n("426969"),
+  S = n("105571"),
   C = n("634114"),
   T = n("49111"),
   v = n("13030"),
@@ -58,7 +58,7 @@ var l = n("37983"),
     }), [P, L, N, x]), (0, d.useFocusLock)(y), i.useEffect(() => {
       (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
     }, [R, O]);
-    let b = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentAppDetail());
+    let b = (0, o.useStateFromStores)([g.default], () => g.default.getCurrentAppDetail());
     return (0, l.jsx)(c.default, {
       section: T.AnalyticsSections.EXPRESSION_PICKER,
       children: (0, l.jsx)(p.AppReferencePositionLayer, {
@@ -87,7 +87,7 @@ var l = n("37983"),
                 children: [(0, l.jsx)(C.default, {
                   channel: n,
                   isAppDetailPresent: null != b
-                }), null != b ? (0, l.jsx)(g.default, {
+                }), null != b ? (0, l.jsx)(S.default, {
                   channel: n,
                   appDetail: b
                 }, b.id) : null]

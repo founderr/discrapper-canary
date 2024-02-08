@@ -23,8 +23,8 @@ function d(e) {
     hasSearchResults: m,
     defaultSearchPlaceholder: h,
     emptySearchPlaceholder: E,
-    renderEmptyState: S,
-    renderRow: g,
+    renderEmptyState: g,
+    renderRow: S,
     renderSection: C,
     renderSectionHeader: T,
     renderSectionFooter: v,
@@ -74,12 +74,12 @@ function d(e) {
     gridNavigatorId: b
   }), $ = i.useCallback(e => {
     let t = V[e];
-    return g(t, q(e), {
+    return S(t, q(e), {
       isUsingKeyboardNavigation: X.current,
       gutterWidth: z,
       rowIndex: e
     }, t => J(e, t), t => c.setInspectedExpressionPosition(t, e))
-  }, [V, J, q, z, X, g, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
+  }, [V, J, q, z, X, S, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
     var e;
     return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
   }, [V, B.columnIndex, B.rowIndex, I]);
@@ -105,7 +105,7 @@ function d(e) {
     children: [null != U ? U(ei) : (0, l.jsxs)("div", {
       className: u.header,
       children: [" ", ei, " "]
-    }), F && null != S ? S(u.emptyState) : (0, l.jsxs)(l.Fragment, {
+    }), F && null != g ? g(u.emptyState) : (0, l.jsxs)(l.Fragment, {
       children: [y(k), null != j && (0, l.jsx)("div", {
         className: u.gridNoticeWrapper,
         children: j

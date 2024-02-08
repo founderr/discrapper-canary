@@ -24,8 +24,8 @@ let o = e => {
     c(e, t, s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
   }, [c]), {
     gridDispatch: E,
-    getItemProps: S,
-    getRowProps: g,
+    getItemProps: g,
+    getRowProps: S,
     gridContainerProps: C,
     handleGridContainerKeyDown: T,
     isUsingKeyboardNavigation: v
@@ -50,8 +50,8 @@ let o = e => {
       y: n
     })
   }, e => e.inspectedExpressionPosition), [E, u]), {
-    getItemProps: S,
-    getRowProps: g,
+    getItemProps: g,
+    getRowProps: S,
     gridContainerProps: C,
     handleGridContainerKeyDown: T,
     isUsingKeyboardNavigation: v

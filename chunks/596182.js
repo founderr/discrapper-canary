@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 });
 var l = n("37983"),
@@ -64,7 +64,7 @@ function E(e) {
       variant: "heading-deprecated-12/semibold",
       children: p.default.Messages.COMMANDS_OPTIONAL_HEADER
     }), o.map(e => h(e, null == n ? void 0 : n[e.name], a))]
-  }) : null, S = d.length > 0 ? (0, l.jsx)(r.Tooltip, {
+  }) : null, g = d.length > 0 ? (0, l.jsx)(r.Tooltip, {
     text: c,
     "aria-label": !1,
     delay: 200,
@@ -80,22 +80,22 @@ function E(e) {
     })
   }) : null;
   return (0, l.jsxs)(l.Fragment, {
-    children: [f, null != E || null != S ? (0, l.jsxs)("div", {
+    children: [f, null != E || null != g ? (0, l.jsxs)("div", {
       className: m.optionals,
-      children: [E, S]
+      children: [E, g]
     }) : null]
   })
 }
 
-function S(e) {
+function g(e) {
   var t, n, a;
   let r, {
       command: u,
       activeOptionName: d,
       channel: p,
       showOptions: h,
-      showImage: S,
-      optionStates: g,
+      showImage: g,
+      optionStates: S,
       onOptionClick: C,
       section: T,
       isSelectable: v = !0
@@ -104,9 +104,9 @@ function S(e) {
       var e;
       return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find(e => e.name === d)
     }, [d, u]),
-    _ = null != d ? null == g ? void 0 : g[d] : null;
+    _ = null != d ? null == S ? void 0 : S[d] : null;
   r = null != _ && (null === (t = _.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? null !== (n = _.lastValidationResult.error) && void 0 !== n ? n : "" : null;
-  let y = S && null != T ? (0, c.getIconComponent)(T) : null;
+  let y = g && null != T ? (0, c.getIconComponent)(T) : null;
   return (0, l.jsxs)("div", {
     className: s(m.wrapper, v ? null : m.disabled),
     children: [null != y ? (0, l.jsx)(y, {
@@ -124,7 +124,7 @@ function S(e) {
           children: f.COMMAND_SENTINEL + u.displayName
         }), h ? (0, l.jsx)(E, {
           command: u,
-          optionStates: g,
+          optionStates: S,
           onOptionClick: C
         }) : null]
       }), (0, l.jsx)(o.AutocompleteRowSubheading, {

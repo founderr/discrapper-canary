@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("945330"),
   h = n("216422"),
   E = n("719923"),
-  S = n("788506"),
-  g = n("49111"),
+  g = n("788506"),
+  S = n("49111"),
   C = n("646718"),
   T = n("782340"),
   v = n("764942");
@@ -39,7 +39,7 @@ var y = e => {
   if (i.useEffect(() => {
       !N && (0, d.fetchSubscriptions)()
     }, [N]), null == A || !(0, E.isSubscriptionStatusFailedPayment)(A.status) || a) return null;
-  let x = A.status === g.SubscriptionStatusTypes.PAST_DUE ? (0, E.getBillingGracePeriodDays)(A) : C.MAX_ACCOUNT_HOLD_DAYS,
+  let x = A.status === S.SubscriptionStatusTypes.PAST_DUE ? (0, E.getBillingGracePeriodDays)(A) : C.MAX_ACCOUNT_HOLD_DAYS,
     O = s(A.currentPeriodStart).add(x, "days"),
     R = "".concat(A.id, ":").concat(O.toISOString());
   if (_ === R) return null;
@@ -60,7 +60,7 @@ var y = e => {
       }), (0, l.jsx)("div", {
         children: (0, l.jsx)(u.Anchor, {
           onClick: () => {
-            (0, S.trackPremiumSettingsPaneOpened)(n), t(), c.default.open(g.UserSettingsSections.PREMIUM)
+            (0, g.trackPremiumSettingsPaneOpened)(n), t(), c.default.open(S.UserSettingsSections.PREMIUM)
           },
           children: T.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
         })

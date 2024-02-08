@@ -24,8 +24,8 @@ var l = n("37983"),
   m = n("526887"),
   h = n("697218"),
   E = n("118849"),
-  S = n("671434"),
-  g = n("132755"),
+  g = n("671434"),
+  S = n("132755"),
   C = n("151185"),
   T = n("368121"),
   v = n("305122"),
@@ -145,7 +145,7 @@ var P = i.forwardRef(function(e, t) {
         emojiName: P.emojiName,
         soundName: P.name
       }),
-      children: er ? (0, l.jsx)(S.default, {
+      children: er ? (0, l.jsx)(g.default, {
         className: s(R.secondaryIcon, R.favoriteIconFavorite),
         color: d.default.unsafe_rawColors.GOLD.css
       }) : (0, l.jsx)(E.default, {
@@ -166,7 +166,7 @@ var P = i.forwardRef(function(e, t) {
         })
       }), (0, l.jsxs)("div", {
         className: R.buttonOverlayActions,
-        children: [ef && eh, !F && !ec && (0, l.jsx)(g.default, {
+        children: [ef && eh, !F && !ec && (0, l.jsx)(S.default, {
           className: R.playIcon
         }), ef && em()]
       })]

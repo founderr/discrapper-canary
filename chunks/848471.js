@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("265363"),
   h = n("140567"),
   E = n("983782"),
-  S = n("791776"),
-  g = n("83800"),
+  g = n("791776"),
+  S = n("83800"),
   C = n("916429"),
   T = n("939563"),
   v = n("385887"),
@@ -88,7 +88,7 @@ var A = i.forwardRef(function(e, t) {
     options: o
   } = e, d = i.useRef(null), [c, f] = i.useState(!1), p = i.useRef(), m = i.useContext(u.default), h = i.useCallback(() => {
     f(!1), clearTimeout(p.current)
-  }, []), g = i.useCallback(e => {
+  }, []), S = i.useCallback(e => {
     var t;
     let n = m.renderWindow,
       l = e.target instanceof n.Node && (null === (t = d.current) || void 0 === t ? void 0 : t.contains(e.target));
@@ -102,7 +102,7 @@ var A = i.forwardRef(function(e, t) {
         let l = e.target instanceof t.Node && (null === (n = d.current) || void 0 === n ? void 0 : n.contains(e.target));
         clearTimeout(p.current), p.current = setTimeout(() => {
           var t;
-          let n = null === (t = (0, S.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement,
+          let n = null === (t = (0, g.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement,
             i = s.current;
           f(l || null != n && null != i && i.contains(n))
         }, 100)
@@ -113,10 +113,10 @@ var A = i.forwardRef(function(e, t) {
     hide: h
   }), [h]), i.useEffect(() => {
     let e = m.renderWindow;
-    return e.document.addEventListener("keydown", h), e.document.addEventListener("mousedown", g), e.document.addEventListener("mouseup", C), e.addEventListener("focus", h), e.addEventListener("blur", h), () => {
-      e.document.removeEventListener("keydown", h), e.document.removeEventListener("mousedown", g), e.document.removeEventListener("mouseup", C), e.removeEventListener("focus", h), e.removeEventListener("blur", h), clearTimeout(p.current)
+    return e.document.addEventListener("keydown", h), e.document.addEventListener("mousedown", S), e.document.addEventListener("mouseup", C), e.addEventListener("focus", h), e.addEventListener("blur", h), () => {
+      e.document.removeEventListener("keydown", h), e.document.removeEventListener("mousedown", S), e.document.removeEventListener("mouseup", C), e.removeEventListener("focus", h), e.removeEventListener("blur", h), clearTimeout(p.current)
     }
-  }, [m, h, g, C]);
+  }, [m, h, S, C]);
   let {
     x: T,
     y: I
@@ -142,13 +142,13 @@ var A = i.forwardRef(function(e, t) {
       h = o.createRange();
     h.setStart(u.anchorNode, u.anchorOffset), h.setEnd(u.focusNode, u.focusOffset);
     let E = h.getBoundingClientRect(),
-      S = f.x === m.x,
-      g = S ? E.x : Math.min(f.x, m.x),
-      C = S ? E.x + E.width : Math.max(f.x, m.x),
+      g = f.x === m.x,
+      S = g ? E.x : Math.min(f.x, m.x),
+      C = g ? E.x + E.width : Math.max(f.x, m.x),
       T = null !== (l = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== l ? l : 0,
       I = Math.max(T, Math.min(m.y, f.y));
     return {
-      x: g + (C - g) / 2,
+      x: S + (C - S) / 2,
       y: I
     }
   }, [s, c, a]), [A, N] = i.useState(0), [x, R] = i.useState(0);
@@ -201,7 +201,7 @@ function N(e) {
     look: o.Button.Looks.FILLED,
     size: o.Button.Sizes.NONE,
     onClick: () => {
-      null != t && g.HistoryUtils.withSingleEntry(t, () => (0, C.toggleMarkdownStyle)(t, n))
+      null != t && S.HistoryUtils.withSingleEntry(t, () => (0, C.toggleMarkdownStyle)(t, n))
     },
     children: i
   })
@@ -221,7 +221,7 @@ function x(e) {
     look: o.Button.Looks.FILLED,
     size: o.Button.Sizes.NONE,
     onClick: () => {
-      null != n && g.HistoryUtils.withSingleEntry(n, () => (0, C.toggleBlockStyle)(n, t))
+      null != n && S.HistoryUtils.withSingleEntry(n, () => (0, C.toggleBlockStyle)(n, t))
     },
     children: i
   })
@@ -234,7 +234,7 @@ function O(e) {
   } = e, [l, a] = null !== (t = v.EditorUtils.getSelectedVoid(n)) && void 0 !== t ? t : [null, null], s = i.useCallback(e => {
     if ((null == n ? void 0 : n.selection) == null || null == a) return;
     let t = n.selection;
-    g.HistoryUtils.withSingleEntry(n, () => {
+    S.HistoryUtils.withSingleEntry(n, () => {
       T.SlateTransforms.voidToText(n, e, a), T.SlateTransforms.select(n, t)
     })
   }, [n, a]);

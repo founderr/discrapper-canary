@@ -18,8 +18,8 @@ var l = n("77078"),
   m = n("447435"),
   h = n("600798"),
   E = n("692038"),
-  S = n("815297"),
-  g = n("168730"),
+  g = n("815297"),
+  S = n("168730"),
   C = n("562228"),
   T = n("529805"),
   v = n("685841"),
@@ -55,8 +55,8 @@ async function R(e) {
   null != k && (D.type = x.MessageTypes.REPLY, D.message_reference = P.messageReference, D.allowed_mentions = P.allowedMentions, (0, T.deletePendingReply)(f));
   let [w, F] = (0, I.default)(D.content);
   w && (D.content = F, D.flags = (0, A.addFlag)(null !== (t = D.flags) && void 0 !== t ? t : 0, x.MessageFlags.SUPPRESS_NOTIFICATIONS));
-  let G = null !== (n = P.nonce) && void 0 !== n ? n : (0, S.createNonce)(),
-    B = (0, S.default)({
+  let G = null !== (n = P.nonce) && void 0 !== n ? n : (0, g.createNonce)(),
+    B = (0, g.default)({
       channelId: f,
       content: D.content,
       tts: null !== (l = null == L ? void 0 : L.tts) && void 0 !== l && l,
@@ -89,7 +89,7 @@ async function R(e) {
         channelId: f,
         file: e,
         messageRecord: c
-      }), (0, g.logMessageSendFailure)({
+      }), (0, S.logMessageSendFailure)({
         fileItems: e.items,
         failureCode: t,
         errorMessage: null == l ? void 0 : l.msg
@@ -200,7 +200,7 @@ var M = {
           type: "UPLOAD_FAIL",
           channelId: n,
           file: t
-        }), (0, g.logMessageSendFailure)({
+        }), (0, S.logMessageSendFailure)({
           fileItems: t.items,
           failureCode: c
         }), c === x.AbortCodes.EXPLICIT_CONTENT) {

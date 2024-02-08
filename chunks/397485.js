@@ -1,7 +1,7 @@
 "use strict";
 t.r(x), t.d(x, {
   CUSTOM_CALL_SOUND_ANIMATION_RANGE: function() {
-    return F
+    return L
   },
   AnimationTypeToAnimations: function() {
     return U
@@ -16,7 +16,7 @@ t.r(x), t.d(x, {
     return V
   },
   getEffectAnnouncement: function() {
-    return j
+    return Y
   }
 });
 var s = t("917351"),
@@ -50,17 +50,17 @@ var s = t("917351"),
   M = t("402671"),
   S = t("626334"),
   C = t("782340");
-let F = {
+let L = {
     start: 10,
     end: 15
   },
-  L = {
+  F = {
     BASIC: [o],
     PREMIUM: [y, k, d, r, p, e, n, m, c, l, f, _, h, u, I, b, w, E, g, A, R]
   },
   U = {
-    [S.VoiceChannelEffectAnimationType.BASIC]: L.BASIC,
-    [S.VoiceChannelEffectAnimationType.PREMIUM]: L.PREMIUM
+    [S.VoiceChannelEffectAnimationType.BASIC]: F.BASIC,
+    [S.VoiceChannelEffectAnimationType.PREMIUM]: F.PREMIUM
   },
   B = a.memoize(i => new Promise(x => {
     let t = new Image;
@@ -98,18 +98,18 @@ function V(i) {
   return null != a ? M.default.getURL(a.surrogates) : ""
 }
 
-function Y(i, x) {
+function P(i, x) {
   return a(i).map(i => {
     var t;
     return null !== (t = i[x]) && void 0 !== t ? t : null
   }).filter(i => null != i).uniq().value()
 }
 
-function j(i) {
+function Y(i) {
   var x, t, s, a, o, y;
   if (i.length < 1) return "";
-  let k = Y(i, "userId"),
-    d = Y(i, "emojiName"),
+  let k = P(i, "userId"),
+    d = P(i, "emojiName"),
     r = d.length < 2 ? null !== (x = null == d ? void 0 : d[0]) && void 0 !== x ? x : "" : d.join(", ");
   if (k.length < 1) return "";
   if (1 === k.length) return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({

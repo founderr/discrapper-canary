@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("986632"),
   h = n("538282"),
   E = n("522096"),
-  S = n("845579"),
-  g = n("697218"),
+  g = n("845579"),
+  S = n("697218"),
   C = n("800762"),
   T = n("476765"),
   v = n("461380"),
@@ -182,14 +182,14 @@ function W(e) {
     defaultSoundsOnly: P = !1
   } = e, {
     analyticsLocations: b
-  } = (0, f.default)(), [W, Y] = i.useState(null), z = (0, r.useStateFromStores)([g.default], () => g.default.getCurrentUser()), J = (0, r.useStateFromStores)([C.default], () => {
+  } = (0, f.default)(), [W, Y] = i.useState(null), z = (0, r.useStateFromStores)([S.default], () => S.default.getCurrentUser()), J = (0, r.useStateFromStores)([C.default], () => {
     var e;
     return C.default.getVoiceState(t, null !== (e = null == z ? void 0 : z.id) && void 0 !== e ? e : "")
   }), q = (null == J ? void 0 : J.selfDeaf) || (null == J ? void 0 : J.mute) || (null == J ? void 0 : J.suppress), Z = (0, h.useExpressionPickerStore)(e => e.searchQuery), Q = (0, T.useUID)(), {
     categories: X
-  } = (0, L.default)(a, void 0, P), [$, ee] = i.useState([]), et = (0, L.useSearchCategories)(X, $, Z), en = S.SoundboardPickerCollapsedSections.useSetting(), el = i.useMemo(() => new Set(en), [en]), ei = null == a, ea = x.default.canUseCustomCallSounds(z), es = i.useCallback(e => {
+  } = (0, L.default)(a, void 0, P), [$, ee] = i.useState([]), et = (0, L.useSearchCategories)(X, $, Z), en = g.SoundboardPickerCollapsedSections.useSetting(), el = i.useMemo(() => new Set(en), [en]), ei = null == a, ea = x.default.canUseCustomCallSounds(z), es = i.useCallback(e => {
     let t = !el.has(e);
-    t ? el.add(e) : el.delete(e), S.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
+    t ? el.add(e) : el.delete(e), g.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
   }, [el]), er = i.useCallback((e, t) => {
     if (!p && (0, R.canUseSoundboardSound)(z, e, a, !1)) {
       var n;

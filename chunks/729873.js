@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("305961"),
   h = n("471671"),
   E = n("351825"),
-  S = n("315102"),
-  g = n("788506"),
+  g = n("315102"),
+  S = n("788506"),
   C = n("352046"),
   T = n("917764"),
   v = n("83017"),
@@ -65,7 +65,7 @@ let N = e => {
       j = (0, a.useStateFromStores)([h.default], () => h.default.isFocused()),
       U = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion, []),
       D = p.AnimateEmoji.useSetting(),
-      k = (0, g.useIsFavoriteEmoji)(x, A(P) ? P : null),
+      k = (0, S.useIsFavoriteEmoji)(x, A(P) ? P : null),
       {
         newlyAddedEmojis: w
       } = (0, C.default)(x, O),
@@ -75,7 +75,7 @@ let N = e => {
         let e = Date.now();
         return () => {
           let t = Date.now() - e;
-          t >= 250 && A(P) && G !== I.EmojiSubCategory.NONE && (G === I.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== P && P.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(P.guildId, w[0].id), null != M.source && (0, g.trackEmojiFocus)({
+          t >= 250 && A(P) && G !== I.EmojiSubCategory.NONE && (G === I.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== P && P.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(P.guildId, w[0].id), null != M.source && (0, S.trackEmojiFocus)({
             emoji: P,
             subCategory: G,
             position: L.columnIndex + 1,
@@ -85,7 +85,7 @@ let N = e => {
       }), null == P) return null;
     if (A(P)) {
       var B;
-      let e = null != P.id ? S.default.getEmojiURL({
+      let e = null != P.id ? g.default.getEmojiURL({
         id: P.id,
         animated: D && P.animated,
         size: 28

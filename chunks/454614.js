@@ -17,8 +17,8 @@ function c(e, t, n, c) {
   var f, p, m;
   let h = l.default.getChannel(s.default.getVoiceChannelId()),
     E = null == h ? void 0 : h.getGuildId(),
-    S = i.default.getMediaSessionId(),
-    g = i.default.getRTCConnectionId(),
+    g = i.default.getMediaSessionId(),
+    S = i.default.getRTCConnectionId(),
     C = null === (f = a.default.getCurrentGameForAnalytics()) || void 0 === f ? void 0 : f.name,
     T = E !== n.guildId && n.guildId !== o.DEFAULT_SOUND_GUILD_ID;
   let v = (p = n, m = T, p.guildId === o.DEFAULT_SOUND_GUILD_ID ? "default" : m ? "custom-external" : "custom");
@@ -27,8 +27,8 @@ function c(e, t, n, c) {
     feature_tier: T ? d.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD : d.AnalyticsPremiumFeatureTiers.FREE,
     guild_id: E,
     location_stack: e,
-    rtc_connection_id: g,
-    media_session_id: S,
+    rtc_connection_id: S,
+    media_session_id: g,
     in_overlay: t,
     application_name: C,
     emoji_count: null != n.emojiId || null != n.emojiName ? 1 : 0,

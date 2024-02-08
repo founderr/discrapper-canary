@@ -25,7 +25,7 @@ var l = n("37983"),
       analyticsLocations: i
     } = (0, r.default)(s.default.GIFT_BUTTON), E = (0, c.useDirectMessageRecipient)(n);
     if (t) return null;
-    let S = () => (0, o.default)({
+    let g = () => (0, o.default)({
       isGift: !0,
       giftRecipient: null === E ? void 0 : E,
       initialPlanId: null,
@@ -46,7 +46,7 @@ var l = n("37983"),
         isActive: !1,
         "aria-label": m.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
         "aria-haspopup": "dialog",
-        onClick: S,
+        onClick: g,
         children: (0, l.jsx)(d.default, {})
       })
     })
