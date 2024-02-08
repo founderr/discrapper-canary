@@ -5,7 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var l, i = n("335609"),
-  a = n("695412");
+  a = n("113149"),
+  s = n("695412");
 l = class extends i.default {
   getCanvasForExport() {
     return this.canvas
@@ -54,20 +55,29 @@ l = class extends i.default {
     this.setContextProperties(), this.context.beginPath(), this.context.roundRect(l, i, a, s, t), n ? this.context.fill() : this.context.stroke()
   }
   drawText(e, t, n) {
-    null != this.context && (this.setContextProperties(), n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y))
+    if (null == this.context) return;
+    this.setContextProperties();
+    let l = this.canvas.width,
+      i = this.context.measureText(e),
+      s = !1;
+    if (this.font.truncate) {
+      for (; i.width + t.x + a.TEXT_TRUNCATION_PADDING_PX > l;) e = e.slice(0, -4), i = this.context.measureText(e), s = !0;
+      s && (e += "...")
+    }
+    n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y)
   }
   drawImage(e, t, n) {
-    if (null == this.context) return a.DrawResultStatus.Failure;
+    if (null == this.context) return s.DrawResultStatus.Failure;
     let l = this.getLoadedImage(e);
-    return null == l ? a.DrawResultStatus.ImageNotLoaded : (null != n ? this.context.drawImage(l, t.x, t.y, n.w, n.h) : this.context.drawImage(l, t.x, t.y), a.DrawResultStatus.Success)
+    return null == l ? s.DrawResultStatus.ImageNotLoaded : (null != n ? this.context.drawImage(l, t.x, t.y, n.w, n.h) : this.context.drawImage(l, t.x, t.y), s.DrawResultStatus.Success)
   }
   drawCroppedImage(e, t, n) {
-    if (null == this.context) return a.DrawResultStatus.Failure;
+    if (null == this.context) return s.DrawResultStatus.Failure;
     let l = this.getLoadedImage(e);
-    if (null == l) return a.DrawResultStatus.ImageNotLoaded;
+    if (null == l) return s.DrawResultStatus.ImageNotLoaded;
     let {
       x: i,
-      y: s,
+      y: a,
       w: r,
       h: o
     } = t, {
@@ -76,7 +86,7 @@ l = class extends i.default {
       w: c,
       h: f
     } = n;
-    return this.context.drawImage(l, i, s, r, o, u, d, c, f), a.DrawResultStatus.Success
+    return this.context.drawImage(l, i, a, r, o, u, d, c, f), s.DrawResultStatus.Success
   }
   constructor(e, t) {
     super(e, t), this.canvas = e, this.context = this.canvas.getContext("2d")
