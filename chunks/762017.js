@@ -129,7 +129,7 @@ let o = {
     inlineRequire: () => E("589636").default
   },
   HangStatusManager: {
-    actions: ["VOICE_CHANNEL_SELECT", "LOGOUT"],
+    actions: ["VOICE_CHANNEL_SELECT", "LOGOUT", "GUILD_MEMBER_UPDATE"],
     inlineRequire: () => E("360557").default,
     hasStoreChangeListeners: !0
   },
