@@ -48,19 +48,21 @@ function _(e) {
       let {
         closePopout: t
       } = e;
-      return (0, s.jsx)(l.default, {
-        analyticsOverride: f,
-        closePopout: t,
-        onSelectEmoji: E,
-        wrapper: "div",
-        pickerIntention: m,
-        renderHeader: _,
-        headerClassName: d.emojiHeader,
-        className: d.emojiList,
-        listHeaderClassName: d.emojiList,
-        searchProps: {
-          accessory: (0, s.jsx)(s.Fragment, {})
-        }
+      return (0, s.jsx)(a.Dialog, {
+        children: (0, s.jsx)(l.default, {
+          analyticsOverride: f,
+          closePopout: t,
+          onSelectEmoji: E,
+          wrapper: "div",
+          pickerIntention: m,
+          renderHeader: _,
+          headerClassName: d.emojiHeader,
+          className: d.emojiList,
+          listHeaderClassName: d.emojiList,
+          searchProps: {
+            accessory: (0, s.jsx)(s.Fragment, {})
+          }
+        })
       })
     },
     children: () => (0, s.jsx)("div", {
