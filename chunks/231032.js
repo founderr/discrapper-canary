@@ -15,8 +15,8 @@ var t = E("37983"),
   T = E("446674"),
   S = E("151426"),
   N = E("143435"),
-  A = E("77078"),
-  O = E("913144"),
+  O = E("77078"),
+  A = E("913144"),
   R = E("916580"),
   l = E("988738"),
   u = E("521735"),
@@ -96,30 +96,30 @@ var eo = function(e) {
   let [eT, eS] = (0, y.useSelectedDismissibleContent)(es, ee.DismissibleContentGroupName.SIDEBAR, !0);
   es.push(S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
   let eN = eT === S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-    eA = eT === S.DismissibleContent.CLIENT_THEMES_COACHMARK;
+    eO = eT === S.DismissibleContent.CLIENT_THEMES_COACHMARK;
   o.useEffect(() => {
     let e = (0, i.matchPath)(n, {
       path: "invite",
       exact: !1,
       strict: !1
     });
-    null == e && eN && !eA && (O.default.dispatch({
+    null == e && eN && !eO && (A.default.dispatch({
       type: "APP_ICON_EDITOR_OPEN"
-    }), O.default.dispatch({
+    }), A.default.dispatch({
       type: "APP_ICON_TRACK_IMPRESSION",
       markAsDismissed: eS
     }))
-  }, [eN, eA, eS, n]);
-  let eO = o.useRef(document.body);
+  }, [eN, eO, eS, n]);
+  let eA = o.useRef(document.body);
   return (0, t.jsx)(H.default, {
     children: (0, t.jsx)(c.default, {
-      children: (0, t.jsxs)(A.RedesignIconContextProvider, {
+      children: (0, t.jsxs)(O.RedesignIconContextProvider, {
         children: [(0, t.jsx)(q.default, {
           skipsSettingDefaultPageTitle: E
         }), (0, t.jsx)(z.default, {
           children: (0, t.jsx)(J.default, {
-            children: (0, t.jsxs)(A.FocusRingScope, {
-              containerRef: eO,
+            children: (0, t.jsxs)(O.FocusRingScope, {
+              containerRef: eA,
               children: [(0, t.jsx)(x.MaskLibrary, {}), (0, t.jsx)(Y.default, {}), (0, t.jsx)(a.FocusGuard, {}), null != N ? (0, t.jsx)(et, {
                 type: N,
                 themeOverride: F
@@ -148,13 +148,13 @@ var eo = function(e) {
                             children: [(0, t.jsx)("div", {
                               className: r(L ? e_.mobileApp : e_.app),
                               children: _
-                            }), (0, t.jsx)(P.default, {}), (0, t.jsx)(l.default, {}), (0, t.jsx)(A.Modals, {}), (0, t.jsx)(u.default, {}), (0, t.jsx)(W.FullScreenLayers, {}), (0, t.jsx)(k.AppLayerContainer, {}), (0, t.jsx)(K.VerificationLayerContainer, {}), (0, t.jsx)(A.ToastContainer, {}), (0, t.jsx)(U.default, {}), (0, t.jsx)(B.default, {}), (0, t.jsx)(eE, {})]
+                            }), (0, t.jsx)(P.default, {}), (0, t.jsx)(l.default, {}), (0, t.jsx)(O.Modals, {}), (0, t.jsx)(u.default, {}), (0, t.jsx)(W.FullScreenLayers, {}), (0, t.jsx)(k.AppLayerContainer, {}), (0, t.jsx)(K.VerificationLayerContainer, {}), (0, t.jsx)(O.ToastContainer, {}), (0, t.jsx)(U.default, {}), (0, t.jsx)(B.default, {}), (0, t.jsx)(eE, {})]
                           })
                         })
                       })
-                    }), (0, t.jsx)(R.default, {}), eI && !eo || eA ? (0, t.jsx)(G.default, {
+                    }), (0, t.jsx)(R.default, {}), eI && !eo || eO ? (0, t.jsx)(G.default, {
                       markAsDismissed: eS
-                    }) : null, !en || ea || eA ? null : (0, t.jsx)(h.default, {
+                    }) : null, !en || ea || eO ? null : (0, t.jsx)(h.default, {
                       isCoachmark: eN,
                       markAsDismissed: eS
                     }), (0, t.jsx)(g.default, {

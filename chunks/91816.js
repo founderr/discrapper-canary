@@ -36,16 +36,16 @@ function N(e) {
     guild: t,
     role: S,
     selectedSection: N,
-    setSelectedSection: f
-  } = e, g = n.useCallback(e => {
-    f(e)
-  }, [f]), A = (0, l.useStateFromStores)([c.default], () => {
+    setSelectedSection: g
+  } = e, f = n.useCallback(e => {
+    g(e)
+  }, [g]), A = (0, l.useStateFromStores)([c.default], () => {
     var e;
     return null === (e = c.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[S.id]
   }, [S.id, t.id]), L = t.id === S.id, m = (0, E.default)(S);
   n.useEffect(() => {
-    L && f(_.GuildSettingsRoleEditSections.PERMISSIONS)
-  }, [L, f]);
+    L && g(_.GuildSettingsRoleEditSections.PERMISSIONS)
+  }, [L, g]);
   let C = (0, o.useHasGuildRoleItems)(t, S);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -83,7 +83,7 @@ function N(e) {
       selectedItem: N,
       type: "top",
       look: "brand",
-      onItemSelect: g,
+      onItemSelect: f,
       children: [(0, a.jsx)(i.TabBar.Item, {
         className: I.tabBarItem,
         id: _.GuildSettingsRoleEditSections.DISPLAY,

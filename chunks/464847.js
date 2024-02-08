@@ -51,15 +51,15 @@ function N(e) {
   } = e, {
     patterns: E,
     valueError: N,
-    errors: f,
-    validatePatternsChanged: g,
+    errors: g,
+    validatePatternsChanged: f,
     validateEditingValueChanged: A
   } = (0, u.default)(l, r), [L] = n.useState(() => ({
     tags: E,
     value: "",
     selections: [],
     isSelecting: !1
-  })), m = n.useMemo(() => f.reduce((e, t) => {
+  })), m = n.useMemo(() => g.reduce((e, t) => {
     let {
       pattern: s,
       message: a,
@@ -73,9 +73,9 @@ function N(e) {
       erroringCharacterLength: l,
       erroringCharacterOffset: i
     }, e)
-  }, {}), [f, E]), C = n.useCallback(e => {
-    g(e, E)
-  }, [g, E]), O = n.useCallback(e => {
+  }, {}), [g, E]), C = n.useCallback(e => {
+    f(e, E)
+  }, [f, E]), O = n.useCallback(e => {
     A(e)
   }, [A]);
   return (0, a.jsxs)("div", {
@@ -91,8 +91,8 @@ function N(e) {
       text: _.default.Messages.GUILD_AUTOMOD_REGEX_SUBTEXT.format({
         helpArticle: I
       }),
-      hasErrors: f.length > 0 || null != N,
-      errorText: null !== (s = null === (t = f.find(e => {
+      hasErrors: g.length > 0 || null != N,
+      errorText: null !== (s = null === (t = g.find(e => {
         let {
           pattern: t
         } = e;

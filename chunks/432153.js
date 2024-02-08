@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useChannelWithTemplateFallback: function() {
-    return _
+    return g
   },
   useSuggestedUnusedPrices: function() {
     return p
@@ -36,9 +36,9 @@ var i = n("642852"),
   E = n("49111"),
   h = n("724210");
 r.shim();
-let g = {};
+let _ = {};
 
-function _(e) {
+function g(e) {
   let t = (0, l.default)([o.default], () => o.default.getChannel(e)),
     n = (0, l.default)([S.default], () => S.default.getChannel(e));
   return null != t ? t : n
@@ -90,7 +90,7 @@ function C(e) {
 
 function I(e) {
   let t = C(e);
-  g[e] = t, t.forEach(e => {
+  _[e] = t, t.forEach(e => {
     let t = e.set("flags", h.ChannelFlags.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
     s.default.dispatch({
       type: "CHANNEL_CREATE",
@@ -101,7 +101,7 @@ function I(e) {
 
 function m(e) {
   var t;
-  let n = null !== (t = g[e]) && void 0 !== t ? t : C(e);
+  let n = null !== (t = _[e]) && void 0 !== t ? t : C(e);
   n.forEach(e => {
     s.default.dispatch({
       type: "CHANNEL_DELETE",

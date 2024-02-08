@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("423487"),
   S = s("701909"),
   N = s("36402"),
-  f = s("766419"),
-  g = s("531493"),
+  g = s("766419"),
+  f = s("531493"),
   A = s("50693"),
   L = s("609542"),
   m = s("91816"),
@@ -83,9 +83,9 @@ function U(e) {
   } = (0, m.useScrolledToTop)(), j = (0, d.useStateFromStores)([N.default], () => {
     var e;
     return null === (e = N.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[s.id]
-  }, [s.id, t.id]), y = (0, d.useStateFromStoresArray)([g.default], () => {
+  }, [s.id, t.id]), y = (0, d.useStateFromStoresArray)([f.default], () => {
     var e;
-    return null !== (e = g.default.getEditedRoleConnectionConfigurationsMap().get(s.id)) && void 0 !== e ? e : []
+    return null !== (e = f.default.getEditedRoleConnectionConfigurationsMap().get(s.id)) && void 0 !== e ? e : []
   }), b = y.length > 1 ? E.ConnectionConfigurationRuleOperator.OR : E.ConnectionConfigurationRuleOperator.AND, B = n.useMemo(() => b === E.ConnectionConfigurationRuleOperator.OR ? y.flat() : null != y && y.length > 0 ? y[0] : [], [b, y]), F = n.useMemo(() => new Set(B.map(e => e.connectionType)), [B]);
 
   function H(e) {
@@ -97,7 +97,7 @@ function U(e) {
       applicationId: t,
       operator: void 0,
       value: void 0
-    }), (0, f.updateRoleConnectionConfigurations)(s.id, x(a, b))
+    }), (0, g.updateRoleConnectionConfigurations)(s.id, x(a, b))
   }
 
   function V() {
@@ -129,7 +129,7 @@ function U(e) {
         children: [(0, a.jsx)(T.default, {}), R.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION]
       })
     })), w = (0, a.jsxs)(a.Fragment, {
-      children: [(k = () => (0, f.updateRoleConnectionConfigurations)(s.id, []), Y = l, (0, a.jsxs)(a.Fragment, {
+      children: [(k = () => (0, g.updateRoleConnectionConfigurations)(s.id, []), Y = l, (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)("div", {
           className: D.headerTitleContainer,
           children: [(0, a.jsx)("div", {
@@ -172,7 +172,7 @@ function U(e) {
             "aria-labelledby": G
           })
         })
-      }(l, s.id, b, B, (e, t) => (0, f.updateRoleConnectionConfigurations)(s.id, x(e, t))), function(e, t, s, n, l) {
+      }(l, s.id, b, B, (e, t) => (0, g.updateRoleConnectionConfigurations)(s.id, x(e, t))), function(e, t, s, n, l) {
         function i(s, a) {
           let n = [];
           for (let t of e) n.push({
@@ -225,7 +225,7 @@ function U(e) {
             integrations: l
           }, e[0].configuration.connectionType + ":" + e[0].index))
         })
-      }(B, e => (0, f.updateRoleConnectionConfigurations)(s.id, x(e, b)), l, s.id, o), e]
+      }(B, e => (0, g.updateRoleConnectionConfigurations)(s.id, x(e, b)), l, s.id, o), e]
     })
   }
   return (0, a.jsx)(u.AdvancedScrollerAuto, {

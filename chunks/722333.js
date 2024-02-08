@@ -50,11 +50,11 @@ let S = {
     }
   };
 
-function A(e) {
+function O(e) {
   return I.default.hasHotspot(e.hotspot)
 }
 
-function O(e) {
+function A(e) {
   return Math.random() < e.chance
 }
 
@@ -72,7 +72,7 @@ t = class extends a.default {
       if (__OVERLAY__) return !1;
       let E = N[e],
         t = null !== (_ = E.eligibilityChecks) && void 0 !== _ ? _ : [];
-      return [R, O, A].every(e => e(E)) && t.every(e => e(E))
+      return [R, A, O].every(e => e(E)) && t.every(e => e(E))
     })(e) && (null == this.feedbackTypeToShow || !(T.FeedbackTypePrecedence[this.feedbackTypeToShow] < T.FeedbackTypePrecedence[e])) && (this.feedbackTypeToShow = e, this.showFeedbackModalDebounced(_))
   }
   constructor(...e) {

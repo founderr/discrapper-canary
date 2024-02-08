@@ -21,8 +21,8 @@ var r = n("414456"),
   S = n("592407"),
   E = n("393414"),
   h = n("18494"),
-  g = n("162771"),
-  _ = n("246053"),
+  _ = n("162771"),
+  g = n("246053"),
   p = n("461380"),
   C = n("423487"),
   I = n("489622"),
@@ -32,9 +32,9 @@ var r = n("414456"),
   R = n("593916"),
   N = n("49111"),
   M = n("724210"),
-  A = n("307785"),
-  L = n("677795"),
-  O = n("782340"),
+  O = n("307785"),
+  A = n("677795"),
+  L = n("782340"),
   b = n("494449");
 
 function x(e) {
@@ -60,12 +60,12 @@ function P(e) {
   } = e;
   return (0, i.jsx)(x, {
     onClick: t,
-    children: O.default.Messages.DISABLE
+    children: L.default.Messages.DISABLE
   })
 }
 
 function w() {
-  let e = (0, s.useStateFromStores)([g.default], () => g.default.getGuildId()),
+  let e = (0, s.useStateFromStores)([_.default], () => _.default.getGuildId()),
     t = (0, s.useStateFromStores)([h.default], () => h.default.getChannelId(e)),
     {
       viewingRoles: n,
@@ -82,16 +82,16 @@ function w() {
   let w = function(e) {
       switch (e) {
         case N.GuildSettingsSections.INTEGRATIONS:
-          return O.default.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
+          return L.default.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
         case N.GuildSettingsSections.ROLE_SUBSCRIPTIONS:
-          return O.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
+          return L.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
         case N.GuildSettingsSections.ONBOARDING:
-          return O.default.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
+          return L.default.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
         default:
-          return O.default.Messages.VIEWING_AS_ROLES_BACK
+          return L.default.Messages.VIEWING_AS_ROLES_BACK
       }
     }(r),
-    G = r === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? O.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : O.default.Messages.VIEWING_AS_ROLES_SELECT,
+    G = r === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? L.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : L.default.Messages.VIEWING_AS_ROLES_SELECT,
     D = t === M.StaticChannelRoute.GUILD_ONBOARDING,
     U = t => {
       let {
@@ -107,25 +107,25 @@ function w() {
         backToSettings: !0
       }),
       className: b.backButton,
-      children: [(0, i.jsx)(_.default, {
+      children: [(0, i.jsx)(g.default, {
         width: 16,
         height: 16,
-        direction: _.default.Directions.LEFT,
+        direction: g.default.Directions.LEFT,
         className: b.backArrow
       }), w]
     }), D && l ? (0, i.jsx)("div", {
       className: b.noticeContents,
       children: (0, i.jsx)("div", {
         className: b.noticeText,
-        children: O.default.Messages.VIEW_AS_MEMBER_DESCRIPTION
+        children: L.default.Messages.VIEW_AS_MEMBER_DESCRIPTION
       })
     }) : (0, i.jsxs)("div", {
       className: b.noticeContents,
       children: [(0, i.jsx)("div", {
         className: b.noticeText,
-        children: l ? O.default.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
+        children: l ? L.default.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({
           numRoles: Object.keys(n).length
-        }) : O.default.Messages.VIEWING_AS_ROLES.format({
+        }) : L.default.Messages.VIEWING_AS_ROLES.format({
           numRoles: Object.keys(n).length
         })
       }), (0, i.jsx)(o.Popout, {
@@ -149,7 +149,7 @@ function w() {
         }
       }), l && (0, i.jsx)(o.TooltipContainer, {
         className: b.previewWarning,
-        text: O.default.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
+        text: L.default.Messages.VIEW_AS_MEMBER_ROLES_WARNING,
         children: (0, i.jsx)(C.default, {
           width: 16,
           height: 16,
@@ -157,9 +157,9 @@ function w() {
         })
       }), m && (0, i.jsx)(o.TooltipContainer, {
         className: b.previewWarning,
-        text: O.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
-          maxTiers: L.MAX_SUBSCRIPTION_TIERS,
-          maxProducts: A.MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS
+        text: L.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
+          maxTiers: A.MAX_SUBSCRIPTION_TIERS,
+          maxProducts: O.MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS
         }),
         children: (0, i.jsx)(C.default, {
           width: 16,

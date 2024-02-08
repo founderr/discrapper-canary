@@ -25,8 +25,8 @@ var n = s("414456"),
       onDrop: I,
       onEdit: S,
       onRemove: N,
-      title: f
-    } = e, g = s.values, A = g.slice(0, 1), L = g.length - A.length;
+      title: g
+    } = e, f = s.values, A = f.slice(0, 1), L = f.length - A.length;
     return (0, a.jsxs)(u.default, {
       field: s,
       index: n,
@@ -35,7 +35,7 @@ var n = s("414456"),
       onDrop: I,
       onEdit: S,
       onRemove: N,
-      title: f,
+      title: g,
       children: [(0, a.jsx)(d.TermsFieldBody, {
         className: l(E.fieldBackground, {
           [E.withFooter]: 0 !== L

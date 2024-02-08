@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return h
   },
   shouldShowRaidNotificationNagbar: function() {
-    return g
+    return _
   }
 }), n("222007");
 var i = n("316693"),
@@ -37,7 +37,7 @@ function h(e) {
   }
 }
 
-function g() {
+function _() {
   var e;
   let t = o.default.getGuildId(),
     n = function(e) {
@@ -62,9 +62,9 @@ function g() {
     } = (0, c.getGuildAlertModeEnabled)(null != n ? n : "0"),
     u = null !== (e = l.default.getGuildsProto()) && void 0 !== e ? e : {},
     h = null != n ? u[n] : null,
-    g = null != h && h.disableRaidAlertNag;
+    _ = null != h && h.disableRaidAlertNag;
   return {
-    show: null != n && r && !g,
+    show: null != n && r && !_,
     guildId: n
   }
 }

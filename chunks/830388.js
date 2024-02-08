@@ -21,7 +21,7 @@ var n = s("414456"),
   S = s("782340"),
   N = s("702864");
 
-function f(e) {
+function g(e) {
   let {
     subscribers: t
   } = e;
@@ -47,7 +47,7 @@ function f(e) {
   })
 }
 
-function g(e) {
+function f(e) {
   let {
     guildName: t,
     guildIcon: s,
@@ -70,7 +70,7 @@ function g(e) {
         variant: "heading-lg/semibold",
         color: "header-primary",
         children: t
-      }), null != l && (0, a.jsx)(f, {
+      }), null != l && (0, a.jsx)(g, {
         subscribers: l
       })]
     })]
@@ -178,12 +178,12 @@ function m(e) {
     guildAvatarUrl: T,
     subscriberCount: I,
     emojisToShow: S,
-    notShownEmojiCount: f,
+    notShownEmojiCount: g,
     storePageUrl: m
   } = o.details;
   return (0, a.jsxs)("div", {
     className: N.guildCard,
-    children: [(0, a.jsx)(g, {
+    children: [(0, a.jsx)(f, {
       guildIcon: c,
       guildName: E,
       guildAvatarUrl: T,
@@ -194,7 +194,7 @@ function m(e) {
       quoteAttributionTitle: r
     }), (0, a.jsx)(L, {
       emojisToShow: S,
-      notShownEmojiCount: f,
+      notShownEmojiCount: g,
       storePageUrl: m
     })]
   })

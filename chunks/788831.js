@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("45299"),
   S = s("734575"),
   N = s("841098"),
-  f = s("812204"),
-  g = s("716241"),
+  g = s("812204"),
+  f = s("716241"),
   A = s("685665"),
   L = s("320954"),
   m = s("679653"),
@@ -77,10 +77,10 @@ let eu = "NO_AFK_CHANNEL",
   eS = "".concat(3600);
 
 function eN(e) {
-  return ef(e[0])
+  return eg(e[0])
 }
 
-function ef(e) {
+function eg(e) {
   if (null == e) return;
   let {
     label: t,
@@ -94,7 +94,7 @@ function ef(e) {
   })
 }
 
-function eg(e) {
+function ef(e) {
   return {
     value: e.id,
     label: (0, m.computeChannelName)(e, k.default, w.default),
@@ -321,7 +321,7 @@ class eL extends n.PureComponent {
       let {
         channel: t
       } = e;
-      return eg(t)
+      return ef(t)
     }).value();
     return o.unshift({
       value: eu,
@@ -338,7 +338,7 @@ class eL extends n.PureComponent {
               options: o,
               onChange: this.handleAFKChannelChange,
               isDisabled: !s,
-              renderOptionLabel: ef,
+              renderOptionLabel: eg,
               renderOptionValue: eN
             })
           })
@@ -377,7 +377,7 @@ class eL extends n.PureComponent {
       let {
         channel: t
       } = e;
-      return eg(t)
+      return ef(t)
     }).value();
     o.unshift({
       value: ec,
@@ -395,7 +395,7 @@ class eL extends n.PureComponent {
         options: o,
         isDisabled: !n,
         onChange: this.handleSystemChannelChange,
-        renderOptionLabel: ef,
+        renderOptionLabel: eg,
         renderOptionValue: eN
       }), (0, a.jsx)(T.FormText, {
         className: er.marginTop8,
@@ -885,7 +885,7 @@ class eL extends n.PureComponent {
         guild: n,
         analyticsLocations: l
       } = this.props;
-      (0, g.trackWithMetadata)(es.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+      (0, f.trackWithMetadata)(es.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: t,
           object: es.AnalyticsObjects.LEARN_MORE
@@ -945,7 +945,7 @@ function em() {
   } = (0, c.useStateFromStoresObject)([ee.default], () => ee.default.getProps()), r = (0, N.default)(), {
     AnalyticsLocationProvider: d,
     analyticsLocations: u
-  } = (0, A.default)(f.default.OVERVIEW);
+  } = (0, A.default)(g.default.OVERVIEW);
   n.useEffect(() => {
     (0, v.hideHotspot)(U.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
   }, []);
@@ -959,8 +959,8 @@ function em() {
       isGuildAdmin: V.default.can(es.Permissions.ADMINISTRATOR, t)
     })),
     S = (0, c.useStateFromStores)([H.default], () => H.default.getMemberCount(null == t ? void 0 : t.id)),
-    g = (0, c.useStateFromStores)([k.default], () => k.default.getCurrentUser());
-  o(null != g, "GuildSettingsOverview: currentUser cannot be undefined");
+    f = (0, c.useStateFromStores)([k.default], () => k.default.getCurrentUser());
+  o(null != f, "GuildSettingsOverview: currentUser cannot be undefined");
   let {
     enableDeadchat: m
   } = O.SimpleDeadchatPromptExperiment.useExperiment({
@@ -979,7 +979,7 @@ function em() {
       guild: t,
       errors: s,
       submitting: l,
-      currentUser: g,
+      currentUser: f,
       guildMemberCount: S,
       theme: r,
       analyticsLocations: u,

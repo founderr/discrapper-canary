@@ -22,23 +22,23 @@ var n = a("37983"),
   f = a("980215"),
   T = a("824794"),
   E = a("635471"),
-  A = a("305961"),
-  _ = a("423487"),
-  S = a("587974"),
-  m = a("599110"),
-  C = a("719923"),
-  g = a("50885"),
-  N = a("713135"),
+  m = a("305961"),
+  S = a("423487"),
+  A = a("587974"),
+  g = a("599110"),
+  _ = a("719923"),
+  C = a("50885"),
+  p = a("713135"),
   v = a("106435"),
-  p = a("289918"),
+  N = a("289918"),
   I = a("878569"),
   h = a("590006"),
   M = a("430312"),
-  O = a("401642"),
-  U = a("590456"),
-  x = a("49111"),
+  x = a("401642"),
+  O = a("590456"),
+  y = a("49111"),
   R = a("646718"),
-  y = a("782340"),
+  U = a("782340"),
   j = a("524466");
 let P = c.AvatarSizes.SIZE_80,
   H = (0, d.getDecorationSizeForAvatarSize)(P);
@@ -49,12 +49,12 @@ function L(e) {
     guildId: a,
     isTryItOutFlow: l,
     forProfileEffectModal: s
-  } = e, i = (0, u.useStateFromStores)([N.default], () => N.default.getUserProfile(t.id), [t]), r = (0, u.useStateFromStores)([A.default], () => A.default.getGuild(a), [a]), d = (0, f.useClydeProfilesEnabled)(r);
+  } = e, i = (0, u.useStateFromStores)([p.default], () => p.default.getUserProfile(t.id), [t]), r = (0, u.useStateFromStores)([m.default], () => m.default.getGuild(a), [a]), d = (0, f.useClydeProfilesEnabled)(r);
   return (0, n.jsxs)(n.Fragment, {
     children: [(null == i ? void 0 : i.profileFetchFailed) && (!t.isClyde() || d) && (0, n.jsx)(c.Tooltip, {
-      text: y.default.Messages.USER_PROFILE_LOAD_ERROR,
+      text: U.default.Messages.USER_PROFILE_LOAD_ERROR,
       spacing: 16,
-      children: e => (0, n.jsx)(_.default, {
+      children: e => (0, n.jsx)(S.default, {
         ...e,
         className: j.warningCircleIcon,
         color: o.default.unsafe_rawColors.YELLOW_300.css
@@ -68,7 +68,7 @@ function L(e) {
     })]
   })
 }
-let D = g.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
+let D = C.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
 function G(e) {
   let {
@@ -80,14 +80,14 @@ function G(e) {
     isMobile: d,
     guildId: f,
     channelId: E,
-    onClose: A,
-    disableUserProfileLink: _,
-    profileType: g,
-    animateOnHover: N,
-    hasProfileEffect: p
+    onClose: m,
+    disableUserProfileLink: S,
+    profileType: C,
+    animateOnHover: p,
+    hasProfileEffect: N
   } = e, {
     profileTheme: h
-  } = l.useContext(M.UserProfileContext), L = l.useContext(m.AnalyticsContext), G = t.isNonUserBot() && !t.isClyde(), b = C.default.isPremiumAtLeast(null == a ? void 0 : a.premiumType, R.PremiumTypes.TIER_2), B = l.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, E), [t, E]), F = _ || t.isClyde(), {
+  } = l.useContext(M.UserProfileContext), L = l.useContext(g.AnalyticsContext), G = t.isNonUserBot() && !t.isClyde(), b = _.default.isPremiumAtLeast(null == a ? void 0 : a.premiumType, R.PremiumTypes.TIER_2), B = l.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, E), [t, E]), F = S || t.isClyde(), {
     avatarDecorationSrc: w,
     avatarSrc: k,
     eventHandlers: V
@@ -95,7 +95,7 @@ function G(e) {
     user: t,
     guildId: f,
     size: P,
-    animateOnHover: N
+    animateOnHover: p
   }), W = (0, n.jsx)("div", {
     className: j.avatarHoverTarget,
     ...V,
@@ -104,12 +104,12 @@ function G(e) {
       avatarDecoration: w,
       size: P,
       "aria-label": t.username,
-      status: B ? x.StatusTypes.UNKNOWN : o,
+      status: B ? y.StatusTypes.UNKNOWN : o,
       statusBackdropColor: null != h && b && !B ? (0, c.getStatusBackdropColor)(h) : void 0,
       isMobile: d,
       statusTooltip: !0
     })
-  }), Y = (0, r.match)(g).with(U.UserProfileTypes.POPOUT, () => {
+  }), Y = (0, r.match)(C).with(O.UserProfileTypes.POPOUT, () => {
     let e = (0, I.buildGetPremiumUserBannerStyles)({
       premiumUserWithBanner: j.avatarPositionPremiumBanner,
       premiumUserWithoutBanner: j.avatarPositionPremiumNoBanner,
@@ -118,9 +118,9 @@ function G(e) {
     return e({
       isPremium: b && !G,
       hasBanner: u,
-      hasProfileEffect: p
+      hasProfileEffect: N
     })
-  }).with(U.UserProfileTypes.POMELO_POPOUT, () => j.avatarPositionPomelo).with(U.UserProfileTypes.PANEL, () => j.avatarPositionPanel).exhaustive();
+  }).with(O.UserProfileTypes.POMELO_POPOUT, () => j.avatarPositionPomelo).with(O.UserProfileTypes.PANEL, () => j.avatarPositionPanel).exhaustive();
   return (0, n.jsx)(n.Fragment, {
     children: (0, n.jsxs)(c.Clickable, {
       className: i({
@@ -129,18 +129,18 @@ function G(e) {
         [j.avatarWrapperNormal]: !G
       }, Y),
       onClick: G || F ? void 0 : function() {
-        (0, O.openUserProfileModal)({
+        (0, x.openUserProfileModal)({
           userId: t.id,
           guildId: null != f ? f : void 0,
           channelId: null != E ? E : void 0,
           analyticsLocation: L.location
-        }), null == A || A()
+        }), null == m || m()
       },
       children: [W, !F && function() {
         let e = null != w,
           t = e ? H : (0, c.getAvatarSize)(P);
-        return (0, n.jsx)(S.default, {
-          mask: null == o || o === x.StatusTypes.UNKNOWN || B ? S.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, d]).with([!0, !0], () => S.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => S.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => S.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => S.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+        return (0, n.jsx)(A.default, {
+          mask: null == o || o === y.StatusTypes.UNKNOWN || B ? A.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, d]).with([!0, !0], () => A.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => A.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => A.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => A.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
           className: e ? j.avatarDecorationHint : j.avatarHint,
           style: e ? {
             borderRadius: .4 * t
@@ -149,7 +149,7 @@ function G(e) {
           height: t,
           children: (0, n.jsx)("div", {
             className: j.avatarHintInner,
-            children: y.default.Messages.VIEW_PROFILE
+            children: U.default.Messages.VIEW_PROFILE
           })
         })
       }()]
@@ -173,12 +173,12 @@ function b(e) {
     upsell: T
   } = e;
   return (0, n.jsxs)(n.Fragment, {
-    children: [T, (0, n.jsx)(p.default, {
+    children: [T, (0, n.jsx)(N.default, {
       user: t,
       displayProfile: a,
       onClose: i,
       guildId: l,
-      profileType: U.UserProfileTypes.POPOUT,
+      profileType: O.UserProfileTypes.POPOUT,
       showPremiumBadgeUpsell: f,
       isHovering: d,
       hasProfileEffect: (null == a ? void 0 : a.profileEffectId) != null
@@ -189,7 +189,7 @@ function b(e) {
     }), (0, n.jsx)(G, {
       user: t,
       displayProfile: a,
-      status: u ? x.StatusTypes.STREAMING : o,
+      status: u ? y.StatusTypes.STREAMING : o,
       isMobile: r,
       guildId: l,
       channelId: s,
@@ -197,7 +197,7 @@ function b(e) {
       disableUserProfileLink: c,
       hasBanner: (null == a ? void 0 : a.banner) != null,
       hasProfileEffect: (null == a ? void 0 : a.profileEffectId) != null,
-      profileType: U.UserProfileTypes.POPOUT
+      profileType: O.UserProfileTypes.POPOUT
     }), (0, n.jsx)(L, {
       user: t,
       guildId: l

@@ -36,12 +36,12 @@ class T extends r.default {
       let S = i.default.lastSeenChangelogId(),
         N = i.default.lastSeenChangelogDate();
       if (null != S && 0 >= t.default.compare(T, S)) return;
-      let A = await n.default.fetchChangelog(T, a.default.locale);
-      if (null != A) {
+      let O = await n.default.fetchChangelog(T, a.default.locale);
+      if (null != O) {
         if (null == N || null == i.default.lastSeenChangelogDate()) {
-          n.default.markChangelogAsSeen(T, A.date);
+          n.default.markChangelogAsSeen(T, O.date);
           return
-        }!i.default.isLocked() && new Date(A.date) > new Date(N) && (0, s.openChangelog)()
+        }!i.default.isLocked() && new Date(O.date) > new Date(N) && (0, s.openChangelog)()
       }
     }
   }

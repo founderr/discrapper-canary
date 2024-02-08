@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("923959"),
   S = s("525065"),
   N = s("305961"),
-  f = s("957255"),
-  g = s("27618"),
+  g = s("957255"),
+  f = s("27618"),
   A = s("697218"),
   L = s("945330"),
   m = s("592407"),
@@ -80,9 +80,9 @@ let x = "dismissedCommunityFeaturesUpsell",
         I(e.body.eligible_for_admin_server)
       }).catch(() => I(!1))
     }, []);
-    let f = (0, r.useStateFromStores)([N.default], () => N.default.getGuild("942897714956472401")),
-      g = l.isCommunity() && E >= 1e3 && _ && !(null != f);
-    if (t && s && !g) return null;
+    let g = (0, r.useStateFromStores)([N.default], () => N.default.getGuild("942897714956472401")),
+      f = l.isCommunity() && E >= 1e3 && _ && !(null != g);
+    if (t && s && !f) return null;
     let A = async () => {
       try {
         let e = await o.default.post({
@@ -92,7 +92,7 @@ let x = "dismissedCommunityFeaturesUpsell",
         m.default.close(), (0, T.transitionToGuild)(e.body.id)
       } catch {}
     };
-    return i && !g ? null : (0, a.jsxs)("div", {
+    return i && !f ? null : (0, a.jsxs)("div", {
       className: M.upsellContainer,
       children: [(0, a.jsxs)("div", {
         className: M.upsellContent,
@@ -125,7 +125,7 @@ let x = "dismissedCommunityFeaturesUpsell",
         })
       }), (0, a.jsxs)("div", {
         className: M.upsellFooter,
-        children: [g && (0, a.jsx)(u.Button, {
+        children: [f && (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           onClick: A,
           className: M.upsellButton,
@@ -163,9 +163,9 @@ let x = "dismissedCommunityFeaturesUpsell",
       {
         canManageGuild: s,
         isGuildAdmin: l
-      } = (0, r.useStateFromStoresObject)([f.default], () => ({
-        canManageGuild: f.default.can(h.Permissions.MANAGE_GUILD, t),
-        isGuildAdmin: f.default.can(h.Permissions.ADMINISTRATOR, t)
+      } = (0, r.useStateFromStoresObject)([g.default], () => ({
+        canManageGuild: g.default.can(h.Permissions.MANAGE_GUILD, t),
+        isGuildAdmin: g.default.can(h.Permissions.ADMINISTRATOR, t)
       })),
       o = (0, r.useStateFromStores)([I.default], () => null != t ? I.default.getChannels(t.id) : null),
       c = n.useMemo(R.calculateLocaleOptions, []),
@@ -186,7 +186,7 @@ let x = "dismissedCommunityFeaturesUpsell",
       } = e;
       t.type === h.ChannelTypes.GUILD_TEXT && N.push({
         value: t.id,
-        label: (0, E.computeChannelName)(t, A.default, g.default, !0)
+        label: (0, E.computeChannelName)(t, A.default, f.default, !0)
       })
     });
     let L = () => {

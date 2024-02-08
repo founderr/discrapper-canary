@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return T
   },
   default: function() {
-    return f
+    return g
   }
 }), s("222007");
 var a = s("37983"),
@@ -128,7 +128,7 @@ function N(e) {
   })
 }
 
-function f(e) {
+function g(e) {
   let {
     guild: t,
     monetizationEligibility: s

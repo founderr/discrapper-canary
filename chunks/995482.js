@@ -77,7 +77,7 @@ function I(e) {
     placeholder: _,
     className: I,
     maxTags: S
-  } = e, N = n.useRef(null), f = n.useRef(null), g = n.useRef(null), A = (0, c.useChipletState)(s), {
+  } = e, N = n.useRef(null), g = n.useRef(null), f = n.useRef(null), A = (0, c.useChipletState)(s), {
     handlePasteEvent: L,
     handleInputChange: m,
     handleKeyDown: C,
@@ -89,9 +89,9 @@ function I(e) {
     handleResetTagSelections: G,
     handleInputBlurEvent: x
   } = (0, c.useChipletStateHandlers)(A, {
-    scrollerRef: g,
+    scrollerRef: f,
     mainInputRef: N,
-    mainContainerRef: f
+    mainContainerRef: g
   }), {
     state: {
       value: p,
@@ -122,18 +122,18 @@ function I(e) {
           var e;
           null === (e = N.current) || void 0 === e || e.blur(), setTimeout(() => {
             var e;
-            return null === (e = f.current) || void 0 === e ? void 0 : e.focus()
+            return null === (e = g.current) || void 0 === e ? void 0 : e.focus()
           }, 16)
         }))
       } else M(e, !0), y(!0)
     }, [D, M, v, U]);
   return (0, a.jsxs)("div", {
     className: i(E.mainContainer, I),
-    ref: f,
+    ref: g,
     tabIndex: 0,
     onKeyUp: O,
     children: [(0, a.jsxs)(T, {
-      ref: g,
+      ref: f,
       onClick: b,
       children: [U.map((e, t) => (0, a.jsx)(d.default, {
         value: e,

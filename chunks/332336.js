@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return O
+    return A
   }
 }), E("222007");
 var t = E("913144"),
@@ -50,7 +50,7 @@ function S(e) {
 function N(e) {
   a[e] = new Set, i[e] = null
 }
-class A extends o.default {
+class O extends o.default {
   handleInitialize() {
     null == I && null == I && (I = setInterval(() => {
       for (let e in a) S(e) && T(e)
@@ -85,4 +85,4 @@ class A extends o.default {
     }
   }
 }
-var O = new A
+var A = new O

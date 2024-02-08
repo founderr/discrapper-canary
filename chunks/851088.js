@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("677847"),
   S = s("88681"),
   N = s("798204"),
-  f = s("677795"),
-  g = s("782340"),
+  g = s("677795"),
+  f = s("782340"),
   A = s("332227");
 
 function L(e) {
@@ -33,16 +33,16 @@ function L(e) {
     isFullServerGating: D
   } = (0, c.default)(L), M = (0, r.useUID)(), G = (0, o.useRoleSubscriptionSettingsDisabled)();
   return (0, a.jsxs)(E.default, {
-    title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_TITLE,
-    description: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_SUBTITLE,
+    title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_TITLE,
+    description: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_SUBTITLE,
     children: [(0, a.jsxs)(l.FormSection, {
-      title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_TITLE,
+      title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_TITLE,
       disabled: G,
       children: [(0, a.jsx)(l.FormText, {
         type: l.FormText.Types.DESCRIPTION,
         className: A.formDescription,
         disabled: G,
-        children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_SUBTITLE
+        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_SUBTITLE
       }), (0, a.jsx)(_.default, {
         channelBenefits: m,
         intangibleBenefits: O,
@@ -64,7 +64,7 @@ function L(e) {
               })),
               a = e.filter(e => !s.has(e)).map(e => ({
                 ref_id: e,
-                ref_type: f.GuildRoleSubscriptionBenefitTypes.CHANNEL
+                ref_type: g.GuildRoleSubscriptionBenefitTypes.CHANNEL
               }));
             return [...t, ...a]
           })
@@ -74,14 +74,14 @@ function L(e) {
     }), (0, a.jsx)(i.default, {
       size: 24
     }), (0, a.jsxs)(l.FormSection, {
-      title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
+      title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
       titleId: M,
       disabled: G,
       children: [(0, a.jsx)(l.FormText, {
         type: l.FormText.Types.DESCRIPTION,
         className: A.formDescription,
         disabled: G,
-        children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_DESCRIPTION
+        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_DESCRIPTION
       }), D && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(T.default, {
           "aria-labelledby": M,
@@ -93,13 +93,13 @@ function L(e) {
     }), (0, a.jsx)(i.default, {
       size: 24
     }), (0, a.jsxs)(l.FormSection, {
-      title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
+      title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
       disabled: G,
       children: [(0, a.jsx)(l.FormText, {
         type: l.FormText.Types.DESCRIPTION,
         className: A.formDescription,
         disabled: G,
-        children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_DESCRIPTION
+        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_DESCRIPTION
       }), (0, a.jsx)(N.default, {})]
     }), (0, a.jsx)(i.default, {
       size: 24

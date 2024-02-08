@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("531493"),
   S = s("900938"),
   N = s("986654"),
-  f = s("462752"),
-  g = s("505002"),
+  g = s("462752"),
+  f = s("505002"),
   A = s("893448"),
   L = s("376252"),
   m = s("728955"),
@@ -70,7 +70,7 @@ function R(e) {
     }, [M.id, null == G ? void 0 : G.id]), null == G) return null;
   switch (R) {
     case C.GuildSettingsRoleEditSections.DISPLAY:
-      t = (0, a.jsx)(g.default, {
+      t = (0, a.jsx)(f.default, {
         guild: M,
         role: G,
         locked: U,
@@ -88,7 +88,7 @@ function R(e) {
       });
       break;
     case C.GuildSettingsRoleEditSections.VERIFICATIONS:
-      t = (0, a.jsx)(f.default, {
+      t = (0, a.jsx)(g.default, {
         guild: M,
         role: G,
         locked: U,

@@ -12,7 +12,7 @@ var I = E("286235"),
   T = E("49111");
 let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"],
   N = new s.default,
-  A = /\/api(\/v\d+)?\/science/;
+  O = /\/api(\/v\d+)?\/science/;
 (0, t.setRequestPatch)({
   prepareRequest(e) {
     let {
@@ -29,7 +29,7 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
       isPlatformEmbedded: s
     } = E("773336");
     if ("/" === e.url[0]) {
-      var T, O;
+      var T, A;
       e.url = t.default.getAPIBaseURL() + e.url, !("Authorization" in e.header) && !("authorization" in e.header) && e.set("Authorization", _.getToken());
       let E = i.getSuperPropertiesBase64();
       null != E && e.set("X-Super-Properties", E);
@@ -56,11 +56,11 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
       let S = n.getDebugOptionsHeaderValue();
       if (null != S && "" !== S && e.set("X-Debug-Options", S), n.isTracingRequests) {
         let _ = a.getCurrentUser(),
-          E = N.generate(null !== (O = null == _ ? void 0 : _.id) && void 0 !== O ? O : "0");
+          E = N.generate(null !== (A = null == _ ? void 0 : _.id) && void 0 !== A ? A : "0");
         e.set("x-client-trace-id", E);
         try {
           let _ = new URL(e.url).pathname;
-          if (!A.test(_)) {
+          if (!O.test(_)) {
             let t = function(e) {
               let _ = new URLSearchParams;
               _.append("query", '@guid.x-client-trace-id:"'.concat(e, '"')), _.append("showAllSpans", "true");

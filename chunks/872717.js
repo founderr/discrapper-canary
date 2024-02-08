@@ -23,7 +23,7 @@ let T = new r.default("HTTPUtils"),
   S = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 
 function N(e, _, E, t, r) {
-  var a, T, A, O, l;
+  var a, T, O, A, l;
   let u = o[e](_.url);
   if (null != _.onRequestCreated && _.onRequestCreated(u), null != _.query) {
     let e = _.query;
@@ -58,7 +58,7 @@ function N(e, _, E, t, r) {
   let L = () => {
     _.backoff = null != _.backoff ? _.backoff : new n.default, _.retried = (null != _.retried ? _.retried : 0) + 1, _.backoff.fail(() => h(_.url).then(() => N(e, _, E, t, r)))
   };
-  null == U || null === (A = U.prepareRequest) || void 0 === A || A.call(U, u), u.ok(e => null != e.status), u.then(o => {
+  null == U || null === (O = U.prepareRequest) || void 0 === O || O.call(U, u), u.ok(e => null != e.status), u.then(o => {
     var n, a, s;
     if (null != _.retries && _.retries-- > 0 && S.has(o.status)) return L();
     let T = {
@@ -69,8 +69,8 @@ function N(e, _, E, t, r) {
       status: o.status
     };
     R(_, T);
-    let A = !1,
-      O = (o, n) => {
+    let O = !1,
+      A = (o, n) => {
         let a = {
           ..._,
           headers: {
@@ -79,17 +79,17 @@ function N(e, _, E, t, r) {
           },
           interceptResponse: n
         };
-        A = !0, N(e, a, E, t, r)
+        O = !0, N(e, a, E, t, r)
       },
       l = e => {
-        !A && (t(e), null == r || r({
+        !O && (t(e), null == r || r({
           ok: !1,
           hasErr: !0,
           err: e
         }))
       };
-    if ((null == _ ? void 0 : null === (n = _.interceptResponse) || void 0 === n ? void 0 : n.call(_, o, O, l)) !== !0) {
-      if ((null == U ? void 0 : null === (a = U.interceptResponse) || void 0 === a ? void 0 : a.call(U, o, O, l)) !== !0) {
+    if ((null == _ ? void 0 : null === (n = _.interceptResponse) || void 0 === n ? void 0 : n.call(_, o, A, l)) !== !0) {
+      if ((null == U ? void 0 : null === (a = U.interceptResponse) || void 0 === a ? void 0 : a.call(U, o, A, l)) !== !0) {
         if (o.ok) E(T);
         else {
           if (_.oldFormErrors && (null == T ? void 0 : null === (s = T.body) || void 0 === s ? void 0 : s.code) === i.INVALID_FORM_BODY_ERROR_CODE) {
@@ -112,28 +112,28 @@ function N(e, _, E, t, r) {
       hasErr: !0,
       err: e
     }))
-  }), (null === (O = _.signal) || void 0 === O ? void 0 : O.aborted) ? u.abort() : null === (l = _.signal) || void 0 === l || l.addEventListener("abort", () => u.abort(), {
+  }), (null === (A = _.signal) || void 0 === A ? void 0 : A.aborted) ? u.abort() : null === (l = _.signal) || void 0 === l || l.addEventListener("abort", () => u.abort(), {
     once: !0
   })
 }
-let A = new Map;
+let O = new Map;
 
-function O(e) {
-  let _ = A.get(e);
+function A(e) {
+  let _ = O.get(e);
   if (null == _) {
     T.verbose("rateLimitExpirationHandler: rate limit for", e, "expired, but record was already removed");
     return
   }
   let E = _.queue.shift();
   if (null == E) {
-    T.verbose("rateLimitExpirationHandler: removing key for", e), A.delete(e);
+    T.verbose("rateLimitExpirationHandler: removing key for", e), O.delete(e);
     return
   }
   T.verbose("rateLimitExpirationHandler: moving to next record for ", e), E()
 }
 
 function R(e, _) {
-  let E = A.get(e.url);
+  let E = O.get(e.url);
   if (null != _ && 429 === _.status) {
     var t, o;
     let n = (null === (t = _.body) || void 0 === t ? void 0 : t.retry_after) || 5,
@@ -146,13 +146,13 @@ function R(e, _) {
       }
     }
     T.verbose("cleanupRequestEntry: rate limit for ".concat(e.url, " retry after ").concat(n, " seconds"));
-    let a = setTimeout(() => O(e.url), 1e3 * n);
-    A.set(e.url, {
+    let a = setTimeout(() => A(e.url), 1e3 * n);
+    O.set(e.url, {
       queue: null !== (o = null == E ? void 0 : E.queue) && void 0 !== o ? o : [],
       retryAfterTimestamp: r,
       timeoutId: a
     })
-  } else null != E && E.retryAfterTimestamp < Date.now() && (T.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), O(e.url))
+  } else null != E && E.retryAfterTimestamp < Date.now() && (T.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), A(e.url))
 }
 
 function l(e, _, E) {
@@ -160,7 +160,7 @@ function l(e, _, E) {
     "string" == typeof _ && (_ = {
       url: _
     });
-    let n = A.get(_.url);
+    let n = O.get(_.url);
     null != n ? (T.verbose("makeRequest: queueing request for ", _.url), n.queue.push(N.bind(null, e, _, t, o, E))) : N(e, _, t, o, E)
   })
 }

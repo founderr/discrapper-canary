@@ -24,8 +24,8 @@ n.r(t), n.d(t, {
 });
 var r = n("872717"),
   o = n("913144"),
-  i = n("507217"),
-  u = n("389153"),
+  u = n("507217"),
+  i = n("389153"),
   a = n("49111");
 
 function l() {
@@ -60,10 +60,10 @@ function d(e, t) {
   })
 }
 async function T(e, t, n) {
-  let i = [];
+  let u = [];
   try {
     let o = await r.default.get(a.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n));
-    o.ok && (i = o.body.permissions)
+    o.ok && (u = o.body.permissions)
   } catch (r) {
     if (404 !== r.status) {
       o.default.dispatch({
@@ -80,7 +80,7 @@ async function T(e, t, n) {
     applicationId: e,
     commandId: n,
     guildId: t,
-    permissions: i
+    permissions: u
   })
 }
 
@@ -109,13 +109,13 @@ async function _(e) {
     if (!n || !r) return t;
     let o = {
       [e]: n,
-      [(0, u.allChannelsSentinel)(e)]: r
+      [(0, i.allChannelsSentinel)(e)]: r
     };
     return t.filter(e => {
       let t = o[e.id];
       return null == t || e.permission !== t
     })
-  }(l, s, r, a) : s, T = await i.updateApplicationGuildCommandPermissions(t, l, n, d);
+  }(l, s, r, a) : s, T = await u.updateApplicationGuildCommandPermissions(t, l, n, d);
   T.ok && o.default.dispatch({
     type: "INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE",
     applicationId: t,

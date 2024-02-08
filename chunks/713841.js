@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var r = n("913144"),
   o = n("592407"),
-  i = n("482391"),
-  u = n("611183"),
+  u = n("482391"),
+  i = n("611183"),
   a = {
     init() {
       r.default.dispatch({
@@ -72,7 +72,7 @@ var r = n("913144"),
       try {
         r.default.dispatch({
           type: "INTEGRATION_SETTINGS_SUBMITTING"
-        }), await i.updateApplicationCommandPermissions({
+        }), await u.updateApplicationCommandPermissions({
           applicationId: e,
           commandId: e,
           defaultEveryoneValue: !0,
@@ -107,7 +107,7 @@ var r = n("913144"),
       try {
         r.default.dispatch({
           type: "INTEGRATION_SETTINGS_SUBMITTING"
-        }), await u.default.update(e, t.id, t), r.default.dispatch({
+        }), await i.default.update(e, t.id, t), r.default.dispatch({
           type: "INTEGRATION_SETTINGS_SAVE_SUCCESS"
         })
       } catch (e) {

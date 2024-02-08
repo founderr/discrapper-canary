@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("634544"),
   S = s("379532"),
   N = s("569912"),
-  f = s("129092"),
-  g = s("205454"),
+  g = s("129092"),
+  f = s("205454"),
   A = s("768596"),
   L = s("656913"),
   m = s("694187"),
@@ -75,7 +75,7 @@ function $(e) {
       })
     })
   }, [t, l]), u = (0, r.default)([O.default], () => O.default.getId());
-  return (0, f.isWelcomeMessageEmpty)(l) ? (0, a.jsx)(d.Button, {
+  return (0, g.isWelcomeMessageEmpty)(l) ? (0, a.jsx)(d.Button, {
     size: d.Button.Sizes.SMALL,
     onClick: o,
     children: (0, a.jsx)(d.Text, {
@@ -124,7 +124,7 @@ function ee(e) {
     channelId: I.channelId,
     icon: I.icon
   }), y = null;
-  null != R && (0, f.isChannelValidForNewMemberAction)(R) ? !P && (y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
+  null != R && (0, g.isChannelValidForNewMemberAction)(R) ? !P && (y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
   let {
     drag: B,
     dragSourcePosition: F,
@@ -184,10 +184,10 @@ function ee(e) {
         })
       }) : (0, a.jsx)("div", {
         className: Z.actionItemEmojiWrapper,
-        children: (0, a.jsx)(g.default, {
+        children: (0, a.jsx)(f.default, {
           emojiId: null === (o = I.emoji) || void 0 === o ? void 0 : o.id,
           emojiName: null === (u = I.emoji) || void 0 === u ? void 0 : u.name,
-          size: g.CTAEmojiSize.MEDIUM,
+          size: f.CTAEmojiSize.MEDIUM,
           defaultComponent: (0, a.jsx)(K, {})
         })
       }), (0, a.jsxs)("div", {
@@ -278,7 +278,7 @@ function et(e) {
       onDragStart: u,
       onDragReset: c,
       onDragComplete: E
-    }, e.channelId)), (0, a.jsx)(es, {}), s.length < f.NEW_MEMBER_ACTION_MAX && (0, a.jsx)(ea, {
+    }, e.channelId)), (0, a.jsx)(es, {}), s.length < g.NEW_MEMBER_ACTION_MAX && (0, a.jsx)(ea, {
       guildId: t,
       onAddAction: l
     })]
@@ -517,8 +517,8 @@ function ei(e) {
     title: I,
     channelId: S,
     description: N
-  } = l, g = h.default.getChannel(S), A = null;
-  (null == g || !(0, f.isChannelValidForResourceChannel)(g)) && (A = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
+  } = l, f = h.default.getChannel(S), A = null;
+  (null == f || !(0, g.isChannelValidForResourceChannel)(f)) && (A = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
   let L = null == N || 0 === N.length,
     m = b.default.getResourceChannelIconURL({
       channelId: l.channelId,
@@ -562,7 +562,7 @@ function ei(e) {
         })
       })
     }, [t, l, G, x]);
-  return null == T || null == g ? null : (0, a.jsxs)("div", {
+  return null == T || null == f ? null : (0, a.jsxs)("div", {
     className: i(Z.resourceChannelContainer),
     children: [(0, a.jsxs)("div", {
       className: i(Z.resourceChannel, {
@@ -673,7 +673,7 @@ function eo(e) {
     let e = u.map(e => e.channel.id);
     (0, V.dismissSuggestedChannels)(t, e)
   }, [t, u]);
-  return u.length <= 0 || l.length >= f.RESOURCE_CHANNEL_MAX ? null : (0, a.jsxs)(a.Fragment, {
+  return u.length <= 0 || l.length >= g.RESOURCE_CHANNEL_MAX ? null : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: Z.suggestedChannelsSection,
       children: [(0, a.jsx)(d.Text, {
@@ -751,7 +751,7 @@ function ed(e) {
       onDragStart: o,
       onDragReset: u,
       onDragComplete: c
-    }, e.channelId)), l.length < f.RESOURCE_CHANNEL_MAX && (0, a.jsxs)(d.Clickable, {
+    }, e.channelId)), l.length < g.RESOURCE_CHANNEL_MAX && (0, a.jsxs)(d.Clickable, {
       className: Z.addActionItem,
       onClick: _,
       children: [(0, a.jsx)(j.default, {}), (0, a.jsx)(d.Text, {

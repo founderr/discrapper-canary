@@ -20,13 +20,13 @@ let S = {
   N = {
     client: S
   },
-  A = !1,
-  O = !0,
+  O = !1,
+  A = !0,
   R = () => {
-    O = !a.default.canUsePremiumAppIcons(n.default.getCurrentUser())
+    A = !a.default.canUsePremiumAppIcons(n.default.getCurrentUser())
   },
   l = e => {
-    if (N.client.desktop = e, !O) {
+    if (N.client.desktop = e, !A) {
       var _;
       r.default.track(I.AnalyticEvents.APP_ICON_UPDATED, {
         icon_id: e,
@@ -37,20 +37,20 @@ let S = {
   };
 
 function u() {
-  O && (N.client = {
+  A && (N.client = {
     desktop: i.FreemiumAppIconIds.DEFAULT,
     coachmarkImpressions: 2
-  }), A = !1
+  }), O = !1
 }
 class L extends t.default.PersistedStore {
   initialize(e) {
     null != e && (N = e), this.waitFor(n.default), this.syncWith([n.default], R)
   }
   get isEditorOpen() {
-    return A
+    return O
   }
   get isUpsellPreview() {
-    return O
+    return A
   }
   getState() {
     return N
@@ -69,7 +69,7 @@ var C = new L(o.default, {
     null != _ && l(_)
   },
   APP_ICON_EDITOR_OPEN: function() {
-    A = !0
+    O = !0
   },
   APP_ICON_EDITOR_CLOSE: u,
   APP_ICON_TRACK_IMPRESSION: function(e) {

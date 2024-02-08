@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("222007"), s("881410");
 var a = s("37983"),
@@ -40,10 +40,10 @@ function N(e) {
   })
 }
 
-function f(e) {
+function g(e) {
   let {
     children: t
-  } = e, [s, l] = n.useState(!1), i = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), d = t.flatMap(e => e.items.map(e => e.completed)), _ = d.filter(e => e).length / d.length, f = 1 === _, g = (0, r.useSpring)({
+  } = e, [s, l] = n.useState(!1), i = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), d = t.flatMap(e => e.items.map(e => e.completed)), _ = d.filter(e => e).length / d.length, g = 1 === _, f = (0, r.useSpring)({
     width: "".concat(100 * _, "%"),
     immediate: i
   }), A = [I.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({
@@ -55,7 +55,7 @@ function f(e) {
   }), I.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({
     tierStructureGuideUrl: T.SERVER_SUBSCRIPTIONS_PREMIUM_CHECKLIST_EDUCATIONAL_URLS.TIER_STRUCTURE_GUIDE
   })], L = s ? null : (0, a.jsxs)(a.Fragment, {
-    children: [!f && t.map((e, t) => {
+    children: [!g && t.map((e, t) => {
       let {
         title: s,
         items: l
@@ -99,11 +99,11 @@ function f(e) {
           direction: s ? E.default.Directions.DOWN : E.default.Directions.UP,
           className: S.headerCaret
         })]
-      }), !f && (0, a.jsx)("div", {
+      }), !g && (0, a.jsx)("div", {
         className: S.progressBarOuter,
         children: (0, a.jsx)(r.animated.div, {
           className: S.progressBarInner,
-          style: g
+          style: f
         })
       }), L]
     })

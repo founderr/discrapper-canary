@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("240292"),
   S = s("701909"),
   N = s("49111"),
-  f = s("533613"),
-  g = s("782340"),
+  g = s("533613"),
+  f = s("782340"),
   A = s("430364"),
   L = s("175717"),
   m = s("869917"),
@@ -33,8 +33,8 @@ var a = s("37983"),
 let G = () => [{
     icon: I.default,
     color: o.default.unsafe_rawColors.GREEN_360.css,
-    header: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_HEADER,
-    body: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_BODY.format({
+    header: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_HEADER,
+    body: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_BODY.format({
       featureHook: (e, t) => (0, a.jsx)("strong", {
         className: A.featuredText,
         children: e
@@ -43,11 +43,11 @@ let G = () => [{
   }, {
     icon: _.default,
     color: o.default.unsafe_rawColors.PARTNER.css,
-    header: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_HEADER,
-    body: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_BODY.format({
+    header: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_HEADER,
+    body: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_BODY.format({
       infoHook: () => (0, a.jsx)(d.Tooltip, {
-        text: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_TOOLTIP,
-        "aria-label": g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_TOOLTIP,
+        text: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_TOOLTIP,
+        "aria-label": f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_TOOLTIP,
         children: e => (0, a.jsx)(T.default, {
           className: A.infoIcon,
           ...e
@@ -61,8 +61,8 @@ let G = () => [{
   }, {
     icon: T.default,
     color: o.default.unsafe_rawColors.RED_360.css,
-    header: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_STAY_INFORMED_HEADER,
-    body: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_STAY_INFORMED_BODY
+    header: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_STAY_INFORMED_HEADER,
+    body: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_STAY_INFORMED_BODY
   }],
   x = [{
     iconSrc: R,
@@ -161,7 +161,7 @@ var v = e => {
   n.useEffect(() => {
     null != C && l(C / 2), null != O && o(O / 2)
   }, [C, O, l, o]), n.useEffect(() => {
-    (0, u.hideHotspot)(f.HotspotLocations.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL)
+    (0, u.hideHotspot)(g.HotspotLocations.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL)
   }, []);
   let h = () => {
     c.default.open()
@@ -186,35 +186,35 @@ var v = e => {
       })]
     }), (0, a.jsx)(d.Heading, {
       variant: "heading-xl/semibold",
-      children: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_HEADER
+      children: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_HEADER
     }), (0, a.jsx)(d.Text, {
       color: "header-secondary",
       variant: "text-md/normal",
       className: A.body,
-      children: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({
+      children: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({
         helpdeskArticle: S.default.getArticleURL(N.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
       })
     }), (0, a.jsx)(d.Tooltip, {
-      text: I ? null : g.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
-      "aria-label": I ? void 0 : g.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
+      text: I ? null : f.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
+      "aria-label": I ? void 0 : f.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
       children: e => (0, a.jsx)(d.Button, {
         onClick: h,
         className: A.button,
         disabled: !I,
         ...e,
-        children: g.default.Messages.GET_STARTED
+        children: f.default.Messages.GET_STARTED
       })
     }), (0, a.jsx)("hr", {
       className: A.separator
     }), (0, a.jsx)(d.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
-      children: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_DETAILS
+      children: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_DETAILS
     }), (0, a.jsx)(d.Text, {
       color: "header-secondary",
       className: A.body,
       variant: "text-sm/normal",
-      children: g.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({
+      children: f.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({
         helpdeskArticle: S.default.getArticleURL(N.HelpdeskArticles.GUILD_COMMUNITY_FEATURE)
       })
     }), (0, a.jsx)("div", {

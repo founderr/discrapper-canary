@@ -15,8 +15,8 @@ var t = E("627445"),
   T = E("42887"),
   S = E("945956"),
   N = E("235660"),
-  A = E("800762"),
-  O = E("449008"),
+  O = E("800762"),
+  A = E("449008"),
   R = E("700507"),
   l = E("893243"),
   u = E("76393"),
@@ -51,14 +51,14 @@ class h extends i.default {
         let _ = u.default.getAwaitingRemoteSessionInfo();
         return e.find(e => {
           let E = D.GAME_CONSOLE_SESSIONS.has(e.clientInfo.os),
-            t = null != A.default.getVoiceStateForSession(s.default.getId(), e.sessionId),
+            t = null != O.default.getVoiceStateForSession(s.default.getId(), e.sessionId),
             o = null == _ || (0, L.coercePlatformTypeToConsoleType)(_.type) === e.clientInfo.os;
           return E && o && t
         })
       }(e);
       if (null == _) return null;
       this.awaitRemoteTimeout.stop(), (0, R.connectToRemote)(_.sessionId);
-      let E = A.default.getVoiceStateForSession(s.default.getId(), _.sessionId);
+      let E = O.default.getVoiceStateForSession(s.default.getId(), _.sessionId);
       null != E && M(E)
     }, this.handleAudioStateToggle = e => {
       let {
@@ -71,7 +71,7 @@ class h extends i.default {
         n = s.default.getId(),
         r = u.default.getRemoteSessionId();
       if (null == r) return;
-      let a = A.default.getVoiceStateForSession(n, r);
+      let a = O.default.getVoiceStateForSession(n, r);
       if (null != a)(a.selfDeaf !== t || a.selfMute !== o) && ((0, R.remoteVoiceStateUpdate)(r, {
         selfDeaf: t,
         selfMute: o
@@ -88,7 +88,7 @@ class h extends i.default {
             sessionId: _
           } = e;
           return null != _ ? N.default.getSessionById(_) : null
-        }).filter(O.isNotNullish);
+        }).filter(A.isNotNullish);
         return this.maybeConnect(e)
       }
       let o = E.find(e => {

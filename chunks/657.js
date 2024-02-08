@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("427459"),
   S = s("467094"),
   N = s("364685"),
-  f = s("566171"),
-  g = s("417385"),
+  g = s("566171"),
+  f = s("417385"),
   A = s("910687"),
   L = s("49111"),
   m = s("782340"),
@@ -159,7 +159,7 @@ var G = e => {
         children: m.default.Messages.PREMIUM_GUILD_TIER_3
       })
     }];
-  return (0, a.jsx)(f.default, {
+  return (0, a.jsx)(g.default, {
     tiers: U,
     renderTier: e => {
       let n, {
@@ -173,8 +173,8 @@ var G = e => {
           canCreateExpressions: S,
           canManageGuildExpression: N
         } = (0, _.getManageResourcePermissions)(t),
-        f = u[E - 1],
-        h = null != f ? (0, I.getTotalStickerCountForTier)(f.tier) : 0,
+        g = u[E - 1],
+        h = null != g ? (0, I.getTotalStickerCountForTier)(g.tier) : 0,
         R = (0, I.getTotalStickerCountForTier)(d.tier),
         U = (0, I.getIncrementalStickerCountForTier)(d.tier),
         v = T.slice(h, R),
@@ -205,7 +205,7 @@ var G = e => {
         }
       }) : b && (n = (0, a.jsx)(M, {
         guild: t
-      })), (0, a.jsxs)(g.default, {
+      })), (0, a.jsxs)(f.default, {
         subscriptionCount: x,
         tier: d,
         onSetRef: r,

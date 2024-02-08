@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("95039"),
   S = s("817963"),
   N = s("305122"),
-  f = s("235004"),
-  g = s("520497"),
+  g = s("235004"),
+  f = s("520497"),
   A = s("812809"),
   L = s("697218"),
   m = s("941886"),
@@ -141,16 +141,16 @@ let V = e => {
 function k(e) {
   let {
     guild: t
-  } = e, [l, i] = (0, d.useStateFromStoresArray)([f.default], () => {
+  } = e, [l, i] = (0, d.useStateFromStoresArray)([g.default], () => {
     var e;
-    return [null !== (e = f.default.getSoundsForGuild(t.id)) && void 0 !== e ? e : P.EMPTY_SOUND_LIST, f.default.isFetchingSounds() || f.default.isFetchingDefaultSounds()]
+    return [null !== (e = g.default.getSoundsForGuild(t.id)) && void 0 !== e ? e : P.EMPTY_SOUND_LIST, g.default.isFetchingSounds() || g.default.isFetchingDefaultSounds()]
   }), {
     canCreateExpressions: r
   } = (0, S.useManageResourcePermissions)(t), o = n.useRef(null), u = (0, T.default)(), E = t.premiumTier, _ = (0, G.getAvailableSoundboardSoundCount)(l, E);
   n.useEffect(() => {
     (0, N.maybeFetchSoundboardSounds)()
   }, []);
-  let I = n.useMemo(() => l.reduce((e, t) => (e[t.soundId] = new Audio((0, g.default)(t.soundId)), e), {}), [l]),
+  let I = n.useMemo(() => l.reduce((e, t) => (e[t.soundId] = new Audio((0, f.default)(t.soundId)), e), {}), [l]),
     L = 0 === l.length && !i;
 
   function C(e) {
@@ -251,12 +251,12 @@ function Y(e) {
     soundId: u,
     name: T,
     user: I,
-    userId: f,
-    emojiId: g,
+    userId: g,
+    emojiId: f,
     emojiName: A
-  } = t, m = (0, d.useStateFromStores)([L.default], () => null != I ? I : L.default.getUser(f), [f, I]), {
+  } = t, m = (0, d.useStateFromStores)([L.default], () => null != I ? I : L.default.getUser(g), [g, I]), {
     canManageGuildExpression: C
-  } = (0, S.useManageResourcePermissions)(o), G = n.useMemo(() => C(t), [t, C]), x = null != g || null != A, [p, U] = n.useState(!1);
+  } = (0, S.useManageResourcePermissions)(o), G = n.useMemo(() => C(t), [t, C]), x = null != f || null != A, [p, U] = n.useState(!1);
   async function v() {
     if (!p) {
       U(!0);
@@ -270,14 +270,14 @@ function Y(e) {
   return n.useEffect(() => {
     null == m && e();
     async function e() {
-      await (0, E.getUser)(f)
+      await (0, E.getUser)(g)
     }
-  }, [m, f]), (0, a.jsxs)("div", {
+  }, [m, g]), (0, a.jsxs)("div", {
     className: i(y.row, {
       [y.active]: l
     }),
     children: [x ? (0, a.jsx)(_.default, {
-      emojiId: g,
+      emojiId: f,
       emojiName: A,
       className: y.emoji
     }) : (0, a.jsx)(h.default, {

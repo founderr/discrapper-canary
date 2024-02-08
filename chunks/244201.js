@@ -10,10 +10,10 @@ E.r(_), E.d(_, {
     return N
   },
   getCurrentlyInteractingAppContext: function() {
-    return A
+    return O
   },
   AppWindowContextProvider: function() {
-    return O
+    return A
   },
   useAppContext: function() {
     return R
@@ -52,7 +52,7 @@ function N(e) {
   return T.get(e)
 }
 
-function A() {
+function O() {
   let e = function() {
     var e;
     let _ = (0, a.getCurrentlyInteractingWindowId)();
@@ -61,7 +61,7 @@ function A() {
   return null != e ? e.appContext : null
 }
 
-function O(e) {
+function A(e) {
   let {
     appContext: _,
     renderWindow: E,

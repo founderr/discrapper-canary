@@ -23,8 +23,8 @@ var n = s("414456"),
   I = s("351825"),
   S = s("330724"),
   N = s("653138"),
-  f = s("782340"),
-  g = s("504540");
+  g = s("782340"),
+  f = s("504540");
 
 function A(e) {
   var t, n, i, d;
@@ -54,12 +54,12 @@ function A(e) {
     customEmoji: v,
     unicodeEmoji: P
   } = (0, E.default)(null === (t = m.emoji) || void 0 === t ? void 0 : t.id, null === (n = m.emoji) || void 0 === n ? void 0 : n.name), j = (0, N.isEmojiEmpty)(m.emoji) || null != v || null != P;
-  return !j && (D = f.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
-    className: l(g.optionCard, {
-      [g.hasError]: C || null != D,
-      [g.dropIndicatorBefore]: null != x && M < x,
-      [g.dropIndicatorAfter]: null != x && M > x,
-      [g.singleColumn]: A
+  return !j && (D = g.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
+    className: l(f.optionCard, {
+      [f.hasError]: C || null != D,
+      [f.dropIndicatorBefore]: null != x && M < x,
+      [f.dropIndicatorAfter]: null != x && M > x,
+      [f.singleColumn]: A
     }),
     onClick: () => (0, o.openModalLazy)(async () => {
       let {
@@ -87,28 +87,28 @@ function A(e) {
     onMouseLeave: () => U(!1),
     innerRef: e => G(p(e)),
     children: [(0, a.jsx)("div", {
-      className: g.dragContainer,
+      className: f.dragContainer,
       children: (0, a.jsx)(T.default, {
-        className: g.dragIcon
+        className: f.dragIcon
       })
     }), (0, a.jsxs)("div", {
-      className: g.optionCardRow,
+      className: f.optionCardRow,
       children: [(0, a.jsx)("div", {
-        className: g.emoji,
+        className: f.emoji,
         children: (0, a.jsx)(_.default, {
           emojiId: null === (i = m.emoji) || void 0 === i ? void 0 : i.id,
           emojiName: null === (d = m.emoji) || void 0 === d ? void 0 : d.name,
           defaultComponent: null
         })
       }), (0, a.jsxs)("div", {
-        className: g.text,
+        className: f.text,
         children: [(0, a.jsx)(o.Text, {
           variant: "text-md/medium",
           color: "header-primary",
           lineClamp: 1,
           children: m.title
         }), "" !== m.description && (0, a.jsx)(o.Text, {
-          className: g.description,
+          className: f.description,
           variant: "text-xs/normal",
           color: "header-secondary",
           children: m.description
@@ -148,31 +148,31 @@ function L(e) {
     })
   };
   return (0, a.jsx)(o.Clickable, {
-    className: l(g.optionCard, g.addOptionCard, {
-      [g.addFirstOptionCard]: 0 === n.options.length,
-      [g.singleColumn]: r
+    className: l(f.optionCard, f.addOptionCard, {
+      [f.addFirstOptionCard]: 0 === n.options.length,
+      [f.singleColumn]: r
     }),
     onClick: () => {
       u && n.options.length + 1 === N.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD ? d.default.show({
-        title: f.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_TITLE,
-        body: f.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_DESCRIPTION.format({
+        title: g.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_TITLE,
+        body: g.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_DESCRIPTION.format({
           thresholdCount: N.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD
         }),
-        confirmText: f.default.Messages.OKAY,
-        cancelText: f.default.Messages.CANCEL,
+        confirmText: g.default.Messages.OKAY,
+        cancelText: g.default.Messages.CANCEL,
         onConfirm: E
       }) : E()
     },
     children: (0, a.jsxs)("div", {
-      className: g.optionCardRow,
+      className: f.optionCardRow,
       children: [(0, a.jsx)(I.default, {
-        className: g.plusIcon,
+        className: f.plusIcon,
         width: 24,
         height: 24
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         color: "header-primary",
-        children: f.default.Messages.ONBOARDING_PROMPT_ADD_OPTION
+        children: g.default.Messages.ONBOARDING_PROMPT_ADD_OPTION
       })]
     })
   })

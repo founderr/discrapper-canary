@@ -15,8 +15,8 @@ var t = E("917351"),
   T = E("235004"),
   S = E("271938"),
   N = E("42887"),
-  A = E("891760"),
-  O = E("536692"),
+  O = E("891760"),
+  A = E("536692"),
   R = E("504385"),
   l = E("872173"),
   u = E("353927");
@@ -24,7 +24,7 @@ let L = e => "AudioContextSettingsMigrated:".concat(e),
   C = e => e === u.MediaEngineContextTypes.STREAM ? n.AudioSettingsDefaultVolumes.STREAM : n.AudioSettingsDefaultVolumes.USER;
 
 function D() {
-  (0, A.shouldReadWriteAudioSettings)() && ! function() {
+  (0, O.shouldReadWriteAudioSettings)() && ! function() {
     let e = a.default.get(L(S.default.getId()));
     !e && l.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
       let _ = !1;
@@ -67,7 +67,7 @@ let c = o.debounce(() => {
 function U() {
   l.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
     let _ = !1;
-    return (0, O.drainPendingAudioSettings)((E, t, o) => {
+    return (0, A.drainPendingAudioSettings)((E, t, o) => {
       let n = function(e, _, E, t) {
         var o, n, a, i, I;
         let s = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
@@ -114,12 +114,12 @@ function M(e) {
     userId: n,
     volume: r
   } = e;
-  if (n === S.default.getId() || !(0, A.shouldReadWriteAudioSettings)()) return;
+  if (n === S.default.getId() || !(0, O.shouldReadWriteAudioSettings)()) return;
   let a = s.default.getRemoteSessionId();
   null != a && d(a, n, o, {
     muted: N.default.isLocalMute(n, o),
     volume: r
-  }), _ = o, E = n, t = r, (0, O.updatePendingSettings)(_, E, {
+  }), _ = o, E = n, t = r, (0, A.updatePendingSettings)(_, E, {
     volume: t
   }), c()
 }
@@ -130,9 +130,9 @@ function h(e) {
     userId: E
   } = e;
   if (E !== S.default.getId()) {
-    if ((0, A.shouldReadWriteAudioSettings)()) {
+    if ((0, O.shouldReadWriteAudioSettings)()) {
       var t, o, n;
-      t = _, o = E, n = N.default.isLocalMute(E, _), (0, O.updatePendingSettings)(t, o, {
+      t = _, o = E, n = N.default.isLocalMute(E, _), (0, A.updatePendingSettings)(t, o, {
         muted: n
       }), c.cancel(), U()
     }
@@ -145,9 +145,9 @@ function P(e) {
     userId: E
   } = e;
   if (E !== S.default.getId()) {
-    if ((0, A.shouldReadWriteAudioSettings)()) {
+    if ((0, O.shouldReadWriteAudioSettings)()) {
       var t, o, n;
-      t = _, o = E, n = T.default.isLocalSoundboardMuted(E), (0, O.updatePendingSettings)(t, o, {
+      t = _, o = E, n = T.default.isLocalSoundboardMuted(E), (0, A.updatePendingSettings)(t, o, {
         soundboardMuted: n
       }), c.cancel(), U()
     }

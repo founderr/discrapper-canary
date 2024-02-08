@@ -14,9 +14,9 @@ var t = E("37983"),
 function I(e) {
   let {
     children: _
-  } = e, [E, I] = o.useState(null), [s, T] = o.useState(null), S = o.useRef(new Set), [N, A] = o.useState(!1), O = o.useCallback(e => {
-    S.current.delete(e), A(S.current.size > 0)
-  }, []), R = o.useCallback(e => (S.current.add(e), A(!0), () => O(e)), [O]), l = o.useCallback((e, _) => {
+  } = e, [E, I] = o.useState(null), [s, T] = o.useState(null), S = o.useRef(new Set), [N, O] = o.useState(!1), A = o.useCallback(e => {
+    S.current.delete(e), O(S.current.size > 0)
+  }, []), R = o.useCallback(e => (S.current.add(e), O(!0), () => A(e)), [A]), l = o.useCallback((e, _) => {
     for (let E of S.current) E(e, _)
   }, []);
   return (0, t.jsxs)(t.Fragment, {
@@ -25,7 +25,7 @@ function I(e) {
       spriteCanvas: E,
       baseConfig: a.COMMON_CONFETTI_BASE_CONFIG,
       addClickListener: R,
-      removeClickListener: O,
+      removeClickListener: A,
       children: _
     }), (0, t.jsx)(n.ConfettiCanvas, {
       ref: T,

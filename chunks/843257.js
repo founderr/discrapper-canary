@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return h
   },
   getRoleSubscriptionPurchaseSystemMessageEventProperties: function() {
-    return g
+    return _
   }
 }), n("249654");
 var i = n("716241"),
@@ -154,7 +154,7 @@ function h(e, t, n, r) {
   })
 }
 
-function g(e, t) {
+function _(e, t) {
   var n;
   return {
     guild_id: e.guild_id,

@@ -26,12 +26,12 @@ function _(e) {
     hasChanges: I,
     editingRule: S,
     errorMessage: N,
-    saveEditingRule: f
+    saveEditingRule: g
   } = (0, u.useAutomodEditingRuleActions)(), {
-    updateRule: g
+    updateRule: f
   } = (0, d.useAutomodRulesList)(t), A = null != S, L = A && !(0, o.isBackendPersistedRule)(S), m = A || I || L, C = async () => {
     if (!I && !L) return _();
-    null != S && !L && g(S);
+    null != S && !L && f(S);
     let e = s.find(e => {
       let {
         id: t
@@ -39,10 +39,10 @@ function _(e) {
       return t === (null == S ? void 0 : S.id)
     });
     try {
-      let e = await f(s);
-      null != e && g(e)
+      let e = await g(s);
+      null != e && f(e)
     } catch (t) {
-      null != e && g(e)
+      null != e && f(e)
     }
   }, O = c.default.Messages.CANCEL, h = !I && A ? c.default.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({
     ruleName: null == S ? void 0 : S.name

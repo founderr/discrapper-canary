@@ -24,17 +24,17 @@ function N() {
   let {
     editStateId: e,
     guildId: t
-  } = (0, d.useEditStateContext)(), [N, f] = u.useTierEmojiIds(e, t), g = (0, c.default)(t, e), {
+  } = (0, d.useEditStateContext)(), [N, g] = u.useTierEmojiIds(e, t), f = (0, c.default)(t, e), {
     setCurrentTab: A
   } = (0, T.useTabBarState)(), L = () => A(T.TabBarSection.EMOJIS), m = (0, n.useStateFromStores)([i.default], () => i.default.getGuild(t)), C = null == m ? void 0 : m.getMaxRoleSubscriptionEmojiSlots();
 
   function O(e) {
-    null == N ? f(new Set(e)) : f(new Set([...N, ...e]))
+    null == N ? g(new Set(e)) : g(new Set([...N, ...e]))
   }
 
   function h(e) {
     let t = new Set(N);
-    t.delete(e), f(t)
+    t.delete(e), g(t)
   }
   let R = (0, o.useRoleSubscriptionSettingsDisabled)();
   return (0, a.jsxs)(l.FormSection, {
@@ -53,7 +53,7 @@ function N() {
       tierEmojiIds: N,
       guildId: t,
       onRemoveEmoji: function(e) {
-        let t = e.roles.filter(e => e !== (null == g ? void 0 : g.id));
+        let t = e.roles.filter(e => e !== (null == f ? void 0 : f.id));
         t.length > 0 ? h(e.id) : (0, l.openModalLazy)(async () => {
           let {
             default: t

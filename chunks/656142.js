@@ -23,7 +23,7 @@ var n = s("414456"),
     var t;
     let {
       className: s
-    } = e, n = (0, i.useStateFromStores)([d.default], () => d.default.getCurrentUser()), N = (0, i.useStateFromStores)([o.default], () => o.default.locale), f = (0, i.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()), g = (0, i.useStateFromStores)([u.default], () => null != f ? u.default.get(f.planId) : void 0), A = null !== (t = (0, i.useStateFromStores)([u.default], () => null != g ? u.default.getForSkuAndInterval(T.PremiumSubscriptionSKUs.GUILD, g.interval, g.intervalCount) : void 0)) && void 0 !== t ? t : T.SubscriptionPlanInfo[T.SubscriptionPlans.PREMIUM_MONTH_GUILD];
+    } = e, n = (0, i.useStateFromStores)([d.default], () => d.default.getCurrentUser()), N = (0, i.useStateFromStores)([o.default], () => o.default.locale), g = (0, i.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()), f = (0, i.useStateFromStores)([u.default], () => null != g ? u.default.get(g.planId) : void 0), A = null !== (t = (0, i.useStateFromStores)([u.default], () => null != f ? u.default.getForSkuAndInterval(T.PremiumSubscriptionSKUs.GUILD, f.interval, f.intervalCount) : void 0)) && void 0 !== t ? t : T.SubscriptionPlanInfo[T.SubscriptionPlans.PREMIUM_MONTH_GUILD];
     return (0, a.jsxs)("div", {
       className: l(S.wrapper, s),
       children: [(0, a.jsx)(r.Heading, {

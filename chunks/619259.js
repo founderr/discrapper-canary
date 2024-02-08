@@ -17,8 +17,8 @@ var i = n("249654"),
 let S = {},
   E = 0,
   h = {},
-  g = {},
-  _ = (e, t) => {
+  _ = {},
+  g = (e, t) => {
     let n = (0, s.getFailedMessageId)(e),
       i = {
         id: n,
@@ -39,7 +39,7 @@ function I(e) {
     messageData: t,
     errorResponseBody: n
   } = e;
-  return _(t, n), !0
+  return g(t, n), !0
 }
 
 function m(e) {
@@ -49,7 +49,7 @@ function m(e) {
     messages: r
   } = e, l = null === (t = o.default.getChannel(n)) || void 0 === t ? void 0 : t.getGuildId();
   if (null == l) return !1;
-  let s = g[l],
+  let s = _[l],
     u = r.reduce((e, t) => {
       var n;
       let r = t.type === f.MessageTypes.AUTO_MODERATION_ACTION;
@@ -62,7 +62,7 @@ function m(e) {
       });
       return l ? null == e || -1 === i.default.compare(e, t.id) ? t.id : void 0 : e
     }, s);
-  return null != u && g[l] !== u && (g[l] = u, !0)
+  return null != u && _[l] !== u && (_[l] = u, !0)
 }
 class T extends r.default.PersistedStore {
   initialize(e) {
@@ -72,7 +72,7 @@ class T extends r.default.PersistedStore {
     return {
       automodFailedMessages: S,
       mentionRaidDetectionByGuild: h,
-      lastIncidentAlertMessage: g
+      lastIncidentAlertMessage: _
     }
   }
   getMessage(e) {
@@ -88,7 +88,7 @@ class T extends r.default.PersistedStore {
   }
   getLastIncidentAlertMessage(e) {
     var t;
-    return null !== (t = g[e]) && void 0 !== t ? t : null
+    return null !== (t = _[e]) && void 0 !== t ? t : null
   }
 }
 T.displayName = "GuildAutomodMessageStore", T.persistKey = "GuildAutomodMessages";
@@ -105,7 +105,7 @@ var v = new T(l.default, {
     } = e;
     if (null == t || n.type !== f.MessageTypes.AUTO_MODERATION_ACTION) return !1;
     let i = (0, u.createMessageRecord)(n);
-    return !!(0, c.isAutomodMessageRecord)(i) && !!(0, c.isAutomodNotification)(i) && (g[t] = i.id, !0)
+    return !!(0, c.isAutomodMessageRecord)(i) && !!(0, c.isAutomodNotification)(i) && (_[t] = i.id, !0)
   },
   MESSAGE_SEND_FAILED_AUTOMOD: I,
   MESSAGE_EDIT_FAILED_AUTOMOD: I,

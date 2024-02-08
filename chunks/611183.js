@@ -6,23 +6,23 @@ n.r(t), n.d(t, {
 });
 var r = n("917351"),
   o = n.n(r),
-  i = n("872717"),
-  u = n("913144"),
+  u = n("872717"),
+  i = n("913144"),
   a = n("49111");
 let l = ["Spidey Bot", "Captain Hook"];
 var s = {
   fetchForGuild(e) {
-    u.default.dispatch({
+    i.default.dispatch({
       type: "WEBHOOKS_FETCHING",
       guildId: e
-    }), i.default.get({
+    }), u.default.get({
       url: a.Endpoints.GUILD_WEBHOOKS(e),
       oldFormErrors: !0
     }).then(t => {
       let {
         body: n
       } = t;
-      return u.default.dispatch({
+      return i.default.dispatch({
         type: "WEBHOOKS_UPDATE",
         guildId: e,
         webhooks: n
@@ -31,7 +31,7 @@ var s = {
       let {
         body: n
       } = t;
-      u.default.dispatch({
+      i.default.dispatch({
         type: "WEBHOOKS_UPDATE",
         guildId: e,
         error: n.message
@@ -39,18 +39,18 @@ var s = {
     })
   },
   fetchForChannel(e, t) {
-    u.default.dispatch({
+    i.default.dispatch({
       type: "WEBHOOKS_FETCHING",
       guildId: e,
       channelId: t
-    }), i.default.get({
+    }), u.default.get({
       url: a.Endpoints.CHANNEL_WEBHOOKS(t),
       oldFormErrors: !0
     }).then(n => {
       let {
         body: r
       } = n;
-      return u.default.dispatch({
+      return i.default.dispatch({
         type: "WEBHOOKS_UPDATE",
         guildId: e,
         channelId: t,
@@ -58,7 +58,7 @@ var s = {
       })
     })
   },
-  create: (e, t, n) => (null == n && (n = l[o.random(0, l.length - 1)]), i.default.post({
+  create: (e, t, n) => (null == n && (n = l[o.random(0, l.length - 1)]), u.default.post({
     url: a.Endpoints.CHANNEL_WEBHOOKS(t),
     body: {
       name: n
@@ -68,23 +68,23 @@ var s = {
     let {
       body: n
     } = t;
-    return u.default.dispatch({
+    return i.default.dispatch({
       type: "WEBHOOK_CREATE",
       guildId: e,
       webhook: n
     }), n
   })),
-  delete: (e, t) => i.default.delete({
+  delete: (e, t) => u.default.delete({
     url: a.Endpoints.WEBHOOK(t),
     oldFormErrors: !0
   }).then(() => {
-    u.default.dispatch({
+    i.default.dispatch({
       type: "WEBHOOK_DELETE",
       guildId: e,
       webhookId: t
     })
   }),
-  update: (e, t, n) => i.default.patch({
+  update: (e, t, n) => u.default.patch({
     url: a.Endpoints.WEBHOOK(t),
     body: n,
     oldFormErrors: !0
@@ -92,7 +92,7 @@ var s = {
     let {
       body: n
     } = t;
-    return u.default.dispatch({
+    return i.default.dispatch({
       type: "WEBHOOK_UPDATE",
       guildId: e,
       webhook: n

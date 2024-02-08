@@ -7,10 +7,10 @@ s.r(t), s.d(t, {
     return S
   },
   createListingNameColumn: function() {
-    return f
+    return g
   },
   createCurrencyAmountColumn: function() {
-    return g
+    return f
   },
   createPersonCountColumn: function() {
     return A
@@ -76,7 +76,7 @@ function N() {
   })
 }
 
-function f(e) {
+function g(e) {
   let {
     cellClassName: t,
     key: s,
@@ -112,7 +112,7 @@ function f(e) {
   })
 }
 
-function g(e) {
+function f(e) {
   let {
     cellClassName: t,
     getAmount: s,

@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("694187"),
   S = s("608684"),
   N = s("957255"),
-  f = s("93581"),
-  g = s("414943"),
+  g = s("93581"),
+  f = s("414943"),
   A = s("578706"),
   L = s("381546"),
   m = s("315102"),
@@ -298,7 +298,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           className: p.description,
                           children: x.default.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_DESCRIPTION
                         })]
-                      }), (0, a.jsx)(g.default, {
+                      }), (0, a.jsx)(f.default, {
                         value: y.primaryCategoryId === G.DEFAULT_DISCOVERY_CATEGORY_ID ? null : null == y ? void 0 : y.primaryCategoryId,
                         placeholder: x.default.Messages.SELECT,
                         options: eo,
@@ -524,7 +524,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                   }) : null]
                 }), !y.isPublished && (0, a.jsx)("div", {
                   className: p.checklist,
-                  children: (0, a.jsx)(f.default, {
+                  children: (0, a.jsx)(g.default, {
                     title: x.default.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_TITLE,
                     children: er,
                     buttonLabel: x.default.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_PUBLISH,

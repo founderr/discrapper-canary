@@ -69,7 +69,7 @@ function S(e) {
     end: (e, t) => {
       null != e && !t.didDrop() && E(e.field, null, !0)
     }
-  }), [, f] = (0, o.useDrop)({
+  }), [, g] = (0, o.useDrop)({
     accept: I,
     hover: (e, s) => {
       var a;
@@ -85,9 +85,9 @@ function S(e) {
       E(e.field, t, !0)
     }
   });
-  return n.useLayoutEffect(() => (N(f(S)), () => {
-    f(null), N(null)
-  }), [N, f]), (0, a.jsxs)("div", {
+  return n.useLayoutEffect(() => (N(g(S)), () => {
+    g(null), N(null)
+  }), [N, g]), (0, a.jsxs)("div", {
     ref: S,
     "data-dnd-name": "field-".concat(t),
     className: i(_.dragContainer, {

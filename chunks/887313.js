@@ -20,8 +20,8 @@ var n = s("446674"),
   I = s("131835"),
   S = s("435076"),
   N = s("642807"),
-  f = s("330724"),
-  g = s("259483"),
+  g = s("330724"),
+  f = s("259483"),
   A = s("682327"),
   L = s("671932"),
   m = s("49111"),
@@ -40,17 +40,17 @@ function h(e) {
   c.object = s ? m.AnalyticsObjects.ONBOARDING_EDIT : m.AnalyticsObjects.ONBOARDING_REVIEW;
   let E = async function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    d ? (await (0, f.enableGuildOnboarding)(t, !1), T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+    d ? (await (0, g.enableGuildOnboarding)(t, !1), T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
       ...(0, r.collectGuildAnalyticsMetadata)(t),
-      action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.TOGGLE_DISABLED],
+      action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.TOGGLE_DISABLED],
       location: c
-    })) : (await (0, f.enableGuildOnboarding)(t, !0), e && (0, S.enableHomeSettings)(t, !0), s ? T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+    })) : (await (0, g.enableGuildOnboarding)(t, !0), e && (0, S.enableHomeSettings)(t, !0), s ? T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
       ...(0, r.collectGuildAnalyticsMetadata)(t),
-      action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.TOGGLE_ENABLED],
+      action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.TOGGLE_ENABLED],
       location: c
     }) : T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
       ...(0, r.collectGuildAnalyticsMetadata)(t),
-      step: g.GuildSettingsOnboardingPage[g.GuildSettingsOnboardingPage.REVIEW],
+      step: f.GuildSettingsOnboardingPage[f.GuildSettingsOnboardingPage.REVIEW],
       back: !1,
       skip: !1,
       completed: !0
@@ -58,7 +58,7 @@ function h(e) {
   }, N = () => {
     T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
       ...(0, r.collectGuildAnalyticsMetadata)(t),
-      action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.PREVIEW],
+      action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.PREVIEW],
       location: c
     }), (0, I.startPreview)(t)
   }, A = (0, a.jsxs)(a.Fragment, {
@@ -67,9 +67,9 @@ function h(e) {
       onEdit: () => {
         T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
           ...(0, r.collectGuildAnalyticsMetadata)(t),
-          action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.EDIT_DEFAULT_CHANNELS],
+          action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.EDIT_DEFAULT_CHANNELS],
           location: c
-        }), (0, I.setOnboardingStep)(g.GuildSettingsOnboardingPage.DEFAULT_CHANNELS)
+        }), (0, I.setOnboardingStep)(f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS)
       },
       disableGoodStatus: s
     }), (0, a.jsx)(_.default, {
@@ -79,9 +79,9 @@ function h(e) {
       onEdit: () => {
         T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
           ...(0, r.collectGuildAnalyticsMetadata)(t),
-          action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.EDIT_CUSTOMIZATION_QUESTIONS],
+          action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.EDIT_CUSTOMIZATION_QUESTIONS],
           location: c
-        }), (0, I.setOnboardingStep)(g.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS)
+        }), (0, I.setOnboardingStep)(f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS)
       },
       disableGoodStatus: s
     }), l && (0, a.jsxs)(a.Fragment, {
@@ -92,9 +92,9 @@ function h(e) {
         onEdit: () => {
           T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
             ...(0, r.collectGuildAnalyticsMetadata)(t),
-            action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.EDIT_HOME_SETTINGS],
+            action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.EDIT_HOME_SETTINGS],
             location: c
-          }), (0, I.setOnboardingStep)(g.GuildSettingsOnboardingPage.HOME_SETTINGS)
+          }), (0, I.setOnboardingStep)(f.GuildSettingsOnboardingPage.HOME_SETTINGS)
         },
         disableGoodStatus: s
       })]

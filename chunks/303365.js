@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return N
   },
   OfflineCacheStore: function() {
-    return A
+    return O
   },
   default: function() {
     return o
@@ -174,4 +174,4 @@ class S extends o {
   }
 }
 class N extends S {}
-class A extends S {}
+class O extends S {}

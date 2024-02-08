@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("430568"),
   S = s("376556"),
   N = s("679653"),
-  f = s("90625"),
-  g = s("506885"),
+  g = s("90625"),
+  f = s("506885"),
   A = s("981601"),
   L = s("161778"),
   m = s("42203"),
@@ -242,13 +242,13 @@ class F extends n.PureComponent {
               backgroundColor: o.oldValue
             }
           }, t),
-          oldTagHook: (e, t) => (0, a.jsx)(f.default, {
+          oldTagHook: (e, t) => (0, a.jsx)(g.default, {
             tag: i,
-            size: f.default.Sizes.SMALL
+            size: g.default.Sizes.SMALL
           }, t),
-          newTagHook: (e, t) => (0, a.jsx)(f.default, {
+          newTagHook: (e, t) => (0, a.jsx)(g.default, {
             tag: r,
-            size: f.default.Sizes.SMALL
+            size: g.default.Sizes.SMALL
           }, t),
           oldEmojiHook: (e, t) => (0, a.jsx)(I.default, {
             emojiId: i
@@ -348,8 +348,8 @@ class F extends n.PureComponent {
       let {
         title: s,
         id: l
-      } = t, d = e.role_ids.map(i).filter(M.isNotNullish), u = e.channel_ids.map(r).filter(M.isNotNullish), c = t.role_ids.map(i).filter(M.isNotNullish), E = t.channel_ids.map(r).filter(M.isNotNullish), _ = o.difference(c, d), I = o.difference(d, c), S = o.difference(E, u), N = o.difference(u, E), f = [];
-      return (!o.isEqual(e.title, t.title) && f.push("title"), !o.isEqual(e.description, t.description) && f.push("description"), 0 === _.length && 0 === I.length && 0 === S.length && 0 === N.length && 0 === f.length) ? null : (0, a.jsxs)("li", {
+      } = t, d = e.role_ids.map(i).filter(M.isNotNullish), u = e.channel_ids.map(r).filter(M.isNotNullish), c = t.role_ids.map(i).filter(M.isNotNullish), E = t.channel_ids.map(r).filter(M.isNotNullish), _ = o.difference(c, d), I = o.difference(d, c), S = o.difference(E, u), N = o.difference(u, E), g = [];
+      return (!o.isEqual(e.title, t.title) && g.push("title"), !o.isEqual(e.description, t.description) && g.push("description"), 0 === _.length && 0 === I.length && 0 === S.length && 0 === N.length && 0 === g.length) ? null : (0, a.jsxs)("li", {
         children: [(0, a.jsxs)("div", {
           className: P.onboardingChangeLogItemTitle,
           children: [(0, a.jsx)(b, {
@@ -384,7 +384,7 @@ class F extends n.PureComponent {
             children: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_CHANNELS.format({
               channels: N.join(", ")
             })
-          }), f.map((s, n) => (0, a.jsx)(T.Text, {
+          }), g.map((s, n) => (0, a.jsx)(T.Text, {
             variant: "text-md/normal",
             children: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_VALUE_CHANGE.format({
               key: s,
@@ -643,7 +643,7 @@ class F extends n.PureComponent {
       }
     } = e;
     if (null != n && null != l) return (0, a.jsx)(T.Popout, {
-      preload: () => (0, g.default)(l, n.getAvatarURL(t, 80), {
+      preload: () => (0, f.default)(l, n.getAvatarURL(t, 80), {
         guildId: t
       }),
       renderPopout: e => (0, a.jsx)(A.default, {

@@ -25,13 +25,13 @@ function T(e) {
     guildId: I,
     toggled: S,
     onToggleAction: N
-  } = e, f = e => () => N(e), g = (0, o.getActionInfo)(s.type, s, T), A = null === (t = s.metadata) || void 0 === t ? void 0 : t.durationSeconds, L = null != A ? (0, c.getFriendlyDurationString)(A) : null, m = (0, n.useStateFromStores)([r.default, i.default], () => r.default.can(u.Permissions.MODERATE_MEMBERS, i.default.getGuild(I)), [I]);
-  if (null == g) return null;
+  } = e, g = e => () => N(e), f = (0, o.getActionInfo)(s.type, s, T), A = null === (t = s.metadata) || void 0 === t ? void 0 : t.durationSeconds, L = null != A ? (0, c.getFriendlyDurationString)(A) : null, m = (0, n.useStateFromStores)([r.default, i.default], () => r.default.can(u.Permissions.MODERATE_MEMBERS, i.default.getGuild(I)), [I]);
+  if (null == f) return null;
   let {
     headerText: C,
     descriptionText: O,
     icon: h
-  } = g;
+  } = f;
   return (0, a.jsxs)("div", {
     className: _.actionContainer,
     children: [(0, a.jsx)("div", {
@@ -62,7 +62,7 @@ function T(e) {
             friendlyDurationString: t
           })
         }(T, L), m && (0, a.jsx)(l.Clickable, {
-          onClick: f(!0),
+          onClick: g(!0),
           className: _.editChannel,
           tag: "span",
           role: "link",
@@ -78,7 +78,7 @@ function T(e) {
         children: (0, a.jsx)(l.Checkbox, {
           type: l.Checkbox.Types.INVERTED,
           value: S,
-          onChange: f(!1),
+          onChange: g(!1),
           disabled: !m,
           className: _.actionCheckbox
         })

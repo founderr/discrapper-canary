@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("465305"),
   S = s("991170"),
   N = s("766419"),
-  f = s("507453"),
-  g = s("50693"),
+  g = s("507453"),
+  f = s("50693"),
   A = s("91816"),
   L = s("449804"),
   m = s("53948"),
@@ -83,7 +83,7 @@ function M(e) {
   } = e;
   if (0 === n.length) return (0, a.jsxs)("div", {
     className: h.noResultsContainer,
-    children: [(0, a.jsx)(f.default, {
+    children: [(0, a.jsx)(g.default, {
       className: h.noResults
     }), (0, a.jsx)(d.Text, {
       variant: "text-sm/normal",
@@ -134,8 +134,8 @@ function G(e) {
     })
   })).filter(e => e.permissions.length > 0), {
     headerHeight: N,
-    headerRef: f
-  } = (0, g.default)(0), {
+    headerRef: g
+  } = (0, f.default)(0), {
     scrolledToTop: D,
     handleScroll: G
   } = (0, A.useScrolledToTop)(), x = n.useRef(!1);
@@ -155,7 +155,7 @@ function G(e) {
         className: i(R.header, R.stickyHeader, {
           [R.stickyHeaderElevated]: !D
         }),
-        ref: f,
+        ref: g,
         children: [(0, a.jsx)(A.default, {
           guild: t,
           role: s,

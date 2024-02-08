@@ -27,13 +27,13 @@ function _(e) {
     index: T,
     isDragEnabled: S,
     submittedGuildJoinRequestsCount: N,
-    removeFormField: f,
-    updateFormField: g,
+    removeFormField: g,
+    updateFormField: f,
     updateFormFieldOrder: A
   } = e, L = async () => {
-    await f(T)
+    await g(T)
   }, m = async e => {
-    await g(T, e)
+    await f(T, e)
   }, C = async (e, t, s) => {
     await A(e, t, s)
   }, O = (0, n.uniqueId)(), h = t === T, R = {

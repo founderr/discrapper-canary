@@ -26,8 +26,8 @@ var a, n, l = s("37983"),
   I = s("578706"),
   S = s("381546"),
   N = s("68238"),
-  f = s("781896"),
-  g = s("772280"),
+  g = s("781896"),
+  f = s("772280"),
   A = s("153160"),
   L = s("648825"),
   m = s("434014"),
@@ -155,7 +155,7 @@ let x = (e, t, s, a) => {
     } = e;
     return (0, l.jsxs)(p, {
       className: G.subscribersCell,
-      children: [null != t ? t : "-", " ", (0, l.jsx)(f.default, {
+      children: [null != t ? t : "-", " ", (0, l.jsx)(g.default, {
         className: G.subscribersIcon,
         "aria-hidden": !0
       })]
@@ -197,7 +197,7 @@ let x = (e, t, s, a) => {
       return (0, l.jsx)(E.Clickable, {
         className: o(G.cell, G.toggleExpandCell),
         onClick: () => a(e.key),
-        children: (0, l.jsx)(g.default, {
+        children: (0, l.jsx)(f.default, {
           className: o(G.caretIcon, {
             [G.caretDownIcon]: n
           })

@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return h
   },
   default: function() {
-    return O
+    return x
   }
 }), a("222007");
 var n = a("37983"),
@@ -19,15 +19,15 @@ var n = a("37983"),
   f = a("867805"),
   T = a("699209"),
   E = a("32346"),
-  A = a("342845"),
-  _ = a("845579"),
-  S = a("271938"),
-  m = a("42203"),
-  C = a("957255"),
-  g = a("824563"),
-  N = a("800762"),
+  m = a("342845"),
+  S = a("845579"),
+  A = a("271938"),
+  g = a("42203"),
+  _ = a("957255"),
+  C = a("824563"),
+  p = a("800762"),
   v = a("137783"),
-  p = a("49111"),
+  N = a("49111"),
   I = a("205341");
 
 function h(e) {
@@ -36,7 +36,7 @@ function h(e) {
     className: a,
     animate: l = !0,
     hideTooltip: s
-  } = e, r = _.AnimateEmoji.useSetting(), c = null != t.id ? ":".concat(t.name, ":") : f.default.translateSurrogatesToInlineEmoji(t.name), d = {
+  } = e, r = S.AnimateEmoji.useSetting(), c = null != t.id ? ":".concat(t.name, ":") : f.default.translateSurrogatesToInlineEmoji(t.name), d = {
     className: i(I.emoji, a),
     emojiId: t.id,
     emojiName: t.name,
@@ -86,7 +86,7 @@ let M = e => {
     })
   })
 };
-var O = e => {
+var x = e => {
   var t;
   let {
     activities: a,
@@ -96,28 +96,28 @@ var O = e => {
     emojiClassName: u,
     animate: o = !0,
     hideTooltip: f = !1,
-    hideEmoji: _ = !1,
-    user: O
-  } = e, U = null != a ? a.find(e => e.type === p.ActivityTypes.CUSTOM_STATUS) : null, x = (0, r.useStateFromStores)([S.default], () => S.default.getId() === (null == O ? void 0 : O.id)), R = (0, r.useStateFromStores)([E.default], () => x ? E.default.getHangStatusActivity() : null != a ? a.find(e => e.type === p.ActivityTypes.HANG_STATUS) : null), y = (0, r.useStateFromStores)([N.default, m.default], () => {
+    hideEmoji: S = !1,
+    user: x
+  } = e, O = null != a ? a.find(e => e.type === N.ActivityTypes.CUSTOM_STATUS) : null, y = (0, r.useStateFromStores)([A.default], () => A.default.getId() === (null == x ? void 0 : x.id)), R = (0, r.useStateFromStores)([E.default], () => y ? E.default.getHangStatusActivity() : null != a ? a.find(e => e.type === N.ActivityTypes.HANG_STATUS) : null), U = (0, r.useStateFromStores)([p.default, g.default], () => {
     var e;
-    return null != R && null != O ? m.default.getChannel(null === (e = N.default.getVoiceStateForUser(O.id)) || void 0 === e ? void 0 : e.channelId) : null
+    return null != R && null != x ? g.default.getChannel(null === (e = p.default.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), {
     enableHangStatus: j
   } = T.HangStatusExperiment.useExperiment({
-    guildId: null == y ? void 0 : y.guild_id,
+    guildId: null == U ? void 0 : U.guild_id,
     location: "ActivityStatus"
-  }), P = null, H = j && null != R && C.default.can(p.Permissions.CONNECT, y);
-  H ? P = (0, n.jsx)(A.default, {
+  }), P = null, H = j && null != R && _.default.can(N.Permissions.CONNECT, U);
+  H ? P = (0, n.jsx)(m.default, {
     className: u,
     hangStatusActivity: R
-  }) : null != U && null != U.emoji && !_ && (P = (0, n.jsx)(h, {
-    emoji: U.emoji,
+  }) : null != O && null != O.emoji && !S && (P = (0, n.jsx)(h, {
+    emoji: O.emoji,
     animate: o,
     hideTooltip: f,
     className: u
   }));
-  let L = (0, r.useStateFromStores)([g.default], () => null != O ? g.default.getStatus(O.id) : null),
-    D = null !== L && [p.StatusTypes.OFFLINE, p.StatusTypes.INVISIBLE].includes(L),
+  let L = (0, r.useStateFromStores)([C.default], () => null != x ? C.default.getStatus(x.id) : null),
+    D = null !== L && [N.StatusTypes.OFFLINE, N.StatusTypes.INVISIBLE].includes(L),
     G = null === (t = (0, d.default)(a, l, void 0, H)) || void 0 === t ? void 0 : t.activityText,
     b = null != G && G.length > 0;
   return D || null == P && !b ? null : (0, n.jsxs)("div", {

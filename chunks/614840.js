@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("772871"),
   S = s("900084"),
   N = s("860170"),
-  f = s("766829"),
-  g = s("994428"),
+  g = s("766829"),
+  f = s("994428"),
   A = s("782340"),
   L = s("642622");
 
@@ -33,10 +33,10 @@ function m(e) {
     O = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentPage());
   if (n.useEffect(() => {
       (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.COMMUNITY_GUILD_SETTINGS_SAFETY, {
-        dismissAction: g.ContentDismissActionType.AUTO
+        dismissAction: f.ContentDismissActionType.AUTO
       })
     }, []), null == C) return null;
-  let h = (0, f.getGuildSafetySettings)(C);
+  let h = (0, g.getGuildSafetySettings)(C);
   switch (O) {
     case I.GuildSettingsSafetyPage.OVERVIEW:
       t = (0, a.jsx)(S.default, {

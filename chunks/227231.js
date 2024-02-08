@@ -22,10 +22,10 @@ E.r(_), E.d(_, {
     return N
   },
   getGameTileAssetUrl: function() {
-    return A
+    return O
   },
   getGameLogotypeAssetUrl: function() {
-    return O
+    return A
   },
   getQuestForTargetedContent: function() {
     return R
@@ -115,8 +115,8 @@ function s(e) {
 let T = e => "".concat(n).concat(e).concat("/reward.png"),
   S = e => "".concat(n).concat(e).concat("/hero.png"),
   N = e => "".concat(n).concat(e).concat("/quest_bar_hero.gif"),
-  A = e => "".concat(n).concat(e).concat("/game_tile.png"),
-  O = (e, _) => "".concat(n).concat(e, "/").concat(_).concat("/game_logotype.png");
+  O = e => "".concat(n).concat(e).concat("/game_tile.png"),
+  A = (e, _) => "".concat(n).concat(e, "/").concat(_).concat("/game_logotype.png");
 
 function R(e, _) {
   for (let [E, t] of e)

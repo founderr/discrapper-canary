@@ -23,12 +23,12 @@ function _(e) {
     triggerType: _,
     toggled: T,
     onToggleAction: I
-  } = e, S = e => () => I(e), N = (0, u.getActionInfo)(s.type, s, _), f = null === (t = s.metadata) || void 0 === t ? void 0 : t.channelId, g = (0, n.useStateFromStores)([d.default, o.default, r.default], () => {
-    let e = r.default.getChannel(f);
+  } = e, S = e => () => I(e), N = (0, u.getActionInfo)(s.type, s, _), g = null === (t = s.metadata) || void 0 === t ? void 0 : t.channelId, f = (0, n.useStateFromStores)([d.default, o.default, r.default], () => {
+    let e = r.default.getChannel(g);
     if (null == e) return null;
     let t = (0, i.computeChannelName)(e, d.default, o.default);
     return t
-  }, [f]);
+  }, [g]);
   if (null == N) return null;
   let {
     headerText: A,
@@ -56,8 +56,8 @@ function _(e) {
       }), T && (0, a.jsxs)(l.Text, {
         color: "text-muted",
         variant: "text-xs/medium",
-        children: [null != g && c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({
-          channelName: g
+        children: [null != f && c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({
+          channelName: f
         }), (0, a.jsx)(l.Clickable, {
           onClick: S(!0),
           className: E.editChannel,

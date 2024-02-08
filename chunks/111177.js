@@ -14,8 +14,8 @@ var t, o = E("773364"),
   T = E("42887"),
   S = E("945956"),
   N = E("205817"),
-  A = E("599110"),
-  O = E("773336"),
+  O = E("599110"),
+  A = E("773336"),
   R = E("56947"),
   l = E("386045"),
   u = E("30591"),
@@ -70,7 +70,7 @@ t = class extends r.default {
       applicationName: _,
       errMsg: E
     } = e;
-    A.default.track(D.AnalyticEvents.CLIPS_INIT_FAILURE, {
+    O.default.track(D.AnalyticEvents.CLIPS_INIT_FAILURE, {
       application_name: _,
       error_message: E
     })
@@ -117,7 +117,7 @@ t = class extends r.default {
     try {
       let e = await a.default.processUtils.getSystemInfo(),
         _ = this.classifyHardware(e);
-      return A.default.track(D.AnalyticEvents.CLIPS_HARDWARE_CLASSIFICATION, {
+      return O.default.track(D.AnalyticEvents.CLIPS_HARDWARE_CLASSIFICATION, {
         classification: _,
         version: C.CLIPS_HARDWARE_CLASSIFICATION_VERSION,
         gpu_models: e.gpus.map(e => {
@@ -132,7 +132,7 @@ t = class extends r.default {
     }
   }
   classifyHardware(e) {
-    if ((0, O.isWindows)()) {
+    if ((0, A.isWindows)()) {
       let _ = e.gpus.some(e => {
           let {
             model: _
@@ -147,7 +147,7 @@ t = class extends r.default {
         });
       return _ ? u.ClipsHardwareClassification.MEETS_AUTO_ENABLE : E ? u.ClipsHardwareClassification.MEETS_MINIMUM : u.ClipsHardwareClassification.BELOW_MINIMUM
     }
-    if ((0, O.isMac)()) {
+    if ((0, A.isMac)()) {
       let _ = e.gpus.some(e => {
         let {
           model: _

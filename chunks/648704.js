@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("716241"),
   S = s("137215"),
   N = s("965397"),
-  f = s("599110"),
-  g = s("659500"),
+  g = s("599110"),
+  f = s("659500"),
   A = s("900938"),
   L = s("851490"),
   m = s("131835"),
@@ -76,8 +76,8 @@ function B(e) {
         delay: 1e3
       })
     }
-    return g.ComponentDispatch.subscribe(P.ComponentActions.EMPHASIZE_NOTICE, e), () => {
-      g.ComponentDispatch.unsubscribe(P.ComponentActions.EMPHASIZE_NOTICE, e)
+    return f.ComponentDispatch.subscribe(P.ComponentActions.EMPHASIZE_NOTICE, e), () => {
+      f.ComponentDispatch.unsubscribe(P.ComponentActions.EMPHASIZE_NOTICE, e)
     }
   }, [W]);
   let z = (0, E.useToken)(d.default.colors.BACKGROUND_FLOATING).hex(),
@@ -115,14 +115,14 @@ function B(e) {
       }
       return !0
     }, ee = async () => {
-      f.default.track(P.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+      g.default.track(P.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
         ...(0, I.collectGuildAnalyticsMetadata)(l),
         step: M.GuildSettingsOnboardingPage[A],
         back: !1,
         skip: !B
       }), (0, m.dismissEducationUpsell)((0, M.pageToEducationUpsellType)(A)), await $() && (0, m.goToNextOnboardingStep)(l, A)
     }, et = async () => {
-      f.default.track(P.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+      g.default.track(P.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
         ...(0, I.collectGuildAnalyticsMetadata)(l),
         step: M.GuildSettingsOnboardingPage[A],
         back: !0,

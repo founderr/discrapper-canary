@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return N
   },
   default: function() {
-    return O
+    return A
   }
 }), E("222007");
 var t = E("37983");
@@ -19,7 +19,7 @@ var o = E("77078"),
   T = E("49111"),
   S = E("843455");
 let N = "LOGIN_REQUIRED_ACTIONS_MODAL_KEY";
-class A extends r.default {
+class O extends r.default {
   handleConnectionOpen() {
     let e = a.default.getCurrentUser();
     if (null == e || I.ProcessArgs.isDisallowPopupsSet()) return;
@@ -53,4 +53,4 @@ class A extends r.default {
     }
   }
 }
-var O = new A
+var A = new O

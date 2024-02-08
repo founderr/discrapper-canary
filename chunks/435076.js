@@ -10,10 +10,10 @@ s.r(t), s.d(t, {
     return N
   },
   deleteNewMemberAction: function() {
-    return f
+    return g
   },
   reorderNewMemberActions: function() {
-    return g
+    return f
   },
   updateNewMemberActionIconData: function() {
     return A
@@ -84,14 +84,14 @@ function N(e, t) {
   })
 }
 
-function f(e) {
+function g(e) {
   i.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION",
     channelId: e
   })
 }
 
-function g(e) {
+function f(e) {
   i.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION",
     actions: e
@@ -219,7 +219,7 @@ function M(e, t) {
   })
 }
 async function G(e, t) {
-  var s, a, o, u, E, I, S, N, f;
+  var s, a, o, u, E, I, S, N, g;
   i.default.dispatch({
     type: "GUILD_HOME_SETTINGS_UPDATE_START"
   });
@@ -244,7 +244,7 @@ async function G(e, t) {
       enabled: null == r ? void 0 : r.enabled
     }), n.body
   } catch (t) {
-    let e = n.flatMap(null !== (f = t.body) && void 0 !== f ? f : {}, e => e);
+    let e = n.flatMap(null !== (g = t.body) && void 0 !== g ? g : {}, e => e);
     i.default.dispatch({
       type: "GUILD_HOME_SETTINGS_UPDATE_FAIL"
     }), r.default.show({

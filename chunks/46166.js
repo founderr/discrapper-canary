@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("913801"),
   S = s("45299"),
   N = s("545158"),
-  f = s("716241"),
-  g = s("465869"),
+  g = s("716241"),
+  f = s("465869"),
   A = s("900938"),
   L = s("973262"),
   m = s("965397"),
@@ -48,11 +48,11 @@ let p = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
       let e = {};
       R !== l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = R), ((null == d ? void 0 : d.store_page_primary_color) == null && j !== v || (null == d ? void 0 : d.store_page_primary_color) != null && j !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = j), b !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = b), H !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = H), !u.isEmpty(e) && (await A(l.id, e), "store_page_enabled" in e && h.default.track(M.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
         enabled: R,
-        ...(0, f.collectGuildAnalyticsMetadata)(l.id)
+        ...(0, g.collectGuildAnalyticsMetadata)(l.id)
       }))
     }, K = M.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(w), W = null != b && b === (null == d ? void 0 : d.store_page_trailer_url), {
       shouldRestrictUpdatingCreatorMonetizationSettings: z
-    } = (0, g.useShouldRestrictUpdatingCreatorMonetizationSettings)(l.id), Z = z || !F;
+    } = (0, f.useShouldRestrictUpdatingCreatorMonetizationSettings)(l.id), Z = z || !F;
     return (0, a.jsxs)("div", {
       children: [(0, a.jsx)(T.FormTitle, {
         tag: "h1",

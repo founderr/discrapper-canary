@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return O
+    return A
   }
 }), E("222007"), E("424973");
 var t = E("866227"),
@@ -28,7 +28,7 @@ let S = e => ({
     getLanguages: () => E("199005")
   });
 
-function A(e) {
+function O(e) {
   E("199038").dateFnsLocales[e]().then(_ => {
     let {
       default: t
@@ -54,5 +54,5 @@ N.addListener("locale", e => {
   _({
     locale: e
   })
-}), N.addListener("locale", A), A(N.getLocale());
-var O = N
+}), N.addListener("locale", O), O(N.getLocale());
+var A = N

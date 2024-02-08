@@ -26,11 +26,11 @@ function _(e) {
     publishedOnly: !1
   }), {
     allowSelfRemoveMonetization: N
-  } = (0, i.useShouldRestrictUpdatingCreatorMonetizationSettings)(t), f = _.filter(e => {
+  } = (0, i.useShouldRestrictUpdatingCreatorMonetizationSettings)(t), g = _.filter(e => {
     var t;
     let s = Object.values(null !== (t = e.ppgs) && void 0 !== t ? t : {})[0];
     return (null == s ? void 0 : s.status) === c.PaymentPayoutGroupStatuses.OPEN || (null == s ? void 0 : s.status) === c.PaymentPayoutGroupStatuses.PAYOUT_DEFERRED
-  }), g = I.length > 0, A = S.length > 0, L = f.length > 0;
+  }), f = I.length > 0, A = S.length > 0, L = g.length > 0;
   return null == T ? null : (0, a.jsxs)("div", {
     children: [(0, a.jsx)(l.FormText, {
       type: l.FormText.Types.DESCRIPTION,
@@ -40,7 +40,7 @@ function _(e) {
     }), (0, a.jsx)(d.default, {
       size: 16
     }), (0, a.jsx)(l.Button, {
-      disabled: !N || g || A || L,
+      disabled: !N || f || A || L,
       look: l.Button.Looks.FILLED,
       color: l.Button.Colors.RED,
       onClick: () => {

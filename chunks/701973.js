@@ -20,8 +20,8 @@ var a, n, l = s("37983"),
   I = s("77078"),
   S = s("430568"),
   N = s("419830"),
-  f = s("385976"),
-  g = s("405645"),
+  g = s("385976"),
+  f = s("405645"),
   A = s("233069"),
   L = s("245997"),
   m = s("305961"),
@@ -50,7 +50,7 @@ function V(e) {
     emojiId: s,
     emojiName: a,
     className: n
-  } = e, i = (0, E.useStateFromStores)([f.default], () => null != s ? f.default.getCustomEmojiById(s) : void 0);
+  } = e, i = (0, E.useStateFromStores)([g.default], () => null != s ? g.default.getCustomEmojiById(s) : void 0);
   return (0, l.jsx)(S.default, {
     emojiId: s,
     emojiName: a,
@@ -162,7 +162,7 @@ function Y(e) {
     existingIntangibleBenefits: n,
     onSubmit: r,
     onClose: o
-  } = e, d = s.role_benefits.benefits, [u, c] = i.useState(() => new Set(d)), E = i.useMemo(() => d.filter(p.isChannelBenefit), [d]), T = (0, v.default)(E), S = i.useMemo(() => d.filter(p.isIntangibleBenefit), [d]), N = i.useMemo(() => new Set(T.filter(e => a.some(t => t.ref_id === e.ref_id))), [T, a]), f = i.useMemo(() => new Set(S.filter(e => n.some(t => (0, _.default)(e, t)))), [n, S]), g = (0, C.useUID)();
+  } = e, d = s.role_benefits.benefits, [u, c] = i.useState(() => new Set(d)), E = i.useMemo(() => d.filter(p.isChannelBenefit), [d]), T = (0, v.default)(E), S = i.useMemo(() => d.filter(p.isIntangibleBenefit), [d]), N = i.useMemo(() => new Set(T.filter(e => a.some(t => t.ref_id === e.ref_id))), [T, a]), g = i.useMemo(() => new Set(S.filter(e => n.some(t => (0, _.default)(e, t)))), [n, S]), f = (0, C.useUID)();
 
   function A(e, t) {
     c(s => {
@@ -175,15 +175,15 @@ function Y(e) {
       e.preventDefault();
       let t = d.filter(e => u.has(e)),
         s = t.filter(p.isChannelBenefit).filter(e => !N.has(e)),
-        a = t.filter(p.isIntangibleBenefit).filter(e => !f.has(e));
+        a = t.filter(p.isIntangibleBenefit).filter(e => !g.has(e));
       r(s, a), o()
     },
     children: (0, l.jsxs)(I.ModalRoot, {
       transitionState: t,
-      "aria-labelledby": g,
+      "aria-labelledby": f,
       children: [(0, l.jsxs)(I.ModalHeader, {
         children: [(0, l.jsx)(I.Heading, {
-          id: g,
+          id: f,
           variant: "heading-md/semibold",
           children: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_MODAL_HEADER.format({
             tierName: s.name
@@ -205,7 +205,7 @@ function Y(e) {
           title: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
           selectAllText: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_INTANGIBLE_BENEFITS,
           benefits: S,
-          dupeBenefits: f,
+          dupeBenefits: g,
           selectedBenefits: u,
           onToggleBenefit: A
         })]
@@ -231,7 +231,7 @@ function K(e) {
     role: a,
     channelCount: n,
     onSelect: i
-  } = e, r = (0, g.useRoleIcon)({
+  } = e, r = (0, f.useRoleIcon)({
     guildId: s,
     roleId: a.id,
     size: H

@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   useResetClientThemePreview: function() {
-    return O
+    return A
   },
   useTrackClientThemePreviewEvent: function() {
     return R
@@ -18,15 +18,15 @@ var t = E("884691"),
   T = E("714657"),
   S = E("49111"),
   N = E("646718"),
-  A = E("116319");
-let O = () => {
+  O = E("116319");
+let A = () => {
     let e = (0, o.useStateFromStores)([T.default], () => T.default.gradientPreset),
-      _ = (0, o.useStateFromStores)([a.default], () => a.default.useSystemTheme === A.SystemThemeState.ON),
+      _ = (0, o.useStateFromStores)([a.default], () => a.default.useSystemTheme === O.SystemThemeState.ON),
       [E, n] = (0, t.useState)(_);
     return (0, t.useEffect)(() => {
       null == e && n(_)
     }, [e, _]), (0, t.useCallback)(() => {
-      if (null != e)(0, s.resetPreviewClientTheme)(), E && (0, r.setUseSystemTheme)(A.SystemThemeState.ON)
+      if (null != e)(0, s.resetPreviewClientTheme)(), E && (0, r.setUseSystemTheme)(O.SystemThemeState.ON)
     }, [e, E])
   },
   R = () => {

@@ -23,7 +23,7 @@ var a = s("37983"),
       isDisabled: l,
       sticker: S,
       canManageSticker: N
-    } = e, [f, g] = n.useState(!1), [A, L] = (0, d.default)(null, 4e3), m = () => {
+    } = e, [g, f] = n.useState(!1), [A, L] = (0, d.default)(null, 4e3), m = () => {
       (0, r.openModalLazy)(async () => {
         let {
           default: e
@@ -35,11 +35,11 @@ var a = s("37983"),
         })
       })
     }, C = async () => {
-      L(null), g(!0);
+      L(null), f(!0);
       try {
         await (0, E.deleteGuildSticker)(S)
       } catch (e) {
-        L(e.body.message), g(!1)
+        L(e.body.message), f(!1)
       }
     };
     return (0, a.jsx)(r.Tooltip, {
@@ -52,7 +52,7 @@ var a = s("37983"),
         }),
         children: [(0, a.jsxs)("div", {
           className: i(I.content, {
-            [I.contentRemoving]: f
+            [I.contentRemoving]: g
           }),
           children: [(0, a.jsx)(_.default, {
             className: I.sticker,
@@ -94,7 +94,7 @@ var a = s("37983"),
               })
             })]
           }) : null]
-        }), f && (0, a.jsx)(r.Spinner, {
+        }), g && (0, a.jsx)(r.Spinner, {
           className: I.spinner
         })]
       })

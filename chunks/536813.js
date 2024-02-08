@@ -15,9 +15,9 @@ var t = E("917351"),
   T = E("170152"),
   S = E("391591");
 let N = 15 * i.default.Millis.SECOND,
-  A = 15 * i.default.Millis.SECOND,
-  O = ["\uD83C\uDDE9", "\uD83C\uDDF4", "\uD83C\uDDF9", "\uD83C\uDDE6"],
-  R = O.length,
+  O = 15 * i.default.Millis.SECOND,
+  A = ["\uD83C\uDDE9", "\uD83C\uDDF4", "\uD83C\uDDF9", "\uD83C\uDDE6"],
+  R = A.length,
   l = function(e, _) {
     let E = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return "".concat(e, ":").concat(_, ":").concat(E)
@@ -46,13 +46,13 @@ function d(e) {
       if (null != r && null != a) a.cancel(), c.play(), delete C[r], (0, s.completeHighFive)(r.split(":")[0], _, E, e);
       else {
         (0, s.queueHighFive)(e, _, E), D.play();
-        let t = new n.DelayedCall(A, () => {
+        let t = new n.DelayedCall(O, () => {
           delete C[_], (0, s.removeHighFive)(_, E)
         });
         C[_] = t, t.delay()
       }
     }(_.name, t, E);
-    t === r && (L = [...L, _.name].slice(-1 * R), o.isEqual(L, O) ? (D.play(), u.stop(), L = [], (0, s.setHighFiveEnabled)(!i)) : u.start(N, () => L = []))
+    t === r && (L = [...L, _.name].slice(-1 * R), o.isEqual(L, A) ? (D.play(), u.stop(), L = [], (0, s.setHighFiveEnabled)(!i)) : u.start(N, () => L = []))
   }
 }
 

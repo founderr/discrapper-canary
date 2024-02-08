@@ -15,8 +15,8 @@ var a, n, l, i, r = s("37983"),
   I = s("879473"),
   S = s("912702"),
   N = s("381546"),
-  f = s("45029"),
-  g = s("956089"),
+  g = s("45029"),
+  f = s("956089"),
   A = s("427459"),
   L = s("49111"),
   m = s("782340"),
@@ -87,9 +87,9 @@ function D(e) {
     className: T
   } = e, I = e => {
     null == n || n(e)
-  }, [N, f] = o.useState(0);
+  }, [N, g] = o.useState(0);
   return o.useLayoutEffect(() => {
-    s && f(1)
+    s && g(1)
   }, [s]), (0, r.jsx)(c.Spring, {
     from: {
       unlockedTranslateY: 50
@@ -143,7 +143,7 @@ function M(e) {
     withCardBody: d = !0,
     guildId: c,
     showHeaderLockStatus: E = !0
-  } = e, I = (0, A.getAppliedGuildBoostsRequired)(c)[n.tier], S = l && s >= I, N = n.tier !== L.BoostedGuildTiers.NONE && n.tier !== L.BoostedGuildTiers.TIER_1, f = (e, t) => {
+  } = e, I = (0, A.getAppliedGuildBoostsRequired)(c)[n.tier], S = l && s >= I, N = n.tier !== L.BoostedGuildTiers.NONE && n.tier !== L.BoostedGuildTiers.TIER_1, g = (e, t) => {
     let {
       icon: s,
       className: a
@@ -159,7 +159,7 @@ function M(e) {
         className: C.perkText,
         children: [(0, r.jsxs)("div", {
           className: C.perkTitle,
-          children: [e.title, e.isNew ? (0, r.jsx)(g.TextBadge, {
+          children: [e.title, e.isNew ? (0, r.jsx)(f.TextBadge, {
             className: C.newBadge,
             text: m.default.Messages.NEW
           }) : null]
@@ -198,7 +198,7 @@ function M(e) {
           children: m.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_PREVIOUS_PERKS
         }) : null, null != n.perks && (0, r.jsx)("div", {
           className: C.perks,
-          children: n.perks.map(e => f(e, S))
+          children: n.perks.map(e => g(e, S))
         })]
       })
     })]
@@ -239,7 +239,7 @@ let G = e => {
         children: m.default.Messages.GUILD_SETTINGS_PREMIUM_GUILD_TIER_REQUIREMENT.format({
           required: t
         })
-      }), (0, r.jsx)(f.default, {
+      }), (0, r.jsx)(g.default, {
         className: C.tierLock
       })]
     })

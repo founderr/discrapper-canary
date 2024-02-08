@@ -23,7 +23,7 @@ function S() {
   let {
     editStateId: e,
     guildId: t
-  } = (0, r.useEditStateContext)(), [, S] = o.useRoleIcon(e, t), [N, f] = o.useRoleColor(e, t), g = o.useRole(e, t);
+  } = (0, r.useEditStateContext)(), [, S] = o.useRoleIcon(e, t), [N, g] = o.useRoleColor(e, t), f = o.useRole(e, t);
 
   function A() {
     (0, n.openModalLazy)(async () => {
@@ -53,7 +53,7 @@ function S() {
       disabled: L,
       children: (0, a.jsx)(c.default, {
         value: N,
-        onChange: f,
+        onChange: g,
         disabled: L
       })
     }), (0, a.jsx)(l.default, {
@@ -71,7 +71,7 @@ function S() {
         }), (0, a.jsxs)("div", {
           className: I.iconUploaderContainer,
           children: [(0, a.jsx)(E.default, {
-            role: g,
+            role: f,
             "aria-label": _.default.Messages.ROLE_ICON_CHOOSE_IMAGE,
             onClick: A,
             disabled: L
@@ -93,12 +93,12 @@ function S() {
         "aria-hidden": !0,
         children: [(0, a.jsx)(u.default, {
           guildId: t,
-          role: g,
+          role: f,
           className: I.messageContainer,
           theme: "light"
         }), (0, a.jsx)(u.default, {
           guildId: t,
-          role: g,
+          role: f,
           className: I.messageContainer,
           theme: "dark"
         })]

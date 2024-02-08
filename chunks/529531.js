@@ -15,8 +15,8 @@ var t = E("37983"),
   T = E("206625"),
   S = E("206230"),
   N = E("812204"),
-  A = E("685665"),
-  O = E("917247"),
+  O = E("685665"),
+  A = E("917247"),
   R = E("635956"),
   l = E("891653"),
   u = E("697218"),
@@ -38,7 +38,7 @@ let G = () => {
   p = () => {
     var e, _, E;
     let o = (0, a.useStateFromStores)([u.default], () => D.default.isPremium(u.default.getCurrentUser())),
-      n = (0, O.usePremiumTrialOffer)(),
+      n = (0, A.usePremiumTrialOffer)(),
       r = (null == n ? void 0 : null === (e = n.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === h.PremiumSubscriptionSKUs.TIER_2;
     return (0, t.jsx)(R.default, {
       size: i.Button.Sizes.MEDIUM,
@@ -100,8 +100,8 @@ function B(e) {
   } = e, {
     analyticsLocations: n,
     AnalyticsLocationProvider: I
-  } = (0, A.default)(N.default.APP_ICON_EDITOR), s = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
-    isUpsellPreview: O,
+  } = (0, O.default)(N.default.APP_ICON_EDITOR), s = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
+    isUpsellPreview: A,
     isEditorOpen: R,
     shouldEditorAnimate: l
   } = (0, a.useStateFromStoresObject)([c.default, S.default], () => ({
@@ -110,15 +110,15 @@ function B(e) {
     shouldEditorAnimate: _ && !S.default.useReducedMotion
   }));
   o.useEffect(() => {
-    O && C.default.track(U.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    A && C.default.track(U.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: h.PremiumUpsellTypes.APP_ICON_UPSELL,
       location_stack: n
     })
-  }, [O, n]);
-  let L = (0, T.default)(null, O ? G : U.NOOP);
+  }, [A, n]);
+  let L = (0, T.default)(null, A ? G : U.NOOP);
   return (o.useEffect(() => {
-    if (O && !R) return G
-  }, [O, R]), null == s) ? null : (0, t.jsx)(I, {
+    if (A && !R) return G
+  }, [A, R]), null == s) ? null : (0, t.jsx)(I, {
     children: (0, t.jsx)("div", {
       ref: L,
       className: r(m.editor, l ? m.editorAnimate : null),

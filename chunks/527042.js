@@ -25,8 +25,8 @@ var a = s("37983"),
   I = s("150021"),
   S = s("133403"),
   N = s("349389"),
-  f = s("84339"),
-  g = s("250666"),
+  g = s("84339"),
+  f = s("250666"),
   A = s("341595"),
   L = s("345988"),
   m = s("153043"),
@@ -284,7 +284,7 @@ var z = () => {
       revision: v.default.getEmojiRevision(e.id),
       emojis: v.default.getEmojis(e.id)
     })),
-    I = (0, f.default)(d),
+    I = (0, g.default)(d),
     [S, L] = n.useState(!1),
     [R, D] = n.useState(!1),
     G = n.useRef(null);
@@ -324,7 +324,7 @@ var z = () => {
         ...s
       })
     })
-  }, Z = (0, g.isCreatorMonetizationEnabledGuild)(e);
+  }, Z = (0, f.isCreatorMonetizationEnabledGuild)(e);
   return (0, a.jsxs)("div", {
     className: B.emojiSettings,
     children: [0 === V ? null : (0, a.jsx)(N.default, {

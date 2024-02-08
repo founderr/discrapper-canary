@@ -26,20 +26,20 @@ function u(e) {
   } = e;
   if (null == t) return null;
   let {
-    emoji: A
-  } = t, _ = null != t.state && "" !== t.state ? t.state : o;
+    emoji: m
+  } = t, S = null != t.state && "" !== t.state ? t.state : o;
   return (0, n.jsxs)("div", {
     className: s(r.container, a),
-    children: [T || null == A ? null : (0, n.jsx)(i.ActivityEmoji, {
-      emoji: A,
+    children: [T || null == m ? null : (0, n.jsx)(i.ActivityEmoji, {
+      emoji: m,
       className: s(r.emoji, l, null != c ? {
-        [c]: null == _ || "" === _
+        [c]: null == S || "" === S
       } : null),
       animate: d,
       hideTooltip: f
-    }), null != _ && _.length > 0 ? (0, n.jsx)("span", {
+    }), null != S && S.length > 0 ? (0, n.jsx)("span", {
       className: u,
-      children: _
+      children: S
     }) : null, E]
   })
 }

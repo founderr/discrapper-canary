@@ -15,8 +15,8 @@ var t = E("37983"),
   T = E("452804"),
   S = E("79112"),
   N = E("206625"),
-  A = E("206230"),
-  O = E("812204"),
+  O = E("206230"),
+  A = E("812204"),
   R = E("685665"),
   l = E("917247"),
   u = E("635956"),
@@ -74,13 +74,13 @@ let B = () => (0, t.jsx)("div", {
       markAsDismissed: r
     } = e, {
       analyticsLocations: a
-    } = (0, R.default)(O.default.CLIENT_THEMES_EDITOR), [S, N] = (0, i.useStateFromStoresArray)([C.default, M.default], () => [M.default.gradientPreset, d.default.isPremium(C.default.getCurrentUser())]), A = (0, l.usePremiumTrialOffer)(), L = (0, d.formatTrialCtaIntervalDuration)({
-      intervalType: null == A ? void 0 : null === (_ = A.subscription_trial) || void 0 === _ ? void 0 : _.interval,
-      intervalCount: null == A ? void 0 : null === (E = A.subscription_trial) || void 0 === E ? void 0 : E.interval_count
+    } = (0, R.default)(A.default.CLIENT_THEMES_EDITOR), [S, N] = (0, i.useStateFromStoresArray)([C.default, M.default], () => [M.default.gradientPreset, d.default.isPremium(C.default.getCurrentUser())]), O = (0, l.usePremiumTrialOffer)(), L = (0, d.formatTrialCtaIntervalDuration)({
+      intervalType: null == O ? void 0 : null === (_ = O.subscription_trial) || void 0 === _ ? void 0 : _.interval,
+      intervalCount: null == O ? void 0 : null === (E = O.subscription_trial) || void 0 === E ? void 0 : E.interval_count
     });
     return (0, t.jsx)(u.default, {
       size: s.Button.Sizes.MEDIUM,
-      buttonText: N ? g.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == A ? void 0 : null === (o = A.subscription_trial) || void 0 === o ? void 0 : o.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? L : g.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+      buttonText: N ? g.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == O ? void 0 : null === (o = O.subscription_trial) || void 0 === o ? void 0 : o.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? L : g.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
       subscriptionTier: p.PremiumSubscriptionSKUs.TIER_2,
       onSubscribeModalClose: e => {
         if (!!e) null == n || n(), null != r && r(G.ContentDismissActionType.PRIMARY), null != S && ((0, P.trackClientThemeUpdated)({
@@ -139,16 +139,16 @@ function b(e) {
   } = e, {
     analyticsLocations: E,
     AnalyticsLocationProvider: n
-  } = (0, R.default)(O.default.CLIENT_THEMES_EDITOR), {
+  } = (0, R.default)(A.default.CLIENT_THEMES_EDITOR), {
     isPreview: a,
     isCoachmark: I,
     isEditorOpen: T,
     shouldEditorAnimate: S
-  } = (0, i.useStateFromStoresObject)([M.default, A.default], () => ({
+  } = (0, i.useStateFromStoresObject)([M.default, O.default], () => ({
     isPreview: M.default.isPreview,
     isCoachmark: M.default.isCoachmark,
     isEditorOpen: M.default.isEditorOpen,
-    shouldEditorAnimate: M.default.isCoachmark && !A.default.useReducedMotion
+    shouldEditorAnimate: M.default.isCoachmark && !O.default.useReducedMotion
   })), l = (0, h.useTrackClientThemePreviewEvent)();
   o.useEffect(() => l(m.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [l]), o.useEffect(() => {
     a && c.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {

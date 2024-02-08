@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("353575"),
   S = s("296839"),
   N = s("4443"),
-  f = s("151866"),
-  g = s("646834"),
+  g = s("151866"),
+  f = s("646834"),
   A = s("124188"),
   L = s("155158"),
   m = s("143460"),
@@ -36,7 +36,7 @@ function R(e) {
   } = e, {
     editingRule: M,
     setEditingRule: G
-  } = (0, f.useAutomodEditingRuleState)(), {
+  } = (0, g.useAutomodEditingRuleState)(), {
     guild: x,
     subsection: p
   } = (0, l.useStateFromStoresObject)([o.default], () => o.default.getProps()), U = null !== (s = null !== (t = null == x ? void 0 : x.id) && void 0 !== t ? t : R) && void 0 !== s ? s : "", v = null != M, [P] = (0, I.useSyncAutomodRulesEffect)(U), {
@@ -142,7 +142,7 @@ function R(e) {
       guild: x,
       withDivider: !1,
       className: h.explicitContentFilterSection
-    }), (0, a.jsx)(g.default, {
+    }), (0, a.jsx)(f.default, {
       guildId: U,
       existingRules: b
     }), v && (0, a.jsx)("div", {

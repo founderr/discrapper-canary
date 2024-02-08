@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("653274"),
   S = s("131835"),
   N = s("330724"),
-  f = s("136278"),
-  g = s("682327"),
+  g = s("136278"),
+  f = s("682327"),
   A = s("457461"),
   L = s("49111"),
   m = s("653138"),
@@ -34,7 +34,7 @@ function h(e) {
   let {
     guildId: t,
     prompts: s
-  } = e, r = (0, l.useStateFromStores)([I.default], () => I.default.editedDefaultChannelIds), [d, T] = (0, u.useChannelCoverageForOnboarding)(t, s, [...r]), S = d.length, N = d.length + T.length, f = S / N * 100, g = Math.max(Math.ceil(85 * N / 100) - S, 0), [A, L] = n.useState(!1);
+  } = e, r = (0, l.useStateFromStores)([I.default], () => I.default.editedDefaultChannelIds), [d, T] = (0, u.useChannelCoverageForOnboarding)(t, s, [...r]), S = d.length, N = d.length + T.length, g = S / N * 100, f = Math.max(Math.ceil(85 * N / 100) - S, 0), [A, L] = n.useState(!1);
   return (0, a.jsxs)("div", {
     className: O.channelCoverage,
     children: [(0, a.jsxs)(i.Clickable, {
@@ -42,7 +42,7 @@ function h(e) {
       onClick: () => L(!A),
       children: [(0, a.jsxs)("div", {
         className: O.warningTextContainer,
-        children: [f <= 85 && (0, a.jsx)(_.default, {
+        children: [g <= 85 && (0, a.jsx)(_.default, {
           width: 16,
           height: 16,
           className: O.warning
@@ -58,8 +58,8 @@ function h(e) {
         className: O.progressContainer,
         children: [(0, a.jsx)(i.Progress, {
           className: O.coverageProgress,
-          foregroundColor: f > 85 ? "var(--status-positive)" : "var(--status-warning)",
-          percent: f
+          foregroundColor: g > 85 ? "var(--status-positive)" : "var(--status-warning)",
+          percent: g
         }), (0, a.jsx)(E.default, {
           className: O.caret,
           open: A
@@ -91,7 +91,7 @@ function h(e) {
         })
       }), (0, a.jsx)("div", {
         className: O.channelCoverageHint,
-        children: g > 0 ? (0, a.jsxs)(a.Fragment, {
+        children: f > 0 ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(_.default, {
             width: 16,
             height: 16
@@ -99,7 +99,7 @@ function h(e) {
             variant: "text-xs/normal",
             color: "text-muted",
             children: C.default.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_ADD_HELP.format({
-              numChannels: g
+              numChannels: f
             })
           })]
         }) : (0, a.jsx)(i.Text, {
@@ -126,7 +126,7 @@ function D(e) {
   let {
     guild: t,
     saveOnClose: s
-  } = e, r = (0, l.useStateFromStores)([d.default], () => d.default.isLoading()), o = (0, l.useStateFromStores)([f.default], () => f.default.editedOnboardingPrompts), u = (0, l.useStateFromStores)([f.default], () => f.default.advancedMode), c = n.useRef(!1);
+  } = e, r = (0, l.useStateFromStores)([d.default], () => d.default.isLoading()), o = (0, l.useStateFromStores)([g.default], () => g.default.editedOnboardingPrompts), u = (0, l.useStateFromStores)([g.default], () => g.default.advancedMode), c = n.useRef(!1);
   if (n.useEffect(() => {
       !r && !c.current && 0 === o.length && (c.current = !0, !u && (0, N.editGuildOnboardingPrompts)(t, [(0, m.getDefaultPrompt)()], !1))
     }), n.useEffect(() => {
@@ -171,7 +171,7 @@ function D(e) {
         })
       }), (0, a.jsx)("div", {
         className: O.dot
-      }), (0, a.jsx)(g.AdvancedModeToggle, {
+      }), (0, a.jsx)(f.AdvancedModeToggle, {
         guildId: t.id
       })]
     }), (0, a.jsx)(h, {
@@ -189,7 +189,7 @@ function D(e) {
 
 function M() {
   let e = (0, l.useStateFromStores)([T.default], () => T.default.getGuild()),
-    t = (0, l.useStateFromStores)([f.default], () => f.default.submitting);
+    t = (0, l.useStateFromStores)([g.default], () => g.default.submitting);
   return null == e ? null : (0, a.jsx)(r.default, {
     onSave: () => {
       try {

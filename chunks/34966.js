@@ -15,19 +15,19 @@ let i = {},
   T = null,
   S = null,
   N = "lastChangeLogId",
-  A = "lastChangeLogDate",
-  O = null,
+  O = "lastChangeLogDate",
+  A = null,
   R = null,
   l = new Set;
 class u extends t.default.Store {
   initialize() {
     var e;
-    this.waitFor(r.default), this.syncWith([r.default], () => !0), O = null !== (e = o.default.get(N)) && void 0 !== e ? e : null;
-    let _ = o.default.get(A);
+    this.waitFor(r.default), this.syncWith([r.default], () => !0), A = null !== (e = o.default.get(N)) && void 0 !== e ? e : null;
+    let _ = o.default.get(O);
     if (null != _) try {
       R = new Date(_)
     } catch {
-      o.default.remove(A)
+      o.default.remove(O)
     }
   }
   getChangelog(e, _) {
@@ -51,7 +51,7 @@ class u extends t.default.Store {
     return T
   }
   lastSeenChangelogId() {
-    return O
+    return A
   }
   lastSeenChangelogDate() {
     return R
@@ -60,7 +60,7 @@ class u extends t.default.Store {
     return {
       changelogConfig: S,
       loadedChangelogs: I,
-      lastSeenChangelogId: O,
+      lastSeenChangelogId: A,
       lastSeenChangelogDate: R
     }
   }
@@ -124,6 +124,6 @@ var L = new u(n.default, {
       changelogId: _,
       changelogDate: E
     } = e;
-    O = null != _ ? _ : null, R = new Date(E), o.default.set(N, _), o.default.set(A, E)
+    A = null != _ ? _ : null, R = new Date(E), o.default.set(N, _), o.default.set(O, E)
   }
 })

@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("679653"),
   S = s("419830"),
   N = s("385976"),
-  f = s("233706"),
-  g = s("223170"),
+  g = s("233706"),
+  f = s("223170"),
   A = s("478964"),
   L = s("310457"),
   m = s("42203"),
@@ -44,7 +44,7 @@ let y = "WELCOME_CHANNEL",
         guildId: r,
         welcomeChannel: o,
         onEdit: T,
-        onChannelReorder: g,
+        onChannelReorder: f,
         isDropHovered: A,
         index: C
       } = e,
@@ -57,7 +57,7 @@ let y = "WELCOME_CHANNEL",
       F = (0, I.default)(x, !1),
       {
         homeSettingsEnabled: H
-      } = (0, f.useOnboardingHomeAdminExperiment)(r),
+      } = (0, g.useOnboardingHomeAdminExperiment)(r),
       [, V] = (0, d.useDrag)({
         type: y,
         item: {
@@ -65,16 +65,16 @@ let y = "WELCOME_CHANNEL",
           index: C
         },
         end: (e, t) => {
-          null != e && !t.didDrop() && g(e.channel, null, !0)
+          null != e && !t.didDrop() && f(e.channel, null, !0)
         }
       }),
       [, w] = (0, d.useDrop)({
         accept: y,
         hover: e => {
-          g(e.channel, C, !1)
+          f(e.channel, C, !1)
         },
         drop: e => {
-          g(e.channel, C, !0)
+          f(e.channel, C, !0)
         }
       });
     return n.useLayoutEffect(() => (V(w(M)), () => {
@@ -106,7 +106,7 @@ let y = "WELCOME_CHANNEL",
             ...t,
             guildId: r,
             welcomeChannel: o,
-            onChannelReorder: g,
+            onChannelReorder: f,
             setShowConfirmModal: h,
             onEdit: T,
             index: C
@@ -170,36 +170,36 @@ var B = e => {
     enabled: y
   } = r, {
     homeSettingsEnabled: B
-  } = (0, f.useOnboardingHomeAdminExperiment)(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : ""), F = () => {
-    if (null != l) R !== d.description && ((0, g.saveWelcomeScreen)(l.id, {
+  } = (0, g.useOnboardingHomeAdminExperiment)(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : ""), F = () => {
+    if (null != l) R !== d.description && ((0, f.saveWelcomeScreen)(l.id, {
       description: null == R ? void 0 : R.trim()
     }), N(!0))
   }, H = e => {
-    if (null != l) !o(e, d.channels) && ((0, g.saveWelcomeScreen)(l.id, {
+    if (null != l) !o(e, d.channels) && ((0, f.saveWelcomeScreen)(l.id, {
       channels: e
     }), N(!0))
   }, V = e => {
-    if (null != l) e !== d.enabled && ((0, g.saveWelcomeScreen)(l.id, {
+    if (null != l) e !== d.enabled && ((0, f.saveWelcomeScreen)(l.id, {
       enabled: e
     }), m(!E), N(!0))
   }, w = e => {
     if (null == e) return;
     let t = [...null != G ? G : [], e];
-    (0, g.updateSettings)({
+    (0, f.updateSettings)({
       channels: t
     }), H(t)
   }, k = e => t => {
     let s = [...null != G ? G : []];
-    null == t ? s.splice(e, 1) : s[e] = t, (0, g.updateSettings)({
+    null == t ? s.splice(e, 1) : s[e] = t, (0, f.updateSettings)({
       channels: s
-    }), H(s), 0 === s.length && y && ((0, g.updateSettings)({
+    }), H(s), 0 === s.length && y && ((0, f.updateSettings)({
       enabled: !1
     }), V(!1))
   }, Y = (e, t, s) => {
     if (null == G) return;
     let a = G.indexOf(e),
       n = [...G];
-    null != t && t !== a && (n.splice(a, 1), n.splice(t, 0, e), (0, g.updateSettings)({
+    null != t && t !== a && (n.splice(a, 1), n.splice(t, 0, e), (0, f.updateSettings)({
       channels: n
     })), s ? (H(n), I(null)) : I(t)
   }, K = n.useRef(!1);
@@ -232,7 +232,7 @@ var B = e => {
         is_enabled: y
       })
     }
-  }, [S, G, R, y, l, K]), n.useEffect(() => () => (0, g.clearWelcomeScreenSettings)(), []);
+  }, [S, G, R, y, l, K]), n.useEffect(() => () => (0, f.clearWelcomeScreenSettings)(), []);
   let W = n.useCallback(() => {
     null != l && x.default.open(l.id, U.GuildSettingsSections.ONBOARDING)
   }, [l]);
@@ -307,7 +307,7 @@ var B = e => {
             className: j.descriptionInput,
             placeholder: P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_DESCRIPTION_PLACEHOLDER,
             onChange: e => {
-              (0, g.updateSettings)({
+              (0, f.updateSettings)({
                 description: e
               })
             },

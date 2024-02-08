@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return f
   }
 }), s("222007");
 var a, n, l = s("37983"),
@@ -18,7 +18,7 @@ var a, n, l = s("37983"),
   S = s("812735"),
   N = s("756058");
 (n = a || (a = {}))[n.LOADING = 0] = "LOADING", n[n.INTRO = 1] = "INTRO", n[n.SETTINGS = 2] = "SETTINGS";
-let f = e => {
+let g = e => {
   let {
     setWelcomeView: t,
     setShowCreateModal: a
@@ -108,7 +108,7 @@ let f = e => {
     })]
   })
 };
-var g = () => {
+var f = () => {
   let {
     guild: e
   } = (0, r.useStateFromStores)([_.default], () => _.default.getProps()), [t, s] = i.useState(0), [a, n] = i.useState(!1);
@@ -124,7 +124,7 @@ var g = () => {
         type: o.Spinner.Type.SPINNING_CIRCLE
       });
     case 1:
-      return (0, l.jsx)(f, {
+      return (0, l.jsx)(g, {
         setWelcomeView: s,
         setShowCreateModal: n
       });

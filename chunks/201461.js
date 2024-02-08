@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("417385"),
   S = s("735201"),
   N = s("555158"),
-  f = s("599110"),
-  g = s("427459"),
+  g = s("599110"),
+  f = s("427459"),
   A = s("701909"),
   L = s("900938"),
   m = s("49111"),
@@ -53,9 +53,9 @@ function R(e) {
   let {
     appliedGuildBoosts: t,
     guildId: s
-  } = e, n = (0, g.getGracePeriodEndingDate)(t, s), l = (0, g.getTierName)((0, g.getGuildTierFromAppliedBoostCount)(t.length, s));
+  } = e, n = (0, f.getGracePeriodEndingDate)(t, s), l = (0, f.getTierName)((0, f.getGuildTierFromAppliedBoostCount)(t.length, s));
   if (null == n || null == l) return null;
-  let i = (0, g.appliedGuildBoostsRequiredForPerks)(t, s);
+  let i = (0, f.appliedGuildBoostsRequiredForPerks)(t, s);
   return (0, a.jsxs)(N.default, {
     messageType: N.HelpMessageTypes.WARNING,
     children: [(0, a.jsx)("div", {
@@ -113,12 +113,12 @@ function M() {
         })
       })]
     }), (0, a.jsx)(T.default, {
-      tiers: (0, g.getTiers)(null != e && e.hasFeature(m.GuildFeatures.COMMUNITY) && e.maxStageVideoChannelUsers >= m.MAX_STAGE_VIDEO_USER_LIMIT_TIER01),
+      tiers: (0, f.getTiers)(null != e && e.hasFeature(m.GuildFeatures.COMMUNITY) && e.maxStageVideoChannelUsers >= m.MAX_STAGE_VIDEO_USER_LIMIT_TIER01),
       renderTier: D
     }), (0, a.jsx)("div", {
       className: O.divider
     }), s ? (0, a.jsx)(_.default, {}) : null, s ? (0, a.jsx)(E.default, {
-      onOpenPremiumClick: () => void f.default.track(m.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+      onOpenPremiumClick: () => void g.default.track(m.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
         location: {
           page: m.AnalyticsPages.GUILD_SETTINGS,
           section: m.AnalyticsSections.NITRO_CROSS_PROMO_FROM_BOOSTING,

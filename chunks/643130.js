@@ -16,8 +16,8 @@ var o = E("917351"),
   T = E("271938"),
   S = E("525065"),
   N = E("945956"),
-  A = E("697218"),
-  O = E("451772"),
+  O = E("697218"),
+  A = E("451772"),
   R = E("374014"),
   l = E("16916"),
   u = E("706530"),
@@ -25,7 +25,7 @@ var o = E("917351"),
 let C = (0, o.debounce)(i.notifyStreamStart, 1e3);
 var D = {
   init() {
-    O.default.init(), r.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
+    A.default.init(), r.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
       let {
         videoState: _
       } = e, E = s.default.getCurrentUserActiveStream();
@@ -75,7 +75,7 @@ var D = {
         ownerId: t,
         guildId: o
       } = (0, R.decodeStreamKey)(E);
-      if (null == o || null == t || t !== (null === (_ = A.default.getCurrentUser()) || void 0 === _ ? void 0 : _.id)) return;
+      if (null == o || null == t || t !== (null === (_ = O.default.getCurrentUser()) || void 0 === _ ? void 0 : _.id)) return;
       let n = S.default.getMemberCount(o);
       null != n && !(n < 2) && !(n > u.STREAM_NOTIFY_GUILD_MAX_SIZE) && I.NotifyFriendsOnGoLive.getSetting() && C(E)
     })

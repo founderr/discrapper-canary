@@ -19,9 +19,9 @@ let s = 26,
   T = {},
   S = {},
   N = {},
-  A = {};
+  O = {};
 
-function O(e) {
+function A(e) {
   let _ = S[e];
   if (null == _) return;
   let E = i.default.fromTimestamp(Date.now() - 9e5),
@@ -37,7 +37,7 @@ function O(e) {
 function R(e, _, E, t) {
   T[e].add(_);
   let o = N[_];
-  (null == o || o + 3e5 > Date.now()) && O(_), null == S[_] && (S[_] = []), S[_].push({
+  (null == o || o + 3e5 > Date.now()) && A(_), null == S[_] && (S[_] = []), S[_].push({
     id: E,
     userId: t
   })
@@ -51,7 +51,7 @@ function l(e) {
 }
 class u extends n.default.Store {
   getActiveChannelsFetchStatus(e) {
-    return A[e]
+    return O[e]
   }
   getActiveChannelIds(e) {
     return T[e]
@@ -61,7 +61,7 @@ class u extends n.default.Store {
   }
   shouldFetch(e) {
     var _;
-    return null == T[e] && !(null === (_ = A[e]) || void 0 === _ ? void 0 : _.loading)
+    return null == T[e] && !(null === (_ = O[e]) || void 0 === _ ? void 0 : _.loading)
   }
 }
 u.displayName = "ActiveChannelsStore";
@@ -76,7 +76,7 @@ var L = new u(r.default, {
     if (null == t) return !1;
     t.forEach(e => {
       var _;
-      O(e), (null === (_ = S[e]) || void 0 === _ ? void 0 : _.length) === 0 && delete S[e]
+      A(e), (null === (_ = S[e]) || void 0 === _ ? void 0 : _.length) === 0 && delete S[e]
     });
     let n = o.chain(Array.from(t)).filter(e => e in S).sortBy(e => {
       var _, E;
@@ -111,7 +111,7 @@ var L = new u(r.default, {
     let {
       guildId: _
     } = e;
-    A[_] = {
+    O[_] = {
       loading: !0,
       error: null,
       fetchedAt: Date.now()
@@ -122,7 +122,7 @@ var L = new u(r.default, {
       guildId: _,
       channels: E
     } = e;
-    A[_] = {
+    O[_] = {
       loading: !1,
       error: null,
       fetchedAt: Date.now()
@@ -141,7 +141,7 @@ var L = new u(r.default, {
       guildId: _,
       error: E
     } = e;
-    A[_] = {
+    O[_] = {
       loading: !1,
       error: E,
       fetchedAt: null

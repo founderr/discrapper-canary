@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return c
   },
   useAutomodRulesList: function() {
-    return f
+    return I
   }
 }), n("424973"), n("222007"), n("808653");
 var r = n("884691"),
   o = n("308503"),
-  i = n("16470"),
-  u = n("448993"),
+  u = n("16470"),
+  i = n("448993"),
   a = n("702873"),
   l = n("254365"),
   s = n("143460");
@@ -45,16 +45,16 @@ let d = {},
     updateRule: n => {
       var r, o;
       let {
-        guildId: i,
-        id: u,
+        guildId: u,
+        id: i,
         triggerType: a
       } = n, {
         rules: s
-      } = t(), d = null !== (r = s[i]) && void 0 !== r ? r : {}, T = null !== (o = d[a]) && void 0 !== o ? o : [], E = T.some(e => e.id === u), A = T.filter(e => (!(0, l.isDefaultRuleId)(e.id) || e.triggerType !== a) && !0), _ = E ? A.map(e => e.id === u ? n : e) : [...A, n];
+      } = t(), d = null !== (r = s[u]) && void 0 !== r ? r : {}, T = null !== (o = d[a]) && void 0 !== o ? o : [], E = T.some(e => e.id === i), A = T.filter(e => (!(0, l.isDefaultRuleId)(e.id) || e.triggerType !== a) && !0), _ = E ? A.map(e => e.id === i ? n : e) : [...A, n];
       e({
         rules: {
           ...s,
-          [i]: {
+          [u]: {
             ...d,
             [a]: _
           }
@@ -65,16 +65,16 @@ let d = {},
     removeRule: (n, r) => {
       let {
         rules: o
-      } = t(), i = o[r], u = Object.keys(i).reduce((e, t) => {
+      } = t(), u = o[r], i = Object.keys(u).reduce((e, t) => {
         var r;
         let o = Number(t),
-          u = null !== (r = i[o]) && void 0 !== r ? r : [];
-        return e[o] = u.filter(e => e.id !== n), e
-      }, i);
+          i = null !== (r = u[o]) && void 0 !== r ? r : [];
+        return e[o] = i.filter(e => e.id !== n), e
+      }, u);
       e({
         rules: {
           ...o,
-          [r]: u
+          [r]: i
         },
         error: null
       })
@@ -90,16 +90,16 @@ let d = {},
         try {
           let r = await (0, a.fetchAutomodRules)(n),
             o = T(r),
-            i = t().rules;
+            u = t().rules;
           e({
             rules: {
-              ...i,
+              ...u,
               [n]: o
             },
             error: null
           })
         } catch (n) {
-          let t = new u.APIError(n);
+          let t = new i.APIError(n);
           e({
             error: t
           })
@@ -110,18 +110,18 @@ let d = {},
   A = (e, t) => {
     var n, r;
     let o = E.getState().rules,
-      i = null !== (r = null === (n = o[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : [];
-    return i.length
+      u = null !== (r = null === (n = o[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : [];
+    return u.length
   };
 
 function _(e) {
-  let [t, n] = r.useState(!1), [o, u] = E(e => [e.syncRules, e.fetching], i.default), a = r.useCallback(async () => {
-    if (!u && null != e) try {
+  let [t, n] = r.useState(!1), [o, i] = E(e => [e.syncRules, e.fetching], u.default), a = r.useCallback(async () => {
+    if (!i && null != e) try {
       n(!0), await o(e)
     } finally {
       n(!1)
     }
-  }, [e, u, o]);
+  }, [e, i, o]);
   return [t, a]
 }
 
@@ -134,7 +134,7 @@ function c(e) {
   }, [e, n]), [t, n]
 }
 
-function f(e) {
+function I(e) {
   return E(t => {
     var n;
     return {

@@ -7,10 +7,10 @@ s.r(t), s.d(t, {
     return N
   },
   useGuildMembers: function() {
-    return f
+    return g
   },
   useGuildRoleMembers: function() {
-    return g
+    return f
   },
   useQueryGuildMembers: function() {
     return A
@@ -41,7 +41,7 @@ var a = s("884691"),
 let S = 50,
   N = 1e3;
 
-function f(e, t) {
+function g(e, t) {
   let s = (0, i.useStateFromStoresArray)([r.default], () => {
       let s = r.default.getMembers(e);
       return null == t ? s : s.filter(t)
@@ -72,12 +72,12 @@ function f(e, t) {
   }, [s, n, e])
 }
 
-function g(e, t, s) {
+function f(e, t, s) {
   a.useEffect(() => {
     (0, _.requestMembersForRole)(e, t).catch(s)
   }, [e, t]);
   let n = a.useCallback(e => e.roles.includes(t), [t]);
-  return f(e, n)
+  return g(e, n)
 }
 
 function A(e, t) {

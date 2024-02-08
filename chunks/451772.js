@@ -15,8 +15,8 @@ var t = E("862337"),
   T = E("205817"),
   S = E("718517"),
   N = E("374014"),
-  A = E("49111");
-let O = new t.Timeout,
+  O = E("49111");
+let A = new t.Timeout,
   R = new t.Timeout,
   l = 5 * S.default.Millis.SECOND,
   u = 12 * S.default.Millis.SECOND,
@@ -76,7 +76,7 @@ var c = {
     }), o.default.subscribe("STREAM_DELETE", () => {
       R.stop()
     }), o.default.subscribe("STREAM_CLOSE", () => {
-      O.stop(), R.stop()
+      A.stop(), R.stop()
     }), o.default.subscribe("VOICE_CHANNEL_SELECT", e => {
       let {
         channelId: _
@@ -104,8 +104,8 @@ var c = {
         if (_ !== a.default.getId() && null != E) {
           if (o && C(E, _)) return;
           let e = r.default.getActiveStreamForUser(_, t);
-          if (null != e && e.channelId === E && (!o && e.state !== A.ApplicationStreamStates.ENDED && O.start(18e4, () => (0, n.closeStream)((0, N.encodeStreamKey)(e), !1)), o && e.state === A.ApplicationStreamStates.ENDED)) {
-            O.stop();
+          if (null != e && e.channelId === E && (!o && e.state !== O.ApplicationStreamStates.ENDED && A.start(18e4, () => (0, n.closeStream)((0, N.encodeStreamKey)(e), !1)), o && e.state === O.ApplicationStreamStates.ENDED)) {
+            A.stop();
             let e = r.default.getStreamForUser(_, t);
             if (null == e) return;
             (0, n.watchStream)(e)

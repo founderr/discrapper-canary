@@ -21,8 +21,8 @@ var t = E("917351"),
   T = E("162551"),
   S = E("698060"),
   N = E("541272"),
-  A = E("20995"),
-  O = E("709048"),
+  O = E("20995"),
+  A = E("709048"),
   R = E("91801"),
   l = E("340431"),
   u = E("538184"),
@@ -81,7 +81,7 @@ let h = 60,
     name: M.default.Messages.APP_ICON_SUNSET
   }, {
     id: U.PremiumAppIconIds.GALAXY,
-    iconSource: A,
+    iconSource: O,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_GALAXY
   }, {
@@ -101,7 +101,7 @@ let h = 60,
     name: M.default.Messages.APP_ICON_BEANIE
   }, {
     id: U.PremiumAppIconIds.GAMING,
-    iconSource: O,
+    iconSource: A,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_GAMING
   }, {

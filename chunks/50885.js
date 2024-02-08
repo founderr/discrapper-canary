@@ -13,8 +13,8 @@ E.r(_), E.d(_, {
 var t, o, n, r, a, i, I, s, T = E("627445"),
   S = E.n(T),
   N = E("817792"),
-  A = E("872717"),
-  O = E("95410"),
+  O = E("872717"),
+  A = E("95410"),
   R = E("115718"),
   l = E("773336"),
   u = E("49111"),
@@ -77,7 +77,7 @@ var g = {
     try {
       e = this.requireModule("discord_overlay2")
     } catch (e) {}
-    e && e.reset && e.reset(), e && e.disconnectAllProcesses && e.destroyHostProcess && (e.disconnectAllProcesses(), e.destroyHostProcess()), C.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== O.default.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) && this.supportsFeature(u.NativeFeatures.USER_DATA_CACHE) && C.userDataCache.cacheUserData(O.default.stringify())
+    e && e.reset && e.reset(), e && e.disconnectAllProcesses && e.destroyHostProcess && (e.disconnectAllProcesses(), e.destroyHostProcess()), C.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== A.default.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) && this.supportsFeature(u.NativeFeatures.USER_DATA_CACHE) && C.userDataCache.cacheUserData(A.default.stringify())
   },
   inputEventRegister(e, _, E, t) {
     !Array.isArray(_) && (_ = _.toJS()), this.getDiscordUtils().inputEventRegister(parseInt(e), _.map(e => {
@@ -370,7 +370,7 @@ var g = {
     l.isPlatformEmbedded && null != C.remoteApp.relaunch && C.remoteApp.relaunch()
   },
   makeChunkedRequest(e, _, E) {
-    let t = "".concat(A.default.getAPIBaseURL()).concat(e);
+    let t = "".concat(O.default.getAPIBaseURL()).concat(e);
     if (!l.isPlatformEmbedded) return Promise.reject(Error("Not embedded!"));
     if (null == C.http) return Promise.reject(Error("HTTP module not available"));
     let {

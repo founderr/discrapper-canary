@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("84339"),
   S = s("510889"),
   N = s("287103"),
-  f = s("900938"),
-  g = s("161778"),
+  g = s("900938"),
+  f = s("161778"),
   A = s("305961"),
   L = s("102985"),
   m = s("941886"),
@@ -94,8 +94,8 @@ function U() {
     rawLogs: P,
     theme: j,
     hide: y
-  } = (0, c.useStateFromStoresObject)([f.default, A.default, N.default, L.default, g.default], () => {
-    let e = f.default.getGuildId(),
+  } = (0, c.useStateFromStoresObject)([g.default, A.default, N.default, L.default, f.default], () => {
+    let e = g.default.getGuildId(),
       t = A.default.getGuild(e),
       s = N.default.logs;
     return {
@@ -108,7 +108,7 @@ function U() {
       hasError: N.default.hasError,
       hasOlderLogs: N.default.hasOlderLogs,
       rawLogs: null != s && null != t ? s : [],
-      theme: g.default.theme,
+      theme: f.default.theme,
       hide: L.default.enabled
     }
   }), [b, B] = n.useState({

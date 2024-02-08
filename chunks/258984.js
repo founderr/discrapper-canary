@@ -31,10 +31,10 @@ function u(e) {
     className: d.noticeContainer,
     children: c.getAnyErrorMessage()
   });
-  let f = null;
-  return null != T ? f = T : _ ? f = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_PENDING : null != I ? (f = I, t = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA) : N ? f = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_READ_ONLY_FOR_PENDING_NEW_OWNER_PENDING_NOTICE : S && (f = o.default.Messages.CREATOR_MONETIZATION_SETTINGS_RESTRICTED_NOTICE), null != f ? (0, a.jsx)(i.default, {
+  let g = null;
+  return null != T ? g = T : _ ? g = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_PENDING : null != I ? (g = I, t = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA) : N ? g = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_READ_ONLY_FOR_PENDING_NEW_OWNER_PENDING_NOTICE : S && (g = o.default.Messages.CREATOR_MONETIZATION_SETTINGS_RESTRICTED_NOTICE), null != g ? (0, a.jsx)(i.default, {
     className: d.noticeContainer,
-    notice: f,
+    notice: g,
     ctaLabel: t,
     ctaLoading: u,
     onClick: E

@@ -18,8 +18,8 @@ var r = n("414456"),
   S = n("580357"),
   E = n("40469"),
   h = n("427459"),
-  g = n("49111"),
-  _ = n("782340"),
+  _ = n("49111"),
+  g = n("782340"),
   p = n("129818");
 
 function C(e) {
@@ -34,23 +34,23 @@ function C(e) {
     premiumTier: o,
     premiumSubscriberCount: S
   } = t;
-  if (0 === S && o === g.BoostedGuildTiers.NONE) return null;
+  if (0 === S && o === _.BoostedGuildTiers.NONE) return null;
   let E = e => {
       e.stopPropagation(), e.preventDefault(), l && !r && (0, a.openGuildBoostingMarketingModal)({
         guildId: t.id,
         location: {
-          section: g.AnalyticsSections.GUILD_HEADER,
-          object: g.AnalyticsObjects.BOOST_GEM_ICON
+          section: _.AnalyticsSections.GUILD_HEADER,
+          object: _.AnalyticsObjects.BOOST_GEM_ICON
         }
       })
     },
-    C = o === g.BoostedGuildTiers.NONE ? _.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.getTierName(o),
+    C = o === _.BoostedGuildTiers.NONE ? g.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.getTierName(o),
     I = (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("div", {
         className: p.tierTooltipTitle,
         children: C
       }), (0, i.jsx)("div", {
-        children: _.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({
+        children: g.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({
           subscriberCount: S
         })
       })]
@@ -68,7 +68,7 @@ function C(e) {
         children: (0, i.jsx)(d.default, {
           premiumTier: o,
           iconBackgroundClassName: n ? p.boostedGuildTierIconBackgroundWithVisibleBanner : null,
-          iconClassName: n && o !== g.BoostedGuildTiers.TIER_3 ? p.boostedGuildTierMutedIconWithVisibleBanner : null
+          iconClassName: n && o !== _.BoostedGuildTiers.TIER_3 ? p.boostedGuildTierMutedIconWithVisibleBanner : null
         })
       })
     })
@@ -116,7 +116,7 @@ function m(e) {
     disableColor: !1,
     disableBoostClick: r
   });
-  let s = t.hasFeature(g.GuildFeatures.VERIFIED) || t.hasFeature(g.GuildFeatures.PARTNERED);
+  let s = t.hasFeature(_.GuildFeatures.VERIFIED) || t.hasFeature(_.GuildFeatures.PARTNERED);
   return s ? (0, i.jsx)(I, {
     guild: t,
     disableColor: !n

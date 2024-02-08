@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   MarketingSections: function() {
-    return f
+    return g
   },
   default: function() {
-    return g
+    return f
   }
 });
 var a = s("37983");
@@ -24,7 +24,7 @@ var n = s("759843"),
   S = s("396076"),
   N = s("97743");
 
-function f(e) {
+function g(e) {
   let {
     onboardingMarketing: t,
     onboardingMarketingError: s
@@ -62,7 +62,7 @@ function f(e) {
   })
 }
 
-function g(e) {
+function f(e) {
   let {
     guild: t
   } = e, s = (0, d.default)(t), {
@@ -70,7 +70,7 @@ function g(e) {
     eligibilityError: _,
     eligibility: T
   } = s, S = (0, r.useCreatorMonetizationIneligibleReasons)(T), {
-    isLoading: g,
+    isLoading: f,
     error: A,
     creatorMonetizationOnboardingMarketing: L
   } = (0, o.default)(t.id);
@@ -85,7 +85,7 @@ function g(e) {
     }
   }, {
     disableTrack: null == t.id || null == T
-  }), E || null == T || g) ? (0, a.jsx)(l.Spinner, {}) : T.actionRequired ? (0, a.jsx)(I.default, {
+  }), E || null == T || f) ? (0, a.jsx)(l.Spinner, {}) : T.actionRequired ? (0, a.jsx)(I.default, {
     guild: t
   }) : null != _ ? (0, a.jsx)(u.default, {
     children: _.message
@@ -94,7 +94,7 @@ function g(e) {
     children: [(0, a.jsx)(c.default, {
       guild: t,
       monetizationEligibility: s
-    }), (0, a.jsx)(f, {
+    }), (0, a.jsx)(g, {
       onboardingMarketing: L,
       onboardingMarketingError: A
     })]

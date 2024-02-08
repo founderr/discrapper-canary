@@ -19,9 +19,9 @@ var a = s("37983"),
   I = s("151185"),
   S = s("432153"),
   N = s("782340"),
-  f = s("490984");
+  g = s("490984");
 
-function g(e) {
+function f(e) {
   return String(e)
 }
 
@@ -33,18 +33,18 @@ function A(e) {
     className: l
   } = e;
   return (0, a.jsxs)("div", {
-    className: i(f.label, l),
+    className: i(g.label, l),
     children: [t, (0, a.jsxs)("div", {
-      className: f.labelText,
+      className: g.labelText,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "none",
-        className: f.labelTitle,
+        className: g.labelTitle,
         children: s
       }), null != n && "" !== n ? (0, a.jsx)(o.Text, {
         variant: "text-xs/semibold",
         color: "text-muted",
-        className: f.labelSubtitle,
+        className: g.labelSubtitle,
         children: n
       }) : null]
     })]
@@ -54,10 +54,10 @@ function A(e) {
 function L() {
   return (0, a.jsx)(A, {
     icon: (0, a.jsx)(I.default, {
-      className: f.labelIcon
+      className: g.labelIcon
     }),
     title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
-    className: f.createLabel
+    className: g.createLabel
   })
 }
 
@@ -72,7 +72,7 @@ function m(e) {
     o = null != l ? (0, d.computeChannelName)(l, T.default, _.default) : void 0;
   return (0, a.jsx)(A, {
     icon: null != i && (0, a.jsx)(i, {
-      className: f.labelIcon
+      className: g.labelIcon
     }),
     title: r,
     subtitle: o
@@ -95,7 +95,7 @@ function O(e) {
     initialChannelId: i,
     omitChannelIds: u,
     "aria-labelledby": I,
-    onChange: f
+    onChange: g
   } = e, A = N.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL, L = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t), [t]), m = (0, S.useChannelWithTemplateFallback)(null != l ? l : ""), O = n.useMemo(() => {
     let e = [{
         value: null,
@@ -128,12 +128,12 @@ function O(e) {
         return s => (0, a.jsx)(e, {
           ...s,
           guildId: t,
-          onSubmit: f
+          onSubmit: g
         })
-      }) : f(e)
+      }) : g(e)
     },
-    isSelected: e => null != l && g(e) === g(l),
-    serialize: g,
+    isSelected: e => null != l && f(e) === f(l),
+    serialize: f,
     renderOptionLabel: C,
     renderOptionValue: e => {
       let [t] = e;

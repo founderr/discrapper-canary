@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 });
 var a = s("37983"),
@@ -20,15 +20,15 @@ var a = s("37983"),
   S = s("332227"),
   N = s("754433");
 
-function f(e) {
+function g(e) {
   var t;
   let {
     onDeleteEditState: l
   } = e, {
-    editStateId: f,
-    guildId: g,
+    editStateId: g,
+    guildId: f,
     groupListingId: A
-  } = (0, E.useEditStateContext)(), L = (0, r.useStateFromStores)([c.default], () => c.default.getSubscriptionListing(f)), m = null == L ? void 0 : L.id, C = (0, _.default)(g), O = n.useMemo(() => {
+  } = (0, E.useEditStateContext)(), L = (0, r.useStateFromStores)([c.default], () => c.default.getSubscriptionListing(g)), m = null == L ? void 0 : L.id, C = (0, _.default)(f), O = n.useMemo(() => {
     var e;
     return null != C && null != L && (null !== (e = C[L.role_id]) && void 0 !== e ? e : 0)
   }, [C, L]), h = 0 === O, R = null == m, D = null !== (t = null == L ? void 0 : L.archived) && void 0 !== t && t, {
@@ -41,7 +41,7 @@ function f(e) {
     let e = async () => {
       if (!R) {
         i(null != A, "group listing doesnt exist"), i(null != m, "subscription listing doesnt exist");
-        let e = await M(g, A, m);
+        let e = await M(f, A, m);
         if (!e) return
       }
       null == l || l()
@@ -67,7 +67,7 @@ function f(e) {
     })
   }, {
     allowSelfRemoveMonetization: v
-  } = (0, d.useShouldRestrictUpdatingCreatorMonetizationSettings)(g);
+  } = (0, d.useShouldRestrictUpdatingCreatorMonetizationSettings)(f);
   return null == L ? null : (0, a.jsx)(T.default, {
     title: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ADVANCE_SECTION_TITLE,
     children: D ? (0, a.jsxs)(o.FormSection, {
@@ -114,7 +114,7 @@ function f(e) {
               confirmText: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON,
               cancelText: I.default.Messages.CANCEL,
               onConfirm: () => {
-                x(g, A, m)
+                x(f, A, m)
               },
               confirmButtonColor: o.Button.Colors.RED,
               ...t,

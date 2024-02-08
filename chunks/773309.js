@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("782340"),
   S = s("688541");
 let N = -1,
-  f = (0, E.cssValueToNumber)(u.default.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-  g = (0, E.cssValueToNumber)(u.default.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+  g = (0, E.cssValueToNumber)(u.default.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+  f = (0, E.cssValueToNumber)(u.default.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
   A = {
     tension: 140,
     friction: 30
@@ -37,7 +37,7 @@ class m extends n.Component {
     let {
       tiers: e
     } = this.props;
-    return e[e.length - 1].y + g / 2
+    return e[e.length - 1].y + f / 2
   }
   getProgressHeight(e) {
     let {
@@ -116,9 +116,9 @@ class m extends n.Component {
       tiers: o
     } = this.props, d = o[s], u = i >= e.numRequired, E = null != d && e.key === d.key, T = e.key === o[0].key;
     l = T ? S.tierFirst : E ? S.tierCurrent : u ? S.tierAccomplished : S.tierInProgress;
-    let I = e.y - (T ? 0 : g / 2),
+    let I = e.y - (T ? 0 : f / 2),
       N = this.state.tierMarkerActive === t,
-      f = !T && E && N;
+      g = !T && E && N;
     return (0, a.jsx)(c.Tooltip, {
       text: this.renderTierMarkerTooltip(e),
       position: "right",
@@ -128,7 +128,7 @@ class m extends n.Component {
           scale: 1
         },
         to: {
-          scale: f ? 1.625 : 1
+          scale: g ? 1.625 : 1
         },
         config: L,
         children: t => (0, a.jsx)(r.animated.div, {
@@ -138,7 +138,7 @@ class m extends n.Component {
             top: I,
             transform: t.scale.interpolate(e => "scale(".concat(e, ")"))
           },
-          children: f && (0, a.jsx)(_.default, {
+          children: g && (0, a.jsx)(_.default, {
             className: S.currentTierIcon
           })
         })
@@ -154,13 +154,13 @@ class m extends n.Component {
       children: [(0, a.jsx)("rect", {
         x: "0",
         y: "0",
-        width: f,
+        width: g,
         height: e,
         fill: "white"
       }), t.map(e => (0, a.jsx)("circle", {
-        cx: f / 2,
+        cx: g / 2,
         cy: e.y,
-        r: f / 2,
+        r: g / 2,
         fill: "black"
       }, e.key))]
     })
@@ -210,8 +210,8 @@ class m extends n.Component {
         height: n
       },
       children: [(0, a.jsxs)("svg", {
-        viewBox: "0 0 ".concat(f, " ").concat(n),
-        width: f,
+        viewBox: "0 0 ".concat(g, " ").concat(n),
+        width: g,
         height: n,
         children: [this.renderProgressMask(n), this.renderProgressBar(n, s)]
       }), (0, a.jsx)("div", {

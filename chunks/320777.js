@@ -13,13 +13,13 @@ var o = E("171718"),
   S = E("951212"),
   N = E("424948");
 E("762017");
-var A = E("787006"),
-  O = E("605250"),
+var O = E("787006"),
+  A = E("605250"),
   R = E("648387"),
   l = E("49111"),
   u = E("782340");
 (0, i.setUpdateRules)(s.default), (0, n.default)(u.default, o.default, T.default), a.default.Emitter.injectBatchEmitChanges(r.batchUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
 let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-new(0, O.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("264726", ", Version Hash: ").concat("a66d799e7727ff0af48277c397daa8759d7f8382")), t.default.setTags({
+new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("264771", ", Version Hash: ").concat("687c055e8b54bda911a9daedc6a0e4275d1aa0f2")), t.default.setTags({
   appContext: l.CURRENT_APP_CONTEXT
-}), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), A.init(), (0, R.cleanupTempFiles)()
+}), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()

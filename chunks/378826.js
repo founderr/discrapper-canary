@@ -23,8 +23,8 @@ function I(e) {
     changeTitle: I,
     value: S,
     options: N,
-    className: f,
-    onChange: g
+    className: g,
+    onChange: f
   } = e, [A, L] = n.useState(S), [m, C] = n.useState(!1), [O, h] = n.useState(!1), R = n.useRef(null);
   n.useEffect(() => {
     L(S)
@@ -33,7 +33,7 @@ function I(e) {
   }, []);
   let D = N.find(e => e.value === A),
     M = e => {
-      !e.disabled && e.value !== A && (h(!0), null == g || g(e), L(e.value), R.current = setTimeout(() => {
+      !e.disabled && e.value !== A && (h(!0), null == f || f(e), L(e.value), R.current = setTimeout(() => {
         h(!1), C(!1)
       }, 1e3))
     };
@@ -48,7 +48,7 @@ function I(e) {
       children: _.default.Messages.CHANGE
     }),
     loading: O,
-    className: f,
+    className: g,
     children: N.map((e, t) => (0, a.jsx)(E.default, {
       title: e.title,
       description: e.description,

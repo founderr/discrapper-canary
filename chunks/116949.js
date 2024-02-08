@@ -10,10 +10,10 @@ E.r(_), E.d(_, {
     return N
   },
   b64ToPreloadedUserSettingsProto: function() {
-    return A
+    return O
   },
   protoToB64WithType: function() {
-    return O
+    return A
   },
   protoToB64: function() {
     return R
@@ -66,11 +66,11 @@ function N(e, _) {
   }
 }
 
-function A(e) {
+function O(e) {
   return N(a.PreloadedUserSettings, e)
 }
 
-function O(e, _) {
+function A(e, _) {
   return R(T[e], _)
 }
 

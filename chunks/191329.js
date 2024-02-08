@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("453910"),
   S = s("283167"),
   N = s("868246"),
-  f = s("324105"),
-  g = s("385976"),
+  g = s("324105"),
+  f = s("385976"),
   A = s("101263"),
   L = s("407063"),
   m = s("694187"),
@@ -135,7 +135,7 @@ class k extends n.PureComponent {
             children: s ? H.default.Messages.GUILD_SETTINGS_DISABLE_DISCOVERABLE : H.default.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
           })
         })]
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(g.default, {
         className: V.guildCard,
         loading: null == e,
         guild: e
@@ -203,7 +203,7 @@ class k extends n.PureComponent {
       emojiDiscoverabilityEnabled: o
     } = s, d = i;
     if (null == d && null != n) {
-      let e = g.default.getGuildEmoji(n.id);
+      let e = f.default.getGuildEmoji(n.id);
       d = {
         ...n,
         premiumSubscriptionCount: null == n ? void 0 : n.premiumSubscriberCount,

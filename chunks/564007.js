@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return A
+    return O
   }
 }), E("222007");
 var t = E("37983"),
@@ -19,16 +19,16 @@ let S = () => {
   N = () => {
     a.default.clearSuppressWarning(!0)
   };
-var A = () => {
+var O = () => {
   let e = o.useRef(null);
 
   function _() {
     null !== e.current && ((0, r.closeModal)(e.current), e.current = null)
   }
-  let [a, A] = (0, n.useStateFromStoresArray)([s.default], () => [s.default.shouldShowWarning(), s.default.isAFKChannel()], []), O = o.useCallback(() => {
+  let [a, O] = (0, n.useStateFromStoresArray)([s.default], () => [s.default.shouldShowWarning(), s.default.isAFKChannel()], []), A = o.useCallback(() => {
     let _ = "",
       E = "";
-    A ? (_ = T.default.Messages.SUPPRESSED_AFK_TITLE, E = T.default.Messages.SUPPRESSED_AFK_BODY) : (_ = T.default.Messages.SUPPRESSED, E = T.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, r.openModal)(e => (0, t.jsx)(i.default, {
+    O ? (_ = T.default.Messages.SUPPRESSED_AFK_TITLE, E = T.default.Messages.SUPPRESSED_AFK_BODY) : (_ = T.default.Messages.SUPPRESSED, E = T.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, r.openModal)(e => (0, t.jsx)(i.default, {
       title: _,
       body: E,
       onConfirm: S,
@@ -37,7 +37,7 @@ var A = () => {
       onConfirmSecondary: N,
       ...e
     }))
-  }, [A]), R = o.useCallback(() => {
+  }, [O]), R = o.useCallback(() => {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -50,7 +50,7 @@ var A = () => {
       null != _ && (e.current = _)
     })
   }, []);
-  return o.useEffect(() => (a && (0, I.isRTCConnectedInHub)() ? R() : a ? O() : _(), () => {
+  return o.useEffect(() => (a && (0, I.isRTCConnectedInHub)() ? R() : a ? A() : _(), () => {
     _()
-  }), [a, O, R]), null
+  }), [a, A, R]), null
 }

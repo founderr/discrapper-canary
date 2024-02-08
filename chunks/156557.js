@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("27618"),
   S = s("697218"),
   N = s("461380"),
-  f = s("258078"),
-  g = s("404008"),
+  g = s("258078"),
+  f = s("404008"),
   A = s("158998"),
   L = s("309021"),
   m = s("49111"),
@@ -83,11 +83,11 @@ class R extends n.PureComponent {
   getActionTypeColor(e) {
     switch (e) {
       case m.AuditLogActionTypes.CREATE:
-        return f.default.Colors.STATUS_GREEN;
+        return g.default.Colors.STATUS_GREEN;
       case m.AuditLogActionTypes.DELETE:
-        return f.default.Colors.STATUS_RED;
+        return g.default.Colors.STATUS_RED;
       default:
-        return f.default.Colors.STATUS_YELLOW
+        return g.default.Colors.STATUS_YELLOW
     }
   }
   getRowAccentColor() {
@@ -189,9 +189,9 @@ class R extends n.PureComponent {
           oldValue: i,
           newValue: r
         } = s, d = null;
-        if (t.action === m.AuditLogActions.MEMBER_ROLE_UPDATE ? d = this.renderRoleUpdate(s) : (t.targetType === m.AuditLogTargetTypes.ROLE || t.action === m.AuditLogActions.CHANNEL_OVERWRITE_CREATE || t.action === m.AuditLogActions.CHANNEL_OVERWRITE_UPDATE) && (d = this.renderPermissionUpdate(s)), (t.action === m.AuditLogActions.CHANNEL_UPDATE || t.action === m.AuditLogActions.CHANNEL_CREATE) && s.key === m.AuditLogChangeKeys.TYPE && (null != i && (i = (0, g.channelTypeString)({
+        if (t.action === m.AuditLogActions.MEMBER_ROLE_UPDATE ? d = this.renderRoleUpdate(s) : (t.targetType === m.AuditLogTargetTypes.ROLE || t.action === m.AuditLogActions.CHANNEL_OVERWRITE_CREATE || t.action === m.AuditLogActions.CHANNEL_OVERWRITE_UPDATE) && (d = this.renderPermissionUpdate(s)), (t.action === m.AuditLogActions.CHANNEL_UPDATE || t.action === m.AuditLogActions.CHANNEL_CREATE) && s.key === m.AuditLogChangeKeys.TYPE && (null != i && (i = (0, f.channelTypeString)({
             type: i
-          })), null != r && (r = (0, g.channelTypeString)({
+          })), null != r && (r = (0, f.channelTypeString)({
             type: r
           }))), t.action === m.AuditLogActions.MEMBER_UPDATE && s.key === m.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL) {
           if (null == (r = o(r)) || !r.isValid()) return null;
@@ -341,7 +341,7 @@ class R extends n.PureComponent {
       variant: "text-xs/normal",
       children: "• ".concat(I, "—").concat(S)
     });
-    let f = c ? l : m.NOOP;
+    let g = c ? l : m.NOOP;
     return (0, a.jsx)(d.ListNavigatorItem, {
       id: t.id,
       children: l => (0, a.jsxs)("div", {
@@ -349,7 +349,7 @@ class R extends n.PureComponent {
         children: [(0, a.jsxs)(u.Clickable, {
           className: T,
           "aria-expanded": n,
-          onClick: f,
+          onClick: g,
           ...l,
           children: [(0, a.jsx)(u.Popout, {
             preload: () => (0, E.default)(t.userId, o.getAvatarURL(r, 80), {

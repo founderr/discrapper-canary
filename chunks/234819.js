@@ -23,14 +23,14 @@ function S() {
       return null !== (_ = null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== _ && _
     }),
     [S, N] = (0, o.useStateFromStoresArray)([a.default], () => [a.default.isIdle(), a.default.isAFK()]),
-    A = [];
-  return !S && !N && A.push("ACTIVE"), S && A.push("IDLE"), N && A.push("AFK"), E && _ ? (0, t.jsx)(I.default, {
+    O = [];
+  return !S && !N && O.push("ACTIVE"), S && O.push("IDLE"), N && O.push("AFK"), E && _ ? (0, t.jsx)(I.default, {
     children: (0, t.jsxs)("div", {
       className: T.container,
       children: [(0, t.jsxs)("div", {
         className: T.status,
         children: [(0, t.jsx)(n.Status, {
-          status: A.includes("ACTIVE") ? s.StatusTypes.ONLINE : s.StatusTypes.IDLE,
+          status: O.includes("ACTIVE") ? s.StatusTypes.ONLINE : s.StatusTypes.IDLE,
           className: T.statusIndicator
         }), (0, t.jsx)(n.Text, {
           variant: "text-md/normal",
@@ -39,7 +39,7 @@ function S() {
           className: T.statusText,
           children: (0, t.jsx)(n.Text, {
             variant: "text-md/bold",
-            children: A.join(" + ")
+            children: O.join(" + ")
           })
         })]
       }), S && (0, t.jsxs)(n.Text, {

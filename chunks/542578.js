@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("726527"),
   S = s("405645"),
   N = s("915675"),
-  f = s("957255"),
-  g = s("211248"),
+  g = s("957255"),
+  f = s("211248"),
   A = s("673220"),
   L = s("462579"),
   m = s("433487"),
@@ -52,7 +52,7 @@ function H(e) {
     renderHeader: o,
     headerHeight: u,
     query: c
-  } = e, _ = (0, d.useStateFromStores)([x.default], () => x.default.getRoleMemberCount(s.id), [s.id]), T = (0, d.useStateFromStores)([f.default], () => f.default.getHighestRole(s), [s]), I = c.trim();
+  } = e, _ = (0, d.useStateFromStores)([x.default], () => x.default.getRoleMemberCount(s.id), [s.id]), T = (0, d.useStateFromStores)([g.default], () => g.default.getHighestRole(s), [s]), I = c.trim();
   n.useEffect(() => {
     (0, G.fetchMemberCounts)(s.id)
   }, [s.id]);
@@ -63,13 +63,13 @@ function H(e) {
     }), S.current = !0)
   }, [c]);
   let N = n.useMemo(() => i.filter(e => (0, p.filterRole)(e, I)), [i, I]),
-    g = n.useMemo(() => [...i, l], [i, l]),
+    f = n.useMemo(() => [...i, l], [i, l]),
     {
       draggingId: A,
       handleDragStart: L,
       handleDragReset: m,
       handleDragComplete: C
-    } = (0, v.default)(g),
+    } = (0, v.default)(f),
     O = n.useCallback(e => {
       var n;
       let {
@@ -121,7 +121,7 @@ function w(e) {
     role: d,
     guild: E,
     highestRole: S,
-    currentPosition: f,
+    currentPosition: g,
     memberCount: O,
     onDragStart: R,
     onDragReset: D,
@@ -134,7 +134,7 @@ function w(e) {
     type: F,
     item: () => (R(d.id), {
       id: d.id,
-      position: f
+      position: g
     }),
     canDrag: () => V && !H,
     collect: e => ({
@@ -193,8 +193,8 @@ function w(e) {
   return (0, a.jsxs)(u.Clickable, {
     className: i(b.roleRow, {
       [b.roleRowDisableHover]: G,
-      [b.containerDragBefore]: null != Z && f < Z,
-      [b.containerDragAfter]: null != Z && f > Z
+      [b.containerDragBefore]: null != Z && g < Z,
+      [b.containerDragAfter]: null != Z && g > Z
     }),
     onClick: q,
     onContextMenu: J,
@@ -257,11 +257,11 @@ function w(e) {
       })
     }), (0, a.jsxs)("div", {
       className: i(b.buttonsContainer, B.buttonsSpacing),
-      children: [(0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(f.default, {
         className: i(b.circleButton, b.editButton),
         tooltip: H ? y.default.Messages.VIEW : y.default.Messages.EDIT,
-        color: g.CircleIconButtonColors.SECONDARY,
-        size: g.CircleIconButtonSizes.SIZE_36,
+        color: f.CircleIconButtonColors.SECONDARY,
+        size: f.CircleIconButtonSizes.SIZE_36,
         icon: H ? (0, a.jsx)(L.default, {
           width: 20,
           height: 20
@@ -270,11 +270,11 @@ function w(e) {
           height: 20
         }),
         onClick: q
-      }), (0, a.jsx)(g.default, {
+      }), (0, a.jsx)(f.default, {
         className: b.circleButton,
         tooltip: y.default.Messages.MORE,
-        color: g.CircleIconButtonColors.SECONDARY,
-        size: g.CircleIconButtonSizes.SIZE_36,
+        color: f.CircleIconButtonColors.SECONDARY,
+        size: f.CircleIconButtonSizes.SIZE_36,
         icon: (0, a.jsx)(m.default, {
           width: 20,
           height: 20

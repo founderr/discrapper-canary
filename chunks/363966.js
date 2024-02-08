@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("484456"),
   S = s("559979"),
   N = s("752520"),
-  f = s("498030"),
-  g = s("782340"),
+  g = s("498030"),
+  f = s("782340"),
   A = s("405625");
 
 function L(e) {
@@ -44,7 +44,7 @@ function L(e) {
     dragPreview: h,
     drop: R,
     isDragging: D
-  } = (0, f.default)(m, E, _, N);
+  } = (0, g.default)(m, E, _, N);
   return O(C), h(R(m)), (0, a.jsxs)("div", {
     ref: m,
     className: i(A.card, {
@@ -82,7 +82,7 @@ function L(e) {
       children: !L && (0, a.jsx)(o.Clickable, {
         className: A.cardActionButton,
         onClick: L ? void 0 : S,
-        "aria-label": g.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
+        "aria-label": f.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
         "aria-disabled": L,
         children: (0, a.jsx)(c.default, {
           className: A.cardActionButtonIcon

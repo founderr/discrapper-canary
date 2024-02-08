@@ -23,8 +23,8 @@ function N(e) {
   var t, s;
   let {
     rule: N,
-    onChangeRule: f
-  } = e, [g, A] = n.useState(null === (t = N.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit), L = (0, d.useIsMentionRaidExperimentEnabled)(N.guildId, !1);
+    onChangeRule: g
+  } = e, [f, A] = n.useState(null === (t = N.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit), L = (0, d.useIsMentionRaidExperimentEnabled)(N.guildId, !1);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)("div", {
       className: S.cardContentsContainer,
@@ -54,9 +54,9 @@ function N(e) {
           }), (0, a.jsx)("div", {
             className: S.stepperContainer,
             children: (0, a.jsx)(i.default, {
-              value: g,
+              value: f,
               onChange: e => {
-                A(e), f({
+                A(e), g({
                   ...N,
                   triggerMetadata: {
                     ...N.triggerMetadata,
@@ -94,7 +94,7 @@ function N(e) {
               type: l.Checkbox.Types.INVERTED,
               value: null === (s = N.triggerMetadata) || void 0 === s ? void 0 : s.mentionRaidProtectionEnabled,
               onChange: (e, t) => {
-                f({
+                g({
                   ...N,
                   triggerMetadata: {
                     ...N.triggerMetadata,
@@ -113,7 +113,7 @@ function N(e) {
         header: I.default.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
         children: (0, a.jsx)(u.default, {
           rule: N,
-          onChangeRule: f
+          onChangeRule: g
         })
       }), (0, a.jsx)(_.default, {
         type: _.default.Type.CROSS
@@ -122,7 +122,7 @@ function N(e) {
         header: I.default.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
         children: (0, a.jsx)(c.default, {
           rule: N,
-          onChangeRule: f
+          onChangeRule: g
         })
       })]
     })

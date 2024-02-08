@@ -25,7 +25,7 @@ var a = s("37983"),
       setEditingRule: S
     } = (0, r.useAutomodEditingRuleState)(), {
       isLoading: N
-    } = (0, r.useAutomodEditingRuleActions)(), [f] = n.useState(() => !(0, l.isBackendPersistedRule)(t)), g = (null == T ? void 0 : T.id) === t.id || s, A = (0, i.isDefaultRuleId)(null == t ? void 0 : t.id), L = g && null != T ? T : t, m = n.useMemo(() => (0, o.createOnPreventNavigation)(t.name), [null == t ? void 0 : t.name]), C = n.useCallback(() => {
+    } = (0, r.useAutomodEditingRuleActions)(), [g] = n.useState(() => !(0, l.isBackendPersistedRule)(t)), f = (null == T ? void 0 : T.id) === t.id || s, A = (0, i.isDefaultRuleId)(null == t ? void 0 : t.id), L = f && null != T ? T : t, m = n.useMemo(() => (0, o.createOnPreventNavigation)(t.name), [null == t ? void 0 : t.name]), C = n.useCallback(() => {
       I(t.guildId, t.triggerType)
     }, [t.guildId, t.triggerType, I]), O = n.useCallback(e => {
       !N && S(e, !0)
@@ -34,24 +34,24 @@ var a = s("37983"),
       E && S(t, !0)
     }, [E, t, S]);
     let h = n.useCallback(() => {
-      g ? !_ && S(null) : _ ? m(() => {
+      f ? !_ && S(null) : _ ? m(() => {
         S(t)
       }) : S(t)
-    }, [g, _, m, t, S]);
+    }, [f, _, m, t, S]);
     return (0, a.jsx)(u.default, {
       renderHeader: (0, a.jsx)(c.default, {
         rule: L,
-        forceSetup: f && !g && !A,
+        forceSetup: g && !f && !A,
         triggerType: t.triggerType,
-        isEditMode: g,
+        isEditMode: f,
         isDefaultRule: A,
         onChangeRule: O,
         onSetupRule: C
       }),
-      isStuck: g && _,
-      isExpanded: g,
+      isStuck: f && _,
+      isExpanded: f,
       onExpand: h,
-      children: g && (0, a.jsx)(d.default, {
+      children: f && (0, a.jsx)(d.default, {
         rule: L,
         isLoading: N,
         onChangeRule: O

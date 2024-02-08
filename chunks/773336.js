@@ -26,10 +26,10 @@ E.r(_), E.d(_, {
     return N
   },
   isAndroidWeb: function() {
-    return A
+    return O
   },
   isAndroid: function() {
-    return O
+    return A
   },
   isIOS: function() {
     return R
@@ -75,12 +75,12 @@ function N() {
   return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
 }
 
-function A() {
+function O() {
   var e;
   return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null
 }
 
-function O() {
+function A() {
   return "android" === a
 }
 

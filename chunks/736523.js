@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("183866"),
   S = s("316841"),
   N = s("788112"),
-  f = s("143460"),
-  g = s("782340"),
+  g = s("143460"),
+  f = s("782340"),
   A = s("69754");
 
 function L(e) {
@@ -95,9 +95,9 @@ function h(e) {
         onChange: r,
         checked: null !== (t = null == s ? void 0 : s.enabled) && void 0 !== t && t
       }), (0, a.jsx)(i.Tooltip, {
-        text: g.default.Messages.MORE,
+        text: f.default.Messages.MORE,
         position: "top",
-        "aria-label": g.default.Messages.MORE_OPTIONS,
+        "aria-label": f.default.Messages.MORE_OPTIONS,
         children: e => (0, a.jsx)(i.Clickable, {
           ...e,
           onClick: o,
@@ -131,15 +131,15 @@ function D(e) {
     saveRule: _
   } = (0, T.useAutomodEditingRuleActions)(), {
     updateRule: S
-  } = (0, E.useAutomodRulesList)(t.guildId), [N, f] = n.useState(t.enabled), m = (0, l.throttle)(async (e, s) => {
+  } = (0, E.useAutomodRulesList)(t.guildId), [N, g] = n.useState(t.enabled), m = (0, l.throttle)(async (e, s) => {
     if (s.preventDefault(), s.stopPropagation(), !d) {
       let e = {
         ...t,
         enabled: !N
       };
-      f(!N);
+      g(!N);
       let s = await _(e, []);
-      if (null != s) S(s), f(s.enabled)
+      if (null != s) S(s), g(s.enabled)
     }
   }, 300), h = e => {
     C(e), r(e)
@@ -188,9 +188,9 @@ function D(e) {
         onChange: m,
         checked: null != N && N
       }), !s && (0, a.jsx)(i.Tooltip, {
-        text: g.default.Messages.MORE,
+        text: f.default.Messages.MORE,
         position: "top",
-        "aria-label": g.default.Messages.MORE_OPTIONS,
+        "aria-label": f.default.Messages.MORE_OPTIONS,
         children: e => (0, a.jsx)(i.Clickable, {
           ...e,
           onClick: h,
@@ -247,7 +247,7 @@ function M(e) {
       children: (0, a.jsx)(i.Button, {
         size: i.Button.Sizes.SMALL,
         onClick: s,
-        children: t === f.AutomodTriggerType.KEYWORD ? g.default.Messages.CREATE : g.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
+        children: t === g.AutomodTriggerType.KEYWORD ? f.default.Messages.CREATE : f.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
       })
     })]
   })

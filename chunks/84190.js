@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("923959"),
   S = s("381546"),
   N = s("423487"),
-  f = s("701909"),
-  g = s("299039"),
+  g = s("701909"),
+  f = s("299039"),
   A = s("592407"),
   L = s("49111"),
   m = s("782340"),
@@ -117,7 +117,7 @@ var R = e => {
       description: m.default.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_DESCRIPTION,
       failingDescription: m.default.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_DESCRIPTION_FAILING_GUIDELINES.format({
         termsURL: L.MarketingURLs.TERMS,
-        guidelinesURL: f.default.getArticleURL(L.HelpdeskArticles.PUBLIC_GUILD_GUILDLINES)
+        guidelinesURL: g.default.getArticleURL(L.HelpdeskArticles.PUBLIC_GUILD_GUILDLINES)
       }),
       checked: null == E ? void 0 : E.safeEnvironment
     }, {
@@ -140,7 +140,7 @@ var R = e => {
       }),
       failingDescription: m.default.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_DESCRIPTION_FAILING.format({
         minimumGuildAge: Math.ceil(E.minimumGuildAge / 7),
-        passDate: u(g.default.extractTimestamp(l)).add(E.minimumGuildAge, "days").format("LL")
+        passDate: u(f.default.extractTimestamp(l)).add(E.minimumGuildAge, "days").format("LL")
       }),
       checked: null == E ? void 0 : E.age
     }, {

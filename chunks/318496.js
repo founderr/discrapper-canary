@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("841098"),
   S = s("716241"),
   N = s("685665"),
-  f = s("770115"),
-  g = s("102985"),
+  g = s("770115"),
+  f = s("102985"),
   A = s("697218"),
   L = s("941886"),
   m = s("810567"),
@@ -46,12 +46,12 @@ function j(e) {
     ban: r,
     hideDiscriminator: o,
     onClose: d
-  } = e, [c, T] = n.useState(!1), [I, f] = n.useState(null), {
-    analyticsLocations: g
-  } = (0, N.default)(), A = null !== (t = null == g ? void 0 : g[0]) && void 0 !== t ? t : null;
+  } = e, [c, T] = n.useState(!1), [I, g] = n.useState(null), {
+    analyticsLocations: f
+  } = (0, N.default)(), A = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null;
   async function L() {
     if (null != l) {
-      f(null), T(!0);
+      g(null), T(!0);
       try {
         await E.default.unbanUser(l.id, i.id), d(), h.default.track(U.AnalyticEvents.GUILD_BAN_REMOVED, {
           ...(0, S.collectGuildAnalyticsMetadata)(l.id),
@@ -60,7 +60,7 @@ function j(e) {
           location: A
         })
       } catch (e) {
-        f(new _.default(e)), T(!1)
+        g(new _.default(e)), T(!1)
       }
     }
   }
@@ -176,7 +176,7 @@ let b = n.forwardRef(function(e, t) {
     guild: s,
     sortedBans: l,
     bans: i
-  } = e, r = (0, d.default)([g.default], () => g.default.hidePersonalInformation, []), o = n.useCallback(e => {
+  } = e, r = (0, d.default)([f.default], () => f.default.hidePersonalInformation, []), o = n.useCallback(e => {
     var t;
     if (null == i && 0 === e) return 60;
     let s = l[e],
@@ -224,7 +224,7 @@ function B(e) {
     }
     if (!r) try {
       o(!0);
-      let [e, s] = (0, f.splitQuery)(l), a = e[0];
+      let [e, s] = (0, g.splitQuery)(l), a = e[0];
       M.default.setSearchQuery(l), await E.default.searchGuildBans(t, a, s), o(!1)
     } catch (e) {
       o(!1)
@@ -274,11 +274,11 @@ function F() {
   let {
     guild: l,
     searchQuery: c
-  } = (0, d.default)([G.default], () => G.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, S = (0, T.default)(_), N = _ !== S, [g] = (0, d.default)([G.default], () => G.default.getBans(), [], R.isVersionEqual), m = null !== (e = null == g ? void 0 : g.size) && void 0 !== e ? e : 0, C = (0, I.default)(), O = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "", h = n.useRef(null), D = n.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
+  } = (0, d.default)([G.default], () => G.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, S = (0, T.default)(_), N = _ !== S, [f] = (0, d.default)([G.default], () => G.default.getBans(), [], R.isVersionEqual), m = null !== (e = null == f ? void 0 : f.size) && void 0 !== e ? e : 0, C = (0, I.default)(), O = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "", h = n.useRef(null), D = n.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
     if (null == t || 0 === e.trim().length) return !1;
     let [
       [s], a
-    ] = (0, f.splitQuery)(e);
+    ] = (0, g.splitQuery)(e);
     return !!a.includes(t.id) || null != s && (!!(t.username.toLowerCase().includes(s.toLowerCase()) || null != t.globalName && t.globalName.toLowerCase().includes(s.toLowerCase())) || !1)
   }, []), M = n.useCallback((e, t, s) => {
     if (null == e || 0 === s) return [];
@@ -288,7 +288,7 @@ function F() {
       null != e && D(t)(e) && a.push(e)
     }
     return a
-  }, [D]), x = n.useMemo(() => M(g, c, m), [g, M, c, m]), p = null != g, U = x.length % 1e3 == 0 && x.length > 0 && p, j = 0 === x.length, [y, F] = n.useState({
+  }, [D]), x = n.useMemo(() => M(f, c, m), [f, M, c, m]), p = null != f, U = x.length % 1e3 == 0 && x.length > 0 && p, j = 0 === x.length, [y, F] = n.useState({
     currentPage: 1,
     pageSize: 100
   });
@@ -329,7 +329,7 @@ function F() {
       className: i(P.scrollerContainer),
       children: [!j && (0, a.jsx)(b, {
         guild: l,
-        bans: g,
+        bans: f,
         sortedBans: Y,
         ref: h
       }), !U && j && (0, a.jsxs)(L.default, {

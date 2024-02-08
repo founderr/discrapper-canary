@@ -36,14 +36,14 @@ let T = (e, t, s, a) => (r.default.track(c.AnalyticEvents.EMOJI_UPLOAD_FILE_SIZE
       guildId: d,
       uploadId: S,
       roles: N,
-      image: f,
-      hideErrorModal: g
+      image: g,
+      hideErrorModal: f
     } = e, A = o.default.sanitizeEmojiName(s.name.split(".")[0]), L = o.default.isFileTooBig(s);
     if (L) {
       if ("image/gif" === s.type) return T(s.name, s.size, d, S);
-      if (null != f) {
+      if (null != g) {
         let e;
-        t = (0, l.downsizeImage)(f, 128, 128);
+        t = (0, l.downsizeImage)(g, 128, 128);
         try {
           e = o.default.isDataTooBig(t)
         } catch (e) {
@@ -73,7 +73,7 @@ let T = (e, t, s, a) => (r.default.track(c.AnalyticEvents.EMOJI_UPLOAD_FILE_SIZE
         upload_id: S
       }), e = E.default.Messages.EMOJI_TOO_BIG.format({
         maxSize: u.EMOJI_MAX_FILESIZE_KB
-      }), s = i.ImageInputUploadErrors.TOO_BIG) : (null != n.image || n.code === c.AbortCodes.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (s = i.ImageInputUploadErrors.RESIZE_GIF)), 429 === l && (e = E.default.Messages.RATE_LIMITED, s = i.ImageInputUploadErrors.RATE_LIMIT), null != e && !g && a.default.show({
+      }), s = i.ImageInputUploadErrors.TOO_BIG) : (null != n.image || n.code === c.AbortCodes.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (s = i.ImageInputUploadErrors.RESIZE_GIF)), 429 === l && (e = E.default.Messages.RATE_LIMITED, s = i.ImageInputUploadErrors.RATE_LIMIT), null != e && !f && a.default.show({
         title: E.default.Messages.GENERIC_ERROR_TITLE,
         body: e
       }), s

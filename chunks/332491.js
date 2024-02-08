@@ -15,12 +15,12 @@ var t = E("77078"),
   T = E("18346"),
   S = E("803725"),
   N = E("80028"),
-  A = E("782340");
-class O extends I.default {
+  O = E("782340");
+class A extends I.default {
   showClipsToast() {
     (0, t.showToast)({
       id: "CLIPS_IN_CALL_WARNING",
-      message: A.default.Messages.CLIPS_IN_CALL_WARNING,
+      message: O.default.Messages.CLIPS_IN_CALL_WARNING,
       type: t.ToastType.CLIP,
       options: {
         duration: N.CLIPS_TOAST_DURATION
@@ -85,4 +85,4 @@ class O extends I.default {
     })
   }
 }
-var R = new O
+var R = new A

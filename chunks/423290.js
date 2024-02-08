@@ -30,7 +30,7 @@ function S(e) {
     editorState: E.createEmptyEditorState([])
   }), {
     editorState: N
-  } = s, [f, g] = n.useState(!0), A = null, L = e => {
+  } = s, [g, f] = n.useState(!0), A = null, L = e => {
     S(t => ({
       ...t,
       editorState: e
@@ -45,19 +45,19 @@ function S(e) {
   }, R = e => {
     A = e
   }, D = () => {
-    g(!0)
+    f(!0)
   }, M = () => {
-    g(!1), null != N && E.isEmpty(N) && C()
+    f(!1), null != N && E.isEmpty(N) && C()
   }, G = e => {
     if (null == N) return;
     let t = E.getFirstTextBlock(N);
     if (t.length >= 512) return !0;
     let s = N;
-    return s = E.updateContent(e, s), L(s = m(s = E.truncateContent(s, 512))), !f && g(!0), !0
+    return s = E.updateContent(e, s), L(s = m(s = E.truncateContent(s, 512))), !g && f(!0), !0
   }, x = e => (e.preventDefault(), !0), p = e => {
     if (e = null != e ? e.replace(/\n/g, "") : "", null == N) return;
     let t = N;
-    return t = E.updateContent(e, t), t = m(t = E.truncateContent(t, 512)), !f && g(!0), L(t), !0
+    return t = E.updateContent(e, t), t = m(t = E.truncateContent(t, 512)), !g && f(!0), L(t), !0
   }, U = null != N && E.getFirstTextBlock(N).length > 0;
   return (0, a.jsx)("div", {
     className: t,
@@ -87,7 +87,7 @@ function S(e) {
               return
             }
             let s = N;
-            L(s = E.truncateContent(s, 0)), !f && Promise.resolve().then(() => h())
+            L(s = E.truncateContent(s, 0)), !g && Promise.resolve().then(() => h())
           },
           hasContent: U,
           className: I.searchIcon

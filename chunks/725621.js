@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("412707"),
   S = s("646186"),
   N = s("7331"),
-  f = s("736271"),
-  g = s("283167"),
+  g = s("736271"),
+  f = s("283167"),
   A = s("10641"),
   L = s("298878"),
   m = s("184890"),
@@ -76,8 +76,8 @@ var a = s("37983"),
   eI = s("902273"),
   eS = s("721822"),
   eN = s("925538"),
-  ef = s("631011"),
-  eg = s("191329"),
+  eg = s("631011"),
+  ef = s("191329"),
   eA = s("851545"),
   eL = s("527042"),
   em = s("977887"),
@@ -113,7 +113,7 @@ function ew(e) {
     canManageRoles: E,
     canManageGuildExpressions: _,
     canManageWebhooks: T,
-    canManageBans: g,
+    canManageBans: f,
     canAccessMembersPage: m,
     canViewGuildAnalytics: R,
     isOwner: G,
@@ -135,7 +135,7 @@ function ew(e) {
     isGuildEligibleForRoleSubscriptions: (0, v.isGuildEligibleForRoleSubscriptions)(t.id),
     isExpeditedMonetizationOnboardingGuild: (0, N.isExpeditedMonetizationOnboardingGuild)(t),
     isUserInCreatorMonetizationEligibleCountry: (0, N.isUserInCreatorMonetizationEligibleCountry)(),
-    shouldRestrictUpdatingRoleSubscriptionSettings: (0, f.shouldRestrictUpdatingCreatorMonetizationSettings)(t.id)
+    shouldRestrictUpdatingRoleSubscriptionSettings: (0, g.shouldRestrictUpdatingCreatorMonetizationSettings)(t.id)
   }), ea = (0, p.isGuildEligibleForGuildProducts)(t.id, "guild_settings"), ew = !1 === t.hasFeature(ey.GuildFeatures.CREATOR_MONETIZABLE) && !1 === t.hasFeature(ey.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL), ek = ea && ew ? {
     label: (0, a.jsx)("div", {
       className: eH.roleSubLabel,
@@ -304,7 +304,7 @@ function ew(e) {
     impressionName: l.ImpressionNames.GUILD_SETTINGS_BANS,
     label: eF.default.Messages.BANS,
     element: eS.default,
-    predicate: () => g
+    predicate: () => f
   }, {
     section: c.SectionTypes.DIVIDER,
     predicate: () => n || R
@@ -361,10 +361,10 @@ function ew(e) {
     section: ey.GuildSettingsSections.DISCOVERY,
     impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
     label: eF.default.Messages.DISCOVERY,
-    element: eg.default,
+    element: ef.default,
     notice: {
       stores: [ei.default],
-      element: eg.GuildSettingsDiscoveryNotice
+      element: ef.GuildSettingsDiscoveryNotice
     },
     predicate: () => n && t.hasFeature(ey.GuildFeatures.COMMUNITY),
     ariaLabel: t.hasFeature(ey.GuildFeatures.DISCOVERABLE) ? eF.default.Messages.DISCOVERY : eF.default.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
@@ -388,7 +388,7 @@ function ew(e) {
     impressionName: l.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
     label: eF.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
     ariaLabel: eF.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
-    element: ef.default,
+    element: eg.default,
     notice: {
       stores: [Y.default],
       element: W.default
@@ -612,8 +612,8 @@ class eW extends n.PureComponent {
       canManageWebhooks: I,
       canManageBans: S,
       canAccessMembersPage: N,
-      canViewGuildAnalytics: f,
-      isOwner: g,
+      canViewGuildAnalytics: g,
+      isOwner: f,
       isOwnerWithRequiredMfaLevel: A,
       showDirtyGuildTemplateIndicator: L,
       memberCount: m,
@@ -636,8 +636,8 @@ class eW extends n.PureComponent {
         canManageWebhooks: I,
         canManageBans: S,
         canAccessMembersPage: N,
-        canViewGuildAnalytics: f,
-        isOwner: g,
+        canViewGuildAnalytics: g,
+        isOwner: f,
         isOwnerWithRequiredMfaLevel: A,
         showDirtyGuildTemplateIndicator: L,
         memberCount: m,
@@ -676,7 +676,7 @@ function ez() {
     isGuildMetadataLoaded: d
   } = (0, i.useStateFromStoresObject)([ei.default], () => ei.default.getProps()), {
     AnalyticsLocationProvider: u
-  } = (0, T.default)(E.default.GUILD_SETTINGS), c = (0, i.useStateFromStores)([w.default], () => w.default.theme), _ = (0, i.useStateFromStores)([w.default], () => w.default.darkSidebar ? ey.ThemeTypes.DARK : void 0), I = (0, i.useStateFromStores)([z.default], () => null != s ? z.default.getChannels(s.id).SELECTABLE : null, [s]), S = (0, i.useStateFromStoresObject)([X.default], () => null != s ? X.default.getGuildPermissionProps(s) : eK), N = null == s ? void 0 : s.id, f = (0, i.useStateFromStores)([X.default], () => null != s && X.default.canAccessGuildSettings(s)), A = null != s && (0, $.staffOnlyGuildSettingsAccess)(s.id), L = A || f, C = A || S.canViewGuildAnalytics, {
+  } = (0, T.default)(E.default.GUILD_SETTINGS), c = (0, i.useStateFromStores)([w.default], () => w.default.theme), _ = (0, i.useStateFromStores)([w.default], () => w.default.darkSidebar ? ey.ThemeTypes.DARK : void 0), I = (0, i.useStateFromStores)([z.default], () => null != s ? z.default.getChannels(s.id).SELECTABLE : null, [s]), S = (0, i.useStateFromStoresObject)([X.default], () => null != s ? X.default.getGuildPermissionProps(s) : eK), N = null == s ? void 0 : s.id, g = (0, i.useStateFromStores)([X.default], () => null != s && X.default.canAccessGuildSettings(s)), A = null != s && (0, $.staffOnlyGuildSettingsAccess)(s.id), L = A || g, C = A || S.canViewGuildAnalytics, {
     shouldFetchMemberInsights: O,
     hasAccessRate: h
   } = (0, i.useStateFromStoresObject)([ea.default], () => ({
@@ -684,7 +684,7 @@ function ez() {
     hasAccessRate: null != s && ea.default.getMemberInsights(s.id).hasAccessRate
   }));
   n.useEffect(() => {
-    !d && null != N && (0, g.fetchMetadataForGuild)(N)
+    !d && null != N && (0, f.fetchMetadataForGuild)(N)
   }, [d, N]), n.useEffect(() => {
     L && C && O && null != N && (0, es.fetchMemberInsights)(N)
   }, [L, C, O, N]);

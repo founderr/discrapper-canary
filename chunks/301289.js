@@ -19,12 +19,12 @@ var a = s("37983"),
   I = s("49111"),
   S = s("782340"),
   N = s("153893");
-let f = (0, c.makeLazy)({
+let g = (0, c.makeLazy)({
   createPromise: () => s.el("282585").then(s.bind(s, "282585")),
   webpackId: "282585"
 });
 
-function g(e) {
+function f(e) {
   let t = (0, r.getDarkness)(e) > .25;
   return (0, u.getColor)(t ? I.Color.WHITE_500 : I.Color.PRIMARY_530)
 }
@@ -40,7 +40,7 @@ function A(e) {
     s(d)
   }
 
-  function f(e) {
+  function g(e) {
     s(e), u(e)
   }
   let A = t === I.DEFAULT_ROLE_COLOR,
@@ -48,7 +48,7 @@ function A(e) {
     m = (0, a.jsx)(_.default, {
       width: 32,
       height: 24,
-      color: g(t)
+      color: f(t)
     }),
     C = (0, o.useRadioGroup)({
       orientation: "horizontal",
@@ -122,7 +122,7 @@ function A(e) {
         renderPopout: e => (0, a.jsx)(E.CustomColorPicker, {
           ...e,
           value: t,
-          onChange: f
+          onChange: g
         }),
         children: e => (0, a.jsx)(o.Clickable, {
           ...e,
@@ -132,7 +132,7 @@ function A(e) {
             className: N.dropperIcon,
             width: 14,
             height: 14,
-            color: g(L)
+            color: f(L)
           })
         })
       })]
@@ -154,7 +154,7 @@ function L(e) {
     value: s,
     onChange: n,
     disabled: l
-  }) : (0, a.jsx)(f, {
+  }) : (0, a.jsx)(g, {
     defaultColor: I.DEFAULT_ROLE_COLOR,
     colors: I.ROLE_COLORS,
     value: s,

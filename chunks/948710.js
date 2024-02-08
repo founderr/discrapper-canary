@@ -15,8 +15,8 @@ var t = E("37983"),
   T = E("578706"),
   S = E("381546"),
   N = E("655804"),
-  A = E("238500"),
-  O = E("983782"),
+  O = E("238500"),
+  A = E("983782"),
   R = E("939011"),
   l = E("953014");
 
@@ -31,7 +31,7 @@ function u() {
     name: C,
     ...D
   } = null != e ? e : {}, c = null != C;
-  return n && E ? (0, t.jsx)(O.default, {
+  return n && E ? (0, t.jsx)(A.default, {
     children: (0, t.jsxs)("div", {
       className: r(l.container, {
         [l.containerMinimized]: u,
@@ -42,7 +42,7 @@ function u() {
         onClick: () => {
           L(!u)
         },
-        children: u ? (0, t.jsx)(N.default, {}) : (0, t.jsx)(A.default, {})
+        children: u ? (0, t.jsx)(N.default, {}) : (0, t.jsx)(O.default, {})
       }), (0, t.jsxs)("div", {
         className: r(l.content, {
           [l.contentMinimized]: u

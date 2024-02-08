@@ -15,8 +15,8 @@ var t = E("210696"),
   T = E("364685"),
   S = E("42203"),
   N = E("305961"),
-  A = E("619443");
-let O = new I.default("EntityVersionsManager");
+  O = E("619443");
+let A = new I.default("EntityVersionsManager");
 class R extends a.default {
   _initialize() {
     r.default.subscribe("CONNECTION_OPEN", u)
@@ -35,10 +35,10 @@ class R extends a.default {
 function l(e) {
   var _;
   let E = null === (_ = N.default.getGuild(e.guild_id)) || void 0 === _ ? void 0 : _.name;
-  O.fileOnly("received deleted guild entities (id: ".concat(e.guild_id, ", name: ").concat(E, ")")), n.default.Emitter.batched(() => {
+  A.fileOnly("received deleted guild entities (id: ".concat(e.guild_id, ", name: ").concat(E, ")")), n.default.Emitter.batched(() => {
     null != e.channels && function(e, _) {
       let E = Object.keys(S.default.getMutableBasicGuildChannelsForGuild(e));
-      O.fileOnly("syncChannels", {
+      A.fileOnly("syncChannels", {
         channelIdsInMemory: E,
         channelIdsFromServer: _
       }), E.forEach(E => {
@@ -96,12 +96,12 @@ function C(e) {
   setTimeout(() => (function(e) {
     var _, E, t, o, n;
     let r = null === (_ = N.default.getGuild(e)) || void 0 === _ ? void 0 : _.name;
-    O.fileOnly("requesting deleted guild entities (id: ".concat(e, ", name: ").concat(r, ")"));
+    A.fileOnly("requesting deleted guild entities (id: ".concat(e, ", name: ").concat(r, ")"));
     let a = D(Object.keys(S.default.getMutableBasicGuildChannelsForGuild(e))),
       i = D(Object.keys(null !== (o = null === (E = N.default.getGuild(e)) || void 0 === E ? void 0 : E.roles) && void 0 !== o ? o : {})),
       I = D(s.default.getGuildEmoji(e).map(e => e.id)),
       R = D(null !== (n = null === (t = T.default.getStickersByGuildId(e)) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== n ? n : []);
-    A.default.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, i, I, R)
+    O.default.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, i, I, R)
   })(e), Math.ceil(2e3 * Math.random()))
 }
 

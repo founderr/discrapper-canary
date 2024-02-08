@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("555158"),
   S = s("810567"),
   N = s("381546"),
-  f = s("155207"),
-  g = s("599110"),
+  g = s("155207"),
+  f = s("599110"),
   A = s("36402"),
   L = s("592407"),
   m = s("531493"),
@@ -94,7 +94,7 @@ function v(e) {
     }
   }
 
-  function f(e) {
+  function g(e) {
     let n = T.default.getUser(t.id);
     null != n && (0, d.openContextMenuLazy)(e, async () => {
       let {
@@ -123,7 +123,7 @@ function v(e) {
       children: e => (0, a.jsxs)(o.Clickable, {
         ...e,
         className: x.memberRow,
-        onContextMenu: f,
+        onContextMenu: g,
         children: [(0, a.jsx)(R.default, {
           className: x.memberDetails,
           avatarURL: t.avatarURL,
@@ -163,7 +163,7 @@ function P(e) {
     className: p.contentWidth,
     children: (0, a.jsxs)("div", {
       className: i(x.memberRow, x.emptyRowContainer),
-      children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(o.Text, {
+      children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(o.Text, {
         className: x.emptyRowText,
         variant: "text-sm/semibold",
         color: "text-muted",
@@ -265,11 +265,11 @@ function b(e) {
   } = (0, O.default)(0), {
     scrolledToTop: S,
     handleScroll: N
-  } = (0, h.useScrolledToTop)(), f = l.managed || d, L = (0, C.useGuildRoleMembers)(t.id, l.id), m = (0, r.useStateFromStores)([A.default], () => {
+  } = (0, h.useScrolledToTop)(), g = l.managed || d, L = (0, C.useGuildRoleMembers)(t.id, l.id), m = (0, r.useStateFromStores)([A.default], () => {
     var e, s;
     return null !== (s = null === (e = A.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[l.id]) && void 0 !== s ? s : 0
   }), R = m > L.length, U = () => {
-    g.default.track(M.AnalyticEvents.OPEN_MODAL, {
+    f.default.track(M.AnalyticEvents.OPEN_MODAL, {
       type: "Add Role Members",
       location_page: "Role Settings",
       location_section: "Members"
@@ -303,7 +303,7 @@ function b(e) {
           }), (0, a.jsx)(y, {
             query: c,
             setQuery: E,
-            locked: f,
+            locked: g,
             handleAddClick: U
           }), R ? (0, a.jsx)(I.default, {
             className: x.searchWarning,
@@ -317,7 +317,7 @@ function b(e) {
       query: c,
       guildId: t.id,
       roleId: l.id,
-      locked: f,
+      locked: g,
       onScroll: N,
       roleMembers: L,
       handleAddClick: U

@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return h
   },
   canManageGuildRoleSubscriptions: function() {
-    return g
+    return _
   }
 });
 var i, r, l = n("446674"),
@@ -80,10 +80,10 @@ function E(e) {
 }
 
 function h(e) {
-  let t = (0, l.useStateFromStores)([o.default], () => g(e), [e]);
+  let t = (0, l.useStateFromStores)([o.default], () => _(e), [e]);
   return t
 }
 
-function g(e) {
+function _(e) {
   return null != e && o.default.can(c.Permissions.ADMINISTRATOR, e)
 }

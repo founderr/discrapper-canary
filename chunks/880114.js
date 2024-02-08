@@ -22,16 +22,16 @@ function T(e) {
     headingClassName: a,
     textClassName: T,
     guild: E,
-    guildMember: A
-  } = e, _ = (0, l.default)([r.default], () => r.default.locale), S = null != E && null != A;
+    guildMember: m
+  } = e, S = (0, l.default)([r.default], () => r.default.locale), A = null != E && null != m;
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(s.Heading, {
       variant: "eyebrow",
       className: a,
-      children: S ? d.default.Messages.USER_PROFILE_MEMBER_SINCE : d.default.Messages.USER_PROFILE_DISCORD_MEMBER_SINCE
+      children: A ? d.default.Messages.USER_PROFILE_MEMBER_SINCE : d.default.Messages.USER_PROFILE_DISCORD_MEMBER_SINCE
     }), (0, n.jsxs)("div", {
       className: f.memberSinceContainer,
-      children: [S && (0, n.jsx)(s.Tooltip, {
+      children: [A && (0, n.jsx)(s.Tooltip, {
         text: d.default.Messages.DISCORD_NAME,
         children: e => (0, n.jsx)(o.default, {
           ...e,
@@ -40,8 +40,8 @@ function T(e) {
       }), (0, n.jsx)(s.Text, {
         className: T,
         variant: "text-sm/normal",
-        children: (0, i.getCreatedAtDate)(c.default.extractTimestamp(t), _)
-      }), null != E && null != A && (0, n.jsxs)(n.Fragment, {
+        children: (0, i.getCreatedAtDate)(c.default.extractTimestamp(t), S)
+      }), null != E && null != m && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)("div", {
           className: f.divider
         }), (0, n.jsx)(s.Tooltip, {
@@ -54,7 +54,7 @@ function T(e) {
         }), (0, n.jsx)(s.Text, {
           className: T,
           variant: "text-sm/normal",
-          children: (0, i.getCreatedAtDate)(A.joinedAt, _)
+          children: (0, i.getCreatedAtDate)(m.joinedAt, S)
         })]
       })]
     })]

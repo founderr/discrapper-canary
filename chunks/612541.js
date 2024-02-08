@@ -13,8 +13,8 @@ var r = E("450911"),
   T = E("845579"),
   S = E("271938"),
   N = E("42203"),
-  A = E("546463"),
-  O = E("568307"),
+  O = E("546463"),
+  A = E("568307"),
   R = E("18494"),
   l = E("101125"),
   u = E("713726"),
@@ -25,7 +25,7 @@ var r = E("450911"),
 let d = [];
 class U extends I.default {
   handleRunningGamesChange() {
-    let e = O.default.getVisibleGame();
+    let e = A.default.getVisibleGame();
     if (null == e) return;
     let {
       canBroadcast: _
@@ -33,11 +33,11 @@ class U extends I.default {
       location: "handle_running_games_change"
     }, {
       autoTrackExposure: !1
-    }), E = l.default.getBroadcast(), t = (0, u.getGameName)(e), o = null != A.default.getGameByName(t), n = (0, D.getIsBroadcastingToAnyone)();
+    }), E = l.default.getBroadcast(), t = (0, u.getGameName)(e), o = null != O.default.getGameByName(t), n = (0, D.getIsBroadcastingToAnyone)();
     if (!_ || null != E || !T.BroadcastAutoBroadcast.getSetting() || !o || !n) return;
     let r = null != d.find(_ => _.pid === e.pid);
     if (r) return;
-    d = O.default.getRunningGames();
+    d = A.default.getRunningGames();
     let a = (0, C.getCanStartBroadcast)();
     if (!a) return;
     let I = R.default.getVoiceChannelId();

@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("228220"),
   S = s("449008"),
   N = s("653274"),
-  f = s("330724"),
-  g = s("136278"),
+  g = s("330724"),
+  f = s("136278"),
   A = s("594523"),
   L = s("653138"),
   m = s("782340"),
@@ -56,9 +56,9 @@ function h(e) {
     onDragStart: p,
     onDragComplete: x,
     onDragReset: U
-  }), H = (0, r.useStateFromStoresObject)([g.default], () => {
+  }), H = (0, r.useStateFromStoresObject)([f.default], () => {
     var e;
-    return null !== (e = g.default.errors[A]) && void 0 !== e ? e : O
+    return null !== (e = f.default.errors[A]) && void 0 !== e ? e : O
   }), [V, w] = n.useState(!1), [k, Y] = n.useState(!1), K = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(S.isNotNullish)[0], W = H.config, z = v && l.options.length >= L.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, Z = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(P), [l]).length - P.size, X = n.useRef(null);
   return (n.useLayoutEffect(() => {
     setTimeout(() => {
@@ -110,7 +110,7 @@ function h(e) {
         className: C.removeButton,
         children: (0, a.jsx)(o.Clickable, {
           className: C.closeIcon,
-          onClick: () => (0, f.deleteGuildOnboardingPrompt)(s, l.id),
+          onClick: () => (0, g.deleteGuildOnboardingPrompt)(s, l.id),
           children: (0, a.jsx)(I.default, {
             height: 16,
             width: 16
@@ -148,7 +148,7 @@ function h(e) {
         inputClassName: C.titleInput,
         inputRef: X,
         value: l.title,
-        onChange: e => (0, f.editGuildOnboardingPrompt)(s, l.id, {
+        onChange: e => (0, g.editGuildOnboardingPrompt)(s, l.id, {
           title: e
         }),
         placeholder: m.default.Messages.ONBOARDING_PROMPT_TITLE_PLACEHOLDER,
@@ -184,7 +184,7 @@ function h(e) {
             size: 20,
             type: o.Checkbox.Types.INVERTED,
             value: !l.singleSelect,
-            onChange: (e, t) => (0, f.editGuildOnboardingPrompt)(s, l.id, {
+            onChange: (e, t) => (0, g.editGuildOnboardingPrompt)(s, l.id, {
               singleSelect: !t
             }),
             children: (0, a.jsx)(o.Text, {
@@ -196,7 +196,7 @@ function h(e) {
             size: 20,
             type: o.Checkbox.Types.INVERTED,
             value: l.inOnboarding && l.required,
-            onChange: (e, t) => (0, f.editGuildOnboardingPrompt)(s, l.id, {
+            onChange: (e, t) => (0, g.editGuildOnboardingPrompt)(s, l.id, {
               required: t
             }),
             disabled: !l.inOnboarding,
@@ -221,7 +221,7 @@ function h(e) {
           className: C.removeButton,
           children: (0, a.jsx)(o.Clickable, {
             className: C.closeIcon,
-            onClick: () => (0, f.deleteGuildOnboardingPrompt)(s, l.id),
+            onClick: () => (0, g.deleteGuildOnboardingPrompt)(s, l.id),
             children: (0, a.jsx)(I.default, {
               height: 16,
               width: 16
@@ -247,7 +247,7 @@ function R(e) {
   function r(e) {
     return (0, a.jsx)(o.Clickable, {
       className: C.example,
-      onClick: () => (0, f.editGuildOnboardingPrompt)(s, t.id, {
+      onClick: () => (0, g.editGuildOnboardingPrompt)(s, t.id, {
         title: e
       }),
       children: (0, a.jsx)(o.Text, {
@@ -282,7 +282,7 @@ function D(e) {
     handleDragStart: d,
     handleDragReset: c,
     handleDragComplete: _
-  } = (0, u.default)(s.options, e => (0, f.editGuildOnboardingPrompt)(t, s.id, {
+  } = (0, u.default)(s.options, e => (0, g.editGuildOnboardingPrompt)(t, s.id, {
     options: e
   }));
   return (0, a.jsxs)("div", {

@@ -20,8 +20,8 @@ var n = s("446674"),
   I = s("701909"),
   S = s("900938"),
   N = s("49111"),
-  f = s("560241"),
-  g = s("782340"),
+  g = s("560241"),
+  f = s("782340"),
   A = s("163810");
 let L = {
     page: N.AnalyticsPages.GUILD_SETTINGS,
@@ -39,11 +39,11 @@ let L = {
       children: [(0, a.jsx)(l.Heading, {
         className: A.upsellHeader,
         variant: "heading-xl/semibold",
-        children: g.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_TITLE
+        children: f.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_TITLE
       }), (0, a.jsx)(l.Text, {
         className: A.upsellDescription,
         variant: "text-md/normal",
-        children: g.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_DESCRIPTION_FREE_SLOTS
+        children: f.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_DESCRIPTION_FREE_SLOTS
       }), (0, a.jsxs)("div", {
         className: A.upsellButtons,
         children: [(0, a.jsx)(l.Button, {
@@ -56,7 +56,7 @@ let L = {
             guildId: t.id,
             totalNumberOfSlotsToAssign: n
           }),
-          children: g.default.Messages.GUILD_SETTINGS_STICKERS_BOOST_SERVER
+          children: f.default.Messages.GUILD_SETTINGS_STICKERS_BOOST_SERVER
         }), (0, a.jsx)(l.Button, {
           innerClassName: A.upsellButton,
           color: l.Button.Colors.WHITE,
@@ -66,23 +66,23 @@ let L = {
               section: N.AnalyticsSections.GUILD_SETTINGS_STICKERS
             }
           }),
-          children: g.default.Messages.LEARN_MORE
+          children: f.default.Messages.LEARN_MORE
         })]
       })]
     })
   },
   C = () => (0, a.jsxs)(l.FormSection, {
-    title: g.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HEADING,
+    title: f.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HEADING,
     children: [(0, a.jsx)(l.FormText, {
       type: l.FormTextTypes.DESCRIPTION,
-      children: g.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({
-        fileSize: (0, _.formatKbSize)(f.MAX_STICKER_FILE_SIZE, {
+      children: f.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({
+        fileSize: (0, _.formatKbSize)(g.MAX_STICKER_FILE_SIZE, {
           useKibibytes: !0
         })
       })
     }), (0, a.jsx)(l.FormText, {
       type: l.FormTextTypes.DESCRIPTION,
-      children: g.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HELP.format({
+      children: f.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HELP.format({
         articleUrl: I.default.getArticleURL(N.HelpdeskArticles.STICKERS_UPLOAD)
       })
     })]
@@ -97,11 +97,11 @@ let L = {
       u = (0, T.getNextTier)(r, l.id),
       c = (0, T.getTotalStickerCountForTier)(r),
       E = i.length;
-    return null == u || r === N.BoostedGuildTiers.TIER_3 || o > 0 ? (0, a.jsx)(a.Fragment, {}) : (E > c ? (t = g.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_HEADER.format({
+    return null == u || r === N.BoostedGuildTiers.TIER_3 || o > 0 ? (0, a.jsx)(a.Fragment, {}) : (E > c ? (t = f.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_HEADER.format({
       level: u
-    }), s = g.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_TEXT.format({
+    }), s = f.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_TEXT.format({
       level: u
-    }), n = N.AnalyticsObjects.BOOST_UPSELL_BANNER_LOST_LEVEL) : (t = g.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER, s = g.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TEXT.format({
+    }), n = N.AnalyticsObjects.BOOST_UPSELL_BANNER_LOST_LEVEL) : (t = f.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER, s = f.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TEXT.format({
       level: u,
       numAdditional: (0, T.getIncrementalStickerCountForTier)(u)
     }), n = N.AnalyticsObjects.BOOST_UPSELL_BANNER_SLOTS_FULL), (0, a.jsx)(d.default, {
@@ -129,7 +129,7 @@ var h = () => {
   let o = e.premiumTier !== N.BoostedGuildTiers.NONE || t.length > 0;
   return (0, a.jsx)(s, {
     children: (0, a.jsxs)(l.FormSection, {
-      title: g.default.Messages.GUILD_SETTINGS_STICKERS,
+      title: f.default.Messages.GUILD_SETTINGS_STICKERS,
       tag: l.FormTitleTags.H1,
       children: [o ? (0, a.jsxs)("div", {
         children: [(0, a.jsx)(O, {

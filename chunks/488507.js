@@ -13,8 +13,8 @@ var t, o, n = E("811022"),
   T = E("568307"),
   S = E("703370"),
   N = E("860957"),
-  A = E("901165"),
-  O = E("599110"),
+  O = E("901165"),
+  A = E("599110"),
   R = E("50885"),
   l = E("816454"),
   u = E("360782"),
@@ -264,7 +264,7 @@ class P {
     if (null != E) {
       E.screenAnalytics.destroy();
       let _ = await E.getAnalytics();
-      for (let e of (O.default.track(C.AnalyticEvents.OVERLAY_USAGE_STATS, _.usage), _.notifications)) O.default.track(C.AnalyticEvents.OVERLAY_USAGE_NOTIFICATION_STATS, e);
+      for (let e of (A.default.track(C.AnalyticEvents.OVERLAY_USAGE_STATS, _.usage), _.notifications)) A.default.track(C.AnalyticEvents.OVERLAY_USAGE_NOTIFICATION_STATS, e);
       c.verbose("OVERLAY_USAGE_STATS: ".concat(e.name), _), delete P.gamesByPid[e.pid]
     }
     delete P.gamesByName[_]
@@ -274,11 +274,11 @@ class P {
     let r = {
         setting_is_enabled: N.default.enabled,
         setting_method: null == this.overlayStatus ? null : D.OverlayMethod[this.overlayStatus.overlayMethod],
-        setting_display_user: A.default.getDisplayUserMode(),
-        setting_display_name: A.default.getDisplayNameMode(),
-        setting_avatar_size: A.default.getAvatarSizeMode(),
-        setting_notification_position: A.default.getNotificationPositionMode(),
-        setting_chat_notification: A.default.getTextChatNotificationMode()
+        setting_display_user: O.default.getDisplayUserMode(),
+        setting_display_name: O.default.getDisplayNameMode(),
+        setting_avatar_size: O.default.getAvatarSizeMode(),
+        setting_notification_position: O.default.getNotificationPositionMode(),
+        setting_chat_notification: O.default.getTextChatNotificationMode()
       },
       a = (0, T.getOverlayGameStatus)(this.game),
       i = {

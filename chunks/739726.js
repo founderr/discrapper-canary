@@ -21,8 +21,8 @@ var r = n("414456"),
   S = n("153160"),
   E = n("928576"),
   h = n("516770"),
-  g = n("843455"),
-  _ = n("782340"),
+  _ = n("843455"),
+  g = n("782340"),
   p = n("49738");
 
 function C(e) {
@@ -38,7 +38,7 @@ function C(e) {
     onDeleteProduct: S,
     onCopyLink: E,
     onTestDownload: h,
-    onReportProduct: g,
+    onReportProduct: _,
     closePopout: C,
     onSelect: I
   } = e;
@@ -47,41 +47,41 @@ function C(e) {
     children: (0, i.jsxs)(s.Menu, {
       navId: "guild-product-context",
       onClose: C,
-      "aria-label": _.default.Messages.GUILD_PRODUCTS_ACTION_MENU_LABEL,
+      "aria-label": g.default.Messages.GUILD_PRODUCTS_ACTION_MENU_LABEL,
       onSelect: I,
       children: [(0, i.jsxs)(s.MenuGroup, {
         children: [t && (0, i.jsx)(s.MenuItem, {
           id: "guild-product-edit",
-          label: _.default.Messages.GUILD_PRODUCT_EDIT,
+          label: g.default.Messages.GUILD_PRODUCT_EDIT,
           action: a
         }), r && (0, i.jsx)(s.MenuItem, {
           id: "guild-product-copy-link",
-          label: _.default.Messages.GUILD_PRODUCT_COPY_LINK,
+          label: g.default.Messages.GUILD_PRODUCT_COPY_LINK,
           icon: c.default,
           action: E
         }), l && (0, i.jsx)(s.MenuItem, {
           id: "guild-product-test-download",
-          label: _.default.Messages.GUILD_PRODUCT_TEST_DOWNLOAD,
+          label: g.default.Messages.GUILD_PRODUCT_TEST_DOWNLOAD,
           icon: d.default,
           action: h
         })]
       }), (0, i.jsxs)(s.MenuGroup, {
         children: [n && (0, i.jsx)(s.MenuItem, {
           id: "guild-product-unpublish",
-          label: _.default.Messages.GUILD_PRODUCT_UNPUBLISH,
+          label: g.default.Messages.GUILD_PRODUCT_UNPUBLISH,
           action: f
         }), u && (0, i.jsx)(s.MenuItem, {
           id: "guild-product-delete",
-          label: _.default.Messages.GUILD_PRODUCT_DELETE,
+          label: g.default.Messages.GUILD_PRODUCT_DELETE,
           color: "danger",
           action: S
         })]
       }), (0, i.jsx)(s.MenuGroup, {
         children: o && (0, i.jsx)(s.MenuItem, {
           id: "guild-product-report",
-          label: _.default.Messages.GUILD_PRODUCT_REPORT,
+          label: g.default.Messages.GUILD_PRODUCT_REPORT,
           color: "danger",
-          action: g
+          action: _
         })
       })]
     })
@@ -102,7 +102,7 @@ function I(e) {
     onUnpublishProduct: S,
     onDeleteProduct: E,
     onCopyProductLink: h,
-    onTestDownload: g,
+    onTestDownload: _,
     onReportProduct: I
   } = e;
   return (0, i.jsx)("div", {
@@ -128,7 +128,7 @@ function I(e) {
         onUnpublishProduct: S,
         onDeleteProduct: E,
         onCopyLink: h,
-        onTestDownload: g,
+        onTestDownload: _,
         onReportProduct: I
       }),
       children: (e, n) => {
@@ -137,7 +137,7 @@ function I(e) {
         } = n;
         return (0, i.jsx)(s.Clickable, {
           ...e,
-          "aria-label": _.default.Messages.GUILD_PRODUCTS_ACTION_MENU_BUTTON_ARIA_LABEL.format({
+          "aria-label": g.default.Messages.GUILD_PRODUCTS_ACTION_MENU_BUTTON_ARIA_LABEL.format({
             productName: t.name
           }),
           "aria-haspopup": "listbox",
@@ -163,7 +163,7 @@ function m(e) {
     onCopyProductLink: f,
     onTestDownload: m,
     disabled: T = !1
-  } = e, v = (0, o.useListingThumbnailUrl)(t, 600), R = null !== t.price_tier ? (0, S.formatPrice)(t.price_tier, g.CurrencyCodes.USD) : void 0, N = (0, E.useProductType)(t);
+  } = e, v = (0, o.useListingThumbnailUrl)(t, 600), R = null !== t.price_tier ? (0, S.formatPrice)(t.price_tier, _.CurrencyCodes.USD) : void 0, N = (0, E.useProductType)(t);
   return (0, i.jsxs)(s.ClickableContainer, {
     tag: "article",
     className: l(p.productCardClickable, p.productCard, {
@@ -190,7 +190,7 @@ function m(e) {
         onReportProduct: () => {}
       })))
     },
-    "aria-label": _.default.Messages.GUILD_PRODUCT_EDIT_ARIA_LABEL.format({
+    "aria-label": g.default.Messages.GUILD_PRODUCT_EDIT_ARIA_LABEL.format({
       productName: t.name
     }),
     children: [(0, i.jsx)("img", {

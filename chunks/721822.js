@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("102985"),
   S = s("697218"),
   N = s("941886"),
-  f = s("810567"),
-  g = s("258078"),
+  g = s("810567"),
+  f = s("258078"),
   A = s("117362"),
   L = s("655518"),
   m = s("158998"),
@@ -60,15 +60,15 @@ function v(e) {
     children: [(0, a.jsxs)(d.ModalHeader, {
       className: p.header,
       separator: !1,
-      children: [(0, a.jsx)(g.default, {
-        size: g.default.Sizes.SIZE_24,
+      children: [(0, a.jsx)(f.default, {
+        size: f.default.Sizes.SIZE_24,
         className: p.userUsername,
         children: m.default.getUserTag(l, {
           mode: "username",
           identifiable: r ? "never" : "always"
         })
-      }), r || l.isPomelo() ? null : (0, a.jsxs)(g.default, {
-        size: g.default.Sizes.SIZE_24,
+      }), r || l.isPomelo() ? null : (0, a.jsxs)(f.default, {
+        size: f.default.Sizes.SIZE_24,
         className: p.userDiscrim,
         children: ["#", l.discriminator]
       })]
@@ -281,7 +281,7 @@ class j extends n.PureComponent {
             children: x.default.Messages.BANS_HINT.format({
               onModerationClick: this.handleModerationClick
             })
-          }), null == t && (0, a.jsx)(f.default, {
+          }), null == t && (0, a.jsx)(g.default, {
             className: p.searchBar,
             query: null != i ? i : "",
             placeholder: x.default.Messages.BANS_SEARCH_PLACEHOLDER,

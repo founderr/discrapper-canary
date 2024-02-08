@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("462579"),
   S = s("641892"),
   N = s("690343"),
-  f = s("782340"),
-  g = s("642622"),
+  g = s("782340"),
+  f = s("642622"),
   A = s("628652");
 
 function L(e) {
@@ -44,13 +44,13 @@ function L(e) {
       } = await s.el("77078").then(s.bind(s, "77078"));
       return s => (0, a.jsx)(t, {
         ...s,
-        header: f.default.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
-        cancelText: f.default.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
-        confirmText: f.default.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
+        header: g.default.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
+        cancelText: g.default.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
+        confirmText: g.default.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
         onConfirm: () => T(e),
         children: (0, a.jsx)(o.Text, {
           variant: "text-md/normal",
-          children: f.default.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
+          children: g.default.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
         })
       })
     }) : T(e)
@@ -67,27 +67,27 @@ function L(e) {
     })
   };
   return (0, a.jsxs)("div", {
-    className: g.itemWrapper,
+    className: f.itemWrapper,
     children: [(0, a.jsxs)("div", {
-      className: g.itemContent,
+      className: f.itemContent,
       children: [(0, a.jsx)(o.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: f.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
+        children: g.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
       }), (l || i && !c) && (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: f.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
+        children: g.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
       }), !l && (0, a.jsx)("div", {
         className: A.pillRow,
         children: r && (0, a.jsxs)(o.Text, {
           color: "interactive-normal",
           variant: "text-xs/medium",
-          className: g.valuePill,
+          className: f.valuePill,
           children: [(0, a.jsx)(S.default, {
             width: 16,
             height: 16
-          }), f.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
+          }), g.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
         })
       })]
     }), (0, a.jsx)("div", {
@@ -101,7 +101,7 @@ function L(e) {
           },
           children: (0, a.jsx)(o.Tooltip, {
             tooltipContentClassName: A.tooltip,
-            text: f.default.Messages.PREVIEW,
+            text: g.default.Messages.PREVIEW,
             children: e => (0, a.jsx)(I.default, {
               height: 24,
               width: 24,
@@ -115,7 +115,7 @@ function L(e) {
         })]
       }) : (0, a.jsx)(o.Button, {
         size: o.Button.Sizes.SMALL,
-        children: f.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
+        children: g.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
       })
     })]
   })
@@ -125,7 +125,7 @@ function m(e) {
   var t;
   let {
     guild: s
-  } = e, [l, o] = n.useState(!1), [I, S] = n.useState(!1), N = n.useRef(!1), f = n.useCallback(() => {
+  } = e, [l, o] = n.useState(!1), [I, S] = n.useState(!1), N = n.useRef(!1), g = n.useCallback(() => {
     N.current = !0
   }, []), m = (0, _.useSubmittedGuildJoinRequestTotal)({
     guildId: s.id
@@ -144,12 +144,12 @@ function m(e) {
     isExpanded: l,
     onExpand: () => o(!l),
     children: (0, a.jsx)("div", {
-      className: i(g.itemBodyContainer, A.rulesScreeningItems),
+      className: i(f.itemBodyContainer, A.rulesScreeningItems),
       children: I && (0, a.jsx)(T.default, {
         guild: s,
         submittedGuildJoinRequestsCount: m,
         formFields: O,
-        onFormFieldUpdate: f,
+        onFormFieldUpdate: g,
         hideVerificationLevelField: !0
       })
     })

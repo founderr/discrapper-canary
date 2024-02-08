@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return A
+    return O
   }
 });
 var t = E("404828");
@@ -17,7 +17,7 @@ let {
   image: S,
   text: N
 } = t.defaultRules;
-var A = {
+var O = {
   newline: o,
   paragraph: n,
   url: r,

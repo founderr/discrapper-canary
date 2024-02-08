@@ -25,8 +25,8 @@ var a = s("37983"),
   I = s("448993"),
   S = s("883069"),
   N = s("569808"),
-  f = s("658329"),
-  g = s("578706"),
+  g = s("658329"),
+  f = s("578706"),
   A = s("381546"),
   L = s("900938"),
   m = s("579033"),
@@ -165,21 +165,21 @@ function p() {
         children: C.default.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_WILL_COPY
       }), (0, a.jsxs)("div", {
         className: O.descriptionRow,
-        children: [(0, a.jsx)(g.default, {
+        children: [(0, a.jsx)(f.default, {
           className: O.descriptionIcon,
           color: u.default.unsafe_rawColors.GREEN_360.css,
           backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
         }), C.default.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_CHANNELS]
       }), (0, a.jsxs)("div", {
         className: O.descriptionRow,
-        children: [(0, a.jsx)(g.default, {
+        children: [(0, a.jsx)(f.default, {
           className: O.descriptionIcon,
           color: u.default.unsafe_rawColors.GREEN_360.css,
           backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
         }), C.default.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_ROLES]
       }), (0, a.jsxs)("div", {
         className: O.descriptionRow,
-        children: [(0, a.jsx)(g.default, {
+        children: [(0, a.jsx)(f.default, {
           className: O.descriptionIcon,
           color: u.default.unsafe_rawColors.GREEN_360.css,
           backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
@@ -278,7 +278,7 @@ function P(e) {
       children: (0, a.jsx)(_.default, {
         buttonLook: c.Button.Looks.FILLED,
         buttonColor: c.Button.Colors.BRAND,
-        value: (0, f.default)(s.code)
+        value: (0, g.default)(s.code)
       })
     }), s.isDirty && (0, a.jsx)(c.Text, {
       color: "text-warning",
