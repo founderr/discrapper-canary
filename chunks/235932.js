@@ -41,13 +41,16 @@ let c = (e, t, n) => {
     }, {
       w: o.activitySize,
       h: o.activitySize
-    }, 8) : (null === (i = a.assetMap) || void 0 === i ? void 0 : i.has(o.AssetTypes.ApplicationImage)) && a.drawRoundedImage("ApplicationImage", {
+    }, 8) : (null === (i = a.assetMap) || void 0 === i ? void 0 : i.has(o.AssetTypes.ApplicationImage)) ? a.drawRoundedImage("ApplicationImage", {
       x: 0,
       y: 8
     }, {
       w: o.activitySize,
       h: o.activitySize
-    }, 8), a.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), a.setFont({
+    }, 8) : (a.setColor("white"), a.drawPath(o.ACTIVITY_IMAGE_FALLBACK_PATH, {
+      x: 0,
+      y: 8
+    }, !0, 2)), a.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), a.setFont({
       size: 16,
       family: "sans-serif"
     }), a.drawText("".concat(n.username, " is playing"), {

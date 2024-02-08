@@ -103,6 +103,14 @@ l = class extends i.default {
     } = n;
     return this.context.drawImage(l, i, a, r, o, u, d, c, f), s.DrawResultStatus.Success
   }
+  drawPath(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+      l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+    if (null == this.context) return s.DrawResultStatus.Failure;
+    this.setContextProperties(), this.context.save();
+    let i = new Path2D(e);
+    return this.context.translate(t.x, t.y), this.context.scale(l, l), n ? this.context.fill(i, "evenodd") : this.context.stroke(i), this.context.restore(), s.DrawResultStatus.Success
+  }
   constructor(e, t) {
     super(e, t), this.canvas = e, this.context = this.canvas.getContext("2d")
   }
