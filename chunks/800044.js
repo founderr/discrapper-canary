@@ -14,7 +14,8 @@ var l = n("103603"),
     }
     async exportCanvas(e, t) {
       let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "png",
-        a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+        s = arguments.length > 4 ? arguments[4] : void 0;
       if (t === i.DiscordCanvasExporterOutputFormats.Base64) return this.toDataUrl(e, n, a);
       if (t === i.DiscordCanvasExporterOutputFormats.Blob) {
         let t = this.toDataUrl(e, n, a);
@@ -22,7 +23,7 @@ var l = n("103603"),
       }
       if (t === i.DiscordCanvasExporterOutputFormats.File) {
         let t = this.toDataUrl(e, n, a);
-        return await (0, l.dataUrlToFile)(t, "activityreaction.png", "image/png")
+        return await (0, l.dataUrlToFile)(t, s, "image/png")
       }
       throw Error("DiscordCanvas: ".concat(t, " is not a valid export format."))
     }

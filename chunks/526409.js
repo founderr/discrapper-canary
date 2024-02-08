@@ -21,10 +21,10 @@ var r = n("966724"),
   p = n("42203"),
   m = n("474643"),
   h = n("462495");
-let E = async e => {
-  let t = await e.export(o.DiscordCanvasExporterOutputFormats.File, "png", 1);
-  return t
-}, S = e => {
+let E = async (e, t) => {
+  let n = await e.export(o.DiscordCanvasExporterOutputFormats.File, "png", 1, t);
+  return n
+}, g = e => {
   let t = h.default.getFiles(e),
     n = t[0],
     i = h.default.getMessageForFile(n.id);
@@ -34,7 +34,7 @@ let E = async e => {
     };
     l.default.subscribe("UPLOAD_COMPLETE", i), l.default.subscribe("UPLOAD_FAIL", i)
   })
-}, g = function(e, t) {
+}, S = function(e, t) {
   var l;
   let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     a = p.default.getChannel(t);
@@ -64,20 +64,22 @@ let E = async e => {
   }
 }, C = async function(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    a = await i.default.openPrivateChannel(n.id, !1, !1),
-    s = await E(e);
-  g(s, a, l);
-  let r = await S(a);
-  if (null != r) {
+    a = arguments.length > 4 ? arguments[4] : void 0,
+    s = await i.default.openPrivateChannel(n.id, !1, !1),
+    r = await E(e, a);
+  S(r, s, l);
+  let o = await g(s);
+  if (null != o) {
     let e = (0, c.toReactionEmoji)(t);
-    (0, d.addReaction)(a, r.id, e)
+    (0, d.addReaction)(s, o.id, e)
   }
 }, T = async function(e, t, n) {
   let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    s = await i.default.openPrivateChannel(n.id, !1, !1),
-    r = await E(e);
-  g(r, s, l), await S(s);
-  let o = p.default.getChannel(s),
-    d = u.default.parse(o, t);
-  a.default.sendMessage(s, d)
+    s = arguments.length > 4 ? arguments[4] : void 0,
+    r = await i.default.openPrivateChannel(n.id, !1, !1),
+    o = await E(e, s);
+  S(o, r, l), await g(r);
+  let d = p.default.getChannel(r),
+    c = u.default.parse(d, t);
+  a.default.sendMessage(r, c)
 }

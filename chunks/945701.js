@@ -18,12 +18,12 @@ var l = n("37983"),
   m = n("964261"),
   h = n("526409"),
   E = n("314848"),
-  S = n("49111"),
-  g = n("782340"),
+  g = n("49111"),
+  S = n("782340"),
   C = n("619187");
 let T = (0, c.createChannelRecord)({
     id: "1",
-    type: S.ChannelTypes.DM
+    type: g.ChannelTypes.DM
   }),
   v = i.forwardRef(function(e, t) {
     let {
@@ -40,7 +40,7 @@ let T = (0, c.createChannelRecord)({
           variant: "text-md/bold",
           children: ["What do you want to say to ", n.globalName, "?"]
         }), (0, l.jsx)(s.Clickable, {
-          "aria-label": g.default.Messages.QUICK_REPLY_CLOSE_ARIA_LABEL,
+          "aria-label": S.default.Messages.QUICK_REPLY_CLOSE_ARIA_LABEL,
           onClick: a,
           children: (0, l.jsx)(p.default, {})
         })]
@@ -81,21 +81,22 @@ var I = e => {
     showReact: s = !0,
     showReply: r = !0,
     requireConfirmation: o = !1,
-    reactor: u
-  } = e, [c, p] = i.useState(!1), [m, S] = i.useState(!1), [g, I] = i.useState(!1), [_, y] = i.useState(), [A, N] = i.useState(""), x = i.useRef(null), O = i.useRef(null), R = (0, E.default)(n);
+    filename: u,
+    reactor: c
+  } = e, [p, m] = i.useState(!1), [g, S] = i.useState(!1), [I, _] = i.useState(!1), [y, A] = i.useState(), [N, x] = i.useState(""), O = i.useRef(null), R = i.useRef(null), M = (0, E.default)(n);
 
-  function M(e) {
+  function L(e) {
     var t, n;
-    null != e.target && (!(null == x ? void 0 : null === (t = x.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && S(!1), !(null == O ? void 0 : null === (n = O.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && I(!1))
+    null != e.target && (!(null == O ? void 0 : null === (t = O.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && S(!1), !(null == R ? void 0 : null === (n = R.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && _(!1))
   }
   return (i.useEffect(() => {
     let e = e => {
-      "Escape" === e.key && (I(!1), S(!1))
+      "Escape" === e.key && (_(!1), S(!1))
     };
-    return document.addEventListener("keydown", e), document.addEventListener("mousedown", M), () => {
-      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", M)
+    return document.addEventListener("keydown", e), document.addEventListener("mousedown", L), () => {
+      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", L)
     }
-  }, []), R) ? (0, l.jsxs)(l.Fragment, {
+  }, []), M) ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: C.reactions,
       children: [s && (0, l.jsx)(f.default, {
@@ -103,7 +104,7 @@ var I = e => {
         tabIndex: 0,
         className: C.reaction,
         onClick: () => {
-          S(!0), I(!1)
+          S(!0), _(!1)
         }
       }), r && (0, l.jsx)("button", {
         style: {
@@ -113,13 +114,13 @@ var I = e => {
         },
         className: C.reaction,
         onClick: () => {
-          I(!0)
+          _(!0)
         },
         children: (0, l.jsx)(a.ArrowAngleLeftUpIcon, {})
       })]
-    }), m && (0, l.jsx)("div", {
+    }), g && (0, l.jsx)("div", {
       className: C.picker,
-      ref: x,
+      ref: O,
       children: (0, l.jsx)(d.ReactionPicker, {
         messageId: "",
         channel: T,
@@ -127,22 +128,22 @@ var I = e => {
           S(!1)
         },
         onSelectEmoji: e => {
-          null != e && (y(e), S(!1), p(!0))
+          null != e && (A(e), S(!1), m(!0))
         }
       })
-    }), g && (0, l.jsx)(v, {
-      ref: O,
+    }), I && (0, l.jsx)(v, {
+      ref: R,
       user: n,
       activity: t,
-      hide: () => I(!1),
+      hide: () => _(!1),
       onEnter: e => {
-        N(e), p(!0)
+        x(e), m(!0)
       }
-    }), c && (0, l.jsx)(u, {
+    }), p && (0, l.jsx)(c, {
       activity: t,
       user: n,
       onComplete: e => {
-        null != _ ? ((0, h.sendReaction)(e, _, n, o), y(void 0)) : null != A && ((0, h.sendReply)(e, A, n, o), N("")), p(!1)
+        null != y ? ((0, h.sendReaction)(e, y, n, o, u), A(void 0)) : null != N && ((0, h.sendReply)(e, N, n, o, u), x("")), m(!1)
       }
     })]
   }) : null
