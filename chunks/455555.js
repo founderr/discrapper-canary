@@ -126,7 +126,12 @@ let eN = l.memo(function() {
         let {
           metadata: e
         } = g, t = P.default.getUserExperimentDescriptor(e.id);
-        null != t && (0, v.trackExposureToExperiment)(e.id, t)
+        null != t && (0, v.trackExposureToExperiment)(e.id, t);
+        let n = async () => {
+          var e, t;
+          (null === (e = g.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, A.surveySeen)(null === (t = g.metadata) || void 0 === t ? void 0 : t.id)
+        };
+        n()
       }
     }, [g]), null == g) return null;
   let eS = ee.typeToDismissibleContent[g.type];

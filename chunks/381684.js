@@ -120,7 +120,7 @@ h.displayName = "SurveyStore", h.persistKey = "SurveyStore", h.migrations = [e =
 var g = new h(r.default, {
   CONNECTION_OPEN: function() {
     var e;
-    if (!(null != I.lastFetched && Date.now() - (null !== (e = I.lastFetched) && void 0 !== e ? e : 0) < 864e5) || null != I.surveyOverride)(0, o.surveyFetch)(I.surveyOverride)
+    if (!(null != I.lastFetched && Date.now() - (null !== (e = I.lastFetched) && void 0 !== e ? e : 0) < 864e5) || null != I.surveyOverride)(0, o.surveyFetch)(I.surveyOverride, !0)
   },
   SURVEY_FETCHED: S,
   SURVEY_HIDE: function(e) {
@@ -133,7 +133,7 @@ var g = new h(r.default, {
     let {
       id: t
     } = e;
-    I.surveyOverride = t, null != t && delete I.hiddenSurveys[t], (0, o.surveyFetch)(I.surveyOverride)
+    I.surveyOverride = t, null != t && delete I.hiddenSurveys[t], (0, o.surveyFetch)(I.surveyOverride, !0)
   },
   PUSH_NOTIFICATION_CLICK: function() {},
   DISPLAYED_INVITE_SHOW: function() {},

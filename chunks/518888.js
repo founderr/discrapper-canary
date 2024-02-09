@@ -8,6 +8,9 @@ n.r(t), n.d(t, {
   },
   surveyFetch: function() {
     return c
+  },
+  surveySeen: function() {
+    return E
   }
 });
 var s = n("759843"),
@@ -37,11 +40,11 @@ function d(e, t) {
   })
 }
 
-function c(e) {
-  var t = {};
-  return null != e && (t.survey_override = e), r.default.get({
+function c(e, t) {
+  var n = {};
+  return null != e && (n.survey_override = e), null != t && (n.disable_auto_seen = t), r.default.get({
     url: o.Endpoints.USER_SURVEY,
-    query: t,
+    query: n,
     trackedActionData: {
       event: s.NetworkActionNames.USER_SURVEY_FETCH,
       properties: e => {
@@ -63,5 +66,24 @@ function c(e) {
       type: "SURVEY_FETCHED",
       survey: null
     })
+  })
+}
+
+function E(e) {
+  return a.default.dispatch({
+    type: "SURVEY_SEEN",
+    key: e
+  }), r.default.post({
+    url: o.Endpoints.USER_SURVEY_SEEN(e),
+    trackedActionData: {
+      event: s.NetworkActionNames.USER_SURVEY_SEEN,
+      properties: e => {
+        var t;
+        let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.survey;
+        return (0, l.exact)({
+          key: null == n ? void 0 : n.key
+        })
+      }
+    }
   })
 }
