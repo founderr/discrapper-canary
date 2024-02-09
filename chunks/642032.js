@@ -14,11 +14,11 @@ function s(e) {
     height: n = 13,
     color: s = "currentColor",
     foreground: a,
-    ...u
+    ...l
   } = e;
   return (0, r.jsx)("svg", {
     ...(0, i.default)({
-      ...u
+      ...l
     }),
     width: t,
     height: n,

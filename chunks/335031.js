@@ -1,31 +1,31 @@
 "use strict";
-l.r(r), l.d(r, {
+l.r(t), l.d(t, {
   default: function() {
     return u
   }
 });
-var t = l("884691"),
-  o = l("656280"),
-  i = l.n(o),
-  n = l("509043"),
-  a = l("446674"),
-  s = l("206230"),
+var r = l("884691"),
+  a = l("656280"),
+  n = l.n(a),
+  s = l("509043"),
+  i = l("446674"),
+  o = l("206230"),
   u = e => {
-    let r = (0, a.useStateFromStores)([s.default], () => s.default.desaturateUserColors ? s.default.saturation : 1),
-      l = (0, t.useMemo)(() => {
+    let t = (0, i.useStateFromStores)([o.default], () => o.default.desaturateUserColors ? o.default.saturation : 1),
+      l = (0, r.useMemo)(() => {
         let {
           h: l,
-          s: t,
-          l: o
-        } = i((0, n.int2hex)(e)).toHsl(), a = i({
+          s: r,
+          l: a
+        } = n((0, s.int2hex)(e)).toHsl(), i = n({
           h: l,
-          s: t * r,
-          l: o
+          s: r * t,
+          l: a
         });
         return {
-          hex: a.toHexString(),
-          hsl: a.toHslString()
+          hex: i.toHexString(),
+          hsl: i.toHslString()
         }
-      }, [e, r]);
+      }, [e, t]);
     return l
   }

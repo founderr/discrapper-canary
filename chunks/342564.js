@@ -14,15 +14,15 @@ var i = n("917351"),
   l = n.n(i),
   a = n("446674"),
   s = n("913144"),
-  o = n("798609"),
-  r = n("80507"),
+  r = n("798609"),
+  o = n("80507"),
   u = n("374363"),
   d = n("317041"),
   c = n("397336");
 let p = {
     pendingUsages: []
   },
-  f = new r.default({
+  f = new o.default({
     computeBonus: () => 1,
     computeWeight: e => e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 0,
     lookupKey: e => e,
@@ -50,7 +50,7 @@ function _(e, t) {
   return 0 > Number(t.id) ? t.id : null != e.guild && null != t.guildId ? "".concat(t.id, ":").concat(e.guild.id) : t.id
 }
 
-function C() {
+function T() {
   var e, t;
   let n = u.default.frecencyWithoutFetchingLatest,
     i = null !== (t = null === (e = n.applicationCommandFrecency) || void 0 === e ? void 0 : e.applicationCommands) && void 0 !== t ? t : {};
@@ -59,9 +59,9 @@ function C() {
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), p.pendingUsages)
 }
-class T extends a.default.PersistedStore {
+class C extends a.default.PersistedStore {
   initialize(e) {
-    null != e && (p = e), this.syncWith([u.default], C)
+    null != e && (p = e), this.syncWith([u.default], T)
   }
   getState() {
     return p
@@ -80,14 +80,14 @@ class T extends a.default.PersistedStore {
     return f.frequently
   }
 }
-T.displayName = "ApplicationCommandFrecencyStore", T.persistKey = "ApplicationCommandFrecencyV2";
-var A = new T(s.default, {
+C.displayName = "ApplicationCommandFrecencyStore", C.persistKey = "ApplicationCommandFrecencyV2";
+var A = new C(s.default, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t,
       context: n
     } = e;
-    if (t.type !== o.ApplicationCommandType.CHAT) return !1;
+    if (t.type !== r.ApplicationCommandType.CHAT) return !1;
     let i = _(n, t);
     p.pendingUsages.push({
       key: i,

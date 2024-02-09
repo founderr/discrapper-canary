@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var l = n("37983");
@@ -37,7 +37,7 @@ let c = () => (0, l.jsxs)(l.Fragment, {
   })]
 });
 
-function E(e) {
+function f(e) {
   let {
     onClick: t
   } = e, n = (0, a.useStateFromStores)([i.HotspotStore], () => !i.HotspotStore.hasHotspot(i.HotspotLocations.STAGE_CHANNEL_UPSELL));

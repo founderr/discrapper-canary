@@ -1,25 +1,25 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
-var n = a("65597"),
-  l = a("845579"),
-  s = a("102985"),
-  i = a("697218"),
-  r = a("782340");
-let u = "legacy_username";
+var r = l("65597"),
+  a = l("845579"),
+  n = l("102985"),
+  s = l("697218"),
+  i = l("782340");
+let o = "legacy_username";
 
-function o(e) {
+function u(e) {
   var t;
-  let a = l.LegacyUsernameDisabled.useSetting(),
-    o = (0, n.default)([i.default], () => i.default.getCurrentUser()),
-    c = (0, n.default)([s.default], () => s.default.hidePersonalInformation);
+  let l = a.LegacyUsernameDisabled.useSetting(),
+    u = (0, r.default)([s.default], () => s.default.getCurrentUser()),
+    d = (0, r.default)([n.default], () => n.default.hidePersonalInformation);
   if (null == e) return [];
-  let d = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
-  return null != o && o.id === e.userId && a && (d = d.filter(e => e.id !== u)), c && (d = d.map(e => ({
+  let c = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
+  return null != u && u.id === e.userId && l && (c = c.filter(e => e.id !== o)), d && (c = c.map(e => ({
     ...e,
-    description: e.id === u ? r.default.Messages.STREAMER_MODE_ENABLED : e.description
-  }))), d
+    description: e.id === o ? i.default.Messages.STREAMER_MODE_ENABLED : e.description
+  }))), c
 }

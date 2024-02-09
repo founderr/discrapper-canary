@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
-    return o
+    return l
   }
 });
-var i = n("884691"),
-  l = n("79112"),
-  r = n("685665"),
-  a = n("929423");
+var r = n("884691"),
+  o = n("79112"),
+  u = n("685665"),
+  I = n("929423");
 n("424562");
-var s = n("49111"),
-  u = n("397336");
+var i = n("49111"),
+  T = n("397336");
 
-function o(e) {
+function l(t) {
   let {
-    guild: t,
+    guild: e,
     scrollPosition: n,
-    analyticsLocation: o,
-    analyticsLocations: d,
-    openWithoutBackstack: c = !1
-  } = e, {
-    analyticsLocations: _
-  } = (0, r.default)(), I = (0, i.useCallback)(() => {
-    null != t && (0, a.initGuildIdentitySettings)(t, null != d ? d : _), l.default.open(s.UserSettingsSections.PROFILE_CUSTOMIZATION, null != t ? u.ProfileCustomizationSubsection.GUILD : u.ProfileCustomizationSubsection.USER_PROFILE, {
+    analyticsLocation: l,
+    analyticsLocations: E,
+    openWithoutBackstack: _ = !1
+  } = t, {
+    analyticsLocations: a
+  } = (0, u.default)(), s = (0, r.useCallback)(() => {
+    null != e && (0, I.initGuildIdentitySettings)(e, null != E ? E : a), o.default.open(i.UserSettingsSections.PROFILE_CUSTOMIZATION, null != e ? T.ProfileCustomizationSubsection.GUILD : T.ProfileCustomizationSubsection.USER_PROFILE, {
       scrollPosition: n,
-      analyticsLocation: o,
-      analyticsLocations: d,
-      openWithoutBackstack: c
+      analyticsLocation: l,
+      analyticsLocations: E,
+      openWithoutBackstack: _
     })
-  }, [t, n, o, d, c, _]);
-  return I
+  }, [e, n, l, E, _, a]);
+  return s
 }

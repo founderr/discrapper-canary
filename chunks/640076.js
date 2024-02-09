@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("986632"),
   h = n("538282"),
   E = n("246511"),
-  g = n("45961"),
-  S = n("515059"),
+  S = n("45961"),
+  g = n("515059"),
   C = n("139321"),
   T = n("845579"),
   v = n("124299"),
@@ -55,7 +55,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       onEmojiSelect: c,
       searchQuery: f,
       sectionDescriptors: h,
-      setCollapsedSections: g,
+      setCollapsedSections: S,
       getEmojiItemProps: T,
       getEmojiRowProps: v,
       isScrolling: _,
@@ -65,7 +65,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       messageId: W,
       isBurstReaction: Y,
       listHeaderClassName: z
-    } = e, J = (0, p.useAnalyticsContext)(), Z = i.useRef(L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), q = i.useMemo(() => "" !== n ? d.default.convert.toCodePoint(n) : "", [n]), X = i.useCallback(function(e) {
+    } = e, J = (0, p.useAnalyticsContext)(), q = i.useRef(L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), Z = i.useMemo(() => "" !== n ? d.default.convert.toCodePoint(n) : "", [n]), Q = i.useCallback(function(e) {
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         l = new Set(t),
         i = t.has(e);
@@ -74,14 +74,14 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         tab: P.ExpressionPickerViewType.EMOJI,
         collapsed: !i,
         guild_id: n.id
-      }), g(l)
-    }, [J, t, g]), Q = i.useCallback(e => {
+      }), S(l)
+    }, [J, t, S]), X = i.useCallback(e => {
       let {
         columnIndex: t,
         visibleRowIndex: n
       } = e, l = e.type === x.EmojiGridItemTypes.EMOJI ? e.emoji.allNamesString : e.name;
-      Z.current !== L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(Z.current), Z.current = window.requestAnimationFrame(() => {
-        m.EmojiPickerStore.setInspectedExpressionPosition(t, n, E.InspectedExpressionChangeSource.MOUSE_EVENT), m.EmojiPickerStore.setSearchPlaceholder(l), Z.current = L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
+      q.current !== L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(q.current), q.current = window.requestAnimationFrame(() => {
+        m.EmojiPickerStore.setInspectedExpressionPosition(t, n, E.InspectedExpressionChangeSource.MOUSE_EVENT), m.EmojiPickerStore.setSearchPlaceholder(l), q.current = L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
       })
     }, []), $ = (0, u.useStateFromStores)([C.HotspotStore], () => C.HotspotStore.hasHotspot(C.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), ee = i.useMemo(() => o.memoize((e, t) => {
       let n = a[e],
@@ -89,8 +89,8 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       return (0, l.jsx)(R.default, {
         emojiDescriptors: n,
         emojiSize: r,
-        surrogateCodePoint: q,
-        onInspect: Q,
+        surrogateCodePoint: Z,
+        onInspect: X,
         onSelect: c,
         getEmojiItemProps: T,
         getEmojiRowProps: v,
@@ -105,7 +105,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         messageId: W,
         isBurstReaction: Y
       }, e)
-    }), [a, h, r, q, Q, c, T, v, _, b, V, $, K, W, Y]);
+    }), [a, h, r, Z, X, c, T, v, _, b, V, $, K, W, Y]);
     i.useEffect(() => () => {
       var e, t;
       return null === (t = ee.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)
@@ -130,14 +130,14 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
             width: 16
           }) : null,
           d = null == i ? void 0 : i.toString();
-        return null != a && (d = (0, y.getStringForEmojiCategory)(a, null == i ? void 0 : i.toString())), (0, l.jsx)(S.default, {
+        return null != a && (d = (0, y.getStringForEmojiCategory)(a, null == i ? void 0 : i.toString())), (0, l.jsx)(g.default, {
           className: s(j.header, z),
           icon: u,
           isCollapsed: t.has(o),
-          onClick: () => X(o, i),
+          onClick: () => Q(o, i),
           children: d
         }, o)
-      }), [h, t, X, z]),
+      }), [h, t, Q, z]),
       en = i.useCallback((e, n) => {
         let i = h[e];
         if (i.type === M.EmojiCategoryTypes.GUILD) {
@@ -201,7 +201,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       setCollapsedSections: c,
       getEmojiItemProps: p,
       getEmojiRowProps: E,
-      rowCount: S,
+      rowCount: g,
       isUsingKeyboardNavigation: C,
       channelGuildId: I,
       messageId: _,
@@ -234,7 +234,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       messageId: _,
       isBurstReaction: y,
       listHeaderClassName: A
-    }), G = (0, g.useSynchronizedActiveCategoryIndexForScrollPosition)({
+    }), G = (0, S.useSynchronizedActiveCategoryIndexForScrollPosition)({
       activeCategoryIndex: x,
       isScrolling: N,
       listRef: a,
@@ -242,7 +242,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       scrollOffset: 20,
       searchQuery: O
     });
-    (0, g.useSynchronizedScrollPositionForActiveCategoryIndex)({
+    (0, S.useSynchronizedScrollPositionForActiveCategoryIndex)({
       searchQuery: O,
       activeCategoryIndex: x,
       listRef: a
@@ -259,7 +259,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         renderSection: P,
         renderSectionHeader: U,
         renderSectionFooter: D,
-        rowCount: S,
+        rowCount: g,
         rowCountBySection: u,
         rowHeight: K(s),
         sectionHeaderHeight: w,

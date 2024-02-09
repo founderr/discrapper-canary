@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return R
+    return O
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  l = s("627445"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("627445"),
+  i = s.n(n),
   r = s("446674"),
   o = s("77078"),
   d = s("716241"),
@@ -15,110 +15,110 @@ var a = s("37983"),
   c = s("957255"),
   E = s("599110"),
   _ = s("449008"),
-  T = s("36402"),
-  I = s("531493"),
-  S = s("900938"),
-  N = s("986654"),
-  g = s("462752"),
-  f = s("505002"),
-  A = s("893448"),
-  L = s("376252"),
-  m = s("728955"),
-  C = s("53948"),
-  O = s("49111"),
-  h = s("121255");
+  I = s("36402"),
+  f = s("531493"),
+  T = s("900938"),
+  S = s("986654"),
+  m = s("462752"),
+  N = s("505002"),
+  g = s("893448"),
+  h = s("376252"),
+  C = s("728955"),
+  R = s("53948"),
+  x = s("49111"),
+  L = s("121255");
 
-function R(e) {
+function O(e) {
   let t, {
       editRoleId: s,
-      setEditRoleId: l,
-      selectedSection: R,
-      setSelectedSection: D
+      setEditRoleId: n,
+      selectedSection: O,
+      setSelectedSection: p
     } = e,
-    M = (0, r.useStateFromStores)([I.default], () => I.default.guild, []);
-  i(null != M, "guildId cannot be null here");
+    A = (0, r.useStateFromStores)([f.default], () => f.default.guild, []);
+  i(null != A, "guildId cannot be null here");
   let {
-    role: G,
-    permissionSearchQuery: x
-  } = (0, r.useStateFromStoresObject)([I.default], () => ({
-    role: I.default.getRole(s),
-    permissionSearchQuery: I.default.getPermissionSearchQuery()
+    role: M,
+    permissionSearchQuery: D
+  } = (0, r.useStateFromStoresObject)([f.default], () => ({
+    role: f.default.getRole(s),
+    permissionSearchQuery: f.default.getPermissionSearchQuery()
   }), [s]);
-  n.useEffect(() => {
-    null == G && l(null)
-  }, [G, l]);
-  let p = (0, r.useStateFromStores)([c.default], () => c.default.getHighestRole(M), [M]),
-    U = (0, r.useStateFromStores)([c.default], () => !c.default.isRoleHigher(M, p, G)),
-    v = n.useRef(null),
-    P = (0, r.useStateFromStores)([S.default], () => S.default.getProps().integrations);
-  if (n.useEffect(() => {
+  l.useEffect(() => {
+    null == M && n(null)
+  }, [M, n]);
+  let v = (0, r.useStateFromStores)([c.default], () => c.default.getHighestRole(A), [A]),
+    j = (0, r.useStateFromStores)([c.default], () => !c.default.isRoleHigher(A, v, M)),
+    G = l.useRef(null),
+    U = (0, r.useStateFromStores)([T.default], () => T.default.getProps().integrations);
+  if (l.useEffect(() => {
       var e, t;
-      let a = (0, N.getSectionAnalyticsName)(R),
-        n = null !== (t = null === (e = T.default.getRoleMemberCount(M.id)) || void 0 === e ? void 0 : e[s]) && void 0 !== t ? t : 0;
-      E.default.track(O.AnalyticEvents.ROLE_PAGE_VIEWED, {
+      let a = (0, S.getSectionAnalyticsName)(O),
+        l = null !== (t = null === (e = I.default.getRoleMemberCount(A.id)) || void 0 === e ? void 0 : e[s]) && void 0 !== t ? t : 0;
+      E.default.track(x.AnalyticEvents.ROLE_PAGE_VIEWED, {
         tab_opened: a,
-        is_everyone: M.id === s,
+        is_everyone: A.id === s,
         role_id: s,
-        role_mentionable: null == G ? void 0 : G.mentionable,
-        role_hoist: null == G ? void 0 : G.hoist,
-        role_permissions: null == G ? void 0 : G.permissions.toString(),
-        role_num_members: n,
-        ...(0, d.collectGuildAnalyticsMetadata)(M.id)
+        role_mentionable: null == M ? void 0 : M.mentionable,
+        role_hoist: null == M ? void 0 : M.hoist,
+        role_permissions: null == M ? void 0 : M.permissions.toString(),
+        role_num_members: l,
+        ...(0, d.collectGuildAnalyticsMetadata)(A.id)
       })
-    }, [R, M.id, null == G ? void 0 : G.id]), n.useEffect(() => {
-      (null == G ? void 0 : G.id) != null && (0, u.fetchRoleConnectionsConfiguration)(M.id, G.id)
-    }, [M.id, null == G ? void 0 : G.id]), null == G) return null;
-  switch (R) {
-    case C.GuildSettingsRoleEditSections.DISPLAY:
-      t = (0, a.jsx)(f.default, {
-        guild: M,
-        role: G,
-        locked: U,
-        highestRole: p,
-        setSelectedSection: D
+    }, [O, A.id, null == M ? void 0 : M.id]), l.useEffect(() => {
+      (null == M ? void 0 : M.id) != null && (0, u.fetchRoleConnectionsConfiguration)(A.id, M.id)
+    }, [A.id, null == M ? void 0 : M.id]), null == M) return null;
+  switch (O) {
+    case R.GuildSettingsRoleEditSections.DISPLAY:
+      t = (0, a.jsx)(N.default, {
+        guild: A,
+        role: M,
+        locked: j,
+        highestRole: v,
+        setSelectedSection: p
       });
       break;
-    case C.GuildSettingsRoleEditSections.PERMISSIONS:
-      t = (0, a.jsx)(L.default, {
-        guild: M,
-        role: G,
-        locked: U,
-        setSelectedSection: D,
-        initialSearchQuery: x
+    case R.GuildSettingsRoleEditSections.PERMISSIONS:
+      t = (0, a.jsx)(h.default, {
+        guild: A,
+        role: M,
+        locked: j,
+        setSelectedSection: p,
+        initialSearchQuery: D
       });
       break;
-    case C.GuildSettingsRoleEditSections.VERIFICATIONS:
+    case R.GuildSettingsRoleEditSections.VERIFICATIONS:
+      t = (0, a.jsx)(m.default, {
+        guild: A,
+        role: M,
+        locked: j,
+        setSelectedSection: p,
+        integrations: null != U ? U : void 0
+      });
+      break;
+    case R.GuildSettingsRoleEditSections.MEMBERS:
       t = (0, a.jsx)(g.default, {
-        guild: M,
-        role: G,
-        locked: U,
-        setSelectedSection: D,
-        integrations: null != P ? P : void 0
-      });
-      break;
-    case C.GuildSettingsRoleEditSections.MEMBERS:
-      t = (0, a.jsx)(A.default, {
-        guild: M,
-        role: G,
-        locked: U,
-        setSelectedSection: D
+        guild: A,
+        role: M,
+        locked: j,
+        setSelectedSection: p
       });
       break;
     default:
-      (0, _.assertNever)(R)
+      (0, _.assertNever)(O)
   }
   return (0, a.jsxs)(o.FormSection, {
-    className: h.page,
-    children: [(0, a.jsx)(m.default, {
-      guild: M,
+    className: L.page,
+    children: [(0, a.jsx)(C.default, {
+      guild: A,
       currentRoleId: s,
-      setCurrentRoleId: l,
-      setSelectedSection: D
+      setCurrentRoleId: n,
+      setSelectedSection: p
     }), (0, a.jsx)("div", {
-      className: h.contentContainer,
-      ref: v,
+      className: L.contentContainer,
+      ref: G,
       children: (0, a.jsx)(o.FocusRingScope, {
-        containerRef: v,
+        containerRef: G,
         children: t
       })
     })]

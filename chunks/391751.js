@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var a = n("37983"),
@@ -9,14 +9,14 @@ var a = n("37983"),
   s = n("179137"),
   i = n("561359"),
   r = n("664336"),
-  u = n("782340"),
-  o = l.memo(function(e) {
+  o = n("782340"),
+  u = l.memo(function(e) {
     let {
       channel: t
-    } = e, n = (0, s.useShouldShowSafetyToolsButtonForChannel)(t.id), o = l.useCallback(() => {}, []);
+    } = e, n = (0, s.useShouldShowSafetyToolsButtonForChannel)(t.id), u = l.useCallback(() => {}, []);
     return n ? (0, a.jsx)(r.default.Icon, {
       icon: i.default,
-      onClick: o,
-      tooltip: u.default.Messages.SAFETY_TOOLS_BUTTON_LABEL
+      onClick: u,
+      tooltip: o.default.Messages.SAFETY_TOOLS_BUTTON_LABEL
     }) : null
   })

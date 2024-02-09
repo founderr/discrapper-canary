@@ -26,11 +26,11 @@ let c = [],
   },
   h = [],
   E = 10 * o.default.Millis.SECOND,
-  g = (0, i.debounce)(() => {
+  S = (0, i.debounce)(() => {
     let e = (0, u.getEffectAnnouncement)(p);
     s.AccessibilityAnnouncer.announce(e, "polite"), p = []
   }, 500);
-class S extends a.default.Store {
+class g extends a.default.Store {
   get recentlyUsedEmojis() {
     return c
   }
@@ -44,8 +44,8 @@ class S extends a.default.Store {
     return f[e]
   }
 }
-S.displayName = "VoiceChannelEffectsStore";
-var C = new S(r.default, {
+g.displayName = "VoiceChannelEffectsStore";
+var C = new g(r.default, {
   VOICE_CHANNEL_EFFECT_CLEAR: e => {
     let {
       userId: t
@@ -71,7 +71,7 @@ var C = new S(r.default, {
     }, p = [...p, {
       emojiName: t.name,
       userId: n
-    }], g())
+    }], S())
   },
   VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
     let e = new Date;

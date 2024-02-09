@@ -1,48 +1,48 @@
 "use strict";
-n.r(t), n.d(t, {
+A.r(t), A.d(t, {
   default: function() {
     return d
   }
 });
-var s = n("37983");
-n("884691");
-var l = n("509043"),
-  a = n("77078"),
-  i = n("191814"),
-  r = n("45029"),
-  o = n("782340"),
-  u = n("411531");
+var a = A("37983");
+A("884691");
+var l = A("509043"),
+  n = A("77078"),
+  r = A("191814"),
+  s = A("45029"),
+  i = A("782340"),
+  o = A("411531");
 
 function d(e) {
   let {
     locked: t,
-    role: n,
+    role: A,
     textVariant: d = "text-xs/medium"
-  } = e, c = (0, a.useToken)(a.tokens.colors.INTERACTIVE_NORMAL).hex();
-  return (0, s.jsx)("div", {
-    className: u.roleTagContainer,
-    children: (0, s.jsxs)("div", {
-      className: u.roleTag,
-      children: [(0, s.jsx)("div", {
-        className: u.roleColor,
+  } = e, u = (0, n.useToken)(n.tokens.colors.INTERACTIVE_NORMAL).hex();
+  return (0, a.jsx)("div", {
+    className: o.roleTagContainer,
+    children: (0, a.jsxs)("div", {
+      className: o.roleTag,
+      children: [(0, a.jsx)("div", {
+        className: o.roleColor,
         style: {
-          backgroundColor: (0, l.int2hex)(n.color)
+          backgroundColor: (0, l.int2hex)(A.color)
         }
-      }), (0, s.jsx)(i.default, {
+      }), (0, a.jsx)(r.default, {
         size: 8,
         horizontal: !0
-      }), (0, s.jsxs)(a.Text, {
+      }), (0, a.jsxs)(n.Text, {
         variant: d,
         color: "text-normal",
-        children: [(0, s.jsx)(a.HiddenVisually, {
-          children: o.default.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER
-        }), n.name]
-      }), !0 === t && (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(i.default, {
+        children: [(0, a.jsx)(n.HiddenVisually, {
+          children: i.default.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER
+        }), A.name]
+      }), !0 === t && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(r.default, {
           size: 8,
           horizontal: !0
-        }), (0, s.jsx)(r.default, {
-          color: c
+        }), (0, a.jsx)(s.default, {
+          color: u
         })]
       })]
     })

@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return D
+    return p
   }
 }), s("686130"), s("781738");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("866227"),
   o = s.n(r),
   d = s("974667"),
@@ -15,50 +15,50 @@ var a = s("37983"),
   c = s("679653"),
   E = s("506885"),
   _ = s("981601"),
-  T = s("242020"),
-  I = s("27618"),
-  S = s("697218"),
-  N = s("461380"),
-  g = s("258078"),
-  f = s("404008"),
-  A = s("158998"),
-  L = s("309021"),
-  m = s("49111"),
-  C = s("491070");
+  I = s("242020"),
+  f = s("27618"),
+  T = s("697218"),
+  S = s("461380"),
+  m = s("258078"),
+  N = s("404008"),
+  g = s("158998"),
+  h = s("309021"),
+  C = s("49111"),
+  R = s("491070");
 
-function O(e, t) {
-  let s = L.NotRenderedChanges[e.targetType];
+function x(e, t) {
+  let s = h.NotRenderedChanges[e.targetType];
   return null != s && !0 === s[t.key]
 }
-class h extends n.PureComponent {
+class L extends l.PureComponent {
   render() {
     let {
       user: e,
       hideDiscriminator: t,
       onContextMenu: s,
-      guildId: n
+      guildId: l
     } = this.props;
     return (0, a.jsx)(u.Popout, {
-      preload: () => (0, E.default)(e.id, e.getAvatarURL(n, 80), {
-        guildId: n
+      preload: () => (0, E.default)(e.id, e.getAvatarURL(l, 80), {
+        guildId: l
       }),
       renderPopout: t => (0, a.jsx)(_.default, {
         ...t,
         userId: e.id,
-        guildId: n
+        guildId: l
       }),
-      children: n => (0, a.jsx)(u.Clickable, {
-        ...n,
+      children: l => (0, a.jsx)(u.Clickable, {
+        ...l,
         onClick: e => {
-          e.stopPropagation(), n.onClick(e)
+          e.stopPropagation(), l.onClick(e)
         },
         onContextMenu: s,
-        className: C.userHook,
+        className: R.userHook,
         children: (0, a.jsxs)("div", {
-          className: C.username,
+          className: R.username,
           children: [(0, a.jsx)(u.Text, {
             variant: "text-sm/normal",
-            children: A.default.getUserTag(e, {
+            children: g.default.getUserTag(e, {
               mode: "username",
               identifiable: t ? "never" : "always"
             })
@@ -71,69 +71,69 @@ class h extends n.PureComponent {
     })
   }
 }
-class R extends n.PureComponent {
+class O extends l.PureComponent {
   hasChangesToRender() {
     let {
       log: e
     } = this.props, {
       changes: t
     } = e;
-    return (e.actionType !== m.AuditLogActionTypes.DELETE || e.action === m.AuditLogActions.MEMBER_BAN_ADD || e.action === m.AuditLogActions.MEMBER_KICK || e.action === m.AuditLogActions.MEMBER_PRUNE) && null != t && t.some(t => !O(e, t))
+    return (e.actionType !== C.AuditLogActionTypes.DELETE || e.action === C.AuditLogActions.MEMBER_BAN_ADD || e.action === C.AuditLogActions.MEMBER_KICK || e.action === C.AuditLogActions.MEMBER_PRUNE) && null != t && t.some(t => !x(e, t))
   }
   getActionTypeColor(e) {
     switch (e) {
-      case m.AuditLogActionTypes.CREATE:
-        return g.default.Colors.STATUS_GREEN;
-      case m.AuditLogActionTypes.DELETE:
-        return g.default.Colors.STATUS_RED;
+      case C.AuditLogActionTypes.CREATE:
+        return m.default.Colors.STATUS_GREEN;
+      case C.AuditLogActionTypes.DELETE:
+        return m.default.Colors.STATUS_RED;
       default:
-        return g.default.Colors.STATUS_YELLOW
+        return m.default.Colors.STATUS_YELLOW
     }
   }
   getRowAccentColor() {
     let {
       log: e
     } = this.props;
-    if (e.action === m.AuditLogActions.MEMBER_BAN_ADD) return C.accentRed
+    if (e.action === C.AuditLogActions.MEMBER_BAN_ADD) return R.accentRed
   }
   renderTitle() {
     let {
       log: e,
       guildId: t,
       onUserContextMenu: s,
-      onTargetContextMenu: n,
-      onChannelContextMenu: l
+      onTargetContextMenu: l,
+      onChannelContextMenu: n
     } = this.props, {
       user: i,
       target: r,
       options: o
-    } = e, d = L.getChangeTitle(e), E = L.getStringForBanReason(e);
+    } = e, d = h.getChangeTitle(e), E = h.getStringForBanReason(e);
     return null != d ? (0, a.jsx)(u.Text, {
-      className: C.overflowEllipsis,
+      className: R.overflowEllipsis,
       variant: "text-sm/normal",
       children: d.format({
         user: i,
         target: r,
         reason: E,
-        userHook: (n, l) => (0, a.jsx)(h, {
+        userHook: (l, n) => (0, a.jsx)(L, {
           guildId: t,
           user: e.user,
           onContextMenu: s,
           hideDiscriminator: !0
-        }, l),
-        targetHook: (s, l) => e.targetType === m.AuditLogTargetTypes.USER ? (0, a.jsx)(h, {
+        }, n),
+        targetHook: (s, n) => e.targetType === C.AuditLogTargetTypes.USER ? (0, a.jsx)(L, {
           guildId: t,
           user: e.target,
-          onContextMenu: n,
-          hideDiscriminator: !1
-        }, l) : (0, a.jsx)("span", {
-          onContextMenu: n,
-          children: s
-        }, l),
-        count: o.count,
-        channel: o.channel ? "string" == typeof o.channel ? o.channel : (0, c.computeChannelName)(o.channel, S.default, I.default, !0) : null,
-        channelHook: (e, t) => (0, a.jsx)("span", {
           onContextMenu: l,
+          hideDiscriminator: !1
+        }, n) : (0, a.jsx)("span", {
+          onContextMenu: l,
+          children: s
+        }, n),
+        count: o.count,
+        channel: o.channel ? "string" == typeof o.channel ? o.channel : (0, c.computeChannelName)(o.channel, T.default, f.default, !0) : null,
+        channelHook: (e, t) => (0, a.jsx)("span", {
+          onContextMenu: n,
           children: e
         }, t)
       })
@@ -144,9 +144,9 @@ class R extends n.PureComponent {
       newValue: t
     } = e;
     return Array.isArray(t) ? t.map(e => (0, a.jsxs)("div", {
-      className: C.subListItem,
+      className: R.subListItem,
       children: [(0, a.jsx)(u.Text, {
-        className: C.bullet,
+        className: R.bullet,
         color: "text-muted",
         variant: "text-sm/normal",
         children: "•"
@@ -162,17 +162,17 @@ class R extends n.PureComponent {
       newValue: t
     } = e;
     return Array.isArray(t) ? t.map(e => {
-      if (null != L.getStringForPermission(e, this.props.log)) return (0, a.jsxs)("div", {
-        className: C.subListItem,
+      if (null != h.getStringForPermission(e, this.props.log)) return (0, a.jsxs)("div", {
+        className: R.subListItem,
         children: [(0, a.jsx)(u.Text, {
-          className: C.bullet,
+          className: R.bullet,
           color: "text-muted",
           variant: "text-sm/normal",
           children: "•"
         }), (0, a.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-normal",
-          children: L.getStringForPermission(e, this.props.log)
+          children: h.getStringForPermission(e, this.props.log)
         })]
       }, e)
     }) : null
@@ -183,26 +183,26 @@ class R extends n.PureComponent {
       onContentClick: s
     } = this.props;
     if (null == t.changes) return null;
-    let n = 0,
-      l = t.changes.map((s, l) => {
+    let l = 0,
+      n = t.changes.map((s, n) => {
         let {
           oldValue: i,
           newValue: r
         } = s, d = null;
-        if (t.action === m.AuditLogActions.MEMBER_ROLE_UPDATE ? d = this.renderRoleUpdate(s) : (t.targetType === m.AuditLogTargetTypes.ROLE || t.action === m.AuditLogActions.CHANNEL_OVERWRITE_CREATE || t.action === m.AuditLogActions.CHANNEL_OVERWRITE_UPDATE) && (d = this.renderPermissionUpdate(s)), (t.action === m.AuditLogActions.CHANNEL_UPDATE || t.action === m.AuditLogActions.CHANNEL_CREATE) && s.key === m.AuditLogChangeKeys.TYPE && (null != i && (i = (0, f.channelTypeString)({
+        if (t.action === C.AuditLogActions.MEMBER_ROLE_UPDATE ? d = this.renderRoleUpdate(s) : (t.targetType === C.AuditLogTargetTypes.ROLE || t.action === C.AuditLogActions.CHANNEL_OVERWRITE_CREATE || t.action === C.AuditLogActions.CHANNEL_OVERWRITE_UPDATE) && (d = this.renderPermissionUpdate(s)), (t.action === C.AuditLogActions.CHANNEL_UPDATE || t.action === C.AuditLogActions.CHANNEL_CREATE) && s.key === C.AuditLogChangeKeys.TYPE && (null != i && (i = (0, N.channelTypeString)({
             type: i
-          })), null != r && (r = (0, f.channelTypeString)({
+          })), null != r && (r = (0, N.channelTypeString)({
             type: r
-          }))), t.action === m.AuditLogActions.MEMBER_UPDATE && s.key === m.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL) {
+          }))), t.action === C.AuditLogActions.MEMBER_UPDATE && s.key === C.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL) {
           if (null == (r = o(r)) || !r.isValid()) return null;
           r = r.calendar()
         }
         let c = e[s.key];
-        if (O(t, s)) return null;
+        if (x(t, s)) return null;
         if ("function" == typeof c && (c = c(s)), null != c && "object" == typeof c) {
           if (null == c.format) {
             let e = c[s.newValue];
-            null == e && null != c[L.DEFAULT_FOR_STRINGS_KEY] ? c = c[L.DEFAULT_FOR_STRINGS_KEY] : null != e && (c = e)
+            null == e && null != c[h.DEFAULT_FOR_STRINGS_KEY] ? c = c[h.DEFAULT_FOR_STRINGS_KEY] : null != e && (c = e)
           }
           if (null != c && null != c.format) {
             var E, _;
@@ -214,13 +214,13 @@ class R extends n.PureComponent {
               count: Array.isArray(r) ? r.length : null,
               subtarget: null !== (_ = null !== (E = t.options.subtarget) && void 0 !== E ? E : s.subtarget) && void 0 !== _ ? _ : null,
               newColorHook: (e, t) => (0, a.jsx)("div", {
-                className: C.colorHook,
+                className: R.colorHook,
                 style: {
                   backgroundColor: s.newValue
                 }
               }, t),
               oldColorHook: (e, t) => (0, a.jsx)("div", {
-                className: C.colorHook,
+                className: R.colorHook,
                 style: {
                   backgroundColor: s.oldValue
                 }
@@ -228,28 +228,28 @@ class R extends n.PureComponent {
             })
           }
         }
-        return c ? (n++, (0, a.jsxs)("div", {
-          className: C.detail,
+        return c ? (l++, (0, a.jsxs)("div", {
+          className: R.detail,
           children: [(0, a.jsxs)("div", {
-            className: C.prefix,
+            className: R.prefix,
             children: [(0, a.jsx)(u.Text, {
               variant: "text-xs/semibold",
               color: "text-muted",
-              children: n < 10 ? "0".concat(n) : n
+              children: l < 10 ? "0".concat(l) : l
             }), (0, a.jsx)(u.Text, {
               variant: "text-xs/semibold",
               color: "text-muted",
-              className: C.dash,
+              className: R.dash,
               children: "—"
             })]
           }), (0, a.jsxs)("div", {
-            className: C.change,
+            className: R.change,
             children: [null != d ? (0, a.jsx)(u.Text, {
-              className: C.changeStr,
+              className: R.changeStr,
               variant: "text-xs/normal",
               children: c.concat(":")
             }) : (0, a.jsx)(u.Text, {
-              className: C.changeStr,
+              className: R.changeStr,
               variant: "text-xs/normal",
               children: c
             }), null != d ? (0, a.jsx)(u.Text, {
@@ -257,12 +257,12 @@ class R extends n.PureComponent {
               children: d
             }) : null]
           })]
-        }, l)) : (console.warn("No change string for", s), null)
+        }, n)) : (console.warn("No change string for", s), null)
       });
     return (0, a.jsx)(u.Clickable, {
       onClick: s,
-      className: C.changeDetails,
-      children: l
+      className: R.changeDetails,
+      children: n
     })
   }
   renderChangeSummary() {
@@ -271,33 +271,33 @@ class R extends n.PureComponent {
       log: t
     } = this.props;
     if (e) switch (t.targetType) {
-      case m.AuditLogTargetTypes.GUILD:
-        return this.renderChangeDetails(L.GuildChangeStrings());
-      case m.AuditLogTargetTypes.CHANNEL:
-      case m.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-        return this.renderChangeDetails(L.ChannelChangeStrings());
-      case m.AuditLogTargetTypes.USER:
-        return this.renderChangeDetails(L.UserChangeStrings());
-      case m.AuditLogTargetTypes.ROLE:
-        return this.renderChangeDetails(L.RoleChangeStrings());
-      case m.AuditLogTargetTypes.INVITE:
-        return this.renderChangeDetails(L.InviteChangeStrings());
-      case m.AuditLogTargetTypes.WEBHOOK:
-        return this.renderChangeDetails(L.WebhookChangeStrings());
-      case m.AuditLogTargetTypes.EMOJI:
-        return this.renderChangeDetails(L.EmojiChangeStrings());
-      case m.AuditLogTargetTypes.STICKER:
-        return this.renderChangeDetails(L.StickerChangeStrings());
-      case m.AuditLogTargetTypes.INTEGRATION:
-        return this.renderChangeDetails(L.IntegrationChangeStrings());
-      case m.AuditLogTargetTypes.STAGE_INSTANCE:
-        return this.renderChangeDetails(L.StageInstanceChangeStrings());
-      case m.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
-        return this.renderChangeDetails(L.GuildScheduledEventChangeStrings());
-      case m.AuditLogTargetTypes.THREAD:
-        return this.renderChangeDetails(L.ThreadChangeStrings());
-      case m.AuditLogTargetTypes.APPLICATION_COMMAND:
-        return this.renderChangeDetails(L.CommandPermissionChangeStrings(t.changes))
+      case C.AuditLogTargetTypes.GUILD:
+        return this.renderChangeDetails(h.GuildChangeStrings());
+      case C.AuditLogTargetTypes.CHANNEL:
+      case C.AuditLogTargetTypes.CHANNEL_OVERWRITE:
+        return this.renderChangeDetails(h.ChannelChangeStrings());
+      case C.AuditLogTargetTypes.USER:
+        return this.renderChangeDetails(h.UserChangeStrings());
+      case C.AuditLogTargetTypes.ROLE:
+        return this.renderChangeDetails(h.RoleChangeStrings());
+      case C.AuditLogTargetTypes.INVITE:
+        return this.renderChangeDetails(h.InviteChangeStrings());
+      case C.AuditLogTargetTypes.WEBHOOK:
+        return this.renderChangeDetails(h.WebhookChangeStrings());
+      case C.AuditLogTargetTypes.EMOJI:
+        return this.renderChangeDetails(h.EmojiChangeStrings());
+      case C.AuditLogTargetTypes.STICKER:
+        return this.renderChangeDetails(h.StickerChangeStrings());
+      case C.AuditLogTargetTypes.INTEGRATION:
+        return this.renderChangeDetails(h.IntegrationChangeStrings());
+      case C.AuditLogTargetTypes.STAGE_INSTANCE:
+        return this.renderChangeDetails(h.StageInstanceChangeStrings());
+      case C.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
+        return this.renderChangeDetails(h.GuildScheduledEventChangeStrings());
+      case C.AuditLogTargetTypes.THREAD:
+        return this.renderChangeDetails(h.ThreadChangeStrings());
+      case C.AuditLogTargetTypes.APPLICATION_COMMAND:
+        return this.renderChangeDetails(h.CommandPermissionChangeStrings(t.changes))
     }
     return null
   }
@@ -307,12 +307,12 @@ class R extends n.PureComponent {
   renderActionTag() {
     let {
       log: e
-    } = this.props, t = (0, T.getTargetType)(e.action);
+    } = this.props, t = (0, I.getTargetType)(e.action);
     if (null != t) return (0, a.jsx)("div", {
-      className: C.tag,
+      className: R.tag,
       children: (0, a.jsx)(u.Text, {
         variant: "text-xs/normal",
-        className: C.tagString,
+        className: R.tagString,
         children: this.formatActionTagName(t)
       })
     })
@@ -322,35 +322,35 @@ class R extends n.PureComponent {
     let {
       log: t,
       className: s,
-      expanded: n,
-      onHeaderClick: l,
+      expanded: l,
+      onHeaderClick: n,
       guildId: r
     } = this.props, o = t.user;
     if (null == o) return null;
     let c = this.hasChangesToRender(),
-      T = C.headerDefault;
-    n ? T = C.headerExpanded : c && (T = C.headerClickable);
-    let I = t.timestampStart.calendar(),
-      S = t.timestampEnd.calendar();
-    e = I === S ? (0, a.jsx)(u.Text, {
-      className: C.timestamp,
+      I = R.headerDefault;
+    l ? I = R.headerExpanded : c && (I = R.headerClickable);
+    let f = t.timestampStart.calendar(),
+      T = t.timestampEnd.calendar();
+    e = f === T ? (0, a.jsx)(u.Text, {
+      className: R.timestamp,
       variant: "text-xs/normal",
-      children: "• ".concat(I)
+      children: "• ".concat(f)
     }) : (0, a.jsx)(u.Text, {
-      className: C.timestamp,
+      className: R.timestamp,
       variant: "text-xs/normal",
-      children: "• ".concat(I, "—").concat(S)
+      children: "• ".concat(f, "—").concat(T)
     });
-    let g = c ? l : m.NOOP;
+    let m = c ? n : C.NOOP;
     return (0, a.jsx)(d.ListNavigatorItem, {
       id: t.id,
-      children: l => (0, a.jsxs)("div", {
-        className: i(this.getRowAccentColor(), C.auditLog, s),
+      children: n => (0, a.jsxs)("div", {
+        className: i(this.getRowAccentColor(), R.auditLog, s),
         children: [(0, a.jsxs)(u.Clickable, {
-          className: T,
-          "aria-expanded": n,
-          onClick: g,
-          ...l,
+          className: I,
+          "aria-expanded": l,
+          onClick: m,
+          ...n,
           children: [(0, a.jsx)(u.Popout, {
             preload: () => (0, E.default)(t.userId, o.getAvatarURL(r, 80), {
               guildId: r
@@ -370,18 +370,18 @@ class R extends n.PureComponent {
               size: u.AvatarSizes.SIZE_40
             })
           }), (0, a.jsxs)("div", {
-            className: C.timeWrap,
+            className: R.timeWrap,
             children: [(0, a.jsx)("div", {
-              className: C.title,
+              className: R.title,
               children: this.renderTitle()
             }), (0, a.jsxs)("div", {
-              className: C.meta,
+              className: R.meta,
               children: [this.renderActionTag(), e]
             })]
-          }), c ? (0, a.jsx)(N.default, {
-            className: C.expand,
-            foreground: C.expandForeground,
-            expanded: n,
+          }), c ? (0, a.jsx)(S.default, {
+            className: R.expand,
+            foreground: R.expandForeground,
+            expanded: l,
             "aria-hidden": !0
           }) : null]
         }), this.renderChangeSummary()]
@@ -389,4 +389,4 @@ class R extends n.PureComponent {
     })
   }
 }
-var D = R
+var p = O

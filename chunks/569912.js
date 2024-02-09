@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return i
   }
 });
-var s = n("65597"),
-  r = n("385976"),
-  i = n("867805");
+var l = n("65597"),
+  s = n("385976"),
+  a = n("867805");
 
-function a(e, t) {
-  let n = (0, s.default)([r.default], () => null != e ? r.default.getCustomEmojiById(e) : null, [e]),
-    a = null != t ? i.default.getByName(i.default.convertSurrogateToName(t, !1)) : null;
+function i(e, t) {
+  let n = (0, l.default)([s.default], () => null != e ? s.default.getCustomEmojiById(e) : null, [e]),
+    i = null != t ? a.default.getByName(a.default.convertSurrogateToName(t, !1)) : null;
   return {
     customEmoji: n,
-    unicodeEmoji: a
+    unicodeEmoji: i
   }
 }

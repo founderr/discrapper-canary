@@ -8,8 +8,8 @@ var t = E("627445"),
   o = E.n(t),
   n = E("917351"),
   r = E.n(n),
-  a = E("446674"),
-  i = E("713349"),
+  i = E("446674"),
+  a = E("713349"),
   I = E("151426"),
   s = E("801340"),
   T = E("913144"),
@@ -23,8 +23,8 @@ let A = {
     editInfo: (0, O.createEmptyEditInfo)()
   },
   R = {
-    ProtoClass: i.FrecencyUserSettings,
-    proto: i.FrecencyUserSettings.create(),
+    ProtoClass: a.FrecencyUserSettings,
+    proto: a.FrecencyUserSettings.create(),
     lazyLoaded: !0,
     editInfo: (0, O.createEmptyEditInfo)()
   },
@@ -62,8 +62,8 @@ function c(e) {
     local: r
   } = e;
   u = !r;
-  let a = l[E];
-  n && D(a), t ? (a.proto = (0, N.mergeTopLevelFields)(a.ProtoClass, a.proto, _), o("string" != typeof a.proto, "UserSettingsProto cannot be a string")) : (a.proto = _, o("string" != typeof a.proto, "UserSettingsProto cannot be a string"), a.editInfo.loaded = !0, a.editInfo.loading = !1)
+  let i = l[E];
+  n && D(i), t ? (i.proto = (0, N.mergeTopLevelFields)(i.ProtoClass, i.proto, _), o("string" != typeof i.proto, "UserSettingsProto cannot be a string")) : (i.proto = _, o("string" != typeof i.proto, "UserSettingsProto cannot be a string"), i.editInfo.loaded = !0, i.editInfo.loading = !1)
 }
 
 function d(e) {
@@ -71,17 +71,17 @@ function d(e) {
     var t, n;
     let r = e[Number(E)];
     if (null == r) return;
-    let a = null !== (t = null == r ? void 0 : r.proto) && void 0 !== t ? t : "",
-      i = (0, N.b64ToProto)(_.ProtoClass, a);
-    if (null == i) return;
-    _.proto = i, o("string" != typeof _.proto, "UserSettingsProto cannot be a string");
+    let i = null !== (t = null == r ? void 0 : r.proto) && void 0 !== t ? t : "",
+      a = (0, N.b64ToProto)(_.ProtoClass, i);
+    if (null == a) return;
+    _.proto = a, o("string" != typeof _.proto, "UserSettingsProto cannot be a string");
     let I = null !== (n = null == r ? void 0 : r.protoToSave) && void 0 !== n ? n : null;
     if (null == I || null == r.offlineEditDataVersion) return;
     let s = (0, N.b64ToProto)(_.ProtoClass, I);
     null != s && (_.editInfo.protoToSave = s, _.editInfo.offlineEditDataVersion = r.offlineEditDataVersion)
   })
 }
-class U extends a.default.PersistedStore {
+class U extends i.default.PersistedStore {
   initialize(e) {
     d(e)
   }

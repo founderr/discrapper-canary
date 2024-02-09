@@ -1,14 +1,14 @@
 "use strict";
-n.r(l), n.d(l, {
+s.r(t), s.d(t, {
   default: function() {
-    return t
+    return l
   }
-}), n("222007");
-var r = n("884691"),
-  t = () => {
-    let [e, l] = (0, r.useState)(null);
-    return (0, r.useEffect)(() => {
+}), s("222007");
+var n = s("884691"),
+  l = () => {
+    let [e, t] = (0, n.useState)(null);
+    return (0, n.useEffect)(() => {
       var e;
-      (null === (e = window) || void 0 === e ? void 0 : e.EyeDropper) != null && l(new window.EyeDropper)
+      (null === (e = window) || void 0 === e ? void 0 : e.EyeDropper) != null && t(new window.EyeDropper)
     }, []), e
   }

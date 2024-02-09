@@ -13,8 +13,8 @@ E.r(_), E.d(_, {
 }), E("222007"), E("781738");
 var n = E("860347"),
   r = E.n(n),
-  a = E("404828"),
-  i = E.n(a),
+  i = E("404828"),
+  a = E.n(i),
   I = E("841206"),
   s = E("853812");
 class T {
@@ -46,8 +46,8 @@ class T {
 
 function S(e) {
   t = function(e, _) {
-    let E = i.parserFor(_(e)),
-      t = i.reactFor(i.ruleOutput(e, "react"));
+    let E = a.parserFor(_(e)),
+      t = a.reactFor(a.ruleOutput(e, "react"));
     return (e, _, o) => {
       let n = !e.includes("\n\n");
       return !n && (e += "\n\n"), t(E(e, {
@@ -57,7 +57,7 @@ function S(e) {
       }))
     }
   }(I.default, e), o = function(e) {
-    let _ = i.parserFor(e);
+    let _ = a.parserFor(e);
     return (e, E, t) => _(e + "\n\n", {
       inline: !1,
       context: E,

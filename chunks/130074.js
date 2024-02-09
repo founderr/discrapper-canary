@@ -54,10 +54,10 @@ var a = n("77078"),
       context: k,
       onSelect: V,
       onHeightUpdate: W
-    } = e, B = (0, x.default)(t.id, null), Z = (0, M.default)(t, k), K = (0, m.default)({
+    } = e, B = (0, x.default)(t.id, null), Z = (0, M.default)(t, k), Y = (0, m.default)({
       user: t,
       context: k
-    }), Y = (0, g.default)(t), z = (0, b.default)(t.id), q = (0, O.default)(n.id, r), X = (0, L.default)(t), Q = (0, o.default)(null, t), J = (0, F.default)(t.id), $ = (0, G.default)(t.id, n.id), ee = (0, A.default)(t), et = (0, P.default)(t.id), en = (0, U.default)(t.id, n.id), ei = (0, y.default)(t), ea = (0, C.default)(n), el = (0, p.default)({
+    }), K = (0, g.default)(t), z = (0, b.default)(t.id), q = (0, O.default)(n.id, r), X = (0, L.default)(t), Q = (0, o.default)(null, t), J = (0, F.default)(t.id), $ = (0, G.default)(t.id, n.id), ee = (0, A.default)(t), et = (0, P.default)(t.id), en = (0, U.default)(t.id, n.id), ei = (0, y.default)(t), ea = (0, C.default)(n), el = (0, p.default)({
       id: t.id,
       label: w.default.Messages.COPY_ID_USER
     }), er = (0, p.default)({
@@ -87,7 +87,7 @@ var a = n("77078"),
         children: !eT && ed
       }), (0, i.jsxs)(a.MenuGroup, {
         children: [!eT && (0, i.jsxs)(i.Fragment, {
-          children: [j && B, Z, !eS && $, j && K, j && Y, z]
+          children: [j && B, Z, !eS && $, j && Y, j && K, z]
         }), q]
       }), !eT && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(a.MenuGroup, {

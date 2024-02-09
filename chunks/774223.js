@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(l), t.d(l, {
   default: function() {
     return r
   }
 });
-var a = n("37983");
-n("884691");
-var l = n("75196");
+var a = t("37983");
+t("884691");
+var n = t("75196");
 
 function r(e) {
   let {
-    width: t = 24,
-    height: n = 24,
+    width: l = 24,
+    height: t = 24,
     color: r = "currentColor",
     className: s,
-    foreground: i,
-    ...u
+    foreground: u,
+    ...C
   } = e;
   return (0, a.jsx)("svg", {
-    ...(0, l.default)(u),
+    ...(0, n.default)(C),
     className: s,
-    width: t,
-    height: n,
+    width: l,
+    height: t,
     viewBox: "0 0 24 24",
     children: (0, a.jsx)("path", {
-      className: i,
+      className: u,
       fill: r,
       fillRule: "evenodd",
       clipRule: "evenodd",

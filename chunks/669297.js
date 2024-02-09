@@ -1,20 +1,20 @@
 "use strict";
-t.r(A), t.d(A, {
+A.r(t), A.d(t, {
   openErrorDialog: function() {
-    return r
+    return s
   }
 });
-var a = t("37983");
-t("884691");
-var l = t("77078"),
-  n = t("959875"),
-  s = t("782340");
+var a = A("37983");
+A("884691");
+var l = A("77078"),
+  n = A("959875"),
+  r = A("782340");
 
-function r(e, A, t) {
-  let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function s(e, t, A) {
+  let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   (0, n.default)({
     title: e,
-    body: "string" == typeof A ? A : A.format({
+    body: "string" == typeof t ? t : t.format({
       highlightHook: e => (0, a.jsx)(l.Text, {
         variant: "text-md/normal",
         color: "text-normal",
@@ -23,10 +23,10 @@ function r(e, A, t) {
         },
         children: e
       }),
-      ...r
+      ...s
     }),
-    cta: s.default.Messages.GOT_IT,
+    cta: r.default.Messages.GOT_IT,
     onConfirm: () => {},
-    iconVariant: t
+    iconVariant: A
   })
 }

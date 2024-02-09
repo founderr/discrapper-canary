@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return S
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("917351"),
   o = s("476042"),
   d = s("669491"),
@@ -16,12 +16,12 @@ var a = s("37983"),
   E = s("782340"),
   _ = s("977618");
 
-function T(e) {
+function I(e) {
   let {
     title: t,
     children: s,
-    onEdit: n,
-    onRemove: l
+    onEdit: l,
+    onRemove: n
   } = e;
   return (0, a.jsxs)("div", {
     className: _.backgroundContainer,
@@ -38,30 +38,30 @@ function T(e) {
         className: i(_.removeButton, _.button),
         size: u.Button.Sizes.SMALL,
         look: u.Button.Looks.BLANK,
-        onClick: l,
+        onClick: n,
         children: E.default.Messages.REMOVE
       }), (0, a.jsx)(u.Button, {
         className: _.button,
         size: u.Button.Sizes.SMALL,
         color: u.Button.Colors.PRIMARY,
-        onClick: n,
+        onClick: l,
         children: E.default.Messages.EDIT
       })]
     })]
   })
 }
-let I = "FORM_FIELD";
+let f = "FORM_FIELD";
 
-function S(e) {
+function T(e) {
   let {
     index: t,
     field: s,
-    isDropHovered: l,
+    isDropHovered: n,
     onDrop: u
   } = e, E = (0, r.debounce)(async (e, t, s) => {
     await u(e, t, s)
-  }), S = n.useRef(null), [, N] = (0, o.useDrag)({
-    type: I,
+  }), T = l.useRef(null), [, S] = (0, o.useDrag)({
+    type: f,
     item: {
       index: t,
       field: s
@@ -69,29 +69,29 @@ function S(e) {
     end: (e, t) => {
       null != e && !t.didDrop() && E(e.field, null, !0)
     }
-  }), [, g] = (0, o.useDrop)({
-    accept: I,
+  }), [, m] = (0, o.useDrop)({
+    accept: f,
     hover: (e, s) => {
       var a;
       let {
-        index: n
-      } = e, l = null === (a = S.current) || void 0 === a ? void 0 : a.getBoundingClientRect(), i = s.getClientOffset();
-      if (null == l || null == i) return;
-      let r = (l.bottom - l.top) / 2,
-        o = i.y - l.top;
-      (!(n < t) || !(o < r)) && (!(n > t) || !(o < r)) && n !== t && E(e.field, t, !1)
+        index: l
+      } = e, n = null === (a = T.current) || void 0 === a ? void 0 : a.getBoundingClientRect(), i = s.getClientOffset();
+      if (null == n || null == i) return;
+      let r = (n.bottom - n.top) / 2,
+        o = i.y - n.top;
+      (!(l < t) || !(o < r)) && (!(l > t) || !(o < r)) && l !== t && E(e.field, t, !1)
     },
     drop: e => {
       E(e.field, t, !0)
     }
   });
-  return n.useLayoutEffect(() => (N(g(S)), () => {
-    g(null), N(null)
-  }), [N, g]), (0, a.jsxs)("div", {
-    ref: S,
+  return l.useLayoutEffect(() => (S(m(T)), () => {
+    m(null), S(null)
+  }), [S, m]), (0, a.jsxs)("div", {
+    ref: T,
     "data-dnd-name": "field-".concat(t),
     className: i(_.dragContainer, {
-      [_.dropHovered]: l
+      [_.dropHovered]: n
     }),
     children: [(0, a.jsx)("div", {
       className: _.dragIconContainer,
@@ -99,18 +99,18 @@ function S(e) {
         className: _.dragIcon,
         color: d.default.unsafe_rawColors.PRIMARY_400.css
       })
-    }), (0, a.jsx)(T, {
+    }), (0, a.jsx)(I, {
       ...e
     })]
   })
 }
 
-function N(e) {
+function S(e) {
   return (0, a.jsx)("div", {
     className: _.spacingContainer,
-    children: e.isDragEnabled ? (0, a.jsx)(S, {
+    children: e.isDragEnabled ? (0, a.jsx)(T, {
       ...e
-    }) : (0, a.jsx)(T, {
+    }) : (0, a.jsx)(I, {
       ...e
     })
   })

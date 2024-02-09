@@ -1,76 +1,76 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
-}), a("222007");
-var n = a("37983"),
-  i = a("884691"),
-  l = a("414456"),
-  s = a.n(l),
-  r = a("77078"),
-  u = a("381546"),
-  o = a("229915"),
-  d = a("782340"),
-  c = a("913893");
+}), n("222007");
+var s = n("37983"),
+  i = n("884691"),
+  l = n("414456"),
+  r = n.n(l),
+  a = n("77078"),
+  u = n("381546"),
+  o = n("229915"),
+  c = n("782340"),
+  d = n("913893");
 class f extends i.Component {
   render() {
     let {
       autoFocus: e,
       label: t,
-      placeholder: a,
+      placeholder: n,
       searchTerm: i,
       inputClassName: l,
       className: f,
-      onChange: p,
-      onFocus: m,
-      onBlur: h,
+      onChange: h,
+      onFocus: p,
+      onBlur: v,
       onKeyPress: I,
-      autoComplete: E,
-      forwardedRef: v,
+      autoComplete: _,
+      forwardedRef: m,
       closeIconClassName: C,
-      searchIconClassName: A,
-      cta: g
-    } = this.props, T = null != i && i.length > 0, R = null != v ? v : this._textInputRef;
-    return (0, n.jsx)(r.FocusRing, {
-      focusTarget: R,
+      searchIconClassName: E,
+      cta: A
+    } = this.props, T = null != i && i.length > 0, g = null != m ? m : this._textInputRef;
+    return (0, s.jsx)(a.FocusRing, {
+      focusTarget: g,
       ringTarget: this._containerRef,
-      children: (0, n.jsxs)("div", {
-        className: s(c.searchBox, f),
+      children: (0, s.jsxs)("div", {
+        className: r(d.searchBox, f),
         ref: this._containerRef,
-        children: [(0, n.jsx)(r.TextInput, {
-          inputRef: R,
+        children: [(0, s.jsx)(a.TextInput, {
+          inputRef: g,
           focusProps: {
             enabled: !1
           },
           name: "search",
           maxLength: 100,
-          className: c.searchBoxInputWrapper,
-          inputClassName: s(c.searchBoxInput, l),
-          onChange: p,
-          onFocus: m,
-          onBlur: h,
+          className: d.searchBoxInputWrapper,
+          inputClassName: r(d.searchBoxInput, l),
+          onChange: h,
+          onFocus: p,
+          onBlur: v,
           onKeyPress: I,
           value: T ? i : "",
-          placeholder: a,
+          placeholder: n,
           autoFocus: e,
           "aria-label": t,
-          autoComplete: E ? "on" : "off"
-        }), null != g ? (0, n.jsx)(r.Text, {
+          autoComplete: _ ? "on" : "off"
+        }), null != A ? (0, s.jsx)(a.Text, {
           color: "text-muted",
           variant: "text-xs/normal",
-          className: c.cta,
-          children: g
-        }) : null, T ? (0, n.jsx)(r.Clickable, {
+          className: d.cta,
+          children: A
+        }) : null, T ? (0, s.jsx)(a.Clickable, {
           onClick: this.handleClear,
-          className: c.clear,
-          "aria-label": d.default.Messages.SEARCH_CLEAR,
-          children: (0, n.jsx)(u.default, {
-            className: s(c.clearIcon, C)
+          className: d.clear,
+          "aria-label": c.default.Messages.SEARCH_CLEAR,
+          children: (0, s.jsx)(u.default, {
+            className: r(d.clearIcon, C)
           })
-        }) : (0, n.jsx)(o.default, {
-          className: s(c.searchIcon, A),
-          "aria-label": d.default.Messages.SEARCH
+        }) : (0, s.jsx)(o.default, {
+          className: r(d.searchIcon, E),
+          "aria-label": c.default.Messages.SEARCH
         })]
       })
     })
@@ -81,16 +81,16 @@ class f extends i.Component {
         onClear: e,
         forwardedRef: t
       } = this.props, {
-        current: a
+        current: n
       } = null != t ? t : this._textInputRef;
-      null != a && a.focus(), null != e && e()
+      null != n && n.focus(), null != e && e()
     }
   }
 }
 f.defaultProps = {
   autoComplete: !1
 };
-var p = i.forwardRef((e, t) => (0, n.jsx)(f, {
+var h = i.forwardRef((e, t) => (0, s.jsx)(f, {
   forwardedRef: t,
   ...e
 }))

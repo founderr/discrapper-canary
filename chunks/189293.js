@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchUserProfileEffects: function() {
-    return o
+    return a
   }
 });
-var a = n("872717"),
-  s = n("913144"),
-  l = n("448993");
+var s = n("872717"),
+  l = n("913144"),
+  i = n("448993");
 n("845962");
-var i = n("49111");
-let r = e => {
+var r = n("49111");
+let o = e => {
     let {
       sku_id: t,
       ...n
@@ -23,22 +23,22 @@ let r = e => {
       }
     }
   },
-  o = async () => {
-    s.default.dispatch({
+  a = async () => {
+    l.default.dispatch({
       type: "USER_PROFILE_EFFECTS_FETCH"
     });
     try {
       let {
         body: e
-      } = await a.default.get(i.Endpoints.USER_PROFILE_EFFECTS), t = null == e ? void 0 : e.profile_effect_configs, n = t.map(r);
-      s.default.dispatch({
+      } = await s.default.get(r.Endpoints.USER_PROFILE_EFFECTS), t = null == e ? void 0 : e.profile_effect_configs, n = t.map(o);
+      l.default.dispatch({
         type: "USER_PROFILE_EFFECTS_FETCH_SUCCESS",
         profileEffects: n
       })
     } catch (e) {
-      throw s.default.dispatch({
+      throw l.default.dispatch({
         type: "USER_PROFILE_EFFECTS_FETCH_FAILURE",
         error: e
-      }), new l.APIError(e)
+      }), new i.APIError(e)
     }
   }

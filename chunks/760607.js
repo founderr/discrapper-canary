@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
     return l
   }
@@ -7,17 +7,17 @@ n.r(t), n.d(t, {
 var i = n("37983");
 n("884691");
 var r = n("75196"),
-  l = function(e) {
+  l = function(t) {
     let {
-      width: t = 16,
+      width: e = 16,
       height: n = 16,
       color: l = "currentColor",
       foreground: s,
       ...a
-    } = e;
+    } = t;
     return (0, i.jsx)("svg", {
       ...(0, r.default)(a),
-      width: t,
+      width: e,
       height: n,
       viewBox: "0 0 16 15.2",
       children: (0, i.jsx)("path", {

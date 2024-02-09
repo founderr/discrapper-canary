@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  u = n.n(r),
-  o = n("446674"),
+  o = n.n(r),
+  u = n("446674"),
   d = n("151426"),
   c = n("77078"),
   f = n("943722"),
@@ -48,7 +48,7 @@ let M = e => {
   R = e => {
     let {
       currentStatus: t
-    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = l.useState(null != t ? t : null), O = (0, o.useStateFromStores)([p.default], () => p.default.getCurrentUser()), y = () => {
+    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = l.useState(null != t ? t : null), O = (0, u.useStateFromStores)([p.default], () => p.default.getCurrentUser()), y = () => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
     }, b = (e, t) => {
       e.stopPropagation(), (0, S.updateHangStatus)(t, !0), y()
@@ -164,7 +164,7 @@ let M = e => {
         }), (0, a.jsxs)("div", {
           className: A.iconsContainer,
           children: [s.current.map((e, n) => {
-            let l = e.status === (null == t ? void 0 : t.details) && u.isEqual(e.emoji, null == t ? void 0 : t.emoji);
+            let l = e.status === (null == t ? void 0 : t.details) && o.isEqual(e.emoji, null == t ? void 0 : t.emoji);
             return (0, a.jsx)(c.Clickable, {
               "aria-label": e.status,
               onMouseEnter: () => F(e),

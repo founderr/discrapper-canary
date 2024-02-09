@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return g
   },
   useDiscovery: function() {
-    return M
+    return O
   },
   executeQuery: function() {
-    return O
+    return M
   },
   useQuery: function() {
     return h
@@ -38,8 +38,8 @@ var i = n("884691"),
   l = n("446674"),
   a = n("938767"),
   s = n("305961"),
-  o = n("697218"),
-  r = n("449008"),
+  r = n("697218"),
+  o = n("449008"),
   u = n("507217"),
   d = n("589777"),
   c = n("14090"),
@@ -48,8 +48,8 @@ var i = n("884691"),
   m = n("216193"),
   I = n("166004"),
   _ = n("524768"),
-  C = n("389153"),
-  T = n("317041"),
+  T = n("389153"),
+  C = n("317041"),
   A = n("49111");
 
 function E(e, t) {
@@ -69,9 +69,9 @@ function E(e, t) {
     }
   }
   let s = p.default.getUserState(),
-    o = p.default.getContextState(e),
-    r = Object.values(null !== (l = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {}).concat(Object.values(null !== (a = null === (i = o.result) || void 0 === i ? void 0 : i.sections) && void 0 !== a ? a : {}));
-  for (let e of r) {
+    r = p.default.getContextState(e),
+    o = Object.values(null !== (l = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {}).concat(Object.values(null !== (a = null === (i = r.result) || void 0 === i ? void 0 : i.sections) && void 0 !== a ? a : {}));
+  for (let e of o) {
     let n = e.commands[t];
     if (null != n) return {
       application: e.descriptor.application,
@@ -85,13 +85,13 @@ function E(e, t) {
 }
 
 function N(e, t, n) {
-  var i, l, a, s, o, r;
+  var i, l, a, s, r, o;
   if (!R({
       location: "getCachedApplicationSection"
-    })) return null === (o = I.default.getApplicationSections(e.id, t)) || void 0 === o ? void 0 : o.find(e => e.id === n);
+    })) return null === (r = I.default.getApplicationSections(e.id, t)) || void 0 === r ? void 0 : r.find(e => e.id === n);
   let u = p.default.getUserState(),
     d = p.default.getContextState(e),
-    c = null !== (r = null === (l = u.result) || void 0 === l ? void 0 : null === (i = l.sections) || void 0 === i ? void 0 : i[n]) && void 0 !== r ? r : null === (s = d.result) || void 0 === s ? void 0 : null === (a = s.sections) || void 0 === a ? void 0 : a[n];
+    c = null !== (o = null === (l = u.result) || void 0 === l ? void 0 : null === (i = l.sections) || void 0 === i ? void 0 : i[n]) && void 0 !== o ? o : null === (s = d.result) || void 0 === s ? void 0 : null === (a = s.sections) || void 0 === a ? void 0 : a[n];
   return null == c ? void 0 : c.descriptor
 }
 
@@ -129,27 +129,27 @@ function g(e, t, n) {
   return [null == i ? void 0 : i.result, null == l ? void 0 : l.result]
 }
 
-function M(e, t, n) {
+function O(e, t, n) {
   if (!P({
       location: "useDiscovery"
     })) {
-    var a, o;
-    return (0, I.useDiscoveryState)(e, t.commandType, null !== (a = n.placeholderCount) && void 0 !== a ? a : 0, null !== (o = n.limit) && void 0 !== o ? o : 10, {
+    var a, r;
+    return (0, I.useDiscoveryState)(e, t.commandType, null !== (a = n.placeholderCount) && void 0 !== a ? a : 0, null !== (r = n.limit) && void 0 !== r ? r : 10, {
       canOnlyUseTextCommands: t.builtIns === f.BuiltInCommandFilter.ONLY_TEXT,
       canUseFrecency: n.includeFrecency
     })
   }
-  let r = (0, l.useStateFromStores)([s.default], () => s.default.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
+  let o = (0, l.useStateFromStores)([s.default], () => s.default.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
     {
       descriptors: u,
       commands: c,
       sectionedCommands: m,
       loading: _
-    } = (0, p.useDiscoveryState)(e, r, t, {
+    } = (0, p.useDiscoveryState)(e, o, t, {
       ...n,
       allowFetch: !0
     }),
-    [C, E] = i.useState(null),
+    [T, E] = i.useState(null),
     N = i.useRef(!1);
   N.current = _;
   let S = i.useMemo(() => {
@@ -164,7 +164,7 @@ function M(e, t, n) {
       commands: c,
       activeSections: u,
       commandsByActiveSection: m,
-      filteredSectionId: C,
+      filteredSectionId: T,
       hasMoreAfter: !1,
       placeholders: _ ? S : [],
       sectionDescriptors: u,
@@ -173,8 +173,8 @@ function M(e, t, n) {
       },
       scrollDown: A.NOOP
     };
-    if (null != C) {
-      let t = m.find(e => e.section.id === C);
+    if (null != T) {
+      let t = m.find(e => e.section.id === T);
       e.activeSections = null != t ? [t.section] : [], e.commandsByActiveSection = null != t ? [t] : []
     }
     if (_) {
@@ -184,7 +184,7 @@ function M(e, t, n) {
         data: [...t.data, ...S]
       }, ...m.slice(1)];
       else {
-        let t = d.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN];
+        let t = d.BUILT_IN_SECTIONS[C.BuiltInSectionId.BUILT_IN];
         e.activeSections = [t], e.commandsByActiveSection = [{
           section: t,
           data: S
@@ -193,17 +193,17 @@ function M(e, t, n) {
       e.commands = [...c, ...S]
     }
     return e
-  }, [c, u, C, m, _, S])
+  }, [c, u, T, m, _, S])
 }
 
-function O(e, t, n) {
+function M(e, t, n) {
   if (!R({
       location: "executeQuery"
     })) {
-    var i, l, s, o, r;
+    var i, l, s, r, o;
     return !0 === n.allowFetch && u.querySearchManager((0, a.getCommandContext)(e), null !== (i = t.text) && void 0 !== i ? i : "", null !== (l = n.limit) && void 0 !== l ? l : 10, t.commandType), {
-      commands: null !== (o = I.default.getQueryCommands(e.id, t.commandType, null !== (s = t.text) && void 0 !== s ? s : "")) && void 0 !== o ? o : [],
-      sections: null !== (r = I.default.getApplicationSections(e.id, t.commandType)) && void 0 !== r ? r : []
+      commands: null !== (r = I.default.getQueryCommands(e.id, t.commandType, null !== (s = t.text) && void 0 !== s ? s : "")) && void 0 !== r ? r : [],
+      sections: null !== (o = I.default.getApplicationSections(e.id, t.commandType)) && void 0 !== o ? o : []
     }
   }
   let {
@@ -215,7 +215,7 @@ function O(e, t, n) {
     for (let e = 0; e < n.placeholderCount; e++) _.push(U(e, t.commandType));
   return {
     commands: m ? [...f, ..._] : f,
-    sections: m && 0 === c.length ? [d.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN]] : c
+    sections: m && 0 === c.length ? [d.BUILT_IN_SECTIONS[C.BuiltInSectionId.BUILT_IN]] : c
   }
 }
 
@@ -228,8 +228,8 @@ function h(e, t, n) {
   }
   let {
     descriptors: s,
-    commands: o,
-    loading: r
+    commands: r,
+    loading: o
   } = (0, p.useQueryState)(e, t, {
     ...n,
     allowFetch: !0
@@ -240,10 +240,10 @@ function h(e, t, n) {
     return e
   }, [t.commandType, n.placeholderCount]);
   return i.useMemo(() => ({
-    commands: r ? [...o, ...u] : o,
-    sections: r && 0 === s.length ? [d.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN]] : s,
+    commands: o ? [...r, ...u] : r,
+    sections: o && 0 === s.length ? [d.BUILT_IN_SECTIONS[C.BuiltInSectionId.BUILT_IN]] : s,
     scrollDown: A.NOOP
-  }), [r, o, s, u])
+  }), [o, r, s, u])
 }
 
 function v(e, t) {
@@ -251,17 +251,17 @@ function v(e, t) {
       location: "useCommand"
     })) {
     var n;
-    let a = (0, l.useStateFromStores)([o.default], () => {
+    let a = (0, l.useStateFromStores)([r.default], () => {
         if (null == e ? void 0 : e.isDM()) {
           let t = e.getRecipientId(),
-            n = o.default.getUser(t);
+            n = r.default.getUser(t);
           if (null != n && n.bot) return n
         }
         return null
       }, [e]),
       {
         command: s,
-        application: r
+        application: o
       } = (0, l.useStateFromStoresObject)([m.default], () => {
         let e = null != t ? m.default.getCommand(t) : void 0,
           n = m.default.getApplication(null == e ? void 0 : e.applicationId);
@@ -276,12 +276,12 @@ function v(e, t) {
         channelId: e.id,
         applicationId: a.id
       }) : null != e.guild_id && null != t && u.fetchCommand(e.guild_id, e.id, t))
-    }, [a, e, s, t]), null == e || null == e.guild_id && (null == a || null == r || a.id !== (null === (n = r.bot) || void 0 === n ? void 0 : n.id))) ? {
+    }, [a, e, s, t]), null == e || null == e.guild_id && (null == a || null == o || a.id !== (null === (n = o.bot) || void 0 === n ? void 0 : n.id))) ? {
       command: void 0,
       application: void 0
     } : {
       command: s,
-      application: r
+      application: o
     }
   }
   let a = (0, p.useUserIndexState)(!0, !0),
@@ -289,8 +289,8 @@ function v(e, t) {
   return i.useMemo(() => {
     if (null != t) {
       var e, n, i, l;
-      let o = Object.values(null !== (i = null === (e = a.result) || void 0 === e ? void 0 : e.sections) && void 0 !== i ? i : {}).concat(Object.values(null !== (l = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {}));
-      for (let e of o) {
+      let r = Object.values(null !== (i = null === (e = a.result) || void 0 === e ? void 0 : e.sections) && void 0 !== i ? i : {}).concat(Object.values(null !== (l = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {}));
+      for (let e of r) {
         let n = e.commands[t];
         if (null != n) return {
           command: n,
@@ -321,16 +321,16 @@ function y(e, t, n) {
   let a = (0, p.useUserIndexState)(!0, !0),
     s = (0, p.useContextIndexState)(e, !0, !0);
   return i.useMemo(() => {
-    var e, i, l, o, u, d;
+    var e, i, l, r, u, d;
     let c = null !== (u = null === (i = a.result) || void 0 === i ? void 0 : null === (e = i.sections) || void 0 === e ? void 0 : e[t]) && void 0 !== u ? u : null === (l = s.result) || void 0 === l ? void 0 : l.sections[t],
-      p = Object.values(null !== (d = null == c ? void 0 : c.commands) && void 0 !== d ? d : {}).map(e => null == e.rootCommand ? e : (0, C.buildCommand)({
+      p = Object.values(null !== (d = null == c ? void 0 : c.commands) && void 0 !== d ? d : {}).map(e => null == e.rootCommand ? e : (0, T.buildCommand)({
         rootCommand: e.rootCommand,
         command: e.rootCommand,
         applicationId: e.applicationId
       })).reduce((e, t) => (e[t.id] = t, e), {});
     return {
-      application: null == c ? void 0 : null === (o = c.descriptor) || void 0 === o ? void 0 : o.application,
-      commands: n.map(e => p[e]).filter(r.isNotNullish)
+      application: null == c ? void 0 : null === (r = c.descriptor) || void 0 === r ? void 0 : r.application,
+      commands: n.map(e => p[e]).filter(o.isNotNullish)
     }
   }, [null == a ? void 0 : a.result, null == s ? void 0 : s.result, t, n])
 }

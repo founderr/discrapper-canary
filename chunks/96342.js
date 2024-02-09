@@ -18,7 +18,7 @@ var l = n("627445"),
   m = n("718517"),
   h = n("23690"),
   E = n("10680");
-let g = {
+let S = {
     link: {
       type: "skip"
     },
@@ -158,12 +158,12 @@ let g = {
       type: "inlineObject"
     }
   },
-  S = new Set(["*", "_", "\\"]),
+  g = new Set(["*", "_", "\\"]),
   C = {},
   T = {};
 for (let e in c.default.RULES) {
-  if (!(e in g)) throw Error("Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") + "then you probably need to add it to this file so that the rich chat box understands it.");
-  let t = g[e];
+  if (!(e in S)) throw Error("Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") + "then you probably need to add it to this file so that the rich chat box understands it.");
+  let t = S[e];
   "skip" !== t.type && (C[e] = v(c.default.RULES[e])), "skip" !== t.type && "inlineObject" !== t.type && (T[e] = v("text" === e ? f.default : c.default.RULES[e]))
 }
 
@@ -396,7 +396,7 @@ function L(e, t, n, l, a) {
           before: "_",
           after: "_"
         };
-        let i = g["link" === t ? "url" : t];
+        let i = S["link" === t ? "url" : t];
         if ("inlineStyle" === i.type) return i;
         throw Error("Slate: rule must be an inlineStyle")
       }(t, r, l, o);
@@ -470,7 +470,7 @@ function U(e, t) {
 
 function D(e, t, n, l) {
   for (; n < l;)
-    if (S.has(t[n])) n = b(e, t, t[n], n, "syntaxBefore"), n = U(t, n);
+    if (g.has(t[n])) n = b(e, t, t[n], n, "syntaxBefore"), n = U(t, n);
     else break;
   return n
 }

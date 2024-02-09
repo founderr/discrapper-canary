@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return C
   }
 }), n("222007");
 var a = n("37983"),
   l = n("884691"),
   i = n("627445"),
-  r = n.n(i),
-  s = n("77078"),
+  s = n.n(i),
+  r = n("77078"),
   u = n("612039"),
   o = n("90592"),
   c = n("527866"),
@@ -18,24 +18,24 @@ var a = n("37983"),
   _ = n("153727"),
   S = n("39065"),
   T = n("628738"),
-  P = n("650484"),
+  N = n("650484"),
   E = n("367767"),
-  N = n("215774"),
+  P = n("215774"),
   A = n("782340"),
   m = n("945598");
 
-function p(e) {
+function C(e) {
   let {
     application: t,
     backButtonEligible: n,
     prevStep: i,
-    showGuildPicker: p,
-    handleStepChange: C,
+    showGuildPicker: C,
+    handleStepChange: p,
     trialFooterMessageOverride: O,
     reviewWarningMessage: R,
     planGroup: g,
-    openInvoiceId: M,
-    analyticsData: L,
+    openInvoiceId: L,
+    analyticsData: M,
     analyticsLocation: h,
     eligibleApplicationSubscriptionGuilds: U,
     listing: v,
@@ -47,32 +47,32 @@ function p(e) {
     currencies: D,
     paymentSources: j,
     priceOptions: k,
-    purchaseError: w,
-    purchaseTokenAuthState: H,
+    purchaseError: H,
+    purchaseTokenAuthState: w,
     selectedPlan: F,
     setCurrency: G,
     setPaymentSourceId: V,
-    setPurchaseState: K,
-    setPurchaseError: Y,
-    step: W,
+    setPurchaseState: Y,
+    setPurchaseError: W,
+    step: K,
     purchaseState: z,
     subscriptionMetadataRequest: Z,
     setSubscriptionMetadataRequest: X,
     setHasAcceptedTerms: Q
   } = (0, d.usePaymentContext)();
-  r(null != F, "Expected plan to be selected"), r(null != W, "Step should be set");
+  s(null != F, "Expected plan to be selected"), s(null != K, "Step should be set");
   let q = l.useRef(null),
     [J, $] = (0, u.default)(!1, 500),
     [ee, et] = l.useState(null == Z ? void 0 : Z.guild_id),
     en = (0, o.isApplicationUserSubscription)(v.sku_flags);
   l.useEffect(() => {
-    null != w && null != q.current && q.current.scrollIntoView({
+    null != H && null != q.current && q.current.scrollIntoView({
       behavior: "smooth"
     })
-  }, [w]);
+  }, [H]);
   let ea = l.useCallback(e => {
-      y(e), C(f.Step.CONFIRM)
-    }, [C, y]),
+      y(e), p(f.Step.CONFIRM)
+    }, [p, y]),
     el = l.useCallback(e => {
       et(e), X({
         ...Z,
@@ -83,30 +83,30 @@ function p(e) {
   return z === I.PurchaseState.PURCHASING ? (0, a.jsx)(T.default, {}) : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(_.default, {
       className: m.breadcrumbs
-    }), (0, a.jsxs)(P.PaymentPortalBody, {
+    }), (0, a.jsxs)(N.PaymentPortalBody, {
       children: [(0, a.jsx)(E.default, {}), en && (0, a.jsxs)("div", {
         className: m.userSubscriptionDetailsContainer,
-        children: [(0, a.jsx)(s.Text, {
+        children: [(0, a.jsx)(r.Text, {
           variant: "eyebrow",
           color: "header-secondary",
           children: A.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_TITLE
-        }), (0, a.jsx)(s.Text, {
+        }), (0, a.jsx)(r.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
           children: A.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({
             applicationName: t.name
           })
         })]
-      }), p && !en && (0, a.jsxs)("div", {
+      }), C && !en && (0, a.jsxs)("div", {
         className: m.guildPickerContainer,
-        children: [(0, a.jsx)(s.FormTitle, {
-          tag: s.FormTitleTags.H5,
+        children: [(0, a.jsx)(r.FormTitle, {
+          tag: r.FormTitleTags.H5,
           children: A.default.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_TITLE
-        }), (0, a.jsx)(s.FormText, {
-          type: s.FormText.Types.DESCRIPTION,
+        }), (0, a.jsx)(r.FormText, {
+          type: r.FormText.Types.DESCRIPTION,
           className: m.guildPickerDescription,
           children: A.default.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_SUBTITLE
-        }), (0, a.jsx)(N.GuildPickerDropdown, {
+        }), (0, a.jsx)(P.GuildPickerDropdown, {
           selectedGuildId: ee,
           onGuildChange: el,
           eligibleApplicationSubscriptionGuilds: U
@@ -118,32 +118,32 @@ function p(e) {
         priceOptions: k,
         currencies: D,
         onCurrencyChange: e => G(e),
-        handlePaymentSourceAdd: () => C(f.Step.ADD_PAYMENT_STEPS),
+        handlePaymentSourceAdd: () => p(f.Step.ADD_PAYMENT_STEPS),
         setHasAcceptedTerms: Q,
         legalTermsNodeRef: ei,
         hasLegalTermsFlash: J,
         trialFooterMessageOverride: O,
         reviewWarningMessage: R,
-        metadata: p || en ? void 0 : Z,
+        metadata: C || en ? void 0 : Z,
         purchaseState: z,
         hideSubscriptionDetails: !0,
         handleClose: x
       })]
-    }), (0, a.jsx)(P.PaymentPortalFooter, {
+    }), (0, a.jsx)(N.PaymentPortalFooter, {
       children: (0, a.jsx)(S.default, {
         premiumSubscription: null != B ? B : null,
-        setPurchaseState: K,
-        onBack: () => null != i && C(i),
+        setPurchaseState: Y,
+        onBack: () => null != i && p(i),
         onNext: ea,
-        onPurchaseError: e => Y(e),
+        onPurchaseError: e => W(e),
         legalTermsNodeRef: ei,
         flashLegalTerms: () => $(!0),
         analyticsLocation: h,
-        baseAnalyticsData: L,
+        baseAnalyticsData: M,
         flowStartTime: b.startTime,
         planGroup: g,
-        purchaseTokenAuthState: H,
-        openInvoiceId: M,
+        purchaseTokenAuthState: w,
+        openInvoiceId: L,
         metadata: en ? void 0 : Z,
         backButtonEligible: n,
         invoiceError: null,

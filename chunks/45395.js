@@ -1,15 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return n
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = {
+var l = s("77078"),
+  n = {
     open() {
-      (0, n.openModalLazy)(async () => {
+      (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await s.el("79536").then(s.bind(s, "79536"));

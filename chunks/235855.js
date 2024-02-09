@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
     return c
   }
@@ -13,45 +13,45 @@ let s = (0, r.v4)(),
 class u extends i.Component {
   componentDidMount() {
     if (this.props.active) {
-      let e = this.getVisibilityObserver();
-      e.observe(this), this.isVisible = e.isVisible(this), this.props.onChange(this.isVisible)
+      let t = this.getVisibilityObserver();
+      t.observe(this), this.isVisible = t.isVisible(this), this.props.onChange(this.isVisible)
     }
   }
-  componentDidUpdate(e) {
-    let t = this.getVisibilityObserver(),
-      n = t.isVisible(this);
-    this.props.active && n !== this.isVisible && this.props.onChange(n), !e.active && this.props.active ? t.observe(this) : e.active && !this.props.active && t.unobserve(this), this.isVisible = n
+  componentDidUpdate(t) {
+    let e = this.getVisibilityObserver(),
+      n = e.isVisible(this);
+    this.props.active && n !== this.isVisible && this.props.onChange(n), !t.active && this.props.active ? e.observe(this) : t.active && !this.props.active && e.unobserve(this), this.isVisible = n
   }
   componentWillUnmount() {
     this.getVisibilityObserver().unobserve(this)
   }
   getVisibilityObserverId() {
     let {
-      rootMargin: e,
-      threshold: t
+      rootMargin: t,
+      threshold: e
     } = this.props;
-    return "".concat(this.elementId, " ").concat(e, " ").concat(t)
+    return "".concat(this.elementId, " ").concat(t, " ").concat(e)
   }
   getVisibilityObserver() {
-    let e = this.getVisibilityObserverId(),
-      t = o.get(e);
-    if (!t) throw Error("Visibility sensor with id ".concat(e, " not found."));
-    return t
+    let t = this.getVisibilityObserverId(),
+      e = o.get(t);
+    if (!e) throw Error("Visibility sensor with id ".concat(t, " not found."));
+    return e
   }
   render() {
     return i.Children.only(this.props.children)
   }
-  constructor(e) {
-    super(e), this.isVisible = !1;
+  constructor(t) {
+    super(t), this.isVisible = !1;
     let {
-      root: t,
+      root: e,
       rootMargin: n,
       threshold: i
-    } = e;
-    t ? a.has(t) ? this.elementId = a.get(t) || "" : a.set(t, (0, r.v4)()) : this.elementId = s;
+    } = t;
+    e ? a.has(e) ? this.elementId = a.get(e) || "" : a.set(e, (0, r.v4)()) : this.elementId = s;
     let u = this.getVisibilityObserverId();
     !o.has(u) && o.set(u, new l.default({
-      root: t,
+      root: e,
       rootMargin: n,
       threshold: i
     }))

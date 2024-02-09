@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("872173"),
   h = n("945956"),
   E = n("305122"),
-  g = n("235004"),
-  S = n("534108"),
+  S = n("235004"),
+  g = n("534108"),
   C = n("808910");
 
 function T(e) {
@@ -38,7 +38,7 @@ function T(e) {
     listPadding: O,
     renderHeader: R,
     defaultSoundsOnly: M
-  } = e, L = (0, o.useStateFromStores)([g.default], () => g.default.isFetchingSounds() || g.default.isFetchingDefaultSounds()), P = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
+  } = e, L = (0, o.useStateFromStores)([S.default], () => S.default.isFetchingSounds() || S.default.isFetchingDefaultSounds()), P = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
     AnalyticsLocationProvider: b
   } = (0, c.default)(d.default.SOUNDBOARD_POPOUT);
   return (0, f.default)({
@@ -57,7 +57,7 @@ function T(e) {
         [C.fetching]: L,
         [C.autoWidth]: N
       }),
-      children: L ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(S.default, {
+      children: L ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(g.default, {
         guildId: t,
         channel: n,
         onClose: T,

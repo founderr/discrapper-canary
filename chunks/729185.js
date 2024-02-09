@@ -12,8 +12,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("77078"),
-  o = n("255397"),
+  o = n("77078"),
+  u = n("255397"),
   d = n("990766"),
   c = n("103723"),
   f = n("605250"),
@@ -54,15 +54,15 @@ function H(e) {
     focused: l,
     idle: s,
     width: i
-  } = e, u = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), o = (0, D.isVideoCompact)(i);
+  } = e, o = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, D.isVideoCompact)(i);
   return (0, a.jsxs)(a.Fragment, {
     children: [n ? null : (0, a.jsx)(P.default, {
       participant: t
-    }), l || null == u || u.state === U.ApplicationStreamStates.ENDED || u.state === U.ApplicationStreamStates.FAILED ? null : (0, a.jsx)(E.default, {
+    }), l || null == o || o.state === U.ApplicationStreamStates.ENDED || o.state === U.ApplicationStreamStates.FAILED ? null : (0, a.jsx)(E.default, {
       size: A.default.Sizes.SMALL,
       className: V.liveIndicator,
       participant: t,
-      showQuality: !o && !s,
+      showQuality: !u && !s,
       isUpsellEnabled: !1
     })]
   })
@@ -84,7 +84,7 @@ function G(e) {
     streamId: K
   } = t, Z = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(Y.channelId)), X = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), J = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), q = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), Q = (null == X ? void 0 : X.ownerId) === G, $ = Q && !q && !A, ee = null != X ? (0, p.default)(X, z, z.id === G, $) : null, et = P < 195;
   if (l.useEffect(() => {
-      !J && (null == Z ? void 0 : Z.isGuildStageVoice()) && !Q && ((0, d.watchStream)(Y), o.default.updateStageStreamSize(Y.channelId, !1))
+      !J && (null == Z ? void 0 : Z.isGuildStageVoice()) && !Q && ((0, d.watchStream)(Y), u.default.updateStageStreamSize(Y.channelId, !1))
     }, []), l.useEffect(() => {
       B.info("Stream Tile State - activeStream: ".concat(null != X, " | selected: ").concat(n, " | Video: ").concat(null != H, " | MediaEngine: ").concat(T.default.supports(F.Features.VIDEO)))
     }, [H, X, n]), W) return (0, a.jsx)(b.default, {
@@ -147,7 +147,7 @@ function G(e) {
     }), n ? null : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(M.CallTileCTA, {
         isSmall: et,
-        children: (0, a.jsx)(u.Text, {
+        children: (0, a.jsx)(o.Text, {
           variant: et ? "text-sm/semibold" : "text-md/semibold",
           color: "none",
           children: P < 175 ? k.default.Messages.WATCH : k.default.Messages.WATCH_STREAM

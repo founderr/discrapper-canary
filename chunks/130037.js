@@ -1,108 +1,108 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   useTrackMemberSearchUsed: function() {
-    return h
+    return A
   },
   useTrackMemberFilterRolesUsed: function() {
-    return p
+    return N
   },
   MemberSafetyFlagType: function() {
-    return r
+    return i
   },
   useTrackMemberFilterSafetyFlagsUsed: function() {
-    return _
+    return M
   },
   ModerationActionType: function() {
-    return s
+    return u
   },
   useTrackModerationAction: function() {
-    return v
+    return f
   },
   trackMembersPageViewed: function() {
-    return m
+    return v
   }
 });
-var l, i, r, s, o = n("884691"),
-  u = n("812204"),
-  a = n("716241"),
-  c = n("271938"),
-  d = n("599110"),
-  f = n("49111");
+var n, a, i, u, s = l("884691"),
+  r = l("812204"),
+  o = l("716241"),
+  d = l("271938"),
+  c = l("599110"),
+  _ = l("49111");
 
-function E(e, t, n) {
-  var l;
-  let i = {
+function E(e, t, l) {
+  var n;
+  let a = {
     ...t,
-    ...(0, a.collectGuildAnalyticsMetadata)(null !== (l = t.guild_id) && void 0 !== l ? l : n)
+    ...(0, o.collectGuildAnalyticsMetadata)(null !== (n = t.guild_id) && void 0 !== n ? n : l)
   };
-  d.default.track(e, i)
+  c.default.track(e, a)
 }
 
-function h(e) {
-  let t = o.useCallback(t => {
+function A(e) {
+  let t = s.useCallback(t => {
     ! function(e) {
       let t = {
         guild_id: e,
-        location: u.default.MEMBER_SAFETY_PAGE
+        location: r.default.MEMBER_SAFETY_PAGE
       };
-      E(f.AnalyticEvents.MOD_DASH_SEARCH_MEMBERS, t)
+      E(_.AnalyticEvents.MOD_DASH_SEARCH_MEMBERS, t)
     }(e)
   }, [e]);
   return t
 }
 
-function p(e) {
-  let t = o.useCallback(t => {
+function N(e) {
+  let t = s.useCallback(t => {
     ! function(e, t) {
-      let n = {
+      let l = {
         selected_role_count: t.size,
         guild_id: e,
-        location: u.default.MEMBER_SAFETY_PAGE
+        location: r.default.MEMBER_SAFETY_PAGE
       };
-      E(f.AnalyticEvents.MOD_DASH_FILTER_ROLES, n)
+      E(_.AnalyticEvents.MOD_DASH_FILTER_ROLES, l)
     }(e, t)
   }, [e]);
   return t
-}(l = r || (r = {})).UNUSUAL_DM_ACTIVITY = "unusual_dm_activity", l.COMMUNICATION_DISABLED = "communication_disabled", l.UNUSUAL_ACCOUNT_ACTIVITY = "unusual_account_activity", l.USERNAME_QUARANTINED = "username_quarantined";
+}(n = i || (i = {})).UNUSUAL_DM_ACTIVITY = "unusual_dm_activity", n.COMMUNICATION_DISABLED = "communication_disabled", n.UNUSUAL_ACCOUNT_ACTIVITY = "unusual_account_activity", n.USERNAME_QUARANTINED = "username_quarantined";
 
-function _(e) {
-  let t = o.useCallback(t => {
+function M(e) {
+  let t = s.useCallback(t => {
     ! function(e, t) {
-      let n = {
+      let l = {
         flag_type: t,
         guild_id: e,
-        location: u.default.MEMBER_SAFETY_PAGE
+        location: r.default.MEMBER_SAFETY_PAGE
       };
-      E(f.AnalyticEvents.MOD_DASH_FILTER_SAFETY_FLAGS, n)
+      E(_.AnalyticEvents.MOD_DASH_FILTER_SAFETY_FLAGS, l)
     }(e, t)
   }, [e]);
   return t
+}
+
+function f(e, t) {
+  let {
+    location: l,
+    targetUserId: n,
+    targets: a,
+    locations: i
+  } = t, u = s.useCallback(t => {
+    let u = {
+      action_type: t,
+      mod_user_id: d.default.getId(),
+      guild_id: e,
+      location: l,
+      locations: i,
+      target_user_id: null != n ? n : void 0,
+      targets: null != a ? a : void 0
+    };
+    E(_.AnalyticEvents.MODERATION_ACTION, u)
+  }, [e, l, n, a, i]);
+  return u
 }
 
 function v(e, t) {
-  let {
-    location: n,
-    targetUserId: l,
-    targets: i,
-    locations: r
-  } = t, s = o.useCallback(t => {
-    let s = {
-      action_type: t,
-      mod_user_id: c.default.getId(),
-      guild_id: e,
-      location: n,
-      locations: r,
-      target_user_id: null != l ? l : void 0,
-      targets: null != i ? i : void 0
-    };
-    E(f.AnalyticEvents.MODERATION_ACTION, s)
-  }, [e, n, l, i, r]);
-  return s
-}
-
-function m(e, t) {
-  E(f.AnalyticEvents.MOD_DASH_MEMBERS_TABLE_VIEWED, {
+  E(_.AnalyticEvents.MOD_DASH_MEMBERS_TABLE_VIEWED, {
     guild_id: e,
     location: t
   })
-}(i = s || (s = {})).BAN = "ban", i.KICK = "kick", i.MUTE = "mute", i.TIMEOUT = "timeout", i.ADD_ROLE = "add_role", i.REMOVE_ROLE = "remove_role", i.COPY_ID = "copy_id", i.CHANGE_NICKNAME = "change_nickname"
+}(a = u || (u = {})).BAN = "ban", a.KICK = "kick", a.MUTE = "mute", a.TIMEOUT = "timeout", a.ADD_ROLE = "add_role", a.REMOVE_ROLE = "remove_role", a.COPY_ID = "copy_id", a.CHANGE_NICKNAME = "change_nickname"

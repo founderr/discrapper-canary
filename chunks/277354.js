@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("987317"),
-  u = n("191145"),
-  o = n("233322"),
+  o = n("191145"),
+  u = n("233322"),
   d = n("157186"),
   c = n("679243"),
   f = n("449008"),
@@ -26,8 +26,8 @@ var g = function(e) {
     channel: g,
     hasConnectPermission: S
   } = e, _ = (0, d.useShowMemberVerificationGate)(g.guild_id), I = l.useCallback(() => {
-    _ ? (0, o.openMemberVerificationModal)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id)
-  }, [g.id, g.guild_id, _]), T = h.filter(e => e.type === p.StageChannelParticipantTypes.VOICE), v = 4 === T.length ? 2 : 3, x = (0, s.useStateFromStoresArray)([u.default], () => T.map(e => u.default.getParticipant(g.id, e.id)).filter(f.isNotNullish), [g.id, T]);
+    _ ? (0, u.openMemberVerificationModal)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id)
+  }, [g.id, g.guild_id, _]), T = h.filter(e => e.type === p.StageChannelParticipantTypes.VOICE), v = 4 === T.length ? 2 : 3, x = (0, s.useStateFromStoresArray)([o.default], () => T.map(e => o.default.getParticipant(g.id, e.id)).filter(f.isNotNullish), [g.id, T]);
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)("div", {

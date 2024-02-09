@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("77078"),
-  o = n("295426"),
+  o = n("77078"),
+  u = n("295426"),
   d = n("352674"),
   c = n("125667"),
   f = n("264732"),
@@ -108,7 +108,7 @@ function X(e) {
       a(e => ({
         ...e,
         ...n
-      })), o.default.changeThreadSettings(e.id, {
+      })), u.default.changeThreadSettings(e.id, {
         ...n,
         parentMessageId: t
       })
@@ -148,7 +148,7 @@ function X(e) {
       privateThreadMode: s,
       textAreaState: i,
       location: r
-    } = e, [u, o] = l.useState(null), [d, c] = l.useState(null), f = (0, H.default)({
+    } = e, [o, u] = l.useState(null), [d, c] = l.useState(null), f = (0, H.default)({
       parentChannel: t,
       parentMessageId: n,
       threadSettings: a,
@@ -157,12 +157,12 @@ function X(e) {
       onThreadCreated: B.openThreadSidebarForViewing,
       useDefaultThreadName: !0
     }), h = l.useCallback(async (e, l, s) => {
-      var r, u, d;
+      var r, o, d;
       null == e && (e = i.textValue), e = e.trim(), (null == l || 0 === l.length) && (l = null === (r = T.default.getStickerPreview(t.id, K.drafts.type)) || void 0 === r ? void 0 : r.map(e => e.id)), (null == s || 0 === s.length) && (s = j.default.getUploads(t.id, A.DraftType.FirstThreadMessage));
-      let h = null !== (u = a.name) && void 0 !== u ? u : "",
+      let h = null !== (o = a.name) && void 0 !== o ? o : "",
         p = null == n && 0 === h.length,
         m = "" === e && (null == l || 0 === l.length) && 0 === s.length;
-      if (o(p ? (0, F.makeEmptyTitleError)() : null), c(m ? (0, F.makeEmptyMessageError)() : null), p || m) return {
+      if (u(p ? (0, F.makeEmptyTitleError)() : null), c(m ? (0, F.makeEmptyMessageError)() : null), p || m) return {
         shouldClear: !1,
         shouldRefocus: !0
       };
@@ -184,7 +184,7 @@ function X(e) {
       try {
         await f(e, l, s)
       } catch (e) {
-        return (null === (d = e.body) || void 0 === d ? void 0 : d.code) === G.AbortCodes.AUTOMOD_TITLE_BLOCKED && o((0, F.makeAutomodViolationError)(e.body, t)), {
+        return (null === (d = e.body) || void 0 === d ? void 0 : d.code) === G.AbortCodes.AUTOMOD_TITLE_BLOCKED && u((0, F.makeAutomodViolationError)(e.body, t)), {
           shouldClear: !1,
           shouldRefocus: !0
         }
@@ -195,7 +195,7 @@ function X(e) {
       }
     }, [f, i.textValue, a.name, n, t]);
     return {
-      nameError: u,
+      nameError: o,
       messageError: d,
       submit: h
     }
@@ -218,7 +218,7 @@ function X(e) {
           e.preventDefault(), M()
         },
         className: Y.form,
-        children: [(0, a.jsx)(u.Scroller, {
+        children: [(0, a.jsx)(o.Scroller, {
           className: Y.scroller,
           fade: !0,
           children: (0, a.jsxs)("div", {
@@ -271,30 +271,30 @@ function J(e) {
     threadSettings: n,
     updateThreadSettings: l,
     privateThreadMode: s
-  } = e, r = (0, k.getIsPrivate)(n, s), o = (0, a.jsx)("div", {
+  } = e, r = (0, k.getIsPrivate)(n, s), u = (0, a.jsx)("div", {
     className: Y.privateThreadFormTitle,
     children: (0, a.jsx)("span", {
       className: Y.privateThreadFormTitleText,
       children: W.default.Messages.PRIVATE_THREAD
     })
-  }), d = (0, a.jsx)(u.Checkbox, {
+  }), d = (0, a.jsx)(o.Checkbox, {
     className: i(Y.checkbox),
-    type: u.Checkbox.Types.INVERTED,
+    type: o.Checkbox.Types.INVERTED,
     disabled: s === k.PrivateThreadMode.PrivateOnly,
     value: r,
     onChange: (e, t) => l({
       isPrivate: t
     }),
-    children: (0, a.jsx)(u.Text, {
+    children: (0, a.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "none",
       children: W.default.Messages.FORM_THREAD_PRIVATE_THREAD_SECTION_LABEL
     })
   });
-  return t || s === k.PrivateThreadMode.Disabled ? null : (0, a.jsxs)(u.FormSection, {
-    title: o,
+  return t || s === k.PrivateThreadMode.Disabled ? null : (0, a.jsxs)(o.FormSection, {
+    title: u,
     className: Y.formSection,
-    children: [d, r ? (0, a.jsx)(u.Text, {
+    children: [d, r ? (0, a.jsx)(o.Text, {
       className: Y.privateThreadDescription,
       variant: "text-xs/normal",
       color: "header-secondary",
@@ -311,16 +311,16 @@ function q(e) {
     threadSettings: s,
     updateThreadSettings: i,
     error: r
-  } = e, o = null !== (t = s.name) && void 0 !== t ? t : "", c = (0, F.renderError)(r, {
-    content: o
+  } = e, u = null !== (t = s.name) && void 0 !== t ? t : "", c = (0, F.renderError)(r, {
+    content: u
   }), f = (0, k.getDefaultThreadName)(n, l), h = null != l, p = (0, L.useUID)();
-  return (0, a.jsx)(u.FormSection, {
+  return (0, a.jsx)(o.FormSection, {
     tag: "label",
     htmlFor: p,
     title: W.default.Messages.THREAD_NAME + (h ? " (Optional)" : ""),
     className: Y.formSection,
-    children: (0, a.jsx)(u.TextInput, {
-      value: o,
+    children: (0, a.jsx)(o.TextInput, {
+      value: u,
       id: p,
       placeholder: "" !== f ? f : W.default.Messages.FORM_THREAD_NAME_PLACEHOLDER,
       maxLength: G.MAX_CHANNEL_NAME_LENGTH,
@@ -330,8 +330,8 @@ function q(e) {
         }), "" !== e ? d.default.startTyping(n.id) : d.default.stopTyping(n.id)
       },
       onBlur: () => {
-        let e = (0, V.default)(o, !0);
-        e !== o && i({
+        let e = (0, V.default)(u, !0);
+        e !== u && i({
           name: e
         })
       },
@@ -348,7 +348,7 @@ function Q(e) {
     submit: c,
     error: f
   } = e, [h, p] = l.useState(!0), m = l.useCallback(() => p(!0), []), E = l.useCallback(() => p(!1), []), C = l.useCallback((e, n, a) => {
-    o.default.saveDraft(t.id, n, A.DraftType.FirstThreadMessage), s(e => ("" !== n && e.textValue !== n ? d.default.startTyping(t.id) : "" === n && d.default.stopTyping(t.id), {
+    u.default.saveDraft(t.id, n, A.DraftType.FirstThreadMessage), s(e => ("" !== n && e.textValue !== n ? d.default.startTyping(t.id) : "" === n && d.default.stopTyping(t.id), {
       textValue: n,
       richValue: a
     }))
@@ -378,7 +378,7 @@ function Q(e) {
       canAttachFiles: I
     }), (0, a.jsx)("div", {
       className: Y.starterMessageError,
-      children: (0, a.jsx)(u.InputError, {
+      children: (0, a.jsx)(o.InputError, {
         error: T
       })
     }), (0, a.jsx)(g.default, {

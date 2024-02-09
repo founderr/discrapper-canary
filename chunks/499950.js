@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return S
   }
 });
 var l = n("37983");
@@ -14,102 +14,102 @@ var a = n("446674"),
   o = n("652453"),
   d = n("119184"),
   c = n("923959"),
-  E = n("305961"),
-  f = n("330154"),
-  I = n("943232"),
-  _ = n("945330"),
-  h = n("599110"),
-  T = n("306160"),
-  v = n("354023"),
-  N = n("841363"),
-  m = n("49111"),
-  S = n("782340"),
-  g = n("131439");
+  f = n("305961"),
+  E = n("330154"),
+  h = n("943232"),
+  v = n("945330"),
+  I = n("599110"),
+  _ = n("306160"),
+  C = n("354023"),
+  m = n("841363"),
+  g = n("49111"),
+  T = n("782340"),
+  p = n("131439");
 let {
-  INVITE_OPTIONS_7_DAYS: C,
-  INVITE_OPTIONS_UNLIMITED: p
-} = v.default;
+  INVITE_OPTIONS_7_DAYS: N,
+  INVITE_OPTIONS_UNLIMITED: x
+} = C.default;
 
-function x(e) {
-  var t, n, x;
+function S(e) {
+  var t, n, S;
   let {
     onClose: A,
-    event: R
-  } = e, M = null == R ? void 0 : R.guild_id, L = (0, a.useStateFromStores)([c.default], () => {
+    event: L
+  } = e, y = null == L ? void 0 : L.guild_id, R = (0, a.useStateFromStores)([c.default], () => {
     var e;
-    return null != M ? null === (e = c.default.getDefaultChannel(M)) || void 0 === e ? void 0 : e.id : null
-  }, [M]), y = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(M), [M]), O = (null == y ? void 0 : y.vanityURLCode) != null && (null == y ? void 0 : y.vanityURLCode.length) > 0, {
+    return null != y ? null === (e = c.default.getDefaultChannel(y)) || void 0 === e ? void 0 : e.id : null
+  }, [y]), M = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(y), [y]), j = (null == M ? void 0 : M.vanityURLCode) != null && (null == M ? void 0 : M.vanityURLCode.length) > 0, {
     enabled: D
   } = r.default.useExperiment({
-    guildId: null != M ? M : "",
+    guildId: null != y ? y : "",
     location: "bd50e8_1"
   }, {
-    autoTrackExposure: O
+    autoTrackExposure: j
   }), {
-    channel_id: j,
-    id: U
-  } = null != R ? R : {}, V = (0, a.useStateFromStores)([f.default], () => {
-    let e = null != j ? j : L;
-    return null == e ? null : f.default.getInvite(e)
-  }, [j, L]);
-  if (null == R) return A(), null;
-  let P = D && null !== (t = null == y ? void 0 : y.vanityURLCode) && void 0 !== t ? t : null == V ? void 0 : V.code,
-    G = null != P ? (0, i.generateInviteKeyFromExtraData)({
-      baseCode: P,
-      guildScheduledEventId: U
+    channel_id: G,
+    id: O
+  } = null != L ? L : {}, V = (0, a.useStateFromStores)([E.default], () => {
+    let e = null != G ? G : R;
+    return null == e ? null : E.default.getInvite(e)
+  }, [G, R]);
+  if (null == L) return A(), null;
+  let U = D && null !== (t = null == M ? void 0 : M.vanityURLCode) && void 0 !== t ? t : null == V ? void 0 : V.code,
+    b = null != U ? (0, i.generateInviteKeyFromExtraData)({
+      baseCode: U,
+      guildScheduledEventId: O
     }) : null,
-    b = null == G || null == V,
-    F = (0, u.default)(null != G ? G : ""),
-    w = null !== (n = null == V ? void 0 : V.maxAge) && void 0 !== n ? n : C.value,
-    k = null !== (x = null == V ? void 0 : V.maxUses) && void 0 !== x ? x : p.value;
+    P = null == b || null == V,
+    w = (0, u.default)(null != b ? b : ""),
+    F = null !== (n = null == V ? void 0 : V.maxAge) && void 0 !== n ? n : N.value,
+    k = null !== (S = null == V ? void 0 : V.maxUses) && void 0 !== S ? S : x.value;
   return (0, l.jsxs)("div", {
-    className: g.container,
+    className: p.container,
     children: [(0, l.jsx)(s.Clickable, {
       onClick: A,
-      className: g.close,
-      "aria-label": S.default.Messages.CLOSE,
-      children: (0, l.jsx)(_.default, {})
+      className: p.close,
+      "aria-label": T.default.Messages.CLOSE,
+      children: (0, l.jsx)(v.default, {})
     }), (0, l.jsx)(d.default, {
       children: (0, l.jsx)("div", {
-        className: g.iconContainer,
-        children: (0, l.jsx)(I.default, {
+        className: p.iconContainer,
+        children: (0, l.jsx)(h.default, {
           height: 30,
           width: 30,
-          className: g.icon
+          className: p.icon
         })
       })
     }), (0, l.jsx)(s.Heading, {
       variant: "heading-xl/semibold",
-      className: g.header,
-      children: S.default.Messages.GUILD_EVENT_CREATED_MODAL_HEADER
+      className: p.header,
+      children: T.default.Messages.GUILD_EVENT_CREATED_MODAL_HEADER
     }), (0, l.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: g.body,
-      children: S.default.Messages.GUILD_EVENT_CREATED_MODAL_BODY
+      className: p.body,
+      children: T.default.Messages.GUILD_EVENT_CREATED_MODAL_BODY
     }), (0, l.jsxs)("div", {
-      className: g.invite,
+      className: p.invite,
       children: [(0, l.jsx)(o.RawInviteCopyInputConnected, {
-        value: F,
+        value: w,
         autoFocus: !1,
         onCopy: e => {
-          if (b) return;
-          (0, T.copy)(e);
-          let t = (0, N.getChannelTypeFromEntity)(R.entity_type);
-          h.default.track(m.AnalyticEvents.COPY_INSTANT_INVITE, {
-            server: R.guild_id,
-            channel: j,
+          if (P) return;
+          (0, _.copy)(e);
+          let t = (0, m.getChannelTypeFromEntity)(L.entity_type);
+          I.default.track(g.AnalyticEvents.COPY_INSTANT_INVITE, {
+            server: L.guild_id,
+            channel: G,
             channel_type: t,
-            location: m.InstantInviteSources.GUILD_EVENTS,
+            location: g.InstantInviteSources.GUILD_EVENTS,
             code: V.code,
-            guild_scheduled_event_id: null == R ? void 0 : R.id
+            guild_scheduled_event_id: null == L ? void 0 : L.id
           })
         }
-      }), (null == y ? void 0 : y.vanityURLCode) == null && (0, l.jsx)(s.Text, {
+      }), (null == M ? void 0 : M.vanityURLCode) == null && (0, l.jsx)(s.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
-        className: g.inviteDetail,
-        children: (0, v.maxAgeString)(w, k)
+        className: p.inviteDetail,
+        children: (0, C.maxAgeString)(F, k)
       })]
     })]
   })

@@ -81,8 +81,8 @@ function d(e) {
     return u.push([e, t]), t + 1
   }
   let c = s(.5 * r),
-    _ = s(i, -c),
-    I = s(i + r, c);
-  for (_ > 0 && (_ = Math.max(d(0), _)), _ = Math.floor(_ / l.MINIMUM_RANGE) * l.MINIMUM_RANGE; _ <= I;) _ = d(_);
+    I = s(i, -c),
+    _ = s(i + r, c);
+  for (I > 0 && (I = Math.max(d(0), I)), I = Math.floor(I / l.MINIMUM_RANGE) * l.MINIMUM_RANGE; I <= _;) I = d(I);
   o(t, n, u)
 }

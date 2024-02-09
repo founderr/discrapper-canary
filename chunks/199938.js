@@ -8,9 +8,9 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("884691"),
-  n = s("862205"),
-  l = s("697218");
-let i = (0, n.createExperiment)({
+  l = s("862205"),
+  n = s("697218");
+let i = (0, l.createExperiment)({
   kind: "guild",
   id: "2022-03_guild_access_rate_insight_experiment",
   label: "Guild Access Rate Insight Experiment",
@@ -28,7 +28,7 @@ let i = (0, n.createExperiment)({
 
 function r(e) {
   var t;
-  let s = null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff();
+  let s = null === (t = n.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff();
   return s && i.getCurrentConfig({
     guildId: e,
     location: "77b4b2_1"

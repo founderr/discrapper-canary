@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   EmptyStateImage: function() {
-    return v
+    return p
   },
   EmptyStateText: function() {
-    return m
+    return _
   },
   default: function() {
     return i
   }
 });
-var l, i, r = n("37983"),
+var l, i, a = n("37983"),
   s = n("884691"),
-  o = n("414456"),
-  u = n.n(o),
-  a = n("819855"),
-  c = n("77078"),
-  d = n("145131"),
+  r = n("414456"),
+  u = n.n(r),
+  o = n("819855"),
+  d = n("77078"),
+  c = n("145131"),
   f = n("49111"),
-  E = n("430098"),
-  h = n("926622");
+  h = n("430098"),
+  I = n("926622");
 let {
-  Provider: p,
-  Consumer: _
+  Provider: g,
+  Consumer: E
 } = s.createContext(f.ThemeTypes.DARK);
-class v extends s.PureComponent {
+class p extends s.PureComponent {
   render() {
     let {
       lightSrc: e,
@@ -33,25 +33,25 @@ class v extends s.PureComponent {
       height: l,
       offsetX: i,
       offsetY: s,
-      style: o
+      style: r
     } = this.props;
-    return (0, r.jsx)(_, {
-      children: c => (0, r.jsx)(d.default.Child, {
+    return (0, a.jsx)(E, {
+      children: d => (0, a.jsx)(c.default.Child, {
         grow: 0,
-        className: u(E.image, h.marginBottom40),
+        className: u(h.image, I.marginBottom40),
         style: {
-          ...o,
+          ...r,
           width: n,
           height: l,
           marginLeft: i,
           marginTop: s,
-          backgroundImage: "url(".concat((0, a.isThemeDark)(c) ? t : e, ")")
+          backgroundImage: "url(".concat((0, o.isThemeDark)(d) ? t : e, ")")
         }
       })
     })
   }
 }
-let m = e => {
+let _ = e => {
   let {
     children: t,
     className: n,
@@ -59,15 +59,15 @@ let m = e => {
     note: i,
     style: s
   } = e;
-  return (0, r.jsxs)(d.default.Child, {
+  return (0, a.jsxs)(c.default.Child, {
     grow: 0,
-    direction: d.default.Direction.VERTICAL,
+    direction: c.default.Direction.VERTICAL,
     style: s,
-    children: [null != t && (0, r.jsx)(c.H, {
-      className: u(n, E.title),
+    children: [null != t && (0, a.jsx)(d.H, {
+      className: u(n, h.title),
       children: t
-    }), null != i ? (0, r.jsx)("div", {
-      className: u(l, E.text, h.marginTop8),
+    }), null != i ? (0, a.jsx)("div", {
+      className: u(l, h.text, I.marginTop8),
       children: i
     }) : null]
   })
@@ -80,16 +80,16 @@ let m = e => {
       className: n,
       style: l
     } = this.props;
-    return (0, r.jsx)(p, {
+    return (0, a.jsx)(g, {
       value: t,
-      children: (0, r.jsx)(d.default, {
-        direction: d.default.Direction.VERTICAL,
-        align: d.default.Align.CENTER,
-        justify: d.default.Justify.CENTER,
-        className: u(E.wrapper, n),
+      children: (0, a.jsx)(c.default, {
+        direction: c.default.Direction.VERTICAL,
+        align: c.default.Align.CENTER,
+        justify: c.default.Justify.CENTER,
+        className: u(h.wrapper, n),
         style: l,
         children: e
       })
     })
   }
-}).Text = m, l.Image = v, i = l
+}).Text = _, l.Image = p, i = l

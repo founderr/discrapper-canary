@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("77078"),
   h = n("295426"),
   E = n("206230"),
-  g = n("812204"),
-  S = n("685665"),
+  S = n("812204"),
+  g = n("685665"),
   C = n("996554"),
   T = n("426969"),
   v = n("847352"),
@@ -50,10 +50,10 @@ var l = n("37983"),
   Y = n("991170"),
   z = n("773336"),
   J = n("545054"),
-  Z = n("850391"),
-  q = n("743825"),
-  X = n("231868"),
-  Q = n("834725"),
+  q = n("850391"),
+  Z = n("743825"),
+  Q = n("231868"),
+  X = n("834725"),
   $ = n("537566"),
   ee = n("912823"),
   et = n("376215"),
@@ -65,7 +65,7 @@ var l = n("37983"),
   er = n("13030"),
   eo = n("537461"),
   eu = i.memo(i.forwardRef(function(e, t) {
-    var a, o, eu, ed, ec, ef, ep, em, eh, eE, eg, eS, eC, eT;
+    var a, o, eu, ed, ec, ef, ep, em, eh, eE, eS, eg, eC, eT;
     let {
       textValue: ev,
       richValue: eI,
@@ -95,10 +95,10 @@ var l = n("37983"),
       canMentionRoles: eY,
       canMentionChannels: ez,
       maxCharacterCount: eJ,
-      showRemainingCharsAfterCount: eZ,
-      allowNewLines: eq = !0,
-      characterCountClassName: eX,
-      "aria-describedby": eQ,
+      showRemainingCharsAfterCount: eq,
+      allowNewLines: eZ = !0,
+      characterCountClassName: eQ,
+      "aria-describedby": eX,
       "aria-labelledby": e$,
       setEditorRef: e0,
       autoCompletePosition: e1,
@@ -110,12 +110,12 @@ var l = n("37983"),
     u(null != eP, "chat input type must be set");
     let {
       AnalyticsLocationProvider: e3
-    } = (0, S.default)(g.default.CHANNEL_TEXT_AREA), e6 = function(e) {
+    } = (0, g.default)(S.default.CHANNEL_TEXT_AREA), e6 = function(e) {
       let t = i.useRef(null);
       if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
       return null == e ? t : e
-    }(t), e7 = i.useRef(null), e5 = i.useRef(null), te = i.useRef(null), tt = i.useRef(null);
-    null == e0 || e0(e5.current);
+    }(t), e5 = i.useRef(null), e7 = i.useRef(null), te = i.useRef(null), tt = i.useRef(null);
+    null == e0 || e0(e7.current);
     let {
       activeCommand: tn,
       activeCommandSection: tl
@@ -161,7 +161,7 @@ var l = n("37983"),
         isPendingMember: s,
         ...r
       }
-    }(eL, eP, tn, eO), td = eP.toolbarType === Z.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eP.commands) || void 0 === a ? void 0 : a.enabled) || !eb || ev !== es.COMMAND_SENTINEL, tp = (0, P.default)(), {
+    }(eL, eP, tn, eO), td = eP.toolbarType === q.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eP.commands) || void 0 === a ? void 0 : a.enabled) || !eb || ev !== es.COMMAND_SENTINEL, tp = (0, P.default)(), {
       isSubmitButtonEnabled: tm,
       fontSize: th
     } = (0, p.useStateFromStoresObject)([E.default], () => ({
@@ -192,8 +192,8 @@ var l = n("37983"),
       })
     }(eP, ts);
     let {
-      eventEmitter: tg,
-      handleEditorSelectionChanged: tS
+      eventEmitter: tS,
+      handleEditorSelectionChanged: tg
     } = function(e, t, n) {
       let [l] = i.useState(() => new r.EventEmitter);
       return i.useEffect(() => {
@@ -204,17 +204,17 @@ var l = n("37983"),
           null != e.current && l.emit("selection-changed", t)
         }
       }
-    }(e5, ev, eI), {
+    }(e7, ev, eI), {
       submitting: tC,
       submit: tT,
       handleSubmit: tv
     } = function(e, t, a, s) {
       let [r, o] = i.useState(!1), u = i.useCallback((i, d, c, f, p) => {
-        var E, g, S;
+        var E, S, g;
         if (r) return;
         o(!0);
-        let C = null !== (g = null === (E = j.default.getStickerPreview(s, t.drafts.type)) || void 0 === E ? void 0 : E.map(e => e.id)) && void 0 !== g ? g : [],
-          T = null !== (S = V.default.getUploads(s, t.drafts.type)) && void 0 !== S ? S : [];
+        let C = null !== (S = null === (E = j.default.getStickerPreview(s, t.drafts.type)) || void 0 === E ? void 0 : E.map(e => e.id)) && void 0 !== S ? S : [],
+          T = null !== (g = V.default.getUploads(s, t.drafts.type)) && void 0 !== g ? g : [];
         if (null == d && !f && !p && (0, M.shouldShowAddMediaToOriginalPostModal)(T, s)) {
           o(!1), (0, m.openModalLazy)(async () => {
             let {
@@ -259,7 +259,7 @@ var l = n("37983"),
         submit: u,
         handleSubmit: d
       }
-    }(eV, eP, e5, eL.id), {
+    }(eV, eP, e7, eL.id), {
       autocompleteRef: tI,
       handleMaybeShowAutocomplete: t_,
       handleHideAutocomplete: ty
@@ -279,11 +279,11 @@ var l = n("37983"),
         handleHideAutocomplete: n
       }
     }();
-    let tA = (eE = tT, eg = eP, eS = e5, i.useCallback(e => {
+    let tA = (eE = tT, eS = eP, eg = e7, i.useCallback(e => {
       var t, n;
-      eg === Z.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eS.current) || void 0 === n || n.insertGIF(e) : eE(e.url, void 0, void 0, !0), (0, x.closeExpressionPicker)(), null === (t = eS.current) || void 0 === t || t.focus()
-    }, [eS, eE, eg]));
-    let tN = (eC = e5, i.useCallback(function(e, t) {
+      eS === q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eg.current) || void 0 === n || n.insertGIF(e) : eE(e.url, void 0, void 0, !0), (0, x.closeExpressionPicker)(), null === (t = eg.current) || void 0 === t || t.focus()
+    }, [eg, eE, eS]));
+    let tN = (eC = e7, i.useCallback(function(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           l = eC.current;
         null != e && null != l && l.insertEmoji(e, t, n), t && (0, x.closeExpressionPicker)()
@@ -298,10 +298,10 @@ var l = n("37983"),
           submit: r
         } = e, {
           analyticsLocations: o
-        } = (0, S.default)();
+        } = (0, g.default)();
         return i.useCallback((e, i) => {
           var u, d;
-          !n && ((0, D.shouldAttachSticker)(i, l, a, s.drafts.type) ? ((0, Q.trackStickerPreviewSelect)({
+          !n && ((0, D.shouldAttachSticker)(i, l, a, s.drafts.type) ? ((0, X.trackStickerPreviewSelect)({
             sticker: e,
             stickerSelectLocation: i,
             isReplacement: null != j.default.getStickerPreview(a, s.drafts.type),
@@ -313,14 +313,14 @@ var l = n("37983"),
           }), null === (d = t.current) || void 0 === d || d.clearValue()), (0, x.closeExpressionPicker)(), null === (u = t.current) || void 0 === u || u.focus())
         }, [n, l, a, s.drafts.type, t, o, r])
       }({
-        editorRef: e5,
+        editorRef: e7,
         disabled: ts,
         textValue: ev,
         channelId: eL.id,
         chatInputType: eP,
         submit: eV
       });
-    let tO = (eT = e5, i.useCallback(e => {
+    let tO = (eT = e7, i.useCallback(e => {
         let t = eT.current;
         null != e && null != t && t.insertSound(e), (0, x.closeExpressionPicker)()
       }, [eT])),
@@ -362,7 +362,7 @@ var l = n("37983"),
           handleEnter: a,
           handleMoveSelection: s
         }
-      }(tI, e7, tf),
+      }(tI, e5, tf),
       {
         expressionPickerView: tU,
         shouldHideExpressionPicker: tD,
@@ -387,14 +387,14 @@ var l = n("37983"),
           handleAutocompleteVisibilityChange: s,
           handleOuterClick: r
         }
-      }(eP, tg, e5),
+      }(eP, tS, e7),
       tF = C.AppLauncherDesktopExperiment.useExperiment({
         location: "chat_input"
       }, {
         autoTrackExposure: !1
       }).enabled,
       tG = (0, p.useStateFromStores)([T.default], () => T.default.shouldShowPopup(), []);
-    (0, J.useHereMentionCallback)(tg, eL.guild_id, eL.id);
+    (0, J.useHereMentionCallback)(tS, eL.guild_id, eL.id);
     let tB = null != ek,
       tH = ts && !((ti || ta) && tu) || tC && (null === (o = eP.submit) || void 0 === o ? void 0 : o.useDisabledStylesOnSubmit),
       tV = null,
@@ -410,18 +410,18 @@ var l = n("37983"),
         return s && (null === (i = t.stickers) || void 0 === i ? void 0 : i.autoSuggest) && !o && (null === (a = l.current) || void 0 === a ? void 0 : a.isVisible()) !== !0 && !__OVERLAY__ && null != n
       }(eL, eP, eI, tI),
       tJ = (0, y.useShouldShowPTONotice)(eL),
-      tZ = null != tn || null != ek || tJ,
-      tq = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
+      tq = null != tn || null != ek || tJ,
+      tZ = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
     return (0, l.jsx)(N.EventEmitterProvider, {
-      value: tg,
+      value: tS,
       children: (0, l.jsxs)(e3, {
         children: [tY && td ? (0, l.jsx)(ei.default, {
-          editorRef: e5,
+          editorRef: e7,
           options: eP.markdown,
           channel: eL
         }) : tY ? (0, l.jsx)(el.default, {
           ref: tt,
-          editorRef: e5,
+          editorRef: e7,
           containerRef: te,
           options: eP.markdown
         }) : null, (0, l.jsxs)("div", {
@@ -445,9 +445,9 @@ var l = n("37983"),
               [eo.scrollableContainer]: !0,
               [eo.themedBackground]: !e4,
               [eo.webkit]: "Blink" === platform.layout,
-              [eo.hasConnectedBar]: tZ
+              [eo.hasConnectedBar]: tq
             }),
-            children: [(0, l.jsx)(X.default, {
+            children: [(0, l.jsx)(Q.default, {
               channelId: eL.id,
               chatInputType: eP
             }), eP.hideAttachmentArea ? null : (0, l.jsx)(et.default, {
@@ -457,15 +457,15 @@ var l = n("37983"),
             }), (0, l.jsxs)("div", {
               className: s(eo.inner, {
                 [eo.innerDisabled]: tH,
-                [eo.sansAttachButton]: eP !== Z.ChatInputTypes.EDIT && (null != tV || tH && null == tV || ti),
-                [eo.sansAttachButtonCreateThread]: eP === Z.ChatInputTypes.THREAD_CREATION,
-                [eo.sansAttachButtonCreatePost]: eP === Z.ChatInputTypes.CREATE_FORUM_POST
+                [eo.sansAttachButton]: eP !== q.ChatInputTypes.EDIT && (null != tV || tH && null == tV || ti),
+                [eo.sansAttachButtonCreateThread]: eP === q.ChatInputTypes.THREAD_CREATION,
+                [eo.sansAttachButtonCreatePost]: eP === q.ChatInputTypes.CREATE_FORUM_POST
               }),
               children: [tV, tK, (0, l.jsx)(m.FocusRing, {
                 ringTarget: e6,
                 ringClassName: eo.focusRing,
-                children: (0, l.jsx)(q.default, {
-                  ref: e5,
+                children: (0, l.jsx)(Z.default, {
+                  ref: e7,
                   id: eN,
                   focused: eb,
                   useSlate: tc,
@@ -481,8 +481,8 @@ var l = n("37983"),
                   canPasteFiles: tr,
                   uploadPromptCharacterCount: ea.MAX_MESSAGE_LENGTH_PREMIUM,
                   maxCharacterCount: null != eJ ? eJ : tp,
-                  allowNewLines: eq,
-                  "aria-describedby": eQ,
+                  allowNewLines: eZ,
+                  "aria-describedby": eX,
                   onChange: ew,
                   onResize: tL,
                   onBlur: eG,
@@ -492,7 +492,7 @@ var l = n("37983"),
                   onTab: tP,
                   onEnter: tb,
                   onMoveSelection: tj,
-                  onSelectionChanged: tS,
+                  onSelectionChanged: tg,
                   onMaybeShowAutocomplete: t_,
                   onHideAutocomplete: ty,
                   promptToUpload: eK,
@@ -500,8 +500,8 @@ var l = n("37983"),
                   spellcheckEnabled: tE,
                   canOnlyUseTextCommands: tB,
                   className: s({
-                    [eo.textAreaThreadCreation]: eP === Z.ChatInputTypes.THREAD_CREATION,
-                    [eo.profileBioInput]: eP === Z.ChatInputTypes.PROFILE_BIO_INPUT
+                    [eo.textAreaThreadCreation]: eP === q.ChatInputTypes.THREAD_CREATION,
+                    [eo.profileBioInput]: eP === q.ChatInputTypes.PROFILE_BIO_INPUT
                   }, eA),
                   "aria-labelledby": e$
                 })
@@ -514,7 +514,7 @@ var l = n("37983"),
               })]
             })]
           }), tf ? null : (0, l.jsx)(_.default, {
-            ref: e7,
+            ref: e5,
             channel: eL,
             canOnlyUseTextCommands: tB
           }), (0, l.jsx)(A.default, {
@@ -529,7 +529,7 @@ var l = n("37983"),
             focused: eb,
             expressionPickerView: tU,
             type: eP,
-            editorRef: e5,
+            editorRef: e7,
             onSendMessage: tT,
             onSendSticker: tx,
             onVisibilityChange: tk,
@@ -542,13 +542,13 @@ var l = n("37983"),
           }), tW ? (0, l.jsx)(en.default, {
             type: eP,
             textValue: ev,
-            className: s(eX, {
-              [eo.indentCharacterCount]: tq
+            className: s(eQ, {
+              [eo.indentCharacterCount]: tZ
             }),
             maxCharacterCount: eJ,
-            showRemainingCharsAfterCount: eZ
+            showRemainingCharsAfterCount: eq
           }) : null, tz ? (0, l.jsx)(R.default, {
-            editorRef: e5,
+            editorRef: e7,
             channel: eL,
             isEditorFocused: eb,
             onSelectSticker: tx,

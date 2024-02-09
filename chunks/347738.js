@@ -18,8 +18,8 @@ var r, o, u = n("917351"),
   v = n("660478"),
   I = n("18494"),
   S = n("282109"),
-  _ = n("697218"),
-  x = n("718517"),
+  x = n("697218"),
+  _ = n("718517"),
   N = n("299039"),
   T = n("204653");
 (o = r || (r = {})).FETCHING = "fetching", o.OK = "ok", o.ERROR = "error";
@@ -47,13 +47,13 @@ class P extends c.default.PersistedStore {
   }
   initialize(e) {
     var t;
-    l = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(E.default, _.default, I.default, C.default, p.default), this.syncWith([g.default], D)
+    l = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(E.default, x.default, I.default, C.default, p.default), this.syncWith([g.default], D)
   }
   allSummaries() {
     return M
   }
   topSummaries() {
-    let e = Object.values(M).flat().filter(e => e.people.length > 1 && N.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * x.default.Millis.HOUR).sort((e, t) => N.default.extractTimestamp(t.endId) - N.default.extractTimestamp(e.endId));
+    let e = Object.values(M).flat().filter(e => e.people.length > 1 && N.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * _.default.Millis.HOUR).sort((e, t) => N.default.extractTimestamp(t.endId) - N.default.extractTimestamp(e.endId));
     return e
   }
   summaries(e) {
@@ -105,7 +105,7 @@ class P extends c.default.PersistedStore {
     return L
   }
   shouldFetchChannelAffinities() {
-    return !("fetching" === L.status || null != L.lastResponse && Date.now() - L.lastResponse < 30 * x.default.Millis.SECOND) && !0
+    return !("fetching" === L.status || null != L.lastResponse && Date.now() - L.lastResponse < 30 * _.default.Millis.SECOND) && !0
   }
   defaultChannelIds(e) {
     let {

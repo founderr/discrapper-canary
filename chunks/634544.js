@@ -1,59 +1,59 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var r = n("37983");
-n("884691");
-var a = n("414456"),
-  i = n.n(a),
-  u = n("77078"),
-  l = n("118503"),
-  o = n("427459"),
-  s = n("782340"),
-  c = n("884737"),
-  d = e => {
-    let t, n, a, {
-        guildFeature: d,
-        guild: f,
-        className: E,
-        hideTooltip: p = !1,
-        tooltipPosition: _ = "left",
+var a = s("37983");
+s("884691");
+var l = s("414456"),
+  n = s.n(l),
+  i = s("77078"),
+  r = s("118503"),
+  o = s("427459"),
+  d = s("782340"),
+  u = s("884737"),
+  c = e => {
+    let t, s, l, {
+        guildFeature: c,
+        guild: E,
+        className: _,
+        hideTooltip: I = !1,
+        tooltipPosition: f = "left",
         onClick: T
       } = e,
-      S = f.hasFeature(d),
-      h = (0, o.minimumRequiredTierForGuildFeature)(d);
-    return (S ? (null != h && (a = s.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, r.jsxs)(r.Fragment, {
-      children: [(0, r.jsx)(l.default, {
-        className: c.unlockedIcon
-      }), (0, r.jsx)(u.Heading, {
+      S = E.hasFeature(c),
+      m = (0, o.minimumRequiredTierForGuildFeature)(c);
+    return (S ? (null != m && (l = d.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(r.default, {
+        className: u.unlockedIcon
+      }), (0, a.jsx)(i.Heading, {
         variant: "eyebrow",
-        className: c.description,
-        children: s.default.Messages.PREMIUM_GUILD_TIER_UNLOCKED
+        className: u.description,
+        children: d.default.Messages.PREMIUM_GUILD_TIER_UNLOCKED
       })]
-    })) : (null != h && (a = s.default.Messages.CLICK_TO_LEARN_MORE), t = (0, r.jsxs)(r.Fragment, {
-      children: [(0, r.jsx)(l.default, {
-        className: c.icon
-      }), (0, r.jsx)(u.Heading, {
+    })) : (null != m && (l = d.default.Messages.CLICK_TO_LEARN_MORE), t = (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(r.default, {
+        className: u.icon
+      }), (0, a.jsx)(i.Heading, {
         variant: "eyebrow",
-        className: c.description,
-        children: null != h && (0, o.getShortenedTierName)(h)
+        className: u.description,
+        children: null != m && (0, o.getShortenedTierName)(m)
       })]
-    })), n = p || null == a ? (0, r.jsx)("div", {
-      className: i(c.availabilityIndicator, E),
+    })), s = I || null == l ? (0, a.jsx)("div", {
+      className: n(u.availabilityIndicator, _),
       children: t
-    }) : (0, r.jsx)(u.Tooltip, {
-      position: _,
-      text: a,
-      children: e => (0, r.jsx)("div", {
+    }) : (0, a.jsx)(i.Tooltip, {
+      position: f,
+      text: l,
+      children: e => (0, a.jsx)("div", {
         ...e,
-        className: i(c.availabilityIndicator, E),
+        className: n(u.availabilityIndicator, _),
         children: t
       })
-    }), null == T || S) ? n : (0, r.jsx)(u.Clickable, {
+    }), null == T || S) ? s : (0, a.jsx)(i.Clickable, {
       onClick: T,
-      className: c.clickable,
-      children: n
+      className: u.clickable,
+      children: s
     })
   }

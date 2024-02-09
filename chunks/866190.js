@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   useIsWindowFocused: function() {
     return a
   }
@@ -11,7 +11,7 @@ var i = n("884691"),
 
 function a() {
   let {
-    windowId: e
+    windowId: t
   } = i.useContext(l.default);
-  return (0, r.useStateFromStores)([s.default], () => s.default.isFocused(e), [e])
+  return (0, r.useStateFromStores)([s.default], () => s.default.isFocused(t), [t])
 }

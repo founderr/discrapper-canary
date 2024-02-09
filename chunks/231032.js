@@ -8,8 +8,8 @@ var t = E("37983"),
   o = E("884691"),
   n = E("414456"),
   r = E.n(n),
-  a = E("965955"),
-  i = E("803182"),
+  i = E("965955"),
+  a = E("803182"),
   I = E("90915"),
   s = E("394846"),
   T = E("446674"),
@@ -91,14 +91,14 @@ var eo = function(e) {
     location: "client_themes_coachmark_reintro"
   }, {
     autoTrackExposure: !0
-  }), ea = (0, T.useStateFromStores)([b.default], () => b.default.getLayers().includes(Z.Layers.USER_SETTINGS)), ei = (0, T.useStateFromStores)([w.default], () => X.default.canUseClientThemes(w.default.getCurrentUser())), eI = $ && !ea, es = [];
-  eI && eo && er && !ei && es.push(S.DismissibleContent.CLIENT_THEMES_COACHMARK);
+  }), ei = (0, T.useStateFromStores)([b.default], () => b.default.getLayers().includes(Z.Layers.USER_SETTINGS)), ea = (0, T.useStateFromStores)([w.default], () => X.default.canUseClientThemes(w.default.getCurrentUser())), eI = $ && !ei, es = [];
+  eI && eo && er && !ea && es.push(S.DismissibleContent.CLIENT_THEMES_COACHMARK);
   let [eT, eS] = (0, y.useSelectedDismissibleContent)(es, ee.DismissibleContentGroupName.SIDEBAR, !0);
   es.push(S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
   let eN = eT === S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
     eO = eT === S.DismissibleContent.CLIENT_THEMES_COACHMARK;
   o.useEffect(() => {
-    let e = (0, i.matchPath)(n, {
+    let e = (0, a.matchPath)(n, {
       path: "invite",
       exact: !1,
       strict: !1
@@ -120,7 +120,7 @@ var eo = function(e) {
           children: (0, t.jsx)(J.default, {
             children: (0, t.jsxs)(O.FocusRingScope, {
               containerRef: eA,
-              children: [(0, t.jsx)(x.MaskLibrary, {}), (0, t.jsx)(Y.default, {}), (0, t.jsx)(a.FocusGuard, {}), null != N ? (0, t.jsx)(et, {
+              children: [(0, t.jsx)(x.MaskLibrary, {}), (0, t.jsx)(Y.default, {}), (0, t.jsx)(i.FocusGuard, {}), null != N ? (0, t.jsx)(et, {
                 type: N,
                 themeOverride: F
               }) : null, (0, t.jsx)(C.AppWindowContextProvider, {
@@ -130,7 +130,7 @@ var eo = function(e) {
                   children: [(0, t.jsxs)("div", {
                     className: r(e_.appAsidePanelWrapper, L && e_.mobileAppAsidePanelWrapper, {
                       [e_.allowsScrolling]: (() => {
-                        let e = (0, i.matchPath)(n, {
+                        let e = (0, a.matchPath)(n, {
                           path: Z.Routes.APPLICATION_DIRECTORY,
                           exact: !1,
                           strict: !1
@@ -154,7 +154,7 @@ var eo = function(e) {
                       })
                     }), (0, t.jsx)(R.default, {}), eI && !eo || eO ? (0, t.jsx)(G.default, {
                       markAsDismissed: eS
-                    }) : null, !en || ea || eO ? null : (0, t.jsx)(h.default, {
+                    }) : null, !en || ei || eO ? null : (0, t.jsx)(h.default, {
                       isCoachmark: eN,
                       markAsDismissed: eS
                     }), (0, t.jsx)(g.default, {
@@ -162,7 +162,7 @@ var eo = function(e) {
                     })]
                   }), !1]
                 })
-              }), (0, t.jsx)(a.FocusGuard, {})]
+              }), (0, t.jsx)(i.FocusGuard, {})]
             })
           })
         })]

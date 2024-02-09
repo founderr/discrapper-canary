@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("967241"),
   h = n("377253"),
   E = n("116320"),
-  g = n("381546"),
-  S = n("49111"),
+  S = n("381546"),
+  g = n("49111"),
   C = n("782340"),
   T = n("650593");
 
@@ -30,7 +30,7 @@ function v(e) {
     replyChainLength: a
   } = e;
   return i.useEffect(() => {
-    (0, u.trackWithMetadata)(S.AnalyticEvents.THREAD_NUDGE_SHOWN, {
+    (0, u.trackWithMetadata)(g.AnalyticEvents.THREAD_NUDGE_SHOWN, {
       type: "Reply Chain (".concat(3, ")"),
       reply_chain_length: a + 1,
       channel_id: t.id,
@@ -83,7 +83,7 @@ function I(e) {
       let e = l;
       for (let t = 0; t < 10; t++) {
         let l = h.default.getMessage(n, e);
-        if ((null == l ? void 0 : l.type) !== S.MessageTypes.REPLY || null == l.messageReference) return t;
+        if ((null == l ? void 0 : l.type) !== g.MessageTypes.REPLY || null == l.messageReference) return t;
         e = l.messageReference.message_id
       }
       return 10
@@ -100,7 +100,7 @@ function I(e) {
       children: [(0, l.jsxs)("div", {
         className: T.replyBar,
         children: [(0, l.jsx)(o.Clickable, {
-          onClick: () => (0, f.transitionTo)(S.Routes.CHANNEL(i.getGuildId(), i.id, a.id)),
+          onClick: () => (0, f.transitionTo)(g.Routes.CHANNEL(i.getGuildId(), i.id, a.id)),
           focusProps: {
             offset: {
               top: -8,
@@ -162,7 +162,7 @@ function I(e) {
             onClick: function(e) {
               e.stopPropagation(), (0, c.deletePendingReply)(i.id)
             },
-            children: (0, l.jsx)(g.default, {
+            children: (0, l.jsx)(S.default, {
               className: T.closeIcon
             })
           })]

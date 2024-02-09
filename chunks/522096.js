@@ -23,8 +23,8 @@ function d(e) {
     hasSearchResults: m,
     defaultSearchPlaceholder: h,
     emptySearchPlaceholder: E,
-    renderEmptyState: g,
-    renderRow: S,
+    renderEmptyState: S,
+    renderRow: g,
     renderSection: C,
     renderSectionHeader: T,
     renderSectionFooter: v,
@@ -61,10 +61,10 @@ function d(e) {
     itemNodeMargin: L
   }), {
     getItemProps: J,
-    getRowProps: Z,
-    gridContainerProps: q,
-    handleGridContainerKeyDown: X,
-    isUsingKeyboardNavigation: Q
+    getRowProps: q,
+    gridContainerProps: Z,
+    handleGridContainerKeyDown: Q,
+    isUsingKeyboardNavigation: X
   } = (0, s.useKeyboardNavigation)({
     columnCounts: Y,
     expressionsListRef: k,
@@ -74,12 +74,12 @@ function d(e) {
     gridNavigatorId: b
   }), $ = i.useCallback(e => {
     let t = V[e];
-    return S(t, Z(e), {
-      isUsingKeyboardNavigation: Q.current,
+    return g(t, q(e), {
+      isUsingKeyboardNavigation: X.current,
       gutterWidth: z,
       rowIndex: e
     }, t => J(e, t), t => c.setInspectedExpressionPosition(t, e))
-  }, [V, J, Z, z, Q, S, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
+  }, [V, J, q, z, X, g, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
     var e;
     return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
   }, [V, B.columnIndex, B.rowIndex, I]);
@@ -94,7 +94,7 @@ function d(e) {
       ref: w,
       store: c,
       hasSendableExpressions: !0,
-      onKeyDown: X,
+      onKeyDown: Q,
       expressionsListRef: k,
       gridNavigatorId: b,
       defaultSearchPlaceholder: h,
@@ -105,7 +105,7 @@ function d(e) {
     children: [null != U ? U(ei) : (0, l.jsxs)("div", {
       className: u.header,
       children: [" ", ei, " "]
-    }), F && null != g ? g(u.emptyState) : (0, l.jsxs)(l.Fragment, {
+    }), F && null != S ? S(u.emptyState) : (0, l.jsxs)(l.Fragment, {
       children: [y(k), null != j && (0, l.jsx)("div", {
         className: u.gridNoticeWrapper,
         children: j
@@ -113,7 +113,7 @@ function d(e) {
         ref: D,
         className: u.listWrapper,
         id: b,
-        ...q,
+        ...Z,
         children: null != H ? (0, l.jsx)(r.default, {
           ref: k,
           store: c,

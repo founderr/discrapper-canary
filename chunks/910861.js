@@ -1,7 +1,7 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return u
   }
 });
 var i = n("37983");
@@ -9,19 +9,19 @@ n("884691");
 var l = n("414456"),
   a = n.n(l),
   r = n("77078"),
-  u = n("396671");
+  s = n("396671");
 
-function s(t) {
+function u(e) {
   let {
-    children: e,
+    children: t,
     className: n,
     size: l = r.Button.Sizes.SMALL,
-    ...s
-  } = t;
+    ...u
+  } = e;
   return (0, i.jsx)(r.Button, {
-    ...s,
+    ...u,
     size: l,
-    className: a(u.button, n),
-    children: e
+    className: a(s.button, n),
+    children: t
   })
 }

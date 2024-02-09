@@ -6,17 +6,17 @@ n.r(t), n.d(t, {
 });
 var s = n("37983"),
   i = n("884691"),
-  r = n("627445"),
-  l = n.n(r),
-  a = n("65597"),
+  a = n("627445"),
+  r = n.n(a),
+  l = n("65597"),
   u = n("206230"),
   o = n("853987"),
   d = n("923702"),
   c = n("658756"),
   f = n("408381"),
-  p = n("177586"),
-  S = n("635357"),
-  E = n("642906"),
+  E = n("177586"),
+  p = n("635357"),
+  S = n("642906"),
   m = n("891865"),
   _ = n("650484"),
   I = n("367767");
@@ -27,13 +27,13 @@ function C(e) {
     confettiCanvas: n,
     analyticsLocations: i
   } = e, {
-    skusById: r,
+    skusById: a,
     selectedSkuId: u,
     application: d
-  } = (0, E.usePaymentContext)(), f = (0, a.default)([o.default], () => o.default.getProduct(u));
-  l(null != u, "Expected selectedSkuId"), l(null != d, "Expected application");
-  let p = r[u];
-  return (l(null != p, "Expected sku"), null == f) ? null : (0, s.jsxs)(_.PaymentPortalBody, {
+  } = (0, S.usePaymentContext)(), f = (0, l.default)([o.default], () => o.default.getProduct(u));
+  r(null != u, "Expected selectedSkuId"), r(null != d, "Expected application");
+  let E = a[u];
+  return (r(null != E, "Expected sku"), null == f) ? null : (0, s.jsxs)(_.PaymentPortalBody, {
     children: [(0, s.jsx)(I.default, {}), (0, s.jsx)(c.CollectiblesCollectedModalInner, {
       product: f,
       onClose: t,
@@ -47,23 +47,23 @@ function T(e) {
   let {
     isGift: t,
     giftCode: n,
-    selectedGiftStyle: r,
-    hasSentMessage: l,
+    selectedGiftStyle: a,
+    hasSentMessage: r,
     giftRecipient: c,
     giftMessageError: _,
     isSendingMessage: I
-  } = (0, S.useGiftContext)(), T = (0, a.default)([u.default], () => u.default.useReducedMotion), x = i.useRef(null), {
+  } = (0, p.useGiftContext)(), T = (0, l.default)([u.default], () => u.default.useReducedMotion), x = i.useRef(null), {
     selectedSkuId: h
-  } = (0, E.usePaymentContext)(), g = (0, a.default)([o.default], () => o.default.getProduct(h)), {
+  } = (0, S.usePaymentContext)(), g = (0, l.default)([o.default], () => o.default.getProduct(h)), {
     confettiColors: P
-  } = (0, p.default)(null == g ? void 0 : g.styles);
+  } = (0, E.default)(null == g ? void 0 : g.styles);
   return t ? (0, s.jsxs)("div", {
     ref: x,
     children: [(0, s.jsx)(m.default, {
       giftCode: n,
       onClose: e.handleClose,
-      selectedGiftStyle: r,
-      hasSentMessage: l,
+      selectedGiftStyle: a,
+      hasSentMessage: r,
       giftRecipient: c,
       giftMessageError: _,
       isSendingMessage: I

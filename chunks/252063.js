@@ -1,43 +1,43 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   usePrivateChannelIntegrationState: function() {
-    return d
+    return u
   }
 }), n("222007");
 var i = n("884691"),
-  u = n("446674"),
+  l = n("446674"),
   a = n("201155"),
-  r = n("21121"),
-  l = n("970755"),
+  s = n("21121"),
+  r = n("970755"),
   o = n("140596");
 
-function d(t) {
+function u(e) {
   let {
-    channelId: e
-  } = t;
-  (0, r.useInMainTabsExperiment)();
-  let n = (0, a.useShowApplicationInGDM)(e),
+    channelId: t
+  } = e;
+  (0, s.useInMainTabsExperiment)();
+  let n = (0, a.useShowApplicationInGDM)(t),
     {
-      installedIntegrations: d,
-      applicationsShelf: s,
-      integrationsFetchState: E,
-      applicationsShelfFetchState: c
-    } = (0, u.useStateFromStoresObject)([o.default], () => ({
-      installedIntegrations: o.default.getIntegrations(e),
+      installedIntegrations: u,
+      applicationsShelf: d,
+      integrationsFetchState: c,
+      applicationsShelfFetchState: p
+    } = (0, l.useStateFromStoresObject)([o.default], () => ({
+      installedIntegrations: o.default.getIntegrations(t),
       applicationsShelf: o.default.getApplicationsShelf(),
-      integrationsFetchState: o.default.getIntegrationsFetchState(e),
+      integrationsFetchState: o.default.getIntegrationsFetchState(t),
       applicationsShelfFetchState: o.default.getApplicationsShelfFetchState()
     }));
   i.useEffect(() => {
-    n && ((E === o.FetchState.NOT_FETCHED || E === o.FetchState.FETCH_FAILED) && (0, l.fetchPrivateChannelIntegrations)(e), (c === o.FetchState.NOT_FETCHED || c === o.FetchState.FETCH_FAILED) && (0, l.fetchApplicationsShelf)())
-  }, [n, e, E, c]);
-  let _ = new Set(d.map(t => t.application.id)),
-    T = s.filter(t => !_.has(t.id));
+    n && ((c === o.FetchState.NOT_FETCHED || c === o.FetchState.FETCH_FAILED) && (0, r.fetchPrivateChannelIntegrations)(t), (p === o.FetchState.NOT_FETCHED || p === o.FetchState.FETCH_FAILED) && (0, r.fetchApplicationsShelf)())
+  }, [n, t, c, p]);
+  let f = new Set(u.map(e => e.application.id)),
+    m = d.filter(e => !f.has(e.id));
   return {
-    installedIntegrations: d,
-    availableApplications: T,
-    applicationsShelf: s,
-    fetched: E !== o.FetchState.NOT_FETCHED && E !== o.FetchState.FETCHING && c !== o.FetchState.NOT_FETCHED && c !== o.FetchState.FETCHING,
+    installedIntegrations: u,
+    availableApplications: m,
+    applicationsShelf: d,
+    fetched: c !== o.FetchState.NOT_FETCHED && c !== o.FetchState.FETCHING && p !== o.FetchState.NOT_FETCHED && p !== o.FetchState.FETCHING,
     appsInGDMEnabled: n
   }
 }

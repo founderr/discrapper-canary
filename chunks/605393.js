@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return c
   },
   default: function() {
-    return C
+    return T
   }
 }), n("424973");
 var i = n("917351"),
   l = n.n(i),
   a = n("446674"),
   s = n("913144"),
-  o = n("798609"),
-  r = n("80507"),
+  r = n("798609"),
+  o = n("80507"),
   u = n("374363"),
   d = n("397336");
 let c = 250,
   p = {
     pendingUsages: []
   },
-  f = new r.default({
+  f = new o.default({
     computeBonus: () => 100,
     computeWeight: e => e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 0,
     lookupKey: e => e,
@@ -65,12 +65,12 @@ class _ extends a.default.PersistedStore {
   }
 }
 _.displayName = "ApplicationFrecencyStore", _.persistKey = "ApplicationFrecency";
-var C = new _(s.default, {
+var T = new _(s.default, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t
     } = e;
-    if (t.type !== o.ApplicationCommandType.CHAT) return !1;
+    if (t.type !== r.ApplicationCommandType.CHAT) return !1;
     m(t.applicationId)
   },
   EMBEDDED_ACTIVITY_OPEN: function(e) {

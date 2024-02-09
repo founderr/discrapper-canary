@@ -20,8 +20,8 @@ let m = i.forwardRef(function(e, t) {
     onKeyDown: n,
     stickersListRef: m,
     channel: h
-  } = e, E = (0, d.useHasSendableSticker)(h), g = i.useRef(null), {
-    searchQuery: S,
+  } = e, E = (0, d.useHasSendableSticker)(h), S = i.useRef(null), {
+    searchQuery: g,
     isSearchSuggestion: C
   } = (0, u.useExpressionPickerStore)(e => ({
     searchQuery: e.searchQuery,
@@ -35,20 +35,20 @@ let m = i.forwardRef(function(e, t) {
   return i.useImperativeHandle(t, () => ({
     focus: () => {
       var e;
-      return null === (e = g.current) || void 0 === e ? void 0 : e.focus()
+      return null === (e = S.current) || void 0 === e ? void 0 : e.focus()
     }
   })), i.useLayoutEffect(() => {
     if (C) {
       var e;
-      null === (e = g.current) || void 0 === e || e.focus()
+      null === (e = S.current) || void 0 === e || e.focus()
     }
   }, [C]), (0, l.jsx)("div", {
     className: p.wrapper,
     children: (0, l.jsx)(r.default, {
       autoFocus: E,
       disabled: !E,
-      query: S,
-      ref: g,
+      query: g,
+      ref: S,
       size: r.default.Sizes.MEDIUM,
       placeholder: null != T ? T : E ? f.default.Messages.SEARCH_FOR_STICKERS : f.default.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
       onClear: _,

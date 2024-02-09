@@ -8,8 +8,8 @@ var t = E("37983"),
   o = E("884691"),
   n = E("446674"),
   r = E("77078"),
-  a = E("629109"),
-  i = E("135230"),
+  i = E("629109"),
+  a = E("135230"),
   I = E("42887"),
   s = E("782340"),
   T = () => {
@@ -21,9 +21,9 @@ var t = E("37983"),
     }
 
     function T() {
-      a.default.interact()
+      i.default.interact()
     }
-    return o.useEffect(() => (e ? _.current = (0, r.openModal)(e => (0, t.jsx)(i.default, {
+    return o.useEffect(() => (e ? _.current = (0, r.openModal)(e => (0, t.jsx)(a.default, {
       title: s.default.Messages.INTERACTION_REQUIRED_TITLE,
       body: s.default.Messages.INTERACTION_REQUIRED_BODY,
       onConfirm: T,

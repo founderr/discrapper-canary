@@ -42,16 +42,16 @@ var d = e => {
           a = 1 === u(c) ? "width" : "height";
         n.current.style[a] = "".concat(i, "px"), t(i)
       },
-      g = t => {
+      S = t => {
         m(!1);
         let n = e(t);
         a(n), null == s || s(n)
       },
-      S = f ? "pointerup" : "mouseup",
+      g = f ? "pointerup" : "mouseup",
       C = f ? "pointermove" : "mousemove",
       T = n.current.ownerDocument;
-    return T.addEventListener(S, g), T.addEventListener(C, r), () => {
-      T.removeEventListener(S, g), T.removeEventListener(C, r), t.cancel()
+    return T.addEventListener(g, S), T.addEventListener(C, r), () => {
+      T.removeEventListener(g, S), T.removeEventListener(C, r), t.cancel()
     }
   }, [p, a, i, l, c, n, d, s, f]), r.useCallback(e => {
     let t = 1 === u(c);

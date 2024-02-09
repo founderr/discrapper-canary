@@ -1,14 +1,14 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return i
+    return a
   }
 }), E("222007");
 var t = E("689988"),
   o = E("162771"),
   n = E("630400"),
   r = E("958706");
-class a extends t.default {
+class i extends t.default {
   handleInteraction(e) {
     let {
       interaction: _
@@ -24,4 +24,4 @@ class a extends t.default {
     }
   }
 }
-var i = new a
+var a = new i

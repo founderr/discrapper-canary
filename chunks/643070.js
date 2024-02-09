@@ -1,51 +1,51 @@
 "use strict";
 r.r(t), r.d(t, {
   Section: function() {
-    return n
+    return a
   },
   NONE_ITEM: function() {
-    return _
+    return m
   },
   SHOP_ITEM: function() {
-    return A
+    return p
   },
   default: function() {
     return C
   }
 }), r("222007"), r("808653"), r("424973");
-var n, a, i = r("884691"),
-  s = r("917351"),
+var a, n, s = r("884691"),
+  i = r("917351"),
   u = r("65597"),
   o = r("853987"),
   l = r("775416"),
   c = r("491232"),
   d = r("697218"),
-  E = r("719923"),
-  f = r("782340");
-(a = n || (n = {})).PURCHASE = "purchase", a.PREMIUM_PURCHASE = "premium_purchase", a.PREVIEW = "preview", a.PREMIUM_PREVIEW = "premium_preview";
-let _ = {
+  f = r("719923"),
+  E = r("782340");
+(n = a || (a = {})).PURCHASE = "purchase", n.PREMIUM_PURCHASE = "premium_purchase", n.PREVIEW = "preview", n.PREMIUM_PREVIEW = "premium_preview";
+let m = {
     id: "None"
   },
-  A = {
+  p = {
     id: "Shop"
   };
 var C = () => {
   let e = (0, u.default)([d.default], () => d.default.getCurrentUser()),
-    t = E.default.canUseCollectibles(e),
+    t = f.default.canUseCollectibles(e),
     r = (0, u.default)([l.default], () => l.default.purchases),
-    [n, a] = (0, u.useStateFromStoresArray)([o.default], () => [o.default.categories, o.default.products]);
-  return (0, i.useMemo)(() => {
-    let e = (0, s.uniqBy)([...(0, c.getAvatarDecorationsFromPurchases)(r), ...(0, c.getAvatarDecorationsFromCategories)(n)], "id"),
-      i = e.reduce((e, n) => {
-        let i = r.get(n.skuId),
-          s = (0, c.isPremiumCollectiblesPurchase)(i);
-        if (s && 0 === e.premium_purchase.length && (e.premium_purchase = e.premium_preview, e.premium_preview = []), s) return e.premium_purchase.push(n), e;
-        if (null != i) return e.purchase.push(n), e;
-        if (!t && (0, c.isPremiumCollectiblesProduct)(a.get(n.skuId))) {
+    [a, n] = (0, u.useStateFromStoresArray)([o.default], () => [o.default.categories, o.default.products]);
+  return (0, s.useMemo)(() => {
+    let e = (0, i.uniqBy)([...(0, c.getAvatarDecorationsFromPurchases)(r), ...(0, c.getAvatarDecorationsFromCategories)(a)], "id"),
+      s = e.reduce((e, a) => {
+        let s = r.get(a.skuId),
+          i = (0, c.isPremiumCollectiblesPurchase)(s);
+        if (i && 0 === e.premium_purchase.length && (e.premium_purchase = e.premium_preview, e.premium_preview = []), i) return e.premium_purchase.push(a), e;
+        if (null != s) return e.purchase.push(a), e;
+        if (!t && (0, c.isPremiumCollectiblesProduct)(n.get(a.skuId))) {
           let t = e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview;
-          return t.push(n), e
+          return t.push(a), e
         }
-        return e.preview.push(n), e
+        return e.preview.push(a), e
       }, {
         purchase: [],
         premium_purchase: [],
@@ -54,24 +54,24 @@ var C = () => {
       });
     return [{
       section: "purchase",
-      items: [_, A, ...i.purchase],
+      items: [m, p, ...s.purchase],
       height: 12,
-      header: f.default.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER
+      header: E.default.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER
     }, {
-      section: i.premium_purchase.length > 0 ? "premium_purchase" : "premium_preview",
-      items: i.premium_purchase.length > 0 ? i.premium_purchase : i.premium_preview,
+      section: s.premium_purchase.length > 0 ? "premium_purchase" : "premium_preview",
+      items: s.premium_purchase.length > 0 ? s.premium_purchase : s.premium_preview,
       height: 12,
-      header: f.default.Messages.CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER
+      header: E.default.Messages.CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER
     }, {
       section: "preview",
-      items: i.preview,
+      items: s.preview,
       height: 12,
-      header: f.default.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
+      header: E.default.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
     }].filter(e => {
       let {
         items: t
       } = e;
       return t.length > 0
     })
-  }, [n, a, r, t])
+  }, [a, n, r, t])
 }

@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
     return r
   }
 });
 var i = n("37983");
 
-function r(e) {
+function r(t) {
   let {
-    size: t,
+    size: e,
     horizontal: n = !1
-  } = e, r = n ? t : 1, l = n ? 1 : t;
+  } = t, r = n ? e : 1, l = n ? 1 : e;
   return (0, i.jsx)("span", {
     style: {
       display: "block",

@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("446674"),
-  l = s("77078"),
+var l = s("446674"),
+  n = s("77078"),
   i = s("626301"),
   r = s("400307"),
   o = s("697218"),
@@ -18,10 +18,10 @@ var n = s("446674"),
 let _ = e => {
   let {
     onOpenPremiumClick: t
-  } = e, s = (0, a.jsx)(l.Button, {
+  } = e, s = (0, a.jsx)(n.Button, {
     className: E.tier0Button,
-    color: l.Button.Colors.BRAND,
-    look: l.Button.Looks.INVERTED,
+    color: n.Button.Colors.BRAND,
+    look: n.Button.Looks.INVERTED,
     onClick: () => {
       (0, i.navigateToPremiumMarketingPage)(), null != t && t()
     },
@@ -29,7 +29,7 @@ let _ = e => {
   });
   return (0, a.jsxs)("div", {
     className: E.tier0Container,
-    children: [(0, a.jsx)(l.Heading, {
+    children: [(0, a.jsx)(n.Heading, {
       className: E.tier0Heading,
       variant: "heading-xxl/extrabold",
       children: c.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_HEADING_SECONDARY
@@ -42,10 +42,10 @@ let _ = e => {
     })]
   })
 };
-var T = e => {
+var I = e => {
   let {
     onOpenPremiumClick: t
-  } = e, s = (0, n.useStateFromStores)([o.default], () => o.default.getCurrentUser());
+  } = e, s = (0, l.useStateFromStores)([o.default], () => o.default.getCurrentUser());
   return d.default.isPremium(s, u.PremiumTypes.TIER_2) ? null : (0, a.jsx)(_, {
     onOpenPremiumClick: t
   })

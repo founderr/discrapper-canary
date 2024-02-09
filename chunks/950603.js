@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("77078"),
   r = s("694187");
 
@@ -15,7 +15,7 @@ function o(e) {
   let {
     buttonCTA: t,
     onChange: s,
-    "aria-label": n,
+    "aria-label": l,
     multiple: o = !1,
     disabled: d = !1,
     submitting: u = !1,
@@ -24,7 +24,7 @@ function o(e) {
   return (0, a.jsx)(i.FocusRing, {
     within: !0,
     children: (0, a.jsxs)("div", {
-      className: l((0, i.getButtonStyle)({
+      className: n((0, i.getButtonStyle)({
         ...c,
         submitting: u,
         disabled: d
@@ -40,7 +40,7 @@ function o(e) {
         tabIndex: 0,
         onChange: s,
         multiple: o,
-        "aria-label": null != n ? n : t,
+        "aria-label": null != l ? l : t,
         disabled: d
       })]
     })

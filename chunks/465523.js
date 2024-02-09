@@ -1,22 +1,22 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return u
+    return a
   }
 });
-var n = r("37983");
-r("884691");
-var i = r("833395"),
-  u = e => {
+var l = n("37983");
+n("884691");
+var i = n("833395"),
+  a = e => {
     let {
       profileEffectConfig: t,
-      onReady: r
+      onReady: n
     } = e, {
-      pendingRef: u,
-      setPending: l
-    } = (0, i.default)(t.effects, r);
-    return (0, n.jsx)("div", {
-      children: t.effects.map(e => (0, n.jsx)("img", {
+      pendingRef: a,
+      setPending: s
+    } = (0, i.default)(t.effects, n);
+    return (0, l.jsx)("div", {
+      children: t.effects.map(e => (0, l.jsx)("img", {
         src: e.src,
         alt: "Preload Profile Effect Asset",
         "aria-hidden": !0,
@@ -25,7 +25,7 @@ var i = r("833395"),
           position: "absolute"
         },
         onLoad: () => {
-          l(u.current - 1), u.current = u.current - 1
+          s(a.current - 1), a.current = a.current - 1
         }
       }, e.src))
     })

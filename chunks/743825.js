@@ -17,8 +17,8 @@ var l, i = n("37983"),
   m = n("394846"),
   h = n("295426"),
   E = n("81594"),
-  g = n("798609"),
-  S = n("966724"),
+  S = n("798609"),
+  g = n("966724"),
   C = n("383018"),
   T = n("605250"),
   v = n("585722"),
@@ -168,8 +168,8 @@ l = class extends a.Component {
       onResize: p,
       onSubmit: h,
       channel: E,
-      type: g,
-      fontSize: S,
+      type: S,
+      fontSize: g,
       useSlate: C,
       spellcheckEnabled: T,
       useNewSlashCommands: v,
@@ -197,7 +197,7 @@ l = class extends a.Component {
       accessibilityLabel: w,
       disabled: d || !1,
       submitting: F,
-      isEdit: g === y.ChatInputTypes.EDIT,
+      isEdit: S === y.ChatInputTypes.EDIT,
       onFocus: this.handleFocus,
       onBlur: this.handleBlur,
       onPaste: this.handlePaste,
@@ -211,15 +211,15 @@ l = class extends a.Component {
       onResize: p,
       onKeyDown: f,
       onSubmit: h,
-      textAreaPaddingClassName: r(j[S], {
-        [P.textAreaWithoutAttachmentButton]: g !== y.ChatInputTypes.NORMAL && g !== y.ChatInputTypes.OVERLAY && g !== y.ChatInputTypes.THREAD_CREATION && g !== y.ChatInputTypes.SIDEBAR,
-        [P.textAreaForPostCreation]: g === y.ChatInputTypes.CREATE_FORUM_POST,
-        [P.textAreaCustomGift]: g === y.ChatInputTypes.CUSTOM_GIFT
+      textAreaPaddingClassName: r(j[g], {
+        [P.textAreaWithoutAttachmentButton]: S !== y.ChatInputTypes.NORMAL && S !== y.ChatInputTypes.OVERLAY && S !== y.ChatInputTypes.THREAD_CREATION && S !== y.ChatInputTypes.SIDEBAR,
+        [P.textAreaForPostCreation]: S === y.ChatInputTypes.CREATE_FORUM_POST,
+        [P.textAreaCustomGift]: S === y.ChatInputTypes.CUSTOM_GIFT
       }),
       spellcheckEnabled: T,
       useNewSlashCommands: v,
-      disableAutoFocus: m.isMobile || null !== (n = g.disableAutoFocus) && void 0 !== n && n,
-      disableEnterToSubmit: null !== (l = null === (e = g.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== l && l,
+      disableAutoFocus: m.isMobile || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
+      disableEnterToSubmit: null !== (l = null === (e = S.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== l && l,
       "aria-controls": null !== (a = G.id) && void 0 !== a ? a : void 0,
       "aria-haspopup": "listbox",
       "aria-expanded": null !== G.id || void 0,
@@ -231,9 +231,9 @@ l = class extends a.Component {
     }, H = C ? (0, i.jsx)(O.default, {
       ref: this.ref,
       ...B,
-      type: g,
+      type: S,
       value: d ? (0, A.toRichValue)("") : u,
-      canUseCommands: null === (t = g.commands) || void 0 === t ? void 0 : t.enabled,
+      canUseCommands: null === (t = S.commands) || void 0 === t ? void 0 : t.enabled,
       canOnlyUseTextCommands: _
     }) : (0, i.jsx)(x.default, {
       ref: this.ref,
@@ -413,15 +413,15 @@ l = class extends a.Component {
         let o = null !== (l = s.drafts.commandType) && void 0 !== l ? l : s.drafts.type,
           u = null,
           d = C.default.getActiveOption(t.id);
-        null != (u = (null == d ? void 0 : d.type) === g.ApplicationCommandOptionType.ATTACHMENT ? d : null === (a = r.options) || void 0 === a ? void 0 : a.find(e => {
-          if (e.type === g.ApplicationCommandOptionType.ATTACHMENT) return null == v.default.getUpload(t.id, e.name, o)
+        null != (u = (null == d ? void 0 : d.type) === S.ApplicationCommandOptionType.ATTACHMENT ? d : null === (a = r.options) || void 0 === a ? void 0 : a.find(e => {
+          if (e.type === S.ApplicationCommandOptionType.ATTACHMENT) return null == v.default.getUpload(t.id, e.name, o)
         })) && E.default.setFile({
           channelId: t.id,
           id: u.name,
           draftType: o,
           file: {
             id: u.name,
-            platform: S.UploadPlatform.WEB,
+            platform: g.UploadPlatform.WEB,
             file: e[0]
           }
         })

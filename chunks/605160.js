@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return S
   },
   getObscuredAlt: function() {
-    return _
+    return x
   }
 }), n("702976"), n("794252");
 var l, a, s = n("506838"),
@@ -75,4 +75,4 @@ function S(e) {
   } = e, l = (0, i.default)([f.default], () => null != t && f.default.can(g.Permissions.MANAGE_MESSAGES, t)), a = c.RenderSpoilers.useSetting(), s = (0, u.useShouldRedactExplicitContentForForum)();
   return I(n, !(0, p.default)(a, l), s)
 }
-let _ = e => (0, s.match)(e).with("explicit_content", () => E.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => E.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+let x = e => (0, s.match)(e).with("explicit_content", () => E.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => E.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)

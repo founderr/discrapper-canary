@@ -1,51 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 }), n("222007"), n("70102");
-var r = n("37983"),
-  u = n("884691"),
-  i = n("446674"),
-  a = n("206230"),
+var s = n("37983"),
+  i = n("884691"),
+  a = n("446674"),
+  r = n("206230"),
   l = n("491605"),
-  s = n("210721"),
+  u = n("210721"),
   o = n("646718");
 
-function c(e) {
+function d(e) {
   let {
     giftStyle: t,
     className: n,
-    shouldAnimate: c = !0,
-    defaultAnimationState: d,
+    shouldAnimate: d = !0,
+    defaultAnimationState: c,
     idleAnimationState: f
-  } = e, p = (0, i.useStateFromStores)([a.default], () => a.default.useReducedMotion), [P, S] = u.useState(d), h = u.useRef((0, s.getGiftAnimationData)(t, P)), [m, x] = u.useState(null == f), [C, I] = u.useState(!1), [E, v] = u.useState(-1), g = () => {
-    h.current = (0, s.getGiftAnimationData)(t, P), v(e => e + 1)
-  }, T = () => {
-    x(!1), I(!0), v(-1), S(d)
+  } = e, E = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion), [p, S] = i.useState(c), m = i.useRef((0, u.getGiftAnimationData)(t, p)), [_, I] = i.useState(null == f), [C, T] = i.useState(!1), [x, h] = i.useState(-1), g = () => {
+    m.current = (0, u.getGiftAnimationData)(t, p), h(e => e + 1)
+  }, P = () => {
+    I(!1), T(!0), h(-1), S(c)
   };
-  u.useEffect(() => {
-    null == f && S(d)
-  }, [f, d]), u.useEffect(() => {
-    if (null != f && E >= 0) {
-      T();
+  i.useEffect(() => {
+    null == f && S(c)
+  }, [f, c]), i.useEffect(() => {
+    if (null != f && x >= 0) {
+      P();
       return
     }
     g()
-  }, [t, f]), u.useEffect(() => {
+  }, [t, f]), i.useEffect(() => {
     (!C || null == f) && g()
-  }, [P]), u.useEffect(() => {
-    C && (x(null == f), I(!1), g())
+  }, [p]), i.useEffect(() => {
+    C && (I(null == f), T(!1), g())
   }, [C]);
   if (!o.PremiumGiftStyles.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
-  return (0, r.jsx)(l.default, {
-    importData: h.current,
-    shouldAnimate: !p && c,
+  return (0, s.jsx)(l.default, {
+    importData: m.current,
+    shouldAnimate: !E && d,
     className: n,
-    versionKey: E,
+    versionKey: x,
     onComplete: null != f ? () => {
-      null != f && (S(f), x(!0))
+      null != f && (S(f), I(!0))
     } : void 0,
-    loop: m
+    loop: _
   })
 }

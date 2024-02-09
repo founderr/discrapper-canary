@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   isIFrameModalForGuildEnabled: function() {
-    return l
+    return a
   }
 });
-var i = n("862205");
-let r = (0, i.createExperiment)({
+var l = n("862205");
+let u = (0, l.createExperiment)({
   kind: "guild",
   id: "2023-08_iframe_modal_guild",
   label: "iFrame Modal guild experiment",
@@ -21,8 +21,8 @@ let r = (0, i.createExperiment)({
   }]
 });
 
-function l(e) {
-  return r.getCurrentConfig({
+function a(e) {
+  return u.getCurrentConfig({
     guildId: null != e ? e : "",
     location: "2d360b_1"
   }, {

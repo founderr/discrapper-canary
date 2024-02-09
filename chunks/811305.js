@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Sizes: function() {
-    return S
+    return g
   },
   default: function() {
     return v
@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("368121"),
   h = n("523096"),
   E = n("587974"),
-  g = n("494101");
-let S = {
+  S = n("494101");
+let g = {
   SIZE_16: 16,
   SIZE_24: 24,
   SIZE_32: 32,
@@ -47,10 +47,10 @@ class T extends i.PureComponent {
       let t = null == o && null == a && u === e.length - 1,
         r = n(e[u], t, u);
       s.push(t ? (0, l.jsx)("div", {
-        className: g.avatarContainer,
+        className: S.avatarContainer,
         children: r
       }, C(null !== (d = e[u]) && void 0 !== d ? d : null, u)) : (0, l.jsx)(E.default, {
-        className: g.avatarContainerMasked,
+        className: S.avatarContainerMasked,
         height: i,
         width: i,
         mask: E.default.Masks.VOICE_USER_SUMMARY_ITEM,
@@ -88,8 +88,8 @@ class T extends i.PureComponent {
   }
   renderIcon() {
     return this.props.renderIcon ? (0, l.jsx)(m.default, {
-      foreground: g.foreground,
-      className: g.icon
+      foreground: S.foreground,
+      className: S.icon
     }) : null
   }
   render() {
@@ -121,19 +121,19 @@ class T extends i.PureComponent {
         popoutUserId: null
       }),
       children: n => (0, l.jsxs)("div", {
-        className: s(e, g.container, function() {
-          let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.SIZE_24;
+        className: s(e, S.container, function() {
+          let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.SIZE_24;
           switch (e) {
-            case S.SIZE_16:
-              return g.size16;
-            case S.SIZE_24:
-              return g.size24;
-            case S.SIZE_32:
-              return g.size32;
-            case S.SIZE_56:
-              return g.size56;
+            case g.SIZE_16:
+              return S.size16;
+            case g.SIZE_24:
+              return S.size24;
+            case g.SIZE_32:
+              return S.size32;
+            case g.SIZE_56:
+              return S.size56;
             default:
-              return g.size24
+              return S.size24
           }
         }(t)),
         ref: this._ref,
@@ -153,7 +153,7 @@ class T extends i.PureComponent {
       } = this.props;
       if (null == e) {
         if (!this.props.showDefaultAvatarsForNullUsers) return (0, l.jsx)("div", {
-          className: g.emptyUser
+          className: S.emptyUser
         });
         {
           let e = (null != n ? n : 0) % h.default.DEFAULT_AVATARS.length,
@@ -161,17 +161,17 @@ class T extends i.PureComponent {
           return (0, l.jsx)("img", {
             src: t,
             alt: "",
-            className: g.avatar
+            className: S.avatar
           })
         }
       }
       let r = (0, l.jsx)("img", {
         src: e.getAvatarURL(a, s),
         alt: e.username,
-        className: g.avatar
+        className: S.avatar
       }, e.id);
       return i ? (0, l.jsx)(u.Clickable, {
-        className: g.clickableAvatar,
+        className: S.clickableAvatar,
         onClick: () => {
           null != this._ref.current && null != e && this.setState({
             popoutUserId: e.id
@@ -187,12 +187,12 @@ T.defaultProps = {
   max: 10,
   renderMoreUsers: function(e) {
     return (0, l.jsx)("div", {
-      className: g.moreUsers,
+      className: S.moreUsers,
       children: e
     })
   },
   renderIcon: !1,
   showDefaultAvatarsForNullUsers: !1,
-  size: S.SIZE_24
+  size: g.SIZE_24
 };
 var v = T

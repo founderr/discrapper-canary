@@ -1,11 +1,11 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   ENTRY_DELAY: function() {
-    return n
+    return l
   },
   RESET: function() {
     return i
   }
 });
-let n = 500,
+let l = 500,
   i = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="

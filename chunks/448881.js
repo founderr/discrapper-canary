@@ -20,17 +20,17 @@ var t = E("872717"),
   o = E("913144"),
   n = E("599417"),
   r = E("2973"),
-  a = E("227231"),
-  i = E("49111");
+  i = E("227231"),
+  a = E("49111");
 async function I() {
   o.default.dispatch({
     type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
   });
   try {
     let e = await t.default.get({
-        url: i.Endpoints.QUESTS_CURRENT_QUESTS
+        url: a.Endpoints.QUESTS_CURRENT_QUESTS
       }),
-      _ = e.body.quests.map(e => (0, a.questWithUserStatusFromServer)(e)),
+      _ = e.body.quests.map(e => (0, i.questWithUserStatusFromServer)(e)),
       E = _.filter(e => {
         var _;
         return (null === (_ = e.userStatus) || void 0 === _ ? void 0 : _.claimedAt) != null || e.config.rewardCodePlatforms.length > 0
@@ -54,7 +54,7 @@ async function s(e) {
   } = e;
   try {
     let e = await t.default.post({
-      url: i.Endpoints.QUESTS_HEARTBEAT(_),
+      url: a.Endpoints.QUESTS_HEARTBEAT(_),
       body: {
         stream_key: E,
         application_id: r
@@ -62,7 +62,7 @@ async function s(e) {
     });
     o.default.dispatch({
       type: "QUESTS_SEND_HEARTBEAT_SUCCESS",
-      userStatus: (0, a.questUserStatusFromServer)(e.body),
+      userStatus: (0, i.questUserStatusFromServer)(e.body),
       applicationId: r,
       questId: _,
       streamKey: E
@@ -85,11 +85,11 @@ async function T(e) {
     });
     try {
       let _ = await t.default.post({
-        url: i.Endpoints.QUESTS_ENROLL(e)
+        url: a.Endpoints.QUESTS_ENROLL(e)
       });
       o.default.dispatch({
         type: "QUESTS_ENROLL_SUCCESS",
-        enrolledQuestUserStatus: (0, a.questUserStatusFromServer)(_.body)
+        enrolledQuestUserStatus: (0, i.questUserStatusFromServer)(_.body)
       })
     } catch (_) {
       o.default.dispatch({
@@ -108,7 +108,7 @@ async function S(e, _) {
     });
     try {
       let E = await t.default.post({
-        url: i.Endpoints.QUESTS_REWARD_CODE(e),
+        url: a.Endpoints.QUESTS_REWARD_CODE(e),
         body: {
           platform: _
         }
@@ -116,7 +116,7 @@ async function S(e, _) {
       o.default.dispatch({
         type: "QUESTS_CLAIM_REWARD_CODE_SUCCESS",
         questId: e,
-        rewardCode: (0, a.questsRewardCodeFromServer)(E.body)
+        rewardCode: (0, i.questsRewardCodeFromServer)(E.body)
       })
     } catch (_) {
       throw o.default.dispatch({
@@ -136,12 +136,12 @@ async function N(e) {
     });
     try {
       let _ = await t.default.get({
-        url: i.Endpoints.QUESTS_REWARD_CODE(e)
+        url: a.Endpoints.QUESTS_REWARD_CODE(e)
       });
       o.default.dispatch({
         type: "QUESTS_FETCH_REWARD_CODE_SUCCESS",
         questId: e,
-        rewardCode: (0, a.questsRewardCodeFromServer)(_.body)
+        rewardCode: (0, i.questsRewardCodeFromServer)(_.body)
       })
     } catch (_) {
       throw o.default.dispatch({

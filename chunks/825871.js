@@ -28,8 +28,8 @@ var i = n("271841"),
   m = n("524768"),
   h = n("389153"),
   E = n("396465"),
-  g = n("355263"),
-  S = n("957255"),
+  S = n("355263"),
+  g = n("957255"),
   C = n("501536"),
   T = n("655518"),
   v = n("200294"),
@@ -66,7 +66,7 @@ function M(e) {
 }
 let L = {
   sentinel: _.COMMAND_SENTINEL,
-  stores: [p.default, f.default, u.default, S.default],
+  stores: [p.default, f.default, u.default, g.default],
   matches: (e, t, n, l, i) => i.commands !== I.CommandMode.DISABLED && null == p.default.getActiveCommand(e.id) && (l || i.commands !== I.CommandMode.OLD_BUILT_INS),
   queryResults(e, t, n, l, i) {
     if (0 === n.length && l.commands !== I.CommandMode.OLD_BUILT_INS) return x;
@@ -88,7 +88,7 @@ let L = {
         }
       }
     }
-    let r = (0, g.getCommandQuery)(e, n),
+    let r = (0, S.getCommandQuery)(e, n),
       {
         commands: u,
         sections: f
@@ -128,7 +128,7 @@ let L = {
       options: r,
       onHover: o,
       onClick: u
-    } = e, c = (0, g.getCommandQuery)(a, s);
+    } = e, c = (0, S.getCommandQuery)(a, s);
     if (r.commands !== I.CommandMode.OLD_BUILT_INS && !d.isInIndexExperiment({
         location: "CommandAutocompletes"
       })) return (0, l.jsx)(E.default, {

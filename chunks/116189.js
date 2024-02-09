@@ -19,8 +19,8 @@ var i = n("917351"),
   m = n("851745"),
   h = n("317041"),
   E = n("782340"),
-  g = n("269175"),
-  S = n("327769");
+  S = n("269175"),
+  g = n("327769");
 let C = {
     results: {
       choices: []
@@ -108,8 +108,8 @@ let C = {
       } = e;
       return i ? (0, l.jsx)(s.default, {
         message: E.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_FAILED,
-        noResultsImageURL: S,
-        className: g.noAutocompleteResults
+        noResultsImageURL: g,
+        className: S.noAutocompleteResults
       }) : 0 !== t.length || n ? (0, p.renderAutocompleteGroup)({
         query: r,
         selectedIndex: a,
@@ -127,8 +127,8 @@ let C = {
         key: "choice"
       }) : (0, l.jsx)(s.default, {
         message: E.default.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_NO_OPTIONS,
-        noResultsImageURL: S,
-        className: g.noAutocompleteResults
+        noResultsImageURL: g,
+        className: S.noAutocompleteResults
       })
     },
     onSelect(e) {

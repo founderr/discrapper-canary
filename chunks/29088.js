@@ -1,82 +1,82 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return d
+    return c
   }
-}), a("222007");
-var n = a("808742"),
-  l = a("204947"),
-  s = a("152311"),
-  i = a("502651"),
-  r = a("49111"),
-  u = a("782340");
+}), l("222007");
+var r = l("808742"),
+  a = l("204947"),
+  n = l("152311"),
+  s = l("502651"),
+  i = l("49111"),
+  o = l("782340");
 
-function o(e) {
+function u(e) {
   return {
-    [r.ActivityTypes.STREAMING]: e ? u.default.Messages.UNFORMATTED_STREAMING : u.default.Messages.STREAMING,
-    [r.ActivityTypes.LISTENING]: e ? u.default.Messages.UNFORMATTED_LISTENING_TO : u.default.Messages.LISTENING_TO,
-    [r.ActivityTypes.WATCHING]: e ? u.default.Messages.UNFORMATTED_WATCHING : u.default.Messages.WATCHING,
-    [r.ActivityTypes.COMPETING]: e ? u.default.Messages.UNFORMATTED_COMPETING : u.default.Messages.COMPETING
+    [i.ActivityTypes.STREAMING]: e ? o.default.Messages.UNFORMATTED_STREAMING : o.default.Messages.STREAMING,
+    [i.ActivityTypes.LISTENING]: e ? o.default.Messages.UNFORMATTED_LISTENING_TO : o.default.Messages.LISTENING_TO,
+    [i.ActivityTypes.WATCHING]: e ? o.default.Messages.UNFORMATTED_WATCHING : o.default.Messages.WATCHING,
+    [i.ActivityTypes.COMPETING]: e ? o.default.Messages.UNFORMATTED_COMPETING : o.default.Messages.COMPETING
   }
-}
-
-function c(e, t) {
-  let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    c = arguments.length > 3 ? arguments[3] : void 0;
-  if (null != e && e.type === r.ActivityTypes.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
-  if (null != t) return null == e || e.type !== r.ActivityTypes.PLAYING ? u.default.Messages.SHARING_SCREEN : o(a)[r.ActivityTypes.STREAMING].format({
-    name: e.name
-  });
-  if (c && null != e && e.type === r.ActivityTypes.HANG_STATUS) return (0, n.getHangStatusText)(e);
-  if (null == e || null == e.name) return null;
-  if ((0, i.default)(e)) {
-    let t = null != e.details && "" !== e.details ? e.details : e.name;
-    return o(a)[r.ActivityTypes.STREAMING].format({
-      name: t
-    })
-  }
-  return (0, s.default)(e) ? (0, l.default)(e.name) : function(e, t, a) {
-    let n = o(a);
-    switch (e) {
-      case r.ActivityTypes.LISTENING:
-      case r.ActivityTypes.WATCHING:
-      case r.ActivityTypes.COMPETING:
-        return n[e].format({
-          name: t
-        });
-      case r.ActivityTypes.CUSTOM_STATUS:
-      case r.ActivityTypes.HANG_STATUS:
-        return null;
-      case r.ActivityTypes.PLAYING:
-      default:
-        return a ? u.default.Messages.UNFORMATTED_PLAYING_GAME.format({
-          game: t
-        }) : u.default.Messages.PLAYING_GAME.format({
-          game: t
-        })
-    }
-  }(e.type, e.name, a)
 }
 
 function d(e, t) {
-  let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    n = arguments.length > 3 ? arguments[3] : void 0;
-  if (Array.isArray(e)) {
-    let l = e;
-    null != t && (l = [...l, null]);
-    let s = null;
-    for (let e of l) {
-      let l = c(e, t, a, n);
-      if (null != l) return {
-        activity: e,
-        activityText: l
-      };
-      (null == e ? void 0 : e.type) === r.ActivityTypes.CUSTOM_STATUS && null != e.emoji && (s = e)
+  let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    d = arguments.length > 3 ? arguments[3] : void 0;
+  if (null != e && e.type === i.ActivityTypes.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
+  if (null != t) return null == e || e.type !== i.ActivityTypes.PLAYING ? o.default.Messages.SHARING_SCREEN : u(l)[i.ActivityTypes.STREAMING].format({
+    name: e.name
+  });
+  if (d && null != e && e.type === i.ActivityTypes.HANG_STATUS) return (0, r.getHangStatusText)(e);
+  if (null == e || null == e.name) return null;
+  if ((0, s.default)(e)) {
+    let t = null != e.details && "" !== e.details ? e.details : e.name;
+    return u(l)[i.ActivityTypes.STREAMING].format({
+      name: t
+    })
+  }
+  return (0, n.default)(e) ? (0, a.default)(e.name) : function(e, t, l) {
+    let r = u(l);
+    switch (e) {
+      case i.ActivityTypes.LISTENING:
+      case i.ActivityTypes.WATCHING:
+      case i.ActivityTypes.COMPETING:
+        return r[e].format({
+          name: t
+        });
+      case i.ActivityTypes.CUSTOM_STATUS:
+      case i.ActivityTypes.HANG_STATUS:
+        return null;
+      case i.ActivityTypes.PLAYING:
+      default:
+        return l ? o.default.Messages.UNFORMATTED_PLAYING_GAME.format({
+          game: t
+        }) : o.default.Messages.PLAYING_GAME.format({
+          game: t
+        })
     }
-    return (null == s ? void 0 : s.emoji) != null ? {
-      activity: s,
+  }(e.type, e.name, l)
+}
+
+function c(e, t) {
+  let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    r = arguments.length > 3 ? arguments[3] : void 0;
+  if (Array.isArray(e)) {
+    let a = e;
+    null != t && (a = [...a, null]);
+    let n = null;
+    for (let e of a) {
+      let a = d(e, t, l, r);
+      if (null != a) return {
+        activity: e,
+        activityText: a
+      };
+      (null == e ? void 0 : e.type) === i.ActivityTypes.CUSTOM_STATUS && null != e.emoji && (n = e)
+    }
+    return (null == n ? void 0 : n.emoji) != null ? {
+      activity: n,
       activityText: null
     } : null
   }
-  return c(e, t, a, n)
+  return d(e, t, l, r)
 }

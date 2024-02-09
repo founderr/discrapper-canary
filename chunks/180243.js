@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("446674"),
   r = s("206230"),
   o = s("181114"),
@@ -18,13 +18,13 @@ function c(e) {
   let {
     className: t,
     shouldShine: s = !0,
-    size: n = 14
+    size: l = 14
   } = e, c = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion);
   return (0, a.jsxs)("div", {
-    className: l([u.guildProductRoleIcon, t]),
+    className: n([u.guildProductRoleIcon, t]),
     children: [(0, a.jsx)(d.default, {
-      height: n,
-      width: n
+      height: l,
+      width: l
     }), (0, a.jsx)(o.Shine, {
       className: u.shine,
       shinePaused: c || !s,

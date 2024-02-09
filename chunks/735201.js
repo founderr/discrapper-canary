@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), n("222007");
-var r = n("446674"),
-  i = n("913144");
-let s = {},
+var s = n("446674"),
+  r = n("913144");
+let l = {},
   a = null,
-  l = [],
+  i = [],
   o = !1,
   u = null,
   c = null;
@@ -16,18 +16,18 @@ let s = {},
 function d() {
   o = !0
 }
-class f extends r.default.Store {
+class f extends s.default.Store {
   getAppliedGuildBoostsForGuild(e) {
-    return null != s[e] ? s[e].subscriptions : null
+    return null != l[e] ? l[e].subscriptions : null
   }
   getLastFetchedAtForGuild(e) {
-    return null != s[e] ? s[e].lastFetchedAt : null
+    return null != l[e] ? l[e].lastFetchedAt : null
   }
   getCurrentUserAppliedBoosts() {
-    return l
+    return i
   }
   getAppliedGuildBoost(e) {
-    return l.find(t => t.id === e)
+    return i.find(t => t.id === e)
   }
   get isModifyingAppliedBoost() {
     return o
@@ -43,13 +43,13 @@ class f extends r.default.Store {
   }
 }
 f.displayName = "AppliedGuildBoostStore";
-var p = new f(i.default, {
+var h = new f(r.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       appliedBoosts: n
     } = e;
-    s[t] = {
+    l[t] = {
       subscriptions: n,
       lastFetchedAt: Date.now()
     }
@@ -58,7 +58,7 @@ var p = new f(i.default, {
     let {
       appliedGuildBoosts: t
     } = e;
-    l = t
+    i = t
   },
   APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS: function(e) {
     let {
@@ -72,7 +72,7 @@ var p = new f(i.default, {
     let {
       appliedGuildBoost: t
     } = e, n = new Set(t.map(e => e.id));
-    l = [...t, ...l.filter(e => !n.has(e.id))], u = null, o = !1
+    i = [...t, ...i.filter(e => !n.has(e.id))], u = null, o = !1
   },
   GUILD_APPLY_BOOST_FAIL: function(e) {
     let {
@@ -84,7 +84,7 @@ var p = new f(i.default, {
     let {
       boostId: t
     } = e;
-    l = l.filter(e => e.id !== t), o = !1
+    i = i.filter(e => e.id !== t), o = !1
   },
   GUILD_UNAPPLY_BOOST_FAIL: function(e) {
     let {

@@ -15,15 +15,15 @@ var t = E("726581"),
   n = E("981980");
 E("704744");
 var r = E("811022"),
-  a = E("644642"),
-  i = E("486196"),
+  i = E("644642"),
+  a = E("486196"),
   I = E("614247"),
   s = E("446825").Buffer;
 let T = new r.default("HTTPUtils"),
   S = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 
 function N(e, _, E, t, r) {
-  var a, T, O, A, l;
+  var i, T, O, A, l;
   let u = o[e](_.url);
   if (null != _.onRequestCreated && _.onRequestCreated(u), null != _.query) {
     let e = _.query;
@@ -37,7 +37,7 @@ function N(e, _, E, t, r) {
     }
     u.query(e)
   }
-  if (_.body && u.send(_.body), null != _.headers && u.set(_.headers), null != _.reason && u.set("X-Audit-Log-Reason", encodeURIComponent(_.reason)), null === (a = _.attachments) || void 0 === a || a.forEach(e => {
+  if (_.body && u.send(_.body), null != _.headers && u.set(_.headers), null != _.reason && u.set("X-Audit-Log-Reason", encodeURIComponent(_.reason)), null === (i = _.attachments) || void 0 === i || i.forEach(e => {
       u.attach(e.name, e.file, e.filename)
     }), null === (T = _.fields) || void 0 === T || T.forEach(e => {
       u.field(e.name, e.value)
@@ -59,7 +59,7 @@ function N(e, _, E, t, r) {
     _.backoff = null != _.backoff ? _.backoff : new n.default, _.retried = (null != _.retried ? _.retried : 0) + 1, _.backoff.fail(() => h(_.url).then(() => N(e, _, E, t, r)))
   };
   null == U || null === (O = U.prepareRequest) || void 0 === O || O.call(U, u), u.ok(e => null != e.status), u.then(o => {
-    var n, a, s;
+    var n, i, s;
     if (null != _.retries && _.retries-- > 0 && S.has(o.status)) return L();
     let T = {
       ok: o.ok,
@@ -71,7 +71,7 @@ function N(e, _, E, t, r) {
     R(_, T);
     let O = !1,
       A = (o, n) => {
-        let a = {
+        let i = {
           ..._,
           headers: {
             ..._.headers,
@@ -79,7 +79,7 @@ function N(e, _, E, t, r) {
           },
           interceptResponse: n
         };
-        O = !0, N(e, a, E, t, r)
+        O = !0, N(e, i, E, t, r)
       },
       l = e => {
         !O && (t(e), null == r || r({
@@ -89,10 +89,10 @@ function N(e, _, E, t, r) {
         }))
       };
     if ((null == _ ? void 0 : null === (n = _.interceptResponse) || void 0 === n ? void 0 : n.call(_, o, A, l)) !== !0) {
-      if ((null == U ? void 0 : null === (a = U.interceptResponse) || void 0 === a ? void 0 : a.call(U, o, A, l)) !== !0) {
+      if ((null == U ? void 0 : null === (i = U.interceptResponse) || void 0 === i ? void 0 : i.call(U, o, A, l)) !== !0) {
         if (o.ok) E(T);
         else {
-          if (_.oldFormErrors && (null == T ? void 0 : null === (s = T.body) || void 0 === s ? void 0 : s.code) === i.INVALID_FORM_BODY_ERROR_CODE) {
+          if (_.oldFormErrors && (null == T ? void 0 : null === (s = T.body) || void 0 === s ? void 0 : s.code) === a.INVALID_FORM_BODY_ERROR_CODE) {
             let {
               errors: e
             } = T.body;
@@ -146,11 +146,11 @@ function R(e, _) {
       }
     }
     T.verbose("cleanupRequestEntry: rate limit for ".concat(e.url, " retry after ").concat(n, " seconds"));
-    let a = setTimeout(() => A(e.url), 1e3 * n);
+    let i = setTimeout(() => A(e.url), 1e3 * n);
     O.set(e.url, {
       queue: null !== (o = null == E ? void 0 : E.queue) && void 0 !== o ? o : [],
       retryAfterTimestamp: r,
-      timeoutId: a
+      timeoutId: i
     })
   } else null != E && E.retryAfterTimestamp < Date.now() && (T.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), A(e.url))
 }
@@ -185,8 +185,8 @@ var d = {
   put: C,
   patch: D,
   delete: c,
-  V6OrEarlierAPIError: a.default,
-  V8APIError: i.default,
+  V6OrEarlierAPIError: i.default,
+  V8APIError: a.default,
   getAPIBaseURL() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? "/v".concat(window.GLOBAL_ENV.API_VERSION) : "")

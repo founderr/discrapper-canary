@@ -1,72 +1,72 @@
 "use strict";
 l.r(e), l.d(e, {
   default: function() {
-    return M
+    return L
   }
 }), l("222007");
 var n = l("37983"),
-  a = l("884691"),
-  s = l("414456"),
-  i = l.n(s),
-  r = l("77078"),
-  o = l("244201"),
+  r = l("884691"),
+  a = l("414456"),
+  s = l.n(a),
+  o = l("77078"),
+  i = l("244201"),
   u = l("685665"),
-  c = l("181114"),
-  d = l("427459"),
+  d = l("181114"),
+  c = l("427459"),
   f = l("954296"),
-  C = l("49111"),
-  h = l("782340"),
-  p = l("500924"),
-  M = t => {
+  _ = l("49111"),
+  p = l("782340"),
+  S = l("500924"),
+  L = t => {
     let {
       analyticsLocation: e,
       analyticsSourceLocation: l,
-      guild: s,
-      buttonText: M,
-      targetBoostedGuildTier: L,
-      onClose: g = () => {},
-      closeLayer: m = () => {},
-      pauseAnimation: S = !1,
-      applicationId: _,
-      handleSubscribeModalClose: A,
-      withHighlight: E = !1,
-      ...w
+      guild: a,
+      buttonText: L,
+      targetBoostedGuildTier: C,
+      onClose: h = () => {},
+      closeLayer: y = () => {},
+      pauseAnimation: E = !1,
+      applicationId: m,
+      handleSubscribeModalClose: O,
+      withHighlight: A = !1,
+      ...T
     } = t, {
-      analyticsLocations: y
-    } = (0, u.default)(), x = (0, o.useAppContext)(), T = x === C.AppContext.POPOUT, [v, N] = a.useState(!1), P = null != L ? Math.max((0, d.getNumberOfAppliedBoostsNeededForTier)(s, L), 1) : 1, R = (0, d.generateBlockGuildSubscriptionPurchasesNode)(), I = async () => {
-      N(!0), await (0, f.addAppliedGuildBoosts)({
-        analyticsLocations: y,
+      analyticsLocations: I
+    } = (0, u.default)(), g = (0, i.useAppContext)(), U = g === _.AppContext.POPOUT, [M, P] = r.useState(!1), w = null != C ? Math.max((0, c.getNumberOfAppliedBoostsNeededForTier)(a, C), 1) : 1, B = (0, c.generateBlockGuildSubscriptionPurchasesNode)(), v = async () => {
+      P(!0), await (0, f.addAppliedGuildBoosts)({
+        analyticsLocations: I,
         analyticsLocation: e,
         analyticsSourceLocation: l,
-        guild: s,
-        numberOfBoostsToAdd: P,
-        onClose: g,
-        closeLayer: m,
-        inPopout: T,
-        applicationId: _,
-        handleSubscribeModalClose: A
-      }), N(!1)
+        guild: a,
+        numberOfBoostsToAdd: w,
+        onClose: h,
+        closeLayer: y,
+        inPopout: U,
+        applicationId: m,
+        handleSubscribeModalClose: O
+      }), P(!1)
     };
-    return null != R ? (0, n.jsx)(r.Tooltip, {
-      text: R,
+    return null != B ? (0, n.jsx)(o.Tooltip, {
+      text: B,
       "aria-label": !1,
-      children: t => (0, n.jsx)(c.default, {
+      children: t => (0, n.jsx)(d.default, {
         ...t,
         disabled: !0,
-        size: r.Button.Sizes.SMALL,
-        pauseAnimation: S,
-        ...w,
-        children: null != M ? M : h.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
+        size: o.Button.Sizes.SMALL,
+        pauseAnimation: E,
+        ...T,
+        children: null != L ? L : p.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
       })
-    }) : (0, n.jsx)(c.default, {
-      size: r.Button.Sizes.SMALL,
-      ...w,
-      className: i(w.className, {
-        [p.buttonHighlighted]: E
+    }) : (0, n.jsx)(d.default, {
+      size: o.Button.Sizes.SMALL,
+      ...T,
+      className: s(T.className, {
+        [S.buttonHighlighted]: A
       }),
-      submitting: v,
-      onClick: I,
-      pauseAnimation: S,
-      children: null != M ? M : h.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
+      submitting: M,
+      onClick: v,
+      pauseAnimation: E,
+      children: null != L ? L : p.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
     })
   }

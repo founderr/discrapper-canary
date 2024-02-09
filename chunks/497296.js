@@ -1,5 +1,5 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
     return E
   }
@@ -16,44 +16,44 @@ var u = n("626301"),
   d = n("718116"),
   f = n("431036");
 
-function E(t) {
+function E(e) {
   let {
-    onClose: e,
+    onClose: t,
     analyticsSource: n,
     onLearnMore: E,
     ..._
-  } = t;
+  } = e;
 
-  function S() {
-    null == E || E(), e(), (0, u.navigateToPremiumMarketingPage)()
+  function T() {
+    null == E || E(), t(), (0, u.navigateToPremiumMarketingPage)()
   }
   let {
-    isLoading: T,
+    isLoading: S,
     suggestedPremiumType: p
   } = (0, i.default)({
     autoTrackExposure: !0,
     experiment: a.default,
     location: "video_backgrounds_upsell"
-  }), I = p === l.PremiumTypes.TIER_0 ? l.PremiumSubscriptionSKUs.TIER_0 : l.PremiumSubscriptionSKUs.TIER_2, A = I === l.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY_TIER_0.format({
-    onLearnMore: S
+  }), A = p === l.PremiumTypes.TIER_0 ? l.PremiumSubscriptionSKUs.TIER_0 : l.PremiumSubscriptionSKUs.TIER_2, C = A === l.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY_TIER_0.format({
+    onLearnMore: T
   }) : c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY.format({
-    onLearnMore: S
+    onLearnMore: T
   });
   return (0, r.jsx)(o.default, {
     artURL: f,
     artContainerClassName: d.videoBackgroundArt,
     type: l.PremiumUpsellTypes.VIDEO_BACKGROUNDS_MODAL,
     title: c.default.Messages.VIDEO_BACKGROUND_UPSELL_TITLE,
-    body: A,
-    glowUp: A,
+    body: C,
+    glowUp: C,
     analyticsSource: n,
     analyticsLocation: {
       page: s.AnalyticsPages.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,
       object: s.AnalyticsObjects.BUTTON_CTA
     },
-    onClose: e,
-    subscriptionTier: I,
-    isLoading: T,
+    onClose: t,
+    subscriptionTier: A,
+    isLoading: S,
     ..._
   })
 }

@@ -6,15 +6,15 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("469563"),
-  l = s("571423"),
+var l = s("469563"),
+  n = s("571423"),
   i = s("75196"),
-  r = (0, n.replaceIcon)(function(e) {
+  r = (0, l.replaceIcon)(function(e) {
     let {
       width: t = 16,
       height: s = 16,
-      color: n = "currentColor",
-      foreground: l,
+      color: l = "currentColor",
+      foreground: n,
       ...r
     } = e;
     return (0, a.jsxs)("svg", {
@@ -24,28 +24,28 @@ var n = s("469563"),
       viewBox: "0 0 16 16",
       xmlns: "http://www.w3.org/2000/svg",
       children: [(0, a.jsx)("rect", {
-        className: l,
+        className: n,
         y: "3",
         width: "16",
         height: "2",
         rx: "1",
-        fill: n
+        fill: l
       }), (0, a.jsx)("rect", {
-        className: l,
+        className: n,
         y: "11",
         width: "8",
         height: "2",
         rx: "1",
-        fill: n
+        fill: l
       }), (0, a.jsx)("rect", {
-        className: l,
+        className: n,
         y: "7",
         width: "16",
         height: "2",
         rx: "1",
-        fill: n
+        fill: l
       })]
     })
-  }, l.ChannelListIcon, void 0, {
+  }, n.ChannelListIcon, void 0, {
     size: 16
   })

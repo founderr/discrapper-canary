@@ -1,84 +1,84 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   BadgeSizes: function() {
-    return n
+    return r
   },
   default: function() {
-    return _
+    return v
   }
-}), a("424973");
-var n, l, s = a("37983");
-a("884691");
-var i = a("414456"),
-  r = a.n(i),
-  u = a("77078"),
-  o = a("572544"),
-  c = a("244201"),
-  d = a("298878"),
-  f = a("643121"),
-  T = a("217513"),
-  E = a("590456"),
-  m = a("49111"),
-  S = a("782340"),
-  A = a("730684"),
-  g = a("696246");
+}), l("424973");
+var r, a, n = l("37983");
+l("884691");
+var s = l("414456"),
+  i = l.n(s),
+  o = l("77078"),
+  u = l("572544"),
+  d = l("244201"),
+  c = l("298878"),
+  f = l("643121"),
+  T = l("217513"),
+  p = l("590456"),
+  m = l("49111"),
+  E = l("782340"),
+  P = l("730684"),
+  S = l("696246");
 
-function _(e) {
+function v(e) {
   let {
     user: t,
-    guildId: a,
-    className: n,
-    shrinkAtCount: l,
-    shrinkToSize: i,
-    isTryItOutFlow: _,
-    size: C = 0
-  } = e, p = (0, T.default)(t.id, a), v = (0, f.default)(p).map(e => ({
+    guildId: l,
+    className: r,
+    shrinkAtCount: a,
+    shrinkToSize: s,
+    isTryItOutFlow: v,
+    size: h = 0
+  } = e, g = (0, T.default)(t.id, l), _ = (0, f.default)(g).map(e => ({
     ...e,
-    src: (0, E.getBadgeAsset)(e.icon)
-  })), N = (0, c.useWindowDispatch)();
-  if (t.isClyde()) return (0, s.jsx)("div", {
-    className: r(n, A.container, A.clydeBadgeList),
-    "aria-label": S.default.Messages.PROFILE_USER_BADGES,
+    src: (0, p.getBadgeAsset)(e.icon)
+  })), N = (0, d.useWindowDispatch)();
+  if (t.isClyde()) return (0, n.jsx)("div", {
+    className: i(r, P.container, P.clydeBadgeList),
+    "aria-label": E.default.Messages.PROFILE_USER_BADGES,
     role: "group",
-    children: (0, s.jsx)(d.default, {})
+    children: (0, n.jsx)(c.default, {})
   });
-  _ && null == v.find(e => "premium" === e.id) && v.push({
+  v && null == _.find(e => "premium" === e.id) && _.push({
     id: "premium",
-    icon: g,
-    src: g,
-    description: S.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+    icon: S,
+    src: S,
+    description: E.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
       date: new Date
     })
   });
-  let I = null != l && null != i && v.length > l ? i : C;
-  return (0, s.jsx)("div", {
-    className: r(n, v.length > 0 ? A.containerWithContent : A.container),
-    "aria-label": S.default.Messages.PROFILE_USER_BADGES,
+  let O = null != a && null != s && _.length > a ? s : h;
+  return (0, n.jsx)("div", {
+    className: i(r, _.length > 0 ? P.containerWithContent : P.container),
+    "aria-label": E.default.Messages.PROFILE_USER_BADGES,
     role: "group",
-    children: v.map(e => (0, s.jsx)(u.Tooltip, {
+    children: _.map(e => (0, n.jsx)(o.Tooltip, {
       position: "top",
       text: e.description,
       spacing: 12,
-      children: t => (0, s.jsx)(u.Anchor, {
+      children: t => (0, n.jsx)(o.Anchor, {
         ...t,
-        onClick: a => {
-          var n;
-          null === (n = t.onClick) || void 0 === n || n.call(t);
-          let l = null != e.link ? (0, o.default)(e.link) : null;
-          if (null != l) return N.dispatch(m.ComponentActions.POPOUT_CLOSE), l(a)
+        onClick: l => {
+          var r;
+          null === (r = t.onClick) || void 0 === r || r.call(t);
+          let a = null != e.link ? (0, u.default)(e.link) : null;
+          if (null != a) return N.dispatch(m.ComponentActions.POPOUT_CLOSE), a(l)
         },
         href: e.link,
-        children: (0, s.jsx)("img", {
+        children: (0, n.jsx)("img", {
           alt: " ",
           "aria-hidden": !0,
           src: e.src,
-          className: r({
-            [A.profileBadge24]: 0 === I,
-            [A.profileBadge22]: 1 === I,
-            [A.profileBadge18]: 2 === I
+          className: i({
+            [P.profileBadge24]: 0 === O,
+            [P.profileBadge22]: 1 === O,
+            [P.profileBadge18]: 2 === O
           })
         })
       })
     }, e.id))
   })
-}(l = n || (n = {}))[l.SIZE_24 = 0] = "SIZE_24", l[l.SIZE_22 = 1] = "SIZE_22", l[l.SIZE_18 = 2] = "SIZE_18"
+}(a = r || (r = {}))[a.SIZE_24 = 0] = "SIZE_24", a[a.SIZE_22 = 1] = "SIZE_22", a[a.SIZE_18 = 2] = "SIZE_18"

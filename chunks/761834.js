@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return r
   },
   default: function() {
-    return a
+    return i
   }
 }), E("860677"), E("222007");
 var t = E("689988"),
@@ -31,4 +31,4 @@ class r extends t.default {
     }
   }
 }
-var a = new r
+var i = new r

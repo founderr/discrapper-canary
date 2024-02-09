@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getAutoArchiveOptions: function() {
-    return o
+    return r
   },
   getAutoArchiveDuration: function() {
-    return r
+    return o
   }
 });
 var i = n("661201"),
@@ -13,7 +13,7 @@ n("866227");
 var a = n("648564"),
   s = n("782340");
 
-function o() {
+function r() {
   return [{
     label: s.default.Messages.AUTO_ARCHIVE_DURATION_1_HOUR,
     value: 60
@@ -29,8 +29,8 @@ function o() {
   }]
 }
 
-function r(e, t) {
+function o(e, t) {
   var n;
   return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : a.DEFAULT_AUTO_ARCHIVE_DURATION
 }
-l(() => o().map(e => e.value))
+l(() => r().map(e => e.value))

@@ -10,24 +10,24 @@ E.r(_), E.d(_, {
     return t.default
   },
   useStateFromStores: function() {
-    return a.default
+    return i.default
   },
   useStateFromStoresObject: function() {
-    return a.useStateFromStoresObject
+    return i.useStateFromStoresObject
   },
   useStateFromStoresArray: function() {
-    return a.useStateFromStoresArray
+    return i.useStateFromStoresArray
   },
   statesWillNeverBeEqual: function() {
-    return a.statesWillNeverBeEqual
+    return i.statesWillNeverBeEqual
   },
   default: function() {
-    return i
+    return a
   }
 });
 var t = E("995113"),
   o = E("893346"),
   n = E("35092"),
   r = E("75247"),
-  a = E("65597"),
-  i = n.default
+  i = E("65597"),
+  a = n.default

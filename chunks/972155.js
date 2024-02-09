@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("759843"),
   i = n("446674"),
   r = n("151426"),
-  u = n("244201"),
-  o = n("191225"),
+  o = n("244201"),
+  u = n("191225"),
   d = n("860345"),
   c = n("117582"),
   f = n("943349"),
@@ -39,7 +39,7 @@ function A(e) {
     inCall: L,
     totalNumberOfParticipants: O,
     paused: y = !1
-  } = e, b = (0, u.useAppContext)(), P = b === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(R.guild_id), [R.guild_id]), {
+  } = e, b = (0, o.useAppContext)(), P = b === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(R.guild_id), [R.guild_id]), {
     dismissedActivityEntryPointTileChannel: U
   } = (0, T.useChannelCallVideoGridStore)(), w = (0, i.useStateFromStores)([p.default], () => p.default.getUserParticipantCount(R.id), [R]), F = l.useCallback(() => {
     T.useChannelCallVideoGridStore.setState({
@@ -64,7 +64,7 @@ function A(e) {
   R.isGuildVoice() && c.VcTileActivitiesEntryPointExperiment.trackExposure({
     location: "8711e9_2"
   });
-  let G = (0, i.useStateFromStores)([o.default], () => o.default.getEmbeddedActivitiesForChannel(R.id).length <= 0),
+  let G = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(R.id).length <= 0),
     W = (0, m.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
     Y = (0, f.useEmbeddedActivityLaunchability)(R.id),
     z = Y !== f.EmbeddedActivityLaunchability.CAN_LAUNCH,

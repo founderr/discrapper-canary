@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
-  u = n.n(r),
-  o = n("446674"),
+  o = n.n(r),
+  u = n("446674"),
   d = n("77078"),
   c = n("327037"),
   f = n("841098"),
@@ -61,19 +61,19 @@ var a = n("37983"),
     let {
       channel: n,
       showCall: s
-    } = e, r = n.recipients[0], [et, en] = l.useState(!1), ea = l.useRef(0), el = (0, y.default)(), es = (0, o.useStateFromStores)([v.default], () => v.default.getUser(r)), ei = null == es ? void 0 : es.isNonUserBot();
-    u(null != es, "Profile Panel: user cannot be undefined");
+    } = e, r = n.recipients[0], [et, en] = l.useState(!1), ea = l.useRef(0), el = (0, y.default)(), es = (0, u.useStateFromStores)([v.default], () => v.default.getUser(r)), ei = null == es ? void 0 : es.isNonUserBot();
+    o(null != es, "Profile Panel: user cannot be undefined");
     let er = (0, L.default)(es.id),
       {
-        installedIntegrations: eu,
-        fetched: eo,
+        installedIntegrations: eo,
+        fetched: eu,
         appsInGDMEnabled: ed,
         availableApplications: ec
       } = (0, E.usePrivateChannelIntegrationState)({
         channelId: n.id
       }),
       ef = !el && !s,
-      eh = (0, o.useStateFromStores)([x.default, S.default], () => {
+      eh = (0, u.useStateFromStores)([x.default, S.default], () => {
         var e;
         return null != es ? S.default.getChannel(null === (e = x.default.getVoiceStateForUser(es.id)) || void 0 === e ? void 0 : e.channelId) : null
       }),
@@ -90,7 +90,7 @@ var a = n("37983"),
         isApplicationStreaming: eg,
         isMobile: eS,
         status: e_
-      } = (0, o.useStateFromStoresObject)([g.default, I.default, _.default], () => {
+      } = (0, u.useStateFromStoresObject)([g.default, I.default, _.default], () => {
         let e = null != g.default.getAnyStreamForUser(es.id);
         return {
           activity: I.default.findActivity(es.id, t => {
@@ -118,8 +118,8 @@ var a = n("37983"),
       }),
       eI = null != em || null != eE || eg,
       eT = null !== (t = N.default.getNickname(null, n.id, es)) && void 0 !== t ? t : A.default.getName(es),
-      ev = (0, o.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
-      [ex, eN, eA, eM, eR] = (0, o.useStateFromStoresArray)([M.default], () => [M.default.getMutualFriendsCount(es.id), M.default.getMutualFriends(es.id), M.default.getMutualGuilds(es.id), M.default.isFetchingProfile(es.id), M.default.isFetchingFriends(es.id)]),
+      ev = (0, u.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
+      [ex, eN, eA, eM, eR] = (0, u.useStateFromStoresArray)([M.default], () => [M.default.getMutualFriendsCount(es.id), M.default.getMutualFriends(es.id), M.default.getMutualGuilds(es.id), M.default.isFetchingProfile(es.id), M.default.isFetchingFriends(es.id)]),
       ej = (0, G.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
       eL = null != ej && !eg,
       {
@@ -168,7 +168,7 @@ var a = n("37983"),
       eF = null == eN ? void 0 : eN.map(e => (0, a.jsx)(K.default, {
         connection: e
       }, e.key)),
-      ek = eu.map(e => (0, a.jsx)(Y.default, {
+      ek = eo.map(e => (0, a.jsx)(Y.default, {
         channel: n,
         integration: e
       }, e.application.id)),
@@ -262,12 +262,12 @@ var a = n("37983"),
               header: ek.length > 0 ? $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
                 count: ek.length
               }) : $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
-              isLoadingContents: !eo,
+              isLoadingContents: !eu,
               isLoadingHeader: !1,
               itemType: z.ListType.AppsList,
               children: [ek, ec.length > 0 && (0, a.jsxs)("div", {
                 className: ee.appButtonContainer,
-                children: [0 === eu.length && (0, a.jsx)(d.Text, {
+                children: [0 === eo.length && (0, a.jsx)(d.Text, {
                   variant: "text-xs/normal",
                   color: "header-secondary",
                   children: $.default.Messages.PRIVATE_CHANNEL_ADD_APPS_INFO

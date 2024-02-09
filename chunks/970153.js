@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return h
   },
   serializeDescendant: function() {
-    return g
+    return S
   }
 }), n("222007"), n("424973"), n("781738");
 var l = n("627445"),
@@ -65,7 +65,7 @@ function E(e, t) {
     }
   let h = f > 0 && m.NodeUtils.isType(e[f - 1], "blockQuote"),
     E = m.NodeUtils.isType(e[f], "blockQuote"),
-    S = m.NodeUtils.isType(e[p], "blockQuote"),
+    g = m.NodeUtils.isType(e[p], "blockQuote"),
     C = [];
   for (let t = f; t <= p; t++) {
     let n = e[t];
@@ -78,8 +78,8 @@ function E(e, t) {
         path: s.path.slice(1),
         offset: s.offset
       } : void 0,
-      u = null == a || null == s || !h && (!E || S),
-      c = g(n, {
+      u = null == a || null == s || !h && (!E || g),
+      c = S(n, {
         mode: i,
         start: l,
         end: r,
@@ -91,12 +91,12 @@ function E(e, t) {
   return C.join(r)
 }
 
-function g(e, t) {
+function S(e, t) {
   let {
     mode: n,
     start: l,
     allowBlockQuotePrefix: h = !1,
-    preventEmojiSurrogates: g = !1
+    preventEmojiSurrogates: S = !1
   } = null != t ? t : {};
   if (m.TextUtils.isText(e)) return function(e, t) {
     var n, l;
@@ -120,7 +120,7 @@ function g(e, t) {
     }
     case "emoji": {
       let t = e.emoji;
-      if (!g && null != t.surrogate) return t.surrogate;
+      if (!S && null != t.surrogate) return t.surrogate;
       return t.name
     }
     case "customEmoji": {

@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var l = n("37983"),
   i = n("884691"),
-  r = n("77078"),
-  a = n("592407"),
-  s = n("957255"),
+  a = n("77078"),
+  s = n("592407"),
+  r = n("957255"),
   u = n("49111"),
   o = n("782340"),
   d = n("435808");
@@ -19,30 +19,30 @@ function c(e) {
     error: n,
     onClose: c
   } = e, f = t.id, h = i.useCallback(() => {
-    c(), a.default.open(f, u.GuildSettingsSections.INSTANT_INVITES)
-  }, [f, c]), g = i.useCallback(e => (0, l.jsx)(r.Clickable, {
+    c(), s.default.open(f, u.GuildSettingsSections.INSTANT_INVITES)
+  }, [f, c]), I = i.useCallback(e => (0, l.jsx)(a.Clickable, {
     className: d.errorLink,
     onClick: h,
-    children: (0, l.jsx)(r.Text, {
+    children: (0, l.jsx)(a.Text, {
       variant: "text-xs/normal",
       color: "text-link",
       tag: "span",
       children: e
     })
-  }), [h]), I = i.useCallback(e => (0, l.jsx)(r.Anchor, {
+  }), [h]), g = i.useCallback(e => (0, l.jsx)(a.Anchor, {
     href: u.MarketingURLs.INVITES_HELP,
     target: "_blank",
-    children: (0, l.jsx)(r.Text, {
+    children: (0, l.jsx)(a.Text, {
       variant: "text-xs/normal",
       color: "text-link",
       tag: "span",
       children: e
     })
-  }), []), E = n.code !== u.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : s.default.can(u.Permissions.MANAGE_GUILD, t) ? o.default.Messages.TOO_MANY_INVITES_ERROR.format({
-    inviteListHook: g,
-    inviteHelpHook: I
+  }), []), E = n.code !== u.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : r.default.can(u.Permissions.MANAGE_GUILD, t) ? o.default.Messages.TOO_MANY_INVITES_ERROR.format({
+    inviteListHook: I,
+    inviteHelpHook: g
   }) : o.default.Messages.TOO_MANY_INVITES_ERROR_MEMBER;
-  return (0, l.jsx)(r.Text, {
+  return (0, l.jsx)(a.Text, {
     className: d.errorMessage,
     variant: "text-xs/normal",
     color: "text-danger",

@@ -9,8 +9,8 @@ var a = n("884691"),
   s = n("242260"),
   i = n("315841"),
   r = n("52477"),
-  u = n("306645"),
-  o = n("195513"),
+  o = n("306645"),
+  u = n("195513"),
   d = n("107517");
 
 function c(e) {
@@ -21,7 +21,7 @@ function c(e) {
     stream: f,
     focused: h,
     canvas: p
-  } = e, m = a.useRef(!1), E = (0, l.default)([s.default], () => s.default.getDrawMode()), C = (0, u.default)((0, o.default)(t.id, n, c), f), g = (0, u.default)((0, d.default)(t.id, n, c), f), S = a.useCallback((e, t, n) => {
+  } = e, m = a.useRef(!1), E = (0, l.default)([s.default], () => s.default.getDrawMode()), C = (0, o.default)((0, u.default)(t.id, n, c), f), g = (0, o.default)((0, d.default)(t.id, n, c), f), S = a.useCallback((e, t, n) => {
     if (null == p) return;
     let {
       x: a,

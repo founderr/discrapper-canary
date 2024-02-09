@@ -10,30 +10,30 @@ n.r(t), n.d(t, {
 var s = n("917351"),
   u = n.n(s),
   o = n("520497"),
-  i = n("812809"),
-  r = n("42887"),
-  a = n("773336");
+  r = n("812809"),
+  a = n("42887"),
+  i = n("773336");
 let c = "default",
   p = c;
 
 function d(e, t) {
   let n = new Audio((0, o.default)(e));
-  n.volume = (0, i.default)(t), n.play()
+  n.volume = (0, r.default)(t), n.play()
 }
 
 function l() {
   null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(e => {
-    let t = r.default.getOutputDevices(),
-      n = u(t).sortBy(e => e.index).findIndex(e => e.id === r.default.getOutputDeviceId()),
-      s = t[r.default.getOutputDeviceId()],
+    let t = a.default.getOutputDevices(),
+      n = u(t).sortBy(e => e.index).findIndex(e => e.id === a.default.getOutputDeviceId()),
+      s = t[a.default.getOutputDeviceId()],
       o = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
-      i = o[n];
-    null != s && (null == i || i.label !== s.name) && (i = o.find(e => e.label === s.name)), p = null != i ? i.deviceId : c
+      r = o[n];
+    null != s && (null == r || r.label !== s.name) && (r = o.find(e => e.label === s.name)), p = null != r ? r.deviceId : c
   }).catch(() => {
     p = c
   })
 }
-a.isPlatformEmbedded && (r.default.addChangeListener(l), l());
+i.isPlatformEmbedded && (a.default.addChangeListener(l), l());
 class f {
   get volume() {
     return this._volume
@@ -76,7 +76,7 @@ class f {
     return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
       let s = new Audio;
       s.src = n("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), s.onloadeddata = () => {
-        s.volume = Math.min(r.default.getOutputVolume() / 100 * this._volume, 1), a.isPlatformEmbedded && s.setSinkId(p), e(s)
+        s.volume = Math.min(a.default.getOutputVolume() / 100 * this._volume, 1), i.isPlatformEmbedded && s.setSinkId(p), e(s)
       }, s.onerror = () => t(Error("could not play audio")), s.onended = () => this._destroyAudio(), s.load()
     }), this._audio
   }

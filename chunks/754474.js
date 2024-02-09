@@ -1,53 +1,53 @@
 "use strict";
 n.r(t), n.d(t, {
   BotTypes: function() {
-    return a.BotTagTypes
+    return o.BotTagTypes
   },
   default: function() {
     return u
   }
 });
-var i = n("37983");
+var s = n("37983");
 n("884691");
-var r = n("414456"),
-  l = n.n(r),
-  s = n("79798"),
-  a = n("988268"),
-  o = n("888770"),
+var l = n("414456"),
+  i = n.n(l),
+  r = n("79798"),
+  o = n("988268"),
+  a = n("888770"),
   u = e => {
     let {
       name: t,
       discriminator: n,
-      invertBotTagColor: r,
-      nameColor: a,
+      invertBotTagColor: l,
+      nameColor: o,
       className: u,
-      botType: d,
-      usernameClass: c,
+      botType: c,
+      usernameClass: d,
       discriminatorClass: f,
-      botClass: E,
-      botVerified: h = !1,
-      style: _,
-      useRemSizes: C = !1,
-      usernameIcon: p
+      botClass: h,
+      botVerified: C = !1,
+      style: v,
+      useRemSizes: p = !1,
+      usernameIcon: E
     } = e;
-    return (0, i.jsxs)("div", {
-      className: l(u, o.nameTag),
-      style: _,
-      children: [(0, i.jsxs)("span", {
-        className: l(o.username, c),
-        style: null != a ? {
-          color: a
+    return (0, s.jsxs)("div", {
+      className: i(u, a.nameTag),
+      style: v,
+      children: [(0, s.jsxs)("span", {
+        className: i(a.username, d),
+        style: null != o ? {
+          color: o
         } : void 0,
-        children: [p, t]
-      }), null != n ? (0, i.jsxs)("span", {
+        children: [E, t]
+      }), null != n ? (0, s.jsxs)("span", {
         className: null != f ? f : void 0,
         children: ["#", n]
-      }) : null, null != d ? (0, i.jsx)(s.default, {
-        type: d,
-        invertColor: r,
-        className: l(E, o.bot),
-        verified: h,
-        useRemSizes: C
+      }) : null, null != c ? (0, s.jsx)(r.default, {
+        type: c,
+        invertColor: l,
+        className: i(h, a.bot),
+        verified: C,
+        useRemSizes: p
       }) : null]
     })
   }

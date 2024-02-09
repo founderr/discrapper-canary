@@ -1,53 +1,53 @@
 "use strict";
-l.r(r), l.d(r, {
+l.r(t), l.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var t = l("37983");
+var r = l("37983");
 l("884691");
-var o = l("77078"),
-  i = l("38766"),
-  n = l("49111"),
-  a = l("782340"),
-  s = l("364547");
+var a = l("77078"),
+  n = l("38766"),
+  s = l("49111"),
+  i = l("782340"),
+  o = l("364547");
 let u = {
-    page: n.AnalyticsPages.GUILD_CHANNEL,
-    section: n.AnalyticsSections.PROFILE_POPOUT,
-    object: n.AnalyticsObjects.EDIT_PER_SERVER_IDENTITY
+    page: s.AnalyticsPages.GUILD_CHANNEL,
+    section: s.AnalyticsSections.PROFILE_POPOUT,
+    object: s.AnalyticsObjects.EDIT_PER_SERVER_IDENTITY
   },
-  f = {
-    page: n.AnalyticsPages.USER_POPOUT,
-    section: n.AnalyticsSections.PROFILE_POPOUT
+  d = {
+    page: s.AnalyticsPages.USER_POPOUT,
+    section: s.AnalyticsSections.PROFILE_POPOUT
   };
 
-function d(e) {
+function c(e) {
   let {
-    onSelect: r,
+    onSelect: t,
     onClose: l,
-    guild: n
-  } = e, d = (0, i.default)({
-    guild: n,
+    guild: s
+  } = e, c = (0, n.default)({
+    guild: s,
     analyticsLocation: u
-  }), c = (0, i.default)({
-    analyticsLocation: f
+  }), f = (0, n.default)({
+    analyticsLocation: d
   });
-  return (0, t.jsxs)(o.Menu, {
-    className: s.popoutMenu,
-    onSelect: r,
+  return (0, r.jsxs)(a.Menu, {
+    className: o.popoutMenu,
+    onSelect: t,
     navId: "edit-profile-popout",
     onClose: l,
-    "aria-label": a.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-    children: [(0, t.jsx)(o.MenuItem, {
+    "aria-label": i.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
+    children: [(0, r.jsx)(a.MenuItem, {
       id: "edit-server-profile",
-      label: a.default.Messages.CHANGE_IDENTITY,
-      subtext: a.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
-      action: () => d()
-    }), (0, t.jsx)(o.MenuItem, {
-      id: "edit-default-profile",
-      label: a.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
-      subtext: a.default.Messages.USER_PROFILE_MENU_HELP,
+      label: i.default.Messages.CHANGE_IDENTITY,
+      subtext: i.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
       action: () => c()
+    }), (0, r.jsx)(a.MenuItem, {
+      id: "edit-default-profile",
+      label: i.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
+      subtext: i.default.Messages.USER_PROFILE_MENU_HELP,
+      action: () => f()
     })]
   })
 }

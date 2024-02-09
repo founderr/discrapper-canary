@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("77078"),
   r = s("642622");
 
@@ -15,7 +15,7 @@ function o(e) {
   let {
     checked: t,
     onChange: s,
-    disabled: n,
+    disabled: l,
     className: o,
     tooltipProps: d
   } = e, u = e => {
@@ -25,12 +25,12 @@ function o(e) {
     onClick: u,
     onMouseDown: u,
     onMouseUp: u,
-    className: l(r.switch, o),
+    className: n(r.switch, o),
     ...d,
     children: (0, a.jsx)(i.Switch, {
       checked: t,
       onChange: s,
-      disabled: n
+      disabled: l
     })
   })
 }

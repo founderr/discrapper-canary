@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("77078"),
   r = s("36694"),
   o = s("987772"),
@@ -18,36 +18,36 @@ function c(e) {
   let {
     className: t,
     enabled: s,
-    previewCTA: n,
+    previewCTA: l,
     onPreview: c,
     onToggle: E,
     animateStatus: _,
-    firstLine: T,
-    secondLine: I,
-    disabled: S
+    firstLine: I,
+    secondLine: f,
+    disabled: T
   } = e;
   return (0, a.jsxs)("div", {
-    className: l(t, u.enableContainer),
+    className: n(t, u.enableContainer),
     children: [s ? (0, a.jsx)(r.default, {
       width: 24,
       height: 24,
-      className: l(u.activeCircle, {
+      className: n(u.activeCircle, {
         [u.animate]: _
       })
     }) : (0, a.jsx)(o.default, {
       width: 24,
       height: 24,
-      className: l(u.editCircle, {
+      className: n(u.editCircle, {
         [u.animate]: _
       })
     }), (0, a.jsxs)("div", {
       className: u.enableDescription,
       children: [(0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
-        children: T
+        children: I
       }), (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
-        children: I
+        children: f
       })]
     }), (0, a.jsxs)("div", {
       className: u.buttonContainer,
@@ -56,11 +56,11 @@ function c(e) {
         look: i.Button.Looks.LINK,
         size: i.Button.Sizes.SMALL,
         onClick: c,
-        disabled: S,
+        disabled: T,
         color: i.Button.Colors.PRIMARY,
-        children: null != n ? n : d.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
+        children: null != l ? l : d.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
       }), (0, a.jsx)(i.Button, {
-        disabled: null == E || S,
+        disabled: null == E || T,
         size: i.Button.Sizes.SMALL,
         color: s ? i.Button.Colors.RED : i.Button.Colors.BRAND,
         onClick: E,

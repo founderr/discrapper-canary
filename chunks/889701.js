@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("986632"),
   h = n("538282"),
   E = n("45961"),
-  g = n("626301"),
-  S = n("716849"),
+  S = n("626301"),
+  g = n("716849"),
   C = n("552917"),
   T = n("917247"),
   v = n("845579"),
@@ -50,10 +50,10 @@ let B = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
   Y = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
   z = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
   J = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-  Z = Y + 2 * J,
-  q = z + 2 * J,
-  X = s(x.trackStickerSearchEmpty, 200),
-  Q = s(x.trackStickerSearchResultsViewed, 200),
+  q = Y + 2 * J,
+  Z = z + 2 * J,
+  Q = s(x.trackStickerSearchEmpty, 200),
+  X = s(x.trackStickerSearchResultsViewed, 200),
   $ = i.forwardRef(function(e, t) {
     var a;
     let {
@@ -66,7 +66,7 @@ let B = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     } = (0, c.useAnalyticsContext)(), {
       AnalyticsLocationProvider: J
     } = (0, p.default)(f.default.STICKER_PICKER);
-    (0, S.useMaybeFetchPremiumLikelihood)(C.default);
+    (0, g.useMaybeFetchPremiumLikelihood)(C.default);
     let $ = (null === (a = (0, T.usePremiumTrialOffer)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
       ee = i.useRef(null),
       et = i.useRef(null),
@@ -94,10 +94,10 @@ let B = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       eh = (0, O.useLatestFrecentStickers)(),
       eE = (0, o.useStateFromStoresObject)([R.default], () => R.default.getAllGuildStickers()),
       {
-        sendable: eg = [],
-        sendableWithPremium: eS = []
+        sendable: eS = [],
+        sendableWithPremium: eg = []
       } = null != ep ? ep : {},
-      eC = eg.length + eS.length,
+      eC = eS.length + eg.length,
       eT = i.useCallback(e => {
         "" === ei ? (0, x.trackStickerSelect)(e) : (0, x.trackStickerSearchSelect)(e, ei, eC), y(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
       }, [y, ei, eC]),
@@ -115,7 +115,7 @@ let B = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         listWidth: eu,
         listPaddingRight: V,
         stickerNodeMargin: ev ? K : W,
-        stickerNodeWidth: ev ? Z : q
+        stickerNodeWidth: ev ? q : Z
       }),
       ex = i.useCallback((e, t) => {
         let {
@@ -177,7 +177,7 @@ let B = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     i.useEffect(() => {
       "" === es.current && "" !== ei && (0, x.trackStickerSearchStart)(), es.current = ei
     }, [ei]), i.useEffect(() => {
-      0 === eC ? X(ei) : Q(ei, eC, ea)
+      0 === eC ? Q(ei) : X(ei, eC, ea)
     }, [ei, eC, ea]), i.useLayoutEffect(() => {
       var e;
       null === (e = en.current) || void 0 === e || e.focus()
@@ -185,7 +185,7 @@ let B = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     let ej = i.useCallback(() => {
       Y(), _.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
         location_section: F.AnalyticsSections.STICKER_PICKER_UPSELL
-      }), (0, g.navigateToPremiumMarketingPage)()
+      }), (0, S.navigateToPremiumMarketingPage)()
     }, [Y]);
     return (0, l.jsxs)(J, {
       children: [!($ && eo) && (0, l.jsx)("div", {

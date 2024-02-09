@@ -10,8 +10,8 @@ var l = n("414456"),
   s = n.n(l),
   i = n("446674"),
   r = n("77078"),
-  u = n("308289"),
-  o = n("244201"),
+  o = n("308289"),
+  u = n("244201"),
   d = n("204947"),
   c = n("442939"),
   f = n("207273"),
@@ -46,7 +46,7 @@ function k(e) {
   let {
     focusedParticipant: t,
     channel: n
-  } = e, l = (0, o.useAppContext)(), s = (0, i.useStateFromStores)([R.default], () => R.default.getLayout(n.id, l));
+  } = e, l = (0, u.useAppContext)(), s = (0, i.useStateFromStores)([R.default], () => R.default.getLayout(n.id, l));
   return (0, a.jsx)(T.default, {
     children: (0, a.jsx)(O.default, {
       className: w.participants,
@@ -67,7 +67,7 @@ function V(e) {
     color: s
   } = e, i = (0, I.default)(n, t, l);
   return null == t || null == l ? null : (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(u.default, {
+    children: [(0, a.jsx)(o.default, {
       className: w.avatar,
       size: r.AvatarSizes.SIZE_24,
       user: t,
@@ -88,9 +88,9 @@ function B(e) {
       channel: s
     } = e,
     i = (0, j.default)(s, !0),
-    u = (0, m.useActiveEvent)(s.id),
-    o = null != u ? (0, E.getNextRecurrenceIdInEvent)(u) : null,
-    c = null != u;
+    o = (0, m.useActiveEvent)(s.id),
+    u = null != o ? (0, E.getNextRecurrenceIdInEvent)(o) : null,
+    c = null != o;
   if ((null == l ? void 0 : l.type) === b.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(A.default.Divider, {
       className: w.divider
@@ -124,8 +124,8 @@ function B(e) {
       })]
     })
   } else c && (t = (0, a.jsx)(C.default, {
-    guildEvent: u,
-    recurrenceId: o
+    guildEvent: o,
+    recurrenceId: u
   }));
   return (0, a.jsx)("div", {
     className: w.container,
@@ -137,8 +137,8 @@ function H(e) {
   let {
     channel: t,
     guild: l,
-    appContext: u,
-    inCall: o,
+    appContext: o,
+    inCall: u,
     isChatOpen: d,
     exitFullScreen: m
   } = e, {
@@ -149,7 +149,7 @@ function H(e) {
   }), [t.id]), C = (0, h.default)(t), I = (0, p.default)(t), [T] = (0, c.default)((null == E ? void 0 : E.type) === b.ParticipantTypes.ACTIVITY ? [E.id] : []), x = U.default.Messages.VOICE_CHANNEL;
   t.isDM() ? x = U.default.Messages.DM : t.isGroupDM() && (x = U.default.Messages.GROUP_DM);
   let j = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
-    O = t.isGuildVoice() && o && null != j && j.length > 0,
+    O = t.isGuildVoice() && u && null != j && j.length > 0,
     k = (0, i.useStateFromStores)([v.default], () => v.default.can(P.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
     V = O ? (0, a.jsx)(r.Tooltip, {
       text: U.default.Messages.VOICE_CHANNEL_SET_STATUS,
@@ -199,10 +199,10 @@ function H(e) {
       className: (0, M.getThemeClass)(D.ThemeTypes.DARK),
       childrenBottom: V,
       toolbar: (0, a.jsx)(L.default, {
-        inPopout: u === P.AppContext.POPOUT,
+        inPopout: o === P.AppContext.POPOUT,
         channel: t,
-        appContext: u,
-        inCall: o,
+        appContext: o,
+        inCall: u,
         isChatOpen: d,
         exitFullScreen: m
       }),

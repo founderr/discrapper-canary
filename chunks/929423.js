@@ -1,188 +1,188 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   saveGuildIdentityChanges: function() {
-    return s
+    return i
   },
   setCurrentGuild: function() {
-    return u
-  },
-  initGuildIdentitySettings: function() {
-    return o
-  },
-  closeGuildIdentitySettings: function() {
-    return d
-  },
-  resetAndCloseGuildIdentityForm: function() {
-    return c
-  },
-  setPendingAvatar: function() {
-    return _
-  },
-  setPendingBanner: function() {
-    return I
-  },
-  setPendingBio: function() {
-    return E
-  },
-  setPendingPronouns: function() {
-    return f
-  },
-  setPendingNickname: function() {
     return T
   },
-  setPendingThemeColors: function() {
+  initGuildIdentitySettings: function() {
+    return l
+  },
+  closeGuildIdentitySettings: function() {
+    return E
+  },
+  resetAndCloseGuildIdentityForm: function() {
+    return _
+  },
+  setPendingAvatar: function() {
+    return a
+  },
+  setPendingBanner: function() {
+    return s
+  },
+  setPendingBio: function() {
     return S
   },
-  resetPendingMemberChanges: function() {
-    return D
+  setPendingPronouns: function() {
+    return c
   },
-  resetPendingProfileChanges: function() {
+  setPendingNickname: function() {
+    return d
+  },
+  setPendingThemeColors: function() {
     return N
   },
+  resetPendingMemberChanges: function() {
+    return f
+  },
+  resetPendingProfileChanges: function() {
+    return D
+  },
   resetAllPending: function() {
-    return A
+    return G
   },
   clearErrors: function() {
     return L
   },
   setDisableSubmit: function() {
-    return m
+    return R
   }
 }), n("70102");
-var i = n("872717"),
-  l = n("913144"),
-  r = n("54239"),
-  a = n("49111");
-async function s(e, t) {
+var r = n("872717"),
+  o = n("913144"),
+  u = n("54239"),
+  I = n("49111");
+async function i(t, e) {
   let {
     nick: n,
-    avatar: r
-  } = t;
-  if (null == e) throw Error("Need guildId");
-  l.default.dispatch({
+    avatar: u
+  } = e;
+  if (null == t) throw Error("Need guildId");
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SUBMIT"
   });
   try {
-    let t = await i.default.patch({
-      url: a.Endpoints.SET_GUILD_MEMBER(e),
+    let e = await r.default.patch({
+      url: I.Endpoints.SET_GUILD_MEMBER(t),
       body: {
         nick: n,
-        avatar: r
+        avatar: u
       },
       oldFormErrors: !0
     });
-    return l.default.dispatch({
+    return o.default.dispatch({
       type: "GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS"
-    }), l.default.dispatch({
+    }), o.default.dispatch({
       type: "GUILD_MEMBER_PROFILE_UPDATE",
-      guildMember: t.body,
-      guildId: e
-    }), t
-  } catch (t) {
-    let e = t.body;
-    (null == e ? void 0 : e.username) != null && (e.nick = e.username, delete e.username), l.default.dispatch({
+      guildMember: e.body,
+      guildId: t
+    }), e
+  } catch (e) {
+    let t = e.body;
+    (null == t ? void 0 : t.username) != null && (t.nick = t.username, delete t.username), o.default.dispatch({
       type: "GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE",
-      errors: t.body
+      errors: e.body
     })
   }
 }
 
-function u(e) {
-  l.default.dispatch({
+function T(t) {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_GUILD",
-    guild: e
+    guild: t
   })
 }
 
-function o(e, t) {
-  l.default.dispatch({
+function l(t, e) {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_INIT",
-    guild: e,
-    analyticsLocations: t
+    guild: t,
+    analyticsLocations: e
   })
 }
 
-function d() {
-  l.default.dispatch({
+function E() {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_CLOSE"
-  }), (0, r.popLayer)()
+  }), (0, u.popLayer)()
 }
 
-function c() {
-  l.default.dispatch({
+function _() {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM"
   })
 }
 
-function _(e) {
-  l.default.dispatch({
+function a(t) {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR",
-    avatar: e
+    avatar: t
   })
 }
 
-function I(e) {
-  l.default.dispatch({
+function s(t) {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER",
-    banner: e
+    banner: t
   })
 }
 
-function E(e) {
-  l.default.dispatch({
+function S(t) {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO",
-    bio: e
+    bio: t
   })
 }
 
-function f(e) {
-  l.default.dispatch({
+function c(t) {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS",
-    pronouns: e
+    pronouns: t
   })
 }
 
-function T(e) {
-  l.default.dispatch({
+function d(t) {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME",
-    nickname: e
+    nickname: t
   })
 }
 
-function S(e) {
-  l.default.dispatch({
+function N(t) {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS",
-    themeColors: e
+    themeColors: t
   })
 }
 
-function D() {
-  l.default.dispatch({
+function f() {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES"
   })
 }
 
-function N() {
-  l.default.dispatch({
+function D() {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
   })
 }
 
-function A() {
-  l.default.dispatch({
+function G() {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING"
   })
 }
 
 function L() {
-  l.default.dispatch({
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS"
   })
 }
 
-function m(e) {
-  l.default.dispatch({
+function R(t) {
+  o.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT",
-    disable: e
+    disable: t
   })
 }

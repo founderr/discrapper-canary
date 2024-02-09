@@ -6,8 +6,8 @@ E.r(_), E.d(_, {
   }
 }), E("860677"), E("222007"), E("424973");
 var o, n, r = E("627445"),
-  a = E.n(r),
-  i = E("102053");
+  i = E.n(r),
+  a = E("102053");
 E("704744");
 var I = E("782648"),
   s = E("805833");
@@ -42,7 +42,7 @@ let T = [],
       let e = Date.now();
       this.initialize(), this._isInitialized = !0;
       let _ = Date.now() - e;
-      _ > 5 && i.default.mark("\uD83E\uDDA5", this.getName() + ".initialize()", _)
+      _ > 5 && a.default.mark("\uD83E\uDDA5", this.getName() + ".initialize()", _)
     }
   }
   initialize() {}
@@ -51,10 +51,10 @@ let T = [],
     let n;
     this.waitFor(...e);
     let r = 0,
-      a = () => {
+      i = () => {
         r !== s.default.getChangeSentinel() && (r = s.default.getChangeSentinel(), !1 !== _() && this.emitChange())
       };
-    t = null != E ? E : 0, o = a, n = null, a = 0 === t ? function() {
+    t = null != E ? E : 0, o = i, n = null, i = 0 === t ? function() {
       clearImmediate(n), n = setImmediate(o)
     } : function() {
       null == n && (n = setTimeout(() => {
@@ -64,11 +64,11 @@ let T = [],
           n = null
         }
       }, t))
-    }, e.forEach(e => e.addChangeListener(a))
+    }, e.forEach(e => e.addChangeListener(i))
   }
   waitFor() {
     for (var e = arguments.length, _ = Array(e), E = 0; E < e; E++) _[E] = arguments[E];
-    let t = _.map((e, _) => (a(null != e, "Store.waitFor(...) called with null Store at index ".concat(_, " for store ").concat(this.getName())), null != e._dispatcher) ? (a(e._dispatcher === this._dispatcher, "Stores belong to two separate dispatchers."), e.getDispatchToken()) : null);
+    let t = _.map((e, _) => (i(null != e, "Store.waitFor(...) called with null Store at index ".concat(_, " for store ").concat(this.getName())), null != e._dispatcher) ? (i(e._dispatcher === this._dispatcher, "Stores belong to two separate dispatchers."), e.getDispatchToken()) : null);
     this._dispatcher.addDependencies(this.getDispatchToken(), t.filter(e => null != e))
   }
   emitChange() {

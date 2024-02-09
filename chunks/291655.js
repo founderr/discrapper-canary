@@ -1,51 +1,51 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(t), E.d(t, {
   default: function() {
-    return E
+    return L
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  s = n.n(r),
-  o = n("193865"),
-  u = n("780571"),
-  a = n("39331"),
-  c = n("596368"),
-  d = n("227439"),
-  f = n("877671"),
-  E = i.memo(function(e) {
-    var t, n, i;
+var _ = E("37983"),
+  s = E("884691"),
+  a = E("414456"),
+  T = E.n(a),
+  n = E("193865"),
+  A = E("780571"),
+  u = E("39331"),
+  I = E("596368"),
+  i = E("227439"),
+  l = E("877671"),
+  L = s.memo(function(e) {
+    var t, E, s;
     let {
-      message: r,
-      channel: E,
-      compact: h,
-      className: p,
-      isGroupStart: _,
-      hideSimpleEmbedContent: v = !0,
-      disableInteraction: m
-    } = e, C = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), S = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
-      content: L
-    } = (0, a.default)(r, {
-      hideSimpleEmbedContent: v,
-      allowList: C.showListsAndHeaders || S.showListsAndHeaders,
-      allowHeading: C.showListsAndHeaders || S.showListsAndHeaders,
-      allowLinks: C.showMaskedLinks || S.showMaskedLinks,
-      previewLinkTarget: C.showMaskedLinks || S.showMaskedLinks
+      message: a,
+      channel: L,
+      compact: o,
+      className: r,
+      isGroupStart: d,
+      hideSimpleEmbedContent: N = !0,
+      disableInteraction: S
+    } = e, g = (0, n.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = a.editedTimestamp) && void 0 !== t ? t : a.timestamp).valueOf()), D = (0, n.useShowImprovedMarkdownGuildExperimentConfig)(null !== (E = null == L ? void 0 : L.guild_id) && void 0 !== E ? E : "", (null !== (s = a.editedTimestamp) && void 0 !== s ? s : a.timestamp).valueOf()), {
+      content: G
+    } = (0, u.default)(a, {
+      hideSimpleEmbedContent: N,
+      allowList: g.showListsAndHeaders || D.showListsAndHeaders,
+      allowHeading: g.showListsAndHeaders || D.showListsAndHeaders,
+      allowLinks: g.showMaskedLinks || D.showMaskedLinks,
+      previewLinkTarget: g.showMaskedLinks || D.showMaskedLinks
     });
-    return (0, l.jsx)(u.default, {
-      compact: h,
-      className: s(p, {
-        [f.message]: !0,
-        [f.cozyMessage]: !h,
-        [f.groupStart]: _
+    return (0, _.jsx)(A.default, {
+      compact: o,
+      className: T(r, {
+        [l.message]: !0,
+        [l.cozyMessage]: !o,
+        [l.groupStart]: d
       }),
-      childrenHeader: (0, d.default)({
+      childrenHeader: (0, i.default)({
         ...e,
-        channel: E,
+        channel: L,
         guildId: void 0
       }),
-      childrenMessageContent: (0, c.default)(e, L),
-      disableInteraction: m
+      childrenMessageContent: (0, I.default)(e, G),
+      disableInteraction: S
     })
   })

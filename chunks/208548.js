@@ -31,17 +31,17 @@ function A(t) {
     isRequiredField: g = !0,
     shouldUpdateBothEmojiFields: m = !1,
     setEmojiId: N,
-    setEmojiName: T
-  } = t, L = (0, h.default)({
+    setEmojiName: L
+  } = t, T = (0, h.default)({
     emojiId: A,
     emojiName: _
-  }), y = (0, o.useStateFromStores)([p.default], () => null != n ? p.default.getDefaultChannel(n) : null), x = i.createRef(), P = (0, d.default)(x), S = () => {
-    T(void 0), N(void 0)
+  }), x = (0, o.useStateFromStores)([p.default], () => null != n ? p.default.getDefaultChannel(n) : null), y = i.createRef(), S = (0, d.default)(y), P = () => {
+    L(void 0), N(void 0)
   }, R = t => (e, n) => {
     let l = (null == e ? void 0 : e.id) == null;
-    S(), l ? T(null == e ? void 0 : e.optionallyDiverseSequence) : (m && T(null == e ? void 0 : e.name), N(null == e ? void 0 : e.id)), n && t()
+    P(), l ? L(null == e ? void 0 : e.optionallyDiverseSequence) : (m && L(null == e ? void 0 : e.name), N(null == e ? void 0 : e.id)), n && t()
   }, w = t => {
-    t.stopPropagation(), S()
+    t.stopPropagation(), P()
   };
   return (0, l.jsx)(s.FormItem, {
     required: g,
@@ -61,7 +61,7 @@ function A(t) {
           onNavigateAway: e,
           onSelectEmoji: R(e),
           guildId: n,
-          channel: y
+          channel: x
         })
       },
       children: (t, e) => {
@@ -71,7 +71,7 @@ function A(t) {
         return (0, l.jsxs)("div", {
           ...t,
           className: E.emojiInput,
-          ref: x,
+          ref: y,
           children: [(0, l.jsx)(C.default, {
             className: E.emojiButton,
             active: n,
@@ -83,9 +83,9 @@ function A(t) {
           }), (0, l.jsx)(s.TextInput, {
             inputClassName: E.emojiText,
             placeholder: I.default.Messages.GUILD_STICKER_UPLOAD_RELATED_EMOJI_PLACEHOLDER,
-            value: null != L ? ":".concat(L, ":") : "",
+            value: null != T ? ":".concat(T, ":") : "",
             readOnly: !0
-          }), P && null != L && (0, l.jsx)(c.default, {
+          }), S && null != T && (0, l.jsx)(c.default, {
             ...t,
             onClick: w,
             className: E.removeButton

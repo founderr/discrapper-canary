@@ -42,7 +42,7 @@ function S(e) {
 
 function _(e, t) {
   let n;
-  let l = v((0, g.truncateText)(e.name, 32));
+  let l = N((0, g.truncateText)(e.name, 32));
   return {
     type: "channel",
     content: [n = "italics" === t ? {
@@ -57,12 +57,12 @@ function _(e, t) {
 function T(e) {
   return {
     type: "channel",
-    content: [v("")],
+    content: [N("")],
     iconType: e ? "post" : "message"
   }
 }
 
-function N(e, t) {
+function I(e, t) {
   var n;
   let l = s.default.getChannel(e),
     r = (0, u.getChannelRoleSubscriptionStatus)(e, s.default, a.default, d.default).isSubscriptionGated,
@@ -98,7 +98,7 @@ function N(e, t) {
   } : null
 }
 
-function I(e) {
+function v(e) {
   return {
     type: "link",
     content: [{
@@ -110,7 +110,7 @@ function I(e) {
   }
 }
 
-function v(e) {
+function N(e) {
   return {
     type: "text",
     content: e
@@ -139,7 +139,7 @@ function b(e, t, n, l) {
   if (!e.canViewChannel) return function(e, t) {
     let n = {
       type: "channel",
-      content: [v(e.roleSubscriptionGated ? e.name : L.default.Messages.NO_ACCESS)],
+      content: [N(e.roleSubscriptionGated ? e.name : L.default.Messages.NO_ACCESS)],
       channelType: e.roleSubscriptionGated ? e.type : y.ChannelTypes.UNKNOWN,
       iconType: "locked"
     };
@@ -152,7 +152,7 @@ function b(e, t, n, l) {
       content: [n]
     }
   }(e, t);
-  if (!e.isMentionable) return v("#".concat(e.name));
+  if (!e.isMentionable) return N("#".concat(e.name));
   let r = {
       type: "channelMention",
       channelId: e.id,
@@ -169,7 +169,7 @@ function b(e, t, n, l) {
       inContent: [_(e)],
       content: [T(!1)]
     };
-    return null != (i = l) ? I(i) : v("#".concat(L.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
+    return null != (i = l) ? v(i) : N("#".concat(L.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
   }
   let u = e.guildId === n;
   return {
@@ -223,7 +223,7 @@ let M = {
         type: "channelMention",
         id: l
       };
-      let r = N(l, n.mentionChannels);
+      let r = I(l, n.mentionChannels);
       return null == r ? R(null, l, null, A(n.channelId)) : b(r, null, A(n.channelId))
     }
   },
@@ -239,8 +239,8 @@ let M = {
         r = e[1],
         a = e[2],
         i = e[3];
-      if (null == a) return I(l);
-      let u = N(a, null);
+      if (null == a) return v(l);
+      let u = I(a, null);
       return null == u ? R(r, a, i, A(n.channelId), l) : b(u, i, A(n.channelId), l)
     }
   },
@@ -254,10 +254,10 @@ let M = {
         a = e[2],
         i = e[3],
         u = e[4];
-      if (null == a || null == i) return I(l);
-      let o = N(i, null);
+      if (null == a || null == i) return v(l);
+      let o = I(i, null);
       if (null != o) return b(o, u, A(n.channelId), l);
-      let s = N(a, null);
+      let s = I(a, null);
       return null != s ? b(s, u, A(n.channelId), l) : R(r, a, u, A(n.channelId), l)
     }
   };

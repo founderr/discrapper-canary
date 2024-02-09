@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("669491"),
   r = s("77078"),
   o = s("461380"),
@@ -19,36 +19,36 @@ var n = s("414456"),
     let {
       channelId: t,
       formField: s,
-      index: n,
+      index: l,
       isDragEnabled: _,
-      isDropHovered: T,
-      onDrop: I,
-      onEdit: S,
-      onRemove: N,
-      title: g
-    } = e, f = s.values, A = f.slice(0, 1), L = f.length - A.length;
+      isDropHovered: I,
+      onDrop: f,
+      onEdit: T,
+      onRemove: S,
+      title: m
+    } = e, N = s.values, g = N.slice(0, 1), h = N.length - g.length;
     return (0, a.jsxs)(u.default, {
       field: s,
-      index: n,
+      index: l,
       isDragEnabled: _,
-      isDropHovered: T,
-      onDrop: I,
-      onEdit: S,
-      onRemove: N,
-      title: g,
+      isDropHovered: I,
+      onDrop: f,
+      onEdit: T,
+      onRemove: S,
+      title: m,
       children: [(0, a.jsx)(d.TermsFieldBody, {
-        className: l(E.fieldBackground, {
-          [E.withFooter]: 0 !== L
+        className: n(E.fieldBackground, {
+          [E.withFooter]: 0 !== h
         }),
-        terms: A,
+        terms: g,
         channelId: t
-      }), 0 !== L && (0, a.jsxs)(r.Clickable, {
-        className: l(E.fieldFooterContainer, E.clickable),
-        onClick: S,
+      }), 0 !== h && (0, a.jsxs)(r.Clickable, {
+        className: n(E.fieldFooterContainer, E.clickable),
+        onClick: T,
         children: [(0, a.jsx)(r.FormText, {
           className: E.clickable,
           children: c.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
-            count: L
+            count: h
           })
         }), (0, a.jsx)(o.default, {
           className: E.termsFieldCaretIcon,

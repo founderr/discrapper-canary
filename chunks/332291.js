@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var i = n("37983"),
-  r = n("884691"),
+var r = n("37983"),
+  i = n("884691"),
   l = n("414456"),
-  s = n.n(l),
-  a = n("446674"),
+  a = n.n(l),
+  s = n("446674"),
   o = n("77078"),
   u = n("106435"),
   d = n("446488"),
@@ -16,7 +16,7 @@ var i = n("37983"),
   m = n("760068");
 
 function f() {
-  let e = (0, a.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3)),
+  let e = (0, s.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3)),
     t = e[0],
     {
       avatarSrc: n,
@@ -27,21 +27,21 @@ function f() {
       animateOnHover: !0
     }),
     f = e => null != e.globalName ? e.globalName : e.username,
-    _ = r.useMemo(() => e.length >= 2 ? c.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+    _ = i.useMemo(() => e.length >= 2 ? c.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
       username: f(e[0])
     }) : 1 === e.length ? c.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
       username: f(e[0])
     }) : "", [e]);
-  return 0 === e.length ? null : (0, i.jsxs)("div", {
+  return 0 === e.length ? null : (0, r.jsxs)("div", {
     className: m.container,
-    children: [(0, i.jsx)(o.Avatar, {
+    children: [(0, r.jsx)(o.Avatar, {
       className: m.icon,
       src: n,
       "aria-label": t.username,
       size: o.AvatarSizes.SIZE_24,
       ...l
-    }), (0, i.jsx)(o.Text, {
-      className: s(m.text),
+    }), (0, r.jsx)(o.Text, {
+      className: a(m.text),
       variant: "text-sm/normal",
       color: "always-white",
       children: _

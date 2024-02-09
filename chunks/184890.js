@@ -5,7 +5,7 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("862205");
-let n = (0, a.createExperiment)({
+let l = (0, a.createExperiment)({
     kind: "user",
     id: "2022-02_guild_audit_log_user",
     label: "Guild Audit Log - User Feature Flag",
@@ -20,7 +20,7 @@ let n = (0, a.createExperiment)({
       }
     }]
   }),
-  l = (0, a.createExperiment)({
+  n = (0, a.createExperiment)({
     kind: "guild",
     id: "2022-02_guild_audit_log_guild",
     label: "Guild Audit Log - Guild Feature Flag",
@@ -39,12 +39,12 @@ let n = (0, a.createExperiment)({
 function i(e) {
   let {
     enableForGuild: t
-  } = l.useExperiment({
+  } = n.useExperiment({
     guildId: null != e ? e : "",
     location: "da2d90_1"
   }), {
     enableForUser: s
-  } = n.useExperiment({
+  } = l.useExperiment({
     location: "da2d90_2"
   }, {
     autoTrackExposure: !1

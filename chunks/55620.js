@@ -1,5 +1,5 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   fetchAllStoreListingsForApplication: function() {
     return d
   },
@@ -16,16 +16,16 @@ n.r(e), n.d(e, {
     return S
   },
   matureDisagree: function() {
-    return T
-  },
-  joinPublishedStoreListingSkuGuild: function() {
     return h
   },
-  goToSKUStoreListing: function() {
+  joinPublishedStoreListingSkuGuild: function() {
     return _
   },
+  goToSKUStoreListing: function() {
+    return T
+  },
   goToApplicationStoreListing: function() {
-    return E
+    return C
   }
 });
 var i = n("872717"),
@@ -33,53 +33,53 @@ var i = n("872717"),
   a = n("84460");
 n("299285");
 var r = n("393414"),
-  u = n("552712");
+  s = n("552712");
 n("698041");
-var s = n("167726"),
+var u = n("167726"),
   o = n("271560"),
   c = n("49111");
 
-function d(t) {
+function d(e) {
   return (0, o.httpGetWithCountryCodeQuery)({
     url: c.Endpoints.STORE_PUBLISHED_LISTINGS_SKUS,
     query: {
-      application_id: t
+      application_id: e
     },
     oldFormErrors: !0
-  }).then(t => (l.default.dispatch({
+  }).then(e => (l.default.dispatch({
     type: "STORE_LISTINGS_FETCH_SUCCESS",
-    storeListings: t.body
-  }), t.body))
+    storeListings: e.body
+  }), e.body))
 }
 
-function f(t) {
-  let e = u.default.get(t),
-    n = null != e && (s.default.inTestModeForApplication(e.applicationId) || a.default.inDevModeForApplication(e.applicationId));
-  return (0, o.httpGetWithCountryCodeQuery)(n ? c.Endpoints.STORE_LISTINGS_SKU(t) : c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(t)).then(t => {
+function f(e) {
+  let t = s.default.get(e),
+    n = null != t && (u.default.inTestModeForApplication(t.applicationId) || a.default.inDevModeForApplication(t.applicationId));
+  return (0, o.httpGetWithCountryCodeQuery)(n ? c.Endpoints.STORE_LISTINGS_SKU(e) : c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(e)).then(e => {
     n ? l.default.dispatch({
       type: "STORE_LISTINGS_FETCH_SUCCESS",
-      storeListings: t.body
+      storeListings: e.body
     }) : l.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
-      storeListing: t.body
+      storeListing: e.body
     })
   })
 }
 
-function p(t) {
-  return (0, o.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_LISTING(t)).then(t => {
+function p(e) {
+  return (0, o.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_LISTING(e)).then(e => {
     l.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
-      storeListing: t.body
+      storeListing: e.body
     })
   })
 }
 
-function I(t) {
-  return (0, o.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(t)).then(t => {
+function I(e) {
+  return (0, o.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then(e => {
     l.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
-      storeListing: t.body
+      storeListing: e.body
     })
   })
 }
@@ -90,29 +90,29 @@ function S() {
   })
 }
 
-function T() {
+function h() {
   (0, r.transitionTo)(c.Routes.APPLICATION_STORE)
 }
 
-function h(t) {
+function _(e) {
   return i.default.post({
-    url: c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(t),
+    url: c.Endpoints.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
     oldFormErrors: !0
   })
 }
 
-function _(t, e) {
+function T(e, t) {
   let {
     pathname: n,
     ...i
-  } = (0, o.getStoreListingLocation)(t, e);
+  } = (0, o.getStoreListingLocation)(e, t);
   (0, r.transitionTo)(n, i)
 }
 
-function E(t, e) {
+function C(e, t) {
   let {
     pathname: n,
     ...i
-  } = (0, o.getApplicationStoreListingLocation)(t, e);
+  } = (0, o.getApplicationStoreListingLocation)(e, t);
   (0, r.transitionTo)(n, i)
 }

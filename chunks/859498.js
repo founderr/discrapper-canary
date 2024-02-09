@@ -1,10 +1,10 @@
 "use strict";
-var n, i, u, l;
-r.r(t), r.d(t, {
+var l, i, a, s;
+n.r(t), n.d(t, {
   RestartMethod: function() {
-    return n
+    return l
   },
   AnimationTypes: function() {
     return i
   }
-}), (u = n || (n = {})).FromLoop = "fromLoop", u.FromStart = "fromStart", (l = i || (i = {}))[l.UNSPECIFIED = 0] = "UNSPECIFIED", l[l.PERSISTENT = 1] = "PERSISTENT", l[l.INTERMITTENT = 2] = "INTERMITTENT"
+}), (a = l || (l = {})).FromLoop = "fromLoop", a.FromStart = "fromStart", (s = i || (i = {}))[s.UNSPECIFIED = 0] = "UNSPECIFIED", s[s.PERSISTENT = 1] = "PERSISTENT", s[s.INTERMITTENT = 2] = "INTERMITTENT"

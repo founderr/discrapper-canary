@@ -22,8 +22,8 @@ var i = n("446674"),
   m = n("777003"),
   h = n("49111"),
   E = n("782340"),
-  g = n("814076"),
-  S = n("293773");
+  S = n("814076"),
+  g = n("293773");
 
 function C(e, t) {
   let n = (0, i.useStateFromStores)([c.default], () => {
@@ -50,24 +50,24 @@ function T(e) {
   return (0, l.jsxs)(m.default, {
     children: [(0, l.jsx)(a.Heading, {
       variant: "eyebrow",
-      className: g.title,
+      className: S.title,
       children: E.default.Messages.PROFILE_IN_VOICE_CALL
     }), (0, l.jsxs)("div", {
-      className: S.voiceDisplayContainer,
+      className: g.voiceDisplayContainer,
       children: [(0, l.jsxs)("div", {
-        className: S.iconContainer,
+        className: g.iconContainer,
         children: [(0, l.jsx)(f.default, {
           size: f.default.Sizes.SMALL,
           active: !0,
           guild: t
         }), (0, l.jsx)("div", {
-          className: S.speakerIconContainer,
+          className: g.speakerIconContainer,
           children: (0, l.jsx)(p.default, {
-            className: S.speakerIcon
+            className: g.speakerIcon
           })
         })]
       }), (0, l.jsxs)("div", {
-        className: S.voiceChannelInfo,
+        className: g.voiceChannelInfo,
         children: [(0, l.jsx)(a.Text, {
           variant: "text-sm/semibold",
           children: n.name

@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(t), E.d(t, {
   default: function() {
-    return u
+    return A
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("77078"),
-  s = n("581583"),
-  o = n("843455");
+var _ = E("37983"),
+  s = E("884691"),
+  a = E("77078"),
+  T = E("581583"),
+  n = E("843455");
 
-function u(e) {
+function A(e) {
   var t;
   let {
-    guildId: n,
-    role: u,
-    className: a
-  } = e, c = (0, r.useToken)(r.tokens.unsafe_rawColors.PRIMARY_300).hex(), d = null !== (t = null == u ? void 0 : u.colorString) && void 0 !== t ? t : c, f = i.useMemo(() => ({
-    backgroundColor: "".concat(d, "27")
-  }), [d]);
-  return null == u ? null : (0, l.jsx)(s.MemberRole, {
-    className: a,
-    style: f,
-    role: u,
-    guildId: n,
+    guildId: E,
+    role: A,
+    className: u
+  } = e, I = (0, a.useToken)(a.tokens.unsafe_rawColors.PRIMARY_300).hex(), i = null !== (t = null == A ? void 0 : A.colorString) && void 0 !== t ? t : I, l = s.useMemo(() => ({
+    backgroundColor: "".concat(i, "27")
+  }), [i]);
+  return null == A ? null : (0, _.jsx)(T.MemberRole, {
+    className: u,
+    style: l,
+    role: A,
+    guildId: E,
     canRemove: !1,
-    onRemove: o.NOOP
+    onRemove: n.NOOP
   })
 }

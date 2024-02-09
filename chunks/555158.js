@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   HelpMessageTypes: function() {
     return r
   },
@@ -18,15 +18,15 @@ var s = n("414456"),
   f = n("423487"),
   h = n("557296");
 (i = r || (r = {}))[i.WARNING = 0] = "WARNING", i[i.INFO = 1] = "INFO", i[i.ERROR = 2] = "ERROR", i[i.POSITIVE = 3] = "POSITIVE";
-var p = function(e) {
+var p = function(t) {
   let {
-    children: t,
+    children: e,
     messageType: n,
     className: i,
     textColor: r = "text-normal",
     textVariant: s = "text-sm/medium"
-  } = e, p = function(e) {
-    switch (e) {
+  } = t, p = function(t) {
+    switch (t) {
       case 0:
         return f.default;
       case 1:
@@ -36,8 +36,8 @@ var p = function(e) {
       case 3:
         return u.default
     }
-  }(n), C = function(e) {
-    switch (e) {
+  }(n), _ = function(t) {
+    switch (t) {
       case 0:
         return h.warning;
       case 1:
@@ -49,7 +49,7 @@ var p = function(e) {
     }
   }(n);
   return (0, l.jsxs)("div", {
-    className: a(h.container, C, i),
+    className: a(h.container, _, i),
     children: [(0, l.jsx)("div", {
       className: h.iconDiv,
       children: (0, l.jsx)(p, {
@@ -59,7 +59,7 @@ var p = function(e) {
       className: h.text,
       color: r,
       variant: s,
-      children: t
+      children: e
     })]
   })
 }

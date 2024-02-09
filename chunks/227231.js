@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return r
   },
   questUserStatusFromServer: function() {
-    return i
+    return a
   },
   questWithUserStatusFromServer: function() {
     return I
@@ -44,18 +44,18 @@ let n = "https://cdn.discordapp.com/assets/quests/";
 function r(e, _) {
   let E;
   for (let [t, o] of e)
-    if (o.config.applicationId === _ && !a(o)) {
+    if (o.config.applicationId === _ && !i(o)) {
       E = o;
       break
     } return E
 }
 
-function a(e) {
+function i(e) {
   let _ = new Date(e.config.expiresAt);
   return _.valueOf() <= Date.now()
 }
 
-function i(e) {
+function a(e) {
   return {
     userId: e.user_id,
     questId: e.quest_id,
@@ -98,7 +98,7 @@ function I(e) {
       },
       rewardCodePlatforms: _.reward_code_platforms.filter(e => t.QUEST_REWARD_CODE_PLATFORMS_SET.has(e))
     },
-    userStatus: null == e.user_status ? null : i(e.user_status),
+    userStatus: null == e.user_status ? null : a(e.user_status),
     targetedContent: e.targeted_content
   }
 }
@@ -120,7 +120,7 @@ let T = e => "".concat(n).concat(e).concat("/reward.png"),
 
 function R(e, _) {
   for (let [E, t] of e)
-    if (!a(t) && t.targetedContent.includes(_)) return t;
+    if (!i(t) && t.targetedContent.includes(_)) return t;
   return null
 }
 let l = e => {

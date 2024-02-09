@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("77078"),
   r = s("213523"),
   o = s("567054"),
@@ -19,7 +19,7 @@ var n = s("414456"),
       addFormField: t
     } = e;
     return (0, a.jsxs)("div", {
-      className: l(c.spacingContainer, c.leftRailIconContainer, c.backgroundContainer),
+      className: n(c.spacingContainer, c.leftRailIconContainer, c.backgroundContainer),
       children: [(0, a.jsx)("div", {
         className: c.iconContainer,
         children: (0, a.jsx)(r.default, {

@@ -1,26 +1,26 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return T
+    return S
   }
 }), r("794252");
-var n = r("37983");
+var a = r("37983");
 r("884691");
-var a = r("414456"),
-  i = r.n(a),
-  s = r("506838"),
+var n = r("414456"),
+  s = r.n(n),
+  i = r("506838"),
   u = r("446674"),
   o = r("77078"),
   l = r("491232"),
   c = r("984002"),
   d = r("716120"),
-  E = r("915639"),
-  f = r("824563"),
-  _ = r("719923"),
-  A = r("795158"),
+  f = r("915639"),
+  E = r("824563"),
+  m = r("719923"),
+  p = r("795158"),
   C = r("782340"),
-  p = r("632000");
-let I = [{
+  _ = r("632000");
+let g = [{
     avatarSize: o.AvatarSizes.SIZE_40,
     showStatus: !1
   }, {
@@ -33,20 +33,20 @@ let I = [{
     avatarSize: o.AvatarSizes.SIZE_32,
     showStatus: !0
   }],
-  m = e => {
+  A = e => {
     let {
       purchase: t
-    } = e, r = (0, u.useStateFromStores)([E.default], () => E.default.locale), a = (0, l.isPremiumCollectiblesPurchase)(t);
-    return (0, n.jsxs)("div", {
-      className: p.purchaseInfo,
-      children: [(0, n.jsx)(o.Text, {
+    } = e, r = (0, u.useStateFromStores)([f.default], () => f.default.locale), n = (0, l.isPremiumCollectiblesPurchase)(t);
+    return (0, a.jsxs)("div", {
+      className: _.purchaseInfo,
+      children: [(0, a.jsx)(o.Text, {
         variant: "text-sm/semibold",
         color: "header-primary",
         children: t.name
-      }), (0, n.jsx)(o.Text, {
+      }), (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         children: t.summary
-      }), (0, n.jsxs)(o.Text, {
+      }), (0, a.jsxs)(o.Text, {
         variant: "text-xxs/normal",
         color: "text-muted",
         children: [C.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
@@ -54,72 +54,72 @@ let I = [{
             month: "long",
             year: "numeric"
           })
-        }), a && (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)("br", {}), C.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
+        }), n && (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)("br", {}), C.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
         })]
       })]
     })
   };
-var T = e => {
+var S = e => {
   let {
     user: t,
     avatarDecorationOverride: r,
-    className: a
-  } = e, E = (0, u.useStateFromStores)([f.default], () => f.default.getStatus(t.id)), {
-    category: T,
-    product: S,
-    purchase: N
-  } = (0, c.default)(null == r ? void 0 : r.skuId), R = _.default.canUseCollectibles(t), g = (0, l.isPremiumCollectiblesPurchase)(N), O = (0, l.isPremiumCollectiblesProduct)(S), h = !R && g;
-  return null != S && (null == N || h) ? (0, n.jsxs)("div", {
-    className: i(p.modalPreview, p.shopPreviewContainer, a),
-    children: [(0, n.jsx)(d.default, {
-      asset: null == T ? void 0 : T.banner,
-      className: p.shopPreviewBanner,
-      children: (0, n.jsx)(A.default, {
+    className: n
+  } = e, f = (0, u.useStateFromStores)([E.default], () => E.default.getStatus(t.id)), {
+    category: S,
+    product: h,
+    purchase: v
+  } = (0, c.default)(null == r ? void 0 : r.skuId), I = m.default.canUseCollectibles(t), N = (0, l.isPremiumCollectiblesPurchase)(v), T = (0, l.isPremiumCollectiblesProduct)(h), x = !I && N;
+  return null != h && (null == v || x) ? (0, a.jsxs)("div", {
+    className: s(_.modalPreview, _.shopPreviewContainer, n),
+    children: [(0, a.jsx)(d.default, {
+      asset: null == S ? void 0 : S.banner,
+      className: _.shopPreviewBanner,
+      children: (0, a.jsx)(p.default, {
         user: t,
         avatarDecorationOverride: r
       })
-    }), (0, n.jsxs)("div", {
-      className: p.shopPreviewTextContainer,
-      children: [(0, n.jsx)(o.Text, {
+    }), (0, a.jsxs)("div", {
+      className: _.shopPreviewTextContainer,
+      children: [(0, a.jsx)(o.Text, {
         variant: "text-sm/semibold",
-        children: S.name
-      }), (0, n.jsx)(o.Text, {
+        children: h.name
+      }), (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: h ? C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, s.match)([O, R]).with([!0, !0], () => C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: x ? C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([T, I]).with([!0, !0], () => C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => C.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
-  }) : (0, n.jsxs)("div", {
-    className: i(p.modalPreview, a),
-    children: [(0, n.jsxs)("div", {
-      className: p.previewSections,
-      children: [(0, n.jsx)("div", {
-        className: p.decorationPreview,
-        children: (0, n.jsx)(A.default, {
+  }) : (0, a.jsxs)("div", {
+    className: s(_.modalPreview, n),
+    children: [(0, a.jsxs)("div", {
+      className: _.previewSections,
+      children: [(0, a.jsx)("div", {
+        className: _.decorationPreview,
+        children: (0, a.jsx)(p.default, {
           user: t,
           avatarDecorationOverride: r
         })
-      }), (0, n.jsx)("div", {
-        className: p.smallDecorationPreviewsContainer,
-        children: I.map(e => {
+      }), (0, a.jsx)("div", {
+        className: _.smallDecorationPreviewsContainer,
+        children: g.map(e => {
           let {
-            avatarSize: a,
-            showStatus: i
+            avatarSize: n,
+            showStatus: s
           } = e;
-          return (0, n.jsx)("div", {
-            className: p.smallDecorationPreview,
-            children: (0, n.jsx)(A.default, {
+          return (0, a.jsx)("div", {
+            className: _.smallDecorationPreview,
+            children: (0, a.jsx)(p.default, {
               user: t,
-              avatarSize: a,
+              avatarSize: n,
               avatarDecorationOverride: r,
-              status: i ? E : void 0,
+              status: s ? f : void 0,
               "aria-hidden": !0
             })
-          }, "".concat(a).concat(i))
+          }, "".concat(n).concat(s))
         })
       })]
-    }), null != N && (0, n.jsx)(m, {
-      purchase: N
+    }), null != v && (0, a.jsx)(A, {
+      purchase: v
     })]
   })
 }

@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("862337"),
-  o = n("899633"),
+  o = n("862337"),
+  u = n("899633"),
   d = n("191225"),
   c = n("299285"),
   f = n("442939"),
@@ -42,9 +42,9 @@ let P = l.memo(e => {
     deaf: l,
     user: s,
     channel: i,
-    sessionId: u,
+    sessionId: o,
     nick: _
-  } = e, A = s.id, b = (0, r.useStateFromStores)([C.default], () => C.default.getId() === A, [A]), [P, D, U] = (0, r.useStateFromStoresArray)([S.default], () => b ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(A), !1, S.default.isLocalVideoDisabled(A)], [b, A]), w = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), F = (0, o.default)({
+  } = e, A = s.id, b = (0, r.useStateFromStores)([C.default], () => C.default.getId() === A, [A]), [P, D, U] = (0, r.useStateFromStoresArray)([S.default], () => b ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(A), !1, S.default.isLocalVideoDisabled(A)], [b, A]), w = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), F = (0, u.default)({
     userId: A,
     checkSoundSharing: !0
   }), k = (0, r.useStateFromStores)([g.default], () => g.default.isGuestOrLurker(i.guild_id, A)), V = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
@@ -56,7 +56,7 @@ let P = l.memo(e => {
   null != Y && j.default.trackExposure({
     location: "voice_users"
   });
-  let [z, K] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(A, i.getGuildId()), E.default.getActiveStreamForUser(A, i.getGuildId())], [i, A]), Z = (0, r.useStateFromStores)([v.default], () => v.default.getSessionById(u)), X = R.default.useName(s), J = (0, r.useStateFromStores)([N.default], () => N.default.getVoicePlatformForChannel(i.id, A), [i.id, A]), {
+  let [z, K] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(A, i.getGuildId()), E.default.getActiveStreamForUser(A, i.getGuildId())], [i, A]), Z = (0, r.useStateFromStores)([v.default], () => v.default.getSessionById(o)), X = R.default.useName(s), J = (0, r.useStateFromStores)([N.default], () => N.default.getVoicePlatformForChannel(i.id, A), [i.id, A]), {
     enableHangStatus: q
   } = h.HangStatusExperiment.useExperiment({
     guildId: i.guild_id,
@@ -98,7 +98,7 @@ var D = function(e) {
     allowPreviews: t = !0,
     allowDragging: n = !0,
     channel: s,
-    voiceStates: o,
+    voiceStates: u,
     collapsed: d,
     collapsedMax: c = 6,
     tabIndex: h,
@@ -107,9 +107,9 @@ var D = function(e) {
     withGuildIcon: E = !1,
     className: g,
     children: S
-  } = e, [T, v] = l.useState(null), [x, N] = l.useState(!1), M = l.useRef(null), R = l.useRef(new u.DelayedCall(50, () => {
+  } = e, [T, v] = l.useState(null), [x, N] = l.useState(!1), M = l.useRef(null), R = l.useRef(new o.DelayedCall(50, () => {
     v(M.current), M.current = null
-  })), j = l.useRef(new u.DelayedCall(175, () => {
+  })), j = l.useRef(new o.DelayedCall(175, () => {
     v(null)
   })), y = l.useCallback(e => {
     t && (N(!0), j.current.cancel(), M.current = e, R.current.delay())
@@ -118,7 +118,7 @@ var D = function(e) {
   }, [t, T]), U = (0, r.useStateFromStoresArray)([I.default], () => {
     if (d) return [];
     let e = new Set;
-    return null == o || o.forEach(t => {
+    return null == u || u.forEach(t => {
       let {
         user: n
       } = t, a = I.default.getActivities(n.id, s.guild_id);
@@ -129,8 +129,8 @@ var D = function(e) {
   });
   (0, f.default)(U);
   let w = (() => {
-    if (null == o || 0 === o.length) return null;
-    let e = d && o.length > c + 1 ? o.slice(0, c) : o,
+    if (null == u || 0 === u.length) return null;
+    let e = d && u.length > c + 1 ? u.slice(0, c) : u,
       t = e.map(e => {
         var t;
         let {
@@ -162,8 +162,8 @@ var D = function(e) {
     return null != m && m > 0 ? t.push((0, a.jsx)(L.AudienceVoiceUser, {
       collapsed: d,
       numAudience: m
-    })) : d && o.length > c + 1 && t.push((0, a.jsx)(L.MoreVoiceUser, {
-      numUsers: o.length - c
+    })) : d && u.length > c + 1 && t.push((0, a.jsx)(L.MoreVoiceUser, {
+      numUsers: u.length - c
     })), t
   })();
   return null == w && null == S ? null : (0, a.jsxs)(A.VoiceUserList, {

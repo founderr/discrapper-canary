@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return I
   }
 });
 var l = n("37983");
 n("884691");
 var i = n("414456"),
-  r = n.n(i),
-  a = n("77078"),
-  s = n("354023"),
+  a = n.n(i),
+  s = n("77078"),
+  r = n("354023"),
   u = n("782340"),
   o = n("911011"),
   d = n("926622");
-let c = s.default.getMaxAgeOptions;
+let c = r.default.getMaxAgeOptions;
 
 function f(e) {
   let {
@@ -23,57 +23,57 @@ function f(e) {
   } = e;
   return n ? (0, l.jsx)("div", {
     className: d.marginTop20
-  }) : (0, l.jsx)(a.FormItem, {
-    className: r(d.marginTop20, o.switch),
-    children: (0, l.jsx)(a.FormSwitch, {
+  }) : (0, l.jsx)(s.FormItem, {
+    className: a(d.marginTop20, o.switch),
+    children: (0, l.jsx)(s.FormSwitch, {
       value: t,
       onChange: e => i(e),
       note: u.default.Messages.TEMPORARY_MEMBERSHIP_EXPLANATION,
       hideBorder: !0,
-      children: (0, l.jsx)(a.Text, {
+      children: (0, l.jsx)(s.Text, {
         variant: "text-sm/normal",
         children: u.default.Messages.GRANT_TEMPORARY_MEMBERSHIP
       })
     })
   })
 }
-let h = s.default.getMaxUsesOptions;
+let h = r.default.getMaxUsesOptions;
 
-function g(e) {
+function I(e) {
   var t;
   let {
     shouldHideTemporaryInviteToggle: n,
     maxAge: i,
-    maxUses: s,
-    temporary: g,
-    onGenerateNewLink: I,
+    maxUses: r,
+    temporary: I,
+    onGenerateNewLink: g,
     onToggleTemporary: E,
-    onSelectMaxAge: _,
-    onSelectMaxUses: p
-  } = e, v = c.find(e => e.value === i), m = h.find(e => e.value === s);
+    onSelectMaxAge: p,
+    onSelectMaxUses: _
+  } = e, v = c.find(e => e.value === i), m = h.find(e => e.value === r);
   return (0, l.jsx)("div", {
     className: o.settingsContent,
     children: (0, l.jsxs)("form", {
-      onSubmit: I,
-      children: [(0, l.jsx)(a.FormItem, {
+      onSubmit: g,
+      children: [(0, l.jsx)(s.FormItem, {
         title: u.default.Messages.EXPIRE_AFTER,
         className: d.marginTop20,
-        children: (0, l.jsx)(a.SingleSelect, {
+        children: (0, l.jsx)(s.SingleSelect, {
           value: null !== (t = null == v ? void 0 : v.value) && void 0 !== t ? t : c[0].value,
           options: c,
-          onChange: _,
+          onChange: p,
           maxVisibleItems: 8
         })
-      }), (0, l.jsx)(a.FormItem, {
+      }), (0, l.jsx)(s.FormItem, {
         title: u.default.Messages.MAX_NUMBER_OF_USES,
-        className: r(d.marginTop20, d.marginBottom4),
-        children: (0, l.jsx)(a.SingleSelect, {
+        className: a(d.marginTop20, d.marginBottom4),
+        children: (0, l.jsx)(s.SingleSelect, {
           value: null == m ? void 0 : m.value,
           options: h,
-          onChange: p
+          onChange: _
         })
       }), (0, l.jsx)(f, {
-        temporary: g,
+        temporary: I,
         shouldHide: n,
         onToggleTemporary: E
       })]

@@ -1,97 +1,97 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return C
+    return h
   }
 });
-var n = a("37983");
-a("884691");
-var l = a("414456"),
-  s = a.n(l),
-  i = a("446674"),
-  r = a("77078"),
-  u = a("997289"),
-  o = a("697218"),
-  c = a("476263"),
-  d = a("216422"),
-  f = a("719923"),
-  T = a("485422"),
-  E = a("777003"),
-  m = a("49111"),
-  S = a("782340"),
-  A = a("125234"),
-  g = a("814076");
+var r = l("37983");
+l("884691");
+var a = l("414456"),
+  n = l.n(a),
+  s = l("446674"),
+  i = l("77078"),
+  o = l("997289"),
+  u = l("697218"),
+  d = l("476263"),
+  c = l("216422"),
+  f = l("719923"),
+  T = l("485422"),
+  p = l("777003"),
+  m = l("49111"),
+  E = l("782340"),
+  P = l("125234"),
+  S = l("814076");
 
-function _(e) {
+function v(e) {
   let {
     guildName: t
   } = e;
-  return (0, n.jsxs)("div", {
-    className: A.guildMemberProfileTooltip,
-    children: [(0, n.jsx)(d.default, {
-      className: A.guildMemberProfileTooltipNitroWheel
-    }), S.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
+  return (0, r.jsxs)("div", {
+    className: P.guildMemberProfileTooltip,
+    children: [(0, r.jsx)(c.default, {
+      className: P.guildMemberProfileTooltipNitroWheel
+    }), E.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
       guildName: t
     })]
   })
 }
 
-function C(e) {
+function h(e) {
   let {
     guild: t,
-    bio: l,
-    hidePersonalInformation: d,
-    isUsingGuildBio: C,
-    lastSection: p = !1,
-    animateOnHover: v = !1,
+    bio: a,
+    hidePersonalInformation: c,
+    isUsingGuildBio: h,
+    lastSection: g = !1,
+    animateOnHover: _ = !1,
     isHovering: N = !1,
-    lineClamp: I
+    lineClamp: O
   } = e, {
-    location: h
-  } = (0, u.useAnalyticsContext)(), M = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser()), x = f.default.canUsePremiumGuildMemberProfile(M);
-  return d || null == l || "" === l ? null : (0, n.jsxs)(E.default, {
-    lastSection: p,
-    children: [(0, n.jsxs)(r.Heading, {
+    location: U
+  } = (0, o.useAnalyticsContext)(), A = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), C = f.default.canUsePremiumGuildMemberProfile(A);
+  return c || null == a || "" === a ? null : (0, r.jsxs)(p.default, {
+    lastSection: g,
+    children: [(0, r.jsxs)(i.Heading, {
       variant: "eyebrow",
-      className: g.title,
-      children: [S.default.Messages.USER_POPOUT_ABOUT_ME, null != t && C && (0, n.jsx)(r.Tooltip, {
-        color: r.Tooltip.Colors.CUSTOM,
-        tooltipClassName: A.aboutMeGuildIconTooltip,
-        "aria-label": S.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
+      className: S.title,
+      children: [E.default.Messages.USER_POPOUT_ABOUT_ME, null != t && h && (0, r.jsx)(i.Tooltip, {
+        color: i.Tooltip.Colors.CUSTOM,
+        tooltipClassName: P.aboutMeGuildIconTooltip,
+        "aria-label": E.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
           guildName: t.name
         }),
-        text: (0, n.jsx)(_, {
+        text: (0, r.jsx)(v, {
           guildName: t.name
         }),
-        children: e => (0, n.jsx)(c.default, {
+        children: e => (0, r.jsx)(d.default, {
           ...e,
           onClick: () => {
             var t;
-            null == (t = e.onClick) || t(), null != M && !x && (0, r.openModalLazy)(async () => {
+            null == (t = e.onClick) || t(), null != A && !C && (0, i.openModalLazy)(async () => {
               let {
                 default: e
-              } = await a.el("414242").then(a.bind(a, "414242"));
-              return t => (0, n.jsx)(e, {
+              } = await l.el("414242").then(l.bind(l, "414242"));
+              return t => (0, r.jsx)(e, {
                 ...t,
                 source: {
-                  ...h,
+                  ...U,
                   object: m.AnalyticsObjects.GUILD_ICON
                 }
               })
             })
           },
           guild: t,
-          size: c.default.Sizes.SMOL,
-          className: s(A.aboutMeGuildIcon, {
-            [A.nonPremiumHoverState]: !x
+          size: d.default.Sizes.SMOL,
+          className: n(P.aboutMeGuildIcon, {
+            [P.nonPremiumHoverState]: !C
           })
         })
       })]
-    }), (0, n.jsx)(T.default, {
-      userBio: l,
-      animateOnHover: v,
+    }), (0, r.jsx)(T.default, {
+      userBio: a,
+      animateOnHover: _,
       isHovering: N,
-      lineClamp: I
+      lineClamp: O
     })]
   })
 }

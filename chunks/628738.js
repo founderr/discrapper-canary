@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
-  i = n("840339");
+var u = n("77078"),
+  a = n("840339");
 
-function r() {
-  return (0, a.jsx)(l.Spinner, {
-    className: i.spinner
+function i() {
+  return (0, l.jsx)(u.Spinner, {
+    className: a.spinner
   })
 }

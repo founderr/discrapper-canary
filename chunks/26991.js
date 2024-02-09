@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("283167"),
+var l = s("77078"),
+  n = s("283167"),
   i = s("868246"),
   r = s("414943"),
   o = s("945330"),
@@ -22,20 +22,20 @@ var n = s("77078"),
     } = e, _ = e => {
       let {
         secondaryCategoryIds: a
-      } = s, n = e.map(e => e.value);
+      } = s, l = e.map(e => e.value);
       if (e.length < a.length) {
-        let e = a.filter(e => !n.includes(e));
-        e.forEach(e => (0, l.deleteGuildCategory)(t.id, e))
+        let e = a.filter(e => !l.includes(e));
+        e.forEach(e => (0, n.deleteGuildCategory)(t.id, e))
       } else {
         if (a.length >= d.MAX_SUBCATEGORIES) return;
-        let e = n.filter(e => !a.includes(e));
-        e.forEach(e => (0, l.addGuildCategory)(t.id, e))
+        let e = l.filter(e => !a.includes(e));
+        e.forEach(e => (0, n.addGuildCategory)(t.id, e))
       }
-    }, T = e => {
-      (0, l.deleteGuildCategory)(t.id, e)
     }, I = e => {
+      (0, n.deleteGuildCategory)(t.id, e)
+    }, f = e => {
       e.preventDefault(), e.stopPropagation()
-    }, S = i.default.getAllCategories().map(e => {
+    }, T = i.default.getAllCategories().map(e => {
       let {
         categoryId: t,
         name: s
@@ -49,7 +49,7 @@ var n = s("77078"),
       value: s.secondaryCategoryIds,
       searchable: !0,
       clearable: !1,
-      options: S,
+      options: T,
       onChange: e => _(e),
       multiValueRenderer: e => {
         let {
@@ -58,10 +58,10 @@ var n = s("77078"),
         } = e;
         return (0, a.jsxs)("span", {
           className: u.subcategory,
-          onMouseDown: I,
-          children: [t, (0, a.jsx)(n.Clickable, {
+          onMouseDown: f,
+          children: [t, (0, a.jsx)(l.Clickable, {
             className: u.closeWrapper,
-            onClick: () => T(s),
+            onClick: () => I(s),
             children: (0, a.jsx)(o.default, {
               width: 16,
               height: 16,

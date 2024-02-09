@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 }), s("70102");
 var a = s("748820"),
-  n = s("872717"),
-  l = s("49111"),
+  l = s("872717"),
+  n = s("49111"),
   i = {
     generateNonce: function() {
       return (0, a.v4)()
@@ -16,8 +16,8 @@ var a = s("748820"),
         body: {
           handoff_token: t
         }
-      } = await n.default.post({
-        url: l.Endpoints.HANDOFF,
+      } = await l.default.post({
+        url: n.Endpoints.HANDOFF,
         body: {
           key: e
         },

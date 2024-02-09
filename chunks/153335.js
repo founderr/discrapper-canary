@@ -1,5 +1,5 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
     return A
   }
@@ -8,8 +8,8 @@ var i = n("37983"),
   l = n("884691"),
   a = n("627445"),
   r = n.n(a),
-  u = n("446674"),
-  s = n("913144"),
+  s = n("446674"),
+  u = n("913144"),
   o = n("775433"),
   c = n("685665"),
   d = n("598981"),
@@ -17,89 +17,89 @@ var i = n("37983"),
   p = n("697218"),
   I = n("10514"),
   S = n("650509"),
-  T = n("90592"),
-  h = n("333955"),
-  _ = n("599733"),
-  E = n("49111"),
-  C = n("782340"),
-  A = t => {
-    var e;
+  h = n("90592"),
+  _ = n("333955"),
+  T = n("599733"),
+  C = n("49111"),
+  E = n("782340"),
+  A = e => {
+    var t;
     let n, {
         listing: a,
         guildId: A,
         groupListingId: m,
-        analyticsLocation: N,
-        showBenefitsFirst: g,
-        onComplete: L,
-        forcesTransitionToGuild: O
-      } = t,
-      R = null == a ? void 0 : a.subscription_plans[0],
-      F = null == a ? void 0 : a.application_id,
-      P = null == R ? void 0 : R.id,
+        analyticsLocation: g,
+        showBenefitsFirst: N,
+        onComplete: O,
+        forcesTransitionToGuild: R
+      } = e,
+      L = null == a ? void 0 : a.subscription_plans[0],
+      P = null == a ? void 0 : a.application_id,
+      b = null == L ? void 0 : L.id,
       v = (null == a ? void 0 : a.published) === !0,
-      b = null == R ? void 0 : R.sku_id,
-      y = (0, u.useStateFromStores)([I.default], () => null != P ? I.default.get(P) : null),
-      D = (0, S.useApplication)(F),
-      H = (0, S.useSubscriptionListingsForGroup)(m, {
+      y = null == L ? void 0 : L.sku_id,
+      F = (0, s.useStateFromStores)([I.default], () => null != b ? I.default.get(b) : null),
+      D = (0, S.useApplication)(P),
+      x = (0, S.useSubscriptionListingsForGroup)(m, {
         includeSoftDeleted: !0
       }),
-      G = H.map(t => t.subscription_plans[0].id),
+      G = x.map(e => e.subscription_plans[0].id),
       {
-        analyticsLocations: x
+        analyticsLocations: M
       } = (0, c.default)(),
       {
-        activeSubscription: M,
-        activeEntitlement: w
-      } = (0, S.useActiveSubscriptionListingForApplication)(F, A),
-      U = (0, S.useEligibleApplicationSubscriptionGuilds)(F, A),
+        activeSubscription: w,
+        activeEntitlement: H
+      } = (0, S.useActiveSubscriptionListingForApplication)(P, A),
+      U = (0, S.useEligibleApplicationSubscriptionGuilds)(P, A),
       k = (0, d.default)(),
-      j = null != a && (0, T.isApplicationUserSubscription)(a.sku_flags),
-      B = null != w && w.userId === (null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id),
-      Y = null == w || B,
-      V = null == w || G.length > 1,
+      j = null != a && (0, h.isApplicationUserSubscription)(a.sku_flags),
+      B = null != H && H.userId === (null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
+      Y = null == H || B,
+      V = null == H || G.length > 1,
       K = null != A || U.length > 0,
-      z = j && B,
-      W = null != y && null != D && Y && V && (K || j) && !z;
-    Y ? K ? z && null != y && (n = C.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
-      tierName: y.name
-    })) : n = C.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = C.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, l.useEffect(() => {
-      v && null != b && k && s.default.wait(() => {
-        (0, o.fetchSubscriptionPlansForSKU)(b)
+      W = j && B,
+      z = null != F && null != D && Y && V && (K || j) && !W;
+    Y ? K ? W && null != F && (n = E.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
+      tierName: F.name
+    })) : n = E.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = E.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, l.useEffect(() => {
+      v && null != y && k && u.default.wait(() => {
+        (0, o.fetchSubscriptionPlansForSKU)(y)
       })
-    }, [v, b, k]);
-    let Z = l.useCallback(() => {
-      r(null != a, "No subscription listing"), r(null != D, "No application"), r(null != R, "No subscription plan"), r(v, "Cannot purchase this unpublished plan");
-      let t = () => {
+    }, [v, y, k]);
+    let q = l.useCallback(() => {
+      r(null != a, "No subscription listing"), r(null != D, "No application"), r(null != L, "No subscription plan"), r(v, "Cannot purchase this unpublished plan");
+      let e = () => {
         (0, f.openApplicationSubscriptionPaymentModal)({
-          activeSubscription: M,
-          analyticsSubscriptionType: E.SubscriptionTypes.APPLICATION,
-          analyticsLocations: x,
-          analyticsLocation: N,
-          renderHeader: (t, e, n) => (0, i.jsx)(h.PurchaseHeader, {
+          activeSubscription: w,
+          analyticsSubscriptionType: C.SubscriptionTypes.APPLICATION,
+          analyticsLocations: M,
+          analyticsLocation: g,
+          renderHeader: (e, t, n) => (0, i.jsx)(_.PurchaseHeader, {
             step: n,
-            onClose: () => e(!1)
+            onClose: () => t(!1)
           }),
-          initialPlanId: R.id,
-          skuId: R.sku_id,
+          initialPlanId: L.id,
+          skuId: L.sku_id,
           guildId: A,
           eligibleApplicationSubscriptionGuilds: U,
           planGroup: G,
           listing: a,
           application: D,
-          showBenefitsFirst: g,
-          onComplete: L,
-          forcesTransitionToGuild: O
+          showBenefitsFirst: N,
+          onComplete: O,
+          forcesTransitionToGuild: R
         })
       };
-      !K && j ? (0, _.confirmNoSharedServerSubscribeWarningModal)({
+      !K && j ? (0, T.confirmNoSharedServerSubscribeWarningModal)({
         application: D,
-        onConfirm: t,
+        onConfirm: e,
         onCancel: () => {}
-      }) : t()
-    }, [v, a, R, G, D, A, K, j, x, N, M, g, U, L, O]);
+      }) : e()
+    }, [v, a, L, G, D, A, K, j, M, g, w, N, U, O, R]);
     return {
-      openModal: Z,
-      canOpenModal: W,
+      openModal: q,
+      canOpenModal: z,
       cannotOpenReason: n
     }
   }

@@ -1,33 +1,33 @@
 "use strict";
-l.r(r), l.d(r, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return l
   }
 });
-var n = l("37983");
-l("884691");
-var t = l("414456"),
-  s = l.n(t),
-  a = l("288264");
+var r = n("37983");
+n("884691");
+var i = n("414456"),
+  u = n.n(i),
+  a = n("288264");
 
-function o(e) {
+function l(e) {
   let {
-    icon: r,
-    iconClassName: l,
-    description: t,
-    color: o
+    icon: t,
+    iconClassName: n,
+    description: i,
+    color: l
   } = e;
-  return (0, n.jsxs)("div", {
+  return (0, r.jsxs)("div", {
     className: a.perkRow,
-    children: [(0, n.jsx)("div", {
+    children: [(0, r.jsx)("div", {
       className: a.perkIconContainer,
-      children: (0, n.jsx)(r, {
-        color: o,
-        className: s(a.perkIcon, l)
+      children: (0, r.jsx)(t, {
+        color: l,
+        className: u(a.perkIcon, n)
       })
-    }), (0, n.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: a.perkDescription,
-      children: t
+      children: i
     })]
   })
 }

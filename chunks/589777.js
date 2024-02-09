@@ -4,15 +4,15 @@ n.r(t), n.d(t, {
     return P
   },
   getBuiltInCommands: function() {
-    return b
+    return H
   }
 }), n("222007"), n("70102");
 var i = n("627445"),
   l = n.n(i),
   a = n("866227"),
   s = n.n(a),
-  o = n("298386"),
-  r = n("223468"),
+  r = n("298386"),
+  o = n("223468"),
   u = n("450911"),
   d = n("851387"),
   c = n("819689"),
@@ -21,15 +21,15 @@ var i = n("627445"),
   m = n("884351"),
   I = n("252862"),
   _ = n("730498"),
-  C = n("300322"),
-  T = n("845579"),
+  T = n("300322"),
+  C = n("845579"),
   A = n("42203"),
   E = n("957255"),
   N = n("697218"),
   S = n("718517"),
   g = n("158998"),
-  M = n("524768"),
-  O = n("317041"),
+  O = n("524768"),
+  M = n("317041"),
   h = n("49111"),
   v = n("903639"),
   y = n("782340");
@@ -39,16 +39,16 @@ let D = n("150692").default,
     return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.value
   },
   P = {
-    [O.BuiltInSectionId.BUILT_IN]: {
-      id: O.BuiltInSectionId.BUILT_IN,
-      type: M.ApplicationCommandSectionType.BUILT_IN,
+    [M.BuiltInSectionId.BUILT_IN]: {
+      id: M.BuiltInSectionId.BUILT_IN,
+      type: O.ApplicationCommandSectionType.BUILT_IN,
       get name() {
         return y.default.Messages.COMMAND_SECTION_BUILT_IN_NAME
       }
     },
-    [O.BuiltInSectionId.FRECENCY]: {
-      id: O.BuiltInSectionId.FRECENCY,
-      type: M.ApplicationCommandSectionType.BUILT_IN,
+    [M.BuiltInSectionId.FRECENCY]: {
+      id: M.BuiltInSectionId.FRECENCY,
+      type: O.ApplicationCommandSectionType.BUILT_IN,
       get name() {
         return y.default.Messages.FREQUENTLY_USED
       }
@@ -59,8 +59,8 @@ let D = n("150692").default,
     name: "shrug",
     displayName: "shrug",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_SHRUG_DESCRIPTION
     },
@@ -90,8 +90,8 @@ let D = n("150692").default,
     name: "tableflip",
     displayName: "tableflip",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_TABLEFLIP_DESCRIPTION
     },
@@ -121,8 +121,8 @@ let D = n("150692").default,
     name: "unflip",
     displayName: "unflip",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION
     },
@@ -152,8 +152,8 @@ let D = n("150692").default,
     name: "tts",
     displayName: "tts",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_TTS_DESCRIPTION
     },
@@ -176,7 +176,7 @@ let D = n("150692").default,
       let {
         channel: t
       } = e;
-      return !t.isPrivate() && T.EnableTTSCommand.getSetting() && E.default.can(h.Permissions.SEND_TTS_MESSAGES, t)
+      return !t.isPrivate() && C.EnableTTSCommand.getSetting() && E.default.can(h.Permissions.SEND_TTS_MESSAGES, t)
     },
     execute: e => {
       var t;
@@ -191,8 +191,8 @@ let D = n("150692").default,
     name: "me",
     displayName: "me",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_ME_DESCRIPTION
     },
@@ -223,8 +223,8 @@ let D = n("150692").default,
     name: "spoiler",
     displayName: "spoiler",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN_TEXT,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_SPOILER_DESCRIPTION
     },
@@ -255,8 +255,8 @@ let D = n("150692").default,
     name: "nick",
     displayName: "nick",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_NICK_DESCRIPTION
     },
@@ -288,15 +288,15 @@ let D = n("150692").default,
       } = t;
       if (null == i) return;
       let a = null !== (n = R(e, "new_nick")) && void 0 !== n ? n : "";
-      r.default.changeNickname(i.id, l.id, h.ME, a || "")
+      o.default.changeNickname(i.id, l.id, h.ME, a || "")
     }
   }, {
     id: "-10",
     name: "thread",
     displayName: "thread",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_THREAD_DESCRIPTION
     },
@@ -330,22 +330,22 @@ let D = n("150692").default,
       let {
         channel: t
       } = e;
-      return (0, C.computeCanStartPublicThread)(t)
+      return (0, T.computeCanStartPublicThread)(t)
     },
     execute: async (e, t) => {
       var n, i;
       let {
         channel: l
-      } = t, a = null !== (n = R(e, "name")) && void 0 !== n ? n : "", s = null !== (i = R(e, "message")) && void 0 !== i ? i : "", r = await (0, _.createThread)(l, a, o.ChannelTypes.PUBLIC_THREAD, (0, I.getAutoArchiveDuration)(l, null), "Slash Command");
-      c.default.sendMessage(r.id, m.default.parse(r, s))
+      } = t, a = null !== (n = R(e, "name")) && void 0 !== n ? n : "", s = null !== (i = R(e, "message")) && void 0 !== i ? i : "", o = await (0, _.createThread)(l, a, r.ChannelTypes.PUBLIC_THREAD, (0, I.getAutoArchiveDuration)(l, null), "Slash Command");
+      c.default.sendMessage(o.id, m.default.parse(o, s))
     }
   }, {
     id: "-11",
     name: "kick",
     displayName: "kick",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_KICK_DESCRIPTION
     },
@@ -410,8 +410,8 @@ let D = n("150692").default,
     name: "ban",
     displayName: "ban",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_BAN_DESCRIPTION
     },
@@ -505,10 +505,10 @@ let D = n("150692").default,
         var t, n;
         if ("" === a) throw Error();
         let s = null !== (t = R(e, "delete_messages")) && void 0 !== t ? t : 0,
-          o = null !== (n = R(e, "reason")) && void 0 !== n ? n : "",
-          r = N.default.getUser(a);
-        await d.default.banUser(i.id, a, s, o), c.default.sendBotMessage(l.id, y.default.Messages.COMMAND_BAN_CONFIRMATION.format({
-          user: null != r ? g.default.getUserTag(r) : a
+          r = null !== (n = R(e, "reason")) && void 0 !== n ? n : "",
+          o = N.default.getUser(a);
+        await d.default.banUser(i.id, a, s, r), c.default.sendBotMessage(l.id, y.default.Messages.COMMAND_BAN_CONFIRMATION.format({
+          user: null != o ? g.default.getUserTag(o) : a
         }))
       };
       s().catch(() => {
@@ -520,8 +520,8 @@ let D = n("150692").default,
     name: "timeout",
     displayName: "timeout",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_TIMEOUT_DESCRIPTION
     },
@@ -588,19 +588,19 @@ let D = n("150692").default,
       }
       let a = async () => {
         var t, a;
-        let o = null !== (t = R(e, "duration")) && void 0 !== t ? t : "",
-          r = null !== (a = R(e, "reason")) && void 0 !== a ? a : "",
+        let r = null !== (t = R(e, "duration")) && void 0 !== t ? t : "",
+          o = null !== (a = R(e, "reason")) && void 0 !== a ? a : "",
           u = N.default.getUser(l);
         if (null == u) throw Error();
         await d.default.setCommunicationDisabledUntil({
           guildId: n.id,
           userId: l,
-          communicationDisabledUntilTimestamp: s().add(o, "s").toISOString(),
-          duration: o,
-          reason: r
+          communicationDisabledUntilTimestamp: s().add(r, "s").toISOString(),
+          duration: r,
+          reason: o
         }), c.default.sendBotMessage(i.id, y.default.Messages.COMMAND_TIMEOUT_CONFIRMATION.format({
           user: g.default.getUserTag(u),
-          duration: o
+          duration: r
         }))
       };
       a().catch(() => {
@@ -612,8 +612,8 @@ let D = n("150692").default,
     name: "msg",
     displayName: "msg",
     type: p.ApplicationCommandType.CHAT,
-    inputType: M.ApplicationCommandInputType.BUILT_IN,
-    applicationId: O.BuiltInSectionId.BUILT_IN,
+    inputType: O.ApplicationCommandInputType.BUILT_IN,
+    applicationId: M.BuiltInSectionId.BUILT_IN,
     get description() {
       return y.default.Messages.COMMAND_MSG_DESCRIPTION
     },
@@ -651,19 +651,19 @@ let D = n("150692").default,
       var n;
       let {
         channel: i
-      } = t, a = R(e, "user"), s = null !== (n = R(e, "message")) && void 0 !== n ? n : "", o = async () => {
+      } = t, a = R(e, "user"), s = null !== (n = R(e, "message")) && void 0 !== n ? n : "", r = async () => {
         await u.default.openPrivateChannel(a).then(e => {
           let t = A.default.getChannel(e);
           l(null != t, "Newly created PrivateChannel is null"), c.default.sendMessage(t.id, m.default.parse(t, s))
         })
       };
-      o().catch(() => {
+      r().catch(() => {
         c.default.sendBotMessage(i.id, y.default.Messages.COMMAND_MSG_ERROR)
       })
     }
   }],
-  B = L.filter(e => ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.name)),
-  b = (e, t, n) => {
-    let i = t ? L : B;
-    return i = i.filter(t => t.type === e && (!n || t.inputType === M.ApplicationCommandInputType.BUILT_IN_TEXT || t.inputType === M.ApplicationCommandInputType.BUILT_IN_INTEGRATION))
+  F = L.filter(e => ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.name)),
+  H = (e, t, n) => {
+    let i = t ? L : F;
+    return i = i.filter(t => t.type === e && (!n || t.inputType === O.ApplicationCommandInputType.BUILT_IN_TEXT || t.inputType === O.ApplicationCommandInputType.BUILT_IN_INTEGRATION))
   }

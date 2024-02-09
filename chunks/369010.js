@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useTopCommands: function() {
-    return o
+    return r
   },
   useTopRealCommands: function() {
-    return r
+    return o
   }
 });
 var i = n("884691"),
@@ -12,7 +12,7 @@ var i = n("884691"),
   a = n("872173"),
   s = n("342564");
 
-function o(e) {
+function r(e) {
   i.useEffect(() => {
     a.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []);
@@ -21,7 +21,7 @@ function o(e) {
   return n
 }
 
-function r(e) {
+function o(e) {
   i.useEffect(() => {
     a.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []);

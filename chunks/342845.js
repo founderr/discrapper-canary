@@ -1,29 +1,29 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
-var n = a("37983");
-a("884691");
-var l = a("943722"),
-  s = a("808742"),
-  i = a("49111"),
-  r = e => {
+var r = l("37983");
+l("884691");
+var a = l("943722"),
+  n = l("808742"),
+  s = l("49111"),
+  i = e => {
     var t;
     let {
-      className: a,
-      hangStatusActivity: r
+      className: l,
+      hangStatusActivity: i
     } = e;
-    if ((null == r ? void 0 : r.state) === i.HangStatusTypes.CUSTOM) return null != r.emoji ? (0, n.jsx)(l.ActivityEmoji, {
-      emoji: r.emoji,
-      className: a,
+    if ((null == i ? void 0 : i.state) === s.HangStatusTypes.CUSTOM) return null != i.emoji ? (0, r.jsx)(a.ActivityEmoji, {
+      emoji: i.emoji,
+      className: l,
       hideTooltip: !0
     }) : null;
-    let u = null === (t = (0, s.getHangStatusDetails)(r)) || void 0 === t ? void 0 : t.icon;
-    return null != u ? (0, n.jsx)("img", {
-      src: u,
+    let o = null === (t = (0, n.getHangStatusDetails)(i)) || void 0 === t ? void 0 : t.icon;
+    return null != o ? (0, r.jsx)("img", {
+      src: o,
       alt: "",
-      className: null != a ? a : void 0
+      className: null != l ? l : void 0
     }) : null
   }

@@ -10,8 +10,8 @@ var l = n("446674"),
   s = n("635471"),
   i = n("824563"),
   r = n("289918"),
-  u = n("590006"),
-  o = n("935409"),
+  o = n("590006"),
+  u = n("935409"),
   d = n("590456"),
   c = n("327828"),
   f = e => {
@@ -30,7 +30,7 @@ var l = n("446674"),
         showPremiumBadgeUpsell: !0,
         isHovering: p,
         animateOnHover: !h
-      }), (0, a.jsx)(o.UserPopoutAvatar, {
+      }), (0, a.jsx)(u.UserPopoutAvatar, {
         user: t,
         displayProfile: n,
         status: E,
@@ -42,10 +42,10 @@ var l = n("446674"),
         animateOnHover: !h
       }), (0, a.jsx)("div", {
         className: c.badgelistGroup,
-        children: (0, a.jsx)(u.default, {
+        children: (0, a.jsx)(o.default, {
           className: c.badgeList,
           user: t,
-          size: u.BadgeSizes.SIZE_22
+          size: o.BadgeSizes.SIZE_22
         })
       }), null != g && (0, a.jsx)(s.default, {
         profileEffectId: g,

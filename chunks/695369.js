@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("378765"),
   h = n("49111"),
   E = n("13030"),
-  g = n("782340"),
-  S = n("537461"),
+  S = n("782340"),
+  g = n("537461"),
   C = i.memo(i.forwardRef(function(e, t) {
     let {
       disabled: n,
@@ -44,19 +44,19 @@ var l = n("37983"),
     if (n) return null;
     let O = I === E.ExpressionPickerViewType.GIF && _ === a;
     return (0, l.jsx)(u.Tooltip, {
-      text: v ? g.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
+      text: v ? S.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
       forceOpen: !0,
       children: e => (0, l.jsx)("div", {
         ref: t,
-        className: s(E.CHAT_INPUT_BUTTON_CLASSNAME, S.buttonContainer),
+        className: s(E.CHAT_INPUT_BUTTON_CLASSNAME, g.buttonContainer),
         ...e,
         children: (0, l.jsx)(f.default, {
-          innerClassName: S.button,
+          innerClassName: g.button,
           icon: p.default,
           onClick: x,
           isActive: O,
           pulse: C,
-          "aria-label": g.default.Messages.GIF_BUTTON_LABEL,
+          "aria-label": S.default.Messages.GIF_BUTTON_LABEL,
           "aria-expanded": O,
           "aria-haspopup": "dialog",
           "aria-controls": y

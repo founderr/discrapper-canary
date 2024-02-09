@@ -4,46 +4,46 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return c
+    return d
   }
 });
-var i, r, l = n("37983"),
-  s = n("884691"),
-  a = n("414456"),
-  o = n.n(a),
-  u = n("623682");
-(i = r || (r = {})).PREMIUM = "premium", i.LIMITED = "limited";
-let d = {
+var s, r, a = n("37983"),
+  l = n("884691"),
+  i = n("414456"),
+  u = n.n(i),
+  c = n("623682");
+(s = r || (r = {})).PREMIUM = "premium", s.LIMITED = "limited";
+let o = {
   premium: {
-    border: u.premiumFeatureBorder,
-    background: u.premiumBackground
+    border: c.premiumFeatureBorder,
+    background: c.premiumBackground
   },
   limited: {
-    border: u.limitedFeatureBorder,
-    background: u.limitedBackground
+    border: c.limitedFeatureBorder,
+    background: c.limitedBackground
   }
 };
-var c = s.forwardRef(function(e, t) {
+var d = l.forwardRef(function(e, t) {
   let {
     children: n,
-    type: i = "premium",
+    type: s = "premium",
     isShown: r,
-    hasBackground: s = !1,
-    className: a,
-    backgroundClassName: c
+    hasBackground: l = !1,
+    className: i,
+    backgroundClassName: d
   } = e;
-  if (!r) return (0, l.jsx)(l.Fragment, {
+  if (!r) return (0, a.jsx)(a.Fragment, {
     children: n
   });
   let {
     border: f,
-    background: E
-  } = d[i];
-  return (0, l.jsx)("div", {
+    background: m
+  } = o[s];
+  return (0, a.jsx)("div", {
     ref: t,
-    className: o(f, a),
-    children: (0, l.jsx)("div", {
-      className: o(s ? E : u.background, c),
+    className: u(f, i),
+    children: (0, a.jsx)("div", {
+      className: u(l ? m : c.background, d),
       children: n
     })
   })

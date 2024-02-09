@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   usePremiumTrialOffer: function() {
-    return o
+    return f
   }
 });
-var i = n("65597"),
-  r = n("340412"),
-  l = n("540692"),
-  s = n("833516"),
-  a = n("646718");
+var l = r("65597"),
+  i = r("340412"),
+  n = r("540692"),
+  u = r("833516"),
+  s = r("646718");
 
-function o(e) {
-  var t, n, o;
-  let u = (0, s.useTrialOffer)(a.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID),
-    d = (0, s.useTrialOffer)(a.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID),
-    c = (0, s.useTrialOffer)(r.default.getAnyOfUserTrialOfferId([a.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID, a.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID, a.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID, a.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID])),
-    f = (0, s.useTrialOffer)(a.PREMIUM_TIER_2_AUTH3_TRIAL_ID),
-    E = (0, i.default)([l.default], () => void 0 === e ? null : l.default.getRelevantUserTrialOffer(e));
-  return null !== (o = null !== (n = null !== (t = null != E ? E : u) && void 0 !== t ? t : d) && void 0 !== n ? n : c) && void 0 !== o ? o : f
+function f(e) {
+  var t, r, f;
+  let a = (0, u.useTrialOffer)(s.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID),
+    E = (0, u.useTrialOffer)(s.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID),
+    _ = (0, u.useTrialOffer)(i.default.getAnyOfUserTrialOfferId([s.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID, s.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID, s.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID, s.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID])),
+    R = (0, u.useTrialOffer)(s.PREMIUM_TIER_2_AUTH3_TRIAL_ID),
+    d = (0, l.default)([n.default], () => void 0 === e ? null : n.default.getRelevantUserTrialOffer(e));
+  return null !== (f = null !== (r = null !== (t = null != d ? d : a) && void 0 !== t ? t : E) && void 0 !== r ? r : _) && void 0 !== f ? f : R
 }

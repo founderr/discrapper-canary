@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("669491"),
-  o = n("77078"),
+  o = n("669491"),
+  u = n("77078"),
   d = n("255397"),
   c = n("244201"),
   f = n("191145"),
@@ -52,7 +52,7 @@ function Y(e) {
     inPopout: t,
     channel: n,
     toggleRequestToSpeakSidebar: s,
-    showRequestToSpeakSidebar: u
+    showRequestToSpeakSidebar: o
   } = e, p = (0, c.useAppContext)(), C = (0, r.useStateFromStores)([f.default], () => f.default.getChatOpen(n.id)), g = (0, D.useCanModerateRequestToSpeak)(n.id), x = (0, b.useStageParticipantsCount)(n.id, P.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
     preventIdle: N,
     allowIdle: A
@@ -60,9 +60,9 @@ function Y(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(E.default, {
       channelId: n.id
-    }, "clips-enabled-indicator"), (0, a.jsx)(o.Popout, {
+    }, "clips-enabled-indicator"), (0, a.jsx)(u.Popout, {
       position: "bottom",
-      animation: o.Popout.Animation.NONE,
+      animation: u.Popout.Animation.NONE,
       align: "right",
       renderPopout: e => (0, a.jsx)(I.default, {
         children: (0, a.jsx)(k.default, {
@@ -90,24 +90,24 @@ function Y(e) {
       onOpen: N,
       onClose: A,
       className: W.button
-    }, "recents"), !u && g ? (0, a.jsx)("div", {
+    }, "recents"), !o && g ? (0, a.jsx)("div", {
       className: W.button,
       children: (0, a.jsx)(F.default, {
         toggleRequestToSpeakSidebar: () => {
           C && d.default.updateChatOpen(n.id, !1), s()
         },
-        showRequestToSpeakSidebar: u,
+        showRequestToSpeakSidebar: o,
         numRequestToSpeak: x
       })
     }) : null, (0, a.jsx)(h.CallscopeChannelCallIssueMarker, {
       className: W.button
     }), !C && (0, a.jsx)("div", {
       className: i(W.button, {
-        [W.sidebarOpen]: u
+        [W.sidebarOpen]: o
       }),
       children: (0, a.jsx)(T.ChatButton, {
         channelId: n.id,
-        showRequestToSpeakSidebar: u,
+        showRequestToSpeakSidebar: o,
         toggleRequestToSpeakSidebar: s,
         iconClassName: W.buttonIcon
       })
@@ -153,7 +153,7 @@ function z(e) {
       disabled: !0,
       "aria-label": G.default.Messages.STAGE_CHANNEL,
       className: W.icon,
-      color: null != E ? u.default.unsafe_rawColors.GREEN_360.css : void 0
+      color: null != E ? o.default.unsafe_rawColors.GREEN_360.css : void 0
     }), (0, a.jsx)(L.default.Title, {
       className: W.channelName,
       wrapperClassName: W.channelNameWrapper,
@@ -164,7 +164,7 @@ function z(e) {
       children: [(0, a.jsx)(M.default, {
         width: 16,
         height: 16
-      }), (0, a.jsx)(o.Text, {
+      }), (0, a.jsx)(u.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
         className: W.speakerCount,
@@ -174,7 +174,7 @@ function z(e) {
       }), (0, a.jsx)(R.default, {
         width: 16,
         height: 16
-      }), (0, a.jsx)(o.Text, {
+      }), (0, a.jsx)(u.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
         className: W.speakerCount,
@@ -189,11 +189,11 @@ function z(e) {
       className: W.boostUpsell,
       children: [(0, a.jsx)(K, {}), (0, a.jsxs)("div", {
         className: W.text,
-        children: [(0, a.jsx)(o.Text, {
+        children: [(0, a.jsx)(u.Text, {
           variant: "text-md/medium",
           color: "header-primary",
           children: v ? G.default.Messages.STAGE_FULL_MODERATOR_TITLE : G.default.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
-        }), (0, a.jsx)(o.Text, {
+        }), (0, a.jsx)(u.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
           children: v ? G.default.Messages.STAGE_FULL_MODERATOR_BODY : G.default.Messages.STAGE_FULL_MAX_BODY
@@ -201,14 +201,14 @@ function z(e) {
       }), (0, a.jsx)("div", {
         className: W.buttons,
         children: v ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(o.Button, {
+          children: [(0, a.jsx)(u.Button, {
             className: W.notNowButton,
             onClick: k,
-            look: o.Button.Looks.BLANK,
-            size: o.Button.Sizes.SMALL,
+            look: u.Button.Looks.BLANK,
+            size: u.Button.Sizes.SMALL,
             children: G.default.Messages.NOT_NOW
           }), (0, a.jsx)(A.default, {
-            size: o.Button.Sizes.SMALL,
+            size: u.Button.Sizes.SMALL,
             onClick: () => {
               (0, C.openGuildBoostingMarketingModal)({
                 guildId: c.guild_id,
@@ -225,11 +225,11 @@ function z(e) {
             className: W.boostButton,
             children: G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
           })]
-        }) : (0, a.jsx)(o.Button, {
+        }) : (0, a.jsx)(u.Button, {
           className: W.notNowButton,
           onClick: k,
-          look: o.Button.Looks.BLANK,
-          size: o.Button.Sizes.SMALL,
+          look: u.Button.Looks.BLANK,
+          size: u.Button.Sizes.SMALL,
           children: G.default.Messages.DISMISS
         })
       })]

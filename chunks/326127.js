@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return G
+    return M
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("917351"),
   o = s("65597"),
   d = s("266491"),
@@ -15,24 +15,24 @@ var a = s("37983"),
   c = s("45299"),
   E = s("900938"),
   _ = s("965397"),
-  T = s("191814"),
-  I = s("351825"),
-  S = s("858560"),
-  N = s("808388"),
-  g = s("837008"),
-  f = s("719726"),
-  A = s("757715"),
-  L = s("167109"),
-  m = s("172589"),
-  C = s("49111"),
-  O = s("782340"),
-  h = s("514465");
-let R = "guild-role-subscription-tier-template-selector",
-  D = e => {
-    let [t, s] = n.useState(!0), [a, l] = n.useState();
-    return n.useEffect(() => {
-      s(!0), (0, f.getPriceTiers)(e).then(e => {
-        l(e), s(!1)
+  I = s("191814"),
+  f = s("351825"),
+  T = s("858560"),
+  S = s("808388"),
+  m = s("837008"),
+  N = s("719726"),
+  g = s("757715"),
+  h = s("167109"),
+  C = s("172589"),
+  R = s("49111"),
+  x = s("782340"),
+  L = s("514465");
+let O = "guild-role-subscription-tier-template-selector",
+  p = e => {
+    let [t, s] = l.useState(!0), [a, n] = l.useState();
+    return l.useEffect(() => {
+      s(!0), (0, N.getPriceTiers)(e).then(e => {
+        n(e), s(!1)
       })
     }, [e]), {
       loading: t,
@@ -40,80 +40,80 @@ let R = "guild-role-subscription-tier-template-selector",
     }
   };
 
-function M(e) {
+function A(e) {
   let {
     guildId: t,
-    priceTiers: l,
-    groupListingId: T
-  } = e, f = (0, g.useSubscriptionListingsForGroup)(T), {
-    editStateIds: D,
-    addNewEditStateId: M,
-    addNewEditStateFromTemplate: G,
-    removeEditStateId: x
-  } = L.useEditStateIds(T, t, {
+    priceTiers: n,
+    groupListingId: I
+  } = e, N = (0, m.useSubscriptionListingsForGroup)(I), {
+    editStateIds: p,
+    addNewEditStateId: A,
+    addNewEditStateFromTemplate: M,
+    removeEditStateId: D
+  } = h.useEditStateIds(I, t, {
     includeSoftDeleted: !0
-  }), [p, U] = n.useState({}), v = n.useMemo(() => {
-    let e = D.map(e => {
+  }), [v, j] = l.useState({}), G = l.useMemo(() => {
+    let e = p.map(e => {
       var t;
-      return null !== (t = p[e]) && void 0 !== t ? t : e
+      return null !== (t = v[e]) && void 0 !== t ? t : e
     });
     return (0, r.uniq)(e)
-  }, [D, p]), P = (e, t) => {
-    U(s => ({
+  }, [p, v]), U = (e, t) => {
+    j(s => ({
       ...s,
       [e]: t
     }))
-  }, j = (0, N.useGuildEligibleForTierTemplates)(t), y = (0, N.useUserEligibleForTierTemplates)(), b = n.useCallback(() => {
-    y && S.GuildRoleSubscriptionsTierTemplatesExperiment.trackExposure({
+  }, P = (0, S.useGuildEligibleForTierTemplates)(t), b = (0, S.useUserEligibleForTierTemplates)(), B = l.useCallback(() => {
+    b && T.GuildRoleSubscriptionsTierTemplatesExperiment.trackExposure({
       guildId: t,
       location: "b2d9de_1"
-    }), y && j ? (0, u.openModalLazy)(async () => {
+    }), b && P ? (0, u.openModalLazy)(async () => {
       let {
         default: e
       } = await s.el("183424").then(s.bind(s, "183424"));
       return s => (0, a.jsx)(e, {
         ...s,
         guildId: t,
-        addNewEditStateFromTemplate: G,
-        addNewEditStateFromScratch: M,
-        priceTiers: l
+        addNewEditStateFromTemplate: M,
+        addNewEditStateFromScratch: A,
+        priceTiers: n
       })
     }, {
-      modalKey: R
-    }) : M()
-  }, [t, G, M, l, y, j]), B = L.useHasChangesForEditStateIds(v), F = n.useCallback(() => v.forEach(L.clearEditState), [v]), H = (0, A.useRoleSubscriptionSettingsDisabled)(), V = (0, o.default)([E.default], () => E.default.getProps().subsection);
-  return n.useEffect(() => (V === C.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && b(), () => {
-    (0, u.closeModal)(R)
-  }), [V, b]), (0, a.jsxs)(a.Fragment, {
+      modalKey: O
+    }) : A()
+  }, [t, M, A, n, b, P]), y = h.useHasChangesForEditStateIds(G), F = l.useCallback(() => G.forEach(h.clearEditState), [G]), H = (0, g.useRoleSubscriptionSettingsDisabled)(), k = (0, o.default)([E.default], () => E.default.getProps().subsection);
+  return l.useEffect(() => (k === R.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && B(), () => {
+    (0, u.closeModal)(O)
+  }), [k, B]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: h.groupListings,
-      children: [v.map(e => (0, a.jsx)(m.default, {
+      className: L.groupListings,
+      children: [G.map(e => (0, a.jsx)(C.default, {
         guildId: t,
         initialEditStateId: e,
-        allSubscriptionListings: f,
-        priceTiers: l,
-        groupListingId: T,
-        onDeleteEditState: () => x(e),
-        onBeforeDispatchNewListing: t => P(t.id, e),
-        onAfterDispatchNewListing: () => x(e)
+        allSubscriptionListings: N,
+        priceTiers: n,
+        groupListingId: I,
+        onDeleteEditState: () => D(e),
+        onBeforeDispatchNewListing: t => U(t.id, e),
+        onAfterDispatchNewListing: () => D(e)
       }, e)), (0, a.jsxs)(u.Clickable, {
-        onClick: H ? void 0 : b,
-        className: i(h.createTierButton, {
-          [h.disabled]: H
+        onClick: H ? void 0 : B,
+        className: i(L.createTierButton, {
+          [L.disabled]: H
         }),
         "aria-disabled": H,
-        children: [(0, a.jsx)(I.default, {
-          className: h.createTierIcon
+        children: [(0, a.jsx)(f.default, {
+          className: L.createTierIcon
         }), (0, a.jsx)(u.Text, {
           variant: "text-md/normal",
           color: "interactive-active",
-          children: O.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_CARD_CREATE
+          children: x.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_CARD_CREATE
         })]
       })]
     }), (0, a.jsx)(d.default, {
       component: "div",
-      className: h.contentRegion,
-      children: B && (0, a.jsx)(_.default, {
+      className: L.contentRegion,
+      children: y && (0, a.jsx)(_.default, {
         children: (0, a.jsx)(c.default, {
           onReset: F
         })
@@ -122,25 +122,25 @@ function M(e) {
   })
 }
 
-function G(e) {
+function M(e) {
   let {
     guildId: t
   } = e, {
     priceTiers: s
-  } = D(t), n = (0, g.useGroupListingsForGuild)(t), {
-    maxTiers: l
-  } = (0, N.useRoleSubscriptionMaxTiersExperiment)(t), i = n.map(e => e.id);
+  } = p(t), l = (0, m.useGroupListingsForGuild)(t), {
+    maxTiers: n
+  } = (0, S.useRoleSubscriptionMaxTiersExperiment)(t), i = l.map(e => e.id);
   return (0, a.jsxs)(u.FormSection, {
-    title: O.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIERS_TAB_TITLE,
-    className: h.container,
+    title: x.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIERS_TAB_TITLE,
+    className: L.container,
     children: [(0, a.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
-      children: O.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIERS_TAB_DESCRIPTION.format({
-        maxTiers: l
+      children: x.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIERS_TAB_DESCRIPTION.format({
+        maxTiers: n
       })
-    }), (0, a.jsx)(T.default, {
+    }), (0, a.jsx)(I.default, {
       size: 16
-    }), (0, a.jsx)(M, {
+    }), (0, a.jsx)(A, {
       priceTiers: s,
       guildId: t,
       groupListingId: i[0]

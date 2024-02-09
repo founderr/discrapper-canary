@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("247013"),
-  u = n("697218"),
-  o = n("959097"),
+  o = n("697218"),
+  u = n("959097"),
   d = n("664336"),
   c = n("487269"),
   f = n("537560"),
@@ -20,8 +20,8 @@ var a = n("37983"),
 function m(e) {
   let {
     channel: t
-  } = e, [n, m] = l.useState(!1), E = (0, s.useStateFromStores)([r.default, u.default], () => {
-    let e = u.default.getCurrentUser();
+  } = e, [n, m] = l.useState(!1), E = (0, s.useStateFromStores)([r.default, o.default], () => {
+    let e = o.default.getCurrentUser();
     return null == e || t.isNSFW() && (!e.nsfwAllowed || !r.default.didAgree(t.getGuildId()))
   }, [t]), C = l.useCallback(() => {
     m(!1)
@@ -52,7 +52,7 @@ function m(e) {
         ...e,
         className: p.icon,
         onClick: g,
-        icon: o.default,
+        icon: u.default,
         "aria-label": h.default.Messages.THREADS,
         tooltip: n ? null : h.default.Messages.THREADS,
         disabled: E,

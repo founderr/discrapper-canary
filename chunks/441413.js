@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return d
   },
   default: function() {
-    return f
+    return _
   }
 });
 var r = n("37983");
@@ -12,8 +12,8 @@ n("884691");
 var i = n("414456"),
   s = n.n(i),
   a = n("75196"),
-  u = n("956089"),
-  l = n("125835"),
+  l = n("956089"),
+  u = n("125835"),
   o = n("782340"),
   c = n("159163");
 
@@ -34,17 +34,17 @@ function d(e) {
   })
 }
 
-function f(e) {
+function _(e) {
   let {
     className: t,
     forceUseColorForSparkles: n = !1,
     shouldInheritTextColor: i = !1,
     shouldInheritBackgroundColor: a = !1
   } = e;
-  return (0, r.jsx)(l.default, {
+  return (0, r.jsx)(u.default, {
     className: t,
     forceUseColor: n,
-    children: (0, r.jsx)(u.TextBadge, {
+    children: (0, r.jsx)(l.TextBadge, {
       disableColor: !0,
       className: s(c.tag, {
         [c.inheritTextColor]: i,

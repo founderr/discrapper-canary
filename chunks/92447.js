@@ -10,9 +10,9 @@ s.r(t), s.d(t, {
     return d
   }
 }), s("70102"), s("222007");
-var a, n, l = s("37983"),
+var a, l, n = s("37983"),
   i = s("884691");
-(n = a || (a = {}))[n.BASIC_INFO = 0] = "BASIC_INFO", n[n.TIERS = 1] = "TIERS", n[n.PAYMENT = 2] = "PAYMENT", n[n.EMOJIS = 3] = "EMOJIS";
+(l = a || (a = {}))[l.BASIC_INFO = 0] = "BASIC_INFO", l[l.TIERS = 1] = "TIERS", l[l.PAYMENT = 2] = "PAYMENT", l[l.EMOJIS = 3] = "EMOJIS";
 let r = i.createContext({
   currentTab: 0,
   setCurrentTab: () => {
@@ -28,11 +28,11 @@ function d(e) {
   let {
     initialTab: t,
     children: s
-  } = e, [a, n] = i.useState(t);
-  return (0, l.jsx)(r.Provider, {
+  } = e, [a, l] = i.useState(t);
+  return (0, n.jsx)(r.Provider, {
     value: {
       currentTab: a,
-      setCurrentTab: n
+      setCurrentTab: l
     },
     children: s
   })

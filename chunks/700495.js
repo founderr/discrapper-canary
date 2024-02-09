@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return m
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  l = s("627445"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("627445"),
+  i = s.n(n),
   r = s("446674"),
   o = s("77078"),
   d = s("465869"),
@@ -15,45 +15,45 @@ var a = s("37983"),
   c = s("648825"),
   E = s("406876"),
   _ = s("795228"),
-  T = s("561205"),
-  I = s("782340"),
-  S = s("332227"),
-  N = s("754433");
+  I = s("561205"),
+  f = s("782340"),
+  T = s("332227"),
+  S = s("754433");
 
-function g(e) {
+function m(e) {
   var t;
   let {
-    onDeleteEditState: l
+    onDeleteEditState: n
   } = e, {
-    editStateId: g,
-    guildId: f,
-    groupListingId: A
-  } = (0, E.useEditStateContext)(), L = (0, r.useStateFromStores)([c.default], () => c.default.getSubscriptionListing(g)), m = null == L ? void 0 : L.id, C = (0, _.default)(f), O = n.useMemo(() => {
+    editStateId: m,
+    guildId: N,
+    groupListingId: g
+  } = (0, E.useEditStateContext)(), h = (0, r.useStateFromStores)([c.default], () => c.default.getSubscriptionListing(m)), C = null == h ? void 0 : h.id, R = (0, _.default)(N), x = l.useMemo(() => {
     var e;
-    return null != C && null != L && (null !== (e = C[L.role_id]) && void 0 !== e ? e : 0)
-  }, [C, L]), h = 0 === O, R = null == m, D = null !== (t = null == L ? void 0 : L.archived) && void 0 !== t && t, {
-    deleteSubscriptionListing: M,
-    submitting: G
+    return null != R && null != h && (null !== (e = R[h.role_id]) && void 0 !== e ? e : 0)
+  }, [R, h]), L = 0 === x, O = null == C, p = null !== (t = null == h ? void 0 : h.archived) && void 0 !== t && t, {
+    deleteSubscriptionListing: A,
+    submitting: M
   } = (0, u.useDeleteSubscriptionListing)(), {
-    archiveSubscriptionListing: x,
-    submitting: p
-  } = (0, u.useArchiveSubscriptionListing)(), U = () => {
+    archiveSubscriptionListing: D,
+    submitting: v
+  } = (0, u.useArchiveSubscriptionListing)(), j = () => {
     let e = async () => {
-      if (!R) {
-        i(null != A, "group listing doesnt exist"), i(null != m, "subscription listing doesnt exist");
-        let e = await M(f, A, m);
+      if (!O) {
+        i(null != g, "group listing doesnt exist"), i(null != C, "subscription listing doesnt exist");
+        let e = await A(N, g, C);
         if (!e) return
       }
-      null == l || l()
+      null == n || n()
     };
     (0, o.openModalLazy)(async () => {
       let {
         ConfirmModal: t
       } = await s.el("77078").then(s.bind(s, "77078"));
       return s => (0, a.jsx)(t, {
-        header: I.default.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
-        confirmText: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON,
-        cancelText: I.default.Messages.CANCEL,
+        header: f.default.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
+        confirmText: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON,
+        cancelText: f.default.Messages.CANCEL,
         onConfirm: () => {
           e()
         },
@@ -61,73 +61,73 @@ function g(e) {
         ...s,
         children: (0, a.jsx)(o.Text, {
           variant: "text-md/normal",
-          children: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
+          children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
         })
       })
     })
   }, {
-    allowSelfRemoveMonetization: v
-  } = (0, d.useShouldRestrictUpdatingCreatorMonetizationSettings)(f);
-  return null == L ? null : (0, a.jsx)(T.default, {
-    title: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ADVANCE_SECTION_TITLE,
-    children: D ? (0, a.jsxs)(o.FormSection, {
-      title: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_LABEL,
-      disabled: !v,
+    allowSelfRemoveMonetization: G
+  } = (0, d.useShouldRestrictUpdatingCreatorMonetizationSettings)(N);
+  return null == h ? null : (0, a.jsx)(I.default, {
+    title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ADVANCE_SECTION_TITLE,
+    children: p ? (0, a.jsxs)(o.FormSection, {
+      title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_LABEL,
+      disabled: !G,
       children: [(0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        className: S.formDescription,
-        disabled: !v,
-        children: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
+        className: T.formDescription,
+        disabled: !G,
+        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
       }), (0, a.jsx)(o.Tooltip, {
-        shouldShow: !h,
-        text: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_TOOLTIP.format({
-          listingMemberCount: O
+        shouldShow: !L,
+        text: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_TOOLTIP.format({
+          listingMemberCount: x
         }),
         children: e => (0, a.jsx)(o.Button, {
           ...e,
-          wrapperClassName: N.deleteListingButton,
+          wrapperClassName: S.deleteListingButton,
           color: o.Button.Colors.RED,
-          onClick: U,
-          submitting: G,
-          disabled: !v || !h,
-          children: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON
+          onClick: j,
+          submitting: M,
+          disabled: !G || !L,
+          children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON
         })
       })]
     }) : (0, a.jsxs)(o.FormSection, {
-      title: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_LABEL,
-      disabled: !v,
+      title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_LABEL,
+      disabled: !G,
       children: [(0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        className: S.formDescription,
-        disabled: !v,
-        children: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
+        className: T.formDescription,
+        disabled: !G,
+        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
       }), (0, a.jsx)(o.Button, {
-        wrapperClassName: N.deleteListingButton,
+        wrapperClassName: S.deleteListingButton,
         color: o.Button.Colors.RED,
         onClick: () => {
-          i(null != A, "group listing doesnt exist"), i(null != m, "subscription listing doesnt exist"), (0, o.openModalLazy)(async () => {
+          i(null != g, "group listing doesnt exist"), i(null != C, "subscription listing doesnt exist"), (0, o.openModalLazy)(async () => {
             let {
               ConfirmModal: e
             } = await s.el("77078").then(s.bind(s, "77078"));
             return t => (0, a.jsx)(e, {
-              header: I.default.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
-              confirmText: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON,
-              cancelText: I.default.Messages.CANCEL,
+              header: f.default.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
+              confirmText: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON,
+              cancelText: f.default.Messages.CANCEL,
               onConfirm: () => {
-                x(f, A, m)
+                D(N, g, C)
               },
               confirmButtonColor: o.Button.Colors.RED,
               ...t,
               children: (0, a.jsx)(o.Text, {
                 variant: "text-md/normal",
-                children: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
+                children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
               })
             })
           })
         },
-        submitting: p,
-        disabled: !v,
-        children: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON
+        submitting: v,
+        disabled: !G,
+        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON
       })]
     })
   })

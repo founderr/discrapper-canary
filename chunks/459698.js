@@ -35,8 +35,8 @@ var l = n("37983"),
   v = n("865453"),
   I = n("153043"),
   S = n("256941"),
-  _ = n("270295"),
-  x = n("626301"),
+  x = n("270295"),
+  _ = n("626301"),
   N = n("635956"),
   T = n("393414"),
   M = n("18494"),
@@ -292,7 +292,7 @@ let Z = () => {
           M(), P.default.track(B.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
             location_page: ee.page,
             location_section: ee.section
-          }), (0, x.navigateToPremiumMarketingPage)()
+          }), (0, _.navigateToPremiumMarketingPage)()
         }
       }),
       eo = Q && en && !ea && (X && et || !X),
@@ -359,7 +359,7 @@ let Z = () => {
             fullWidth: !0,
             onClick: e,
             children: er.text
-          }) : void 0, eo && (0, l.jsx)(_.default, {
+          }) : void 0, eo && (0, l.jsx)(x.default, {
             className: z.ctaButton,
             size: d.Button.Sizes.SMALL,
             fullWidth: !0,

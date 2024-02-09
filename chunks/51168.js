@@ -8,8 +8,8 @@ var t = E("37983"),
   o = E("884691"),
   n = E("446674"),
   r = E("77078"),
-  a = E("629109"),
-  i = E("363658"),
+  i = E("629109"),
+  a = E("363658"),
   I = E("135230"),
   s = E("622785"),
   T = E("49111"),
@@ -24,7 +24,7 @@ function N() {
   }
 
   function N() {
-    i.default.clearVADWarning()
+    a.default.clearVADWarning()
   }
   return o.useEffect(() => (e ? _.current = (0, r.openModal)(e => (0, t.jsx)(I.default, {
     title: S.default.Messages.VAD_PERMISSION_TITLE,
@@ -33,7 +33,7 @@ function N() {
     cancelText: S.default.Messages.VAD_PERMISSION_OKAY,
     confirmText: S.default.Messages.VAD_PERMISSION_ENABLE_PTT,
     onConfirm: () => {
-      a.default.setMode(T.InputModes.PUSH_TO_TALK), N()
+      i.default.setMode(T.InputModes.PUSH_TO_TALK), N()
     },
     ...e
   })) : E(), () => {

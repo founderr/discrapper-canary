@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("502651"),
   h = n("812204"),
   E = n("685665"),
-  g = n("299285"),
-  S = n("442939"),
+  S = n("299285"),
+  g = n("442939"),
   C = n("373469"),
   T = n("26989"),
   v = n("305961"),
@@ -61,8 +61,8 @@ function B(e) {
     return null === (e = N.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
   }), {
     AnalyticsLocationProvider: J
-  } = (0, E.default)(h.default.PROFILE_POPOUT), Z = (0, r.useStateFromStores)([v.default], () => null != n ? v.default.getGuild(n) : null), q = (0, r.useStateFromStores)([T.default], () => null != n ? T.default.getMember(n, t.id) : null), X = t.isNonUserBot(), {
-    activity: Q,
+  } = (0, E.default)(h.default.PROFILE_POPOUT), q = (0, r.useStateFromStores)([v.default], () => null != n ? v.default.getGuild(n) : null), Z = (0, r.useStateFromStores)([T.default], () => null != n ? T.default.getMember(n, t.id) : null), Q = t.isNonUserBot(), {
+    activity: X,
     customStatusActivity: $,
     status: ee,
     isMobile: et,
@@ -82,7 +82,7 @@ function B(e) {
         } = e;
         return t === k.ActivityTypes.CUSTOM_STATUS
       }),
-      status: X ? null : I.default.getStatus(t.id),
+      status: Q ? null : I.default.getStatus(t.id),
       isMobile: I.default.isMobileOnline(t.id),
       isApplicationStreaming: e
     }
@@ -98,19 +98,19 @@ function B(e) {
     }),
     [eo, eu] = i.useState(!1);
   (0, c.default)(() => eu(!0), er.shouldShow ? 250 : null);
-  let ed = (0, S.useGetOrFetchApplication)(null == Q ? void 0 : Q.application_id);
+  let ed = (0, g.useGetOrFetchApplication)(null == X ? void 0 : X.application_id);
   return i.useEffect(() => {
     null == B || B(null == K ? void 0 : K.current)
   }, [K, B]), i.useEffect(() => {
-    if (!el)((null == Q ? void 0 : Q.application_id) == null || null != ed) && (null == n || (null == q ? void 0 : q.fullProfileLoadedTimestamp) != null) && (function() {
+    if (!el)((null == X ? void 0 : X.application_id) == null || null != ed) && (null == n || (null == Z ? void 0 : Z.fullProfileLoadedTimestamp) != null) && (function() {
       var e;
       let l, i, s;
-      null != Q && (l = Q.party, i = Q.assets, s = null != Q.application_id ? g.default.getApplication(Q.application_id) : null);
+      null != X && (l = X.party, i = X.assets, s = null != X.application_id ? S.default.getApplication(X.application_id) : null);
       let r = ee;
       ee === k.StatusTypes.ONLINE && (r = et ? k.AnalyticsUserStatusTypes.ONLINE_MOBILE : k.AnalyticsUserStatusTypes.ONLINE_DESKTOP);
-      let o = null != q ? {
-          has_nickname: !!(null == q ? void 0 : q.nick),
-          has_guild_member_avatar: !!(null == q ? void 0 : q.avatar),
+      let o = null != Z ? {
+          has_nickname: !!(null == Z ? void 0 : Z.nick),
+          has_guild_member_avatar: !!(null == Z ? void 0 : Z.avatar),
           has_guild_member_banner: !!(null == W ? void 0 : W.isUsingGuildMemberBanner()),
           has_guild_member_bio: !!(null == W ? void 0 : W.isUsingGuildMemberBio())
         } : {},
@@ -123,15 +123,15 @@ function B(e) {
         guild_id: n,
         channel_id: a,
         other_user_id: t.id,
-        application_id: null != Q ? Q.application_id : void 0,
-        application_name: null != Q ? Q.name : void 0,
+        application_id: null != X ? X.application_id : void 0,
+        application_name: null != X ? X.name : void 0,
         sku_id: null != s ? s.primarySkuId : null,
         is_friend: _.default.isFriend(t.id),
         has_images: !!(null !== (e = null == i ? void 0 : i.large_image) && void 0 !== e ? e : null == i ? void 0 : i.small_image),
         party_max: null != l && null != l.size ? l.size[1] : void 0,
         party_id: null != l ? l.id : void 0,
         party_platform: null != l && (0, w.isSpotifyParty)(l.id) ? k.PlatformTypes.SPOTIFY : null,
-        game_platform: (0, p.default)(Q),
+        game_platform: (0, p.default)(X),
         profile_user_status: r,
         is_streaming: en,
         has_custom_status: null != $,
@@ -145,7 +145,7 @@ function B(e) {
         ...V
       })
     }(), ei(!0))
-  }, [q, null == Q ? void 0 : Q.application_id, ed, el, n]), (0, l.jsx)(J, {
+  }, [Z, null == X ? void 0 : X.application_id, ed, el, n]), (0, l.jsx)(J, {
     children: (0, l.jsx)(u.default, {
       section: k.AnalyticsSections.PROFILE_POPOUT,
       children: (0, l.jsx)(o.Dialog, {
@@ -169,7 +169,7 @@ function B(e) {
             channelId: a,
             onClose: () => null == y ? void 0 : y(),
             isMobile: et,
-            isStreaming: (0, m.default)(Q),
+            isStreaming: (0, m.default)(X),
             status: ee,
             disableUserProfileLink: H,
             isHovering: Y,
@@ -184,12 +184,12 @@ function B(e) {
             children: [(0, l.jsx)(R.default, {
               onTooltipClose: y
             }), (0, l.jsx)(L.default, {
-              activity: Q,
+              activity: X,
               customStatusActivity: $,
               displayProfile: W,
               user: t,
-              guild: Z,
-              guildMember: q,
+              guild: q,
+              guildMember: Z,
               channelId: a,
               onClose: y,
               setNote: s,

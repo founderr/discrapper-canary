@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("884691"),
-  r = n("77078"),
+var r = n("884691"),
+  i = n("77078"),
   l = n("606292"),
-  s = n("688318"),
-  a = n("19287");
+  a = n("688318"),
+  s = n("19287");
 
 function o(e) {
   let {
@@ -24,10 +24,10 @@ function o(e) {
     avatarSrc: _,
     isAvatarAnimating: E,
     eventHandlers: T
-  } = (0, a.useAnimatedAvatarSrc)({
+  } = (0, s.useAnimatedAvatarSrc)({
     user: t,
     guildId: n,
-    size: (0, r.getAvatarSize)(o),
+    size: (0, i.getAvatarSize)(o),
     showPending: u,
     animateOnHover: c,
     avatarOverride: f
@@ -35,16 +35,16 @@ function o(e) {
     avatarPlaceholderSrc: I,
     avatarDecorationSrc: p,
     eventHandlers: P
-  } = (0, s.default)({
+  } = (0, a.default)({
     user: t,
     size: (0, l.getDecorationSizeForAvatarSize)(o),
     showPending: u,
     animateOnHover: c,
     avatarDecorationOverride: m,
     showTryItOut: d
-  }), S = i.useCallback(() => {
+  }), S = r.useCallback(() => {
     T.onMouseEnter(), P.onMouseEnter()
-  }, [T, P]), R = i.useCallback(() => {
+  }, [T, P]), R = r.useCallback(() => {
     T.onMouseLeave(), P.onMouseLeave()
   }, [T, P]);
   return {

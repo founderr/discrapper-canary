@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("266491"),
-  l = s("77078"),
+var l = s("266491"),
+  n = s("77078"),
   i = s("45299"),
   r = s("965397"),
   o = s("454686"),
@@ -22,47 +22,47 @@ function _(e) {
     existingRules: s
   } = e, {
     cancelEditingRule: _,
-    isLoading: T,
-    hasChanges: I,
-    editingRule: S,
-    errorMessage: N,
-    saveEditingRule: g
+    isLoading: I,
+    hasChanges: f,
+    editingRule: T,
+    errorMessage: S,
+    saveEditingRule: m
   } = (0, u.useAutomodEditingRuleActions)(), {
-    updateRule: f
-  } = (0, d.useAutomodRulesList)(t), A = null != S, L = A && !(0, o.isBackendPersistedRule)(S), m = A || I || L, C = async () => {
-    if (!I && !L) return _();
-    null != S && !L && f(S);
+    updateRule: N
+  } = (0, d.useAutomodRulesList)(t), g = null != T, h = g && !(0, o.isBackendPersistedRule)(T), C = g || f || h, R = async () => {
+    if (!f && !h) return _();
+    null != T && !h && N(T);
     let e = s.find(e => {
       let {
         id: t
       } = e;
-      return t === (null == S ? void 0 : S.id)
+      return t === (null == T ? void 0 : T.id)
     });
     try {
-      let e = await g(s);
-      null != e && f(e)
+      let e = await m(s);
+      null != e && N(e)
     } catch (t) {
-      null != e && f(e)
+      null != e && N(e)
     }
-  }, O = c.default.Messages.CANCEL, h = !I && A ? c.default.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({
-    ruleName: null == S ? void 0 : S.name
+  }, x = c.default.Messages.CANCEL, L = !f && g ? c.default.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({
+    ruleName: null == T ? void 0 : T.name
   }) : void 0;
-  return null != N && (h = (0, a.jsx)(l.Text, {
+  return null != S && (L = (0, a.jsx)(n.Text, {
     variant: "text-md/normal",
     color: "text-danger",
     className: E.message,
-    children: N
-  })), (0, a.jsx)(n.default, {
+    children: S
+  })), (0, a.jsx)(l.default, {
     component: "div",
     className: E.saveNoticeContainer,
-    children: m && (0, a.jsx)(r.default, {
+    children: C && (0, a.jsx)(r.default, {
       children: (0, a.jsx)(i.default, {
-        submitting: T,
-        disabled: T,
-        onSave: C,
+        submitting: I,
+        disabled: I,
+        onSave: R,
         onReset: _,
-        onResetText: O,
-        message: h
+        onResetText: x,
+        message: L
       })
     })
   })

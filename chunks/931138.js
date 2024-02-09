@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
     return c
   }
@@ -12,14 +12,14 @@ var i = n("37983"),
   o = n("760607"),
   u = n("89976");
 
-function c(e) {
+function c(t) {
   let {
-    children: t,
+    children: e,
     size: n = 16,
     className: l,
     flowerStarClassName: c,
     ...d
-  } = e, f = r.Children.only(t), h = (0, a.useRedesignIconContext)().enabled;
+  } = t, f = r.Children.only(e), h = (0, a.useRedesignIconContext)().enabled;
   return (0, i.jsxs)("div", {
     className: s(u.flowerStarContainer, l),
     style: {

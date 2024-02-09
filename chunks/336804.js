@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
-  u = n("617258"),
-  o = n("446674"),
+  o = n("617258"),
+  u = n("446674"),
   d = n("669491"),
   c = n("769846"),
   f = n("77078"),
@@ -29,7 +29,7 @@ var a = n("37983"),
   N = n("646718"),
   A = n("782340"),
   M = n("456802");
-let R = (0, u.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
+let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   j = {
     opacity: 0,
     transform: "translate3d(100%, 0, 0)"
@@ -59,7 +59,7 @@ let R = (0, u.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   U = e => {
     let t, s, {
         participant: r,
-        isUpsellEnabled: u,
+        isUpsellEnabled: o,
         shape: c,
         size: m,
         didTrackUpsellViewed: R,
@@ -85,8 +85,8 @@ let R = (0, u.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       {
         location: D
       } = (0, h.useAnalyticsContext)(),
-      U = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-      w = u && !I.default.isPremium(U, N.PremiumTypes.TIER_1) && !I.default.canStreamQuality(I.default.StreamQuality.MID, U),
+      U = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
+      w = o && !I.default.isPremium(U, N.PremiumTypes.TIER_1) && !I.default.canStreamQuality(I.default.StreamQuality.MID, U),
       F = l.useCallback(() => {
         w && P && (0, f.openModalLazy)(async () => {
           let {
@@ -138,8 +138,8 @@ var w = e => {
     participant: t,
     showQuality: n,
     isUpsellEnabled: s = !0,
-    size: u,
-    className: o
+    size: o,
+    className: u
   } = e, [d, c] = l.useState(!1), h = (0, T.getMaxQuality)(t), {
     reducedMotion: p
   } = l.useContext(f.AccessibilityPreferencesContext), E = n && null != h;
@@ -173,7 +173,7 @@ var w = e => {
         children: (0, a.jsx)(U, {
           className: M.liveQualityIndicator,
           participant: t,
-          size: u,
+          size: o,
           shape: g.BadgeShapes.ROUND_LEFT,
           isUpsellEnabled: s,
           didTrackUpsellViewed: d,
@@ -184,12 +184,12 @@ var w = e => {
         className: M.liveIndicator,
         children: (0, a.jsx)(S.default, {
           look: S.LiveIndicatorLooks.RED,
-          size: u,
+          size: o,
           shape: E ? g.BadgeShapes.ROUND_RIGHT : g.BadgeShapes.ROUND
         })
       })]
     })
   })({
-    className: o
+    className: u
   })
 }

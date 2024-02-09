@@ -19,12 +19,12 @@ var l = n("37983"),
   g = n("305961"),
   S = n("660478"),
   h = n("476765"),
-  N = n("943232"),
-  m = n("945330"),
+  m = n("943232"),
+  N = n("945330"),
   C = n("599110"),
   p = n("449008"),
-  I = n("933326"),
-  _ = n("334683"),
+  _ = n("933326"),
+  I = n("334683"),
   T = n("534222"),
   x = n("473031"),
   D = n("266763"),
@@ -40,9 +40,9 @@ function y(e) {
     transitionState: t,
     onClose: i,
     guildId: y
-  } = e, V = (0, h.useUID)(), O = (0, s.useStateFromStores)([g.default], () => g.default.getGuild(y)), P = (0, _.default)(null == O ? void 0 : O.id), j = (0, T.default)(y), k = u.useRef(S.default.ackMessageId(y, M.ReadStateTypes.GUILD_EVENT)), b = (0, G.default)();
+  } = e, V = (0, h.useUID)(), O = (0, s.useStateFromStores)([g.default], () => g.default.getGuild(y)), P = (0, I.default)(null == O ? void 0 : O.id), j = (0, T.default)(y), k = u.useRef(S.default.ackMessageId(y, M.ReadStateTypes.GUILD_EVENT)), F = (0, G.default)();
   return u.useEffect(() => {
-    j.forEach(e => I.default.getGuildEventUserCounts(y, e.id, [])), I.default.getGuildEventsForCurrentUser(y)
+    j.forEach(e => _.default.getGuildEventUserCounts(y, e.id, [])), _.default.getGuildEventsForCurrentUser(y)
   }, [j, y]), u.useEffect(() => {
     let e = g.default.getGuild(y);
     if (!(null == e ? void 0 : e.hasFeature(L.GuildFeatures.HUB))) return;
@@ -73,7 +73,7 @@ function y(e) {
     "aria-labelledby": V,
     children: [(0, l.jsxs)(d.ModalHeader, {
       className: U.header,
-      children: [(0, l.jsx)(N.default, {
+      children: [(0, l.jsx)(m.default, {
         className: U.icon
       }), (0, l.jsx)(d.Heading, {
         id: V,
@@ -96,7 +96,7 @@ function y(e) {
                 ...t,
                 guildId: y
               })
-            }, b)
+            }, F)
           },
           innerClassName: U.button,
           children: A.default.Messages.SCHEDULE_EVENT
@@ -105,7 +105,7 @@ function y(e) {
         onClick: i,
         className: U.iconButton,
         "aria-label": A.default.Messages.CLOSE,
-        children: (0, l.jsx)(m.default, {
+        children: (0, l.jsx)(N.default, {
           className: U.icon
         })
       })]

@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return D
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("627445"),
   o = s.n(r),
   d = s("819855"),
@@ -15,55 +15,55 @@ var a = s("37983"),
   c = s("308289"),
   E = s("841098"),
   _ = s("376556"),
-  T = s("945330"),
-  I = s("49111"),
-  S = s("214509"),
-  N = s("782340"),
-  g = s("817760");
+  I = s("945330"),
+  f = s("49111"),
+  T = s("214509"),
+  S = s("782340"),
+  m = s("817760");
 
-function f(e) {
+function N(e) {
   var t, s;
-  let n, {
-    theme: l,
+  let l, {
+    theme: n,
     platform: r,
     integration: E,
     onRemove: _,
-    locked: I
+    locked: f
   } = e;
-  if ((null == E ? void 0 : E.application) != null) o(null != E.application.bot, "bot is null"), n = (0, a.jsx)(c.default, {
+  if ((null == E ? void 0 : E.application) != null) o(null != E.application.bot, "bot is null"), l = (0, a.jsx)(c.default, {
     size: u.AvatarSizes.SIZE_24,
     user: E.application.bot,
-    className: g.verifiedIcon
+    className: m.verifiedIcon
   });
   else if (null != r) {
-    let e = (0, d.isThemeLight)(l) ? r.icon.lightSVG : r.icon.darkSVG;
-    n = (0, a.jsx)("img", {
-      className: g.verifiedIcon,
+    let e = (0, d.isThemeLight)(n) ? r.icon.lightSVG : r.icon.darkSVG;
+    l = (0, a.jsx)("img", {
+      className: m.verifiedIcon,
       src: e,
-      alt: N.default.Messages.IMG_ALT_LOGO.format({
+      alt: S.default.Messages.IMG_ALT_LOGO.format({
         name: r.name
       })
     })
   }
   return (0, a.jsxs)("div", {
-    className: i(g.verifiedRow, (null == r ? void 0 : r.hasMetadata) === !0 || (null == E ? void 0 : E.role_connections_metadata) != null && (null == E ? void 0 : E.role_connections_metadata.length) > 0 ? g.verifiedRowWithMetadata : null),
-    children: [n, (0, a.jsx)(u.Text, {
+    className: i(m.verifiedRow, (null == r ? void 0 : r.hasMetadata) === !0 || (null == E ? void 0 : E.role_connections_metadata) != null && (null == E ? void 0 : E.role_connections_metadata.length) > 0 ? m.verifiedRowWithMetadata : null),
+    children: [l, (0, a.jsx)(u.Text, {
       variant: "text-md/medium",
-      className: g.verifiedText,
-      children: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_ACCOUNT.format({
+      className: m.verifiedText,
+      children: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_ACCOUNT.format({
         platformName: null !== (s = null == r ? void 0 : r.name) && void 0 !== s ? s : null == E ? void 0 : null === (t = E.application) || void 0 === t ? void 0 : t.name
       })
     }), (0, a.jsx)(u.Button, {
-      "aria-label": N.default.Messages.REMOVE,
+      "aria-label": S.default.Messages.REMOVE,
       size: u.Button.Sizes.TINY,
       look: u.Button.Looks.BLANK,
       onClick: _,
-      disabled: I,
-      className: g.closeButton,
+      disabled: f,
+      className: m.closeButton,
       children: (0, a.jsx)(u.Tooltip, {
-        text: N.default.Messages.REMOVE,
-        children: e => (0, a.jsx)(T.default, {
-          className: g.closeIcon,
+        text: S.default.Messages.REMOVE,
+        children: e => (0, a.jsx)(I.default, {
+          className: m.closeIcon,
           ...e
         })
       })
@@ -71,8 +71,8 @@ function f(e) {
   })
 }
 
-function A(e) {
-  var t, s, l;
+function g(e) {
+  var t, s, n;
   let {
     inputRef: i,
     existingPendingConfiguration: r,
@@ -81,88 +81,88 @@ function A(e) {
     platform: c,
     applicationId: E,
     metadataField: _,
-    operator: T
-  } = e, I = null !== (s = null == r ? void 0 : r.index) && void 0 !== s ? s : -1, N = null != T ? T : S.OperatorTypes.GREATER_THAN, f = Math.round(Number(null !== (l = null == r ? void 0 : null === (t = r.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== l ? l : 0));
-  N === S.OperatorTypes.GREATER_THAN ? f = Math.max(1, f + 1) : N === S.OperatorTypes.LESS_THAN && (f = Math.max(0, f - 1));
-  let [A, L] = n.useState(f.toString());
-  return n.useEffect(() => {
-    L(A)
-  }, [A]), (0, a.jsx)(u.TextInput, {
+    operator: I
+  } = e, f = null !== (s = null == r ? void 0 : r.index) && void 0 !== s ? s : -1, S = null != I ? I : T.OperatorTypes.GREATER_THAN, N = Math.round(Number(null !== (n = null == r ? void 0 : null === (t = r.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0));
+  S === T.OperatorTypes.GREATER_THAN ? N = Math.max(1, N + 1) : S === T.OperatorTypes.LESS_THAN && (N = Math.max(0, N - 1));
+  let [g, h] = l.useState(N.toString());
+  return l.useEffect(() => {
+    h(g)
+  }, [g]), (0, a.jsx)(u.TextInput, {
     inputRef: i,
     type: "number",
-    className: g.numericalRuleInput,
+    className: m.numericalRuleInput,
     size: u.TextInput.Sizes.MINI,
-    value: A,
+    value: g,
     onChange: e => {
       if (null != r) {
         if ("" !== e) {
           var t;
           let s = Math.round(Number(e));
-          N === S.OperatorTypes.GREATER_THAN ? s = Math.max(0, s - 1) : N === S.OperatorTypes.LESS_THAN && (s = Math.max(1, s + 1)), d({
-            connectionType: null !== (t = null == c ? void 0 : c.type) && void 0 !== t ? t : S.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE,
+          S === T.OperatorTypes.GREATER_THAN ? s = Math.max(0, s - 1) : S === T.OperatorTypes.LESS_THAN && (s = Math.max(1, s + 1)), d({
+            connectionType: null !== (t = null == c ? void 0 : c.type) && void 0 !== t ? t : T.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE,
             applicationId: E,
             connectionMetadataField: _,
-            operator: N,
+            operator: S,
             value: s.toString()
-          }, I)
+          }, f)
         }
-        L(e)
+        h(e)
       }
     },
     disabled: o
   }, _)
 }
 
-function L(e) {
+function h(e) {
   let {
     titleText: t,
     fieldText: s,
-    metadataField: n,
-    existingPendingConfiguration: l,
+    metadataField: l,
+    existingPendingConfiguration: n,
     platform: i,
     applicationId: r,
     onConfigurationChange: o,
     locked: d
   } = e;
   return (0, a.jsxs)("div", {
-    className: g.ruleContainer,
+    className: m.ruleContainer,
     children: [(0, a.jsxs)("div", {
       children: [(0, a.jsx)(u.Text, {
         variant: "text-md/bold",
-        className: g.ruleItemHeader,
+        className: m.ruleItemHeader,
         children: t
       }), (0, a.jsx)("div", {
-        className: g.numericalRuleSubItemContainer,
+        className: m.numericalRuleSubItemContainer,
         children: (0, a.jsx)(u.Text, {
           variant: "text-md/normal",
-          className: g.numericalRuleSubText,
+          className: m.numericalRuleSubText,
           children: s
         })
       })]
     }), (0, a.jsx)(u.Switch, {
-      className: g.ruleItemSwitch,
-      checked: (null == l ? void 0 : l.configuration.value) === "1",
+      className: m.ruleItemSwitch,
+      checked: (null == n ? void 0 : n.configuration.value) === "1",
       onChange: e => {
         var t, s;
         let a = null;
         e && (a = {
-          connectionType: null !== (t = null == i ? void 0 : i.type) && void 0 !== t ? t : S.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE,
+          connectionType: null !== (t = null == i ? void 0 : i.type) && void 0 !== t ? t : T.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE,
           applicationId: r,
-          connectionMetadataField: n,
-          operator: S.OperatorTypes.EQUAL,
+          connectionMetadataField: l,
+          operator: T.OperatorTypes.EQUAL,
           value: "1"
-        }), o(a, null !== (s = null == l ? void 0 : l.index) && void 0 !== s ? s : -1)
+        }), o(a, null !== (s = null == n ? void 0 : n.index) && void 0 !== s ? s : -1)
       },
       disabled: d
     })]
-  }, n)
+  }, l)
 }
 
-function m(e) {
+function C(e) {
   let {
     titleText: t,
     fieldText: s,
-    fieldTextHook: l,
+    fieldTextHook: n,
     metadataField: i,
     existingPendingConfiguration: r,
     platform: o,
@@ -170,106 +170,192 @@ function m(e) {
     onConfigurationChange: c,
     locked: E,
     operator: _
-  } = e, T = n.createRef(), I = (null == r ? void 0 : r.configuration) != null, N = (0, a.jsx)(A, {
-    inputRef: T,
+  } = e, I = l.createRef(), f = (null == r ? void 0 : r.configuration) != null, S = (0, a.jsx)(g, {
+    inputRef: I,
     metadataField: i,
     existingPendingConfiguration: r,
-    locked: E || !I,
+    locked: E || !f,
     onConfigurationChange: c,
     platform: o,
     operator: _,
     applicationId: d
-  }, i), f = null != l ? l.format({
-    metadataHook: () => N
+  }, i), N = null != n ? n.format({
+    metadataHook: () => S
   }) : (0, a.jsxs)(a.Fragment, {
-    children: [N, (0, a.jsx)("span", {
-      className: g.fieldText,
+    children: [S, (0, a.jsx)("span", {
+      className: m.fieldText,
       children: s
     })]
   });
   return (0, a.jsxs)("div", {
-    className: g.ruleContainer,
+    className: m.ruleContainer,
     children: [(0, a.jsxs)("div", {
-      className: g.ruleContainerLabel,
+      className: m.ruleContainerLabel,
       children: [(0, a.jsx)(u.Text, {
         variant: "text-md/bold",
-        className: g.ruleItemHeader,
+        className: m.ruleItemHeader,
         children: t
       }), (0, a.jsx)("div", {
-        className: g.numericalRuleSubItemContainer,
+        className: m.numericalRuleSubItemContainer,
         children: (0, a.jsx)(u.Text, {
           variant: "text-md/normal",
-          className: g.numericalRuleSubText,
-          children: f
+          className: m.numericalRuleSubText,
+          children: N
         })
       })]
     }), (0, a.jsx)(u.Switch, {
-      className: g.ruleItemSwitch,
-      checked: I,
+      className: m.ruleItemSwitch,
+      checked: f,
       onChange: e => {
         var t, s, a;
-        let n = null;
+        let l = null;
         if (e) {
-          let e = null != _ ? _ : S.OperatorTypes.GREATER_THAN,
-            a = Math.round(Number(null === (t = T.current) || void 0 === t ? void 0 : t.value));
-          e === S.OperatorTypes.GREATER_THAN ? a = Math.max(0, a - 1) : e === S.OperatorTypes.LESS_THAN && (a = Math.max(1, a + 1)), n = {
-            connectionType: null !== (s = null == o ? void 0 : o.type) && void 0 !== s ? s : S.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE,
+          let e = null != _ ? _ : T.OperatorTypes.GREATER_THAN,
+            a = Math.round(Number(null === (t = I.current) || void 0 === t ? void 0 : t.value));
+          e === T.OperatorTypes.GREATER_THAN ? a = Math.max(0, a - 1) : e === T.OperatorTypes.LESS_THAN && (a = Math.max(1, a + 1)), l = {
+            connectionType: null !== (s = null == o ? void 0 : o.type) && void 0 !== s ? s : T.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE,
             applicationId: d,
             connectionMetadataField: i,
             operator: e,
             value: a.toString()
           }
         }
-        c(n, null !== (a = null == r ? void 0 : r.index) && void 0 !== a ? a : -1)
+        c(l, null !== (a = null == r ? void 0 : r.index) && void 0 !== a ? a : -1)
       },
       disabled: E
     })]
   }, i)
 }
 
-function C(e) {
+function R(e) {
   let {
     configMetadataMap: t,
     onConfigurationChange: s,
-    locked: n
-  } = e, l = _.default.get(I.PlatformTypes.STEAM);
+    locked: l
+  } = e, n = _.default.get(f.PlatformTypes.STEAM);
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(m, {
-      titleText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ACCOUNT_AGE,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AGE,
-      metadataField: S.MetadataFields.CREATED_AT,
-      existingPendingConfiguration: t.get(S.MetadataFields.CREATED_AT),
-      platform: l,
+    children: [(0, a.jsx)(C, {
+      titleText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ACCOUNT_AGE,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AGE,
+      metadataField: T.MetadataFields.CREATED_AT,
+      existingPendingConfiguration: t.get(T.MetadataFields.CREATED_AT),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.CONNECTIONS_STEAM_GAMES,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_GAMES,
-      metadataField: S.MetadataFields.STEAM_GAME_COUNT,
-      existingPendingConfiguration: t.get(S.MetadataFields.STEAM_GAME_COUNT),
-      platform: l,
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.CONNECTIONS_STEAM_GAMES,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_GAMES,
+      metadataField: T.MetadataFields.STEAM_GAME_COUNT,
+      existingPendingConfiguration: t.get(T.MetadataFields.STEAM_GAME_COUNT),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ITEMS.format({
-        gameName: N.default.Messages.CONNECTIONS_STEAM_DOTA2
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ITEMS.format({
+        gameName: S.default.Messages.CONNECTIONS_STEAM_DOTA2
       }),
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_DOTA2,
-      metadataField: S.MetadataFields.STEAM_ITEM_COUNT_DOTA2,
-      existingPendingConfiguration: t.get(S.MetadataFields.STEAM_ITEM_COUNT_DOTA2),
-      platform: l,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_DOTA2,
+      metadataField: T.MetadataFields.STEAM_ITEM_COUNT_DOTA2,
+      existingPendingConfiguration: t.get(T.MetadataFields.STEAM_ITEM_COUNT_DOTA2),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ITEMS.format({
-        gameName: N.default.Messages.CONNECTIONS_STEAM_TF2
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ITEMS.format({
+        gameName: S.default.Messages.CONNECTIONS_STEAM_TF2
       }),
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_TF2,
-      metadataField: S.MetadataFields.STEAM_ITEM_COUNT_TF2,
-      existingPendingConfiguration: t.get(S.MetadataFields.STEAM_ITEM_COUNT_TF2),
-      platform: l,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_TF2,
+      metadataField: T.MetadataFields.STEAM_ITEM_COUNT_TF2,
+      existingPendingConfiguration: t.get(T.MetadataFields.STEAM_ITEM_COUNT_TF2),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
+      locked: l
+    })]
+  })
+}
+
+function x(e) {
+  let {
+    configMetadataMap: t,
+    onConfigurationChange: s,
+    locked: l
+  } = e, n = _.default.get(f.PlatformTypes.TWITTER);
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(C, {
+      titleText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ACCOUNT_AGE,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AGE,
+      metadataField: T.MetadataFields.CREATED_AT,
+      existingPendingConfiguration: t.get(T.MetadataFields.CREATED_AT),
+      platform: n,
+      onConfigurationChange: s,
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.CONNECTIONS_TWITTER_FOLLOWERS,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_FOLLOWERS,
+      metadataField: T.MetadataFields.TWITTER_FOLLOWERS_COUNT,
+      existingPendingConfiguration: t.get(T.MetadataFields.TWITTER_FOLLOWERS_COUNT),
+      platform: n,
+      onConfigurationChange: s,
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.CONNECTIONS_TWITTER_STATUSES,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_TWEETS,
+      metadataField: T.MetadataFields.TWITTER_STATUSES_COUNT,
+      existingPendingConfiguration: t.get(T.MetadataFields.TWITTER_STATUSES_COUNT),
+      platform: n,
+      onConfigurationChange: s,
+      locked: l
+    }), (0, a.jsx)(h, {
+      titleText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_VERIFIED,
+      fieldText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_VERIFIED,
+      metadataField: T.MetadataFields.TWITTER_VERIFIED,
+      existingPendingConfiguration: t.get(T.MetadataFields.TWITTER_VERIFIED),
+      platform: n,
+      onConfigurationChange: s,
+      locked: l
+    })]
+  })
+}
+
+function L(e) {
+  let {
+    configMetadataMap: t,
+    onConfigurationChange: s,
+    locked: l
+  } = e, n = _.default.get(f.PlatformTypes.REDDIT);
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(C, {
+      titleText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ACCOUNT_AGE,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AGE,
+      metadataField: T.MetadataFields.CREATED_AT,
+      existingPendingConfiguration: t.get(T.MetadataFields.CREATED_AT),
+      platform: n,
+      onConfigurationChange: s,
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.CONNECTIONS_REDDIT_KARMA,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_KARMA,
+      metadataField: T.MetadataFields.REDDIT_TOTAL_KARMA,
+      existingPendingConfiguration: t.get(T.MetadataFields.REDDIT_TOTAL_KARMA),
+      platform: n,
+      onConfigurationChange: s,
+      locked: l
+    }), (0, a.jsx)(h, {
+      titleText: S.default.Messages.CONNECTIONS_REDDIT_MOD,
+      fieldText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_MOD,
+      metadataField: T.MetadataFields.REDDIT_MOD,
+      existingPendingConfiguration: t.get(T.MetadataFields.REDDIT_MOD),
+      platform: n,
+      onConfigurationChange: s,
+      locked: l
+    }), (0, a.jsx)(h, {
+      titleText: S.default.Messages.CONNECTIONS_REDDIT_GOLD,
+      fieldText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_GOLD,
+      metadataField: T.MetadataFields.REDDIT_GOLD,
+      existingPendingConfiguration: t.get(T.MetadataFields.REDDIT_GOLD),
+      platform: n,
+      onConfigurationChange: s,
+      locked: l
     })]
   })
 }
@@ -278,163 +364,120 @@ function O(e) {
   let {
     configMetadataMap: t,
     onConfigurationChange: s,
-    locked: n
-  } = e, l = _.default.get(I.PlatformTypes.TWITTER);
+    locked: l
+  } = e, n = _.default.get(f.PlatformTypes.PAYPAL);
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(m, {
-      titleText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ACCOUNT_AGE,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AGE,
-      metadataField: S.MetadataFields.CREATED_AT,
-      existingPendingConfiguration: t.get(S.MetadataFields.CREATED_AT),
-      platform: l,
+    children: [(0, a.jsx)(C, {
+      titleText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ACCOUNT_AGE,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AGE,
+      metadataField: T.MetadataFields.CREATED_AT,
+      existingPendingConfiguration: t.get(T.MetadataFields.CREATED_AT),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.CONNECTIONS_TWITTER_FOLLOWERS,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_FOLLOWERS,
-      metadataField: S.MetadataFields.TWITTER_FOLLOWERS_COUNT,
-      existingPendingConfiguration: t.get(S.MetadataFields.TWITTER_FOLLOWERS_COUNT),
-      platform: l,
+      locked: l
+    }), (0, a.jsx)(h, {
+      titleText: S.default.Messages.CONNECTIONS_PAYPAL_VERIFIED,
+      fieldText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_PAYPAL_VERIFIED_BANK_ACCOUNT,
+      metadataField: T.MetadataFields.PAYPAL_VERIFIED,
+      existingPendingConfiguration: t.get(T.MetadataFields.PAYPAL_VERIFIED),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.CONNECTIONS_TWITTER_STATUSES,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_TWEETS,
-      metadataField: S.MetadataFields.TWITTER_STATUSES_COUNT,
-      existingPendingConfiguration: t.get(S.MetadataFields.TWITTER_STATUSES_COUNT),
-      platform: l,
-      onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(L, {
-      titleText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_VERIFIED,
-      fieldText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_VERIFIED,
-      metadataField: S.MetadataFields.TWITTER_VERIFIED,
-      existingPendingConfiguration: t.get(S.MetadataFields.TWITTER_VERIFIED),
-      platform: l,
-      onConfigurationChange: s,
-      locked: n
+      locked: l
     })]
   })
 }
 
-function h(e) {
+function p(e) {
   let {
     configMetadataMap: t,
     onConfigurationChange: s,
-    locked: n
-  } = e, l = _.default.get(I.PlatformTypes.REDDIT);
+    locked: l
+  } = e, n = _.default.get(f.PlatformTypes.EBAY);
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(m, {
-      titleText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ACCOUNT_AGE,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AGE,
-      metadataField: S.MetadataFields.CREATED_AT,
-      existingPendingConfiguration: t.get(S.MetadataFields.CREATED_AT),
-      platform: l,
+    children: [(0, a.jsx)(C, {
+      titleText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ACCOUNT_AGE,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AGE,
+      metadataField: T.MetadataFields.CREATED_AT,
+      existingPendingConfiguration: t.get(T.MetadataFields.CREATED_AT),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.CONNECTIONS_REDDIT_KARMA,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_KARMA,
-      metadataField: S.MetadataFields.REDDIT_TOTAL_KARMA,
-      existingPendingConfiguration: t.get(S.MetadataFields.REDDIT_TOTAL_KARMA),
-      platform: l,
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.CONNECTIONS_EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_POSITIVE_FEEDBACK_PERCENTAGE,
+      metadataField: T.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
+      existingPendingConfiguration: t.get(T.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(L, {
-      titleText: N.default.Messages.CONNECTIONS_REDDIT_MOD,
-      fieldText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_MOD,
-      metadataField: S.MetadataFields.REDDIT_MOD,
-      existingPendingConfiguration: t.get(S.MetadataFields.REDDIT_MOD),
-      platform: l,
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.CONNECTIONS_EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_UNIQUE_POSITIVE_FEEDBACK_COUNT,
+      metadataField: T.MetadataFields.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
+      existingPendingConfiguration: t.get(T.MetadataFields.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(L, {
-      titleText: N.default.Messages.CONNECTIONS_REDDIT_GOLD,
-      fieldText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_GOLD,
-      metadataField: S.MetadataFields.REDDIT_GOLD,
-      existingPendingConfiguration: t.get(S.MetadataFields.REDDIT_GOLD),
-      platform: l,
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.CONNECTIONS_EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_MOST_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
+      metadataField: T.MetadataFields.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
+      existingPendingConfiguration: t.get(T.MetadataFields.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
+      locked: l,
+      operator: T.OperatorTypes.LESS_THAN
+    }), (0, a.jsx)(h, {
+      titleText: S.default.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER,
+      fieldText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_TOP_RATED_SELLER,
+      metadataField: T.MetadataFields.EBAY_TOP_RATED_SELLER,
+      existingPendingConfiguration: t.get(T.MetadataFields.EBAY_TOP_RATED_SELLER),
+      platform: n,
+      onConfigurationChange: s,
+      locked: l
     })]
   })
 }
 
-function R(e) {
+function A(e) {
   let {
     configMetadataMap: t,
     onConfigurationChange: s,
-    locked: n
-  } = e, l = _.default.get(I.PlatformTypes.PAYPAL);
+    locked: l
+  } = e, n = _.default.get(f.PlatformTypes.TIKTOK);
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(m, {
-      titleText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ACCOUNT_AGE,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AGE,
-      metadataField: S.MetadataFields.CREATED_AT,
-      existingPendingConfiguration: t.get(S.MetadataFields.CREATED_AT),
-      platform: l,
+    children: [(0, a.jsx)(h, {
+      titleText: S.default.Messages.CONNECTIONS_TIKTOK_VERIFIED,
+      fieldText: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_VERIFIED,
+      metadataField: T.MetadataFields.TIKTOK_VERIFIED,
+      existingPendingConfiguration: t.get(T.MetadataFields.TIKTOK_VERIFIED),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(L, {
-      titleText: N.default.Messages.CONNECTIONS_PAYPAL_VERIFIED,
-      fieldText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_PAYPAL_VERIFIED_BANK_ACCOUNT,
-      metadataField: S.MetadataFields.PAYPAL_VERIFIED,
-      existingPendingConfiguration: t.get(S.MetadataFields.PAYPAL_VERIFIED),
-      platform: l,
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.CONNECTIONS_TIKTOK_FOLLOWERS,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_FOLLOWERS,
+      metadataField: T.MetadataFields.TIKTOK_FOLLOWER_COUNT,
+      existingPendingConfiguration: t.get(T.MetadataFields.TIKTOK_FOLLOWER_COUNT),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    })]
-  })
-}
-
-function D(e) {
-  let {
-    configMetadataMap: t,
-    onConfigurationChange: s,
-    locked: n
-  } = e, l = _.default.get(I.PlatformTypes.EBAY);
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(m, {
-      titleText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ACCOUNT_AGE,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AGE,
-      metadataField: S.MetadataFields.CREATED_AT,
-      existingPendingConfiguration: t.get(S.MetadataFields.CREATED_AT),
-      platform: l,
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.CONNECTIONS_TIKTOK_FOLLOWING,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_FOLLOWING,
+      metadataField: T.MetadataFields.TIKTOK_FOLLOWING_COUNT,
+      existingPendingConfiguration: t.get(T.MetadataFields.TIKTOK_FOLLOWING_COUNT),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.CONNECTIONS_EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_POSITIVE_FEEDBACK_PERCENTAGE,
-      metadataField: S.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
-      existingPendingConfiguration: t.get(S.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE),
-      platform: l,
+      locked: l
+    }), (0, a.jsx)(C, {
+      titleText: S.default.Messages.CONNECTIONS_TIKTOK_LIKES,
+      fieldTextHook: S.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_LIKES,
+      metadataField: T.MetadataFields.TIKTOK_LIKES_COUNT,
+      existingPendingConfiguration: t.get(T.MetadataFields.TIKTOK_LIKES_COUNT),
+      platform: n,
       onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.CONNECTIONS_EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_UNIQUE_POSITIVE_FEEDBACK_COUNT,
-      metadataField: S.MetadataFields.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
-      existingPendingConfiguration: t.get(S.MetadataFields.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT),
-      platform: l,
-      onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.CONNECTIONS_EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_MOST_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
-      metadataField: S.MetadataFields.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
-      existingPendingConfiguration: t.get(S.MetadataFields.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT),
-      platform: l,
-      onConfigurationChange: s,
-      locked: n,
-      operator: S.OperatorTypes.LESS_THAN
-    }), (0, a.jsx)(L, {
-      titleText: N.default.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER,
-      fieldText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_TOP_RATED_SELLER,
-      metadataField: S.MetadataFields.EBAY_TOP_RATED_SELLER,
-      existingPendingConfiguration: t.get(S.MetadataFields.EBAY_TOP_RATED_SELLER),
-      platform: l,
-      onConfigurationChange: s,
-      locked: n
+      locked: l
     })]
   })
 }
@@ -443,106 +486,63 @@ function M(e) {
   let {
     configMetadataMap: t,
     onConfigurationChange: s,
-    locked: n
-  } = e, l = _.default.get(I.PlatformTypes.TIKTOK);
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(L, {
-      titleText: N.default.Messages.CONNECTIONS_TIKTOK_VERIFIED,
-      fieldText: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_BE_VERIFIED,
-      metadataField: S.MetadataFields.TIKTOK_VERIFIED,
-      existingPendingConfiguration: t.get(S.MetadataFields.TIKTOK_VERIFIED),
-      platform: l,
-      onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.CONNECTIONS_TIKTOK_FOLLOWERS,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_FOLLOWERS,
-      metadataField: S.MetadataFields.TIKTOK_FOLLOWER_COUNT,
-      existingPendingConfiguration: t.get(S.MetadataFields.TIKTOK_FOLLOWER_COUNT),
-      platform: l,
-      onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.CONNECTIONS_TIKTOK_FOLLOWING,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_FOLLOWING,
-      metadataField: S.MetadataFields.TIKTOK_FOLLOWING_COUNT,
-      existingPendingConfiguration: t.get(S.MetadataFields.TIKTOK_FOLLOWING_COUNT),
-      platform: l,
-      onConfigurationChange: s,
-      locked: n
-    }), (0, a.jsx)(m, {
-      titleText: N.default.Messages.CONNECTIONS_TIKTOK_LIKES,
-      fieldTextHook: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_LIKES,
-      metadataField: S.MetadataFields.TIKTOK_LIKES_COUNT,
-      existingPendingConfiguration: t.get(S.MetadataFields.TIKTOK_LIKES_COUNT),
-      platform: l,
-      onConfigurationChange: s,
-      locked: n
-    })]
-  })
-}
-
-function G(e) {
-  let {
-    configMetadataMap: t,
-    onConfigurationChange: s,
-    locked: n,
-    integration: l
+    locked: l,
+    integration: n
   } = e;
-  if (null == l || null == l.role_connections_metadata) return null;
-  let i = l.role_connections_metadata.map(e => {
+  if (null == n || null == n.role_connections_metadata) return null;
+  let i = n.role_connections_metadata.map(e => {
     var i, r;
     let o;
     switch (e.type) {
-      case S.MetadataItemTypes.INTEGER_LESS_THAN_EQUAL:
-      case S.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
-        o = S.OperatorTypes.LESS_THAN;
+      case T.MetadataItemTypes.INTEGER_LESS_THAN_EQUAL:
+      case T.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
+        o = T.OperatorTypes.LESS_THAN;
         break;
-      case S.MetadataItemTypes.INTEGER_GREATER_THAN_EQUAL:
-      case S.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
-        o = S.OperatorTypes.GREATER_THAN;
+      case T.MetadataItemTypes.INTEGER_GREATER_THAN_EQUAL:
+      case T.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
+        o = T.OperatorTypes.GREATER_THAN;
         break;
-      case S.MetadataItemTypes.INTEGER_EQUAL:
-      case S.MetadataItemTypes.BOOLEAN_EQUAL:
-        o = S.OperatorTypes.EQUAL;
+      case T.MetadataItemTypes.INTEGER_EQUAL:
+      case T.MetadataItemTypes.BOOLEAN_EQUAL:
+        o = T.OperatorTypes.EQUAL;
         break;
-      case S.MetadataItemTypes.INTEGER_NOT_EQUAL:
-      case S.MetadataItemTypes.BOOLEAN_NOT_EQUAL:
-        o = S.OperatorTypes.NOT_EQUAL;
+      case T.MetadataItemTypes.INTEGER_NOT_EQUAL:
+      case T.MetadataItemTypes.BOOLEAN_NOT_EQUAL:
+        o = T.OperatorTypes.NOT_EQUAL;
         break;
       default:
         return null
     }
     switch (e.type) {
-      case S.MetadataItemTypes.INTEGER_LESS_THAN_EQUAL:
-      case S.MetadataItemTypes.INTEGER_GREATER_THAN_EQUAL:
-      case S.MetadataItemTypes.INTEGER_EQUAL:
-      case S.MetadataItemTypes.INTEGER_NOT_EQUAL:
-      case S.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
-      case S.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
-        return (0, a.jsx)(m, {
+      case T.MetadataItemTypes.INTEGER_LESS_THAN_EQUAL:
+      case T.MetadataItemTypes.INTEGER_GREATER_THAN_EQUAL:
+      case T.MetadataItemTypes.INTEGER_EQUAL:
+      case T.MetadataItemTypes.INTEGER_NOT_EQUAL:
+      case T.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
+      case T.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
+        return (0, a.jsx)(C, {
           titleText: e.name,
           fieldText: e.description,
           metadataField: e.key,
           existingPendingConfiguration: t.get(e.key),
           platform: null,
           onConfigurationChange: s,
-          locked: n,
+          locked: l,
           operator: o,
-          applicationId: null === (i = l.application) || void 0 === i ? void 0 : i.id
+          applicationId: null === (i = n.application) || void 0 === i ? void 0 : i.id
         }, e.key);
-      case S.MetadataItemTypes.BOOLEAN_EQUAL:
-      case S.MetadataItemTypes.BOOLEAN_NOT_EQUAL:
-        return (0, a.jsx)(L, {
+      case T.MetadataItemTypes.BOOLEAN_EQUAL:
+      case T.MetadataItemTypes.BOOLEAN_NOT_EQUAL:
+        return (0, a.jsx)(h, {
           titleText: e.name,
           fieldText: e.description,
           metadataField: e.key,
           existingPendingConfiguration: t.get(e.key),
           platform: null,
           onConfigurationChange: s,
-          locked: n,
+          locked: l,
           operator: o,
-          applicationId: null === (r = l.application) || void 0 === r ? void 0 : r.id
+          applicationId: null === (r = n.application) || void 0 === r ? void 0 : r.id
         }, e.key)
     }
   });
@@ -551,11 +551,11 @@ function G(e) {
   })
 }
 
-function x(e) {
+function D(e) {
   let t, {
       configurationItems: s,
-      onConfigurationChange: n,
-      locked: l,
+      onConfigurationChange: l,
+      locked: n,
       integrations: i
     } = e,
     r = (0, E.default)();
@@ -574,57 +574,57 @@ function x(e) {
   s.forEach(e => {
     null != e.configuration.connectionMetadataField ? c.set(e.configuration.connectionMetadataField, e) : null == e.configuration.value && null == e.configuration.operator && null == e.configuration.connectionMetadataField && (t = e)
   });
-  let T = {
+  let I = {
       configMetadataMap: c,
-      onConfigurationChange: n,
-      locked: l
+      onConfigurationChange: l,
+      locked: n
     },
-    S = null;
+    T = null;
   switch (null == u ? void 0 : u.type) {
-    case I.PlatformTypes.STEAM:
-      S = (0, a.jsx)(C, {
-        ...T
+    case f.PlatformTypes.STEAM:
+      T = (0, a.jsx)(R, {
+        ...I
       });
       break;
-    case I.PlatformTypes.TWITTER:
-      S = (0, a.jsx)(O, {
-        ...T
+    case f.PlatformTypes.TWITTER:
+      T = (0, a.jsx)(x, {
+        ...I
       });
       break;
-    case I.PlatformTypes.REDDIT:
-      S = (0, a.jsx)(h, {
-        ...T
+    case f.PlatformTypes.REDDIT:
+      T = (0, a.jsx)(L, {
+        ...I
       });
       break;
-    case I.PlatformTypes.PAYPAL:
-      S = (0, a.jsx)(R, {
-        ...T
+    case f.PlatformTypes.PAYPAL:
+      T = (0, a.jsx)(O, {
+        ...I
       });
       break;
-    case I.PlatformTypes.EBAY:
-      S = (0, a.jsx)(D, {
-        ...T
+    case f.PlatformTypes.EBAY:
+      T = (0, a.jsx)(p, {
+        ...I
       });
       break;
-    case I.PlatformTypes.TIKTOK:
-      S = (0, a.jsx)(M, {
-        ...T
+    case f.PlatformTypes.TIKTOK:
+      T = (0, a.jsx)(A, {
+        ...I
       });
       break;
     default:
-      S = (0, a.jsx)(G, {
-        ...T,
+      T = (0, a.jsx)(M, {
+        ...I,
         integration: d
       })
   }
   return (0, a.jsxs)("div", {
-    className: g.container,
-    children: [(0, a.jsx)(f, {
+    className: m.container,
+    children: [(0, a.jsx)(N, {
       theme: r,
       platform: u,
       integration: d,
-      onRemove: () => n(null, t.index),
-      locked: l
-    }), S]
+      onRemove: () => l(null, t.index),
+      locked: n
+    }), T]
   })
 }

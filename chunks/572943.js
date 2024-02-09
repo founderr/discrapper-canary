@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   usePlatformAllowed: function() {
-    return g
+    return S
   },
   usePlatforms: function() {
-    return S
+    return g
   },
   useLegacyPlatformType: function() {
     return C
@@ -29,7 +29,7 @@ let m = {
   ]),
   E = 30 * c.default.Millis.DAY;
 
-function g(e) {
+function S(e) {
   let {
     forUserProfile: t
   } = e, n = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), l = o.PlayStationVoiceExperiment.useExperiment({
@@ -43,9 +43,9 @@ function g(e) {
   }
 }
 
-function S() {
+function g() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.getAccounts()),
-    t = g({
+    t = S({
       forUserProfile: !1
     }),
     n = l.useMemo(() => {

@@ -9,8 +9,8 @@ let {
   newline: o,
   paragraph: n,
   url: r,
-  link: a,
-  strong: i,
+  link: i,
+  strong: a,
   u: I,
   br: s,
   em: T,
@@ -22,13 +22,13 @@ var O = {
   paragraph: n,
   url: r,
   link: {
-    ...a,
+    ...i,
     parse(e, _, E) {
-      let t = a.parse(e, _, E);
+      let t = i.parse(e, _, E);
       return t.context = E.context, t
     }
   },
-  strong: i,
+  strong: a,
   u: I,
   br: s,
   em: T,

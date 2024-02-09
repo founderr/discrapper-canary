@@ -8,8 +8,8 @@ var i = n("917351"),
   l = n.n(i),
   a = n("693566"),
   s = n.n(a),
-  o = n("446674"),
-  r = n("913144"),
+  r = n("446674"),
+  o = n("913144"),
   u = n("798609"),
   d = n("140596"),
   c = n("42203"),
@@ -18,8 +18,8 @@ var i = n("917351"),
   m = n("166004"),
   I = n("389153");
 let _ = new Map,
-  C = new Set,
   T = new Set,
+  C = new Set,
   A = new s({
     max: 1e4
   }),
@@ -36,7 +36,7 @@ let _ = new Map,
     return (0, m.search)(n, i).then(e => {
       var i;
       if (null == e) return;
-      if (null != t && l && C.add(t), 0 === e.applicationCommands.length && (null == e.applications || 0 === e.applications.length)) return;
+      if (null != t && l && T.add(t), 0 === e.applicationCommands.length && (null == e.applications || 0 === e.applications.length)) return;
       let a = (0, I.buildApplicationCommands)(e.applicationCommands);
       f.updateRegistry(a, null !== (i = e.applications) && void 0 !== i ? i : [], n)
     })
@@ -65,7 +65,7 @@ let _ = new Map,
     let a = c.default.getChannel(t);
     if (null == a || !(0, I.canUseApplicationCommands)(p.default, d.default, !1, a)) return;
     let s = l.slice(0, 100),
-      o = l.slice(100);
+      r = l.slice(100);
     N({
       guildId: e,
       channelId: t,
@@ -78,10 +78,10 @@ let _ = new Map,
         limit: 0
       }
     }).then(() => {
-      o.length > 0 && g(e, t, new Set(o), i)
+      r.length > 0 && g(e, t, new Set(r), i)
     })
   }, 250);
-class M extends o.default.Store {
+class O extends r.default.Store {
   hasCommand(e) {
     return null != e && A.has(e)
   }
@@ -98,8 +98,8 @@ class M extends o.default.Store {
     }, [])
   }
 }
-M.displayName = "ApplicationCommandRegistryStore";
-let O = new M(r.default, {
+O.displayName = "ApplicationCommandRegistryStore";
+let M = new O(o.default, {
   APPLICATION_COMMAND_FETCH: function(e) {
     let {
       channelId: t,
@@ -107,9 +107,9 @@ let O = new M(r.default, {
       guildId: i
     } = e;
     if (A.has(n)) return;
-    T.add(n);
-    let l = null != i && !C.has(i);
-    g(i, t, T, l)
+    C.add(n);
+    let l = null != i && !T.has(i);
+    g(i, t, C, l)
   },
   APPLICATION_COMMANDS_FETCH: function(e) {
     let {
@@ -119,10 +119,10 @@ let O = new M(r.default, {
     } = e;
     n.forEach(e => {
       var n;
-      (null === (n = E.get(e)) || void 0 === n ? void 0 : n.channelId) !== t && T.add(e)
+      (null === (n = E.get(e)) || void 0 === n ? void 0 : n.channelId) !== t && C.add(e)
     });
-    let l = null != i && !C.has(i);
-    g(i, t, T, l)
+    let l = null != i && !T.has(i);
+    g(i, t, C, l)
   },
   APPLICATION_COMMANDS_FETCH_FOR_APPLICATION: function(e) {
     let {
@@ -141,7 +141,7 @@ let O = new M(r.default, {
     let {
       guildId: t
     } = e;
-    C.delete(t)
+    T.delete(t)
   },
   APPLICATION_COMMAND_REGISTRY_UPDATE: function(e) {
     let {
@@ -150,7 +150,7 @@ let O = new M(r.default, {
       channelId: i
     } = e;
     for (let e of t) _.set(e.id, e);
-    for (let e of n) T.delete(e.id), A.set(e.id, e), E.set(e.id, {
+    for (let e of n) C.delete(e.id), A.set(e.id, e), E.set(e.id, {
       channelId: i,
       command: e
     })
@@ -174,7 +174,7 @@ let O = new M(r.default, {
     }))
   },
   LOGOUT: function() {
-    _.clear(), C.clear(), T.clear(), A.reset(), E.reset()
+    _.clear(), T.clear(), C.clear(), A.reset(), E.reset()
   }
 });
-var h = O
+var h = M

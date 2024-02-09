@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("644583"),
-  l = s("398410"),
+var l = s("644583"),
+  n = s("398410"),
   i = s("571067");
 
 function r(e) {
@@ -21,17 +21,17 @@ function r(e) {
     includeRoleRestrictedPrivateChannels: c = !1,
     includeStageVoiceChannels: E = !1,
     helperText: _,
-    className: T
-  } = e, I = (0, l.useChannelRows)(t, s, c, E), S = (0, i.useRoleRows)(t, r, u);
-  return (0, a.jsx)(n.default, {
-    channelRows: I,
-    roleRows: S,
+    className: I
+  } = e, f = (0, n.useChannelRows)(t, s, c, E), T = (0, i.useRoleRows)(t, r, u);
+  return (0, a.jsx)(l.default, {
+    channelRows: f,
+    roleRows: T,
     guildId: t,
     selectedChannelIds: s,
     selectedRoleIds: r,
     onChange: o,
     placeholder: d,
     helperText: _,
-    className: T
+    className: I
   })
 }

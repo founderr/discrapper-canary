@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(e), l.d(e, {
   default: function() {
-    return r
+    return a
   }
 });
-var i = n("666038");
-class l extends i.default {
-  static createFromServer(e) {
-    return new l({
-      id: e.id,
-      guildId: e.guild_id,
-      userId: null != e.user ? e.user.id : e.user_id,
-      user: e.user,
-      ended: e.ended,
-      endsAt: null != e.ends_at && "" !== e.ends_at ? new Date(e.ends_at) : null
+var n = l("666038");
+class r extends n.default {
+  static createFromServer(t) {
+    return new r({
+      id: t.id,
+      guildId: t.guild_id,
+      userId: null != t.user ? t.user.id : t.user_id,
+      user: t.user,
+      ended: t.ended,
+      endsAt: null != t.ends_at && "" !== t.ends_at ? new Date(t.ends_at) : null
     })
   }
-  constructor(e) {
-    super(), this.id = e.id, this.guildId = e.guildId, this.userId = e.userId, this.user = e.user, this.ended = e.ended, this.endsAt = null != e.endsAt ? e.endsAt : null
+  constructor(t) {
+    super(), this.id = t.id, this.guildId = t.guildId, this.userId = t.userId, this.user = t.user, this.ended = t.ended, this.endsAt = null != t.endsAt ? t.endsAt : null
   }
 }
-var r = l
+var a = r

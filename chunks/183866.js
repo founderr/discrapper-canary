@@ -4,12 +4,12 @@ s.r(t), s.d(t, {
     return E
   },
   getRuleInfo: function() {
-    return f
+    return N
   }
 });
 var a = s("116320"),
-  n = s("117300"),
-  l = s("83900"),
+  l = s("117300"),
+  n = s("83900"),
   i = s("350932"),
   r = s("160237"),
   o = s("454686"),
@@ -38,11 +38,11 @@ let E = e => {
         return !1
     }
   },
-  T = (e, t) => {
+  I = (e, t) => {
     var s;
     return null !== (s = null == t ? void 0 : t.name) && void 0 !== s ? s : (0, d.triggerConfigs)[e].getDefaultRuleName()
   },
-  I = (e, t) => {
+  f = (e, t) => {
     if ((0, o.isBackendPersistedRule)(t) && (0, o.isRuleKeywordFilter)(t)) return t.triggerMetadata.regexPatterns.length > 0 ? c.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_AND_REGEX_COUNT.format({
       keywordCount: t.triggerMetadata.keywordFilter.length,
       regexPatternCount: t.triggerMetadata.regexPatterns.length
@@ -50,7 +50,7 @@ let E = e => {
       keywordCount: t.triggerMetadata.keywordFilter.length
     })
   },
-  S = e => {
+  T = e => {
     switch (e) {
       case u.AutomodTriggerType.KEYWORD:
         return c.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_DESCRIPTION;
@@ -66,10 +66,10 @@ let E = e => {
         return null
     }
   },
-  N = e => {
+  S = e => {
     if (e === u.AutomodTriggerType.KEYWORD) return c.default.Messages.GUILD_AUTOMOD_LINK_FILTER_MATCHING_STRATEGY_DESCRIPTION.format()
   },
-  g = e => {
+  m = e => {
     switch (e) {
       case u.AutomodTriggerType.MENTION_SPAM:
         return a.default;
@@ -77,19 +77,19 @@ let E = e => {
         return i.default;
       case u.AutomodTriggerType.ML_SPAM:
       case u.AutomodTriggerType.USER_PROFILE:
-        return n.default;
+        return l.default;
       case u.AutomodTriggerType.DEFAULT_KEYWORD_LIST:
         return r.default
     }
   };
 
-function f(e, t) {
-  var s, a, n, i, r;
+function N(e, t) {
+  var s, a, l, i, r;
   return null != e && _(e) ? {
-    headerText: null !== (s = T(e, t)) && void 0 !== s ? s : "",
-    headerSubtext: null !== (a = I(e, t)) && void 0 !== a ? a : "",
-    descriptionText: null !== (n = S(e)) && void 0 !== n ? n : "",
-    descriptionSubtext: null !== (i = N(e)) && void 0 !== i ? i : "",
-    icon: null !== (r = g(e)) && void 0 !== r ? r : l.default
+    headerText: null !== (s = I(e, t)) && void 0 !== s ? s : "",
+    headerSubtext: null !== (a = f(e, t)) && void 0 !== a ? a : "",
+    descriptionText: null !== (l = T(e)) && void 0 !== l ? l : "",
+    descriptionSubtext: null !== (i = S(e)) && void 0 !== i ? i : "",
+    icon: null !== (r = m(e)) && void 0 !== r ? r : n.default
   } : null
 }

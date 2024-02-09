@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("65597"),
   i = n("84339"),
   r = n("427953"),
-  u = n("550766"),
-  o = n("191225"),
+  o = n("550766"),
+  u = n("191225"),
   d = n("420444"),
   c = n("294926"),
   f = n("272505");
@@ -23,17 +23,17 @@ function h(e) {
     connectedChannelId: h,
     connectedActivity: p,
     activityPanelMode: m
-  } = (0, s.useStateFromStoresObject)([o.default], () => {
+  } = (0, s.useStateFromStoresObject)([u.default], () => {
     var e;
-    let t = o.default.getConnectedActivityChannelId();
+    let t = u.default.getConnectedActivityChannelId();
     return {
       connectedChannelId: t,
-      connectedActivity: null != t && null !== (e = o.default.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
-      activityPanelMode: o.default.getActivityPanelMode()
+      connectedActivity: null != t && null !== (e = u.default.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
+      activityPanelMode: u.default.getActivityPanelMode()
     }
   }), E = (0, r.useIsActivitiesInTextEnabled)(h, "ActivityPanelUI"), C = (0, i.default)(h);
   if (l.useEffect(() => {
-      null != h && null == C && (0, u.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
+      null != h && null == C && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
     }, [h, C]), !E) return null;
   let g = null == p ? void 0 : p.applicationId;
   return m !== f.ActivityPanelModes.PANEL || null == g ? null : null == h || null == p || (0, d.default)(h) || null == g ? null : (0, a.jsx)(c.default, {

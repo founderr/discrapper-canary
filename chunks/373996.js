@@ -1,42 +1,42 @@
 "use strict";
-t.r(A), t.d(A, {
+A.r(t), A.d(t, {
   default: function() {
     return h
   }
 });
-var a = t("37983");
-t("884691");
-var l = t("627445"),
-  n = t.n(l),
-  s = t("509043"),
-  r = t("77078"),
-  i = t("973262"),
-  o = t("191814"),
-  d = t("476765"),
-  u = t("422403"),
-  c = t("49111"),
-  f = t("782340"),
-  g = t("513706");
+var a = A("37983");
+A("884691");
+var l = A("627445"),
+  n = A.n(l),
+  r = A("509043"),
+  s = A("77078"),
+  i = A("973262"),
+  o = A("191814"),
+  d = A("476765"),
+  u = A("422403"),
+  c = A("49111"),
+  f = A("782340"),
+  g = A("513706");
 let C = (0, d.uid)();
 
 function h(e) {
   let {
-    newRoleParams: A,
-    setNewRoleParams: t
+    newRoleParams: t,
+    setNewRoleParams: A
   } = e, {
     name: l,
     color: d
-  } = A, h = e => t(A => (n(null != A, "newRoleParams should be defined"), {
-    ...A,
+  } = t, h = e => A(t => (n(null != t, "newRoleParams should be defined"), {
+    ...t,
     color: e
   }));
   return (0, a.jsxs)("div", {
     className: g.roleInputContainer,
-    children: [(0, a.jsx)(r.TextInput, {
+    children: [(0, a.jsx)(s.TextInput, {
       autoFocus: !0,
       value: l,
-      onChange: e => t(A => (n(null != A, "newRoleParams should be defined"), {
-        ...A,
+      onChange: e => A(t => (n(null != t, "newRoleParams should be defined"), {
+        ...t,
         name: e
       })),
       id: C,
@@ -45,25 +45,25 @@ function h(e) {
       inputClassName: g.input
     }), (0, a.jsxs)("div", {
       className: g.roleColorContainer,
-      children: [(0, a.jsx)(r.HiddenVisually, {
+      children: [(0, a.jsx)(s.HiddenVisually, {
         children: f.default.Messages.GUILD_PRODUCT_SETTINGS_SELECT_ROLE_COLOR_ARIA.format({
-          color: (0, s.int2hex)(d)
+          color: (0, r.int2hex)(d)
         })
       }), (0, a.jsx)("div", {
         className: g.roleColorPreview,
         style: {
-          backgroundColor: (0, s.int2hex)(d)
+          backgroundColor: (0, r.int2hex)(d)
         }
       }), (0, a.jsx)(o.default, {
         size: 8,
         horizontal: !0
-      }), (0, a.jsx)(r.Popout, {
+      }), (0, a.jsx)(s.Popout, {
         renderPopout: e => (0, a.jsx)(i.CustomColorPicker, {
           ...e,
           value: d,
           onChange: h
         }),
-        children: e => (0, a.jsx)(r.Clickable, {
+        children: e => (0, a.jsx)(s.Clickable, {
           ...e,
           tag: "span",
           "aria-label": f.default.Messages.GUILD_PRODUCT_SETTINGS_CREATE_ROLE_SELECT_COLOR_ARIA,

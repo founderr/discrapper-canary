@@ -50,8 +50,8 @@ var E = s.memo(function(e) {
     iconClassName: s,
     icon: r,
     children: E,
-    onClick: g,
-    isActive: S,
+    onClick: S,
+    isActive: g,
     onMouseEnter: C,
     onMouseLeave: T,
     onFocus: v,
@@ -92,12 +92,12 @@ var E = s.memo(function(e) {
     "aria-controls": R,
     disabled: n,
     className: o(t, {
-      [m.active]: S
+      [m.active]: g
     }),
     innerClassName: o(m.button, l, {
       [m.pulseButton]: _
     }),
-    onClick: g,
+    onClick: S,
     onMouseEnter: C,
     onMouseLeave: T,
     onFocus: v,

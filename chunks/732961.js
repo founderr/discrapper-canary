@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
-  u = n("84339"),
-  o = n("109489"),
+  o = n("84339"),
+  u = n("109489"),
   d = n("271938"),
   c = n("42887"),
   f = n("659500"),
@@ -55,7 +55,7 @@ function v(e) {
     Z = K && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : I,
     X = P <= 2 * T + 144,
     J = L && !X,
-    q = (0, u.default)(J),
+    q = (0, o.default)(J),
     Q = 0;
   (z || J) && (Q += 72), z && !J && (Q += 48), J && (Q += .5 * T + 8);
   let $ = P - 2 * Q,
@@ -106,7 +106,7 @@ function v(e) {
         clamp: !0
       }
     }),
-    eu = (0, r.useTransition)(j, {
+    eo = (0, r.useTransition)(j, {
       keys: e => null == e ? void 0 : e.id,
       config: {
         ...r.config.stiff,
@@ -123,7 +123,7 @@ function v(e) {
         opacity: 0
       }
     }),
-    eo = l.useCallback(e => {
+    eu = l.useCallback(e => {
       B(e), G(!1)
     }, []),
     ed = J || y ? [] : (0, m.getPipParticipants)(x, j, k),
@@ -153,7 +153,7 @@ function v(e) {
             style: {
               aspectRatio: Z
             },
-            children: eu((e, t, l) => {
+            children: eo((e, t, l) => {
               let {
                 key: i
               } = l;
@@ -172,7 +172,7 @@ function v(e) {
                   onClick: n,
                   onDoubleClick: v,
                   onContextMenu: s,
-                  onVideoResize: eo,
+                  onVideoResize: eu,
                   inCall: M,
                   inPopout: w
                 })
@@ -186,7 +186,7 @@ function v(e) {
           style: {
             bottom: er.value
           },
-          children: (0, a.jsx)(o.default, {
+          children: (0, a.jsx)(u.default, {
             channelId: R.id,
             isParticipantsOpen: L,
             isVertical: !0

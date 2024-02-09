@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   CircleXIcon: function() {
     return s
   }
@@ -8,20 +8,20 @@ var i = n("37983");
 n("884691");
 var r = n("669491"),
   l = n("82169");
-let s = e => {
+let s = t => {
   let {
-    width: t = 24,
+    width: e = 24,
     height: n = 24,
     secondaryColor: s = "transparent",
     secondaryColorClass: a = "",
     color: o = r.default.colors.INTERACTIVE_NORMAL,
     colorClass: u = "",
     ...c
-  } = e;
+  } = t;
   return (0, i.jsxs)("svg", {
     ...(0, l.default)(c),
     xmlns: "http://www.w3.org/2000/svg",
-    width: t,
+    width: e,
     height: n,
     fill: "none",
     viewBox: "0 0 24 24",

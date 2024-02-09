@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   SearchBarIcon: function() {
-    return S
+    return g
   },
   default: function() {
     return T
@@ -22,19 +22,19 @@ var l, i, a = n("37983"),
   m = n("49111"),
   h = n("782340"),
   E = n("515315");
-let g = Object.freeze({
+let S = Object.freeze({
   SMALL: E.small,
   MEDIUM: E.medium,
   LARGE: E.large
 });
 (i = l || (l = {})).MEMBER = "MEMBER", i.ROLE = "ROLE", i.CHANNEL = "CHANNEL", i.GUILD = "GUILD", i.USER = "USER";
-let S = e => {
+let g = e => {
   let {
     hasContent: t,
     onClear: n,
     className: l,
     themeOverride: i,
-    size: s = g.SMALL
+    size: s = S.SMALL
   } = e;
   return (0, a.jsx)(u.Clickable, {
     className: o(l, E.iconLayout, s, (0, p.getThemeClass)(i), {
@@ -162,7 +162,7 @@ class C extends s.Component {
       size: r,
       maxHeight: f,
       tags: m,
-      onActivate: g,
+      onActivate: S,
       className: C,
       inputProps: T,
       focusAfterReady: v
@@ -228,10 +228,10 @@ class C extends s.Component {
             disabled: i,
             "aria-disabled": i,
             autoFocus: !v && e,
-            onMouseDown: g,
+            onMouseDown: S,
             ...this.defaultInputProps,
             ...T
-          }), null != s ? (0, a.jsx)(S, {
+          }), null != s ? (0, a.jsx)(g, {
             size: r,
             themeOverride: l,
             hasContent: I,
@@ -296,8 +296,8 @@ class C extends s.Component {
     }
   }
 }
-C.Sizes = g, C.defaultProps = {
-  size: g.SMALL,
+C.Sizes = S, C.defaultProps = {
+  size: S.SMALL,
   query: "",
   sections: [],
   selectedSection: 0,

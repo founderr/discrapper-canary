@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("45961"),
   h = n("515059"),
   E = n("501536"),
-  g = n("124299"),
-  S = n("476765"),
+  S = n("124299"),
+  g = n("476765"),
   C = n("507217"),
   T = n("240249"),
   v = n("972620"),
@@ -57,7 +57,7 @@ var U = i.forwardRef(function(e, t) {
     commands: Y,
     filteredSectionId: z,
     scrollDown: J,
-    filterSection: Z
+    filterSection: q
   } = T.useDiscovery(n, {
     commandType: d.ApplicationCommandType.CHAT,
     builtIns: a ? v.BuiltInCommandFilter.ONLY_TEXT : v.BuiltInCommandFilter.ALLOW,
@@ -66,7 +66,7 @@ var U = i.forwardRef(function(e, t) {
     placeholderCount: 7,
     limit: x.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
-  }), q = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
+  }), Z = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
     activeCategoryIndex: B,
     isScrolling: r,
     listRef: w,
@@ -79,16 +79,16 @@ var U = i.forwardRef(function(e, t) {
     },
     scrollOffset: 20,
     searchQuery: ""
-  }), X = e => {
+  }), Q = e => {
     let t = V.length,
       n = K.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
       l = 48 * t + n * P - 512;
-    W && e + 420 > l && J(), q(e), j(), o.current = e
+    W && e + 420 > l && J(), Z(e), j(), o.current = e
   };
   i.useEffect(() => {
-    X(o.current)
+    Q(o.current)
   }, [Y]);
-  let Q = i.useCallback(e => {
+  let X = i.useCallback(e => {
       let t = e === V.length - 1;
       return t && !W ? 0 : 16
     }, [V.length, W]),
@@ -104,9 +104,9 @@ var U = i.forwardRef(function(e, t) {
   let ee = i.useCallback(e => {
       if (e.id === z || e.id === x.BuiltInSectionId.FRECENCY) {
         var t;
-        Z(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
-      } else Z(e.id)
-    }, [Z, z]),
+        q(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
+      } else q(e.id)
+    }, [q, z]),
     et = i.useCallback((e, t, l) => {
       C.setActiveCommand({
         channelId: n.id,
@@ -197,7 +197,7 @@ var U = i.forwardRef(function(e, t) {
         }
       }, r)
     }, [n, K, et, H, U]),
-    ea = (0, S.useUID)();
+    ea = (0, g.useUID)();
   return (0, f.useChannelEditorPopup)(ea, !0, (0, E.getAutocompleteRowId)(U)), i.useEffect(() => () => {
     (0, f.dismissChannelEditorPopup)()
   }, []), (0, l.jsxs)(E.default, {
@@ -213,11 +213,11 @@ var U = i.forwardRef(function(e, t) {
       activeCategoryIndex: B,
       onSectionClick: ee,
       applicationCommandListRef: w
-    }), (0, l.jsx)(g.default, {
+    }), (0, l.jsx)(S.default, {
       role: "listbox",
       className: M.list,
       listPadding: b,
-      onScroll: X,
+      onScroll: Q,
       renderRow: ei,
       renderSection: el,
       renderSectionHeader: en,
@@ -225,7 +225,7 @@ var U = i.forwardRef(function(e, t) {
       rowCountBySection: $,
       rowHeight: P,
       sectionHeaderHeight: 32,
-      sectionMarginBottom: Q,
+      sectionMarginBottom: X,
       ref: w,
       stickyHeaders: !0
     })]

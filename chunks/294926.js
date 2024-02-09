@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("577776"),
-  o = n("452804"),
+  o = n("577776"),
+  u = n("452804"),
   d = n("579408"),
   c = n("168973"),
   f = n("981913"),
@@ -46,7 +46,7 @@ function y(e) {
   } = e, D = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != b ? I.default.getEmbeddedActivitiesForChannel(b) : [], [b]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), k = l.useCallback(() => {
     (0, _.updateActivityPanelMode)(M.ActivityPanelModes.PIP)
   }, []), V = l.useRef(null), B = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), H = B !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = l.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : y), Y = l.useCallback(e => {
-    o.default.updatedUnsyncedSettings({
+    u.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
   }, []), z = l.useRef(null), [K, Z] = l.useState({
@@ -88,7 +88,7 @@ function y(e) {
       className: L.activityPanelContainer,
       children: [H ? null : (0, a.jsx)("div", {
         className: L.header,
-        children: (0, a.jsx)(u.Text, {
+        children: (0, a.jsx)(o.Text, {
           color: "header-primary",
           variant: "text-md/semibold",
           className: L.headerTitle,

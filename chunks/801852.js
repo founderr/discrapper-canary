@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("90915"),
-  u = n("748820"),
-  o = n("446674"),
+  o = n("748820"),
+  u = n("446674"),
   d = n("77078"),
   c = n("997289"),
   f = n("244201"),
@@ -43,12 +43,12 @@ var a = n("37983"),
   k = n("894860"),
   V = n("717387"),
   B = n("861948");
-let H = "vc-activities-".concat((0, u.v4)()),
+let H = "vc-activities-".concat((0, o.v4)()),
   G = l.forwardRef(function(e, t) {
     let {
       channel: n,
       isHovered: s,
-      closePopout: u,
+      closePopout: o,
       onMouseEnter: G,
       onMouseLeave: W,
       onClick: Y,
@@ -79,7 +79,7 @@ let H = "vc-activities-".concat((0, u.v4)()),
       location: "activties_mini_shelf"
     }, {
       autoTrackExposure: !0
-    }), Q = (0, o.useStateFromStores)([C.default], () => C.default.getState().theme), $ = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
+    }), Q = (0, u.useStateFromStores)([C.default], () => C.default.getState().theme), $ = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
       id: ee,
       guild_id: et
     } = n;
@@ -89,8 +89,8 @@ let H = "vc-activities-".concat((0, u.v4)()),
         guild_id: et
       })
     }, [ee, et]), l.useEffect(() => {
-      !s && u()
-    }, [u, s]);
+      !s && o()
+    }, [o, s]);
     let en = (0, f.useAppContext)(),
       {
         analyticsLocations: ea,
@@ -101,8 +101,8 @@ let H = "vc-activities-".concat((0, u.v4)()),
         AnalyticsLocationProvider: ei
       } = (0, m.default)([...ea, p.default.ACTIVITIES_MINI_SHELF_BANNER]),
       er = en === b.AppContext.POPOUT,
-      eu = (0, c.useAnalyticsContext)(),
-      eo = function(e) {
+      eo = (0, c.useAnalyticsContext)(),
+      eu = function(e) {
         let t = (0, R.default)({
             guildId: e
           }),
@@ -121,11 +121,11 @@ let H = "vc-activities-".concat((0, u.v4)()),
         (0, O.default)({
           channel: n,
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-          locationObject: eu.location,
+          locationObject: eo.location,
           openInPopout: er,
           analyticsLocations: ea
         }), W(), Y()
-      }, [eu, ea, n, Y, W, er]),
+      }, [eo, ea, n, Y, W, er]),
       ec = l.useCallback(e => {
         G(), I.default.track(b.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
@@ -174,7 +174,7 @@ let H = "vc-activities-".concat((0, u.v4)()),
           [D.clickableBannerReducedMotion]: $
         }),
         onClick: () => {
-          Y(), u(), (0, E.transitionTo)(b.Routes.ACTIVITY_DETAILS(y.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, es)
+          Y(), o(), (0, E.transitionTo)(b.Routes.ACTIVITY_DETAILS(y.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, es)
         },
         children: [(0, a.jsx)("img", {
           alt: P.default.Messages.EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT,
@@ -188,7 +188,7 @@ let H = "vc-activities-".concat((0, u.v4)()),
           [D.clickableBannerReducedMotion]: $
         }),
         onClick: () => {
-          Y(), u(), (0, E.transitionTo)(b.Routes.ACTIVITY_DETAILS(y.COLONIST_APPLICATION_ID), void 0, void 0, es)
+          Y(), o(), (0, E.transitionTo)(b.Routes.ACTIVITY_DETAILS(y.COLONIST_APPLICATION_ID), void 0, void 0, es)
         },
         children: [(0, a.jsx)("img", {
           alt: P.default.Messages.EMBEDDED_ACTIVITIES_COLONIST_POSTER_ALT,
@@ -244,11 +244,11 @@ let H = "vc-activities-".concat((0, u.v4)()),
               children: ef
             }), (0, a.jsxs)("div", {
               className: D.activityContainer,
-              children: [eo.map(e => (0, a.jsx)(j.ActivitySuggestion, {
+              children: [eu.map(e => (0, a.jsx)(j.ActivitySuggestion, {
                 channel: n,
                 activityItem: e,
                 onClick: () => {
-                  u(), Y()
+                  o(), Y()
                 },
                 aspectRatio: j.ActivitySuggestion.AspectRatio.THIRTEEN_BY_ELEVEN,
                 animatedDivClass: D.activitySuggestion

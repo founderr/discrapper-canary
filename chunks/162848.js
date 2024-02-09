@@ -7,17 +7,17 @@ n.r(t), n.d(t, {
 var s = n("37983");
 n("884691");
 var i = n("414456"),
-  r = n.n(i),
-  l = n("265586"),
-  a = n("446674"),
+  a = n.n(i),
+  r = n("265586"),
+  l = n("446674"),
   u = n("77078"),
   o = n("606292"),
   d = n("688318"),
   c = n("635357"),
   f = n("184900"),
-  p = n("845962"),
-  S = n("506885"),
-  E = n("697218"),
+  E = n("845962"),
+  p = n("506885"),
+  S = n("697218"),
   m = n("153160"),
   _ = n("426188"),
   I = n("49111"),
@@ -27,7 +27,7 @@ var i = n("414456"),
 let h = e => {
     let {
       avatarDecoration: t
-    } = e, n = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), {
+    } = e, n = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser()), {
       avatarDecorationSrc: i
     } = (0, d.default)({
       user: n,
@@ -44,20 +44,20 @@ let h = e => {
     var t;
     let {
       profileEffect: n
-    } = e, i = (0, a.useStateFromStores)([p.default], () => p.default.getProfileEffectById(n.id)), {
-      accessibilityLabel: r,
-      thumbnailPreviewSrc: l,
+    } = e, i = (0, l.useStateFromStores)([E.default], () => E.default.getProfileEffectById(n.id)), {
+      accessibilityLabel: a,
+      thumbnailPreviewSrc: r,
       title: u
     } = null !== (t = null == i ? void 0 : i.config) && void 0 !== t ? t : {};
     return (0, s.jsxs)("div", {
       className: T.profileEffectContainer,
       children: [(0, s.jsx)("img", {
         src: x,
-        alt: r,
+        alt: a,
         className: T.profileEffectBackground
       }), (0, s.jsx)("img", {
         className: T.profileEffect,
-        src: l,
+        src: r,
         alt: u
       })]
     })
@@ -71,8 +71,8 @@ var P = e => {
     product: o
   } = (0, _.useFetchCollectiblesProduct)(t), {
     giftRecipient: d,
-    giftRecipientError: p
-  } = (0, c.useGiftContext)(), x = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser());
+    giftRecipientError: E
+  } = (0, c.useGiftContext)(), x = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser());
   if (null == o || null == n) return null;
   let [P] = o.items, A = null != d && d.id !== (null == x ? void 0 : x.id);
   return (0, s.jsxs)("div", {
@@ -83,13 +83,13 @@ var P = e => {
         className: T.previewTitle,
         children: C.default.Messages.COLLECTIBLES_GIFT_LABEL
       }), A && (0, s.jsx)(u.Popout, {
-        preload: () => (0, S.default)(d.id, d.getAvatarURL(null, 80)),
+        preload: () => (0, p.default)(d.id, d.getAvatarURL(null, 80)),
         renderPopout: e => (0, s.jsx)(f.default, {
           ...e,
           user: d,
           pendingAvatar: d.getAvatarURL(null, (0, u.getAvatarSize)(u.AvatarSizes.SIZE_80)),
-          pendingAvatarDecoration: P.type === l.CollectiblesItemType.AVATAR_DECORATION ? P : null,
-          pendingProfileEffectId: P.type === l.CollectiblesItemType.PROFILE_EFFECT ? P.id : null,
+          pendingAvatarDecoration: P.type === r.CollectiblesItemType.AVATAR_DECORATION ? P : null,
+          pendingProfileEffectId: P.type === r.CollectiblesItemType.PROFILE_EFFECT ? P.id : null,
           canUsePremiumCustomization: !0,
           onAvatarChange: I.NOOP,
           onBannerChange: I.NOOP,
@@ -108,12 +108,12 @@ var P = e => {
         })
       }, d.id)]
     }), (0, s.jsxs)("div", {
-      className: r(T.previewContainer, {
-        [T.previewContainerError]: null != p
+      className: a(T.previewContainer, {
+        [T.previewContainerError]: null != E
       }),
-      children: [P.type === l.CollectiblesItemType.AVATAR_DECORATION && (0, s.jsx)(h, {
+      children: [P.type === r.CollectiblesItemType.AVATAR_DECORATION && (0, s.jsx)(h, {
         avatarDecoration: P
-      }), P.type === l.CollectiblesItemType.PROFILE_EFFECT && (0, s.jsx)(g, {
+      }), P.type === r.CollectiblesItemType.PROFILE_EFFECT && (0, s.jsx)(g, {
         profileEffect: P
       }), (0, s.jsxs)("div", {
         className: T.previewTextContainer,
@@ -123,17 +123,17 @@ var P = e => {
         }), (0, s.jsx)(u.Heading, {
           variant: "heading-sm/medium",
           color: "header-secondary",
-          children: P.type === l.CollectiblesItemType.AVATAR_DECORATION ? C.default.Messages.USER_SETTINGS_AVATAR_DECORATION : P.type === l.CollectiblesItemType.PROFILE_EFFECT ? C.default.Messages.USER_SETTINGS_PROFILE_EFFECT : null
+          children: P.type === r.CollectiblesItemType.AVATAR_DECORATION ? C.default.Messages.USER_SETTINGS_AVATAR_DECORATION : P.type === r.CollectiblesItemType.PROFILE_EFFECT ? C.default.Messages.USER_SETTINGS_PROFILE_EFFECT : null
         })]
       }), (0, s.jsx)(u.Text, {
         variant: "text-md/semibold",
         children: (0, m.formatPrice)(n.amount, n.currency)
       })]
-    }), null != p && (0, s.jsx)(u.Text, {
+    }), null != E && (0, s.jsx)(u.Text, {
       className: T.recipientError,
       variant: "text-sm/normal",
       color: "status-danger-background",
-      children: p
+      children: E
     })]
   })
 }

@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("621115"),
-  l = s("933351"),
+var l = s("621115"),
+  n = s("933351"),
   i = s("977618"),
   r = function(e) {
     let {
@@ -22,7 +22,7 @@ var n = s("621115"),
       label: E,
       placeholder: _
     } = t;
-    return (0, a.jsx)(l.default, {
+    return (0, a.jsx)(n.default, {
       field: t,
       index: s,
       isDragEnabled: r,
@@ -31,7 +31,7 @@ var n = s("621115"),
       onEdit: u,
       onRemove: c,
       title: E,
-      children: (0, a.jsx)(n.TextInputFieldBody, {
+      children: (0, a.jsx)(l.TextInputFieldBody, {
         className: i.fieldBackground,
         placeholder: _,
         disabled: !0

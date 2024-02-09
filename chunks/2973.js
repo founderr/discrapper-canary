@@ -8,8 +8,8 @@ var t = E("446674"),
   o = E("913144");
 let n = !1,
   r = new Map,
-  a = 0,
-  i = new Set,
+  i = 0,
+  a = new Set,
   I = new Set,
   s = new Set,
   T = new Map;
@@ -40,8 +40,8 @@ function N(e, _) {
 }
 
 function O(e) {
-  let _ = new Set(i);
-  _.delete(e), i = _
+  let _ = new Set(a);
+  _.delete(e), a = _
 }
 class A extends t.default.Store {
   get quests() {
@@ -51,10 +51,10 @@ class A extends t.default.Store {
     return n
   }
   get lastFetchedCurrentQuests() {
-    return a
+    return i
   }
   isEnrolling(e) {
-    return i.has(e)
+    return a.has(e)
   }
   isClaimingRewardCode(e) {
     return I.has(e)
@@ -69,10 +69,10 @@ class A extends t.default.Store {
 A.displayName = "QuestsStore";
 var R = new A(o.default, {
   LOGOUT: function() {
-    n = !1, r = new Map, a = 0, i = new Set
+    n = !1, r = new Map, i = 0, a = new Set
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
-    a = Date.now(), n = !0
+    i = Date.now(), n = !0
   },
   QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function(e) {
     let {
@@ -81,7 +81,7 @@ var R = new A(o.default, {
     for (let e of (n = !1, r = new Map, _)) r.set(e.id, e)
   },
   QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function() {
-    a = 0, n = !1
+    i = 0, n = !1
   },
   QUESTS_SEND_HEARTBEAT_SUCCESS: function(e) {
     let {
@@ -95,8 +95,8 @@ var R = new A(o.default, {
   QUESTS_ENROLL_BEGIN: function(e) {
     let {
       questId: _
-    } = e, E = new Set(i);
-    E.add(_), i = E
+    } = e, E = new Set(a);
+    E.add(_), a = E
   },
   QUESTS_ENROLL_SUCCESS: function(e) {
     let {

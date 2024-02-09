@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("795696"),
   h = n("1607"),
   E = n("328511"),
-  g = n("585722"),
-  S = n("697218"),
+  S = n("585722"),
+  g = n("697218"),
   C = n("719923"),
   T = n("998206"),
   v = n("35385"),
@@ -66,7 +66,7 @@ var P = i.memo(function(e) {
     channel: k,
     handleSubmit: w,
     isEmpty: F
-  } = e, G = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), B = (0, s.useStateFromStores)([E.default], () => E.default.getStickerPreview(k.id, U.drafts.type)), H = null != B && B.length > 0, V = (0, s.useStateFromStores)([g.default], () => g.default.getUploads(k.id, U.drafts.type)), {
+  } = e, G = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), B = (0, s.useStateFromStores)([E.default], () => E.default.getStickerPreview(k.id, U.drafts.type)), H = null != B && B.length > 0, V = (0, s.useStateFromStores)([S.default], () => S.default.getUploads(k.id, U.drafts.type)), {
     activeCommand: K,
     activeCommandOption: W
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
@@ -84,31 +84,31 @@ var P = i.memo(function(e) {
     location: "dc120b_4"
   }, {
     autoTrackExposure: !1
-  }), Z = S.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => J && C.default.isPremiumExactly(Z, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
+  }), q = g.default.getCurrentUser(), Z = null !== (p = (0, s.useStateFromStores)([f.default], () => J && C.default.isPremiumExactly(q, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, Q = (0, s.useStateFromStores)([f.default], () => {
     if (!k.isDM() || void 0 === k.recipients || k.recipients.length > 1 || !J) return !1;
     let e = k.recipients[0],
       t = f.default.getSentUserIds();
     return t.includes(e)
-  }), [Q, $] = (0, s.useStateFromStoresArray)([f.default, S.default], () => {
+  }), [X, $] = (0, s.useStateFromStoresArray)([f.default, g.default], () => {
     let e = [!1, !1];
     if (!k.isDM() || void 0 === k.recipients || k.recipients.length > 1) return e;
     let t = k.recipients[0],
-      n = S.default.getUser(t);
+      n = g.default.getUser(t);
     if (null == n) return e;
     let l = n.bot;
     if (l) return e;
-    let i = X || q > 0,
+    let i = Q || Z > 0,
       a = f.default.getRecipientEligibility(t);
     return [J && i && a, a]
   }), ee = (0, u.useActivitiesInTextButtonVisibility)(k.id, "ChannelTextAreaButtons");
   if (!a.isMobile) {
-    if (k.isDM() && (null === (_ = U.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (C.default.isPremiumExactly(Z, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+    if (k.isDM() && (null === (_ = U.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (C.default.isPremiumExactly(q, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
         location: "dc120b_5"
-      }), Q && z.push((0, l.jsx)(y.default, {
+      }), X && z.push((0, l.jsx)(y.default, {
         disabled: D,
-        referralsRemaining: q,
+        referralsRemaining: Z,
         channel: k,
-        isResending: X
+        isResending: Q
       }, "referral"))), (null == ee ? void 0 : ee.showChatInputButton) && O.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(k.type) && null == K && (null === (A = U.commands) || void 0 === A ? void 0 : A.enabled) && z.push((0, l.jsx)(T.default, {
         disabled: D,
         channel: k,

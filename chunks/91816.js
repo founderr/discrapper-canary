@@ -1,15 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   useScrolledToTop: function() {
-    return S
+    return T
   },
   default: function() {
-    return N
+    return S
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("446674"),
+  l = s("884691"),
+  n = s("446674"),
   i = s("77078"),
   r = s("272030"),
   o = s("726527"),
@@ -18,11 +18,11 @@ var a = s("37983"),
   c = s("36402"),
   E = s("364222"),
   _ = s("53948"),
-  T = s("782340"),
-  I = s("925041");
+  I = s("782340"),
+  f = s("925041");
 
-function S() {
-  let [e, t] = n.useState(!0);
+function T() {
+  let [e, t] = l.useState(!0);
   return {
     scrolledToTop: e,
     handleScroll: function(e) {
@@ -31,34 +31,34 @@ function S() {
   }
 }
 
-function N(e) {
+function S(e) {
   let {
     guild: t,
-    role: S,
-    selectedSection: N,
-    setSelectedSection: g
-  } = e, f = n.useCallback(e => {
-    g(e)
-  }, [g]), A = (0, l.useStateFromStores)([c.default], () => {
+    role: T,
+    selectedSection: S,
+    setSelectedSection: m
+  } = e, N = l.useCallback(e => {
+    m(e)
+  }, [m]), g = (0, n.useStateFromStores)([c.default], () => {
     var e;
-    return null === (e = c.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[S.id]
-  }, [S.id, t.id]), L = t.id === S.id, m = (0, E.default)(S);
-  n.useEffect(() => {
-    L && g(_.GuildSettingsRoleEditSections.PERMISSIONS)
-  }, [L, g]);
-  let C = (0, o.useHasGuildRoleItems)(t, S);
+    return null === (e = c.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[T.id]
+  }, [T.id, t.id]), h = t.id === T.id, C = (0, E.default)(T);
+  l.useEffect(() => {
+    h && m(_.GuildSettingsRoleEditSections.PERMISSIONS)
+  }, [h, m]);
+  let R = (0, o.useHasGuildRoleItems)(t, T);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: I.titleContainer,
+      className: f.titleContainer,
       children: [(0, a.jsx)(i.Text, {
-        className: I.titleText,
+        className: f.titleText,
         color: "header-primary",
         variant: "text-md/semibold",
-        children: T.default.Messages.ROLE_EDIT_TITLE_WITH_NAME.format({
-          roleName: S.name
+        children: I.default.Messages.ROLE_EDIT_TITLE_WITH_NAME.format({
+          roleName: T.name
         })
-      }), C ? (0, a.jsx)(i.Clickable, {
-        className: I.menu,
+      }), R ? (0, a.jsx)(i.Clickable, {
+        className: f.menu,
         onClick: function(e) {
           (0, r.openContextMenuLazy)(e, async () => {
             let {
@@ -67,43 +67,43 @@ function N(e) {
             return s => (0, a.jsx)(e, {
               ...s,
               guild: t,
-              role: S
+              role: T
             })
           })
         },
-        "aria-label": T.default.Messages.MORE_OPTIONS,
+        "aria-label": I.default.Messages.MORE_OPTIONS,
         children: (0, a.jsx)(u.default, {})
       }) : null]
-    }), null != m ? (0, a.jsx)(d.default, {
+    }), null != C ? (0, a.jsx)(d.default, {
       messageType: d.HelpMessageTypes.WARNING,
-      children: m
+      children: C
     }) : null, (0, a.jsxs)(i.TabBar, {
-      className: I.tabBar,
-      "aria-label": T.default.Messages.OPTIONS,
-      selectedItem: N,
+      className: f.tabBar,
+      "aria-label": I.default.Messages.OPTIONS,
+      selectedItem: S,
       type: "top",
       look: "brand",
-      onItemSelect: f,
+      onItemSelect: N,
       children: [(0, a.jsx)(i.TabBar.Item, {
-        className: I.tabBarItem,
+        className: f.tabBarItem,
         id: _.GuildSettingsRoleEditSections.DISPLAY,
-        disabled: L,
-        children: T.default.Messages.ROLE_EDIT_TAB_DISPLAY
+        disabled: h,
+        children: I.default.Messages.ROLE_EDIT_TAB_DISPLAY
       }), (0, a.jsx)(i.TabBar.Item, {
-        className: I.tabBarItem,
+        className: f.tabBarItem,
         id: _.GuildSettingsRoleEditSections.PERMISSIONS,
-        children: T.default.Messages.ROLE_EDIT_TAB_PERMISSIONS
+        children: I.default.Messages.ROLE_EDIT_TAB_PERMISSIONS
       }), (0, a.jsx)(i.TabBar.Item, {
-        className: I.tabBarItem,
+        className: f.tabBarItem,
         id: _.GuildSettingsRoleEditSections.VERIFICATIONS,
-        disabled: L,
-        children: T.default.Messages.ROLE_EDIT_TAB_VERIFICATION
+        disabled: h,
+        children: I.default.Messages.ROLE_EDIT_TAB_VERIFICATION
       }), (0, a.jsx)(i.TabBar.Item, {
-        className: I.tabBarItem,
+        className: f.tabBarItem,
         id: _.GuildSettingsRoleEditSections.MEMBERS,
-        disabled: L,
-        children: L ? T.default.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS : T.default.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({
-          numMembers: String(A)
+        disabled: h,
+        children: h ? I.default.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS : I.default.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({
+          numMembers: String(g)
         })
       })]
     })]

@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return t
   },
   FrecencyUserSettings: function() {
-    return i
+    return a
   },
   FavoriteGIFs: function() {
     return s
@@ -46,7 +46,7 @@ E.r(_), E.d(_, {
 var t, o, n = E("849266"),
   r = E("959714");
 (o = t || (t = {}))[o.NONE = 0] = "NONE", o[o.IMAGE = 1] = "IMAGE", o[o.VIDEO = 2] = "VIDEO";
-class a extends n.MessageType {
+class i extends n.MessageType {
   create(e) {
     let _ = {};
     return globalThis.Object.defineProperty(_, n.MESSAGE_TYPE, {
@@ -56,8 +56,8 @@ class a extends n.MessageType {
   }
   internalBinaryRead(e, _, E, t) {
     let o = null != t ? t : this.create(),
-      a = e.pos + _;
-    for (; e.pos < a;) {
+      i = e.pos + _;
+    for (; e.pos < i;) {
       let [_, t] = e.tag();
       switch (_) {
         case 1:
@@ -97,10 +97,10 @@ class a extends n.MessageType {
           o.guildAndChannelFrecency = f.internalBinaryRead(e, e.uint32(), E, o.guildAndChannelFrecency);
           break;
         default:
-          let a = E.readUnknownField;
-          if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-          let i = e.skip(t);
-          !1 !== a && (!0 === a ? n.UnknownFieldHandler.onRead : a)(this.typeName, o, _, t, i)
+          let i = E.readUnknownField;
+          if ("throw" === i) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
+          let a = e.skip(t);
+          !1 !== i && (!0 === i ? n.UnknownFieldHandler.onRead : i)(this.typeName, o, _, t, a)
       }
     }
     return o
@@ -174,7 +174,7 @@ class a extends n.MessageType {
     }])
   }
 }
-let i = new a;
+let a = new i;
 class I extends n.MessageType {
   create(e) {
     let _ = {
@@ -201,8 +201,8 @@ class I extends n.MessageType {
         default:
           let r = E.readUnknownField;
           if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-          let a = e.skip(t);
-          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+          let i = e.skip(t);
+          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -289,8 +289,8 @@ class T extends n.MessageType {
         default:
           let r = E.readUnknownField;
           if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-          let a = e.skip(t);
-          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+          let i = e.skip(t);
+          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -352,8 +352,8 @@ class N extends n.MessageType {
       } else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let a = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+        let i = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -397,8 +397,8 @@ class A extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let a = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+        let i = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -460,8 +460,8 @@ class l extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let a = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+        let i = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -501,8 +501,8 @@ class L extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let a = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+        let i = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -564,8 +564,8 @@ class D extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let a = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+        let i = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -644,8 +644,8 @@ class d extends n.MessageType {
         default:
           let r = E.readUnknownField;
           if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-          let a = e.skip(t);
-          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+          let i = e.skip(t);
+          !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -708,8 +708,8 @@ class M extends n.MessageType {
       } else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let a = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+        let i = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -753,8 +753,8 @@ class P extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let a = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+        let i = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -816,8 +816,8 @@ class G extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let a = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+        let i = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -879,8 +879,8 @@ class g extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let a = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+        let i = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o
@@ -942,8 +942,8 @@ class B extends n.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
-        let a = e.skip(t);
-        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, a)
+        let i = e.skip(t);
+        !1 !== r && (!0 === r ? n.UnknownFieldHandler.onRead : r)(this.typeName, o, _, t, i)
       }
     }
     return o

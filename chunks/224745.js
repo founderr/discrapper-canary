@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   StickerIcon: function() {
-    return l
+    return a
   }
 });
 var r = n("37983");
 n("884691");
 var i = n("669491"),
   u = n("82169");
-let l = e => {
+let a = e => {
   let {
     width: t = 24,
     height: n = 24,
-    color: l = i.default.colors.INTERACTIVE_NORMAL,
-    colorClass: a = "",
+    color: a = i.default.colors.INTERACTIVE_NORMAL,
+    colorClass: l = "",
     ...o
   } = e;
   return (0, r.jsxs)("svg", {
@@ -24,15 +24,15 @@ let l = e => {
     fill: "none",
     viewBox: "0 0 24 24",
     children: [(0, r.jsx)("path", {
-      fill: "string" == typeof l ? l : l.css,
+      fill: "string" == typeof a ? a : a.css,
       fillRule: "evenodd",
       d: "M6 2h12a4 4 0 0 1 4 4v7.5a.5.5 0 0 1-.5.5H19a5 5 0 0 0-5 5v2.5a.5.5 0 0 1-.5.5H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4Zm.5 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM19 8.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm-9.91 2.94a1 1 0 0 0-1.66 1.12 5.5 5.5 0 0 0 9.14 0 1 1 0 0 0-1.66-1.12 3.5 3.5 0 0 1-5.82 0Z",
       clipRule: "evenodd",
-      className: a
+      className: l
     }), (0, r.jsx)("path", {
-      fill: "string" == typeof l ? l : l.css,
+      fill: "string" == typeof a ? a : a.css,
       d: "M21.66 16c.03 0 .05.03.04.06a3 3 0 0 1-.58.82l-4.24 4.24a3 3 0 0 1-.82.58.04.04 0 0 1-.06-.04V19a3 3 0 0 1 3-3h2.66Z",
-      className: a
+      className: l
     })]
   })
 }

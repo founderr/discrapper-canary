@@ -40,6 +40,6 @@ function o(e) {
       type: "text",
       text: f
     } : n[0],
-    g = (0, a.default)[t.type](E, t, u, o, c);
-  return !g.success && null == g.error && (g.error = (0, s.getValidationErrorText)(t)), g
+    S = (0, a.default)[t.type](E, t, u, o, c);
+  return !S.success && null == S.error && (S.error = (0, s.getValidationErrorText)(t)), S
 }

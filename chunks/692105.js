@@ -1,6 +1,6 @@
 "use strict";
 var i, l;
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   IconType: function() {
     return i
   }

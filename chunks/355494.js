@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("24373"),
   h = n("41170"),
   E = n("782340"),
-  g = n("13763");
-let S = (0, c.cssValueToNumber)(a.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+  S = n("13763");
+let g = (0, c.cssValueToNumber)(a.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
   C = (0, c.cssValueToNumber)(a.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
   T = e => {
     let t = null,
@@ -66,13 +66,13 @@ let S = (0, c.cssValueToNumber)(a.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION
       title: u
     } = T(a), c = (0, m.isStandardSticker)(a) || (0, m.isGuildSticker)(a) ? (0, l.jsx)(h.default, {
       isInteracting: !0,
-      size: S,
+      size: g,
       sticker: a,
       disableAnimation: !0
     }) : (0, l.jsx)("div", {
-      className: g.iconWrapper,
+      className: S.iconWrapper,
       children: (0, l.jsx)(d.default, {
-        className: g.icon
+        className: S.icon
       })
     });
     return (0, l.jsx)(o.default, {

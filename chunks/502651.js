@@ -1,16 +1,16 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var n = a("954016"),
-  l = a("49111");
+var r = l("954016"),
+  a = l("49111");
 
-function s(e) {
-  return e.type === l.ActivityTypes.STREAMING && null != e.url && n.validStreamURL.test(e.url)
+function n(e) {
+  return e.type === a.ActivityTypes.STREAMING && null != e.url && r.validStreamURL.test(e.url)
 }
 
-function i(e) {
-  return null != e && (Array.isArray(e) ? e.some(s) : s(e))
+function s(e) {
+  return null != e && (Array.isArray(e) ? e.some(n) : n(e))
 }

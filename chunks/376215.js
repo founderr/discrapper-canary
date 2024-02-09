@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("302437"),
   h = n("383018"),
   E = n("474643"),
-  g = n("585722"),
-  S = n("898260"),
+  S = n("585722"),
+  g = n("898260"),
   C = n("378765"),
   T = n("393377"),
   v = n("761354"),
@@ -32,7 +32,7 @@ function N(e) {
   let {
     channelId: t,
     type: n
-  } = e, a = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), N = (0, m.default)("attachments", o.Orientations.HORIZONTAL), x = (0, u.useStateFromStores)([g.default], () => g.default.getUploads(t, n.drafts.type)), {
+  } = e, a = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), N = (0, m.default)("attachments", o.Orientations.HORIZONTAL), x = (0, u.useStateFromStores)([S.default], () => S.default.getUploads(t, n.drafts.type)), {
     isApplicationCommand: O,
     commandOptions: R,
     commandOptionStates: M
@@ -104,7 +104,7 @@ function N(e) {
           })
         }
       })
-    }), n.drafts.type === E.DraftType.FirstThreadMessage ? null : (0, l.jsx)(S.default, {})]
+    }), n.drafts.type === E.DraftType.FirstThreadMessage ? null : (0, l.jsx)(g.default, {})]
   })
 }
 var x = i.memo(function(e) {

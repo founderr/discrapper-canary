@@ -4,29 +4,29 @@ n.r(t), n.d(t, {
     return a
   }
 }), n("424973");
-var r = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
+var r = n("77078"),
   u = n("272030"),
   o = n("861370"),
   i = n("893455"),
-  c = n("49111"),
-  s = n("782340");
+  s = n("49111"),
+  c = n("782340");
 
 function a(e) {
   let {
     role: t,
     guild: n,
     onSelect: a
-  } = e, d = [], f = (0, i.default)(n, t, c.GuildSettingsSections.INTEGRATIONS);
+  } = e, d = [], f = (0, i.default)(n, t, s.GuildSettingsSections.INTEGRATIONS);
   null != f && d.push(f);
   let h = (0, o.default)({
     id: t.id,
-    label: s.default.Messages.COPY_ID_ROLE
+    label: c.default.Messages.COPY_ID_ROLE
   });
-  return (null != h && d.push(h), 0 === d.length) ? null : (0, r.jsx)(l.Menu, {
+  return (null != h && d.push(h), 0 === d.length) ? null : (0, l.jsx)(r.Menu, {
     navId: "guild-integrations-permission-role-context",
-    "aria-label": s.default.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
+    "aria-label": c.default.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
     onClose: u.closeContextMenu,
     onSelect: a,
     children: d

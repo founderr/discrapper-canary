@@ -1,54 +1,54 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var a = n("913144"),
-  l = n("327037"),
+var l = n("913144"),
+  u = n("327037"),
   i = n("462274"),
-  r = n("535013"),
-  s = n("42203"),
-  u = n("26989"),
-  o = n("713135"),
-  c = n("386714");
-async function d(e, t) {
-  var n, d, f;
-  let I, {
-    withMutualGuilds: _ = !1,
-    withMutualFriendsCount: S = !1,
-    friendToken: T,
-    preloadUserBanner: P = !0,
-    dispatchWait: E = !1,
+  a = n("535013"),
+  r = n("42203"),
+  s = n("26989"),
+  d = n("713135"),
+  o = n("386714");
+async function c(e, t) {
+  var n, c, f;
+  let E, {
+    withMutualGuilds: v = !1,
+    withMutualFriendsCount: g = !1,
+    friendToken: S,
+    preloadUserBanner: h = !0,
+    dispatchWait: m = !1,
     guildId: N,
-    channelId: A
+    channelId: C
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   if ("" === e) return;
-  null != t && (0, i.maybeFetchColors)(t), null != N && !_ && (_ = !0), null != N && (I = null !== (d = null === (n = (0, r.getVisibleConnectionsRole)({
-    guildMember: u.default.getMember(N, e),
-    channel: s.default.getChannel(A)
-  })) || void 0 === n ? void 0 : n.id) && void 0 !== d ? d : void 0);
-  let m = o.default.getUserProfile(e),
-    p = o.default.getMutualGuilds(e),
-    C = o.default.getMutualFriendsCount(e),
-    O = o.default.isFetchingProfile(e),
-    R = (null == m ? void 0 : m.profileFetchFailed) || !O && (!Array.isArray(p) && _ || null == C && S),
-    g = P ? c.default : void 0,
-    M = !1;
+  null != t && (0, i.maybeFetchColors)(t), null != N && !v && (v = !0), null != N && (E = null !== (c = null === (n = (0, a.getVisibleConnectionsRole)({
+    guildMember: s.default.getMember(N, e),
+    channel: r.default.getChannel(C)
+  })) || void 0 === n ? void 0 : n.id) && void 0 !== c ? c : void 0);
+  let p = d.default.getUserProfile(e),
+    _ = d.default.getMutualGuilds(e),
+    I = d.default.getMutualFriendsCount(e),
+    T = d.default.isFetchingProfile(e),
+    x = (null == p ? void 0 : p.profileFetchFailed) || !T && (!Array.isArray(_) && v || null == I && g),
+    D = h ? o.default : void 0,
+    G = !1;
   if (null != N) {
-    let t = o.default.getGuildMemberProfile(e, N);
-    M = null == t
-  }!(!R && !M && (O || Date.now() - (null !== (f = null == m ? void 0 : m.lastFetched) && void 0 !== f ? f : 0) < 6e4)) && (E ? await a.default.wait(() => (0, l.fetchProfile)(e, {
-    withMutualGuilds: _,
-    withMutualFriendsCount: S,
-    friendToken: T,
+    let t = d.default.getGuildMemberProfile(e, N);
+    G = null == t
+  }!(!x && !G && (T || Date.now() - (null !== (f = null == p ? void 0 : p.lastFetched) && void 0 !== f ? f : 0) < 6e4)) && (m ? await l.default.wait(() => (0, u.fetchProfile)(e, {
+    withMutualGuilds: v,
+    withMutualFriendsCount: g,
+    friendToken: S,
     guildId: N,
-    connectionsRoleId: I
-  }, g)) : await (0, l.fetchProfile)(e, {
-    withMutualGuilds: _,
-    withMutualFriendsCount: S,
-    friendToken: T,
+    connectionsRoleId: E
+  }, D)) : await (0, u.fetchProfile)(e, {
+    withMutualGuilds: v,
+    withMutualFriendsCount: g,
+    friendToken: S,
     guildId: N,
-    connectionsRoleId: I
-  }, g))
+    connectionsRoleId: E
+  }, D))
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.r(l), n.d(l, {
+t.r(n), t.d(n, {
   createEventLocationClickHandler: function() {
     return b
   },
@@ -7,226 +7,226 @@ n.r(l), n.d(l, {
     return z
   }
 });
-var t = n("37983"),
-  s = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
-  u = n("446674"),
-  o = n("77078"),
-  r = n("970728"),
-  d = n("987317"),
-  c = n("716214"),
-  m = n("813006"),
-  v = n("42203"),
-  p = n("305961"),
-  E = n("580357"),
-  N = n("174622"),
-  h = n("660279"),
-  C = n("36694"),
-  g = n("374021"),
-  f = n("398604"),
-  I = n("1339"),
-  x = n("882550"),
-  S = n("189443"),
-  j = n("822516"),
-  L = n("93550"),
-  R = n("255050"),
-  T = n("400271"),
-  _ = n("931874"),
-  B = n("936965"),
-  D = n("745049"),
-  k = n("782340"),
-  y = n("336179");
-let G = (e, l) => n => {
-    n.stopPropagation(), d.default.selectVoiceChannel(e.channel_id, !1), null == l || l(n)
+var l = t("37983"),
+  s = t("884691"),
+  i = t("414456"),
+  a = t.n(i),
+  u = t("446674"),
+  r = t("77078"),
+  d = t("970728"),
+  o = t("987317"),
+  c = t("716214"),
+  v = t("813006"),
+  m = t("42203"),
+  E = t("305961"),
+  h = t("580357"),
+  p = t("174622"),
+  f = t("660279"),
+  N = t("36694"),
+  g = t("374021"),
+  C = t("398604"),
+  I = t("1339"),
+  x = t("882550"),
+  S = t("189443"),
+  _ = t("822516"),
+  j = t("93550"),
+  L = t("255050"),
+  T = t("400271"),
+  R = t("931874"),
+  B = t("936965"),
+  D = t("745049"),
+  k = t("782340"),
+  G = t("336179");
+let y = (e, n) => t => {
+    t.stopPropagation(), o.default.selectVoiceChannel(e.channel_id, !1), null == n || n(t)
   },
-  A = (e, l) => n => {
-    let t = v.default.getChannel(e.channel_id);
-    null != t && (n.stopPropagation(), (0, c.connectAndOpen)(t), null == l || l(n))
+  A = (e, n) => t => {
+    let l = m.default.getChannel(e.channel_id);
+    null != l && (t.stopPropagation(), (0, c.connectAndOpen)(l), null == n || n(t))
   },
-  b = (e, l) => {
+  b = (e, n) => {
     switch (null == e ? void 0 : e.entity_type) {
       case D.GuildScheduledEventEntityTypes.STAGE_INSTANCE:
-        return A(e, l);
+        return A(e, n);
       case D.GuildScheduledEventEntityTypes.VOICE:
-        return G(e, l)
+        return y(e, n)
     }
     return () => {}
   },
-  M = (e, l) => l && [D.GuildScheduledEventEntityTypes.STAGE_INSTANCE, D.GuildScheduledEventEntityTypes.VOICE].includes(null == e ? void 0 : e.entity_type),
+  M = (e, n) => n && [D.GuildScheduledEventEntityTypes.STAGE_INSTANCE, D.GuildScheduledEventEntityTypes.VOICE].includes(null == e ? void 0 : e.entity_type),
   w = s.memo(function(e) {
-    var l;
+    var n;
     let {
-      guild: n,
-      guildScheduledEvent: a,
-      channel: i,
-      isMember: d
-    } = e, c = (0, u.useStateFromStores)([p.default], () => {
+      guild: t,
+      guildScheduledEvent: i,
+      channel: a,
+      isMember: o
+    } = e, c = (0, u.useStateFromStores)([E.default], () => {
       var e;
-      return null == n ? null : null !== (e = p.default.getGuild(n.id)) && void 0 !== e ? e : new m.default(n)
-    }, [n]), v = (0, _.getLocationDataForEvent)(a, i), h = s.useCallback(e => {
-      d && null != a && (e.stopPropagation(), (0, r.transitionToGuildFromEventInvite)(a))
-    }, [d, a]), C = s.useCallback(e => {
-      b(a)(e)
-    }, [a]);
+      return null == t ? null : null !== (e = E.default.getGuild(t.id)) && void 0 !== e ? e : new v.default(t)
+    }, [t]), m = (0, R.getLocationDataForEvent)(i, a), f = s.useCallback(e => {
+      o && null != i && (e.stopPropagation(), (0, d.transitionToGuildFromEventInvite)(i))
+    }, [o, i]), N = s.useCallback(e => {
+      b(i)(e)
+    }, [i]);
     if (null == c) return null;
-    let g = null == v ? void 0 : v.IconComponent,
-      f = (0, t.jsxs)(t.Fragment, {
-        children: [null != g && (0, t.jsx)(g, {
+    let g = null == m ? void 0 : m.IconComponent,
+      C = (0, l.jsxs)(l.Fragment, {
+        children: [null != g && (0, l.jsx)(g, {
           width: 16,
           height: 16,
-          className: y.channelIcon
-        }), (0, t.jsx)(o.Text, {
-          className: y.channelDescription,
+          className: G.channelIcon
+        }), (0, l.jsx)(r.Text, {
+          className: G.channelDescription,
           variant: "text-xs/normal",
-          children: (0, I.guildEventDetailsParser)(null !== (l = null == v ? void 0 : v.locationName) && void 0 !== l ? l : "", !0)
+          children: (0, I.guildEventDetailsParser)(null !== (n = null == m ? void 0 : m.locationName) && void 0 !== n ? n : "", !0)
         })]
       });
-    return (0, t.jsxs)("div", {
-      className: y.inviteDetailsContainer,
-      children: [(0, t.jsx)(N.default.Icon, {
+    return (0, l.jsxs)("div", {
+      className: G.inviteDetailsContainer,
+      children: [(0, l.jsx)(p.default.Icon, {
         guild: c,
-        onClick: h
-      }), (0, t.jsxs)("div", {
-        className: y.verticalContainer,
-        children: [(0, t.jsxs)("div", {
-          className: y.guildChannelInfoContainer,
-          children: [(0, t.jsx)(E.default, {
+        onClick: f
+      }), (0, l.jsxs)("div", {
+        className: G.verticalContainer,
+        children: [(0, l.jsxs)("div", {
+          className: G.guildChannelInfoContainer,
+          children: [(0, l.jsx)(h.default, {
             guild: c,
             tooltipPosition: "top",
-            tooltipColor: o.Tooltip.Colors.PRIMARY,
+            tooltipColor: r.Tooltip.Colors.PRIMARY,
             size: 16,
-            className: y.guildBadge
-          }), (0, t.jsx)(o.Clickable, {
-            className: y.guildNameClickable,
-            onClick: h,
-            children: (0, t.jsx)(o.Heading, {
-              className: d ? y.guildNameLinkable : y.guildName,
+            className: G.guildBadge
+          }), (0, l.jsx)(r.Clickable, {
+            className: G.guildNameClickable,
+            onClick: f,
+            children: (0, l.jsx)(r.Heading, {
+              className: o ? G.guildNameLinkable : G.guildName,
               variant: "text-sm/medium",
               children: c.name
             })
           })]
-        }), (0, t.jsx)("div", {
-          className: y.channelInfoContainer,
-          children: M(a, d) ? (0, t.jsx)(o.Clickable, {
-            className: y.channelLocationLink,
-            onClick: C,
-            children: f
-          }) : f
+        }), (0, l.jsx)("div", {
+          className: G.channelInfoContainer,
+          children: M(i, o) ? (0, l.jsx)(r.Clickable, {
+            className: G.channelLocationLink,
+            onClick: N,
+            children: C
+          }) : C
         })]
       })]
     })
   }),
   P = s.memo(function(e) {
     let {
-      guildId: l,
-      guildScheduledEventId: n,
+      guildId: n,
+      guildScheduledEventId: t,
       recurrenceId: s,
-      isActive: a,
-      isEnded: i,
-      isMember: r,
-      isExternal: d,
+      isActive: i,
+      isEnded: a,
+      isMember: d,
+      isExternal: o,
       onAcceptInstantInvite: c,
-      onTransitionToInviteChannel: m
-    } = e, v = (0, u.useStateFromStores)([f.default], () => f.default.isInterestedInEventRecurrence(n, s), [n, s]), p = e => {
-      e.stopPropagation(), r ? a && m() : c()
+      onTransitionToInviteChannel: v
+    } = e, m = (0, u.useStateFromStores)([C.default], () => C.default.isInterestedInEventRecurrence(t, s), [t, s]), E = e => {
+      e.stopPropagation(), d ? i && v() : c()
     };
-    return r ? a ? (0, t.jsx)(o.Button, {
-      className: y.button,
-      size: o.Button.Sizes.SMALL,
+    return d ? i ? (0, l.jsx)(r.Button, {
+      className: G.button,
+      size: r.Button.Sizes.SMALL,
       onClick: e => {
-        !d && p(e)
+        !o && E(e)
       },
-      color: d ? o.Button.Colors.TRANSPARENT : o.Button.Colors.GREEN,
-      children: d ? k.default.Messages.GUILD_SCHEDULED_EVENT_VIEW_DETAIL : k.default.Messages.JOIN_GUILD
-    }) : i ? (0, t.jsx)(o.Button, {
-      className: y.button,
-      size: o.Button.Sizes.SMALL,
+      color: o ? r.Button.Colors.TRANSPARENT : r.Button.Colors.GREEN,
+      children: o ? k.default.Messages.GUILD_SCHEDULED_EVENT_VIEW_DETAIL : k.default.Messages.JOIN_GUILD
+    }) : a ? (0, l.jsx)(r.Button, {
+      className: G.button,
+      size: r.Button.Sizes.SMALL,
       disabled: !0,
-      color: o.Button.Colors.PRIMARY,
-      look: o.Button.Looks.OUTLINED,
+      color: r.Button.Colors.PRIMARY,
+      look: r.Button.Looks.OUTLINED,
       children: k.default.Messages.GUILD_EVENT_INVITE_COMPLETED
-    }) : (0, t.jsxs)(o.Button, {
-      className: y.button,
-      innerClassName: y.innerButton,
-      size: o.Button.Sizes.SMALL,
-      color: o.Button.Colors.PRIMARY,
-      look: v ? o.Button.Looks.OUTLINED : o.Button.Looks.FILLED,
+    }) : (0, l.jsxs)(r.Button, {
+      className: G.button,
+      innerClassName: G.innerButton,
+      size: r.Button.Sizes.SMALL,
+      color: r.Button.Colors.PRIMARY,
+      look: m ? r.Button.Looks.OUTLINED : r.Button.Looks.FILLED,
       onClick: e => {
-        e.stopPropagation(), (0, B.default)(n, s, l)
+        e.stopPropagation(), (0, B.default)(t, s, n)
       },
-      children: [v ? (0, t.jsx)(C.default, {
+      children: [m ? (0, l.jsx)(N.default, {
         width: 16,
         height: 16,
-        className: y.buttonIcon
-      }) : (0, t.jsx)(h.default, {
+        className: G.buttonIcon
+      }) : (0, l.jsx)(f.default, {
         width: 16,
         height: 16,
-        className: y.buttonIcon
+        className: G.buttonIcon
       }), k.default.Messages.INDICATE_RSVP]
-    }) : (0, t.jsx)(o.Button, {
-      className: y.button,
-      size: o.Button.Sizes.SMALL,
-      onClick: p,
-      color: o.Button.Colors.GREEN,
+    }) : (0, l.jsx)(r.Button, {
+      className: G.button,
+      size: r.Button.Sizes.SMALL,
+      onClick: E,
+      color: r.Button.Colors.GREEN,
       children: k.default.Messages.JOIN_GUILD
     })
   }),
   U = s.memo(function(e) {
-    var l;
+    var n;
     let {
-      guildScheduledEvent: n,
-      guild: a,
+      guildScheduledEvent: t,
+      guild: i,
       channel: u,
-      isMember: r,
-      recurrenceId: d,
+      isMember: d,
+      recurrenceId: o,
       onAcceptInstantInvite: c,
-      onTransitionToInviteChannel: m
-    } = e, v = null != d ? d : null != n ? (0, j.getNextRecurrenceIdInEvent)(n) : null, p = (null == n ? void 0 : n.recurrence_rule) == null || null == v || (0, j.isValidRecurrence)((0, S.recurrenceRuleFromServer)(null == n ? void 0 : n.recurrence_rule), v), E = (0, x.default)(n), h = s.useCallback(() => {
-      r && null != n && (0, g.openGuildEventDetails)({
-        eventId: n.id,
-        recurrenceId: v
+      onTransitionToInviteChannel: v
+    } = e, m = null != o ? o : null != t ? (0, _.getNextRecurrenceIdInEvent)(t) : null, E = (null == t ? void 0 : t.recurrence_rule) == null || null == m || (0, _.isValidRecurrence)((0, S.recurrenceRuleFromServer)(null == t ? void 0 : t.recurrence_rule), m), h = (0, x.default)(t), f = s.useCallback(() => {
+      d && null != t && (0, g.openGuildEventDetails)({
+        eventId: t.id,
+        recurrenceId: m
       })
-    }, [r, n, v]);
-    if (null == n || !p) return null;
-    let C = (0, f.isGuildScheduledEventActive)(n),
-      I = (0, f.isGuildEventEnded)(n),
-      _ = n.entity_type === D.GuildScheduledEventEntityTypes.EXTERNAL;
-    return (0, t.jsx)(N.default, {
-      className: i({
-        [y.clickable]: r
+    }, [d, t, m]);
+    if (null == t || !E) return null;
+    let N = (0, C.isGuildScheduledEventActive)(t),
+      I = (0, C.isGuildEventEnded)(t),
+      R = t.entity_type === D.GuildScheduledEventEntityTypes.EXTERNAL;
+    return (0, l.jsx)(p.default, {
+      className: a({
+        [G.clickable]: d
       }),
-      children: (0, t.jsxs)(o.Clickable, {
-        onClick: h,
-        children: [null != n.image && (0, t.jsx)(R.default, {
-          source: (0, L.default)(n),
-          className: y.banner
-        }), (0, t.jsx)(T.default, {
-          name: n.name,
-          description: null !== (l = n.description) && void 0 !== l ? l : void 0,
-          descriptionClassName: y.eventDescription,
-          guildId: n.guild_id,
-          creator: E,
-          guildEventId: n.id,
-          eventPreview: n,
-          recurrenceId: v
-        }), (0, t.jsxs)("div", {
-          className: y.footerContainer,
-          children: [(0, t.jsx)(w, {
-            guild: a,
+      children: (0, l.jsxs)(r.Clickable, {
+        onClick: f,
+        children: [null != t.image && (0, l.jsx)(L.default, {
+          source: (0, j.default)(t),
+          className: G.banner
+        }), (0, l.jsx)(T.default, {
+          name: t.name,
+          description: null !== (n = t.description) && void 0 !== n ? n : void 0,
+          descriptionClassName: G.eventDescription,
+          guildId: t.guild_id,
+          creator: h,
+          guildEventId: t.id,
+          eventPreview: t,
+          recurrenceId: m
+        }), (0, l.jsxs)("div", {
+          className: G.footerContainer,
+          children: [(0, l.jsx)(w, {
+            guild: i,
             channel: u,
-            guildScheduledEvent: n,
-            isMember: r
-          }), (0, t.jsx)(P, {
-            isActive: C,
+            guildScheduledEvent: t,
+            isMember: d
+          }), (0, l.jsx)(P, {
+            isActive: N,
             isEnded: I,
-            isMember: r,
-            guildId: n.guild_id,
-            guildScheduledEventId: n.id,
-            recurrenceId: v,
+            isMember: d,
+            guildId: t.guild_id,
+            guildScheduledEventId: t.id,
+            recurrenceId: m,
             onAcceptInstantInvite: c,
-            onTransitionToInviteChannel: m,
-            isExternal: _
+            onTransitionToInviteChannel: v,
+            isExternal: R
           })]
         })]
       })

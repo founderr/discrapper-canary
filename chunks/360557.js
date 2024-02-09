@@ -8,8 +8,8 @@ var t = E("689988"),
   o = E("271938"),
   n = E("42203"),
   r = E("957255"),
-  a = E("800762"),
-  i = E("233965"),
+  i = E("800762"),
+  a = E("233965"),
   I = E("699209"),
   s = E("32346"),
   T = E("49111");
@@ -38,8 +38,8 @@ class S extends t.default {
       }
       if (!t || _ === this.previousVoiceChannelId) return;
       if (this.previousVoiceChannelId = _, null == E || null == _) return;
-      let a = n.default.getChannel(_);
-      if (null == a || a.type !== T.ChannelTypes.GUILD_VOICE || !r.default.can(T.Permissions.SET_VOICE_CHANNEL_STATUS, a)) return;
+      let i = n.default.getChannel(_);
+      if (null == i || i.type !== T.ChannelTypes.GUILD_VOICE || !r.default.can(T.Permissions.SET_VOICE_CHANNEL_STATUS, i)) return;
       let S = s.default.getCurrentHangStatus();
       if (null != S) return;
       let N = s.default.getCurrentDefaultStatus();
@@ -49,30 +49,30 @@ class S extends t.default {
             status: e,
             emoji: _
           } = N.customHangStatus;
-          (0, i.updateCustomHangStatus)(e, _);
+          (0, a.updateCustomHangStatus)(e, _);
           return
         }
         if (null == N.status) return;
         else {
-          (0, i.updateHangStatus)(N.status);
+          (0, a.updateHangStatus)(N.status);
           return
         }
       }
-      o && (0, i.updateHangStatus)(T.HangStatusTypes.CHILLING)
+      o && (0, a.updateHangStatus)(T.HangStatusTypes.CHILLING)
     }, this.handleGuildMemberUpdate = e => {
       let {
         user: _,
         guildId: E
       } = e;
       if (_.id !== o.default.getId()) return;
-      let t = a.default.getCurrentClientVoiceChannelId(E);
+      let t = i.default.getCurrentClientVoiceChannelId(E);
       if (null == t) return;
       let I = s.default.getCurrentHangStatus();
       if (null == I) return;
       let S = n.default.getChannel(t);
-      !r.default.can(T.Permissions.SET_VOICE_CHANNEL_STATUS, S) && (0, i.clearHangStatus)()
+      !r.default.can(T.Permissions.SET_VOICE_CHANNEL_STATUS, S) && (0, a.clearHangStatus)()
     }, this.handleDisconnectFromVoiceChannel = () => {
-      (0, i.clearHangStatus)()
+      (0, a.clearHangStatus)()
     }, this.handleLogout = () => {
       this.handleDisconnectFromVoiceChannel()
     }

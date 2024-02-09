@@ -1,5 +1,5 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   FetchState: function() {
     return i
   },
@@ -9,93 +9,93 @@ n.r(e), n.d(e, {
 }), n("222007");
 var i, l, a = n("446674"),
   r = n("913144"),
-  u = n("718517");
+  s = n("718517");
 (l = i || (i = {}))[l.NOT_FETCHED = 0] = "NOT_FETCHED", l[l.FETCHING = 1] = "FETCHING", l[l.FETCHED = 2] = "FETCHED", l[l.ERROR = 3] = "ERROR";
-let s = {
+let u = {
   applicationIdToGuildIds: {},
   lastFetchTimeMs: null,
   nextFetchRetryTimeMs: null,
   fetchState: 0
 };
 
-function o(t) {
+function o(e) {
   let {
-    applicationId: e,
+    applicationId: t,
     guildId: n
-  } = t;
-  null == s.applicationIdToGuildIds[e] && (s.applicationIdToGuildIds[e] = new Set), s.applicationIdToGuildIds[e].add(n), s.applicationIdToGuildIds[e] = new Set(s.applicationIdToGuildIds[e])
+  } = e;
+  null == u.applicationIdToGuildIds[t] && (u.applicationIdToGuildIds[t] = new Set), u.applicationIdToGuildIds[t].add(n), u.applicationIdToGuildIds[t] = new Set(u.applicationIdToGuildIds[t])
 }
 class c extends a.default.PersistedStore {
-  initialize(t) {
-    if (null != t)
-      for (let e in s.lastFetchTimeMs = t.lastFetchTimeMs, s.nextFetchRetryTimeMs = t.nextFetchRetryTimeMs, s.fetchState = t.fetchState, t.applicationIdToGuildIds) s.applicationIdToGuildIds[e] = new Set(t.applicationIdToGuildIds[e])
+  initialize(e) {
+    if (null != e)
+      for (let t in u.lastFetchTimeMs = e.lastFetchTimeMs, u.nextFetchRetryTimeMs = e.nextFetchRetryTimeMs, u.fetchState = e.fetchState, e.applicationIdToGuildIds) u.applicationIdToGuildIds[t] = new Set(e.applicationIdToGuildIds[t])
   }
   getState() {
-    return s
+    return u
   }
-  getGuildIdsForApplication(t) {
-    if (null != t) return s.applicationIdToGuildIds[t]
+  getGuildIdsForApplication(e) {
+    if (null != e) return u.applicationIdToGuildIds[e]
   }
   getLastFetchTimeMs() {
-    return s.lastFetchTimeMs
+    return u.lastFetchTimeMs
   }
   getNextFetchRetryTimeMs() {
-    return s.nextFetchRetryTimeMs
+    return u.nextFetchRetryTimeMs
   }
   getFetchState() {
-    return s.fetchState
+    return u.fetchState
   }
 }
 c.displayName = "MyGuildApplicationsStore", c.persistKey = "MyGuildApplicationsStore";
 var d = new c(r.default, {
   LOGOUT: function() {
-    s.applicationIdToGuildIds = {}, s.lastFetchTimeMs = null, s.nextFetchRetryTimeMs = null, s.fetchState = 0
+    u.applicationIdToGuildIds = {}, u.lastFetchTimeMs = null, u.nextFetchRetryTimeMs = null, u.fetchState = 0
   },
   FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: function() {
-    s.fetchState = 1
+    u.fetchState = 1
   },
-  FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS: function(t) {
+  FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS: function(e) {
     let {
-      guildIdToApplicationIds: e
-    } = t;
-    for (let t in s.fetchState = 2, s.lastFetchTimeMs = Date.now(), s.applicationIdToGuildIds = {}, s.nextFetchRetryTimeMs = null, e)
-      for (let n of e[t]) o({
+      guildIdToApplicationIds: t
+    } = e;
+    for (let e in u.fetchState = 2, u.lastFetchTimeMs = Date.now(), u.applicationIdToGuildIds = {}, u.nextFetchRetryTimeMs = null, t)
+      for (let n of t[e]) o({
         applicationId: n,
-        guildId: t
+        guildId: e
       })
   },
-  FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_FAILURE: function(t) {
+  FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_FAILURE: function(e) {
     let {
-      retryAfterSeconds: e
-    } = t;
-    if (s.fetchState = 3, null != e) {
-      let t = e * u.default.Millis.SECOND;
-      s.nextFetchRetryTimeMs = Date.now() + t
+      retryAfterSeconds: t
+    } = e;
+    if (u.fetchState = 3, null != t) {
+      let e = t * s.default.Millis.SECOND;
+      u.nextFetchRetryTimeMs = Date.now() + e
     }
   },
-  INTEGRATION_CREATE: function(t) {
+  INTEGRATION_CREATE: function(e) {
     let {
-      application: e,
+      application: t,
       guildId: n
-    } = t;
-    null != e && o({
-      applicationId: e.id,
+    } = e;
+    null != t && o({
+      applicationId: t.id,
       guildId: n
     })
   },
-  INTEGRATION_DELETE: function(t) {
+  INTEGRATION_DELETE: function(e) {
     let {
-      applicationId: e,
+      applicationId: t,
       guildId: n
-    } = t;
-    null != e && ! function(t) {
+    } = e;
+    null != t && ! function(e) {
       let {
-        applicationId: e,
+        applicationId: t,
         guildId: n
-      } = t;
-      null != s.applicationIdToGuildIds[e] && (s.applicationIdToGuildIds[e].delete(n), s.applicationIdToGuildIds[e] = new Set(s.applicationIdToGuildIds[e]))
+      } = e;
+      null != u.applicationIdToGuildIds[t] && (u.applicationIdToGuildIds[t].delete(n), u.applicationIdToGuildIds[t] = new Set(u.applicationIdToGuildIds[t]))
     }({
-      applicationId: e,
+      applicationId: t,
       guildId: n
     })
   }

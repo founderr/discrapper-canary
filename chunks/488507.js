@@ -6,8 +6,8 @@ E.r(_), E.d(_, {
 }), E("222007"), E("70102");
 var t, o, n = E("811022"),
   r = E("398183"),
-  a = E("913144"),
-  i = E("115718"),
+  i = E("913144"),
+  a = E("115718"),
   I = E("689988"),
   s = E("49671"),
   T = E("568307"),
@@ -180,37 +180,37 @@ class h {
     var e, _;
     let E = e => this.counters[e].elapsed().asMilliseconds(),
       t = {
-        [i.RunningProcessFullscreenType.UNKNOWN]: E(i.RunningProcessFullscreenType.UNKNOWN),
-        [i.RunningProcessFullscreenType.WINDOWED]: E(i.RunningProcessFullscreenType.WINDOWED),
-        [i.RunningProcessFullscreenType.MAXIMIZED]: E(i.RunningProcessFullscreenType.MAXIMIZED),
-        [i.RunningProcessFullscreenType.BORDERLESS_FULLSCREEN]: E(i.RunningProcessFullscreenType.BORDERLESS_FULLSCREEN),
-        [i.RunningProcessFullscreenType.FULLSCREEN]: E(i.RunningProcessFullscreenType.FULLSCREEN),
-        [i.RunningProcessFullscreenType.MINIMIZED]: E(i.RunningProcessFullscreenType.MINIMIZED)
+        [a.RunningProcessFullscreenType.UNKNOWN]: E(a.RunningProcessFullscreenType.UNKNOWN),
+        [a.RunningProcessFullscreenType.WINDOWED]: E(a.RunningProcessFullscreenType.WINDOWED),
+        [a.RunningProcessFullscreenType.MAXIMIZED]: E(a.RunningProcessFullscreenType.MAXIMIZED),
+        [a.RunningProcessFullscreenType.BORDERLESS_FULLSCREEN]: E(a.RunningProcessFullscreenType.BORDERLESS_FULLSCREEN),
+        [a.RunningProcessFullscreenType.FULLSCREEN]: E(a.RunningProcessFullscreenType.FULLSCREEN),
+        [a.RunningProcessFullscreenType.MINIMIZED]: E(a.RunningProcessFullscreenType.MINIMIZED)
       },
       o = Object.entries(t).sort((e, _) => {
         let [E, t] = e, [o, n] = _;
         return n - t
       })[0],
       n = parseInt(o[0], 10),
-      r = isNaN(n) ? i.RunningProcessFullscreenType.UNKNOWN : n;
+      r = isNaN(n) ? a.RunningProcessFullscreenType.UNKNOWN : n;
     isNaN(n) && c.error("ScreenTypeAnalytics: Unknown most used screen type: ".concat(o), t);
-    let a = L.GameDisplayModeStorage.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
+    let i = L.GameDisplayModeStorage.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
     L.GameDisplayModeStorage.setGameDisplayMode(null !== (_ = this.game.name) && void 0 !== _ ? _ : this.game.id, r);
     let I = {
-      screentype_unknown_duration: t[i.RunningProcessFullscreenType.UNKNOWN],
-      screentype_windowed_duration: t[i.RunningProcessFullscreenType.WINDOWED],
-      screentype_maximized_duration: t[i.RunningProcessFullscreenType.MAXIMIZED],
-      screentype_borderless_fullscreen_duration: t[i.RunningProcessFullscreenType.BORDERLESS_FULLSCREEN],
-      screentype_fullscreen_duration: t[i.RunningProcessFullscreenType.FULLSCREEN],
-      screentype_minimized_duration: t[i.RunningProcessFullscreenType.MINIMIZED]
+      screentype_unknown_duration: t[a.RunningProcessFullscreenType.UNKNOWN],
+      screentype_windowed_duration: t[a.RunningProcessFullscreenType.WINDOWED],
+      screentype_maximized_duration: t[a.RunningProcessFullscreenType.MAXIMIZED],
+      screentype_borderless_fullscreen_duration: t[a.RunningProcessFullscreenType.BORDERLESS_FULLSCREEN],
+      screentype_fullscreen_duration: t[a.RunningProcessFullscreenType.FULLSCREEN],
+      screentype_minimized_duration: t[a.RunningProcessFullscreenType.MINIMIZED]
     };
     return {
       ...I,
       screentype_global_supported_duration: I.screentype_windowed_duration + I.screentype_maximized_duration + I.screentype_borderless_fullscreen_duration,
       screentype_global_unsupported_duration: I.screentype_fullscreen_duration,
-      screentype_initial: i.RunningProcessFullscreenType[this.game.fullscreenType],
-      screentype_most_used: i.RunningProcessFullscreenType[r],
-      screentype_most_used_previous: null == a ? null : i.RunningProcessFullscreenType[a],
+      screentype_initial: a.RunningProcessFullscreenType[this.game.fullscreenType],
+      screentype_most_used: a.RunningProcessFullscreenType[r],
+      screentype_most_used_previous: null == i ? null : a.RunningProcessFullscreenType[i],
       game_display_mode_is_adjustment_supported: R.default.GameDisplayModeIsGameSupported(this.game.name)
     }
   }
@@ -219,12 +219,12 @@ class h {
   }
   constructor(e) {
     this.game = e, this.counters = {
-      [i.RunningProcessFullscreenType.UNKNOWN]: new r.StopWatch,
-      [i.RunningProcessFullscreenType.WINDOWED]: new r.StopWatch,
-      [i.RunningProcessFullscreenType.MAXIMIZED]: new r.StopWatch,
-      [i.RunningProcessFullscreenType.BORDERLESS_FULLSCREEN]: new r.StopWatch,
-      [i.RunningProcessFullscreenType.FULLSCREEN]: new r.StopWatch,
-      [i.RunningProcessFullscreenType.MINIMIZED]: new r.StopWatch
+      [a.RunningProcessFullscreenType.UNKNOWN]: new r.StopWatch,
+      [a.RunningProcessFullscreenType.WINDOWED]: new r.StopWatch,
+      [a.RunningProcessFullscreenType.MAXIMIZED]: new r.StopWatch,
+      [a.RunningProcessFullscreenType.BORDERLESS_FULLSCREEN]: new r.StopWatch,
+      [a.RunningProcessFullscreenType.FULLSCREEN]: new r.StopWatch,
+      [a.RunningProcessFullscreenType.MINIMIZED]: new r.StopWatch
     }, this.lastscreenType = void 0, this.update(), this.updateScreenInterval = setInterval(() => this.update(), 1e4)
   }
 }
@@ -280,16 +280,16 @@ class P {
         setting_notification_position: O.default.getNotificationPositionMode(),
         setting_chat_notification: O.default.getTextChatNotificationMode()
       },
-      a = (0, T.getOverlayGameStatus)(this.game),
-      i = {
+      i = (0, T.getOverlayGameStatus)(this.game),
+      a = {
         event_uuid: this.uuid,
         overlay_usage_stats_version: 2,
         ...this.notificationAnalytics.getAnalytics(),
         ...this.widgetAnalytics.getAnalytics(),
         ...this.screenAnalytics.getAnalytics(),
         ...r,
-        overlay_status_game_enabled: a.enabled,
-        overlay_status_game_source: a.source,
+        overlay_status_game_enabled: i.enabled,
+        overlay_status_game_source: i.source,
         game_name: null !== (E = this.game.name) && void 0 !== E ? E : null,
         game_id: null !== (t = this.game.id) && void 0 !== t ? t : null,
         game_elevated: this.game.elevated,
@@ -315,7 +315,7 @@ class P {
         mute_toggled_count: this.muteToggledCount
       };
     return {
-      usage: i,
+      usage: a,
       notifications: this.notificationAnalytics.getCounterAnalytics(this.uuid)
     }
   }
@@ -491,7 +491,7 @@ class Y {
       c.error("Game not found.");
       return
     }
-    a.default.dispatch({
+    i.default.dispatch({
       type: "OVERLAY_MESSAGE_EVENT_ACTION",
       eventType: "ack",
       gameName: _.name,
@@ -506,7 +506,7 @@ class Y {
       c.error("Game not found.");
       return
     }
-    a.default.dispatch({
+    i.default.dispatch({
       type: "OVERLAY_MESSAGE_EVENT_ACTION",
       eventType: "create",
       gameName: _.name,

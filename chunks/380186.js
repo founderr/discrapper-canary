@@ -4,46 +4,46 @@ n.r(t), n.d(t, {
     return o
   },
   subscriptionCanSwitchImmediately: function() {
-    return c
+    return d
   },
   subscriptionCanDowngrade: function() {
-    return d
+    return c
   },
   getOrFetchSubscriptionPlan: function() {
     return f
   }
 }), n("222007"), n("884691");
-var r = n("627445"),
-  u = n.n(r);
+var s = n("627445"),
+  a = n.n(s);
 n("446674");
-var i = n("775433"),
-  a = n("10514"),
-  l = n("49111"),
-  s = n("646718");
+var l = n("775433"),
+  i = n("10514"),
+  r = n("49111"),
+  u = n("646718");
 
 function o(e) {
   return e.items.map(e => {
-    let t = a.default.get(e.planId);
-    return u(null != t, "Unable to fetch plan"), t
+    let t = i.default.get(e.planId);
+    return a(null != t, "Unable to fetch plan"), t
   }).map(e => e.skuId)
 }
 
-function c(e, t, n) {
-  let r = e.getCurrentSubscriptionPlanIdForGroup(n);
-  return e.type === l.SubscriptionTypes.PREMIUM && null == r || (u(null != r, "Current subscription has no plan in group"), u(!(r === s.SubscriptionPlans.PREMIUM_YEAR_TIER_1 && t === s.SubscriptionPlans.PREMIUM_MONTH_TIER_2), "Unexpected plan switch"), n.indexOf(r) < n.indexOf(t))
+function d(e, t, n) {
+  let s = e.getCurrentSubscriptionPlanIdForGroup(n);
+  return e.type === r.SubscriptionTypes.PREMIUM && null == s || (a(null != s, "Current subscription has no plan in group"), a(!(s === u.SubscriptionPlans.PREMIUM_YEAR_TIER_1 && t === u.SubscriptionPlans.PREMIUM_MONTH_TIER_2), "Unexpected plan switch"), n.indexOf(s) < n.indexOf(t))
 }
 
-function d(e, t, n) {
-  return !c(e, t, n)
+function c(e, t, n) {
+  return !d(e, t, n)
 }
 
 function f(e, t) {
-  let n = a.default.get(e);
+  let n = i.default.get(e);
   if (null == n) {
-    let n = s.SubscriptionPlanInfo[e];
-    u(null != n, "Missing hardcoded subscriptionPlan: ".concat(e));
-    let r = n.skuId;
-    !a.default.isFetchingForSKU(r) && (0, i.fetchSubscriptionPlansForSKU)(r, t)
+    let n = u.SubscriptionPlanInfo[e];
+    a(null != n, "Missing hardcoded subscriptionPlan: ".concat(e));
+    let s = n.skuId;
+    !i.default.isFetchingForSKU(s) && (0, l.fetchSubscriptionPlansForSKU)(s, t)
   }
   return n
 }

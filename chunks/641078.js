@@ -4,20 +4,20 @@ n.r(t), n.d(t, {
     return U
   },
   maybeFetchActiveBogoPromotion: function() {
-    return N
+    return h
   },
   isEligibleForBOGOAnnouncementModal: function() {
-    return x
+    return N
   },
   getBOGOPillCopy: function() {
     return A
   }
 });
-var i = n("866227"),
-  r = n.n(i),
+var r = n("866227"),
+  i = n.n(r),
   l = n("65597"),
-  s = n("151426"),
-  a = n("850068"),
+  a = n("151426"),
+  s = n("850068"),
   o = n("174727"),
   u = n("619935"),
   d = n("10641"),
@@ -32,31 +32,31 @@ var i = n("866227"),
   P = n("935566"),
   S = n("917247"),
   R = n("538620"),
-  C = n("694540"),
-  O = n("807345"),
+  O = n("694540"),
+  C = n("807345"),
   M = n("646718"),
   g = n("49111"),
   L = n("782340");
 
 function v(e) {
-  var t, n, i;
+  var t, n, r;
   let {
     experimentEnabled: l,
-    premiumSubscription: s,
-    mostRecentSubscription: a
+    premiumSubscription: a,
+    mostRecentSubscription: s
   } = e, o = !1, u = !1;
-  if (null != a && a.status === g.SubscriptionStatusTypes.ENDED) {
-    let e = (null === (t = a.metadata) || void 0 === t ? void 0 : t.ended_at) != null ? r(a.metadata.ended_at) : null,
-      i = null === (n = (0, E.getPremiumPlanItem)(a)) || void 0 === n ? void 0 : n.planId,
-      l = null != i && E.default.getPremiumType(i) === M.PremiumTypes.TIER_2;
-    u = null != e && l && e.add(10, "days").isAfter(r())
+  if (null != s && s.status === g.SubscriptionStatusTypes.ENDED) {
+    let e = (null === (t = s.metadata) || void 0 === t ? void 0 : t.ended_at) != null ? i(s.metadata.ended_at) : null,
+      r = null === (n = (0, E.getPremiumPlanItem)(s)) || void 0 === n ? void 0 : n.planId,
+      l = null != r && E.default.getPremiumType(r) === M.PremiumTypes.TIER_2;
+    u = null != e && l && e.add(10, "days").isAfter(i())
   }
-  if (null != s) {
-    let e = null === (i = (0, E.getPremiumPlanItem)(s)) || void 0 === i ? void 0 : i.planId,
+  if (null != a) {
+    let e = null === (r = (0, E.getPremiumPlanItem)(a)) || void 0 === r ? void 0 : r.planId,
       t = null != e && E.default.getPremiumType(e) === M.PremiumTypes.TIER_2,
       n = m.default.getCurrentUser(),
-      r = (null == s ? void 0 : s.trialId) != null && E.default.isPremiumExactly(n, M.PremiumTypes.TIER_0);
-    o = t || r
+      i = (null == a ? void 0 : a.trialId) != null && E.default.isPremiumExactly(n, M.PremiumTypes.TIER_0);
+    o = t || i
   }
   return !l || o || u
 }
@@ -71,22 +71,22 @@ function U() {
     autoTrackExposure: !1
   }), {
     promotion: n
-  } = (0, C.useBogoPromotion)(), {
-    enabled: i
+  } = (0, O.useBogoPromotion)(), {
+    enabled: r
   } = (0, P.default)(), {
-    mostRecentSubscription: r,
-    premiumSubscription: s
+    mostRecentSubscription: i,
+    premiumSubscription: a
   } = (0, l.useStateFromStoresObject)([f.default], () => ({
     mostRecentSubscription: f.default.getMostRecentPremiumTypeSubscription(),
     premiumSubscription: f.default.getPremiumTypeSubscription()
-  })), a = (0, S.usePremiumTrialOffer)(), d = new Date(null !== (e = null == n ? void 0 : n.endDate) && void 0 !== e ? e : 0).valueOf();
+  })), s = (0, S.usePremiumTrialOffer)(), d = new Date(null !== (e = null == n ? void 0 : n.endDate) && void 0 !== e ? e : 0).valueOf();
   (0, o.default)(d, 1e3, void 0, d + 2e3 < Date.now());
   let c = !v({
-      experimentEnabled: i,
-      premiumSubscription: s,
-      mostRecentSubscription: r
+      experimentEnabled: r,
+      premiumSubscription: a,
+      mostRecentSubscription: i
     }),
-    m = c && null == a && null != n && !t,
+    m = c && null == s && null != n && !t,
     _ = Date.now(),
     {
       enabled: E
@@ -98,19 +98,19 @@ function U() {
     });
   return !(_ > d) && E
 }
-async function h() {
+async function x() {
   var e;
   let t = m.default.getCurrentUser(),
     n = !(null == t ? void 0 : t.isClaimed()),
     {
-      paymentsBlocked: i
+      paymentsBlocked: r
     } = u.default.getCurrentConfig({
       location: "153d31_3"
     }, {
       autoTrackExposure: !1
     }),
     {
-      enabled: r
+      enabled: i
     } = (0, P.isBogoPromotionExperimentEnabled)(),
     {
       enabled: l
@@ -120,40 +120,40 @@ async function h() {
       autoTrackExposure: !1
     }),
     {
-      enabled: s
+      enabled: a
     } = I.BOGOAnnouncementModalExperiment.getCurrentConfig({
       location: "153d31_5"
     }, {
       autoTrackExposure: !1
     });
-  if (n || i || !r || !s && !l) return !1;
+  if (n || r || !i || !a && !l) return !1;
   if (_.default.shouldFetchOffer() && await T.default.fetchUserTrialOffer(), _.default.hasFetchedOffer() && _.default.hasAnyUnexpiredOffer()) return !1;
-  !f.default.hasFetchedMostRecentPremiumTypeSubscription() && (null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasHadSKU(M.PremiumSubscriptionSKUs.TIER_2)) && await (0, a.fetchMostRecentSubscription)(), !f.default.hasFetchedSubscriptions() && await (0, a.fetchSubscriptions)();
+  !f.default.hasFetchedMostRecentPremiumTypeSubscription() && (null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasHadSKU(M.PremiumSubscriptionSKUs.TIER_2)) && await (0, s.fetchMostRecentSubscription)(), !f.default.hasFetchedSubscriptions() && await (0, s.fetchSubscriptions)();
   let o = f.default.getMostRecentPremiumTypeSubscription(),
     d = f.default.getPremiumTypeSubscription();
   return !v({
-    experimentEnabled: r,
+    experimentEnabled: i,
     premiumSubscription: d,
     mostRecentSubscription: o
   })
 }
-async function N() {
-  let e = await h();
+async function h() {
+  let e = await x();
   if (!e) return;
-  let t = O.default.bogoPromotion;
+  let t = C.default.bogoPromotion;
   if (null != t) {
     let e = new Date(t.endDate).valueOf();
     if (e >= Date.now()) return
   }
   await (0, R.fetchActiveBogoPromotion)()
 }
-async function x() {
-  let e = O.default.bogoPromotion,
+async function N() {
+  let e = C.default.bogoPromotion,
     t = null != e && new Date(e.endDate).valueOf() >= Date.now() && new Date(e.startDate).valueOf() <= Date.now(),
-    n = (0, d.isDismissibleContentDismissed)(s.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL),
-    i = await h(),
+    n = (0, d.isDismissibleContentDismissed)(a.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL),
+    r = await x(),
     {
-      enabled: r
+      enabled: i
     } = P.BogoPromotionExperiment.getCurrentConfig({
       location: "153d31_6"
     }, {
@@ -164,9 +164,9 @@ async function x() {
     } = I.BOGOAnnouncementModalExperiment.getCurrentConfig({
       location: "153d31_7"
     }, {
-      autoTrackExposure: t && r && !n && i
+      autoTrackExposure: t && i && !n && r
     });
-  return t && l && r && !n && i
+  return t && l && i && !n && r
 }
 
 function A() {

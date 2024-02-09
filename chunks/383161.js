@@ -1,49 +1,49 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   mentionUser: function() {
-    return T
+    return E
   },
   default: function() {
-    return I
+    return T
   }
 }), n("222007");
-var i = n("37983");
+var u = n("37983");
 n("884691");
-var u = n("446674"),
+var r = n("446674"),
   a = n("77078"),
-  r = n("352674"),
+  i = n("352674"),
   l = n("42203"),
-  o = n("957255"),
+  s = n("957255"),
   d = n("18494"),
-  s = n("659500"),
-  E = n("158998"),
-  c = n("49111"),
+  o = n("659500"),
+  c = n("158998"),
+  f = n("49111"),
   _ = n("782340");
 
-function T(t, e) {
+function E(e, t) {
   let {
     id: n
-  } = t, i = "@".concat(E.default.getUserTag(t, {
+  } = e, u = "@".concat(c.default.getUserTag(e, {
     decoration: "never"
   }));
-  s.ComponentDispatch.dispatchToLastSubscribed(c.ComponentActions.INSERT_TEXT, {
-    plainText: i,
+  o.ComponentDispatch.dispatchToLastSubscribed(f.ComponentActions.INSERT_TEXT, {
+    plainText: u,
     rawText: "<@".concat(n, ">")
-  }), null != e && r.default.startTyping(e)
+  }), null != t && i.default.startTyping(t)
 }
 
-function I(t, e, n) {
-  let [r, s] = (0, u.useStateFromStoresArray)([d.default, l.default, o.default], () => {
-    let t = d.default.getChannelId(e),
-      n = l.default.getChannel(t),
-      i = null != n && (n.isMultiUserDM() || o.default.can(c.Permissions.SEND_MESSAGES, n));
-    return [t, i]
-  }, [e]), E = n === c.AppContext.POPOUT;
-  return !s || E ? null : (0, i.jsx)(a.MenuItem, {
+function T(e, t, n) {
+  let [i, o] = (0, r.useStateFromStoresArray)([d.default, l.default, s.default], () => {
+    let e = d.default.getChannelId(t),
+      n = l.default.getChannel(e),
+      u = null != n && (n.isMultiUserDM() || s.default.can(f.Permissions.SEND_MESSAGES, n));
+    return [e, u]
+  }, [t]), c = n === f.AppContext.POPOUT;
+  return !o || c ? null : (0, u.jsx)(a.MenuItem, {
     id: "mention",
     label: _.default.Messages.MENTION,
     action: function() {
-      T(t, r)
+      E(e, i)
     }
   })
 }

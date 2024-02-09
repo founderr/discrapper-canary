@@ -1,96 +1,96 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   fetchReferralsRemaining: function() {
-    return o
+    return f
   },
   checkRecipientEligibility: function() {
-    return u
+    return a
   },
   createReferralTrial: function() {
-    return d
+    return E
   },
   resolveReferralTrialOffer: function() {
-    return c
+    return _
   }
 });
-var i = n("872717"),
-  r = n("913144"),
-  l = n("819689"),
-  s = n("18494"),
-  a = n("49111");
-let o = () => (r.default.dispatch({
+var l = r("872717"),
+  i = r("913144"),
+  n = r("819689"),
+  u = r("18494"),
+  s = r("49111");
+let f = () => (i.default.dispatch({
     type: "BILLING_REFERRALS_REMAINING_FETCH_START"
-  }), i.default.get({
-    url: a.Endpoints.GET_REFERRALS_REMAINING,
+  }), l.default.get({
+    url: s.Endpoints.GET_REFERRALS_REMAINING,
     oldFormErrors: !0
   }).then(e => {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
       referrals_remaining: null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
       sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : []
     })
   }, () => {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL"
     })
   })),
-  u = e => (r.default.dispatch({
+  a = e => (i.default.dispatch({
     type: "BILLING_CREATE_REFERRAL_PREVIEW_START",
     recipientId: e
-  }), i.default.post({
-    url: a.Endpoints.CREATE_REFERRAL_PREVIEW(e),
+  }), l.default.post({
+    url: s.Endpoints.CREATE_REFERRAL_PREVIEW(e),
     oldFormErrors: !0
   }).then(t => {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS",
       recipientId: e,
       is_eligible: null != t.body && t.body.is_eligible
     })
   }, () => {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "BILLING_CREATE_REFERRAL_PREVIEW_FAIL",
       recipientId: e
     })
   }));
-async function d(e) {
+async function E(e) {
   try {
     var t;
-    let n = await i.default.post({
-        url: a.Endpoints.CREATE_REFERRAL(e),
+    let r = await l.default.post({
+        url: s.Endpoints.CREATE_REFERRAL(e),
         oldFormErrors: !0
       }),
-      l = null !== (t = n.body) && void 0 !== t ? t : null;
-    return r.default.dispatch({
+      n = null !== (t = r.body) && void 0 !== t ? t : null;
+    return i.default.dispatch({
       type: "BILLING_CREATE_REFERRAL_SUCCESS",
-      userTrialOffer: l
+      userTrialOffer: n
     }), {
-      userTrialOffer: l
+      userTrialOffer: n
     }
   } catch (e) {
-    if (r.default.dispatch({
+    if (i.default.dispatch({
         type: "BILLING_CREATE_REFERRAL_FAIL"
-      }), e.body.code === a.AbortCodes.INVALID_MESSAGE_SEND_USER) {
-      let t = s.default.getCurrentlySelectedChannelId();
-      null != t && l.default.sendClydeError(t, e.body.code)
+      }), e.body.code === s.AbortCodes.INVALID_MESSAGE_SEND_USER) {
+      let t = u.default.getCurrentlySelectedChannelId();
+      null != t && n.default.sendClydeError(t, e.body.code)
     }
   }
 }
-async function c(e) {
+async function _(e) {
   try {
     var t;
-    let n = await i.default.get({
-        url: a.Endpoints.REFERRAL_OFFER_ID_RESOLVE(e),
+    let r = await l.default.get({
+        url: s.Endpoints.REFERRAL_OFFER_ID_RESOLVE(e),
         oldFormErrors: !0
       }),
-      l = null !== (t = n.body) && void 0 !== t ? t : null;
-    return r.default.dispatch({
+      n = null !== (t = r.body) && void 0 !== t ? t : null;
+    return i.default.dispatch({
       type: "BILLING_REFERRAL_RESOLVE_SUCCESS",
-      userTrialOffer: l
+      userTrialOffer: n
     }), {
-      userTrialOffer: l
+      userTrialOffer: n
     }
   } catch (t) {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "BILLING_REFERRAL_RESOLVE_FAIL",
       userTrialOfferId: e
     })

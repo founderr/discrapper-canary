@@ -12,8 +12,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("966900"),
-  u = n("838048"),
-  o = n("359902"),
+  o = n("838048"),
+  u = n("359902"),
   d = n("780624"),
   c = n("120606"),
   f = n("77078"),
@@ -118,15 +118,15 @@ class w extends l.Component {
       speaking: l,
       userNameClassName: s,
       mute: r,
-      serverMute: u,
-      isGuest: o
+      serverMute: o,
+      isGuest: u
     } = this.props;
     return n ? null : (0, a.jsxs)("div", {
       className: i(s, {
         [P.username]: !0,
-        [P.usernameSpeaking]: !r && !u && l
+        [P.usernameSpeaking]: !r && !o && l
       }),
-      children: [null != e ? e : j.default.getName(t), o ? (0, a.jsxs)("span", {
+      children: [null != e ? e : j.default.getName(t), u ? (0, a.jsxs)("span", {
         className: P.guestSuffix,
         children: ["\xa0", b.default.Messages.GUEST_NAME_SUFFIX]
       }) : ""]
@@ -140,8 +140,8 @@ class w extends l.Component {
       serverMute: l,
       deaf: s,
       serverDeaf: r,
-      collapsed: u,
-      video: o,
+      collapsed: o,
+      video: u,
       isStreaming: d,
       disabled: c,
       isWatching: h,
@@ -158,7 +158,7 @@ class w extends l.Component {
       user: B,
       handleHoverHangStatus: H
     } = this.props;
-    if (u || c) return null;
+    if (o || c) return null;
     let G = [],
       W = (0, a.jsx)(V, {
         iconClassName: m,
@@ -168,7 +168,7 @@ class w extends l.Component {
         deaf: s,
         serverDeaf: r
       });
-    o && (n ? G.push((0, a.jsx)(f.TooltipContainer, {
+    u && (n ? G.push((0, a.jsx)(f.TooltipContainer, {
       className: P.iconSpacing,
       text: b.default.Messages.LOCAL_VIDEO_DISABLED,
       children: (0, a.jsx)(_.default, {
@@ -242,20 +242,20 @@ class w extends l.Component {
       size: l,
       className: s,
       selected: r,
-      disabled: u,
-      overlap: o,
+      disabled: o,
+      overlap: u,
       "aria-label": d,
       tabIndex: c
     } = this.props;
     return (0, a.jsx)(f.Clickable, {
       className: i(s, {
         [P.voiceUser]: !0,
-        [P.overlap]: o,
+        [P.overlap]: u,
         [P.selected]: r,
         [P.clickable]: null != e,
         [P.userSmall]: l === L.OverlayAvatarSizes.SMALL,
         [P.userLarge]: l === L.OverlayAvatarSizes.LARGE,
-        [P.disabled]: !r && u
+        [P.disabled]: !r && o
       }),
       onClick: this.handleClick,
       onDoubleClick: this.handleDoubleClick,
@@ -329,15 +329,15 @@ function k(e) {
     iconClassName: n,
     guildId: s,
     channelId: r,
-    userId: u
-  } = e, [o, d] = l.useState(!1), c = (0, h.useIsVisible)(e => d(e));
+    userId: o
+  } = e, [u, d] = l.useState(!1), c = (0, h.useIsVisible)(e => d(e));
   return l.useEffect(() => {
-    o && m.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
+    u && m.default.trackWithMetadata(L.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
       channel_id: r,
       guild_id: s,
-      user_id: u
+      user_id: o
     })
-  }, [t.id, r, s, u, o]), (0, a.jsx)(f.TooltipContainer, {
+  }, [t.id, r, s, o, u]), (0, a.jsx)(f.TooltipContainer, {
     text: b.default.Messages.UNFORMATTED_PLAYING_GAME.format({
       game: t.name
     }),
@@ -356,7 +356,7 @@ function k(e) {
             channel_id: r,
             guild_id: s,
             game_name: t.name,
-            user_id: u
+            user_id: o
           })
         }
       })
@@ -377,7 +377,7 @@ function V(e) {
     let e;
     if (p) {
       let n;
-      n = s ? o.MicrophoneDenyIcon : l ? o.MicrophoneDenyIcon : d.MicrophoneSlashIcon, e = (0, a.jsx)(n, {
+      n = s ? u.MicrophoneDenyIcon : l ? u.MicrophoneDenyIcon : d.MicrophoneSlashIcon, e = (0, a.jsx)(n, {
         className: i(P.icon, t, {
           [P.iconServer]: s
         }),
@@ -398,7 +398,7 @@ function V(e) {
   if (h || c) {
     let e;
     if (p) {
-      let n = h ? r.HeadphonesDenyIcon : u.HeadphonesSlashIcon;
+      let n = h ? r.HeadphonesDenyIcon : o.HeadphonesSlashIcon;
       e = (0, a.jsx)(n, {
         className: i(P.icon, t, {
           [P.iconServer]: h

@@ -8,8 +8,8 @@ var t = E("77078"),
   o = E("913144"),
   n = E("373469"),
   r = E("42887"),
-  a = E("568307"),
-  i = E("56947"),
+  i = E("568307"),
+  a = E("56947"),
   I = E("111177"),
   s = E("386045"),
   T = E("18346"),
@@ -29,7 +29,7 @@ class A extends I.default {
   }
   applyNativeClipsSettings(e) {
     if (!(0, T.default)(r.default)) return;
-    let _ = (0, i.areClipsEnabled)(),
+    let _ = (0, a.areClipsEnabled)(),
       E = s.default.getSettings(),
       t = (E.clipsEnabled || E.decoupledClipsEnabled) && _,
       o = r.default.getMediaEngine();
@@ -42,22 +42,22 @@ class A extends I.default {
     }
   }
   handleClipsInitOnToggleDetection(e) {
-    let _ = a.default.getVisibleGame();
+    let _ = i.default.getVisibleGame();
     null != _ && _.id === e.game.id && this.fireClipsInitEvent()
   }
   handleClipsInitOnGamesChange(e) {
-    let _ = a.default.getVisibleGame();
+    let _ = i.default.getVisibleGame();
     if (null == _) return;
     let E = !!e.added.find(e => e.pid === _.pid);
     E ? setTimeout(() => this.fireClipsInitEvent(), N.CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY) : this.fireClipsInitEvent()
   }
   fireClipsInitEvent() {
     if (!(0, T.default)(r.default)) return;
-    let e = (0, i.areClipsEnabled)(),
+    let e = (0, a.areClipsEnabled)(),
       _ = s.default.getSettings(),
       E = _.clipsEnabled && e;
     if (!E || null != n.default.getCurrentUserActiveStream()) return;
-    let t = a.default.getVisibleGame();
+    let t = i.default.getVisibleGame();
     (null == t ? void 0 : t.pid) != null && (null == t ? void 0 : t.windowHandle) != null && null != t.name && "" !== t.name && o.default.dispatch({
       type: "CLIPS_INIT",
       sourceId: "window:".concat(null == t ? void 0 : t.windowHandle),

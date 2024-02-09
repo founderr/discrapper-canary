@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
     return i
   }
@@ -12,39 +12,39 @@ let s = {
   threshold: .5
 };
 i = class {
-  isVisible(e) {
-    return null == this._observer || this._visibleComponents.has(e)
+  isVisible(t) {
+    return null == this._observer || this._visibleComponents.has(t)
   }
-  observe(e) {
-    let t = this._observer;
-    if (null == t) return;
-    this.unobserve(e);
-    let n = (0, r.findDOMNode)(e);
-    (0, l.isElement)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), t.observe(n))
+  observe(t) {
+    let e = this._observer;
+    if (null == e) return;
+    this.unobserve(t);
+    let n = (0, r.findDOMNode)(t);
+    (0, l.isElement)(n, HTMLElement) && (this._nodes.set(n, t), this._components.set(t, n), e.observe(n))
   }
-  unobserve(e) {
-    let t = this._observer;
-    if (null == t) return;
-    let n = this._components.get(e);
-    null != n && (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n))
+  unobserve(t) {
+    let e = this._observer;
+    if (null == e) return;
+    let n = this._components.get(t);
+    null != n && (this._nodes.delete(n), this._components.delete(t), this._visibleComponents.delete(t), e.unobserve(n))
   }
-  constructor(e = s) {
-    this._nodes = new WeakMap, this._components = new WeakMap, this._visibleComponents = new WeakSet, this._handleEntries = e => {
-      e.forEach(e => {
-        let t;
-        if (null != e.isIntersecting) t = e.isIntersecting;
+  constructor(t = s) {
+    this._nodes = new WeakMap, this._components = new WeakMap, this._visibleComponents = new WeakSet, this._handleEntries = t => {
+      t.forEach(t => {
+        let e;
+        if (null != t.isIntersecting) e = t.isIntersecting;
         else {
           let {
             threshold: n
           } = this._options;
-          t = null == n ? e.intersectionRatio > 0 : Array.isArray(n) ? n.some(t => e.intersectionRatio > t) : e.intersectionRatio > n
+          e = null == n ? t.intersectionRatio > 0 : Array.isArray(n) ? n.some(e => t.intersectionRatio > e) : t.intersectionRatio > n
         }
-        let n = this._nodes.get(e.target);
+        let n = this._nodes.get(t.target);
         if (null != n) {
-          let e = !1;
-          t ? !this._visibleComponents.has(n) && (this._visibleComponents.add(n), e = !0) : this._visibleComponents.has(n) && (this._visibleComponents.delete(n), e = !0), e && n.forceUpdate()
+          let t = !1;
+          e ? !this._visibleComponents.has(n) && (this._visibleComponents.add(n), t = !0) : this._visibleComponents.has(n) && (this._visibleComponents.delete(n), t = !0), t && n.forceUpdate()
         }
       })
-    }, this._options = e, null != window.IntersectionObserver && (this._observer = new window.IntersectionObserver(this._handleEntries, e))
+    }, this._options = t, null != window.IntersectionObserver && (this._observer = new window.IntersectionObserver(this._handleEntries, t))
   }
 }

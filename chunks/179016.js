@@ -1,23 +1,23 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return n
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("75196");
+var l = s("75196");
 
-function l(e) {
+function n(e) {
   let {
     width: t = 17,
     height: s = 16,
-    color: l = "currentColor",
+    color: n = "currentColor",
     foreground: i,
     ...r
   } = e;
   return (0, a.jsxs)("svg", {
-    ...(0, n.default)(r),
+    ...(0, l.default)(r),
     width: t,
     height: s,
     viewBox: "0 0 17 16",
@@ -28,14 +28,14 @@ function l(e) {
       width: "16",
       height: "2",
       rx: "1",
-      fill: l
+      fill: n
     }), (0, a.jsx)("rect", {
       className: i,
       y: "9",
       width: "8",
       height: "2",
       rx: "1",
-      fill: l
+      fill: n
     })]
   })
 }

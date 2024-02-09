@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return f
   }
 });
 var a = s("884691"),
-  n = s("65597"),
-  l = s("465869"),
+  l = s("65597"),
+  n = s("465869"),
   i = s("697218"),
   r = s("701909"),
   o = s("7331"),
@@ -15,74 +15,74 @@ var a = s("884691"),
   c = s("365721"),
   E = s("782914"),
   _ = s("49111"),
-  T = s("782340");
+  I = s("782340");
 
-function I(e) {
+function f(e) {
   let t;
   let s = (0, o.useIsExpeditedOnboardingGuild)(e),
-    I = null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL),
-    S = null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE),
-    N = (0, n.default)([i.default], () => {
+    f = null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL),
+    T = null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE),
+    S = (0, l.default)([i.default], () => {
       let t = i.default.getCurrentUser();
       return (null == e ? void 0 : e.isOwner(t)) === !0
     }),
     {
-      error: g,
-      loading: f,
-      createEnableRequest: A,
-      submittedRequest: L
+      error: m,
+      loading: N,
+      createEnableRequest: g,
+      submittedRequest: h
     } = (0, d.default)(null == e ? void 0 : e.id),
     {
-      loading: m,
-      error: C,
-      refresh: O,
-      eligibility: h
+      loading: C,
+      error: R,
+      refresh: x,
+      eligibility: L
     } = (0, u.default)(null == e ? void 0 : e.id),
     {
-      isApplicationRejected: R,
-      requestCooldownDuration: D
-    } = (0, c.default)(h),
-    M = (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) === !0,
+      isApplicationRejected: O,
+      requestCooldownDuration: p
+    } = (0, c.default)(L),
+    A = (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) === !0,
     {
-      isMonetizationReapplicationDisabled: G
-    } = (0, l.useIsMonetizationReapplicationDisabled)(null == e ? void 0 : e.id),
-    x = L || (null == h ? void 0 : h.isApplicationPending) === !0,
-    p = (null == h ? void 0 : h.canApply) === !0,
-    U = T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
+      isMonetizationReapplicationDisabled: M
+    } = (0, n.useIsMonetizationReapplicationDisabled)(null == e ? void 0 : e.id),
+    D = h || (null == L ? void 0 : L.isApplicationPending) === !0,
+    v = (null == L ? void 0 : L.canApply) === !0,
+    j = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
       faqUrl: r.default.getArticleURL(_.HelpdeskArticles.CREATOR_FAQ)
     });
-  R && G ? t = !0 === I ? T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({
+  O && M ? t = !0 === f ? I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({
     communityGuidelineUrl: _.MarketingURLs.GUIDELINES
-  }) : T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM_ALT.format({
+  }) : I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM_ALT.format({
     communityGuidelineUrl: _.MarketingURLs.GUIDELINES
-  }) : R && null != D && (t = T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({
-    requestCooldownDuration: D,
+  }) : O && null != p && (t = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({
+    requestCooldownDuration: p,
     creatorRevenuePolicyUrl: r.default.getArticleURL(_.HelpdeskArticles.CREATOR_POLICY)
   }));
-  let v = s && N && !1 === S,
-    P = s && !1 === I,
-    j = (0, E.getCreatorMonetizationAcceptTermsCheckboxText)(),
-    y = R && p && N ? T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
+  let G = s && S && !1 === T,
+    U = s && !1 === f,
+    P = (0, E.getCreatorMonetizationAcceptTermsCheckboxText)(),
+    b = O && v && S ? I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
   return a.useEffect(() => {
-    v && O()
-  }, [O, v]), {
-    resubmittingEnableRequest: f,
-    resubmissionError: g,
-    isGuildOwner: N,
-    createEnableRequest: A,
-    resubmittedRequest: L,
-    eligibilityLoading: m,
-    eligibilityError: C,
-    refreshEligibility: O,
-    eligibility: h,
-    eligibleForMonetization: p,
-    isApplicationPending: x,
-    hasPreviousApplicationRejection: R,
+    G && x()
+  }, [x, G]), {
+    resubmittingEnableRequest: N,
+    resubmissionError: m,
+    isGuildOwner: S,
+    createEnableRequest: g,
+    resubmittedRequest: h,
+    eligibilityLoading: C,
+    eligibilityError: R,
+    refreshEligibility: x,
+    eligibility: L,
+    eligibleForMonetization: v,
+    isApplicationPending: D,
+    hasPreviousApplicationRejection: O,
     requestRejectedNoticeText: t,
-    reapplyNoticeText: y,
-    showAcceptTermsFlow: P,
-    wasRejectedInV1: P && (M || R),
-    requirementsFinePrintText: U,
-    acceptTermsCheckboxText: j
+    reapplyNoticeText: b,
+    showAcceptTermsFlow: U,
+    wasRejectedInV1: U && (A || O),
+    requirementsFinePrintText: j,
+    acceptTermsCheckboxText: P
   }
 }

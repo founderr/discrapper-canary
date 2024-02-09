@@ -1,13 +1,13 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   PurchaseHeader: function() {
-    return T
-  },
-  BenefitsConfirmation: function() {
     return h
   },
-  PurchaseConfirmation: function() {
+  BenefitsConfirmation: function() {
     return _
+  },
+  PurchaseConfirmation: function() {
+    return T
   }
 });
 var i = n("37983");
@@ -15,8 +15,8 @@ n("884691");
 var l = n("77078"),
   a = n("834897"),
   r = n("85336"),
-  u = n("159149"),
-  s = n("650484"),
+  s = n("159149"),
+  u = n("650484"),
   o = n("945330"),
   c = n("829805"),
   d = n("425480"),
@@ -24,14 +24,14 @@ var l = n("77078"),
   p = n("370184"),
   I = n("137852"),
   S = n("511117");
-let T = t => {
+let h = e => {
     let {
-      step: e,
+      step: t,
       onClose: n
-    } = t, u = (0, a.default)(d.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
-    return e === r.Step.CONFIRM || e === r.Step.BENEFITS ? (0, i.jsx)("div", {}) : (0, i.jsxs)("div", {
+    } = e, s = (0, a.default)(d.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
+    return t === r.Step.CONFIRM || t === r.Step.BENEFITS ? (0, i.jsx)("div", {}) : (0, i.jsxs)("div", {
       className: p.headerContainer,
-      children: [!u && (0, i.jsx)("div", {
+      children: [!s && (0, i.jsx)("div", {
         className: p.headerImageContainer,
         "aria-hidden": "true",
         children: (0, i.jsx)("img", {
@@ -49,27 +49,27 @@ let T = t => {
       })]
     })
   },
-  h = t => {
+  _ = e => {
     let {
-      icon: e,
+      icon: t,
       storeListingBenefits: n,
       skuBenefits: l,
       application: a,
       title: r,
-      subtitle: u,
-      description: s
-    } = t;
+      subtitle: s,
+      description: u
+    } = e;
     return null == a ? null : (0, i.jsx)("div", {
       className: p.confirmationContainer,
       children: (0, i.jsxs)(c.ApplicationBenefitsModalContent, {
         children: [(0, i.jsx)(c.ApplicationBenefitsModalIcon, {
           application: a,
-          asset: e
+          asset: t
         }), (0, i.jsx)(c.ApplicationBenefitsModalHeading, {
           children: r
         }), (0, i.jsx)(c.ApplicationBenefitsModalDivider, {}), (0, i.jsx)(c.ApplicationBenefitsModalDescription, {
-          title: u,
-          description: s
+          title: s,
+          description: u
         }), (0, i.jsx)(c.ApplicationBenefitsModalBenefits, {
           applicationId: a.id,
           storeListingBenefits: n,
@@ -79,12 +79,12 @@ let T = t => {
     })
   };
 
-function _(t) {
+function T(e) {
   let {
-    tierName: e,
+    tierName: t,
     onConfirm: n,
     subscription: a
-  } = t;
+  } = e;
   return (0, i.jsxs)("div", {
     className: p.purchaseConfirmation,
     children: [(0, i.jsx)("img", {
@@ -97,7 +97,7 @@ function _(t) {
       variant: "heading-xl/extrabold",
       color: "header-primary",
       children: f.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({
-        tier: e
+        tier: t
       })
     }), (0, i.jsx)(l.Text, {
       className: p.confirmationSubtitle,
@@ -106,10 +106,10 @@ function _(t) {
       children: f.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
         timestamp: null == a ? void 0 : a.currentPeriodEnd
       })
-    }), (0, i.jsx)(s.PaymentPortalFooter, {
-      children: (0, i.jsx)(u.default, {
+    }), (0, i.jsx)(u.PaymentPortalFooter, {
+      children: (0, i.jsx)(s.default, {
         onPrimary: n,
-        primaryCTA: u.CTAType.CONTINUE,
+        primaryCTA: s.CTAType.CONTINUE,
         primaryText: f.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
       })
     })]

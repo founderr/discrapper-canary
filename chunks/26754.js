@@ -6,19 +6,19 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("614351"),
+var l = s("77078"),
+  n = s("614351"),
   i = function(e) {
     let {
       text: t
     } = e;
     return (0, a.jsxs)("div", {
-      className: l.container,
-      children: [(0, a.jsx)(n.FormDivider, {}), (0, a.jsx)(n.Text, {
+      className: n.container,
+      children: [(0, a.jsx)(l.FormDivider, {}), (0, a.jsx)(l.Text, {
         variant: "text-xs/bold",
         color: "header-secondary",
-        className: l.text,
+        className: n.text,
         children: t.toUpperCase()
-      }), (0, a.jsx)(n.FormDivider, {})]
+      }), (0, a.jsx)(l.FormDivider, {})]
     })
   }

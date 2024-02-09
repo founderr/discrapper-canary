@@ -1,11 +1,11 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
-var n = a("782340");
+var r = l("782340");
 
-function l(e) {
-  return null != e && "" !== e ? e : n.default.Messages.EMBEDDED_ACTIVITIES_IN_ACTIVITY
+function a(e) {
+  return null != e && "" !== e ? e : r.default.Messages.EMBEDDED_ACTIVITIES_IN_ACTIVITY
 }

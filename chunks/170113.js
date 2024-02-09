@@ -26,8 +26,8 @@ var l = n("37983"),
   v = n("316680"),
   I = n("830837"),
   S = n("132755"),
-  _ = n("73034"),
-  x = n("58608"),
+  x = n("73034"),
+  _ = n("58608"),
   N = n("719347"),
   T = n("49111"),
   M = n("782340"),
@@ -137,7 +137,7 @@ class P extends a.Component {
       onClick: s,
       tabIndex: i ? -1 : 0,
       "aria-label": M.default.Messages.PLAY_AGAIN,
-      children: (0, l.jsx)(_.default, {
+      children: (0, l.jsx)(x.default, {
         className: A.controlIcon
       }, "replay")
     }) : (0, l.jsx)(d.Clickable, {
@@ -429,7 +429,7 @@ class k extends a.PureComponent {
       playing: r,
       fullscreen: o
     } = this.state, u = this.getWidth(), d = this.getHeight();
-    return n ? (0, l.jsx)(x.default, {
+    return n ? (0, l.jsx)(_.default, {
       className: A.video,
       controls: !1,
       height: d,
@@ -439,7 +439,7 @@ class k extends a.PureComponent {
       mediaLayoutType: i,
       playsInline: !0,
       autoPlay: r
-    }) : (0, l.jsx)(x.default, {
+    }) : (0, l.jsx)(_.default, {
       className: A.video,
       controls: !1,
       playsInline: !0,

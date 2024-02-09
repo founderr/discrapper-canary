@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   },
   run: function() {
-    return S
+    return g
   },
   convertRawToInlineVoids: function() {
     return v
@@ -25,7 +25,7 @@ let p = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#
   h = new Set(["line", "blockQuote"]),
   E = new Set(["applicationCommandOption"]);
 
-function g(e, t, n) {
+function S(e, t, n) {
   let {
     isInline: l,
     isVoid: i,
@@ -37,12 +37,12 @@ function g(e, t, n) {
   return e.onChange = () => {
     let l = f.EditorUtils.richValue(e);
     (l !== s || e.previewMarkdown !== r) && (o.HistoryUtils.withMergedEntry(e, () => {
-      f.EditorUtils.withoutNormalizing(e, () => S(e, t, n))
+      f.EditorUtils.withoutNormalizing(e, () => g(e, t, n))
     }), s = l, r = e.previewMarkdown), a()
   }, e
 }
 
-function S(e, t, n) {
+function g(e, t, n) {
   let l = f.EditorUtils.areStylesDisabled(e),
     i = f.EditorUtils.blocks(e);
   for (let a of i)
@@ -70,7 +70,7 @@ function C(e, t, n, l) {
       let h = s.children[d];
       if (!f.TextUtils.isText(h)) continue;
       let E = f.PathUtils.child(o, d),
-        g = [];
+        S = [];
       for (p.lastIndex = 0; null != (m = p.exec(h.text));) {
         if (0 !== m.index && null == h.text.charAt(m.index - 1).match(/(\t|\s)/)) {
           p.lastIndex = m.index + 1;
@@ -82,13 +82,13 @@ function C(e, t, n, l) {
         };
         if (I(e, o, i, a)) continue;
         let s = (0, r.resolvePlaintextInlineVoid)(m[0], n, l);
-        null != s && _(l, t[0], s) ? g.push({
+        null != s && _(l, t[0], s) ? S.push({
           index: m.index,
           length: m[0].length,
           node: s
         }) : p.lastIndex = m.index + 1
       }
-      for (let t of g.reverse()) {
+      for (let t of S.reverse()) {
         let n = [h, f.PathUtils.child(o, d)];
         (function(e, t, n, l, a) {
           let [s, r] = t, o = {

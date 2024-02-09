@@ -8,8 +8,8 @@ var a = n("37983");
 n("884691");
 var l = n("85336"),
   i = n("262683"),
-  r = n("946359"),
-  s = n("724269"),
+  s = n("946359"),
+  r = n("724269"),
   u = n("559362"),
   o = n("671672"),
   c = n("101432"),
@@ -53,10 +53,10 @@ function I(e) {
     }
   }, {
     key: l.Step.AWAITING_PURCHASE_TOKEN_AUTH,
-    renderStep: () => (0, a.jsx)(s.default, {})
+    renderStep: () => (0, a.jsx)(r.default, {})
   }, {
     key: l.Step.AWAITING_AUTHENTICATION,
-    renderStep: () => (0, a.jsx)(r.default, {})
+    renderStep: () => (0, a.jsx)(s.default, {})
   }, {
     key: l.Step.REVIEW,
     renderStep: e => (0, a.jsx)(d.default, {

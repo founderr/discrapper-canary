@@ -14,8 +14,8 @@ function i(e) {
     context: n,
     canvasWidth: i,
     canvasHeight: r,
-    fallbackColor: u,
-    outlineColorDark: o,
+    fallbackColor: o,
+    outlineColorDark: u,
     outlineColorLight: d,
     linesDrawnAt: c,
     deadDrawables: f
@@ -43,7 +43,7 @@ function i(e) {
     {
       fillColor: _,
       outlineColor: I
-    } = (0, a.getUserColors)(t.userId, o, d, u),
+    } = (0, a.getUserColors)(t.userId, u, d, o),
     T = S(I, 6 + s.OUTLINE_WIDTH),
     v = null != T && C(T);
   v && (0, l.renderAvatarCursorOutline)(n, T.x, T.y, I, s.OUTLINE_WIDTH), S(_, 6), v && (0, l.renderAvatarCursor)(n, T.x, T.y, t.userId)

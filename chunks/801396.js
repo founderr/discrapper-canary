@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("592407"),
   h = n("817963"),
   E = n("305961"),
-  g = n("326880"),
-  S = n("595086"),
+  S = n("326880"),
+  g = n("595086"),
   C = n("427459"),
   T = n("49111"),
   v = n("944305"),
@@ -49,7 +49,7 @@ var l = n("37983"),
       }), A(!0))
     }, [M, O, a, N, y, A, x, R]), null != O && R) ? M ? (0, l.jsxs)("div", {
       className: s(_.upsell, t),
-      children: [(0, l.jsx)(g.default, {
+      children: [(0, l.jsx)(S.default, {
         className: _.icon,
         width: 24,
         height: 24
@@ -75,7 +75,7 @@ var l = n("37983"),
       })]
     }) : (0, l.jsxs)("div", {
       className: s(_.upsell, t),
-      children: [(0, l.jsx)(S.default, {
+      children: [(0, l.jsx)(g.default, {
         className: _.icon,
         width: 20,
         height: 20

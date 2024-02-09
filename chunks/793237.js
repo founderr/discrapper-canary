@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   setHighlightedSummary: function() {
-    return x
+    return _
   },
   toggleTopicsBar: function() {
     return N
@@ -68,7 +68,7 @@ async function S(e, t) {
     receivedAt: Date.now()
   })
 }
-async function _(e) {
+async function x(e) {
   var t, n;
   let l, a;
   if (!g.default.shouldFetch(e)) return;
@@ -94,7 +94,7 @@ async function _(e) {
   })
 }
 
-function x(e, t) {
+function _(e, t) {
   u.default.dispatch({
     type: "SET_HIGHLIGHTED_SUMMARY",
     channelId: e,
@@ -246,8 +246,8 @@ let b = {
   useSummaryPolling: O,
   updateVisibleMessages: M,
   setSelectedSummary: T,
-  setHighlightedSummary: x,
-  fetchSummaries: _,
+  setHighlightedSummary: _,
+  fetchSummaries: x,
   fetchSummariesBulk: L,
   useChannelSummaries: function(e) {
     let {

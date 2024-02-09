@@ -23,8 +23,8 @@ var i = n("37983"),
   S = n("476765"),
   I = n("486952"),
   m = n("811305"),
-  y = n("599110"),
-  g = n("701909"),
+  g = n("599110"),
+  y = n("701909"),
   A = n("339023"),
   N = n("602658"),
   T = n("49111"),
@@ -38,7 +38,7 @@ var i = n("37983"),
       onClose: x
     } = e, b = (0, a.useStateFromStores)([_.default], () => _.default.getGuild(t), [t]), w = (0, a.useStateFromStores)([v.default], () => v.default.getId()), O = (0, a.useStateFromStores)([E.default], () => E.default.getMember(t, w)), [U, M] = r.useState([]), D = (0, f.default)(), k = (0, S.useUID)();
     if (r.useEffect(() => {
-        0 !== U.length && y.default.track(T.AnalyticEvents.PASSPORT_ENTRY_VIEWED, {
+        0 !== U.length && g.default.track(T.AnalyticEvents.PASSPORT_ENTRY_VIEWED, {
           role_ids: U.map(e => {
             let {
               role_id: t
@@ -77,7 +77,7 @@ var i = n("37983"),
           variant: "heading-md/semibold",
           color: "header-primary",
           children: L.default.Messages.CONNECTIONS_ROLES_CHANNEL_CALL_TO_ACTION_LEARN_MORE.format({
-            helpdeskArticleUrl: g.default.getArticleURL(T.HelpdeskArticles.CONNECTION_DETAILS)
+            helpdeskArticleUrl: y.default.getArticleURL(T.HelpdeskArticles.CONNECTION_DETAILS)
           })
         }), (0, i.jsx)("div", {
           className: R.verifiedRoles,

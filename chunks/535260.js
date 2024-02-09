@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("880317"),
   i = n("77078"),
   r = n("404118"),
-  u = n("819689"),
-  o = n("378438"),
+  o = n("819689"),
+  u = n("378438"),
   d = n("419135"),
   c = n("206230"),
   f = n("679653"),
@@ -53,7 +53,7 @@ function b(e) {
   } = n, A = l.useCallback(e => {
     if (x) return;
     let t = e - 1;
-    null == g || g(t), o.changePage(f, t)
+    null == g || g(t), u.changePage(f, t)
   }, [f, x, g]), M = l.useCallback(e => {
     if (e.blocked) r.default.show({
       title: O.default.Messages.UNBLOCK_TO_JUMP_TITLE,
@@ -65,7 +65,7 @@ function b(e) {
     else {
       let t = S.default.getChannel(e.channel_id),
         n = null != t ? t.getGuildId() : null;
-      u.default.trackJump(e.channel_id, e.id, "Search Results", {
+      o.default.trackJump(e.channel_id, e.id, "Search Results", {
         search_id: v.default.getAnalyticsId(f)
       }), (0, E.transitionTo)(L.Routes.CHANNEL(n, e.channel_id, e.id))
     }
@@ -142,7 +142,7 @@ function b(e) {
     }), C > 0 ? (0, a.jsxs)(i.Clickable, {
       tag: "div",
       className: y.resultsBlocked,
-      onClick: () => o.setShowBlockedResults(f, !N),
+      onClick: () => u.setShowBlockedResults(f, !N),
       children: [(0, a.jsx)("div", {
         className: y.resultsBlockedImage
       }), (0, a.jsx)("div", {
@@ -167,8 +167,8 @@ function P(e) {
   let {
     channel: s,
     results: r,
-    highlighter: u,
-    startIndex: o,
+    highlighter: o,
+    startIndex: u,
     resultRefs: d,
     totalResults: c,
     scrollTo: E,
@@ -188,7 +188,7 @@ function P(e) {
     content: F,
     embeds: []
   }, {
-    postProcessor: u
+    postProcessor: o
   }), z = l.useRef(null), [K, Z] = l.useState(!1);
   l.useEffect(() => {
     let e = z.current;
@@ -236,7 +236,7 @@ function P(e) {
           }) : null]
         })
       }), r.map((e, t) => {
-        let n = o + t;
+        let n = u + t;
         return (0, a.jsx)(j.default, {
           ref: e => d.current[n] = e,
           totalResults: c,

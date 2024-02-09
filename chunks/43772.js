@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return W
+    return K
   }
 }), n("702976"), n("222007");
 var s = n("37983"),
@@ -38,8 +38,8 @@ var s = n("37983"),
   U = n("860959"),
   G = n("49111"),
   B = n("492397"),
-  y = n("56235"),
-  b = n("53452"),
+  b = n("56235"),
+  y = n("53452"),
   F = n("782340"),
   V = n("926622");
 o.default.initialize();
@@ -65,7 +65,7 @@ class Y extends a.PureComponent {
         invite_code: n
       }, {
         flush: !0
-      }), (0, A.trackAppUIViewed)("invite"), !b.IS_APP_COMPATIBLE_BROWSER) {
+      }), (0, A.trackAppUIViewed)("invite"), !y.IS_APP_COMPATIBLE_BROWSER) {
       let e = this.getInviteKey();
       D.default.launch("discord://" + G.Routes.INVITE(e), () => void 0)
     }
@@ -105,7 +105,7 @@ class Y extends a.PureComponent {
       let {
         channel: e
       } = t;
-      null != e && ((0, m.setNewUser)(y.NewUserTypes.INVITE_UNCLAIMED), null != t.guild ? a(G.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(t, a))
+      null != e && ((0, m.setNewUser)(b.NewUserTypes.INVITE_UNCLAIMED), null != t.guild ? a(G.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(t, a))
     }
   }
   getInviteKey() {
@@ -253,7 +253,7 @@ class Y extends a.PureComponent {
       case G.InviteStates.RESOLVED:
         var i;
         if (n && (0, L.hasFlag)(null !== (i = e.flags) && void 0 !== i ? i : 0, r.GuildInviteFlags.IS_GUEST_INVITE)) return c.default.openApp(e.code), d.default.set(T.GUEST_INVITE_KEY, e.code), this.renderAppOpened(() => a(G.Routes.APP));
-        if (n || !b.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
+        if (n || !y.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
         else if (this.getMode() === H.LOGIN) return (0, s.jsx)(j.default, {
           invite: e,
           transitionTo: a,
@@ -331,7 +331,7 @@ class Y extends a.PureComponent {
           invite: a
         } = t.props,
         l = null != a.stage_instance || null != a.guild_scheduled_event;
-      return b.IS_APP_COMPATIBLE_BROWSER ? (0, s.jsx)(R.Button, {
+      return y.IS_APP_COMPATIBLE_BROWSER ? (0, s.jsx)(R.Button, {
         className: l ? V.marginTop20 : V.marginTop40,
         onClick: n,
         color: l ? R.Button.Colors.GREEN : R.Button.Colors.BRAND,
@@ -342,7 +342,7 @@ class Y extends a.PureComponent {
     }
   }
 }
-var W = o.default.connectStores([v.default, C.default, S.default, h.default, E.default], e => {
+var K = o.default.connectStores([v.default, C.default, S.default, h.default, E.default], e => {
   var t;
   let {
     inviteKey: n

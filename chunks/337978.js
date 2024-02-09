@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
 var s = n("37983");
 n("884691");
 var i = n("77078"),
-  r = n("834897"),
-  l = n("85336"),
-  a = n("425480"),
+  a = n("834897"),
+  r = n("85336"),
+  l = n("425480"),
   u = n("504898"),
   o = n("551290");
 
@@ -17,8 +17,8 @@ function d(e) {
   let {
     step: t,
     onClose: n
-  } = e, d = (0, r.default)(a.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
-  return t === l.Step.BENEFITS || t === l.Step.CONFIRM ? null : (0, s.jsxs)("div", {
+  } = e, d = (0, a.default)(l.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
+  return t === r.Step.BENEFITS || t === r.Step.CONFIRM ? null : (0, s.jsxs)("div", {
     className: u.headerContainer,
     children: [!d && (0, s.jsx)("div", {
       className: u.headerImageContainer,

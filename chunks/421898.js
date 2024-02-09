@@ -1,27 +1,27 @@
-t = e.nmd(t), ! function() {
+e = A.nmd(e), ! function() {
   "use strict";
-  var n = {}.hasOwnProperty;
+  var t = {}.hasOwnProperty;
 
-  function e() {
-    for (var t = "", u = 0; u < arguments.length; u++) {
-      var o = arguments[u];
-      o && (t = r(t, function(t) {
-        if ("string" == typeof t || "number" == typeof t) return t;
-        if ("object" != typeof t) return "";
-        if (Array.isArray(t)) return e.apply(null, t);
-        if (t.toString !== Object.prototype.toString && !t.toString.toString().includes("[native code]")) return t.toString();
-        var u = "";
-        for (var o in t) n.call(t, o) && t[o] && (u = r(u, o));
-        return u
-      }(o)))
+  function A() {
+    for (var e = "", l = 0; l < arguments.length; l++) {
+      var n = arguments[l];
+      n && (e = a(e, function(e) {
+        if ("string" == typeof e || "number" == typeof e) return e;
+        if ("object" != typeof e) return "";
+        if (Array.isArray(e)) return A.apply(null, e);
+        if (e.toString !== Object.prototype.toString && !e.toString.toString().includes("[native code]")) return e.toString();
+        var l = "";
+        for (var n in e) t.call(e, n) && e[n] && (l = a(l, n));
+        return l
+      }(n)))
     }
-    return t
+    return e
   }
 
-  function r(t, n) {
-    return n ? t ? t + " " + n : t + n : t
+  function a(e, t) {
+    return t ? e ? e + " " + t : e + t : e
   }
-  void 0 !== t && t.exports ? (e.default = e, t.exports = e) : "function" == typeof define && "object" == typeof define.amd && define.amd ? define("classnames", [], function() {
-    return e
-  }) : window.classNames = e
+  void 0 !== e && e.exports ? (A.default = A, e.exports = A) : "function" == typeof define && "object" == typeof define.amd && define.amd ? define("classnames", [], function() {
+    return A
+  }) : window.classNames = A
 }()

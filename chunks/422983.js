@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   MinusIcon: function() {
-    return i
+    return a
   }
 });
 var s = n("37983");
 n("884691");
 var r = n("669491"),
   l = n("82169");
-let i = e => {
+let a = e => {
   let {
     width: t = 24,
     height: n = 24,
-    color: i = r.default.colors.INTERACTIVE_NORMAL,
-    colorClass: a = "",
+    color: a = r.default.colors.INTERACTIVE_NORMAL,
+    colorClass: i = "",
     ...o
   } = e;
   return (0, s.jsx)("svg", {
@@ -24,11 +24,11 @@ let i = e => {
     fill: "none",
     viewBox: "0 0 24 24",
     children: (0, s.jsx)("path", {
-      fill: "string" == typeof i ? i : i.css,
+      fill: "string" == typeof a ? a : a.css,
       fillRule: "evenodd",
       d: "M22 12a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h18a1 1 0 0 1 1 1Z",
       clipRule: "evenodd",
-      className: a
+      className: i
     })
   })
 }

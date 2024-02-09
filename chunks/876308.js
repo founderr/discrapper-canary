@@ -23,9 +23,9 @@ var l = n("37983"),
   v = n("49111"),
   I = n("782340"),
   S = n("447946");
-let _ = a.lazy(() => n.el("403130").then(n.bind(n, "403130")));
+let x = a.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
-function x(e) {
+function _(e) {
   let {
     played: t,
     duration: n,
@@ -146,7 +146,7 @@ var N = a.memo(function(e) {
   let eh = z ? f.default : h.default,
     ep = z ? I.default.Messages.PAUSE : I.default.Messages.PLAY;
   M = "Safari" === platform.name ? (0, l.jsx)(a.Suspense, {
-    children: (0, l.jsx)(_, {
+    children: (0, l.jsx)(x, {
       ref: k,
       className: S.audioElement,
       src: A,
@@ -210,7 +210,7 @@ var N = a.memo(function(e) {
       onDrag: em,
       onDragStart: ed,
       onDragEnd: ec
-    }), (0, l.jsx)(x, {
+    }), (0, l.jsx)(_, {
       played: X,
       currentTime: V,
       duration: B

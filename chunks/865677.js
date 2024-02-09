@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("42203"),
   h = n("86878"),
   E = n("525065"),
-  g = n("305961"),
-  S = n("686470"),
+  S = n("305961"),
+  g = n("686470"),
   C = n("957255"),
   T = n("27618"),
   v = n("18494"),
@@ -54,31 +54,31 @@ function F(e) {
     isEmbedded: W = !1
   } = e, {
     analyticsLocations: Y
-  } = (0, c.default)(), [z, J] = i.useState(!1), Z = (0, L.default)({
+  } = (0, c.default)(), [z, J] = i.useState(!1), q = (0, L.default)({
     channelId: K,
     userId: V.id,
     activity: t
-  }), q = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), X = (0, a.useStateFromStores)([S.default, p.default, A.default, h.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, x.isLaunchable)({
-    LibraryApplicationStore: S.default,
+  }), Z = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), Q = (0, a.useStateFromStores)([g.default, p.default, A.default, h.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, x.isLaunchable)({
+    LibraryApplicationStore: g.default,
     LaunchableGameStore: p.default,
     DispatchApplicationStore: A.default,
     ConnectedAppsStore: h.default,
     applicationId: t.application_id
-  })), Q = (0, a.useStateFromStores)([O.default], () => Array.from(O.default.getSelfEmbeddedActivities().values()).some(e => {
+  })), X = (0, a.useStateFromStores)([O.default], () => Array.from(O.default.getSelfEmbeddedActivities().values()).some(e => {
     let {
       applicationId: n,
       channelId: l
     } = e;
-    return n === (null == t ? void 0 : t.application_id) && l === Z
-  })), $ = (0, a.useStateFromStores)([y.default], () => null != t && null != t.application_id && y.default.getState(t.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, a.useStateFromStores)([m.default, g.default, E.default, T.default, v.default, _.default, C.default], () => (0, M.default)({
+    return n === (null == t ? void 0 : t.application_id) && l === q
+  })), $ = (0, a.useStateFromStores)([y.default], () => null != t && null != t.application_id && y.default.getState(t.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, a.useStateFromStores)([m.default, S.default, E.default, T.default, v.default, _.default, C.default], () => (0, M.default)({
     user: V,
     activity: t,
     application: ee,
-    channelId: Z,
-    currentUser: q,
+    channelId: q,
+    currentUser: Z,
     isEmbedded: W,
     ChannelStore: m.default,
-    GuildStore: g.default,
+    GuildStore: S.default,
     GuildMemberCountStore: E.default,
     RelationshipStore: T.default,
     SelectedChannelStore: v.default,
@@ -86,9 +86,9 @@ function F(e) {
     PermissionStore: C.default
   })), en = (0, d.useAnalyticsContext)(), el = !N.isPlatformEmbedded, ei = (0, P.default)(t, k.ActivityFlags.JOIN) || W;
   if (null == t || !ei || null == t.application_id) return null;
-  let ea = !F && (el || X) && !z && !Q && (!W || et),
+  let ea = !F && (el || Q) && !z && !X && (!W || et),
     es = null;
-  F ? es = w.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : !el && !X && (es = w.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
+  F ? es = w.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : !el && !Q && (es = w.default.Messages.USER_ACTIVITY_NOT_DETECTED.format({
     name: t.name
   }));
   let er = async (e, t) => {
@@ -112,11 +112,11 @@ function F(e) {
   }, eo = async () => {
     let e = !1;
     if (W) {
-      if (!et || null == Z || null == t.application_id) return;
+      if (!et || null == q || null == t.application_id) return;
       e = await (0, R.default)({
         applicationId: t.application_id,
         currentEmbeddedApplication: n,
-        activityChannelId: Z,
+        activityChannelId: q,
         locationObject: en.location,
         embeddedActivitiesManager: j.default,
         analyticsLocations: Y

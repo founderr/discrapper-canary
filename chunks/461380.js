@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
-    return C
+    return _
   }
 });
 var i = n("37983");
@@ -21,44 +21,44 @@ let h = {
     DOWN: f.directionDown,
     LEFT: f.directionLeft
   },
-  p = e => {
+  p = t => {
     let {
-      direction: t = h.DOWN,
+      direction: e = h.DOWN,
       width: n = 24,
       height: r = 24,
       color: p = "currentColor",
-      transition: C = f.transition,
+      transition: _ = f.transition,
       className: v,
-      foreground: E,
-      expanded: I,
+      foreground: C,
+      expanded: E,
       ...g
-    } = e, {
-      enabled: _
-    } = (0, c.useRedesignIconContext)(), S = t;
-    if (!0 === I ? S = h.DOWN : !1 === I && (S = h.RIGHT), _) {
-      let e = {
+    } = t, {
+      enabled: I
+    } = (0, c.useRedesignIconContext)(), S = e;
+    if (!0 === E ? S = h.DOWN : !1 === E && (S = h.RIGHT), I) {
+      let t = {
         [h.UP]: u.ChevronSmallUpIcon,
         [h.DOWN]: s.ChevronSmallDownIcon,
         [h.LEFT]: a.ChevronSmallLeftIcon,
         [h.RIGHT]: o.ChevronSmallRightIcon
       } [S];
-      return (0, i.jsx)(e, {
+      return (0, i.jsx)(t, {
         ...g,
         className: v,
         width: n,
         height: r,
         color: p,
-        colorClass: E
+        colorClass: C
       })
     }
     return (0, i.jsx)("svg", {
-      className: l(v, C, S),
+      className: l(v, _, S),
       width: n,
       height: r,
       viewBox: "0 0 24 24",
       ...(0, d.default)(g),
       children: (0, i.jsx)("path", {
-        className: E,
+        className: C,
         fill: "none",
         stroke: p,
         strokeWidth: "2",
@@ -70,4 +70,4 @@ let h = {
     })
   };
 p.Directions = h;
-var C = p
+var _ = p

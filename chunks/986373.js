@@ -1,70 +1,70 @@
 "use strict";
 n.r(t), n.d(t, {
   useCanFavoriteChannel: function() {
-    return E
+    return _
   },
   useFavorite: function() {
-    return h
+    return E
   },
   useFavoritesCategories: function() {
-    return C
+    return T
   },
   useFavoritesGuildSelected: function() {
-    return p
+    return S
   },
   useFavoriteAdded: function() {
-    return _
+    return h
   }
 }), n("424973"), n("222007");
-var i = n("884691"),
-  a = n("298386"),
-  l = n("446674");
+var a = n("884691"),
+  l = n("298386"),
+  i = n("446674");
 n("42203");
-var r = n("923959"),
-  s = n("162771"),
-  u = n("697218"),
-  o = n("379881"),
-  d = n("498139"),
-  c = n("136569"),
-  f = n("49111");
+var u = n("923959"),
+  r = n("162771"),
+  s = n("697218"),
+  d = n("379881"),
+  o = n("498139"),
+  f = n("136569"),
+  c = n("49111");
 
-function E(e) {
+function _(e) {
   let {
     favoritesEnabled: t,
     hasStaffPrivileges: n
-  } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), i = (0, l.useStateFromStores)([o.default], () => o.default.isFavorite(e.id)), a = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()), r = e.isDM() || e.isThread(), s = !r || n && (null == a ? void 0 : a.isStaff()) === !0;
-  return t && !__OVERLAY__ && !i && s
+  } = (0, o.useFavoritesServerExperiment)("useCanFavoriteChannel"), a = (0, i.useStateFromStores)([d.default], () => d.default.isFavorite(e.id)), l = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()), u = e.isDM() || e.isThread(), r = !u || n && (null == l ? void 0 : l.isStaff()) === !0;
+  return t && !__OVERLAY__ && !a && r
 }
 
-function h(e) {
-  let t = (0, l.useStateFromStores)([o.default], () => o.default.getFavorite(e));
+function E(e) {
+  let t = (0, i.useStateFromStores)([d.default], () => d.default.getFavorite(e));
   return t
 }
 
-function C() {
-  let e = (0, l.useStateFromStores)([r.default], () => r.default.getChannels(f.FAVORITES))[a.ChannelTypes.GUILD_CATEGORY];
+function T() {
+  let e = (0, i.useStateFromStores)([u.default], () => u.default.getChannels(c.FAVORITES))[l.ChannelTypes.GUILD_CATEGORY];
   return e.map(e => ({
     id: "null" === e.channel.id ? null : e.channel.id,
     name: e.channel.name
   }))
 }
 
-function p() {
-  let e = (0, l.useStateFromStores)([s.default], () => s.default.getGuildId());
-  return e === f.FAVORITES
+function S() {
+  let e = (0, i.useStateFromStores)([r.default], () => r.default.getGuildId());
+  return e === c.FAVORITES
 }
 
-function _() {
+function h() {
   let {
     isFavoritesPerk: e
-  } = (0, d.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, c.useFavoritesTooltipStore)(), n = i.useCallback(() => {
+  } = (0, o.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, f.useFavoritesTooltipStore)(), n = a.useCallback(() => {
     e && t.notifyFavoriteAdded()
-  }, [t, e]), a = i.useCallback(() => {
+  }, [t, e]), l = a.useCallback(() => {
     e && t.clearFavoriteAdded()
   }, [t, e]);
   return {
     favoriteAdded: t.favoriteAdded,
     notifyFavoriteAdded: n,
-    clearFavoriteAdded: a
+    clearFavoriteAdded: l
   }
 }

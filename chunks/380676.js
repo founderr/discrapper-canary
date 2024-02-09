@@ -18,13 +18,13 @@ var i = n("37983"),
   p = n("596368"),
   E = n("227439"),
   _ = n("697218"),
-  C = n("170113"),
-  S = n("780571"),
+  S = n("170113"),
+  C = n("780571"),
   I = n("377502"),
   g = n("103603"),
   A = n("736393"),
-  v = n("170213"),
-  m = n("49111"),
+  m = n("170213"),
+  v = n("49111"),
   T = n("719347"),
   y = n("782340"),
   w = n("161730");
@@ -40,20 +40,20 @@ let L = (e, t) => {
       if (!((0, u.isImageFile)(e.filename) || (0, u.isVideoFile)(e.filename))) return s;
       return {
         ...s,
-        width: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== l ? l : v.DEFAULT_MEDIA_MAX_WIDTH,
-        height: null !== (a = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== a ? a : v.DEFAULT_MEDIA_MAX_HEIGHT
+        width: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== l ? l : m.DEFAULT_MEDIA_MAX_WIDTH,
+        height: null !== (a = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== a ? a : m.DEFAULT_MEDIA_MAX_HEIGHT
       }
     });
     return (0, c.createMessageRecord)({
       ...(0, d.default)({
         nonce: e.id,
         content: e.content,
-        type: m.MessageTypes.DEFAULT,
+        type: v.MessageTypes.DEFAULT,
         channelId: ""
       }),
       timestamp: new Date(s.default.extractTimestamp(e.id)).toISOString(),
       attachments: n,
-      state: m.MessageStates.SENT
+      state: v.MessageStates.SENT
     })
   },
   N = e => {
@@ -64,23 +64,23 @@ let L = (e, t) => {
     } = t;
     if (0 === n.length) return null;
     let l = (e, t, n) => {
-        let l = v.DEFAULT_MEDIA_MAX_WIDTH,
-          s = v.DEFAULT_MEDIA_MAX_HEIGHT;
+        let l = m.DEFAULT_MEDIA_MAX_WIDTH,
+          s = m.DEFAULT_MEDIA_MAX_HEIGHT;
         if (null != t.width && null != t.height) {
           let e = (0, g.getRatio)({
             width: t.width,
             height: t.height,
-            maxWidth: v.DEFAULT_MEDIA_MAX_WIDTH,
-            maxHeight: v.DEFAULT_MEDIA_MAX_HEIGHT
+            maxWidth: m.DEFAULT_MEDIA_MAX_WIDTH,
+            maxHeight: m.DEFAULT_MEDIA_MAX_HEIGHT
           });
-          l = (0, a.clamp)(Math.round(t.width * e), 0, v.DEFAULT_MEDIA_MAX_WIDTH), s = (0, a.clamp)(Math.round(t.height * e), 0, v.DEFAULT_MEDIA_MAX_HEIGHT)
+          l = (0, a.clamp)(Math.round(t.width * e), 0, m.DEFAULT_MEDIA_MAX_WIDTH), s = (0, a.clamp)(Math.round(t.height * e), 0, m.DEFAULT_MEDIA_MAX_HEIGHT)
         }
         return (0, i.jsx)("div", {
           style: {
             width: n ? l : "100%",
             height: n ? s : "100%"
           },
-          children: (0, i.jsx)(C.default, {
+          children: (0, i.jsx)(S.default, {
             className: e.className,
             forceExternal: !1,
             src: t.url,
@@ -90,7 +90,7 @@ let L = (e, t) => {
             volume: e.volume,
             autoPlay: !1,
             autoMute: !1,
-            type: C.default.Types.VIDEO,
+            type: S.default.Types.VIDEO,
             mediaLayoutType: e.mediaLayoutType,
             fileName: t.filename,
             fileSize: null == t.size ? void 0 : t.size.toString(),
@@ -137,7 +137,7 @@ let L = (e, t) => {
     var t;
     let {
       flaggedContent: n
-    } = e, a = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), [s, c] = l.useState({}), [d, f] = l.useState(!0), C = n[0], I = L(C, s), g = (0, h.default)(I, {
+    } = e, a = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), [s, c] = l.useState({}), [d, f] = l.useState(!0), S = n[0], I = L(S, s), g = (0, h.default)(I, {
       hideSimpleEmbedContent: !1,
       allowList: !1,
       allowHeading: !1,
@@ -145,7 +145,7 @@ let L = (e, t) => {
       previewLinkTarget: !1
     });
     return (l.useEffect(() => {
-      Promise.all(C.attachments.filter(e => {
+      Promise.all(S.attachments.filter(e => {
         let {
           filename: t
         } = e;
@@ -181,7 +181,7 @@ let L = (e, t) => {
           [e.id]: t
         })))
       })).finally(() => f(!1))
-    }, [C.attachments]), "" === I.content && 0 === I.attachments.length) ? null : (0, i.jsxs)("div", {
+    }, [S.attachments]), "" === I.content && 0 === I.attachments.length) ? null : (0, i.jsxs)("div", {
       className: w.classificationEvidenceContainer,
       children: [(0, i.jsx)(o.Text, {
         variant: "eyebrow",
@@ -189,7 +189,7 @@ let L = (e, t) => {
         children: y.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
       }), d ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsx)("div", {
         className: w.classificationEvidenceCard,
-        children: (0, i.jsx)(S.default, {
+        children: (0, i.jsx)(C.default, {
           compact: !1,
           childrenHeader: (0, E.default)({
             author: {

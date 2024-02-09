@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
     return l
   }
@@ -8,15 +8,15 @@ var i = n("37983");
 n("884691");
 var r = n("75196");
 
-function l(e) {
+function l(t) {
   let {
-    width: t = 104,
+    width: e = 104,
     height: n = 80,
     ...l
-  } = e;
+  } = t;
   return (0, i.jsxs)("svg", {
     ...(0, r.default)(l),
-    width: t,
+    width: e,
     height: n,
     viewBox: "0 0 104 80",
     fill: "none",

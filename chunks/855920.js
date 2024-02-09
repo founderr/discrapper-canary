@@ -75,7 +75,7 @@ let v = e => {
       isInteracting: n,
       tooltipPosition: s = h.EXPRESSION_TOOLTIP_PROPS.position,
       enableClick: c = !0
-    } = e, [E, v] = a.useState(String(Date.now())), [I, _] = a.useState(!1), x = function() {
+    } = e, [E, v] = a.useState(String(Date.now())), [I, x] = a.useState(!1), _ = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return (0, l.jsx)(d.default, {
         ...e,
@@ -91,7 +91,7 @@ let v = e => {
       ...h.EXPRESSION_TOOLTIP_PROPS,
       position: s,
       onTooltipShow: () => {
-        _(!0), c && (S({
+        x(!0), c && (S({
           emojiNode: t,
           isCustomEmoji: !0,
           nonce: N
@@ -108,18 +108,18 @@ let v = e => {
         },
         onClick: t => {
           var n;
-          _(!1), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
+          x(!1), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
           I && (m.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
             nonce: N
-          }), _(!1))
+          }), x(!1))
         },
         tag: "span",
         className: i(C.emojiContainer, {
           [C.emojiContainerClickable]: c
         }),
-        children: x(t)
+        children: _(t)
       })
     });
     return c ? (0, l.jsx)(o.Popout, {
@@ -128,7 +128,7 @@ let v = e => {
       onRequestClose: () => {
         m.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
           nonce: N
-        }), _(!1)
+        }), x(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,

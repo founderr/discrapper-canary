@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("65597"),
+  l = s("884691"),
+  n = s("65597"),
   i = s("77078"),
   r = s("817674"),
   o = s("957255"),
@@ -18,10 +18,10 @@ var a = s("37983"),
 function _(e) {
   let {
     guild: t
-  } = e, s = n.useId(), _ = (0, l.default)([o.default], () => null != t && o.default.can(u.Permissions.MANAGE_GUILD, t), [t]), T = t.hasFeature(u.GuildFeatures.COMMUNITY), [I, S] = n.useState(t.hasFeature(u.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), N = n.useCallback(async e => {
-    S(e), await (0, r.toggleModerationExperienceGuildFeature)(t, e)
+  } = e, s = l.useId(), _ = (0, n.default)([o.default], () => null != t && o.default.can(u.Permissions.MANAGE_GUILD, t), [t]), I = t.hasFeature(u.GuildFeatures.COMMUNITY), [f, T] = l.useState(t.hasFeature(u.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), S = l.useCallback(async e => {
+    T(e), await (0, r.toggleModerationExperienceGuildFeature)(t, e)
   }, [t]);
-  return T ? null : (0, a.jsxs)("div", {
+  return I ? null : (0, a.jsxs)("div", {
     className: E.bannerContainer,
     children: [(0, a.jsx)(d.default, {
       width: 64,
@@ -39,8 +39,8 @@ function _(e) {
       className: E.buttonContainer,
       children: (0, a.jsx)(i.Switch, {
         id: s,
-        checked: I,
-        onChange: N,
+        checked: f,
+        onChange: S,
         disabled: !_
       })
     })]

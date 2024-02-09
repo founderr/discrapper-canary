@@ -30,8 +30,8 @@ function m(e) {
     onClick: m,
     onSecondaryClick: h,
     onComponentMount: E,
-    asset: g,
-    markAsDismissed: S,
+    asset: S,
+    markAsDismissed: g,
     caretPosition: C = "caretTopCenter",
     buttonLayout: T = 0
   } = e;
@@ -41,7 +41,7 @@ function m(e) {
   let v = null != u;
   return (0, r.jsxs)("div", {
     className: d(t, p.upsellTooltipWrapper, p[C]),
-    children: [g, null == n ? null : (0, r.jsx)(c.Heading, {
+    children: [S, null == n ? null : (0, r.jsx)(c.Heading, {
       className: d(l, p.upsellTooltipHeader),
       variant: "heading-md/semibold",
       children: n
@@ -58,7 +58,7 @@ function m(e) {
       children: [v ? (0, r.jsx)(c.Button, {
         color: c.Button.Colors.BRAND,
         onClick: () => {
-          null == h || h(), null == S || S(f.ContentDismissActionType.SECONDARY)
+          null == h || h(), null == g || g(f.ContentDismissActionType.SECONDARY)
         },
         children: u
       }) : null, null == s ? null : (0, r.jsx)(c.Button, {
@@ -68,7 +68,7 @@ function m(e) {
         color: c.Button.Colors.BRAND,
         look: c.Button.Looks.INVERTED,
         onClick: e => {
-          m(e), null == S || S(f.ContentDismissActionType.PRIMARY)
+          m(e), null == g || g(f.ContentDismissActionType.PRIMARY)
         },
         children: s
       })]

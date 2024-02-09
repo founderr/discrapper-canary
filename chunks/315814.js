@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("433328"),
   h = n("599110"),
   E = n("49111"),
-  g = n("646718"),
-  S = n("782340"),
+  S = n("646718"),
+  g = n("782340"),
   C = n("537461"),
   T = i.memo(function(e) {
     let {
@@ -33,7 +33,7 @@ var l = n("37983"),
       location: "ec41f5_1"
     }, {
       autoTrackExposure: !0
-    }), _ = I ? S.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : v ? S.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : S.default.Messages.SHARE_NITRO_TOOLTIP, y = I ? S.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [A, N] = i.useState(!1), [x, O] = i.useState(!1), R = (0, r.default)(null, () => O(!1)), {
+    }), _ = I ? g.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : v ? g.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : g.default.Messages.SHARE_NITRO_TOOLTIP, y = I ? g.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [A, N] = i.useState(!1), [x, O] = i.useState(!1), R = (0, r.default)(null, () => O(!1)), {
       analyticsLocations: M
     } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), L = T.isDM() && void 0 !== T.recipients ? T.recipients[0] : null, P = (0, o.default)();
     return t ? null : (0, l.jsxs)("div", {
@@ -53,7 +53,7 @@ var l = n("37983"),
           onMouseEnter: () => {
             !x && !A && (N(!0), h.default.track(E.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
               location_stack: M,
-              step: g.ReferralTrialsAnalyticSteps.BADGE_TOOLTIP_VIEWED,
+              step: S.ReferralTrialsAnalyticSteps.BADGE_TOOLTIP_VIEWED,
               other_user_id: Number(L)
             }))
           },
@@ -69,7 +69,7 @@ var l = n("37983"),
             onClick: () => {
               O(e => !e), h.default.track(E.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                 location_stack: M,
-                step: g.ReferralTrialsAnalyticSteps.BADGE_CLICKED,
+                step: S.ReferralTrialsAnalyticSteps.BADGE_CLICKED,
                 other_user_id: Number(L)
               })
             },

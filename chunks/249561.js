@@ -1,64 +1,64 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return A
+    return C
   }
-}), n("702976"), n("222007");
-var s = n("37983"),
-  a = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
-  r = n("77078"),
-  d = n("828986"),
-  u = n("819689"),
-  o = n("679653"),
-  c = n("390236"),
-  f = n("377114"),
-  E = n("699473"),
-  g = n("27618"),
-  m = n("697218"),
-  M = n("822332"),
-  h = n("568734"),
-  _ = n("870190"),
-  N = n("49111"),
-  p = n("782340"),
-  S = n("834476");
-class I extends a.PureComponent {
+}), s("702976"), s("222007");
+var a = s("37983"),
+  n = s("884691"),
+  l = s("414456"),
+  i = s.n(l),
+  d = s("77078"),
+  r = s("828986"),
+  u = s("819689"),
+  o = s("679653"),
+  c = s("390236"),
+  f = s("377114"),
+  E = s("699473"),
+  g = s("27618"),
+  M = s("697218"),
+  _ = s("822332"),
+  h = s("568734"),
+  m = s("870190"),
+  N = s("49111"),
+  S = s("782340"),
+  A = s("834476");
+class I extends n.PureComponent {
   render() {
     let e, t;
     let {
-      report: n
+      report: s
     } = this.state, {
-      channel: a,
+      channel: n,
       message: l,
       showContextMenuHint: i,
-      ...d
-    } = this.props, u = a.type === N.ChannelTypes.GUILD_ANNOUNCEMENT && (0, h.hasFlag)(l.flags, N.MessageFlags.CROSSPOSTED);
-    return i && (e = (0, s.jsx)(M.default, {
-      className: S.spacingTop,
-      children: p.default.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format()
-    })), (0, _.canDeleteAndReportMessage)(l) && (t = (0, s.jsx)(r.FormSwitch, {
-      value: n,
+      ...r
+    } = this.props, u = n.type === N.ChannelTypes.GUILD_ANNOUNCEMENT && (0, h.hasFlag)(l.flags, N.MessageFlags.CROSSPOSTED);
+    return i && (e = (0, a.jsx)(_.default, {
+      className: A.spacingTop,
+      children: S.default.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format()
+    })), (0, m.canDeleteAndReportMessage)(l) && (t = (0, a.jsx)(d.FormSwitch, {
+      value: s,
       onChange: this.handleToggleReport,
       hideBorder: !0,
-      className: S.spacingTop,
-      children: p.default.Messages.DELETE_MESSAGE_REPORT
-    })), (0, s.jsx)(c.default.Provider, {
-      value: a.guild_id,
-      children: (0, s.jsxs)(r.ConfirmModal, {
-        header: u ? p.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER : p.default.Messages.DELETE_MESSAGE_TITLE,
-        confirmText: p.default.Messages.DELETE,
-        cancelText: p.default.Messages.CANCEL,
+      className: A.spacingTop,
+      children: S.default.Messages.DELETE_MESSAGE_REPORT
+    })), (0, a.jsx)(c.default.Provider, {
+      value: n.guild_id,
+      children: (0, a.jsxs)(d.ConfirmModal, {
+        header: u ? S.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER : S.default.Messages.DELETE_MESSAGE_TITLE,
+        confirmText: S.default.Messages.DELETE,
+        cancelText: S.default.Messages.CANCEL,
         onConfirm: this.handleDelete,
-        ...d,
-        children: [(0, s.jsx)(r.Text, {
+        ...r,
+        children: [(0, a.jsx)(d.Text, {
           variant: "text-md/normal",
-          className: S.spacing,
-          children: u ? p.default.Messages.DELETE_FOLLOWED_NEWS_BODY : p.default.Messages.DELETE_MESSAGE_BODY
-        }), (0, s.jsx)("div", {
-          className: S.message,
-          children: (0, s.jsx)(E.default, {
-            channel: a,
+          className: A.spacing,
+          children: u ? S.default.Messages.DELETE_FOLLOWED_NEWS_BODY : S.default.Messages.DELETE_MESSAGE_BODY
+        }), (0, a.jsx)("div", {
+          className: A.message,
+          children: (0, a.jsx)(E.default, {
+            channel: n,
             message: l,
             disableInteraction: !0
           })
@@ -74,9 +74,9 @@ class I extends a.PureComponent {
         report: e
       } = this.state, {
         channel: t,
-        message: n
+        message: s
       } = this.props;
-      e ? (0, f.showReportModalForMessage)(n, () => u.default.deleteMessage(t.id, n.id)) : u.default.deleteMessage(t.id, n.id)
+      e ? (0, f.showReportModalForMessage)(s, () => u.default.deleteMessage(t.id, s.id)) : u.default.deleteMessage(t.id, s.id)
     }, this.handleToggleReport = e => {
       this.setState({
         report: e
@@ -84,29 +84,29 @@ class I extends a.PureComponent {
     }
   }
 }
-var A = {
+var C = {
   confirmPin: function(e, t) {
-    (0, r.openModal)(n => {
-      let a;
-      let l = (0, o.computeChannelName)(e, m.default, g.default);
-      return a = e.isPrivate() ? p.default.Messages.PIN_MESSAGE_BODY_PRIVATE_CHANNEL : p.default.Messages.PIN_MESSAGE_BODY.format({
+    (0, d.openModal)(s => {
+      let n;
+      let l = (0, o.computeChannelName)(e, M.default, g.default);
+      return n = e.isPrivate() ? S.default.Messages.PIN_MESSAGE_BODY_PRIVATE_CHANNEL : S.default.Messages.PIN_MESSAGE_BODY.format({
         channelName: l
-      }), (0, s.jsx)(c.default.Provider, {
+      }), (0, a.jsx)(c.default.Provider, {
         value: e.guild_id,
-        children: (0, s.jsxs)(r.ConfirmModal, {
-          header: p.default.Messages.PIN_MESSAGE_TITLE,
-          confirmText: p.default.Messages.PIN_CONFIRM,
-          cancelText: p.default.Messages.CANCEL,
-          confirmButtonColor: r.Button.Colors.BRAND,
-          onConfirm: () => d.default.pinMessage(e, t.id),
-          ...n,
-          children: [(0, s.jsx)(r.Text, {
+        children: (0, a.jsxs)(d.ConfirmModal, {
+          header: S.default.Messages.PIN_MESSAGE_TITLE,
+          confirmText: S.default.Messages.PIN_CONFIRM,
+          cancelText: S.default.Messages.CANCEL,
+          confirmButtonColor: d.Button.Colors.BRAND,
+          onConfirm: () => r.default.pinMessage(e, t.id),
+          ...s,
+          children: [(0, a.jsx)(d.Text, {
             variant: "text-md/normal",
-            className: S.spacing,
-            children: a
-          }), (0, s.jsx)("div", {
-            className: S.message,
-            children: (0, s.jsx)(E.default, {
+            className: A.spacing,
+            children: n
+          }), (0, a.jsx)("div", {
+            className: A.message,
+            children: (0, a.jsx)(E.default, {
               channel: e,
               message: t,
               animateAvatar: !1,
@@ -118,54 +118,54 @@ var A = {
     })
   },
   confirmUnpin: function(e, t) {
-    (0, r.openModal)(n => (0, s.jsx)(c.default.Provider, {
+    (0, d.openModal)(s => (0, a.jsx)(c.default.Provider, {
       value: e.guild_id,
-      children: (0, s.jsxs)(r.ConfirmModal, {
-        header: p.default.Messages.UNPIN_MESSAGE_TITLE,
-        confirmText: p.default.Messages.UNPIN_CONFIRM,
-        cancelText: p.default.Messages.CANCEL,
-        onConfirm: () => d.default.unpinMessage(e, t.id),
-        ...n,
-        children: [(0, s.jsx)(r.Text, {
+      children: (0, a.jsxs)(d.ConfirmModal, {
+        header: S.default.Messages.UNPIN_MESSAGE_TITLE,
+        confirmText: S.default.Messages.UNPIN_CONFIRM,
+        cancelText: S.default.Messages.CANCEL,
+        onConfirm: () => r.default.unpinMessage(e, t.id),
+        ...s,
+        children: [(0, a.jsx)(d.Text, {
           variant: "text-md/normal",
-          className: S.spacing,
-          children: p.default.Messages.UNPIN_MESSAGE_BODY
-        }), (0, s.jsx)("div", {
-          className: i(S.message, S.spacing),
-          children: (0, s.jsx)(E.default, {
+          className: A.spacing,
+          children: S.default.Messages.UNPIN_MESSAGE_BODY
+        }), (0, a.jsx)("div", {
+          className: i(A.message, A.spacing),
+          children: (0, a.jsx)(E.default, {
             channel: e,
             message: t,
             disableInteraction: !0
           })
-        }), (0, s.jsx)(M.default, {
-          children: p.default.Messages.UNPIN_MESSAGE_CONTEXT_MENU_HINT.format()
+        }), (0, a.jsx)(_.default, {
+          children: S.default.Messages.UNPIN_MESSAGE_CONTEXT_MENU_HINT.format()
         })]
       })
     }))
   },
   confirmDelete: function(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    (0, r.openModal)(a => (0, s.jsx)(I, {
+    let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    (0, d.openModal)(n => (0, a.jsx)(I, {
       channel: e,
       message: t,
-      showContextMenuHint: n,
-      ...a
+      showContextMenuHint: s,
+      ...n
     }))
   },
-  confirmEdit: function(e, t, n) {
-    (0, r.openModal)(a => (0, s.jsx)(r.ConfirmModal, {
-      header: p.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-      confirmText: p.default.Messages.CONFIRM,
-      cancelText: p.default.Messages.CANCEL,
-      confirmButtonColor: r.Button.Colors.BRAND,
+  confirmEdit: function(e, t, s) {
+    (0, d.openModal)(n => (0, a.jsx)(d.ConfirmModal, {
+      header: S.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
+      confirmText: S.default.Messages.CONFIRM,
+      cancelText: S.default.Messages.CANCEL,
+      confirmButtonColor: d.Button.Colors.BRAND,
       onConfirm: () => u.default.editMessage(e, t, {
-        content: n
+        content: s
       }),
-      ...a,
-      children: (0, s.jsx)(r.Text, {
+      ...n,
+      children: (0, a.jsx)(d.Text, {
         variant: "text-md/normal",
-        className: S.spacing,
-        children: p.default.Messages.EDIT_FOLLOWED_NEWS_BODY
+        className: A.spacing,
+        children: S.default.Messages.EDIT_FOLLOWED_NEWS_BODY
       })
     }))
   }

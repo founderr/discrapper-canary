@@ -1,6 +1,6 @@
 var r = n("437083"),
   i = n("329252"),
   u = n("725502");
-t.exports = function(t) {
-  return (u(t) ? r : i)(t)
+e.exports = function(e) {
+  return (u(e) ? r : i)(e)
 }

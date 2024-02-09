@@ -1,34 +1,34 @@
 "use strict";
-let n;
-r.r(t), r.d(t, {
+let l;
+n.r(t), n.d(t, {
   default: function() {
-    return _
+    return m
   }
 });
-var i = r("917351"),
-  u = r("446674"),
-  l = r("913144");
-let o = [],
-  a = !1;
-let s = o,
+var i = n("917351"),
+  a = n("446674"),
+  s = n("913144");
+let r = [],
+  o = !1;
+let u = r,
   d = {},
   c = null,
   f = e => {
-    s = (0, i.cloneDeep)(e);
+    u = (0, i.cloneDeep)(e);
     let t = {};
-    s.forEach(e => {
+    u.forEach(e => {
       t[e.id] = e
     }), d = t
   };
-class E extends u.default.Store {
+class p extends a.default.Store {
   get isFetching() {
-    return a
+    return o
   }
   get fetchError() {
-    return n
+    return l
   }
   get profileEffects() {
-    return s
+    return u
   }
   get tryItOutId() {
     return c
@@ -37,22 +37,22 @@ class E extends u.default.Store {
     return null != e ? d[e] : void 0
   }
 }
-E.displayName = "ProfileEffectStore";
-var _ = new E(l.default, {
+p.displayName = "ProfileEffectStore";
+var m = new p(s.default, {
   USER_PROFILE_EFFECTS_FETCH: () => {
-    a = !0
+    o = !0
   },
   USER_PROFILE_EFFECTS_FETCH_SUCCESS: e => {
     let {
       profileEffects: t
     } = e;
-    a = !1, f(0 === t.length ? o : t)
+    o = !1, f(0 === t.length ? r : t)
   },
   USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
     let {
       error: t
     } = e;
-    a = !1, n = t, f(o)
+    o = !1, l = t, f(r)
   },
   PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
     let {
@@ -61,6 +61,6 @@ var _ = new E(l.default, {
     c = t
   },
   LOGOUT: e => {
-    a = !1, f(o), c = null
+    o = !1, f(r), c = null
   }
 })

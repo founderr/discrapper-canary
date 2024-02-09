@@ -1,16 +1,16 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildSettingsRolesNotice: function() {
-    return C
+    return R
   },
   default: function() {
-    return O
+    return x
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("627445"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("627445"),
+  i = s.n(n),
   r = s("446674"),
   o = s("851387"),
   d = s("45299"),
@@ -18,76 +18,76 @@ var a = s("37983"),
   c = s("449008"),
   E = s("592407"),
   _ = s("766419"),
-  T = s("531493"),
-  I = s("900938"),
-  S = s("986654"),
-  N = s("482763"),
-  g = s("620296"),
-  f = s("500053"),
-  A = s("53948"),
-  L = s("49111");
+  I = s("531493"),
+  f = s("900938"),
+  T = s("986654"),
+  S = s("482763"),
+  m = s("620296"),
+  N = s("500053"),
+  g = s("53948"),
+  h = s("49111");
 
-function m(e) {
+function C(e) {
   E.default.selectRole(e)
 }
-let C = () => {
+let R = () => {
   let {
     guild: e
-  } = (0, r.useStateFromStoresObject)([I.default], () => I.default.getProps()), t = (0, r.useStateFromStores)([T.default], () => T.default.formState), s = (0, r.useStateFromStores)([T.default], () => T.default.errorMessage);
+  } = (0, r.useStateFromStoresObject)([f.default], () => f.default.getProps()), t = (0, r.useStateFromStores)([I.default], () => I.default.formState), s = (0, r.useStateFromStores)([I.default], () => I.default.errorMessage);
   return (0, a.jsx)(d.default, {
     errorMessage: s,
     onSave: () => {
       if (null == e) return;
       let {
         id: t
-      } = e, s = T.default.editedRoleIds.map(e => T.default.getRole(e)).filter(c.isNotNullish), a = T.default.getSortDeltas(), n = null, l = null;
-      T.default.hasRoleConfigurationChanges && (l = T.default.editedRoleIdsForConfigurations, n = T.default.getEditedRoleConnectionConfigurationsMap()), (0, _.saveRoleSettings)(t, s, a, l, n)
+      } = e, s = I.default.editedRoleIds.map(e => I.default.getRole(e)).filter(c.isNotNullish), a = I.default.getSortDeltas(), l = null, n = null;
+      I.default.hasRoleConfigurationChanges && (n = I.default.editedRoleIdsForConfigurations, l = I.default.getEditedRoleConnectionConfigurationsMap()), (0, _.saveRoleSettings)(t, s, a, n, l)
     },
-    submitting: t === L.FormStates.SUBMITTING,
+    submitting: t === h.FormStates.SUBMITTING,
     onReset: _.init
   })
 };
 
-function O(e) {
+function x(e) {
   let {
     refToScroller: t
   } = e, {
     guild: s,
-    roles: l
-  } = (0, r.useStateFromStoresObject)([T.default], () => ({
-    guild: T.default.guild,
-    roles: T.default.roles
+    roles: n
+  } = (0, r.useStateFromStoresObject)([I.default], () => ({
+    guild: I.default.guild,
+    roles: I.default.roles
   }), []);
   i(null != s, "Guild cannot be null here");
-  let d = n.useMemo(() => l.find(e => e.id === s.id), [l, s]);
+  let d = l.useMemo(() => n.find(e => e.id === s.id), [n, s]);
   i(null != d, "Guild must have an everyone role");
-  let c = n.useMemo(() => l.filter(e => e.id !== s.id), [l, s]),
-    E = (0, r.useStateFromStores)([I.default], () => I.default.getSelectedRoleId()),
-    [_, L] = n.useState(c.length > 0);
-  n.useEffect(() => {
-    L(_ || c.length > 0)
-  }, [_, c.length]), n.useEffect(() => {
+  let c = l.useMemo(() => n.filter(e => e.id !== s.id), [n, s]),
+    E = (0, r.useStateFromStores)([f.default], () => f.default.getSelectedRoleId()),
+    [_, h] = l.useState(c.length > 0);
+  l.useEffect(() => {
+    h(_ || c.length > 0)
+  }, [_, c.length]), l.useEffect(() => {
     let e = u.default.getMemberCount(s.id);
-    null != e && e <= S.MAX_PREFETCH_MEMBER_COUNT && o.default.requestMembers(s.id, "", 0, !1)
+    null != e && e <= T.MAX_PREFETCH_MEMBER_COUNT && o.default.requestMembers(s.id, "", 0, !1)
   }, []);
-  let [C, O] = n.useState(A.GuildSettingsRoleEditSections.DISPLAY);
-  return (n.useEffect(() => {
-    null == E && O(A.GuildSettingsRoleEditSections.DISPLAY)
-  }, [E]), null != E) ? (0, a.jsx)(N.default, {
+  let [R, x] = l.useState(g.GuildSettingsRoleEditSections.DISPLAY);
+  return (l.useEffect(() => {
+    null == E && x(g.GuildSettingsRoleEditSections.DISPLAY)
+  }, [E]), null != E) ? (0, a.jsx)(S.default, {
     editRoleId: E,
-    setEditRoleId: m,
-    selectedSection: C,
-    setSelectedSection: O
-  }) : _ ? (0, a.jsx)(f.default, {
-    setEditRoleId: m,
+    setEditRoleId: C,
+    selectedSection: R,
+    setSelectedSection: x
+  }) : _ ? (0, a.jsx)(N.default, {
+    setEditRoleId: C,
     guild: s,
     everyoneRole: d,
     otherRoles: c,
-    setSelectedSection: O,
+    setSelectedSection: x,
     refToScroller: t
-  }) : (0, a.jsx)(g.default, {
+  }) : (0, a.jsx)(m.default, {
     guild: s,
     everyoneRole: d,
-    setEditRoleId: m
+    setEditRoleId: C
   })
 }

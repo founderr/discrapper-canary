@@ -18,8 +18,8 @@ var l = n("917351"),
   m = n("389480"),
   h = n("846325"),
   E = n("397336");
-let g = [],
-  S = new s({
+let S = [],
+  g = new s({
     max: h.NUM_RECENTLY_HEARD_SOUNDS
   }),
   C = new u.default({
@@ -40,7 +40,7 @@ function T() {
   C.overwriteHistory((t = null != n ? n : {}, i.mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
-  }))), g)
+  }))), S)
 }
 
 function v() {
@@ -51,22 +51,22 @@ function v() {
 }
 class I extends r.default.PersistedStore {
   initialize(e) {
-    this.waitFor(c.default, p.default), (null == e ? void 0 : e.recentlyHeardCache) != null && S.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (g = e.playedEventsPendingFlush), this.syncWith([d.default], T)
+    this.waitFor(c.default, p.default), (null == e ? void 0 : e.recentlyHeardCache) != null && g.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (S = e.playedEventsPendingFlush), this.syncWith([d.default], T)
   }
   getState() {
     return {
-      recentlyHeardCache: S.dump(),
-      playedEventsPendingFlush: g
+      recentlyHeardCache: g.dump(),
+      playedEventsPendingFlush: S
     }
   }
   hasPendingUsage() {
-    return g.length > 0
+    return S.length > 0
   }
   get playedSoundHistory() {
     return C.usageHistory
   }
   get recentlyHeardSoundIds() {
-    return S.values()
+    return g.values()
   }
   get frecentlyPlayedSounds() {
     return C.frequently
@@ -82,7 +82,7 @@ var _ = new I(o.default, {
     if (!v()) return;
     let l = t.soundId.toString();
     n === m.LocalSoundTrigger.SOUNDBOARD && function(e) {
-      C.track(e), g.push({
+      C.track(e), S.push({
         key: e,
         timestamp: Date.now()
       }), C.compute()
@@ -110,7 +110,7 @@ var _ = new I(o.default, {
       }
       return !1
     }(i) && function(e) {
-      S.set(e, e)
+      g.set(e, e)
     }(i)
   },
   USER_SETTINGS_PROTO_UPDATE: function(e) {
@@ -120,6 +120,6 @@ var _ = new I(o.default, {
       },
       wasSaved: n
     } = e;
-    v() && t === E.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS && n && (g = [])
+    v() && t === E.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS && n && (S = [])
   }
 })

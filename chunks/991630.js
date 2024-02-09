@@ -27,11 +27,11 @@ function p(e) {
     onMouseOver: _,
     onMouseLeave: C,
     ...v
-  } = e, [A, E] = i.useState(!1), y = i.useCallback(() => {
+  } = e, [A, E] = i.useState(!1), I = i.useCallback(() => {
     E(!0), null == h || h()
-  }, [h]), I = i.useCallback(() => {
+  }, [h]), T = i.useCallback(() => {
     E(!1), null == g || g()
-  }, [g]), T = i.useCallback(() => {
+  }, [g]), y = i.useCallback(() => {
     E(!0), null == _ || _()
   }, [_]), M = i.useCallback(() => {
     E(!1), null == C || C()
@@ -54,9 +54,9 @@ function p(e) {
       [c.selectable]: f,
       [c.selected]: f && n
     }),
-    onFocus: y,
-    onBlur: I,
-    onMouseOver: T,
+    onFocus: I,
+    onBlur: T,
+    onMouseOver: y,
     onMouseLeave: M,
     children: (0, l.jsx)(r.default, {
       className: c.mask,

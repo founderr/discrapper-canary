@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   loadInviteSuggestions: function() {
-    return s
+    return a
   },
   searchInviteSuggestions: function() {
-    return l
+    return s
   }
 }), n("222007");
-var u = n("913144"),
-  I = n("777273");
+var l = n("913144"),
+  i = n("777273");
 
-function s(e) {
+function a(e) {
   let {
     omitUserIds: t,
     guild: n,
-    channel: s,
-    applicationId: l,
-    inviteTargetType: i
+    channel: a,
+    applicationId: s,
+    inviteTargetType: r
   } = e;
-  return (0, I.fetchUserAffinities)().then(() => {
-    u.default.dispatch({
+  return (0, i.fetchUserAffinities)().then(() => {
+    l.default.dispatch({
       type: "LOAD_INVITE_SUGGESTIONS",
       omitUserIds: null != t ? t : new Set,
       guild: n,
-      channel: s,
-      applicationId: l,
-      inviteTargetType: i
+      channel: a,
+      applicationId: s,
+      inviteTargetType: r
     })
   })
 }
 
-function l(e) {
-  u.default.dispatch({
+function s(e) {
+  l.default.dispatch({
     type: "INVITE_SUGGESTIONS_SEARCH",
     query: e
   })

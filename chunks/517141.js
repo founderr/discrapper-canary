@@ -12,8 +12,8 @@ var a = n("884691"),
   s = n("404118"),
   i = n("783480"),
   r = n("681736"),
-  u = n("578198"),
-  o = n("884351"),
+  o = n("578198"),
+  u = n("884351"),
   d = n("474643"),
   c = n("305961"),
   f = n("254490"),
@@ -28,7 +28,7 @@ function E(e) {
     threadSettings: l,
     privateThreadMode: s,
     location: r,
-    onThreadCreated: u,
+    onThreadCreated: o,
     useDefaultThreadName: c
   } = e, f = a.useCallback((e, t, n, a) => {
     i.default.uploadFiles({
@@ -38,7 +38,7 @@ function E(e) {
       options: {
         stickerIds: a
       },
-      parsedMessage: o.default.parse(e, n)
+      parsedMessage: u.default.parse(e, n)
     })
   }, []);
   return (0, h.useCreateThreadCommon)({
@@ -47,7 +47,7 @@ function E(e) {
     threadSettings: l,
     privateThreadMode: s,
     location: r,
-    onThreadCreated: u,
+    onThreadCreated: o,
     useDefaultThreadName: c,
     uploadHandler: f
   })
@@ -59,7 +59,7 @@ function C(e) {
   } = e, {
     name: n,
     appliedTags: a
-  } = (0, u.useForumPostComposerStore)(e => {
+  } = (0, o.useForumPostComposerStore)(e => {
     let {
       name: t,
       appliedTags: n
@@ -75,8 +75,8 @@ function C(e) {
     appliedTags: a,
     upload: function(e, n, a) {
       return new Promise((l, i) => {
-        let u = new r.default(e);
-        u.on("error", (e, n, a) => {
+        let o = new r.default(e);
+        o.on("error", (e, n, a) => {
           if (n === p.AbortCodes.EXPLICIT_CONTENT) {
             var l;
             let e = c.default.getGuild(null !== (l = t.getGuildId()) && void 0 !== l ? l : "");
@@ -103,11 +103,11 @@ function C(e) {
           i({
             body: a
           })
-        }), u.on("complete", (e, t) => {
+        }), o.on("complete", (e, t) => {
           l({
             body: t
           })
-        }), u.uploadFiles(a, n, {
+        }), o.uploadFiles(a, n, {
           addFilesTo: "message.attachments"
         })
       })

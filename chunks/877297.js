@@ -1,12 +1,12 @@
 var r = n("68421");
-t.exports = function(t, e) {
+e.exports = function(e, t) {
   var n = -1,
-    i = t.length,
+    i = e.length,
     u = i - 1;
-  for (e = void 0 === e ? i : e; ++n < e;) {
-    var o = r(n, u),
-      a = t[o];
-    t[o] = t[n], t[n] = a
+  for (t = void 0 === t ? i : t; ++n < t;) {
+    var a = r(n, u),
+      l = e[a];
+    e[a] = e[n], e[n] = l
   }
-  return t.length = e, t
+  return e.length = t, e
 }

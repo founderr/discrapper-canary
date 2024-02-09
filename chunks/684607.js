@@ -23,18 +23,18 @@ function u(e) {
     allowNewLines: m,
     submit: h,
     hideAutocomplete: E,
-    moveSelection: g
-  } = e, S = l.useCallback(e => {
+    moveSelection: S
+  } = e, g = l.useCallback(e => {
     var l;
     switch (e.which) {
       case o.KeyboardKeys.ARROW_UP:
-        if (g(-1)) {
+        if (S(-1)) {
           e.preventDefault();
           return
         }
         break;
       case o.KeyboardKeys.ARROW_DOWN:
-        if (g(1)) {
+        if (S(1)) {
           e.preventDefault();
           return
         }
@@ -42,7 +42,7 @@ function u(e) {
       case o.KeyboardKeys.P:
         if ((0, r.checkModifiers)(e, {
             ctrl: !0
-          }) && g(-1)) {
+          }) && S(-1)) {
           e.preventDefault();
           return
         }
@@ -50,7 +50,7 @@ function u(e) {
       case o.KeyboardKeys.N:
         if ((0, r.checkModifiers)(e, {
             ctrl: !0
-          }) && g(1)) {
+          }) && S(1)) {
           e.preventDefault();
           return
         }
@@ -80,11 +80,11 @@ function u(e) {
       return
     }
     e.which === o.KeyboardKeys.ENTER && (!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.hasOpenPlainTextCodeBlock)(t) || !m) && (e.preventDefault(), e.stopPropagation(), h()), null == d || d(e)
-  }, [m, n.id, u, t, E, g, p, d, f, h]), C = l.useCallback(e => {
+  }, [m, n.id, u, t, E, S, p, d, f, h]), C = l.useCallback(e => {
     null == c || c(e)
   }, [c]);
   return {
-    handleKeyDown: S,
+    handleKeyDown: g,
     handleKeyUp: C
   }
 }

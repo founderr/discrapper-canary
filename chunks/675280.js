@@ -18,32 +18,32 @@ var l = n("37983"),
   m = n("216422"),
   h = n("290581"),
   E = n("742219"),
-  g = n("115279");
-let S = e => {
+  S = n("115279");
+let g = e => {
     switch (e) {
-      case g.EmojiCategories.RECENT:
+      case S.EmojiCategories.RECENT:
         return o.default;
-      case g.EmojiCategories.FAVORITES:
+      case S.EmojiCategories.FAVORITES:
         return h.default;
-      case g.EmojiCategories.TOP_GUILD_EMOJI:
+      case S.EmojiCategories.TOP_GUILD_EMOJI:
         return E.default;
-      case g.EmojiCategories.PEOPLE:
+      case S.EmojiCategories.PEOPLE:
         return c.default;
-      case g.EmojiCategories.NATURE:
+      case S.EmojiCategories.NATURE:
         return u.default;
-      case g.EmojiCategories.FOOD:
+      case S.EmojiCategories.FOOD:
         return r.default;
-      case g.EmojiCategories.ACTIVITY:
+      case S.EmojiCategories.ACTIVITY:
         return a.default;
-      case g.EmojiCategories.TRAVEL:
+      case S.EmojiCategories.TRAVEL:
         return p.default;
-      case g.EmojiCategories.OBJECTS:
+      case S.EmojiCategories.OBJECTS:
         return d.default;
-      case g.EmojiCategories.SYMBOLS:
+      case S.EmojiCategories.SYMBOLS:
         return f.default;
-      case g.EmojiCategories.FLAGS:
+      case S.EmojiCategories.FLAGS:
         return s.default;
-      case g.EmojiCategories.PREMIUM_UPSELL:
+      case S.EmojiCategories.PREMIUM_UPSELL:
         return m.default;
       default:
         return
@@ -53,7 +53,7 @@ let S = e => {
     let {
       categoryId: t,
       ...n
-    } = e, i = S(t);
+    } = e, i = g(t);
     return null == i ? null : (0, l.jsx)(i, {
       ...n
     })

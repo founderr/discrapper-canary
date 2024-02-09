@@ -1,26 +1,26 @@
 "use strict";
-l.r(r), l.d(r, {
+l.r(t), l.d(t, {
   buildGetPremiumUserBannerStyles: function() {
-    return s
+    return o
   },
   getUserBannerStyles: function() {
     return u
   },
   getUserBannerHeight: function() {
-    return f
+    return d
   },
   getUserBannerSize: function() {
-    return c
+    return f
   }
 }), l("794252");
-var t = l("506838"),
-  o = l("617258"),
-  i = l("769846"),
-  n = l("590456"),
-  a = l("220817");
-let s = e => r => {
-    if (r.hasBanner && r.isPremium || r.hasProfileEffect) return e.premiumUserWithBanner;
-    if (r.isPremium) {
+var r = l("506838"),
+  a = l("617258"),
+  n = l("769846"),
+  s = l("590456"),
+  i = l("220817");
+let o = e => t => {
+    if (t.hasBanner && t.isPremium || t.hasProfileEffect) return e.premiumUserWithBanner;
+    if (t.isPremium) {
       var l;
       return null !== (l = e.premiumUserWithoutBanner) && void 0 !== l ? l : e.default
     }
@@ -28,52 +28,52 @@ let s = e => r => {
   },
   u = e => {
     let {
-      profileType: r,
+      profileType: t,
       user: l
     } = e;
-    return (0, t.match)(r).with(n.UserProfileTypes.POPOUT, n.UserProfileTypes.POMELO_POPOUT, () => {
-      let e = s({
-        premiumUserWithBanner: a.popoutBannerPremium,
-        premiumUserWithoutBanner: a.popoutNoBannerPremium,
-        default: a.popoutBanner
+    return (0, r.match)(t).with(s.UserProfileTypes.POPOUT, s.UserProfileTypes.POMELO_POPOUT, () => {
+      let e = o({
+        premiumUserWithBanner: i.popoutBannerPremium,
+        premiumUserWithoutBanner: i.popoutNoBannerPremium,
+        default: i.popoutBanner
       });
       return e(l)
-    }).with(n.UserProfileTypes.MODAL, () => {
-      let e = s({
-        premiumUserWithBanner: a.profileBannerPremium,
-        premiumUserWithoutBanner: a.profileBanner,
-        default: a.profileBanner
+    }).with(s.UserProfileTypes.MODAL, () => {
+      let e = o({
+        premiumUserWithBanner: i.profileBannerPremium,
+        premiumUserWithoutBanner: i.profileBanner,
+        default: i.profileBanner
       });
       return e(l)
-    }).with(n.UserProfileTypes.SETTINGS, () => a.settingsBanner).with(n.UserProfileTypes.PANEL, () => a.panelBanner).with(n.UserProfileTypes.CANCEL_MODAL, () => a.cancelModalBanner).exhaustive()
+    }).with(s.UserProfileTypes.SETTINGS, () => i.settingsBanner).with(s.UserProfileTypes.PANEL, () => i.panelBanner).with(s.UserProfileTypes.CANCEL_MODAL, () => i.cancelModalBanner).exhaustive()
   },
-  f = e => {
+  d = e => {
     let {
-      profileType: r,
+      profileType: t,
       user: l
-    } = e, a = (0, t.match)(r).with(n.UserProfileTypes.POPOUT, () => {
-      let e = s({
-        premiumUserWithBanner: i.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_POPOUT,
-        premiumUserWithoutBanner: i.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_NO_BANNER_IMAGE_POPOUT,
-        default: i.default.USER_BANNER_BANNER_HEIGHT_POPOUT
+    } = e, i = (0, r.match)(t).with(s.UserProfileTypes.POPOUT, () => {
+      let e = o({
+        premiumUserWithBanner: n.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_POPOUT,
+        premiumUserWithoutBanner: n.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_NO_BANNER_IMAGE_POPOUT,
+        default: n.default.USER_BANNER_BANNER_HEIGHT_POPOUT
       });
       return e(l)
-    }).with(n.UserProfileTypes.MODAL, () => {
-      let e = s({
-        premiumUserWithBanner: i.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_PROFILE,
-        premiumUserWithoutBanner: i.default.USER_BANNER_BANNER_HEIGHT_PROFILE,
-        default: i.default.USER_BANNER_BANNER_HEIGHT_PROFILE
+    }).with(s.UserProfileTypes.MODAL, () => {
+      let e = o({
+        premiumUserWithBanner: n.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_PROFILE,
+        premiumUserWithoutBanner: n.default.USER_BANNER_BANNER_HEIGHT_PROFILE,
+        default: n.default.USER_BANNER_BANNER_HEIGHT_PROFILE
       });
       return e(l)
-    }).with(n.UserProfileTypes.POMELO_POPOUT, () => i.default.USER_BANNER_BANNER_HEIGHT_POMELO).with(n.UserProfileTypes.SETTINGS, () => i.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_SETTINGS).with(n.UserProfileTypes.PANEL, () => i.default.USER_BANNER_BANNER_HEIGHT_PANEL).with(n.UserProfileTypes.CANCEL_MODAL, () => i.default.USER_BANNER_CANCEL_MODAL_HEIGHT).exhaustive();
-    return (0, o.cssValueToNumber)(a)
+    }).with(s.UserProfileTypes.POMELO_POPOUT, () => n.default.USER_BANNER_BANNER_HEIGHT_POMELO).with(s.UserProfileTypes.SETTINGS, () => n.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_SETTINGS).with(s.UserProfileTypes.PANEL, () => n.default.USER_BANNER_BANNER_HEIGHT_PANEL).with(s.UserProfileTypes.CANCEL_MODAL, () => n.default.USER_BANNER_CANCEL_MODAL_HEIGHT).exhaustive();
+    return (0, a.cssValueToNumber)(i)
   },
-  d = Object.freeze({
-    [n.UserProfileTypes.POPOUT]: 480,
-    [n.UserProfileTypes.PANEL]: 480,
-    [n.UserProfileTypes.MODAL]: 600,
-    [n.UserProfileTypes.SETTINGS]: 600,
-    [n.UserProfileTypes.POMELO_POPOUT]: 432,
-    [n.UserProfileTypes.CANCEL_MODAL]: 172
+  c = Object.freeze({
+    [s.UserProfileTypes.POPOUT]: 480,
+    [s.UserProfileTypes.PANEL]: 480,
+    [s.UserProfileTypes.MODAL]: 600,
+    [s.UserProfileTypes.SETTINGS]: 600,
+    [s.UserProfileTypes.POMELO_POPOUT]: 432,
+    [s.UserProfileTypes.CANCEL_MODAL]: 172
   }),
-  c = e => d[e]
+  f = e => c[e]

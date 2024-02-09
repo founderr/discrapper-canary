@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var l = n("37983");
@@ -19,20 +19,20 @@ var i = n("414456"),
   m = n("449008"),
   h = n("782340"),
   E = n("127789"),
-  g = function(e) {
+  S = function(e) {
     let {
       createdAt: t,
       participantIds: n,
       applicationId: i,
       title: s,
-      guildId: g,
-      className: S
+      guildId: S,
+      className: g
     } = e, C = (0, d.useGetOrFetchApplication)(i), T = (0, o.useStateFromStoresArray)([f.default], () => {
       var e;
       return null !== (e = n.map(e => f.default.getUser(e)).filter(m.isNotNullish)) && void 0 !== e ? e : []
     }), v = null == C ? void 0 : C.name, I = r(t).fromNow();
     return null == t ? null : (0, l.jsxs)("div", {
-      className: a(S, E.container),
+      className: a(g, E.container),
       children: [(0, l.jsx)(p.default, {
         game: C
       }), (0, l.jsxs)("div", {
@@ -59,7 +59,7 @@ var i = n("414456"),
         maxUsers: 4,
         users: T,
         className: E.facePile,
-        guildId: g
+        guildId: S
       })]
     })
   }

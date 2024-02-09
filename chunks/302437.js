@@ -1,7 +1,7 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return u
   }
 });
 var i = n("974667"),
@@ -12,18 +12,18 @@ function r() {
   return Promise.resolve()
 }
 
-function u(t) {
-  let e = document.querySelector(t);
-  null != e && e.focus()
+function s(e) {
+  let t = document.querySelector(e);
+  null != t && t.focus()
 }
 
-function s(t, e) {
+function u(e, t) {
   let n = (0, l.useStateFromStores)([a.default], () => a.default.keyboardModeEnabled);
   return (0, i.default)({
-    id: t,
+    id: e,
     isEnabled: n,
-    orientation: e,
-    setFocus: u,
+    orientation: t,
+    setFocus: s,
     scrollToStart: r,
     scrollToEnd: r
   })

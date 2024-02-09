@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("446674"),
   i = n("151426"),
   r = n("77078"),
-  u = n("997289"),
-  o = n("244201"),
+  o = n("997289"),
+  u = n("244201"),
   d = n("886860"),
   c = n("614175"),
   f = n("903178"),
@@ -56,7 +56,7 @@ function L(e) {
     channelId: t.id
   }), H = !b && n, G = l.useCallback(e => {
     "focus" !== e.type && U()
-  }, [U]), W = (0, u.useAnalyticsContext)(), Y = (0, o.useAppContext)(), z = Y === M.AppContext.POPOUT, {
+  }, [U]), W = (0, o.useAnalyticsContext)(), Y = (0, u.useAppContext)(), z = Y === M.AppContext.POPOUT, {
     analyticsLocations: K
   } = (0, v.default)(), Z = l.useCallback(() => {
     (0, T.default)({

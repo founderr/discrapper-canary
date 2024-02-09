@@ -4,31 +4,31 @@ s.r(t), s.d(t, {
     return r
   }
 });
-var i = s("37983");
+var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("145131"),
-  a = s("997324"),
+var l = s("77078"),
+  n = s("145131"),
+  i = s("997324"),
   r = e => {
     let {
       title: t,
       subtitle: s,
       icon: r
     } = e;
-    return (0, i.jsxs)(l.default, {
-      className: a.wrapper,
-      align: l.default.Align.BASELINE,
-      children: [null != r && (0, i.jsx)(r, {
+    return (0, a.jsxs)(n.default, {
+      className: i.wrapper,
+      align: n.default.Align.BASELINE,
+      children: [null != r && (0, a.jsx)(r, {
         width: 16,
         height: 16,
-        className: a.icon
-      }), (0, i.jsx)(n.Text, {
+        className: i.icon
+      }), (0, a.jsx)(l.Text, {
         variant: "text-md/normal",
-        className: a.title,
+        className: i.title,
         children: t
-      }), null != s && "" !== s ? (0, i.jsx)(n.Text, {
+      }), null != s && "" !== s ? (0, a.jsx)(l.Text, {
         variant: "text-xs/semibold",
-        className: a.subtitle,
+        className: i.subtitle,
         children: s
       }) : null]
     })

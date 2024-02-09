@@ -1,11 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return n
+    return r
   }
 }), s("702976");
-var n, r = s("866227"),
-  a = s.n(r),
+var r, n = s("866227"),
+  a = s.n(n),
   i = s("666038"),
   l = s("568734"),
   o = s("797647"),
@@ -15,7 +15,7 @@ let d = Object.freeze({
   EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
   NOT_SELF_REDEEMABLE: 4
 });
-n = class e extends i.default {
+r = class e extends i.default {
   static createFromServer(t) {
     return new e({
       userId: null != t.user ? t.user.id : null,

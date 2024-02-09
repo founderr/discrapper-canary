@@ -1,16 +1,16 @@
 "use strict";
 s.r(t), s.d(t, {
   MarketingSections: function() {
-    return g
+    return m
   },
   default: function() {
-    return f
+    return N
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("759843"),
-  l = s("77078"),
+var l = s("759843"),
+  n = s("77078"),
   i = s("428958"),
   r = s("205881"),
   o = s("724334"),
@@ -19,84 +19,84 @@ var n = s("759843"),
   c = s("219772"),
   E = s("222934"),
   _ = s("830388"),
-  T = s("561496"),
-  I = s("100072"),
-  S = s("396076"),
-  N = s("97743");
+  I = s("561496"),
+  f = s("100072"),
+  T = s("396076"),
+  S = s("97743");
 
-function g(e) {
+function m(e) {
   let {
     onboardingMarketing: t,
     onboardingMarketingError: s
-  } = e, n = e => {
+  } = e, l = e => {
     let {
       children: t
     } = e;
     return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(l.FormDivider, {
-        className: N.sectionDivider
+      children: [(0, a.jsx)(n.FormDivider, {
+        className: S.sectionDivider
       }), t]
     })
-  }, i = (0, a.jsx)(n, {
-    children: (0, a.jsx)(T.default, {})
-  }, S.CreatorMonetizationOnboardingMarketingSection.HOW_IT_WORKS), r = (0, a.jsx)(n, {
+  }, i = (0, a.jsx)(l, {
+    children: (0, a.jsx)(I.default, {})
+  }, T.CreatorMonetizationOnboardingMarketingSection.HOW_IT_WORKS), r = (0, a.jsx)(l, {
     children: (0, a.jsx)(E.default, {})
-  }, S.CreatorMonetizationOnboardingMarketingSection.BENEFITS);
+  }, T.CreatorMonetizationOnboardingMarketingSection.BENEFITS);
   return null != s || (null == t ? void 0 : t.sections) == null ? (0, a.jsxs)(a.Fragment, {
     children: [i, r]
   }) : (0, a.jsx)(a.Fragment, {
     children: t.sections.map(e => {
       switch (e.type) {
-        case S.CreatorMonetizationOnboardingMarketingSection.HOW_IT_WORKS:
+        case T.CreatorMonetizationOnboardingMarketingSection.HOW_IT_WORKS:
           return i;
-        case S.CreatorMonetizationOnboardingMarketingSection.BENEFITS:
+        case T.CreatorMonetizationOnboardingMarketingSection.BENEFITS:
           return r;
-        case S.CreatorMonetizationOnboardingMarketingSection.OTHER_CREATORS:
-          return (0, a.jsx)(n, {
+        case T.CreatorMonetizationOnboardingMarketingSection.OTHER_CREATORS:
+          return (0, a.jsx)(l, {
             children: (0, a.jsx)(_.default, {
               highlightedCreators: e.creators
             })
-          }, S.CreatorMonetizationOnboardingMarketingSection.OTHER_CREATORS)
+          }, T.CreatorMonetizationOnboardingMarketingSection.OTHER_CREATORS)
       }
     })
   })
 }
 
-function f(e) {
+function N(e) {
   let {
     guild: t
   } = e, s = (0, d.default)(t), {
     eligibilityLoading: E,
     eligibilityError: _,
-    eligibility: T
-  } = s, S = (0, r.useCreatorMonetizationIneligibleReasons)(T), {
-    isLoading: f,
-    error: A,
-    creatorMonetizationOnboardingMarketing: L
+    eligibility: I
+  } = s, T = (0, r.useCreatorMonetizationIneligibleReasons)(I), {
+    isLoading: N,
+    error: g,
+    creatorMonetizationOnboardingMarketing: h
   } = (0, o.default)(t.id);
   return ((0, i.default)({
-    type: n.ImpressionTypes.PANE,
-    name: n.ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING,
+    type: l.ImpressionTypes.PANE,
+    name: l.ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING,
     properties: {
       guild_id: t.id,
       is_owner: s.isGuildOwner,
       is_eligible: s.eligibleForMonetization,
-      ineligible_reasons: S
+      ineligible_reasons: T
     }
   }, {
-    disableTrack: null == t.id || null == T
-  }), E || null == T || f) ? (0, a.jsx)(l.Spinner, {}) : T.actionRequired ? (0, a.jsx)(I.default, {
+    disableTrack: null == t.id || null == I
+  }), E || null == I || N) ? (0, a.jsx)(n.Spinner, {}) : I.actionRequired ? (0, a.jsx)(f.default, {
     guild: t
   }) : null != _ ? (0, a.jsx)(u.default, {
     children: _.message
   }) : (0, a.jsxs)("div", {
-    className: N.container,
+    className: S.container,
     children: [(0, a.jsx)(c.default, {
       guild: t,
       monetizationEligibility: s
-    }), (0, a.jsx)(g, {
-      onboardingMarketing: L,
-      onboardingMarketingError: A
+    }), (0, a.jsx)(m, {
+      onboardingMarketing: h,
+      onboardingMarketingError: g
     })]
   })
 }

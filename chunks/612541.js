@@ -6,8 +6,8 @@ E.r(_), E.d(_, {
   }
 }), E("222007");
 var r = E("450911"),
-  a = E("267363"),
-  i = E("990766"),
+  i = E("267363"),
+  a = E("990766"),
   I = E("689988"),
   s = E("374014"),
   T = E("845579"),
@@ -38,10 +38,10 @@ class U extends I.default {
     let r = null != d.find(_ => _.pid === e.pid);
     if (r) return;
     d = A.default.getRunningGames();
-    let a = (0, C.getCanStartBroadcast)();
-    if (!a) return;
+    let i = (0, C.getCanStartBroadcast)();
+    if (!i) return;
     let I = R.default.getVoiceChannelId();
-    (0, i.createBroadcastChannelOrStartStream)({
+    (0, a.createBroadcastChannelOrStartStream)({
       pid: e.pid,
       channelId: I
     })
@@ -60,12 +60,12 @@ class U extends I.default {
     let E = (0, s.decodeStreamKey)(_),
       {
         ownerId: r,
-        channelId: a
+        channelId: i
       } = E;
-    if (null == r || null == a) return;
-    let i = S.default.getId();
-    if (r !== i) return;
-    let I = N.default.getChannel(a),
+    if (null == r || null == i) return;
+    let a = S.default.getId();
+    if (r !== a) return;
+    let I = N.default.getChannel(i),
       T = null != I && I.isBroadcastChannel();
     null != I && r === I.ownerId && T && (t = null, o = null, n = null, (0, u.stopBroadcast)())
   }
@@ -82,7 +82,7 @@ class U extends I.default {
     if (null == _ || null == t && null == o && null == n) return;
     let E = S.default.getId(),
       r = N.default.getChannel(_);
-    null != r && E === r.ownerId && r.isBroadcastChannel() && (0, i.startStream)(null, _, {
+    null != r && E === r.ownerId && r.isBroadcastChannel() && (0, a.startStream)(null, _, {
       pid: t,
       sourceId: o,
       sourceName: n
@@ -117,7 +117,7 @@ class U extends I.default {
     if (null == t || !t.isBroadcastChannel()) return;
     let o = R.default.getVoiceChannelId(),
       n = o !== t.id;
-    n && (0, a.localAck)(_)
+    n && (0, i.localAck)(_)
   }
   constructor(...e) {
     super(...e), this.actions = {

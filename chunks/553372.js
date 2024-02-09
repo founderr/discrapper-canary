@@ -24,8 +24,8 @@ var l = n("37983"),
   m = n("526887"),
   h = n("697218"),
   E = n("118849"),
-  g = n("671434"),
-  S = n("132755"),
+  S = n("671434"),
+  g = n("132755"),
   C = n("151185"),
   T = n("368121"),
   v = n("305122"),
@@ -104,9 +104,9 @@ var P = i.forwardRef(function(e, t) {
     name: Y,
     emojiId: z,
     emojiName: J
-  } = P, Z = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, N.useSoundButtonContextMenu)(P, null == b ? void 0 : b.guild_id), {
-    playSoundboardSound: X,
-    previewSound: Q,
+  } = P, q = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), Z = (0, N.useSoundButtonContextMenu)(P, null == b ? void 0 : b.guild_id), {
+    playSoundboardSound: Q,
+    previewSound: X,
     isPlayingSound: $
   } = (0, A.default)(P, null !== (n = null == b ? void 0 : b.id) && void 0 !== n ? n : null), {
     createMultipleConfettiAt: ee
@@ -130,7 +130,7 @@ var P = i.forwardRef(function(e, t) {
     eo = "sound-".concat(P.soundId),
     eu = (0, r.useListItem)(eo),
     ed = null != z || null != J,
-    ec = !(0, y.canUseSoundboardSound)(Z, P, b),
+    ec = !(0, y.canUseSoundboardSound)(q, P, b),
     ef = D || w && !ec;
 
   function ep(e) {
@@ -145,7 +145,7 @@ var P = i.forwardRef(function(e, t) {
         emojiName: P.emojiName,
         soundName: P.name
       }),
-      children: er ? (0, l.jsx)(g.default, {
+      children: er ? (0, l.jsx)(S.default, {
         className: s(R.secondaryIcon, R.favoriteIconFavorite),
         color: d.default.unsafe_rawColors.GOLD.css
       }) : (0, l.jsx)(E.default, {
@@ -155,7 +155,7 @@ var P = i.forwardRef(function(e, t) {
   }
   let eh = L({
       sound: P,
-      previewSound: Q,
+      previewSound: X,
       disabled: ec
     }),
     eE = () => (0, l.jsxs)("div", {
@@ -166,7 +166,7 @@ var P = i.forwardRef(function(e, t) {
         })
       }), (0, l.jsxs)("div", {
         className: R.buttonOverlayActions,
-        children: [ef && eh, !F && !ec && (0, l.jsx)(S.default, {
+        children: [ef && eh, !F && !ec && (0, l.jsx)(g.default, {
           className: R.playIcon
         }), ef && em()]
       })]
@@ -207,9 +207,9 @@ var P = i.forwardRef(function(e, t) {
           B();
           return
         }
-        F || X(H)
+        F || Q(H)
       },
-      onContextMenu: w && !ec ? q : void 0,
+      onContextMenu: w && !ec ? Z : void 0,
       children: [(0, l.jsxs)("div", {
         className: R.soundInfo,
         "aria-hidden": !0,

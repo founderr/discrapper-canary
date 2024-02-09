@@ -1,39 +1,39 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return c
   }
 });
 var s = n("37983");
 n("884691");
 var r = n("414456"),
-  a = n.n(r),
-  l = n("153160"),
+  l = n.n(r),
+  a = n("153160"),
   i = n("646718"),
-  u = n("782340"),
-  c = n("552033");
+  o = n("782340"),
+  u = n("552033");
 
-function o(e) {
+function c(e) {
   let {
     price: t,
     currency: n,
     intervalType: r,
-    className: o,
+    className: c,
     intervalCount: d = 1,
     isPrepaidPaymentSource: f = !1
-  } = e, m = (0, l.formatPrice)(t, n), _ = null;
-  return r === i.SubscriptionIntervalTypes.YEAR ? _ = u.default.Messages.BILLING_PRICE_PER_YEAR_BOLD.format({
-    price: m
-  }) : r === i.SubscriptionIntervalTypes.MONTH && 1 === d ? _ = u.default.Messages.BILLING_PRICE_PER_MONTH_BOLD.format({
-    price: m
-  }) : r === i.SubscriptionIntervalTypes.MONTH && d > 1 && (_ = u.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS_BOLD.format({
-    price: m,
+  } = e, h = (0, a.formatPrice)(t, n), E = null;
+  return r === i.SubscriptionIntervalTypes.YEAR ? E = o.default.Messages.BILLING_PRICE_PER_YEAR_BOLD.format({
+    price: h
+  }) : r === i.SubscriptionIntervalTypes.MONTH && 1 === d ? E = o.default.Messages.BILLING_PRICE_PER_MONTH_BOLD.format({
+    price: h
+  }) : r === i.SubscriptionIntervalTypes.MONTH && d > 1 && (E = o.default.Messages.BILLING_PRICE_PER_MULTI_MONTHS_BOLD.format({
+    price: h,
     intervalCount: d
   })), (0, s.jsx)("div", {
-    className: a(c.pricePerInterval, o),
+    className: l(u.pricePerInterval, c),
     "data-testid": "PricePerInterval-".concat(n),
     children: null == r || f ? (0, s.jsx)("strong", {
-      children: m
-    }) : _
+      children: h
+    }) : E
   })
 }

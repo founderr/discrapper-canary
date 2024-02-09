@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("472850"),
   r = s("933351"),
   o = s("977618"),
@@ -15,7 +15,7 @@ var n = s("414456"),
     let {
       formField: t,
       index: s,
-      isDragEnabled: n,
+      isDragEnabled: l,
       isDropHovered: d,
       onDrop: u,
       onEdit: c,
@@ -26,7 +26,7 @@ var n = s("414456"),
     return (0, a.jsx)(r.default, {
       field: t,
       index: s,
-      isDragEnabled: n,
+      isDragEnabled: l,
       isDropHovered: d,
       onDrop: u,
       onEdit: c,
@@ -35,7 +35,7 @@ var n = s("414456"),
       children: (0, a.jsx)(i.MultipleChoiceFieldBody, {
         field: t,
         value: void 0,
-        radioItemClassName: l(o.fieldBackground, o.multipleChoiceFixedTextColor),
+        radioItemClassName: n(o.fieldBackground, o.multipleChoiceFixedTextColor),
         disabled: !1
       })
     })

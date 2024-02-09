@@ -4,18 +4,18 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("222007");
-var l = n("37983"),
-  s = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
-  u = n("458960"),
-  r = n("77078"),
-  o = n("866893");
-let d = {
+var s = n("37983"),
+  r = n("884691"),
+  l = n("414456"),
+  a = n.n(l),
+  i = n("458960"),
+  o = n("77078"),
+  u = n("866893");
+let c = {
   friction: 7,
   tension: 60
 };
-class c extends s.Component {
+class d extends r.Component {
   componentWillAppear(e) {
     this.animateTo(1).start(e)
   }
@@ -26,11 +26,11 @@ class c extends s.Component {
     let {
       reducedMotion: t
     } = this.context;
-    t.enabled ? this.animateTo(0).start(e) : u.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
+    t.enabled ? this.animateTo(0).start(e) : i.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
   }
   animateTo(e) {
-    return u.default.spring(this.animation, {
-      ...d,
+    return i.default.spring(this.animation, {
+      ...c,
       toValue: e
     })
   }
@@ -38,7 +38,7 @@ class c extends s.Component {
     let {
       reducedMotion: e
     } = this.context;
-    return u.default.accelerate({
+    return i.default.accelerate({
       opacity: this.animation,
       transform: e.enabled ? void 0 : [{
         translateY: this.animation.interpolate({
@@ -53,15 +53,15 @@ class c extends s.Component {
       className: e,
       children: t
     } = this.props;
-    return (0, l.jsx)(u.default.div, {
-      className: i(e, o.slider),
+    return (0, s.jsx)(i.default.div, {
+      className: a(e, u.slider),
       style: this.getAnimatedStyle(),
       children: t
     })
   }
   constructor(...e) {
-    super(...e), this.animation = new u.default.Value(0)
+    super(...e), this.animation = new i.default.Value(0)
   }
 }
-c.contextType = r.AccessibilityPreferencesContext;
-var f = c
+d.contextType = o.AccessibilityPreferencesContext;
+var f = d

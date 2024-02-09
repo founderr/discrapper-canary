@@ -7,18 +7,18 @@ n.r(t), n.d(t, {
 var s = n("446674"),
   u = n("913144"),
   o = n("168067"),
-  i = n("157246");
-let r = {
-  soundpack: i.Soundpacks.CLASSIC
+  r = n("157246");
+let a = {
+  soundpack: r.Soundpacks.CLASSIC
 };
-class a extends s.default.PersistedStore {
+class i extends s.default.PersistedStore {
   initialize(e) {
     o.default.subscribe({
       location: "1"
-    }, () => this.emitChange()), null != e && (r = e)
+    }, () => this.emitChange()), null != e && (a = e)
   }
   getState() {
-    return r
+    return a
   }
   getSoundpack() {
     var e;
@@ -29,16 +29,16 @@ class a extends s.default.PersistedStore {
     }, {
       autoTrackExposure: !1
     });
-    return t && (e = r.soundpack, Object.values(i.Soundpacks).includes(e)) ? r.soundpack : i.Soundpacks.CLASSIC
+    return t && (e = a.soundpack, Object.values(r.Soundpacks).includes(e)) ? a.soundpack : r.Soundpacks.CLASSIC
   }
 }
-a.displayName = "SoundpackStore", a.persistKey = "SoundpackStore";
-var c = new a(u.default, {
+i.displayName = "SoundpackStore", i.persistKey = "SoundpackStore";
+var c = new i(u.default, {
   SET_SOUNDPACK: function(e) {
     let {
       soundpack: t
     } = e;
-    r = {
+    a = {
       soundpack: t
     }
   }

@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return O
   }
 });
-var i = n("37983"),
-  r = n("884691"),
+var r = n("37983"),
+  i = n("884691"),
   l = n("414456"),
-  s = n.n(l),
-  a = n("77078"),
+  a = n.n(l),
+  s = n("77078"),
   o = n("812204"),
   u = n("685665"),
   d = n("617917"),
@@ -24,140 +24,140 @@ var i = n("37983"),
   S = n("857513"),
   R = n("393828");
 
-function C(e) {
+function O(e) {
   var t, n, l;
   let {
-    title: C,
-    type: O,
+    title: O,
+    type: C,
     guildBoostProps: M,
     analyticsSource: g,
     analyticsLocation: L,
     body: v,
     context: U,
-    glowUp: h,
-    modalClassName: N,
-    artContainerClassName: x,
+    glowUp: x,
+    modalClassName: h,
+    artContainerClassName: N,
     bodyClassName: A,
     transitionState: b,
     onClose: D,
-    onSubscribeClick: F,
+    onSubscribeClick: y,
     onSecondaryClick: j,
-    secondaryCTA: y,
+    secondaryCTA: F,
     subscribeButtonText: w,
     showNewBadge: B = !1,
-    enableArtBoxShadow: G = !0,
-    subscriptionTier: H = I.PremiumSubscriptionSKUs.TIER_2,
-    isLoading: k = !1,
+    enableArtBoxShadow: k = !0,
+    subscriptionTier: G = I.PremiumSubscriptionSKUs.TIER_2,
+    isLoading: H = !1,
     hideBackButton: K,
     backButtonText: V,
-    ...Y
-  } = e, z = null != M, W = (0, _.usePremiumTrialOffer)(), Z = (0, f.usePremiumDiscountOffer)(), X = ((null == W ? void 0 : null === (t = W.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === H || (0, f.discountOfferHasTier)(Z, H)) && !z, {
+    ...z
+  } = e, W = null != M, Z = (0, _.usePremiumTrialOffer)(), Y = (0, f.usePremiumDiscountOffer)(), X = ((null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === G || (0, f.discountOfferHasTier)(Y, G)) && !W, {
     analyticsLocations: J
   } = (0, u.default)(o.default.PREMIUM_UPSELL_MODAL);
-  r.useEffect(() => {
-    !k && (z ? c.default.track(p.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
-      type: "".concat(O, " - Tier ").concat(M.boostedGuildTier),
+  i.useEffect(() => {
+    !H && (W ? c.default.track(p.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+      type: "".concat(C, " - Tier ").concat(M.boostedGuildTier),
       guild_id: M.guild.id,
       channel_id: M.channelId,
       location: L,
       location_stack: J
     }) : c.default.track(p.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: O,
+      type: C,
       source: g,
       location_stack: J,
-      sku_id: H
+      sku_id: G
     }))
-  }, [z, H, k]);
-  let q = G ? s(S.artContainer, S.artContainerBoxShadow, x) : s(S.artContainer, x),
+  }, [W, G, H]);
+  let q = k ? a(S.artContainer, S.artContainerBoxShadow, N) : a(S.artContainer, N),
     Q = null;
-  return Q = "artURL" in Y ? (0, i.jsx)("img", {
+  return Q = "artURL" in z ? (0, r.jsx)("img", {
     className: S.art,
     alt: "",
-    src: Y.artURL
-  }) : Y.artElement, (0, i.jsxs)(a.ModalRoot, {
-    className: s(S.root, N),
-    "aria-label": C,
+    src: z.artURL
+  }) : z.artElement, (0, r.jsxs)(s.ModalRoot, {
+    className: a(S.root, h),
+    "aria-label": O,
     transitionState: b,
-    children: [(0, i.jsxs)("div", {
+    children: [(0, r.jsxs)("div", {
       className: q,
-      children: [Q, B ? (0, i.jsx)("img", {
+      children: [Q, B ? (0, r.jsx)("img", {
         className: S.sparkleBadge,
         alt: "",
         src: R
       }) : null]
-    }), (0, i.jsx)(a.ModalContent, {
+    }), (0, r.jsx)(s.ModalContent, {
       className: S.content,
-      children: k ? (0, i.jsx)(a.Spinner, {}) : (0, i.jsx)(i.Fragment, {
-        children: X ? (0, i.jsx)(i.Fragment, {
-          children: (0, i.jsx)(E.default, {
+      children: H ? (0, r.jsx)(s.Spinner, {}) : (0, r.jsx)(r.Fragment, {
+        children: X ? (0, r.jsx)(r.Fragment, {
+          children: (0, r.jsx)(E.default, {
             onClose: D,
-            type: O,
-            subscriptionTier: null !== (l = null == W ? void 0 : null === (n = W.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : I.PremiumSubscriptionSKUs.TIER_2,
-            headingText: C,
+            type: C,
+            subscriptionTier: null !== (l = null == Z ? void 0 : null === (n = Z.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : I.PremiumSubscriptionSKUs.TIER_2,
+            headingText: O,
             context: U,
             analyticsLocationObject: L,
-            discountOffer: Z,
-            trialOffer: W,
-            children: h
+            discountOffer: Y,
+            trialOffer: Z,
+            children: x
           })
-        }) : (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(a.Heading, {
+        }) : (0, r.jsxs)(r.Fragment, {
+          children: [(0, r.jsx)(s.Heading, {
             className: S.header,
             variant: "heading-xl/semibold",
-            children: C
-          }), (0, i.jsx)(a.Text, {
+            children: O
+          }), (0, r.jsx)(s.Text, {
             variant: "text-md/normal",
-            className: s(A),
+            className: a(A),
             children: v
           })]
         })
       })
-    }), (0, i.jsxs)(a.ModalFooter, {
+    }), (0, r.jsxs)(s.ModalFooter, {
       className: S.footer,
-      children: [(0, i.jsxs)("div", {
+      children: [(0, r.jsxs)("div", {
         className: S.primaryActions,
-        children: [null != y ? (0, i.jsx)(a.Button, {
+        children: [null != F ? (0, r.jsx)(s.Button, {
           className: S.secondaryAction,
           onClick: j,
-          size: a.Button.Sizes.SMALL,
-          color: a.Button.Colors.PRIMARY,
-          look: a.Button.Looks.LINK,
-          children: y
+          size: s.Button.Sizes.SMALL,
+          color: s.Button.Colors.PRIMARY,
+          look: s.Button.Looks.LINK,
+          children: F
         }) : null, (() => {
           let e, t;
-          if (z) return (0, i.jsx)(d.default, {
+          if (W) return (0, r.jsx)(d.default, {
             analyticsLocation: L,
             guild: M.guild,
             onClose: D
           });
           if (X) {
-            if (null != W) {
-              var n, r;
+            if (null != Z) {
+              var n, i;
               e = (0, m.formatTrialCtaIntervalDuration)({
-                intervalType: null == W ? void 0 : null === (n = W.subscription_trial) || void 0 === n ? void 0 : n.interval,
-                intervalCount: null == W ? void 0 : null === (r = W.subscription_trial) || void 0 === r ? void 0 : r.interval_count
-              }), t = null == W ? void 0 : W.trial_id
-            } else null != Z && (e = P.default.Messages.PREMIUM_DISCOUNT_CTA.format({
-              percent: Z.discount.amount
+                intervalType: null == Z ? void 0 : null === (n = Z.subscription_trial) || void 0 === n ? void 0 : n.interval,
+                intervalCount: null == Z ? void 0 : null === (i = Z.subscription_trial) || void 0 === i ? void 0 : i.interval_count
+              }), t = null == Z ? void 0 : Z.trial_id
+            } else null != Y && (e = P.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+              percent: Y.discount.amount
             }))
           }
-          return (0, i.jsx)(T.default, {
+          return (0, r.jsx)(T.default, {
             premiumModalAnalyticsLocation: L,
-            subscriptionTier: H,
+            subscriptionTier: G,
             trialId: t,
-            size: a.Button.Sizes.SMALL,
-            color: a.Button.Colors.GREEN,
+            size: s.Button.Sizes.SMALL,
+            color: s.Button.Colors.GREEN,
             onClick: () => {
-              null == F || F(), D()
+              null == y || y(), D()
             },
             buttonText: null != w ? w : e
           })
         })()]
-      }), !K && (0, i.jsx)(a.Button, {
+      }), !K && (0, r.jsx)(s.Button, {
         onClick: D,
-        size: a.Button.Sizes.SMALL,
-        color: a.Button.Colors.PRIMARY,
-        look: a.Button.Looks.LINK,
+        size: s.Button.Sizes.SMALL,
+        color: s.Button.Colors.PRIMARY,
+        look: s.Button.Looks.LINK,
         children: null != V ? V : P.default.Messages.BACK
       })]
     })]

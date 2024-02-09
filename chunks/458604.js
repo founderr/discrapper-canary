@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("246511"),
   h = n("139321"),
   E = n("140708"),
-  g = n("305961"),
-  S = n("773336"),
+  S = n("305961"),
+  g = n("773336"),
   C = n("215550"),
   T = n("782340"),
   v = n("465439");
@@ -34,14 +34,14 @@ let I = (e, t) => "".concat(e, ":").concat(t),
         isDisabled: p,
         showPulse: h,
         columnIndex: E,
-        rowIndex: S,
+        rowIndex: g,
         size: I,
         surrogateCodePoint: _,
         allowAnimatedEmoji: y,
         selectedItemClassName: A,
         ...N
       } = e,
-      x = (0, r.useStateFromStores)([g.default], () => i.type === f.EmojiTypes.GUILD ? g.default.getGuild(i.guildId) : void 0, [i]);
+      x = (0, r.useStateFromStores)([S.default], () => i.type === f.EmojiTypes.GUILD ? S.default.getGuild(i.guildId) : void 0, [i]);
     return (0, l.jsx)(o.FocusRing, {
       children: (0, l.jsx)("button", {
         ...N,
@@ -65,7 +65,7 @@ let I = (e, t) => "".concat(e, ":").concat(t),
             names: n
           }) : n),
           columnIndex: E,
-          rowIndex: S,
+          rowIndex: g,
           emoji: i,
           size: I,
           surrogateCodePoint: _,
@@ -82,7 +82,7 @@ function y(e) {
     isInspected: s,
     rowIndex: f,
     channelGuildId: m,
-    onInspect: g,
+    onInspect: S,
     onSelect: C,
     isScrolling: v,
     isUsingKeyboardNavigation: y,
@@ -111,7 +111,7 @@ function y(e) {
       toggleFavorite: n
     })
   }, z = () => {
-    !v.current && !y.current && g(t)
+    !v.current && !y.current && S(t)
   }, J = e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
@@ -121,7 +121,7 @@ function y(e) {
         ...t
       })
     })
-  }, Z = function() {
+  }, q = function() {
     var e;
     let {
       onMouseEnter: t,
@@ -169,10 +169,10 @@ function y(e) {
   };
   return A ? (0, l.jsx)(o.Tooltip, {
     text: T.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
-      key: (0, S.isMac)() ? "Opt" : "Alt"
+      key: (0, g.isMac)() ? "Opt" : "Alt"
     }),
     position: "top",
     delay: 200,
-    children: e => Z(e)
-  }, a) : Z()
+    children: e => q(e)
+  }, a) : q()
 }
