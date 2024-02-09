@@ -107,13 +107,15 @@ function _(e, t) {
 function c(e, t) {
   let n = (0, i.useStateFromStores)([a.default], () => a.default.getChannel(e)),
     s = l(n),
-    r = o.useExperiment({
+    r = (null == n ? void 0 : n.guild_id) != null ? d : o,
+    u = r.useExperiment({
+      guildId: null == n ? void 0 : n.guild_id,
       location: t
     }, {
       autoTrackExposure: !1
     });
-  return r.enabled && s ? {
-    showInOmniButtonMenu: r.showInOmniButtonMenu,
-    showChatInputButton: r.showChatInputButton
+  return u.enabled && s ? {
+    showInOmniButtonMenu: u.showInOmniButtonMenu,
+    showChatInputButton: u.showChatInputButton
   } : null
 }
