@@ -7,6 +7,9 @@ n.r(t), n.d(t, {
   getOverlayGameStatus: function() {
     return en
   },
+  isDetectionEnabled: function() {
+    return ei
+  },
   transformForGameSettings: function() {
     return es
   },
@@ -528,7 +531,9 @@ var ed = new ec(f.default, {
     let {
       game: t
     } = e, n = ei(t);
-    j.enableDetection[ee(t)] = !n, er()
+    j.enableDetection[ee(t)] = !n, er(), T.default.track(y.AnalyticEvents.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
+      enabled: !n
+    })
   },
   RUNNING_GAME_EDIT_NAME: function(e) {
     let t = ee(e.game),

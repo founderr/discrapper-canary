@@ -172,7 +172,8 @@ class z extends s.PureComponent {
             overlay_method: K.OverlayMethod[o.overlayMethod],
             activity_status_enabled: g.ShowCurrentGame.getSetting(),
             activity_status_shared_guilds: s,
-            current_user_status: U.default.getStatus()
+            current_user_status: U.default.getStatus(),
+            game_detection_enabled: (0, y.isDetectionEnabled)(m)
           })
         }, 1e4), null != m.name && null != O && R.default.shouldReport(m.name)) {
         let e = m.name;
