@@ -84,7 +84,7 @@ var P = i.memo(function(e) {
     location: "dc120b_4"
   }, {
     autoTrackExposure: !1
-  }), q = S.default.getCurrentUser(), Z = null !== (p = (0, s.useStateFromStores)([f.default], () => J && C.default.isPremiumExactly(q, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
+  }), Z = S.default.getCurrentUser(), q = null !== (p = (0, s.useStateFromStores)([f.default], () => J && C.default.isPremiumExactly(Z, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
     if (!k.isDM() || void 0 === k.recipients || k.recipients.length > 1 || !J) return !1;
     let e = k.recipients[0],
       t = f.default.getSentUserIds();
@@ -97,16 +97,16 @@ var P = i.memo(function(e) {
     if (null == n) return e;
     let l = n.bot;
     if (l) return e;
-    let i = X || Z > 0,
+    let i = X || q > 0,
       a = f.default.getRecipientEligibility(t);
     return [J && i && a, a]
   }), ee = (0, u.useActivitiesInTextButtonVisibility)(k.id, "ChannelTextAreaButtons");
   if (!a.isMobile) {
-    if (k.isDM() && (null === (_ = U.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (C.default.isPremiumExactly(q, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+    if (k.isDM() && (null === (_ = U.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (C.default.isPremiumExactly(Z, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
         location: "dc120b_5"
       }), Q && z.push((0, l.jsx)(y.default, {
         disabled: D,
-        referralsRemaining: Z,
+        referralsRemaining: q,
         channel: k,
         isResending: X
       }, "referral"))), (null == ee ? void 0 : ee.showChatInputButton) && O.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(k.type) && null == K && (null === (A = U.commands) || void 0 === A ? void 0 : A.enabled) && z.push((0, l.jsx)(T.default, {

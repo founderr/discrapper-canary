@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return k
+    return B
   }
 }), s("222007");
 var a = s("37983"),
@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("446674"),
-  u = s("77078"),
-  o = s("913144"),
+  o = s("77078"),
+  u = s("913144"),
   d = s("850068"),
   c = s("583367"),
   _ = s("775433"),
@@ -38,19 +38,19 @@ var a = s("37983"),
   b = s("646718"),
   j = s("49111"),
   G = s("265921"),
-  k = function(e) {
+  B = function(e) {
     let {
       entrypoint: t = b.PremiumMarketingEntrypoints.UserSettings
     } = e, s = (0, f.useBlockedPaymentsConfig)(), {
       AnalyticsLocationProvider: r,
-      sourceAnalyticsLocations: k
+      sourceAnalyticsLocations: B
     } = (0, T.default)(I.default.PREMIUM_MARKETING), {
-      enabled: B
-    } = (0, M.default)(), y = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), H = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), K = (0, x.usePremiumTrialOffer)(), W = (0, L.usePremiumDiscountOffer)(), F = (0, S.useSubscriptionPlansLoaded)(), [w, V] = n.useState(!0), Y = n.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), Q = (0, h.useLocalizedPromoQuery)(), X = null == Q ? void 0 : Q.countryCode, J = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
+      enabled: k
+    } = (0, M.default)(), y = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), H = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), K = (0, x.usePremiumTrialOffer)(), W = (0, L.usePremiumDiscountOffer)(), F = (0, S.useSubscriptionPlansLoaded)(), [w, V] = n.useState(!0), Y = n.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), Q = (0, h.useLocalizedPromoQuery)(), X = null == Q ? void 0 : Q.countryCode, Z = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
     n.useEffect(() => {
-      !J && d.getNitroAffinity()
-    }, [J]), n.useEffect(() => {
-      o.default.wait(async () => {
+      !Z && d.getNitroAffinity()
+    }, [Z]), n.useEffect(() => {
+      u.default.wait(async () => {
         let e = Date.now();
         await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(X, null, j.RevenueSurfaces.DISCOVERY)]), Y.current = Date.now() - e, V(!1)
       })
@@ -61,15 +61,15 @@ var a = s("37983"),
       }
     }, [s, K, W]), n.useEffect(() => {
       !w && p.default.track(j.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
-        location_stack: k,
+        location_stack: B,
         load_duration_ms: Y.current
       })
-    }, [k, w]);
-    let Z = (0, l.useStateFromStores)([A.default], () => A.default.enabled);
-    if (Z) return (0, a.jsx)(E.default, {});
+    }, [B, w]);
+    let J = (0, l.useStateFromStores)([A.default], () => A.default.enabled);
+    if (J) return (0, a.jsx)(E.default, {});
     if (s) return (0, a.jsx)(R.BlockedPaymentsContentSettings, {});
     let q = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
-    return q && z && !B ? (0, a.jsx)(r, {
+    return q && z && !k ? (0, a.jsx)(r, {
       children: (0, a.jsx)(U.default, {})
     }) : y && F && !w ? (0, a.jsx)(r, {
       children: (0, a.jsx)(D.default, {
@@ -77,6 +77,6 @@ var a = s("37983"),
       })
     }) : (0, a.jsx)("div", {
       className: i(G.container, G.loading),
-      children: (0, a.jsx)(u.Spinner, {})
+      children: (0, a.jsx)(o.Spinner, {})
     })
   }

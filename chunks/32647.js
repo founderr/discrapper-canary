@@ -54,8 +54,8 @@ var l = n("37983"),
       onTab: Y,
       onEnter: z,
       onSubmit: J,
-      maybeShowAutocomplete: q,
-      hideAutocomplete: Z,
+      maybeShowAutocomplete: Z,
+      hideAutocomplete: q,
       moveSelection: X,
       spellcheckEnabled: Q,
       canUseCommands: $,
@@ -175,18 +175,18 @@ var l = n("37983"),
       onEnter: z,
       allowNewLines: el,
       submit: e_,
-      hideAutocomplete: Z,
+      hideAutocomplete: q,
       moveSelection: X
     }), {
       handlePaste: eN,
       handleGlobalPaste: ex
     } = (0, _.default)(ev, eg, G), eO = i.useCallback(e => {
-      null == q || q()
-    }, [q]), eR = i.useCallback(e => {
+      null == Z || Z()
+    }, [Z]), eR = i.useCallback(e => {
       e !== em.current ? eE.current && (null == F || F(null, (0, E.toTextValue)(e, {
         mode: "raw"
-      }), e)) : eE.current && q()
-    }, [q, F]);
+      }), e)) : eE.current && Z()
+    }, [Z, F]);
     i.useLayoutEffect(() => {
       eh.current && (em.current = n, eS(ev, "parent", {
         value: n

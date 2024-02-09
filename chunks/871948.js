@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("446674"),
-  u = s("77078"),
-  o = s("106435"),
+  o = s("77078"),
+  u = s("106435"),
   d = s("446488"),
   c = s("52904"),
   _ = s("782340"),
@@ -22,7 +22,7 @@ function I(e) {
   } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), r = s.map((e, t) => (0, a.jsx)(T, {
     affinity: e,
     applyMask: t !== s.length - 1
-  }, e.id)), i = e => null != e.globalName ? e.globalName : e.username, o = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+  }, e.id)), i = e => null != e.globalName ? e.globalName : e.username, u = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
     username: i(s[2])
   }) : 2 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_2.format({
     username: i(s[1]),
@@ -38,14 +38,14 @@ function I(e) {
     }), (0, a.jsx)("div", {
       className: E.textContainer,
       children: (0, a.jsx)(function() {
-        return t ? (0, a.jsx)(u.Text, {
+        return t ? (0, a.jsx)(o.Text, {
           variant: "text-lg/medium",
           color: "always-white",
-          children: o
-        }) : (0, a.jsx)(u.Heading, {
+          children: u
+        }) : (0, a.jsx)(o.Heading, {
           variant: "heading-xl/medium",
           color: "always-white",
-          children: o
+          children: u
         })
       }, {})
     })]
@@ -59,12 +59,12 @@ function T(e) {
   } = e, {
     avatarSrc: n,
     eventHandlers: r
-  } = (0, o.default)({
+  } = (0, u.default)({
     user: t,
     size: c.AvatarSizes.SIZE_32,
     animateOnHover: !0
   });
-  return (0, a.jsx)(u.Avatar, {
+  return (0, a.jsx)(o.Avatar, {
     className: i(E.icon, {
       [E.mask]: s
     }),

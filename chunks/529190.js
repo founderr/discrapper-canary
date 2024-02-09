@@ -57,7 +57,7 @@ var U = i.forwardRef(function(e, t) {
     commands: Y,
     filteredSectionId: z,
     scrollDown: J,
-    filterSection: q
+    filterSection: Z
   } = T.useDiscovery(n, {
     commandType: d.ApplicationCommandType.CHAT,
     builtIns: a ? v.BuiltInCommandFilter.ONLY_TEXT : v.BuiltInCommandFilter.ALLOW,
@@ -66,7 +66,7 @@ var U = i.forwardRef(function(e, t) {
     placeholderCount: 7,
     limit: x.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
-  }), Z = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
+  }), q = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
     activeCategoryIndex: B,
     isScrolling: r,
     listRef: w,
@@ -83,7 +83,7 @@ var U = i.forwardRef(function(e, t) {
     let t = V.length,
       n = K.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
       l = 48 * t + n * P - 512;
-    W && e + 420 > l && J(), Z(e), j(), o.current = e
+    W && e + 420 > l && J(), q(e), j(), o.current = e
   };
   i.useEffect(() => {
     X(o.current)
@@ -104,9 +104,9 @@ var U = i.forwardRef(function(e, t) {
   let ee = i.useCallback(e => {
       if (e.id === z || e.id === x.BuiltInSectionId.FRECENCY) {
         var t;
-        q(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
-      } else q(e.id)
-    }, [q, z]),
+        Z(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
+      } else Z(e.id)
+    }, [Z, z]),
     et = i.useCallback((e, t, l) => {
       C.setActiveCommand({
         channelId: n.id,

@@ -61,7 +61,7 @@ function B(e) {
     return null === (e = N.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
   }), {
     AnalyticsLocationProvider: J
-  } = (0, E.default)(h.default.PROFILE_POPOUT), q = (0, r.useStateFromStores)([v.default], () => null != n ? v.default.getGuild(n) : null), Z = (0, r.useStateFromStores)([T.default], () => null != n ? T.default.getMember(n, t.id) : null), X = t.isNonUserBot(), {
+  } = (0, E.default)(h.default.PROFILE_POPOUT), Z = (0, r.useStateFromStores)([v.default], () => null != n ? v.default.getGuild(n) : null), q = (0, r.useStateFromStores)([T.default], () => null != n ? T.default.getMember(n, t.id) : null), X = t.isNonUserBot(), {
     activity: Q,
     customStatusActivity: $,
     status: ee,
@@ -102,15 +102,15 @@ function B(e) {
   return i.useEffect(() => {
     null == B || B(null == K ? void 0 : K.current)
   }, [K, B]), i.useEffect(() => {
-    if (!el)((null == Q ? void 0 : Q.application_id) == null || null != ed) && (null == n || (null == Z ? void 0 : Z.fullProfileLoadedTimestamp) != null) && (function() {
+    if (!el)((null == Q ? void 0 : Q.application_id) == null || null != ed) && (null == n || (null == q ? void 0 : q.fullProfileLoadedTimestamp) != null) && (function() {
       var e;
       let l, i, s;
       null != Q && (l = Q.party, i = Q.assets, s = null != Q.application_id ? g.default.getApplication(Q.application_id) : null);
       let r = ee;
       ee === k.StatusTypes.ONLINE && (r = et ? k.AnalyticsUserStatusTypes.ONLINE_MOBILE : k.AnalyticsUserStatusTypes.ONLINE_DESKTOP);
-      let o = null != Z ? {
-          has_nickname: !!(null == Z ? void 0 : Z.nick),
-          has_guild_member_avatar: !!(null == Z ? void 0 : Z.avatar),
+      let o = null != q ? {
+          has_nickname: !!(null == q ? void 0 : q.nick),
+          has_guild_member_avatar: !!(null == q ? void 0 : q.avatar),
           has_guild_member_banner: !!(null == W ? void 0 : W.isUsingGuildMemberBanner()),
           has_guild_member_bio: !!(null == W ? void 0 : W.isUsingGuildMemberBio())
         } : {},
@@ -145,7 +145,7 @@ function B(e) {
         ...V
       })
     }(), ei(!0))
-  }, [Z, null == Q ? void 0 : Q.application_id, ed, el, n]), (0, l.jsx)(J, {
+  }, [q, null == Q ? void 0 : Q.application_id, ed, el, n]), (0, l.jsx)(J, {
     children: (0, l.jsx)(u.default, {
       section: k.AnalyticsSections.PROFILE_POPOUT,
       children: (0, l.jsx)(o.Dialog, {
@@ -188,8 +188,8 @@ function B(e) {
               customStatusActivity: $,
               displayProfile: W,
               user: t,
-              guild: q,
-              guildMember: Z,
+              guild: Z,
+              guildMember: q,
               channelId: a,
               onClose: y,
               setNote: s,

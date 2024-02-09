@@ -50,8 +50,8 @@ let B = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
   Y = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
   z = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
   J = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-  q = Y + 2 * J,
-  Z = z + 2 * J,
+  Z = Y + 2 * J,
+  q = z + 2 * J,
   X = s(x.trackStickerSearchEmpty, 200),
   Q = s(x.trackStickerSearchResultsViewed, 200),
   $ = i.forwardRef(function(e, t) {
@@ -115,7 +115,7 @@ let B = (0, y.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         listWidth: eu,
         listPaddingRight: V,
         stickerNodeMargin: ev ? K : W,
-        stickerNodeWidth: ev ? q : Z
+        stickerNodeWidth: ev ? Z : q
       }),
       ex = i.useCallback((e, t) => {
         let {

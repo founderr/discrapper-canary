@@ -50,8 +50,8 @@ var l = n("37983"),
   Y = n("991170"),
   z = n("773336"),
   J = n("545054"),
-  q = n("850391"),
-  Z = n("743825"),
+  Z = n("850391"),
+  q = n("743825"),
   X = n("231868"),
   Q = n("834725"),
   $ = n("537566"),
@@ -95,8 +95,8 @@ var l = n("37983"),
       canMentionRoles: eY,
       canMentionChannels: ez,
       maxCharacterCount: eJ,
-      showRemainingCharsAfterCount: eq,
-      allowNewLines: eZ = !0,
+      showRemainingCharsAfterCount: eZ,
+      allowNewLines: eq = !0,
       characterCountClassName: eX,
       "aria-describedby": eQ,
       "aria-labelledby": e$,
@@ -161,7 +161,7 @@ var l = n("37983"),
         isPendingMember: s,
         ...r
       }
-    }(eL, eP, tn, eO), td = eP.toolbarType === q.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eP.commands) || void 0 === a ? void 0 : a.enabled) || !eb || ev !== es.COMMAND_SENTINEL, tp = (0, P.default)(), {
+    }(eL, eP, tn, eO), td = eP.toolbarType === Z.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eP.commands) || void 0 === a ? void 0 : a.enabled) || !eb || ev !== es.COMMAND_SENTINEL, tp = (0, P.default)(), {
       isSubmitButtonEnabled: tm,
       fontSize: th
     } = (0, p.useStateFromStoresObject)([E.default], () => ({
@@ -281,7 +281,7 @@ var l = n("37983"),
     }();
     let tA = (eE = tT, eg = eP, eS = e5, i.useCallback(e => {
       var t, n;
-      eg === q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eS.current) || void 0 === n || n.insertGIF(e) : eE(e.url, void 0, void 0, !0), (0, x.closeExpressionPicker)(), null === (t = eS.current) || void 0 === t || t.focus()
+      eg === Z.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eS.current) || void 0 === n || n.insertGIF(e) : eE(e.url, void 0, void 0, !0), (0, x.closeExpressionPicker)(), null === (t = eS.current) || void 0 === t || t.focus()
     }, [eS, eE, eg]));
     let tN = (eC = e5, i.useCallback(function(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -410,8 +410,8 @@ var l = n("37983"),
         return s && (null === (i = t.stickers) || void 0 === i ? void 0 : i.autoSuggest) && !o && (null === (a = l.current) || void 0 === a ? void 0 : a.isVisible()) !== !0 && !__OVERLAY__ && null != n
       }(eL, eP, eI, tI),
       tJ = (0, y.useShouldShowPTONotice)(eL),
-      tq = null != tn || null != ek || tJ,
-      tZ = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
+      tZ = null != tn || null != ek || tJ,
+      tq = !!(null === (eu = eP.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
     return (0, l.jsx)(N.EventEmitterProvider, {
       value: tg,
       children: (0, l.jsxs)(e3, {
@@ -445,7 +445,7 @@ var l = n("37983"),
               [eo.scrollableContainer]: !0,
               [eo.themedBackground]: !e4,
               [eo.webkit]: "Blink" === platform.layout,
-              [eo.hasConnectedBar]: tq
+              [eo.hasConnectedBar]: tZ
             }),
             children: [(0, l.jsx)(X.default, {
               channelId: eL.id,
@@ -457,14 +457,14 @@ var l = n("37983"),
             }), (0, l.jsxs)("div", {
               className: s(eo.inner, {
                 [eo.innerDisabled]: tH,
-                [eo.sansAttachButton]: eP !== q.ChatInputTypes.EDIT && (null != tV || tH && null == tV || ti),
-                [eo.sansAttachButtonCreateThread]: eP === q.ChatInputTypes.THREAD_CREATION,
-                [eo.sansAttachButtonCreatePost]: eP === q.ChatInputTypes.CREATE_FORUM_POST
+                [eo.sansAttachButton]: eP !== Z.ChatInputTypes.EDIT && (null != tV || tH && null == tV || ti),
+                [eo.sansAttachButtonCreateThread]: eP === Z.ChatInputTypes.THREAD_CREATION,
+                [eo.sansAttachButtonCreatePost]: eP === Z.ChatInputTypes.CREATE_FORUM_POST
               }),
               children: [tV, tK, (0, l.jsx)(m.FocusRing, {
                 ringTarget: e6,
                 ringClassName: eo.focusRing,
-                children: (0, l.jsx)(Z.default, {
+                children: (0, l.jsx)(q.default, {
                   ref: e5,
                   id: eN,
                   focused: eb,
@@ -481,7 +481,7 @@ var l = n("37983"),
                   canPasteFiles: tr,
                   uploadPromptCharacterCount: ea.MAX_MESSAGE_LENGTH_PREMIUM,
                   maxCharacterCount: null != eJ ? eJ : tp,
-                  allowNewLines: eZ,
+                  allowNewLines: eq,
                   "aria-describedby": eQ,
                   onChange: ew,
                   onResize: tL,
@@ -500,8 +500,8 @@ var l = n("37983"),
                   spellcheckEnabled: tE,
                   canOnlyUseTextCommands: tB,
                   className: s({
-                    [eo.textAreaThreadCreation]: eP === q.ChatInputTypes.THREAD_CREATION,
-                    [eo.profileBioInput]: eP === q.ChatInputTypes.PROFILE_BIO_INPUT
+                    [eo.textAreaThreadCreation]: eP === Z.ChatInputTypes.THREAD_CREATION,
+                    [eo.profileBioInput]: eP === Z.ChatInputTypes.PROFILE_BIO_INPUT
                   }, eA),
                   "aria-labelledby": e$
                 })
@@ -543,10 +543,10 @@ var l = n("37983"),
             type: eP,
             textValue: ev,
             className: s(eX, {
-              [eo.indentCharacterCount]: tZ
+              [eo.indentCharacterCount]: tq
             }),
             maxCharacterCount: eJ,
-            showRemainingCharsAfterCount: eq
+            showRemainingCharsAfterCount: eZ
           }) : null, tz ? (0, l.jsx)(R.default, {
             editorRef: e5,
             channel: eL,

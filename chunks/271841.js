@@ -134,15 +134,15 @@ function p(e) {
     onMouseEnter: P,
     onMouseLeave: M,
     onKeyDown: U,
-    children: w,
-    rel: b,
+    children: b,
+    rel: w,
     buttonRef: G,
     focusProps: F,
     "aria-label": k,
     submittingStartedLabel: B,
     submittingFinishedLabel: x,
-    ...H
-  } = e, V = I || T, W = V && (null != P || null != M), Y = function(e, t) {
+    ...V
+  } = e, H = I || T, W = H && (null != P || null != M), Y = function(e, t) {
     var n, i, r, o;
     let s = null == e ? void 0 : e.offset;
     if (t === f.LINK || t === f.BLANK) return s;
@@ -162,12 +162,12 @@ function p(e) {
     ...F,
     offset: Y,
     children: (0, i.jsxs)("button", {
-      ...V ? null : H,
+      ...H ? null : V,
       "aria-label": k,
       "aria-busy": !!T || void 0,
       ref: G,
-      onClick: V ? e => e.preventDefault() : O,
-      onDoubleClick: V ? e => e.preventDefault() : L,
+      onClick: H ? e => e.preventDefault() : O,
+      onDoubleClick: H ? e => e.preventDefault() : L,
       onMouseUp: I ? void 0 : y,
       onMouseDown: I ? void 0 : D,
       onMouseEnter: P,
@@ -176,7 +176,7 @@ function p(e) {
       type: v,
       disabled: I,
       style: A,
-      rel: b,
+      rel: w,
       className: s(C, m({
         look: t,
         color: n,
@@ -194,7 +194,7 @@ function p(e) {
         itemClassName: _.spinnerItem
       }) : null, (0, i.jsx)("div", {
         className: s(_.contents, R),
-        children: w
+        children: b
       })]
     })
   });

@@ -65,7 +65,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       messageId: W,
       isBurstReaction: Y,
       listHeaderClassName: z
-    } = e, J = (0, p.useAnalyticsContext)(), q = i.useRef(L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), Z = i.useMemo(() => "" !== n ? d.default.convert.toCodePoint(n) : "", [n]), X = i.useCallback(function(e) {
+    } = e, J = (0, p.useAnalyticsContext)(), Z = i.useRef(L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), q = i.useMemo(() => "" !== n ? d.default.convert.toCodePoint(n) : "", [n]), X = i.useCallback(function(e) {
       let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         l = new Set(t),
         i = t.has(e);
@@ -80,8 +80,8 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         columnIndex: t,
         visibleRowIndex: n
       } = e, l = e.type === x.EmojiGridItemTypes.EMOJI ? e.emoji.allNamesString : e.name;
-      q.current !== L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(q.current), q.current = window.requestAnimationFrame(() => {
-        m.EmojiPickerStore.setInspectedExpressionPosition(t, n, E.InspectedExpressionChangeSource.MOUSE_EVENT), m.EmojiPickerStore.setSearchPlaceholder(l), q.current = L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
+      Z.current !== L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(Z.current), Z.current = window.requestAnimationFrame(() => {
+        m.EmojiPickerStore.setInspectedExpressionPosition(t, n, E.InspectedExpressionChangeSource.MOUSE_EVENT), m.EmojiPickerStore.setSearchPlaceholder(l), Z.current = L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
       })
     }, []), $ = (0, u.useStateFromStores)([C.HotspotStore], () => C.HotspotStore.hasHotspot(C.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), ee = i.useMemo(() => o.memoize((e, t) => {
       let n = a[e],
@@ -89,7 +89,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       return (0, l.jsx)(R.default, {
         emojiDescriptors: n,
         emojiSize: r,
-        surrogateCodePoint: Z,
+        surrogateCodePoint: q,
         onInspect: Q,
         onSelect: c,
         getEmojiItemProps: T,
@@ -105,7 +105,7 @@ let U = (0, _.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         messageId: W,
         isBurstReaction: Y
       }, e)
-    }), [a, h, r, Z, Q, c, T, v, _, b, V, $, K, W, Y]);
+    }), [a, h, r, q, Q, c, T, v, _, b, V, $, K, W, Y]);
     i.useEffect(() => () => {
       var e, t;
       return null === (t = ee.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)

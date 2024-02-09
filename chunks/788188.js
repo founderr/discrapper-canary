@@ -10,8 +10,8 @@ var n = s("90915"),
   r = s("446674"),
   i = s("77078"),
   l = s("901582"),
-  u = s("86621"),
-  o = s("984376"),
+  o = s("86621"),
+  u = s("984376"),
   d = s("812204"),
   c = s("685665"),
   _ = s("539938"),
@@ -25,7 +25,7 @@ var n = s("90915"),
   m = s("309285");
 let N = r.default.connectStores([I.default], () => ({
   user: I.default.getCurrentUser()
-}))((0, o.default)((0, u.default)(e => {
+}))((0, u.default)((0, o.default)(e => {
   let {
     AnalyticsLocationProvider: t
   } = (0, c.default)(d.default.HOME_PAGE_PREMIUM_TAB), {

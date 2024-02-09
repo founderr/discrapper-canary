@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("77078"),
-  u = s("411691"),
-  o = s("367226"),
+  o = s("411691"),
+  u = s("367226"),
   d = s("628550"),
   c = s("598739"),
   _ = s("558566"),
@@ -22,8 +22,8 @@ var a = s("37983"),
       noBackground: r = !1,
       leftAlignHeaders: I = !1,
       showAllPerksButton: T
-    } = e, f = n.useRef(null), S = (0, o.useShouldScrollToWhatsNew)(), R = (0, u.default)("perks-discoverability");
-    (0, o.useClearNewBadge)();
+    } = e, f = n.useRef(null), S = (0, u.useShouldScrollToWhatsNew)(), R = (0, o.default)("perks-discoverability");
+    (0, u.useClearNewBadge)();
     let A = s === c.PerksDiscoverabilityVariants.WHATS_NEW;
     n.useEffect(() => {
       let e = f.current;

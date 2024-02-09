@@ -10,8 +10,8 @@ var n = s("414456"),
   r = s.n(n),
   i = s("907002"),
   l = s("65597"),
-  u = s("206230"),
-  o = s("154889"),
+  o = s("206230"),
+  u = s("154889"),
   d = s("917247"),
   c = s("218435"),
   _ = s("881155"),
@@ -24,7 +24,7 @@ var n = s("414456"),
       isVisible: n,
       isFullscreen: f,
       subscriptionTier: S
-    } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, A = (0, o.usePremiumDiscountOffer)(), m = (0, o.discountOfferHasTier)(A, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.default)([u.default], () => u.default.useReducedMotion), p = (0, i.useSpring)({
+    } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, A = (0, u.usePremiumDiscountOffer)(), m = (0, u.discountOfferHasTier)(A, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.default)([o.default], () => o.default.useReducedMotion), p = (0, i.useSpring)({
       transform: n ? "translateY(-100%)" : "translateY(0%)",
       opacity: n ? 1 : 0,
       config: {

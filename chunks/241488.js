@@ -128,12 +128,12 @@ var H = i.memo(function(e) {
     channel: Y,
     type: z,
     position: J,
-    align: q,
-    positionLayerClassName: Z,
+    align: Z,
+    positionLayerClassName: q,
     closeOnModalOuterClick: X = !1,
     parentModalKey: Q,
     customUploadFilters: $
-  } = e, ee = i.useRef(null), et = i.useRef(!1), en = i.useRef(), el = i.useRef(null), ei = "left" === q ? E.ResizeOrientation.HORIZONTAL_RIGHT : E.ResizeOrientation.HORIZONTAL_LEFT, {
+  } = e, ee = i.useRef(null), et = i.useRef(!1), en = i.useRef(), el = i.useRef(null), ei = "left" === Z ? E.ResizeOrientation.HORIZONTAL_RIGHT : E.ResizeOrientation.HORIZONTAL_LEFT, {
     drawerWidth: ea,
     handleDrawerResizeHandleMouseDown: es
   } = B({
@@ -184,15 +184,15 @@ var H = i.memo(function(e) {
   let eg = (null === (t = z.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile && null != x,
     eS = (null === (n = z.stickers) || void 0 === n ? void 0 : n.allowSending) && null != V,
     eC = !(null === (a = z.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (eg || eS),
-    eT = "left" === q ? "right" : "left",
-    ev = null != Z ? Z : "left" === q ? w.positionLayerDefaultAlignLeft : w.positionLayerDefaultAlignRight;
+    eT = "left" === Z ? "right" : "left",
+    ev = null != q ? q : "left" === Z ? w.positionLayerDefaultAlignLeft : w.positionLayerDefaultAlignRight;
   return (0, l.jsx)(h.default, {
     section: b.AnalyticsSections.EXPRESSION_PICKER,
     children: (0, l.jsx)(O.AppReferencePositionLayer, {
       className: s(w.positionLayer, ev),
       reference: r,
       position: J,
-      align: q,
+      align: Z,
       spacing: 8,
       autoInvert: !0,
       children: e => {
@@ -210,7 +210,7 @@ var H = i.memo(function(e) {
             className: w.drawerSizingWrapper,
             style: {
               width: null == ea ? void 0 : ea,
-              [q]: 0
+              [Z]: 0
             },
             ref: el,
             children: [(0, l.jsx)("div", {

@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("77078"),
   i = s("895530"),
   l = s("437825"),
-  u = s("36694"),
-  o = s("530311"),
+  o = s("36694"),
+  u = s("530311"),
   d = s("824326"),
   c = s("833458"),
   _ = s("155207"),
@@ -81,7 +81,7 @@ let N = [{
     feature: R.SKUFeatureTypes.CLOUD_SAVES,
     getText: () => A.default.Messages.APPLICATION_STORE_CLOUD_SAVES,
     getTooltip: () => A.default.Messages.APPLICATION_STORE_CLOUD_SAVES_TOOLTIP,
-    IconComponent: o.default
+    IconComponent: u.default
   }, {
     feature: R.SKUFeatureTypes.SECURE_NETWORKING,
     getText: () => A.default.Messages.APPLICATION_STORE_SECURE_NETWORKING,
@@ -105,7 +105,7 @@ let N = [{
       }), (0, a.jsx)("span", {
         className: m.featureText,
         children: s
-      }), (0, a.jsx)(u.default, {
+      }), (0, a.jsx)(o.default, {
         className: m.checkmarkIcon
       })]
     })

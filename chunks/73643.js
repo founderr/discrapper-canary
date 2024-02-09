@@ -47,15 +47,15 @@ function _(e, t, n, o) {
       wrapSection: P,
       getAnchorId: M,
       paddingTop: U,
-      paddingBottom: w,
-      fade: b = !1,
+      paddingBottom: b,
+      fade: w = !1,
       customTheme: G = !1,
       chunkSize: F,
       style: k,
       innerId: B,
       innerRole: x,
-      innerAriaLabel: H,
-      innerAriaMultiselectable: V,
+      innerAriaLabel: V,
+      innerAriaMultiselectable: H,
       innerAriaOrientation: W,
       innerClassName: Y,
       innerTag: z = "div",
@@ -88,7 +88,7 @@ function _(e, t, n, o) {
       sidebarHeight: N,
       listHeaderHeight: C,
       paddingTop: U,
-      paddingBottom: w,
+      paddingBottom: b,
       chunkSize: F,
       getScrollerState: $,
       getAnchorId: M
@@ -168,7 +168,7 @@ function _(e, t, n, o) {
       onScroll: eE,
       className: s(S, {
         [e]: !0,
-        [t]: b,
+        [t]: w,
         [n]: G,
         [d.scrolling]: X
       }),
@@ -177,8 +177,8 @@ function _(e, t, n, o) {
       children: [r.useMemo(() => (0, i.jsx)(z, {
         id: B,
         role: x,
-        "aria-label": H,
-        "aria-multiselectable": V,
+        "aria-label": V,
+        "aria-multiselectable": H,
         "aria-orientation": W,
         style: {
           height: et
@@ -232,7 +232,7 @@ function _(e, t, n, o) {
             spacerTop: ee
           })
         })
-      }), [B, x, H, V, W, Y, z, et, en, R, O, L, y, P, ee]), r.useMemo(() => (function(e) {
+      }), [B, x, V, H, W, Y, z, et, en, R, O, L, y, P, ee]), r.useMemo(() => (function(e) {
         let {
           renderSidebar: t,
           sidebarHeight: n,

@@ -10,8 +10,8 @@ var n = s("414456"),
   r = s.n(n),
   i = s("77078"),
   l = s("79112"),
-  u = s("423487"),
-  o = s("701909"),
+  o = s("423487"),
+  u = s("701909"),
   d = s("719923"),
   c = s("182650"),
   _ = s("646718"),
@@ -38,7 +38,7 @@ var n = s("414456"),
         [T.centerText]: S
       }),
       type: i.Card.Types.CUSTOM,
-      children: [(0, a.jsx)(u.default, {
+      children: [(0, a.jsx)(o.default, {
         className: r(T.icon, {
           [T.lightThemeColorOnly]: S || f
         })
@@ -46,7 +46,7 @@ var n = s("414456"),
         variant: "text-sm/medium",
         color: S || f ? "always-white" : "text-normal",
         children: p ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
-          helpdeskArticle: o.default.getArticleURL(E.HelpdeskArticles.PREMIUM_DETAILS),
+          helpdeskArticle: u.default.getArticleURL(E.HelpdeskArticles.PREMIUM_DETAILS),
           onSubscriptionsClick: m
         }) : I.default.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
           subscriptionName: t,

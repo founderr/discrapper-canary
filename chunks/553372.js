@@ -104,7 +104,7 @@ var P = i.forwardRef(function(e, t) {
     name: Y,
     emojiId: z,
     emojiName: J
-  } = P, q = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), Z = (0, N.useSoundButtonContextMenu)(P, null == b ? void 0 : b.guild_id), {
+  } = P, Z = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, N.useSoundButtonContextMenu)(P, null == b ? void 0 : b.guild_id), {
     playSoundboardSound: X,
     previewSound: Q,
     isPlayingSound: $
@@ -130,7 +130,7 @@ var P = i.forwardRef(function(e, t) {
     eo = "sound-".concat(P.soundId),
     eu = (0, r.useListItem)(eo),
     ed = null != z || null != J,
-    ec = !(0, y.canUseSoundboardSound)(q, P, b),
+    ec = !(0, y.canUseSoundboardSound)(Z, P, b),
     ef = D || w && !ec;
 
   function ep(e) {
@@ -209,7 +209,7 @@ var P = i.forwardRef(function(e, t) {
         }
         F || X(H)
       },
-      onContextMenu: w && !ec ? Z : void 0,
+      onContextMenu: w && !ec ? q : void 0,
       children: [(0, l.jsxs)("div", {
         className: R.soundInfo,
         "aria-hidden": !0,

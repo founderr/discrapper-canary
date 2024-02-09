@@ -146,16 +146,16 @@ var K = e => {
       firstUnicodeCategoryOffsetTop: a,
       rowCountBySection: i
     }
-  }, [v]), [J, q] = i.useState(!0);
+  }, [v]), [J, Z] = i.useState(!0);
   i.useLayoutEffect(() => {
-    q(K >= 7)
+    Z(K >= 7)
   }, [K]);
-  let Z = i.useCallback(e => {
+  let q = i.useCallback(e => {
       var t;
       let n = null === (t = _.current) || void 0 === t ? void 0 : t.getListDimensions();
       if (null == n) return;
       let l = e + n.height;
-      l - k >= Y ? q(!1) : q(!0)
+      l - k >= Y ? Z(!1) : Z(!0)
     }, [Y]),
     X = i.useCallback(e => {
       var t;
@@ -185,7 +185,7 @@ var K = e => {
     store: h.EmojiPickerStore,
     categories: v,
     listPadding: L,
-    onScroll: Z,
+    onScroll: q,
     renderCategoryListItem: O,
     renderSection: $,
     rowCount: v.length,

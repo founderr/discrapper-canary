@@ -185,9 +185,9 @@ function W(e) {
   } = (0, f.default)(), [W, Y] = i.useState(null), z = (0, r.useStateFromStores)([S.default], () => S.default.getCurrentUser()), J = (0, r.useStateFromStores)([C.default], () => {
     var e;
     return C.default.getVoiceState(t, null !== (e = null == z ? void 0 : z.id) && void 0 !== e ? e : "")
-  }), q = (null == J ? void 0 : J.selfDeaf) || (null == J ? void 0 : J.mute) || (null == J ? void 0 : J.suppress), Z = (0, h.useExpressionPickerStore)(e => e.searchQuery), X = (0, T.useUID)(), {
+  }), Z = (null == J ? void 0 : J.selfDeaf) || (null == J ? void 0 : J.mute) || (null == J ? void 0 : J.suppress), q = (0, h.useExpressionPickerStore)(e => e.searchQuery), X = (0, T.useUID)(), {
     categories: Q
-  } = (0, L.default)(a, void 0, P), [$, ee] = i.useState([]), et = (0, L.useSearchCategories)(Q, $, Z), en = g.SoundboardPickerCollapsedSections.useSetting(), el = i.useMemo(() => new Set(en), [en]), ei = null == a, ea = x.default.canUseCustomCallSounds(z), es = i.useCallback(e => {
+  } = (0, L.default)(a, void 0, P), [$, ee] = i.useState([]), et = (0, L.useSearchCategories)(Q, $, q), en = g.SoundboardPickerCollapsedSections.useSetting(), el = i.useMemo(() => new Set(en), [en]), ei = null == a, ea = x.default.canUseCustomCallSounds(z), es = i.useCallback(e => {
     let t = !el.has(e);
     t ? el.add(e) : el.delete(e), g.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
   }, [el]), er = i.useCallback((e, t) => {
@@ -216,12 +216,12 @@ function W(e) {
     onSelectItem: eo,
     soundButtonProps: {
       channel: a,
-      interactive: ei ? ea : !q,
+      interactive: ei ? ea : !Z,
       forceSecondaryActions: ei,
       analyticsLocations: b
     },
     buttonOverlay: _
-  }, "row-".concat(t["aria-rowindex"])), [eo, a, q, p, b, ei, ea, _]), ed = i.useCallback((e, t) => {
+  }, "row-".concat(t["aria-rowindex"])), [eo, a, Z, p, b, ei, ea, _]), ed = i.useCallback((e, t) => {
     let n = "".concat(e.key);
     return (0, l.jsx)(H, {
       categoryInfo: e.categoryInfo,

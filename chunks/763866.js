@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return q
+    return Z
   }
 }), n("222007");
 var l = n("37983"),
@@ -51,11 +51,11 @@ var l = n("37983"),
   z = n("477691"),
   J = n("398664");
 
-function q(e) {
+function Z(e) {
   var t, n, a;
   let {
-    activity: q,
-    customStatusActivity: Z,
+    activity: Z,
+    customStatusActivity: q,
     user: X,
     displayProfile: Q,
     guild: $,
@@ -120,7 +120,7 @@ function q(e) {
     }) : null, (0, l.jsxs)(o.HeadingLevel, {
       children: [(0, l.jsx)(U.default, {
         className: Y.customStatusSection,
-        customStatusActivity: Z
+        customStatusActivity: q
       }), (0, l.jsx)(x.default, {
         className: Y.divider
       }), X.isClyde() && ey && null != $ ? !eN && eA ? eS && !eh ? (0, l.jsx)(o.Button, {
@@ -191,7 +191,7 @@ function q(e) {
             onClose: en,
             color: z.buttonColor
           }), (0, l.jsx)(R.default, {
-            activity: q,
+            activity: Z,
             user: X,
             guild: $,
             channelId: et,

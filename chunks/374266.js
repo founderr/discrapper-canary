@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("77078"),
-  u = s("895530"),
-  o = s("145131"),
+  o = s("895530"),
+  u = s("145131"),
   d = s("993105"),
   c = s("449008"),
   _ = s("773336"),
@@ -95,7 +95,7 @@ class m extends n.PureComponent {
     } = this.props, {
       selectedOperatingSystem: s
     } = this.state, n = Object.keys(t);
-    return 1 === n.length ? null : (0, a.jsxs)(o.default, {
+    return 1 === n.length ? null : (0, a.jsxs)(u.default, {
       className: f.tabs,
       children: [(0, a.jsx)("div", {
         className: f.separator
@@ -131,7 +131,7 @@ class m extends n.PureComponent {
       }).filter(c.isNotNullish);
     return (0, a.jsxs)("div", {
       className: f.requirements,
-      children: [(0, a.jsx)(u.default, {
+      children: [(0, a.jsx)(o.default, {
         tag: "h4",
         children: t
       }), n]
@@ -150,7 +150,7 @@ class m extends n.PureComponent {
   render() {
     return (0, a.jsxs)("div", {
       className: this.props.className,
-      children: [(0, a.jsx)(u.default, {
+      children: [(0, a.jsx)(o.default, {
         children: T.default.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS
       }), this.renderTabs(), this.renderBody()]
     })

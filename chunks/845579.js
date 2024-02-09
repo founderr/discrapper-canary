@@ -61,10 +61,10 @@ n.r(t), n.d(t, {
     return M
   },
   MessageRequestRestrictedGuildIds: function() {
-    return w
+    return b
   },
   MessageRequestRestrictedDefault: function() {
-    return b
+    return w
   },
   NonSpamRetrainingOptIn: function() {
     return G
@@ -82,10 +82,10 @@ n.r(t), n.d(t, {
     return x
   },
   ConvertEmoticons: function() {
-    return H
+    return V
   },
   MessageDisplayCompact: function() {
-    return V
+    return H
   },
   SoundboardSettings: function() {
     return W
@@ -311,8 +311,8 @@ let D = (0, l.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => 
     value: e
   })),
   U = [],
-  w = (0, l.defineProtoSetting)("privacy", "messageRequestRestrictedGuildIds", e => null != e ? e : U, e => e),
-  b = (0, l.defineProtoSetting)("privacy", "defaultMessageRequestRestricted", e => {
+  b = (0, l.defineProtoSetting)("privacy", "messageRequestRestrictedGuildIds", e => null != e ? e : U, e => e),
+  w = (0, l.defineProtoSetting)("privacy", "defaultMessageRequestRestricted", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => o.BoolValue.create({
@@ -347,13 +347,13 @@ let B = (0, l.defineProtoSetting)("privacy", "friendSourceFlags", e => {
   }, e => o.BoolValue.create({
     value: e
   })),
-  H = (0, l.defineProtoSetting)("textAndImages", "convertEmoticons", e => {
+  V = (0, l.defineProtoSetting)("textAndImages", "convertEmoticons", e => {
     var t;
     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
   }, e => o.BoolValue.create({
     value: e
   })),
-  V = (0, l.defineProtoSetting)("textAndImages", "messageDisplayCompact", e => {
+  H = (0, l.defineProtoSetting)("textAndImages", "messageDisplayCompact", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => o.BoolValue.create({

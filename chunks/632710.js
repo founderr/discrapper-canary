@@ -61,11 +61,11 @@ var i = n("414456"),
       Y = (0, C.default)(n),
       z = (0, p.isStageActivity)(n),
       J = K ? g.default.Align.END : g.default.Align.STRETCH,
-      q = Y || W ? g.default.Direction.HORIZONTAL : g.default.Direction.VERTICAL,
-      Z = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
+      Z = Y || W ? g.default.Direction.HORIZONTAL : g.default.Direction.VERTICAL,
+      q = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
       X = (0, u.useStateFromStores)([E.default, m.default], () => {
         var e;
-        return Z ? m.default.getChannel(null === (e = E.default.getVoiceStateForUser(i.id)) || void 0 === e ? void 0 : e.channelId) : null
+        return q ? m.default.getChannel(null === (e = E.default.getVoiceStateForUser(i.id)) || void 0 === e ? void 0 : e.channelId) : null
       });
     if ((0, T.default)(n)) t = [(0, l.jsx)(I.default, {
       look: w,
@@ -114,7 +114,7 @@ var i = n("414456"),
         applicationStream: s
       }, "watch-button");
       t = [e]
-    } else if (Z && null != X) {
+    } else if (q && null != X) {
       let e = (0, l.jsx)(A.default, {
         color: k,
         look: w,
@@ -152,11 +152,11 @@ var i = n("414456"),
       if (null == a && null == s && null == e && null == r) return null;
       t = [a, s, e, r]
     }
-    let Q = q === g.default.Direction.VERTICAL;
+    let Q = Z === g.default.Direction.VERTICAL;
     return (0, l.jsx)(g.default, {
       grow: 0,
       align: J,
-      direction: q,
+      direction: Z,
       wrap: Q ? g.default.Wrap.WRAP : g.default.Wrap.NO_WRAP,
       className: a(c, b.buttonsWrapper, Q ? b.vertical : b.horizontal),
       onClick: function(e) {

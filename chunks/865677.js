@@ -54,11 +54,11 @@ function F(e) {
     isEmbedded: W = !1
   } = e, {
     analyticsLocations: Y
-  } = (0, c.default)(), [z, J] = i.useState(!1), q = (0, L.default)({
+  } = (0, c.default)(), [z, J] = i.useState(!1), Z = (0, L.default)({
     channelId: K,
     userId: V.id,
     activity: t
-  }), Z = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), X = (0, a.useStateFromStores)([S.default, p.default, A.default, h.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, x.isLaunchable)({
+  }), q = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), X = (0, a.useStateFromStores)([S.default, p.default, A.default, h.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, x.isLaunchable)({
     LibraryApplicationStore: S.default,
     LaunchableGameStore: p.default,
     DispatchApplicationStore: A.default,
@@ -69,13 +69,13 @@ function F(e) {
       applicationId: n,
       channelId: l
     } = e;
-    return n === (null == t ? void 0 : t.application_id) && l === q
+    return n === (null == t ? void 0 : t.application_id) && l === Z
   })), $ = (0, a.useStateFromStores)([y.default], () => null != t && null != t.application_id && y.default.getState(t.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, a.useStateFromStores)([m.default, g.default, E.default, T.default, v.default, _.default, C.default], () => (0, M.default)({
     user: V,
     activity: t,
     application: ee,
-    channelId: q,
-    currentUser: Z,
+    channelId: Z,
+    currentUser: q,
     isEmbedded: W,
     ChannelStore: m.default,
     GuildStore: g.default,
@@ -112,11 +112,11 @@ function F(e) {
   }, eo = async () => {
     let e = !1;
     if (W) {
-      if (!et || null == q || null == t.application_id) return;
+      if (!et || null == Z || null == t.application_id) return;
       e = await (0, R.default)({
         applicationId: t.application_id,
         currentEmbeddedApplication: n,
-        activityChannelId: q,
+        activityChannelId: Z,
         locationObject: en.location,
         embeddedActivitiesManager: j.default,
         analyticsLocations: Y
