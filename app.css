@@ -70590,6 +70590,11 @@ input::-webkit-inner-spin-button {
     background: var(--bg-overlay-3, var(--background-secondary-alt))
 }
 
+.channel_fa3b45:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline
+}
+
 .userList_a7e652 {
     position: relative;
     border: 1px solid;

@@ -47,7 +47,7 @@ let c = (e, t, n) => {
     }, {
       w: o.activitySize,
       h: o.activitySize
-    }, 8) : (s.setColor("white"), s.drawPath(o.ACTIVITY_IMAGE_FALLBACK_PATH, {
+    }, 8) : (s.setColor("dark" === d ? "white" : "black"), s.drawPath(o.ACTIVITY_IMAGE_FALLBACK_PATH, {
       x: o.padding,
       y: o.padding
     }, !0, 2 + 2 / 3));
@@ -163,43 +163,59 @@ let c = (e, t, n) => {
     }, !0)
   },
   m = (e, t, n) => {
-    var l;
+    var l, i, a;
     let {
-      canvas: i
+      canvas: s
     } = e;
-    i.setSize({
-      w: 450,
-      h: 300
+    s.setSize({
+      w: o.canvasWidth,
+      h: o.canvasHeight
     });
     let {
-      color: a,
-      theme: s
+      color: r,
+      theme: d
     } = (0, u.getProfileInfo)(n, "black");
-    i.setColor(a), i.drawRoundedRect({
+    s.setColor(r), s.drawRoundedRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, 8, !0), i.setColor("dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), i.drawRoundedRect({
+    }, 8, !0), s.setColor("dark" === d ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), s.drawRoundedRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, 8, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.StreamPreview)) && i.drawRoundedImage(o.AssetTypes.StreamPreview, {
-      x: 8,
-      y: 54
+    }, 8, !0), s.setColor("dark" === d ? "white" : "black"), (null === (l = t.assets) || void 0 === l ? void 0 : l.large_image) != null ? s.drawRoundedImage(o.AssetTypes.AssetImage, {
+      x: o.padding,
+      y: o.padding
     }, {
-      w: 240,
-      h: 180
-    }, 8), i.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), i.setFont({
-      size: 16
-    }), i.drawText("".concat(n.username), {
-      x: 8,
-      y: 22
-    }, !0), i.drawText("".concat(t.name), {
-      x: 8,
-      y: 38
-    }, !0)
+      w: o.activitySize,
+      h: o.activitySize
+    }, 8) : (null === (i = s.assetMap) || void 0 === i ? void 0 : i.has(o.AssetTypes.ApplicationImage)) ? s.drawRoundedImage("ApplicationImage", {
+      x: o.padding,
+      y: o.padding
+    }, {
+      w: o.activitySize,
+      h: o.activitySize
+    }, 8) : s.drawPath(o.ACTIVITY_IMAGE_FALLBACK_PATH, {
+      x: o.padding,
+      y: o.padding
+    }, !0, 2 + 2 / 3);
+    let c = o.activitySize + o.padding + o.imagePadding;
+    s.setColor("dark" === d ? "white" : "rgb(6, 6, 7)"), s.setFont({
+      size: 16,
+      family: '"gg sans", sans-serif',
+      weight: 700
+    }), s.drawText("Streaming ".concat(t.name), {
+      x: c,
+      y: o.fontPadding + o.lineHeight * (null != t.timestamps ? 1 : 1.5)
+    }, !0, (null === (a = s.assetMap) || void 0 === a ? void 0 : a.has(o.AssetTypes.Platform)) ? o.titleMaxWidthPlatform : o.titleMaxWidthNoPlatform), null != t.timestamps && (s.setFont({
+      size: 14,
+      weight: 500
+    }), s.drawText("for ".concat((0, u.howLong)(t.timestamps)), {
+      x: c,
+      y: o.fontPadding + 2 * o.lineHeight
+    }, !0))
   };
 var h = e => {
   var t;
@@ -207,8 +223,8 @@ var h = e => {
     renderer: u,
     activity: h,
     user: E,
-    onComplete: S,
-    stream: g
+    onComplete: g,
+    stream: S
   } = e;
   {
     let e = n("800044").default;
@@ -220,11 +236,11 @@ var h = e => {
     } = C;
   T.setFont({
     truncate: !0
-  }), null != g ? m(C, h, E) : (0, a.default)(h) ? f(C, h, E) : (0, i.default)(h) && h.name === l.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? p(C, h, E) : c(C, h, E), (null === (t = T.assetMap) || void 0 === t ? void 0 : t.has(o.AssetTypes.Platform)) && T.drawImage(o.AssetTypes.Platform, {
+  }), null != S ? m(C, h, E) : (0, a.default)(h) ? f(C, h, E) : (0, i.default)(h) && h.name === l.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? p(C, h, E) : c(C, h, E), (null === (t = T.assetMap) || void 0 === t ? void 0 : t.has(o.AssetTypes.Platform)) && T.drawImage(o.AssetTypes.Platform, {
     x: o.canvasWidth - o.padding - o.platformSize,
     y: o.padding
   }, {
     w: o.platformSize,
     h: o.platformSize
-  }), S(C)
+  }), g(C)
 }

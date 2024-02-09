@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
   getProfileInfo: function() {
     return h
   }
-});
+}), n("222007");
 var l = n("509043"),
   i = n("376556"),
   a = n("429928"),
@@ -40,14 +40,13 @@ let d = e => "".concat(e).length < 13 ? 1e3 * e : e,
   },
   m = e => (0, a.default)(e) ? i.default.get(u.PlatformTypes.SPOTIFY) : (0, s.default)(e) ? i.default.get(u.PlatformTypes.XBOX) : null != e.platform && [u.ActivityGamePlatforms.PS4, u.ActivityGamePlatforms.PS5].includes(e.platform) ? i.default.get(u.PlatformTypes.PLAYSTATION) : e.name === i.default.get(u.PlatformTypes.LEAGUE_OF_LEGENDS).name ? i.default.get(u.PlatformTypes.LEAGUE_OF_LEGENDS) : void(e.type, u.ActivityTypes.PLAYING),
   h = (e, t) => {
-    var n, i;
-    let a = o.default.getUserProfile(e.id),
-      s = null == a ? void 0 : null === (n = a.themeColors) || void 0 === n ? void 0 : n[0],
-      u = null == a ? void 0 : null === (i = a.themeColors) || void 0 === i ? void 0 : i[1],
-      d = (0, r.getProfileTheme)(s),
-      c = null != u ? (0, l.int2hex)(u) : t;
+    var n;
+    let i = o.default.getUserProfile(e.id),
+      [a, s] = null !== (n = null == i ? void 0 : i.themeColors) && void 0 !== n ? n : [],
+      u = (0, r.getProfileTheme)(a),
+      d = null != s ? (0, l.int2hex)(s) : t;
     return {
-      color: c,
-      theme: c === t ? "dark" : d
+      color: d,
+      theme: d === t ? "dark" : u
     }
   }
