@@ -38,6 +38,9 @@ r.r(e), r.d(e, {
   },
   isCollectiblesGiftCode: function() {
     return P
+  },
+  getLogoSize: function() {
+    return g
   }
 }), r("222007");
 var n = r("917351"),
@@ -114,4 +117,5 @@ let c = t => (null == t ? void 0 : t.premiumType) != null,
       shopPreviews: n
     }
   },
-  P = t => t.applicationId === T.COLLECTIBLES_APPLICATION_ID
+  P = t => t.applicationId === T.COLLECTIBLES_APPLICATION_ID,
+  g = t => 3.8 * t

@@ -6,17 +6,14 @@ r.r(t), r.d(t, {
   getAssetSizeByHeight: function() {
     return E
   },
-  getLogoSize: function() {
+  getBackgroundGradient: function() {
     return f
   },
-  getBackgroundGradient: function() {
-    return _
-  },
   getConfettiSprites: function() {
-    return p
+    return C
   },
   CollectiblesDCToDisplayOptions: function() {
-    return I
+    return p
   }
 });
 var n, a = r("635058"),
@@ -28,8 +25,7 @@ var n, a = r("635058"),
   c = r("782340");
 let d = 1060,
   E = e => e * (0, o.default)(),
-  f = e => 3.8 * e,
-  _ = function(e) {
+  f = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
       {
         primary: r,
@@ -37,8 +33,8 @@ let d = 1060,
       } = e;
     return "linear-gradient(".concat(t, "deg, ").concat(r.toHslString(), ", ").concat(n.toHslString(), ")")
   },
-  A = l.COMMON_CONFETTI_SPRITES.filter((e, t) => 1 !== t && 7 !== t),
-  C = {
+  _ = l.COMMON_CONFETTI_SPRITES.filter((e, t) => 1 !== t && 7 !== t),
+  A = {
     ["".concat(a.CollectiblesCategorySkuId.FANTASY)]: [r("655029"), r("290216")],
     ["".concat(a.CollectiblesCategorySkuId.ANIME)]: [r("597704"), r("714293")],
     ["".concat(a.CollectiblesCategorySkuId.BREAKFAST)]: [r("286642"), r("94646")],
@@ -49,11 +45,11 @@ let d = 1060,
     ["".concat(a.CollectiblesCategorySkuId.CYBERPUNK)]: [r("424869"), r("714293")],
     ["".concat(a.CollectiblesCategorySkuId.LUNAR_NEW_YEAR)]: [r("424869"), r("714293")]
   },
-  p = e => {
+  C = e => {
     var t;
-    return null == e ? A : null !== (t = C[e]) && void 0 !== t ? t : A
+    return null == e ? _ : null !== (t = A[e]) && void 0 !== t ? t : _
   },
-  I = {
+  p = {
     [i.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE]: {
       tooltipText: () => c.default.Messages.COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE
     },
