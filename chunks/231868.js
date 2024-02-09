@@ -20,11 +20,11 @@ var l = n("37983"),
     let {
       channelId: n,
       chatInputType: m
-    } = e, [h, E] = i.useState(null), S = (0, a.useStateFromStores)([r.default], () => r.default.getStickerPreview(n, m.drafts.type));
-    return (null === (t = m.stickers) || void 0 === t ? void 0 : t.allowSending) && null != S && 0 !== S.length ? (0, l.jsxs)(l.Fragment, {
+    } = e, [h, E] = i.useState(null), g = (0, a.useStateFromStores)([r.default], () => r.default.getStickerPreview(n, m.drafts.type));
+    return (null === (t = m.stickers) || void 0 === t ? void 0 : t.allowSending) && null != g && 0 !== g.length ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: p.stickerPreviews,
-        children: S.map(e => (0, l.jsxs)("div", {
+        children: g.map(e => (0, l.jsxs)("div", {
           className: p.stickerPreviewContainer,
           children: [(0, l.jsx)(s.Clickable, {
             onFocus: () => E(e.id),

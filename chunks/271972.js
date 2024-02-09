@@ -19,9 +19,9 @@ var l, i, a = n("37983"),
   m = n("645406"),
   h = n("49111"),
   E = n("782340"),
-  S = n("864147");
+  g = n("864147");
 
-function g(e) {
+function S(e) {
   e.stopPropagation()
 }(l = i || (i = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.CLIP = 2] = "CLIP";
 var C = s.forwardRef(function(e, t) {
@@ -70,23 +70,23 @@ var C = s.forwardRef(function(e, t) {
           null == v || v(e)
         }
       },
-      className: o(S.upload, i, {
-        [S.sizeClip]: 2 === _
+      className: o(g.upload, i, {
+        [g.sizeClip]: 2 === _
       }),
       ref: t,
       children: (0, a.jsxs)("div", {
-        className: S.uploadContainer,
+        className: g.uploadContainer,
         children: [s, R ? (0, a.jsx)("div", {
-          className: S.actionBarContainer,
+          className: g.actionBarContainer,
           children: (0, a.jsx)("div", {
-            className: o(S.actionBar, {
-              [S.smallActionBar]: O
+            className: o(g.actionBar, {
+              [g.smallActionBar]: O
             }),
-            onContextMenu: g,
+            onContextMenu: S,
             "aria-label": E.default.Messages.ATTACHMENT_UTILITIES,
             children: (0, a.jsx)(f.default, {
               className: o({
-                [S.miniPopover]: O
+                [g.miniPopover]: O
               }),
               children: r
             })

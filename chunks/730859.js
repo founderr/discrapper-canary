@@ -23,9 +23,9 @@ function m(e) {
     users: r,
     guildId: m,
     onFocus: h
-  } = e, [E, S] = i.useState(!1);
+  } = e, [E, g] = i.useState(!1);
 
-  function g() {
+  function S() {
     return (0, l.jsx)(u.Dialog, {
       className: p.popoutWrapper,
       children: (0, l.jsx)(u.Scroller, {
@@ -43,7 +43,7 @@ function m(e) {
               user: e
             })
           }, {
-            onClose: () => S(!1)
+            onClose: () => g(!1)
           })
         }, e.id))
       })
@@ -66,14 +66,14 @@ function m(e) {
         }).value(),
         t = r.length - a;
       return t > 0 && (e[e.length - 1] = (0, l.jsx)(u.Popout, {
-        renderPopout: g,
+        renderPopout: S,
         shouldShow: E,
         position: "bottom",
-        onRequestClose: () => S(!1),
+        onRequestClose: () => g(!1),
         children: () => (0, l.jsxs)(u.Button, {
           className: s(p.avatar, p.overflow),
           onFocus: h,
-          onClick: () => S(!0),
+          onClick: () => g(!0),
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
           children: ["+", t + 1]

@@ -24,8 +24,8 @@ var i = n("414456"),
       onKeyDown: m,
       onFocus: h,
       autoFocus: E,
-      searchBarRef: S,
-      hasTabWrapper: g,
+      searchBarRef: g,
+      hasTabWrapper: S,
       diversitySurrogate: C,
       isBurstReaction: T,
       onBurstReactionToggle: v,
@@ -36,7 +36,7 @@ var i = n("414456"),
         gridNavigatorId: d.GRID_NAVIGATOR_ID,
         onKeyDown: m,
         className: f.searchBar,
-        ref: S,
+        ref: g,
         isFullRow: n === c.EmojiIntention.COMMUNITY_CONTENT_ONLY,
         onFocus: h,
         autoFocus: E,
@@ -48,9 +48,9 @@ var i = n("414456"),
           onClick: v
         })
       }) : null, n === c.EmojiIntention.COMMUNITY_CONTENT_ONLY ? null : null != t ? t : (0, l.jsx)(o.default, {
-        searchBarRef: S,
+        searchBarRef: g,
         className: f.diversitySelector,
-        hasTabWrapper: g,
+        hasTabWrapper: S,
         selectedSurrogate: C
       })]
     });

@@ -1,222 +1,222 @@
-if (n("808653"), n("424973"), !i) var i = {
-  map: function(t, e) {
+if (n("808653"), n("424973"), !l) var l = {
+  map: function(e, t) {
     var n = {};
-    return e ? t.map(function(t, i) {
-      return n.index = i, e.call(n, t)
-    }) : t.slice()
+    return t ? e.map(function(e, l) {
+      return n.index = l, t.call(n, e)
+    }) : e.slice()
   },
-  naturalOrder: function(t, e) {
-    return t < e ? -1 : t > e ? 1 : 0
+  naturalOrder: function(e, t) {
+    return e < t ? -1 : e > t ? 1 : 0
   },
-  sum: function(t, e) {
+  sum: function(e, t) {
     var n = {};
-    return t.reduce(e ? function(t, i, r) {
-      return n.index = r, t + e.call(n, i)
-    } : function(t, e) {
-      return t + e
+    return e.reduce(t ? function(e, l, i) {
+      return n.index = i, e + t.call(n, l)
+    } : function(e, t) {
+      return e + t
     }, 0)
   },
-  max: function(t, e) {
-    return Math.max.apply(null, e ? i.map(t, e) : t)
+  max: function(e, t) {
+    return Math.max.apply(null, t ? l.map(e, t) : e)
   }
 };
-var r = function() {
-  var t = 3;
+var i = function() {
+  var e = 3;
 
-  function e(t, e, n) {
-    return (t << 10) + (e << 5) + n
+  function t(e, t, n) {
+    return (e << 10) + (t << 5) + n
   }
 
-  function n(t) {
-    var e = [],
+  function n(e) {
+    var t = [],
       n = !1;
 
-    function i() {
-      e.sort(t), n = !0
+    function l() {
+      t.sort(e), n = !0
     }
     return {
-      push: function(t) {
-        e.push(t), n = !1
+      push: function(e) {
+        t.push(e), n = !1
       },
-      peek: function(t) {
-        return !n && i(), void 0 === t && (t = e.length - 1), e[t]
+      peek: function(e) {
+        return !n && l(), void 0 === e && (e = t.length - 1), t[e]
       },
       pop: function() {
-        return !n && i(), e.pop()
+        return !n && l(), t.pop()
       },
       size: function() {
-        return e.length
+        return t.length
       },
-      map: function(t) {
-        return e.map(t)
+      map: function(e) {
+        return t.map(e)
       },
       debug: function() {
-        return !n && i(), e
+        return !n && l(), t
       }
     }
   }
 
-  function r(t, e, n, i, r, l, s) {
-    this.r1 = t, this.r2 = e, this.g1 = n, this.g2 = i, this.b1 = r, this.b2 = l, this.histo = s
+  function i(e, t, n, l, i, a, s) {
+    this.r1 = e, this.r2 = t, this.g1 = n, this.g2 = l, this.b1 = i, this.b2 = a, this.histo = s
   }
 
-  function l() {
-    this.vboxes = new n(function(t, e) {
-      return i.naturalOrder(t.vbox.count() * t.vbox.volume(), e.vbox.count() * e.vbox.volume())
+  function a() {
+    this.vboxes = new n(function(e, t) {
+      return l.naturalOrder(e.vbox.count() * e.vbox.volume(), t.vbox.count() * t.vbox.volume())
     })
   }
-  return r.prototype = {
-    volume: function(t) {
-      return (!this._volume || t) && (this._volume = (this.r2 - this.r1 + 1) * (this.g2 - this.g1 + 1) * (this.b2 - this.b1 + 1)), this._volume
+  return i.prototype = {
+    volume: function(e) {
+      return (!this._volume || e) && (this._volume = (this.r2 - this.r1 + 1) * (this.g2 - this.g1 + 1) * (this.b2 - this.b1 + 1)), this._volume
     },
-    count: function(t) {
+    count: function(e) {
       var n = this.histo;
-      if (!this._count_set || t) {
-        var i, r, l, s = 0;
-        for (i = this.r1; i <= this.r2; i++)
-          for (r = this.g1; r <= this.g2; r++)
-            for (l = this.b1; l <= this.b2; l++) s += n[e(i, r, l)] || 0;
+      if (!this._count_set || e) {
+        var l, i, a, s = 0;
+        for (l = this.r1; l <= this.r2; l++)
+          for (i = this.g1; i <= this.g2; i++)
+            for (a = this.b1; a <= this.b2; a++) s += n[t(l, i, a)] || 0;
         this._count = s, this._count_set = !0
       }
       return this._count
     },
     copy: function() {
-      return new r(this.r1, this.r2, this.g1, this.g2, this.b1, this.b2, this.histo)
+      return new i(this.r1, this.r2, this.g1, this.g2, this.b1, this.b2, this.histo)
     },
-    avg: function(t) {
+    avg: function(e) {
       var n = this.histo;
-      if (!this._avg || t) {
-        var i, r, l, s, a = 0,
-          o = 8,
-          u = 0,
-          c = 0,
-          d = 0;
-        for (r = this.r1; r <= this.r2; r++)
-          for (l = this.g1; l <= this.g2; l++)
-            for (s = this.b1; s <= this.b2; s++) a += i = n[e(r, l, s)] || 0, u += i * (r + .5) * o, c += i * (l + .5) * o, d += i * (s + .5) * o;
-        a ? this._avg = [~~(u / a), ~~(c / a), ~~(d / a)] : this._avg = [~~(o * (this.r1 + this.r2 + 1) / 2), ~~(o * (this.g1 + this.g2 + 1) / 2), ~~(o * (this.b1 + this.b2 + 1) / 2)]
+      if (!this._avg || e) {
+        var l, i, a, s, r = 0,
+          u = 8,
+          o = 0,
+          d = 0,
+          c = 0;
+        for (i = this.r1; i <= this.r2; i++)
+          for (a = this.g1; a <= this.g2; a++)
+            for (s = this.b1; s <= this.b2; s++) r += l = n[t(i, a, s)] || 0, o += l * (i + .5) * u, d += l * (a + .5) * u, c += l * (s + .5) * u;
+        r ? this._avg = [~~(o / r), ~~(d / r), ~~(c / r)] : this._avg = [~~(u * (this.r1 + this.r2 + 1) / 2), ~~(u * (this.g1 + this.g2 + 1) / 2), ~~(u * (this.b1 + this.b2 + 1) / 2)]
       }
       return this._avg
     },
-    contains: function(e) {
-      var n = e[0] >> t;
-      return gval = e[1] >> t, bval = e[2] >> t, n >= this.r1 && n <= this.r2 && gval >= this.g1 && gval <= this.g2 && bval >= this.b1 && bval <= this.b2
+    contains: function(t) {
+      var n = t[0] >> e;
+      return gval = t[1] >> e, bval = t[2] >> e, n >= this.r1 && n <= this.r2 && gval >= this.g1 && gval <= this.g2 && bval >= this.b1 && bval <= this.b2
     }
-  }, l.prototype = {
-    push: function(t) {
+  }, a.prototype = {
+    push: function(e) {
       this.vboxes.push({
-        vbox: t,
-        color: t.avg()
+        vbox: e,
+        color: e.avg()
       })
     },
     palette: function() {
-      return this.vboxes.map(function(t) {
-        return t.color
+      return this.vboxes.map(function(e) {
+        return e.color
       })
     },
     size: function() {
       return this.vboxes.size()
     },
-    map: function(t) {
-      for (var e = this.vboxes, n = 0; n < e.size(); n++)
-        if (e.peek(n).vbox.contains(t)) return e.peek(n).color;
-      return this.nearest(t)
+    map: function(e) {
+      for (var t = this.vboxes, n = 0; n < t.size(); n++)
+        if (t.peek(n).vbox.contains(e)) return t.peek(n).color;
+      return this.nearest(e)
     },
-    nearest: function(t) {
-      for (var e, n, i, r = this.vboxes, l = 0; l < r.size(); l++)((n = Math.sqrt(Math.pow(t[0] - r.peek(l).color[0], 2) + Math.pow(t[1] - r.peek(l).color[1], 2) + Math.pow(t[2] - r.peek(l).color[2], 2))) < e || void 0 === e) && (e = n, i = r.peek(l).color);
-      return i
+    nearest: function(e) {
+      for (var t, n, l, i = this.vboxes, a = 0; a < i.size(); a++)((n = Math.sqrt(Math.pow(e[0] - i.peek(a).color[0], 2) + Math.pow(e[1] - i.peek(a).color[1], 2) + Math.pow(e[2] - i.peek(a).color[2], 2))) < t || void 0 === t) && (t = n, l = i.peek(a).color);
+      return l
     },
     forcebw: function() {
-      var t = this.vboxes;
-      t.sort(function(t, e) {
-        return i.naturalOrder(i.sum(t.color), i.sum(e.color))
+      var e = this.vboxes;
+      e.sort(function(e, t) {
+        return l.naturalOrder(l.sum(e.color), l.sum(t.color))
       });
-      var e = t[0].color;
-      e[0] < 5 && e[1] < 5 && e[2] < 5 && (t[0].color = [0, 0, 0]);
-      var n = t.length - 1,
-        r = t[n].color;
-      r[0] > 251 && r[1] > 251 && r[2] > 251 && (t[n].color = [255, 255, 255])
+      var t = e[0].color;
+      t[0] < 5 && t[1] < 5 && t[2] < 5 && (e[0].color = [0, 0, 0]);
+      var n = e.length - 1,
+        i = e[n].color;
+      i[0] > 251 && i[1] > 251 && i[2] > 251 && (e[n].color = [255, 255, 255])
     }
   }, {
-    quantize: function(s, a) {
-      if (!s.length || a < 2 || a > 256) return !1;
-      var o, u, c, d, f, h, p, _, v, C, E, g, I, S, m, A, N = (o = s, f = Array(32768), o.forEach(function(n) {
-          c = n[0] >> t, d = n[1] >> t, f[u = e(c, d, n[2] >> t)] = (f[u] || 0) + 1
+    quantize: function(s, r) {
+      if (!s.length || r < 2 || r > 256) return !1;
+      var u, o, d, c, f, h, I, g, E, p, _, v, m, T, S, N, C = (u = s, f = Array(32768), u.forEach(function(n) {
+          d = n[0] >> e, c = n[1] >> e, f[o = t(d, c, n[2] >> e)] = (f[o] || 0) + 1
         }), f),
-        T = 0;
-      N.forEach(function() {
-        T++
+        A = 0;
+      C.forEach(function() {
+        A++
       });
-      var w = (h = s, p = N, E = 1e6, g = 0, I = 1e6, S = 0, m = 1e6, A = 0, h.forEach(function(e) {
-          _ = e[0] >> t, v = e[1] >> t, C = e[2] >> t, _ < E ? E = _ : _ > g && (g = _), v < I ? I = v : v > S && (S = v), C < m ? m = C : C > A && (A = C)
-        }), new r(E, g, I, S, m, A, p)),
-        y = new n(function(t, e) {
-          return i.naturalOrder(t.count(), e.count())
+      var x = (h = s, I = C, _ = 1e6, v = 0, m = 1e6, T = 0, S = 1e6, N = 0, h.forEach(function(t) {
+          g = t[0] >> e, E = t[1] >> e, p = t[2] >> e, g < _ ? _ = g : g > v && (v = g), E < m ? m = E : E > T && (T = E), p < S ? S = p : p > N && (N = p)
+        }), new i(_, v, m, T, S, N, I)),
+        M = new n(function(e, t) {
+          return l.naturalOrder(e.count(), t.count())
         });
 
-      function L(t, n) {
-        for (var r, l = 1, s = 0; s < 1e3;) {
-          if (!(r = t.pop()).count()) {
-            t.push(r), s++;
+      function y(e, n) {
+        for (var i, a = 1, s = 0; s < 1e3;) {
+          if (!(i = e.pop()).count()) {
+            e.push(i), s++;
             continue
           }
-          var a = function(t, n) {
+          var r = function(e, n) {
               if (n.count()) {
-                var r = n.r2 - n.r1 + 1,
-                  l = n.g2 - n.g1 + 1,
+                var i = n.r2 - n.r1 + 1,
+                  a = n.g2 - n.g1 + 1,
                   s = n.b2 - n.b1 + 1,
-                  a = i.max([r, l, s]);
+                  r = l.max([i, a, s]);
                 if (1 == n.count()) return [n.copy()];
-                var o, u, c, d, f, h = 0,
-                  p = [],
-                  _ = [];
-                if (a == r)
-                  for (o = n.r1; o <= n.r2; o++) {
-                    for (d = 0, u = n.g1; u <= n.g2; u++)
-                      for (c = n.b1; c <= n.b2; c++) d += t[f = e(o, u, c)] || 0;
-                    h += d, p[o] = h
-                  } else if (a == l)
-                    for (o = n.g1; o <= n.g2; o++) {
-                      for (d = 0, u = n.r1; u <= n.r2; u++)
-                        for (c = n.b1; c <= n.b2; c++) d += t[f = e(u, o, c)] || 0;
-                      h += d, p[o] = h
+                var u, o, d, c, f, h = 0,
+                  I = [],
+                  g = [];
+                if (r == i)
+                  for (u = n.r1; u <= n.r2; u++) {
+                    for (c = 0, o = n.g1; o <= n.g2; o++)
+                      for (d = n.b1; d <= n.b2; d++) c += e[f = t(u, o, d)] || 0;
+                    h += c, I[u] = h
+                  } else if (r == a)
+                    for (u = n.g1; u <= n.g2; u++) {
+                      for (c = 0, o = n.r1; o <= n.r2; o++)
+                        for (d = n.b1; d <= n.b2; d++) c += e[f = t(o, u, d)] || 0;
+                      h += c, I[u] = h
                     } else
-                      for (o = n.b1; o <= n.b2; o++) {
-                        for (d = 0, u = n.r1; u <= n.r2; u++)
-                          for (c = n.g1; c <= n.g2; c++) d += t[f = e(u, c, o)] || 0;
-                        h += d, p[o] = h
+                      for (u = n.b1; u <= n.b2; u++) {
+                        for (c = 0, o = n.r1; o <= n.r2; o++)
+                          for (d = n.g1; d <= n.g2; d++) c += e[f = t(o, d, u)] || 0;
+                        h += c, I[u] = h
                       }
-                return p.forEach(function(t, e) {
-                  _[e] = h - t
-                }), v(a == r ? "r" : a == l ? "g" : "b")
+                return I.forEach(function(e, t) {
+                  g[t] = h - e
+                }), E(r == i ? "r" : r == a ? "g" : "b")
               }
 
-              function v(t) {
-                var e, i, r, l, s, a = t + "1",
-                  u = t + "2",
-                  c = 0;
-                for (o = n[a]; o <= n[u]; o++)
-                  if (p[o] > h / 2) {
-                    for (r = n.copy(), l = n.copy(), e = o - n[a], s = e <= (i = n[u] - o) ? Math.min(n[u] - 1, ~~(o + i / 2)) : Math.max(n[a], ~~(o - 1 - e / 2)); !p[s];) s++;
-                    for (c = _[s]; !c && p[s - 1];) c = _[--s];
-                    return r[u] = s, l[a] = r[u] + 1, [r, l]
+              function E(e) {
+                var t, l, i, a, s, r = e + "1",
+                  o = e + "2",
+                  d = 0;
+                for (u = n[r]; u <= n[o]; u++)
+                  if (I[u] > h / 2) {
+                    for (i = n.copy(), a = n.copy(), t = u - n[r], s = t <= (l = n[o] - u) ? Math.min(n[o] - 1, ~~(u + l / 2)) : Math.max(n[r], ~~(u - 1 - t / 2)); !I[s];) s++;
+                    for (d = g[s]; !d && I[s - 1];) d = g[--s];
+                    return i[o] = s, a[r] = i[o] + 1, [i, a]
                   }
               }
-            }(N, r),
-            o = a[0],
-            u = a[1];
-          if (!o) return;
-          if (t.push(o), u && (t.push(u), l++), l >= n || s++ > 1e3) return
+            }(C, i),
+            u = r[0],
+            o = r[1];
+          if (!u) return;
+          if (e.push(u), o && (e.push(o), a++), a >= n || s++ > 1e3) return
         }
       }
-      y.push(w), L(y, .75 * a);
-      for (var R = new n(function(t, e) {
-          return i.naturalOrder(t.count() * t.volume(), e.count() * e.volume())
-        }); y.size();) R.push(y.pop());
-      L(R, a - R.size());
-      for (var b = new l; R.size();) b.push(R.pop());
-      return b
+      M.push(x), y(M, .75 * r);
+      for (var w = new n(function(e, t) {
+          return l.naturalOrder(e.count() * e.volume(), t.count() * t.volume())
+        }); M.size();) w.push(M.pop());
+      y(w, r - w.size());
+      for (var R = new a; w.size();) R.push(w.pop());
+      return R
     }
   }
 }();
-t.exports = r.quantize
+e.exports = i.quantize

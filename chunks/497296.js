@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return E
   }
 });
-var r = n("37983");
+var u = n("37983");
 n("884691");
-var u = n("626301"),
+var r = n("626301"),
   a = n("552917"),
   i = n("843647"),
   o = n("789946"),
@@ -25,7 +25,7 @@ function E(e) {
   } = e;
 
   function T() {
-    null == E || E(), t(), (0, u.navigateToPremiumMarketingPage)()
+    null == E || E(), t(), (0, r.navigateToPremiumMarketingPage)()
   }
   let {
     isLoading: S,
@@ -39,7 +39,7 @@ function E(e) {
   }) : c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY.format({
     onLearnMore: T
   });
-  return (0, r.jsx)(o.default, {
+  return (0, u.jsx)(o.default, {
     artURL: f,
     artContainerClassName: d.videoBackgroundArt,
     type: l.PremiumUpsellTypes.VIDEO_BACKGROUNDS_MODAL,

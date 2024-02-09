@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return f
+    return E
   }
 });
 var r, i, s = n("37983");
@@ -23,19 +23,19 @@ let _ = e => {
     primaryIcon: r,
     primaryCTA: i,
     primaryType: _,
-    primaryText: f,
-    primaryTooltip: E,
+    primaryText: E,
+    primaryTooltip: f,
     primaryDisabled: C,
     primarySubmitting: I,
     onPrimary: A,
-    secondaryText: p,
-    onSecondary: T
+    secondaryText: T,
+    onSecondary: p
   } = e;
   return (0, s.jsxs)(a.ModalFooter, {
     justify: l.default.Justify.BETWEEN,
     align: l.default.Align.CENTER,
     children: [(() => {
-      if (null == i || null == f) return null;
+      if (null == i || null == E) return null;
       let e = 2 === i ? u.default : a.Button,
         t = {
           innerClassName: d.button,
@@ -45,26 +45,26 @@ let _ = e => {
           color: 0 === i ? a.Button.Colors.BRAND : a.Button.Colors.GREEN,
           onClick: A
         };
-      return null != E ? (0, s.jsx)(a.Tooltip, {
-        text: E,
+      return null != f ? (0, s.jsx)(a.Tooltip, {
+        text: f,
         children: n => (0, s.jsxs)(e, {
           ...n,
           ...t,
           children: [null == r ? null : (0, s.jsx)(r, {
             className: d.primaryIcon
-          }), f]
+          }), E]
         })
       }) : (0, s.jsxs)(e, {
         ...t,
         children: [null == r ? null : (0, s.jsx)(r, {
           className: d.primaryIcon
-        }), f]
+        }), E]
       })
-    })(), null == p ? null : (0, s.jsx)(a.Button, {
+    })(), null == T ? null : (0, s.jsx)(a.Button, {
       color: a.Button.Colors.PRIMARY,
       look: a.Button.Looks.LINK,
-      onClick: T,
-      children: p
+      onClick: p,
+      children: T
     }), (0, s.jsx)(o.default, {}), null == t ? null : (0, s.jsx)(a.Button, {
       className: d.back,
       color: a.Button.Colors.PRIMARY,
@@ -75,4 +75,4 @@ let _ = e => {
   })
 };
 _.CTAType = i;
-var f = _
+var E = _

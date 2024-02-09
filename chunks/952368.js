@@ -130,8 +130,8 @@ let g = /\.gif($|\?|#)/i,
       minWidth: v,
       minHeight: I,
       maxWidth: S,
-      maxHeight: x,
-      renderItem: _,
+      maxHeight: _,
+      renderItem: x,
       onClick: N,
       renderAccessory: T,
       tabIndex: M,
@@ -143,12 +143,12 @@ let g = /\.gif($|\?|#)/i,
     } = this.props, {
       readyState: R,
       hasMouseOver: b,
-      hasFocus: D
-    } = this.state, P = null != l, w = this.getRatio(), U = (0, r.clamp)(Math.round(E * w), null != v ? v : 0, null != S ? S : 1 / 0), k = (0, r.clamp)(Math.round(C * w), null != I ? I : 0, null != x ? x : 1 / 0), V = {
+      hasFocus: P
+    } = this.state, D = null != l, w = this.getRatio(), U = (0, r.clamp)(Math.round(E * w), null != v ? v : 0, null != S ? S : 1 / 0), k = (0, r.clamp)(Math.round(C * w), null != I ? I : 0, null != _ ? _ : 1 / 0), V = {
       alt: t,
       readyState: R,
       onContextMenu: null != i ? i : void 0,
-      zoomable: P,
+      zoomable: D,
       className: d,
       imageClassName: c,
       minWidth: v,
@@ -159,7 +159,7 @@ let g = /\.gif($|\?|#)/i,
       tabIndex: M,
       width: U,
       height: k,
-      renderItem: _,
+      renderItem: x,
       src: "",
       placeholder: j,
       placeholderVersion: y,
@@ -183,14 +183,14 @@ let g = /\.gif($|\?|#)/i,
       onBlur: this.onBlur
     };
     if (1 === V.width && 1 === V.height) return null;
-    switch ((P || null != N) && (V.onClick = this.onClick), a && (V.original = null != u && "" !== u ? u : V.src), R) {
+    switch ((D || null != N) && (V.onClick = this.onClick), a && (V.original = null != u && "" !== u ? u : V.src), R) {
       case p.ImageReadyStates.LOADING:
         null != n && (V.src = n);
         break;
       case p.ImageReadyStates.READY:
         if (e.isAnimated(this.props)) {
           V.onMouseLeave = this.onMouseLeave;
-          let t = (o || b || D) && (null == g || g) && e.visibilityObserver.isVisible(this);
+          let t = (o || b || P) && (null == g || g) && e.visibilityObserver.isVisible(this);
           t ? (V.src = this.getSrc(w), V.renderAccessory = T) : (V.src = this.getSrc(w, !h || !o), V.renderAccessory = this.renderAccessory), null != m && (V.children = e => {
             let {
               src: n,

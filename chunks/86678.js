@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("150021"),
   h = n("901582"),
   E = n("997289"),
-  S = n("812204"),
-  g = n("685665"),
+  g = n("812204"),
+  S = n("685665"),
   C = n("384997"),
   T = n("385976"),
   v = n("575226"),
@@ -109,8 +109,8 @@ let ee = (0, k.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
     }, [a, o, n, f, t, c]), {
       gridDispatch: h,
       getItemProps: E,
-      getRowProps: S,
-      gridContainerProps: g,
+      getRowProps: g,
+      gridContainerProps: S,
       handleGridContainerKeyDown: C,
       isUsingKeyboardNavigation: I
     } = (0, N.useExpressionPickerGridKeyboardNavigation)({
@@ -135,8 +135,8 @@ let ee = (0, k.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
       })
     }, e => e.inspectedExpressionPosition), [h]), {
       getItemProps: E,
-      getRowProps: S,
-      gridContainerProps: g,
+      getRowProps: g,
+      gridContainerProps: S,
       handleGridContainerKeyDown: C,
       isUsingKeyboardNavigation: I
     }
@@ -184,8 +184,8 @@ var ed = i.memo(i.forwardRef(function(e, t) {
       headerClassName: em,
       analyticsOverride: eh = eu,
       searchProps: eE = {},
-      wrapper: eS,
-      shouldHidePickerActions: eg = !1,
+      wrapper: eg,
+      shouldHidePickerActions: eS = !1,
       messageId: eC,
       renderHeader: eT,
       listHeaderClassName: ev
@@ -223,7 +223,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
     section: null != eB ? eB : Z.AnalyticsSections.EMOJI_PICKER_POPOUT
   }), [eF, eB]), {
     AnalyticsLocationProvider: eW
-  } = (0, g.default)(S.default.EMOJI_PICKER), {
+  } = (0, S.default)(g.default.EMOJI_PICKER), {
     diversitySurrogate: eY
   } = (0, d.useStateFromStoresObject)([T.default], () => ({
     diversitySurrogate: T.default.diversitySurrogate
@@ -343,7 +343,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
     }
     eR.current = eM
   }, [eM, eK, eJ, ez, o]);
-  let tl = null != eS ? eS : O ? "div" : p.Dialog,
+  let tl = null != eg ? eg : O ? "div" : p.Dialog,
     ti = null != eX;
   (null == ex ? void 0 : ex.type) === K.EmojiUpsellType.PREMIUM ? r = (0, l.jsx)(J.default, {
     onLearnMore: e6,
@@ -408,7 +408,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
                 markAsDismissed: () => n(Q.ContentDismissActionType.UNKNOWN)
               })
             }
-          }), eg ? null : (0, l.jsx)("div", {
+          }), eS ? null : (0, l.jsx)("div", {
             className: $.emojiPickerListWrapper,
             id: q.GRID_NAVIGATOR_ID,
             ...te,
@@ -445,7 +445,7 @@ var ed = i.memo(i.forwardRef(function(e, t) {
           pickerIntention: o,
           channel: u
         }), r]
-      }), eg ? null : (0, l.jsx)(B.default, {
+      }), eS ? null : (0, l.jsx)(B.default, {
         className: $.categoryList,
         emojiListRef: eP,
         sectionDescriptors: e0,

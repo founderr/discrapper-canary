@@ -1,15 +1,15 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
-var i = n("49111");
+var u = n("49111");
 
-function r(t) {
+function i(e) {
   let {
-    CDN_HOST: e,
+    CDN_HOST: t,
     PROJECT_ENV: n
   } = window.GLOBAL_ENV;
-  return "development" !== n ? "".concat(location.protocol, "//").concat(e).concat(i.Endpoints.SOUNDBOARD_SOUND(t)) : "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(i.Endpoints.SOUNDBOARD_SOUND(t))
+  return "development" !== n ? "".concat(location.protocol, "//").concat(t).concat(u.Endpoints.SOUNDBOARD_SOUND(e)) : "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(u.Endpoints.SOUNDBOARD_SOUND(e))
 }

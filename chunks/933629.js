@@ -66,8 +66,8 @@ var l, a, s = n("37983"),
   v = n("84339"),
   I = n("298878"),
   S = n("793237"),
-  x = n("347738"),
-  _ = n("584998"),
+  _ = n("347738"),
+  x = n("584998"),
   N = n("845579"),
   T = n("876308"),
   M = n("660478"),
@@ -78,8 +78,8 @@ var l, a, s = n("37983"),
   L = n("476765"),
   R = n("62843"),
   b = n("461380"),
-  D = n("171710"),
-  P = n("945330"),
+  P = n("171710"),
+  D = n("945330"),
   w = n("909004"),
   U = n("599110"),
   k = n("449008"),
@@ -379,7 +379,7 @@ function el(e) {
         type: "button",
         onClick: r,
         className: z.barButtonAlt,
-        children: [W.default.Messages.MARK_AS_READ, (0, s.jsx)(D.default, {
+        children: [W.default.Messages.MARK_AS_READ, (0, s.jsx)(P.default, {
           className: z.barButtonIcon
         })]
       })
@@ -395,9 +395,9 @@ function ea(e) {
     scrollManager: u
   } = e, {
     disableInteractions: g
-  } = i.useContext(R.MessagesInteractionContext), [E, N] = i.useState(null), T = i.useRef(null), [O, j] = i.useState(null), y = i.useRef(null), L = (0, m.useStateFromStoresArray)([x.default], () => {
+  } = i.useContext(R.MessagesInteractionContext), [E, N] = i.useState(null), T = i.useRef(null), [O, j] = i.useState(null), y = i.useRef(null), L = (0, m.useStateFromStoresArray)([_.default], () => {
     var e;
-    return null !== (e = x.default.summaries(a.id)) && void 0 !== e ? e : []
+    return null !== (e = _.default.summaries(a.id)) && void 0 !== e ? e : []
   }, [a]), V = (0, v.default)(L);
   i.useEffect(() => {
     !d.isEqual(V, L) && U.default.track(F.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
@@ -421,7 +421,7 @@ function ea(e) {
         }).filter(k.isNotNullish)
       })) && void 0 !== e ? e : []
     }, [L], es),
-    G = null !== (n = (0, m.useStateFromStores)([x.default], () => x.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+    G = null !== (n = (0, m.useStateFromStores)([_.default], () => _.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
     Z = null == L ? void 0 : null === (t = L[G]) || void 0 === t ? void 0 : t.topic;
   null == Z && null == E && (null == L ? void 0 : L.length) >= 1 && (Z = null === (l = L[0]) || void 0 === l ? void 0 : l.topic);
   let J = i.useMemo(() => d.debounce(e => {
@@ -508,7 +508,7 @@ function ea(e) {
   }), [u, X]), (0, S.useSummaryPolling)(a.id, !0), i.useEffect(() => (document.addEventListener("mousedown", et), () => {
     document.removeEventListener("mousedown", et)
   }), [et]);
-  let en = i.useMemo(() => (0, s.jsx)(_.default, {
+  let en = i.useMemo(() => (0, s.jsx)(x.default, {
       channel: a,
       summaries: L,
       summariesMembers: B,
@@ -573,7 +573,7 @@ function ea(e) {
       children: [(0, s.jsx)("div", {
         className: z.newTopicsBarCompact,
         children: W.default.Messages.MARK_AS_READ
-      }), (0, s.jsx)(D.default, {
+      }), (0, s.jsx)(P.default, {
         className: z.barButtonIcon
       })]
     }), K && (0, s.jsxs)("div", {
@@ -598,7 +598,7 @@ function ea(e) {
           "aria-label": W.default.Messages.CLOSE,
           onClick: Q,
           className: z.topicsDropdownClose,
-          children: (0, s.jsx)(P.default, {})
+          children: (0, s.jsx)(D.default, {})
         })]
       }), (0, s.jsx)(f.Scroller, {
         ref: y,
@@ -624,9 +624,9 @@ function ei(e) {
     scrollManager: r
   } = e, {
     disableInteractions: u
-  } = i.useContext(R.MessagesInteractionContext), [p, g] = i.useState(null), E = i.useRef(null), [N, T] = i.useState(null), M = i.useRef(null), O = (0, m.useStateFromStoresArray)([x.default], () => {
+  } = i.useContext(R.MessagesInteractionContext), [p, g] = i.useState(null), E = i.useRef(null), [N, T] = i.useState(null), M = i.useRef(null), O = (0, m.useStateFromStoresArray)([_.default], () => {
     var e;
-    return null !== (e = x.default.summaries(a.id)) && void 0 !== e ? e : []
+    return null !== (e = _.default.summaries(a.id)) && void 0 !== e ? e : []
   }, [a]), j = (0, v.default)(O);
   i.useEffect(() => {
     !d.isEqual(j, O) && U.default.track(F.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
@@ -650,9 +650,9 @@ function ei(e) {
         }).filter(k.isNotNullish)
       })) && void 0 !== e ? e : []
     }, [O], es),
-    L = null !== (n = (0, m.useStateFromStores)([x.default], () => x.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-    D = null == O ? void 0 : null === (t = O[L]) || void 0 === t ? void 0 : t.topic;
-  null == D && null == p && (null == O ? void 0 : O.length) >= 1 && (D = null === (l = O[0]) || void 0 === l ? void 0 : l.topic);
+    L = null !== (n = (0, m.useStateFromStores)([_.default], () => _.default.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+    P = null == O ? void 0 : null === (t = O[L]) || void 0 === t ? void 0 : t.topic;
+  null == P && null == p && (null == O ? void 0 : O.length) >= 1 && (P = null === (l = O[0]) || void 0 === l ? void 0 : l.topic);
   let V = i.useMemo(() => d.get(O, L - 1), [L, O]),
     B = i.useMemo(() => d.get(O, L + 1), [L, O]),
     G = i.useMemo(() => d.debounce(e => {
@@ -745,17 +745,17 @@ function ei(e) {
   }), [r, J]), (0, S.useSummaryPolling)(a.id, !0), i.useEffect(() => (document.addEventListener("mousedown", et), () => {
     document.removeEventListener("mousedown", et)
   }), [et]);
-  let en = i.useMemo(() => (0, s.jsx)(_.default, {
+  let en = i.useMemo(() => (0, s.jsx)(x.default, {
       channel: a,
       summaries: O,
       summariesMembers: y,
       selectTopic: q,
       setOpen: ee
     }), [O, y, q, ee, a]),
-    el = (0, m.useStateFromStores)([x.default], () => x.default.shouldShowTopicsBar());
+    el = (0, m.useStateFromStores)([_.default], () => _.default.shouldShowTopicsBar());
   if (!el) return null;
   let ea = W.default.Messages.SUMMARIES_NO_SUMMARIES;
-  return O.length > 0 && (ea = "" === D || null == D ? W.default.Messages.SUMMARIES_VIEW_ALL : D), u ? null : (0, s.jsxs)("div", {
+  return O.length > 0 && (ea = "" === P || null == P ? W.default.Messages.SUMMARIES_VIEW_ALL : P), u ? null : (0, s.jsxs)("div", {
     ref: E,
     className: o(z.topicsPillContainer, z.containerMarginTop),
     children: [(0, s.jsxs)("div", {
@@ -832,7 +832,7 @@ function ei(e) {
           "aria-label": W.default.Messages.CLOSE,
           onClick: K,
           className: z.topicsDropdownClose,
-          children: (0, s.jsx)(P.default, {})
+          children: (0, s.jsx)(D.default, {})
         })]
       }), (0, s.jsx)(f.Scroller, {
         ref: M,

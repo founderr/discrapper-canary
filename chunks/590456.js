@@ -4,18 +4,18 @@ n.r(t), n.d(t, {
     return i
   },
   UserProfileTypes: function() {
-    return r
+    return l
   },
   getBadgeAsset: function() {
-    return a
+    return o
   }
 });
-var s, l, i, r, o = n("49111");
+var r, s, i, l, a = n("49111");
 
-function a(e) {
+function o(e) {
   let {
     API_ENDPOINT: t,
     CDN_HOST: n
   } = window.GLOBAL_ENV;
-  return null != n ? "".concat(location.protocol, "//").concat(n, "/badge-icons/").concat(e, ".png") : "".concat(location.protocol).concat(t).concat(o.Endpoints.BADGE_ICON(e))
-}(s = i || (i = {})).USER_INFO = "USER_INFO", s.USER_INFO_CONNECTIONS = "USER_INFO_CONNECTIONS", s.ACTIVITY = "ACTIVITY", s.MUTUAL_GUILDS = "MUTUAL_GUILDS", s.MUTUAL_FRIENDS = "MUTUAL_FRIENDS", s.BOT_DATA_ACCESS = "BOT_DATA_ACCESS", (l = r || (r = {})).POPOUT = "POPOUT", l.MODAL = "MODAL", l.SETTINGS = "SETTINGS", l.PANEL = "PANEL", l.CARD = "CARD", l.POMELO_POPOUT = "POMELO_POPOUT", l.CANCEL_MODAL = "CANCEL_MODAL"
+  return null != n ? "".concat(location.protocol, "//").concat(n, "/badge-icons/").concat(e, ".png") : "".concat(location.protocol).concat(t).concat(a.Endpoints.BADGE_ICON(e))
+}(r = i || (i = {})).USER_INFO = "USER_INFO", r.USER_INFO_CONNECTIONS = "USER_INFO_CONNECTIONS", r.ACTIVITY = "ACTIVITY", r.MUTUAL_GUILDS = "MUTUAL_GUILDS", r.MUTUAL_FRIENDS = "MUTUAL_FRIENDS", r.BOT_DATA_ACCESS = "BOT_DATA_ACCESS", (s = l || (l = {})).POPOUT = "POPOUT", s.MODAL = "MODAL", s.SETTINGS = "SETTINGS", s.PANEL = "PANEL", s.CARD = "CARD", s.POMELO_POPOUT = "POMELO_POPOUT", s.CANCEL_MODAL = "CANCEL_MODAL"

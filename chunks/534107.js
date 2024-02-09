@@ -45,14 +45,14 @@ function S(e) {
   if (0 !== m) t = i, n = 6 * d * r, l = (o / 2 - m / 2) * r, a = m * r, s = 1 * r, t.moveTo(n, l + s), t.lineTo(n, l + a - s), t.arc(n + s, l + a - s, s, Math.PI, 0, !0), t.lineTo(n + 2 * s, l + s), t.arc(n + s, l + s, s, 0, Math.PI, !0), t.closePath()
 }
 
-function x(e, t, n) {
+function _(e, t, n) {
   let [l, s] = a.useState(e), [i, r] = a.useState(e);
   return a.useLayoutEffect(() => {
     s(i), r(e)
   }, [e, t, n]), [l, i]
 }
 
-function _(e, t, n, l) {
+function x(e, t, n, l) {
   if (null == l) return [t, !1];
   let a = Math.min((n - l) / 200, 1);
   if (1 === a) return [t, !1];
@@ -107,7 +107,7 @@ function N(e) {
         }(null != n ? n : [], l)) && void 0 !== e ? e : v
       }, [n, l]);
     return s
-  }(n, j), b = a.useRef(C), D = a.useRef(N), P = a.useRef(null), w = window.devicePixelRatio, {
+  }(n, j), b = a.useRef(C), P = a.useRef(N), D = a.useRef(null), w = window.devicePixelRatio, {
     lastBackgroundFillColor: U,
     backgroundFillColor: k,
     lastActiveFillColor: V,
@@ -121,11 +121,11 @@ function N(e) {
       s = (0, o.useToken)(r.default.unsafe_rawColors.BRAND_430).hex(),
       i = (0, o.useToken)(r.default.unsafe_rawColors.WHITE_500).hex(),
       u = t ? s : n,
-      [d, c] = x(u, t, e),
+      [d, c] = _(u, t, e),
       m = t ? i : e ? a : l,
-      [f, h] = x(m, t, e),
+      [f, h] = _(m, t, e),
       p = e ? u : l,
-      [g, E] = x(p, t, e);
+      [g, E] = _(p, t, e);
     return {
       lastBackgroundFillColor: d,
       backgroundFillColor: c,
@@ -168,10 +168,10 @@ function N(e) {
         s = L.current;
       if (null == l || null == a || null == s) return;
       let i = !1;
-      (b.current !== C || D.current !== N) && (b.current = C, D.current = N, P.current = n), null != P.current && n > P.current + 200 && (P.current = null);
+      (b.current !== C || P.current !== N) && (b.current = C, P.current = N, D.current = n), null != D.current && n > D.current + 200 && (D.current = null);
       let r = l.height / w;
       a.clearRect(0, 0, l.width, l.height), a.beginPath();
-      let [o, u] = _(U, k, n, P.current);
+      let [o, u] = x(U, k, n, D.current);
       i = i || u, a.fillStyle = o;
       for (let e = 0; e < R.length; e++) S({
         context: a,
@@ -182,9 +182,9 @@ function N(e) {
         constrainMin: !0
       });
       a.fill();
-      let [d, c] = _(B, H, n, P.current);
+      let [d, c] = x(B, H, n, D.current);
       i = i || c;
-      let [m, f] = _(V, F, n, P.current);
+      let [m, f] = x(V, F, n, D.current);
       i = i || f;
       for (let e = 0; e < s.length; e++) {
         let t = s[e],

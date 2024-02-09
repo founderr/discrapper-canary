@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("233069"),
   h = n("882641"),
   E = n("945330"),
-  S = n("964261"),
-  g = n("526409"),
+  g = n("964261"),
+  S = n("526409"),
   C = n("314848"),
   T = n("49111"),
   v = n("782340"),
@@ -33,7 +33,7 @@ let _ = (0, m.createChannelRecord)({
       user: n,
       hide: a,
       onEnter: r
-    } = e, [p, m] = i.useState(""), [h, g] = i.useState((0, c.toRichValue)("")), C = (0, u.default)();
+    } = e, [p, m] = i.useState(""), [h, S] = i.useState((0, c.toRichValue)("")), C = (0, u.default)();
     return (0, l.jsxs)("div", {
       className: s([I.reply, "theme-".concat(C)]),
       ref: t,
@@ -53,10 +53,10 @@ let _ = (0, m.createChannelRecord)({
         focused: !0,
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
-        maxCharacterCount: S.MAX_CHAR_COUNT,
+        maxCharacterCount: g.MAX_CHAR_COUNT,
         channel: _,
         onChange: (e, t, n) => {
-          m(t), g(n)
+          m(t), S(n)
         },
         type: d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT,
         textValue: p,
@@ -65,7 +65,7 @@ let _ = (0, m.createChannelRecord)({
           let {
             value: t
           } = e;
-          return t.length > S.MAX_CHAR_COUNT ? Promise.resolve({
+          return t.length > g.MAX_CHAR_COUNT ? Promise.resolve({
             shouldClear: !1,
             shouldRefocus: !0
           }) : (r(t), Promise.resolve({
@@ -87,7 +87,7 @@ var A = e => {
     requireConfirmation: d = !1,
     filename: c,
     reactor: f
-  } = e, [m, E] = i.useState(!1), S = (0, u.default)(), [T, v] = i.useState(!1), [A, N] = i.useState(!1), [x, O] = i.useState(), [R, M] = i.useState(""), L = i.useRef(null), P = i.useRef(null), b = (0, C.default)(n);
+  } = e, [m, E] = i.useState(!1), g = (0, u.default)(), [T, v] = i.useState(!1), [A, N] = i.useState(!1), [x, O] = i.useState(), [R, M] = i.useState(""), L = i.useRef(null), P = i.useRef(null), b = (0, C.default)(n);
 
   function j(e) {
     var t, n;
@@ -123,7 +123,7 @@ var A = e => {
         children: (0, l.jsx)(r.ArrowAngleLeftUpIcon, {})
       })]
     }), T && (0, l.jsx)("div", {
-      className: s([I.picker, "theme-".concat(S)]),
+      className: s([I.picker, "theme-".concat(g)]),
       ref: L,
       children: (0, l.jsx)(p.ReactionPicker, {
         messageId: "",
@@ -147,7 +147,7 @@ var A = e => {
       activity: t,
       user: n,
       onComplete: e => {
-        null != x ? ((0, g.sendReaction)(e, x, n, d, c), O(void 0)) : null != R && ((0, g.sendReply)(e, R, n, d, c), M("")), E(!1)
+        null != x ? ((0, S.sendReaction)(e, x, n, d, c), O(void 0)) : null != R && ((0, S.sendReply)(e, R, n, d, c), M("")), E(!1)
       }
     })]
   }) : null

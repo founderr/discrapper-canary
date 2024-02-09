@@ -18,8 +18,8 @@ var r, o, u = n("917351"),
   v = n("660478"),
   I = n("18494"),
   S = n("282109"),
-  x = n("697218"),
-  _ = n("718517"),
+  _ = n("697218"),
+  x = n("718517"),
   N = n("299039"),
   T = n("204653");
 (o = r || (r = {})).FETCHING = "fetching", o.OK = "ok", o.ERROR = "error";
@@ -36,10 +36,10 @@ let M = {},
   R = [],
   b = [];
 
-function D() {
+function P() {
   R = g.default.getProps().results.filter(e => e.type === h.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
 }
-class P extends c.default.PersistedStore {
+class D extends c.default.PersistedStore {
   getState() {
     return {
       shouldShowTopicsBar: l
@@ -47,13 +47,13 @@ class P extends c.default.PersistedStore {
   }
   initialize(e) {
     var t;
-    l = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(E.default, x.default, I.default, C.default, p.default), this.syncWith([g.default], D)
+    l = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t, this.waitFor(E.default, _.default, I.default, C.default, p.default), this.syncWith([g.default], P)
   }
   allSummaries() {
     return M
   }
   topSummaries() {
-    let e = Object.values(M).flat().filter(e => e.people.length > 1 && N.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * _.default.Millis.HOUR).sort((e, t) => N.default.extractTimestamp(t.endId) - N.default.extractTimestamp(e.endId));
+    let e = Object.values(M).flat().filter(e => e.people.length > 1 && N.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * x.default.Millis.HOUR).sort((e, t) => N.default.extractTimestamp(t.endId) - N.default.extractTimestamp(e.endId));
     return e
   }
   summaries(e) {
@@ -105,7 +105,7 @@ class P extends c.default.PersistedStore {
     return L
   }
   shouldFetchChannelAffinities() {
-    return !("fetching" === L.status || null != L.lastResponse && Date.now() - L.lastResponse < 30 * _.default.Millis.SECOND) && !0
+    return !("fetching" === L.status || null != L.lastResponse && Date.now() - L.lastResponse < 30 * x.default.Millis.SECOND) && !0
   }
   defaultChannelIds(e) {
     let {
@@ -126,8 +126,8 @@ class P extends c.default.PersistedStore {
     return s
   }
 }
-P.persistKey = "SummaryStore";
-let w = new P(m.default, {
+D.persistKey = "SummaryStore";
+let w = new D(m.default, {
   CONNECTION_OPEN: () => !1,
   CHANNEL_SELECT(e) {
     let {

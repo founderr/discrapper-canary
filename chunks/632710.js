@@ -19,8 +19,8 @@ var i = n("414456"),
   m = n("42203"),
   h = n("697218"),
   E = n("800762"),
-  S = n("145131"),
-  g = n("313873"),
+  g = n("145131"),
+  S = n("313873"),
   C = n("429928"),
   T = n("36539"),
   v = n("698372"),
@@ -56,12 +56,12 @@ var i = n("414456"),
         let e = h.default.getCurrentUser();
         return r(null != e, "UserActivityActions: currentUser cannot be undefined"), e
       }),
-      K = F === g.Types.PROFILE || F === g.Types.PROFILE_V2,
-      W = F === g.Types.STREAM_PREVIEW || null != s,
+      K = F === S.Types.PROFILE || F === S.Types.PROFILE_V2,
+      W = F === S.Types.STREAM_PREVIEW || null != s,
       Y = (0, C.default)(n),
       z = (0, p.isStageActivity)(n),
-      J = K ? S.default.Align.END : S.default.Align.STRETCH,
-      q = Y || W ? S.default.Direction.HORIZONTAL : S.default.Direction.VERTICAL,
+      J = K ? g.default.Align.END : g.default.Align.STRETCH,
+      q = Y || W ? g.default.Direction.HORIZONTAL : g.default.Direction.VERTICAL,
       Z = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
       Q = (0, u.useStateFromStores)([E.default, m.default], () => {
         var e;
@@ -152,12 +152,12 @@ var i = n("414456"),
       if (null == a && null == s && null == e && null == r) return null;
       t = [a, s, e, r]
     }
-    let X = q === S.default.Direction.VERTICAL;
-    return (0, l.jsx)(S.default, {
+    let X = q === g.default.Direction.VERTICAL;
+    return (0, l.jsx)(g.default, {
       grow: 0,
       align: J,
       direction: q,
-      wrap: X ? S.default.Wrap.WRAP : S.default.Wrap.NO_WRAP,
+      wrap: X ? g.default.Wrap.WRAP : g.default.Wrap.NO_WRAP,
       className: a(c, b.buttonsWrapper, X ? b.vertical : b.horizontal),
       onClick: function(e) {
         (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == G || G())

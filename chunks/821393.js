@@ -5,13 +5,13 @@ n.r(t), n.d(t, {
   }
 }), n("808653"), n("222007"), n("424973");
 var i = n("884691"),
-  l = n("446674"),
-  r = n("398604"),
+  r = n("446674"),
+  l = n("398604"),
   s = n("745049");
 
 function a(e, t) {
-  let n = (0, l.useStateFromStoresArray)([r.default], () => Object.values(r.default.getUsersForGuildEvent(e, null)), [e]),
-    a = (0, l.useStateFromStoresArray)([r.default], () => Object.values(r.default.getUsersForGuildEvent(e, t)), [e, t]),
+  let n = (0, r.useStateFromStoresArray)([l.default], () => Object.values(l.default.getUsersForGuildEvent(e, null)), [e]),
+    a = (0, r.useStateFromStoresArray)([l.default], () => Object.values(l.default.getUsersForGuildEvent(e, t)), [e, t]),
     u = (0, i.useMemo)(() => {
       let e = a.reduce((e, t) => (e[t.user_id] = t, e), {}),
         t = n.filter(t => {
@@ -19,12 +19,12 @@ function a(e, t) {
           return null == n || n.response === s.GuildScheduledEventUserResponses.INTERESTED
         }),
         i = a.filter(e => e.response === s.GuildScheduledEventUserResponses.INTERESTED),
-        l = new Set,
-        r = [],
+        r = new Set,
+        l = [],
         u = e => {
-          !l.has(e.user_id) && (r.push(e), l.add(e.user_id))
+          !r.has(e.user_id) && (l.push(e), r.add(e.user_id))
         };
-      return t.forEach(u), i.forEach(u), r
+      return t.forEach(u), i.forEach(u), l
     }, [n, a]);
   return u
 }

@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("292655"),
   h = n("478272"),
   E = n("685665"),
-  S = n("384997"),
-  g = n("128295"),
+  g = n("384997"),
+  S = n("128295"),
   C = n("414868"),
   T = n("49111"),
   v = n("994428"),
@@ -32,7 +32,7 @@ function A(e) {
     disabled: t,
     channel: n,
     markAsDismissed: a,
-    visibleContent: S,
+    visibleContent: g,
     innerRef: A
   } = e, N = (0, d.useAppContext)(), {
     analyticsLocations: x
@@ -53,13 +53,13 @@ function A(e) {
       guildId: n.guild_id
     })
   }, [x, n, M, a, O]), P = () => {
-    if (S === o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, l.jsxs)("div", {
+    if (g === o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, l.jsxs)("div", {
       className: y.sparkleContainer,
       children: [(0, l.jsx)(C.default, {
         className: s(y.sparkleStar, {
           [y.noAnimation]: R
         })
-      }), (0, l.jsx)(g.default, {
+      }), (0, l.jsx)(S.default, {
         className: s(y.sparklePlus, {
           [y.noAnimation]: R
         })
@@ -90,7 +90,7 @@ function A(e) {
 }
 let N = [o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
 var x = i.memo(i.forwardRef(function(e, t) {
-  return (0, l.jsx)(S.default, {
+  return (0, l.jsx)(g.default, {
     contentTypes: N,
     children: n => {
       let {

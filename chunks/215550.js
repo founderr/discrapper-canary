@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 });
 var l = n("37983"),
@@ -61,4 +61,4 @@ let p = s.memoize(e => "".concat(e * c.EmojiSprites.NonDiversityPerRow, "px ").c
       })
     })
   });
-var S = E
+var g = E

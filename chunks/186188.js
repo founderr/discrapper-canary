@@ -46,8 +46,8 @@ var i = n("446674"),
   m = n("305961"),
   h = n("102985"),
   E = n("697218"),
-  S = n("666897"),
-  g = n("404008"),
+  g = n("666897"),
+  S = n("404008"),
   C = n("387111"),
   T = n("158998"),
   v = n("680894"),
@@ -95,7 +95,7 @@ function x(e) {
     channelId: n,
     guildId: i
   } = e, a = m.default.getGuild(i), s = p.default.getChannel(n), r = (0, u.useClydeEnabled)(a, s), o = r && "@Clyde" === t ? v.CLYDE_AI_MENTION_COLOR : null;
-  return (0, l.jsx)(S.default, {
+  return (0, l.jsx)(g.default, {
     color: o,
     children: t
   })
@@ -106,7 +106,7 @@ function O(e) {
     id: t,
     guildId: n,
     channelId: s
-  } = e, o = (0, i.useStateFromStores)([E.default], () => E.default.getUser(t)), u = (0, i.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), d = C.default.useName(n, s, o), c = (0, l.jsx)(S.default, {
+  } = e, o = (0, i.useStateFromStores)([E.default], () => E.default.getUser(t)), u = (0, i.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), d = C.default.useName(n, s, o), c = (0, l.jsx)(g.default, {
     children: null == d ? "<@".concat(t, ">") : "@".concat(d)
   });
   if (null != o) {
@@ -154,7 +154,7 @@ function R(e) {
     children: "@deleted-role"
   });
   let u = null != s.color && 0 !== s.color;
-  return (0, l.jsxs)(S.default, {
+  return (0, l.jsxs)(g.default, {
     color: "username" === r && u ? s.color : null,
     children: ["dot" === r && (0, l.jsx)(a.RoleDot, {
       color: s.colorString,
@@ -170,9 +170,9 @@ function M(e) {
   } = e, n = (0, i.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = I.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
   if (null != n) {
     var o;
-    a = (0, d.canViewChannel)(n) ? n.name : I.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, g.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
+    a = (0, d.canViewChannel)(n) ? n.name : I.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, S.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
   }
-  return r ? (0, l.jsx)(S.default, {
+  return r ? (0, l.jsx)(g.default, {
     iconType: s,
     children: a
   }) : (0, l.jsx)("span", {
@@ -185,7 +185,7 @@ function L(e) {
   let {
     id: n
   } = e, a = (0, i.useStateFromStores)([f.default], () => f.default.getSoundById(n));
-  return (0, l.jsx)(S.default, {
+  return (0, l.jsx)(g.default, {
     children: null !== (t = null == a ? void 0 : a.name) && void 0 !== t ? t : "Sound"
   })
 }
@@ -199,7 +199,7 @@ function P(e) {
     browse: I.default.Messages.CHANNEL_BROWSER_TITLE,
     customize: I.default.Messages.CHANNELS_AND_ROLES
   };
-  return (0, l.jsx)(S.default, {
+  return (0, l.jsx)(g.default, {
     iconType: t,
     children: n[t]
   })
@@ -210,7 +210,7 @@ function b(e) {
     text: t,
     id: n
   } = e;
-  return (0, l.jsxs)(S.default, {
+  return (0, l.jsxs)(g.default, {
     children: [t, "(", n, ")"]
   })
 }

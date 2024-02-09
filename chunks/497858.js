@@ -18,8 +18,8 @@ var l = n("884691"),
   m = n("234246"),
   h = n("689299"),
   E = n("49111"),
-  S = n("680894"),
-  g = n("958706");
+  g = n("680894"),
+  S = n("958706");
 
 function C(e, t, n) {
   var C, T, v, I, _, y, A;
@@ -29,7 +29,7 @@ function C(e, t, n) {
   } = e, [O, R] = l.useState(() => (0, m.createInitialState)()), M = (0, i.useForceUpdate)(), L = (0, a.useStateFromStores)([d.default], () => {
     if (null != e.guild) {
       var t;
-      return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, S.CLYDE_AI_USER_ID)
+      return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, g.CLYDE_AI_USER_ID)
     }
     return !1
   }), P = (0, u.useClydeEnabled)(e.guild, e.channel) && !L && !(0, u.canUseCustomClydeProfiles)(e.guild), b = (0, a.useStateFromStores)([d.default, p.default], () => {
@@ -66,7 +66,7 @@ function C(e, t, n) {
     canMentionClyde: P,
     hidePersonalInformation: U,
     hideMentionDescription: x === o.ChatInputTypes.RULES_INPUT,
-    emojiIntention: x === o.ChatInputTypes.RULES_INPUT ? g.EmojiIntention.COMMUNITY_CONTENT : g.EmojiIntention.CHAT,
+    emojiIntention: x === o.ChatInputTypes.RULES_INPUT ? S.EmojiIntention.COMMUNITY_CONTENT : S.EmojiIntention.CHAT,
     currentWord: null !== (y = null == F ? void 0 : F.word) && void 0 !== y ? y : "",
     currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
     optionText: null != k ? (0, s.getString)({

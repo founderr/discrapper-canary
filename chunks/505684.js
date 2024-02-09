@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ObscuredDisplayContext: function() {
-    return x
+    return _
   },
   default: function() {
     return N
@@ -101,8 +101,8 @@ let C = e => {
       })
     })
   },
-  x = i.createContext(!1);
-class _ extends i.PureComponent {
+  _ = i.createContext(!1);
+class x extends i.PureComponent {
   renderWithTooltip(e) {
     return (0, s.jsx)(c.Tooltip, {
       position: "left",
@@ -131,7 +131,7 @@ class _ extends i.PureComponent {
       obscurityControlClassName: u
     } = this.props, {
       visible: d
-    } = this.state, f = (0, s.jsx)(x.Consumer, {
+    } = this.state, f = (0, s.jsx)(_.Consumer, {
       children: f => {
         let h = f || d || !a;
         return [m.ObscureReason.EXPLICIT_CONTENT, m.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(i) && !t ? (0, s.jsxs)("div", {
@@ -192,7 +192,7 @@ class _ extends i.PureComponent {
     } = this.props, {
       visible: r
     } = this.state;
-    return (0, s.jsx)(x.Consumer, {
+    return (0, s.jsx)(_.Consumer, {
       children: u => {
         let d = u || r;
         return [m.ObscureReason.EXPLICIT_CONTENT, m.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(i) ? (0, s.jsxs)("div", {
@@ -245,7 +245,7 @@ class _ extends i.PureComponent {
       className: n
     } = this.props, {
       visible: l
-    } = this.state, a = (0, s.jsx)(x.Consumer, {
+    } = this.state, a = (0, s.jsx)(_.Consumer, {
       children: a => {
         let r = a || l,
           u = i.Children.toArray(e(r)),
@@ -354,5 +354,5 @@ class _ extends i.PureComponent {
     }
   }
 }
-_.Types = l, _.Reasons = m.ObscureReason;
-var N = _
+x.Types = l, x.Reasons = m.ObscureReason;
+var N = x

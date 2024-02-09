@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var i = n("37983"),
   l = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+  a = n("414456"),
+  r = n.n(a),
   s = n("748820"),
   u = n("446674"),
   o = n("819855"),
@@ -27,16 +27,16 @@ var i = n("37983"),
   L = n("103603"),
   g = n("467094"),
   R = n("161585"),
-  p = n("24373"),
-  G = n("41170"),
+  G = n("24373"),
+  p = n("41170"),
   U = n("560241"),
   M = n("49111"),
   v = n("782340"),
   C = n("735193"),
   O = n("357450"),
-  y = n("348919");
-let P = new Set(["application/json", "image/png", "image/apng", "image/gif"]),
-  w = [{
+  P = n("348919");
+let w = new Set(["application/json", "image/png", "image/apng", "image/gif"]),
+  y = [{
     name: "Sticker file",
     extensions: ["json", "png", "apng", "gif"]
   }];
@@ -62,7 +62,7 @@ let x = e => {
       }), (0, i.jsx)("div", {
         className: C.previewLight,
         children: null != t ? t : (0, i.jsx)("img", {
-          src: y,
+          src: P,
           alt: v.default.Messages.GUILD_STICKER_PREVIEW_IMG_ALT_LIGHT
         })
       })]
@@ -74,29 +74,29 @@ let x = e => {
       previewData: n,
       onStickerError: l
     } = e;
-    if (null != t) return (0, i.jsx)(G.default, {
+    if (null != t) return (0, i.jsx)(p.default, {
       size: 160,
       sticker: t
     });
     if (null == n) return null;
     let {
-      id: r,
-      formatType: a,
+      id: a,
+      formatType: r,
       content: s
     } = n;
-    return (0, i.jsx)(G.default, {
+    return (0, i.jsx)(p.default, {
       assetData: s,
       fileUri: s,
       size: 160,
       sticker: {
-        name: r,
+        name: a,
         description: "",
-        id: r,
+        id: a,
         pack_id: "",
-        format_type: a
+        format_type: r
       },
       onError: l
-    }, r)
+    }, a)
   };
 async function H(e) {
   let t = await (0, L.readFileAsBase64)(e),
@@ -107,20 +107,20 @@ async function H(e) {
 }
 
 function F(e) {
-  var t, n, r, E, G, O, y, F;
+  var t, n, a, E, p, O, P, F;
   let {
     transitionState: V,
     onClose: j,
     guildId: K,
     sticker: Y
-  } = e, k = (0, u.useStateFromStores)([f.default], () => f.default.theme), z = (0, u.useStateFromStores)([c.default], () => (null == Y ? void 0 : Y.tags) != null ? c.default.getCustomEmojiById(Y.tags) : null), W = null !== (n = null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && void 0 !== n && n, Z = W ? U.STAFF_MAX_STICKER_FILE_SIZE : U.MAX_STICKER_FILE_SIZE, [X, J] = l.useState(null), [q, Q] = l.useState(null !== (r = null == Y ? void 0 : Y.name) && void 0 !== r ? r : ""), [$, ee] = l.useState({
+  } = e, k = (0, u.useStateFromStores)([f.default], () => f.default.theme), z = (0, u.useStateFromStores)([c.default], () => (null == Y ? void 0 : Y.tags) != null ? c.default.getCustomEmojiById(Y.tags) : null), W = null !== (n = null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && void 0 !== n && n, Z = W ? U.STAFF_MAX_STICKER_FILE_SIZE : U.MAX_STICKER_FILE_SIZE, [X, J] = l.useState(null), [q, Q] = l.useState(null !== (a = null == Y ? void 0 : Y.name) && void 0 !== a ? a : ""), [$, ee] = l.useState({
     file: null,
-    filename: null !== (E = (0, p.getFilenameForSticker)(Y)) && void 0 !== E ? E : ""
-  }), [et, en] = l.useState(null == z ? void 0 : z.id), [ei, el] = l.useState(null !== (G = null == z ? void 0 : z.name) && void 0 !== G ? G : null == Y ? void 0 : Y.tags), [er, ea] = l.useState(null !== (O = null == Y ? void 0 : Y.description) && void 0 !== O ? O : ""), [es, eu] = l.useState(!1), [eo, ed] = l.useState(null), ec = (0, u.useStateFromStores)([T.default], () => T.default.getGuild(K)), eI = (null == ec ? void 0 : ec.hasFeature(M.GuildFeatures.PARTNERED)) || (null == ec ? void 0 : ec.hasFeature(M.GuildFeatures.VERIFIED)), e_ = null != Y, eE = e_ || (null == $ ? void 0 : $.file) != null, ef = 0 === er.length || er.length >= 2 && er.length <= 100, eT = !es && (null == eo ? void 0 : eo.isBlocking) !== !0 && q.length >= 2 && (null != et || null != ei || (null == Y ? void 0 : Y.tags) != null && (null == Y ? void 0 : Y.tags) !== "") && eE && ef, eS = async e => {
+    filename: null !== (E = (0, G.getFilenameForSticker)(Y)) && void 0 !== E ? E : ""
+  }), [et, en] = l.useState(null == z ? void 0 : z.id), [ei, el] = l.useState(null !== (p = null == z ? void 0 : z.name) && void 0 !== p ? p : null == Y ? void 0 : Y.tags), [ea, er] = l.useState(null !== (O = null == Y ? void 0 : Y.description) && void 0 !== O ? O : ""), [es, eu] = l.useState(!1), [eo, ed] = l.useState(null), ec = (0, u.useStateFromStores)([T.default], () => T.default.getGuild(K)), eI = (null == ec ? void 0 : ec.hasFeature(M.GuildFeatures.PARTNERED)) || (null == ec ? void 0 : ec.hasFeature(M.GuildFeatures.VERIFIED)), e_ = null != Y, eE = e_ || (null == $ ? void 0 : $.file) != null, ef = 0 === ea.length || ea.length >= 2 && ea.length <= 100, eT = !es && (null == eo ? void 0 : eo.isBlocking) !== !0 && q.length >= 2 && (null != et || null != ei || (null == Y ? void 0 : Y.tags) != null && (null == Y ? void 0 : Y.tags) !== "") && eE && ef, eS = async e => {
     var t;
     if (null == e) return;
     let n = null === (t = e.type) || void 0 === t ? void 0 : t.split(";")[0];
-    if (!P.has(n)) {
+    if (!w.has(n)) {
       ed({
         message: v.default.Messages.GUILD_STICKER_UNKNOWN_MIME_TYPE,
         isBlocking: !0
@@ -151,9 +151,9 @@ function F(e) {
       });
       return
     }
-    let l = (0, p.getStickerFormatTypeFromFileType)(i.type),
-      r = l === R.StickerFormat.LOTTIE;
-    if (r) {
+    let l = (0, G.getStickerFormatTypeFromFileType)(i.type),
+      a = l === R.StickerFormat.LOTTIE;
+    if (a) {
       if (!eI) {
         ed({
           message: v.default.Messages.GUILD_STICKER_UNSUPPORTED_MIME_TYPE.format({
@@ -184,20 +184,20 @@ function F(e) {
       filename: i.name
     })
   }, eD = async e => {
-    var t, n, i, l, r, a;
+    var t, n, i, l, a, r;
     e.preventDefault();
     let s = null !== (n = null !== (t = null != et ? et : ei) && void 0 !== t ? t : null == Y ? void 0 : Y.tags) && void 0 !== n ? n : "";
     try {
       if (eu(!0), e_) await (0, g.updateGuildSticker)(K, null !== (i = null == Y ? void 0 : Y.id) && void 0 !== i ? i : "", {
         name: q,
         tags: s,
-        description: er
+        description: ea
       });
       else {
         ;
         let e = new FormData;
-        e.append("name", q), e.append("tags", s), e.append("description", er), (null == $ ? void 0 : $.file) != null && e.append("file", $.file), a = null !== (r = null === (l = $.file) || void 0 === l ? void 0 : l.type) && void 0 !== r ? r : "", A.default.track(M.AnalyticEvents.STICKER_UPLOAD_STARTED, {
-          filetype: a
+        e.append("name", q), e.append("tags", s), e.append("description", ea), (null == $ ? void 0 : $.file) != null && e.append("file", $.file), r = null !== (a = null === (l = $.file) || void 0 === l ? void 0 : l.type) && void 0 !== a ? a : "", A.default.track(M.AnalyticEvents.STICKER_UPLOAD_STARTED, {
+          filetype: r
         }), await (0, g.createGuildSticker)(K, e), b(!0)
       }
       j()
@@ -254,17 +254,17 @@ function F(e) {
             stickerPreview: eA
           })
         }), (0, i.jsxs)(d.FormSection, {
-          className: a(C.formItem, C.formItemRow),
+          className: r(C.formItem, C.formItemRow),
           children: [(0, i.jsx)(d.FormItem, {
             title: e_ ? v.default.Messages.GUILD_STICKER_UPLOAD_FILE_TITLE_BLOCKED : v.default.Messages.GUILD_STICKER_UPLOAD_FILE_TITLE,
             required: !0,
             className: C.formItemRowChild,
             children: e_ ? (0, i.jsx)(d.TextInput, {
               disabled: !0,
-              value: null !== (y = null == $ ? void 0 : $.filename) && void 0 !== y ? y : ""
+              value: null !== (P = null == $ ? void 0 : $.filename) && void 0 !== P ? P : ""
             }) : (0, i.jsx)(_.default, {
               buttonText: v.default.Messages.GUILD_STICKER_UPLOAD_FILE_BUTTON,
-              filters: w,
+              filters: y,
               filename: null !== (F = null == $ ? void 0 : $.filename) && void 0 !== F ? F : "",
               placeholder: v.default.Messages.GUILD_STICKER_UPLOAD_FILE_PLACEHOLDER,
               onFileSelect: eS
@@ -299,8 +299,8 @@ function F(e) {
               })
             })]
           }), (0, i.jsx)(d.TextArea, {
-            value: er,
-            onChange: ea,
+            value: ea,
+            onChange: er,
             placeholder: v.default.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION_PLACEHOLDER,
             maxLength: 100
           })]

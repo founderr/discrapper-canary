@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("351825"),
   h = n("642032"),
   E = n("83017"),
-  S = n("458604"),
-  g = n("115279"),
+  g = n("458604"),
+  S = n("115279"),
   C = n("49111"),
   T = n("782340"),
   v = n("465439"),
@@ -46,8 +46,8 @@ var l = n("37983"),
     i.useEffect(() => c.EmojiPickerStore.useStore.subscribe(e => w(e), e => e.inspectedExpressionPosition), []), i.useEffect(() => {
       p.FrecencyUserSettingsActionCreators.loadIfNecessary()
     }, []);
-    let H = n === g.EmojiSize.LARGE,
-      V = n === g.EmojiSize.MEDIUM,
+    let H = n === S.EmojiSize.LARGE,
+      V = n === S.EmojiSize.MEDIUM,
       K = e => {
         let t = "".concat(e.rowIndex, "c").concat(e.columnIndex);
         switch (e.type) {
@@ -110,7 +110,7 @@ var l = n("37983"),
               columnIndex: i,
               visibleRowIndex: s
             } = e, r = k.rowIndex === s && k.columnIndex === i;
-            return (0, l.jsx)(S.default, {
+            return (0, l.jsx)(g.default, {
               rowIndex: O,
               descriptor: e,
               emojiItemKey: t,
@@ -145,9 +145,9 @@ var l = n("37983"),
         ref: B,
         children: e.map(K)
       });
-    if (P !== g.EmojiCategoryTypes.TOP_GUILD_EMOJI) return W(t);
-    let Y = t.filter(e => e.subCategory === g.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === g.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
-      z = t.filter(e => e.subCategory === g.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
+    if (P !== S.EmojiCategoryTypes.TOP_GUILD_EMOJI) return W(t);
+    let Y = t.filter(e => e.subCategory === S.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === S.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
+      z = t.filter(e => e.subCategory === S.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && d.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
     return 0 === z.length ? W(t) : (0, l.jsxs)("div", {
       className: v.topEmojiSectionContainer,
       children: [(0, l.jsx)("div", {

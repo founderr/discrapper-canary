@@ -18,14 +18,14 @@ var l = n("37983"),
   m = n("150021"),
   h = n("206625"),
   E = n("302437"),
-  S = n("867805"),
-  g = n("476765"),
+  g = n("867805"),
+  S = n("476765"),
   C = n("402671"),
   T = n("159885"),
   v = n("49111"),
   I = n("782340"),
   _ = n("576643");
-let y = (0, g.uid)(),
+let y = (0, S.uid)(),
   A = c.default.convert.fromCodePoint("1f44f"),
   N = (0, T.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
   x = (0, T.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
@@ -82,7 +82,7 @@ let y = (0, g.uid)(),
       onClick: a,
       hasTabWrapper: r
     } = e, c = (0, E.default)("diversity"), f = (0, u.useSpring)({
-      height: (x + 2 * N) * (S.DIVERSITY_SURROGATES.length + 1),
+      height: (x + 2 * N) * (g.DIVERSITY_SURROGATES.length + 1),
       from: {
         height: x
       },
@@ -93,7 +93,7 @@ let y = (0, g.uid)(),
     i.useEffect(() => {
       c.focusFirstVisibleItem()
     }, [c]);
-    let p = ["", ...S.DIVERSITY_SURROGATES];
+    let p = ["", ...g.DIVERSITY_SURROGATES];
     return o.remove(p, e => e === n), p.unshift(n), (0, l.jsx)(d.ListNavigatorProvider, {
       navigator: c,
       children: (0, l.jsx)(d.ListNavigatorContainer, {

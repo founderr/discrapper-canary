@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("713135"),
   h = n("765698"),
   E = n("906889"),
-  S = n("10532"),
-  g = n("648149"),
+  g = n("10532"),
+  S = n("648149"),
   C = n("915712"),
   T = n("261523"),
   v = n("369869"),
@@ -92,7 +92,7 @@ function U(e) {
       user: k,
       nickname: ea,
       pronouns: null == w ? void 0 : w.pronouns,
-      usernameIcon: k.hasAvatarForGuild(null == F ? void 0 : F.id) && (0, l.jsx)(g.default, {
+      usernameIcon: k.hasAvatarForGuild(null == F ? void 0 : F.id) && (0, l.jsx)(S.default, {
         user: k,
         nickname: ea
       }),
@@ -101,7 +101,7 @@ function U(e) {
       children: [(0, l.jsx)(y.default, {
         className: b.customStatusSection,
         customStatusActivity: D
-      }), (0, l.jsx)(S.default, {
+      }), (0, l.jsx)(g.default, {
         className: b.divider
       }), (0, l.jsxs)(o.AdvancedScroller, {
         className: s(b.scroller, {

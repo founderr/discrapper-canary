@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchUserEntitlementsForApplication: function() {
-    return l
+    return o
   },
   fetchUserEntitlements: function() {
-    return s
+    return l
   },
   fetchGiftableEntitlements: function() {
-    return o
+    return s
   }
 });
 var u = n("872717"),
   r = n("913144"),
-  i = n("271560"),
-  a = n("49111");
+  a = n("271560"),
+  i = n("49111");
 
-function l(e) {
+function o(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   return r.default.wait(() => {
     r.default.dispatch({
@@ -23,7 +23,7 @@ function l(e) {
       applicationId: e
     })
   }), u.default.get({
-    url: a.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
+    url: i.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
     oldFormErrors: !0,
     query: {
       exclude_consumed: t
@@ -39,22 +39,22 @@ function l(e) {
     })
   })
 }
-async function s(e) {
+async function l(e) {
   let {
     withSku: t = !1,
     withApplication: n = !1,
-    entitlementType: i
+    entitlementType: a
   } = e;
   r.default.dispatch({
     type: "ENTITLEMENTS_FETCH_FOR_USER_START"
   });
   try {
     let e = await u.default.get({
-      url: a.Endpoints.ENTITLEMENTS_FOR_USER,
+      url: i.Endpoints.ENTITLEMENTS_FOR_USER,
       query: {
         with_sku: t,
         with_application: n,
-        entitlement_type: i
+        entitlement_type: a
       }
     });
     r.default.dispatch({
@@ -67,13 +67,13 @@ async function s(e) {
     })
   }
 }
-async function o() {
+async function s() {
   r.default.dispatch({
     type: "ENTITLEMENTS_GIFTABLE_FETCH"
   });
   try {
-    let e = await (0, i.httpGetWithCountryCodeQuery)({
-      url: a.Endpoints.ENTITLEMENTS_GIFTABLE
+    let e = await (0, a.httpGetWithCountryCodeQuery)({
+      url: i.Endpoints.ENTITLEMENTS_GIFTABLE
     });
     r.default.dispatch({
       type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS",

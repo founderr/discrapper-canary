@@ -1,37 +1,37 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
 });
-var i = n("37983"),
-  r = n("884691"),
-  l = n("414456"),
-  s = n.n(l),
-  a = n("77078"),
-  o = n("760607"),
-  u = n("89976");
+var l = n("37983"),
+  a = n("884691"),
+  r = n("414456"),
+  s = n.n(r),
+  i = n("77078"),
+  u = n("760607"),
+  o = n("89976");
 
-function c(t) {
+function c(e) {
   let {
-    children: e,
+    children: t,
     size: n = 16,
-    className: l,
+    className: r,
     flowerStarClassName: c,
     ...d
-  } = t, f = r.Children.only(e), h = (0, a.useRedesignIconContext)().enabled;
-  return (0, i.jsxs)("div", {
-    className: s(u.flowerStarContainer, l),
+  } = e, f = a.Children.only(t), E = (0, i.useRedesignIconContext)().enabled;
+  return (0, l.jsxs)("div", {
+    className: s(o.flowerStarContainer, r),
     style: {
       width: n,
       height: n
     },
-    children: [(0, i.jsx)(o.default, {
+    children: [(0, l.jsx)(u.default, {
       ...d,
-      className: s(c, u.flowerStar)
-    }), (0, i.jsx)("div", {
-      className: s(u.childContainer, {
-        [u.redesignIconChildContainer]: h
+      className: s(c, o.flowerStar)
+    }), (0, l.jsx)("div", {
+      className: s(o.childContainer, {
+        [o.redesignIconChildContainer]: E
       }),
       children: f
     })]

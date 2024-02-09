@@ -23,8 +23,8 @@ var l = n("37983"),
   v = n("402318"),
   I = n("976818"),
   S = n("49111"),
-  x = n("200521"),
-  _ = n("137738");
+  _ = n("200521"),
+  x = n("137738");
 
 function N(e) {
   let {
@@ -42,7 +42,7 @@ function N(e) {
     })
   }, R = d.default.can(S.Permissions.MANAGE_MESSAGES, c);
   return (0, l.jsxs)(i.Clickable, {
-    className: _.container,
+    className: x.container,
     onClick: M,
     onContextMenu: e => {
       R && (0, r.openContextMenuLazy)(e, async () => {
@@ -60,13 +60,13 @@ function N(e) {
     children: [(0, l.jsx)(p.default, {
       hovered: A,
       unread: T,
-      className: _.unreadPill
+      className: x.unreadPill
     }), (0, l.jsx)("div", {
-      className: _.rowHeader,
+      className: x.rowHeader,
       children: (0, l.jsxs)("div", {
-        className: _.rowHeaderLeft,
+        className: x.rowHeaderLeft,
         children: [(0, l.jsx)(i.Text, {
-          className: _.timestamp,
+          className: x.timestamp,
           color: "interactive-normal",
           variant: "text-xs/normal",
           children: j
@@ -74,13 +74,13 @@ function N(e) {
           height: 4,
           width: 4,
           "aria-hidden": "true",
-          className: _.dot
+          className: x.dot
         }), (0, l.jsx)(m.default, {
           height: 12,
           width: 12,
-          className: _.icon
+          className: x.icon
         }), (0, l.jsx)(i.Text, {
-          className: _.count,
+          className: x.count,
           color: "interactive-normal",
           variant: "text-xs/normal",
           children: t.count
@@ -89,7 +89,7 @@ function N(e) {
             height: 4,
             width: 4,
             "aria-hidden": "true",
-            className: _.dot
+            className: x.dot
           }), (0, l.jsx)(v.default, {
             partySize: {
               knownSize: I.length,
@@ -102,18 +102,18 @@ function N(e) {
         })]
       })
     }), A && !y && (0, l.jsxs)("div", {
-      className: _.feedbackContainer,
+      className: x.feedbackContainer,
       children: [(0, l.jsx)(i.Clickable, {
-        onClick: e => L(e, x.FeedbackRating.GOOD),
+        onClick: e => L(e, _.FeedbackRating.GOOD),
         children: (0, l.jsx)(h.default, {
-          className: _.thumbIcon,
+          className: x.thumbIcon,
           width: 12,
           height: 12
         })
       }), (0, l.jsx)(i.Clickable, {
-        onClick: e => L(e, x.FeedbackRating.BAD),
+        onClick: e => L(e, _.FeedbackRating.BAD),
         children: (0, l.jsx)(f.default, {
-          className: _.thumbIcon,
+          className: x.thumbIcon,
           width: 12,
           height: 12
         })
@@ -121,12 +121,12 @@ function N(e) {
     }), (0, l.jsx)(i.Text, {
       color: "header-primary",
       variant: "text-sm/semibold",
-      className: _.title,
+      className: x.title,
       children: t.topic
     }), (0, l.jsx)(i.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
-      className: _.subtitle,
+      className: x.subtitle,
       children: t.summShort
     })]
   })

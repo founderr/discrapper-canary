@@ -5,10 +5,10 @@ i.r(t), i.d(t, {
   }
 }), i("808653");
 var n = i("716241"),
-  r = i("385976"),
-  o = i("42203"),
-  a = i("18494"),
-  u = i("402671"),
+  o = i("385976"),
+  r = i("42203"),
+  u = i("18494"),
+  a = i("402671"),
   s = i("255214"),
   l = i("352046"),
   E = i("49111"),
@@ -23,7 +23,7 @@ function m(e) {
     rowSize: _,
     isBurstReaction: f,
     analyticsObject: g
-  } = e, I = o.default.getChannel(a.default.getChannelId()), O = null == I ? void 0 : I.getGuildId(), C = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), p = null != I ? r.default.getDisambiguatedEmojiContext(I.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], y = C.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), T = null != O ? r.default.getGuildEmoji(O) : [], S = null !== (t = r.default.getDisambiguatedEmojiContext(null == I ? void 0 : I.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}, j = Object.values(S).reduce((e, t) => e += t.length, 0), {
+  } = e, I = r.default.getChannel(u.default.getChannelId()), O = null == I ? void 0 : I.getGuildId(), C = o.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), p = null != I ? o.default.getDisambiguatedEmojiContext(I.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], y = C.slice(0, o.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), T = null != O ? o.default.getGuildEmoji(O) : [], S = null !== (t = o.default.getDisambiguatedEmojiContext(null == I ? void 0 : I.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}, j = Object.values(S).reduce((e, t) => e += t.length, 0), {
     topEmojis: h,
     newlyAddedEmojis: A
   } = (0, l.getTopAndNewlyAddedEmojis)({
@@ -43,11 +43,11 @@ function m(e) {
     badged: !1,
     num_expressions_favorites: p.length,
     num_animated_expressions_favorites: p.filter(e => null == e ? void 0 : e.animated).length,
-    num_custom_expressions_favorites: p.filter(u.default.isCustomEmoji).length,
+    num_custom_expressions_favorites: p.filter(a.default.isCustomEmoji).length,
     num_standard_expressions_favorites: p.filter(e => null == e.id).length,
     num_expressions_frecent: y.length,
     num_animated_expressions_frecent: y.filter(e => null == e ? void 0 : e.animated).length,
-    num_custom_expressions_frecent: y.filter(u.default.isCustomEmoji).length,
+    num_custom_expressions_frecent: y.filter(a.default.isCustomEmoji).length,
     num_standard_expressions_frecent: y.filter(e => null == e.id).length,
     num_current_guild_expressions: T.length,
     num_custom_expressions_total: j,

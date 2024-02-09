@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return E
   },
   SelectionUtils: function() {
-    return S
+    return g
   },
   DOMUtils: function() {
     return v
@@ -289,7 +289,7 @@ let d = {
       }
     }
   },
-  S = {
+  g = {
     equals: (e, t) => null == e && null == t || null != e && null != t && E.equals(e, t),
     isValid(e, t) {
       if (null == t) return !1;
@@ -302,14 +302,14 @@ let d = {
       return p.isText(i) && p.isText(a) && n.offset <= i.text.length && l.offset <= a.text.length
     }
   },
-  g = (e, t) => {
+  S = (e, t) => {
     let n = (t.top + t.bottom) / 2;
     return e.top <= n && e.bottom >= n
   },
   C = (e, t, n) => {
     let l = d.toDOMRange(e, t).getBoundingClientRect(),
       i = d.toDOMRange(e, n).getBoundingClientRect();
-    return g(l, i) && g(i, l)
+    return S(l, i) && S(i, l)
   },
   T = (e, t, n, l) => {
     let i = {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   setHighlightedSummary: function() {
-    return _
+    return x
   },
   toggleTopicsBar: function() {
     return N
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return R
   },
   default: function() {
-    return D
+    return P
   }
 }), n("222007");
 var l = n("884691"),
@@ -68,7 +68,7 @@ async function S(e, t) {
     receivedAt: Date.now()
   })
 }
-async function x(e) {
+async function _(e) {
   var t, n;
   let l, a;
   if (!g.default.shouldFetch(e)) return;
@@ -94,7 +94,7 @@ async function x(e) {
   })
 }
 
-function _(e, t) {
+function x(e, t) {
   u.default.dispatch({
     type: "SET_HIGHLIGHTED_SUMMARY",
     channelId: e,
@@ -246,8 +246,8 @@ let b = {
   useSummaryPolling: O,
   updateVisibleMessages: M,
   setSelectedSummary: T,
-  setHighlightedSummary: _,
-  fetchSummaries: x,
+  setHighlightedSummary: x,
+  fetchSummaries: _,
   fetchSummariesBulk: L,
   useChannelSummaries: function(e) {
     let {
@@ -272,4 +272,4 @@ let b = {
   },
   deleteSummary: R
 };
-var D = b
+var P = b

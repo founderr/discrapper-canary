@@ -1,7 +1,7 @@
 "use strict";
 n.r(e), n.d(e, {
   default: function() {
-    return c
+    return u
   }
 });
 var l = n("37983"),
@@ -10,21 +10,21 @@ var l = n("37983"),
   r = n.n(a),
   o = n("77078"),
   s = n("371642"),
-  u = n("775980");
+  c = n("775980");
 
-function c(t) {
+function u(t) {
   let {
     filename: e,
     className: n,
     filters: a,
-    buttonText: c,
+    buttonText: u,
     placeholder: d,
     onFileSelect: f
   } = t, p = i.useRef(null);
   return (0, l.jsxs)("div", {
-    className: r(n, u.fileUpload),
+    className: r(n, c.fileUpload),
     children: [(0, l.jsx)("input", {
-      className: u.fileUploadInput,
+      className: c.fileUploadInput,
       tabIndex: -1,
       readOnly: !0,
       placeholder: d,
@@ -32,8 +32,8 @@ function c(t) {
       value: e
     }), (0, l.jsxs)(o.Button, {
       size: o.Button.Sizes.MIN,
-      className: u.fileUploadButton,
-      children: [c, (0, l.jsx)(s.default, {
+      className: c.fileUploadButton,
+      children: [u, (0, l.jsx)(s.default, {
         ref: p,
         tabIndex: -1,
         onChange: t => {

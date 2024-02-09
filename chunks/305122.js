@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return S
   },
   uploadSound: function() {
-    return x
+    return _
   },
   updateSound: function() {
-    return _
+    return x
   },
   deleteSound: function() {
     return N
@@ -91,7 +91,7 @@ let E = async e => {
 }, S = () => __OVERLAY__ ? (i.default.dispatch({
   type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
 }), Promise.all([])) : Promise.all([v(), I()]);
-async function x(e) {
+async function _(e) {
   let {
     guildId: t,
     name: n,
@@ -111,7 +111,7 @@ async function x(e) {
   }), u = (0, c.soundboardSoundFromAPI)(o.body, t);
   return u
 }
-async function _(e) {
+async function x(e) {
   let {
     guildId: t,
     soundId: n,

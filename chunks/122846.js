@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var r = n("37983"),
   i = n("884691"),
-  u = n("414456"),
-  a = n.n(u),
+  a = n("414456"),
+  u = n.n(a),
   l = n("446674"),
   o = n("77078"),
   s = n("913144"),
@@ -21,8 +21,8 @@ var r = n("37983"),
   S = n("154889"),
   R = n("917247"),
   I = n("956597"),
-  p = n("635956"),
-  N = n("273619"),
+  N = n("635956"),
+  p = n("273619"),
   C = n("674158"),
   P = n("915639"),
   U = n("357957"),
@@ -30,13 +30,13 @@ var r = n("37983"),
   h = n("46829"),
   M = n("595086"),
   m = n("240481"),
-  v = n("719923"),
-  L = n("153160"),
-  D = n("49111"),
+  L = n("719923"),
+  D = n("153160"),
+  v = n("49111"),
   g = n("646718"),
   y = n("782340"),
   G = n("643076");
-let x = e => {
+let b = e => {
   let {
     locale: t
   } = e;
@@ -60,7 +60,7 @@ let x = e => {
   })
 };
 
-function b() {
+function x() {
   return (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(C.default, {
       icon: M.default,
@@ -77,7 +77,7 @@ let B = e => {
     let {
       trialOffer: t,
       discountOffer: i,
-      isTier0Upsell: u,
+      isTier0Upsell: a,
       isLoading: s,
       price: c,
       onClose: d
@@ -90,7 +90,7 @@ let B = e => {
       }), _ && (0, r.jsx)(I.PremiumTrialGradientBadge, {
         className: G.premiumTrialBadge
       }), (0, r.jsx)("img", {
-        className: a(G.heroImage, {
+        className: u(G.heroImage, {
           [G.heroImageWithTrialOffer]: _
         }),
         src: n("190389"),
@@ -101,15 +101,15 @@ let B = e => {
           className: G.heading,
           children: null == c ? (0, r.jsx)(o.Spinner, {
             type: o.Spinner.Type.PULSING_ELLIPSIS
-          }) : u ? y.default.Messages.STICKER_PREMIUM_SUBSCRIPTION_UPSELL_ALERT_TITLE.format({
-            planName: (0, v.getTierDisplayName)(g.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-            monthlyPrice: (0, L.formatPrice)(c.amount, c.currency)
+          }) : a ? y.default.Messages.STICKER_PREMIUM_SUBSCRIPTION_UPSELL_ALERT_TITLE.format({
+            planName: (0, L.getTierDisplayName)(g.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+            monthlyPrice: (0, D.formatPrice)(c.amount, c.currency)
           }) : y.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_ALERT_TITLE.format({
-            monthlyPrice: (0, L.formatPrice)(c.amount, c.currency)
+            monthlyPrice: (0, D.formatPrice)(c.amount, c.currency)
           })
         }), (0, r.jsx)("div", {
           className: G.perks,
-          children: u ? (0, r.jsx)(b, {}) : (0, r.jsx)(x, {
+          children: a ? (0, r.jsx)(x, {}) : (0, r.jsx)(b, {
             locale: E
           })
         })]
@@ -121,26 +121,26 @@ let B = e => {
       trialOffer: t,
       discountOffer: n,
       isTier0Upsell: i,
-      onClose: u
-    } = e, a = {
-      section: D.AnalyticsSections.STICKER_PREMIUM_TIER_2_UPSELL_MODAL
+      onClose: a
+    } = e, u = {
+      section: v.AnalyticsSections.STICKER_PREMIUM_TIER_2_UPSELL_MODAL
     };
     return (0, r.jsxs)(o.ModalFooter, {
       className: G.footer,
       children: [(0, r.jsx)(o.Button, {
-        onClick: u,
+        onClick: a,
         size: o.Button.Sizes.SMALL,
         color: o.Button.Colors.PRIMARY,
         look: o.Button.Looks.LINK,
         children: y.default.Messages.CLOSE
-      }), (0, r.jsx)(p.default, {
+      }), (0, r.jsx)(N.default, {
         buttonText: null != t || null != n ? i ? y.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : y.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0,
-        premiumModalAnalyticsLocation: a,
+        premiumModalAnalyticsLocation: u,
         subscriptionTier: i ? g.PremiumSubscriptionSKUs.TIER_0 : g.PremiumSubscriptionSKUs.TIER_2,
         size: o.Button.Sizes.SMALL,
         color: o.Button.Colors.GREEN,
         onClick: () => {
-          u()
+          a()
         }
       })]
     })
@@ -150,7 +150,7 @@ function V(e) {
   let {
     onClose: t,
     ...n
-  } = e, u = (0, E.useSubscriptionPlansLoaded)(), a = (0, l.useStateFromStores)([U.default], () => U.default.hasFetchedPaymentSources), I = u && a, p = (0, R.usePremiumTrialOffer)(), C = (0, S.usePremiumDiscountOffer)(), {
+  } = e, a = (0, E.useSubscriptionPlansLoaded)(), u = (0, l.useStateFromStores)([U.default], () => U.default.hasFetchedPaymentSources), I = a && u, N = (0, R.usePremiumTrialOffer)(), C = (0, S.usePremiumDiscountOffer)(), {
     isLoading: P,
     suggestedPremiumType: O
   } = (0, A.default)({
@@ -160,11 +160,11 @@ function V(e) {
   });
   i.useEffect(() => {
     s.default.wait(() => {
-      (0, c.fetchPaymentSources)(), (0, d.fetchPremiumSubscriptionPlans)(null, null, D.RevenueSurfaces.DISCOVERY)
+      (0, c.fetchPaymentSources)(), (0, d.fetchPremiumSubscriptionPlans)(null, null, v.RevenueSurfaces.DISCOVERY)
     })
   }, []);
   let h = O === g.PremiumTypes.TIER_0 && null == C,
-    M = I ? v.default.getDefaultPrice(h ? g.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : g.SubscriptionPlans.PREMIUM_MONTH_TIER_2) : null;
+    M = I ? L.default.getDefaultPrice(h ? g.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : g.SubscriptionPlans.PREMIUM_MONTH_TIER_2) : null;
   return (0, r.jsx)(_.PaymentContextProvider, {
     activeSubscription: null,
     stepConfigs: [],
@@ -172,10 +172,10 @@ function V(e) {
     children: (0, r.jsx)(o.ModalRoot, {
       ...n,
       "aria-labelledby": "sticker-pack-premium-upsell-modal-header",
-      children: (0, r.jsx)(N.default, {
+      children: (0, r.jsx)(p.default, {
         hideBreadcrumbs: !0,
         body: (0, r.jsx)(B, {
-          trialOffer: p,
+          trialOffer: N,
           discountOffer: C,
           isTier0Upsell: h,
           isLoading: !I || P,
@@ -183,7 +183,7 @@ function V(e) {
           onClose: t
         }),
         footer: (0, r.jsx)(H, {
-          trialOffer: p,
+          trialOffer: N,
           discountOffer: C,
           isTier0Upsell: h,
           onClose: t

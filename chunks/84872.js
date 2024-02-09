@@ -19,8 +19,8 @@ var i = n("551042"),
   m = n("851745"),
   h = n("406291"),
   E = n("49111"),
-  S = n("782340"),
-  g = n("106226");
+  g = n("782340"),
+  S = n("106226");
 
 function C(e, t) {
   return (0, l.jsx)(u.default, {
@@ -89,8 +89,8 @@ let T = {
         autocompletes: t,
         onHover: u,
         onClick: f,
-        titleWithQuery: S.default.Messages.EMOJI_MATCHING,
-        titleWithoutQuery: S.default.Messages.EMOJI,
+        titleWithQuery: g.default.Messages.EMOJI_MATCHING,
+        titleWithoutQuery: g.default.Messages.EMOJI,
         Component: c.default.Emoji,
         getProps: e => ({
           emoji: e,
@@ -115,8 +115,8 @@ let T = {
             })
           })
         },
-        titleWithQuery: 0 === t.length ? S.default.Messages.EMOJI_MATCHING : null,
-        titleWithoutQuery: 0 === t.length ? S.default.Messages.EMOJI : null,
+        titleWithQuery: 0 === t.length ? g.default.Messages.EMOJI_MATCHING : null,
+        titleWithoutQuery: 0 === t.length ? g.default.Messages.EMOJI : null,
         Component: c.default.EmojiUpsell,
         getProps: e => {
           let {
@@ -131,15 +131,15 @@ let T = {
         key: "emoji-upsell",
         indexOffset: t.length
       }) : null, (t.length > 0 || s.length > 0) && a.length > 0 && (0, l.jsx)(c.default.Divider, {
-        className: g.emojiStickersDivider
+        className: S.emojiStickersDivider
       }), (0, p.renderAutocompleteGroup)({
         query: o,
         selectedIndex: r,
         autocompletes: a,
         onHover: u,
         onClick: f,
-        titleWithQuery: S.default.Messages.STICKERS_MATCHING,
-        titleWithoutQuery: S.default.Messages.STICKER,
+        titleWithQuery: g.default.Messages.STICKERS_MATCHING,
+        titleWithoutQuery: g.default.Messages.STICKER,
         Component: c.default.Sticker,
         getProps: e => {
           let {
@@ -156,7 +156,7 @@ let T = {
         getQuery: e => e,
         key: "stickers",
         indexOffset: t.length + s.length,
-        headerClassName: t.length > 0 ? g.stickersHeaderWithEmojiResults : void 0
+        headerClassName: t.length > 0 ? S.stickersHeaderWithEmojiResults : void 0
       })]
     })
   },

@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return M
   }
 });
-var s = n("37983");
+var r = n("37983");
 n("884691");
-var l = n("446674"),
+var s = n("446674"),
   i = n("77078"),
-  r = n("152584"),
-  o = n("853987"),
-  a = n("491232"),
+  l = n("152584"),
+  a = n("853987"),
+  o = n("491232"),
   u = n("884351"),
   c = n("184900"),
   d = n("783142"),
@@ -28,25 +28,25 @@ let L = e => {
     var t;
     let {
       effectIsOwned: n,
-      pendingProfileEffectRecord: r,
+      pendingProfileEffectRecord: l,
       product: u,
       purchase: c
-    } = e, d = (0, l.useStateFromStores)([E.default], () => E.default.getCurrentUser()), f = (0, l.useStateFromStores)([o.default], () => o.default.getProduct(null == r ? void 0 : r.skuId)), C = (0, l.useStateFromStores)([h.default], () => h.default.locale), v = m.default.canUseCollectibles(d), p = (0, a.isPremiumCollectiblesPurchase)(c), L = (0, a.isPremiumCollectiblesProduct)(u), _ = x(!v && p, L, v);
-    return null != r ? (0, s.jsx)("div", {
+    } = e, d = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), f = (0, s.useStateFromStores)([a.default], () => a.default.getProduct(null == l ? void 0 : l.skuId)), C = (0, s.useStateFromStores)([h.default], () => h.default.locale), v = m.default.canUseCollectibles(d), p = (0, o.isPremiumCollectiblesPurchase)(c), L = (0, o.isPremiumCollectiblesProduct)(u), M = x(!v && p, L, v);
+    return null != l ? (0, r.jsx)("div", {
       className: n ? I.effectDescriptionNoGradient : I.effectDescriptionBorderWithGradient,
-      children: (0, s.jsxs)("div", {
+      children: (0, r.jsxs)("div", {
         className: I.effectDescriptionContainer,
-        children: [(0, s.jsx)(i.Text, {
+        children: [(0, r.jsx)(i.Text, {
           color: "header-primary",
           variant: "text-sm/semibold",
           className: I.effectName,
           children: null !== (t = null == c ? void 0 : c.name) && void 0 !== t ? t : null == f ? void 0 : f.name
-        }), (0, s.jsx)(i.Text, {
+        }), (0, r.jsx)(i.Text, {
           color: "text-normal",
           variant: "text-sm/normal",
           className: I.effectDescription,
-          children: null != c ? c.summary : _
-        }), null != c && (0, s.jsxs)(i.Text, {
+          children: null != c ? c.summary : M
+        }), null != c && (0, r.jsxs)(i.Text, {
           variant: "text-xxs/normal",
           color: "text-muted",
           className: I.effectPurchasedAt,
@@ -55,68 +55,68 @@ let L = e => {
               month: "long",
               year: "numeric"
             })
-          }), p && (0, s.jsxs)(s.Fragment, {
-            children: [(0, s.jsx)("br", {}), g.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
+          }), p && (0, r.jsxs)(r.Fragment, {
+            children: [(0, r.jsx)("br", {}), g.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
           })]
         })]
       })
     }) : null
   },
   x = (e, t, n) => e ? g.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED : t && n ? g.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM : t && !n ? g.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER : g.default.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM;
-var _ = e => {
+var M = e => {
   var t;
   let {
     user: n,
     pendingProfileEffectRecord: i,
-    canApplySelectedChange: o,
-    product: a,
+    canApplySelectedChange: a,
+    product: o,
     purchase: h
   } = e, {
     pendingAvatar: E,
     pendingBanner: g,
     pendingBio: x,
-    pendingPronouns: _,
-    pendingGlobalName: N,
-    pendingAccentColor: S,
-    pendingAvatarDecoration: M,
-    pendingThemeColors: A
-  } = (0, l.useStateFromStoresObject)([p.default], () => {
+    pendingPronouns: M,
+    pendingGlobalName: _,
+    pendingAccentColor: N,
+    pendingAvatarDecoration: S,
+    pendingThemeColors: O
+  } = (0, s.useStateFromStoresObject)([p.default], () => {
     let e = p.default.getAllPending(),
       t = p.default.getErrors();
     return {
       ...e,
       errors: t
     }
-  }), R = m.default.isPremium(n), T = (0, f.default)(n.id), O = !!(null == T ? void 0 : T.getPreviewBio(x).value), P = C.UseLegacyChatInput.useSetting(), w = P && null != x ? u.default.parse(void 0, x).content : x, j = m.default.canUsePremiumProfileCustomization(n), y = (null == T ? void 0 : T.canUsePremiumProfileCustomization) || j, b = {
+  }), A = m.default.isPremium(n), P = (0, f.default)(n.id), R = !!(null == P ? void 0 : P.getPreviewBio(x).value), T = C.UseLegacyChatInput.useSetting(), w = T && null != x ? u.default.parse(void 0, x).content : x, j = m.default.canUsePremiumProfileCustomization(n), y = (null == P ? void 0 : P.canUsePremiumProfileCustomization) || j, b = {
     user: n,
     canUsePremiumCustomization: j,
     onUpsellClick: v.default,
-    onAvatarChange: r.setPendingAvatar,
+    onAvatarChange: l.setPendingAvatar,
     onBannerChange: d.setPendingBanner,
     pendingBanner: g,
     pendingBio: w,
-    pendingPronouns: _,
+    pendingPronouns: M,
     pendingAvatar: E,
-    pendingGlobalName: N,
-    pendingAvatarDecoration: M,
-    pendingThemeColors: A,
-    pendingAccentColor: S,
+    pendingGlobalName: _,
+    pendingAvatarDecoration: S,
+    pendingThemeColors: O,
+    pendingAccentColor: N,
     pendingProfileEffectId: null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : null,
-    hideFakeActivity: O,
+    hideFakeActivity: R,
     useLargeBanner: !0
   };
-  return (0, s.jsxs)("div", {
+  return (0, r.jsxs)("div", {
     className: y ? I.previewContainerWithTheme : I.previewContainerWithoutTheme,
-    children: [(0, s.jsx)(c.default, {
+    children: [(0, r.jsx)(c.default, {
       ...b,
       disabledInputs: !0,
       forProfileEffectModal: !0
-    }), !1, (0, s.jsx)(L, {
-      effectIsOwned: o,
+    }), !1, (0, r.jsx)(L, {
+      effectIsOwned: a,
       pendingProfileEffectRecord: i,
-      product: a,
+      product: o,
       purchase: h,
-      userIsPremium: R
+      userIsPremium: A
     })]
   })
 }

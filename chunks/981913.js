@@ -37,8 +37,8 @@ function f(e) {
     tooltipPosition: v = "top",
     shouldShowTooltip: I = !0,
     forceTooltipOpen: S = !1,
-    buttonRef: x,
-    grow: _,
+    buttonRef: _,
+    grow: x,
     "aria-label": N
   } = e;
   return (0, l.jsx)(u.default, {
@@ -86,8 +86,8 @@ function f(e) {
             [m.active]: C
           }, c),
           wrapperClassName: f,
-          buttonRef: x,
-          grow: _,
+          buttonRef: _,
+          grow: x,
           "aria-label": N,
           ...S,
           children: (0, l.jsx)(p, {

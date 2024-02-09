@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   useAudioTrimmerStore: function() {
-    return r
+    return s
   }
 });
-var l = n("308503"),
-  i = n("16470"),
-  a = n("859971");
-let s = (0, l.default)(e => ({
+var a = n("308503"),
+  r = n("16470"),
+  i = n("859971");
+let l = (0, a.default)(e => ({
   audio: null,
   file: null,
   loading: !1,
@@ -17,7 +17,7 @@ let s = (0, l.default)(e => ({
         audio: null,
         loading: null != t
       }), null == t) return;
-    let n = await (0, a.loadAudioFromFile)(t);
+    let n = await (0, i.loadAudioFromFile)(t);
     null != n && e({
       audio: n,
       loading: !1
@@ -31,13 +31,13 @@ let s = (0, l.default)(e => ({
   }
 }));
 
-function r() {
-  return s(e => ({
+function s() {
+  return l(e => ({
     audio: e.audio,
     file: e.file,
     loading: e.loading,
     loadAudioFromFile: e.loadAudioFromFile,
     maxVolume: e.maxVolume,
     setMaxVolume: e.setMaxVolume
-  }), i.default)
+  }), r.default)
 }

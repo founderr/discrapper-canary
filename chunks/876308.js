@@ -23,9 +23,9 @@ var l = n("37983"),
   v = n("49111"),
   I = n("782340"),
   S = n("447946");
-let x = a.lazy(() => n.el("403130").then(n.bind(n, "403130")));
+let _ = a.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
-function _(e) {
+function x(e) {
   let {
     played: t,
     duration: n,
@@ -48,8 +48,8 @@ var N = a.memo(function(e) {
       waveform: L,
       durationSecs: R,
       onVolumeShow: b,
-      onVolumeHide: D,
-      onPlay: P,
+      onVolumeHide: P,
+      onPlay: D,
       onPause: w,
       onError: U
     } = e,
@@ -114,7 +114,7 @@ var N = a.memo(function(e) {
     if (X || z) {
       if (z) {
         var e, t;
-        ef.current = performance.now(), null == P || P(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * g.default.Millis.SECOND)
+        ef.current = performance.now(), null == D || D(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * g.default.Millis.SECOND)
       } else {
         let e = performance.now(),
           t = ef.current;
@@ -146,7 +146,7 @@ var N = a.memo(function(e) {
   let eh = z ? f.default : h.default,
     ep = z ? I.default.Messages.PAUSE : I.default.Messages.PLAY;
   M = "Safari" === platform.name ? (0, l.jsx)(a.Suspense, {
-    children: (0, l.jsx)(x, {
+    children: (0, l.jsx)(_, {
       ref: k,
       className: S.audioElement,
       src: A,
@@ -210,7 +210,7 @@ var N = a.memo(function(e) {
       onDrag: em,
       onDragStart: ed,
       onDragEnd: ec
-    }), (0, l.jsx)(_, {
+    }), (0, l.jsx)(x, {
       played: X,
       currentTime: V,
       duration: B
@@ -226,7 +226,7 @@ var N = a.memo(function(e) {
       onValueChange: eo,
       onToggleMute: eu,
       onVolumeShow: b,
-      onVolumeHide: D
+      onVolumeHide: P
     }), M]
   })
 })

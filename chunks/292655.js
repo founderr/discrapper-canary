@@ -27,7 +27,7 @@ function c(e) {
     h(!0)
   }
 
-  function S() {
+  function g() {
     h(!1)
   }
   return (0, l.jsx)(r.Button, {
@@ -38,9 +38,9 @@ function c(e) {
     onClick: a,
     onMouseEnter: E,
     onMouseOver: E,
-    onMouseLeave: S,
+    onMouseLeave: g,
     onFocus: E,
-    onBlur: S,
+    onBlur: g,
     "aria-label": u.default.Messages.SELECT_ACTIVITY,
     "aria-expanded": c,
     "aria-controls": f,

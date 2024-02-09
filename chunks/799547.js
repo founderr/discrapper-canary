@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getEventChannelsByType: function() {
-    return i
+    return r
   },
   useGetEventChannelsByType: function() {
-    return r
+    return i
   }
 }), n("222007"), n("424973");
 var l = n("446674"),
@@ -12,11 +12,11 @@ var l = n("446674"),
 n("834052");
 var s = n("923959");
 
-function i(e, t) {
+function r(e, t) {
   let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.default];
   if (null == t) return [];
   let l = n.getChannels(e)[s.GUILD_VOCAL_CHANNELS_KEY],
-    i = [];
+    r = [];
   for (let {
       channel: e
     }
@@ -25,12 +25,12 @@ function i(e, t) {
       canCreateGuildEvent: n,
       canManageAllEvents: l
     } = (0, a.getManageResourcePermissions)(e), s = n || l;
-    e.type === t && (e.isGuildVoice() && s ? i.push(e) : e.isGuildStageVoice() && s && i.push(e))
+    e.type === t && (e.isGuildVoice() && s ? r.push(e) : e.isGuildStageVoice() && s && r.push(e))
   }
-  return i
+  return r
 }
 
-function r(e, t) {
-  return (0, l.useStateFromStoresArray)([s.default], () => i(e, t, [s.default]), [e, t])
+function i(e, t) {
+  return (0, l.useStateFromStoresArray)([s.default], () => r(e, t, [s.default]), [e, t])
 }
 n("957255"), n("270161")

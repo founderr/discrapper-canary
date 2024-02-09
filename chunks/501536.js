@@ -24,8 +24,8 @@ var l = n("37983"),
   m = n("41884"),
   h = n("679653"),
   E = n("419830"),
-  S = n("404345"),
-  g = n("364685"),
+  g = n("404345"),
+  S = n("364685"),
   C = n("24373"),
   T = n("305961"),
   v = n("27618"),
@@ -381,7 +381,7 @@ j.Generic = class e extends b {
     } = this.props, {
       hovered: o
     } = this.state;
-    return (0, C.isStandardSticker)(r) ? n = null === (e = g.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, C.isGuildSticker)(r) && (n = null === (t = T.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, l.jsxs)(y.AutocompleteRowContent, {
+    return (0, C.isStandardSticker)(r) ? n = null === (e = S.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, C.isGuildSticker)(r) && (n = null === (t = T.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, l.jsxs)(y.AutocompleteRowContent, {
       children: [(0, l.jsx)(y.AutocompleteRowIcon, {
         children: a(r, o || !0 === s)
       }), (0, l.jsxs)(y.AutocompleteRowContentPrimary, {
@@ -403,7 +403,7 @@ j.Generic = class e extends b {
   }
 }, j.EmojiUpsell = class e extends b {
   renderContent() {
-    return (0, l.jsx)(S.default, {
+    return (0, l.jsx)(g.default, {
       emojis: this.props.emojis
     })
   }

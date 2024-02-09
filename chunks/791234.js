@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return S
   },
   useForumPostMediaProperties: function() {
-    return x
+    return _
   },
   useFindFirstMediaProperties: function() {
-    return _
+    return x
   },
   useFirstMediaIsEmbed: function() {
     return N
@@ -135,7 +135,7 @@ function I(e, t) {
 
 function S(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    l = x(e, n);
+    l = _(e, n);
   return s.useMemo(() => {
     if (null == t) return [];
     if (!t.isMediaChannel()) return l;
@@ -146,13 +146,13 @@ function S(e, t) {
   }, [t, l])
 }
 
-function x(e, t) {
+function _(e, t) {
   let n = v(e),
     l = I(e, t);
   return [...n, ...l]
 }
 
-function _(e, t) {
+function x(e, t) {
   var n, l;
   let a = v(e),
     s = I(e, t);

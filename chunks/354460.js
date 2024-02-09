@@ -7,16 +7,16 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var r = n("49111"),
-  a = n("75015");
+var a = n("49111"),
+  r = n("75015");
 
 function i(e, t) {
   let {
     isGIF: n
   } = t;
-  if (e === a.UploadTypes.GUILD_BANNER) return n ? r.GuildFeatures.ANIMATED_BANNER : r.GuildFeatures.BANNER
+  if (e === r.UploadTypes.GUILD_BANNER) return n ? a.GuildFeatures.ANIMATED_BANNER : a.GuildFeatures.BANNER
 }
 
 function u(e) {
-  return e === a.UploadTypes.AVATAR || e === a.UploadTypes.BANNER
+  return e === r.UploadTypes.AVATAR || e === r.UploadTypes.BANNER
 }

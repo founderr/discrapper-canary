@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("45961"),
   h = n("515059"),
   E = n("501536"),
-  S = n("124299"),
-  g = n("476765"),
+  g = n("124299"),
+  S = n("476765"),
   C = n("507217"),
   T = n("240249"),
   v = n("972620"),
@@ -197,7 +197,7 @@ var U = i.forwardRef(function(e, t) {
         }
       }, r)
     }, [n, K, et, H, U]),
-    ea = (0, g.useUID)();
+    ea = (0, S.useUID)();
   return (0, f.useChannelEditorPopup)(ea, !0, (0, E.getAutocompleteRowId)(U)), i.useEffect(() => () => {
     (0, f.dismissChannelEditorPopup)()
   }, []), (0, l.jsxs)(E.default, {
@@ -213,7 +213,7 @@ var U = i.forwardRef(function(e, t) {
       activeCategoryIndex: B,
       onSectionClick: ee,
       applicationCommandListRef: w
-    }), (0, l.jsx)(S.default, {
+    }), (0, l.jsx)(g.default, {
       role: "listbox",
       className: M.list,
       listPadding: b,

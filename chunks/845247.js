@@ -19,9 +19,9 @@ var i = n("798609"),
   m = n("200294"),
   h = n("851745"),
   E = n("825871"),
-  S = n("782340");
+  g = n("782340");
 
-function g(e) {
+function S(e) {
   let t = p.PREFIX_COMMAND_REGEX.exec(e);
   if (null != t) return {
     type: "prefix",
@@ -45,12 +45,12 @@ let C = {
   focusMode: h.FocusMode.MANUAL,
   matches(e, t, n, l, i) {
     if (i.commands === h.CommandMode.DISABLED || i.commands === h.CommandMode.OLD_BUILT_INS || n.length < 2 || !u.ShowCommandSuggestions.getSetting()) return !1;
-    let a = g(n);
+    let a = S(n);
     return null != a && a.cleanedQuery.length > 0
   },
   queryResults(e, t, n, l, r) {
     if (!u.ShowCommandSuggestions.getSetting()) return E.EMPTY_RESULTS;
-    let d = g(n);
+    let d = S(n);
     if (null == d) return E.EMPTY_RESULTS;
     let c = (0, E.getLimit)("LegacyCommandAutocompletes"),
       f = (0, o.getCommandQuery)(e, d.cleanedQuery),
@@ -67,15 +67,15 @@ let C = {
         allowFetch: r
       });
     if (null == p) return E.EMPTY_RESULTS;
-    let S = p;
+    let g = p;
     if (f.hasSpaceTerminator) {
       let e = f.text.trim(),
         t = e + " ";
-      S = S.filter(n => n.name === e || n.name.startsWith(t))
+      g = g.filter(n => n.name === e || n.name.startsWith(t))
     }
-    return 0 === S.length ? E.EMPTY_RESULTS : {
+    return 0 === g.length ? E.EMPTY_RESULTS : {
       results: {
-        entries: S.slice(0, c).map(e => ({
+        entries: g.slice(0, c).map(e => ({
           command: e,
           section: null == m ? void 0 : m.find(t => t.id === e.applicationId)
         }))
@@ -101,8 +101,8 @@ let C = {
       autocompletes: t,
       onHover: o,
       onClick: u,
-      titleWithQuery: S.default.Messages.COMMANDS_MATCHING,
-      titleWithoutQuery: S.default.Messages.COMMANDS,
+      titleWithQuery: g.default.Messages.COMMANDS_MATCHING,
+      titleWithoutQuery: g.default.Messages.COMMANDS,
       Component: r.commands === h.CommandMode.OLD_BUILT_INS ? c.default.Command : c.default.NewCommand,
       getProps: e => {
         let {
@@ -119,7 +119,7 @@ let C = {
         }
       },
       getQuery: e => {
-        let t = g(e);
+        let t = S(e);
         if ("mention" !== t.type) return e;
         let n = f.default.getName(null == i ? void 0 : i.id, a.id, t.user);
         return e.replace(p.BOT_MENTION_COMMAND_REGEX, "@".concat(n))

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return m
   }
 }), n("222007"), n("808653");
-var l = n("917351"),
-  i = n.n(l),
-  a = n("446674"),
-  s = n("913144"),
+var a = n("917351"),
+  l = n.n(a),
+  s = n("446674"),
+  i = n("913144"),
   r = n("990766"),
   o = n("374014"),
   u = n("706530");
@@ -15,44 +15,44 @@ let d = {},
   c = {},
   f = new Set;
 
-function p() {
+function h() {
   d = {}, c = {}
 }
-class m extends a.default.Store {
+class p extends s.default.Store {
   getPreviewURL(e, t, n) {
-    let l = (0, o.encodeStreamKey)({
+    let a = (0, o.encodeStreamKey)({
         streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
         guildId: e,
         channelId: t,
         ownerId: n
       }),
-      i = d[l];
-    return null == i || Date.now() > i.expires ? (!f.has(l) && (f.add(l), Promise.resolve().then(() => {
+      l = d[a];
+    return null == l || Date.now() > l.expires ? (!f.has(a) && (f.add(a), Promise.resolve().then(() => {
       (0, r.fetchStreamPreview)(e, t, n)
-    })), null) : i.url
+    })), null) : l.url
   }
   getPreviewURLForStreamKey(e) {
     let {
       guildId: t,
       channelId: n,
-      ownerId: l
+      ownerId: a
     } = (0, o.decodeStreamKey)(e);
-    return this.getPreviewURL(t, n, l)
+    return this.getPreviewURL(t, n, a)
   }
   getIsPreviewLoading(e, t, n) {
-    let l = (0, o.encodeStreamKey)({
+    let a = (0, o.encodeStreamKey)({
       streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
       guildId: e,
       channelId: t,
       ownerId: n
     });
-    return f.has(l)
+    return f.has(a)
   }
 }
-m.displayName = "ApplicationStreamPreviewStore";
-var h = new m(s.default, {
-  CONNECTION_OPEN: p,
-  LOGOUT: p,
+p.displayName = "ApplicationStreamPreviewStore";
+var m = new p(i.default, {
+  CONNECTION_OPEN: h,
+  LOGOUT: h,
   STREAM_PREVIEW_FETCH_START: function(e) {
     var t;
     let {
@@ -84,21 +84,21 @@ var h = new m(s.default, {
     let {
       voiceStates: t
     } = e;
-    return !(i.isEmpty(d) && i.isEmpty(c)) && t.reduce((e, t) => {
+    return !(l.isEmpty(d) && l.isEmpty(c)) && t.reduce((e, t) => {
       let {
         userId: n,
-        guildId: l,
-        channelId: i,
-        selfStream: a
+        guildId: a,
+        channelId: l,
+        selfStream: s
       } = t;
-      if (a) return e;
-      let s = (0, o.encodeStreamKey)({
-        streamType: null != l ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
-        guildId: l,
-        channelId: i,
+      if (s) return e;
+      let i = (0, o.encodeStreamKey)({
+        streamType: null != a ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
+        guildId: a,
+        channelId: l,
         ownerId: n
       });
-      return delete d[s], delete c[s], !0
+      return delete d[i], delete c[i], !0
     }, !1)
   }
 })

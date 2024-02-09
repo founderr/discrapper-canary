@@ -26,17 +26,17 @@ var l = n("37983"),
       jumbo: n = !1
     } = e, {
       currentPreviewRef: s
-    } = a.useContext(m.default), v = (0, r.default)([f.default], () => f.default.getSoundById(t)), I = (null == v ? void 0 : v.emojiId) != null || (null == v ? void 0 : v.emojiName) != null, [S, x] = a.useState(!1), _ = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), N = a.useCallback(() => {
+    } = a.useContext(m.default), v = (0, r.default)([f.default], () => f.default.getSoundById(t)), I = (null == v ? void 0 : v.emojiId) != null || (null == v ? void 0 : v.emojiName) != null, [S, _] = a.useState(!1), x = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), N = a.useCallback(() => {
       var e;
       null == v && (0, c.maybeFetchSoundboardSounds)();
       let n = new Audio((0, h.default)(t));
-      null != s.current && s.current.pause(), s.current = n, n.currentTime = 0, n.volume = (0, p.default)(null !== (e = null == v ? void 0 : v.volume) && void 0 !== e ? e : .5), x(!0), n.play(), n.addEventListener("ended", () => {
-        x(!1)
+      null != s.current && s.current.pause(), s.current = n, n.currentTime = 0, n.volume = (0, p.default)(null !== (e = null == v ? void 0 : v.volume) && void 0 !== e ? e : .5), _(!0), n.play(), n.addEventListener("ended", () => {
+        _(!1)
       }, {
         once: !0
       })
-    }, [t, v, s, x]);
-    return _ ? null == v ? (0, l.jsxs)(o.Clickable, {
+    }, [t, v, s, _]);
+    return x ? null == v ? (0, l.jsxs)(o.Clickable, {
       title: "Risky Click",
       tag: "span",
       onClick: N,

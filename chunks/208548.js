@@ -10,8 +10,8 @@ var l = n("37983"),
   r = n.n(a),
   o = n("446674"),
   s = n("77078"),
-  u = n("430568"),
-  c = n("133403"),
+  c = n("430568"),
+  u = n("133403"),
   d = n("252744"),
   f = n("86678"),
   p = n("923959"),
@@ -76,7 +76,7 @@ function A(t) {
             className: E.emojiButton,
             active: n,
             tabIndex: 0,
-            renderButtonContents: null != A || null != _ ? () => (0, l.jsx)(u.default, {
+            renderButtonContents: null != A || null != _ ? () => (0, l.jsx)(c.default, {
               emojiName: _,
               emojiId: A
             }) : null
@@ -85,7 +85,7 @@ function A(t) {
             placeholder: I.default.Messages.GUILD_STICKER_UPLOAD_RELATED_EMOJI_PLACEHOLDER,
             value: null != T ? ":".concat(T, ":") : "",
             readOnly: !0
-          }), S && null != T && (0, l.jsx)(c.default, {
+          }), S && null != T && (0, l.jsx)(u.default, {
             ...t,
             onClick: w,
             className: E.removeButton

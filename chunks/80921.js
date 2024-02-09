@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("222007");
 var l = n("37983"),
@@ -18,15 +18,15 @@ var l = n("37983"),
   m = n("13030"),
   h = n("782340"),
   E = n("537461"),
-  S = i.memo(i.forwardRef(function(e, t) {
+  g = i.memo(i.forwardRef(function(e, t) {
     let n, {
         disabled: a,
         type: p
       } = e,
-      [S, g] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default),
+      [g, S] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default),
       C = i.useContext(u.default),
       [T, v] = i.useState(!1),
-      I = S === m.ExpressionPickerViewType.STICKER,
+      I = g === m.ExpressionPickerViewType.STICKER,
       _ = i.useCallback(() => {
         (0, d.toggleExpressionPicker)(m.ExpressionPickerViewType.STICKER, p)
       }, [p]);
@@ -63,7 +63,7 @@ var l = n("37983"),
         "aria-label": h.default.Messages.STICKER_BUTTON_LABEL,
         "aria-expanded": I,
         "aria-haspopup": "dialog",
-        "aria-controls": g,
+        "aria-controls": S,
         sparkle: !1,
         notification: null,
         children: n

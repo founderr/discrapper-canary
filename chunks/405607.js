@@ -44,8 +44,8 @@ var f = function(e) {
     listPadding: m,
     rowCount: h,
     getScrollOffsetForIndex: E,
-    categoryHeight: S,
-    onScroll: g,
+    categoryHeight: g,
+    onScroll: S,
     renderCategoryListItem: C,
     rowCountBySection: T,
     renderSection: v
@@ -66,12 +66,12 @@ var f = function(e) {
       }
     }, [n, u]),
     y = i.useCallback(e => C(a[e], e, () => _(e), I === e), [I, a, _, C]),
-    A = i.useMemo(() => "function" == typeof S ? e => S(a[e], e) : S, [a, S]);
+    A = i.useMemo(() => "function" == typeof g ? e => g(a[e], e) : g, [a, g]);
   return (0, l.jsxs)("div", {
     className: s(d.wrapper, p),
     children: [(0, l.jsx)(r.default, {
       listPadding: m,
-      onScroll: g,
+      onScroll: S,
       ref: t,
       renderRow: y,
       rowCount: h,

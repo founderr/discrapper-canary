@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var s = n("871388"),
-  l = n("49111");
+var r = n("871388"),
+  s = n("49111");
 
 function i(e) {
-  return (0, s.default)(e, l.ActivityFlags.EMBEDDED)
+  return (0, r.default)(e, s.ActivityFlags.EMBEDDED)
 }

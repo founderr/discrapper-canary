@@ -1,43 +1,43 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   HelpMessageTypes: function() {
-    return r
+    return a
   },
   default: function() {
-    return p
+    return M
   }
 });
-var i, r, l = n("37983");
+var u, a, r = n("37983");
 n("884691");
 var s = n("414456"),
-  a = n.n(s),
-  o = n("77078"),
-  u = n("36694"),
-  c = n("381546"),
-  d = n("68238"),
+  l = n.n(s),
+  i = n("77078"),
+  c = n("36694"),
+  d = n("381546"),
+  o = n("68238"),
   f = n("423487"),
   h = n("557296");
-(i = r || (r = {}))[i.WARNING = 0] = "WARNING", i[i.INFO = 1] = "INFO", i[i.ERROR = 2] = "ERROR", i[i.POSITIVE = 3] = "POSITIVE";
-var p = function(t) {
+(u = a || (a = {}))[u.WARNING = 0] = "WARNING", u[u.INFO = 1] = "INFO", u[u.ERROR = 2] = "ERROR", u[u.POSITIVE = 3] = "POSITIVE";
+var M = function(e) {
   let {
-    children: e,
+    children: t,
     messageType: n,
-    className: i,
-    textColor: r = "text-normal",
+    className: u,
+    textColor: a = "text-normal",
     textVariant: s = "text-sm/medium"
-  } = t, p = function(t) {
-    switch (t) {
+  } = e, M = function(e) {
+    switch (e) {
       case 0:
         return f.default;
       case 1:
-        return d.default;
+        return o.default;
       case 2:
-        return c.default;
+        return d.default;
       case 3:
-        return u.default
+        return c.default
     }
-  }(n), _ = function(t) {
-    switch (t) {
+  }(n), p = function(e) {
+    switch (e) {
       case 0:
         return h.warning;
       case 1:
@@ -48,18 +48,18 @@ var p = function(t) {
         return h.positive
     }
   }(n);
-  return (0, l.jsxs)("div", {
-    className: a(h.container, _, i),
-    children: [(0, l.jsx)("div", {
+  return (0, r.jsxs)("div", {
+    className: l(h.container, p, u),
+    children: [(0, r.jsx)("div", {
       className: h.iconDiv,
-      children: (0, l.jsx)(p, {
+      children: (0, r.jsx)(M, {
         className: h.icon
       })
-    }), (0, l.jsx)(o.Text, {
+    }), (0, r.jsx)(i.Text, {
       className: h.text,
-      color: r,
+      color: a,
       variant: s,
-      children: e
+      children: t
     })]
   })
 }

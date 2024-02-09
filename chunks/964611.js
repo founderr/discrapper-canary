@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("206230"),
   h = n("986632"),
   E = n("405607"),
-  S = n("423080"),
-  g = n("471671"),
+  g = n("423080"),
+  S = n("471671"),
   C = n("46829"),
   T = n("599110"),
   v = n("159885"),
@@ -57,7 +57,7 @@ function K(e) {
     isWindowFocused: c,
     useReducedMotion: p,
     isNitroLocked: m
-  } = e, h = (0, u.useListItem)("expression-guild-".concat(n)), E = o.type === x.EmojiCategoryTypes.GUILD ? null : o.id, g = t === n, C = o.type === x.EmojiCategoryTypes.GUILD ? o.guild : null, {
+  } = e, h = (0, u.useListItem)("expression-guild-".concat(n)), E = o.type === x.EmojiCategoryTypes.GUILD ? null : o.id, S = t === n, C = o.type === x.EmojiCategoryTypes.GUILD ? o.guild : null, {
     enabled: v
   } = I.default.useExperiment({
     location: "Emoji Picker Category List"
@@ -69,7 +69,7 @@ function K(e) {
     className: s({
       [L.categoryItemGuildCategory]: null != C,
       [L.categoryItemDefaultCategory]: null == C,
-      [L.categoryItemDefaultCategorySelected]: null == C && g,
+      [L.categoryItemDefaultCategorySelected]: null == C && S,
       [L.categoryItemRecentEmoji]: o.type === x.EmojiCategoryTypes.RECENT
     }),
     onClick: () => {
@@ -81,7 +81,7 @@ function K(e) {
     },
     children: [null != C ? (0, l.jsx)(A.default, {
       guild: C,
-      isSelected: g,
+      isSelected: S,
       shouldAnimate: !p && c,
       isLocked: v && m
     }) : null, null == C && null != E ? (0, l.jsx)(y.default, {
@@ -92,7 +92,7 @@ function K(e) {
     }) : null]
   }), M = r[n + 1], P = null != M && o.type === x.EmojiCategoryTypes.GUILD && M.type !== x.EmojiCategoryTypes.GUILD;
   return null != C ? (0, l.jsxs)(i.Fragment, {
-    children: [(0, l.jsx)(S.default, {
+    children: [(0, l.jsx)(g.default, {
       guild: C,
       includeActivity: !1,
       children: (0, l.jsx)("div", {
@@ -110,10 +110,10 @@ var W = e => {
     sectionDescriptors: a,
     intention: r,
     channel: u
-  } = e, c = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), S = (0, N.useCategorySelectHandler)({
+  } = e, c = h.EmojiPickerStore.useStore(e => e.activeCategoryIndex), g = (0, N.useCategorySelectHandler)({
     sectionDescriptors: a,
     emojiListRef: n
-  }), T = (0, p.useAnalyticsContext)(), v = (0, _.useEmojiCategories)(r, u), I = i.useRef(null), y = (0, d.useStateFromStores)([g.default], () => g.default.isFocused()), A = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), O = (0, _.useCategoryNitroLockedStates)(r, u, v), R = i.useMemo(() => o.memoize((e, t) => {
+  }), T = (0, p.useAnalyticsContext)(), v = (0, _.useEmojiCategories)(r, u), I = i.useRef(null), y = (0, d.useStateFromStores)([S.default], () => S.default.isFocused()), A = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), O = (0, _.useCategoryNitroLockedStates)(r, u, v), R = i.useMemo(() => o.memoize((e, t) => {
     let n = v[t];
     if (null == n) return;
     let i = O[t];
@@ -123,12 +123,12 @@ var W = e => {
       categories: v,
       category: n,
       categoryIndex: t,
-      handleCategorySelect: S,
+      handleCategorySelect: g,
       isWindowFocused: y,
       useReducedMotion: A,
       isNitroLocked: i
     }, t)
-  }), [c, T, v, S, y, A, O]), P = i.useMemo(() => [8, 8, 0, 8], []), D = i.useCallback((e, t) => {
+  }), [c, T, v, g, y, A, O]), P = i.useMemo(() => [8, 8, 0, 8], []), D = i.useCallback((e, t) => {
     let n = v[t];
     if (n.type === x.EmojiCategoryTypes.RECENT) return G;
     if (n.type === x.EmojiCategoryTypes.GUILD) {

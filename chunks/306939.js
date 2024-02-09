@@ -8,8 +8,8 @@ var l = n("37983");
 n("884691");
 var a = n("446674"),
   s = n("77078"),
-  i = n("139321"),
-  r = n("597517"),
+  r = n("139321"),
+  i = n("597517"),
   u = n("782340"),
   o = n("8341"),
   d = n("533662");
@@ -40,7 +40,7 @@ let c = () => (0, l.jsxs)(l.Fragment, {
 function f(e) {
   let {
     onClick: t
-  } = e, n = (0, a.useStateFromStores)([i.HotspotStore], () => !i.HotspotStore.hasHotspot(i.HotspotLocations.STAGE_CHANNEL_UPSELL));
+  } = e, n = (0, a.useStateFromStores)([r.HotspotStore], () => !r.HotspotStore.hasHotspot(r.HotspotLocations.STAGE_CHANNEL_UPSELL));
   return n ? null : (0, l.jsxs)("div", {
     className: o.container,
     children: [(0, l.jsxs)("div", {
@@ -79,7 +79,7 @@ function f(e) {
         children: u.default.Messages.CREATE_STAGE_CHANNEL
       }), (0, l.jsx)(s.Button, {
         onClick: () => {
-          r.hideHotspot(i.HotspotLocations.STAGE_CHANNEL_UPSELL)
+          i.hideHotspot(r.HotspotLocations.STAGE_CHANNEL_UPSELL)
         },
         color: s.Button.Colors.TRANSPARENT,
         size: s.Button.Sizes.SMALL,

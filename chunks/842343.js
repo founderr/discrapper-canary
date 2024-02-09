@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("983782"),
   h = n("659186"),
   E = n("418062"),
-  S = n("851745"),
-  g = n("280214"),
+  g = n("851745"),
+  S = n("280214"),
   C = n("497858"),
   T = n("551221"),
   v = i.forwardRef(function(e, t) {
@@ -45,7 +45,7 @@ var l = n("37983"),
       location: "6e9811_2"
     }, {
       autoTrackExposure: !1
-    }), k = (0, g.useChannelAutocompleteLayerPosition)({
+    }), k = (0, S.useChannelAutocompleteLayerPosition)({
       editorHeight: N,
       type: A,
       state: L,
@@ -71,7 +71,7 @@ var l = n("37983"),
         [T.bottom]: null == k && "bottom" === e.position
       },
       B = 490;
-    null != k && (B = (null === (v = A.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (I = L.query) || void 0 === I ? void 0 : I.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
+    null != k && (B = (null === (v = A.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (I = L.query) || void 0 === I ? void 0 : I.type) === g.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
     let H = (0, l.jsx)(f.default, {
       id: O,
       className: s(T.autocomplete, G),

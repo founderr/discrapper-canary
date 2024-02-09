@@ -1,116 +1,116 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return d
   }
 }), n("702976"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
-var i = n("872717"),
-  r = n("913144"),
-  l = n("568734"),
-  s = n("299285"),
-  a = n("49111"),
-  o = {
-    async createApplication(t) {
+var u = n("872717"),
+  i = n("913144"),
+  a = n("568734"),
+  l = n("299285"),
+  r = n("49111"),
+  d = {
+    async createApplication(e) {
       let {
-        name: e,
+        name: t,
         guildId: n,
-        type: l,
-        teamId: s
-      } = t, o = await i.default.post({
-        url: a.Endpoints.APPLICATIONS,
+        type: a,
+        teamId: l
+      } = e, d = await u.default.post({
+        url: r.Endpoints.APPLICATIONS,
         body: {
-          name: e,
-          type: l,
+          name: t,
+          type: a,
           guild_id: n,
-          team_id: s
+          team_id: l
         }
-      }), u = o.body;
-      return null != n && null != l && r.default.dispatch({
+      }), o = d.body;
+      return null != n && null != a && i.default.dispatch({
         type: "APPLICATION_FETCH_SUCCESS",
-        application: u
-      }), u
+        application: o
+      }), o
     },
-    async getApplicationsForGuild(t) {
+    async getApplicationsForGuild(e) {
       let {
-        includeTeam: e,
+        includeTeam: t,
         ...n
-      } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, l = await i.default.get({
-        url: a.Endpoints.GUILD_APPLICATIONS(t),
+      } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, a = await u.default.get({
+        url: r.Endpoints.GUILD_APPLICATIONS(e),
         query: {
           ...n,
-          include_team: e
+          include_team: t
         }
-      }), s = l.body;
-      return r.default.dispatch({
+      }), l = a.body;
+      return i.default.dispatch({
         type: "APPLICATIONS_FETCH_SUCCESS",
-        applications: s
-      }), s
+        applications: l
+      }), l
     },
-    async transferApplication(t) {
+    async transferApplication(e) {
       let {
-        applicationId: e,
+        applicationId: t,
         teamId: n
-      } = t, l = await i.default.post({
-        url: a.Endpoints.APPLICATION_OWNER_TRANSFER(e),
+      } = e, a = await u.default.post({
+        url: r.Endpoints.APPLICATION_OWNER_TRANSFER(t),
         body: {
           team_id: n
         }
-      }), s = l.body;
-      return r.default.dispatch({
+      }), l = a.body;
+      return i.default.dispatch({
         type: "APPLICATION_FETCH_SUCCESS",
-        application: s
-      }), s
+        application: l
+      }), l
     },
-    async fetchApplications(t) {
-      let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = t;
-      if (!e && (n = t.filter(t => {
-          var e, n;
-          let i = s.default.getApplication(t),
-            r = (0, l.hasFlag)(null !== (n = null == i ? void 0 : i.flags) && void 0 !== n ? n : 0, a.ApplicationFlags.EMBEDDED),
-            o = r && (null == i ? void 0 : null === (e = i.embeddedActivityConfig) || void 0 === e ? void 0 : e.supported_platforms) == null;
-          return !(null != i && !o) && !s.default.isFetchingApplication(t) && !s.default.didFetchingApplicationFail(t) && t.length > 0
+    async fetchApplications(e) {
+      let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        n = e;
+      if (!t && (n = e.filter(e => {
+          var t, n;
+          let u = l.default.getApplication(e),
+            i = (0, a.hasFlag)(null !== (n = null == u ? void 0 : u.flags) && void 0 !== n ? n : 0, r.ApplicationFlags.EMBEDDED),
+            d = i && (null == u ? void 0 : null === (t = u.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null;
+          return !(null != u && !d) && !l.default.isFetchingApplication(e) && !l.default.didFetchingApplicationFail(e) && e.length > 0
         })), n.length > 0) {
-        let t;
-        r.default.dispatch({
+        let e;
+        i.default.dispatch({
           type: "APPLICATIONS_FETCH",
           applicationIds: n
         });
         try {
-          t = await i.default.get({
-            url: a.Endpoints.APPLICATIONS_PUBLIC,
-            query: new URLSearchParams(n.map(t => ["application_ids", t])).toString(),
+          e = await u.default.get({
+            url: r.Endpoints.APPLICATIONS_PUBLIC,
+            query: new URLSearchParams(n.map(e => ["application_ids", e])).toString(),
             oldFormErrors: !0
           })
-        } catch (t) {
-          throw r.default.dispatch({
+        } catch (e) {
+          throw i.default.dispatch({
             type: "APPLICATIONS_FETCH_FAIL",
             applicationIds: n
-          }), t
+          }), e
         }
-        r.default.dispatch({
+        i.default.dispatch({
           type: "APPLICATIONS_FETCH_SUCCESS",
-          applications: t.body
+          applications: e.body
         })
       }
     },
-    fetchApplication(t) {
-      let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      return r.default.dispatch({
+    fetchApplication(e) {
+      let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      return i.default.dispatch({
         type: "APPLICATION_FETCH",
-        applicationId: t
-      }), i.default.get({
-        url: a.Endpoints.APPLICATION_PUBLIC(t),
+        applicationId: e
+      }), u.default.get({
+        url: r.Endpoints.APPLICATION_PUBLIC(e),
         query: {
-          with_guild: e
+          with_guild: t
         },
         oldFormErrors: !0
-      }).then(t => (r.default.dispatch({
+      }).then(e => (i.default.dispatch({
         type: "APPLICATION_FETCH_SUCCESS",
-        application: t.body
-      }), t.body)).catch(e => (r.default.dispatch({
+        application: e.body
+      }), e.body)).catch(t => (i.default.dispatch({
         type: "APPLICATION_FETCH_FAIL",
-        applicationId: t
-      }), Promise.reject(e)))
+        applicationId: e
+      }), Promise.reject(t)))
     }
   }

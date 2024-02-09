@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   subscribeMembers: function() {
-    return r
+    return a
   },
   unsubscribeMembers: function() {
-    return a
+    return r
   },
   subscribeToMemberUpdates: function() {
     return s
@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
 var i = n("913144"),
   l = n("696605");
 
-function r(e, t) {
+function a(e, t) {
   i.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD",
     guildId: e,
@@ -30,7 +30,7 @@ function r(e, t) {
   })
 }
 
-function a(e, t) {
+function r(e, t) {
   i.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE",
     guildId: e,
@@ -66,13 +66,13 @@ function d(e) {
     guildId: t,
     channelId: n,
     y: i,
-    height: r,
-    rowHeight: a
+    height: a,
+    rowHeight: r
   } = e;
 
   function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return Math.max(0, Math.ceil(Math.ceil(e / a)) + t)
+    return Math.max(0, Math.ceil(Math.ceil(e / r)) + t)
   }
   let u = [];
 
@@ -80,9 +80,9 @@ function d(e) {
     let t = e + (l.MINIMUM_RANGE - 1);
     return u.push([e, t]), t + 1
   }
-  let c = s(.5 * r),
+  let c = s(.5 * a),
     I = s(i, -c),
-    _ = s(i + r, c);
+    _ = s(i + a, c);
   for (I > 0 && (I = Math.max(d(0), I)), I = Math.floor(I / l.MINIMUM_RANGE) * l.MINIMUM_RANGE; I <= _;) I = d(I);
   o(t, n, u)
 }

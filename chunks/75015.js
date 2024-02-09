@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return a
   },
   EDITING_CONTAINER_WIDTH: function() {
-    return u
+    return o
   },
   USER_BANNER_MAX_WIDTH: function() {
-    return o
+    return s
   },
   USER_BANNER_MAX_HEIGHT: function() {
     return c
@@ -16,73 +16,73 @@ n.r(t), n.d(t, {
     return d
   },
   GUILD_BANNER_MAX_HEIGHT: function() {
-    return _
+    return E
   },
   SCHEDULED_EVENT_IMAGE_MAX_WIDTH: function() {
-    return E
+    return _
   },
   SCHEDULED_EVENT_IMAGE_MAX_HEIGHT: function() {
     return f
   },
   HOME_HEADER_MAX_WIDTH: function() {
-    return h
+    return T
   },
   HOME_HEADER_MAX_HEIGHT: function() {
     return A
   },
   BANNER_ASPECT_RATIO: function() {
-    return T
-  },
-  GUILD_BANNER_ASPECT_RATIO: function() {
-    return I
-  },
-  SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
-    return R
-  },
-  HOME_HEADER_ASPECT_RATIO: function() {
-    return p
-  },
-  MAX_BANNER_OVERLAY_HEIGHT: function() {
-    return m
-  },
-  MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
-    return N
-  },
-  MAX_SCHEDULED_EVENT_IMAGE_OVERLAY_HEIGHT: function() {
-    return C
-  },
-  MAX_HOME_HEADER_OVERLAY_HEIGHT: function() {
-    return g
-  },
-  VIDEO_BACKGROUND_ASPECT_RATIO: function() {
-    return M
-  },
-  MAX_VIDEO_OVERLAY_HEIGHT: function() {
     return S
   },
+  GUILD_BANNER_ASPECT_RATIO: function() {
+    return R
+  },
+  SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
+    return I
+  },
+  HOME_HEADER_ASPECT_RATIO: function() {
+    return N
+  },
+  MAX_BANNER_OVERLAY_HEIGHT: function() {
+    return p
+  },
+  MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
+    return C
+  },
+  MAX_SCHEDULED_EVENT_IMAGE_OVERLAY_HEIGHT: function() {
+    return P
+  },
+  MAX_HOME_HEADER_OVERLAY_HEIGHT: function() {
+    return U
+  },
+  VIDEO_BACKGROUND_ASPECT_RATIO: function() {
+    return O
+  },
+  MAX_VIDEO_OVERLAY_HEIGHT: function() {
+    return h
+  },
   MessageTypes: function() {
-    return l
+    return u
   }
 });
-var i, r, a, l, s = n("917219");
-(i = a || (a = {}))[i.AVATAR = 0] = "AVATAR", i[i.BANNER = 1] = "BANNER", i[i.GUILD_BANNER = 2] = "GUILD_BANNER", i[i.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", i[i.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", i[i.HOME_HEADER = 5] = "HOME_HEADER", i[i.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
-let u = 568,
-  o = 2400,
+var r, i, a, u, l = n("917219");
+(r = a || (a = {}))[r.AVATAR = 0] = "AVATAR", r[r.BANNER = 1] = "BANNER", r[r.GUILD_BANNER = 2] = "GUILD_BANNER", r[r.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", r[r.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", r[r.HOME_HEADER = 5] = "HOME_HEADER", r[r.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
+let o = 568,
+  s = 2400,
   c = 848,
   d = 2400,
-  _ = 1350,
-  E = 2400,
+  E = 1350,
+  _ = 2400,
   f = 960,
-  h = 2400,
+  T = 2400,
   A = 600,
-  T = 17 / 6,
-  I = 16 / 9,
-  R = 2.5,
-  p = 4,
-  m = u / T,
-  N = u / I,
-  C = u / R,
-  g = u / p,
-  M = s.BACKGROUND_REPLACEMENT_SIZE.width / s.BACKGROUND_REPLACEMENT_SIZE.height,
-  S = u / M;
-(r = l || (l = {}))[r.CROP_GIF_START = 0] = "CROP_GIF_START", r[r.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", r[r.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
+  S = 17 / 6,
+  R = 16 / 9,
+  I = 2.5,
+  N = 4,
+  p = o / S,
+  C = o / R,
+  P = o / I,
+  U = o / N,
+  O = l.BACKGROUND_REPLACEMENT_SIZE.width / l.BACKGROUND_REPLACEMENT_SIZE.height,
+  h = o / O;
+(i = u || (u = {}))[i.CROP_GIF_START = 0] = "CROP_GIF_START", i[i.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", i[i.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"

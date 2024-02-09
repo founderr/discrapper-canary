@@ -26,8 +26,8 @@ var l = n("37983"),
   v = n("316680"),
   I = n("830837"),
   S = n("132755"),
-  x = n("73034"),
-  _ = n("58608"),
+  _ = n("73034"),
+  x = n("58608"),
   N = n("719347"),
   T = n("49111"),
   M = n("782340"),
@@ -53,7 +53,7 @@ function b(e) {
     n = t % 60;
   return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"))
 }
-let D = e => {
+let P = e => {
   let {
     current: t,
     duration: n
@@ -72,7 +72,7 @@ let D = e => {
     })]
   })
 };
-class P extends a.Component {
+class D extends a.Component {
   componentDidMount() {
     this.state.translateY.setValue(this.props.autoPlay ? 1 : 0)
   }
@@ -137,7 +137,7 @@ class P extends a.Component {
       onClick: s,
       tabIndex: i ? -1 : 0,
       "aria-label": M.default.Messages.PLAY_AGAIN,
-      children: (0, l.jsx)(x.default, {
+      children: (0, l.jsx)(_.default, {
         className: A.controlIcon
       }, "replay")
     }) : (0, l.jsx)(d.Clickable, {
@@ -172,7 +172,7 @@ class P extends a.Component {
       onClick: e => e.stopPropagation(),
       onDoubleClick: e => e.stopPropagation(),
       style: this.getAnimatedStyle(),
-      children: [this.renderPlayIcon(), "string" == typeof f || f > 250 ? (0, l.jsx)(D, {
+      children: [this.renderPlayIcon(), "string" == typeof f || f > 250 ? (0, l.jsx)(P, {
         current: n,
         duration: a
       }) : null, (0, l.jsx)(g.default, {
@@ -244,7 +244,7 @@ function w(e) {
     })]
   })
 }
-P.defaultProps = {
+D.defaultProps = {
   disabled: !1
 };
 class U extends a.Component {
@@ -429,7 +429,7 @@ class k extends a.PureComponent {
       playing: r,
       fullscreen: o
     } = this.state, u = this.getWidth(), d = this.getHeight();
-    return n ? (0, l.jsx)(_.default, {
+    return n ? (0, l.jsx)(x.default, {
       className: A.video,
       controls: !1,
       height: d,
@@ -439,7 +439,7 @@ class k extends a.PureComponent {
       mediaLayoutType: i,
       playsInline: !0,
       autoPlay: r
-    }) : (0, l.jsx)(_.default, {
+    }) : (0, l.jsx)(x.default, {
       className: A.video,
       controls: !1,
       playsInline: !0,
@@ -498,7 +498,7 @@ class k extends a.PureComponent {
         dragging: I
       }
     } = this, S = this.getWidth();
-    return d || n || t === L.AUDIO ? (0, l.jsx)(P, {
+    return d || n || t === L.AUDIO ? (0, l.jsx)(D, {
       buffers: r,
       currentTime: o,
       duration: u,

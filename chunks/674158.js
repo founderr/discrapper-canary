@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var r = n("37983");
 n("884691");
 var i = n("414456"),
-  u = n.n(i),
-  a = n("288264");
+  a = n.n(i),
+  u = n("288264");
 
 function l(e) {
   let {
@@ -18,15 +18,15 @@ function l(e) {
     color: l
   } = e;
   return (0, r.jsxs)("div", {
-    className: a.perkRow,
+    className: u.perkRow,
     children: [(0, r.jsx)("div", {
-      className: a.perkIconContainer,
+      className: u.perkIconContainer,
       children: (0, r.jsx)(t, {
         color: l,
-        className: u(a.perkIcon, n)
+        className: a(u.perkIcon, n)
       })
     }), (0, r.jsx)("div", {
-      className: a.perkDescription,
+      className: u.perkDescription,
       children: i
     })]
   })

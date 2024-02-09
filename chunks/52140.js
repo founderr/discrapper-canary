@@ -23,8 +23,8 @@ var l = n("37983"),
   v = n("873218"),
   I = n("250832"),
   S = n("22248"),
-  x = n("28236"),
-  _ = n("306160"),
+  _ = n("28236"),
+  x = n("306160"),
   N = n("794818"),
   T = n("844659"),
   M = n("657057"),
@@ -35,9 +35,9 @@ var l = n("37983"),
   L = n("49111"),
   R = n("724210"),
   b = n("782340"),
-  D = n("862839");
+  P = n("862839");
 n("706250");
-var P = n("632215");
+var D = n("632215");
 
 function w(e) {
   let {
@@ -46,7 +46,7 @@ function w(e) {
   return (0, l.jsx)(o.Clickable, {
     onClick: () => {
       try {
-        (0, _.copy)(t), s(!0)
+        (0, x.copy)(t), s(!0)
       } catch (e) {
         s(!1)
       }
@@ -63,9 +63,9 @@ function w(e) {
 let U = {
   blockQuote: {
     react: (e, t, n) => (0, l.jsxs)("div", {
-      className: P.blockquoteContainer,
+      className: D.blockquoteContainer,
       children: [(0, l.jsx)("div", {
-        className: P.blockquoteDivider
+        className: D.blockquoteDivider
       }), (0, l.jsx)("blockquote", {
         children: t(e.content, n)
       })]
@@ -96,14 +96,14 @@ let U = {
   codeBlock: {
     react(e, t, a) {
       let s = () => (0, l.jsx)("code", {
-        className: i(D.scrollbarGhostHairline, "hljs"),
+        className: i(P.scrollbarGhostHairline, "hljs"),
         children: (0, T.smartOutput)(e, t, a)
       });
       return (0, l.jsx)("pre", {
         children: (0, l.jsxs)("div", {
-          className: P.codeContainer,
-          children: [_.SUPPORTS_COPY ? (0, l.jsx)("div", {
-            className: P.codeActions,
+          className: D.codeContainer,
+          children: [x.SUPPORTS_COPY ? (0, l.jsx)("div", {
+            className: D.codeActions,
             children: (0, l.jsx)(w, {
               text: e.content
             })
@@ -116,7 +116,7 @@ let U = {
               {
                 let n = t.highlight(e.lang, e.content, !0);
                 return null == n ? s() : (0, l.jsx)("code", {
-                  className: i(D.scrollbarGhostHairline, "hljs", n.language),
+                  className: i(P.scrollbarGhostHairline, "hljs", n.language),
                   dangerouslySetInnerHTML: {
                     __html: n.value
                   }
@@ -146,7 +146,7 @@ let U = {
     }, n.key)
   },
   soundboard: {
-    react: e => (0, l.jsx)(x.default, {
+    react: e => (0, l.jsx)(_.default, {
       channelId: e.channelId,
       soundId: e.soundId,
       jumbo: e.jumboable
@@ -219,7 +219,7 @@ let U = {
         a = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
       return (0, r.reactElement)(l, "".concat(n.key), {
         start: e.start,
-        className: n.formatInline ? P.inlineFormat : null,
+        className: n.formatInline ? D.inlineFormat : null,
         style: {
           "--totalCharacters": a
         },
@@ -241,7 +241,7 @@ let U = {
       });
       return (0, r.reactElement)("h" + e.level, (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
         children: l,
-        className: n.formatInline ? P.inlineFormat : null
+        className: n.formatInline ? D.inlineFormat : null
       })
     }
   },

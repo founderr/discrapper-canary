@@ -26,9 +26,9 @@ var l = n("37983"),
   v = n("317041"),
   I = n("406291"),
   S = n("782340"),
-  x = n("781606");
+  _ = n("781606");
 
-function _(e, t, n, a) {
+function x(e, t, n, a) {
   if (null == e) return;
   let s = () => {
     let l = m.default.getChannel(e);
@@ -91,7 +91,7 @@ function N(e) {
     return m.default.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : p.default.getChannelId())
   }, [n.channelId]), {
     hasSendMessagePerm: S,
-    hasUseAppCommandsPerm: x
+    hasUseAppCommandsPerm: _
   } = (0, s.useStateFromStoresObject)([h.default], () => {
     let e = h.default.can(C.Permissions.SEND_MESSAGES, E),
       t = h.default.can(C.Permissions.USE_APPLICATION_COMMANDS, E);
@@ -107,9 +107,9 @@ function N(e) {
       t = (0, d.computeIsReadOnlyThread)(E);
     if (t || !e && !S) return !1;
     let l = (null == N ? void 0 : N.applicationId) === v.BuiltInSectionId.BUILT_IN;
-    return !!e || !!l || !!x || !1
-  }, [E, N, S, x, n.commandName, T]), A = a.useCallback(e => {
-    null == e || e.stopPropagation(), null != E && null != n.commandName && null != n.commandKey && _(E.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
+    return !!e || !!l || !!_ || !1
+  }, [E, N, S, _, n.commandName, T]), A = a.useCallback(e => {
+    null == e || e.stopPropagation(), null != E && null != n.commandName && null != n.commandKey && x(E.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
   }, [E, n.commandKey, n.commandName]);
   return M ? (0, l.jsx)(i.Tooltip, {
     text: n.output,
@@ -139,12 +139,12 @@ function T(e) {
     commandDescription: a,
     onClick: r
   } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getChannelId()), d = e => {
-    null == e || e.stopPropagation(), _(o, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == r || r(t)
+    null == e || e.stopPropagation(), x(o, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == r || r(t)
   };
   return (0, l.jsx)(i.Tooltip, {
     text: a,
     position: "top",
-    tooltipContentClassName: x.tooltip,
+    tooltipContentClassName: _.tooltip,
     children: e => {
       let {
         onMouseEnter: t,

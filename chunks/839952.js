@@ -111,7 +111,7 @@ function S(e) {
   })
 }
 
-function x(e) {
+function _(e) {
   let {
     language: t,
     setLanguage: n
@@ -155,7 +155,7 @@ function x(e) {
   })
 }
 
-function _(e) {
+function x(e) {
   return (0, l.jsx)(o.Tooltip, {
     text: g.default.Messages.PREVIEW_WHOLE_FILE,
     children: t => (0, l.jsx)(o.Clickable, {
@@ -213,7 +213,7 @@ function N(e) {
           setExpanded: r,
           isWholeFile: N,
           numLines: p
-        }), (0, l.jsx)(_, {
+        }), (0, l.jsx)(x, {
           language: u,
           fileContents: a,
           bytesLeft: m,
@@ -223,7 +223,7 @@ function N(e) {
         className: E.footerGap
       }), (0, l.jsx)(S, {
         attachment: n
-      }), (0, l.jsx)(x, {
+      }), (0, l.jsx)(_, {
         language: u,
         setLanguage: c
       })]
@@ -264,7 +264,7 @@ function T(e) {
           className: E.footerGap
         }), (0, l.jsx)(S, {
           attachment: r
-        }), (0, l.jsx)(x, {
+        }), (0, l.jsx)(_, {
           language: u,
           setLanguage: c
         })]

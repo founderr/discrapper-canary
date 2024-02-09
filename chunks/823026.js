@@ -1,63 +1,63 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return p
   }
 }), n("424973");
-var a = n("37983"),
-  i = n("884691"),
-  l = n("446674"),
-  s = n("77078"),
-  u = n("713841"),
-  r = n("79112"),
-  d = n("988721"),
-  o = n("592407"),
+var i = n("37983"),
+  a = n("884691"),
+  r = n("446674"),
+  l = n("77078"),
+  s = n("713841"),
+  u = n("79112"),
+  o = n("988721"),
+  d = n("592407"),
   c = n("305961"),
   f = n("957255"),
   E = n("49111"),
-  m = n("782340");
+  h = n("782340");
 
-function M(e) {
+function p(e) {
   let {
     user: t,
     guildId: n,
-    channel: M,
-    context: g
-  } = e, p = c.default.getGuild(n), I = (0, l.useStateFromStores)([f.default], () => null != p ? f.default.can(E.Permissions.MANAGE_GUILD, p) : null), S = (0, d.useContextIndexState)(M, !0, !0), v = (0, d.useUserIndexState)(!0, !0), {
-    isUserApp: h,
-    isGuildApp: A
-  } = i.useMemo(() => {
-    var e, n, a, i;
+    channel: p,
+    context: C
+  } = e, _ = c.default.getGuild(n), I = (0, r.useStateFromStores)([f.default], () => null != _ ? f.default.can(E.Permissions.MANAGE_GUILD, _) : null), S = (0, o.useContextIndexState)(p, !0, !0), T = (0, o.useUserIndexState)(!0, !0), {
+    isUserApp: N,
+    isGuildApp: v
+  } = a.useMemo(() => {
+    var e, n, i, a;
     if ((null == t ? void 0 : t.id) == null) return {
       isGuildApp: !1,
       isUserApp: !1
     };
-    let l = Object.values(null !== (a = null === (e = S.result) || void 0 === e ? void 0 : e.sections) && void 0 !== a ? a : {}),
-      s = Object.values(null !== (i = null === (n = v.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {});
+    let r = Object.values(null !== (i = null === (e = S.result) || void 0 === e ? void 0 : e.sections) && void 0 !== i ? i : {}),
+      l = Object.values(null !== (a = null === (n = T.result) || void 0 === n ? void 0 : n.sections) && void 0 !== a ? a : {});
     return {
-      isGuildApp: l.some(e => {
+      isGuildApp: r.some(e => {
         var n;
         return (null === (n = e.descriptor.application) || void 0 === n ? void 0 : n.id) === (null == t ? void 0 : t.id)
       }),
-      isUserApp: s.some(e => {
+      isUserApp: l.some(e => {
         var n;
         return (null === (n = e.descriptor.application) || void 0 === n ? void 0 : n.id) === (null == t ? void 0 : t.id)
       })
     }
-  }, [S, v, null == t ? void 0 : t.id]), _ = i.useCallback(() => {
-    (null == p ? void 0 : p.id) != null && (o.default.open(p.id, E.GuildSettingsSections.INTEGRATIONS), u.default.setSection(E.IntegrationSettingsSections.APPLICATION, null == t ? void 0 : t.id))
-  }, [null == t ? void 0 : t.id, null == p ? void 0 : p.id]), T = i.useCallback(() => {
-    r.default.open(E.UserSettingsSections.AUTHORIZED_APPS)
-  }, []), C = g === E.AppContext.POPOUT;
-  if (!(null == t ? void 0 : t.bot) || !I || C || !A && !h) return null;
-  let R = [];
-  return A && R.push((0, a.jsx)(s.MenuItem, {
+  }, [S, T, null == t ? void 0 : t.id]), A = a.useCallback(() => {
+    (null == _ ? void 0 : _.id) != null && (d.default.open(_.id, E.GuildSettingsSections.INTEGRATIONS), s.default.setSection(E.IntegrationSettingsSections.APPLICATION, null == t ? void 0 : t.id))
+  }, [null == t ? void 0 : t.id, null == _ ? void 0 : _.id]), g = a.useCallback(() => {
+    u.default.open(E.UserSettingsSections.AUTHORIZED_APPS)
+  }, []), m = C === E.AppContext.POPOUT;
+  if (!(null == t ? void 0 : t.bot) || !I || m || !v && !N) return null;
+  let M = [];
+  return v && M.push((0, i.jsx)(l.MenuItem, {
     id: "manage-integration",
-    label: m.default.Messages.MANAGE_INTEGRATION,
-    action: _
-  }, "manage-integration")), h && R.push((0, a.jsx)(s.MenuItem, {
+    label: h.default.Messages.MANAGE_INTEGRATION,
+    action: A
+  }, "manage-integration")), N && M.push((0, i.jsx)(l.MenuItem, {
     id: "manage-authorized-app",
-    label: m.default.Messages.MANAGE_AUTHORIZED_APP,
-    action: T
-  }, "manage-authorized-app")), R
+    label: h.default.Messages.MANAGE_AUTHORIZED_APP,
+    action: g
+  }, "manage-authorized-app")), M
 }

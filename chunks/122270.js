@@ -51,13 +51,13 @@ let p = {
         channel: m,
         query: h,
         options: E,
-        onHover: S,
-        onClick: g
+        onHover: g,
+        onClick: S
       } = e,
       C = a.map((e, t) => (0, l.jsx)(s.default.User, {
         guildId: m.guild_id,
-        onClick: g,
-        onHover: S,
+        onClick: S,
+        onHover: g,
         selected: p === t,
         index: t,
         user: e.user,
@@ -66,8 +66,8 @@ let p = {
         hidePersonalInformation: E.hidePersonalInformation
       }, e.user.id)),
       T = r.map((e, t) => (0, l.jsx)(s.default.Generic, {
-        onClick: g,
-        onHover: S,
+        onClick: S,
+        onHover: g,
         selected: p === t + a.length,
         index: a.length + t,
         text: e.text,
@@ -75,8 +75,8 @@ let p = {
         "aria-label": e.text
       }, e.text)),
       v = o.map((e, t) => (0, l.jsx)(s.default.Role, {
-        onClick: g,
-        onHover: S,
+        onClick: S,
+        onHover: g,
         selected: p === t + a.length + r.length,
         index: a.length + r.length + t,
         role: e,

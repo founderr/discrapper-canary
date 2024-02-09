@@ -1,67 +1,67 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 }), n("222007"), n("70102");
-var i = n("884691"),
+var a = n("884691"),
   r = n("748820"),
-  l = n("157590");
-let s = (0, r.v4)(),
-  a = new Map,
-  o = new Map;
-class u extends i.Component {
+  i = n("157590");
+let l = (0, r.v4)(),
+  s = new Map,
+  u = new Map;
+class o extends a.Component {
   componentDidMount() {
     if (this.props.active) {
-      let t = this.getVisibilityObserver();
-      t.observe(this), this.isVisible = t.isVisible(this), this.props.onChange(this.isVisible)
+      let e = this.getVisibilityObserver();
+      e.observe(this), this.isVisible = e.isVisible(this), this.props.onChange(this.isVisible)
     }
   }
-  componentDidUpdate(t) {
-    let e = this.getVisibilityObserver(),
-      n = e.isVisible(this);
-    this.props.active && n !== this.isVisible && this.props.onChange(n), !t.active && this.props.active ? e.observe(this) : t.active && !this.props.active && e.unobserve(this), this.isVisible = n
+  componentDidUpdate(e) {
+    let t = this.getVisibilityObserver(),
+      n = t.isVisible(this);
+    this.props.active && n !== this.isVisible && this.props.onChange(n), !e.active && this.props.active ? t.observe(this) : e.active && !this.props.active && t.unobserve(this), this.isVisible = n
   }
   componentWillUnmount() {
     this.getVisibilityObserver().unobserve(this)
   }
   getVisibilityObserverId() {
     let {
-      rootMargin: t,
-      threshold: e
+      rootMargin: e,
+      threshold: t
     } = this.props;
-    return "".concat(this.elementId, " ").concat(t, " ").concat(e)
+    return "".concat(this.elementId, " ").concat(e, " ").concat(t)
   }
   getVisibilityObserver() {
-    let t = this.getVisibilityObserverId(),
-      e = o.get(t);
-    if (!e) throw Error("Visibility sensor with id ".concat(t, " not found."));
-    return e
+    let e = this.getVisibilityObserverId(),
+      t = u.get(e);
+    if (!t) throw Error("Visibility sensor with id ".concat(e, " not found."));
+    return t
   }
   render() {
-    return i.Children.only(this.props.children)
+    return a.Children.only(this.props.children)
   }
-  constructor(t) {
-    super(t), this.isVisible = !1;
+  constructor(e) {
+    super(e), this.isVisible = !1;
     let {
-      root: e,
+      root: t,
       rootMargin: n,
-      threshold: i
-    } = t;
-    e ? a.has(e) ? this.elementId = a.get(e) || "" : a.set(e, (0, r.v4)()) : this.elementId = s;
-    let u = this.getVisibilityObserverId();
-    !o.has(u) && o.set(u, new l.default({
-      root: e,
+      threshold: a
+    } = e;
+    t ? s.has(t) ? this.elementId = s.get(t) || "" : s.set(t, (0, r.v4)()) : this.elementId = l;
+    let o = this.getVisibilityObserverId();
+    !u.has(o) && u.set(o, new i.default({
+      root: t,
       rootMargin: n,
-      threshold: i
+      threshold: a
     }))
   }
 }
-u.defaultProps = {
+o.defaultProps = {
   active: !0,
-  children: i.createElement("span"),
+  children: a.createElement("span"),
   root: null,
   rootMargin: "0px 0px 0px 0px",
   threshold: [0, Number.MIN_VALUE]
 };
-var c = u
+var d = o

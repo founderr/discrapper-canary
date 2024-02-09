@@ -1,17 +1,17 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   useIsWindowFocused: function() {
-    return a
+    return s
   }
 });
-var i = n("884691"),
+var a = n("884691"),
   r = n("446674"),
-  l = n("244201"),
-  s = n("471671");
+  i = n("244201"),
+  l = n("471671");
 
-function a() {
+function s() {
   let {
-    windowId: t
-  } = i.useContext(l.default);
-  return (0, r.useStateFromStores)([s.default], () => s.default.isFocused(t), [t])
+    windowId: e
+  } = a.useContext(i.default);
+  return (0, r.useStateFromStores)([l.default], () => l.default.isFocused(e), [e])
 }

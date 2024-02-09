@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var l = n("884691"),
   a = n("446674"),
   s = n("152475"),
-  i = n("42203"),
-  r = n("501030"),
+  r = n("42203"),
+  i = n("501030"),
   u = n("730647"),
   o = n("49111");
 let d = {
@@ -26,7 +26,7 @@ function c(e, t, n) {
     let e = async () => {
       v.current = !0;
       try {
-        let e = await (0, r.getDirectoryEntryBroadcastInfo)(I, u.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT, t);
+        let e = await (0, i.getDirectoryEntryBroadcastInfo)(I, u.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT, t);
         f(e)
       } catch (e) {
         f(d)
@@ -42,7 +42,7 @@ function c(e, t, n) {
     }
     h(null === (e = c.has_broadcast) || void 0 === e || e)
   }, [c]);
-  let C = (0, a.useStateFromStores)([i.default], () => (0, s.canEveryoneRoleViewEvent)(n, [i.default]));
+  let C = (0, a.useStateFromStores)([r.default], () => (0, s.canEveryoneRoleViewEvent)(n, [r.default]));
   return {
     broadcastInfo: c,
     broadcastToDirectoryChannels: C && E,

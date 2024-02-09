@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   SafetyWarningTypes: function() {
-    return l
-  },
-  SafetyWarningFeedbackTypes: function() {
     return r
   },
+  SafetyWarningFeedbackTypes: function() {
+    return l
+  },
   default: function() {
-    return C
+    return p
   }
 });
-var i, a, l, r, s = n("446674"),
+var i, a, r, l, s = n("446674"),
   u = n("913144"),
   o = n("42203");
-(i = l || (l = {}))[i.STRANGER_DANGER = 1] = "STRANGER_DANGER", i[i.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", i[i.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (a = r || (r = {}))[a.UPVOTE = 0] = "UPVOTE", a[a.DOWNVOTE = 1] = "DOWNVOTE";
+(i = r || (r = {}))[i.STRANGER_DANGER = 1] = "STRANGER_DANGER", i[i.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", i[i.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (a = l || (l = {}))[a.UPVOTE = 0] = "UPVOTE", a[a.DOWNVOTE = 1] = "DOWNVOTE";
 let d = [],
   c = {};
 
@@ -42,7 +42,7 @@ class h extends s.default.Store {
     return null !== (t = c[e]) && void 0 !== t ? t : d
   }
 }
-var C = new h(u.default, {
+var p = new h(u.default, {
   CHANNEL_CREATE: function(e) {
     f(e.channel)
   },

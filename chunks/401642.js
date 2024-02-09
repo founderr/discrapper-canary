@@ -1,52 +1,52 @@
 "use strict";
 n.r(t), n.d(t, {
   openUserProfileModal: function() {
-    return a
+    return o
   },
   closeUserProfileModal: function() {
     return u
   }
 });
-var s = n("913144"),
-  l = n("327037"),
+var r = n("913144"),
+  s = n("327037"),
   i = n("697218"),
-  r = n("506885"),
-  o = n("49111");
+  l = n("506885"),
+  a = n("49111");
 
-function a(e) {
+function o(e) {
   let {
     userId: t,
     section: n,
-    guildId: a = o.ME,
+    guildId: o = a.ME,
     channelId: u,
     friendToken: c,
     autoFocusNote: d,
     analyticsLocation: f
-  } = e, h = i.default.getUser(t), C = a !== o.ME ? a : void 0;
-  if (null == h) return (0, l.fetchProfile)(t, {
+  } = e, h = i.default.getUser(t), C = o !== a.ME ? o : void 0;
+  if (null == h) return (0, s.fetchProfile)(t, {
     friendToken: c,
     guildId: C
   }).then(() => {
-    s.default.dispatch({
+    r.default.dispatch({
       type: "USER_PROFILE_MODAL_OPEN",
       userId: t,
       section: n,
-      guildId: a,
+      guildId: o,
       channelId: u,
       friendToken: c,
       autoFocusNote: d,
       analyticsLocation: f
     })
   });
-  (0, r.default)(t, h.getAvatarURL(void 0, 80), {
+  (0, l.default)(t, h.getAvatarURL(void 0, 80), {
     withMutualGuilds: !0,
     friendToken: c,
     guildId: C
-  }), s.default.dispatch({
+  }), r.default.dispatch({
     type: "USER_PROFILE_MODAL_OPEN",
     userId: t,
     section: n,
-    guildId: a,
+    guildId: o,
     channelId: u,
     friendToken: c,
     autoFocusNote: d,
@@ -55,7 +55,7 @@ function a(e) {
 }
 
 function u() {
-  s.default.dispatch({
+  r.default.dispatch({
     type: "USER_PROFILE_MODAL_CLOSE"
   })
 }

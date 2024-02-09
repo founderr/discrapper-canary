@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("606292"),
   h = n("688318"),
   E = n("21526"),
-  S = n("853987"),
-  g = n("491232"),
+  g = n("853987"),
+  S = n("491232"),
   C = n("845962"),
   T = n("697218"),
   v = n("945330"),
@@ -104,9 +104,9 @@ var P = e => {
     H()
   }), [B, b, H]);
   let V = (0, o.default)([C.default], () => C.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
-    [K, W] = (0, o.useStateFromStoresArray)([S.default], () => {
+    [K, W] = (0, o.useStateFromStoresArray)([g.default], () => {
       var e;
-      return [(0, g.isPremiumCollectiblesProduct)(S.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, g.isPremiumCollectiblesProduct)(S.default.getProduct(null == V ? void 0 : V.skuId))]
+      return [(0, S.isPremiumCollectiblesProduct)(g.default.getProduct(null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, S.isPremiumCollectiblesProduct)(g.default.getProduct(null == V ? void 0 : V.skuId))]
     }),
     Y = i.useCallback(() => {
       var e, t, l, i;

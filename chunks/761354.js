@@ -21,8 +21,8 @@ var l = n("37983"),
   m = n("42203"),
   h = n("505684"),
   E = n("462579"),
-  S = n("867544"),
-  g = n("987772"),
+  g = n("867544"),
+  S = n("987772"),
   C = n("228220"),
   T = n("956089"),
   v = n("58608"),
@@ -262,7 +262,7 @@ function b(e) {
         onClick: () => u.default.update(t, a.id, n, {
           spoiler: !a.spoiler
         }),
-        children: a.spoiler ? (0, l.jsx)(S.default, {
+        children: a.spoiler ? (0, l.jsx)(g.default, {
           className: s({
             [x.actionBarIcon]: L
           })
@@ -277,7 +277,7 @@ function b(e) {
         }),
         tooltip: N.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
         onClick: j,
-        children: (0, l.jsx)(g.default, {
+        children: (0, l.jsx)(S.default, {
           className: s({
             [x.actionBarIcon]: L
           })

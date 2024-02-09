@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return w
   }
 });
 var i = n("37983"),
-  l = n("884691"),
-  r = n("414456"),
-  s = n.n(r),
+  r = n("884691"),
+  l = n("414456"),
+  s = n.n(l),
   a = n("446674"),
   u = n("77078"),
   o = n("970728"),
@@ -15,12 +15,12 @@ var i = n("37983"),
   d = n("26989"),
   f = n("305961"),
   h = n("580357"),
-  C = n("476263"),
-  v = n("155207"),
+  v = n("476263"),
+  C = n("155207"),
   p = n("158998"),
-  E = n("933326"),
-  S = n("398604"),
-  I = n("882550"),
+  I = n("933326"),
+  E = n("398604"),
+  S = n("882550"),
   m = n("466148"),
   g = n("189443"),
   _ = n("909151"),
@@ -35,14 +35,14 @@ function R(e) {
   var t;
   let {
     creator: n,
-    guildId: l
-  } = e, r = (0, a.useStateFromStores)([d.default], () => d.default.getMember(l, n.id), [n, l]);
+    guildId: r
+  } = e, l = (0, a.useStateFromStores)([d.default], () => d.default.getMember(r, n.id), [n, r]);
   return (0, i.jsxs)("div", {
     className: L.row,
     children: [(0, i.jsx)(u.Avatar, {
       size: u.AvatarSizes.SIZE_20,
-      src: n.getAvatarURL(l, 20),
-      "aria-label": null !== (t = null == r ? void 0 : r.nick) && void 0 !== t ? t : p.default.getName(n),
+      src: n.getAvatarURL(r, 20),
+      "aria-label": null !== (t = null == l ? void 0 : l.nick) && void 0 !== t ? t : p.default.getName(n),
       className: L.icon
     }), (0, i.jsx)(u.Text, {
       color: "header-secondary",
@@ -53,7 +53,7 @@ function R(e) {
           return (0, i.jsx)(u.Clickable, {
             onClick: () => (0, c.openUserProfileModal)({
               userId: n.id,
-              guildId: l,
+              guildId: r,
               analyticsLocation: {
                 section: y.AnalyticsSections.SCHEDULED_GUILD_EVENT_INFORMATION_DIALOG
               }
@@ -62,8 +62,8 @@ function R(e) {
             tag: "span",
             role: "link",
             children: (0, i.jsx)(u.NameWithRole, {
-              name: null !== (e = null == r ? void 0 : r.nick) && void 0 !== e ? e : p.default.getName(n),
-              color: null !== (t = null == r ? void 0 : r.colorString) && void 0 !== t ? t : void 0
+              name: null !== (e = null == l ? void 0 : l.nick) && void 0 !== e ? e : p.default.getName(n),
+              color: null !== (t = null == l ? void 0 : l.colorString) && void 0 !== t ? t : void 0
             })
           }, "open-user-profile")
         }
@@ -72,17 +72,17 @@ function R(e) {
   })
 }
 
-function j(e) {
+function M(e) {
   let {
     guild: t,
     onClick: n,
-    onClose: r
-  } = e, a = l.useCallback(e => {
-    null == n || n(e), null != n && (null == r || r(e))
-  }, [n, r]), o = (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(C.default, {
+    onClose: l
+  } = e, a = r.useCallback(e => {
+    null == n || n(e), null != n && (null == l || l(e))
+  }, [n, l]), o = (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(v.default, {
       guild: t,
-      size: C.default.Sizes.MINI,
+      size: v.default.Sizes.MINI,
       active: !0,
       className: s(L.guildIcon, L.icon)
     }), (0, i.jsx)(h.default, {
@@ -109,14 +109,14 @@ function j(e) {
   })
 }
 
-function w(e) {
+function j(e) {
   let {
     userCount: t,
     onClick: n
   } = e;
   return (0, i.jsxs)("div", {
     className: L.row,
-    children: [(0, i.jsx)(v.default, {
+    children: [(0, i.jsx)(C.default, {
       width: 20,
       height: 20,
       className: L.icon
@@ -134,39 +134,39 @@ function w(e) {
   })
 }
 
-function M(e) {
+function w(e) {
   let {
     guildEvent: t,
     guild: n,
-    channel: r,
+    channel: l,
     headerId: s,
     onClose: c,
     onClickInterestedCount: d,
     isHub: h = !1,
-    containerRef: C,
-    recurrenceId: v,
+    containerRef: v,
+    recurrenceId: C,
     setRecurrenceId: p
   } = e, y = (0, a.useStateFromStores)([f.default], () => null != f.default.getGuild(n.id), [n.id]), {
     startTime: A,
-    endTime: M
-  } = (0, m.default)(t.id, v), b = (0, a.useStateFromStores)([S.default], () => S.default.getUserCount(t.id, v)), P = l.useCallback(e => {
+    endTime: w
+  } = (0, m.default)(t.id, C), b = (0, a.useStateFromStores)([E.default], () => E.default.getUserCount(t.id, C)), P = r.useCallback(e => {
     e.stopPropagation(), null != t && (0, o.transitionToGuildFromEventInvite)(t)
-  }, [t]), U = (0, I.default)(t);
-  l.useEffect(() => {
-    E.default.getGuildEventUserCounts(n.id, t.id, null != v ? [v] : []), E.default.getGuildEventsForCurrentUser(n.id)
-  }, [n.id, t.id, v]);
-  let D = (0, g.recurrenceRuleFromServer)(t.recurrence_rule);
+  }, [t]), U = (0, S.default)(t);
+  r.useEffect(() => {
+    I.default.getGuildEventUserCounts(n.id, t.id, null != C ? [C] : []), I.default.getGuildEventsForCurrentUser(n.id)
+  }, [n.id, t.id, C]);
+  let O = (0, g.recurrenceRuleFromServer)(t.recurrence_rule);
   return (0, i.jsxs)("div", {
-    ref: C,
+    ref: v,
     children: [(0, i.jsxs)("div", {
       className: L.header,
       children: [(0, i.jsx)(x.GuildEventTimeStatus, {
         startTime: A.toISOString(),
-        endTime: null == M ? void 0 : M.toISOString(),
+        endTime: null == w ? void 0 : w.toISOString(),
         status: t.status,
         eventType: t.entity_type,
         guildEventId: t.id,
-        recurrenceId: v
+        recurrenceId: C
       }), (0, i.jsx)(u.Heading, {
         id: s,
         variant: "heading-lg/semibold",
@@ -176,15 +176,15 @@ function M(e) {
       })]
     }), (0, i.jsxs)("div", {
       className: L.body,
-      children: [(0, i.jsx)(j, {
+      children: [(0, i.jsx)(M, {
         guild: n,
         onClick: y ? P : void 0,
         onClose: c
       }), (0, i.jsx)(T.default, {
         guildScheduledEvent: t,
-        channel: r,
+        channel: l,
         onClose: c
-      }), null != b && (0, i.jsx)(w, {
+      }), null != b && (0, i.jsx)(j, {
         userCount: b,
         onClick: d
       }), !h && null != U && (0, i.jsx)(R, {
@@ -198,15 +198,15 @@ function M(e) {
           guildId: n.id
         })
       })]
-    }), null != D && (0, i.jsx)("hr", {
+    }), null != O && (0, i.jsx)("hr", {
       className: L.divider
-    }), null != D && (0, i.jsx)(N.default, {
+    }), null != O && (0, i.jsx)(N.default, {
       guildId: n.id,
-      recurrenceRule: D,
+      recurrenceRule: O,
       guildEventId: t.id,
       onRecurrenceClick: p,
       hideScroller: !0,
-      activeRecurrenceId: v
+      activeRecurrenceId: C
     })]
   })
 }

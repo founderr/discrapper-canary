@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("42203"),
   h = n("86878"),
   E = n("525065"),
-  S = n("305961"),
-  g = n("686470"),
+  g = n("305961"),
+  S = n("686470"),
   C = n("957255"),
   T = n("27618"),
   v = n("18494"),
@@ -58,8 +58,8 @@ function F(e) {
     channelId: K,
     userId: V.id,
     activity: t
-  }), Z = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), Q = (0, a.useStateFromStores)([g.default, p.default, A.default, h.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, x.isLaunchable)({
-    LibraryApplicationStore: g.default,
+  }), Z = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), Q = (0, a.useStateFromStores)([S.default, p.default, A.default, h.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, x.isLaunchable)({
+    LibraryApplicationStore: S.default,
     LaunchableGameStore: p.default,
     DispatchApplicationStore: A.default,
     ConnectedAppsStore: h.default,
@@ -70,7 +70,7 @@ function F(e) {
       channelId: l
     } = e;
     return n === (null == t ? void 0 : t.application_id) && l === q
-  })), $ = (0, a.useStateFromStores)([y.default], () => null != t && null != t.application_id && y.default.getState(t.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, a.useStateFromStores)([m.default, S.default, E.default, T.default, v.default, _.default, C.default], () => (0, M.default)({
+  })), $ = (0, a.useStateFromStores)([y.default], () => null != t && null != t.application_id && y.default.getState(t.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, a.useStateFromStores)([m.default, g.default, E.default, T.default, v.default, _.default, C.default], () => (0, M.default)({
     user: V,
     activity: t,
     application: ee,
@@ -78,7 +78,7 @@ function F(e) {
     currentUser: Z,
     isEmbedded: W,
     ChannelStore: m.default,
-    GuildStore: S.default,
+    GuildStore: g.default,
     GuildMemberCountStore: E.default,
     RelationshipStore: T.default,
     SelectedChannelStore: v.default,
