@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return g
   }
 }), n("222007");
 var a = n("37983"),
@@ -116,7 +116,7 @@ class m extends s.PureComponent {
   }
 }
 
-function A() {
+function g() {
   let e = {
     installShortcutDesktop: o.InstallShortcutDesktop.useSetting(),
     installShortcutStartMenu: o.InstallShortcutStartMenu.useSetting(),

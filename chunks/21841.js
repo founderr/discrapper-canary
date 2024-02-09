@@ -9,8 +9,8 @@ var l = n("884691"),
   s = n.n(a),
   i = n("298386"),
   r = n("446674"),
-  u = n("862337"),
-  o = n("666020"),
+  o = n("862337"),
+  u = n("666020"),
   d = n("427953"),
   c = n("191225"),
   f = n("534222"),
@@ -20,9 +20,9 @@ var l = n("884691"),
   m = n("373469"),
   E = n("271938"),
   g = n("42203"),
-  I = n("525065"),
-  _ = n("305961"),
-  S = n("957255"),
+  S = n("525065"),
+  I = n("305961"),
+  _ = n("957255"),
   N = n("945956"),
   T = n("282109"),
   A = n("800762"),
@@ -34,7 +34,7 @@ let R = [];
 function M(e) {
   var t, n, a;
   let M = (0, r.useStateFromStores)([T.default], () => T.default.isMuted(e)),
-    O = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(e)),
+    O = (0, r.useStateFromStores)([I.default], () => I.default.getGuild(e)),
     y = (null === (t = (0, h.default)(e)) || void 0 === t ? void 0 : t.length) > 0,
     D = (0, f.useGuildActiveEvent)(e),
     b = (null === (n = (0, C.default)()) || void 0 === n ? void 0 : n.guild_id) === e,
@@ -53,13 +53,13 @@ function M(e) {
       guildHasVoice: B,
       guildHasVideo: V,
       selectedVoiceChannelHasVideo: H
-    } = (0, r.useStateFromStoresObject)([A.default, g.default, S.default], () => {
+    } = (0, r.useStateFromStoresObject)([A.default, g.default, _.default], () => {
       let t = !1,
         n = !1,
         l = A.default.getVoiceStates(e);
       for (let e in l) {
         let a = g.default.getBasicChannel(l[e].channelId);
-        null != a && a.type !== i.ChannelTypes.GUILD_STAGE_VOICE && F !== a.id && S.default.canBasicChannel(x.BasicPermissions.VIEW_CHANNEL, a) && (t = !0, l[e].selfVideo && (n = !0))
+        null != a && a.type !== i.ChannelTypes.GUILD_STAGE_VOICE && F !== a.id && _.default.canBasicChannel(x.BasicPermissions.VIEW_CHANNEL, a) && (t = !0, l[e].selfVideo && (n = !0))
       }
       return {
         guildHasVoice: t,
@@ -70,7 +70,7 @@ function M(e) {
     k = (0, r.useStateFromStores)([m.default], () => m.default.getAllApplicationStreams().some(t => t.guildId === e));
   ! function(e, t) {
     let n = l.useRef(new Set),
-      a = l.useRef(new u.Timeout),
+      a = l.useRef(new o.Timeout),
       {
         shouldSubscribeToGuildMemberUpdates: i
       } = L.default.useExperiment({
@@ -78,8 +78,8 @@ function M(e) {
       }, {
         autoTrackExposure: !1
       }),
-      d = (0, r.useStateFromStores)([I.default], () => {
-        let t = I.default.getMemberCount(e);
+      d = (0, r.useStateFromStores)([S.default], () => {
+        let t = S.default.getMemberCount(e);
         return null == t || t > 1e3
       }),
       c = (0, r.useStateFromStoresObject)([A.default], () => {
@@ -95,13 +95,13 @@ function M(e) {
           let l = new Set(t),
             s = t.filter(e => !n.has(e)),
             i = Array.from(n).filter(e => !l.has(e));
-          (0, o.unsubscribeMembers)(e, i), (0, o.subscribeMembers)(e, s), a()
+          (0, u.unsubscribeMembers)(e, i), (0, u.subscribeMembers)(e, s), a()
         })
       }(e, c, n.current, a.current, () => {
         n.current = new Set(c)
       })
     }, [e, c]), l.useEffect(() => () => {
-      a.current.stop(), (0, o.unsubscribeMembers)(e, Array.from(n.current))
+      a.current.stop(), (0, u.unsubscribeMembers)(e, Array.from(n.current))
     }, [e])
   }(e, M);
   let Y = (0, v.default)(e),
@@ -123,18 +123,18 @@ function M(e) {
     })),
     X = !1,
     Q = !1,
-    J = !1,
     q = !1,
+    J = !1,
     $ = !1,
     ee = !1;
-  return P ? (X = !0, Q = (null == D ? void 0 : D.channel_id) === U, J = b, q = P && H, $ = w, ee = z) : !M && (X = B, Q = null != D, J = y, q = V, $ = k, ee = Z), l.useMemo(() => ({
+  return P ? (X = !0, Q = (null == D ? void 0 : D.channel_id) === U, q = b, J = P && H, $ = w, ee = z) : !M && (X = B, Q = null != D, q = y, J = V, $ = k, ee = Z), l.useMemo(() => ({
     audio: X,
-    video: q,
+    video: J,
     screenshare: $,
-    liveStage: J,
+    liveStage: q,
     activeEvent: Q,
     activity: ee,
     gaming: Y,
     isCurrentUserConnected: P || b
-  }), [X, q, $, J, Q, ee, P, b, Y])
+  }), [X, J, $, q, Q, ee, P, b, Y])
 }

@@ -56,7 +56,7 @@ var s = l("37983"),
   Q = l("53708");
 let $ = r.AvatarSizes.SIZE_152,
   ee = (0, E.getDecorationSizeForAvatarSize)($),
-  et = (0, W.getLogoSize)(18),
+  et = (0, k.getLogoSize)(18),
   el = e => {
     let {
       text: t

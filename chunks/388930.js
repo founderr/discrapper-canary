@@ -10,8 +10,8 @@ var a = n("974667"),
   s = n("446674"),
   i = n("151426"),
   r = n("77078"),
-  u = n("272030"),
-  o = n("120363"),
+  o = n("272030"),
+  u = n("120363"),
   d = n("10641"),
   c = n("534222"),
   f = n("131143"),
@@ -21,23 +21,23 @@ var a = n("974667"),
   m = n("956089"),
   E = n("708402"),
   g = n("133335"),
-  I = n("782340"),
-  _ = n("404135");
+  S = n("782340"),
+  I = n("404135");
 
-function S(e) {
+function _(e) {
   let {
     selected: t,
     showUnread: n,
     onClick: s,
     onContextMenu: r,
-    eventsMuted: u,
+    eventsMuted: o,
     rowLabel: d,
     mentionCount: c,
     guildId: h
-  } = e, C = (0, a.useListItem)("upcoming-events-".concat(h)), g = (0, f.useCanShowRecurringEventUpsell)(h), I = (0, o.useChannelListUpsellLocationTrackerRef)(h, i.DismissibleContent.RECURRING_EVENT_COACHMARK, !g);
+  } = e, C = (0, a.useListItem)("upcoming-events-".concat(h)), g = (0, f.useCanShowRecurringEventUpsell)(h), S = (0, u.useChannelListUpsellLocationTrackerRef)(h, i.DismissibleContent.RECURRING_EVENT_COACHMARK, !g);
   return (0, l.jsx)(E.default, {
     ...C,
-    ref: I,
+    ref: S,
     renderIcon: e => (0, l.jsx)(p.default, {
       className: e
     }),
@@ -46,8 +46,8 @@ function S(e) {
     onClick: s,
     onContextMenu: r,
     showUnread: n,
-    badge: !u && c > 0 ? (0, l.jsx)(m.NumberBadge, {
-      className: _.numberBadge,
+    badge: !o && c > 0 ? (0, l.jsx)(m.NumberBadge, {
+      className: I.numberBadge,
       disableColor: !0,
       count: c
     }) : null
@@ -59,7 +59,7 @@ function N(e) {
     guild: t,
     selected: a
   } = e, {
-    hasUnread: o,
+    hasUnread: u,
     mentionCount: f
   } = (0, s.useStateFromStoresObject)([h.default], () => ({
     hasUnread: h.default.hasUnread(t.id, g.ReadStateTypes.GUILD_EVENT),
@@ -77,15 +77,15 @@ function N(e) {
     }), (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)
   }
   let E = (0, c.default)(t.id),
-    _ = E.length > 0 ? I.default.Messages.GUILD_EVENTS_PLURAL.format({
+    I = E.length > 0 ? S.default.Messages.GUILD_EVENTS_PLURAL.format({
       number: E.length
-    }) : I.default.Messages.GUILD_EVENTS;
-  return (0, l.jsx)(S, {
+    }) : S.default.Messages.GUILD_EVENTS;
+  return (0, l.jsx)(_, {
     selected: a,
-    showUnread: o && !p,
+    showUnread: u && !p,
     onClick: m,
     onContextMenu: e => {
-      (0, u.openContextMenuLazy)(e, async () => {
+      (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("213528").then(n.bind(n, "213528"));
@@ -96,7 +96,7 @@ function N(e) {
       })
     },
     eventsMuted: p,
-    rowLabel: _,
+    rowLabel: I,
     mentionCount: f,
     guildId: t.id
   })

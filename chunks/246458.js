@@ -16,26 +16,26 @@ var i = n("37983"),
   f = n("934743"),
   h = n("393027"),
   p = n("870691"),
-  g = n("816092"),
-  m = n("162805"),
-  E = n("245997"),
+  E = n("816092"),
+  g = n("162805"),
+  m = n("245997"),
   S = n("923959"),
   v = n("952451"),
-  y = n("305961"),
-  O = n("957255"),
-  C = n("18494"),
+  I = n("305961"),
+  y = n("957255"),
+  _ = n("18494"),
   N = n("282109"),
   T = n("316133"),
-  I = n("474571"),
-  _ = n("560995"),
+  O = n("474571"),
+  C = n("560995"),
   A = n("637842"),
   x = n("758547"),
   R = n("49111"),
-  L = n("695838"),
-  M = n("782340"),
+  M = n("695838"),
+  L = n("782340"),
   D = n("718394");
 let j = 54;
-class k extends a.PureComponent {
+class P extends a.PureComponent {
   static getDerivedStateFromProps(e) {
     let {
       guild: t
@@ -50,7 +50,7 @@ class k extends a.PureComponent {
       guildId: e
     } = this.props, {
       scrollTop: t
-    } = m.default.getGuildDimensions(e);
+    } = g.default.getGuildDimensions(e);
     this.setAnimatedValue(null != t ? t : 0)
   }
   componentDidUpdate(e) {
@@ -61,7 +61,7 @@ class k extends a.PureComponent {
     if (e.guild !== t) {
       let {
         scrollTop: e
-      } = m.default.getGuildDimensions(n);
+      } = g.default.getGuildDimensions(n);
       this.setAnimatedValue(null != e ? e : 0)
     }
   }
@@ -118,7 +118,7 @@ class k extends a.PureComponent {
       renderBanner: l,
       bannerVisible: s,
       communityInfoVisible: r
-    } = this.state, d = n.id === L.FAVORITES_RAW_GUILD_ID ? u.FavoritesChannelList : u.GuildChannelList;
+    } = this.state, d = n.id === M.FAVORITES_RAW_GUILD_ID ? u.FavoritesChannelList : u.GuildChannelList;
     return (0, i.jsxs)(x.default, {
       header: (0, i.jsx)(c.default, {
         guild: n,
@@ -133,9 +133,9 @@ class k extends a.PureComponent {
         children: (0, i.jsx)(o.Popout, {
           position: "right",
           renderPopout: this.renderSettings,
-          children: e => (0, i.jsx)(_.default.Icon, {
-            icon: I.default,
-            label: M.default.Messages.SETTINGS,
+          children: e => (0, i.jsx)(C.default.Icon, {
+            icon: O.default,
+            label: L.default.Messages.SETTINGS,
             ...e
           })
         })
@@ -150,7 +150,7 @@ class k extends a.PureComponent {
         })
       }), (0, i.jsx)("section", {
         className: D.panels,
-        "aria-label": M.default.Messages.ACCOUNT_A11Y_LABEL,
+        "aria-label": L.default.Messages.ACCOUNT_A11Y_LABEL,
         children: (0, i.jsx)(f.default, {
           guildId: n.id
         })
@@ -179,38 +179,38 @@ function b(e) {
   var t;
   let {
     guildId: n
-  } = e, a = (0, s.useStateFromStores)([y.default], () => y.default.getGuild(n)), l = (0, s.useStateFromStores)([S.default], () => S.default.getChannels(n)), o = (0, s.useStateFromStores)([E.default], () => E.default.getCategories(n)), {
+  } = e, a = (0, s.useStateFromStores)([I.default], () => I.default.getGuild(n)), l = (0, s.useStateFromStores)([S.default], () => S.default.getChannels(n)), o = (0, s.useStateFromStores)([m.default], () => m.default.getCategories(n)), {
     mutedChannels: u,
     collapseMuted: c
   } = (0, s.useStateFromStoresObject)([N.default], () => ({
     mutedChannels: N.default.getMutedChannels(n),
     collapseMuted: N.default.isGuildCollapsed(n)
-  })), f = (0, s.useStateFromStores)([T.default], () => T.default.getVoiceStates(n)), I = (0, s.useStateFromStores)([g.default], () => g.default.getCollapsed()), {
-    scrollTo: _
-  } = (0, s.useStateFromStores)([m.default], () => m.default.getGuildDimensions(n)), A = (0, h.default)(e => {
+  })), f = (0, s.useStateFromStores)([T.default], () => T.default.getVoiceStates(n)), O = (0, s.useStateFromStores)([E.default], () => E.default.getCollapsed()), {
+    scrollTo: C
+  } = (0, s.useStateFromStores)([g.default], () => g.default.getGuildDimensions(n)), A = (0, h.default)(e => {
     let {
       channelId: t
     } = e;
     return t
-  }), x = (0, s.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), L = (0, s.useStateFromStores)([O.default], () => O.default.getGuildVersion(n)), M = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), j = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), b = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), w = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
-  return (0, i.jsx)(k, {
+  }), x = (0, s.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), M = (0, s.useStateFromStores)([y.default], () => y.default.getGuildVersion(n)), L = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), j = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), b = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), k = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
+  return (0, i.jsx)(P, {
     guildId: n,
     guild: a,
     channels: l,
     categories: o,
     mutedChannels: u,
-    scrollToChannel: _,
+    scrollToChannel: C,
     selectedChannelId: A,
     selectedVoiceChannelId: x,
     voiceStates: f,
-    collapsedChannels: I,
+    collapsedChannels: O,
     collapseMuted: c,
     guildReadStateSentinel: D,
-    permissionVersion: L,
-    categoryCollapseVersion: M,
+    permissionVersion: M,
+    categoryCollapseVersion: L,
     embeddedAppsByChannel: j,
     activeEventsByChannel: b,
-    showNewUnreadsBar: w,
+    showNewUnreadsBar: k,
     optInEnabled: !1
   })
 }

@@ -19,14 +19,14 @@ let C = "ActivityTrackingStore",
   p = {},
   m = !1;
 
-function A(e) {
+function g(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  t && g(e, !0);
+  t && A(e, !0);
   let n = p[e.applicationId];
   null != n && (n.stop(), delete p[e.applicationId]), delete S[e.applicationId], l.default.set(C, S)
 }
 
-function g(e) {
+function A(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
@@ -39,7 +39,7 @@ function g(e) {
     closed: t
   }), e.updatedAt = n;
   let s = p[e.applicationId];
-  null == s && (s = p[e.applicationId] = new i.Interval).start(I, () => g(e)), !t && (S[e.applicationId] = e, l.default.set(C, S))
+  null == s && (s = p[e.applicationId] = new i.Interval).start(I, () => A(e)), !t && (S[e.applicationId] = e, l.default.set(C, S))
 }
 
 function N() {
@@ -52,17 +52,17 @@ function N() {
     }
     of t) {
     let t = f.default.getGameByName(e);
-    if (null != t) n.add(t.id), !(t.id in S) && g({
+    if (null != t) n.add(t.id), !(t.id in S) && A({
       applicationId: t.id,
       updatedAt: Date.now(),
       distributor: a
     })
   }
-  for (let t of Object.keys(S)) !n.has(t) && A(S[t], e)
+  for (let t of Object.keys(S)) !n.has(t) && g(S[t], e)
 }
 
 function R() {
-  for (let e of Object.keys(S)) A(S[e]);
+  for (let e of Object.keys(S)) g(S[e]);
   m = !1
 }
 class O extends s.default.Store {
@@ -77,7 +77,7 @@ O.displayName = "ActivityTrackingStore", new O(r.default, {
   RUNNING_GAMES_CHANGE: () => N(),
   CONNECTION_OPEN: function() {
     if (m) return !1;
-    for (let e of Object.keys(S)) g(S[e]);
+    for (let e of Object.keys(S)) A(S[e]);
     N(!1), m = !0
   },
   CONNECTION_CLOSED: function(e) {

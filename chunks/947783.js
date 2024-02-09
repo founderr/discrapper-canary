@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return A
   }
 });
 var a = n("37983");
@@ -45,7 +45,7 @@ function m() {
     })
   })
 }
-let A = {
+let g = {
   [C.ClipsUserEducationType.Error]: {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
@@ -81,7 +81,7 @@ let A = {
   }
 };
 
-function g() {
+function A() {
   var e;
   let {
     decoupledClipsEnabled: t,
@@ -99,7 +99,7 @@ function g() {
       buttonColor: f,
       buttonLook: E,
       containerClass: I
-    } = A[s];
+    } = g[s];
   return (0, a.jsxs)("div", {
     className: I,
     children: [(0, a.jsx)(r.Text, {

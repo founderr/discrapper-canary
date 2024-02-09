@@ -14,7 +14,7 @@ function o(e) {
   let {
     onError: t,
     onSuccess: n
-  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [_, h] = a.useState(!1), [C, I] = a.useState(!1), [T, S] = a.useState(!1), [p, m] = a.useState(!1), [A, g] = a.useState(!1), N = o || d || f || _ || T || A, R = a.useCallback(async e => {
+  } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [f, E] = a.useState(!1), [_, h] = a.useState(!1), [C, I] = a.useState(!1), [T, S] = a.useState(!1), [p, m] = a.useState(!1), [g, A] = a.useState(!1), N = o || d || f || _ || T || g, R = a.useCallback(async e => {
     if (!N) {
       u(!0);
       try {
@@ -103,18 +103,18 @@ function o(e) {
       a = n[n.length - 1],
       r = i.default.getStartId(),
       o = i.default.getSelectedTeenId();
-    if (!A && null != r && null != o) {
-      g(!0);
+    if (!g && null != r && null != o) {
+      A(!0);
       try {
         await l.default.fetchMoreTeenActivity(o, e, r, a.event_id)
       } catch (n) {
         let e = new s.APIError(n);
         null == t || t(e)
       } finally {
-        g(!1)
+        A(!1)
       }
     }
-  }, [A, t]);
+  }, [g, t]);
   return {
     acceptLinkRequest: R,
     declineLinkRequest: O,
@@ -131,6 +131,6 @@ function o(e) {
     isGetLinkCodeLoading: C,
     isSelectTeenUserLoading: p,
     isRequestingLink: T,
-    isMoreLoading: A
+    isMoreLoading: g
   }
 }

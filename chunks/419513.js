@@ -25,7 +25,7 @@ var l = a("37983"),
   x = a("646718"),
   b = a("782340"),
   v = a("927694");
-let S = (0, T.getLogoSize)(96),
+let S = (0, h.getLogoSize)(96),
   I = e => {
     let {
       category: t

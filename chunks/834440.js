@@ -60,7 +60,7 @@ var m = function(e) {
   let {
     onUnmount: l,
     quest: d
-  } = e, m = (0, r.useStateFromStores)([E.default], () => E.default.isEnrolling(d.id), [d]), A = s.useRef(l), g = s.useCallback(e => {
+  } = e, m = (0, r.useStateFromStores)([E.default], () => E.default.isEnrolling(d.id), [d]), g = s.useRef(l), A = s.useCallback(e => {
     e.stopPropagation()
   }, []), N = s.useCallback(() => {}, []), R = s.useCallback(() => {
     (0, f.enrollInQuest)(d.id)
@@ -68,10 +68,10 @@ var m = function(e) {
     u.default.open(I.UserSettingsSections.INVENTORY)
   }, []), L = (0, C.useHandleClaimQuestsReward)(d);
   s.useEffect(() => {
-    A.current = l
+    g.current = l
   }, [l]), s.useEffect(() => () => {
     var e;
-    null === (e = A.current) || void 0 === e || e.call(A)
+    null === (e = g.current) || void 0 === e || e.call(g)
   }, []);
   let v = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
     M = (null === (n = d.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
@@ -79,8 +79,8 @@ var m = function(e) {
     className: i(S.wrapper, {
       [S.wrapperQuestAccepted]: v
     }),
-    onClick: g,
-    onKeyPress: g,
+    onClick: A,
+    onKeyPress: A,
     children: [(0, a.jsxs)("div", {
       className: S.utils,
       children: [v ? (0, a.jsx)(p, {

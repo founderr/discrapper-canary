@@ -12,77 +12,77 @@ var i, a, l, s, o = n("627445"),
   f = n("539405"),
   h = n("415635"),
   p = n("387129"),
-  g = n("981253"),
-  m = n("931237"),
-  E = n("37359"),
+  E = n("981253"),
+  g = n("931237"),
+  m = n("37359"),
   S = n("364864"),
   v = n("523505"),
-  y = n("47271"),
-  O = n("386045"),
-  C = n("969416"),
+  I = n("47271"),
+  y = n("386045"),
+  _ = n("969416"),
   N = n("827922"),
   T = n("845579"),
-  I = n("271938"),
-  _ = n("42203"),
+  O = n("271938"),
+  C = n("42203"),
   A = n("385649"),
   x = n("824563"),
   R = n("18494"),
-  L = n("101125"),
-  M = n("102985"),
+  M = n("101125"),
+  L = n("102985"),
   D = n("697218"),
   j = n("189857"),
-  k = n("901165"),
+  P = n("901165"),
   b = n("718517"),
-  w = n("189771"),
-  P = n("686069"),
+  k = n("189771"),
+  w = n("686069"),
   V = n("703370"),
   U = n("49111"),
-  B = n("6791"),
-  F = n("782340");
+  F = n("6791"),
+  B = n("782340");
 (l = i || (i = {}))[l.GENERIC = 0] = "GENERIC", l[l.TEXT = 1] = "TEXT", l[l.INCOMING_CALL = 2] = "INCOMING_CALL", (s = a || (a = {}))[s.NORMAL = 0] = "NORMAL", s[s.HIGH = 1] = "HIGH", s[s.URGENT = 2] = "URGENT";
-let G = 5 * b.default.Millis.SECOND,
-  W = 8 * b.default.Millis.SECOND,
-  H = 30 * b.default.Millis.SECOND,
+let H = 5 * b.default.Millis.SECOND,
+  G = 8 * b.default.Millis.SECOND,
+  Y = 30 * b.default.Millis.SECOND,
   z = Object.freeze({
     priority: 0,
-    duration: G,
+    duration: H,
     expirationExternallyManaged: !1,
     type: 0
   }),
-  Y = [],
+  W = [],
   K = (e, t, n) => {
     let i = t ? U.OverlayNotificationStatus.TIMED_OUT : U.OverlayNotificationStatus.DISMISSED;
-    return setTimeout(() => f.default.updateNotificationStatus(e, i), null != n ? n : G)
+    return setTimeout(() => f.default.updateNotificationStatus(e, i), null != n ? n : H)
   };
 
 function Z(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : U.OverlayNotificationStatus.DISMISSED;
   if (null == e) return !1;
-  let n = Y.findIndex(t => t.id === e);
+  let n = W.findIndex(t => t.id === e);
   if (-1 === n) return !1;
-  let i = Y[n];
-  clearTimeout(i.timerId), Y = [...Y], t === U.OverlayNotificationStatus.DISMISSED ? Y.splice(n, 1) : Y[n] = {
+  let i = W[n];
+  clearTimeout(i.timerId), W = [...W], t === U.OverlayNotificationStatus.DISMISSED ? W.splice(n, 1) : W[n] = {
     ...i,
     status: t
   }
 }
 
 function X(e) {
-  let t = Y.length;
-  return (Y = Y.filter(t => 1 !== t.type || t.channelId !== e || !1)).length !== t
+  let t = W.length;
+  return (W = W.filter(t => 1 !== t.type || t.channelId !== e || !1)).length !== t
 }
 
 function J(e) {
-  let t = Y.find(t => 2 === t.type && t.channelId === e);
+  let t = W.find(t => 2 === t.type && t.channelId === e);
   return null != t ? t.id : null
 }
 
-function q(e, t) {
+function Q(e, t) {
   let n = {
     ...z,
     ...t
   };
-  if (2 !== n.priority && !k.default.isInstanceFocused()) return null;
+  if (2 !== n.priority && !P.default.isInstanceFocused()) return null;
   let i = (0, d.v4)(),
     a = {
       id: i,
@@ -91,26 +91,26 @@ function q(e, t) {
       props: e,
       ...n
     };
-  Y = [...Y];
-  let l = Y.findIndex(e => e.priority <= n.priority);
-  if (-1 === l ? Y.push(a) : Y.splice(l, 0, a), Y.length > 10) {
-    let e = Y.pop();
+  W = [...W];
+  let l = W.findIndex(e => e.priority <= n.priority);
+  if (-1 === l ? W.push(a) : W.splice(l, 0, a), W.length > 10) {
+    let e = W.pop();
     clearTimeout(e.timerId)
   }
   return i
 }
 
-function Q(e) {
+function q(e) {
   let {
     channelId: t,
     ringing: n
-  } = e, i = J(t), a = n.includes(I.default.getId());
+  } = e, i = J(t), a = n.includes(O.default.getId());
   if (!a) return Z(i);
   if (null != i) return !1;
-  let l = _.default.getChannel(t);
-  if (null == l || !l.isPrivate() || L.default.getStatus() === U.StatusTypes.DND || T.QuietMode.getSetting()) return !1;
-  let s = Y.find(e => 1 === e.type && e.channelId === t && e.messageType === U.MessageTypes.CALL);
-  null != s && Z(s.id), q((0, m.default)(l), {
+  let l = C.default.getChannel(t);
+  if (null == l || !l.isPrivate() || M.default.getStatus() === U.StatusTypes.DND || T.QuietMode.getSetting()) return !1;
+  let s = W.find(e => 1 === e.type && e.channelId === t && e.messageType === U.MessageTypes.CALL);
+  null != s && Z(s.id), Q((0, g.default)(l), {
     priority: 1,
     expirationExternallyManaged: !0,
     type: 2,
@@ -119,10 +119,10 @@ function Q(e) {
 }
 class $ extends u.default.Store {
   initialize() {
-    this.waitFor(_.default, D.default)
+    this.waitFor(C.default, D.default)
   }
   getNotifications() {
-    return Y
+    return W
   }
 }
 $.displayName = "OverlayNotificationsStore";
@@ -139,21 +139,21 @@ var ee = new $(c.default, __OVERLAY__ ? {
       nudge: t
     } = e, n = function(e) {
       switch (e.type) {
-        case B.OverlayNudgeTypes.BROADCAST:
-          return (0, y.default)(e);
-        case B.OverlayNudgeTypes.GO_LIVE_VOICE:
-        case B.OverlayNudgeTypes.GO_LIVE_NON_VOICE:
-          return (0, g.default)(e);
-        case B.OverlayNudgeTypes.KEYBIND_INDICATORS:
+        case F.OverlayNudgeTypes.BROADCAST:
+          return (0, I.default)(e);
+        case F.OverlayNudgeTypes.GO_LIVE_VOICE:
+        case F.OverlayNudgeTypes.GO_LIVE_NON_VOICE:
+          return (0, E.default)(e);
+        case F.OverlayNudgeTypes.KEYBIND_INDICATORS:
           return (0, N.default)(e);
-        case B.OverlayNudgeTypes.NEWS:
+        case F.OverlayNudgeTypes.NEWS:
         default:
           return (0, v.default)(e)
       }
     }(t);
-    null != n && q(n, {
+    null != n && Q(n, {
       priority: 2,
-      duration: W
+      duration: G
     })
   },
   OVERLAY_SET_INPUT_LOCKED: function(e) {
@@ -161,7 +161,7 @@ var ee = new $(c.default, __OVERLAY__ ? {
       locked: t
     } = e;
     if (t) return !1;
-    Y = Y.map(e => e.status === U.OverlayNotificationStatus.ACTIVE ? (clearTimeout(e.timerId), {
+    W = W.map(e => e.status === U.OverlayNotificationStatus.ACTIVE ? (clearTimeout(e.timerId), {
       ...e,
       timerId: K(e.id, e.expirationExternallyManaged)
     }) : e)
@@ -171,13 +171,13 @@ var ee = new $(c.default, __OVERLAY__ ? {
     let {
       channelId: a,
       message: l
-    } = e, s = _.default.getChannel(a), o = D.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
+    } = e, s = C.default.getChannel(a), o = D.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
     if (null == s || null == o) return !1;
     if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === U.ActivityActionTypes.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === U.ActivityActionTypes.JOIN_REQUEST) {
-      if (!(0, w.shouldNotify)(l, a, !0, !0)) return !1;
+      if (!(0, k.shouldNotify)(l, a, !0, !0)) return !1;
       let e = function(e, t, n) {
         let i, a;
-        if (r(null != t.activity, "received null message activity"), n.id === I.default.getId()) return !1;
+        if (r(null != t.activity, "received null message activity"), n.id === O.default.getId()) return !1;
         let l = V.default.getGame();
         if (null == l) return !1;
         switch (t.activity.type) {
@@ -186,22 +186,22 @@ var ee = new $(c.default, __OVERLAY__ ? {
             a = (0, h.default)(e, t, n, l, i);
             break;
           case U.ActivityActionTypes.JOIN_REQUEST:
-            if (null == (i = L.default.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-            a = (0, E.default)(e, n, l, i)
+            if (null == (i = M.default.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+            a = (0, m.default)(e, n, l, i)
         }
         if (null == a) return !1;
-        let s = q(a, {
+        let s = Q(a, {
           priority: 2,
           expirationExternallyManaged: !0,
           channelId: e.id
         });
-        return null != s && K(s, !1, H), !0
+        return null != s && K(s, !1, Y), !0
       }(s, l, o);
       if (!1 !== e) return e
     }
-    if ((!k.default.isInstanceUILocked() || k.default.isPinned(U.OverlayWidgets.TEXT)) && a === R.default.getChannelId() || k.default.getTextChatNotificationMode() === U.OverlayNotificationTextChatTypes.DISABLED || M.default.disableNotifications || !(0, w.shouldNotify)(l, a)) return !1;
+    if ((!P.default.isInstanceUILocked() || P.default.isPinned(U.OverlayWidgets.TEXT)) && a === R.default.getChannelId() || P.default.getTextChatNotificationMode() === U.OverlayNotificationTextChatTypes.DISABLED || L.default.disableNotifications || !(0, k.shouldNotify)(l, a)) return !1;
     let d = !A.default.isSoundDisabled(j.MESSAGE_SOUND);
-    q((0, S.default)(s, l, o, d), {
+    Q((0, S.default)(s, l, o, d), {
       type: 1,
       channelId: s.id,
       messageType: l.type
@@ -219,8 +219,8 @@ var ee = new $(c.default, __OVERLAY__ ? {
     } = e;
     return X(t)
   },
-  CALL_CREATE: Q,
-  CALL_UPDATE: Q,
+  CALL_CREATE: q,
+  CALL_UPDATE: q,
   CALL_DELETE: function(e) {
     let {
       channelId: t
@@ -237,24 +237,24 @@ var ee = new $(c.default, __OVERLAY__ ? {
     if (null == l || l.id !== a) return !1;
     if (n === U.ActivityActionTypes.JOIN) t = (0, p.default)(i, l);
     if (null == t) return !1;
-    q(t, {
+    Q(t, {
       priority: 2,
       type: 0
     })
   },
   CLIPS_SAVE_CLIP_START: function() {
-    q((0, C.createClipsNotification)(F.default.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE))
+    Q((0, _.createClipsNotification)(B.default.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE))
   },
   CLIPS_SAVE_CLIP: function() {
-    q((0, C.createClipsNotification)(F.default.Messages.CLIPS_NOTIFICATION_TITLE.format({
-      duration: (0, P.getSecondsSliderLabel)(O.default.getSettings().clipsLength / 1e3, !0)
+    Q((0, _.createClipsNotification)(B.default.Messages.CLIPS_NOTIFICATION_TITLE.format({
+      duration: (0, w.getSecondsSliderLabel)(y.default.getSettings().clipsLength / 1e3, !0)
     })))
   },
   CLIPS_SAVE_CLIP_ERROR: function() {
-    q((0, C.createClipsNotification)(F.default.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE))
+    Q((0, _.createClipsNotification)(B.default.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE))
   },
   STREAM_START: function(e) {
-    let t = (0, C.createClipsReminderNotification)();
-    null != t && q(t)
+    let t = (0, _.createClipsReminderNotification)();
+    null != t && Q(t)
   }
 } : {})

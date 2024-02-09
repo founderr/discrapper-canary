@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return E
   }
 });
 var i = n("37983");
@@ -18,18 +18,18 @@ var a = n("539405"),
   h = n("6791"),
   p = n("782340");
 
-function g(e, t, n, g) {
-  var m;
+function E(e, t, n, E) {
+  var g;
   let {
-    icon: E,
+    icon: m,
     title: S,
     body: v
   } = (0, d.makeTextChatNotification)(e, t, n), {
-    trackView: y,
-    trackClick: O
+    trackView: I,
+    trackClick: y
   } = (0, c.makeAnalyticsTrackers)(h.OverlayNotificationType.TextChat, {
     notif_type: h.OverlayNotificationType.TextChat,
-    notif_user_id: null === (m = t.author) || void 0 === m ? void 0 : m.id,
+    notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
     message_id: t.id,
     message_type: t.type,
     guild_id: e.guild_id,
@@ -38,7 +38,7 @@ function g(e, t, n, g) {
   });
   return {
     colorScheme: r.ColorSchemes.PRIMARY,
-    icon: E,
+    icon: m,
     title: S,
     body: v,
     renderFooter: e => e ? (0, i.jsx)("div", {
@@ -49,13 +49,13 @@ function g(e, t, n, g) {
     }) : null,
     maxBodyLines: 2,
     onNotificationShow: () => {
-      g && (0, u.playSound)(s.MESSAGE_SOUND, s.MESSAGE_SOUND_VOLUME), y()
+      E && (0, u.playSound)(s.MESSAGE_SOUND, s.MESSAGE_SOUND_VOLUME), I()
     },
     onNotificationClick: () => {
-      (0, l.transitionTo)(f.Routes.CHANNEL(e.guild_id, e.id)), O("jump"), o.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
+      (0, l.transitionTo)(f.Routes.CHANNEL(e.guild_id, e.id)), y("jump"), o.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
     },
     onDismissClick: () => {
-      O("dismiss")
+      y("dismiss")
     }
   }
 }

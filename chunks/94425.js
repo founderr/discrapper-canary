@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("374023"),
   p = n("2973"),
   m = n("588025"),
-  A = n("227231"),
-  g = n("555226"),
+  g = n("227231"),
+  A = n("555226"),
   N = n("315130"),
   R = n("228399"),
   O = n("45198"),
@@ -95,14 +95,14 @@ function F(e) {
       children: [(0, a.jsx)("img", {
         alt: r.config.messages.rewardName,
         className: P.questProgressRewardTile,
-        src: (0, A.getRewardAssetUrl)(r.id)
+        src: (0, g.getRewardAssetUrl)(r.id)
       }), (0, a.jsx)(N.default, {
         className: P.questProgressBar,
         quest: r
       })]
     }) : (0, a.jsxs)("div", {
       className: P.brandingWrapper,
-      children: [(0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(A.default, {
         className: P.partnerBranding,
         quest: r
       }), (0, a.jsx)(c.Heading, {
@@ -123,7 +123,7 @@ let B = s.forwardRef(function(e, t) {
     quest: _
   } = e, h = (0, d.useStateFromStores)([p.default], () => p.default.isEnrolling(_.id), [_]), I = (0, d.useStateFromStores)([E.default], () => E.default.locale), S = s.useMemo(() => new Date(_.config.expiresAt).toLocaleDateString(I, {
     dateStyle: "long"
-  }), [_.config.expiresAt, I]), m = s.useCallback(() => {}, []), g = s.useCallback(() => {
+  }), [_.config.expiresAt, I]), m = s.useCallback(() => {}, []), A = s.useCallback(() => {
     (0, T.enrollInQuest)(_.id)
   }, [_]), v = (0, L.useHandleClaimQuestsReward)(_), D = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, y = (null === (l = _.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
   return (0, a.jsx)(u.animated.div, {
@@ -145,7 +145,7 @@ let B = s.forwardRef(function(e, t) {
           children: [(0, a.jsx)("img", {
             alt: _.config.messages.rewardName,
             className: P.questProgressRewardTile,
-            src: (0, A.getRewardAssetUrl)(_.id)
+            src: (0, g.getRewardAssetUrl)(_.id)
           }), (0, a.jsxs)("div", {
             className: P.questAcceptedContentCopy,
             children: [(0, a.jsx)(c.Heading, {
@@ -233,7 +233,7 @@ let B = s.forwardRef(function(e, t) {
             className: P.cta,
             color: c.Button.Colors.CUSTOM,
             fullWidth: !0,
-            onClick: g,
+            onClick: A,
             size: c.Button.Sizes.NONE,
             submitting: h,
             children: M.default.Messages.QUESTS_ACCEPT_QUEST
@@ -245,7 +245,7 @@ let B = s.forwardRef(function(e, t) {
           color: _.config.colors.primary
         },
         children: (0, a.jsx)("img", {
-          src: (0, A.getQuestBarHeroAssetUrl)(_.id),
+          src: (0, g.getQuestBarHeroAssetUrl)(_.id),
           className: P.heroAnimation,
           alt: ""
         })
@@ -260,11 +260,11 @@ var H = function() {
       autoTrackExposure: !0
     }),
     r = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion),
-    o = (0, d.useStateFromStores)([p.default], () => (0, A.getQuestForTargetedContent)(p.default.quests, m.QuestContent.QUEST_BAR)),
+    o = (0, d.useStateFromStores)([p.default], () => (0, g.getQuestForTargetedContent)(p.default.quests, m.QuestContent.QUEST_BAR)),
     c = (0, d.useStateFromStores)([_.default], () => _.default.isFocused()),
     E = s.useRef(-1),
     C = s.useRef(!1),
-    [T, g] = s.useState(!1),
+    [T, A] = s.useState(!1),
     [N, R] = s.useState(!1),
     [O, L] = s.useState(!0),
     [M, D] = s.useState(240),
@@ -315,7 +315,7 @@ var H = function() {
       D((null !== (t = null === (e = b.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), R(!0)
     }, []),
     z = s.useCallback(() => {
-      window.clearTimeout(E.current), C.current = !0, x.current = !0, K(), g(!1)
+      window.clearTimeout(E.current), C.current = !0, x.current = !0, K(), A(!1)
     }, [K]),
     q = s.useCallback(() => {
       !j && (C.current = !1, E.current = window.setTimeout(() => {
@@ -328,7 +328,7 @@ var H = function() {
   return (s.useEffect(() => {
     if (x.current) return;
     let e = window.setTimeout(() => {
-      g(_.default.isFocused())
+      A(_.default.isFocused())
     }, 500);
     return () => {
       window.clearTimeout(e)

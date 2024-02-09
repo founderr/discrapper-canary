@@ -85,8 +85,8 @@ var h = {
         assets: S,
         party: p,
         secrets: m,
-        timestamps: A,
-        buttons: g,
+        timestamps: g,
+        buttons: A,
         type: N
       } = h;
       if ((null == N || N !== E.ActivityTypes.PLAYING && !I) && (h.type = E.ActivityTypes.PLAYING), null != m) {
@@ -97,14 +97,14 @@ var h = {
         if (s.uniq(e).length < e.length) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets must be unique");
-        if (null != g) throw new u.default({
+        if (null != A) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot currently be sent with buttons")
       }
-      if (null != g && (h.metadata = {
-          button_urls: g.map(e => e.url)
-        }, h.buttons = g.map(e => e.label)), null != A)
-        for (let e of Object.keys(A)) Date.now().toString().length - A[e].toString().length > 2 && (A[e] = Math.floor(A[e] * o.default.Millis.SECOND));
+      if (null != A && (h.metadata = {
+          button_urls: A.map(e => e.url)
+        }, h.buttons = A.map(e => e.label)), null != g)
+        for (let e of Object.keys(g)) Date.now().toString().length - g[e].toString().length > 2 && (g[e] = Math.floor(g[e] * o.default.Millis.SECOND));
       if (null == S) n = Promise.resolve([]);
       else {
         if (null == a.application || null == a.application.id) throw Error();

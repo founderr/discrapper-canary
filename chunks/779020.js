@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("670984"),
   p = n("141962"),
   m = n("581516"),
-  A = n("182537"),
-  g = n("943183"),
+  g = n("182537"),
+  A = n("943183"),
   N = n("271081"),
   R = n("298557"),
   O = n("176162"),
@@ -77,8 +77,8 @@ var a = n("37983"),
   eS = n("208021"),
   ep = n("582713"),
   em = n("949000"),
-  eA = n("987285"),
-  eg = n("686551"),
+  eg = n("987285"),
+  eA = n("686551"),
   eN = n("793237"),
   eR = n("120252"),
   eO = n("481395"),
@@ -113,7 +113,7 @@ var a = n("37983"),
   e1 = n("56235");
 n("72177"), n("392453"), n("366679"), n("848872"), n("189857"), n("144747"), n("698041"), n("552712"), n("367530"), n("429464"), n("205817"), n("767960"), n("26092"), n("790618"), n("424562"), n("900938"), n("492114"), n("161810"), n("901998"), n("684442"), n("799286"), n("470055"), n("140596");
 let e2 = !1;
-(0, g.initSessionHeartbeatScheduler)(), o.default.initialize(), eI.default.loadServer(), eQ.isPlatformEmbedded && (eZ.default.on("USER_SETTINGS_OPEN", () => {
+(0, A.initSessionHeartbeatScheduler)(), o.default.initialize(), eI.default.loadServer(), eQ.isPlatformEmbedded && (eZ.default.on("USER_SETTINGS_OPEN", () => {
   !ek.default.getLayers().includes(eJ.Layers.USER_SETTINGS) && h.default.open(eJ.UserSettingsSections.ACCOUNT)
 }), eZ.default.on("LAUNCH_APPLICATION", (e, t) => {
   let n = eF.default.getActiveLibraryApplication(t);
@@ -447,7 +447,7 @@ function ta(e) {
 }
 class ts extends s.PureComponent {
   componentDidMount() {
-    P.default.initialize(), eZ.default.setZoomFactor(C.default.zoom), eI.default.init(), v.default.initialize(), eo.default.initialize(), w.default.initialize(), ex.default.initialize(), k.default.initialize(), ed.default.initialize(), J.default.initialize(), I.default.init(), B.default.init(), F.default.init(), ea.default.initialize(), A.default.initialize(), j.default.initialize(), ec.default.initialize(), m.default.initialize(), ey.default.initialize(), er.default.initialize(), p.default.initialize(), Y.default.init(), Z.default.init(), eK.default.init(), eq.default.init(), S.default.initialize(), eO.default.init(), eW.default.init(), eY.default.init(), eM.default.init(), eA.default.initialize(), eg.default.initialize(), ev.default.initialize(), eP.default.init(), G.default.initialize(), T.default.initialize(), eT.default.initialize(), em.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), D.default.initialize(), ef.default.initialize(), X.default.init({
+    P.default.initialize(), eZ.default.setZoomFactor(C.default.zoom), eI.default.init(), v.default.initialize(), eo.default.initialize(), w.default.initialize(), ex.default.initialize(), k.default.initialize(), ed.default.initialize(), J.default.initialize(), I.default.init(), B.default.init(), F.default.init(), ea.default.initialize(), g.default.initialize(), j.default.initialize(), ec.default.initialize(), m.default.initialize(), ey.default.initialize(), er.default.initialize(), p.default.initialize(), Y.default.init(), Z.default.init(), eK.default.init(), eq.default.init(), S.default.initialize(), eO.default.init(), eW.default.init(), eY.default.init(), eM.default.init(), eg.default.initialize(), eA.default.initialize(), ev.default.initialize(), eP.default.init(), G.default.initialize(), T.default.initialize(), eT.default.initialize(), em.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), D.default.initialize(), ef.default.initialize(), X.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {

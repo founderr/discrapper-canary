@@ -28,8 +28,8 @@ function S(e) {
     channel: n,
     otherUser: E,
     active: S
-  } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), A = (0, _.useMessageRequestRelativeTimestampText)(n), {
-    avatarDecorationSrc: g
+  } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), g = (0, _.useMessageRequestRelativeTimestampText)(n), {
+    avatarDecorationSrc: A
   } = (0, u.default)({
     user: E,
     size: (0, o.getDecorationSizeForAvatarSize)(l.AvatarSizes.SIZE_40),
@@ -39,7 +39,7 @@ function S(e) {
     children: [(0, a.jsx)(T, {
       className: I.avatar,
       src: (0, d.getChannelIconURL)(n, 40, !p && S),
-      avatarDecoration: g,
+      avatarDecoration: A,
       size: l.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == E ? void 0 : E.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER
     }), (0, a.jsxs)("div", {
@@ -57,7 +57,7 @@ function S(e) {
           className: I.timestampWithPreview,
           color: "text-muted",
           variant: "text-xs/normal",
-          children: A
+          children: g
         })]
       }), (0, a.jsx)("div", {
         className: I.messagePreview,

@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("244201"),
   p = n("266790"),
   m = n("191225"),
-  A = n("372610"),
-  g = n("380691"),
+  g = n("372610"),
+  A = n("380691"),
   N = n("943349"),
   R = n("702173"),
   O = n("10524"),
@@ -77,8 +77,8 @@ var a = n("37983"),
   eS = n("145131"),
   ep = n("437825"),
   em = n("142303"),
-  eA = n("406019"),
-  eg = n("220075"),
+  eg = n("406019"),
+  eA = n("220075"),
   eN = n("82636"),
   eR = n("394832"),
   eO = n("394640"),
@@ -280,7 +280,7 @@ function eY(e) {
       userInActivity: null != m.default.getSelfEmbeddedActivityForChannel(t.id)
     })),
     h = (0, T.useAnalyticsContext)(),
-    C = (0, g.useShowActivityIndicator)(),
+    C = (0, A.useShowActivityIndicator)(),
     I = u !== N.EmbeddedActivityLaunchability.CAN_LAUNCH;
   return n ? (0, a.jsx)(c.Tooltip, {
     text: f,
@@ -335,11 +335,11 @@ function eW(e) {
     S = (0, et.useOtherStreams)(n, u, f);
   t = null == T ? l ? I : ea.default : () => (0, j.default)(T);
   let p = null != T || S.length > 0,
-    A = E ? ej.default.Messages.SHARE_YOUR_SCREEN : ej.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
-    g = h || r || C,
+    g = E ? ej.default.Messages.SHARE_YOUR_SCREEN : ej.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
+    A = h || r || C,
     N = (0, a.jsx)(eR.default, {
       className: i(ew.buttonIcon, {
-        [ew.withText]: !g
+        [ew.withText]: !A
       })
     });
   return (0, a.jsx)(c.Popout, {
@@ -364,7 +364,7 @@ function eW(e) {
         ...s
       } = e;
       return (0, a.jsx)(c.Tooltip, {
-        text: A,
+        text: g,
         children: e => (0, a.jsx)(c.Button, {
           ...e,
           size: c.Button.Sizes.SMALL,
@@ -380,7 +380,7 @@ function eW(e) {
           ...p ? s : null,
           innerClassName: ew.buttonContents,
           wrapperClassName: ew.button,
-          children: g ? N : (0, a.jsxs)(eS.default, {
+          children: A ? N : (0, a.jsxs)(eS.default, {
             align: eS.default.Align.CENTER,
             children: [N, ej.default.Messages.GO_LIVE_SHARE_SCREEN]
           })
@@ -448,7 +448,7 @@ class eK extends s.PureComponent {
           "aria-label": t,
           tooltipText: null,
           disabled: !0,
-          icon: eg.default
+          icon: eA.default
         })
       }
     }) : (0, a.jsx)(c.Popout, {
@@ -463,7 +463,7 @@ class eK extends s.PureComponent {
           ...t,
           tooltipClassName: ew.noiseCancellationTooltip,
           tooltipText: s ? null : ej.default.Messages.NOISE_CANCELLATION_TOOLTIP,
-          icon: e ? eA.default : eg.default
+          icon: e ? eg.default : eA.default
         })
       }
     }, "krisp-popout")
@@ -652,7 +652,7 @@ var ez = (0, I.default)(function(e) {
     T = (0, d.useStateFromStores)([F.default], () => F.default.isViewingRoles(u)),
     S = (0, d.useStateFromStores)([eE.default], () => T && !eE.default.can(eU.Permissions.VIEW_CHANNEL, o), [T, o]),
     p = X.RtcPanelShowVoiceStates.useSetting(),
-    [m, g, N] = (0, d.useStateFromStoresArray)([eT.default, Y.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [Y.default.getMutableParticipants(o.id, W.StageChannelParticipantNamedIndex.SPEAKER), Y.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eT.default.getVoiceStatesForChannel(o) : null], [o]),
+    [m, A, N] = (0, d.useStateFromStoresArray)([eT.default, Y.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [Y.default.getMutableParticipants(o.id, W.StageChannelParticipantNamedIndex.SPEAKER), Y.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eT.default.getVoiceStatesForChannel(o) : null], [o]),
     O = s.useMemo(() => {
       var e, t;
       return null !== (t = null !== (e = null == m ? void 0 : m.map(e => {
@@ -667,14 +667,14 @@ var ez = (0, I.default)(function(e) {
           voiceState: a
         }
       })) && void 0 !== e ? e : N) && void 0 !== t ? t : []
-    }, [m, g, N]),
+    }, [m, A, N]),
     [L, D] = s.useState(!1);
   s.useEffect(() => {
     (T || S) && D(!1)
   }, [T, S, D]);
   let {
     AnalyticsLocationProvider: y
-  } = (0, M.default)(v.default.RTC_PANEL), j = (0, A.default)(null != u ? u : "", null == o ? void 0 : o.id), w = (0, R.default)(null == o ? void 0 : o.id), B = (0, P.default)();
+  } = (0, M.default)(v.default.RTC_PANEL), j = (0, g.default)(null != u ? u : "", null == o ? void 0 : o.id), w = (0, R.default)(null == o ? void 0 : o.id), B = (0, P.default)();
   return (0, a.jsx)(y, {
     children: (0, a.jsxs)("div", {
       className: ew.wrapper,

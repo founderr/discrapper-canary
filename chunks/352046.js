@@ -9,8 +9,8 @@ i.r(t), i.d(t, {
 });
 var n = i("65597"),
   r = i("385976"),
-  a = i("958706");
-let o = [];
+  o = i("958706");
+let a = [];
 
 function u(e) {
   let {
@@ -19,8 +19,8 @@ function u(e) {
     pickerIntention: n
   } = e;
   return {
-    topEmojis: n !== a.EmojiIntention.REACTION ? t.getTopEmoji(i) : o,
-    newlyAddedEmojis: n !== a.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(i) : o
+    topEmojis: n !== o.EmojiIntention.REACTION ? t.getTopEmoji(i) : a,
+    newlyAddedEmojis: n !== o.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(i) : a
   }
 }
 

@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var a = n("862205");
-let s = (0, a.createExperiment)({
+var s = n("862205");
+let a = (0, s.createExperiment)({
   kind: "user",
   id: "2024-01_omnibutton_file_upload_subtext",
   label: "Omnibutton File Upload Subtext",
@@ -22,7 +22,7 @@ let s = (0, a.createExperiment)({
 });
 
 function l(e) {
-  let t = s.useExperiment({
+  let t = a.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0

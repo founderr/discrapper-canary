@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   fetchTopEmojis: function() {
-    return o
+    return a
   },
   updateNewlyAddedLastSeen: function() {
     return u
@@ -12,14 +12,14 @@ i.r(t), i.d(t, {
 });
 var n = i("872717"),
   r = i("913144"),
-  a = i("49111");
+  o = i("49111");
 
-function o(e) {
+function a(e) {
   r.default.dispatch({
     type: "TOP_EMOJIS_FETCH",
     guildId: e
   }), n.default.get({
-    url: a.Endpoints.TOP_EMOJIS_FOR_GUILD(e),
+    url: o.Endpoints.TOP_EMOJIS_FOR_GUILD(e),
     oldFormErrors: !0
   }).then(t => r.default.dispatch({
     type: "TOP_EMOJIS_FETCH_SUCCESS",

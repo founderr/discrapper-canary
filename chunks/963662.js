@@ -31,8 +31,8 @@ let C = i.debounce(o.default.trackWithMetadata, 500),
       undismissable: S,
       onDismissed: p,
       onClick: m,
-      cta: A,
-      ctaColor: g
+      cta: g,
+      ctaColor: A
     } = e;
     s.useEffect(() => {
       C(E.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -41,7 +41,7 @@ let C = i.debounce(o.default.trackWithMetadata, 500),
       })
     }, [t.id, c]);
     let N = null;
-    "function" == typeof A ? N = A() : null != A && (N = (0, a.jsx)(r.Button, {
+    "function" == typeof g ? N = g() : null != g && (N = (0, a.jsx)(r.Button, {
       className: h.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
@@ -52,8 +52,8 @@ let C = i.debounce(o.default.trackWithMetadata, 500),
         }), null == m || m()
       },
       fullWidth: !0,
-      color: g,
-      children: A
+      color: A,
+      children: g
     }));
     let R = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   generateRsaKeyPair: function() {
-    return r
+    return l
   },
   serializePublicKey: function() {
     return i
@@ -13,17 +13,17 @@ n.r(t), n.d(t, {
     return f
   },
   decryptNonce: function() {
-    return _
+    return h
   },
   decodeEncodedUserRecord: function() {
-    return h
+    return _
   }
 }), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("101997"), n("222007"), n("781738"), n("492311"), n("70102");
 var s = n("627445"),
   a = n.n(s),
-  l = n("766274");
+  r = n("766274");
 
-function r() {
+function l() {
   return window.crypto.subtle.generateKey({
     name: "RSA-OAEP",
     modulusLength: 2048,
@@ -67,19 +67,19 @@ async function f(e, t) {
     s = await E(e, d(t));
   return n.decode(s)
 }
-async function _(e, t) {
+async function h(e, t) {
   let n = await E(e, d(t));
   return u(n)
 }
-async function h(e, t) {
+async function _(e, t) {
   t = await f(e, t);
   let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
   if (null == n) throw Error("Invalid encoded user record.");
-  let [, s, a, r, i] = n;
-  return new l.default({
+  let [, s, a, l, i] = n;
+  return new r.default({
     id: s,
     discriminator: a,
-    avatar: "0" === r ? null : r,
+    avatar: "0" === l ? null : l,
     username: i
   })
 }

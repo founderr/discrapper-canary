@@ -26,8 +26,8 @@ var a = n("37983"),
   S = n("668596"),
   p = n("892313"),
   m = n("49111"),
-  A = n("482931"),
-  g = n("782340");
+  g = n("482931"),
+  A = n("782340");
 let N = "Email Verification";
 
 function R() {
@@ -69,7 +69,7 @@ function R() {
           ...t
         })
       }, {
-        modalKey: A.PHONE_VERIFICATION_MODAL_KEY,
+        modalKey: g.PHONE_VERIFICATION_MODAL_KEY,
         Layer: S.default
       })
     };
@@ -82,9 +82,9 @@ function R() {
       } = await n.el("135230").then(n.bind(n, "135230"));
       return t => (0, a.jsx)(e, {
         ...t,
-        title: g.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_TITLE,
-        body: g.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_BODY,
-        confirmText: g.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_CONFIRM
+        title: A.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_TITLE,
+        body: A.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_BODY,
+        confirmText: A.default.Messages.PHONE_THEN_EMAIL_INTERSTITIAL_CONFIRM
       })
     }, {
       modalKey: "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY",
@@ -116,14 +116,14 @@ function R() {
           Text
         } = await n.el("77078").then(n.bind(n, "77078"));
         return t => (0, a.jsx)(e, {
-          header: g.default.Messages.LOGOUT,
-          confirmText: g.default.Messages.LOGOUT,
-          cancelText: g.default.Messages.CANCEL,
+          header: A.default.Messages.LOGOUT,
+          confirmText: A.default.Messages.LOGOUT,
+          cancelText: A.default.Messages.CANCEL,
           onConfirm: () => u.default.logout(),
           ...t,
           children: (0, a.jsx)(Text, {
             variant: "text-md/normal",
-            children: g.default.Messages.USER_SETTINGS_CONFIRM_LOGOUT
+            children: A.default.Messages.USER_SETTINGS_CONFIRM_LOGOUT
           })
         })
       }, {

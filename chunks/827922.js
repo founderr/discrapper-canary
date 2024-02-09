@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useGetKeybindNotification: function() {
-    return m
+    return g
   },
   default: function() {
-    return E
+    return m
   }
 }), n("222007");
 var i = n("37983");
@@ -20,9 +20,9 @@ var a = n("151426"),
   f = n("6791"),
   h = n("994428"),
   p = n("782340"),
-  g = n("672294");
+  E = n("672294");
 
-function m() {
+function g() {
   let [e, t] = (0, r.useGetDismissibleContent)([a.DismissibleContent.OVERLAY_KEYBIND_NOTIFICATION]), {
     showKeybindIndicators: n
   } = c.default.useExperiment({
@@ -36,7 +36,7 @@ function m() {
   }
 }
 
-function E(e) {
+function m(e) {
   let {
     markAsDismissed: t
   } = e, {
@@ -45,9 +45,9 @@ function E(e) {
   } = (0, o.makeAnalyticsTrackers)(f.OverlayNotificationType.KeybindIndicatorsNotification, {
     notif_type: f.OverlayNotificationType.KeybindIndicatorsNotification
   }), r = (0, i.jsxs)("div", {
-    className: g.notificationBody,
+    className: E.notificationBody,
     children: [(0, i.jsx)("div", {
-      className: g.iconContainer,
+      className: E.iconContainer,
       children: (0, i.jsx)(u.default, {
         height: 28,
         width: 28

@@ -20,10 +20,10 @@ function f(e, t, n, f) {
       username: "",
       game: n.name
     }),
-    g = t.getAvatarURL(e.guild_id, 80),
+    E = t.getAvatarURL(e.guild_id, 80),
     {
-      trackView: m,
-      trackClick: E
+      trackView: g,
+      trackClick: m
     } = (0, r.makeAnalyticsTrackers)(u.OverlayNotificationType.ActivityInvite, {
       notif_type: u.OverlayNotificationType.ActivityInvite,
       notif_user_id: t.id,
@@ -32,14 +32,14 @@ function f(e, t, n, f) {
     });
   return {
     colorScheme: o.default.ColorSchemes.PRIMARY,
-    icon: g,
+    icon: E,
     title: h,
     body: p,
     hint: e => (0, o.renderKeybindHint)(e, (0, r.getOverlayKeybind)(), c.default.Messages.OVERLAY_UNLOCK_TO_ANSWER),
     confirmText: c.default.Messages.USER_ACTIVITY_RESPOND_YEAH,
     cancelText: c.default.Messages.USER_ACTIVITY_RESPOND_NOPE,
     onNotificationShow: () => {
-      m()
+      g()
     },
     onConfirmClick: (t, n) => {
       i.default.sendActivityInvite({
@@ -47,13 +47,13 @@ function f(e, t, n, f) {
         type: d.ActivityActionTypes.JOIN,
         activity: f,
         location: s.default.isInstanceUILocked() ? d.AnalyticsLocations.LOCKED_OVERLAY : d.AnalyticsLocations.UNLOCKED_OVERLAY
-      }), E("join"), a.default.updateNotificationStatus(n)
+      }), m("join"), a.default.updateNotificationStatus(n)
     },
     onCancelClick: (t, n) => {
-      (0, l.ack)(e.id, !0, !0), a.default.updateNotificationStatus(n), E("decline")
+      (0, l.ack)(e.id, !0, !0), a.default.updateNotificationStatus(n), m("decline")
     },
     onDismissClick: () => {
-      E("dismiss")
+      m("dismiss")
     }
   }
 }

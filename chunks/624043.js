@@ -33,19 +33,19 @@ let _ = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack(
     let n = o.default.getChannelId();
     return null != n && !0
   },
-  A = () => {
+  g = () => {
     if (0 === I.length || !m() || C) return;
     C = !0;
     let [e, t] = I[I.length - 1];
-    (0, d.playSound)(e, t), T = setTimeout(g, 1e3)
+    (0, d.playSound)(e, t), T = setTimeout(A, 1e3)
   },
-  g = () => {
-    I.pop(), C = !1, A()
+  A = () => {
+    I.pop(), C = !1, g()
   },
   N = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
       n = r.default.isConnected();
-    I.push([e, t * (n ? .1 : 1)]), A()
+    I.push([e, t * (n ? .1 : 1)]), g()
   };
 class R extends s.default {
   _initialize() {

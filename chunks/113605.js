@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   extractDisplayName: function() {
-    return A
+    return g
   },
   default: function() {
     return R
@@ -33,7 +33,7 @@ let E = {},
   },
   m = /\(([^)]+)\)/;
 
-function A(e) {
+function g(e) {
   if ((0, u.getPlatform)() === u.PlatformTypes.WINDOWS) {
     let t = e.name.match(m);
     if (null != t) return t[1]
@@ -41,7 +41,7 @@ function A(e) {
   return e.name
 }
 
-function g(e, t, n) {
+function A(e, t, n) {
   return null == e || e.displayName !== t ? {
     displayName: t,
     type: n
@@ -84,7 +84,7 @@ var R = new N(i.default, {
       outputDevices: n
     } = e, a = {};
     S.justChanged = !1, t.forEach(e => {
-      if (a[A(e)] = e.id, e.id === f.DEFAULT_DEVICE_ID) {
+      if (a[g(e)] = e.id, e.id === f.DEFAULT_DEVICE_ID) {
         var t;
         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
         n !== S.id && (S.justChanged = !0), S.id = n
@@ -92,7 +92,7 @@ var R = new N(i.default, {
     });
     let l = {};
     if (p.justChanged = !1, n.forEach(e => {
-        if (l[A(e)] = e.id, e.id === f.DEFAULT_DEVICE_ID) {
+        if (l[g(e)] = e.id, e.id === f.DEFAULT_DEVICE_ID) {
           var t;
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
           n !== p.id && (p.justChanged = !0), p.id = n
@@ -111,11 +111,11 @@ var R = new N(i.default, {
     else {
       let e = s.difference(r, i);
       e.forEach(e => {
-        T[e] = g(T[e], e, c.ConnectedDeviceType.INPUT)
+        T[e] = A(T[e], e, c.ConnectedDeviceType.INPUT)
       });
       let t = s.difference(u, o);
       t.forEach(e => {
-        T[e] = g(T[e], e, c.ConnectedDeviceType.OUTPUT)
+        T[e] = A(T[e], e, c.ConnectedDeviceType.OUTPUT)
       })
     }
     return !(s.isEqual(i, r) && s.isEqual(o, u)) && (C = a, I = l, !0)

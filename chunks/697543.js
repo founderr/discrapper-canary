@@ -1,14 +1,14 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useUURegistrationExperiment: function() {
-    return i
+    return r
   },
   hasRegistrationUsernameSuggestions: function() {
     return l
   }
 });
-var s = a("862205");
-let n = (0, s.createExperiment)({
+var s = n("862205");
+let a = (0, s.createExperiment)({
     kind: "user",
     id: "2023-06_unique_username_registration",
     label: "Unique Username Registration",
@@ -46,12 +46,12 @@ let n = (0, s.createExperiment)({
       }
     }]
   }),
-  i = () => n.useExperiment({
+  r = () => a.useExperiment({
     location: "83ca1a_3"
   }, {
     autoTrackExposure: !1
   }),
-  l = () => n.getCurrentConfig({
+  l = () => a.getCurrentConfig({
     location: "83ca1a_4"
   }, {
     autoTrackExposure: !1

@@ -9,15 +9,15 @@ var l = n("37983"),
   s = n("446674"),
   i = n("266491"),
   r = n("274870"),
-  u = n("42203"),
-  o = n("336376"),
+  o = n("42203"),
+  u = n("336376"),
   d = n("945956"),
   c = n("543785");
 
 function f() {
-  (0, s.useStateFromStores)([u.default], () => u.default.getPrivateChannelsVersion());
-  let e = u.default.getMutablePrivateChannels(),
-    t = (0, s.useStateFromStoresArray)([o.default], () => o.default.getUnreadPrivateChannelIds()),
+  (0, s.useStateFromStores)([o.default], () => o.default.getPrivateChannelsVersion());
+  let e = o.default.getMutablePrivateChannels(),
+    t = (0, s.useStateFromStoresArray)([u.default], () => u.default.getUnreadPrivateChannelIds()),
     {
       selectedVoiceGuildId: n,
       selectedVoiceChannelId: f

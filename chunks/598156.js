@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("69927"),
   p = n("10641"),
   m = n("384997"),
-  A = n("539938"),
-  g = n("155084"),
+  g = n("539938"),
+  A = n("155084"),
   N = n("393414"),
   R = n("582713"),
   O = n("970366"),
@@ -116,7 +116,7 @@ function ee() {
         })]
       }) : null]
     }, "title"), [t, I, u]);
-  return (n.length !== t && g.default.increment({
+  return (n.length !== t && A.default.increment({
     name: o.MetricEvents.MESSAGE_REQUEST_COUNT_DRIFT
   }), 0 === n.length) ? (0, a.jsx)(W.default, {
     section: q.MessageRequestSections.REQUESTS
@@ -239,7 +239,7 @@ let el = (0, E.default)(function(e) {
   s.useEffect(() => {
     f.setHomeLink(Q.Routes.MESSAGE_REQUESTS), (0, O.trackAppUIViewed)("message-requests"), b.default.track(Q.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: n
-    }), g.default.increment({
+    }), A.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
@@ -259,17 +259,17 @@ let el = (0, E.default)(function(e) {
         [$.threadSidebarOpen]: _,
         [$.threadSidebarFloating]: _ && d
       }),
-      children: [(0, a.jsxs)(A.default, {
+      children: [(0, a.jsxs)(g.default, {
         className: (0, U.getThemeClass)(l),
         toolbar: !0,
-        children: [(0, a.jsx)(A.default.Icon, {
+        children: [(0, a.jsx)(g.default.Icon, {
           icon: y.default,
           "aria-hidden": !0
         }), (0, a.jsx)(ea, {
-          children: (0, a.jsx)(A.default.Title, {
+          children: (0, a.jsx)(g.default.Title, {
             children: X.default.Messages.MESSAGE_REQUESTS
           })
-        }), (0, a.jsx)(A.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
+        }), (0, a.jsx)(g.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
           "aria-label": X.default.Messages.MESSAGE_REQUESTS,
           selectedItem: h,
           type: "top-pill",

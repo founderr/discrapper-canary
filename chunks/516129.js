@@ -28,9 +28,9 @@ function C(e) {
     analyticsLocation: S,
     isLightTheme: p
   } = e, m = "AnnouncementModalVariant1", {
-    onClose: A
-  } = I, g = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
-    (0, r.transitionTo)(f.Routes.APPLICATION_STORE), A()
+    onClose: g
+  } = I, A = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+    (0, r.transitionTo)(f.Routes.APPLICATION_STORE), g()
   } : () => (0, i.default)({
     subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: T,
@@ -40,7 +40,7 @@ function C(e) {
       objectType: f.AnalyticsObjectTypes.TIER_2
     },
     onClose: e => {
-      e && A()
+      e && g()
     }
   }), O = "" !== C.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
     className: _.termsApplyAnchor,
@@ -89,7 +89,7 @@ function C(e) {
           alt: "",
           className: _.nitroIconSubHeader,
           src: h
-        }), g]
+        }), A]
       })
     },
     modalDismissibleContent: "" !== C.dismissKey ? Number(C.dismissKey) : void 0

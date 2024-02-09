@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("974667"),
-  u = n("446674"),
-  o = n("77078"),
+  o = n("446674"),
+  u = n("77078"),
   d = n("450911"),
   c = n("272030"),
   f = n("191225"),
@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("393027"),
   E = n("373469"),
   g = n("42203"),
-  I = n("18494"),
-  _ = n("800762"),
-  S = n("290581"),
+  S = n("18494"),
+  I = n("800762"),
+  _ = n("290581"),
   N = n("15738"),
   T = n("108189"),
   A = n("379881"),
@@ -51,12 +51,12 @@ function b() {
     {
       favoriteServerMuted: G,
       favoriteChannels: U
-    } = (0, u.useStateFromStoresObject)([A.default], () => ({
+    } = (0, o.useStateFromStoresObject)([A.default], () => ({
       favoriteChannels: A.default.getFavoriteChannels(),
       favoriteServerMuted: A.default.favoriteServerMuted
     })),
-    P = (0, u.useStateFromStores)([I.default], () => I.default.getChannelId(M.FAVORITES)),
-    w = (0, u.useStateFromStores)([g.default], () => g.default.getChannel(P)),
+    P = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(M.FAVORITES)),
+    w = (0, o.useStateFromStores)([g.default], () => g.default.getChannel(P)),
     F = (0, m.default)(e => e.guildId),
     B = F === M.FAVORITES,
     {
@@ -64,28 +64,28 @@ function b() {
       unread: H
     } = (0, v.default)(U),
     k = function(e) {
-      let t = (0, u.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
+      let t = (0, o.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
         n = null != t && null != e[t],
-        l = (0, u.useStateFromStores)([E.default], () => {
+        l = (0, o.useStateFromStores)([E.default], () => {
           if (!n) return !1;
           let t = E.default.getCurrentUserActiveStream();
           return null != t && null != e[t.channelId]
         }),
-        a = (0, u.useStateFromStores)([E.default], () => E.default.getAllApplicationStreams().some(t => null != e[t.channelId])),
-        s = (0, u.useStateFromStores)([_.default], () => n && null != t && _.default.hasVideo(t), [n, t]),
-        i = (0, u.useStateFromStoresArray)([f.default], () => Object.keys(e).reduce((e, t) => (e.push(...f.default.getEmbeddedActivitiesForChannel(t)), e), [])),
-        r = (0, u.useStateFromStores)([f.default], () => Array.from(f.default.getSelfEmbeddedActivities().values()).some(t => {
+        a = (0, o.useStateFromStores)([E.default], () => E.default.getAllApplicationStreams().some(t => null != e[t.channelId])),
+        s = (0, o.useStateFromStores)([I.default], () => n && null != t && I.default.hasVideo(t), [n, t]),
+        i = (0, o.useStateFromStoresArray)([f.default], () => Object.keys(e).reduce((e, t) => (e.push(...f.default.getEmbeddedActivitiesForChannel(t)), e), [])),
+        r = (0, o.useStateFromStores)([f.default], () => Array.from(f.default.getSelfEmbeddedActivities().values()).some(t => {
           let {
             channelId: n
           } = t;
           return null != e[n]
         })),
-        o = i.length > 0,
+        u = i.length > 0,
         d = !1,
         c = !1,
         h = !1,
         p = !1;
-      return n ? (d = !s, c = s, h = l, p = r) : (h = a, p = o), (0, C.renderMediaBadge)({
+      return n ? (d = !s, c = s, h = l, p = r) : (h = a, p = u), (0, C.renderMediaBadge)({
         audio: d,
         video: c,
         screenshare: h,
@@ -107,7 +107,7 @@ function b() {
     }), (0, l.jsx)(R.default, {
       onShow: K,
       children: (0, l.jsx)(x.FavoriteAddedTooltip, {
-        children: (0, l.jsx)(o.BlobMask, {
+        children: (0, l.jsx)(u.BlobMask, {
           selected: B || b,
           upperBadge: k,
           lowerBadge: Y,
@@ -141,7 +141,7 @@ function b() {
               className: i(y.ring, {
                 [y.ringActive]: t
               }),
-              children: (0, l.jsx)(S.default, {
+              children: (0, l.jsx)(_.default, {
                 className: y.favoriteIcon,
                 width: 20,
                 height: 20

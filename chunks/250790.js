@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("37983"),
   a = n("884691"),
-  l = n("483366"),
-  r = n.n(l),
+  r = n("483366"),
+  l = n.n(r),
   i = n("458960"),
   o = n("394846"),
   u = n("769846"),
@@ -15,11 +15,11 @@ var s = n("37983"),
   c = n("159885"),
   E = n("99130");
 let f = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-  _ = {
+  h = {
     START: 0,
     END: 1
   },
-  h = {
+  _ = {
     friction: 10,
     tension: 130
   };
@@ -32,18 +32,18 @@ var g = function(e) {
       clearTimeout(this.timeout), window.removeEventListener("resize", this.handleResizeDebounced)
     }
     componentWillAppear(e) {
-      this.state.shouldAnimate ? this.animateTo(_.END, e) : e()
+      this.state.shouldAnimate ? this.animateTo(h.END, e) : e()
     }
     componentWillEnter(e) {
-      this.state.shouldAnimate ? (clearTimeout(this.timeout), this.timeout = setTimeout(() => this.animateTo(_.END, e), 40)) : e()
+      this.state.shouldAnimate ? (clearTimeout(this.timeout), this.timeout = setTimeout(() => this.animateTo(h.END, e), 40)) : e()
     }
     componentWillLeave(e) {
-      this.state.shouldAnimate ? this.animateTo(_.START, e) : e()
+      this.state.shouldAnimate ? this.animateTo(h.START, e) : e()
     }
     animateTo(e, t) {
       i.default.spring(this.anim, {
         toValue: e,
-        ...h
+        ..._
       }).start(t)
     }
     getAnimatedStyle(e) {
@@ -83,14 +83,14 @@ var g = function(e) {
       })
     }
     constructor(...e) {
-      super(...e), this.anim = new i.default.Value(_.START), this.state = {
+      super(...e), this.anim = new i.default.Value(h.START), this.state = {
         shouldAnimate: !o.isMobile
       }, this.handleResize = () => {
         let e = window.innerWidth > f;
-        !this.state.shouldAnimate && e && this.anim.setValue(_.END), this.setState({
+        !this.state.shouldAnimate && e && this.anim.setValue(h.END), this.setState({
           shouldAnimate: e
         })
-      }, this.handleResizeDebounced = r(this.handleResize, 60)
+      }, this.handleResizeDebounced = l(this.handleResize, 60)
     }
   }
 }

@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("77078"),
   i = n("79112"),
   r = n("271938"),
-  u = n("945330"),
-  o = n("599110"),
+  o = n("945330"),
+  u = n("599110"),
   d = n("243632"),
   c = n("180273"),
   f = n("411511"),
@@ -85,19 +85,19 @@ function g(e) {
     partnerGame: c
   } = e, g = (0, d.useDropsExperiment)(c);
   (0, d.useFetchInitialDropProgress)(c);
-  let I = (0, a.useStateFromStores)([r.default], () => r.default.getId());
+  let S = (0, a.useStateFromStores)([r.default], () => r.default.getId());
   if (null == g) return null;
   let {
-    streamLengthRequirement: _,
-    viewerCountRequirement: S
+    streamLengthRequirement: I,
+    viewerCountRequirement: _
   } = g.config, N = g.drop, {
     header: T,
     body: A,
     imgSrc: L,
     imgStyle: v
-  } = m(n, N, _), x = () => {
-    o.default.track(h.AnalyticEvents.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK, {
-      user_id: I,
+  } = m(n, N, I), x = () => {
+    u.default.track(h.AnalyticEvents.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK, {
+      user_id: S,
       drops_quest_id: N.dropsQuestId,
       game_id: N.dropsGameId,
       game_name: N.title.toLowerCase(),
@@ -116,7 +116,7 @@ function g(e) {
       className: p.buttonClose,
       "aria-label": C.default.Messages.CLOSE,
       onClick: R,
-      children: (0, l.jsx)(u.default, {
+      children: (0, l.jsx)(o.default, {
         width: 16,
         height: 16,
         className: p.closeIcon
@@ -128,8 +128,8 @@ function g(e) {
       variant: "heading-md/extrabold",
       children: T
     }), n === f.TooltipActions.TRACK_PROGRESS ? (0, l.jsx)(E, {
-      streamLengthRequirement: _,
-      viewerCountRequirement: S
+      streamLengthRequirement: I,
+      viewerCountRequirement: _
     }) : (0, l.jsx)(s.Text, {
       variant: "text-sm/medium",
       className: p.subTitle,

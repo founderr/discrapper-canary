@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var l = n("37983"),
@@ -9,14 +9,14 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
-  u = n("603128");
+  o = n("603128");
 
-function o(e) {
+function u(e) {
   let {
     children: t,
     text: n,
     color: s,
-    disableWrapper: o = !1,
+    disableWrapper: u = !1,
     disabled: d = !1,
     hideOnClick: c = !0,
     shouldShow: f,
@@ -33,12 +33,12 @@ function o(e) {
     position: "right",
     color: s,
     "aria-label": !1,
-    tooltipClassName: i(u.listItemTooltip, p),
-    children: e => o ? a.cloneElement(a.Children.only(t), {
+    tooltipClassName: i(o.listItemTooltip, p),
+    children: e => u ? a.cloneElement(a.Children.only(t), {
       ...e
     }) : (0, l.jsx)("div", {
-      className: i(u.listItemWrapper, {
-        [u.selected]: C
+      className: i(o.listItemWrapper, {
+        [o.selected]: C
       }),
       ...e,
       children: t

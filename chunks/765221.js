@@ -24,8 +24,8 @@ var n = r("37983"),
   T = r("719923"),
   S = r("643070"),
   N = r("688318"),
-  g = r("782340"),
-  R = r("654353");
+  R = r("782340"),
+  g = r("654353");
 let O = () => 80,
   h = e => {
     let {
@@ -36,7 +36,7 @@ let O = () => 80,
       ...u
     } = e;
     return (0, n.jsx)(c.Clickable, {
-      className: s(R.decorationGridItem, i ? R.selected : void 0, r),
+      className: s(g.decorationGridItem, i ? g.selected : void 0, r),
       ...u,
       onClick: a,
       children: t
@@ -68,12 +68,12 @@ let O = () => 80,
         animateOnHover: !b
       });
     return (0, n.jsxs)(h, {
-      className: v ? R.decorationGridItemChurned : void 0,
+      className: v ? g.decorationGridItemChurned : void 0,
       innerRef: null != i ? i : x,
       isSelected: u,
       ...c,
       children: [(0, n.jsx)("img", {
-        className: R.presetDecorationImg,
+        className: g.presetDecorationImg,
         src: P,
         alt: r.label
       }), (() => {
@@ -81,13 +81,13 @@ let O = () => 80,
         if (e) return null;
         let t = !p && !u && !M;
         return t ? (0, n.jsx)(m.PremiumBadge, {
-          className: R.newBadge,
+          className: g.newBadge,
           text: (0, n.jsxs)("div", {
-            className: R.newBadgeText,
+            className: g.newBadgeText,
             children: [(0, n.jsx)(I.default, {
               width: 12,
               height: 12
-            }), g.default.Messages.NEW]
+            }), R.default.Messages.NEW]
           })
         }) : (0, n.jsx)(m.IconBadge, {
           icon: A ? () => (0, n.jsx)(C.default, {
@@ -98,7 +98,7 @@ let O = () => 80,
             height: 12
           }),
           color: o.default.BACKGROUND_ACCENT,
-          className: R.iconBadge
+          className: g.iconBadge
         })
       })()]
     })
@@ -113,7 +113,7 @@ var M = e => {
   } = e, o = (0, S.default)();
   return (0, n.jsx)(c.MasonryList, {
     fade: !0,
-    className: R.list,
+    className: g.list,
     columns: 3,
     sections: o.map(e => {
       let {
@@ -138,21 +138,21 @@ var M = e => {
         isSelected: null === r,
         onSelect: () => i(null),
         children: [(0, n.jsx)(p.default, {
-          className: R.notAllowedIcon
+          className: g.notAllowedIcon
         }), (0, n.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "header-primary",
-          children: g.default.Messages.NONE
+          children: R.default.Messages.NONE
         })]
       }, E)).with(S.SHOP_ITEM, () => (0, n.jsxs)(h, {
         style: d,
         onSelect: s,
         children: [(0, n.jsx)(A.default, {
-          className: R.shopIcon
+          className: g.shopIcon
         }), (0, n.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "header-primary",
-          children: g.default.Messages.COLLECTIBLES_SHOP
+          children: R.default.Messages.COLLECTIBLES_SHOP
         })]
       }, E)).otherwise(e => {
         let s = (null == r ? void 0 : r.id) === e.id;
@@ -174,7 +174,7 @@ var M = e => {
         header: t
       } = o[e];
       return (0, n.jsx)("div", {
-        className: R.headings,
+        className: g.headings,
         children: (0, n.jsx)(c.HeadingLevel, {
           forceLevel: 5,
           children: (0, n.jsx)(c.Heading, {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var l = n("37983");
@@ -11,7 +11,7 @@ var a = n("5667"),
   i = n("875502"),
   r = n("655361");
 
-function u(e) {
+function o(e) {
   let {
     markAsDismissed: t
   } = e;

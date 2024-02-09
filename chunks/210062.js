@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("884691"),
-  s = n("65597"),
+var s = n("884691"),
+  a = n("65597"),
   l = n("913144"),
   i = n("206230"),
   r = n("166257"),
@@ -15,19 +15,19 @@ var a = n("884691"),
 
 function c() {
   let e = o.AnimateEmoji.useSetting(),
-    t = (0, s.default)([i.default], () => i.default.useReducedMotion);
-  a.useEffect(() => {
+    t = (0, a.default)([i.default], () => i.default.useReducedMotion);
+  s.useEffect(() => {
     function n(n) {
       let {
-        messageId: a,
-        channelId: s,
+        messageId: s,
+        channelId: a,
         emoji: l,
         optimistic: i,
         reactionType: o
       } = n;
       !i && o === d.ReactionTypes.BURST && e && !t && (0, r.playBurstReaction)({
-        channelId: s,
-        messageId: a,
+        channelId: a,
+        messageId: s,
         emoji: l,
         key: u.BurstReactionEffectSource.EXTERNAL
       })

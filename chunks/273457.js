@@ -30,18 +30,18 @@ var a = n("37983"),
     s.useEffect(() => {
       null != m && (0, r.transitionTo)(E.Routes.CHANNEL(t))
     }, [m, t]);
-    let A = s.useCallback(e => {
+    let g = s.useCallback(e => {
         I(t => Math.max(t, e))
       }, []),
-      g = (0, c.getArtForPath)();
+      A = (0, c.getArtForPath)();
     return (0, a.jsx)("div", {
       className: h.page,
       children: (0, a.jsxs)(d.default, {
         embedded: !0,
-        splash: g,
+        splash: A,
         waveState: C,
         showLogo: !1,
-        updateWaveState: A,
+        updateWaveState: g,
         children: [(0, a.jsx)("div", {
           className: h.dragRegion
         }), (0, a.jsx)("div", {

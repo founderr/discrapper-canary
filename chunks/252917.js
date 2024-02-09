@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("73749"),
   p = n("191145"),
   m = n("533466"),
-  A = n("837844"),
-  g = n("171984"),
+  g = n("837844"),
+  A = n("171984"),
   N = n("551254"),
   R = n("893399"),
   O = n("353681"),
@@ -105,13 +105,13 @@ let eC = () => (0, a.jsx)("div", {
     name: "ChannelsAndRolesPage",
     renderLoader: eC
   }),
-  eA = (0, d.makeLazy)({
+  eg = (0, d.makeLazy)({
     createPromise: () => n.el("413896").then(n.bind(n, "413896")),
     webpackId: "413896",
     name: "GuildOnboardingPage",
     renderLoader: eC
   }),
-  eg = e => {
+  eA = e => {
     let {
       match: t
     } = e, n = (0, f.useStateFromStores)([X.default, ee.default], () => {
@@ -161,7 +161,7 @@ let eC = () => (0, a.jsx)("div", {
           selectedSection: eE.GuildOnboardingTab.BROWSE
         });
       case ef.StaticChannelRoute.GUILD_ONBOARDING:
-        return (0, a.jsx)(eA, {
+        return (0, a.jsx)(eg, {
           guildId: s
         });
       case ef.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
@@ -214,7 +214,7 @@ function eR(e) {
     guildId: t
   })
 }
-let eO = e => (0, a.jsx)(eg, {
+let eO = e => (0, a.jsx)(eA, {
     ...e
   }),
   eL = e => {
@@ -247,7 +247,7 @@ let eO = e => (0, a.jsx)(eg, {
   ey = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return function(t) {
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(A.default, {
         isFullScreen: e,
         ...t
       })
@@ -382,7 +382,7 @@ function eF() {
           className: eh.base,
           children: [c.isMobile ? null : (0, a.jsx)(ei.default, {}), (0, a.jsxs)("div", {
             className: eh.content,
-            children: [(0, a.jsx)(A.default, {}), (0, a.jsx)(ek, {
+            children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(ek, {
               hasNotice: t,
               sidebarTheme: n,
               hideSidebar: l || i || d || E || I || !_

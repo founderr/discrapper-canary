@@ -34,14 +34,14 @@ var n = r("884691"),
       avatarDecoration: void 0 !== d ? d : R,
       canAnimate: O,
       size: r
-    }), [R, O, r, d]), U = n.useCallback(() => C(!0), []), g = n.useCallback(() => C(!1), []);
+    }), [R, O, r, d]), g = n.useCallback(() => C(!0), []), U = n.useCallback(() => C(!1), []);
     return {
       avatarPlaceholderSrc: c,
       avatarDecorationSrc: P,
       isAvatarDecorationAnimating: O,
       eventHandlers: {
-        onMouseEnter: U,
-        onMouseLeave: g
+        onMouseEnter: g,
+        onMouseLeave: U
       }
     }
   }

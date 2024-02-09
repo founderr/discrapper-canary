@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("77078"),
   p = n("850068"),
   m = n("272030"),
-  A = n("79112"),
-  g = n("146350"),
+  g = n("79112"),
+  A = n("146350"),
   N = n("901582"),
   R = n("415929"),
   O = n("687531"),
@@ -77,8 +77,8 @@ var a = n("37983"),
   eS = n("697218"),
   ep = n("521012"),
   em = n("145131"),
-  eA = n("398288"),
-  eg = n("837899"),
+  eg = n("398288"),
+  eA = n("837899"),
   eN = n("425190"),
   eR = n("474571"),
   eO = n("272339"),
@@ -146,7 +146,7 @@ class eq extends s.PureComponent {
     let r = eF.default.getName(l),
       o = null != i && i !== eH.StatusTypes.UNKNOWN,
       u = null != n;
-    return (u || o && l.isPomelo()) && (e = (0, a.jsx)(eA.default, {
+    return (u || o && l.isPomelo()) && (e = (0, a.jsx)(eg.default, {
       hoverText: s,
       forceHover: t,
       children: u ? (0, a.jsx)(w.default, {
@@ -258,7 +258,7 @@ class eq extends s.PureComponent {
             }),
             children: r ? (0, a.jsx)(eD.default, {
               tooltipText: null,
-              icon: d.isShown ? eg.default : eN.default,
+              icon: d.isShown ? eA.default : eN.default,
               role: "switch",
               "aria-label": eY.default.Messages.SET_STATUS
             }) : this.renderNameTag()
@@ -467,7 +467,7 @@ class eq extends s.PureComponent {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eH.UserSettingsSections.ACCOUNT,
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0;
-      A.default.open(e, t, n)
+      g.default.open(e, t, n)
     }, this.handleOpenSettingsContextMenu = e => {
       let {
         currentUser: t
@@ -597,7 +597,7 @@ class eq extends s.PureComponent {
           })
         })
       }
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(A.default, {
         onClose: () => {
           this.handleMouseLeave(), null == t || t()
         }
@@ -644,11 +644,11 @@ function eQ() {
       selfDeaf: T,
       deaf: m
     } = (0, ed.default)(_),
-    A = (0, r.useStateFromStores)([P.default], () => {
+    g = (0, r.useStateFromStores)([P.default], () => {
       var e;
       return (0, D.probablyHasBuildOverride)() ? null === (e = P.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    g = (0, r.useStateFromStores)([ep.default], () => ep.default.getPremiumTypeSubscription()),
+    A = (0, r.useStateFromStores)([ep.default], () => ep.default.getPremiumTypeSubscription()),
     N = (0, r.useStateFromStores)([eh.default], () => eh.default.getEverSpeakingWhileMuted()),
     M = (0, r.useStateFromStores)([e_.default], () => e_.default.hasLayers()),
     y = (0, S.useModalsStore)(S.hasAnyModalOpenSelector),
@@ -718,8 +718,8 @@ function eQ() {
     };
   if (!x) {
     if (eu && em.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), t) {
-      var eA;
-      em.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (eA = (0, V.getDrop)(eV.PartnerGame.FORTNITE)) || void 0 === eA ? void 0 : eA.title) && em.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)
+      var eg;
+      em.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (eg = (0, V.getDrop)(eV.PartnerGame.FORTNITE)) || void 0 === eg ? void 0 : eg.title) && em.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)
     }
     Q && $ && em.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? em.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : em.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), er && em.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), es && em.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING)
   }
@@ -730,7 +730,7 @@ function eQ() {
     userTag: f,
     hidePrivateData: E,
     occluded: x,
-    premiumSubscription: g,
+    premiumSubscription: A,
     selfDeaf: T,
     selfMute: C,
     serverDeaf: m,
@@ -743,7 +743,7 @@ function eQ() {
     status: d,
     streaming: u,
     suppress: I,
-    webBuildOverride: A,
+    webBuildOverride: g,
     awaitingRemote: U,
     isEligibleForPomelo: b
   })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return S
   }
 });
 var l = n("37983"),
@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("77078"),
-  o = n("207273"),
+  o = n("77078"),
+  u = n("207273"),
   d = n("367376"),
   c = n("957255"),
   f = n("98292"),
@@ -21,29 +21,29 @@ var l = n("37983"),
   E = n("781691"),
   g = n("632215");
 
-function I(e) {
+function S(e) {
   let {
     channel: t,
     connected: n,
     hovered: s,
-    subtitle: I,
-    onClick: _,
-    enableHangStatus: S,
+    subtitle: S,
+    onClick: I,
+    enableHangStatus: _,
     allowChannelTopic: N
-  } = e, T = (0, r.useStateFromStores)([o.default], () => o.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, r.useStateFromStores)([c.default], () => (!S || !!N) && c.default.can(p.Permissions.SET_VOICE_CHANNEL_STATUS, t)), v = null != I && I.length > 0;
+  } = e, T = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), A = null != T && T.length > 0, L = (0, r.useStateFromStores)([c.default], () => (!_ || !!N) && c.default.can(p.Permissions.SET_VOICE_CHANNEL_STATUS, t)), v = null != S && S.length > 0;
   a.useEffect(() => {
     A && C.default.track(p.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
       channel_id: t.id
     })
   }, [t.id, A, t.guild_id]);
-  let x = (0, u.useRedesignIconContext)().enabled ? 12 : 14;
+  let x = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
   if (null == t.guild_id) return null;
   let R = i(E.statusDiv, n && L ? E.hoverable : null);
-  if (A) return (0, l.jsx)(u.Clickable, {
+  if (A) return (0, l.jsx)(o.Clickable, {
     className: R,
-    onClick: L ? _ : void 0,
-    children: (0, l.jsx)(u.Text, {
+    onClick: L ? I : void 0,
+    children: (0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: i(E.statusText, g.markup),
       children: (0, l.jsx)(f.default, {
@@ -53,10 +53,10 @@ function I(e) {
       })
     })
   });
-  if (n && L && (!v || s)) return (0, l.jsxs)(u.Clickable, {
+  if (n && L && (!v || s)) return (0, l.jsxs)(o.Clickable, {
     className: R,
-    onClick: _,
-    children: [(0, l.jsx)(u.Text, {
+    onClick: I,
+    children: [(0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: E.statusText,
       children: m.default.Messages.VOICE_CHANNEL_SET_STATUS
@@ -67,7 +67,7 @@ function I(e) {
     })]
   });
   if (v) return (0, l.jsx)(f.default, {
-    children: I
+    children: S
   });
   return null
 }

@@ -23,10 +23,10 @@ var a = n("37983"),
   S = n("535974"),
   p = n("599110"),
   m = n("602043"),
-  A = n("780009"),
-  g = n("49111"),
+  g = n("780009"),
+  A = n("49111"),
   N = n("782340");
-let R = d.default.get(g.PlatformTypes.XBOX).name;
+let R = d.default.get(A.PlatformTypes.XBOX).name;
 
 function O(e) {
   let {
@@ -34,7 +34,7 @@ function O(e) {
   } = e, n = t.length > 1, O = function(e) {
     let {
       currentActivities: t
-    } = e, n = (0, l.useStateFromStores)([h.default], () => h.default.getAccounts().some(e => e.type === d.default.get(g.PlatformTypes.XBOX).type)), s = t.some(e => {
+    } = e, n = (0, l.useStateFromStores)([h.default], () => h.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
       let {
         activity: t
       } = e;
@@ -42,7 +42,7 @@ function O(e) {
     });
     return n || !s ? null : (0, a.jsx)(i.MenuItem, {
       id: "xbox-connect",
-      action: () => u.default.open(g.UserSettingsSections.CONNECTIONS),
+      action: () => u.default.open(A.UserSettingsSections.CONNECTIONS),
       label: N.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
         platform: R
       })
@@ -59,7 +59,7 @@ function O(e) {
       return {
         ...e,
         libraryApplication: s,
-        canJoin: null != t && (0, c.default)(t, g.ActivityFlags.JOIN) && t.type === g.ActivityTypes.PLAYING,
+        canJoin: null != t && (0, c.default)(t, A.ActivityFlags.JOIN) && t.type === A.ActivityTypes.PLAYING,
         canPlay: (0, m.isLaunchable)({
           LibraryApplicationStore: I.default,
           LaunchableGameStore: _.default,
@@ -88,10 +88,10 @@ function O(e) {
       async function u() {
         if (null == s) return;
         let e = await r.default.sendActivityInviteUser({
-          type: g.ActivityActionTypes.JOIN_REQUEST,
+          type: A.ActivityActionTypes.JOIN_REQUEST,
           userId: l.id,
           activity: s,
-          location: g.AnalyticsLocations.PROFILE_POPOUT
+          location: A.AnalyticsLocations.PROFILE_POPOUT
         });
         null != e && o.default.selectPrivateChannel(e.id)
       }
@@ -121,11 +121,11 @@ function O(e) {
       return (0, a.jsx)(i.MenuItem, {
         id: "play-".concat(n.session_id),
         action: function() {
-          (0, A.playApplication)(s.id, l, {
+          (0, g.playApplication)(s.id, l, {
             analyticsParams: {
               location: {
                 ...r,
-                object: g.AnalyticsObjects.LIST_ITEM
+                object: A.AnalyticsObjects.LIST_ITEM
               }
             }
           })

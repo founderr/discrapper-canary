@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return S
   }
 });
 var l = n("37983"),
@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("272030"),
-  o = n("667771"),
+  o = n("272030"),
+  u = n("667771"),
   d = n("42203"),
   c = n("923959"),
   f = n("957255"),
@@ -19,15 +19,15 @@ var l = n("37983"),
   p = n("49111"),
   m = n("133335"),
   E = n("708995");
-let g = (0, o.makeChannelSortable)(function(e) {
+let g = (0, u.makeChannelSortable)(function(e) {
   let {
     guild: t,
     selectedChannelId: s,
-    position: o,
+    position: u,
     disableManageChannels: g,
-    sorting: I,
-    sortingType: _,
-    sortingPosition: S,
+    sorting: S,
+    sortingType: I,
+    sortingPosition: _,
     connectChannelDragSource: N,
     connectChannelDropTarget: T,
     tabIndex: A
@@ -35,7 +35,7 @@ let g = (0, o.makeChannelSortable)(function(e) {
     let e = c.default.getDirectoryChannelIds(t.id);
     return 0 === e.length ? null : d.default.getChannel(e[0])
   }), v = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(null == L ? void 0 : L.parent_id)), x = s === (null == L ? void 0 : L.id), R = (0, r.useStateFromStores)([f.default], () => null != v ? f.default.can(p.Permissions.MANAGE_CHANNELS, v) : null != t && f.default.can(p.Permissions.MANAGE_CHANNELS, t)), M = a.useCallback(e => {
-    null != L && (0, u.openContextMenuLazy)(e, async () => {
+    null != L && (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("425630").then(n.bind(n, "425630"));
@@ -46,8 +46,8 @@ let g = (0, o.makeChannelSortable)(function(e) {
     })
   }, [L]);
   if (null == L) return null;
-  let O = (0, h.getChannelItemClassName)(o, S),
-    y = (0, h.isChannelItemDisabled)(L, I, _),
+  let O = (0, h.getChannelItemClassName)(u, _),
+    y = (0, h.isChannelItemDisabled)(L, S, I),
     D = (0, l.jsx)("div", {
       className: i(O, {
         [E.disabled]: y,
@@ -74,4 +74,4 @@ let g = (0, o.makeChannelSortable)(function(e) {
     });
   return R && (D = T(N(D))), D
 });
-var I = g
+var S = g
