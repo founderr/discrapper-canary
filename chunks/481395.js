@@ -23,8 +23,8 @@ var a = n("913144"),
   S = n("697218"),
   p = n("158998"),
   m = n("76629"),
-  g = n("981957"),
-  A = n("357046"),
+  A = n("981957"),
+  g = n("357046"),
   N = n("49111"),
   R = n("782340");
 let O = [],
@@ -110,8 +110,8 @@ function w(e) {
     optimistic: m
   } = e;
   if (m || _.default.isSelfDeaf()) return !1;
-  let g = c.default.getChannel(E);
-  if (null == g) return !1;
+  let A = c.default.getChannel(E);
+  if (null == A) return !1;
   let R = I.default.getChannelId(),
     L = d.default.getCurrentSidebarChannelId(R),
     v = E === R || E === L,
@@ -121,13 +121,13 @@ function w(e) {
   if ((M || y) && ((null === (n = S.author) || void 0 === n ? void 0 : n.id) == null || !C.default.isBlocked(S.author.id))) {
     if (O.indexOf(S.id) >= 0) return !1;
     O.unshift(S.id) > 10 && O.pop();
-    let e = g.getGuildId();
+    let e = A.getGuildId();
     if (null != e && T.default.getMutedChannels(e).has(E)) return !1;
     let t = null !== (i = null !== (l = f.default.getNick(e, null === (a = S.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : p.default.getName(S.author)) && void 0 !== i ? i : "",
       n = S.type === N.MessageTypes.REPLY ? null === (s = S.referenced_message) || void 0 === s ? void 0 : s.author : null,
       o = null != n ? null !== (r = f.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : p.default.getName(n) : null,
       u = D(S.content, t, e, o);
-    b(u, !1, g.id, S.id, A.MAX_TTS_LENGTH)
+    b(u, !1, A.id, S.id, g.MAX_TTS_LENGTH)
   }
   return !1
 }
@@ -136,7 +136,7 @@ function k(e) {
   let {
     id: t,
     channelId: n
-  } = e, a = g.default.currentMessage;
+  } = e, a = A.default.currentMessage;
   return null != a && t === a.messageId && n === a.channelId && ((0, m.stopSpeaking)(), !0)
 }
 

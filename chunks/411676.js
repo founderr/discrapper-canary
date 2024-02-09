@@ -27,11 +27,11 @@ function S(e) {
     type: n,
     status: S,
     isFocused: p
-  } = e, m = s.useContext(f.AnalyticsContext), g = e => {
+  } = e, m = s.useContext(f.AnalyticsContext), A = e => {
     e.stopPropagation(), i.default.cancelFriendRequest(t.id, {
       location: "Friends"
     })
-  }, A = e => {
+  }, g = e => {
     e.stopPropagation(), i.default.addRelationship({
       userId: t.id,
       context: {
@@ -59,20 +59,20 @@ function S(e) {
           icon: u.default,
           actionType: E.default.ActionTypes.ACCEPT,
           tooltip: I.default.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: A,
+          onClick: g,
           shouldHighlight: e
         }), (0, a.jsx)(E.default, {
           icon: d.default,
           actionType: E.default.ActionTypes.DENY,
           tooltip: I.default.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: g,
+          onClick: A,
           shouldHighlight: e
         })]
       }) : (0, a.jsx)(E.default, {
         icon: d.default,
         actionType: E.default.ActionTypes.DENY,
         tooltip: I.default.Messages.FRIEND_REQUEST_CANCEL,
-        onClick: g,
+        onClick: A,
         shouldHighlight: e
       });
       return (0, a.jsxs)("div", {

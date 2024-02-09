@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return g
   }
 });
 var i = n("37983"),
@@ -39,7 +39,7 @@ class p extends a.Component {
     })
   }
 }
-var E = o.default.connectStores([d.default, u.default], () => ({
+var g = o.default.connectStores([d.default, u.default], () => ({
   notifications: d.default.getNotifications(),
   position: u.default.getNotificationPositionMode()
 }))(p)

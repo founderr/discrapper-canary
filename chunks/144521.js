@@ -37,7 +37,7 @@ function I(e) {
     })
   }, m = e => {
     null == e || e.stopPropagation(), i.default.ignore(t.id)
-  }, g = I === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : I;
+  }, A = I === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : I;
   return (0, a.jsx)(f.default, {
     isFocused: T,
     user: t,
@@ -66,7 +66,7 @@ function I(e) {
         children: [(0, a.jsx)(E.default, {
           user: t,
           hovered: e,
-          status: g,
+          status: A,
           subText: n,
           className: C.userInfo
         }), (0, a.jsx)("div", {

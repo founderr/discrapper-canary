@@ -13,8 +13,8 @@ var a = n("77078"),
   s = n("5667"),
   i = n("651072"),
   r = n("334683"),
-  o = n("994428"),
-  u = n("782340"),
+  u = n("994428"),
+  o = n("782340"),
   d = n("928936"),
   c = n("713827");
 
@@ -31,13 +31,13 @@ function f(e) {
       alt: "",
       className: d.image
     }),
-    header: u.default.Messages.GUILD_EVENT_RECURRING_COACHMARK_TITLE,
+    header: o.default.Messages.GUILD_EVENT_RECURRING_COACHMARK_TITLE,
     content: (0, l.jsx)(a.Text, {
       variant: "text-sm/normal",
       color: "always-white",
-      children: u.default.Messages.GUILD_EVENT_RECURRING_COACHMARK_BODY
+      children: o.default.Messages.GUILD_EVENT_RECURRING_COACHMARK_BODY
     }),
-    buttonCTA: u.default.Messages.GUILD_EVENT_RECURRING_COACHMARK_CTA,
+    buttonCTA: o.default.Messages.GUILD_EVENT_RECURRING_COACHMARK_CTA,
     onClick: () => {
       (0, a.openModalLazy)(async () => {
         let {
@@ -47,11 +47,11 @@ function f(e) {
           ...n,
           guildId: t
         })
-      }), i(o.ContentDismissActionType.TAKE_ACTION)
+      }), i(u.ContentDismissActionType.TAKE_ACTION)
     },
-    secondaryButtonCTA: u.default.Messages.DISMISS,
-    onSecondaryClick: () => i(o.ContentDismissActionType.USER_DISMISS),
-    markAsDismissed: () => i(o.ContentDismissActionType.USER_DISMISS)
+    secondaryButtonCTA: o.default.Messages.DISMISS,
+    onSecondaryClick: () => i(u.ContentDismissActionType.USER_DISMISS),
+    markAsDismissed: () => i(u.ContentDismissActionType.USER_DISMISS)
   })
 }
 

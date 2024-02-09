@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("444497"),
   p = n("349682"),
   m = n("393414"),
-  g = n("970366"),
-  A = n("915639"),
+  A = n("970366"),
+  g = n("915639"),
   N = n("161778"),
   R = n("350522"),
   O = n("926787"),
@@ -88,7 +88,7 @@ class W extends s.PureComponent {
       c = null !== (t = null === (e = d.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
     c > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({
       to: c
-    })), (0, g.trackAppUIViewed)("guild_discovery")
+    })), (0, A.trackAppUIViewed)("guild_discovery")
   }
   componentDidUpdate(e) {
     let {
@@ -433,10 +433,10 @@ class W extends s.PureComponent {
     }
   }
 }
-let K = f.default.connectStores([N.default, A.default, v.default, R.default, O.default, b.default, L.default], () => {
+let K = f.default.connectStores([N.default, g.default, v.default, R.default, O.default, b.default, L.default], () => {
   var e;
   let t = k.LANGUAGE_OPTIONS,
-    n = A.default.locale,
+    n = g.default.locale,
     a = null !== (e = o.find(t, {
       code: n
     })) && void 0 !== e ? e : t[0],

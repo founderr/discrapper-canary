@@ -36,15 +36,15 @@ var C = e => {
     theme: S,
     onViewGuild: p,
     fetchGuilds: m,
-    onGuildCardSeen: g,
-    currentCategoryId: A,
+    onGuildCardSeen: A,
+    currentCategoryId: g,
     loadId: N,
     onTagClick: R,
     showMoreCards: O = !1
   } = e;
   s.useEffect(() => {
     i.default.wait(() => m())
-  }, [A]);
+  }, [g]);
   let L = (0, c.default)(O ? h : _),
     {
       analyticsLocations: v
@@ -80,7 +80,7 @@ var C = e => {
     guild: e,
     onView: y,
     theme: S,
-    onGuildCardSeen: g,
+    onGuildCardSeen: A,
     onTagClick: R
   }, e.id));
   return (0, a.jsx)("section", {

@@ -24,8 +24,8 @@ var a, s, l = n("884691"),
   S = n("572182"),
   p = n("201952"),
   m = n("718517"),
-  g = n("427459"),
-  A = n("49111");
+  A = n("427459"),
+  g = n("49111");
 
 function N(e) {
   var t;
@@ -45,10 +45,10 @@ function N(e) {
     })),
     R = (0, i.useStateFromStores)([h.default], () => h.default.isVisible(e)),
     O = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
-    L = (0, i.useStateFromStores)([I.default], () => I.default.can(A.Permissions.ADMINISTRATOR, e)),
-    v = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
+    L = (0, i.useStateFromStores)([I.default], () => I.default.can(g.Permissions.ADMINISTRATOR, e)),
+    v = null != s && Date.now() - s <= g.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     M = null != e ? e.premiumSubscriberCount : 0,
-    P = (0, g.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
+    P = (0, A.getGuildTierFromAppliedBoostCount)(M, n) !== g.BoostedGuildTiers.NONE,
     D = null != a && Date.now() - a <= 432e5,
     y = !D && !v && L && P,
     x = (0, c.useGuildHasLiveChannelNotice)(n),
@@ -59,7 +59,7 @@ function N(e) {
       enableStudyGroup: j
     } = (0, E.useHubStudyGroupExperiment)(e),
     w = G.length > 0,
-    k = j && !(null == e ? void 0 : e.hasFeature(A.GuildFeatures.HUB)),
+    k = j && !(null == e ? void 0 : e.hasFeature(g.GuildFeatures.HUB)),
     {
       canSeeUpcomingEventsNotices: F
     } = d.default.useExperiment({

@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("446674"),
   r = n("77078"),
-  o = n("255397"),
-  u = n("272030"),
+  u = n("255397"),
+  o = n("272030"),
   d = n("667771"),
   c = n("650912"),
   f = n("139375"),
@@ -21,9 +21,9 @@ var a = n("414456"),
   m = n("106346"),
   E = n("144491"),
   g = n("716214"),
-  S = n("567469"),
-  I = n("998716"),
-  _ = n("834052"),
+  I = n("567469"),
+  _ = n("998716"),
+  S = n("834052"),
   N = n("819450"),
   T = n("886776"),
   A = n("870691"),
@@ -97,8 +97,8 @@ class Y extends G.default {
       connected: n,
       locked: a,
       connectChannelDropTarget: i,
-      connectChannelDragSource: o,
-      connectUserDropTarget: u,
+      connectChannelDragSource: u,
+      connectUserDropTarget: o,
       connectDragPreview: d,
       canReorderChannel: c,
       canMoveMembers: h,
@@ -107,10 +107,10 @@ class Y extends G.default {
       needSubscriptionToAccess: m,
       unread: E,
       resolvedUnreadSetting: g,
-      mentionCount: S,
-      isFavoriteSuggestion: I
+      mentionCount: I,
+      isFavoriteSuggestion: _
     } = this.props, {
-      shouldShowGuildVerificationPopout: _
+      shouldShowGuildVerificationPopout: S
     } = this.state, N = this.getVoiceStatesCount(), T = (0, l.jsxs)("li", {
       className: s(this.getModeClass(), {
         [H.disabled]: this.isDisabled()
@@ -121,14 +121,14 @@ class Y extends G.default {
         renderPopout: this.renderPopout,
         spacing: 0,
         onRequestClose: this.closeGuildVerificationPopout,
-        shouldShow: _,
+        shouldShow: S,
         children: () => (0, l.jsx)(r.Tooltip, {
           text: this.getTooltipText(),
           children: i => {
             let {
               onClick: r,
-              onContextMenu: o,
-              ...u
+              onContextMenu: u,
+              ...o
             } = i;
             return (0, l.jsxs)(P.default, {
               className: H.iconVisibility,
@@ -136,37 +136,37 @@ class Y extends G.default {
                 [k.iconLive]: null != C
               }),
               channel: e,
-              selected: !I && t,
+              selected: !_ && t,
               connected: n,
               unread: n ? E : void 0,
               resolvedUnreadSetting: g,
-              mentionCount: S,
+              mentionCount: I,
               locked: a,
               onClick: () => {
                 this.handleClick(), null == r || r()
               },
               onContextMenu: e => {
-                this.handleContextMenu(e), null == o || o()
+                this.handleContextMenu(e), null == u || u()
               },
               connectDragPreview: d,
               subtitle: this.renderSubtitle(),
-              isFavoriteSuggestion: I,
+              isFavoriteSuggestion: _,
               "aria-label": (0, f.default)({
                 channel: e,
                 unread: E,
-                mentionCount: S,
+                mentionCount: I,
                 userCount: N,
                 isSubscriptionGated: p,
                 needSubscriptionToAccess: m
               }),
-              ...u,
-              children: [I && this.renderAcceptSuggestionButton(), I && this.renderRemoveSuggestionButton(), !I && this.renderOpenChatButton(), !I && this.renderInviteButton(), !I && this.renderEditButton(), !I && this.renderChannelInfo()]
+              ...o,
+              children: [_ && this.renderAcceptSuggestionButton(), _ && this.renderRemoveSuggestionButton(), !_ && this.renderOpenChatButton(), !_ && this.renderInviteButton(), !_ && this.renderEditButton(), !_ && this.renderChannelInfo()]
             })
           }
         })
       }), this.renderVoiceUsers()]
     });
-    return h && (T = u(T)), c && (T = i(o(T))), T
+    return h && (T = o(T)), c && (T = i(u(T))), T
   }
   constructor(...e) {
     super(...e), this.state = {
@@ -195,7 +195,7 @@ class Y extends G.default {
       let {
         channel: t
       } = this.props, a = v.default.getGuild(t.getGuildId());
-      null != a && (0, u.openContextMenuLazy)(e, async () => {
+      null != a && (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("168003").then(n.bind(n, "168003"));
@@ -229,18 +229,18 @@ class Y extends G.default {
           let {
             onMouseEnter: a,
             onMouseLeave: i,
-            onFocus: u,
+            onFocus: o,
             onBlur: d
           } = t;
           return (0, l.jsx)(r.Clickable, {
             className: s(H.iconItem, n ? H.alwaysShown : null),
             onClick: () => {
-              o.default.updateChatOpen(e.id, !0), this.handleClickChat()
+              u.default.updateChatOpen(e.id, !0), this.handleClickChat()
             },
             "aria-label": V.default.Messages.OPEN_CHAT,
             onMouseEnter: a,
             onMouseLeave: i,
-            onFocus: u,
+            onFocus: o,
             onBlur: d,
             children: (0, l.jsx)(b.default, {
               width: 16,
@@ -273,8 +273,8 @@ function W(e) {
     disableSorting: a,
     isFavoriteCategory: s,
     collapsed: r,
-    voiceStates: o
-  } = e, u = (0, i.useStateFromStoresObject)([M.default], () => ({
+    voiceStates: u
+  } = e, o = (0, i.useStateFromStoresObject)([M.default], () => ({
     unread: M.default.hasUnread(n.id),
     mentionCount: M.default.getMentionCount(n.id)
   })), d = (0, i.useStateFromStores)([O.default], () => O.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
@@ -288,14 +288,14 @@ function W(e) {
       bypassLimit: R.default.can(F.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), C = (0, i.useStateFromStores)([_.default], () => _.default.getStageInstanceByChannel(n.id), [n.id]), m = (0, S.useStageParticipantsCount)(n.id, I.StageChannelParticipantNamedIndex.AUDIENCE), {
+  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), C = (0, i.useStateFromStores)([S.default], () => S.default.getStageInstanceByChannel(n.id), [n.id]), m = (0, I.useStageParticipantsCount)(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: E,
     needSubscriptionToAccess: g
   } = (0, p.default)(n.id), v = (0, i.useStateFromStores)([O.default], () => O.default.isFavorite(t.id, n.id)), y = (0, N.getStageHasMedia)(n.id), D = (0, U.default)({
     channel: n,
     isChannelSelected: !1,
     isChannelCollapsed: r,
-    voiceStates: o,
+    voiceStates: u,
     isSubscriptionGated: E,
     needSubscriptionToAccess: g,
     enableConnectedUserLimit: y || n.userLimit > 0 && n.userLimit < F.MAX_STAGE_VOICE_USER_LIMIT
@@ -307,7 +307,7 @@ function W(e) {
     stageInstance: C,
     isSubscriptionGated: E,
     needSubscriptionToAccess: g,
-    ...u,
+    ...o,
     ...c,
     ...e,
     isFavoriteSuggestion: s && !v,

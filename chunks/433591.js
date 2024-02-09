@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("452229"),
   p = n("196986"),
   m = n("92918"),
-  g = n("973199"),
-  A = n("49111"),
+  A = n("973199"),
+  g = n("49111"),
   N = n("782340"),
   R = n("127671");
 
@@ -51,7 +51,7 @@ function O() {
       P(e)
     }, [t, P]);
   s.useEffect(() => {
-    _.default.track(A.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
+    _.default.track(g.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
     }), f.default.increment({
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
@@ -96,7 +96,7 @@ function O() {
       }) : null]
     }, "message-requests-spam-title"), [n, D, O]);
   return 0 === t.length ? (0, a.jsx)(p.default, {
-    section: g.MessageRequestSections.SPAM
+    section: A.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: L,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
@@ -116,8 +116,8 @@ function O() {
           },
           paddingTop: 24,
           paddingBottom: 24,
-          sectionHeight: g.LIST_SECTION_HEIGHT,
-          rowHeight: g.LIST_ROW_HEIGHT,
+          sectionHeight: A.LIST_SECTION_HEIGHT,
+          rowHeight: A.LIST_ROW_HEIGHT,
           renderSection: x,
           renderRow: y,
           sections: [t.length],

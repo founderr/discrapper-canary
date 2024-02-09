@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("42887"),
   p = n("211248"),
   m = n("200639"),
-  g = n("97347"),
-  A = n("151185"),
+  A = n("97347"),
+  g = n("151185"),
   N = n("342169"),
   R = n("158998"),
   O = n("39141"),
@@ -40,7 +40,7 @@ let M = {
       getStatus: () => L.default.Messages.SERVER_DEAFENED
     },
     serverMute: {
-      icon: g.default,
+      icon: A.default,
       colorize: !0,
       getStatus: () => L.default.Messages.SERVER_MUTED
     },
@@ -50,7 +50,7 @@ let M = {
       getStatus: () => L.default.Messages.VOICE_CHANNEL_DEAFENED
     },
     mute: {
-      icon: g.default,
+      icon: A.default,
       colorize: !1,
       getStatus: () => L.default.Messages.VOICE_CHANNEL_MUTED
     }
@@ -93,10 +93,10 @@ function y(e) {
     deaf: c,
     serverMute: T,
     serverDeaf: p
-  } = e, m = (0, r.useStateFromStores)([S.default], () => S.default.isLocalMute(o.id)), g = (0, _.default)({
+  } = e, m = (0, r.useStateFromStores)([S.default], () => S.default.isLocalMute(o.id)), A = (0, _.default)({
     userId: o.id,
     checkSoundSharing: !0
-  }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), y = null != u ? u : R.default.getName(o), {
+  }), g = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), y = null != u ? u : R.default.getName(o), {
     icon: x,
     colorize: b,
     getStatus: U
@@ -125,14 +125,14 @@ function y(e) {
   }) : y;
 
   function j(e) {
-    null != A ? (0, E.openContextMenuLazy)(e, async () => {
+    null != g ? (0, E.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("834247").then(n.bind(n, "834247"));
       return t => (0, a.jsx)(e, {
         ...t,
         user: o,
-        guildId: A,
+        guildId: g,
         channel: l,
         showMediaItems: !0
       })
@@ -148,14 +148,14 @@ function y(e) {
     })
   }
   return (0, a.jsx)(f.Popout, {
-    preload: () => (0, C.default)(o.id, o.getAvatarURL(A, 80), {
-      guildId: A,
+    preload: () => (0, C.default)(o.id, o.getAvatarURL(g, 80), {
+      guildId: g,
       channelId: l.id
     }),
     position: "top",
     renderPopout: e => (0, a.jsx)(I.default, {
       userId: o.id,
-      guildId: A,
+      guildId: g,
       channelId: l.id,
       ...e
     }),
@@ -169,10 +169,10 @@ function y(e) {
         focusProps: M,
         children: (0, a.jsx)(h.default, {
           shakeLocation: O.ShakeLocation.VOICE_USER,
-          isShaking: g,
+          isShaking: A,
           children: (0, a.jsx)("div", {
             className: i(v.avatar, {
-              [v.speaking]: g
+              [v.speaking]: A
             }),
             style: {
               backgroundImage: "url(".concat(N, ")")
@@ -198,7 +198,7 @@ function x(e) {
     voiceStates: t,
     channel: n,
     className: l
-  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, a.jsx)(p.default, {
+  } = e, [o, u] = s.useState(!1), d = o ? N.default : g.default, c = (0, a.jsx)(p.default, {
     className: v.expandButton,
     onClick: () => u(!o),
     color: p.CircleIconButtonColors.PRIMARY,

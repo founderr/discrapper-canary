@@ -41,9 +41,9 @@ function C(e) {
       rarity: m
     } = T,
     {
-      color: g
+      color: A
     } = (0, c.getAchievementStyles)(m),
-    A = (0, s.isThemeDark)(I) ? _ : h,
+    g = (0, s.isThemeDark)(I) ? _ : h,
     N = (S.size - S.offset - 2 * S.stroke) * .8,
     R = S.size - S.stroke,
     O = {
@@ -68,7 +68,7 @@ function C(e) {
     children: [(0, a.jsx)("div", {
       className: E.trophyIconContainer,
       children: (0, a.jsx)(d.default, {
-        color: f ? g : (0, r.getColor)(A.trophy),
+        color: f ? A : (0, r.getColor)(g.trophy),
         width: N,
         height: N
       })
@@ -76,7 +76,7 @@ function C(e) {
       className: E.lockContainer,
       style: L,
       children: (0, a.jsx)(u.default, {
-        color: (0, r.getColor)(A.locked),
+        color: (0, r.getColor)(g.locked),
         ...O
       })
     }), f && m === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return A
   }
 });
 var a = n("37983"),
@@ -29,7 +29,7 @@ let p = {
     transform: "scale(1)",
     opacity: 1
   };
-var g = () => {
+var A = () => {
   let e = (0, u.useStateFromStores)([h.default], () => h.default.getChannelId()),
     t = (0, u.useStateFromStoresArray)([I.default], () => I.default.getIncomingCalls().filter(t => {
       let {
@@ -39,20 +39,20 @@ var g = () => {
     })),
     n = (0, u.useStateFromStores)([I.default], () => I.default.hasIncomingCalls()),
     l = (0, u.useStateFromStores)([_.default], () => _.default.isSoundDisabled("call_ringing")),
-    g = f.default.useIsRingtoneEligible(),
-    A = f.default.useIsRingtoneDisabled(),
+    A = f.default.useIsRingtoneEligible(),
+    g = f.default.useIsRingtoneDisabled(),
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
     R = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
     O = s.useRef(!1),
     L = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
-      if (g && !A) return (0, T.createSound)(c.default.ringtone, e);
+      if (A && !g) return (0, T.createSound)(c.default.ringtone, e);
       if (R === S.Soundpacks.CLASSIC) {
         let t = 500 === i.random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
         return (0, T.createSound)(t, e)
       }
       return (0, T.createSoundForPack)("call_ringing", R)
-    }, [R, A, g]);
+    }, [R, g, A]);
   s.useEffect(() => () => {
     L.stop()
   }, [L]), s.useEffect(() => {

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   closeSoundboardInOverlay: function() {
-    return o
+    return u
   }
 }), n("37983"), n("884691");
 var l = n("913144");
@@ -41,7 +41,7 @@ function r(e, t) {
   })
 }
 
-function o(e) {
+function u(e) {
   l.default.dispatch({
     type: "SOUNDBOARD_SET_OVERLAY_ENABLED",
     pid: e,

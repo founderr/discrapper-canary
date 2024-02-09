@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("5367"),
   r = n("100835"),
-  o = n("393027"),
-  u = n("341542"),
+  u = n("393027"),
+  o = n("341542"),
   d = n("952451"),
   c = n("305961"),
   f = n("471671"),
@@ -22,7 +22,7 @@ var l = n("37983"),
     let {
       guildNode: t,
       lowerBadge: n
-    } = e, E = t.id, g = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(E)), S = (0, i.useCurrentUserGuildBadgeStatus)(E), I = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), _ = (0, s.useStateFromStores)([u.default], () => u.default.isUnavailable(E)), N = (0, o.default)(e => e.guildId), T = (0, C.default)(E), {
+    } = e, E = t.id, g = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(E)), I = (0, i.useCurrentUserGuildBadgeStatus)(E), _ = (0, s.useStateFromStores)([f.default], () => f.default.isFocused()), S = (0, s.useStateFromStores)([o.default], () => o.default.isUnavailable(E)), N = (0, u.default)(e => e.guildId), T = (0, C.default)(E), {
       badge: A,
       unread: L
     } = (0, s.useStateFromStoresObject)([d.default], () => ({
@@ -39,13 +39,13 @@ var l = n("37983"),
     return (0, l.jsx)(p.default, {
       ...e,
       guild: g,
-      unavailable: _,
-      animatable: I,
+      unavailable: S,
+      animatable: _,
       selected: N === E,
       badge: A,
       lowerBadge: x,
       unread: L,
       mediaState: T,
-      guildJoinRequestStatus: S
+      guildJoinRequestStatus: I
     })
   })

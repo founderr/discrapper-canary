@@ -30,8 +30,8 @@ var a, s, l = n("37983"),
   S = n("957255"),
   p = n("316133"),
   m = n("660279"),
-  g = n("943232"),
-  A = n("36694"),
+  A = n("943232"),
+  g = n("36694"),
   N = n("945330"),
   R = n("272339"),
   O = n("718550"),
@@ -170,7 +170,7 @@ function Z(e) {
     look: s ? o.Button.Looks.OUTLINED : o.Button.Looks.FILLED,
     color: s ? o.Button.Colors.TRANSPARENT : o.Button.Colors.GREEN,
     size: o.Button.Sizes.SMALL,
-    children: [s ? (0, l.jsx)(A.default, {
+    children: [s ? (0, l.jsx)(g.default, {
       width: 16,
       height: 16,
       className: z.buttonIcon
@@ -235,7 +235,7 @@ function X(e) {
       })]
     }), (0, l.jsxs)("div", {
       className: z.textBlock,
-      children: [(0, l.jsx)(g.default, {
+      children: [(0, l.jsx)(A.default, {
         className: z.stageIcon,
         width: 16,
         height: 16

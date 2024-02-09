@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return A
   }
 });
 var a = n("37983"),
@@ -23,7 +23,7 @@ var a = n("37983"),
   S = n("782340"),
   p = n("724708"),
   m = n("926622"),
-  g = () => {
+  A = () => {
     let e = _.FamilyCenterEnabled.useSetting(),
       {
         categories: t,

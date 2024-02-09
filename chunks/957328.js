@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("50647"),
   p = n("15435"),
   m = n("637888"),
-  g = n("718517"),
-  A = n("773336"),
+  A = n("718517"),
+  g = n("773336"),
   N = n("709681"),
   R = n("50885"),
   O = n("49111"),
@@ -53,7 +53,7 @@ class M extends s.PureComponent {
     } = this.props, d = i && n && !a && !s;
     if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== i || d) {
       if (i && null != this.videoRef) {
-        let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * g.default.Millis.SECOND), 600);
+        let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * A.default.Millis.SECOND), 600);
         clearTimeout(this._noProblemsTimeout), c.default.get(O.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
           problems: !1,
           hide: i
@@ -212,7 +212,7 @@ class M extends s.PureComponent {
     }(), this.handleReady = () => {
       this.setState({
         ready: !0
-      }), (0, A.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
+      }), (0, g.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
     }, this.setVideoRef = e => {
       this.videoRef = e
     }, this.setProblemsTimeout = () => {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return g
   }
 }), n("222007"), n("70102");
 var a = n("446825"),
@@ -114,7 +114,7 @@ class m extends d.default {
     super("ipc", t, n), this.socket = e
   }
 }
-class g extends s.EventEmitter {
+class A extends s.EventEmitter {
   handleConnection(e) {
     C(e, !1), e.pause(), e.on("readable", () => {
       try {
@@ -164,4 +164,4 @@ class g extends s.EventEmitter {
     })
   }
 }
-var A = new g
+var g = new A

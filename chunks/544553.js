@@ -28,8 +28,8 @@ var s = n("65597"),
       t = (0, c.useSelectedTeenUser)(),
       n = (0, s.default)([r.default], () => r.default.getCurrentUser()),
       m = (0, d.useAgeSpecificText)(S.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, S.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
-      g = (0, d.useAgeSpecificText)(S.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, S.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
-      A = (0, d.useAgeSpecificText)(S.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, S.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
+      A = (0, d.useAgeSpecificText)(S.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, S.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
+      g = (0, d.useAgeSpecificText)(S.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, S.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
       N = (0, i.useRedesignIconContext)().enabled;
     return void 0 === n ? null : (0, a.jsxs)("div", {
       className: p.container,
@@ -46,11 +46,11 @@ var s = n("65597"),
         }), (0, a.jsx)(C.default, {
           icon: u.default,
           header: S.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
-          description: g
+          description: A
         }), (0, a.jsx)(C.default, {
           icon: N ? l.QrCodeCameraIcon : I.default,
           header: S.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
-          description: A
+          description: g
         })]
       }), 0 === e.length ? (0, a.jsx)(h.default, {}) : null, void 0 !== t && e.length > 0 ? (0, a.jsx)(_.default, {
         user: t

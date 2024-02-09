@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("299285"),
   p = n("449918"),
   m = n("161778"),
-  g = n("686470"),
-  A = n("535974"),
+  A = n("686470"),
+  g = n("535974"),
   N = n("352326"),
   R = n("471671"),
   O = n("145131"),
@@ -376,7 +376,7 @@ class Q extends s.PureComponent {
   }
   renderProgressPatching() {
     return (0, a.jsx)(G.default, {
-      getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
+      getHistoricalTotalBytes: g.default.getHistoricalTotalBytesWritten,
       updateInterval: 5e3,
       children: this.renderProgressPatchingBody
     })
@@ -573,13 +573,13 @@ class et extends s.PureComponent {
         children: [(0, a.jsx)(j.default, {
           className: i(F.headerCell, F.networkProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-          getHistoricalTotalBytes: A.default.getHistoricalTotalBytesDownloaded,
+          getHistoricalTotalBytes: g.default.getHistoricalTotalBytesDownloaded,
           color: w.Color.GREEN_360,
           animate: s
         }), (0, a.jsx)(j.default, {
           className: i(F.headerCell, F.diskProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-          getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
+          getHistoricalTotalBytes: g.default.getHistoricalTotalBytesWritten,
           color: w.Color.BLUE_345,
           animate: s
         })]
@@ -639,15 +639,15 @@ function en(e, t, n, a) {
       branchId: r,
       state: u,
       application: o,
-      libraryApplication: g.default.getLibraryApplication(i, r),
+      libraryApplication: A.default.getLibraryApplication(i, r),
       finished: t,
       index: l
     }), e
   }, [])
 }
-var ea = (0, T.default)(u.default.connectStores([S.default, A.default, N.default, m.default, R.default], () => {
-  let e = en(N.default.activeItems, !1, S.default, A.default),
-    t = en(N.default.finishedItems, !0, S.default, A.default);
+var ea = (0, T.default)(u.default.connectStores([S.default, g.default, N.default, m.default, R.default], () => {
+  let e = en(N.default.activeItems, !1, S.default, g.default),
+    t = en(N.default.finishedItems, !0, S.default, g.default);
   return {
     applications: [...e, ...t],
     paused: N.default.paused,

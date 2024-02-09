@@ -22,8 +22,8 @@ n.r(t), n.d(t, {
     return m
   }
 }), n("702976");
-var s = n("872717"),
-  a = n("913144"),
+var a = n("872717"),
+  s = n("913144"),
   l = n("81732");
 n("21121"), n("693051");
 var i = n("263024");
@@ -33,7 +33,7 @@ var r = n("42203"),
   u = n("49111");
 
 function d(e, t, n) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "CHANNEL_SETTINGS_INIT",
     channelId: e,
     location: t,
@@ -42,13 +42,13 @@ function d(e, t, n) {
 }
 
 function c() {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "CHANNEL_SETTINGS_CLOSE"
   })
 }
 
 function f(e) {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "CHANNEL_SETTINGS_SET_SECTION",
     section: e
   })
@@ -58,7 +58,7 @@ function h(e) {
   let {
     name: t,
     type: n,
-    topic: s,
+    topic: a,
     bitrate: l,
     userLimit: i,
     nsfw: r,
@@ -74,16 +74,16 @@ function h(e) {
     locked: E,
     invitable: g,
     availableTags: S,
-    defaultSortOrder: A,
-    defaultForumLayout: _,
+    defaultSortOrder: _,
+    defaultForumLayout: A,
     iconEmoji: T,
     themeColor: M
   } = e;
-  a.default.dispatch({
+  s.default.dispatch({
     type: "CHANNEL_SETTINGS_UPDATE",
     name: t,
     channelType: n,
-    topic: s,
+    topic: a,
     bitrate: l,
     userLimit: i,
     nsfw: r,
@@ -99,8 +99,8 @@ function h(e) {
     locked: E,
     invitable: g,
     availableTags: S,
-    defaultSortOrder: A,
-    defaultForumLayout: _,
+    defaultSortOrder: _,
+    defaultForumLayout: A,
     iconEmoji: T,
     themeColor: M
   })
@@ -119,8 +119,8 @@ async function C(e, t) {
     rateLimitPerUser: E,
     defaultThreadRateLimitPerUser: g,
     defaultAutoArchiveDuration: S,
-    template: A,
-    defaultReactionEmoji: _,
+    template: _,
+    defaultReactionEmoji: A,
     rtcRegion: T,
     videoQualityMode: M,
     autoArchiveDuration: N,
@@ -132,9 +132,9 @@ async function C(e, t) {
     iconEmoji: y,
     themeColor: O
   } = t, D = r.default.getChannel(e);
-  return a.default.dispatch({
+  return s.default.dispatch({
     type: "CHANNEL_SETTINGS_SUBMIT"
-  }), await i.default.unarchiveThreadIfNecessary(e), s.default.patch({
+  }), await i.default.unarchiveThreadIfNecessary(e), a.default.patch({
     url: u.Endpoints.CHANNEL(e),
     body: {
       name: n,
@@ -149,16 +149,16 @@ async function C(e, t) {
       rate_limit_per_user: E,
       default_thread_rate_limit_per_user: g,
       default_auto_archive_duration: S,
-      template: A,
+      template: _,
       rtc_region: T,
       video_quality_mode: M,
       auto_archive_duration: N,
       locked: I,
       invitable: v,
-      default_reaction_emoji: null != _ ? {
-        emoji_id: null == _ ? void 0 : _.emojiId,
-        emoji_name: null == _ ? void 0 : _.emojiName
-      } : null === _ ? null : void 0,
+      default_reaction_emoji: null != A ? {
+        emoji_id: null == A ? void 0 : A.emojiId,
+        emoji_name: null == A ? void 0 : A.emojiName
+      } : null === A ? null : void 0,
       available_tags: null == L ? void 0 : L.map(e => ({
         id: e.id,
         name: e.name,
@@ -176,13 +176,13 @@ async function C(e, t) {
     },
     oldFormErrors: !0
   }).then(t => {
-    a.default.dispatch({
+    s.default.dispatch({
       type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
       channelId: e
     });
     let n = null == D ? void 0 : D.getGuildId();
     return null != n && !(null == D ? void 0 : D.isThread()) && l.default.checkGuildTemplateDirty(n), t
-  }, e => (a.default.dispatch({
+  }, e => (s.default.dispatch({
     type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
     errors: e.body
   }), e))
@@ -190,7 +190,7 @@ async function C(e, t) {
 
 function p(e) {
   let t = r.default.getChannel(e);
-  s.default.delete({
+  a.default.delete({
     url: u.Endpoints.CHANNEL(e),
     oldFormErrors: !0
   }).then(() => {
@@ -206,7 +206,7 @@ var m = {
   close: c,
   setSection: f,
   selectPermissionOverwrite: function(e) {
-    a.default.dispatch({
+    s.default.dispatch({
       type: "CHANNEL_SETTINGS_OVERWRITE_SELECT",
       overwriteId: e
     })
@@ -215,7 +215,7 @@ var m = {
   saveChannel: C,
   deleteChannel: p,
   updateVoiceChannelStatus: function(e, t) {
-    return s.default.put({
+    return a.default.put({
       url: u.Endpoints.UPDATE_VOICE_CHANNEL_STATUS(e),
       body: {
         status: t

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return A
   }
 }), n("222007");
 var a = n("37983");
@@ -74,4 +74,4 @@ class m extends f.default {
     }
   }
 }
-var g = new m
+var A = new m

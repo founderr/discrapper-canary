@@ -23,8 +23,8 @@ var a = n("913144"),
   S = n("102985"),
   p = n("860957"),
   m = n("901165"),
-  g = n("599110"),
-  A = n("360782"),
+  A = n("599110"),
+  g = n("360782"),
   N = n("49111"),
   R = n("353927");
 let O = {
@@ -106,7 +106,7 @@ let O = {
   },
   [N.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK]: {
     onTrigger(e) {
-      let t = (0, A.default)();
+      let t = (0, g.default)();
       null != t && (e ? l.default.setUILocked(!m.default.isUILocked(t), t) : l.default.setInputLocked(!p.default.isInputLocked(t), t))
     },
     keyEvents: {
@@ -166,7 +166,7 @@ let O = {
   [N.GlobalKeybindActions.SOUNDBOARD]: {
     onTrigger: () => {
       if (!(0, h.canSelectedVoiceChannelUseSoundboard)()) return;
-      let e = (0, A.default)();
+      let e = (0, g.default)();
       null != e && (m.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
     },
     keyEvents: {
@@ -177,7 +177,7 @@ let O = {
   [N.GlobalKeybindActions.SOUNDBOARD_HOLD]: {
     onTrigger: e => {
       if (!(0, h.canSelectedVoiceChannelUseSoundboard)()) return;
-      let t = (0, A.default)();
+      let t = (0, g.default)();
       if (null != t) {
         e ? (0, C.openSoundboardInOverlay)(!1, t) : (0, C.closeSoundboardInOverlay)(t);
         return
@@ -191,7 +191,7 @@ let O = {
   [N.GlobalKeybindActions.SAVE_CLIP]: {
     onTrigger: () => {
       let e = (0, d.areClipsEnabled)();
-      e && (g.default.track(N.AnalyticEvents.CLIP_SAVE_KEYBIND_PRESSED), (0, c.saveClip)())
+      e && (A.default.track(N.AnalyticEvents.CLIP_SAVE_KEYBIND_PRESSED), (0, c.saveClip)())
     },
     keyEvents: {
       keyup: !1,

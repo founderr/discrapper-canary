@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return g
   }
 });
 var a = n("37983"),
@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("223415"),
   p = n("399174"),
   m = n("49111"),
-  g = n("507812"),
-  A = s.memo(function() {
+  A = n("507812"),
+  g = s.memo(function() {
     let e = s.useRef(null),
       t = s.useCallback(t => {
         let {
@@ -41,9 +41,9 @@ var a = n("37983"),
       I.ComponentDispatch.unsubscribe(m.ComponentActions.SHAKE_APP, t)
     }), [t]), (0, E.default)(), (0, a.jsxs)(r.Shakeable, {
       ref: e,
-      className: g.app,
+      className: A.app,
       children: [(0, a.jsx)(p.default, {
-        className: g.layers,
+        className: A.layers,
         children: (0, a.jsx)(o.default, {})
       }), (0, a.jsx)(_.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(T.default, {}), (0, a.jsx)(h.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {}), (0, a.jsx)(S.default, {})]
     })

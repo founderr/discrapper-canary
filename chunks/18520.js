@@ -31,7 +31,7 @@ async function I(e, t, n) {
     guild_id: S,
     channel_id: p,
     prompt: m,
-    disable_guild_select: g
+    disable_guild_select: A
   } = e;
   if (null == l) throw new E.default({
     errorCode: h.RPCErrors.OAUTH2_ERROR
@@ -39,8 +39,8 @@ async function I(e, t, n) {
   if (null != r) throw new E.default({
     errorCode: h.RPCErrors.OAUTH2_ERROR
   }, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
-  let A = [];
-  "string" == typeof I ? A = I.split(" ").filter(e => e.length > 0) : Array.isArray(I) && (A = I);
+  let g = [];
+  "string" == typeof I ? g = I.split(" ").filter(e => e.length > 0) : Array.isArray(I) && (g = I);
   let N = c.default.getCurrentUser();
   if (null == N) throw new E.default({
     errorCode: h.RPCErrors.OAUTH2_ERROR
@@ -48,7 +48,7 @@ async function I(e, t, n) {
   try {
     a = await (0, u.fetchAuthorization)({
       clientId: l,
-      scopes: A,
+      scopes: g,
       responseType: i,
       redirectUri: r,
       codeChallenge: o,
@@ -67,7 +67,7 @@ async function I(e, t, n) {
     let e = await (0, u.authorize)({
       authorize: !0,
       clientId: l,
-      scopes: A,
+      scopes: g,
       responseType: i,
       redirectUri: r,
       codeChallenge: o,
@@ -88,7 +88,7 @@ async function I(e, t, n) {
   try {
     R = s.default.deserialize(null != T ? T : 0)
   } catch (e) {}
-  return t(l, a, A, R, i, r, o, _, C, S, p, m, g)
+  return t(l, a, g, R, i, r, o, _, C, S, p, m, A)
 }
 
 function T(e, t) {

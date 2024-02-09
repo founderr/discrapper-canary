@@ -21,8 +21,8 @@ function p(e) {
     n = h.default.Messages.OVERLAY_NOTIFICATION_INCOMING_CALL,
     p = (0, l.getChannelIconURL)(e),
     {
-      trackView: E,
-      trackClick: g
+      trackView: g,
+      trackClick: m
     } = (0, u.makeAnalyticsTrackers)(f.OverlayNotificationType.IncomingCall, {
       notif_type: f.OverlayNotificationType.IncomingCall,
       notif_user_id: 1 === e.recipients.length ? e.recipients[0] : null,
@@ -39,10 +39,10 @@ function p(e) {
     confirmText: h.default.Messages.JOIN_CALL,
     cancelText: h.default.Messages.DECLINE,
     onNotificationShow: () => {
-      E()
+      g()
     },
     onConfirmClick: () => {
-      a.default.callPrivateChannel(e.id), g("join"), a.default.track(c.AnalyticEvents.VOICE_CHANNEL_SELECTED, {
+      a.default.callPrivateChannel(e.id), m("join"), a.default.track(c.AnalyticEvents.VOICE_CHANNEL_SELECTED, {
         location: "Overlay Notificaiton",
         guild_id: null,
         channel_id: e.id,
@@ -50,10 +50,10 @@ function p(e) {
       })
     },
     onCancelClick: () => {
-      i.default.stopRinging(e.id), g("decline")
+      i.default.stopRinging(e.id), m("decline")
     },
     onDismissClick: () => {
-      g("dismiss")
+      m("dismiss")
     }
   }
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useHubUnreadCount: function() {
-    return o
+    return u
   }
 });
 var l = n("249654"),
@@ -10,7 +10,7 @@ var l = n("249654"),
   i = n("513688"),
   r = n("660478");
 
-function o(e) {
+function u(e) {
   return (0, a.useStateFromStores)([s.default, r.default], () => {
     var t;
     if (null == e) return 0;

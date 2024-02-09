@@ -128,8 +128,8 @@ class m {
     this._rows = e
   }
 }
-let g = !0,
-  A = !1,
+let A = !0,
+  g = !1,
   N = C.FriendsSections.ONLINE,
   R = new m,
   O = !0,
@@ -137,11 +137,11 @@ let g = !0,
 
 function v() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  g && (e || N !== C.FriendsSections.ONLINE && N !== C.FriendsSections.ADD_FRIEND) && !A && (g = !1, A = !0, r.default.fetchRelationships())
+  A && (e || N !== C.FriendsSections.ONLINE && N !== C.FriendsSections.ADD_FRIEND) && !g && (A = !1, g = !0, r.default.fetchRelationships())
 }
 
 function M() {
-  if (g = !0, O ? A = !1 : v(), R = R.reset(), L) return;
+  if (A = !0, O ? g = !1 : v(), R = R.reset(), L) return;
   let e = R.getRelationshipCounts();
   N = 0 === e[C.RelationshipTypes.FRIEND] ? 0 !== e[C.RelationshipTypes.PENDING_INCOMING] ? C.FriendsSections.PENDING : C.FriendsSections.ADD_FRIEND : C.FriendsSections.ONLINE
 }
@@ -161,7 +161,7 @@ class y extends l.default.Store {
   }
   getState() {
     return {
-      fetching: A,
+      fetching: g,
       section: N,
       pendingCount: _.default.getPendingCount(),
       rows: R
@@ -183,10 +183,10 @@ var x = new y(i.default, {
     return O = null != t, P(), !O
   },
   LOAD_RELATIONSHIPS_SUCCESS: function() {
-    A = !1
+    g = !1
   },
   LOAD_RELATIONSHIPS_FAILURE: function() {
-    g = !0, A = !0
+    A = !0, g = !0
   },
   DRAWER_SELECT_TAB: function(e) {
     let {

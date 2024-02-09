@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("145131"),
   p = n("953109"),
   m = n("280174"),
-  g = n("158352"),
-  A = n("867544"),
+  A = n("158352"),
+  g = n("867544"),
   N = n("216422"),
   R = n("688342"),
   O = n("599110"),
@@ -130,7 +130,7 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
           children: [(0, a.jsx)(G, {
             flag: P.LibraryApplicationFlags.PRIVATE,
             item: e,
-            icon: A.default,
+            icon: g.default,
             tooltip: D.default.Messages.GAME_LIBRARY_PRIVATE_TOOLTIP
           }), (0, a.jsx)(G, {
             flag: P.LibraryApplicationFlags.OVERLAY_DISABLED,
@@ -316,7 +316,7 @@ class k extends s.PureComponent {
       highlightedApplicationKey: o
     } = this.state;
     return (0, a.jsxs)(s.Fragment, {
-      children: [n.length > 0 ? (0, a.jsx)(g.default, {
+      children: [n.length > 0 ? (0, a.jsx)(A.default, {
         columns: j,
         data: n,
         sortData: !1,

@@ -37,7 +37,7 @@ function m() {
         }
       }), _.switchAccount(t))
     },
-    g = n.map(n => {
+    A = n.map(n => {
       let s = new r.default(n),
         o = s.id === (null == e ? void 0 : e.id),
         u = n.tokenStatus === h.MultiAccountTokenStatus.INVALID,
@@ -89,11 +89,11 @@ function m() {
         }
       }, s.id)
     });
-  return g.push((0, a.jsxs)(a.Fragment, {
+  return A.push((0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.MenuSeparator, {}), (0, a.jsx)(l.MenuItem, {
       id: "manage-accounts",
       label: S.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
       action: I.default
     })]
-  })), g
+  })), A
 }

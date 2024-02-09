@@ -61,14 +61,14 @@ function C(e) {
       partiedMembers: d,
       voiceChannels: C,
       currentActivities: I
-    } = e, T = s.length, S = d.length - T, p = I[0], m = null == p ? void 0 : p.activity, g = null == p ? void 0 : p.startedPlayingTime, A = {
+    } = e, T = s.length, S = d.length - T, p = I[0], m = null == p ? void 0 : p.activity, A = null == p ? void 0 : p.startedPlayingTime, g = {
       name: null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : ""
     };
     if ((0, i.default)(m) && null != m) return {
       subtitle: (0, a.jsx)(u.default, {
-        start: g,
+        start: A,
         location: u.default.Locations.ACTIVITY_FEED_NEW,
-        messageProps: A
+        messageProps: g
       }),
       icon: null
     };
@@ -92,9 +92,9 @@ function C(e) {
           };
           return {
             subtitle: (0, a.jsx)(u.default, {
-              start: g,
+              start: A,
               location: u.default.Locations.ACTIVITY_FEED_NEW,
-              messageProps: A
+              messageProps: g
             }), icon: null != e ? (0, a.jsx)(f.default.Header.Icon, {
               src: null != e.getIconURL(E.ICON_SIZE) ? e.getIconURL(E.ICON_SIZE) : n("992739")
             }) : null
@@ -167,7 +167,7 @@ function C(e) {
         subtitle: (0, a.jsx)(u.default, {
           start: s,
           location: u.default.Locations.ACTIVITY_FEED_NEW,
-          messageProps: A
+          messageProps: g
         }),
         icon: null != n && null != n.getIconURL(E.ICON_SIZE) ? (0, a.jsx)(f.default.Header.Icon, {
           src: n.getIconURL(E.ICON_SIZE)

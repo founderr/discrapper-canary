@@ -29,8 +29,8 @@ function m(e) {
     party: t,
     onChannelContextMenu: n,
     registerQuestEntrypoint: m,
-    unregisterQuestEntrypoint: g,
-    shouldRenderQuestEntrypoint: A
+    unregisterQuestEntrypoint: A,
+    shouldRenderQuestEntrypoint: g
   } = e, {
     voiceChannels: N,
     currentActivities: R,
@@ -167,9 +167,9 @@ function m(e) {
     }, "xbox-".concat(null !== (P = x.session_id) && void 0 !== P ? P : n)));
     if (null != b) {
       let e = (0, E.getQuestByApplicationId)(M, b.id);
-      null != e && A(e.id, t.id) && (m(e.id, t.id), D((0, a.jsx)(_.default, {
+      null != e && g(e.id, t.id) && (m(e.id, t.id), D((0, a.jsx)(_.default, {
         quest: e,
-        onUnmount: () => g(e.id)
+        onUnmount: () => A(e.id)
       }, "quest-".concat(e.id, "-").concat(null !== (y = x.session_id) && void 0 !== y ? y : n))))
     }
   }), P.length > 0 ? (0, a.jsx)(T.default.Body, {

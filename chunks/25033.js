@@ -1,43 +1,43 @@
 "use strict";
-let l;
+let a;
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return d
   }
 });
-var a = n("446674"),
-  u = n("913144"),
-  r = n("988415");
-let s = (0, r.getDefaultCountryCode)();
+var s = n("446674"),
+  l = n("913144"),
+  i = n("988415");
+let r = (0, i.getDefaultCountryCode)();
 
-function i(e) {
+function o(e) {
   var t;
   let {
     countryCode: n
   } = e;
-  null != n && (s = null !== (t = (0, r.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : (0, r.getDefaultCountryCode)())
+  null != n && (r = null !== (t = (0, i.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : (0, i.getDefaultCountryCode)())
 }
-class o extends a.default.DeviceSettingsStore {
+class u extends s.default.DeviceSettingsStore {
   initialize(e) {
-    null != e && (l = e.selectedCountryCode)
+    null != e && (a = e.selectedCountryCode)
   }
   getUserAgnosticState() {
     return {
-      selectedCountryCode: l
+      selectedCountryCode: a
     }
   }
   getCountryCode() {
-    return null != l ? l : s
+    return null != a ? a : r
   }
 }
-o.displayName = "PhoneStore", o.persistKey = "PhoneStore";
-var _ = new o(u.default, {
+u.displayName = "PhoneStore", u.persistKey = "PhoneStore";
+var d = new u(l.default, {
   PHONE_SET_COUNTRY_CODE: function(e) {
     let {
       countryCode: t
     } = e;
-    l = t
+    a = t
   },
-  CONNECTION_OPEN: i,
-  SET_LOCATION_METADATA: i
+  CONNECTION_OPEN: o,
+  SET_LOCATION_METADATA: o
 })

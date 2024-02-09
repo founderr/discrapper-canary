@@ -23,11 +23,11 @@ var a = n("37983"),
   S = n("49111"),
   p = n("782340"),
   m = n("234837");
-let g = {
+let A = {
   HOST: 5,
   LISTENER: 4
 };
-class A extends s.PureComponent {
+class g extends s.PureComponent {
   isHost() {
     let {
       currentUser: e,
@@ -73,7 +73,7 @@ class A extends s.PureComponent {
         className: m.party,
         children: (0, a.jsx)(f.default, {
           users: this.props.party,
-          max: this.isHost() ? g.HOST : g.LISTENER,
+          max: this.isHost() ? A.HOST : A.LISTENER,
           renderUser: this.renderPartyMember,
           renderMoreUsers: this.renderPartyMemberOverflow
         })
@@ -137,4 +137,4 @@ class A extends s.PureComponent {
     }
   }
 }
-var N = A
+var N = g

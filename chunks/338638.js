@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("868246"),
   p = n("447621"),
   m = n("49111"),
-  g = n("782340"),
-  A = n("708417");
+  A = n("782340"),
+  g = n("708417");
 let N = o.throttle(C.trackSearchResultsViewed, 1e3, {
     leading: !1,
     trailing: !0
@@ -39,11 +39,11 @@ let N = o.throttle(C.trackSearchResultsViewed, 1e3, {
     } = e;
     return (0, a.jsx)(d.Clickable, {
       onClick: () => n(s),
-      className: i(A.categoryPill, {
-        [A.selected]: t
+      className: i(g.categoryPill, {
+        [g.selected]: t
       }),
       children: (0, a.jsx)(d.Text, {
-        className: A.categoryLabel,
+        className: g.categoryLabel,
         variant: "text-sm/normal",
         children: null != r ? "".concat(l, " (").concat(r, ")") : l
       })
@@ -123,7 +123,7 @@ class O extends s.PureComponent {
       }
     });
     return (0, a.jsx)(d.SingleSelect, {
-      className: A.languageSelector,
+      className: g.languageSelector,
       options: s,
       value: null !== (e = null == n ? void 0 : n.name) && void 0 !== e ? e : "",
       onChange: this.handleLanguageChange,
@@ -136,12 +136,12 @@ class O extends s.PureComponent {
       countsByCategory: t
     } = this.props;
     return (0, a.jsx)("div", {
-      className: A.categories,
+      className: g.categories,
       children: null == t ? void 0 : t.map(t => {
         let [n, s] = t;
         return (0, a.jsx)(R, {
           categoryId: n,
-          name: n === p.DISCOVERY_ALL_CATEGORIES_ID ? g.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : S.default.getCategoryName(n),
+          name: n === p.DISCOVERY_ALL_CATEGORIES_ID ? A.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : S.default.getCategoryName(n),
           onCategoryChange: this.handleCategoryChange,
           isSelected: e === n,
           count: s
@@ -159,19 +159,19 @@ class O extends s.PureComponent {
     } = this.props;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
-        className: i(A.container, {
-          [A.searchPage]: s
+        className: i(g.container, {
+          [g.searchPage]: s
         }),
         children: [(0, a.jsx)("div", {
-          className: A.search,
+          className: g.search,
           children: (0, a.jsx)(E.default, {
             ref: this._searchRef,
             searchTerm: e,
-            className: s ? void 0 : A.searchBox,
-            inputClassName: s ? void 0 : A.searchBoxInput,
-            closeIconClassName: s ? void 0 : A.closeIcon,
-            searchIconClassName: s ? void 0 : A.searchIcon,
-            label: g.default.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
+            className: s ? void 0 : g.searchBox,
+            inputClassName: s ? void 0 : g.searchBoxInput,
+            closeIconClassName: s ? void 0 : g.closeIcon,
+            searchIconClassName: s ? void 0 : g.searchIcon,
+            label: A.default.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
             placeholder: n,
             onChange: this.handleQueryChanged,
             onClear: this.handleQueryCleared,
@@ -179,7 +179,7 @@ class O extends s.PureComponent {
             onBlur: this.handleSearchBlurred,
             onKeyPress: this.handleSearchKeyPress,
             autoFocus: !s,
-            cta: t && null != e && e.length > 1 ? g.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+            cta: t && null != e && e.length > 1 ? A.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
           })
         }), s ? this.renderSearchOptions() : null]
       }), s ? this.renderCategories() : null]

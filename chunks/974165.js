@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("151426"),
   i = n("77078"),
   r = n("990766"),
-  o = n("716241"),
-  u = n("713726"),
+  u = n("716241"),
+  o = n("713726"),
   d = n("9759"),
   c = n("705565"),
   f = n("44723"),
@@ -21,9 +21,9 @@ var a = n("446674"),
   m = n("374014"),
   E = n("375202"),
   g = n("373469"),
-  S = n("271938"),
-  I = n("568307"),
-  _ = n("18494"),
+  I = n("271938"),
+  _ = n("568307"),
+  S = n("18494"),
   N = n("101125"),
   T = n("703370"),
   A = n("774223"),
@@ -33,9 +33,9 @@ var a = n("446674"),
   R = n("782340");
 
 function M() {
-  let e = (0, a.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()),
-    t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
-    n = (0, a.useStateFromStores)([I.default, T.default], () => (0, E.default)(I.default, T.default)),
+  let e = (0, a.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
+    t = (0, a.useStateFromStores)([I.default], () => I.default.getId()),
+    n = (0, a.useStateFromStores)([_.default, T.default], () => (0, E.default)(_.default, T.default)),
     {
       canBroadcast: M
     } = d.default.useExperiment({
@@ -53,7 +53,7 @@ function M() {
   let b = [];
   O && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
   let j = () => {
-      o.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
+      u.default.trackWithMetadata(v.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
         game_id: null == n ? void 0 : n.id
       })
     },
@@ -65,8 +65,8 @@ function M() {
             pid: null == n ? void 0 : n.pid,
             channelId: e
           })
-        }) : (0, u.startBroadcastForStream)((0, m.encodeStreamKey)(l), null == n ? void 0 : n.pid)
-      } else(0, u.stopBroadcast)()
+        }) : (0, o.startBroadcastForStream)((0, m.encodeStreamKey)(l), null == n ? void 0 : n.pid)
+      } else(0, o.stopBroadcast)()
     },
     U = e => (0, l.jsx)(L.default, {
       tooltipText: O ? R.default.Messages.START_BROADCASTING : R.default.Messages.STOP_BROADCASTING,

@@ -27,8 +27,8 @@ function p(e) {
     channel: t,
     iconClassName: p,
     className: m,
-    innerClassName: g,
-    ...A
+    innerClassName: A,
+    ...g
   } = e, {
     mute: N,
     suppress: R
@@ -74,7 +74,7 @@ function p(e) {
         ...t,
         className: m,
         wrapperClassName: m,
-        innerClassName: g,
+        innerClassName: A,
         disabled: L,
         onClick: () => {
           var t, n;
@@ -83,7 +83,7 @@ function p(e) {
         onContextMenu: U,
         fullWidth: !0,
         size: r.Button.Sizes.SMALL,
-        ...A,
+        ...g,
         children: (0, a.jsx)(_.default, {
           className: p
         })

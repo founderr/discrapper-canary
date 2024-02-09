@@ -24,8 +24,8 @@ var s = n("524297"),
   S = n("471671"),
   p = n("568734"),
   m = n("449008"),
-  g = n("253981"),
-  A = n("563680"),
+  A = n("253981"),
+  g = n("563680"),
   N = n("861309"),
   R = n("578287"),
   O = n("716724"),
@@ -170,7 +170,7 @@ var x = {
       } = (0, v.validateOpenInviteDialog)(), r = h.default.getWindow(D.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
       (null == r ? void 0 : r.closed) && (r = null);
       let o = null != r ? D.AppContext.POPOUT : D.AppContext.APP;
-      (0, A.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
+      (0, g.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("310688").then(n.bind(n, "310688"));
@@ -261,7 +261,7 @@ var x = {
       if (null == i) throw new N.default({
         errorCode: D.RPCErrors.INVALID_COMMAND
       }, "No channel found");
-      if (!g.default.isDiscordCdnUrl(a)) throw new N.default({
+      if (!A.default.isDiscordCdnUrl(a)) throw new N.default({
         errorCode: D.RPCErrors.INVALID_PAYLOAD
       }, "mediaUrl must be a Discord CDN url");
       (0, _.openActivityShareMomentModal)({

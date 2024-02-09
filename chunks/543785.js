@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("907002"),
   i = n("974667"),
   r = n("446674"),
-  o = n("77078"),
-  u = n("272030"),
+  u = n("77078"),
+  o = n("272030"),
   d = n("191145"),
   c = n("843962"),
   f = n("679653"),
@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("18494"),
   E = n("697218"),
   g = n("471671"),
-  S = n("15738"),
-  I = n("956089"),
-  _ = n("108189"),
+  I = n("15738"),
+  _ = n("956089"),
+  S = n("108189"),
   N = n("610898"),
   T = n("829562"),
   A = n("255991"),
@@ -119,7 +119,7 @@ class M extends a.PureComponent {
       selected: n,
       badge: a,
       audio: r,
-      video: u,
+      video: o,
       stream: d,
       isCurrentUserInThisDMCall: c,
       unread: f
@@ -130,7 +130,7 @@ class M extends a.PureComponent {
     return (0, l.jsx)(s.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, l.jsxs)(N.ListItem, {
-        children: [(0, l.jsx)(S.default, {
+        children: [(0, l.jsx)(I.default, {
           hovered: !C && h,
           selected: !C && n,
           unread: !C && f,
@@ -138,19 +138,19 @@ class M extends a.PureComponent {
         }), (0, l.jsx)(T.default, {
           text: null != t ? t : "",
           selected: n,
-          children: (0, l.jsx)(o.BlobMask, {
+          children: (0, l.jsx)(u.BlobMask, {
             selected: n || h,
             lowerBadge: a > 0 ? (0, A.renderMentionBadge)(a) : null,
             upperBadge: (0, A.renderMediaBadge)({
               audio: r,
-              video: u,
+              video: o,
               screenshare: d,
               isCurrentUserConnected: c
             }),
-            lowerBadgeWidth: (0, I.getBadgeWidthForValue)(a),
+            lowerBadgeWidth: (0, _.getBadgeWidthForValue)(a),
             children: (0, l.jsx)(i.ListNavigatorItem, {
               id: e.id,
-              children: a => (0, l.jsx)(_.default, {
+              children: a => (0, l.jsx)(S.default, {
                 to: L.Routes.CHANNEL(L.ME, e.id),
                 onMouseEnter: () => this.setState({
                   hovered: !0
@@ -184,7 +184,7 @@ class M extends a.PureComponent {
       let {
         channel: t
       } = this.props, a = t.type === L.ChannelTypes.DM ? E.default.getUser(t.getRecipientId()) : null;
-      null != a ? (0, u.openContextMenuLazy)(e, async () => {
+      null != a ? (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("130074").then(n.bind(n, "130074"));
@@ -193,7 +193,7 @@ class M extends a.PureComponent {
           channel: t,
           user: a
         })
-      }) : (0, u.openContextMenuLazy)(e, async () => {
+      }) : (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("493015").then(n.bind(n, "493015"));
@@ -217,22 +217,22 @@ var O = a.forwardRef(function(e, t) {
     a = (0, f.default)(e.channel),
     s = (0, r.useStateFromStores)([C.default], () => C.default.getChannelId(), []),
     i = (0, r.useStateFromStores)([d.default], () => null != s ? d.default.getMode(s) : L.ChannelModes.VOICE, [s]),
-    o = (0, r.useStateFromStores)([h.default], () => h.default.getAllApplicationStreamsForChannel(n).length > 0),
-    u = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId(), []),
+    u = (0, r.useStateFromStores)([h.default], () => h.default.getAllApplicationStreamsForChannel(n).length > 0),
+    o = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId(), []),
     c = (0, r.useStateFromStores)([p.default], () => p.default.getMentionCount(n), [n]),
     E = s === n,
     g = !1,
-    S = !1;
-  return E && (g = i === L.ChannelModes.VOICE, S = i === L.ChannelModes.VIDEO), (0, l.jsx)(M, {
+    I = !1;
+  return E && (g = i === L.ChannelModes.VOICE, I = i === L.ChannelModes.VIDEO), (0, l.jsx)(M, {
     ...e,
     ref: t,
     channelName: a,
     unread: c > 0,
-    selected: u === n,
+    selected: o === n,
     badge: c,
     audio: g,
-    video: S,
-    stream: o,
+    video: I,
+    stream: u,
     isCurrentUserInThisDMCall: E
   })
 })

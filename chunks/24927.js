@@ -25,12 +25,12 @@ var a = n("37983"),
       isActive: I,
       onOtherHover: T,
       className: S
-    } = e, [p, m] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
-      m(!0), C && !I && !g && (null == T || T())
+    } = e, [p, m] = s.useState(!1), [A, g] = s.useState(!1), N = () => {
+      m(!0), C && !I && !A && (null == T || T())
     }, R = () => {
       m(!1)
     }, O = (e, t) => {
-      null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
+      null != t && (g(!0), (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("406784").then(n.bind(n, "406784"));
@@ -40,7 +40,7 @@ var a = n("37983"),
         })
       }, {
         onClose: () => {
-          A(!1)
+          g(!1)
         }
       }))
     };
@@ -53,7 +53,7 @@ var a = n("37983"),
         },
         children: (0, a.jsx)(r.default.div, {
           className: i(f.messageRequestItem, S, {
-            [f.active]: I || g,
+            [f.active]: I || A,
             [f.firstItem]: 0 === t
           }),
           onContextMenu: e => O(e, E),
@@ -65,7 +65,7 @@ var a = n("37983"),
             opacity: 1
           },
           ...e,
-          children: l(p || I || g)
+          children: l(p || I || A)
         })
       })
     })

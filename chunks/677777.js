@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("65597"),
   r = n("151426"),
-  o = n("95410"),
-  u = n("77078"),
+  u = n("95410"),
+  o = n("77078"),
   d = n("272030"),
   c = n("206230"),
   f = n("716241"),
@@ -21,9 +21,9 @@ var a = n("414456"),
   m = n("907038"),
   E = n("10641"),
   g = n("393414"),
-  S = n("923959"),
-  I = n("305961"),
-  _ = n("381546"),
+  I = n("923959"),
+  _ = n("305961"),
+  S = n("381546"),
   N = n("956089"),
   T = n("599110"),
   A = n("708402"),
@@ -38,8 +38,8 @@ function O(e) {
     guildId: t,
     selected: n,
     handleClick: a
-  } = e, d = (0, C.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), p = (0, i.default)([I.default], () => I.default.getGuild(t)), A = (null == p ? void 0 : p.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, v = "false" === o.default.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.default)([c.default], () => c.default.useReducedMotion);
-  return (0, l.jsx)(u.ClickableContainer, {
+  } = e, d = (0, C.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), p = (0, i.default)([_.default], () => _.default.getGuild(t)), A = (null == p ? void 0 : p.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, v = "false" === u.default.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.default)([c.default], () => c.default.useReducedMotion);
+  return (0, l.jsx)(o.ClickableContainer, {
     tag: "div",
     onClick: a,
     className: s(M.previewChannelRow, {
@@ -57,14 +57,14 @@ function O(e) {
       }), (0, l.jsxs)("div", {
         className: M.gifSection,
         children: [O ? (0, l.jsx)(N.TextBadge, {
-          color: u.tokens.unsafe_rawColors.BRAND_260.css,
+          color: o.tokens.unsafe_rawColors.BRAND_260.css,
           text: R.default.Messages.NEW,
           className: M.newBadge
         }) : (0, l.jsx)("img", {
           src: (0, h.getAssetCDNUrl)("server_products/storefront/money.gif"),
           className: M.money,
           alt: ""
-        }), n && (0, l.jsx)(u.Clickable, {
+        }), n && (0, l.jsx)(o.Clickable, {
           className: M.closeButton,
           onClick: e => {
             if (e.stopPropagation(), (0, E.markDismissibleContentAsDismissed)(r.DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW), T.default.track(L.AnalyticEvents.GUILD_SHOP_PREVIEW_CLICK, {
@@ -72,11 +72,11 @@ function O(e) {
                 action_taken: x.GuildShopPreviewClickActions.DISMISS_CHANNEL_ROW
               }), !d || !A) {
               var n;
-              (0, g.replaceWith)(L.Routes.CHANNEL(t, null === (n = S.default.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id))
+              (0, g.replaceWith)(L.Routes.CHANNEL(t, null === (n = I.default.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id))
             }
           },
           "aria-label": R.default.Messages.DISMISS,
-          children: (0, l.jsx)(_.default, {
+          children: (0, l.jsx)(S.default, {
             width: 16,
             height: 16
           })
@@ -91,7 +91,7 @@ function y(e) {
     guild: t,
     selected: a
   } = e, s = (0, p.useGuildShopPreviewVisible)(t, "guild_shop_channel_row"), i = () => {
-    o.default.set(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "true"), (0, g.transitionTo)(L.Routes.CHANNEL(t.id, v.StaticChannelRoute.GUILD_SHOP))
+    u.default.set(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "true"), (0, g.transitionTo)(L.Routes.CHANNEL(t.id, v.StaticChannelRoute.GUILD_SHOP))
   };
   return s ? (0, l.jsx)(O, {
     guildId: t.id,

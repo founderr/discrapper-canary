@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("224978"),
   p = n("83916"),
   m = n("559541"),
-  g = n("49111"),
-  A = n("353927"),
+  A = n("49111"),
+  g = n("353927"),
   N = n("782340"),
   R = n("889195");
 
@@ -36,7 +36,7 @@ function O(e) {
     c.default.removeFriend(t.id, {
       location: "Friends"
     })
-  }, l = (0, r.useStateFromStores)([_.default], () => _.default.supports(A.Features.VIDEO));
+  }, l = (0, r.useStateFromStores)([_.default], () => _.default.supports(g.Features.VIDEO));
   return (0, a.jsxs)(o.Menu, {
     navId: "friend-row",
     "aria-label": N.default.Messages.USER_ACTIONS_MENU_LABEL,
@@ -143,8 +143,8 @@ class L extends s.PureComponent {
         user: t
       } = this.props;
       e.stopPropagation();
-      let n = i.find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
-      null != n ? (0, f.transitionTo)(g.Routes.CHANNEL(g.ME, n.id)) : u.default.openPrivateChannel(t.id)
+      let n = i.find(E.default.getMutablePrivateChannels(), e => e.type === A.ChannelTypes.DM && e.getRecipientId() === t.id);
+      null != n ? (0, f.transitionTo)(A.Routes.CHANNEL(A.ME, n.id)) : u.default.openPrivateChannel(t.id)
     }, this.handleOpenActionsMenu = e => {
       let {
         user: t

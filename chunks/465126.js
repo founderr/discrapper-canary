@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("587974"),
   p = n("49111"),
   m = n("782340"),
-  g = n("362962"),
-  A = n("68422"),
+  A = n("362962"),
+  g = n("68422"),
   N = n("578817"),
   R = n("855237");
 class O extends s.PureComponent {
@@ -32,7 +32,7 @@ class O extends s.PureComponent {
     if (t) return R;
     switch (e) {
       case p.ThemeTypes.DARK:
-        return A;
+        return g;
       case p.ThemeTypes.LIGHT:
         return N
     }
@@ -46,7 +46,7 @@ class O extends s.PureComponent {
       onTagClick: l
     } = this.props, {
       loaded: u,
-      hasBeenSeen: A,
+      hasBeenSeen: g,
       isVisible: N,
       submitting: R
     } = this.state, {
@@ -90,50 +90,50 @@ class O extends s.PureComponent {
       threshold: .1,
       children: N ? (0, a.jsx)(r.VisibilitySensor, {
         onChange: this.handleVisibilityChange,
-        active: !A,
+        active: !g,
         threshold: .55,
         children: (0, a.jsxs)("div", {
           className: i(n, {
-            [g.loaded]: u,
-            [g.loading]: !u
+            [A.loaded]: u,
+            [A.loading]: !u
           }),
           children: [R ? (0, a.jsx)(o.Spinner, {
             type: o.Spinner.Type.PULSING_ELLIPSIS,
-            className: g.spinner
+            className: A.spinner
           }) : null, (0, a.jsxs)(o.Clickable, {
             onClick: this.handleClickView,
-            className: i(g.card, {
-              [g.submitting]: R,
-              [g.cardWithTags]: U
+            className: i(A.card, {
+              [A.submitting]: R,
+              [A.cardWithTags]: U
             }),
             onContextMenu: this.handleContextMenu,
             children: [(0, a.jsxs)("div", {
-              className: g.cardHeader,
+              className: A.cardHeader,
               children: [(0, a.jsx)("div", {
-                className: g.splash,
+                className: A.splash,
                 children: (0, a.jsx)("img", {
                   src: x,
                   alt: "",
-                  className: i(g.splashImage, {
-                    [g.splashImageHeight]: !D
+                  className: i(A.splashImage, {
+                    [A.splashImageHeight]: !D
                   }),
                   onLoad: () => this.setState({
                     loaded: !0
                   })
                 })
               }), j || G ? (0, a.jsx)("div", {
-                className: g.actionButtons,
+                className: A.actionButtons,
                 children: (0, a.jsx)(E.default, {
                   guild: t
                 })
               }) : null, (0, a.jsx)("div", {
-                className: g.guildIcon,
+                className: A.guildIcon,
                 children: (0, a.jsx)(S.default, {
                   mask: S.default.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, a.jsx)("div", {
-                    className: g.iconMask,
+                    className: A.iconMask,
                     children: (0, a.jsx)(S.default, {
                       mask: S.default.Masks.SQUIRCLE,
                       width: 40,
@@ -141,27 +141,27 @@ class O extends s.PureComponent {
                       children: (0, a.jsx)("img", {
                         src: b,
                         alt: "",
-                        className: g.avatar
+                        className: A.avatar
                       })
                     })
                   })
                 })
               })]
             }), (0, a.jsxs)("div", {
-              className: g.guildInfo,
+              className: A.guildInfo,
               children: [(0, a.jsxs)("div", {
-                className: g.title,
+                className: A.title,
                 children: [(0, a.jsx)(T.default, {
-                  className: g.guildBadge,
+                  className: A.guildBadge,
                   guild: t,
                   tooltipColor: o.Tooltip.Colors.PRIMARY
                 }), (0, a.jsx)(o.Heading, {
                   variant: "heading-md/semibold",
-                  className: g.guildName,
+                  className: A.guildName,
                   children: O
                 })]
               }), (0, a.jsx)(o.Text, {
-                className: g.description,
+                className: A.description,
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: L
@@ -171,11 +171,11 @@ class O extends s.PureComponent {
                 guildId: t.id,
                 section: I.AnalyticsContexts.POPULAR
               }), (0, a.jsxs)("div", {
-                className: g.memberInfo,
+                className: A.memberInfo,
                 children: [null != v && (0, a.jsxs)("div", {
-                  className: g.memberCount,
+                  className: A.memberCount,
                   children: [(0, a.jsx)("div", {
-                    className: g.dotOnline
+                    className: A.dotOnline
                   }), (0, a.jsx)(o.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
@@ -184,9 +184,9 @@ class O extends s.PureComponent {
                     })
                   })]
                 }), null != M && (0, a.jsxs)("div", {
-                  className: g.memberCount,
+                  className: A.memberCount,
                   children: [(0, a.jsx)("div", {
-                    className: g.dotOffline
+                    className: A.dotOffline
                   }), (0, a.jsx)(o.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
@@ -200,8 +200,8 @@ class O extends s.PureComponent {
           })]
         })
       }) : (0, a.jsx)("div", {
-        className: i(g.card, {
-          [g.cardWithTags]: U
+        className: i(A.card, {
+          [A.cardWithTags]: U
         })
       })
     })
@@ -257,6 +257,6 @@ class O extends s.PureComponent {
   }
 }
 O.Placeholder = e => (0, a.jsx)("div", {
-  className: i(e.className, g.cardPlaceholder)
+  className: i(e.className, A.cardPlaceholder)
 });
 var L = O

@@ -1,7 +1,7 @@
 "use strict";
-var s, a;
+var a, s;
 n.r(t), n.d(t, {
   ChatOverlays: function() {
-    return s
+    return a
   }
-}), (a = s || (s = {})).NEW_MESSAGES = "new_messages", a.OPT_IN_CHANNEL = "opt_in_channel", a.SUMMARIES = "summaries"
+}), (s = a || (a = {})).NEW_MESSAGES = "new_messages", s.OPT_IN_CHANNEL = "opt_in_channel", s.SUMMARIES = "summaries"
