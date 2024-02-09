@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  r = s("414456"),
-  i = s.n(r),
+  i = s("414456"),
+  r = s.n(i),
   l = s("907002"),
   o = s("891722"),
   u = s("704426"),
@@ -18,8 +18,8 @@ var a = s("37983"),
     let {
       cards: t,
       className: s,
-      cardType: r
-    } = e, E = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [I, T] = n.useState(0), [f, S] = n.useState(E()), [R, A] = n.useState(!1), m = t.length;
+      cardType: i
+    } = e, E = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [I, T] = n.useState(0), [f, S] = n.useState(E()), [R, m] = n.useState(!1), A = t.length;
     n.useEffect(() => {
       let e = () => {
         S(E())
@@ -28,8 +28,8 @@ var a = s("37983"),
         window.removeEventListener("resize", e)
       }
     }, []), n.useEffect(() => {
-      m > f && I > m - f ? T(m - f) : m <= f && T(0)
-    }, [m, f]);
+      A > f && I > A - f ? T(A - f) : A <= f && T(0)
+    }, [A, f]);
     let N = n.useCallback(e => ({
         x: (e - I) * 100
       }), [I]),
@@ -40,11 +40,11 @@ var a = s("37983"),
       className: s,
       children: (0, a.jsxs)("div", {
         className: _.cardContainer,
-        children: [m > f && (0, a.jsx)(d.Clickable, {
+        children: [A > f && (0, a.jsx)(d.Clickable, {
           onClick: R ? () => {
-            T(e => 0 === e ? m - f : e - 1)
+            T(e => 0 === e ? A - f : e - 1)
           } : void 0,
-          className: i({
+          className: r({
             [_.leftArrow]: R,
             [_.inactiveArrow]: !R
           }),
@@ -65,23 +65,23 @@ var a = s("37983"),
               },
               children: (0, a.jsx)(c.default, {
                 ...t[s],
-                cardType: r
+                cardType: i
               }, "".concat(t[s].name, "_").concat(s, "_perks_card"))
             }, "".concat(t[s].name, "_").concat(s, "_animated_div"))
           })
-        }), m > f && (0, a.jsx)(d.Clickable, {
+        }), A > f && (0, a.jsx)(d.Clickable, {
           onClick: () => {
-            T(e => e >= m - f ? (A(!0), 0) : e + 1)
+            T(e => e >= A - f ? (m(!0), 0) : e + 1)
           },
           className: _.rightArrow,
           children: (0, a.jsx)(u.ArrowSmallRightIcon, {
             className: _.arrowIcon,
             colorClass: _.arrowIcon
           })
-        }), m > f && (0, a.jsx)("div", {
+        }), A > f && (0, a.jsx)("div", {
           className: _.cardProgressBar,
           children: t.map((e, t) => {
-            if (!(t > m - f)) return (0, a.jsx)("div", {
+            if (!(t > A - f)) return (0, a.jsx)("div", {
               className: t === I ? _.selectedDot : _.dot
             }, "progress_bar_dot_".concat(t))
           })

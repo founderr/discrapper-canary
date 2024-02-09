@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   n = s("884691"),
-  r = s("414456"),
-  i = s.n(r),
+  i = s("414456"),
+  r = s.n(i),
   l = s("446674"),
   o = s("1017"),
   u = s("102985"),
@@ -20,21 +20,21 @@ var a = s("37983"),
   f = s("760936"),
   S = s("697092"),
   R = s("782340"),
-  A = s("825704");
-class m extends n.Component {
+  m = s("825704");
+class A extends n.Component {
   renderReasons(e, t, s) {
     return 0 === e.length && 0 === t.length ? null : (0, a.jsx)("div", {
-      className: A.section,
+      className: m.section,
       children: (0, a.jsxs)("div", {
-        className: A.sectionContent,
+        className: m.sectionContent,
         children: [e.map(e => (0, a.jsx)("div", {
-          className: A.unit,
+          className: m.unit,
           children: (0, a.jsx)(f.default, {
             reason: e,
             hidePersonalInformation: s
           })
         }, e.type)), t.map(e => (0, a.jsx)("div", {
-          className: A.unit,
+          className: m.unit,
           children: (0, a.jsx)(I.default, {
             reason: e
           })
@@ -57,18 +57,18 @@ class m extends n.Component {
       nonSocialReasons: t,
       storeListing: s,
       hidePersonalInformation: n,
-      className: r
+      className: i
     } = this.props;
     if (0 === e.length && 0 === t.length && null == s.staffNotes) return null;
     let l = this.getReviewToRender();
     return (0, a.jsxs)("div", {
-      className: i(A.root, r),
+      className: r(m.root, i),
       children: [(0, a.jsx)("div", {
-        className: A.header,
+        className: m.header,
         children: R.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
       }), this.renderReasons(e, t, n), null != l ? (0, a.jsx)(S.default, {
         data: l,
-        className: A.review
+        className: m.review
       }) : null]
     })
   }
@@ -82,4 +82,4 @@ var N = l.default.connectStores([_.default, d.default, E.default, o.default, c.d
     nonSocialReasons: (0, T.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
     hidePersonalInformation: u.default.hidePersonalInformation
   }
-})(m)
+})(A)

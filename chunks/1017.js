@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("446674"),
   n = s("913144"),
-  r = s("177589"),
-  i = s("824563"),
+  i = s("177589"),
+  r = s("824563"),
   l = s("843823"),
   o = s("697218"),
   u = s("49111");
@@ -36,19 +36,19 @@ function I(e) {
 function T(e) {
   var t, s, a, n;
   let {
-    user: i,
+    user: r,
     activities: o
   } = e;
-  if (null == i || !l.default.getUserAffinitiesUserIds().has(i.id)) return !1;
+  if (null == r || !l.default.getUserAffinitiesUserIds().has(r.id)) return !1;
   let d = o.find(e => e.type !== u.ActivityTypes.CUSTOM_STATUS);
-  if (null == d) return I(i.id);
-  let E = (0, r.default)(d);
-  if (null == E) return I(i.id);
-  let T = _[i.id];
-  null != T && T.gameId !== E && I(i.id);
+  if (null == d) return I(r.id);
+  let E = (0, i.default)(d);
+  if (null == E) return I(r.id);
+  let T = _[r.id];
+  null != T && T.gameId !== E && I(r.id);
   let f = null !== (s = null === (t = d.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== s ? s : Date.now(),
     S = {
-      userId: i.id,
+      userId: r.id,
       activity: d,
       startedPlaying: f
     };
@@ -71,11 +71,11 @@ function f() {
   let e = !1;
   if (!l.default.needsRefresh() && !d) {
     let t;
-    c = {}, _ = {}, t = !1, i.default.getUserIds().forEach(e => {
+    c = {}, _ = {}, t = !1, r.default.getUserIds().forEach(e => {
       let s = o.default.getUser(e);
       null != s && (t = T({
         user: s,
-        activities: i.default.getActivities(e)
+        activities: r.default.getActivities(e)
       }) || t)
     }), e = t
   }

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var n = s("414456"),
-  r = s.n(n),
-  i = s("65597"),
+  i = s.n(n),
+  r = s("65597"),
   l = s("77078"),
   o = s("521012"),
   u = s("701909"),
@@ -25,11 +25,11 @@ var n = s("414456"),
       isFullscreen: t
     } = e, {
       promotion: s
-    } = (0, E.useBogoPromotion)(), n = (0, i.default)([o.default], () => o.default.getPremiumTypeSubscription()), R = (0, c.useIsEligibleForBogoPromotion)();
+    } = (0, E.useBogoPromotion)(), n = (0, r.default)([o.default], () => o.default.getPremiumTypeSubscription()), R = (0, c.useIsEligibleForBogoPromotion)();
     if (!R) return null;
-    let A = new Date(s.endDate);
+    let m = new Date(s.endDate);
     return (0, a.jsx)("div", {
-      className: r(S.banner, {
+      className: i(S.banner, {
         [S.bannerFullscreen]: t
       }),
       children: (0, a.jsxs)("div", {
@@ -43,7 +43,7 @@ var n = s("414456"),
             className: S.countdown,
             variant: "text-sm/medium",
             children: (0, a.jsx)(d.default, {
-              endDate: A
+              endDate: m
             })
           }), (0, a.jsx)(l.Text, {
             variant: "text-sm/medium",

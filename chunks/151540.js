@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
 var a = s("37983");
 s("884691");
 var n = s("662034");
 
-function r() {
+function i() {
   return (0, a.jsx)("div", {
     className: n.divider
   })

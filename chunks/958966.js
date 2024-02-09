@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var n = s("414456"),
-  r = s.n(n),
-  i = s("446674"),
+  i = s.n(n),
+  r = s("446674"),
   l = s("77078"),
   o = s("812204"),
   u = s("685665"),
@@ -21,8 +21,8 @@ var n = s("414456"),
   f = s("871948"),
   S = s("401135"),
   R = s("218435"),
-  A = s("881155"),
-  m = s("782340"),
+  m = s("881155"),
+  A = s("782340"),
   N = s("30126");
 
 function p(e) {
@@ -33,7 +33,7 @@ function p(e) {
     variant: t,
     color: "always-white",
     className: N.description,
-    children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
+    children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
       cheapestMonthlyPrice: s
     })
   })
@@ -51,14 +51,14 @@ var g = e => {
     location: "HeroHeading"
   }, {
     autoTrackExposure: !1
-  }), M = (0, i.useStateFromStores)([_.default], () => _.default.affinities);
+  }), M = (0, r.useStateFromStores)([_.default], () => _.default.affinities);
   M.length > 0 && c.default.trackExposure({
     location: "HeroHeading"
   });
   let h = O && M.length > 0;
   return (0, a.jsx)(S, {
     children: (0, a.jsxs)("div", {
-      className: r(N.container, s, {
+      className: i(N.container, s, {
         [N.settingsContainer]: !t,
         [N.affinityHeight]: !t && h
       }),
@@ -68,7 +68,7 @@ var g = e => {
         children: [(0, a.jsx)(l.Heading, {
           variant: t ? "display-lg" : "display-md",
           color: "always-white",
-          children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
+          children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
         }), h ? (0, a.jsx)("div", {
           className: N.affinityDescription,
           children: (0, a.jsx)(f.default, {
@@ -83,7 +83,7 @@ var g = e => {
         }) : (0, a.jsxs)(a.Fragment, {
           children: [C ? null : (0, a.jsxs)("div", {
             className: N.buttonContainer,
-            children: [(0, a.jsx)(A.default, {
+            children: [(0, a.jsx)(m.default, {
               forceInverted: !0,
               className: N.button,
               subscriptionTier: n

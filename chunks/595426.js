@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  r = s("414456"),
-  i = s.n(r),
+  i = s("414456"),
+  r = s.n(i),
   l = s("446674"),
   o = s("77078"),
   u = s("913144"),
@@ -20,8 +20,8 @@ var a = s("37983"),
   f = s("619935"),
   S = s("308592"),
   R = s("245187"),
-  A = s("102985"),
-  m = s("697218"),
+  m = s("102985"),
+  A = s("697218"),
   N = s("521012"),
   p = s("599110"),
   g = s("764364"),
@@ -42,11 +42,11 @@ var a = s("37983"),
     let {
       entrypoint: t = b.PremiumMarketingEntrypoints.UserSettings
     } = e, s = (0, f.useBlockedPaymentsConfig)(), {
-      AnalyticsLocationProvider: r,
+      AnalyticsLocationProvider: i,
       sourceAnalyticsLocations: B
     } = (0, T.default)(I.default.PREMIUM_MARKETING), {
       enabled: k
-    } = (0, M.default)(), y = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), H = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), K = (0, x.usePremiumTrialOffer)(), W = (0, L.usePremiumDiscountOffer)(), F = (0, S.useSubscriptionPlansLoaded)(), [w, V] = n.useState(!0), Y = n.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), Q = (0, h.useLocalizedPromoQuery)(), X = null == Q ? void 0 : Q.countryCode, Z = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
+    } = (0, M.default)(), y = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), H = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), K = (0, x.usePremiumTrialOffer)(), W = (0, L.usePremiumDiscountOffer)(), F = (0, S.useSubscriptionPlansLoaded)(), [w, V] = n.useState(!0), Y = n.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), Q = (0, h.useLocalizedPromoQuery)(), X = null == Q ? void 0 : Q.countryCode, Z = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
     n.useEffect(() => {
       !Z && d.getNitroAffinity()
     }, [Z]), n.useEffect(() => {
@@ -65,18 +65,18 @@ var a = s("37983"),
         load_duration_ms: Y.current
       })
     }, [B, w]);
-    let J = (0, l.useStateFromStores)([A.default], () => A.default.enabled);
+    let J = (0, l.useStateFromStores)([m.default], () => m.default.enabled);
     if (J) return (0, a.jsx)(E.default, {});
     if (s) return (0, a.jsx)(R.BlockedPaymentsContentSettings, {});
     let q = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
-    return q && z && !k ? (0, a.jsx)(r, {
+    return q && z && !k ? (0, a.jsx)(i, {
       children: (0, a.jsx)(U.default, {})
-    }) : y && F && !w ? (0, a.jsx)(r, {
+    }) : y && F && !w ? (0, a.jsx)(i, {
       children: (0, a.jsx)(D.default, {
         entrypoint: t
       })
     }) : (0, a.jsx)("div", {
-      className: i(G.container, G.loading),
+      className: r(G.container, G.loading),
       children: (0, a.jsx)(o.Spinner, {})
     })
   }

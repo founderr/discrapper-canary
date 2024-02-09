@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
     return X
   }
 });
-var a, n, r = s("65597"),
-  i = s("151426"),
+var a, n, i = s("65597"),
+  r = s("151426"),
   l = s("79112"),
   o = s("841098"),
   u = s("812204"),
@@ -21,8 +21,8 @@ var a, n, r = s("65597"),
   f = s("701909"),
   S = s("719923"),
   R = s("184684"),
-  A = s("598739"),
-  m = s("646718"),
+  m = s("598739"),
+  A = s("646718"),
   N = s("49111"),
   p = s("397336"),
   g = s("782340"),
@@ -55,7 +55,7 @@ var a, n, r = s("65597"),
 var X = () => {
   let {
     analyticsLocations: e
-  } = (0, d.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, o.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, r.default)([T.default], () => T.default.getPremiumTypeSubscription()), n = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != n ? S.default.getSkuIdForPlan(n.planId) : null, Z = X === m.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, d.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, o.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, i.default)([T.default], () => T.default.getPremiumTypeSubscription()), n = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != n ? S.default.getSkuIdForPlan(n.planId) : null, Z = X === A.PremiumSubscriptionSKUs.TIER_2, {
     flipped: J
   } = (0, R.useWhatsNewAvatarDecoRollout)(), {
     flipped: q
@@ -83,7 +83,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: v,
       canReveal: J,
-      dismissibleContentType: i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      dismissibleContentType: r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     } : {
       name: "avatarDecorations",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
@@ -92,7 +92,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: v,
       canReveal: J,
-      dismissibleContentType: i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      dismissibleContentType: r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     },
     clientThemes: {
       name: "clientThemes",
@@ -200,7 +200,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: H,
       canReveal: q,
-      dismissibleContentType: i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      dismissibleContentType: r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     } : {
       name: "profileEffects",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
@@ -209,7 +209,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: H,
       canReveal: q,
-      dismissibleContentType: i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      dismissibleContentType: r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     },
     profiles: {
       name: "profiles",
@@ -356,14 +356,14 @@ var X = () => {
       name: "customSoundsEverywhere",
       title: g.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
       subtitle: g.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-      perkImage: (0, A.getThemedImage)(t, P, O),
+      perkImage: (0, m.getThemedImage)(t, P, O),
       description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
     },
     specialStickerAccess: {
       name: "specialStickerAccess",
       title: g.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
       subtitle: g.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-      perkImage: (0, A.getThemedImage)(t, M, w),
+      perkImage: (0, m.getThemedImage)(t, M, w),
       description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
     },
     largeUploads: {

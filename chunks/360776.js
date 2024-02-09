@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var n = s("414456"),
-  r = s.n(n),
-  i = s("907002"),
+  i = s.n(n),
+  r = s("907002"),
   l = s("65597"),
   o = s("206230"),
   u = s("154889"),
@@ -24,7 +24,7 @@ var n = s("414456"),
       isVisible: n,
       isFullscreen: f,
       subscriptionTier: S
-    } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, A = (0, u.usePremiumDiscountOffer)(), m = (0, u.discountOfferHasTier)(A, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.default)([o.default], () => o.default.useReducedMotion), p = (0, i.useSpring)({
+    } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, m = (0, u.usePremiumDiscountOffer)(), A = (0, u.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.default)([o.default], () => o.default.useReducedMotion), p = (0, r.useSpring)({
       transform: n ? "translateY(-100%)" : "translateY(0%)",
       opacity: n ? 1 : 0,
       config: {
@@ -35,8 +35,8 @@ var n = s("414456"),
     }), g = {
       section: I.AnalyticsSections.MARKETING_FLOATING_CTA
     };
-    return (0, a.jsx)(i.animated.div, {
-      className: r(T.wrapper, {
+    return (0, a.jsx)(r.animated.div, {
+      className: i(T.wrapper, {
         [T.fullscreenWrapper]: f,
         [T.invisible]: !n
       }),
@@ -46,7 +46,7 @@ var n = s("414456"),
         children: [(0, a.jsx)(_.default, {
           className: T.button,
           shinyButtonClassName: T.shinyButton,
-          subscriptionTier: null !== (s = null != S ? S : null == R ? void 0 : R.sku_id) && void 0 !== s ? s : m,
+          subscriptionTier: null !== (s = null != S ? S : null == R ? void 0 : R.sku_id) && void 0 !== s ? s : A,
           premiumModalAnalyticsLocation: g,
           isPersistentCTA: !0
         }), (0, a.jsx)(c.default, {

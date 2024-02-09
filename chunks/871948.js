@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   n = s("884691"),
-  r = s("414456"),
-  i = s.n(r),
+  i = s("414456"),
+  r = s.n(i),
   l = s("446674"),
   o = s("77078"),
   u = s("106435"),
@@ -19,22 +19,22 @@ var a = s("37983"),
 function I(e) {
   let {
     smallerText: t
-  } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), r = s.map((e, t) => (0, a.jsx)(T, {
+  } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), i = s.map((e, t) => (0, a.jsx)(T, {
     affinity: e,
     applyMask: t !== s.length - 1
-  }, e.id)), i = e => null != e.globalName ? e.globalName : e.username, u = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
-    username: i(s[2])
+  }, e.id)), r = e => null != e.globalName ? e.globalName : e.username, u = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+    username: r(s[2])
   }) : 2 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_2.format({
-    username: i(s[1]),
-    otherUsername: i(s[0])
+    username: r(s[1]),
+    otherUsername: r(s[0])
   }) : 1 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
-    username: i(s[0])
+    username: r(s[0])
   }) : "", [s]);
   return 0 === s.length ? null : (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)("div", {
       className: E.iconContainer,
-      children: r
+      children: i
     }), (0, a.jsx)("div", {
       className: E.textContainer,
       children: (0, a.jsx)(function() {
@@ -58,19 +58,19 @@ function T(e) {
     applyMask: s
   } = e, {
     avatarSrc: n,
-    eventHandlers: r
+    eventHandlers: i
   } = (0, u.default)({
     user: t,
     size: c.AvatarSizes.SIZE_32,
     animateOnHover: !0
   });
   return (0, a.jsx)(o.Avatar, {
-    className: i(E.icon, {
+    className: r(E.icon, {
       [E.mask]: s
     }),
     src: n,
     "aria-label": t.username,
     size: c.AvatarSizes.SIZE_32,
-    ...r
+    ...i
   })
 }

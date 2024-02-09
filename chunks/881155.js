@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var n = s("819855"),
-  r = s("77078"),
-  i = s("841098"),
+  i = s("77078"),
+  r = s("841098"),
   l = s("719923"),
   o = s("154889"),
   u = s("917247"),
@@ -22,12 +22,12 @@ let I = e => {
       subscriptionTier: s,
       shouldShowUpsells: a,
       trialDurationCopy: n,
-      isPersistentCTA: r,
-      subscriptionTrial: i
+      isPersistentCTA: i,
+      subscriptionTrial: r
     } = e;
-    if (t && (s === c.PremiumSubscriptionSKUs.TIER_2 || r)) return (0, l.formatTrialCtaIntervalDuration)({
-      intervalType: null == i ? void 0 : i.interval,
-      intervalCount: null == i ? void 0 : i.interval_count
+    if (t && (s === c.PremiumSubscriptionSKUs.TIER_2 || i)) return (0, l.formatTrialCtaIntervalDuration)({
+      intervalType: null == r ? void 0 : r.interval,
+      intervalCount: null == r ? void 0 : r.interval_count
     });
     if (t) return _.default.Messages.GET_FREE_TRIAL.format({
       freeTrialText: n
@@ -45,8 +45,8 @@ var f = e => {
     isEligibleForBogoPromotion: f = !1,
     isPersistentCTA: S = !1,
     useShorterCTA: R = !1,
-    ...A
-  } = e, m = (0, i.default)(), N = (0, n.isThemeDark)(m) || s, p = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, l.formatTrialOfferIntervalDuration)({
+    ...m
+  } = e, A = (0, r.default)(), N = (0, n.isThemeDark)(A) || s, p = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, l.formatTrialOfferIntervalDuration)({
     intervalType: null == p ? void 0 : p.interval,
     intervalCount: null == p ? void 0 : p.interval_count
   }), C = (0, o.usePremiumDiscountOffer)(), P = null != p && c === p.sku_id, O = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != C ? T(c, R, S, C.discount.amount) : I({
@@ -58,14 +58,14 @@ var f = e => {
     subscriptionTrial: p
   });
   return (0, a.jsx)(d.default, {
-    color: r.ButtonColors.BRAND,
-    look: N ? r.ButtonLooks.INVERTED : void 0,
-    buttonShineClassName: "buttonShineClassName" in A ? A.buttonShineClassName : N ? E.brandShine : void 0,
+    color: i.ButtonColors.BRAND,
+    look: N ? i.ButtonLooks.INVERTED : void 0,
+    buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : N ? E.brandShine : void 0,
     trialId: null == p ? void 0 : p.id,
     buttonText: O,
     buttonTextClassName: P ? E.freeTrialText : void 0,
     onlyShineOnHover: !0,
     subscriptionTier: c,
-    ...A
+    ...m
   })
 }

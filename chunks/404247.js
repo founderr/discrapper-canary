@@ -9,8 +9,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  r = s("730290"),
-  i = s("90915"),
+  i = s("730290"),
+  r = s("90915"),
   l = s("446674"),
   o = s("971178"),
   u = s("850068"),
@@ -23,8 +23,8 @@ var a = s("37983"),
   f = s("269936"),
   S = s("967889"),
   R = s("393414"),
-  A = s("970366"),
-  m = s("592433"),
+  m = s("970366"),
+  A = s("592433"),
   N = s("489749"),
   p = s("75576"),
   g = s("49111"),
@@ -43,7 +43,7 @@ class h extends n.PureComponent {
   componentDidMount() {
     (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
       e.pathname.startsWith(g.Routes.APPLICATION_STORE) && (0, o.updateLocation)(e)
-    }), this.props.isAuthenticated && (0, u.fetchPaymentSources)(), T.default.disable(), T.default.setLayout(E.APPLICATION_STORE_LAYOUT), T.default.enable(), (0, A.trackAppUIViewed)("application_store")
+    }), this.props.isAuthenticated && (0, u.fetchPaymentSources)(), T.default.disable(), T.default.setLayout(E.APPLICATION_STORE_LAYOUT), T.default.enable(), (0, m.trackAppUIViewed)("application_store")
   }
   componentWillUnmount() {
     null != this.stopListeningToHistory && this.stopListeningToHistory(), T.default.disable(), T.default.setLayout(I.DEFAULT_LAYOUT), T.default.enable()
@@ -84,10 +84,10 @@ class h extends n.PureComponent {
             slug: n
           }
         },
-        location: i
+        location: r
       } = e, {
         width: l
-      } = this.props, o = (0, r.parse)(i.search);
+      } = this.props, o = (0, i.parse)(r.search);
       return (0, a.jsx)(d.default, {
         page: g.AnalyticsPages.STORE_LISTING,
         root: !0,
@@ -95,36 +95,36 @@ class h extends n.PureComponent {
           skuId: t,
           applicationId: s,
           slug: n,
-          location: i,
+          location: r,
           storeListingId: o.store_listing_id,
           pageSize: M(l)
         })
       })
-    }, this.renderContent = () => (0, a.jsxs)(i.Switch, {
-      children: [(0, a.jsx)(i.Route, {
+    }, this.renderContent = () => (0, a.jsxs)(r.Switch, {
+      children: [(0, a.jsx)(r.Route, {
         path: g.Routes.APPLICATION_STORE,
         exact: !0,
         render: () => (0, a.jsx)(d.default, {
           page: g.AnalyticsPages.STORE_DIRECTORY_HOME,
           root: !0,
-          children: (0, a.jsx)(m.default, {})
+          children: (0, a.jsx)(A.default, {})
         })
-      }), (0, a.jsx)(i.Route, {
+      }), (0, a.jsx)(r.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Route, {
+      }), (0, a.jsx)(r.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Route, {
+      }), (0, a.jsx)(r.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Route, {
+      }), (0, a.jsx)(r.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_SKU(":skuId"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Redirect, {
+      }), (0, a.jsx)(r.Redirect, {
         to: g.Routes.APP
       })]
     })
   }
 }
-var L = (0, i.withRouter)((0, c.default)((0, _.default)(h)))
+var L = (0, r.withRouter)((0, c.default)((0, _.default)(h)))

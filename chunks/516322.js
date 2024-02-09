@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var n = s("414456"),
-  r = s.n(n),
-  i = s("956089"),
+  i = s.n(n),
+  r = s("956089"),
   l = s("782340"),
   o = s("171684");
 
@@ -16,8 +16,8 @@ function u(e) {
   let {
     className: t
   } = e;
-  return (0, a.jsx)(i.TextBadge, {
-    className: r(o.tag, t),
+  return (0, a.jsx)(r.TextBadge, {
+    className: i(o.tag, t),
     text: l.default.Messages.EARLY_ACCESS
   })
 }
