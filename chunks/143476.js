@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return Y
+    return z
   }
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  r = s("414456"),
-  i = s.n(r),
+  i = s("414456"),
+  r = s.n(i),
   l = s("446674"),
   o = s("290381"),
   u = s("77078"),
@@ -20,8 +20,8 @@ var a = s("37983"),
   f = s("719923"),
   S = s("182650"),
   R = s("706922"),
-  A = s("300962"),
-  m = s("959905"),
+  m = s("300962"),
+  A = s("959905"),
   N = s("154889"),
   p = s("917247"),
   g = s("460680"),
@@ -32,172 +32,175 @@ var a = s("37983"),
   h = s("159646"),
   L = s("379521"),
   x = s("958966"),
-  v = s("830648"),
-  D = s("627474"),
-  U = s("904871"),
-  b = s("360776"),
-  j = s("525505"),
-  G = s("881155"),
-  B = s("598739"),
-  k = s("326881"),
-  y = s("228967"),
-  H = s("646718"),
-  K = s("49111"),
-  W = s("880552"),
-  F = s("679324"),
-  w = s("905498"),
-  V = s("452637"),
-  Y = e => {
+  v = s("149102"),
+  D = s("830648"),
+  U = s("627474"),
+  b = s("904871"),
+  j = s("360776"),
+  G = s("525505"),
+  B = s("881155"),
+  k = s("598739"),
+  y = s("326881"),
+  H = s("228967"),
+  K = s("646718"),
+  W = s("49111"),
+  F = s("880552"),
+  w = s("679324"),
+  V = s("905498"),
+  Y = s("452637"),
+  z = e => {
     var t;
     let {
       isFullscreen: s
-    } = e, r = n.useRef(null), [Y, z] = n.useState(!1), [Q, X] = n.useState(!1), [Z, J] = n.useState(!1), [q, $] = n.useState(!1), ee = (0, l.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), {
-      enabled: et
-    } = (0, R.default)(), es = null != ee ? (0, f.getPremiumPlanItem)(ee) : null, ea = null != es ? f.default.getSkuIdForPlan(es.planId) : null, en = null !== ea && ea !== H.PremiumSubscriptionSKUs.TIER_2 ? H.PremiumSubscriptionSKUs.TIER_2 : null, er = (0, m.useLocalizedPromoQuery)(), ei = null != er, [el, eo] = n.useState(!1), eu = (0, N.usePremiumDiscountOffer)(), ed = (0, p.usePremiumTrialOffer)(), ec = null == ed ? void 0 : null === (t = ed.subscription_trial) || void 0 === t ? void 0 : t.sku_id, e_ = (0, S.useIsInPremiumOfferExperience)(), eE = (0, O.useIsEligibleForBogoPromotion)(), {
-      enabled: eI
-    } = (0, A.default)(), {
-      analyticsLocations: eT
-    } = (0, _.default)(c.default.PREMIUM_MARKETING), ef = "PremiumMarketingHome";
+    } = e, i = n.useRef(null), [v, z] = n.useState(K.PremiumTypes.TIER_2), [Q, X] = n.useState(!1), [Z, J] = n.useState(!1), [q, $] = n.useState(!1), [ee, et] = n.useState(!1), es = (0, l.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), {
+      enabled: ea
+    } = (0, R.default)(), en = null != es ? (0, f.getPremiumPlanItem)(es) : null, ei = null != en ? f.default.getSkuIdForPlan(en.planId) : null, er = null !== ei && ei !== K.PremiumSubscriptionSKUs.TIER_2 ? K.PremiumSubscriptionSKUs.TIER_2 : null, el = (0, A.useLocalizedPromoQuery)(), eo = null != el, [eu, ed] = n.useState(!1), ec = (0, N.usePremiumDiscountOffer)(), e_ = (0, p.usePremiumTrialOffer)(), eE = null == e_ ? void 0 : null === (t = e_.subscription_trial) || void 0 === t ? void 0 : t.sku_id, eI = (0, S.useIsInPremiumOfferExperience)(), eT = (0, O.useIsEligibleForBogoPromotion)(), {
+      enabled: ef
+    } = (0, m.default)(), {
+      analyticsLocations: eS
+    } = (0, _.default)(c.default.PREMIUM_MARKETING), eR = "PremiumMarketingHome";
     (0, d.useTriggerDebuggingAA)({
-      location: ef + " auto on",
+      location: eR + " auto on",
       autoTrackExposure: !0
     }), (0, d.useTriggerDebuggingAA)({
-      location: ef + " auto off",
+      location: eR + " auto off",
       autoTrackExposure: !1
     }), n.useEffect(() => {
-      $(!0)
+      et(!0)
     }, []);
-    let eS = (0, a.jsxs)("div", {
-      className: i(W.container, {
-        [W.settingsContainer]: !s
+    let em = (0, a.jsxs)("div", {
+      className: r(F.container, {
+        [F.settingsContainer]: !s
       }),
       "data-cy": "tier-0-marketing-page",
       children: [(0, a.jsx)(h.default, {
-        premiumSubscription: ee,
-        className: i(s ? W.fullscreenExistingSubscriberSpacing : W.existingSubscriberSpacing, {
-          [W.zIndex1]: e_
+        premiumSubscription: es,
+        className: r(s ? F.fullscreenExistingSubscriberSpacing : F.existingSubscriberSpacing, {
+          [F.zIndex1]: eI
         }),
         isFullscreen: s
-      }), s || e_ ? (0, a.jsx)(L.default, {
-        lifted: !s && e_
-      }) : null, !s && ei ? (0, a.jsx)(P.default, {
-        localizedPricingPromo: er,
+      }), s || eI ? (0, a.jsx)(L.default, {
+        lifted: !s && eI
+      }) : null, !s && eo ? (0, a.jsx)(P.default, {
+        localizedPricingPromo: el,
         smallGap: !0
       }) : (0, a.jsx)(o.VisibilitySensor, {
-        onChange: e => z(e),
+        onChange: e => X(e),
         threshold: 0,
         active: !0,
         children: (0, a.jsx)(x.default, {
-          subscriptionTier: en,
-          isFullscreen: s || e_,
-          className: i({
-            [W.fullscreenHero]: s,
-            [W.settingsHeroNoBackground]: !s && e_,
-            [W.trialMarketingMargin]: e_,
-            [W.settingsHeroBogoHeight]: !s && eE,
-            [W.settingsHeroBogoMarginFullscreen]: s && eE,
-            [W.noTopPaddingOverride]: null != ee
+          subscriptionTier: er,
+          isFullscreen: s || eI,
+          className: r({
+            [F.fullscreenHero]: s,
+            [F.settingsHeroNoBackground]: !s && eI,
+            [F.trialMarketingMargin]: eI,
+            [F.settingsHeroBogoHeight]: !s && eT,
+            [F.settingsHeroBogoMarginFullscreen]: s && eT,
+            [F.noTopPaddingOverride]: null != es
           })
         })
-      }), (0, a.jsxs)("div", {
-        className: s ? W.premiumTierCardsContainerFullscreen : W.premiumTierCardsContainerSettings,
+      }), !1, (0, a.jsxs)("div", {
+        className: s ? F.premiumTierCardsContainerFullscreen : F.premiumTierCardsContainerSettings,
         children: [(0, a.jsx)(g.default, {
           isFullscreen: s
-        }), s && ei && (0, a.jsx)(C.default, {
-          localizedPricingPromo: er
+        }), s && eo && (0, a.jsx)(C.default, {
+          localizedPricingPromo: el
         }), (0, a.jsx)(o.VisibilitySensor, {
-          onChange: e => X(e),
+          onChange: e => J(e),
           threshold: .1,
           active: !0,
           children: (0, a.jsx)(M.default, {
-            showWumpus: !0,
-            tier0CTAButton: ec === H.PremiumSubscriptionSKUs.TIER_2 || eE || null != eu ? (0, a.jsx)(G.default, {
+            showWumpus: true,
+            variant: (0, M.PremiumTierCardsVariant.DEFAULT),
+            toggleState: void 0,
+            tier0CTAButton: eE === K.PremiumSubscriptionSKUs.TIER_2 || eT || null != ec ? (0, a.jsx)(B.default, {
               forceInverted: !0,
               showIcon: !1,
-              subscriptionTier: H.PremiumSubscriptionSKUs.TIER_0,
-              className: W.marginTopForButtons,
+              subscriptionTier: K.PremiumSubscriptionSKUs.TIER_0,
+              className: F.marginTopForButtons,
               look: u.ButtonLooks.OUTLINED,
               color: u.ButtonColors.WHITE,
               buttonShineClassName: void 0
-            }) : (0, a.jsx)(G.default, {
+            }) : (0, a.jsx)(B.default, {
               forceInverted: !0,
               showIcon: !1,
-              subscriptionTier: H.PremiumSubscriptionSKUs.TIER_0,
-              className: W.marginTopForButtons
+              subscriptionTier: K.PremiumSubscriptionSKUs.TIER_0,
+              className: F.marginTopForButtons
             }),
-            tier2CTAButton: ec === H.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(G.default, {
+            tier2CTAButton: eE === K.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(B.default, {
               forceInverted: !0,
               showIcon: !1,
-              subscriptionTier: H.PremiumSubscriptionSKUs.TIER_2,
-              className: W.marginTopForButtons,
+              subscriptionTier: K.PremiumSubscriptionSKUs.TIER_2,
+              className: F.marginTopForButtons,
               look: u.ButtonLooks.OUTLINED,
               color: u.ButtonColors.WHITE,
               buttonShineClassName: void 0
-            }) : (0, a.jsx)(G.default, {
+            }) : (0, a.jsx)(B.default, {
               forceInverted: !0,
               showIcon: !1,
-              subscriptionTier: H.PremiumSubscriptionSKUs.TIER_2,
-              className: W.marginTopForButtons,
-              isEligibleForBogoPromotion: eE
+              subscriptionTier: K.PremiumSubscriptionSKUs.TIER_2,
+              className: F.marginTopForButtons,
+              isEligibleForBogoPromotion: eT
             })
           })
         })]
-      }), s && !eI ? (0, a.jsxs)("div", {
-        className: W.whatsNewSection,
-        children: [(0, a.jsx)(D.default, {
-          variant: B.PerksDiscoverabilityVariants.WHATS_NEW
-        }), (0, a.jsx)(D.default, {
-          showAllPerksButton: et ? (0, a.jsx)(y.default, {
-            setIsAllPerksVisible: eo,
-            previousComponent: B.NitroLandingPages.MARKETING
+      }), s && !ef ? (0, a.jsxs)("div", {
+        className: F.whatsNewSection,
+        children: [(0, a.jsx)(U.default, {
+          variant: k.PerksDiscoverabilityVariants.WHATS_NEW
+        }), (0, a.jsx)(U.default, {
+          showAllPerksButton: ea ? (0, a.jsx)(H.default, {
+            setIsAllPerksVisible: ed,
+            previousComponent: k.NitroLandingPages.MARKETING
           }) : void 0
-        }), e_ ? (0, a.jsx)(U.default, {
-          className: W.pdSparklesTop,
-          variant: U.SparkleVariants.TOP
-        }) : null, e_ ? (0, a.jsx)(U.default, {
-          className: W.pdSparklesBottom,
-          variant: U.SparkleVariants.BOTTOM
+        }), eI ? (0, a.jsx)(b.default, {
+          className: F.pdSparklesTop,
+          variant: b.SparkleVariants.TOP
+        }) : null, eI ? (0, a.jsx)(b.default, {
+          className: F.pdSparklesBottom,
+          variant: b.SparkleVariants.BOTTOM
         }) : null]
-      }) : null, !(et && s) && (0, a.jsx)(v.default, {
-        className: s ? W.perkCardsContainerSpacingFullscreen : W.perkCardsContainerSpacingSettings
+      }) : null, !(ea && s) && (0, a.jsx)(D.default, {
+        className: s ? F.perkCardsContainerSpacingFullscreen : F.perkCardsContainerSpacingSettings
       }), (0, a.jsxs)("div", {
-        className: W.planComparisonTableContainer,
-        children: [(0, a.jsx)(j.default, {
-          className: W.planComparisonTable,
+        className: F.planComparisonTableContainer,
+        children: [(0, a.jsx)(G.default, {
+          className: F.planComparisonTable,
           hideCTAs: !0
         }), s ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(I.default, {
-            src: w,
-            className: W.tableLeftSideDecoration,
+            src: V,
+            className: F.tableLeftSideDecoration,
             width: 197,
             height: 486,
             zoomable: !1
           }), (0, a.jsx)(I.default, {
-            src: V,
-            className: W.tableRightSideDecoration,
+            src: Y,
+            className: F.tableRightSideDecoration,
             width: 241,
             height: 552,
             zoomable: !1
           })]
         }) : null]
       }), (0, a.jsx)("div", {
-        className: s ? W.footerSpacingFullscreen : W.footerSpacing
-      }), (0, a.jsx)(b.default, {
-        isVisible: !Y && !Q && q,
+        className: s ? F.footerSpacingFullscreen : F.footerSpacing
+      }), (0, a.jsx)(j.default, {
+        isVisible: !Q && !Z && ee,
         isFullscreen: s,
-        subscriptionTier: en
+        subscriptionTier: er
       }), (0, a.jsx)(o.VisibilitySensor, {
         onChange: e => {
-          e && !Z && (T.default.track(K.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-            location_stack: eT
-          }), J(!0))
+          e && !q && (T.default.track(W.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+            location_stack: eS
+          }), $(!0))
         },
         children: (0, a.jsx)("div", {
-          className: W.bottomOfPageVisibilitySensor
+          className: F.bottomOfPageVisibilitySensor
         })
       }), (0, a.jsx)(I.default, {
-        src: F,
-        className: W.bottomIllustration,
+        src: w,
+        className: F.bottomIllustration,
         width: 112,
         height: 85,
         zoomable: !1
@@ -205,13 +208,13 @@ var a = s("37983"),
     });
     return s ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(u.AdvancedScrollerAuto, {
-        className: W.scroller,
-        ref: r,
-        children: eS
-      }), et ? (0, a.jsx)(k.default, {
-        previousComponent: B.NitroLandingPages.MARKETING,
-        isAllPerksVisible: el,
-        setIsAllPerksVisible: eo
+        className: F.scroller,
+        ref: i,
+        children: em
+      }), ea ? (0, a.jsx)(y.default, {
+        previousComponent: k.NitroLandingPages.MARKETING,
+        isAllPerksVisible: eu,
+        setIsAllPerksVisible: ed
       }) : null]
-    }) : eS
+    }) : em
   }
