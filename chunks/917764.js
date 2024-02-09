@@ -1,45 +1,54 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return d
   }
 }), n("222007");
 var l = n("37983"),
   i = n("884691"),
   a = n("414456"),
   s = n.n(a),
-  r = n("587974"),
-  o = n("333380"),
-  u = e => {
+  r = n("600785"),
+  o = n("587974"),
+  u = n("333380"),
+  d = e => {
     let {
       className: t,
       guild: n,
       isSelected: a = !0,
-      width: u = 32,
-      height: d = 32,
-      shouldAnimate: c = !0
-    } = e, [f, p] = i.useState(!1), m = n.getIconURL(32, c && a), h = () => p(!0), E = () => p(!1);
-    return (0, l.jsx)("div", {
-      onFocus: h,
-      onBlur: E,
-      onMouseOver: h,
-      onMouseLeave: E,
-      children: (0, l.jsx)(r.default, {
-        className: s(o.mask, t),
-        mask: a || f ? r.MaskIDs.SQUIRCLE : r.MaskIDs.AVATAR_DEFAULT,
-        width: u,
-        height: d,
-        children: null == m ? (0, l.jsx)("div", {
-          className: s(o.guildIcon, o.guildIconWithoutImage),
+      width: d = 32,
+      height: c = 32,
+      shouldAnimate: f = !0,
+      isLocked: p = !1
+    } = e, [m, h] = i.useState(!1), E = n.getIconURL(32, f && a), g = () => h(!0), S = () => h(!1);
+    return (0, l.jsxs)("div", {
+      onFocus: g,
+      onBlur: S,
+      onMouseOver: g,
+      onMouseLeave: S,
+      children: [(0, l.jsx)(o.default, {
+        className: s(u.mask, t),
+        mask: a || m ? o.MaskIDs.SQUIRCLE : o.MaskIDs.AVATAR_DEFAULT,
+        width: d,
+        height: c,
+        children: null == E ? (0, l.jsx)("div", {
+          className: s(u.guildIcon, u.guildIconWithoutImage),
           children: (0, l.jsx)("div", {
-            className: o.guildAcronym,
+            className: u.guildAcronym,
             children: n.acronym
           })
         }) : (0, l.jsx)("img", {
           alt: n.toString(),
-          src: m,
-          className: o.guildIcon
+          src: E,
+          className: u.guildIcon
         })
-      })
+      }), p ? (0, l.jsx)("div", {
+        className: u.categoryItemLockIconContainer,
+        children: (0, l.jsx)(r.default, {
+          width: 10,
+          height: 10,
+          className: u.categoryItemLockIcon
+        })
+      }) : null]
     })
   }
