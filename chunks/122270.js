@@ -23,23 +23,21 @@ let p = {
       s = l.mentions.global === d.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE,
       o = l.mentions.user !== d.UserMentionMode.DENY,
       u = l.mentions.role !== d.RoleMentionMode.DENY,
-      c = l.mentions.clyde !== d.ClydeMentionMode.DENY,
-      f = l.mentions.user === d.UserMentionMode.ALLOW_GUILD,
-      p = l.mentions.role === d.RoleMentionMode.ALLOW_ALL,
-      m = r.default.queryMentionResults({
+      c = l.mentions.user === d.UserMentionMode.ALLOW_GUILD,
+      f = l.mentions.role === d.RoleMentionMode.ALLOW_ALL,
+      p = r.default.queryMentionResults({
         query: n,
         channel: e,
         canMentionEveryone: a,
         canMentionHere: s,
         canMentionUsers: o,
         canMentionRoles: u,
-        canMentionClyde: c,
-        includeAllGuildUsers: f,
-        includeNonMentionableRoles: p,
+        includeAllGuildUsers: c,
+        includeNonMentionableRoles: f,
         request: i
       });
     return {
-      results: m
+      results: p
     }
   },
   renderResults(e) {
@@ -53,13 +51,13 @@ let p = {
         channel: m,
         query: h,
         options: E,
-        onHover: g,
-        onClick: S
+        onHover: S,
+        onClick: g
       } = e,
       C = a.map((e, t) => (0, l.jsx)(s.default.User, {
         guildId: m.guild_id,
-        onClick: S,
-        onHover: g,
+        onClick: g,
+        onHover: S,
         selected: p === t,
         index: t,
         user: e.user,
@@ -68,8 +66,8 @@ let p = {
         hidePersonalInformation: E.hidePersonalInformation
       }, e.user.id)),
       T = r.map((e, t) => (0, l.jsx)(s.default.Generic, {
-        onClick: S,
-        onHover: g,
+        onClick: g,
+        onHover: S,
         selected: p === t + a.length,
         index: a.length + t,
         text: e.text,
@@ -77,8 +75,8 @@ let p = {
         "aria-label": e.text
       }, e.text)),
       v = o.map((e, t) => (0, l.jsx)(s.default.Role, {
-        onClick: S,
-        onHover: g,
+        onClick: g,
+        onHover: S,
         selected: p === t + a.length + r.length,
         index: a.length + r.length + t,
         role: e,

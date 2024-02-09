@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return c
   }
 });
 var l = s("37983");
@@ -9,12 +9,11 @@ s("884691");
 var a = s("414456"),
   i = s.n(a),
   r = s("77078"),
-  o = s("888355"),
-  n = s("49111"),
-  u = s("782340"),
-  d = s("355718");
+  o = s("49111"),
+  n = s("782340"),
+  u = s("355718");
 
-function c(e) {
+function d(e) {
   let {
     className: t,
     ...s
@@ -23,42 +22,42 @@ function c(e) {
     ...s,
     look: r.Button.Looks.FILLED,
     size: r.Button.Sizes.SMALL,
-    className: i(d.actionButton, t)
+    className: i(u.actionButton, t)
   })
 }
 
-function f(e) {
+function c(e) {
   let {
     isCurrentUser: t,
     user: s,
     relationshipType: a,
     onAddFriend: i,
-    onIgnoreFriend: f,
-    onSendMessage: S
-  } = e, m = (0, o.useIsDMsToClydeEnabled)();
-  return t || a === n.RelationshipTypes.BLOCKED || s.isClyde() && !m ? null : a === n.RelationshipTypes.FRIEND || s.bot || s.isClyde() ? (0, l.jsx)(c, {
+    onIgnoreFriend: c,
+    onSendMessage: f
+  } = e;
+  return t || a === o.RelationshipTypes.BLOCKED ? null : a === o.RelationshipTypes.FRIEND || s.bot ? (0, l.jsx)(d, {
     color: r.Button.Colors.GREEN,
-    onClick: S,
-    children: u.default.Messages.SEND_MESSAGE
-  }) : a === n.RelationshipTypes.PENDING_OUTGOING ? (0, l.jsx)(c, {
+    onClick: f,
+    children: n.default.Messages.SEND_MESSAGE
+  }) : a === o.RelationshipTypes.PENDING_OUTGOING ? (0, l.jsx)(d, {
     color: r.Button.Colors.GREEN,
     disabled: !0,
-    children: u.default.Messages.ADD_FRIEND_BUTTON_AFTER
-  }) : a === n.RelationshipTypes.PENDING_INCOMING ? (0, l.jsxs)("div", {
-    className: d.pendingIncoming,
-    children: [(0, l.jsx)(c, {
+    children: n.default.Messages.ADD_FRIEND_BUTTON_AFTER
+  }) : a === o.RelationshipTypes.PENDING_INCOMING ? (0, l.jsxs)("div", {
+    className: u.pendingIncoming,
+    children: [(0, l.jsx)(d, {
       color: r.Button.Colors.GREEN,
       onClick: i,
-      children: u.default.Messages.FRIEND_REQUEST_ACCEPT
-    }), (0, l.jsx)(c, {
+      children: n.default.Messages.FRIEND_REQUEST_ACCEPT
+    }), (0, l.jsx)(d, {
       color: r.Button.Colors.PRIMARY,
-      onClick: f,
-      className: d.actionRightButton,
-      children: u.default.Messages.FRIEND_REQUEST_IGNORE
+      onClick: c,
+      className: u.actionRightButton,
+      children: n.default.Messages.FRIEND_REQUEST_IGNORE
     })]
-  }) : (0, l.jsx)(c, {
+  }) : (0, l.jsx)(d, {
     color: r.Button.Colors.GREEN,
     onClick: i,
-    children: u.default.Messages.ADD_FRIEND_BUTTON
+    children: n.default.Messages.ADD_FRIEND_BUTTON
   })
 }

@@ -49,7 +49,6 @@ function d(e) {
   else if (e <= o.AuditLogActions.HARMFUL_LINKS_BLOCKED_MESSAGE) return o.AuditLogTargetTypes.GUILD;
   else if (e <= o.AuditLogActions.HOME_SETTINGS_UPDATE) return o.AuditLogTargetTypes.HOME_SETTINGS;
   else if (e <= o.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE) return o.AuditLogTargetTypes.VOICE_CHANNEL_STATUS;
-  else if (e === o.AuditLogActions.CLYDE_AI_PROFILE_UPDATE) return o.AuditLogTargetTypes.CLYDE_AI;
   else if (e <= o.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return o.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION;
   return i.default.captureMessage("Unknown target type for: ".concat(e)), o.AuditLogTargetTypes.UNKNOWN
 }
@@ -132,7 +131,6 @@ function u(e) {
     case o.AuditLogActions.ONBOARDING_UPDATE:
     case o.AuditLogActions.SOUNDBOARD_SOUND_UPDATE:
     case o.AuditLogActions.HOME_SETTINGS_UPDATE:
-    case o.AuditLogActions.CLYDE_AI_PROFILE_UPDATE:
       return o.AuditLogActionTypes.UPDATE
   }
   return o.AuditLogActionTypes.ALL

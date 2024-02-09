@@ -1,29 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   useClydeProfilesEnabled: function() {
-    return c
+    return s
   },
   useClydeEnabled: function() {
-    return d
+    return c
   },
   getClydeEnabled: function() {
-    return p
+    return f
   },
   getClydeExperimentEnabled: function() {
-    return h
+    return p
   },
   canUseCustomClydeProfiles: function() {
-    return m
+    return h
   }
 }), n("884691"), n("446674");
 var l = n("305961"),
   r = n("957255"),
   a = n("772051"),
-  i = n("254927"),
-  u = n("49111"),
-  o = n("724210");
+  i = n("49111"),
+  u = n("724210");
 
-function s(e) {
+function o(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "1e9ccc_1",
@@ -37,34 +36,32 @@ function s(e) {
   return i
 }
 
-function c(e) {
+function s(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 ? arguments[2] : void 0,
-    l = s(e, t, n);
+    l = o(e, t, n);
   return l === a.ClydeExperimentState.ClydeProfiles
 }
 
-function d(e, t) {
+function c(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    l = s(e, n);
-  return f(l, e, t)
+    l = o(e, n);
+  return d(l, e, t)
 }
 
-function f(e, t, n) {
+function d(e, t, n) {
   if (null == t) {
     if (null != n && n.isPrivate()) {
-      if (n.hasFlag(o.ChannelFlags.CLYDE_AI)) return !0;
-      let e = (0, i.isClydeEnabledinGdms)();
-      if (!e) return !1;
-      let t = l.default.getGuildIds().some(e => h(l.default.getGuild(e)));
-      return t
+      if (n.hasFlag(u.ChannelFlags.CLYDE_AI)) return !0;
+      let e = l.default.getGuildIds().some(e => p(l.default.getGuild(e)));
+      return e
     }
     return !1
   }
-  return null != e && e !== a.ClydeExperimentState.None && r.default.can(u.Permissions.USE_CLYDE_AI, n)
+  return null != e && e !== a.ClydeExperimentState.None && r.default.can(i.Permissions.USE_CLYDE_AI, n)
 }
 
-function p(e, t) {
+function f(e, t) {
   var n;
   let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : "",
@@ -74,21 +71,21 @@ function p(e, t) {
     }, {
       autoTrackExposure: l
     }).experimentState;
-  return f(i, e, t)
+  return d(i, e, t)
 }
 
-function h(e) {
+function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    n = g(e, t);
+    n = m(e, t);
   return n !== a.ClydeExperimentState.None
 }
 
-function m(e) {
+function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return g(e, t) === a.ClydeExperimentState.ClydeProfiles
+  return m(e, t) === a.ClydeExperimentState.ClydeProfiles
 }
 
-function g(e) {
+function m(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (null == e) return !1;
   let n = e.id;

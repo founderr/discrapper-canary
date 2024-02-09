@@ -32,10 +32,6 @@ let o = {
     inlineRequire: () => E("578165").default,
     neverLoadBeforeConnectionOpen: !0
   },
-  ClydeAuthorizeManager: {
-    actions: ["MESSAGE_FAILED_CLYDE_CONSENT"],
-    inlineRequire: () => E("887418").default
-  },
   CommunicationDisabledManager: {
     inlineRequire: () => E("658536").default,
     loadAfterConnectionOpen: !0

@@ -17,10 +17,5 @@ var l = n("577427"),
       text: "@here",
       description: r.default.Messages.MENTION_HERE_AUTOCOMPLETE_DESCRIPTION
     }),
-    MENTION_CLYDE: () => ({
-      test: "clyde",
-      text: "@Clyde",
-      description: r.default.Messages.CLYDE_MENTION_DESCRIPTION
-    }),
     LAUNCHABLE_APPLICATIONS: () => l.default.launchableApplicationViewItems
   }
