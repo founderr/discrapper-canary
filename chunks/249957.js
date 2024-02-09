@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var a = n("37983");
@@ -10,28 +10,29 @@ var l = n("414456"),
   s = n.n(l),
   i = n("65597"),
   r = n("77078"),
-  u = n("26989"),
-  o = n("697218"),
+  o = n("26989"),
+  u = n("697218"),
   d = n("339123"),
   c = n("763225"),
   f = n("703433"),
   h = n("21363"),
-  p = n("608973"),
-  m = n("132881"),
-  E = n("63893");
+  p = n("68777"),
+  m = n("608973"),
+  E = n("132881"),
+  C = n("63893");
 
-function C(e) {
+function g(e) {
   let {
     userId: t,
     guildId: n
   } = e, l = (0, c.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
   return (0, a.jsxs)("div", {
-    className: s(E.header),
+    className: s(C.header),
     style: {
       backgroundColor: l
     },
     children: [(0, a.jsxs)("div", {
-      className: s(E.headerTitle),
+      className: s(C.headerTitle),
       children: [(0, a.jsx)(d.default, {
         width: 16,
         height: 16
@@ -42,41 +43,43 @@ function C(e) {
     }), (0, a.jsx)("div", {
       children: (0, a.jsx)(r.KeyCombo, {
         shortcut: "esc",
-        keyClassName: E.keyComboInner,
-        className: E.keyComboContainer
+        keyClassName: C.keyComboInner,
+        className: C.keyComboContainer
       })
     })]
   })
 }
 
-function g(e) {
+function S(e) {
   let {
     userId: t,
     guildId: n,
     location: l,
-    className: r,
-    onNavigate: d
-  } = e, g = (0, i.default)([o.default], () => o.default.getUser(t), [t]), S = (0, i.default)([u.default], () => u.default.getMember(n, t), [n, t]), _ = (0, c.useProfileThemedPanelBackground)(t, n);
-  return null == g || null == S ? null : (0, a.jsxs)("div", {
-    className: s(E.container, r),
+    className: d,
+    onNavigate: S
+  } = e, _ = (0, i.default)([u.default], () => u.default.getUser(t), [t]), I = (0, i.default)([o.default], () => o.default.getMember(n, t), [n, t]), T = (0, c.useProfileThemedPanelBackground)(t, n);
+  return null == _ || null == I ? null : (0, a.jsxs)(r.Scroller, {
+    className: s(C.container, d),
     style: {
-      backgroundColor: _
+      backgroundColor: T
     },
-    children: [(0, a.jsx)(C, {
+    children: [(0, a.jsx)(g, {
       userId: t,
       guildId: n
     }), (0, a.jsxs)("div", {
-      className: s(E.innerContainer),
-      children: [(0, a.jsx)(p.default, {
-        member: S
-      }), (0, a.jsx)(m.default, {
+      className: s(C.innerContainer),
+      children: [(0, a.jsx)(m.default, {
+        member: I
+      }), (0, a.jsx)(E.default, {
         userId: t,
         guildId: n,
-        onNavigate: d
+        onNavigate: S
       }), (0, a.jsx)(h.default, {
-        member: S
+        member: I
       }), (0, a.jsx)(f.default, {
-        member: S
+        member: I
+      }), (0, a.jsx)(p.default, {
+        member: I
       })]
     })]
   })
