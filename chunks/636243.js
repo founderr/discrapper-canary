@@ -6,16 +6,16 @@ n.r(t), n.d(t, {
 });
 var i = (0, n("862205").createExperiment)({
   kind: "user",
-  id: "2024-02_clips_quality_decoupling",
-  label: "Clips quality decoupling",
+  id: "2024-01_h265_desktop_decode",
+  label: "H.265 Desktop Decode",
   defaultConfig: {
-    allowQualityDecoupling: !1
+    signalH265DesktopDecode: !1
   },
   treatments: [{
     id: 1,
-    label: "Enable Clips quality decoupling",
+    label: "Desktop H.265 Decode",
     config: {
-      allowQualityDecoupling: !0
+      signalH265DesktopDecode: !0
     }
   }]
 })

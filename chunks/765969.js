@@ -6,22 +6,20 @@ E.r(_), E.d(_, {
 });
 var t = E("697218"),
   o = E("558986"),
-  n = E("802461"),
-  r = E("269579");
+  n = E("236266"),
+  r = E("802461");
 async function a() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown",
     _ = t.default.getCurrentUser();
   if (null == _) return;
-  let {
-    isEmojiCaptionsEnabled: E
-  } = r.default.getCurrentConfig({
+  let E = (0, n.getEmojiCaptionsExperimentConfig)({
     location: e
   });
-  if (!E) {
-    n.default.hasPersistedState() && n.default.clear();
+  if (!E.isEnabledOnDesktop) {
+    r.default.hasPersistedState() && r.default.clear();
     return
   }
-  if (n.default.getIsFetching()) return;
-  let a = n.default.getEmojiCaptionsTTL();
+  if (r.default.getIsFetching()) return;
+  let a = r.default.getEmojiCaptionsTTL();
   !(null != a && Date.now() < a) && await (0, o.getEmojiCaptionsForUser)()
 }

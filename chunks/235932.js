@@ -25,32 +25,29 @@ let c = (e, t, n) => {
       color: s,
       theme: r
     } = (0, u.getProfileInfo)(n, "black");
-    a.setColor(s), a.drawRoundedRect({
+    a.setColor(s), a.drawRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, 8, !0), a.setColor("dark" === r ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), a.drawRoundedRect({
+    }, !0), a.setColor("dark" === r ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), a.drawRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, 8, !0), (null === (l = t.assets) || void 0 === l ? void 0 : l.large_image) != null ? a.drawRoundedImage(o.AssetTypes.AssetImage, {
+    }, !0), (null === (l = t.assets) || void 0 === l ? void 0 : l.large_image) != null ? a.drawImage(o.AssetTypes.AssetImage, {
       x: 0,
       y: 8
     }, {
       w: o.activitySize,
       h: o.activitySize
-    }, 8) : (null === (i = a.assetMap) || void 0 === i ? void 0 : i.has(o.AssetTypes.ApplicationImage)) ? a.drawRoundedImage("ApplicationImage", {
+    }) : (null === (i = a.assetMap) || void 0 === i ? void 0 : i.has(o.AssetTypes.ApplicationImage)) && a.drawImage("ApplicationImage", {
       x: 0,
       y: 8
     }, {
       w: o.activitySize,
       h: o.activitySize
-    }, 8) : (a.setColor("white"), a.drawPath(o.ACTIVITY_IMAGE_FALLBACK_PATH, {
-      x: 0,
-      y: 8
-    }, !0, 2)), a.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), a.setFont({
+    }), a.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), a.setFont({
       size: 16,
       family: "sans-serif"
     }), a.drawText("".concat(n.username, " is playing"), {
@@ -77,23 +74,23 @@ let c = (e, t, n) => {
       color: a,
       theme: s
     } = (0, u.getProfileInfo)(n, "black");
-    i.setColor(a), i.drawRoundedRect({
+    i.setColor(a), i.drawRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, 8, !0), i.setColor("dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), i.drawRoundedRect({
+    }, !0), i.setColor("dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), i.drawRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
       w: o.canvasWidth
-    }, 8, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.AssetImage)) && i.drawRoundedImage(o.AssetTypes.AssetImage, {
+    }, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.AssetImage)) && i.drawImage(o.AssetTypes.AssetImage, {
       x: o.padding,
       y: o.padding
     }, {
       w: o.activitySize,
       h: o.activitySize
-    }, 8);
+    });
     let r = o.activitySize + o.padding + o.imagePadding;
     i.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), i.setFont({
       size: 16,
@@ -125,23 +122,23 @@ let c = (e, t, n) => {
       color: d,
       theme: c
     } = (0, u.getProfileInfo)(n, "black");
-    l.setColor(d), l.drawRoundedRect({
+    l.setColor(d), l.drawRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
-      w: o.canvasWidth
-    }, 8, !0), l.setColor("dark" === c ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), l.drawRoundedRect({
+      w: 320
+    }, !0), l.setColor("dark" === c ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), l.drawRect({
       x: 0,
       y: 0,
       h: o.canvasHeight,
-      w: o.canvasWidth
-    }, 8, !0), null != s && l.drawRoundedImage(o.AssetTypes.AssetImage, {
+      w: 320
+    }, !0), null != s && l.drawImage(o.AssetTypes.AssetImage, {
       x: o.padding,
       y: o.padding
     }, {
       w: o.activitySize,
       h: o.activitySize
-    }, 8);
+    });
     let f = o.activitySize + o.padding + o.imagePadding;
     l.setColor("dark" === c ? "white" : "rgb(6, 6, 7)"), l.setFont({
       size: 16,
@@ -160,39 +157,36 @@ let c = (e, t, n) => {
   },
   m = (e, t, n) => {
     var l;
-    let {
-      canvas: i
-    } = e;
-    i.setSize({
+    e.canvas.setSize({
       w: 450,
       h: 300
     });
     let {
-      color: a,
-      theme: s
+      color: i,
+      theme: a
     } = (0, u.getProfileInfo)(n, "black");
-    i.setColor(a), i.drawRoundedRect({
+    e.canvas.setColor(i), e.canvas.drawRect({
       x: 0,
       y: 0,
-      h: o.canvasHeight,
-      w: o.canvasWidth
-    }, 8, !0), i.setColor("dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), i.drawRoundedRect({
+      h: 300,
+      w: 450
+    }, !0), e.canvas.setColor("dark" === a ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), e.canvas.drawRect({
       x: 0,
       y: 0,
-      h: o.canvasHeight,
-      w: o.canvasWidth
-    }, 8, !0), (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.StreamPreview)) && i.drawRoundedImage(o.AssetTypes.StreamPreview, {
+      h: 300,
+      w: 450
+    }, !0), (null === (l = e.canvas.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.StreamPreview)) && e.canvas.drawImage(o.AssetTypes.StreamPreview, {
       x: 8,
       y: 54
     }, {
       w: 240,
       h: 180
-    }, 8), i.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"), i.setFont({
+    }), e.canvas.setColor("dark" === a ? "white" : "rgb(6, 6, 7)"), e.canvas.setFont({
       size: 16
-    }), i.drawText("".concat(n.username), {
+    }), e.canvas.drawText("".concat(n.username), {
       x: 8,
       y: 22
-    }, !0), i.drawText("".concat(t.name), {
+    }, !0), e.canvas.drawText("".concat(t.name), {
       x: 8,
       y: 38
     }, !0)
@@ -210,13 +204,8 @@ var h = e => {
     let e = n("800044").default;
     r = new e
   }
-  let C = new s.default(u, r),
-    {
-      canvas: T
-    } = C;
-  T.setFont({
-    truncate: !0
-  }), null != S ? m(C, h, E) : (0, a.default)(h) ? f(C, h, E) : (0, i.default)(h) && h.name === l.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? p(C, h, E) : c(C, h, E), (null === (t = T.assetMap) || void 0 === t ? void 0 : t.has(o.AssetTypes.Platform)) && T.drawImage(o.AssetTypes.Platform, {
+  let C = new s.default(u, r);
+  null != S ? m(C, h, E) : (0, a.default)(h) ? f(C, h, E) : (0, i.default)(h) && h.name === l.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? p(C, h, E) : c(C, h, E), (null === (t = C.canvas.assetMap) || void 0 === t ? void 0 : t.has(o.AssetTypes.Platform)) && C.canvas.drawImage(o.AssetTypes.Platform, {
     x: o.canvasWidth - o.padding - o.platformSize,
     y: o.padding
   }, {

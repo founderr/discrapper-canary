@@ -87,7 +87,7 @@ function b(i) {
     type: y = r.ReactionTypes.NORMAL
   } = i, k = null != s.id ? "".concat(s.name, ":").concat(s.id) : s.name;
   return null == a ? _.Endpoints.REACTIONS(x, t, k) : o ? _.Endpoints.REACTION_WITH_TYPE(x, t, k, a, y) : _.Endpoints.REACTION(x, t, k, a)
-}(s = a || (a = {})).MESSAGE = "Message", s.FORUM_TOOLBAR = "Forum Toolbar", s.MOBILE_MEDIA_VIEWER = "Mobile Media Viewer";
+}
 async function w(i) {
   let {
     channelId: x,
@@ -96,31 +96,27 @@ async function w(i) {
     limit: a,
     after: y,
     type: d
-  } = i, p = d === r.ReactionTypes.VOTE ? function(i, x, t) {
-    var s;
-    let a = null !== (s = t.id) && void 0 !== s ? s : t.name;
-    return _.Endpoints.POLL_ANSWER_VOTERS(i, x, a)
-  }(x, t, s) : b({
-    channelId: x,
-    messageId: t,
-    emoji: s
-  }), e = await o.default.get({
-    url: p,
+  } = i, r = await o.default.get({
+    url: b({
+      channelId: x,
+      messageId: t,
+      emoji: s
+    }),
     query: {
       limit: a,
       after: y,
       type: d
     },
     oldFormErrors: !0
-  }), n = d === r.ReactionTypes.VOTE ? e.body.users : e.body;
+  });
   return k.default.dispatch({
     type: "MESSAGE_REACTION_ADD_USERS",
     channelId: x,
     messageId: t,
-    users: n,
+    users: r.body,
     emoji: s,
     reactionType: d
-  }), n
+  }), r.body
 }
 async function E(i, x, t) {
   let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
@@ -280,7 +276,7 @@ async function T(i, x) {
     t = await (0, l.getEmojiColors)(i)
   } catch {}
   return t
-}
+}(s = a || (a = {})).MESSAGE = "Message", s.FORUM_TOOLBAR = "Forum Toolbar", s.MOBILE_MEDIA_VIEWER = "Mobile Media Viewer";
 
 function N(i) {
   let {
