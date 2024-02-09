@@ -269,10 +269,15 @@ var ed = i.memo(i.forwardRef(function(e, t) {
       onSelectEmoji: el,
       setUpsellConfigs: eO,
       emojiSelectAnalytics: e => {
-        "" !== eM ? (0, w.trackEmojiSearchSelect)(e.emoji, {
-          ...eK,
-          object: Z.AnalyticsObjects.EMOJI
-        }, eM, o) : (0, w.trackEmojiSelect)({
+        "" !== eM ? (0, w.trackEmojiSearchSelect)({
+          emoji: e.emoji,
+          location: {
+            ...eK,
+            object: Z.AnalyticsObjects.EMOJI
+          },
+          searchQuery: eM,
+          intention: o
+        }) : (0, w.trackEmojiSelect)({
           emoji: e.emoji,
           location: {
             ...eK,
