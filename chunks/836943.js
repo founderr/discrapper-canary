@@ -12,7 +12,7 @@ var s = n("37983"),
   o = n.n(r),
   u = n("130969"),
   d = n("77078"),
-  c = n("913144"),
+  c = n("558986"),
   E = n("62587"),
   f = n("85589"),
   _ = n("166257"),
@@ -68,18 +68,8 @@ class v extends l.Component {
             onClick: e => {
               this.handleAddReactionClick(e)
             },
-            onMouseEnter: () => {
-              c.default.dispatch({
-                type: "EMOJI_INTERACTION_INITIATED",
-                interaction: g.EmojiInteractionPoint.AddReactionPopoutMouseEntered
-              })
-            },
-            onFocus: () => {
-              c.default.dispatch({
-                type: "EMOJI_INTERACTION_INITIATED",
-                interaction: g.EmojiInteractionPoint.AddReactionPopoutFocused
-              })
-            },
+            onMouseEnter: () => (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
+            onFocus: () => (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.AddReactionPopoutFocused),
             className: i(I.reactionBtn, {
               [I.active]: a
             }, n),

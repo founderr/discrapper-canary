@@ -8,7 +8,7 @@ var a = n("37983");
 n("884691");
 var s = n("394846"),
   l = n("77078"),
-  i = n("913144"),
+  i = n("558986"),
   r = n("79945"),
   o = n("149279"),
   u = n("958706"),
@@ -56,10 +56,7 @@ function f(e) {
           } = e;
           return (0, a.jsx)(o.Button, {
             onMouseEnter: () => {
-              null == t || t(), i.default.dispatch({
-                type: "EMOJI_INTERACTION_INITIATED",
-                interaction: u.EmojiInteractionPoint.MessageContextMenuMouseEntered
-              })
+              null == t || t(), (0, i.initiateEmojiInteraction)(u.EmojiInteractionPoint.MessageContextMenuMouseEntered)
             },
             onMouseLeave: n,
             onClick: () => {

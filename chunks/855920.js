@@ -13,9 +13,9 @@ var l = n("37983"),
   i = n.n(s),
   r = n("748820"),
   o = n("77078"),
-  u = n("913144"),
-  d = n("430568"),
-  c = n("716241"),
+  u = n("430568"),
+  d = n("716241"),
+  c = n("558986"),
   m = n("599110"),
   f = n("459698"),
   h = n("933629"),
@@ -29,7 +29,7 @@ let v = e => {
       node: n,
       tooltipPosition: a = h.EXPRESSION_TOOLTIP_PROPS.position,
       enableClick: s = !0
-    } = e, r = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0], u = null != r ? r : n.name, c = e => (0, l.jsx)(d.default, {
+    } = e, r = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0], d = null != r ? r : n.name, c = e => (0, l.jsx)(u.default, {
       ...e,
       emojiName: n.name,
       size: n.jumboable ? "jumbo" : "default",
@@ -38,7 +38,7 @@ let v = e => {
       animated: !1
     }), m = e => (0, l.jsx)(o.Tooltip, {
       text: (0, h.renderClickableTooltipNode)(n.name, s),
-      "aria-label": u,
+      "aria-label": d,
       ...h.EXPRESSION_TOOLTIP_PROPS,
       position: a,
       onTooltipShow: () => {
@@ -74,10 +74,10 @@ let v = e => {
       node: t,
       isInteracting: n,
       tooltipPosition: s = h.EXPRESSION_TOOLTIP_PROPS.position,
-      enableClick: c = !0
-    } = e, [E, v] = a.useState(String(Date.now())), [I, x] = a.useState(!1), _ = function() {
+      enableClick: d = !0
+    } = e, [E, v] = a.useState(String(Date.now())), [I, _] = a.useState(!1), x = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return (0, l.jsx)(d.default, {
+      return (0, l.jsx)(u.default, {
         ...e,
         emojiName: t.name,
         size: t.jumboable ? "jumbo" : "default",
@@ -86,19 +86,16 @@ let v = e => {
         isInteracting: n
       })
     }, N = (0, r.v4)(), T = e => (0, l.jsx)(o.Tooltip, {
-      text: (0, h.renderClickableTooltipNode)(t.name, c),
+      text: (0, h.renderClickableTooltipNode)(t.name, d),
       "aria-label": t.name,
       ...h.EXPRESSION_TOOLTIP_PROPS,
       position: s,
       onTooltipShow: () => {
-        x(!0), c && (S({
+        _(!0), d && (S({
           emojiNode: t,
           isCustomEmoji: !0,
           nonce: N
-        }), u.default.dispatch({
-          type: "EMOJI_INTERACTION_INITIATED",
-          interaction: g.EmojiInteractionPoint.CustomEmojiTooltipShown
-        }))
+        }), (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.CustomEmojiTooltipShown))
       },
       children: t => (0, l.jsx)(o.Clickable, {
         ...e,
@@ -108,27 +105,27 @@ let v = e => {
         },
         onClick: t => {
           var n;
-          x(!1), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
+          _(!1), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
           I && (m.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
             nonce: N
-          }), x(!1))
+          }), _(!1))
         },
         tag: "span",
         className: i(C.emojiContainer, {
-          [C.emojiContainerClickable]: c
+          [C.emojiContainerClickable]: d
         }),
-        children: _(t)
+        children: x(t)
       })
     });
-    return c ? (0, l.jsx)(o.Popout, {
+    return d ? (0, l.jsx)(o.Popout, {
       animation: o.Popout.Animation.FADE,
       align: "center",
       onRequestClose: () => {
         m.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
           nonce: N
-        }), x(!1)
+        }), _(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
@@ -149,7 +146,7 @@ let v = e => {
       isCustomEmoji: n,
       nonce: l
     } = e;
-    c.default.trackWithMetadata(p.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
+    d.default.trackWithMetadata(p.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
       type: E.PremiumUpsellTypes.EMOJI_IN_MESSAGE_HOVER,
       expression_id: t.emojiId,
       expression_name: t.name,

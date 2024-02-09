@@ -297,7 +297,8 @@ let eu = l.memo(e => {
               onToggleMute: eD,
               participantUserId: eC,
               hangStatusActivity: eO,
-              application: eP
+              application: eP,
+              speaking: eT
             }) : null, d.type === el.ParticipantTypes.USER && eS ? (0, a.jsx)(N.default, {
               userId: d.id,
               channelId: B.id
@@ -369,10 +370,11 @@ let ec = l.memo(e => {
     onToggleMute: O,
     platform: y,
     hangStatusActivity: P,
-    application: D
-  } = e, w = null, G = null, W = null, z = null, K = (0, et.isVideoCompact)(C), J = (0, et.isNamesCompact)(C), q = (0, r.useStateFromStores)([b.default], () => null != j && b.default.isLocalVideoAutoDisabled(j, (0, g.default)(R)), [j, R]), Q = (0, h.useRedesignIconContext)().enabled;
+    application: D,
+    speaking: w
+  } = e, G = null, W = null, z = null, K = null, J = (0, et.isVideoCompact)(C), q = (0, et.isNamesCompact)(C), Q = (0, r.useStateFromStores)([b.default], () => null != j && b.default.isLocalVideoAutoDisabled(j, (0, g.default)(R)), [j, R]), $ = (0, h.useRedesignIconContext)().enabled;
   if (!M) {
-    if (l && R === el.ParticipantTypes.STREAM && S && !N) w = (0, a.jsx)(h.Tooltip, {
+    if (l && R === el.ParticipantTypes.STREAM && S && !N) G = (0, a.jsx)(h.Tooltip, {
       text: er.default.Messages.UNMUTE,
       children: e => {
         let {
@@ -389,21 +391,21 @@ let ec = l.memo(e => {
         })
       }
     });
-    else if (l || R !== el.ParticipantTypes.STREAM || !S || K || N) {
-      if (Q) {
+    else if (l || R !== el.ParticipantTypes.STREAM || !S || J || N) {
+      if ($) {
         let e;
-        p ? e = u.HeadphonesDenyIcon : s ? e = c.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : l ? e = c.MicrophoneDenyIcon : t && (e = f.MicrophoneSlashIcon), w = null != e ? (0, a.jsx)(e, {
+        p ? e = u.HeadphonesDenyIcon : s ? e = c.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : l ? e = c.MicrophoneDenyIcon : t && (e = f.MicrophoneSlashIcon), G = null != e ? (0, a.jsx)(e, {
           color: o.default.colors.WHITE
         }) : null
       } else if (n || t || l) {
         let e = n ? B.default : H.default;
-        w = (0, a.jsx)(e, {
+        G = (0, a.jsx)(e, {
           foreground: i({
             [eo.localMuteStrikethrough]: l && !n
           })
         })
       }
-    } else w = (0, a.jsx)(h.Tooltip, {
+    } else G = (0, a.jsx)(h.Tooltip, {
       text: er.default.Messages.MUTE,
       children: e => {
         let {
@@ -421,9 +423,9 @@ let ec = l.memo(e => {
       }
     })
   }
-  return _ && b.default.supports(ei.Features.VIDEO) || !S ? _ && S && I && !q && (G = (0, a.jsx)(V.default, {
+  return _ && b.default.supports(ei.Features.VIDEO) || !S ? _ && S && I && !Q && (W = (0, a.jsx)(V.default, {
     foreground: eo.localMuteStrikethrough
-  })) : G = (0, a.jsx)(k.default, {}), R === el.ParticipantTypes.STREAM && !N && S && (W = (0, a.jsx)(h.Tooltip, {
+  })) : W = (0, a.jsx)(k.default, {}), R === el.ParticipantTypes.STREAM && !N && S && (z = (0, a.jsx)(h.Tooltip, {
     text: er.default.Messages.OPTIONS,
     children: e => {
       let {
@@ -439,7 +441,7 @@ let ec = l.memo(e => {
         children: (0, a.jsx)(Y.default, {})
       })
     }
-  })), W = (0, a.jsx)(h.Tooltip, {
+  })), z = (0, a.jsx)(h.Tooltip, {
     text: er.default.Messages.OPTIONS,
     children: e => {
       let {
@@ -455,7 +457,7 @@ let ec = l.memo(e => {
         children: (0, a.jsx)(Y.default, {})
       })
     }
-  }), null != P ? z = (0, a.jsx)(h.Tooltip, {
+  }), null != P ? K = (0, a.jsx)(h.Tooltip, {
     text: (0, T.getHangStatusText)(P),
     children: e => (0, a.jsx)("div", {
       ...e,
@@ -464,10 +466,11 @@ let ec = l.memo(e => {
       }),
       children: (0, a.jsx)(v.default, {
         hangStatusActivity: P,
-        className: eo.hangStatusIcon
+        className: eo.hangStatusIcon,
+        animate: w
       })
     })
-  }) : null != D && (z = (0, a.jsx)(h.Tooltip, {
+  }) : null != D && (K = (0, a.jsx)(h.Tooltip, {
     text: er.default.Messages.UNFORMATTED_PLAYING_GAME.format({
       game: D.name
     }),
@@ -488,7 +491,7 @@ let ec = l.memo(e => {
       className: i(eo.overlayTop, {
         [eo.small]: C < 195
       }),
-      children: q || x === ea.VideoToggleState.AUTO_PROBING ? m ? (0, a.jsx)("div", {
+      children: Q || x === ea.VideoToggleState.AUTO_PROBING ? m ? (0, a.jsx)("div", {
         className: eo.status,
         children: (0, a.jsx)(V.default, {})
       }) : (0, a.jsxs)("div", {
@@ -506,7 +509,7 @@ let ec = l.memo(e => {
       className: i(eo.overlayBottom, {
         [eo.small]: C < 195
       }),
-      children: [J ? (0, a.jsx)("div", {}) : (0, a.jsxs)(h.Text, {
+      children: [q ? (0, a.jsx)("div", {}) : (0, a.jsxs)(h.Text, {
         className: i(eo.overlayTitle, {
           [eo.idle]: m
         }),
@@ -528,13 +531,13 @@ let ec = l.memo(e => {
         }) : null]
       }), (0, a.jsxs)("div", {
         className: eo.statusContainer,
-        children: [null != G && (0, a.jsx)("div", {
+        children: [null != W && (0, a.jsx)("div", {
+          className: eo.status,
+          children: W
+        }), null != G && (0, a.jsx)("div", {
           className: eo.status,
           children: G
-        }), null != w && (0, a.jsx)("div", {
-          className: eo.status,
-          children: w
-        }), W, z]
+        }), z, K]
       })]
     })]
   })

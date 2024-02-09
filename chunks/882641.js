@@ -13,7 +13,7 @@ var l = n("37983"),
   s = n.n(a),
   r = n("907002"),
   o = n("77078"),
-  u = n("913144"),
+  u = n("558986"),
   d = n("474293"),
   c = n("958706"),
   f = n("782340"),
@@ -39,20 +39,12 @@ var h = function(e) {
       "--custom-emoji-sprite-col": t % 20
     }),
     x = i.useCallback(() => {
-      if (!y) v(!0), _(Math.floor(77 * Math.random())), u.default.dispatch({
-        type: "EMOJI_INTERACTION_INITIATED",
-        interaction: c.EmojiInteractionPoint.EmojiButtonMouseEntered
-      })
+      if (!y) v(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
     }, [y, v, _]),
     O = i.useCallback(() => {
       v(!1)
     }, [v]),
-    R = i.useCallback(() => {
-      u.default.dispatch({
-        type: "EMOJI_INTERACTION_INITIATED",
-        interaction: c.EmojiInteractionPoint.EmojiButtonFocused
-      })
-    }, []);
+    R = i.useCallback(() => (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonFocused), []);
   return (0, l.jsx)(o.Button, {
     look: o.Button.Looks.BLANK,
     size: o.Button.Sizes.NONE,
