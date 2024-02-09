@@ -84,7 +84,7 @@ function w(e) {
     type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
     channelId: i,
     instanceId: l
-  })), null != A && !f.some(e => e === I) && Array.from(A.userIds).some(e => e === I) && (S.get(i) === a ? S.delete(i) : y.delete(a));
+  })), null != A && i === A.channelId && !f.some(e => e === I) && Array.from(A.userIds).some(e => e === I) && (S.get(i) === a ? S.delete(i) : y.delete(a));
   let D = null !== (t = C.get(i)) && void 0 !== t ? t : [],
     N = D.filter(e => e.applicationId !== a),
     O = M(s),
