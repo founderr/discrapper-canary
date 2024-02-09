@@ -54,15 +54,15 @@ l = class extends i.default {
     } = e;
     this.setContextProperties(), this.context.beginPath(), this.context.roundRect(l, i, a, s, t), n ? this.context.fill() : this.context.stroke()
   }
-  drawText(e, t, n) {
+  drawText(e, t, n, l) {
     if (null == this.context) return;
     this.setContextProperties();
-    let l = this.canvas.width,
-      i = this.context.measureText(e),
-      s = !1;
+    let i = null != l ? l : this.canvas.width,
+      s = this.context.measureText(e),
+      r = !1;
     if (this.font.truncate) {
-      for (; i.width + t.x + a.TEXT_TRUNCATION_PADDING_PX > l;) e = e.slice(0, -4), i = this.context.measureText(e), s = !0;
-      s && (e += "...")
+      for (; s.width + t.x + a.TEXT_TRUNCATION_PADDING_PX > i;) e = e.slice(0, -4), s = this.context.measureText(e), r = !0;
+      r && (e += "...")
     }
     n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y)
   }
