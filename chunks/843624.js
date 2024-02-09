@@ -101,8 +101,8 @@ function N(e) {
             canMentionChannels: !1,
             allowNewLines: !1,
             parentModalKey: _,
-            maxCharacterCount: 50,
-            showRemainingCharsAfterCount: 25,
+            maxCharacterCount: 500,
+            showRemainingCharsAfterCount: 250,
             emojiPickerCloseOnModalOuterClick: !0
           }), null != y ? (0, l.jsx)(r.FormErrorBlock, {
             className: h.error,
@@ -120,7 +120,7 @@ function N(e) {
           onClick: O,
           submitting: A,
           className: h.button,
-          disabled: I.length > 50,
+          disabled: I.length > 500,
           children: v.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS
         })]
       })]
