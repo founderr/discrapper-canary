@@ -1,6 +1,5 @@
 "use strict";
 e.exports = {
-  closeIcon: "closeIcon_bfdebf",
   picker: "picker__35201",
   reaction: "reaction__98ec4",
   reactions: "reactions__7b6b2",

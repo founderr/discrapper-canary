@@ -15,9 +15,6 @@ n.r(t), n.d(t, {
   getPremiumPlanItem: function() {
     return w
   },
-  getDefaultPrice: function() {
-    return k
-  },
   getPrice: function() {
     return x
   },

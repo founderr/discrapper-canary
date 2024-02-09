@@ -44,7 +44,6 @@ i = class extends a.default {
   setClipRecordUser(e, t, n) {}
   setViewerSideClip(e) {}
   setClipsKeyFrameInterval(e) {}
-  setQualityDecoupling(e) {}
   getStreamParameters() {
     return s.cloneDeep(this.videoStreamParameters)
   }

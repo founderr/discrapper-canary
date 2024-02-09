@@ -21,9 +21,6 @@ let d = {
         channelId: e.channel_id,
         messageId: e.id
       })
-    },
-    iconProps: {
-      color: "currentColor"
     }
   })
 };

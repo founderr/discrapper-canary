@@ -18,15 +18,15 @@ var o, l, u, c, d = n("627445"),
   I = n("913144"),
   C = n("49671"),
   v = n("6193"),
-  A = n("965068"),
-  R = n("386045"),
-  N = n("18346"),
-  O = n("605250"),
-  D = n("808122"),
-  y = n("733589"),
-  P = n("933034"),
-  L = n("746800"),
-  b = n("584687"),
+  A = n("386045"),
+  R = n("18346"),
+  N = n("605250"),
+  O = n("808122"),
+  D = n("733589"),
+  y = n("933034"),
+  P = n("746800"),
+  L = n("584687"),
+  b = n("636243"),
   M = n("705500"),
   U = n("238847"),
   G = n("981699"),
@@ -67,7 +67,7 @@ var o, l, u, c, d = n("627445"),
   e_ = n("397336"),
   eS = n("353927"),
   em = n("782340");
-let eT = new O.default("MediaEngineStore");
+let eT = new N.default("MediaEngineStore");
 (u = o || (o = {}))[u.DETACHED = 0] = "DETACHED", u[u.WAITING = 1] = "WAITING", u[u.ATTACHED = 2] = "ATTACHED", u[u.STARTED = 3] = "STARTED", u[u.PLAYING = 4] = "PLAYING", u[u.SILENCE = 5] = "SILENCE", (c = l || (l = {}))[c.FAILED = -1] = "FAILED", c[c.OK = 0] = "OK", c[c.ACE_INSTALL_FAILED = 4] = "ACE_INSTALL_FAILED", c[c.ACE_NOT_AUTHORIZED = 5] = "ACE_NOT_AUTHORIZED";
 let eg = "MediaEngineStore",
   eI = {
@@ -266,7 +266,7 @@ function e9(e, t, n, i) {
     soundshare_failure_code: t,
     soundshare_failure_reason: n,
     soundshare_failure_will_retry: i,
-    ...(0, P.default)(e)
+    ...(0, y.default)(e)
   })
 }
 
@@ -524,27 +524,34 @@ class tT extends S.default.Store {
       });
       r && e.setExperimentFlag(eS.ExperimentFlags.VIDEOTOOLBOX_RATE_CONTROL, !0);
       {
-        (0, ee.isWindows)() && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT, !0);
         let {
-          signalH265SupportMacOS: t
+          signalH265DesktopDecode: t
+        } = b.default.getCurrentConfig({
+          location: "MediaEngineStore_setupMediaEngine"
+        }, {
+          autoTrackExposure: !0
+        });
+        t && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT, !0);
+        let {
+          signalH265SupportMacOS: n
         } = M.default.getCurrentConfig({
           location: "f627ab_8"
         }, {
           autoTrackExposure: !0
         });
-        t && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
+        n && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
         let {
-          signalH265SupportNvenc: n
+          signalH265SupportNvenc: i
         } = U.default.getCurrentConfig({
           location: "f627ab_9"
         }, {
           autoTrackExposure: !0
         });
-        n && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0)
+        i && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0)
       }
       let {
         signalAV1Support: a
-      } = L.default.getCurrentConfig({
+      } = P.default.getCurrentConfig({
         location: "f627ab_10"
       }, {
         autoTrackExposure: !0
@@ -557,8 +564,8 @@ class tT extends S.default.Store {
       }, {
         autoTrackExposure: !0
       });
-      if (o && ev.setHasFullbandPerformance((0, D.hasPerformanceForKrispFullband)()), (0, N.default)(i)) {
-        let t = R.default.getSettings();
+      if (o && ev.setHasFullbandPerformance((0, O.hasPerformanceForKrispFullband)()), (0, R.default)(i)) {
+        let t = A.default.getSettings();
         e.setExperimentFlag(eS.ExperimentFlags.STREAMER_CLIP, t.clipsEnabled);
         let {
           enableViewerClipping: n
@@ -575,15 +582,7 @@ class tT extends S.default.Store {
           location: "MediaEngineStore_SetupMediaEngine"
         }, {
           autoTrackExposure: !0
-        }).keyFrameIntervalMs), e.setClipsKeyFrameInterval(n && t.viewerClipsEnabled ? eS.VIEWERSIDE_CLIP_KFI_MS : r);
-        let {
-          allowQualityDecoupling: s
-        } = A.default.getCurrentConfig({
-          location: "MediaEngineStore_setupMediaEngine"
-        }, {
-          autoTrackExposure: !0
-        });
-        e.setQualityDecoupling(s)
+        }).keyFrameIntervalMs), e.setClipsKeyFrameInterval(n && t.viewerClipsEnabled ? eS.VIEWERSIDE_CLIP_KFI_MS : r)
       }
       for (let t of (n = e3(e.context), e.setPostponeDecodeLevel(100), Object.keys(n.localMutes))) t !== er.default.getId() && e.setLocalMute(t, n.localMutes[t]);
       for (let t of Object.keys(n.localVolumes)) t !== er.default.getId() && e.setLocalVolume(t, n.localVolumes[t]);
@@ -609,7 +608,7 @@ class tT extends S.default.Store {
           }
         })
       }), e.on(m.BaseConnectionEvent.SoundshareAttached, () => {
-        (null == s ? void 0 : s.desktopSource) != null && Z.default.track(eE.AnalyticEvents.SOUNDSHARE_ATTACHED, (0, P.default)(null == s ? void 0 : s.desktopSource))
+        (null == s ? void 0 : s.desktopSource) != null && Z.default.track(eE.AnalyticEvents.SOUNDSHARE_ATTACHED, (0, y.default)(null == s ? void 0 : s.desktopSource))
       }), e.on(m.BaseConnectionEvent.SoundshareFailed, e => {
         let {
           failureCode: t,
@@ -618,7 +617,7 @@ class tT extends S.default.Store {
         } = e;
         e9(null == s ? void 0 : s.desktopSource, t, n, i)
       }), e.on(m.BaseConnectionEvent.SoundshareSpeaking, () => {
-        (null == s ? void 0 : s.desktopSource) != null && (Z.default.track(eE.AnalyticEvents.SOUNDSHARE_TRANSMITTING, (0, P.default)(null == s ? void 0 : s.desktopSource)), null != eu.default.getHookError(eE.MediaEngineHookTypes.SOUND) && I.default.wait(() => I.default.dispatch({
+        (null == s ? void 0 : s.desktopSource) != null && (Z.default.track(eE.AnalyticEvents.SOUNDSHARE_TRANSMITTING, (0, y.default)(null == s ? void 0 : s.desktopSource)), null != eu.default.getHookError(eE.MediaEngineHookTypes.SOUND) && I.default.wait(() => I.default.dispatch({
           type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING"
         })))
       });
@@ -661,7 +660,7 @@ class tT extends S.default.Store {
           sample_count: i,
           success: r,
           reinitialization: a,
-          ...(0, P.default)(null == s ? void 0 : s.desktopSource)
+          ...(0, y.default)(null == s ? void 0 : s.desktopSource)
         })
       }), e.on(m.BaseConnectionEvent.NoiseCancellationError, e => {
         eT.warn("noisecancellererror event: ".concat(e)), eq = !0, Z.default.track(eE.AnalyticEvents.VOICE_PROCESSING, {
@@ -791,7 +790,7 @@ class tT extends S.default.Store {
       [eS.Features.VIDEO]: ev.supports(eS.Features.VIDEO),
       [eS.Features.DESKTOP_CAPTURE]: ev.supports(eS.Features.DESKTOP_CAPTURE),
       [eS.Features.HYBRID_VIDEO]: ev.supports(eS.Features.HYBRID_VIDEO)
-    }, this.waitFor(er.default, ea.default, eo.default, eu.default, ec.default, ed.default, z.default.storage, Q.default, el.default, R.default)
+    }, this.waitFor(er.default, ea.default, eo.default, eu.default, ec.default, ed.default, z.default.storage, Q.default, el.default, A.default)
   }
   supports(e) {
     return ev.supports(e)
@@ -1620,7 +1619,7 @@ var tg = i = new tT(I.default, {
   APP_STATE_UPDATE: function(e) {
     let {
       state: t
-    } = e, n = y.default.isEnabled();
+    } = e, n = D.default.isEnabled();
     if (t === eE.AppStates.BACKGROUND && ew && !n) eF = !0, e8(!1);
     else {
       if (t !== eE.AppStates.ACTIVE || !eF) return !1;
@@ -1716,11 +1715,11 @@ var tg = i = new tT(I.default, {
       quality: r
     } = e, {
       enableDecoupledGameClipping: s
-    } = b.default.getCurrentConfig({
+    } = L.default.getCurrentConfig({
       location: "handleClipsInit"
     }, {
       autoTrackExposure: !0
-    }), o = R.default.getSettings().decoupledClipsEnabled;
+    }), o = A.default.getSettings().decoupledClipsEnabled;
     if (!s || !o || null == C.default) return;
     let l = null,
       u = null,
@@ -1777,6 +1776,6 @@ var tg = i = new tT(I.default, {
     let {
       settings: t
     } = e;
-    void 0 !== t.viewerClipsEnabled && ev.eachConnection(e => e.setClipsKeyFrameInterval(R.default.getSettings().viewerClipsEnabled ? eS.VIEWERSIDE_CLIP_KFI_MS : 0), eS.MediaEngineContextTypes.STREAM), !1 === t.decoupledClipsEnabled && (a = null, ev.setClipsSource(null))
+    void 0 !== t.viewerClipsEnabled && ev.eachConnection(e => e.setClipsKeyFrameInterval(A.default.getSettings().viewerClipsEnabled ? eS.VIEWERSIDE_CLIP_KFI_MS : 0), eS.MediaEngineContextTypes.STREAM), !1 === t.decoupledClipsEnabled && (a = null, ev.setClipsSource(null))
   }
 })

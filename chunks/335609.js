@@ -14,8 +14,8 @@ var l = n("627445"),
       this.color = e
     }
     setFont(e) {
-      var t, n, l, i, a;
-      this.font.style = null !== (t = e.style) && void 0 !== t ? t : this.font.style, this.font.size = null !== (n = e.size) && void 0 !== n ? n : this.font.size, this.font.weight = null !== (l = e.weight) && void 0 !== l ? l : this.font.weight, this.font.family = null !== (i = e.family) && void 0 !== i ? i : this.font.family, this.font.truncate = null !== (a = e.truncate) && void 0 !== a ? a : this.font.truncate
+      var t, n, l, i;
+      this.font.style = null !== (t = e.style) && void 0 !== t ? t : this.font.style, this.font.size = null !== (n = e.size) && void 0 !== n ? n : this.font.size, this.font.weight = null !== (l = e.weight) && void 0 !== l ? l : this.font.weight, this.font.family = null !== (i = e.family) && void 0 !== i ? i : this.font.family
     }
     getLoadedImage(e) {
       i(null != this.assetMap, "DiscordCanvas: An AssetStore has not been initialized.");
@@ -31,8 +31,7 @@ var l = n("627445"),
         style: "normal",
         weight: 300,
         size: 24,
-        family: "serif",
-        truncate: !1
+        family: "serif"
       }, this.canvas = e, this.assetMap = t
     }
   }
