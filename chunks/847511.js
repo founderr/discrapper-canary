@@ -196,10 +196,14 @@ var x = {
     } = null !== (n = (0, g.computeBasicPollChatData)(c)) && void 0 !== n ? n : {};
     if (!0 === E) {
       let e = null !== (a = null === (l = (0, g.reactionForId)(null != f ? f : [], i)) || void 0 === l ? void 0 : null === (s = l.count_details) || void 0 === s ? void 0 : s.vote) && void 0 !== a ? a : 0;
-      0 === e ? d.default.show({
-        title: M.default.Messages.POLL_NO_VOTES_FOR_ANSWER_TITLE,
-        body: M.default.Messages.POLL_NO_VOTES_FOR_ANSWER_BODY
-      }) : A.showVotesForAnswer({
+      if (0 === e) {
+        d.default.show({
+          title: M.default.Messages.POLL_NO_VOTES_FOR_ANSWER_TITLE,
+          body: M.default.Messages.POLL_NO_VOTES_FOR_ANSWER_BODY
+        });
+        return
+      }
+      A.showVotesForAnswer({
         channelId: o,
         messageId: u,
         answerId: i

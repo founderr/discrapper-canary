@@ -77,6 +77,24 @@ var a = (0, t("237436").defineColorTokens)({
       opacity: .96
     }
   },
+  "voice-video-video-tile-background": {
+    light: {
+      color: "plum.17",
+      opacity: .4
+    },
+    dark: {
+      color: "plum.17",
+      opacity: .4
+    },
+    darker: {
+      color: "plum.17",
+      opacity: .4
+    },
+    midnight: {
+      color: "plum.17",
+      opacity: .4
+    }
+  },
   "voice-video-video-tile-blur-fallback": {
     light: {
       color: "primary.700",

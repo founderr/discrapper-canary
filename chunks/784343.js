@@ -243,6 +243,11 @@ i = class e extends l.default {
       enableViewerSideClip: e
     })
   }
+  setQualityDecoupling(e) {
+    this.context === m.MediaEngineContextTypes.STREAM && this.conn.setTransportOptions({
+      enableQualityDecoupling: e
+    })
+  }
   getLocalVolume(e) {
     var t;
     let n = this.localVolumes[e];
