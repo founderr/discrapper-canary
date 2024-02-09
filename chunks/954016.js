@@ -174,6 +174,7 @@ let ei = {
       [R.EmbeddedActivitySupportedPlatforms.IOS]: ei,
       [R.EmbeddedActivitySupportedPlatforms.ANDROID]: ei
     },
-    has_csp_exception: !1
+    has_csp_exception: !1,
+    displays_advertisements: !1
   },
   es = [N.ChannelTypes.GUILD_TEXT, N.ChannelTypes.DM, N.ChannelTypes.GROUP_DM]
