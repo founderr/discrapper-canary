@@ -15,8 +15,8 @@ let o = r.ApplicationStreamPresets.PRESET_VIDEO,
 class f extends s.default.PersistedStore {
   initialize(e) {
     if (null != e) {
-      var t;
-      o = null !== (t = e.preset) && void 0 !== t ? t : r.ApplicationStreamPresets.PRESET_VIDEO, d = e.resolution, u = e.fps, l = e.soundshareEnabled
+      var t, n;
+      o = null !== (t = e.preset) && void 0 !== t ? t : r.ApplicationStreamPresets.PRESET_VIDEO, d = e.resolution, u = e.fps, l = null === (n = e.soundshareEnabled) || void 0 === n || n
     }
   }
   getState() {
