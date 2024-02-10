@@ -193,7 +193,8 @@ function B(e) {
               channelId: a,
               onClose: y,
               setNote: s,
-              canDM: es
+              canDM: es,
+              analyticsParams: V
             })]
           })]
         })

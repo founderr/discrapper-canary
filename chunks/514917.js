@@ -230,7 +230,13 @@ var a = n("37983"),
             children: (0, a.jsx)(w.default, {
               activity: null != em ? em : eE,
               user: es,
-              channelId: n.id
+              channelId: n.id,
+              analyticsParams: {
+                location: {
+                  page: q.AnalyticsPages.USER_PROFILE,
+                  section: q.AnalyticsSections.DM_PROFILE
+                }
+              }
             })
           }) : null, (eb || eP) && (0, a.jsxs)(b.default.Inner, {
             className: ee.profilePanelConnections,

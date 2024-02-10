@@ -70,49 +70,51 @@ var L = function(e) {
     useStoreStream: a = !0,
     showActions: o = !0,
     hideHeader: d = !1,
-    ...c
-  } = e, N = (0, r.useStateFromStores)([_.default, C.default], () => {
+    analyticsParams: c,
+    ...N
+  } = e, M = (0, r.useStateFromStores)([_.default, C.default], () => {
     var e;
     return C.default.getChannel(null === (e = _.default.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId)
   }), {
-    enableHangStatus: M
+    enableHangStatus: L
   } = E.HangStatusExperiment.useExperiment({
-    guildId: null == N ? void 0 : N.guild_id,
+    guildId: null == M ? void 0 : M.guild_id,
     location: "UserActivityContainer"
-  }), L = (0, r.useStateFromStores)([S.default], () => a ? S.default.getAnyStreamForUser(n.id) : null), P = M && v.default.can(x.Permissions.CONNECT, N), b = (null == t ? void 0 : t.type) === x.ActivityTypes.HANG_STATUS && P ? N : null, j = (0, r.useStateFromStores)([T.default, _.default, C.default], () => {
+  }), P = (0, r.useStateFromStores)([S.default], () => a ? S.default.getAnyStreamForUser(n.id) : null), b = L && v.default.can(x.Permissions.CONNECT, M), j = (null == t ? void 0 : t.type) === x.ActivityTypes.HANG_STATUS && b ? M : null, U = (0, r.useStateFromStores)([T.default, _.default, C.default], () => {
     var e, l;
-    return (0, u.default)(t, x.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = C.default.getChannel(null === (l = _.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === l ? void 0 : l.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != b ? T.default.getGuild(b.getGuildId()) : null
-  }), U = (0, r.useStateFromStores)([T.default], () => null != L ? T.default.getGuild(L.guildId) : null), D = (0, r.useStateFromStores)([f.default], () => {
+    return (0, u.default)(t, x.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = C.default.getChannel(null === (l = _.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === l ? void 0 : l.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != j ? T.default.getGuild(j.getGuildId()) : null
+  }), D = (0, r.useStateFromStores)([T.default], () => null != P ? T.default.getGuild(P.guildId) : null), k = (0, r.useStateFromStores)([f.default], () => {
     if (null != t) return null != t.application_id ? f.default.getApplication(t.application_id) : f.default.getApplicationByName(t.name);
     return null
-  }), k = (0, r.useStateFromStores)([I.default], () => I.default.getCurrentUser()), w = (0, p.default)(), F = w && null != t;
+  }), w = (0, r.useStateFromStores)([I.default], () => I.default.getCurrentUser()), F = (0, p.default)(), G = F && null != t;
   return (i.useEffect(() => {
-    (null == t ? void 0 : t.type) === x.ActivityTypes.HANG_STATUS && P && A.default.track(x.AnalyticEvents.VIEW_HANG_STATUS, {
+    (null == t ? void 0 : t.type) === x.ActivityTypes.HANG_STATUS && b && A.default.track(x.AnalyticEvents.VIEW_HANG_STATUS, {
       source: "UserProfilePopout",
-      guild_id: null == b ? void 0 : b.guild_id,
-      channel_id: null == b ? void 0 : b.id
+      guild_id: null == j ? void 0 : j.guild_id,
+      channel_id: null == j ? void 0 : j.id
     })
-  }, [null == t ? void 0 : t.type, P, b]), (null == t ? void 0 : t.type) !== x.ActivityTypes.HANG_STATUS || P) ? (0, l.jsx)(y.default, {
-    ...c,
+  }, [null == t ? void 0 : t.type, b, j]), (null == t ? void 0 : t.type) !== x.ActivityTypes.HANG_STATUS || b) ? (0, l.jsx)(y.default, {
+    ...N,
     activity: t,
     user: n,
-    application: D,
+    application: k,
     hideHeader: d,
-    activityGuild: null != j ? j : U,
+    activityGuild: null != U ? U : D,
     renderActions: o ? () => (0, l.jsxs)("div", {
-      className: s(F && O.actionsWrapper),
+      className: s(G && O.actionsWrapper),
       children: [(0, l.jsx)(R, {
-        ...c,
-        applicationStream: L,
+        ...N,
+        applicationStream: P,
         activity: t,
         user: n
-      }), F && (0, l.jsx)(m.default, {
+      }), G && (0, l.jsx)(m.default, {
         activity: t,
         user: n,
-        filename: "".concat(null == k ? void 0 : k.globalName, "-reacting-to-").concat(t.name, ".png").toLowerCase(),
+        filename: "".concat(null == w ? void 0 : w.globalName, "-reacting-to-").concat(t.name, ".png").toLowerCase(),
         showReact: !0,
         showReply: !0,
-        reactor: h.default
+        reactor: h.default,
+        analyticsParams: c
       })]
     }) : null,
     onOpenSpotifyTrack: g.openTrack,

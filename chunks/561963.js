@@ -98,7 +98,13 @@ let W = F.default.getEnableHardwareAcceleration(),
         ...e,
         userId: g.id,
         guildId: t.guild_id,
-        channelId: t.id
+        channelId: t.id,
+        analyticsParams: {
+          location: {
+            page: V.AnalyticsPages.GUILD_CHANNEL,
+            section: V.AnalyticsSections.THREAD_MEMBER_LIST
+          }
+        }
       }),
       position: d.isMobile ? "window_center" : "left",
       spacing: 16,

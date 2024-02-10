@@ -90,7 +90,13 @@ class R extends l.PureComponent {
             activity: e,
             user: t,
             guildId: n.guildId,
-            channelId: n.channelId
+            channelId: n.channelId,
+            analyticsParams: {
+              location: {
+                page: N.AnalyticsPages.GO_LIVE_MODAL,
+                section: N.AnalyticsSections.STREAM_VIEWER_POPOUT
+              }
+            }
           }) : (0, a.jsx)(c.default, {
             type: u.UserActivityTypes.STREAM_PREVIEW,
             applicationStream: n,

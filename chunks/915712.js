@@ -17,7 +17,8 @@ function o(e) {
     user: n,
     guild: o,
     channelId: u,
-    onClose: d
+    onClose: d,
+    analyticsParams: c
   } = e;
   return (0, l.jsx)(a.default, {
     children: (0, l.jsx)(i.default, {
@@ -30,7 +31,8 @@ function o(e) {
       source: s.AnalyticsLocations.PROFILE_POPOUT,
       onOpenGameProfile: d,
       onAction: d,
-      actionColor: r.buttonColor
+      actionColor: r.buttonColor,
+      analyticsParams: c
     })
   })
 }

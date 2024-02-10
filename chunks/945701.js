@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return x
   }
 }), n("222007");
 var l = n("37983"),
@@ -18,45 +18,47 @@ var l = n("37983"),
   m = n("233069"),
   h = n("882641"),
   E = n("945330"),
-  g = n("964261"),
-  S = n("526409"),
-  C = n("314848"),
-  T = n("49111"),
-  v = n("782340"),
-  I = n("619187");
-let _ = (0, m.createChannelRecord)({
+  g = n("599110"),
+  S = n("964261"),
+  C = n("407462"),
+  T = n("526409"),
+  v = n("314848"),
+  I = n("49111"),
+  _ = n("782340"),
+  y = n("619187");
+let A = (0, m.createChannelRecord)({
     id: "1",
-    type: T.ChannelTypes.DM
+    type: I.ChannelTypes.DM
   }),
-  y = i.forwardRef(function(e, t) {
+  N = i.forwardRef(function(e, t) {
     let {
       user: n,
       hide: a,
       onEnter: r
-    } = e, [p, m] = i.useState(""), [h, S] = i.useState((0, c.toRichValue)("")), C = (0, u.default)();
+    } = e, [p, m] = i.useState(""), [h, g] = i.useState((0, c.toRichValue)("")), C = (0, u.default)();
     return (0, l.jsxs)("div", {
-      className: s([I.reply, "theme-".concat(C)]),
+      className: s([y.reply, "theme-".concat(C)]),
       ref: t,
       children: [(0, l.jsxs)("div", {
-        className: I.replyHeader,
+        className: y.replyHeader,
         children: [(0, l.jsxs)(o.Text, {
           variant: "text-md/bold",
           children: ["What do you want to say to ", n.globalName, "?"]
         }), (0, l.jsx)(o.Clickable, {
-          className: I.closeIcon,
-          "aria-label": v.default.Messages.QUICK_REPLY_CLOSE_ARIA_LABEL,
+          className: y.closeIcon,
+          "aria-label": _.default.Messages.QUICK_REPLY_CLOSE_ARIA_LABEL,
           onClick: a,
           children: (0, l.jsx)(E.default, {})
         })]
       }), (0, l.jsx)(f.default, {
-        className: I.replyInput,
+        className: y.replyInput,
         focused: !0,
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
-        maxCharacterCount: g.MAX_CHAR_COUNT,
-        channel: _,
+        maxCharacterCount: S.MAX_CHAR_COUNT,
+        channel: A,
         onChange: (e, t, n) => {
-          m(t), S(n)
+          m(t), g(n)
         },
         type: d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT,
         textValue: p,
@@ -65,7 +67,7 @@ let _ = (0, m.createChannelRecord)({
           let {
             value: t
           } = e;
-          return t.length > g.MAX_CHAR_COUNT ? Promise.resolve({
+          return t.length > S.MAX_CHAR_COUNT ? Promise.resolve({
             shouldClear: !1,
             shouldRefocus: !0
           }) : (r(t), Promise.resolve({
@@ -78,7 +80,7 @@ let _ = (0, m.createChannelRecord)({
       })]
     })
   });
-var A = e => {
+var x = e => {
   let {
     activity: t,
     user: n,
@@ -86,29 +88,38 @@ var A = e => {
     showReply: o = !0,
     requireConfirmation: d = !1,
     filename: c,
-    reactor: f
-  } = e, [m, E] = i.useState(!1), g = (0, u.default)(), [T, v] = i.useState(!1), [A, N] = i.useState(!1), [x, O] = i.useState(), [R, M] = i.useState(""), L = i.useRef(null), P = i.useRef(null), b = (0, C.default)(n);
+    reactor: f,
+    analyticsParams: m
+  } = e, [E, S] = i.useState(!1), _ = (0, u.default)(), [x, O] = i.useState(!1), [R, M] = i.useState(!1), [L, P] = i.useState(), [b, j] = i.useState(""), U = i.useRef(null), D = i.useRef(null), k = (0, v.default)(n);
 
-  function j(e) {
+  function w(e) {
     var t, n;
-    null != e.target && (!(null == L ? void 0 : null === (t = L.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && v(!1), !(null == P ? void 0 : null === (n = P.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && N(!1))
+    null != e.target && (!(null == U ? void 0 : null === (t = U.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && O(!1), !(null == D ? void 0 : null === (n = D.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && M(!1))
+  }
+
+  function F(e) {
+    g.default.track(I.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
+      application_id: t.application_id,
+      interaction_type: e,
+      ...m
+    })
   }
   return (i.useEffect(() => {
     let e = e => {
-      "Escape" === e.key && (N(!1), v(!1))
+      "Escape" === e.key && (M(!1), O(!1))
     };
-    return document.addEventListener("keydown", e), document.addEventListener("mousedown", j), () => {
-      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", j)
+    return document.addEventListener("keydown", e), document.addEventListener("mousedown", w), () => {
+      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", w)
     }
-  }, []), b) ? (0, l.jsxs)(l.Fragment, {
+  }, []), k) ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
-      className: I.reactions,
+      className: y.reactions,
       children: [a && (0, l.jsx)(h.default, {
         active: !1,
         tabIndex: 0,
-        className: I.reaction,
+        className: y.reaction,
         onClick: () => {
-          v(!0), N(!1)
+          F(C.ActivityReactorInteractionTypes.ReactBegin), O(!0), M(!1)
         }
       }), o && (0, l.jsx)("button", {
         style: {
@@ -116,38 +127,38 @@ var A = e => {
           marginTop: 4,
           marginLeft: 8
         },
-        className: I.reaction,
+        className: y.reaction,
         onClick: () => {
-          N(!0)
+          F(C.ActivityReactorInteractionTypes.ReplyBegin), M(!0)
         },
         children: (0, l.jsx)(r.ArrowAngleLeftUpIcon, {})
       })]
-    }), T && (0, l.jsx)("div", {
-      className: s([I.picker, "theme-".concat(g)]),
-      ref: L,
+    }), x && (0, l.jsx)("div", {
+      className: s([y.picker, "theme-".concat(_)]),
+      ref: U,
       children: (0, l.jsx)(p.ReactionPicker, {
         messageId: "",
-        channel: _,
+        channel: A,
         closePopout: () => {
-          v(!1)
+          O(!1)
         },
         onSelectEmoji: e => {
-          null != e && (O(e), v(!1), E(!0))
+          null != e && (F(C.ActivityReactorInteractionTypes.ReactSubmit), P(e), O(!1), S(!0))
         }
       })
-    }), A && (0, l.jsx)(y, {
-      ref: P,
+    }), R && (0, l.jsx)(N, {
+      ref: D,
       user: n,
       activity: t,
-      hide: () => N(!1),
+      hide: () => M(!1),
       onEnter: e => {
-        M(e), E(!0)
+        F(C.ActivityReactorInteractionTypes.ReplySubmit), j(e), S(!0)
       }
-    }), m && (0, l.jsx)(f, {
+    }), E && (0, l.jsx)(f, {
       activity: t,
       user: n,
       onComplete: e => {
-        null != x ? ((0, S.sendReaction)(e, x, n, d, c), O(void 0)) : null != R && ((0, S.sendReply)(e, R, n, d, c), M("")), E(!1)
+        null != L ? (F(C.ActivityReactorInteractionTypes.ReactSend), (0, T.sendReaction)(e, L, n, d, c), P(void 0)) : null != b && (F(C.ActivityReactorInteractionTypes.ReplySend), (0, T.sendReply)(e, b, n, d, c), j("")), S(!1)
       }
     })]
   }) : null
