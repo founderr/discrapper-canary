@@ -83,11 +83,11 @@ function f(e, t) {
     guildId: e.guild_id,
     location: t
   }, {
-    autoTrackExposure: !1
+    autoTrackExposure: !0
   }).enabled && n : o.getCurrentConfig({
     location: t
   }, {
-    autoTrackExposure: !1
+    autoTrackExposure: !0
   }).enabled && n
 }
 
@@ -99,7 +99,7 @@ function _(e, t) {
       guildId: null == n ? void 0 : n.guild_id,
       location: t
     }, {
-      autoTrackExposure: !1
+      autoTrackExposure: !0
     });
   return u.enabled && s
 }
@@ -112,7 +112,7 @@ function c(e, t) {
       guildId: null == n ? void 0 : n.guild_id,
       location: t
     }, {
-      autoTrackExposure: !1
+      autoTrackExposure: !0
     });
   return u.enabled && s ? {
     showInOmniButtonMenu: u.showInOmniButtonMenu,

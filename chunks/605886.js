@@ -17,8 +17,8 @@ var s = n("627445"),
   m = n("659632"),
   _ = n("719923"),
   E = n("286350"),
-  I = n("49111"),
-  p = n("646718"),
+  p = n("49111"),
+  I = n("646718"),
   S = n("782340");
 async function P(e) {
   let {
@@ -57,14 +57,14 @@ async function P(e) {
   t(E.PurchaseState.PURCHASING), n(!0), s(!0), a.default.wait(i.clearError), P(null);
   try {
     let e, n, s;
-    if (d.default.track(I.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
+    if (d.default.track(p.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
         ...O,
         duration_ms: Date.now() - g
       }), N) return;
     let a = (0, m.getGiftExperience)(H),
       i = m.GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING.has(a),
       P = m.GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD.has(a);
-    if (k === I.PurchaseTypes.ONE_TIME) r(null != B, "SKU must exist and be fetched."), r(null != F, "SKUPricePreview must exist."), e = await (0, c.purchaseSKU)(B.applicationId, B.id, {
+    if (k === p.PurchaseTypes.ONE_TIME) r(null != B, "SKU must exist and be fetched."), r(null != F, "SKUPricePreview must exist."), e = await (0, c.purchaseSKU)(B.applicationId, B.id, {
       expectedAmount: F.amount,
       expectedCurrency: F.currency,
       isGift: C,
@@ -78,7 +78,7 @@ async function P(e) {
     });
     else if (r(null != M, "Missing subscriptionPlan"), C) {
       let t = (0, _.getPrice)(M.id, !1, !0, y);
-      if ("usd" === t.currency && (null == L ? void 0 : L.type) === I.PaymentSourceTypes.GCASH) {
+      if ("usd" === t.currency && (null == L ? void 0 : L.type) === p.PaymentSourceTypes.GCASH) {
         var V;
         let e = Error("Invalid USD currency for GCash");
         (0, f.captureBillingException)(e, {
@@ -89,7 +89,7 @@ async function P(e) {
           }
         })
       }
-      e = await (0, c.purchaseSKU)(p.PREMIUM_SUBSCRIPTION_APPLICATION, M.skuId, {
+      e = await (0, c.purchaseSKU)(I.PREMIUM_SUBSCRIPTION_APPLICATION, M.skuId, {
         expectedAmount: t.amount,
         expectedCurrency: t.currency,
         paymentSource: L,
@@ -102,7 +102,7 @@ async function P(e) {
         emojiConfetti: P ? Z : void 0,
         soundEffect: P ? K : void 0
       })
-    } else e = b && null != j && null != L && null != G ? I.PREPAID_PAYMENT_SOURCES.has(L.type) ? await (0, l.payInvoiceManually)(G, j, L, y.currency) : await (0, l.updateSubscription)(G, {
+    } else e = b && null != j && null != L && null != G ? p.PREPAID_PAYMENT_SOURCES.has(L.type) ? await (0, l.payInvoiceManually)(G, j, L, y.currency) : await (0, l.updateSubscription)(G, {
       paymentSource: L,
       currency: y.currency
     }, R, h, w) : null != G ? await (0, l.updateSubscription)(G, {
@@ -129,7 +129,7 @@ async function P(e) {
     };
     C && (i && (z.is_custom_message_edited = W !== S.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE), P && (z.is_custom_emoji_sound_available = !0, null != Z && (z.emoji_name = Z.surrogates), null != K && (z.sound_id = K.soundId))), t(E.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? o.default.createFromServer(e.subscription) : null : "entitlements" in e && (s = null != e.entitlements ? e.entitlements : void 0), D(n, s)
   } catch (e) {
-    t(E.PurchaseState.FAIL), P(e), d.default.track(I.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+    t(E.PurchaseState.FAIL), P(e), d.default.track(p.AnalyticEvents.PAYMENT_FLOW_FAILED, {
       ...O,
       payment_error_code: null == e ? void 0 : e.code,
       payment_source_id: null == L ? void 0 : L.id,

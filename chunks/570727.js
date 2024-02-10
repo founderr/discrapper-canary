@@ -20,8 +20,8 @@ var s = n("37983"),
   m = n("635357"),
   _ = n("642906"),
   E = n("85336"),
-  I = n("883558"),
-  p = n("10514"),
+  p = n("883558"),
+  I = n("10514"),
   S = n("521012"),
   P = n("659632"),
   N = n("701909"),
@@ -49,7 +49,7 @@ var s = n("37983"),
   w = n("33769");
 
 function H(e) {
-  var t, n, a, E, I, S;
+  var t, n, a, E, p, S;
   let {
     premiumSubscription: T,
     skuId: h,
@@ -81,7 +81,7 @@ function H(e) {
     location: "PremiumSwitchPlanSelectBody"
   });
   h = null != h ? h : $, l(void 0 !== (T = null != T ? T : q), "should not be undefined");
-  let [eo, ed] = (0, i.useStateFromStoresArray)([p.default], () => [null != T ? p.default.get(T.planId) : null, null != j ? p.default.get(j) : null]), ef = (0, M.usePremiumTrialOffer)(K), em = null == ef ? void 0 : ef.subscription_trial, e_ = (0, g.usePremiumDiscountOffer)(), eE = null == e_ ? void 0 : null === (t = e_.discount) || void 0 === t ? void 0 : t.plan_ids, eI = null != ed ? ed : ee, ep = r.useCallback(e => {
+  let [eo, ed] = (0, i.useStateFromStoresArray)([I.default], () => [null != T ? I.default.get(T.planId) : null, null != j ? I.default.get(j) : null]), ef = (0, M.usePremiumTrialOffer)(K), em = null == ef ? void 0 : ef.subscription_trial, e_ = (0, g.usePremiumDiscountOffer)(), eE = null == e_ ? void 0 : null === (t = e_.discount) || void 0 === t ? void 0 : t.plan_ids, ep = null != ed ? ed : ee, eI = r.useCallback(e => {
     null != G ? G(e) : Q(e)
   }, [G, Q]), eS = null != H ? H : et;
   l(null != eS, "Price option has to be set");
@@ -93,19 +93,19 @@ function H(e) {
       location: "5f89bb_1"
     })
   }, [Z]);
-  let eC = (null == eI ? void 0 : eI.id) != null && W.includes(eI.id);
+  let eC = (null == ep ? void 0 : ep.id) != null && W.includes(ep.id);
   r.useEffect(() => {
     if (!eC) {
-      if (null == eo || en) ep(W[0]);
+      if (null == eo || en) eI(W[0]);
       else if (null != eo) {
         let e = W.find(e => e !== eo.id);
-        null != e && ep(e)
+        null != e && eI(e)
       }
     }
-  }, [eC, en, W, eo, ep]);
+  }, [eC, en, W, eo, eI]);
   let eA = !eu && (en || !eP && !eN) && eC && z,
     eO = (0, u.useRadioGroup)(),
-    eh = (null == eI ? void 0 : eI.id) != null ? (0, C.getPrice)(eI.id, !1, en, eS) : void 0,
+    eh = (null == ep ? void 0 : ep.id) != null ? (0, C.getPrice)(ep.id, !1, en, eS) : void 0,
     {
       ipCountryCode: eR
     } = (0, R.default)(),
@@ -184,9 +184,9 @@ function H(e) {
                 return r
             }
           }(eo, h)
-        }), (I = eP, S = eN, eu ? (0, s.jsx)(u.FormTitle, {
+        }), (p = eP, S = eN, eu ? (0, s.jsx)(u.FormTitle, {
           children: Y.default.Messages.GIFT_SUBSCRIPTION_SELECTION
-        }) : ev ? I ? (0, s.jsxs)("div", {
+        }) : ev ? p ? (0, s.jsxs)("div", {
           children: [(0, s.jsx)(u.Text, {
             variant: "text-sm/normal",
             className: w.trialPlanSelectHeader,
@@ -216,15 +216,15 @@ function H(e) {
           children: W.map(e => (0, s.jsx)(D.default, {
             planId: e,
             premiumSubscription: en ? null : null != T ? T : null,
-            selectPlan: ep,
-            selected: (null == eI ? void 0 : eI.id) === e,
+            selectPlan: eI,
+            selected: (null == ep ? void 0 : ep.id) === e,
             priceOptions: eS,
             shouldShowUpdatedPaymentModal: ev,
             isEligibleForDiscount: eN,
             discountAmountOff: ey
           }, e))
         }), (0, s.jsx)("div", {
-          children: eA && null != eI && null != eh ? (0, s.jsxs)("div", {
+          children: eA && null != ep && null != eh ? (0, s.jsxs)("div", {
             children: [(0, s.jsx)("div", {
               className: w.selectPlanDivider
             }), (0, s.jsx)(v.PremiumInvoiceTableTotalRow, {
@@ -232,8 +232,8 @@ function H(e) {
               value: (0, s.jsx)(y.default, {
                 price: eh.amount,
                 currency: eh.currency,
-                intervalType: en ? null : eI.interval,
-                intervalCount: eI.intervalCount,
+                intervalType: en ? null : ep.interval,
+                intervalCount: ep.intervalCount,
                 isPrepaidPaymentSource: eM
               }),
               className: w.selectPlanTotalRow
@@ -310,7 +310,7 @@ function Z(e) {
     if (e === h.CheckoutV2ChildExperiments.BROWSER_AUTOFILL) {
       let {
         enabled: e
-      } = I.default.getCurrentConfig({
+      } = p.default.getCurrentConfig({
         location: "5f89bb_3"
       }, {
         autoTrackExposure: !0

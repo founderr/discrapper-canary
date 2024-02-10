@@ -53,7 +53,7 @@ let c = (e, t, n) => {
     }, !0, 2 + 2 / 3));
     let c = o.activitySize + o.padding + o.imagePadding;
     s.setColor("dark" === d ? "white" : "rgb(6, 6, 7)"), s.setFont({
-      size: 16,
+      size: 14,
       family: '"gg sans", sans-serif',
       weight: 700
     }), s.drawText("".concat(t.name), {
@@ -61,7 +61,7 @@ let c = (e, t, n) => {
       y: o.fontPadding + 1 * o.lineHeight
     }, !0, (null === (a = s.assetMap) || void 0 === a ? void 0 : a.has(o.AssetTypes.Platform)) ? o.titleMaxWidthPlatform : o.titleMaxWidthNoPlatform), null != t.timestamps && (s.setFont({
       size: 14,
-      weight: 500
+      weight: 400
     }), s.drawText("for ".concat((0, u.howLong)(t.timestamps)), {
       x: c,
       y: o.fontPadding + 2 * o.lineHeight
@@ -99,7 +99,7 @@ let c = (e, t, n) => {
     }, 8);
     let d = o.activitySize + o.padding + o.imagePadding;
     a.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"), a.setFont({
-      size: 16,
+      size: 14,
       family: '"gg sans", sans-serif',
       weight: 700
     }), a.drawText("".concat(t.details), {
@@ -107,7 +107,7 @@ let c = (e, t, n) => {
       y: o.fontPadding + 1 * o.lineHeight
     }, !0, (null === (i = a.assetMap) || void 0 === i ? void 0 : i.has(o.AssetTypes.Platform)) ? o.titleMaxWidthPlatform : o.titleMaxWidthNoPlatform), a.setFont({
       size: 14,
-      weight: 500
+      weight: 400
     }), a.drawText("by ".concat(t.state), {
       x: d,
       y: o.fontPadding + 2 * o.lineHeight
@@ -148,7 +148,7 @@ let c = (e, t, n) => {
     }, 8);
     let p = o.activitySize + o.padding + o.imagePadding;
     i.setColor("dark" === f ? "white" : "rgb(6, 6, 7)"), i.setFont({
-      size: 16,
+      size: 14,
       family: '"gg sans", sans-serif',
       weight: 700
     }), i.drawText("".concat(t.details), {
@@ -156,7 +156,7 @@ let c = (e, t, n) => {
       y: o.fontPadding + 1 * o.lineHeight
     }, !0, (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.Platform)) ? o.titleMaxWidthPlatform : o.titleMaxWidthNoPlatform), i.setFont({
       size: 14,
-      weight: 500
+      weight: 400
     }), i.drawText("".concat(t.state), {
       x: p,
       y: o.fontPadding + 2 * o.lineHeight

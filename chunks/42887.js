@@ -526,17 +526,17 @@ class tT extends S.default.Store {
       {
         (0, ee.isWindows)() && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT, !0);
         let {
-          signalH265SupportMacOS: t
-        } = M.default.getCurrentConfig({
-          location: "f627ab_8"
+          signalH265SupportNvenc: t
+        } = U.default.getCurrentConfig({
+          location: "f627ab_9"
         }, {
           autoTrackExposure: !0
         });
         t && e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
         let {
-          signalH265SupportNvenc: n
-        } = U.default.getCurrentConfig({
-          location: "f627ab_9"
+          signalH265SupportMacOS: n
+        } = M.default.getCurrentConfig({
+          location: "f627ab_8"
         }, {
           autoTrackExposure: !0
         });

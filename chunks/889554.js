@@ -17,8 +17,8 @@ var s = n("37983"),
   m = n("64798"),
   _ = n("646718"),
   E = n("782340"),
-  I = n("734203");
-let p = [_.PremiumGiftStyles.STANDARD_BOX, _.PremiumGiftStyles.CAKE, _.PremiumGiftStyles.COFFEE, _.PremiumGiftStyles.CHEST],
+  p = n("734203");
+let I = [_.PremiumGiftStyles.STANDARD_BOX, _.PremiumGiftStyles.CAKE, _.PremiumGiftStyles.COFFEE, _.PremiumGiftStyles.CHEST],
   S = () => {
     let {
       giftRecipient: e,
@@ -37,21 +37,21 @@ let p = [_.PremiumGiftStyles.STANDARD_BOX, _.PremiumGiftStyles.CAKE, _.PremiumGi
     }, {
       autoTrackExposure: x
     }), y = null;
-    return M && (y = x && v ? _.SeasonalGiftStyles2023 : p), (0, s.jsxs)("div", {
+    return M && (y = x && v ? _.SeasonalGiftStyles2023 : I), (0, s.jsxs)("div", {
       children: [M && (0, s.jsxs)("div", {
-        className: I.giftMainAnimation,
+        className: p.giftMainAnimation,
         children: [null != t ? (0, s.jsx)(d.default, {
           giftStyle: t,
           defaultAnimationState: c.AnimationState.ACTION,
           idleAnimationState: c.AnimationState.LOOP,
           shouldAnimate: !0,
-          className: I.animation
+          className: p.animation
         }) : (0, s.jsx)(a.Spinner, {
-          className: I.spinner
+          className: p.spinner
         }), g && (0, s.jsxs)("div", {
-          className: I.soundEmojiContainer,
+          className: p.soundEmojiContainer,
           children: [(0, s.jsx)("div", {
-            className: I.sound,
+            className: p.sound,
             children: (0, s.jsx)(i.default, {
               sound: P,
               onSelect: e => {
@@ -59,7 +59,7 @@ let p = [_.PremiumGiftStyles.STANDARD_BOX, _.PremiumGiftStyles.CAKE, _.PremiumGi
               }
             })
           }), (0, s.jsx)("div", {
-            className: I.emoji,
+            className: p.emoji,
             children: (0, s.jsx)(f.default, {
               setEmojiConfetti: N,
               emojiConfetti: null == S ? void 0 : S
@@ -72,7 +72,7 @@ let p = [_.PremiumGiftStyles.STANDARD_BOX, _.PremiumGiftStyles.CAKE, _.PremiumGi
           var t;
           e.target === e.currentTarget && (null === (t = O.current) || void 0 === t || t.focus())
         },
-        className: I.giftBoxOptionContainer,
+        className: p.giftBoxOptionContainer,
         "aria-label": E.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
         ...h,
         children: null != y && y.map((e, r) => (0, s.jsx)(m.GiftStaticOption, {
@@ -84,7 +84,7 @@ let p = [_.PremiumGiftStyles.STANDARD_BOX, _.PremiumGiftStyles.CAKE, _.PremiumGi
           onBlur: () => A(!1)
         }, e))
       }), (0, s.jsx)("div", {
-        className: I.selectPlanDivider
+        className: p.selectPlanDivider
       })]
     })
   }

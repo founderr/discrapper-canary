@@ -23,9 +23,9 @@ function _(e) {
     breadcrumbSteps: s,
     handleStepChange: _,
     referralTrialOfferId: E,
-    onReturn: I
+    onReturn: p
   } = e, {
-    contextMetadata: p,
+    contextMetadata: I,
     step: S,
     paymentSources: P,
     paymentSourceId: N,
@@ -46,7 +46,7 @@ function _(e) {
     setPurchaseError: A,
     purchaseErrorBlockRef: O,
     paymentAuthenticationState: h
-  }, x = (0, l.usePremiumTrialOffer)(E), v = !g && null != x && null != R && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(R), y = null != I ? I : () => {
+  }, x = (0, l.usePremiumTrialOffer)(E), v = !g && null != x && null != R && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(R), y = null != p ? p : () => {
     let e = Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
     _(e, {
       trackedFromStep: d.Step.PAYMENT_TYPE
@@ -78,7 +78,7 @@ function _(e) {
         from_step: n,
         to_step: s,
         step_duration_ms: r - L,
-        flow_duration_ms: r - p.startTime
+        flow_duration_ms: r - I.startTime
       })
     },
     isEligibleForTrial: v

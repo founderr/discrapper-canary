@@ -17,8 +17,8 @@ var s = n("37983"),
   m = n("661128"),
   _ = n("868869"),
   E = n("926223"),
-  I = n("467292"),
-  p = n("622839"),
+  p = n("467292"),
+  I = n("622839"),
   S = n("145131"),
   P = n("599110"),
   N = n("719923"),
@@ -75,23 +75,23 @@ function x(e) {
     giftRecipient: ec
   } = (0, T.useGiftContext)(), eo = null == K ? void 0 : K.id, ed = (0, h.checkNoPaymentTrialEnabled)(U, V.paymentSourceId, eo), ef = (0, i.useStateFromStores)([E.default], () => E.default.popupCallbackCalled), {
     analyticsLocations: em
-  } = (0, o.default)(), e_ = null != q ? Q[q] : null, [eE, eI] = r.useState(ed), [ep, eS] = r.useState(!1), {
+  } = (0, o.default)(), e_ = null != q ? Q[q] : null, [eE, ep] = r.useState(ed), [eI, eS] = r.useState(!1), {
     hasEntitlements: eP
   } = (0, m.useSubscriptionEntitlements)(eo, er), eN = (0, N.isPrepaidPaymentSource)(V.paymentSourceId), eT = eP || ed, eC = (0, d.useIsPrepaidPaymentPastDue)(), eA = null, eO = null;
   if (J === g.PurchaseTypes.ONE_TIME) {
     var eh;
     l(null != $, "SKU must be selected for one-time purchases"), l(null != (eA = null !== (eh = ee[$]) && void 0 !== eh ? eh : null), "SKU must exist and be fetched.");
     let e = et[$],
-      t = null != q ? q : p.NO_PAYMENT_SOURCE;
+      t = null != q ? q : I.NO_PAYMENT_SOURCE;
     eO = null != e ? e[t] : null
   }
   let eR = async () => {
     await (0, A.purchaseProduct)({
       setPurchaseState: n,
       setHasAcceptedTerms: z,
-      setIsSubmitting: eI,
+      setIsSubmitting: ep,
       setPurchaseError: X,
-      hasRedirectURL: ep,
+      hasRedirectURL: eI,
       setHasRedirectURL: eS,
       isGift: er,
       giftStyle: ea,
@@ -134,8 +134,8 @@ function x(e) {
           duration_ms: Date.now() - D
         })
       } finally {
-        eI(!1), (0, c.resetPaymentIntentId)()
-      } else k === I.PurchaseTokenAuthState.SUCCESS && await eR()
+        ep(!1), (0, c.resetPaymentIntentId)()
+      } else k === p.PurchaseTokenAuthState.SUCCESS && await eR()
     };
     e()
   }, [ef]), r.useEffect(() => {
