@@ -24,8 +24,8 @@ var n = l("37983"),
   _ = l("756898"),
   p = l("375202"),
   I = l("321443"),
-  v = l("444276"),
-  x = l("353927"),
+  x = l("444276"),
+  v = l("353927"),
   A = l("782340"),
   R = l("45122");
 async function T() {
@@ -100,7 +100,7 @@ function j(e) {
     enableGoLiveCaptureCard: s
   } = g.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), i = m.default.supports(x.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, C] = a.useState(null), [N, _] = a.useState(null), p = null != N && N.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [j, O] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
+  }), i = m.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, C] = a.useState(null), [N, _] = a.useState(null), p = null != N && N.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [j, O] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
   a.useEffect(() => {
     let e = P.current;
     return T().then(e => {
@@ -127,7 +127,7 @@ function j(e) {
         D.current = e, O((t = !e.isScrolledToTop(), t))
       }
     }, []),
-    G = function(e) {
+    U = function(e) {
       switch (e) {
         case u.DesktopSources.WINDOW:
           return S;
@@ -137,13 +137,13 @@ function j(e) {
           return N
       }
     }(L);
-  if (null == G) return (0, n.jsx)(E.default, {
+  if (null == U) return (0, n.jsx)(E.default, {
     className: R.spinner,
     justify: E.default.Justify.CENTER,
     align: E.default.Align.CENTER,
     children: (0, n.jsx)(c.Spinner, {})
   });
-  let y = G.map(e => {
+  let G = U.map(e => {
     let {
       id: a
     } = e, s = (null == t ? void 0 : t.id) === a;
@@ -152,14 +152,14 @@ function j(e) {
         [R.selected]: s
       }),
       onClick: () => l(e, null),
-      children: (0, n.jsx)(v.default, {
+      children: (0, n.jsx)(x.default, {
         source: e,
         selectedSource: t
       }, e.id)
     }, a)
   });
 
-  function U() {
+  function y() {
     let e = D.current;
     null != e && O(!e.isScrolledToTop())
   }
@@ -197,23 +197,23 @@ function j(e) {
       children: (0, n.jsx)(c.AdvancedScroller, {
         ref: b,
         className: R.sourceScroller,
-        onScroll: U,
+        onScroll: y,
         children: (0, n.jsx)(h.default, {
           layout: h.default.Layout.WRAP,
           columns: 2,
           className: R.sourceContainer,
-          children: y
+          children: G
         })
       })
     }) : (0, n.jsx)(c.AdvancedScroller, {
       ref: b,
       className: R.sourceScroller,
-      onScroll: U,
+      onScroll: y,
       children: (0, n.jsx)(h.default, {
         layout: h.default.Layout.WRAP,
         columns: 2,
         className: R.sourceContainer,
-        children: y
+        children: G
       })
     })]
   })

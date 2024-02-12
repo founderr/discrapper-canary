@@ -50,9 +50,9 @@ let M = e => {
       currentStatus: t
     } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = l.useState(null != t ? t : null), O = (0, u.useStateFromStores)([p.default], () => p.default.getCurrentUser()), y = () => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
-    }, P = (e, t) => {
-      e.stopPropagation(), (0, S.updateHangStatus)(t, !0), y()
     }, b = (e, t) => {
+      e.stopPropagation(), (0, S.updateHangStatus)(t, !0), y()
+    }, P = (e, t) => {
       e.stopPropagation(), (0, S.updateCustomHangStatus)(t.status, t.emoji, !0), y()
     }, D = l.useCallback(e => {
       e.stopPropagation(), (0, S.clearHangStatus)(!0)
@@ -130,7 +130,7 @@ let M = e => {
             return (0, a.jsx)(c.Clickable, {
               "aria-label": l.title,
               onMouseEnter: () => w(n),
-              onClick: e => P(e, n),
+              onClick: e => b(e, n),
               children: (0, a.jsx)(M, {
                 className: i(A.iconWidget, {
                   [A.selectedWidget]: n === (null == t ? void 0 : t.state)
@@ -168,7 +168,7 @@ let M = e => {
             return (0, a.jsx)(c.Clickable, {
               "aria-label": e.status,
               onMouseEnter: () => F(e),
-              onClick: t => b(t, e),
+              onClick: t => P(t, e),
               children: (0, a.jsx)(M, {
                 className: i(A.iconWidget, {
                   [A.selectedWidget]: l

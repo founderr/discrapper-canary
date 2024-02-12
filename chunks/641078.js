@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return U
   },
   maybeFetchActiveBogoPromotion: function() {
-    return h
+    return x
   },
   isEligibleForBOGOAnnouncementModal: function() {
-    return N
+    return h
   },
   getBOGOPillCopy: function() {
     return A
@@ -98,7 +98,7 @@ function U() {
     });
   return !(_ > d) && E
 }
-async function x() {
+async function N() {
   var e;
   let t = m.default.getCurrentUser(),
     n = !(null == t ? void 0 : t.isClaimed()),
@@ -137,8 +137,8 @@ async function x() {
     mostRecentSubscription: o
   })
 }
-async function h() {
-  let e = await x();
+async function x() {
+  let e = await N();
   if (!e) return;
   let t = C.default.bogoPromotion;
   if (null != t) {
@@ -147,11 +147,11 @@ async function h() {
   }
   await (0, R.fetchActiveBogoPromotion)()
 }
-async function N() {
+async function h() {
   let e = C.default.bogoPromotion,
     t = null != e && new Date(e.endDate).valueOf() >= Date.now() && new Date(e.startDate).valueOf() <= Date.now(),
     n = (0, d.isDismissibleContentDismissed)(a.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL),
-    r = await x(),
+    r = await N(),
     {
       enabled: i
     } = P.BogoPromotionExperiment.getCurrentConfig({

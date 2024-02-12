@@ -8,8 +8,8 @@ var s = n("37983"),
   u = n("884691"),
   o = n("77078"),
   r = n("545158"),
-  a = n("37785"),
-  i = n("709681"),
+  i = n("37785"),
+  a = n("709681"),
   c = n("782340"),
   p = n("865201");
 let d = [{
@@ -45,7 +45,7 @@ function f(e) {
     asanaTask: f
   } = e;
   u.useEffect(() => {
-    (0, i.playSound)("success", .1)
+    (0, a.playSound)("success", .1)
   }, []);
   let m = u.useRef(d[Math.floor(Math.random() * d.length)]).current;
   return (0, s.jsx)(o.ModalRoot, {
@@ -67,7 +67,7 @@ function f(e) {
       }), (0, s.jsxs)(o.Text, {
         className: p.submitText,
         variant: "text-sm/normal",
-        children: ["Thanks for submitting a ", (0, s.jsx)(a.default, {
+        children: ["Thanks for submitting a ", (0, s.jsx)(i.default, {
           onClick: () => (0, r.default)(f.permalink_url),
           children: "bug"
         }), "!", (0, s.jsx)("br", {}), (0, s.jsx)(l, {

@@ -68,7 +68,7 @@ function R(e) {
       }
       return n
     }, [L]),
-    x = (0, r.jsxs)("div", {
+    N = (0, r.jsxs)("div", {
       className: S.body,
       children: [(0, r.jsx)("span", {
         children: U
@@ -83,7 +83,7 @@ function R(e) {
     enableArtBoxShadow: !1,
     type: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
     title: P.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-    body: x,
+    body: N,
     context: P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
       maxSize: P.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
     }),

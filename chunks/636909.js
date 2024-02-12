@@ -24,8 +24,8 @@ var n = l("37983"),
   _ = l("568307"),
   p = l("18494"),
   I = l("697218"),
-  v = l("703370"),
-  x = l("145131"),
+  x = l("703370"),
+  v = l("145131"),
   A = l("953109"),
   R = l("476263"),
   T = l("267675"),
@@ -36,29 +36,29 @@ var n = l("37983"),
   D = l("701909"),
   P = l("773336"),
   b = l("767960"),
-  G = l("375202"),
-  y = l("916262"),
-  U = l("75974"),
-  w = l("359812"),
-  V = l("273405"),
+  U = l("375202"),
+  G = l("916262"),
+  y = l("75974"),
+  V = l("359812"),
+  w = l("273405"),
   H = l("326620"),
-  F = l("985997"),
-  k = l("16750"),
+  k = l("985997"),
+  F = l("16750"),
   B = l("706530"),
   W = l("49111"),
   z = l("782340"),
   Z = l("183351"),
-  K = l("770420");
+  Y = l("770420");
 
-function Y(e) {
+function K(e) {
   let {
     selectedSource: t,
     selectSource: l,
     sourceChanged: a,
     onChangeSource: s
-  } = e, r = (0, i.useStateFromStores)([_.default, v.default], () => (0, P.isWindows)() ? (0, G.default)(_.default, v.default) : null), o = (0, i.useStateFromStores)([d.default], () => (null == r ? void 0 : r.id) != null ? d.default.getApplication(r.id) : null), c = (0, i.useStateFromStores)([_.default], () => _.default.getRunningGames()), f = (0, i.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(O.isNotNullish), [c]), m = null;
+  } = e, r = (0, i.useStateFromStores)([_.default, x.default], () => (0, P.isWindows)() ? (0, U.default)(_.default, x.default) : null), o = (0, i.useStateFromStores)([d.default], () => (null == r ? void 0 : r.id) != null ? d.default.getApplication(r.id) : null), c = (0, i.useStateFromStores)([_.default], () => _.default.getRunningGames()), f = (0, i.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(O.isNotNullish), [c]), m = null;
   if (null != t ? m = t.name : null != r && (m = r.name), null == m) return null;
-  let S = (0, k.default)(r, t, c),
+  let S = (0, F.default)(r, t, c),
     C = a ? f.find(e => {
       let {
         id: t
@@ -68,8 +68,8 @@ function Y(e) {
     E = null != t && t.id.startsWith("screen") ? T.default : M.default;
   return (0, n.jsx)(u.FormItem, {
     title: z.default.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
-    className: K.modalContent,
-    titleClassName: K.formItemTitleVerySlim,
+    className: Y.modalContent,
+    titleClassName: Y.formItemTitleVerySlim,
     children: (0, n.jsxs)(H.default, {
       children: [null != C ? (0, n.jsx)(A.default, {
         game: C,
@@ -98,8 +98,8 @@ function J(e) {
   } = e, a = (0, i.useStateFromStores)([N.default], () => N.default.getGuild(l));
   return null == a ? (t(), null) : (0, n.jsx)(u.FormItem, {
     title: z.default.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
-    className: K.modalContent,
-    titleClassName: K.formItemTitle,
+    className: Y.modalContent,
+    titleClassName: Y.formItemTitle,
     children: (0, n.jsxs)(H.default, {
       children: [(0, n.jsx)(R.default, {
         guild: a,
@@ -123,8 +123,8 @@ function X(e) {
   let {
     text: t
   } = e;
-  return (0, n.jsxs)(x.default, {
-    align: x.default.Align.CENTER,
+  return (0, n.jsxs)(v.default, {
+    align: v.default.Align.CENTER,
     className: Z.warning,
     children: [(0, n.jsx)(L.default, {
       className: Z.warningIcon
@@ -148,7 +148,7 @@ function Q(e) {
     })
   }, []), d = l >= 2 && l <= B.STREAM_NOTIFY_GUILD_MAX_SIZE;
   return d ? (0, n.jsx)(u.FormItem, {
-    className: r(K.modalContent, Z.checkboxRow),
+    className: r(Y.modalContent, Z.checkboxRow),
     children: (0, n.jsx)(u.Checkbox, {
       value: !!s,
       type: u.Checkbox.Types.INVERTED,
@@ -169,7 +169,7 @@ function q(e) {
     l(t)
   }, [l]);
   return (0, n.jsx)(u.FormItem, {
-    className: r(K.modalContent, Z.checkboxRow),
+    className: r(Y.modalContent, Z.checkboxRow),
     children: (0, n.jsx)(u.Checkbox, {
       value: t,
       type: u.Checkbox.Types.INVERTED,
@@ -194,8 +194,8 @@ function $(e) {
     targetGuildPremiumTier: h,
     selectSource: N,
     selectGuild: _,
-    sound: v,
-    onClose: x,
+    sound: x,
+    onClose: v,
     onChangeSelectedFPS: A,
     onChangeSelectedResolution: R,
     onChangeSelectedPreset: T,
@@ -203,14 +203,14 @@ function $(e) {
     onChangeSource: M,
     onChangeAudioDevice: j,
     onChangeGuild: O,
-    onChangeSound: G,
+    onChangeSound: U,
     isAnimationDone: H
-  } = e, k = (0, i.useStateFromStores)([p.default, E.default], () => E.default.getChannel(p.default.getVoiceChannelId())), B = (0, i.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), Z = (0, i.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), K = (0, i.useStateFromStores)([g.default], () => g.default.getSoundshareEnabled()), $ = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), ee = (0, f.useEnableClips)(), et = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+  } = e, F = (0, i.useStateFromStores)([p.default, E.default], () => E.default.getChannel(p.default.getVoiceChannelId())), B = (0, i.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), Z = (0, i.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), Y = (0, i.useStateFromStores)([g.default], () => g.default.getSoundshareEnabled()), $ = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), ee = (0, f.useEnableClips)(), et = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !ee
-  }), el = (0, y.default)();
-  null != t && t.id.startsWith("screen") && !g.default.supportsScreenSoundshare() ? el = z.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND : null == el && g.default.supportsEnableSoundshare() && K !== W.SoundshareEnableState.ENABLED && (el = z.default.Messages.GO_LIVE_SCREENSHARE_ENABLE_FOR_SOUNDSHARE.format({
+  }), el = (0, G.default)();
+  null != t && t.id.startsWith("screen") && !g.default.supportsScreenSoundshare() ? el = z.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND : null == el && g.default.supportsEnableSoundshare() && Y !== W.SoundshareEnableState.ENABLED && (el = z.default.Messages.GO_LIVE_SCREENSHARE_ENABLE_FOR_SOUNDSHARE.format({
     onVoiceSettingsClick: () => {
-      x(), o.default.open(W.UserSettingsSections.VOICE)
+      v(), o.default.open(W.UserSettingsSections.VOICE)
     }
   }));
   let en = ee ? (0, n.jsx)(S.default, {
@@ -219,14 +219,14 @@ function $(e) {
     }) : et ? (0, n.jsx)(m.default, {}) : void 0,
     ea = !!(null == t ? void 0 : t.id.startsWith("camera")),
     es = null != $ && $.verified && !$.bot,
-    er = null != k && !(0, c.isPrivateGuildChannel)(k);
+    er = null != F && !(0, c.isPrivateGuildChannel)(F);
   return (0, n.jsxs)(a.Fragment, {
-    children: [ea ? (0, n.jsx)(U.default, {
+    children: [ea ? (0, n.jsx)(y.default, {
       selectedSource: t,
       onChangeVideoDeviceSource: M,
       onChangeAudioDevice: j
     }) : (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(Y, {
+      children: [(0, n.jsx)(K, {
         selectSource: N,
         sourceChanged: d,
         onChangeSource: M,
@@ -234,15 +234,15 @@ function $(e) {
       }), null != el ? (0, n.jsx)(X, {
         text: el
       }) : null, (0, P.isWindows)() && null != t && t.id.startsWith("screen") && null == el ? (0, n.jsx)(q, {
-        enabled: v,
-        onChange: G
+        enabled: x,
+        onChange: U
       }) : null]
     }), _ && null != C ? (0, n.jsx)(J, {
       guildId: C,
       onChange: O
-    }) : null, null != k ? (0, n.jsx)(V.default, {
-      channel: k
-    }) : (0, n.jsx)(w.default, {
+    }) : null, null != F ? (0, n.jsx)(w.default, {
+      channel: F
+    }) : (0, n.jsx)(V.default, {
       guildId: C,
       selectedChannelId: s,
       onChangeSelectedChannelId: L
@@ -254,12 +254,12 @@ function $(e) {
       text: z.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
         helpCenterLink: D.default.getArticleURL(W.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
       })
-    }) : null, (0, n.jsx)(F.default, {
+    }) : null, (0, n.jsx)(k.default, {
       selectedPreset: r,
       selectedFPS: l,
       selectedResolution: u,
       targetGuildPremiumTier: h,
-      onClose: x,
+      onClose: v,
       onFPSChange: A,
       onResolutionChange: R,
       onPresetChange: T,

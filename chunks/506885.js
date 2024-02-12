@@ -19,36 +19,36 @@ async function c(e, t) {
     withMutualFriendsCount: g = !1,
     friendToken: S,
     preloadUserBanner: h = !0,
-    dispatchWait: N = !1,
-    guildId: m,
+    dispatchWait: m = !1,
+    guildId: N,
     channelId: C
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   if ("" === e) return;
-  null != t && (0, i.maybeFetchColors)(t), null != m && !v && (v = !0), null != m && (E = null !== (c = null === (n = (0, a.getVisibleConnectionsRole)({
-    guildMember: s.default.getMember(m, e),
+  null != t && (0, i.maybeFetchColors)(t), null != N && !v && (v = !0), null != N && (E = null !== (c = null === (n = (0, a.getVisibleConnectionsRole)({
+    guildMember: s.default.getMember(N, e),
     channel: r.default.getChannel(C)
   })) || void 0 === n ? void 0 : n.id) && void 0 !== c ? c : void 0);
   let p = d.default.getUserProfile(e),
-    I = d.default.getMutualGuilds(e),
-    _ = d.default.getMutualFriendsCount(e),
+    _ = d.default.getMutualGuilds(e),
+    I = d.default.getMutualFriendsCount(e),
     T = d.default.isFetchingProfile(e),
-    x = (null == p ? void 0 : p.profileFetchFailed) || !T && (!Array.isArray(I) && v || null == _ && g),
+    x = (null == p ? void 0 : p.profileFetchFailed) || !T && (!Array.isArray(_) && v || null == I && g),
     D = h ? o.default : void 0,
     G = !1;
-  if (null != m) {
-    let t = d.default.getGuildMemberProfile(e, m);
+  if (null != N) {
+    let t = d.default.getGuildMemberProfile(e, N);
     G = null == t
-  }!(!x && !G && (T || Date.now() - (null !== (f = null == p ? void 0 : p.lastFetched) && void 0 !== f ? f : 0) < 6e4)) && (N ? await l.default.wait(() => (0, u.fetchProfile)(e, {
+  }!(!x && !G && (T || Date.now() - (null !== (f = null == p ? void 0 : p.lastFetched) && void 0 !== f ? f : 0) < 6e4)) && (m ? await l.default.wait(() => (0, u.fetchProfile)(e, {
     withMutualGuilds: v,
     withMutualFriendsCount: g,
     friendToken: S,
-    guildId: m,
+    guildId: N,
     connectionsRoleId: E
   }, D)) : await (0, u.fetchProfile)(e, {
     withMutualGuilds: v,
     withMutualFriendsCount: g,
     friendToken: S,
-    guildId: m,
+    guildId: N,
     connectionsRoleId: E
   }, D))
 }

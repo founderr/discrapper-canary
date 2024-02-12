@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return b
   }
 }), n("808653"), n("424973"), n("222007");
 var a = n("37983"),
@@ -35,7 +35,7 @@ var a = n("37983"),
   O = n("782340"),
   y = n("211631");
 
-function P(e) {
+function b(e) {
   var t;
   let {
     search: n,
@@ -83,9 +83,9 @@ function P(e) {
         startIndex: t
       }), t += 1, n[n.length - 1].results.push(a), e = null == s ? void 0 : s.id, n)
     }, [])
-  }, [m, N]), P = l.useRef([]), D = j.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
+  }, [m, N]), b = l.useRef([]), D = j.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
     if (!c.default.keyboardModeEnabled) return;
-    let n = P.current,
+    let n = b.current,
       a = null != t ? n[t] : void 0;
     if (null == a || null == a.hitRef.current) return;
     let l = a.hitRef.current.getClientRects()[0],
@@ -95,7 +95,7 @@ function P(e) {
       null === (t = document.getElementById(e)) || void 0 === t || t.focus()
     })
   }, [p]), w = l.useCallback(e => {
-    let t = P.current[e];
+    let t = b.current[e];
     null == t || t.jumpTo()
   }, []), F = (0, s.useListNavigator)({
     navId: "search-results",
@@ -109,12 +109,12 @@ function P(e) {
       results: n,
       startIndex: l
     } = e;
-    return (0, a.jsx)(b, {
+    return (0, a.jsx)(P, {
       channel: t,
       results: n,
       highlighter: B,
       startIndex: l,
-      resultRefs: P,
+      resultRefs: b,
       totalResults: I,
       scrollTo: p,
       searchId: f,
@@ -162,7 +162,7 @@ function P(e) {
   })
 }
 
-function b(e) {
+function P(e) {
   var t, n;
   let {
     channel: s,
@@ -175,8 +175,8 @@ function b(e) {
     searchId: v,
     renderEmbeds: R,
     offset: O,
-    jumpToMessage: P,
-    listNavigator: b,
+    jumpToMessage: b,
+    listNavigator: P,
     favoriteSearch: D
   } = e, U = g.RenderSpoilers.useSetting(), w = l.useCallback(e => {
     if (e === x.default.getChannelId()) return;
@@ -247,8 +247,8 @@ function b(e) {
           pageResultsLength: r.length,
           result: e,
           index: n,
-          onJump: P,
-          listItemProps: b.getItemProps({
+          onJump: b,
+          listItemProps: P.getItemProps({
             index: n
           })
         }, "search-result-".concat(n))

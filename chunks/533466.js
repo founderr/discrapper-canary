@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("992207"),
   O = n("269936"),
   y = n("69927"),
-  P = n("40635"),
-  b = n("10641"),
+  b = n("40635"),
+  P = n("10641"),
   D = n("499520"),
   U = n("327432"),
   w = n("336804"),
@@ -88,8 +88,8 @@ var a = n("37983"),
   eL = n("305961"),
   eO = n("824563"),
   ey = n("744983"),
-  eP = n("18494"),
-  eb = n("162771"),
+  eb = n("18494"),
+  eP = n("162771"),
   eD = n("697218"),
   eU = n("800762"),
   ew = n("980423"),
@@ -223,7 +223,7 @@ class e0 extends l.PureComponent {
       guild: n
     });
     if (e.isGuildVocal()) return null;
-    if (e.isDirectory()) return o(null != n, "directory channels must exist within a guild"), (0, a.jsx)(P.default, {
+    if (e.isDirectory()) return o(null != n, "directory channels must exist within a guild"), (0, a.jsx)(b.default, {
       channel: e,
       guild: n
     });
@@ -706,7 +706,7 @@ var e2 = l.memo(function(e) {
   var t;
   let {
     providedChannel: n
-  } = e, [s, i] = l.useState(null), r = (0, f.useStateFromStores)([eP.default], () => eP.default.getChannelId()), o = (0, f.useStateFromStores)([eP.default], () => eP.default.getVoiceChannelId()), u = (0, f.useStateFromStores)([eA.default], () => null != n ? n : eA.default.getChannel(r), [r, n]), m = (0, f.useStateFromStores)([eA.default], () => eA.default.getChannel(o), [o]), E = null == u ? void 0 : u.parent_id, C = (0, f.useStateFromStores)([eA.default], () => eA.default.getChannel(E), [E]), g = (0, f.useStateFromStores)([eL.default], () => eL.default.getGuild(null == u ? void 0 : u.guild_id), [u]), {
+  } = e, [s, i] = l.useState(null), r = (0, f.useStateFromStores)([eb.default], () => eb.default.getChannelId()), o = (0, f.useStateFromStores)([eb.default], () => eb.default.getVoiceChannelId()), u = (0, f.useStateFromStores)([eA.default], () => null != n ? n : eA.default.getChannel(r), [r, n]), m = (0, f.useStateFromStores)([eA.default], () => eA.default.getChannel(o), [o]), E = null == u ? void 0 : u.parent_id, C = (0, f.useStateFromStores)([eA.default], () => eA.default.getChannel(E), [E]), g = (0, f.useStateFromStores)([eL.default], () => eL.default.getGuild(null == u ? void 0 : u.guild_id), [u]), {
     needSubscriptionToAccess: S
   } = (0, B.default)(null !== (t = null == u ? void 0 : u.id) && void 0 !== t ? t : void 0), _ = (0, f.useStateFromStores)([M.default], () => {
     let e = null != r ? M.default.getParticipants(r) : [],
@@ -717,13 +717,13 @@ var e2 = l.memo(function(e) {
     return x.default.getSelfEmbeddedActivityForChannel(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : "")
   }), N = (0, f.useStateFromStores)([x.default], () => x.default.getActivityPanelMode()), R = null != I && !(0, A.default)(null == u ? void 0 : u.id) && N === ez.ActivityPanelModes.PANEL, j = (0, f.useStateFromStores)([eU.default], () => null != u && u.isVocalThread() && !d.isEmpty(eU.default.getVoiceStatesForChannel(u.id)), [u]), L = (null == u ? void 0 : u.isGuildVocal()) || R || _ || j, {
     welcomeModalChannelId: O
-  } = (0, c.useLocation)(), y = (0, f.useStateFromStores)([es.default], () => null != u && es.default.isLurking(u.guild_id), [u]), P = (0, f.useStateFromStores)([ev.default], () => ev.default.hasSeen(null == u ? void 0 : u.guild_id, y), [u, y]), D = (0, f.useStateFromStores)([M.default, x.default], () => null != x.default.getConnectedActivityChannelId() && x.default.getActivityPanelMode() === ez.ActivityPanelModes.PANEL ? x.default.getFocusedLayout() === ez.FocusedActivityLayouts.NO_CHAT ? eY.ChannelLayouts.NO_CHAT : eY.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : eY.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != u ? M.default.getSelectedParticipant(u.id) : null), w = (0, f.useStateFromStores)([eD.default], () => eD.default.getCurrentUser()), F = (0, ea.default)(g), k = (0, ex.default)(O, null == g ? void 0 : g.id), {
+  } = (0, c.useLocation)(), y = (0, f.useStateFromStores)([es.default], () => null != u && es.default.isLurking(u.guild_id), [u]), b = (0, f.useStateFromStores)([ev.default], () => ev.default.hasSeen(null == u ? void 0 : u.guild_id, y), [u, y]), D = (0, f.useStateFromStores)([M.default, x.default], () => null != x.default.getConnectedActivityChannelId() && x.default.getActivityPanelMode() === ez.ActivityPanelModes.PANEL ? x.default.getFocusedLayout() === ez.FocusedActivityLayouts.NO_CHAT ? eY.ChannelLayouts.NO_CHAT : eY.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : eY.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != u ? M.default.getSelectedParticipant(u.id) : null), w = (0, f.useStateFromStores)([eD.default], () => eD.default.getCurrentUser()), F = (0, ea.default)(g), k = (0, ex.default)(O, null == g ? void 0 : g.id), {
     section: V,
     channelSidebarState: H
   } = (0, f.useStateFromStoresObject)([eN.default], () => ({
     section: eN.default.getSection(r, null == u ? void 0 : u.isDM()),
     channelSidebarState: eN.default.getSidebarState(r)
-  }), [r, u]), G = null == g ? void 0 : g.id, W = (0, f.useStateFromStores)([eN.default], () => eN.default.getGuildSidebarState(G), [G]), Y = (0, f.useStateFromStores)([eb.default], () => eb.default.getGuildId()), z = Y === eY.FAVORITES, K = (0, ek.default)(u), Z = (0, ek.default)(u, !0), X = null != u && o === u.id, J = null != u && u.isGuildStageVoice();
+  }), [r, u]), G = null == g ? void 0 : g.id, W = (0, f.useStateFromStores)([eN.default], () => eN.default.getGuildSidebarState(G), [G]), Y = (0, f.useStateFromStores)([eP.default], () => eP.default.getGuildId()), z = Y === eY.FAVORITES, K = (0, ek.default)(u), Z = (0, ek.default)(u, !0), X = null != u && o === u.id, J = null != u && u.isGuildStageVoice();
   l.useEffect(() => {
     var e, t, n;
     let a = (0, ei.getHistory)();
@@ -743,7 +743,7 @@ var e2 = l.memo(function(e) {
   l.useEffect(() => {
     let e = $ && !Q,
       t = $ && Q && (null == u ? void 0 : u.id) !== ee;
-    (e || t) && (0, b.markDismissibleContentAsDismissed)(h.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, {
+    (e || t) && (0, P.markDismissibleContentAsDismissed)(h.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, {
       dismissAction: eZ.ContentDismissActionType.AUTO
     })
   }, [null == u ? void 0 : u.id, ee, Q, $]);
@@ -770,7 +770,7 @@ var e2 = l.memo(function(e) {
     isMobile: (0, f.useStateFromStores)([eO.default], () => (null == u ? void 0 : u.type) === eY.ChannelTypes.DM && eO.default.isMobileOnline(u.getRecipientId()), [u]),
     isUnavailable: (0, f.useStateFromStores)([eR.default], () => (null == u ? void 0 : u.guild_id) != null && eR.default.isUnavailable(u.guild_id), [u]),
     showRealNameModal: F,
-    showWelcomeModal: !P && k,
+    showWelcomeModal: !b && k,
     showFollowButton: (null == u ? void 0 : u.type) === eY.ChannelTypes.GUILD_ANNOUNCEMENT && (null == g ? void 0 : g.hasFeature(eY.GuildFeatures.NEWS)) || !1,
     ...(0, f.useStateFromStoresObject)([eU.default], () => ({
       hasVideo: null != u && eU.default.hasVideo(u.id)

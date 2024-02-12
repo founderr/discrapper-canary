@@ -37,7 +37,7 @@ var a = n("37983"),
     } = g.HangStatusExperiment.useExperiment({
       guildId: N.guild_id,
       location: "HangStatusPopout"
-    }), R = (0, r.default)([c.default], () => c.default.getId()), j = (0, r.default)([m.default], () => m.default.getUser(s)), L = (0, r.default)([p.default], () => p.default.getChannelId() === N.id), O = (0, r.default)([h.default], () => h.default.can(T.Permissions.CONNECT, N)), y = (0, r.default)([f.default], () => null != N.guild_id && null != j ? f.default.getMember(N.guild_id, s) : null), P = l.useMemo(() => null != j ? (0, d.getPreviewAvatar)(void 0, y, j, {
+    }), R = (0, r.default)([c.default], () => c.default.getId()), j = (0, r.default)([m.default], () => m.default.getUser(s)), L = (0, r.default)([p.default], () => p.default.getChannelId() === N.id), O = (0, r.default)([h.default], () => h.default.can(T.Permissions.CONNECT, N)), y = (0, r.default)([f.default], () => null != N.guild_id && null != j ? f.default.getMember(N.guild_id, s) : null), b = l.useMemo(() => null != j ? (0, d.getPreviewAvatar)(void 0, y, j, {
       size: 40
     }) : void 0, [y, j]);
     return (l.useEffect(() => {
@@ -83,7 +83,7 @@ var a = n("37983"),
               children: [(0, a.jsx)(o.Avatar, {
                 className: x.avatar,
                 size: o.AvatarSizes.SIZE_40,
-                src: P,
+                src: b,
                 "aria-hidden": !0
               }), (0, a.jsx)("div", {
                 className: x.outline

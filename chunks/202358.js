@@ -24,13 +24,13 @@ function d(e) {
   } = e, E = (0, l.useStateFromStores)([s.default, r.default], () => {
     var e;
     return s.default.getGuild(null === (e = r.default.getChannel(t)) || void 0 === e ? void 0 : e.getGuildId())
-  }, [t]), v = (0, l.useStateFromStores)([a.default], () => a.default.getStageInstanceByChannel(t), [t]), g = (0, u.useStageParticipants)(t, i.StageChannelParticipantNamedIndex.SPEAKER), S = (0, u.useStageParticipantsCount)(t), h = null != v ? g : o, N = (null != v ? S : c) - h.length;
+  }, [t]), v = (0, l.useStateFromStores)([a.default], () => a.default.getStageInstanceByChannel(t), [t]), g = (0, u.useStageParticipants)(t, i.StageChannelParticipantNamedIndex.SPEAKER), S = (0, u.useStageParticipantsCount)(t), h = null != v ? g : o, m = (null != v ? S : c) - h.length;
   return {
     channelId: t,
     guild: null != E ? E : n,
     stage: null != v ? v : d,
     speakers: h,
-    audienceCount: N,
+    audienceCount: m,
     context: f
   }
 }

@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("826684"),
   O = n("483093"),
   y = n("659500"),
-  P = n("449008"),
-  b = n("158998"),
+  b = n("449008"),
+  P = n("158998"),
   D = n("50885"),
   U = n("49111"),
   w = n("782340"),
@@ -133,7 +133,7 @@ class H extends l.Component {
       let {
         user: e,
         channel: t
-      } = this.props, n = "@".concat(b.default.getUserTag(e, {
+      } = this.props, n = "@".concat(P.default.getUserTag(e, {
         decoration: "never"
       })), a = "<@".concat(e.id, ">");
       y.ComponentDispatch.dispatchToLastSubscribed(U.ComponentActions.INSERT_TEXT, {
@@ -410,7 +410,7 @@ class z extends l.Component {
           rowsVisible: n
         } = this.getDimensions();
       if (void 0 === n || 0 === n || null == t) return;
-      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(P.isNotNullish);
+      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(b.isNotNullish);
       if (0 === a.length) return;
       let l = a.reduce((e, t) => t.type !== N.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === U.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
         num_users_visible: 0,

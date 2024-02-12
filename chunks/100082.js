@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("664336"),
   O = n("599110"),
   y = n("439932"),
-  P = n("567469"),
-  b = n("998716"),
+  b = n("567469"),
+  P = n("998716"),
   D = n("619395"),
   U = n("923510"),
   w = n("834052"),
@@ -53,7 +53,7 @@ function Y(e) {
     channel: n,
     toggleRequestToSpeakSidebar: s,
     showRequestToSpeakSidebar: o
-  } = e, p = (0, c.useAppContext)(), C = (0, r.useStateFromStores)([f.default], () => f.default.getChatOpen(n.id)), g = (0, D.useCanModerateRequestToSpeak)(n.id), x = (0, P.useStageParticipantsCount)(n.id, b.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
+  } = e, p = (0, c.useAppContext)(), C = (0, r.useStateFromStores)([f.default], () => f.default.getChatOpen(n.id)), g = (0, D.useCanModerateRequestToSpeak)(n.id), x = (0, b.useStageParticipantsCount)(n.id, P.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
     preventIdle: N,
     allowIdle: A
   } = (0, _.usePreventIdle)("popup");
@@ -122,7 +122,7 @@ function z(e) {
     channel: c,
     toggleRequestToSpeakSidebar: f,
     showRequestToSpeakSidebar: h
-  } = e, m = (0, p.default)(c), E = (0, r.useStateFromStores)([w.default], () => w.default.getStageInstanceByChannel(c.id)), S = (0, P.useActualStageSpeakerCount)(c.id), _ = (0, P.useStageParticipantsCount)(c.id, b.StageChannelParticipantNamedIndex.AUDIENCE), I = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(c.guild_id), [c.guild_id]), T = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, v = (null == I ? void 0 : I.isCommunity()) ? T < B.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == I ? void 0 : I.premiumTier) !== B.BoostedGuildTiers.TIER_3 && T <= B.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, D = (0, V.default)(c), F = (0, r.useStateFromStores)([N.default], () => N.default.can(U.MODERATE_STAGE_CHANNEL_PERMISSIONS, c)), k = () => {
+  } = e, m = (0, p.default)(c), E = (0, r.useStateFromStores)([w.default], () => w.default.getStageInstanceByChannel(c.id)), S = (0, b.useActualStageSpeakerCount)(c.id), _ = (0, b.useStageParticipantsCount)(c.id, P.StageChannelParticipantNamedIndex.AUDIENCE), I = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(c.guild_id), [c.guild_id]), T = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, v = (null == I ? void 0 : I.isCommunity()) ? T < B.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == I ? void 0 : I.premiumTier) !== B.BoostedGuildTiers.TIER_3 && T <= B.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, D = (0, V.default)(c), F = (0, r.useStateFromStores)([N.default], () => N.default.can(U.MODERATE_STAGE_CHANNEL_PERMISSIONS, c)), k = () => {
     d.default.updateStageVideoLimitBoostUpsellDismissed(c.id, !0), O.default.track(B.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
       guild_id: c.guild_id,
       type: H.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,

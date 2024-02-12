@@ -41,9 +41,9 @@ function y(e) {
   var t, n, s;
   let {
     maxHeight: y,
-    connectedChannelId: P,
-    renderExternalHeader: b
-  } = e, D = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != P ? I.default.getEmbeddedActivitiesForChannel(P) : [], [P]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), k = l.useCallback(() => {
+    connectedChannelId: b,
+    renderExternalHeader: P
+  } = e, D = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != b ? I.default.getEmbeddedActivitiesForChannel(b) : [], [b]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), k = l.useCallback(() => {
     (0, _.updateActivityPanelMode)(M.ActivityPanelModes.PIP)
   }, []), V = l.useRef(null), B = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), H = B !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = l.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : y), Y = l.useCallback(e => {
     u.default.updatedUnsyncedSettings({
@@ -84,7 +84,7 @@ function y(e) {
       maxHeight: y,
       height: G
     } : void 0,
-    children: [null == b ? void 0 : b(), (0, a.jsxs)("div", {
+    children: [null == P ? void 0 : P(), (0, a.jsxs)("div", {
       className: L.activityPanelContainer,
       children: [H ? null : (0, a.jsx)("div", {
         className: L.header,
@@ -105,7 +105,7 @@ function y(e) {
         ref: z,
         children: (0, a.jsx)(x.default, {
           className: L.iframe,
-          embedId: (0, N.default)(P, D.id)
+          embedId: (0, N.default)(b, D.id)
         })
       }), null != et ? (0, a.jsxs)("div", {
         className: L.footer,
@@ -123,7 +123,7 @@ function y(e) {
             className: L.leaveButtonContainer,
             children: (0, a.jsx)(h.default, {
               applicationId: D.id,
-              channelId: P,
+              channelId: b,
               className: L.leaveActivityButton,
               iconClassName: L.leaveActivityIcon,
               centerButton: !0,
