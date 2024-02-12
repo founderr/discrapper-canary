@@ -1,6 +1,9 @@
 "use strict";
 let i;
 n.r(t), n.d(t, {
+  gameKey: function() {
+    return ee
+  },
   gameInDatabase: function() {
     return et
   },

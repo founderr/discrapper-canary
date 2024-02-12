@@ -323,7 +323,7 @@ var V = function() {
       rawGame: t,
       isOverride: s.has(t.exePath),
       nowPlaying: !0
-    }, t.exePath) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
+    }, (0, f.gameKey)(t)) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
       className: i(L.nowPlayingAdd, U.marginReset, U.marginTop8, U.marginBottom20),
       children: [(0, a.jsx)("span", {
         children: D.default.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
@@ -358,7 +358,7 @@ var V = function() {
       }), e.map(e => (0, a.jsx)(G, {
         rawGame: e,
         isOverride: s.has(e.exePath)
-      }, e.exePath))]
+      }, (0, f.gameKey)(e)))]
     })]
   })
 }
