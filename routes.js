@@ -1674,7 +1674,8 @@
                     COLLECTIBLES_SHOP: "/shop",
                     COLLECTIBLES_SHOP_FULLSCREEN: "/shop/fullscreen",
                     COLLECTIBLES_SHOP_PRODUCT_DETAIL: _ => "/shop/product/".concat(_),
-                    ACCOUNT_STANDING: "/account-standing"
+                    ACCOUNT_STANDING: "/account-standing",
+                    QUESTS: _ => "/quests/".concat(_)
                 }),
                 a4 = (0, aW.wrapPaths)(a2),
                 a8 = (0, aW.wrapPaths)(a6, [":", "?", "@"]);
