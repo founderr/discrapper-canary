@@ -24,8 +24,8 @@ var l = n("77078"),
   S = n("449008"),
   p = n("773336"),
   m = n("165926"),
-  A = n("527441"),
-  g = n("56235"),
+  g = n("527441"),
+  A = n("56235"),
   N = n("218971"),
   R = n("49111"),
   O = n("492397"),
@@ -43,21 +43,21 @@ class M extends r.default {
   }
   handleConnectionOpen() {
     var e;
-    let t, i = A.default.getType();
+    let t, i = g.default.getType();
     if (null == i) return;
     switch (i) {
-      case g.NewUserTypes.INVITE_UNCLAIMED:
+      case A.NewUserTypes.INVITE_UNCLAIMED:
         f.default.flowStart(L.FlowType.INVITE, L.RegistrationSteps.NUF_STARTED);
         break;
-      case g.NewUserTypes.ORGANIC_REGISTERED:
+      case A.NewUserTypes.ORGANIC_REGISTERED:
         f.default.flowStart(L.FlowType.ORGANIC, L.RegistrationSteps.NUF_STARTED);
         break;
-      case g.NewUserTypes.MARKETING_UNCLAIMED:
+      case A.NewUserTypes.MARKETING_UNCLAIMED:
         f.default.flowStart(L.FlowType.ORGANIC_MARKETING, L.RegistrationSteps.NUF_STARTED)
     }
     let r = !1,
       v = I.default.getGuildId();
-    if (i === g.NewUserTypes.INVITE_UNCLAIMED) {
+    if (i === A.NewUserTypes.INVITE_UNCLAIMED) {
       let e = C.default.getGuild(v);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }

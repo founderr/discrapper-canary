@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("685665"),
   p = n("9759"),
   m = n("754493"),
-  A = n("813531"),
-  g = n("21526"),
+  g = n("813531"),
+  A = n("21526"),
   N = n("176555"),
   R = n("232374"),
   O = n("833514"),
@@ -79,7 +79,7 @@ let ep = e => {
     let {
       selected: t,
       ...n
-    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([Q.default], () => Q.default.getPendingCount()), i = (0, A.default)(), {
+    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([Q.default], () => Q.default.getPendingCount()), i = (0, g.default)(), {
       canViewBroadcasts: r
     } = p.default.useExperiment({
       location: "friends_tab_no_track"
@@ -135,7 +135,7 @@ let ep = e => {
       })
     })
   },
-  eA = e => {
+  eg = e => {
     let t, n, {
         selected: s,
         route: l,
@@ -178,7 +178,7 @@ let ep = e => {
       children: n
     })) : null
   },
-  eg = e => {
+  eA = e => {
     let {
       selected: t,
       route: n,
@@ -251,7 +251,7 @@ let ep = e => {
       ...r,
       ...i,
       onClick: () => {
-        (0, g.openCollectiblesShop)({
+        (0, A.openCollectiblesShop)({
           openInLayer: !1,
           analyticsSource: u,
           analyticsLocations: d
@@ -453,7 +453,7 @@ let eb = e => {
       }, "friends"), n && t ? (0, a.jsx)(em, {
         selected: null == c ? null != s && s.startsWith(eI.Routes.APPLICATION_LIBRARY) : c.startsWith(eI.Routes.APPLICATION_LIBRARY),
         hideGameUpdateProgressIndicator: s === eI.Routes.APPLICATION_LIBRARY
-      }, "library") : null, (0, a.jsx)(eA, {
+      }, "library") : null, (0, a.jsx)(eg, {
         selected: null == c ? o : c.startsWith(eI.Routes.APPLICATION_STORE),
         route: null == l || location.pathname.startsWith(eI.Routes.ACTIVITIES) || location.pathname.startsWith(eI.Routes.APPLICATION_STORE) ? eI.Routes.APPLICATION_STORE : l,
         locationState: {
@@ -463,7 +463,7 @@ let eb = e => {
             object: eI.AnalyticsObjects.NAVIGATION_LINK
           }
         }
-      }, "premium"), f ? (0, a.jsx)(eg, {
+      }, "premium"), f ? (0, a.jsx)(eA, {
         selected: null != c && c.startsWith(eI.Routes.ACTIVITIES) || null != s && s.startsWith(eI.Routes.ACTIVITIES),
         route: eI.Routes.ACTIVITIES,
         locationState: {

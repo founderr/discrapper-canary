@@ -25,8 +25,8 @@ var a, s, l = n("37983"),
   p = n("782340"),
   m = n("314796");
 (a = s || (s = {})).BOOSTING = "BOOSTING", a.NITRO = "NITRO", a.BASH_OUT = "BASH_OUT", a.GARTIC_PHONE = "GARTIC_PHONE", a.GAME_NIGHT = "GAME_NIGHT", a.KRUNKER_STRIKE = "KRUNKER_STRIKE";
-let A = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
-  g = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
+let g = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
+  A = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
   N = e => {
     let {
       channelId: t,
@@ -47,11 +47,11 @@ let A = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       switch (e) {
         case "BOOSTING":
           return {
-            analyticsLocation: E.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: g, videoUrl: A, ctaText: p.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: p.default.Messages.DISMISS
+            analyticsLocation: E.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: A, videoUrl: g, ctaText: p.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: p.default.Messages.DISMISS
           };
         case "NITRO":
           return {
-            analyticsLocation: E.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: g, videoUrl: A, ctaText: p.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: p.default.Messages.DISMISS
+            analyticsLocation: E.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: p.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: A, videoUrl: g, ctaText: p.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: p.default.Messages.DISMISS
           };
         case "BASH_OUT":
           return {

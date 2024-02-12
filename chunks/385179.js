@@ -27,8 +27,8 @@ var l = n("37983"),
   M = n("437712"),
   A = n("599110"),
   I = n("719923"),
-  y = n("635357"),
-  N = n("642906"),
+  N = n("635357"),
+  y = n("642906"),
   h = n("85336"),
   R = n("286350"),
   C = n("359371"),
@@ -91,9 +91,9 @@ function D(e) {
     paymentSourceId: eE,
     paymentSources: ep,
     purchaseType: em
-  } = (0, N.usePaymentContext)(), eS = (0, C.default)(), eP = J || (null == eS ? void 0 : eS.isLargeModal) ? o.ModalSize.LARGE : o.ModalSize.SMALL, {
+  } = (0, y.usePaymentContext)(), eS = (0, C.default)(), eP = J || (null == eS ? void 0 : eS.isLargeModal) ? o.ModalSize.LARGE : o.ModalSize.SMALL, {
     isGift: eT
-  } = (0, y.useGiftContext)(), eM = (0, p.usePremiumDiscountOffer)(), eA = null != M && !eT && (0, p.discountOfferHasTier)(eM, M), [eI, ey] = u.useState({
+  } = (0, N.useGiftContext)(), eM = (0, p.usePremiumDiscountOffer)(), eA = null != M && !eT && (0, p.discountOfferHasTier)(eM, M), [eI, eN] = u.useState({
     load_id: eo.loadId,
     payment_type: x.PurchaseTypeToAnalyticsPaymentType[em],
     location: null != n ? n : a,
@@ -109,9 +109,9 @@ function D(e) {
     payment_modal_version: "v1",
     activity_session_id: Z,
     eligible_for_discount: eA
-  }), eN = null != eE ? ep[eE] : null;
+  }), ey = null != eE ? ep[eE] : null;
   u.useEffect(() => {
-    ey(e => {
+    eN(e => {
       let t = null != el ? (0, I.getPrice)(el.id, !1, eT, ef) : void 0,
         n = {
           ...e,
@@ -147,7 +147,7 @@ function D(e) {
       e === h.Step.CONFIRM && (A.default.track(x.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, {
         ...eI,
         duration_ms: a - eo.startTime,
-        payment_source_type: null == eN ? void 0 : eN.type
+        payment_source_type: null == ey ? void 0 : ey.type
       }), null == d || d(u)), ea(e), ei(null);
       let i = null != n ? n : er;
       if (null === i) {
@@ -166,7 +166,7 @@ function D(e) {
         step_duration_ms: a - eh,
         flow_duration_ms: a - eo.startTime
       })
-    }, [eI, eo.startTime, d, ei, ea, er, eh, e_, eN]),
+    }, [eI, eo.startTime, d, ei, ea, er, eh, e_, ey]),
     eC = u.useMemo(() => () => null == O ? void 0 : O($ === R.PurchaseState.COMPLETED, et), [O, $, et]);
   (0, m.usePaymentStepForAuthentication)(er, es, eR), (0, h.usePurchaseStateForStep)(er, $, ee), (0, S.usePurchaseTokenAuthStep)(er, ec, eR), (0, _.default)(eC), (0, P.useUnsupportedExternalSubscriptionModalHandler)(ed, () => O(!1), eT), (0, m.usePaymentAuthenticationPoller)(es);
   let eO = (0, L.PaymentModalHeader)({
@@ -194,7 +194,7 @@ function D(e) {
         handleStepChange: eR,
         handleClose: eC,
         analyticsData: eI,
-        setAnalyticsData: ey,
+        setAnalyticsData: eN,
         trialId: g,
         trialFooterMessageOverride: v,
         reviewWarningMessage: D,
@@ -228,9 +228,9 @@ function Y(e) {
     setSelectedPlanId: T,
     defaultPlanId: A,
     startedPaymentFlowWithPaymentSourcesRef: I
-  } = (0, N.usePaymentContext)(), {
+  } = (0, y.usePaymentContext)(), {
     isGift: R
-  } = (0, y.useGiftContext)(), C = I.current, L = (0, g.default)({
+  } = (0, N.useGiftContext)(), C = I.current, L = (0, g.default)({
     isGift: R,
     skuId: P,
     referralTrialOfferId: i

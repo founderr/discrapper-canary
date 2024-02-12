@@ -23,8 +23,8 @@ async function I(e) {
   var t, l, i, I;
   let T, S, p, {
       userId: m,
-      section: A,
-      guildId: g = _.ME,
+      section: g,
+      guildId: A = _.ME,
       channelId: N,
       friendToken: R,
       autoFocusNote: O,
@@ -46,14 +46,14 @@ async function I(e) {
       ...t,
       user: v,
       autoFocusNote: O,
-      guildId: g,
+      guildId: A,
       friendToken: R,
-      initialSection: A,
+      initialSection: g,
       channelId: N
     })
   }), f.default.track(_.AnalyticEvents.OPEN_MODAL, {
     type: "Profile Modal",
-    guild_id: g !== _.ME ? g : null,
+    guild_id: A !== _.ME ? A : null,
     channel_id: N,
     other_user_id: m,
     application_id: null !== (l = null == P ? void 0 : P.application_id) && void 0 !== l ? l : null,

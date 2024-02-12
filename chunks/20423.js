@@ -27,8 +27,8 @@
       D = t("928741");
     t("525036");
     var L = t("466295"),
-      y = t("117041"),
-      P = t("605250"),
+      P = t("117041"),
+      y = t("605250"),
       M = t("718517");
     let x = 5 * M.default.Millis.MINUTE,
       k = document.getElementById("app-mount");
@@ -55,7 +55,7 @@
         nativeBuildNumber: null == a ? void 0 : a.toString()
       });
       let r = Object.keys(t).filter(e => null != t[e]).map(e => "".concat(e, ": ").concat(t[e])).join(", ");
-      new(0, P.default)().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(r, ", build: ").concat(a)), T.default.setBackgroundThrottling(!1), T.default.initializeExitHook()
+      new(0, y.default)().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(r, ", build: ").concat(a)), T.default.setBackgroundThrottling(!1), T.default.initializeExitHook()
     }
     if ((0, v.setupWindow)(window), __OVERLAY__) G(u.default.Overlay);
     else if (null != window.require && null == window.DiscordNative) G(u.default.OutdatedClient);
@@ -71,5 +71,5 @@
           (0, A.hidden)(window)
         })
       }
-      h.default.initialize(), p.default.init(), _.default.init(), j.default.init(), y.default.init(), b.default.initialize(), I.default.initialize(), O.default.initialize(), m.initialize(), G(u.default.App)
+      h.default.initialize(), p.default.init(), _.default.init(), j.default.init(), P.default.init(), b.default.initialize(), I.default.initialize(), O.default.initialize(), m.initialize(), G(u.default.App)
     }

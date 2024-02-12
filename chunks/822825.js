@@ -15,7 +15,7 @@ var a = n("249654"),
 let c = null,
   f = null,
   E = {},
-  _ = g(),
+  _ = A(),
   h = N(),
   C = null,
   I = function() {
@@ -26,9 +26,9 @@ let c = null,
   S = !1,
   p = null,
   m = null,
-  A = {};
+  g = {};
 
-function g() {
+function A() {
   return {
     [d.TeenActionDisplayType.USER_ADD]: {},
     [d.TeenActionDisplayType.GUILD_ADD]: {},
@@ -62,7 +62,7 @@ function O(e) {
 }
 
 function L(e, t) {
-  let n = t ? _ : g();
+  let n = t ? _ : A();
   return _ = e.reduce((e, t) => {
     let a = t.display_type;
     return void 0 !== n[a] && void 0 === n[a][t.event_id] && (e[a][t.event_id] = t), e
@@ -70,10 +70,10 @@ function L(e, t) {
 }
 
 function v(e) {
-  A = e.reduce((e, t) => ({
+  g = e.reduce((e, t) => ({
     ...e,
     [t.id]: new o.FamilyCenterGuild(t)
-  }), A)
+  }), g)
 }
 
 function M() {
@@ -185,7 +185,7 @@ function F(e) {
 }
 
 function B() {
-  c = null, f = null, E = {}, _ = g(), h = N(), A = {}, S = !1, p = null
+  c = null, f = null, E = {}, _ = A(), h = N(), g = {}, S = !1, p = null
 }
 class H extends l.default {
   takeSnapshot() {
@@ -204,7 +204,7 @@ class H extends l.default {
             e.push(...Object.values(a))
           }), e
         }(),
-        guilds: Object.values(A)
+        guilds: Object.values(g)
       }
     }
   }
@@ -232,7 +232,7 @@ class H extends l.default {
     return C
   }
   getGuild(e) {
-    return A[e]
+    return g[e]
   }
   getSelectedTab() {
     return I

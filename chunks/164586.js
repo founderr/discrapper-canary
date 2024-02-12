@@ -29,8 +29,8 @@ var C = function(e) {
     imageMarginTop: S,
     trackingSource: p,
     undismissable: m,
-    onDismissed: A,
-    onClick: g,
+    onDismissed: g,
+    onClick: A,
     cta: N,
     ctaColor: R,
     centerText: O
@@ -50,7 +50,7 @@ var C = function(e) {
         source: p,
         guild_id: t.id,
         notice_type: C
-      }), null == g || g()
+      }), null == A || A()
     },
     fullWidth: !0,
     color: R,
@@ -74,7 +74,7 @@ var C = function(e) {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
           notice_type: C
-        }), null == A || A()
+        }), null == g || g()
       },
       className: _.close,
       "aria-label": E.default.Messages.DISMISS,

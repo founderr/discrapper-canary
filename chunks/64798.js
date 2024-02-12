@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GiftStaticOption: function() {
-    return p
+    return I
   }
 });
 var s = n("37983"),
@@ -17,7 +17,7 @@ var s = n("37983"),
   m = n("990439"),
   _ = n("999641"),
   E = n("74771");
-let I = {
+let p = {
     [l.PremiumGiftStyles.STANDARD_BOX]: f,
     [l.PremiumGiftStyles.CAKE]: m,
     [l.PremiumGiftStyles.CHEST]: _,
@@ -30,7 +30,7 @@ let I = {
     [l.PremiumGiftStyles.SEASONAL_COFFEE]: d,
     [l.PremiumGiftStyles.SEASONAL_STANDARD_BOX]: u
   },
-  p = r.forwardRef(function(e, t) {
+  I = r.forwardRef(function(e, t) {
     let {
       isSelected: n,
       giftStyle: r,
@@ -49,7 +49,7 @@ let I = {
           height: "100%"
         },
         alt: "",
-        src: I[r],
+        src: p[r],
         className: n ? i.customGiftBoxHighlighted : i.customGiftBox
       })
     })

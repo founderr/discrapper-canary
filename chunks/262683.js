@@ -23,12 +23,12 @@ function _(e) {
     breadcrumbSteps: s,
     handleStepChange: _,
     referralTrialOfferId: E,
-    onReturn: I
+    onReturn: p
   } = e, {
-    contextMetadata: p,
+    contextMetadata: I,
     step: S,
-    paymentSources: P,
-    paymentSourceId: N,
+    paymentSources: N,
+    paymentSourceId: P,
     setPaymentSourceId: T,
     purchaseError: C,
     setPurchaseError: A,
@@ -39,15 +39,15 @@ function _(e) {
     isGift: M
   } = (0, c.useGiftContext)(), g = {
     ...(0, i.useSharedPaymentModal)(),
-    paymentSources: P,
-    paymentSourceId: N,
+    paymentSources: N,
+    paymentSourceId: P,
     setPaymentSourceId: T,
     purchaseError: C,
     setPurchaseError: A,
     purchaseErrorBlockRef: O,
     paymentAuthenticationState: h
-  }, x = (0, l.usePremiumTrialOffer)(E), v = !M && null != x && null != R && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(R), y = null != I ? I : () => {
-    let e = Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
+  }, x = (0, l.usePremiumTrialOffer)(E), v = !M && null != x && null != R && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(R), y = null != p ? p : () => {
+    let e = Object.values(N).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
     _(e, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
@@ -78,7 +78,7 @@ function _(e) {
         from_step: n,
         to_step: s,
         step_duration_ms: r - L,
-        flow_duration_ms: r - p.startTime
+        flow_duration_ms: r - I.startTime
       })
     },
     isEligibleForTrial: v

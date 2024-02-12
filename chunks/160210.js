@@ -1,7 +1,7 @@
 "use strict";
 a.r(n), a.d(n, {
   default: function() {
-    return A
+    return M
   }
 });
 var i = a("37983");
@@ -23,7 +23,7 @@ var t = a("414456"),
   S = a("646718"),
   h = a("782340"),
   p = a("9180");
-let M = e => {
+let A = e => {
   let {
     isTier0: n,
     discountAmount: a
@@ -41,12 +41,12 @@ let M = e => {
     })
   })
 };
-var A = function(e) {
+var M = function(e) {
   var n;
   let a;
   let {
     hideCloseButton: t = !1,
-    hideCloseOnFullScreen: A,
+    hideCloseOnFullScreen: M,
     shouldShowPrice: N,
     plan: E,
     renderAnimation: x,
@@ -56,8 +56,8 @@ var A = function(e) {
     headerTheme: y = S.PremiumHeaderThemes.DEFAULT,
     className: g,
     showTrialBadge: j = !1,
-    showDiscountBadge: H = !1
-  } = e, v = _ === S.PremiumTypes.TIER_2;
+    showDiscountBadge: v = !1
+  } = e, H = _ === S.PremiumTypes.TIER_2;
   a = _ === S.PremiumTypes.TIER_0 ? o.default : _ === S.PremiumTypes.TIER_1 ? d.default : c.default;
   let F = (0, s.useStateFromStores)([m.default], () => m.default.useReducedMotion),
     O = (0, P.usePremiumDiscountOffer)(),
@@ -65,13 +65,13 @@ var A = function(e) {
   return (0, i.jsxs)("div", {
     "aria-hidden": !0,
     className: r({
-      [p.headerBackground]: !v,
-      [y === S.PremiumHeaderThemes.WINTER ? p.tier2HeaderBackgroundWinterTheme : p.tier2HeaderBackground]: v
+      [p.headerBackground]: !H,
+      [y === S.PremiumHeaderThemes.WINTER ? p.tier2HeaderBackgroundWinterTheme : p.tier2HeaderBackground]: H
     }, g),
     children: [F || y !== S.PremiumHeaderThemes.WINTER ? null : (0, i.jsx)(C.default, {
       className: p.snow,
       wind: 5
-    }), (j || H) && (0, i.jsx)(L.default, {
+    }), (j || v) && (0, i.jsx)(L.default, {
       className: p.trialBadgeSparkles
     }), x(), (0, i.jsxs)(l.default, {
       align: l.default.Align.START,
@@ -80,14 +80,14 @@ var A = function(e) {
       children: [(0, i.jsxs)("div", {
         children: [(0, i.jsx)(a, {
           className: r(p.headerIcon, {
-            [p.nonTier2]: !v
+            [p.nonTier2]: !H
           })
-        }), (j || H) && (0, i.jsx)(M, {
+        }), (j || v) && (0, i.jsx)(A, {
           isTier0: _ === S.PremiumTypes.TIER_0,
-          discountAmount: H ? B : void 0
+          discountAmount: v ? B : void 0
         })]
       }), !t && (0, i.jsx)(u.ModalCloseButton, {
-        hideOnFullscreen: A,
+        hideOnFullscreen: M,
         onClick: I,
         className: p.closeButton
       })]

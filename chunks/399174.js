@@ -23,12 +23,12 @@ var a = n("37983"),
   S = n("439932"),
   p = n("49111"),
   m = n("350828");
-let A = (0, _.makeLazy)({
+let g = (0, _.makeLazy)({
     createPromise: () => n.el("420610").then(n.bind(n, "420610")),
     webpackId: "420610",
     name: "UserSettings"
   }),
-  g = (0, _.makeLazy)({
+  A = (0, _.makeLazy)({
     createPromise: () => n.el("995865").then(n.bind(n, "995865")),
     webpackId: "995865",
     name: "ChannelSettings"
@@ -44,8 +44,8 @@ let A = (0, _.makeLazy)({
     name: "GuildSettings"
   }),
   O = {
-    [p.Layers.USER_SETTINGS]: () => (0, a.jsx)(A, {}),
-    [p.Layers.CHANNEL_SETTINGS]: () => (0, a.jsx)(g, {}),
+    [p.Layers.USER_SETTINGS]: () => (0, a.jsx)(g, {}),
+    [p.Layers.CHANNEL_SETTINGS]: () => (0, a.jsx)(A, {}),
     [p.Layers.GUILD_SETTINGS]: () => (0, a.jsx)(R, {}),
     [p.Layers.COLLECTIBLES_SHOP]: () => (0, a.jsx)(N, {})
   },

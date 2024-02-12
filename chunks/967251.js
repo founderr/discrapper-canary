@@ -33,7 +33,7 @@ var s = n("77078"),
     let {
       activeSubscription: S
     } = (0, r.default)(null == T ? void 0 : T.id), p = (0, l.useSubscriptionsSettings)(I.id), m = null == p ? void 0 : p.description, {
-      editStateIds: A
+      editStateIds: g
     } = i.useEditStateIds(null !== (t = null == T ? void 0 : T.id) && void 0 !== t ? t : null, I.id);
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(E.default, {
@@ -53,7 +53,7 @@ var s = n("77078"),
       }), (0, a.jsx)(s.HeadingLevel, {
         children: (0, a.jsx)(c.default, {
           guildId: I.id,
-          children: A.map(e => {
+          children: g.map(e => {
             var t;
             return (0, a.jsx)(f.default, {
               guildId: I.id,

@@ -58,9 +58,9 @@ var i = n("37983"),
       Y = null == H || B,
       V = null == H || G.length > 1,
       K = null != A || U.length > 0,
-      W = j && B,
-      z = null != F && null != D && Y && V && (K || j) && !W;
-    Y ? K ? W && null != F && (n = E.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
+      z = j && B,
+      W = null != F && null != D && Y && V && (K || j) && !z;
+    Y ? K ? z && null != F && (n = E.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
       tierName: F.name
     })) : n = E.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = E.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, l.useEffect(() => {
       v && null != y && k && u.default.wait(() => {
@@ -99,7 +99,7 @@ var i = n("37983"),
     }, [v, a, L, G, D, A, K, j, M, g, w, N, U, O, R]);
     return {
       openModal: q,
-      canOpenModal: z,
+      canOpenModal: W,
       cannotOpenReason: n
     }
   }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return A
   }
 }), n("222007");
 var a = n("37983"),
@@ -29,7 +29,7 @@ let T = {
   p = "".concat(S, "-decription"),
   m = "".concat(S, "-error");
 
-function A(e, t) {
+function g(e, t) {
   switch (t.type) {
     case "RESET":
       return T;
@@ -48,19 +48,19 @@ function A(e, t) {
   }
 }
 
-function g() {
+function A() {
   let e = s.createRef(),
     t = s.createRef(),
-    [n, l] = s.useReducer(A, T),
+    [n, l] = s.useReducer(g, T),
     {
       canSend: r,
       hint: c,
-      success: g,
+      success: A,
       error: N
     } = n;
   return s.useEffect(() => {
-    null != g && (o(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
-  }, [g, e]), (0, a.jsxs)("form", {
+    null != A && (o(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
+  }, [A, e]), (0, a.jsxs)("form", {
     onSubmit: t => {
       t.preventDefault(), o(null != e.current, "Input is submitted when not mounted");
       let n = e.current.value.trim();
@@ -103,7 +103,7 @@ function g() {
       children: (0, a.jsxs)("div", {
         ref: t,
         className: i(C.addFriendInputWrapper, {
-          [C.success]: g,
+          [C.success]: A,
           [C.error]: N
         }),
         children: [(0, a.jsx)(u.TextInput, {
@@ -162,11 +162,11 @@ function g() {
       type: u.FormText.Types.ERROR,
       className: I.marginTop8,
       children: N
-    }), null != g && (0, a.jsx)(u.FormText, {
+    }), null != A && (0, a.jsx)(u.FormText, {
       role: "status",
       type: u.FormText.Types.SUCCESS,
       className: I.marginTop8,
-      children: g
+      children: A
     })]
   })
 }

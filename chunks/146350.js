@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("599110"),
   p = n("158998"),
   m = n("49111"),
-  A = n("782340"),
-  g = n("304169");
+  g = n("782340"),
+  A = n("304169");
 
 function N(e) {
   let {
@@ -33,17 +33,17 @@ function N(e) {
     focused: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: g.statusItem,
+    className: A.statusItem,
     children: [(0, a.jsx)(u.Status, {
       status: t,
-      className: g.icon,
+      className: A.icon,
       size: 10,
       color: s ? "currentColor" : void 0
     }), (0, a.jsx)("div", {
-      className: g.status,
+      className: A.status,
       children: (0, p.humanizeStatus)(t)
     }), null != n && (0, a.jsx)("div", {
-      className: g.description,
+      className: A.description,
       children: n
     })]
   })
@@ -56,37 +56,37 @@ function R(e) {
     e.stopPropagation(), h.CustomStatusSetting.updateSetting(void 0)
   };
   return null != t ? (0, a.jsx)("div", {
-    "aria-label": A.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+    "aria-label": g.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
     children: (0, a.jsx)(c.default, {
-      className: null != t.emoji ? g.customStatusWithEmoji : g.customStatusItem,
+      className: null != t.emoji ? A.customStatusWithEmoji : A.customStatusItem,
       activity: t,
-      emojiClassName: g.customEmoji,
-      textClassName: g.customText,
-      placeholderText: A.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+      emojiClassName: A.customEmoji,
+      textClassName: A.customText,
+      placeholderText: g.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
       children: (0, a.jsx)(u.Tooltip, {
-        text: A.default.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS,
+        text: g.default.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS,
         children: e => (0, a.jsx)(u.Button, {
           ...e,
-          className: g.clearStatusButton,
+          className: A.clearStatusButton,
           onClick: n,
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
           tabIndex: -1,
           "aria-hidden": !0,
           children: (0, a.jsx)(I.default, {
-            className: g.clearStatusIcon
+            className: A.clearStatusIcon
           })
         })
       })
     })
   }) : (0, a.jsxs)("div", {
-    className: i(g.statusItem, g.customStatusContentIcon),
-    "aria-label": A.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
+    className: i(A.statusItem, A.customStatusContentIcon),
+    "aria-label": g.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
     children: [(0, a.jsx)("div", {
-      className: g.customEmojiPlaceholder
+      className: A.customEmojiPlaceholder
     }), (0, a.jsx)("div", {
-      className: g.status,
-      children: A.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
+      className: A.status,
+      children: g.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
     })]
   })
 }
@@ -96,16 +96,16 @@ function O(e) {
     focused: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: i(g.statusItem, g.statusItemNoPadding, g.customStatusContentIcon, g.switchAccountsItem),
-    "aria-label": A.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
+    className: i(A.statusItem, A.statusItemNoPadding, A.customStatusContentIcon, A.switchAccountsItem),
+    "aria-label": g.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
     children: [(0, a.jsx)(T.default, {
       width: 18,
       height: 18,
-      className: g.switchAccountsIcon,
+      className: A.switchAccountsIcon,
       color: t ? o.default.unsafe_rawColors.WHITE_500.css : "currentColor"
     }), (0, a.jsx)("div", {
-      className: g.status,
-      children: A.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE
+      className: A.status,
+      children: g.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE
     })]
   })
 }
@@ -131,7 +131,7 @@ let L = e => {
   return (0, a.jsxs)(u.Menu, {
     navId: "status-picker",
     variant: "fixed",
-    "aria-label": A.default.Messages.SET_STATUS,
+    "aria-label": g.default.Messages.SET_STATUS,
     onClose: l,
     onSelect: r,
     children: [(0, a.jsx)(u.MenuItem, {
@@ -169,7 +169,7 @@ let L = e => {
         } = e;
         return (0, a.jsx)(N, {
           status: u.StatusTypes.DND,
-          description: A.default.Messages.STATUS_DND_HELP,
+          description: g.default.Messages.STATUS_DND_HELP,
           focused: t
         })
       },
@@ -183,7 +183,7 @@ let L = e => {
         } = e;
         return (0, a.jsx)(N, {
           status: u.StatusTypes.INVISIBLE,
-          description: A.default.Messages.STATUS_INVISIBLE_HELPER,
+          description: g.default.Messages.STATUS_INVISIBLE_HELPER,
           focused: t
         })
       },

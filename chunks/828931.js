@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("599110"),
   p = n("427459"),
   m = n("49111"),
-  A = n("994428"),
-  g = n("944305"),
+  g = n("994428"),
+  A = n("944305"),
   N = n("646718"),
   R = n("782340"),
   O = n("706904"),
@@ -51,7 +51,7 @@ function b(e, t) {
     analyticsLocations: e,
     analyticsSourceLocation: m.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH,
     guild: t,
-    perks: (0, g.guildInviteUpsellPerks)()
+    perks: (0, A.guildInviteUpsellPerks)()
   }))
 }
 
@@ -80,7 +80,7 @@ var G = s.memo(function(e) {
     renderGuildHeaderDropdownButton: r
   } = e, {
     analyticsLocations: f
-  } = (0, o.default)(), g = () => {
+  } = (0, o.default)(), A = () => {
     S.default.track(m.AnalyticEvents.TOOLTIP_VIEWED, {
       type: N.PremiumUpsellTypes.PREMIUM_PROGRESS_BAR,
       location: {
@@ -95,14 +95,14 @@ var G = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, j = (0, i.isThemeDark)(n) ? M : P, [w, k] = (0, c.useSelectedDismissibleContent)(t, A.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, j = (0, i.isThemeDark)(n) ? M : P, [w, k] = (0, c.useSelectedDismissibleContent)(t, g.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (w) {
         case l.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(T.default, {
-              onComponentMount: g,
+              onComponentMount: A,
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
@@ -121,7 +121,7 @@ var G = s.memo(function(e) {
         case l.DismissibleContent.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
           return (0, a.jsx)(U, {
             renderPopout: (0, a.jsx)(T.default, {
-              onComponentMount: g,
+              onComponentMount: A,
               header: R.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
@@ -199,7 +199,7 @@ var G = s.memo(function(e) {
               header: R.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
               content: R.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
               buttonCTA: R.default.Messages.GOT_IT,
-              onClick: () => k(A.ContentDismissActionType.UNKNOWN),
+              onClick: () => k(g.ContentDismissActionType.UNKNOWN),
               markAsDismissed: k
             }),
             renderGuildHeaderDropdownButton: r

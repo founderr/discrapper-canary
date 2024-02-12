@@ -21,8 +21,8 @@ var a, s, l = n("37983"),
   S = n("429928"),
   p = n("502651"),
   m = n("29088"),
-  A = n("698372"),
-  g = n("141962"),
+  g = n("698372"),
+  A = n("141962"),
   N = n("685665"),
   R = n("299285"),
   O = n("679653"),
@@ -488,7 +488,7 @@ es.Header = ea, es.Body = e => {
     channel: n,
     guildId: a,
     participants: s
-  } = e, r = (0, A.default)(), [o, d] = i.useState(null), f = t.application_id;
+  } = e, r = (0, g.default)(), [o, d] = i.useState(null), f = t.application_id;
   i.useEffect(() => {
     null != f && (0, H.fetchAssetIds)(f, ["embedded_background"]).then(e => {
       let [t] = e;
@@ -552,7 +552,7 @@ es.Header = ea, es.Body = e => {
                 currentEmbeddedApplication: r,
                 activityChannelId: n.id,
                 locationObject: C.location,
-                embeddedActivitiesManager: g.default,
+                embeddedActivitiesManager: A.default,
                 analyticsLocations: I
               })
             },

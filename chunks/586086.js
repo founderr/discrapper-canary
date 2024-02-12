@@ -26,13 +26,13 @@ var a = n("37983"),
   S = n("782340"),
   p = n("492898");
 let m = 12,
-  A = () => {
+  g = () => {
     let e = (0, c.getHistory)(),
       t = e.location.search,
       n = null != t && t.length > 0 && t.startsWith("?");
     return n ? r.parse(t) : {}
   },
-  g = e => {
+  A = e => {
     let {
       categoryId: t,
       categoryName: n,
@@ -91,7 +91,7 @@ var R = e => {
     total: w
   } = n, [k, F] = s.useState(!1), {
     tag: B
-  } = A(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
+  } = g(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
     d.doAlgoliaSearch(l, {
       categoryId: n ? T.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
@@ -110,7 +110,7 @@ var R = e => {
     let {
       offset: e,
       tag: t
-    } = A(), n = null != e ? Math.floor(parseInt(e, 10) / m) + 1 : 1;
+    } = g(), n = null != e ? Math.floor(parseInt(e, 10) / m) + 1 : 1;
     V(!!t), 1 === n && F(!0)
   }, [l]);
   let z = M === T.DISCOVERY_ALL_CATEGORIES_ID ? S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
@@ -150,7 +150,7 @@ var R = e => {
       isSearchPage: !0,
       currentCategoryId: M,
       isTagSearch: H
-    }), Y ? (0, a.jsx)(N, {}) : w <= 0 ? (0, a.jsx)(g, {
+    }), Y ? (0, a.jsx)(N, {}) : w <= 0 ? (0, a.jsx)(A, {
       categoryId: M,
       categoryName: P,
       onClick: () => {

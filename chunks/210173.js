@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("154640"),
   p = n("922832"),
   m = n("782340"),
-  A = n("563662"),
-  g = n("926622"),
+  g = n("563662"),
+  A = n("926622"),
   N = n("371997");
 
 function R(e) {
@@ -34,9 +34,9 @@ function R(e) {
     stepNumber: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: A.step,
+    className: g.step,
     children: [(0, a.jsx)("div", {
-      className: A.stepNumber,
+      className: g.stepNumber,
       children: (0, a.jsx)(o.Heading, {
         variant: "heading-md/semibold",
         color: "text-brand",
@@ -61,13 +61,13 @@ function R(e) {
 
 function O() {
   return (0, a.jsxs)("div", {
-    className: i(A.box, A.linkingBanner, A.linkingBannerParent),
+    className: i(g.box, g.linkingBanner, g.linkingBannerParent),
     children: [(0, a.jsxs)("div", {
-      className: i(A.linkingBannerUpper),
+      className: i(g.linkingBannerUpper),
       children: [(0, a.jsxs)("div", {
-        className: A.header,
+        className: g.header,
         children: [(0, a.jsx)(o.Heading, {
-          className: g.marginBottom8,
+          className: A.marginBottom8,
           variant: "heading-xl/medium",
           children: (0, a.jsx)(o.HeadingLevel, {
             children: m.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_PARENT
@@ -75,16 +75,16 @@ function O() {
         }), (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
-          className: g.marginBottom20,
+          className: A.marginBottom20,
           children: m.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_PARENT
         })]
       }), (0, a.jsx)("img", {
-        className: A.bannerArt,
+        className: g.bannerArt,
         src: N,
         alt: m.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
       })]
     }), (0, a.jsxs)("div", {
-      className: A.steps,
+      className: g.steps,
       children: [(0, a.jsx)(R, {
         header: m.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
         description: m.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
@@ -105,10 +105,10 @@ function O() {
 function L() {
   let e = (0, _.useHasMaxConnections)();
   return (0, a.jsxs)("div", {
-    className: i(A.box, A.linkingBanner),
+    className: i(g.box, g.linkingBanner),
     children: [(0, a.jsxs)("div", {
       children: [(0, a.jsx)(o.Heading, {
-        className: g.marginBottom8,
+        className: A.marginBottom8,
         variant: "heading-xl/medium",
         children: (0, a.jsx)(o.HeadingLevel, {
           children: m.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN
@@ -116,13 +116,13 @@ function L() {
       }), (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
-        className: g.marginBottom20,
+        className: A.marginBottom20,
         children: m.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({
           link: "https://support.discord.com/hc/articles/14155060633623"
         })
       }), e ? null : (0, a.jsx)(C.default, {})]
     }), (0, a.jsx)("img", {
-      className: A.bannerArt,
+      className: g.bannerArt,
       src: N,
       alt: m.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
     })]
@@ -149,16 +149,16 @@ function v(e) {
       })
     }, i.id)
   }, [l, t]), _ = s.useCallback(() => (0, a.jsx)(d.default, {
-    className: A.sectionTitle,
+    className: g.sectionTitle,
     children: (0, a.jsx)(o.Text, {
-      className: g.marginBottom8,
+      className: A.marginBottom8,
       variant: "eyebrow",
       color: "header-secondary",
       children: n
     })
   }, "title"), [n]);
   return (0, a.jsx)("div", {
-    className: A.section,
+    className: g.section,
     children: (0, a.jsx)(r.ListNavigatorProvider, {
       navigator: f,
       children: (0, a.jsx)(r.ListNavigatorContainer, {
@@ -169,7 +169,7 @@ function v(e) {
             ...r
           } = e;
           return (0, a.jsx)(o.List, {
-            className: A.list,
+            className: g.list,
             innerRole: s,
             innerAriaLabel: n,
             ref: e => {
@@ -205,14 +205,14 @@ let M = () => {
         sectionTitle: l,
         requests: t
       }) : (0, a.jsxs)("div", {
-        className: A.section,
+        className: g.section,
         children: [(0, a.jsx)(o.Text, {
-          className: g.marginBottom8,
+          className: A.marginBottom8,
           variant: "eyebrow",
           color: "header-secondary",
           children: l
         }), (0, a.jsx)("div", {
-          className: A.box,
+          className: g.box,
           children: (0, a.jsx)(h.default, {
             text: m.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION
           })
@@ -230,7 +230,7 @@ let M = () => {
         maxConnections: n
       }));
     return e ? (0, a.jsx)("div", {
-      className: A.maxConnectionInfo,
+      className: g.maxConnectionInfo,
       children: (0, a.jsx)(o.Text, {
         variant: "text-xxs/medium",
         color: "text-muted",
@@ -241,9 +241,9 @@ let M = () => {
   D = () => {
     let e = (0, f.useShouldShowHelplineLink)();
     return e ? (0, a.jsxs)("div", {
-      className: i(A.helpLineInfo, g.marginTop20),
+      className: i(g.helpLineInfo, A.marginTop20),
       children: [(0, a.jsx)(o.Heading, {
-        className: A.supportHeader,
+        className: g.supportHeader,
         variant: "heading-sm/semibold",
         children: (0, a.jsx)(o.HeadingLevel, {
           children: m.default.Messages.FAMILY_CENTER_HELP_LINE_HEADER
@@ -273,7 +273,7 @@ let M = () => {
 var x = () => {
   let e = (0, E.default)();
   return (0, a.jsxs)("div", {
-    className: A.container,
+    className: g.container,
     children: [e ? (0, a.jsx)(O, {}) : (0, a.jsx)(L, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(D, {})]
   })
 }

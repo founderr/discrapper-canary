@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("812204"),
   p = n("685665"),
   m = n("106803"),
-  A = n("861370"),
-  g = n("91639"),
+  g = n("861370"),
+  A = n("91639"),
   N = n("128887"),
   R = n("217513"),
   O = n("430312"),
@@ -156,7 +156,7 @@ function Z(e) {
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, V.StatusTypes.UNKNOWN, !1] : [null !== (e = x.default.findActivity(n, e => e.type !== V.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, x.default.findActivity(t.id, e => e.type === V.ActivityTypes.CUSTOM_STATUS), x.default.getStatus(n), x.default.isMobileOnline(n)]
   }), J = function(e, t) {
-    let n = g.ExpiringStatusExperiment.useExperiment({
+    let n = A.ExpiringStatusExperiment.useExperiment({
         location: "account popout"
       }).expiringStatus,
       s = P.StatusExpiresAtSetting.useSetting(),
@@ -200,7 +200,7 @@ function Z(e) {
   }, []);
   let et = (0, B.useMultiAccountMenuItems)(),
     en = (0, m.useCustomStatusMenuItem)(null != n ? n : void 0, K.menuItemFocused),
-    ea = (0, A.default)({
+    ea = (0, g.default)({
       id: t.id,
       label: W.default.Messages.COPY_ID_USER,
       showIconFirst: !0

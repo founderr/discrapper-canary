@@ -23,8 +23,8 @@ var a = n("37983"),
   S = n("679653"),
   p = n("176347"),
   m = n("782340"),
-  A = n("768922"),
-  g = n("421202");
+  g = n("768922"),
+  A = n("421202");
 
 function N(e) {
   let {
@@ -56,19 +56,19 @@ function N(e) {
         inSidebar: !0
       })
     }), v && (0, a.jsxs)("div", {
-      className: g.hamBanner,
+      className: A.hamBanner,
       children: [(0, a.jsx)(i.Text, {
-        className: g.hamBannerText,
+        className: A.hamBannerText,
         variant: "text-sm/normal",
         children: m.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
       }), (0, a.jsx)(i.Button, {
-        className: g.hamBannerButton,
+        className: A.hamBannerButton,
         size: i.ButtonSizes.SMALL,
         onClick: () => y(t, M),
         children: m.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })]
     }), (0, a.jsx)("div", {
-      className: A.chat,
+      className: g.chat,
       children: (0, a.jsx)(p.default, {
         channel: t,
         guild: null,
