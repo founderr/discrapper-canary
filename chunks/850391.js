@@ -371,9 +371,6 @@ let r = {
     drafts: {
       type: s.DraftType.ChannelMessage
     },
-    emojis: {
-      button: !0
-    },
     permissions: {
       requireSendMessages: !0
     },
