@@ -18,23 +18,26 @@ E.r(_), E.d(_, {
   getHeroAssetUrl: function() {
     return S
   },
-  getQuestBarHeroAssetUrl: function() {
+  getQuestBarStaticHeroAssetUrl: function() {
     return N
   },
-  getGameTileAssetUrl: function() {
+  getQuestBarAnimatedHeroAssetUrl: function() {
     return O
   },
-  getGameLogotypeAssetUrl: function() {
+  getGameTileAssetUrl: function() {
     return A
   },
-  getQuestForTargetedContent: function() {
+  getGameLogotypeAssetUrl: function() {
     return R
   },
-  getPlatformString: function() {
+  getQuestForTargetedContent: function() {
     return l
   },
-  calculatePercentComplete: function() {
+  getPlatformString: function() {
     return u
+  },
+  calculatePercentComplete: function() {
+    return L
   }
 }), E("222007");
 var t = E("588025"),
@@ -96,7 +99,8 @@ function I(e) {
         primary: (o = _.colors).primary,
         secondary: o.secondary
       },
-      rewardCodePlatforms: _.reward_code_platforms.filter(e => t.QUEST_REWARD_CODE_PLATFORMS_SET.has(e))
+      rewardCodePlatforms: _.reward_code_platforms.filter(e => t.QUEST_REWARD_CODE_PLATFORMS_SET.has(e)),
+      videoAssets: _.video_assets
     },
     userStatus: null == e.user_status ? null : a(e.user_status),
     targetedContent: e.targeted_content
@@ -114,16 +118,17 @@ function s(e) {
 }
 let T = e => "".concat(n).concat(e).concat("/reward.png"),
   S = e => "".concat(n).concat(e).concat("/hero.png"),
-  N = e => "".concat(n).concat(e).concat("/quest_bar_hero.gif"),
-  O = e => "".concat(n).concat(e).concat("/game_tile.png"),
-  A = (e, _) => "".concat(n).concat(e, "/").concat(_).concat("/game_logotype.png");
+  N = e => "".concat(n).concat(e).concat("/quests_bar_hero.png"),
+  O = e => "".concat(n).concat(e).concat("/quests_bar_hero.webm"),
+  A = e => "".concat(n).concat(e).concat("/game_tile.png"),
+  R = (e, _) => "".concat(n).concat(e, "/").concat(_).concat("/game_logotype.png");
 
-function R(e, _) {
+function l(e, _) {
   for (let [E, t] of e)
     if (!i(t) && t.targetedContent.includes(_)) return t;
   return null
 }
-let l = e => {
+let u = e => {
   switch (e) {
     case t.QuestRewardCodePlatforms.XBOX:
       return o.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -138,7 +143,7 @@ let l = e => {
   }
 };
 
-function u(e) {
+function L(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: _,
