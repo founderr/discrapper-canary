@@ -1,88 +1,80 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumPaymentConfirmStep: function() {
-    return m
+    return E
   }
 });
 var s = n("37983"),
-  a = n("884691"),
-  r = n("627445"),
-  l = n.n(r),
-  i = n("837148"),
-  u = n("491523"),
-  o = n("775155"),
-  d = n("659632"),
-  c = n("380186"),
-  _ = n("635357"),
-  f = n("642906"),
-  I = n("236838"),
-  E = n("650484"),
-  S = n("367767");
+  r = n("884691"),
+  l = n("627445"),
+  a = n.n(l),
+  i = n("491523"),
+  u = n("775155"),
+  o = n("659632"),
+  d = n("380186"),
+  c = n("635357"),
+  _ = n("642906"),
+  I = n("650484"),
+  f = n("367767");
 
-function m(e) {
+function E(e) {
   var t, n;
-  let r, {
-      handleClose: m,
-      planGroup: P,
-      onSubscriptionConfirmation: p,
-      renderPurchaseConfirmation: T,
-      postSuccessGuild: N,
-      followupSKUInfo: M
+  let l, {
+      handleClose: E,
+      planGroup: S,
+      onSubscriptionConfirmation: m,
+      renderPurchaseConfirmation: P,
+      postSuccessGuild: p,
+      followupSKUInfo: T
     } = e,
     {
-      activeSubscription: C,
-      paymentSources: L,
-      paymentSourceId: R,
-      selectedPlan: A,
-      selectedSkuId: O,
-      step: g,
-      updatedSubscription: x,
-      startingPremiumSubscriptionPlanIdRef: h
-    } = (0, f.usePaymentContext)(),
+      activeSubscription: N,
+      paymentSources: M,
+      paymentSourceId: C,
+      selectedPlan: R,
+      selectedSkuId: L,
+      step: A,
+      updatedSubscription: g,
+      startingPremiumSubscriptionPlanIdRef: O
+    } = (0, _.usePaymentContext)(),
     {
-      isGift: y,
-      giftRecipient: b,
-      giftCode: U,
-      hasSentMessage: k,
-      isSendingMessage: j,
-      sendGiftMessage: D
-    } = (0, _.useGiftContext)();
-  l(null != A, "Expected plan to selected"), l(null != O, "Expected selectedSkuId"), l(null != g, "Step should be set");
-  let {
-    successUpsellEnabled: G
-  } = (0, i.default)({
-    location: "PremiumPaymentConfirmStep"
-  }), B = a.useCallback(() => {
-    m(), null == p || p()
-  }, [m, p]);
-  return a.useEffect(() => {
-    if (!y || null == b || null == U || k || j || (0, d.shouldShowCustomGiftExperience)(b, !0, "PremiumPaymentConfirmStep")) return;
-    let e = u.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
+      isGift: x,
+      giftRecipient: h,
+      giftCode: y,
+      hasSentMessage: b,
+      isSendingMessage: U,
+      sendGiftMessage: k
+    } = (0, c.useGiftContext)();
+  a(null != R, "Expected plan to selected"), a(null != L, "Expected selectedSkuId"), a(null != A, "Step should be set");
+  let j = r.useCallback(() => {
+    E(), null == m || m()
+  }, [E, m]);
+  return r.useEffect(() => {
+    if (!x || null == h || null == y || b || U || (0, o.shouldShowCustomGiftExperience)(h, !0, "PremiumPaymentConfirmStep")) return;
+    let e = i.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
       location: "36b986_1"
     }).enabled;
-    e && D({
-      onSubscriptionConfirmation: p
+    e && k({
+      onSubscriptionConfirmation: m
     })
-  }, [D, y, b, U, k, j, p]), r = null != T ? T(A, B, x) : y ? (0, s.jsx)(o.PremiumSubscriptionGiftPurchaseConfirmation, {
-    planId: A.id,
-    onClose: B
-  }) : h.current === A.id ? (0, s.jsx)(o.default, {
-    planId: A.id,
-    postSuccessGuild: N,
-    onClose: B,
-    paymentSourceType: null === (t = L[null != R ? R : ""]) || void 0 === t ? void 0 : t.type
-  }) : (0, s.jsx)(o.default, {
-    followupSKUInfo: M,
-    startingPremiumSubscriptionPlanId: h.current,
-    planId: A.id,
-    onClose: B,
-    isDowngrade: null != C && (0, c.subscriptionCanDowngrade)(C, A.id, P),
-    paymentSourceType: null === (n = L[null != R ? R : ""]) || void 0 === n ? void 0 : n.type
-  }), (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsxs)(E.PaymentPortalBody, {
-      children: [(0, s.jsx)(S.default, {}), r]
-    }), G && y && (0, s.jsx)(I.default, {
-      onClose: B
-    })]
+  }, [k, x, h, y, b, U, m]), l = null != P ? P(R, j, g) : x ? (0, s.jsx)(u.PremiumSubscriptionGiftPurchaseConfirmation, {
+    planId: R.id,
+    onClose: j
+  }) : O.current === R.id ? (0, s.jsx)(u.default, {
+    planId: R.id,
+    postSuccessGuild: p,
+    onClose: j,
+    paymentSourceType: null === (t = M[null != C ? C : ""]) || void 0 === t ? void 0 : t.type
+  }) : (0, s.jsx)(u.default, {
+    followupSKUInfo: T,
+    startingPremiumSubscriptionPlanId: O.current,
+    planId: R.id,
+    onClose: j,
+    isDowngrade: null != N && (0, d.subscriptionCanDowngrade)(N, R.id, S),
+    paymentSourceType: null === (n = M[null != C ? C : ""]) || void 0 === n ? void 0 : n.type
+  }), (0, s.jsx)(s.Fragment, {
+    children: (0, s.jsxs)(I.PaymentPortalBody, {
+      children: [(0, s.jsx)(f.default, {}), l]
+    })
   })
 }
