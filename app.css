@@ -17333,7 +17333,14 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    justify-content: space-between
+    justify-content: space-between;
+    width: 100%
+}
+
+.actionsWrapper__753d7 .actionsProfile_e94765,
+.actionsWrapper__753d7 .actionsProfileV2__1c710 {
+    margin-left: 0;
+    margin-top: 12px
 }
 
 .section__6f61e {
