@@ -66,7 +66,8 @@ var s = {
   "./unmute.mp3": "216636",
   "./user_join.mp3": "170438",
   "./user_leave.mp3": "911578",
-  "./user_moved.mp3": "455307"
+  "./user_moved.mp3": "455307",
+  "./vibing_wumpus.mp3": "653225"
 };
 
 function u(e) {

@@ -316,6 +316,11 @@ let o = {
     actions: ["RUNNING_GAMES_CHANGE", "VOICE_CHANNEL_SELECT"],
     inlineRequire: () => E("282655").default,
     neverLoadBeforeConnectionOpen: !0
+  },
+  InappropriateConversationsManager: {
+    actions: ["VIBING_WUMPUS_PLAY_MUSIC", "VIBING_WUMPUS_STOP_MUSIC"],
+    inlineRequire: () => E("874200").default,
+    neverLoadBeforeConnectionOpen: !0
   }
 };
 (0, t.initialize)(o)
