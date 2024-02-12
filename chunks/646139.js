@@ -81,7 +81,7 @@ function U(e) {
     isGift: v,
     giftMessage: F,
     giftRecipient: H
-  } = (0, I.useGiftContext)(), W = v && (0, _.shouldShowCustomGiftExperience)(H, !0, "PremiumPaymentModal") && B === E.Step.PLAN_SELECT;
+  } = (0, I.useGiftContext)(), W = v && (0, _.shouldShowCustomGiftExperience)(H) && B === E.Step.PLAN_SELECT;
   return (0, s.jsx)(S.PaymentModal, {
     analyticsLocations: G,
     analyticsLocation: t,
