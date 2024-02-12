@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var l = s("37983"),
-  n = s("884691"),
-  i = s("414456"),
-  a = s.n(i),
+  i = s("884691"),
+  n = s("414456"),
+  a = s.n(n),
   u = s("917351"),
   r = s.n(u),
   d = s("446674"),
@@ -38,7 +38,7 @@ function x(e) {
   let {
     giftCode: t,
     application: s,
-    sku: i,
+    sku: n,
     subscriptionPlan: u,
     selectedGiftStyle: r,
     onClose: f,
@@ -48,18 +48,21 @@ function x(e) {
     isSendingMessage: A
   } = e, {
     productLine: R
-  } = (0, L.usePaymentContext)(), [C, x] = n.useState(N.default.Modes.DEFAULT), G = (0, d.useStateFromStores)([T.default], () => T.default.enabled), y = I || null != r && null != c, j = () => null != u ? u.skuId : null != i ? i.id : null, B = () => {
+  } = (0, L.usePaymentContext)(), [C, x] = i.useState(N.default.Modes.DEFAULT), G = (0, d.useStateFromStores)([T.default], () => T.default.enabled), y = () => null != u ? u.skuId : null != n ? n.id : null, j = () => {
     let e;
     let t = null != r && U.SeasonalGiftStyles2023.includes(r);
-    return null != _ ? m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == u ? null : (e = u.interval === U.SubscriptionIntervalTypes.MONTH ? y ? t ? m.default.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : y ? t ? m.default.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
+    if (null != _) return m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB;
+    if (null == u) return null;
+    let s = I || null != c;
+    return (e = u.interval === U.SubscriptionIntervalTypes.MONTH ? s ? t ? m.default.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : s ? t ? m.default.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
       skuName: (0, P.getTierDisplayName)(u.id),
       intervalCount: u.intervalCount
     })
   }, b = (e, t) => {
-    null != i && (0, O.trackGiftCodeCopy)(new E.default({
+    null != n && (0, O.trackGiftCodeCopy)(new E.default({
       code: t,
       maxUses: 1
-    }), i);
+    }), n);
     try {
       (0, h.copy)(e), x(N.default.Modes.SUCCESS)
     } catch (e) {
@@ -68,7 +71,7 @@ function x(e) {
     setTimeout(() => {
       x(N.default.Modes.DEFAULT)
     }, 1500)
-  }, D = () => {
+  }, B = () => {
     let e;
     if (null == t) return null;
     switch (C) {
@@ -107,27 +110,28 @@ function x(e) {
       game: s,
       className: M.icon,
       size: p.default.Sizes.LARGE,
-      skuId: j()
+      skuId: y()
     }) : null, (0, l.jsx)(o.Spinner, {
       type: o.SpinnerTypes.PULSING_ELLIPSIS
     })]
   });
-  let k = R === F.SKUProductLines.COLLECTIBLES;
+  let D = (0, O.isCustomGiftEnabled)(c),
+    k = R === F.SKUProductLines.COLLECTIBLES;
   return (0, l.jsxs)("div", {
     className: M.confirmation,
     children: [null != s ? (0, l.jsx)(p.default, {
       game: s,
       className: M.icon,
       size: p.default.Sizes.LARGE,
-      skuId: j()
+      skuId: y()
     }) : null, (0, l.jsx)(o.Heading, {
       variant: "heading-lg/semibold",
       className: a({
         [M.header]: null == r && !k,
         [M.headerCustomGifting]: null != r && !k
       }),
-      children: null != c || I && null == _ ? m.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != _ ? m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : m.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
-    }), I && null != c && null == _ || y ? (0, l.jsxs)(l.Fragment, {
+      children: D || I && null == _ ? m.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != _ ? m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : m.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
+    }), I && null != c && null == _ || (0, O.isCustomGiftEnabled)(c) ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(S.default, {
         user: c,
         className: M.giftRecipient,
@@ -141,18 +145,18 @@ function x(e) {
         children: [" ", g.default.getUserTag(c)]
       }), (0, l.jsx)("div", {
         className: M.giftSentMessage,
-        children: B()
+        children: j()
       })]
     }) : (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: M.blurb,
-        children: B()
+        children: j()
       }), null == _ && (0, l.jsx)(v, {
         giftCode: t,
         onClose: f
       }), (0, l.jsx)("div", {
         className: M.divider
-      }), D()]
+      }), B()]
     })]
   })
 }
@@ -161,10 +165,10 @@ let v = e => {
     giftCode: t,
     onClose: s
   } = e;
-  n.useEffect(() => {
+  i.useEffect(() => {
     I.default.fetchRelationships(), (0, c.fetchUserAffinities)()
   }, []);
-  let [i, a] = n.useState(), [u, E] = n.useState(!1), [T, N] = n.useState(!1), {
+  let [n, a] = i.useState(), [u, E] = i.useState(!1), [T, N] = i.useState(!1), {
     userAffinities: p,
     isLoading: h
   } = (0, d.useStateFromStoresObject)([R.default], () => ({
@@ -190,7 +194,7 @@ let v = e => {
         renderLeading: () => h ? (0, l.jsx)(o.Spinner, {
           type: o.SpinnerTypes.PULSING_ELLIPSIS
         }) : null,
-        value: i,
+        value: n,
         onChange: e => {
           a(e), E(!1)
         },
@@ -199,11 +203,11 @@ let v = e => {
           label: "".concat(g.default.getUserTag(e))
         }))
       }), (0, l.jsx)(o.Button, {
-        disabled: null == i,
+        disabled: null == n,
         submitting: T,
         className: M.sendToRecipientButton,
         onClick: () => {
-          N(!0), (0, _.sendGiftMessage)(i, t).then(() => {
+          N(!0), (0, _.sendGiftMessage)(n, t).then(() => {
             s(), (0, f.popAllLayers)()
           }).catch(() => {
             E(!0), N(!1)

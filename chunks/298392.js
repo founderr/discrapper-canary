@@ -105,7 +105,7 @@ function w(e) {
   } = (0, _.usePaymentContext)(), {
     isGift: k,
     giftRecipient: H
-  } = (0, b.useGiftContext)(), V = k && (0, x.shouldShowCustomGiftExperience)(H);
+  } = (0, b.useGiftContext)(), V = k && (0, x.shouldShowCustomGiftExperience)(H, !0, "OneTimePurchaseReview");
   r(null != D, "Expected selectedSkuId");
   let z = U[D],
     Y = G[D],

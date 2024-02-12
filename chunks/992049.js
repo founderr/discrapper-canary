@@ -50,7 +50,7 @@ function E(e) {
     E(), null == m || m()
   }, [E, m]);
   return r.useEffect(() => {
-    if (!x || null == h || null == y || b || U || (0, o.shouldShowCustomGiftExperience)(h)) return;
+    if (!x || null == h || null == y || b || U || (0, o.shouldShowCustomGiftExperience)(h, !0, "PremiumPaymentConfirmStep")) return;
     let e = i.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
       location: "36b986_1"
     }).enabled;

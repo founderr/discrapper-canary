@@ -20,7 +20,7 @@ function c(e) {
     isGift: n,
     giftRecipient: c
   } = (0, s.useGiftContext)();
-  return !n || (0, l.shouldShowCustomGiftExperience)(c) ? null : (0, i.jsx)(a.default, {
+  return !n || (0, l.shouldShowCustomGiftExperience)(c, !0, "GiftNote") ? null : (0, i.jsx)(a.default, {
     className: o.paymentNote,
     iconSize: a.default.Sizes.SMALL,
     icon: r.default,

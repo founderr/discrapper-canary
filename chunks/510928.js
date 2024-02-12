@@ -29,11 +29,11 @@ function f(e) {
     onClose: S,
     hideCloseButton: h,
     showTrialBadge: p,
-    showDiscountBadge: A,
-    isGift: M,
+    showDiscountBadge: M,
+    isGift: A,
     giftRecipient: N
   } = e, E = (0, s.useStateFromStores)([m.default], () => m.default.useReducedMotion), x = P ? L.PremiumHeaderThemes.WINTER : L.PremiumHeaderThemes.DEFAULT;
-  return M && (0, c.shouldShowCustomGiftExperience)(N) && n !== l.Step.CONFIRM ? (0, i.jsxs)(u.ModalHeader, {
+  return A && (0, c.shouldShowCustomGiftExperience)(N, !0, "PremiumSubscriptionModalHeader") && n !== l.Step.CONFIRM ? (0, i.jsxs)(u.ModalHeader, {
     className: T.modalHeaderCustomGift,
     separator: !1,
     children: [(0, i.jsx)("div", {
@@ -87,7 +87,7 @@ function f(e) {
       onClose: S,
       headerTheme: x,
       showTrialBadge: p,
-      showDiscountBadge: A
+      showDiscountBadge: M
     })
   })
 }

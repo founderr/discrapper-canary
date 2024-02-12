@@ -1,65 +1,74 @@
 "use strict";
 n.r(t), n.d(t, {
+  isCustomGiftEnabled: function() {
+    return M
+  },
   GiftExperience: function() {
     return s
   },
-  getGiftExperience: function() {
-    return M
-  },
-  shouldShowCustomGiftExperience: function() {
+  GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING: function() {
     return w
   },
-  makeComboId: function() {
+  GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD: function() {
     return L
   },
-  parseComboId: function() {
+  getGiftExperience: function() {
     return U
   },
-  isGiftCodeEmbed: function() {
+  shouldShowCustomGiftExperience: function() {
+    return G
+  },
+  makeComboId: function() {
     return F
   },
-  findGiftCodes: function() {
+  parseComboId: function() {
     return H
   },
-  getGiftCodeURL: function() {
-    return B
-  },
-  resolveGiftCode: function() {
+  isGiftCodeEmbed: function() {
     return x
   },
-  trackGiftCodeCopy: function() {
+  findGiftCodes: function() {
     return Y
   },
-  getStep: function() {
+  getGiftCodeURL: function() {
     return j
   },
-  getHeaderText: function() {
+  resolveGiftCode: function() {
     return K
   },
-  getButtonText: function() {
+  trackGiftCodeCopy: function() {
     return W
   },
-  getBodyText: function() {
+  getStep: function() {
     return z
   },
-  getErrorMessage: function() {
+  getHeaderText: function() {
     return q
   },
-  firstLibraryApplicationForGiftCode: function() {
+  getButtonText: function() {
     return X
   },
-  processGiftCodeInput: function() {
+  getBodyText: function() {
     return Q
   },
-  useGetGiftCode: function() {
+  getErrorMessage: function() {
     return Z
+  },
+  firstLibraryApplicationForGiftCode: function() {
+    return J
+  },
+  processGiftCodeInput: function() {
+    return $
+  },
+  useGetGiftCode: function() {
+    return ee
   }
 }), n("222007"), n("781738"), n("794252");
 var s, i, r = n("506838"),
-  a = n("394846"),
-  o = n("446674"),
-  d = n("333805"),
-  u = n("791160"),
+  a = n("446674"),
+  o = n("333805"),
+  d = n("791160"),
+  u = n("977591"),
   l = n("353365"),
   f = n("697218"),
   _ = n("599110"),
@@ -83,18 +92,33 @@ let T = h.default.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
   b = O(4, 6),
   V = O(5, 3),
   R = [P, b, V, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
-  k = new RegExp("^(".concat("WUMP-?", ")?(").concat(R, ")$"));
-(i = s || (s = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", i[i.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2] = "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD";
-let M = e => a.isMobile || a.isTablet ? 0 : null != e ? 2 : 1,
-  w = e => 0 !== M(e);
+  k = new RegExp("^(".concat("WUMP-?", ")?(").concat(R, ")$")),
+  M = e => null != e && !0;
+(i = s || (s = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", i[i.CUSTOM_MESSAGE = 2] = "CUSTOM_MESSAGE", i[i.EMOJI_SOUNDBOARD = 3] = "EMOJI_SOUNDBOARD";
+let w = new Set([2, 3]),
+  L = new Set([3]),
+  U = function(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "getGiftExperience";
+    return null != e ? 3 : u.ExpandedGiftingRevampExperiment.getCurrentConfig({
+      location: n
+    }, {
+      autoTrackExposure: t
+    }).enabled ? 1 : 0
+  },
+  G = function(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "shouldShowCustomGiftExperience";
+    return 0 !== U(e, t, n)
+  };
 
-function L(e) {
+function F(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
     n = arguments.length > 2 ? arguments[2] : void 0;
   return "".concat(e, ":").concat(null != t ? t : "", ":").concat(null != n ? n : "")
 }
 
-function U(e) {
+function H(e) {
   let [t, n, s] = e.split(":");
   return {
     skuId: t,
@@ -103,25 +127,25 @@ function U(e) {
   }
 }
 
-function G(e) {
+function B(e) {
   return e.replace(/[^A-Za-z0-9]/g, "")
 }
-let F = e => (null == e ? void 0 : e.type) === E.MessageTypes.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === E.MessageEmbedTypes.GIFT,
-  H = e => {
+let x = e => (null == e ? void 0 : e.type) === E.MessageTypes.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === E.MessageEmbedTypes.GIFT,
+  Y = e => {
     let t;
     if (null == e) return [];
     let n = new Set;
-    for (; null != (t = S.exec(e)) && n.size < 3;) n.add(G(t[1]));
-    for (; null != (t = N.exec(e)) && n.size < 3;) n.add(G(t[1]));
+    for (; null != (t = S.exec(e)) && n.size < 3;) n.add(B(t[1]));
+    for (; null != (t = N.exec(e)) && n.size < 3;) n.add(B(t[1]));
     return Array.from(n)
   };
 
-function B() {
+function j() {
   let e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
     n = window.GLOBAL_ENV.GIFT_CODE_HOST;
   return null == n || (0, g.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
 }
-async function x(e) {
+async function K(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   try {
@@ -149,22 +173,22 @@ async function x(e) {
     throw _.default.track(E.AnalyticEvents.GIFT_CODE_RESOLVED, {
       resolved: !1,
       gift_code: e
-    }), new d.default(t)
+    }), new o.default(t)
   }
 }
 
-function Y(e, t) {
+function W(e, t) {
   _.default.track(E.AnalyticEvents.GIFT_CODE_COPIED, {
-    ...(0, u.default)(t, !1, !1),
+    ...(0, d.default)(t, !1, !1),
     ...e.analyticsData
   })
 }
 
-function j(e, t, n, s, i, r, a) {
+function z(e, t, n, s, i, r, a) {
   return null == n && (s || i || null == e) ? !a || r || s || i ? s && (t.isSubscription || null != e) ? E.GiftCodeModalStates.SUCCESS : E.GiftCodeModalStates.CONFIRM : E.GiftCodeModalStates.OPEN : E.GiftCodeModalStates.ERROR
 }
 
-function K(e, t, n) {
+function q(e, t, n) {
   switch (e) {
     case E.GiftCodeModalStates.ERROR:
       return y.default.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
@@ -180,7 +204,7 @@ function K(e, t, n) {
   }
 }
 
-function W(e, t, n) {
+function X(e, t, n) {
   switch (e) {
     case E.GiftCodeModalStates.ERROR:
       return y.default.Messages.GIFT_CONFIRMATION_BUTTON_FAIL;
@@ -198,7 +222,7 @@ function W(e, t, n) {
   }
 }
 
-function z(e) {
+function Q(e) {
   let {
     step: t,
     sku: n,
@@ -211,7 +235,7 @@ function z(e) {
   } = e;
   switch (t) {
     case E.GiftCodeModalStates.ERROR:
-      return q(s, i, a, o, d);
+      return Z(s, i, a, o, d);
     case E.GiftCodeModalStates.SUCCESS:
       if (null != u) {
         var l;
@@ -255,7 +279,7 @@ function z(e) {
   }
 }
 
-function q(e, t, n, s, i) {
+function Z(e, t, n, s, i) {
   let r = y.default.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
     onGoToLibrary: i
   });
@@ -290,21 +314,21 @@ function q(e, t, n, s, i) {
   }(t, a)
 }
 
-function X(e, t, n) {
+function J(e, t, n) {
   let s = t.applicationId,
     i = e.length > 0 ? e : [s],
     r = i.map(e => n.getLibraryApplication(s, e, !0)).filter(c.isNotNullish);
   return r.length === i.length ? r[0] : null
 }
 
-function Q(e) {
+function $(e) {
   let t = e.trim().split("/").pop(),
     n = t.match(k);
   if (null == n) return null;
   let [s, i, r] = n;
   return null == r ? null : r.replace(/-/g, "")
 }
-let Z = (e, t) => (0, o.useStateFromStores)([l.default], () => {
+let ee = (e, t) => (0, a.useStateFromStores)([l.default], () => {
   if (null == e || !t) return null;
   let n = l.default.getGiftCode(e);
   return null == n || "" === n ? null : n

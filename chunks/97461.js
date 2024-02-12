@@ -111,7 +111,7 @@ function j(e) {
   return eT && (null == em ? void 0 : em.subscriptionPeriodEnd) == null ? (0, s.jsx)(g.default, {}) : (a(null != J, "Step should be set"), a(ec.length > 0, "Premium plan options should be set"), (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(x.GiftNote, {
       giftMessage: $
-    }), !(Q && (0, T.shouldShowCustomGiftExperience)(Z)) && (0, s.jsx)(A.default, {
+    }), !(Q && (0, T.shouldShowCustomGiftExperience)(Z, !0, "PremiumPaymentPlanSelectStep")) && (0, s.jsx)(A.default, {
       isEligibleForTrial: el
     }), (0, s.jsxs)(O.PaymentPortalBody, {
       children: [eT && (0, s.jsx)("hr", {

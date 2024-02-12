@@ -18,6 +18,7 @@ function a() {
   return {
     nonce: "",
     useGuildVersions: !1,
+    userGuildSettingsVersion: -1,
     version: r,
     cacheCreationDate: null,
     apiCodeVersion: 0,

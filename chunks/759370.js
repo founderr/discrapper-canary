@@ -131,7 +131,6 @@ var C = new class e {
     null === (n = this.synced) || void 0 === n || n.delete(e), f.default.basicChannelsTransaction(t).delete(e), f.default.syncedBasicChannelsTransaction(t).put(e, !1), E.default.invalidate(e)
   }
   sync(e) {
-    _.verbose("Starting to write all basic channels");
     let t = performance.now(),
       n = {
         written: 0,

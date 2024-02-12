@@ -104,7 +104,7 @@ function g(e) {
     eC = !es && null != eS && null != Q && (0, C.SubscriptionTrials)[eS.trial_id].skus.includes(Q),
     eb = null == eh ? void 0 : null === (t = eh.discount) || void 0 === t ? void 0 : t.plan_ids,
     e_ = !es && null != eh && null != eb && null != K && eb.includes(K.id),
-    eg = es && (0, m.shouldShowCustomGiftExperience)(eo),
+    eg = es && (0, m.shouldShowCustomGiftExperience)(eo, !0, "PaymentModalReviewStep"),
     eN = null == O && null == U && ea === b.PurchaseTypes.SUBSCRIPTION,
     eL = (0, v.inOneStepSubscriptionCheckout)({
       isTrial: eC,

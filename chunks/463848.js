@@ -100,7 +100,6 @@ var L = function(e) {
     application: k,
     hideHeader: d,
     activityGuild: null != U ? U : D,
-    showReactions: G,
     renderActions: o ? () => (0, l.jsxs)("div", {
       className: s(G && O.actionsWrapper),
       children: [(0, l.jsx)(R, {
