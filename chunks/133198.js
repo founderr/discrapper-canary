@@ -532,6 +532,16 @@ let a = {
       dark: "green.360",
       light: "green.360"
     },
+    "halo-positive": {
+      dark: {
+        color: "green.360",
+        opacity: .24
+      },
+      light: {
+        color: "green.360",
+        opacity: .24
+      }
+    },
     "text-brand": {
       dark: "brand.360",
       light: "brand.500"
