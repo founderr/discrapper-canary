@@ -441,23 +441,7 @@ let ec = l.memo(e => {
         children: (0, a.jsx)(Y.default, {})
       })
     }
-  })), z = (0, a.jsx)(h.Tooltip, {
-    text: er.default.Messages.OPTIONS,
-    children: e => {
-      let {
-        onClick: t,
-        ...n
-      } = e;
-      return (0, a.jsx)(h.Clickable, {
-        ...n,
-        onClick: e => {
-          e.stopPropagation(), null == t || t(), L(e)
-        },
-        className: i(eo.status, eo.interactive),
-        children: (0, a.jsx)(Y.default, {})
-      })
-    }
-  }), null != P ? K = (0, a.jsx)(h.Tooltip, {
+  })), null != P ? K = (0, a.jsx)(h.Tooltip, {
     text: (0, T.getHangStatusText)(P),
     children: e => (0, a.jsx)("div", {
       ...e,
