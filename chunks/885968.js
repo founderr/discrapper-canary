@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("653047"),
   N = n("271938"),
   p = n("824563"),
-  A = n("697218"),
-  S = n("811305"),
+  S = n("697218"),
+  A = n("811305"),
   C = n("449008"),
   h = n("29883"),
   g = n("954016"),
@@ -43,9 +43,9 @@ function R(e) {
   } = (0, a.useStateFromStoresObject)([u.default], () => ({
     embeddedActivity: u.default.getEmbeddedActivitiesForChannel(R).find(e => e.instanceId === n.id),
     currentEmbeddedActivity: u.default.getCurrentEmbeddedActivity()
-  })), G = (0, a.useStateFromStoresArray)([A.default], () => {
+  })), G = (0, a.useStateFromStoresArray)([S.default], () => {
     var e;
-    return Array.from(null !== (e = null == j ? void 0 : j.userIds) && void 0 !== e ? e : []).map(e => A.default.getUser(e)).filter(C.isNotNullish)
+    return Array.from(null !== (e = null == j ? void 0 : j.userIds) && void 0 !== e ? e : []).map(e => S.default.getUser(e)).filter(C.isNotNullish)
   }), B = (0, a.useStateFromStores)([p.default], () => {
     var e;
     let n = null == j ? void 0 : j.userIds.values().next().value;
@@ -134,11 +134,11 @@ function R(e) {
               disabled: H.disabled
             }, H.text)
           }
-        }), !w && (0, s.jsx)(S.default, {
+        }), !w && (0, s.jsx)(A.default, {
           guildId: L,
           users: G,
           max: 4,
-          size: S.Sizes.SIZE_32
+          size: A.Sizes.SIZE_32
         })]
       })]
     })

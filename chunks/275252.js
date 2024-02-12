@@ -20,7 +20,7 @@ function u(e) {
     onExpandChange: u,
     loading: c,
     ...E
-  } = e, [_, I] = l.useState(!1), f = e => {
+  } = e, [_, I] = l.useState(!1), T = e => {
     I(e), null == u || u(e)
   };
   return (0, a.jsx)(r.Collapsible, {
@@ -43,7 +43,7 @@ function u(e) {
           type: r.Spinner.Type.PULSING_ELLIPSIS
         }) : t,
         onClick: e => {
-          f(!_), s(e)
+          T(!_), s(e)
         }
       })
     }

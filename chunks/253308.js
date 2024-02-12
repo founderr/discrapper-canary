@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("837648"),
   _ = s("461380"),
   I = s("673220"),
-  f = s("228220"),
-  T = s("449008"),
+  T = s("228220"),
+  f = s("449008"),
   S = s("653274"),
   m = s("330724"),
   N = s("136278"),
@@ -59,7 +59,7 @@ function L(e) {
   }), H = (0, r.useStateFromStoresObject)([N.default], () => {
     var e;
     return null !== (e = N.default.errors[g]) && void 0 !== e ? e : x
-  }), [k, w] = l.useState(!1), [V, Y] = l.useState(!1), W = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(T.isNotNullish)[0], z = H.config, K = G && n.options.length >= h.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, Z = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(U), [n]).length - U.size, X = l.useRef(null);
+  }), [k, w] = l.useState(!1), [V, Y] = l.useState(!1), W = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(f.isNotNullish)[0], z = H.config, K = G && n.options.length >= h.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, Z = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(U), [n]).length - U.size, X = l.useRef(null);
   return (l.useLayoutEffect(() => {
     setTimeout(() => {
       if (0 === g && !u) {
@@ -111,7 +111,7 @@ function L(e) {
         children: (0, a.jsx)(o.Clickable, {
           className: R.closeIcon,
           onClick: () => (0, m.deleteGuildOnboardingPrompt)(s, n.id),
-          children: (0, a.jsx)(f.default, {
+          children: (0, a.jsx)(T.default, {
             height: 16,
             width: 16
           })
@@ -222,7 +222,7 @@ function L(e) {
           children: (0, a.jsx)(o.Clickable, {
             className: R.closeIcon,
             onClick: () => (0, m.deleteGuildOnboardingPrompt)(s, n.id),
-            children: (0, a.jsx)(f.default, {
+            children: (0, a.jsx)(T.default, {
               height: 16,
               width: 16
             })

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("973262"),
   _ = s("36694"),
   I = s("422403"),
-  f = s("49111"),
-  T = s("782340"),
+  T = s("49111"),
+  f = s("782340"),
   S = s("153893");
 let m = (0, c.makeLazy)({
   createPromise: () => s.el("282585").then(s.bind(s, "282585")),
@@ -26,7 +26,7 @@ let m = (0, c.makeLazy)({
 
 function N(e) {
   let t = (0, r.getDarkness)(e) > .25;
-  return (0, u.getColor)(t ? f.Color.WHITE_500 : f.Color.PRIMARY_530)
+  return (0, u.getColor)(t ? T.Color.WHITE_500 : T.Color.PRIMARY_530)
 }
 
 function g(e) {
@@ -43,7 +43,7 @@ function g(e) {
   function m(e) {
     s(e), u(e)
   }
-  let g = t === f.DEFAULT_ROLE_COLOR,
+  let g = t === T.DEFAULT_ROLE_COLOR,
     h = g ? d : t,
     C = (0, a.jsx)(_.default, {
       width: 32,
@@ -56,19 +56,19 @@ function g(e) {
     }),
     x = (0, o.useRadioItem)({
       isSelected: g,
-      label: T.default.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT_BUTTON.format({
-        colorHex: (0, r.int2hex)(f.DEFAULT_ROLE_COLOR)
+      label: f.default.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT_BUTTON.format({
+        colorHex: (0, r.int2hex)(T.DEFAULT_ROLE_COLOR)
       })
     }),
     L = (0, o.useRadioItem)({
       isSelected: !g,
-      label: T.default.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM_BUTTON.format({
+      label: f.default.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM_BUTTON.format({
         colorHex: (0, r.int2hex)(t)
       })
     });
   return (0, a.jsxs)("div", {
     className: S.buttonsContainer,
-    "aria-label": T.default.Messages.USER_SETTINGS_PROFILE_COLOR,
+    "aria-label": f.default.Messages.USER_SETTINGS_PROFILE_COLOR,
     ...R,
     children: [(0, a.jsx)("div", {
       className: i(S.colorSwatch, {
@@ -76,14 +76,14 @@ function g(e) {
       }),
       children: (0, a.jsxs)(o.Clickable, {
         onClick: n ? void 0 : function() {
-          s(f.DEFAULT_ROLE_COLOR)
+          s(T.DEFAULT_ROLE_COLOR)
         },
         "aria-disabled": n,
         ...x,
         children: [(0, a.jsx)("div", {
           className: S.swatch,
           style: {
-            backgroundColor: (0, r.int2hex)(f.DEFAULT_ROLE_COLOR)
+            backgroundColor: (0, r.int2hex)(T.DEFAULT_ROLE_COLOR)
           },
           children: g ? C : null
         }), (0, a.jsx)(o.Text, {
@@ -91,7 +91,7 @@ function g(e) {
           color: "header-secondary",
           variant: "text-xs/normal",
           "aria-hidden": !0,
-          children: T.default.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT
+          children: f.default.Messages.USER_SETTINGS_PROFILE_COLOR_DEFAULT
         })]
       })
     }), (0, a.jsxs)("div", {
@@ -104,7 +104,7 @@ function g(e) {
         ...L,
         children: [(0, a.jsx)("div", {
           className: i(S.customSwatch, {
-            [S.defaultSwatch]: h === f.DEFAULT_ROLE_COLOR
+            [S.defaultSwatch]: h === T.DEFAULT_ROLE_COLOR
           }),
           style: {
             "--custom-color": (0, r.int2hex)(h)
@@ -115,7 +115,7 @@ function g(e) {
           color: "header-secondary",
           variant: "text-xs/normal",
           "aria-hidden": !0,
-          children: T.default.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM
+          children: f.default.Messages.USER_SETTINGS_PROFILE_COLOR_CUSTOM
         })]
       }), !n && (0, a.jsx)(o.Popout, {
         onRequestOpen: c,
@@ -127,7 +127,7 @@ function g(e) {
         children: e => (0, a.jsx)(o.Clickable, {
           ...e,
           className: S.dropperIconButton,
-          "aria-label": T.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
+          "aria-label": f.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
           children: (0, a.jsx)(I.default, {
             className: S.dropperIcon,
             width: 14,
@@ -155,8 +155,8 @@ function h(e) {
     onChange: l,
     disabled: n
   }) : (0, a.jsx)(m, {
-    defaultColor: f.DEFAULT_ROLE_COLOR,
-    colors: f.ROLE_COLORS,
+    defaultColor: T.DEFAULT_ROLE_COLOR,
+    colors: T.ROLE_COLORS,
     value: s,
     onChange: l,
     disabled: n

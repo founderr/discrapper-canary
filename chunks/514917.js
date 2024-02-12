@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("217513"),
   O = n("893980"),
   y = n("58351"),
-  b = n("430312"),
-  P = n("789321"),
+  P = n("430312"),
+  b = n("789321"),
   D = n("627601"),
   U = n("10532"),
   w = n("915712"),
@@ -136,8 +136,8 @@ var a = n("37983"),
       }, {
         autoTrackExposure: ef
       }),
-      eb = !es.bot && null != eA && eA.length > 0,
-      eP = !es.bot && null != ex && ex > 0,
+      eP = !es.bot && null != eA && eA.length > 0,
+      eb = !es.bot && null != ex && ex > 0,
       eD = (0, W.useShouldShowUserPopoutCollectiblesUpsell)({
         popoutUser: es,
         source: D.UserPopoutUpsellSource.PROFILE_PANEL
@@ -181,11 +181,11 @@ var a = n("37983"),
       className: ee.profilePanel,
       onMouseEnter: eB,
       onMouseLeave: eH,
-      children: (0, a.jsxs)(b.default, {
+      children: (0, a.jsxs)(P.default, {
         user: es,
         profileType: J.UserProfileTypes.PANEL,
         useDefaultClientTheme: !0,
-        children: [eD.shouldShow && (0, a.jsx)(P.default, {
+        children: [eD.shouldShow && (0, a.jsx)(b.default, {
           user: es,
           upsellSource: D.UserPopoutUpsellSource.PROFILE_PANEL,
           displayProfile: er,
@@ -198,7 +198,7 @@ var a = n("37983"),
             channel: n,
             animateAssets: et,
             forceShowPremiumBadge: et
-          }), (0, a.jsxs)(b.default.Inner, {
+          }), (0, a.jsxs)(P.default.Inner, {
             children: [(0, a.jsx)(H.default, {
               user: es,
               nickname: eT,
@@ -220,13 +220,13 @@ var a = n("37983"),
               setNote: !1,
               hideNote: !1
             })]
-          }), eO && eL ? (0, a.jsx)(b.default.Inner, {
+          }), eO && eL ? (0, a.jsx)(P.default.Inner, {
             children: (0, a.jsx)(G.default, {
               voiceGuild: ej.voiceGuild,
               voiceChannel: ej.voiceChannel,
               color: ee.appButtonColor
             })
-          }) : null, eI ? (0, a.jsx)(b.default.Inner, {
+          }) : null, eI ? (0, a.jsx)(P.default.Inner, {
             children: (0, a.jsx)(w.default, {
               activity: null != em ? em : eE,
               user: es,
@@ -238,18 +238,18 @@ var a = n("37983"),
                 }
               }
             })
-          }) : null, (eb || eP) && (0, a.jsxs)(b.default.Inner, {
+          }) : null, (eP || eb) && (0, a.jsxs)(P.default.Inner, {
             className: ee.profilePanelConnections,
-            children: [eb ? (0, a.jsx)(z.default, {
+            children: [eP ? (0, a.jsx)(z.default, {
               className: ee.mutualGuildsList,
               header: $.default.Messages.MUTUAL_GUILDS_COUNT.format({
                 count: null == eA ? void 0 : eA.length
               }),
               isLoadingHeader: eM,
               children: ew
-            }) : null, eP ? (0, a.jsx)(z.default, {
+            }) : null, eb ? (0, a.jsx)(z.default, {
               className: i(ee.mutualFriendsList, {
-                [ee.mutualFriendsDivider]: eb
+                [ee.mutualFriendsDivider]: eP
               }),
               header: $.default.Messages.MUTUAL_FRIENDS_COUNT.format({
                 count: ex
@@ -262,7 +262,7 @@ var a = n("37983"),
               itemType: z.ListType.MutualFriendsList,
               children: eF
             }) : null]
-          }), ed && (0, a.jsx)(b.default.Inner, {
+          }), ed && (0, a.jsx)(P.default.Inner, {
             className: i(ee.profilePanelConnections, ee.appListThemedContainer),
             children: (0, a.jsxs)(z.default, {
               header: ek.length > 0 ? $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({

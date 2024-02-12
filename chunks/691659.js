@@ -17,15 +17,15 @@ var l = s("65597"),
   E = s("657650"),
   _ = s("441901"),
   I = s("900938"),
-  f = s("442379"),
-  T = s("559821"),
+  T = s("442379"),
+  f = s("559821"),
   S = s("762051"),
   m = s("782340");
 
 function N(e) {
   let {
     listingId: t
-  } = e, s = (0, f.useGuildProductListingById)(t);
+  } = e, s = (0, T.useGuildProductListingById)(t);
   return null == s ? null : (0, a.jsx)(r.Cell, {
     children: s.name
   })
@@ -34,8 +34,8 @@ function N(e) {
 function g(e) {
   var t, s, r;
   let {
-    guildId: f
-  } = e, g = (0, T.default)(f), h = (0, i.useCreatorMonetizationSettingsDisabled)(), C = (0, l.default)([I.default], () => I.default.getGuild());
+    guildId: T
+  } = e, g = (0, f.default)(T), h = (0, i.useCreatorMonetizationSettingsDisabled)(), C = (0, l.default)([I.default], () => I.default.getGuild());
   return g.loading || null == C ? (0, a.jsx)(n.Spinner, {}) : null == g.application ? (0, a.jsx)(c.default, {
     guild: C
   }) : (0, a.jsxs)(u.default, {
@@ -47,7 +47,7 @@ function g(e) {
       summaryMetricTrend: null !== (r = g.metrics.paymentsCountChange) && void 0 !== r ? r : 0,
       summaryMetricTrendIsPercent: !1,
       children: (0, a.jsx)(S.default, {
-        guildId: f,
+        guildId: T,
         earningsData: g
       })
     }), (0, a.jsx)(n.FormSection, {
@@ -61,13 +61,13 @@ function g(e) {
       title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,
       disabled: h,
       children: (0, a.jsx)(E.default, {
-        guildId: f,
+        guildId: T,
         application: g.application
       })
     }), (0, a.jsx)(n.FormSection, {
       title: m.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
       children: (0, a.jsx)(_.default, {
-        guildId: f,
+        guildId: T,
         allPeriods: g.payoutsByPeriod
       })
     })]

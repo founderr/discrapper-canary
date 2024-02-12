@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return N
   },
   default: function() {
-    return S
+    return A
   }
 }), n("222007"), n("424973");
 var s = n("37983"),
@@ -28,7 +28,7 @@ let m = (e, t) => null == e && null == t || e === t,
     let n = N(e, t);
     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)]
   };
-class A extends l.PureComponent {
+class S extends l.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let n = e.message.reactions.length;
     return 0 === t.reactionsCount && n > 0 ? {
@@ -48,8 +48,8 @@ class A extends l.PureComponent {
       isPendingMember: m,
       isForumToolbar: N,
       channel: p,
-      className: A,
-      forceAddReactions: S,
+      className: S,
+      forceAddReactions: A,
       reactionClassName: C,
       useChatFontScaling: h,
       forceHideReactionCreates: g,
@@ -59,9 +59,9 @@ class A extends l.PureComponent {
     } = this.props, {
       disableTransitionAppear: L
     } = this.state, v = h ? I : T, P = R > 0;
-    return P || S ? (0, s.jsxs)(r.default, {
+    return P || A ? (0, s.jsxs)(r.default, {
       component: "div",
-      className: i(v.reactions, A),
+      className: i(v.reactions, S),
       transitionAppear: !L,
       role: "group",
       transitionLeave: !1,
@@ -100,8 +100,8 @@ class A extends l.PureComponent {
         useChatFontScaling: h,
         isHovered: this.state.isHovered,
         className: i({
-          [v.forceShow]: S && !P,
-          [v.forceShowLook]: S
+          [v.forceShow]: A && !P,
+          [v.forceShowLook]: A
         })
       })]
     }) : null
@@ -114,7 +114,7 @@ class A extends l.PureComponent {
     }
   }
 }
-var S = e => {
+var A = e => {
   let {
     message: t,
     maxReactions: n,
@@ -144,7 +144,7 @@ var S = e => {
       remainingReactions: r
     }
   }, [a, n, t.reactions]);
-  return (0, s.jsx)(A, {
+  return (0, s.jsx)(S, {
     ...e,
     visibleReactionsCount: o,
     combinedReactions: i,

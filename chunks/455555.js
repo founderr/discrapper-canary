@@ -24,8 +24,8 @@ var s = n("37983"),
   m = n("167359"),
   N = n("55620"),
   p = n("52289"),
-  A = n("518888"),
-  S = n("70614"),
+  S = n("518888"),
+  A = n("70614"),
   C = n("79112"),
   h = n("376556"),
   g = n("812204"),
@@ -113,7 +113,7 @@ let eN = l.memo(function() {
       analyticsLocations: eN
     } = (0, M.default)(),
     ep = null == g ? void 0 : g.type,
-    eA = (0, j.useShowMemberVerificationGate)(_);
+    eS = (0, j.useShowMemberVerificationGate)(_);
   if (l.useEffect(() => {
       null != ep && ! function(e, t) {
         let n = {
@@ -129,14 +129,14 @@ let eN = l.memo(function() {
         null != t && (0, v.trackExposureToExperiment)(e.id, t);
         let n = async () => {
           var e, t;
-          (null === (e = g.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, A.surveySeen)(null === (t = g.metadata) || void 0 === t ? void 0 : t.id)
+          (null === (e = g.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, S.surveySeen)(null === (t = g.metadata) || void 0 === t ? void 0 : t.id)
         };
         n()
       }
     }, [g]), null == g) return null;
-  let eS = ee.typeToDismissibleContent[g.type];
-  if (null != eS) return (0, s.jsx)(L.DismissibleContentNotices, {
-    dismissibleContent: eS,
+  let eA = ee.typeToDismissibleContent[g.type];
+  if (null != eA) return (0, s.jsx)(L.DismissibleContentNotices, {
+    dismissibleContent: eA,
     noticeType: g.type
   });
   let eC = null === (e = g.metadata) || void 0 === e ? void 0 : e.premiumType;
@@ -284,7 +284,7 @@ let eN = l.memo(function() {
         color: es.NoticeColors.DEFAULT,
         children: [ef.default.Messages.NOTICE_UNCLAIMED_ACCOUNT, (0, s.jsx)(es.PrimaryCTANoticeButton, {
           noticeType: eu.NoticeTypes.UNCLAIMED_ACCOUNT,
-          onClick: () => eA && null != _ ? (0, U.openMemberVerificationModal)(_) : R.openClaimAccountModal(),
+          onClick: () => eS && null != _ ? (0, U.openMemberVerificationModal)(_) : R.openClaimAccountModal(),
           children: ef.default.Messages.CLAIM_ACCOUNT
         })]
       });
@@ -448,12 +448,12 @@ let eN = l.memo(function() {
         children: [(0, s.jsx)(es.NoticeCloseButton, {
           noticeType: eu.NoticeTypes.SURVEY,
           onClick: () => {
-            (0, A.surveyHide)(t, !0)
+            (0, S.surveyHide)(t, !0)
           }
         }), n, (0, s.jsx)(es.PrimaryCTANoticeButton, {
           noticeType: eu.NoticeTypes.SURVEY,
           onClick: () => {
-            window.open(a, "_blank"), (0, A.surveyHide)(t, !1)
+            window.open(a, "_blank"), (0, S.surveyHide)(t, !1)
           },
           children: l
         })]
@@ -571,7 +571,7 @@ let eN = l.memo(function() {
               applicationName: g.metadata.applicationName
             })
           }), (0, s.jsx)(es.NoticeCloseButton, {
-            onClick: S.reset,
+            onClick: A.reset,
             noticeType: eu.NoticeTypes.APPLICATION_TEST_MODE
           })]
         })
@@ -601,7 +601,7 @@ let eN = l.memo(function() {
             applicationId: g.metadata.applicationId,
             children: ef.default.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
           }), (0, s.jsx)(es.NoticeCloseButton, {
-            onClick: S.reset,
+            onClick: A.reset,
             noticeType: eu.NoticeTypes.APPLICATION_TEST_MODE
           })]
         })

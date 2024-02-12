@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("327037"),
   _ = s("430568"),
   I = s("841098"),
-  f = s("95039"),
-  T = s("817963"),
+  T = s("95039"),
+  f = s("817963"),
   S = s("305122"),
   m = s("235004"),
   N = s("520497"),
@@ -83,7 +83,7 @@ function H(e) {
         className: b.boostingIconWrapper,
         onClick: () => {
           var e;
-          return e = l, void(0, f.openGuildBoostingMarketingModal)({
+          return e = l, void(0, T.openGuildBoostingMarketingModal)({
             guildId: e,
             location: {
               section: G.AnalyticsSections.GUILD_SETTINGS_SOUNDBOARD,
@@ -146,17 +146,17 @@ function V(e) {
     return [null !== (e = m.default.getSoundsForGuild(t.id)) && void 0 !== e ? e : U.EMPTY_SOUND_LIST, m.default.isFetchingSounds() || m.default.isFetchingDefaultSounds()]
   }), {
     canCreateExpressions: r
-  } = (0, T.useManageResourcePermissions)(t), o = l.useRef(null), u = (0, I.default)(), E = t.premiumTier, _ = (0, M.getAvailableSoundboardSoundCount)(n, E);
+  } = (0, f.useManageResourcePermissions)(t), o = l.useRef(null), u = (0, I.default)(), E = t.premiumTier, _ = (0, M.getAvailableSoundboardSoundCount)(n, E);
   l.useEffect(() => {
     (0, S.maybeFetchSoundboardSounds)()
   }, []);
-  let f = l.useMemo(() => n.reduce((e, t) => (e[t.soundId] = new Audio((0, N.default)(t.soundId)), e), {}), [n]),
+  let T = l.useMemo(() => n.reduce((e, t) => (e[t.soundId] = new Audio((0, N.default)(t.soundId)), e), {}), [n]),
     h = 0 === n.length && !i;
 
   function R(e) {
     var t;
     null === (t = o.current) || void 0 === t || t.pause();
-    let s = f[e.soundId];
+    let s = T[e.soundId];
     null != s && (o.current = s, s.currentTime = 0, s.volume = (0, g.default)(e.volume), s.play())
   }
   l.useEffect(() => () => {
@@ -250,13 +250,13 @@ function Y(e) {
   } = e, {
     soundId: u,
     name: I,
-    user: f,
+    user: T,
     userId: m,
     emojiId: N,
     emojiName: g
-  } = t, C = (0, d.useStateFromStores)([h.default], () => null != f ? f : h.default.getUser(m), [m, f]), {
+  } = t, C = (0, d.useStateFromStores)([h.default], () => null != T ? T : h.default.getUser(m), [m, T]), {
     canManageGuildExpression: R
-  } = (0, T.useManageResourcePermissions)(o), M = l.useMemo(() => R(t), [t, R]), D = null != N || null != g, [v, j] = l.useState(!1);
+  } = (0, f.useManageResourcePermissions)(o), M = l.useMemo(() => R(t), [t, R]), D = null != N || null != g, [v, j] = l.useState(!1);
   async function G() {
     if (!v) {
       j(!0);

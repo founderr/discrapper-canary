@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("868246"),
   _ = s("298878"),
   I = s("407063"),
-  f = s("694187"),
-  T = s("608684"),
+  T = s("694187"),
+  f = s("608684"),
   S = s("957255"),
   m = s("93581"),
   N = s("414943"),
@@ -341,12 +341,12 @@ let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                             size: r.Button.Sizes.SMALL,
                             color: r.Button.Colors.PRIMARY,
                             hover: r.Button.Colors.PRIMARY,
-                            children: [D.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(f.default, {
+                            children: [D.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(T.default, {
                               disabled: !U,
                               onChange: Q
                             })]
                           })]
-                        }), (0, a.jsx)(T.default, {
+                        }), (0, a.jsx)(f.default, {
                           image: s.discoverySplash,
                           makeURL: e => C.default.getGuildDiscoverySplashURL({
                             id: s.id,

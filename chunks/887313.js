@@ -17,8 +17,8 @@ var l = s("446674"),
   E = s("423487"),
   _ = s("898260"),
   I = s("599110"),
-  f = s("131835"),
-  T = s("435076"),
+  T = s("131835"),
+  f = s("435076"),
   S = s("642807"),
   m = s("330724"),
   N = s("259483"),
@@ -44,7 +44,7 @@ function L(e) {
       ...(0, r.collectGuildAnalyticsMetadata)(t),
       action_taken: N.GuildSettingsCTAs[N.GuildSettingsCTAs.TOGGLE_DISABLED],
       location: c
-    })) : (await (0, m.enableGuildOnboarding)(t, !0), e && (0, T.enableHomeSettings)(t, !0), s ? I.default.track(C.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+    })) : (await (0, m.enableGuildOnboarding)(t, !0), e && (0, f.enableHomeSettings)(t, !0), s ? I.default.track(C.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
       ...(0, r.collectGuildAnalyticsMetadata)(t),
       action_taken: N.GuildSettingsCTAs[N.GuildSettingsCTAs.TOGGLE_ENABLED],
       location: c
@@ -60,7 +60,7 @@ function L(e) {
       ...(0, r.collectGuildAnalyticsMetadata)(t),
       action_taken: N.GuildSettingsCTAs[N.GuildSettingsCTAs.PREVIEW],
       location: c
-    }), (0, f.startPreview)(t)
+    }), (0, T.startPreview)(t)
   }, g = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(h.DefaultChannelsOverviewItem, {
       guildId: t,
@@ -69,7 +69,7 @@ function L(e) {
           ...(0, r.collectGuildAnalyticsMetadata)(t),
           action_taken: N.GuildSettingsCTAs[N.GuildSettingsCTAs.EDIT_DEFAULT_CHANNELS],
           location: c
-        }), (0, f.setOnboardingStep)(N.GuildSettingsOnboardingPage.DEFAULT_CHANNELS)
+        }), (0, T.setOnboardingStep)(N.GuildSettingsOnboardingPage.DEFAULT_CHANNELS)
       },
       disableGoodStatus: s
     }), (0, a.jsx)(_.default, {
@@ -81,7 +81,7 @@ function L(e) {
           ...(0, r.collectGuildAnalyticsMetadata)(t),
           action_taken: N.GuildSettingsCTAs[N.GuildSettingsCTAs.EDIT_CUSTOMIZATION_QUESTIONS],
           location: c
-        }), (0, f.setOnboardingStep)(N.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS)
+        }), (0, T.setOnboardingStep)(N.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS)
       },
       disableGoodStatus: s
     }), n && (0, a.jsxs)(a.Fragment, {
@@ -94,7 +94,7 @@ function L(e) {
             ...(0, r.collectGuildAnalyticsMetadata)(t),
             action_taken: N.GuildSettingsCTAs[N.GuildSettingsCTAs.EDIT_HOME_SETTINGS],
             location: c
-          }), (0, f.setOnboardingStep)(N.GuildSettingsOnboardingPage.HOME_SETTINGS)
+          }), (0, T.setOnboardingStep)(N.GuildSettingsOnboardingPage.HOME_SETTINGS)
         },
         disableGoodStatus: s
       })]

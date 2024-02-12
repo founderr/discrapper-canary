@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return C
   },
   updateImpersonatedRoles: function() {
-    return S
+    return I
   },
   updateImpersonatedData: function() {
-    return I
+    return S
   }
 }), n("222007");
 var s = n("913144"),
@@ -88,7 +88,7 @@ function C(e, t, n) {
   })
 }
 
-function S(e, t) {
+function I(e, t) {
   let n = u.default.getGuild(e);
   if (null == n) return;
   ! function(e, t) {
@@ -110,7 +110,7 @@ function S(e, t) {
   })
 }
 
-function I(e, t) {
+function S(e, t) {
   p(e, {
     type: m.ImpersonateType.NEW_MEMBER,
     ...t

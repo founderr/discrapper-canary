@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("587974"),
   _ = s("315102"),
   I = s("159885"),
-  f = s("782340"),
-  T = s("583810"),
+  T = s("782340"),
+  f = s("583810"),
   S = s("68422"),
   m = s("578817");
 let N = [16, 16, 14, 14, 12, 10, 8];
@@ -34,9 +34,9 @@ var g = function(e) {
     className: O
   } = e, p = (0, d.default)(), [A, M] = l.useState(!1);
   if (null == n || C) return (0, a.jsx)("div", {
-    className: i(O, T.card, T.cardPlaceholder, {
-      [T.cardSmall]: h,
-      [T.cardDisabled]: g
+    className: i(O, f.card, f.cardPlaceholder, {
+      [f.cardSmall]: h,
+      [f.cardDisabled]: g
     })
   });
   let {
@@ -53,14 +53,14 @@ var g = function(e) {
   if (null != G) B = (0, a.jsx)("img", {
     src: G,
     alt: "",
-    className: T.avatar
+    className: f.avatar
   });
   else {
     let e = (0, I.getAcronym)(n.name);
     B = (0, a.jsx)("div", {
-      className: T.defaultIcon,
+      className: f.defaultIcon,
       children: (0, a.jsx)(o.Text, {
-        className: T.acronym,
+        className: f.acronym,
         style: {
           fontSize: null !== (s = N[e.length]) && void 0 !== s ? s : N[N.length - 1]
         },
@@ -70,29 +70,29 @@ var g = function(e) {
     })
   }
   return (0, a.jsxs)("div", {
-    className: i(O, T.card, {
-      [T.cardSmall]: h,
-      [T.cardDisabled]: g,
-      [T.splashLoaded]: A
+    className: i(O, f.card, {
+      [f.cardSmall]: h,
+      [f.cardDisabled]: g,
+      [f.splashLoaded]: A
     }),
     children: [(0, a.jsxs)("div", {
-      className: T.cardHeader,
+      className: f.cardHeader,
       children: [(0, a.jsx)("div", {
-        className: T.splash,
+        className: f.splash,
         children: (0, a.jsx)("img", {
           src: null != v ? v : j,
           alt: "",
-          className: T.splashImage,
+          className: f.splashImage,
           onLoad: () => M(!0)
         })
       }), (0, a.jsx)("div", {
-        className: T.guildIcon,
+        className: f.guildIcon,
         children: (0, a.jsx)(E.default, {
           mask: E.default.Masks.SQUIRCLE,
           width: 48,
           height: 48,
           children: (0, a.jsx)("div", {
-            className: T.iconMask,
+            className: f.iconMask,
             children: (0, a.jsx)(E.default, {
               mask: E.default.Masks.SQUIRCLE,
               width: 40,
@@ -103,49 +103,49 @@ var g = function(e) {
         })
       })]
     }), (0, a.jsxs)("div", {
-      className: T.guildInfo,
+      className: f.guildInfo,
       children: [(0, a.jsxs)("div", {
-        className: T.title,
+        className: f.title,
         children: [(0, a.jsx)(c.default, {
-          className: T.verifiedIcon,
+          className: f.verifiedIcon,
           guild: n,
           tooltipColor: o.Tooltip.Colors.PRIMARY
         }), (0, a.jsx)(o.Text, {
-          className: T.guildName,
+          className: f.guildName,
           variant: "text-md/normal",
           children: (0, a.jsx)("span", {
             children: D
           })
         })]
       }), (0, a.jsx)(o.Text, {
-        className: T.description,
+        className: f.description,
         variant: "text-sm/normal",
         children: (0, a.jsx)("span", {
           children: U
         })
       }), (0, a.jsxs)("div", {
-        className: T.memberInfo,
+        className: f.memberInfo,
         children: [null != b && (0, a.jsxs)("div", {
-          className: T.memberCount,
+          className: f.memberCount,
           children: [(0, a.jsx)("div", {
-            className: T.dotOnline
+            className: f.dotOnline
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
-            children: h ? f.default.Messages.NUMBERS_ONLY.format({
+            children: h ? T.default.Messages.NUMBERS_ONLY.format({
               count: b
-            }) : f.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+            }) : T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
               membersOnline: b
             })
           })]
         }), null != P && (0, a.jsxs)("div", {
-          className: T.memberCount,
+          className: f.memberCount,
           children: [(0, a.jsx)("div", {
-            className: T.dotOffline
+            className: f.dotOffline
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
-            children: h ? f.default.Messages.NUMBERS_ONLY.format({
+            children: h ? T.default.Messages.NUMBERS_ONLY.format({
               count: P
-            }) : f.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+            }) : T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
               count: P
             })
           })]

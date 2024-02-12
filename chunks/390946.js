@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   hydrateReadySupplementalPayload: function() {
-    return I
+    return S
   },
   preloadReadyPayloadData: function() {
     return A
@@ -36,18 +36,18 @@ var s = n("627445"),
 let y = new c.default("ReadyPayloadUtils"),
   T = {},
   C = null,
-  S = {};
+  I = {};
 
-function I(e, t) {
+function S(e, t) {
   var n;
   let {
     guilds: s,
     merged_members: i,
     merged_presences: r,
     ...a
-  } = e, o = P(S, null == r ? void 0 : r.friends), d = null !== (n = null == s ? void 0 : s.map((e, t) => {
-    let n = P(S, null == r ? void 0 : r.guilds[t]),
-      s = P(S, null == i ? void 0 : i[t]);
+  } = e, o = P(I, null == r ? void 0 : r.friends), d = null !== (n = null == s ? void 0 : s.map((e, t) => {
+    let n = P(I, null == r ? void 0 : r.guilds[t]),
+      s = P(I, null == i ? void 0 : i[t]);
     return {
       ...e,
       unavailable: void 0 === e.voice_states,
@@ -62,7 +62,7 @@ function I(e, t) {
     voice_states: e.voice_states,
     unavailable: !1
   }));
-  return null != u && d.push(u), S = {}, {
+  return null != u && d.push(u), I = {}, {
     ...a,
     presences: o,
     guilds: d
@@ -111,13 +111,13 @@ function D(e, t, n) {
         readStates: r
       })
     }
-  })(n), S = a.keyBy(r, e => e.id);
-  let h = P(S, d);
+  })(n), I = a.keyBy(r, e => e.id);
+  let h = P(I, d);
   null == u || u.forEach(e => {
     let t = e.recipient_ids;
-    null != t && (e.recipients = t.map(e => (i(null != S[e], "Missing user in compressed ready payload"), S[e]))), delete e.recipient_ids
+    null != t && (e.recipients = t.map(e => (i(null != I[e], "Missing user in compressed ready payload"), I[e]))), delete e.recipient_ids
   });
-  let y = null !== (s = null == _ ? void 0 : _.map((e, t) => !0 === e.unavailable ? e : (e.members = P(S, null == l ? void 0 : l[t]), V(e)))) && void 0 !== s ? s : [],
+  let y = null !== (s = null == _ ? void 0 : _.map((e, t) => !0 === e.unavailable ? e : (e.members = P(I, null == l ? void 0 : l[t]), V(e)))) && void 0 !== s ? s : [],
     C = N(t, _, e => V(e));
   return null != C && y.push(C), {
     ...c,

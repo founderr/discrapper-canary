@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("41594"),
   _ = s("676143"),
   I = s("98292"),
-  f = s("45029"),
-  T = s("851490"),
+  T = s("45029"),
+  f = s("851490"),
   S = s("904383"),
   m = s("223729"),
   N = s("49111"),
@@ -57,7 +57,7 @@ function C(e) {
     onClick: e => {
       e.stopPropagation();
       let n = (0, u.canChannelBeDefault)(t.id, l.id);
-      return n ? (0, T.toggleDefaultChannel)(l.id) : (0, o.openModalLazy)(async () => {
+      return n ? (0, f.toggleDefaultChannel)(l.id) : (0, o.openModalLazy)(async () => {
         let {
           default: e
         } = await s.el("10035").then(s.bind(s, "10035"));
@@ -110,7 +110,7 @@ let R = l.memo(function() {
       if (p) return;
       e.stopPropagation();
       let l = (0, u.canChannelBeDefault)(n.id, t.id);
-      return l ? (0, T.toggleDefaultChannel)(t.id) : (0, o.openModalLazy)(async () => {
+      return l ? (0, f.toggleDefaultChannel)(t.id) : (0, o.openModalLazy)(async () => {
         let {
           default: e
         } = await s.el("10035").then(s.bind(s, "10035"));
@@ -198,7 +198,7 @@ let R = l.memo(function() {
               className: h.lockedPill,
               innerClassName: h.lockedPillInner,
               onClick: N.NOOP,
-              children: [(0, a.jsx)(f.default, {
+              children: [(0, a.jsx)(T.default, {
                 width: 16,
                 height: 16
               }), (0, a.jsx)(o.Text, {

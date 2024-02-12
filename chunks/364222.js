@@ -22,8 +22,8 @@ function _(e) {
     let _;
     if (!e.managed) return null;
     let I = null === (s = e.tags) || void 0 === s ? void 0 : s.bot_id,
-      f = null === (l = e.tags) || void 0 === l ? void 0 : l.integration_id,
-      T = (null === (n = e.tags) || void 0 === n ? void 0 : n.premium_subscriber) !== void 0,
+      T = null === (l = e.tags) || void 0 === l ? void 0 : l.integration_id,
+      f = (null === (n = e.tags) || void 0 === n ? void 0 : n.premium_subscriber) !== void 0,
       S = (null === (u = e.tags) || void 0 === u ? void 0 : u.guild_connections) !== void 0;
     if (null != I ? _ = null == t ? void 0 : t.find(e => {
         var t;
@@ -31,11 +31,11 @@ function _(e) {
           application: s
         } = e;
         return (null == s ? void 0 : null === (t = s.bot) || void 0 === t ? void 0 : t.id) === I
-      }) : null != f && (_ = null == t ? void 0 : t.find(e => {
+      }) : null != T && (_ = null == t ? void 0 : t.find(e => {
         let {
           id: t
         } = e;
-        return t === f
+        return t === T
       })), null != _ && null != _.application && null != _.name) {
       let e = _.application.id,
         t = _.name;
@@ -51,6 +51,6 @@ function _(e) {
         }, t)
       })
     }
-    return T ? E.default.Messages.MANAGED_ROLE_PREMIUM_SUBSCRIBER_EXPLANATION : S ? E.default.Messages.MANAGED_ROLE_GUILD_CONNECTIONS_EXPLANATION : E.default.Messages.MANAGED_ROLE_EXPLAINATION
+    return f ? E.default.Messages.MANAGED_ROLE_PREMIUM_SUBSCRIBER_EXPLANATION : S ? E.default.Messages.MANAGED_ROLE_GUILD_CONNECTIONS_EXPLANATION : E.default.Messages.MANAGED_ROLE_EXPLAINATION
   })(e, t), [e, t])
 }

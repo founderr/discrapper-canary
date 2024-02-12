@@ -28,9 +28,9 @@ function I(e) {
     avatarSrc: N,
     eventHandlers: {
       onMouseEnter: p,
-      onMouseLeave: A
+      onMouseLeave: S
     }
-  } = (0, c.useAutomodAvatar)(!0), S = "" !== t.content ? new Date(t.content).toLocaleString(_.default.getLocale(), {
+  } = (0, c.useAutomodAvatar)(!0), A = "" !== t.content ? new Date(t.content).toLocaleString(_.default.getLocale(), {
     hour: "numeric",
     minute: "2-digit",
     month: "2-digit",
@@ -39,7 +39,7 @@ function I(e) {
   }) : "";
   return (0, s.jsx)("div", {
     onMouseEnter: p,
-    onMouseLeave: A,
+    onMouseLeave: S,
     children: (0, s.jsx)(d.default, {
       className: a(T.mainContainer, {
         [T.compact]: n
@@ -81,7 +81,7 @@ function I(e) {
           children: t.type === E.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
             username: I.nick,
             usernameHook: m,
-            time: S
+            time: A
           }) : _.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
             username: I.nick,
             usernameHook: m

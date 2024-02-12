@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("483093"),
   _ = s("159885"),
   I = s("782340"),
-  f = s("356072");
-let T = (0, _.cssValueToNumber)(r.default.ROLE_ICON_UPLOADER_ICON_SIZE);
+  T = s("356072");
+let f = (0, _.cssValueToNumber)(r.default.ROLE_ICON_UPLOADER_ICON_SIZE);
 
 function S(e) {
   let {
@@ -26,28 +26,28 @@ function S(e) {
     className: n,
     onClick: r,
     disabled: _ = !1
-  } = e, S = l.useRef(null), m = l.useMemo(() => null != t ? (0, d.getRoleIconProps)(t, T) : null, [t]), N = null != m ? (0, a.jsx)(E.default, {
+  } = e, S = l.useRef(null), m = l.useMemo(() => null != t ? (0, d.getRoleIconProps)(t, f) : null, [t]), N = null != m ? (0, a.jsx)(E.default, {
     enableTooltip: !1,
-    className: f.icon,
+    className: T.icon,
     ...m
   }) : (0, a.jsx)(c.default, {
-    className: f.icon
+    className: T.icon
   });
   return (0, a.jsx)(o.FocusRing, {
     ringTarget: S,
     children: (0, a.jsxs)(o.Clickable, {
       "aria-label": s,
-      className: i(f.container, n, {
-        [f.disabled]: _
+      className: i(T.container, n, {
+        [T.disabled]: _
       }),
       onClick: _ ? void 0 : r,
       "aria-disabled": _,
       children: [(0, a.jsx)("div", {
         ref: S,
-        className: f.preview,
+        className: T.preview,
         children: N
       }), null != m ? (0, a.jsx)(u.ImageUploaderIcon, {
-        className: f.uploaderIcon
+        className: T.uploaderIcon
       }) : null]
     })
   })

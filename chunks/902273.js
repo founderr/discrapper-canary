@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("655772"),
   _ = s("10641"),
   I = s("597517"),
-  f = s("915639"),
-  T = s("525065"),
+  T = s("915639"),
+  f = s("525065"),
   S = s("305961"),
   m = s("37785"),
   N = s("68238"),
@@ -106,9 +106,9 @@ function W(e) {
   } = e, {
     hasAccessRate: s,
     accessRate: n
-  } = (0, r.useStateFromStoresObject)([L.default], () => L.default.getMemberInsights(t)), i = (0, r.useStateFromStores)([T.default], () => {
+  } = (0, r.useStateFromStoresObject)([L.default], () => L.default.getMemberInsights(t)), i = (0, r.useStateFromStores)([f.default], () => {
     var e;
-    return null !== (e = T.default.getMemberCount()) && void 0 !== e ? e : 0
+    return null !== (e = f.default.getMemberCount()) && void 0 !== e ? e : 0
   }), {
     showAccessRate: o
   } = (0, C.useGuildAccessRateInsightExperiment)(t, !s);
@@ -119,30 +119,30 @@ function W(e) {
     }, [o]), !o || !s || null == n) return null;
   let E = 10 * Math.ceil((1 - n) * 10),
     I = H,
-    f = null,
+    T = null,
     S = null;
-  return n >= .9 ? (I = H, f = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
+  return n >= .9 ? (I = H, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
     ratingHook: (e, t) => (0, a.jsx)("span", {
       className: v.ratingVeryGood,
       children: e
     }, t)
   }), S = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({
     accessRate: 10
-  })) : n >= (i > 1e4 ? .7 : .8) ? (I = y, f = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
+  })) : n >= (i > 1e4 ? .7 : .8) ? (I = y, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
     ratingHook: (e, t) => (0, a.jsx)("span", {
       className: v.ratingGood,
       children: e
     }, t)
   }), S = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
     accessRate: E
-  })) : n >= .5 ? (I = F, f = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
+  })) : n >= .5 ? (I = F, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
     ratingHook: (e, t) => (0, a.jsx)("span", {
       className: v.ratingNeutral,
       children: e
     }, t)
   }), S = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
     accessRate: E
-  })) : (I = B, f = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
+  })) : (I = B, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
     ratingHook: (e, t) => (0, a.jsx)("span", {
       className: v.ratingBad,
       children: e
@@ -172,7 +172,7 @@ function W(e) {
           children: [(0, a.jsx)(c.Text, {
             variant: "text-md/semibold",
             className: v.title,
-            children: f
+            children: T
           }), (0, a.jsxs)(c.Text, {
             className: v.description,
             variant: "text-sm/normal",
@@ -284,9 +284,9 @@ function W(e) {
 }
 var z = () => {
   let e = (0, r.useStateFromStores)([O.default], () => O.default.getGuildId()),
-    t = (0, r.useStateFromStores)([T.default], () => T.default.getMemberCount(e)),
+    t = (0, r.useStateFromStores)([f.default], () => f.default.getMemberCount(e)),
     s = (0, r.useStateFromStores)([S.default], () => S.default.getGuild(e)),
-    n = (0, r.useStateFromStores)([f.default], () => f.default.locale),
+    n = (0, r.useStateFromStores)([T.default], () => T.default.locale),
     {
       analytics: i,
       errorCode: o

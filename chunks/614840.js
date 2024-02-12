@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("900938"),
   _ = s("431451"),
   I = s("353830"),
-  f = s("772871"),
-  T = s("900084"),
+  T = s("772871"),
+  f = s("900084"),
   S = s("860170"),
   m = s("766829"),
   N = s("994428"),
@@ -38,43 +38,43 @@ function C(e) {
     }, []), null == R) return null;
   let L = (0, m.getGuildSafetySettings)(R);
   switch (x) {
-    case f.GuildSettingsSafetyPage.OVERVIEW:
-      t = (0, a.jsx)(T.default, {
+    case T.GuildSettingsSafetyPage.OVERVIEW:
+      t = (0, a.jsx)(f.default, {
         guild: R,
         hideChangelog: s
       });
       break;
-    case f.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION:
+    case T.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION:
       t = (0, a.jsx)(S.default, {
         title: g.default.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
-        settings: L[f.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION]
+        settings: L[T.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION]
       });
       break;
-    case f.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION:
+    case T.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION:
       t = (0, a.jsx)(S.default, {
         title: g.default.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
-        settings: L[f.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION]
+        settings: L[T.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION]
       });
       break;
-    case f.GuildSettingsSafetyPage.AUTOMOD:
+    case T.GuildSettingsSafetyPage.AUTOMOD:
       t = (0, a.jsx)(d.default, {
         guildId: R.id
       });
       break;
-    case f.GuildSettingsSafetyPage.PERMISSIONS:
+    case T.GuildSettingsSafetyPage.PERMISSIONS:
       t = (0, a.jsx)(S.default, {
         title: g.default.Messages.GUILD_SETTINGS_SAFETY_PERMISSIONS_TITLE,
-        settings: L[f.GuildSettingsSafetyPage.PERMISSIONS]
+        settings: L[T.GuildSettingsSafetyPage.PERMISSIONS]
       })
   }
   return (0, a.jsxs)(a.Fragment, {
-    children: [x !== f.GuildSettingsSafetyPage.OVERVIEW && (0, a.jsxs)(r.Button, {
+    children: [x !== T.GuildSettingsSafetyPage.OVERVIEW && (0, a.jsxs)(r.Button, {
       className: h.back,
       innerClassName: h.backButton,
       look: r.Button.Looks.BLANK,
       size: r.Button.Sizes.MIN,
       onClick: () => {
-        (0, _.setSafetyPage)(f.GuildSettingsSafetyPage.OVERVIEW)
+        (0, _.setSafetyPage)(T.GuildSettingsSafetyPage.OVERVIEW)
       },
       children: [(0, a.jsx)(c.default, {
         className: h.arrow,

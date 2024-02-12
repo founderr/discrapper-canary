@@ -30,8 +30,8 @@ var i, a, s = n("37983"),
   I = n("505093"),
   N = n("161778"),
   y = n("168973"),
-  O = n("491605"),
-  C = n("476765"),
+  C = n("491605"),
+  O = n("476765"),
   A = n("599110"),
   M = n("32531"),
   P = n("714657"),
@@ -128,7 +128,7 @@ let k = Object.freeze({
     let {
       type: t,
       children: n
-    } = e, i = (0, C.useUID)(), a = (0, m.useRadioGroup)({
+    } = e, i = (0, O.useUID)(), a = (0, m.useRadioGroup)({
       orientation: "horizontal",
       labelledBy: i
     }), r = l.useMemo(() => ({
@@ -190,7 +190,7 @@ K.Basic = e => {
   } = (0, S.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [v, N, y] = (0, d.useStateFromStoresArray)([P.default], () => {
     var e;
     return [P.default.isPreview, P.default.isCoachmark, null === (e = P.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-  }), [C, A] = l.useState(!1), [w, x] = l.useState(-1), L = (0, d.useStateFromStores)([g.default], () => g.default.useReducedMotion), k = (null === (i = (0, T.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
+  }), [O, A] = l.useState(!1), [w, x] = l.useState(-1), L = (0, d.useStateFromStores)([g.default], () => g.default.useReducedMotion), k = (null === (i = (0, T.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
   l.useEffect(() => {
     (w === R.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || y === c.BackgroundGradientPresetId.EASTER_EGG) && A(!0)
   }, [w, u, y]);
@@ -207,7 +207,7 @@ K.Basic = e => {
         backgroundGradientPresetId: e.id,
         theme: e.theme
       }, f), null != t) {
-      if (C && A(!1), t <= w || 0 === t) {
+      if (O && A(!1), t <= w || 0 === t) {
         x(0);
         return
       }
@@ -250,7 +250,7 @@ K.Basic = e => {
         disabled: o,
         tabIndex: 0 !== t || o ? void 0 : 0
       }, e.id)), (() => {
-        if (!C) return null;
+        if (!O) return null;
         let e = R.BACKGROUND_GRADIENT_PRESETS_MAP[c.BackgroundGradientPresetId.EASTER_EGG];
         if (null == e) return null;
         async function t() {
@@ -265,7 +265,7 @@ K.Basic = e => {
             preset: e,
             isSelected: y === c.BackgroundGradientPresetId.EASTER_EGG,
             onSelect: () => K(e)
-          }), (0, s.jsx)(O.default, {
+          }), (0, s.jsx)(C.default, {
             importData: t,
             shouldAnimate: !L,
             className: j.sparkles

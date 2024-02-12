@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("599110"),
   _ = s("449008"),
   I = s("36402"),
-  f = s("531493"),
-  T = s("900938"),
+  T = s("531493"),
+  f = s("900938"),
   S = s("986654"),
   m = s("462752"),
   N = s("505002"),
@@ -35,14 +35,14 @@ function O(e) {
       selectedSection: O,
       setSelectedSection: p
     } = e,
-    A = (0, r.useStateFromStores)([f.default], () => f.default.guild, []);
+    A = (0, r.useStateFromStores)([T.default], () => T.default.guild, []);
   i(null != A, "guildId cannot be null here");
   let {
     role: M,
     permissionSearchQuery: D
-  } = (0, r.useStateFromStoresObject)([f.default], () => ({
-    role: f.default.getRole(s),
-    permissionSearchQuery: f.default.getPermissionSearchQuery()
+  } = (0, r.useStateFromStoresObject)([T.default], () => ({
+    role: T.default.getRole(s),
+    permissionSearchQuery: T.default.getPermissionSearchQuery()
   }), [s]);
   l.useEffect(() => {
     null == M && n(null)
@@ -50,7 +50,7 @@ function O(e) {
   let v = (0, r.useStateFromStores)([c.default], () => c.default.getHighestRole(A), [A]),
     j = (0, r.useStateFromStores)([c.default], () => !c.default.isRoleHigher(A, v, M)),
     G = l.useRef(null),
-    U = (0, r.useStateFromStores)([T.default], () => T.default.getProps().integrations);
+    U = (0, r.useStateFromStores)([f.default], () => f.default.getProps().integrations);
   if (l.useEffect(() => {
       var e, t;
       let a = (0, S.getSectionAnalyticsName)(O),

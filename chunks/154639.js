@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("67310"),
   _ = s("296416"),
   I = s("143460"),
-  f = s("782340"),
-  T = s("744432");
+  T = s("782340"),
+  f = s("744432");
 
 function S(e) {
   var t, s;
@@ -27,32 +27,32 @@ function S(e) {
   } = e, [N, g] = l.useState(null === (t = S.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit), h = (0, d.useIsMentionRaidExperimentEnabled)(S.guildId, !1);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)("div", {
-      className: T.cardContentsContainer,
+      className: f.cardContentsContainer,
       children: [(0, a.jsxs)(E.default, {
         step: 1,
-        header: f.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_HEADER,
+        header: T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_HEADER,
         children: [(0, a.jsxs)("div", {
-          className: T.mentionLimitContainer,
+          className: f.mentionLimitContainer,
           children: [(0, a.jsx)("div", {
-            className: T.mentionLimitIconContainer,
+            className: f.mentionLimitIconContainer,
             children: (0, a.jsx)(r.default, {
               width: 24,
               height: 24,
-              className: T.mentionLimitIcon
+              className: f.mentionLimitIcon
             })
           }), (0, a.jsxs)("div", {
-            className: T.mentionLimitTextContainer,
+            className: f.mentionLimitTextContainer,
             children: [(0, a.jsx)(n.Heading, {
               variant: "heading-sm/semibold",
-              children: f.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_DESCRIPTION
+              children: T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_DESCRIPTION
             }), (0, a.jsx)(n.Text, {
               color: "interactive-normal",
               variant: "text-xs/medium",
-              className: T.descriptionHint,
-              children: f.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_DESCRIPTION_HINT
+              className: f.descriptionHint,
+              children: T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_DESCRIPTION_HINT
             })]
           }), (0, a.jsx)("div", {
-            className: T.stepperContainer,
+            className: f.stepperContainer,
             children: (0, a.jsx)(i.default, {
               value: N,
               onChange: e => {
@@ -66,28 +66,28 @@ function S(e) {
               },
               minValue: I.MIN_MENTION_SPAM_LIMIT,
               maxValue: I.MAX_MENTION_SPAM_LIMIT,
-              className: T.stepper
+              className: f.stepper
             })
           })]
         }), h ? (0, a.jsxs)("div", {
-          className: T.mentionLimitContainer,
+          className: f.mentionLimitContainer,
           children: [(0, a.jsx)("div", {
-            className: T.mentionLimitIconContainer,
+            className: f.mentionLimitIconContainer,
             children: (0, a.jsx)(o.default, {
               width: 24,
               height: 24,
-              className: T.mentionLimitIcon
+              className: f.mentionLimitIcon
             })
           }), (0, a.jsxs)("div", {
-            className: T.mentionLimitTextContainer,
+            className: f.mentionLimitTextContainer,
             children: [(0, a.jsx)(n.Heading, {
               variant: "heading-sm/semibold",
-              children: f.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_RAID_DESCRIPTION
+              children: T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_RAID_DESCRIPTION
             }), (0, a.jsx)(n.Text, {
               color: "interactive-normal",
               variant: "text-xs/medium",
-              className: T.descriptionHint,
-              children: f.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_RAID_DESCRIPTION_HINT
+              className: f.descriptionHint,
+              children: T.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_RAID_DESCRIPTION_HINT
             })]
           }), (0, a.jsx)("div", {
             children: (0, a.jsx)(n.Checkbox, {
@@ -102,7 +102,7 @@ function S(e) {
                   }
                 })
               },
-              className: T.actionCheckbox
+              className: f.actionCheckbox
             })
           })]
         }) : null]
@@ -110,7 +110,7 @@ function S(e) {
         type: _.default.Type.ARROW_DOWN
       }), (0, a.jsx)(E.default, {
         step: 2,
-        header: f.default.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
+        header: T.default.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
         children: (0, a.jsx)(u.default, {
           rule: S,
           onChangeRule: m
@@ -119,7 +119,7 @@ function S(e) {
         type: _.default.Type.CROSS
       }), (0, a.jsx)(E.default, {
         step: 3,
-        header: f.default.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
+        header: T.default.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
         children: (0, a.jsx)(c.default, {
           rule: S,
           onChangeRule: m

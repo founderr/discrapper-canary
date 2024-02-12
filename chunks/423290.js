@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildAuditLogSearch: function() {
-    return T
+    return f
   }
 }), s("222007"), s("781738");
 var a = s("37983"),
@@ -16,22 +16,22 @@ var a = s("37983"),
   E = s("202752"),
   _ = s("751520"),
   I = s("782340"),
-  f = s("110846");
+  T = s("110846");
 s("525840");
 
-function T(e) {
+function f(e) {
   let {
     className: t
   } = e;
   l.useEffect(() => {
     _.clearTokenCache()
   }, []);
-  let [s, T] = l.useState({
+  let [s, f] = l.useState({
     editorState: E.createEmptyEditorState([])
   }), {
     editorState: S
   } = s, [m, N] = l.useState(!0), g = null, h = e => {
-    T(t => ({
+    f(t => ({
       ...t,
       editorState: e
     }))
@@ -62,9 +62,9 @@ function T(e) {
   return (0, a.jsx)("div", {
     className: t,
     children: (0, a.jsxs)("div", {
-      className: f.search,
+      className: T.search,
       children: [(0, a.jsxs)("div", {
-        className: f.searchBar,
+        className: T.searchBar,
         children: [(0, a.jsx)(n.Editor, {
           ref: O,
           onBlur: A,
@@ -90,26 +90,26 @@ function T(e) {
             h(s = E.truncateContent(s, 0)), !m && Promise.resolve().then(() => L())
           },
           hasContent: j,
-          className: f.searchIcon
+          className: T.searchIcon
         }), (0, a.jsxs)(i.Button, {
           look: i.Button.Looks.BLANK,
-          className: f.filter,
-          innerClassName: f.filterButton,
+          className: T.filter,
+          innerClassName: T.filterButton,
           onClick: () => {},
           children: [I.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_FILTER, (0, a.jsx)(u.default, {
-            className: f.filterIcon,
+            className: T.filterIcon,
             width: 16,
             height: 16
           })]
         })]
       }), (0, a.jsxs)(i.Button, {
         color: i.Button.Colors.PRIMARY,
-        className: f.sort,
-        innerClassName: f.sortButton,
+        className: T.sort,
+        innerClassName: T.sortButton,
         size: i.Button.Sizes.SMALL,
         onClick: () => {},
         children: [I.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_SORT, (0, a.jsx)(c.default, {
-          className: f.sortIcon,
+          className: T.sortIcon,
           width: 16,
           height: 16
         })]

@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   resetDefaultChannels: function() {
-    return f
+    return T
   },
   toggleDefaultChannel: function() {
-    return T
+    return f
   },
   saveDefaultChannels: function() {
     return S
@@ -23,13 +23,13 @@ var a = s("913144"),
   _ = s("653138"),
   I = s("782340");
 
-function f() {
+function T() {
   a.default.dispatch({
     type: "GUILD_SETTINGS_DEFAULT_CHANNELS_RESET"
   })
 }
 
-function T(e) {
+function f(e) {
   a.default.dispatch({
     type: "GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE",
     channelId: e
@@ -38,10 +38,10 @@ function T(e) {
 async function S(e) {
   let t = Array.from(u.default.editedDefaultChannelIds).filter(e => null != o.default.getChannel(e)),
     s = E.default.advancedMode,
-    [f, T] = (0, r.getChattableDefaultChannels)(e.id, [...t]),
+    [T, f] = (0, r.getChattableDefaultChannels)(e.id, [...t]),
     S = (0, r.getMinimumSetOfDefaultChannelIds)(e.id, t, E.default.editedOnboardingPrompts),
     m = (0, r.getMinimumSetOfDefaultChannelIds)(e.id, t, E.default.editedOnboardingPrompts, r.isChattableChannelId);
-  if (i.default.getEnabled(e.id) && (!s && (T.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || f.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN) || s && (S.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || m.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN))) {
+  if (i.default.getEnabled(e.id) && (!s && (f.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || T.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN) || s && (S.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || m.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN))) {
     l.default.show({
       title: I.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
       body: I.default.Messages.DEFAULT_CHANNELS_SAVE_INVALID_DEFAULT_CHANNELS

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("305961"),
   _ = s("351825"),
   I = s("330724"),
-  f = s("136278"),
-  T = s("253308"),
+  T = s("136278"),
+  f = s("253308"),
   S = s("653138"),
   m = s("782340"),
   N = s("108852");
@@ -27,8 +27,8 @@ function g(e) {
     guild: t,
     prejoinOnly: s,
     postjoinOnly: n
-  } = e, d = (0, r.default)([f.default], () => f.default.editedOnboardingPrompts), c = d.filter(e => e.inOnboarding), E = c.length, {
-    drag: T,
+  } = e, d = (0, r.default)([T.default], () => T.default.editedOnboardingPrompts), c = d.filter(e => e.inOnboarding), E = c.length, {
+    drag: f,
     drop: g,
     dragSourcePosition: h,
     setIsDraggable: C
@@ -43,8 +43,8 @@ function g(e) {
   return l.useEffect(() => {
     C(!1)
   }, [C]), l.useEffect(() => {
-    T(g(R))
-  }, [T, g, R]), (0, a.jsxs)("div", {
+    f(g(R))
+  }, [f, g, R]), (0, a.jsxs)("div", {
     ref: R,
     className: i(N.separatorSection, {
       [N.dropIndicatorBefore]: null != h && E < h,
@@ -85,7 +85,7 @@ function h(e) {
     postjoinOnly: l,
     includeCount: n,
     singleColumn: i
-  } = e, u = (0, r.default)([E.default], () => E.default.getGuild(t)), h = (0, r.default)([f.default], () => f.default.editedOnboardingPrompts), C = h.filter(e => e.inOnboarding), R = h.filter(e => !0 !== e.inOnboarding), x = [...C.map(e => ({
+  } = e, u = (0, r.default)([E.default], () => E.default.getGuild(t)), h = (0, r.default)([T.default], () => T.default.editedOnboardingPrompts), C = h.filter(e => e.inOnboarding), R = h.filter(e => !0 !== e.inOnboarding), x = [...C.map(e => ({
     id: e.id,
     data: e
   })), {
@@ -131,7 +131,7 @@ function h(e) {
           className: N.subtitle,
           children: m.default.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_SUBHEADER
         })]
-      }), C.map((e, t) => (0, a.jsx)(T.default, {
+      }), C.map((e, t) => (0, a.jsx)(f.default, {
         guild: u,
         prompt: e,
         disableAutofocus: s,
@@ -148,7 +148,7 @@ function h(e) {
       prejoinOnly: s,
       postjoinOnly: l
     }), s ? null : (0, a.jsxs)(a.Fragment, {
-      children: [R.map((e, t) => (0, a.jsx)(T.default, {
+      children: [R.map((e, t) => (0, a.jsx)(f.default, {
         guild: u,
         prompt: e,
         promptIndex: t + C.length,

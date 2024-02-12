@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return w
+    return G
   }
 }), n("222007"), n("70102");
 var a = n("37983"),
@@ -41,9 +41,9 @@ var a = n("37983"),
   F = n("80028"),
   U = n("782340"),
   k = n("381769"),
-  w = s.memo(function(e) {
-    var t, l, w;
-    let G, {
+  G = s.memo(function(e) {
+    var t, l, G;
+    let w, {
         className: B,
         channel: V,
         draftType: W,
@@ -122,13 +122,13 @@ var a = n("37983"),
         activities: X,
         newClipsCount: eA,
         canPostPolls: eg,
-        canLaunchActivities: null !== (w = null == e_ ? void 0 : e_.showInOmniButtonMenu) && void 0 !== w && w,
+        canLaunchActivities: null !== (G = null == e_ ? void 0 : e_.showInOmniButtonMenu) && void 0 !== G && G,
         appContext: Y
       });
     if (0 === eT.length) return null;
     let eM = X.some(e => (0, C.default)(e, H.ActivityFlags.SYNC)),
       eN = X.some(e => (0, C.default)(e, H.ActivityFlags.JOIN) && !(0, C.default)(e, H.ActivityFlags.EMBEDDED)) || eM;
-    G = eS ? (0, a.jsx)(o.CirclePlusIcon, {
+    w = eS ? (0, a.jsx)(o.CirclePlusIcon, {
       className: k.attachButtonIcon,
       colorClass: k.attachButtonPlus
     }) : eN ? (0, a.jsx)(y.default, {
@@ -197,7 +197,7 @@ var a = n("37983"),
           return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
         } : void 0,
         ...e,
-        children: G
+        children: w
       })
     });
     return (0, a.jsxs)(a.Fragment, {

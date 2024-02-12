@@ -14,8 +14,8 @@ var a, l, n = s("37983"),
   E = s("97031"),
   _ = s("283962"),
   I = s("258984"),
-  f = s("592407"),
-  T = s("479756"),
+  T = s("592407"),
+  f = s("479756"),
   S = s("507950"),
   m = s("393414"),
   N = s("305961"),
@@ -43,11 +43,11 @@ function D(e) {
   let P = i.useCallback(() => {
     if (null == l) return;
     let e = l.roles[l.id];
-    f.default.close();
+    T.default.close();
     let t = {
       [e.id]: e
     };
-    (0, T.startImpersonating)(l.id, {
+    (0, f.startImpersonating)(l.id, {
       type: S.ImpersonateType.SERVER_SHOP,
       roles: t,
       initialTab: "guild_products",

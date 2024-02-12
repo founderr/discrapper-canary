@@ -23,7 +23,7 @@ var l = n("498574"),
 
 function N(e) {
   var t, N;
-  let p, A, S, {
+  let p, S, A, {
       onTransitionToInviteChannel: C,
       onAcceptInstantInvite: h,
       guild: g,
@@ -60,7 +60,7 @@ function N(e) {
       isStage: G,
       isStream: !1
     });
-  return A = (0, s.jsxs)("span", {
+  return S = (0, s.jsxs)("span", {
     className: m.infoTitle,
     children: [(0, s.jsx)(o.default.GuildName, {
       guild: g
@@ -72,13 +72,13 @@ function N(e) {
         disableBoostClick: !0
       })
     })]
-  }), B && (S = (0, s.jsx)(a.TooltipContainer, {
+  }), B && (A = (0, s.jsx)(a.TooltipContainer, {
     className: m.tooltipContainer,
     text: I.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(u.default, {
       className: m.infoIcon
     })
-  })), b ? (A = (0, s.jsx)(o.default.Channel, {
+  })), b ? (S = (0, s.jsx)(o.default.Channel, {
     channel: y
   }), p = (0, s.jsxs)("span", {
     className: m.infoTitle,
@@ -102,14 +102,14 @@ function N(e) {
       guild: g
     }), (0, s.jsx)(o.default.Header, {
       text: w,
-      extra: S
+      extra: A
     }), (0, s.jsxs)(o.default.Body, {
       children: [(0, s.jsxs)("div", {
         className: m.headerLine,
         children: [(0, s.jsx)(o.default.Icon, {
           guild: g
         }), (0, s.jsx)(o.default.Info, {
-          title: A,
+          title: S,
           onClick: U ? F : null,
           children: p
         })]

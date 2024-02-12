@@ -25,7 +25,7 @@ function d(e, t) {
     {
       currentPeriod: _,
       previousPeriods: I,
-      metrics: f
+      metrics: T
     } = a.useMemo(() => {
       let {
         currentPeriod: e,
@@ -47,6 +47,6 @@ function d(e, t) {
     currentPeriod: _,
     previousPeriods: I,
     allPeriods: d,
-    metrics: f
+    metrics: T
   }
 }

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("401642"),
   _ = s("305961"),
   I = s("178406"),
-  f = s("645266"),
-  T = s("914985"),
+  T = s("645266"),
+  f = s("914985"),
   S = s("308073"),
   m = s("565556"),
   N = s("553275"),
@@ -69,7 +69,7 @@ function p(e) {
                 className: i(O.tableContainer),
                 children: [(0, a.jsx)(S.default, {
                   guild: s
-                }), (0, a.jsx)(T.default, {
+                }), (0, a.jsx)(f.default, {
                   guild: s
                 }), p ? (0, a.jsxs)("div", {
                   className: i(O.mainTableContainer),
@@ -97,7 +97,7 @@ function p(e) {
                       color: "text-muted",
                       children: L.default.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_ENABLED.format({
                         onClick: e => {
-                          null != s && (e.preventDefault(), c.default.close(), (0, f.goToMemberSafetyDashboard)(s.id))
+                          null != s && (e.preventDefault(), c.default.close(), (0, T.goToMemberSafetyDashboard)(s.id))
                         }
                       })
                     })]

@@ -30,8 +30,8 @@ var r = n("448105"),
   _ = n("766274"),
   T = n("42203"),
   I = n("923959"),
-  v = n("26989"),
-  N = n("305961"),
+  N = n("26989"),
+  v = n("305961"),
   R = n("377253"),
   b = n("957255"),
   M = n("824563"),
@@ -49,8 +49,8 @@ var r = n("448105"),
   H = n("49111"),
   V = n("375822"),
   K = n("724210"),
-  j = n("782340");
-let Y = new d.default("AutocompleteUtils"),
+  Y = n("782340");
+let j = new d.default("AutocompleteUtils"),
   Q = () => !0,
   W = /(\t|\s)/,
   z = [];
@@ -87,7 +87,7 @@ function et(e, t) {
       }(r, e)) return 3;
     if (i && a(r, e)) return 1
   } catch (e) {
-    Y.error(e)
+    j.error(e)
   }
   return 0
 }
@@ -105,10 +105,10 @@ function el(e) {
     allowSnowflake: i
   } = e, u = D.default.getUsers(), s = O.default.getGuildId(), c = t.toLocaleLowerCase(), d = (0, q.normalize)(c), f = [], p = [], h = n.length, m = 0, g = 0;
   for (; m < h;) {
-    var E, C, y, L, A, S, T, I, N;
+    var E, C, y, L, A, S, T, I, v;
     let e, l;
     let o = n[m];
-    o instanceof _.default ? (l = o, e = null === (C = v.default.getNick(s, l.id)) || void 0 === C ? void 0 : C.toLocaleLowerCase()) : (e = null === (y = o.nick) || void 0 === y ? void 0 : y.toLocaleLowerCase(), l = u[o.userId]);
+    o instanceof _.default ? (l = o, e = null === (C = N.default.getNick(s, l.id)) || void 0 === C ? void 0 : C.toLocaleLowerCase()) : (e = null === (y = o.nick) || void 0 === y ? void 0 : y.toLocaleLowerCase(), l = u[o.userId]);
     let h = null === (E = B.default.getGlobalName(l)) || void 0 === E ? void 0 : E.toLocaleLowerCase();
     if (null == r || r(l)) {
       let n = l.username.toLocaleLowerCase(),
@@ -135,7 +135,7 @@ function el(e) {
         record: l,
         score: 1,
         comparator: null !== (I = null != h ? h : e) && void 0 !== I ? I : n,
-        sortable: null !== (N = null != m ? m : o) && void 0 !== N ? N : r
+        sortable: null !== (v = null != m ? m : o) && void 0 !== v ? v : r
       }), g += 1)
     }
     m += 1
@@ -159,12 +159,12 @@ function ea(e, t) {
     if (null == e || e.isNonUserBot()) return !1;
     let t = n.getGuildId();
     if (null == t) return !0;
-    let l = v.default.getMember(t, e.id);
+    let l = N.default.getMember(t, e.id);
     return en(l)
   }).map(e => {
     var t;
     let l = n.getGuildId(),
-      r = null != l ? v.default.getMember(l, e.id) : null;
+      r = null != l ? N.default.getMember(l, e.id) : null;
     return {
       type: V.AutocompleterResultTypes.USER,
       record: e,
@@ -233,7 +233,7 @@ var ei = {
         let e = ea(o.id, r);
         if (e.length > 0) return e
       }
-      t = v.default.getMembers(c.guild_id).filter(en), a && w.default.requestMembers(c.guild_id, l, r)
+      t = N.default.getMembers(c.guild_id).filter(en), a && w.default.requestMembers(c.guild_id, l, r)
     }
     return el({
       query: l,
@@ -257,12 +257,12 @@ var ei = {
       filter: i,
       allowSnowflake: u
     } = e;
-    if (null == N.default.getGuild(t)) return [];
+    if (null == v.default.getGuild(t)) return [];
     if (0 === n.length && a) {
       let e = ea(U.default.getChannelId(t), l);
       if (e.length > 0) return e
     }
-    let o = v.default.getMembers(t).filter(en);
+    let o = N.default.getMembers(t).filter(en);
     return r && n.length > 0 && w.default.requestMembers(t, n, l), el({
       query: n,
       members: o,
@@ -321,7 +321,7 @@ var ei = {
     let g = {},
       E = [];
     for (let e of t) {
-      var C, y, A, _, v;
+      var C, y, A, _, N;
       if (C = c, y = e.type, A = null != l, !(C === y || (A || (0, S.isGuildChannelType)(y)) && (C === I.GUILD_SELECTABLE_CHANNELS_KEY ? (0, S.isGuildSelectableChannelType)(y) || (0, S.isGuildVocalChannelType)(y) : C === I.GUILD_VOCAL_CHANNELS_KEY && (0, S.isGuildVocalChannelType)(y))) || (0, S.isGuildChannelType)(e.type) && !b.default.can(f ? e.accessPermissions : H.Permissions.VIEW_CHANNEL, e) || !i(e)) continue;
       let t = [...m],
         r = e.name.toLocaleLowerCase(),
@@ -334,7 +334,7 @@ var ei = {
               let n = t[e.guild_id];
               if (null == n) {
                 var l;
-                n = t[e.guild_id] = null === (l = N.default.getGuild(e.guild_id)) || void 0 === l ? void 0 : l.toString().toLocaleLowerCase()
+                n = t[e.guild_id] = null === (l = v.default.getGuild(e.guild_id)) || void 0 === l ? void 0 : l.toString().toLocaleLowerCase()
               }
               return n
             }(e, g), function(e, t) {
@@ -354,7 +354,7 @@ var ei = {
         }
         if (0 !== o && !(t.length > 1) && (1 !== t.length || t[0].isFullMatch || u)) {
           ;
-          if (_ = c, v = e.type, _ === I.GUILD_SELECTABLE_CHANNELS_KEY && (0, S.isGuildVocalChannelType)(v)) o = Math.max(o - 1, .5);
+          if (_ = c, N = e.type, _ === I.GUILD_SELECTABLE_CHANNELS_KEY && (0, S.isGuildVocalChannelType)(N)) o = Math.max(o - 1, .5);
           E.push({
             type: (0, S.isGuildVocalChannelType)(e.type) ? V.AutocompleterResultTypes.VOICE_CHANNEL : V.AutocompleterResultTypes.TEXT_CHANNEL,
             record: e,
@@ -378,7 +378,7 @@ var ei = {
       exactQuery: RegExp("^".concat(F.default.escape(i)), "i"),
       containQuery: RegExp(F.default.escape(i), "i"),
       queryLower: i
-    }, c = [], d = u(N.default.getGuilds()).values().value();
+    }, c = [], d = u(v.default.getGuilds()).values().value();
     for (let e of d) {
       if (!r(e)) continue;
       let t = e.name.toLocaleLowerCase(),
@@ -510,13 +510,13 @@ var ei = {
         user: t,
         score: l,
         comparator: r,
-        nick: v.default.getNick(n.guild_id, t.id),
+        nick: N.default.getNick(n.guild_id, t.id),
         status: M.default.getStatus(t.id)
       }
     }) : [], g = m.length, E = t.toLowerCase(), C = [];
     if (g < f && o) {
       let e = n.getGuildId(),
-        t = N.default.getGuild(e);
+        t = v.default.getGuild(e);
       null != t && (u(t.roles).filter(t => {
         let {
           mentionable: n,
@@ -551,7 +551,7 @@ var ei = {
       status: M.default.getStatus(e.record.id)
     })) : [], c = s.length, d = t.toLowerCase(), f = [];
     if (c < H.MAX_AUTOCOMPLETE_RESULTS && i) {
-      let e = N.default.getGuild(n);
+      let e = v.default.getGuild(n);
       null != e && (u(e.roles).filter(e => {
         let {
           mentionable: t,
@@ -600,13 +600,13 @@ var ei = {
       queryLower: l
     }, a = ((0, p.canSeeGuildHome)(n.id) || (0, m.canSeeOnboardingHome)(n.id)) && !n.hasFeature(H.GuildFeatures.HUB), i = n.hasFeature(H.GuildFeatures.COMMUNITY), u = (0, h.isGuildOnboardingAvailable)(n) && n.hasFeature(H.GuildFeatures.COMMUNITY), o = [{
       id: K.StaticChannelId.SERVER_GUIDE,
-      name: j.default.Messages.SERVER_GUIDE
+      name: Y.default.Messages.SERVER_GUIDE
     }, {
       id: K.StaticChannelId.CHANNEL_BROWSER,
-      name: j.default.Messages.CHANNEL_BROWSER_TITLE
+      name: Y.default.Messages.CHANNEL_BROWSER_TITLE
     }, {
       id: K.StaticChannelId.CUSTOMIZE_COMMUNITY,
-      name: j.default.Messages.CHANNELS_AND_ROLES
+      name: Y.default.Messages.CHANNELS_AND_ROLES
     }], s = [];
     for (let e of o) {
       if (e.id === K.StaticChannelId.SERVER_GUIDE && !a || e.id === K.StaticChannelId.CHANNEL_BROWSER && !i || e.id === K.StaticChannelId.CUSTOMIZE_COMMUNITY && !u) continue;
@@ -766,7 +766,7 @@ var ei = {
   hasSameRoleAsUsername(e, t) {
     var n;
     if (!t.isPomelo()) return !1;
-    let l = N.default.getGuild(e.getGuildId()),
+    let l = v.default.getGuild(e.getGuildId()),
       r = null !== (n = null == l ? void 0 : l.roles) && void 0 !== n ? n : {};
     for (let {
         name: e

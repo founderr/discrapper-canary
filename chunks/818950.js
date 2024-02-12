@@ -71,7 +71,7 @@ let F = s.memo(function(e) {
     attachments: 8,
     fontSize: I,
     groupSpacing: c
-  }), [S, I, c]), w = (0, D.default)({
+  }), [S, I, c]), G = (0, D.default)({
     messages: m,
     channel: C,
     compact: S,
@@ -81,8 +81,8 @@ let F = s.memo(function(e) {
     canLoadMore: null == x,
     handleScrollToBottom: s.useCallback(() => U(!0), [U]),
     handleScrollFromBottom: s.useCallback(() => U(!1), [U])
-  }), G = (0, O.default)({
-    scrollerRef: w.ref,
+  }), w = (0, O.default)({
+    scrollerRef: G.ref,
     isEditing: null != N,
     keyboardModeEnabled: v,
     hasMoreAfter: m.hasMoreAfter
@@ -105,8 +105,8 @@ let F = s.memo(function(e) {
       messageDisplayCompact: S,
       channelStream: _,
       uploads: A,
-      loadMore: w.loadMore,
-      scrollManager: w,
+      loadMore: G.loadMore,
+      scrollManager: G,
       specs: k,
       filterAfterTimestamp: null != x ? x : B,
       showingQuarantineBanner: R,
@@ -114,7 +114,7 @@ let F = s.memo(function(e) {
       jumpToPresent: () => {
         if (m.hasPresent()) {
           var e;
-          null === (e = w.ref.current) || void 0 === e || e.scrollToBottom({
+          null === (e = G.ref.current) || void 0 === e || e.scrollToBottom({
             animate: !f.default.useReducedMotion
           })
         } else d.default.jumpToPresent(C.id, P.MAX_MESSAGES_PER_CHANNEL)
@@ -147,18 +147,18 @@ let F = s.memo(function(e) {
       event: P.ComponentActions.SCROLL_PAGE_DOWN,
       handler: a
     })
-  }(w.ref);
+  }(G.ref);
   let Y = (0, u.useFocusJumpSection)(),
     {
       ref: q,
       ...X
-    } = (0, r.getContainerPropsFromNavigator)(G),
+    } = (0, r.getContainerPropsFromNavigator)(w),
     J = s.useCallback(e => {
       var t;
-      w.ref.current = e, q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
+      G.ref.current = e, q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
     }, []);
   return (0, a.jsx)(r.ListNavigatorProvider, {
-    navigator: G,
+    navigator: w,
     children: (0, a.jsxs)("div", {
       className: i(H.messagesWrapper, l, "group-spacing-".concat(c)),
       children: [null != K ? K : W, (0, a.jsxs)(u.PinToBottomScrollerAuto, {
@@ -166,10 +166,10 @@ let F = s.memo(function(e) {
         customTheme: !0,
         className: i(h, H.scroller),
         contentClassName: H.scrollerContent,
-        onResize: w.handleResize,
-        onScroll: w.handleScroll,
-        onMouseDown: w.handleMouseDown,
-        onMouseUp: w.handleMouseUp,
+        onResize: G.handleResize,
+        onScroll: G.handleScroll,
+        onMouseDown: G.handleMouseDown,
+        onMouseUp: G.handleMouseUp,
         ...Y,
         tabIndex: -1,
         role: "group",

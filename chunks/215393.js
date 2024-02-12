@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return I
   },
   useExpandableRows: function() {
-    return f
+    return T
   }
 }), s("222007"), s("424973");
 var a = s("37983"),
@@ -80,7 +80,7 @@ function I(e) {
   }
 }
 
-function f(e, t) {
+function T(e, t) {
   let {
     generateExpandedRows: s
   } = t, a = function() {

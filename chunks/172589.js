@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("191814"),
   _ = s("987772"),
   I = s("956089"),
-  f = s("153160"),
-  T = s("577357"),
+  T = s("153160"),
+  f = s("577357"),
   S = s("837008"),
   m = s("648825"),
   N = s("757715"),
@@ -90,7 +90,7 @@ function p(e) {
           }), null != F && (0, a.jsxs)(u.Text, {
             color: "interactive-normal",
             variant: "text-sm/normal",
-            children: [(0, f.formatPrice)(F.price, F.currency), "/", (0, T.formatPlanInterval)(F)]
+            children: [(0, T.formatPrice)(F.price, F.currency), "/", (0, f.formatPlanInterval)(F)]
           })]
         })]
       }), B ? (0, a.jsxs)(a.Fragment, {

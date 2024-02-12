@@ -42,7 +42,7 @@ function S(e) {
 
 function _(e, t) {
   let n;
-  let l = N((0, g.truncateText)(e.name, 32));
+  let l = v((0, g.truncateText)(e.name, 32));
   return {
     type: "channel",
     content: [n = "italics" === t ? {
@@ -57,7 +57,7 @@ function _(e, t) {
 function T(e) {
   return {
     type: "channel",
-    content: [N("")],
+    content: [v("")],
     iconType: e ? "post" : "message"
   }
 }
@@ -98,7 +98,7 @@ function I(e, t) {
   } : null
 }
 
-function v(e) {
+function N(e) {
   return {
     type: "link",
     content: [{
@@ -110,7 +110,7 @@ function v(e) {
   }
 }
 
-function N(e) {
+function v(e) {
   return {
     type: "text",
     content: e
@@ -139,7 +139,7 @@ function b(e, t, n, l) {
   if (!e.canViewChannel) return function(e, t) {
     let n = {
       type: "channel",
-      content: [N(e.roleSubscriptionGated ? e.name : L.default.Messages.NO_ACCESS)],
+      content: [v(e.roleSubscriptionGated ? e.name : L.default.Messages.NO_ACCESS)],
       channelType: e.roleSubscriptionGated ? e.type : y.ChannelTypes.UNKNOWN,
       iconType: "locked"
     };
@@ -152,7 +152,7 @@ function b(e, t, n, l) {
       content: [n]
     }
   }(e, t);
-  if (!e.isMentionable) return N("#".concat(e.name));
+  if (!e.isMentionable) return v("#".concat(e.name));
   let r = {
       type: "channelMention",
       channelId: e.id,
@@ -169,7 +169,7 @@ function b(e, t, n, l) {
       inContent: [_(e)],
       content: [T(!1)]
     };
-    return null != (i = l) ? v(i) : N("#".concat(L.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
+    return null != (i = l) ? N(i) : v("#".concat(L.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
   }
   let u = e.guildId === n;
   return {
@@ -239,7 +239,7 @@ let M = {
         r = e[1],
         a = e[2],
         i = e[3];
-      if (null == a) return v(l);
+      if (null == a) return N(l);
       let u = I(a, null);
       return null == u ? R(r, a, i, A(n.channelId), l) : b(u, i, A(n.channelId), l)
     }
@@ -254,7 +254,7 @@ let M = {
         a = e[2],
         i = e[3],
         u = e[4];
-      if (null == a || null == i) return v(l);
+      if (null == a || null == i) return N(l);
       let o = I(i, null);
       if (null != o) return b(o, u, A(n.channelId), l);
       let s = I(a, null);

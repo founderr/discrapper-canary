@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("49111"),
   N = n("646718"),
   p = n("814809");
-let A = (0, E.cssValueToNumber)(a.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
-  S = e => {
+let S = (0, E.cssValueToNumber)(a.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
+  A = e => {
     null != e && o.default.trackWithMetadata(m.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
       type: N.PremiumUpsellTypes.STICKER_IN_MESSAGE_HOVER,
       expression_id: e.id,
@@ -68,7 +68,7 @@ var C = e => {
           text: (0, d.renderClickableTooltipNode)(h),
           "aria-label": !1,
           onTooltipShow: () => {
-            S(N)
+            A(N)
           },
           children: e => (0, s.jsx)(i.Clickable, {
             ...e,
@@ -79,7 +79,7 @@ var C = e => {
             tag: "span",
             children: (0, s.jsx)(T.default, {
               isInteracting: a,
-              size: A,
+              size: S,
               sticker: null != N ? N : t
             })
           })

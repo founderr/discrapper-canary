@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("721698"),
   N = n("349503"),
   p = n("412707"),
-  A = n("646186"),
-  S = n("49111"),
+  S = n("646186"),
+  A = n("49111"),
   C = n("782340"),
   h = n("759374");
 
@@ -40,7 +40,7 @@ function g(e) {
   l.useEffect(() => {
     (0, m.getEmbedApplication)(g)
   }, [g]), l.useEffect(() => {
-    x && L === N.FetchState.FETCHED && T.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+    x && L === N.FetchState.FETCHED && T.default.track(A.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
       application_id: g,
       device_platform: a.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
@@ -48,7 +48,7 @@ function g(e) {
       channel_id: M.channel_id
     })
   }, [x, g, null == D ? void 0 : D.id, M.channel_id, P, M.author.id, L]), l.useEffect(() => {
-    x && R && T.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+    x && R && T.default.track(A.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
       device_platform: a.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
       guild_id: P,
@@ -56,13 +56,13 @@ function g(e) {
     })
   }, [x, P, R, M.author.id, M.channel_id]);
   let b = e => {
-    T.default.track(S.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
+    T.default.track(A.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
       application_id: g,
       device_platform: a.isMobile ? "mobile_web" : "desktop_web",
       clicked_section: e,
       guild_id: P,
       channel_id: M.channel_id
-    }), (0, A.goToAppDirectory)({
+    }), (0, S.goToAppDirectory)({
       view: p.ApplicationDirectoryViews.APPLICATION,
       guildId: P,
       applicationId: g,

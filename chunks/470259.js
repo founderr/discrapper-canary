@@ -21,8 +21,8 @@ var l = n("37983"),
   I = n("697218"),
   g = n("315102"),
   E = n("159885"),
-  p = n("158998"),
-  _ = n("782340"),
+  _ = n("158998"),
+  p = n("782340"),
   v = n("435808");
 let m = 44;
 class T extends i.Component {
@@ -35,7 +35,7 @@ class T extends i.Component {
       user: i,
       channel: a
     } = this.props;
-    if (null != i) t = i.getAvatarURL(null == a ? void 0 : a.guild_id, 32), n = p.default.getName(i);
+    if (null != i) t = i.getAvatarURL(null == a ? void 0 : a.guild_id, 32), n = _.default.getName(i);
     else if (null != a && (t = (0, u.getChannelIconURL)(a), n = (0, o.computeChannelName)(a, I.default, h.default), null == t && null != a.guild_id)) {
       let n = c.default.getGuild(a.guild_id);
       null != n && (null != n.icon ? t = g.default.getGuildIconURL({
@@ -71,7 +71,7 @@ class T extends i.Component {
       size: s.Button.Sizes.SMALL,
       disabled: !0,
       color: (0, a.isThemeDark)(d.default.theme) ? s.Button.Colors.WHITE : s.Button.Colors.BLACK,
-      children: _.default.Messages.INVITE_FRIEND_MODAL_SENT
+      children: p.default.Messages.INVITE_FRIEND_MODAL_SENT
     }) : (0, l.jsx)(s.Button, {
       color: s.Button.Colors.GREEN,
       look: u ? s.Button.Looks.FILLED : s.Button.Looks.OUTLINED,
@@ -79,7 +79,7 @@ class T extends i.Component {
       size: s.Button.Sizes.SMALL,
       submitting: i,
       onClick: this.handleClickInvite,
-      children: _.default.Messages.INVITE_FRIEND_MODAL_INVITE
+      children: p.default.Messages.INVITE_FRIEND_MODAL_INVITE
     }), (0, l.jsxs)("div", {
       className: v.inviteRow,
       onMouseEnter: this.handleMouseEnter,
@@ -88,7 +88,7 @@ class T extends i.Component {
         className: v.inviteRowInfo,
         children: [this.renderUserOrChannel(), (0, l.jsxs)("div", {
           className: v.inviteRowName,
-          children: [p.default.getName(t), null != n ? (0, o.computeChannelName)(n, I.default, h.default, !0) : null]
+          children: [_.default.getName(t), null != n ? (0, o.computeChannelName)(n, I.default, h.default, !0) : null]
         })]
       }), e]
     })

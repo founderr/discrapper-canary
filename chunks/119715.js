@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("455555"),
   N = n("398654"),
   p = n("712125"),
-  A = n("311161"),
-  S = n("201131"),
+  S = n("311161"),
+  A = n("201131"),
   C = n("928098"),
   h = n("702873"),
   g = n("592407"),
@@ -56,9 +56,9 @@ function V(e) {
     compact: n
   } = e, {
     notificationType: l
-  } = (0, S.extractAutomodNotificationFields)(t);
+  } = (0, A.extractAutomodNotificationFields)(t);
   switch (l) {
-    case S.IS_BACKWARDS_COMPAT_RAID_TYPE:
+    case A.IS_BACKWARDS_COMPAT_RAID_TYPE:
     case d.AutomodNotificationEmbedTypeKeys.RAID:
       return (0, s.jsx)(K, {
         message: t,
@@ -111,7 +111,7 @@ function W(e) {
   let {
     message: n,
     compact: a
-  } = e, i = P.default.getUser((0, S.getUserIdOfAutomodAction)(n)), r = null === (t = L.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, o = null != r && null != i, u = o ? v.default.getMember(r, i.id) : null, {
+  } = e, i = P.default.getUser((0, A.getUserIdOfAutomodAction)(n)), r = null === (t = L.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, o = null != r && null != i, u = o ? v.default.getMember(r, i.id) : null, {
     avatarSrc: d,
     avatarDecorationSrc: c,
     eventHandlers: E
@@ -198,7 +198,7 @@ function K(e) {
     dmsSent: T,
     raidType: m,
     resolvedReason: h
-  } = (0, S.extractAutomodNotificationFields)(a), g = (0, E.useStateFromStores)([L.default], () => L.default.getChannel(a.channel_id), [a.channel_id]), O = null !== (t = null == g ? void 0 : g.guild_id) && void 0 !== t ? t : null, {
+  } = (0, A.extractAutomodNotificationFields)(a), g = (0, E.useStateFromStores)([L.default], () => L.default.getChannel(a.channel_id), [a.channel_id]), O = null !== (t = null == g ? void 0 : g.guild_id) && void 0 !== t ? t : null, {
     incidentData: R,
     shouldShowIncidentActions: v
   } = (0, N.useGuildIncidentsState)(O), P = (0, M.useContextMenuRaidAlert)(a.author.id, a.channel_id), D = l.useCallback(() => {
@@ -244,7 +244,7 @@ function K(e) {
       variant: "text-md/normal",
       color: "text-muted",
       children: F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
-        dateTime: d.toLocaleString(F.default.getLocale(), A.DATE_CONFIG)
+        dateTime: d.toLocaleString(F.default.getLocale(), S.DATE_CONFIG)
       })
     }) : null,
     footerButtons: (0, s.jsxs)("div", {
@@ -255,7 +255,7 @@ function K(e) {
             let e = {
               source: p.GuildIncidentActionSources.MESSAGE,
               messageId: a.id,
-              alertType: (0, A.getIncidentAlertType)(R)
+              alertType: (0, S.getIncidentAlertType)(R)
             };
             (0, I.openModalLazy)(async () => {
               let {
@@ -310,7 +310,7 @@ function K(e) {
           children: (0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
             color: "text-link",
-            children: (0, S.getRaidAlertResolveCTAText)(h)
+            children: (0, A.getRaidAlertResolveCTAText)(h)
           })
         })
       })]
@@ -327,7 +327,7 @@ function z(e) {
     raidDatetime: r,
     decisionId: u,
     suspiciousMentionActivityUntil: d
-  } = (0, S.extractAutomodNotificationFields)(n);
+  } = (0, A.extractAutomodNotificationFields)(n);
   return (0, s.jsx)(Z, {
     compact: a,
     header: (0, s.jsxs)(l.Fragment, {
@@ -444,7 +444,7 @@ function J(e) {
     }
   } = (0, G.useAutomodAvatar)(!0), {
     notificationType: c
-  } = (0, S.extractAutomodNotificationFields)(l), E = null == c || c === d.AutomodNotificationEmbedTypeKeys.RAID;
+  } = (0, A.extractAutomodNotificationFields)(l), E = null == c || c === d.AutomodNotificationEmbedTypeKeys.RAID;
   return (0, s.jsx)("div", {
     onMouseEnter: o,
     onMouseLeave: u,

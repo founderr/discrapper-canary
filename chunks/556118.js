@@ -47,8 +47,8 @@ var a = n("37983"),
   F = n("227984"),
   U = n("82080"),
   k = n("535993"),
-  w = n("144553"),
-  G = n("862451"),
+  G = n("144553"),
+  w = n("862451"),
   B = n("894488"),
   V = n("49111"),
   W = n("782340"),
@@ -97,7 +97,7 @@ function K(e) {
       replyReference: l,
       author: m
     }),
-    childrenSystemMessage: (0, G.default)(e),
+    childrenSystemMessage: (0, w.default)(e),
     childrenMessageContent: null,
     "aria-labelledby": g,
     "aria-describedby": S,
@@ -174,7 +174,7 @@ function Y(e) {
       onKeyDown: ef,
       onFocus: Y,
       onBlur: q,
-      childrenRepliedMessage: (0, w.default)(e, Q, X, H, et),
+      childrenRepliedMessage: (0, G.default)(e, Q, X, H, et),
       childrenHeader: (0, F.default)({
         messageProps: e,
         setPopout: Q,
@@ -192,7 +192,7 @@ function Y(e) {
         renderComponentAccessory: !1,
         renderSuppressEmbeds: !1
       }),
-      childrenSystemMessage: (0, G.default)(e),
+      childrenSystemMessage: (0, w.default)(e),
       childrenMessageContent: em,
       onMouseMove: es,
       onMouseLeave: el,
@@ -290,7 +290,7 @@ var q = s.memo(function(e) {
     eU = null != eH;
   r = N.type === V.MessageTypes.CUSTOM_GIFT ? "" : !eS && eU ? (0, b.default)(e, eL) : (0, U.default)(e, eL, eS);
   let ek = N.id === Q,
-    ew = (0, a.jsx)(c.FocusRing, {
+    eG = (0, a.jsx)(c.FocusRing, {
       offset: {
         left: 4,
         right: 4
@@ -325,7 +325,7 @@ var q = s.memo(function(e) {
             [Z.automodMessage]: eU
           }),
           zalgo: !eS,
-          childrenRepliedMessage: $ ? void 0 : (0, w.default)(e, eo, ei, ee, el),
+          childrenRepliedMessage: $ ? void 0 : (0, G.default)(e, eo, ei, ee, el),
           childrenExecutedCommand: (0, k.default)(e, eo, ei),
           childrenHeader: $ ? void 0 : (0, F.default)({
             messageProps: e,
@@ -349,7 +349,7 @@ var q = s.memo(function(e) {
             messagePopouts: ei,
             isFocused: eC || ep
           }) : void 0,
-          childrenSystemMessage: (0, G.default)(e),
+          childrenSystemMessage: (0, w.default)(e),
           childrenMessageContent: r,
           onMouseMove: ec,
           onMouseLeave: ef,
@@ -366,6 +366,6 @@ var q = s.memo(function(e) {
       [Z.backgroundFlash]: !0,
       [Z.groupStart]: !q && N.id === Q
     }),
-    children: ew
-  }, "bg-flash-".concat(g)) : ew
+    children: eG
+  }, "bg-flash-".concat(g)) : eG
 })

@@ -80,11 +80,11 @@ function R(e) {
     E.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P("/", (0, A.toRichValue)("/"))
   }
 
-  function w() {
+  function G() {
     b()
   }
 
-  function G() {
+  function w() {
     (0, i.openModalLazy)(async () => {
       let {
         default: e
@@ -181,13 +181,13 @@ function R(e) {
           return (0, a.jsx)(i.MenuItem, {
             id: "clips",
             label: s,
-            action: w
+            action: G
           }, "clips");
         case T.AttachmentTypes.POLL:
           return (0, a.jsx)(i.MenuItem, {
             id: "poll",
             label: s,
-            action: G
+            action: w
           }, "poll");
         case T.AttachmentTypes.INVITE_TO_PLAY_GAME:
           return (0, a.jsx)(i.MenuItem, {

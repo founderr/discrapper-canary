@@ -34,9 +34,9 @@ var i = n("642852"),
   f = n("65722"),
   S = n("736880"),
   E = n("49111"),
-  h = n("724210");
+  _ = n("724210");
 r.shim();
-let _ = {};
+let h = {};
 
 function g(e) {
   let t = (0, l.default)([o.default], () => o.default.getChannel(e)),
@@ -90,8 +90,8 @@ function C(e) {
 
 function I(e) {
   let t = C(e);
-  _[e] = t, t.forEach(e => {
-    let t = e.set("flags", h.ChannelFlags.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+  h[e] = t, t.forEach(e => {
+    let t = e.set("flags", _.ChannelFlags.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
     s.default.dispatch({
       type: "CHANNEL_CREATE",
       channel: t
@@ -101,7 +101,7 @@ function I(e) {
 
 function m(e) {
   var t;
-  let n = null !== (t = _[e]) && void 0 !== t ? t : C(e);
+  let n = null !== (t = h[e]) && void 0 !== t ? t : C(e);
   n.forEach(e => {
     s.default.dispatch({
       type: "CHANNEL_DELETE",

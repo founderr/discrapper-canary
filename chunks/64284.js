@@ -19,19 +19,19 @@ var a = s("37983"),
     var t;
     let {
       guildId: s
-    } = e, I = (0, n.useStateFromStores)([d.default], () => d.default.get(s)), [f, T] = l.useState(null), [S, m] = l.useState(null !== (t = null == I ? void 0 : I.description) && void 0 !== t ? t : ""), N = l.useRef(!1), g = l.useRef(!1);
+    } = e, I = (0, n.useStateFromStores)([d.default], () => d.default.get(s)), [T, f] = l.useState(null), [S, m] = l.useState(null !== (t = null == I ? void 0 : I.description) && void 0 !== t ? t : ""), N = l.useRef(!1), g = l.useRef(!1);
     l.useEffect(() => () => {
       g.current = !0
     }, []);
     let h = l.useCallback(async () => {
       if (!N.current) {
-        T(null);
+        f(null);
         try {
           await o.default.updateVerificationFormDescription(s, S)
         } catch (t) {
           if (g.current) return;
           let e = new r.APIError(t);
-          T(e.getAnyErrorMessage())
+          f(e.getAnyErrorMessage())
         } finally {
           if (g.current) return;
           N.current = !1
@@ -50,11 +50,11 @@ var a = s("37983"),
         },
         onBlur: h,
         autosize: !0
-      }), null != f && "" !== f ? (0, a.jsx)(i.Text, {
+      }), null != T && "" !== T ? (0, a.jsx)(i.Text, {
         className: _.errorText,
         variant: "text-xs/normal",
         color: "text-danger",
-        children: f
+        children: T
       }) : null]
     })
   }

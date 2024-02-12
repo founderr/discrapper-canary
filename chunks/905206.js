@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   reactionForId: function() {
-    return S
+    return A
   },
   isPollMessageDirectlyInteractive: function() {
     return h
@@ -30,14 +30,14 @@ var s = n("506838"),
   m = n("973799"),
   N = n("49111"),
   p = n("782340");
-let A = {
+let S = {
   channelId: "",
   selectedAnswerIds: new Set,
   submitting: !1,
   editing: !1
 };
 
-function S(e, t) {
+function A(e, t) {
   for (let n of e) {
     let e = "number" == typeof n.emoji.id ? "".concat(n.emoji.id) : n.emoji.id;
     if (e === t) return n
@@ -79,7 +79,7 @@ function g(e, t) {
       selectedAnswerIds: d,
       submitting: c,
       editing: E
-    } = null !== (n = null != t ? t : (0, f.getPollState)(e.getChannelId(), e.id)) && void 0 !== n ? n : A,
+    } = null !== (n = null != t ? t : (0, f.getPollState)(e.getChannelId(), e.id)) && void 0 !== n ? n : S,
     _ = e.reactions,
     T = !0;
   if (!h(e)) {
@@ -88,17 +88,17 @@ function g(e, t) {
   }
   let I = d.size > 0,
     p = _.some(e => !0 === e.me_vote),
-    S = !E && p,
-    C = T && (S || u);
+    A = !E && p,
+    C = T && (A || u);
   return {
     poll: a,
     canTapAnswers: i && (!p || E || C),
-    canEditVote: !c && S && i && !u,
+    canEditVote: !c && A && i && !u,
     canShowVoteCounts: C,
-    canSubmitVote: !c && I && !S && i,
+    canSubmitVote: !c && I && !A && i,
     expirationLabel: r,
     hasSelectedAnswer: I,
-    hasVoted: S,
+    hasVoted: A,
     hasVoteRecorded: p,
     isEditingVote: E,
     isExpired: u,
@@ -115,7 +115,7 @@ function M(e, t, n) {
   var o, f, m;
   let {
     animateEmoji: N = !1,
-    theme: A = "dark",
+    theme: S = "dark",
     formattedExpirationLabel: h
   } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, {
     poll: M
@@ -151,12 +151,12 @@ function M(e, t, n) {
     return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
   }, 0), z = Math.max(...v.map(e => {
     var t, n;
-    let s = S(H, "".concat(e.answer_id));
+    let s = A(H, "".concat(e.answer_id));
     return null !== (n = null == s ? void 0 : null === (t = s.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
   })), Z = v.map(e => {
     var t, n, r;
     let o = "".concat(e.answer_id),
-      u = S(H, o),
+      u = A(H, o),
       E = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
       f = V.has(o),
       _ = F ? E >= z && 0 !== E : void 0,
@@ -296,7 +296,7 @@ function M(e, t, n) {
     }, () => p.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID).otherwise(() => void 0),
     layoutType: P,
     resources: (0, I.default)({
-      theme: A,
+      theme: S,
       layoutType: P
     }),
     containerStyle: X,

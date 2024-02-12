@@ -16,9 +16,9 @@ n.r(t), n.d(t, {
 var r, i, l, u, a, o, s = n("746379"),
   d = n("810793");
 n("355025");
-var E = n("9294");
+var _ = n("9294");
 n("42793");
-var _ = n("337543"),
+var E = n("337543"),
   c = n("655518"),
   I = n("253981"),
   S = n("139514"),
@@ -29,8 +29,8 @@ let f = /^\/([a-zA-Z0-9-]+)$/,
   A = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
   R = /^\/application-directory\/([0-9-]+)\/?$/,
   C = /^\/activities\/([0-9-]+)\/?$/,
-  O = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-  L = /^\/channels\/([0-9]+)\/shop$/,
+  L = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+  O = /^\/channels\/([0-9]+)\/shop$/,
   h = /^\/clyde-profiles\/([0-9-]+)\/?$/,
   P = /^dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+$/i,
   g = w(window.GLOBAL_ENV.INVITE_HOST),
@@ -98,14 +98,14 @@ function V(e) {
         }))
       };
     if ((null == i ? void 0 : i.match(f)) != null) {
-      let e = (0, E.generateInviteKeyFromUrlParams)(i.substring(1), r.search);
-      _.default.getInvite(e), I(S.CodedLinkType.INVITE, e)
+      let e = (0, _.generateInviteKeyFromUrlParams)(i.substring(1), r.search);
+      E.default.getInvite(e), I(S.CodedLinkType.INVITE, e)
     }(null == s ? void 0 : s.match(f)) != null && I(S.CodedLinkType.TEMPLATE, s.substring(1));
     let T = null == c ? void 0 : c.match(N);
     if (null != T) {
       let e = T[1].toUpperCase();
       if (e === S.CodedLinkType.INVITE) {
-        let e = (0, E.generateInviteKeyFromUrlParams)(T[2], r.search);
+        let e = (0, _.generateInviteKeyFromUrlParams)(T[2], r.search);
         I(S.CodedLinkType.INVITE, e)
       } else I(e, T[2])
     }(null == c ? void 0 : c.match(p)) != null && I(S.CodedLinkType.CHANNEL_LINK, c.replace("/channels/", ""));
@@ -141,9 +141,9 @@ function V(e) {
       let e = w[1];
       I(S.CodedLinkType.ACTIVITY_BOOKMARK, e)
     }
-    let V = null == c ? void 0 : c.match(O);
+    let V = null == c ? void 0 : c.match(L);
     null != V && I(S.CodedLinkType.GUILD_PRODUCT, "".concat(V[1], "-").concat(V[2]));
-    let H = null == c ? void 0 : c.match(L);
+    let H = null == c ? void 0 : c.match(O);
     null != H && I(S.CodedLinkType.SERVER_SHOP, H[1])
   }
   return n

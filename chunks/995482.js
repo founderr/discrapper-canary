@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 }), s("222007"), s("860677");
 var a = s("37983"),
@@ -67,7 +67,7 @@ let I = l.forwardRef(function(e, t) {
   })
 });
 
-function f(e) {
+function T(e) {
   var t;
   let {
     initialValue: s,
@@ -75,8 +75,8 @@ function f(e) {
     onChangeNewTagValue: o,
     tagErrors: u = {},
     placeholder: _,
-    className: f,
-    maxTags: T
+    className: T,
+    maxTags: f
   } = e, S = l.useRef(null), m = l.useRef(null), N = l.useRef(null), g = (0, c.useChipletState)(s), {
     handlePasteEvent: h,
     handleInputChange: C,
@@ -128,7 +128,7 @@ function f(e) {
       } else A(e, !0), b(!0)
     }, [p, A, G, j]);
   return (0, a.jsxs)("div", {
-    className: i(E.mainContainer, f),
+    className: i(E.mainContainer, T),
     ref: m,
     tabIndex: 0,
     onKeyUp: x,
@@ -157,11 +157,11 @@ function f(e) {
         placeholder: 0 === j.length ? _ : void 0,
         value: v
       })]
-    }), null != T && (0, a.jsxs)(r.Text, {
+    }), null != f && (0, a.jsxs)(r.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
       className: E.maxTags,
-      children: [null !== (t = null == j ? void 0 : j.length) && void 0 !== t ? t : 0, "/", T]
+      children: [null !== (t = null == j ? void 0 : j.length) && void 0 !== t ? t : 0, "/", f]
     })]
   })
 }

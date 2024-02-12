@@ -21,15 +21,15 @@ var s = n("37983"),
   m = n("666897"),
   N = n("49111"),
   p = n("406291"),
-  A = n("782340"),
-  S = n("532560");
+  S = n("782340"),
+  A = n("532560");
 let C = {
     tag: "span",
     variant: "text-md/normal",
     color: "header-secondary"
   },
   h = {
-    className: i("mention", S.mention)
+    className: i("mention", A.mention)
   };
 
 function g(e) {
@@ -57,13 +57,13 @@ var M = l.memo(function(e) {
       (null == P || P.type === u.ApplicationCommandType.CHAT && void 0 === P.application_command) && c.fetchMessageInteractionData(L.id, v)
     }, [L.id, v, P]), null == P) R = (0, s.jsx)(o.Spinner, {
     type: o.Spinner.Type.SPINNING_CIRCLE,
-    className: S.spinner
+    className: A.spinner
   });
   else {
     let e = [],
       t = Object.fromEntries((null !== (i = null === (n = P.application_command) || void 0 === n ? void 0 : n.options) && void 0 !== i ? i : []).map(e => [e.name, e]));
     for (let n of null !== (M = P.options) && void 0 !== M ? M : []) e = e.concat(function e(t, n, a, i, r) {
-      var d, c, T, S, M, O, R;
+      var d, c, T, A, M, O, R;
       let L;
       let v = null != i ? i + " " + t.name : t.name;
       if (t.type === u.ApplicationCommandOptionType.SUB_COMMAND || t.type === u.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
@@ -74,7 +74,7 @@ var M = l.memo(function(e) {
             })]
           }, v)],
           u = Object.fromEntries(null === (d = null !== (T = null == r ? void 0 : r.options) && void 0 !== T ? T : []) || void 0 === d ? void 0 : d.map(e => [e.name, e]));
-        for (let s of null !== (S = t.options) && void 0 !== S ? S : []) i = i.concat(e(s, n, a, v, u[s.name]));
+        for (let s of null !== (A = t.options) && void 0 !== A ? A : []) i = i.concat(e(s, n, a, v, u[s.name]));
         return i
       }
       let P = t.value;
@@ -142,7 +142,7 @@ var M = l.memo(function(e) {
           break
         }
         case u.ApplicationCommandOptionType.ATTACHMENT:
-          L = g(A.default.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
+          L = g(S.default.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
           break;
         default: {
           let e = null == r ? void 0 : null === (M = r.choices) || void 0 === M ? void 0 : M.find(e => e.value === t.value);
@@ -164,18 +164,18 @@ var M = l.memo(function(e) {
     })
   }
   return (0, s.jsxs)("div", {
-    className: S.container,
+    className: A.container,
     onCopy: e => {
       var t, n, s;
       let l = null !== (s = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== s ? s : "";
       l.startsWith("/") && l.endsWith("\n") && D(e, P)
     },
     children: [(0, s.jsx)("div", {
-      className: S.tooltip,
+      className: A.tooltip,
       ref: x,
       children: R
     }), (0, s.jsx)("div", {
-      className: S.tooltipPointer
+      className: A.tooltipPointer
     })]
   })
 })

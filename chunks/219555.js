@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 }), s("222007");
 var a = s("37983"),
@@ -23,7 +23,7 @@ let I = l.forwardRef(function(e, t) {
     isEditing: u,
     forceShowErrorTooltip: c = !1,
     error: E
-  } = e, [I, f, T] = l.useMemo(() => {
+  } = e, [I, T, f] = l.useMemo(() => {
     if (null == E) return [];
     let {
       erroringCharacterOffset: e = 0,
@@ -39,14 +39,14 @@ let I = l.forwardRef(function(e, t) {
     ref: t,
     children: r
   });
-  let S = (null !== (s = null == I ? void 0 : I.length) && void 0 !== s ? s : 0) + (null !== (n = null == f ? void 0 : f.length) && void 0 !== n ? n : 0) > 70;
+  let S = (null !== (s = null == I ? void 0 : I.length) && void 0 !== s ? s : 0) + (null !== (n = null == T ? void 0 : T.length) && void 0 !== n ? n : 0) > 70;
   return S ? (0, a.jsx)(o.Tooltip, {
     "aria-label": E.message,
     text: () => (0, a.jsxs)("div", {
       "aria-label": E.message,
       children: [E.message, " ", (0, a.jsx)("span", {
         className: _.errorOverflowValue,
-        children: f
+        children: T
       })]
     }),
     tooltipClassName: _.errorTooltip,
@@ -65,9 +65,9 @@ let I = l.forwardRef(function(e, t) {
         children: I
       }), (0, a.jsx)("span", {
         className: _.errorValue,
-        children: f
-      }), (0, a.jsx)("span", {
         children: T
+      }), (0, a.jsx)("span", {
+        children: f
       })]
     })
   }) : (0, a.jsxs)("div", {
@@ -86,21 +86,21 @@ let I = l.forwardRef(function(e, t) {
       children: e => (0, a.jsx)("span", {
         ...e,
         className: _.errorValue,
-        children: f
+        children: T
       })
     }), (0, a.jsx)("span", {
-      children: T
+      children: f
     })]
   })
 });
 
-function f(e) {
+function T(e) {
   let {
     value: t,
     onChange: s,
     onBlur: n,
-    onFocus: f,
-    onRemove: T,
+    onFocus: T,
+    onRemove: f,
     isSelected: S,
     isSelecting: m,
     error: N,
@@ -125,23 +125,23 @@ function f(e) {
     P = l.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         s = t.trim().length <= 0;
-      if (s && T(), null != h.current && null != L.current && null != C.current) {
+      if (s && f(), null != h.current && null != L.current && null != C.current) {
         var a;
         h.current.scrollTo(0, 0), h.current.setSelectionRange(0, 0), h.current.scrollLeft = 0, L.current.scrollLeft = 0, (null === (a = C.current) || void 0 === a ? void 0 : a.ref) != null && (C.current.ref.scrollLeft = 0)
       }
       x(!1), n(e)
-    }, [t, L, n, T]),
+    }, [t, L, n, f]),
     b = l.useCallback(e => {
       let s = t.trim().length <= 0;
       E.NEXT_CHIP_INPUT_KEY.has(e.key) ? (e.preventDefault(), e.stopPropagation(), P(!0)) : "Backspace" === e.key && s && (e.preventDefault(), e.stopPropagation(), P(!0))
     }, [P, t]),
     B = l.useCallback(e => {
       let t = e.metaKey || e.ctrlKey;
-      f(t), t ? e.preventDefault() : x(!0), e.stopPropagation()
-    }, [f]),
+      T(t), t ? e.preventDefault() : x(!0), e.stopPropagation()
+    }, [T]),
     y = l.useCallback(e => {
-      T()
-    }, [T]);
+      f()
+    }, [f]);
   return (0, a.jsx)("div", {
     className: _.chipletFlexContainer,
     children: (0, a.jsxs)("div", {

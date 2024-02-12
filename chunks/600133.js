@@ -24,8 +24,8 @@ var s = n("866227"),
   m = n("180273"),
   N = n("579565"),
   p = n("789563"),
-  A = n("619443"),
-  S = n("875037"),
+  S = n("619443"),
+  A = n("875037"),
   C = n("398654"),
   h = n("54346"),
   g = n("681937"),
@@ -78,8 +78,8 @@ var s = n("866227"),
   em = n("167726"),
   eN = n("773336"),
   ep = n("719923"),
-  eA = n("189459"),
-  eS = n("316661"),
+  eS = n("189459"),
+  eA = n("316661"),
   eC = n("352326"),
   eh = n("49111"),
   eg = n("492397"),
@@ -253,14 +253,14 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [eh.NoticeTypes.DISPATCH_ERROR]: {
-      predicate: () => null != eA.default.getLastError(),
+      predicate: () => null != eS.default.getLastError(),
       metadata: () => ({
-        error: eA.default.getLastError()
+        error: eS.default.getLastError()
       })
     },
     [eh.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS]: {
-      predicate: () => null != eS.default.getLastProgress(),
-      metadata: () => eS.default.getLastProgress()
+      predicate: () => null != eA.default.getLastProgress(),
+      metadata: () => eA.default.getLastProgress()
     },
     [eh.NoticeTypes.SPOTIFY_AUTO_PAUSED]: {
       predicate: () => F.default.wasAutoPaused()
@@ -347,7 +347,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           selectedGuildId: t
         } = e;
-        return null != t && S.default.getCurrentConfig({
+        return null != t && A.default.getCurrentConfig({
           location: "notice_store"
         }).showSurvey && !eG(eh.NoticeTypes.SERVER_USAGE_SURVEY)
       },
@@ -657,7 +657,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
   };
 
 function ew() {
-  if (!A.default.isConnected()) return !1;
+  if (!S.default.isConnected()) return !1;
   eU = null;
   let e = ed.default.getCurrentUser();
   if (null == e) return !1;
@@ -696,7 +696,7 @@ function eH() {
 }
 class eV extends a.default.Store {
   initialize() {
-    this.syncWith([eo.default, et.default, J.default, ea.default, b.default, eT.default, W.default, Z.default, V.default, h.default, v.default], ew), this.waitFor(ed.default, ei.default, X.default, Q.default, en.default, q.default, er.default, p.default, ea.default, eu.default, F.default, es.default, et.default, eA.default, eS.default, em.default, $.default, e_.default, eC.default, J.default, ef.default, ee.default, b.default, eI.default, eT.default, Z.default, L.default, m.default, T.default, B.default)
+    this.syncWith([eo.default, et.default, J.default, ea.default, b.default, eT.default, W.default, Z.default, V.default, h.default, v.default], ew), this.waitFor(ed.default, ei.default, X.default, Q.default, en.default, q.default, er.default, p.default, ea.default, eu.default, F.default, es.default, et.default, eS.default, eA.default, em.default, $.default, e_.default, eC.default, J.default, ef.default, ee.default, b.default, eI.default, eT.default, Z.default, L.default, m.default, T.default, B.default)
   }
   hasNotice() {
     return null != eU && null != eU.type

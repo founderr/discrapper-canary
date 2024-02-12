@@ -27,8 +27,8 @@ function E(e) {
     onClick: m,
     className: N,
     source: p,
-    storeListingAnalyticsProperties: A,
-    pauseAnimation: S,
+    storeListingAnalyticsProperties: S,
+    pauseAnimation: A,
     hover: C,
     innerClassName: h
   } = e, g = {
@@ -50,8 +50,8 @@ function E(e) {
     ...g,
     skuId: null != M ? M.sku.id : null,
     applicationId: t.id,
-    pauseAnimation: S,
-    storeListingAnalyticsProperties: A
+    pauseAnimation: A,
+    storeListingAnalyticsProperties: S
   }) : (0, s.jsx)(d.default, {
     ...g,
     hideNotLaunchable: T,

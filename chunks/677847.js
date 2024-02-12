@@ -21,9 +21,9 @@ function I() {
   let {
     editStateId: e,
     guildId: t
-  } = (0, o.useEditStateContext)(), [s, I] = d.useChannelBenefits(e), f = l.useMemo(() => new Set(s.map(e => e.ref_id)), [s]);
+  } = (0, o.useEditStateContext)(), [s, I] = d.useChannelBenefits(e), T = l.useMemo(() => new Set(s.map(e => e.ref_id)), [s]);
 
-  function T(e, t) {
+  function f(e, t) {
     let {
       channelId: a,
       description: l,
@@ -47,9 +47,9 @@ function I() {
         (0, n.openModal)(l => (0, a.jsx)(u.EditChannelBenefitModal, {
           ...l,
           guildId: t,
-          omitChannelIds: f,
+          omitChannelIds: T,
           initialData: s[e],
-          onSave: t => T(t, e),
+          onSave: t => f(t, e),
           onDelete: () => (function(e) {
             let t = [...s];
             t.splice(e, 1), I(t)
@@ -69,8 +69,8 @@ function I() {
         (0, n.openModal)(e => (0, a.jsx)(u.EditChannelBenefitModal, {
           ...e,
           guildId: t,
-          omitChannelIds: f,
-          onSave: e => T(e)
+          omitChannelIds: T,
+          onSave: e => f(e)
         }))
       },
       disabled: S,

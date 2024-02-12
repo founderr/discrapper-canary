@@ -19,8 +19,8 @@ var s, l, a = n("37983"),
   m = n("697218"),
   N = n("476765"),
   p = n("599110"),
-  A = n("98013"),
-  S = n("439932"),
+  S = n("98013"),
+  A = n("439932"),
   C = n("49111"),
   h = n("782340"),
   g = n("777016");
@@ -28,21 +28,21 @@ var s, l, a = n("37983"),
 let M = [{
     getOs: () => h.default.Messages.PLATFORM_MACOS,
     icon: g.apple,
-    url: () => (0, A.makeDesktopDownloadURL)("osx", !1),
+    url: () => (0, S.makeDesktopDownloadURL)("osx", !1),
     platformKey: 0
   }, {
     getOs: () => h.default.Messages.PLATFORM_WINDOWS,
     icon: g.windows,
-    url: () => (0, A.makeDesktopDownloadURL)("win", !1),
+    url: () => (0, S.makeDesktopDownloadURL)("win", !1),
     platformKey: 1
   }, {
     getOs: () => h.default.Messages.PLATFORM_LINUX,
     icon: g.linux,
     url: [{
-      url: () => (0, A.makeDesktopDownloadURL)("linux", !1, "deb"),
+      url: () => (0, S.makeDesktopDownloadURL)("linux", !1, "deb"),
       getText: () => h.default.Messages.DEB
     }, {
-      url: () => (0, A.makeDesktopDownloadURL)("linux", !1, "tar.gz"),
+      url: () => (0, S.makeDesktopDownloadURL)("linux", !1, "tar.gz"),
       getText: () => h.default.Messages.TAR_GZ
     }],
     platformKey: 2
@@ -58,7 +58,7 @@ let M = [{
     url: () => C.DownloadLinks.ANDROID,
     platformKey: 4
   }],
-  R = (0, S.getThemeClass)(C.ThemeTypes.LIGHT),
+  R = (0, A.getThemeClass)(C.ThemeTypes.LIGHT),
   L = e => {
     let {
       url: t,
@@ -140,7 +140,7 @@ function P(e) {
     source: t,
     onClose: n,
     transitionState: s
-  } = e, l = (0, f.useStateFromStores)([m.default], () => m.default.getCurrentUser()), r = (0, f.useStateFromStores)([I.default], () => I.default.getFingerprint()), u = null == l || l.isClaimed(), [A, S] = i.useState(function() {
+  } = e, l = (0, f.useStateFromStores)([m.default], () => m.default.getCurrentUser()), r = (0, f.useStateFromStores)([I.default], () => I.default.getFingerprint()), u = null == l || l.isClaimed(), [S, A] = i.useState(function() {
     var e;
     switch (null === (e = d.os) || void 0 === e ? void 0 : e.family) {
       case "OS X":
@@ -175,7 +175,7 @@ function P(e) {
   }
 
   function P(e) {
-    S(e)
+    A(e)
   }
   i.useEffect(() => {
     p.default.track(C.AnalyticEvents.OPEN_MODAL, {
@@ -213,7 +213,7 @@ function P(e) {
             children: (0, a.jsx)("ul", {
               className: g.platforms,
               children: M.map(e => (0, a.jsx)(v, {
-                isActive: A === e.platformKey,
+                isActive: S === e.platformKey,
                 platform: e,
                 onClick: L,
                 onMouseEnter: P,
@@ -234,7 +234,7 @@ function P(e) {
             children: [(0, a.jsx)("ul", {
               className: g.platforms,
               children: O.map(e => (0, a.jsx)(v, {
-                isActive: A === e.platformKey,
+                isActive: S === e.platformKey,
                 platform: e,
                 onClick: L,
                 onMouseEnter: P,

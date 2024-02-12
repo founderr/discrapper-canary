@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("84460"),
   N = n("299285"),
   p = n("661579"),
-  A = n("393414"),
-  S = n("915639"),
+  S = n("393414"),
+  A = n("915639"),
   C = n("697218"),
   h = n("437712"),
   g = n("622839"),
@@ -118,10 +118,10 @@ class G extends l.Component {
         sku: m,
         entitlementBranchId: N,
         isInTestMode: p,
-        innerClassName: A
+        innerClassName: S
       } = this.props,
-      S = !0 === T && (null == m || m.type !== U.SKUTypes.CONSUMABLE),
-      C = !0 === n.disabled || null != m && !m.available && !(null != N) && !p || S && !I,
+      A = !0 === T && (null == m || m.type !== U.SKUTypes.CONSUMABLE),
+      C = !0 === n.disabled || null != m && !m.available && !(null != N) && !p || A && !I,
       h = n.disabledTooltipText,
       g = {
         wrapperClassName: a,
@@ -130,7 +130,7 @@ class G extends l.Component {
         size: d,
         color: C && null != f ? f : null != E ? E : u.Button.Colors.GREEN,
         hover: this.hover,
-        innerClassName: i(null != A ? A : null, b.applicationBuyButton),
+        innerClassName: i(null != S ? S : null, b.applicationBuyButton),
         disabled: C,
         submitting: l || !0 === n.submitting,
         onClick: null != n.onClick ? n.onClick : this.handleClick
@@ -231,7 +231,7 @@ class G extends l.Component {
         let e = {
           redirect_to: U.Routes.APPLICATION_STORE_LISTING_SKU(s.id, s.slug)
         };
-        (0, A.transitionTo)(U.Routes.LOGIN, {
+        (0, S.transitionTo)(U.Routes.LOGIN, {
           search: (0, r.stringify)(e)
         });
         return
@@ -290,7 +290,7 @@ var B = l.forwardRef((e, t) => {
       o = null != s ? h.default.isEntitledToSku(t, s, l, r) : null,
       u = x.default.canInstallPremiumApplications(t);
     return [e, t, a, o, u, s]
-  }), p = (0, o.useStateFromStores)([R.default], () => R.default.isFocused()), A = (0, o.useStateFromStores)([g.default], () => g.default.isPurchasingSKU), L = (0, o.useStateFromStores)([S.default], () => S.default.locale), v = (0, I.useAnalyticsContext)();
+  }), p = (0, o.useStateFromStores)([R.default], () => R.default.isFocused()), S = (0, o.useStateFromStores)([g.default], () => g.default.isPurchasingSKU), L = (0, o.useStateFromStores)([A.default], () => A.default.locale), v = (0, I.useAnalyticsContext)();
   if (null != n && null == a) throw Error("Unexpected entitlementBranchId without a channelId");
   return (0, s.jsx)(G, {
     ...r,
@@ -305,7 +305,7 @@ var B = l.forwardRef((e, t) => {
     isEntitled: f,
     isUserPremium: _,
     isWindowFocused: p,
-    isPurchasing: A,
+    isPurchasing: S,
     locale: L,
     analyticsContext: v,
     ref: t,

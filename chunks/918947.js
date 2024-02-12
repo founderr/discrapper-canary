@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 }), s("222007");
 var a = s("37983"),
@@ -16,9 +16,9 @@ var a = s("37983"),
   E = s("316497"),
   _ = s("49111"),
   I = s("782340"),
-  f = s("273899");
+  T = s("273899");
 
-function T(e) {
+function f(e) {
   let {
     guild: t,
     everyoneRole: s,
@@ -41,7 +41,7 @@ function T(e) {
       tag: r.FormTitleTags.H1,
       children: I.default.Messages.ROLES
     }), (0, a.jsx)(r.Text, {
-      className: f.description,
+      className: T.description,
       color: "header-secondary",
       variant: "text-sm/normal",
       children: I.default.Messages.ROLE_OVERVIEW_DESCRIPTION
@@ -74,30 +74,30 @@ function S(e) {
       query: n,
       setQuery: o
     }), (0, a.jsx)(r.Text, {
-      className: f.helpText,
+      className: T.helpText,
       color: "header-secondary",
       variant: "text-sm/normal",
       children: I.default.Messages.ROLE_LIST_BODY_WITH_HELP.format({
         articleURL: u.default.getArticleURL(_.HelpdeskArticles.PERMISSIONS_TUTORIAL)
       })
     }), (0, a.jsx)("div", {
-      className: f.rolesTable,
+      className: T.rolesTable,
       children: (0, a.jsxs)("div", {
-        className: f.tableHeader,
+        className: T.tableHeader,
         children: [(0, a.jsx)("div", {
-          className: f.dragSpacing
+          className: T.dragSpacing
         }), (0, a.jsx)(r.Text, {
-          className: i(f.tableTitle, f.roleNameSpacing),
+          className: i(T.tableTitle, T.roleNameSpacing),
           variant: "text-sm/normal",
           children: I.default.Messages.ROLE_LIST_HEADER.format({
             numRoles: String(l.length)
           })
         }), (0, a.jsx)(r.Text, {
-          className: i(f.tableTitle, f.memberSpacing),
+          className: i(T.tableTitle, T.memberSpacing),
           variant: "text-sm/normal",
           children: I.default.Messages.MEMBERS
         }), (0, a.jsx)("div", {
-          className: f.buttonsSpacing
+          className: T.buttonsSpacing
         })]
       })
     })]
@@ -117,9 +117,9 @@ function m(e) {
     u(!0), await o.default.createRole(t.id), u(!1)
   };
   return (0, a.jsx)("div", {
-    className: f.rolesList,
+    className: T.rolesList,
     children: (0, a.jsxs)("div", {
-      className: f.searchContainer,
+      className: T.searchContainer,
       children: [(0, a.jsx)(d.default, {
         size: d.default.Sizes.MEDIUM,
         query: s,
@@ -128,7 +128,7 @@ function m(e) {
         placeholder: I.default.Messages.SEARCH_ROLES,
         "aria-label": I.default.Messages.SEARCH_ROLES
       }), (0, a.jsx)(r.Button, {
-        className: f.createButton,
+        className: T.createButton,
         size: r.Button.Sizes.SMALL,
         onClick: _,
         submitting: i,

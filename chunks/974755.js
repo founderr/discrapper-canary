@@ -17,8 +17,8 @@ var r = n("414456"),
   f = n("697218"),
   S = n("580357"),
   E = n("40469"),
-  h = n("427459"),
-  _ = n("49111"),
+  _ = n("427459"),
+  h = n("49111"),
   g = n("782340"),
   p = n("129818");
 
@@ -34,17 +34,17 @@ function C(e) {
     premiumTier: o,
     premiumSubscriberCount: S
   } = t;
-  if (0 === S && o === _.BoostedGuildTiers.NONE) return null;
+  if (0 === S && o === h.BoostedGuildTiers.NONE) return null;
   let E = e => {
       e.stopPropagation(), e.preventDefault(), l && !r && (0, a.openGuildBoostingMarketingModal)({
         guildId: t.id,
         location: {
-          section: _.AnalyticsSections.GUILD_HEADER,
-          object: _.AnalyticsObjects.BOOST_GEM_ICON
+          section: h.AnalyticsSections.GUILD_HEADER,
+          object: h.AnalyticsObjects.BOOST_GEM_ICON
         }
       })
     },
-    C = o === _.BoostedGuildTiers.NONE ? g.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.getTierName(o),
+    C = o === h.BoostedGuildTiers.NONE ? g.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : _.getTierName(o),
     I = (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("div", {
         className: p.tierTooltipTitle,
@@ -68,7 +68,7 @@ function C(e) {
         children: (0, i.jsx)(d.default, {
           premiumTier: o,
           iconBackgroundClassName: n ? p.boostedGuildTierIconBackgroundWithVisibleBanner : null,
-          iconClassName: n && o !== _.BoostedGuildTiers.TIER_3 ? p.boostedGuildTierMutedIconWithVisibleBanner : null
+          iconClassName: n && o !== h.BoostedGuildTiers.TIER_3 ? p.boostedGuildTierMutedIconWithVisibleBanner : null
         })
       })
     })
@@ -116,7 +116,7 @@ function m(e) {
     disableColor: !1,
     disableBoostClick: r
   });
-  let s = t.hasFeature(_.GuildFeatures.VERIFIED) || t.hasFeature(_.GuildFeatures.PARTNERED);
+  let s = t.hasFeature(h.GuildFeatures.VERIFIED) || t.hasFeature(h.GuildFeatures.PARTNERED);
   return s ? (0, i.jsx)(I, {
     guild: t,
     disableColor: !n

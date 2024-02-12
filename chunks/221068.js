@@ -41,8 +41,8 @@ var a = n("37983"),
   F = n("699473"),
   U = n("556118"),
   k = n("342009"),
-  w = n("97810"),
-  G = n("933629"),
+  G = n("97810"),
+  w = n("933629"),
   B = n("88243"),
   V = n("753089"),
   W = n("210062"),
@@ -130,7 +130,7 @@ function Q(e) {
           item: e,
           channel: u,
           isBeforeGroup: null == e.content && X(ee[t + 1])
-        }) : (0, a.jsx)(w.default, {
+        }) : (0, a.jsx)(G.default, {
           isUnread: l,
           isBeforeGroup: null == e.content && X(ee[t + 1]),
           id: l ? z.NEW_MESSAGE_BAR_ID : void 0,
@@ -258,7 +258,7 @@ function Q(e) {
             },
             children: n
           });
-          s = (0, a.jsx)(G.NewTopicsBar, {
+          s = (0, a.jsx)(w.NewTopicsBar, {
             scrollManager: en,
             content: e,
             channel: u
@@ -287,13 +287,13 @@ function Q(e) {
               children: n
             })
           });
-          s = (0, a.jsx)(G.NewMessagesBar, {
+          s = (0, a.jsx)(w.NewMessagesBar, {
             content: e,
             channelId: u.id
           })
         }
       }
-    } else eh.includes(Z.ChatOverlays.NEW_MESSAGES) && (s = (0, a.jsx)(G.NewMessagesBar, {
+    } else eh.includes(Z.ChatOverlays.NEW_MESSAGES) && (s = (0, a.jsx)(w.NewMessagesBar, {
       content: e.format({
         count: F,
         timestamp: l
@@ -301,10 +301,10 @@ function Q(e) {
       channelId: u.id
     }))
   }
-  if (null == s && (0, d.canSeeChannelSummaries)(u) && ec && eh.includes(Z.ChatOverlays.SUMMARIES) && (s = (0, a.jsx)(G.TopicsPill, {
+  if (null == s && (0, d.canSeeChannelSummaries)(u) && ec && eh.includes(Z.ChatOverlays.SUMMARIES) && (s = (0, a.jsx)(w.TopicsPill, {
       channel: u,
       scrollManager: en
-    })), x.error) l = (0, a.jsx)(G.ErrorLoadingBar, {
+    })), x.error) l = (0, a.jsx)(w.ErrorLoadingBar, {
     loading: x.loadingMore,
     onClick: () => {
       var e;
@@ -319,8 +319,8 @@ function Q(e) {
     let {
       jumpReturnTargetId: e
     } = x;
-    l = x.loadingMore && x.jumpedToPresent ? (0, a.jsx)(G.JumpToPresentBar, {}) : null != e ? (0, a.jsx)(G.JumpToPresentBar, {
-      type: G.JumpBarType.REPLY,
+    l = x.loadingMore && x.jumpedToPresent ? (0, a.jsx)(w.JumpToPresentBar, {}) : null != e ? (0, a.jsx)(w.JumpToPresentBar, {
+      type: w.JumpBarType.REPLY,
       onClick: () => {
         var t, n;
         return t = u, n = e, void o.default.jumpToMessage({
@@ -329,7 +329,7 @@ function Q(e) {
           flash: !0
         })
       }
-    }) : (0, a.jsx)(G.JumpToPresentBar, {
+    }) : (0, a.jsx)(w.JumpToPresentBar, {
       onClick: () => (function(e) {
         o.default.jumpToPresent(e.id, K.MAX_MESSAGES_PER_CHANNEL);
         let t = v.default.getChannelId();

@@ -47,7 +47,7 @@ function I(e) {
     channel: I,
     recurrenceId: n,
     isRecurrenceItem: M
-  }), C = (0, E.default)(t, N, I), O = (0, S.default)(t, N, I), A = (0, r.default)(t, N.id, n), L = (0, f.default)(t), G = (0, i.default)({
+  }), C = (0, E.default)(t, N, I), O = (0, S.default)(t, N, I), A = (0, r.default)(t, N.id, n), G = (0, f.default)(t), L = (0, i.default)({
     id: null != n ? n : t,
     label: g.default.Messages.COPY_ID_EVENT
   }), y = (0, s.default)(t, N.id, I, n), x = (0, T.default)({
@@ -66,9 +66,9 @@ function I(e) {
       children: [(0, l.jsxs)(u.MenuGroup, {
         children: [y, !M && O, R, !M && C, D, p, A, M && x]
       }), !M && (0, l.jsx)(u.MenuGroup, {
-        children: L
-      }), (0, l.jsx)(u.MenuGroup, {
         children: G
+      }), (0, l.jsx)(u.MenuGroup, {
+        children: L
       })]
     })
   })

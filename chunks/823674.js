@@ -41,8 +41,8 @@ var a = n("37983"),
   F = n("433487"),
   U = n("987772"),
   k = n("566998"),
-  w = n("516358"),
-  G = n("550515"),
+  G = n("516358"),
+  w = n("550515"),
   B = n("959097"),
   V = n("228220"),
   W = n("149279"),
@@ -157,7 +157,7 @@ function er(e) {
     canReply: S,
     canStartThread: N,
     canViewThread: R,
-    isExpanded: G,
+    isExpanded: w,
     showMoreUtilities: W,
     showEmojiPicker: $,
     showMessageRemindersActions: ea,
@@ -187,9 +187,9 @@ function er(e) {
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && R);
     let U = (0, K.canReportMessage)(n),
       k = (0, q.default)(n, t, R),
-      w = !t.isSystemDM() && (0, Y.default)(n, f) && h && !E,
+      G = !t.isSystemDM() && (0, Y.default)(n, f) && h && !E,
       {
-        disableReactionCreates: G
+        disableReactionCreates: w
       } = (0, X.default)({
         channel: t,
         canChat: N,
@@ -218,7 +218,7 @@ function er(e) {
       channel: t,
       message: n,
       canPin: k,
-      canEdit: w,
+      canEdit: G,
       canDelete: F,
       canReport: U,
       canReply: O,
@@ -226,7 +226,7 @@ function er(e) {
       canViewThread: j,
       canCopy: z.SUPPORTS_COPY,
       hasDeveloperMode: S,
-      canReact: !G && g,
+      canReact: !w && g,
       canPublish: B,
       canConfigureJoin: W,
       isExpanded: Q && !$ && !a && !s && !l,
@@ -252,7 +252,7 @@ function er(e) {
     })
   }, [$, er]), eC = (0, A.useIsActiveChannelOrUnarchivableThread)(t), ep = n.hasFlag(et.MessageFlags.CROSSPOSTED);
   return (0, a.jsxs)(a.Fragment, {
-    children: [G ? (0, a.jsxs)(a.Fragment, {
+    children: [w ? (0, a.jsxs)(a.Fragment, {
       children: [l && eo ? ei({
         key: "copy-id",
         channel: t,
@@ -300,7 +300,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.MESSAGE_ACTION_REPLY,
-        icon: w.default,
+        icon: G.default,
         onClick: J.replyToMessage
       }) : null]
     }) : null, E && !ed ? (0, a.jsx)(Q.default, {
@@ -315,7 +315,7 @@ function er(e) {
       channel: t,
       message: n,
       label: en.default.Messages.MESSAGE_ACTION_REPLY,
-      icon: w.default,
+      icon: G.default,
       onClick: J.replyToMessage
     }) : null, f ? ei({
       key: "edit",
@@ -346,7 +346,7 @@ function er(e) {
       icon: b.default,
       onClick: J.publishMessage,
       disabled: ep
-    }) : null, r && (ed || G) ? ei({
+    }) : null, r && (ed || w) ? ei({
       key: "delete",
       channel: t,
       message: n,
@@ -354,8 +354,8 @@ function er(e) {
       icon: V.default,
       onClick: J.deleteMessage,
       dangerous: !0,
-      separator: !G
-    }) : null, G && r ? null : (0, a.jsx)(d.Popout, {
+      separator: !w
+    }) : null, w && r ? null : (0, a.jsx)(d.Popout, {
       renderPopout: e => {
         let {
           updatePosition: s,
@@ -405,7 +405,7 @@ function eo(e) {
     children: [!s && l && ei({
       key: "retry",
       label: en.default.Messages.RETRY,
-      icon: G.default,
+      icon: w.default,
       channel: t,
       message: n,
       onClick: J.retrySendMessage

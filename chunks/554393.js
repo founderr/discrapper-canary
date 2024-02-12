@@ -46,7 +46,7 @@ function b(e) {
   } = e, {
     ref: H,
     width: F
-  } = (0, d.default)(), [U, k] = s.useState(3), [w, G] = s.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
+  } = (0, d.default)(), [U, k] = s.useState(3), [G, w] = s.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
     firstMessage: Z
   } = (0, x.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
     disableReactionUpdates: K,
@@ -60,7 +60,7 @@ function b(e) {
       let e = t.intersectionRect,
         n = t.boundingClientRect,
         a = (e.bottom - e.top) / (n.bottom - n.top);
-      G(a < 1)
+      w(a < 1)
     }
   }, [n]);
   s.useLayoutEffect(() => {
@@ -93,7 +93,7 @@ function b(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: i(j.container, {
-        [j.header]: w
+        [j.header]: G
       }),
       ref: H,
       children: [(0, a.jsxs)("div", {

@@ -16,9 +16,9 @@ var a = s("37983"),
   E = s("49111"),
   _ = s("782340"),
   I = s("493265");
-let f = o.default.getArticleURL(E.HelpdeskArticles.GUILD_AUTOMOD_REGEX);
+let T = o.default.getArticleURL(E.HelpdeskArticles.GUILD_AUTOMOD_REGEX);
 
-function T(e) {
+function f(e) {
   let {
     hasErrors: t,
     text: s,
@@ -31,7 +31,7 @@ function T(e) {
       variant: "text-xs/medium",
       color: "text-danger",
       children: null != l ? l : _.default.Messages.GUILD_AUTOMOD_REGEX_ERROR_HELP.format({
-        helpArticle: f
+        helpArticle: T
       })
     })
   }) : (0, a.jsx)(r.Text, {
@@ -87,9 +87,9 @@ function S(e) {
       onChangeNewTagValue: x,
       tagErrors: C,
       maxTags: c.MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER
-    }), (0, a.jsx)(T, {
+    }), (0, a.jsx)(f, {
       text: _.default.Messages.GUILD_AUTOMOD_REGEX_SUBTEXT.format({
-        helpArticle: f
+        helpArticle: T
       }),
       hasErrors: m.length > 0 || null != S,
       errorText: null !== (s = null === (t = m.find(e => {

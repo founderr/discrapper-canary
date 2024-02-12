@@ -20,21 +20,21 @@ function c(e) {
     application: c
   } = e, E = (0, l.default)([i.default], () => i.default.getGuild(t)), _ = (0, l.default)([r.default], () => r.default.getCurrentUser()), I = (0, d.useRoleSubscriptionSettingsDisabled)();
   if (null == E) return null;
-  let f = E.isOwner(_);
-  if (!f) return null;
-  let T = c.team;
+  let T = E.isOwner(_);
+  if (!T) return null;
+  let f = c.team;
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(n.FormText, {
       type: n.FormText.Types.DESCRIPTION,
       disabled: I,
-      children: null != T ? u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_DESCRIPTION.format({
-        teamName: T.name
+      children: null != f ? u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_DESCRIPTION.format({
+        teamName: f.name
       }) : u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_NO_TEAM_DESCRIPTION
     }), (0, a.jsx)(o.default, {
       size: 16
     }), (0, a.jsx)(n.Button, {
       look: n.Button.Looks.FILLED,
-      color: null != T ? n.Button.Colors.PRIMARY : n.Button.Colors.BRAND_NEW,
+      color: null != f ? n.Button.Colors.PRIMARY : n.Button.Colors.BRAND_NEW,
       onClick: () => {
         var e;
         return e = c, void(0, n.openModalLazy)(async () => {
@@ -48,7 +48,7 @@ function c(e) {
         })
       },
       disabled: I,
-      children: null != T ? u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_CHANGE_TEAM_CTA : u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_SELECT_TEAM_CTA
+      children: null != f ? u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_CHANGE_TEAM_CTA : u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_SELECT_TEAM_CTA
     })]
   })
 }

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("719887"),
   _ = s("697218"),
   I = s("471671"),
-  f = s("37785"),
-  T = s("599110"),
+  T = s("37785"),
+  f = s("599110"),
   S = s("837008"),
   m = s("757715"),
   N = s("352807"),
@@ -58,10 +58,10 @@ function M(e) {
     error: E
   } = (0, d.default)(), {
     fetchSubscriptionsSettings: _
-  } = (0, S.useFetchSubscriptionsSettings)(), I = (0, m.useRoleSubscriptionSettingsDisabled)(), f = l.useMemo(() => s.map(e => ({
+  } = (0, S.useFetchSubscriptionsSettings)(), I = (0, m.useRoleSubscriptionSettingsDisabled)(), T = l.useMemo(() => s.map(e => ({
     label: e.name,
     value: e.id
-  })), [s]), T = async () => {
+  })), [s]), f = async () => {
     let e = await u(t, r, x.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS);
     e && (_(t.id), (0, N.openActionCompleteSuccessModal)({
       Icon: C.default,
@@ -74,14 +74,14 @@ function M(e) {
       className: p.selectTeamContainer,
       children: [(0, a.jsx)(i.SingleSelect, {
         className: p.teamSelect,
-        options: f,
+        options: T,
         placeholder: O.default.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER,
         value: r,
-        isDisabled: 0 === f.length || I || !n,
+        isDisabled: 0 === T.length || I || !n,
         onChange: e => o(e),
         "aria-label": O.default.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER
       }), (0, a.jsx)(i.Button, {
-        onClick: T,
+        onClick: f,
         className: p.enableTicketingButton,
         submitting: c,
         disabled: null == r || I || !n,
@@ -106,7 +106,7 @@ var D = e => {
     var t;
     return e.payout_account_status !== L.PayoutAccountStatuses.BLOCKED && (0, c.isUserTeamAdministrator)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "", e)
   }), [N, s]), D = x.length > 0, v = l.useCallback(async () => {
-    T.default.track(R.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
+    f.default.track(R.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
       is_onboarding_v2: S,
       has_eligible_team: D,
       guild_id: t.id,
@@ -114,7 +114,7 @@ var D = e => {
     });
     let e = await (0, u.generateDeveloperPortalLink)(R.RelativeMarketingURLs.DEVELOPER_PORTAL_TEAMS);
     (0, r.default)(e)
-  }, [t, d, S, D]), j = l.useCallback(e => d ? (0, a.jsx)(f.default, {
+  }, [t, d, S, D]), j = l.useCallback(e => d ? (0, a.jsx)(T.default, {
     onClick: v,
     children: e
   }) : e, [v, d]);

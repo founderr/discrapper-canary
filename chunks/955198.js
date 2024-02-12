@@ -84,7 +84,7 @@ function d(e, t) {
         })
       }), e.preventDefault(), e.stopPropagation(), null === (t = s.current) || void 0 === t || t.scrollToBottom())
     }, [c, s]),
-    f = a.useCallback(e => {
+    T = a.useCallback(e => {
       c(t => {
         let {
           tags: s,
@@ -98,7 +98,7 @@ function d(e, t) {
         }
       })
     }, [c]),
-    T = a.useCallback(e => t => {
+    f = a.useCallback(e => t => {
       c(s => {
         let {
           tags: a,
@@ -280,8 +280,8 @@ function d(e, t) {
     handleInputChange: g,
     handleKeyDown: O,
     handleContainerKeyUp: p,
-    handleRemoveTag: f,
-    handleTagChangeEvent: T,
+    handleRemoveTag: T,
+    handleTagChangeEvent: f,
     handleSelectTag: S,
     handleUnselectTag: m,
     handleResetTagSelections: N,

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("353575"),
   _ = s("296839"),
   I = s("151866"),
-  f = s("183866"),
-  T = s("316841"),
+  T = s("183866"),
+  f = s("316841"),
   S = s("788112"),
   m = s("143460"),
   N = s("782340"),
@@ -27,7 +27,7 @@ function h(e) {
   let {
     rule: t,
     triggerType: s
-  } = e, n = l.useMemo(() => null == t ? (0, _.getAvailableActionTypes)(s).map(e => (0, a.jsx)(T.default, {
+  } = e, n = l.useMemo(() => null == t ? (0, _.getAvailableActionTypes)(s).map(e => (0, a.jsx)(f.default, {
     actionType: e,
     triggerType: s
   }, e)) : (0, _.getAvailableActionTypes)(s).reduce((e, l) => {
@@ -38,7 +38,7 @@ function h(e) {
       } = e;
       return l === t
     });
-    return null == i ? e : (e.push((0, a.jsx)(T.default, {
+    return null == i ? e : (e.push((0, a.jsx)(f.default, {
       actionType: l,
       action: i,
       triggerType: null !== (n = null == t ? void 0 : t.triggerType) && void 0 !== n ? n : s
@@ -126,11 +126,11 @@ function p(e) {
     rule: t,
     isDefaultRule: s,
     onContextMenu: r
-  } = e, o = (0, f.getRuleInfo)(t.triggerType, t), {
+  } = e, o = (0, T.getRuleInfo)(t.triggerType, t), {
     isLoading: d,
     saveRule: _
   } = (0, I.useAutomodEditingRuleActions)(), {
-    updateRule: T
+    updateRule: f
   } = (0, E.useAutomodRulesList)(t.guildId), [S, m] = l.useState(t.enabled), C = (0, n.throttle)(async (e, s) => {
     if (s.preventDefault(), s.stopPropagation(), !d) {
       let e = {
@@ -139,7 +139,7 @@ function p(e) {
       };
       m(!S);
       let s = await _(e, []);
-      if (null != s) T(s), m(s.enabled)
+      if (null != s) f(s), m(s.enabled)
     }
   }, 300), L = e => {
     R(e), r(e)
@@ -210,7 +210,7 @@ function A(e) {
   let {
     triggerType: t,
     onSetupRule: s
-  } = e, n = l.useMemo(() => (0, f.getRuleInfo)(t), [t]);
+  } = e, n = l.useMemo(() => (0, T.getRuleInfo)(t), [t]);
   if (null == n) return null;
   let {
     headerText: r,

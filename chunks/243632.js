@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return p
   },
   useTrackDropsImpression: function() {
-    return A
+    return S
   }
 });
 var s = n("884691"),
@@ -106,7 +106,7 @@ function p(e, t, n, s) {
   }
 }
 
-function A(e, t, n) {
+function S(e, t, n) {
   let s = (0, f.getDrop)(e);
   (0, i.default)({
     type: t,

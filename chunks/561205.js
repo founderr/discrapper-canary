@@ -21,14 +21,14 @@ function _(e) {
     title: s,
     description: n,
     children: _
-  } = e, [I, f] = l.useState(t), T = () => f(e => !e), S = (0, o.useUID)();
+  } = e, [I, T] = l.useState(t), f = () => T(e => !e), S = (0, o.useUID)();
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)(u.default, {
       className: i(E.header, {
         [E.headerWithDescription]: I && null != n
       }),
-      onClick: T,
+      onClick: f,
       children: e => {
         let {
           areaRef: t,
@@ -39,7 +39,7 @@ function _(e) {
             variant: "heading-md/semibold",
             children: s
           }), (0, a.jsx)(r.Clickable, {
-            onClick: l(T),
+            onClick: l(f),
             "aria-label": c.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TOGGLE_SECTION_LABEL,
             "aria-controls": S,
             "aria-expanded": I,

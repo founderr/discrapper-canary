@@ -17,7 +17,7 @@ var a = s("37983"),
   _ = s("782340"),
   I = s("544067");
 
-function f() {
+function T() {
   let e = "• ";
   return (0, a.jsxs)("div", {
     className: I.changelog,
@@ -62,7 +62,7 @@ function f() {
   })
 }
 
-function T(e) {
+function f(e) {
   let {
     title: t,
     subtitle: s,
@@ -147,9 +147,9 @@ function S(e) {
       color: "header-primary",
       className: I.header,
       children: _.default.Messages.GUILD_SETTINGS_SAFETY_SETUP_HEADER
-    }), !u && (0, a.jsx)(f, {}), (0, a.jsxs)("div", {
+    }), !u && (0, a.jsx)(T, {}), (0, a.jsxs)("div", {
       className: I.safetyChecklist,
-      children: [(0, a.jsx)(T, {
+      children: [(0, a.jsx)(f, {
         icon: s("373558"),
         title: _.default.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
         subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
@@ -159,7 +159,7 @@ function S(e) {
         page: c.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION
       }), (0, a.jsx)("div", {
         className: I.divider
-      }), (0, a.jsx)(T, {
+      }), (0, a.jsx)(f, {
         icon: s("119134"),
         title: _.default.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
         subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
@@ -170,7 +170,7 @@ function S(e) {
       }), (0, a.jsx)("div", {
         className: I.divider
       }), L && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(T, {
+        children: [(0, a.jsx)(f, {
           icon: s("799036"),
           title: _.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
           subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
@@ -181,7 +181,7 @@ function S(e) {
         }), (0, a.jsx)("div", {
           className: I.divider
         })]
-      }), (0, a.jsx)(T, {
+      }), (0, a.jsx)(f, {
         icon: s("444964"),
         title: _.default.Messages.PERMISSIONS,
         subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({

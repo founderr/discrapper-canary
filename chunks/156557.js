@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("506885"),
   _ = s("981601"),
   I = s("242020"),
-  f = s("27618"),
-  T = s("697218"),
+  T = s("27618"),
+  f = s("697218"),
   S = s("461380"),
   m = s("258078"),
   N = s("404008"),
@@ -131,7 +131,7 @@ class O extends l.PureComponent {
           children: s
         }, n),
         count: o.count,
-        channel: o.channel ? "string" == typeof o.channel ? o.channel : (0, c.computeChannelName)(o.channel, T.default, f.default, !0) : null,
+        channel: o.channel ? "string" == typeof o.channel ? o.channel : (0, c.computeChannelName)(o.channel, f.default, T.default, !0) : null,
         channelHook: (e, t) => (0, a.jsx)("span", {
           onContextMenu: n,
           children: e
@@ -330,16 +330,16 @@ class O extends l.PureComponent {
     let c = this.hasChangesToRender(),
       I = R.headerDefault;
     l ? I = R.headerExpanded : c && (I = R.headerClickable);
-    let f = t.timestampStart.calendar(),
-      T = t.timestampEnd.calendar();
-    e = f === T ? (0, a.jsx)(u.Text, {
+    let T = t.timestampStart.calendar(),
+      f = t.timestampEnd.calendar();
+    e = T === f ? (0, a.jsx)(u.Text, {
       className: R.timestamp,
       variant: "text-xs/normal",
-      children: "• ".concat(f)
+      children: "• ".concat(T)
     }) : (0, a.jsx)(u.Text, {
       className: R.timestamp,
       variant: "text-xs/normal",
-      children: "• ".concat(f, "—").concat(T)
+      children: "• ".concat(T, "—").concat(f)
     });
     let m = c ? n : C.NOOP;
     return (0, a.jsx)(d.ListNavigatorItem, {

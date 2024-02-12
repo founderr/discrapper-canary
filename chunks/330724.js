@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return S
   },
   saveGuildOnboardingPrompts: function() {
-    return m
+    return T
   },
   enableGuildOnboarding: function() {
-    return T
+    return m
   },
   editOnboarding: function() {
     return D
@@ -68,7 +68,7 @@ function S(e, t) {
     })
   }
 }
-async function m(e, t) {
+async function T(e, t) {
   let {
     dropdownsAllowed: n
   } = (0, d.getOnboardingDropdownExperiment)(e.id);
@@ -125,11 +125,11 @@ async function m(e, t) {
       }
     })
   } catch (n) {
-    var m;
+    var T;
     let {
       fieldName: e,
       error: t
-    } = null !== (m = new(0, i.APIError)(n).getAnyErrorMessageAndField()) && void 0 !== m ? m : {};
+    } = null !== (T = new(0, i.APIError)(n).getAnyErrorMessageAndField()) && void 0 !== T ? T : {};
     throw s.default.show({
       title: I.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
       body: [e, t].filter(u.isNotNullish).join(": ")
@@ -138,7 +138,7 @@ async function m(e, t) {
     }), Error("failed to save prompts")
   }
 }
-async function T(e, t) {
+async function m(e, t) {
   l.default.dispatch({
     type: "GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE",
     guildId: e,

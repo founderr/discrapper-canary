@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = s("884691"),
@@ -17,11 +17,11 @@ var a = s("884691"),
   _ = s("49111"),
   I = s("782340");
 
-function f(e) {
+function T(e) {
   let t;
   let s = (0, o.useIsExpeditedOnboardingGuild)(e),
-    f = null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL),
-    T = null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE),
+    T = null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL),
+    f = null == e ? void 0 : e.hasFeature(_.GuildFeatures.CREATOR_MONETIZABLE),
     S = (0, l.default)([i.default], () => {
       let t = i.default.getCurrentUser();
       return (null == e ? void 0 : e.isOwner(t)) === !0
@@ -51,7 +51,7 @@ function f(e) {
     j = I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
       faqUrl: r.default.getArticleURL(_.HelpdeskArticles.CREATOR_FAQ)
     });
-  O && M ? t = !0 === f ? I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({
+  O && M ? t = !0 === T ? I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({
     communityGuidelineUrl: _.MarketingURLs.GUIDELINES
   }) : I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM_ALT.format({
     communityGuidelineUrl: _.MarketingURLs.GUIDELINES
@@ -59,8 +59,8 @@ function f(e) {
     requestCooldownDuration: p,
     creatorRevenuePolicyUrl: r.default.getArticleURL(_.HelpdeskArticles.CREATOR_POLICY)
   }));
-  let G = s && S && !1 === T,
-    U = s && !1 === f,
+  let G = s && S && !1 === f,
+    U = s && !1 === T,
     P = (0, E.getCreatorMonetizationAcceptTermsCheckboxText)(),
     b = O && v && S ? I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
   return a.useEffect(() => {

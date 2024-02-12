@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("201380"),
   O = n("49111"),
   y = n("39141"),
-  b = n("707155");
-let P = l.memo(e => {
+  P = n("707155");
+let b = l.memo(e => {
   var t;
   let {
     mute: n,
@@ -44,7 +44,7 @@ let P = l.memo(e => {
     channel: i,
     sessionId: o,
     nick: _
-  } = e, A = s.id, b = (0, r.useStateFromStores)([C.default], () => C.default.getId() === A, [A]), [P, D, U] = (0, r.useStateFromStoresArray)([S.default], () => b ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(A), !1, S.default.isLocalVideoDisabled(A)], [b, A]), w = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), F = (0, u.default)({
+  } = e, A = s.id, P = (0, r.useStateFromStores)([C.default], () => C.default.getId() === A, [A]), [b, D, U] = (0, r.useStateFromStoresArray)([S.default], () => P ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(A), !1, S.default.isLocalVideoDisabled(A)], [P, A]), w = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), F = (0, u.default)({
     userId: A,
     checkSoundSharing: !0
   }), k = (0, r.useStateFromStores)([g.default], () => g.default.isGuestOrLurker(i.guild_id, A)), V = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
@@ -52,7 +52,7 @@ let P = l.memo(e => {
       userIds: t
     } = e;
     return t.has(A)
-  }), [A, i.id]), B = (0, f.default)(null != V ? [V.applicationId] : []), H = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), G = (0, r.useStateFromStores)([I.default, T.default], () => b ? T.default.getActivities() : I.default.getActivities(A, i.guild_id)), W = G.find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([c.default], () => (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
+  }), [A, i.id]), B = (0, f.default)(null != V ? [V.applicationId] : []), H = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), G = (0, r.useStateFromStores)([I.default, T.default], () => P ? T.default.getActivities() : I.default.getActivities(A, i.guild_id)), W = G.find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([c.default], () => (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
   null != Y && j.default.trackExposure({
     location: "voice_users"
   });
@@ -65,7 +65,7 @@ let P = l.memo(e => {
     permission: O.Permissions.SET_VOICE_CHANNEL_STATUS,
     user: s,
     context: i
-  }), $ = (0, r.useStateFromStores)([p.default], () => b ? p.default.getHangStatusActivity() : null, [b]), ee = (0, r.useStateFromStores)([I.default], () => I.default.findActivity(A, e => e.type === O.ActivityTypes.HANG_STATUS), [A]);
+  }), $ = (0, r.useStateFromStores)([p.default], () => P ? p.default.getHangStatusActivity() : null, [P]), ee = (0, r.useStateFromStores)([I.default], () => I.default.findActivity(A, e => e.type === O.ActivityTypes.HANG_STATUS), [A]);
   return (0, a.jsx)(m.default, {
     shakeLocation: y.ShakeLocation.VOICE_USER,
     isShaking: F,
@@ -75,9 +75,9 @@ let P = l.memo(e => {
       canDrag: e.canDrag && !k,
       otherClientSessionType: null == Z ? void 0 : null === (t = Z.clientInfo) || void 0 === t ? void 0 : t.os,
       voicePlatform: J,
-      localMute: P && !b,
+      localMute: b && !P,
       localVideoDisabled: U,
-      mute: n || P,
+      mute: n || b,
       deaf: l || D,
       speaking: F,
       priority: w,
@@ -86,13 +86,13 @@ let P = l.memo(e => {
       isWatching: null != K && K.state !== O.ApplicationStreamStates.ENDED,
       isGuest: k,
       showHangStatus: Q && q && (C.default.getId() === s.id || null != ee),
-      hangStatusActivity: b ? $ : ee,
+      hangStatusActivity: P ? $ : ee,
       isSelf: C.default.getId() === s.id,
       application: H ? Y : void 0
     })
   })
 });
-P.displayName = "ConnectedVoiceUser";
+b.displayName = "ConnectedVoiceUser";
 var D = function(e) {
   let {
     allowPreviews: t = !0,
@@ -138,7 +138,7 @@ var D = function(e) {
           nick: i,
           voiceState: r
         } = e;
-        return (0, a.jsx)(P, {
+        return (0, a.jsx)(b, {
           user: l,
           nick: i,
           isSelfOnOtherClient: C.default.getId() === l.id && r.sessionId !== C.default.getSessionId(),
@@ -167,9 +167,9 @@ var D = function(e) {
     })), t
   })();
   return null == w && null == S ? null : (0, a.jsxs)(A.VoiceUserList, {
-    className: i(g, b.list, {
-      [b.collapsed]: d,
-      [b.withGuildIcon]: E
+    className: i(g, P.list, {
+      [P.collapsed]: d,
+      [P.withGuildIcon]: E
     }),
     collapsed: d,
     children: [w, S]

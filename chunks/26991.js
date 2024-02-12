@@ -33,9 +33,9 @@ var l = s("77078"),
       }
     }, I = e => {
       (0, n.deleteGuildCategory)(t.id, e)
-    }, f = e => {
+    }, T = e => {
       e.preventDefault(), e.stopPropagation()
-    }, T = i.default.getAllCategories().map(e => {
+    }, f = i.default.getAllCategories().map(e => {
       let {
         categoryId: t,
         name: s
@@ -49,7 +49,7 @@ var l = s("77078"),
       value: s.secondaryCategoryIds,
       searchable: !0,
       clearable: !1,
-      options: T,
+      options: f,
       onChange: e => _(e),
       multiValueRenderer: e => {
         let {
@@ -58,7 +58,7 @@ var l = s("77078"),
         } = e;
         return (0, a.jsxs)("span", {
           className: u.subcategory,
-          onMouseDown: f,
+          onMouseDown: T,
           children: [t, (0, a.jsx)(l.Clickable, {
             className: u.closeWrapper,
             onClick: () => I(s),

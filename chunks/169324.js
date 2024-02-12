@@ -22,8 +22,8 @@ var l = s("414456"),
       index: l,
       isDragEnabled: _,
       isDropHovered: I,
-      onDrop: f,
-      onEdit: T,
+      onDrop: T,
+      onEdit: f,
       onRemove: S,
       title: m
     } = e, N = s.values, g = N.slice(0, 1), h = N.length - g.length;
@@ -32,8 +32,8 @@ var l = s("414456"),
       index: l,
       isDragEnabled: _,
       isDropHovered: I,
-      onDrop: f,
-      onEdit: T,
+      onDrop: T,
+      onEdit: f,
       onRemove: S,
       title: m,
       children: [(0, a.jsx)(d.TermsFieldBody, {
@@ -44,7 +44,7 @@ var l = s("414456"),
         channelId: t
       }), 0 !== h && (0, a.jsxs)(r.Clickable, {
         className: n(E.fieldFooterContainer, E.clickable),
-        onClick: T,
+        onClick: f,
         children: [(0, a.jsx)(r.FormText, {
           className: E.clickable,
           children: c.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({

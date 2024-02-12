@@ -17,8 +17,8 @@ var l = s("414456"),
   E = s("191814"),
   _ = s("111462"),
   I = s("120856"),
-  f = s("915675"),
-  T = s("782340"),
+  T = s("915675"),
+  f = s("782340"),
   S = s("702864");
 
 function m(e) {
@@ -36,12 +36,12 @@ function m(e) {
       })
     }), (0, a.jsxs)("div", {
       className: S.subscriberCountText,
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(T.default, {
         color: d.default.WHITE
       }), (0, a.jsx)(i.Text, {
         variant: "text-md/normal",
         color: "always-white",
-        children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBSCRIBERS_LABEL
+        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBSCRIBERS_LABEL
       })]
     })]
   })
@@ -92,9 +92,9 @@ function g(e) {
     }), (0, a.jsx)(i.Text, {
       variant: "text-md/normal",
       color: "interactive-active",
-      children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_QUOTE_ATTRIBUTION.format({
+      children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_QUOTE_ATTRIBUTION.format({
         attributionName: s,
-        attributionTitle: null != l ? l : T.default.Messages.GUILD_OWNER
+        attributionTitle: null != l ? l : f.default.Messages.GUILD_OWNER
       })
     })]
   })
@@ -115,7 +115,7 @@ function h(e) {
         variant: "text-xs/semibold",
         color: "header-primary",
         className: S.premiumEmojisTitle,
-        children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_CARD_PREMIUM_EMOJI_TITLE
+        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_CARD_PREMIUM_EMOJI_TITLE
       }), (0, a.jsxs)("div", {
         className: S.premiumEmojisRow,
         children: [(0, a.jsxs)("div", {
@@ -140,7 +140,7 @@ function h(e) {
             color: i.Button.Colors.CUSTOM,
             disabled: null == l,
             onClick: u,
-            children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_VIEW_SERVER_CTA
+            children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_VIEW_SERVER_CTA
           })
         })]
       })]
@@ -150,7 +150,7 @@ function h(e) {
       color: i.Button.Colors.CUSTOM,
       disabled: null == l,
       onClick: u,
-      children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_VIEW_SERVER_CTA
+      children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_VIEW_SERVER_CTA
     })
   })
 }
@@ -176,8 +176,8 @@ function C(e) {
     guildIcon: c,
     guildName: E,
     guildAvatarUrl: I,
-    subscriberCount: f,
-    emojisToShow: T,
+    subscriberCount: T,
+    emojisToShow: f,
     notShownEmojiCount: m,
     storePageUrl: C
   } = o.details;
@@ -187,13 +187,13 @@ function C(e) {
       guildIcon: c,
       guildName: E,
       guildAvatarUrl: I,
-      subscriberCount: f
+      subscriberCount: T
     }), (0, a.jsx)(g, {
       quote: l,
       quoteAttribution: n,
       quoteAttributionTitle: r
     }), (0, a.jsx)(h, {
-      emojisToShow: T,
+      emojisToShow: f,
       notShownEmojiCount: m,
       storePageUrl: C
     })]
@@ -208,7 +208,7 @@ function R(e) {
     children: [(0, a.jsx)(i.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
-      children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_GUILD_SECTION_TITLE
+      children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_GUILD_SECTION_TITLE
     }), (0, a.jsx)(E.default, {
       size: 24
     }), (0, a.jsx)(I.default, {

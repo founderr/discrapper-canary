@@ -23,8 +23,8 @@ function c(e) {
     onToggle: E,
     animateStatus: _,
     firstLine: I,
-    secondLine: f,
-    disabled: T
+    secondLine: T,
+    disabled: f
   } = e;
   return (0, a.jsxs)("div", {
     className: n(t, u.enableContainer),
@@ -47,7 +47,7 @@ function c(e) {
         children: I
       }), (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
-        children: f
+        children: T
       })]
     }), (0, a.jsxs)("div", {
       className: u.buttonContainer,
@@ -56,11 +56,11 @@ function c(e) {
         look: i.Button.Looks.LINK,
         size: i.Button.Sizes.SMALL,
         onClick: c,
-        disabled: T,
+        disabled: f,
         color: i.Button.Colors.PRIMARY,
         children: null != l ? l : d.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
       }), (0, a.jsx)(i.Button, {
-        disabled: null == E || T,
+        disabled: null == E || f,
         size: i.Button.Sizes.SMALL,
         color: s ? i.Button.Colors.RED : i.Button.Colors.BRAND,
         onClick: E,

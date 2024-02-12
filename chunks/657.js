@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("163732"),
   _ = s("817963"),
   I = s("599110"),
-  f = s("427459"),
-  T = s("467094"),
+  T = s("427459"),
+  f = s("467094"),
   S = s("364685"),
   m = s("566171"),
   N = s("417385"),
@@ -25,14 +25,14 @@ var a = s("37983"),
   h = s("49111"),
   C = s("782340"),
   R = s("116407");
-let x = e => e < (0, f.getTotalStickerCountForTier)(h.BoostedGuildTiers.NONE) ? h.BoostedGuildTiers.NONE : e < (0, f.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_1) ? h.BoostedGuildTiers.TIER_1 : e < (0, f.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_2) ? h.BoostedGuildTiers.TIER_2 : e < (0, f.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_3) ? h.BoostedGuildTiers.TIER_3 : h.BoostedGuildTiers.NONE,
+let x = e => e < (0, T.getTotalStickerCountForTier)(h.BoostedGuildTiers.NONE) ? h.BoostedGuildTiers.NONE : e < (0, T.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_1) ? h.BoostedGuildTiers.TIER_1 : e < (0, T.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_2) ? h.BoostedGuildTiers.TIER_2 : e < (0, T.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_3) ? h.BoostedGuildTiers.TIER_3 : h.BoostedGuildTiers.NONE,
   L = e => {
     let {
       children: t,
       currentGuildTier: s,
       guildStickers: l,
       tier: n
-    } = e, i = s < n, r = (0, f.getIncrementalStickerCountForTier)(n);
+    } = e, i = s < n, r = (0, T.getIncrementalStickerCountForTier)(n);
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Heading, {
         color: "header-primary",
@@ -42,7 +42,7 @@ let x = e => e < (0, f.getTotalStickerCountForTier)(h.BoostedGuildTiers.NONE) ? 
         variant: "text-xs/normal",
         children: C.default.Messages.GUILD_STICKER_SETTINGS_REMAINING_SLOTS_AVAILABLE.format({
           numTotal: r,
-          numAvailable: (0, f.getAvailableStickerSlotCount)(l, n)
+          numAvailable: (0, T.getAvailableStickerSlotCount)(l, n)
         })
       })]
     })
@@ -100,11 +100,11 @@ var M = e => {
     return null !== (e = S.default.getStickersByGuildId(t.id)) && void 0 !== e ? e : []
   }, [t]), {
     analyticsLocations: O
-  } = (0, u.default)(), M = t.hasFeature(h.GuildFeatures.MORE_STICKERS) ? h.BoostedGuildTiers.TIER_3 : t.premiumTier, D = t.hasFeature(h.GuildFeatures.MORE_STICKERS) ? (0, f.getAppliedGuildBoostsRequired)(t.id)[h.BoostedGuildTiers.TIER_3] : t.premiumSubscriberCount;
+  } = (0, u.default)(), M = t.hasFeature(h.GuildFeatures.MORE_STICKERS) ? h.BoostedGuildTiers.TIER_3 : t.premiumTier, D = t.hasFeature(h.GuildFeatures.MORE_STICKERS) ? (0, T.getAppliedGuildBoostsRequired)(t.id)[h.BoostedGuildTiers.TIER_3] : t.premiumSubscriberCount;
   if (l.useEffect(() => {
       let e = !1,
         s = async () => {
-          d(!0), await (0, T.fetchGuildStickers)(t.id), !e && d(!1)
+          d(!0), await (0, f.fetchGuildStickers)(t.id), !e && d(!1)
         };
       return s(), () => {
         e = !0
@@ -170,18 +170,18 @@ var M = e => {
           tierIndex: E
         } = e,
         {
-          canCreateExpressions: T,
+          canCreateExpressions: f,
           canManageGuildExpression: S
         } = (0, _.getManageResourcePermissions)(t),
         m = u[E - 1],
-        L = null != m ? (0, f.getTotalStickerCountForTier)(m.tier) : 0,
-        O = (0, f.getTotalStickerCountForTier)(d.tier),
-        j = (0, f.getIncrementalStickerCountForTier)(d.tier),
+        L = null != m ? (0, T.getTotalStickerCountForTier)(m.tier) : 0,
+        O = (0, T.getTotalStickerCountForTier)(d.tier),
+        j = (0, T.getIncrementalStickerCountForTier)(d.tier),
         G = I.slice(L, O),
         U = G.length > 0,
         P = M < d.tier,
         b = x(I.length),
-        B = T && !P && b === d.tier && O !== G.length,
+        B = f && !P && b === d.tier && O !== G.length,
         y = B || G.length > 0,
         F = O - L,
         H = s("89734"),
@@ -201,7 +201,7 @@ var M = e => {
           page: h.AnalyticsPages.GUILD_SETTINGS,
           section: h.AnalyticsSections.GUILD_SETTINGS_STICKERS,
           object: h.AnalyticsObjects.BOOST_UPSELL_NEXT_LEVEL_HEADER,
-          objectType: (0, f.boostedGuildTierToAnalyticsObjectType)(d.tier)
+          objectType: (0, T.boostedGuildTierToAnalyticsObjectType)(d.tier)
         }
       }) : B && (l = (0, a.jsx)(A, {
         guild: t
@@ -247,7 +247,7 @@ var M = e => {
             })
           }), (0, a.jsx)(o.Button, {
             color: o.Button.Colors.GREEN,
-            onClick: () => v((0, f.getAppliedGuildBoostsRequired)(t.id)[d.tier] - t.premiumSubscriberCount, d.tier),
+            onClick: () => v((0, T.getAppliedGuildBoostsRequired)(t.id)[d.tier] - t.premiumSubscriberCount, d.tier),
             children: C.default.Messages.GUILD_STICKER_SETTINGS_BUY_LEVEL
           })]
         })]

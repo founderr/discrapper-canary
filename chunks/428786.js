@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("521012"),
   N = n("888400"),
   p = n("719923"),
-  A = n("158998"),
-  S = n("540692"),
+  S = n("158998"),
+  A = n("540692"),
   C = n("166960"),
   h = n("833516"),
   g = n("646718"),
@@ -44,7 +44,7 @@ class R extends l.Component {
       trialOffer: s
     } = this.props, l = I.default.getUser(s.referrer_id);
     return (e || t) && n && void 0 === s.redeemed_at ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_BODY : e && !n && void 0 === s.redeemed_at ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_BODY : M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY.format({
-      username: null != l ? A.default.getName(l) : "???"
+      username: null != l ? S.default.getName(l) : "???"
     })
   }
   renderActions(e, t, n) {
@@ -163,9 +163,9 @@ function L(e) {
   } = e, {
     trialOffer: l,
     isResolving: a
-  } = (0, d.useStateFromStoresObject)([S.default], () => ({
-    trialOffer: n ? S.default.getRelevantUserTrialOffer(t) : null,
-    isResolving: !!n && S.default.isResolving(t)
+  } = (0, d.useStateFromStoresObject)([A.default], () => ({
+    trialOffer: n ? A.default.getRelevantUserTrialOffer(t) : null,
+    isResolving: !!n && A.default.isResolving(t)
   }), [n, t]), i = I.default.getCurrentUser(), r = (0, d.useStateFromStores)([I.default], () => null != l && (0, p.isPremium)(void 0 !== i && l.user_id === i.id ? i : I.default.getUser(l.user_id))), o = (0, d.useStateFromStores)([m.default], () => {
     var e;
     return r ? null === (e = m.default.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null

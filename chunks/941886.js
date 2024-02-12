@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   EmptyStateImage: function() {
-    return p
+    return _
   },
   EmptyStateText: function() {
-    return _
+    return p
   },
   default: function() {
     return i
@@ -24,7 +24,7 @@ let {
   Provider: g,
   Consumer: E
 } = s.createContext(f.ThemeTypes.DARK);
-class p extends s.PureComponent {
+class _ extends s.PureComponent {
   render() {
     let {
       lightSrc: e,
@@ -51,7 +51,7 @@ class p extends s.PureComponent {
     })
   }
 }
-let _ = e => {
+let p = e => {
   let {
     children: t,
     className: n,
@@ -92,4 +92,4 @@ let _ = e => {
       })
     })
   }
-}).Text = _, l.Image = p, i = l
+}).Text = p, l.Image = _, i = l

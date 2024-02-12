@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("851387"),
   _ = s("206230"),
   I = s("339023"),
-  f = s("957255"),
-  T = s("730988"),
+  T = s("957255"),
+  f = s("730988"),
   S = s("246053"),
   m = s("151185"),
   N = s("531493"),
@@ -36,8 +36,8 @@ function A(e) {
       guild: d,
       role: E,
       highestRole: _,
-      selectedItem: f,
-      onClick: T,
+      selectedItem: T,
+      onClick: f,
       currentPosition: S,
       onDragStart: m,
       onDragReset: N,
@@ -98,9 +98,9 @@ function A(e) {
       [O.dragAfter]: null !== v && S > v
     }),
     id: E.id,
-    selectedItem: f,
+    selectedItem: T,
     itemType: "side",
-    onClick: T,
+    onClick: f,
     onContextMenu: function(e) {
       (0, c.openContextMenuLazy)(e, async () => {
         let {
@@ -136,7 +136,7 @@ function M(e) {
     currentRoleId: s,
     setCurrentRoleId: n,
     setSelectedSection: r
-  } = e, o = (0, d.useStateFromStores)([N.default], () => N.default.roles), c = (0, d.useStateFromStores)([f.default], () => f.default.getHighestRole(t)), I = (0, d.useStateFromStores)([_.default], () => _.default.roleStyle), [g, x] = l.useState(o.length), {
+  } = e, o = (0, d.useStateFromStores)([N.default], () => N.default.roles), c = (0, d.useStateFromStores)([T.default], () => T.default.getHighestRole(t)), I = (0, d.useStateFromStores)([_.default], () => _.default.roleStyle), [g, x] = l.useState(o.length), {
     scrolledToTop: p,
     handleScroll: M
   } = (0, C.useScrolledToTop)(), {
@@ -158,7 +158,7 @@ function M(e) {
   let P = () => {
     E.default.createRole(t.id), r(R.GuildSettingsRoleEditSections.DISPLAY)
   };
-  return (0, a.jsx)(T.default.Sidebar, {
+  return (0, a.jsx)(f.default.Sidebar, {
     className: O.sidebar,
     children: (0, a.jsxs)("div", {
       className: O.container,

@@ -48,8 +48,8 @@ function I(e) {
     temporary: I,
     onGenerateNewLink: g,
     onToggleTemporary: E,
-    onSelectMaxAge: p,
-    onSelectMaxUses: _
+    onSelectMaxAge: _,
+    onSelectMaxUses: p
   } = e, v = c.find(e => e.value === i), m = h.find(e => e.value === r);
   return (0, l.jsx)("div", {
     className: o.settingsContent,
@@ -61,7 +61,7 @@ function I(e) {
         children: (0, l.jsx)(s.SingleSelect, {
           value: null !== (t = null == v ? void 0 : v.value) && void 0 !== t ? t : c[0].value,
           options: c,
-          onChange: p,
+          onChange: _,
           maxVisibleItems: 8
         })
       }), (0, l.jsx)(s.FormItem, {
@@ -70,7 +70,7 @@ function I(e) {
         children: (0, l.jsx)(s.SingleSelect, {
           value: null == m ? void 0 : m.value,
           options: h,
-          onChange: _
+          onChange: p
         })
       }), (0, l.jsx)(f, {
         temporary: I,

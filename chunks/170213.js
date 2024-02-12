@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return p
   },
   DEFAULT_MEDIA_MAX_WIDTH: function() {
-    return A
+    return S
   },
   DEFAULT_MEDIA_MAX_HEIGHT: function() {
-    return S
+    return A
   },
   AppealIngestionSlideTypes: function() {
     return _
@@ -59,8 +59,8 @@ N.ICON_TYPE = "icon_type", N.HEADER = "header", N.BODY = "body", N.CTAS = "ctas"
   SPAM: T.AnalyticsSections.APPEAL_INGESTION_SPAM
 }), (r = f || (f = {}))[r.DIDNT_VIOLATE_POLICY = 0] = "DIDNT_VIOLATE_POLICY", r[r.TOO_STRICT_UNFAIR = 1] = "TOO_STRICT_UNFAIR", r[r.DONT_AGREE_PENALTY = 2] = "DONT_AGREE_PENALTY", r[r.SOMETHING_ELSE = 3] = "SOMETHING_ELSE";
 let p = [0, 1, 2, 3],
-  A = 372,
-  S = 279;
+  S = 372,
+  A = 279;
 (o = _ || (_ = {})).SPEED_BUMP = "speed-bump", o.COLLECT_SIGNAL = "collect-signal", o.CONFIRM_SUBMISSION = "confirm-submission", o.REQUEST_SENT = "request-sent", o.THANKS = "thanks";
 let C = {
     "speed-bump": {

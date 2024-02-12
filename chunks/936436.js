@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   WelcomeCTAContainer: function() {
-    return A
+    return S
   }
 }), n("222007");
 var s = n("37983"),
@@ -54,7 +54,7 @@ let p = e => {
       })
     })
   },
-  A = e => {
+  S = e => {
     let {
       message: t,
       channel: n

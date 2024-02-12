@@ -20,7 +20,7 @@ var l = s("669491"),
       isTrendingUp: c,
       isTrendingDown: E,
       tooltipText: _
-    } = e, I = "string" == typeof _ ? _ : t, f = null != _ ? (0, a.jsx)(n.Tooltip, {
+    } = e, I = "string" == typeof _ ? _ : t, T = null != _ ? (0, a.jsx)(n.Tooltip, {
       text: _,
       position: "top",
       "aria-label": I,
@@ -35,7 +35,7 @@ var l = s("669491"),
       className: d.analyticsCard,
       children: [(0, a.jsxs)(n.FormTitle, {
         className: d.analyticsCardTitle,
-        children: [t, f]
+        children: [t, T]
       }), (0, a.jsx)("div", {
         className: d.analyticsCardContent,
         children: (0, a.jsx)(n.Heading, {

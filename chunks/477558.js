@@ -24,8 +24,8 @@ function N(e) {
   let {
     code: t
   } = e, [n, N, p] = t.split("-"), {
-    guildScheduledEvent: A,
-    guild: S,
+    guildScheduledEvent: S,
+    guild: A,
     channel: C,
     isMember: h
   } = (0, a.useStateFromStoresObject)([_.default, c.default, u.default, d.default, E.default], () => {
@@ -42,11 +42,11 @@ function N(e) {
     }
   }, [n, N]);
   return l.useEffect(() => {
-    (null == A ? void 0 : A.id) == null && T.default.fetchGuildEvent(n, N), f.default.getGuildEventUserCounts(n, N, null != p ? [p] : []), f.default.getGuildEventsForCurrentUser(n)
-  }, [N, n, null == A ? void 0 : A.id, p]), (0, s.jsx)(I.default, {
-    guild: S,
+    (null == S ? void 0 : S.id) == null && T.default.fetchGuildEvent(n, N), f.default.getGuildEventUserCounts(n, N, null != p ? [p] : []), f.default.getGuildEventsForCurrentUser(n)
+  }, [N, n, null == S ? void 0 : S.id, p]), (0, s.jsx)(I.default, {
+    guild: A,
     channel: C,
-    guildScheduledEvent: A,
+    guildScheduledEvent: S,
     isMember: h,
     onAcceptInstantInvite: m.NOOP,
     onTransitionToInviteChannel: function() {

@@ -22,8 +22,8 @@ function E(e) {
     revenueTrend: E,
     summaryMetricLabel: _,
     summaryMetricValue: I,
-    summaryMetricTrend: f,
-    summaryMetricTrendIsPercent: T
+    summaryMetricTrend: T,
+    summaryMetricTrendIsPercent: f
   } = e;
   return (0, a.jsx)(l.FormSection, {
     title: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_HEADER,
@@ -41,8 +41,8 @@ function E(e) {
           label: _,
           value: I,
           additionalContent: (0, a.jsx)(n.MetricTrend, {
-            value: f,
-            isPercent: T
+            value: T,
+            isPercent: f
           })
         })]
       }), t]

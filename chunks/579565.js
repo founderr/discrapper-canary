@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return p
   },
   getShowDropsEndedIncompleteBanner: function() {
-    return A
+    return S
   },
   getDropExpired: function() {
-    return S
+    return A
   },
   getDrop: function() {
     return C
@@ -111,7 +111,7 @@ function p(e) {
   return !s && l
 }
 
-function A(e) {
+function S(e) {
   var t, n;
   let s = C(e);
   if (null == s || !(null === (n = E(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
@@ -121,10 +121,10 @@ function A(e) {
     })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
   let l = a.DropsOptedOut.getSetting(),
     i = N(s, !1);
-  return S(s) && !l && i
+  return A(s) && !l && i
 }
 
-function S(e) {
+function A(e) {
   let {
     endDate: t
   } = e, n = l(t, "YYYY-MM-DD HH:mm"), s = l();

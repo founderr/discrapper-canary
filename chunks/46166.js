@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("669491"),
   _ = s("266491"),
   I = s("77078"),
-  f = s("913801"),
-  T = s("45299"),
+  T = s("913801"),
+  f = s("45299"),
   S = s("545158"),
   m = s("716241"),
   N = s("465869"),
@@ -75,7 +75,7 @@ let v = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
       }), (0, a.jsxs)(I.FormItem, {
         title: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_PROMO_URL,
         disabled: K,
-        children: [(0, a.jsx)(f.default, {
+        children: [(0, a.jsx)(T.default, {
           value: W,
           className: i({
             [D.disabled]: K
@@ -182,7 +182,7 @@ let v = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
         component: "div",
         className: D.contentRegion,
         children: V && (0, a.jsx)(C.default, {
-          children: (0, a.jsx)(T.default, {
+          children: (0, a.jsx)(f.default, {
             submitting: c,
             onReset: () => {
               var e, t;

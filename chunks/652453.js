@@ -21,8 +21,8 @@ var l = n("37983"),
   I = n("306160"),
   g = n("568734"),
   E = n("354023"),
-  p = n("865699"),
-  _ = n("91366"),
+  _ = n("865699"),
+  p = n("91366"),
   v = n("49111"),
   m = n("782340"),
   T = n("435808"),
@@ -84,32 +84,32 @@ let A = u.default.connectStores([f.default], () => ({
       showGuestInviteToggleForCurrentVoiceChannel: x,
       copyValue: M,
       changePage: y,
-      inviteChannel: w,
-      source: R,
+      inviteChannel: R,
+      source: w,
       code: L,
       guildScheduledEvent: O,
-      disabled: U
+      disabled: D
     } = e, {
-      maxAge: D,
+      maxAge: U,
       maxUses: b,
-      networkError: F,
-      showVanityURL: P
+      networkError: P,
+      showVanityURL: F
     } = o, V = i.useCallback(() => {
       (0, I.copy)(M), h.default.track(v.AnalyticEvents.COPY_INSTANT_INVITE, {
         server: c.default.getGuildId(),
-        channel: null == w ? void 0 : w.id,
-        channel_type: null == w ? void 0 : w.type,
-        location: R,
+        channel: null == R ? void 0 : R.id,
+        channel_type: null == R ? void 0 : R.type,
+        location: w,
         code: L,
         guild_scheduled_event_id: null == O ? void 0 : O.id
       })
-    }, [M, w, R, L, O]);
+    }, [M, R, w, L, O]);
     return (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(A, {
         value: M,
         autoFocus: a,
         onCopy: V,
-        disabled: U
+        disabled: D
       }), f ? (0, l.jsx)("div", {
         className: T.temporaryMembershipContainerBackground,
         children: (0, l.jsx)(d.FormSwitch, {
@@ -117,27 +117,27 @@ let A = u.default.connectStores([f.default], () => ({
           value: (0, g.hasFlag)(S, r.GuildInviteFlags.IS_GUEST_INVITE),
           onChange: e => N((0, g.setFlag)(S, r.GuildInviteFlags.IS_GUEST_INVITE, e)),
           note: m.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
-          disabled: U,
+          disabled: D,
           hideBorder: !0,
           children: x ? m.default.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : m.default.Messages.GRANT_GUEST_MEMBERSHIP
         })
-      }) : null, n || P ? null : (0, l.jsxs)(d.Text, {
+      }) : null, n || F ? null : (0, l.jsxs)(d.Text, {
         variant: "text-xs/normal",
         className: s(C.marginTop8, T.footerText),
-        children: [(0, E.maxAgeString)(D, b), " ", a ? (0, l.jsx)(d.Anchor, {
-          onClick: () => y(_.InstantInviteModalPages.SETTINGS),
+        children: [(0, E.maxAgeString)(U, b), " ", a ? (0, l.jsx)(d.Anchor, {
+          onClick: () => y(p.InstantInviteModalPages.SETTINGS),
           children: m.default.Messages.INVITE_EDIT_LINK
         }) : null]
-      }), !n && a && P ? (0, l.jsxs)(d.Text, {
+      }), !n && a && F ? (0, l.jsxs)(d.Text, {
         variant: "text-xs/normal",
         className: s(C.marginTop8, T.footerText),
         children: [m.default.Messages.INVITE_VANITY_USED, " ", (0, l.jsx)(d.Anchor, {
-          onClick: () => y(_.InstantInviteModalPages.SETTINGS),
+          onClick: () => y(p.InstantInviteModalPages.SETTINGS),
           children: m.default.Messages.INVITE_EDIT_LINK
         })]
-      }) : null, null != F ? (0, l.jsx)(p.InviteErrorMessage, {
+      }) : null, null != P ? (0, l.jsx)(_.InviteErrorMessage, {
         guild: t,
-        error: F,
+        error: P,
         onClose: u
       }) : null]
     })

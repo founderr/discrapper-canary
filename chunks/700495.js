@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("406876"),
   _ = s("795228"),
   I = s("561205"),
-  f = s("782340"),
-  T = s("332227"),
+  T = s("782340"),
+  f = s("332227"),
   S = s("754433");
 
 function m(e) {
@@ -51,9 +51,9 @@ function m(e) {
         ConfirmModal: t
       } = await s.el("77078").then(s.bind(s, "77078"));
       return s => (0, a.jsx)(t, {
-        header: f.default.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
-        confirmText: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON,
-        cancelText: f.default.Messages.CANCEL,
+        header: T.default.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
+        confirmText: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON,
+        cancelText: T.default.Messages.CANCEL,
         onConfirm: () => {
           e()
         },
@@ -61,7 +61,7 @@ function m(e) {
         ...s,
         children: (0, a.jsx)(o.Text, {
           variant: "text-md/normal",
-          children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
+          children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
         })
       })
     })
@@ -69,18 +69,18 @@ function m(e) {
     allowSelfRemoveMonetization: G
   } = (0, d.useShouldRestrictUpdatingCreatorMonetizationSettings)(N);
   return null == h ? null : (0, a.jsx)(I.default, {
-    title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ADVANCE_SECTION_TITLE,
+    title: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ADVANCE_SECTION_TITLE,
     children: p ? (0, a.jsxs)(o.FormSection, {
-      title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_LABEL,
+      title: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_LABEL,
       disabled: !G,
       children: [(0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        className: T.formDescription,
+        className: f.formDescription,
         disabled: !G,
-        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
+        children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_DESCRIPTION
       }), (0, a.jsx)(o.Tooltip, {
         shouldShow: !L,
-        text: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_TOOLTIP.format({
+        text: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_TOOLTIP.format({
           listingMemberCount: x
         }),
         children: e => (0, a.jsx)(o.Button, {
@@ -90,17 +90,17 @@ function m(e) {
           onClick: j,
           submitting: M,
           disabled: !G || !L,
-          children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON
+          children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_BUTTON
         })
       })]
     }) : (0, a.jsxs)(o.FormSection, {
-      title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_LABEL,
+      title: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_LABEL,
       disabled: !G,
       children: [(0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
-        className: T.formDescription,
+        className: f.formDescription,
         disabled: !G,
-        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
+        children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
       }), (0, a.jsx)(o.Button, {
         wrapperClassName: S.deleteListingButton,
         color: o.Button.Colors.RED,
@@ -110,9 +110,9 @@ function m(e) {
               ConfirmModal: e
             } = await s.el("77078").then(s.bind(s, "77078"));
             return t => (0, a.jsx)(e, {
-              header: f.default.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
-              confirmText: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON,
-              cancelText: f.default.Messages.CANCEL,
+              header: T.default.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
+              confirmText: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON,
+              cancelText: T.default.Messages.CANCEL,
               onConfirm: () => {
                 D(N, g, C)
               },
@@ -120,14 +120,14 @@ function m(e) {
               ...t,
               children: (0, a.jsx)(o.Text, {
                 variant: "text-md/normal",
-                children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
+                children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_DESCRIPTION
               })
             })
           })
         },
         submitting: v,
         disabled: !G,
-        children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON
+        children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON
       })]
     })
   })

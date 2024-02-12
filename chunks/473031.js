@@ -43,8 +43,8 @@ function x(e) {
     channel_id: U,
     creator_id: y,
     name: V,
-    description: O,
-    entity_type: P,
+    description: P,
+    entity_type: O,
     image: j,
     recurrence_rule: k
   } = n, b = (0, C.getNextRecurrenceIdInEvent)(n), F = (0, u.useStateFromStores)([v.default], () => v.default.isInterestedInEventRecurrence(M, b), [M, b]), w = (0, u.useStateFromStores)([a.default], () => a.default.isLurking(A), [A]), H = (0, u.useStateFromStores)([s.default], () => s.default.getStageInstanceByChannel(U), [U]), B = (0, u.useStateFromStores)([d.default], () => d.default.getChannel(U), [U]), W = (0, u.useStateFromStores)([f.default], () => f.default.getUser(y), [y]), {
@@ -81,8 +81,8 @@ function x(e) {
     channel: B,
     creator: W,
     name: V,
-    entityType: P,
-    description: null != O ? O : void 0,
+    entityType: O,
+    description: null != P ? P : void 0,
     location: null !== (t = (0, m.getLocationFromEvent)(n)) && void 0 !== t ? t : void 0,
     imageSource: null != j ? (0, p.default)(n) : void 0,
     imageLocation: I.GuildEventBodyImageLocation.THUMBNAIL,

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("679653"),
   _ = s("506885"),
   I = s("981601"),
-  f = s("161778"),
-  T = s("27618"),
+  T = s("161778"),
+  f = s("27618"),
   S = s("697218"),
   m = s("461380"),
   N = s("987663"),
@@ -94,7 +94,7 @@ class p extends l.PureComponent {
           children: t
         }, l),
         count: r.count,
-        channel: r.channel ? "string" == typeof r.channel ? r.channel : (0, E.computeChannelName)(r.channel, S.default, T.default, !0) : null,
+        channel: r.channel ? "string" == typeof r.channel ? r.channel : (0, E.computeChannelName)(r.channel, S.default, f.default, !0) : null,
         channelHook: (e, t) => (0, a.jsx)("span", {
           onContextMenu: l,
           children: e
@@ -220,6 +220,6 @@ class p extends l.PureComponent {
     })
   }
 }
-var A = o.default.connectStores([f.default], () => ({
-  theme: f.default.theme
+var A = o.default.connectStores([T.default], () => ({
+  theme: T.default.theme
 }))(p)

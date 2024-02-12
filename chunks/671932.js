@@ -25,8 +25,8 @@ var a = s("37983"),
   E = s("593195"),
   _ = s("36694"),
   I = s("564875"),
-  f = s("620193"),
-  T = s("423487"),
+  T = s("620193"),
+  f = s("423487"),
   S = s("435076"),
   m = s("642807"),
   N = s("682327"),
@@ -61,7 +61,7 @@ function R(e) {
       break;
     case "warning":
       t = (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(T.default, {
+        children: [(0, a.jsx)(f.default, {
           width: 16,
           height: 16,
           className: C.warning
@@ -75,7 +75,7 @@ function R(e) {
       break;
     case "required":
       t = (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(T.default, {
+        children: [(0, a.jsx)(f.default, {
           width: 16,
           height: 16,
           className: C.danger
@@ -148,8 +148,8 @@ function O(e) {
     guildId: d,
     onEdit: u,
     disableGoodStatus: c
-  } = e, _ = (0, n.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(d)), I = (0, n.useStateFromStores)([r.default], () => (0, o.getMinimumSetOfDefaultChannelIds)(d, r.default.getDefaultChannelIds(d), r.default.getOnboardingPrompts(d)).length), [, f] = (0, o.useChattableDefaultChannels)(d, _), T = f.length, S = x(d), m = (0, N.useAdvancedModeReady)(d), L = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(d));
-  let O = (t = S, s = L, l = T, i = I, s ? h.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
+  } = e, _ = (0, n.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(d)), I = (0, n.useStateFromStores)([r.default], () => (0, o.getMinimumSetOfDefaultChannelIds)(d, r.default.getDefaultChannelIds(d), r.default.getOnboardingPrompts(d)).length), [, T] = (0, o.useChattableDefaultChannels)(d, _), f = T.length, S = x(d), m = (0, N.useAdvancedModeReady)(d), L = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(d));
+  let O = (t = S, s = L, l = f, i = I, s ? h.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
     numDefaultChannels: l,
     numFromQuestions: i - l
   }) : t ? h.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS.format({
@@ -166,7 +166,7 @@ function O(e) {
       height: 24,
       className: C.channelIcon
     }),
-    hasStarted: T > 0 || L,
+    hasStarted: f > 0 || L,
     status: S || m ? c ? "none" : "good" : "required",
     onEdit: u
   })
@@ -177,15 +177,15 @@ function p(e) {
     guildId: t,
     onEdit: s,
     disableGoodStatus: l
-  } = e, i = (0, n.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(t)), d = (0, n.useStateFromStoresArray)([r.default], () => r.default.getOnboardingPrompts(t)), u = d.length, [c, E] = (0, o.useChannelCoverageForOnboarding)(t, d, i), _ = c.length, f = c.length + E.length, T = _ / f * 100, S = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), m = u > 0, N = "none";
-  return m && (T >= 85 && !l ? N = "good" : T < 85 && (N = "warning")), (0, a.jsx)(R, {
+  } = e, i = (0, n.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(t)), d = (0, n.useStateFromStoresArray)([r.default], () => r.default.getOnboardingPrompts(t)), u = d.length, [c, E] = (0, o.useChannelCoverageForOnboarding)(t, d, i), _ = c.length, T = c.length + E.length, f = _ / T * 100, S = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), m = u > 0, N = "none";
+  return m && (f >= 85 && !l ? N = "good" : f < 85 && (N = "warning")), (0, a.jsx)(R, {
     title: S ? h.default.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : h.default.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER,
     description: h.default.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE.format({
       numChannels: _,
-      numTotalChannels: f,
+      numTotalChannels: T,
       channelsHook: (e, t) => (0, a.jsx)("span", {
         style: {
-          color: T > 85 ? "var(--header-primary)" : "var(--status-warning)"
+          color: f > 85 ? "var(--header-primary)" : "var(--status-warning)"
         },
         children: e
       }, t)
@@ -208,22 +208,22 @@ function A(e) {
     disableGoodStatus: o
   } = e, c = (0, n.useStateFromStores)([m.default], () => m.default.getSettings()), E = (0, n.useStateFromStores)([r.default], () => r.default.getEnabled(t)), {
     serverGuideOptional: _
-  } = (0, u.useOptionalOnboardingHomeAdminExperiment)(t), I = (0, d.isSettingsValid)(c), T = c.enabled, N = l.useCallback(() => {
-    (0, S.enableHomeSettings)(t, !T)
-  }, [t, T]), g = !(0, d.isSettingsEmpty)(c), x = "none";
+  } = (0, u.useOptionalOnboardingHomeAdminExperiment)(t), I = (0, d.isSettingsValid)(c), f = c.enabled, N = l.useCallback(() => {
+    (0, S.enableHomeSettings)(t, !f)
+  }, [t, f]), g = !(0, d.isSettingsEmpty)(c), x = "none";
   g && (I && !o ? x = "good" : !I && (x = "required"));
   let L = h.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_DESCRIPTION;
   I ? !g && (L = h.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_NOT_STARTED_DESCRIPTION) : L = h.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_INVALID_DESCRIPTION;
   let O = null;
   return g && _ && E && (O = (0, a.jsx)(i.Switch, {
     className: C.inlineSwitch,
-    checked: T,
+    checked: f,
     onChange: N,
     disabled: !I
   })), (0, a.jsx)(R, {
     title: h.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_TITLE,
     description: L,
-    icon: (0, a.jsx)(f.default, {
+    icon: (0, a.jsx)(T.default, {
       width: 24,
       height: 24,
       className: C.channelIcon

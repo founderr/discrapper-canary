@@ -55,7 +55,7 @@ let p = "SearchStore",
   T = {},
   C = null;
 
-function S(e) {
+function I(e) {
   var t;
   let {
     searchId: n,
@@ -68,7 +68,7 @@ function S(e) {
   })
 }
 
-function I(e) {
+function S(e) {
   let {
     searchId: t
   } = e, n = g[t];
@@ -193,7 +193,7 @@ var N = new D(d.default, {
     null != o.searchFetcher && (o.searchFetcher.cancel(), o.searchFetcher = null);
     let _ = o.searchType,
       g = new u.default(i, _, a);
-    o.searchFetcher = g, o.isSearching = !0, o.rawResults = null, o.analyticsId = null, o.query = r.omit(a, "type"), o.offset = null !== (n = a.offset) && void 0 !== n ? n : 0, o.showBlockedResults = !1, S({
+    o.searchFetcher = g, o.isSearching = !0, o.rawResults = null, o.analyticsId = null, o.query = r.omit(a, "type"), o.offset = null !== (n = a.offset) && void 0 !== n ? n : 0, o.showBlockedResults = !1, I({
       type: "SEARCH_ADD_HISTORY",
       searchId: i,
       query: s
@@ -249,7 +249,7 @@ var N = new D(d.default, {
     let s = n.query;
     null == s && (n.hasError = !0)
   },
-  SEARCH_EDITOR_STATE_CLEAR: I,
+  SEARCH_EDITOR_STATE_CLEAR: S,
   SEARCH_ENSURE_SEARCH_STATE: function(e) {
     let {
       searchId: t
@@ -284,7 +284,7 @@ var N = new D(d.default, {
     A(null != t ? t : n)
   },
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
-    return null != C && I({
+    return null != C && S({
       searchId: C
     })
   },
@@ -305,7 +305,7 @@ var N = new D(d.default, {
       history: T
     }))
   },
-  SEARCH_ADD_HISTORY: S,
+  SEARCH_ADD_HISTORY: I,
   LOGOUT: function() {
     o.default.remove(p), T = {}
   },

@@ -30,7 +30,7 @@ function _(e) {
     webhooks: E,
     editedWebhook: _,
     isFetching: I,
-    errors: f
+    errors: T
   } = (0, l.useStateFromStoresObject)([d.default], () => ({
     editedIntegration: d.default.editedIntegration,
     editedWebhook: d.default.editedWebhook,
@@ -51,7 +51,7 @@ function _(e) {
     editedWebhook: _,
     isFetching: I,
     hasChanges: d.default.hasChanges,
-    errors: f,
+    errors: T,
     refToScroller: t
   })
 }

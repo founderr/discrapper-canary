@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return A
   }
 }), n("424973"), n("222007");
 var s = n("37983");
@@ -22,20 +22,20 @@ var l = n("414456"),
   m = n("724210"),
   N = n("782340"),
   p = n("884938"),
-  A = n("105029"),
-  S = () => {
+  S = n("105029"),
+  A = () => {
     var e, t;
     let l = (0, o.useStateFromStores)([c.default], () => c.default.getGuildId(), []),
-      S = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(l), [l]),
+      A = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(l), [l]),
       C = (0, o.useStateFromStores)([T.default], () => null != l ? T.default.getRequest(l) : null, [l]),
       h = (0, r.useLocation)(),
-      g = (null === (e = (0, i.matchPath)(h.pathname, I.Routes.CHANNEL(null == S ? void 0 : S.id, m.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-    if (null == S || !S.hasVerificationGate() || g) return null;
+      g = (null === (e = (0, i.matchPath)(h.pathname, I.Routes.CHANNEL(null == A ? void 0 : A.id, m.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    if (null == A || !A.hasVerificationGate() || g) return null;
     let M = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
       O = null,
       R = null,
       L = null,
-      v = [p.notice, A.notice];
+      v = [p.notice, S.notice];
     switch (M) {
       case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
         O = N.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, R = N.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, L = () => {
@@ -43,7 +43,7 @@ var l = n("414456"),
             header: N.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
             confirmText: N.default.Messages.CONFIRM,
             cancelText: N.default.Messages.CANCEL,
-            onConfirm: () => E.default.removeGuildJoinRequest(S.id),
+            onConfirm: () => E.default.removeGuildJoinRequest(A.id),
             confirmButtonColor: u.Button.Colors.BRAND,
             ...e,
             children: (0, s.jsx)(u.Text, {
@@ -60,7 +60,7 @@ var l = n("414456"),
               default: e
             } = await n.el("388435").then(n.bind(n, "388435"));
             return t => (0, s.jsx)(e, {
-              guildId: S.id,
+              guildId: A.id,
               ...t
             })
           })
@@ -68,7 +68,7 @@ var l = n("414456"),
         break;
       default:
         O = N.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, R = N.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, L = () => {
-          (0, f.openMemberVerificationModal)(S.id)
+          (0, f.openMemberVerificationModal)(A.id)
         }
     }
     return (0, s.jsxs)("div", {

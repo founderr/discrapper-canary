@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("866561"),
   _ = s("656142"),
   I = s("566171"),
-  f = s("417385"),
-  T = s("735201"),
+  T = s("417385"),
+  f = s("735201"),
   S = s("555158"),
   m = s("599110"),
   N = s("427459"),
@@ -78,7 +78,7 @@ let p = e => {
     tierIndex: r,
     guildId: o
   } = e;
-  return (0, a.jsx)(f.default, {
+  return (0, a.jsx)(T.default, {
     subscriptionCount: l,
     tier: n,
     onSetRef: s,
@@ -95,7 +95,7 @@ function A() {
     })
   }, []);
   let e = (0, n.useStateFromStores)([h.default], () => h.default.getGuild()),
-    t = (0, n.useStateFromStores)([T.default], () => null != e ? T.default.getAppliedGuildBoostsForGuild(e.id) : null),
+    t = (0, n.useStateFromStores)([f.default], () => null != e ? f.default.getAppliedGuildBoostsForGuild(e.id) : null),
     s = (0, c.useSubscriptionPlansLoaded)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(l.Fragment, {

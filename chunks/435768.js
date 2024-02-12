@@ -83,8 +83,8 @@ function m(e) {
     onSave: C
   } = (0, h.default)(t, n), {
     modalStep: p,
-    setModalStep: x,
-    readySlide: I,
+    setModalStep: I,
+    readySlide: x,
     handleSlideReady: L,
     savedOptions: A,
     handleSettingsSave: D,
@@ -120,7 +120,7 @@ function m(e) {
             error: T,
             onSave: D,
             defaultOptions: A,
-            isSlideReady: I === v.StartStageSteps.STAGE_CHANNEL_SETTINGS
+            isSlideReady: x === v.StartStageSteps.STAGE_CHANNEL_SETTINGS
           })
         })
       }), (0, l.jsx)(s.Slide, {
@@ -135,7 +135,7 @@ function m(e) {
             loading: N,
             onNext: y,
             onCancel: n,
-            onBack: () => x(v.StartStageSteps.STAGE_CHANNEL_SETTINGS)
+            onBack: () => I(v.StartStageSteps.STAGE_CHANNEL_SETTINGS)
           })
         })
       })]

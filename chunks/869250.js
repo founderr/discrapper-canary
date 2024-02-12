@@ -4,8 +4,8 @@ s.r(t), s.d(t, {
     return h
   }
 });
-var l = s("37983"),
-  a = s("884691"),
+var a = s("37983"),
+  l = s("884691"),
   i = s("446674"),
   r = s("77078"),
   o = s("910330"),
@@ -18,9 +18,9 @@ var l = s("37983"),
   m = s("485422"),
   E = s("880114"),
   T = s("824140"),
-  x = s("751906"),
-  N = s("782340"),
-  p = s("974991");
+  p = s("751906"),
+  x = s("782340"),
+  N = s("974991");
 
 function h(e) {
   var t;
@@ -34,50 +34,50 @@ function h(e) {
   }), _ = (0, i.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getUserProfile(s.id)) || void 0 === e ? void 0 : e.connectedAccounts) && void 0 !== t ? t : []
-  }), C = (0, i.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), {
-    profileTheme: U
-  } = (0, S.default)(s, h), j = (0, i.useStateFromStores)([d.default], () => d.default.locale), y = a.useMemo(() => _.filter(e => {
+  }), U = (0, i.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), {
+    profileTheme: C
+  } = (0, S.default)(s, h), j = (0, i.useStateFromStores)([d.default], () => d.default.locale), y = l.useMemo(() => _.filter(e => {
     let t = n.default.get(e.type);
     return null != t && I(t)
-  }), [_, I]), g = a.useRef(null);
-  return (a.useLayoutEffect(() => {
+  }), [_, I]), g = l.useRef(null);
+  return (l.useLayoutEffect(() => {
     if (A) {
       var e;
       null == g || null === (e = g.current) || void 0 === e || e.scrollIntoView()
     }
-  }, [A]), C) ? (0, l.jsx)(x.default, {}) : (0, l.jsxs)(r.ScrollerThin, {
+  }, [A]), U) ? (0, a.jsx)(p.default, {}) : (0, a.jsxs)(r.ScrollerThin, {
     fade: !0,
-    className: p.infoScroller,
-    children: [(0, l.jsxs)("div", {
-      className: p.userInfoSection,
-      children: [(null == h ? void 0 : h.bio) != null && (null == h ? void 0 : h.bio) !== "" && (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(r.Heading, {
+    className: N.infoScroller,
+    children: [(0, a.jsxs)("div", {
+      className: N.userInfoSection,
+      children: [(null == h ? void 0 : h.bio) != null && (null == h ? void 0 : h.bio) !== "" && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(r.Heading, {
           variant: "eyebrow",
-          className: p.userInfoSectionHeader,
-          children: N.default.Messages.USER_PROFILE_ABOUT_ME
-        }), (0, l.jsx)(m.default, {
-          className: p.userInfoText,
+          className: N.userInfoSectionHeader,
+          children: x.default.Messages.USER_PROFILE_ABOUT_ME
+        }), (0, a.jsx)(m.default, {
+          className: N.userInfoText,
           userBio: null !== (t = null == h ? void 0 : h.bio) && void 0 !== t ? t : ""
         })]
-      }), (0, l.jsx)(E.default, {
+      }), (0, a.jsx)(E.default, {
         userId: s.id,
-        headingClassName: p.userInfoSectionHeader,
-        textClassName: p.userInfoText
-      }), (0, l.jsx)(r.Heading, {
+        headingClassName: N.userInfoSectionHeader,
+        textClassName: N.userInfoText
+      }), (0, a.jsx)(r.Heading, {
         variant: "eyebrow",
-        className: p.userInfoSectionHeader,
-        children: N.default.Messages.NOTE
-      }), (0, l.jsx)(o.default, {
+        className: N.userInfoSectionHeader,
+        children: x.default.Messages.NOTE
+      }), (0, a.jsx)(o.default, {
         userId: s.id,
         autoFocus: v,
-        className: p.note
+        className: N.note
       })]
-    }), (0, l.jsx)(T.ConnectedUserAccounts, {
+    }), (0, a.jsx)(T.ConnectedUserAccounts, {
       ref: g,
       connectedAccounts: y,
-      theme: U,
+      theme: C,
       locale: j,
-      className: p.userInfoSection,
+      className: N.userInfoSection,
       userId: s.id
     })]
   })

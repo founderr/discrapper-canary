@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return p
   },
   PrivateChannelIntegrationRemovedSystemMessage: function() {
-    return A
+    return S
   }
 });
 var s = n("37983"),
@@ -89,7 +89,7 @@ function p(e) {
   })
 }
 
-function A(e) {
+function S(e) {
   let {
     message: t,
     channel: l,

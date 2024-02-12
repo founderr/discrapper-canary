@@ -17,8 +17,8 @@ var l = s("819855"),
   E = s("818643"),
   _ = s("483093"),
   I = s("766419"),
-  f = s("49111"),
-  T = s("944305"),
+  T = s("49111"),
+  f = s("944305"),
   S = s("782340"),
   m = s("195072"),
   N = function(e) {
@@ -40,33 +40,33 @@ var l = s("819855"),
           onSelectUnicodeEmoji: e => (0, I.updateRoleIcon)(g.id, null, e)
         })
       })
-    }, L = t.features.has(f.GuildFeatures.ROLE_ICONS), O = e => {
-      !L && ((0, r.trackWithMetadata)(f.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+    }, L = t.features.has(T.GuildFeatures.ROLE_ICONS), O = e => {
+      !L && ((0, r.trackWithMetadata)(T.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           ...e,
-          section: f.AnalyticsSections.CUSTOM_ROLE_ICONS_TOOLTIP
+          section: T.AnalyticsSections.CUSTOM_ROLE_ICONS_TOOLTIP
         },
         guild_id: null == t ? void 0 : t.id,
         location_stack: R
       }), (0, c.default)({
         analyticsLocations: R,
         analyticsSourceLocation: {
-          page: f.AnalyticsPages.GUILD_SETTINGS,
-          section: f.AnalyticsSections.GUILD_ROLE_EDIT_UPSELL_MODAL,
-          object: f.AnalyticsObjects.BADGE
+          page: T.AnalyticsPages.GUILD_SETTINGS,
+          section: T.AnalyticsSections.GUILD_ROLE_EDIT_UPSELL_MODAL,
+          object: T.AnalyticsObjects.BADGE
         },
         guild: t,
-        perks: (0, T.customRoleIconUpsellPerks)()
+        perks: (0, f.customRoleIconUpsellPerks)()
       }))
     }, p = (0, a.jsx)(d.default, {
       className: m.availabilityIndicator,
       guild: t,
-      guildFeature: f.GuildFeatures.ROLE_ICONS,
+      guildFeature: T.GuildFeatures.ROLE_ICONS,
       tooltipPosition: "top",
       hideTooltip: L,
       onClick: () => O({
-        object: f.AnalyticsObjects.LEARN_MORE,
-        objectType: f.AnalyticsObjectTypes.TIER_2
+        object: T.AnalyticsObjects.LEARN_MORE,
+        objectType: T.AnalyticsObjectTypes.TIER_2
       })
     });
     return (0, a.jsxs)(n.FormItem, {
@@ -96,8 +96,8 @@ var l = s("819855"),
           className: m.button,
           color: (0, l.isThemeLight)(h) ? n.Button.Colors.PRIMARY : n.Button.Colors.WHITE,
           look: n.Button.Looks.OUTLINED,
-          onClick: () => t.hasFeature(f.GuildFeatures.ROLE_ICONS) ? x() : O({
-            object: f.AnalyticsObjects.UPLOAD_IMAGE
+          onClick: () => t.hasFeature(T.GuildFeatures.ROLE_ICONS) ? x() : O({
+            object: T.AnalyticsObjects.UPLOAD_IMAGE
           }),
           disabled: N,
           children: S.default.Messages.ROLE_ICON_CHOOSE_IMAGE

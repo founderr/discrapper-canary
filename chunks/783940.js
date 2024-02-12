@@ -28,22 +28,22 @@ function I(e) {
       onAcceptInstantInvite: N
     } = e,
     p = I === l.id,
-    A = n.state === f.InviteStates.ACCEPTING,
-    S = (0, i.useStateFromStores)([o.default], () => null != n.channel ? o.default.getChannel(n.channel.id) : null, [n]);
-  a(null == S || S.isPrivate(), "must be a private channel");
-  let C = null != S;
-  if (null == S) {
+    S = n.state === f.InviteStates.ACCEPTING,
+    A = (0, i.useStateFromStores)([o.default], () => null != n.channel ? o.default.getChannel(n.channel.id) : null, [n]);
+  a(null == A || A.isPrivate(), "must be a private channel");
+  let C = null != A;
+  if (null == A) {
     if (null == n.channel) return (0, s.jsx)(E.default, {});
-    S = (0, r.createChannelRecordFromInvite)(n.channel), t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []
+    A = (0, r.createChannelRecordFromInvite)(n.channel), t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []
   } else {
-    t = S.recipients.reduce((e, t) => {
+    t = A.recipients.reduce((e, t) => {
       let n = u.default.getUser(t);
       return null != n && e.push(n), e
     }, []);
     let e = u.default.getCurrentUser();
     C && null != e && t.push(e)
   }
-  let h = S.name;
+  let h = A.name;
   (null == h || "" === h) && (h = t.length > 0 ? t.filter(c.isNotNullish).map(e => e.username).join(", ") : _.default.Messages.UNNAMED);
   let g = C ? m : N,
     M = _.default.Messages.JOIN_GUILD,
@@ -57,7 +57,7 @@ function I(e) {
       children: [(0, s.jsxs)("div", {
         className: T.headerLine,
         children: [(0, s.jsx)(d.default.Icon, {
-          channel: S,
+          channel: A,
           onClick: C ? g : void 0
         }), (0, s.jsx)(d.default.Info, {
           title: h,
@@ -68,7 +68,7 @@ function I(e) {
         })]
       }), (0, s.jsx)(d.default.Button, {
         onClick: g,
-        submitting: A,
+        submitting: S,
         isDisabled: C,
         color: O,
         children: M

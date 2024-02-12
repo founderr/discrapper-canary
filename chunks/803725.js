@@ -46,10 +46,10 @@ n.r(t), n.d(t, {
     return J
   },
   exportClip: function() {
-    return z
+    return Y
   },
   dismissClipsUserEducation: function() {
-    return Y
+    return z
   }
 }), n("222007"), n("424973");
 var a = n("773364"),
@@ -402,13 +402,13 @@ async function J(e) {
     filepath: e
   }))
 }
-async function z(e, t) {
+async function Y(e, t) {
   let n = m.default.getMediaEngine(),
     a = await n.exportClip(e.filepath, t);
   return (0, N.default)(a)
 }
 
-function Y(e) {
+function z(e) {
   d.default.dispatch({
     type: "CLIPS_DISMISS_EDUCATION",
     educationType: e

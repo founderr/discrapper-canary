@@ -17,29 +17,29 @@ var n = a("37983"),
   g = a("685058"),
   p = a("498139"),
   E = a("578411"),
-  h = a("383292"),
-  I = a("163139"),
+  I = a("383292"),
+  h = a("163139"),
   M = a("230947"),
   m = a("747867"),
-  x = a("58622"),
-  _ = a("413266"),
+  _ = a("58622"),
+  x = a("413266"),
   S = a("701203"),
   v = a("95039"),
   A = a("255812"),
   G = a("199938"),
-  C = a("592407"),
-  R = a("267567"),
-  b = a("724026"),
-  T = a("393414"),
+  R = a("592407"),
+  C = a("267567"),
+  T = a("724026"),
+  b = a("393414"),
   L = a("26989"),
-  j = a("957255"),
-  D = a("282109"),
+  D = a("957255"),
+  j = a("282109"),
   N = a("697218"),
   y = a("756609"),
   U = a("660279"),
-  H = a("171710"),
-  O = a("796454"),
-  P = a("919765"),
+  P = a("171710"),
+  H = a("796454"),
+  O = a("919765"),
   V = a("474571"),
   w = a("118503"),
   F = a("987772"),
@@ -68,26 +68,26 @@ let q = i.memo(function(e) {
       guild_id: t.id
     })
   });
-  let J = (0, d.useStateFromStores)([D.default], () => D.default.isGuildCollapsed(t.id), [t.id]),
+  let J = (0, d.useStateFromStores)([j.default], () => j.default.isGuildCollapsed(t.id), [t.id]),
     {
       canAccessSettings: Q,
       canManageChannels: $,
       showGuildAnalytics: ee
-    } = (0, d.useStateFromStoresObject)([j.default], () => {
-      let e = j.default.can(Z.Permissions.VIEW_GUILD_ANALYTICS, t) && t.hasFeature(Z.GuildFeatures.COMMUNITY);
+    } = (0, d.useStateFromStoresObject)([D.default], () => {
+      let e = D.default.can(Z.Permissions.VIEW_GUILD_ANALYTICS, t) && t.hasFeature(Z.GuildFeatures.COMMUNITY);
       return {
-        canAccessSettings: j.default.canAccessGuildSettings(t),
-        canManageChannels: j.default.can(Z.Permissions.MANAGE_CHANNELS, t),
+        canAccessSettings: D.default.canAccessGuildSettings(t),
+        canManageChannels: D.default.can(Z.Permissions.MANAGE_CHANNELS, t),
         showGuildAnalytics: (0, G.staffOnlyGuildSettingsAccess)(t.id) || e
       }
     }, [t]),
     et = (0, S.useCanReportRaid)(t),
     ea = t.isOwner(q),
-    en = (0, d.useStateFromStores)([R.default], () => R.default.isLurking(t.id), [t.id]),
+    en = (0, d.useStateFromStores)([C.default], () => C.default.isLurking(t.id), [t.id]),
     ei = (0, d.useStateFromStores)([L.default], () => L.default.isCurrentUserGuest(t.id)),
     el = (0, A.default)(t.id, !0),
     es = (0, g.default)(t),
-    ed = (0, x.default)({
+    ed = (0, _.default)({
       source: Z.InstantInviteSources.GUILD_HEADER,
       guild: t
     }),
@@ -102,15 +102,15 @@ let q = i.memo(function(e) {
     }),
     er = t.hasFeature(Z.GuildFeatures.HUB),
     eo = t.id === W.FAVORITES_RAW_GUILD_ID,
-    ec = (0, b.default)(t.id),
-    ef = (0, h.default)(t),
-    eg = (0, I.default)(t),
+    ec = (0, T.default)(t.id),
+    ef = (0, I.default)(t),
+    eg = (0, h.default)(t),
     ep = (0, m.default)(t, !0),
     {
       isFavoritesPerk: eE
     } = (0, p.useFavoritesServerExperiment)("GuildHeaderPopout"),
     {
-      triggerDeadchat: eh
+      triggerDeadchat: eI
     } = f.SimpleDeadchatPromptExperiment.useExperiment({
       guildId: t.id,
       location: "guild header"
@@ -118,7 +118,7 @@ let q = i.memo(function(e) {
       autoTrackExposure: !1
     }),
     {
-      triggerGamingStats: eI
+      triggerGamingStats: eh
     } = c.GamingStatsPromptExperiment.useExperiment({
       guildId: t.id,
       location: "guild header"
@@ -134,9 +134,9 @@ let q = i.memo(function(e) {
     children: (0, n.jsx)(u.MenuItem, {
       id: "leave-guild",
       label: K.default.Messages.LEAVE_SERVER,
-      icon: O.default,
+      icon: H.default,
       action: () => {
-        C.default.leaveGuild(t.id), !ei && (0, T.transitionTo)(Z.Routes.GUILD_DISCOVERY)
+        R.default.leaveGuild(t.id), !ei && (0, b.transitionTo)(Z.Routes.GUILD_DISCOVERY)
       }
     })
   }) : eo ? (0, n.jsxs)(u.Menu, {
@@ -162,7 +162,7 @@ let q = i.memo(function(e) {
       }), (0, n.jsx)(u.MenuItem, {
         id: "create-category",
         label: K.default.Messages.CREATE_CATEGORY,
-        icon: P.default,
+        icon: O.default,
         action: () => (0, u.openModalLazy)(async () => {
           let {
             default: e
@@ -192,7 +192,7 @@ let q = i.memo(function(e) {
         label: K.default.Messages.SERVER_SETTINGS,
         icon: V.default,
         action: () => {
-          C.default.open(t.id, Z.GuildSettingsSections.OVERVIEW)
+          R.default.open(t.id, Z.GuildSettingsSections.OVERVIEW)
         }
       }) : null, ed, (0, n.jsx)(u.MenuItem, {
         id: "privacy",
@@ -212,7 +212,7 @@ let q = i.memo(function(e) {
       children: (0, n.jsx)(u.MenuItem, {
         id: "leave",
         label: K.default.Messages.LEAVE_HUB,
-        icon: O.default,
+        icon: H.default,
         color: "danger",
         action: () => X(t)
       })
@@ -238,17 +238,17 @@ let q = i.memo(function(e) {
         }
       })
     }), (0, n.jsxs)(u.MenuGroup, {
-      children: [ea && q.isStaff() && eh ? (0, n.jsx)(u.MenuItem, {
+      children: [ea && q.isStaff() && eI ? (0, n.jsx)(u.MenuItem, {
         id: "create-deadchat",
         label: "Deadchat Ping",
-        icon: H.default,
+        icon: P.default,
         action: () => {
           (0, o.forcePrompt)(t.id, Z.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT)
         }
-      }) : null, ea && q.isStaff() && eI ? (0, n.jsx)(u.MenuItem, {
+      }) : null, ea && q.isStaff() && eh ? (0, n.jsx)(u.MenuItem, {
         id: "create-gaming-ping",
         label: "Gaming Stats Ping",
-        icon: H.default,
+        icon: P.default,
         action: () => {
           (0, o.forcePrompt)(t.id, Z.MessageTypes.GUILD_GAMING_STATS_PROMPT)
         }
@@ -257,13 +257,13 @@ let q = i.memo(function(e) {
         label: K.default.Messages.SERVER_SETTINGS,
         icon: V.default,
         action: () => {
-          C.default.open(t.id, Z.GuildSettingsSections.OVERVIEW)
+          R.default.open(t.id, Z.GuildSettingsSections.OVERVIEW)
         }
       }) : null, ee ? (0, n.jsx)(u.MenuItem, {
         id: "insights",
         label: K.default.Messages.SERVER_INSIGHTS,
         icon: y.default,
-        action: () => C.default.open(t.id, Z.GuildSettingsSections.ANALYTICS)
+        action: () => R.default.open(t.id, Z.GuildSettingsSections.ANALYTICS)
       }) : null, $ ? (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)(u.MenuItem, {
           id: "create-channel",
@@ -282,7 +282,7 @@ let q = i.memo(function(e) {
         }), (0, n.jsx)(u.MenuItem, {
           id: "create-category",
           label: K.default.Messages.CREATE_CATEGORY,
-          icon: P.default,
+          icon: O.default,
           action: () => (0, u.openModalLazy)(async () => {
             let {
               default: e
@@ -336,11 +336,11 @@ let q = i.memo(function(e) {
         label: K.default.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
         icon: B.default,
         color: "danger",
-        action: () => (0, _.openReportRaidModal)(t.id)
+        action: () => (0, x.openReportRaidModal)(t.id)
       }) : null, ea ? null : (0, n.jsx)(u.MenuItem, {
         id: "leave",
         label: K.default.Messages.LEAVE_SERVER,
-        icon: O.default,
+        icon: H.default,
         color: "danger",
         action: () => X(t)
       })]

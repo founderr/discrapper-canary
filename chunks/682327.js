@@ -4,10 +4,10 @@ s.r(t), s.d(t, {
     return I
   },
   useAdvancedModeReady: function() {
-    return f
+    return T
   },
   AdvancedModeToggle: function() {
-    return T
+    return f
   }
 }), s("222007");
 var a = s("37983"),
@@ -28,7 +28,7 @@ function I(e, t) {
   return [a, s]
 }
 
-function f(e) {
+function T(e) {
   let t = (0, n.default)([o.default], () => o.default.isAdvancedMode(e)),
     [s, a] = function(e) {
       let t = (0, n.useStateFromStoresArray)([o.default], () => (0, d.getMinimumSetOfDefaultChannelIds)(e, o.default.getDefaultChannelIds(e), o.default.getOnboardingPrompts(e))),
@@ -38,7 +38,7 @@ function f(e) {
   return !!t && a.length >= E.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING && s.length >= E.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN
 }
 
-function T(e) {
+function f(e) {
   let {
     guildId: t,
     className: s

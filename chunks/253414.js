@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 }), s("222007");
 var a = s("37983");
@@ -17,13 +17,13 @@ var l = s("77078"),
   E = s("341778"),
   _ = s("782340"),
   I = s("332227"),
-  f = s("780425");
+  T = s("780425");
 
-function T() {
+function f() {
   let {
     editStateId: e,
     guildId: t
-  } = (0, r.useEditStateContext)(), [, T] = o.useRoleIcon(e, t), [S, m] = o.useRoleColor(e, t), N = o.useRole(e, t);
+  } = (0, r.useEditStateContext)(), [, f] = o.useRoleIcon(e, t), [S, m] = o.useRoleColor(e, t), N = o.useRole(e, t);
 
   function g() {
     (0, l.openModalLazy)(async () => {
@@ -33,11 +33,11 @@ function T() {
       return s => (0, a.jsx)(e, {
         ...s,
         guildId: t,
-        onUploadIcon: e => T({
+        onUploadIcon: e => f({
           icon: e,
           unicodeEmoji: null
         }),
-        onSelectUnicodeEmoji: e => T({
+        onSelectUnicodeEmoji: e => f({
           icon: null,
           unicodeEmoji: e
         })
@@ -69,7 +69,7 @@ function T() {
           disabled: h,
           children: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_DESCRIPTION
         }), (0, a.jsxs)("div", {
-          className: f.iconUploaderContainer,
+          className: T.iconUploaderContainer,
           children: [(0, a.jsx)(E.default, {
             role: N,
             "aria-label": _.default.Messages.ROLE_ICON_CHOOSE_IMAGE,
@@ -89,17 +89,17 @@ function T() {
       size: 24
     }), (0, a.jsx)(l.FocusBlock, {
       children: (0, a.jsxs)("div", {
-        className: f.previewContainer,
+        className: T.previewContainer,
         "aria-hidden": !0,
         children: [(0, a.jsx)(u.default, {
           guildId: t,
           role: N,
-          className: f.messageContainer,
+          className: T.messageContainer,
           theme: "light"
         }), (0, a.jsx)(u.default, {
           guildId: t,
           role: N,
-          className: f.messageContainer,
+          className: T.messageContainer,
           theme: "dark"
         })]
       })

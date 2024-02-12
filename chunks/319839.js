@@ -67,8 +67,8 @@ var i, s, l, a = n("627445"),
   Y = n("796618"),
   k = n("49111"),
   W = n("724210"),
-  j = n("843455");
-let z = "placeholder-channel-id",
+  z = n("843455");
+let j = "placeholder-channel-id",
   X = 2;
 (l = i || (i = {}))[l.CannotShow = 1] = "CannotShow", l[l.DoNotShow = 2] = "DoNotShow", l[l.WouldShowIfUncollapsed = 3] = "WouldShowIfUncollapsed", l[l.Show = 4] = "Show";
 let J = 0,
@@ -177,7 +177,7 @@ class $ {
     }
   }
   isPlaceholderRow(e, t) {
-    return r(e > J, "Invalid section"), e !== this.recentsSectionNumber && this.getRows()[e][t] === z
+    return r(e > J, "Invalid section"), e !== this.recentsSectionNumber && this.getRows()[e][t] === j
   }
   getFirstVoiceChannel(e) {
     if (void 0 === this.firstVoiceChannel) {
@@ -349,7 +349,7 @@ class ee {
   }
   getRows() {
     let e = this.getShownChannelIds();
-    return 0 === e.length && this.shouldShowEmptyCategory() ? [z] : e
+    return 0 === e.length && this.shouldShowEmptyCategory() ? [j] : e
   }
   shouldShowEmptyCategory() {
     return h.some(this.channels, e => e.renderLevel >= 3)
@@ -390,7 +390,7 @@ class et extends ee {
 }
 class en extends ee {
   shouldShowEmptyCategory() {
-    return !!(super.shouldShowEmptyCategory() || b.default.can(j.Permissions.MANAGE_CHANNELS, this.record) && b.default.can(j.Permissions.VIEW_CHANNEL, this.record) && h.isEmpty(this.channels) && (!this.guild.optInEnabled || this.guild.optedInChannels.has(this.id))) || !1
+    return !!(super.shouldShowEmptyCategory() || b.default.can(z.Permissions.MANAGE_CHANNELS, this.record) && b.default.can(z.Permissions.VIEW_CHANNEL, this.record) && h.isEmpty(this.channels) && (!this.guild.optInEnabled || this.guild.optedInChannels.has(this.id))) || !1
   }
   constructor(e, t, n, i) {
     for (let s of (super(e), this.record = t, this.id = t.id, this.isCollapsed = !0 === e.collapsedCategoryIds[t.id], this.isMuted = e.mutedChannelIds.has(t.id), this.channels = {}, n)) this.channels[s.id] = new eh(this, s, i)
@@ -549,7 +549,7 @@ class ea extends ee {
   getRows() {
     if (!this.guild.optInEnabled) return [];
     let e = this.getShownChannelIds();
-    return 0 === e.length && this.getHiddenChannelIds().length > 0 ? [z] : e
+    return 0 === e.length && this.getHiddenChannelIds().length > 0 ? [j] : e
   }
   getShownChannelIds() {
     if (!this.guild.optInEnabled) return [];
@@ -637,7 +637,7 @@ class eh extends ed {
       activeJoinedRelevantThreads: s,
       activeJoinedUnreadThreads: l
     } = e, a = [];
-    if (!b.default.can(j.Permissions.VIEW_CHANNEL, this.record)) {
+    if (!b.default.can(z.Permissions.VIEW_CHANNEL, this.record)) {
       if (this.id === i) return {
         renderLevel: 4,
         threadIds: a
@@ -685,7 +685,7 @@ class eo extends ed {
       selectedVoiceChannelId: i,
       activeJoinedRelevantThreads: s
     } = e;
-    return b.default.can(j.Permissions.VIEW_CHANNEL, this.record) ? {
+    return b.default.can(z.Permissions.VIEW_CHANNEL, this.record) ? {
       renderLevel: 4,
       threadIds: ef(this.record, null !== (t = s[this.id]) && void 0 !== t ? t : {}, n, i, !1)
     } : {
@@ -702,7 +702,7 @@ class eu extends ed {
       selectedVoiceChannelId: i,
       activeJoinedRelevantThreads: s
     } = e;
-    return b.default.can(j.Permissions.VIEW_CHANNEL, this.record) ? {
+    return b.default.can(z.Permissions.VIEW_CHANNEL, this.record) ? {
       renderLevel: eE(this, e) ? 4 : 3,
       threadIds: ef(this.record, null !== (t = s[this.id]) && void 0 !== t ? t : {}, n, i, !1)
     } : {
@@ -731,7 +731,7 @@ class ec extends eh {
 class eC extends eh {
   getRenderLevel(e) {
     let t = this.category.guild;
-    return !b.default.can(j.Permissions.VIEW_CHANNEL, this.record) || 4 === e || 3 === e || eI(t, this.record) ? 1 : this.category.isCollapsed ? h.some(M.default.getVoiceStatesForChannel(this.record.id)) ? 4 : 3 : 4
+    return !b.default.can(z.Permissions.VIEW_CHANNEL, this.record) || 4 === e || 3 === e || eI(t, this.record) ? 1 : this.category.isCollapsed ? h.some(M.default.getVoiceStatesForChannel(this.record.id)) ? 4 : 3 : 4
   }
   computeState(e) {
     let t = super.computeState(e),

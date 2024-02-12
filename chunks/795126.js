@@ -17,8 +17,8 @@ var l = s("414456"),
   E = s("461380"),
   _ = s("593195"),
   I = s("653274"),
-  f = s("34654"),
-  T = s("782340"),
+  T = s("34654"),
+  f = s("782340"),
   S = s("873536");
 
 function m(e) {
@@ -30,7 +30,7 @@ function m(e) {
     className: S.container,
     children: [(0, a.jsx)("div", {
       className: S.header,
-      children: (0, a.jsx)(f.default, {
+      children: (0, a.jsx)(T.default, {
         guildId: t.id,
         scrollToQuestions: s
       })
@@ -56,7 +56,7 @@ function N() {
       className: S.channelName,
       variant: "text-md/normal",
       color: "text-muted",
-      children: T.default.Messages.DEFAULT_CHANNELS_PREVIEW_EMPTY_STATE
+      children: f.default.Messages.DEFAULT_CHANNELS_PREVIEW_EMPTY_STATE
     })]
   })
 }

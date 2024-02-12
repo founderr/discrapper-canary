@@ -23,16 +23,16 @@ function u(e) {
       createEnableRequest: E,
       resubmittedRequest: _,
       requestRejectedNoticeText: I,
-      reapplyNoticeText: f
+      reapplyNoticeText: T
     } = (0, l.default)(s),
-    T = s.hasFeature(r.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED),
+    f = s.hasFeature(r.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED),
     S = s.hasFeature(r.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
   if (null != c) return (0, a.jsx)(n.default, {
     className: d.noticeContainer,
     children: c.getAnyErrorMessage()
   });
   let m = null;
-  return null != I ? m = I : _ ? m = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_PENDING : null != f ? (m = f, t = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA) : S ? m = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_READ_ONLY_FOR_PENDING_NEW_OWNER_PENDING_NOTICE : T && (m = o.default.Messages.CREATOR_MONETIZATION_SETTINGS_RESTRICTED_NOTICE), null != m ? (0, a.jsx)(i.default, {
+  return null != I ? m = I : _ ? m = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_PENDING : null != T ? (m = T, t = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA) : S ? m = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_READ_ONLY_FOR_PENDING_NEW_OWNER_PENDING_NOTICE : f && (m = o.default.Messages.CREATOR_MONETIZATION_SETTINGS_RESTRICTED_NOTICE), null != m ? (0, a.jsx)(i.default, {
     className: d.noticeContainer,
     notice: m,
     ctaLabel: t,

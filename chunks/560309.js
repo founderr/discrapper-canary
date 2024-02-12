@@ -22,8 +22,8 @@ var l = n("37983"),
   C = n("228427"),
   m = n("697468"),
   p = n("398604"),
-  g = n("334683"),
-  T = n("799547"),
+  T = n("334683"),
+  g = n("799547"),
   N = n("776863"),
   x = n("613767"),
   S = n("841363"),
@@ -53,7 +53,7 @@ let j = e => e === L.GuildScheduledEventEntityTypes.EXTERNAL,
       onSelectChannel: s,
       disabled: r,
       entityType: i
-    } = e, d = n === y.ChannelTypes.GUILD_STAGE_VOICE, c = (0, x.isChannelPublic)(a, i), f = (0, T.useGetEventChannelsByType)(t, n);
+    } = e, d = n === y.ChannelTypes.GUILD_STAGE_VOICE, c = (0, x.isChannelPublic)(a, i), f = (0, g.useGetEventChannelsByType)(t, n);
     return (0, l.jsxs)(u.FormItem, {
       title: d ? M.default.Messages.START_STAGE_MODAL_SET_TOPIC_SELECT_LABEL : M.default.Messages.GUILD_EVENT_LOCATION_VOICE_FIELD_LABEL,
       className: R.options,
@@ -95,14 +95,14 @@ function G(e, t, n, l) {
     tooltipText: M.default.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_PERMISSION
   }
 }
-let V = e => t => {
+let U = e => t => {
     e({
       entityMetadata: {
         location: t
       }
     })
   },
-  U = e => t => {
+  V = e => t => {
     var n;
     e({
       channelId: null !== (n = null == t ? void 0 : t.id) && void 0 !== n ? n : null
@@ -139,8 +139,8 @@ function P(e) {
       null === (e = E.current) || void 0 === e || e.focus()
     }
   }, [r, o]);
-  let h = V(s),
-    v = U(s),
+  let h = U(s),
+    v = V(s),
     I = (0, S.getLocationFromEventData)(n),
     _ = (0, S.getChannelTypeFromEntity)(o),
     C = (0, p.isGuildScheduledEventActive)(n);
@@ -171,7 +171,7 @@ function w(e) {
     guildId: t,
     guildEvent: n,
     onChange: s
-  } = e, r = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]), o = (0, g.default)(t, void 0), d = (0, g.default)(t, y.ChannelTypes.GUILD_VOICE), f = (0, g.default)(t, y.ChannelTypes.GUILD_STAGE_VOICE), E = (0, T.useGetEventChannelsByType)(t, y.ChannelTypes.GUILD_VOICE), h = (0, N.useChannelsUserCanStartStageIn)(r), _ = null == r ? void 0 : r.hasFeature(y.GuildFeatures.COMMUNITY), m = (0, p.isGuildScheduledEventActive)(n), x = b(s, n), S = a.useMemo(() => {
+  } = e, r = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]), o = (0, T.default)(t, void 0), d = (0, T.default)(t, y.ChannelTypes.GUILD_VOICE), f = (0, T.default)(t, y.ChannelTypes.GUILD_STAGE_VOICE), E = (0, g.useGetEventChannelsByType)(t, y.ChannelTypes.GUILD_VOICE), h = (0, N.useChannelsUserCanStartStageIn)(r), _ = null == r ? void 0 : r.hasFeature(y.GuildFeatures.COMMUNITY), m = (0, p.isGuildScheduledEventActive)(n), x = b(s, n), S = a.useMemo(() => {
     let e = [{
       name: M.default.Messages.VOICE_CHANNEL,
       value: L.GuildScheduledEventEntityTypes.VOICE,

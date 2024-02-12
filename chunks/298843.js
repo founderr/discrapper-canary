@@ -36,12 +36,12 @@ function N(e) {
     privacy_level: y
   } = a, R = (0, r.useStateFromStores)([f.default], () => f.default.getChannel(a.channel_id), [a]), O = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(m), [m]), {
     canManageGuildEvent: L
-  } = (0, o.useManageResourcePermissions)(null != R ? R : O), x = L(a), G = (0, r.useStateFromStores)([d.default], () => d.default.isLurking(m), [m]), M = a.entity_type === S.GuildScheduledEventEntityTypes.STAGE_INSTANCE, [w, U] = i.useState(M), [k, {
+  } = (0, o.useManageResourcePermissions)(null != R ? R : O), G = L(a), x = (0, r.useStateFromStores)([d.default], () => d.default.isLurking(m), [m]), M = a.entity_type === S.GuildScheduledEventEntityTypes.STAGE_INSTANCE, [w, U] = i.useState(M), [k, {
     loading: D,
-    error: b
+    error: P
   }] = (0, v.default)();
-  if (!x) return null;
-  let P = y === S.GuildScheduledEventPrivacyLevel.PUBLIC ? p.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : p.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
+  if (!G) return null;
+  let b = y === S.GuildScheduledEventPrivacyLevel.PUBLIC ? p.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : p.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
     j = () => {
       null == N || N(), A(), (0, c.setIsOnStartStageScreen)(!1)
     },
@@ -64,7 +64,7 @@ function N(e) {
           description: null !== (t = a.description) && void 0 !== t ? t : void 0,
           imageSource: (0, g.default)(a),
           isActive: !1,
-          isUserLurking: G,
+          isUserLurking: x,
           speakers: [],
           speakerCount: 0,
           rsvped: !0,
@@ -75,7 +75,7 @@ function N(e) {
         className: T.privacyLevel,
         variant: "text-sm/normal",
         children: p.default.Messages.START_EVENT_CONFIRMATION.format({
-          privacyLevel: P,
+          privacyLevel: b,
           privacyLevelHook: (e, t) => y !== S.GuildScheduledEventPrivacyLevel.PUBLIC ? null : (0, l.jsxs)("div", {
             className: T.privacyLevel,
             children: [(0, l.jsx)(_.default, {
@@ -122,11 +122,11 @@ function N(e) {
           className: T.button,
           children: p.default.Messages.START_EVENT
         })]
-      }), null != b && null != b.getAnyErrorMessage() ? (0, l.jsx)(u.Text, {
+      }), null != P && null != P.getAnyErrorMessage() ? (0, l.jsx)(u.Text, {
         color: "text-danger",
         variant: "text-sm/normal",
         className: T.errorMessage,
-        children: b.getAnyErrorMessage()
+        children: P.getAnyErrorMessage()
       }) : null]
     })
   })

@@ -21,8 +21,8 @@ var s = n("627445"),
   m = n("474643"),
   N = n("377253"),
   p = n("585722"),
-  A = n("239013"),
-  S = n("914271"),
+  S = n("239013"),
+  A = n("914271"),
   C = n("690714"),
   h = n("641126"),
   g = n("905206"),
@@ -203,7 +203,7 @@ var x = {
         });
         return
       }
-      A.showVotesForAnswer({
+      S.showVotesForAnswer({
         channelId: o,
         messageId: u,
         answerId: i
@@ -273,7 +273,7 @@ var x = {
       if (null != u && u.length > 0) {
         var T;
         let e = null !== (T = I.default.getToken()) && void 0 !== T ? T : "";
-        await S.sendPollMessageWithAttachments({
+        await A.sendPollMessageWithAttachments({
           channel: t,
           items: u,
           token: e,

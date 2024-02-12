@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("662285"),
   N = n("866253"),
   p = n("981601"),
-  A = n("671071"),
-  S = n("766274"),
+  S = n("671071"),
+  A = n("766274"),
   C = n("86878"),
   h = n("925758"),
   g = n("26989"),
@@ -54,7 +54,7 @@ class B extends l.PureComponent {
       let t = (0, c.default)(e, n.id);
       if (null != t) return t
     }
-    return null == n || n instanceof A.default ? null : D.default.getApplicationIconURL({
+    return null == n || n instanceof S.default ? null : D.default.getApplicationIconURL({
       id: n.id,
       icon: null != t ? t.coverImage : n.coverImage,
       size: b.ACTIVITY_INVITE_COVER_IMAGE_SIZE
@@ -251,7 +251,7 @@ var k = a.default.connectStores([m.default, h.default, O.default, M.default, T.d
         n = null != t ? t.nick : null,
         s = R.default.getUser(e),
         l = null == s;
-      return null == s && (s = new S.default({
+      return null == s && (s = new A.default({
         discriminator: "0005"
       })), {
         user: s,

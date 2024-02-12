@@ -22,7 +22,7 @@ function E(e) {
   } = e, {
     editStateId: E,
     guildId: _
-  } = (0, n.useEditStateContext)(), [I, f] = r.useChannelAccessFormat(E, _);
+  } = (0, n.useEditStateContext)(), [I, T] = r.useChannelAccessFormat(E, _);
   return (0, a.jsx)(l.RadioGroup, {
     className: c.channelAccessSelect,
     radioItemClassName: c.channelAccessSelectRadioButton,
@@ -32,7 +32,7 @@ function E(e) {
       let {
         value: t
       } = e;
-      return f(t)
+      return T(t)
     },
     options: [{
       name: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_BENEFITS_SELECT_CHANNELS_MANUALLY_LABEL,

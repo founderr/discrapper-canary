@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("430625"),
   N = n("740589"),
   p = n("472315"),
-  A = n("783940"),
-  S = n("530078"),
+  S = n("783940"),
+  A = n("530078"),
   C = n("649112"),
   h = n("793079"),
   g = n("135666"),
@@ -75,7 +75,7 @@ function R(e) {
         context: R("Invite Button Embed")
       })
     },
-    G = (0, s.jsx)(S.default, {
+    G = (0, s.jsx)(A.default, {
       onTransitionToInviteChannel: j,
       onAcceptInstantInvite: b,
       currentUserId: y,
@@ -103,7 +103,7 @@ function R(e) {
     default:
       switch ((0, c.getInviteType)(P)) {
         case c.InviteTypes.GROUP_DM:
-          G = (0, s.jsx)(A.default, {
+          G = (0, s.jsx)(S.default, {
             onTransitionToInviteChannel: j,
             onAcceptInstantInvite: b,
             currentUserId: y,

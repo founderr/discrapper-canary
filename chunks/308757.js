@@ -25,8 +25,8 @@ var l = n("627445"),
   m = n("846286"),
   N = n("509167"),
   p = n("292687"),
-  A = n("929479"),
-  S = n("697218"),
+  S = n("929479"),
+  A = n("697218"),
   C = n("357957"),
   h = n("521012"),
   g = n("552712"),
@@ -69,7 +69,7 @@ async function v(e) {
     a(null != s, "Could not find store listing for sku"), s.sku.type === O.SKUTypes.SUBSCRIPTION_GROUP && await (0, _.fetchAllSubscriptionListingsDataForApplication)(t, s.id)
   }(null == (c = null != c ? c : g.default.get(n)) ? void 0 : c.type) === O.SKUTypes.SUBSCRIPTION && !(0, I.getSubscriptionPlansLoaded)([c.id]) && await (0, f.fetchSubscriptionPlansForSKU)(c.id);
   let p = L(),
-    C = S.default.getCurrentUser();
+    C = A.default.getCurrentUser();
   if (null != c && c.premium) {
     if (M.default.canInstallPremiumApplications(C)) return R(c, d);
     await u.openModal(d), await
@@ -91,9 +91,9 @@ async function v(e) {
         };
         switch (l) {
           case O.AppContext.APP:
-            return A.default.openPremiumPaymentModalInApp(t);
+            return S.default.openPremiumPaymentModalInApp(t);
           case O.AppContext.OVERLAY:
-            return A.default.openPremiumPaymentModalInOverlay(t);
+            return S.default.openPremiumPaymentModalInOverlay(t);
           default:
             throw Error("Unexpected app context: ".concat(l))
         }

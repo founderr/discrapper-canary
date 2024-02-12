@@ -1,7 +1,7 @@
 "use strict";
 t.r(s), t.d(s, {
   default: function() {
-    return _
+    return p
   }
 });
 var a = t("37983"),
@@ -19,7 +19,7 @@ var a = t("37983"),
   h = t("782340"),
   N = t("637103");
 
-function p(e) {
+function _(e) {
   let {
     step: s,
     instructions: t
@@ -42,17 +42,17 @@ function p(e) {
   })
 }
 
-function _(e) {
+function p(e) {
   let {
     channel: s,
     transitionState: t,
-    onClose: _
+    onClose: p
   } = e, g = (0, l.useStateFromStores)([c.default], () => null != c.default.getRemoteSessionId()), C = (0, u.default)(s, {
     forQRCode: !0
   });
   return r.useEffect(() => {
-    g && _()
-  }, [g, _]), r.useEffect(() => {
+    g && p()
+  }, [g, p]), r.useEffect(() => {
     (0, f.default)(s.id, m.GameConsoleTypes.XBOX)
   }, [s.id]), (0, a.jsxs)(d.ModalRoot, {
     size: d.ModalSize.DYNAMIC,
@@ -83,10 +83,10 @@ function _(e) {
             children: [(0, a.jsx)(i.default, {
               className: N.cardHeaderIcon
             }), h.default.Messages.XBOX_APP_FOR_MOBILE]
-          }), (0, a.jsx)(p, {
+          }), (0, a.jsx)(_, {
             step: 1,
             instructions: h.default.Messages.XBOX_APP_STEP_ONE
-          }), (0, a.jsx)(p, {
+          }), (0, a.jsx)(_, {
             step: 2,
             instructions: h.default.Messages.XBOX_APP_STEP_TWO
           }), (0, a.jsx)(d.Text, {
@@ -105,7 +105,7 @@ function _(e) {
       })
     }), (0, a.jsx)(d.ModalCloseButton, {
       className: N.closeButton,
-      onClick: _
+      onClick: p
     })]
   })
 }

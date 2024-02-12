@@ -82,7 +82,7 @@ function C(e, t, n) {
   return e.type === t && (null === (s = e.other_user) || void 0 === s ? void 0 : s.id) === n
 }
 
-function S(e) {
+function I(e) {
   var t;
   if (!(0, r.isGuildEventEnded)(e)) return;
   let n = t => t.type === _.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id,
@@ -97,7 +97,7 @@ function S(e) {
     })
   } : e)
 }
-class I extends s.default.PersistedStore {
+class S extends s.default.PersistedStore {
   initialize(e) {
     if (this.waitFor(u.default), null != e) {
       let t = e.notifCenterItems.map(e => ({
@@ -152,8 +152,8 @@ class I extends s.default.PersistedStore {
     return h.notifCenterTabFocused
   }
 }
-I.displayName = "NotificationCenterItemsStore", I.persistKey = "NotificationCenterItemsStore_v2";
-var A = new I(i.default, {
+S.displayName = "NotificationCenterItemsStore", S.persistKey = "NotificationCenterItemsStore_v2";
+var A = new S(i.default, {
   CONNECTION_OPEN: function(e) {
     E(), m.default.initialLanguageLoad.then(() => {
       let t = [];
@@ -170,7 +170,7 @@ var A = new I(i.default, {
         t.push(a)
       }), e.guilds.forEach(e => {
         e.guild_scheduled_events.forEach(e => {
-          S(e)
+          I(e)
         })
       }), h.notifCenterLocalItems = t
     })
@@ -192,7 +192,7 @@ var A = new I(i.default, {
     let {
       guildScheduledEvent: t
     } = e;
-    S(t)
+    I(t)
   },
   NOTIFICATION_CENTER_ITEM_CREATE: y,
   NOTIFICATION_CENTER_ITEM_DELETE: function(e) {

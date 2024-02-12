@@ -20,9 +20,9 @@ function E(e) {
     rule: s,
     onChangeRule: E,
     collapsed: _ = !1
-  } = e, [I, f] = l.useState(!_), T = l.useCallback(() => {
-    f(!I)
-  }, [I, f]), S = l.useCallback(e => {
+  } = e, [I, T] = l.useState(!_), f = l.useCallback(() => {
+    T(!I)
+  }, [I, T]), S = l.useCallback(e => {
     E({
       ...s,
       triggerMetadata: {
@@ -46,7 +46,7 @@ function E(e) {
       } = e;
       return (0, a.jsx)(n.Clickable, {
         onClick: e => {
-          T(), t(e)
+          f(), t(e)
         },
         children: (0, a.jsxs)("div", {
           className: c.header,

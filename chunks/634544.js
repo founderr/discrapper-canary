@@ -19,8 +19,8 @@ var l = s("414456"),
         guild: E,
         className: _,
         hideTooltip: I = !1,
-        tooltipPosition: f = "left",
-        onClick: T
+        tooltipPosition: T = "left",
+        onClick: f
       } = e,
       S = E.hasFeature(c),
       m = (0, o.minimumRequiredTierForGuildFeature)(c);
@@ -44,15 +44,15 @@ var l = s("414456"),
       className: n(u.availabilityIndicator, _),
       children: t
     }) : (0, a.jsx)(i.Tooltip, {
-      position: f,
+      position: T,
       text: l,
       children: e => (0, a.jsx)("div", {
         ...e,
         className: n(u.availabilityIndicator, _),
         children: t
       })
-    }), null == T || S) ? s : (0, a.jsx)(i.Clickable, {
-      onClick: T,
+    }), null == f || S) ? s : (0, a.jsx)(i.Clickable, {
+      onClick: f,
       className: u.clickable,
       children: s
     })

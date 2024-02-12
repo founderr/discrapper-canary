@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("574073"),
   N = n("865343"),
   p = n("39331"),
-  A = n("68480"),
-  S = n("115859"),
+  S = n("68480"),
+  A = n("115859"),
   C = n("596368"),
   h = n("227439"),
   g = n("862451"),
@@ -60,7 +60,7 @@ var s = n("37983"),
     }), z = l.type === R.MessageTypes.REPLY ? l.messageReference : void 0, Z = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(z)), J = (0, r.useListItem)(l.id), Q = (0, m.default)(l), X = (0, o.useStateFromStores)([E.default], () => l.hasFlag(R.MessageFlags.HAS_THREAD) && E.default.getChannel(l.id)), q = (0, d.useRoleIcon)({
       guildId: U.guild_id,
       roleId: Q.iconRoleId
-    }), $ = (0, o.useStateFromStores)([f.default], () => f.default.can(R.Permissions.CREATE_INSTANT_INVITE, U)), ee = (0, A.default)({
+    }), $ = (0, o.useStateFromStores)([f.default], () => f.default.can(R.Permissions.CREATE_INSTANT_INVITE, U)), ee = (0, S.default)({
       message: l,
       channel: U,
       enabled: k
@@ -83,7 +83,7 @@ var s = n("37983"),
         author: Q,
         roleIcon: q
       }),
-      childrenAccessories: e.hideAccessories ? void 0 : (0, S.renderSimpleAccessories)(e, K),
+      childrenAccessories: e.hideAccessories ? void 0 : (0, A.renderSimpleAccessories)(e, K),
       childrenMessageContent: (0, C.default)({
         ...e,
         asPartialPreview: F

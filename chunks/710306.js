@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("210721"),
   N = n("583711"),
   p = n("65324"),
-  A = n("393414"),
-  S = n("271938"),
+  S = n("393414"),
+  A = n("271938"),
   C = n("55411"),
   h = n("686470"),
   g = n("697218"),
@@ -290,7 +290,7 @@ class V extends l.Component {
       let {
         libraryApplication: t
       } = this.props;
-      e.preventDefault(), null != t && t.isHidden() ? (0, A.transitionTo)(G.Routes.APPLICATION_LIBRARY_SETTINGS) : (0, A.transitionTo)(G.Routes.APPLICATION_LIBRARY, {
+      e.preventDefault(), null != t && t.isHidden() ? (0, S.transitionTo)(G.Routes.APPLICATION_LIBRARY_SETTINGS) : (0, S.transitionTo)(G.Routes.APPLICATION_LIBRARY, {
         state: {
           applicationId: null != t ? t.id : null
         }
@@ -363,7 +363,7 @@ class V extends l.Component {
   }
 }
 let Y = (0, _.default)((0, f.default)(V));
-var W = u.default.connectStores([C.default, O.default, g.default, h.default, M.default, S.default, T.default], e => {
+var W = u.default.connectStores([C.default, O.default, g.default, h.default, M.default, A.default, T.default], e => {
   let {
     code: t,
     author: n,
@@ -375,7 +375,7 @@ var W = u.default.connectStores([C.default, O.default, g.default, h.default, M.d
     gifter: i,
     currentUser: s,
     subscriptionPlan: null != l && null != l.subscriptionPlanId ? (0, U.getOrFetchSubscriptionPlan)(l.subscriptionPlanId) : null,
-    isSelfGift: null != l ? S.default.getId() === l.userId : S.default.getId() === n.id,
+    isSelfGift: null != l ? A.default.getId() === l.userId : A.default.getId() === n.id,
     resolved: C.default.getIsResolved(t),
     libraryApplication: null != a && (null == l ? void 0 : l.entitlementBranches) != null ? x.firstLibraryApplicationForGiftCode(l.entitlementBranches, a, h.default) : null,
     useReducedMotion: r

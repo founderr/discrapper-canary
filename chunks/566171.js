@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("583367"),
   _ = s("145079"),
   I = s("900938"),
-  f = s("735201"),
-  T = s("26989"),
+  T = s("735201"),
+  f = s("26989"),
   S = s("697218"),
   m = s("773309"),
   N = s("533403"),
@@ -218,13 +218,13 @@ class O extends l.Component {
     }, s)
   }
 }
-let p = d.default.connectStores([I.default, S.default, f.default, T.default], () => {
+let p = d.default.connectStores([I.default, S.default, T.default, f.default], () => {
   let e = I.default.getGuildId(),
-    t = null != e ? f.default.getAppliedGuildBoostsForGuild(e) : null,
+    t = null != e ? T.default.getAppliedGuildBoostsForGuild(e) : null,
     s = o(null != t ? t : []).uniqBy(e => e.userId),
     a = s.map(t => ({
       user: S.default.getUser(t.userId),
-      nick: T.default.getNick(e, t.userId)
+      nick: f.default.getNick(e, t.userId)
     })).filter(e => null != e.user).value();
   return {
     guildId: e,

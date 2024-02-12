@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   },
   ImportRoleCard: function() {
-    return T
+    return f
   }
 });
 var a = s("37983");
@@ -21,7 +21,7 @@ var l = s("414456"),
   _ = s("782340"),
   I = s("919686");
 
-function f(e) {
+function T(e) {
   let {
     channelBenefits: t,
     intangibleBenefits: s,
@@ -71,7 +71,7 @@ function f(e) {
   })
 }
 
-function T(e) {
+function f(e) {
   let {
     guildId: t,
     onImport: s,

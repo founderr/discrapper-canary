@@ -17,8 +17,8 @@ var l = s("281071"),
   E = s("757515"),
   _ = s("727411"),
   I = s("35018"),
-  f = s("739726"),
-  T = s("782340"),
+  T = s("739726"),
+  f = s("782340"),
   S = s("540583");
 let m = "guild-product-listings-header";
 
@@ -53,12 +53,12 @@ function N(e) {
     children: [(0, a.jsx)(n.FormTitle, {
       className: S.productListingsHeader,
       id: m,
-      children: C ? T.default.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : T.default.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
+      children: C ? f.default.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : f.default.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
     }), C ? (0, a.jsx)("ul", {
       className: S.productListings,
       "aria-labelledby": m,
       children: d.map(e => (0, a.jsx)("li", {
-        children: (0, a.jsx)(f.default, {
+        children: (0, a.jsx)(T.default, {
           guildId: t,
           product: e,
           onEditProduct: () => o(e.id),
@@ -102,7 +102,7 @@ function g(e) {
       }), (0, a.jsx)(o.default, {
         size: 6,
         horizontal: !0
-      }), T.default.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON]
+      }), f.default.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON]
     }), (0, a.jsx)(o.default, {
       size: 24
     }), (0, a.jsx)(N, {

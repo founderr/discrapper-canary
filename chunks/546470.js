@@ -25,7 +25,7 @@ function _(e) {
     formField: c,
     guild: _,
     index: I,
-    isDragEnabled: T,
+    isDragEnabled: f,
     submittedGuildJoinRequestsCount: S,
     removeFormField: m,
     updateFormField: N,
@@ -39,10 +39,10 @@ function _(e) {
   }, x = (0, l.uniqueId)(), L = t === I, O = {
     key: x,
     index: I,
-    isDragEnabled: T,
+    isDragEnabled: f,
     isDropHovered: L,
     onEdit: () => {
-      0 === S ? f(c, C) : (0, n.openModalLazy)(async () => {
+      0 === S ? T(c, C) : (0, n.openModalLazy)(async () => {
         let {
           default: e
         } = await s.el("265397").then(s.bind(s, "265397"));
@@ -50,7 +50,7 @@ function _(e) {
           ...t,
           guildId: _.id,
           submittedGuildJoinRequestsCount: S,
-          onConfirm: () => f(c, C)
+          onConfirm: () => T(c, C)
         })
       })
     },
@@ -137,7 +137,7 @@ function I(e, t) {
   }
 }
 
-function f(e, t) {
+function T(e, t) {
   let l = {
     onCloseRequest: c.NOOP
   };

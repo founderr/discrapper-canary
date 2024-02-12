@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   getVerificationLevelText: function() {
-    return f
+    return T
   },
   default: function() {
     return S
@@ -20,7 +20,7 @@ var a = s("37983"),
   _ = s("782340"),
   I = s("977618");
 
-function f(e) {
+function T(e) {
   switch (e) {
     case E.VerificationLevels.LOW:
       return _.default.Messages.VERIFICATION_LEVEL_LOW;
@@ -34,7 +34,7 @@ function f(e) {
       return ""
   }
 }
-let T = {
+let f = {
   [E.VerificationLevels.NONE]: "",
   [E.VerificationLevels.LOW]: n.default.unsafe_rawColors.GREEN_360.css,
   [E.VerificationLevels.MEDIUM]: n.default.unsafe_rawColors.YELLOW_300.css,
@@ -44,7 +44,7 @@ let T = {
 var S = function(e) {
   let {
     guild: t
-  } = e, n = r.default.can(E.Permissions.MANAGE_GUILD, t), S = t.verificationLevel, m = S === E.VerificationLevels.VERY_HIGH ? d.default : o.default, N = l.useMemo(() => f(S), [S]), g = T[S], h = (0, a.jsx)("div", {
+  } = e, n = r.default.can(E.Permissions.MANAGE_GUILD, t), S = t.verificationLevel, m = S === E.VerificationLevels.VERY_HIGH ? d.default : o.default, N = l.useMemo(() => T(S), [S]), g = f[S], h = (0, a.jsx)("div", {
     className: I.verificationLevelTitle,
     children: _.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
       verificationLevelHook: function() {

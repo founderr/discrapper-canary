@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("432153"),
   _ = s("505705"),
   I = s("179234"),
-  f = s("459662"),
-  T = s("49111"),
+  T = s("459662"),
+  f = s("49111"),
   S = s("988268"),
   m = s("276541");
 
@@ -33,11 +33,11 @@ function N() {
   l.useEffect(() => {
     null != t && (0, E.isEligibleForNewBadge)(t) && (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE)
   }, [t]);
-  let C = (null == t ? void 0 : t.hasFeature(T.GuildFeatures.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(T.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+  let C = (null == t ? void 0 : t.hasFeature(f.GuildFeatures.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(f.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
   return e = null == t || N ? (0, a.jsx)(r.Spinner, {}) : null != h ? (0, a.jsx)(I.default, {
     guild: t,
     config: h
-  }) : C ? (0, a.jsx)(f.default, {
+  }) : C ? (0, a.jsx)(T.default, {
     guild: t
   }) : (0, a.jsx)(_.default, {
     guild: t,

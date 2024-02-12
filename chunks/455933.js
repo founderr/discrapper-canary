@@ -35,17 +35,17 @@ function p(e, t, n, u) {
       startTime: O,
       endTime: A
     } = (0, S.default)(null != e ? e : "", u),
-    L = (0, r.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(e), [e]),
-    G = (0, r.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
-  if (C || null == L) return null;
-  R = L.entity_type === I.GuildScheduledEventEntityTypes.EXTERNAL ? L.entity_metadata.location : null != n && null != G ? N.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
+    G = (0, r.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(e), [e]),
+    L = (0, r.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
+  if (C || null == G) return null;
+  R = G.entity_type === I.GuildScheduledEventEntityTypes.EXTERNAL ? G.entity_metadata.location : null != n && null != L ? N.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
     channelName: n.name,
-    guildName: G.name
+    guildName: L.name
   }) : N.default.Messages.NOTIFICATION_TITLE_DISCORD;
-  let y = i(L.scheduled_start_time),
-    x = null != L.scheduled_end_time ? i(L.scheduled_end_time) : y,
-    V = null != L.description && "" !== L.description ? E.default.unparse(L.description, null !== (d = null == n ? void 0 : n.id) && void 0 !== d ? d : "", !0) : "",
-    U = (0, v.recurrenceRuleFromServer)(L.recurrence_rule),
+  let y = i(G.scheduled_start_time),
+    x = null != G.scheduled_end_time ? i(G.scheduled_end_time) : y,
+    V = null != G.description && "" !== G.description ? E.default.unparse(G.description, null !== (d = null == n ? void 0 : n.id) && void 0 !== d ? d : "", !0) : "",
+    U = (0, v.recurrenceRuleFromServer)(G.recurrence_rule),
     b = null != U ? (0, g.getRRule)(U) : null,
     P = null !== (p = i(O)) && void 0 !== p ? p : y,
     w = null !== (D = i(null != A ? A : O)) && void 0 !== D ? D : y,
@@ -54,7 +54,7 @@ function p(e, t, n, u) {
       e.createEvent({
         start: y,
         end: x,
-        summary: L.name,
+        summary: G.name,
         description: V,
         location: R,
         repeating: b
@@ -71,7 +71,7 @@ function p(e, t, n, u) {
         var e;
         let t = null == b ? void 0 : b.toString(),
           n = {
-            text: L.name,
+            text: G.name,
             dates: "".concat(y.format(m), "/").concat(x.format(m)),
             details: V,
             action: "TEMPLATE",
@@ -91,7 +91,7 @@ function p(e, t, n, u) {
       action: () => {
         let e = {
             v: 60,
-            title: L.name,
+            title: G.name,
             st: P.format(m),
             et: w.format(m),
             desc: V,
@@ -109,7 +109,7 @@ function p(e, t, n, u) {
             rru: "addevent",
             startdt: P.format(M),
             enddt: w.format(M),
-            subject: L.name,
+            subject: G.name,
             body: V,
             location: R,
             allday: !1

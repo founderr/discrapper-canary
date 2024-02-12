@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("159885"),
   _ = s("36694"),
   I = s("49111"),
-  f = s("782340"),
-  T = s("688541");
+  T = s("782340"),
+  f = s("688541");
 let S = -1,
   m = (0, E.cssValueToNumber)(u.default.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
   N = (0, E.cssValueToNumber)(u.default.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
@@ -76,14 +76,14 @@ class C extends l.Component {
       targetElementRef: this.foregroundTooltipElementRef,
       position: "right",
       color: c.Tooltip.Colors.BLACK,
-      tooltipClassName: T.foregroundTooltip,
+      tooltipClassName: f.foregroundTooltip,
       children: [(0, a.jsx)("div", {
-        children: f.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_NUM_SUBSCRIPTIONS.format({
+        children: T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_NUM_SUBSCRIPTIONS.format({
           numSubscriptions: e
         })
       }), null != o && null != i ? (0, a.jsx)("div", {
-        className: T.tooltipMuted,
-        children: f.default.Messages.PREMIUM_GUILD_SETTINGS_MEMBERS_SUBSCRIBED_NEEDED.format({
+        className: f.tooltipMuted,
+        children: T.default.Messages.PREMIUM_GUILD_SETTINGS_MEMBERS_SUBSCRIBED_NEEDED.format({
           number: o,
           tier: i.name
         })
@@ -97,11 +97,11 @@ class C extends l.Component {
     if (null == e.name || e.key === I.BoostedGuildTiers.NONE) return null;
     let s = Math.min(t, e.numRequired);
     return (0, a.jsxs)("div", {
-      className: T.tierTooltip,
+      className: f.tierTooltip,
       children: [(0, a.jsx)("div", {
         children: e.name
       }), (0, a.jsx)("div", {
-        children: f.default.Messages.PREMIUM_GUILD_SETTINGS_X_OF_Y_SUBSCRIPTIONS.format({
+        children: T.default.Messages.PREMIUM_GUILD_SETTINGS_X_OF_Y_SUBSCRIPTIONS.format({
           subscribers: s,
           numRequired: e.numRequired
         })
@@ -115,8 +115,8 @@ class C extends l.Component {
       progress: i,
       tiers: o
     } = this.props, d = o[s], u = i >= e.numRequired, E = null != d && e.key === d.key, I = e.key === o[0].key;
-    n = I ? T.tierFirst : E ? T.tierCurrent : u ? T.tierAccomplished : T.tierInProgress;
-    let f = e.y - (I ? 0 : N / 2),
+    n = I ? f.tierFirst : E ? f.tierCurrent : u ? f.tierAccomplished : f.tierInProgress;
+    let T = e.y - (I ? 0 : N / 2),
       S = this.state.tierMarkerActive === t,
       m = !I && E && S;
     return (0, a.jsx)(c.Tooltip, {
@@ -135,11 +135,11 @@ class C extends l.Component {
           ...e,
           className: n,
           style: {
-            top: f,
+            top: T,
             transform: t.scale.interpolate(e => "scale(".concat(e, ")"))
           },
           children: m && (0, a.jsx)(_.default, {
-            className: T.currentTierIcon
+            className: f.currentTierIcon
           })
         })
       })
@@ -174,7 +174,7 @@ class C extends l.Component {
     return (0, a.jsxs)("g", {
       mask: "url(#".concat(this.tierMarkerMaskId, ")"),
       children: [(0, a.jsx)("rect", {
-        className: T.background,
+        className: f.background,
         height: e,
         fill: "currentColor"
       }), (0, a.jsx)(r.Spring, {
@@ -189,7 +189,7 @@ class C extends l.Component {
         onChange: this.handleForegroundFrame,
         onRest: l ? void 0 : this.handleFinishedInitialAnimation,
         children: e => (0, a.jsx)(r.animated.rect, {
-          className: T.foreground,
+          className: f.foreground,
           height: e.height.interpolate(e => Math.max(0, e)),
           onMouseEnter: this.handleForegroundMouseEnter,
           onMouseLeave: this.handleForegroundMouseLeave,
@@ -205,7 +205,7 @@ class C extends l.Component {
       tiers: t
     } = this.props, s = this.getCurrentTierIndex(), l = this.getTotalHeight();
     return (0, a.jsxs)("div", {
-      className: i(e, T.progressBar),
+      className: i(e, f.progressBar),
       style: {
         height: l
       },
@@ -219,7 +219,7 @@ class C extends l.Component {
         style: {
           top: this.state.foregroundTooltipY
         },
-        className: T.foregroundTooltipPosition
+        className: f.foregroundTooltipPosition
       }), t.map((e, t) => this.renderTierMarker(e, t, s)), this.renderForegroundTooltip()]
     })
   }

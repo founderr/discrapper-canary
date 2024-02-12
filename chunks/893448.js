@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("506885"),
   _ = s("981601"),
   I = s("697218"),
-  f = s("555158"),
-  T = s("810567"),
+  T = s("555158"),
+  f = s("810567"),
   S = s("381546"),
   m = s("155207"),
   N = s("599110"),
@@ -59,11 +59,11 @@ function G(e) {
     guildId: n,
     roleId: r,
     locked: u
-  } = e, f = l.useMemo(() => ({
+  } = e, T = l.useMemo(() => ({
     [n]: [t.id]
   }), [n, t.id]);
 
-  function T(e) {
+  function f(e) {
     if (e.stopPropagation(), !u) {
       if (e.shiftKey) {
         j(t, n, r);
@@ -108,7 +108,7 @@ function G(e) {
       })
     })
   }
-  return (0, c.useSubscribeGuildMembers)(f), (0, a.jsx)("div", {
+  return (0, c.useSubscribeGuildMembers)(T), (0, a.jsx)("div", {
     className: v.contentWidth,
     children: (0, a.jsx)(o.Popout, {
       renderPopout: e => (0, a.jsx)(_.default, {
@@ -141,7 +141,7 @@ function G(e) {
               className: i(D.removeButton, {
                 [D.removeButtonDisabled]: u
               }),
-              onClick: T,
+              onClick: f,
               children: (0, a.jsx)(S.default, {
                 width: 16,
                 height: 16
@@ -236,8 +236,8 @@ function b(e) {
   } = e;
   return (0, a.jsxs)("div", {
     className: D.searchContainer,
-    children: [(0, a.jsx)(T.default, {
-      size: T.default.Sizes.MEDIUM,
+    children: [(0, a.jsx)(f.default, {
+      size: f.default.Sizes.MEDIUM,
       query: t,
       onChange: s,
       onClear: () => s(""),
@@ -263,7 +263,7 @@ function B(e) {
     headerHeight: _,
     headerRef: I
   } = (0, x.default)(0), {
-    scrolledToTop: T,
+    scrolledToTop: f,
     handleScroll: S
   } = (0, L.useScrolledToTop)(), m = n.managed || d, h = (0, R.useGuildRoleMembers)(t.id, n.id), C = (0, r.useStateFromStores)([g.default], () => {
     var e, s;
@@ -293,7 +293,7 @@ function B(e) {
         className: v.contentWidth,
         children: (0, a.jsxs)("div", {
           className: i(v.header, {
-            [v.stickyHeaderElevated]: !T
+            [v.stickyHeaderElevated]: !f
           }),
           children: [(0, a.jsx)(L.default, {
             guild: t,
@@ -305,9 +305,9 @@ function B(e) {
             setQuery: E,
             locked: m,
             handleAddClick: j
-          }), O ? (0, a.jsx)(f.default, {
+          }), O ? (0, a.jsx)(T.default, {
             className: D.searchWarning,
-            messageType: f.HelpMessageTypes.INFO,
+            messageType: T.HelpMessageTypes.INFO,
             children: M.default.Messages.ROLE_EDIT_MEMBERS_MISSING
           }) : null]
         })

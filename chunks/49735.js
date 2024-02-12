@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var a = n("77078"),
-  r = n("400307"),
-  l = n("646718"),
+var r = n("77078"),
+  l = n("400307"),
+  a = n("646718"),
   i = n("414539");
 
 function u(e) {
@@ -16,12 +16,12 @@ function u(e) {
     onClick: t,
     isGift: n
   } = e;
-  return (0, s.jsx)(a.Clickable, {
+  return (0, s.jsx)(r.Clickable, {
     onClick: t,
     style: {
       cursor: "pointer"
     },
-    children: (0, s.jsx)(r.Tier2Card, {
+    children: (0, s.jsx)(l.Tier2Card, {
       className: i.tier2MarketingCard,
       ctaButton: null,
       showWumpus: !0,
@@ -37,12 +37,12 @@ function o(e) {
     onClick: t,
     isGift: n
   } = e;
-  return (0, s.jsx)(a.Clickable, {
+  return (0, s.jsx)(r.Clickable, {
     onClick: t,
     style: {
       cursor: "pointer"
     },
-    children: (0, s.jsx)(r.Tier0Card, {
+    children: (0, s.jsx)(l.Tier0Card, {
       className: i.tier0MarketingCard,
       ctaButton: null,
       showWumpus: !0,
@@ -58,10 +58,10 @@ var d = function(e) {
   } = e;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(u, {
-      onClick: () => t(l.PremiumSubscriptionSKUs.TIER_2),
+      onClick: () => t(a.PremiumSubscriptionSKUs.TIER_2),
       isGift: n
     }), (0, s.jsx)(o, {
-      onClick: () => t(l.PremiumSubscriptionSKUs.TIER_0),
+      onClick: () => t(a.PremiumSubscriptionSKUs.TIER_0),
       isGift: n
     })]
   })

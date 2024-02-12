@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 }), s("222007");
 var a = s("37983"),
@@ -17,18 +17,18 @@ var a = s("37983"),
   _ = s("782340"),
   I = s("116891");
 
-function f(e) {
+function T(e) {
   var t, s, n;
   let {
-    changeTitle: f,
-    value: T,
+    changeTitle: T,
+    value: f,
     options: S,
     className: m,
     onChange: N
-  } = e, [g, h] = l.useState(T), [C, R] = l.useState(!1), [x, L] = l.useState(!1), O = l.useRef(null);
+  } = e, [g, h] = l.useState(f), [C, R] = l.useState(!1), [x, L] = l.useState(!1), O = l.useRef(null);
   l.useEffect(() => {
-    h(T)
-  }, [T]), l.useEffect(() => () => {
+    h(f)
+  }, [f]), l.useEffect(() => () => {
     clearTimeout(O.current)
   }, []);
   let p = S.find(e => e.value === g),
@@ -38,7 +38,7 @@ function f(e) {
       }, 1e3))
     };
   return (0, a.jsx)(c.default, {
-    title: C ? f : null !== (t = null == p ? void 0 : p.title) && void 0 !== t ? t : f,
+    title: C ? T : null !== (t = null == p ? void 0 : p.title) && void 0 !== t ? t : T,
     description: C ? "(".concat(null !== (s = null == p ? void 0 : p.title) && void 0 !== s ? s : _.default.Messages.NONE, ")") : null !== (n = null == p ? void 0 : p.description) && void 0 !== n ? n : "",
     highlightColor: C ? u.HighlightColors.NONE : null == p ? void 0 : p.highlightColor,
     action: (0, a.jsx)(r.Button, {

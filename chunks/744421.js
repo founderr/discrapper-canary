@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("882641"),
   _ = s("381546"),
   I = s("900938"),
-  f = s("958706"),
-  T = s("782340"),
+  T = s("958706"),
+  f = s("782340"),
   S = s("311352");
 let m = e => {
   var t;
@@ -25,7 +25,7 @@ let m = e => {
     reason: s = "",
     emoji_name: n,
     onSetReason: u,
-    onSelectEmoji: T,
+    onSelectEmoji: f,
     onClearPressed: m,
     reasonMinLength: N,
     reasonMaxLength: g,
@@ -47,10 +47,10 @@ let m = e => {
           closePopout: t
         } = e;
         return (0, a.jsx)(c.default, {
-          pickerIntention: f.EmojiIntention.COMMUNITY_CONTENT,
+          pickerIntention: T.EmojiIntention.COMMUNITY_CONTENT,
           closePopout: t,
           onSelectEmoji: (e, s) => {
-            null != e && T(e), s && t()
+            null != e && f(e), s && t()
           }
         })
       },
@@ -100,7 +100,7 @@ var N = e => {
     reasonMaxLength: s,
     guildId: l,
     reasons: n
-  } = e, i = [T.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_ONE, T.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_TWO, T.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_THREE, T.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_FOUR], r = [];
+  } = e, i = [f.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_ONE, f.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_TWO, f.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_THREE, f.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_FOUR], r = [];
   for (let e = 0; e < 4; e++) r.push((0, a.jsx)(m, {
     position: e,
     placeholder: i[e],

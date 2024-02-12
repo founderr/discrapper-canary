@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return A
   }
 }), n("222007"), n("834022");
 var s = n("37983"),
@@ -21,13 +21,13 @@ var s = n("37983"),
   m = n("315176"),
   N = n("49111"),
   p = n("782340"),
-  A = n("779194");
+  S = n("779194");
 
-function S(e) {
+function A(e) {
   let {
     message: t,
     channel: a,
-    compact: S
+    compact: A
   } = e, C = (0, r.useStateFromStoresArray)([d.default], () => {
     let e = d.default.getAllGuildStickers();
     return Array.from(e.values()).flat()
@@ -39,24 +39,24 @@ function S(e) {
     return () => clearInterval(e)
   }, [h]), null == a.guild_id) ? null : (0, s.jsxs)("div", {
     children: [(0, s.jsx)(_.default, {
-      className: i(A.mainContainer, {
-        [A.compact]: S
+      className: i(S.mainContainer, {
+        [S.compact]: A
       }),
       icon: n("127067"),
-      compact: S,
+      compact: A,
       children: (0, s.jsx)("div", {
-        className: i(A.content, {
-          [A.compact]: S
+        className: i(S.content, {
+          [S.compact]: A
         }),
         children: (0, s.jsx)("div", {
-          className: i(A.messageContent, {
-            [A.compact]: S
+          className: i(S.messageContent, {
+            [S.compact]: A
           }),
           children: "" !== t.content ? t.content : p.default.Messages.DEADCHAT_PROMPT_1
         })
       })
     }), (0, s.jsxs)("div", {
-      className: A.actions,
+      className: S.actions,
       children: [(0, s.jsx)(o.TooltipContainer, {
         text: p.default.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
         children: (0, s.jsx)(o.Button, {

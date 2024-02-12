@@ -22,8 +22,8 @@ var a = s("37983"),
   E = s("913144"),
   _ = s("913801"),
   I = s("45299"),
-  f = s("448993"),
-  T = s("883069"),
+  T = s("448993"),
+  f = s("883069"),
   S = s("569808"),
   m = s("658329"),
   N = s("578706"),
@@ -59,7 +59,7 @@ class O extends d.default.Store {
     }, this.setError = e => {
       this.error = e, this.emitChange()
     }, this.save = async () => {
-      await T.default.updateGuildTemplate(h.default.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange()
+      await f.default.updateGuildTemplate(h.default.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange()
     }
   }
 }
@@ -112,9 +112,9 @@ function D() {
         (async function t() {
           s(!0);
           try {
-            await T.default.loadTemplatesForGuild(e), s(!1)
+            await f.default.loadTemplatesForGuild(e), s(!1)
           } catch (e) {
-            p.setError(new f.APIError(e))
+            p.setError(new T.APIError(e))
           }
         })()
       }, [e]);
@@ -315,9 +315,9 @@ function P(e) {
   } = e, n = (0, d.useStateFromStores)([p], () => p.name), [i, r] = l.useState(!1), o = async () => {
     p.setError(null), r(!0);
     try {
-      await T.default.createGuildTemplate(s.id, p.name, p.description)
+      await f.default.createGuildTemplate(s.id, p.name, p.description)
     } catch (e) {
-      p.setError(new f.APIError(e))
+      p.setError(new T.APIError(e))
     }
     r(!1)
   };
@@ -337,9 +337,9 @@ function b(e) {
   } = e, [n, i] = l.useState(!1), r = async () => {
     p.setError(null), i(!0);
     try {
-      await T.default.syncGuildTemplate(t.id, s.code)
+      await f.default.syncGuildTemplate(t.id, s.code)
     } catch (e) {
-      p.setError(new f.APIError(e))
+      p.setError(new T.APIError(e))
     }
     i(!1)
   };
@@ -358,9 +358,9 @@ function B(e) {
   } = e, [n, i] = l.useState(!1), r = async () => {
     p.setError(null);
     try {
-      await T.default.deleteGuildTemplate(t.id, s.code), p.setName(""), p.setDescription("")
+      await f.default.deleteGuildTemplate(t.id, s.code), p.setName(""), p.setDescription("")
     } catch (e) {
-      p.setError(new f.APIError(e))
+      p.setError(new T.APIError(e))
     }
     i(!1)
   };

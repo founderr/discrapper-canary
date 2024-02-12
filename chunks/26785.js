@@ -18,8 +18,8 @@ var r = n("414456"),
   m = n("10514"),
   _ = n("659632"),
   E = n("240481"),
-  p = n("719923"),
-  I = n("153160"),
+  I = n("719923"),
+  p = n("153160"),
   S = n("646718"),
   P = n("782340"),
   N = n("419063");
@@ -35,15 +35,15 @@ function T(e) {
     isEligibleForDiscount: A,
     discountAmountOff: O
   } = e, h = (0, u.useStateFromStores)([f.default], () => f.default.locale), R = (0, u.useStateFromStores)([m.default], () => m.default.get(n)), {
-    isGift: g,
-    giftRecipient: M
-  } = (0, d.useGiftContext)(), x = g && (0, _.shouldShowCustomGiftExperience)(M, !0, "PremiumSwitchPlanSelectOption");
+    isGift: M,
+    giftRecipient: g
+  } = (0, d.useGiftContext)(), x = M && (0, _.shouldShowCustomGiftExperience)(g, !0, "PremiumSwitchPlanSelectOption");
   i(null != R, "Missing subscriptionPlan");
   let v = null != t && t.planId === n,
     y = v || n === S.SubscriptionPlans.PREMIUM_MONTH_TIER_2 && null != t && [S.SubscriptionPlans.PREMIUM_YEAR_TIER_0, S.SubscriptionPlans.PREMIUM_YEAR_TIER_1].includes(t.planId),
     L = S.DISCOUNTS[n],
-    b = (0, p.getPrice)(n, !1, g, T),
-    j = (0, p.isPrepaidPaymentSource)(T.paymentSourceId),
+    b = (0, I.getPrice)(n, !1, M, T),
+    j = (0, I.isPrepaidPaymentSource)(T.paymentSourceId),
     G = null != L && !C,
     D = R.interval === S.SubscriptionIntervalTypes.YEAR ? P.default.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : P.default.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
     U = () => null != L && (0, s.jsx)(o.Text, {
@@ -96,11 +96,11 @@ function T(e) {
               [N.optionSelected]: l || x,
               [N.updatedOptionSelected]: C && (l || x)
             }),
-            children: [(0, p.getIntervalString)(R.interval, g, j, R.intervalCount, x, (0, p.getPremiumType)(R.id)), x && B()]
+            children: [(0, I.getIntervalString)(R.interval, M, j, R.intervalCount, x, (0, I.getPremiumType)(R.id)), x && B()]
           }), x && (0, s.jsx)("div", {
             className: N.planOneTimeCost,
             children: P.default.Messages.ONE_TIME_CHARGE.format({
-              currencyAmount: (0, I.formatPrice)(b.amount, b.currency)
+              currencyAmount: (0, p.formatPrice)(b.amount, b.currency)
             })
           })]
         }), v && (0, s.jsxs)("span", {
@@ -113,8 +113,8 @@ function T(e) {
         }),
         children: P.default.Messages.BILLING_TRIAL_PRICE_NOW.format({
           price: (() => {
-            if (A && null != O) return R.interval === S.SubscriptionIntervalTypes.MONTH ? (0, I.formatPrice)(b.amount - O, b.currency) : (0, I.formatPrice)(b.amount, b.currency);
-            return (0, I.formatPrice)(0, b.currency, {
+            if (A && null != O) return R.interval === S.SubscriptionIntervalTypes.MONTH ? (0, p.formatPrice)(b.amount - O, b.currency) : (0, p.formatPrice)(b.amount, b.currency);
+            return (0, p.formatPrice)(0, b.currency, {
               maximumFractionDigits: 0
             })
           })()
@@ -123,7 +123,7 @@ function T(e) {
         className: a({
           [N.optionSelected]: l || x
         }),
-        children: (0, I.formatPrice)(b.amount, b.currency)
+        children: (0, p.formatPrice)(b.amount, b.currency)
       })]
     }), C && (0, s.jsx)("div", {
       className: N.planOptionSubtextContainer,
@@ -134,12 +134,12 @@ function T(e) {
           [N.discountPlanOptionSubtext]: A
         }),
         children: A && null != O ? R.interval === S.SubscriptionIntervalTypes.MONTH ? P.default.Messages.BILLING_DISCOUNT_MONTHLY_PRICE.format({
-          discountedPrice: (0, I.formatPrice)(b.amount - O, b.currency),
-          regularPrice: (0, I.formatPrice)(b.amount, b.currency)
+          discountedPrice: (0, p.formatPrice)(b.amount - O, b.currency),
+          regularPrice: (0, p.formatPrice)(b.amount, b.currency)
         }) : P.default.Messages.BILLING_YEARLY_PLAN_SAVINGS.format({
           percent: L
         }) : D.format({
-          price: (0, I.formatPrice)(b.amount, b.currency)
+          price: (0, p.formatPrice)(b.amount, b.currency)
         })
       })
     })]

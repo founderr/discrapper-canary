@@ -50,9 +50,9 @@ function I(e) {
     })]
   })
 }
-let f = "FORM_FIELD";
+let T = "FORM_FIELD";
 
-function T(e) {
+function f(e) {
   let {
     index: t,
     field: s,
@@ -60,8 +60,8 @@ function T(e) {
     onDrop: u
   } = e, E = (0, r.debounce)(async (e, t, s) => {
     await u(e, t, s)
-  }), T = l.useRef(null), [, S] = (0, o.useDrag)({
-    type: f,
+  }), f = l.useRef(null), [, S] = (0, o.useDrag)({
+    type: T,
     item: {
       index: t,
       field: s
@@ -70,12 +70,12 @@ function T(e) {
       null != e && !t.didDrop() && E(e.field, null, !0)
     }
   }), [, m] = (0, o.useDrop)({
-    accept: f,
+    accept: T,
     hover: (e, s) => {
       var a;
       let {
         index: l
-      } = e, n = null === (a = T.current) || void 0 === a ? void 0 : a.getBoundingClientRect(), i = s.getClientOffset();
+      } = e, n = null === (a = f.current) || void 0 === a ? void 0 : a.getBoundingClientRect(), i = s.getClientOffset();
       if (null == n || null == i) return;
       let r = (n.bottom - n.top) / 2,
         o = i.y - n.top;
@@ -85,10 +85,10 @@ function T(e) {
       E(e.field, t, !0)
     }
   });
-  return l.useLayoutEffect(() => (S(m(T)), () => {
+  return l.useLayoutEffect(() => (S(m(f)), () => {
     m(null), S(null)
   }), [S, m]), (0, a.jsxs)("div", {
-    ref: T,
+    ref: f,
     "data-dnd-name": "field-".concat(t),
     className: i(_.dragContainer, {
       [_.dropHovered]: n
@@ -108,7 +108,7 @@ function T(e) {
 function S(e) {
   return (0, a.jsx)("div", {
     className: _.spacingContainer,
-    children: e.isDragEnabled ? (0, a.jsx)(T, {
+    children: e.isDragEnabled ? (0, a.jsx)(f, {
       ...e
     }) : (0, a.jsx)(I, {
       ...e

@@ -14,8 +14,8 @@ var a, l, n = s("37983"),
   E = s("434014"),
   _ = s("488499"),
   I = s("860598"),
-  f = s("445940"),
-  T = s("578706"),
+  T = s("445940"),
+  f = s("578706"),
   S = s("381546"),
   m = s("68238"),
   N = s("717559"),
@@ -67,7 +67,7 @@ function O(e) {
         })]
       });
       return (0, n.jsxs)(n.Fragment, {
-        children: [R.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED, (0, n.jsx)(f.default, {
+        children: [R.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED, (0, n.jsx)(T.default, {
           className: x.statusDeferredIcon
         })]
       })
@@ -90,7 +90,7 @@ function O(e) {
       });
     case C.PayoutStatuses.PAID:
       return (0, n.jsxs)(n.Fragment, {
-        children: [R.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PAID, (0, n.jsx)(T.default, {
+        children: [R.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PAID, (0, n.jsx)(f.default, {
           className: x.statusPaidIcon
         })]
       });

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("567054"),
   _ = s("859130"),
   I = s("613786"),
-  f = s("462579"),
-  T = s("641892"),
+  T = s("462579"),
+  f = s("641892"),
   S = s("690343"),
   m = s("782340"),
   N = s("642622"),
@@ -84,7 +84,7 @@ function h(e) {
           color: "interactive-normal",
           variant: "text-xs/medium",
           className: N.valuePill,
-          children: [(0, a.jsx)(T.default, {
+          children: [(0, a.jsx)(f.default, {
             width: 16,
             height: 16
           }), m.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
@@ -102,7 +102,7 @@ function h(e) {
           children: (0, a.jsx)(o.Tooltip, {
             tooltipContentClassName: g.tooltip,
             text: m.default.Messages.PREVIEW,
-            children: e => (0, a.jsx)(f.default, {
+            children: e => (0, a.jsx)(T.default, {
               height: 24,
               width: 24,
               className: g.previewIcon,
@@ -125,14 +125,14 @@ function C(e) {
   var t;
   let {
     guild: s
-  } = e, [n, o] = l.useState(!1), [f, T] = l.useState(!1), S = l.useRef(!1), m = l.useCallback(() => {
+  } = e, [n, o] = l.useState(!1), [T, f] = l.useState(!1), S = l.useRef(!1), m = l.useCallback(() => {
     S.current = !0
   }, []), C = (0, _.useSubmittedGuildJoinRequestTotal)({
     guildId: s.id
   }), R = (0, r.useStateFromStores)([c.default], () => c.default.get(s.id)), x = null !== (t = null == R ? void 0 : R.formFields) && void 0 !== t ? t : [];
   return l.useEffect(() => {
     u.default.fetchVerificationForm(s.id).then(() => {
-      T(!0)
+      f(!0)
     })
   }, [s.id]), (0, a.jsx)(d.default, {
     renderHeader: (0, a.jsx)(h, {
@@ -145,7 +145,7 @@ function C(e) {
     onExpand: () => o(!n),
     children: (0, a.jsx)("div", {
       className: i(N.itemBodyContainer, g.rulesScreeningItems),
-      children: f && (0, a.jsx)(I.default, {
+      children: T && (0, a.jsx)(I.default, {
         guild: s,
         submittedGuildJoinRequestsCount: C,
         formFields: x,

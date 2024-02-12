@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("137215"),
   _ = s("900938"),
   I = s("851490"),
-  f = s("131835"),
-  T = s("330724"),
+  T = s("131835"),
+  f = s("330724"),
   S = s("136278"),
   m = s("397947"),
   N = s("259483"),
@@ -92,7 +92,7 @@ function D(e) {
       [A.upsellOnTop]: M
     }),
     children: [!S && n !== N.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)(v, {
-      setOnboardingStep: f.setOnboardingStep,
+      setOnboardingStep: T.setOnboardingStep,
       page: n,
       homeSettingsEnabled: D
     }), S && n !== N.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)("div", {
@@ -101,7 +101,7 @@ function D(e) {
         look: d.Button.Looks.BLANK,
         size: d.Button.Sizes.MIN,
         onClick: () => {
-          (0, T.resetGuildOnboardingPrompts)(), (0, I.resetDefaultChannels)(), (0, f.setOnboardingStep)(N.GuildSettingsOnboardingPage.LANDING)
+          (0, f.resetGuildOnboardingPrompts)(), (0, I.resetDefaultChannels)(), (0, T.setOnboardingStep)(N.GuildSettingsOnboardingPage.LANDING)
         },
         children: [(0, a.jsx)(E.default, {
           className: A.arrow,

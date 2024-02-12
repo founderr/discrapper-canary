@@ -22,8 +22,8 @@ var a = s("37983"),
   E = s("446674"),
   _ = s("77078"),
   I = s("404118"),
-  f = s("150021"),
-  T = s("133403"),
+  T = s("150021"),
+  f = s("133403"),
   S = s("349389"),
   m = s("84339"),
   N = s("250666"),
@@ -47,7 +47,7 @@ var a = s("37983"),
   B = s("782340"),
   y = s("341569"),
   F = s("405879");
-let H = u.throttle(f.fetchEmoji, 1e3),
+let H = u.throttle(T.fetchEmoji, 1e3),
   k = e => {
     let {
       currentTarget: t,
@@ -93,7 +93,7 @@ let H = u.throttle(f.fetchEmoji, 1e3),
           onKeyPress: k,
           onChange: d,
           onBlur: () => {
-            o !== s.name && (0, f.updateEmoji)({
+            o !== s.name && (0, T.updateEmoji)({
               guildId: t,
               emojiId: s.id,
               name: D.default.sanitizeEmojiName(o)
@@ -130,10 +130,10 @@ let H = u.throttle(f.fetchEmoji, 1e3),
           height: 24,
           className: y.editEmojiRolesIcon
         })
-      }), !r && (0, a.jsx)(T.default, {
+      }), !r && (0, a.jsx)(f.default, {
         className: y.emojiRemove,
         onClick: () => {
-          (0, f.deleteEmoji)(t, s.id).catch(e => {
+          (0, T.deleteEmoji)(t, s.id).catch(e => {
             let {
               status: t
             } = e;
@@ -284,17 +284,17 @@ var K = () => {
       revision: G.default.getEmojiRevision(e.id),
       emojis: G.default.getEmojis(e.id)
     })),
-    f = (0, m.default)(d),
-    [T, h] = l.useState(!1),
+    T = (0, m.default)(d),
+    [f, h] = l.useState(!1),
     [O, p] = l.useState(!1),
     M = l.useRef(null);
   l.useEffect(() => {
-    T && W()
-  }, [T]), l.useEffect(() => {
+    f && W()
+  }, [f]), l.useEffect(() => {
     H(e.id)
   }, [e.id]), l.useEffect(() => {
-    null != f && f < d && H(e.id)
-  }, [d, f, e.id]);
+    null != T && T < d && H(e.id)
+  }, [d, T, e.id]);
   let [D, v] = l.useMemo(() => {
     let t = null == I ? void 0 : I.filter(t => !(0, C.isRoleSubscriptionEmoji)(t, e.id)),
       [s, a] = u.partition(t, e => !e.animated);

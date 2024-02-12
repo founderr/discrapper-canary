@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("256170"),
   _ = s("423487"),
   I = s("900938"),
-  f = s("653274"),
-  T = s("131835"),
+  T = s("653274"),
+  f = s("131835"),
   S = s("330724"),
   m = s("136278"),
   N = s("682327"),
@@ -34,7 +34,7 @@ function L(e) {
   let {
     guildId: t,
     prompts: s
-  } = e, r = (0, n.useStateFromStores)([f.default], () => f.default.editedDefaultChannelIds), [d, I] = (0, u.useChannelCoverageForOnboarding)(t, s, [...r]), T = d.length, S = d.length + I.length, m = T / S * 100, N = Math.max(Math.ceil(85 * S / 100) - T, 0), [g, h] = l.useState(!1);
+  } = e, r = (0, n.useStateFromStores)([T.default], () => T.default.editedDefaultChannelIds), [d, I] = (0, u.useChannelCoverageForOnboarding)(t, s, [...r]), f = d.length, S = d.length + I.length, m = f / S * 100, N = Math.max(Math.ceil(85 * S / 100) - f, 0), [g, h] = l.useState(!1);
   return (0, a.jsxs)("div", {
     className: x.channelCoverage,
     children: [(0, a.jsxs)(i.Clickable, {
@@ -51,7 +51,7 @@ function L(e) {
           variant: "text-xs/medium",
           color: "text-muted",
           children: R.default.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_MISSING_CHANNELS.format({
-            numChannelsMissing: S - T
+            numChannelsMissing: S - f
           })
         })]
       }), (0, a.jsxs)("div", {
@@ -138,7 +138,7 @@ function p(e) {
     }, [s]), null == t) return null;
   let E = async () => {
     try {
-      await (0, S.saveGuildOnboardingPrompts)(t), await (0, T.startPreview)(t.id)
+      await (0, S.saveGuildOnboardingPrompts)(t), await (0, f.startPreview)(t.id)
     } catch {}
   };
   return (0, a.jsxs)(a.Fragment, {

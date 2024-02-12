@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("38600"),
   N = n("981601"),
   p = n("315102"),
-  A = n("888400"),
-  S = n("927632"),
+  S = n("888400"),
+  A = n("927632"),
   C = n("195483"),
   h = n("49111"),
   g = n("406291"),
@@ -63,12 +63,12 @@ function L(e) {
     channelId: r.id,
     guildId: r.guild_id,
     userId: t.id
-  })), [r]), L = l.useMemo(() => e => (o(null != r, "ExecutedCommand: channel cannot be null"), (0, s.jsx)(S.default, {
+  })), [r]), L = l.useMemo(() => e => (o(null != r, "ExecutedCommand: channel cannot be null"), (0, s.jsx)(A.default, {
     ...e,
     channel: r,
     messageId: a.id,
     interactionData: a.interactionData
-  })), [r, a.id, a.interactionData]), v = (0, I.useNullableUserAuthor)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, r), P = l.useMemo(() => e.compact ? (0, m.default)((0, A.dateFormat)(d(), "LT")) : null, [e.compact]), {
+  })), [r, a.id, a.interactionData]), v = (0, I.useNullableUserAuthor)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, r), P = l.useMemo(() => e.compact ? (0, m.default)((0, S.dateFormat)(d(), "LT")) : null, [e.compact]), {
     analyticsLocations: D
   } = (0, T.default)(), x = (0, E.useIsActivitiesInTextEnabled)(r.id, "ExecutedCommand"), y = a.interaction;
   if (null == y || null == v) return null;

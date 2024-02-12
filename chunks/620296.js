@@ -16,20 +16,20 @@ var a = s("37983"),
   E = s("126383"),
   _ = s("49111"),
   I = s("782340"),
-  f = s("680451");
+  T = s("680451");
 
-function T(e) {
+function f(e) {
   let {
     color: t,
     children: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: f.roleTag,
+    className: T.roleTag,
     children: [(0, a.jsx)(o.RoleCircle, {
-      className: f.roleDot,
+      className: T.roleDot,
       color: t
     }), (0, a.jsx)("span", {
-      className: f.roleText,
+      className: T.roleText,
       children: s
     })]
   })
@@ -41,22 +41,22 @@ function S(e) {
     display: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: i(f.banner, t.backgroundClass, {
-      [f.bannerOut]: !s
+    className: i(T.banner, t.backgroundClass, {
+      [T.bannerOut]: !s
     }),
     children: [(0, a.jsx)("div", {
-      className: f.roles,
+      className: T.roles,
       children: t.roles.map((e, t) => (0, a.jsx)("div", {
-        className: f.rolesRow,
-        children: e.map(e => (0, a.jsx)(T, {
+        className: T.rolesRow,
+        children: e.map(e => (0, a.jsx)(f, {
           color: e.color,
           children: e.name
         }, e.name))
       }, t))
     }), (0, a.jsx)("div", {
-      className: f.profileCard,
+      className: T.profileCard,
       children: (0, a.jsxs)("div", {
-        className: f.avatarContainer,
+        className: T.avatarContainer,
         children: [(0, a.jsx)(o.Avatar, {
           size: o.AvatarSizes.SIZE_56,
           "aria-hidden": !0,
@@ -65,7 +65,7 @@ function S(e) {
         }), (0, a.jsx)(o.Text, {
           color: "header-primary",
           variant: "text-md/bold",
-          className: f.avatarName,
+          className: T.avatarName,
           children: t.username
         })]
       })
@@ -76,7 +76,7 @@ function S(e) {
 function m() {
   let e = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     t = l.useMemo(() => [{
-      backgroundClass: f.bannerClubs,
+      backgroundClass: T.bannerClubs,
       username: "Wumpus#0000",
       avatar: s("896122"),
       roles: [
@@ -102,7 +102,7 @@ function m() {
         }]
       ]
     }, {
-      backgroundClass: f.bannerGaming,
+      backgroundClass: T.bannerGaming,
       username: "Graggle#0000",
       avatar: s("352683"),
       roles: [
@@ -128,7 +128,7 @@ function m() {
         }]
       ]
     }, {
-      backgroundClass: f.bannerHobbies,
+      backgroundClass: T.bannerHobbies,
       username: "Mallow#0000",
       avatar: s("380476"),
       roles: [
@@ -160,7 +160,7 @@ function m() {
     let s = setTimeout(() => i((n + 1) % t.length), 6332);
     return () => clearTimeout(s)
   }, [n]), (0, a.jsx)("div", {
-    className: f.bannerContainer,
+    className: T.bannerContainer,
     "aria-hidden": !0,
     children: t.map((e, t) => (0, a.jsx)(S, {
       guild: e,
@@ -181,28 +181,28 @@ function N(e) {
   }, [n, s.id]);
   return (0, a.jsx)(u.DefaultCustomContentScroller, {
     children: (0, a.jsxs)(o.FormSection, {
-      className: f.section,
+      className: T.section,
       title: I.default.Messages.ROLES,
       tag: o.FormTitleTags.H2,
       children: [(0, a.jsxs)("div", {
-        className: f.container,
+        className: T.container,
         children: [(0, a.jsx)(m, {}), (0, a.jsx)(o.Heading, {
           variant: "heading-xl/semibold",
           children: I.default.Messages.ROLE_OVERVIEW_EMPTY_SUBHEADER
         }), (0, a.jsx)(o.Text, {
           color: "header-secondary",
           variant: "text-md/normal",
-          className: f.introBody,
+          className: T.introBody,
           children: I.default.Messages.ROLE_OVERVIEW_DESCRIPTION
         }), (0, a.jsx)(o.Button, {
-          className: f.button,
+          className: T.button,
           size: o.Button.Sizes.MEDIUM,
           onClick: c,
           submitting: i,
           children: I.default.Messages.ROLE_CREATE_CTA
         })]
       }), (0, a.jsx)(o.FormDivider, {
-        className: f.divider
+        className: T.divider
       }), (0, a.jsx)(E.default, {
         role: s,
         onClick: _

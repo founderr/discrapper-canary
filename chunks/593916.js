@@ -16,8 +16,8 @@ var i = n("37983"),
   f = n("26989"),
   S = n("305961"),
   E = n("697218"),
-  h = n("991170"),
-  _ = n("479756"),
+  _ = n("991170"),
+  h = n("479756"),
   g = n("38654"),
   p = n("507950"),
   C = n("49111"),
@@ -43,32 +43,32 @@ function v(e) {
   } = (0, d.useStateFromStoresObject)([g.default], () => ({
     impersonateType: g.default.getImpersonateType(t),
     viewingRoles: g.default.getViewingRoles(t)
-  })), R = u === p.ImpersonateType.SERVER_SHOP, N = (0, d.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [M, O] = (0, c.useMultiSelect)(null == v ? [] : Object.keys(v)), A = r.useRef(l);
+  })), R = u === p.ImpersonateType.SERVER_SHOP, N = (0, d.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [M, O] = (0, c.useMultiSelect)(null == v ? [] : Object.keys(v)), L = r.useRef(l);
   r.useEffect(() => {
     let e = {},
-      t = A.current;
+      t = L.current;
     if (null != t && null != u) {
       for (let n of M) {
         let i = t.getRole(n);
         null != i && (e[n] = i)
-      }(0, _.updateImpersonating)(t.id, {
+      }(0, h.updateImpersonating)(t.id, {
         type: u,
         roles: e
       })
     }
   }, [M, u]);
-  let L = null != l && null != n && null != N ? o(l.roles).filter(e => -1 !== N.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
+  let A = null != l && null != n && null != N ? o(l.roles).filter(e => -1 !== N.roles.indexOf(e.id)).sortBy(e => -e.position).first() : void 0,
     b = r.useMemo(() => null != l && null != n ? Object.values(l.roles).filter(e => e.id !== l.id).filter(e => {
       var t;
       return !R || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null
-    }).filter(e => (null == L ? void 0 : L.id) === e.id || h.default.isRoleHigher(l, n.id, L, e)) : [], [l, n, R, L]);
+    }).filter(e => (null == A ? void 0 : A.id) === e.id || _.default.isRoleHigher(l, n.id, A, e)) : [], [l, n, R, A]);
   if (null == n || null == l || null == N) return null;
   let x = {};
   N.roles.forEach(e => {
     let t = l.roles[e];
     null != t && (x[t.id] = t)
   });
-  let P = a.default.has(h.default.computePermissionsForRoles({
+  let P = a.default.has(_.default.computePermissionsForRoles({
     forceRoles: x,
     context: l
   }), a.default.combine(C.Permissions.MANAGE_GUILD, C.Permissions.MANAGE_ROLES));

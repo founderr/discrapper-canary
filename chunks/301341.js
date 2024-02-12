@@ -22,8 +22,8 @@ function c(e) {
     subtitleText: E,
     initialValue: _
   } = e, I = l.useMemo(() => null != _ ? _ : [], [_]), {
-    value: f,
-    onChange: T,
+    value: T,
+    onChange: f,
     errorMessage: S
   } = (0, o.default)(t, _, s);
   return (0, a.jsxs)(a.Fragment, {
@@ -31,8 +31,8 @@ function c(e) {
       className: i(u.keywordsContainer, n),
       children: [(0, a.jsx)(r.TextAreaAutosize, {
         className: i(u.keywordsTextArea, c),
-        value: f,
-        onChange: T,
+        value: T,
+        onChange: f,
         placeholder: d.default.Messages.GUILD_AUTOMOD_KEYWORDS_PLACEHOLDER
       }), (0, a.jsx)(r.Text, {
         className: u.keywordsCounter,

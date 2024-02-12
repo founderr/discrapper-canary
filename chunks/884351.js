@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return Y
+    return j
   }
 }), n("222007"), n("808653"), n("424973"), n("881410");
 var l = n("917351"),
@@ -27,8 +27,8 @@ var l = n("917351"),
   _ = n("25292"),
   T = n("402671"),
   I = n("158998"),
-  v = n("49111"),
-  N = n("958706"),
+  N = n("49111"),
+  v = n("958706"),
   R = n("782340");
 
 function b(e, t, n) {
@@ -290,13 +290,13 @@ let U = c.default.RULES,
       }
     },
     spoiler: {
-      match: i.anyScopeRegex(v.MARKDOWN_SPOILER_REGEXP),
+      match: i.anyScopeRegex(N.MARKDOWN_SPOILER_REGEXP),
       parse: () => ({
         content: "<".concat(R.default.Messages.SPOILER.toLowerCase(), ">")
       })
     },
     staticRouteLink: {
-      match: i.anyScopeRegex(v.MARKDOWN_STATIC_ROUTE_NAME_REGEXP),
+      match: i.anyScopeRegex(N.MARKDOWN_STATIC_ROUTE_NAME_REGEXP),
       parse: e => ({
         content: "<id:".concat(e[1], ">")
       })
@@ -354,7 +354,7 @@ function K(e) {
   let t;
   let n = null == e ? void 0 : e.getGuildId(),
     l = null != n ? C.default.getGuild(n) : null,
-    a = y.default.can(v.Permissions.MENTION_EVERYONE, e);
+    a = y.default.can(N.Permissions.MENTION_EVERYONE, e);
   t = (null == e ? void 0 : e.isPrivate()) ? e.recipients.map(e => ({
     userId: e,
     nick: null
@@ -429,10 +429,10 @@ function K(e) {
   return A
 }
 
-function j(e) {
+function Y(e) {
   return e
 }
-var Y = {
+var j = {
   parse(e, t) {
     var n, l, r;
     let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
@@ -447,7 +447,7 @@ var Y = {
       T.default.isEmojiPremiumLocked({
         emoji: t,
         channel: e,
-        intention: N.EmojiIntention.CHAT
+        intention: v.EmojiIntention.CHAT
       }) ? u.invalidEmojis.push(t) : !n && u.validNonShortcutEmojis.push(t)
     }, V(B(n, l), l, s.default.translateInlineEmojiToSurrogates, r)), u
   },
@@ -460,7 +460,7 @@ var Y = {
       a = null != l ? l.getGuildId() : null,
       u = null != a ? C.default.getGuild(a) : null,
       o = n ? q : r.omit(q, ["spoiler", "timestamp"]),
-      c = n ? j : s.default.translateSurrogatesToInlineEmoji,
+      c = n ? Y : s.default.translateSurrogatesToInlineEmoji,
       d = i.parserFor(o),
       f = {
         inline: !0,

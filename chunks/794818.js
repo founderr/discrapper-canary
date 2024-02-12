@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return p
   },
   trackGuildJoinClicked: function() {
-    return x
+    return I
   },
   getDiscoverableGuild: function() {
-    return I
+    return x
   }
 }), n("222007");
 var l, a, r = n("522632"),
@@ -228,7 +228,7 @@ function p(e) {
   })
 }
 
-function x(e) {
+function I(e) {
   let t = u.default.getLoadId(e);
   E.default.track(h.AnalyticEvents.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
     guild_id: e,
@@ -236,7 +236,7 @@ function x(e) {
     guild_size: d.default.getMemberCount(e)
   })
 }
-async function I(e) {
+async function x(e) {
   try {
     var t, n;
     let l = await s.default.get({

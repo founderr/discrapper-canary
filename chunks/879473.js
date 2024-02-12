@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 }), s("222007");
 var a, l, n = s("37983"),
@@ -58,7 +58,7 @@ function I(e, t, s, a) {
     duration: s / t
   })))
 }
-class f extends i.Component {
+class T extends i.Component {
   componentDidMount() {
     this.startAnimation()
   }
@@ -197,5 +197,5 @@ class f extends i.Component {
     super(...e), this.x = new c.default.Value(0), this.y = new c.default.Value(0), this.opacity = new c.default.Value(1), this.fireScale = new c.default.Value(1), this.currentAnimation = null, this.isUnmounted = !1
   }
 }
-f.Stages = a;
-var T = f
+T.Stages = a;
+var f = T

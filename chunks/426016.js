@@ -22,10 +22,10 @@ function I(e) {
   let {
     action: s,
     triggerType: I,
-    guildId: f,
-    toggled: T,
+    guildId: T,
+    toggled: f,
     onToggleAction: S
-  } = e, m = e => () => S(e), N = (0, o.getActionInfo)(s.type, s, I), g = null === (t = s.metadata) || void 0 === t ? void 0 : t.durationSeconds, h = null != g ? (0, c.getFriendlyDurationString)(g) : null, C = (0, l.useStateFromStores)([r.default, i.default], () => r.default.can(u.Permissions.MODERATE_MEMBERS, i.default.getGuild(f)), [f]);
+  } = e, m = e => () => S(e), N = (0, o.getActionInfo)(s.type, s, I), g = null === (t = s.metadata) || void 0 === t ? void 0 : t.durationSeconds, h = null != g ? (0, c.getFriendlyDurationString)(g) : null, C = (0, l.useStateFromStores)([r.default, i.default], () => r.default.can(u.Permissions.MODERATE_MEMBERS, i.default.getGuild(T)), [T]);
   if (null == N) return null;
   let {
     headerText: R,
@@ -50,7 +50,7 @@ function I(e) {
         color: "interactive-normal",
         variant: "text-xs/medium",
         children: x
-      }), T && (0, a.jsxs)(n.Text, {
+      }), f && (0, a.jsxs)(n.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
         children: [function(e, t) {
@@ -77,7 +77,7 @@ function I(e) {
         ...e,
         children: (0, a.jsx)(n.Checkbox, {
           type: n.Checkbox.Types.INVERTED,
-          value: T,
+          value: f,
           onChange: m(!1),
           disabled: !C,
           className: _.actionCheckbox

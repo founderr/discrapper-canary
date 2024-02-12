@@ -25,8 +25,8 @@ function m(e) {
       invite: m,
       currentUserId: N,
       guild: p,
-      onTransitionToInviteChannel: A,
-      onAcceptInstantInvite: S
+      onTransitionToInviteChannel: S,
+      onAcceptInstantInvite: A
     } = e,
     C = null == p ? void 0 : p.id,
     h = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
@@ -48,7 +48,7 @@ function m(e) {
     p = new o.default(m.guild)
   }
   let y = null != m.channel ? (0, r.createChannelRecordFromInvite)(m.channel) : null,
-    U = O ? A : S;
+    U = O ? S : A;
   x && !R ? l = P ? T.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : T.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
     name: v.username
   }) : (t = T.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, O && (t = T.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), l = P ? T.default.Messages.INVITE_BUTTON_STREAMER : T.default.Messages.INVITE_BUTTON_STREAMING.format({

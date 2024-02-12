@@ -19,8 +19,8 @@ var s, l, a = n("37983"),
   m = n("535974"),
   N = n("352326"),
   p = n("964889"),
-  A = n("773336"),
-  S = n("882941"),
+  S = n("773336"),
+  A = n("882941"),
   C = n("780009"),
   h = n("159467"),
   g = n("49111"),
@@ -78,7 +78,7 @@ class v extends i.Component {
     if (e.isHidden()) return "add_to_library";
     if (e.isPreorder()) return "preorder_wait";
     let s = null != n ? R[n] : null;
-    return null != s ? s : null != t && t.type === g.LocalDispatchApplicationStates.UNINSTALLING ? "uninstalling" : (0, A.isWeb)() ? "play" : "unsupported_os"
+    return null != s ? s : null != t && t.type === g.LocalDispatchApplicationStates.UNINSTALLING ? "uninstalling" : (0, S.isWeb)() ? "play" : "unsupported_os"
   }
   renderPlayButton() {
     let {
@@ -177,7 +177,7 @@ class v extends i.Component {
     } = this.props, n = this.getButtonState();
     if ("play" === n) return this.renderPlayButton();
     if ("preorder_wait" === n) return this.renderDisabledButton(n, function(e) {
-      let t = S.getReadablePreorderReleaseDate(e.sku);
+      let t = A.getReadablePreorderReleaseDate(e.sku);
       return null != t ? M.default.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT_TOOLTIP.format({
         date: t
       }) : null

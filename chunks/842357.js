@@ -21,23 +21,23 @@ var a = s("37983"),
     } = e, {
       hasChanges: _,
       editingRule: I,
-      createNewEditingRule: f,
-      setEditingRule: T
+      createNewEditingRule: T,
+      setEditingRule: f
     } = (0, r.useAutomodEditingRuleState)(), {
       isLoading: S
     } = (0, r.useAutomodEditingRuleActions)(), [m] = l.useState(() => !(0, n.isBackendPersistedRule)(t)), N = (null == I ? void 0 : I.id) === t.id || s, g = (0, i.isDefaultRuleId)(null == t ? void 0 : t.id), h = N && null != I ? I : t, C = l.useMemo(() => (0, o.createOnPreventNavigation)(t.name), [null == t ? void 0 : t.name]), R = l.useCallback(() => {
-      f(t.guildId, t.triggerType)
-    }, [t.guildId, t.triggerType, f]), x = l.useCallback(e => {
-      !S && T(e, !0)
-    }, [S, T]);
+      T(t.guildId, t.triggerType)
+    }, [t.guildId, t.triggerType, T]), x = l.useCallback(e => {
+      !S && f(e, !0)
+    }, [S, f]);
     l.useEffect(() => {
-      E && T(t, !0)
-    }, [E, t, T]);
+      E && f(t, !0)
+    }, [E, t, f]);
     let L = l.useCallback(() => {
-      N ? !_ && T(null) : _ ? C(() => {
-        T(t)
-      }) : T(t)
-    }, [N, _, C, t, T]);
+      N ? !_ && f(null) : _ ? C(() => {
+        f(t)
+      }) : f(t)
+    }, [N, _, C, t, f]);
     return (0, a.jsx)(u.default, {
       renderHeader: (0, a.jsx)(c.default, {
         rule: h,

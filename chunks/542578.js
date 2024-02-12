@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("534291"),
   _ = s("339023"),
   I = s("180243"),
-  f = s("726527"),
-  T = s("405645"),
+  T = s("726527"),
+  f = s("405645"),
   S = s("915675"),
   m = s("957255"),
   N = s("211248"),
@@ -52,17 +52,17 @@ function H(e) {
     renderHeader: o,
     headerHeight: u,
     query: c
-  } = e, _ = (0, d.useStateFromStores)([D.default], () => D.default.getRoleMemberCount(s.id), [s.id]), I = (0, d.useStateFromStores)([m.default], () => m.default.getHighestRole(s), [s]), f = c.trim();
+  } = e, _ = (0, d.useStateFromStores)([D.default], () => D.default.getRoleMemberCount(s.id), [s.id]), I = (0, d.useStateFromStores)([m.default], () => m.default.getHighestRole(s), [s]), T = c.trim();
   l.useEffect(() => {
     (0, M.fetchMemberCounts)(s.id)
   }, [s.id]);
-  let T = l.useRef(!1);
+  let f = l.useRef(!1);
   l.useEffect(() => {
-    !T.current && "" !== c.trimStart() && (A.default.track(P.AnalyticEvents.SEARCH_STARTED, {
+    !f.current && "" !== c.trimStart() && (A.default.track(P.AnalyticEvents.SEARCH_STARTED, {
       search_type: "Roles"
-    }), T.current = !0)
+    }), f.current = !0)
   }, [c]);
-  let S = l.useMemo(() => i.filter(e => (0, v.filterRole)(e, f)), [i, f]),
+  let S = l.useMemo(() => i.filter(e => (0, v.filterRole)(e, T)), [i, T]),
     N = l.useMemo(() => [...i, n], [i, n]),
     {
       draggingId: g,
@@ -120,7 +120,7 @@ function w(e) {
   let {
     role: d,
     guild: E,
-    highestRole: T,
+    highestRole: f,
     currentPosition: m,
     memberCount: x,
     onDragStart: O,
@@ -130,7 +130,7 @@ function w(e) {
     disableDrag: D,
     setEditRoleId: v,
     setSelectedSection: G
-  } = e, P = (0, j.useLockTooltip)(E, T, d), H = null != P, [k, w] = l.useState(!1), Y = l.useMemo(() => ({
+  } = e, P = (0, j.useLockTooltip)(E, f, d), H = null != P, [k, w] = l.useState(!1), Y = l.useMemo(() => ({
     type: F,
     item: () => (O(d.id), {
       id: d.id,
@@ -177,7 +177,7 @@ function w(e) {
         guild: E
       })
     })
-  }, [E, d]), J = (0, f.useHasGuildRoleItems)(E, d);
+  }, [E, d]), J = (0, T.useHasGuildRoleItems)(E, d);
   if (W) return (0, a.jsx)("div", {
     ref: z,
     className: i(B.roleRow, B.roleRowDragging)
@@ -295,7 +295,7 @@ function V(e) {
     enableTooltip: r,
     className: d,
     defaultIconClassName: u
-  } = e, c = (0, T.useRoleIcon)({
+  } = e, c = (0, f.useRoleIcon)({
     guildId: s,
     roleId: l.id,
     size: n

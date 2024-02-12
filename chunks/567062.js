@@ -21,8 +21,8 @@ var a = s("37983"),
       children: s,
       isExpanded: n,
       isStuck: I,
-      onExpand: f
-    } = e, T = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, m] = l.useState(!0), [N, g] = l.useState(!1), {
+      onExpand: T
+    } = e, f = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, m] = l.useState(!0), [N, g] = l.useState(!1), {
       ref: h,
       height: C = 0
     } = (0, u.default)(), {
@@ -30,7 +30,7 @@ var a = s("37983"),
       height: x = 0
     } = (0, u.default)(), [L, O] = l.useState(n), p = (0, r.useSpring)({
       height: L ? x + C : C,
-      immediate: S || T,
+      immediate: S || f,
       config: {
         ...r.config.stiff,
         clamp: !0
@@ -70,7 +70,7 @@ var a = s("37983"),
         style: p,
         children: [(0, a.jsx)(d.Clickable, {
           innerRef: h,
-          onClick: I ? void 0 : f,
+          onClick: I ? void 0 : T,
           className: i(_.innerHeader, {
             [_.toggled]: n && I
           }),

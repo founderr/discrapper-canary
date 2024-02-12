@@ -24,8 +24,8 @@ var s = n("37983"),
   m = n("246053"),
   N = n("58608"),
   p = n("158998"),
-  A = n("866190"),
-  S = n("662960"),
+  S = n("866190"),
+  A = n("662960"),
   C = n("634388"),
   h = n("893399"),
   g = n("744917"),
@@ -57,7 +57,7 @@ function L(e) {
   let {
     coverImageAsset: t,
     isPreview: n = !1
-  } = e, l = E.GifAutoPlay.useSetting(), a = (0, A.useIsWindowFocused)(), i = a && l, [r, o] = (0, c.default)(t, i), u = i ? (0, s.jsx)(N.default, {
+  } = e, l = E.GifAutoPlay.useSetting(), a = (0, S.useIsWindowFocused)(), i = a && l, [r, o] = (0, c.default)(t, i), u = i ? (0, s.jsx)(N.default, {
     autoPlay: !0,
     loop: !0,
     className: O.coverImage,
@@ -88,7 +88,7 @@ function v(e) {
   } = e, m = c.id;
   let {
     nickname: N,
-    nickcolor: A
+    nickcolor: S
   } = (a = m, (0, r.useStateFromStoresObject)([f.default, _.default], () => {
     var e, t;
     let n = _.default.getCurrentUser();
@@ -101,7 +101,7 @@ function v(e) {
   }, [a])), {
     isTruncated: v,
     ExpandableTextContainer: P
-  } = (0, S.useExpandableTextContainer)(), D = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [x, y] = l.useState(1), U = (0, u.default)("(max-width: ".concat(O.twoColumnWidth, ")")), {
+  } = (0, A.useExpandableTextContainer)(), D = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [x, y] = l.useState(1), U = (0, u.default)("(max-width: ".concat(O.twoColumnWidth, ")")), {
     selectedTab: j,
     isPhantomPreview: b
   } = (0, C.useGuildShopDisplayContext)(), G = j === h.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, B = D ? (0, s.jsxs)(s.Fragment, {
@@ -163,7 +163,7 @@ function v(e) {
               usernameHook: function(e, t) {
                 return (0, s.jsx)("span", {
                   style: {
-                    color: A
+                    color: S
                   },
                   children: e
                 }, t)

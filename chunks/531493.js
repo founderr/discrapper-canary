@@ -14,8 +14,8 @@ var i = s("917351"),
   E = s("382981"),
   _ = s("746574"),
   I = s("449008"),
-  f = s("991170"),
-  T = s("900938"),
+  T = s("991170"),
+  f = s("900938"),
   S = s("53948"),
   m = s("49111");
 let N = new Set,
@@ -60,7 +60,7 @@ function v(e) {
 
 function j() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  a = T.default.getProps().guild, h = !1, C = !1, n = void 0, N.clear(), g = m.FormStates.OPEN, x = [...R = null != a ? r(a.roles).values().value() : []], O = !1, e && (M.clear(), A.forEach((e, t) => {
+  a = f.default.getProps().guild, h = !1, C = !1, n = void 0, N.clear(), g = m.FormStates.OPEN, x = [...R = null != a ? r(a.roles).values().value() : []], O = !1, e && (M.clear(), A.forEach((e, t) => {
     M.set(t, [...e])
   }))
 }
@@ -102,7 +102,7 @@ function b(e) {
     guildId: t
   } = e;
   if (null == a || t !== a.id || g === m.FormStates.SUBMITTING) return !1;
-  a = T.default.getProps().guild;
+  a = f.default.getProps().guild;
   let s = [];
   null != a && (s = r(a.roles).values().value()), N.forEach(e => {
     let t = P(e),
@@ -118,7 +118,7 @@ function b(e) {
 }
 class B extends u.default.Store {
   initialize() {
-    this.waitFor(T.default, E.default)
+    this.waitFor(f.default, E.default)
   }
   hasChanges() {
     return h || C || O
@@ -206,7 +206,7 @@ let y = new B(c.default, __OVERLAY__ ? {} : {
       id: t
     } = e, s = P(t);
     return null != s && U(s, {
-      permissions: f.default.NONE
+      permissions: T.default.NONE
     })
   },
   GUILD_SETTINGS_ROLES_UPDATE_NAME: function(e) {

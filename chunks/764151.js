@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("419830"),
   _ = s("69678"),
   I = s("372283"),
-  f = s("634544"),
-  T = s("379532"),
+  T = s("634544"),
+  f = s("379532"),
   S = s("569912"),
   m = s("129092"),
   N = s("205454"),
@@ -110,19 +110,19 @@ function ee(e) {
   var t, n, o, u, c;
   let {
     guildId: I,
-    action: f,
-    actionIndex: T,
+    action: T,
+    actionIndex: f,
     onChange: g,
     onDelete: h,
     onDragStart: C,
     onDragComplete: R,
     onDragReset: x
-  } = e, O = (0, r.default)([L.default], () => L.default.getChannel(f.channelId)), A = (0, r.default)([p.default], () => p.default.getGuild(I)), {
+  } = e, O = (0, r.default)([L.default], () => L.default.getChannel(T.channelId)), A = (0, r.default)([p.default], () => p.default.getGuild(I)), {
     customEmoji: D,
     unicodeEmoji: v
-  } = (0, S.default)(null === (t = f.emoji) || void 0 === t ? void 0 : t.id, null === (n = f.emoji) || void 0 === n ? void 0 : n.name), U = null == f.emoji || null != D || null != v, P = B.default.getNewMemberActionIconURL({
-    channelId: f.channelId,
-    icon: f.icon
+  } = (0, S.default)(null === (t = T.emoji) || void 0 === t ? void 0 : t.id, null === (n = T.emoji) || void 0 === n ? void 0 : n.name), U = null == T.emoji || null != D || null != v, P = B.default.getNewMemberActionIconURL({
+    channelId: T.channelId,
+    icon: T.icon
   }), b = null;
   null != O && (0, m.isChannelValidForNewMemberAction)(O) ? !U && (b = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : b = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
   let {
@@ -132,8 +132,8 @@ function ee(e) {
     setIsDraggable: w
   } = (0, _.default)({
     type: "NEW_MEMBER_ACTION",
-    index: T,
-    optionId: f.channelId,
+    index: f,
+    optionId: T.channelId,
     onDragStart: C,
     onDragComplete: R,
     onDragReset: x
@@ -147,21 +147,21 @@ function ee(e) {
       return t => (0, a.jsx)(e, {
         ...t,
         guildId: I,
-        action: f,
-        onSave: (e, t) => g(T, e, t),
-        onDelete: () => h(T),
+        action: T,
+        onSave: (e, t) => g(f, e, t),
+        onDelete: () => h(f),
         onIconUpload: V
       })
     })
-  }, [I, f, T, g, h, V]);
+  }, [I, T, f, g, h, V]);
   if (null == O || null == A) return null;
   let W = null !== (c = (0, E.getChannelIconComponent)(O)) && void 0 !== c ? c : M.default;
   return (0, a.jsxs)("div", {
     className: i(Z.actionItemContainer),
     children: [(0, a.jsxs)("div", {
       className: i(Z.actionItem, {
-        [Z.dropIndicatorBefore]: null != F && T < F,
-        [Z.dropIndicatorAfter]: null != F && T > F,
+        [Z.dropIndicatorBefore]: null != F && f < F,
+        [Z.dropIndicatorAfter]: null != F && f > F,
         [Z.actionItemError]: null != b
       }),
       ref: e => y(H(e)),
@@ -185,8 +185,8 @@ function ee(e) {
       }) : (0, a.jsx)("div", {
         className: Z.actionItemEmojiWrapper,
         children: (0, a.jsx)(N.default, {
-          emojiId: null === (o = f.emoji) || void 0 === o ? void 0 : o.id,
-          emojiName: null === (u = f.emoji) || void 0 === u ? void 0 : u.name,
+          emojiId: null === (o = T.emoji) || void 0 === o ? void 0 : o.id,
+          emojiName: null === (u = T.emoji) || void 0 === u ? void 0 : u.name,
           size: N.CTAEmojiSize.MEDIUM,
           defaultComponent: (0, a.jsx)(W, {})
         })
@@ -195,7 +195,7 @@ function ee(e) {
         children: [(0, a.jsx)(d.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
-          children: f.title
+          children: T.title
         }), (0, a.jsx)(d.Text, {
           variant: "text-xs/medium",
           color: "header-secondary",
@@ -397,7 +397,7 @@ function en(e) {
       },
       guild_id: null == i ? void 0 : i.id,
       location_stack: []
-    }), (0, T.default)({
+    }), (0, f.default)({
       analyticsLocations: [],
       analyticsSourceLocation: {
         section: V.AnalyticsSections.GUILD_SETTINGS_ONBOARDING,
@@ -428,7 +428,7 @@ function en(e) {
         className: Z.header,
         variant: "heading-lg/extrabold",
         children: K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_BANNER
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(T.default, {
         className: Z.boostIndicator,
         guild: i,
         guildFeature: V.GuildFeatures.BANNER,
@@ -462,7 +462,7 @@ function en(e) {
         className: Z.header,
         variant: "heading-lg/extrabold",
         children: K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_BANNER
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(T.default, {
         className: Z.boostIndicator,
         guild: i,
         guildFeature: V.GuildFeatures.BANNER,
@@ -514,10 +514,10 @@ function ei(e) {
     onDragStart: c,
     onDragReset: E
   } = e, I = (0, r.default)([p.default], () => p.default.getGuild(t)), {
-    title: f,
-    channelId: T,
+    title: T,
+    channelId: f,
     description: S
-  } = n, N = L.default.getChannel(T), g = null;
+  } = n, N = L.default.getChannel(f), g = null;
   (null == N || !(0, m.isChannelValidForResourceChannel)(N)) && (g = K.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
   let h = null == S || 0 === S.length,
     C = B.default.getResourceChannelIconURL({
@@ -594,7 +594,7 @@ function ei(e) {
           className: Z.resourceChannelTitle,
           variant: "text-md/semibold",
           color: "header-primary",
-          children: f
+          children: T
         }), !h && (0, a.jsx)(d.Text, {
           className: Z.resourceChannelDescription,
           variant: "text-xs/medium",

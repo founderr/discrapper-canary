@@ -19,17 +19,17 @@ var a = s("37983"),
 function I(e) {
   var t, s, I;
   let {
-    rule: f,
-    onChangeRule: T
+    rule: T,
+    onChangeRule: f
   } = e, S = l.useCallback(e => {
-    T({
-      ...f,
+    f({
+      ...T,
       triggerMetadata: {
-        ...f.triggerMetadata,
+        ...T.triggerMetadata,
         allowList: e
       }
     })
-  }, [T, f]);
+  }, [f, T]);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)("div", {
       className: _.cardContentsContainer,
@@ -37,13 +37,13 @@ function I(e) {
         step: 1,
         header: E.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_TRIGGER_DESCRIPTION,
         children: [(0, a.jsx)(i.default, {
-          rule: f,
-          onChangeRule: T
+          rule: T,
+          onChangeRule: f
         }), (0, a.jsx)(n.default, {
           onChange: S,
-          initialValue: null === (t = f.triggerMetadata) || void 0 === t ? void 0 : t.allowList,
+          initialValue: null === (t = T.triggerMetadata) || void 0 === t ? void 0 : t.allowList,
           maxWordCount: c.MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE,
-          collapsed: (null === (s = f.triggerMetadata) || void 0 === s ? void 0 : s.allowList) == null || (null === (I = f.triggerMetadata) || void 0 === I ? void 0 : I.allowList.length) === 0
+          collapsed: (null === (s = T.triggerMetadata) || void 0 === s ? void 0 : s.allowList) == null || (null === (I = T.triggerMetadata) || void 0 === I ? void 0 : I.allowList.length) === 0
         })]
       }), (0, a.jsx)(u.default, {
         type: u.default.Type.ARROW_DOWN
@@ -51,8 +51,8 @@ function I(e) {
         step: 2,
         header: E.default.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
         children: (0, a.jsx)(r.default, {
-          rule: f,
-          onChangeRule: T
+          rule: T,
+          onChangeRule: f
         })
       }), (0, a.jsx)(u.default, {
         type: u.default.Type.CROSS
@@ -60,8 +60,8 @@ function I(e) {
         step: 3,
         header: E.default.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
         children: (0, a.jsx)(o.default, {
-          rule: f,
-          onChangeRule: T
+          rule: T,
+          onChangeRule: f
         })
       })]
     })

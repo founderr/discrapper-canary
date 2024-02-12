@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = s("37983"),
@@ -17,8 +17,8 @@ var a = s("37983"),
   _ = s("782340"),
   I = s("452938");
 
-function f(e) {
-  var t, s, f, T, S, m;
+function T(e) {
+  var t, s, T, f, S, m;
   let {
     rule: N,
     onChangeRule: g
@@ -52,10 +52,10 @@ function f(e) {
         }), (0, a.jsx)(r.default, {
           rule: N,
           onChangeRule: g,
-          collapsed: (null == N ? void 0 : null === (s = N.triggerMetadata) || void 0 === s ? void 0 : s.regexPatterns) == null || (null == N ? void 0 : null === (f = N.triggerMetadata) || void 0 === f ? void 0 : f.regexPatterns.length) === 0
+          collapsed: (null == N ? void 0 : null === (s = N.triggerMetadata) || void 0 === s ? void 0 : s.regexPatterns) == null || (null == N ? void 0 : null === (T = N.triggerMetadata) || void 0 === T ? void 0 : T.regexPatterns.length) === 0
         }), (0, a.jsx)(n.default, {
           onChange: C,
-          initialValue: null === (T = N.triggerMetadata) || void 0 === T ? void 0 : T.allowList,
+          initialValue: null === (f = N.triggerMetadata) || void 0 === f ? void 0 : f.allowList,
           maxWordCount: E.MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE,
           collapsed: (null === (S = N.triggerMetadata) || void 0 === S ? void 0 : S.allowList) == null || (null === (m = N.triggerMetadata) || void 0 === m ? void 0 : m.allowList.length) === 0
         })]

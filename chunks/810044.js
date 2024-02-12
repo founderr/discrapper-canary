@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("191814"),
   N = n("898260"),
   p = n("599110"),
-  A = n("741515"),
-  S = n("3081"),
+  S = n("741515"),
+  A = n("3081"),
   C = n("907038"),
   h = n("49111"),
   g = n("782340"),
@@ -35,7 +35,7 @@ function O(e) {
   } = e, a = (0, u.useStateFromStores)([T.default], () => T.default.getGuild(n)), {
     loading: O,
     subscriptionsSettings: R
-  } = (0, A.useMonetizationSettings)(n), {
+  } = (0, S.useMonetizationSettings)(n), {
     listingsLoaded: L
   } = (0, f.useFetchGuildProductListingsForGuild)(n), v = (0, f.useGuildProductsForGuild)(n, {
     publishedOnly: !0
@@ -56,7 +56,7 @@ function O(e) {
     children: (0, s.jsx)(d.Spinner, {})
   }) : null == a || null == R ? null : (0, s.jsxs)("div", {
     className: M.guildShopEmbed,
-    children: [(0, s.jsx)(S.HeroImage, {
+    children: [(0, s.jsx)(A.HeroImage, {
       coverImageAsset: null !== (t = R.cover_image_asset) && void 0 !== t ? t : null
     }), (0, s.jsx)(m.default, {
       size: 16

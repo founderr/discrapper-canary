@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getStoreListingLocation: function() {
-    return S
+    return I
   },
   getApplicationStoreListingLocation: function() {
-    return I
+    return S
   },
   getAssetURL: function() {
     return A
@@ -50,7 +50,7 @@ var s = n("917351"),
 d.shim();
 let C = !u.isMobile && !u.isTablet && -1 !== (0, h.getChromeVersion)();
 
-function S(e, t) {
+function I(e, t) {
   let {
     analyticsSource: n,
     analyticsProperties: s,
@@ -69,7 +69,7 @@ function S(e, t) {
   }
 }
 
-function I(e, t) {
+function S(e, t) {
   let {
     analyticsSource: n,
     analyticsProperties: s,

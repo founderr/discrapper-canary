@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a, l, n = s("37983");
@@ -16,7 +16,7 @@ var i = s("414456"),
   _ = s("660198"),
   I = s("301352");
 (a = l || (l = {})).TIER_NAME = "tier_name", a.SUBSCRIBERS = "subscribers", a.AMOUNT = "amount", a.PRICE = "price";
-let f = [{
+let T = [{
   key: "tier_name",
   cellClassName: _.tierNameColumn,
   renderHeader: () => E.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_TIERS,
@@ -59,7 +59,7 @@ let f = [{
     })
   }
 }];
-var T = e => {
+var f = e => {
   let {
     totalPayoutsForPeriod: t,
     guildId: s,
@@ -68,7 +68,7 @@ var T = e => {
   return (0, n.jsx)("div", {
     className: r(I.tableContainer, a),
     children: (0, n.jsx)(o.default, {
-      columns: f,
+      columns: T,
       data: l,
       className: r(I.table, _.table),
       rowClassName: _.row,

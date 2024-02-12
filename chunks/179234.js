@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a = s("37983");
@@ -18,7 +18,7 @@ var l = s("759843"),
   _ = s("666118"),
   I = s("419143");
 
-function f(e) {
+function T(e) {
   let {
     config: t
   } = e, {
@@ -61,7 +61,7 @@ function f(e) {
   })
 }
 
-function T(e) {
+function f(e) {
   let {
     guild: t,
     config: s
@@ -78,7 +78,7 @@ function T(e) {
     }
   }), o) ? (0, a.jsx)(n.Spinner, {}) : (0, a.jsxs)("div", {
     className: _.container,
-    children: [(0, a.jsx)(f, {
+    children: [(0, a.jsx)(T, {
       config: s
     }), (0, a.jsx)(c.MarketingSections, {
       onboardingMarketing: u,

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("77078"),
   _ = s("642950"),
   I = s("206625"),
-  f = s("84339"),
-  T = s("510889"),
+  T = s("84339"),
+  f = s("510889"),
   S = s("287103"),
   m = s("900938"),
   N = s("161778"),
@@ -48,7 +48,7 @@ function v(e) {
   l.useEffect(() => {
     _.current = r
   }, [r]);
-  let I = (0, T.default)("audit-log", _);
+  let I = (0, f.default)("audit-log", _);
   return (0, a.jsx)(d.ListNavigatorProvider, {
     navigator: I,
     children: (0, a.jsx)(d.ListNavigatorContainer, {
@@ -87,7 +87,7 @@ function j() {
     guild: n,
     isInitialLoading: r,
     isLoading: d,
-    isLoadingNextPage: T,
+    isLoadingNextPage: f,
     showLoadMore: x,
     hasError: j,
     hasOlderLogs: G,
@@ -115,7 +115,7 @@ function j() {
     expandedId: null,
     lastExpandedId: null,
     actionFilterQuery: ""
-  }), F = R.transformLogs(U, n), H = !1, k = l.useRef(null), w = (0, f.default)(B), V = (0, f.default)(F), Y = () => {
+  }), F = R.transformLogs(U, n), H = !1, k = l.useRef(null), w = (0, T.default)(B), V = (0, T.default)(F), Y = () => {
     var e;
     return (null === (e = k.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
   };
@@ -261,7 +261,7 @@ function j() {
               onClick: J,
               children: O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
             })
-          })(), !T || b || d ? null : ee()]
+          })(), !f || b || d ? null : ee()]
         })
       })
     })

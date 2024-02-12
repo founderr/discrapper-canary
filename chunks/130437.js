@@ -23,8 +23,8 @@ var a, l, n = s("37983"),
   E = s("77078"),
   _ = s("717559"),
   I = s("158352"),
-  f = s("578706"),
-  T = s("381546"),
+  T = s("578706"),
+  f = s("381546"),
   S = s("68238"),
   m = s("781896"),
   N = s("772280"),
@@ -53,13 +53,13 @@ let D = (e, t, s, a) => {
         });
       case p.PaymentPayoutGroupStatuses.CANCELED:
         return (0, n.jsxs)(n.Fragment, {
-          children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, n.jsx)(T.default, {
+          children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, n.jsx)(f.default, {
             className: M.statusErrorIcon
           })]
         });
       case p.PaymentPayoutGroupStatuses.PAYOUT_DEFERRED:
         if ((null == s ? void 0 : s.includes(p.PaymentPayoutGroupDeferralReasons.PAYOUT_SEIZED)) === !0) return (0, n.jsxs)(n.Fragment, {
-          children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, n.jsx)(T.default, {
+          children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_CANCELLED, (0, n.jsx)(f.default, {
             className: M.statusErrorIcon
           })]
         });
@@ -87,7 +87,7 @@ let D = (e, t, s, a) => {
         });
       case p.PayoutStatuses.PAID:
         return (0, n.jsxs)(n.Fragment, {
-          children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PAID, (0, n.jsx)(f.default, {
+          children: [A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PAID, (0, n.jsx)(T.default, {
             className: M.statusPaidIcon
           })]
         });
@@ -96,7 +96,7 @@ let D = (e, t, s, a) => {
       case p.PayoutStatuses.REJECTED:
       case p.PayoutStatuses.RISK_REVIEW:
         return (0, n.jsxs)(n.Fragment, {
-          children: [R.default.getStatusErrorText(t), (0, n.jsx)(T.default, {
+          children: [R.default.getStatusErrorText(t), (0, n.jsx)(f.default, {
             className: M.statusErrorIcon
           })]
         })

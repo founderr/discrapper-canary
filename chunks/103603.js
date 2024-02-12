@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return E
   },
   readFileAsBase64: function() {
-    return _
+    return p
   },
   dataUriFileSize: function() {
     return v
@@ -121,8 +121,8 @@ function g(e, t, n) {
     d = u(o, t);
   return "boolean" == typeof d ? I : d.palette()
 }
-let E = e => "number" == typeof e ? null : p(e),
-  p = s.memoize(e => new Promise((t, n) => {
+let E = e => "number" == typeof e ? null : _(e),
+  _ = s.memoize(e => new Promise((t, n) => {
     let l = new Image;
     l.crossOrigin = "Anonymous", l.onerror = e => {
       n(e), l.onerror = l.onload = null, l = null
@@ -131,7 +131,7 @@ let E = e => "number" == typeof e ? null : p(e),
     }, l.src = e
   }));
 
-function _(e) {
+function p(e) {
   return new Promise((t, n) => {
     let l = new FileReader;
     l.readAsDataURL(e), l.onload = () => {

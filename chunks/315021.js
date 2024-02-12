@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SafetySystemNotification: function() {
-    return A
+    return S
   }
 });
 var s = n("37983");
@@ -105,7 +105,7 @@ function p(e) {
   })
 }
 
-function A(e) {
+function S(e) {
   var t, n;
   if (null == e.embed || null == e.embed.fields) return null;
   let l = (0, d.parseMessageEmbedForProps)(e.embed);

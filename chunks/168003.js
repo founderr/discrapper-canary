@@ -23,8 +23,8 @@ var l = n("446674"),
   g = n("534222"),
   h = n("601131"),
   C = n("47495"),
-  A = n("834052"),
-  M = n("715243"),
+  M = n("834052"),
+  A = n("715243"),
   I = n("458574"),
   v = n("963150"),
   p = n("308798"),
@@ -49,7 +49,7 @@ function w(e) {
     channel: t,
     guild: n,
     onSelect: s
-  } = e, d = t.isGuildStageVoice(), o = (0, l.useStateFromStores)([A.default], () => d ? A.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, I.default)(t), T = (0, g.useActiveEvent)(t.id), M = (0, h.default)(null == T ? void 0 : T.id, n, t), v = (0, V.default)(t, o), p = (0, _.useAddToFavoritesItem)(t), O = (0, _.useRemoveFromFavoritesItem)(t), U = (0, E.default)(t), R = (0, S.default)(t), b = (0, N.default)(t), D = (0, L.default)(t), F = (0, y.default)(t), j = (0, m.default)(t), w = (0, H.default)(t, n), B = (0, c.default)({
+  } = e, d = t.isGuildStageVoice(), o = (0, l.useStateFromStores)([M.default], () => d ? M.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, I.default)(t), T = (0, g.useActiveEvent)(t.id), A = (0, h.default)(null == T ? void 0 : T.id, n, t), v = (0, V.default)(t, o), p = (0, _.useAddToFavoritesItem)(t), O = (0, _.useRemoveFromFavoritesItem)(t), U = (0, E.default)(t), R = (0, S.default)(t), b = (0, N.default)(t), D = (0, L.default)(t), F = (0, y.default)(t), j = (0, m.default)(t), w = (0, H.default)(t, n), B = (0, c.default)({
     id: t.id,
     label: P.default.Messages.COPY_ID_CHANNEL
   }), k = (0, x.default)(t), Y = (0, r.default)(t), W = (0, C.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuFavorite"), q = (0, G.default)(t);
@@ -59,7 +59,7 @@ function w(e) {
     "aria-label": P.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onSelect: s,
     children: [(0, a.jsx)(i.MenuGroup, {
-      children: null != T ? M : v
+      children: null != T ? A : v
     }), (0, a.jsxs)(i.MenuGroup, {
       children: [R, b, U, p]
     }), (0, a.jsxs)(i.MenuGroup, {
@@ -83,7 +83,7 @@ function B(e) {
     channel: t,
     guild: n,
     onSelect: s
-  } = e, d = t.isGuildStageVoice(), o = (0, l.useStateFromStores)([A.default], () => d ? A.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, U.default)(t), E = (0, I.default)(t), S = (0, g.useActiveEvent)(t.id), N = (0, h.default)(null == S ? void 0 : S.id, n, t), j = (0, V.default)(t, o), w = (0, _.useAddToFavoritesItem)(t), B = (0, _.useRemoveFromFavoritesItem)(t), k = (0, L.default)(t), Y = (0, y.default)(t), W = (0, m.default)(t), q = (0, O.default)(t, n, o), K = (0, H.default)(t, n), Z = (0, D.default)(t, n), X = (0, F.default)(t, n.id), J = (0, M.default)(t, n), Q = (0, v.default)(t, n), z = (0, p.default)(t), $ = (0, c.default)({
+  } = e, d = t.isGuildStageVoice(), o = (0, l.useStateFromStores)([M.default], () => d ? M.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, U.default)(t), E = (0, I.default)(t), S = (0, g.useActiveEvent)(t.id), N = (0, h.default)(null == S ? void 0 : S.id, n, t), j = (0, V.default)(t, o), w = (0, _.useAddToFavoritesItem)(t), B = (0, _.useRemoveFromFavoritesItem)(t), k = (0, L.default)(t), Y = (0, y.default)(t), W = (0, m.default)(t), q = (0, O.default)(t, n, o), K = (0, H.default)(t, n), Z = (0, D.default)(t, n), X = (0, F.default)(t, n.id), J = (0, A.default)(t, n), Q = (0, v.default)(t, n), z = (0, p.default)(t), $ = (0, c.default)({
     id: t.id,
     label: P.default.Messages.COPY_ID_CHANNEL
   }), ee = (0, x.default)(t), et = (0, r.default)(t), en = (0, b.default)(t), ea = (0, T.default)(t), el = (0, R.default)(t), ei = (0, C.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuNormal"), eu = (0, G.default)(t);

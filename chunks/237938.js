@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("132664"),
   _ = s("213307"),
   I = s("324105"),
-  f = s("149632"),
-  T = s("525065"),
+  T = s("149632"),
+  f = s("525065"),
   S = s("84190"),
   m = s("49111"),
   N = s("782340"),
@@ -40,7 +40,7 @@ var x = e => {
   } = (0, o.useStateFromStoresObject)([u.default], () => ({
     canEnableDiscovery: u.default.passesChecklist(t.id),
     isPendingSuccess: u.default.isPendingSuccess(t.id)
-  }), [t.id]), [D, v] = (0, o.useStateFromStoresArray)([T.default], () => [null, T.default.getMemberCount(t.id)], [t.id]), j = l.useCallback(() => {
+  }), [t.id]), [D, v] = (0, o.useStateFromStoresArray)([f.default], () => [null, f.default.getMemberCount(t.id)], [t.id]), j = l.useCallback(() => {
     null != s && s()
   }, [s]), G = null;
   return n ? M ? G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !A && (G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : G = N.default.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, a.jsxs)("div", {
@@ -79,7 +79,7 @@ var x = e => {
       className: g.valueProp,
       color: "header-secondary",
       children: N.default.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION.format({
-        onLinkClick: () => (0, f.navigateToAndTrackHelpCenterClick)({
+        onLinkClick: () => (0, T.navigateToAndTrackHelpCenterClick)({
           articleId: m.HelpdeskArticles.SERVER_DISCOVERY,
           guildId: t.id,
           pageView: c.DiscoverySettingsViews.INTRO
@@ -90,7 +90,7 @@ var x = e => {
       className: g.byline,
       color: "header-secondary",
       children: N.default.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION_SUBHEADING.format({
-        onGuidelinesClick: () => (0, f.navigateToAndTrackHelpCenterClick)({
+        onGuidelinesClick: () => (0, T.navigateToAndTrackHelpCenterClick)({
           articleId: m.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES,
           guildId: t.id,
           pageView: c.DiscoverySettingsViews.INTRO

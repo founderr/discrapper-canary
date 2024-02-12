@@ -16,8 +16,8 @@ var a = s("414456"),
   E = s("228427"),
   _ = s("290581"),
   I = s("595086"),
-  f = s("619911"),
-  T = s("698015"),
+  T = s("619911"),
+  f = s("698015"),
   S = s("427459"),
   m = s("392568");
 
@@ -45,7 +45,7 @@ function N(e, t) {
       };
     case S.PerkIcons.UPLOAD:
       return {
-        icon: T.default, className: l(m.icon, m.upload)
+        icon: f.default, className: l(m.icon, m.upload)
       };
     case S.PerkIcons.VANITY:
       return {
@@ -53,7 +53,7 @@ function N(e, t) {
       };
     case S.PerkIcons.STREAM:
       return {
-        icon: f.default, className: l(m.icon, m.stream)
+        icon: T.default, className: l(m.icon, m.stream)
       };
     case S.PerkIcons.STICKER:
       return {

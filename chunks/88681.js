@@ -17,8 +17,8 @@ var l = s("446674"),
   E = s("363966"),
   _ = s("851015"),
   I = s("92447"),
-  f = s("782340"),
-  T = s("332227");
+  T = s("782340"),
+  f = s("332227");
 
 function S() {
   let {
@@ -38,15 +38,15 @@ function S() {
   }
   let O = (0, o.useRoleSubscriptionSettingsDisabled)();
   return (0, a.jsxs)(n.FormSection, {
-    title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_TITLE,
+    title: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_TITLE,
     disabled: O,
     children: [(0, a.jsxs)(n.FormText, {
       type: n.FormText.Types.DESCRIPTION,
-      className: T.formDescription,
+      className: f.formDescription,
       disabled: O,
-      children: [f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({
+      children: [T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({
         premiumEmojiMaximum: R
-      }), (0, a.jsx)("br", {}), f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({
+      }), (0, a.jsx)("br", {}), T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({
         handleTransitionToManageEmoji: h
       })]
     }), (0, a.jsx)(_.EmojiList, {
@@ -86,7 +86,7 @@ function S() {
         })
       },
       disabled: O,
-      children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_ADD_BUTTON_TEXT
+      children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_ADD_BUTTON_TEXT
     })]
   })
 }

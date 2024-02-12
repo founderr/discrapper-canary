@@ -17,8 +17,8 @@ var l = s("819855"),
   E = s("722838"),
   _ = s("497002"),
   I = s("437250"),
-  f = s("382531"),
-  T = s("865332"),
+  T = s("382531"),
+  f = s("865332"),
   S = s("439044"),
   m = s("912839"),
   N = s("600719");
@@ -49,7 +49,7 @@ function h() {
       })]
     }), (0, a.jsx)("img", {
       className: u.roundAvatar,
-      src: T,
+      src: f,
       alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_PREVIEW_IMG_ALT
     })]
   })
@@ -117,7 +117,7 @@ function C() {
         length: 12
       }), (0, a.jsx)("img", {
         className: u.roundAvatar,
-        src: f,
+        src: T,
         alt: ""
       })]
     })]

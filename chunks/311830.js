@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return A
   }
 }), n("794252");
 var s = n("37983"),
@@ -89,7 +89,7 @@ function p(e) {
   })
 }
 
-function A(e) {
+function S(e) {
   let {
     message: t,
     poll: n,
@@ -132,7 +132,7 @@ function A(e) {
   })
 }
 
-function S(e) {
+function A(e) {
   let {
     message: t,
     poll: n,
@@ -142,7 +142,7 @@ function S(e) {
     message: t,
     poll: n,
     children: (0, s.jsx)(f.PollFocusManager, {
-      children: (0, s.jsx)(A, {
+      children: (0, s.jsx)(S, {
         message: t,
         poll: n,
         className: l

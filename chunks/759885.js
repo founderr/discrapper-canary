@@ -27,8 +27,8 @@ function p(e) {
     channel: t,
     onClick: n,
     beforeTransition: p,
-    className: A,
-    openChatWithoutConnecting: S
+    className: S,
+    openChatWithoutConnecting: A
   } = e, C = (0, l.useStateFromStores)([_.default, f.default], () => null == t ? "" : (0, o.computeChannelName)(t, _.default, f.default), [t]);
   return (0, s.jsx)(a.Tooltip, {
     text: C,
@@ -40,7 +40,7 @@ function p(e) {
       } = e;
       return (0, s.jsx)(T.default, {
         role: "link",
-        className: A,
+        className: S,
         onClick: e => {
           e.stopPropagation(), null != n ? n() : (null != p && p(), (0, a.closeAllModals)(), ! function(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -61,7 +61,7 @@ function p(e) {
               r.default.selectVoiceChannel(l.id);
               return
             }(0, u.transitionTo)(N.Routes.CHANNEL(e, t))
-          }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, S))
+          }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, A))
         },
         onMouseEnter: l,
         onMouseLeave: o,

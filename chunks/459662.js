@@ -20,8 +20,8 @@ var l = s("759843"),
   E = s("222934"),
   _ = s("830388"),
   I = s("561496"),
-  f = s("100072"),
-  T = s("396076"),
+  T = s("100072"),
+  f = s("396076"),
   S = s("97743");
 
 function m(e) {
@@ -39,24 +39,24 @@ function m(e) {
     })
   }, i = (0, a.jsx)(l, {
     children: (0, a.jsx)(I.default, {})
-  }, T.CreatorMonetizationOnboardingMarketingSection.HOW_IT_WORKS), r = (0, a.jsx)(l, {
+  }, f.CreatorMonetizationOnboardingMarketingSection.HOW_IT_WORKS), r = (0, a.jsx)(l, {
     children: (0, a.jsx)(E.default, {})
-  }, T.CreatorMonetizationOnboardingMarketingSection.BENEFITS);
+  }, f.CreatorMonetizationOnboardingMarketingSection.BENEFITS);
   return null != s || (null == t ? void 0 : t.sections) == null ? (0, a.jsxs)(a.Fragment, {
     children: [i, r]
   }) : (0, a.jsx)(a.Fragment, {
     children: t.sections.map(e => {
       switch (e.type) {
-        case T.CreatorMonetizationOnboardingMarketingSection.HOW_IT_WORKS:
+        case f.CreatorMonetizationOnboardingMarketingSection.HOW_IT_WORKS:
           return i;
-        case T.CreatorMonetizationOnboardingMarketingSection.BENEFITS:
+        case f.CreatorMonetizationOnboardingMarketingSection.BENEFITS:
           return r;
-        case T.CreatorMonetizationOnboardingMarketingSection.OTHER_CREATORS:
+        case f.CreatorMonetizationOnboardingMarketingSection.OTHER_CREATORS:
           return (0, a.jsx)(l, {
             children: (0, a.jsx)(_.default, {
               highlightedCreators: e.creators
             })
-          }, T.CreatorMonetizationOnboardingMarketingSection.OTHER_CREATORS)
+          }, f.CreatorMonetizationOnboardingMarketingSection.OTHER_CREATORS)
       }
     })
   })
@@ -69,7 +69,7 @@ function N(e) {
     eligibilityLoading: E,
     eligibilityError: _,
     eligibility: I
-  } = s, T = (0, r.useCreatorMonetizationIneligibleReasons)(I), {
+  } = s, f = (0, r.useCreatorMonetizationIneligibleReasons)(I), {
     isLoading: N,
     error: g,
     creatorMonetizationOnboardingMarketing: h
@@ -81,11 +81,11 @@ function N(e) {
       guild_id: t.id,
       is_owner: s.isGuildOwner,
       is_eligible: s.eligibleForMonetization,
-      ineligible_reasons: T
+      ineligible_reasons: f
     }
   }, {
     disableTrack: null == t.id || null == I
-  }), E || null == I || N) ? (0, a.jsx)(n.Spinner, {}) : I.actionRequired ? (0, a.jsx)(f.default, {
+  }), E || null == I || N) ? (0, a.jsx)(n.Spinner, {}) : I.actionRequired ? (0, a.jsx)(T.default, {
     guild: t
   }) : null != _ ? (0, a.jsx)(u.default, {
     children: _.message

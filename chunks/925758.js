@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return S
   }
 }), n("222007");
 var s = n("917351"),
@@ -87,7 +87,7 @@ class p extends a.default.Store {
   }
 }
 p.displayName = "GamePartyStore";
-var A = new p(i.default, {
+var S = new p(i.default, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       guilds: t,

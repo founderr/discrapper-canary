@@ -20,9 +20,9 @@ function _(e) {
   let {
     guildId: t,
     allPeriods: _
-  } = e, I = (0, l.default)([o.default], () => o.default.getGuild(t)), f = (0, u.useSubscriptionListingsForGuild)(t, {
+  } = e, I = (0, l.default)([o.default], () => o.default.getGuild(t)), T = (0, u.useSubscriptionListingsForGuild)(t, {
     includeSoftDeleted: !0
-  }), T = (0, r.useGuildProductsForGuild)(t, {
+  }), f = (0, r.useGuildProductsForGuild)(t, {
     publishedOnly: !1
   }), {
     allowSelfRemoveMonetization: S
@@ -30,7 +30,7 @@ function _(e) {
     var t;
     let s = Object.values(null !== (t = e.ppgs) && void 0 !== t ? t : {})[0];
     return (null == s ? void 0 : s.status) === c.PaymentPayoutGroupStatuses.OPEN || (null == s ? void 0 : s.status) === c.PaymentPayoutGroupStatuses.PAYOUT_DEFERRED
-  }), N = f.length > 0, g = T.length > 0, h = m.length > 0;
+  }), N = T.length > 0, g = f.length > 0, h = m.length > 0;
   return null == I ? null : (0, a.jsxs)("div", {
     children: [(0, a.jsx)(n.FormText, {
       type: n.FormText.Types.DESCRIPTION,

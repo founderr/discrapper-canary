@@ -12,8 +12,8 @@ var a, l, n, i, r = s("37983"),
   E = s("77078"),
   _ = s("983065"),
   I = s("160604"),
-  f = s("879473"),
-  T = s("912702"),
+  T = s("879473"),
+  f = s("912702"),
   S = s("381546"),
   m = s("45029"),
   N = s("956089"),
@@ -41,7 +41,7 @@ function O(e) {
   }, d = 2 === t, _ = 1 === t;
   if (!(!(a >= l) && a / l >= .8) || d) return null;
   let I = _ || d ? R.hidden : null,
-    T = _ ? f.default.Stages.FLYING : f.default.Stages.HOVERING;
+    f = _ ? T.default.Stages.FLYING : T.default.Stages.HOVERING;
   return (0, r.jsx)(c.Spring, {
     from: {
       opacity: 0
@@ -53,9 +53,9 @@ function O(e) {
     children: e => (0, r.jsxs)(c.animated.div, {
       className: R.tierClose,
       style: e,
-      children: [(0, r.jsx)(f.default, {
+      children: [(0, r.jsx)(T.default, {
         className: R.tierCloseMechaWumpus,
-        stage: T,
+        stage: f,
         onFlyingComplete: i
       }), (0, r.jsx)("div", {
         className: u(R.tierCloseHint, I),
@@ -85,7 +85,7 @@ function p(e) {
     subscriptionsRequired: E,
     subscriptionCount: _,
     className: I
-  } = e, f = e => {
+  } = e, T = e => {
     null == l || l(e)
   }, [S, m] = o.useState(0);
   return o.useLayoutEffect(() => {
@@ -104,10 +104,10 @@ function p(e) {
         [R.tierHeaderUnlocked]: a,
         [R.tierHeaderLocked]: !a
       }, I),
-      ref: f,
+      ref: T,
       children: (0, r.jsxs)("div", {
         className: R.tierHeaderContent,
-        children: [(0, r.jsx)(T.default, {
+        children: [(0, r.jsx)(f.default, {
           tier: n.tier,
           className: u(R.tierIcon, {
             [R.tierIconLocked]: !a
@@ -143,7 +143,7 @@ function A(e) {
     withCardBody: d = !0,
     guildId: c,
     showHeaderLockStatus: E = !0
-  } = e, f = (0, g.getAppliedGuildBoostsRequired)(c)[l.tier], T = n && s >= f, S = l.tier !== h.BoostedGuildTiers.NONE && l.tier !== h.BoostedGuildTiers.TIER_1, m = (e, t) => {
+  } = e, T = (0, g.getAppliedGuildBoostsRequired)(c)[l.tier], f = n && s >= T, S = l.tier !== h.BoostedGuildTiers.NONE && l.tier !== h.BoostedGuildTiers.TIER_1, m = (e, t) => {
     let {
       icon: s,
       className: a
@@ -185,8 +185,8 @@ function A(e) {
       withCardBody: d,
       guildId: c,
       hasBottomMargin: i,
-      subscriptionsRequired: f,
-      hasAnimatedUnlocked: T,
+      subscriptionsRequired: T,
+      hasAnimatedUnlocked: f,
       isAnimatedTo: n
     }), (0, r.jsx)("div", {
       className: u({
@@ -198,7 +198,7 @@ function A(e) {
           children: C.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_PREVIOUS_PERKS
         }) : null, null != l.perks && (0, r.jsx)("div", {
           className: R.perks,
-          children: l.perks.map(e => m(e, T))
+          children: l.perks.map(e => m(e, f))
         })]
       })
     })]

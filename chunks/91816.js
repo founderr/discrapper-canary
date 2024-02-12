@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   useScrolledToTop: function() {
-    return T
+    return f
   },
   default: function() {
     return S
@@ -19,9 +19,9 @@ var a = s("37983"),
   E = s("364222"),
   _ = s("53948"),
   I = s("782340"),
-  f = s("925041");
+  T = s("925041");
 
-function T() {
+function f() {
   let [e, t] = l.useState(!0);
   return {
     scrolledToTop: e,
@@ -34,31 +34,31 @@ function T() {
 function S(e) {
   let {
     guild: t,
-    role: T,
+    role: f,
     selectedSection: S,
     setSelectedSection: m
   } = e, N = l.useCallback(e => {
     m(e)
   }, [m]), g = (0, n.useStateFromStores)([c.default], () => {
     var e;
-    return null === (e = c.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[T.id]
-  }, [T.id, t.id]), h = t.id === T.id, C = (0, E.default)(T);
+    return null === (e = c.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[f.id]
+  }, [f.id, t.id]), h = t.id === f.id, C = (0, E.default)(f);
   l.useEffect(() => {
     h && m(_.GuildSettingsRoleEditSections.PERMISSIONS)
   }, [h, m]);
-  let R = (0, o.useHasGuildRoleItems)(t, T);
+  let R = (0, o.useHasGuildRoleItems)(t, f);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: f.titleContainer,
+      className: T.titleContainer,
       children: [(0, a.jsx)(i.Text, {
-        className: f.titleText,
+        className: T.titleText,
         color: "header-primary",
         variant: "text-md/semibold",
         children: I.default.Messages.ROLE_EDIT_TITLE_WITH_NAME.format({
-          roleName: T.name
+          roleName: f.name
         })
       }), R ? (0, a.jsx)(i.Clickable, {
-        className: f.menu,
+        className: T.menu,
         onClick: function(e) {
           (0, r.openContextMenuLazy)(e, async () => {
             let {
@@ -67,7 +67,7 @@ function S(e) {
             return s => (0, a.jsx)(e, {
               ...s,
               guild: t,
-              role: T
+              role: f
             })
           })
         },
@@ -78,28 +78,28 @@ function S(e) {
       messageType: d.HelpMessageTypes.WARNING,
       children: C
     }) : null, (0, a.jsxs)(i.TabBar, {
-      className: f.tabBar,
+      className: T.tabBar,
       "aria-label": I.default.Messages.OPTIONS,
       selectedItem: S,
       type: "top",
       look: "brand",
       onItemSelect: N,
       children: [(0, a.jsx)(i.TabBar.Item, {
-        className: f.tabBarItem,
+        className: T.tabBarItem,
         id: _.GuildSettingsRoleEditSections.DISPLAY,
         disabled: h,
         children: I.default.Messages.ROLE_EDIT_TAB_DISPLAY
       }), (0, a.jsx)(i.TabBar.Item, {
-        className: f.tabBarItem,
+        className: T.tabBarItem,
         id: _.GuildSettingsRoleEditSections.PERMISSIONS,
         children: I.default.Messages.ROLE_EDIT_TAB_PERMISSIONS
       }), (0, a.jsx)(i.TabBar.Item, {
-        className: f.tabBarItem,
+        className: T.tabBarItem,
         id: _.GuildSettingsRoleEditSections.VERIFICATIONS,
         disabled: h,
         children: I.default.Messages.ROLE_EDIT_TAB_VERIFICATION
       }), (0, a.jsx)(i.TabBar.Item, {
-        className: f.tabBarItem,
+        className: T.tabBarItem,
         id: _.GuildSettingsRoleEditSections.MEMBERS,
         disabled: h,
         children: h ? I.default.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS : I.default.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({

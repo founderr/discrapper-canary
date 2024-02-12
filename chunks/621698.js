@@ -26,8 +26,8 @@ let I = l.memo(function(e) {
         count: m,
         me: N,
         me_burst: p,
-        burst_count: A,
-        burst_colors: S,
+        burst_count: S,
+        burst_colors: A,
         readOnly: C,
         isLurking: h,
         isGuest: g,
@@ -36,9 +36,9 @@ let I = l.memo(function(e) {
       } = e,
       R = O === E.ReactionTypes.BURST,
       L = (0, f.isMeReaction)(N, p, O),
-      v = (0, d.useEmojiColorPalette)(R && null != S ? S : []),
+      v = (0, d.useEmojiColorPalette)(R && null != A ? A : []),
       P = l ? T : _,
-      D = R ? A : m,
+      D = R ? S : m,
       x = (0, c.getMinCounterWidth)(D, f.REACTION_MIN_WIDTH_DIGITS),
       y = {};
     if (R && null != v) {

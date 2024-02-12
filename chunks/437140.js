@@ -21,8 +21,8 @@ var i = n("759843"),
         type: n,
         name: S,
         permissionOverwrites: E = [],
-        bitrate: h,
-        userLimit: _,
+        bitrate: _,
+        userLimit: h,
         parentId: g,
         skuId: p,
         branchId: C
@@ -35,7 +35,7 @@ var i = n("759843"),
         name: S,
         permission_overwrites: E
       };
-      if (null != h && h !== c.BITRATE_DEFAULT && (I.bitrate = h), null != _ && _ > 0 && (I.user_limit = _), null != g && (I.parent_id = g), n === c.ChannelTypes.GUILD_STORE) {
+      if (null != _ && _ !== c.BITRATE_DEFAULT && (I.bitrate = _), null != h && h > 0 && (I.user_limit = h), null != g && (I.parent_id = g), n === c.ChannelTypes.GUILD_STORE) {
         if (null == p) throw Error("Unexpected missing SKU");
         I.sku_id = p, I.branch_id = C
       }

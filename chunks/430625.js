@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("685665"),
   N = n("442939"),
   p = n("419830"),
-  A = n("813006"),
-  S = n("42203"),
+  S = n("813006"),
+  A = n("42203"),
   C = n("305961"),
   h = n("957255"),
   g = n("697218"),
@@ -165,7 +165,7 @@ function k(e) {
         return F.id === t
       })
     }),
-    Q = S.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+    Q = A.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
     X = (0, u.useStateFromStores)([h.default], () => null != Q && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
     {
       analyticsLocations: q
@@ -180,7 +180,7 @@ function k(e) {
     es = null != K;
   if (null == K) {
     if (null == d.guild) return (0, s.jsx)(v.default, {});
-    K = new A.default(d.guild)
+    K = new S.default(d.guild)
   }
   let el = es && !X || es && Z,
     ea = () => {

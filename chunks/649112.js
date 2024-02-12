@@ -25,8 +25,8 @@ function _(e) {
     m = (0, l.useStateFromStores)([i.default], () => i.default.getId()),
     N = (0, l.useStateFromStores)([r.default], () => r.default.getChannelId()),
     p = d.default.useName(T),
-    A = m === T.id;
-  return A ? (t = E.default.Messages.INVITE_BUTTON_INVALID_OWNER, _ = E.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (_ = E.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, I ? t = E.default.Messages.INSTANT_INVITE_BANNED_INFO : null != p ? (t = E.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
+    S = m === T.id;
+  return S ? (t = E.default.Messages.INVITE_BUTTON_INVALID_OWNER, _ = E.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (_ = E.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, I ? t = E.default.Messages.INSTANT_INVITE_BANNED_INFO : null != p ? (t = E.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
     username: p
   }), n = (0, s.jsx)(o.default.Button, {
     onClick: function() {

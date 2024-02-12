@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return C
   },
   getEmojiColors: function() {
-    return S
+    return I
   },
   getEmojiUrl: function() {
-    return I
+    return S
   }
 }), n("222007"), n("781738"), n("808653"), n("424973");
 var s = n("736271"),
@@ -167,11 +167,11 @@ var C = {
   isFileTooBig: e => e.size > 2097152,
   isDataTooBig: e => (0, f.dataUriFileSize)(e) > g.EMOJI_MAX_FILESIZE
 };
-async function S(e) {
+async function I(e) {
   return await l.default.getEmojiColors(e)
 }
 
-function I(e) {
+function S(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
     {
       id: n,

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("900938"),
   _ = s("965397"),
   I = s("191814"),
-  f = s("351825"),
-  T = s("858560"),
+  T = s("351825"),
+  f = s("858560"),
   S = s("808388"),
   m = s("837008"),
   N = s("719726"),
@@ -64,7 +64,7 @@ function A(e) {
       [e]: t
     }))
   }, P = (0, S.useGuildEligibleForTierTemplates)(t), b = (0, S.useUserEligibleForTierTemplates)(), B = l.useCallback(() => {
-    b && T.GuildRoleSubscriptionsTierTemplatesExperiment.trackExposure({
+    b && f.GuildRoleSubscriptionsTierTemplatesExperiment.trackExposure({
       guildId: t,
       location: "b2d9de_1"
     }), b && P ? (0, u.openModalLazy)(async () => {
@@ -102,7 +102,7 @@ function A(e) {
           [L.disabled]: H
         }),
         "aria-disabled": H,
-        children: [(0, a.jsx)(f.default, {
+        children: [(0, a.jsx)(T.default, {
           className: L.createTierIcon
         }), (0, a.jsx)(u.Text, {
           variant: "text-md/normal",

@@ -26,8 +26,8 @@ var s, i = n("917351"),
   y = n("599110"),
   T = n("104478"),
   C = n("374014"),
-  S = n("933034"),
-  I = n("196383"),
+  I = n("933034"),
+  S = n("196383"),
   A = n("49111"),
   D = n("353927");
 class N {
@@ -146,7 +146,7 @@ s = class extends d.default {
               windows: l,
               activity: f,
               ...E,
-              ...(0, S.default)(null == h ? void 0 : h.desktopSource)
+              ...(0, I.default)(null == h ? void 0 : h.desktopSource)
             })
           })
         })
@@ -199,7 +199,7 @@ s = class extends d.default {
     }
   }
   _trackVideoStartStats() {
-    let e = this.isOwner ? (0, I.default)() : null;
+    let e = this.isOwner ? (0, S.default)() : null;
     y.default.track(A.AnalyticEvents.VIDEO_STREAM_STARTED, {
       ...this._getStreamAnalyticsProperties(),
       ...e,

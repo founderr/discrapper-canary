@@ -12,8 +12,8 @@ var d = n("446674"),
   I = n("354023"),
   g = n("42203"),
   E = n("27618"),
-  p = n("843823"),
-  _ = n("49111"),
+  _ = n("843823"),
+  p = n("49111"),
   v = n("91366");
 let m = new Set,
   T = [],
@@ -23,11 +23,11 @@ function N(e) {
   let t = new Set,
     n = null == s || o === v.InviteTargetTypes.EMBEDDED_APPLICATION ? void 0 : s.id,
     l = (0, I.getMostRecentDMedUser)(m, n);
-  for (let e of (null != l && !E.default.isBlocked(l.id) && t.add(l.id), p.default.getUserAffinitiesUserIds())) t.add(e);
+  for (let e of (null != l && !E.default.isBlocked(l.id) && t.add(l.id), _.default.getUserAffinitiesUserIds())) t.add(e);
   let i = new Set;
   if (o === v.InviteTargetTypes.EMBEDDED_APPLICATION) {
     let e = f.default.getChannelHistory();
-    e.map(e => g.default.getChannel(e)).filter(h.isNotNullish).filter(e => e.type === _.ChannelTypes.GUILD_TEXT).slice(0, 3).forEach(e => i.add(e.id))
+    e.map(e => g.default.getChannel(e)).filter(h.isNotNullish).filter(e => e.type === p.ChannelTypes.GUILD_TEXT).slice(0, 3).forEach(e => i.add(e.id))
   }
   return (0, I.generateRowsForQuery)({
     query: e,
@@ -49,7 +49,7 @@ function C(e) {
 }
 class A extends d.default.Store {
   initialize() {
-    this.waitFor(E.default, p.default)
+    this.waitFor(E.default, _.default)
   }
   getInviteSuggestionRows() {
     return T
@@ -62,7 +62,7 @@ class A extends d.default.Store {
   }
   getSelectedInviteMetadata(e) {
     let t = S.get(e),
-      n = p.default.getUserAffinitiesUserIds();
+      n = _.default.getUserAffinitiesUserIds();
     return null != t ? {
       rowNum: t.index,
       isAffinitySuggestion: e.isSuggested,
@@ -84,13 +84,13 @@ var x = new A(c.default, {
     } = e;
     s = null != d ? n : null, r = d, u = c, o = f;
     let h = E.default.getRelationships(),
-      g = Object.keys(h).filter(e => h[e] === _.RelationshipTypes.BLOCKED),
-      p = (0, I.getUsersAlreadyJoined)({
+      g = Object.keys(h).filter(e => h[e] === p.RelationshipTypes.BLOCKED),
+      _ = (0, I.getUsersAlreadyJoined)({
         channel: r,
         applicationId: u,
         inviteTargetType: f
       });
-    m = new Set([...t, ...g, ...p]), a = !1;
+    m = new Set([...t, ...g, ..._]), a = !1;
     let {
       rows: v,
       counts: S

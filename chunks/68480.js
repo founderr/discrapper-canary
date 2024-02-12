@@ -23,20 +23,20 @@ function c(e) {
     var e;
     let t = r.default.getGuild(E.guild_id);
     return null !== (e = null == t ? void 0 : t.hasFeature(d.GuildFeatures.COMMUNITY)) && void 0 !== e && e
-  }, [E.guild_id]), T = (null === (t = c.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != c.webhookId && c.hasFlag(d.MessageFlags.IS_CROSSPOST) && null != E.guild_id, I = E.type === l.ChannelTypes.GUILD_ANNOUNCEMENT && _, m = !c.hasFlag(d.MessageFlags.EPHEMERAL) && (T || I), N = T && null != c.messageReference ? c.messageReference.message_id : c.id, p = T && null != c.messageReference ? c.messageReference.channel_id : E.id, A = T && (null === (n = c.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? c.messageReference.guild_id : E.guild_id, S = s.useCallback(e => {
+  }, [E.guild_id]), T = (null === (t = c.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != c.webhookId && c.hasFlag(d.MessageFlags.IS_CROSSPOST) && null != E.guild_id, I = E.type === l.ChannelTypes.GUILD_ANNOUNCEMENT && _, m = !c.hasFlag(d.MessageFlags.EPHEMERAL) && (T || I), N = T && null != c.messageReference ? c.messageReference.message_id : c.id, p = T && null != c.messageReference ? c.messageReference.channel_id : E.id, S = T && (null === (n = c.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? c.messageReference.guild_id : E.guild_id, A = s.useCallback(e => {
     e ? u.default.handleMessageBecameVisible({
       messageId: N,
       channelId: E.id,
       guildId: E.guild_id,
       sourceChannelId: p,
-      sourceGuildId: A
+      sourceGuildId: S
     }) : u.default.handleMessageLostVisibility(N)
-  }, [N, E.id, E.guild_id, p, A]), C = o.default.useExperiment({
+  }, [N, E.id, E.guild_id, p, S]), C = o.default.useExperiment({
     location: "836a4b_1"
   }, {
     disable: !m || !f,
     autoTrackExposure: !0
-  }).enabled, h = (0, i.useIsVisible)(S, 0, C);
+  }).enabled, h = (0, i.useIsVisible)(A, 0, C);
   return s.useEffect(() => () => {
     u.default.handleMessageLostVisibility(N)
   }, [N]), h

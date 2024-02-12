@@ -21,7 +21,7 @@ function c(e) {
     isOutOfSlots: c
   } = e, E = t.premiumTier, _ = (0, i.getNextTier)(E, t.id), I = o.TotalSoundboardSoundCountsByTier[E] - 2;
   if (null == _ || E === r.BoostedGuildTiers.TIER_3 || s < I) return null;
-  let f = c ? {
+  let T = c ? {
     color: l.ButtonColors.GREEN,
     look: l.ButtonLooks.FILLED,
     text: d.default.Messages.GUILD_SETTINGS_SOUNDBOARD_CTA
@@ -34,7 +34,7 @@ function c(e) {
     }),
     headerColor: "header-primary",
     textColor: "text-normal",
-    buttonProps: f,
+    buttonProps: T,
     guild: t,
     analyticsLocation: {
       page: r.AnalyticsPages.GUILD_SETTINGS,

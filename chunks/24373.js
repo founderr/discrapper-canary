@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return C
   },
   getStickerFormatTypeFromFileType: function() {
-    return I
+    return S
   },
   getFilenameForSticker: function() {
     return A
@@ -65,7 +65,7 @@ let {
     if (null != t) return t
   }
   return e.stickers[0]
-}, S = e => {
+}, I = e => {
   switch (e) {
     case l.StickerFormat.PNG:
       return o.SUPPORTS_WEBP ? l.StickerExtensions.WEBP : l.StickerExtensions.PNG;
@@ -78,7 +78,7 @@ let {
     default:
       throw Error("Unexpected format type: ".concat(e))
   }
-}, I = e => {
+}, S = e => {
   switch (e) {
     case "application/json":
       return l.StickerFormat.LOTTIE;
@@ -92,13 +92,13 @@ let {
     default:
       throw Error("Unexpected file type: ".concat(e))
   }
-}, A = e => null == e ? null : "".concat(e.name, ".").concat(S(e.format_type)), D = function(e) {
+}, A = e => null == e ? null : "".concat(e.name, ".").concat(I(e.format_type)), D = function(e) {
   let {
     isPreview: t = !1,
     size: n = f.DEFAULT_STICKER_DIMENSIONS
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   if (null == e.format_type) return null;
-  let s = _.Endpoints.STICKER_ASSET(e.id, S(e.format_type));
+  let s = _.Endpoints.STICKER_ASSET(e.id, I(e.format_type));
   if ("development" !== m) {
     if (e.format_type === l.StickerFormat.LOTTIE) return "".concat(location.protocol).concat(h).concat(s);
     let r = e.format_type === l.StickerFormat.APNG && t && !(0, d.isAndroid)() ? "&passthrough=false" : "",

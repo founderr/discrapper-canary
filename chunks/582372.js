@@ -17,8 +17,8 @@ var l = s("446674"),
   E = s("657"),
   _ = s("993105"),
   I = s("427459"),
-  f = s("701909"),
-  T = s("900938"),
+  T = s("701909"),
+  f = s("900938"),
   S = s("49111"),
   m = s("560241"),
   N = s("782340"),
@@ -83,7 +83,7 @@ let h = {
     }), (0, a.jsx)(n.FormText, {
       type: n.FormTextTypes.DESCRIPTION,
       children: N.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HELP.format({
-        articleUrl: f.default.getArticleURL(S.HelpdeskArticles.STICKERS_UPLOAD)
+        articleUrl: T.default.getArticleURL(S.HelpdeskArticles.STICKERS_UPLOAD)
       })
     })]
   }),
@@ -117,7 +117,7 @@ let h = {
     }))
   };
 var L = () => {
-  let e = (0, l.useStateFromStores)([T.default], () => T.default.getGuild()),
+  let e = (0, l.useStateFromStores)([f.default], () => f.default.getGuild()),
     t = (0, l.useStateFromStores)([c.default], () => {
       var t;
       return null != e && null !== (t = c.default.getStickersByGuildId(e.id)) && void 0 !== t ? t : []

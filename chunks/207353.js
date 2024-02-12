@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   getDefaultSorter: function() {
-    return f
+    return T
   },
   createColumn: function() {
-    return T
+    return f
   },
   createListingNameColumn: function() {
     return m
@@ -42,7 +42,7 @@ var r = s("77078"),
   _ = s("782340"),
   I = s("960282");
 
-function f(e) {
+function T(e) {
   return (t, s, a) => {
     let l = e(t),
       n = e(s);
@@ -50,7 +50,7 @@ function f(e) {
   }
 }
 
-function T(e) {
+function f(e) {
   let {
     key: t,
     cellClassName: s,
@@ -83,7 +83,7 @@ function m(e) {
     renderHeader: l,
     ...n
   } = e;
-  return T({
+  return f({
     cellClassName: t,
     key: s,
     renderHeader: l,
@@ -120,7 +120,7 @@ function N(e) {
     renderHeader: n,
     ...i
   } = e;
-  return T({
+  return f({
     key: l,
     cellClassName: t,
     renderHeader: n,
@@ -142,7 +142,7 @@ function g(e) {
     renderHeader: n,
     ...i
   } = e;
-  return T({
+  return f({
     key: l,
     cellClassName: t,
     renderHeader: n,
@@ -221,7 +221,7 @@ function O(e) {
     initialSortKey: d,
     initialSortDirection: u = E.TableSortDirections.ASCENDING,
     ...c
-  } = e, [_, f] = l.useState(d), [T, S] = l.useState(u);
+  } = e, [_, T] = l.useState(d), [f, S] = l.useState(u);
   return (0, a.jsx)("div", {
     className: i(I.tableContainer, t),
     children: (0, a.jsx)(o.default, {
@@ -235,9 +235,9 @@ function O(e) {
         [I.headerWithoutSeparators]: !r
       }, s),
       sortKey: _,
-      sortDirection: T,
+      sortDirection: f,
       onSort: (e, t) => {
-        f(e), S(t)
+        T(e), S(t)
       },
       ...c
     })

@@ -17,8 +17,8 @@ var l = s("446674"),
   E = s("393414"),
   _ = s("719887"),
   I = s("697218"),
-  f = s("191814"),
-  T = s("449008"),
+  T = s("191814"),
+  f = s("449008"),
   S = s("257869"),
   m = s("837008"),
   N = s("757715"),
@@ -90,13 +90,13 @@ function b(e) {
     return e.id === (null == t ? void 0 : null === (s = t.team) || void 0 === s ? void 0 : s.id)
   }), n = [j.PayoutAccountStatuses.ACTION_REQUIRED, j.PayoutAccountStatuses.BLOCKED, j.PayoutAccountStatuses.SUSPENDED];
   return (null == l ? void 0 : l.payout_account_status) != null && n.includes(null == l ? void 0 : l.payout_account_status) ? (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(f.default, {
+    children: [(0, a.jsx)(T.default, {
       size: 16
     }), (0, a.jsx)(R.default, {
       children: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYOUTS_PROBLEM_WARNING.format({
         url: D.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(l.id)
       })
-    }), (0, a.jsx)(f.default, {
+    }), (0, a.jsx)(T.default, {
       size: 16
     })]
   }) : null
@@ -136,7 +136,7 @@ function y(e) {
     d = null != r && s.hasFeature(D.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
     {
       currentTab: _,
-      setCurrentTab: f
+      setCurrentTab: T
     } = (0, A.useTabBarState)(),
     m = (0, S.useGroupListingsFetchContext)(),
     N = (0, l.useStateFromStores)([I.default], () => I.default.getCurrentUser()),
@@ -178,7 +178,7 @@ function y(e) {
       });
       break;
     default:
-      (0, T.assertNever)(_)
+      (0, f.assertNever)(_)
   }
   return (0, a.jsxs)("div", {
     className: U.container,
@@ -202,7 +202,7 @@ function y(e) {
           selectedItem: _,
           type: "top",
           look: "brand",
-          onItemSelect: f,
+          onItemSelect: T,
           children: [(0, a.jsx)(i.default, {
             id: A.TabBarSection.BASIC_INFO,
             disabledTooltip: G.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,

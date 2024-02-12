@@ -20,7 +20,7 @@ var a = s("37983"),
   _ = s("419143");
 let I = "role_subscriptions_eligibility_modal";
 
-function f(e) {
+function T(e) {
   let {
     guild: t,
     eligibility: l,
@@ -58,7 +58,7 @@ function f(e) {
   })
 }
 
-function T(e) {
+function f(e) {
   let {
     guild: t,
     checkboxText: s
@@ -67,15 +67,15 @@ function T(e) {
     error: u,
     loading: _,
     submitAcceptTermsRequest: I
-  } = (0, i.default)(t.id), [f, T] = l.useState(!1);
+  } = (0, i.default)(t.id), [T, f] = l.useState(!1);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(n.Checkbox, {
       onChange: function() {
-        T(e => !e)
+        f(e => !e)
       },
       size: 20,
       type: n.Checkbox.Types.INVERTED,
-      value: f,
+      value: T,
       children: (0, a.jsx)(n.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
@@ -85,7 +85,7 @@ function T(e) {
       size: 24
     }), (0, a.jsx)(n.Button, {
       className: E.ctaButton,
-      disabled: !f || !o,
+      disabled: !T || !o,
       grow: !0,
       onClick: I,
       size: n.Button.Sizes.LARGE,
@@ -116,10 +116,10 @@ function S(e) {
   } = s;
   return o ? c ? (0, a.jsx)(u.default, {
     ...s
-  }) : (0, a.jsx)(T, {
+  }) : (0, a.jsx)(f, {
     guild: t,
     checkboxText: d
-  }) : (0, a.jsx)(f, {
+  }) : (0, a.jsx)(T, {
     guild: t,
     eligibility: r,
     eligibilityLoading: l,

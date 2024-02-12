@@ -91,8 +91,8 @@ class m extends a.PureComponent {
       iconSrc: T,
       "aria-hidden": C,
       ...p
-    } = this.props, x = R[u], I = null != g ? c.Clickable : "div";
-    return (0, l.jsxs)(I, {
+    } = this.props, I = R[u], x = null != g ? c.Clickable : "div";
+    return (0, l.jsxs)(x, {
       className: s(v.icon, a, (0, h.getClass)(v, "iconSize", u), {
         [null !== (e = (0, h.getClass)(v, "iconActive", u)) && void 0 !== e ? e : ""]: i,
         [v.iconInactive]: !i,
@@ -100,7 +100,7 @@ class m extends a.PureComponent {
       }),
       "aria-hidden": C,
       style: null == n.icon ? {
-        fontSize: (null !== (t = x[n.acronym.length]) && void 0 !== t ? t : x[x.length - 1]) * d,
+        fontSize: (null !== (t = I[n.acronym.length]) && void 0 !== t ? t : I[I.length - 1]) * d,
         ...o
       } : o,
       onClick: null != _ || null == g ? void 0 : g,

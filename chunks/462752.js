@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("535013"),
   _ = s("476765"),
   I = s("351825"),
-  f = s("423487"),
-  T = s("701909"),
+  T = s("423487"),
+  f = s("701909"),
   S = s("36402"),
   m = s("766419"),
   N = s("531493"),
@@ -53,7 +53,7 @@ function v(e) {
       variant: "text-sm/normal",
       color: "header-secondary",
       children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
-        helpdeskArticleUrl: T.default.getArticleURL(x.HelpdeskArticles.CONNECTION_DETAILS_ADMIN)
+        helpdeskArticleUrl: f.default.getArticleURL(x.HelpdeskArticles.CONNECTION_DETAILS_ADMIN)
       })
     }), (0, a.jsx)(u.Button, {
       disabled: s,
@@ -150,7 +150,7 @@ function j(e) {
         }), (0, a.jsx)(u.Text, {
           variant: "text-sm/normal",
           children: O.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
-            helpdeskArticleUrl: T.default.getArticleURL(x.HelpdeskArticles.CONNECTION_DETAILS_ADMIN)
+            helpdeskArticleUrl: f.default.getArticleURL(x.HelpdeskArticles.CONNECTION_DETAILS_ADMIN)
           })
         })]
       })), function(e, t, s, l, n) {
@@ -249,7 +249,7 @@ function j(e) {
         })
       }), (null != P ? P : 0) > 0 ? (0, a.jsxs)("div", {
         className: p.warningContainer,
-        children: [(0, a.jsx)(f.default, {
+        children: [(0, a.jsx)(T.default, {
           className: p.warningIcon
         }), (0, a.jsx)(u.Text, {
           variant: "text-sm/normal",

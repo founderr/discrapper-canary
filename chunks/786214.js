@@ -30,23 +30,23 @@ let p = e => {
       url: n,
       description: l
     } = t;
-    return null == n ? null : (0, s.jsx)(S, {
+    return null == n ? null : (0, s.jsx)(A, {
       url: n,
       description: l
     })
   },
-  A = e => {
+  S = e => {
     var t, n, l;
     let {
       embed: a
     } = e;
     if (!T.SUPPORTED_EMBED_TYPES.has(a.type)) return null;
     let i = void 0 !== a.video && a.type !== r.MessageEmbedTypes.GIFV ? a.video.url : null !== (l = null === (t = a.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== l ? l : null === (n = a.image) || void 0 === n ? void 0 : n.url;
-    return null == i ? null : (0, s.jsx)(S, {
+    return null == i ? null : (0, s.jsx)(A, {
       url: i
     })
   },
-  S = e => {
+  A = e => {
     let {
       url: t,
       description: n
@@ -103,7 +103,7 @@ function g(e) {
       messageId: n,
       context: i
     }), f()
-  }, [t, n, i, f]), S = l.useCallback(() => {
+  }, [t, n, i, f]), A = l.useCallback(() => {
     null == d || d(), (0, _.trackMediaRedactionAction)({
       action: _.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
       channelId: t,
@@ -139,7 +139,7 @@ function g(e) {
         children: I.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
       }), null != r && (0, s.jsx)(p, {
         attachment: r
-      }), null != o && (0, s.jsx)(A, {
+      }), null != o && (0, s.jsx)(S, {
         embed: o
       })]
     }), (0, s.jsxs)(u.ModalFooter, {
@@ -149,7 +149,7 @@ function g(e) {
         submitting: a,
         size: u.Button.Sizes.MEDIUM,
         color: u.Button.Colors.BRAND,
-        onClick: S,
+        onClick: A,
         children: I.default.Messages.CONFIRM
       }), (0, s.jsx)(u.Button, {
         className: m.button,

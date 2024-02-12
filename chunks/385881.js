@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("406876"),
   _ = s("167109"),
   I = s("979778"),
-  f = s("59767"),
-  T = s("561205"),
+  T = s("59767"),
+  f = s("561205"),
   S = s("782340"),
   m = s("332227");
 
@@ -27,11 +27,11 @@ function N() {
     editStateId: t
   } = (0, E.useEditStateContext)(), [s, n] = _.useTrialInterval(t), [N, g] = _.useTrialLimit(t), h = (0, u.useSubscriptionTrial)(t), {
     options: C
-  } = (0, f.default)(null !== (e = null == h ? void 0 : h.active_trial) && void 0 !== e ? e : null), R = (0, I.default)(), x = null != s, L = l.useCallback(e => {
+  } = (0, T.default)(null !== (e = null == h ? void 0 : h.active_trial) && void 0 !== e ? e : null), R = (0, I.default)(), x = null != s, L = l.useCallback(e => {
     let t = C.find(e => e.isDefault);
     i(null != t, "Missing default trial duartion option"), n(e ? t.value : null)
   }, [n, C]), O = (0, c.useRoleSubscriptionSettingsDisabled)(), p = (0, d.useUID)(), A = (0, d.useUID)();
-  return (0, a.jsxs)(T.default, {
+  return (0, a.jsxs)(f.default, {
     title: S.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TITLE,
     description: S.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_DESCRIPTION,
     children: [(0, a.jsx)(r.FormSwitch, {

@@ -24,8 +24,8 @@ var s, i, r, a = n("917351"),
   y = n("387111"),
   T = n("246846"),
   C = n("99795"),
-  S = n("49111"),
-  I = n("353927");
+  I = n("49111"),
+  S = n("353927");
 let A = "__EMBEDDED_ACTIVITIES__";
 
 function D(e) {
@@ -52,7 +52,7 @@ function D(e) {
   }
   rebuild() {
     let e = g.default.getChannel(this.channelId);
-    if (null == e || e.type === S.ChannelTypes.GUILD_TEXT) return !1;
+    if (null == e || e.type === I.ChannelTypes.GUILD_TEXT) return !1;
     if (this.call = c.default.getCall(this.channelId), e.isPrivate() && (null == this.call || this.call.unavailable)) return !1;
     let t = new Set(e.isGuildVocalOrThread() ? Object.keys(p.default.getVoiceStatesForChannel(e.id)) : e.recipients);
     return t.add(_.default.getId()), f.default.getAllActiveStreamsForChannel(this.channelId).forEach(e => {
@@ -119,7 +119,7 @@ function D(e) {
       return {
         type: C.ParticipantTypes.ACTIVITY,
         id: e.applicationId,
-        activityType: S.ActivityTypes.PLAYING,
+        activityType: I.ActivityTypes.PLAYING,
         activityUrl: e.url,
         participants: new Set(e.userIds),
         guildId: null !== (s = null === (n = g.default.getChannel(this.channelId)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== s ? s : null,
@@ -133,16 +133,16 @@ function D(e) {
     let c = [],
       T = v.default.getUser(e);
     if (null == T) return c;
-    let S = p.default.getVoiceStateForChannel(this.channelId, e),
+    let I = p.default.getVoiceStateForChannel(this.channelId, e),
       A = p.default.getVoicePlatformForChannel(this.channelId, e),
       D = g.default.getChannel(this.channelId),
       N = null !== (s = null === (n = this.call) || void 0 === n ? void 0 : null === (t = n.ringing) || void 0 === t ? void 0 : t.includes(e)) && void 0 !== s && s;
-    (null != S || N) && (o = {
+    (null != I || N) && (o = {
       type: C.ParticipantTypes.USER,
       ...E.default.getUserStreamData(e, null == D ? void 0 : D.getGuildId()),
       user: T,
       id: T.id,
-      voiceState: S,
+      voiceState: I,
       voicePlatform: A,
       speaking: (0, d.getIsSpeaking)({
         userId: e,
@@ -166,11 +166,11 @@ function D(e) {
           maxFrameRate: n.maxFrameRate
         } : null;
       u = {
-        ...E.default.getUserStreamData(e, null == D ? void 0 : D.getGuildId(), I.MediaEngineContextTypes.STREAM),
+        ...E.default.getUserStreamData(e, null == D ? void 0 : D.getGuildId(), S.MediaEngineContextTypes.STREAM),
         ...i,
         type: s ? C.ParticipantTypes.HIDDEN_STREAM : C.ParticipantTypes.STREAM,
         id: t,
-        userVideo: null !== (a = null == S ? void 0 : S.selfVideo) && void 0 !== a && a,
+        userVideo: null !== (a = null == I ? void 0 : I.selfVideo) && void 0 !== a && a,
         user: T,
         userNick: y.default.getName(null == D ? void 0 : D.getGuildId(), this.channelId, T),
         stream: O

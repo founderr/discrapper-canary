@@ -21,7 +21,7 @@ var a = s("37983"),
       paginationCaretClassName: n,
       intervalBetweenAutomaticItemRotations: _,
       renderItem: I
-    } = e, f = l.useMemo(() => new r.Interval, []), [T, S] = l.useState(u.SlideDirection.LEFT), [m, N] = l.useState(0), [g, h] = l.useState(!1), [C, R] = l.useState(!1), x = l.useCallback((e, t) => {
+    } = e, T = l.useMemo(() => new r.Interval, []), [f, S] = l.useState(u.SlideDirection.LEFT), [m, N] = l.useState(0), [g, h] = l.useState(!1), [C, R] = l.useState(!1), x = l.useCallback((e, t) => {
       N(s => {
         let a = s + t;
         return a < 0 ? a = e.length - 1 : a > e.length - 1 && (a = 0), a
@@ -32,8 +32,8 @@ var a = s("37983"),
       !C && x(t, -1)
     }, [x, t, C]);
     return l.useEffect(() => {
-      null != _ && (g ? g && f.stop() : f.start(_, L))
-    }, [g, f, _, L]), (0, a.jsxs)("div", {
+      null != _ && (g ? g && T.stop() : T.start(_, L))
+    }, [g, T, _, L]), (0, a.jsxs)("div", {
       className: E.root,
       onMouseEnter: () => h(!0),
       onMouseLeave: () => h(!1),
@@ -50,7 +50,7 @@ var a = s("37983"),
         })
       }), (0, a.jsx)(u.default, {
         step: m,
-        direction: T,
+        direction: f,
         onAnimationStart: () => R(!0),
         onAnimationEnd: () => R(!1),
         className: i(E.carousel, s),

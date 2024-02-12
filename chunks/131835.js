@@ -35,8 +35,8 @@ var a = n("913144"),
   f = n("592407"),
   O = n("653274"),
   S = n("330724"),
-  m = n("259483"),
-  T = n("724210"),
+  T = n("259483"),
+  m = n("724210"),
   D = n("653138"),
   A = n("782340");
 
@@ -89,26 +89,26 @@ async function h(e, t) {
 function L(e, t) {
   let {
     homeSettingsEnabled: n
-  } = (0, u.getOnboardingHomeAdminExperiment)(e), a = m.ONBOARDING_STEPS.findIndex(e => e === t);
-  if (-1 !== a && a !== m.ONBOARDING_STEPS.length - 1) {
-    if (!n && m.ONBOARDING_STEPS[a + 1] === m.GuildSettingsOnboardingPage.HOME_SETTINGS) {
-      g(m.ONBOARDING_STEPS[a + 2]);
+  } = (0, u.getOnboardingHomeAdminExperiment)(e), a = T.ONBOARDING_STEPS.findIndex(e => e === t);
+  if (-1 !== a && a !== T.ONBOARDING_STEPS.length - 1) {
+    if (!n && T.ONBOARDING_STEPS[a + 1] === T.GuildSettingsOnboardingPage.HOME_SETTINGS) {
+      g(T.ONBOARDING_STEPS[a + 2]);
       return
     }
-    g(m.ONBOARDING_STEPS[a + 1])
+    g(T.ONBOARDING_STEPS[a + 1])
   }
 }
 
 function R(e, t) {
   let {
     homeSettingsEnabled: n
-  } = (0, u.getOnboardingHomeAdminExperiment)(e), a = m.ONBOARDING_STEPS.findIndex(e => e === t);
+  } = (0, u.getOnboardingHomeAdminExperiment)(e), a = T.ONBOARDING_STEPS.findIndex(e => e === t);
   if (-1 !== a && 0 !== a) {
-    if (!n && m.ONBOARDING_STEPS[a - 1] === m.GuildSettingsOnboardingPage.HOME_SETTINGS) {
-      g(m.ONBOARDING_STEPS[a - 2]);
+    if (!n && T.ONBOARDING_STEPS[a - 1] === T.GuildSettingsOnboardingPage.HOME_SETTINGS) {
+      g(T.ONBOARDING_STEPS[a - 2]);
       return
     }
-    g(m.ONBOARDING_STEPS[a - 1])
+    g(T.ONBOARDING_STEPS[a - 1])
   }
 }
 async function p(e) {
@@ -127,6 +127,6 @@ async function p(e) {
   }), r.default.resetOnboardingStatus(t.id), (0, o.discardOnboardingPromise)(t.id), await (0, o.default)({
     guildId: t.id,
     isPreview: !0,
-    returnChannelId: T.StaticChannelRoute.GUILD_HOME
+    returnChannelId: m.StaticChannelRoute.GUILD_HOME
   }))
 }

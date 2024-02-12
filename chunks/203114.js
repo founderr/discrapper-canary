@@ -21,14 +21,14 @@ function c(e) {
     onHeaderClick: E,
     className: _,
     expanded: I,
-    onContentClick: f
+    onContentClick: T
   } = e;
   return null == t ? null : (0, a.jsx)(o.default, {
     guildId: t,
     log: c,
     className: _,
     expanded: I,
-    onContentClick: f,
+    onContentClick: T,
     onHeaderClick: () => {
       null == E || E(c)
     },

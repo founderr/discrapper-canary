@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return C
   },
   getAssets: function() {
-    return S
+    return I
   },
   fetchAssetIds: function() {
     return N
@@ -90,7 +90,7 @@ function C(e, t, n) {
   let s = "number" == typeof n ? "?size=".concat((0, l.getBestMediaProxySize)(n)) : "";
   return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(s) : "".concat(o.default.getAPIBaseURL(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(s)
 }
-async function S(e) {
+async function I(e) {
   let {
     assets: t
   } = await
@@ -102,7 +102,7 @@ async function S(e) {
   }(e);
   return t
 }
-async function I(e, t) {
+async function S(e, t) {
   let n = t.filter(e => null != e && !Object.prototype.hasOwnProperty.call(p, e) && null == p[e]);
   if (0 === n.length) return;
   let {
@@ -159,13 +159,13 @@ async function N(e, t) {
   });
   let s = [],
     i = t.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
-  i.length > 0 && await I(e, i);
+  i.length > 0 && await S(e, i);
   let r = A(t, s);
   if (r) return d.default.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
     applicationId: e
   }), s;
-  let a = await S(e),
+  let a = await I(e),
     o = D(t, s, a, n);
   return o ? y(e).then(() => N(e, t, n - 1)) : (d.default.dispatch({
     type: "APPLICATION_ASSETS_FETCH_SUCCESS",

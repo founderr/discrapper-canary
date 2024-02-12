@@ -27,8 +27,8 @@ var s = n("597755"),
   y = n("290886"),
   T = n("374021"),
   C = n("398604"),
-  S = n("704341"),
-  I = n("9294"),
+  I = n("704341"),
+  S = n("9294"),
   A = n("487946"),
   D = n("258158"),
   N = n("877275"),
@@ -326,7 +326,7 @@ var es = {
       context: a,
       callback: o,
       skipOnboarding: d
-    } = e, f = (0, I.parseExtraDataFromInviteKey)(r), c = f.baseCode, g = V.default.getSessionId();
+    } = e, f = (0, S.parseExtraDataFromInviteKey)(r), c = f.baseCode, g = V.default.getSessionId();
     let m = (s = a, i = f, {
         ...s,
         invite_guild_scheduled_event_id: i.guildScheduledEventId
@@ -404,7 +404,7 @@ var es = {
       guild: a
     } = e;
     if (null != a && (null === (n = a.features) || void 0 === n ? void 0 : n.includes(W.GuildFeatures.HUB))) {
-      S.default.onOpenHubInvite(e);
+      I.default.onOpenHubInvite(e);
       return
     }
     if (null != a && (null === (s = a.features) || void 0 === s ? void 0 : s.includes(W.GuildFeatures.COMMUNITY)) && (null === (i = a.features) || void 0 === i ? void 0 : i.includes(W.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)) && !a.features.includes(W.GuildFeatures.PREVIEW_ENABLED)) {
@@ -437,7 +437,7 @@ var es = {
   openApp(e, t, n, s, r) {
     var u, f;
     let _;
-    let c = null != e ? (0, I.parseExtraDataFromInviteKey)(e) : null,
+    let c = null != e ? (0, S.parseExtraDataFromInviteKey)(e) : null,
       g = null == c ? void 0 : c.baseCode;
     if (l.default.dispatch({
         type: "INVITE_APP_OPENING",

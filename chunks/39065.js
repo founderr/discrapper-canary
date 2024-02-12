@@ -17,8 +17,8 @@ var s = n("37983"),
   m = n("661128"),
   _ = n("868869"),
   E = n("926223"),
-  p = n("467292"),
-  I = n("622839"),
+  I = n("467292"),
+  p = n("622839"),
   S = n("145131"),
   P = n("599110"),
   N = n("719923"),
@@ -28,8 +28,8 @@ var s = n("37983"),
   O = n("286350"),
   h = n("102492"),
   R = n("376641"),
-  g = n("49111"),
-  M = n("994770");
+  M = n("49111"),
+  g = n("994770");
 
 function x(e) {
   let {
@@ -75,23 +75,23 @@ function x(e) {
     giftRecipient: ec
   } = (0, T.useGiftContext)(), eo = null == K ? void 0 : K.id, ed = (0, h.checkNoPaymentTrialEnabled)(U, V.paymentSourceId, eo), ef = (0, i.useStateFromStores)([E.default], () => E.default.popupCallbackCalled), {
     analyticsLocations: em
-  } = (0, o.default)(), e_ = null != q ? Q[q] : null, [eE, ep] = r.useState(ed), [eI, eS] = r.useState(!1), {
+  } = (0, o.default)(), e_ = null != q ? Q[q] : null, [eE, eI] = r.useState(ed), [ep, eS] = r.useState(!1), {
     hasEntitlements: eP
   } = (0, m.useSubscriptionEntitlements)(eo, er), eN = (0, N.isPrepaidPaymentSource)(V.paymentSourceId), eT = eP || ed, eC = (0, d.useIsPrepaidPaymentPastDue)(), eA = null, eO = null;
-  if (J === g.PurchaseTypes.ONE_TIME) {
+  if (J === M.PurchaseTypes.ONE_TIME) {
     var eh;
     l(null != $, "SKU must be selected for one-time purchases"), l(null != (eA = null !== (eh = ee[$]) && void 0 !== eh ? eh : null), "SKU must exist and be fetched.");
     let e = et[$],
-      t = null != q ? q : I.NO_PAYMENT_SOURCE;
+      t = null != q ? q : p.NO_PAYMENT_SOURCE;
     eO = null != e ? e[t] : null
   }
   let eR = async () => {
     await (0, A.purchaseProduct)({
       setPurchaseState: n,
       setHasAcceptedTerms: z,
-      setIsSubmitting: ep,
+      setIsSubmitting: eI,
       setPurchaseError: X,
-      hasRedirectURL: eI,
+      hasRedirectURL: ep,
       setHasRedirectURL: eS,
       isGift: er,
       giftStyle: ea,
@@ -126,7 +126,7 @@ function x(e) {
         if (null == E.default.redirectedPaymentId) return;
         await (0, c.redirectedPaymentSucceeded)(E.default.redirectedPaymentId), n(O.PurchaseState.COMPLETED), x()
       } catch (e) {
-        n(O.PurchaseState.FAIL), j(e), P.default.track(g.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+        n(O.PurchaseState.FAIL), j(e), P.default.track(M.AnalyticEvents.PAYMENT_FLOW_FAILED, {
           ...G,
           payment_error_code: null == e ? void 0 : e.code,
           payment_source_id: q,
@@ -134,14 +134,14 @@ function x(e) {
           duration_ms: Date.now() - D
         })
       } finally {
-        ep(!1), (0, c.resetPaymentIntentId)()
-      } else k === p.PurchaseTokenAuthState.SUCCESS && await eR()
+        eI(!1), (0, c.resetPaymentIntentId)()
+      } else k === I.PurchaseTokenAuthState.SUCCESS && await eR()
     };
     e()
   }, [ef]), r.useEffect(() => {
     ed && !er && null == t && eR()
   }, [ed, er, t]);
-  let eg = null != Y || J === g.PurchaseTypes.ONE_TIME && !er;
+  let eM = null != Y || J === M.PurchaseTypes.ONE_TIME && !er;
   return ed ? null : (0, s.jsxs)(u.ModalFooter, {
     align: S.default.Align.CENTER,
     children: [(0, s.jsx)(_.default, {
@@ -158,8 +158,8 @@ function x(e) {
       isTrial: Z,
       makePurchase: eR,
       needsPaymentSource: null == e_ && !eT
-    }), (0, s.jsx)(R.default, {}), H && !eg ? (0, s.jsx)("div", {
-      className: M.back,
+    }), (0, s.jsx)(R.default, {}), H && !eM ? (0, s.jsx)("div", {
+      className: g.back,
       children: (0, s.jsx)(f.default, {
         onClick: a
       })

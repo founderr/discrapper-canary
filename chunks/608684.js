@@ -45,8 +45,8 @@ class I extends a.PureComponent {
       disabled: C,
       onChange: m,
       showIcon: p,
-      showIconDisabled: g,
-      className: T,
+      showIconDisabled: T,
+      className: g,
       imageClassName: N,
       iconClassName: x,
       iconWrapperClassName: S,
@@ -63,14 +63,14 @@ class I extends a.PureComponent {
         className: h.imageUploaderAcronym,
         children: (0, d.getAcronym)(I)
       })), C) return (0, l.jsx)("div", {
-      className: r(h.imageUploader, h.disabled, T),
+      className: r(h.imageUploader, h.disabled, g),
       children: (0, l.jsxs)("div", {
         className: r(h.imageUploaderInner, N),
         style: {
           ...y,
           backgroundImage: n
         },
-        children: [a, g && (0, l.jsx)("div", {
+        children: [a, T && (0, l.jsx)("div", {
           className: r(h.imageUploaderIcon, h.imageUploaderIconDisabled, x),
           children: A
         })]
@@ -88,7 +88,7 @@ class I extends a.PureComponent {
     }));
     let G = null !== (e = null != O ? O : u) && void 0 !== e ? e : E.default.Messages.CHANGE_AVATAR;
     return (0, l.jsxs)("div", {
-      className: r(h.imageUploader, T),
+      className: r(h.imageUploader, g),
       children: [(0, l.jsx)(o.FocusRing, {
         within: !0,
         children: (0, l.jsxs)("div", {

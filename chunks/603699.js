@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return I
   }
 });
 var s = n("446674"),
@@ -81,7 +81,7 @@ class C extends s.default.Store {
   }
 }
 C.displayName = "IdleStore";
-var S = new C(i.default, {
+var I = new C(i.default, {
   IDLE: function(e) {
     g = e.idle
   },

@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("311340"),
   _ = s("701203"),
   I = s("85448"),
-  f = s("567062"),
-  T = s("42203"),
+  T = s("567062"),
+  f = s("42203"),
   S = s("923959"),
   m = s("957255"),
   N = s("27618"),
@@ -38,7 +38,7 @@ function p(e) {
     isExpanded: s,
     selectedChannelId: n,
     className: r
-  } = e, f = (0, _.useCanEnableRaidAlerts)(t), S = t.canHaveRaidActivityAlerts(), [m, N] = l.useState(S), g = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(n), [n]), C = (0, c.default)(g), p = async () => {
+  } = e, T = (0, _.useCanEnableRaidAlerts)(t), S = t.canHaveRaidActivityAlerts(), [m, N] = l.useState(S), g = (0, o.useStateFromStores)([f.default], () => f.default.getChannel(n), [n]), C = (0, c.default)(g), p = async () => {
     N(!m);
     try {
       var e;
@@ -82,7 +82,7 @@ function p(e) {
     }), (0, a.jsx)(R.default, {
       checked: m,
       onChange: p,
-      disabled: !f || null == n
+      disabled: !T || null == n
     })]
   })
 }
@@ -94,7 +94,7 @@ function A(e) {
     selectedChannelId: l,
     setSelectedChannelId: n,
     className: E
-  } = e, _ = null !== (t = s.safetyAlertsChannelId) && void 0 !== t ? t : null, f = (0, o.useStateFromStoresArray)([S.default, g.default, N.default, m.default], () => {
+  } = e, _ = null !== (t = s.safetyAlertsChannelId) && void 0 !== t ? t : null, T = (0, o.useStateFromStoresArray)([S.default, g.default, N.default, m.default], () => {
     let e = S.default.getChannels(s.id),
       t = e[0, S.GUILD_SELECTABLE_CHANNELS_KEY].filter(e => {
         let {
@@ -111,7 +111,7 @@ function A(e) {
         }
       });
     return null != _ ? t : [...t]
-  }, [s.id, _]), T = async e => {
+  }, [s.id, _]), f = async e => {
     n(e);
     try {
       if (e !== _ && (await C.default.saveGuild(s.id, {
@@ -142,8 +142,8 @@ function A(e) {
         children: L.default.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE
       }), (0, a.jsx)(d.SearchableSelect, {
         wrapperClassName: O.bringToFront,
-        options: f,
-        onChange: T,
+        options: T,
+        onChange: f,
         value: l,
         maxVisibleItems: 5
       }), (0, a.jsx)(d.Text, {
@@ -160,7 +160,7 @@ function M(e) {
   let {
     guild: n
   } = e, [i, r] = l.useState(!1), o = null !== (t = n.safetyAlertsChannelId) && void 0 !== t ? t : null, [d, u] = l.useState(null != o ? o : null !== (s = null == n ? void 0 : n.publicUpdatesChannelId) && void 0 !== s ? s : null);
-  return (0, a.jsx)(f.default, {
+  return (0, a.jsx)(T.default, {
     renderHeader: (0, a.jsx)(p, {
       isExpanded: i,
       guild: n,

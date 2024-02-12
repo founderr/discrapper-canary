@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = s("37983"),
@@ -17,10 +17,10 @@ var a = s("37983"),
   _ = s("782340"),
   I = s("642622");
 
-function f(e) {
+function T(e) {
   let {
     guild: t
-  } = e, n = t.verificationLevel, f = l.useMemo(() => (0, o.getVerificationLevelText)(n), [n]);
+  } = e, n = t.verificationLevel, T = l.useMemo(() => (0, o.getVerificationLevelText)(n), [n]);
   return (0, a.jsxs)(r.Clickable, {
     onClick: () => (0, r.openModalLazy)(async () => {
       let {
@@ -55,7 +55,7 @@ function f(e) {
           }) : (0, a.jsx)(u.default, {
             width: 16,
             height: 16
-          }), f]
+          }), T]
         })
       })]
     }), (0, a.jsx)(d.default, {

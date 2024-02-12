@@ -16,8 +16,8 @@ var i = n("249654"),
   f = n("49111");
 let S = {},
   E = 0,
-  h = {},
   _ = {},
+  h = {},
   g = (e, t) => {
     let n = (0, s.getFailedMessageId)(e),
       i = {
@@ -49,7 +49,7 @@ function m(e) {
     messages: r
   } = e, l = null === (t = o.default.getChannel(n)) || void 0 === t ? void 0 : t.getGuildId();
   if (null == l) return !1;
-  let s = _[l],
+  let s = h[l],
     u = r.reduce((e, t) => {
       var n;
       let r = t.type === f.MessageTypes.AUTO_MODERATION_ACTION;
@@ -62,17 +62,17 @@ function m(e) {
       });
       return l ? null == e || -1 === i.default.compare(e, t.id) ? t.id : void 0 : e
     }, s);
-  return null != u && _[l] !== u && (_[l] = u, !0)
+  return null != u && h[l] !== u && (h[l] = u, !0)
 }
 class T extends r.default.PersistedStore {
   initialize(e) {
-    this.waitFor(a.default), null != e && (S = e.automodFailedMessages, h = e.mentionRaidDetectionByGuild)
+    this.waitFor(a.default), null != e && (S = e.automodFailedMessages, _ = e.mentionRaidDetectionByGuild)
   }
   getState() {
     return {
       automodFailedMessages: S,
-      mentionRaidDetectionByGuild: h,
-      lastIncidentAlertMessage: _
+      mentionRaidDetectionByGuild: _,
+      lastIncidentAlertMessage: h
     }
   }
   getMessage(e) {
@@ -84,11 +84,11 @@ class T extends r.default.PersistedStore {
   }
   getMentionRaidDetected(e) {
     var t;
-    return null !== (t = h[e]) && void 0 !== t ? t : null
+    return null !== (t = _[e]) && void 0 !== t ? t : null
   }
   getLastIncidentAlertMessage(e) {
     var t;
-    return null !== (t = _[e]) && void 0 !== t ? t : null
+    return null !== (t = h[e]) && void 0 !== t ? t : null
   }
 }
 T.displayName = "GuildAutomodMessageStore", T.persistKey = "GuildAutomodMessages";
@@ -105,7 +105,7 @@ var v = new T(l.default, {
     } = e;
     if (null == t || n.type !== f.MessageTypes.AUTO_MODERATION_ACTION) return !1;
     let i = (0, u.createMessageRecord)(n);
-    return !!(0, c.isAutomodMessageRecord)(i) && !!(0, c.isAutomodNotification)(i) && (_[t] = i.id, !0)
+    return !!(0, c.isAutomodMessageRecord)(i) && !!(0, c.isAutomodNotification)(i) && (h[t] = i.id, !0)
   },
   MESSAGE_SEND_FAILED_AUTOMOD: I,
   MESSAGE_EDIT_FAILED_AUTOMOD: I,
@@ -130,7 +130,7 @@ var v = new T(l.default, {
       decisionId: n,
       suspiciousMentionActivityUntil: i
     } = e;
-    return h[t] = {
+    return _[t] = {
       guildId: t,
       decisionId: n,
       suspiciousMentionActivityUntil: i
@@ -140,6 +140,6 @@ var v = new T(l.default, {
     let {
       guildId: t
     } = e;
-    return delete h[t], !0
+    return delete _[t], !0
   }
 })

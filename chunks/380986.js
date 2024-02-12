@@ -63,8 +63,8 @@ var s = n("37983"),
   m = n("773336"),
   N = n("158998"),
   p = n("441823"),
-  A = n("913491"),
-  S = n("456936"),
+  S = n("913491"),
+  A = n("456936"),
   C = n("49111"),
   h = n("782340");
 
@@ -137,7 +137,7 @@ function y(e, t, a, r) {
   } = t, {
     id: f,
     flags: _
-  } = e, T = (0, I.hasFlag)(_, C.MessageFlags.EPHEMERAL), N = (0, A.default)(e), p = (0, u.useAppContext)();
+  } = e, T = (0, I.hasFlag)(_, C.MessageFlags.EPHEMERAL), N = (0, S.default)(e), p = (0, u.useAppContext)();
   return l.useCallback((e, t) => {
     if (T) return;
     if (!m.isPlatformEmbedded) {
@@ -218,7 +218,7 @@ function G(e, t) {
     id: s
   } = t;
   return l.useCallback(e => {
-    e.altKey && (e.preventDefault(), (0, S.default)(s, n))
+    e.altKey && (e.preventDefault(), (0, A.default)(s, n))
   }, [s, n])
 }
 

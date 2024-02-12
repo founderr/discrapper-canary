@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("773336"),
   N = n("780009"),
   p = n("49111"),
-  A = n("782340"),
-  S = n("743317");
+  S = n("782340"),
+  A = n("743317");
 class C extends l.PureComponent {
   get analyticsLocation() {
     return {
@@ -35,13 +35,13 @@ class C extends l.PureComponent {
       dispatchState: e
     } = this.props, t = null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1;
     return t ? (0, s.jsxs)(o.Clickable, {
-      "aria-label": A.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
-      className: S.dropdownArrowHitbox,
+      "aria-label": S.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
+      className: A.dropdownArrowHitbox,
       onClick: this.handleDropdownClick,
       children: [(0, s.jsx)("div", {
-        className: S.arrowSeparator
+        className: A.arrowSeparator
       }), (0, s.jsx)(I.default, {
-        className: S.dropdownArrow
+        className: A.dropdownArrow
       })]
     }) : null
   }
@@ -54,19 +54,19 @@ class C extends l.PureComponent {
       tooltipPosition: r
     } = this.props;
     return (0, s.jsxs)("div", {
-      className: S.disabledButtonWrapper,
+      className: A.disabledButtonWrapper,
       children: [(0, s.jsx)(o.Button, {
         className: n,
         fullWidth: l,
         size: a,
-        color: null != i ? i : S.disabledButtonColor,
+        color: null != i ? i : A.disabledButtonColor,
         disabled: !0,
         children: e
       }), (0, s.jsx)(o.Tooltip, {
         text: t,
         position: r,
         children: e => (0, s.jsx)("div", {
-          className: S.disabledButtonOverlay,
+          className: A.disabledButtonOverlay,
           ...e
         })
       })]
@@ -84,12 +84,12 @@ class C extends l.PureComponent {
       isShiny: d,
       hideNotLaunchable: c
     } = this.props;
-    if (!a) return c ? null : this.renderDisabledButton(A.default.Messages.GAME_ACTION_BUTTON_PLAY, m.isPlatformEmbedded ? A.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : A.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
-    if (u) return this.renderDisabledButton(A.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
+    if (!a) return c ? null : this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_PLAY, m.isPlatformEmbedded ? S.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : S.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+    if (u) return this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
     let E = d ? T.default : o.Button;
     return (0, s.jsxs)(E, {
-      className: i(S.playButton, e),
-      innerClassName: S.playButtonContents,
+      className: i(A.playButton, e),
+      innerClassName: A.playButtonContents,
       fullWidth: t,
       size: n,
       color: null != l ? l : o.Button.Colors.GREEN,
@@ -97,8 +97,8 @@ class C extends l.PureComponent {
       submitting: r,
       onClick: this.handleClick,
       children: [(0, s.jsx)("div", {
-        className: S.buttonText,
-        children: A.default.Messages.GAME_ACTION_BUTTON_PLAY
+        className: A.buttonText,
+        children: S.default.Messages.GAME_ACTION_BUTTON_PLAY
       }), this.renderDropdown()]
     })
   }

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("648825"),
   _ = s("757715"),
   I = s("406876"),
-  f = s("167109"),
-  T = s("620199"),
+  T = s("167109"),
+  f = s("620199"),
   S = s("561205"),
   m = s("49111"),
   N = s("782340"),
@@ -32,11 +32,11 @@ function C(e) {
   } = (0, I.useEditStateContext)(), C = (0, n.useStateFromStores)([E.default], () => {
     var e;
     return null === (e = E.default.getSubscriptionListing(s)) || void 0 === e ? void 0 : e.image_asset
-  }), [R, x] = f.useName(s), [L, O] = f.usePriceTier(s), [p, A] = f.useDescription(s), [M, D] = f.useImage(s, 1024), {
+  }), [R, x] = T.useName(s), [L, O] = T.usePriceTier(s), [p, A] = T.useDescription(s), [M, D] = T.useImage(s, 1024), {
     imageCTA: v,
     imageAriaLabel: j,
     setFilename: G
-  } = (0, T.default)(C), U = l.useMemo(() => {
+  } = (0, f.default)(C), U = l.useMemo(() => {
     var e;
     return null !== (e = null == t ? void 0 : t.map(e => ({
       value: e,

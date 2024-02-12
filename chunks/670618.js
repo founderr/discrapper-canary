@@ -17,11 +17,11 @@ function u(e, t) {
     [u, c] = a.useState(),
     [E, _] = a.useState(!1),
     I = (0, d.useIsExpeditedOnboardingGuild)(s),
-    f = (0, l.useStateFromStores)([r.default], () => {
+    T = (0, l.useStateFromStores)([r.default], () => {
       let e = r.default.getCurrentUser();
       return (null == s ? void 0 : s.isOwner(e)) === !0
     }, [s]),
-    T = a.useCallback(async () => {
+    f = a.useCallback(async () => {
       if (null != e && (I || null != t)) {
         _(!0), c(void 0);
         try {
@@ -34,9 +34,9 @@ function u(e, t) {
       }
     }, [e, t, I]);
   return {
-    canSubmitAcceptance: f,
+    canSubmitAcceptance: T,
     error: u,
     loading: E,
-    submitAcceptTermsRequest: T
+    submitAcceptTermsRequest: f
   }
 }

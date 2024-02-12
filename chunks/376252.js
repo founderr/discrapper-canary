@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("697218"),
   _ = s("810567"),
   I = s("599110"),
-  f = s("465305"),
-  T = s("991170"),
+  T = s("465305"),
+  f = s("991170"),
   S = s("766419"),
   m = s("507453"),
   N = s("50693"),
@@ -34,15 +34,15 @@ function p(e) {
     guild: t,
     role: s,
     locked: n
-  } = e, i = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentUser()), u = l.useMemo(() => T.default.computePermissions({
+  } = e, i = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentUser()), u = l.useMemo(() => f.default.computePermissions({
     user: i,
     context: t
   }), [i, t]), c = l.useMemo(() => ({
     [s.id]: {
       ...s,
-      permissions: T.default.NONE
+      permissions: f.default.NONE
     }
-  }), [s]), _ = l.useMemo(() => T.default.computePermissions({
+  }), [s]), _ = l.useMemo(() => f.default.computePermissions({
     user: i,
     context: t,
     roles: c
@@ -66,7 +66,7 @@ function p(e) {
           onClick: () => (0, S.clearRolePermissions)(s.id),
           onMouseEnter: t,
           onMouseLeave: l,
-          disabled: r.default.equals(s.permissions, T.default.NONE) || I || n,
+          disabled: r.default.equals(s.permissions, f.default.NONE) || I || n,
           children: x.default.Messages.ROLE_PERMISSIONS_CLEAR_PERMISSIONS
         })
       }
@@ -126,7 +126,7 @@ function M(e) {
     locked: n,
     setSelectedSection: r,
     initialSearchQuery: o
-  } = e, [u, c] = l.useState(null != o ? o : ""), E = l.useMemo(() => f.default.generateGuildPermissionSpec(t), [t]), T = E.map(e => ({
+  } = e, [u, c] = l.useState(null != o ? o : ""), E = l.useMemo(() => T.default.generateGuildPermissionSpec(t), [t]), f = E.map(e => ({
     ...e,
     permissions: e.permissions.filter(e => {
       let t = u.trimStart().toLowerCase();
@@ -180,7 +180,7 @@ function M(e) {
       }), (0, a.jsx)(A, {
         guild: t,
         role: s,
-        specs: T,
+        specs: f,
         locked: n
       })]
     })

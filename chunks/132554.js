@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var a = n("414456"),
-  r = n.n(a),
-  l = n("77078"),
+var r = n("414456"),
+  l = n.n(r),
+  a = n("77078"),
   i = n("978679"),
   u = n("265469");
 
@@ -16,20 +16,20 @@ function o(e) {
   let {
     className: t,
     copy: n,
-    bannerImage: a,
+    bannerImage: r,
     textColor: o = "always-white"
   } = e;
   return (0, s.jsxs)("div", {
-    className: r(u.bannerContainer, t),
-    children: [null == a ? null : (0, s.jsx)("img", {
+    className: l(u.bannerContainer, t),
+    children: [null == r ? null : (0, s.jsx)("img", {
       alt: "",
       className: u.banner,
-      src: a
+      src: r
     }), (0, s.jsxs)("div", {
       className: u.textContainer,
       children: [(0, s.jsx)(i.default, {
         className: u.giftIcon
-      }), (0, s.jsx)(l.Heading, {
+      }), (0, s.jsx)(a.Heading, {
         className: u.textHeader,
         color: o,
         variant: "eyebrow",

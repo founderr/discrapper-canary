@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return C
   },
   getBaseScheduleForRecurrence: function() {
-    return I
+    return x
   },
   getScheduleForRecurrenceWithException: function() {
     return L
@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return U
   },
   recurrenceRuleToOption: function() {
-    return B
+    return G
   }
 }), n("222007"), n("424973");
 var l = n("917351"),
@@ -137,7 +137,7 @@ function p(e) {
   return new s.Weekday(_[e])
 }
 
-function x(e, t) {
+function I(e, t) {
   let n;
   return null != e && (n = {
     startDate: r(e),
@@ -145,9 +145,9 @@ function x(e, t) {
   }, null != t && (n.endDate = r(t))), n
 }
 
-function I(e, t) {
+function x(e, t) {
   let n = function(e) {
-      return x(e.scheduled_start_time, e.scheduled_end_time)
+      return I(e.scheduled_start_time, e.scheduled_end_time)
     }(t),
     l = r(i.default.extractTimestamp(e)),
     a = (null == n ? void 0 : n.endDate) != null ? l.clone().add(n.endDate.diff(n.startDate)) : void 0;
@@ -168,7 +168,7 @@ function L(e, t) {
 }
 
 function A(e) {
-  return x(e.scheduledStartTime, e.scheduledEndTime)
+  return I(e.scheduledStartTime, e.scheduledEndTime)
 }
 
 function D(e, t) {
@@ -310,7 +310,7 @@ function U(e, t) {
   }
 }
 
-function B(e, t) {
+function G(e, t) {
   if (null == t) return o.RecurrenceOptions.NONE;
   let n = M(t);
   switch (n.options.freq) {

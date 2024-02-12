@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return p
   },
   useOpenFixQuarantinedProfileModal: function() {
-    return A
+    return S
   }
 }), n("702976");
 var s = n("884691"),
@@ -60,7 +60,7 @@ function p(e) {
   }, [e])
 }
 
-function A(e) {
+function S(e) {
   let {
     guildId: t,
     scrollPosition: n,

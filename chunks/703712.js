@@ -17,8 +17,8 @@ var s, l, a, i, r = n("37983"),
   m = n("526887"),
   N = n("574073"),
   p = n("28007"),
-  A = n("367594"),
-  S = n("273108"),
+  S = n("367594"),
+  A = n("273108"),
   C = n("118503"),
   h = n("659186"),
   g = n("304198"),
@@ -147,7 +147,7 @@ function F(e) {
   }()), {
     createMultipleConfettiAt: f,
     confettiCanvas: _
-  } = o.useContext(m.ConfettiCannonContext), [I, N] = o.useState(null), p = (0, c.useConfettiCannon)(_, I), A = function(e, t) {
+  } = o.useContext(m.ConfettiCannonContext), [I, N] = o.useState(null), p = (0, c.useConfettiCannon)(_, I), S = function(e, t) {
     if (null == e) return "enter";
     switch (e) {
       case "enter":
@@ -265,12 +265,12 @@ function F(e) {
         [L.easterEggAnimationClickTargetBottomLeft]: "BOTTOM_LEFT" === u,
         [L.easterEggAnimationClickTargetBottomRight]: "BOTTOM_RIGHT" === u
       }),
-      children: (0, r.jsx)(S.default, {
+      children: (0, r.jsx)(A.default, {
         animationRef: O,
         className: d(L.easterEggAnimation, {
           [L.easterEggAnimationHideLeaf]: h
         }),
-        nextScene: A,
+        nextScene: S,
         sceneSegments: v,
         onScenePlay: g,
         onSceneComplete: M,
@@ -300,13 +300,13 @@ function w(e) {
       }
       return null
     }(n),
-    d = (0, A.default)(n),
+    d = (0, S.default)(n),
     {
       createMultipleConfettiAt: c,
       addClickListener: E
     } = o.useContext(m.ConfettiCannonContext),
     [f, _] = o.useState(!1),
-    S = o.useRef(null),
+    A = o.useRef(null),
     {
       reducedMotion: v
     } = o.useContext(T.AccessibilityPreferencesContext),
@@ -336,7 +336,7 @@ function w(e) {
       if (!v.enabled) {
         if (f || 0 !== Math.floor(50 * Math.random())) {
           var e;
-          let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+          let t = null === (e = A.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
           if (null != t) c(t.left + t.width / 2, t.top + t.height / 2)
         } else _(!0)
       }
@@ -358,7 +358,7 @@ function w(e) {
   });
   let B = (0, r.jsx)(T.Clickable, {
     className: L.iconWrapper,
-    innerRef: S,
+    innerRef: A,
     onClick: i,
     children: (0, r.jsx)(C.default, {
       className: L.icon,

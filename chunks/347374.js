@@ -181,7 +181,7 @@ class N extends l.Component {
         splashClassName: E,
         splashPlaceholderClassName: N,
         renderMediaOverlay: p
-      } = this.props, A = u ? _.default : f.default;
+      } = this.props, S = u ? _.default : f.default;
       return (0, s.jsxs)(l.Fragment, {
         children: [o.isMobile ? null : (0, s.jsx)(T.default, {
           className: i(I.splash, E),
@@ -207,7 +207,7 @@ class N extends l.Component {
             [I.muteContainerMediaOverlay]: null != p
           }),
           onClick: this.handleToggleMute,
-          children: r && e ? (0, s.jsx)(A, {
+          children: r && e ? (0, s.jsx)(S, {
             className: I.mute
           }) : null
         })]

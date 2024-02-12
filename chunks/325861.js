@@ -10,8 +10,8 @@ var r, i, l = n("917351"),
   o = n("913144"),
   s = n("42203"),
   d = n("923959"),
-  E = n("26989"),
-  _ = n("305961"),
+  _ = n("26989"),
+  E = n("305961"),
   c = n("697218"),
   I = n("800762"),
   S = n("991170"),
@@ -32,7 +32,7 @@ function A(e, t) {
     let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       u = s.default.getChannel(t),
       a = null == u ? void 0 : u.getGuildId(),
-      o = _.default.getGuild(a);
+      o = E.default.getGuild(a);
     if (null == o || null == u || !u.isGuildStageVoice()) return N;
     return {
       speaker: function(e, t) {
@@ -72,7 +72,7 @@ function C(e) {
   return t.length > 0
 }
 
-function O(e) {
+function L(e) {
   let {
     guildId: t,
     user: n
@@ -86,7 +86,7 @@ function O(e) {
   }(n.id, t)
 }
 
-function L(e) {
+function O(e) {
   let {
     guild: t
   } = e;
@@ -97,7 +97,7 @@ function L(e) {
 }
 class h extends a.default.Store {
   initialize() {
-    this.waitFor(E.default, s.default, _.default, c.default, I.default)
+    this.waitFor(_.default, s.default, E.default, c.default, I.default)
   }
   isSpeaker(e, t) {
     return this.getPermissionsForUser(e, t).speaker
@@ -130,8 +130,8 @@ var P = new h(o.default, {
   CONNECTION_OPEN: function() {
     p = {}
   },
-  GUILD_MEMBER_REMOVE: O,
-  GUILD_MEMBER_UPDATE: O,
+  GUILD_MEMBER_REMOVE: L,
+  GUILD_MEMBER_UPDATE: L,
   GUILD_ROLE_UPDATE: function(e) {
     let {
       guildId: t
@@ -156,6 +156,6 @@ var P = new h(o.default, {
       return R(n, r) || e
     }, !1)
   },
-  GUILD_CREATE: L,
-  GUILD_DELETE: L
+  GUILD_CREATE: O,
+  GUILD_DELETE: O
 })

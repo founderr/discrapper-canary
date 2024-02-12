@@ -18,8 +18,8 @@ var a = s("37983"),
 function _(e) {
   let {
     guild: t
-  } = e, s = l.useId(), _ = (0, n.default)([o.default], () => null != t && o.default.can(u.Permissions.MANAGE_GUILD, t), [t]), I = t.hasFeature(u.GuildFeatures.COMMUNITY), [f, T] = l.useState(t.hasFeature(u.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), S = l.useCallback(async e => {
-    T(e), await (0, r.toggleModerationExperienceGuildFeature)(t, e)
+  } = e, s = l.useId(), _ = (0, n.default)([o.default], () => null != t && o.default.can(u.Permissions.MANAGE_GUILD, t), [t]), I = t.hasFeature(u.GuildFeatures.COMMUNITY), [T, f] = l.useState(t.hasFeature(u.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), S = l.useCallback(async e => {
+    f(e), await (0, r.toggleModerationExperienceGuildFeature)(t, e)
   }, [t]);
   return I ? null : (0, a.jsxs)("div", {
     className: E.bannerContainer,
@@ -39,7 +39,7 @@ function _(e) {
       className: E.buttonContainer,
       children: (0, a.jsx)(i.Switch, {
         id: s,
-        checked: f,
+        checked: T,
         onChange: S,
         disabled: !_
       })

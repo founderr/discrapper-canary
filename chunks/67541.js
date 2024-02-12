@@ -33,7 +33,7 @@ function T(e) {
       guild_id: m,
       channel_id: N
     }), (0, i.transitionToChannel)(n.id, T.id), a.default.selectVoiceChannel(T.id)
-  }, [null === (t = I.author) || void 0 === t ? void 0 : t.id, n.id, T.id, T.type, m, N]), A = (0, s.jsx)(d.default.Channel, {
+  }, [null === (t = I.author) || void 0 === t ? void 0 : t.id, n.id, T.id, T.type, m, N]), S = (0, s.jsx)(d.default.Channel, {
     channel: T
   });
   return (0, s.jsx)(d.default, {
@@ -43,7 +43,7 @@ function T(e) {
         children: [(0, s.jsx)(d.default.Icon, {
           guild: n
         }), (0, s.jsx)(d.default.Info, {
-          title: A,
+          title: S,
           onClick: p,
           children: (0, s.jsxs)("span", {
             className: _.infoTitle,

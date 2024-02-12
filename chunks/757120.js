@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("716241"),
   _ = s("685665"),
   I = s("634544"),
-  f = s("379532"),
-  T = s("52393"),
+  T = s("379532"),
+  f = s("52393"),
   S = s("102985"),
   m = s("409633"),
   N = s("181114"),
@@ -122,7 +122,7 @@ class v extends l.PureComponent {
       children: (0, L.getErrorMessageFromErrorCode)(null == t ? void 0 : t.code)
     });
     if (null != s && s.length > 0) {
-      let e = (0, T.default)(s);
+      let e = (0, f.default)(s);
       return (0, a.jsx)(o.FormText, {
         className: M.marginTop20,
         type: o.FormTextTypes.LABEL_DESCRIPTOR,
@@ -188,7 +188,7 @@ class v extends l.PureComponent {
           location_stack: i
         },
         guild_id: null == n ? void 0 : n.id
-      }), (0, f.default)({
+      }), (0, T.default)({
         analyticsLocations: i,
         analyticsSourceLocation: {
           section: s,

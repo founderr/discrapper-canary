@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("537325"),
   N = n("651693"),
   p = n("380986"),
-  A = n("969706"),
-  S = n("506885"),
+  S = n("969706"),
+  A = n("506885"),
   C = n("981601"),
   h = n("845579"),
   g = n("26989"),
@@ -48,7 +48,7 @@ function B(e) {
     channel: k
   } = e, F = (0, x.useMediaPostEmbedData)(r, B), {
     setPopout: w
-  } = (0, A.default)(B.id, U.DEFAULT_POPOUTS), H = (0, p.useContextMenuMessage)(B, k, w, !0), V = h.GifAutoPlay.useSetting(), Y = (0, P.useIsWindowFocused)(), [W, K] = l.useState(!1), [z, Z] = l.useState((null == F ? void 0 : F.coverImage) == null), J = (0, c.default)([f.default], () => f.default.useReducedMotion), Q = (0, c.default)([g.default, M.default], () => {
+  } = (0, S.default)(B.id, U.DEFAULT_POPOUTS), H = (0, p.useContextMenuMessage)(B, k, w, !0), V = h.GifAutoPlay.useSetting(), Y = (0, P.useIsWindowFocused)(), [W, K] = l.useState(!1), [z, Z] = l.useState((null == F ? void 0 : F.coverImage) == null), J = (0, c.default)([f.default], () => f.default.useReducedMotion), Q = (0, c.default)([g.default, M.default], () => {
     var e;
     return g.default.isMember(null == F ? void 0 : F.guildId, null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [F]), X = (0, c.default)([g.default], () => {
@@ -69,7 +69,7 @@ function B(e) {
     }), F.canAccess ? (0, m.default)(y.Routes.CHANNEL(F.guildId, F.threadId, F.messageId)) : Q ? (0, m.default)(y.Routes.CHANNEL(F.guildId, F.parentChannelId)) : await v.startLurking(F.guildId, {}, {
       channelId: F.parentChannelId
     }))
-  }, [F, k, Q]), el = l.useCallback(() => (o((null == F ? void 0 : F.authorId) != null, "Author Id cannot be null when loading user profile"), (0, S.default)(F.authorId, F.avatarUrl, {
+  }, [F, k, Q]), el = l.useCallback(() => (o((null == F ? void 0 : F.authorId) != null, "Author Id cannot be null when loading user profile"), (0, A.default)(F.authorId, F.avatarUrl, {
     guildId: F.guildId,
     channelId: k.id
   })), [F, k]);

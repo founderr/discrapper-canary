@@ -23,7 +23,7 @@ function E(e) {
   return null !== (t = I[e]) && void 0 !== t ? t : g
 }
 
-function p(e) {
+function _(e) {
   var t, n;
   let {
     channelId: l,
@@ -40,7 +40,7 @@ function p(e) {
   }, f)), I[l] = a
 }
 
-function _(e) {
+function p(e) {
   let {
     channelId: t,
     userId: n
@@ -65,8 +65,8 @@ class m extends i.default.Store {
 }
 m.displayName = "TypingStore";
 var T = new m(s.default, {
-  TYPING_START: p,
-  TYPING_STOP: _,
+  TYPING_START: _,
+  TYPING_STOP: p,
   TYPING_START_LOCAL: function(e) {
     let {
       channelId: t
@@ -77,7 +77,7 @@ var T = new m(s.default, {
       r = .8 * f;
     if (null != l && (null != l.timeout || l.prevSend + r > i)) return !1;
     let I = null == l || l.prevSend > i - 2 * r ? h : 0,
-      _ = setTimeout(() => {
+      p = setTimeout(() => {
         if (null != l && l.channelId === t && n === u.default.getId() && null != l.timeout) l.timeout = null, !(function(e) {
           let t = E(e);
           return t === g ? 0 : Object.keys(t).length
@@ -105,9 +105,9 @@ var T = new m(s.default, {
       }, I);
     return l = {
       channelId: t,
-      timeout: _,
+      timeout: p,
       prevSend: i
-    }, p({
+    }, _({
       channelId: t,
       userId: n
     })
@@ -116,7 +116,7 @@ var T = new m(s.default, {
     let {
       channelId: t
     } = e, n = u.default.getId();
-    return null != n && null != l && l.channelId === t && null != l.timeout && (clearTimeout(l.timeout), l = null, _({
+    return null != n && null != l && l.channelId === t && null != l.timeout && (clearTimeout(l.timeout), l = null, p({
       channelId: t,
       userId: n
     }))
@@ -134,7 +134,7 @@ var T = new m(s.default, {
     return i && ! function(e) {
       if (null == l || l.channelId !== e) return;
       null != l.timeout && clearTimeout(l.timeout), l = null
-    }(t), null != n && _({
+    }(t), null != n && p({
       channelId: t,
       userId: n.id
     })

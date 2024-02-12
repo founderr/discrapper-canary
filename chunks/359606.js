@@ -57,7 +57,7 @@ let I = e => {
       children: (0, c.default)(t, !1)
     })
   },
-  A = e => {
+  S = e => {
     let {
       sku: t,
       className: n
@@ -67,7 +67,7 @@ let I = e => {
       children: (0, c.default)(t)
     })
   },
-  S = e => {
+  A = e => {
     let {
       sku: t,
       className: n
@@ -78,7 +78,7 @@ let I = e => {
         sku: t
       }), (0, r.jsx)(p, {
         sku: t
-      }), (0, r.jsx)(A, {
+      }), (0, r.jsx)(S, {
         sku: t
       })]
     })
@@ -127,12 +127,12 @@ class h extends o.PureComponent {
           className: d(t, n)
         });
       case 2:
-        return (0, r.jsx)(S, {
+        return (0, r.jsx)(A, {
           sku: s,
           className: d(t, n)
         });
       default:
-        return (0, r.jsx)(A, {
+        return (0, r.jsx)(S, {
           className: d(t, n),
           sku: s
         })
@@ -154,12 +154,12 @@ class h extends o.PureComponent {
           className: d(T.directoryHeroPricePremium, t)
         });
       case 2:
-        return (0, r.jsx)(S, {
+        return (0, r.jsx)(A, {
           sku: n,
           className: d(T.directoryHeroPrice, t)
         });
       default:
-        return (0, r.jsx)(A, {
+        return (0, r.jsx)(S, {
           className: d(T.directoryHeroPrice, t),
           sku: n
         })
@@ -179,7 +179,7 @@ class h extends o.PureComponent {
         t = (0, r.jsxs)(o.Fragment, {
           children: [(0, r.jsxs)("div", {
             className: T.row,
-            children: [(0, r.jsx)(A, {
+            children: [(0, r.jsx)(S, {
               sku: s
             }), (0, r.jsx)(N, {
               sku: s
@@ -190,7 +190,7 @@ class h extends o.PureComponent {
         });
         break;
       default:
-        t = (0, r.jsx)(A, {
+        t = (0, r.jsx)(S, {
           sku: s
         })
     }

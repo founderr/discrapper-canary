@@ -26,7 +26,7 @@ let T = {
 (l = s || (s = {})).IS_OWNER = "is_owner", l.IS_ADMIN = "is_admin", l.IS_COMMUNITY = "is_community", l.GUILD_SIZE = "guild_size", l.IS_HUB = "is_hub", l.IS_VIEWING = "is_viewing", l.GUILD_PERMISSIONS = "guild_permissions", l.GUILD_SIZE_ALL = "guild_size_all";
 let p = new Set(Object.values(s));
 
-function A(e) {
+function S(e) {
   let {
     guild_requirements: t = [],
     guild_size: n = [null, null],
@@ -71,23 +71,23 @@ function A(e) {
   return !!l && !!i || !1
 }
 
-function S(e) {
+function A(e) {
   let {
     survey: t
   } = e;
   if (I.lastFetched = Date.now(), null != t && null == I.hiddenSurveys[t.key]) {
-    if (!A(t)) return;
+    if (!S(t)) return;
     N = t
   }
 }
 
 function C() {
-  if (null != N && (A(N) || (N = null, 0))) return !1;
+  if (null != N && (S(N) || (N = null, 0))) return !1;
   ! function() {
     m = null != m ? m : {};
     let e = Object.values(m)[0];
-    if (null != e && A(e)) {
-      S({
+    if (null != e && S(e)) {
+      A({
         type: "SURVEY_FETCHED",
         survey: e
       });
@@ -122,7 +122,7 @@ var g = new h(r.default, {
     var e;
     if (!(null != I.lastFetched && Date.now() - (null !== (e = I.lastFetched) && void 0 !== e ? e : 0) < 864e5) || null != I.surveyOverride)(0, o.surveyFetch)(I.surveyOverride, !0)
   },
-  SURVEY_FETCHED: S,
+  SURVEY_FETCHED: A,
   SURVEY_HIDE: function(e) {
     let {
       key: t

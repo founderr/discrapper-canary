@@ -22,8 +22,8 @@ function _(e) {
     action: s,
     triggerType: _,
     toggled: I,
-    onToggleAction: f
-  } = e, T = e => () => f(e), S = (0, u.getActionInfo)(s.type, s, _), m = null === (t = s.metadata) || void 0 === t ? void 0 : t.channelId, N = (0, l.useStateFromStores)([d.default, o.default, r.default], () => {
+    onToggleAction: T
+  } = e, f = e => () => T(e), S = (0, u.getActionInfo)(s.type, s, _), m = null === (t = s.metadata) || void 0 === t ? void 0 : t.channelId, N = (0, l.useStateFromStores)([d.default, o.default, r.default], () => {
     let e = r.default.getChannel(m);
     if (null == e) return null;
     let t = (0, i.computeChannelName)(e, d.default, o.default);
@@ -59,7 +59,7 @@ function _(e) {
         children: [null != N && c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({
           channelName: N
         }), (0, a.jsx)(n.Clickable, {
-          onClick: T(!0),
+          onClick: f(!0),
           className: E.editChannel,
           tag: "span",
           role: "link",
@@ -70,7 +70,7 @@ function _(e) {
       children: (0, a.jsx)(n.Checkbox, {
         type: n.Checkbox.Types.INVERTED,
         value: I,
-        onChange: T(!1),
+        onChange: f(!1),
         className: E.actionCheckbox
       })
     })]

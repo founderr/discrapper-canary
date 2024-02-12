@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("561205"),
   _ = s("958671"),
   I = s("104967"),
-  f = s("677847"),
-  T = s("88681"),
+  T = s("677847"),
+  f = s("88681"),
   S = s("798204"),
   m = s("677795"),
   N = s("782340"),
@@ -89,7 +89,7 @@ function h(e) {
         }), (0, a.jsx)(i.default, {
           size: 8
         })]
-      }), (0, a.jsx)(f.default, {})]
+      }), (0, a.jsx)(T.default, {})]
     }), (0, a.jsx)(i.default, {
       size: 24
     }), (0, a.jsxs)(n.FormSection, {
@@ -103,6 +103,6 @@ function h(e) {
       }), (0, a.jsx)(S.default, {})]
     }), (0, a.jsx)(i.default, {
       size: 24
-    }), (0, a.jsx)(T.default, {})]
+    }), (0, a.jsx)(f.default, {})]
   })
 }

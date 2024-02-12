@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("335724"),
   _ = s("925993"),
   I = s("832285"),
-  f = s("26754"),
-  T = s("546470"),
+  T = s("26754"),
+  f = s("546470"),
   S = s("394294"),
   m = s("782340"),
   N = function(e) {
@@ -67,7 +67,7 @@ var a = s("37983"),
         guildId: t.id
       }), !v && !D && (0, a.jsx)(E.default, {
         addFormField: B
-      }), p.map(e => (0, T.getFormFieldBuilderComponent)({
+      }), p.map(e => (0, f.getFormFieldBuilderComponent)({
         dropHoveredIndex: C,
         formField: e,
         guild: t,
@@ -80,14 +80,14 @@ var a = s("37983"),
       }))]
     });
     return U ? (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(T.default, {
         text: m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_AUTOMATIC_APPROVAL_DIVIDER
-      }), k, (0, a.jsx)(f.default, {
+      }), k, (0, a.jsx)(T.default, {
         text: m.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_DIVIDER
       }), !j && (0, a.jsx)(u.default, {
         addFormField: B,
         hasManualFormFields: M > 0
-      }), A.map(e => (0, T.getFormFieldBuilderComponent)({
+      }), A.map(e => (0, f.getFormFieldBuilderComponent)({
         dropHoveredIndex: C,
         formField: e,
         guild: t,

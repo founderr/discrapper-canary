@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return l
   },
   default: function() {
-    return T
+    return f
   }
 });
 var a, l, n = s("37983");
@@ -18,9 +18,9 @@ var i = s("669491"),
   E = s("444456"),
   _ = s("423487"),
   I = s("782340"),
-  f = s("114141");
+  T = s("114141");
 (a = l || (l = {}))[a.TOO_BIG = 0] = "TOO_BIG", a[a.RATE_LIMIT = 1] = "RATE_LIMIT", a[a.TOO_MANY_EMOJI = 2] = "TOO_MANY_EMOJI", a[a.TOO_MANY_ANIMATED_EMOJI = 3] = "TOO_MANY_ANIMATED_EMOJI", a[a.WRONG_TYPE = 4] = "WRONG_TYPE", a[a.RESIZE_GIF = 5] = "RESIZE_GIF";
-var T = e => {
+var f = e => {
   let {
     error: t
   } = e, {
@@ -64,20 +64,20 @@ var T = e => {
       tooltip: I.default.Messages.UPLOAD_ERROR_TITLE
     }
   }, {
-    icon: T,
+    icon: f,
     description: S,
     color: m,
     tooltip: N
   } = l[s];
   return (0, n.jsxs)("div", {
-    className: f.emojiErrorItem,
-    children: [(0, n.jsx)(T, {
-      className: f.fileIcon,
+    className: T.emojiErrorItem,
+    children: [(0, n.jsx)(f, {
+      className: T.fileIcon,
       color: i.default.unsafe_rawColors.PRIMARY_300.css
     }), (0, n.jsxs)(r.FormSection, {
-      className: f.fileInfo,
+      className: T.fileInfo,
       children: [(0, n.jsx)(r.FormTitle, {
-        className: f.fileName,
+        className: T.fileName,
         children: a
       }), (0, n.jsx)(r.FormText, {
         type: r.FormTextTypes.DESCRIPTION,

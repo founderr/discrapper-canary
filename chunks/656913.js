@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a = s("37983");
@@ -17,15 +17,15 @@ var l = s("414456"),
   E = s("49111"),
   _ = s("575282");
 let I = E.Color.PRIMARY_400,
-  f = E.Color.PRIMARY_500;
+  T = E.Color.PRIMARY_500;
 
-function T(e) {
+function f(e) {
   let {
     enabled: t,
     imageClassName: s,
     iconWrapperClassName: l,
     ...E
-  } = e, T = (0, r.default)(), S = (0, i.isThemeDark)(T) ? I : f, m = {
+  } = e, f = (0, r.default)(), S = (0, i.isThemeDark)(f) ? I : T, m = {
     height: 18,
     width: 18,
     color: (0, o.getColor)(S)

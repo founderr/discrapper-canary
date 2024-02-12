@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = s("37983");
@@ -18,16 +18,16 @@ var l = s("917351"),
   _ = s("782340"),
   I = s("642622");
 
-function f(e) {
+function T(e) {
   let t, {
       guild: s
     } = e,
-    f = s.mfaLevel,
-    T = (0, n.useStateFromStores)([o.default], () => null != s && o.default.can(E.Permissions.MANAGE_GUILD, s), [s]),
+    T = s.mfaLevel,
+    f = (0, n.useStateFromStores)([o.default], () => null != s && o.default.can(E.Permissions.MANAGE_GUILD, s), [s]),
     S = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
     m = s.isOwner(S),
     N = null == S ? void 0 : S.mfaEnabled,
-    g = f === E.MFALevels.ELEVATED,
+    g = T === E.MFALevels.ELEVATED,
     h = m && N,
     C = (0, l.throttle)(async e => {
       h && await u.default.updateMFALevel({
@@ -36,7 +36,7 @@ function f(e) {
         isEnabled: !e
       })
     }, 1e3);
-  if (!T) return null;
+  if (!f) return null;
   !h && (t = m ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({
     settingsHook: () => r.default.open(E.UserSettingsSections.ACCOUNT)
   }) : _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_DETAIL);

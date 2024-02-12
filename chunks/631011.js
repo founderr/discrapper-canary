@@ -14,8 +14,8 @@ var a, l, n = s("37983"),
   E = s("449008"),
   _ = s("900938"),
   I = s("999905"),
-  f = s("782340"),
-  T = s("812735"),
+  T = s("782340"),
+  f = s("812735"),
   S = s("756058");
 (l = a || (a = {}))[l.LOADING = 0] = "LOADING", l[l.INTRO = 1] = "INTRO", l[l.SETTINGS = 2] = "SETTINGS";
 let m = e => {
@@ -24,47 +24,47 @@ let m = e => {
     setShowCreateModal: a
   } = e, l = [{
     emoji: "\uD83D\uDCAC",
-    description: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_1,
-    name: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_1
+    description: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_1,
+    name: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_1
   }, {
     emoji: "\uD83C\uDFF9",
-    description: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_2,
-    name: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_2
+    description: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_2,
+    name: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_2
   }, {
     emoji: "\uD83D\uDDDE",
-    description: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_3,
-    name: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_3
+    description: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_3,
+    name: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_3
   }];
   return (0, n.jsxs)(o.FormSection, {
-    title: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+    title: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
     tag: "h1",
     children: [(0, n.jsxs)("div", {
-      className: T.welcomeDescription,
+      className: f.welcomeDescription,
       children: [(0, n.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INTRO_TEXT.format()
+        children: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INTRO_TEXT.format()
       }), (0, n.jsx)(o.Button, {
         onClick: () => {
           a(!0), t(2)
         },
-        children: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INTRO_BUTTON
+        children: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INTRO_BUTTON
       })]
     }), (0, n.jsxs)("div", {
-      className: T.exampleContainer,
+      className: f.exampleContainer,
       children: [(0, n.jsxs)("div", {
-        className: T.exampleWumpus,
+        className: f.exampleWumpus,
         children: [(0, n.jsx)("img", {
-          className: T.wumpus,
+          className: f.wumpus,
           alt: "",
           src: s("517226")
         }), (0, n.jsx)("div", {
-          className: T.tooltipPointer
+          className: f.tooltipPointer
         }), (0, n.jsx)("div", {
-          className: T.tooltip,
-          children: f.default.Messages.GUILD_SETTINGS_EXAMPLE_TOOLTIP
+          className: f.tooltip,
+          children: T.default.Messages.GUILD_SETTINGS_EXAMPLE_TOOLTIP
         })]
       }), (0, n.jsxs)("div", {
-        className: T.exampleModal,
+        className: f.exampleModal,
         children: [(0, n.jsx)("img", {
           alt: "",
           className: S.guildIcon,
@@ -73,20 +73,20 @@ let m = e => {
           height: 64
         }), (0, n.jsx)(o.Heading, {
           variant: "heading-xl/semibold",
-          className: T.header,
-          children: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_TITLE.format()
+          className: f.header,
+          children: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_TITLE.format()
         }), (0, n.jsx)(o.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
           className: S.guildDescription,
-          children: f.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_DESCRIPTION
+          children: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_DESCRIPTION
         }), (0, n.jsx)(o.FormTitle, {
           className: S.choiceHeader,
-          children: f.default.Messages.WELCOME_SCREEN_CHOICE_HEADER
+          children: T.default.Messages.WELCOME_SCREEN_CHOICE_HEADER
         }), (0, n.jsx)("div", {
           className: S.options,
           children: l.map(e => (0, n.jsxs)("div", {
-            className: T.optionContainer,
+            className: f.optionContainer,
             children: [(0, n.jsx)(u.default, {
               emojiName: e.emoji,
               className: S.optionEmoji

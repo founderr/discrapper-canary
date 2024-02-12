@@ -19,14 +19,14 @@ var l = s("446674"),
 function _(e) {
   let {
     guild: t
-  } = e, _ = (0, l.useStateFromStores)([i.default], () => i.default.isUploadingEmoji()), I = (0, c.default)(t.id), f = t.getMaxRoleSubscriptionEmojiSlots() - I.length, T = (0, u.useRoleSubscriptionSettingsDisabled)();
+  } = e, _ = (0, l.useStateFromStores)([i.default], () => i.default.isUploadingEmoji()), I = (0, c.default)(t.id), T = t.getMaxRoleSubscriptionEmojiSlots() - I.length, f = (0, u.useRoleSubscriptionSettingsDisabled)();
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsxs)(n.FormSection, {
       title: E.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_TITLE,
-      disabled: T,
+      disabled: f,
       children: [(0, a.jsx)(n.FormText, {
         type: n.FormText.Types.DESCRIPTION,
-        disabled: T,
+        disabled: f,
         children: E.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_DESCRIPTION.format({
           maxSlots: t.getMaxRoleSubscriptionEmojiSlots()
         })
@@ -48,7 +48,7 @@ function _(e) {
         },
         buttonCTA: E.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_CTA,
         submitting: _,
-        disabled: T || _ || 0 === f
+        disabled: f || _ || 0 === T
       }), (0, a.jsx)(o.default, {
         size: 24
       }), (0, a.jsx)(r.EmojiTableTitle, {
@@ -70,7 +70,7 @@ function _(e) {
             })
           })
         },
-        editingDisabled: T
+        editingDisabled: f
       })]
     })
   })

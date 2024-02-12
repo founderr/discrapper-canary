@@ -27,8 +27,8 @@ var l = n("917351"),
   _ = n("788554"),
   T = n("49111"),
   I = n("317041"),
-  v = n("680894"),
-  N = n("782340");
+  N = n("680894"),
+  v = n("782340");
 let R = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
   b = /^$|\n *$/,
   M = /^ *>>> ?/,
@@ -176,7 +176,7 @@ let O = e => {
           i = null != a ? a.roles[r] : null;
         return null == i ? {
           type: "text",
-          content: "@".concat(N.default.Messages.DELETED_ROLE_PLACEHOLDER)
+          content: "@".concat(v.default.Messages.DELETED_ROLE_PLACEHOLDER)
         } : {
           type: "mention",
           channelId: n.channelId,
@@ -214,10 +214,10 @@ let O = e => {
           var o;
           l = null !== (o = p.default.getNickname(i.getGuildId(), n.channelId, a)) && void 0 !== o ? o : h.default.getName(a)
         }
-        null == a && "@Clyde" === e[0] && (0, u.getClydeEnabled)(D(n), i) && (r = v.CLYDE_AI_USER_ID);
+        null == a && "@Clyde" === e[0] && (0, u.getClydeEnabled)(D(n), i) && (r = N.CLYDE_AI_USER_ID);
         let s = e[1],
           d = null != s && T.ID_REGEX.test(s.trim()),
-          m = d && n.unknownUserMentionPlaceholder ? "@".concat(N.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
+          m = d && n.unknownUserMentionPlaceholder ? "@".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
         return {
           userId: r,
           channelId: n.channelId,
@@ -331,10 +331,10 @@ let O = e => {
       match: e => T.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e),
       parse(e, t, n) {
         let l = {
-          home: N.default.Messages.SERVER_GUIDE,
-          guide: N.default.Messages.SERVER_GUIDE,
-          browse: N.default.Messages.CHANNEL_BROWSER_TITLE,
-          customize: N.default.Messages.CHANNELS_AND_ROLES
+          home: v.default.Messages.SERVER_GUIDE,
+          guide: v.default.Messages.SERVER_GUIDE,
+          browse: v.default.Messages.CHANNEL_BROWSER_TITLE,
+          customize: v.default.Messages.CHANNELS_AND_ROLES
         };
         return {
           content: [{
@@ -369,19 +369,19 @@ let O = e => {
   V = r.omit(P, ["codeBlock", "blockQuote", "br"]),
   K = r.omit(P, ["codeBlock", "br", "inlineCode"]);
 
-function j(e, t) {
+function Y(e, t) {
   return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim()
 }
-let Y = (0, _.default)([{
+let j = (0, _.default)([{
   highlightWord: {
     order: -1,
     match(e, t) {
       if (null == t.highlightWord || 0 === t.highlightWord.length) return null;
       let n = e.indexOf(t.highlightWord);
       if (-1 === n) return null;
-      let l = !j(e, n);
+      let l = !Y(e, n);
       if (l)
-        do n = e.indexOf(t.highlightWord, n + 1), l = !j(e, n); while (l && -1 !== n);
+        do n = e.indexOf(t.highlightWord, n + 1), l = !Y(e, n); while (l && -1 !== n);
       if (-1 === n) return null;
       let r = e.substring(0, n),
         a = e.substring(n + t.highlightWord.length);
@@ -416,6 +416,6 @@ var Q = {
   GUILD_VERIFICATION_FORM_RULES: B,
   GUILD_EVENT_RULES: V,
   PROFILE_BIO_RULES: H,
-  AUTO_MODERATION_SYSTEM_MESSAGE_RULES: Y,
+  AUTO_MODERATION_SYSTEM_MESSAGE_RULES: j,
   NATIVE_SEARCH_RESULT_LINK_RULES: K
 }

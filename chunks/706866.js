@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("41594"),
   _ = s("367376"),
   I = s("988724"),
-  f = s("161188"),
-  T = s("245997"),
+  T = s("161188"),
+  f = s("245997"),
   S = s("923959"),
   m = s("98292"),
   N = s("461380"),
@@ -42,7 +42,7 @@ var a = s("37983"),
 function U(e) {
   let {
     guild: t
-  } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.getEnabled(t.id)), i = (0, r.useStateFromStores)([f.default], () => f.default.hasFetched(t.id)), d = (0, p.default)(t), T = (0, r.useStateFromStores)([x.default], () => x.default.editedDefaultChannelIds), S = d.filter(e => !T.has(e.id)), [N, C] = l.useState(!1);
+  } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.getEnabled(t.id)), i = (0, r.useStateFromStores)([T.default], () => T.default.hasFetched(t.id)), d = (0, p.default)(t), f = (0, r.useStateFromStores)([x.default], () => x.default.editedDefaultChannelIds), S = d.filter(e => !f.has(e.id)), [N, C] = l.useState(!1);
   l.useEffect(() => {
     !i && !n && (0, I.fetchTopReadChannels)(t.id)
   }, [t.id, i, n]);
@@ -148,7 +148,7 @@ function U(e) {
 function P(e) {
   let {
     saveOnClose: t = !1
-  } = e, s = (0, r.useStateFromStores)([C.default], () => C.default.getGuild()), n = (0, r.useStateFromStores)([c.default], () => c.default.isLoading()), d = (0, r.useStateFromStores)([S.default], () => S.default.getChannels(null == s ? void 0 : s.id)), u = (0, r.useStateFromStores)([T.default], () => T.default.getCategories(null == s ? void 0 : s.id)), E = (0, r.useStateFromStores)([O.default], () => O.default.advancedMode), _ = l.useRef(null), [I, f] = l.useState(!1);
+  } = e, s = (0, r.useStateFromStores)([C.default], () => C.default.getGuild()), n = (0, r.useStateFromStores)([c.default], () => c.default.isLoading()), d = (0, r.useStateFromStores)([S.default], () => S.default.getChannels(null == s ? void 0 : s.id)), u = (0, r.useStateFromStores)([f.default], () => f.default.getCategories(null == s ? void 0 : s.id)), E = (0, r.useStateFromStores)([O.default], () => O.default.advancedMode), _ = l.useRef(null), [I, T] = l.useState(!1);
   return (l.useEffect(() => {
     if (t) return () => {
       null != s && (0, R.saveDefaultChannels)(s).then(() => {
@@ -163,7 +163,7 @@ function P(e) {
       className: G.channelBrowser,
       children: [(0, a.jsx)(o.Clickable, {
         className: G.collapseButton,
-        onClick: () => f(e => !e),
+        onClick: () => T(e => !e),
         children: (0, a.jsx)(N.default, {
           direction: I ? N.default.Directions.DOWN : N.default.Directions.UP,
           height: 16,

@@ -140,16 +140,16 @@ var i = function() {
   }, {
     quantize: function(s, r) {
       if (!s.length || r < 2 || r > 256) return !1;
-      var u, o, d, c, f, h, I, g, E, p, _, v, m, T, S, N, C = (u = s, f = Array(32768), u.forEach(function(n) {
+      var u, o, d, c, f, h, I, g, E, _, p, v, m, T, S, N, C = (u = s, f = Array(32768), u.forEach(function(n) {
           d = n[0] >> e, c = n[1] >> e, f[o = t(d, c, n[2] >> e)] = (f[o] || 0) + 1
         }), f),
         A = 0;
       C.forEach(function() {
         A++
       });
-      var x = (h = s, I = C, _ = 1e6, v = 0, m = 1e6, T = 0, S = 1e6, N = 0, h.forEach(function(t) {
-          g = t[0] >> e, E = t[1] >> e, p = t[2] >> e, g < _ ? _ = g : g > v && (v = g), E < m ? m = E : E > T && (T = E), p < S ? S = p : p > N && (N = p)
-        }), new i(_, v, m, T, S, N, I)),
+      var x = (h = s, I = C, p = 1e6, v = 0, m = 1e6, T = 0, S = 1e6, N = 0, h.forEach(function(t) {
+          g = t[0] >> e, E = t[1] >> e, _ = t[2] >> e, g < p ? p = g : g > v && (v = g), E < m ? m = E : E > T && (T = E), _ < S ? S = _ : _ > N && (N = _)
+        }), new i(p, v, m, T, S, N, I)),
         M = new n(function(e, t) {
           return l.naturalOrder(e.count(), t.count())
         });
@@ -210,12 +210,12 @@ var i = function() {
         }
       }
       M.push(x), y(M, .75 * r);
-      for (var w = new n(function(e, t) {
+      for (var R = new n(function(e, t) {
           return l.naturalOrder(e.count() * e.volume(), t.count() * t.volume())
-        }); M.size();) w.push(M.pop());
-      y(w, r - w.size());
-      for (var R = new a; w.size();) R.push(w.pop());
-      return R
+        }); M.size();) R.push(M.pop());
+      y(R, r - R.size());
+      for (var w = new a; R.size();) w.push(R.pop());
+      return w
     }
   }
 }();

@@ -29,9 +29,9 @@ var s, i, r, a, o = n("627445"),
   y = n("231987"),
   T = n("980134"),
   C = n("282928"),
-  S = n("49111");
-let I = null;
-__OVERLAY__ && (I = n("901165").default), (r = s || (s = {})).OVERLAY_UNLOCKED = "overlay_unlocked", r.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned", r.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated", (a = i || (i = {}))[a.SEND = 0] = "SEND", a[a.EDIT = 1] = "EDIT", a[a.COMMAND = 2] = "COMMAND";
+  I = n("49111");
+let S = null;
+__OVERLAY__ && (S = n("901165").default), (r = s || (s = {})).OVERLAY_UNLOCKED = "overlay_unlocked", r.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned", r.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated", (a = i || (i = {}))[a.SEND = 0] = "SEND", a[a.EDIT = 1] = "EDIT", a[a.COMMAND = 2] = "COMMAND";
 let A = e => 0 === e.type,
   D = e => 1 === e.type,
   N = e => A(e) ? e.message.nonce : D(e) ? e.message.messageId : e.message.data.id,
@@ -58,7 +58,7 @@ class P extends y.default {
   }
   startQueueMetricTimers(e) {
     let t = O.map(e => setTimeout(() => {
-      (0, _.trackWithMetadata)(S.AnalyticEvents.SEND_MESSAGE_QUEUED, {
+      (0, _.trackWithMetadata)(I.AnalyticEvents.SEND_MESSAGE_QUEUED, {
         queued_duration_ms: e
       })
     }, e));
@@ -71,7 +71,7 @@ class P extends y.default {
   createResponseHandler(e, t) {
     return n => {
       if (null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr) return t(null, n);
-      null != n.body && (n.body.code === S.AbortCodes.SLOWMODE_RATE_LIMITED || n.body.code === S.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({
+      null != n.body && (n.body.code === I.AbortCodes.SLOWMODE_RATE_LIMITED || n.body.code === I.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({
         retryAfter: n.body.retry_after * E.default.Millis.SECOND
       }) : t(null, n)
     }
@@ -101,9 +101,9 @@ class P extends y.default {
       });
       return
     }
-    null != I && (I.isInstanceUILocked() ? n = {
+    null != S && (S.isInstanceUILocked() ? n = {
       location: "overlay_locked_activated"
-    } : !I.isInstanceUILocked() && (n = I.isPinned(S.OverlayWidgets.TEXT) ? {
+    } : !S.isInstanceUILocked() && (n = S.isPinned(I.OverlayWidgets.TEXT) ? {
       location: "overlay_unlocked_pinned"
     } : {
       location: "overlay_unlocked"
@@ -111,7 +111,7 @@ class P extends y.default {
     let f = this.createResponseHandler(e.nonce, t),
       _ = new AbortController;
     if (this.startQueueMetricTimers(e.nonce), null != i && null != r && "" !== r) l.default.post({
-      url: S.Endpoints.MESSAGES(s),
+      url: I.Endpoints.MESSAGES(s),
       fields: Object.entries(d).map(e => {
         let [t, n] = e;
         return {
@@ -138,7 +138,7 @@ class P extends y.default {
         backoff: new u.default
       };
       l.default.post({
-        url: S.Endpoints.MESSAGES(s),
+        url: I.Endpoints.MESSAGES(s),
         body: d,
         context: n,
         oldFormErrors: !0,
@@ -157,7 +157,7 @@ class P extends y.default {
       ...i
     } = e, r = new AbortController;
     l.default.patch({
-      url: S.Endpoints.MESSAGE(n, s),
+      url: I.Endpoints.MESSAGE(n, s),
       body: i,
       retries: 1,
       oldFormErrors: !0,
@@ -194,7 +194,7 @@ class P extends y.default {
     }
     let m = new AbortController;
     l.default.post({
-      url: S.Endpoints.INTERACTIONS,
+      url: I.Endpoints.INTERACTIONS,
       fields: [{
         name: "payload_json",
         value: JSON.stringify(g)

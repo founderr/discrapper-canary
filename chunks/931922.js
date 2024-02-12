@@ -68,10 +68,10 @@ function P(e) {
     }).value()
   }, [t, b]), k = _.default.can(O.Permissions.MANAGE_CHANNELS, t) || _.default.can(O.Permissions.MANAGE_ROLES, t);
 
-  function w() {
+  function G() {
     h.default.open(t.id)
   }
-  let G = s.useCallback(() => l(!1), []);
+  let w = s.useCallback(() => l(!1), []);
   return (0, a.jsxs)(R.default, {
     channelId: t.id,
     children: [(0, a.jsx)(R.EmptyMessageIcon, {
@@ -99,7 +99,7 @@ function P(e) {
         })
       }), (0, a.jsx)(x.default, {
         label: D.default.Messages.EDIT_CHANNEL,
-        onClick: w,
+        onClick: G,
         icon: (0, a.jsx)(T.default, {
           width: 16,
           height: 16
@@ -161,7 +161,7 @@ function P(e) {
     }), n ? (0, a.jsx)(f.Modal, {
       renderModal: e => (0, a.jsx)(m.default, {
         ...e,
-        onClose: () => (G(), e.onClose()),
+        onClose: () => (w(), e.onClose()),
         channelId: t.id
       }),
       onCloseRequest: () => l(!1)

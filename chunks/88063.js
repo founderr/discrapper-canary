@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("296839"),
   _ = s("151866"),
   I = s("842357"),
-  f = s("782340"),
-  T = s("975456");
+  T = s("782340"),
+  f = s("975456");
 
 function S(e) {
   let {
@@ -52,22 +52,22 @@ function S(e) {
     }
   });
   return null == h || L ? (0, a.jsxs)("div", {
-    className: T.mainRuleContainer,
+    className: f.mainRuleContainer,
     style: {
       height: L ? "auto" : "60px"
     },
     children: [(0, a.jsx)(n.animated.div, {
-      className: T.animatedRuleCardContainer,
+      className: f.animatedRuleCardContainer,
       style: M,
       children: (0, a.jsx)(I.default, {
         rule: O,
         persistEdit: N
       })
     }), (0, a.jsx)(n.animated.div, {
-      className: T.animatedNewRuleContainer,
+      className: f.animatedNewRuleContainer,
       style: A,
       children: (0, a.jsxs)(o.Clickable, {
-        className: T.addAnotherRuleCardContainer,
+        className: f.addAnotherRuleCardContainer,
         onClick: () => {
           C(t, s)
         },
@@ -75,11 +75,11 @@ function S(e) {
           width: 20,
           height: 20,
           color: i.default.BLUE_345,
-          className: T.plusIcon
+          className: f.plusIcon
         }), (0, a.jsx)(o.Text, {
           variant: "text-md/semibold",
           color: "text-link",
-          children: f.default.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({
+          children: T.default.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({
             ruleName: R()
           })
         })]

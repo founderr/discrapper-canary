@@ -400,8 +400,8 @@ class h {
       y = null !== (t = e.isBefore) && void 0 !== t && t,
       T = null !== (n = e.isAfter) && void 0 !== n && n,
       C = null !== (s = e.jump) && void 0 !== s ? s : null,
-      S = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
-      I = null !== (d = e.hasMoreAfter) && void 0 !== d && d,
+      I = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
+      S = null !== (d = e.hasMoreAfter) && void 0 !== d && d,
       A = null !== (l = e.cached) && void 0 !== l && l,
       D = i(p).reverse().map(r.default.getCurrentConfig({
         location: "2ecb25_2"
@@ -425,8 +425,8 @@ class h {
       jumpTargetOffset: null != C && null != C.messageId && null != C.offset ? C.offset : 0,
       jumpSequenceId: null != C ? N.jumpSequenceId + 1 : N.jumpSequenceId,
       jumpReturnTargetId: null !== (E = null == C ? void 0 : C.returnMessageId) && void 0 !== E ? E : null,
-      hasMoreBefore: null == C && T ? N.hasMoreBefore : S,
-      hasMoreAfter: null == C && y ? N.hasMoreAfter : I,
+      hasMoreBefore: null == C && T ? N.hasMoreBefore : I,
+      hasMoreAfter: null == C && y ? N.hasMoreAfter : S,
       cached: A,
       hasFetched: e.hasFetched,
       error: !1

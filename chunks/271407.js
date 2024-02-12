@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("957255"),
   _ = s("756609"),
   I = s("68238"),
-  f = s("240292"),
-  T = s("701909"),
+  T = s("240292"),
+  f = s("701909"),
   S = s("49111"),
   m = s("533613"),
   N = s("782340"),
@@ -31,7 +31,7 @@ var a = s("37983"),
   p = s("845929"),
   A = s("144582");
 let M = () => [{
-    icon: f.default,
+    icon: T.default,
     color: o.default.unsafe_rawColors.GREEN_360.css,
     header: N.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_HEADER,
     body: N.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_BODY.format({
@@ -157,7 +157,7 @@ let M = () => [{
 var G = e => {
   let {
     guild: t
-  } = e, [s, n] = l.useState(0), [i, o] = l.useState(0), [_, I] = l.useState(), f = (0, r.useStateFromStores)([E.default], () => E.default.can(S.Permissions.ADMINISTRATOR, t)), R = null == _ ? void 0 : _.offsetWidth, x = null == _ ? void 0 : _.offsetHeight;
+  } = e, [s, n] = l.useState(0), [i, o] = l.useState(0), [_, I] = l.useState(), T = (0, r.useStateFromStores)([E.default], () => E.default.can(S.Permissions.ADMINISTRATOR, t)), R = null == _ ? void 0 : _.offsetWidth, x = null == _ ? void 0 : _.offsetHeight;
   l.useEffect(() => {
     null != R && n(R / 2), null != x && o(x / 2)
   }, [R, x, n, o]), l.useEffect(() => {
@@ -192,15 +192,15 @@ var G = e => {
       variant: "text-md/normal",
       className: g.body,
       children: N.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({
-        helpdeskArticle: T.default.getArticleURL(S.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
+        helpdeskArticle: f.default.getArticleURL(S.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
       })
     }), (0, a.jsx)(d.Tooltip, {
-      text: f ? null : N.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
-      "aria-label": f ? void 0 : N.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
+      text: T ? null : N.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
+      "aria-label": T ? void 0 : N.default.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
       children: e => (0, a.jsx)(d.Button, {
         onClick: L,
         className: g.button,
-        disabled: !f,
+        disabled: !T,
         ...e,
         children: N.default.Messages.GET_STARTED
       })
@@ -215,7 +215,7 @@ var G = e => {
       className: g.body,
       variant: "text-sm/normal",
       children: N.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({
-        helpdeskArticle: T.default.getArticleURL(S.HelpdeskArticles.GUILD_COMMUNITY_FEATURE)
+        helpdeskArticle: f.default.getArticleURL(S.HelpdeskArticles.GUILD_COMMUNITY_FEATURE)
       })
     }), (0, a.jsx)("div", {
       className: g.features,

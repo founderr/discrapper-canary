@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 }), s("222007"), s("881410");
 var a = s("37983"),
@@ -17,7 +17,7 @@ var a = s("37983"),
   _ = s("578706"),
   I = s("110569");
 
-function f(e) {
+function T(e) {
   let {
     checked: t,
     children: s
@@ -38,14 +38,14 @@ function f(e) {
   })
 }
 
-function T(e) {
+function f(e) {
   let {
     title: t,
     children: s,
     buttonLabel: n,
     buttonCallback: i,
     disabled: d
-  } = e, [_, T] = l.useState(!1), S = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), m = s.flatMap(e => e.items.map(e => e.completed)), N = m.filter(e => e).length / m.length, g = (0, r.useSpring)({
+  } = e, [_, f] = l.useState(!1), S = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), m = s.flatMap(e => e.items.map(e => e.completed)), N = m.filter(e => e).length / m.length, g = (0, r.useSpring)({
     width: "".concat(100 * N, "%"),
     immediate: S
   });
@@ -53,7 +53,7 @@ function T(e) {
     className: I.container,
     children: [(0, a.jsxs)(u.Clickable, {
       className: I.headerBar,
-      onClick: () => T(e => !e),
+      onClick: () => f(e => !e),
       children: [(0, a.jsx)(u.Heading, {
         variant: "heading-md/semibold",
         className: I.headerText,
@@ -79,7 +79,7 @@ function T(e) {
         }), (0, a.jsx)(u.FormTitle, {
           className: I.categoryTitle,
           children: s
-        }), n.map((e, t) => (0, a.jsx)(f, {
+        }), n.map((e, t) => (0, a.jsx)(T, {
           children: e.description,
           checked: e.completed
         }, t))]

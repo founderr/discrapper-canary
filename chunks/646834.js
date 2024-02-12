@@ -23,20 +23,20 @@ function _(e) {
   } = e, {
     cancelEditingRule: _,
     isLoading: I,
-    hasChanges: f,
-    editingRule: T,
+    hasChanges: T,
+    editingRule: f,
     errorMessage: S,
     saveEditingRule: m
   } = (0, u.useAutomodEditingRuleActions)(), {
     updateRule: N
-  } = (0, d.useAutomodRulesList)(t), g = null != T, h = g && !(0, o.isBackendPersistedRule)(T), C = g || f || h, R = async () => {
-    if (!f && !h) return _();
-    null != T && !h && N(T);
+  } = (0, d.useAutomodRulesList)(t), g = null != f, h = g && !(0, o.isBackendPersistedRule)(f), C = g || T || h, R = async () => {
+    if (!T && !h) return _();
+    null != f && !h && N(f);
     let e = s.find(e => {
       let {
         id: t
       } = e;
-      return t === (null == T ? void 0 : T.id)
+      return t === (null == f ? void 0 : f.id)
     });
     try {
       let e = await m(s);
@@ -44,8 +44,8 @@ function _(e) {
     } catch (t) {
       null != e && N(e)
     }
-  }, x = c.default.Messages.CANCEL, L = !f && g ? c.default.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({
-    ruleName: null == T ? void 0 : T.name
+  }, x = c.default.Messages.CANCEL, L = !T && g ? c.default.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({
+    ruleName: null == f ? void 0 : f.name
   }) : void 0;
   return null != S && (L = (0, a.jsx)(n.Text, {
     variant: "text-md/normal",

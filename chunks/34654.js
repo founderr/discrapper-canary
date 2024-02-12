@@ -17,8 +17,8 @@ var l = s("446674"),
   E = s("653274"),
   _ = s("682327"),
   I = s("653138"),
-  f = s("782340"),
-  T = s("22394");
+  T = s("782340"),
+  f = s("22394");
 
 function S(e) {
   let {
@@ -27,30 +27,30 @@ function S(e) {
   } = e, S = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), m = (0, l.useStateFromStores)([E.default], () => E.default.editedDefaultChannelIds), [N, g] = (0, o.useChattableDefaultChannels)(t, [...m]), [h, C] = (0, _.useEditedChattableDefaultChannelsWithQuestions)(t, [...m]), R = S ? C.length : g.length, x = S ? h.length : N.length, L = R < I.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING, O = x >= I.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN, p = C.length - g.length, A = (0, a.jsx)(d.default, {
     color: n.default.unsafe_rawColors.BRAND_500.css,
     backgroundColor: n.default.unsafe_rawColors.WHITE_100.css,
-    className: T.icon,
+    className: f.icon,
     width: 18,
     height: 18
   }), M = (0, a.jsx)(u.default, {
-    className: T.icon,
+    className: f.icon,
     color: "var(--background-accent)",
     backgroundColor: n.default.colors.WHITE.css,
     width: 18,
     height: 18
   }), D = [Math.min(I.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN, x) / I.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING * 100, Math.min(I.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING, R) / I.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING * 100], v = !L && O ? [n.default.colors.TEXT_POSITIVE.css, n.default.colors.TEXT_POSITIVE.css] : [n.default.colors.TEXT_BRAND.css, n.default.colors.TEXT_MUTED.css];
   return (0, a.jsxs)("div", {
-    className: T.container,
+    className: f.container,
     children: [(0, a.jsxs)("div", {
-      className: T.header,
+      className: f.header,
       children: [(0, a.jsx)(i.Text, {
         variant: "text-xs/bold",
         color: "text-brand",
-        children: f.default.Messages.DEFAULT_CHANNELS_CHATTABLE_COUNT.format({
+        children: T.default.Messages.DEFAULT_CHANNELS_CHATTABLE_COUNT.format({
           count: x
         })
       }), (0, a.jsx)(i.Text, {
         variant: "text-xs/bold",
         color: "text-muted",
-        children: f.default.Messages.DEFAULT_CHANNELS_TOTAL_COUNT.format({
+        children: T.default.Messages.DEFAULT_CHANNELS_TOTAL_COUNT.format({
           count: R
         })
       })]
@@ -59,49 +59,49 @@ function S(e) {
       percents: D,
       size: i.StackedProgress.Sizes.XSMALL
     }), (0, a.jsxs)("div", {
-      className: T.requiredItem,
+      className: f.requiredItem,
       children: [L ? M : A, (0, a.jsx)(i.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: f.default.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_MIN_CHANNELS.format({
+        children: T.default.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_MIN_CHANNELS.format({
           count: I.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING
         })
       })]
     }), (0, a.jsxs)("div", {
-      className: T.requiredItem,
+      className: f.requiredItem,
       children: [O ? A : M, (0, a.jsx)(i.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: f.default.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_MIN_CHATTABLE_CHANNELS.format({
+        children: T.default.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_MIN_CHATTABLE_CHANNELS.format({
           count: I.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN
         })
       })]
     }), S && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
-        className: T.requiredItem,
+        className: f.requiredItem,
         children: [(0, a.jsx)(c.default, {
           color: "var(--background-accent)",
           backgroundColor: n.default.colors.WHITE.css,
-          className: T.icon,
+          className: f.icon,
           width: 18,
           height: 18
         }), (0, a.jsx)(i.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: f.default.Messages.DEFAULT_CHANNELS_ADVANCED_EXPLAINER
+          children: T.default.Messages.DEFAULT_CHANNELS_ADVANCED_EXPLAINER
         })]
       }), (0, a.jsxs)("div", {
-        className: T.requiredItem,
+        className: f.requiredItem,
         children: [(0, a.jsx)(c.default, {
           color: "var(--background-accent)",
           backgroundColor: n.default.colors.WHITE.css,
-          className: T.icon,
+          className: f.icon,
           width: 18,
           height: 18
         }), (0, a.jsx)(i.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: f.default.Messages.DEFAULT_CHANNELS_PREVIEW_ADDITIONAL.format({
+          children: T.default.Messages.DEFAULT_CHANNELS_PREVIEW_ADDITIONAL.format({
             count: p,
             prejoinHook: e => (0, a.jsx)(i.Anchor, {
               onClick: s,

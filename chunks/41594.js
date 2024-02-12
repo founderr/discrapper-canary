@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return O
   },
   default: function() {
-    return U
+    return D
   }
 });
 var l = n("37983"),
@@ -21,8 +21,8 @@ var l = n("37983"),
   I = n("565298"),
   g = n("305961"),
   E = n("824563"),
-  p = n("191542"),
-  _ = n("697218"),
+  _ = n("191542"),
+  p = n("697218"),
   v = n("37785"),
   m = n("98292"),
   T = n("587974"),
@@ -44,7 +44,7 @@ function M(e) {
 }
 let y = S.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
 
-function w(e) {
+function R(e) {
   let {
     channel: t
   } = e;
@@ -55,10 +55,10 @@ function w(e) {
   })
 }
 
-function R(e) {
+function w(e) {
   let {
     channel: t
-  } = e, n = (0, o.useStateFromStores)([_.default], () => _.default.getUser(null == t ? void 0 : t.recipients[0])), i = (0, o.useStateFromStores)([p.default], () => !(null == n || null == t || t.isMultiUserDM()) && null != p.default.getTypingUsers(null == t ? void 0 : t.id)[null == n ? void 0 : n.id]), {
+  } = e, n = (0, o.useStateFromStores)([p.default], () => p.default.getUser(null == t ? void 0 : t.recipients[0])), i = (0, o.useStateFromStores)([_.default], () => !(null == n || null == t || t.isMultiUserDM()) && null != _.default.getTypingUsers(null == t ? void 0 : t.id)[null == n ? void 0 : n.id]), {
     status: a,
     isMobile: s
   } = (0, o.useStateFromStoresObject)([E.default], () => null == n || null == t || t.isMultiUserDM() ? {
@@ -87,17 +87,17 @@ let L = [13, 11, 10, 10, 10, 10, 10],
       locked: a,
       hasActiveThreads: r,
       withGuildIcon: c
-    } = e, f = (0, o.useStateFromStores)([g.default], () => g.default.getGuild(i.guild_id), [i.guild_id]), I = c ? null == f ? void 0 : f.getIconURL(48) : null, E = null != I, p = function(e, t, n) {
+    } = e, f = (0, o.useStateFromStores)([g.default], () => g.default.getGuild(i.guild_id), [i.guild_id]), I = c ? null == f ? void 0 : f.getIconURL(48) : null, E = null != I, _ = function(e, t, n) {
       switch (e.type) {
         case N.ChannelTypes.DM:
           return function() {
-            return (0, l.jsx)(R, {
+            return (0, l.jsx)(w, {
               channel: e
             })
           };
         case N.ChannelTypes.GROUP_DM:
           return function() {
-            return (0, l.jsx)(w, {
+            return (0, l.jsx)(R, {
               channel: e
             })
           };
@@ -108,13 +108,13 @@ let L = [13, 11, 10, 10, 10, 10, 10],
       locked: a,
       hasActiveThreads: r
     });
-    if (null == p) return null;
-    let _ = E ? null == f ? void 0 : f.name : (0, h.getChannelIconTooltipText)(i, f, a, r),
-      v = E && null != f ? "".concat(f.name, " - ").concat(_, " icon") : "".concat(_, " icon"),
+    if (null == _) return null;
+    let p = E ? null == f ? void 0 : f.name : (0, h.getChannelIconTooltipText)(i, f, a, r),
+      v = E && null != f ? "".concat(f.name, " - ").concat(p, " icon") : "".concat(p, " icon"),
       m = (0, u.getAcronym)(null !== (t = null == f ? void 0 : f.toString()) && void 0 !== t ? t : null),
       S = i.type === N.ChannelTypes.DM || i.type === N.ChannelTypes.GROUP_DM;
     return (0, l.jsx)(d.Tooltip, {
-      text: _,
+      text: p,
       delay: 500,
       children: e => {
         var t;
@@ -141,7 +141,7 @@ let L = [13, 11, 10, 10, 10, 10, 10],
               },
               children: m
             })
-          }), (0, l.jsx)(p, {
+          }), (0, l.jsx)(_, {
             className: s(A.icon, {
               [A.iconWithGuildIcon]: c
             }, n)
@@ -151,7 +151,7 @@ let L = [13, 11, 10, 10, 10, 10, 10],
     })
   };
 
-function U(e) {
+function D(e) {
   var t;
   let {
     channel: n,
@@ -162,21 +162,21 @@ function U(e) {
     unread: h,
     locked: g,
     hasActiveThreads: E,
-    onClick: p,
-    onMouseDown: _,
+    onClick: _,
+    onMouseDown: p,
     onMouseUp: T,
     onContextMenu: S,
     connectDragPreview: y,
-    className: w,
-    iconClassName: R,
+    className: R,
+    iconClassName: w,
     subtitle: L,
-    subtitleColor: U,
+    subtitleColor: D,
     channel: {
-      type: D
+      type: U
     },
     onMouseEnter: b,
-    onMouseLeave: F,
-    "aria-label": P,
+    onMouseLeave: P,
+    "aria-label": F,
     children: V,
     guild: j,
     channelTypeOverride: G,
@@ -198,16 +198,16 @@ function U(e) {
       target: "_blank",
       ref: q,
       className: A.link,
-      onClick: () => null == p ? void 0 : p(n),
+      onClick: () => null == _ ? void 0 : _(n),
       ...Z,
-      "aria-label": P,
+      "aria-label": F,
       focusProps: {
         enabled: !1
       },
       children: [(0, l.jsxs)("div", {
         className: A.linkTop,
         children: [(0, l.jsx)(O, {
-          className: R,
+          className: w,
           channel: n,
           guild: j,
           hasActiveThreads: E,
@@ -227,7 +227,7 @@ function U(e) {
           [A.withGuildIcon]: K
         }),
         children: (0, l.jsx)(d.Text, {
-          color: null != U ? U : "text-muted",
+          color: null != D ? D : "text-muted",
           variant: "text-xs/medium",
           className: A.subtitle,
           children: L
@@ -244,7 +244,7 @@ function U(e) {
       right: 4
     },
     children: (0, l.jsxs)("div", {
-      className: s(w, null != p || null != T || null != _ || H ? A.wrapper : A.notInteractive, (() => {
+      className: s(R, null != _ || null != T || null != p || H ? A.wrapper : A.notInteractive, (() => {
         if (o) return x.SELECTED;
         if (c) return x.CONNECTED;
         if (g) return x.LOCKED;
@@ -268,12 +268,12 @@ function U(e) {
           default:
             return A.typeDefault
         }
-      }(null != G ? G : D)),
+      }(null != G ? G : U)),
       onMouseUp: e => null == T ? void 0 : T(e, n),
-      onMouseDown: e => null == _ ? void 0 : _(e, n),
+      onMouseDown: e => null == p ? void 0 : p(e, n),
       onContextMenu: e => null == S ? void 0 : S(e, n),
       onMouseEnter: b,
-      onMouseLeave: F,
+      onMouseLeave: P,
       children: [u || !h || o && !ee ? null : (0, l.jsx)("div", {
         className: s(A.unread, z ? A.unreadImportant : void 0)
       }), null !== (t = null == y ? void 0 : y(et)) && void 0 !== t ? t : et]

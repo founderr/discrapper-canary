@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("351825"),
   _ = s("577357"),
   I = s("757715"),
-  f = s("484456"),
-  T = s("559979"),
+  T = s("484456"),
+  f = s("559979"),
   S = s("752520"),
   m = s("498030"),
   N = s("782340"),
@@ -36,7 +36,7 @@ function h(e) {
     targetType: E,
     index: _,
     dndName: I,
-    onEdit: T,
+    onEdit: f,
     onMove: S,
     disabled: h = !1
   } = e, C = l.useRef(null), R = l.useRef(null), {
@@ -53,7 +53,7 @@ function h(e) {
     }),
     children: [(0, a.jsxs)("div", {
       className: g.emojiWrapper,
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(T.default, {
         guildId: t,
         emojiId: s,
         emojiName: n,
@@ -81,7 +81,7 @@ function h(e) {
       className: g.cardActions,
       children: !h && (0, a.jsx)(o.Clickable, {
         className: g.cardActionButton,
-        onClick: h ? void 0 : T,
+        onClick: h ? void 0 : f,
         "aria-label": N.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
         "aria-disabled": h,
         children: (0, a.jsx)(c.default, {
@@ -114,7 +114,7 @@ function C(e) {
         guildId: o,
         emojiId: e.emoji_id,
         emojiName: e.emoji_name,
-        title: (0, T.default)(e),
+        title: (0, f.default)(e),
         description: e.description,
         targetType: u,
         index: t,

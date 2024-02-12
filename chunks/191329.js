@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("271889"),
   _ = s("75766"),
   I = s("758276"),
-  f = s("453910"),
-  T = s("283167"),
+  T = s("453910"),
+  f = s("283167"),
   S = s("868246"),
   m = s("324105"),
   N = s("385976"),
@@ -67,7 +67,7 @@ let w = i.default.connectStores([G.default], () => {
         safetyAlertsChannelId: e.safetyAlertsChannelId,
         rulesChannelId: e.rulesChannelId,
         preferredLocale: e.preferredLocale
-      }), T.saveGuildMetadata({
+      }), f.saveGuildMetadata({
         guildId: e.id,
         primaryCategoryId: a.primaryCategoryId,
         keywords: a.keywords,
@@ -90,13 +90,13 @@ class V extends l.PureComponent {
     if (null != e) {
       (0, E.fetchDiscoveryChecklist)(e.id).then(() => {
         (0, c.trackGuildSettingsDiscoveryViewed)(e.id)
-      }), T.maybeFetchGuildDiscoveryCategories(), T.fetchMetadataForGuild(e.id);
+      }), f.maybeFetchGuildDiscoveryCategories(), f.fetchMetadataForGuild(e.id);
       let t = await (0, v.getDiscoverableGuild)(e.id);
       null != t && this.setState({
         discoverableGuild: t
       });
       let s = this.checkForLowerMemberCountReqEnabled(e);
-      s && f.DiscoveryRequirementsM2Experiment.trackExposure({
+      s && T.DiscoveryRequirementsM2Experiment.trackExposure({
         guildId: e.id,
         location: "006266_1"
       })
@@ -397,7 +397,7 @@ class V extends l.PureComponent {
         isGuildAdmin: t
       } = this.props, s = e.hasFeature(y.GuildFeatures.COMMUNITY), {
         enableLowerMemberCountReq: a
-      } = f.DiscoveryRequirementsM2Experiment.getCurrentConfig({
+      } = T.DiscoveryRequirementsM2Experiment.getCurrentConfig({
         guildId: e.id,
         location: "006266_2"
       }, {
@@ -445,7 +445,7 @@ class V extends l.PureComponent {
       let {
         guild: s
       } = this.props;
-      (null == s ? void 0 : s.id) != null && T.updateGuildPrimaryCategory(null == s ? void 0 : s.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : F.DEFAULT_DISCOVERY_CATEGORY_ID)
+      (null == s ? void 0 : s.id) != null && f.updateGuildPrimaryCategory(null == s ? void 0 : s.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : F.DEFAULT_DISCOVERY_CATEGORY_ID)
     }, this.handleRemoveKeyword = e => {
       let {
         guild: t,
@@ -453,7 +453,7 @@ class V extends l.PureComponent {
       } = this.props;
       if ((null == t ? void 0 : t.id) == null) return;
       let a = [...s.keywords];
-      a.splice(e, 1), T.updateGuildKeywords(t.id, a)
+      a.splice(e, 1), f.updateGuildKeywords(t.id, a)
     }, this.handleAddKeyword = e => {
       let {
         guild: t,
@@ -461,7 +461,7 @@ class V extends l.PureComponent {
       } = this.props, {
         keywords: a
       } = s;
-      if ((null == t ? void 0 : t.id) != null) !(a.length >= B.MAX_KEYWORDS) && T.updateGuildKeywords(t.id, [...a, e])
+      if ((null == t ? void 0 : t.id) != null) !(a.length >= B.MAX_KEYWORDS) && f.updateGuildKeywords(t.id, [...a, e])
     }, this.handleToggleEmojiDiscoverability = () => {
       let {
         guild: e,
@@ -469,7 +469,7 @@ class V extends l.PureComponent {
       } = this.props, {
         emojiDiscoverabilityEnabled: s
       } = t;
-      (null == e ? void 0 : e.id) != null && T.updateGuildEmojiDiscoverabilityEnabled(e.id, !s)
+      (null == e ? void 0 : e.id) != null && f.updateGuildEmojiDiscoverabilityEnabled(e.id, !s)
     }
   }
 }

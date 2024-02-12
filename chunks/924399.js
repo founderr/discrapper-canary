@@ -27,7 +27,7 @@ function m(e) {
     compact: l,
     usernameHook: m,
     channel: N
-  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(N.guild_id)), A = (0, o.default)(n), S = m(A), {
+  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(N.guild_id)), S = (0, o.default)(n), A = m(S), {
     avatarSrc: C,
     eventHandlers: {
       onMouseEnter: h,
@@ -76,8 +76,8 @@ function m(e) {
             [I.compact]: l
           }),
           children: T.default.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-            username: A.nick,
-            usernameHook: S,
+            username: S.nick,
+            usernameHook: A,
             guildName: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : ""
           })
         })]

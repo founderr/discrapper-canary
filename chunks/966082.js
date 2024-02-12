@@ -17,8 +17,8 @@ var l = s("77078"),
   E = s("619389"),
   _ = s("44737"),
   I = s("53264"),
-  f = s("130437"),
-  T = s("940958"),
+  T = s("130437"),
+  f = s("940958"),
   S = s("657650"),
   m = s("441901"),
   N = s("49111"),
@@ -41,7 +41,7 @@ function C(e) {
       children: [g.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_DESCRIPTION, " ", r]
     }), (0, a.jsx)(i.default, {
       size: 16
-    }), (0, a.jsx)(f.default, {
+    }), (0, a.jsx)(T.default, {
       payoutsByPeriod: t
     })]
   })
@@ -67,7 +67,7 @@ let x = e => {
     application: u
   } = e, {
     loading: I,
-    team: f,
+    team: T,
     currentPeriod: x,
     allPeriods: L,
     metrics: O
@@ -88,14 +88,14 @@ let x = e => {
         size: 8
       }), (0, a.jsxs)("div", {
         className: h.metricsContainer,
-        children: [(0, a.jsx)(T.default, {
+        children: [(0, a.jsx)(f.default, {
           label: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_REVENUE,
           value: (0, o.formatPrice)(null !== (t = O.revenue) && void 0 !== t ? t : 0, N.CurrencyCodes.USD),
-          additionalContent: (0, a.jsx)(T.MetricTrend, {
+          additionalContent: (0, a.jsx)(f.MetricTrend, {
             value: O.revenuePctChange,
             isPercent: !0
           })
-        }), (0, a.jsx)(T.default, {
+        }), (0, a.jsx)(f.default, {
           label: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_SUBSCRIBERS,
           value: (0, a.jsxs)(a.Fragment, {
             children: [null !== (s = O.subscribers) && void 0 !== s ? s : "-", " ", (0, a.jsx)(r.default, {
@@ -103,7 +103,7 @@ let x = e => {
               "aria-hidden": !0
             })]
           }),
-          additionalContent: (0, a.jsx)(T.MetricTrend, {
+          additionalContent: (0, a.jsx)(f.MetricTrend, {
             value: O.subscriberChange
           })
         })]
@@ -116,7 +116,7 @@ let x = e => {
       className: h.formSection,
       children: (0, a.jsx)(C, {
         payoutsByPeriod: L,
-        team: f
+        team: T
       })
     }), (0, a.jsx)(l.FormSection, {
       title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,

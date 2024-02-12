@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("77078"),
   _ = s("252073"),
   I = s("272030"),
-  f = s("642950"),
-  T = s("465395"),
+  T = s("642950"),
+  f = s("465395"),
   S = s("510889"),
   m = s("161778"),
   N = s("242020"),
@@ -159,9 +159,9 @@ function H(e) {
   l.useEffect(() => {
     I.current = o
   }, [o]);
-  let f = (0, S.default)("audit-log", I);
+  let T = (0, S.default)("audit-log", I);
   return (0, a.jsx)(d.ListNavigatorProvider, {
-    navigator: f,
+    navigator: T,
     children: (0, a.jsx)(d.ListNavigatorContainer, {
       children: e => {
         let {
@@ -273,7 +273,7 @@ class k extends l.PureComponent {
       guildId: u,
       guild: c
     } = this.props;
-    if (i) return (0, a.jsx)(f.default, {});
+    if (i) return (0, a.jsx)(T.default, {});
     if (o || r) return this.renderSpinner();
     if (0 === l.length) {
       let e = d ? P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
@@ -436,7 +436,7 @@ class k extends l.PureComponent {
         })) && void 0 !== t ? t : u;
       return (0, a.jsxs)("div", {
         className: b.quickSelect,
-        children: [(0, a.jsx)(T.default, {
+        children: [(0, a.jsx)(f.default, {
           popoutClassName: i(b.selectFilterPopout, y.elevationBorderHigh),
           items: c,
           renderItem: this.renderUserQuickSelectItem,
@@ -449,7 +449,7 @@ class k extends l.PureComponent {
             autoInvert: !1,
             position: "bottom"
           }
-        }), (0, a.jsx)(T.default, {
+        }), (0, a.jsx)(f.default, {
           placeholder: P.default.Messages.SEARCH_ACTIONS,
           label: P.default.Messages.GUILD_SETTINGS_FILTER_ACTION,
           popoutClassName: i(b.selectFilterPopout, y.elevationBorderLow),

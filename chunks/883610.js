@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return S
   }
 }), n("222007");
 var s = n("37983"),
@@ -114,4 +114,4 @@ p.defaultProps = {
   isHorizontal: !1,
   isEmbed: !1
 };
-var A = p
+var S = p

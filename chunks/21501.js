@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("395905"),
   _ = s("700495"),
   I = s("903152"),
-  f = s("851088"),
-  T = s("385881"),
+  T = s("851088"),
+  f = s("385881"),
   S = s("253414"),
   m = s("782340"),
   N = s("332227"),
@@ -73,9 +73,9 @@ function h(e) {
       })]
     }), (0, a.jsx)(I.default, {
       priceTiers: M
-    }), (0, a.jsx)(f.default, {
+    }), (0, a.jsx)(T.default, {
       allSubscriptionListings: n
-    }), (0, a.jsx)(T.default, {}), (0, a.jsx)(S.default, {}), (0, a.jsx)(_.default, {
+    }), (0, a.jsx)(f.default, {}), (0, a.jsx)(S.default, {}), (0, a.jsx)(_.default, {
       onDeleteEditState: L
     })]
   })

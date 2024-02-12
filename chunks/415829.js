@@ -27,14 +27,14 @@ function p(e) {
     message: t,
     compact: n
   } = e, l = (0, i.useStateFromStores)([d.default], () => d.default.getChannel(t.id));
-  return null == l ? null : (0, s.jsx)(A, {
+  return null == l ? null : (0, s.jsx)(S, {
     channel: l,
     compact: n,
     isSystemMessage: (0, u.default)(t)
   })
 }
 
-function A(e) {
+function S(e) {
   let {
     channel: t,
     compact: l,
@@ -60,7 +60,7 @@ function A(e) {
         children: (0, f.getTimestampString)(a)
       })]
     })
-  }(t), A = null != d && d > 0;
+  }(t), S = null != d && d > 0;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)("div", {
       className: a(N.spine, {
@@ -102,7 +102,7 @@ function A(e) {
             children: t.name
           }), (0, s.jsx)("span", {
             className: N.cta,
-            "aria-hidden": !A,
+            "aria-hidden": !S,
             children: (0, c.formatMessageCountLabel)(d, t.id)
           })]
         }), (0, s.jsx)("span", {

@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("702873"),
   N = n("537325"),
   p = n("95045"),
-  A = n("909917"),
-  S = n("380986"),
+  S = n("909917"),
+  A = n("380986"),
   C = n("969706"),
   h = n("957255"),
   g = n("697218"),
@@ -178,7 +178,7 @@ function Z(e) {
     isFocused: U,
     handleFocus: j,
     handleBlur: W
-  } = (0, S.useFocusInside)(R), K = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Z = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
+  } = (0, A.useFocusInside)(R), K = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Z = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
     ruleName: J,
     embedChannel: Q,
     decisionId: X,
@@ -201,7 +201,7 @@ function Z(e) {
     } = (0, C.default)(e.id, F.DEFAULT_POPOUTS), {
       usernameProfile: i,
       avatarProfile: r
-    } = n, o = (0, S.useContextMenuUser)(e.author.id, t.id), u = (0, S.useContextMenuModerateUser)(e.author.id, t.id, e.id), d = (0, S.useClickMessageAuthorUsername)(e, t, i, a), c = (0, S.useClickMessageAuthorAvatar)(r, a), E = l.useCallback(() => a({
+    } = n, o = (0, A.useContextMenuUser)(e.author.id, t.id), u = (0, A.useContextMenuModerateUser)(e.author.id, t.id, e.id), d = (0, A.useClickMessageAuthorUsername)(e, t, i, a), c = (0, A.useClickMessageAuthorAvatar)(r, a), E = l.useCallback(() => a({
       usernameProfile: !1,
       avatarProfile: !1,
       referencedUsernameProfile: !1
@@ -213,7 +213,7 @@ function Z(e) {
       onClickUsername: d,
       onClickAvatar: c,
       onPopoutRequestClose: E,
-      renderPopout: A.default,
+      renderPopout: S.default,
       showAvatarPopout: r,
       showUsernamePopout: i
     }

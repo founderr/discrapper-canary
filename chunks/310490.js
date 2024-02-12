@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("679653"),
   _ = s("923959"),
   I = s("957255"),
-  f = s("27618"),
-  T = s("102985"),
+  T = s("27618"),
+  f = s("102985"),
   S = s("697218"),
   m = s("592407"),
   N = s("900938"),
@@ -57,7 +57,7 @@ class L extends l.PureComponent {
       } = e;
       return {
         value: t.id,
-        label: (0, E.computeChannelName)(t, S.default, f.default, !0)
+        label: (0, E.computeChannelName)(t, S.default, T.default, !0)
       }
     }).value(), n = {
       value: R,
@@ -160,7 +160,7 @@ class L extends l.PureComponent {
     }
   }
 }
-var O = o.default.connectStores([N.default, T.default], () => {
+var O = o.default.connectStores([N.default, f.default], () => {
   let {
     guild: e,
     embedChannelId: t,
@@ -170,6 +170,6 @@ var O = o.default.connectStores([N.default, T.default], () => {
     guild: e,
     widgetChannelId: t,
     widgetEnabled: s,
-    hide: T.default.enabled
+    hide: f.default.enabled
   }
 })(L)

@@ -22,13 +22,13 @@ function h(e) {
     recurrenceId: l,
     transitionState: h,
     onClose: g
-  } = e, x = (0, u.default)(l, t.id), f = (0, o.getBaseScheduleForRecurrence)(l, t), D = (0, o.getScheduleForRecurrenceWithException)(f, x), [A, m] = a.useState(D), [N, {
-    loading: T,
-    error: v
+  } = e, x = (0, u.default)(l, t.id), D = (0, o.getBaseScheduleForRecurrence)(l, t), f = (0, o.getScheduleForRecurrenceWithException)(D, x), [A, T] = a.useState(f), [m, {
+    loading: N,
+    error: I
   }] = (0, i.default)(async () => {
-    let e = (0, o.areDatesIdentical)(f.startDate, A.startDate) ? null : A.startDate,
-      n = (0, o.areDatesIdentical)(f.endDate, A.endDate) ? null : A.endDate;
-    if (null != x)(0, o.areSchedulesIdentical)(A, f) ? await d.default.deleteGuildEventException(t.guild_id, t.id, x.event_exception_id) : await d.default.updateGuildEventException({
+    let e = (0, o.areDatesIdentical)(D.startDate, A.startDate) ? null : A.startDate,
+      n = (0, o.areDatesIdentical)(D.endDate, A.endDate) ? null : A.endDate;
+    if (null != x)(0, o.areSchedulesIdentical)(A, D) ? await d.default.deleteGuildEventException(t.guild_id, t.id, x.event_exception_id) : await d.default.updateGuildEventException({
       scheduled_start_time: null == e ? void 0 : e.toISOString(),
       scheduled_end_time: null == n ? void 0 : n.toISOString(),
       is_canceled: x.is_canceled
@@ -42,7 +42,7 @@ function h(e) {
         is_canceled: !1
       }, t.guild_id, t.id)
     }
-    null == v && g()
+    null == I && g()
   });
   return (0, n.jsxs)(r.ModalRoot, {
     transitionState: h,
@@ -59,7 +59,7 @@ function h(e) {
             startDate: t,
             endDate: l
           } = e;
-          null != t && null != l && l.isBefore(t) && (l = t.clone().add(1, "hour")), m({
+          null != t && null != l && l.isBefore(t) && (l = t.clone().add(1, "hour")), T({
             startDate: t,
             endDate: l
           })
@@ -69,20 +69,20 @@ function h(e) {
         requireEndDate: null != A.endDate,
         guildId: t.guild_id,
         recurrenceRule: t.recurrence_rule
-      }), null != v ? (0, n.jsx)(r.Text, {
+      }), null != I ? (0, n.jsx)(r.Text, {
         color: "text-danger",
         variant: "text-xs/normal",
         className: _.warning,
-        children: v.getAnyErrorMessage()
+        children: I.getAnyErrorMessage()
       }) : null]
     }), (0, n.jsxs)(r.ModalFooter, {
       className: _.footer,
       children: [(0, n.jsx)(r.Button, {
         color: r.Button.Colors.BRAND,
-        onClick: N,
+        onClick: m,
         className: _.button,
-        submitting: T,
-        disabled: (0, o.areSchedulesIdentical)(A, D),
+        submitting: N,
+        disabled: (0, o.areSchedulesIdentical)(A, f),
         children: E.default.Messages.SAVE_EVENT
       }), (0, n.jsx)(r.Button, {
         color: r.Button.Colors.PRIMARY,

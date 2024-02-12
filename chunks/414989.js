@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = s("37983"),
@@ -38,23 +38,23 @@ function I(e) {
     })
   })
 }
-var f = function(e) {
+var T = function(e) {
   let {
     addFormField: t,
-    hasManualFormFields: f
-  } = e, T = l.useCallback(e => {
+    hasManualFormFields: T
+  } = e, f = l.useCallback(e => {
     (0, c.openEmptyFormFieldModal)(e, t)
   }, [t]), S = l.useCallback(e => {
-    f ? T(e) : (0, n.openModalLazy)(async () => {
+    T ? f(e) : (0, n.openModalLazy)(async () => {
       let {
         default: t
       } = await s.el("331761").then(s.bind(s, "331761"));
       return s => (0, a.jsx)(t, {
         ...s,
-        onSubmit: () => T(e)
+        onSubmit: () => f(e)
       })
     })
-  }, [f, T]);
+  }, [T, f]);
   return (0, a.jsxs)("div", {
     className: _.backgroundContainer,
     children: [(0, a.jsx)("div", {

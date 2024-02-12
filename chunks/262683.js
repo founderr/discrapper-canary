@@ -23,9 +23,9 @@ function _(e) {
     breadcrumbSteps: s,
     handleStepChange: _,
     referralTrialOfferId: E,
-    onReturn: p
+    onReturn: I
   } = e, {
-    contextMetadata: I,
+    contextMetadata: p,
     step: S,
     paymentSources: P,
     paymentSourceId: N,
@@ -36,8 +36,8 @@ function _(e) {
     paymentAuthenticationState: h,
     selectedSkuId: R
   } = (0, o.usePaymentContext)(), {
-    isGift: g
-  } = (0, c.useGiftContext)(), M = {
+    isGift: M
+  } = (0, c.useGiftContext)(), g = {
     ...(0, i.useSharedPaymentModal)(),
     paymentSources: P,
     paymentSourceId: N,
@@ -46,7 +46,7 @@ function _(e) {
     setPurchaseError: A,
     purchaseErrorBlockRef: O,
     paymentAuthenticationState: h
-  }, x = (0, l.usePremiumTrialOffer)(E), v = !g && null != x && null != R && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(R), y = null != p ? p : () => {
+  }, x = (0, l.usePremiumTrialOffer)(E), v = !M && null != x && null != R && (0, m.SubscriptionTrials)[x.trial_id].skus.includes(R), y = null != I ? I : () => {
     let e = Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
     _(e, {
       trackedFromStep: d.Step.PAYMENT_TYPE
@@ -55,7 +55,7 @@ function _(e) {
   r(S, "Step should be set here");
   let L = (0, a.useStableMemo)(() => Date.now(), [S]);
   return (0, i.AddPaymentFlow)({
-    paymentModalArgs: M,
+    paymentModalArgs: g,
     initialStep: d.Step.PAYMENT_TYPE,
     prependSteps: [d.Step.PROMOTION_INFO],
     appendSteps: [d.Step.REVIEW, d.Step.CONFIRM],
@@ -78,7 +78,7 @@ function _(e) {
         from_step: n,
         to_step: s,
         step_duration_ms: r - L,
-        flow_duration_ms: r - I.startTime
+        flow_duration_ms: r - p.startTime
       })
     },
     isEligibleForTrial: v

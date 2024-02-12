@@ -24,8 +24,8 @@ let h = e => {
     onGenerateNewLink: I,
     onToggleTemporary: g,
     onSelectMaxAge: E,
-    onSelectMaxUses: p
-  } = e, _ = (0, r.default)(), {
+    onSelectMaxUses: _
+  } = e, p = (0, r.default)(), {
     maxAge: v,
     maxUses: m,
     temporary: T
@@ -51,12 +51,12 @@ let h = e => {
       temporary: T,
       onToggleTemporary: g,
       onSelectMaxAge: E,
-      onSelectMaxUses: p,
+      onSelectMaxUses: _,
       onGenerateNewLink: I
     }), (0, l.jsx)(s.ModalFooter, {
       className: c.settingsFooter,
       children: (0, l.jsx)(o.default, {
-        theme: _,
+        theme: p,
         onConfirm: () => {
           I(), t()
         },

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("461380"),
   _ = s("578706"),
   I = s("677795"),
-  f = s("782340"),
-  T = s("717580");
+  T = s("782340"),
+  f = s("717580");
 
 function S(e) {
   let {
@@ -25,17 +25,17 @@ function S(e) {
     children: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: T.row,
+    className: f.row,
     children: [(0, a.jsx)(u.Text, {
       variant: "text-md/normal",
       color: "interactive-active",
-      className: T.rowText,
+      className: f.rowText,
       children: s
     }), t ? (0, a.jsx)(_.default, {
       backgroundColor: d.default.unsafe_rawColors.WHITE_500.css,
-      className: i(T.rowIcon, T.rowIconChecked)
+      className: i(f.rowIcon, f.rowIconChecked)
     }) : (0, a.jsx)("div", {
-      className: i(T.rowIcon, T.rowIconEmpty)
+      className: i(f.rowIcon, f.rowIconEmpty)
     })]
   })
 }
@@ -46,13 +46,13 @@ function m(e) {
   } = e, [s, n] = l.useState(!1), i = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), d = t.flatMap(e => e.items.map(e => e.completed)), _ = d.filter(e => e).length / d.length, m = 1 === _, N = (0, r.useSpring)({
     width: "".concat(100 * _, "%"),
     immediate: i
-  }), g = [f.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({
+  }), g = [T.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({
     promoPageGuideUrl: I.SERVER_SUBSCRIPTIONS_PREMIUM_CHECKLIST_EDUCATIONAL_URLS.PROMO_PAGE_GUIDE
-  }), f.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_CASE_STUDIES.format({
+  }), T.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_CASE_STUDIES.format({
     caseStudiesUrl: I.SERVER_SUBSCRIPTIONS_PREMIUM_CHECKLIST_EDUCATIONAL_URLS.CASE_STUDIES
-  }), f.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_SUBSCRIPTION_OFFERING.format({
+  }), T.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_SUBSCRIPTION_OFFERING.format({
     subscriptionOfferingGuideUrl: I.SERVER_SUBSCRIPTIONS_PREMIUM_CHECKLIST_EDUCATIONAL_URLS.SUBSCRIPTION_OFFERING_GUIDE
-  }), f.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({
+  }), T.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({
     tierStructureGuideUrl: I.SERVER_SUBSCRIPTIONS_PREMIUM_CHECKLIST_EDUCATIONAL_URLS.TIER_STRUCTURE_GUIDE
   })], h = s ? null : (0, a.jsxs)(a.Fragment, {
     children: [!m && t.map((e, t) => {
@@ -62,9 +62,9 @@ function m(e) {
       } = e;
       return (0, a.jsxs)(l.Fragment, {
         children: [t > 0 && (0, a.jsx)(u.FormDivider, {
-          className: T.divider
+          className: f.divider
         }), (0, a.jsx)(u.FormTitle, {
-          className: T.categoryTitle,
+          className: f.categoryTitle,
           children: s
         }), n.map((e, t) => (0, a.jsx)(S, {
           children: e.description,
@@ -72,12 +72,12 @@ function m(e) {
         }, t))]
       }, t)
     }), (0, a.jsx)(u.FormDivider, {
-      className: T.divider
+      className: f.divider
     }), (0, a.jsx)(u.FormTitle, {
-      className: T.categoryTitle,
-      children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LEARN_MORE_SECTION_TITLE
+      className: f.categoryTitle,
+      children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LEARN_MORE_SECTION_TITLE
     }), g.map((e, t) => (0, a.jsx)("div", {
-      className: T.row,
+      className: f.row,
       children: (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
         children: e
@@ -85,24 +85,24 @@ function m(e) {
     }, t))]
   });
   return (0, a.jsx)("div", {
-    className: T.checklist,
+    className: f.checklist,
     children: (0, a.jsxs)("div", {
-      className: T.container,
+      className: f.container,
       children: [(0, a.jsxs)(u.Clickable, {
-        className: T.headerBar,
+        className: f.headerBar,
         onClick: () => n(e => !e),
         children: [(0, a.jsx)(u.Heading, {
           variant: "heading-md/semibold",
-          className: T.headerText,
-          children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_HEADER
+          className: f.headerText,
+          children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_HEADER
         }), (0, a.jsx)(E.default, {
           direction: s ? E.default.Directions.DOWN : E.default.Directions.UP,
-          className: T.headerCaret
+          className: f.headerCaret
         })]
       }), !m && (0, a.jsx)("div", {
-        className: T.progressBarOuter,
+        className: f.progressBarOuter,
         children: (0, a.jsx)(r.animated.div, {
-          className: T.progressBarInner,
+          className: f.progressBarInner,
           style: N
         })
       }), h]

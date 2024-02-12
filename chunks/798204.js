@@ -38,7 +38,7 @@ function _() {
     };
     null != t ? r[t] = o : r.push(o), _(r)
   }
-  let f = (0, i.useRoleSubscriptionSettingsDisabled)();
+  let T = (0, i.useRoleSubscriptionSettingsDisabled)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(u.EditableBenefitsList, {
       benefits: s,
@@ -70,7 +70,7 @@ function _() {
           onSave: e => I(e)
         }))
       },
-      disabled: f,
+      disabled: T,
       children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_ADD_BUTTON_TEXT
     })]
   })

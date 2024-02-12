@@ -20,8 +20,8 @@ var l = s("414456"),
   E = s("569912"),
   _ = s("205454"),
   I = s("673220"),
-  f = s("351825"),
-  T = s("330724"),
+  T = s("351825"),
+  f = s("330724"),
   S = s("653138"),
   m = s("782340"),
   N = s("504540");
@@ -30,7 +30,7 @@ function g(e) {
   var t, l, i, d;
   let {
     guild: c,
-    prompt: f,
+    prompt: T,
     singleColumn: g,
     promptIndex: h,
     option: C,
@@ -38,13 +38,13 @@ function g(e) {
     onDragStart: x,
     onDragComplete: L,
     onDragReset: O
-  } = e, p = null, A = r.findIndex(f.options, e => e.id === C.id), {
+  } = e, p = null, A = r.findIndex(T.options, e => e.id === C.id), {
     drag: M,
     dragSourcePosition: D,
     drop: v,
     setIsDraggable: j
   } = (0, u.default)({
-    type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(f.id),
+    type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(T.id),
     index: A,
     optionId: C.id,
     onDragStart: x,
@@ -68,17 +68,17 @@ function g(e) {
       return t => (0, a.jsx)(e, {
         ...t,
         guild: c,
-        prompt: f,
+        prompt: T,
         option: C,
         index: h,
         onSave: e => {
-          (0, T.editGuildOnboardingPrompt)(c, f.id, {
-            options: f.options.map(t => t.id === C.id ? e : t)
+          (0, f.editGuildOnboardingPrompt)(c, T.id, {
+            options: T.options.map(t => t.id === C.id ? e : t)
           })
         },
         onDelete: () => {
-          (0, T.editGuildOnboardingPrompt)(c, f.id, {
-            options: f.options.filter(e => e.id !== C.id)
+          (0, f.editGuildOnboardingPrompt)(c, T.id, {
+            options: T.options.filter(e => e.id !== C.id)
           })
         }
       })
@@ -139,7 +139,7 @@ function h(e) {
         ...s,
         guild: t,
         prompt: l,
-        onSave: e => (0, T.editGuildOnboardingPrompt)(t, l.id, {
+        onSave: e => (0, f.editGuildOnboardingPrompt)(t, l.id, {
           options: [...l.options, e]
         }),
         onDelete: () => {},
@@ -165,7 +165,7 @@ function h(e) {
     },
     children: (0, a.jsxs)("div", {
       className: N.optionCardRow,
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(T.default, {
         className: N.plusIcon,
         width: 24,
         height: 24

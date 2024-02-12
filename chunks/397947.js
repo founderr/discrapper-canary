@@ -16,8 +16,8 @@ var a = s("446674"),
   E = s("136278"),
   _ = s("259483"),
   I = s("867928"),
-  f = s("49111");
-let T = new Set,
+  T = s("49111");
+let f = new Set,
   S = _.GuildSettingsOnboardingPage.LANDING,
   m = null;
 
@@ -26,14 +26,14 @@ function N(e) {
     subsection: t
   } = e;
   if (r.default.getGuildId() === m) return !1;
-  S = t === f.GuildSettingsSubsections.SERVER_GUIDE ? _.GuildSettingsOnboardingPage.HOME_SETTINGS : _.GuildSettingsOnboardingPage.LANDING, m = r.default.getGuildId()
+  S = t === T.GuildSettingsSubsections.SERVER_GUIDE ? _.GuildSettingsOnboardingPage.HOME_SETTINGS : _.GuildSettingsOnboardingPage.LANDING, m = r.default.getGuildId()
 }
 class g extends a.default.Store {
   initialize() {
     this.waitFor(n.default, u.default, E.default, c.default, o.default), this.syncWith([n.default, u.default, E.default, c.default, o.default], () => !0)
   }
   isEducationUpsellDismissed(e) {
-    return T.has(e)
+    return f.has(e)
   }
   getCurrentPage() {
     return S
@@ -81,6 +81,6 @@ var h = new g(l.default, {
     let {
       upsellType: t
     } = e;
-    T.add(t)
+    f.add(t)
   }
 })

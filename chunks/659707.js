@@ -40,7 +40,7 @@ function y(e) {
     transitionState: t,
     onClose: i,
     guildId: y
-  } = e, V = (0, h.useUID)(), O = (0, s.useStateFromStores)([g.default], () => g.default.getGuild(y)), P = (0, _.default)(null == O ? void 0 : O.id), j = (0, T.default)(y), k = u.useRef(S.default.ackMessageId(y, M.ReadStateTypes.GUILD_EVENT)), b = (0, G.default)();
+  } = e, V = (0, h.useUID)(), P = (0, s.useStateFromStores)([g.default], () => g.default.getGuild(y)), O = (0, _.default)(null == P ? void 0 : P.id), j = (0, T.default)(y), k = u.useRef(S.default.ackMessageId(y, M.ReadStateTypes.GUILD_EVENT)), b = (0, G.default)();
   return u.useEffect(() => {
     j.forEach(e => I.default.getGuildEventUserCounts(y, e.id, [])), I.default.getGuildEventsForCurrentUser(y)
   }, [j, y]), u.useEffect(() => {
@@ -81,7 +81,7 @@ function y(e) {
         children: j.length > 0 ? A.default.Messages.GUILD_EVENTS_PLURAL.format({
           number: j.length
         }) : A.default.Messages.GUILD_EVENTS
-      }), P && (0, l.jsxs)(l.Fragment, {
+      }), O && (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)("div", {
           className: U.divider,
           children: "|"

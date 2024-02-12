@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("77078"),
   _ = s("841098"),
   I = s("206230"),
-  f = s("716241"),
-  T = s("137215"),
+  T = s("716241"),
+  f = s("137215"),
   S = s("965397"),
   m = s("599110"),
   N = s("659500"),
@@ -116,14 +116,14 @@ function y(e) {
       return !0
     }, ee = async () => {
       m.default.track(U.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-        ...(0, f.collectGuildAnalyticsMetadata)(n),
+        ...(0, T.collectGuildAnalyticsMetadata)(n),
         step: A.GuildSettingsOnboardingPage[g],
         back: !1,
         skip: !y
       }), (0, C.dismissEducationUpsell)((0, A.pageToEducationUpsellType)(g)), await $() && (0, C.goToNextOnboardingStep)(n, g)
     }, et = async () => {
       m.default.track(U.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-        ...(0, f.collectGuildAnalyticsMetadata)(n),
+        ...(0, T.collectGuildAnalyticsMetadata)(n),
         step: A.GuildSettingsOnboardingPage[g],
         back: !0,
         skip: !1
@@ -141,9 +141,9 @@ function y(e) {
       disabled: k || H,
       children: (0, a.jsxs)("span", {
         className: b.button,
-        children: [(0, a.jsx)(T.default, {
+        children: [(0, a.jsx)(f.default, {
           className: b.arrow,
-          direction: T.default.Directions.LEFT
+          direction: f.default.Directions.LEFT
         }), P.default.Messages.BACK]
       })
     }),
@@ -159,9 +159,9 @@ function y(e) {
         style: {
           color: Q
         },
-        children: [F ? P.default.Messages.NEXT : P.default.Messages.SKIP, (0, a.jsx)(T.default, {
+        children: [F ? P.default.Messages.NEXT : P.default.Messages.SKIP, (0, a.jsx)(f.default, {
           className: b.arrow,
-          direction: T.default.Directions.RIGHT
+          direction: f.default.Directions.RIGHT
         })]
       })
     });

@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   updateWelcomeMessage: function() {
-    return f
+    return T
   },
   addNewMemberAction: function() {
-    return T
+    return f
   },
   updateNewMemberAction: function() {
     return S
@@ -62,14 +62,14 @@ var a = s("917351"),
   _ = s("49111"),
   I = s("782340");
 
-function f(e) {
+function T(e) {
   i.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_UPDATE_WELCOME_MESSAGE",
     welcomeMessage: e
   })
 }
 
-function T(e) {
+function f(e) {
   i.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION",
     action: e
@@ -219,7 +219,7 @@ function A(e, t) {
   })
 }
 async function M(e, t) {
-  var s, a, o, u, E, f, T, S, m;
+  var s, a, o, u, E, T, f, S, m;
   i.default.dispatch({
     type: "GUILD_HOME_SETTINGS_UPDATE_START"
   });
@@ -238,8 +238,8 @@ async function M(e, t) {
       guild_id: e,
       welcome_message_author_id: (null !== (u = null == r ? void 0 : null === (s = r.welcomeMessage) || void 0 === s ? void 0 : s.authorIds) && void 0 !== u ? u : [])[0],
       welcome_message_length: null !== (E = null == r ? void 0 : null === (o = r.welcomeMessage) || void 0 === o ? void 0 : null === (a = o.message) || void 0 === a ? void 0 : a.length) && void 0 !== E ? E : 0,
-      member_action_channel_ids: (null !== (f = null == r ? void 0 : r.newMemberActions) && void 0 !== f ? f : []).map(e => e.channelId),
-      member_action_channel_actions: (null !== (T = null == r ? void 0 : r.newMemberActions) && void 0 !== T ? T : []).map(e => e.actionType),
+      member_action_channel_ids: (null !== (T = null == r ? void 0 : r.newMemberActions) && void 0 !== T ? T : []).map(e => e.channelId),
+      member_action_channel_actions: (null !== (f = null == r ? void 0 : r.newMemberActions) && void 0 !== f ? f : []).map(e => e.actionType),
       resource_channel_ids: (null !== (S = null == r ? void 0 : r.resourceChannels) && void 0 !== S ? S : []).map(e => e.channelId),
       enabled: null == r ? void 0 : r.enabled
     }), l.body

@@ -21,16 +21,16 @@ var s = n("917351"),
 let m = "DetectedOffPlatformPremiumPerksStore",
   N = {},
   p = {},
-  A = [];
+  S = [];
 
-function S() {
+function A() {
   let e = !1;
   for (let {
       skuId: t,
       applicationId: n
     }
     of l.values(p)) {
-    if (A.includes(t)) continue;
+    if (S.includes(t)) continue;
     let s = c.default.getApplication(n);
     if (null == s) {
       !c.default.isFetchingApplication(n) && !c.default.didFetchingApplicationFail(n) && d.default.fetchApplication(n);
@@ -51,7 +51,7 @@ function S() {
 class C extends a.default.Store {
   initialize() {
     var e;
-    this.waitFor(E.default, T.default, _.default), A = null !== (e = i.default.get(m)) && void 0 !== e ? e : A
+    this.waitFor(E.default, T.default, _.default), S = null !== (e = i.default.get(m)) && void 0 !== e ? e : S
   }
   getDetectedOffPlatformPremiumPerks() {
     return l.values(N)
@@ -62,16 +62,16 @@ var h = new C(r.default, {
   LOGOUT: function() {
     N = {}, p = {}
   },
-  SKU_FETCH_SUCCESS: S,
-  ENTITLEMENT_FETCH_APPLICATION_SUCCESS: S,
-  ENTITLEMENT_CREATE: S,
-  APPLICATION_FETCH_SUCCESS: S,
+  SKU_FETCH_SUCCESS: A,
+  ENTITLEMENT_FETCH_APPLICATION_SUCCESS: A,
+  ENTITLEMENT_CREATE: A,
+  APPLICATION_FETCH_SUCCESS: A,
   DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function(e) {
     let {
       skuId: t
     } = e;
-    if (delete N[t], A.includes(t)) return !1;
-    A.push(t), i.default.set(m, A)
+    if (delete N[t], S.includes(t)) return !1;
+    S.push(t), i.default.set(m, S)
   },
   RUNNING_GAMES_CHANGE: function() {
     let e = !1;
@@ -86,11 +86,11 @@ var h = new C(r.default, {
             applicationId: s
           }
           of I.OFF_PLATFORM_PREMIUM_PERKS) {
-          if (!(s !== t || A.includes(n))) null == p[n] && (!_.default.applicationIdsFetched.has(s) && !_.default.applicationIdsFetching.has(s) && null == _.default.getForSku(n) && o.fetchUserEntitlementsForApplication(s), p[n] = {
+          if (!(s !== t || S.includes(n))) null == p[n] && (!_.default.applicationIdsFetched.has(s) && !_.default.applicationIdsFetching.has(s) && null == _.default.getForSku(n) && o.fetchUserEntitlementsForApplication(s), p[n] = {
             skuId: n,
             applicationId: s
           }, e = !0)
         }
-    return e && S(), e
+    return e && A(), e
   }
 })

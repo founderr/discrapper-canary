@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("405645"),
   _ = s("692038"),
   I = s("815297"),
-  f = s("291655"),
-  T = s("766274"),
+  T = s("291655"),
+  f = s("766274"),
   S = s("957255"),
   m = s("439932"),
   N = s("766419"),
@@ -102,7 +102,7 @@ function b(e) {
         state: O.MessageStates.SENT,
         id: "31337"
       });
-      return e.author = new T.default({
+      return e.author = new f.default({
         id: "313337",
         username: p.default.Messages.WUMPUS,
         discriminator: "0000",
@@ -130,7 +130,7 @@ function b(e) {
         className: (0, m.getThemeClass)(O.ThemeTypes.LIGHT),
         children: (0, a.jsx)("div", {
           className: A.messageContainer,
-          children: (0, a.jsx)(f.default, {
+          children: (0, a.jsx)(T.default, {
             author: d,
             message: o,
             roleIcon: null != N ? N : S,
@@ -141,7 +141,7 @@ function b(e) {
         className: (0, m.getThemeClass)(O.ThemeTypes.DARK),
         children: (0, a.jsx)("div", {
           className: A.messageContainer,
-          children: (0, a.jsx)(f.default, {
+          children: (0, a.jsx)(T.default, {
             author: d,
             message: o,
             roleIcon: null != N ? N : c,
@@ -189,14 +189,14 @@ function y(e) {
     headerRef: _
   } = (0, g.default)(0), {
     scrolledToTop: I,
-    handleScroll: f
+    handleScroll: T
   } = (0, C.useScrolledToTop)();
   return (0, a.jsx)(u.AdvancedScrollerAuto, {
     className: A.scroller,
     style: {
       scrollPaddingTop: E
     },
-    onScroll: f,
+    onScroll: T,
     children: (0, a.jsxs)("div", {
       className: M.contentWidth,
       children: [(0, a.jsx)("div", {

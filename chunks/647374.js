@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return C
   },
   default: function() {
-    return S
+    return I
   }
 }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("70102");
 var s = n("917351"),
@@ -71,14 +71,14 @@ function C(e) {
     return null
   }
 }
-var S = {
+var I = {
   ...d.defaultRules.link,
   match: (e, t, n) => t.allowLinks ? d.defaultRules.link.match(e, t, n) : null,
   parse(e, t, n) {
     let [s, r, a, o] = e, _ = () => ({
       type: f.AST_KEY.TEXT,
       content: s
-    }), c = g(a), m = g(r), S = g(null != o ? o : ""), I = c.whitespaceSanitized, A = m.fullySanitized, D = S.fullySanitized, N = A.trim(), O = I.trim();
+    }), c = g(a), m = g(r), I = g(null != o ? o : ""), S = c.whitespaceSanitized, A = m.fullySanitized, D = I.fullySanitized, N = A.trim(), O = S.trim();
     if (0 === O.length || 0 === N.length) return _();
     let P = d.unescapeUrl(a),
       b = C(P),
@@ -138,7 +138,7 @@ var S = {
     let x = i.pick(t.rules, k),
       Y = d.parserFor(x),
       j = Y(m.whitespaceSanitized, R),
-      K = S.whitespaceSanitized,
+      K = I.whitespaceSanitized,
       {
         target: W
       } = b;

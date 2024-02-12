@@ -24,10 +24,10 @@ let g = new d.default("ClientStateStore"),
   T = f.initialState.lastSelectedGuildId,
   C = !1;
 
-function S() {
+function I() {
   v = -1, f.clear(), p = 0, y.clear()
 }
-class I extends i.default.Store {
+class S extends i.default.Store {
   initialize() {
     this.waitFor(u.default), this.syncWith([l.default], () => {
       if (!C) return !1;
@@ -47,7 +47,7 @@ class I extends i.default.Store {
     })
   }
   clear() {
-    S()
+    I()
   }
   async getClientState() {
     let [e, t] = await Promise.all([h && (0, _.isCacheEnabled)() ? a.default.getCommittedVersions() : Promise.resolve({}), h && (0, _.isCacheEnabled)() ? o.default.getCommittedVersions() : Promise.resolve({})]);
@@ -69,8 +69,8 @@ class I extends i.default.Store {
     return m
   }
 }
-I.displayName = "ClientStateStore";
-var A = new I(r.default, {
+S.displayName = "ClientStateStore";
+var A = new S(r.default, {
   BACKGROUND_SYNC: function(e) {
     for (let t of e.guilds) "partial" === t.data_mode && t.unableToSyncDeletes && y.add(t.id);
     null != e.apiCodeVersion && (p = e.apiCodeVersion)
@@ -92,10 +92,10 @@ var A = new I(r.default, {
     } = e;
     !t.unavailable && (t.unableToSyncDeletes && y.add(t.id), t.unableToSyncDeletes && y.add(t.id))
   },
-  CLEAR_GUILD_CACHE: S,
-  CLEAR_CACHES: S,
-  LOGOUT: S,
-  LOGIN: S,
+  CLEAR_GUILD_CACHE: I,
+  CLEAR_CACHES: I,
+  LOGOUT: I,
+  LOGIN: I,
   USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
     let {
       userGuildSettings: t

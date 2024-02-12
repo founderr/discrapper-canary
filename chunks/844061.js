@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("95039"),
   N = n("289967"),
   p = n("866027"),
-  A = n("398604"),
-  S = n("477558"),
+  S = n("398604"),
+  A = n("477558"),
   C = n("592407"),
   h = n("86456"),
   g = n("393414"),
@@ -75,8 +75,8 @@ var s = n("37983"),
   em = n("95045"),
   eN = n("232259"),
   ep = n("49111"),
-  eA = n("706530"),
-  eS = n("782340"),
+  eS = n("706530"),
+  eA = n("782340"),
   eC = n("896393");
 
 function eh(e) {
@@ -292,7 +292,7 @@ let eM = Object.freeze({
       messageReference: u
     } = t, c = t.getChannelId(), E = (0, a.useStateFromStores)([b.default], () => b.default.findActivity(o, e => e.type === ep.ActivityTypes.PLAYING), [o]), f = (0, a.useStateFromStores)([y.default], () => null != u ? y.default.getChannel(u.channel_id) : null, [u]), _ = null == u ? void 0 : u.guild_id, T = (0, eN.useUsernameHook)(r, c, i.guild_id), I = l.useCallback(() => {
       null != f && null != _ && (0, d.watchStreamAndTransitionToStream)({
-        streamType: eA.StreamTypes.GUILD,
+        streamType: eS.StreamTypes.GUILD,
         ownerId: o,
         channelId: f.id,
         guildId: _
@@ -445,13 +445,13 @@ let eM = Object.freeze({
       message: t,
       channel: n,
       compact: l
-    } = e, i = (0, eN.useUsernameHook)(t.author, n.id, n.guild_id), r = (0, a.useStateFromStores)([A.default], () => A.default.getActiveEventByChannel(n.id), [n.id]);
+    } = e, i = (0, eN.useUsernameHook)(t.author, n.id, n.guild_id), r = (0, a.useStateFromStores)([S.default], () => S.default.getActiveEventByChannel(n.id), [n.id]);
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(ea.default, {
         message: t,
         compact: l,
         usernameHook: i
-      }), null != r && r.name === t.content ? (0, s.jsx)(S.default, {
+      }), null != r && r.name === t.content ? (0, s.jsx)(A.default, {
         code: "".concat(n.guild_id, "-").concat(r.id)
       }) : null]
     })
@@ -503,7 +503,7 @@ let eM = Object.freeze({
         children: [(0, s.jsx)(F.default, {
           height: 20,
           width: 20
-        }), eS.default.Messages.REQUEST_TO_SPEAK_ACCEPT]
+        }), eA.default.Messages.REQUEST_TO_SPEAK_ACCEPT]
       }) : null]
     })
   },

@@ -21,14 +21,14 @@ var a = s("37983"),
       onAddTag: E,
       maxTaxLength: _,
       maxTags: I,
-      disabled: f,
-      placeholder: T,
+      disabled: T,
+      placeholder: f,
       ...S
     } = e, [m, N] = l.useState(null != n ? n : ""), g = s.map((e, t) => (0, a.jsxs)("span", {
       className: i(u.tag, {
-        [u.disabledTag]: f
+        [u.disabledTag]: T
       }),
-      children: [e, !f && (0, a.jsx)(r.Clickable, {
+      children: [e, !T && (0, a.jsx)(r.Clickable, {
         className: u.closeWrapper,
         onClick: () => c(t),
         children: (0, a.jsx)(o.default, {
@@ -53,7 +53,7 @@ var a = s("37983"),
     }, [h, m.length, c, s.length]);
     return (0, a.jsxs)("div", {
       className: i(t, u.inputWrapper, {
-        [u.disabled]: f
+        [u.disabled]: T
       }),
       children: [g, (0, a.jsx)(r.TextInput, {
         className: u.inputOuter,
@@ -63,9 +63,9 @@ var a = s("37983"),
         onKeyDown: C,
         onChange: N,
         maxLength: _,
-        disabled: f,
+        disabled: T,
         onBlur: h,
-        placeholder: T
+        placeholder: f
       })]
     })
   }

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("245997"),
   _ = s("27618"),
   I = s("697218"),
-  f = s("151185"),
-  T = s("432153"),
+  T = s("151185"),
+  f = s("432153"),
   S = s("782340"),
   m = s("490984");
 
@@ -53,7 +53,7 @@ function g(e) {
 
 function h() {
   return (0, a.jsx)(g, {
-    icon: (0, a.jsx)(f.default, {
+    icon: (0, a.jsx)(T.default, {
       className: m.labelIcon
     }),
     title: S.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
@@ -65,7 +65,7 @@ function C(e) {
   var t;
   let {
     channelId: s
-  } = e, l = (0, T.useChannelWithTemplateFallback)(s), n = (0, T.useChannelWithTemplateFallback)(null !== (t = null == l ? void 0 : l.parent_id) && void 0 !== t ? t : "");
+  } = e, l = (0, f.useChannelWithTemplateFallback)(s), n = (0, f.useChannelWithTemplateFallback)(null !== (t = null == l ? void 0 : l.parent_id) && void 0 !== t ? t : "");
   if (null == l) return null;
   let i = (0, u.getChannelIconComponent)(l),
     r = (0, d.computeChannelName)(l, I.default, _.default),
@@ -94,9 +94,9 @@ function x(e) {
     value: n,
     initialChannelId: i,
     omitChannelIds: u,
-    "aria-labelledby": f,
+    "aria-labelledby": T,
     onChange: m
-  } = e, g = S.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL, h = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t), [t]), C = (0, T.useChannelWithTemplateFallback)(null != n ? n : ""), x = l.useMemo(() => {
+  } = e, g = S.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL, h = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t), [t]), C = (0, f.useChannelWithTemplateFallback)(null != n ? n : ""), x = l.useMemo(() => {
     let e = [{
         value: null,
         label: g
@@ -139,6 +139,6 @@ function x(e) {
       let [t] = e;
       return R(t)
     },
-    "aria-labelledby": f
+    "aria-labelledby": T
   })
 }

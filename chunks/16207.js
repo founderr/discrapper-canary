@@ -82,7 +82,7 @@ function E(e, t) {
       var t;
       return d(null !== (t = e[0]) && void 0 !== t ? t : null)
     })
-  }, [e]), f = a.useCallback((s, a) => {
+  }, [e]), T = a.useCallback((s, a) => {
     !(0, l.isEqual)(s, a) && (c.cancel(), u({
       ...e,
       triggerMetadata: {
@@ -97,7 +97,7 @@ function E(e, t) {
     patterns: E,
     errors: i,
     valueError: o,
-    validatePatternsChanged: f,
+    validatePatternsChanged: T,
     validateEditingValueChanged: I
   }
 }

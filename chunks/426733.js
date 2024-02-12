@@ -77,8 +77,8 @@ var _ = e => {
     tabIndex: E = -1,
     "aria-label": _,
     filters: I,
-    setLoading: f
-  } = e, T = l.createRef(), S = l.useRef(null), [m, N] = l.useState(!1);
+    setLoading: T
+  } = e, f = l.createRef(), S = l.useRef(null), [m, N] = l.useState(!1);
   l.useEffect(() => {
     m && g()
   }, [m]);
@@ -86,7 +86,7 @@ var _ = e => {
       null !== S.current && ((0, n.closeModal)(S.current), S.current = null)
     },
     h = async e => {
-      null == f || f(!0), await c(e, t), N(!0), null == f || f(!1)
+      null == T || T(!0), await c(e, t), N(!0), null == T || T(!1)
     }, C = async e => {
       var t, l, i;
       if (e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (i = e.currentTarget) || void 0 === i ? void 0 : null === (l = i.files) || void 0 === l ? void 0 : l.length) === 0) return;
@@ -109,6 +109,6 @@ var _ = e => {
     className: u,
     tabIndex: E,
     "aria-label": _,
-    ref: T
+    ref: f
   })
 }

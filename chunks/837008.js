@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return E
   },
   useGroupListingsForGuild: function() {
-    return h
+    return _
   },
   useSubscriptionListingsForGuild: function() {
-    return _
+    return h
   },
   useFetchListingsForSubscriptions: function() {
     return g
@@ -83,11 +83,11 @@ let c = [],
     }, [e, t, n])
   },
   E = e => (0, r.useStateFromStores)([a.default], () => null != e ? a.default.getSubscriptionListing(e) : null),
-  h = e => {
+  _ = e => {
     let t = (0, u.useGroupListingsFetchContext)("useGroupListingsForGuild");
     return (0, r.useStateFromStores)([a.default], () => null != e && t ? a.default.getSubscriptionGroupListingsForGuild(e) : c)
   },
-  _ = function(e) {
+  h = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
       includeSoftDeleted: !1,
       sortDeletedListingsLast: !1
