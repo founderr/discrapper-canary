@@ -77,13 +77,9 @@ function E(e) {
     url: o.Endpoints.USER_SURVEY_SEEN(e),
     trackedActionData: {
       event: s.NetworkActionNames.USER_SURVEY_SEEN,
-      properties: e => {
-        var t;
-        let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.survey;
-        return (0, l.exact)({
-          key: null == n ? void 0 : n.key
-        })
-      }
+      properties: t => (0, l.exact)({
+        key: e
+      })
     }
   })
 }
