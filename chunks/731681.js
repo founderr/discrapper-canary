@@ -29,7 +29,7 @@ var a, s, l = n("884691"),
 
 function N(e) {
   var t;
-  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
+  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : g.EMPTY_STRING_GUILD_ID,
     {
       lastFetchedAt: a
     } = (0, i.useStateFromStoresObject)([C.default], () => ({

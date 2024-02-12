@@ -22,8 +22,8 @@ var a = s("37983"),
   E = s("716241"),
   _ = s("679653"),
   I = s("419830"),
-  f = s("298878"),
-  T = s("610174"),
+  T = s("298878"),
+  f = s("610174"),
   S = s("413476"),
   m = s("413266"),
   N = s("926809"),
@@ -60,7 +60,7 @@ function w(e) {
     location: "1a2662_1"
   }, {
     autoTrackExposure: n
-  }), r = (0, N.useIsMentionRaidExperimentEnabled)(t.id), u = (0, o.useStateFromStores)([h.default], () => h.default.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), c = (0, _.default)(u), T = null != u, g = l.useMemo(() => {
+  }), r = (0, N.useIsMentionRaidExperimentEnabled)(t.id), u = (0, o.useStateFromStores)([h.default], () => h.default.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), c = (0, _.default)(u), f = null != u, g = l.useMemo(() => {
     let e = (null == u ? void 0 : u.type) != null ? (0, I.getSimpleChannelIconComponent)(u.type) : null;
     return null != e ? e : O.default
   }, [u]);
@@ -78,7 +78,7 @@ function w(e) {
         children: [(0, a.jsxs)(d.Text, {
           color: "header-primary",
           variant: "text-md/semibold",
-          children: [H.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_TITLE, " ", (0, a.jsx)(f.default, {
+          children: [H.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_TITLE, " ", (0, a.jsx)(T.default, {
             className: k.betaTag
           })]
         }), (0, a.jsx)(d.Text, {
@@ -121,11 +121,11 @@ function w(e) {
             }), (0, a.jsx)(d.Text, {
               color: "text-muted",
               variant: "text-xs/medium",
-              children: T && s ? H.default.Messages.GUILD_ANTIRAID_SETTING_ENABLED_ALERTS : H.default.Messages.GUILD_ANTIRAID_SETTING_ENABLED
+              children: f && s ? H.default.Messages.GUILD_ANTIRAID_SETTING_ENABLED_ALERTS : H.default.Messages.GUILD_ANTIRAID_SETTING_ENABLED
             })]
           }), (0, a.jsx)("div", {
             className: k.settingsRowSubsectionItem,
-            children: T && s ? (0, a.jsxs)(a.Fragment, {
+            children: f && s ? (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsx)(d.Text, {
                 color: "text-normal",
                 variant: "text-xs/semibold",
@@ -153,7 +153,7 @@ function w(e) {
             })
           })]
         }) : null
-      }), !T && i ? (0, a.jsx)(L.default, {
+      }), !f && i ? (0, a.jsx)(L.default, {
         messageType: L.HelpMessageTypes.INFO,
         textVariant: "text-xs/normal",
         children: H.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ENABLE_TIP.format({
@@ -323,7 +323,7 @@ function z(e) {
           children: [(0, a.jsxs)(d.Text, {
             color: "header-primary",
             variant: "text-md/semibold",
-            children: [H.default.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE, (0, a.jsx)(f.default, {
+            children: [H.default.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE, (0, a.jsx)(T.default, {
               className: k.betaTag
             })]
           }), (0, a.jsx)(d.Text, {
@@ -410,7 +410,7 @@ function Z() {
     mfaLevel: s
   } = (0, o.useStateFromStoresObject)([U.default], () => U.default.getProps(), []), l = (0, o.useStateFromStores)([R.default], () => R.default.enabled, []), {
     showAlertMode: n
-  } = (0, T.useGuildAlertModeEnabled)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "");
+  } = (0, f.useGuildAlertModeEnabled)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : F.EMPTY_STRING_GUILD_ID);
   return null == t ? null : l ? (0, a.jsx)(c.default, {}) : (0, a.jsxs)(d.FormSection, {
     title: H.default.Messages.SAFETY_SETUP,
     tag: d.FormTitleTags.H1,

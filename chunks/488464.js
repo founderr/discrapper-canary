@@ -12,8 +12,8 @@ var r = n("714617"),
   o = n("407846"),
   s = n("913144"),
   d = n("374014"),
-  E = n("373469"),
-  _ = n("271938"),
+  _ = n("373469"),
+  E = n("271938"),
   c = n("42203"),
   I = n("305961"),
   S = n("957255"),
@@ -24,11 +24,11 @@ var r = n("714617"),
   A = n("316133"),
   R = n("998716"),
   C = n("325861"),
-  O = n("834052");
-let L = "NO_GUILD",
-  h = new o.default(e => [function(e) {
+  L = n("834052"),
+  O = n("49111");
+let h = new o.default(e => [function(e) {
     var t;
-    return null !== (t = e.getGuildId()) && void 0 !== t ? t : L
+    return null !== (t = e.getGuildId()) && void 0 !== t ? t : O.NO_GUILD_STRING_GUILD_ID
   }(e)], e => e.id),
   P = new Set,
   g = {};
@@ -133,7 +133,7 @@ function H(e) {
 let k = [];
 class Y extends a.default.Store {
   initialize() {
-    this.waitFor(_.default, p.default, c.default, f.default, N.default, S.default, A.default, I.default, C.default, T.default, O.default, E.default)
+    this.waitFor(E.default, p.default, c.default, f.default, N.default, S.default, A.default, I.default, C.default, T.default, L.default, _.default)
   }
   getParticipantsVersion(e) {
     var t, n;
@@ -156,7 +156,7 @@ class Y extends a.default.Store {
     return null !== (r = null === (n = D(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== r ? r : 0
   }
   getChannels(e) {
-    return y(null != e ? e : L), h.values(null != e ? e : L)
+    return y(null != e ? e : O.NO_GUILD_STRING_GUILD_ID), h.values(null != e ? e : O.NO_GUILD_STRING_GUILD_ID)
   }
   getChannelsVersion() {
     return h.version

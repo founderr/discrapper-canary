@@ -31,7 +31,7 @@ let i = (0, s.createExperiment)({
       })
     }, [e]);
     let n = i.useExperiment({
-      guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
+      guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : l.EMPTY_STRING_GUILD_ID,
       location: "467c32_2"
     }, {
       autoTrackExposure: !1,

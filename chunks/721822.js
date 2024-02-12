@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("534291"),
   _ = s("599417"),
   I = s("161778"),
-  f = s("102985"),
-  T = s("697218"),
+  T = s("102985"),
+  f = s("697218"),
   S = s("941886"),
   m = s("810567"),
   N = s("258078"),
@@ -43,14 +43,14 @@ function G(e) {
     ban: i,
     hideDiscriminator: r,
     onClose: o
-  } = e, [u, E] = l.useState(!1), [I, f] = l.useState(null);
-  async function T() {
+  } = e, [u, E] = l.useState(!1), [I, T] = l.useState(null);
+  async function f() {
     if (null != s) {
-      f(null), E(!0);
+      T(null), E(!0);
       try {
         await c.default.unbanUser(s.id, n.id), o()
       } catch (e) {
-        f(new _.default(e)), E(!1)
+        T(new _.default(e)), E(!1)
       }
     }
   }
@@ -90,7 +90,7 @@ function G(e) {
     }), (0, a.jsxs)(d.ModalFooter, {
       className: v.footer,
       children: [(0, a.jsx)(d.Button, {
-        onClick: T,
+        onClick: f,
         look: d.Button.Looks.LINK,
         color: d.Button.Colors.RED,
         submitting: u,
@@ -197,7 +197,7 @@ class P extends l.PureComponent {
       let s = this.makeFilter(t),
         a = [];
       for (let t of e.keys()) {
-        let e = T.default.getUser(t);
+        let e = f.default.getUser(t);
         null != e && s(e) && a.push(e)
       }
       return a.sort((e, t) => e.username.localeCompare(t.username))
@@ -298,7 +298,7 @@ class P extends l.PureComponent {
     }
   }
 }
-let b = o.default.connectStores([L.default, I.default, f.default], () => {
+let b = o.default.connectStores([L.default, I.default, T.default], () => {
   let {
     bans: e,
     guild: t,
@@ -309,7 +309,7 @@ let b = o.default.connectStores([L.default, I.default, f.default], () => {
     bans: e,
     guild: t,
     theme: I.default.theme,
-    streamerMode: f.default.hidePersonalInformation
+    streamerMode: T.default.hidePersonalInformation
   }
 })(P);
 
@@ -320,7 +320,7 @@ function B() {
   } = (0, o.useStateFromStores)([L.default], () => L.default.getProps(), [], r.isEqual), {
     enabled: s
   } = x.GuildSettingsBansNewExperiment.useExperiment({
-    guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "",
+    guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : M.EMPTY_STRING_GUILD_ID,
     location: "4d6318_1"
   }, {
     autoTrackExposure: !0

@@ -20,7 +20,7 @@ function f(e, s) {
     nonce: f,
     forQRCode: m
   } = s, x = e.getGuildId(), h = l.default.getGuild(x), N = (0, o.XBOX_HANDOFF_SEARCH_PARAMS)({
-    guildId: null != x ? x : "0",
+    guildId: null != x ? x : c.ZERO_STRING_GUILD_ID,
     channelId: e.id,
     channelName: (0, r.computeChannelName)(e, i.default, n.default),
     guildName: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : u.default.Messages.UNNAMED,

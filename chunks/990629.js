@@ -28,7 +28,7 @@ class S extends n.default {
     } = e;
     if (_.type !== T.ChannelTypes.GROUP_DM) return;
     let E = _.originChannelId,
-      t = I.default.getChannelId("null");
+      t = I.default.getChannelId(T.NULL_STRING_GUILD_ID);
     null == s.default.getGuildId() && null != E && E === t && (0, r.transitionTo)(T.Routes.CHANNEL(T.ME, _.id)), null != E && E === I.default.getVoiceChannelId() && o.default.selectVoiceChannel(_.id, a.default.isVideoEnabled())
   }
   handleLogout() {

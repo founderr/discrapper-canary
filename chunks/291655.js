@@ -1,7 +1,7 @@
 "use strict";
 E.r(t), E.d(t, {
   default: function() {
-    return L
+    return o
   }
 });
 var _ = E("37983"),
@@ -13,39 +13,40 @@ var _ = E("37983"),
   u = E("39331"),
   I = E("596368"),
   i = E("227439"),
-  l = E("877671"),
-  L = s.memo(function(e) {
+  l = E("49111"),
+  L = E("877671"),
+  o = s.memo(function(e) {
     var t, E, s;
     let {
       message: a,
-      channel: L,
-      compact: o,
-      className: r,
-      isGroupStart: d,
-      hideSimpleEmbedContent: N = !0,
-      disableInteraction: S
-    } = e, g = (0, n.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = a.editedTimestamp) && void 0 !== t ? t : a.timestamp).valueOf()), D = (0, n.useShowImprovedMarkdownGuildExperimentConfig)(null !== (E = null == L ? void 0 : L.guild_id) && void 0 !== E ? E : "", (null !== (s = a.editedTimestamp) && void 0 !== s ? s : a.timestamp).valueOf()), {
-      content: G
+      channel: o,
+      compact: r,
+      className: d,
+      isGroupStart: N,
+      hideSimpleEmbedContent: S = !0,
+      disableInteraction: g
+    } = e, D = (0, n.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = a.editedTimestamp) && void 0 !== t ? t : a.timestamp).valueOf()), G = (0, n.useShowImprovedMarkdownGuildExperimentConfig)(null !== (E = null == o ? void 0 : o.guild_id) && void 0 !== E ? E : l.EMPTY_STRING_GUILD_ID, (null !== (s = a.editedTimestamp) && void 0 !== s ? s : a.timestamp).valueOf()), {
+      content: O
     } = (0, u.default)(a, {
-      hideSimpleEmbedContent: N,
-      allowList: g.showListsAndHeaders || D.showListsAndHeaders,
-      allowHeading: g.showListsAndHeaders || D.showListsAndHeaders,
-      allowLinks: g.showMaskedLinks || D.showMaskedLinks,
-      previewLinkTarget: g.showMaskedLinks || D.showMaskedLinks
+      hideSimpleEmbedContent: S,
+      allowList: D.showListsAndHeaders || G.showListsAndHeaders,
+      allowHeading: D.showListsAndHeaders || G.showListsAndHeaders,
+      allowLinks: D.showMaskedLinks || G.showMaskedLinks,
+      previewLinkTarget: D.showMaskedLinks || G.showMaskedLinks
     });
     return (0, _.jsx)(A.default, {
-      compact: o,
-      className: T(r, {
-        [l.message]: !0,
-        [l.cozyMessage]: !o,
-        [l.groupStart]: d
+      compact: r,
+      className: T(d, {
+        [L.message]: !0,
+        [L.cozyMessage]: !r,
+        [L.groupStart]: N
       }),
       childrenHeader: (0, i.default)({
         ...e,
-        channel: L,
+        channel: o,
         guildId: void 0
       }),
-      childrenMessageContent: (0, I.default)(e, G),
-      disableInteraction: S
+      childrenMessageContent: (0, I.default)(e, O),
+      disableInteraction: g
     })
   })

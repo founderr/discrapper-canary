@@ -41,8 +41,8 @@ var a = n("37983"),
   F = n("956967"),
   U = n("952104"),
   k = n("509"),
-  w = n("406043"),
-  G = n("68895"),
+  G = n("406043"),
+  w = n("68895"),
   B = n("934288"),
   V = n("87635"),
   W = n("734570"),
@@ -643,7 +643,7 @@ class eD extends s.PureComponent {
         communicationDisabledUntil: l,
         showAutomodUserProfileChatBlocker: i
       } = e;
-      return t.type === eI.ChannelTypes.DM && n ? (0, a.jsx)(Q.default, {}) : null != l && (0, k.isCommunicationDisabled)(l) && null != s && !eu.default.can(eI.Permissions.ADMINISTRATOR, s) ? (0, a.jsx)(G.CommunicationDisabledBanner, {
+      return t.type === eI.ChannelTypes.DM && n ? (0, a.jsx)(Q.default, {}) : null != l && (0, k.isCommunicationDisabled)(l) && null != s && !eu.default.can(eI.Permissions.ADMINISTRATOR, s) ? (0, a.jsx)(w.CommunicationDisabledBanner, {
         guild: s,
         disabledUntil: l
       }) : i ? (0, a.jsx)(U.AutomodUserProfileQuarantineChatInputNotice, {
@@ -661,9 +661,9 @@ var ej = s.memo(function(e) {
   } = e, {
     placeholder: i,
     accessibilityLabel: r
-  } = (0, eA.default)(t), o = (0, Q.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [u] = (0, w.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, F.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, d.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), C = (0, d.useStateFromStores)([er.default], () => {
+  } = (0, eA.default)(t), o = (0, Q.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [u] = (0, G.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, F.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, d.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), C = (0, d.useStateFromStores)([er.default], () => {
     var e, t, a;
-    return null != h && null !== (a = null === (e = er.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : "", null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== a && a
+    return null != h && null !== (a = null === (e = er.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eI.EMPTY_STRING_GUILD_ID, null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== a && a
   }), p = (0, d.useStateFromStores)([Y.default], () => Y.default.isEnabled()), m = (0, J.default)(t.id), E = (0, B.default)(t.id);
   return (0, a.jsx)(eD, {
     channel: t,

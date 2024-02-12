@@ -52,12 +52,11 @@ function M() {
     (0, c.maybeFetchSoundboardSounds)()
   }, []);
   let L = n.useCallback((e, t) => {
-    var s;
     let {
-      inDropdown: n
+      inDropdown: s
     } = t;
-    return n ? (0, a.jsx)(v, {
-      guildId: null !== (s = null == e ? void 0 : e.value) && void 0 !== s ? s : ""
+    return null == e ? null : s ? (0, a.jsx)(v, {
+      guildId: e.value
     }) : null
   }, []);
   return (0, a.jsxs)(i.FormSection, {

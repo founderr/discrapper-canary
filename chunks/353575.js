@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   getRuleCountByTriggerType: function() {
-    return A
-  },
-  useSyncAutomodRules: function() {
     return _
   },
-  useSyncAutomodRulesEffect: function() {
+  useSyncAutomodRules: function() {
     return c
   },
-  useAutomodRulesList: function() {
+  useSyncAutomodRulesEffect: function() {
     return I
+  },
+  useAutomodRulesList: function() {
+    return f
   }
 }), n("424973"), n("222007"), n("808653");
 var r = n("884691"),
@@ -19,9 +19,10 @@ var r = n("884691"),
   i = n("448993"),
   a = n("702873"),
   l = n("254365"),
-  s = n("143460");
-let d = {},
-  T = e => {
+  s = n("143460"),
+  d = n("49111");
+let T = {},
+  E = e => {
     let t = {
       [s.AutomodTriggerType.KEYWORD]: [],
       [s.AutomodTriggerType.ML_SPAM]: [],
@@ -38,7 +39,7 @@ let d = {},
       null === (n = t[r]) || void 0 === n || n.push(e)
     }), t
   },
-  E = (0, o.default)((e, t) => ({
+  A = (0, o.default)((e, t) => ({
     rules: {},
     fetching: !1,
     error: null,
@@ -83,13 +84,13 @@ let d = {},
       if (function(e) {
           var t;
           let n = Date.now(),
-            r = null !== (t = d[e]) && void 0 !== t ? t : 0;
+            r = null !== (t = T[e]) && void 0 !== t ? t : 0;
           return n - r > 2e4
         }(n)) {
-        d[n] = Date.now();
+        T[n] = Date.now();
         try {
           let r = await (0, a.fetchAutomodRules)(n),
-            o = T(r),
+            o = E(r),
             u = t().rules;
           e({
             rules: {
@@ -107,15 +108,15 @@ let d = {},
       }
     }
   })),
-  A = (e, t) => {
+  _ = (e, t) => {
     var n, r;
-    let o = E.getState().rules,
+    let o = A.getState().rules,
       u = null !== (r = null === (n = o[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : [];
     return u.length
   };
 
-function _(e) {
-  let [t, n] = r.useState(!1), [o, i] = E(e => [e.syncRules, e.fetching], u.default), a = r.useCallback(async () => {
+function c(e) {
+  let [t, n] = r.useState(!1), [o, i] = A(e => [e.syncRules, e.fetching], u.default), a = r.useCallback(async () => {
     if (!i && null != e) try {
       n(!0), await o(e)
     } finally {
@@ -125,8 +126,8 @@ function _(e) {
   return [t, a]
 }
 
-function c(e) {
-  let [t, n] = _(e);
+function I(e) {
+  let [t, n] = c(e);
   return r.useEffect(() => {
     (async () => {
       await n()
@@ -134,11 +135,11 @@ function c(e) {
   }, [e, n]), [t, n]
 }
 
-function I(e) {
-  return E(t => {
+function f(e) {
+  return A(t => {
     var n;
     return {
-      rulesByTriggerType: null !== (n = t.rules[null != e ? e : ""]) && void 0 !== n ? n : {},
+      rulesByTriggerType: null !== (n = t.rules[null != e ? e : d.EMPTY_STRING_GUILD_ID]) && void 0 !== n ? n : {},
       updateRule: t.updateRule,
       removeRule: t.removeRule
     }

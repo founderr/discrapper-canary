@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildSettingsMembersRow: function() {
-    return T
+    return f
   },
   default: function() {
     return S
@@ -20,9 +20,9 @@ var l = s("917351"),
   E = s("900938"),
   _ = s("49111"),
   I = s("782340"),
-  f = s("927911");
+  T = s("927911");
 
-function T() {
+function f() {
   var e;
   let t = (0, n.useStateFromStores)([E.default], () => E.default.getProps().guild, []),
     s = null !== (e = null == t ? void 0 : t.isCommunity()) && void 0 !== e && e;
@@ -30,11 +30,11 @@ function T() {
     onClick: e => {
       null != t && (s ? (e.preventDefault(), c.default.close(), (0, o.goToMemberSafetyDashboard)(t.id)) : c.default.open(t.id, _.GuildSettingsSections.MEMBERS))
     },
-    className: f.rowContainer,
+    className: T.rowContainer,
     children: [(0, a.jsx)("div", {
       children: I.default.Messages.MEMBERS
     }), s && (0, a.jsx)(u.default, {
-      className: f.linkIcon,
+      className: T.linkIcon,
       width: 16,
       height: 16
     })]
@@ -45,7 +45,7 @@ function S() {
   var e;
   let {
     guild: t
-  } = (0, n.useStateFromStores)([E.default], () => E.default.getProps(), [], l.isEqual), s = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "", i = (0, r.useCanAccessMemberSafetyPage)(s);
+  } = (0, n.useStateFromStores)([E.default], () => E.default.getProps(), [], l.isEqual), s = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : _.EMPTY_STRING_GUILD_ID, i = (0, r.useCanAccessMemberSafetyPage)(s);
   return i ? (0, a.jsx)(d.default, {
     guildId: s
   }) : null

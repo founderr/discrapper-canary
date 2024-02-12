@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("669491"),
   _ = s("819855"),
   I = s("77078"),
-  f = s("45299"),
-  T = s("734575"),
+  T = s("45299"),
+  f = s("734575"),
   S = s("841098"),
   m = s("812204"),
   N = s("716241"),
@@ -73,8 +73,8 @@ let eu = "NO_AFK_CHANNEL",
   eE = "".concat(60),
   e_ = "".concat(300),
   eI = "".concat(900),
-  ef = "".concat(1800),
-  eT = "".concat(3600);
+  eT = "".concat(1800),
+  ef = "".concat(3600);
 
 function eS(e) {
   return em(e[0])
@@ -133,7 +133,7 @@ let eg = () => {
   }, [e, t]), o = l.useCallback(() => {
     null != e && $.default.init(e.id)
   }, [e]);
-  return (0, a.jsx)(f.default, {
+  return (0, a.jsx)(T.default, {
     submitting: s,
     errorMessage: i,
     onSave: r,
@@ -303,12 +303,12 @@ class eh extends l.PureComponent {
         minutes: 15
       })
     }, {
-      value: ef,
+      value: eT,
       label: ei.default.Messages.DURATION_MINUTES.format({
         minutes: 30
       })
     }, {
-      value: eT,
+      value: ef,
       label: ei.default.Messages.DURATION_HOURS.format({
         hours: 1
       })
@@ -496,7 +496,7 @@ class eh extends l.PureComponent {
     let {
       guild: e,
       canManageGuild: t
-    } = this.props, s = (0, T.canGuildUseConversationSummaries)(e, !1);
+    } = this.props, s = (0, f.canGuildUseConversationSummaries)(e, !1);
     return s ? (0, a.jsx)("div", {
       children: (0, a.jsx)(I.FormSection, {
         className: er.divider,
@@ -953,18 +953,18 @@ function eC() {
     _ = l.useMemo(() => (0, h.default)(E._categories, E), [E]),
     {
       canManageGuild: I,
-      isGuildAdmin: f
+      isGuildAdmin: T
     } = (0, c.useStateFromStoresObject)([k.default], () => ({
       canManageGuild: k.default.can(es.Permissions.MANAGE_GUILD, t),
       isGuildAdmin: k.default.can(es.Permissions.ADMINISTRATOR, t)
     })),
-    T = (0, c.useStateFromStores)([H.default], () => H.default.getMemberCount(null == t ? void 0 : t.id)),
+    f = (0, c.useStateFromStores)([H.default], () => H.default.getMemberCount(null == t ? void 0 : t.id)),
     N = (0, c.useStateFromStores)([V.default], () => V.default.getCurrentUser());
   o(null != N, "GuildSettingsOverview: currentUser cannot be undefined");
   let {
     enableDeadchat: C
   } = x.SimpleDeadchatPromptExperiment.useExperiment({
-    guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "",
+    guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : es.EMPTY_STRING_GUILD_ID,
     location: "guild_settings"
   }, {
     disable: null == t,
@@ -974,13 +974,13 @@ function eC() {
     children: (0, a.jsx)(eh, {
       channels: _,
       canManageGuild: I,
-      isGuildAdmin: f,
+      isGuildAdmin: T,
       subsection: i,
       guild: t,
       errors: s,
       submitting: n,
       currentUser: N,
-      guildMemberCount: T,
+      guildMemberCount: f,
       theme: r,
       analyticsLocations: u,
       eligibleForDeadchatPrompt: C

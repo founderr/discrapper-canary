@@ -79,7 +79,7 @@ function C(e) {
         o.on("error", (e, n, a) => {
           if (n === p.AbortCodes.EXPLICIT_CONTENT) {
             var l;
-            let e = c.default.getGuild(null !== (l = t.getGuildId()) && void 0 !== l ? l : "");
+            let e = c.default.getGuild(null !== (l = t.getGuildId()) && void 0 !== l ? l : p.EMPTY_STRING_GUILD_ID);
             null != e && s.default.show({
               title: m.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
               body: m.default.Messages.BOT_GUILD_EXPLICIT_CONTENT.format({

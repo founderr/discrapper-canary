@@ -18,23 +18,23 @@ var a = t("37983"),
   N = t("592407"),
   M = t("766419"),
   T = t("900938"),
-  m = t("610903"),
-  I = t("978970"),
+  I = t("610903"),
+  m = t("978970"),
   L = t("161778"),
   x = t("923959"),
   f = t("305961"),
   O = t("27618"),
   C = t("697218"),
-  A = t("476765"),
-  S = t("578706"),
+  S = t("476765"),
+  A = t("578706"),
   p = t("68238"),
   h = t("599110"),
   v = t("701909"),
   g = t("991170"),
   D = t("730541"),
   R = t("69741"),
-  j = t("49111"),
-  U = t("782340"),
+  U = t("49111"),
+  j = t("782340"),
   b = t("291683"),
   P = t("741161"),
   B = t("687444"),
@@ -52,7 +52,7 @@ let H = e => {
       disableVerificationLevel: n,
       headerId: r,
       theme: d
-    } = e, u = (0, o.useStateFromStores)([f.default], () => f.default.getGuild(s.id), [s.id]), _ = null != u && u.verificationLevel > j.VerificationLevels.NONE, N = (null == u ? void 0 : u.explicitContentFilter) === j.GuildExplicitContentFilterTypes.ALL_MEMBERS, M = (0, c.isThemeDark)(d) ? y : G;
+    } = e, u = (0, o.useStateFromStores)([f.default], () => f.default.getGuild(s.id), [s.id]), _ = null != u && u.verificationLevel > U.VerificationLevels.NONE, N = (null == u ? void 0 : u.explicitContentFilter) === U.GuildExplicitContentFilterTypes.ALL_MEMBERS, M = (0, c.isThemeDark)(d) ? y : G;
     return (0, a.jsxs)("div", {
       className: b.container,
       children: [(0, a.jsxs)("div", {
@@ -65,47 +65,47 @@ let H = e => {
           variant: "heading-xl/semibold",
           className: b.header,
           id: r,
-          children: U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_1_HEADER
+          children: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_1_HEADER
         }), (0, a.jsx)(E.Text, {
           color: "none",
           variant: "text-md/normal",
           className: b.headerCaption,
-          children: U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_1_BODY
+          children: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_1_BODY
         })]
       }), (0, a.jsxs)("div", {
         className: b.form,
         children: [(0, a.jsx)(E.FormTitle, {
-          children: U.default.Messages.FORM_LABEL_VERIFICATION_LEVEL
+          children: j.default.Messages.FORM_LABEL_VERIFICATION_LEVEL
         }), (0, a.jsx)(E.FormText, {
           type: E.FormTextTypes.DESCRIPTION,
           className: b.description,
-          children: _ ? U.default.Messages.ENABLE_COMMUNITY_MODAL_VERIFICATION_LEVEL_MET : U.default.Messages.ENABLE_COMMUNITY_MODAL_VERIFICATION_LEVEL_HELP
+          children: _ ? j.default.Messages.ENABLE_COMMUNITY_MODAL_VERIFICATION_LEVEL_MET : j.default.Messages.ENABLE_COMMUNITY_MODAL_VERIFICATION_LEVEL_HELP
         }), (0, a.jsx)(E.Checkbox, {
           type: E.Checkbox.Types.ROW,
           disabled: n,
-          value: s.verificationLevel > j.VerificationLevels.NONE,
+          value: s.verificationLevel > U.VerificationLevels.NONE,
           onChange: t,
           children: (0, a.jsx)(E.Text, {
             variant: "text-sm/normal",
-            children: U.default.Messages.ENABLE_PUBLIC_MODAL_VERIFICATION_LEVEL_DESCRIPTION
+            children: j.default.Messages.ENABLE_PUBLIC_MODAL_VERIFICATION_LEVEL_DESCRIPTION
           })
         })]
       }), (0, a.jsxs)("div", {
         className: b.form,
         children: [(0, a.jsx)(E.FormTitle, {
-          children: U.default.Messages.FORM_LABEL_EXPLICIT_CONTENT_FILTER
+          children: j.default.Messages.FORM_LABEL_EXPLICIT_CONTENT_FILTER
         }), (0, a.jsx)(E.FormText, {
           type: E.FormTextTypes.DESCRIPTION,
           className: b.description,
-          children: N ? U.default.Messages.ENABLE_COMMUNITY_MODAL_CONTENT_FILTER_MET : U.default.Messages.ENABLE_PUBLIC_MODAL_CONTENT_FILTER_HELP
+          children: N ? j.default.Messages.ENABLE_COMMUNITY_MODAL_CONTENT_FILTER_MET : j.default.Messages.ENABLE_PUBLIC_MODAL_CONTENT_FILTER_HELP
         }), (0, a.jsx)(E.Checkbox, {
           type: E.Checkbox.Types.ROW,
           disabled: i,
-          value: s.explicitContentFilter === j.GuildExplicitContentFilterTypes.ALL_MEMBERS,
+          value: s.explicitContentFilter === U.GuildExplicitContentFilterTypes.ALL_MEMBERS,
           onChange: l,
           children: (0, a.jsx)(E.Text, {
             variant: "text-sm/normal",
-            children: U.default.Messages.EXPLICIT_CONTENT_FILTER_HIGH
+            children: j.default.Messages.EXPLICIT_CONTENT_FILTER_HIGH
           })
         })]
       })]
@@ -142,21 +142,21 @@ let H = e => {
           variant: "heading-xl/semibold",
           className: b.header,
           id: o,
-          children: U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_2_HEADER
+          children: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_2_HEADER
         }), (0, a.jsx)(E.Text, {
           color: "none",
           variant: "text-md/normal",
           className: b.headerCaption,
-          children: U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_2_BODY
+          children: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_2_BODY
         })]
       }), (0, a.jsxs)("div", {
         className: b.form,
         children: [(0, a.jsx)(E.FormTitle, {
-          children: U.default.Messages.ENABLE_PUBLIC_MODAL_RULES_CHANNEL_TITLE
+          children: j.default.Messages.ENABLE_PUBLIC_MODAL_RULES_CHANNEL_TITLE
         }), (0, a.jsx)(E.FormText, {
           type: E.FormTextTypes.DESCRIPTION,
           className: b.description,
-          children: U.default.Messages.ENABLE_PUBLIC_MODAL_RULES_CHANNEL_HELP
+          children: j.default.Messages.ENABLE_PUBLIC_MODAL_RULES_CHANNEL_HELP
         }), (0, a.jsx)(E.SearchableSelect, {
           options: s,
           onChange: t,
@@ -166,11 +166,11 @@ let H = e => {
       }), (0, a.jsxs)("div", {
         className: b.form,
         children: [(0, a.jsx)(E.FormTitle, {
-          children: U.default.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE
+          children: j.default.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE
         }), (0, a.jsx)(E.FormText, {
           type: E.FormTextTypes.DESCRIPTION,
           className: b.description,
-          children: U.default.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_HELP
+          children: j.default.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_HELP
         }), (0, a.jsx)(E.SearchableSelect, {
           options: s,
           onChange: n,
@@ -212,34 +212,34 @@ let H = e => {
           variant: "heading-xl/semibold",
           className: b.header,
           id: N,
-          children: U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_HEADER
+          children: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_HEADER
         }), (0, a.jsx)(E.Text, {
           color: "none",
           variant: "text-md/normal",
           className: b.headerCaption,
-          children: U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_BODY
+          children: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_BODY
         })]
       }), (0, a.jsx)("div", {
         className: b.form,
         children: (0, a.jsx)(E.Tooltip, {
-          text: u ? U.default.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP : null,
-          "aria-label": !!u && U.default.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP,
+          text: u ? j.default.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP : null,
+          "aria-label": !!u && j.default.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP,
           children: e => (0, a.jsx)("div", {
             ...e,
             children: (0, a.jsx)(E.Checkbox, {
               type: E.Checkbox.Types.ROW,
               disabled: u,
-              value: s.defaultMessageNotifications === j.UserNotificationSettings.ONLY_MENTIONS,
+              value: s.defaultMessageNotifications === U.UserNotificationSettings.ONLY_MENTIONS,
               onChange: o,
               className: n({
                 [b.disabled]: u
               }),
               children: (0, a.jsx)(E.Text, {
                 variant: "text-sm/normal",
-                children: U.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_LABEL.format({
+                children: j.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_LABEL.format({
                   infoHook: () => (0, a.jsx)(E.Tooltip, {
-                    text: U.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
-                    "aria-label": U.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
+                    text: j.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
+                    "aria-label": j.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
                     children: e => (0, a.jsx)(p.default, {
                       className: b.icon,
                       ...e
@@ -251,8 +251,8 @@ let H = e => {
           })
         })
       }), (0, a.jsx)(E.Tooltip, {
-        text: _ ? U.default.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP : null,
-        "aria-label": !!_ && U.default.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP,
+        text: _ ? j.default.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP : null,
+        "aria-label": !!_ && j.default.Messages.ENABLE_COMMUNITY_MODAL_REQUIREMENT_SATISFIED_TOOLTIP,
         children: e => (0, a.jsx)("div", {
           ...e,
           className: b.checkboxOption,
@@ -266,10 +266,10 @@ let H = e => {
             }),
             children: (0, a.jsx)(E.Text, {
               variant: "text-sm/normal",
-              children: U.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_LABEL.format({
+              children: j.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_LABEL.format({
                 infoHook: () => (0, a.jsx)(E.Tooltip, {
-                  text: U.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_TOOLTIP,
-                  "aria-label": U.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_TOOLTIP,
+                  text: j.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_TOOLTIP,
+                  "aria-label": j.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_TOOLTIP,
                   children: e => (0, a.jsx)(p.default, {
                     className: b.icon,
                     ...e
@@ -282,13 +282,13 @@ let H = e => {
       }), (0, a.jsxs)("div", {
         className: b.form,
         children: [(0, a.jsx)(E.FormTitle, {
-          children: U.default.Messages.PUBLIC_GUILD_POLICY_TITLE
+          children: j.default.Messages.PUBLIC_GUILD_POLICY_TITLE
         }), (0, a.jsx)(E.FormText, {
           type: E.FormTextTypes.DESCRIPTION,
           className: b.description,
-          children: U.default.Messages.COMMUNITY_GUIDELINES_AND_TYPES_OF_SPACES_POLICIES.format({
-            communityGuidelines: v.default.getArticleURL(j.HelpdeskArticles.PUBLIC_GUILD_GUILDLINES),
-            typesOfGuilds: v.default.getArticleURL(j.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
+          children: j.default.Messages.COMMUNITY_GUIDELINES_AND_TYPES_OF_SPACES_POLICIES.format({
+            communityGuidelines: v.default.getArticleURL(U.HelpdeskArticles.PUBLIC_GUILD_GUILDLINES),
+            typesOfGuilds: v.default.getArticleURL(U.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
           })
         }), (0, a.jsx)(E.Checkbox, {
           type: E.Checkbox.Types.ROW,
@@ -296,7 +296,7 @@ let H = e => {
           onChange: r,
           children: (0, a.jsx)(E.Text, {
             variant: "text-sm/normal",
-            children: U.default.Messages.PUBLIC_GUILD_POLICY_ACCEPT
+            children: j.default.Messages.PUBLIC_GUILD_POLICY_ACCEPT
           })
         })]
       })]
@@ -342,7 +342,7 @@ function X(e) {
       className: b.tableHeader,
       variant: "text-xs/semibold",
       color: "text-muted",
-      children: U.default.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLING_PERMISSIONS
+      children: j.default.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLING_PERMISSIONS
     }), (0, a.jsx)("div", {
       className: b.permissionsTable,
       children: s.map((e, s) => (0, a.jsxs)("div", {
@@ -363,8 +363,8 @@ function K(e) {
   let {
     disabledPermissions: s,
     onGetPermisisonName: t
-  } = e, l = U.default.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED_PERMISSIONS;
-  return s.length === R.MODERATOR_PERMISSIONS.length && (l = U.default.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED), (0, a.jsxs)("div", {
+  } = e, l = j.default.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED_PERMISSIONS;
+  return s.length === R.MODERATOR_PERMISSIONS.length && (l = j.default.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED), (0, a.jsxs)("div", {
     className: b.tableContainer,
     children: [(0, a.jsx)(E.Text, {
       className: b.tableHeader,
@@ -392,14 +392,14 @@ function q(e) {
     permissions: s
   } = e, t = e => {
     switch (e.toString()) {
-      case j.Permissions.MENTION_EVERYONE.toString():
-        return U.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
-      case j.Permissions.CREATE_GUILD_EXPRESSIONS.toString():
-        return U.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_CREATE_EMOJI;
-      case j.Permissions.MANAGE_GUILD_EXPRESSIONS.toString():
-        return U.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MANAGE_EMOJI;
+      case U.Permissions.MENTION_EVERYONE.toString():
+        return j.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
+      case U.Permissions.CREATE_GUILD_EXPRESSIONS.toString():
+        return j.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_CREATE_EMOJI;
+      case U.Permissions.MANAGE_GUILD_EXPRESSIONS.toString():
+        return j.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MANAGE_EMOJI;
       default:
-        return (0, I.getPermissionName)(e)
+        return (0, m.getPermissionName)(e)
     }
   }, {
     enabledPermissions: l,
@@ -454,25 +454,25 @@ let z = e => {
         variant: "heading-xl/semibold",
         className: b.updatedHeader,
         id: n,
-        children: U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_HEADER
+        children: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_HEADER
       })]
     }), (0, a.jsxs)("div", {
       className: b.updatedForm,
       children: [(0, a.jsx)(E.FormTitle, {
         className: b.formTitle,
-        children: U.default.Messages.ENABLE_COMMUNITY_MODAL_UPDATED_SETTINGS_LABEL
+        children: j.default.Messages.ENABLE_COMMUNITY_MODAL_UPDATED_SETTINGS_LABEL
       }), (0, a.jsxs)("div", {
         className: b.checklistRow,
-        children: [(0, a.jsx)(S.default, {
+        children: [(0, a.jsx)(A.default, {
           className: b.checklistIcon,
           color: d.default.unsafe_rawColors.GREEN_360.css,
           backgroundColor: d.default.unsafe_rawColors.WHITE_500.css
         }), (0, a.jsx)(E.Text, {
           variant: "text-md/normal",
-          children: U.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_LABEL.format({
+          children: j.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_LABEL.format({
             infoHook: () => (0, a.jsx)(E.Tooltip, {
-              text: U.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
-              "aria-label": U.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
+              text: j.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
+              "aria-label": j.default.Messages.ENABLE_COMMUNITY_MODAL_DEFAULT_NOTIFICATIONS_TOOLTIP,
               children: e => (0, a.jsx)(p.default, {
                 className: b.icon,
                 ...e
@@ -482,13 +482,13 @@ let z = e => {
         })]
       }), (0, a.jsxs)("div", {
         className: b.checklistRow,
-        children: [(0, a.jsx)(S.default, {
+        children: [(0, a.jsx)(A.default, {
           className: b.checklistIcon,
           color: d.default.unsafe_rawColors.GREEN_360.css,
           backgroundColor: d.default.unsafe_rawColors.WHITE_500.css
         }), (0, a.jsx)(E.Text, {
           variant: "text-md/normal",
-          children: U.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_LABEL_UPDATED
+          children: j.default.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_LABEL_UPDATED
         }), (0, a.jsx)(W, {
           guild: s
         })]
@@ -499,14 +499,14 @@ let z = e => {
       className: b.updatedForm,
       children: [(0, a.jsx)(E.FormTitle, {
         className: b.formTitle,
-        children: U.default.Messages.PUBLIC_GUILD_POLICY_TITLE
+        children: j.default.Messages.PUBLIC_GUILD_POLICY_TITLE
       }), (0, a.jsx)(E.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         className: b.description,
-        children: U.default.Messages.COMMUNITY_GUIDELINES_AND_TYPES_OF_SPACES_POLICIES.format({
-          communityGuidelines: v.default.getArticleURL(j.HelpdeskArticles.PUBLIC_GUILD_GUILDLINES),
-          typesOfGuilds: v.default.getArticleURL(j.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
+        children: j.default.Messages.COMMUNITY_GUIDELINES_AND_TYPES_OF_SPACES_POLICIES.format({
+          communityGuidelines: v.default.getArticleURL(U.HelpdeskArticles.PUBLIC_GUILD_GUILDLINES),
+          typesOfGuilds: v.default.getArticleURL(U.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
         })
       }), (0, a.jsx)(E.Checkbox, {
         type: E.Checkbox.Types.ROW,
@@ -516,7 +516,7 @@ let z = e => {
           className: b.acceptText,
           variant: "text-md/medium",
           color: "header-primary",
-          children: U.default.Messages.PUBLIC_GUILD_POLICY_ACCEPT
+          children: j.default.Messages.PUBLIC_GUILD_POLICY_ACCEPT
         })
       })]
     })]
@@ -529,48 +529,48 @@ var Q = e => {
     onClose: i
   } = e;
   l.useEffect(() => {
-    h.default.track(j.AnalyticEvents.OPEN_MODAL, {
+    h.default.track(U.AnalyticEvents.OPEN_MODAL, {
       type: R.ENABLE_COMMUNITY_FLOW_MODAL_KEY
     })
   }, []);
   let {
     guild: n
-  } = (0, o.useStateFromStoresObject)([T.default], () => T.default.getProps()), d = (0, o.useStateFromStores)([L.default], () => L.default.theme), [c, E] = l.useState(!1), [I, f] = l.useState(!R.MODERATOR_PERMISSIONS.some(e => g.default.canEveryone(e, n))), [S, p] = l.useState(R.CREATE_NEW_CHANNEL_VALUE), [v, D] = l.useState(R.CREATE_NEW_CHANNEL_VALUE), [P] = l.useState(null == n ? void 0 : n.defaultMessageNotifications), [B] = l.useState(null == n ? void 0 : n.verificationLevel), [F] = l.useState(null == n ? void 0 : n.explicitContentFilter), [Y] = l.useState(I), y = null == n ? void 0 : n.getRole(null == n ? void 0 : n.id), G = (0, o.useStateFromStores)([x.default], () => null != n ? x.default.getChannels(n.id) : null, [n]), W = (0, A.useUID)(), {
+  } = (0, o.useStateFromStoresObject)([T.default], () => T.default.getProps()), d = (0, o.useStateFromStores)([L.default], () => L.default.theme), [c, E] = l.useState(!1), [m, f] = l.useState(!R.MODERATOR_PERMISSIONS.some(e => g.default.canEveryone(e, n))), [A, p] = l.useState(R.CREATE_NEW_CHANNEL_VALUE), [v, D] = l.useState(R.CREATE_NEW_CHANNEL_VALUE), [P] = l.useState(null == n ? void 0 : n.defaultMessageNotifications), [B] = l.useState(null == n ? void 0 : n.verificationLevel), [F] = l.useState(null == n ? void 0 : n.explicitContentFilter), [Y] = l.useState(m), y = null == n ? void 0 : n.getRole(null == n ? void 0 : n.id), G = (0, o.useStateFromStores)([x.default], () => null != n ? x.default.getChannels(n.id) : null, [n]), W = (0, S.useUID)(), {
     enabled: X
-  } = (0, u.useIsMassMentionsDefaultDisabledExperiment)(null !== (s = null == n ? void 0 : n.id) && void 0 !== s ? s : "");
+  } = (0, u.useIsMassMentionsDefaultDisabledExperiment)(null !== (s = null == n ? void 0 : n.id) && void 0 !== s ? s : U.EMPTY_STRING_GUILD_ID);
   if (null == n) return null;
   let K = [{
     value: R.CREATE_NEW_CHANNEL_VALUE,
-    label: U.default.Messages.ENABLE_PUBLIC_MODAL_CREATE_CHANNEL
+    label: j.default.Messages.ENABLE_PUBLIC_MODAL_CREATE_CHANNEL
   }];
   G[0, x.GUILD_SELECTABLE_CHANNELS_KEY].forEach(e => {
     let {
       channel: s
     } = e;
-    s.type === j.ChannelTypes.GUILD_TEXT && K.push({
+    s.type === U.ChannelTypes.GUILD_TEXT && K.push({
       value: s.id,
       label: (0, _.computeChannelName)(s, C.default, O.default, !0)
     })
   });
-  let q = B !== j.VerificationLevels.NONE,
-    Q = F === j.GuildExplicitContentFilterTypes.ALL_MEMBERS,
-    J = P === j.UserNotificationSettings.ONLY_MENTIONS,
+  let q = B !== U.VerificationLevels.NONE,
+    Q = F === U.GuildExplicitContentFilterTypes.ALL_MEMBERS,
+    J = P === U.UserNotificationSettings.ONLY_MENTIONS,
     Z = async () => {
       if (null == y || !c) return;
       let e = new Set(n.features);
-      e.add(j.GuildFeatures.COMMUNITY);
-      let s = I ? r.default.remove(y.permissions, R.MODERATOR_PERMISSIONS_FLAG) : y.permissions,
+      e.add(U.GuildFeatures.COMMUNITY);
+      let s = m ? r.default.remove(y.permissions, R.MODERATOR_PERMISSIONS_FLAG) : y.permissions,
         t = {
           ...y,
           permissions: s
         };
       s !== y.permissions && await (0, M.saveRoleSettings)(n.id, [t]), N.default.updateGuild({
         features: e,
-        rulesChannelId: S,
+        rulesChannelId: A,
         publicUpdatesChannelId: v
       }), await N.default.saveGuild(n.id, {
         features: e,
-        rulesChannelId: S,
+        rulesChannelId: A,
         verificationLevel: n.verificationLevel,
         explicitContentFilter: n.explicitContentFilter,
         publicUpdatesChannelId: v,
@@ -590,7 +590,7 @@ var Q = e => {
           return
         }
         s && N.default.updateGuild({
-          verificationLevel: j.VerificationLevels.LOW
+          verificationLevel: U.VerificationLevels.LOW
         })
       },
       onAcceptContentFilter: (e, s) => {
@@ -601,7 +601,7 @@ var Q = e => {
           return
         }
         N.default.updateGuild({
-          explicitContentFilter: j.GuildExplicitContentFilterTypes.ALL_MEMBERS
+          explicitContentFilter: U.GuildExplicitContentFilterTypes.ALL_MEMBERS
         })
       },
       headerId: W,
@@ -614,7 +614,7 @@ var Q = e => {
       onPublicUpdatesChannelChange: e => {
         D(e)
       },
-      ruleChannel: S,
+      ruleChannel: A,
       publicUpdatesChannel: v,
       headerId: W,
       theme: d,
@@ -625,13 +625,13 @@ var Q = e => {
       onAcceptPolicy: (e, s) => {
         if (s) {
           E(!0), !J && N.default.updateGuild({
-            defaultMessageNotifications: j.UserNotificationSettings.ONLY_MENTIONS
-          }), !I && null != y && f(!0);
+            defaultMessageNotifications: U.UserNotificationSettings.ONLY_MENTIONS
+          }), !m && null != y && f(!0);
           return
         }
         E(!1), J && N.default.updateGuild({
           defaultMessageNotifications: P
-        }), I && null != y && f(!1)
+        }), m && null != y && f(!1)
       },
       headerId: W,
       theme: d
@@ -640,7 +640,7 @@ var Q = e => {
       disableDefaultNotifications: J,
       disableEveryoneRolePermissions: Y,
       policyAccepted: c,
-      everyoneRolePermissionsAccepted: I,
+      everyoneRolePermissionsAccepted: m,
       onAcceptPolicy: (e, s) => {
         if (s) {
           E(!0);
@@ -656,7 +656,7 @@ var Q = e => {
           return
         }
         N.default.updateGuild({
-          defaultMessageNotifications: j.UserNotificationSettings.ONLY_MENTIONS
+          defaultMessageNotifications: U.UserNotificationSettings.ONLY_MENTIONS
         })
       },
       onAcceptEveryoneRolePermissions: (e, s) => {
@@ -671,27 +671,27 @@ var Q = e => {
       width: 240
     }), ea = [{
       modalContent: $,
-      disableNextStep: n.explicitContentFilter !== j.GuildExplicitContentFilterTypes.ALL_MEMBERS || n.verificationLevel === j.VerificationLevels.NONE,
-      overviewTitle: U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_1_TITLE
+      disableNextStep: n.explicitContentFilter !== U.GuildExplicitContentFilterTypes.ALL_MEMBERS || n.verificationLevel === U.VerificationLevels.NONE,
+      overviewTitle: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_1_TITLE
     }, {
       modalContent: ee,
-      disableNextStep: null == S || null == v,
-      overviewTitle: U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_2_TITLE
+      disableNextStep: null == A || null == v,
+      overviewTitle: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_2_TITLE
     }, {
       modalContent: es,
       disableNextStep: !c,
-      overviewTitle: U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_TITLE
+      overviewTitle: j.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_TITLE
     }];
-  return (0, a.jsx)(m.default, {
+  return (0, a.jsx)(I.default, {
     stepData: ea,
-    title: U.default.Messages.ENABLE_COMMUNITY_MODAL_TITLE,
+    title: j.default.Messages.ENABLE_COMMUNITY_MODAL_TITLE,
     transitionState: t,
     onClose: () => {
-      i(), h.default.track(j.AnalyticEvents.MODAL_DISMISSED, {
+      i(), h.default.track(U.AnalyticEvents.MODAL_DISMISSED, {
         type: R.ENABLE_COMMUNITY_FLOW_MODAL_KEY
       })
     },
-    completeButtonText: U.default.Messages.ENABLE_COMMUNITY_BUTTON_TEXT,
+    completeButtonText: j.default.Messages.ENABLE_COMMUNITY_BUTTON_TEXT,
     onComplete: Z,
     overviewFooter: et,
     sequencerClassName: b.container,

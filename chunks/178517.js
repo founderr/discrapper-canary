@@ -18,7 +18,7 @@ function u(e) {
       canSeeTopLevelEventsEntrypoint: o
     } = a.default.useExperiment({
       location: "Channel List",
-      guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
+      guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : r.EMPTY_STRING_GUILD_ID
     }, {
       autoTrackExposure: !1
     }),

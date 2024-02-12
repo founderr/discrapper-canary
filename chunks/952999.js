@@ -90,8 +90,8 @@ function j(e) {
     guildPersonalized: U
   } = (0, p.useCompletedStates)(l), {
     handleInvite: k,
-    handleMessage: w,
-    handlePersonalize: G,
+    handleMessage: G,
+    handlePersonalize: w,
     handleDownload: B,
     handleAddApplication: V
   } = function(e) {
@@ -213,7 +213,7 @@ function j(e) {
   }(W), K = (0, u.useStateFromStores)([C.default], () => C.default.getGuildApplicationIds(null == l ? void 0 : l.id)), Y = K.length > 0;
   if (s.useEffect(() => {
       var e;
-      (0, E.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : "")
+      (0, E.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : x.EMPTY_STRING_GUILD_ID)
     }, [l]), null == l) return null;
   let q = [];
   !f && (T && q.push((0, a.jsx)(o.default.div, {
@@ -236,7 +236,7 @@ function j(e) {
       iconUrl: n("215036"),
       header: y.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
       completed: U,
-      onClick: G
+      onClick: w
     })
   }, "customize")), P && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,
@@ -247,7 +247,7 @@ function j(e) {
       iconUrl: n("505873"),
       header: y.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
       completed: F,
-      onClick: w
+      onClick: G
     })
   }, "message")), (0, I.isWeb)() && q.push((0, a.jsx)(o.default.div, {
     className: O.cardWrapper,

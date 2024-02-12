@@ -1,9 +1,9 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return z
+    return Q
   }
-}), s("843762"), s("506083");
+}), s("222007"), s("843762"), s("506083");
 var a = s("37983"),
   n = s("884691"),
   l = s("414456"),
@@ -37,16 +37,17 @@ var a = s("37983"),
   j = s("599110"),
   b = s("701909"),
   U = s("62418"),
-  B = s("241088"),
-  y = s("845579"),
-  F = s("568456"),
-  G = s("49111"),
-  k = s("170213"),
-  H = s("782340"),
-  w = s("863341"),
-  V = s("926622");
+  B = s("299039"),
+  y = s("241088"),
+  F = s("845579"),
+  G = s("568456"),
+  k = s("49111"),
+  H = s("170213"),
+  w = s("782340"),
+  V = s("863341"),
+  Y = s("926622");
 
-function Y(e) {
+function W(e) {
   let {
     body: t,
     ...s
@@ -61,17 +62,17 @@ function Y(e) {
   }))
 }
 
-function W(e) {
+function K(e) {
   let {
     message: t
   } = e;
-  Y({
-    header: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-    confirmText: H.default.Messages.OKAY,
+  W({
+    header: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
+    confirmText: w.default.Messages.OKAY,
     body: t
   })
 }
-class K extends n.PureComponent {
+class z extends n.PureComponent {
   componentDidMount() {
     (0, f.fetchConsents)(), (0, m.getHarvestStatus)().then(e => {
       let t = {
@@ -91,43 +92,43 @@ class K extends n.PureComponent {
     })
   }
   showGuildRestrictionModal(e) {
-    Y({
-      header: H.default.Messages.USER_DM_SETTINGS_TITLE,
-      body: H.default.Messages.USER_DM_SETTINGS_DESCRIPTION,
-      confirmText: H.default.Messages.NO_TEXT,
-      cancelText: H.default.Messages.YES_TEXT,
+    W({
+      header: w.default.Messages.USER_DM_SETTINGS_TITLE,
+      body: w.default.Messages.USER_DM_SETTINGS_DESCRIPTION,
+      confirmText: w.default.Messages.NO_TEXT,
+      cancelText: w.default.Messages.YES_TEXT,
       confirmButtonColor: E.Button.Colors.BRAND,
       onConfirm: () => {
-        y.DefaultGuildsRestricted.updateSetting(e), this.trackDefaultDmsUpdated(e, !1)
+        F.DefaultGuildsRestricted.updateSetting(e), this.trackDefaultDmsUpdated(e, !1)
       },
       onCancel: () => {
-        y.DefaultGuildsRestricted.updateSetting(e), y.RestrictedGuildIds.updateSetting(e ? Object.keys(M.default.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0)
+        F.DefaultGuildsRestricted.updateSetting(e), F.RestrictedGuildIds.updateSetting(e ? B.default.keys(M.default.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0)
       }
     })
   }
   trackDefaultDmsUpdated(e, t) {
-    j.default.track(G.AnalyticEvents.GUILD_DEFAULT_DMS_UPDATED, {
+    j.default.track(k.AnalyticEvents.GUILD_DEFAULT_DMS_UPDATED, {
       default_guilds_restricted: e,
       applied_to_existing_guilds: t
     })
   }
   showMessageRequestRestrictionModal(e) {
-    Y({
-      header: H.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_HEADER,
-      body: H.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_DESCRIPTION,
-      confirmText: H.default.Messages.NO_TEXT,
-      cancelText: H.default.Messages.YES_TEXT,
+    W({
+      header: w.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_HEADER,
+      body: w.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_DESCRIPTION,
+      confirmText: w.default.Messages.NO_TEXT,
+      cancelText: w.default.Messages.YES_TEXT,
       confirmButtonColor: E.Button.Colors.BRAND,
       onConfirm: () => {
-        y.MessageRequestRestrictedDefault.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1)
+        F.MessageRequestRestrictedDefault.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1)
       },
       onCancel: () => {
-        y.MessageRequestRestrictedDefault.updateSetting(e), y.MessageRequestRestrictedGuildIds.updateSetting(e ? Object.keys(M.default.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0)
+        F.MessageRequestRestrictedDefault.updateSetting(e), F.MessageRequestRestrictedGuildIds.updateSetting(e ? B.default.keys(M.default.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0)
       }
     })
   }
   trackDefaultMessageRequestUpdated(e, t) {
-    j.default.track(G.AnalyticEvents.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+    j.default.track(k.AnalyticEvents.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
       default_guilds_restricted: e,
       applied_to_existing_guilds: t
     })
@@ -135,13 +136,13 @@ class K extends n.PureComponent {
   renderLegacyExplicitContentFilter(e) {
     return (0, a.jsxs)(E.FormItem, {
       tag: E.FormTitleTags.H3,
-      className: V.marginBottom20,
-      title: H.default.Messages.USER_EXPLICIT_CONTENT_FILTER_V2,
+      className: Y.marginBottom20,
+      title: w.default.Messages.USER_EXPLICIT_CONTENT_FILTER_V2,
       children: [(0, a.jsx)(E.FormText, {
         type: E.FormTextTypes.DESCRIPTION,
-        className: V.marginBottom8,
-        children: H.default.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({
-          appealLink: b.default.getArticleURL(G.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
+        className: Y.marginBottom8,
+        children: w.default.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({
+          appealLink: b.default.getArticleURL(k.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
         })
       }), (0, a.jsx)(E.RadioGroup, {
         value: this.props.explicitContentFilter,
@@ -150,9 +151,9 @@ class K extends n.PureComponent {
           let {
             value: s
           } = t;
-          this.props.dmSpamFilter === S.DmSpamFilterV2.DEFAULT_UNSET ? y.DmSpamFilterV2.updateSetting(e).then(() => {
-            y.ExplicitContentFilter.updateSetting(s)
-          }) : y.ExplicitContentFilter.updateSetting(s)
+          this.props.dmSpamFilter === S.DmSpamFilterV2.DEFAULT_UNSET ? F.DmSpamFilterV2.updateSetting(e).then(() => {
+            F.ExplicitContentFilter.updateSetting(s)
+          }) : F.ExplicitContentFilter.updateSetting(s)
         }
       })]
     })
@@ -165,38 +166,38 @@ class K extends n.PureComponent {
       userIsConsideredAdult: n
     } = this.props, l = [{
       value: S.ExplicitContentRedaction.BLUR,
-      label: H.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
+      label: w.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
     }, {
       value: S.ExplicitContentRedaction.BLOCK,
-      label: H.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLOCK
+      label: w.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLOCK
     }], r = [{
       value: S.ExplicitContentRedaction.BLUR,
-      label: H.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
+      label: w.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
     }], o = {
       value: S.ExplicitContentRedaction.SHOW,
-      label: H.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_SHOW
+      label: w.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_SHOW
     };
     return n && (l.unshift(o), r.unshift(o)), (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H5,
         faded: !0,
-        className: V.marginBottom8,
+        className: Y.marginBottom8,
         children: (0, a.jsxs)("div", {
-          className: i(w.betaTagContainer),
-          children: [H.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(I.default, {
-            className: w.betaTagIcon
+          className: i(V.betaTagContainer),
+          children: [w.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(I.default, {
+            className: V.betaTagIcon
           })]
         })
       }), (0, a.jsx)(E.FormText, {
         type: E.FormTextTypes.DESCRIPTION,
-        className: V.marginBottom8,
-        children: H.default.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({
-          learnMoreLink: b.default.getArticleURL(G.HelpdeskArticles.EXPLICIT_MEDIA_REDACTION)
+        className: Y.marginBottom8,
+        children: w.default.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({
+          learnMoreLink: b.default.getArticleURL(k.HelpdeskArticles.EXPLICIT_MEDIA_REDACTION)
         })
       }), (0, a.jsx)(E.FormItem, {
         tag: E.FormTitleTags.H3,
-        className: V.marginBottom20,
-        title: H.default.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
+        className: Y.marginBottom20,
+        title: w.default.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
         children: (0, a.jsx)(E.SingleSelect, {
           options: l,
           value: t,
@@ -206,8 +207,8 @@ class K extends n.PureComponent {
         })
       }), (0, a.jsx)(E.FormItem, {
         tag: E.FormTitleTags.H3,
-        className: V.marginBottom20,
-        title: H.default.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
+        className: Y.marginBottom20,
+        title: w.default.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
         children: (0, a.jsx)(E.SingleSelect, {
           options: l,
           value: s,
@@ -217,8 +218,8 @@ class K extends n.PureComponent {
         })
       }), n && (0, a.jsx)(E.FormItem, {
         tag: E.FormTitleTags.H3,
-        className: V.marginBottom20,
-        title: H.default.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
+        className: Y.marginBottom20,
+        title: w.default.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
         children: (0, a.jsx)(E.SingleSelect, {
           options: r,
           value: e,
@@ -231,19 +232,19 @@ class K extends n.PureComponent {
   }
   renderDMSafety() {
     var e;
-    let t = this.props.dmSpamFilter !== S.DmSpamFilterV2.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = F.ExplicitContentFilterToDmSpamFilterV2.get(this.props.explicitContentFilter)) && void 0 !== e ? e : S.DmSpamFilterV2.NON_FRIENDS;
+    let t = this.props.dmSpamFilter !== S.DmSpamFilterV2.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = G.ExplicitContentFilterToDmSpamFilterV2.get(this.props.explicitContentFilter)) && void 0 !== e ? e : S.DmSpamFilterV2.NON_FRIENDS;
     return this.props.mediaRedactionIsEnabled ? (0, a.jsxs)(E.FormSection, {
       tag: E.FormTitleTags.H3,
-      className: V.marginBottom20,
+      className: Y.marginBottom20,
       children: [this.renderSelfModExplicitContentSettings(), (0, a.jsxs)(E.FormItem, {
         tag: E.FormTitleTags.H5,
-        className: V.marginBottom4,
-        title: H.default.Messages.USER_DM_SPAM_FILTER,
+        className: Y.marginBottom4,
+        title: w.default.Messages.USER_DM_SPAM_FILTER,
         children: [(0, a.jsx)(E.FormText, {
           type: E.FormTextTypes.DESCRIPTION,
-          className: V.marginBottom8,
-          children: H.default.Messages.USER_DM_SPAM_FILTER_HELP.format({
-            appealLink: b.default.getArticleURL(G.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
+          className: Y.marginBottom8,
+          children: w.default.Messages.USER_DM_SPAM_FILTER_HELP.format({
+            appealLink: b.default.getArticleURL(k.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
           })
         }), (0, a.jsx)(E.RadioGroup, {
           value: t,
@@ -252,23 +253,23 @@ class K extends n.PureComponent {
             let {
               value: t
             } = e;
-            return y.DmSpamFilterV2.updateSetting(t)
+            return F.DmSpamFilterV2.updateSetting(t)
           }
         })]
       })]
     }) : (0, a.jsxs)(E.FormSection, {
       tag: E.FormTitleTags.H5,
-      className: V.marginBottom40,
-      title: H.default.Messages.USER_DIRECT_MESSAGE_FILTERS,
+      className: Y.marginBottom40,
+      title: w.default.Messages.USER_DIRECT_MESSAGE_FILTERS,
       children: [this.renderLegacyExplicitContentFilter(t), (0, a.jsxs)(E.FormItem, {
         tag: E.FormTitleTags.H3,
-        className: V.marginBottom4,
-        title: H.default.Messages.USER_DM_SPAM_FILTER,
+        className: Y.marginBottom4,
+        title: w.default.Messages.USER_DM_SPAM_FILTER,
         children: [(0, a.jsx)(E.FormText, {
           type: E.FormTextTypes.DESCRIPTION,
-          className: V.marginBottom8,
-          children: H.default.Messages.USER_DM_SPAM_FILTER_HELP.format({
-            appealLink: b.default.getArticleURL(G.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
+          className: Y.marginBottom8,
+          children: w.default.Messages.USER_DM_SPAM_FILTER_HELP.format({
+            appealLink: b.default.getArticleURL(k.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
           })
         }), (0, a.jsx)(E.RadioGroup, {
           value: t,
@@ -277,7 +278,7 @@ class K extends n.PureComponent {
             let {
               value: t
             } = e;
-            return y.DmSpamFilterV2.updateSetting(t)
+            return F.DmSpamFilterV2.updateSetting(t)
           }
         })]
       })]
@@ -294,36 +295,36 @@ class K extends n.PureComponent {
       defaultMessageRequestRestricted: i
     } = this.state, r = !0 === t.nsfwAllowed;
     return (0, a.jsxs)(E.FormSection, {
-      className: V.marginBottom40,
+      className: Y.marginBottom40,
       children: [(0, a.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H5,
-        className: V.marginBottom8,
-        children: H.default.Messages.USER_DM_SETTINGS
+        className: Y.marginBottom8,
+        children: w.default.Messages.USER_DM_SETTINGS
       }), (0, a.jsx)(E.FormSwitch, {
         value: !l,
-        note: H.default.Messages.USER_DM_SETTINGS_HELP,
+        note: w.default.Messages.USER_DM_SETTINGS_HELP,
         onChange: this.handleChangeDefaultGuildsRestricted,
-        children: H.default.Messages.NEW_GUILDS_DM_ALLOWED
+        children: w.default.Messages.NEW_GUILDS_DM_ALLOWED
       }), (0, a.jsx)(E.FormSwitch, {
         value: !!r && e,
-        note: H.default.Messages.NSFW_GUILDS_TOGGLE_CAPTION,
+        note: w.default.Messages.NSFW_GUILDS_TOGGLE_CAPTION,
         disabled: !r,
-        onChange: y.ViewNsfwGuilds.updateSetting,
-        children: H.default.Messages.NSFW_GUILDS_TOGGLE_HEADER
+        onChange: F.ViewNsfwGuilds.updateSetting,
+        children: w.default.Messages.NSFW_GUILDS_TOGGLE_HEADER
       }), !s && (0, a.jsx)(E.FormSwitch, {
         value: !i,
-        note: H.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({
-          helpdeskArticle: b.default.getArticleURL(G.HelpdeskArticles.MESSAGE_REQUESTS)
+        note: w.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({
+          helpdeskArticle: b.default.getArticleURL(k.HelpdeskArticles.MESSAGE_REQUESTS)
         }),
         disabled: l,
         onChange: this.handleChangeDefaultMessageRequestRestricted,
-        children: H.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_HEADER
+        children: w.default.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_HEADER
       }), (0, a.jsx)(E.FormSwitch, {
         value: !!r && n,
-        note: H.default.Messages.NSFW_DM_COMMANDS_CAPTION,
+        note: w.default.Messages.NSFW_DM_COMMANDS_CAPTION,
         disabled: !r,
-        onChange: y.ViewNsfwCommands.updateSetting,
-        children: H.default.Messages.NSFW_DM_COMMANDS_HEADER
+        onChange: F.ViewNsfwCommands.updateSetting,
+        children: w.default.Messages.NSFW_DM_COMMANDS_HEADER
       })]
     })
   }
@@ -334,33 +335,33 @@ class K extends n.PureComponent {
       dropsOptedOut: s
     } = this.props;
     return (0, a.jsxs)(E.FormSection, {
-      className: V.marginBottom40,
+      className: Y.marginBottom40,
       children: [(0, a.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H5,
-        className: V.marginBottom8,
-        children: H.default.Messages.DATA_PRIVACY_CONTROLS
+        className: Y.marginBottom8,
+        children: w.default.Messages.DATA_PRIVACY_CONTROLS
       }), (0, a.jsx)(E.FormSwitch, {
         value: e,
-        note: H.default.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({
-          helpdeskArticle: b.default.getArticleURL(G.HelpdeskArticles.DATA_PRIVACY_CONTROLS)
+        note: w.default.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({
+          helpdeskArticle: b.default.getArticleURL(k.HelpdeskArticles.DATA_PRIVACY_CONTROLS)
         }),
         onChange: this.handleUsageStatisticsChange,
-        children: H.default.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE
+        children: w.default.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE
       }), (0, a.jsx)(E.FormSwitch, {
         value: t,
-        note: H.default.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({
-          helpdeskArticle: b.default.getArticleURL(G.HelpdeskArticles.DATA_PRIVACY_CONTROLS)
+        note: w.default.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({
+          helpdeskArticle: b.default.getArticleURL(k.HelpdeskArticles.DATA_PRIVACY_CONTROLS)
         }),
         hideBorder: !0,
         onChange: this.handlePersonalizationChange,
-        children: H.default.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE
+        children: w.default.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE
       }), (0, a.jsx)(E.FormSwitch, {
         value: !s && t,
         note: (0, a.jsxs)("div", {
-          className: w.dependentSetting,
-          children: [H.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE, s ? (0, a.jsx)("div", {
-            className: i(V.marginTop8, w.feedback),
-            children: H.default.Messages.DROPS_REQUEST_FEEDBACK_OPT_OUT.format({
+          className: V.dependentSetting,
+          children: [w.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE, s ? (0, a.jsx)("div", {
+            className: i(Y.marginTop8, V.feedback),
+            children: w.default.Messages.DROPS_REQUEST_FEEDBACK_OPT_OUT.format({
               feedbackURL: "https://survey.alchemer.com/s3/7043738/Discord-Drops-Opt-Out-Survey?user_id=".concat(this.props.currentUser.id)
             })
           }) : null]
@@ -368,21 +369,21 @@ class K extends n.PureComponent {
         disabled: !t,
         onChange: this.handleChangeDropsOptedOut,
         children: (0, a.jsxs)("div", {
-          className: i(w.betaTagContainer, w.dependentSetting),
-          children: [H.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT, (0, a.jsx)(I.default, {
-            className: w.betaTagIcon
+          className: i(V.betaTagContainer, V.dependentSetting),
+          children: [w.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT, (0, a.jsx)(I.default, {
+            className: V.betaTagIcon
           })]
         })
       }), (0, a.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H3,
-        className: i(V.marginTop20, V.marginBottom8),
-        children: H.default.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE
+        className: i(Y.marginTop20, Y.marginBottom8),
+        children: w.default.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE
       }), (0, a.jsx)(E.FormText, {
         type: E.FormTextTypes.DESCRIPTION,
-        className: V.marginBottom20,
-        children: H.default.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE.format({
+        className: Y.marginBottom20,
+        children: w.default.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE.format({
           onClick: () => {
-            _.default.setSection(G.UserSettingsSections.ACCOUNT)
+            _.default.setSection(k.UserSettingsSections.ACCOUNT)
           }
         })
       }), this.renderHarvestRequest()]
@@ -395,8 +396,8 @@ class K extends n.PureComponent {
     } = this.props, {
       requestingHarvest: s,
       currentHarvestRequest: l
-    } = this.state, i = (0, B.harvestDisabled)(l, t), r = (0, a.jsx)(E.Tooltip, {
-      text: t.verified ? null : H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_TOOLTIP,
+    } = this.state, i = (0, y.harvestDisabled)(l, t), r = (0, a.jsx)(E.Tooltip, {
+      text: t.verified ? null : w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_TOOLTIP,
       children: e => {
         let {
           onMouseEnter: t,
@@ -410,43 +411,43 @@ class K extends n.PureComponent {
           look: E.Button.Looks.OUTLINED,
           color: E.Button.Colors.BRAND,
           submitting: s,
-          children: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD
+          children: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD
         })
       }
     });
     return i && null != l && (e = (0, a.jsx)(E.Card, {
-      className: w.card,
+      className: V.card,
       children: (0, a.jsx)(E.Text, {
         variant: "text-md/normal",
-        children: H.default.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({
-          date: u(l.created_at).add(G.REQUEST_DATA_LIMIT_DAYS, "days").format("MMMM Do YYYY")
+        children: w.default.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({
+          date: u(l.created_at).add(k.REQUEST_DATA_LIMIT_DAYS, "days").format("MMMM Do YYYY")
         })
       })
     }), r = null), null != r && (r = (0, a.jsx)(L.default, {
       children: r
     })), (0, a.jsxs)(n.Fragment, {
       children: [(0, a.jsx)(E.FormDivider, {
-        className: V.marginBottom20
+        className: Y.marginBottom20
       }), (0, a.jsx)(E.FormTitle, {
         tag: E.FormTitleTags.H3,
-        children: H.default.Messages.DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE
+        children: w.default.Messages.DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE
       }), (0, a.jsx)(E.FormText, {
         type: E.FormTextTypes.DESCRIPTION,
-        className: V.marginBottom20,
-        children: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({
-          helpdeskArticle: b.default.getArticleURL(G.HelpdeskArticles.GDPR_REQUEST_DATA)
+        className: Y.marginBottom20,
+        children: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({
+          helpdeskArticle: b.default.getArticleURL(k.HelpdeskArticles.GDPR_REQUEST_DATA)
         })
       }), e, r]
     })
   }
   renderPrivacyAndTermsNote() {
     return (0, a.jsx)(E.FormSection, {
-      className: V.marginBottom40,
+      className: Y.marginBottom40,
       children: (0, a.jsx)(E.FormNotice, {
         type: E.FormNotice.Types.PRIMARY,
-        body: H.default.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
-          termsLink: G.MarketingURLs.TERMS,
-          privacyLink: G.MarketingURLs.PRIVACY
+        body: w.default.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
+          termsLink: k.MarketingURLs.TERMS,
+          privacyLink: k.MarketingURLs.PRIVACY
         })
       })
     })
@@ -458,28 +459,28 @@ class K extends n.PureComponent {
     } = this.props;
     return e.isStaff() ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(E.FormDivider, {
-        className: V.marginBottom20
+        className: Y.marginBottom20
       }), (0, a.jsxs)(E.FormSection, {
-        className: V.marginBottom40,
+        className: Y.marginBottom40,
         children: [(0, a.jsx)(E.FormTitle, {
           tag: E.FormTitleTags.H5,
-          className: V.marginBottom8,
-          children: H.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER
+          className: Y.marginBottom8,
+          children: w.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER
         }), (0, a.jsxs)(E.FormItem, {
           tag: E.FormTitleTags.H5,
-          className: V.marginBottom4,
+          className: Y.marginBottom4,
           children: [(0, a.jsx)(E.FormText, {
             type: E.FormTextTypes.DESCRIPTION,
-            className: V.marginBottom8,
-            children: H.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_DESC
+            className: Y.marginBottom8,
+            children: w.default.Messages.PRIVACY_SETTINGS_STAFF_ONLY_DESC
           }), (0, a.jsx)(E.RadioGroup, {
-            options: (0, B.generateNonSpamRetrainingOptInSettingOptions)(),
-            value: null == t ? B.NonSpamRetrainingOptInOptions.UNDECIDED : t ? B.NonSpamRetrainingOptInOptions.OPTIN : B.NonSpamRetrainingOptInOptions.OPTOUT,
+            options: (0, y.generateNonSpamRetrainingOptInSettingOptions)(),
+            value: null == t ? y.NonSpamRetrainingOptInOptions.UNDECIDED : t ? y.NonSpamRetrainingOptInOptions.OPTIN : y.NonSpamRetrainingOptInOptions.OPTOUT,
             onChange: e => {
               let {
                 value: t
               } = e;
-              return y.NonSpamRetrainingOptIn.updateSetting(B.NonSpamRetrainingOptInOptionsToValue[t])
+              return F.NonSpamRetrainingOptIn.updateSetting(y.NonSpamRetrainingOptInOptionsToValue[t])
             }
           })]
         })]
@@ -492,7 +493,7 @@ class K extends n.PureComponent {
     } = this.props;
     return (0, a.jsxs)(E.FormSection, {
       tag: E.FormTitleTags.H1,
-      title: H.default.Messages.PRIVACY_AND_SAFETY,
+      title: w.default.Messages.PRIVACY_AND_SAFETY,
       children: [this.renderDMSafety(), this.renderServerPrivacy(), e ? this.renderDataPrivacy() : null, this.renderPrivacyAndTermsNote(), this.renderStaffOnlySettings()]
     })
   }
@@ -508,30 +509,30 @@ class K extends n.PureComponent {
       null != s && this.setState({
         selectedTab: s
       });
-      let e = n === k.SafetyHubView.ACCOUNT_STANDING && null != t;
+      let e = n === H.SafetyHubView.ACCOUNT_STANDING && null != t;
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(E.TabBar, {
-          className: w.settingsTabBar,
-          "aria-label": H.default.Messages.SAFETY_HUB_PAGE_TITLE,
+          className: V.settingsTabBar,
+          "aria-label": w.default.Messages.SAFETY_HUB_PAGE_TITLE,
           selectedItem: n,
           type: "top",
           look: "brand",
           onItemSelect: this.handleTabSelect,
           children: [(0, a.jsx)(E.TabBar.Item, {
-            className: w.settingsTabBarItem,
-            id: k.SafetyHubView.SETTINGS,
-            "aria-label": H.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS,
-            children: H.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS
+            className: V.settingsTabBarItem,
+            id: H.SafetyHubView.SETTINGS,
+            "aria-label": w.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS,
+            children: w.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS
           }), (0, a.jsx)(E.TabBar.Item, {
-            className: w.settingsTabBarItem,
-            id: k.SafetyHubView.ACCOUNT_STANDING,
-            "aria-label": H.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT,
-            children: H.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT
+            className: V.settingsTabBarItem,
+            id: H.SafetyHubView.ACCOUNT_STANDING,
+            "aria-label": w.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT,
+            children: w.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT
           })]
         }), (0, a.jsx)(E.TabBar.Panel, {
           id: n,
           "aria-labelledby": (0, P.uid)(),
-          className: [e ? w.contentPanelNagbar : "", w.contentPanel].join(" "),
+          className: [e ? V.contentPanelNagbar : "", V.contentPanel].join(" "),
           children: (0, a.jsx)("div", {
             children: this.SETTINGS_TABS[n]()
           })
@@ -542,44 +543,44 @@ class K extends n.PureComponent {
   }
   constructor(e) {
     super(e), this.SETTINGS_TABS = {
-      [k.SafetyHubView.SETTINGS]: () => this.renderSettingsBody(),
-      [k.SafetyHubView.ACCOUNT_STANDING]: () => (0, a.jsx)(x.default, {})
+      [H.SafetyHubView.SETTINGS]: () => this.renderSettingsBody(),
+      [H.SafetyHubView.ACCOUNT_STANDING]: () => (0, a.jsx)(x.default, {})
     }, this.handleChangeDefaultGuildsRestricted = e => {
       this.setState({
         defaultGuildsRestricted: !e
       }, () => this.showGuildRestrictionModal(!e))
     }, this.handleChangeDropsOptedOut = () => {
-      this.props.personalization && y.DropsOptedOut.updateSetting(!this.props.dropsOptedOut)
+      this.props.personalization && F.DropsOptedOut.updateSetting(!this.props.dropsOptedOut)
     }, this.handleChangeDefaultMessageRequestRestricted = e => {
       this.setState({
         defaultMessageRequestRestricted: !e
       }, () => this.showMessageRequestRestrictionModal(!e))
     }, this.handleUsageStatisticsChange = () => {
       let e = !this.props.usageStatistics;
-      e ? (0, f.setConsents)([G.Consents.USAGE_STATISTICS], []).catch(W) : Y({
-        header: H.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_TITLE,
-        body: H.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
-        confirmText: H.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
-        cancelText: H.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-        onConfirm: () => (0, f.setConsents)([], [G.Consents.USAGE_STATISTICS]).catch(W)
+      e ? (0, f.setConsents)([k.Consents.USAGE_STATISTICS], []).catch(K) : W({
+        header: w.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_TITLE,
+        body: w.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
+        confirmText: w.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
+        cancelText: w.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
+        onConfirm: () => (0, f.setConsents)([], [k.Consents.USAGE_STATISTICS]).catch(K)
       })
     }, this.handlePersonalizationChange = () => {
       let e = !this.props.personalization;
-      e ? (0, f.setConsents)([G.Consents.PERSONALIZATION], []).catch(W) : Y({
-        header: H.default.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
-        confirmText: H.default.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
-        cancelText: H.default.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
+      e ? (0, f.setConsents)([k.Consents.PERSONALIZATION], []).catch(K) : W({
+        header: w.default.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
+        confirmText: w.default.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
+        cancelText: w.default.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
         onConfirm: () => {
-          (0, f.setConsents)([], [G.Consents.PERSONALIZATION]).catch(W), y.DropsOptedOut.updateSetting(!0)
+          (0, f.setConsents)([], [k.Consents.PERSONALIZATION]).catch(K), F.DropsOptedOut.updateSetting(!0)
         },
-        body: H.default.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
+        body: w.default.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
       })
     }, this.handleDataDownloadRequest = () => {
-      Y({
-        header: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
-        body: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_NOTE,
-        confirmText: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
-        cancelText: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CANCEL,
+      W({
+        header: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
+        body: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_NOTE,
+        confirmText: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
+        cancelText: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CANCEL,
         onConfirm: () => {
           this.setState({
             requestingHarvest: !0
@@ -588,14 +589,14 @@ class K extends n.PureComponent {
               null != e && null != e.body ? (this.setState({
                 currentHarvestRequest: e.body
               }), T.default.show({
-                body: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS
+                body: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS
               })) : T.default.show({
-                title: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-                body: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
+                title: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
+                body: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
               })
             }, () => T.default.show({
-              title: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-              body: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
+              title: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
+              body: w.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
             })).finally(() => this.setState({
               requestingHarvest: !1
             }))
@@ -616,20 +617,20 @@ class K extends n.PureComponent {
       defaultMessageRequestRestricted: s,
       currentHarvestRequest: null,
       requestingHarvest: !0,
-      selectedTab: k.SafetyHubView.SETTINGS
+      selectedTab: H.SafetyHubView.SETTINGS
     }
   }
 }
 
-function z() {
+function Q() {
   let e = (0, c.useStateFromStores)([D.default], () => {
       let e = D.default.getCurrentUser();
       return o(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
     }),
     t = (0, c.useStateFromStoresObject)([R.default], () => ({
       fetchedConsents: R.default.fetchedConsents,
-      usageStatistics: R.default.hasConsented(G.Consents.USAGE_STATISTICS),
-      personalization: R.default.hasConsented(G.Consents.PERSONALIZATION)
+      usageStatistics: R.default.hasConsented(k.Consents.USAGE_STATISTICS),
+      personalization: R.default.hasConsented(k.Consents.PERSONALIZATION)
     })),
     s = (0, A.useIsSafetyHubEnabled)(),
     n = (0, c.useStateFromStores)([O.default], () => O.default.getFetchError()),
@@ -637,18 +638,18 @@ function z() {
     i = (0, g.useIsEligibleForExplicitMediaRedaction)(),
     r = (0, N.useExplicitContentSettingOrDefault)(),
     d = (0, C.default)();
-  return (0, a.jsx)(K, {
+  return (0, a.jsx)(z, {
     currentUser: e,
-    defaultGuildsRestricted: y.DefaultGuildsRestricted.useSetting(),
-    defaultMessageRequestRestricted: y.MessageRequestRestrictedDefault.useSetting(),
-    nonSpamRetrainingOptIn: y.NonSpamRetrainingOptIn.useSetting(),
+    defaultGuildsRestricted: F.DefaultGuildsRestricted.useSetting(),
+    defaultMessageRequestRestricted: F.MessageRequestRestrictedDefault.useSetting(),
+    nonSpamRetrainingOptIn: F.NonSpamRetrainingOptIn.useSetting(),
     isStricterMessageRequests: (0, p.default)(),
-    viewNsfwGuilds: y.ViewNsfwGuilds.useSetting(),
-    viewNsfwCommands: y.ViewNsfwCommands.useSetting(),
-    explicitContentFilter: y.ExplicitContentFilter.useSetting(),
-    dmSpamFilter: y.DmSpamFilterV2.useSetting(),
-    showCurrentGame: y.ShowCurrentGame.useSetting(),
-    dropsOptedOut: y.DropsOptedOut.useSetting(),
+    viewNsfwGuilds: F.ViewNsfwGuilds.useSetting(),
+    viewNsfwCommands: F.ViewNsfwCommands.useSetting(),
+    explicitContentFilter: F.ExplicitContentFilter.useSetting(),
+    dmSpamFilter: F.DmSpamFilterV2.useSetting(),
+    showCurrentGame: F.ShowCurrentGame.useSetting(),
+    dropsOptedOut: F.DropsOptedOut.useSetting(),
     safetyHubIsEnabled: s,
     safetyHubFetchError: n,
     mediaRedactionIsEnabled: i,

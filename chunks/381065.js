@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("712125"),
   N = n("311161"),
   p = n("49111"),
-  A = n("724210"),
-  S = n("782340"),
+  S = n("724210"),
+  A = n("782340"),
   C = n("17629");
 
 function h(e) {
@@ -33,10 +33,10 @@ function h(e) {
     shouldShowIncidentActions: v,
     incidentData: P,
     isUnderLockdown: D
-  } = (0, I.useGuildIncidentsState)(R), x = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == L ? void 0 : L.id) && void 0 !== t ? t : ""), y = l.useCallback(() => null != L && (0, o.goToMemberSafetyDashboard)(L.id), [L]);
+  } = (0, I.useGuildIncidentsState)(R), x = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == L ? void 0 : L.id) && void 0 !== t ? t : p.EMPTY_STRING_GUILD_ID), y = l.useCallback(() => null != L && (0, o.goToMemberSafetyDashboard)(L.id), [L]);
   if (null == L || null == P || !v) return null;
   let U = e => {
-      if (e && x && O !== A.StaticChannelRoute.MEMBER_SAFETY && y()) {
+      if (e && x && O !== S.StaticChannelRoute.MEMBER_SAFETY && y()) {
         T.default.track(p.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
           notice_type: p.NoticeTypes.GUILD_RAID_NOTIFICATION,
           guild_id: L.id
@@ -79,19 +79,19 @@ function h(e) {
           width: 16,
           height: 16
         }), (0, s.jsx)("span", {
-          children: S.default.Messages.GUILD_ANTIRAID_LOCKDOWN_NAGBAR_ACTION
+          children: A.default.Messages.GUILD_ANTIRAID_LOCKDOWN_NAGBAR_ACTION
         })]
       })
     })]
   });
-  let B = (0, N.hasDetectedRaid)(P) ? S.default.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({
+  let B = (0, N.hasDetectedRaid)(P) ? A.default.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({
       guildName: L.name
-    }) : (0, N.hasDetectedDMRaid)(P) ? S.default.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({
+    }) : (0, N.hasDetectedDMRaid)(P) ? A.default.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({
       guildName: L.name
-    }) : S.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
+    }) : A.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
       guildName: L.name
     }),
-    k = x && O === A.StaticChannelRoute.MEMBER_SAFETY;
+    k = x && O === S.StaticChannelRoute.MEMBER_SAFETY;
   return (0, s.jsxs)(_.default, {
     className: C.notice,
     color: _.NoticeColors.WARNING,
@@ -104,7 +104,7 @@ function h(e) {
       children: (0, s.jsx)("div", {
         className: C.actionButtonInner,
         children: (0, s.jsx)("span", {
-          children: S.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW
+          children: A.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW
         })
       })
     })]

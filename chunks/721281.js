@@ -52,7 +52,7 @@ function u(e) {
     voiceChannelActivityNotifsEnabled: n
   } = s.useExperiment({
     location: "useVoiceActivityNotificationSettingsExperiment",
-    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : ""
+    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.EMPTY_STRING_GUILD_ID
   }, {
     disable: (null == e ? void 0 : e.type) !== i.ChannelTypes.GUILD_VOICE,
     autoTrackExposure: !1
@@ -72,7 +72,7 @@ function r(e) {
   let {
     voiceChannelActivityNotifsEnabled: n
   } = s.getCurrentConfig({
-    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : "",
+    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.EMPTY_STRING_GUILD_ID,
     location: "hasVoiceChannelActivityNotifsEnabled"
   });
   return n

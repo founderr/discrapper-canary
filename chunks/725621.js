@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("812204"),
   _ = s("716241"),
   I = s("685665"),
-  f = s("412707"),
-  T = s("646186"),
+  T = s("412707"),
+  f = s("646186"),
   S = s("7331"),
   m = s("736271"),
   N = s("283167"),
@@ -73,8 +73,8 @@ var a = s("37983"),
   eE = s("648704"),
   e_ = s("887754"),
   eI = s("614840"),
-  ef = s("902273"),
-  eT = s("721822"),
+  eT = s("902273"),
+  ef = s("721822"),
   eS = s("925538"),
   em = s("631011"),
   eN = s("191329"),
@@ -246,10 +246,10 @@ function ew(e) {
     label: eF.default.Messages.APP_DIRECTORY,
     ariaLabel: eF.default.Messages.APP_DIRECTORY,
     onClick() {
-      (0, T.goToAppDirectory)({
+      (0, f.goToAppDirectory)({
         guildId: t.id,
         entrypoint: {
-          name: f.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS,
+          name: T.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS,
           guildSettingsSection: $
         }
       }), (0, d.popLayer)()
@@ -303,7 +303,7 @@ function ew(e) {
     section: eb.GuildSettingsSections.BANS,
     impressionName: n.ImpressionNames.GUILD_SETTINGS_BANS,
     label: eF.default.Messages.BANS,
-    element: eT.default,
+    element: ef.default,
     predicate: () => N
   }, {
     section: c.SectionTypes.DIVIDER,
@@ -353,7 +353,7 @@ function ew(e) {
     impressionName: n.ImpressionNames.GUILD_SETTINGS_ANALYTICS,
     label: eF.default.Messages.SERVER_INSIGHTS,
     ariaLabel: eF.default.Messages.SERVER_INSIGHTS,
-    element: ef.default,
+    element: eT.default,
     newIndicator: H.default.hasHotspot(eB.HotspotLocations.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
     newIndicatorDismissibleContentTypes: V ? [r.DismissibleContent.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
     predicate: () => O && t.hasFeature(eb.GuildFeatures.COMMUNITY)
@@ -609,8 +609,8 @@ class ez extends l.PureComponent {
       canViewAuditLogV2: E,
       canManageRoles: _,
       canManageGuildExpressions: I,
-      canManageWebhooks: f,
-      canManageBans: T,
+      canManageWebhooks: T,
+      canManageBans: f,
       canAccessMembersPage: S,
       canViewGuildAnalytics: m,
       isOwner: N,
@@ -633,8 +633,8 @@ class ez extends l.PureComponent {
         canViewAuditLogV2: E,
         canManageRoles: _,
         canManageGuildExpressions: I,
-        canManageWebhooks: f,
-        canManageBans: T,
+        canManageWebhooks: T,
+        canManageBans: f,
         canAccessMembersPage: S,
         canViewGuildAnalytics: m,
         isOwner: N,
@@ -676,7 +676,7 @@ function eK() {
     isGuildMetadataLoaded: d
   } = (0, i.useStateFromStoresObject)([ei.default], () => ei.default.getProps()), {
     AnalyticsLocationProvider: u
-  } = (0, I.default)(E.default.GUILD_SETTINGS), c = (0, i.useStateFromStores)([w.default], () => w.default.theme), _ = (0, i.useStateFromStores)([w.default], () => w.default.darkSidebar ? eb.ThemeTypes.DARK : void 0), f = (0, i.useStateFromStores)([K.default], () => null != s ? K.default.getChannels(s.id).SELECTABLE : null, [s]), T = (0, i.useStateFromStoresObject)([X.default], () => null != s ? X.default.getGuildPermissionProps(s) : eW), S = null == s ? void 0 : s.id, m = (0, i.useStateFromStores)([X.default], () => null != s && X.default.canAccessGuildSettings(s)), g = null != s && (0, $.staffOnlyGuildSettingsAccess)(s.id), h = g || m, R = g || T.canViewGuildAnalytics, {
+  } = (0, I.default)(E.default.GUILD_SETTINGS), c = (0, i.useStateFromStores)([w.default], () => w.default.theme), _ = (0, i.useStateFromStores)([w.default], () => w.default.darkSidebar ? eb.ThemeTypes.DARK : void 0), T = (0, i.useStateFromStores)([K.default], () => null != s ? K.default.getChannels(s.id).SELECTABLE : null, [s]), f = (0, i.useStateFromStoresObject)([X.default], () => null != s ? X.default.getGuildPermissionProps(s) : eW), S = null == s ? void 0 : s.id, m = (0, i.useStateFromStores)([X.default], () => null != s && X.default.canAccessGuildSettings(s)), g = null != s && (0, $.staffOnlyGuildSettingsAccess)(s.id), h = g || m, R = g || f.canViewGuildAnalytics, {
     shouldFetchMemberInsights: x,
     hasAccessRate: L
   } = (0, i.useStateFromStoresObject)([ea.default], () => ({
@@ -694,7 +694,7 @@ function eK() {
   }, [S, A]);
   let {
     homeSettingsEnabled: v
-  } = (0, D.useOnboardingHomeAdminExperiment)(null != S ? S : "");
+  } = (0, D.useOnboardingHomeAdminExperiment)(null != S ? S : eb.EMPTY_STRING_GUILD_ID);
   l.useEffect(() => {
     null != S && v && (0, M.fetchGuildHomeSettings)(S)
   }, [v, S]);
@@ -703,10 +703,10 @@ function eK() {
   } = (0, $.useGuildAccessRateInsightExperiment)(null == s ? void 0 : s.id, !L || !R || !h), G = (0, i.useStateFromStores)([F.default], () => {
     var e;
     return (null == s ? void 0 : s.id) != null && (null === (e = F.default.getForGuild(s.id)) || void 0 === e ? void 0 : e.isDirty) === !0
-  }, [s]), U = (0, i.useStateFromStores)([Z.default], () => Z.default.getMemberCount(null == s ? void 0 : s.id), [s]), P = (0, C.useGuildAuditLogV2Enabled)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "");
+  }, [s]), U = (0, i.useStateFromStores)([Z.default], () => Z.default.getMemberCount(null == s ? void 0 : s.id), [s]), P = (0, C.useGuildAuditLogV2Enabled)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : eb.EMPTY_STRING_GUILD_ID);
   l.useEffect(() => {
-    null != S && T.canManageGuild && y.default.loadTemplatesForGuild(S)
-  }, [S, T.canManageGuild]), l.useEffect(() => {
+    null != S && f.canManageGuild && y.default.loadTemplatesForGuild(S)
+  }, [S, f.canManageGuild]), l.useEffect(() => {
     !h && et.default.close()
   }, [h]);
   let b = (0, i.useStateFromStores)([ed.default], () => ed.default.getCurrentPage()),
@@ -718,12 +718,12 @@ function eK() {
       section: n,
       theme: c,
       sidebarTheme: _,
-      channels: f,
+      channels: T,
       showDirtyGuildTemplateIndicator: G,
       analyticsLocation: r,
       memberCount: U,
       isGuildAuditLogV2Enabled: P,
-      ...T,
+      ...f,
       canViewGuildAnalytics: R,
       showAccessRate: j,
       onboardingStep: b,

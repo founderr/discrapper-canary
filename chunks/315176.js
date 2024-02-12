@@ -28,12 +28,12 @@ async function m(e, t) {
   if (null == N) return;
   let p = c.default.getGuild(N);
   if (null == p) return;
-  let A = E.default.getCurrentUser();
-  if (null == A) return;
+  let S = E.default.getCurrentUser();
+  if (null == S) return;
   await (0, o.fetchStickerPacks)();
-  let S = Array.from(u.default.getAllStickersIterator()),
-    C = S.filter(e => e.type === d.MetaStickerType.GUILD),
-    h = C.filter(e => I(e.guild_id) && (0, r.isSendableSticker)(e, A, t)).sort((e, t) => -s.default.compare(e.id, t.id));
+  let A = Array.from(u.default.getAllStickersIterator()),
+    C = A.filter(e => e.type === d.MetaStickerType.GUILD),
+    h = C.filter(e => I(e.guild_id) && (0, r.isSendableSticker)(e, S, t)).sort((e, t) => -s.default.compare(e.id, t.id));
   if (h.length > 5) {
     let s = [h[Math.floor(Math.pow(Math.random(), 2) * h.length)].id];
     l.default.sendStickers(t.id, s, "", {
@@ -45,15 +45,14 @@ async function m(e, t) {
     });
     return
   }
-  let g = c.default.getGuilds(),
-    M = Object.keys(g).filter(I).map(e => a.default.getUsableGuildEmoji(e)).flat().filter(e => null == f.default.getEmojiUnavailableReason({
-      emoji: e,
-      channel: t,
-      guildId: N,
-      intention: T.EmojiIntention.CHAT
-    })).sort((e, t) => -s.default.compare(e.id, t.id));
-  if (M.length > 10) {
-    let n = M[Math.floor(Math.pow(Math.random(), 2) * M.length)];
+  let g = c.default.getGuildIds().filter(I).map(e => a.default.getUsableGuildEmoji(e)).flat().filter(e => null == f.default.getEmojiUnavailableReason({
+    emoji: e,
+    channel: t,
+    guildId: N,
+    intention: T.EmojiIntention.CHAT
+  })).sort((e, t) => -s.default.compare(e.id, t.id));
+  if (g.length > 10) {
+    let n = g[Math.floor(Math.pow(Math.random(), 2) * g.length)];
     l.default.sendMessage(t.id, i.default.parse(t, n.allNamesString), !1, {
       messageReference: {
         guild_id: null !== (_ = t.getGuildId()) && void 0 !== _ ? _ : void 0,
@@ -63,9 +62,9 @@ async function m(e, t) {
     });
     return
   }
-  let O = S.filter(e => e.type === d.MetaStickerType.STANDARD),
-    R = [O[Math.floor(Math.random() * O.length)].id];
-  l.default.sendStickers(t.id, R, "", {
+  let M = A.filter(e => e.type === d.MetaStickerType.STANDARD),
+    O = [M[Math.floor(Math.random() * M.length)].id];
+  l.default.sendStickers(t.id, O, "", {
     messageReference: {
       guild_id: null !== (m = t.getGuildId()) && void 0 !== m ? m : void 0,
       channel_id: t.id,

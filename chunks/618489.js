@@ -674,7 +674,7 @@ var ez = (0, I.default)(function(e) {
   }, [T, S, D]);
   let {
     AnalyticsLocationProvider: y
-  } = (0, M.default)(v.default.RTC_PANEL), j = (0, A.default)(null != u ? u : "", null == o ? void 0 : o.id), w = (0, R.default)(null == o ? void 0 : o.id), B = (0, P.default)();
+  } = (0, M.default)(v.default.RTC_PANEL), j = (0, A.default)(null != u ? u : eU.EMPTY_STRING_GUILD_ID, null == o ? void 0 : o.id), w = (0, R.default)(null == o ? void 0 : o.id), B = (0, P.default)();
   return (0, a.jsx)(y, {
     children: (0, a.jsxs)("div", {
       className: ew.wrapper,

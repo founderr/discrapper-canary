@@ -42,7 +42,7 @@ function d(e) {
     {
       enabled: l
     } = r.useExperiment({
-      guildId: null !== (s = null == e ? void 0 : e.id) && void 0 !== s ? s : "",
+      guildId: null !== (s = null == e ? void 0 : e.id) && void 0 !== s ? s : n.EMPTY_STRING_GUILD_ID,
       location: "dd4beb_3"
     }, {
       autoTrackExposure: !0

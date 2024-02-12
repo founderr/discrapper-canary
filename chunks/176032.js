@@ -22,7 +22,7 @@ var s = n("446674"),
       guild: v,
       user: p,
       onSelect: C
-    } = e, M = null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : "", I = (0, s.useStateFromStores)([i.default], () => null != v && i.default.canManageUser(d.Permissions.BAN_MEMBERS, p, v), [v, p]);
+    } = e, M = null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : d.EMPTY_STRING_GUILD_ID, I = (0, s.useStateFromStores)([i.default], () => null != v && i.default.canManageUser(d.Permissions.BAN_MEMBERS, p, v), [v, p]);
     return (0, l.jsx)(a.Menu, {
       navId: "member-application-context-menu",
       className: h.contextMenu,

@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("851387"),
   _ = s("599417"),
   I = s("84339"),
-  f = s("841098"),
-  T = s("716241"),
+  T = s("841098"),
+  f = s("716241"),
   S = s("685665"),
   m = s("770115"),
   N = s("102985"),
@@ -46,7 +46,7 @@ function P(e) {
     ban: r,
     hideDiscriminator: o,
     onClose: d
-  } = e, [c, I] = l.useState(!1), [f, m] = l.useState(null), {
+  } = e, [c, I] = l.useState(!1), [T, m] = l.useState(null), {
     analyticsLocations: N
   } = (0, S.default)(), g = null !== (t = null == N ? void 0 : N[0]) && void 0 !== t ? t : null;
   async function h() {
@@ -54,7 +54,7 @@ function P(e) {
       m(null), I(!0);
       try {
         await E.default.unbanUser(n.id, i.id), d(), L.default.track(j.AnalyticEvents.GUILD_BAN_REMOVED, {
-          ...(0, T.collectGuildAnalyticsMetadata)(n.id),
+          ...(0, f.collectGuildAnalyticsMetadata)(n.id),
           target_user_id: i.id,
           reason: r.reason,
           location: g
@@ -91,11 +91,11 @@ function P(e) {
       }), (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         children: null != r.reason && "" !== r.reason ? r.reason : G.default.Messages.NO_BAN_REASON
-      }), null != f ? (0, a.jsx)(u.Text, {
+      }), null != T ? (0, a.jsx)(u.Text, {
         className: U.error,
         color: "text-danger",
         variant: "text-sm/normal",
-        children: f.getAnyErrorMessage()
+        children: T.getAnyErrorMessage()
       }) : null]
     }), (0, a.jsxs)(u.ModalFooter, {
       className: U.footer,
@@ -229,7 +229,7 @@ function y(e) {
     } catch (e) {
       o(!1)
     }
-  }, [t, r, n]), f = l.useCallback(e => {
+  }, [t, r, n]), T = l.useCallback(e => {
     "Enter" === e.key && (e.preventDefault(), e.stopPropagation(), I())
   }, [I]);
   return (0, a.jsxs)(u.FormSection, {
@@ -252,7 +252,7 @@ function y(e) {
         placeholder: G.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
         "aria-label": G.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
         onChange: c,
-        onKeyDown: f,
+        onKeyDown: T,
         onClear: _,
         size: C.default.Sizes.MEDIUM,
         isLoading: r
@@ -274,7 +274,7 @@ function F() {
   let {
     guild: n,
     searchQuery: c
-  } = (0, d.default)([M.default], () => M.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, T = (0, I.default)(_), S = _ !== T, [N] = (0, d.default)([M.default], () => M.default.getBans(), [], O.isVersionEqual), C = null !== (e = null == N ? void 0 : N.size) && void 0 !== e ? e : 0, R = (0, f.default)(), x = null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : "", L = l.useRef(null), p = l.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
+  } = (0, d.default)([M.default], () => M.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, f = (0, I.default)(_), S = _ !== f, [N] = (0, d.default)([M.default], () => M.default.getBans(), [], O.isVersionEqual), C = null !== (e = null == N ? void 0 : N.size) && void 0 !== e ? e : 0, R = (0, T.default)(), x = null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : j.EMPTY_STRING_GUILD_ID, L = l.useRef(null), p = l.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
     if (null == t || 0 === e.trim().length) return !1;
     let [
       [s], a
@@ -288,38 +288,38 @@ function F() {
       null != e && p(t)(e) && a.push(e)
     }
     return a
-  }, [p]), D = l.useMemo(() => A(N, c, C), [N, A, c, C]), v = null != N, j = D.length % 1e3 == 0 && D.length > 0 && v, P = 0 === D.length, [b, F] = l.useState({
+  }, [p]), D = l.useMemo(() => A(N, c, C), [N, A, c, C]), v = null != N, P = D.length % 1e3 == 0 && D.length > 0 && v, b = 0 === D.length, [F, H] = l.useState({
     currentPage: 1,
     pageSize: 100
   });
   l.useEffect(() => {
-    S && 1 !== b.currentPage && F(e => ({
+    S && 1 !== F.currentPage && H(e => ({
       ...e,
       currentPage: 1
     }))
-  }, [S, b.currentPage]);
-  let H = l.useCallback(e => {
+  }, [S, F.currentPage]);
+  let k = l.useCallback(e => {
       E.default.fetchGuildBansBatch(x, 1e3, e)
     }, [x]),
-    k = l.useMemo(() => o.chunk(D, b.pageSize), [b.pageSize, D]),
-    w = l.useCallback(e => {
+    w = l.useMemo(() => o.chunk(D, F.pageSize), [F.pageSize, D]),
+    V = l.useCallback(e => {
       var t, s, a;
       null === (t = L.current) || void 0 === t || t.scrollToSectionTop(0);
-      let l = (e + 1) * b.pageSize,
+      let l = (e + 1) * F.pageSize,
         n = l > D.length;
-      n && j && !_ && (V.current = null !== (a = null === (s = D[D.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, H(V.current)), (null != k[e - 1] || j) && F(t => ({
+      n && P && !_ && (Y.current = null !== (a = null === (s = D[D.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, k(Y.current)), (null != w[e - 1] || P) && H(t => ({
         ...t,
         currentPage: e
       }))
-    }, [b.pageSize, D, j, k, H, _]),
-    V = l.useRef(null);
+    }, [F.pageSize, D, P, w, k, _]),
+    Y = l.useRef(null);
   l.useEffect(() => {
-    H(V.current)
-  }, [H]);
-  let Y = l.useMemo(() => {
+    k(Y.current)
+  }, [k]);
+  let W = l.useMemo(() => {
     var e;
-    return null !== (e = k[b.currentPage - 1]) && void 0 !== e ? e : []
-  }, [k, b.currentPage]);
+    return null !== (e = w[F.currentPage - 1]) && void 0 !== e ? e : []
+  }, [w, F.currentPage]);
   return null == n ? null : (0, a.jsxs)("div", {
     className: i(U.container),
     children: [(0, a.jsx)(y, {
@@ -327,12 +327,12 @@ function F() {
       storedSearchQuery: c
     }), (0, a.jsxs)("div", {
       className: i(U.scrollerContainer),
-      children: [!P && (0, a.jsx)(B, {
+      children: [!b && (0, a.jsx)(B, {
         guild: n,
         bans: N,
-        sortedBans: Y,
+        sortedBans: W,
         ref: L
-      }), !j && P && (0, a.jsxs)(h.default, {
+      }), !P && b && (0, a.jsxs)(h.default, {
         theme: R,
         className: U.emptyState,
         children: [(0, a.jsx)(h.EmptyStateImage, {
@@ -352,10 +352,10 @@ function F() {
       className: i(U.paginationContainer),
       children: (0, a.jsx)(u.Paginator, {
         className: i(U.paginationInput),
-        totalCount: D.length + (j ? b.pageSize : 0),
-        pageSize: b.pageSize,
-        currentPage: b.currentPage,
-        onPageChange: w,
+        totalCount: D.length + (P ? F.pageSize : 0),
+        pageSize: F.pageSize,
+        currentPage: F.currentPage,
+        onPageChange: V,
         maxVisiblePages: 9
       })
     })]

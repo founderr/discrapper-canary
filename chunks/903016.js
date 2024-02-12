@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return N
   }
-}), n("808653"), n("424973");
+}), n("808653"), n("424973"), n("222007");
 var s = n("37983"),
   r = n("884691"),
   l = n("414456"),
@@ -16,9 +16,10 @@ var s = n("37983"),
   f = n("145131"),
   h = n("965397"),
   E = n("423487"),
-  _ = n("782340"),
-  p = n("47274");
-class m extends r.PureComponent {
+  _ = n("299039"),
+  p = n("782340"),
+  m = n("47274");
+class I extends r.PureComponent {
   render() {
     let {
       onClose: e
@@ -36,7 +37,7 @@ class m extends r.PureComponent {
   }
 }
 
-function I(e) {
+function S(e) {
   let {
     imageClass: t,
     children: n,
@@ -44,12 +45,12 @@ function I(e) {
     onDismissError: l
   } = e;
   return (0, s.jsxs)("div", {
-    className: p.content,
+    className: m.content,
     children: [(0, s.jsx)("div", {
-      className: a(p.image, t)
+      className: a(m.image, t)
     }), n, (0, s.jsx)(o.default, {
       children: null != r ? (0, s.jsx)(h.default, {
-        className: p.error,
+        className: m.error,
         children: (0, s.jsx)(u.FormErrorBlock, {
           onDismiss: l,
           children: r.message
@@ -58,18 +59,18 @@ function I(e) {
     })]
   })
 }
-let S = e => {
+let g = e => {
   let {
     canceledCount: t
   } = e, n = (0, i.useStateFromStores)([d.default], () => d.default.getPremiumTypeSubscription());
   return null == n ? null : (0, s.jsxs)("div", {
-    className: p.pendingCancellation,
+    className: m.pendingCancellation,
     children: [(0, s.jsx)(E.default, {
-      className: p.pendingCancellationIcon
+      className: m.pendingCancellationIcon
     }), (0, s.jsx)(u.Text, {
       variant: "text-md/normal",
-      className: p.pendingCancellationMessage,
-      children: _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_CANCEL_WARNING.format({
+      className: m.pendingCancellationMessage,
+      children: p.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_CANCEL_WARNING.format({
         date: n.currentPeriodEnd,
         canceledCount: t
       })
@@ -77,7 +78,7 @@ let S = e => {
   })
 };
 
-function g(e) {
+function L(e) {
   let {
     imageClass: t,
     blurb: n,
@@ -88,7 +89,7 @@ function g(e) {
     slotCount: o = 1,
     canceledCount: d = 0
   } = e;
-  return (0, s.jsxs)(I, {
+  return (0, s.jsxs)(S, {
     imageClass: t,
     error: a,
     onDismissError: i,
@@ -96,18 +97,18 @@ function g(e) {
       variant: "text-md/normal",
       children: n
     }), (0, s.jsx)(c.default, {
-      className: p.guildCard,
+      className: m.guildCard,
       guild: r,
       subscriptionChange: o
     }), (0, s.jsx)(u.Text, {
       variant: "text-md/normal",
       children: l
-    }), d > 0 ? (0, s.jsx)(S, {
+    }), d > 0 ? (0, s.jsx)(g, {
       canceledCount: d
     }) : null]
   })
 }
-class L extends r.PureComponent {
+class C extends r.PureComponent {
   render() {
     let {
       confirmation: e,
@@ -127,12 +128,12 @@ class L extends r.PureComponent {
         color: u.Button.Colors.PRIMARY,
         onClick: l,
         disabled: n,
-        children: _.default.Messages.CANCEL
+        children: p.default.Messages.CANCEL
       })]
     })
   }
 }
-class C extends r.PureComponent {
+class R extends r.PureComponent {
   render() {
     let {
       guild: e,
@@ -150,10 +151,10 @@ class C extends r.PureComponent {
       canceledCount: _
     } = this.props;
     return (0, s.jsxs)(r.Fragment, {
-      children: [(0, s.jsx)(m, {
+      children: [(0, s.jsx)(I, {
         text: t
       }), (0, s.jsx)(u.ModalContent, {
-        children: (0, s.jsx)(g, {
+        children: (0, s.jsx)(L, {
           guild: e,
           blurb: n,
           warning: l,
@@ -162,7 +163,7 @@ class C extends r.PureComponent {
           onDismissError: E,
           canceledCount: _
         })
-      }), (0, s.jsx)(L, {
+      }), (0, s.jsx)(C, {
         confirmation: a,
         confirmationLabel: i,
         isModifyingSubscription: d,
@@ -172,7 +173,7 @@ class C extends r.PureComponent {
     })
   }
 }
-C.Header = m, C.ApplyBody = g, C.TransferBody = function(e) {
+R.Header = I, R.ApplyBody = L, R.TransferBody = function(e) {
   var t, n;
   let {
     imageClass: l,
@@ -183,8 +184,8 @@ C.Header = m, C.ApplyBody = g, C.TransferBody = function(e) {
     onDismissError: f,
     slotCount: h = 1,
     canceledCount: E = 0
-  } = e, m = r.useRef(i), g = null === (t = m.current) || void 0 === t ? void 0 : t.length, L = null === (n = m.current) || void 0 === n ? void 0 : n.reduce((e, t) => (!e.hasOwnProperty(t.id) && (e[t.id] = []), e[t.id].push(t), e), {});
-  return (0, s.jsxs)(I, {
+  } = e, I = r.useRef(i), L = null === (t = I.current) || void 0 === t ? void 0 : t.length, C = null === (n = I.current) || void 0 === n ? void 0 : n.reduce((e, t) => (!e.hasOwnProperty(t.id) && (e[t.id] = []), e[t.id].push(t), e), {});
+  return (0, s.jsxs)(S, {
     imageClass: l,
     error: d,
     onDismissError: f,
@@ -193,30 +194,30 @@ C.Header = m, C.ApplyBody = g, C.TransferBody = function(e) {
       children: a
     }), (0, s.jsx)(u.Text, {
       variant: "text-xs/bold",
-      className: p.transferGuildCardHeader,
-      children: _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_TRANSFER_FROM_GUILD.format({
-        guildCount: g
+      className: m.transferGuildCardHeader,
+      children: p.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_TRANSFER_FROM_GUILD.format({
+        guildCount: L
       })
-    }), null != L ? Object.keys(L).map(e => (0, s.jsx)(c.default, {
-      className: p.transferFromGuildCard,
-      guild: L[e][0],
-      subscriptionChange: -1 * L[e].length
+    }), null != C ? _.default.keys(C).map(e => (0, s.jsx)(c.default, {
+      className: m.transferFromGuildCard,
+      guild: C[e][0],
+      subscriptionChange: -1 * C[e].length
     }, e)) : null, (0, s.jsx)(u.Text, {
       variant: "text-xs/normal",
-      className: p.transferGuildCardHeader,
-      children: _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_TRANSFER_TO_GUILD.format({
+      className: m.transferGuildCardHeader,
+      children: p.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_TRANSFER_TO_GUILD.format({
         slotCount: h
       })
     }), (0, s.jsx)("div", {
-      className: p.activeTransferGuildCardBorder,
+      className: m.activeTransferGuildCardBorder,
       children: (0, s.jsx)(c.default, {
-        className: p.transferToGuildCard,
+        className: m.transferToGuildCard,
         guild: o,
         subscriptionChange: null != i ? i.length : 1
       })
-    }), E > 0 ? (0, s.jsx)(S, {
+    }), E > 0 ? (0, s.jsx)(g, {
       canceledCount: E
     }) : null]
   })
-}, C.Footer = L;
-var R = C
+}, R.Footer = C;
+var N = R

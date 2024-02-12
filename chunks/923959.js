@@ -46,7 +46,7 @@ let v = "SELECTABLE",
       name: C.default.Messages.UNCATEGORIZED
     })
   },
-  b = G("null"),
+  b = G(I.NULL_STRING_GUILD_ID),
   M = [],
   U = {};
 

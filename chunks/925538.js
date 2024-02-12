@@ -19,8 +19,8 @@ var a = s("37983"),
   E = s("679653"),
   _ = s("413476"),
   I = s("239380"),
-  f = s("923959"),
-  T = s("525065"),
+  T = s("923959"),
+  f = s("525065"),
   S = s("305961"),
   m = s("957255"),
   N = s("27618"),
@@ -71,14 +71,14 @@ let D = "dismissedCommunityFeaturesUpsell",
       discoveryEnabled: t,
       onboardingEnabled: s,
       guild: n
-    } = e, [i, c] = l.useState(!0 === d.default.get(D)), E = (0, r.useStateFromStores)([T.default], () => {
+    } = e, [i, c] = l.useState(!0 === d.default.get(D)), E = (0, r.useStateFromStores)([f.default], () => {
       var e;
-      return null !== (e = T.default.getMemberCount(n.id)) && void 0 !== e ? e : 0
-    }), [_, f] = l.useState(!1);
+      return null !== (e = f.default.getMemberCount(n.id)) && void 0 !== e ? e : 0
+    }), [_, T] = l.useState(!1);
     l.useEffect(() => {
       o.default.get(L.Endpoints.GUILD_ADMIN_SERVER_ELIGIBILITY(n.id)).then(e => {
-        f(e.body.eligible_for_admin_server)
-      }).catch(() => f(!1))
+        T(e.body.eligible_for_admin_server)
+      }).catch(() => T(!1))
     }, []);
     let m = (0, r.useStateFromStores)([S.default], () => S.default.getGuild("942897714956472401")),
       N = n.isCommunity() && E >= 1e3 && _ && !(null != m);
@@ -167,20 +167,20 @@ let D = "dismissedCommunityFeaturesUpsell",
         canManageGuild: m.default.can(L.Permissions.MANAGE_GUILD, t),
         isGuildAdmin: m.default.can(L.Permissions.ADMINISTRATOR, t)
       })),
-      o = (0, r.useStateFromStores)([f.default], () => null != t ? f.default.getChannels(t.id) : null),
+      o = (0, r.useStateFromStores)([T.default], () => null != t ? T.default.getChannels(t.id) : null),
       c = l.useMemo(O.calculateLocaleOptions, []),
       I = !0 !== d.default.get(D),
       {
-        enableRaidAlerts: T
+        enableRaidAlerts: f
       } = _.RaidAlertExperiment.useExperiment({
-        guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "",
+        guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : L.EMPTY_STRING_GUILD_ID,
         location: "c1af51_2"
       }, {
         autoTrackExposure: s
       });
     if (null == t) return null;
     let S = [];
-    null != o && o[0, f.GUILD_SELECTABLE_CHANNELS_KEY].forEach(e => {
+    null != o && o[0, T.GUILD_SELECTABLE_CHANNELS_KEY].forEach(e => {
       let {
         channel: t
       } = e;
@@ -323,7 +323,7 @@ let D = "dismissedCommunityFeaturesUpsell",
         })]
       }), (0, a.jsx)(u.FormDivider, {
         className: A.divider
-      }), T && (0, a.jsxs)(a.Fragment, {
+      }), f && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(u.FormSection, {
           className: i(A.twoColumnFormSection, A.firstSection),
           children: [(0, a.jsxs)("div", {

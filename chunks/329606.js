@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("449008"),
   _ = s("701909"),
   I = s("523096"),
-  f = s("353575"),
-  T = s("296839"),
+  T = s("353575"),
+  f = s("296839"),
   S = s("4443"),
   m = s("151866"),
   N = s("646834"),
@@ -39,11 +39,11 @@ function O(e) {
   } = (0, m.useAutomodEditingRuleState)(), {
     guild: D,
     subsection: v
-  } = (0, n.useStateFromStoresObject)([o.default], () => o.default.getProps()), j = null !== (s = null !== (t = null == D ? void 0 : D.id) && void 0 !== t ? t : O) && void 0 !== s ? s : "", G = null != A, [U] = (0, f.useSyncAutomodRulesEffect)(j), {
+  } = (0, n.useStateFromStoresObject)([o.default], () => o.default.getProps()), j = null !== (s = null !== (t = null == D ? void 0 : D.id) && void 0 !== t ? t : O) && void 0 !== s ? s : R.EMPTY_STRING_GUILD_ID, G = null != A, [U] = (0, T.useSyncAutomodRulesEffect)(j), {
     rulesByTriggerType: P
-  } = (0, f.useAutomodRulesList)(j), b = {
-    [T.AutomodTriggerCategory.MEMBERS]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
-    [T.AutomodTriggerCategory.CONTENT]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
+  } = (0, T.useAutomodRulesList)(j), b = {
+    [f.AutomodTriggerCategory.MEMBERS]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
+    [f.AutomodTriggerCategory.CONTENT]: x.default.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
   }, B = l.useMemo(() => Object.values(null != P ? P : {}).flat().filter(E.isNotNullish), [P]);
   l.useEffect(() => {
     G && M(null)
@@ -58,7 +58,7 @@ function O(e) {
           return s === e
         })) || void 0 === s ? void 0 : s.name) && void 0 !== a ? a : null
       }
-      return null != t ? (0, T.triggerConfigs)[t].getDefaultRuleName() : null
+      return null != t ? (0, f.triggerConfigs)[t].getDefaultRuleName() : null
     }, [B]),
     F = l.useMemo(() => {
       var e, t;
@@ -67,7 +67,7 @@ function O(e) {
   l.useEffect(() => {
     p(G, (0, h.createOnPreventNavigation)(F))
   }, [p, G, F]);
-  let H = (0, T.useAvailableTriggerTypes)(j),
+  let H = (0, f.useAvailableTriggerTypes)(j),
     k = e => (0, a.jsx)(a.Fragment, {
       children: e.map(e => {
         var t;

@@ -168,7 +168,7 @@ function O(t, e) {
 
 function h(t) {
   var e;
-  let n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "",
+  let n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : P.EMPTY_STRING_GUILD_ID,
     u = (0, l.useStateFromStores)([S.default], () => S.default.can(P.Permissions.ADMINISTRATOR, t)),
     {
       entitlementsLoaded: i

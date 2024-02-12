@@ -14,7 +14,7 @@ function u(e) {
   let {
     guildId: t
   } = e, n = s.CommunityEndlessInvitesExperiment.useExperiment({
-    guildId: null != t ? t : "",
+    guildId: null != t ? t : r.EMPTY_STRING_GUILD_ID,
     location: "6798be_2"
   }), u = (0, l.default)([i.default], () => i.default.getGuild(t));
   return null != t && function(e) {
@@ -25,7 +25,7 @@ function u(e) {
     } = e, {
       defaultInvitesToNeverExpire: i
     } = null != l ? l : s.CommunityEndlessInvitesExperiment.getCurrentConfig({
-      guildId: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : "",
+      guildId: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : r.EMPTY_STRING_GUILD_ID,
       location: "6798be_1"
     });
     if ((null == n ? void 0 : n.hasFeature(r.GuildFeatures.HUB)) === !0 || (null == n ? void 0 : n.hasFeature(r.GuildFeatures.COMMUNITY)) === !0 && i) return a.default.INVITE_OPTIONS_FOREVER.value

@@ -24,8 +24,8 @@ var l = n("414456"),
   f = n("593195"),
   O = n("36694"),
   S = n("991497"),
-  m = n("733160"),
-  T = n("599110"),
+  T = n("733160"),
+  m = n("599110"),
   D = n("900938"),
   A = n("131835"),
   g = n("259483"),
@@ -49,7 +49,7 @@ let R = () => [{
     selected: !1
   }],
   p = () => [{
-    channelIcon: () => (0, a.jsx)(m.default, {
+    channelIcon: () => (0, a.jsx)(T.default, {
       className: L.channelIcon
     }),
     channel: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_1,
@@ -160,7 +160,7 @@ function M() {
     n = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
     {
       homeSettingsEnabled: l
-    } = (0, c.useOnboardingHomeAdminExperiment)(null != e ? e : "");
+    } = (0, c.useOnboardingHomeAdminExperiment)(null != e ? e : G.EMPTY_STRING_GUILD_ID);
   return null == e || null == t || null == n ? null : (0, a.jsxs)("div", {
     className: L.upsellContainer,
     children: [(0, a.jsxs)("div", {
@@ -185,7 +185,7 @@ function M() {
         className: L.upsellButtons,
         children: (0, a.jsx)(r.Button, {
           onClick: function() {
-            null != e && (T.default.track(G.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+            null != e && (m.default.track(G.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
               ...(0, d.collectGuildAnalyticsMetadata)(e),
               step: g.GuildSettingsOnboardingPage[g.GuildSettingsOnboardingPage.LANDING],
               back: !1,

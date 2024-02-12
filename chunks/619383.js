@@ -208,7 +208,7 @@ function O(e) {
     className: I.wrapper,
     children: [(0, a.jsx)("div", {
       className: I.container,
-      children: Object.keys(r).map(e => (0, a.jsx)(A, {
+      children: T.default.keys(r).map(e => (0, a.jsx)(A, {
         guildId: e,
         guildBoostSlotRecords: r[e],
         premiumSubscription: s,

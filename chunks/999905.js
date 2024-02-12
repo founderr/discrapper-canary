@@ -16,8 +16,8 @@ var a = s("37983"),
   E = s("272030"),
   _ = s("430568"),
   I = s("206230"),
-  f = s("679653"),
-  T = s("419830"),
+  T = s("679653"),
+  f = s("419830"),
   S = s("385976"),
   m = s("233706"),
   N = s("223170"),
@@ -53,8 +53,8 @@ let b = "WELCOME_CHANNEL",
       D = (0, u.useStateFromStores)([C.default], () => C.default.getChannel(o.channel_id)),
       v = (0, u.useStateFromStores)([S.default], () => null != o.emoji_id ? S.default.getUsableCustomEmojiById(o.emoji_id) : null),
       B = null != D && M.default.canEveryoneRole(j.Permissions.VIEW_CHANNEL, D),
-      y = null !== (t = (0, T.getChannelIconComponent)(D)) && void 0 !== t ? t : O.default,
-      F = (0, f.default)(D, !1),
+      y = null !== (t = (0, f.getChannelIconComponent)(D)) && void 0 !== t ? t : O.default,
+      F = (0, T.default)(D, !1),
       {
         homeSettingsEnabled: H
       } = (0, m.useOnboardingHomeAdminExperiment)(r),
@@ -164,13 +164,13 @@ var y = e => {
   } = e, {
     welcomeSettings: r,
     originalWelcomeSettings: d
-  } = (0, u.useStateFromStores)([g.default], () => g.default.getSettingsProps()), E = (0, u.useStateFromStores)([I.default], () => I.default.useReducedMotion), [_, f] = l.useState(null), [T, S] = l.useState(!1), [h, C] = l.useState(!1), {
+  } = (0, u.useStateFromStores)([g.default], () => g.default.getSettingsProps()), E = (0, u.useStateFromStores)([I.default], () => I.default.useReducedMotion), [_, T] = l.useState(null), [f, S] = l.useState(!1), [h, C] = l.useState(!1), {
     description: O,
     channels: M,
     enabled: b
   } = r, {
     homeSettingsEnabled: y
-  } = (0, m.useOnboardingHomeAdminExperiment)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : ""), F = () => {
+  } = (0, m.useOnboardingHomeAdminExperiment)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : j.EMPTY_STRING_GUILD_ID), F = () => {
     if (null != n) O !== d.description && ((0, N.saveWelcomeScreen)(n.id, {
       description: null == O ? void 0 : O.trim()
     }), S(!0))
@@ -201,7 +201,7 @@ var y = e => {
       l = [...M];
     null != t && t !== a && (l.splice(a, 1), l.splice(t, 0, e), (0, N.updateSettings)({
       channels: l
-    })), s ? (H(l), f(null)) : f(t)
+    })), s ? (H(l), T(null)) : T(t)
   }, W = l.useRef(!1);
   l.useEffect(() => (null != n && i && (0, c.openModalLazy)(async () => {
     let {
@@ -217,7 +217,7 @@ var y = e => {
   }), () => {
     W.current = !0
   }), []), l.useEffect(() => () => {
-    if (W.current && T) {
+    if (W.current && f) {
       let e = [],
         t = [],
         s = !1;
@@ -232,7 +232,7 @@ var y = e => {
         is_enabled: b
       })
     }
-  }, [T, M, O, b, n, W]), l.useEffect(() => () => (0, N.clearWelcomeScreenSettings)(), []);
+  }, [f, M, O, b, n, W]), l.useEffect(() => () => (0, N.clearWelcomeScreenSettings)(), []);
   let z = l.useCallback(() => {
     null != n && D.default.open(n.id, j.GuildSettingsSections.ONBOARDING)
   }, [n]);

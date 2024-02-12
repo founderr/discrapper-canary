@@ -19,7 +19,7 @@ var n = s("957255"),
 
 function c(e) {
   var t;
-  let s = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
+  let s = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.EMPTY_STRING_GUILD_ID,
     {
       enableRaidReporting: i
     } = r.ReportRaidExperiment.useExperiment({
@@ -44,7 +44,7 @@ function c(e) {
 
 function E(e) {
   var t;
-  let s = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
+  let s = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.EMPTY_STRING_GUILD_ID,
     a = (0, l.useStateFromStores)([n.default], () => (function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : n.default;
       return t.can(u.Permissions.MANAGE_GUILD, e)

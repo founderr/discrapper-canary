@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return u
   },
   default: function() {
-    return P
+    return O
   }
 });
 var l, u, i = n("37983"),
@@ -73,7 +73,7 @@ function V(e) {
   })
 }
 
-function O(e) {
+function P(e) {
   let {
     guild: t,
     channel: n,
@@ -114,7 +114,7 @@ function O(e) {
   })
 }
 
-function P(e) {
+function O(e) {
   var t;
   let {
     className: n,
@@ -129,54 +129,54 @@ function P(e) {
     isActive: h,
     isUserLurking: N,
     isJoined: p = !1,
-    isMember: A = !1,
-    isHub: U = !1,
-    speakers: V,
-    speakerCount: P,
-    rsvped: j,
-    canInvite: k,
-    location: b,
-    truncate: F,
-    onContextMenu: w,
-    onJoinClick: H,
-    onJoinGuildClick: B,
-    onGoToGuildClick: W,
-    onRsvpClick: z,
-    onStartClick: Y,
-    onInviteClick: q,
-    onEndClick: K,
-    onClick: Z,
-    isNew: J,
-    guildEventId: X,
-    eventPreview: Q,
-    recurrenceRule: $,
-    recurrenceId: ee
-  } = e, et = (0, I.isChannelPublic)(u, E), en = E === M.GuildScheduledEventEntityTypes.EXTERNAL, {
-    analyticsLocations: el
+    isMember: U = !1,
+    isHub: V = !1,
+    speakers: O,
+    speakerCount: j,
+    rsvped: k,
+    canInvite: b,
+    location: F,
+    truncate: w,
+    onContextMenu: H,
+    onJoinClick: B,
+    onJoinGuildClick: W,
+    onGoToGuildClick: z,
+    onRsvpClick: Y,
+    onStartClick: q,
+    onInviteClick: K,
+    onEndClick: Z,
+    onClick: J,
+    isNew: X,
+    guildEventId: Q,
+    eventPreview: $,
+    recurrenceRule: ee,
+    recurrenceId: et
+  } = e, en = (0, I.isChannelPublic)(u, E), el = E === M.GuildScheduledEventEntityTypes.EXTERNAL, {
+    analyticsLocations: eu
   } = (0, f.default)(c.default.GUILD_EVENT_CARD), {
-    showRecurringEventsDesktop: eu
+    showRecurringEventsDesktop: ei
   } = C.default.useExperiment({
-    guildId: null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "",
-    location: el[0]
+    guildId: null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : A.EMPTY_STRING_GUILD_ID,
+    location: eu[0]
   }, {
     autoTrackExposure: !1
-  }), ei = (0, d.useStateFromStores)([m.default], () => m.default.getGuildScheduledEvent(X)), ea = [];
-  if (null != $ && null != ei) {
-    let e = (0, _.getRRule)($);
-    ea = (0, _.generateNextRecurrences)(4, e, new Date(ei.scheduled_start_time))
+  }), ea = (0, d.useStateFromStores)([m.default], () => m.default.getGuildScheduledEvent(Q)), er = [];
+  if (null != ee && null != ea) {
+    let e = (0, _.getRRule)(ee);
+    er = (0, _.generateNextRecurrences)(4, e, new Date(ea.scheduled_start_time))
   }
-  let er = eu && ea.length > 0;
+  let es = ei && er.length > 0;
   return (0, i.jsxs)(o.ClickableContainer, {
     "aria-label": r,
-    onClick: () => null == Z ? void 0 : Z(ee),
-    onContextMenu: w,
+    onClick: () => null == J ? void 0 : J(et),
+    onContextMenu: H,
     className: s(y.card, {
       [y.joined]: p,
       [y.lurking]: N
     }, n),
     children: [(0, i.jsxs)("div", {
       className: s(y.padding, {
-        [y.isRecurring]: er
+        [y.isRecurring]: es
       }),
       children: [0 === g && (0, i.jsx)(x.default, {
         source: S
@@ -185,65 +185,65 @@ function P(e) {
         name: r,
         description: v,
         imageSource: 1 === g ? S : null,
-        truncate: F,
+        truncate: w,
         guildId: null == l ? void 0 : l.id,
-        isHub: U,
-        isNew: J,
-        guildEventId: X,
-        eventPreview: Q,
-        recurrenceId: ee
-      }), h && null != l && null != V && P > 0 && (0, i.jsx)(L.default, {
+        isHub: V,
+        isNew: X,
+        guildEventId: Q,
+        eventPreview: $,
+        recurrenceId: et
+      }), h && null != l && null != O && j > 0 && (0, i.jsx)(L.default, {
         guild: l,
-        speakers: V,
-        speakerCount: P,
+        speakers: O,
+        speakerCount: j,
         className: y.spacing
       }), (0, i.jsx)("hr", {
         className: y.divider
       }), (0, i.jsxs)("div", {
         className: s(y.inline, y.footer),
-        children: [(0, i.jsx)(O, {
+        children: [(0, i.jsx)(P, {
           guild: l,
           channel: u,
-          onJoinClick: H,
-          handleLocationClick: en ? e => e.stopPropagation() : void 0,
-          location: b,
-          isExternal: en,
-          isHub: U
-        }), U ? (0, i.jsx)(R.default, {
+          onJoinClick: B,
+          handleLocationClick: el ? e => e.stopPropagation() : void 0,
+          location: F,
+          isExternal: el,
+          isHub: V
+        }), V ? (0, i.jsx)(R.default, {
           isActive: h,
           isUserLurking: N,
-          isMember: A,
-          rsvped: j,
-          onRsvpClick: z,
-          onJoinGuildClick: B,
-          onGoToGuildClick: W,
+          isMember: U,
+          rsvped: k,
+          onRsvpClick: Y,
+          onJoinGuildClick: W,
+          onGoToGuildClick: z,
           guildName: null == l ? void 0 : l.name,
-          canInvite: k,
-          isChannelPublic: et,
-          onInviteClick: q
+          canInvite: b,
+          isChannelPublic: en,
+          onInviteClick: K
         }) : (0, i.jsx)(T.default, {
           entityType: E,
           isJoined: p,
           isActive: h,
           isUserLurking: N,
-          rsvped: j,
-          canInvite: k,
-          isChannelPublic: et,
-          onContextMenu: w,
-          onJoinClick: H,
-          onRsvpClick: z,
-          onStartClick: Y,
-          onInviteClick: q,
-          onEndClick: K
+          rsvped: k,
+          canInvite: b,
+          isChannelPublic: en,
+          onContextMenu: H,
+          onJoinClick: B,
+          onRsvpClick: Y,
+          onStartClick: q,
+          onInviteClick: K,
+          onEndClick: Z
         })]
-      }), er && (0, i.jsx)("hr", {
+      }), es && (0, i.jsx)("hr", {
         className: y.divider
       })]
-    }), er && (0, i.jsx)(G.default, {
+    }), es && (0, i.jsx)(G.default, {
       guildId: null == l ? void 0 : l.id,
-      recurrenceRule: $,
-      guildEventId: X,
-      onRecurrenceClick: Z
+      recurrenceRule: ee,
+      guildEventId: Q,
+      onRecurrenceClick: J
     })]
   })
 }(l = u || (u = {}))[l.BANNER = 0] = "BANNER", l[l.THUMBNAIL = 1] = "THUMBNAIL"

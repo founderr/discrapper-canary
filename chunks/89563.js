@@ -1,9 +1,9 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return I
   }
-});
+}), s("222007");
 var a = s("37983");
 s("884691");
 var n = s("77078"),
@@ -13,117 +13,118 @@ var n = s("77078"),
   o = s("305961"),
   d = s("701909"),
   u = s("773336"),
-  c = s("845579"),
-  S = s("49111"),
-  E = s("782340"),
-  T = s("852003"),
-  f = s("926622");
+  c = s("299039"),
+  S = s("845579"),
+  E = s("49111"),
+  T = s("782340"),
+  f = s("852003"),
+  m = s("926622");
 
-function m() {
-  let e = c.ShowCurrentGame.useSetting(),
-    t = c.DefaultGuildsActivityRestricted.useSetting(),
-    s = u.isPlatformEmbedded ? E.default.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : E.default.Messages.SHOW_CURRENT_ACTIVITY_DESC,
+function _() {
+  let e = S.ShowCurrentGame.useSetting(),
+    t = S.DefaultGuildsActivityRestricted.useSetting(),
+    s = u.isPlatformEmbedded ? T.default.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : T.default.Messages.SHOW_CURRENT_ACTIVITY_DESC,
     l = e => {
-      c.DefaultGuildsActivityRestricted.updateSetting(e), ! function(e) {
+      S.DefaultGuildsActivityRestricted.updateSetting(e), ! function(e) {
         let t = () => {
-          c.ActivityRestrictedGuilds.updateSetting(e ? Object.keys(o.default.getGuilds()) : [])
+          S.ActivityRestrictedGuilds.updateSetting(e ? c.default.keys(o.default.getGuilds()) : [])
         };
         (0, n.openModal)(e => (0, a.jsx)(n.ConfirmModal, {
-          header: E.default.Messages.USER_DM_SETTINGS_TITLE,
-          confirmText: E.default.Messages.NO_TEXT,
-          cancelText: E.default.Messages.YES_TEXT,
+          header: T.default.Messages.USER_DM_SETTINGS_TITLE,
+          confirmText: T.default.Messages.NO_TEXT,
+          cancelText: T.default.Messages.YES_TEXT,
           onCancel: t,
           confirmButtonColor: n.Button.Colors.BRAND,
           ...e,
           children: (0, a.jsx)(n.Text, {
             variant: "text-md/normal",
-            children: E.default.Messages.ACTIVITY_RESTRICTION_MODAL_DESC
+            children: T.default.Messages.ACTIVITY_RESTRICTION_MODAL_DESC
           })
         }))
       }(e)
     };
   return (0, a.jsxs)(n.FormSection, {
-    className: f.marginBottom40,
+    className: m.marginBottom40,
     children: [(0, a.jsx)(n.FormTitle, {
       tag: n.FormTitleTags.H5,
-      className: f.marginBottom8,
-      children: E.default.Messages.ACTIVITY_STATUS
+      className: m.marginBottom8,
+      children: T.default.Messages.ACTIVITY_STATUS
     }), (0, a.jsx)(n.FormSwitch, {
       value: e,
-      onChange: e => c.ShowCurrentGame.updateSetting(e),
+      onChange: e => S.ShowCurrentGame.updateSetting(e),
       note: s,
-      children: E.default.Messages.SHOW_CURRENT_ACTIVITY
+      children: T.default.Messages.SHOW_CURRENT_ACTIVITY
     }), (0, a.jsx)(n.FormSwitch, {
       value: !t,
-      note: E.default.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({
-        helpdeskArticle: d.default.getArticleURL(S.HelpdeskArticles.ACTIVITY_STATUS_SETTINGS)
+      note: T.default.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({
+        helpdeskArticle: d.default.getArticleURL(E.HelpdeskArticles.ACTIVITY_STATUS_SETTINGS)
       }),
       onChange: e => l(!e),
-      children: E.default.Messages.ACTIVITY_RESTRICTION_DEFAULT
-    })]
-  })
-}
-
-function _() {
-  let e = c.AllowActivityPartyPrivacyFriends.useSetting(),
-    t = c.AllowActivityPartyPrivacyVoiceChannel.useSetting();
-  return (0, a.jsxs)(n.FormSection, {
-    className: f.marginBottom40,
-    children: [(0, a.jsx)(n.FormTitle, {
-      tag: n.FormTitleTags.H5,
-      className: f.marginBottom8,
-      children: E.default.Messages.ACTIVITY_PARTY_PRIVACY
-    }), (0, a.jsx)(n.FormSwitch, {
-      value: e,
-      note: E.default.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP,
-      onChange: e => c.AllowActivityPartyPrivacyFriends.updateSetting(e),
-      children: E.default.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS
-    }), (0, a.jsx)(n.FormSwitch, {
-      value: t,
-      note: E.default.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP,
-      onChange: e => c.AllowActivityPartyPrivacyVoiceChannel.updateSetting(e),
-      children: E.default.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL
+      children: T.default.Messages.ACTIVITY_RESTRICTION_DEFAULT
     })]
   })
 }
 
 function g() {
+  let e = S.AllowActivityPartyPrivacyFriends.useSetting(),
+    t = S.AllowActivityPartyPrivacyVoiceChannel.useSetting();
   return (0, a.jsxs)(n.FormSection, {
-    className: f.marginBottom40,
-    children: [(0, a.jsxs)(n.FormTitle, {
+    className: m.marginBottom40,
+    children: [(0, a.jsx)(n.FormTitle, {
       tag: n.FormTitleTags.H5,
-      className: f.marginBottom8,
-      children: [E.default.Messages.BROADCASTING_SETTINGS, (0, a.jsx)(i.default, {
-        className: T.betaTag
-      })]
-    }), (0, a.jsx)(n.FormText, {
-      type: n.FormText.Types.DESCRIPTION,
-      className: f.marginBottom20,
-      children: E.default.Messages.BROADCASTING_SETTINGS_DESCRIPTION
-    }), (0, a.jsx)(n.FormItem, {
-      children: (0, a.jsx)(n.Button, {
-        onClick: () => (0, r.openBroadcastingPrivacySettingsModal)(),
-        size: n.ButtonSizes.SMALL,
-        children: E.default.Messages.BROADCASTING_SETTINGS_CTA
-      })
+      className: m.marginBottom8,
+      children: T.default.Messages.ACTIVITY_PARTY_PRIVACY
+    }), (0, a.jsx)(n.FormSwitch, {
+      value: e,
+      note: T.default.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP,
+      onChange: e => S.AllowActivityPartyPrivacyFriends.updateSetting(e),
+      children: T.default.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS
+    }), (0, a.jsx)(n.FormSwitch, {
+      value: t,
+      note: T.default.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP,
+      onChange: e => S.AllowActivityPartyPrivacyVoiceChannel.updateSetting(e),
+      children: T.default.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL
     })]
   })
 }
 
 function h() {
+  return (0, a.jsxs)(n.FormSection, {
+    className: m.marginBottom40,
+    children: [(0, a.jsxs)(n.FormTitle, {
+      tag: n.FormTitleTags.H5,
+      className: m.marginBottom8,
+      children: [T.default.Messages.BROADCASTING_SETTINGS, (0, a.jsx)(i.default, {
+        className: f.betaTag
+      })]
+    }), (0, a.jsx)(n.FormText, {
+      type: n.FormText.Types.DESCRIPTION,
+      className: m.marginBottom20,
+      children: T.default.Messages.BROADCASTING_SETTINGS_DESCRIPTION
+    }), (0, a.jsx)(n.FormItem, {
+      children: (0, a.jsx)(n.Button, {
+        onClick: () => (0, r.openBroadcastingPrivacySettingsModal)(),
+        size: n.ButtonSizes.SMALL,
+        children: T.default.Messages.BROADCASTING_SETTINGS_CTA
+      })
+    })]
+  })
+}
+
+function N() {
   return (0, a.jsx)(n.FormSection, {
-    className: f.marginBottom40,
+    className: m.marginBottom40,
     children: (0, a.jsx)(n.FormNotice, {
       type: n.FormNotice.Types.PRIMARY,
-      body: E.default.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
-        termsLink: S.MarketingURLs.TERMS,
-        privacyLink: S.MarketingURLs.PRIVACY
+      body: T.default.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
+        termsLink: E.MarketingURLs.TERMS,
+        privacyLink: E.MarketingURLs.PRIVACY
       })
     })
   })
 }
 
-function N() {
+function I() {
   let {
     canBroadcast: e
   } = l.default.useExperiment({
@@ -133,7 +134,7 @@ function N() {
   });
   return (0, a.jsxs)(n.FormSection, {
     tag: n.FormTitleTags.H1,
-    title: E.default.Messages.ACTIVITY_PRIVACY,
-    children: [(0, a.jsx)(m, {}), (0, a.jsx)(_, {}), e && (0, a.jsx)(g, {}), (0, a.jsx)(h, {})]
+    title: T.default.Messages.ACTIVITY_PRIVACY,
+    children: [(0, a.jsx)(_, {}), (0, a.jsx)(g, {}), e && (0, a.jsx)(h, {}), (0, a.jsx)(N, {})]
   })
 }
