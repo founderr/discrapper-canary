@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return A
   }
 }), s("843762");
 var a = s("917351"),
@@ -43,18 +43,10 @@ function m(e) {
 
 function N() {
   n.forEach(_, e => {
-    n.forEach(e.messages, e => {
-      e.timestamp.locale(u.default.locale)
-    })
-  })
-}
-
-function S() {
-  n.forEach(_, e => {
     e.messages = e.messages.map(e => e.set("blocked", g.default.isBlocked(e.author.id)))
   })
 }
-class A extends l.default.Store {
+class S extends l.default.Store {
   initialize() {
     this.waitFor(o.default, f.default, c.default, E.default, M.default, u.default)
   }
@@ -66,8 +58,8 @@ class A extends l.default.Store {
     return null != _[e] && _[e].loaded
   }
 }
-A.displayName = "ChannelPinsStore";
-var I = new A(i.default, {
+S.displayName = "ChannelPinsStore";
+var A = new S(i.default, {
   CONNECTION_OPEN: function() {
     _ = {}
   },
@@ -147,12 +139,10 @@ var I = new A(i.default, {
     } = e;
     delete _[t]
   },
-  USER_SETTINGS_PROTO_UPDATE: N,
-  I18N_LOAD_SUCCESS: N,
   CHANNEL_DELETE: m,
   THREAD_DELETE: m,
-  RELATIONSHIP_ADD: S,
-  RELATIONSHIP_REMOVE: S,
+  RELATIONSHIP_ADD: N,
+  RELATIONSHIP_REMOVE: N,
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
     let {
       messageId: t,

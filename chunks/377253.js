@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return F
   }
 }), n("222007"), n("702976"), n("424973"), n("860677");
 var s = n("917351"),
@@ -43,19 +43,8 @@ function R() {
     }))
   }), b.clear()
 }
-let k = null;
 
-function M() {
-  let e = h.default.locale;
-  if (k === e) return !1;
-  o.default.forEach(t => {
-    t.forAll(t => {
-      t.timestamp.locale(e)
-    })
-  }), k = e
-}
-
-function w() {
+function k() {
   o.default.forEach(e => {
     let {
       channelId: t
@@ -64,15 +53,15 @@ function w() {
   })
 }
 
-function L() {
+function M() {
   o.default.forEach(e => {
     o.default.commit(e.reset(e.map(e => e.set("blocked", A.default.isBlocked(e.author.id)))))
   })
 }
 
-function U(e) {}
+function w(e) {}
 
-function G(e) {
+function L(e) {
   let {
     type: t,
     channelId: n,
@@ -86,7 +75,7 @@ function G(e) {
   d = d.update(s, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(r, u, e.colors, a) : n.removeReaction(r, u, a)), o.default.commit(d)
 }
 
-function F(e) {
+function U(e) {
   let {
     type: t,
     messageData: n
@@ -99,7 +88,7 @@ function F(e) {
     return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(f.isNotAutomodEmbed).length) > 0 && (e = e.set("embeds", [])), "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, v.addFlag)(e.flags, P.MessageFlags.EPHEMERAL))), e
   }), o.default.commit(a)
 }
-class H extends r.default.Store {
+class G extends r.default.Store {
   initialize() {
     this.waitFor(O.default, p.default, y.default, C.default, h.default, D.default, N.default, I.default, A.default, T.default), this.syncWith([_.default], () => {})
   }
@@ -151,8 +140,8 @@ class H extends r.default.Store {
     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
   }
 }
-H.displayName = "MessageStore";
-var B = new H(a.default, {
+G.displayName = "MessageStore";
+var F = new G(a.default, {
   BACKGROUND_SYNC_CHANNEL_MESSAGES: function(e) {
     let {
       changesByChannelId: t
@@ -273,8 +262,8 @@ var B = new H(a.default, {
     let r = i.get(n, !0);
     i = (null == r ? void 0 : r.isPoll()) === !0 ? i.remove(n) : i.update(n, e => ((e = e.set("state", P.MessageStates.SEND_FAILED)).isCommandType() && (e = (e = e.set("interactionError", null != s ? s : "")).set("flags", (0, v.addFlag)(e.flags, P.MessageFlags.EPHEMERAL))), e)), o.default.commit(i)
   },
-  MESSAGE_SEND_FAILED_AUTOMOD: F,
-  MESSAGE_EDIT_FAILED_AUTOMOD: F,
+  MESSAGE_SEND_FAILED_AUTOMOD: U,
+  MESSAGE_EDIT_FAILED_AUTOMOD: U,
   MESSAGE_UPDATE: function(e) {
     let t = e.message.id,
       n = e.message.channel_id,
@@ -335,8 +324,6 @@ var B = new H(a.default, {
       revealedMessageId: n
     }))
   },
-  USER_SETTINGS_PROTO_UPDATE: M,
-  I18N_LOAD_SUCCESS: M,
   THREAD_CREATE_LOCAL: function(e) {
     let {
       channelId: t
@@ -347,14 +334,14 @@ var B = new H(a.default, {
       hasMoreBefore: !1
     }), o.default.commit(n)
   },
-  CHANNEL_DELETE: w,
-  THREAD_DELETE: w,
-  GUILD_DELETE: w,
-  RELATIONSHIP_ADD: L,
-  RELATIONSHIP_REMOVE: L,
-  GUILD_MEMBERS_CHUNK: U,
-  THREAD_MEMBER_LIST_UPDATE: U,
-  MESSAGE_REACTION_ADD: G,
+  CHANNEL_DELETE: k,
+  THREAD_DELETE: k,
+  GUILD_DELETE: k,
+  RELATIONSHIP_ADD: M,
+  RELATIONSHIP_REMOVE: M,
+  GUILD_MEMBERS_CHUNK: w,
+  THREAD_MEMBER_LIST_UPDATE: w,
+  MESSAGE_REACTION_ADD: L,
   MESSAGE_REACTION_ADD_MANY: function(e) {
     let {
       channelId: t,
@@ -367,7 +354,7 @@ var B = new H(a.default, {
       return e.addReactionBatch(s, null === (t = O.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     }), o.default.commit(i)
   },
-  MESSAGE_REACTION_REMOVE: G,
+  MESSAGE_REACTION_REMOVE: L,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       channelId: t,

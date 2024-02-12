@@ -83,7 +83,7 @@ function R(e) {
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), T = m.MessageDisplayCompact.useSetting(), v = (0, o.useStateFromStores)([S.default], () => S.default.can(C.Permissions.CREATE_INSTANT_INVITE, s)), R = (0, h.isSpamSupported)(s), L = !1, O = 0 === l.messages.length || l.messages[0].timestamp.isSame(i(), "day"), b = null !== (n = null === (t = g.default.getUser(p.default.getId())) || void 0 === t ? void 0 : t.hasFlag(C.UserFlags.SPAMMER)) && void 0 !== n && n, y = [];
+  }), T = m.MessageDisplayCompact.useSetting(), v = (0, o.useStateFromStores)([S.default], () => S.default.can(C.Permissions.CREATE_INSTANT_INVITE, s)), R = (0, h.isSpamSupported)(s), L = !1, O = 0 === l.messages.length || i(l.messages[0].timestamp).isSame(i(), "day"), b = null !== (n = null === (t = g.default.getUser(p.default.getId())) || void 0 === t ? void 0 : t.hasFlag(C.UserFlags.SPAMMER)) && void 0 !== n && n, y = [];
   if (!l.collapsed) {
     let e = null,
       t = null,
@@ -95,7 +95,7 @@ function R(e) {
           y.push((0, a.jsx)(N.default, {
             className: M.divider,
             children: t
-          }, t)), e = n.timestamp
+          }, t)), e = i(n.timestamp)
         }
         let l = null == t || (0, f.default)(s, t, n);
         t = n, L = L || (0, h.isSpam)(n), y.push((0, a.jsx)(x, {

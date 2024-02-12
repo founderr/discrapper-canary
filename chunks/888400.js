@@ -40,9 +40,7 @@ function c(e, t) {
 }
 
 function d(e, t) {
-  let n = e.toDate(),
-    i = t.toDate();
-  return Math.abs(+n - +i) <= o && n.getDate() === i.getDate()
+  return Math.abs(+e - +t) <= o && e.getDate() === t.getDate()
 }
 
 function f(e, t, n) {
@@ -50,25 +48,26 @@ function f(e, t, n) {
 }
 
 function E(e, t) {
-  let n = "".concat(e.locale(), ":").concat(t),
-    i = l[n];
-  return null == i && (i = l[n] = (0, s.default)(t)), i(e.toDate())
+  let n = e instanceof Date ? r(e).locale() : e.locale(),
+    i = "".concat(n, ":").concat(t),
+    a = l[i];
+  return null == a && (a = l[i] = (0, s.default)(t)), a(e instanceof Date ? e : e.toDate())
 }
 
 function p(e) {
   let t;
   let n = r.localeData(),
     i = r(),
-    s = c(e.toDate(), i.toDate());
-  return s < -1 ? E(e, "L LT") : (t = s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse", E(e, n.calendar(t, e, i)))
+    s = c(e instanceof Date ? e : e.toDate(), i.toDate());
+  return s < -1 ? E(e, "L LT") : (t = s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse", E(e, n.calendar(t, e instanceof Date ? r(e) : e, i)))
 }
 
 function h(e) {
   let t;
   let n = r.localeData(),
-    i = r(),
-    s = c(e.toDate(), i.toDate());
-  return "sameElse" == (t = s < -1 ? "sameElse" : s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse") ? E(e, "LLL") : E(e, n.calendar(t, e, i))
+    i = new Date,
+    s = c(e, i);
+  return "sameElse" == (t = s < -1 ? "sameElse" : s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse") ? E(e, "LLL") : E(e, n.calendar(t, r(e), r(i)))
 }
 a.default.addChangeListener(() => {
   l = Object.create(null)

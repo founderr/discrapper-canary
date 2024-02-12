@@ -20,7 +20,7 @@ function g(e, t) {
   let n = e.get(t.id);
   return null == n || function(e, t) {
     var n, s;
-    let i = null != e.editedTimestamp ? +e.editedTimestamp.toDate() : 0,
+    let i = null != e.editedTimestamp ? +e.editedTimestamp : 0,
       r = null != t.edited_timestamp ? +new Date(t.edited_timestamp) : 0;
     return !!(r > i) || !!(e.embeds.length < (null !== (s = null === (n = t.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0)) || e.content !== t.content
   }(n, t) || e.cached ? (0, u.createMessageRecord)(t) : n

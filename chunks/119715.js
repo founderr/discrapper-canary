@@ -111,10 +111,10 @@ function W(e) {
   let {
     message: n,
     compact: a
-  } = e, i = P.default.getUser((0, A.getUserIdOfAutomodAction)(n)), r = null === (t = L.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, o = null != r && null != i, u = o ? v.default.getMember(r, i.id) : null, {
-    avatarSrc: d,
-    avatarDecorationSrc: c,
-    eventHandlers: E
+  } = e, i = P.default.getUser((0, A.getUserIdOfAutomodAction)(n)), r = null === (t = L.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, u = null != r && null != i, d = u ? v.default.getMember(r, i.id) : null, {
+    avatarSrc: c,
+    avatarDecorationSrc: E,
+    eventHandlers: _
   } = (0, R.default)({
     user: i,
     guildId: r,
@@ -137,7 +137,7 @@ function W(e) {
       className: w.dotSeparatedRow,
       children: [(0, s.jsx)("div", {
         className: w.alertsEnabledSubHeader,
-        children: null != u && null != i && (0, s.jsxs)(l.Fragment, {
+        children: null != d && null != i && (0, s.jsxs)(l.Fragment, {
           children: [(0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
             color: "text-normal",
@@ -156,17 +156,17 @@ function W(e) {
               className: w.alertsEnabledSubHeaderAvatarUsername,
               ...e,
               children: [(0, s.jsx)("div", {
-                ...E,
+                ..._,
                 children: (0, s.jsx)(I.Avatar, {
-                  src: d,
-                  avatarDecoration: c,
+                  src: c,
+                  avatarDecoration: E,
                   size: I.AvatarSizes.SIZE_16,
                   "aria-label": "TODO"
                 })
               }), (0, s.jsxs)(I.Text, {
                 variant: "text-xs/medium",
                 style: {
-                  color: null != u.colorString ? u.colorString : f.default.colors.TEXT_NORMAL.css
+                  color: null != d.colorString ? d.colorString : f.default.colors.TEXT_NORMAL.css
                 },
                 children: [" ", "@", i.username]
               })]
@@ -176,7 +176,7 @@ function W(e) {
       }), (0, s.jsx)(H, {}), (0, s.jsx)(I.Text, {
         variant: "text-xs/medium",
         color: "text-normal",
-        children: n.timestamp.fromNow()
+        children: o(n.timestamp).fromNow()
       })]
     }),
     content: (0, s.jsx)(I.Text, {
