@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return C
   }
 });
 var r = n("37983"),
@@ -14,151 +14,175 @@ var r = n("37983"),
   d = n("617917"),
   c = n("599110"),
   m = n("719923"),
-  f = n("154889"),
-  _ = n("917247"),
-  E = n("956597"),
-  T = n("635956"),
-  I = n("646718"),
-  p = n("49111"),
-  P = n("782340"),
-  S = n("857513"),
-  R = n("393828");
+  f = n("688771"),
+  _ = n("154889"),
+  E = n("917247"),
+  T = n("956597"),
+  I = n("635956"),
+  p = n("646718"),
+  P = n("49111"),
+  S = n("782340"),
+  R = n("857513"),
+  O = n("393828");
 
-function O(e) {
+function C(e) {
   var t, n, l;
   let {
-    title: O,
-    type: C,
-    guildBoostProps: M,
-    analyticsSource: g,
-    analyticsLocation: L,
-    body: v,
-    context: U,
+    title: C,
+    type: M,
+    guildBoostProps: g,
+    analyticsSource: L,
+    analyticsLocation: v,
+    body: U,
+    context: N,
     glowUp: x,
     modalClassName: h,
-    artContainerClassName: N,
-    bodyClassName: A,
-    transitionState: b,
-    onClose: D,
-    onSubscribeClick: y,
-    onSecondaryClick: j,
-    secondaryCTA: F,
+    artContainerClassName: A,
+    bodyClassName: b,
+    transitionState: D,
+    onClose: y,
+    onSubscribeClick: j,
+    onSecondaryClick: F,
+    secondaryCTA: B,
     subscribeButtonText: w,
-    showNewBadge: B = !1,
-    enableArtBoxShadow: k = !0,
-    subscriptionTier: G = I.PremiumSubscriptionSKUs.TIER_2,
-    isLoading: H = !1,
-    hideBackButton: K,
-    backButtonText: V,
-    ...z
-  } = e, W = null != M, Z = (0, _.usePremiumTrialOffer)(), Y = (0, f.usePremiumDiscountOffer)(), X = ((null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === G || (0, f.discountOfferHasTier)(Y, G)) && !W, {
-    analyticsLocations: J
-  } = (0, u.default)(o.default.PREMIUM_UPSELL_MODAL);
+    showNewBadge: k = !1,
+    enableArtBoxShadow: G = !0,
+    subscriptionTier: H = p.PremiumSubscriptionSKUs.TIER_2,
+    isLoading: K = !1,
+    hideBackButton: V,
+    backButtonText: z,
+    ...W
+  } = e, Z = null != g, Y = (0, E.usePremiumTrialOffer)(), X = (0, _.usePremiumDiscountOffer)(), J = ((null == Y ? void 0 : null === (t = Y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === H || (0, _.discountOfferHasTier)(X, H)) && !Z, {
+    analyticsLocations: q
+  } = (0, u.default)(o.default.PREMIUM_UPSELL_MODAL), {
+    enabled: Q,
+    variant: $
+  } = f.default.useExperiment({
+    location: "PremiumUpsellModal"
+  }, {
+    autoTrackExposure: !1
+  }), ee = Q && M === p.PremiumUpsellTypes.STREAM_QUALITY_UPSELL, et = ee && f.GradientVariants.includes($);
   i.useEffect(() => {
-    !H && (W ? c.default.track(p.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
-      type: "".concat(C, " - Tier ").concat(M.boostedGuildTier),
-      guild_id: M.guild.id,
-      channel_id: M.channelId,
-      location: L,
-      location_stack: J
-    }) : c.default.track(p.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: C,
-      source: g,
-      location_stack: J,
-      sku_id: G
+    !K && (Z ? c.default.track(P.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+      type: "".concat(M, " - Tier ").concat(g.boostedGuildTier),
+      guild_id: g.guild.id,
+      channel_id: g.channelId,
+      location: v,
+      location_stack: q
+    }) : c.default.track(P.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: M,
+      source: L,
+      location: v,
+      location_stack: q,
+      sku_id: H
     }))
-  }, [W, G, H]);
-  let q = k ? a(S.artContainer, S.artContainerBoxShadow, N) : a(S.artContainer, N),
-    Q = null;
-  return Q = "artURL" in z ? (0, r.jsx)("img", {
-    className: S.art,
+  }, [Z, H, K]);
+  let en = G ? a(R.artContainer, R.artContainerBoxShadow, A) : a(R.artContainer, A),
+    er = null;
+  return er = "artURL" in W ? (0, r.jsx)("img", {
+    className: R.art,
     alt: "",
-    src: z.artURL
-  }) : z.artElement, (0, r.jsxs)(s.ModalRoot, {
-    className: a(S.root, h),
-    "aria-label": O,
-    transitionState: b,
+    src: W.artURL
+  }) : W.artElement, (0, r.jsxs)(s.ModalRoot, {
+    className: a(R.root, h),
+    "aria-label": C,
+    transitionState: D,
     children: [(0, r.jsxs)("div", {
-      className: q,
-      children: [Q, B ? (0, r.jsx)("img", {
-        className: S.sparkleBadge,
+      className: en,
+      children: [er, k ? (0, r.jsx)("img", {
+        className: R.sparkleBadge,
         alt: "",
-        src: R
+        src: O
       }) : null]
-    }), (0, r.jsx)(s.ModalContent, {
-      className: S.content,
-      children: H ? (0, r.jsx)(s.Spinner, {}) : (0, r.jsx)(r.Fragment, {
-        children: X ? (0, r.jsx)(r.Fragment, {
-          children: (0, r.jsx)(E.default, {
-            onClose: D,
-            type: C,
-            subscriptionTier: null !== (l = null == Z ? void 0 : null === (n = Z.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : I.PremiumSubscriptionSKUs.TIER_2,
-            headingText: O,
-            context: U,
-            analyticsLocationObject: L,
-            discountOffer: Y,
-            trialOffer: Z,
+    }), ee ? (0, r.jsx)(s.ModalCloseButton, {
+      onClick: y,
+      className: R.closeButton
+    }) : null, (0, r.jsx)(s.ModalContent, {
+      className: R.content,
+      children: K ? (0, r.jsx)(s.Spinner, {}) : (0, r.jsx)(r.Fragment, {
+        children: J ? (0, r.jsx)(r.Fragment, {
+          children: (0, r.jsx)(T.default, {
+            onClose: y,
+            type: M,
+            subscriptionTier: null !== (l = null == Y ? void 0 : null === (n = Y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : p.PremiumSubscriptionSKUs.TIER_2,
+            headingText: C,
+            context: N,
+            analyticsLocationObject: v,
+            discountOffer: X,
+            trialOffer: Y,
             children: x
           })
         }) : (0, r.jsxs)(r.Fragment, {
           children: [(0, r.jsx)(s.Heading, {
-            className: S.header,
+            className: a(R.header, {
+              [R.enhancedHeader]: ee
+            }),
             variant: "heading-xl/semibold",
-            children: O
+            children: C
           }), (0, r.jsx)(s.Text, {
             variant: "text-md/normal",
-            className: a(A),
-            children: v
+            className: a(b),
+            children: U
           })]
         })
       })
     }), (0, r.jsxs)(s.ModalFooter, {
-      className: S.footer,
+      className: a(R.footer, {
+        [R.enhancedFooter]: ee
+      }),
       children: [(0, r.jsxs)("div", {
-        className: S.primaryActions,
-        children: [null != F ? (0, r.jsx)(s.Button, {
-          className: S.secondaryAction,
-          onClick: j,
+        className: a(R.primaryActions, {
+          [R.enhancedPrimaryActions]: ee
+        }),
+        children: [null != B ? (0, r.jsx)(s.Button, {
+          className: a(R.secondaryAction, {
+            [R.enhancedSecondaryAction]: et
+          }),
+          onClick: F,
           size: s.Button.Sizes.SMALL,
-          color: s.Button.Colors.PRIMARY,
+          color: et ? s.Button.Colors.CUSTOM : s.Button.Colors.PRIMARY,
           look: s.Button.Looks.LINK,
-          children: F
+          children: B
         }) : null, (() => {
-          let e, t;
-          if (W) return (0, r.jsx)(d.default, {
-            analyticsLocation: L,
-            guild: M.guild,
-            onClose: D
+          let e;
+          if (Z) return (0, r.jsx)(d.default, {
+            analyticsLocation: v,
+            guild: g.guild,
+            onClose: y
           });
-          if (X) {
-            if (null != Z) {
+          let t = ee ? S.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
+          if (J) {
+            if (null != Y) {
               var n, i;
-              e = (0, m.formatTrialCtaIntervalDuration)({
-                intervalType: null == Z ? void 0 : null === (n = Z.subscription_trial) || void 0 === n ? void 0 : n.interval,
-                intervalCount: null == Z ? void 0 : null === (i = Z.subscription_trial) || void 0 === i ? void 0 : i.interval_count
-              }), t = null == Z ? void 0 : Z.trial_id
-            } else null != Y && (e = P.default.Messages.PREMIUM_DISCOUNT_CTA.format({
-              percent: Y.discount.amount
+              t = (0, m.formatTrialCtaIntervalDuration)({
+                intervalType: null == Y ? void 0 : null === (n = Y.subscription_trial) || void 0 === n ? void 0 : n.interval,
+                intervalCount: null == Y ? void 0 : null === (i = Y.subscription_trial) || void 0 === i ? void 0 : i.interval_count
+              }), e = null == Y ? void 0 : Y.trial_id
+            } else null != X && (t = S.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+              percent: X.discount.amount
             }))
           }
-          return (0, r.jsx)(T.default, {
-            premiumModalAnalyticsLocation: L,
-            subscriptionTier: G,
-            trialId: t,
+          return (0, r.jsx)(I.default, {
+            className: a({
+              [R.getNitroCTA]: et
+            }),
+            premiumModalAnalyticsLocation: v,
+            subscriptionTier: H,
+            trialId: e,
             size: s.Button.Sizes.SMALL,
-            color: s.Button.Colors.GREEN,
+            color: et ? s.Button.Colors.CUSTOM : s.Button.Colors.GREEN,
             onClick: () => {
-              null == y || y(), D()
+              null == j || j(), y()
             },
-            buttonText: null != w ? w : e
+            buttonText: null != w ? w : t
           })
         })()]
-      }), !K && (0, r.jsx)(s.Button, {
-        onClick: D,
+      }), !V && !ee && (0, r.jsx)(s.Button, {
+        onClick: y,
         size: s.Button.Sizes.SMALL,
         color: s.Button.Colors.PRIMARY,
         look: s.Button.Looks.LINK,
-        children: null != V ? V : P.default.Messages.BACK
+        children: null != z ? z : S.default.Messages.BACK
       })]
     })]
   })

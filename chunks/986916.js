@@ -2,6 +2,7 @@
 e.exports = {
   documentModeDescription: "documentModeDescription_b5a4b5",
   documentModeGroup: "documentModeGroup_c1f054",
+  enhancedSelectorNitroText: "enhancedSelectorNitroText__4f836",
   logoPrimary: "logoPrimary__3a045",
   premiumIcon: "premiumIcon_c9b2b7 logoPrimary__3a045",
   qualitySettingsContainer: "qualitySettingsContainer__5cacd",

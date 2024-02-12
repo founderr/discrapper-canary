@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return c
+    return C
   }
 });
 var n = l("37983");
@@ -9,40 +9,95 @@ l("884691");
 var a = l("414456"),
   s = l.n(a),
   r = l("77078"),
-  i = l("216422"),
-  u = l("49111"),
-  o = l("782340"),
-  d = l("139191");
+  i = l("688771"),
+  u = l("635956"),
+  o = l("791106"),
+  d = l("216422"),
+  c = l("49111"),
+  f = l("646718"),
+  m = l("782340"),
+  S = l("139191");
 
-function c(e) {
+function C(e) {
   let {
     message: t,
     onClose: l,
-    openStreamUpsellModal: a
-  } = e, c = {
-    section: u.AnalyticsSections.STREAM_SETTINGS,
-    object: u.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
-    objectType: u.AnalyticsObjectTypes.BUY
-  };
-  return (0, n.jsxs)(r.Clickable, {
-    onClick: () => a({
-      analyticsLocation: c,
-      onClose: l
+    openStreamUpsellModal: a,
+    glow: C = !1
+  } = e, {
+    enabled: E,
+    variant: h
+  } = i.default.useExperiment({
+    location: "StreamSettingsUpsellBanner"
+  }, {
+    autoTrackExposure: !0
+  }), N = E && i.GradientVariants.includes(h), g = E && [i.EnhancedHDStreamingRoadblockVariants.VARIANT_1A, i.EnhancedHDStreamingRoadblockVariants.VARIANT_1B].includes(h), _ = {
+    section: c.AnalyticsSections.STREAM_SETTINGS,
+    object: c.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
+    objectType: c.AnalyticsObjectTypes.BUY
+  }, p = () => (0, n.jsx)(u.default, {
+    className: s(S.enhancedCTA, {
+      [S.ctaGradientBackground]: N
     }),
-    className: s(d.upsellBanner, d.gradientBackground),
+    iconClassName: S.premiumIcon,
+    subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
+    buttonText: m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
+    size: r.Button.Sizes.TINY,
+    premiumModalAnalyticsLocation: _
+  });
+  return E ? (0, n.jsxs)("div", {
+    className: s(S.upsellBanner, S.enhancedBanner, {
+      [S.gradientGlow]: C
+    }),
     children: [(0, n.jsxs)("div", {
-      className: d.iconTextContainer,
-      children: [(0, n.jsx)(i.default, {
-        className: d.iconColor
+      className: S.iconTextContainer,
+      children: [(0, n.jsx)(d.default, {
+        color: o.GradientCssUrls.PREMIUM_TIER_2
       }), (0, n.jsx)(r.Text, {
         variant: "text-sm/medium",
-        className: d.upsellText,
-        children: null != t ? t : o.default.Messages.STREAM_PREMIUM_UPSELL_BANNER
+        className: s(S.upsellText, S.enhancedUpsellText),
+        children: null != t ? t : g ? m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_V2 : m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V2.format({
+          onClick: () => a({
+            analyticsLocation: _,
+            onClose: l
+          })
+        })
+      })]
+    }), (0, n.jsx)("div", {
+      className: S.enhancedCTAs,
+      children: g ? (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(r.Button, {
+          className: s(S.enhancedCTA, S.learnMoreCTA),
+          color: N ? r.Button.Colors.CUSTOM : r.Button.Colors.TRANSPARENT,
+          onClick: () => a({
+            analyticsLocation: _,
+            onClose: l
+          }),
+          look: r.Button.Looks.OUTLINED,
+          size: r.Button.Sizes.TINY,
+          children: m.default.Messages.LEARN_MORE
+        }), p()]
+      }) : p()
+    })]
+  }) : (0, n.jsxs)(r.Clickable, {
+    onClick: () => a({
+      analyticsLocation: _,
+      onClose: l
+    }),
+    className: s(S.upsellBanner, S.gradientBackground),
+    children: [(0, n.jsxs)("div", {
+      className: S.iconTextContainer,
+      children: [(0, n.jsx)(d.default, {
+        className: S.iconColor
+      }), (0, n.jsx)(r.Text, {
+        variant: "text-sm/medium",
+        className: S.upsellText,
+        children: null != t ? t : m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER
       })]
     }), (0, n.jsx)(r.Text, {
       variant: "text-sm/medium",
-      className: d.textLink,
-      children: o.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA
+      className: S.textLink,
+      children: m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA
     })]
   })
 }
