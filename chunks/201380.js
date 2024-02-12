@@ -134,7 +134,9 @@ class U extends l.PureComponent {
         user: n,
         showHangStatus: a
       } = this.props;
-      (t || a) && (null == e || e(n.id))
+      (t || a) && (null == e || e(n.id)), this.setState({
+        isHoveringHangStatus: !1
+      })
     }, this.handleMouseEnter = () => {
       let {
         user: e,
