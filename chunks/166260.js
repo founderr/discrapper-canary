@@ -1,7 +1,10 @@
 "use strict";
 e.r(t), e.d(t, {
-  default: function() {
+  VibingWumpus: function() {
     return h
+  },
+  default: function() {
+    return M
   }
 }), e("222007");
 var n = e("37983"),
@@ -13,8 +16,8 @@ var n = e("37983"),
   r = e("77078"),
   o = e("559922"),
   d = e("782340"),
-  I = e("725803"),
-  N = e("813916");
+  I = e("660663"),
+  N = e("725803");
 
 function h(s) {
   let {
@@ -26,14 +29,14 @@ function h(s) {
     children: [(0, n.jsx)("img", {
       src: "https://cdn.discordapp.com/assets/vibing-wumpus.png",
       alt: d.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_ALT,
-      className: N.wumpus
+      className: I.wumpus
     }), (0, n.jsx)(r.ModalCloseButton, {
       onClick: t,
-      className: N.closeButton
+      className: I.closeButton
     }), (0, n.jsxs)(r.ModalContent, {
-      className: u(I.body, N.body),
+      className: u(N.body, I.body),
       children: [(0, n.jsxs)("div", {
-        className: I.textContainer,
+        className: N.textContainer,
         children: [(0, n.jsx)(r.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
@@ -44,7 +47,7 @@ function h(s) {
           children: d.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_DESCRIPTION
         })]
       }), (0, n.jsxs)("div", {
-        className: N.buttonContainer,
+        className: I.buttonContainer,
         children: [(0, n.jsx)(r.Button, {
           fullWidth: !0,
           color: r.Button.Colors.BRAND,
@@ -58,7 +61,7 @@ function h(s) {
             e ? (0, o.playVibingWumpusMusic)() : (0, o.stopVibingWumpusMusic)(), a(!e)
           },
           fullWidth: !0,
-          innerClassName: N.mute,
+          innerClassName: I.mute,
           children: [e ? (0, n.jsx)(c.MusicSlashIcon, {
             width: 20,
             height: 20
@@ -69,5 +72,17 @@ function h(s) {
         })]
       })]
     })]
+  })
+}
+var M = s => {
+  let {
+    onClose: t,
+    transitionState: e
+  } = s;
+  return (0, n.jsx)(r.ModalRoot, {
+    transitionState: e,
+    children: (0, n.jsx)(h, {
+      onClose: t
+    })
   })
 }

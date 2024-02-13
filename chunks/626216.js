@@ -6,9 +6,9 @@ s.r(t), s.d(t, {
 });
 var T = s("37983"),
   l = s("884691"),
-  n = s("414456"),
-  o = s.n(n),
-  a = s("669491"),
+  a = s("414456"),
+  n = s.n(a),
+  o = s("669491"),
   r = s("748802"),
   _ = s("77078"),
   i = s("652126"),
@@ -32,8 +32,8 @@ function A(e) {
     title: t,
     subTitle: s,
     buttonText: l,
-    buttonColor: n,
-    onPress: o
+    buttonColor: a,
+    onPress: n
   } = e;
   return (0, T.jsxs)("div", {
     className: d.actionRow,
@@ -50,8 +50,8 @@ function A(e) {
       })]
     }), (0, T.jsx)(_.Button, {
       size: _.Button.Sizes.SMALL,
-      color: n,
-      onClick: o,
+      color: a,
+      onClick: n,
       children: l
     })]
   })
@@ -63,7 +63,7 @@ function c(e) {
     onPress: s
   } = e;
   return (0, T.jsxs)(_.Clickable, {
-    className: o(d.actionRow, d.clickableActionRow),
+    className: n(d.actionRow, d.clickableActionRow),
     onClick: s,
     children: [(0, T.jsx)(_.Text, {
       variant: "text-md/semibold",
@@ -72,14 +72,14 @@ function c(e) {
     }), (0, T.jsx)(r.ChevronSmallRightIcon, {
       width: 24,
       height: 24,
-      color: a.default.colors.INTERACTIVE_NORMAL
+      color: o.default.colors.INTERACTIVE_NORMAL
     })]
   })
 }
 var C = function(e) {
   let {
     transitionToSlide: t
-  } = e, s = (0, i.useShouldShowHelplineLink)(), n = l.useMemo(() => {
+  } = e, a = (0, i.useShouldShowHelplineLink)(), n = l.useMemo(() => {
     let e = {
         title: E.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_TITLE,
         subTitle: E.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE,
@@ -106,14 +106,25 @@ var C = function(e) {
       buttonText: E.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
       buttonColor: _.ButtonColors.PRIMARY,
       onPress: () => {}
-    }, s ? e : t, {
+    }, a ? e : t, {
       title: E.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE,
       subTitle: E.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE,
       buttonText: E.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON,
       buttonColor: _.ButtonColors.BRAND,
-      onPress: () => {}
+      onPress: () => {
+        (0, _.openModalLazy)(async () => {
+          let {
+            default: e
+          } = await s.el("166260").then(s.bind(s, "166260"));
+          return t => (0, T.jsx)(e, {
+            ...t
+          })
+        }, {
+          onCloseCallback: _.closeAllModals
+        })
+      }
     }]
-  }, [s]), o = l.useMemo(() => [{
+  }, [a]), o = l.useMemo(() => [{
     title: E.default.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
     onPress: () => {}
   }, {
@@ -127,15 +138,15 @@ var C = function(e) {
           title: t,
           subTitle: s,
           buttonText: l,
-          buttonColor: n,
-          onPress: o
+          buttonColor: a,
+          onPress: n
         } = e;
         return (0, T.jsx)(A, {
           title: t,
           subTitle: s,
           buttonText: l,
-          buttonColor: n,
-          onPress: o
+          buttonColor: a,
+          onPress: n
         }, t)
       })
     }), (0, T.jsx)(O, {
