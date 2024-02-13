@@ -220,6 +220,17 @@ class F extends i.default.PersistedStore {
     let t = this.getConnectedActivityChannelId();
     if (null != t) return null !== (e = this.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0
   }
+  getEmbeddedActivityForUserId(e, t) {
+    let n;
+    if (void 0 !== t) {
+      e: for (let [s, i] of C)
+        for (let s of i)
+          if (s.applicationId === t && s.userIds.has(e)) {
+            n = s;
+            break e
+          }return n
+    }
+  }
 }
 F.displayName = "EmbeddedActivitiesStore", F.persistKey = "EmbeddedActivities", F.migrations = [e => ({
   ...e,

@@ -134,7 +134,6 @@ var i = n("414456"),
           isCurrentUser: V.id === i.id,
           color: k,
           look: w,
-          channelId: U,
           isEmbedded: B
         }, "join-activity-button"),
         s = (0, l.jsx)(x.default, {
