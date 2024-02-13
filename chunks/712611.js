@@ -255,7 +255,7 @@ let R = new x(l.default, {
       let {
         token: e
       } = r;
-      null != e && e.getFullMatch().trim().length > 0 ? (u.default.requestMembers(a, e.getFullMatch(), 10), c.context.setQuery(e.getFullMatch().trim(), {
+      null != e && e.getFullMatch().trim().length > 0 ? (u.default.requestMembers(a, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), {
         guild: a
       }), n = o.autocompletes, f = !1) : (c.context.clearQuery(), n = C(a, r))
     }
