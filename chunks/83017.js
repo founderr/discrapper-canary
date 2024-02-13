@@ -128,12 +128,14 @@ let P = e => {
       if (null != a) 0 !== a.unlocked.length && T(a.unlocked, {
         type: R.EmojiCategoryTypes.SEARCH_RESULTS,
         sectionId: R.EmojiCategoryTypes.SEARCH_RESULTS,
-        count: a.unlocked.length
+        count: a.unlocked.length,
+        isNitroLocked: !1
       }), 0 !== a.locked.length && T(a.locked, {
         type: R.EmojiCategoryTypes.PREMIUM_UPSELL,
         categoryId: R.EmojiCategories.PREMIUM_UPSELL,
         sectionId: R.EmojiCategoryTypes.PREMIUM_UPSELL,
-        count: a.locked.length
+        count: a.locked.length,
+        isNitroLocked: !0
       });
       else
         for (let e of d)
@@ -147,13 +149,19 @@ let P = e => {
                 intention: i
               }) !== M.EmojiDisabledReasons.DISALLOW_EXTERNAL);
               if (0 === a.length) return;
-              let s = I.default.getGuild(n);
+              let s = I.default.getGuild(n),
+                r = A.default.isEmojiCategoryNitroLocked({
+                  categoryEmojis: a,
+                  channel: t,
+                  intention: i
+                });
               T(a, {
                 categoryId: e,
                 guild: s,
                 type: R.EmojiCategoryTypes.GUILD,
                 sectionId: null != s ? s.id : (0, f.v4)(),
-                count: a.length
+                count: a.length,
+                isNitroLocked: r
               })
             };
             if (null != m && n(m.id), (0, M.isExternalEmojiAllowedForIntention)(i))
@@ -173,7 +181,8 @@ let P = e => {
               guild: n,
               type: R.EmojiCategoryTypes.TOP_GUILD_EMOJI,
               sectionId: R.EmojiCategoryTypes.TOP_GUILD_EMOJI,
-              count: t.length
+              count: t.length,
+              isNitroLocked: !1
             })
           }
         }
@@ -187,7 +196,8 @@ let P = e => {
           categoryId: e,
           type: R.EmojiCategoryTypes.RECENT,
           sectionId: R.EmojiCategoryTypes.RECENT,
-          count: n.length
+          count: n.length,
+          isNitroLocked: !1
         })
       } else if (e === R.EmojiCategories.FAVORITES) {
         let n = (0, N.dedupeUnicodeEmojis)(P).filter(e => !A.default.isEmojiFiltered({
@@ -199,7 +209,8 @@ let P = e => {
           categoryId: e,
           type: R.EmojiCategoryTypes.FAVORITES,
           sectionId: R.EmojiCategoryTypes.FAVORITES,
-          count: n.length
+          count: n.length,
+          isNitroLocked: !1
         })
       } else if ((0, N.allowUnicodeEmojiForIntention)(i)) {
         let t = g.default.getByCategory(e);
@@ -207,7 +218,8 @@ let P = e => {
           categoryId: e,
           type: R.EmojiCategoryTypes.UNICODE,
           sectionId: e,
-          count: t.length
+          count: t.length,
+          isNitroLocked: !1
         })
       }
     }

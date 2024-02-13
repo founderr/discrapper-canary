@@ -7156,6 +7156,7 @@ e.exports = Object.freeze({
   PREMIUM_NITRO_DROP_2023_BANNER_NON_TIER_2_SUB_SUBHEADER: "Check out the latest perks: Themes, Avatar Decorations, Super Reactions (coming soon), and Soundboard!",
   PREMIUM_NITRO_DROP_2023_BANNER_NON_TIER_2_SUB_SUBHEADER_2: "Check out the latest perks: Themes, Avatar Decorations, Soundboard, and Super Reactions!",
   PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER: "Avatar Decorations",
+  EMOJI_PICKER_PREMIUM_UPSELL_TITLE: "Unlock these emoji with Nitro",
   EMOJI_PICKER_PREMIUM_UPSELL_BODY: "Use these emoji and more by subscribing to Nitro.",
   EMOJI_PICKER_PREMIUM_TIER_0_UPSELL_BODY: "Use these emoji and more by subscribing to {planName}.",
   EMOJI_PICKER_PREMIUM_UPSELL_BODY_TOP_OF_LIST: "Unlock every emoji and use them anywhere with Nitro.",

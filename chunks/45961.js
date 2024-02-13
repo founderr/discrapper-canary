@@ -75,11 +75,12 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       isScrolling: i,
       searchQuery: s,
       scrollOffset: r = 0,
-      onActiveCategoryIndexChange: o
-    } = e, u = l.useRef(c.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), d = l.useMemo(() => a.debounce(() => {
+      onActiveCategoryIndexChange: o,
+      disableForSearch: u = !0
+    } = e, d = l.useRef(c.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), f = l.useMemo(() => a.debounce(() => {
       i.current = !1
-    }, 250), [i]), f = l.useMemo(() => a.debounce(e => {
-      "" === s && (window.cancelAnimationFrame(u.current), u.current = window.requestAnimationFrame(() => {
+    }, 250), [i]), p = l.useMemo(() => a.debounce(e => {
+      ("" === s || !u) && (window.cancelAnimationFrame(d.current), d.current = window.requestAnimationFrame(() => {
         var l;
         let i = null === (l = n.current) || void 0 === l ? void 0 : l.getSectionDescriptors();
         if (null == i) return;
@@ -92,10 +93,10 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           s = -1 === a ? 0 : a;
         t !== s && o(s)
       }))
-    }, 50), [s, n, t, r, o]), p = l.useCallback(e => {
-      i.current = !0, d(), f(e)
-    }, [i, d, f]);
-    return p
+    }, 0), [s, n, t, r, o, u]), m = l.useCallback(e => {
+      i.current = !0, f(), p(e)
+    }, [i, f, p]);
+    return m
   },
   E = e => {
     let {
