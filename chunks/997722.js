@@ -562,8 +562,8 @@ r = class extends E.default {
       if (e) {
         this._videoHealthManager = new j.VideoHealthManager(t, n, i, r), null != this._localMediaSinkWantsManager && (this._localMediaSinkWantsManager.videoHealthManager = this._videoHealthManager);
         this._videoQuality.on(Y.VideoQualityEvent.FpsUpdate, (e, t, n) => {
-          var i;
-          null === (i = this._videoHealthManager) || void 0 === i || i.updateFps(e, t, n)
+          var i, r;
+          (null === (i = this._localMediaSinkWantsManager) || void 0 === i ? void 0 : i.shouldReceiveFromUser(e)) && (null === (r = this._videoHealthManager) || void 0 === r || r.updateFps(e, t, n))
         })
       }
     }

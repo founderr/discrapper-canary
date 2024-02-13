@@ -366,7 +366,7 @@ class p extends a.default {
           let t = this.inboundStats[n];
           null == t && (console.warn("Unknown inbound video stream for user: ".concat(n)), t = new d.InboundStats(this.timestampProducer), this.inboundStats[n] = t);
           let r = d.RawVideoStats.parseInboundStats(i, e);
-          !this.statCollectionPausedUsers.has(n) && t.appendAndIncrementStats(r), this.emit("fps-update", n, r.framesCodec, r.timestamp), t.decoderCodec !== d.CodecTypes.UNKNOWN && E.add(t.decoderCodec), null == t.timeToFirstFrame && i.framesDecoded > 0 && (t.timeToFirstFrame = e - t.startTime)
+          !this.statCollectionPausedUsers.has(n) && t.appendAndIncrementStats(r), r.packets > 0 && this.emit("fps-update", n, r.framesCodec, r.timestamp), t.decoderCodec !== d.CodecTypes.UNKNOWN && E.add(t.decoderCodec), null == t.timeToFirstFrame && i.framesDecoded > 0 && (t.timeToFirstFrame = e - t.startTime)
         }
       }), 0 !== f.size && 0 !== E.size) {
       ;

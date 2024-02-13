@@ -2,7 +2,7 @@
 let i, r, s, a;
 n.r(t), n.d(t, {
   default: function() {
-    return tg
+    return tI
   }
 }), n("222007"), n("808653"), n("506083"), n("424973"), n("256955");
 var o, l, u, c, d = n("627445"),
@@ -424,7 +424,18 @@ function td(e, t) {
   })
 }
 
-function tf(e) {
+function tf() {
+  let e = eS.MediaEngineContextTypes.DEFAULT,
+    {
+      videoToggleStateMap: t
+    } = e3(e);
+  for (let [e, n] of Object.entries(t)) n === eE.VideoToggleState.AUTO_PROBING && delete t[e];
+  tr({
+    videoToggleStateMap: t
+  }, e, !1)
+}
+
+function tE(e) {
   let t = e3();
   Z.default.track(eE.AnalyticEvents.VOICE_PROCESSING, {
     echo_cancellation: t.echoCancellation,
@@ -435,7 +446,7 @@ function tf(e) {
   })
 }
 
-function tE() {
+function tp() {
   let e = e3(),
     t = e.inputDeviceId,
     n = ea.default.hasEchoCancellation(t) || e.echoCancellation,
@@ -450,10 +461,10 @@ function tE() {
   })
 }
 
-function tp() {
+function th() {
   return eK || !1
 }
-async function th() {
+async function t_() {
   try {
     await en.default.ensureModule("discord_krisp"), en.default.requireModule("discord_krisp"), eK = !0, i.emitChange()
   } catch (t) {
@@ -473,28 +484,28 @@ async function th() {
   }
 }
 
-function t_(e) {
+function tS(e) {
   let {
     section: t
   } = e;
   return t === eE.UserSettingsSections.VOICE && ts(), !1
 }
 
-function tS(e) {
+function tm(e) {
   eX = 0 === e ? eE.SoundshareEnableState.ENABLED : 5 === e ? eE.SoundshareEnableState.ENABLING : -1 === e || 4 === e ? eE.SoundshareEnableState.FAILED_TO_ENABLE : eE.SoundshareEnableState.NOT_ENABLED
 }
-async function tm() {
+async function tT() {
   if (eX === eE.SoundshareEnableState.ENABLING) return;
   eX = eE.SoundshareEnableState.ENABLING;
   let e = {};
   try {
     let t = await ev.enableSoundshare();
-    tS(t.code), e = {
+    tm(t.code), e = {
       status_code: t.code,
       message: t.message
     }
   } catch (t) {
-    eT.warn("Failed to enable macOS soundshare: ".concat(t)), tS(-1), e = {
+    eT.warn("Failed to enable macOS soundshare: ".concat(t)), tm(-1), e = {
       status_code: -1,
       message: "".concat(t)
     }
@@ -502,7 +513,7 @@ async function tm() {
     i.emitChange(), Z.default.track(eE.AnalyticEvents.SOUNDSHARE_ENABLE, e)
   }
 }
-class tT extends S.default.Store {
+class tg extends S.default.Store {
   initialize() {
     ev.on(m.MediaEngineEvent.Connection, e => {
       let {
@@ -783,11 +794,11 @@ class tT extends S.default.Store {
         }()
     }(), !(0, ee.isDesktop)() || __OVERLAY__ || eW || eK ? (0, ee.isWeb)() && ev.supports(eS.Features.NOISE_CANCELLATION) ? (eK = !0, i.emitChange()) : (0, ee.isWeb)() && tr({
       noiseCancellation: !1
-    }) : (eW = !0, th()), (0, ee.isMac)() && ev.supports(eS.Features.SOUNDSHARE) ? ev.getSoundshareStatus().then(e => {
-      tS(e)
+    }) : (eW = !0, t_()), (0, ee.isMac)() && ev.supports(eS.Features.SOUNDSHARE) ? ev.getSoundshareStatus().then(e => {
+      tm(e)
     }).catch(e => {
       eT.warn("Failed to check if soundshare is enabled: ".concat(e))
-    }) : eX = eE.SoundshareEnableState.ENABLED, e1 = {
+    }) : eX = eE.SoundshareEnableState.ENABLED, tf(), e1 = {
       [eS.Features.VIDEO]: ev.supports(eS.Features.VIDEO),
       [eS.Features.DESKTOP_CAPTURE]: ev.supports(eS.Features.DESKTOP_CAPTURE),
       [eS.Features.HYBRID_VIDEO]: ev.supports(eS.Features.HYBRID_VIDEO)
@@ -1120,8 +1131,8 @@ class tT extends S.default.Store {
     return null != a
   }
 }
-tT.displayName = "MediaEngineStore";
-var tg = i = new tT(I.default, {
+tg.displayName = "MediaEngineStore";
+var tI = i = new tg(I.default, {
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       guildId: t,
@@ -1184,7 +1195,7 @@ var tg = i = new tT(I.default, {
           }), eJ.clear(), tr({
             disabledLocalVideos: t
           }, e, !1)
-        })()
+        })(), tf()
     }
     ti.update()
   },
@@ -1346,7 +1357,7 @@ var tg = i = new tT(I.default, {
     let t = tr({
       echoCancellation: e.enabled
     });
-    ev.eachConnection(e => e.setEchoCancellation(t.echoCancellation)), tE(), tf(e.location)
+    ev.eachConnection(e => e.setEchoCancellation(t.echoCancellation)), tp(), tE(e.location)
   },
   MEDIA_ENGINE_SET_H265: function(e) {
     let t = tr({
@@ -1358,25 +1369,25 @@ var tg = i = new tT(I.default, {
     let {
       enabled: t
     } = e;
-    return e0 = t, tE()
+    return e0 = t, tp()
   },
   AUDIO_SET_NOISE_SUPPRESSION: function(e) {
     let t = tr({
       noiseSuppression: e.enabled
     });
-    ev.eachConnection(e => e.setNoiseSuppression(t.noiseSuppression)), tE(), tf(e.location)
+    ev.eachConnection(e => e.setNoiseSuppression(t.noiseSuppression)), tp(), tE(e.location)
   },
   AUDIO_SET_AUTOMATIC_GAIN_CONTROL: function(e) {
     let t = tr({
       automaticGainControl: e.enabled
     });
-    ev.eachConnection(e => e.setAutomaticGainControl(t.automaticGainControl)), tE(), tf(e.location)
+    ev.eachConnection(e => e.setAutomaticGainControl(t.automaticGainControl)), tp(), tE(e.location)
   },
   AUDIO_SET_NOISE_CANCELLATION: function(e) {
     let t = tr({
       noiseCancellation: e.enabled
     });
-    ev.eachConnection(e => e.setNoiseCancellation(t.noiseCancellation)), tE(), tf(e.location)
+    ev.eachConnection(e => e.setNoiseCancellation(t.noiseCancellation)), tp(), tE(e.location)
   },
   AUDIO_SET_DISPLAY_SILENCE_WARNING: function(e) {
     tr({
@@ -1570,8 +1581,8 @@ var tg = i = new tT(I.default, {
   MEDIA_ENGINE_INTERACTION_REQUIRED: function(e) {
     return eO !== e.required && (eO = e.required, !e.required && ev.interact(), !0)
   },
-  USER_SETTINGS_MODAL_INIT: t_,
-  USER_SETTINGS_MODAL_SET_SECTION: t_,
+  USER_SETTINGS_MODAL_INIT: tS,
+  USER_SETTINGS_MODAL_SET_SECTION: tS,
   CERTIFIED_DEVICES_SET: function() {
     return ev.eachConnection(te), !1
   },
@@ -1673,7 +1684,7 @@ var tg = i = new tT(I.default, {
     return !!eq && (eq = !1, !0)
   },
   MEDIA_ENGINE_ENABLE_SOUNDSHARE: function() {
-    tm(), ! function() {
+    tT(), ! function() {
       var e, t;
       let n = i.isSoundSharing(),
         r = null === (e = i.getGoLiveSource()) || void 0 === e ? void 0 : e.desktopSource;

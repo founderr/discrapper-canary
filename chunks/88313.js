@@ -11,7 +11,8 @@ var i = n("811022"),
   o = n("49111");
 class l {
   calculateFps(e, t, n) {
-    if (-1 === this.prevFramesCodec[e] || t < this.prevFramesCodec[e] || n < this.prevTimestamp[e]) return this.prevFramesCodec[e] = t, this.prevTimestamp[e] = n, this.perUserFpsWindow[e] = [], NaN;
+    if (-1 === this.prevFramesCodec[e] || t < this.prevFramesCodec[e] || n < this.prevTimestamp[e] || n > this.prevTimestamp[e] + 1e3 * this.windowLength) return this.prevFramesCodec[e] = t, this.prevTimestamp[e] = n, this.perUserFpsWindow[e] = [], NaN;
+    if (n < this.prevTimestamp[e] + 900) return NaN;
     let i = this.elapsedSeconds(n, this.prevTimestamp[e]);
     this.prevTimestamp[e] = n;
     let r = (t - this.prevFramesCodec[e]) / i;
