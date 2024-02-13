@@ -16662,5 +16662,11 @@ e.exports = Object.freeze({
   QUIET_MODE_SETTINGS_DESCRIPTION: "Discord will not show in-app, desktop notifications or play message sounds.",
   QUIET_MODE_DISABLED_BY: "This is disabled by Focus Mode",
   QUIET_MODE_HABITUAL_DND_NOTICE: "You've been on Do Not Disturb for a while. Would you like to enable Focus Mode instead?",
-  QUICK_REPLY_CLOSE_ARIA_LABEL: "Close reply popout"
+  QUICK_REPLY_CLOSE_ARIA_LABEL: "Close reply popout",
+  ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE: "An activity card showing @{username} and {activity}",
+  ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING: "An activity card showing @{username} playing {activity}",
+  ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING: "An activity card showing @{username} watching {activity}",
+  ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING: "An activity card showing @{username} listening to {activity}",
+  ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY: "An activity card showing @{username} listening to {song} by {artist}",
+  ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING: "An activity card showing @{username} streaming {activity}"
 })

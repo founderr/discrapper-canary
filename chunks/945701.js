@@ -86,30 +86,31 @@ var N = e => {
     showReply: o = !0,
     requireConfirmation: d = !1,
     filename: c,
-    reactor: f,
-    analyticsParams: m
-  } = e, [g, I] = i.useState(!1), N = (0, u.default)(), [x, O] = i.useState(!1), [R, M] = i.useState(!1), [L, P] = i.useState(), [b, j] = i.useState(""), U = i.useRef(null), D = i.useRef(null), k = (0, T.default)(n);
-
-  function w(e) {
-    var t, n;
-    null != e.target && (!(null == U ? void 0 : null === (t = U.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && O(!1), !(null == D ? void 0 : null === (n = D.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && M(!1))
-  }
+    altText: f,
+    reactor: m,
+    analyticsParams: g
+  } = e, [I, N] = i.useState(!1), x = (0, u.default)(), [O, R] = i.useState(!1), [M, L] = i.useState(!1), [P, b] = i.useState(), [j, U] = i.useState(""), D = i.useRef(null), k = i.useRef(null), w = (0, T.default)(n);
 
   function F(e) {
+    var t, n;
+    null != e.target && (!(null == D ? void 0 : null === (t = D.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && R(!1), !(null == k ? void 0 : null === (n = k.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && L(!1))
+  }
+
+  function G(e) {
     E.default.track(v.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
       application_id: t.application_id,
       interaction_type: e,
-      ...m
+      ...g
     })
   }
   return (i.useEffect(() => {
     let e = e => {
-      "Escape" === e.key && (M(!1), O(!1))
+      "Escape" === e.key && (L(!1), R(!1))
     };
-    return document.addEventListener("keydown", e), document.addEventListener("mousedown", w), () => {
-      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", w)
+    return document.addEventListener("keydown", e), document.addEventListener("mousedown", F), () => {
+      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", F)
     }
-  }, []), k) ? (0, l.jsxs)(l.Fragment, {
+  }, []), w) ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: _.reactions,
       children: [a && (0, l.jsx)(h.default, {
@@ -117,41 +118,55 @@ var N = e => {
         tabIndex: 0,
         className: _.reaction,
         onClick: () => {
-          F(S.ActivityReactorInteractionTypes.ReactBegin), O(!0), M(!1)
+          G(S.ActivityReactorInteractionTypes.ReactBegin), R(!0), L(!1)
         }
       }), o && (0, l.jsx)(A, {
-        ref: D,
+        ref: k,
         user: n,
-        showPopout: R,
+        showPopout: M,
         onEnter: e => {
-          F(S.ActivityReactorInteractionTypes.ReplySubmit), j(e), I(!0)
+          G(S.ActivityReactorInteractionTypes.ReplySubmit), U(e), N(!0)
         },
         children: (0, l.jsx)("button", {
           className: s(_.reaction, _.emojiButton),
           onClick: () => {
-            F(S.ActivityReactorInteractionTypes.ReplyBegin), M(!0)
+            G(S.ActivityReactorInteractionTypes.ReplyBegin), L(!0)
           },
           children: (0, l.jsx)(r.ArrowAngleLeftUpIcon, {})
         })
       })]
-    }), x && (0, l.jsx)("div", {
-      className: s([_.picker, "theme-".concat(N)]),
-      ref: U,
+    }), O && (0, l.jsx)("div", {
+      className: s([_.picker, "theme-".concat(x)]),
+      ref: D,
       children: (0, l.jsx)(p.ReactionPicker, {
         messageId: "",
         channel: y,
         closePopout: () => {
-          O(!1)
+          R(!1)
         },
         onSelectEmoji: e => {
-          null != e && (F(S.ActivityReactorInteractionTypes.ReactSubmit), P(e), O(!1), I(!0))
+          null != e && (G(S.ActivityReactorInteractionTypes.ReactSubmit), b(e), R(!1), N(!0))
         }
       })
-    }), g && (0, l.jsx)(f, {
+    }), I && (0, l.jsx)(m, {
       activity: t,
       user: n,
       onComplete: e => {
-        null != L ? (F(S.ActivityReactorInteractionTypes.ReactSend), (0, C.sendReaction)(e, L, n, d, c), P(void 0)) : null != b && (F(S.ActivityReactorInteractionTypes.ReplySend), (0, C.sendReply)(e, b, n, d, c), j("")), I(!1)
+        null != P ? (G(S.ActivityReactorInteractionTypes.ReactSend), (0, C.sendReaction)({
+          discordCanvas: e,
+          reaction: P,
+          user: n,
+          requireConfirmation: d,
+          filename: c,
+          altText: f
+        }), b(void 0)) : null != j && (G(S.ActivityReactorInteractionTypes.ReplySend), (0, C.sendReply)({
+          discordCanvas: e,
+          reply: j,
+          user: n,
+          requireConfirmation: d,
+          filename: c,
+          altText: f
+        }), U("")), N(!1)
       }
     })]
   }) : null
