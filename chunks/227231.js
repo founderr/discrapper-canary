@@ -79,6 +79,7 @@ function I(e) {
       expiresAt: (_ = e.config).expires_at,
       streamDurationRequirementMinutes: _.stream_duration_requirement_minutes,
       gameTitle: _.game_title,
+      getGameLink: _.get_game_link,
       applicationId: _.application_id,
       messages: {
         questName: (E = _.messages).quest_name,
