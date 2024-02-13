@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return x
   }
-});
+}), n("222007");
 var a = n("37983"),
   l = n("884691"),
   s = n("414456"),
@@ -11,67 +11,82 @@ var a = n("37983"),
   r = n("446674"),
   o = n("77078"),
   u = n("851387"),
-  d = n("750560"),
-  c = n("812204"),
-  f = n("685665"),
-  h = n("645266"),
-  m = n("506885"),
-  p = n("430312"),
-  E = n("26989"),
+  d = n("84339"),
+  c = n("750560"),
+  f = n("812204"),
+  h = n("685665"),
+  m = n("645266"),
+  p = n("506885"),
+  E = n("430312"),
+  S = n("26989"),
   g = n("697218"),
-  S = n("459824"),
-  C = n("516832"),
-  _ = n("986358"),
-  I = n("590456"),
-  T = n("623529");
+  C = n("459824"),
+  _ = n("516832"),
+  I = n("986358"),
+  T = n("590456"),
+  v = n("623529");
 
-function v(e) {
+function x(e) {
   let {
     userId: t,
     guildId: n,
     onClose: s,
-    className: v,
-    infoPanelClassName: x,
-    style: N
-  } = e, A = (0, S.useCanAccessGuildMemberModView)(n), M = (0, r.useStateFromStores)([g.default], () => g.default.getUser(t), [t]), R = (0, r.useStateFromStores)([E.default], () => E.default.getMember(n, t), [n, t]), j = null == M || null == R, {
-    AnalyticsLocationProvider: L
-  } = (0, f.default)(c.default.GUILD_MEMBER_MOD_VIEW);
+    className: x,
+    infoPanelClassName: N,
+    style: A
+  } = e, M = (0, C.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([g.default], () => g.default.getUser(t), [t]), j = (0, r.useStateFromStores)([S.default], () => S.default.getMember(n, t), [n, t]), [L, O] = l.useState(null == R || null == j), y = (0, d.default)(j), P = l.useRef(null), {
+    AnalyticsLocationProvider: b
+  } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW);
   return (l.useEffect(() => {
-    !A && s()
-  }, [A, s]), (0, d.useSubscribeGuildMembers)({
+    !M && s()
+  }, [M, s]), l.useEffect(() => {
+    let e = null != y && null == j;
+    e && !L && s()
+  }, [L, j, s, y]), l.useEffect(() => {
+    null != R && null != j && O(!1)
+  }, [R, j]), l.useEffect(() => {
+    let e = null == j;
+    return !L && e && (P.current = window.setTimeout(s, 500)), () => {
+      null != P.current && window.clearTimeout(P.current)
+    }
+  }, [L, j, s]), (0, c.useSubscribeGuildMembers)({
     [n]: [t]
   }), l.useEffect(() => {
-    u.default.requestMembersById(n, [t]), (0, m.default)(t, void 0, {
-      guildId: n
-    }), (0, h.getMemberSupplemental)(n, [t])
-  }, [n, t]), A) ? j ? (0, a.jsx)("div", {
-    className: i(T.sidebarContianer, T.loadingContainer, v),
-    style: N,
+    (async function e() {
+      let e = [u.default.requestMembersById(n, [t]), (0, m.getMemberSupplemental)(n, [t]), (0, p.default)(t, void 0, {
+        guildId: n,
+        dispatchWait: !0
+      })];
+      await Promise.all(e), O(!1)
+    })()
+  }, [n, t]), M) ? L || null == R || null == j ? (0, a.jsx)("div", {
+    className: i(v.sidebarContianer, v.loadingContainer, x),
+    style: A,
     children: (0, a.jsx)(o.Spinner, {
       animated: !0,
-      type: o.Spinner.Type.SPINNING_CIRCLE
+      type: L ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
     })
-  }) : (0, a.jsx)(L, {
+  }) : (0, a.jsx)(b, {
     children: (0, a.jsx)("div", {
-      className: i(T.sidebarContianer, v),
-      style: N,
-      children: (0, a.jsx)(p.default, {
-        user: M,
+      className: i(v.sidebarContianer, x),
+      style: A,
+      children: (0, a.jsx)(E.default, {
+        user: R,
         guildId: n,
-        profileType: I.UserProfileTypes.MODAL,
+        profileType: T.UserProfileTypes.MODAL,
         forceShowPremium: !0,
-        className: i(T.profileThemedContainer),
+        className: i(v.profileThemedContainer),
         children: (0, a.jsxs)("div", {
-          className: i(T.innerContainer),
-          children: [(0, a.jsx)(_.default, {
+          className: i(v.innerContainer),
+          children: [(0, a.jsx)(I.default, {
             userId: t,
             guildId: n,
             onClose: s
-          }), (0, a.jsx)(C.default, {
+          }), (0, a.jsx)(_.default, {
             userId: t,
             guildId: n,
             onClose: s,
-            className: x
+            className: N
           })]
         })
       })
