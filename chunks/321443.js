@@ -4,17 +4,17 @@ l.r(t), l.d(t, {
     return i
   }
 });
-var a = l("37983");
+var n = l("37983");
 l("884691");
-var n = l("414456"),
-  s = l.n(n),
+var a = l("414456"),
+  s = l.n(a),
   r = l("8684");
 
 function i(e) {
   let {
     separator: t = !1
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, n.jsx)("div", {
     className: s(r.divider, {
       [r.separator]: t
     })

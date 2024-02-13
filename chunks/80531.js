@@ -21,7 +21,7 @@ var l = n("446674"),
       channel: f,
       animateAssets: h,
       forceShowPremiumBadge: m
-    } = e, p = t.isNonUserBot(), [E, g] = (0, l.useStateFromStoresArray)([i.default], () => [p ? null : i.default.getStatus(t.id), i.default.isMobileOnline(t.id)]), S = null == n ? void 0 : n.profileEffectId;
+    } = e, p = t.isNonUserBot(), [E, S] = (0, l.useStateFromStoresArray)([i.default], () => [p ? null : i.default.getStatus(t.id), i.default.isMobileOnline(t.id)]), g = null == n ? void 0 : n.profileEffectId;
     return (0, a.jsxs)("div", {
       children: [(0, a.jsx)(r.default, {
         user: t,
@@ -34,7 +34,7 @@ var l = n("446674"),
         user: t,
         displayProfile: n,
         status: E,
-        isMobile: g,
+        isMobile: S,
         channelId: f.id,
         disableUserProfileLink: !0,
         hasBanner: (null == n ? void 0 : n.banner) != null,
@@ -47,8 +47,8 @@ var l = n("446674"),
           user: t,
           size: o.BadgeSizes.SIZE_22
         })
-      }), null != S && (0, a.jsx)(s.default, {
-        profileEffectId: S,
+      }), null != g && (0, a.jsx)(s.default, {
+        profileEffectId: g,
         maxLoops: 0,
         resetOnHover: !0,
         isHovering: m,

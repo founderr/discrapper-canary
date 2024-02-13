@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("812204"),
   p = n("685665"),
   E = n("393414"),
-  g = n("161778"),
-  S = n("124824"),
+  S = n("161778"),
+  g = n("124824"),
   C = n("772280"),
   _ = n("82636"),
   I = n("599110"),
@@ -79,7 +79,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
       location: "activties_mini_shelf"
     }, {
       autoTrackExposure: !0
-    }), Q = (0, u.useStateFromStores)([g.default], () => g.default.getState().theme), $ = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
+    }), Q = (0, u.useStateFromStores)([S.default], () => S.default.getState().theme), $ = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
       id: ee,
       guild_id: et
     } = n;
@@ -199,7 +199,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
         })]
       }) : null;
     return (0, a.jsx)(el, {
-      children: (0, a.jsx)(S.default, {
+      children: (0, a.jsx)(g.default, {
         children: (0, a.jsxs)(d.Dialog, {
           ref: t,
           "aria-labelledby": H,

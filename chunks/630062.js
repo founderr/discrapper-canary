@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("449918"),
-  o = n("698882"),
-  u = n("675305"),
+  u = n("698882"),
+  o = n("675305"),
   d = n("393414"),
   c = n("461380"),
   f = n("49111"),
@@ -28,13 +28,13 @@ function m(e, t) {
 let E = a.memo(function(e) {
   let {
     guild: t
-  } = e, n = (0, s.useStateFromStores)([o.default], () => o.default.getNewMemberActions(t.id), [t.id]), E = (0, s.useStateFromStores)([u.default], () => u.default.getCompletedActions(t.id)), g = a.useMemo(() => {
+  } = e, n = (0, s.useStateFromStores)([u.default], () => u.default.getNewMemberActions(t.id), [t.id]), E = (0, s.useStateFromStores)([o.default], () => o.default.getCompletedActions(t.id)), g = a.useMemo(() => {
     if (null == n || null == E) return 0;
     let e = 0;
     return n.forEach(t => {
       null != E[t.channelId] && e++
     }), e
-  }, [E, n]), S = null == n ? 0 : n.length;
+  }, [E, n]), I = null == n ? 0 : n.length;
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(i.Clickable, {
       className: p.progressBarContainer,
@@ -54,7 +54,7 @@ let E = a.memo(function(e) {
             className: p.rightText,
             children: C.default.Messages.GUILD_ONBOARDING_NEW_MEMBER_PROGRESS_BAR_COUNTER.format({
               numberHook: m,
-              total: S.toString(),
+              total: I.toString(),
               completed: g.toString()
             })
           }), (0, l.jsx)(c.default, {
@@ -67,7 +67,7 @@ let E = a.memo(function(e) {
       }), (0, l.jsx)(i.Progress, {
         className: p.progressBar,
         foregroundGradientColor: [(0, r.getColor)(f.Color.GREEN_300), (0, r.getColor)(f.Color.GREEN_230)],
-        percent: g / S * 100 + 3,
+        percent: g / I * 100 + 3,
         animate: !0
       })]
     }), (0, l.jsx)("div", {

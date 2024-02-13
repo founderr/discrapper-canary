@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("957255"),
   p = n("697218"),
   E = n("465305"),
-  g = n("473073"),
-  S = n("763225"),
+  S = n("473073"),
+  g = n("763225"),
   C = n("914275"),
   _ = n("49111"),
   I = n("782340"),
@@ -32,9 +32,9 @@ function x(e) {
     permission: h,
     roleIds: p,
     guild: E,
-    specMap: g,
-    categoryTitle: S
-  } = e, T = _.Permissions[h], x = null !== (s = null === (t = g[T.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, c.getPermissionName)(T), N = null !== (f = null === (n = g[T.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== f ? f : "", A = C.ELEVATED_PERMISSIONS.has(T), M = p.length, R = (0, r.default)([m.default], () => m.default.can(_.Permissions.MANAGE_ROLES, E), [E]), j = l.useCallback(async e => {
+    specMap: S,
+    categoryTitle: g
+  } = e, T = _.Permissions[h], x = null !== (s = null === (t = S[T.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, c.getPermissionName)(T), N = null !== (f = null === (n = S[T.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== f ? f : "", A = C.ELEVATED_PERMISSIONS.has(T), M = p.length, R = (0, r.default)([m.default], () => m.default.can(_.Permissions.MANAGE_ROLES, E), [E]), j = l.useCallback(async e => {
     R && (await d.default.open(E.id, _.GuildSettingsSections.ROLES), await d.default.selectRole(e))
   }, [R, E.id]);
   return (0, a.jsxs)("div", {
@@ -49,10 +49,10 @@ function x(e) {
           variant: "text-md/medium",
           color: A ? "text-danger" : "header-primary",
           children: x
-        }), null != S && (0, a.jsx)(o.Text, {
+        }), null != g && (0, a.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: "header-muted",
-          children: S
+          children: g
         })]
       }), (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
@@ -91,7 +91,7 @@ function N(e) {
     location: s,
     className: u,
     onNavigate: d
-  } = e, c = (0, r.default)([p.default], () => p.default.getUser(t), [t]), m = (0, r.default)([h.default], () => h.default.getGuild(n), [n]), N = (0, r.default)([f.default], () => f.default.getMember(n, t), [n, t]), A = (0, S.useProfileThemedPanelBackground)(t, n), M = (0, C.useUserPermissionsAndRoles)(t, n, C.ALL_PERMISSIONS), R = Object.keys(M).length, j = l.useMemo(() => null != m ? E.default.getGuildPermissionSpecMap(m) : null, [m]), L = l.useMemo(() => null != m ? E.default.generateGuildPermissionSpec(m) : null, [m]), O = l.useMemo(() => {
+  } = e, c = (0, r.default)([p.default], () => p.default.getUser(t), [t]), m = (0, r.default)([h.default], () => h.default.getGuild(n), [n]), N = (0, r.default)([f.default], () => f.default.getMember(n, t), [n, t]), A = (0, g.useProfileThemedPanelBackground)(t, n), M = (0, C.useUserPermissionsAndRoles)(t, n, C.ALL_PERMISSIONS), R = Object.keys(M).length, j = l.useMemo(() => null != m ? E.default.getGuildPermissionSpecMap(m) : null, [m]), L = l.useMemo(() => null != m ? E.default.generateGuildPermissionSpec(m) : null, [m]), O = l.useMemo(() => {
     if (null == m || null == j || null == N) return null;
     if (0 === R) return (0, a.jsx)("div", {
       className: i(v.permissionChiplet, v.noModPerms),
@@ -123,7 +123,7 @@ function N(e) {
     style: {
       backgroundColor: A
     },
-    children: [(0, a.jsx)(g.default, {
+    children: [(0, a.jsx)(S.default, {
       guildId: n,
       userId: t,
       onNavigate: d

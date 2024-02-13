@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("77078"),
   i = n("104359"),
   r = n("956089"),
-  o = n("108189"),
-  u = n("315102"),
+  u = n("108189"),
+  o = n("315102"),
   d = n("610898"),
   c = n("829562"),
   f = n("246507");
@@ -28,7 +28,7 @@ function h(e) {
           disableColor: !0,
           className: f.geoRestrictedBadge
         }),
-        children: (0, l.jsx)(o.default, {
+        children: (0, l.jsx)(u.default, {
           name: e.name,
           onMouseEnter: () => {
             h(!0)
@@ -48,7 +48,7 @@ function h(e) {
               })
             })
           },
-          icon: null != e.icon ? u.default.getGuildIconURL({
+          icon: null != e.icon ? o.default.getGuildIconURL({
             id: e.id,
             icon: e.icon,
             canAnimate: !1,

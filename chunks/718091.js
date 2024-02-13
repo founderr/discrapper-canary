@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("77078"),
   p = n("913144"),
   E = n("561288"),
-  g = n("450911"),
-  S = n("630086"),
+  S = n("450911"),
+  g = n("630086"),
   C = n("970728"),
   _ = n("369008"),
   I = n("736964"),
@@ -578,17 +578,17 @@ class eo extends l.PureComponent {
       } = this.props, l = !t.has(e);
       l ? (_.default.addUser(e), n.length > 0 && _.default.clear(null == a ? void 0 : a.id)) : _.default.removeUser(e), this.forceFocus()
     }, this.handleAddFriendNavigation = () => {
-      (0, L.transitionTo)(Q.Routes.FRIENDS), S.default.setSection(Q.FriendsSections.ADD_FRIEND), this.props.onClose()
+      (0, L.transitionTo)(Q.Routes.FRIENDS), g.default.setSection(Q.FriendsSections.ADD_FRIEND), this.props.onClose()
     }, this.handleScroll = () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({
         separator: !e.isScrolledToTop()
       })
     }, this.createNewDM = e => {
-      g.default.openPrivateChannel(e, !1, !1, "New Group DM")
+      S.default.openPrivateChannel(e, !1, !1, "New Group DM")
     }, this.pushToExistingDM = (e, t) => {
       let n = D.default.getChannelId() === e.id;
-      g.default.addRecipients(e.id, t, Q.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
+      S.default.addRecipients(e.id, t, Q.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
         if (n) {
           if (e.isDM() && a !== e.id) {
             E.default.call(a, !1, !0);

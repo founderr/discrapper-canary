@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("759843"),
   i = n("249654"),
   r = n("446674"),
-  o = n("812204"),
-  u = n("685665"),
+  u = n("812204"),
+  o = n("685665"),
   d = n("428958"),
   c = n("872173"),
   f = n("945956"),
@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("24156"),
   E = n("774473"),
   g = n("679864"),
-  S = n("553372"),
-  I = n("846325"),
-  _ = n("11099");
+  I = n("553372"),
+  _ = n("846325"),
+  S = n("11099");
 
 function N(e) {
   let {
@@ -38,11 +38,11 @@ function N(e) {
     let [t, n] = (0, r.useStateFromStoresArray)([C.default], () => [C.default.getSounds(), C.default.getFavorites()]);
     return a.useMemo(() => {
       let l = [],
-        a = [...e, I.DEFAULT_SOUND_GUILD_ID],
+        a = [...e, _.DEFAULT_SOUND_GUILD_ID],
         s = (e, a) => {
           var s, r;
-          let o = null !== (r = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => i.default.compare(e.soundId, t.soundId))) && void 0 !== r ? r : [];
-          for (let e of o) {
+          let u = null !== (r = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => i.default.compare(e.soundId, t.soundId))) && void 0 !== r ? r : [];
+          for (let e of u) {
             let t = n.has(e.soundId),
               s = t && a || !t && !a;
             s && l.push(e)
@@ -53,7 +53,7 @@ function N(e) {
   }(R), O = (0, m.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [D, b] = a.useState(void 0), j = (0, r.useStateFromStores)([f.default], () => f.default.getMediaSessionId()), {
     analyticsLocations: G,
     AnalyticsLocationProvider: U
-  } = (0, u.default)(o.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
+  } = (0, o.default)(u.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
     (0, p.playSound)(e, n.id, G), x()
   }, [G, n.id, x]);
   a.useEffect(() => {
@@ -90,9 +90,9 @@ function N(e) {
       let t = M[e];
       null != t && P(t)
     }, [M, P]),
-    V = a.useMemo(() => M.map(e => (0, l.jsx)(S.default, {
+    V = a.useMemo(() => M.map(e => (0, l.jsx)(I.default, {
       interactive: L,
-      className: _.soundButton,
+      className: S.soundButton,
       sound: e,
       focused: D === e.soundId,
       channel: n

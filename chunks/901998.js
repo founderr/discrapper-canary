@@ -34,12 +34,12 @@ function R(e) {
   return null != t && null == n[t] && (n[t] = d.default.makeEveryoneOverwrite(t)), n
 }
 
-function v() {
+function O() {
   if (m = c.default.getChannel(), T = c.default.getCategory(), null == m) return !1;
   let e = m.getGuildId();
   p = S = R(m), null == S[g] && (g = e), s = null != T, a = d.default.areChannelsLocked(m, T), A = null, I = !1, C = E.FormStates.CLOSED, _.clear()
 }
-class O extends r.default.Store {
+class v extends r.default.Store {
   initialize() {
     this.waitFor(c.default, f.default)
   }
@@ -80,16 +80,16 @@ class O extends r.default.Store {
     return N
   }
 }
-O.displayName = "ChannelSettingsPermissionsStore";
-var L = new O(u.default, {
+v.displayName = "ChannelSettingsPermissionsStore";
+var L = new v(u.default, {
   CHANNEL_SETTINGS_SET_SECTION: function(e) {
     let {
       section: t
     } = e;
     if (null != m || t !== E.ChannelSettingsSections.PERMISSIONS) return !1;
-    v()
+    O()
   },
-  CHANNEL_SETTINGS_PERMISSIONS_INIT: v,
+  CHANNEL_SETTINGS_PERMISSIONS_INIT: O,
   CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function(e) {
     let {
       id: t,
@@ -148,7 +148,7 @@ var L = new O(u.default, {
     let {
       silent: t
     } = e;
-    t ? C = E.FormStates.OPEN : (C = E.FormStates.CLOSED, v())
+    t ? C = E.FormStates.OPEN : (C = E.FormStates.CLOSED, O())
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function(e) {
     let {

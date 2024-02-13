@@ -37,7 +37,7 @@ let d = () => {
     (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await t.el("309449").then(t.bind(t, "309449"));
+      } = await t.el("166260").then(t.bind(t, "166260"));
       return r => (0, a.jsx)(e, {
         ...r
       })

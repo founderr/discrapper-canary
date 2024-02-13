@@ -16,8 +16,8 @@ var a, l, s = n("37983"),
   m = n("45029"),
   p = n("216422"),
   E = n("719923"),
-  g = n("439932"),
-  S = n("15264"),
+  S = n("439932"),
+  g = n("15264"),
   C = n("607573"),
   _ = n("817039"),
   I = n("687292"),
@@ -65,7 +65,7 @@ function R(e) {
         labelType: P
       })
     })
-  }), [a.application.name, P]), V = i.useMemo(() => (0, S.default)(a.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
+  }), [a.application.name, P]), V = i.useMemo(() => (0, g.default)(a.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
     className: N.iconOuterContainer,
     children: (0, s.jsx)("div", {
       className: o(N.iconInnerContainer, N.nitroIconContainer),
@@ -139,7 +139,7 @@ function R(e) {
           value: t
         } = e;
         return (0, s.jsx)(u.animated.div, {
-          className: o((0, g.getThemeClass)(v.ThemeTypes.DARK), N.activityItem, R, {
+          className: o((0, S.getThemeClass)(v.ThemeTypes.DARK), N.activityItem, R, {
             [N.activityItem_13_11]: 0 === r,
             [N.activityItem_16_9]: 1 === r
           }),

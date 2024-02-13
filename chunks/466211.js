@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 });
 var a = n("37983"),
@@ -28,16 +28,16 @@ let m = {
     precision: 1e-4,
     bounce: 0
   },
-  g = {
+  S = {
     duration: 1e3
   };
 
-function S(e) {
+function g(e) {
   let {
     stream: t,
     inPopout: n
   } = e, {
-    reducedMotion: S
+    reducedMotion: g
   } = l.useContext(r.AccessibilityPreferencesContext), C = (0, l.useRef)(null), _ = d.useClipsButtonStore.getState().clipsButtonRef, I = (0, c.encodeStreamKey)(t), T = (0, i.useStateFromStores)([o.default], () => o.default.getActiveAnimation()), v = (0, i.useStateFromStoresArray)([o.default], () => o.default.getStreamClipAnimations(I)), x = (0, l.useRef)();
   l.useEffect(() => () => {
     (0, u.dismissSaveClipAnimation)(I)
@@ -86,7 +86,7 @@ function S(e) {
         position: "fixed",
         visibility: "hidden",
         opacity: 1,
-        ...S.enabled ? A(e) : N()
+        ...g.enabled ? A(e) : N()
       }),
       enter: e => [{
         opacity: 1,
@@ -95,7 +95,7 @@ function S(e) {
       }],
       leave: {
         opacity: 0,
-        ...!S.enabled && {
+        ...!g.enabled && {
           height: 0,
           width: 0,
           ...(() => {
@@ -106,7 +106,7 @@ function S(e) {
           })()
         }
       },
-      config: S.enabled ? g : E,
+      config: g.enabled ? S : E,
       onRest: (e, t) => {
         null != t.item && null != v.find(e => e.timestamp === t.item.timestamp) && (0, u.dismissSaveClipAnimation)(I, t.item.timestamp)
       }

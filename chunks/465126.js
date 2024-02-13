@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return v
   }
 }), n("222007");
 var a = n("37983"),
@@ -27,7 +27,7 @@ var a = n("37983"),
   A = n("68422"),
   N = n("578817"),
   R = n("855237");
-class v extends s.PureComponent {
+class O extends s.PureComponent {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
@@ -50,8 +50,8 @@ class v extends s.PureComponent {
       isVisible: N,
       submitting: R
     } = this.state, {
-      name: v,
-      description: O,
+      name: O,
+      description: v,
       presenceCount: L,
       memberCount: M,
       keywords: P
@@ -158,13 +158,13 @@ class v extends s.PureComponent {
                 }), (0, a.jsx)(o.Heading, {
                   variant: "heading-md/semibold",
                   className: g.guildName,
-                  children: v
+                  children: O
                 })]
               }), (0, a.jsx)(o.Text, {
                 className: g.description,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: O
+                children: v
               }), U && null != P && null != l && (0, a.jsx)(f.DiscoveryTags, {
                 tags: P,
                 onTagClick: e => l(e, t.id),
@@ -256,7 +256,7 @@ class v extends s.PureComponent {
     }
   }
 }
-v.Placeholder = e => (0, a.jsx)("div", {
+O.Placeholder = e => (0, a.jsx)("div", {
   className: i(e.className, g.cardPlaceholder)
 });
-var O = v
+var v = O

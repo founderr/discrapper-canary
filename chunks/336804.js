@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("685665"),
   p = n("506885"),
   E = n("697218"),
-  g = n("216422"),
-  S = n("956089"),
+  S = n("216422"),
+  g = n("956089"),
   C = n("980423"),
   _ = n("599110"),
   I = n("719923"),
@@ -116,7 +116,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         className: i(M.qualityIndicator, p, C.LiveIndicatorShapes[c], P ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
           [M.clickable]: w && b
         }),
-        children: [b ? (0, a.jsx)(g.default, {
+        children: [b ? (0, a.jsx)(S.default, {
           className: M.premiumStreamIcon
         }) : null, (0, a.jsx)("span", {
           className: M.qualityResolution,
@@ -126,7 +126,7 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
         })]
       })
     });
-    return (0, a.jsx)(S.TextBadge, {
+    return (0, a.jsx)(g.TextBadge, {
       text: k,
       className: i(L, M.qualityIndicatorBadge),
       color: d.default.unsafe_rawColors.PRIMARY_500.css,
@@ -148,7 +148,7 @@ var w = e => {
       dispatchWait: !0
     })
   }, [t]);
-  let g = (0, r.useTransition)(E, {
+  let S = (0, r.useTransition)(E, {
       enter: {
         from: m.enabled ? O : j,
         to: m.enabled ? y : L
@@ -168,13 +168,13 @@ var w = e => {
     return (0, a.jsxs)("div", {
       className: i(M.streamQualityIndicator, n),
       ...l,
-      children: [g((e, n) => n ? (0, a.jsx)(r.animated.div, {
+      children: [S((e, n) => n ? (0, a.jsx)(r.animated.div, {
         style: e,
         children: (0, a.jsx)(U, {
           className: M.liveQualityIndicator,
           participant: t,
           size: o,
-          shape: S.BadgeShapes.ROUND_LEFT,
+          shape: g.BadgeShapes.ROUND_LEFT,
           isUpsellEnabled: s,
           didTrackUpsellViewed: d,
           setDidTrackUpsellViewed: c
@@ -185,7 +185,7 @@ var w = e => {
         children: (0, a.jsx)(C.default, {
           look: C.LiveIndicatorLooks.RED,
           size: o,
-          shape: E ? S.BadgeShapes.ROUND_RIGHT : S.BadgeShapes.ROUND
+          shape: E ? g.BadgeShapes.ROUND_RIGHT : g.BadgeShapes.ROUND
         })
       })]
     })

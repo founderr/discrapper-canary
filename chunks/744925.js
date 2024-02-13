@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("750560"),
-  o = n("575136"),
-  u = n("871388"),
+  u = n("575136"),
+  o = n("871388"),
   d = n("152311"),
   c = n("419830"),
   f = n("305961"),
@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("449008"),
   E = n("447235"),
   g = n("563903"),
-  S = n("321314"),
-  I = n("137376"),
-  _ = n("789482"),
+  I = n("321314"),
+  _ = n("137376"),
+  S = n("789482"),
   N = n("49111"),
   T = n("782340"),
   A = n("387646");
@@ -34,8 +34,8 @@ function L(e) {
     guild: h,
     onAction: p,
     voiceStates: E,
-    isChannelSelected: S,
-    shouldShowSettingNudge: I
+    isChannelSelected: I,
+    shouldShowSettingNudge: _
   } = e;
   ! function(e, t) {
     let n = a.useMemo(() => {
@@ -51,9 +51,9 @@ function L(e) {
     }, [e, t]);
     (0, r.useSubscribeGuildMembers)(n)
   }(f, E);
-  let _ = (0, o.default)(f),
+  let S = (0, u.default)(f),
     L = new Map;
-  _.forEach(e => {
+  S.forEach(e => {
     L.set(e.application.id, e)
   });
   let x = null !== (t = null == E ? void 0 : E.filter(m.isNotNullish)) && void 0 !== t ? t : [],
@@ -78,11 +78,11 @@ function L(e) {
         if (null != n && !(0, d.default)(n)) {
           var l, a, s, i;
           let r = "".concat(null !== (a = n.application_id) && void 0 !== a ? a : "", ":").concat(null !== (s = null === (l = n.party) || void 0 === l ? void 0 : l.id) && void 0 !== s ? s : t.user.id),
-            o = null !== (i = e[r]) && void 0 !== i ? i : {
+            u = null !== (i = e[r]) && void 0 !== i ? i : {
               members: [],
               activity: n
             };
-          o.members.push(t), !(0, u.default)(o.activity, N.ActivityFlags.JOIN) && (o.activity = n), e[r] = o
+          u.members.push(t), !(0, o.default)(u.activity, N.ActivityFlags.JOIN) && (u.activity = n), e[r] = u
         }
       }), Object.values(e)
     }, [x], s.statesWillNeverBeEqual),
@@ -95,7 +95,7 @@ function L(e) {
     className: A.container,
     children: [(0, l.jsx)(v, {
       channel: f,
-      isChannelSelected: S,
+      isChannelSelected: I,
       voiceStatesCount: null !== (c = null == E ? void 0 : E.length) && void 0 !== c ? c : 0
     }), (0, l.jsx)("div", {
       className: A.headerDivider
@@ -111,7 +111,7 @@ function L(e) {
         members: n,
         onAction: p
       }, t)
-    }), I && (0, l.jsxs)(l.Fragment, {
+    }), _ && (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: A.headerDivider
       }), (0, l.jsx)("div", {
@@ -143,21 +143,21 @@ function v(e) {
     channel: t,
     isChannelSelected: n,
     voiceStatesCount: a
-  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), o = (0, E.default)({
+  } = e, i = (0, s.useStateFromStores)([h.default], () => !h.default.can(N.Permissions.CONNECT, t)), r = (0, s.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), u = (0, E.default)({
     channel: t,
     locked: i,
     video: r,
     selected: n
-  }), u = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), d = (0, c.getChannelIconComponent)(t, u);
+  }), o = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), d = (0, c.getChannelIconComponent)(t, o);
   return null == d ? null : (0, l.jsxs)("div", {
     className: A.popoutHeaderContainer,
-    children: [(0, l.jsx)(S.default, {
+    children: [(0, l.jsx)(I.default, {
       channel: t
-    }), o ? (0, l.jsx)(I.default, {
+    }), u ? (0, l.jsx)(_.default, {
       userCount: a,
       video: r,
       channel: t
-    }) : (0, l.jsx)(_.default, {
+    }) : (0, l.jsx)(S.default, {
       userCount: a
     })]
   })

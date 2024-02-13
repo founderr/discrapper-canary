@@ -16,9 +16,9 @@ var i = n("37983"),
   f = n("49111"),
   h = n("782340"),
   p = n("482096");
-let E = Object.values(c.OpacityBounds).map(e => 100 * e),
-  g = (0, d.uid)();
-class m extends a.PureComponent {
+let g = Object.values(c.OpacityBounds).map(e => 100 * e),
+  m = (0, d.uid)();
+class E extends a.PureComponent {
   handleUpdateBackgroundOpacity(e) {
     o.default.setTextWidgetOpacity((0, u.default)(e / 100)), o.default.track(f.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
       text_opacity_slider: e
@@ -31,7 +31,7 @@ class m extends a.PureComponent {
     return (0, i.jsxs)("div", {
       className: p.container,
       children: [(0, i.jsx)(s.FormTitle, {
-        id: g,
+        id: m,
         tag: s.FormTitleTags.H5,
         className: p.title,
         children: h.default.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY
@@ -41,16 +41,16 @@ class m extends a.PureComponent {
           mini: !0,
           initialValue: this.initialValue,
           defaultValue: this.initialValue,
-          minValue: E[0],
-          maxValue: E[E.length - 1],
+          minValue: g[0],
+          maxValue: g[g.length - 1],
           handleSize: 10,
           onValueChange: this.handleUpdateBackgroundOpacity,
           asValueChanges: this.handlePreviewBackgroundOpacity,
-          markers: E,
+          markers: g,
           onMarkerRender: f.NOOP,
           equidistant: !0,
           stickToMarkers: !0,
-          "aria-labelledby": g
+          "aria-labelledby": m
         })
       })]
     })
@@ -61,4 +61,4 @@ class m extends a.PureComponent {
 }
 var S = l.default.connectStores([r.default], () => ({
   opacity: r.default.getTextWidgetOpacity()
-}))(m)
+}))(E)

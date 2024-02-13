@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var s = n("65597"),
-  a = n("191225"),
+var a = n("65597"),
+  s = n("191225"),
   l = n("420444"),
   i = n("42203"),
   r = n("321933"),
@@ -20,7 +20,7 @@ let u = "no_text_activity",
   };
 
 function c() {
-  let e = (0, s.default)([a.default], () => a.default.getCurrentEmbeddedActivity()),
-    t = (0, s.default)([a.default], () => a.default.getActivityPanelMode());
+  let e = (0, a.default)([s.default], () => s.default.getCurrentEmbeddedActivity()),
+    t = (0, a.default)([s.default], () => s.default.getActivityPanelMode());
   return void 0 === e || (0, l.default)(null == e ? void 0 : e.channelId, i.default) ? d[u] : d[t]
 }

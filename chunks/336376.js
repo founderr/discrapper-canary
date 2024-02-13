@@ -9,13 +9,13 @@ var l = n("446674"),
   s = n("233069"),
   i = n("117362"),
   r = n("42203"),
-  o = n("660478"),
-  u = n("18494"),
+  u = n("660478"),
+  o = n("18494"),
   d = n("287850");
 let c = [];
 
 function f() {
-  let e = d.default.getPrivateChannelIds().filter(e => o.default.getMentionCount(e) > 0);
+  let e = d.default.getPrivateChannelIds().filter(e => u.default.getMentionCount(e) > 0);
   return e.length > 20 && (e.length = 20), !(0, i.areArraysShallowlyEqual)(e, c) && (c = e, !0)
 }
 
@@ -31,7 +31,7 @@ function C(e) {
 }
 class p extends l.default.Store {
   initialize() {
-    this.waitFor(d.default, r.default, u.default, o.default)
+    this.waitFor(d.default, r.default, o.default, u.default)
   }
   getUnreadPrivateChannelIds() {
     return c
@@ -58,7 +58,7 @@ var m = new p(a.default, {
     return !!(null != n && (0, s.isPrivate)(n.type)) && f()
   },
   WINDOW_FOCUS: function() {
-    let e = r.default.getChannel(u.default.getChannelId());
+    let e = r.default.getChannel(o.default.getChannelId());
     return !!(null != e && (0, s.isPrivate)(e.type)) && f()
   },
   CHANNEL_CREATE: function(e) {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("222007");
 var a = n("37983"),
@@ -18,14 +18,14 @@ var a = n("37983"),
   m = n("664336"),
   p = n("659500"),
   E = n("49111"),
-  g = n("782340"),
-  S = function(e) {
+  S = n("782340"),
+  g = function(e) {
     let {
       channel: t
     } = e, n = (0, s.useStateFromStores)([d.default, f.default], () => {
       let e = f.default.getCurrentUser();
       return null == e || t.isNSFW() && (!e.nsfwAllowed || !d.default.didAgree(t.getGuildId()))
-    }, [t]), [S, C] = l.useState(!1), _ = (0, s.useStateFromStores)([c.default], () => c.default.hasUnreadPins(t.id), [t]), I = (0, o.useWindowDispatch)(), T = (0, u.useIsBroadcastingGDM)(t.id), v = l.useCallback(() => {
+    }, [t]), [g, C] = l.useState(!1), _ = (0, s.useStateFromStores)([c.default], () => c.default.hasUnreadPins(t.id), [t]), I = (0, o.useWindowDispatch)(), T = (0, u.useIsBroadcastingGDM)(t.id), v = l.useCallback(() => {
       !n && C(e => !e)
     }, [n]);
 
@@ -35,7 +35,7 @@ var a = n("37983"),
     return (l.useEffect(() => (p.ComponentDispatch.subscribe(E.ComponentActions.TOGGLE_CHANNEL_PINS, v), () => {
       p.ComponentDispatch.unsubscribe(E.ComponentActions.TOGGLE_CHANNEL_PINS, v)
     }), [v]), T) ? null : (0, a.jsx)(i.Popout, {
-      shouldShow: S,
+      shouldShow: g,
       animation: i.Popout.Animation.NONE,
       position: "bottom",
       align: "right",
@@ -56,9 +56,9 @@ var a = n("37983"),
         return (0, a.jsx)(m.Icon, {
           ...e,
           onClick: v,
-          tooltip: l ? null : g.default.Messages.PINNED_MESSAGES,
+          tooltip: l ? null : S.default.Messages.PINNED_MESSAGES,
           icon: h.default,
-          "aria-label": g.default.Messages.PINNED_MESSAGES,
+          "aria-label": S.default.Messages.PINNED_MESSAGES,
           disabled: n,
           showBadge: _,
           selected: l

@@ -25,18 +25,18 @@ function i(e) {
     m = c.current[t.id],
     p = e => m + e.deltaTime,
     E = e => p(e) + 1500 >= Date.now(),
-    g = e => p(e) <= Date.now() && E(e),
-    S = h.find(g);
-  if (null == S) {
+    S = e => p(e) <= Date.now() && E(e),
+    g = h.find(S);
+  if (null == g) {
     !E(t.points[t.points.length - 1]) && f.push(t);
     return
   }
   let C = (e, t) => {
       let a = null;
-      n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(S.x, S.y);
+      n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(g.x, g.y);
       for (let e = 1; e < h.length; e++) {
         let t = h[e];
-        g(t) && (n.lineTo(t.x, t.y), a = t)
+        S(t) && (n.lineTo(t.x, t.y), a = t)
       }
       return n.stroke(), a
     },
@@ -45,6 +45,6 @@ function i(e) {
       outlineColor: I
     } = (0, a.getUserColors)(t.userId, u, d, o),
     T = C(I, 6 + s.OUTLINE_WIDTH),
-    v = null != T && g(T);
+    v = null != T && S(T);
   v && (0, l.renderAvatarCursorOutline)(n, T.x, T.y, I, s.OUTLINE_WIDTH), C(_, 6), v && (0, l.renderAvatarCursor)(n, T.x, T.y, t.userId)
 }

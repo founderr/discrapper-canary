@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("981913"),
   N = n("742683"),
   R = n("116439"),
-  v = n("42887"),
-  O = n("697218"),
+  O = n("42887"),
+  v = n("697218"),
   L = n("471671"),
   M = n("945330"),
   P = n("823050"),
@@ -44,11 +44,11 @@ let k = {
     width: 232,
     height: 315
   },
-  B = {
+  F = {
     width: 232,
     height: 267
   },
-  F = {
+  B = {
     width: 475,
     height: 267
   };
@@ -56,9 +56,9 @@ let k = {
 function H(e) {
   let {
     header: t
-  } = e, n = v.default.getCameraComponent(), l = (0, o.useStateFromStores)([v.default], () => v.default.getVideoDeviceId()), i = (0, p.default)();
+  } = e, n = O.default.getCameraComponent(), l = (0, o.useStateFromStores)([O.default], () => O.default.getVideoDeviceId()), i = (0, p.default)();
   return s.useEffect(() => {
-    let e = O.default.getCurrentUser();
+    let e = v.default.getCurrentUser();
     if (i && null != e) {
       let t = (0, I.getLastUsedVideoBackgroundOption)(e);
       (0, S.applyBackgroundOptionPreview)(t, l, {
@@ -72,8 +72,8 @@ function H(e) {
       children: (0, a.jsx)(n, {
         disabled: !1,
         deviceId: l,
-        width: F.width,
-        height: F.height
+        width: B.width,
+        height: B.height
       })
     }), (0, a.jsx)("div", {
       className: j.previewChannelHeader,
@@ -150,7 +150,7 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, I] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [m, T] = (0, o.useStateFromStoresArray)([v.default], () => [v.default.supports(U.Features.VIDEO), Object.keys(v.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, I] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [m, T] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), R = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -165,7 +165,7 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let O = A === b.ChannelModes.VIDEO && m && T > 0,
+  let v = A === b.ChannelModes.VIDEO && m && T > 0,
     M = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(P.default, {
         className: j.icon,
@@ -188,7 +188,7 @@ function Y(e) {
         })]
       })]
     }),
-    x = O ? k : B;
+    x = v ? k : F;
   return (0, a.jsx)(E.default, {
     className: j.wrapper,
     selector: ".".concat(j.root),
@@ -207,9 +207,9 @@ function Y(e) {
         }, C ? (0, D.getThemeClass)("dark") : null),
         style: {
           ...t,
-          width: R.value.interpolate([0, 1], [x.width, F.width]),
-          minHeight: R.value.interpolate([0, 1], [x.height, F.height]),
-          translateX: R.value.interpolate([0, 1], [0, -1 * Math.abs(F.width - x.width) / 2])
+          width: R.value.interpolate([0, 1], [x.width, B.width]),
+          minHeight: R.value.interpolate([0, 1], [x.height, B.height]),
+          translateX: R.value.interpolate([0, 1], [0, -1 * Math.abs(B.width - x.width) / 2])
         },
         children: [C ? (0, a.jsx)(H, {
           header: M
@@ -217,10 +217,10 @@ function Y(e) {
           className: j.mainChannelInfo,
           children: M
         }), (0, a.jsx)(V, {
-          canVideo: O,
+          canVideo: v,
           channel: f,
           numVideoDevices: T
-        }), O && !C ? (0, a.jsx)(u.Button, {
+        }), v && !C ? (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,
           look: u.Button.Looks.LINK,

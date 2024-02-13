@@ -22,16 +22,16 @@ var l = n("77078"),
       handleClearSearch: m,
       handleSearchKeyPress: p,
       handleCreateOrAddGuild: E,
-      searchResults: g,
-      searchFetching: S
+      searchResults: S,
+      searchFetching: g
     } = e;
-    if (S) t = (0, a.jsx)("div", {
+    if (g) t = (0, a.jsx)("div", {
       className: u.pageContainer,
       children: (0, a.jsx)(l.Spinner, {
         className: u.spinner
       })
     });
-    else if (0 === g.length) {
+    else if (0 === S.length) {
       let e = null != E ? o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
         addServerHook: function(e, t) {
           return (0, a.jsx)(l.Anchor, {
@@ -60,7 +60,7 @@ var l = n("77078"),
       })
     } else t = (0, a.jsx)("div", {
       className: u.cardsContainer,
-      children: g.map(e => (0, a.jsx)(r.default, {
+      children: S.map(e => (0, a.jsx)(r.default, {
         entry: e
       }, e.guildId))
     });
@@ -82,7 +82,7 @@ var l = n("77078"),
               variant: "heading-xl/semibold",
               className: d.searchPageTitle,
               children: o.default.Messages.DIRECTORY_SEARCH_RESULTS_HEADER.format({
-                numResults: g.length,
+                numResults: S.length,
                 query: h
               })
             })]

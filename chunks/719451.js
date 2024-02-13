@@ -1,179 +1,179 @@
 "use strict";
 n.r(t), n.d(t, {
   InviteResolvingHeader: function() {
-    return g
+    return R
   },
   default: function() {
-    return h
+    return C
   }
 }), n("70102");
-var l = n("37983"),
+var s = n("37983"),
   a = n("884691"),
-  u = n("446674"),
+  l = n("446674"),
   r = n("77078"),
-  s = n("770032"),
-  i = n("653047"),
-  o = n("233069"),
-  _ = n("813006"),
-  E = n("766274"),
-  d = n("697218"),
-  I = n("953109"),
-  c = n("580357"),
-  T = n("124969"),
-  N = n("587974"),
-  f = n("158998"),
-  A = n("49111"),
-  O = n("238055"),
-  p = n("91366"),
-  S = n("782340"),
-  C = n("310042");
-let g = () => (0, l.jsxs)(a.Fragment, {
-    children: [(0, l.jsx)(T.Avatar, {
+  i = n("770032"),
+  o = n("653047"),
+  u = n("233069"),
+  d = n("813006"),
+  c = n("766274"),
+  E = n("697218"),
+  f = n("953109"),
+  _ = n("580357"),
+  h = n("124969"),
+  g = n("587974"),
+  m = n("158998"),
+  T = n("49111"),
+  p = n("238055"),
+  I = n("91366"),
+  A = n("782340"),
+  S = n("310042");
+let R = () => (0, s.jsxs)(a.Fragment, {
+    children: [(0, s.jsx)(h.Avatar, {
       src: null,
       size: r.AvatarSizes.DEPRECATED_SIZE_100,
-      className: C.avatar
-    }), (0, l.jsx)(T.SubTitle, {
-      children: S.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN
-    }), (0, l.jsx)(T.Title, {
-      className: C.inviteResolvingGuildName,
-      children: S.default.Messages.LOADING
+      className: S.avatar
+    }), (0, s.jsx)(h.SubTitle, {
+      children: A.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN
+    }), (0, s.jsx)(h.Title, {
+      className: S.inviteResolvingGuildName,
+      children: A.default.Messages.LOADING
     })]
   }),
-  R = e => {
+  N = e => {
     let {
       guild: t,
       user: n,
       application: a,
-      compact: u
+      compact: l
     } = e;
-    if (null != a) return (0, l.jsx)(I.default, {
-      className: C.appIcon,
+    if (null != a) return (0, s.jsx)(f.default, {
+      className: S.appIcon,
       game: a,
-      size: C.appIconSize
+      size: S.appIconSize
     });
-    if (null != n) return (0, l.jsx)(T.Avatar, {
+    if (null != n) return (0, s.jsx)(h.Avatar, {
       src: null != n ? n.getAvatarURL(void 0, 80) : null,
       size: r.AvatarSizes.SIZE_80,
-      className: u ? C.compactAvatar : C.avatar
+      className: l ? S.compactAvatar : S.avatar
     });
-    if (null != t) return (0, l.jsx)(N.default, {
-      mask: N.default.Masks.SQUIRCLE,
+    if (null != t) return (0, s.jsx)(g.default, {
+      mask: g.default.Masks.SQUIRCLE,
       width: 64,
       height: 64,
-      className: C.guildIcon,
-      children: (0, l.jsx)(T.GuildIcon, {
+      className: S.guildIcon,
+      children: (0, s.jsx)(h.GuildIcon, {
         guild: t,
-        size: T.GuildIcon.Sizes.LARGER,
+        size: h.GuildIcon.Sizes.LARGER,
         animate: !0
       })
     });
     else return null
   };
-var h = e => {
+var C = e => {
   var t;
-  let n, a, I, {
-      invite: N,
-      disableUser: g = !1,
-      error: h,
-      flatActivityCount: m = !1,
-      isRegister: U = !1
+  let n, a, f, {
+      invite: g,
+      disableUser: R = !1,
+      error: C,
+      flatActivityCount: O = !1,
+      isRegister: L = !1
     } = e,
     {
       currentUser: M,
-      multiAccounts: D
-    } = (0, u.useStateFromStoresObject)([s.default, d.default], () => ({
-      currentUser: d.default.getCurrentUser(),
-      multiAccounts: s.default.getUsers()
+      multiAccounts: v
+    } = (0, l.useStateFromStoresObject)([i.default, E.default], () => ({
+      currentUser: E.default.getCurrentUser(),
+      multiAccounts: i.default.getUsers()
     }));
-  if (null == N) return null;
-  let L = null != N.guild ? new _.default(N.guild) : null,
-    v = null != N.channel ? (0, o.createChannelRecordFromInvite)(N.channel) : null,
-    P = null != N.target_application ? new i.default(N.target_application) : null,
-    F = g || null == N.inviter ? null : new E.default(N.inviter),
-    y = null != N.approximate_member_count && N.approximate_member_count > 100 || null != L && L.hasFeature(A.GuildFeatures.COMMUNITY),
-    V = !y && null != F,
-    H = null,
-    G = !1;
-  if (null != L) H = null == F ? S.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : S.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
-    username: f.default.getFormattedName(F)
-  }), N.target_type === p.InviteTargetTypes.STREAM && null != N.target_user && (H = S.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
-    username: f.default.getFormattedName(N.target_user)
-  })), N.target_type === p.InviteTargetTypes.EMBEDDED_APPLICATION && null != N.target_application && (H = null != F ? S.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
-    username: f.default.getFormattedName(F)
-  }) : S.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY), V && null == P && (n = (0, l.jsx)(T.GuildIcon, {
-    className: C.icon,
-    guild: L,
-    size: T.GuildIcon.Sizes.SMALL
-  })), a = L.name, null != P && (a = P.name, I = (0, l.jsxs)("div", {
-    children: [(0, l.jsx)(T.SubTitle, {
-      className: C.appIn,
-      children: S.default.Messages.EMBEDDED_ACTIVITIES_INVITE_IN
-    }), (0, l.jsxs)("div", {
-      className: C.guildContainer,
-      children: [(0, l.jsx)(T.GuildIcon, {
-        guild: L,
-        size: T.GuildIcon.Sizes.SMALL
-      }), (0, l.jsx)(r.Text, {
+  if (null == g) return null;
+  let D = null != g.guild ? new d.default(g.guild) : null,
+    U = null != g.channel ? (0, u.createChannelRecordFromInvite)(g.channel) : null,
+    x = null != g.target_application ? new o.default(g.target_application) : null,
+    y = R || null == g.inviter ? null : new c.default(g.inviter),
+    G = null != g.approximate_member_count && g.approximate_member_count > 100 || null != D && D.hasFeature(T.GuildFeatures.COMMUNITY),
+    P = !G && null != y,
+    b = null,
+    F = !1;
+  if (null != D) b = null == y ? A.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : A.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
+    username: m.default.getFormattedName(y)
+  }), g.target_type === I.InviteTargetTypes.STREAM && null != g.target_user && (b = A.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
+    username: m.default.getFormattedName(g.target_user)
+  })), g.target_type === I.InviteTargetTypes.EMBEDDED_APPLICATION && null != g.target_application && (b = null != y ? A.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
+    username: m.default.getFormattedName(y)
+  }) : A.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY), P && null == x && (n = (0, s.jsx)(h.GuildIcon, {
+    className: S.icon,
+    guild: D,
+    size: h.GuildIcon.Sizes.SMALL
+  })), a = D.name, null != x && (a = x.name, f = (0, s.jsxs)("div", {
+    children: [(0, s.jsx)(h.SubTitle, {
+      className: S.appIn,
+      children: A.default.Messages.EMBEDDED_ACTIVITIES_INVITE_IN
+    }), (0, s.jsxs)("div", {
+      className: S.guildContainer,
+      children: [(0, s.jsx)(h.GuildIcon, {
+        guild: D,
+        size: h.GuildIcon.Sizes.SMALL
+      }), (0, s.jsx)(r.Text, {
         tag: "span",
         variant: "text-lg/normal",
         color: "header-primary",
-        className: C.appGuildName,
-        children: L.name
+        className: S.appGuildName,
+        children: D.name
       })]
     })]
   }));
-  else if (null != v) {
-    if (null == F) throw Error("no inviter in group DM invite");
-    let e = f.default.getFormattedName(F);
-    null != v.name && "" !== v.name ? (H = S.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
+  else if (null != U) {
+    if (null == y) throw Error("no inviter in group DM invite");
+    let e = m.default.getFormattedName(y);
+    null != U.name && "" !== U.name ? (b = A.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
       username: e
-    }), a = v.name, null != v.icon && (n = (0, l.jsx)(T.ChannelIcon, {
-      channel: v,
+    }), a = U.name, null != U.icon && (n = (0, s.jsx)(h.ChannelIcon, {
+      channel: U,
       size: r.AvatarSizes.SIZE_32
-    }))) : (H = S.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM, a = e)
-  } else if (null != F) {
-    let e = f.default.getFormattedName(F, !0);
-    a = S.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
+    }))) : (b = A.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM, a = e)
+  } else if (null != y) {
+    let e = m.default.getFormattedName(y, !0);
+    a = A.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
       username: e
-    }), G = !0, I = null != h ? null : (0, l.jsx)(T.SubTitle, {
-      className: C.directInviteSubTitle,
-      children: U ? S.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION_REGISTER.format({
+    }), F = !0, f = null != C ? null : (0, s.jsx)(h.SubTitle, {
+      className: S.directInviteSubTitle,
+      children: L ? A.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION_REGISTER.format({
         username: e
-      }) : S.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION.format({
+      }) : A.default.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION.format({
         username: e
       })
     })
   }
-  return (0, l.jsxs)("div", {
-    className: C.container,
-    children: [(0, l.jsx)(R, {
-      application: P,
-      guild: L,
-      user: V ? F : null,
-      compact: G
-    }), null != h ? (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(T.SubTitle, {
-        children: S.default.Messages.INVITE_MODAL_ERROR_TITLE
-      }), (0, l.jsx)(T.Title, {
-        children: h
+  return (0, s.jsxs)("div", {
+    className: S.container,
+    children: [(0, s.jsx)(N, {
+      application: x,
+      guild: D,
+      user: P ? y : null,
+      compact: F
+    }), null != C ? (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(h.SubTitle, {
+        children: A.default.Messages.INVITE_MODAL_ERROR_TITLE
+      }), (0, s.jsx)(h.Title, {
+        children: C
       })]
-    }) : (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(T.SubTitle, {
-        children: H
-      }), (0, l.jsxs)(T.Title, {
-        className: C.title,
-        children: [null != L ? (0, l.jsx)(c.default, {
-          guild: L,
-          className: C.guildBadge,
+    }) : (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(h.SubTitle, {
+        children: b
+      }), (0, s.jsxs)(h.Title, {
+        className: S.title,
+        children: [null != D ? (0, s.jsx)(_.default, {
+          guild: D,
+          className: S.guildBadge,
           tooltipPosition: "left"
         }) : null, n, a]
       })]
-    }), I, null != P || G || (null == N ? void 0 : null === (t = N.guild) || void 0 === t ? void 0 : t.id) === O.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, l.jsx)(T.ActivityCount, {
-      className: C.activityCount,
-      online: N.approximate_presence_count,
-      total: N.approximate_member_count,
-      flat: m
-    }), D.length > 1 ? (0, l.jsx)(T.JoiningAs, {
+    }), f, null != x || F || (null == g ? void 0 : null === (t = g.guild) || void 0 === t ? void 0 : t.id) === p.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, s.jsx)(h.ActivityCount, {
+      className: S.activityCount,
+      online: g.approximate_presence_count,
+      total: g.approximate_member_count,
+      flat: O
+    }), v.length > 1 ? (0, s.jsx)(h.JoiningAs, {
       user: M
     }) : null]
   })

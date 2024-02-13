@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("380691"),
   N = n("943349"),
   R = n("702173"),
-  v = n("10524"),
-  O = n("478272"),
+  O = n("10524"),
+  v = n("478272"),
   L = n("812204"),
   M = n("685665"),
   P = n("754493"),
@@ -41,8 +41,8 @@ var a = n("37983"),
   j = n("16916"),
   w = n("597517"),
   k = n("269596"),
-  B = n("38654"),
-  F = n("393414"),
+  F = n("38654"),
+  B = n("393414"),
   H = n("245463"),
   V = n("486185"),
   Y = n("488464"),
@@ -81,8 +81,8 @@ var a = n("37983"),
   eA = n("220075"),
   eN = n("82636"),
   eR = n("394832"),
-  ev = n("394640"),
-  eO = n("343571"),
+  eO = n("394640"),
+  ev = n("343571"),
   eL = n("962541"),
   eM = n("762489"),
   eP = n("599110"),
@@ -96,7 +96,7 @@ var a = n("37983"),
   ew = n("833076"),
   ek = n("926622");
 
-function eB(e) {
+function eF(e) {
   let t = e.currentTarget;
   eP.default.track(eU.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
@@ -107,7 +107,7 @@ function eB(e) {
   })
 }
 
-function eF() {
+function eB() {
   let e = s.useRef(null);
   (0, c.useFocusLock)(e), s.useEffect(() => {
     eP.default.track(eU.AnalyticEvents.OPEN_POPOUT, {
@@ -146,14 +146,14 @@ function eF() {
       className: ew.footer,
       children: [(0, a.jsx)(c.Anchor, {
         href: eU.MarketingURLs.KRISP,
-        onClick: e => eB(e),
+        onClick: e => eF(e),
         children: (0, a.jsx)("div", {
           className: ew.krispLogo
         })
       }), (0, a.jsx)(c.Anchor, {
         href: eD.default.getArticleURL(eU.HelpdeskArticles.NOISE_SUPPRESSION),
         className: ew.krispLink,
-        onClick: e => eB(e),
+        onClick: e => eF(e),
         children: ej.default.Messages.LEARN_MORE
       })]
     })]
@@ -166,7 +166,7 @@ function eH() {
   return (0, a.jsx)(eL.default, {
     "aria-label": t,
     tooltipText: t,
-    icon: e ? eO.default : ev.default,
+    icon: e ? ev.default : eO.default,
     onClick: () => (0, z.updateStageMusicMuted)(!e)
   })
 }
@@ -185,7 +185,7 @@ function eV(e) {
     if (ef.default.isVideoEnabled() === e) return;
     let n = () => {
       var n;
-      f.default.setVideoEnabled(e), e && (0, F.transitionTo)(eU.Routes.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eU.ME, t.id))
+      f.default.setVideoEnabled(e), e && (0, B.transitionTo)(eU.Routes.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eU.ME, t.id))
     };
     e ? (0, el.default)(n, I) : n()
   }, [t, I]), m = u || n || E;
@@ -290,7 +290,7 @@ function eY(e) {
       size: c.Button.Sizes.SMALL,
       onClick: () => {
         var n;
-        (0, O.default)({
+        (0, v.default)({
           channel: t,
           guildId: t.guild_id,
           locationObject: _.location,
@@ -305,7 +305,7 @@ function eY(e) {
       }),
       innerClassName: ew.buttonContents,
       wrapperClassName: ew.button,
-      children: [C ? (0, a.jsx)(v.FreeActivityIndicatorDot, {
+      children: [C ? (0, a.jsx)(O.FreeActivityIndicatorDot, {
         top: -1,
         right: -1
       }) : null, (0, a.jsx)(eN.default, {
@@ -454,7 +454,7 @@ class eK extends s.PureComponent {
     }) : (0, a.jsx)(c.Popout, {
       position: "top",
       align: "center",
-      renderPopout: () => (0, a.jsx)(eF, {}),
+      renderPopout: () => (0, a.jsx)(eB, {}),
       children: (t, n) => {
         let {
           isShown: s
@@ -649,11 +649,11 @@ var ez = (0, I.default)(function(e) {
     _ = (0, d.useStateFromStores)([eI.default], () => null != i && eI.default.hasVideo(i), [i]),
     C = (0, d.useStateFromStores)([er.default], () => er.default.getCurrentUserActiveStream()),
     I = (0, d.useStateFromStores)([ec.default], () => ec.default.hasLayers()),
-    S = (0, d.useStateFromStores)([B.default], () => B.default.isViewingRoles(u)),
+    S = (0, d.useStateFromStores)([F.default], () => F.default.isViewingRoles(u)),
     p = (0, d.useStateFromStores)([eE.default], () => S && !eE.default.can(eU.Permissions.VIEW_CHANNEL, o), [S, o]),
     m = X.RtcPanelShowVoiceStates.useSetting(),
     [T, A, N] = (0, d.useStateFromStoresArray)([eS.default, Y.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [Y.default.getMutableParticipants(o.id, W.StageChannelParticipantNamedIndex.SPEAKER), Y.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eS.default.getVoiceStatesForChannel(o) : null], [o]),
-    v = s.useMemo(() => {
+    O = s.useMemo(() => {
       var e, t;
       return null !== (t = null !== (e = null == T ? void 0 : T.map(e => {
         let {
@@ -668,13 +668,13 @@ var ez = (0, I.default)(function(e) {
         }
       })) && void 0 !== e ? e : N) && void 0 !== t ? t : []
     }, [T, A, N]),
-    [O, D] = s.useState(!1);
+    [v, D] = s.useState(!1);
   s.useEffect(() => {
     (S || p) && D(!1)
   }, [S, p, D]);
   let {
     AnalyticsLocationProvider: y
-  } = (0, M.default)(L.default.RTC_PANEL), j = (0, g.default)(null != u ? u : eU.EMPTY_STRING_GUILD_ID, null == o ? void 0 : o.id), w = (0, R.default)(null == o ? void 0 : o.id), F = (0, P.default)();
+  } = (0, M.default)(L.default.RTC_PANEL), j = (0, g.default)(null != u ? u : eU.EMPTY_STRING_GUILD_ID, null == o ? void 0 : o.id), w = (0, R.default)(null == o ? void 0 : o.id), B = (0, P.default)();
   return (0, a.jsx)(y, {
     children: (0, a.jsxs)("div", {
       className: ew.wrapper,
@@ -692,12 +692,12 @@ var ez = (0, I.default)(function(e) {
         hasVideo: _,
         selfStream: C,
         hasLayers: I,
-        voiceStates: v,
+        voiceStates: O,
         showVoiceStates: m,
         shouldShowVoicePanelIntroduction: h,
         isPrivateChannelWithEnabledActivities: w,
-        isBroadcasting: F
-      }), !O && S && null != u ? (0, a.jsxs)("div", {
+        isBroadcasting: B
+      }), !v && S && null != u ? (0, a.jsxs)("div", {
         className: ew.viewAsRolesWarning,
         children: [(0, a.jsx)(c.Text, {
           variant: "text-sm/normal",

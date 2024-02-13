@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("483366"),
-  o = n.n(r),
-  u = n("458960"),
+  u = n.n(r),
+  o = n("458960"),
   d = n("233736"),
   c = n("77078"),
   f = n("100252");
@@ -48,7 +48,7 @@ class C extends a.Component {
       return
     }
     this._timeout = setTimeout(() => {
-      u.default.spring(e, {
+      o.default.spring(e, {
         toValue: 0,
         ...h
       }).start()
@@ -62,7 +62,7 @@ class C extends a.Component {
       e.setValue(1);
       return
     }
-    u.default.spring(e, {
+    o.default.spring(e, {
       toValue: 1,
       ...h
     }).start()
@@ -74,7 +74,7 @@ class C extends a.Component {
       hide: n,
       onClick: a
     } = this.props;
-    return (0, l.jsx)(u.default.div, {
+    return (0, l.jsx)(o.default.div, {
       className: i(f.bar, e),
       onClick: a,
       style: this.getAnimatedStyle(),
@@ -102,7 +102,7 @@ class C extends a.Component {
   }
   constructor(e) {
     super(e), this.state = {
-      translateY: new u.default.Value,
+      translateY: new o.default.Value,
       reduceMotion: !1
     }
   }
@@ -126,8 +126,8 @@ class p extends a.PureComponent {
       textUnread: a,
       reverse: s,
       className: r,
-      barClassName: o,
-      hide: u,
+      barClassName: u,
+      hide: o,
       animate: d
     } = this.props, {
       reducedMotion: c
@@ -135,8 +135,8 @@ class p extends a.PureComponent {
     return (0, l.jsx)("div", {
       className: null != r ? r : void 0,
       children: (0, l.jsx)(C, {
-        hide: !0 === u || null == e && null == t,
-        className: i(o, null != t ? f.mention : f.unread),
+        hide: !0 === o || null == e && null == t,
+        className: i(u, null != t ? f.mention : f.unread),
         text: null != t ? n : a,
         reverse: s,
         animate: d && !c.enabled,
@@ -148,7 +148,7 @@ class p extends a.PureComponent {
     super(...e), this.state = {
       unread: null,
       mention: null
-    }, this.calculateState = o(() => {
+    }, this.calculateState = u(() => {
       let {
         items: e,
         expandedFolders: t,
@@ -157,23 +157,23 @@ class p extends a.PureComponent {
         isMentioned: a,
         reverse: s,
         onCalculate: i
-      } = this.props, r = null, o = null, u = [];
+      } = this.props, r = null, u = null, o = [];
       e.forEach(e => {
-        "string" == typeof e ? u.push(e) : "object" == typeof e && null != e.folderId ? null != t && t.has(e.folderId) ? (u.push("folder:".concat(e.folderId)), e.guildIds.forEach(e => u.push(e))) : u.push(e.guildIds) : u.push(e.guildIds[0])
+        "string" == typeof e ? o.push(e) : "object" == typeof e && null != e.folderId ? null != t && t.has(e.folderId) ? (o.push("folder:".concat(e.folderId)), e.guildIds.forEach(e => o.push(e))) : o.push(e.guildIds) : o.push(e.guildIds[0])
       });
       let d = e => {
-          null == r && a(e, s, u) && (r = e), null == o && l(e, s, u) && (o = e)
+          null == r && a(e, s, o) && (r = e), null == u && l(e, s, o) && (u = e)
         },
-        c = s ? u.length - 1 : 0,
-        f = u[c];
+        c = s ? o.length - 1 : 0,
+        f = o[c];
       for (; null != f;) {
         if ("string" == typeof f) {
-          if (n(f, s, u)) break;
+          if (n(f, s, o)) break;
           d(f)
         } else {
           let e = !1;
           for (let t of f) {
-            if (n(t, s, u)) {
+            if (n(t, s, o)) {
               e = !0;
               break
             }
@@ -181,11 +181,11 @@ class p extends a.PureComponent {
           }
           if (e) break
         }
-        c += s ? -1 : 1, f = u[c]
+        c += s ? -1 : 1, f = o[c]
       }
-      null != i && i(r, o, s), this.setState({
+      null != i && i(r, u, s), this.setState({
         mention: r,
-        unread: o
+        unread: u
       })
     }, 200), this.handleClick = e => {
       e.preventDefault(), e.stopPropagation();

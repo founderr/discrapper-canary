@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   useCreateForumPost: function() {
-    return g
+    return S
   }
 });
 var a = n("884691"),
@@ -53,7 +53,7 @@ function E(e) {
   })
 }
 
-function g(e) {
+function S(e) {
   let {
     parentChannel: t
   } = e, {

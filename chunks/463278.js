@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("136281"),
   p = n("914275"),
   E = n("789150"),
-  g = n("49111"),
-  S = n("782340"),
+  S = n("49111"),
+  g = n("782340"),
   C = n("104687");
 
 function _(e) {
@@ -29,16 +29,16 @@ function _(e) {
     roleIds: s,
     guild: r,
     specMap: o
-  } = e, f = g.Permissions[l], h = null !== (n = null === (t = o[f.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, c.getPermissionName)(f), m = p.ELEVATED_PERMISSIONS.has(f);
+  } = e, f = S.Permissions[l], h = null !== (n = null === (t = o[f.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, c.getPermissionName)(f), m = p.ELEVATED_PERMISSIONS.has(f);
   return (0, a.jsx)(u.Tooltip, {
-    "aria-label": S.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
+    "aria-label": g.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
     tooltipClassName: C.roleTooltipContainer,
     tooltipContentClassName: C.roleTooltipContentContainer,
     allowOverflow: !0,
     text: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
-        children: m ? S.default.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY : S.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY
+        children: m ? g.default.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY : g.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY
       }), s.map(e => (0, a.jsx)("div", {
         className: i(C.roleTooltipItem),
         children: (0, a.jsx)(d.default, {
@@ -78,14 +78,14 @@ var I = l.memo(function(e) {
       children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         color: "text-positive",
-        children: S.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND
+        children: g.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND
       })
     });
     let e = [];
     return null == x || x.forEach(t => {
       t.permissions.forEach(t => {
         let n = t.flag,
-          l = p.ALL_PERMISSIONS.find(e => g.Permissions[e] === n);
+          l = p.ALL_PERMISSIONS.find(e => S.Permissions[e] === n);
         if (null == l) return;
         let i = d[l];
         null != i && e.push((0, a.jsx)(_, {
@@ -103,14 +103,14 @@ var I = l.memo(function(e) {
       children: [(0, a.jsx)(u.Text, {
         variant: "eyebrow",
         color: "header-secondary",
-        children: S.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE
+        children: g.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE
       }), (0, a.jsxs)(u.Clickable, {
         className: C.viewAllPermissions,
         onClick: () => null == n ? void 0 : n(E.ModViewPanel.PERMISSIONS),
         children: [(0, a.jsx)(u.Text, {
           variant: "eyebrow",
           color: "interactive-normal",
-          children: S.default.Messages.GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS.format({
+          children: g.default.Messages.GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS.format({
             count: T
           })
         }), (0, a.jsx)(o.ChevronSmallRightIcon, {

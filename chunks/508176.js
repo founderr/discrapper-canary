@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("65597"),
   i = n("151426"),
   r = n("669491"),
-  o = n("272030"),
-  u = n("10641"),
+  u = n("272030"),
+  o = n("10641"),
   d = n("863636"),
   c = n("361776"),
   f = n("15684"),
@@ -20,9 +20,9 @@ var l = n("37983"),
   m = n("956089"),
   E = n("299039"),
   g = n("319839"),
-  S = n("708402"),
-  I = n("49111"),
-  _ = n("724210"),
+  I = n("708402"),
+  _ = n("49111"),
+  S = n("724210"),
   N = n("133335"),
   T = n("782340"),
   A = n("174757");
@@ -31,16 +31,16 @@ function L(e) {
   let {
     guild: t,
     selected: L
-  } = e, v = (0, c.default)(t), x = (0, u.useIsDismissibleContentDismissed)(i.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX), R = (0, s.useStateFromStoresArray)([f.default], () => Array.from(f.default.getNewChannelIds(t.id)).filter(e => f.default.shouldIndicateNewChannel(t.id, e))), M = (0, s.default)([C.default], () => C.default.hasUnread(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION)), O = R.length > g.MAX_NEW_CHANNELS_TO_SHOW, y = (0, s.default)([d.default, C.default], () => {
+  } = e, v = (0, c.default)(t), x = (0, o.useIsDismissibleContentDismissed)(i.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX), R = (0, s.useStateFromStoresArray)([f.default], () => Array.from(f.default.getNewChannelIds(t.id)).filter(e => f.default.shouldIndicateNewChannel(t.id, e))), M = (0, s.default)([C.default], () => C.default.hasUnread(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION)), O = R.length > g.MAX_NEW_CHANNELS_TO_SHOW, y = (0, s.default)([d.default, C.default], () => {
     let e = d.default.lastFetchedAt(t.id),
       n = C.default.lastMessageId(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION);
     if (null == n) return !1;
     let l = E.default.extractTimestamp(n);
     return null != e && e > l
   }), D = a.useCallback(() => {
-    (0, h.transitionTo)(I.Routes.CHANNEL(t.id, v ? _.StaticChannelRoute.CUSTOMIZE_COMMUNITY : _.StaticChannelRoute.CHANNEL_BROWSER))
+    (0, h.transitionTo)(_.Routes.CHANNEL(t.id, v ? S.StaticChannelRoute.CUSTOMIZE_COMMUNITY : S.StaticChannelRoute.CHANNEL_BROWSER))
   }, [t.id, v]), b = a.useCallback(e => {
-    (0, o.openContextMenuLazy)(e, async () => {
+    (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("357763").then(n.bind(n, "357763"));
@@ -54,7 +54,7 @@ function L(e) {
     color: r.default.unsafe_rawColors.BRAND_260.css,
     text: T.default.Messages.NEW,
     className: A.newChannel
-  })), (0, l.jsx)(S.default, {
+  })), (0, l.jsx)(I.default, {
     renderIcon: e => (0, l.jsx)(p.default, {
       className: e
     }),

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return E
   }
 });
 var i = n("37983");
@@ -17,8 +17,8 @@ var a = n("414456"),
   f = n("97347"),
   h = n("13798"),
   p = n("49111"),
-  E = n("707154");
-let g = {
+  g = n("707154");
+let m = {
   [p.GlobalKeybindActions.TOGGLE_MUTE]: {
     legacy: {
       slash: f.default,
@@ -31,7 +31,7 @@ let g = {
   }
 };
 
-function m(e) {
+function E(e) {
   let {
     value: t,
     action: n,
@@ -39,17 +39,17 @@ function m(e) {
   } = e, o = (0, s.useStateFromStores)([u.default], () => u.default.getKeybindForAction(n, !1, !0)), r = (0, d.useRedesignIconContext)().enabled;
   if (null == o || !a) return null;
   let c = h.toString(o.shortcut),
-    f = r ? g[n].new : g[n].legacy,
+    f = r ? m[n].new : m[n].legacy,
     p = t ? f.slash : f.default;
   return (0, i.jsxs)("div", {
-    className: E.keybindIndicator,
+    className: g.keybindIndicator,
     children: [(0, i.jsx)(p, {
-      className: E.keybindIcon,
+      className: g.keybindIcon,
       width: 16,
       height: 16
     }), (0, i.jsx)(d.Text, {
       variant: "text-xxs/semibold",
-      className: l(E.keybindIndicatorText),
+      className: l(g.keybindIndicatorText),
       children: c
     })]
   })

@@ -16,8 +16,8 @@ var a, l, s = n("37983"),
   m = n("308289"),
   p = n("750560"),
   E = n("506885"),
-  g = n("981601"),
-  S = n("26989"),
+  S = n("981601"),
+  g = n("26989"),
   C = n("957255"),
   _ = n("824563"),
   I = n("945330"),
@@ -75,7 +75,7 @@ let b = i.memo(function(e) {
     } = (0, c.useStateFromStoresObject)([_.default], () => ({
       isMobile: _.default.isMobileOnline(a.user.id),
       status: _.default.getStatus(a.user.id, C)
-    })), A = (0, c.useStateFromStores)([S.default], () => S.default.getMember(C, a.user.id)), j = i.useMemo(() => ({
+    })), A = (0, c.useStateFromStores)([g.default], () => g.default.getMember(C, a.user.id)), j = i.useMemo(() => ({
       [C]: [a.user.id]
     }), [C, a.user.id]);
     (0, p.useSubscribeGuildMembers)(j);
@@ -109,7 +109,7 @@ let b = i.memo(function(e) {
           guildId: t.guild_id,
           channelId: t.id
         }),
-        renderPopout: e => (0, s.jsx)(g.default, {
+        renderPopout: e => (0, s.jsx)(S.default, {
           ...e,
           userId: a.user.id,
           guildId: C,

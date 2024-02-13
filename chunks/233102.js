@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return y
   }
 }), n("222007");
 var i = n("37983"),
@@ -16,9 +16,9 @@ var i = n("37983"),
   f = n("246458"),
   h = n("637842"),
   p = n("890291"),
-  E = n("758547"),
-  g = n("782340"),
-  m = n("893908");
+  g = n("758547"),
+  m = n("782340"),
+  E = n("893908");
 
 function S(e) {
   let {
@@ -37,15 +37,15 @@ class v extends a.PureComponent {
     } = this.props, a = null != e ? (0, i.jsx)(f.default, {
       guildId: e,
       onDragStart: this.onDragStart
-    }, e) : (0, i.jsx)(E.default, {
-      title: g.default.Messages.DIRECT_MESSAGES,
+    }, e) : (0, i.jsx)(g.default, {
+      title: m.default.Messages.DIRECT_MESSAGES,
       renderSettings: S,
       onDragStart: this.onDragStart,
       children: (0, i.jsx)(p.default, {})
     }), l = n ? "div" : c.default;
     return (0, i.jsxs)(l, {
-      className: s(m.base, {
-        [m.widget]: !n
+      className: s(E.base, {
+        [E.widget]: !n
       }),
       children: [(0, i.jsx)(r.default, {
         isOverlay: !0,
@@ -66,6 +66,6 @@ class v extends a.PureComponent {
 v.defaultProps = {
   contained: !1
 };
-var I = o.default.connectStores([d.default], () => ({
+var y = o.default.connectStores([d.default], () => ({
   selectedGuildId: d.default.getGuildId()
 }))(v)

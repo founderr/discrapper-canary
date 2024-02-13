@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
-    return v
+    return O
   },
   default: function() {
-    return O
+    return v
   }
 }), n("222007");
 var a = n("37983"),
@@ -30,15 +30,15 @@ var a = n("37983"),
   A = n("750408"),
   N = n("68422"),
   R = n("578817");
-let v = () => (0, a.jsx)("div", {
+let O = () => (0, a.jsx)("div", {
   className: A.placeholder
 });
-var O = e => {
+var v = e => {
   var t;
   let {
     guild: l,
-    theme: v,
-    onView: O,
+    theme: O,
+    onView: v,
     onTagClick: L
   } = e, {
     id: M,
@@ -49,8 +49,8 @@ var O = e => {
     presenceCount: b,
     memberCount: U,
     keywords: G
-  } = l, [j, w] = s.useState(!1), [k, B] = s.useState(!1), {
-    analyticsLocations: F
+  } = l, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
+    analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
     splash: P,
@@ -62,7 +62,7 @@ var O = e => {
       case T.ThemeTypes.LIGHT:
         return R
     }
-  }(v), Y = null !== (t = _.default.getGuildIconURL({
+  }(O), Y = null !== (t = _.default.getGuildIconURL({
     id: M,
     icon: D,
     size: 32
@@ -80,15 +80,15 @@ var O = e => {
             page: T.AnalyticsPages.GUILD_DISCOVERY,
             section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
-          analyticsLocations: F
+          analyticsLocations: B
         });
         return
       }
-      B(!0);
+      F(!0);
       try {
-        null != O && await O(l.id)
+        null != v && await v(l.id)
       } finally {
-        B(!1)
+        F(!1)
       }
     }
   };

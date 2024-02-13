@@ -31,12 +31,12 @@ function h(e) {
       connectedActivity: null != t && null !== (e = u.default.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
       activityPanelMode: u.default.getActivityPanelMode()
     }
-  }), E = (0, r.useIsActivitiesInTextEnabled)(h, "ActivityPanelUI"), g = (0, i.default)(h);
+  }), E = (0, r.useIsActivitiesInTextEnabled)(h, "ActivityPanelUI"), S = (0, i.default)(h);
   if (l.useEffect(() => {
-      null != h && null == g && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
-    }, [h, g]), !E) return null;
-  let S = null == m ? void 0 : m.applicationId;
-  return p !== f.ActivityPanelModes.PANEL || null == S ? null : null == h || null == m || (0, d.default)(h) || null == S ? null : (0, a.jsx)(c.default, {
+      null != h && null == S && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
+    }, [h, S]), !E) return null;
+  let g = null == m ? void 0 : m.applicationId;
+  return p !== f.ActivityPanelModes.PANEL || null == g ? null : null == h || null == m || (0, d.default)(h) || null == g ? null : (0, a.jsx)(c.default, {
     maxHeight: t,
     connectedChannelId: h,
     renderExternalHeader: n

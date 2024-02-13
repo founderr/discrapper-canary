@@ -29,7 +29,7 @@ var a = n("37983"),
       T(!0), C && !I && !g && (null == S || S())
     }, R = () => {
       T(!1)
-    }, v = (e, t) => {
+    }, O = (e, t) => {
       null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -56,7 +56,7 @@ var a = n("37983"),
             [f.active]: I || g,
             [f.firstItem]: 0 === t
           }),
-          onContextMenu: e => v(e, E),
+          onContextMenu: e => O(e, E),
           onMouseEnter: N,
           onMouseLeave: R,
           onClick: null != _ ? _ : void 0,

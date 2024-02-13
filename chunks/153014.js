@@ -34,8 +34,8 @@ var a, s, l = n("37983"),
   A = n("36694"),
   N = n("945330"),
   R = n("272339"),
-  v = n("718550"),
-  O = n("228427"),
+  O = n("718550"),
+  v = n("228427"),
   L = n("811305"),
   M = n("599110"),
   P = n("449008"),
@@ -48,8 +48,8 @@ var a, s, l = n("37983"),
   j = n("1339"),
   w = n("593897"),
   k = n("466148"),
-  B = n("534222"),
-  F = n("841363"),
+  F = n("534222"),
+  B = n("841363"),
   H = n("822516"),
   V = n("936965"),
   Y = n("745049"),
@@ -187,7 +187,7 @@ function X(e) {
   let {
     guildEvent: n,
     noticeType: a
-  } = e, s = (0, F.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, F.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
+  } = e, s = (0, B.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, B.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
     startTime: f,
     endTime: E
   } = (0, k.default)(n.id), {
@@ -251,7 +251,7 @@ function X(e) {
         width: 16,
         height: 16,
         className: z.stageIcon
-      }) : (0, l.jsx)(v.default, {
+      }) : (0, l.jsx)(O.default, {
         width: 16,
         height: 16,
         className: z.stageIcon
@@ -271,7 +271,7 @@ function X(e) {
 function J(e) {
   let {
     guildEvent: t
-  } = e, n = (0, F.getLocationFromEvent)(t);
+  } = e, n = (0, B.getLocationFromEvent)(t);
   return null == n ? null : (0, l.jsx)(q, {
     onClickCloseIcon: () => (0, x.hideLiveChannelNotice)({
       eventId: null == t ? void 0 : t.id
@@ -279,7 +279,7 @@ function J(e) {
     heading: K.default.Messages.HAPPENING_NOW,
     topic: t.name,
     location: (0, j.guildEventDetailsParser)(n, !0),
-    locationIcon: (0, l.jsx)(v.default, {
+    locationIcon: (0, l.jsx)(O.default, {
       width: 16,
       height: 16,
       className: z.stageIcon
@@ -344,7 +344,7 @@ function et(e) {
       height: 14,
       className: z.stageIcon
     }),
-    locationIcon: (0, l.jsx)(O.default, {
+    locationIcon: (0, l.jsx)(v.default, {
       width: 16,
       height: 16,
       className: z.stageIcon
@@ -402,7 +402,7 @@ var ea = i.memo(function(e) {
     guild: t
   } = e, {
     showRedesignedLiveChannelNotice: n
-  } = (0, d.useChannelNoticeRedesignExperiment)(!0), a = (0, w.useActiveEventOrStageInstanceChannel)(t.id), s = (0, B.useGuildActiveEvent)(t.id), i = (0, B.useGuildUpcomingEventsNotice)(t.id), {
+  } = (0, d.useChannelNoticeRedesignExperiment)(!0), a = (0, w.useActiveEventOrStageInstanceChannel)(t.id), s = (0, F.useGuildActiveEvent)(t.id), i = (0, F.useGuildUpcomingEventsNotice)(t.id), {
     canSeeUpcomingEventsNotices: o
   } = G.default.useExperiment({
     guildId: t.id,

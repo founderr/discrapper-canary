@@ -6,9 +6,9 @@ s.r(t), s.d(t, {
 });
 var T = s("37983"),
   l = s("884691"),
-  n = s("77078"),
-  o = s("79112"),
-  a = s("701909"),
+  a = s("77078"),
+  n = s("79112"),
+  o = s("701909"),
   r = s("689294"),
   _ = s("49111"),
   i = s("782340"),
@@ -17,16 +17,16 @@ var T = s("37983"),
     let {
       onClose: t
     } = e, s = l.useCallback(() => {
-      o.default.open(_.UserSettingsSections.PRIVACY_AND_SAFETY), t()
+      n.default.open(_.UserSettingsSections.PRIVACY_AND_SAFETY), t()
     }, [t]);
     return (0, T.jsxs)(r.default, {
       style: S.wrapperStyle,
-      children: [(0, T.jsx)(n.Text, {
+      children: [(0, T.jsx)(a.Text, {
         variant: "text-md/medium",
         children: i.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format({
-          learnMoreLink: a.default.getArticleURL(_.HelpdeskArticles.SAFETY_ALERTS)
+          learnMoreLink: o.default.getArticleURL(_.HelpdeskArticles.SAFETY_ALERTS)
         })
-      }), (0, T.jsx)(n.Button, {
+      }), (0, T.jsx)(a.Button, {
         className: S.settingsButton,
         onClick: s,
         children: i.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS

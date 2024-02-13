@@ -16,8 +16,8 @@ var a, l, s = n("37983"),
   m = n("973137"),
   p = n("661917"),
   E = n("85427"),
-  g = n("620103"),
-  S = n("297446"),
+  S = n("620103"),
+  g = n("297446"),
   C = n("782340"),
   _ = n("478107");
 let I = {
@@ -28,7 +28,7 @@ let I = {
 (l = a || (a = {}))[l.SELECTED = 0] = "SELECTED", l[l.SPEAKER = 1] = "SPEAKER", l[l.AUDIENCE = 2] = "AUDIENCE";
 let T = (e, t) => {
     let n = Math.floor(e / t - 8),
-      a = Math.floor(n / S.SPEAKER_TILE_ASPECT_RATIO);
+      a = Math.floor(n / g.SPEAKER_TILE_ASPECT_RATIO);
     return {
       speakerTileWidth: n,
       speakerTileHeight: a
@@ -64,7 +64,7 @@ var N = (0, o.default)(e => {
       let {
         section: t
       } = e;
-      if (1 === t) return 0 === M ? null : (0, s.jsx)(g.default, {
+      if (1 === t) return 0 === M ? null : (0, s.jsx)(S.default, {
         participantCount: M,
         label: C.default.Messages.SPEAKER_LABEL,
         className: _.header,
@@ -74,7 +74,7 @@ var N = (0, o.default)(e => {
         channel: a,
         isStreamLive: y
       }, "speaker-header-".concat(t));
-      if (2 === t) return 0 === R ? null : (0, s.jsx)(g.default, {
+      if (2 === t) return 0 === R ? null : (0, s.jsx)(S.default, {
         participantCount: R,
         label: C.default.Messages.AUDIENCE_LABEL,
         className: _.header,
@@ -96,7 +96,7 @@ var N = (0, o.default)(e => {
           if (0 === l.length || null == l[0]) return null;
           return (0, s.jsx)("div", {
             className: _.focusedRow,
-            children: (0, s.jsx)(S.default, {
+            children: (0, s.jsx)(g.default, {
               channel: a,
               participant: l[0],
               width: H
@@ -125,7 +125,7 @@ var N = (0, o.default)(e => {
     },
     rowHeight: e => {
       let t = null == F[e][0];
-      return t ? 0 : 0 === e ? H / S.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? W ? 0 : B : z ? 0 : 98
+      return t ? 0 : 0 === e ? H / g.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? W ? 0 : B : z ? 0 : 98
     },
     renderFooter: e => {
       let {

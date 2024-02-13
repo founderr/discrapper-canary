@@ -18,8 +18,8 @@ var l = n("917351"),
   m = n("27618"),
   p = n("697218"),
   E = n("49111");
-let g = !1,
-  S = "",
+let S = !1,
+  g = "",
   C = 0,
   _ = [],
   I = !1,
@@ -27,17 +27,17 @@ let g = !1,
   v = null;
 
 function x() {
-  S = "", C = 0, _ = [], T = new Set, g = !1, v = null
+  g = "", C = 0, _ = [], T = new Set, S = !1, v = null
 }
 
 function N(e) {
-  S = e, C = 0, A()
+  g = e, C = 0, A()
 }
 
 function A() {
-  if (!g) return !1;
+  if (!S) return !1;
   let e = f.default.getChannel(v);
-  if (0 === S.trim().length) return null != a && a.clearQuery(), _ = function(e) {
+  if (0 === g.trim().length) return null != a && a.clearQuery(), _ = function(e) {
     let t = m.default.getFriendIDs();
     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
       let n = p.default.getUser(t);
@@ -47,7 +47,7 @@ function A() {
     }, []).sort(R)
   }(e), !0;
   let t = null != e ? e.recipients : [];
-  return null != a && a.setQuery(S, {
+  return null != a && a.setQuery(g, {
     friends: !0
   }, t, function() {
     let e = h.default.getFrequentlyWithoutFetchingLatest(),
@@ -70,7 +70,7 @@ function A() {
 }
 
 function M() {
-  if (!g) return !1;
+  if (!S) return !1;
   let e = I;
   return (I = s.some(m.default.getRelationships(), e => e === E.RelationshipTypes.FRIEND)) !== e
 }
@@ -83,7 +83,7 @@ function j(e) {
   let {
     results: t
   } = e;
-  g && "" !== S && (_ = t.map(e => {
+  S && "" !== g && (_ = t.map(e => {
     let {
       id: t
     } = e;
@@ -99,7 +99,7 @@ function L() {
 
 function O(e) {
   if (e.key !== E.NEW_GROUP_DM_POPOUT_ID) return !1;
-  g = !0, M(), a = L(), v = null, N("")
+  S = !0, M(), a = L(), v = null, N("")
 }
 
 function y(e) {
@@ -124,11 +124,11 @@ class b extends i.default.Store {
     return T
   }
   getQuery() {
-    return S
+    return g
   }
   getState() {
     return {
-      query: S,
+      query: g,
       selectedRow: C,
       selectedUsers: T,
       results: _,
@@ -147,13 +147,13 @@ let D = new b(r.default, {
       channelId: n
     } = e;
     if (null != t) return !1;
-    let a = g;
-    return x(), g = a, v = n, A()
+    let a = S;
+    return x(), S = a, v = n, A()
   },
   MODAL_PUSH: O,
   SHOW_ACTION_SHEET: O,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    g = !0, M(), a = L(), v = e.channelId, N("")
+    S = !0, M(), a = L(), v = e.channelId, N("")
   },
   MODAL_POP: y,
   HIDE_ACTION_SHEET: y,

@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("272030"),
   p = n("666020"),
   E = n("352674"),
-  g = n("888503"),
-  S = n("206230"),
+  S = n("888503"),
+  g = n("206230"),
   C = n("716241"),
   _ = n("95039"),
   I = n("405645"),
@@ -41,7 +41,7 @@ var a = n("37983"),
   w = n("782340"),
   F = n("881235");
 let k = D.default.getEnableHardwareAcceleration(),
-  V = 44 + g.AVATAR_DECORATION_PADDING,
+  V = 44 + S.AVATAR_DECORATION_PADDING,
   B = {
     origin: {
       x: 38,
@@ -74,7 +74,7 @@ class H extends l.Component {
       isTyping: m,
       isMobileOnline: p,
       premiumSince: E,
-      ...S
+      ...g
     } = this.props, C = null != E ? new Date(E) : null;
     return (0, a.jsx)(h.Popout, {
       preload: () => (0, v.default)(s.id, s.getAvatarURL(f, 80), {
@@ -89,7 +89,7 @@ class H extends l.Component {
         let {
           isShown: E
         } = h;
-        return (0, a.jsx)(g.default, {
+        return (0, a.jsx)(S.default, {
           className: F.member,
           onContextMenu: this.renderUserContextMenu,
           shouldAnimateStatus: k,
@@ -109,7 +109,7 @@ class H extends l.Component {
           isMobile: p,
           onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
           selected: E,
-          itemProps: S,
+          itemProps: g,
           ...d
         })
       }
@@ -222,7 +222,7 @@ function Y(e) {
   let {
     index: t
   } = e, n = (0, u.useListItem)("".concat(t));
-  return (0, a.jsx)(g.default, {
+  return (0, a.jsx)(S.default, {
     itemProps: n
   })
 }
@@ -430,7 +430,7 @@ function K(e) {
   let {
     channel: t,
     className: n
-  } = e, s = (0, c.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([N.default], () => N.default.getProps(t.guild_id, t.id)), {
+  } = e, s = (0, c.useStateFromStores)([g.default], () => g.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([N.default], () => N.default.getProps(t.guild_id, t.id)), {
     rows: o,
     groups: d
   } = r, f = l.useRef(null), h = l.useCallback((e, t) => {

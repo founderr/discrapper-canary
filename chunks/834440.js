@@ -64,9 +64,9 @@ var T = function(e) {
     e.stopPropagation()
   }, []), N = s.useCallback(() => {}, []), R = s.useCallback(() => {
     (0, f.enrollInQuest)(d.id)
-  }, [d]), v = s.useCallback(() => {
+  }, [d]), O = s.useCallback(() => {
     u.default.open(I.UserSettingsSections.INVENTORY)
-  }, []), O = (0, C.useHandleClaimQuestsReward)(d);
+  }, []), v = (0, C.useHandleClaimQuestsReward)(d);
   s.useEffect(() => {
     g.current = l
   }, [l]), s.useEffect(() => () => {
@@ -134,7 +134,7 @@ var T = function(e) {
           color: o.Button.Colors.PRIMARY,
           fullWidth: !0,
           size: o.Button.Sizes.SMALL,
-          onClick: v,
+          onClick: O,
           children: S.default.Messages.QUESTS_LEARN_MORE_V2
         }), (0, a.jsx)(o.Button, {
           className: p.cta,
@@ -149,14 +149,14 @@ var T = function(e) {
         className: p.cta,
         color: o.Button.Colors.BRAND,
         fullWidth: !0,
-        onClick: v,
+        onClick: O,
         size: o.Button.Sizes.SMALL,
         children: S.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
       }), M && (0, a.jsx)(o.Button, {
         className: p.cta,
         color: o.Button.Colors.BRAND,
         fullWidth: !0,
-        onClick: O,
+        onClick: v,
         size: o.Button.Sizes.SMALL,
         children: S.default.Messages.QUESTS_CLAIM_YOUR_REWARD
       })]

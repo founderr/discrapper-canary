@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return E
   },
   shouldShowCallscopeUI: function() {
-    return g
+    return S
   },
   setCallscopeIssue: function() {
-    return S
+    return g
   }
 }), n("424973"), n("222007");
 var a = n("811022"),
@@ -77,11 +77,11 @@ function E() {
   return p
 }
 
-function g() {
+function S() {
   return p.shouldShowUI()
 }
 
-function S(e) {
+function g(e) {
   p.issues.push({
     date: new Date,
     description: e

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("702976");
-var s = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("568734"),
+var s = n("568734"),
   l = n("913491"),
   i = n("823674"),
   r = n("49111"),
@@ -27,8 +27,8 @@ function u(e) {
       groupId: C,
       compact: p = !1
     }
-  } = e, m = f.state === r.MessageStates.SENDING, E = f.id === C, g = (0, a.hasFlag)(f.flags, r.MessageFlags.EPHEMERAL), S = f.state === r.MessageStates.SEND_FAILED;
-  return m || g && !S ? null : (0, s.jsx)(i.default, {
+  } = e, m = f.state === r.MessageStates.SENDING, E = f.id === C, g = (0, s.hasFlag)(f.flags, r.MessageFlags.EPHEMERAL), S = f.state === r.MessageStates.SEND_FAILED;
+  return m || g && !S ? null : (0, a.jsx)(i.default, {
     className: o.buttons,
     innerClassName: o.buttonsInner,
     isHeader: !p && E && !(0, l.default)(f),

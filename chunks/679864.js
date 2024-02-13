@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("917351"),
   i = n.n(s),
   r = n("77078"),
-  o = n("224216"),
-  u = n("782340"),
+  u = n("224216"),
+  o = n("782340"),
   d = n("153934");
 
 function c(e) {
@@ -110,9 +110,9 @@ var m = a.memo(function(e) {
     itemWidth: m,
     itemHeight: E,
     showDeadZoneIndicator: g,
-    activeItem: S,
-    onItemSelect: I,
-    onItemAction: _,
+    activeItem: I,
+    onItemSelect: _,
+    onItemAction: S,
     interactive: N = !0,
     children: T
   } = e, A = a.useRef(null), L = a.useRef([]), v = a.useRef(!1), x = a.useRef(null), [R, M] = a.useState(0), [O, y] = a.useState({
@@ -121,10 +121,10 @@ var m = a.memo(function(e) {
   }), D = Math.abs(O.x) + Math.abs(O.y) > 0, b = a.useMemo(() => i.chunk(T, h), [T]), j = a.useCallback((e, t) => {
     null == L.current[R] ? L.current[R] = [] : L.current[R][t] = e
   }, [R]), G = a.useCallback((e, t) => {
-    x.current = t, I(h * e + t)
-  }, [I]), U = a.useCallback(() => {
-    x.current = null, I(null)
-  }, [I]), P = a.useCallback(e => {
+    x.current = t, _(h * e + t)
+  }, [_]), U = a.useCallback(() => {
+    x.current = null, _(null)
+  }, [_]), P = a.useCallback(e => {
     U(), v.current = e
   }, [U]), w = a.useCallback((e, t, n) => {
     if (v.current) {
@@ -142,14 +142,14 @@ var m = a.memo(function(e) {
       s = l.y < 0,
       i = p(n, l),
       r = a ? Math.max(l.x, -i.x) : Math.min(l.x, i.x),
-      o = s ? Math.max(l.y, -i.y) : Math.min(l.y, i.y);
+      u = s ? Math.max(l.y, -i.y) : Math.min(l.y, i.y);
     y({
       x: r / 2,
-      y: o / 2
+      y: u / 2
     })
   }, []), F = a.useCallback(e => {
-    null != x.current && (e.preventDefault(), e.stopPropagation(), null == _ || _(h * R + x.current))
-  }, [_, R]), B = a.useMemo(() => (0, s.throttle)(e => {
+    null != x.current && (e.preventDefault(), e.stopPropagation(), null == S || S(h * R + x.current))
+  }, [S, R]), B = a.useMemo(() => (0, s.throttle)(e => {
     if (null == A.current) return;
     let l = A.current.getBoundingClientRect(),
       a = l.left + l.width / 2,
@@ -163,21 +163,21 @@ var m = a.memo(function(e) {
         y: e.clientY
       };
     if (w(r, i, Math.max(t, n)), v.current) {
-      null != S && U();
+      null != I && U();
       return
     }
-    let u = (0, o.extendLineSegment)(i, r, Math.max(t, n));
+    let o = (0, u.extendLineSegment)(i, r, Math.max(t, n));
     for (let e = 0; e < L.current[R].length; e++) {
       let t = L.current[R][e];
       if (null == t) continue;
       let n = t.getBoundingClientRect();
-      if ((0, o.doesLineSegmentIntersectRectangle)(i, u, n)) {
+      if ((0, u.doesLineSegmentIntersectRectangle)(i, o, n)) {
         G(R, e);
         return
       }
     }
     U()
-  }, 16), [S, w, U, G, R, n, t]), V = a.useCallback(e => {
+  }, 16), [I, w, U, G, R, n, t]), V = a.useCallback(e => {
     if (!N) return;
     let t = e.deltaY > 0 ? 1 : -1,
       n = R + t;
@@ -280,7 +280,7 @@ var m = a.memo(function(e) {
           className: d.chatWheelDeadZoneIcon
         }), N && b.length > 1 ? (0, l.jsx)("div", {
           className: d.paginationHint,
-          children: u.default.Messages.CHAT_WHEEL_PAGINATION_HINT
+          children: o.default.Messages.CHAT_WHEEL_PAGINATION_HINT
         }) : null]
       }), H]
     })

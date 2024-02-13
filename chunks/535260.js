@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("70845"),
   p = n("95045"),
   E = n("393414"),
-  g = n("144491"),
-  S = n("845579"),
+  S = n("144491"),
+  g = n("845579"),
   C = n("42203"),
   _ = n("305961"),
   I = n("957255"),
@@ -43,8 +43,8 @@ function P(e) {
     renderEmbeds: h,
     scrollTo: m,
     searchResults: p,
-    blockCount: g,
-    onChangePage: S
+    blockCount: S,
+    onChangePage: g
   } = e, {
     offset: _,
     totalResults: I,
@@ -53,8 +53,8 @@ function P(e) {
   } = n, A = l.useCallback(e => {
     if (x) return;
     let t = e - 1;
-    null == S || S(t), u.changePage(f, t)
-  }, [f, x, S]), M = l.useCallback(e => {
+    null == g || g(t), u.changePage(f, t)
+  }, [f, x, g]), M = l.useCallback(e => {
     if (e.blocked) r.default.show({
       title: O.default.Messages.UNBLOCK_TO_JUMP_TITLE,
       body: O.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
@@ -139,7 +139,7 @@ function P(e) {
       ...W,
       "aria-busy": x,
       children: H
-    }), g > 0 ? (0, a.jsxs)(i.Clickable, {
+    }), S > 0 ? (0, a.jsxs)(i.Clickable, {
       tag: "div",
       className: y.resultsBlocked,
       onClick: () => u.setShowBlockedResults(f, !N),
@@ -148,9 +148,9 @@ function P(e) {
       }), (0, a.jsx)("div", {
         className: y.resultsBlockedText,
         children: N ? O.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
-          count: g
+          count: S
         }) : O.default.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({
-          count: g
+          count: S
         })
       })]
     }) : null, !x && !V && (0, a.jsx)(R.default, {
@@ -178,10 +178,10 @@ function b(e) {
     jumpToMessage: P,
     listNavigator: b,
     favoriteSearch: D
-  } = e, U = S.RenderSpoilers.useSetting(), w = l.useCallback(e => {
+  } = e, U = g.RenderSpoilers.useSetting(), w = l.useCallback(e => {
     if (e === x.default.getChannelId()) return;
     let t = C.default.getChannel(e);
-    if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, g.transitionToChannel)(t.id)
+    if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, S.transitionToChannel)(t.id)
   }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, B = null != V ? V.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != V ? (0, h.default)(V) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
     content: Y
   } = (0, p.default)({

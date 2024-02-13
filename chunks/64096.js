@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   AttachmentTypes: function() {
-    return s
+    return a
   },
   default: function() {
     return T
   }
 }), n("424973");
-var s, a, l = n("871388"),
+var a, s, l = n("871388"),
   i = n("679653"),
   r = n("20606"),
   o = n("27618"),
@@ -29,8 +29,8 @@ function T(e) {
   let {
     canAttachFiles: t,
     canStartThreads: n,
-    useSlate: s,
-    canUseApplicationCommands: a,
+    useSlate: a,
+    canUseApplicationCommands: s,
     hasClips: T,
     channel: M,
     activities: N,
@@ -61,7 +61,7 @@ function T(e) {
     type: "POLL",
     icon: m.default,
     display: A.default.Messages.CREATE_POLL
-  }), s && a && R.push({
+  }), a && s && R.push({
     type: "SLASH_COMMAND",
     icon: d.default,
     display: A.default.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
@@ -96,4 +96,4 @@ function T(e) {
       activity: e
     }))
   }), R
-}(a = s || (s = {})).UPLOAD_A_FILE = "UPLOAD_A_FILE", a.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE", a.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME", a.INVITE_TO_LISTEN = "INVITE_TO_LISTEN", a.INVITE_TO_WATCH = "INVITE_TO_WATCH", a.CREATE_THREAD = "CREATE_THREAD", a.SLASH_COMMAND = "SLASH_COMMAND", a.CLIPS = "CLIPS", a.POLL = "POLL", a.ACTIVITY = "ACTIVITY"
+}(s = a || (a = {})).UPLOAD_A_FILE = "UPLOAD_A_FILE", s.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE", s.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME", s.INVITE_TO_LISTEN = "INVITE_TO_LISTEN", s.INVITE_TO_WATCH = "INVITE_TO_WATCH", s.CREATE_THREAD = "CREATE_THREAD", s.SLASH_COMMAND = "SLASH_COMMAND", s.CLIPS = "CLIPS", s.POLL = "POLL", s.ACTIVITY = "ACTIVITY"

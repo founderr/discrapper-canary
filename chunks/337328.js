@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("91639"),
   N = n("128887"),
   R = n("217513"),
-  v = n("430312"),
-  O = n("763866"),
+  O = n("430312"),
+  v = n("763866"),
   L = n("10532"),
   M = n("935409"),
   P = n("845579"),
@@ -41,8 +41,8 @@ var a = n("37983"),
   j = n("599110"),
   w = n("718517"),
   k = n("158998"),
-  B = n("583232"),
-  F = n("644091"),
+  F = n("583232"),
+  B = n("644091"),
   H = n("891964"),
   V = n("49111"),
   Y = n("590456"),
@@ -78,7 +78,7 @@ function q(e, t, n, s) {
       return (0, a.jsx)(f.MenuItem, {
         id: "".concat(e, "-").concat(l),
         label: i(),
-        action: () => (0, B.default)(e, t, n, l)
+        action: () => (0, F.default)(e, t, n, l)
       }, l)
     })
   });
@@ -107,7 +107,7 @@ function q(e, t, n, s) {
         })]
       })
     },
-    action: () => (0, B.default)(e, t, n),
+    action: () => (0, F.default)(e, t, n),
     children: e !== V.StatusTypes.ONLINE ? l : void 0
   })
 }
@@ -136,7 +136,7 @@ function Q(e, t, n, s) {
         })]
       })
     },
-    action: () => (0, B.default)(e, t, n)
+    action: () => (0, F.default)(e, t, n)
   })
 }
 
@@ -151,7 +151,7 @@ function Z(e) {
     closePopout: D
   } = e, y = (0, _.useAnalyticsContext)(), {
     AnalyticsLocationProvider: b
-  } = (0, m.default)(p.default.ACCOUNT_PROFILE_POPOUT), w = (0, R.default)(t.id, l), [B, z, Z, X] = (0, d.useStateFromStoresArray)([x.default], () => {
+  } = (0, m.default)(p.default.ACCOUNT_PROFILE_POPOUT), w = (0, R.default)(t.id, l), [F, z, Z, X] = (0, d.useStateFromStoresArray)([x.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, V.StatusTypes.UNKNOWN, !1] : [null !== (e = x.default.findActivity(n, e => e.type !== V.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, x.default.findActivity(t.id, e => e.type === V.ActivityTypes.CUSTOM_STATUS), x.default.getStatus(n), x.default.isMobileOnline(n)]
@@ -190,15 +190,15 @@ function Z(e) {
       type: "User Status Menu",
       has_custom_status: null != n,
       other_user_id: t.id,
-      application_id: null != B ? B.application_id : void 0,
+      application_id: null != F ? F.application_id : void 0,
       is_streaming: r,
-      application_name: null != B ? B.name : void 0,
+      application_name: null != F ? F.name : void 0,
       profile_has_nitro_customization: (null == w ? void 0 : w.banner) != null,
       location: y.location,
       has_profile_effect: (null == w ? void 0 : w.profileEffectId) != null
     })
   }, []);
-  let et = (0, F.useMultiAccountMenuItems)(),
+  let et = (0, B.useMultiAccountMenuItems)(),
     en = (0, T.useCustomStatusMenuItem)(null != n ? n : void 0, K.menuItemFocused),
     ea = (0, g.default)({
       id: t.id,
@@ -215,7 +215,7 @@ function Z(e) {
       className: K.popoutContainer,
       children: (0, a.jsx)("div", {
         ref: $,
-        children: (0, a.jsxs)(v.default, {
+        children: (0, a.jsxs)(O.default, {
           user: t,
           profileType: Y.UserProfileTypes.POPOUT,
           children: [(0, a.jsx)(M.default, {
@@ -223,14 +223,14 @@ function Z(e) {
             displayProfile: w,
             onClose: () => null == D ? void 0 : D(),
             isMobile: X,
-            isStreaming: (0, S.default)(B),
+            isStreaming: (0, S.default)(F),
             status: Z,
             disableUserProfileLink: __OVERLAY__,
             isHovering: ee,
             showPremiumBadgeUpsell: !1
-          }), (0, a.jsxs)(v.default.Inner, {
-            children: [(0, a.jsx)(O.default, {
-              activity: B,
+          }), (0, a.jsxs)(O.default.Inner, {
+            children: [(0, a.jsx)(v.default, {
+              activity: F,
               customStatusActivity: z,
               displayProfile: w,
               user: t,
