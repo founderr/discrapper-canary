@@ -14,10 +14,10 @@ n.r(t), n.d(t, {
     return ei
   },
   transformForGameSettings: function() {
-    return es
+    return ea
   },
   default: function() {
-    return ed
+    return ef
   }
 }), n("222007"), n("424973"), n("808653"), n("781738"), n("843762");
 var r, s, a = n("917351"),
@@ -235,11 +235,15 @@ function ei(e) {
   return null == t || t
 }
 
-function er() {
+function er(e) {
+  return !e.hidden && ei(e)
+}
+
+function es() {
   d.default.set(b, j)
 }
 
-function es(e) {
+function ea(e) {
   var t, n;
   let i = {
     ...e,
@@ -255,7 +259,7 @@ function es(e) {
   return i
 }
 
-function ea() {
+function eo() {
   let e = !1;
   return w = o.values(O.default.libraryApplications).reduce((t, n) => {
     let i = N.default.getDetectableGame(n.id);
@@ -277,17 +281,17 @@ function ea() {
       })
     }
     return t
-  }, []), e && eo(), e
+  }, []), e && el(), e
 }
 
-function eo() {
+function el() {
   if (!__OVERLAY__ && v.isPlatformEmbedded) {
     let e = [...w, ...o.values(j.gameOverrides)];
     A.default.setGameCandidateOverrides(e)
   }
 }
 
-function el(e) {
+function eu(e) {
   null != e && 0 !== e.length && (e.forEach(e => {
     let t = j.gamesSeen.some(t => {
       if (t.name === e.name) {
@@ -312,10 +316,10 @@ function el(e) {
         return null != e.id && (t.id = e.id), null != e.nativeProcessObserverId && (t.nativeProcessObserverId = e.nativeProcessObserverId), null != e.name && (t.name = e.name), e.add && (t.add = !0), e.block && (t.block = !0), Z(t, e), t
       }(e))
     }
-  }), j.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused), er(), I.default.setRecentGames(eu().map(e => es(e))))
+  }), j.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused), es(), I.default.setRecentGames(ec().map(e => ea(e))))
 }
 
-function eu() {
+function ec() {
   let e = o.values(j.gameOverrides),
     t = j.gamesSeen.filter(e => void 0 === j.gameOverrides[ee(e)]);
   return t.concat(e)
@@ -380,9 +384,9 @@ function eu() {
       type: "RUNNING_STREAMER_TOOLS_CHANGE",
       count: K
     })), x = e, V = n, i = r, $()
-  }), eo()
+  }), el()
 });
-class ec extends c.default.Store {
+class ed extends c.default.Store {
   initialize() {
     var e, t, n, i;
     let r = null !== (e = d.default.get(b)) && void 0 !== e ? e : {
@@ -396,15 +400,21 @@ class ec extends c.default.Store {
     if (o.values(null !== (t = r.gameOverrides) && void 0 !== t ? t : {}).forEach(e => {
         let t = ee(e);
         j.gameOverrides[t] = e
-      }), j.enableOverlay = null !== (n = r.enableOverlay) && void 0 !== n ? n : {}, j.enableDetection = null !== (i = r.enableDetection) && void 0 !== i ? i : {}, eo(), Array.isArray(r.gamesSeen))
+      }), j.enableOverlay = null !== (n = r.enableOverlay) && void 0 !== n ? n : {}, j.enableDetection = null !== (i = r.enableDetection) && void 0 !== i ? i : {}, el(), Array.isArray(r.gamesSeen))
       for (let e of r.gamesSeen) "number" == typeof e.id && (e.nativeProcessObserverId = e.id, delete e.id, s = !0);
-    el(r.gamesSeen), this.waitFor(N.default), this.syncWith([O.default, N.default, D.default], o.throttle(ea, 1e3)), s && er()
+    eu(r.gamesSeen), this.waitFor(N.default), this.syncWith([O.default, N.default, D.default], o.throttle(eo, 1e3)), s && es()
   }
   getVisibleGame() {
-    return null != F && (F.hidden || !ei(F)) ? null : F
+    return null == F || er(F) ? F : null
   }
   getCurrentGameForAnalytics() {
     return F
+  }
+  getVisibleRunningGames() {
+    return x.filter(er)
+  }
+  getRunningGames() {
+    return x
   }
   getRunningDiscordApplicationIds() {
     let e = [];
@@ -437,12 +447,9 @@ class ec extends c.default.Store {
   getCandidateGames() {
     return k.filter(e => e.hidden || null == e.id).filter(e => void 0 === j.gameOverrides[ee(e)])
   }
-  getRunningGames() {
-    return x
-  }
   getGamesSeen(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-      n = eu();
+      n = ec();
     if (e) {
       let e = this.getVisibleGame();
       if (null != e) {
@@ -477,10 +484,10 @@ class ec extends c.default.Store {
     return U
   }
 }
-ec.displayName = "RunningGameStore";
-var ed = new ec(f.default, {
+ed.displayName = "RunningGameStore";
+var ef = new ed(f.default, {
   RUNNING_GAMES_CHANGE: function(e) {
-    el(x)
+    eu(x)
   },
   CANDIDATE_GAMES_CHANGE: function(e) {
     k = e.games
@@ -517,10 +524,10 @@ var ed = new ec(f.default, {
     (null == i.lastFocused || 0 === i.lastFocused) && (i.lastFocused = Math.floor(Date.now() / 1e3)), j.gameOverrides[t] = {
       ...i,
       add: !0
-    }, el(x), eo(), er(), $()
+    }, eu(x), el(), es(), $()
   },
   RUNNING_GAME_TOGGLE_OVERLAY: function(e) {
-    if (j.enableOverlay[ee(e.game)] = e.newEnabledValue, er(), !__OVERLAY__) {
+    if (j.enableOverlay[ee(e.game)] = e.newEnabledValue, es(), !__OVERLAY__) {
       let t = null != e.game.id ? N.default.getDetectableGame(e.game.id) : null;
       null != t && T.default.track(y.AnalyticEvents.OVERLAY_TOGGLED, {
         enabled: e.newEnabledValue,
@@ -534,7 +541,7 @@ var ed = new ec(f.default, {
     let {
       game: t
     } = e, n = ei(t);
-    j.enableDetection[ee(t)] = !n, er(), T.default.track(y.AnalyticEvents.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
+    j.enableDetection[ee(t)] = !n, es(), T.default.track(y.AnalyticEvents.USER_SETTINGS_GAME_DETECTION_TOGGLE, {
       enabled: !n
     })
   },
@@ -558,13 +565,13 @@ var ed = new ec(f.default, {
     let s = !1;
     x.forEach(n => {
       ee(n) === t && (n.name = e.newName, s = !0)
-    }), eo(), er(), s && $()
+    }), el(), es(), s && $()
   },
   RUNNING_GAME_DELETE_ENTRY: function(e) {
     let t = ee(e.game);
     delete j.gameOverrides[t], delete j.enableOverlay[t], delete j.enableDetection[t], j.gamesSeen = j.gamesSeen.filter(e => ee(e) !== t), H[t] && (x.forEach(e => {
       t === ee(e) && (e.hidden = !0)
-    }), delete H[t], $()), eo(), er()
+    }), delete H[t], $()), el(), es()
   },
   GAMES_DATABASE_UPDATE: Y,
   GAME_LAUNCH_SUCCESS: function(e) {
@@ -576,6 +583,6 @@ var ed = new ec(f.default, {
     null != i && n(i.id, i.name, null !== (t = e.pids) && void 0 !== t ? t : [])
   },
   GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: function() {
-    eo()
+    el()
   }
 })

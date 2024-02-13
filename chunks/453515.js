@@ -44,7 +44,7 @@ function A(e) {
 
 function N() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-    t = h.default.getRunningGames(),
+    t = h.default.getVisibleRunningGames(),
     n = new Set;
   for (let {
       name: e,
@@ -65,7 +65,7 @@ function R() {
   for (let e of Object.keys(p)) g(p[e]);
   T = !1
 }
-class v extends s.default.Store {
+class O extends s.default.Store {
   initialize() {
     this.waitFor(h.default, u.default, E.default), this.syncWith([u.default], N)
   }
@@ -73,7 +73,7 @@ class v extends s.default.Store {
     return p
   }
 }
-v.displayName = "ActivityTrackingStore", new v(r.default, {
+O.displayName = "ActivityTrackingStore", new O(r.default, {
   RUNNING_GAMES_CHANGE: () => N(),
   CONNECTION_OPEN: function() {
     if (T) return !1;
