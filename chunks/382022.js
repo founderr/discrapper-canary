@@ -9,7 +9,7 @@ var t = E("210696"),
   n = E("446674"),
   r = E("913144"),
   i = E("689988"),
-  a = E("288206"),
+  a = E("479732"),
   I = E("605250"),
   s = E("385976"),
   T = E("364685"),
@@ -82,7 +82,9 @@ function l(e) {
 }
 
 function u() {
-  a.default.getGuildIdsRequiringDeletedIdsSync().forEach(e => C(e))
+  a.default.getAll().then(e => {
+    e.forEach(e => C(e))
+  })
 }
 
 function L(e) {

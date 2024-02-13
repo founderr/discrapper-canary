@@ -20,7 +20,6 @@ function a() {
     useGuildVersions: !1,
     version: r,
     cacheCreationDate: null,
-    apiCodeVersion: 0,
     guildIdsRequiringDeletedIdsSync: [],
     lastSelectedGuildId: null
   }
