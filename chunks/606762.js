@@ -465,8 +465,8 @@ function r(E, e, s, S) {
       flag: C.Permissions.CREATE_EVENTS
     },
     [C.Permissions.SET_VOICE_CHANNEL_STATUS.toString()]: {
-      title: l.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE,
-      description: l.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_DESCRIPTION,
+      title: (null == S ? void 0 : S.inVoiceBgExperiment) ? l.default.Messages.VOICE_CHANNEL_CUSTOMIZE_PERMISSION_TITLE : l.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE,
+      description: (null == S ? void 0 : S.inVoiceBgExperiment) ? l.default.Messages.VOICE_CHANNEL_CUSTOMIZE_PERMISSION_DESCRIPTION : l.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_DESCRIPTION,
       flag: C.Permissions.SET_VOICE_CHANNEL_STATUS
     }
   }

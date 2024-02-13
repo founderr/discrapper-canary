@@ -1049,6 +1049,7 @@
                     MESSAGE_ACK: (_, E) => "/channels/".concat(_, "/messages/").concat(E, "/ack"),
                     MESSAGE_CREATE_ATTACHMENT_UPLOAD: _ => "/channels/".concat(_, "/attachments"),
                     UPDATE_VOICE_CHANNEL_STATUS: _ => "/channels/".concat(_, "/voice-status"),
+                    UPDATE_VOICE_CHANNEL_BACKGROUND: _ => "/channels/".concat(_, "/voice-background"),
                     MESSAGE_DELETE_UPLOAD: _ => "/attachments/".concat(_),
                     MESSAGE_CROSSPOST: (_, E) => "/channels/".concat(_, "/messages/").concat(E, "/crosspost"),
                     MESSAGE_LOG_PRIVATE_CHANNELS: "/messages-log/private-channels/get",

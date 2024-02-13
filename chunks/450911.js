@@ -193,8 +193,8 @@ var s = n("872717"),
       return n = t.type === h.VoiceCallBackgroundTypes.EMPTY ? t : {
         type: t.type,
         resource_id: t.resourceId
-      }, s.default.patch({
-        url: m.Endpoints.CHANNEL(e),
+      }, s.default.put({
+        url: m.Endpoints.UPDATE_VOICE_CHANNEL_BACKGROUND(e),
         body: {
           voice_background_display: n
         },
