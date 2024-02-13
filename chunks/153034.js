@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return B
   }
 }), n("70102"), n("222007");
 var a = n("37983"),
@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("867544"),
   N = n("216422"),
   R = n("688342"),
-  O = n("599110"),
-  v = n("964889"),
+  v = n("599110"),
+  O = n("964889"),
   L = n("159885"),
   M = n("950395"),
   P = n("49111"),
@@ -143,7 +143,7 @@ let x = (0, L.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
             }),
             libraryApplication: e.libraryApplication
           })]
-        }), (0, v.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, a.jsx)(C.default, {
+        }), (0, O.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, a.jsx)(C.default, {
           analyticsListSort: (l = t.sortKey, r = t.sortDirection, "".concat(U[l], " ").concat(r === P.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: P.AnalyticsLocations.APPLICATION_LIBRARY,
@@ -267,7 +267,7 @@ class k extends s.PureComponent {
       }
       e.num_applications_total++
     }
-    O.default.track(P.AnalyticEvents.LIBRARY_VIEWED, {
+    v.default.track(P.AnalyticEvents.LIBRARY_VIEWED, {
       ...e,
       load_id: t.loadId
     })
@@ -390,8 +390,8 @@ class k extends s.PureComponent {
   }
 }
 
-function F(e) {
-  let t = s.useContext(O.AnalyticsContext),
+function B(e) {
+  let t = s.useContext(v.AnalyticsContext),
     n = (0, r.useLocation)(),
     {
       applicationViewItems: l,

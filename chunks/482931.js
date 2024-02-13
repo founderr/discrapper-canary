@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return a
   },
   PHONE_VERIFICATION_CODE_NUM_DIGITS: function() {
-    return s
+    return l
   }
 });
 let a = "PHONE_VERIFICATION_MODAL_KEY",
-  s = 6
+  l = 6

@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return T
   }
 });
-var a = n("37983"),
-  s = n("884691"),
+var s = n("37983"),
+  a = n("884691"),
   l = n("446674"),
   i = n("933805"),
   r = n("409129"),
@@ -22,7 +22,7 @@ var a = n("37983"),
   g = n("380986"),
   S = n("49111"),
   _ = n("782340");
-let A = s.memo(function(e) {
+let A = a.memo(function(e) {
   var t, n, A;
   let {
     baseMessage: T,
@@ -32,7 +32,7 @@ let A = s.memo(function(e) {
     referencedUsernameProfile: v,
     referencedAvatarProfile: L,
     setPopout: x
-  } = e, R = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, m.useNullableMessageAuthor)(R), O = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = T.editedTimestamp) && void 0 !== t ? t : T.timestamp).valueOf()), D = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == N ? void 0 : N.guild_id) && void 0 !== n ? n : "", (null !== (A = T.editedTimestamp) && void 0 !== A ? A : T.timestamp).valueOf()), j = s.useMemo(() => {
+  } = e, R = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, m.useNullableMessageAuthor)(R), D = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = T.editedTimestamp) && void 0 !== t ? t : T.timestamp).valueOf()), O = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == N ? void 0 : N.guild_id) && void 0 !== n ? n : "", (null !== (A = T.editedTimestamp) && void 0 !== A ? A : T.timestamp).valueOf()), j = a.useMemo(() => {
     if (null == R) return null;
     if (R.type === S.MessageTypes.USER_JOIN) return (0, i.astToString)(C.default.getSystemMessageUserJoin(R.id).astFormat({
       username: null != y ? y.nick : R.author.username,
@@ -62,21 +62,21 @@ let A = s.memo(function(e) {
         noStyleAndInteraction: !0,
         allowHeading: !0,
         allowList: !0,
-        allowLinks: O.showMaskedLinks || D.showMaskedLinks
+        allowLinks: D.showMaskedLinks || O.showMaskedLinks
       } : {
         formatInline: !0,
-        allowHeading: O.showListsAndHeaders || D.showListsAndHeaders,
-        allowList: O.showListsAndHeaders || D.showListsAndHeaders,
-        allowLinks: O.showMaskedLinks || D.showMaskedLinks
+        allowHeading: D.showListsAndHeaders || O.showListsAndHeaders,
+        allowList: D.showListsAndHeaders || O.showListsAndHeaders,
+        allowLinks: D.showMaskedLinks || O.showMaskedLinks
       };
       return (0, p.default)(R, e).content
     }
     return null
-  }, [R, y, N, O, D]), P = (0, l.useStateFromStores)([f.default], () => null != R && f.default.isBlocked(R.author.id), [R]), b = (0, g.useContextMenuUser)(null == R ? void 0 : R.author.id, N.id), H = (0, g.useClickReply)(T, R, P), F = (0, g.useClickReferencedMessageAuthorUsername)(R, N, v, x), U = (0, g.useClickReferencedMessageAuthorAvatar)(L, x), k = s.useCallback(() => x({
+  }, [R, y, N, D, O]), b = (0, l.useStateFromStores)([f.default], () => null != R && f.default.isBlocked(R.author.id), [R]), P = (0, g.useContextMenuUser)(null == R ? void 0 : R.author.id, N.id), H = (0, g.useClickReply)(T, R, b), F = (0, g.useClickReferencedMessageAuthorUsername)(R, N, v, x), U = (0, g.useClickReferencedMessageAuthorAvatar)(L, x), k = a.useCallback(() => x({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
   }), [x]), G = (0, m.useNullableMessageAuthor)(T);
-  return (0, a.jsx)(h.default, {
+  return (0, s.jsx)(h.default, {
     repliedAuthor: y,
     baseMessage: T,
     channel: N,
@@ -84,19 +84,19 @@ let A = s.memo(function(e) {
     referencedMessage: M,
     content: j,
     compact: I,
-    isReplyAuthorBlocked: P,
+    isReplyAuthorBlocked: b,
     showAvatarPopout: L,
     showUsernamePopout: v,
     renderPopout: E.default,
     onClickAvatar: U,
     onClickUsername: F,
     onClickReply: H,
-    onContextMenu: b,
+    onContextMenu: P,
     onPopoutRequestClose: k
   })
 });
 
-function T(e, t, n, s, l) {
+function T(e, t, n, a, l) {
   let {
     message: i,
     channel: r,
@@ -104,9 +104,9 @@ function T(e, t, n, s, l) {
   } = e, {
     referencedUsernameProfile: u,
     referencedAvatarProfile: d
-  } = n, c = i.type === S.MessageTypes.REPLY && null != s && (0, a.jsx)(A, {
+  } = n, c = i.type === S.MessageTypes.REPLY && null != a && (0, s.jsx)(A, {
     baseMessage: i,
-    replyReference: s,
+    replyReference: a,
     referencedMessage: l,
     channel: r,
     compact: o,
@@ -114,7 +114,7 @@ function T(e, t, n, s, l) {
     referencedUsernameProfile: u,
     referencedAvatarProfile: d
   });
-  return (0, a.jsx)(a.Fragment, {
+  return (0, s.jsx)(s.Fragment, {
     children: c
   })
 }

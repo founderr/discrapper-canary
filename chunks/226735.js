@@ -24,12 +24,12 @@ function m(e) {
     appContext: m,
     exitFullScreen: p,
     onSelect: E
-  } = e, S = (0, l.useStateFromStores)([i.default], () => i.default.getSelectedParticipant(t)), g = (null == S ? void 0 : S.type) === f.ParticipantTypes.STREAM ? S.stream : null, C = (0, r.default)(t), _ = (0, u.default)(), I = (0, o.default)(t), T = (0, c.default)(t);
+  } = e, g = (0, l.useStateFromStores)([i.default], () => i.default.getSelectedParticipant(t)), S = (null == g ? void 0 : g.type) === f.ParticipantTypes.STREAM ? g.stream : null, C = (0, r.default)(t), _ = (0, u.default)(), I = (0, o.default)(t), T = (0, c.default)(t);
   return (0, a.jsxs)(s.Menu, {
     navId: "channel-call-overflow-popout",
     onClose: n,
     "aria-label": h.default.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
     onSelect: E,
-    children: [C, _, I, T, (0, d.default)(g, m, p)]
+    children: [C, _, I, T, (0, d.default)(S, m, p)]
   })
 }

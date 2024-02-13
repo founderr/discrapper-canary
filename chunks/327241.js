@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return w
+    return H
   }
 });
-var i = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
-  l = n("272030"),
-  r = n("838446"),
+var l = n("77078"),
+  r = n("272030"),
+  i = n("838446"),
   u = n("158534"),
   s = n("846883"),
   o = n("812204"),
@@ -17,92 +17,92 @@ var a = n("77078"),
   f = n("972701"),
   p = n("390008"),
   h = n("41205"),
-  m = n("936947"),
-  E = n("47495"),
-  x = n("715243"),
-  g = n("458574"),
-  v = n("963150"),
-  C = n("308798"),
-  S = n("47006"),
-  b = n("878526"),
-  I = n("44141"),
+  E = n("936947"),
+  C = n("47495"),
+  _ = n("715243"),
+  v = n("458574"),
+  m = n("963150"),
+  I = n("308798"),
+  g = n("47006"),
+  N = n("878526"),
+  x = n("44141"),
   y = n("531674"),
-  _ = n("619436"),
-  A = n("625399"),
-  M = n("731390"),
-  N = n("339876"),
-  T = n("49111"),
-  L = n("782340");
+  T = n("619436"),
+  S = n("625399"),
+  L = n("731390"),
+  O = n("339876"),
+  M = n("49111"),
+  b = n("782340");
 
-function O(e) {
+function A(e) {
   let {
     channel: t,
     onSelect: n
-  } = e, r = (0, I.default)(t), u = (0, g.default)(t), o = (0, f.useAddToFavoritesItem)(t), c = (0, f.useRemoveFromFavoritesItem)(t), x = (0, p.default)(t), v = (0, h.default)(t), C = (0, m.default)(t), b = (0, y.default)(t), M = (0, _.default)(t), N = (0, S.default)(t), T = (0, d.default)({
+  } = e, i = (0, x.default)(t), u = (0, v.default)(t), o = (0, f.useAddToFavoritesItem)(t), c = (0, f.useRemoveFromFavoritesItem)(t), _ = (0, p.default)(t), m = (0, h.default)(t), I = (0, E.default)(t), N = (0, y.default)(t), L = (0, T.default)(t), O = (0, g.default)(t), M = (0, d.default)({
     id: t.id,
-    label: L.default.Messages.COPY_ID_CHANNEL
-  }), O = (0, s.default)(t), j = (0, A.default)(t), w = (0, E.useShouldUseNewNotificationSystem)("ChannelContextFavoritesMenu");
-  return (0, i.jsxs)(a.Menu, {
+    label: b.default.Messages.COPY_ID_CHANNEL
+  }), A = (0, s.default)(t), R = (0, S.default)(t), H = (0, C.useShouldUseNewNotificationSystem)("ChannelContextFavoritesMenu");
+  return (0, a.jsxs)(l.Menu, {
     navId: "channel-context",
-    onClose: l.closeContextMenu,
-    "aria-label": L.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    onClose: r.closeContextMenu,
+    "aria-label": b.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onSelect: n,
-    children: [(0, i.jsx)(a.MenuGroup, {
-      children: r
-    }), (0, i.jsxs)(a.MenuGroup, {
-      children: [v, C, x, o]
-    }), (0, i.jsxs)(a.MenuGroup, {
-      children: [b, w ? j : M]
-    }), (0, i.jsx)(a.MenuGroup, {
-      children: N
-    }), (0, i.jsx)(a.MenuGroup, {
+    children: [(0, a.jsx)(l.MenuGroup, {
+      children: i
+    }), (0, a.jsxs)(l.MenuGroup, {
+      children: [m, I, _, o]
+    }), (0, a.jsxs)(l.MenuGroup, {
+      children: [N, H ? R : L]
+    }), (0, a.jsx)(l.MenuGroup, {
       children: O
-    }), (0, i.jsx)(a.MenuGroup, {
+    }), (0, a.jsx)(l.MenuGroup, {
+      children: A
+    }), (0, a.jsx)(l.MenuGroup, {
       children: c
-    }), (0, i.jsx)(a.MenuGroup, {
+    }), (0, a.jsx)(l.MenuGroup, {
       children: u
-    }), (0, i.jsx)(a.MenuGroup, {
-      children: T
+    }), (0, a.jsx)(l.MenuGroup, {
+      children: M
     })]
   })
 }
 
-function j(e) {
+function R(e) {
   let {
     channel: t,
     guild: n,
-    onSelect: r
-  } = e, u = (0, I.default)(t), s = (0, g.default)(t), o = (0, f.useAddToFavoritesItem)(t), c = (0, f.useRemoveFromFavoritesItem)(t), p = (0, N.default)(t), h = (0, y.default)(t), m = (0, S.default)(t), T = (0, b.default)(t, n), O = (0, x.default)(t, n), j = (0, v.default)(t, n), w = (0, C.default)(t), U = (0, d.default)({
+    onSelect: i
+  } = e, u = (0, x.default)(t), s = (0, v.default)(t), o = (0, f.useAddToFavoritesItem)(t), c = (0, f.useRemoveFromFavoritesItem)(t), p = (0, O.default)(t), h = (0, y.default)(t), E = (0, g.default)(t), M = (0, N.default)(t, n), A = (0, _.default)(t, n), R = (0, m.default)(t, n), H = (0, I.default)(t), P = (0, d.default)({
     id: t.id,
-    label: L.default.Messages.COPY_ID_CHANNEL
-  }), G = (0, M.default)(t, "list_text_channel_context_menu"), R = (0, _.default)(t), D = (0, A.default)(t), P = (0, E.useShouldUseNewNotificationSystem)("ChannelContextMenuNormal");
-  return (0, i.jsxs)(a.Menu, {
+    label: b.default.Messages.COPY_ID_CHANNEL
+  }), D = (0, L.default)(t, "list_text_channel_context_menu"), V = (0, T.default)(t), U = (0, S.default)(t), w = (0, C.useShouldUseNewNotificationSystem)("ChannelContextMenuNormal");
+  return (0, a.jsxs)(l.Menu, {
     navId: "channel-context",
-    onClose: l.closeContextMenu,
-    "aria-label": L.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    onSelect: r,
-    children: [(0, i.jsxs)(a.MenuGroup, {
+    onClose: r.closeContextMenu,
+    "aria-label": b.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    onSelect: i,
+    children: [(0, a.jsxs)(l.MenuGroup, {
       children: [u, o]
-    }, "mark-as-read-or-favorite"), (0, i.jsxs)(a.MenuGroup, {
-      children: [T, p, s, G]
-    }, "channel-actions"), (0, i.jsxs)(a.MenuGroup, {
-      children: [h, P ? D : R]
-    }, "notifications"), (0, i.jsxs)(a.MenuGroup, {
-      children: [m, O, j, w]
-    }, "admin-actions"), (0, i.jsx)(a.MenuGroup, {
+    }, "mark-as-read-or-favorite"), (0, a.jsxs)(l.MenuGroup, {
+      children: [M, p, s, D]
+    }, "channel-actions"), (0, a.jsxs)(l.MenuGroup, {
+      children: [h, w ? U : V]
+    }, "notifications"), (0, a.jsxs)(l.MenuGroup, {
+      children: [E, A, R, H]
+    }, "admin-actions"), (0, a.jsx)(l.MenuGroup, {
       children: c
-    }), (0, i.jsx)(a.MenuGroup, {
-      children: U
+    }), (0, a.jsx)(l.MenuGroup, {
+      children: P
     }, "developer-actions")]
   })
 }
-var w = (0, u.default)((0, r.default)(function(e) {
+var H = (0, u.default)((0, i.default)(function(e) {
   let t = (0, c.default)();
-  return t ? (0, i.jsx)(O, {
+  return t ? (0, a.jsx)(A, {
     ...e
-  }) : (0, i.jsx)(j, {
+  }) : (0, a.jsx)(R, {
     ...e
   })
 }, {
-  object: T.AnalyticsObjects.CONTEXT_MENU
+  object: M.AnalyticsObjects.CONTEXT_MENU
 }), [o.default.CONTEXT_MENU, o.default.CHANNEL_LIST_TEXT_CHANNEL_MENU])

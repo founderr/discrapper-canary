@@ -15,8 +15,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
-  u = n.n(r),
-  o = n("90915"),
+  o = n.n(r),
+  u = n("90915"),
   d = n("974667"),
   c = n("394846"),
   f = n("446674"),
@@ -26,9 +26,9 @@ var l = n("37983"),
   m = n("502651"),
   E = n("139375"),
   g = n("843962"),
-  I = n("679653"),
-  _ = n("379881"),
-  S = n("262973"),
+  S = n("679653"),
+  I = n("379881"),
+  _ = n("262973"),
   N = n("106435"),
   T = n("373469"),
   A = n("824563"),
@@ -83,7 +83,7 @@ class K extends a.Component {
       iconClassName: a,
       interactiveClassName: s,
       text: r,
-      children: u,
+      children: o,
       locationState: d,
       onClick: f,
       className: C,
@@ -110,7 +110,7 @@ class K extends a.Component {
         className: i(s, B.interactive, B.linkButton, {
           [B.interactiveSelected]: t
         }),
-        children: (0, l.jsxs)(o.Link, {
+        children: (0, l.jsxs)(u.Link, {
           to: {
             pathname: e,
             state: d
@@ -125,7 +125,7 @@ class K extends a.Component {
             }),
             name: r,
             innerClassName: B.avatarWithText
-          }), u]
+          }), o]
         })
       })
     })
@@ -152,7 +152,7 @@ function W(e) {
     user: r,
     size: h.AvatarSizes.SIZE_32,
     animateOnHover: !(s || G)
-  }), J = (0, f.useStateFromStores)([x.default], () => x.default.isChannelMuted(t.getGuildId(), t.id)), q = (0, f.useStateFromStores)([L.default], () => L.default.getMentionCount(t.id) > 0), $ = (0, I.default)(t), ee = (0, f.useStateFromStores)([_.default], () => _.default.isFavorite(t.id)), et = () => {
+  }), q = (0, f.useStateFromStores)([x.default], () => x.default.isChannelMuted(t.getGuildId(), t.id)), J = (0, f.useStateFromStores)([L.default], () => L.default.getMentionCount(t.id) > 0), $ = (0, S.default)(t), ee = (0, f.useStateFromStores)([I.default], () => I.default.isFavorite(t.id)), et = () => {
     K(!0)
   }, en = () => {
     K(!1)
@@ -191,7 +191,7 @@ function W(e) {
         channelSelected: s
       })
     })
-  }, eu = e => {
+  }, eo = e => {
     e.preventDefault(), e.stopPropagation();
     let n = F.default.Messages.LEAVE_GROUP_DM_TITLE.format({
         name
@@ -209,7 +209,7 @@ function W(e) {
       onSubmit: el,
       ...e
     }))
-  }, eo = () => {
+  }, eu = () => {
     let e = {
       className: B.activity,
       textClassName: B.activityText,
@@ -239,7 +239,7 @@ function W(e) {
       className: B.avatar,
       size: h.AvatarSizes.SIZE_32
     });
-    u(null != r, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
+    o(null != r, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
     let e = null;
     return !r.isSystemUser() && (e = (0, m.default)(c) ? w.StatusTypes.STREAMING : v), (0, l.jsx)(V, {
       ...Q,
@@ -253,7 +253,7 @@ function W(e) {
       "aria-label": r.username,
       statusTooltip: !0
     })
-  }, ec = t.isMultiUserDM(), ef = t.isSystemDM(), eh = (0, S.systemDMRedesignEnabled)();
+  }, ec = t.isMultiUserDM(), ef = t.isSystemDM(), eh = (0, _.systemDMRedesignEnabled)();
   return (0, l.jsx)(d.ListNavigatorItem, {
     id: t.id,
     children: e => {
@@ -283,23 +283,23 @@ function W(e) {
           }),
           as: "div",
           onClick: ei,
-          muted: J,
+          muted: q,
           selected: s,
-          children: [(0, l.jsx)(o.Link, {
+          children: [(0, l.jsx)(u.Link, {
             innerRef: W,
             to: w.Routes.CHANNEL(w.ME, t.id),
             className: B.link,
             "aria-label": (0, E.default)({
               channel: t,
-              unread: q
+              unread: J
             }),
             ...a,
             children: (0, l.jsx)(y.default, {
               avatar: ed(),
               selected: s,
-              highlighted: q,
-              muted: null != J && J,
-              subText: eo(),
+              highlighted: J,
+              muted: null != q && q,
+              subText: eu(),
               name: (0, l.jsx)(O.default, {
                 children: $
               }),
@@ -311,7 +311,7 @@ function W(e) {
             })
           }), ee ? (0, l.jsx)(Y, {}) : null, !ef && (0, l.jsx)(k, {
             "aria-label": ec ? F.default.Messages.LEAVE_GROUP_DM : F.default.Messages.CLOSE_DM,
-            onClick: ec ? eu : el,
+            onClick: ec ? eo : el,
             onMouseDown: es
           })]
         })
@@ -329,7 +329,7 @@ var Z = e => {
     activities: null != i ? A.default.getActivities(i) : null,
     applicationStream: null != i ? T.default.getAnyStreamForUser(i) : null,
     isMobile: null != i && A.default.isMobileOnline(i)
-  }), [i]), u = (0, f.useStateFromStores)([v.default], () => null != s ? v.default.isTyping(t.id, t.getRecipientId()) : void 0);
+  }), [i]), o = (0, f.useStateFromStores)([v.default], () => null != s ? v.default.isTyping(t.id, t.getRecipientId()) : void 0);
   return t.isMultiUserDM() ? (0, l.jsx)(W, {
     channel: t,
     selected: n,
@@ -338,7 +338,7 @@ var Z = e => {
     channel: t,
     selected: n,
     user: s,
-    isTyping: u,
+    isTyping: o,
     ...a,
     ...r
   })

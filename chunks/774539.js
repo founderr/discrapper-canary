@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsVoiceUserGameActivityEnabled: function() {
-    return s
+    return i
   },
   isVoiceUserGameActivityEnabled: function() {
-    return i
+    return s
   },
   default: function() {
     return l
@@ -27,7 +27,7 @@ let r = (0, a.createExperiment)({
   }]
 });
 
-function s(e, t) {
+function i(e, t) {
   let {
     showGameIcon: n
   } = r.useExperiment({
@@ -38,7 +38,7 @@ function s(e, t) {
   return n
 }
 
-function i(e, t) {
+function s(e, t) {
   let {
     showGameIcon: n
   } = r.getCurrentConfig({

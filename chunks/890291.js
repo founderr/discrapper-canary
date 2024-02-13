@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return g
   }
 });
 var i = n("37983"),
@@ -16,8 +16,8 @@ var i = n("37983"),
   f = n("49111"),
   h = n("782340"),
   p = n("572889");
-let g = () => (0, r.show)("DM_SEARCH");
-var m = a.memo(function() {
+let E = () => (0, r.show)("DM_SEARCH");
+var g = a.memo(function() {
   let e = (0, l.useStateFromStores)([u.default], () => u.default.isUILocked((0, c.getPID)()) ? "true" : "false"),
     t = (0, d.default)(e => {
       let {
@@ -32,7 +32,7 @@ var m = a.memo(function() {
       children: (0, i.jsx)("button", {
         type: "button",
         className: p.searchBarComponent,
-        onClick: g,
+        onClick: E,
         children: h.default.Messages.DM_SEARCH_PLACEHOLDER
       })
     }), (0, i.jsx)(s.default, {

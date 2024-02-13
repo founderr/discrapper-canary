@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("227231"),
   N = n("555226"),
   R = n("315130"),
-  O = n("228399"),
-  v = n("45198"),
+  v = n("228399"),
+  O = n("45198"),
   L = n("275986"),
   M = n("686098"),
   P = n("166604"),
@@ -62,12 +62,12 @@ async function k(e, t) {
   let s = (await n.el("723469").then(n.t.bind(n, "723469", 19))).default;
   return j(s, b, t), w.set(e, s), s
 }
-let F = new Map;
-async function B(e, t) {
-  let a = F.get(e);
+let B = new Map;
+async function F(e, t) {
+  let a = B.get(e);
   if (null != a) return a;
   let s = (await n.el("479580").then(n.t.bind(n, "479580", 19))).default;
-  return j(s, G, t), F.set(e, s), s
+  return j(s, G, t), B.set(e, s), s
 }
 
 function H(e) {
@@ -132,7 +132,7 @@ let Y = s.forwardRef(function(e, t) {
     dateStyle: "long"
   }), [m.config.expiresAt, b]), G = s.useMemo(() => m.config.videoAssets.includes(g.QuestContent.QUEST_BAR), [m]), j = s.useCallback(() => {
     (0, p.enrollInQuest)(m.id)
-  }, [m]), w = (0, M.useHandleClaimQuestsReward)(m), k = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = m.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
+  }, [m]), w = (0, M.useHandleClaimQuestsReward)(m), k = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, B = (null === (l = m.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
   return (0, a.jsx)(u.animated.div, {
     "aria-hidden": !o && f,
     className: i(x.content, x.contentExpanded),
@@ -159,12 +159,12 @@ let Y = s.forwardRef(function(e, t) {
               className: x.questAcceptedContentCopyHeading,
               color: "always-white",
               variant: "heading-sm/semibold",
-              children: F ? y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_HEADING_COMPLETE : y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_HEADING_INCOMPLETE
+              children: B ? y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_HEADING_COMPLETE : y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_HEADING_INCOMPLETE
             }), (0, a.jsx)(c.Text, {
               className: x.questAcceptedContentCopySubheading,
               color: "always-white",
               variant: "text-xxs/normal",
-              children: F ? y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_COMPLETE.format({
+              children: B ? y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_COMPLETE.format({
                 expirationDate: U
               }) : y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_INCOMPLETE.format({
                 expirationDate: U
@@ -186,7 +186,7 @@ let Y = s.forwardRef(function(e, t) {
             })
           })
         })]
-      }), F ? (0, a.jsx)(c.Button, {
+      }), B ? (0, a.jsx)(c.Button, {
         className: i(x.cta, x.ctaClaimReward),
         color: c.Button.Colors.CUSTOM,
         fullWidth: !0,
@@ -211,7 +211,7 @@ let Y = s.forwardRef(function(e, t) {
         ref: t,
         children: [(0, a.jsxs)("div", {
           className: x.utils,
-          children: [(0, a.jsx)(v.default, {
+          children: [(0, a.jsx)(O.default, {
             color: "always-white"
           }), (0, a.jsx)(L.QuestsEntryContextMenuPopout, {
             onOpen: h,
@@ -230,7 +230,7 @@ let Y = s.forwardRef(function(e, t) {
           })]
         }), (0, a.jsxs)("div", {
           className: x.details,
-          children: [(0, a.jsx)(O.default, {
+          children: [(0, a.jsx)(v.default, {
             className: x.rewardTile,
             quest: m
           }), (0, a.jsx)(c.Heading, {
@@ -297,14 +297,14 @@ var W = function() {
     C = s.useRef(-1),
     I = s.useRef(!1),
     [p, N] = s.useState(!1),
-    [R, O] = s.useState(!1),
-    [v, L] = s.useState(!1),
+    [R, v] = s.useState(!1),
+    [O, L] = s.useState(!1),
     [M, D] = s.useState(!0),
     [y, b] = s.useState(240),
     G = s.useRef(!1),
     j = s.useRef(null),
     w = (null == o ? void 0 : null === (e = o.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
-    F = (null == o ? void 0 : null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+    B = (null == o ? void 0 : null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
     W = (null == o ? void 0 : null === (n = o.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
     K = s.useMemo(() => {
       if (null == o) return null;
@@ -328,7 +328,7 @@ var W = function() {
         expansionFactor: 0
       },
       to: {
-        expansionFactor: v ? 1 : 0
+        expansionFactor: O ? 1 : 0
       },
       config: {
         tension: 300,
@@ -357,13 +357,13 @@ var W = function() {
       N(!1), L(!1), I.current = !1
     }, []),
     $ = s.useCallback(() => {
-      window.clearTimeout(C.current), G.current = !0, O(!1), Q()
+      window.clearTimeout(C.current), G.current = !0, v(!1), Q()
     }, [Q]),
     ee = s.useCallback(() => {
-      if (!F) !p && (C.current = window.setTimeout(() => {
+      if (!B) !p && (C.current = window.setTimeout(() => {
         !I.current && L(!1)
       }, 200))
-    }, [p, F]),
+    }, [p, B]),
     et = s.useCallback(() => {
       I.current = !0, $()
     }, [$]),
@@ -376,18 +376,18 @@ var W = function() {
   return (s.useEffect(() => {
     if (G.current) return;
     let e = window.setTimeout(() => {
-      O(h.default.isFocused())
+      v(h.default.isFocused())
     }, 500);
     return () => {
       window.clearTimeout(e)
     }
   }, []), s.useEffect(() => {
-    F && Q()
-  }, [F, Q]), W || !l || null == o) ? null : (0, a.jsxs)("div", {
+    B && Q()
+  }, [B, Q]), W || !l || null == o) ? null : (0, a.jsxs)("div", {
     className: x.wrapper,
     style: {
       color: o.config.colors.secondary,
-      height: F && v ? y : void 0
+      height: B && O ? y : void 0
     },
     children: [(0, a.jsxs)(u.animated.div, {
       onMouseLeave: en,
@@ -395,7 +395,7 @@ var W = function() {
       onFocus: $,
       onBlur: ee,
       className: i(x.contentWrapper, {
-        [x.contentWrapperExpanded]: v,
+        [x.contentWrapperExpanded]: O,
         [x.contentWrapperAccepted]: w
       }),
       style: {
@@ -407,7 +407,7 @@ var W = function() {
       },
       children: [(0, a.jsx)(V, {
         expansionFactor: q,
-        isExpanded: v,
+        isExpanded: O,
         isExpansionAnimationComplete: M,
         quest: o
       }), (0, a.jsx)(Y, {
@@ -415,13 +415,13 @@ var W = function() {
         onCtxMenuClose: X,
         onCtxMenuSelect: J,
         expansionFactor: q,
-        isExpanded: v,
+        isExpanded: O,
         isExpansionAnimationComplete: M,
         quest: o,
         useReducedMotion: r,
         ref: j
       })]
-    }), null != z && !w && (!v || v && !M) && (0, a.jsx)("div", {
+    }), null != z && !w && (!O || O && !M) && (0, a.jsx)("div", {
       className: x.lottieAnimationBackgroundWrapper,
       children: (0, a.jsx)(_.default, {
         importData: () => k(o.id, z),
@@ -430,7 +430,7 @@ var W = function() {
         loop: !0
       })
     }), !w && null != K && (0, a.jsx)(_.default, {
-      importData: () => B(o.id, K),
+      importData: () => F(o.id, K),
       shouldAnimate: R,
       className: i(x.lottieAnimation, x.lottieAnimationForeground, {
         [x.lottieAnimationForegroundHidden]: !R

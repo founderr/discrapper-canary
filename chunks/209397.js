@@ -119,25 +119,25 @@ var p = new m(l.default, {
     let {
       channelId: p,
       entry: E
-    } = e, S = (0, s.guildDirectoryEntryFromServer)(E), g = null === (t = u[p]) || void 0 === t ? void 0 : t[S.guildId];
+    } = e, g = (0, s.guildDirectoryEntryFromServer)(E), S = null === (t = u[p]) || void 0 === t ? void 0 : t[g.guildId];
     u[p] = {
       ...u[p],
-      [S.guildId]: {
-        ...g,
-        ...S
+      [g.guildId]: {
+        ...S,
+        ...g
       }
     };
-    let C = null !== (l = null == g ? void 0 : g.primaryCategoryId) && void 0 !== l ? l : i.DirectoryEntryCategories.UNCATEGORIZED,
-      _ = null !== (r = S.primaryCategoryId) && void 0 !== r ? r : i.DirectoryEntryCategories.UNCATEGORIZED,
+    let C = null !== (l = null == S ? void 0 : S.primaryCategoryId) && void 0 !== l ? l : i.DirectoryEntryCategories.UNCATEGORIZED,
+      _ = null !== (r = g.primaryCategoryId) && void 0 !== r ? r : i.DirectoryEntryCategories.UNCATEGORIZED,
       I = Object.assign({}, null === (n = c[p]) || void 0 === n ? void 0 : n[C]);
-    null != g && C !== _ && delete I[S.guildId], c[p] = {
+    null != S && C !== _ && delete I[g.guildId], c[p] = {
       ...c[p],
       [C]: I,
       [_]: {
         ...null === (a = c[p]) || void 0 === a ? void 0 : a[_],
-        [S.guildId]: {
-          ...g,
-          ...S
+        [g.guildId]: {
+          ...S,
+          ...g
         }
       }
     }, _ !== C && null != f[p] && (f[p] = {

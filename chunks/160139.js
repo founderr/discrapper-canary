@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("414456"),
-  s = n.n(r),
-  i = n("446674"),
+  i = n.n(r),
+  s = n("446674"),
   l = n("77078"),
   u = n("368598"),
   o = n("49671"),
@@ -38,7 +38,7 @@ let A = e => v.default.close(e),
       hasOpenLayer: r
     } = e;
     return (0, a.jsxs)("div", {
-      className: s(I.typeWindows, (0, _.getThemeClass)(n), {
+      className: i(I.typeWindows, (0, _.getThemeClass)(n), {
         [I.withBackgroundOverride]: !r
       }),
       children: [(0, a.jsx)("div", {
@@ -70,11 +70,11 @@ let A = e => v.default.close(e),
       focused: t,
       windowKey: n,
       frame: r,
-      themeOverride: i,
+      themeOverride: s,
       hasOpenLayer: u
     } = e;
     return (0, a.jsxs)(l.Clickable, {
-      className: s(r ? I.typeMacOSWithFrame : I.typeMacOS, t ? I.focused : I.unfocused, (0, _.getThemeClass)(i), {
+      className: i(r ? I.typeMacOSWithFrame : I.typeMacOS, t ? I.focused : I.unfocused, (0, _.getThemeClass)(s), {
         [I.withBackgroundOverride]: !u
       }),
       onDoubleClick: () => v.default.maximize(n),
@@ -122,9 +122,9 @@ function L(e) {
     focused: t,
     type: n,
     windowKey: r,
-    macOSFrame: s = !1,
+    macOSFrame: i = !1,
     themeOverride: l
-  } = e, o = (0, d.useAppContext)(), f = (0, i.useStateFromStores)([c.default], () => c.default.isFullscreenInContext(o)), h = (0, u.default)();
+  } = e, o = (0, d.useAppContext)(), f = (0, s.useStateFromStores)([c.default], () => c.default.isFullscreenInContext(o)), h = (0, u.default)();
   if (f) return null;
   switch (n) {
     case g.PlatformTypes.WINDOWS:
@@ -137,7 +137,7 @@ function L(e) {
       return (0, a.jsx)(N, {
         focused: t,
         windowKey: r,
-        frame: s,
+        frame: i,
         themeOverride: l,
         hasOpenLayer: h
       });

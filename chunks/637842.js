@@ -14,15 +14,15 @@ var i, a, l = n("37983"),
   f = n("901165"),
   h = n("145131"),
   p = n("314892"),
-  g = n("50885"),
-  m = n("13798"),
-  E = n("999819"),
+  E = n("50885"),
+  g = n("13798"),
+  m = n("999819"),
   S = n("49111"),
   v = n("782340"),
-  y = n("406638"),
-  O = n("926622");
+  I = n("406638"),
+  y = n("926622");
 (a = i || (i = {})).GENERAL = "GENERAL", a.VOICE = "VOICE", a.DEVELOPER = "DEVELOPER";
-let C = () => [{
+let _ = () => [{
     value: S.OverlayAvatarSizes.LARGE,
     name: v.default.Messages.AVATAR_SIZE_OPTION_LARGE
   }, {
@@ -47,7 +47,7 @@ let C = () => [{
     name: v.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
   }];
 
-function I() {
+function O() {
   let e = f.default.getNotificationPositionMode(),
     t = e !== S.OverlayNotificationPositions.DISABLED,
     n = c.default.getOverlayKeybind(),
@@ -58,11 +58,11 @@ function I() {
     notifications_position: t ? e : null,
     text_notifications_mode: f.default.getTextChatNotificationMode(),
     text_opacity_slider: f.default.getTextWidgetOpacity(),
-    hotkey: null != n ? (0, m.toString)(n.shortcut) : null,
-    text_activation_hotkey: null != i ? (0, m.toString)(i.shortcut) : null
+    hotkey: null != n ? (0, g.toString)(n.shortcut) : null,
+    text_activation_hotkey: null != i ? (0, g.toString)(i.shortcut) : null
   })
 }
-class _ extends s.PureComponent {
+class C extends s.PureComponent {
   componentDidMount() {
     d.default.track(S.AnalyticEvents.SETTINGS_PANE_VIEWED, {
       settings_type: "overlay",
@@ -71,7 +71,7 @@ class _ extends s.PureComponent {
     })
   }
   handleChangeNotificationPositionMode(e, t) {
-    d.default.setNotificationPositionMode(t), I()
+    d.default.setNotificationPositionMode(t), O()
   }
   handleChangeAvatarSizeMode(e) {
     let {
@@ -96,14 +96,14 @@ class _ extends s.PureComponent {
       direction: h.default.Direction.VERTICAL,
       grow: 0,
       shrink: 0,
-      className: y.header,
+      className: I.header,
       children: [(0, l.jsxs)(h.default, {
         children: [(0, l.jsx)(r.FormTitle, {
-          className: y.headerTitle,
+          className: I.headerTitle,
           tag: "h1",
           children: v.default.Messages.OVERLAY_SETTINGS_TITLE
         }), (0, l.jsx)(r.ModalCloseButton, {
-          className: y.headerClose,
+          className: I.headerClose,
           onClick: this.props.onClose
         })]
       }), this.renderTabBar()]
@@ -114,21 +114,21 @@ class _ extends s.PureComponent {
       selectedSection: e
     } = this.state, t = u.default.isDeveloper ? (0, l.jsx)(r.TabBar.Item, {
       id: "DEVELOPER",
-      className: y.tabBarItem,
+      className: I.tabBarItem,
       children: "Developer"
     }) : null;
     return (0, l.jsxs)(r.TabBar, {
       selectedItem: e,
       type: "top",
-      className: y.tabBar,
+      className: I.tabBar,
       onItemSelect: this.handleSelectSection,
       children: [(0, l.jsx)(r.TabBar.Item, {
         id: "GENERAL",
-        className: y.tabBarItem,
+        className: I.tabBarItem,
         children: v.default.Messages.OVERLAY_SETTINGS_GENERAL_TAB
       }), (0, l.jsx)(r.TabBar.Item, {
         id: "VOICE",
-        className: y.tabBarItem,
+        className: I.tabBarItem,
         children: v.default.Messages.OVERLAY_SETTINGS_VOICE_TAB
       }), t]
     })
@@ -149,7 +149,7 @@ class _ extends s.PureComponent {
         e = this.renderGeneralSettings()
     }
     return (0, l.jsx)(r.ModalContent, {
-      className: y.content,
+      className: I.content,
       children: e
     }, t)
   }
@@ -163,7 +163,7 @@ class _ extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
-        className: O.marginBottom20,
+        className: y.marginBottom20,
         children: (0, l.jsx)(p.default, {
           position: t,
           onChange: this.handleChangeNotificationPositionMode
@@ -191,16 +191,16 @@ class _ extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_AVATAR_SIZE,
-        className: O.marginBottom20,
+        className: y.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeAvatarSizeMode,
-          options: C(),
+          options: _(),
           value: e,
           size: r.RadioGroup.Sizes.SMALL
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_NAMES,
-        className: O.marginBottom20,
+        className: y.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayNameMode,
           options: N(),
@@ -209,7 +209,7 @@ class _ extends s.PureComponent {
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_USERS,
-        className: O.marginBottom20,
+        className: y.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayUserMode,
           options: T(),
@@ -223,7 +223,7 @@ class _ extends s.PureComponent {
     return (0, l.jsx)(s.Fragment, {
       children: (0, l.jsx)(r.FormItem, {
         title: "Crashes",
-        className: O.marginBottom20,
+        className: y.marginBottom20,
         children: (0, l.jsx)(r.SingleSelect, {
           value: void 0,
           options: [{
@@ -245,7 +245,7 @@ class _ extends s.PureComponent {
             value: 4,
             label: "Out of Memory"
           }],
-          onChange: e => null != e && g.default.crash(e)
+          onChange: e => null != e && E.default.crash(e)
         })
       })
     })
@@ -269,7 +269,7 @@ class _ extends s.PureComponent {
         ENABLED: e,
         DISABLED: t
       } = S.OverlayNotificationTextChatTypes, n = this.props.textChatNotificationMode === e ? t : e;
-      d.default.setTextChatNotificationMode(n), I()
+      d.default.setTextChatNotificationMode(n), O()
     }
   }
 }
@@ -293,10 +293,10 @@ function A(e) {
     shouldShowKeybindIndicators: f.default.showKeybindIndicators
   })), {
     showKeybindIndicators: u
-  } = E.default.useExperiment({
+  } = m.default.useExperiment({
     location: "Overlay Settings"
   });
-  return (0, l.jsx)(_, {
+  return (0, l.jsx)(C, {
     onClose: t,
     avatarSizeMode: n,
     displayNameMode: i,

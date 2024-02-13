@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("781738"), n("222007");
 var a = n("37983"),
@@ -49,7 +49,7 @@ class E extends l.PureComponent {
     })
   }
 }
-class S extends l.PureComponent {
+class g extends l.PureComponent {
   componentDidMount() {
     null == this.props.regions && o.default.fetchRegions(null)
   }
@@ -113,6 +113,6 @@ class S extends l.PureComponent {
     }
   }
 }
-var g = r.default.connectStores([u.default], () => ({
+var S = r.default.connectStores([u.default], () => ({
   regions: u.default.getRegions(null)
-}))(S)
+}))(g)

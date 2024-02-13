@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("77078"),
-  s = n("913144"),
-  i = n("697218"),
+  i = n("913144"),
+  s = n("697218"),
   l = n("599110"),
   u = n("773336"),
   o = n("180748"),
@@ -33,11 +33,11 @@ var _ = {
     f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), E.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), h.addListener(this.handleSystemPrefersContrastChanged), p.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
   },
   init() {
-    this.initBasic(), s.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
+    this.initBasic(), i.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
       l.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
         colorblind_enabled: d.default.colorblindMode
       })
-    }), s.default.subscribe("ACCESSIBILITY_SET_SATURATION", e => {
+    }), i.default.subscribe("ACCESSIBILITY_SET_SATURATION", e => {
       l.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
         saturation_level: e.saturation
       })
@@ -45,7 +45,7 @@ var _ = {
   },
   maybeShowKeyboardNavigationExplainerModal() {
     S = Math.max(S - 1, 0), ! function() {
-      let e = i.default.getCurrentUser();
+      let e = s.default.getCurrentUser();
       return null == e || Date.now() - +e.createdAt < 864e5
     }() && !d.default.keyboardNavigationExplainerModalSeen && 0 === S && (0, r.openModalLazy)(async () => {
       let {
@@ -57,7 +57,7 @@ var _ = {
     })
   },
   handleSystemPrefersReducedMotionChanged(e) {
-    s.default.wait(() => {
+    i.default.wait(() => {
       o.systemPrefersReducedMotionChanged(e.matches ? "reduce" : "no-preference")
     })
   },
@@ -66,13 +66,13 @@ var _ = {
     E.matches ? e = c.ThemeTypes.DARK : C.matches && (e = c.ThemeTypes.LIGHT);
     let t = !u.isPlatformEmbedded || g(),
       n = t && m.matches ? "active" : "none";
-    s.default.wait(() => {
+    i.default.wait(() => {
       o.systemColorPreferencesChanged(e, n)
     })
   },
   handleSystemPrefersContrastChanged() {
     let e = "no-preference";
-    h.matches ? e = "more" : p.matches && (e = "less"), s.default.wait(() => {
+    h.matches ? e = "more" : p.matches && (e = "less"), i.default.wait(() => {
       o.systemPrefersContrastChanged(e)
     })
   }

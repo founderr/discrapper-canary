@@ -7,12 +7,12 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("77078"),
-  s = n("42887"),
-  i = n("353927"),
+  i = n("42887"),
+  s = n("353927"),
   l = n("782340");
 
 function u(e) {
-  s.default.supports(i.Features.VIDEO) ? (0, r.openModalLazy)(async () => {
+  i.default.supports(s.Features.VIDEO) ? (0, r.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("861054").then(n.bind(n, "861054"));
@@ -27,8 +27,8 @@ function u(e) {
     let {
       default: t
     } = await n.el("861054").then(n.bind(n, "861054"));
-    return s => (0, a.jsx)(t, {
-      ...s,
+    return i => (0, a.jsx)(t, {
+      ...i,
       header: l.default.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
       body: l.default.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
       confirmText: l.default.Messages.DOWNLOAD_APP,

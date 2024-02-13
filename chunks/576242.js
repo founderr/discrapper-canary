@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("550766"),
-  s = n("893011"),
-  i = n("981913"),
+  i = n("893011"),
+  s = n("981913"),
   l = n("782340");
 
 function u(e) {
@@ -17,7 +17,7 @@ function u(e) {
     applicationId: n,
     centerButton: u = !1,
     ...o
-  } = e, d = u ? i.CenterControlButton : i.default;
+  } = e, d = u ? s.CenterControlButton : s.default;
   return (0, a.jsx)(d, {
     ...o,
     onClick: () => {
@@ -26,7 +26,7 @@ function u(e) {
         applicationId: n
       })
     },
-    iconComponent: s.default,
+    iconComponent: i.default,
     label: l.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY
   })
 }

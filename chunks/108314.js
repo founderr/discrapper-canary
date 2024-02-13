@@ -21,8 +21,8 @@ var a = n("37983"),
   m = n("837899"),
   p = n("425190"),
   E = n("68238"),
-  S = n("315102"),
-  g = n("577357"),
+  g = n("315102"),
+  S = n("577357"),
   C = n("837008"),
   _ = n("167109"),
   I = n("176687"),
@@ -65,7 +65,7 @@ let U = e => {
           children: (0, a.jsx)(R.default, {
             guildId: s,
             benefit: e
-          }, (0, g.getBenefitKey)(e))
+          }, (0, S.getBenefitKey)(e))
         }, t))
       }), d && (0, a.jsx)(k, {
         isViewAll: i,
@@ -102,7 +102,7 @@ let U = e => {
               return (0, a.jsx)("img", {
                 ...t,
                 className: D.emojiListEmoji,
-                src: (n = e, S.default.getEmojiURL({
+                src: (n = e, g.default.getEmojiURL({
                   id: n.id,
                   animated: n.animated,
                   size: 24
@@ -184,7 +184,7 @@ var V = e => {
     groupListingId: h,
     analyticsLocation: m
   } = e, p = (0, C.useSubscriptionListing)(n), {
-    openModal: S,
+    openModal: g,
     canOpenModal: v,
     cannotOpenReason: x,
     isCheckingTrialEligibility: N
@@ -201,7 +201,7 @@ var V = e => {
     children: [q && (0, a.jsxs)("div", {
       className: i(D.tierTrialIndicator, D.tierTopIndicator),
       children: [b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_PERIOD.format({
-        trialPeriodDuration: (0, g.formatPlanIntervalDuration)({
+        trialPeriodDuration: (0, S.formatPlanIntervalDuration)({
           interval: Z.interval,
           interval_count: Z.interval_count
         })
@@ -244,7 +244,7 @@ var V = e => {
               fullWidth: !0,
               disabled: !v || M,
               submitting: N,
-              onClick: S,
+              onClick: g,
               onlyShineOnHover: !0,
               children: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
             })

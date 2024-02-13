@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("32346"),
   p = n("835040"),
   E = n("373469"),
-  S = n("271938"),
-  g = n("26989"),
+  g = n("271938"),
+  S = n("26989"),
   C = n("42887"),
   _ = n("957255"),
   I = n("824563"),
@@ -44,10 +44,10 @@ let b = l.memo(e => {
     channel: i,
     sessionId: o,
     nick: _
-  } = e, A = s.id, P = (0, r.useStateFromStores)([S.default], () => S.default.getId() === A, [A]), [b, D, U] = (0, r.useStateFromStoresArray)([C.default], () => P ? [!C.default.isSupported() || C.default.isSelfMute() || C.default.isSelfMutedTemporarily(), C.default.isSelfDeaf(), !1] : [!C.default.isSupported() || C.default.isLocalMute(A), !1, C.default.isLocalVideoDisabled(A)], [P, A]), w = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), F = (0, u.default)({
+  } = e, A = s.id, P = (0, r.useStateFromStores)([g.default], () => g.default.getId() === A, [A]), [b, D, U] = (0, r.useStateFromStoresArray)([C.default], () => P ? [!C.default.isSupported() || C.default.isSelfMute() || C.default.isSelfMutedTemporarily(), C.default.isSelfDeaf(), !1] : [!C.default.isSupported() || C.default.isLocalMute(A), !1, C.default.isLocalVideoDisabled(A)], [P, A]), w = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), F = (0, u.default)({
     userId: A,
     checkSoundSharing: !0
-  }), k = (0, r.useStateFromStores)([g.default], () => g.default.isGuestOrLurker(i.guild_id, A)), V = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
+  }), k = (0, r.useStateFromStores)([S.default], () => S.default.isGuestOrLurker(i.guild_id, A)), V = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
     let {
       userIds: t
     } = e;
@@ -85,9 +85,9 @@ let b = l.memo(e => {
       isStreaming: null != z && z.channelId === i.id,
       isWatching: null != K && K.state !== O.ApplicationStreamStates.ENDED,
       isGuest: k,
-      showHangStatus: Q && q && (S.default.getId() === s.id || null != ee),
+      showHangStatus: Q && q && (g.default.getId() === s.id || null != ee),
       hangStatusActivity: P ? $ : ee,
-      isSelf: S.default.getId() === s.id,
+      isSelf: g.default.getId() === s.id,
       application: H ? Y : void 0
     })
   })
@@ -105,7 +105,7 @@ var D = function(e) {
     location: m,
     numAudience: p,
     withGuildIcon: E = !1,
-    className: g,
+    className: S,
     children: C
   } = e, [T, v] = l.useState(null), [x, N] = l.useState(!1), M = l.useRef(null), R = l.useRef(new o.DelayedCall(50, () => {
     v(M.current), M.current = null
@@ -141,7 +141,7 @@ var D = function(e) {
         return (0, a.jsx)(b, {
           user: l,
           nick: i,
-          isSelfOnOtherClient: S.default.getId() === l.id && r.sessionId !== S.default.getSessionId(),
+          isSelfOnOtherClient: g.default.getId() === l.id && r.sessionId !== g.default.getSessionId(),
           mute: r.isVoiceMuted(),
           deaf: r.isVoiceDeafened(),
           video: r.selfVideo,
@@ -167,7 +167,7 @@ var D = function(e) {
     })), t
   })();
   return null == w && null == C ? null : (0, a.jsxs)(A.VoiceUserList, {
-    className: i(g, P.list, {
+    className: i(S, P.list, {
       [P.collapsed]: d,
       [P.withGuildIcon]: E
     }),

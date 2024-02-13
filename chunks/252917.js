@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return eF
+    return eB
   }
 }), n("222007");
 var a = n("37983"),
@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("171984"),
   N = n("551254"),
   R = n("893399"),
-  O = n("353681"),
-  v = n("256430"),
+  v = n("353681"),
+  O = n("256430"),
   L = n("390236"),
   M = n("546102"),
   P = n("380710"),
@@ -41,8 +41,8 @@ var a = n("37983"),
   j = n("507950"),
   w = n("598156"),
   k = n("397039"),
-  F = n("628805"),
-  B = n("755729"),
+  B = n("628805"),
+  F = n("755729"),
   H = n("934743"),
   V = n("566396"),
   Y = n("618489"),
@@ -196,7 +196,7 @@ let eC = () => (0, a.jsx)("div", {
     } = (0, q.default)(), n = (0, f.useStateFromStores)([ee.default], () => null != t ? t : ee.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(ec.Routes.GUILD_DISCOVERY)
-    }() ? (0, a.jsx)(v.default, {}) : null != e ? (0, a.jsx)(x.default, {
+    }() ? (0, a.jsx)(O.default, {}) : null != e ? (0, a.jsx)(x.default, {
       selectedChannelId: n,
       guildId: e
     }, e) : (0, a.jsx)(er.default, {})
@@ -214,13 +214,13 @@ function eR(e) {
     guildId: t
   })
 }
-let eO = e => (0, a.jsx)(eA, {
+let ev = e => (0, a.jsx)(eA, {
     ...e
   }),
-  ev = e => {
+  eO = e => {
     let t = null != e && e.length > 0 && e.startsWith("?"),
       n = t ? e.split("?")[1] : null;
-    return (0, a.jsx)(O.default, {
+    return (0, a.jsx)(v.default, {
       searchRoute: n
     })
   },
@@ -334,13 +334,13 @@ function ek(e) {
         children: (0, a.jsx)(Y.default, {})
       }), (0, a.jsx)(eo.default, {
         section: ec.AnalyticsSections.ACCOUNT_PANEL,
-        children: (0, a.jsx)(B.default, {})
+        children: (0, a.jsx)(F.default, {})
       })]
     }), (0, a.jsx)(el.default, {})]
   })
 }
 
-function eF() {
+function eB() {
   var e;
   let t = (0, f.useStateFromStores)([et.default], () => et.default.hasNotice()),
     n = (0, f.useStateFromStores)([Z.default], () => Z.default.darkSidebar ? ec.ThemeTypes.DARK : void 0),
@@ -366,7 +366,7 @@ function eF() {
       let t = (0, o.useLocation)();
       return (null === (e = (0, r.matchPath)(t.pathname, ec.Routes.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e ? void 0 : e.isExact) === !0
     }(),
-    h = (0, f.useStateFromStores)([F.default], () => F.default.getIsOpen()),
+    h = (0, f.useStateFromStores)([B.default], () => B.default.getIsOpen()),
     _ = (0, o.useRouteMatch)([ec.Routes.CHANNEL(ec.ME, ":channelId"), ec.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")]),
     I = (null == _ ? void 0 : null === (e = _.params) || void 0 === e ? void 0 : e.channelId) === ef.StaticChannelRoute.GUILD_ONBOARDING,
     S = s.useCallback(() => k.default.openSidebar(), []);
@@ -453,7 +453,7 @@ function eF() {
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: [ec.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), ec.Routes.CHANNEL(ec.ME, ":channelId"), ec.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                  render: eO,
+                  render: ev,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
@@ -462,7 +462,7 @@ function eF() {
                     let {
                       location: t
                     } = e;
-                    return ev(t.search)
+                    return eO(t.search)
                   },
                   impressionName: u.ImpressionNames.GUILD_DISCOVERY,
                   disableTrack: !0

@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("926128"),
   p = n("191225"),
   E = n("426631"),
-  S = n("380691"),
-  g = n("943349"),
+  g = n("380691"),
+  S = n("943349"),
   C = n("702173"),
   _ = n("801852"),
   I = n("10524"),
@@ -41,12 +41,12 @@ function L(e) {
     location: "7152d0_1"
   }, {
     autoTrackExposure: !0
-  }), L = (0, s.useStateFromStores)([p.default], () => p.default.isLaunchingActivity()), O = (0, g.useEmbeddedActivityLaunchability)(t.id), y = (0, g.getEmbeddedActivityLaunchabilityLabel)(O), P = O !== g.EmbeddedActivityLaunchability.CAN_LAUNCH || L, {
+  }), L = (0, s.useStateFromStores)([p.default], () => p.default.isLaunchingActivity()), O = (0, S.useEmbeddedActivityLaunchability)(t.id), y = (0, S.getEmbeddedActivityLaunchabilityLabel)(O), P = O !== S.EmbeddedActivityLaunchability.CAN_LAUNCH || L, {
     isHovered: b,
     setIsHovered: D,
     onMouseEnter: U,
     onMouseLeave: w
-  } = (0, N.default)(200, 300), F = (0, S.useShowActivityIndicator)(), {
+  } = (0, N.default)(200, 300), F = (0, g.useShowActivityIndicator)(), {
     enabled: k
   } = c.ActivitiesGameNightExperiment.useExperiment({
     location: "7152d0_2"

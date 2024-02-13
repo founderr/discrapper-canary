@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   r = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
+  i = n("414456"),
+  s = n.n(i),
   l = n("817736"),
   u = n("773336"),
   o = n("325753"),
@@ -43,11 +43,11 @@ class p extends r.PureComponent {
       edgeOffsetTop: n,
       edgeOffsetLeft: a,
       edgeOffsetBottom: r,
-      edgeOffsetRight: s,
-      maxX: i,
+      edgeOffsetRight: i,
+      maxX: s,
       maxY: o,
       dockedRect: c
-    } = this.props, f = Math.round(n), h = Math.round(o - r - this._height), p = Math.round(a), E = Math.round(i - s - this._width), C = (0, u.getPlatform)(), m = C !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+    } = this.props, f = Math.round(n), h = Math.round(o - r - this._height), p = Math.round(a), E = Math.round(s - i - this._width), C = (0, u.getPlatform)(), m = C !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
     if (null != c) {
       var S, g;
       return {
@@ -133,7 +133,7 @@ class p extends r.PureComponent {
       maxY: t,
       dockedRect: n,
       hidden: r,
-      roundCorners: s,
+      roundCorners: i,
       className: l
     } = this.props, u = {};
     return null != n && (u = {
@@ -143,9 +143,9 @@ class p extends r.PureComponent {
     }), (0, a.jsx)(o.default, {
       dragAnywhere: !0,
       ref: this.handleSetDraggableRef,
-      className: i(c.pictureInPictureWindow, l, {
+      className: s(c.pictureInPictureWindow, l, {
         [c.hidden]: r,
-        [c.borderRadius]: s
+        [c.borderRadius]: i
       }),
       maxX: e,
       maxY: t,
@@ -183,8 +183,8 @@ class p extends r.PureComponent {
       let {
         maxX: a,
         maxY: r
-      } = this.props, s = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), i = !0, l = !0;
-      if (s.x > a / 2 && (l = !1), s.y > r / 2 && (i = !1), n = i && l ? d.PictureInPicturePositions.TOP_LEFT : i && !l ? d.PictureInPicturePositions.TOP_RIGHT : !i && l ? d.PictureInPicturePositions.BOTTOM_LEFT : d.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
+      } = this.props, i = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), s = !0, l = !0;
+      if (i.x > a / 2 && (l = !1), i.y > r / 2 && (s = !1), n = s && l ? d.PictureInPicturePositions.TOP_LEFT : s && !l ? d.PictureInPicturePositions.TOP_RIGHT : !s && l ? d.PictureInPicturePositions.BOTTOM_LEFT : d.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
         let {
           id: e,
           onMove: t
@@ -203,7 +203,7 @@ var E = r.memo(e => {
     selectedPIPWindow: t,
     pipWindows: n,
     maxX: r,
-    maxY: s,
+    maxY: i,
     onWindowMove: l,
     dockedRect: u,
     pictureInPictureComponents: o,
@@ -223,14 +223,14 @@ var E = r.memo(e => {
         }),
         m = e.length > 1 ? c.noBoxShadow : {};
       return (0, a.jsx)(p, {
-        className: i(c.pictureInPictureWindowOverflow, f.elevationHigh, m),
+        className: s(c.pictureInPictureWindowOverflow, f.elevationHigh, m),
         appContext: E,
         position: t.position,
         id: t.id,
         hidden: t.hidden,
         onMove: l,
         maxX: r,
-        maxY: s,
+        maxY: i,
         dockedRect: u,
         edgeOffsetTop: h.top,
         edgeOffsetBottom: h.bottom,

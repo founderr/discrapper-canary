@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return r
   },
   HEIGHT_CHANNEL: function() {
-    return u
+    return o
   },
   HEIGHT_CHANNEL_FAVORITES: function() {
-    return o
+    return u
   },
   HEIGHT_CHANNEL_SUBTITLE: function() {
     return d
@@ -48,8 +48,8 @@ let l = 8,
   s = 40,
   i = 12,
   r = 12,
-  u = 34,
-  o = 41.5,
+  o = 34,
+  u = 41.5,
   d = 16,
   c = 32,
   f = 8,

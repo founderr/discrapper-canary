@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return O
   }
 }), n("222007");
 var a = n("37983"),
@@ -49,7 +49,7 @@ let N = o.throttle(C.trackSearchResultsViewed, 1e3, {
       })
     })
   };
-class O extends s.PureComponent {
+class v extends s.PureComponent {
   componentDidMount() {
     let {
       loadId: e,
@@ -274,13 +274,13 @@ class O extends s.PureComponent {
   }
 }
 
-function v(e) {
+function O(e) {
   let t = (0, u.useStateFromStores)([p.default], () => p.default.getDiscoveryCategories(), [], p.areDiscoveryCategoriesEqual),
     n = (0, u.useStateFromStores)([f.default], () => f.default.getTopCategoryCounts(e.mostRecentQuery));
-  return (0, a.jsx)(O, {
+  return (0, a.jsx)(v, {
     ...e,
     categories: t,
     countsByCategory: n
   })
 }
-O.contextType = h.AnalyticsContext
+v.contextType = h.AnalyticsContext

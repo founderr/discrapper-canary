@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("146350"),
   N = n("901582"),
   R = n("415929"),
-  O = n("687531"),
-  v = n("875212"),
+  v = n("687531"),
+  O = n("875212"),
   L = n("899633"),
   M = n("606292"),
   P = n("489740"),
@@ -41,8 +41,8 @@ var a = n("37983"),
   j = n("225772"),
   w = n("775377"),
   k = n("10641"),
-  F = n("384997"),
-  B = n("243632"),
+  B = n("384997"),
+  F = n("243632"),
   H = n("180273"),
   V = n("579565"),
   Y = n("473503"),
@@ -81,8 +81,8 @@ var a = n("37983"),
   eA = n("837899"),
   eN = n("425190"),
   eR = n("474571"),
-  eO = n("272339"),
-  ev = n("200639"),
+  ev = n("272339"),
+  eO = n("200639"),
   eL = n("925877"),
   eM = n("849467"),
   eP = n("97347"),
@@ -95,13 +95,13 @@ var a = n("37983"),
   ej = n("306160"),
   ew = n("718517"),
   ek = n("197881"),
-  eF = n("158998"),
-  eB = n("50885"),
+  eB = n("158998"),
+  eF = n("50885"),
   eH = n("49111"),
   eV = n("411511"),
   eY = n("782340"),
   eW = n("374555");
-let eK = eB.default.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
+let eK = eF.default.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
   ez = 30 * ew.default.Millis.DAY;
 class eq extends s.PureComponent {
   get isCopiedStreakGodlike() {
@@ -143,7 +143,7 @@ class eq extends s.PureComponent {
       status: i
     } = this.props;
     if (null == l) return null;
-    let r = eF.default.getName(l),
+    let r = eB.default.getName(l),
       o = null != i && i !== eH.StatusTypes.UNKNOWN,
       u = null != n;
     return (u || o && l.isPomelo()) && (e = (0, a.jsx)(eg.default, {
@@ -153,7 +153,7 @@ class eq extends s.PureComponent {
         activity: n,
         emojiClassName: eW.emoji,
         className: eW.customStatus
-      }) : eF.default.humanizeStatus(i)
+      }) : eB.default.humanizeStatus(i)
     })), (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: eW.panelTitleContainer,
@@ -276,7 +276,7 @@ class eq extends s.PureComponent {
       showTaglessAccountPanel: s
     } = this.props;
     return null == e ? null : (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(F.default, {
+      children: [(0, a.jsx)(B.default, {
         contentTypes: t.avatar,
         children: e => {
           let {
@@ -346,7 +346,7 @@ class eq extends s.PureComponent {
           "aria-label": eY.default.Messages.DEAFEN,
           "aria-checked": E,
           disabled: s
-        }), (0, a.jsx)(F.default, {
+        }), (0, a.jsx)(B.default, {
           contentTypes: d.settings,
           children: e => {
             let {
@@ -531,7 +531,7 @@ class eq extends s.PureComponent {
         copiedStreak: n
       } = this.state;
       if (null == e) return;
-      (0, ej.copy)(eF.default.getUserTag(e, {
+      (0, ej.copy)(eB.default.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
       })), eU.default.track(eH.AnalyticEvents.TEXT_COPIED, {
@@ -613,7 +613,7 @@ class eq extends s.PureComponent {
 
 function eQ() {
   let e = (0, r.useStateFromStores)([ep.default], () => ep.default.getCurrentUser()),
-    t = (0, B.useShowEligibilityEnrollmentTooltip)(eV.PartnerGame.FORTNITE),
+    t = (0, F.useShowEligibilityEnrollmentTooltip)(eV.PartnerGame.FORTNITE),
     n = (0, r.useStateFromStores)([ef.default], () => ef.default.getId()),
     l = eo.CustomStatusSetting.useSetting(),
     i = s.useMemo(() => null != l ? (0, j.default)(l) : null, [l]),
@@ -627,7 +627,7 @@ function eQ() {
     c = (0, L.default)({
       userId: n
     }),
-    f = eF.default.useUserTag(e, {
+    f = eB.default.useUserTag(e, {
       decoration: "never"
     }),
     E = (0, r.useStateFromStores)([eS.default], () => eS.default.hidePersonalInformation),
@@ -663,7 +663,7 @@ function eQ() {
     {
       isPopupEnabled: G,
       isJoinedTagButtonEnabled: w,
-      isTaglessAccountPanelEnabled: F
+      isTaglessAccountPanelEnabled: B
     } = q.default.useExperiment({
       location: "08bd40_4"
     }, {
@@ -672,15 +672,15 @@ function eQ() {
     Y = (0, r.useStateFromStores)([H.default], () => H.default.isCurrentQuestCompleted),
     W = (0, r.useStateFromStores)([H.default], () => H.default.currentDropQuestGameTitle),
     Q = (0, z.useIsHomeSelected)(),
-    $ = (0, O.useIsDmSpamFilterCoachmarkEnabled)(),
+    $ = (0, v.useIsDmSpamFilterCoachmarkEnabled)(),
     en = (0, ee.useCanSeeSafetyEducationBlockMuteCoachmark)(),
     ea = (0, R.useIsSafetyConsumerEducationBlockMuteBucket)(),
     es = (0, et.useCanSeeSafetyEducationReportingCoachmark)(),
     ei = "account";
-  (0, v.useTriggerDebuggingAA)({
+  (0, O.useTriggerDebuggingAA)({
     location: ei + " auto on",
     autoTrackExposure: !0
-  }), (0, v.useTriggerDebuggingAA)({
+  }), (0, O.useTriggerDebuggingAA)({
     location: ei + " auto off",
     autoTrackExposure: !1
   }), (0, ee.useSafetyEducationAATriggerPoint)();
@@ -737,7 +737,7 @@ function eQ() {
     serverMute: _,
     showRichProfilePopup: G,
     showTagAsButton: w,
-    showTaglessAccountPanel: F,
+    showTaglessAccountPanel: B,
     speaking: c,
     speakingWhileMuted: N,
     status: d,
@@ -814,7 +814,7 @@ function eJ(e) {
       color: null != s ? s : "currentColor"
     })
   } {
-    let e = t ? ev.default : eO.default;
+    let e = t ? eO.default : ev.default;
     return (0, a.jsx)(e, {
       width: 20,
       height: 20,

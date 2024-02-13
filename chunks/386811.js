@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return i
   }
 });
 var a = n("37983");
 n("884691");
 var r = n("75196");
 
-function s(e) {
+function i(e) {
   let {
     width: t = 12,
     height: n = 12,
-    color: s = "currentColor",
-    foreground: i,
+    color: i = "currentColor",
+    foreground: s,
     ...l
   } = e;
   return (0, a.jsx)("svg", {
@@ -22,8 +22,8 @@ function s(e) {
     height: n,
     viewBox: "0 0 12 12",
     children: (0, a.jsx)("path", {
-      stroke: s,
-      className: i,
+      stroke: i,
+      className: s,
       fill: "none",
       d: "M8.5,3.5 L6,6 L3.5,3.5 L6,6 L3.5,8.5 L6,6 L8.5,8.5 L6,6 L8.5,3.5 Z"
     })

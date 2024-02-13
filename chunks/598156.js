@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("155084"),
   N = n("393414"),
   R = n("582713"),
-  O = n("970366"),
-  v = n("5667"),
+  v = n("970366"),
+  O = n("5667"),
   L = n("161778"),
   M = n("982108"),
   P = n("42203"),
@@ -41,8 +41,8 @@ var a = n("37983"),
   j = n("486503"),
   w = n("916650"),
   k = n("803524"),
-  F = n("7643"),
-  B = n("785770"),
+  B = n("7643"),
+  F = n("785770"),
   H = n("260488"),
   V = n("500526"),
   Y = n("452229"),
@@ -67,13 +67,13 @@ function ee() {
     }, []),
     {
       rejectAll: f
-    } = (0, F.useMessageRequestActions)({
+    } = (0, B.useMessageRequestActions)({
       onError: d
     }),
     E = (0, C.default)("message-requests-list"),
     {
       channelId: _
-    } = (0, B.useMessageRequestSidebarState)(),
+    } = (0, F.useMessageRequestSidebarState)(),
     I = s.useCallback(() => {
       let e = n.map(e => e.channel.id);
       f(e)
@@ -174,14 +174,14 @@ let en = function(e) {
     let {
       markAsDismissed: t
     } = e;
-    return (0, a.jsx)(v.default, {
+    return (0, a.jsx)(O.default, {
       header: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
       content: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
       buttonCTA: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
       className: J.messageRequestCoachmark,
       onClick: () => t(Z.ContentDismissActionType.UNKNOWN),
       markAsDismissed: t,
-      caretPosition: v.CaretPosition.TOP_CENTER,
+      caretPosition: O.CaretPosition.TOP_CENTER,
       headerClassName: J.header
     })
   },
@@ -201,7 +201,7 @@ let en = function(e) {
         if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, a.jsx)(c.Popout, {
           renderPopout: () => t ? (0, a.jsx)(en, {
             markAsDismissed: r
-          }) : (0, a.jsx)(v.default, {
+          }) : (0, a.jsx)(O.default, {
             header: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
             content: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
             buttonCTA: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
@@ -211,7 +211,7 @@ let en = function(e) {
               e.stopPropagation(), (0, N.transitionTo)(Q.Routes.SETTINGS("privacy-and-safety"))
             },
             markAsDismissed: r,
-            caretPosition: v.CaretPosition.TOP_CENTER,
+            caretPosition: O.CaretPosition.TOP_CENTER,
             headerClassName: J.header
           }),
           position: "bottom",
@@ -237,7 +237,7 @@ let el = (0, E.default)(function(e) {
     width: t
   } = e, n = (0, H.useMessageRequestsCount)();
   s.useEffect(() => {
-    f.setHomeLink(Q.Routes.MESSAGE_REQUESTS), (0, O.trackAppUIViewed)("message-requests"), b.default.track(Q.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
+    f.setHomeLink(Q.Routes.MESSAGE_REQUESTS), (0, v.trackAppUIViewed)("message-requests"), b.default.track(Q.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: n
     }), A.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW

@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("352674"),
   p = n("206230"),
   E = n("95039"),
-  S = n("405645"),
-  g = n("256648"),
+  g = n("405645"),
+  S = n("256648"),
   C = n("593752"),
   _ = n("506885"),
   I = n("981601"),
@@ -53,32 +53,32 @@ let W = F.default.getEnableHardwareAcceleration(),
       sectionId: s,
       userId: i,
       guildOwnerId: r
-    } = e, o = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), S = (0, c.useStateFromStores)([x.default], () => {
+    } = e, o = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), g = (0, c.useStateFromStores)([x.default], () => {
       var e, n;
       return (null == p ? void 0 : p.colorRoleId) != null ? null === (n = x.default.getGuild(t.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(p.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-    }, [t.guild_id, p]), g = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == g ? void 0 : g.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), b = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, u.useListItem)(i), F = (0, c.useStateFromStores)([C.default], () => C.default.canUserViewChannel(t.id, s, i)), H = (null == g ? void 0 : g.id) != null && g.id === r, G = l.useCallback(e => {
-      null != g && (0, h.openContextMenuLazy)(e, async () => {
+    }, [t.guild_id, p]), S = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == S ? void 0 : S.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), b = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, u.useListItem)(i), F = (0, c.useStateFromStores)([C.default], () => C.default.canUserViewChannel(t.id, s, i)), H = (null == S ? void 0 : S.id) != null && S.id === r, G = l.useCallback(e => {
+      null != S && (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("721429").then(n.bind(n, "721429"));
         return n => (0, a.jsx)(e, {
           ...n,
-          user: g,
+          user: S,
           guildId: t.guild_id,
           channel: t
         })
       })
-    }, [g, t]), Y = l.useCallback(() => {
-      if (null == g) return;
-      let e = "@".concat(w.default.getUserTag(g, {
+    }, [S, t]), Y = l.useCallback(() => {
+      if (null == S) return;
+      let e = "@".concat(w.default.getUserTag(S, {
           decoration: "never"
         })),
-        n = "<@".concat(g.id, ">");
+        n = "<@".concat(S.id, ">");
       D.ComponentDispatch.dispatchToLastSubscribed(V.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
       }), m.default.startTyping(t.id)
-    }, [g, t]), z = l.useCallback(e => {
+    }, [S, t]), z = l.useCallback(e => {
       e.stopPropagation(), (0, E.openGuildBoostingMarketingModal)({
         guildId: t.guild_id,
         location: {
@@ -87,16 +87,16 @@ let W = F.default.getEnableHardwareAcceleration(),
         }
       })
     }, [t.guild_id]);
-    if (null == g) return null;
+    if (null == S) return null;
     let K = null == p ? void 0 : p.premiumSince;
     return (0, a.jsx)(f.Popout, {
-      preload: () => (0, _.default)(g.id, g.getAvatarURL(t.guild_id, 80), {
+      preload: () => (0, _.default)(S.id, S.getAvatarURL(t.guild_id, 80), {
         guildId: t.guild_id,
         channelId: t.id
       }),
       renderPopout: e => (0, a.jsx)(I.default, {
         ...e,
-        userId: g.id,
+        userId: S.id,
         guildId: t.guild_id,
         channelId: t.id,
         analyticsParams: {
@@ -116,13 +116,13 @@ let W = F.default.getEnableHardwareAcceleration(),
         return (0, a.jsx)(k.default, {
           onContextMenu: G,
           shouldAnimateStatus: W,
-          user: g,
+          user: S,
           currentUser: j,
           nick: null == p ? void 0 : p.nick,
           status: O,
           activities: P,
           colorString: null == p ? void 0 : p.colorString,
-          colorRoleName: S,
+          colorRoleName: g,
           isTyping: o,
           channel: t,
           guildId: t.guild_id,
@@ -145,7 +145,7 @@ let W = F.default.getEnableHardwareAcceleration(),
       label: n,
       count: l,
       guildId: s
-    } = e, i = (0, S.useRoleIcon)({
+    } = e, i = (0, g.useRoleIcon)({
       roleId: t,
       guildId: s,
       size: 16
@@ -198,7 +198,7 @@ function X(e) {
   let {
     channel: t,
     guild: n
-  } = e, s = "members-".concat(t.id), r = (0, g.useThreadMemberListSections)(t.id, n), d = r.filter(e => e.userIds.length > 0).reverse()[0], {
+  } = e, s = "members-".concat(t.id), r = (0, S.useThreadMemberListSections)(t.id, n), d = r.filter(e => e.userIds.length > 0).reverse()[0], {
     navigator: h,
     listRef: m
   } = function(e, t) {
@@ -261,7 +261,7 @@ function X(e) {
     }, [t.guild_id, t.id, t.type]), E) return (0, a.jsx)(J, {
     channel: t
   });
-  let S = o.omit(h.containerProps, ["ref"]),
+  let g = o.omit(h.containerProps, ["ref"]),
     C = U.default.getGuildVisualOwnerId(n);
   return (0, a.jsx)(u.ListNavigatorProvider, {
     navigator: h,
@@ -308,7 +308,7 @@ function X(e) {
           innerTag: "ul",
           sections: r.map(e => e.userIds.length),
           fade: !0,
-          ...S,
+          ...g,
           ...e
         }, s)
       })

@@ -15,8 +15,8 @@ var l = n("37983"),
   s = n("811305"),
   i = n("404008"),
   r = n("319839"),
-  u = n("175632"),
-  o = n("708186"),
+  o = n("175632"),
+  u = n("708186"),
   d = n("249181"),
   c = n("272125");
 let f = a.memo(function(e) {
@@ -24,7 +24,7 @@ let f = a.memo(function(e) {
     guildChannels: t,
     guildChannelsVersion: n
   } = e, s = a.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
-  return null == s ? null : (0, l.jsx)(o.VoiceChannelCategoryButton, {
+  return null == s ? null : (0, l.jsx)(u.VoiceChannelCategoryButton, {
     category: s
   })
 });
@@ -40,13 +40,13 @@ function h(e) {
   } = e;
   if (t === n.voiceChannelsSectionNumber) return 44;
   let {
-    hasDivider: o,
+    hasDivider: u,
     canHaveVoiceSummary: c
-  } = (0, u.getSectionFooterConfig)(n, i, t), f = o ? d.HEIGHT_SECTION_DIVIDER : 0;
+  } = (0, o.getSectionFooterConfig)(n, i, t), f = u ? d.HEIGHT_SECTION_DIVIDER : 0;
   if (!c || t === r.SECTION_INDEX_COMMUNITY) return f;
   let h = n.getNamedCategoryFromSection(t);
   if (null == h) return f;
-  let C = (0, u.isSectionFooterWithActiveVoiceChannels)({
+  let C = (0, o.isSectionFooterWithActiveVoiceChannels)({
     category: h,
     selectedChannelId: a,
     selectedVoiceChannelId: s,
@@ -60,14 +60,14 @@ function C(e, t, n) {
   let {
     hasDivider: l,
     canHaveVoiceSummary: a
-  } = (0, u.getSectionFooterConfig)(t, n, e);
+  } = (0, o.getSectionFooterConfig)(t, n, e);
   return "section-footer-".concat(e).concat(l ? "-divider" : "").concat(a ? "-voice-summary" : "")
 }
 var p = a.memo(function(e) {
   let {
     sectionIndex: t,
     guildChannels: n,
-    guildChannelsVersion: o,
+    guildChannelsVersion: u,
     voiceStates: d,
     guildId: h,
     selectedChannelId: C,
@@ -76,29 +76,29 @@ var p = a.memo(function(e) {
   } = e, {
     hasDivider: E,
     canHaveVoiceSummary: g
-  } = a.useMemo(() => (0, u.getSectionFooterConfig)(n, m, t), [n, m, t, o]), I = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, o]), _ = a.useMemo(() => null != I && I.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
-    channels: I.getChannelRecords(),
+  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, m, t), [n, m, t, u]), S = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), I = a.useMemo(() => null != S && S.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
+    channels: S.getChannelRecords(),
     selectedChannelId: C,
     selectedVoiceChannelId: p,
     voiceStates: d
-  }) : [], [I, C, p, d]);
+  }) : [], [S, C, p, d]);
   if (t === n.voiceChannelsSectionNumber) return (0, l.jsx)(f, {
     guildChannels: n,
-    guildChannelsVersion: o
+    guildChannelsVersion: u
   });
-  let S = E ? (0, l.jsx)("div", {
+  let _ = E ? (0, l.jsx)("div", {
     className: c.sectionDivider
   }) : null;
-  return g && 0 !== _.length ? (0, l.jsxs)(l.Fragment, {
+  return g && 0 !== I.length ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: c.voiceUserSummary,
       children: (0, l.jsx)(s.default, {
         renderIcon: !0,
-        users: _,
+        users: I,
         max: 8,
         showUserPopout: !0,
         guildId: h
       })
-    }), S]
-  }) : S
+    }), _]
+  }) : _
 })

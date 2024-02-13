@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("70102"), n("222007");
 var a = n("37983"),
   r = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
+  i = n("414456"),
+  s = n.n(i),
   l = n("917351"),
   u = n.n(l),
   o = n("446674"),
@@ -46,10 +46,10 @@ function M(e) {
     users: t,
     disableInteraction: n,
     guildId: r,
-    participantType: s,
+    participantType: i,
     channelId: l,
     handleUserContextMenu: u
-  } = e, o = A(s, t.length);
+  } = e, o = A(i, t.length);
   return (0, a.jsx)(c.Dialog, {
     "aria-label": o,
     className: I.popoutWrapper,
@@ -62,7 +62,7 @@ function M(e) {
       }), (0, a.jsx)("div", {
         children: t.map(e => (0, a.jsx)(C.default, {
           guildId: null != r ? r : void 0,
-          className: i(I.memberListItem, {
+          className: s(I.memberListItem, {
             [I.popoutDisabled]: n
           }),
           textClassName: I.memberListItemText,
@@ -81,10 +81,10 @@ function x(e) {
     users: t,
     guildId: n,
     channelId: r,
-    maxVisibleUsers: s = 3,
+    maxVisibleUsers: i = 3,
     className: l,
     participantType: u
-  } = e, o = A(u, t.length), d = t.length < s ? t.map(e => (0, a.jsx)("div", {
+  } = e, o = A(u, t.length), d = t.length < i ? t.map(e => (0, a.jsx)("div", {
     className: I.viewersTooltipItem,
     children: g.default.getName(n, r, e)
   }, e.id)) : o;
@@ -92,7 +92,7 @@ function x(e) {
     text: d,
     "aria-label": o,
     children: (0, a.jsxs)("div", {
-      className: i(I.viewers, l),
+      className: s(I.viewers, l),
       children: [(0, a.jsx)(m.default, {
         className: I.viewersIcon
       }), (0, a.jsx)("span", {
@@ -107,7 +107,7 @@ let R = [];
 function N(e) {
   let {
     channelId: t,
-    guildId: s,
+    guildId: i,
     participant: l,
     className: C,
     compact: m = !1,
@@ -140,13 +140,13 @@ function N(e) {
   if (m) return (0, a.jsx)(x, {
     maxVisibleUsers: T,
     users: O,
-    guildId: s,
+    guildId: i,
     channelId: t,
     className: C,
     participantType: l.type
   });
   let D = u(O).take(T).map(e => (0, a.jsx)(c.Avatar, {
-    src: e.getAvatarURL(s, 24),
+    src: e.getAvatarURL(i, 24),
     "aria-label": e.username,
     size: c.AvatarSizes.SIZE_24,
     className: I.viewer
@@ -163,7 +163,7 @@ function N(e) {
         renderPopout: () => (0, a.jsx)(M, {
           participantType: l.type,
           handleUserContextMenu: b,
-          guildId: s,
+          guildId: i,
           channelId: t,
           users: O,
           disableInteraction: g
@@ -171,7 +171,7 @@ function N(e) {
         shouldShow: A,
         position: "top",
         children: () => (0, a.jsx)("div", {
-          className: i(I.viewers, C),
+          className: s(I.viewers, C),
           children: D
         })
       })

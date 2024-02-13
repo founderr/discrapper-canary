@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 }), n("222007");
 var s = n("872717"),
   a = n("913144"),
-  l = n("437822"),
-  r = n("697796"),
+  r = n("437822"),
+  l = n("697796"),
   i = n("524824"),
   o = n("72177"),
   u = n("599110"),
@@ -44,16 +44,16 @@ class f extends d.default {
       let {
         body: t
       } = e;
-      (0, r.handoffSetUser)(t.user), l.default.loginToken(t.token, !1), E(!0, o)
+      (0, l.handoffSetUser)(t.user), r.default.loginToken(t.token, !1), E(!0, o)
     }, e => {
-      if (null != a && E(!1, o), l.default.setFingerprint(a), (0, r.handoffEnd)(), o === i.LoginHandoffSource.ROLE_SUBSCRIPTION) {
+      if (null != a && E(!1, o), r.default.setFingerprint(a), (0, l.handoffEnd)(), o === i.LoginHandoffSource.ROLE_SUBSCRIPTION) {
         var t;
         u.default.track(c.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
           reason: null !== (t = e.message) && void 0 !== t ? t : e.text,
           handoff_source: o
         })
       }
-    }) : null != a ? (l.default.setFingerprint(a), E(!1, o), (0, r.handoffEnd)()) : (l.default.setFingerprint(a), (0, r.handoffUnavailable)())
+    }) : null != a ? (r.default.setFingerprint(a), E(!1, o), (0, l.handoffEnd)()) : (r.default.setFingerprint(a), (0, l.handoffUnavailable)())
   }
   constructor(...e) {
     super(...e), this.handleEnd = e => {
@@ -66,8 +66,8 @@ class f extends d.default {
         handoffToken: t,
         fingerprint: n,
         handoffSource: void 0
-      }) : (l.default.setFingerprint(null), (0, r.handoffUnavailable)())
+      }) : (r.default.setFingerprint(null), (0, l.handoffUnavailable)())
     }
   }
 }
-var _ = new f
+var h = new f

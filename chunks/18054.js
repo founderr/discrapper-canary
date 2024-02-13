@@ -22,8 +22,8 @@ n.r(t), n.d(t, {
     return m
   }
 }), n("702976");
-var a = n("872717"),
-  s = n("913144"),
+var s = n("872717"),
+  a = n("913144"),
   l = n("81732");
 n("21121"), n("693051");
 var i = n("263024");
@@ -33,7 +33,7 @@ var r = n("42203"),
   u = n("49111");
 
 function d(e, t, n) {
-  s.default.dispatch({
+  a.default.dispatch({
     type: "CHANNEL_SETTINGS_INIT",
     channelId: e,
     location: t,
@@ -42,13 +42,13 @@ function d(e, t, n) {
 }
 
 function c() {
-  s.default.dispatch({
+  a.default.dispatch({
     type: "CHANNEL_SETTINGS_CLOSE"
   })
 }
 
 function f(e) {
-  s.default.dispatch({
+  a.default.dispatch({
     type: "CHANNEL_SETTINGS_SET_SECTION",
     section: e
   })
@@ -58,7 +58,7 @@ function h(e) {
   let {
     name: t,
     type: n,
-    topic: a,
+    topic: s,
     bitrate: l,
     userLimit: i,
     nsfw: r,
@@ -79,11 +79,11 @@ function h(e) {
     iconEmoji: T,
     themeColor: M
   } = e;
-  s.default.dispatch({
+  a.default.dispatch({
     type: "CHANNEL_SETTINGS_UPDATE",
     name: t,
     channelType: n,
-    topic: a,
+    topic: s,
     bitrate: l,
     userLimit: i,
     nsfw: r,
@@ -130,11 +130,11 @@ async function C(e, t) {
     defaultSortOrder: x,
     defaultForumLayout: R,
     iconEmoji: y,
-    themeColor: O
-  } = t, D = r.default.getChannel(e);
-  return s.default.dispatch({
+    themeColor: D
+  } = t, O = r.default.getChannel(e);
+  return a.default.dispatch({
     type: "CHANNEL_SETTINGS_SUBMIT"
-  }), await i.default.unarchiveThreadIfNecessary(e), a.default.patch({
+  }), await i.default.unarchiveThreadIfNecessary(e), s.default.patch({
     url: u.Endpoints.CHANNEL(e),
     body: {
       name: n,
@@ -172,17 +172,17 @@ async function C(e, t) {
         id: y.id,
         name: y.name
       } : null === y ? null : void 0,
-      theme_color: O
+      theme_color: D
     },
     oldFormErrors: !0
   }).then(t => {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
       channelId: e
     });
-    let n = null == D ? void 0 : D.getGuildId();
-    return null != n && !(null == D ? void 0 : D.isThread()) && l.default.checkGuildTemplateDirty(n), t
-  }, e => (s.default.dispatch({
+    let n = null == O ? void 0 : O.getGuildId();
+    return null != n && !(null == O ? void 0 : O.isThread()) && l.default.checkGuildTemplateDirty(n), t
+  }, e => (a.default.dispatch({
     type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
     errors: e.body
   }), e))
@@ -190,7 +190,7 @@ async function C(e, t) {
 
 function p(e) {
   let t = r.default.getChannel(e);
-  a.default.delete({
+  s.default.delete({
     url: u.Endpoints.CHANNEL(e),
     oldFormErrors: !0
   }).then(() => {
@@ -206,7 +206,7 @@ var m = {
   close: c,
   setSection: f,
   selectPermissionOverwrite: function(e) {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "CHANNEL_SETTINGS_OVERWRITE_SELECT",
       overwriteId: e
     })
@@ -215,7 +215,7 @@ var m = {
   saveChannel: C,
   deleteChannel: p,
   updateVoiceChannelStatus: function(e, t) {
-    return a.default.put({
+    return s.default.put({
       url: u.Endpoints.UPDATE_VOICE_CHANNEL_STATUS(e),
       body: {
         status: t

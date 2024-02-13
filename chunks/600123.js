@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("607391"),
-  s = n("145131"),
-  i = n("191933");
+  i = n("145131"),
+  s = n("191933");
 
 function l(e) {
   let {
@@ -17,11 +17,11 @@ function l(e) {
     children: l,
     size: u
   } = e;
-  return (0, a.jsxs)(s.default, {
-    className: i.root,
-    justify: s.default.Justify.CENTER,
-    align: s.default.Align.CENTER,
-    direction: s.default.Direction.VERTICAL,
+  return (0, a.jsxs)(i.default, {
+    className: s.root,
+    justify: i.default.Justify.CENTER,
+    align: i.default.Align.CENTER,
+    direction: i.default.Direction.VERTICAL,
     children: [(0, a.jsx)(r.default, {
       header: t,
       description: n,

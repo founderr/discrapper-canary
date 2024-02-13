@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("795696"),
   p = n("635792"),
   E = n("252063"),
-  S = n("724110"),
-  g = n("373469"),
+  g = n("724110"),
+  S = n("373469"),
   C = n("42203"),
   _ = n("957255"),
   I = n("824563"),
@@ -86,12 +86,12 @@ var a = n("37983"),
       {
         activity: ep,
         hangStatusActivity: eE,
-        customStatusActivity: eS,
-        isApplicationStreaming: eg,
+        customStatusActivity: eg,
+        isApplicationStreaming: eS,
         isMobile: eC,
         status: e_
-      } = (0, u.useStateFromStoresObject)([g.default, I.default, _.default], () => {
-        let e = null != g.default.getAnyStreamForUser(es.id);
+      } = (0, u.useStateFromStoresObject)([S.default, I.default, _.default], () => {
+        let e = null != S.default.getAnyStreamForUser(es.id);
         return {
           activity: I.default.findActivity(es.id, t => {
             let {
@@ -116,12 +116,12 @@ var a = n("37983"),
           status: ei ? null : I.default.getStatus(es.id)
         }
       }),
-      eI = null != ep || null != eE || eg,
+      eI = null != ep || null != eE || eS,
       eT = null !== (t = N.default.getNickname(null, n.id, es)) && void 0 !== t ? t : A.default.getName(es),
       ev = (0, u.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
       [ex, eN, eA, eM, eR] = (0, u.useStateFromStoresArray)([M.default], () => [M.default.getMutualFriendsCount(es.id), M.default.getMutualFriends(es.id), M.default.getMutualGuilds(es.id), M.default.isFetchingProfile(es.id), M.default.isFetchingFriends(es.id)]),
       ej = (0, G.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
-      eL = null != ej && !eg,
+      eL = null != ej && !eS,
       {
         showVoiceActivityInProfile: eO
       } = R.VoiceActivityProfileExperiment.useExperiment({
@@ -156,10 +156,10 @@ var a = n("37983"),
         isMobile: eC,
         loadDurationMs: Date.now() - ea.current,
         activity: ep,
-        customStatusActivity: eS,
+        customStatusActivity: eg,
         status: e_
       })
-    }, [er, eC, ep, eS, e_, ef]);
+    }, [er, eC, ep, eg, e_, ef]);
     let ew = null == eA ? void 0 : eA.map(e => (0, a.jsx)(Z.default, {
         connection: e,
         user: es,
@@ -204,7 +204,7 @@ var a = n("37983"),
               nickname: eT,
               pronouns: null == er ? void 0 : er.pronouns
             }), (0, a.jsx)(k.default, {
-              customStatusActivity: eS,
+              customStatusActivity: eg,
               animate: et
             }), (0, a.jsx)(U.default, {}), (0, a.jsx)(F.default, {
               bio: null == er ? void 0 : er.bio,
@@ -279,7 +279,7 @@ var a = n("37983"),
                   children: $.default.Messages.PRIVATE_CHANNEL_ADD_APPS_INFO
                 }), (0, a.jsx)(d.Button, {
                   onClick: () => {
-                    (0, d.openModal)(e => (0, a.jsx)(S.default, {
+                    (0, d.openModal)(e => (0, a.jsx)(g.default, {
                       channelId: n.id,
                       ...e
                     }))

@@ -18,8 +18,8 @@ n.r(t), n.d(t, {
 });
 var a = n("872717"),
   r = n("913144"),
-  s = n("374014"),
-  i = n("766274"),
+  i = n("374014"),
+  s = n("766274"),
   l = n("271938"),
   u = n("42203"),
   o = n("546463"),
@@ -44,19 +44,19 @@ function E(e, t) {
     autoTrackExposure: !1
   });
   if (!n) return;
-  let a = (0, s.decodeStreamKey)(e),
+  let a = (0, i.decodeStreamKey)(e),
     {
-      ownerId: i,
+      ownerId: s,
       channelId: f
     } = a;
-  if (null == i || null == f) return;
+  if (null == s || null == f) return;
   let h = l.default.getId();
-  if (i !== h) return;
+  if (s !== h) return;
   let E = l.default.getSessionId();
   if (null == E) return;
   let C = u.default.getChannel(f),
     m = null != C && C.isBroadcastChannel();
-  if (null == C || i !== C.ownerId || !m) return;
+  if (null == C || s !== C.ownerId || !m) return;
   let S = function(e) {
     var t;
     let n = d.default.getGameForPID(e),
@@ -135,7 +135,7 @@ async function g() {
         var t;
         let a = f.default.getBroadcastByChannel(e.id).userId,
           r = null !== (t = e.recipients) && void 0 !== t ? t : [];
-        n[a] = r.map(e => new i.default(e)).filter(e => e.id !== a)
+        n[a] = r.map(e => new s.default(e)).filter(e => e.id !== a)
       }), r.default.dispatch({
         type: "BROADCAST_VIEWERS_UPDATE",
         viewers: n

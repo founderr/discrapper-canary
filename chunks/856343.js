@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   r = n("884691"),
-  s = n("446674"),
-  i = n("77078"),
+  i = n("446674"),
+  s = n("77078"),
   l = n("629109"),
   u = n("997289"),
   o = n("773356"),
@@ -25,19 +25,19 @@ function S(e, t) {
     preset: S,
     resolution: g,
     fps: _
-  } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), v = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), T = (0, s.useStateFromStores)([h.default], () => h.default.getCurrentUser()), I = (0, s.useStateFromStores)([c.default], () => {
+  } = (0, i.useStateFromStoresObject)([d.default], () => d.default.getState()), v = (0, i.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), T = (0, i.useStateFromStores)([h.default], () => h.default.getCurrentUser()), I = (0, i.useStateFromStores)([c.default], () => {
     var t;
     return null === (t = c.default.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier
   }), {
     location: A
-  } = (0, u.useAnalyticsContext)(), M = r.useCallback((e, r, s, u) => {
+  } = (0, u.useAnalyticsContext)(), M = r.useCallback((e, r, i, u) => {
     if (e) {
       if (null != v) {
         let e = {
           qualityOptions: {
             preset: E.ApplicationStreamPresets.PRESET_CUSTOM,
             resolution: r,
-            frameRate: s
+            frameRate: i
           },
           context: C.MediaEngineContextTypes.STREAM
         };
@@ -55,7 +55,7 @@ function S(e, t) {
         ...A,
         object: p.AnalyticsObjects.RADIO_ITEM,
         objectType: u
-      }, (0, i.openModalLazy)(async () => {
+      }, (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("754534").then(n.bind(n, "754534"));
@@ -64,7 +64,7 @@ function S(e, t) {
           analyticsSource: d
         })
       }, {
-        contextKey: o === p.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
+        contextKey: o === p.AppContext.POPOUT ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT
       })
     }
   }, [t, A, v]);
@@ -75,7 +75,7 @@ function S(e, t) {
         value: t,
         label: n
       } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, g, t, T, I);
-      return (0, a.jsx)(i.MenuRadioItem, {
+      return (0, a.jsx)(s.MenuRadioItem, {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
         label: n,
@@ -88,7 +88,7 @@ function S(e, t) {
         value: t,
         label: n
       } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, t, x, T, I);
-      return (0, a.jsx)(i.MenuRadioItem, {
+      return (0, a.jsx)(s.MenuRadioItem, {
         group: "stream-settings-resolution",
         id: "stream-settings-resolution-".concat(t),
         label: n,
@@ -97,10 +97,10 @@ function S(e, t) {
       }, "stream-settings-resolution-".concat(t))
     });
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(i.MenuGroup, {
+    children: [(0, a.jsx)(s.MenuGroup, {
       label: m.default.Messages.SCREENSHARE_FRAME_RATE,
       children: R
-    }), (0, a.jsx)(i.MenuGroup, {
+    }), (0, a.jsx)(s.MenuGroup, {
       label: m.default.Messages.STREAM_RESOLUTION,
       children: N
     })]

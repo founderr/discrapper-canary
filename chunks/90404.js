@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   r = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
+  i = n("414456"),
+  s = n.n(i),
   l = n("77078"),
   u = n("145131"),
   o = n("648324");
@@ -20,7 +20,7 @@ class d extends r.PureComponent {
       className: r
     } = this.props;
     return (0, a.jsx)("div", {
-      className: i(o.wrapper, r),
+      className: s(o.wrapper, r),
       children: (0, a.jsxs)(u.default, {
         className: o.flexWrapper,
         direction: u.default.Direction.VERTICAL,

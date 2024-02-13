@@ -76,8 +76,8 @@ var R = e => {
     defaultLanguage: r,
     availableLanguages: c,
     isFetchingSearch: R,
-    scroller: O,
-    loadingGuildId: v,
+    scroller: v,
+    loadingGuildId: O,
     theme: L,
     currentCategoryId: M,
     currentCategoryName: P,
@@ -89,9 +89,9 @@ var R = e => {
     guilds: G,
     loading: j,
     total: w
-  } = n, [k, F] = s.useState(!1), {
-    tag: B
-  } = g(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
+  } = n, [k, B] = s.useState(!1), {
+    tag: F
+  } = g(), [H, V] = s.useState(F), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
     d.doAlgoliaSearch(l, {
       categoryId: n ? S.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
@@ -100,9 +100,9 @@ var R = e => {
       filters: {
         approximate_member_count: h.MINIMUM_MEMBER_COUNT
       }
-    }), F(!1)
+    }), B(!1)
   }, K = () => {
-    null == O || O.scrollTo({
+    null == v || v.scrollTo({
       to: 0
     })
   };
@@ -111,7 +111,7 @@ var R = e => {
       offset: e,
       tag: t
     } = g(), n = null != e ? Math.floor(parseInt(e, 10) / T) + 1 : 1;
-    V(!!t), 1 === n && F(!0)
+    V(!!t), 1 === n && B(!0)
   }, [l]);
   let z = M === S.DISCOVERY_ALL_CATEGORIES_ID ? p.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
@@ -177,7 +177,7 @@ var R = e => {
               loading: j,
               loadingPlaceholderCount: T,
               onViewGuild: D,
-              loadingGuildId: v,
+              loadingGuildId: O,
               theme: L,
               analyticsContext: h.AnalyticsContexts.SEARCH,
               onGuildCardSeen: y,

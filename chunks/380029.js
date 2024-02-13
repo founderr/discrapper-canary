@@ -5,8 +5,8 @@
       i = n("483366"),
       u = n.n(i),
       c = n("655518"),
-      l = n("159885"),
-      a = n("195547");
+      a = n("159885"),
+      l = n("195547");
     let f = {
         UPDATE_USERS: "UPDATE_USERS",
         USER_RESULTS: "USER_RESULTS",
@@ -44,7 +44,7 @@
       } = e, h = null != f && f.strict && null !== (n = f.guild) && void 0 !== n ? n : null, m = null !== (r = e.boosters) && void 0 !== r ? r : {}, S = RegExp("^".concat(c.default.escape(i)), "i"), x = RegExp(c.default.escape(i), "i"), j = [];
       if ("" === i) return E(i, j, t);
       let O = i.toLocaleLowerCase(),
-        T = (0, l.normalize)(O);
+        T = (0, a.normalize)(O);
       s.forEach((t, e) => {
         let n;
         if (! function(t, e, n, r, o) {
@@ -71,17 +71,17 @@
           let u;
           let c = t[i];
           if ("boolean" == typeof c || null == c || null != h && i !== v && i !== b && i !== g && h !== i) return;
-          let a = (0, l.stripDiacritics)(c.toLocaleLowerCase());
+          let l = (0, a.stripDiacritics)(c.toLocaleLowerCase());
           S.test(c) ? u = {
             comparator: c,
             score: y(10, m[e])
           } : x.test(c) ? u = {
             comparator: c,
             score: y(5, m[e])
-          } : o(O, a) ? u = {
+          } : o(O, l) ? u = {
             comparator: c,
             score: y(1, m[e])
-          } : o(T, (0, l.normalize)(a)) && (u = {
+          } : o(T, (0, a.normalize)(l)) && (u = {
             comparator: c,
             score: y(1, m[e])
           }), null != u && (null == n || n.score < u.score) && (n = {
@@ -90,7 +90,7 @@
             username: r
           })
         }), null != n && j.push(n)
-      }), j.sort(a.default), j.length > u && (j.length = u), E(i, j, t)
+      }), j.sort(l.default), j.length > u && (j.length = u), E(i, j, t)
     }
 
     function E(t, e, n) {

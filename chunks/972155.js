@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("191145"),
   p = n("393171"),
   E = n("242757"),
-  S = n("305961"),
-  g = n("957255"),
+  g = n("305961"),
+  S = n("957255"),
   C = n("466079"),
   _ = n("444657"),
   I = n("679243"),
@@ -39,7 +39,7 @@ function A(e) {
     inCall: L,
     totalNumberOfParticipants: O,
     paused: y = !1
-  } = e, P = (0, o.useAppContext)(), b = P === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(R.guild_id), [R.guild_id]), {
+  } = e, P = (0, o.useAppContext)(), b = P === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([g.default], () => g.default.getGuild(R.guild_id), [R.guild_id]), {
     dismissedActivityEntryPointTileChannel: U
   } = (0, T.useChannelCallVideoGridStore)(), w = (0, i.useStateFromStores)([m.default], () => m.default.getUserParticipantCount(R.id), [R]), F = l.useCallback(() => {
     T.useChannelCallVideoGridStore.setState({
@@ -51,7 +51,7 @@ function A(e) {
       dismissedActivityEntryPointTileChannel: null
     })
   }, [R.id, U]);
-  let k = (0, i.useStateFromStores)([g.default], () => R.isPrivate() || (0, E.canViewInviteModal)(g.default, D, R), [D, R]),
+  let k = (0, i.useStateFromStores)([S.default], () => R.isPrivate() || (0, E.canViewInviteModal)(S.default, D, R), [D, R]),
     V = (null == D ? void 0 : D.afkChannelId) === R.id,
     B = R.userLimit <= 0 || R.userLimit > 1,
     {

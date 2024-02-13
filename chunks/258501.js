@@ -22,8 +22,8 @@ var l = n("414456"),
   m = n("577357"),
   p = n("837008"),
   E = n("41391"),
-  S = n("833531"),
-  g = n("393381"),
+  g = n("833531"),
+  S = n("393381"),
   C = n("677795"),
   _ = n("782340"),
   I = n("751071");
@@ -75,7 +75,7 @@ let T = e => {
       onClose: t,
       listing: n,
       guildId: l
-    } = e, s = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(l), [l]), u = (0, E.default)(l), d = u.filter(e => e.roles.includes(n.role_id)), f = n.role_benefits.benefits.filter(m.isChannelBenefit).slice(0, null === d.length ? 4 : 3), h = (0, S.default)(f).slice(0, null === d.length ? 4 : 3);
+    } = e, s = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(l), [l]), u = (0, E.default)(l), d = u.filter(e => e.roles.includes(n.role_id)), f = n.role_benefits.benefits.filter(m.isChannelBenefit).slice(0, null === d.length ? 4 : 3), h = (0, g.default)(f).slice(0, null === d.length ? 4 : 3);
     return (0, a.jsxs)("div", {
       className: I.confirmationContainer,
       children: [(0, a.jsx)(r.Heading, {
@@ -100,7 +100,7 @@ let T = e => {
           children: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CHANNEL_PREVIEW
         }), (0, a.jsx)("div", {
           className: I.confirmationBenefits,
-          children: h.map(e => (0, a.jsx)(g.default, {
+          children: h.map(e => (0, a.jsx)(S.default, {
             benefit: e,
             guildId: l,
             onClick: () => t(!0)

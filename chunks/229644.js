@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("21526"),
   N = n("176555"),
   R = n("232374"),
-  O = n("833514"),
-  v = n("20606"),
+  v = n("833514"),
+  O = n("20606"),
   L = n("384997"),
   M = n("785770"),
   P = n("260488"),
@@ -41,8 +41,8 @@ var a = n("37983"),
   j = n("801388"),
   w = n("770469"),
   k = n("641078"),
-  F = n("773367"),
-  B = n("266782"),
+  B = n("773367"),
+  F = n("266782"),
   H = n("367226"),
   V = n("104589"),
   Y = n("393027"),
@@ -99,7 +99,7 @@ let em = e => {
       ...n,
       ...s,
       children: [i.length > 0 && r && (0, a.jsx)(ed.TextBadge, {
-        color: v.default.BG_BRAND,
+        color: O.default.BG_BRAND,
         text: (0, a.jsxs)("div", {
           className: ep.broadcastingBadge,
           children: [(0, a.jsx)(es.default, {
@@ -157,11 +157,11 @@ let em = e => {
       m = s || null != E || null != h || I || S || null != u && Date.now() - u.createdAt.getTime() > 2592e6 || (0, ec.hasPremiumSubscriptionToDisplay)(u, c);
     return m && (!p || s) ? (I ? n = (0, a.jsx)(j.default, {
       isNitroTab: !0
-    }) : S ? n = (0, a.jsx)(B.default, {}) : null != h ? n = (0, a.jsx)(F.PremiumDiscountOfferTabBadge, {
+    }) : S ? n = (0, a.jsx)(F.default, {}) : null != h ? n = (0, a.jsx)(B.PremiumDiscountOfferTabBadge, {
       userDiscount: h,
       isTabSelected: s,
       includesAmountOff: !1
-    }) : null != E ? n = (0, a.jsx)(F.PremiumTrialOfferTabBadge, {
+    }) : null != E ? n = (0, a.jsx)(B.PremiumTrialOfferTabBadge, {
       trialOffer: E,
       isTabSelected: s
     }) : C && (n = (0, a.jsx)(w.LocalizedPricingBadgeIcon, {
@@ -232,7 +232,7 @@ let em = e => {
       text: eS.default.Messages.NEW
     })
   },
-  eO = e => {
+  ev = e => {
     let {
       selected: t,
       locationState: n,
@@ -260,7 +260,7 @@ let em = e => {
       children: l
     })
   },
-  ev = e => {
+  eO = e => {
     let {
       selected: t,
       locationState: n,
@@ -279,7 +279,7 @@ let em = e => {
       position: "right",
       hideOnClick: !1,
       "aria-label": l.tooltipText(),
-      children: e => (0, a.jsx)(eO, {
+      children: e => (0, a.jsx)(ev, {
         selected: t,
         locationState: n,
         ...e,
@@ -301,7 +301,7 @@ let em = e => {
       animation: E.Popout.Animation.TRANSLATE,
       align: "top",
       shouldShow: !0,
-      children: () => (0, a.jsx)(eO, {
+      children: () => (0, a.jsx)(ev, {
         selected: t,
         locationState: n,
         onButtonClick: s
@@ -318,8 +318,8 @@ let em = e => {
     } = (0, R.default)(), {
       collectiblesShopTabNewBadgeDisplayOptions: i,
       dismissCollectiblesShopTabNewBadge: r
-    } = (0, O.default)();
-    return null != i ? (0, a.jsx)(ev, {
+    } = (0, v.default)();
+    return null != i ? (0, a.jsx)(eO, {
       selected: t,
       locationState: n,
       onButtonClick: r,
@@ -328,7 +328,7 @@ let em = e => {
       selected: t,
       locationState: n,
       onButtonClick: l
-    }) : (0, a.jsx)(eO, {
+    }) : (0, a.jsx)(ev, {
       selected: t,
       locationState: n
     })
@@ -384,7 +384,7 @@ let em = e => {
         } = e;
         return t === c.DismissibleContent.FAMILY_CENTER_NEW_BADGE ? (0, a.jsx)(ed.TextBadge, {
           text: eS.default.Messages.NEW,
-          color: v.default.BG_BRAND
+          color: O.default.BG_BRAND
         }) : null
       }
     })

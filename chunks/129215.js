@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("535974"),
   N = n("352326"),
   R = n("471671"),
-  O = n("145131"),
-  v = n("953109"),
+  v = n("145131"),
+  O = n("953109"),
   L = n("280174"),
   M = n("158352"),
   P = n("546671"),
@@ -41,8 +41,8 @@ var a = n("37983"),
   j = n("449427"),
   w = n("49111"),
   k = n("782340"),
-  F = n("918702");
-let B = e => {
+  B = n("918702");
+let F = e => {
     let {
       className: t,
       children: n,
@@ -71,15 +71,15 @@ let B = e => {
         } = e;
         return (0, a.jsx)(f.Button, {
           "aria-label": t,
-          className: F.actionButton,
-          innerClassName: F.actionButtonContents,
+          className: B.actionButton,
+          innerClassName: B.actionButtonContents,
           color: f.Button.Colors.PRIMARY,
           size: f.Button.Sizes.ICON,
           onClick: n,
           onMouseEnter: l,
           onMouseLeave: i,
           children: (0, a.jsx)(s, {
-            className: F.actionIcon
+            className: B.actionIcon
           })
         })
       }
@@ -269,8 +269,8 @@ class Q extends s.PureComponent {
       foregroundGradientColor: s,
       message: l
     } = e;
-    return (0, a.jsxs)(O.default, {
-      direction: O.default.Direction.VERTICAL,
+    return (0, a.jsxs)(v.default, {
+      direction: v.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
@@ -278,7 +278,7 @@ class Q extends s.PureComponent {
         foregroundGradientColor: null != s ? [(0, m.getColor)(s[0]), (0, m.getColor)(s[1])] : void 0,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
-        className: F.progressCellText,
+        className: B.progressCellText,
         children: null != l ? l : ""
       })]
     })
@@ -288,15 +288,15 @@ class Q extends s.PureComponent {
       percents: t,
       message: n
     } = e;
-    return (0, a.jsxs)(O.default, {
-      direction: O.default.Direction.VERTICAL,
+    return (0, a.jsxs)(v.default, {
+      direction: v.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.StackedProgress, {
         percents: t,
         size: f.Progress.Sizes.SMALL,
         foregroundColors: H,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
-        className: F.progressCellText,
+        className: B.progressCellText,
         children: null != n ? n : ""
       })]
     })
@@ -496,36 +496,36 @@ let Z = () => (0, a.jsx)(V, {
   },
   ee = [{
     key: q.NAME,
-    cellClassName: F.nameCell,
-    render: e => (0, a.jsxs)(O.default, {
-      align: O.default.Align.CENTER,
-      children: [(0, a.jsx)(v.default, {
+    cellClassName: B.nameCell,
+    render: e => (0, a.jsxs)(v.default, {
+      align: v.default.Align.CENTER,
+      children: [(0, a.jsx)(O.default, {
         game: e.application,
-        className: F.gameIcon,
-        size: v.default.Sizes.SMALL
+        className: B.gameIcon,
+        size: O.default.Sizes.SMALL
       }), (0, a.jsx)("div", {
-        className: F.nameCellText,
+        className: B.nameCellText,
         children: e.application.name
       })]
     })
   }, {
     key: q.PROGRESS,
-    cellClassName: F.progressCell,
-    headerCellClassName: F.progressCellHeader,
-    bodyCellClassName: F.progressCellBody,
+    cellClassName: B.progressCell,
+    headerCellClassName: B.progressCellHeader,
+    bodyCellClassName: B.progressCellBody,
     render: (e, t) => (0, a.jsx)(Q, {
       item: e,
       cellProps: t
     })
   }, {
     key: q.ACTIONS,
-    cellClassName: F.actionsCell,
+    cellClassName: B.actionsCell,
     render(e, t) {
       let n, s;
       return e.finished ? n = null != e.libraryApplication ? (0, a.jsx)(C.default, {
         libraryApplication: e.libraryApplication,
         size: f.Button.Sizes.SMALL,
-        className: F.gameActionButton,
+        className: B.gameActionButton,
         source: w.AnalyticsLocations.APPLICATION_LIBRARY_UPDATES
       }) : null : null != e.state ? e.state.type !== w.LocalDispatchApplicationStates.UP_TO_DATE && (n = e.index > 0 ? (0, a.jsx)(J, {
         item: e
@@ -535,8 +535,8 @@ let Z = () => (0, a.jsx)(V, {
         item: e
       })) : s = (0, a.jsx)($, {
         item: e
-      }), (0, a.jsxs)(O.default, {
-        justify: O.default.Justify.END,
+      }), (0, a.jsxs)(v.default, {
+        justify: v.default.Justify.END,
         children: [n, s]
       })
     }
@@ -567,17 +567,17 @@ class et extends s.PureComponent {
       analyticsContext: r
     } = this.props;
     return 0 === e.length ? null : (0, a.jsxs)("div", {
-      className: F.gameUpdates,
+      className: B.gameUpdates,
       children: [(0, a.jsxs)("div", {
-        className: F.headerRow,
+        className: B.headerRow,
         children: [(0, a.jsx)(j.default, {
-          className: i(F.headerCell, F.networkProgress),
+          className: i(B.headerCell, B.networkProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesDownloaded,
           color: w.Color.GREEN_360,
           animate: s
         }), (0, a.jsx)(j.default, {
-          className: i(F.headerCell, F.diskProgress),
+          className: i(B.headerCell, B.diskProgress),
           title: k.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
           getHistoricalTotalBytes: A.default.getHistoricalTotalBytesWritten,
           color: w.Color.BLUE_345,
@@ -587,9 +587,9 @@ class et extends s.PureComponent {
         hasHeader: !1,
         columns: ee,
         data: e,
-        className: F.table,
-        rowClassName: F.row,
-        rowComponent: B,
+        className: B.table,
+        rowClassName: B.row,
+        rowComponent: F,
         cellProps: {
           paused: t,
           isFocused: s,
@@ -611,7 +611,7 @@ class et extends s.PureComponent {
             })
           }
         },
-        bodyCellClassName: F.cell
+        bodyCellClassName: B.cell
       })]
     })
   }

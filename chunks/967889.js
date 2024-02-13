@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   r = n("884691"),
-  s = n("917351"),
-  i = n.n(s),
+  i = n("917351"),
+  s = n.n(i),
   l = n("88807"),
   u = n("721998"),
   o = n("432710"),
@@ -33,7 +33,7 @@ function M() {
     return (0, p.probablyHasBuildOverride)() ? null === (e = h.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
   });
   if (null == n) return null;
-  let s = async () => {
+  let i = async () => {
     try {
       t(!0), await (0, f.clearBuildOverride)(), window.location.reload(!0)
     } catch (e) {
@@ -42,13 +42,13 @@ function M() {
   };
   return (0, a.jsx)(c.Button, {
     size: c.ButtonSizes.LARGE,
-    onClick: s,
+    onClick: i,
     submitting: e,
     className: A.clearOverrideButton,
     children: I.default.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
-let x = i.throttle(() => {
+let x = s.throttle(() => {
   C.default.increment({
     name: o.MetricEvents.APP_CRASHED,
     tags: ["reason:".concat(l.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]

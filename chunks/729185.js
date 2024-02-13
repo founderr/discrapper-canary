@@ -21,8 +21,8 @@ var a = n("37983"),
   m = n("430951"),
   p = n("673527"),
   E = n("336804"),
-  S = n("952221"),
-  g = n("600123"),
+  g = n("952221"),
+  S = n("600123"),
   C = n("373469"),
   _ = n("271938"),
   I = n("42203"),
@@ -109,7 +109,7 @@ function G(e) {
     width: b
   });
   else if (null != X && !n && null != H && T.default.supports(F.Features.VIDEO)) return (0, a.jsxs)(a.Fragment, {
-    children: [null != Z ? (0, a.jsx)(S.default, {
+    children: [null != Z ? (0, a.jsx)(g.default, {
       focused: D,
       channelId: Z.id,
       guildId: Z.guild_id,
@@ -126,7 +126,7 @@ function G(e) {
       paused: f || $,
       videoSpinnerContext: Q ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,
       userId: z.id
-    }, K), null != ee ? (0, a.jsx)(g.default, {
+    }, K), null != ee ? (0, a.jsx)(S.default, {
       size: (0, R.getSizeForWidth)(b),
       ...ee
     }) : null, (0, a.jsx)(j.default, {

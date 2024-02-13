@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("478272"),
   p = n("812204"),
   E = n("685665"),
-  S = n("10641"),
-  g = n("36562"),
+  g = n("10641"),
+  S = n("36562"),
   C = n("945330"),
   _ = n("381546"),
   I = n("564875"),
@@ -289,9 +289,9 @@ function U(e) {
             tile_type: "activity suggestion",
             close_type: "permanent",
             n_participants: d
-          }), (0, S.markDismissibleContentAsDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT)
+          }), (0, g.markDismissibleContentAsDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT)
         },
-        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(u.Text, {
+        children: [(0, a.jsx)(S.default, {}), (0, a.jsx)(u.Text, {
           variant: "text-sm/medium",
           children: j.default.Messages.DONT_SHOW_AGAIN
         })]

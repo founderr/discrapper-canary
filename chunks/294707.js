@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
 var a = n("427459"),
   r = n("719923"),
-  s = n("646718");
+  i = n("646718");
 
-function i(e, t, n) {
+function s(e, t, n) {
   if (null == e || null == e.quality && null == e.guildPremiumTier) return !0;
-  let i = !1;
-  return null != e.quality && (e.quality === s.StreamQualities.HIGH_STREAMING_QUALITY ? i = i || r.default.canStreamQuality(r.default.StreamQuality.HIGH, t) : e.quality === s.StreamQualities.MID_STREAMING_QUALITY && (i = i || r.default.canStreamQuality(r.default.StreamQuality.MID, t))), null != e.guildPremiumTier && (i = i || (0, a.isGuildBoostedAtLeast)(n, e.guildPremiumTier)), i
+  let s = !1;
+  return null != e.quality && (e.quality === i.StreamQualities.HIGH_STREAMING_QUALITY ? s = s || r.default.canStreamQuality(r.default.StreamQuality.HIGH, t) : e.quality === i.StreamQualities.MID_STREAMING_QUALITY && (s = s || r.default.canStreamQuality(r.default.StreamQuality.MID, t))), null != e.guildPremiumTier && (s = s || (0, a.isGuildBoostedAtLeast)(n, e.guildPremiumTier)), s
 }

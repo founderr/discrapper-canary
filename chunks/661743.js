@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("697218"),
   p = n("468759"),
   E = n("987772"),
-  S = n("956089"),
-  g = n("315102"),
+  g = n("956089"),
+  S = n("315102"),
   C = n("233965"),
   _ = n("32346"),
   I = n("808742"),
@@ -93,7 +93,7 @@ let M = e => {
               variant: "text-md/semibold",
               color: "header-primary",
               children: N.default.Messages.ACTIVITY_STATUS
-            }), (0, a.jsx)(S.TextBadge, {
+            }), (0, a.jsx)(g.TextBadge, {
               text: N.default.Messages.BETA,
               disableColor: !0,
               className: A.newBadge
@@ -110,7 +110,7 @@ let M = e => {
               children: [(0, a.jsx)(c.Avatar, {
                 className: A.avatar,
                 size: c.AvatarSizes.SIZE_40,
-                src: (0, g.getUserAvatarURL)(O),
+                src: (0, S.getUserAvatarURL)(O),
                 "aria-hidden": !0
               }), (0, a.jsx)("div", {
                 className: A.outline

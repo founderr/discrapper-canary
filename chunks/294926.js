@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("18494"),
   p = n("697218"),
   E = n("717018"),
-  S = n("811305"),
-  g = n("659500"),
+  g = n("811305"),
+  S = n("659500"),
   C = n("439932"),
   _ = n("550766"),
   I = n("191225"),
@@ -109,7 +109,7 @@ function y(e) {
         })
       }), null != et ? (0, a.jsxs)("div", {
         className: L.footer,
-        children: [(0, a.jsx)(S.default, {
+        children: [(0, a.jsx)(g.default, {
           renderIcon: !1,
           users: ea,
           size: 32,
@@ -146,12 +146,12 @@ function y(e) {
       maxHeight: y,
       resizableNode: V,
       onResize: e => {
-        g.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0
         }), W(e)
       },
       onResizeEnd: e => {
-        g.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !1
         }), Y(e)
       }

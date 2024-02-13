@@ -5,16 +5,16 @@
       u = Math.max,
       c = Math.min;
     t.exports = function(t, e, n) {
-      var l, a, f, s, d, p, v = 0,
+      var a, l, f, s, d, p, v = 0,
         b = !1,
         g = !1,
         h = !0;
       if ("function" != typeof t) throw TypeError("Expected a function");
 
       function y(e) {
-        var n = l,
-          r = a;
-        return l = a = void 0, v = e, s = t.apply(r, n)
+        var n = a,
+          r = l;
+        return a = l = void 0, v = e, s = t.apply(r, n)
       }
       e = i(e) || 0, r(n) && (b = !!n.leading, f = (g = "maxWait" in n) ? u(i(n.maxWait) || 0, e) : f, h = "trailing" in n ? !!n.trailing : h);
 
@@ -31,13 +31,13 @@
       }
 
       function S(t) {
-        return (d = void 0, h && l) ? y(t) : (l = a = void 0, s)
+        return (d = void 0, h && a) ? y(t) : (a = l = void 0, s)
       }
 
       function x() {
         var t, n = o(),
           r = m(n);
-        if (l = arguments, a = this, p = n, r) {
+        if (a = arguments, l = this, p = n, r) {
           if (void 0 === d) {
             ;
             return v = t = p, d = setTimeout(E, e), b ? y(t) : s
@@ -47,7 +47,7 @@
         return void 0 === d && (d = setTimeout(E, e)), s
       }
       return x.cancel = function() {
-        void 0 !== d && clearTimeout(d), v = 0, l = p = a = d = void 0
+        void 0 !== d && clearTimeout(d), v = 0, a = p = l = d = void 0
       }, x.flush = function() {
         return void 0 === d ? s : S(o())
       }, x

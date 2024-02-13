@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("414456"),
-  s = n.n(r),
-  i = n("244201"),
+  i = n.n(r),
+  s = n("244201"),
   l = n("289656"),
   u = n("437825"),
   o = n("142303"),
@@ -23,15 +23,15 @@ function f(e) {
     {
       enabled: n,
       cameraUnavailable: r,
-      onChange: s,
+      onChange: i,
       onCameraUnavailable: d,
       hasPermission: c,
       children: f,
       channelLimitReached: h = !1,
       join: p
     } = e,
-    E = (0, i.useAppContext)(),
-    C = r ? () => d() : () => s(!e.enabled, E);
+    E = (0, s.useAppContext)(),
+    C = r ? () => d() : () => i(!e.enabled, E);
   return (0, a.jsx)(a.Fragment, {
     children: f({
       onClick: C,
@@ -49,7 +49,7 @@ function h(e) {
     enabled: t,
     join: n,
     channel: r,
-    onChange: i,
+    onChange: s,
     onCameraUnavailable: l,
     cameraUnavailable: u,
     hasPermission: o,
@@ -64,7 +64,7 @@ function h(e) {
     enabled: t,
     join: n,
     channel: r,
-    onChange: i,
+    onChange: s,
     onCameraUnavailable: l,
     cameraUnavailable: u,
     hasPermission: o,
@@ -79,7 +79,7 @@ function h(e) {
         ...r,
         ...S,
         isActive: t,
-        className: s(h, {
+        className: i(h, {
           [c.fauxDisabled]: n
         }),
         onPopoutClick: m

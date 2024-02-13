@@ -6,20 +6,20 @@ n.r(t), n.d(t, {
 });
 var a = n("446674"),
   r = n("913144");
-let s = !1,
-  i = !1;
+let i = !1,
+  s = !1;
 class l extends a.default.DeviceSettingsStore {
   initialize(e) {
-    null != e && (s = e)
+    null != e && (i = e)
   }
   isMuted() {
-    return s
-  }
-  shouldPlay() {
     return i
   }
-  getUserAgnosticState() {
+  shouldPlay() {
     return s
+  }
+  getUserAgnosticState() {
+    return i
   }
 }
 l.displayName = "StageMusicStore", l.persistKey = "StageMusicStore";
@@ -28,15 +28,15 @@ var u = new l(r.default, {
     let {
       muted: t
     } = e;
-    s = t, i = !1
+    i = t, s = !1
   },
   STAGE_MUSIC_PLAY: function(e) {
     let {
       play: t
     } = e;
-    i = t
+    s = t
   },
   VOICE_CHANNEL_SELECT: function() {
-    i = !1
+    s = !1
   }
 })
