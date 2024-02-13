@@ -58,17 +58,7 @@ function V(e) {
     isEventNoticeHidden: I.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), W = null == a ? void 0 : a.id, {
-    speakers: K,
-    listenerCount: z
-  } = (0, u.useStateFromStoresObject)([R.default], () => {
-    let e = R.default.getMutableParticipants(W, O.StageChannelParticipantNamedIndex.SPEAKER),
-      t = null != W ? R.default.getParticipantCount(W, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0;
-    return {
-      speakers: [...new Set(e.map(e => e.user))],
-      listenerCount: t
-    }
-  }, [W]), q = (0, u.useStateFromStores)([D.default], () => D.default.can(k.Permissions.CONNECT, a)), Q = (0, L.default)(null == a ? void 0 : a.id), Z = null == s ? void 0 : s.creator_id, X = (0, u.useStateFromStores)([y.default], () => y.default.getUser(Z), [Z]);
+  }), [r, s]), W = null == a ? void 0 : a.id, K = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(W, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [W]), z = (0, u.useStateFromStores)([R.default], () => null != W ? R.default.getParticipantCount(W, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [W]), q = (0, u.useStateFromStores)([D.default], () => D.default.can(k.Permissions.CONNECT, a)), Q = (0, L.default)(null == a ? void 0 : a.id), Z = null == s ? void 0 : s.creator_id, X = (0, u.useStateFromStores)([y.default], () => y.default.getUser(Z), [Z]);
   i.useEffect(() => {
     null != Z && (0, f.getUser)(Z)
   }, [Z]);

@@ -18,8 +18,8 @@ var a = n("37983"),
   m = n("271938"),
   p = n("305961"),
   E = n("957255"),
-  S = n("824563"),
-  g = n("800762"),
+  g = n("824563"),
+  S = n("800762"),
   C = n("822332"),
   _ = n("599110"),
   I = n("223913"),
@@ -121,7 +121,7 @@ function j(e) {
     user: t,
     channel: n,
     ...s
-  } = e, [i, o] = (0, r.useStateFromStoresArray)([g.default, p.default, E.default, f.default], () => (0, I.canWatchStream)(n, g.default, p.default, E.default, f.default)), u = (0, r.useStateFromStores)([h.default], () => h.default.getStreamForUser(t.id, n.getGuildId())), c = (0, r.useStateFromStores)([h.default], () => h.default.getActiveStreamForApplicationStream(u)), C = (0, r.useStateFromStores)([m.default], () => m.default.getId()), _ = (0, r.useStateFromStores)([S.default], () => (0, T.getStreamerApplication)(u, S.default)), v = (0, r.useStateFromStores)([S.default], () => (0, T.getStreamerActivity)(u, S.default)), x = l.useMemo(() => ({
+  } = e, [i, o] = (0, r.useStateFromStoresArray)([S.default, p.default, E.default, f.default], () => (0, I.canWatchStream)(n, S.default, p.default, E.default, f.default)), u = (0, r.useStateFromStores)([h.default], () => h.default.getStreamForUser(t.id, n.getGuildId())), c = (0, r.useStateFromStores)([h.default], () => h.default.getActiveStreamForApplicationStream(u)), C = (0, r.useStateFromStores)([m.default], () => m.default.getId()), _ = (0, T.useGetStreamApplication)(u), v = (0, r.useStateFromStores)([g.default], () => (0, T.getStreamerActivity)(u, g.default)), x = l.useMemo(() => ({
     [n.guild_id]: [t.id]
   }), [n.guild_id, t.id]);
   return (0, d.useSubscribeGuildMembers)(x), (0, a.jsx)(R, {

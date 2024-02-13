@@ -329,17 +329,7 @@ function et(e) {
   let {
     stageInstance: t,
     channel: n
-  } = e, {
-    speakers: a,
-    listenerCount: s
-  } = (0, r.useStateFromStoresObject)([h.default], () => {
-    let e = h.default.getMutableParticipants(n.id, _.StageChannelParticipantNamedIndex.SPEAKER),
-      t = h.default.getParticipantCount(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE);
-    return {
-      speakers: [...new Set(e.map(e => e.user))],
-      listenerCount: t
-    }
-  }, [n.id]), i = K.default.Messages.LISTENING_COUNT.format({
+  } = e, a = (0, r.useStateFromStoresArray)([h.default], () => [...new Set(h.default.getMutableParticipants(n.id, _.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [n.id]), s = (0, r.useStateFromStores)([h.default], () => h.default.getParticipantCount(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE), [n.id]), i = K.default.Messages.LISTENING_COUNT.format({
     count: "".concat(s)
   });
   return (0, l.jsx)(q, {

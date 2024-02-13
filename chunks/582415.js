@@ -1,28 +1,38 @@
 "use strict";
 n.r(t), n.d(t, {
   getStreamerActivity: function() {
-    return r
+    return d
   },
   getStreamerApplication: function() {
-    return a
+    return u
+  },
+  useGetStreamApplication: function() {
+    return l
   }
 });
-var s = n("49111");
+var s = n("446674"),
+  i = n("233736"),
+  r = n("824563"),
+  a = n("49111");
 
-function i(e) {
-  return e.type === s.ActivityTypes.PLAYING
+function o(e) {
+  return e.type === a.ActivityTypes.PLAYING
 }
 
-function r(e, t) {
+function d(e, t) {
   var n;
-  return null != e ? (n = e.ownerId, t.findActivity(n, i)) : null
+  return null != e ? (n = e.ownerId, t.findActivity(n, o)) : null
 }
 
-function a(e, t) {
+function u(e, t) {
   if (null == e) return null;
-  let n = r(e, t);
+  let n = d(e, t);
   return null == n ? null : {
     id: n.application_id,
     name: n.name
   }
+}
+
+function l(e) {
+  return (0, s.useStateFromStores)([r.default], () => u(e, r.default), [e], (e, t) => e === t || null != e && null != t && (0, i.default)(e, t))
 }
