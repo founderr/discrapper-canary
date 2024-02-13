@@ -7,9 +7,10 @@ n.r(t), n.d(t, {
   ModViewPanelNameMap: function() {
     return s
   }
-}), (l = a || (a = {}))[l.UNKNOWN = 0] = "UNKNOWN", l[l.INFO = 1] = "INFO", l[l.MESSAGE_HISTORY = 2] = "MESSAGE_HISTORY";
+}), (l = a || (a = {}))[l.UNKNOWN = 0] = "UNKNOWN", l[l.INFO = 1] = "INFO", l[l.MESSAGE_HISTORY = 2] = "MESSAGE_HISTORY", l[l.PERMISSIONS = 3] = "PERMISSIONS";
 let s = {
   0: "UNKNOWN",
   1: "INFO",
-  2: "MESSAGE_HISTORY"
+  2: "MESSAGE_HISTORY",
+  3: "PERMISSIONS"
 }

@@ -63,13 +63,11 @@ let A = new s.default("GuildSettingsActionCreators"),
         searchQuery: e
       })
     },
-    selectRole(e, t) {
-      r.default.dispatch({
-        type: "GUILD_SETTINGS_ROLE_SELECT",
-        roleId: e,
-        searchQuery: t
-      })
-    },
+    selectRole: (e, t) => r.default.dispatch({
+      type: "GUILD_SETTINGS_ROLE_SELECT",
+      roleId: e,
+      searchQuery: t
+    }),
     updateEmbed(e, t, n) {
       l.default.patch({
         url: p.Endpoints.GUILD_WIDGET(e),

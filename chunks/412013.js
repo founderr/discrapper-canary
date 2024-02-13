@@ -15,16 +15,20 @@ function A(e) {
   let {
     guildId: E,
     role: A,
-    className: u
-  } = e, I = (0, a.useToken)(a.tokens.unsafe_rawColors.PRIMARY_300).hex(), i = null !== (t = null == A ? void 0 : A.colorString) && void 0 !== t ? t : I, l = s.useMemo(() => ({
-    backgroundColor: "".concat(i, "27")
-  }), [i]);
-  return null == A ? null : (0, _.jsx)(T.MemberRole, {
     className: u,
-    style: l,
-    role: A,
-    guildId: E,
-    canRemove: !1,
-    onRemove: n.NOOP
+    canRemove: I = !1,
+    onRemove: i = n.NOOP
+  } = e, l = (0, a.useToken)(a.tokens.unsafe_rawColors.PRIMARY_300).hex(), L = null !== (t = null == A ? void 0 : A.colorString) && void 0 !== t ? t : l, o = s.useMemo(() => ({
+    backgroundColor: "".concat(L, "27")
+  }), [L]);
+  return null == A ? null : (0, _.jsx)(a.Clickable, {
+    children: (0, _.jsx)(T.MemberRole, {
+      className: u,
+      style: o,
+      role: A,
+      guildId: E,
+      canRemove: I,
+      onRemove: i
+    })
   })
 }
