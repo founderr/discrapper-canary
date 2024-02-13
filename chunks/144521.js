@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("371449"),
   f = n("224978"),
   E = n("559541"),
-  _ = n("49111"),
-  h = n("782340"),
+  h = n("49111"),
+  _ = n("782340"),
   C = n("858401");
 
 function I(e) {
@@ -24,8 +24,8 @@ function I(e) {
     user: t,
     nickname: n,
     status: I,
-    isFocused: T
-  } = e, S = s.useContext(d.AnalyticsContext), p = e => {
+    isFocused: S
+  } = e, p = s.useContext(d.AnalyticsContext), m = e => {
     null == e || e.stopPropagation(), l.default.addRelationship({
       userId: t.id,
       context: {
@@ -35,29 +35,29 @@ function I(e) {
       friendToken: void 0,
       fromFriendSuggestion: !0
     })
-  }, m = e => {
+  }, T = e => {
     null == e || e.stopPropagation(), i.default.ignore(t.id)
-  }, g = I === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : I;
+  }, g = I === h.StatusTypes.OFFLINE ? h.StatusTypes.UNKNOWN : I;
   return (0, a.jsx)(f.default, {
-    isFocused: T,
+    isFocused: S,
     user: t,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
-      analyticsLocation: S.location
+      analyticsLocation: p.location
     }),
     children: e => {
       let s = (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(c.default, {
           icon: o.default,
           actionType: c.default.ActionTypes.ACCEPT,
-          tooltip: h.default.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: p,
+          tooltip: _.default.Messages.FRIEND_REQUEST_ACCEPT,
+          onClick: m,
           shouldHighlight: e
         }), (0, a.jsx)(c.default, {
           icon: u.default,
           actionType: c.default.ActionTypes.DENY,
-          tooltip: h.default.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: m,
+          tooltip: _.default.Messages.FRIEND_REQUEST_IGNORE,
+          onClick: T,
           shouldHighlight: e
         })]
       });

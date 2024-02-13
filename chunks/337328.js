@@ -15,21 +15,21 @@ var a = n("37983"),
   c = n("47115"),
   f = n("77078"),
   E = n("327037"),
-  _ = n("79112"),
-  h = n("997289"),
+  h = n("79112"),
+  _ = n("997289"),
   C = n("731898"),
   I = n("252744"),
-  T = n("502651"),
-  S = n("812204"),
-  p = n("685665"),
-  m = n("106803"),
+  S = n("502651"),
+  p = n("812204"),
+  m = n("685665"),
+  T = n("106803"),
   g = n("861370"),
   A = n("91639"),
   N = n("128887"),
   R = n("217513"),
   O = n("430312"),
-  L = n("763866"),
-  v = n("10532"),
+  v = n("763866"),
+  L = n("10532"),
   M = n("935409"),
   P = n("845579"),
   D = n("373469"),
@@ -149,9 +149,9 @@ function Z(e) {
     onClose: o,
     onSelect: E,
     closePopout: D
-  } = e, y = (0, h.useAnalyticsContext)(), {
+  } = e, y = (0, _.useAnalyticsContext)(), {
     AnalyticsLocationProvider: b
-  } = (0, p.default)(S.default.ACCOUNT_PROFILE_POPOUT), w = (0, R.default)(t.id, l), [F, z, Z, X] = (0, d.useStateFromStoresArray)([x.default], () => {
+  } = (0, m.default)(p.default.ACCOUNT_PROFILE_POPOUT), w = (0, R.default)(t.id, l), [F, z, Z, X] = (0, d.useStateFromStoresArray)([x.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, V.StatusTypes.UNKNOWN, !1] : [null !== (e = x.default.findActivity(n, e => e.type !== V.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, x.default.findActivity(t.id, e => e.type === V.ActivityTypes.CUSTOM_STATUS), x.default.getStatus(n), x.default.isMobileOnline(n)]
@@ -199,7 +199,7 @@ function Z(e) {
     })
   }, []);
   let et = (0, B.useMultiAccountMenuItems)(),
-    en = (0, m.useCustomStatusMenuItem)(null != n ? n : void 0, K.menuItemFocused),
+    en = (0, T.useCustomStatusMenuItem)(null != n ? n : void 0, K.menuItemFocused),
     ea = (0, g.default)({
       id: t.id,
       label: W.default.Messages.COPY_ID_USER,
@@ -223,13 +223,13 @@ function Z(e) {
             displayProfile: w,
             onClose: () => null == D ? void 0 : D(),
             isMobile: X,
-            isStreaming: (0, T.default)(F),
+            isStreaming: (0, S.default)(F),
             status: Z,
             disableUserProfileLink: __OVERLAY__,
             isHovering: ee,
             showPremiumBadgeUpsell: !1
           }), (0, a.jsxs)(O.default.Inner, {
-            children: [(0, a.jsx)(L.default, {
+            children: [(0, a.jsx)(v.default, {
               activity: F,
               customStatusActivity: z,
               displayProfile: w,
@@ -239,7 +239,7 @@ function Z(e) {
               canDM: !1,
               hideNote: !0,
               showCopiableUsername: !0
-            }), (0, a.jsx)(v.default, {
+            }), (0, a.jsx)(L.default, {
               className: K.divider
             }), (0, a.jsxs)(f.Menu, {
               navId: "account",
@@ -309,7 +309,7 @@ function Z(e) {
                     })
                   },
                   action: () => {
-                    _.default.open(V.UserSettingsSections.NOTIFICATIONS)
+                    h.default.open(V.UserSettingsSections.NOTIFICATIONS)
                   }
                 }, "quiet-mode") : null]
               }), (0, a.jsx)(f.MenuGroup, {
@@ -341,15 +341,15 @@ function X(e) {
     guildId: l,
     onClose: i,
     onSelect: r
-  } = e, u = (0, d.useStateFromStores)([b.default], () => b.default.getUser(t), [t]), c = (0, d.useStateFromStores)([y.default], () => y.default.getCustomStatusActivity()), [f, _] = s.useState(!1), h = null != u ? u : n, C = (0, d.useStateFromStores)([D.default], () => null != h && null != D.default.getAnyStreamForUser(h.id));
+  } = e, u = (0, d.useStateFromStores)([b.default], () => b.default.getUser(t), [t]), c = (0, d.useStateFromStores)([y.default], () => y.default.getCustomStatusActivity()), [f, h] = s.useState(!1), _ = null != u ? u : n, C = (0, d.useStateFromStores)([D.default], () => null != _ && null != D.default.getAnyStreamForUser(_.id));
   return (s.useEffect(() => {
     null == u && e();
     async function e() {
-      "string" == typeof t && (await (0, E.getUser)(t), _(!0))
+      "string" == typeof t && (await (0, E.getUser)(t), h(!0))
     }
-  }, [u, t]), null == h) ? (f && o(null != h, "Unexpected missing user"), null) : (0, a.jsx)(Z, {
+  }, [u, t]), null == _) ? (f && o(null != _, "Unexpected missing user"), null) : (0, a.jsx)(Z, {
     closePopout: i,
-    user: h,
+    user: _,
     customStatus: c,
     guildId: l,
     isApplicationStreaming: C,

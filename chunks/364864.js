@@ -19,17 +19,17 @@ var a = n("539405"),
   p = n("782340");
 
 function g(e, t, n, g) {
-  var m;
+  var E;
   let {
-    icon: E,
+    icon: m,
     title: S,
     body: v
   } = (0, d.makeTextChatNotification)(e, t, n), {
     trackView: y,
-    trackClick: O
+    trackClick: I
   } = (0, c.makeAnalyticsTrackers)(h.OverlayNotificationType.TextChat, {
     notif_type: h.OverlayNotificationType.TextChat,
-    notif_user_id: null === (m = t.author) || void 0 === m ? void 0 : m.id,
+    notif_user_id: null === (E = t.author) || void 0 === E ? void 0 : E.id,
     message_id: t.id,
     message_type: t.type,
     guild_id: e.guild_id,
@@ -38,7 +38,7 @@ function g(e, t, n, g) {
   });
   return {
     colorScheme: r.ColorSchemes.PRIMARY,
-    icon: E,
+    icon: m,
     title: S,
     body: v,
     renderFooter: e => e ? (0, i.jsx)("div", {
@@ -52,10 +52,10 @@ function g(e, t, n, g) {
       g && (0, u.playSound)(s.MESSAGE_SOUND, s.MESSAGE_SOUND_VOLUME), y()
     },
     onNotificationClick: () => {
-      (0, l.transitionTo)(f.Routes.CHANNEL(e.guild_id, e.id)), O("jump"), o.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
+      (0, l.transitionTo)(f.Routes.CHANNEL(e.guild_id, e.id)), I("jump"), o.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
     },
     onDismissClick: () => {
-      O("dismiss")
+      I("dismiss")
     }
   }
 }

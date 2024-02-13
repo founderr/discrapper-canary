@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("37983");
@@ -21,19 +21,19 @@ let E = (e, t) => ({
   imgStyle: f.defaultDropImage
 });
 
-function _(e) {
+function h(e) {
   let {
     markAsDismissed: t,
     partnerGame: n
   } = e;
   (0, o.useTrackDropsImpression)(n, s.ImpressionTypes.POPOUT, s.ImpressionNames.DROPS_QUEST_COMPLETION);
-  let _ = (0, o.useDropsExperiment)(n);
-  if (null == _) return null;
+  let h = (0, o.useDropsExperiment)(n);
+  if (null == h) return null;
   let {
-    body: h,
+    body: _,
     imgSrc: C,
     imgStyle: I
-  } = E(_.drop, _.config.streamLengthRequirement), T = () => {
+  } = E(h.drop, h.config.streamLengthRequirement), S = () => {
     t(d.ContentDismissActionType.DISMISS)
   };
   return (0, a.jsxs)("div", {
@@ -45,7 +45,7 @@ function _(e) {
     }), (0, a.jsx)(l.Clickable, {
       className: f.buttonClose,
       "aria-label": c.default.Messages.CLOSE,
-      onClick: T,
+      onClick: S,
       children: (0, a.jsx)(r.default, {
         width: 16,
         height: 16,
@@ -58,7 +58,7 @@ function _(e) {
     }), (0, a.jsx)(l.Text, {
       variant: "text-sm/medium",
       className: f.subTitle,
-      children: h
+      children: _
     }), (0, a.jsx)(l.Button, {
       look: l.Button.Looks.INVERTED,
       fullWidth: !0,
@@ -69,7 +69,7 @@ function _(e) {
     }), (0, a.jsx)(l.Button, {
       className: f.linkButtonContainer,
       innerClassName: f.linkButton,
-      onClick: T,
+      onClick: S,
       look: l.Button.Looks.LINK,
       fullWidth: !0,
       color: l.Button.Colors.WHITE,

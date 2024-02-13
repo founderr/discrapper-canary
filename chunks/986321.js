@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("37983");
@@ -36,7 +36,7 @@ function E(e) {
     })
   })
 }
-var _ = function(e) {
+var h = function(e) {
   let {
     guild: t
   } = e, n = (0, l.useStateFromStores)([r.default], () => {

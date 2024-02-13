@@ -15,9 +15,9 @@ var a = n("37983"),
   c = n("928056"),
   f = n("49111"),
   E = n("782340"),
-  _ = n("312079");
+  h = n("312079");
 
-function h() {
+function _() {
   return (0, a.jsxs)(l.Switch, {
     children: [(0, a.jsx)(r.default, {
       path: f.Routes.APPLICATION_LIBRARY_SETTINGS,
@@ -45,9 +45,9 @@ var C = s.memo(function() {
   return s.useEffect(() => {
     (0, u.trackAppUIViewed)("application_library")
   }, []), (0, a.jsxs)("div", {
-    className: _.container,
+    className: h.container,
     children: [(0, a.jsx)(o.AppPageTitle, {
       location: E.default.Messages.LIBRARY
-    }), (0, a.jsx)(h, {})]
+    }), (0, a.jsx)(_, {})]
   })
 })

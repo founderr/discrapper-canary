@@ -1,15 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   useGetPlanComparisonTableRows: function() {
-    return A
+    return m
   }
 });
 var a, n, i = s("37983");
 s("884691");
 var r = s("77078"),
   l = s("915639"),
-  o = s("36694"),
-  u = s("945330"),
+  u = s("36694"),
+  o = s("945330"),
   d = s("719923"),
   c = s("153160"),
   _ = s("527715"),
@@ -40,19 +40,19 @@ let S = e => {
       children: t
     })
   },
-  m = e => {
+  A = e => {
     let {
       includes: t
     } = e;
     return t ? (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(o.default, {
+      children: [(0, i.jsx)(u.default, {
         className: f.checkmarkIcon,
         "aria-hidden": !0
       }), (0, i.jsx)(r.HiddenVisually, {
         children: T.default.Messages.INCLUDED
       })]
     }) : (0, i.jsxs)(i.Fragment, {
-      children: [(0, i.jsx)(u.default, {
+      children: [(0, i.jsx)(o.default, {
         className: f.closeIcon,
         "aria-hidden": !0
       }), (0, i.jsx)(r.HiddenVisually, {
@@ -61,10 +61,10 @@ let S = e => {
     })
   };
 (a = n || (n = {}))[a.PRICE = 0] = "PRICE", a[a.EMOJI = 1] = "EMOJI", a[a.STICKER = 2] = "STICKER", a[a.CUSTOM_APP_ICONS = 3] = "CUSTOM_APP_ICONS", a[a.SUPER_REACTIONS = 4] = "SUPER_REACTIONS", a[a.UPLOAD = 5] = "UPLOAD", a[a.STREAMING = 6] = "STREAMING", a[a.BOOSTS = 7] = "BOOSTS", a[a.PROFILE_THEMES = 8] = "PROFILE_THEMES", a[a.SERVER_PROFILE = 9] = "SERVER_PROFILE", a[a.SHOP_DISCOUNTS = 10] = "SHOP_DISCOUNTS", a[a.CLIENT_THEME = 11] = "CLIENT_THEME", a[a.BADGE = 12] = "BADGE", a[a.VIDEO_BACKGROUND = 13] = "VIDEO_BACKGROUND", a[a.CUSTOM_SOUNDS_ANYWHERE = 14] = "CUSTOM_SOUNDS_ANYWHERE", a[a.CUSTOM_ENTRY_SOUNDS = 15] = "CUSTOM_ENTRY_SOUNDS", a[a.SERVER_LIMIT = 16] = "SERVER_LIMIT", a[a.MESSAGE_LENGTH = 17] = "MESSAGE_LENGTH", a[a.CUSTOMIZATION_CATEGORY = 18] = "CUSTOMIZATION_CATEGORY", a[a.FEATURE_UPGRADES_CATEGORY = 19] = "FEATURE_UPGRADES_CATEGORY", a[a.PERSONALIZATION_CATEGORY = 20] = "PERSONALIZATION_CATEGORY";
-let A = (e, t, s, a) => {
+let m = (e, t, s, a) => {
   let {
     enabled: n
-  } = (0, _.default)(), o = {
+  } = (0, _.default)(), u = {
     0: {
       label: (0, i.jsx)(S, {
         variant: n ? "heading-lg/extrabold" : void 0,
@@ -87,10 +87,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !0
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -98,10 +98,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !0
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -109,10 +109,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !0
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -120,10 +120,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !0
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -142,7 +142,7 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !1
       }),
       column2: (0, i.jsx)(R, {
@@ -156,10 +156,10 @@ let A = (e, t, s, a) => {
           percentageOff: (0, c.formatPercent)(l.default.locale, E.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
         })
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !1
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -167,10 +167,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !1
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -178,10 +178,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !1
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -189,10 +189,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !1
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -200,10 +200,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !1
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -211,10 +211,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !0
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -222,10 +222,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !0
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -233,10 +233,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !1
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       }),
       withBottomBorder: !n
@@ -245,10 +245,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !1
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -256,10 +256,10 @@ let A = (e, t, s, a) => {
       label: (0, i.jsx)(S, {
         text: T.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !1
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       })
     },
@@ -269,10 +269,10 @@ let A = (e, t, s, a) => {
           maxChars: I.MAX_MESSAGE_LENGTH_PREMIUM
         })
       }),
-      column1: (0, i.jsx)(m, {
+      column1: (0, i.jsx)(A, {
         includes: !1
       }),
-      column2: (0, i.jsx)(m, {
+      column2: (0, i.jsx)(A, {
         includes: !0
       }),
       withBottomBorder: !n
@@ -308,5 +308,5 @@ let A = (e, t, s, a) => {
       withBottomBorder: !1
     }
   };
-  return n ? [o[0], o[18], o[1], o[2], o[14], o[19], o[5], o[6], o[7], o[9], o[13], o[16], o[17], o[20], o[12], o[15]] : [o[0], o[1], o[2], o[3], o[4], o[5], o[6], o[7], o[8], o[9], o[10], o[11], o[12], o[13], o[14], o[15], o[16], o[17]]
+  return n ? [u[0], u[18], u[1], u[2], u[14], u[19], u[5], u[6], u[7], u[9], u[13], u[16], u[17], u[20], u[12], u[15]] : [u[0], u[1], u[2], u[3], u[4], u[5], u[6], u[7], u[8], u[9], u[10], u[11], u[12], u[13], u[14], u[15], u[16], u[17]]
 }

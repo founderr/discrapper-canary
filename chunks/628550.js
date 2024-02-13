@@ -4,14 +4,14 @@ s.r(t), s.d(t, {
     return n
   },
   default: function() {
-    return X
+    return Q
   }
 });
 var a, n, i = s("65597"),
   r = s("151426"),
   l = s("79112"),
-  o = s("841098"),
-  u = s("812204"),
+  u = s("841098"),
+  o = s("812204"),
   d = s("685665"),
   c = s("18346"),
   _ = s("21526"),
@@ -21,8 +21,8 @@ var a, n, i = s("65597"),
   f = s("701909"),
   S = s("719923"),
   R = s("184684"),
-  m = s("598739"),
-  A = s("646718"),
+  A = s("598739"),
+  m = s("646718"),
   N = s("49111"),
   p = s("397336"),
   g = s("782340"),
@@ -34,8 +34,8 @@ var a, n, i = s("65597"),
   L = s("994679"),
   x = s("620826"),
   v = s("333078"),
-  D = s("156591"),
-  U = s("578770"),
+  U = s("156591"),
+  D = s("578770"),
   b = s("913204"),
   j = s("198326"),
   G = s("761708"),
@@ -44,18 +44,18 @@ var a, n, i = s("65597"),
   y = s("62414"),
   H = s("613697"),
   K = s("907511"),
-  W = s("165870"),
-  F = s("186590"),
+  F = s("165870"),
+  W = s("186590"),
   w = s("14528"),
   V = s("925094"),
   Y = s("832085"),
   z = s("443646"),
-  Q = s("759308");
+  X = s("759308");
 (a = n || (n = {})).AVATAR_DECORATIONS = "avatarDecorations", a.CLIENT_THEMES = "clientThemes", a.CLIPS = "clips", a.EARLY_ACCESS = "earlyAccess", a.ENTRANCE_SOUNDS = "entranceSounds", a.PROFILE_EFFECTS = "profileEffects", a.PROFILES = "profiles", a.REMIXING = "remixing", a.SERVER_BOOSTS = "serverBoosts", a.SPECIAL_MEMBER_PRICING = "specialMemberPricing", a.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = "specialMemberPricingSeeAllVariant", a.SPECIAL_SHOP_PERKS = "specialShopPerks", a.UNLIMITED_SUPER_REACTIONS = "unlimitedSuperReactions", a.SUPER_REACTIONS = "superReactions", a.UPCOMING_DROP_UNTIMED = "upcomingDropUntimed", a.CUSTOM_APP_ICONS = "customAppIcons", a.MORE_EMOJI_POWER = "moreEmojiPower", a.CUSTOM_SOUNDS_EVERYWHERE = "customSoundsEverywhere", a.SPECIAL_STICKER_ACCESS = "specialStickerAccess", a.LARGE_UPLOADS = "largeUploads", a.HD_VIDEO = "hdVideo", a.BADGE = "badge", a.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = "entranceSoundsSeeAllVariation", a.EARLY_ACCESS_SEE_ALL_VARIATION = "earlyAccessSeeAllVariant";
-var X = () => {
+var Q = () => {
   let {
     analyticsLocations: e
-  } = (0, d.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, o.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, i.default)([T.default], () => T.default.getPremiumTypeSubscription()), n = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != n ? S.default.getSkuIdForPlan(n.planId) : null, Z = X === A.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, d.default)(o.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, i.default)([T.default], () => T.default.getPremiumTypeSubscription()), n = null != a ? S.default.getPremiumPlanItem(a) : null, Q = null != n ? S.default.getSkuIdForPlan(n.planId) : null, Z = Q === m.PremiumSubscriptionSKUs.TIER_2, {
     flipped: J
   } = (0, R.useWhatsNewAvatarDecoRollout)(), {
     flipped: q
@@ -70,7 +70,7 @@ var X = () => {
   }, es = () => {
     (0, _.openCollectiblesShop)({
       analyticsLocations: e,
-      analyticsSource: u.default.PREMIUM_MARKETING_PERK_CARD
+      analyticsSource: o.default.PREMIUM_MARKETING_PERK_CARD
     })
   }, ea = {
     avatarDecorations: Z ? {
@@ -123,14 +123,14 @@ var X = () => {
       } : () => {
         window.open(f.default.getArticleURL(N.HelpdeskArticles.CLIPS), "_blank")
       },
-      perkImage: D
+      perkImage: U
     } : {
       name: "clips",
       title: g.default.Messages.CLIPS,
       subtitle: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
       description: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
       pillText: g.default.Messages.EARLY_ACCESS,
-      perkImage: D
+      perkImage: U
     },
     earlyAccess: Z ? {
       name: "earlyAccess",
@@ -256,14 +256,14 @@ var X = () => {
       description: g.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
       descriptionCta: g.default.Messages.VISIT_THE_SHOP_CTA,
       onCtaClick: es,
-      perkImage: W
+      perkImage: F
     } : {
       name: "specialMemberPricing",
       title: g.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
       subtitle: g.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
       description: g.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
       isPremiumGetCta: !0,
-      perkImage: W
+      perkImage: F
     },
     specialMemberPricingSeeAllVariant: Z ? {
       name: "specialMemberPricingSeeAllVariant",
@@ -272,14 +272,14 @@ var X = () => {
       description: g.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
       descriptionCta: g.default.Messages.VISIT_THE_SHOP_CTA,
       onCtaClick: es,
-      perkImage: F
+      perkImage: W
     } : {
       name: "specialMemberPricingSeeAllVariant",
       title: g.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
       subtitle: g.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
       description: g.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
       isPremiumGetCta: !0,
-      perkImage: F
+      perkImage: W
     },
     specialShopPerks: Z ? {
       name: "specialShopPerks",
@@ -288,7 +288,7 @@ var X = () => {
       description: g.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
       descriptionCta: g.default.Messages.VISIT_THE_SHOP_CTA,
       onCtaClick: es,
-      perkImage: W
+      perkImage: F
     } : {
       name: "specialShopPerks",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
@@ -296,7 +296,7 @@ var X = () => {
       description: g.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
       descriptionCta: g.default.Messages.VISIT_THE_SHOP_CTA,
       onCtaClick: es,
-      perkImage: W
+      perkImage: F
     },
     unlimitedSuperReactions: Z ? {
       name: "unlimitedSuperReactions",
@@ -336,7 +336,7 @@ var X = () => {
       name: "customAppIcons",
       title: g.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
       subtitle: g.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-      perkImage: U,
+      perkImage: D,
       description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
       descriptionCta: g.default.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
@@ -356,14 +356,14 @@ var X = () => {
       name: "customSoundsEverywhere",
       title: g.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
       subtitle: g.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-      perkImage: (0, m.getThemedImage)(t, P, O),
+      perkImage: (0, A.getThemedImage)(t, P, O),
       description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
     },
     specialStickerAccess: {
       name: "specialStickerAccess",
       title: g.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
       subtitle: g.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-      perkImage: (0, m.getThemedImage)(t, M, w),
+      perkImage: (0, A.getThemedImage)(t, M, w),
       description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
     },
     largeUploads: {
@@ -372,7 +372,7 @@ var X = () => {
         premiumMaxSize: s
       }),
       subtitle: g.default.Messages.NITRO_HOME_UPLOAD_ALL_YOU_WANT,
-      perkImage: Q,
+      perkImage: X,
       description: g.default.Messages.NITRO_HOME_CARD_UPLOAD_POWER
     },
     hdVideo: {

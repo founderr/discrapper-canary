@@ -10,8 +10,8 @@ var n = s("414456"),
   i = s.n(n),
   r = s("65597"),
   l = s("77078"),
-  o = s("521012"),
-  u = s("701909"),
+  u = s("521012"),
+  o = s("701909"),
   d = s("394058"),
   c = s("641078"),
   _ = s("881155"),
@@ -25,9 +25,9 @@ var n = s("414456"),
       isFullscreen: t
     } = e, {
       promotion: s
-    } = (0, E.useBogoPromotion)(), n = (0, r.default)([o.default], () => o.default.getPremiumTypeSubscription()), R = (0, c.useIsEligibleForBogoPromotion)();
+    } = (0, E.useBogoPromotion)(), n = (0, r.default)([u.default], () => u.default.getPremiumTypeSubscription()), R = (0, c.useIsEligibleForBogoPromotion)();
     if (!R) return null;
-    let m = new Date(s.endDate);
+    let A = new Date(s.endDate);
     return (0, a.jsx)("div", {
       className: i(S.banner, {
         [S.bannerFullscreen]: t
@@ -43,15 +43,15 @@ var n = s("414456"),
             className: S.countdown,
             variant: "text-sm/medium",
             children: (0, a.jsx)(d.default, {
-              endDate: m
+              endDate: A
             })
           }), (0, a.jsx)(l.Text, {
             variant: "text-sm/medium",
             color: "always-white",
             children: null == n ? f.default.Messages.BOGO_PERKS_SUBTITLE_NON_SUB_FORMATTED.format({
-              helpCenterLink: u.default.getArticleURL(T.HelpdeskArticles.SUMMER_2023_BOGO)
+              helpCenterLink: o.default.getArticleURL(T.HelpdeskArticles.SUMMER_2023_BOGO)
             }) : f.default.Messages.BOGO_PERKS_SUBTITLE_SUB_FORMATTED.format({
-              helpCenterLink: u.default.getArticleURL(T.HelpdeskArticles.SUMMER_2023_BOGO)
+              helpCenterLink: o.default.getArticleURL(T.HelpdeskArticles.SUMMER_2023_BOGO)
             })
           })]
         }), (0, a.jsx)(_.default, {

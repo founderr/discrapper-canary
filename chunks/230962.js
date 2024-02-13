@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   default: function() {
-    return h
+    return _
   }
 }), n("222007");
 var a = n("37983"),
@@ -21,7 +21,7 @@ let f = (0, u.cssValueToNumber)(o.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
     BLACK: c.black,
     GRAY: c.gray
   });
-class _ extends s.Component {
+class h extends s.Component {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -90,8 +90,8 @@ class _ extends s.Component {
     }
   }
 }
-_.defaultProps = {
+h.defaultProps = {
   gradientStart: r.default.unsafe_rawColors.YELLOW_260.css,
   gradientEnd: r.default.unsafe_rawColors.GREEN_360.css
 };
-var h = _
+var _ = h

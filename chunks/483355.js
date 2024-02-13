@@ -15,8 +15,8 @@ var i, a, l = n("884691"),
   h = n("658530"),
   p = n("773336"),
   g = n("50885"),
-  m = n("819068");
-let E = {
+  E = n("819068");
+let m = {
     x: 0,
     y: 0
   },
@@ -27,11 +27,11 @@ function v(e) {
     clientX: t,
     clientY: n
   } = e;
-  S = !0, E.x = t, E.y = n
+  S = !0, m.x = t, m.y = n
 }
 let y = new Map;
 
-function O(e, t) {
+function I(e, t) {
   if (null == t) y.delete(e), 0 === y.size && (window.removeEventListener("mousemove", v), S = !1);
   else {
     let n = y.get(e);
@@ -39,7 +39,7 @@ function O(e, t) {
     0 === y.size && window.addEventListener("mousemove", v), y.set(e, t)
   }
   if (p.isPlatformEmbedded) {
-    if ((0, m.isOutOfProcess)()) f.default.setClickZones(Array.from(y.values()).map(e => {
+    if ((0, E.isOutOfProcess)()) f.default.setClickZones(Array.from(y.values()).map(e => {
       let {
         zone: t
       } = e, n = {
@@ -63,23 +63,23 @@ function O(e, t) {
           })
         }),
         function() {
-          if (C) return;
+          if (O) return;
           let e = g.default.requireModule("discord_overlay2");
           e.setClickZoneCallback((e, t, n) => {
             let i = y.get(e);
-            null != i && (!S && (E.x = t, E.y = n), i.instance.click())
-          }), C = !0
+            null != i && (!S && (m.x = t, m.y = n), i.instance.click())
+          }), O = !0
         }()
     }
   }
 }
-let C = !1;
+let O = !1;
 (i = class extends l.PureComponent {
   componentDidMount() {
     this.props.observe ? this.observeZone() : this.updateZone()
   }
   componentWillUnmount() {
-    this.interval.stop(), O(this.zone, null)
+    this.interval.stop(), I(this.zone, null)
   }
   componentDidUpdate(e) {
     let {
@@ -94,8 +94,8 @@ let C = !1;
     this.updateZone(), this.interval.start(this.props.observeInterval, this.updateZone)
   }
   click() {
-    let e = (0, h.createMouseEvent)("click", E.x, E.y);
-    (0, h.dispatchEventToPoint)(e, E.x, E.y)
+    let e = (0, h.createMouseEvent)("click", m.x, m.y);
+    (0, h.dispatchEventToPoint)(e, m.x, m.y)
   }
   constructor(...e) {
     super(...e), this.zone = o.uniqueId("ClickArea"), this.interval = new c.Interval, this.updateZone = () => {
@@ -107,7 +107,7 @@ let C = !1;
           right: i,
           bottom: a
         } = e.getBoundingClientRect();
-        O(this.zone, {
+        I(this.zone, {
           instance: this,
           zone: {
             name: this.zone,

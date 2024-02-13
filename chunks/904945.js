@@ -20,12 +20,12 @@ var s = n("974667"),
       searchQuery: c,
       sectionFilter: f,
       useReducedMotion: E
-    } = e, _ = (0, l.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), h = (0, s.default)({
+    } = e, h = (0, l.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), _ = (0, s.default)({
       id: "people",
-      isEnabled: _,
+      isEnabled: h,
       async scrollToStart() {},
       async scrollToEnd() {}
-    }), C = f !== u.FriendsSections.ONLINE && f !== u.FriendsSections.ALL, I = E || "" !== c || C, T = t.map((e, t) => I ? (0, a.jsx)("div", {
+    }), C = f !== u.FriendsSections.ONLINE && f !== u.FriendsSections.ALL, I = E || "" !== c || C, S = t.map((e, t) => I ? (0, a.jsx)("div", {
       children: e.map(n)
     }, t) : (0, a.jsx)(i.default, {
       transitionAppear: !1,
@@ -33,7 +33,7 @@ var s = n("974667"),
       children: e.map(n)
     }, t));
     return (0, a.jsx)(s.ListNavigatorProvider, {
-      navigator: h,
+      navigator: _,
       children: (0, a.jsx)(s.ListNavigatorContainer, {
         children: e => {
           let {
@@ -44,7 +44,7 @@ var s = n("974667"),
             ref: t,
             className: d.peopleList,
             ...n,
-            children: T
+            children: S
           })
         }
       })

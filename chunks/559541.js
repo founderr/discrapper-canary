@@ -21,10 +21,10 @@ var s = n("414456"),
       showAccountIdentifier: c,
       status: f,
       isMobile: E,
-      className: _
-    } = e, h = (0, i.useStateFromStores)([u.default], () => u.default.getNickname(t.id));
+      className: h
+    } = e, _ = (0, i.useStateFromStores)([u.default], () => u.default.getNickname(t.id));
     return (0, a.jsxs)("div", {
-      className: l(d.userInfo, _, {
+      className: l(d.userInfo, h, {
         [d.hovered]: n
       }),
       children: [(0, a.jsx)(o.default, {
@@ -37,7 +37,7 @@ var s = n("414456"),
         className: d.text,
         children: [(0, a.jsx)(r.default, {
           user: t,
-          nick: h,
+          nick: _,
           botClass: d.botTag,
           className: l(d.discordTag, {
             [d.alignPomelo]: t.isPomelo()

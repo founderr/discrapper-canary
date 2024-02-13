@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return E
   },
   removeAccount: function() {
-    return _
+    return h
   }
 });
 var a = n("171718"),
@@ -76,7 +76,7 @@ function E(e, t) {
   }), Promise.resolve()) : i.default.switchAccountToken(n, t)
 }
 
-function _(e) {
+function h(e) {
   l.default.dispatch({
     type: "MULTI_ACCOUNT_REMOVE_ACCOUNT",
     userId: e

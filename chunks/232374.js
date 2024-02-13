@@ -20,13 +20,13 @@ var a = n("446674"),
       n = (0, l.useModalsStore)(l.hasAnyModalOpenSelector),
       E = n || t || u.ProcessArgs.isDisallowPopupsSet(),
       {
-        coachmarkEnabled: _
+        coachmarkEnabled: h
       } = (0, c.default)({
         location: "useCollectiblesShopTabCoachmarkDismissibleContent"
       }),
-      h = [];
-    _ && (0, d.ageEligibleForPremiumUpsell)(e) && h.push(s.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_COACHMARK);
-    let [C, I] = (0, i.useSelectedDismissibleContent)(E ? [] : h, void 0, !0);
+      _ = [];
+    h && (0, d.ageEligibleForPremiumUpsell)(e) && _.push(s.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_COACHMARK);
+    let [C, I] = (0, i.useSelectedDismissibleContent)(E ? [] : _, void 0, !0);
     return {
       collectiblesShopTabCoachmark: C,
       dismissCollectiblesShopTabCoachmark: () => {

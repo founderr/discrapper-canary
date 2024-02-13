@@ -10,8 +10,8 @@ var a = n("414456"),
   s = n.n(a),
   i = n("446674"),
   r = n("77078"),
-  u = n("463848"),
-  o = n("429928"),
+  o = n("463848"),
+  u = n("429928"),
   d = n("632710"),
   c = n("769791"),
   f = n("233069"),
@@ -23,7 +23,7 @@ var a = n("414456"),
   g = n("938177"),
   I = n("84059");
 
-function _(e) {
+function S(e) {
   let {
     guildId: t,
     member: n,
@@ -33,19 +33,19 @@ function _(e) {
     text: n.nick,
     position: "bottom",
     children: e => {
-      var u;
+      var o;
       return (0, l.jsx)(r.Avatar, {
         src: null != i ? i : n.user.getAvatarURL(t, 16),
         size: r.AvatarSizes.SIZE_16,
         className: s(a, I.partyAvatar),
-        "aria-label": null !== (u = n.nick) && void 0 !== u ? u : E.default.getName(n.user),
+        "aria-label": null !== (o = n.nick) && void 0 !== o ? o : E.default.getName(n.user),
         ...e
       })
     }
   })
 }
 
-function S(e) {
+function _(e) {
   let {
     members: t,
     guildId: n
@@ -55,7 +55,7 @@ function S(e) {
     guildId: n,
     users: t,
     max: 6,
-    renderUser: (e, t, a) => (0, l.jsx)(_, {
+    renderUser: (e, t, a) => (0, l.jsx)(S, {
       guildId: n,
       member: e,
       className: t
@@ -81,13 +81,13 @@ var N = e => {
     if (p) return C.default.getUser(m[0])
   });
   if (null == E) return null;
-  let _ = p || (0, o.default)(n),
+  let S = p || (0, u.default)(n),
     N = (0, f.isVoiceChannel)(t.type);
   return (0, l.jsxs)("div", {
     className: I.activity,
     children: [(0, l.jsx)("div", {
       className: I.channelActivityContainer,
-      children: _ ? (0, l.jsx)(g.default, {
+      children: S ? (0, l.jsx)(g.default, {
         activity: n,
         embeddedApp: s,
         user: E,
@@ -96,13 +96,13 @@ var N = e => {
         onOpenSpotifyTrack: N ? c.openTrack : void 0,
         onOpenSpotifyArtist: N ? c.openArtist : void 0,
         onOpenSpotifyAlbum: N ? c.openAlbum : void 0
-      }) : (0, l.jsx)(u.default, {
-        type: u.UserActivityTypes.VOICE_CHANNEL,
+      }) : (0, l.jsx)(o.default, {
+        type: o.UserActivityTypes.VOICE_CHANNEL,
         activity: n,
         user: E,
         guildId: t.getGuildId(),
         channelId: t.id,
-        renderHeaderAccessory: null != a ? () => (0, l.jsx)(S, {
+        renderHeaderAccessory: null != a ? () => (0, l.jsx)(_, {
           guildId: t.guild_id,
           members: a
         }) : void 0,
@@ -111,7 +111,7 @@ var N = e => {
     }), (0, l.jsx)("div", {
       className: I.activityActionsContainer,
       children: (0, l.jsx)(d.default, {
-        type: u.UserActivityTypes.VOICE_CHANNEL,
+        type: o.UserActivityTypes.VOICE_CHANNEL,
         activity: n,
         user: E,
         guildId: t.getGuildId(),

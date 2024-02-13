@@ -16,28 +16,28 @@ var s = n("414456"),
   c = n("364719"),
   f = n("701909"),
   E = n("13798"),
-  _ = n("386045"),
-  h = n("803725"),
+  h = n("386045"),
+  _ = n("803725"),
   C = n("80028"),
   I = n("49111"),
-  T = n("782340"),
-  S = n("410876");
+  S = n("782340"),
+  p = n("410876");
 
-function p(e) {
-  o.default.open(I.UserSettingsSections.CLIPS), (0, h.dismissClipsUserEducation)(e)
+function m(e) {
+  o.default.open(I.UserSettingsSections.CLIPS), (0, _.dismissClipsUserEducation)(e)
 }
 
-function m() {
+function T() {
   let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(I.GlobalKeybindActions.SAVE_CLIP));
   if (null == e) return (0, a.jsx)(a.Fragment, {
-    children: T.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
+    children: S.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
   });
   let t = E.toString(e.shortcut, !0);
   return (0, a.jsx)(a.Fragment, {
-    children: T.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
+    children: S.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
       keybind: t,
       keybindHook: () => (0, a.jsx)("span", {
-        className: S.keyCombo,
+        className: p.keyCombo,
         children: (0, a.jsx)(r.KeyCombo, {
           shortcut: t
         })
@@ -52,32 +52,32 @@ let g = {
     buttonColor: r.Button.Colors.PRIMARY,
     bodyCopy: () => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(c.default, {
-        className: S.errorWarningIcon
-      }), T.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
+        className: p.errorWarningIcon
+      }), S.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
     }),
-    buttonCopy: () => T.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
+    buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
     ctaOnClick: () => {
       window.open(f.default.getArticleURL(I.HelpdeskArticles.CLIPS), "_blank")
     },
-    containerClass: S.container
+    containerClass: p.container
   },
   [C.ClipsUserEducationType.Disabled]: {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.BRAND,
-    bodyCopy: () => T.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
-    buttonCopy: () => T.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => p(C.ClipsUserEducationType.Disabled),
-    containerClass: S.container
+    bodyCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
+    buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
+    ctaOnClick: () => m(C.ClipsUserEducationType.Disabled),
+    containerClass: p.container
   },
   [C.ClipsUserEducationType.Enabled]: {
     textColor: "always-white",
     buttonLook: r.Button.Looks.INVERTED,
     buttonColor: r.Button.Colors.BRAND,
-    bodyCopy: () => (0, a.jsx)(m, {}),
-    buttonCopy: () => T.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => p(C.ClipsUserEducationType.Enabled),
-    containerClass: l(S.container, S.containerEnabled)
+    bodyCopy: () => (0, a.jsx)(T, {}),
+    buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
+    ctaOnClick: () => m(C.ClipsUserEducationType.Enabled),
+    containerClass: l(p.container, p.containerEnabled)
   }
 };
 
@@ -86,9 +86,9 @@ function A() {
   let {
     decoupledClipsEnabled: t,
     clipsError: n
-  } = (0, i.useStateFromStoresObject)([_.default], () => ({
-    decoupledClipsEnabled: _.default.getSettings().decoupledClipsEnabled,
-    clipsError: _.default.getLastClipsError()
+  } = (0, i.useStateFromStoresObject)([h.default], () => ({
+    decoupledClipsEnabled: h.default.getSettings().decoupledClipsEnabled,
+    clipsError: h.default.getLastClipsError()
   }));
   let s = (e = t, null != n ? C.ClipsUserEducationType.Error : e ? C.ClipsUserEducationType.Enabled : C.ClipsUserEducationType.Disabled),
     {
@@ -107,18 +107,18 @@ function A() {
       variant: "text-sm/medium",
       children: l()
     }), (0, a.jsx)(r.Button, {
-      onClick: () => (0, h.dismissClipsUserEducation)(s),
+      onClick: () => (0, _.dismissClipsUserEducation)(s),
       size: r.Button.Sizes.NONE,
       look: r.Button.Looks.BLANK,
-      className: S.buttonClose,
+      className: p.buttonClose,
       children: (0, a.jsx)(d.default, {
-        className: S.dismissIcon,
+        className: p.dismissIcon,
         width: 16,
         height: 16
       })
     }), (0, a.jsx)(r.Button, {
       onClick: u,
-      className: S.buttonCTA,
+      className: p.buttonCTA,
       color: f,
       look: E,
       fullWidth: !0,

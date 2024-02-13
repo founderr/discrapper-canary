@@ -20,7 +20,7 @@ var s = n("446674"),
       handleCategorySelect: t,
       shouldDisplaySelectedCategory: n,
       currentCategoryId: E
-    } = e, _ = (0, s.useStateFromStores)([r.default], () => r.default.hasHotspot(i.HotspotLocations.HUB_NEW));
+    } = e, h = (0, s.useStateFromStores)([r.default], () => r.default.hasHotspot(i.HotspotLocations.HUB_NEW));
     return (0, a.jsx)(u.default, {
       avatar: (0, a.jsx)(o.default, {}),
       name: c.default.Messages.HUB_SCHOOL_HUBS,
@@ -39,7 +39,7 @@ var s = n("446674"),
       className: f.categoryItem,
       selectedClassName: f.selectedCategoryItem,
       innerClassName: f.itemInner,
-      children: _ && (0, a.jsx)("div", {
+      children: h && (0, a.jsx)("div", {
         className: f.new,
         children: (0, a.jsx)(l.Text, {
           color: "none",

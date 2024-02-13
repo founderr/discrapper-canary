@@ -22,21 +22,21 @@ var a, s, l = n("37983"),
   c = n("810467"),
   f = n("393414"),
   E = n("716214"),
-  _ = n("488464"),
-  h = n("998716"),
+  h = n("488464"),
+  _ = n("998716"),
   C = n("230324"),
   I = n("834052"),
-  T = n("160870"),
-  S = n("957255"),
-  p = n("316133"),
-  m = n("660279"),
+  S = n("160870"),
+  p = n("957255"),
+  m = n("316133"),
+  T = n("660279"),
   g = n("943232"),
   A = n("36694"),
   N = n("945330"),
   R = n("272339"),
   O = n("718550"),
-  L = n("228427"),
-  v = n("811305"),
+  v = n("228427"),
+  L = n("811305"),
   M = n("599110"),
   P = n("449008"),
   D = n("374021"),
@@ -126,7 +126,7 @@ function Q(e) {
   let {
     guildEvent: t,
     channel: n
-  } = e, a = (0, r.useStateFromStoresArray)([p.default], () => p.default.getVoiceStatesForChannel(n).map(e => {
+  } = e, a = (0, r.useStateFromStoresArray)([m.default], () => m.default.getVoiceStatesForChannel(n).map(e => {
     let {
       user: t
     } = e;
@@ -174,7 +174,7 @@ function Z(e) {
       width: 16,
       height: 16,
       className: z.buttonIcon
-    }) : (0, l.jsx)(m.default, {
+    }) : (0, l.jsx)(T.default, {
       width: 16,
       height: 16,
       className: z.buttonIcon
@@ -191,13 +191,13 @@ function X(e) {
     startTime: f,
     endTime: E
   } = (0, k.default)(n.id), {
-    startDateTimeString: _,
-    upcomingEvent: h,
+    startDateTimeString: h,
+    upcomingEvent: _,
     diffMinutes: C
-  } = (0, H.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), I = h ? C > 0 ? K.default.Messages.STARTING_IN_MINUTES.format({
+  } = (0, H.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), I = _ ? C > 0 ? K.default.Messages.STARTING_IN_MINUTES.format({
     minutes: C
   }) : K.default.Messages.STARTING_SOON : K.default.Messages.STARTING_ON_DATE.format({
-    date: _
+    date: h
   });
   return i.useEffect(() => {
     M.default.track(W.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -332,9 +332,9 @@ function et(e) {
   } = e, {
     speakers: a,
     listenerCount: s
-  } = (0, r.useStateFromStoresObject)([_.default], () => {
-    let e = _.default.getMutableParticipants(n.id, h.StageChannelParticipantNamedIndex.SPEAKER),
-      t = _.default.getParticipantCount(n.id, h.StageChannelParticipantNamedIndex.AUDIENCE);
+  } = (0, r.useStateFromStoresObject)([h.default], () => {
+    let e = h.default.getMutableParticipants(n.id, _.StageChannelParticipantNamedIndex.SPEAKER),
+      t = h.default.getParticipantCount(n.id, _.StageChannelParticipantNamedIndex.AUDIENCE);
     return {
       speakers: [...new Set(e.map(e => e.user))],
       listenerCount: t
@@ -354,7 +354,7 @@ function et(e) {
       height: 14,
       className: z.stageIcon
     }),
-    locationIcon: (0, l.jsx)(L.default, {
+    locationIcon: (0, l.jsx)(v.default, {
       width: 16,
       height: 16,
       className: z.stageIcon
@@ -373,7 +373,7 @@ function en(e) {
     channel: t,
     speakers: n,
     voiceType: a
-  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([S.default], () => S.default.can(W.Permissions.CONNECT, t)), c = (0, T.default)(t.id), f = K.default.Messages.JOIN;
+  } = e, s = t.getGuildId(), u = i.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([p.default], () => p.default.can(W.Permissions.CONNECT, t)), c = (0, S.default)(t.id), f = K.default.Messages.JOIN;
   switch (a) {
     case 1:
       f = K.default.Messages.JOIN;
@@ -390,11 +390,11 @@ function en(e) {
   return null == s ? null : (0, l.jsxs)(l.Fragment, {
     children: [u.length > 0 ? (0, l.jsxs)("div", {
       className: z.textBlock,
-      children: [(0, l.jsx)(v.default, {
+      children: [(0, l.jsx)(L.default, {
         guildId: s,
         users: u,
         showUserPopout: !0,
-        size: v.Sizes.SIZE_16
+        size: L.Sizes.SIZE_16
       }), (0, l.jsx)(o.Text, {
         color: "header-secondary",
         variant: "text-xs/normal",
@@ -429,24 +429,24 @@ var ea = i.memo(function(e) {
     isEventNoticeHidden: b.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [u, s]), _ = null, h = null != u && null != a && !f;
+  }), [u, s]), h = null, _ = null != u && null != a && !f;
   if (n) return (0, l.jsx)(c.default, {
     guild: t
   });
-  null == s || E ? h && (_ = (0, l.jsx)(et, {
+  null == s || E ? _ && (h = (0, l.jsx)(et, {
     stageInstance: u,
     channel: a
-  })) : s.entity_type === Y.GuildScheduledEventEntityTypes.STAGE_INSTANCE && h ? _ = (0, l.jsx)(et, {
+  })) : s.entity_type === Y.GuildScheduledEventEntityTypes.STAGE_INSTANCE && _ ? h = (0, l.jsx)(et, {
     stageInstance: u,
     channel: a
-  }) : s.entity_type === Y.GuildScheduledEventEntityTypes.EXTERNAL ? _ = (0, l.jsx)(J, {
+  }) : s.entity_type === Y.GuildScheduledEventEntityTypes.EXTERNAL ? h = (0, l.jsx)(J, {
     guildEvent: s
-  }) : s.entity_type === Y.GuildScheduledEventEntityTypes.VOICE && null != a && (_ = (0, l.jsx)(Q, {
+  }) : s.entity_type === Y.GuildScheduledEventEntityTypes.VOICE && null != a && (h = (0, l.jsx)(Q, {
     guildEvent: s,
     channel: a
   }));
   let C = t.hasFeature(W.GuildFeatures.COMMUNITY) || t.hasFeature(W.GuildFeatures.HUB);
-  if (null == _ && null != i && !C) {
+  if (null == h && null != i && !C) {
     let {
       upcomingEvent: e,
       noticeType: n
@@ -454,10 +454,10 @@ var ea = i.memo(function(e) {
     G.default.trackExposure({
       guildId: t.id,
       location: "Guild Live Channel Notice"
-    }), _ = o ? (0, l.jsx)(X, {
+    }), h = o ? (0, l.jsx)(X, {
       guildEvent: e,
       noticeType: n
     }) : null
   }
-  return _
+  return h
 })

@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("476042"),
-  u = n("907002"),
-  o = n("974667"),
+  o = n("907002"),
+  u = n("974667"),
   d = n("769846"),
   c = n("452804"),
   f = n("677099"),
@@ -21,8 +21,8 @@ var l = n("37983"),
   E = n("472942"),
   g = n("492950"),
   I = n("610898"),
-  _ = n("829562"),
-  S = n("782340"),
+  S = n("829562"),
+  _ = n("782340"),
   N = n("54965"),
   T = n("789978");
 let A = (0, C.cssValueToNumber)(d.default.FOLDER_ITEM_ANIMATION_DURATION),
@@ -74,7 +74,7 @@ function x(e) {
     K(e)
   }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && G()
-  }, [G, d]), J = null != B && "" !== B ? B : null != M && "" !== M ? M : S.default.Messages.SERVER_FOLDER_PLACEHOLDER, q = (0, o.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, u.useTransition)(!Z && d, {
+  }, [G, d]), J = null != B && "" !== B ? B : null != M && "" !== M ? M : _.default.Messages.SERVER_FOLDER_PLACEHOLDER, q = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
     from: {
       height: 0
     },
@@ -94,7 +94,7 @@ function x(e) {
       selected: s,
       unread: R,
       className: T.pill
-    }), (0, l.jsx)(_.default, {
+    }), (0, l.jsx)(S.default, {
       text: J,
       disabled: D,
       selected: s,
@@ -140,7 +140,7 @@ function x(e) {
       let {
         key: a
       } = n;
-      return t && (0, l.jsx)(u.animated.ul, {
+      return t && (0, l.jsx)(o.animated.ul, {
         id: $,
         style: {
           height: e.height.to(e => e * ee)

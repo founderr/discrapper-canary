@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("37983"),
@@ -15,7 +15,7 @@ var a = n("37983"),
   c = n("782340"),
   f = n("254514"),
   E = n("152985"),
-  _ = e => {
+  h = e => {
     let {
       loadId: t
     } = e, n = (0, o.default)();

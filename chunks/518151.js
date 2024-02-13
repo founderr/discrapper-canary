@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   extractAnnouncementModalContent: function() {
-    return h
+    return _
   },
   default: function() {
     return C
@@ -19,9 +19,9 @@ var s = n("849266"),
   c = n("10641"),
   f = n("286235"),
   E = n("516129"),
-  _ = n("702542");
+  h = n("702542");
 
-function h(e) {
+function _(e) {
   let {
     content: t,
     isPreview: n
@@ -37,16 +37,16 @@ function C(e) {
     location: s
   } = (0, r.useAnalyticsContext)(), {
     analyticsLocations: l
-  } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), c = (0, o.default)(), h = (0, i.isThemeLight)(c);
+  } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), c = (0, o.default)(), _ = (0, i.isThemeLight)(c);
   if ("announcementModalVariant1" === n.properties.oneofKind) {
     let e = (0, E.adaptAnnouncementModalVariant1)({
       content: n.properties.announcementModalVariant1,
       renderModalProps: t,
       analyticsLocations: l,
       analyticsLocation: s,
-      isLightTheme: h
+      isLightTheme: _
     });
-    return (0, a.jsx)(_.default, {
+    return (0, a.jsx)(h.default, {
       ...e
     })
   }

@@ -15,19 +15,19 @@ var a = n("37983"),
   c = n("250529"),
   f = n("391950"),
   E = n("49111"),
-  _ = n("988268"),
-  h = n("782340");
+  h = n("988268"),
+  _ = n("782340");
 
 function C(e) {
   let {
     party: t,
     close: n,
     onSelect: C
-  } = e, I = (0, u.default)(t), T = (0, f.default)(t), S = (0, c.default)(t), p = (0, d.default)(t), m = (0, r.default)(t), g = (0, o.default)(t);
+  } = e, I = (0, u.default)(t), S = (0, f.default)(t), p = (0, c.default)(t), m = (0, d.default)(t), T = (0, r.default)(t), g = (0, o.default)(t);
   return s.useEffect(() => {
     let e = t.currentActivities.filter(e => {
       var t, n;
-      return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === _.ApplicationTypes.GAME
+      return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === h.ApplicationTypes.GAME
     }).map(e => e.game.name);
     i.default.track(E.AnalyticEvents.OPEN_POPOUT, {
       type: "Now Playing Card Popout",
@@ -36,14 +36,14 @@ function C(e) {
   }, []), (0, a.jsxs)(l.Menu, {
     navId: "now-playing-menu",
     onClose: n,
-    "aria-label": h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+    "aria-label": _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onSelect: C,
     children: [I, (0, a.jsxs)(l.MenuGroup, {
-      children: [T, S]
-    }), (0, a.jsx)(l.MenuGroup, {
-      children: p
+      children: [S, p]
     }), (0, a.jsx)(l.MenuGroup, {
       children: m
+    }), (0, a.jsx)(l.MenuGroup, {
+      children: T
     }), g]
   })
 }

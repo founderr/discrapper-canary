@@ -10,8 +10,8 @@ var n = s("414456"),
   i = s.n(n),
   r = s("446674"),
   l = s("77078"),
-  o = s("812204"),
-  u = s("685665"),
+  u = s("812204"),
+  o = s("685665"),
   d = s("441413"),
   c = s("309318"),
   _ = s("446488"),
@@ -21,8 +21,8 @@ var n = s("414456"),
   f = s("871948"),
   S = s("401135"),
   R = s("218435"),
-  m = s("881155"),
-  A = s("782340"),
+  A = s("881155"),
+  m = s("782340"),
   N = s("30126");
 
 function p(e) {
@@ -33,7 +33,7 @@ function p(e) {
     variant: t,
     color: "always-white",
     className: N.description,
-    children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
+    children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
       cheapestMonthlyPrice: s
     })
   })
@@ -45,7 +45,7 @@ var g = e => {
     subscriptionTier: n
   } = e, {
     AnalyticsLocationProvider: S
-  } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), C = (0, E.useIsInPremiumOfferExperience)(), P = (0, T.useIsEligibleForBogoPromotion)(), {
+  } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), C = (0, E.useIsInPremiumOfferExperience)(), P = (0, T.useIsEligibleForBogoPromotion)(), {
     marketingEnabled: O
   } = c.default.useExperiment({
     location: "HeroHeading"
@@ -68,7 +68,7 @@ var g = e => {
         children: [(0, a.jsx)(l.Heading, {
           variant: t ? "display-lg" : "display-md",
           color: "always-white",
-          children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
+          children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
         }), h ? (0, a.jsx)("div", {
           className: N.affinityDescription,
           children: (0, a.jsx)(f.default, {
@@ -83,7 +83,7 @@ var g = e => {
         }) : (0, a.jsxs)(a.Fragment, {
           children: [C ? null : (0, a.jsxs)("div", {
             className: N.buttonContainer,
-            children: [(0, a.jsx)(m.default, {
+            children: [(0, a.jsx)(A.default, {
               forceInverted: !0,
               className: N.button,
               subscriptionTier: n

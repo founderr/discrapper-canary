@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,11 +15,11 @@ var a = n("37983"),
   c = n("145131"),
   f = n("109507"),
   E = n("49111"),
-  _ = n("782340"),
-  h = n("291273"),
+  h = n("782340"),
+  _ = n("291273"),
   C = n("926622");
 let I = d.default.getArticleURL(E.HelpdeskArticles.VERIFICATION_FAQ);
-class T extends s.PureComponent {
+class S extends s.PureComponent {
   renderFields() {
     let {
       types: e,
@@ -40,24 +40,24 @@ class T extends s.PureComponent {
   }
   render() {
     return (0, a.jsxs)(c.default, {
-      className: h.verification,
+      className: _.verification,
       align: c.default.Align.CENTER,
       direction: c.default.Direction.VERTICAL,
       children: [(0, a.jsxs)(c.default, {
-        className: i(h.container, {
-          [h.isMobile]: r.isMobile
+        className: i(_.container, {
+          [_.isMobile]: r.isMobile
         }),
         direction: c.default.Direction.VERTICAL,
         align: c.default.Align.CENTER,
         justify: c.default.Justify.CENTER,
         children: [(0, a.jsx)("div", {
-          className: h.image
+          className: _.image
         }), (0, a.jsx)("div", {
-          className: i(h.title, C.marginTop20),
-          children: _.default.Messages.VERIFICATION_TITLE
+          className: i(_.title, C.marginTop20),
+          children: h.default.Messages.VERIFICATION_TITLE
         }), (0, a.jsx)("div", {
-          className: i(h.body, C.marginTop4, C.marginBottom20),
-          children: _.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
+          className: i(_.body, C.marginTop4, C.marginBottom20),
+          children: h.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
             helpCenterURL: I
           })
         }), (0, a.jsx)(c.default, {
@@ -67,22 +67,22 @@ class T extends s.PureComponent {
           children: this.renderFields()
         })]
       }), (0, a.jsx)("div", {
-        className: i(h.footer, C.marginTop20),
-        children: _.default.Messages.VERIFICATION_FOOTER
+        className: i(_.footer, C.marginTop20),
+        children: h.default.Messages.VERIFICATION_FOOTER
       }), (0, a.jsxs)(c.default, {
         className: i(C.marginTop4, C.marginBottom20),
         grow: 0,
         children: [(0, a.jsx)("div", {
-          className: i(h.footer, h.footerAction),
-          children: _.default.Messages.VERIFICATION_FOOTER_SUPPORT.format({
+          className: i(_.footer, _.footerAction),
+          children: h.default.Messages.VERIFICATION_FOOTER_SUPPORT.format({
             supportURL: d.default.getSubmitRequestURL()
           })
         }), (0, a.jsx)("div", {
-          className: i(h.footer, h.footerBullet),
+          className: i(_.footer, _.footerBullet),
           children: "•"
         }), (0, a.jsx)("div", {
-          className: i(h.footer, h.footerAction),
-          children: _.default.Messages.VERIFICATION_FOOTER_LOGOUT.format({
+          className: i(_.footer, _.footerAction),
+          children: h.default.Messages.VERIFICATION_FOOTER_LOGOUT.format({
             logoutOnClick: this.props.onLogout
           })
         })]
@@ -98,9 +98,9 @@ class T extends s.PureComponent {
     }
   }
 }
-T.defaultProps = {
+S.defaultProps = {
   types: [E.VerificationTypes.CAPTCHA],
   onCaptchaVerify: E.NOOP,
   onLogout: E.NOOP
 };
-var S = T
+var p = S

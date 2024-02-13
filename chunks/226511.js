@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 }), n("222007");
 var a = n("446674"),
@@ -26,7 +26,7 @@ class E extends a.default.Store {
   }
 }
 E.displayName = "EnablePublicGuildUpsellNoticeStore";
-var _ = new E(l.default, {
+var h = new E(l.default, {
   PUBLIC_UPSELL_NOTICE_DISMISS: function(e) {
     let t = e.guildId;
     if (!f.has(t)) return f.add(t), s.default.set(c, f), !0

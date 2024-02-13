@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return O
   },
   default: function() {
-    return L
+    return v
   }
 }), n("222007");
 var a = n("37983"),
@@ -18,14 +18,14 @@ var a = n("37983"),
   c = n("141254"),
   f = n("116616"),
   E = n("580357"),
-  _ = n("587974"),
-  h = n("315102"),
+  h = n("587974"),
+  _ = n("315102"),
   C = n("794818"),
   I = n("378662"),
-  T = n("574921"),
-  S = n("311092"),
-  p = n("613088"),
-  m = n("49111"),
+  S = n("574921"),
+  p = n("311092"),
+  m = n("613088"),
+  T = n("49111"),
   g = n("782340"),
   A = n("750408"),
   N = n("68422"),
@@ -33,13 +33,13 @@ var a = n("37983"),
 let O = () => (0, a.jsx)("div", {
   className: A.placeholder
 });
-var L = e => {
+var v = e => {
   var t;
   let {
     guild: l,
     theme: O,
-    onView: L,
-    onTagClick: v
+    onView: v,
+    onTagClick: L
   } = e, {
     id: M,
     discoverySplash: P,
@@ -51,18 +51,18 @@ var L = e => {
     keywords: G
   } = l, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
     analyticsLocations: B
-  } = (0, u.default)(), H = h.default.getGuildDiscoverySplashURL({
+  } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
     splash: P,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case m.ThemeTypes.DARK:
+      case T.ThemeTypes.DARK:
         return N;
-      case m.ThemeTypes.LIGHT:
+      case T.ThemeTypes.LIGHT:
         return R
     }
-  }(O), Y = null !== (t = h.default.getGuildIconURL({
+  }(O), Y = null !== (t = _.default.getGuildIconURL({
     id: M,
     icon: D,
     size: 32
@@ -74,11 +74,11 @@ var L = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: m.AnalyticsPages.GUILD_DISCOVERY
+            page: T.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: m.AnalyticsPages.GUILD_DISCOVERY,
-            section: m.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: T.AnalyticsPages.GUILD_DISCOVERY,
+            section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
           analyticsLocations: B
         });
@@ -86,18 +86,18 @@ var L = e => {
       }
       F(!0);
       try {
-        null != L && await L(l.id)
+        null != v && await v(l.id)
       } finally {
         F(!1)
       }
     }
   };
-  s.useEffect(() => T.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => S.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = T.DiscoveryTagsExperiment.useExperiment({
+  } = S.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
@@ -143,8 +143,8 @@ var L = e => {
           }),
           children: [(0, a.jsxs)("div", {
             className: A.header,
-            children: [(0, a.jsx)(_.default, {
-              mask: _.default.Masks.SQUIRCLE,
+            children: [(0, a.jsx)(h.default, {
+              mask: h.default.Masks.SQUIRCLE,
               width: 32,
               height: 32,
               children: (0, a.jsx)("img", {
@@ -170,10 +170,10 @@ var L = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: x
-          }), K && null != G && null != v && (0, a.jsx)(S.DiscoveryTags, {
+          }), K && null != G && null != L && (0, a.jsx)(p.DiscoveryTags, {
             guildId: l.id,
-            discoveryTagStyle: S.DiscoveryTagStyle.ALT,
-            onTagClick: e => v(e, l.id),
+            discoveryTagStyle: p.DiscoveryTagStyle.ALT,
+            onTagClick: e => L(e, l.id),
             tags: G,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
@@ -204,7 +204,7 @@ var L = e => {
           })]
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
-          children: (0, a.jsx)(p.default, {
+          children: (0, a.jsx)(m.default, {
             guild: l
           })
         }) : null]

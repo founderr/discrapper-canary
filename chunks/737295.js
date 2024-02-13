@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 });
 var a = n("37983"),
@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("49111"),
   f = n("782340"),
   E = n("616567");
-let _ = (0, d.isSupportedPlatform)() || !1;
-var h = s.memo(function(e) {
+let h = (0, d.isSupportedPlatform)() || !1;
+var _ = s.memo(function(e) {
   let {
     currentRoute: t,
     renderToolbar: n
-  } = e, d = s.useContext(u.AnalyticsContext), h = _ || t === c.Routes.APPLICATION_LIBRARY_SETTINGS;
+  } = e, d = s.useContext(u.AnalyticsContext), _ = h || t === c.Routes.APPLICATION_LIBRARY_SETTINGS;
   return (0, a.jsxs)(i.default, {
     className: E.libraryHeader,
     toolbar: null == n ? void 0 : n(),
@@ -46,7 +46,7 @@ var h = s.memo(function(e) {
       children: [(0, a.jsx)(l.TabBar.Item, {
         id: c.Routes.APPLICATION_LIBRARY,
         children: f.default.Messages.APPLICATION_LIBRARY_MY_GAMES
-      }), h ? (0, a.jsx)(l.TabBar.Item, {
+      }), _ ? (0, a.jsx)(l.TabBar.Item, {
         id: c.Routes.APPLICATION_LIBRARY_SETTINGS,
         children: f.default.Messages.SETTINGS
       }) : null]

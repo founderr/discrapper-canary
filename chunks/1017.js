@@ -9,8 +9,8 @@ var a = s("446674"),
   i = s("177589"),
   r = s("824563"),
   l = s("843823"),
-  o = s("697218"),
-  u = s("49111");
+  u = s("697218"),
+  o = s("49111");
 let d = !1,
   c = {},
   _ = {};
@@ -37,10 +37,10 @@ function T(e) {
   var t, s, a, n;
   let {
     user: r,
-    activities: o
+    activities: u
   } = e;
   if (null == r || !l.default.getUserAffinitiesUserIds().has(r.id)) return !1;
-  let d = o.find(e => e.type !== u.ActivityTypes.CUSTOM_STATUS);
+  let d = u.find(e => e.type !== o.ActivityTypes.CUSTOM_STATUS);
   if (null == d) return I(r.id);
   let E = (0, i.default)(d);
   if (null == E) return I(r.id);
@@ -72,7 +72,7 @@ function f() {
   if (!l.default.needsRefresh() && !d) {
     let t;
     c = {}, _ = {}, t = !1, r.default.getUserIds().forEach(e => {
-      let s = o.default.getUser(e);
+      let s = u.default.getUser(e);
       null != s && (t = T({
         user: s,
         activities: r.default.getActivities(e)

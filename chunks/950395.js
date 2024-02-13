@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return S
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("220978"),
   f = n("581454"),
   E = n("49111"),
-  _ = n("782340");
-let h = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
+  h = n("782340");
+let _ = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
   C = Object.freeze({
     [E.CloudSyncStateTypes.DONE]: u.default,
     [E.CloudSyncStateTypes.PLANNING]: u.default,
@@ -63,19 +63,19 @@ class I extends s.PureComponent {
   getTooltip(e, t) {
     switch (e.type) {
       case E.CloudSyncStateTypes.DONE:
-        if (t) return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_DONE;
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
+        if (t) return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_DONE;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
       case E.CloudSyncStateTypes.CONFLICT:
       case E.CloudSyncStateTypes.ERROR:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
       case E.CloudSyncStateTypes.PLANNING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PLANNING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PLANNING;
       case E.CloudSyncStateTypes.PREPARING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PREPARING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PREPARING;
       case E.CloudSyncStateTypes.PUSHING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PUSHING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PUSHING;
       case E.CloudSyncStateTypes.PULLING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PULLING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PULLING;
       default:
         return null
     }
@@ -88,7 +88,7 @@ class I extends s.PureComponent {
     } = this.props, s = null == e ? {
       type: E.CloudSyncStateTypes.DONE
     } : e, l = this.getIsRecentlySynced(), i = {};
-    (h.has(s.type) || l) && (i.gradientConfig = {
+    (_.has(s.type) || l) && (i.gradientConfig = {
       id: t.id,
       startColor: "rgba(199, 208, 240, 1)",
       stopColor: "rgba(114, 137, 218, 1)",
@@ -108,7 +108,7 @@ class I extends s.PureComponent {
     super(...e), this._doneTimer = new i.Timeout
   }
 }
-var T = l.default.connectStores([o.default], e => {
+var S = l.default.connectStores([o.default], e => {
   let {
     libraryApplication: t
   } = e;

@@ -15,22 +15,22 @@ var a = n("37983"),
   c = n("48821"),
   f = n("388437"),
   E = n("667048"),
-  _ = n("153014"),
-  h = n("79176"),
+  h = n("153014"),
+  _ = n("79176"),
   C = n("986321"),
   I = n("519440"),
-  T = n("947337"),
-  S = n("197881"),
-  p = n("401774"),
-  m = n("607894"),
+  S = n("947337"),
+  p = n("197881"),
+  m = n("401774"),
+  T = n("607894"),
   g = n("746504"),
   A = n("107153"),
   N = n("32505"),
   R = n("731681"),
   O = n("427474"),
-  L = n("994428");
+  v = n("994428");
 
-function v(e) {
+function L(e) {
   e.stopPropagation()
 }
 
@@ -38,7 +38,7 @@ function M(e) {
   var t;
   let {
     guild: n
-  } = e, [o, c] = s.useState(null !== (t = r.default.get(O.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), _ = e => {
+  } = e, [o, c] = s.useState(null !== (t = r.default.get(O.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), h = e => {
     r.default.set(O.LAST_HIDDEN_CHANNEL_NOTICE, e), c(e)
   }, C = (0, l.useStateFromStoresArray)(O.CHANNEL_NOTICE_STORES, () => O.CHANNEL_NOTICES.filter(e => {
     let {
@@ -48,17 +48,17 @@ function M(e) {
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(d.default, {
     contentTypes: C,
-    groupName: L.DismissibleContentGroupName.CHANNEL_NOTICES,
+    groupName: v.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
       let {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        _(Date.now()), s(L.ContentDismissActionType.UNKNOWN)
+        h(Date.now()), s(v.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
-            return (0, a.jsx)(h.default, {
+            return (0, a.jsx)(_.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -83,21 +83,21 @@ function M(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE:
-            return (0, a.jsx)(m.default, {
+            return (0, a.jsx)(T.default, {
               guild: n,
               markAsDismissed: l
             });
           case i.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
             return (0, a.jsx)(u.default, {
               guild: n,
-              markAsDismissed: () => s(L.ContentDismissActionType.UNKNOWN)
+              markAsDismissed: () => s(v.ContentDismissActionType.UNKNOWN)
             });
           default:
             return null
         }
       })();
       return null == r ? null : (0, a.jsx)("div", {
-        onContextMenu: v,
+        onContextMenu: L,
         children: r
       })
     }
@@ -109,7 +109,7 @@ var P = e => {
   } = e, n = (0, R.default)(t);
   switch (n) {
     case R.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
-      return (0, a.jsx)(T.default, {
+      return (0, a.jsx)(S.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
@@ -121,11 +121,11 @@ var P = e => {
         guild: t
       });
     case R.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
-      return (0, a.jsx)(_.default, {
+      return (0, a.jsx)(h.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.GUILD_MFA_WARNING:
-      return (0, a.jsx)(p.default, {
+      return (0, a.jsx)(m.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.COMMANDS_MIGRATION:
@@ -141,7 +141,7 @@ var P = e => {
         guild: t
       })
   }
-  return S.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(M, {
+  return p.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(M, {
     guild: e.guild
   })
 }

@@ -13,21 +13,21 @@ var s = n("77078"),
   o = n("50885"),
   u = n("18520"),
   d = n("49111"),
-  c = (0, u.default)((e, t, n, r, o, u, d, c, f, E, _, h, C) => {
-    let I = "OAuth2Authorize_".concat(e, "_").concat(E, "_").concat(_);
-    return new Promise(T => {
-      let S = e => {
+  c = (0, u.default)((e, t, n, r, o, u, d, c, f, E, h, _, C) => {
+    let I = "OAuth2Authorize_".concat(e, "_").concat(E, "_").concat(h);
+    return new Promise(S => {
+      let p = e => {
         let {
           location: t
         } = e;
-        T(t)
+        S(t)
       };
       (0, s.openModal)(s => (0, a.jsx)(i.OAuth2AuthorizeModal, {
         ...s,
         authorization: t,
         clientId: e,
         scopes: null != n ? n : [],
-        callback: S,
+        callback: p,
         responseType: o,
         redirectUri: u,
         codeChallenge: d,
@@ -35,15 +35,15 @@ var s = n("77078"),
         state: f,
         permissions: r,
         guildId: E,
-        channelId: _,
-        prompt: h,
+        channelId: h,
+        prompt: _,
         disableGuildSelect: "boolean" == typeof C ? C : "true" === C
       }), {
         modalKey: I,
         onCloseRequest: () => {
-          (0, s.closeModal)(I), T(void 0)
+          (0, s.closeModal)(I), S(void 0)
         }
-      }, (0, l.default)(t.application, _) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
+      }, (0, l.default)(t.application, h) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
     })
   }, function(e, t) {
     if (r.isPlatformEmbedded) {

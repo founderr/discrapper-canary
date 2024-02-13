@@ -79,16 +79,16 @@ var U = i.forwardRef(function(e, t) {
     },
     scrollOffset: 20,
     searchQuery: ""
-  }), Q = e => {
+  }), X = e => {
     let t = V.length,
       n = K.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
       l = 48 * t + n * P - 512;
     W && e + 420 > l && J(), Z(e), j(), o.current = e
   };
   i.useEffect(() => {
-    Q(o.current)
+    X(o.current)
   }, [Y]);
-  let X = i.useCallback(e => {
+  let Q = i.useCallback(e => {
       let t = e === V.length - 1;
       return t && !W ? 0 : 16
     }, [V.length, W]),
@@ -217,7 +217,7 @@ var U = i.forwardRef(function(e, t) {
       role: "listbox",
       className: M.list,
       listPadding: b,
-      onScroll: Q,
+      onScroll: X,
       renderRow: ei,
       renderSection: el,
       renderSectionHeader: en,
@@ -225,7 +225,7 @@ var U = i.forwardRef(function(e, t) {
       rowCountBySection: $,
       rowHeight: P,
       sectionHeaderHeight: 32,
-      sectionMarginBottom: X,
+      sectionMarginBottom: Q,
       ref: w,
       stickyHeaders: !0
     })]

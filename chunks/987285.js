@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 }), n("222007");
 var a = n("913144"),
@@ -42,4 +42,4 @@ class E extends i.default {
     }
   }
 }
-var _ = new E
+var h = new E

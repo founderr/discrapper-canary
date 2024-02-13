@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PendingMessageRequestRowItem: function() {
-    return _
+    return h
   }
 });
 var a = n("37983"),
@@ -16,35 +16,35 @@ var a = n("37983"),
   f = n("782340"),
   E = n("727447");
 
-function _(e) {
+function h(e) {
   let {
     active: t,
     user: n,
-    channel: _
-  } = e, h = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
+    channel: h
+  } = e, _ = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
     (0, l.showToast)((0, l.createToast)(f.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
   }, []), I = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
-  }, []), T = s.useCallback(() => {
-    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), h && (0, i.transitionToChannel)(_.id)
-  }, [_.id, h]), {
-    acceptMessageRequest: S,
-    rejectMessageRequest: p,
-    isAcceptLoading: m,
+  }, []), S = s.useCallback(() => {
+    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
+  }, [h.id, _]), {
+    acceptMessageRequest: p,
+    rejectMessageRequest: m,
+    isAcceptLoading: T,
     isRejectLoading: g,
     isUserProfileLoading: A,
     isOptimisticAccepted: N,
     isOptimisticRejected: R
   } = (0, d.useMessageRequestActions)({
     user: n,
-    onAcceptSuccess: T,
+    onAcceptSuccess: S,
     onRejectSuccess: I,
     onError: C
-  }), O = m || g || A || N || R;
+  }), O = T || g || A || N || R;
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)(c.default, {
-      channel: _,
+      channel: h,
       otherUser: n,
       active: t
     }), (0, a.jsxs)("div", {
@@ -54,7 +54,7 @@ function _(e) {
         color: l.ButtonColors.PRIMARY,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), p(_.id)
+          e.stopPropagation(), m(h.id)
         },
         disabled: O,
         submitting: g || R,
@@ -64,10 +64,10 @@ function _(e) {
         color: l.ButtonColors.BRAND,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), S(_.id)
+          e.stopPropagation(), p(h.id)
         },
         disabled: O,
-        submitting: m || A || N,
+        submitting: T || A || N,
         children: f.default.Messages.MESSAGE_REQUEST_ACCEPT
       })]
     })]

@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("803524"),
   f = n("7643"),
   E = n("98708"),
-  _ = n("28424"),
-  h = n("782340"),
+  h = n("28424"),
+  _ = n("782340"),
   C = n("578484");
 
 function I(e) {
@@ -24,25 +24,25 @@ function I(e) {
     active: t,
     user: n,
     channel: I
-  } = e, T = (0, c.useListHasSingleSpamMessageRequest)(), S = s.useCallback(() => {
-    (0, i.showToast)((0, i.createToast)(h.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
+  } = e, S = (0, c.useListHasSingleSpamMessageRequest)(), p = s.useCallback(() => {
+    (0, i.showToast)((0, i.createToast)(_.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
       name: l.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
-  }, []), p = s.useCallback(() => {
-    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), m = s.useCallback(() => {
-    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), T && (0, o.transitionToChannel)(I.id)
-  }, [I.id, T]), {
+    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+  }, []), T = s.useCallback(() => {
+    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), S && (0, o.transitionToChannel)(I.id)
+  }, [I.id, S]), {
     acceptMessageRequest: g,
     isAcceptLoading: A,
     isUserProfileLoading: N,
     isOptimisticAccepted: R
   } = (0, f.useMessageRequestActions)({
     user: n,
-    onAcceptSuccess: m,
-    onRejectSuccess: p,
-    onError: S
-  }), O = A || N, L = O || R;
+    onAcceptSuccess: T,
+    onRejectSuccess: m,
+    onError: p
+  }), O = A || N, v = O || R;
   return (0, a.jsxs)("div", {
     className: C.container,
     children: [(0, a.jsx)(E.default, {
@@ -58,10 +58,10 @@ function I(e) {
         onClick: e => {
           g(I.id), e.stopPropagation()
         },
-        disabled: L,
+        disabled: v,
         submitting: O,
-        children: h.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
-      }), (0, a.jsx)(_.default, {
+        children: _.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
+      }), (0, a.jsx)(h.default, {
         className: C.button,
         channel: I,
         buttonSize: i.Button.Sizes.SMALL

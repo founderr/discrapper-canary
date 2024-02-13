@@ -20,12 +20,12 @@ var l, u, i = n("37983"),
   g = n("817963"),
   S = n("957255"),
   h = n("476263"),
-  m = n("718550"),
-  N = n("398604"),
+  N = n("718550"),
+  m = n("398604"),
   C = n("651072"),
   p = n("1339"),
-  _ = n("613767"),
-  I = n("822516"),
+  I = n("613767"),
+  _ = n("822516"),
   T = n("707916"),
   x = n("255050"),
   D = n("400271"),
@@ -102,7 +102,7 @@ function P(e) {
   }) : (0, i.jsxs)(o.Clickable, {
     className: y.inline,
     onClick: u,
-    children: [(0, i.jsx)(m.default, {
+    children: [(0, i.jsx)(N.default, {
       height: 20,
       width: 20,
       className: s(y.channelContainer, y.icon)
@@ -127,15 +127,15 @@ function O(e) {
     imageLocation: g = 0,
     imageSource: S,
     isActive: h,
-    isUserLurking: m,
+    isUserLurking: N,
     isJoined: p = !1,
     isMember: U = !1,
     isHub: V = !1,
     speakers: O,
     speakerCount: j,
     rsvped: k,
-    canInvite: F,
-    location: b,
+    canInvite: b,
+    location: F,
     truncate: w,
     onContextMenu: H,
     onJoinClick: B,
@@ -151,7 +151,7 @@ function O(e) {
     eventPreview: $,
     recurrenceRule: ee,
     recurrenceId: et
-  } = e, en = (0, _.isChannelPublic)(u, E), el = E === M.GuildScheduledEventEntityTypes.EXTERNAL, {
+  } = e, en = (0, I.isChannelPublic)(u, E), el = E === M.GuildScheduledEventEntityTypes.EXTERNAL, {
     analyticsLocations: eu
   } = (0, f.default)(c.default.GUILD_EVENT_CARD), {
     showRecurringEventsDesktop: ei
@@ -160,10 +160,10 @@ function O(e) {
     location: eu[0]
   }, {
     autoTrackExposure: !1
-  }), ea = (0, d.useStateFromStores)([N.default], () => N.default.getGuildScheduledEvent(Q)), er = [];
+  }), ea = (0, d.useStateFromStores)([m.default], () => m.default.getGuildScheduledEvent(Q)), er = [];
   if (null != ee && null != ea) {
-    let e = (0, I.getRRule)(ee);
-    er = (0, I.generateNextRecurrences)(4, e, new Date(ea.scheduled_start_time))
+    let e = (0, _.getRRule)(ee);
+    er = (0, _.generateNextRecurrences)(4, e, new Date(ea.scheduled_start_time))
   }
   let es = ei && er.length > 0;
   return (0, i.jsxs)(o.ClickableContainer, {
@@ -172,7 +172,7 @@ function O(e) {
     onContextMenu: H,
     className: s(y.card, {
       [y.joined]: p,
-      [y.lurking]: m
+      [y.lurking]: N
     }, n),
     children: [(0, i.jsxs)("div", {
       className: s(y.padding, {
@@ -206,28 +206,28 @@ function O(e) {
           channel: u,
           onJoinClick: B,
           handleLocationClick: el ? e => e.stopPropagation() : void 0,
-          location: b,
+          location: F,
           isExternal: el,
           isHub: V
         }), V ? (0, i.jsx)(R.default, {
           isActive: h,
-          isUserLurking: m,
+          isUserLurking: N,
           isMember: U,
           rsvped: k,
           onRsvpClick: Y,
           onJoinGuildClick: W,
           onGoToGuildClick: z,
           guildName: null == l ? void 0 : l.name,
-          canInvite: F,
+          canInvite: b,
           isChannelPublic: en,
           onInviteClick: K
         }) : (0, i.jsx)(T.default, {
           entityType: E,
           isJoined: p,
           isActive: h,
-          isUserLurking: m,
+          isUserLurking: N,
           rsvped: k,
-          canInvite: F,
+          canInvite: b,
           isChannelPublic: en,
           onContextMenu: H,
           onJoinClick: B,

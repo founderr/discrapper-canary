@@ -10,8 +10,8 @@ var n = s("414456"),
   i = s.n(n),
   r = s("907002"),
   l = s("65597"),
-  o = s("206230"),
-  u = s("154889"),
+  u = s("206230"),
+  o = s("154889"),
   d = s("917247"),
   c = s("218435"),
   _ = s("881155"),
@@ -24,7 +24,7 @@ var n = s("414456"),
       isVisible: n,
       isFullscreen: f,
       subscriptionTier: S
-    } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, m = (0, u.usePremiumDiscountOffer)(), A = (0, u.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.default)([o.default], () => o.default.useReducedMotion), p = (0, r.useSpring)({
+    } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, A = (0, o.usePremiumDiscountOffer)(), m = (0, o.discountOfferHasTier)(A, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.default)([u.default], () => u.default.useReducedMotion), p = (0, r.useSpring)({
       transform: n ? "translateY(-100%)" : "translateY(0%)",
       opacity: n ? 1 : 0,
       config: {
@@ -46,7 +46,7 @@ var n = s("414456"),
         children: [(0, a.jsx)(_.default, {
           className: T.button,
           shinyButtonClassName: T.shinyButton,
-          subscriptionTier: null !== (s = null != S ? S : null == R ? void 0 : R.sku_id) && void 0 !== s ? s : A,
+          subscriptionTier: null !== (s = null != S ? S : null == R ? void 0 : R.sku_id) && void 0 !== s ? s : m,
           premiumModalAnalyticsLocation: g,
           isPersistentCTA: !0
         }), (0, a.jsx)(c.default, {

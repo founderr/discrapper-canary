@@ -9,8 +9,8 @@ var a = s("37983"),
   i = s("414456"),
   r = s.n(i),
   l = s("446674"),
-  o = s("77078"),
-  u = s("913144"),
+  u = s("77078"),
+  o = s("913144"),
   d = s("850068"),
   c = s("583367"),
   _ = s("775433"),
@@ -20,8 +20,8 @@ var a = s("37983"),
   f = s("619935"),
   S = s("308592"),
   R = s("245187"),
-  m = s("102985"),
-  A = s("697218"),
+  A = s("102985"),
+  m = s("697218"),
   N = s("521012"),
   p = s("599110"),
   g = s("764364"),
@@ -33,8 +33,8 @@ var a = s("37983"),
   L = s("154889"),
   x = s("917247"),
   v = s("157829"),
-  D = s("254893"),
-  U = s("840326"),
+  U = s("254893"),
+  D = s("840326"),
   b = s("646718"),
   j = s("49111"),
   G = s("265921"),
@@ -46,37 +46,37 @@ var a = s("37983"),
       sourceAnalyticsLocations: B
     } = (0, T.default)(I.default.PREMIUM_MARKETING), {
       enabled: k
-    } = (0, M.default)(), y = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), H = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), K = (0, x.usePremiumTrialOffer)(), W = (0, L.usePremiumDiscountOffer)(), F = (0, S.useSubscriptionPlansLoaded)(), [w, V] = n.useState(!0), Y = n.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), Q = (0, h.useLocalizedPromoQuery)(), X = null == Q ? void 0 : Q.countryCode, Z = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
+    } = (0, M.default)(), y = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), H = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), K = (0, x.usePremiumTrialOffer)(), F = (0, L.usePremiumDiscountOffer)(), W = (0, S.useSubscriptionPlansLoaded)(), [w, V] = n.useState(!0), Y = n.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), X = (0, h.useLocalizedPromoQuery)(), Q = null == X ? void 0 : X.countryCode, Z = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
     n.useEffect(() => {
       !Z && d.getNitroAffinity()
     }, [Z]), n.useEffect(() => {
-      u.default.wait(async () => {
+      o.default.wait(async () => {
         let e = Date.now();
-        await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(X, null, j.RevenueSurfaces.DISCOVERY)]), Y.current = Date.now() - e, V(!1)
+        await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(Q, null, j.RevenueSurfaces.DISCOVERY)]), Y.current = Date.now() - e, V(!1)
       })
-    }, [X]), n.useEffect(() => {
-      if (s && (null != K || null != W)) {
+    }, [Q]), n.useEffect(() => {
+      if (s && (null != K || null != F)) {
         let e = (0, v.shouldHitUserOfferEndPoints)("PremiumMarketingPage");
-        e ? (0, P.acknowledgeUserOffer)(K, W) : null != K && null == K.expires_at && O.default.acknowledgeUserTrialOffer(K)
+        e ? (0, P.acknowledgeUserOffer)(K, F) : null != K && null == K.expires_at && O.default.acknowledgeUserTrialOffer(K)
       }
-    }, [s, K, W]), n.useEffect(() => {
+    }, [s, K, F]), n.useEffect(() => {
       !w && p.default.track(j.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
         location_stack: B,
         load_duration_ms: Y.current
       })
     }, [B, w]);
-    let J = (0, l.useStateFromStores)([m.default], () => m.default.enabled);
+    let J = (0, l.useStateFromStores)([A.default], () => A.default.enabled);
     if (J) return (0, a.jsx)(E.default, {});
     if (s) return (0, a.jsx)(R.BlockedPaymentsContentSettings, {});
     let q = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
     return q && z && !k ? (0, a.jsx)(i, {
-      children: (0, a.jsx)(U.default, {})
-    }) : y && F && !w ? (0, a.jsx)(i, {
-      children: (0, a.jsx)(D.default, {
+      children: (0, a.jsx)(D.default, {})
+    }) : y && W && !w ? (0, a.jsx)(i, {
+      children: (0, a.jsx)(U.default, {
         entrypoint: t
       })
     }) : (0, a.jsx)("div", {
       className: r(G.container, G.loading),
-      children: (0, a.jsx)(o.Spinner, {})
+      children: (0, a.jsx)(u.Spinner, {})
     })
   }

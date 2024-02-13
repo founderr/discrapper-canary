@@ -10,9 +10,9 @@ var a = s("884691"),
       [t, s] = a.useState(!1),
       [n, i] = a.useState(0),
       [r, l] = a.useState(!1),
-      [o, u] = a.useState(0);
+      [u, o] = a.useState(0);
     return a.useEffect(() => {
-      n >= e && (l(!0), u(Math.floor(n / e)));
+      n >= e && (l(!0), o(Math.floor(n / e)));
       let t = setTimeout(() => {
         i(0)
       }, 1e3);
@@ -20,7 +20,7 @@ var a = s("884691"),
     }, [n, e]), a.useEffect(() => {
       if (!t) {
         let e = setTimeout(() => {
-          l(!1), u(0)
+          l(!1), o(0)
         }, 1e3);
         return () => clearTimeout(e)
       }
@@ -33,6 +33,6 @@ var a = s("884691"),
         s(!1)
       },
       isEasterEggTriggered: r,
-      easterEggLevel: o
+      easterEggLevel: u
     }
   }

@@ -63,8 +63,8 @@ function d(e) {
     getItemProps: J,
     getRowProps: q,
     gridContainerProps: Z,
-    handleGridContainerKeyDown: Q,
-    isUsingKeyboardNavigation: X
+    handleGridContainerKeyDown: X,
+    isUsingKeyboardNavigation: Q
   } = (0, s.useKeyboardNavigation)({
     columnCounts: Y,
     expressionsListRef: k,
@@ -75,11 +75,11 @@ function d(e) {
   }), $ = i.useCallback(e => {
     let t = V[e];
     return S(t, q(e), {
-      isUsingKeyboardNavigation: X.current,
+      isUsingKeyboardNavigation: Q.current,
       gutterWidth: z,
       rowIndex: e
     }, t => J(e, t), t => c.setInspectedExpressionPosition(t, e))
-  }, [V, J, q, z, X, S, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
+  }, [V, J, q, z, Q, S, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
     var e;
     return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
   }, [V, B.columnIndex, B.rowIndex, I]);
@@ -94,7 +94,7 @@ function d(e) {
       ref: w,
       store: c,
       hasSendableExpressions: !0,
-      onKeyDown: Q,
+      onKeyDown: X,
       expressionsListRef: k,
       gridNavigatorId: b,
       defaultSearchPlaceholder: h,

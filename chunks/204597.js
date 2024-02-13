@@ -28,35 +28,35 @@ var a = n("37983"),
       if (null == l || null == s) return null;
       let i = l[s];
       return null == i ? null : n(i)
-    }, _ = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), h = s.useRef(null), C = s.useCallback(() => new Promise(e => {
-      let t = h.current;
+    }, h = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), _ = s.useRef(null), C = s.useCallback(() => new Promise(e => {
+      let t = _.current;
       if (null == t) return e();
       t.scrollToTop({
         callback: () => requestAnimationFrame(() => e())
       })
     }), []), I = s.useCallback(() => new Promise(e => {
-      let t = h.current;
+      let t = _.current;
       if (null == t) return e();
       t.scrollToBottom({
         callback: () => requestAnimationFrame(() => e())
       })
-    }), []), T = s.useCallback(e => {
+    }), []), S = s.useCallback(e => {
       let t = document.querySelector(e),
-        n = h.current;
+        n = _.current;
       null != t && null != n && n.scrollIntoViewNode({
         node: t,
         padding: 8,
         callback: () => null == t ? void 0 : t.focus()
       })
-    }, []), S = (0, l.default)({
+    }, []), p = (0, l.default)({
       id: "people-list",
-      isEnabled: _,
+      isEnabled: h,
       scrollToStart: C,
       scrollToEnd: I,
-      setFocus: T
+      setFocus: S
     });
     return (0, a.jsx)(l.ListNavigatorProvider, {
-      navigator: S,
+      navigator: p,
       children: (0, a.jsx)(l.ListNavigatorContainer, {
         children: e => {
           let {
@@ -66,7 +66,7 @@ var a = n("37983"),
           return (0, a.jsx)(r.ListAuto, {
             ref: e => {
               var t;
-              h.current = e, n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
+              _.current = e, n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
             },
             sectionHeight: f,
             renderRow: E,

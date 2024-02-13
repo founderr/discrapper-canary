@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return L
   }
 });
 var a = n("37983"),
@@ -15,14 +15,14 @@ var a = n("37983"),
   c = n("775377"),
   f = n("583232"),
   E = n("891964"),
-  _ = n("644091"),
-  h = n("845579"),
+  h = n("644091"),
+  _ = n("845579"),
   C = n("52028"),
   I = n("381546"),
-  T = n("304121"),
-  S = n("599110"),
-  p = n("158998"),
-  m = n("49111"),
+  S = n("304121"),
+  p = n("599110"),
+  m = n("158998"),
+  T = n("49111"),
   g = n("782340"),
   A = n("304169");
 
@@ -41,7 +41,7 @@ function N(e) {
       color: s ? "currentColor" : void 0
     }), (0, a.jsx)("div", {
       className: A.status,
-      children: (0, p.humanizeStatus)(t)
+      children: (0, m.humanizeStatus)(t)
     }), null != n && (0, a.jsx)("div", {
       className: A.description,
       children: n
@@ -53,7 +53,7 @@ function R(e) {
   let {
     customStatus: t
   } = e, n = e => {
-    e.stopPropagation(), h.CustomStatusSetting.updateSetting(void 0)
+    e.stopPropagation(), _.CustomStatusSetting.updateSetting(void 0)
   };
   return null != t ? (0, a.jsx)("div", {
     "aria-label": g.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
@@ -98,7 +98,7 @@ function O(e) {
   return (0, a.jsxs)("div", {
     className: i(A.statusItem, A.statusItemNoPadding, A.customStatusContentIcon, A.switchAccountsItem),
     "aria-label": g.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-    children: [(0, a.jsx)(T.default, {
+    children: [(0, a.jsx)(S.default, {
       width: 18,
       height: 18,
       className: A.switchAccountsIcon,
@@ -109,15 +109,15 @@ function O(e) {
     })]
   })
 }
-let L = e => {
+let v = e => {
   let {
     customStatus: t,
     onClose: l,
     analyticsContext: i,
     onSelect: r
-  } = e, o = (0, _.useMultiAccountMenuItems)();
+  } = e, o = (0, h.useMultiAccountMenuItems)();
   s.useEffect(() => {
-    S.default.track(m.AnalyticEvents.OPEN_POPOUT, {
+    p.default.track(T.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != t,
       location: i.location
@@ -220,10 +220,10 @@ let L = e => {
     }, "switch-account")]
   })
 };
-var v = (0, d.default)(e => {
+var L = (0, d.default)(e => {
   let t = (0, r.useStateFromStores)([C.default], () => C.default.getCustomStatusActivity()),
-    n = h.StatusSetting.useSetting();
-  return (0, a.jsx)(L, {
+    n = _.StatusSetting.useSetting();
+  return (0, a.jsx)(v, {
     ...e,
     customStatus: t,
     status: n

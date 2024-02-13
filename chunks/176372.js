@@ -16,8 +16,8 @@ var s = n("77078"),
   c = n("247820"),
   f = n("641078"),
   E = n("518151");
-let _ = "PremiumServerDriveAnnouncementModal";
-class h extends i.default {
+let h = "PremiumServerDriveAnnouncementModal";
+class _ extends i.default {
   _initialize() {
     l.default.subscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal), l.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
@@ -30,7 +30,7 @@ class h extends i.default {
         content: e,
         isPreview: t
       });
-      return null != l && ((0, s.closeModal)(_), (0, s.openModalLazy)(async () => {
+      return null != l && ((0, s.closeModal)(h), (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("518151").then(n.bind(n, "518151"));
@@ -39,7 +39,7 @@ class h extends i.default {
           properties: l
         })
       }, {
-        modalKey: _
+        modalKey: h
       }), !0)
     }, this.handlePreview = e => {
       let {
@@ -73,4 +73,4 @@ class h extends i.default {
     }
   }
 }
-var C = new h
+var C = new _

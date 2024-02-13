@@ -10,8 +10,8 @@ var n = s("414456"),
   i = s.n(n),
   r = s("77078"),
   l = s("812204"),
-  o = s("685665"),
-  u = s("324878"),
+  u = s("685665"),
+  o = s("324878"),
   d = s("635956"),
   c = s("400307"),
   _ = s("782340"),
@@ -22,7 +22,7 @@ var n = s("414456"),
       className: t
     } = e, {
       AnalyticsLocationProvider: s
-    } = (0, o.default)(l.default.PREMIUM_MARKETING_HERO_CTA), n = (0, u.useHasActiveTrial)();
+    } = (0, u.default)(l.default.PREMIUM_MARKETING_HERO_CTA), n = (0, o.useHasActiveTrial)();
     return (0, a.jsx)(s, {
       children: (0, a.jsxs)("div", {
         className: i(E.container, t),

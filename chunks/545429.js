@@ -15,19 +15,19 @@ var a = n("917351"),
   c = n("26989"),
   f = n("305961"),
   E = n("824563"),
-  _ = n("27618"),
-  h = n("697218"),
+  h = n("27618"),
+  _ = n("697218"),
   C = n("49111");
 
 function I(e) {
-  let t = h.default.getUser(e);
+  let t = _.default.getUser(e);
   return {
     user: t,
     usernameLower: null != t ? t.username.toLowerCase() : null
   }
 }
 
-function T(e) {
+function S(e) {
   return {
     status: E.default.getStatus(e),
     isMobile: E.default.isMobileOnline(e),
@@ -36,7 +36,7 @@ function T(e) {
   }
 }
 
-function S(e) {
+function p(e) {
   let t = [];
   return s(c.default.memberOf(e)).map(f.default.getGuild).sortBy(e => null != e ? e.name.toLowerCase() : null).forEach(e => {
     null != e && t.push(e)
@@ -45,7 +45,7 @@ function S(e) {
     mutualGuilds: t.slice(0, 5)
   }
 }
-class p extends o.default {
+class m extends o.default {
   get comparator() {
     var e, t, n, a, s;
     return [this.type, null !== (s = null !== (a = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== a ? a : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : this.usernameLower]
@@ -54,28 +54,28 @@ class p extends o.default {
     super(), this.key = e.key, this.type = e.type, this.status = e.status, this.activities = e.activities, this.applicationStream = e.applicationStream, this.user = e.user, this.isMobile = e.isMobile, this.usernameLower = e.usernameLower, this.mutualGuildsLength = e.mutualGuildsLength, this.mutualGuilds = e.mutualGuilds, this.nickname = e.nickname
   }
 }
-class m {
+class T {
   reset() {
-    let e = s.map(_.default.getRelationships(), (e, t) => new p({
+    let e = s.map(h.default.getRelationships(), (e, t) => new m({
         key: t,
         type: e,
-        nickname: _.default.getNickname(t),
+        nickname: h.default.getNickname(t),
         ...I(t),
-        ...T(t),
-        ...S(t)
+        ...S(t),
+        ...p(t)
       })),
-      t = s.map(u.default.getSuggestions(), e => new p({
+      t = s.map(u.default.getSuggestions(), e => new m({
         key: e.key,
         type: 99,
         nickname: e.name,
         ...I(e.key),
-        ...T(e.key),
-        ...S(e.key)
+        ...S(e.key),
+        ...p(e.key)
       }));
-    return new m(s.concat(e, t))
+    return new T(s.concat(e, t))
   }
   clone() {
-    return new m(this._rows)
+    return new T(this._rows)
   }
   update(e) {
     let t = !1;
@@ -131,23 +131,23 @@ class m {
 let g = !0,
   A = !1,
   N = C.FriendsSections.ONLINE,
-  R = new m,
+  R = new T,
   O = !0,
-  L = !1;
+  v = !1;
 
-function v() {
+function L() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
   g && (e || N !== C.FriendsSections.ONLINE && N !== C.FriendsSections.ADD_FRIEND) && !A && (g = !1, A = !0, r.default.fetchRelationships())
 }
 
 function M() {
-  if (g = !0, O ? A = !1 : v(), R = R.reset(), L) return;
+  if (g = !0, O ? A = !1 : L(), R = R.reset(), v) return;
   let e = R.getRelationshipCounts();
   N = 0 === e[C.RelationshipTypes.FRIEND] ? 0 !== e[C.RelationshipTypes.PENDING_INCOMING] ? C.FriendsSections.PENDING : C.FriendsSections.ADD_FRIEND : C.FriendsSections.ONLINE
 }
 
 function P() {
-  R = O ? new m : R.reset()
+  R = O ? new T : R.reset()
 }
 
 function D(e) {
@@ -157,13 +157,13 @@ function D(e) {
 }
 class y extends l.default.Store {
   initialize() {
-    this.waitFor(_.default, E.default, h.default, f.default, c.default, d.default, u.default), this.syncWith([_.default], P), this.syncWith([u.default], P), this.syncWith([h.default], D(I)), this.syncWith([E.default, d.default], D(T)), M()
+    this.waitFor(h.default, E.default, _.default, f.default, c.default, d.default, u.default), this.syncWith([h.default], P), this.syncWith([u.default], P), this.syncWith([_.default], D(I)), this.syncWith([E.default, d.default], D(S)), M()
   }
   getState() {
     return {
       fetching: A,
       section: N,
-      pendingCount: _.default.getPendingCount(),
+      pendingCount: h.default.getPendingCount(),
       rows: R
     }
   }
@@ -174,7 +174,7 @@ var x = new y(i.default, {
     M()
   },
   FRIENDS_SET_SECTION: function(e) {
-    N = e.section, v()
+    N = e.section, L()
   },
   CHANNEL_SELECT: function(e) {
     let {
@@ -195,6 +195,6 @@ var x = new y(i.default, {
     return O = t !== C.DrawerTabTypes.FRIENDS, P(), !O
   },
   FRIENDS_SET_INITIAL_SECTION: function(e) {
-    N = e.section, L = !0
+    N = e.section, v = !0
   }
 })

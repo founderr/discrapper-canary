@@ -46,7 +46,7 @@ async function E(e, t) {
     }), a.filter(e => (null == e ? void 0 : e.price) != null).forEach(e => s.push(e))
   }), s
 }
-async function _(e) {
+async function h(e) {
   let {
     socket: t
   } = e;
@@ -66,7 +66,7 @@ async function _(e) {
   return [...r, ...c]
 }
 
-function h(e) {
+function _(e) {
   let {
     socket: t
   } = e;
@@ -80,22 +80,22 @@ function h(e) {
 var C = {
   [f.RPCCommands.GET_SKUS]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
-    handler: _
+    handler: h
   },
   [f.RPCCommands.GET_ENTITLEMENTS]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
-    handler: h
+    handler: _
   },
   [f.RPCCommands.GET_SKUS_EMBEDDED]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     handler: async e => ({
-      skus: await _(e)
+      skus: await h(e)
     })
   },
   [f.RPCCommands.GET_ENTITLEMENTS_EMBEDDED]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     handler: async e => ({
-      entitlements: await h(e)
+      entitlements: await _(e)
     })
   }
 }

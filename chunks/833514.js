@@ -33,12 +33,12 @@ var a = n("884691"),
         }
         return []
       }, [t, n, e]),
-      [_, h] = (0, i.useSelectedDismissibleContent)(E, void 0, !0),
-      C = null != _ ? c.CollectiblesDCToDisplayOptions[_] : null;
+      [h, _] = (0, i.useSelectedDismissibleContent)(E, void 0, !0),
+      C = null != h ? c.CollectiblesDCToDisplayOptions[h] : null;
     return {
       collectiblesShopTabNewBadgeDisplayOptions: C,
       dismissCollectiblesShopTabNewBadge: () => {
-        null != C && h(f.ContentDismissActionType.AUTO)
+        null != C && _(f.ContentDismissActionType.AUTO)
       }
     }
   }

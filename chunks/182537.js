@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return S
   }
 });
 var a = n("37983");
@@ -16,15 +16,15 @@ var s = n("77078"),
   c = n("669499"),
   f = n("37016"),
   E = n("58069"),
-  _ = n("586391"),
-  h = n("49111");
+  h = n("586391"),
+  _ = n("49111");
 
 function C(e, t) {
   var n;
   if (null == e) return;
   let a = d.default.getCurrentUser(),
     s = null === (n = r.default.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW();
-  s && null != a && null == a.nsfwAllowed && (0, c.openAgeGateModal)(_.AgeGateSource.NSFW_CHANNEL)
+  s && null != a && null == a.nsfwAllowed && (0, c.openAgeGateModal)(h.AgeGateSource.NSFW_CHANNEL)
 }
 class I extends i.default {
   _initialize() {
@@ -58,12 +58,12 @@ class I extends i.default {
         ...n
       })
     }, {
-      modalKey: _.EXISTING_USER_AGE_GATE_MODAL_KEY,
-      onCloseRequest: h.NOOP
+      modalKey: h.EXISTING_USER_AGE_GATE_MODAL_KEY,
+      onCloseRequest: _.NOOP
     })
   }
   handleAgeGateSuccess() {
-    (0, s.updateModal)(_.EXISTING_USER_AGE_GATE_MODAL_KEY, e => (0, a.jsx)(E.default, {
+    (0, s.updateModal)(h.EXISTING_USER_AGE_GATE_MODAL_KEY, e => (0, a.jsx)(E.default, {
       ...e
     }))
   }
@@ -71,13 +71,13 @@ class I extends i.default {
     let {
       underageMessage: t
     } = e;
-    (0, s.updateModal)(_.EXISTING_USER_AGE_GATE_MODAL_KEY, e => (0, a.jsx)(f.default, {
+    (0, s.updateModal)(h.EXISTING_USER_AGE_GATE_MODAL_KEY, e => (0, a.jsx)(f.default, {
       underageMessage: t,
       ...e
     }))
   }
   handleAgeGateModalClose() {
-    (0, s.closeModal)(_.EXISTING_USER_AGE_GATE_MODAL_KEY)
+    (0, s.closeModal)(h.EXISTING_USER_AGE_GATE_MODAL_KEY)
   }
 }
-var T = new I
+var S = new I

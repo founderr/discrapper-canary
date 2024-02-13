@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("37983"),
@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("240481"),
   f = n("227231"),
   E = n("278506"),
-  _ = function(e) {
+  h = function(e) {
     let {
       className: t,
       color: n = o.default.colors.WHITE.css,
       quest: l
-    } = e, _ = (0, r.useStateFromStores)([d.default], () => d.default.locale), h = s.useMemo(() => (0, f.calculatePercentComplete)(l), [l]), C = 100 * h;
+    } = e, h = (0, r.useStateFromStores)([d.default], () => d.default.locale), _ = s.useMemo(() => (0, f.calculatePercentComplete)(l), [l]), C = 100 * _;
     return (0, a.jsxs)("div", {
       className: i(E.wrapper, t),
       style: {
@@ -32,7 +32,7 @@ var a = n("37983"),
           variant: "text-xs/semibold",
           className: E.percentCompleteLabel,
           color: "none",
-          children: (0, c.formatPercent)(_, h, {
+          children: (0, c.formatPercent)(h, _, {
             roundingMode: "floor"
           })
         }), (0, a.jsx)("div", {

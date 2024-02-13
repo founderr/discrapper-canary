@@ -16,12 +16,12 @@ var s = n("819855"),
   c = n("106413"),
   f = n("843455"),
   E = n("406307");
-let _ = {
+let h = {
     trophy: f.Color.PRIMARY_400,
     locked: f.Color.PRIMARY_400,
     unlocked: f.Color.GREEN_330
   },
-  h = {
+  _ = {
     trophy: f.Color.PRIMARY_400,
     locked: f.Color.PRIMARY_400,
     unlocked: f.Color.GREEN_330
@@ -33,28 +33,28 @@ function C(e) {
     achievementId: n,
     unlocked: f,
     size: C = l.AvatarSizes.SIZE_40
-  } = e, I = (0, i.default)(), T = (0, c.getPoggermodeAchievementData)(n);
-  if (null == T) return null;
-  let S = (0, l.getAvatarSpecs)(C),
+  } = e, I = (0, i.default)(), S = (0, c.getPoggermodeAchievementData)(n);
+  if (null == S) return null;
+  let p = (0, l.getAvatarSpecs)(C),
     {
-      name: p,
-      rarity: m
-    } = T,
+      name: m,
+      rarity: T
+    } = S,
     {
       color: g
-    } = (0, c.getAchievementStyles)(m),
-    A = (0, s.isThemeDark)(I) ? _ : h,
-    N = (S.size - S.offset - 2 * S.stroke) * .8,
-    R = S.size - S.stroke,
+    } = (0, c.getAchievementStyles)(T),
+    A = (0, s.isThemeDark)(I) ? h : _,
+    N = (p.size - p.offset - 2 * p.stroke) * .8,
+    R = p.size - p.stroke,
     O = {
       width: .4 * N,
       height: .4 * N
     },
-    L = {
+    v = {
       width: O.width + 1,
       height: O.height + 1,
-      right: S.stroke + 1,
-      bottom: S.stroke + 1,
+      right: p.stroke + 1,
+      bottom: p.stroke + 1,
       padding: 0
     };
   return (0, a.jsxs)("div", {
@@ -62,9 +62,9 @@ function C(e) {
     style: {
       width: R,
       height: R,
-      padding: S.stroke
+      padding: p.stroke
     },
-    "aria-label": "".concat(null !== (t = p()) && void 0 !== t ? t : ""),
+    "aria-label": "".concat(null !== (t = m()) && void 0 !== t ? t : ""),
     children: [(0, a.jsx)("div", {
       className: E.trophyIconContainer,
       children: (0, a.jsx)(d.default, {
@@ -74,14 +74,14 @@ function C(e) {
       })
     }), !f && (0, a.jsx)("div", {
       className: E.lockContainer,
-      style: L,
+      style: v,
       children: (0, a.jsx)(u.default, {
         color: (0, r.getColor)(A.locked),
         ...O
       })
-    }), f && m === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
+    }), f && T === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {
       className: E.lockContainer,
-      style: L,
+      style: v,
       children: (0, a.jsx)(o.default, {
         className: E.confettiIcon,
         ...O

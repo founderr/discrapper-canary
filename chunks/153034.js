@@ -15,27 +15,27 @@ var a = n("37983"),
   c = n("77078"),
   f = n("913144"),
   E = n("272030"),
-  _ = n("259083"),
-  h = n("790219"),
+  h = n("259083"),
+  _ = n("790219"),
   C = n("827825"),
   I = n("577427"),
-  T = n("946749"),
-  S = n("145131"),
-  p = n("953109"),
-  m = n("280174"),
+  S = n("946749"),
+  p = n("145131"),
+  m = n("953109"),
+  T = n("280174"),
   g = n("158352"),
   A = n("867544"),
   N = n("216422"),
   R = n("688342"),
   O = n("599110"),
-  L = n("964889"),
-  v = n("159885"),
+  v = n("964889"),
+  L = n("159885"),
   M = n("950395"),
   P = n("49111"),
   D = n("782340"),
   y = n("304686");
-let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
-  b = (0, v.cssValueToNumber)(d.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let x = (0, L.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
+  b = (0, L.cssValueToNumber)(d.default.GAME_LIST_LINKED_TO_GLOW_DURATION),
   U = Object.freeze({
     [P.GameTableListKeys.PLATFORM]: "Platform",
     [P.GameTableListKeys.LAST_PLAYED]: "Last Played",
@@ -64,11 +64,11 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
     sort: !0,
     cellClassName: y.nameCell,
     bodyCellClassName: y.nameBodyCell,
-    render: e => (0, a.jsxs)(S.default, {
-      align: S.default.Align.CENTER,
-      children: [(0, a.jsx)(p.default, {
+    render: e => (0, a.jsxs)(p.default, {
+      align: p.default.Align.CENTER,
+      children: [(0, a.jsx)(m.default, {
         game: e.application,
-        size: p.default.Sizes.SMALL,
+        size: m.default.Sizes.SMALL,
         className: y.gameIcon
       }), (0, a.jsxs)("div", {
         className: y.nameCellInfo,
@@ -92,8 +92,8 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: y.textCell,
     render(e) {
       let t = e.libraryApplication.getDistributor();
-      return (0, a.jsx)(S.default, {
-        align: S.default.Align.CENTER,
+      return (0, a.jsx)(p.default, {
+        align: p.default.Align.CENTER,
         children: null != t ? P.DistributorNames[t] : D.default.Messages.GAME_LIBRARY_NOT_APPLICABLE
       })
     }
@@ -105,11 +105,11 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: y.textCell,
     render(e) {
       let t;
-      return t = e.isRunning ? D.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? D.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, a.jsx)(m.default, {
+      return t = e.isRunning ? D.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? D.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, a.jsx)(T.default, {
         end: e.lastPlayed,
-        location: m.default.Locations.GAME_LIBRARY_LAST_PLAYED
-      }) : D.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, a.jsx)(S.default, {
-        align: S.default.Align.CENTER,
+        location: T.default.Locations.GAME_LIBRARY_LAST_PLAYED
+      }) : D.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, a.jsx)(p.default, {
+        align: p.default.Align.CENTER,
         className: i({
           [y.lastPlayedCellNew]: e.isNew
         }),
@@ -143,7 +143,7 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
             }),
             libraryApplication: e.libraryApplication
           })]
-        }), (0, L.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, a.jsx)(C.default, {
+        }), (0, v.isUserEntitledToLibraryApplication)(e.libraryApplication) ? (0, a.jsx)(C.default, {
           analyticsListSort: (l = t.sortKey, r = t.sortDirection, "".concat(U[l], " ").concat(r === P.TableSortDirections.ASCENDING ? "ASC" : "DESC")),
           analyticsListIndex: n,
           source: P.AnalyticsLocations.APPLICATION_LIBRARY,
@@ -154,7 +154,7 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
           hideProgress: null != e.defaultAction,
           onDropdownOpen: () => null != t && t.setActiveRowKey(e),
           onDropdownClose: () => null != t && t.clearActiveRowKey()
-        }) : (0, a.jsx)(h.default, {
+        }) : (0, a.jsx)(_.default, {
           skuId: e.libraryApplication.sku.id,
           applicationId: e.application.id,
           color: o ? c.Button.Colors.GREEN : c.Button.Colors.PRIMARY,
@@ -273,7 +273,7 @@ class k extends s.PureComponent {
     })
   }
   handleSort(e, t) {
-    _.sortList(e, t)
+    h.sortList(e, t)
   }
   renderImportHelp() {
     let e;
@@ -287,10 +287,10 @@ class k extends s.PureComponent {
       className: s ? y.emptyStateSmall : y.emptyStateLarge,
       children: [(0, a.jsx)("div", {
         className: y.emptyWumpus
-      }), (0, a.jsx)(S.default, {
+      }), (0, a.jsx)(p.default, {
         grow: 0,
         shrink: s ? 1 : 0,
-        direction: S.default.Direction.VERTICAL,
+        direction: p.default.Direction.VERTICAL,
         children: (0, a.jsxs)("div", {
           className: y.emptyStateText,
           children: [(0, a.jsx)("div", {
@@ -363,9 +363,9 @@ class k extends s.PureComponent {
         overflowMenuRowKey: null
       })
     }, this.handleRowMouseEnter = e => {
-      !this.props.isNavigatingByKeyboard && _.updateActiveRowKey(e.key)
+      !this.props.isNavigatingByKeyboard && h.updateActiveRowKey(e.key)
     }, this.handleRowMouseLeave = () => {
-      !this.props.isNavigatingByKeyboard && _.updateActiveRowKey(null)
+      !this.props.isNavigatingByKeyboard && h.updateActiveRowKey(null)
     }, this.setRowRef = (e, t) => {
       this._rowRefs[t] = e
     }, this.handleApplicationContextMenu = (e, t) => {
@@ -407,11 +407,11 @@ function F(e) {
       sortDirection: c,
       activeRowKey: f,
       isNavigatingByKeyboard: E
-    } = (0, o.useStateFromStoresObject)([T.default], () => ({
-      sortKey: T.default.sortKey,
-      sortDirection: T.default.sortDirection,
-      activeRowKey: T.default.activeRowKey,
-      isNavigatingByKeyboard: T.default.isNavigatingByKeyboard
+    } = (0, o.useStateFromStoresObject)([S.default], () => ({
+      sortKey: S.default.sortKey,
+      sortDirection: S.default.sortDirection,
+      activeRowKey: S.default.activeRowKey,
+      isNavigatingByKeyboard: S.default.isNavigatingByKeyboard
     }));
   return (0, a.jsx)(k, {
     ...e,

@@ -34,11 +34,11 @@ function E(e, t, n, a, s) {
   }
 }(r = s || (s = {}))[r.DISABLED = 0] = "DISABLED", r[r.DEFAULT = 1] = "DEFAULT", r[r.OFFSET = 2] = "OFFSET", (o = l || (l = {})).TOP = "TOP", o.BOTTOM = "BOTTOM", o.RIGHT = "RIGHT", o.LEFT = "LEFT";
 
-function _(e) {
+function h(e) {
   return [null == e.bottom ? "TOP" : "BOTTOM", null == e.right ? "LEFT" : "RIGHT"]
 }
 
-function h(e) {
+function _(e) {
   let {
     top: t,
     left: n,
@@ -209,10 +209,10 @@ function I(e) {
         snapOrientation: c
       } = this.props, {
         dragging: I,
-        dragging: T,
-        verticalOrientation: S,
-        horizontalOrientation: p
-      } = this.state, m = !1;
+        dragging: S,
+        verticalOrientation: p,
+        horizontalOrientation: m
+      } = this.state, T = !1;
       if (null == a || !I && 9 > f(this._dragStart, {
           x: t,
           y: n
@@ -226,17 +226,17 @@ function I(e) {
         left: R
       }, s, l, g, A));
       if (c) {
-        O = h(O);
-        let e = _(O);
-        S = e[0], p = e[1]
+        O = _(O);
+        let e = h(O);
+        p = e[0], m = e[1]
       } else O = {
         top: O.top,
         left: O.left
       };
-      2 === r && p !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, m = !0), 2 === i && S !== this.state.verticalOrientation && (this._offsetY = A - this._offsetY, m = !0), this.setDOMPositions(O), !T && (null == o || o(O, a)), null == u || u(O, a), m && (null == d || d([S, p])), this.setState({
+      2 === r && m !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, T = !0), 2 === i && p !== this.state.verticalOrientation && (this._offsetY = A - this._offsetY, T = !0), this.setDOMPositions(O), !S && (null == o || o(O, a)), null == u || u(O, a), T && (null == d || d([p, m])), this.setState({
         dragging: I,
-        verticalOrientation: S,
-        horizontalOrientation: p,
+        verticalOrientation: p,
+        horizontalOrientation: m,
         atTopEdge: 0 === O.top
       })
     }, this.handleMouseUp = () => {
@@ -276,8 +276,8 @@ function I(e) {
         clientWidth: c
       } = a, f = E(t, s, l, c, d);
       if (f = C(f), r) {
-        e = h(f);
-        let t = _(e);
+        e = _(f);
+        let t = h(e);
         o = t[0], u = t[1]
       } else e = {
         top: f.top,
@@ -294,7 +294,7 @@ function I(e) {
         atTopEdge: I
       })
     };
-    let [t, n] = _(e.initialPosition);
+    let [t, n] = h(e.initialPosition);
     this.position = function(e) {
       let {
         top: t,

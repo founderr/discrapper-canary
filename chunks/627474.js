@@ -9,8 +9,8 @@ var a = s("37983"),
   i = s("414456"),
   r = s.n(i),
   l = s("77078"),
-  o = s("411691"),
-  u = s("367226"),
+  u = s("411691"),
+  o = s("367226"),
   d = s("628550"),
   c = s("598739"),
   _ = s("558566"),
@@ -22,20 +22,20 @@ var a = s("37983"),
       noBackground: i = !1,
       leftAlignHeaders: I = !1,
       showAllPerksButton: T
-    } = e, f = n.useRef(null), S = (0, u.useShouldScrollToWhatsNew)(), R = (0, o.default)("perks-discoverability");
-    (0, u.useClearNewBadge)();
-    let m = s === c.PerksDiscoverabilityVariants.WHATS_NEW;
+    } = e, f = n.useRef(null), S = (0, o.useShouldScrollToWhatsNew)(), R = (0, u.default)("perks-discoverability");
+    (0, o.useClearNewBadge)();
+    let A = s === c.PerksDiscoverabilityVariants.WHATS_NEW;
     n.useEffect(() => {
       let e = f.current;
-      if (null == e || !S || !m) return;
+      if (null == e || !S || !A) return;
       let t = requestAnimationFrame(() => {
         e.scrollIntoView({
           behavior: "smooth"
         })
       });
       return () => cancelAnimationFrame(t)
-    }, [f, S, m]);
-    let A = (0, c.usePerksDiscoverabilityStrings)(m),
+    }, [f, S, A]);
+    let m = (0, c.usePerksDiscoverabilityStrings)(A),
       N = (0, d.default)(),
       p = (0, c.getFilteredPerksDiscoverabilityCards)(N, s, R),
       g = p.some(e => null != e.pillText);
@@ -50,7 +50,7 @@ var a = s("37983"),
           variant: "heading-xxl/extrabold",
           color: "header-primary",
           className: E.heading,
-          children: A.title
+          children: m.title
         });
         return null == T ? e : I ? (0, a.jsxs)("div", {
           className: E.sectionHeader,
@@ -71,12 +71,12 @@ var a = s("37983"),
         className: r(E.subtitle, {
           [E.subtitle]: null == T || I,
           [E.subtitleWithButton]: null != T && !I,
-          [E.fullWidth]: m || I,
+          [E.fullWidth]: A || I,
           [E.moreSubtitleMargin]: g,
           [E.leftAlignSubtitle]: I,
           [E.centerAlignSubtitle]: !I
         }),
-        children: A.subtitle
+        children: m.subtitle
       }), !I && null != T && (0, a.jsx)("div", {
         className: r(E.showAllPerksButtonCenter),
         children: T

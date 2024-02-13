@@ -16,21 +16,21 @@ var s = n("524297"),
   c = n("244201"),
   f = n("550766"),
   E = n("299803"),
-  _ = n("587984"),
-  h = n("292687"),
+  h = n("587984"),
+  _ = n("292687"),
   C = n("42203"),
   I = n("52028"),
-  T = n("101125"),
-  S = n("471671"),
-  p = n("568734"),
-  m = n("449008"),
+  S = n("101125"),
+  p = n("471671"),
+  m = n("568734"),
+  T = n("449008"),
   g = n("253981"),
   A = n("563680"),
   N = n("861309"),
   R = n("578287"),
   O = n("716724"),
-  L = n("613652"),
-  v = n("207873"),
+  v = n("613652"),
+  L = n("207873"),
   M = n("56245"),
   P = n("492249"),
   D = n("49111");
@@ -40,7 +40,7 @@ async function y(e, t, n, a) {
   if (null == l || null == l.secrets || !(0, R.validateActivityInvite)(a, l.party, l.secrets)) throw new N.default({
     errorCode: D.RPCErrors.NO_ELIGIBLE_ACTIVITY
   }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
-  let o = (0, E.default)(l, T.default);
+  let o = (0, E.default)(l, S.default);
   if (o) {
     let {
       lock: t
@@ -167,7 +167,7 @@ var x = {
       } = e, {
         channel: s,
         guild: i
-      } = (0, v.validateOpenInviteDialog)(), r = h.default.getWindow(D.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+      } = (0, L.validateOpenInviteDialog)(), r = _.default.getWindow(D.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
       (null == r ? void 0 : r.closed) && (r = null);
       let o = null != r ? D.AppContext.POPOUT : D.AppContext.APP;
       (0, A.exitFullScreen)({}, null == r ? void 0 : r.document), (0, l.openModalLazy)(async () => {
@@ -199,14 +199,14 @@ var x = {
       if (null == a) throw new N.default({
         errorCode: D.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      let s = null === (t = (0, L.default)()) || void 0 === t ? void 0 : t.id;
+      let s = null === (t = (0, v.default)()) || void 0 === t ? void 0 : t.id;
       if (null == s) throw new N.default({
         errorCode: D.RPCErrors.UNKNOWN_ERROR
       }, "Unable to find selected channel");
       return new Promise((e, t) => {
         ! function(e, t) {
           var n;
-          let a = S.default.getFocusedWindowId(),
+          let a = p.default.getFocusedWindowId(),
             s = null == a ? null : null === (n = (0, c.getAppWindowContextValue)(a)) || void 0 === n ? void 0 : n.renderWindow;
           if (null == s) throw new N.default({
             errorCode: D.RPCErrors.UNKNOWN_ERROR
@@ -219,13 +219,13 @@ var x = {
             }, 1e3)
           };
           l.addEventListener("change", () => {
-            (0, m.isNotNullish)(l.files) && e(l.files[0]), i()
+            (0, T.isNotNullish)(l.files) && e(l.files[0]), i()
           }), l.addEventListener("cancel", () => {
             i()
           }), s.document.body.addEventListener("focus", i, !0), s.document.body.appendChild(l), l.click()
         }(async n => {
           let l = await (0, f.uploadImageAttachment)(a, s, n);
-          (0, m.isNotNullish)(l) && (0, m.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
+          (0, T.isNotNullish)(l) && (0, T.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
             image_url: l.url
           }): t(l)
         }, () => t())
@@ -253,18 +253,18 @@ var x = {
       if (null == s) throw new N.default({
         errorCode: D.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      let l = (0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, D.ApplicationFlags.EMBEDDED);
+      let l = (0, m.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, D.ApplicationFlags.EMBEDDED);
       if (!l) throw new N.default({
         errorCode: D.RPCErrors.INVALID_COMMAND
       }, "This application cannot access this API");
-      let i = (0, L.default)();
+      let i = (0, v.default)();
       if (null == i) throw new N.default({
         errorCode: D.RPCErrors.INVALID_COMMAND
       }, "No channel found");
       if (!g.default.isDiscordCdnUrl(a)) throw new N.default({
         errorCode: D.RPCErrors.INVALID_PAYLOAD
       }, "mediaUrl must be a Discord CDN url");
-      (0, _.openActivityShareMomentModal)({
+      (0, h.openActivityShareMomentModal)({
         applicationId: s,
         channelId: i.id,
         mediaUrl: a

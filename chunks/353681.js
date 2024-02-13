@@ -15,21 +15,21 @@ var a = n("37983"),
   c = n("394846"),
   f = n("446674"),
   E = n("77078"),
-  _ = n("913144"),
-  h = n("340626"),
+  h = n("913144"),
+  _ = n("340626"),
   C = n("444949"),
   I = n("139245"),
-  T = n("69927"),
-  S = n("444497"),
-  p = n("349682"),
-  m = n("393414"),
+  S = n("69927"),
+  p = n("444497"),
+  m = n("349682"),
+  T = n("393414"),
   g = n("970366"),
   A = n("915639"),
   N = n("161778"),
   R = n("350522"),
   O = n("926787"),
-  L = n("305961"),
-  v = n("251013"),
+  v = n("305961"),
+  L = n("251013"),
   M = n("664336"),
   P = n("794818"),
   D = n("574921"),
@@ -59,7 +59,7 @@ class W extends s.PureComponent {
       currentHomepageCategoryId: r,
       mostRecentQuery: o
     } = this.props;
-    if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, h.createAlgoliaIndex)(), _.default.wait(() => {
+    if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
         (0, I.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
       }), !a && 0 === o.length && P.trackDiscoveryViewed({
         loadId: this.loadId,
@@ -74,7 +74,7 @@ class W extends s.PureComponent {
         preferredLocale: a,
         categoryId: s
       } = u.parse(i);
-      (0, h.doAlgoliaSearch)(e, {
+      (0, _.doAlgoliaSearch)(e, {
         categoryId: parseInt(s, 10),
         preferredLocale: a,
         offset: parseInt(t, 10),
@@ -83,8 +83,8 @@ class W extends s.PureComponent {
         },
         length: parseInt(n, 10)
       })
-    } else null != r && r !== k.DISCOVERY_ALL_CATEGORIES_ID && _.default.wait(() => (0, h.selectCategory)(r));
-    let d = (0, m.getHistory)().location,
+    } else null != r && r !== k.DISCOVERY_ALL_CATEGORIES_ID && h.default.wait(() => (0, _.selectCategory)(r));
+    let d = (0, T.getHistory)().location,
       c = null !== (t = null === (e = d.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
     c > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({
       to: c
@@ -112,7 +112,7 @@ class W extends s.PureComponent {
         to: 0
       })
     }
-    e.currentCategoryId !== i && P.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && l !== i && (0, h.selectCategory)(l)
+    e.currentCategoryId !== i && P.trackDiscoveryExited(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && s.length < 1 && l !== i && (0, _.selectCategory)(l)
   }
   componentWillUnmount() {
     let {
@@ -144,7 +144,7 @@ class W extends s.PureComponent {
       analyticsContext: P.AnalyticsContexts.RECOMMENDED,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
-      fetchGuilds: h.fetchGamesYouPlayGuilds,
+      fetchGuilds: _.fetchGamesYouPlayGuilds,
       theme: n
     }) : null
   }
@@ -236,7 +236,7 @@ class W extends s.PureComponent {
       analyticsContext: P.AnalyticsContexts.POPULAR,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
-      fetchGuilds: () => (0, h.fetchFeaturedOrPopularGuilds)(0, 30),
+      fetchGuilds: () => (0, _.fetchFeaturedOrPopularGuilds)(0, 30),
       loadingGuildId: n,
       theme: t,
       onTagClick: (e, t) => this.handleTagSearch(e, t, P.AnalyticsContexts.POPULAR)
@@ -258,7 +258,7 @@ class W extends s.PureComponent {
       analyticsContext: P.AnalyticsContexts.POPULAR,
       onViewGuild: this.handleViewGuild,
       onGuildCardSeen: this.handleGuildCardSeen,
-      fetchGuilds: () => (0, h.fetchPopularGuildsForCategory)(n),
+      fetchGuilds: () => (0, _.fetchPopularGuildsForCategory)(n),
       currentCategoryId: n,
       theme: t,
       onTagClick: (e, t) => this.handleTagSearch(e, t, P.AnalyticsContexts.POPULAR)
@@ -281,18 +281,18 @@ class W extends s.PureComponent {
       location: "54961b_4"
     }, {
       autoTrackExposure: !1
-    }), _ = r === k.DISCOVERY_ALL_CATEGORIES_ID ? null === (e = u[F.GuildDiscoverySections.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = u[r]) || void 0 === t ? void 0 : t.guilds;
-    if (r === k.DISCORD_HUB_ID) return (0, a.jsx)(p.default, {
+    }), h = r === k.DISCOVERY_ALL_CATEGORIES_ID ? null === (e = u[F.GuildDiscoverySections.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = u[r]) || void 0 === t ? void 0 : t.guilds;
+    if (r === k.DISCORD_HUB_ID) return (0, a.jsx)(m.default, {
       loadId: this.loadId
     });
-    let h = r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_HOME_TITLE : B.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
+    let _ = r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_HOME_TITLE : B.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
       categoryName: n
     });
     return (0, a.jsxs)("div", {
       className: H.pageWrapper,
-      children: [(0, a.jsx)(T.AppPageTitle, {
+      children: [(0, a.jsx)(S.AppPageTitle, {
         subsection: d ? l : void 0,
-        location: h
+        location: _
       }), (0, a.jsx)("div", {
         className: i(H.dragRegion, H.pageHeaderDrag, {
           [H.searchPageDrag]: d
@@ -335,7 +335,7 @@ class W extends s.PureComponent {
                     className: H.headerTagContainer,
                     discoveryTagStyle: w.DiscoveryTagStyle.LIGHT,
                     onTagClick: e => this.handleTagSearch(e, void 0, P.AnalyticsContexts.HEADER),
-                    tags: o.chain(_).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
+                    tags: o.chain(h).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
                   })]
                 })
               })]
@@ -390,8 +390,8 @@ class W extends s.PureComponent {
       let o = null !== (l = null === (s = this._scroller.current) || void 0 === s ? void 0 : s.getScrollerState().scrollTop) && void 0 !== l ? l : 0,
         {
           location: u
-        } = (0, m.getHistory)();
-      (0, m.replaceWith)({
+        } = (0, T.getHistory)();
+      (0, T.replaceWith)({
         ...u,
         state: o
       }), this.setState({
@@ -422,7 +422,7 @@ class W extends s.PureComponent {
       let l = {
         approximate_member_count: P.MINIMUM_MEMBER_COUNT
       };
-      (0, h.getSearchResultsCount)(e, l), (0, h.doAlgoliaSearch)(e, {
+      (0, _.getSearchResultsCount)(e, l), (0, _.doAlgoliaSearch)(e, {
         filters: l,
         categoryId: a,
         preferredLocale: s.code,
@@ -433,14 +433,14 @@ class W extends s.PureComponent {
     }
   }
 }
-let K = f.default.connectStores([N.default, A.default, v.default, R.default, O.default, b.default, L.default], () => {
+let K = f.default.connectStores([N.default, A.default, L.default, R.default, O.default, b.default, v.default], () => {
   var e;
   let t = k.LANGUAGE_OPTIONS,
     n = A.default.locale,
     a = null !== (e = o.find(t, {
       code: n
     })) && void 0 !== e ? e : t[0],
-    s = v.default.applicationStatistics,
+    s = L.default.applicationStatistics,
     l = Object.keys(s),
     i = R.default.hasConsented(F.Consents.PERSONALIZATION) && l.length > 0,
     r = O.default.getCurrentCategoryId(),
@@ -454,7 +454,7 @@ let K = f.default.connectStores([N.default, A.default, v.default, R.default, O.d
     currentHomepageCategoryId: u,
     currentCategoryName: b.default.getCategoryName(r),
     categories: b.default.getDiscoveryCategories(),
-    userGuilds: L.default.getGuilds(),
+    userGuilds: v.default.getGuilds(),
     theme: N.default.theme,
     mightHaveGamesYouPlay: i,
     availableLanguages: t,
@@ -467,10 +467,10 @@ function z(e) {
     fetching: t,
     loadId: n,
     recommendedGuilds: s
-  } = (0, f.useStateFromStoresObject)([S.default], () => ({
-    recommendedGuilds: S.default.getRecommendedGuilds(),
-    loadId: S.default.getLoadId(),
-    fetching: S.default.isFetching()
+  } = (0, f.useStateFromStoresObject)([p.default], () => ({
+    recommendedGuilds: p.default.getRecommendedGuilds(),
+    loadId: p.default.getLoadId(),
+    fetching: p.default.isFetching()
   }));
   return (0, a.jsx)(K, {
     ...e,

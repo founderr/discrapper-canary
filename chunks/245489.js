@@ -15,31 +15,31 @@ var a = n("37983"),
   c = n("476765"),
   f = n("284609"),
   E = n("49111"),
-  _ = n("894282"),
-  h = n("782340"),
+  h = n("894282"),
+  _ = n("782340"),
   C = n("636478"),
   I = n("926622");
-let T = {
+let S = {
     canSend: !1,
     hint: null,
     success: null,
     error: null
   },
-  S = (0, c.uid)(),
-  p = "".concat(S, "-decription"),
-  m = "".concat(S, "-error");
+  p = (0, c.uid)(),
+  m = "".concat(p, "-decription"),
+  T = "".concat(p, "-error");
 
 function g(e, t) {
   switch (t.type) {
     case "RESET":
-      return T;
+      return S;
     case "SUCCESS":
       return {
-        ...T, success: t.text
+        ...S, success: t.text
       };
     case "HINT":
       return {
-        ...T, canSend: !0, hint: t.text
+        ...S, canSend: !0, hint: t.text
       };
     case "ERROR":
       return {
@@ -51,7 +51,7 @@ function g(e, t) {
 function A() {
   let e = s.createRef(),
     t = s.createRef(),
-    [n, l] = s.useReducer(g, T),
+    [n, l] = s.useReducer(g, S),
     {
       canSend: r,
       hint: c,
@@ -80,7 +80,7 @@ function A() {
         }
       }).then(() => l({
         type: "SUCCESS",
-        text: h.default.Messages.ADD_FRIEND_SUCCESS.format({
+        text: _.default.Messages.ADD_FRIEND_SUCCESS.format({
           discordTag: n
         })
       }), e => {
@@ -93,9 +93,9 @@ function A() {
     },
     autoComplete: "off",
     children: [(0, a.jsx)(u.FormText, {
-      id: p,
+      id: m,
       type: u.FormText.Types.DESCRIPTION,
-      children: h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION
+      children: _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION
     }), (0, a.jsx)(u.FocusRing, {
       focusTarget: e,
       ringTarget: t,
@@ -107,17 +107,17 @@ function A() {
           [C.error]: N
         }),
         children: [(0, a.jsx)(u.TextInput, {
-          id: S,
+          id: p,
           inputRef: e,
           className: C.addFriendInput,
           inputClassName: C.input,
           onKeyPress: t => {
             let n = t.currentTarget.value;
-            if (t.key !== _.KeyboardEventKey.Enter && n.includes("#")) {
+            if (t.key !== h.KeyboardEventKey.Enter && n.includes("#")) {
               o(null != e.current, "Input is handling keypress when not mounted");
               let a = n.indexOf("#"),
                 s = e.current.selectionStart,
-                l = t.key === _.KeyboardEventKey.Backspace || t.key === _.KeyboardEventKey.ArrowRight || t.key === _.KeyboardEventKey.ArrowLeft,
+                l = t.key === h.KeyboardEventKey.Backspace || t.key === h.KeyboardEventKey.ArrowRight || t.key === h.KeyboardEventKey.ArrowLeft,
                 i = t.which >= 48 && t.which <= 57;
               null != s && s > a && /^(.+?#\d{4})$/.test(n) && !l ? t.preventDefault() : null != s && s > a && !i && !l && t.preventDefault()
             }
@@ -141,10 +141,10 @@ function A() {
           autoComplete: "off",
           name: "add-friend",
           "data-lpignore": !0,
-          placeholder: h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
-          "aria-label": h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
+          placeholder: _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
+          "aria-label": _.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-invalid": null != N || void 0,
-          "aria-describedby": null != N ? m : p
+          "aria-describedby": null != N ? T : m
         }), null != c && (0, a.jsx)("div", {
           className: C.addFriendHint,
           "aria-hidden": !0,
@@ -153,12 +153,12 @@ function A() {
           size: u.Button.Sizes.SMALL,
           disabled: !r,
           type: "submit",
-          children: h.default.Messages.ADD_FRIEND_BUTTON
+          children: _.default.Messages.ADD_FRIEND_BUTTON
         })]
       })
     }), null != N && (0, a.jsx)(u.FormText, {
       role: "alert",
-      id: m,
+      id: T,
       type: u.FormText.Types.ERROR,
       className: I.marginTop8,
       children: N

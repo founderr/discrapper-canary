@@ -10,8 +10,8 @@ var a = n("65597"),
   s = n("151426"),
   i = n("77078"),
   r = n("272030"),
-  u = n("369964"),
-  o = n("778588"),
+  o = n("369964"),
+  u = n("778588"),
   d = n("227602"),
   c = n("522049"),
   f = n("962541"),
@@ -23,7 +23,7 @@ var a = n("65597"),
   g = n("782340"),
   I = n("508170");
 
-function _(e) {
+function S(e) {
   (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
@@ -34,7 +34,7 @@ function _(e) {
   })
 }
 
-function S() {
+function _() {
   (0, m.saveClip)()
 }
 let N = e => {
@@ -52,7 +52,7 @@ let N = e => {
       let {
         closePopout: n
       } = e;
-      return (0, l.jsx)(u.default, {
+      return (0, l.jsx)(o.default, {
         dismissibleContent: s.DismissibleContent.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
         shouldUseHorizontalButtons: !0,
         inlineArt: !0,
@@ -95,7 +95,7 @@ let N = e => {
   })
 };
 var T = () => {
-  let e = (0, a.default)([o.default], () => o.default.hasLayers()),
+  let e = (0, a.default)([u.default], () => u.default.hasLayers()),
     t = (0, C.useEnableClips)(),
     {
       clipsEnabled: n,
@@ -114,8 +114,8 @@ var T = () => {
       tooltipText: null != i ? g.default.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({
         hotkey: h.toString(null == i ? void 0 : i.shortcut, !0)
       }) : g.default.Messages.CLIPS_EDIT_SAVE_CLIP,
-      onClick: S,
-      onContextMenu: _,
+      onClick: _,
+      onContextMenu: S,
       icon: c.default
     })
   })

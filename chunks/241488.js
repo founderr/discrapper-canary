@@ -130,8 +130,8 @@ var H = i.memo(function(e) {
     position: J,
     align: q,
     positionLayerClassName: Z,
-    closeOnModalOuterClick: Q = !1,
-    parentModalKey: X,
+    closeOnModalOuterClick: X = !1,
+    parentModalKey: Q,
     customUploadFilters: $
   } = e, ee = i.useRef(null), et = i.useRef(!1), en = i.useRef(), el = i.useRef(null), ei = "left" === q ? E.ResizeOrientation.HORIZONTAL_RIGHT : E.ResizeOrientation.HORIZONTAL_LEFT, {
     drawerWidth: ea,
@@ -143,9 +143,9 @@ var H = i.memo(function(e) {
   }), er = (0, L.useExpressionPickerStore)(e => e.activeView), eo = (0, y.useHasSendableSticker)(Y), {
     renderWindow: eu,
     windowDispatch: ed
-  } = i.useContext(g.default), ec = (0, c.useStateFromStores)([A.default], () => !A.default.hasLoadedStickerPacks), ef = (0, v.useSoundmojiExperiment)("expression_picker"), ep = null != X, em = (0, f.useIsModalAtTop)(null != X ? X : ""), eh = i.useCallback(e => {
+  } = i.useContext(g.default), ec = (0, c.useStateFromStores)([A.default], () => !A.default.hasLoadedStickerPacks), ef = (0, v.useSoundmojiExperiment)("expression_picker"), ep = null != Q, em = (0, f.useIsModalAtTop)(null != Q ? Q : ""), eh = i.useCallback(e => {
     var t;
-    if (!ep && (0, f.hasAnyModalOpen)() || ep && !(em && Q)) return;
+    if (!ep && (0, f.hasAnyModalOpen)() || ep && !(em && X)) return;
     let {
       target: n
     } = e;
@@ -157,7 +157,7 @@ var H = i.memo(function(e) {
     }(0, L.closeExpressionPicker)();
     let l = null === (t = (0, M.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
     (null == l || "BODY" === l.tagName) && R.ComponentDispatch.dispatchToLastSubscribed(b.ComponentActions.TEXTAREA_FOCUS)
-  }, [Q, em, ep]), eE = i.useCallback(() => {
+  }, [X, em, ep]), eE = i.useCallback(() => {
     (0, L.closeExpressionPicker)()
   }, []);
   i.useLayoutEffect(() => {

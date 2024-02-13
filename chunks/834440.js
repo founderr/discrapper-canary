@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 });
 var a = n("37983"),
@@ -15,14 +15,14 @@ var a = n("37983"),
   c = n("433487"),
   f = n("448881"),
   E = n("2973"),
-  _ = n("227231"),
-  h = n("45198"),
+  h = n("227231"),
+  _ = n("45198"),
   C = n("686098"),
   I = n("49111"),
-  T = n("782340"),
-  S = n("670375");
+  S = n("782340"),
+  p = n("670375");
 
-function p(e) {
+function m(e) {
   var t;
   let {
     quest: n
@@ -30,135 +30,135 @@ function p(e) {
     dateStyle: "short"
   }), [n.config.expiresAt, l]), u = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
-    className: S.heading,
+    className: p.heading,
     children: [(0, a.jsx)("img", {
-      className: S.headingGameTile,
+      className: p.headingGameTile,
       alt: "",
-      src: (0, _.getGameTileAssetUrl)(n.id)
+      src: (0, h.getGameTileAssetUrl)(n.id)
     }), (0, a.jsxs)("div", {
-      className: S.headingCopy,
+      className: p.headingCopy,
       children: [(0, a.jsx)(o.Heading, {
         variant: "heading-md/semibold",
         color: "header-primary",
-        children: u ? T.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_HEADING_COMPLETE : T.default.Messages.QUESTS_TITLE.format({
+        children: u ? S.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_HEADING_COMPLETE : S.default.Messages.QUESTS_TITLE.format({
           questName: n.config.messages.questName
         })
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
-        children: u ? T.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_COMPLETE.format({
+        children: u ? S.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_COMPLETE.format({
           expirationDate: i
-        }) : T.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_INCOMPLETE.format({
+        }) : S.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_INCOMPLETE.format({
           expirationDate: i
         })
       })]
     })]
   })
 }
-var m = function(e) {
+var T = function(e) {
   var t, n;
   let {
     onUnmount: l,
     quest: d
-  } = e, m = (0, r.useStateFromStores)([E.default], () => E.default.isEnrolling(d.id), [d]), g = s.useRef(l), A = s.useCallback(e => {
+  } = e, T = (0, r.useStateFromStores)([E.default], () => E.default.isEnrolling(d.id), [d]), g = s.useRef(l), A = s.useCallback(e => {
     e.stopPropagation()
   }, []), N = s.useCallback(() => {}, []), R = s.useCallback(() => {
     (0, f.enrollInQuest)(d.id)
   }, [d]), O = s.useCallback(() => {
     u.default.open(I.UserSettingsSections.INVENTORY)
-  }, []), L = (0, C.useHandleClaimQuestsReward)(d);
+  }, []), v = (0, C.useHandleClaimQuestsReward)(d);
   s.useEffect(() => {
     g.current = l
   }, [l]), s.useEffect(() => () => {
     var e;
     null === (e = g.current) || void 0 === e || e.call(g)
   }, []);
-  let v = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+  let L = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
     M = (null === (n = d.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
   return (0, a.jsxs)("div", {
-    className: i(S.wrapper, {
-      [S.wrapperQuestAccepted]: v
+    className: i(p.wrapper, {
+      [p.wrapperQuestAccepted]: L
     }),
     onClick: A,
     onKeyPress: A,
     children: [(0, a.jsxs)("div", {
-      className: S.utils,
-      children: [v ? (0, a.jsx)(p, {
+      className: p.utils,
+      children: [L ? (0, a.jsx)(m, {
         quest: d
-      }) : (0, a.jsx)(h.default, {
+      }) : (0, a.jsx)(_.default, {
         opacity: .5
       }), (0, a.jsx)(o.Clickable, {
-        className: S.submenuWrapper,
+        className: p.submenuWrapper,
         onClick: N,
         children: (0, a.jsx)(c.default, {
-          className: S.submenuIcon
+          className: p.submenuIcon
         })
       })]
-    }), !v && (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(p, {
+    }), !L && (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(m, {
         quest: d
       }), (0, a.jsx)(o.Text, {
-        className: S.instructions,
+        className: p.instructions,
         variant: "text-sm/normal",
         color: "text-normal",
-        children: T.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
+        children: S.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
           gameTitle: d.config.messages.gameTitle,
           questReward: d.config.messages.rewardNameWithArticle,
           streamingDurationRequirement: d.config.streamDurationRequirementMinutes
         })
       })]
-    }), v && !M && (0, a.jsxs)("div", {
-      className: S.rewardWithInstructions,
+    }), L && !M && (0, a.jsxs)("div", {
+      className: p.rewardWithInstructions,
       style: {
         color: d.config.colors.primary
       },
       children: [(0, a.jsx)("img", {
         alt: d.config.messages.rewardName,
-        className: S.rewardTile,
-        src: (0, _.getRewardAssetUrl)(d.id)
+        className: p.rewardTile,
+        src: (0, h.getRewardAssetUrl)(d.id)
       }), (0, a.jsx)(o.Text, {
-        className: S.instructions,
+        className: p.instructions,
         variant: "text-sm/normal",
         color: "text-normal",
-        children: T.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD.format({
+        children: S.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD.format({
           gameTitle: d.config.messages.gameTitle,
           questReward: d.config.messages.rewardNameWithArticle,
           streamingDurationRequirement: d.config.streamDurationRequirementMinutes
         })
       })]
     }), (0, a.jsxs)("div", {
-      className: S.ctas,
-      children: [!v && (0, a.jsxs)(a.Fragment, {
+      className: p.ctas,
+      children: [!L && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(o.Button, {
-          className: S.cta,
+          className: p.cta,
           color: o.Button.Colors.PRIMARY,
           fullWidth: !0,
           size: o.Button.Sizes.SMALL,
           onClick: O,
-          children: T.default.Messages.QUESTS_LEARN_MORE_V2
+          children: S.default.Messages.QUESTS_LEARN_MORE_V2
         }), (0, a.jsx)(o.Button, {
-          className: S.cta,
+          className: p.cta,
           color: o.Button.Colors.GREEN,
           fullWidth: !0,
           onClick: R,
           size: o.Button.Sizes.SMALL,
-          submitting: m,
-          children: T.default.Messages.QUESTS_ACCEPT_QUEST
+          submitting: T,
+          children: S.default.Messages.QUESTS_ACCEPT_QUEST
         })]
-      }), v && !M && (0, a.jsx)(o.Button, {
-        className: S.cta,
+      }), L && !M && (0, a.jsx)(o.Button, {
+        className: p.cta,
         color: o.Button.Colors.BRAND,
         fullWidth: !0,
         onClick: O,
         size: o.Button.Sizes.SMALL,
-        children: T.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
+        children: S.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
       }), M && (0, a.jsx)(o.Button, {
-        className: S.cta,
+        className: p.cta,
         color: o.Button.Colors.BRAND,
         fullWidth: !0,
-        onClick: L,
+        onClick: v,
         size: o.Button.Sizes.SMALL,
-        children: T.default.Messages.QUESTS_CLAIM_YOUR_REWARD
+        children: S.default.Messages.QUESTS_CLAIM_YOUR_REWARD
       })]
     })]
   })

@@ -14,13 +14,13 @@ var l = n("44170"),
   c = n("605250"),
   f = n("313915"),
   E = n("50885"),
-  _ = n("861309"),
-  h = n("856116"),
+  h = n("861309"),
+  _ = n("856116"),
   C = n("470313"),
   I = n("56245"),
-  T = n("492249"),
-  S = n("49111"),
-  p = n("446825").Buffer;
+  S = n("492249"),
+  p = n("49111"),
+  m = n("446825").Buffer;
 try {
   a = E.default.requireModule("discord_erlpack")
 } catch (e) {
@@ -28,7 +28,7 @@ try {
     a = E.default.requireModule("erlpack")
   } catch (e) {}
 }
-let m = E.default.requireModule("discord_rpc").RPCWebSocket,
+let T = E.default.requireModule("discord_rpc").RPCWebSocket,
   g = window.GLOBAL_ENV.MARKETING_ENDPOINT,
   A = new c.default("RPCServer:WSS"),
   N = [];
@@ -47,10 +47,10 @@ function O() {
         port: e
       })
     };
-  s.listen(S.RPC_STARTING_PORT + e % S.RPC_PORT_RANGE, "127.0.0.1", t)
+  s.listen(p.RPC_STARTING_PORT + e % p.RPC_PORT_RANGE, "127.0.0.1", t)
 }
 
-function L(e, t, n) {
+function v(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
     l = null != R(e.headers).origin ? {
@@ -59,22 +59,22 @@ function L(e, t, n) {
       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
       "Access-Control-Allow-Headers": "Content-Type, Authorization"
     } : {};
-  n = n ? JSON.stringify(n) : "", a = 200 === a && 0 === n.length ? 204 : a, t.setHeader("Content-Length", p.byteLength(n).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(a, {
+  n = n ? JSON.stringify(n) : "", a = 200 === a && 0 === n.length ? 204 : a, t.setHeader("Content-Length", m.byteLength(n).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(a, {
     ...s,
     ...l
   }), t.end(n)
 }
 
-function v(e, t, n, a) {
+function L(e, t, n, a) {
   let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-  L(e, t, {
+  v(e, t, {
     code: s,
     message: a
   }, n)
 }
 class WebSocket extends C.default {
   send(e) {
-    (f.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY && e.evt !== S.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, h.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
+    (f.default.isLoggingOverlayEvents || e.cmd !== p.RPCCommands.OVERLAY && e.evt !== p.RPCEvents.OVERLAY) && A.info("Socket Emit: ".concat(this.id), (0, _.default)(e)), null != a && "etf" === this.encoding ? this._socket.send(a.pack(e), {
       binary: !0
     }) : this._socket.send(JSON.stringify(e))
   }
@@ -82,25 +82,25 @@ class WebSocket extends C.default {
     this._socket.close(e, t)
   }
   constructor(e, t, n) {
-    if (super("ws", t, n), -1 === ["etf", "json"].indexOf(n)) throw new _.default({
-      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+    if (super("ws", t, n), -1 === ["etf", "json"].indexOf(n)) throw new h.default({
+      closeCode: p.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(n));
-    if ("etf" === n && null == a) throw new _.default({
-      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+    if ("etf" === n && null == a) throw new h.default({
+      closeCode: p.RPCCloseCodes.INVALID_ENCODING
     }, "Erlpack cannot be used on this client");
     this._socket = e
   }
 }
 class M extends C.default {
   send(e) {
-    (f.default.isLoggingOverlayEvents || e.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
+    (f.default.isLoggingOverlayEvents || e.cmd !== p.RPCCommands.OVERLAY) && A.info("Socket Emit: ".concat(this.id), e), this._sendCallback(e)
   }
   close(e, t) {
     this._closeCallback(t, e)
   }
   constructor(e, t, n, a) {
-    if (super("http", n, a), "json" !== a) throw new _.default({
-      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+    if (super("http", n, a), "json" !== a) throw new h.default({
+      closeCode: p.RPCCloseCodes.INVALID_ENCODING
     }, "Invalid Encoding: ".concat(a));
     this._sendCallback = e, this._closeCallback = t
   }
@@ -109,7 +109,7 @@ class P extends l.EventEmitter {
   handleRequest(e, t) {
     let [n, a] = R(e.url).split("?"), s = R(e.method);
     if ("/rpc" === n && "OPTIONS" === s) {
-      L(e, t, {
+      v(e, t, {
         body: ""
       });
       return
@@ -126,10 +126,10 @@ class P extends l.EventEmitter {
           } = u.parse(null !== (e = n.get("callback")) && void 0 !== e ? e : "");
           a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", g), t.writeHead(301), t.end()
         },
-        o = new M(l ? L.bind(null, e, t) : r, l ? v.bind(null, e, t, 400) : r, Number(n.get("v")), s);
+        o = new M(l ? v.bind(null, e, t) : r, l ? L.bind(null, e, t, 400) : r, Number(n.get("v")), s);
       if (l)(0, I.validateSocketClient)(o, R(e.headers).origin, n.get("client_id")).then(() => {
         let n = "";
-        e.on("data", e => n += e), e.on("error", () => v(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(o, n))
+        e.on("data", e => n += e), e.on("error", () => L(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(o, n))
       }).catch(e => {
         let {
           code: t,
@@ -139,11 +139,11 @@ class P extends l.EventEmitter {
       });
       else {
         var i;
-        o.authorization.scopes = [T.RPC_PRIVATE_LIMITED_SCOPE], this.handleMessage(o, decodeURIComponent(null !== (i = n.get("payload")) && void 0 !== i ? i : ""))
+        o.authorization.scopes = [S.RPC_PRIVATE_LIMITED_SCOPE], this.handleMessage(o, decodeURIComponent(null !== (i = n.get("payload")) && void 0 !== i ? i : ""))
       }
       return
     }
-    v(e, t, 404, "Not Found")
+    L(e, t, 404, "Not Found")
   }
   handleConnection(e) {
     var t, n;
@@ -175,22 +175,22 @@ class P extends l.EventEmitter {
       else if ("string" == typeof t) n = JSON.parse(t);
       else throw Error()
     } catch (t) {
-      e.close(S.RPCCloseCodes.CLOSE_UNSUPPORTED, "Payload not ".concat(e.encoding));
+      e.close(p.RPCCloseCodes.CLOSE_UNSUPPORTED, "Payload not ".concat(e.encoding));
       return
-    }(f.default.isLoggingOverlayEvents || n.cmd !== S.RPCCommands.OVERLAY) && A.info("Socket Message: ".concat(e.id), (0, h.default)(n)), this.emit("request", e, n)
+    }(f.default.isLoggingOverlayEvents || n.cmd !== p.RPCCommands.OVERLAY) && A.info("Socket Message: ".concat(e.id), (0, _.default)(n)), this.emit("request", e, n)
   }
   constructor() {
     var e;
     super();
     let t = 0;
-    (s = m.http.createServer()).on("error", e => {
+    (s = T.http.createServer()).on("error", e => {
       A.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => O(++t), 1e3)
     }), s.on("request", this.handleRequest.bind(this)), O(t);
     let n = {
       instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
       server: s
     };
-    new m.ws.Server(n).on("connection", e => this.handleConnection(e))
+    new T.ws.Server(n).on("connection", e => this.handleConnection(e))
   }
 }
 var D = new P

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("37983");
@@ -16,11 +16,11 @@ var s = n("446674"),
   c = n("49111"),
   f = n("782340"),
   E = n("557659"),
-  _ = e => {
+  h = e => {
     let {
       guild: t
-    } = e, n = t.id, _ = (0, s.useStateFromStores)([u.default], () => u.default.getAppliedGuildBoostsForGuild(t.id));
-    return null == _ || 0 >= (0, d.appliedGuildBoostsRequiredForPerks)(_, n) ? null : (0, a.jsx)(r.default, {
+    } = e, n = t.id, h = (0, s.useStateFromStores)([u.default], () => u.default.getAppliedGuildBoostsForGuild(t.id));
+    return null == h || 0 >= (0, d.appliedGuildBoostsRequiredForPerks)(h, n) ? null : (0, a.jsx)(r.default, {
       guild: t,
       onDismissed: () => {
         (0, i.hidePremiumGuildGracePeriodNotice)(n)

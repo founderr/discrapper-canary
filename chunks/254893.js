@@ -9,17 +9,17 @@ var a = s("37983"),
   i = s("456015"),
   r = s("982457"),
   l = s("154889"),
-  o = s("917247"),
-  u = s("157829"),
+  u = s("917247"),
+  o = s("157829"),
   d = s("143476"),
   c = s("646718"),
   _ = e => {
     let {
       entrypoint: t
-    } = e, s = (0, o.usePremiumTrialOffer)(), _ = (0, l.usePremiumDiscountOffer)(), E = t === c.PremiumMarketingEntrypoints.ApplicationStoreHome;
+    } = e, s = (0, u.usePremiumTrialOffer)(), _ = (0, l.usePremiumDiscountOffer)(), E = t === c.PremiumMarketingEntrypoints.ApplicationStoreHome;
     return n.useEffect(() => {
       if (null != s || null != _) {
-        let e = (0, u.shouldHitUserOfferEndPoints)("PremiumMarketing");
+        let e = (0, o.shouldHitUserOfferEndPoints)("PremiumMarketing");
         e ? (0, i.acknowledgeUserOffer)(s, _) : null != s && r.default.acknowledgeUserTrialOffer(s)
       }
     }, [s, _]), (0, a.jsx)(d.default, {

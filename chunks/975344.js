@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 });
 var a = n("37983");
@@ -16,26 +16,26 @@ var s = n("414456"),
   c = n("49111"),
   f = n("782340"),
   E = n("116658");
-let _ = [18, 18, 16, 16, 14, 12, 10];
-var h = e => {
+let h = [18, 18, 16, 16, 14, 12, 10];
+var _ = e => {
   let {
     guildId: t
   } = e, n = (0, r.default)([d.default], () => d.default.getGuild(t));
   if (void 0 === n) return null;
   let s = n.hasFeature(c.GuildFeatures.VERIFIED) || n.hasFeature(c.GuildFeatures.PARTNERED),
-    h = n.toString(),
+    _ = n.toString(),
     C = n.getIconURL(40, !0),
     I = null,
-    T = _[_.length - 1];
-  if (null == n.icon && null != h) {
-    var S;
-    T = null !== (S = _[(I = (0, i.getAcronym)(h)).length - 1]) && void 0 !== S ? S : _[_.length - 1]
+    S = h[h.length - 1];
+  if (null == n.icon && null != _) {
+    var p;
+    S = null !== (p = h[(I = (0, i.getAcronym)(_)).length - 1]) && void 0 !== p ? p : h[h.length - 1]
   }
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsxs)("div", {
       style: {
-        fontSize: T
+        fontSize: S
       },
       children: [null != I ? (0, a.jsx)("div", {
         className: l(E.childWrapper, E.acronym),

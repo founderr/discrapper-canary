@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 });
 var a = n("37983"),
@@ -15,19 +15,19 @@ var a = n("37983"),
   c = n("956089"),
   f = n("599110"),
   E = n("371449"),
-  _ = n("224978"),
-  h = n("559541"),
+  h = n("224978"),
+  _ = n("559541"),
   C = n("49111"),
   I = n("782340"),
-  T = n("819745");
+  S = n("819745");
 
-function S(e) {
+function p(e) {
   let {
     user: t,
     type: n,
-    status: S,
-    isFocused: p
-  } = e, m = s.useContext(f.AnalyticsContext), g = e => {
+    status: p,
+    isFocused: m
+  } = e, T = s.useContext(f.AnalyticsContext), g = e => {
     e.stopPropagation(), i.default.cancelFriendRequest(t.id, {
       location: "Friends"
     })
@@ -38,19 +38,19 @@ function S(e) {
         location: "Friends"
       }
     })
-  }, N = S === C.StatusTypes.OFFLINE ? C.StatusTypes.UNKNOWN : S, R = n === C.RelationshipTypes.PENDING_INCOMING ? I.default.Messages.INCOMING_FRIEND_REQUEST : I.default.Messages.OUTGOING_FRIEND_REQUEST;
-  return (0, a.jsx)(_.default, {
-    isFocused: p,
+  }, N = p === C.StatusTypes.OFFLINE ? C.StatusTypes.UNKNOWN : p, R = n === C.RelationshipTypes.PENDING_INCOMING ? I.default.Messages.INCOMING_FRIEND_REQUEST : I.default.Messages.OUTGOING_FRIEND_REQUEST;
+  return (0, a.jsx)(h.default, {
+    isFocused: m,
     user: t,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
-      analyticsLocation: m.location
+      analyticsLocation: T.location
     }),
     children: e => {
       var s;
       let i = n === C.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
         children: [(null === (s = o.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, a.jsx)("div", {
-          className: T.staffIndicator,
+          className: S.staffIndicator,
           children: (0, a.jsx)(c.TextBadge, {
             color: l.default.unsafe_rawColors.BRAND_500.css,
             text: I.default.Messages.STAFF_BADGE_TOOLTIP
@@ -76,16 +76,16 @@ function S(e) {
         shouldHighlight: e
       });
       return (0, a.jsxs)("div", {
-        className: T.listItemContents,
-        children: [(0, a.jsx)(h.default, {
+        className: S.listItemContents,
+        children: [(0, a.jsx)(_.default, {
           user: t,
           hovered: e,
           showAccountIdentifier: !0,
           status: N,
           subText: R,
-          className: T.userInfo
+          className: S.userInfo
         }), (0, a.jsx)("div", {
-          className: T.actions,
+          className: S.actions,
           children: i
         })]
       })

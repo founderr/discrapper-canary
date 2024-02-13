@@ -9,8 +9,8 @@ var a = s("37983"),
   i = s("446674"),
   r = s("465527"),
   l = s("86621"),
-  o = s("299285"),
-  u = s("539938"),
+  u = s("299285"),
+  o = s("539938"),
   d = s("393414"),
   c = s("552712"),
   _ = s("454589"),
@@ -61,17 +61,17 @@ class T extends n.PureComponent {
           }
         }
       })
-    }, this.renderCustomBreadcrumb = (e, t) => (0, a.jsx)(u.default.Title, {
+    }, this.renderCustomBreadcrumb = (e, t) => (0, a.jsx)(o.default.Title, {
       className: t ? null : I.breadcrumb,
       muted: !t,
       children: e.label
     })
   }
 }
-var f = (0, l.default)(i.default.connectStores([o.default, c.default], e => {
+var f = (0, l.default)(i.default.connectStores([u.default, c.default], e => {
   let {
     sku: t
-  } = e, s = null != t ? o.default.getApplication(t.applicationId) : null, a = null != s && null != s.primarySkuId && s.primarySkuId !== t.id ? s.primarySkuId : null;
+  } = e, s = null != t ? u.default.getApplication(t.applicationId) : null, a = null != s && null != s.primarySkuId && s.primarySkuId !== t.id ? s.primarySkuId : null;
   return {
     primarySkuId: a,
     isFetchingPrimarySku: null != a && c.default.isFetching(a),

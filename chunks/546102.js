@@ -15,14 +15,14 @@ var a = n("37983"),
   c = n("315102"),
   f = n("549103"),
   E = n("50926"),
-  _ = n("526253"),
-  h = n("567054"),
+  h = n("526253"),
+  _ = n("567054"),
   C = n("982527"),
   I = n("444752"),
-  T = n("437942"),
-  S = n("267235"),
-  p = n("49111"),
-  m = n("289382"),
+  S = n("437942"),
+  p = n("267235"),
+  m = n("49111"),
+  T = n("289382"),
   g = n("782340"),
   A = n("936791"),
   N = e => {
@@ -30,7 +30,7 @@ var a = n("37983"),
     let {
       guildId: n,
       inviteCode: N
-    } = e, [R, O] = s.useState(m.WaveStates.INITIAL), L = (0, l.useStateFromStores)([_.default], () => _.default.get(n)), v = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(n)), M = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(n)), {
+    } = e, [R, O] = s.useState(T.WaveStates.INITIAL), v = (0, l.useStateFromStores)([h.default], () => h.default.get(n)), L = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(n)), M = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(n)), {
       hasFetchedRequestToJoinGuilds: P,
       guildPreviewDisabled: D
     } = (0, l.useStateFromStoresObject)([C.default], () => ({
@@ -38,7 +38,7 @@ var a = n("37983"),
       guildPreviewDisabled: C.default.getJoinRequestGuild(n)
     }));
     s.useEffect(() => {
-      null != M && (0, r.transitionTo)(p.Routes.CHANNEL(n))
+      null != M && (0, r.transitionTo)(m.Routes.CHANNEL(n))
     }, [M, n]), s.useEffect(() => {
       !P && f.default.fetchRequestToJoinGuilds()
     }, [P]);
@@ -67,10 +67,10 @@ var a = n("37983"),
       }, G = x(g.default.Messages.LEAVE_SERVER_BODY.format({
         name: null == M ? void 0 : M.toString()
       }), () => {
-        O(Math.max(R, m.WaveStates.FILLING)), f.default.removeGuildJoinRequest(n), (0, r.transitionTo)(p.Routes.ME)
-      }), j = (null == L ? void 0 : null === (t = L.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
-        id: L.guild.id,
-        splash: L.guild.splash
+        O(Math.max(R, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(n), (0, r.transitionTo)(m.Routes.ME)
+      }), j = (null == v ? void 0 : null === (t = v.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
+        id: v.guild.id,
+        splash: v.guild.splash
       }) : (0, d.getArtForPath)();
     return (0, a.jsx)("div", {
       className: A.page,
@@ -85,24 +85,24 @@ var a = n("37983"),
         }), (0, a.jsx)("div", {
           className: A.contentWrapper,
           children: (() => {
-            switch (null == v ? void 0 : v.applicationStatus) {
-              case h.GuildJoinRequestApplicationStatuses.SUBMITTED:
-                return (0, a.jsx)(T.default, {
+            switch (null == L ? void 0 : L.applicationStatus) {
+              case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
+                return (0, a.jsx)(S.default, {
                   onCancel: x(g.default.Messages.MEMBER_VERIFICATION_CANCEL_PENDING_APPLICATION_MODAL_TITLE, U),
                   onLeave: G,
                   guild: D
                 });
-              case h.GuildJoinRequestApplicationStatuses.REJECTED:
+              case _.GuildJoinRequestApplicationStatuses.REJECTED:
                 return (0, a.jsx)(I.default, {
                   reapplyText: g.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                   onReapply: U,
                   confirmText: g.default.Messages.LEAVE_SERVER,
                   onConfirm: G,
-                  rejectionReason: null == v ? void 0 : v.rejectionReason,
+                  rejectionReason: null == L ? void 0 : L.rejectionReason,
                   guild: D
                 });
               default:
-                return (0, a.jsx)(S.default, {
+                return (0, a.jsx)(p.default, {
                   guildId: n,
                   inviteCode: N,
                   onComplete: b

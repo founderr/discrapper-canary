@@ -15,21 +15,21 @@ var a = n("37983"),
   c = n("228157"),
   f = n("987317"),
   E = n("543155"),
-  _ = n("843962"),
-  h = n("679653"),
+  h = n("843962"),
+  _ = n("679653"),
   C = n("393414"),
   I = n("659558"),
-  T = n("439141"),
-  S = n("648911"),
-  p = n("999180"),
-  m = n("289180"),
+  S = n("439141"),
+  p = n("648911"),
+  m = n("999180"),
+  T = n("289180"),
   g = n("19065"),
   A = n("981913"),
   N = n("742683"),
   R = n("116439"),
   O = n("42887"),
-  L = n("697218"),
-  v = n("471671"),
+  v = n("697218"),
+  L = n("471671"),
   M = n("945330"),
   P = n("823050"),
   D = n("439932"),
@@ -56,12 +56,12 @@ let k = {
 function H(e) {
   let {
     header: t
-  } = e, n = O.default.getCameraComponent(), l = (0, o.useStateFromStores)([O.default], () => O.default.getVideoDeviceId()), i = (0, S.default)();
+  } = e, n = O.default.getCameraComponent(), l = (0, o.useStateFromStores)([O.default], () => O.default.getVideoDeviceId()), i = (0, p.default)();
   return s.useEffect(() => {
-    let e = L.default.getCurrentUser();
+    let e = v.default.getCurrentUser();
     if (i && null != e) {
       let t = (0, I.getLastUsedVideoBackgroundOption)(e);
-      (0, T.applyBackgroundOptionPreview)(t, l, {
+      (0, S.applyBackgroundOptionPreview)(t, l, {
         track: !1
       }).catch(b.NOOP)
     }
@@ -90,7 +90,7 @@ function V(e) {
   } = e, {
     cameraUnavailable: l,
     enabled: r
-  } = (0, p.default)(), o = (0, m.default)(n);
+  } = (0, m.default)(), o = (0, T.default)(n);
   return (0, a.jsxs)("div", {
     className: j.actions,
     children: [(0, a.jsx)(A.CenterControlButton, {
@@ -150,7 +150,7 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, I] = s.useState(!1), T = (0, _.getChannelIconURL)(f), S = (0, h.default)(f), [p, m] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([v.default], () => v.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, I] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [m, T] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), R = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -165,12 +165,12 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let L = A === b.ChannelModes.VIDEO && p && m > 0,
+  let v = A === b.ChannelModes.VIDEO && m && T > 0,
     M = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(P.default, {
         className: j.icon,
         ringing: g,
-        src: null != T ? T : "",
+        src: null != S ? S : "",
         ringingType: P.default.RingingType.INCOMING,
         size: C ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
       }), (0, a.jsxs)("div", {
@@ -179,7 +179,7 @@ function Y(e) {
           className: j.title,
           color: "header-primary",
           variant: C ? "text-md/semibold" : "text-lg/semibold",
-          children: S
+          children: p
         }), (0, a.jsx)(u.Text, {
           color: "header-secondary",
           className: j.subtitle,
@@ -188,7 +188,7 @@ function Y(e) {
         })]
       })]
     }),
-    x = L ? k : F;
+    x = v ? k : F;
   return (0, a.jsx)(E.default, {
     className: j.wrapper,
     selector: ".".concat(j.root),
@@ -217,10 +217,10 @@ function Y(e) {
           className: j.mainChannelInfo,
           children: M
         }), (0, a.jsx)(V, {
-          canVideo: L,
+          canVideo: v,
           channel: f,
-          numVideoDevices: m
-        }), L && !C ? (0, a.jsx)(u.Button, {
+          numVideoDevices: T
+        }), v && !C ? (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,
           look: u.Button.Looks.LINK,

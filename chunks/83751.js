@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("272030"),
   i = n("982527"),
   r = n("5367"),
-  u = n("162771"),
-  o = n("471671"),
+  o = n("162771"),
+  u = n("471671"),
   d = n("198442"),
   c = n("255991"),
   f = n("49111");
@@ -31,7 +31,7 @@ function h(e, t) {
 function C(e) {
   let {
     guildNode: t
-  } = e, n = t.id, s = (0, r.useCurrentUserGuildBadgeStatus)(n), C = (0, a.useStateFromStores)([i.default], () => i.default.getJoinRequestGuild(n), [n]), p = (0, a.useStateFromStores)([o.default], () => o.default.isFocused()), m = (0, a.useStateFromStores)([u.default], () => u.default.getGuildId());
+  } = e, n = t.id, s = (0, r.useCurrentUserGuildBadgeStatus)(n), C = (0, a.useStateFromStores)([i.default], () => i.default.getJoinRequestGuild(n), [n]), p = (0, a.useStateFromStores)([u.default], () => u.default.isFocused()), m = (0, a.useStateFromStores)([o.default], () => o.default.getGuildId());
   return null == C ? null : (0, l.jsx)(d.default, {
     guildNode: t,
     guild: C,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("662285"),
   f = n("981601"),
   E = n("925758"),
-  _ = n("27618"),
-  h = n("697218"),
+  h = n("27618"),
+  _ = n("697218"),
   C = n("663449"),
   I = n("449008"),
-  T = n("782340");
-class S extends s.PureComponent {
+  S = n("782340");
+class p extends s.PureComponent {
   hasParty(e) {
     return e.length > 1
   }
@@ -66,26 +66,26 @@ class S extends s.PureComponent {
       } = this.props;
       return (0, a.jsx)(u.default, {
         party: e,
-        header: T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
+        header: S.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
           count: e.length
         })
       })
     }
   }
 }
-var p = r.default.connectStores([c.default, h.default, _.default, E.default], () => {
+var m = r.default.connectStores([c.default, _.default, h.default, E.default], () => {
   let e, t;
   let n = c.default.getSyncingWith(),
     a = c.default.getActivity(),
-    s = h.default.getCurrentUser(),
+    s = _.default.getCurrentUser(),
     l = [];
-  if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
+  if (null != n ? (e = _.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
     var r;
-    l = i(Array.from(null !== (r = E.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(I.isNotNullish).orderBy([t => null == e || e.id === t.id, e => _.default.isFriend(e.id)], ["desc", "desc"]).value()
+    l = i(Array.from(null !== (r = E.default.getParty(t)) && void 0 !== r ? r : [])).map(e => _.default.getUser(e)).filter(I.isNotNullish).orderBy([t => null == e || e.id === t.id, e => h.default.isFriend(e.id)], ["desc", "desc"]).value()
   }
   return {
     currentUser: s,
     host: e,
     party: l
   }
-})(S)
+})(p)

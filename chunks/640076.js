@@ -69,7 +69,7 @@ let k = (0, y.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       listHeaderClassName: J,
       activeSectionIndex: q,
       enableNitroUpsell: Z
-    } = e, Q = (0, p.useAnalyticsContext)(), X = i.useRef(b.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), $ = i.useMemo(() => "" !== n ? d.default.convert.toCodePoint(n) : "", [n]), ee = i.useCallback(e => {
+    } = e, X = (0, p.useAnalyticsContext)(), Q = i.useRef(b.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), $ = i.useMemo(() => "" !== n ? d.default.convert.toCodePoint(n) : "", [n]), ee = i.useCallback(e => {
       if (!Z) return !1;
       let t = h[e],
         n = h[e + 1];
@@ -84,18 +84,18 @@ let k = (0, y.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         l = new Set(t),
         i = t.has(e);
       i ? l.delete(e) : l.add(e), null != n && _.default.track(b.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
-        location: Q.location,
+        location: X.location,
         tab: j.ExpressionPickerViewType.EMOJI,
         collapsed: !i,
         guild_id: n.id
       }), g(l)
-    }, [Q, t, g]), el = i.useCallback(e => {
+    }, [X, t, g]), el = i.useCallback(e => {
       let {
         columnIndex: t,
         visibleRowIndex: n
       } = e, l = e.type === R.EmojiGridItemTypes.EMOJI ? e.emoji.allNamesString : e.name;
-      X.current !== b.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(X.current), X.current = window.requestAnimationFrame(() => {
-        m.EmojiPickerStore.setInspectedExpressionPosition(t, n, E.InspectedExpressionChangeSource.MOUSE_EVENT), m.EmojiPickerStore.setSearchPlaceholder(l), X.current = b.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
+      Q.current !== b.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(Q.current), Q.current = window.requestAnimationFrame(() => {
+        m.EmojiPickerStore.setInspectedExpressionPosition(t, n, E.InspectedExpressionChangeSource.MOUSE_EVENT), m.EmojiPickerStore.setSearchPlaceholder(l), Q.current = b.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID
       })
     }, []), ei = (0, u.useStateFromStores)([C.HotspotStore], () => C.HotspotStore.hasHotspot(C.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), []), ea = i.useMemo(() => o.memoize((e, t) => {
       let n = a[e],

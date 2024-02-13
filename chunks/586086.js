@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MAX_GUILDS_PER_PAGE: function() {
-    return m
+    return T
   },
   default: function() {
     return R
@@ -18,14 +18,14 @@ var a = n("37983"),
   c = n("393414"),
   f = n("926787"),
   E = n("246053"),
-  _ = n("794818"),
-  h = n("961098"),
+  h = n("794818"),
+  _ = n("961098"),
   C = n("338638"),
   I = n("719369"),
-  T = n("447621"),
-  S = n("782340"),
-  p = n("492898");
-let m = 12,
+  S = n("447621"),
+  p = n("782340"),
+  m = n("492898");
+let T = 12,
   g = () => {
     let e = (0, c.getHistory)(),
       t = e.location.search,
@@ -37,18 +37,18 @@ let m = 12,
       categoryId: t,
       categoryName: n,
       onClick: s
-    } = e, l = t === T.DISCOVERY_ALL_CATEGORIES_ID, i = l ? S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
+    } = e, l = t === S.DISCOVERY_ALL_CATEGORIES_ID, i = l ? p.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : p.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
       categoryName: n
-    }), r = l ? S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
+    }), r = l ? p.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : p.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
       onClick: s
     });
     return (0, a.jsxs)("div", {
-      className: p.emptyContainer,
+      className: m.emptyContainer,
       children: [(0, a.jsx)("div", {
-        className: p.emptyImage
+        className: m.emptyImage
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: p.emptyHeader,
+        className: m.emptyHeader,
         children: i
       }), (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
@@ -58,14 +58,14 @@ let m = 12,
     })
   },
   N = () => (0, a.jsxs)("div", {
-    className: p.emptyContainer,
+    className: m.emptyContainer,
     children: [(0, a.jsx)("div", {
-      className: p.errorImage
+      className: m.errorImage
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: p.emptyHeader,
-      children: S.default.Messages.GUILD_DISCOVERY_SEARCH_ERROR
+      className: m.emptyHeader,
+      children: p.default.Messages.GUILD_DISCOVERY_SEARCH_ERROR
     })]
   });
 var R = e => {
@@ -77,8 +77,8 @@ var R = e => {
     availableLanguages: c,
     isFetchingSearch: R,
     scroller: O,
-    loadingGuildId: L,
-    theme: v,
+    loadingGuildId: v,
+    theme: L,
     currentCategoryId: M,
     currentCategoryName: P,
     onViewGuild: D,
@@ -93,12 +93,12 @@ var R = e => {
     tag: B
   } = g(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
     d.doAlgoliaSearch(l, {
-      categoryId: n ? T.DISCOVERY_ALL_CATEGORIES_ID : M,
+      categoryId: n ? S.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
       offset: e,
       length: t,
       filters: {
-        approximate_member_count: _.MINIMUM_MEMBER_COUNT
+        approximate_member_count: h.MINIMUM_MEMBER_COUNT
       }
     }), F(!1)
   }, K = () => {
@@ -110,33 +110,33 @@ var R = e => {
     let {
       offset: e,
       tag: t
-    } = g(), n = null != e ? Math.floor(parseInt(e, 10) / m) + 1 : 1;
+    } = g(), n = null != e ? Math.floor(parseInt(e, 10) / T) + 1 : 1;
     V(!!t), 1 === n && F(!0)
   }, [l]);
-  let z = M === T.DISCOVERY_ALL_CATEGORIES_ID ? S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
+  let z = M === S.DISCOVERY_ALL_CATEGORIES_ID ? p.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
     query: l
-  }) : S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
+  }) : p.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
     query: l,
     category: P
   });
   return (0, a.jsxs)("div", {
-    className: p.container,
+    className: m.container,
     children: [(0, a.jsxs)("div", {
-      className: p.searchHeader,
+      className: m.searchHeader,
       children: [(0, a.jsx)(u.Clickable, {
         onClick: () => {
-          d.clearSearch(), _.trackSearchClosed(t)
+          d.clearSearch(), h.trackSearchClosed(t)
         },
-        className: p.arrow,
-        "aria-label": S.default.Messages.BACK,
+        className: m.arrow,
+        "aria-label": p.default.Messages.BACK,
         children: (0, a.jsx)(E.default, {
           direction: E.default.Directions.LEFT
         })
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: p.header,
+        className: m.header,
         children: z
       })]
     }), (0, a.jsx)(C.default, {
@@ -154,17 +154,17 @@ var R = e => {
       categoryId: M,
       categoryName: P,
       onClick: () => {
-        d.selectCategory(T.DISCOVERY_ALL_CATEGORIES_ID), W(0, m, !0)
+        d.selectCategory(S.DISCOVERY_ALL_CATEGORIES_ID), W(0, T, !0)
       }
     }) : (0, a.jsx)("div", {
-      className: p.results,
-      children: (0, a.jsx)(h.default, {
-        pageSize: m,
+      className: m.results,
+      children: (0, a.jsx)(_.default, {
+        pageSize: T,
         totalCount: w,
         resetCurrentPage: k,
         onPageChange: e => {
-          let t = (e - 1) * m;
-          W(t, m), K()
+          let t = (e - 1) * T;
+          W(t, T), K()
         },
         children: e => {
           let {
@@ -175,11 +175,11 @@ var R = e => {
             children: [(0, a.jsx)(I.default, {
               guilds: G,
               loading: j,
-              loadingPlaceholderCount: m,
+              loadingPlaceholderCount: T,
               onViewGuild: D,
-              loadingGuildId: L,
-              theme: v,
-              analyticsContext: _.AnalyticsContexts.SEARCH,
+              loadingGuildId: v,
+              theme: L,
+              analyticsContext: h.AnalyticsContexts.SEARCH,
               onGuildCardSeen: y,
               onTagClick: b
             }), t]

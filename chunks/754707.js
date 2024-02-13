@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 });
 var a = n("37983"),
@@ -15,22 +15,22 @@ var a = n("37983"),
   c = n("49111"),
   f = n("994428"),
   E = n("695838"),
-  _ = n("69741");
+  h = n("69741");
 
-function h(e) {
+function _(e) {
   var t;
-  let h = (0, r.useCanCurrentUserViewDisableUnsafeGuildSettingsNotice)(e),
-    C = _.MODERATOR_PERMISSIONS.some(t => (null == e ? void 0 : e.id) !== E.FAVORITES_RAW_GUILD_ID && u.default.canEveryone(t, e)),
+  let _ = (0, r.useCanCurrentUserViewDisableUnsafeGuildSettingsNotice)(e),
+    C = h.MODERATOR_PERMISSIONS.some(t => (null == e ? void 0 : e.id) !== E.FAVORITES_RAW_GUILD_ID && u.default.canEveryone(t, e)),
     I = (null == e ? void 0 : e.defaultMessageNotifications) === c.UserNotificationSettings.ALL_MESSAGES,
-    T = (0, d.useIsContentDismissed)(l.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_GUILD_ID),
-    S = h && (C || I) && !T,
-    p = s.useCallback(() => {
+    S = (0, d.useIsContentDismissed)(l.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_GUILD_ID),
+    p = _ && (C || I) && !S,
+    m = s.useCallback(() => {
       var t;
       (0, d.markContentAsDismissed)(l.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_GUILD_ID, !0, f.ContentDismissActionType.DISMISS)
     }, [e]),
-    m = s.useRef(!1);
+    T = s.useRef(!1);
   s.useEffect(() => {
-    if (S && !m.current) {
+    if (p && !T.current) {
       var t;
       (0, i.openModalLazy)(async () => {
         let {
@@ -43,11 +43,11 @@ function h(e) {
           ...n
         })
       }, {
-        onCloseCallback: p
+        onCloseCallback: m
       }), o.default.track(c.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
         type: l.DismissibleGuildContent[l.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
         guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_GUILD_ID
-      }), m.current = !0
+      }), T.current = !0
     }
-  }, [C, e, p, I, S])
+  }, [C, e, m, I, p])
 }

@@ -15,21 +15,21 @@ var a = n("37983"),
   c = n("819855"),
   f = n("77078"),
   E = n("913144"),
-  _ = n("272030"),
-  h = n("190017"),
+  h = n("272030"),
+  _ = n("190017"),
   C = n("827825"),
   I = n("86621"),
-  T = n("737960"),
-  S = n("299285"),
-  p = n("449918"),
-  m = n("161778"),
+  S = n("737960"),
+  p = n("299285"),
+  m = n("449918"),
+  T = n("161778"),
   g = n("686470"),
   A = n("535974"),
   N = n("352326"),
   R = n("471671"),
   O = n("145131"),
-  L = n("953109"),
-  v = n("280174"),
+  v = n("953109"),
+  L = n("280174"),
   M = n("158352"),
   P = n("546671"),
   D = n("945330"),
@@ -101,24 +101,24 @@ function Y(e, t) {
 }
 let W = {
   [w.LocalDispatchApplicationStates.INSTALLING]: {
-    [v.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+    [L.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [v.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+    [L.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [v.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+    [L.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [v.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+    [L.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
@@ -126,24 +126,24 @@ let W = {
     })
   },
   [w.LocalDispatchApplicationStates.UPDATING]: {
-    [v.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
+    [L.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [v.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
+    [L.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [v.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
+    [L.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [v.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
+    [L.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_UPDATING_UPDATING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
@@ -151,24 +151,24 @@ let W = {
     })
   },
   [w.LocalDispatchApplicationStates.REPAIRING]: {
-    [v.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
+    [L.TimeUnits.NONE]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING.format({
       percent: e,
       progress: t,
       total: n
     }),
-    [v.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
+    [L.TimeUnits.SECONDS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_SECONDS.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [v.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
+    [L.TimeUnits.MINUTES]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_MINUTES.format({
       percent: e,
       progress: t,
       total: n,
       timeRemaining: a
     }),
-    [v.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
+    [L.TimeUnits.HOURS]: (e, t, n, a) => k.default.Messages.GAME_LIBRARY_UPDATES_INSTALLING_HOURS.format({
       percent: e,
       progress: t,
       total: n,
@@ -183,7 +183,7 @@ function K(e, t, n, a, s) {
     {
       unit: r,
       time: o
-    } = (0, v.getTimeAndUnit)(null != e ? e / 60 : null, i);
+    } = (0, L.getTimeAndUnit)(null != e ? e / 60 : null, i);
   if (null != l && null != r) {
     let e = l[r];
     return null != e ? e(n, a, s, o) : null
@@ -274,8 +274,8 @@ class Q extends s.PureComponent {
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
-        foregroundColor: (0, p.getColor)(n),
-        foregroundGradientColor: null != s ? [(0, p.getColor)(s[0]), (0, p.getColor)(s[1])] : void 0,
+        foregroundColor: (0, m.getColor)(n),
+        foregroundGradientColor: null != s ? [(0, m.getColor)(s[0]), (0, m.getColor)(s[1])] : void 0,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
         className: F.progressCellText,
@@ -307,7 +307,7 @@ class Q extends s.PureComponent {
     } = this.props;
     return this.renderBody({
       message: k.default.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
-        remove: () => h.removeFinished(e.applicationId, e.branchId)
+        remove: () => _.removeFinished(e.applicationId, e.branchId)
       }),
       foregroundColor: (0, c.isThemeLight)(e.theme) ? w.Color.PRIMARY_300 : w.Color.PRIMARY_500,
       percent: 100
@@ -467,12 +467,12 @@ class Q extends s.PureComponent {
 let Z = () => (0, a.jsx)(V, {
     icon: x.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
-    onClick: () => h.resume()
+    onClick: () => _.resume()
   }),
   X = () => (0, a.jsx)(V, {
     icon: y.default,
     tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
-    onClick: () => h.pause()
+    onClick: () => _.pause()
   }),
   J = e => {
     let {
@@ -481,7 +481,7 @@ let Z = () => (0, a.jsx)(V, {
     return (0, a.jsx)(V, {
       icon: P.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
-      onClick: () => h.moveUp(t.applicationId, t.branchId)
+      onClick: () => _.moveUp(t.applicationId, t.branchId)
     })
   },
   $ = e => {
@@ -491,7 +491,7 @@ let Z = () => (0, a.jsx)(V, {
     return (0, a.jsx)(V, {
       icon: D.default,
       tooltip: k.default.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
-      onClick: () => h.cancel(t.applicationId, t.branchId)
+      onClick: () => _.cancel(t.applicationId, t.branchId)
     })
   },
   ee = [{
@@ -499,10 +499,10 @@ let Z = () => (0, a.jsx)(V, {
     cellClassName: F.nameCell,
     render: e => (0, a.jsxs)(O.default, {
       align: O.default.Align.CENTER,
-      children: [(0, a.jsx)(L.default, {
+      children: [(0, a.jsx)(v.default, {
         game: e.application,
         className: F.gameIcon,
-        size: L.default.Sizes.SMALL
+        size: v.default.Sizes.SMALL
       }), (0, a.jsx)("div", {
         className: F.nameCellText,
         children: e.application.name
@@ -554,7 +554,7 @@ class et extends s.PureComponent {
     } = this.props;
     e.forEach(e => {
       e.finished && E.default.wait(() => {
-        h.removeFinished(e.applicationId, e.branchId)
+        _.removeFinished(e.applicationId, e.branchId)
       })
     }), window.removeEventListener("resize", this.throttledUpdateHeight), this.isUnmounted = !0
   }
@@ -598,7 +598,7 @@ class et extends s.PureComponent {
         rowProps: {
           onContextMenu: (e, t) => {
             var s, l, i;
-            return s = e, l = t, i = r, void _.openContextMenuLazy(s, async () => {
+            return s = e, l = t, i = r, void h.openContextMenuLazy(s, async () => {
               let {
                 default: e
               } = await n.el("975419").then(n.bind(n, "975419"));
@@ -645,13 +645,13 @@ function en(e, t, n, a) {
     }), e
   }, [])
 }
-var ea = (0, T.default)(u.default.connectStores([S.default, A.default, N.default, m.default, R.default], () => {
-  let e = en(N.default.activeItems, !1, S.default, A.default),
-    t = en(N.default.finishedItems, !0, S.default, A.default);
+var ea = (0, S.default)(u.default.connectStores([p.default, A.default, N.default, T.default, R.default], () => {
+  let e = en(N.default.activeItems, !1, p.default, A.default),
+    t = en(N.default.finishedItems, !0, p.default, A.default);
   return {
     applications: [...e, ...t],
     paused: N.default.paused,
     isFocused: R.default.isFocused(),
-    theme: m.default.theme
+    theme: T.default.theme
   }
 })((0, I.default)(et)))

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return S
   }
 });
 var a = n("37983"),
@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("478761"),
   f = n("164586"),
   E = n("49111"),
-  _ = n("782340"),
-  h = n("866241");
+  h = n("782340"),
+  _ = n("866241");
 let C = i.debounce(o.default.trackWithMetadata, 500),
   I = e => {
     let {
@@ -27,10 +27,10 @@ let C = i.debounce(o.default.trackWithMetadata, 500),
       type: c,
       imageMarginX: f,
       imageMarginTop: I,
-      trackingSource: T,
-      undismissable: S,
-      onDismissed: p,
-      onClick: m,
+      trackingSource: S,
+      undismissable: p,
+      onDismissed: m,
+      onClick: T,
       cta: g,
       ctaColor: A
     } = e;
@@ -42,14 +42,14 @@ let C = i.debounce(o.default.trackWithMetadata, 500),
     }, [t.id, c]);
     let N = null;
     "function" == typeof g ? N = g() : null != g && (N = (0, a.jsx)(r.Button, {
-      className: h.btn,
+      className: _.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
         null != c && d.default.track(E.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-          source: T,
+          source: S,
           guild_id: t.id,
           notice_type: c
-        }), null == m || m()
+        }), null == T || T()
       },
       fullWidth: !0,
       color: A,
@@ -57,35 +57,35 @@ let C = i.debounce(o.default.trackWithMetadata, 500),
     }));
     let R = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
-      className: h.channelNotice,
-      children: [!0 === S ? null : (0, a.jsx)(r.Clickable, {
+      className: _.channelNotice,
+      children: [!0 === p ? null : (0, a.jsx)(r.Clickable, {
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
-          }), null == p || p()
+          }), null == m || m()
         },
-        className: h.close,
-        "aria-label": _.default.Messages.DISMISS,
+        className: _.close,
+        "aria-label": h.default.Messages.DISMISS,
         children: (0, a.jsx)(u.default, {
-          className: h.closeIcon
+          className: _.closeIcon
         })
       }), (0, a.jsx)("div", {
-        className: h.imageContainer,
+        className: _.imageContainer,
         style: {
           marginTop: "".concat(I, "px"),
           marginLeft: R,
           marginRight: R
         },
         children: (0, a.jsx)("img", {
-          className: h.image,
+          className: _.image,
           src: i,
           alt: ""
         })
       }), (0, a.jsxs)("div", {
-        className: h.message,
+        className: _.message,
         children: [null != n ? (0, a.jsx)(r.Heading, {
           variant: "heading-md/semibold",
-          className: h.title,
+          className: _.title,
           children: n
         }) : null, (0, a.jsx)(r.Text, {
           variant: "text-sm/normal",
@@ -94,7 +94,7 @@ let C = i.debounce(o.default.trackWithMetadata, 500),
       })]
     })
   };
-var T = function(e) {
+var S = function(e) {
   let {
     showRedesignedChannelNotice: t
   } = (0, c.useChannelNoticeRedesignExperiment)(!0);

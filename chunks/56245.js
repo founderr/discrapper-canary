@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return E
   },
   getDeprecatedVoiceSettings: function() {
-    return _
+    return h
   },
   getVoiceSettings: function() {
-    return h
+    return _
   }
 });
 var a = n("539405"),
@@ -44,7 +44,7 @@ let E = async (e, t, n) => {
   }, "No Client ID Specified"));
   let a = l.default.releaseChannel !== d.PublicReleaseChannels.CANARY && !c.includes(n) && e.transport !== u.TransportTypes.POST_MESSAGE;
   return await (0, o.processSocketThrottlers)(n, a), (0, o.fetchApplicationsRPC)(e, n, t)
-}, _ = () => (0, o.getDeprecatedVoiceSettingsWithShortcut)(e => {
+}, h = () => (0, o.getDeprecatedVoiceSettingsWithShortcut)(e => {
   let t = [];
   if (null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut)) t = e.modeOptions.shortcut.map(e => {
     var t;
@@ -55,7 +55,7 @@ let E = async (e, t, n) => {
     }
   });
   return t
-}), h = e => (0, o.getVoiceSettingsWithShortcut)(e, e => {
+}), _ = e => (0, o.getVoiceSettingsWithShortcut)(e, e => {
   let t = "";
   return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, i.toString)(e.modeOptions.shortcut)), t
 })

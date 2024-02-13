@@ -15,9 +15,9 @@ var a = n("913144"),
   c = n("353927");
 let f = new Set,
   E = new Set,
-  _ = null;
+  h = null;
 
-function h() {
+function _() {
   for (let e of f) s.default.setDisableLocalVideo(e, d.VideoToggleState.MANUAL_ENABLED, c.MediaEngineContextTypes.DEFAULT, !1);
   E.clear(), f.clear()
 }
@@ -26,7 +26,7 @@ class C extends l.default {
     a.default.subscribe("RTC_CONNECTION_VIDEO", this.handleIncomingVideo), a.default.subscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleManualLocalVideoToggle), a.default.subscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange), a.default.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), i.default.addChangeListener(this.handlePopoutChange)
   }
   _terminate() {
-    a.default.unsubscribe("RTC_CONNECTION_VIDEO", this.handleIncomingVideo), a.default.unsubscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleManualLocalVideoToggle), a.default.unsubscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange), a.default.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), i.default.removeChangeListener(this.handlePopoutChange), h(), _ = null
+    a.default.unsubscribe("RTC_CONNECTION_VIDEO", this.handleIncomingVideo), a.default.unsubscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleManualLocalVideoToggle), a.default.unsubscribe("WINDOW_VISIBILITY_CHANGE", this.handleWindowVisibilityChange), a.default.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect), i.default.removeChangeListener(this.handlePopoutChange), _(), h = null
   }
   handleIncomingVideo(e) {
     let {
@@ -36,11 +36,11 @@ class C extends l.default {
     } = e;
     if (n !== c.MediaEngineContextTypes.DEFAULT || null == a) return;
     let l = null != o.default.getVisibleGame(),
-      _ = u.default.isVisible(),
-      h = i.default.getWindowVisible(d.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
+      h = u.default.isVisible(),
+      _ = i.default.getWindowVisible(d.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
       C = r.default.isLocalVideoDisabled(t, n),
       I = E.has(t);
-    l && !_ && !h && !C && !I && (f.add(t), s.default.setDisableLocalVideo(t, d.VideoToggleState.DISABLED, n, !1))
+    l && !h && !_ && !C && !I && (f.add(t), s.default.setDisableLocalVideo(t, d.VideoToggleState.DISABLED, n, !1))
   }
   handleManualLocalVideoToggle(e) {
     let {
@@ -54,14 +54,14 @@ class C extends l.default {
       let {
         visible: t
       } = e;
-      t && h()
+      t && _()
     }, this.handleVoiceChannelSelect = e => {
       let {
         channelId: t
       } = e;
-      t !== _ && (h(), _ = t)
+      t !== h && (_(), h = t)
     }, this.handlePopoutChange = () => {
-      i.default.getWindowVisible(d.PopoutWindowKeys.CHANNEL_CALL_POPOUT) && h()
+      i.default.getWindowVisible(d.PopoutWindowKeys.CHANNEL_CALL_POPOUT) && _()
     }
   }
 }

@@ -18,15 +18,15 @@ let f = "IncomingCallStore",
     width: 232,
     height: 315
   },
-  _ = new Set,
-  h = [],
+  h = new Set,
+  _ = [],
   C = new Map,
   I = new Set,
-  T = 0,
   S = 0,
-  p = !1;
+  p = 0,
+  m = !1;
 
-function m(e) {
+function T(e) {
   if (null == e || null == C.get(e)) return !1;
   C.delete(e), (I = new Set(I)).delete(e)
 }
@@ -42,40 +42,40 @@ function g(e) {
     let n = 10 * I.size;
     C.set(t, {
       channel: e,
-      x: T + n,
-      y: S + n
+      x: S + n,
+      y: p + n
     }), (I = new Set(I)).add(t)
   } else {
     if (!I.has(t) || a) return !1;
-    m(t)
+    T(t)
   }
 }! function() {
   let e = s.default.get(f);
-  if (null != e) T = +e.x, S = +e.y;
+  if (null != e) S = +e.x, p = +e.y;
   else {
     let e = n("471671").default.windowSize();
-    T = e.width / 2 - E.width / 2, S = e.height / 2 - E.height / 2
+    S = e.width / 2 - E.width / 2, p = e.height / 2 - E.height / 2
   }
 }();
 
 function A() {
-  p = d.default.getStatus() === c.StatusTypes.DND || i.QuietMode.getSetting()
+  m = d.default.getStatus() === c.StatusTypes.DND || i.QuietMode.getSetting()
 }
 class N extends a.default.Store {
   initialize() {
     this.waitFor(u.default, d.default), this.syncWith([d.default], A), this.syncWith([r.default], A)
   }
   getIncomingCalls() {
-    return p ? h : Array.from(C.values())
+    return m ? _ : Array.from(C.values())
   }
   getIncomingCallChannelIds() {
-    return p ? _ : I
+    return m ? h : I
   }
   getFirstIncomingCallId() {
-    return p ? null : I.values().next().value
+    return m ? null : I.values().next().value
   }
   hasIncomingCalls() {
-    return !p && I.size > 0
+    return !m && I.size > 0
   }
 }
 N.displayName = "IncomingCallStore";
@@ -86,28 +86,28 @@ var R = new N(l.default, {
     let {
       channelId: t
     } = e;
-    return m(t)
+    return T(t)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return m(t)
+    return T(t)
   },
   INCOMING_CALL_MOVE: function(e) {
     let {
       x: t,
       y: n
     } = e;
-    return T = t, S = n, s.default.set(f, {
-      x: T,
-      y: S
+    return S = t, p = n, s.default.set(f, {
+      x: S,
+      y: p
     }), !1
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return m(t.id)
+    return T(t.id)
   }
 })

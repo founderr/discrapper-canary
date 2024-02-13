@@ -21,21 +21,21 @@ function f(e) {
     className: n,
     channel: f,
     user: E,
-    hasSingleMessageRequest: _
+    hasSingleMessageRequest: h
   } = e, {
-    channelId: h
+    channelId: _
   } = (0, o.useMessageRequestSidebarState)();
   return (0, a.jsx)(u.default, {
     index: t,
     className: n,
-    isFocused: h === f.id,
+    isFocused: _ === f.id,
     channel: f,
     user: E,
     onClick: e => {
       e.stopPropagation(), s.default.openPrivateChannelAsSidebar({
         channelId: f.id,
         baseChannelId: l.MESSAGE_REQUESTS_BASE_CHANNEL_ID,
-        hasSingleMessageRequest: _
+        hasSingleMessageRequest: h
       }), i.default.track(c.AnalyticEvents.MESSAGE_REQUEST_PREVIEW_VIEWED, {
         is_spam: !1,
         channel_id: f.id,

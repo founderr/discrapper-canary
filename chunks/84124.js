@@ -16,23 +16,23 @@ var s = n("77078"),
   c = n("197881"),
   f = n("177632"),
   E = n("49111"),
-  _ = n("843455");
-let h = "AGREEMENTS_MODAL_KEY";
+  h = n("843455");
+let _ = "AGREEMENTS_MODAL_KEY";
 var C = {
   init() {
     l.default.subscribe("CONNECTION_OPEN", this.handleRequiredAction), l.default.subscribe("USER_REQUIRED_ACTION_UPDATE", this.handleRequiredAction), l.default.subscribe("CURRENT_USER_UPDATE", this.handleCurrentUserUpdate), l.default.subscribe("LOGOUT", this.handleLogout)
   },
   handleRequiredAction(e) {
     let t = e.requiredAction;
-    !c.ProcessArgs.isDisallowPopupsSet() && (null == o.default.getCurrentUser() ? ((0, u.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(h) && (0, s.closeModal)(h)) : t === E.UserRequiredActions.REQUIRE_CAPTCHA || t === E.UserRequiredActions.REQUIRE_VERIFIED_EMAIL || t === E.UserRequiredActions.REQUIRE_VERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || i.default.isEmailReverification(t) ? (0, u.openFullScreenLayer)(() => (0, a.jsx)(r.default, {}), {
+    !c.ProcessArgs.isDisallowPopupsSet() && (null == o.default.getCurrentUser() ? ((0, u.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(_) && (0, s.closeModal)(_)) : t === E.UserRequiredActions.REQUIRE_CAPTCHA || t === E.UserRequiredActions.REQUIRE_VERIFIED_EMAIL || t === E.UserRequiredActions.REQUIRE_VERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || i.default.isEmailReverification(t) ? (0, u.openFullScreenLayer)(() => (0, a.jsx)(r.default, {}), {
       layerKey: "verification",
       Layer: d.default
     }) : t === E.UserRequiredActions.AGREEMENTS ? (0, s.openModal)(e => (0, a.jsx)(f.default, {
       ...e
     }), {
-      modalKey: h,
-      onCloseRequest: _.NOOP_NULL
-    }) : null == t && ((0, u.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(h) && (0, s.closeModal)(h)))
+      modalKey: _,
+      onCloseRequest: h.NOOP_NULL
+    }) : null == t && ((0, u.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(_) && (0, s.closeModal)(_)))
   },
   handleLogout() {
     (0, u.closeFullScreenLayer)("verification")

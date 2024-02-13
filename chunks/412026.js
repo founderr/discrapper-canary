@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  u = n("984444"),
-  o = n("456799"),
+  o = n("984444"),
+  u = n("456799"),
   d = n("15318"),
   c = n("146782"),
   f = n("77078"),
@@ -21,13 +21,13 @@ var l = n("37983"),
   E = n("331306"),
   g = n("49111"),
   I = n("115022");
-let _ = {
+let S = {
     [g.RTCConnectionQuality.UNKNOWN]: f.Tooltip.Colors.BLACK,
     [g.RTCConnectionQuality.BAD]: f.Tooltip.Colors.RED,
     [g.RTCConnectionQuality.AVERAGE]: f.Tooltip.Colors.YELLOW,
     [g.RTCConnectionQuality.FINE]: f.Tooltip.Colors.GREEN
   },
-  S = {
+  _ = {
     [g.ConnectionStatus.CONNECTED]: I.rtcConnectionStatusConnected,
     [g.ConnectionStatus.CONNECTING]: I.rtcConnectionStatusConnecting,
     [g.ConnectionStatus.ERROR]: I.rtcConnectionStatusError
@@ -71,7 +71,7 @@ class A extends a.PureComponent {
       return (0, l.jsx)(f.Button, {
         look: f.Button.Looks.BLANK,
         size: f.Button.Sizes.NONE,
-        className: i(e, S[a]),
+        className: i(e, _[a]),
         onClick: n,
         children: s
       })
@@ -85,11 +85,11 @@ class A extends a.PureComponent {
       lastPing: a,
       state: s,
       className: r,
-      children: u
+      children: o
     } = this.props;
     return s === g.RTCConnectionStates.RTC_CONNECTED && (e = (0, l.jsx)(f.Tooltip, {
       text: t !== g.RTCConnectionQuality.UNKNOWN && null != a ? "".concat(a.toFixed(0), " ms") : null,
-      color: _[t],
+      color: S[t],
       children: e => (0, l.jsx)(L, {
         quality: t,
         smallPing: n,
@@ -102,7 +102,7 @@ class A extends a.PureComponent {
           className: I.labelWrapper,
           children: this.renderStatus()
         })]
-      }), u]
+      }), o]
     })
   }
   constructor(...e) {
@@ -127,8 +127,8 @@ function L(e) {
   {
     let e = {
       [g.RTCConnectionQuality.FINE]: d.ConnectionFineIcon,
-      [g.RTCConnectionQuality.AVERAGE]: u.ConnectionAverageIcon,
-      [g.RTCConnectionQuality.BAD]: o.ConnectionBadIcon,
+      [g.RTCConnectionQuality.AVERAGE]: o.ConnectionAverageIcon,
+      [g.RTCConnectionQuality.BAD]: u.ConnectionBadIcon,
       [g.RTCConnectionQuality.UNKNOWN]: c.ConnectionUnknownIcon
     } [t];
     return (0, l.jsx)(e, {

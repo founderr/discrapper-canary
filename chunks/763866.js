@@ -57,7 +57,7 @@ function D(e) {
   } = e, q = (0, r.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), Z = (0, r.useStateFromStores)([m.default], () => {
     var e;
     return null === (e = m.default.getUserProfile(w.id)) || void 0 === e ? void 0 : e.application
-  }), Q = (0, r.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(w.id)), X = (0, P.useGetVoiceChannelInfoForVoiceActivitySection)(w.id, null == G ? void 0 : G.id), $ = !Q && null != X, {
+  }), X = (0, r.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(w.id)), Q = (0, P.useGetVoiceChannelInfoForVoiceActivitySection)(w.id, null == G ? void 0 : G.id), $ = !X && null != Q, {
     showVoiceActivityInProfile: ee
   } = h.VoiceActivityProfileExperiment.useExperiment({
     location: "user popout"
@@ -130,8 +130,8 @@ function D(e) {
           guild: G,
           guildMember: B
         }), ee && $ && (0, l.jsx)(P.default, {
-          voiceChannel: X.voiceChannel,
-          voiceGuild: X.voiceGuild,
+          voiceChannel: Q.voiceChannel,
+          voiceGuild: Q.voiceGuild,
           onClose: V,
           color: U.buttonColor
         }), (0, l.jsx)(C.default, {

@@ -19,16 +19,16 @@ var a = n("37983"),
       index: t,
       children: l,
       user: E,
-      channel: _,
-      onClick: h,
+      channel: h,
+      onClick: _,
       isFocused: C,
       isActive: I,
-      onOtherHover: T,
-      className: S
-    } = e, [p, m] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
-      m(!0), C && !I && !g && (null == T || T())
+      onOtherHover: S,
+      className: p
+    } = e, [m, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
+      T(!0), C && !I && !g && (null == S || S())
     }, R = () => {
-      m(!1)
+      T(!1)
     }, O = (e, t) => {
       null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
         let {
@@ -45,27 +45,27 @@ var a = n("37983"),
       }))
     };
     return (0, a.jsx)(o.ListNavigatorItem, {
-      id: _.id,
+      id: h.id,
       children: e => (0, a.jsx)(u.FocusRing, {
         offset: {
           left: -8,
           right: -8
         },
         children: (0, a.jsx)(r.default.div, {
-          className: i(f.messageRequestItem, S, {
+          className: i(f.messageRequestItem, p, {
             [f.active]: I || g,
             [f.firstItem]: 0 === t
           }),
           onContextMenu: e => O(e, E),
           onMouseEnter: N,
           onMouseLeave: R,
-          onClick: null != h ? h : void 0,
+          onClick: null != _ ? _ : void 0,
           style: {
             LIST_ROW_HEIGHT: c.LIST_ROW_HEIGHT,
             opacity: 1
           },
           ...e,
-          children: l(p || I || g)
+          children: l(m || I || g)
         })
       })
     })

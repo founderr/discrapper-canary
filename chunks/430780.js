@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 }), n("222007");
 var a = n("37983"),
@@ -32,7 +32,7 @@ let E = e => {
   }
 };
 
-function _(e) {
+function h(e) {
   let {
     groupListingId: t,
     subscription: n,
@@ -40,14 +40,14 @@ function _(e) {
   } = e, {
     analyticsLocations: r
   } = (0, u.default)(o.default.PENDING_PLAN_CHANGE_NOTICE), {
-    resetRenewalMutation: _,
-    submitting: h,
+    resetRenewalMutation: h,
+    submitting: _,
     error: C
   } = E(r), I = (0, d.useSubscriptionListingsForGroup)(t, {
     includeSoftDeleted: !0
   }), {
-    currentListing: T,
-    nextListing: S
+    currentListing: S,
+    nextListing: p
   } = s.useMemo(() => {
     if ((null == n ? void 0 : n.renewalMutations) == null) return {
       currentListing: void 0,
@@ -62,17 +62,17 @@ function _(e) {
       nextListing: s
     }
   }, [n, I]);
-  if (null == n || null == T || null == S) return null;
-  let p = i(n.currentPeriodEnd).format("MMM DD, YYYY");
+  if (null == n || null == S || null == p) return null;
+  let m = i(n.currentPeriodEnd).format("MMM DD, YYYY");
   return (0, a.jsx)(c.default, {
     message: f.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_DESCRIPTION.format({
-      currentListing: T.name,
-      nextListing: S.name,
-      changeDate: p
+      currentListing: S.name,
+      nextListing: p.name,
+      changeDate: m
     }),
     error: null == C ? void 0 : C.message,
-    onClick: () => _(n),
-    submitting: h,
+    onClick: () => h(n),
+    submitting: _,
     ctaMessage: f.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_CTA,
     className: l
   })

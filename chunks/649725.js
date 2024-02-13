@@ -16,8 +16,8 @@ var s = n("316887"),
   c = n("11056"),
   f = n("449008"),
   E = n("447621"),
-  _ = n("763065");
-let h = e => {
+  h = n("763065");
+let _ = e => {
     switch (e) {
       case E.CategoryIcons.Activity:
         return (0, a.jsx)(s.default, {});
@@ -49,7 +49,7 @@ let h = e => {
     } = e;
     return (0, a.jsx)(a.Fragment, {
       children: t.map(e => (0, a.jsx)(c.default, {
-        avatar: h(e.icon),
+        avatar: _(e.icon),
         name: e.name,
         focusProps: {
           offset: {
@@ -61,9 +61,9 @@ let h = e => {
         onClick: () => s(e.categoryId),
         wrapContent: !0,
         selected: l && e.categoryId === n,
-        className: _.categoryItem,
-        selectedClassName: _.selectedCategoryItem,
-        innerClassName: _.itemInner
+        className: h.categoryItem,
+        selectedClassName: h.selectedCategoryItem,
+        innerClassName: h.itemInner
       }, e.categoryId))
     })
   };

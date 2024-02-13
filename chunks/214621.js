@@ -15,14 +15,14 @@ var a = n("37983"),
   c = n("845579"),
   f = n("957255"),
   E = n("27618"),
-  _ = n("505684"),
-  h = n("93427"),
+  h = n("505684"),
+  _ = n("93427"),
   C = n("389495"),
   I = n("49111"),
-  T = n("719347"),
-  S = n("782340"),
-  p = n("863452"),
-  m = n("632215");
+  S = n("719347"),
+  p = n("782340"),
+  m = n("863452"),
+  T = n("632215");
 let g = s.memo(function(e) {
   let {
     channel: t
@@ -37,52 +37,52 @@ let g = s.memo(function(e) {
     noStyleAndInteraction: !0
   }) : {
     content: null
-  }, [g]), L = null;
-  if (l) L = (0, a.jsx)(o.Text, {
-    className: p.messageReplacement,
+  }, [g]), v = null;
+  if (l) v = (0, a.jsx)(o.Text, {
+    className: m.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
-    children: S.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
+    children: p.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
-    if (null != g && A) L = (0, a.jsx)(o.Text, {
-      className: p.messageReplacement,
+    if (null != g && A) v = (0, a.jsx)(o.Text, {
+      className: m.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: S.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
+      children: p.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
     });
     else if (null != g) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, h.renderSingleLineMessage)(g, O, A, i(p.messageContent, m.inlineFormat, m.smallFontSize), {
-        iconClass: p.messageContentIcon,
-        iconSize: T.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+      } = (0, _.renderSingleLineMessage)(g, O, A, i(m.messageContent, T.inlineFormat, T.smallFontSize), {
+        iconClass: m.messageContentIcon,
+        iconSize: S.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
-      L = null != t ? (0, a.jsx)(o.Text, {
+      v = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: p.messageContent,
+        className: m.messageContent,
         children: t
       }) : (0, a.jsx)(o.Text, {
         tag: "span",
         variant: "text-sm/normal",
         color: "text-muted",
-        className: p.messageReplacement,
+        className: m.messageReplacement,
         children: e
       })
-    } else L = (0, a.jsx)(o.Text, {
-      className: p.messageReplacement,
+    } else v = (0, a.jsx)(o.Text, {
+      className: m.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: S.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
+      children: p.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
-  } else L = null;
-  return (0, a.jsx)(_.ObscuredDisplayContext.Provider, {
+  } else v = null;
+  return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {
     value: (0, u.default)(R, N),
     children: (0, a.jsx)(o.FocusBlock, {
-      className: p.messageFocusBlock,
-      children: L
+      className: m.messageFocusBlock,
+      children: v
     })
   })
 });

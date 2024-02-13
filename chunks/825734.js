@@ -15,9 +15,9 @@ var a = n("308757"),
   c = n("492249"),
   f = n("49111"),
   E = n("646718");
-let _ = [s.default.RPC];
+let h = [s.default.RPC];
 
-function h(e) {
+function _(e) {
   if (null == e) return {
     lock: f.NOOP_NULL,
     context: f.AppContext.APP
@@ -32,7 +32,7 @@ function h(e) {
 function C(e, t) {
   let n = {
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: _,
+    analyticsLocations: h,
     analyticsObject: t
   };
   switch (e) {
@@ -67,20 +67,20 @@ var I = {
       let {
         lock: r,
         context: d
-      } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null), E = (0, o.default)();
+      } = _(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null), E = (0, o.default)();
       if (null == E) throw new i.default({
         errorCode: f.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel");
       let I = {
           page: f.AnalyticsPages.IN_APP
         },
-        T = async () => {
+        S = async () => {
           try {
             let e = await (0, a.openIAPPurchaseModal)({
               applicationId: l,
               skuId: n,
               openPremiumPaymentModal: () => C(d, I),
-              analyticsLocations: _,
+              analyticsLocations: h,
               analyticsLocationObject: I,
               context: d
             });
@@ -97,7 +97,7 @@ var I = {
             }, "Purchase was canceled by the user.")
           }
         };
-      return T()
+      return S()
     }
   },
   [f.RPCCommands.START_PREMIUM_PURCHASE]: {
@@ -120,7 +120,7 @@ var I = {
       let {
         lock: s,
         context: l
-      } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? n : null), r = {
+      } = _(t.transport !== c.TransportTypes.POST_MESSAGE ? n : null), r = {
         page: f.AnalyticsPages.IN_APP
       };
       return C(l, r).then(() => {

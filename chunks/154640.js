@@ -20,7 +20,7 @@ var a = n("37983"),
       children: n,
       isLast: l,
       className: E
-    } = e, [_, h] = s.useState(!1), C = s.useCallback(() => {
+    } = e, [h, _] = s.useState(!1), C = s.useCallback(() => {
       (0, d.openUserProfileModal)({
         userId: t,
         analyticsLocation: {
@@ -28,9 +28,9 @@ var a = n("37983"),
         }
       })
     }, [t]), I = () => {
-      h(!0)
-    }, T = () => {
-      h(!1)
+      _(!0)
+    }, S = () => {
+      _(!1)
     };
     return (0, a.jsx)(u.ListNavigatorItem, {
       id: t,
@@ -45,13 +45,13 @@ var a = n("37983"),
           },
           className: i(f.rowItem, E, {
             [f.last]: l,
-            [f.active]: _
+            [f.active]: h
           }),
           onMouseEnter: I,
-          onMouseLeave: T,
+          onMouseLeave: S,
           onClick: C,
           ...e,
-          children: n(_)
+          children: n(h)
         })
       })
     })

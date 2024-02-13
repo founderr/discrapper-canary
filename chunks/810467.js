@@ -13,21 +13,21 @@ var a, s, l = n("37983"),
   c = n("77078"),
   f = n("327037"),
   E = n("419830"),
-  _ = n("374021"),
-  h = n("398604"),
+  h = n("374021"),
+  _ = n("398604"),
   C = n("395869"),
   I = n("824650"),
-  T = n("1339"),
-  S = n("593897"),
-  p = n("534222"),
-  m = n("841363"),
+  S = n("1339"),
+  p = n("593897"),
+  m = n("534222"),
+  T = n("841363"),
   g = n("822516"),
   A = n("393414"),
   N = n("716214"),
   R = n("488464"),
   O = n("998716"),
-  L = n("834052"),
-  v = n("160870"),
+  v = n("834052"),
+  L = n("160870"),
   M = n("506885"),
   P = n("981601"),
   D = n("957255"),
@@ -48,7 +48,7 @@ function V(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, a = (0, S.useActiveEventOrStageInstanceChannel)(t.id), s = (0, p.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+  } = e, a = (0, p.useActiveEventOrStageInstanceChannel)(t.id), s = (0, m.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([v.default], () => v.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: V,
     isEventNoticeHidden: Y
   } = (0, u.useStateFromStoresObject)([I.default], () => ({
@@ -68,7 +68,7 @@ function V(e) {
       speakers: [...new Set(e.map(e => e.user))],
       listenerCount: t
     }
-  }, [W]), q = (0, u.useStateFromStores)([D.default], () => D.default.can(k.Permissions.CONNECT, a)), Q = (0, v.default)(null == a ? void 0 : a.id), Z = null == s ? void 0 : s.creator_id, X = (0, u.useStateFromStores)([y.default], () => y.default.getUser(Z), [Z]);
+  }, [W]), q = (0, u.useStateFromStores)([D.default], () => D.default.can(k.Permissions.CONNECT, a)), Q = (0, L.default)(null == a ? void 0 : a.id), Z = null == s ? void 0 : s.creator_id, X = (0, u.useStateFromStores)([y.default], () => y.default.getUser(Z), [Z]);
   i.useEffect(() => {
     null != Z && (0, f.getUser)(Z)
   }, [Z]);
@@ -94,9 +94,9 @@ function V(e) {
       listenerCount: u,
       isEventNoticeHidden: d,
       isStageNoticeHidden: f,
-      isStudyRoomNotice: _
-    } = e, I = null != n && null != a && !f, S = null != t ? (0, g.getNextRecurrenceIdInEvent)(t) : null;
-    if (_ && null != a) {
+      isStudyRoomNotice: h
+    } = e, I = null != n && null != a && !f, p = null != t ? (0, g.getNextRecurrenceIdInEvent)(t) : null;
+    if (h && null != a) {
       let e = (0, E.getChannelIconComponent)(a);
       return {
         noticeType: 3,
@@ -180,15 +180,15 @@ function V(e) {
         }
       }
       if (t.entity_type === F.GuildScheduledEventEntityTypes.EXTERNAL) {
-        let e = (0, m.getLocationFromEvent)(t);
+        let e = (0, T.getLocationFromEvent)(t);
         if (null == e) return {
           noticeType: null
         };
-        let n = h.default.getUserCount(t.id, S);
+        let n = _.default.getUserCount(t.id, p);
         return {
           noticeType: 1,
           title: t.name,
-          location: (0, T.guildEventDetailsParser)(e, !0),
+          location: (0, S.guildEventDetailsParser)(e, !0),
           locationIcon: (0, l.jsx)(G.default, {
             width: 16,
             height: 16,
@@ -216,7 +216,7 @@ function V(e) {
         }
       } else if (t.entity_type === F.GuildScheduledEventEntityTypes.VOICE && null != a) {
         let e = (0, E.getChannelIconComponent)(a),
-          n = h.default.getUserCount(t.id, S);
+          n = _.default.getUserCount(t.id, p);
         return {
           noticeType: 2,
           title: t.name,
@@ -323,7 +323,7 @@ function V(e) {
         if (en) null != a && null != a.getGuildId() && ((0, N.connectAndOpen)(a), (0, A.transitionToGuild)(a.getGuildId(), a.id));
         else {
           if (null == s) return;
-          (0, _.openGuildEventDetails)({
+          (0, h.openGuildEventDetails)({
             eventId: s.id
           })
         }

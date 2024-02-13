@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,13 +15,13 @@ var a = n("37983"),
   c = n("778588"),
   f = n("577427"),
   E = n("946749"),
-  _ = n("810567"),
-  h = n("791776"),
+  h = n("810567"),
+  _ = n("791776"),
   C = n("780009"),
   I = n("49111"),
-  T = n("782340"),
-  S = n("948063");
-class p extends s.Component {
+  S = n("782340"),
+  p = n("948063");
+class m extends s.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)
   }
@@ -54,11 +54,11 @@ class p extends s.Component {
     } = this.state;
     return (0, a.jsx)("div", {
       className: i({
-        [S.libraryFilter]: !0,
-        [S.focused]: t
+        [p.libraryFilter]: !0,
+        [p.focused]: t
       }),
-      children: (0, a.jsx)(_.default, {
-        className: S.searchBar,
+      children: (0, a.jsx)(h.default, {
+        className: p.searchBar,
         ref: this.setRef,
         onChange: d.updateLibraryFilter,
         onFocus: () => this.setState({
@@ -73,7 +73,7 @@ class p extends s.Component {
         },
         maxLength: 100,
         query: e,
-        placeholder: T.default.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
+        placeholder: S.default.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
       })
     })
   }
@@ -92,8 +92,8 @@ class p extends s.Component {
         searchBarRef: l
       } = this;
       if (a || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
-      let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      if (!(i !== l.inputRef.current && (0, h.isInputLikeElement)(i))) switch (e.which) {
+      let i = null === (t = (0, _.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+      if (!(i !== l.inputRef.current && (0, _.isInputLikeElement)(i))) switch (e.which) {
         case I.KeyboardKeys.ESCAPE:
           e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
           break;
@@ -126,10 +126,10 @@ class p extends s.Component {
   }
 }
 
-function m() {
+function T() {
   let e = (0, r.useStateFromStores)([c.default], () => c.default.hasLayers()),
     t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, a.jsx)(p, {
+  return (0, a.jsx)(m, {
     activeRowKey: (0, r.useStateFromStores)([E.default], () => E.default.activeRowKey),
     hasModalOpen: t || e,
     filterQuery: (0, r.useStateFromStores)([f.default], () => f.default.applicationFilterQuery),

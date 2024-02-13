@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,14 +15,14 @@ var a = n("37983"),
   c = n("476765"),
   f = n("49111"),
   E = n("782340"),
-  _ = n("305502");
+  h = n("305502");
 
-function h(e) {
+function _(e) {
   let {
     transitionState: t
-  } = e, h = (0, i.default)([d.default], () => d.default.getAction()), [C, I] = s.useState(!1), T = (0, c.useUID)();
-  async function S() {
-    if (I(!0), h === f.UserRequiredActions.AGREEMENTS) {
+  } = e, _ = (0, i.default)([d.default], () => d.default.getAction()), [C, I] = s.useState(!1), S = (0, c.useUID)();
+  async function p() {
+    if (I(!0), _ === f.UserRequiredActions.AGREEMENTS) {
       let e = await (0, o.acceptAgreements)();
       I(e)
     }
@@ -32,13 +32,13 @@ function h(e) {
     type: l.ImpressionTypes.VIEW,
     name: l.ImpressionNames.USER_AGREEMENTS,
     properties: {
-      required_action: h
+      required_action: _
     }
   }, {}, []), (0, a.jsxs)(r.ModalRoot, {
-    "aria-labelledby": T,
+    "aria-labelledby": S,
     transitionState: t,
     children: [(0, a.jsx)("div", {
-      id: T
+      id: S
     }), (0, a.jsx)(r.ModalHeader, {
       separator: !1,
       children: (0, a.jsx)(r.Heading, {
@@ -48,11 +48,11 @@ function h(e) {
     }), (0, a.jsxs)(r.ModalContent, {
       children: [(0, a.jsx)(r.Text, {
         variant: "text-md/normal",
-        children: h === f.UserRequiredActions.AGREEMENTS ? E.default.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
+        children: _ === f.UserRequiredActions.AGREEMENTS ? E.default.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
       }), (0, a.jsxs)("div", {
-        className: _.container,
+        className: h.container,
         children: [(0, a.jsxs)("ul", {
-          className: _.links,
+          className: h.links,
           children: [(0, a.jsx)("li", {
             children: E.default.Messages.TERMS_OF_SERVICE.format({
               url: f.MarketingURLs.TERMS
@@ -71,7 +71,7 @@ function h(e) {
             })
           })]
         }), (0, a.jsx)("img", {
-          className: _.image,
+          className: h.image,
           alt: "",
           src: n("275974")
         })]
@@ -79,7 +79,7 @@ function h(e) {
     }), (0, a.jsx)(r.ModalFooter, {
       children: (0, a.jsx)(r.Button, {
         submitting: C,
-        onClick: S,
+        onClick: p,
         color: r.Button.Colors.GREEN,
         children: E.default.Messages.AGREE
       })

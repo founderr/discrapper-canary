@@ -8,8 +8,8 @@ var a, n = s("37983"),
   i = s("884691"),
   r = s("414456"),
   l = s.n(r),
-  o = s("888400"),
-  u = s("943232"),
+  u = s("888400"),
+  o = s("943232"),
   d = s("36694"),
   c = s("76638"),
   _ = s("216422"),
@@ -58,18 +58,18 @@ a = class extends i.Component {
     if (e.type === E.StoreRecommendationTypes.RECENT_RELEASE_DATE) return (0, n.jsx)(S, {
       className: t,
       circle: (0, n.jsx)(f, {
-        IconComponent: u.default
+        IconComponent: o.default
       }),
       smallHeader: I.default.Messages.APPLICATION_STORE_NEW_RELEASE,
-      text: (0, o.dateFormat)(e.releaseDate, "LL")
+      text: (0, u.dateFormat)(e.releaseDate, "LL")
     });
     if (e.type === E.StoreRecommendationTypes.RELEASE_DATE) return (0, n.jsx)(S, {
       className: t,
       circle: (0, n.jsx)(f, {
-        IconComponent: u.default
+        IconComponent: o.default
       }),
       smallHeader: I.default.Messages.APPLICATION_STORE_DETAILS_RELEASE_DATE,
-      text: (0, o.dateFormat)(e.releaseDate, "LL")
+      text: (0, u.dateFormat)(e.releaseDate, "LL")
     });
     if (e.type === E.StoreRecommendationTypes.EARLY_ACCESS) return null != e.releaseDate ? (0, n.jsx)(S, {
       className: t,
@@ -78,7 +78,7 @@ a = class extends i.Component {
         className: T.earlyAccess
       }),
       smallHeader: I.default.Messages.APPLICATION_STORE_EARLY_ACCESS,
-      text: (0, o.dateFormat)(e.releaseDate, "LL")
+      text: (0, u.dateFormat)(e.releaseDate, "LL")
     }) : (0, n.jsx)(S, {
       className: t,
       circle: (0, n.jsx)(f, {

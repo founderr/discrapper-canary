@@ -16,14 +16,14 @@ var a, s, l = n("884691"),
   c = n("568500"),
   f = n("534222"),
   E = n("341563"),
-  _ = n("702411"),
-  h = n("226511"),
+  h = n("702411"),
+  _ = n("226511"),
   C = n("735201"),
   I = n("957255"),
-  T = n("833781"),
-  S = n("572182"),
-  p = n("201952"),
-  m = n("718517"),
+  S = n("833781"),
+  p = n("572182"),
+  m = n("201952"),
+  T = n("718517"),
   g = n("427459"),
   A = n("49111");
 
@@ -39,21 +39,21 @@ function N(e) {
     {
       lastDismissedGracePeriod: s,
       isGracePeriodVisible: N
-    } = (0, i.useStateFromStoresObject)([T.default], () => ({
-      lastDismissedGracePeriod: T.default.getLastDismissedGracePeriodForGuild(n),
-      isGracePeriodVisible: T.default.isVisible(n)
+    } = (0, i.useStateFromStoresObject)([S.default], () => ({
+      lastDismissedGracePeriod: S.default.getLastDismissedGracePeriodForGuild(n),
+      isGracePeriodVisible: S.default.isVisible(n)
     })),
-    R = (0, i.useStateFromStores)([h.default], () => h.default.isVisible(e)),
-    O = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
-    L = (0, i.useStateFromStores)([I.default], () => I.default.can(A.Permissions.ADMINISTRATOR, e)),
-    v = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
+    R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
+    O = (0, i.useStateFromStores)([m.default], () => m.default.isVisible(e)),
+    v = (0, i.useStateFromStores)([I.default], () => I.default.can(A.Permissions.ADMINISTRATOR, e)),
+    L = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     M = null != e ? e.premiumSubscriberCount : 0,
     P = (0, g.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
     D = null != a && Date.now() - a <= 432e5,
-    y = !D && !v && L && P,
+    y = !D && !L && v && P,
     x = (0, c.useGuildHasLiveChannelNotice)(n),
-    b = (0, i.useStateFromStores)([S.default], () => S.default.isVisible(e)),
-    U = _.default.useShouldShowChannelNotice(n),
+    b = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
+    U = h.default.useShouldShowChannelNotice(n),
     G = (0, o.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {
       enableStudyGroup: j
@@ -75,7 +75,7 @@ function N(e) {
       let e = -1;
       return y && (e = window.setTimeout(() => {
         null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n)
-      }, 30 * Math.random() * m.default.Millis.SECOND)), () => {
+      }, 30 * Math.random() * T.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
     }, [n, y]), R) return 0;

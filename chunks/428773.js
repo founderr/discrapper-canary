@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 }), n("222007");
 var a = n("37983");
@@ -23,15 +23,15 @@ function E() {
     s = u.default.getOutputDeviceId();
   if (o.default.getState().neverShowModal || l.isEmpty(o.default.lastDeviceConnected)) return;
   let E = (0, o.extractDisplayName)(u.default.getInputDevices()[t]),
-    _ = (0, o.extractDisplayName)(u.default.getOutputDevices()[s]),
-    h = l.some(o.default.lastDeviceConnected, e => c.has(e.displayName) || e.displayName === E || e.displayName === _);
-  if (h) return;
+    h = (0, o.extractDisplayName)(u.default.getOutputDevices()[s]),
+    _ = l.some(o.default.lastDeviceConnected, e => c.has(e.displayName) || e.displayName === E || e.displayName === h);
+  if (_) return;
   let C = l.some(o.default.lastDeviceConnected, e => r.default.isCertified(o.default.inputDevices[e.displayName]) || r.default.isCertified(o.default.outputDevices[e.displayName])),
     I = t === d.DEFAULT_DEVICE_ID && o.default.lastInputSystemDevice.justChanged || s === d.DEFAULT_DEVICE_ID && o.default.lastOutputSystemDevice.justChanged;
   if (I && !C) return;
-  let T = l.first(Object.keys(o.default.lastDeviceConnected)),
-    S = null != T && "" !== T ? o.default.lastDeviceConnected[T] : null;
-  null != S && (o.default.initialized && null != T && (r.default.isCertified(o.default.inputDevices[T]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[T]) : r.default.isCertified(o.default.outputDevices[T]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[T]))), f = !0, (0, i.openModalLazy)(async () => {
+  let S = l.first(Object.keys(o.default.lastDeviceConnected)),
+    p = null != S && "" !== S ? o.default.lastDeviceConnected[S] : null;
+  null != p && (o.default.initialized && null != S && (r.default.isCertified(o.default.inputDevices[S]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[S]) : r.default.isCertified(o.default.outputDevices[S]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[S]))), f = !0, (0, i.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("134064").then(n.bind(n, "134064"));
@@ -41,7 +41,7 @@ function E() {
         onClose: l
       } = n;
       return (0, a.jsx)(t, {
-        device: S,
+        device: p,
         certifiedDeviceMetadata: e,
         transitionState: s,
         onClose: () => (f = !1, l())
@@ -49,7 +49,7 @@ function E() {
     }
   }))
 }
-var _ = {
+var h = {
   init() {
     o.default.addChangeListener(E)
   }

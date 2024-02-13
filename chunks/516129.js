@@ -16,26 +16,26 @@ var s = n("105110"),
   c = n("646718"),
   f = n("49111"),
   E = n("782340"),
-  _ = n("334873"),
-  h = n("121432");
+  h = n("334873"),
+  _ = n("121432");
 
 function C(e) {
   var t, n;
   let {
     content: C,
     renderModalProps: I,
-    analyticsLocations: T,
-    analyticsLocation: S,
-    isLightTheme: p
-  } = e, m = "AnnouncementModalVariant1", {
+    analyticsLocations: S,
+    analyticsLocation: p,
+    isLightTheme: m
+  } = e, T = "AnnouncementModalVariant1", {
     onClose: g
   } = I, A = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, r.transitionTo)(f.Routes.APPLICATION_STORE), g()
   } : () => (0, i.default)({
     subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: T,
+    analyticsLocations: S,
     analyticsObject: {
-      ...S,
+      ...p,
       object: f.AnalyticsObjects.BUTTON_CTA,
       objectType: f.AnalyticsObjectTypes.TIER_2
     },
@@ -43,52 +43,52 @@ function C(e) {
       e && g()
     }
   }), O = "" !== C.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
-    className: _.termsApplyAnchor,
+    className: h.termsApplyAnchor,
     href: d.default.getArticleURL(C.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
       variant: "heading-md/normal",
-      className: _.termsApplyBodyText,
+      className: h.termsApplyBodyText,
       children: E.default.Messages.BOGO_TERMS_APPLY
     })
-  }) : void 0, L = {
+  }) : void 0, v = {
     type: "video",
-    src: p ? C.heroArtVideoLinkLightTheme : C.videoLink
+    src: m ? C.heroArtVideoLinkLightTheme : C.videoLink
   };
-  return ("" !== C.heroArtImageLinkDarkTheme || "" !== C.heroArtImageLinkLightTheme) && (L = {
+  return ("" !== C.heroArtImageLinkDarkTheme || "" !== C.heroArtImageLinkLightTheme) && (v = {
     type: "image",
-    src: p ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
+    src: m ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
   }), {
     renderModalProps: I,
     header: C.header,
     subHeader: C.subheader,
     subHeaderExtra: O,
-    heroArt: L,
+    heroArt: v,
     featureCards: C.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
-      imageSrc: p ? e.imageLinkLightTheme : e.imageLink,
+      imageSrc: m ? e.imageLinkLightTheme : e.imageLink,
       tagText: "" !== e.pill ? e.pill : void 0
     })),
-    changeLogId: m,
+    changeLogId: T,
     button: () => {
       let e = Date.now();
       return (0, a.jsxs)(o.default, {
-        className: _.buttonWide,
-        innerClassName: _.innerButton,
+        className: h.buttonWide,
+        innerClassName: h.innerButton,
         color: l.Button.Colors.GREEN,
         size: l.Button.Sizes.SMALL,
         onClick: () => {
           u.default.track(f.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-            change_log_id: m,
+            change_log_id: T,
             cta_type: N,
             seconds_open: Math.round((Date.now() - e) / 1e3),
-            target: m
+            target: T
           }), R()
         },
         children: [(0, a.jsx)("img", {
           alt: "",
-          className: _.nitroIconSubHeader,
-          src: h
+          className: h.nitroIconSubHeader,
+          src: _
         }), A]
       })
     },

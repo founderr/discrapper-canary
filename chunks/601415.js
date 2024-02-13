@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return P
   }
 }), n("222007"), n("860677");
 var i = n("37983"),
@@ -17,24 +17,24 @@ var i = n("37983"),
   h = n("539405"),
   p = n("121338"),
   g = n("155084"),
-  m = n("393414"),
-  E = n("415518"),
+  E = n("393414"),
+  m = n("415518"),
   S = n("720691"),
   v = n("560995"),
   y = n("718517"),
-  O = n("286235"),
-  C = n("439932"),
-  N = n("819068"),
-  T = n("483355"),
-  I = n("6791"),
+  I = n("286235"),
+  O = n("439932"),
+  T = n("819068"),
+  C = n("483355"),
+  N = n("6791"),
   _ = n("49111"),
   A = n("782340"),
   x = n("353306");
 let R = 10 * y.default.Millis.SECOND;
 
 function L() {
-  let e = (0, N.getPID)(),
-    t = (0, N.getRPCAuthToken)();
+  let e = (0, T.getPID)(),
+    t = (0, T.getRPCAuthToken)();
   (0, p.send)({
     type: _.OverlayEventTypes.DISPATCH,
     pid: e,
@@ -49,7 +49,7 @@ function L() {
 class M extends a.PureComponent {
   componentDidMount() {
     this.notificationTimer = setTimeout(this.hideNotification, R), h.default.track(_.AnalyticEvents.NOTIFICATION_VIEWED, {
-      notif_type: I.OverlayNotificationType.OverlayCrashed
+      notif_type: N.OverlayNotificationType.OverlayCrashed
     })
   }
   componentWillUnmount() {
@@ -67,14 +67,14 @@ class M extends a.PureComponent {
     } = this.state, {
       notificationTimer: a
     } = this;
-    return null == a ? null : (0, i.jsx)(T.default, {
+    return null == a ? null : (0, i.jsx)(C.default, {
       observe: !1,
       children: (0, i.jsxs)(f.Clickable, {
-        className: s((0, C.getThemeClass)(_.ThemeTypes.DARK), x.container),
+        className: s((0, O.getThemeClass)(_.ThemeTypes.DARK), x.container),
         onClick: e => e.stopPropagation(),
-        children: [(0, i.jsx)(E.default, {
+        children: [(0, i.jsx)(m.default, {
           expand: !0,
-          colorScheme: E.ColorSchemes.DANGER,
+          colorScheme: m.ColorSchemes.DANGER,
           icon: (0, i.jsx)(S.default, {
             width: 40,
             height: 40,
@@ -116,7 +116,7 @@ class M extends a.PureComponent {
       this.setState({
         busy: !0
       }), L(), h.default.track(_.AnalyticEvents.NOTIFICATION_CLICKED, {
-        notif_type: I.OverlayNotificationType.OverlayCrashed,
+        notif_type: N.OverlayNotificationType.OverlayCrashed,
         action_type: "reload"
       }, !0), e.stopPropagation(), setTimeout(() => location.reload(!0), 200)
     }, this.handleNotificationClick = e => {
@@ -140,16 +140,16 @@ let D = r.throttle(() => {
 });
 class j extends a.PureComponent {
   componentDidCatch(e, t) {
-    let n = (0, m.getHistory)().location;
+    let n = (0, E.getHistory)().location;
     this.setState({
       error: e,
       info: t
     });
-    let i = (0, N.getPID)(),
-      a = (0, N.getRPCAuthToken)();
+    let i = (0, T.getPID)(),
+      a = (0, T.getRPCAuthToken)();
     (0, p.send)({
       type: _.OverlayEventTypes.DISPATCH,
-      pid: (0, N.getPID)(),
+      pid: (0, T.getPID)(),
       token: a,
       payloads: [{
         type: "OVERLAY_CRASHED",
@@ -160,7 +160,7 @@ class j extends a.PureComponent {
         pid: i
       }]
     }), setImmediate(() => window.addEventListener("click", L));
-    let l = O.default.captureCrash(e, {
+    let l = I.default.captureCrash(e, {
       extra: t
     });
     h.default.track(_.AnalyticEvents.APP_CRASHED, {
@@ -194,4 +194,4 @@ class j extends a.PureComponent {
     }
   }
 }
-var k = j
+var P = j

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 });
 var a = n("37983");
@@ -16,19 +16,19 @@ var s = n("446674"),
   c = n("27618"),
   f = n("158998"),
   E = n("50885"),
-  _ = n("91830"),
-  h = n("214621"),
+  h = n("91830"),
+  _ = n("214621"),
   C = n("782340"),
   I = n("556559");
-let T = E.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+let S = E.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 
-function S(e) {
+function p(e) {
   var t;
   let {
     channel: n,
     otherUser: E,
-    active: S
-  } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), g = (0, _.useMessageRequestRelativeTimestampText)(n), {
+    active: p
+  } = e, m = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), T = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), g = (0, h.useMessageRequestRelativeTimestampText)(n), {
     avatarDecorationSrc: A
   } = (0, u.default)({
     user: E,
@@ -36,9 +36,9 @@ function S(e) {
     animateOnHover: !0
   });
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(T, {
+    children: [(0, a.jsx)(S, {
       className: I.avatar,
-      src: (0, d.getChannelIconURL)(n, 40, !p && S),
+      src: (0, d.getChannelIconURL)(n, 40, !m && p),
       avatarDecoration: A,
       size: l.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == E ? void 0 : E.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER
@@ -47,7 +47,7 @@ function S(e) {
       children: [(0, a.jsxs)("div", {
         className: I.userContainerWithPreview,
         children: [(0, a.jsx)(i.default, {
-          nick: m,
+          nick: T,
           user: E,
           showAccountIdentifier: !0,
           className: I.tagContainer,
@@ -61,7 +61,7 @@ function S(e) {
         })]
       }), (0, a.jsx)("div", {
         className: I.messagePreview,
-        children: (0, a.jsx)(h.default, {
+        children: (0, a.jsx)(_.default, {
           channel: n
         })
       })]

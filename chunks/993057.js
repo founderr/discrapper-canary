@@ -15,25 +15,25 @@ var a = n("37983"),
   c = n("657199"),
   f = n("250666"),
   E = n("465869"),
-  _ = n("619443"),
-  h = n("539938"),
+  h = n("619443"),
+  _ = n("539938"),
   C = n("305961"),
   I = n("160299"),
-  T = n("257869"),
-  S = n("638779"),
-  p = n("459736"),
-  m = n("967251"),
+  S = n("257869"),
+  p = n("638779"),
+  m = n("459736"),
+  T = n("967251"),
   g = n("663831"),
   A = n("170185"),
   N = n("277860"),
   R = n("724210"),
   O = n("782340"),
-  L = n("981239");
+  v = n("981239");
 
-function v(e) {
+function L(e) {
   let {
     guildId: t
-  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), v = (0, i.useStateFromStores)([_.default], () => _.default.isConnected()), M = (0, f.default)(t), P = (0, S.default)(t), D = (0, i.useStateFromStores)([I.default], () => I.default.isSubscriptionFetching), y = (0, T.useGroupListingsFetchContext)(), {
+  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), P = (0, p.default)(t), D = (0, i.useStateFromStores)([I.default], () => I.default.isSubscriptionFetching), y = (0, S.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: x,
     restrictionsLoading: b
   } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !y || D || b;
@@ -41,7 +41,7 @@ function v(e) {
     subsection: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
   }), (0, u.default)(l.isMobile ? "role-subscriptions-overview" : void 0);
-  let G = v && (null == n || !(M || P) || x && !b);
+  let G = L && (null == n || !(M || P) || x && !b);
   if (s.useEffect(() => {
       o.fetchSubscriptions()
     }, []), s.useEffect(() => {
@@ -53,25 +53,25 @@ function v(e) {
     })
   }
   return (0, a.jsxs)("div", {
-    className: L.container,
-    children: [(0, a.jsxs)(h.default, {
+    className: v.container,
+    children: [(0, a.jsxs)(_.default, {
       toolbar: (0, a.jsx)(s.Fragment, {}),
-      className: L.headerBar,
-      children: [(0, a.jsx)(h.default.Icon, {
-        icon: p.default,
+      className: v.headerBar,
+      children: [(0, a.jsx)(_.default.Icon, {
+        icon: m.default,
         "aria-hidden": !0
-      }), (0, a.jsx)(h.default.Title, {
+      }), (0, a.jsx)(_.default.Title, {
         children: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })]
     }), (0, a.jsx)("div", {
       id: N.OVERVIEW_NOTICE_ROOT
     }), (0, a.jsx)("div", {
-      className: L.content,
+      className: v.content,
       children: M ? (0, a.jsx)(r.ScrollerNone, {
-        className: L.scroller,
+        className: v.scroller,
         children: (0, a.jsx)("div", {
-          className: L.scrollerContent,
-          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(m.default, {
+          className: v.scrollerContent,
+          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(T.default, {
             guild: n
           })
         })
@@ -84,10 +84,10 @@ function M(e) {
   let {
     guildId: t
   } = e;
-  return (0, a.jsx)(T.GroupListingsFetchContextProvider, {
+  return (0, a.jsx)(S.GroupListingsFetchContextProvider, {
     guildId: t,
     refetchOnMount: !0,
-    children: (0, a.jsx)(v, {
+    children: (0, a.jsx)(L, {
       guildId: t
     })
   })

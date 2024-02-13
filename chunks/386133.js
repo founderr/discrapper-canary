@@ -15,21 +15,21 @@ var a = n("37983"),
   c = n("913144"),
   f = n("777273"),
   E = n("843823"),
-  _ = n("697218"),
-  h = n("392453"),
+  h = n("697218"),
+  _ = n("392453"),
   C = n("599110"),
   I = n("718517"),
-  T = n("744923"),
-  S = n("333705"),
-  p = n("749554"),
-  m = n("62659"),
+  S = n("744923"),
+  p = n("333705"),
+  m = n("749554"),
+  T = n("62659"),
   g = n("36512"),
   A = n("638441"),
   N = n("49111"),
   R = n("988268"),
   O = n("782340"),
-  L = n("561368");
-let v = 15 * I.default.Millis.MINUTE,
+  v = n("561368");
+let L = 15 * I.default.Millis.MINUTE,
   M = (0, A.default)(function(e) {
     let {
       party: t,
@@ -38,10 +38,10 @@ let v = 15 * I.default.Millis.MINUTE,
       registerQuestEntrypoint: i,
       unregisterQuestEntrypoint: r,
       shouldRenderQuestEntrypoint: u
-    } = e, c = (0, a.jsx)(p.default, {
+    } = e, c = (0, a.jsx)(m.default, {
       party: t,
       onUserContextMenu: n
-    }), f = (0, a.jsx)(S.default, {
+    }), f = (0, a.jsx)(p.default, {
       party: t,
       onChannelContextMenu: l,
       registerQuestEntrypoint: i,
@@ -49,22 +49,22 @@ let v = 15 * I.default.Millis.MINUTE,
       shouldRenderQuestEntrypoint: u
     }), {
       partiedMembers: E,
-      applicationStreams: _,
-      currentActivities: h,
+      applicationStreams: h,
+      currentActivities: _,
       voiceChannels: I
-    } = t, T = E.length, A = _.length, O = h.length, M = I.length > 0, P = s.useCallback(() => {
-      let e = h.filter(e => {
+    } = t, S = E.length, A = h.length, O = _.length, M = I.length > 0, P = s.useCallback(() => {
+      let e = _.filter(e => {
         var t, n;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === R.ApplicationTypes.GAME
       }).map(e => e.game.name);
       C.default.track(N.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
-        num_users: T,
+        num_users: S,
         num_streams: A,
         num_activities: O,
         in_voice_channel: M,
         games_detected: e
       })
-    }, [T, A, O, M, h]), D = o(P, v);
+    }, [S, A, O, M, _]), D = o(P, L);
     return null != c || null != f ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
@@ -81,11 +81,11 @@ let v = 15 * I.default.Millis.MINUTE,
         let {
           isShown: n
         } = t;
-        return (0, a.jsx)(m.default, {
+        return (0, a.jsx)(T.default, {
           ...e,
           onMouseEnter: D,
           "aria-haspopup": "menu",
-          className: L.itemCard,
+          className: v.itemCard,
           active: n,
           children: (0, a.jsxs)("div", {
             children: [c, f]
@@ -103,12 +103,12 @@ function D() {
     needsRefresh: n,
     fetching: l,
     currentUser: i
-  } = (0, u.useStateFromStoresObject)([h.default, E.default, _.default], () => ({
-    nowPlayingCards: h.default.nowPlayingCards,
-    loaded: h.default.loaded,
+  } = (0, u.useStateFromStoresObject)([_.default, E.default, h.default], () => ({
+    nowPlayingCards: _.default.nowPlayingCards,
+    loaded: _.default.loaded,
     needsRefresh: E.default.needsRefresh(),
     fetching: E.default.getFetching(),
-    currentUser: _.default.getCurrentUser()
+    currentUser: h.default.getCurrentUser()
   })), r = s.useRef(new Map), o = s.useCallback((e, t) => {
     let n = r.current.get(e);
     return null == n || n === t
@@ -117,7 +117,7 @@ function D() {
   }, []), C = s.useCallback(e => {
     r.current.delete(e)
   }, []);
-  s.useEffect(() => (c.default.wait(() => T.mount()), () => c.default.wait(() => T.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
+  s.useEffect(() => (c.default.wait(() => S.mount()), () => c.default.wait(() => S.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
     n && !l && P()
   }, [n, l]);
   let I = null;
@@ -132,21 +132,21 @@ function D() {
       unregisterQuestEntrypoint: C
     }, t.id)
   }) : (0, a.jsxs)("div", {
-    className: L.emptyCard,
+    className: v.emptyCard,
     children: [(0, a.jsx)(d.Heading, {
       variant: "heading-md/semibold",
-      className: L.emptyHeader,
+      className: v.emptyHeader,
       children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
     }), (0, a.jsx)(d.Text, {
       color: "none",
-      className: L.emptyText,
+      className: v.emptyText,
       variant: "text-sm/normal",
       children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
     })]
   }), (0, a.jsx)(a.Fragment, {
     children: I
   })) : (0, a.jsx)("div", {
-    className: L.emptyCard,
+    className: v.emptyCard,
     children: (0, a.jsx)(d.Spinner, {})
   })
 }

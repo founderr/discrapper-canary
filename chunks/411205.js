@@ -10,8 +10,8 @@ var n = s("446674"),
   i = s("77078"),
   r = s("915639"),
   l = s("521012"),
-  o = s("909469"),
-  u = s("485138"),
+  u = s("909469"),
+  o = s("485138"),
   d = s("585624"),
   c = s("49111"),
   _ = s("110694"),
@@ -19,11 +19,11 @@ var n = s("446674"),
     let {
       localizedPricingPromo: t
     } = e, s = t.countryCode, E = (0, n.useStateFromStores)([r.default], () => r.default.locale);
-    (0, u.useTrackLocalizedPricingPromoImpression)(c.AnalyticsSections.SETTINGS_PREMIUM_BANNER, s);
+    (0, o.useTrackLocalizedPricingPromoImpression)(c.AnalyticsSections.SETTINGS_PREMIUM_BANNER, s);
     let I = (0, n.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()),
       {
         localizedPricingBannerBody: T
-      } = (0, o.getLocalizedPricingBannerStrings)({
+      } = (0, u.getLocalizedPricingBannerStrings)({
         localizedPricingPromo: t,
         subscription: I,
         forceSingleLine: !0,

@@ -15,17 +15,17 @@ var a = n("917351"),
   c = n("42887"),
   f = n("945956"),
   E = n("568307"),
-  _ = n("697218"),
-  h = n("800762"),
+  h = n("697218"),
+  _ = n("800762"),
   C = n("861309"),
   I = n("578287"),
-  T = n("65810"),
-  S = n("716724"),
-  p = n("961400"),
-  m = n("694352"),
+  S = n("65810"),
+  p = n("716724"),
+  m = n("961400"),
+  T = n("694352"),
   g = n("492249"),
   A = n("49111");
-let N = e => (0, S.default)(e).required().keys({
+let N = e => (0, p.default)(e).required().keys({
   channel_id: e.string().required()
 });
 
@@ -40,16 +40,16 @@ function R(e) {
   if (null == s || !(0, I.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid channel id: ".concat(n));
-  if (s.isNSFW() && (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new C.default({
+  if (s.isNSFW() && (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new C.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid nsfw channel id: ".concat(s.id))
 }
-let O = e => (0, S.default)(e).keys({
+let O = e => (0, p.default)(e).keys({
   lobby_id: e.string(),
   channel_id: e.string()
 });
 
-function L(e) {
+function v(e) {
   let {
     args: {
       lobby_id: t,
@@ -69,10 +69,10 @@ function L(e) {
     }, "Invalid lobby id: ".concat(t))
   }
 }
-let v = {
+let L = {
   [A.RPCEvents.GUILD_STATUS]: {
     scope: A.OAuth2Scopes.RPC,
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, p.default)(e).required().keys({
       guild_id: e.string().required()
     }),
     handler(e) {
@@ -107,7 +107,7 @@ let v = {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ]
     },
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, p.default)(e).required().keys({
       channel_id: e.string().required()
     }),
     handler(e) {
@@ -126,7 +126,7 @@ let v = {
         } = e, l = o.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(l.id));
+          r = Object.values(_.default.getVoiceStatesForChannel(l.id));
         if (n) {
           let e = s.differenceBy(r, n, e => {
             let {
@@ -144,7 +144,7 @@ let v = {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ]
     },
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, p.default)(e).required().keys({
       channel_id: e.string().required()
     }),
     handler(e) {
@@ -163,7 +163,7 @@ let v = {
         } = e, l = o.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(l.id)),
+          r = Object.values(_.default.getVoiceStatesForChannel(l.id)),
           u = s.differenceBy(n, r, e => {
             let {
               userId: t
@@ -178,7 +178,7 @@ let v = {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ]
     },
-    validation: e => (0, S.default)(e).required().keys({
+    validation: e => (0, p.default)(e).required().keys({
       channel_id: e.string().required()
     }),
     handler(e) {
@@ -197,7 +197,7 @@ let v = {
         } = e, l = o.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(l.id)).map(e => (0, I.transformVoiceState)(i, l.id, e)),
+          r = Object.values(_.default.getVoiceStatesForChannel(l.id)).map(e => (0, I.transformVoiceState)(i, l.id, e)),
           u = s.differenceWith(r, n, s.isEqual);
         return u.forEach(e => a(e)), r
       }
@@ -239,12 +239,12 @@ let v = {
   [A.RPCEvents.SPEAKING_START]: {
     [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE],
     validation: O,
-    handler: L
+    handler: v
   },
   [A.RPCEvents.SPEAKING_STOP]: {
     [g.RPC_SCOPE_CONFIG.ANY]: [A.OAuth2Scopes.RPC, A.OAuth2Scopes.RPC_VOICE_READ, g.RPC_LOCAL_SCOPE],
     validation: O,
-    handler: L
+    handler: v
   },
   [A.RPCEvents.GUILD_CREATE]: {
     scope: A.OAuth2Scopes.RPC,
@@ -302,7 +302,7 @@ let v = {
     },
     handler() {}
   },
-  [A.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: T.activityInstanceConnectedParticipantsUpdateEvent,
+  [A.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: S.activityInstanceConnectedParticipantsUpdateEvent,
   [A.RPCEvents.THERMAL_STATE_UPDATE]: {
     scope: {
       [g.RPC_SCOPE_CONFIG.ANY]: [g.RPC_AUTHENTICATED_SCOPE]
@@ -341,9 +341,9 @@ let v = {
         prevState: t,
         dispatch: n
       } = e, a = {
-        currentUser: _.default.getCurrentUser()
+        currentUser: h.default.getCurrentUser()
       };
-      return null != a.currentUser && (null == t || !(0, l.default)(a, t)) && n((0, m.default)(a.currentUser)), a
+      return null != a.currentUser && (null == t || !(0, l.default)(a, t)) && n((0, T.default)(a.currentUser)), a
     }
   },
   [A.RPCEvents.LOBBY_UPDATE]: {
@@ -407,14 +407,14 @@ let v = {
       let {
         prevState: a,
         dispatch: l
-      } = e, o = r.default.getStreamerActiveStreamMetadata(), u = (null == o ? void 0 : o.pid) != null ? E.default.getGameForPID(o.pid) : null, d = (null == u ? void 0 : u.id) != null ? i.default.getApplication(u.id) : null, c = null != d ? (0, p.default)(d) : null, f = null == o ? void 0 : o.sourceName, _ = {
+      } = e, o = r.default.getStreamerActiveStreamMetadata(), u = (null == o ? void 0 : o.pid) != null ? E.default.getGameForPID(o.pid) : null, d = (null == u ? void 0 : u.id) != null ? i.default.getApplication(u.id) : null, c = null != d ? (0, m.default)(d) : null, f = null == o ? void 0 : o.sourceName, h = {
         active: null != o,
         pid: null !== (t = null == o ? void 0 : o.pid) && void 0 !== t ? t : null,
         application: (n = null != c, n) ? {
           name: f
         } : null
       };
-      return !s.isEqual(_, a) && l(_), _
+      return !s.isEqual(h, a) && l(h), h
     }
   },
   [A.RPCEvents.VIDEO_STATE_UPDATE]: {
@@ -432,4 +432,4 @@ let v = {
     }
   }
 };
-var M = v
+var M = L

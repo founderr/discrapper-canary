@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return E
   },
   useAcceptedRequestsCount: function() {
-    return _
+    return h
   },
   useActivityWindowTimeStamp: function() {
-    return h
+    return _
   },
   useLinkTimestampText: function() {
     return C
@@ -61,7 +61,7 @@ function E() {
   return n.length
 }
 
-function _() {
+function h() {
   let e = (0, a.default)([s.default], () => s.default.getCurrentUser()),
     t = (0, a.default)([l.default], () => l.default.getLinkedUsers());
   if (null == e) return 0;
@@ -69,7 +69,7 @@ function _() {
   return n.length
 }
 
-function h(e) {
+function _(e) {
   let t = (0, r.useSelectedTeenId)(),
     n = (0, a.default)([l.default], () => null == t ? null : l.default.getRangeStartTimestamp());
   return null == n ? null : (0, i.formatUserActivityTimestamp)(new Date(n).getTime(), () => e, 7)

@@ -10,16 +10,16 @@ var a = n("446674"),
   s = n("77078"),
   i = n("15649"),
   r = n("341542"),
-  u = n("305961"),
-  o = n("610898"),
+  o = n("305961"),
+  u = n("610898"),
   d = n("829562"),
   c = n("49111"),
   f = n("782340"),
   h = n("258023");
 
 function C() {
-  let e = (0, a.useStateFromStores)([r.default, u.default], () => r.default.unavailableGuilds.filter(e => null == u.default.getGuild(e)).length);
-  return e <= 0 ? null : (0, l.jsx)(o.ListItem, {
+  let e = (0, a.useStateFromStores)([r.default, o.default], () => r.default.unavailableGuilds.filter(e => null == o.default.getGuild(e)).length);
+  return e <= 0 ? null : (0, l.jsx)(u.ListItem, {
     children: (0, l.jsx)(d.default, {
       text: f.default.Messages.PARTIAL_OUTAGE.format({
         count: e

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("37983");
@@ -28,16 +28,16 @@ class E extends r.default {
       file: l,
       uploadType: r,
       guildId: E,
-      isTryItOutFlow: _
-    } = e, h = null != E ? o.setPendingAvatar : i.setPendingAvatar, C = null != E ? o.setPendingBanner : u.setPendingBanner, I = d.default.getCurrentUser();
+      isTryItOutFlow: h
+    } = e, _ = null != E ? o.setPendingAvatar : i.setPendingAvatar, C = null != E ? o.setPendingBanner : u.setPendingBanner, I = d.default.getCurrentUser();
     if (r === f.UploadTypes.AVATAR) {
-      if (_) {
+      if (h) {
         (0, u.setTryItOutAvatar)(t);
         return
       }
       let e = c.default.canUseAnimatedAvatar(I);
       if (e || "image/gif" !== l.type) {
-        h(t);
+        _(t);
         return
       }(0, s.openModalLazy)(async () => {
         let {
@@ -45,12 +45,12 @@ class E extends r.default {
         } = await n.el("745544").then(n.bind(n, "745544"));
         return n => (0, a.jsx)(e, {
           avatarSrc: t,
-          onSubscribe: () => h(t),
+          onSubscribe: () => _(t),
           ...n
         })
       })
     } else if (r === f.UploadTypes.BANNER) {
-      if (_) {
+      if (h) {
         (0, u.setTryItOutBanner)(t);
         return
       }
@@ -71,4 +71,4 @@ class E extends r.default {
     }
   }
 }
-var _ = new E
+var h = new E

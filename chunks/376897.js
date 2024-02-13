@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return S
   }
 }), n("222007");
 var a = n("37983");
@@ -16,14 +16,14 @@ var s = n("77078"),
   c = n("101125"),
   f = n("861309"),
   E = n("578287"),
-  _ = n("716724"),
-  h = n("56245"),
+  h = n("716724"),
+  _ = n("56245"),
   C = n("492249"),
   I = n("49111"),
-  T = {
+  S = {
     [I.RPCCommands.SET_OVERLAY_LOCKED]: {
       scope: C.RPC_LOCAL_SCOPE,
-      validation: e => (0, _.default)(e).required().keys({
+      validation: e => (0, h.default)(e).required().keys({
         locked: e.boolean().required(),
         pid: e.number().min(0).required()
       }),
@@ -45,7 +45,7 @@ var s = n("77078"),
     },
     [I.RPCCommands.OPEN_OVERLAY_ACTIVITY_INVITE]: {
       scope: C.RPC_LOCAL_SCOPE,
-      validation: e => (0, _.default)(e).required().keys({
+      validation: e => (0, h.default)(e).required().keys({
         type: e.number().required().valid([I.ActivityActionTypes.JOIN]),
         pid: e.number().min(0).required()
       }),
@@ -66,7 +66,7 @@ var s = n("77078"),
         }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
         let {
           lock: r
-        } = (0, h.unlockOverlay)(a), o = (0, u.default)(l, c.default);
+        } = (0, _.unlockOverlay)(a), o = (0, u.default)(l, c.default);
         return (0, i.openModal)(l, o).then(() => {
           if (r(), o) throw new f.default({
             errorCode: I.RPCErrors.NO_ELIGIBLE_ACTIVITY
@@ -76,7 +76,7 @@ var s = n("77078"),
     },
     [I.RPCCommands.OPEN_OVERLAY_GUILD_INVITE]: {
       scope: C.RPC_LOCAL_SCOPE,
-      validation: e => (0, _.default)(e).required().keys({
+      validation: e => (0, h.default)(e).required().keys({
         code: e.string().required(),
         pid: e.number().min(0).required()
       }),
@@ -102,7 +102,7 @@ var s = n("77078"),
           let {
             context: s,
             lock: i
-          } = (0, h.unlockOverlay)(n);
+          } = (0, _.unlockOverlay)(n);
           return new Promise(e => {
             l.default.dispatch({
               type: "INVITE_MODAL_OPEN",
@@ -117,7 +117,7 @@ var s = n("77078"),
     },
     [I.RPCCommands.OPEN_OVERLAY_VOICE_SETTINGS]: {
       scope: C.RPC_LOCAL_SCOPE,
-      validation: e => (0, _.default)(e).required().keys({
+      validation: e => (0, h.default)(e).required().keys({
         pid: e.number().min(0).required()
       }),
       handler(e) {
@@ -132,7 +132,7 @@ var s = n("77078"),
         }, "No application.");
         let {
           lock: r
-        } = (0, h.unlockOverlay)(t);
+        } = (0, _.unlockOverlay)(t);
         return new Promise(e => {
           (0, s.openModalLazy)(async () => {
             let {

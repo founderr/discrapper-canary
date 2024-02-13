@@ -2,7 +2,7 @@
 let a;
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("70102");
 var s = n("917351"),
@@ -15,33 +15,33 @@ var s = n("917351"),
   c = n("260320"),
   f = n("42887"),
   E = n("49111");
-let _ = {};
+let h = {};
 
-function h() {
-  l.forEach(_, (e, t) => {
-    e.destroy(), delete _[t]
+function _() {
+  l.forEach(h, (e, t) => {
+    e.destroy(), delete h[t]
   })
 }
 
 function C(e, t, n) {
-  let a = _[e];
+  let a = h[e];
   return null != a ? t(a) : n
 }
 
 function I(e) {
   let {
     lobbyId: t
-  } = e, n = _[t];
+  } = e, n = h[t];
   if (null == n) return !1;
-  n.destroy(), delete _[t]
+  n.destroy(), delete h[t]
 }
 
-function T() {
+function S() {
   return !0
 }
-class S extends i.default.Store {
+class p extends i.default.Store {
   forEach(e) {
-    l.each(_, e)
+    l.each(h, e)
   }
   getState(e) {
     return C(e, e => e.state, E.RTCConnectionStates.DISCONNECTED)
@@ -80,24 +80,24 @@ class S extends i.default.Store {
     return C(e, e => e.getDuration(), 0)
   }
 }
-S.displayName = "RTCConnectionStore";
-var p = new S(r.default, f.default.isSupported() ? {
+p.displayName = "RTCConnectionStore";
+var m = new p(r.default, f.default.isSupported() ? {
   CONNECTION_OPEN: function(e) {
-    a = e.sessionId, h()
+    a = e.sessionId, _()
   },
   CONNECTION_CLOSED: function() {
-    a = null, h()
+    a = null, _()
   },
-  RTC_CONNECTION_STATE: T,
-  RTC_CONNECTION_PING: T,
-  RTC_CONNECTION_LOSS_RATE: T,
+  RTC_CONNECTION_STATE: S,
+  RTC_CONNECTION_PING: S,
+  RTC_CONNECTION_LOSS_RATE: S,
   RTC_CONNECTION_UPDATE_ID: function(e) {
-    return l.some(_, t => t === e.connection)
+    return l.some(h, t => t === e.connection)
   },
   LOBBY_VOICE_STATE_UPDATE: function(e) {
     if (d.default.getId() !== e.userId || e.sessionId !== a) return !1;
-    let t = _[e.lobbyId];
-    null != t && null == e.channelId ? (t.destroy(), delete _[e.lobbyId]) : null != t ? t.channelId = e.channelId : null != e.channelId && (t = function(e, t) {
+    let t = h[e.lobbyId];
+    null != t && null == e.channelId ? (t.destroy(), delete h[e.lobbyId]) : null != t ? t.channelId = e.channelId : null != e.channelId && (t = function(e, t) {
       if (null == a) throw Error("Creating RTCConnection without session.");
       let n = c.default.getLobby(e);
       if (null == n) throw Error("Creating RTCConnection without lobby.");
@@ -131,10 +131,10 @@ var p = new S(r.default, f.default.isSupported() ? {
           lobbyId: e
         })
       }), l
-    }(e.lobbyId, e.channelId), _[e.lobbyId] = t)
+    }(e.lobbyId, e.channelId), h[e.lobbyId] = t)
   },
   LOBBY_VOICE_SERVER_UPDATE: function(e) {
-    let t = _[e.lobbyId];
+    let t = h[e.lobbyId];
     if (null == t) return !1;
     t.connect(e.endpoint, e.token)
   },

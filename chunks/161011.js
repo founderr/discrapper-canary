@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("37983"),
@@ -25,7 +25,7 @@ function E() {
     }), (0, a.jsx)(i.default, {})]
   })
 }
-var _ = function() {
+var h = function() {
   return (0, a.jsxs)(s.Fragment, {
     children: [(0, a.jsx)(E, {}), (0, r.backToSchoolEnabled)() && (0, a.jsx)(o.default, {}), (0, a.jsx)("div", {
       className: f.emptyState,

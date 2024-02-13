@@ -18,21 +18,21 @@ var a = n("37983"),
   c = n("77078"),
   f = n("939488"),
   E = n("669499"),
-  _ = n("69927"),
-  h = n("10641"),
+  h = n("69927"),
+  _ = n("10641"),
   C = n("539938"),
   I = n("155084"),
-  T = n("970366"),
-  S = n("161778"),
-  p = n("845579"),
-  m = n("697218"),
+  S = n("970366"),
+  p = n("161778"),
+  m = n("845579"),
+  T = n("697218"),
   g = n("476765"),
   A = n("155207"),
   N = n("956089"),
   R = n("599110"),
   O = n("439932"),
-  L = n("544556"),
-  v = n("822825"),
+  v = n("544556"),
+  L = n("822825"),
   M = n("104887"),
   P = n("771783"),
   D = n("775032"),
@@ -132,19 +132,19 @@ function W(e) {
 function K() {
   let e = (0, D.default)(),
     t = (0, y.useAcceptedRequestsCount)(),
-    n = (0, h.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
-    l = (0, u.default)([v.default], () => v.default.getIsInitialized()),
+    n = (0, _.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
+    l = (0, u.default)([L.default], () => L.default.getIsInitialized()),
     r = (0, P.useSelectedTeenId)(),
     {
       selectedTab: f,
       handleTabChange: C
     } = (0, M.default)(),
-    S = (0, g.useUID)(),
-    p = m.default.getCurrentUser(),
+    p = (0, g.useUID)(),
+    m = T.default.getCurrentUser(),
     A = null != e,
-    N = l && null != p && !A;
+    N = l && null != m && !A;
   return (s.useEffect(() => {
-    (0, T.trackAppUIViewed)("family-center"), L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+    (0, S.trackAppUIViewed)("family-center"), v.default.initialPageLoad(), !n && (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
       dismissAction: k.ContentDismissActionType.AUTO,
       forceTrack: !0
     })
@@ -161,7 +161,7 @@ function K() {
   }, [l, A]), N) ? ((0, E.openAgeGateModal)(w.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
     className: i(B.container),
     "aria-label": F.default.Messages.FAMILY_CENTER_TITLE,
-    children: [(0, a.jsx)(_.AppPageTitle, {
+    children: [(0, a.jsx)(h.AppPageTitle, {
       location: F.default.Messages.FAMILY_CENTER_TITLE
     }), (0, a.jsx)(Y, {
       section: f,
@@ -170,7 +170,7 @@ function K() {
       }
     }), (0, a.jsx)(c.TabBar.Panel, {
       id: f,
-      "aria-labelledby": S,
+      "aria-labelledby": p,
       className: B.contentPanel,
       children: (0, a.jsx)("div", {
         children: H[f]()
@@ -182,20 +182,20 @@ function K() {
 function z() {
   let e = (0, D.default)(),
     t = (0, y.useAcceptedRequestsCount)(),
-    n = (0, h.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
-    l = (0, u.default)([v.default], () => v.default.getIsInitialized()),
+    n = (0, _.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
+    l = (0, u.default)([L.default], () => L.default.getIsInitialized()),
     r = (0, P.useSelectedTeenId)(),
-    C = (0, u.default)([S.default], () => S.default.theme),
+    C = (0, u.default)([p.default], () => p.default.theme),
     {
       selectedTab: A,
       handleTabChange: N
     } = (0, M.default)(),
     O = (0, g.useUID)(),
-    x = m.default.getCurrentUser(),
+    x = T.default.getCurrentUser(),
     b = null != e,
     U = l && null != x && !b;
   if (s.useEffect(() => {
-      f.setHomeLink(j.Routes.FAMILY_CENTER), (0, T.trackAppUIViewed)("family-center"), !v.default.isLoading() && v.default.canRefetch() && L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+      f.setHomeLink(j.Routes.FAMILY_CENTER), (0, S.trackAppUIViewed)("family-center"), !L.default.isLoading() && L.default.canRefetch() && v.default.initialPageLoad(), !n && (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: k.ContentDismissActionType.AUTO,
         forceTrack: !0
       })
@@ -210,15 +210,15 @@ function z() {
         name: o.MetricEvents.FAMILY_CENTER_VIEW
       }))
     }, [l, b]), s.useEffect(() => {
-      let t = p.FamilyCenterEnabled.getSetting();
-      l && e && void 0 === t && p.FamilyCenterEnabled.updateSetting(!0)
+      let t = m.FamilyCenterEnabled.getSetting();
+      l && e && void 0 === t && m.FamilyCenterEnabled.updateSetting(!0)
     }, [l, e]), U) return (0, E.openAgeGateModal)(w.AgeGateSource.FAMILY_CENTER), null;
   let H = A !== G.FamilyCenterSubPages.SETTINGS ? A : G.FamilyCenterSubPages.ACTIVITY,
     Y = V[H];
   return (0, a.jsxs)("main", {
     className: i(B.container, B.containerSidenav),
     "aria-label": F.default.Messages.FAMILY_CENTER_TITLE,
-    children: [(0, a.jsx)(_.AppPageTitle, {
+    children: [(0, a.jsx)(h.AppPageTitle, {
       location: F.default.Messages.FAMILY_CENTER_TITLE
     }), (0, a.jsx)(W, {
       theme: C,

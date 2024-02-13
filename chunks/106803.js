@@ -23,7 +23,7 @@ function E(e, t) {
     e.stopPropagation(), u.CustomStatusSetting.updateSetting(void 0)
   }
 
-  function _() {
+  function h() {
     (0, i.openModalLazy)(async () => {
       let {
         default: e
@@ -61,7 +61,7 @@ function E(e, t) {
           height: 18
         })
       }),
-      action: _
+      action: h
     })
   }
   return (0, a.jsx)(i.MenuItem, {
@@ -71,7 +71,7 @@ function E(e, t) {
     icon: e => (0, a.jsx)("div", {
       className: l(f.customEmojiPlaceholder, e)
     }),
-    action: _,
+    action: h,
     showIconFirst: !0
   })
 }

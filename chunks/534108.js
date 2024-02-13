@@ -185,9 +185,9 @@ function W(e) {
   } = (0, f.default)(), [W, Y] = i.useState(null), z = (0, r.useStateFromStores)([S.default], () => S.default.getCurrentUser()), J = (0, r.useStateFromStores)([C.default], () => {
     var e;
     return C.default.getVoiceState(t, null !== (e = null == z ? void 0 : z.id) && void 0 !== e ? e : "")
-  }), q = (null == J ? void 0 : J.selfDeaf) || (null == J ? void 0 : J.mute) || (null == J ? void 0 : J.suppress), Z = (0, h.useExpressionPickerStore)(e => e.searchQuery), Q = (0, T.useUID)(), {
-    categories: X
-  } = (0, L.default)(a, void 0, P), [$, ee] = i.useState([]), et = (0, L.useSearchCategories)(X, $, Z), en = g.SoundboardPickerCollapsedSections.useSetting(), el = i.useMemo(() => new Set(en), [en]), ei = null == a, ea = x.default.canUseCustomCallSounds(z), es = i.useCallback(e => {
+  }), q = (null == J ? void 0 : J.selfDeaf) || (null == J ? void 0 : J.mute) || (null == J ? void 0 : J.suppress), Z = (0, h.useExpressionPickerStore)(e => e.searchQuery), X = (0, T.useUID)(), {
+    categories: Q
+  } = (0, L.default)(a, void 0, P), [$, ee] = i.useState([]), et = (0, L.useSearchCategories)(Q, $, Z), en = g.SoundboardPickerCollapsedSections.useSetting(), el = i.useMemo(() => new Set(en), [en]), ei = null == a, ea = x.default.canUseCustomCallSounds(z), es = i.useCallback(e => {
     let t = !el.has(e);
     t ? el.add(e) : el.delete(e), g.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
   }, [el]), er = i.useCallback((e, t) => {
@@ -229,7 +229,7 @@ function W(e) {
       collapsed: el.has(n),
       index: t
     }, "header-".concat(n))
-  }, [el, es]), ec = i.useCallback(e => ee((0, M.default)(e, X, z, a)), [a, z, X]), ef = i.useCallback(e => {
+  }, [el, es]), ec = i.useCallback(e => ee((0, M.default)(e, Q, z, a)), [a, z, Q]), ef = i.useCallback(e => {
     (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -248,9 +248,9 @@ function W(e) {
     })
   }), [ef]), em = i.useCallback(e => (0, l.jsx)(j.default, {
     soundboardListRef: e,
-    categories: X,
+    categories: Q,
     listPadding: y
-  }), [X, y]), eh = i.useCallback(e => {
+  }), [Q, y]), eh = i.useCallback(e => {
     if ((null == e ? void 0 : e.item.type) === O.SoundboardSoundItemType.SOUND) {
       var t;
       return (0, l.jsx)(U.default, {
@@ -283,7 +283,7 @@ function W(e) {
       sectionHeaderHeight: B,
       listPadding: G,
       itemNodeWidth: 150,
-      gridNavigatorId: Q,
+      gridNavigatorId: X,
       renderEmptySearchState: V,
       renderInspector: eh,
       gridNotice: I,

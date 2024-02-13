@@ -9,8 +9,8 @@ var s = n("37983");
 n("884691");
 var i = n("77078"),
   r = n("913144"),
-  u = n("427495"),
-  o = n("49111");
+  o = n("427495"),
+  u = n("49111");
 let d = null;
 
 function c(e) {
@@ -19,7 +19,7 @@ function c(e) {
 var f = {
   init() {
     r.default.subscribe("PREMIUM_REQUIRED_MODAL_OPEN", e => {
-      if (c(!1), d = e.context, l = e.resolve, a = e.reject, o.CURRENT_APP_CONTEXT === e.context) {
+      if (c(!1), d = e.context, l = e.resolve, a = e.reject, u.CURRENT_APP_CONTEXT === e.context) {
         let e;
         e = !1, (0, i.openModalLazy)(async () => {
           let {
@@ -39,7 +39,7 @@ var f = {
           }
         }, {
           onCloseCallback: () => {
-            (0, u.closeModal)(e)
+            (0, o.closeModal)(e)
           }
         })
       }

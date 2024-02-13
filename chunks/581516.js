@@ -15,16 +15,16 @@ var s = n("913144"),
   c = n("945956"),
   f = n("18494"),
   E = n("162771"),
-  _ = n("800762"),
-  h = n("191225"),
+  h = n("800762"),
+  _ = n("191225"),
   C = n("420444"),
   I = n("320817"),
-  T = n("49111");
+  S = n("49111");
 
-function S() {
+function p() {
   let e = c.default.getChannelId(),
-    t = h.default.getConnectedActivityChannelId(),
-    n = h.default.getSelfEmbeddedActivityForChannel(null != t ? t : ""),
+    t = _.default.getConnectedActivityChannelId(),
+    n = _.default.getSelfEmbeddedActivityForChannel(null != t ? t : ""),
     i = o.default.getChannel(e),
     r = o.default.getChannel(t),
     u = null == t || (null == e || null == i) && (0, C.default)(t);
@@ -36,16 +36,16 @@ function S() {
     let e = (0, I.default)(t, n.applicationId);
     return function(e, t) {
       if (d.default.isOpen(t)) return !1;
-      s.default.wait(() => l.open(t, T.PictureInPictureComponents.EMBED_IFRAME, {
+      s.default.wait(() => l.open(t, S.PictureInPictureComponents.EMBED_IFRAME, {
         channel: e
       })), a = t
     }(r, e)
   }
 }
 
-function p() {
+function m() {
   let e = u.default.hasLayers(),
-    t = r.default.getWindowOpen(T.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+    t = r.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   return e && !t ? function() {
     let e = a;
     null != e && d.default.isOpen(e) && s.default.wait(() => l.hide(e))
@@ -54,12 +54,12 @@ function p() {
     null != e && d.default.isOpen(e) && s.default.wait(() => l.show(e))
   }()
 }
-class m extends i.default {
+class T extends i.default {
   _initialize() {
-    f.default.addChangeListener(S), E.default.addChangeListener(S), c.default.addChangeListener(S), _.default.addChangeListener(S), r.default.addChangeListener(S), h.default.addChangeListener(S), u.default.addChangeListener(p)
+    f.default.addChangeListener(p), E.default.addChangeListener(p), c.default.addChangeListener(p), h.default.addChangeListener(p), r.default.addChangeListener(p), _.default.addChangeListener(p), u.default.addChangeListener(m)
   }
   _terminate() {
-    f.default.removeChangeListener(S), E.default.removeChangeListener(S), c.default.removeChangeListener(S), _.default.removeChangeListener(S), r.default.removeChangeListener(S), h.default.removeChangeListener(S), u.default.removeChangeListener(p)
+    f.default.removeChangeListener(p), E.default.removeChangeListener(p), c.default.removeChangeListener(p), h.default.removeChangeListener(p), r.default.removeChangeListener(p), _.default.removeChangeListener(p), u.default.removeChangeListener(m)
   }
 }
-var g = new m
+var g = new T

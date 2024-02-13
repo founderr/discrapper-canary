@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return S
   }
 });
 var a = n("37983");
@@ -16,27 +16,27 @@ var s = n("446674"),
   c = n("911574"),
   f = n("350522"),
   E = n("476765"),
-  _ = n("386133"),
-  h = n("49111"),
+  h = n("386133"),
+  _ = n("49111"),
   C = n("782340"),
   I = n("607626");
 
-function T() {
+function S() {
   let {
     AnalyticsLocationProvider: e
-  } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(h.Consents.PERSONALIZATION)), n = t ? [] : [l.DismissibleContent.NOW_PLAYING_CONSENT_CARD], T = (0, E.useUID)();
+  } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(_.Consents.PERSONALIZATION)), n = t ? [] : [l.DismissibleContent.NOW_PLAYING_CONSENT_CARD], S = (0, E.useUID)();
   return (0, a.jsx)(e, {
     children: (0, a.jsx)(r.default, {
-      section: h.AnalyticsSections.ACTIVE_NOW_COLUMN,
+      section: _.AnalyticsSections.ACTIVE_NOW_COLUMN,
       children: (0, a.jsx)("aside", {
         className: I.container,
-        "aria-labelledby": T,
+        "aria-labelledby": S,
         children: (0, a.jsxs)(i.Scroller, {
           className: I.scroller,
           children: [(0, a.jsx)(i.Heading, {
             variant: "heading-lg/semibold",
             className: I.header,
-            id: T,
+            id: S,
             children: C.default.Messages.GAME_FEED_CURRENT_HEADER_TITLE
           }), (0, a.jsx)(d.default, {
             contentTypes: n,
@@ -50,7 +50,7 @@ function T() {
                 markAsDismissed: n
               })
             }
-          }), (0, a.jsx)(_.default, {})]
+          }), (0, a.jsx)(h.default, {})]
         })
       })
     })

@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("77078"),
   i = n("234755"),
   r = n("101125"),
-  u = n("474571"),
-  o = n("962541"),
+  o = n("474571"),
+  u = n("962541"),
   d = n("782340");
 
 function c() {
@@ -27,10 +27,10 @@ function c() {
       })
     },
     animation: s.Popout.Animation.FADE,
-    children: e => (0, l.jsx)(o.default, {
+    children: e => (0, l.jsx)(u.default, {
       ...e,
       tooltipText: d.default.Messages.BROADCAST_SETTINGS,
-      icon: u.default
+      icon: o.default
     })
   })
 }

@@ -15,7 +15,7 @@ var a = n("917351"),
   c = n("397336"),
   f = {
     init() {
-      o.default[c.UserSettingsTypes.PRELOADED_USER_SETTINGS] = r.default, o.default[c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = i.default, l.default.subscribe("CONNECTION_OPEN", E), l.default.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", _), l.default.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", h), l.default.subscribe("APP_STATE_UPDATE", C)
+      o.default[c.UserSettingsTypes.PRELOADED_USER_SETTINGS] = r.default, o.default[c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = i.default, l.default.subscribe("CONNECTION_OPEN", E), l.default.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", h), l.default.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", _), l.default.subscribe("APP_STATE_UPDATE", C)
     }
   };
 
@@ -28,7 +28,7 @@ function E() {
   })
 }
 
-function _(e) {
+function h(e) {
   let {
     settings: {
       proto: t,
@@ -43,7 +43,7 @@ function _(e) {
   })
 }
 
-function h(e) {
+function _(e) {
   let {
     settingsType: t
   } = e;

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return L
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,14 +15,14 @@ var a = n("37983"),
   c = n("736964"),
   f = n("393414"),
   E = n("42203"),
-  _ = n("42887"),
-  h = n("109264"),
+  h = n("42887"),
+  _ = n("109264"),
   C = n("663745"),
   I = n("158998"),
-  T = n("371449"),
-  S = n("224978"),
-  p = n("83916"),
-  m = n("559541"),
+  S = n("371449"),
+  p = n("224978"),
+  m = n("83916"),
+  T = n("559541"),
   g = n("49111"),
   A = n("353927"),
   N = n("782340"),
@@ -36,7 +36,7 @@ function O(e) {
     c.default.removeFriend(t.id, {
       location: "Friends"
     })
-  }, l = (0, r.useStateFromStores)([_.default], () => _.default.supports(A.Features.VIDEO));
+  }, l = (0, r.useStateFromStores)([h.default], () => h.default.supports(A.Features.VIDEO));
   return (0, a.jsxs)(o.Menu, {
     navId: "friend-row",
     "aria-label": N.default.Messages.USER_ACTIONS_MENU_LABEL,
@@ -78,7 +78,7 @@ function O(e) {
     })]
   })
 }
-class L extends s.PureComponent {
+class v extends s.PureComponent {
   componentWillLeave(e) {
     null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e)
   }
@@ -96,7 +96,7 @@ class L extends s.PureComponent {
     } = this.props, {
       isActiveRow: r
     } = this.state;
-    return (0, a.jsx)(S.default, {
+    return (0, a.jsx)(p.default, {
       ref: this.peopleListItemRef,
       isFocused: t,
       isActive: r,
@@ -105,11 +105,11 @@ class L extends s.PureComponent {
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
         className: R.listItemContents,
-        children: [(0, a.jsx)(m.default, {
+        children: [(0, a.jsx)(T.default, {
           user: e,
           status: l,
           isMobile: i,
-          subText: (0, a.jsx)(p.default, {
+          subText: (0, a.jsx)(m.default, {
             hovered: t,
             activities: n,
             applicationStream: s,
@@ -120,12 +120,12 @@ class L extends s.PureComponent {
           showAccountIdentifier: !0
         }), (0, a.jsxs)("div", {
           className: R.actions,
-          children: [(0, a.jsx)(T.default, {
-            icon: h.default,
+          children: [(0, a.jsx)(S.default, {
+            icon: _.default,
             tooltip: N.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
-          }), (0, a.jsx)(T.default, {
+          }), (0, a.jsx)(S.default, {
             icon: C.default,
             tooltip: N.default.Messages.MORE,
             onClick: this.handleOpenActionsMenu,
@@ -164,4 +164,4 @@ class L extends s.PureComponent {
     }
   }
 }
-var v = L
+var L = v

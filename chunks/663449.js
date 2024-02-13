@@ -15,14 +15,14 @@ var a = n("37983"),
   c = n("145131"),
   f = n("533403"),
   E = n("945330"),
-  _ = n("925877"),
-  h = n("701909"),
+  h = n("925877"),
+  _ = n("701909"),
   C = n("962541"),
   I = n("762489"),
-  T = n("329858"),
-  S = n("49111"),
-  p = n("782340"),
-  m = n("234837");
+  S = n("329858"),
+  p = n("49111"),
+  m = n("782340"),
+  T = n("234837");
 let g = {
   HOST: 5,
   LISTENER: 4
@@ -37,12 +37,12 @@ class A extends s.PureComponent {
   }
   renderTitle() {
     return (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(T.default, {
-        children: this.isHost() ? p.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
+      children: [(0, a.jsx)(S.default, {
+        children: this.isHost() ? m.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
           count: this.props.party.length
-        }) : p.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
+        }) : m.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
       }), (0, a.jsx)(I.default, {
-        children: p.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
+        children: m.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
       })]
     })
   }
@@ -51,26 +51,26 @@ class A extends s.PureComponent {
       onStopListening: e
     } = this.props;
     return this.isHost() ? null : (0, a.jsx)(C.default, {
-      tooltipText: p.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
+      tooltipText: m.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
       onClick: e,
       icon: E.default
     })
   }
   renderHelpIcon() {
     return this.isHost() ? (0, a.jsx)(C.default, {
-      tooltipText: p.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
+      tooltipText: m.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
       onClick: () => {
-        window.open(h.default.getArticleURL(S.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
+        window.open(_.default.getArticleURL(p.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
       },
-      icon: _.default
+      icon: h.default
     }) : null
   }
   render() {
     return (0, a.jsxs)("div", {
-      className: m.listeningAlong,
+      className: T.listeningAlong,
       children: [this.renderTitle(), (0, a.jsx)(c.default, {
         justify: c.default.Justify.END,
-        className: m.party,
+        className: T.party,
         children: (0, a.jsx)(f.default, {
           users: this.props.party,
           max: this.isHost() ? g.HOST : g.LISTENER,
@@ -78,7 +78,7 @@ class A extends s.PureComponent {
           renderMoreUsers: this.renderPartyMemberOverflow
         })
       }), (0, a.jsxs)("div", {
-        className: m.icons,
+        className: T.icons,
         children: [this.renderHelpIcon(), this.renderStopListeningButton()]
       })]
     })
@@ -92,7 +92,7 @@ class A extends s.PureComponent {
         renderUserPopout: r,
         onUserContextMenu: c
       } = this.props;
-      return n = (null == l ? void 0 : l.id) === e.id ? p.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : p.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, a.jsx)(u.Popout, {
+      return n = (null == l ? void 0 : l.id) === e.id ? m.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : m.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, a.jsx)(u.Popout, {
         preload: () => (0, d.default)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (o(null != e, ""), r(t, e)),
         position: "top",
@@ -109,7 +109,7 @@ class A extends s.PureComponent {
               key: e.id,
               src: e.getAvatarURL(void 0, 24),
               size: u.AvatarSizes.SIZE_24,
-              className: i(m.avatar, t),
+              className: i(T.avatar, t),
               "aria-label": e.username,
               onMouseEnter: a,
               onMouseLeave: r,
@@ -125,9 +125,9 @@ class A extends s.PureComponent {
       return (0, a.jsx)(u.Popout, {
         renderPopout: s,
         children: n => (0, a.jsx)(u.Tooltip, {
-          text: p.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
+          text: m.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
           children: s => (0, a.jsx)("div", {
-            className: i(m.overflow, t),
+            className: i(T.overflow, t),
             ...s,
             ...n,
             children: e

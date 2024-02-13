@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 }), n("222007");
 var a = n("37983"),
@@ -48,7 +48,7 @@ class E extends s.PureComponent {
     }
   }
 }
-var _ = l.default.connectStores([o.default], e => {
+var h = l.default.connectStores([o.default], e => {
   let {
     guild: t
   } = e;

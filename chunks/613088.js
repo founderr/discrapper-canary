@@ -17,7 +17,7 @@ var a = n("37983"),
   E = function(e) {
     let {
       guild: t
-    } = e, [n, l] = s.useState(!1), E = s.useCallback(() => l(!0), [l]), _ = s.useCallback(() => l(!0), [l]);
+    } = e, [n, l] = s.useState(!1), E = s.useCallback(() => l(!0), [l]), h = s.useCallback(() => l(!0), [l]);
     return (0, a.jsx)("div", {
       className: i(f.actionButtonsContainer, {
         [f.forceButtonsShow]: n
@@ -25,7 +25,7 @@ var a = n("37983"),
       children: (0, a.jsx)(u.default, {
         children: (0, a.jsx)(d.GuildDiscoveryMenuPopout, {
           onRequestOpen: E,
-          onRequestClose: _,
+          onRequestClose: h,
           guild: t,
           children: e => {
             let {

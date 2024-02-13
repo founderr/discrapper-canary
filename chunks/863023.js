@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("768815"),
   f = n("176661"),
   E = n("922832"),
-  _ = n("782340"),
-  h = n("850832");
+  h = n("782340"),
+  _ = n("850832");
 
 function C(e) {
   let {
@@ -34,19 +34,19 @@ function C(e) {
     })
   }, [l, t]);
   return (0, a.jsxs)("div", {
-    className: h.container,
+    className: _.container,
     children: [(0, a.jsx)("div", {
-      className: h.details,
+      className: _.details,
       children: (0, a.jsx)(f.default, {
         otherUser: t,
         status: E.UserLinkStatus.ACTIVE
       })
     }), (0, a.jsx)("div", {
-      className: h.actions,
+      className: _.actions,
       children: (0, a.jsx)(c.default, {
         icon: d.default,
-        className: h.actionDeny,
-        tooltip: _.default.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
+        className: _.actionDeny,
+        tooltip: h.default.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
         onClick: C
       })
     })]

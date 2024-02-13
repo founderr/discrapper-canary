@@ -15,21 +15,21 @@ var i, a, l = n("37983"),
   h = n("145131"),
   p = n("314892"),
   g = n("50885"),
-  m = n("13798"),
-  E = n("999819"),
+  E = n("13798"),
+  m = n("999819"),
   S = n("49111"),
   v = n("782340"),
   y = n("406638"),
-  O = n("926622");
+  I = n("926622");
 (a = i || (i = {})).GENERAL = "GENERAL", a.VOICE = "VOICE", a.DEVELOPER = "DEVELOPER";
-let C = () => [{
+let O = () => [{
     value: S.OverlayAvatarSizes.LARGE,
     name: v.default.Messages.AVATAR_SIZE_OPTION_LARGE
   }, {
     value: S.OverlayAvatarSizes.SMALL,
     name: v.default.Messages.AVATAR_SIZE_OPTION_SMALL
   }],
-  N = () => [{
+  T = () => [{
     value: S.OverlayDisplayNames.ALWAYS,
     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
   }, {
@@ -39,7 +39,7 @@ let C = () => [{
     value: S.OverlayDisplayNames.NEVER,
     name: v.default.Messages.DISPLAY_OPTION_NEVER
   }],
-  T = () => [{
+  C = () => [{
     value: S.OverlayDisplayUsers.ALWAYS,
     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
   }, {
@@ -47,7 +47,7 @@ let C = () => [{
     name: v.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
   }];
 
-function I() {
+function N() {
   let e = f.default.getNotificationPositionMode(),
     t = e !== S.OverlayNotificationPositions.DISABLED,
     n = c.default.getOverlayKeybind(),
@@ -58,8 +58,8 @@ function I() {
     notifications_position: t ? e : null,
     text_notifications_mode: f.default.getTextChatNotificationMode(),
     text_opacity_slider: f.default.getTextWidgetOpacity(),
-    hotkey: null != n ? (0, m.toString)(n.shortcut) : null,
-    text_activation_hotkey: null != i ? (0, m.toString)(i.shortcut) : null
+    hotkey: null != n ? (0, E.toString)(n.shortcut) : null,
+    text_activation_hotkey: null != i ? (0, E.toString)(i.shortcut) : null
   })
 }
 class _ extends s.PureComponent {
@@ -71,7 +71,7 @@ class _ extends s.PureComponent {
     })
   }
   handleChangeNotificationPositionMode(e, t) {
-    d.default.setNotificationPositionMode(t), I()
+    d.default.setNotificationPositionMode(t), N()
   }
   handleChangeAvatarSizeMode(e) {
     let {
@@ -163,7 +163,7 @@ class _ extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
-        className: O.marginBottom20,
+        className: I.marginBottom20,
         children: (0, l.jsx)(p.default, {
           position: t,
           onChange: this.handleChangeNotificationPositionMode
@@ -191,28 +191,28 @@ class _ extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_AVATAR_SIZE,
-        className: O.marginBottom20,
+        className: I.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeAvatarSizeMode,
-          options: C(),
+          options: O(),
           value: e,
           size: r.RadioGroup.Sizes.SMALL
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_NAMES,
-        className: O.marginBottom20,
+        className: I.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayNameMode,
-          options: N(),
+          options: T(),
           value: t,
           size: r.RadioGroup.Sizes.SMALL
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_USERS,
-        className: O.marginBottom20,
+        className: I.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayUserMode,
-          options: T(),
+          options: C(),
           value: n,
           size: r.RadioGroup.Sizes.SMALL
         })
@@ -223,7 +223,7 @@ class _ extends s.PureComponent {
     return (0, l.jsx)(s.Fragment, {
       children: (0, l.jsx)(r.FormItem, {
         title: "Crashes",
-        className: O.marginBottom20,
+        className: I.marginBottom20,
         children: (0, l.jsx)(r.SingleSelect, {
           value: void 0,
           options: [{
@@ -269,7 +269,7 @@ class _ extends s.PureComponent {
         ENABLED: e,
         DISABLED: t
       } = S.OverlayNotificationTextChatTypes, n = this.props.textChatNotificationMode === e ? t : e;
-      d.default.setTextChatNotificationMode(n), I()
+      d.default.setTextChatNotificationMode(n), N()
     }
   }
 }
@@ -293,7 +293,7 @@ function A(e) {
     shouldShowKeybindIndicators: f.default.showKeybindIndicators
   })), {
     showKeybindIndicators: u
-  } = E.default.useExperiment({
+  } = m.default.useExperiment({
     location: "Overlay Settings"
   });
   return (0, l.jsx)(_, {

@@ -36,17 +36,17 @@ function E(e) {
         numberOfGamesLaunchedSinceDismissal: s,
         numberOfTimesDismissed: E
       },
-      hasTakenDecoupledClip: _,
+      hasTakenDecoupledClip: h,
       clipsSettings: {
-        clipsEnabled: h
+        clipsEnabled: _
       }
     } = u.default.getState();
     if (null === a) return !0;
     let C = null != e && (0, o.isUserPremiumTypeForClipsEarlyAccess)(e);
     if (!C) return !1;
     let I = Date.now() - a > c.CLIPS_EDUCATION_COOLDOWN,
-      T = s >= c.CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD,
-      S = h ? c.CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED : c.CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED;
-    return I && T && E < S && !_
+      S = s >= c.CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD,
+      p = _ ? c.CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED : c.CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED;
+    return I && S && E < p && !h
   })
 }

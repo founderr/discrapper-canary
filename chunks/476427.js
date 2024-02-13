@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return I
   }
 });
 var i = n("37983"),
@@ -17,23 +17,23 @@ var i = n("37983"),
   h = n("552067"),
   p = n("866681"),
   g = n("791106"),
-  m = n("983782"),
-  E = n("587974"),
+  E = n("983782"),
+  m = n("587974"),
   S = n("601415"),
   v = n("357506"),
   y = n("49111");
 n("551184"), n("762017"), l.default.initialize();
-var O = function() {
+var I = function() {
   return a.useEffect(() => (f.default.initialize(), d.default.initialize(), p.default.init(), h.default.init(), () => {
     f.default.terminate(), d.default.terminate()
   }), []), (0, i.jsxs)(a.Fragment, {
     children: [(0, i.jsx)(u.default, {}), (0, i.jsx)(c.default, {
       children: (0, i.jsxs)(S.default, {
-        children: [(0, i.jsx)(E.MaskLibrary, {}), (0, i.jsx)(g.default, {}), (0, i.jsx)(r.AppWindowContextProvider, {
+        children: [(0, i.jsx)(m.MaskLibrary, {}), (0, i.jsx)(g.default, {}), (0, i.jsx)(r.AppWindowContextProvider, {
           appContext: y.AppContext.OVERLAY,
           renderWindow: window,
-          children: (0, i.jsxs)(m.AppLayerProvider, {
-            children: [(0, i.jsx)(v.default, {}), (0, i.jsx)(s.Modals, {}), (0, i.jsx)(o.default, {}), (0, i.jsx)(m.AppLayerContainer, {})]
+          children: (0, i.jsxs)(E.AppLayerProvider, {
+            children: [(0, i.jsx)(v.default, {}), (0, i.jsx)(s.Modals, {}), (0, i.jsx)(o.default, {}), (0, i.jsx)(E.AppLayerContainer, {})]
           })
         })]
       })

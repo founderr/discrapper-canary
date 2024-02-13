@@ -9,8 +9,8 @@ var a = s("65597"),
   i = s("79112"),
   r = s("841098"),
   l = s("697218"),
-  o = s("719923"),
-  u = s("49111"),
+  u = s("719923"),
+  o = s("49111"),
   d = s("397336"),
   c = s("782340"),
   _ = s("737117"),
@@ -20,8 +20,8 @@ var a = s("65597"),
   f = s("404875"),
   S = s("118536"),
   R = s("411389"),
-  m = s("840456"),
-  A = s("720917"),
+  A = s("840456"),
+  m = s("720917"),
   N = s("982784"),
   p = s("19530"),
   g = s("215541"),
@@ -33,8 +33,8 @@ var a = s("65597"),
   L = s("578770"),
   x = s("761708"),
   v = s("224456"),
-  D = s("656564"),
-  U = s("124989"),
+  U = s("656564"),
+  D = s("124989"),
   b = s("14528"),
   j = s("443817"),
   G = s("759308");
@@ -44,7 +44,7 @@ let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
       styles: t
     } = e, s = (0, r.default)(), n = (0, a.default)([l.default], () => {
       let e = l.default.getCurrentUser();
-      return o.default.canUsePremiumProfileCustomization(e)
+      return u.default.canUsePremiumProfileCustomization(e)
     }), k = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, y = {
       badge: {
         title: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
@@ -81,7 +81,7 @@ let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
         title: c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
         description: e => {
           let t = () => {
-            i.default.open(u.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
+            i.default.open(o.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
               scrollPosition: d.ProfileCustomizationScrollPositions.TRY_IT_OUT,
               analyticsLocations: e
             })
@@ -98,19 +98,19 @@ let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
       longerMessages: {
         title: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-        imageSource: B(s, v, D),
+        imageSource: B(s, v, U),
         imageClassName: t.longerMessagesImage
       },
       moreGuilds: {
         title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: B(s, T, U),
+        imageSource: B(s, T, D),
         imageClassName: t.moreGuildsImage
       },
       moreGuildsAlt: {
         title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: B(s, m, A),
+        imageSource: B(s, A, m),
         imageClassName: t.moreGuildsAltImage
       },
       remix: {

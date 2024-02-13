@@ -15,21 +15,21 @@ var a = n("37983"),
   c = n("77078"),
   f = n("206230"),
   E = n("915639"),
-  _ = n("471671"),
-  h = n("491605"),
+  h = n("471671"),
+  _ = n("491605"),
   C = n("433487"),
   I = n("58608"),
-  T = n("284679"),
-  S = n("448881"),
-  p = n("374023"),
-  m = n("2973"),
+  S = n("284679"),
+  p = n("448881"),
+  m = n("374023"),
+  T = n("2973"),
   g = n("588025"),
   A = n("227231"),
   N = n("555226"),
   R = n("315130"),
   O = n("228399"),
-  L = n("45198"),
-  v = n("686098"),
+  v = n("45198"),
+  L = n("686098"),
   M = n("166604"),
   P = n("782340"),
   D = n("874275");
@@ -121,13 +121,13 @@ let H = s.forwardRef(function(e, t) {
     expansionFactor: r,
     isExpanded: o,
     isExpansionAnimationComplete: f,
-    quest: _,
-    useReducedMotion: h
-  } = e, T = (0, d.useStateFromStores)([m.default], () => m.default.isEnrolling(_.id), [_]), p = (0, d.useStateFromStores)([E.default], () => E.default.locale), N = s.useMemo(() => new Date(_.config.expiresAt).toLocaleDateString(p, {
+    quest: h,
+    useReducedMotion: _
+  } = e, S = (0, d.useStateFromStores)([T.default], () => T.default.isEnrolling(h.id), [h]), m = (0, d.useStateFromStores)([E.default], () => E.default.locale), N = s.useMemo(() => new Date(h.config.expiresAt).toLocaleDateString(m, {
     dateStyle: "long"
-  }), [_.config.expiresAt, p]), M = s.useMemo(() => _.config.videoAssets.includes(g.QuestContent.QUEST_BAR), [_]), y = s.useCallback(() => {}, []), x = s.useCallback(() => {
-    (0, S.enrollInQuest)(_.id)
-  }, [_]), b = (0, v.useHandleClaimQuestsReward)(_), U = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, G = (null === (l = _.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
+  }), [h.config.expiresAt, m]), M = s.useMemo(() => h.config.videoAssets.includes(g.QuestContent.QUEST_BAR), [h]), y = s.useCallback(() => {}, []), x = s.useCallback(() => {
+    (0, p.enrollInQuest)(h.id)
+  }, [h]), b = (0, L.useHandleClaimQuestsReward)(h), U = (null === (n = h.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, G = (null === (l = h.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
   return (0, a.jsx)(u.animated.div, {
     "aria-hidden": !o && f,
     className: i(D.content, D.contentExpanded),
@@ -145,9 +145,9 @@ let H = s.forwardRef(function(e, t) {
         children: [(0, a.jsxs)("div", {
           className: D.questAcceptedContentHeading,
           children: [(0, a.jsx)("img", {
-            alt: _.config.messages.rewardName,
+            alt: h.config.messages.rewardName,
             className: D.questProgressRewardTile,
-            src: (0, A.getRewardAssetUrl)(_.id)
+            src: (0, A.getRewardAssetUrl)(h.id)
           }), (0, a.jsxs)("div", {
             className: D.questAcceptedContentCopy,
             children: [(0, a.jsx)(c.Heading, {
@@ -185,12 +185,12 @@ let H = s.forwardRef(function(e, t) {
         color: "always-white",
         variant: "text-xs/normal",
         children: P.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-          gameTitle: _.config.messages.gameTitle,
-          streamingDurationRequirement: _.config.streamDurationRequirementMinutes,
-          questReward: _.config.messages.rewardNameWithArticle
+          gameTitle: h.config.messages.gameTitle,
+          streamingDurationRequirement: h.config.streamDurationRequirementMinutes,
+          questReward: h.config.messages.rewardNameWithArticle
         })
       }), (0, a.jsx)(R.default, {
-        quest: _
+        quest: h
       })]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
@@ -198,7 +198,7 @@ let H = s.forwardRef(function(e, t) {
         ref: t,
         children: [(0, a.jsxs)("div", {
           className: D.utils,
-          children: [(0, a.jsx)(L.default, {
+          children: [(0, a.jsx)(v.default, {
             color: "always-white"
           }), (0, a.jsx)(c.Clickable, {
             className: D.submenuWrapper,
@@ -211,22 +211,22 @@ let H = s.forwardRef(function(e, t) {
           className: D.details,
           children: [(0, a.jsx)(O.default, {
             className: D.rewardTile,
-            quest: _
+            quest: h
           }), (0, a.jsx)(c.Heading, {
             className: D.title,
             color: "always-white",
             variant: "heading-md/medium",
             children: P.default.Messages.QUESTS_TITLE.format({
-              questName: _.config.messages.questName
+              questName: h.config.messages.questName
             })
           }), (0, a.jsx)(c.Text, {
             className: D.description,
             color: "always-white",
             variant: "text-sm/normal",
             children: P.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-              gameTitle: _.config.messages.gameTitle,
-              streamingDurationRequirement: _.config.streamDurationRequirementMinutes,
-              questReward: _.config.messages.rewardNameWithArticle
+              gameTitle: h.config.messages.gameTitle,
+              streamingDurationRequirement: h.config.streamDurationRequirementMinutes,
+              questReward: h.config.messages.rewardNameWithArticle
             })
           })]
         }), (0, a.jsx)("div", {
@@ -237,47 +237,47 @@ let H = s.forwardRef(function(e, t) {
             fullWidth: !0,
             onClick: x,
             size: c.Button.Sizes.NONE,
-            submitting: T,
+            submitting: S,
             children: P.default.Messages.QUESTS_ACCEPT_QUEST
           })
         })]
       }), (0, a.jsx)("div", {
         className: D.heroAssetWrapper,
         style: {
-          color: _.config.colors.primary
+          color: h.config.colors.primary
         },
         children: (0, a.jsx)(I.default, {
-          autoPlay: !h,
+          autoPlay: !_,
           loop: !0,
           muted: !0,
           playsInline: !0,
           className: D.heroAsset,
           controls: !1,
-          poster: (0, A.getQuestBarStaticHeroAssetUrl)(_.id),
-          children: h || !M ? null : (0, a.jsx)("source", {
-            src: (0, A.getQuestBarAnimatedHeroAssetUrl)(_.id),
+          poster: (0, A.getQuestBarStaticHeroAssetUrl)(h.id),
+          children: _ || !M ? null : (0, a.jsx)("source", {
+            src: (0, A.getQuestBarAnimatedHeroAssetUrl)(h.id),
             type: "video/webm"
           })
-        }, h ? "static" : "animated")
+        }, _ ? "static" : "animated")
       })]
     })
   })
 });
 var V = function() {
   var e, t, n;
-  let l = (0, p.useIsEligibleForQuests)({
+  let l = (0, m.useIsEligibleForQuests)({
       location: M.QuestsExperimentLocations.ACTIVITY_PANEL,
       autoTrackExposure: !0
     }),
     r = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion),
-    o = (0, d.useStateFromStores)([m.default], () => (0, A.getQuestForTargetedContent)(m.default.quests, g.QuestContent.QUEST_BAR)),
-    c = (0, d.useStateFromStores)([_.default], () => _.default.isFocused()),
+    o = (0, d.useStateFromStores)([T.default], () => (0, A.getQuestForTargetedContent)(T.default.quests, g.QuestContent.QUEST_BAR)),
+    c = (0, d.useStateFromStores)([h.default], () => h.default.isFocused()),
     E = !r && c,
     C = s.useRef(-1),
     I = s.useRef(!1),
-    [S, N] = s.useState(!1),
+    [p, N] = s.useState(!1),
     [R, O] = s.useState(!1),
-    [L, v] = s.useState(!0),
+    [v, L] = s.useState(!0),
     [P, y] = s.useState(240),
     b = s.useRef(!1),
     U = s.useRef(null),
@@ -286,12 +286,12 @@ var V = function() {
     V = (null == o ? void 0 : null === (n = o.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
     Y = s.useMemo(() => {
       if (null == o) return null;
-      let e = (0, T.hexToRgb)(o.config.colors.primary);
+      let e = (0, S.hexToRgb)(o.config.colors.primary);
       return [F(e.r) / 255, F(e.g) / 255, F(e.b) / 255]
     }, [o]),
     W = s.useMemo(() => {
       if (null == o) return null;
-      let e = (0, T.hexToRgb)(o.config.colors.primary),
+      let e = (0, S.hexToRgb)(o.config.colors.primary),
         t = {
           r: e.r / 255,
           g: e.g / 255,
@@ -315,10 +315,10 @@ var V = function() {
       },
       immediate: r,
       onRest: () => {
-        v(!0)
+        L(!0)
       },
       onStart: () => {
-        v(!1)
+        L(!1)
       }
     }),
     z = s.useCallback(() => {
@@ -339,7 +339,7 @@ var V = function() {
   return (s.useEffect(() => {
     if (b.current) return;
     let e = window.setTimeout(() => {
-      N(_.default.isFocused())
+      N(h.default.isFocused())
     }, 500);
     return () => {
       window.clearTimeout(e)
@@ -371,33 +371,33 @@ var V = function() {
       children: [(0, a.jsx)(B, {
         expansionFactor: K,
         isExpanded: R,
-        isExpansionAnimationComplete: L,
+        isExpansionAnimationComplete: v,
         quest: o
       }), (0, a.jsx)(H, {
         expansionFactor: K,
         isExpanded: R,
-        isExpansionAnimationComplete: L,
+        isExpansionAnimationComplete: v,
         quest: o,
         useReducedMotion: r,
         ref: U
       })]
-    }), null != W && !G && (!R || R && !L) && (0, a.jsx)("div", {
+    }), null != W && !G && (!R || R && !v) && (0, a.jsx)("div", {
       className: D.lottieAnimationBackgroundWrapper,
-      children: (0, a.jsx)(h.default, {
+      children: (0, a.jsx)(_.default, {
         importData: () => j(o.id, W),
         shouldAnimate: E,
         className: i(D.lottieAnimation, D.lottieAnimationBackground),
         loop: !0
       })
-    }), !G && null != Y && (0, a.jsx)(h.default, {
+    }), !G && null != Y && (0, a.jsx)(_.default, {
       importData: () => k(o.id, Y),
-      shouldAnimate: S,
+      shouldAnimate: p,
       className: i(D.lottieAnimation, D.lottieAnimationForeground, {
-        [D.lottieAnimationForegroundHidden]: !S
+        [D.lottieAnimationForegroundHidden]: !p
       }),
       loop: !1,
       onComplete: Z,
-      autoplay: S
+      autoplay: p
     }), null == W && (0, a.jsx)("div", {
       className: D.backgroundFallback
     })]

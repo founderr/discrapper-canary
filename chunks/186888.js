@@ -15,14 +15,14 @@ var a = n("37983"),
   c = n("871388"),
   f = n("152311"),
   E = n("36539"),
-  _ = n("860285"),
-  h = n("47319"),
+  h = n("860285"),
+  _ = n("47319"),
   C = n("86878"),
   I = n("686470"),
-  T = n("568307"),
-  S = n("535974"),
-  p = n("599110"),
-  m = n("602043"),
+  S = n("568307"),
+  p = n("535974"),
+  m = n("599110"),
+  T = n("602043"),
   g = n("780009"),
   A = n("49111"),
   N = n("782340");
@@ -34,7 +34,7 @@ function O(e) {
   } = e, n = t.length > 1, O = function(e) {
     let {
       currentActivities: t
-    } = e, n = (0, l.useStateFromStores)([h.default], () => h.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
+    } = e, n = (0, l.useStateFromStores)([_.default], () => _.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
       let {
         activity: t
       } = e;
@@ -47,11 +47,11 @@ function O(e) {
         platform: R
       })
     })
-  }(e), L = function(e) {
+  }(e), v = function(e) {
     let {
       currentActivities: t
-    } = e, n = s.useContext(p.AnalyticsContext);
-    return (0, l.useStateFromStoresArray)([T.default, I.default, _.default, S.default, C.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
+    } = e, n = s.useContext(m.AnalyticsContext);
+    return (0, l.useStateFromStoresArray)([S.default, I.default, h.default, p.default, C.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
       let {
         activity: t,
         game: a
@@ -60,25 +60,25 @@ function O(e) {
         ...e,
         libraryApplication: s,
         canJoin: null != t && (0, c.default)(t, A.ActivityFlags.JOIN) && t.type === A.ActivityTypes.PLAYING,
-        canPlay: (0, m.isLaunchable)({
+        canPlay: (0, T.isLaunchable)({
           LibraryApplicationStore: I.default,
-          LaunchableGameStore: _.default,
-          DispatchApplicationStore: S.default,
+          LaunchableGameStore: h.default,
+          DispatchApplicationStore: p.default,
           ConnectedAppsStore: C.default,
           applicationId: a.id,
           branchId: null != s ? s.branchId : null
         }),
-        isLaunching: _.default.launchingGames.has(a.id),
-        isRunning: T.default.getRunningVerifiedApplicationIds().includes(a.id),
+        isLaunching: h.default.launchingGames.has(a.id),
+        isRunning: S.default.getRunningVerifiedApplicationIds().includes(a.id),
         location: n.location
       }
     }), [n.location, t])
-  }(e), v = [];
-  for (let e of L) {
+  }(e), L = [];
+  for (let e of v) {
     let {
       activity: t
     } = e;
-    null != t && null != t.type && v.push(function(e, t) {
+    null != t && null != t.type && L.push(function(e, t) {
       let {
         canJoin: n,
         activity: s,
@@ -137,5 +137,5 @@ function O(e) {
       })
     }(e, n))
   }
-  return [O, ...v]
+  return [O, ...L]
 }

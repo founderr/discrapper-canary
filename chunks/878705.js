@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 }), n("222007"), n("702976");
 var a = n("872717"),
@@ -15,9 +15,9 @@ var a = n("872717"),
   c = n("716724"),
   f = n("613652"),
   E = n("492249"),
-  _ = n("49111"),
-  h = {
-    [_.RPCCommands.SEND_ANALYTICS_EVENT]: {
+  h = n("49111"),
+  _ = {
+    [h.RPCCommands.SEND_ANALYTICS_EVENT]: {
       validation: e => (0, c.default)(e).required().keys({
         event_name: e.string().required(),
         event_properties: e.object().required()
@@ -36,12 +36,12 @@ var a = n("872717"),
           c = (0, f.default)(),
           E = null == c ? void 0 : c.getGuildId();
         if (null == c) throw new u.default({
-          errorCode: _.RPCErrors.INVALID_COMMAND
+          errorCode: h.RPCErrors.INVALID_COMMAND
         }, "Invalid channel");
-        let h = l.default.getApplication(i),
-          C = (0, o.hasFlag)(null !== (t = null == h ? void 0 : h.flags) && void 0 !== t ? t : 0, _.ApplicationFlags.EMBEDDED_FIRST_PARTY);
+        let _ = l.default.getApplication(i),
+          C = (0, o.hasFlag)(null !== (t = null == _ ? void 0 : _.flags) && void 0 !== t ? t : 0, h.ApplicationFlags.EMBEDDED_FIRST_PARTY);
         if (!C) throw new u.default({
-          errorCode: _.RPCErrors.INVALID_COMMAND
+          errorCode: h.RPCErrors.INVALID_COMMAND
         }, "This application cannot access this API");
         r.default.track(a, {
           ...s,
@@ -50,17 +50,17 @@ var a = n("872717"),
         })
       }
     },
-    [_.RPCCommands.GET_APPLICATION_TICKET]: {
+    [h.RPCCommands.GET_APPLICATION_TICKET]: {
       scope: E.RPC_LOCAL_SCOPE,
       handler(e) {
         let {
           socket: t
         } = e, n = t.application.id;
         if (null == n) throw new u.default({
-          errorCode: _.RPCErrors.INVALID_COMMAND
+          errorCode: h.RPCErrors.INVALID_COMMAND
         }, "No application.");
         return a.default.post({
-          url: _.Endpoints.APPLICATION_TICKET(n),
+          url: h.Endpoints.APPLICATION_TICKET(n),
           body: {
             test_mode: i.default.inTestModeForApplication(n) || s.default.inDevModeForApplication(n)
           },

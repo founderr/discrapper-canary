@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return S
   }
 });
 var l = n("37983"),
@@ -9,8 +9,8 @@ var l = n("37983"),
   s = n("974667"),
   i = n("446674"),
   r = n("450911"),
-  u = n("677315"),
-  o = n("827298"),
+  o = n("677315"),
+  u = n("827298"),
   d = n("290886"),
   c = n("393414"),
   f = n("660478"),
@@ -22,26 +22,26 @@ var l = n("37983"),
   g = n("133335"),
   I = n("782340");
 
-function _(e) {
+function S(e) {
   let {
     guild: t,
     selected: n
-  } = e, _ = (0, s.useListItem)("home-tab-".concat(t.id)), {
-    showBadge: S
-  } = u.GuildHomeBadgeExperiment.useExperiment({
+  } = e, S = (0, s.useListItem)("home-tab-".concat(t.id)), {
+    showBadge: _
+  } = o.GuildHomeBadgeExperiment.useExperiment({
     location: "487e85_1"
   }, {
     autoTrackExposure: !1
   });
   a.useEffect(() => {
-    u.GuildHomeBadgeExperiment.trackExposure({
+    o.GuildHomeBadgeExperiment.trackExposure({
       location: "487e85_2"
     })
   }, []);
   let N = (0, d.useCanSeeOnboardingHome)(t.id),
-    T = (0, i.useStateFromStores)([f.default], () => f.default.hasUnread(t.id, g.ReadStateTypes.GUILD_HOME) && S, [t.id, S]);
+    T = (0, i.useStateFromStores)([f.default], () => f.default.hasUnread(t.id, g.ReadStateTypes.GUILD_HOME) && _, [t.id, _]);
   return (0, l.jsx)(p.default, {
-    ..._,
+    ...S,
     renderIcon: e => N ? (0, l.jsx)(C.default, {
       className: e
     }) : (0, l.jsx)(h.default, {
@@ -54,7 +54,7 @@ function _(e) {
       r.default.preload(t.id, E.StaticChannelRoute.GUILD_HOME)
     },
     onClick: function() {
-      (0, o.ackGuildHome)(t.id), (0, c.transitionTo)(m.Routes.CHANNEL(t.id, E.StaticChannelRoute.GUILD_HOME))
+      (0, u.ackGuildHome)(t.id), (0, c.transitionTo)(m.Routes.CHANNEL(t.id, E.StaticChannelRoute.GUILD_HOME))
     }
   })
 }

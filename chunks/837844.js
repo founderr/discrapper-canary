@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("162771"),
   f = n("120363"),
   E = n("994428"),
-  _ = n("326185");
-let h = s.memo(function(e) {
+  h = n("326185");
+let _ = s.memo(function(e) {
   var t, n, l;
   let {
     state: r,
@@ -25,21 +25,21 @@ let h = s.memo(function(e) {
     name: c,
     guildId: f,
     boundingRect: E
-  } = r, h = s.useMemo(() => (function(e, t, n) {
+  } = r, _ = s.useMemo(() => (function(e, t, n) {
     if (e === o.DismissibleContent.RECURRING_EVENT_COACHMARK) return (0, a.jsx)(d.default, {
       guildId: t,
       markAsDismissed: n
     });
     return null
   })(c, f, u), [c, f, u]);
-  if (null == h) return null;
+  if (null == _) return null;
   return (0, a.jsx)("div", {
-    className: i(_.upsell, !(null != (t = E) && !(t.y < 0)) && _.hidden),
+    className: i(h.upsell, !(null != (t = E) && !(t.y < 0)) && h.hidden),
     style: (n = 0, null == (l = E) ? {} : {
       top: l.top,
       left: l.right - l.x
     }),
-    children: h
+    children: _
   })
 });
 
@@ -60,8 +60,8 @@ function C() {
   if (null == n) return null;
   let l = t[n];
   return null == l ? null : (0, a.jsx)("div", {
-    className: _.container,
-    children: (0, a.jsx)(h, {
+    className: h.container,
+    children: (0, a.jsx)(_, {
       state: l,
       markAsDismissed: s
     })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,11 +15,11 @@ var a = n("37983"),
   c = n("398288"),
   f = n("993105"),
   E = n("773336"),
-  _ = n("50885"),
-  h = n("782340"),
+  h = n("50885"),
+  _ = n("782340"),
   C = n("148738"),
   I = n("926622");
-class T extends s.PureComponent {
+class S extends s.PureComponent {
   renderDiskUsageCircle() {
     let {
       metadata: e
@@ -56,11 +56,11 @@ class T extends s.PureComponent {
             children: null != s ? s : o.default.getLabelFromPath(n)
           }), r ? (0, a.jsx)("span", {
             className: C.defaultIndicator,
-            children: h.default.Messages.DEFAULT
+            children: _.default.Messages.DEFAULT
           }) : null]
         }), null != u && null != e && null != t ? (0, a.jsx)(c.default, {
           className: C.rowBody,
-          hoverText: h.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_SPACE.format({
+          hoverText: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_SPACE.format({
             available: e,
             total: t
           }),
@@ -75,7 +75,7 @@ class T extends s.PureComponent {
         disabled: null != l,
         color: i.Button.Colors.PRIMARY,
         onClick: this.handleStartEditing,
-        children: h.default.Messages.EDIT
+        children: _.default.Messages.EDIT
       })]
     })
   }
@@ -93,14 +93,14 @@ class T extends s.PureComponent {
       children: (0, a.jsxs)(d.default, {
         children: [this.renderDiskUsageCircle(), (0, a.jsxs)(d.default.Child, {
           children: [(0, a.jsx)(i.FormItem, {
-            title: h.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_NAME,
+            title: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_NAME,
             children: (0, a.jsx)(i.TextInput, {
               value: n,
               placeholder: o.default.getLabelFromPath(e),
               onChange: this.handleLabelChange
             })
           }), (0, a.jsx)(i.FormItem, {
-            title: h.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION,
+            title: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION,
             className: I.marginTop20,
             children: (0, a.jsx)(i.TextInput, {
               disabled: !0,
@@ -112,7 +112,7 @@ class T extends s.PureComponent {
             disabled: this.props.isDefault,
             className: C.defaultLocationCheckbox,
             onChange: this.handleToggleDefault,
-            children: h.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_MAKE_DEFAULT
+            children: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_MAKE_DEFAULT
           }), (0, a.jsx)(i.FormDivider, {
             className: C.separator
           }), (0, a.jsxs)(d.default, {
@@ -122,7 +122,7 @@ class T extends s.PureComponent {
               color: i.Button.Colors.RED,
               look: i.Button.Looks.OUTLINED,
               onClick: this.handleRemoveLocation,
-              children: h.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE
+              children: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE
             }), (0, a.jsxs)(d.default, {
               justify: d.default.Justify.END,
               children: [(0, a.jsx)(i.Button, {
@@ -130,13 +130,13 @@ class T extends s.PureComponent {
                 color: i.Button.Colors.PRIMARY,
                 look: i.Button.Looks.LINK,
                 onClick: this.handleStopEditing,
-                children: h.default.Messages.CANCEL
+                children: _.default.Messages.CANCEL
               }), (0, a.jsx)(i.Button, {
                 disabled: e === this.props.path && n === this.props.label && s === this.props.isDefault,
                 size: i.Button.Sizes.SMALL,
                 color: i.Button.Colors.GREEN,
                 onClick: this.handleSaveChanges,
-                children: h.default.Messages.SAVE
+                children: _.default.Messages.SAVE
               })]
             })]
           })]
@@ -173,15 +173,15 @@ class T extends s.PureComponent {
     }, this.handleRemoveLocation = () => {
       (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
         ...e,
-        header: h.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
-        confirmText: h.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
-        cancelText: h.default.Messages.CANCEL,
+        header: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
+        confirmText: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_REMOVE,
+        cancelText: _.default.Messages.CANCEL,
         onConfirm: () => {
           this.handleStopEditing(), (0, r.removeInstallLocation)(this.props.path)
         },
         children: (0, a.jsx)(i.Text, {
           variant: "text-md/normal",
-          children: h.default.Messages.USER_SETTINGS_GAMES_REMOVE_LOCATION_BODY
+          children: _.default.Messages.USER_SETTINGS_GAMES_REMOVE_LOCATION_BODY
         })
       }))
     }, this.handleSaveChanges = () => {
@@ -200,7 +200,7 @@ class T extends s.PureComponent {
     }
   }
 }
-class S extends s.PureComponent {
+class p extends s.PureComponent {
   componentDidMount() {
     (0, r.fetchMetadata)(this.props.installationPaths.map(e => {
       let {
@@ -219,13 +219,13 @@ class S extends s.PureComponent {
     } = this.state;
     return (0, a.jsxs)(i.FormSection, {
       className: C.wrapper,
-      title: h.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATIONS,
+      title: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATIONS,
       children: [e.map(e => {
         let {
           path: l,
           label: i
         } = e;
-        return (0, a.jsx)(T, {
+        return (0, a.jsx)(S, {
           path: l,
           label: i,
           metadata: t[l],
@@ -240,7 +240,7 @@ class S extends s.PureComponent {
           disabled: !E.isPlatformEmbedded,
           onClick: this.handleAddInstallationLocation,
           size: i.Button.Sizes.SMALL,
-          children: h.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD
+          children: _.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD
         })
       })]
     })
@@ -249,7 +249,7 @@ class S extends s.PureComponent {
     super(...e), this.state = {
       editingPath: null
     }, this.handleAddInstallationLocation = () => {
-      _.default.showOpenDialog(["openDirectory"]).then(e => {
+      h.default.showOpenDialog(["openDirectory"]).then(e => {
         null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, r.addInstallLocation)(e[0])
       })
     }, this.handleToggleEditing = e => {
@@ -259,8 +259,8 @@ class S extends s.PureComponent {
     }
   }
 }
-var p = l.default.connectStores([o.default], () => ({
+var m = l.default.connectStores([o.default], () => ({
   installationPaths: o.default.installationPaths,
   installationPathsMetadata: o.default.installationPathsMetadata,
   defaultInstallationPath: o.default.defaultInstallationPath
-}))(S)
+}))(p)

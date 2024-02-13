@@ -63,7 +63,7 @@ var i = n("414456"),
       J = K ? g.default.Align.END : g.default.Align.STRETCH,
       q = Y || W ? g.default.Direction.HORIZONTAL : g.default.Direction.VERTICAL,
       Z = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
-      Q = (0, u.useStateFromStores)([E.default, m.default], () => {
+      X = (0, u.useStateFromStores)([E.default, m.default], () => {
         var e;
         return Z ? m.default.getChannel(null === (e = E.default.getVoiceStateForUser(i.id)) || void 0 === e ? void 0 : e.channelId) : null
       });
@@ -114,11 +114,11 @@ var i = n("414456"),
         applicationStream: s
       }, "watch-button");
       t = [e]
-    } else if (Z && null != Q) {
+    } else if (Z && null != X) {
       let e = (0, l.jsx)(A.default, {
         color: k,
         look: w,
-        hangStatusChannel: Q
+        hangStatusChannel: X
       }, "hang-status-button");
       t = [e]
     } else {
@@ -152,13 +152,13 @@ var i = n("414456"),
       if (null == a && null == s && null == e && null == r) return null;
       t = [a, s, e, r]
     }
-    let X = q === g.default.Direction.VERTICAL;
+    let Q = q === g.default.Direction.VERTICAL;
     return (0, l.jsx)(g.default, {
       grow: 0,
       align: J,
       direction: q,
-      wrap: X ? g.default.Wrap.WRAP : g.default.Wrap.NO_WRAP,
-      className: a(c, b.buttonsWrapper, X ? b.vertical : b.horizontal),
+      wrap: Q ? g.default.Wrap.WRAP : g.default.Wrap.NO_WRAP,
+      className: a(c, b.buttonsWrapper, Q ? b.vertical : b.horizontal),
       onClick: function(e) {
         (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == G || G())
       },

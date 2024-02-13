@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("37983");
@@ -16,7 +16,7 @@ var s = n("151426"),
   c = n("782340"),
   f = n("906861"),
   E = n("273626"),
-  _ = () => {
+  h = () => {
     let {
       analyticsLocations: e
     } = (0, i.default)(l.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP);

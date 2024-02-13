@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var a = n("37983"),
@@ -15,7 +15,7 @@ var a = n("37983"),
   c = n("49111"),
   f = n("994428"),
   E = n("782340"),
-  _ = e => {
+  h = e => {
     let {
       guild: t,
       markAsDismissed: n
@@ -23,7 +23,7 @@ var a = n("37983"),
     s.useEffect(() => {
       (0, i.requestMarkDismissibleContentAsShown)(l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
     }, []);
-    let _ = s.useCallback(() => {
+    let h = s.useCallback(() => {
         o.default.open(t.id, c.GuildSettingsSections.ONBOARDING), u.default.track(c.AnalyticEvents.UPSELL_CLICKED, {
           type: l.DismissibleContent[l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
           action: "primary"
@@ -31,7 +31,7 @@ var a = n("37983"),
           dismissAction: f.ContentDismissActionType.PRIMARY
         }), (0, r.dismissedGuildOnboardingUpsell)(t.id, l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE)
       }, [t.id]),
-      h = s.useCallback(() => {
+      _ = s.useCallback(() => {
         u.default.track(c.AnalyticEvents.UPSELL_CLICKED, {
           type: l.DismissibleContent[l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE],
           action: "dismiss"
@@ -39,8 +39,8 @@ var a = n("37983"),
       }, [t.id, n]);
     return (0, a.jsx)(d.default, {
       guild: t,
-      onDismissed: h,
-      onClick: _,
+      onDismissed: _,
+      onClick: h,
       title: E.default.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_TITLE,
       message: E.default.Messages.GUILD_ONBOARDING_CHANNEL_NOTICE_MESSAGE,
       cta: E.default.Messages.CHECK_IT_OUT,

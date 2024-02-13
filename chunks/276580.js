@@ -15,13 +15,13 @@ var a = n("37983"),
   c = n("738169"),
   f = n("49111"),
   E = n("628159");
-let _ = [
+let h = [
     [1696, 20],
     [1432, 16],
     [1168, 12],
     [0, 8]
   ],
-  h = [
+  _ = [
     [1696, 30],
     [1432, 24],
     [1168, 18],
@@ -32,10 +32,10 @@ var C = e => {
     title: n,
     subtitle: C,
     guildsData: I,
-    analyticsContext: T,
-    theme: S,
-    onViewGuild: p,
-    fetchGuilds: m,
+    analyticsContext: S,
+    theme: p,
+    onViewGuild: m,
+    fetchGuilds: T,
     onGuildCardSeen: g,
     currentCategoryId: A,
     loadId: N,
@@ -43,11 +43,11 @@ var C = e => {
     showMoreCards: O = !1
   } = e;
   s.useEffect(() => {
-    i.default.wait(() => m())
+    i.default.wait(() => T())
   }, [A]);
-  let L = (0, c.default)(O ? h : _),
+  let v = (0, c.default)(O ? _ : h),
     {
-      analyticsLocations: v
+      analyticsLocations: L
     } = (0, r.default)();
   if (null == I) return null;
   let {
@@ -64,22 +64,22 @@ var C = e => {
         page: f.AnalyticsPages.GUILD_DISCOVERY,
         section: f.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
       },
-      analyticsLocations: v
+      analyticsLocations: L
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await p(e, t, T, N)
+      await m(e, t, S, N)
     }
   };
   if (P || null == M) {
     let e = [];
-    for (let t = 0; t < L; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
+    for (let t = 0; t < v; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, L).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, v).map(e => (0, a.jsx)(d.default, {
     className: E.guildCard,
     guild: e,
     onView: y,
-    theme: S,
+    theme: p,
     onGuildCardSeen: g,
     onTagClick: R
   }, e.id));

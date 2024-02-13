@@ -15,21 +15,21 @@ var a = n("37983"),
   c = n("374014"),
   f = n("32346"),
   E = n("808422"),
-  _ = n("233069"),
-  h = n("373469"),
+  h = n("233069"),
+  _ = n("373469"),
   C = n("271938"),
   I = n("42203"),
-  T = n("305961"),
-  S = n("42887"),
-  p = n("385649"),
-  m = n("945956"),
+  S = n("305961"),
+  p = n("42887"),
+  m = n("385649"),
+  T = n("945956"),
   g = n("18494"),
   A = n("280168"),
   N = n("800762"),
   R = n("316133"),
   O = n("449008"),
-  L = n("709681"),
-  v = n("49111");
+  v = n("709681"),
+  L = n("49111");
 
 function M(e, t, n, a) {
   s.useEffect(() => {
@@ -37,18 +37,18 @@ function M(e, t, n, a) {
       l = new r.BatchedStoreListener(e, () => {
         let e = t(),
           l = n(s, e);
-        null != l && !p.default.isSoundDisabled(l) && (0, L.playSound)(l, null != a ? a : .4), s = e
+        null != l && !m.default.isSoundDisabled(l) && (0, v.playSound)(l, null != a ? a : .4), s = e
       });
     return l.attach("useSound"), () => l.detach()
   })
 }
 
 function P() {
-  return M([S.default, g.default], () => ({
+  return M([p.default, g.default], () => ({
     inVoiceChannel: null != g.default.getVoiceChannelId(),
-    selfMute: S.default.isSelfMute(),
-    selfDeaf: S.default.isSelfDeaf(),
-    audioPermissionReady: S.default.isNativeAudioPermissionReady()
+    selfMute: p.default.isSelfMute(),
+    selfDeaf: p.default.isSelfDeaf(),
+    audioPermissionReady: p.default.isNativeAudioPermissionReady()
   }), (e, t) => {
     let {
       inVoiceChannel: n,
@@ -61,17 +61,17 @@ function P() {
 }
 
 function D() {
-  return M([I.default, m.default, g.default, d.default], () => {
+  return M([I.default, T.default, g.default, d.default], () => {
     let e = I.default.getChannel(g.default.getVoiceChannelId()),
       t = null == e ? void 0 : e.type,
       n = null == e ? void 0 : e.getGuildId(),
-      a = m.default.getWasEverRtcConnected(),
-      s = m.default.getState();
+      a = T.default.getWasEverRtcConnected(),
+      s = T.default.getState();
     return {
       channelType: t,
       guildId: n,
-      connected: s === v.RTCConnectionStates.RTC_CONNECTED,
-      connectHasStarted: !a && s !== v.RTCConnectionStates.DISCONNECTED || s === v.RTCConnectionStates.RTC_CONNECTED,
+      connected: s === L.RTCConnectionStates.RTC_CONNECTED,
+      connectHasStarted: !a && s !== L.RTCConnectionStates.DISCONNECTED || s === L.RTCConnectionStates.RTC_CONNECTED,
       awaitingRemote: null != d.default.getAwaitingRemoteSessionInfo(),
       connectedRemote: null != d.default.getRemoteSessionId()
     }
@@ -84,11 +84,11 @@ function D() {
       connectedRemote: i
     } = t, r = e.channelType, o = e.connectedRemote, u = e.connected, d = e.connectHasStarted;
     if (!d && s || i && !o) {
-      if (null != n && _.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n)) return;
+      if (null != n && h.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n)) return;
       return "user_join"
     }
     if (u && !a) {
-      if (l || i || null != r && _.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(r)) return;
+      if (l || i || null != r && h.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(r)) return;
       return "disconnect"
     }
   }), null
@@ -97,19 +97,19 @@ function D() {
 function y() {
   return M([A.default], () => A.default.isCurrentUserSpeaking(), (e, t) => {
     if (e !== t) {
-      let e = S.default.isSelfMute(),
-        n = S.default.getMode();
-      if (n === v.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
+      let e = p.default.isSelfMute(),
+        n = p.default.getMode();
+      if (n === L.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
     }
   }), null
 }
 
 function x() {
-  return M([S.default], () => S.default.isSelfMutedTemporarily(), (e, t) => {
+  return M([p.default], () => p.default.isSelfMutedTemporarily(), (e, t) => {
     if (e !== t) {
-      let e = S.default.isSelfMute(),
-        n = S.default.getMode();
-      if (n === v.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
+      let e = p.default.isSelfMute(),
+        n = p.default.getMode();
+      if (n === L.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
     }
   }), null
 }
@@ -132,20 +132,20 @@ function U() {
 }
 
 function G() {
-  return M([g.default, h.default, C.default, N.default, I.default], () => {
+  return M([g.default, _.default, C.default, N.default, I.default], () => {
     let e, t;
     let n = g.default.getVoiceChannelId(),
       a = C.default.getId();
     let s = [],
       l = null,
       i = 0,
-      r = h.default.getAllActiveStreams();
+      r = _.default.getAllActiveStreams();
     if (null != n) {
       let a = I.default.getChannel(n);
-      null != a && (e = a.type, t = R.default.countVoiceStatesForChannel(a.id) - (N.default.isInChannel(a.id) ? 1 : 0), s = h.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
+      null != a && (e = a.type, t = R.default.countVoiceStatesForChannel(a.id) - (N.default.isInChannel(a.id) ? 1 : 0), s = _.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
     }
     let o = null;
-    return (null == (o = 1 === r.length ? r[0] : h.default.getCurrentUserActiveStream()) ? void 0 : o.state) === v.ApplicationStreamStates.CONNECTING && (o = null), null != o && (l = (0, c.encodeStreamKey)(o), i = h.default.getViewerIds(l).filter(e => e !== a).length), {
+    return (null == (o = 1 === r.length ? r[0] : _.default.getCurrentUserActiveStream()) ? void 0 : o.state) === L.ApplicationStreamStates.CONNECTING && (o = null), null != o && (l = (0, c.encodeStreamKey)(o), i = _.default.getViewerIds(l).filter(e => e !== a).length), {
       channelType: e,
       voiceChannelId: n,
       voiceChannelUserCount: t,
@@ -170,9 +170,9 @@ function G() {
         if (null == t) return !1;
         let n = t.getGuildId();
         if (null == n) return !1;
-        let a = T.default.getGuild(n);
+        let a = S.default.getGuild(n);
         return null != a && a.afkChannelId === t.id
-      }(a) || null != n && _.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n)) return;
+      }(a) || null != n && h.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n)) return;
     let u = null != i && e.singleActiveStreamKey === i,
       d = l.some(t => !e.streamingUserIds.includes(t)),
       c = e.allActiveStreams.map(e => e.ownerId),

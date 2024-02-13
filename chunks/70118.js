@@ -82,15 +82,15 @@ function c(e) {
     return n.filter(t => !e.includes(t.id))
   }, [n, i]);
   if (i.length <= 1 && 0 === f.length) {
-    var E, _;
+    var E, h;
     return (0, a.jsx)(l.MenuGroup, {
       label: n.length > 1 ? u.default.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({
         memberCount: n.length
       }) : void 0,
-      children: d(t, c, n.length, null !== (_ = null === (E = i[0]) || void 0 === E ? void 0 : E.activity) && void 0 !== _ ? _ : void 0, null == r ? void 0 : r.id)
+      children: d(t, c, n.length, null !== (h = null === (E = i[0]) || void 0 === E ? void 0 : E.activity) && void 0 !== h ? h : void 0, null == r ? void 0 : r.id)
     })
   }
-  let h = i.map((e, n) => {
+  let _ = i.map((e, n) => {
       let {
         playingMembers: s,
         game: i,
@@ -116,5 +116,5 @@ function c(e) {
         return C.includes(t.id)
       }), f.filter(e => !o.has(e.id)), f.length, void 0, null == r ? void 0 : r.id)
     });
-  return [...h, I]
+  return [..._, I]
 }

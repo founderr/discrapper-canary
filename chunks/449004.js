@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 }), n("222007"), n("808653");
 var a = n("917351"),
@@ -15,8 +15,8 @@ var a = n("917351"),
 let c = {},
   f = 0,
   E = !1,
-  _ = !1,
-  h = new Set,
+  h = !1,
+  _ = new Set,
   C = new Set;
 
 function I(e, t) {
@@ -31,7 +31,7 @@ function I(e, t) {
     isUnseen: !t && !e.is_viewed
   }
 }(0, a.debounce)(e => d.default.viewSuggestions(e), 15e3);
-class T extends l.default.Store {
+class S extends l.default.Store {
   initialize() {
     this.waitFor(u.default)
   }
@@ -48,10 +48,10 @@ class T extends l.default.Store {
     return c[e]
   }
 }
-T.displayName = "FriendSuggestionStore";
-var S = new T(i.default, {
+S.displayName = "FriendSuggestionStore";
+var p = new S(i.default, {
   CONNECTION_OPEN: function(e) {
-    c = {}, (f = e.friendSuggestionCount) > 0 && (_ = !0, E || !_ || (E = !0, _ = !1, d.default.fetch()))
+    c = {}, (f = e.friendSuggestionCount) > 0 && (h = !0, E || !h || (E = !0, h = !1, d.default.fetch()))
   },
   FRIEND_SUGGESTION_CREATE: function(e) {
     let t = I(e.suggestion);
@@ -76,7 +76,7 @@ var S = new T(i.default, {
   },
   VIEWED_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
     e.userIds.forEach(e => {
-      h.add(e), C.delete(e)
+      _.add(e), C.delete(e)
     })
   }
 })

@@ -15,21 +15,21 @@ var a = n("37983"),
   c = n("77078"),
   f = n("939488"),
   E = n("737960"),
-  _ = n("74456"),
-  h = n("206230"),
+  h = n("74456"),
+  _ = n("206230"),
   C = n("302437"),
   I = n("665182"),
-  T = n("442174"),
-  S = n("69927"),
-  p = n("10641"),
-  m = n("384997"),
+  S = n("442174"),
+  p = n("69927"),
+  m = n("10641"),
+  T = n("384997"),
   g = n("539938"),
   A = n("155084"),
   N = n("393414"),
   R = n("582713"),
   O = n("970366"),
-  L = n("5667"),
-  v = n("161778"),
+  v = n("5667"),
+  L = n("161778"),
   M = n("982108"),
   P = n("42203"),
   D = n("778588"),
@@ -61,7 +61,7 @@ function ee() {
     t = (0, H.useMessageRequestsCount)(),
     n = (0, V.default)(),
     l = (0, k.useListHasSingleMessageRequest)(),
-    u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
+    u = (0, h.useIsRejectAllMessageRequestsEnabled)(),
     d = s.useCallback(() => {
       (0, c.showToast)((0, c.createToast)(X.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
     }, []),
@@ -72,13 +72,13 @@ function ee() {
     }),
     E = (0, C.default)("message-requests-list"),
     {
-      channelId: h
+      channelId: _
     } = (0, B.useMessageRequestSidebarState)(),
     I = s.useCallback(() => {
       let e = n.map(e => e.channel.id);
       f(e)
     }, [n, f]),
-    T = s.useCallback(e => {
+    S = s.useCallback(e => {
       var t, s;
       let {
         row: r
@@ -86,15 +86,15 @@ function ee() {
       return (0, a.jsx)(K.default, {
         index: r,
         className: i({
-          [J.selected]: null != h && h === d,
-          [J.siblingSelected]: null != h && h === u
+          [J.selected]: null != _ && _ === d,
+          [J.siblingSelected]: null != _ && _ === u
         }),
         channel: o.channel,
         user: o.user,
         hasSingleMessageRequest: l
       }, d)
-    }, [l, n, h]),
-    S = s.useCallback(() => (0, a.jsxs)(x.default, {
+    }, [l, n, _]),
+    p = s.useCallback(() => (0, a.jsxs)(x.default, {
       className: J.sectionTitle,
       children: [t > 0 ? X.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
         count: t
@@ -141,8 +141,8 @@ function ee() {
           paddingBottom: 24,
           sectionHeight: q.LIST_SECTION_HEIGHT,
           rowHeight: q.LIST_ROW_HEIGHT,
-          renderSection: S,
-          renderRow: T,
+          renderSection: p,
+          renderRow: S,
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
@@ -164,7 +164,7 @@ function et(e) {
     sidebarType: I.ChatSidebarType.MessageRequestSidebar,
     maxWidth: i,
     onWidthChange: n,
-    children: (0, a.jsx)(T.default, {
+    children: (0, a.jsx)(S.default, {
       channel: l,
       baseChannelId: M.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
@@ -174,24 +174,24 @@ let en = function(e) {
     let {
       markAsDismissed: t
     } = e;
-    return (0, a.jsx)(L.default, {
+    return (0, a.jsx)(v.default, {
       header: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
       content: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
       buttonCTA: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
       className: J.messageRequestCoachmark,
       onClick: () => t(Z.ContentDismissActionType.UNKNOWN),
       markAsDismissed: t,
-      caretPosition: L.CaretPosition.TOP_CENTER,
+      caretPosition: v.CaretPosition.TOP_CENTER,
       headerClassName: J.header
     })
   },
   ea = e => {
     let t = (0, w.default)(),
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
-      l = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion);
+      l = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, p.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
-    }, []), (0, a.jsx)(m.default, {
+      (0, m.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+    }, []), (0, a.jsx)(T.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
         let {
@@ -201,7 +201,7 @@ let en = function(e) {
         if (i === d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK) return (0, a.jsx)(c.Popout, {
           renderPopout: () => t ? (0, a.jsx)(en, {
             markAsDismissed: r
-          }) : (0, a.jsx)(L.default, {
+          }) : (0, a.jsx)(v.default, {
             header: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
             content: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
             buttonCTA: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
@@ -211,7 +211,7 @@ let en = function(e) {
               e.stopPropagation(), (0, N.transitionTo)(Q.Routes.SETTINGS("privacy-and-safety"))
             },
             markAsDismissed: r,
-            caretPosition: L.CaretPosition.TOP_CENTER,
+            caretPosition: v.CaretPosition.TOP_CENTER,
             headerClassName: J.header
           }),
           position: "bottom",
@@ -243,21 +243,21 @@ let el = (0, E.default)(function(e) {
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
-  let l = (0, u.useStateFromStores)([v.default], () => v.default.theme),
+  let l = (0, u.useStateFromStores)([L.default], () => L.default.theme),
     r = (0, Y.useSpamMessageRequestCount)(),
     [d, E] = s.useState(!1),
-    _ = (0, u.useStateFromStores)([M.default, G.default, j.default], () => {
+    h = (0, u.useStateFromStores)([M.default, G.default, j.default], () => {
       let e = M.default.getSidebarState(M.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
       return null != e && e.type === R.SidebarType.VIEW_MESSAGE_REQUEST && (G.default.isMessageRequest(e.channelId) || j.default.isSpam(e.channelId))
     }),
-    [h, C] = s.useState(q.MessageRequestSections.REQUESTS);
-  return (0, S.usePageTitle)({
+    [_, C] = s.useState(q.MessageRequestSections.REQUESTS);
+  return (0, p.usePageTitle)({
     location: X.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: i($.chat, J.container, {
-        [$.threadSidebarOpen]: _,
-        [$.threadSidebarFloating]: _ && d
+        [$.threadSidebarOpen]: h,
+        [$.threadSidebarFloating]: h && d
       }),
       children: [(0, a.jsxs)(g.default, {
         className: (0, U.getThemeClass)(l),
@@ -271,7 +271,7 @@ let el = (0, E.default)(function(e) {
           })
         }), (0, a.jsx)(g.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
           "aria-label": X.default.Messages.MESSAGE_REQUESTS,
-          selectedItem: h,
+          selectedItem: _,
           type: "top-pill",
           onItemSelect: e => {
             C(e)
@@ -292,10 +292,10 @@ let el = (0, E.default)(function(e) {
       }), (0, a.jsx)("div", {
         className: $.content,
         children: (0, a.jsx)(es, {
-          section: h
+          section: _
         })
       })]
-    }), _ && (0, a.jsx)(et, {
+    }), h && (0, a.jsx)(et, {
       pageWidth: t,
       onSidebarResize: (e, t) => {
         E(t)

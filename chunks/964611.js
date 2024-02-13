@@ -162,14 +162,14 @@ var W = e => {
   i.useLayoutEffect(() => {
     Z(W >= 7)
   }, [W]);
-  let Q = i.useCallback(e => {
+  let X = i.useCallback(e => {
       var t;
       let n = null === (t = I.current) || void 0 === t ? void 0 : t.getListDimensions();
       if (null == n) return;
       let l = e + n.height;
       l - w >= z ? Z(!1) : Z(!0)
     }, [z]),
-    X = i.useCallback(e => {
+    Q = i.useCallback(e => {
       var t;
       e(Y), null === (t = I.current) || void 0 === t || t.scrollTo(z)
     }, [z, Y]),
@@ -197,7 +197,7 @@ var W = e => {
     store: h.EmojiPickerStore,
     categories: v,
     listPadding: P,
-    onScroll: Q,
+    onScroll: X,
     renderCategoryListItem: R,
     renderSection: ee,
     rowCount: v.length,
@@ -211,7 +211,7 @@ var W = e => {
         [L.unicodeShortcutInvisible]: !q
       }),
       tabIndex: q ? 0 : -1,
-      onClick: () => X(e),
+      onClick: () => Q(e),
       children: (0, l.jsx)(C.default, {
         height: j,
         width: j

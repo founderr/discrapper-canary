@@ -62,21 +62,21 @@ var a, s = n("746379"),
   c = n("367376"),
   f = n("574073"),
   E = n("845579"),
-  _ = n("233069"),
-  h = n("766274"),
+  h = n("233069"),
+  _ = n("766274"),
   C = n("42203"),
   I = n("305961"),
-  T = n("42887"),
-  S = n("377253"),
-  p = n("824563"),
-  m = n("697218"),
+  S = n("42887"),
+  p = n("377253"),
+  m = n("824563"),
+  T = n("697218"),
   g = n("800762"),
   A = n("718517"),
   N = n("387111"),
   R = n("655518"),
   O = n("861309"),
-  L = n("694352"),
-  v = n("492249"),
+  v = n("694352"),
+  L = n("492249"),
   M = n("49111");
 let P = null !== (a = l.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
   D = function() {
@@ -106,15 +106,15 @@ function j(e) {
 function w(e, t) {
   let n = [],
     a = e.getGuildId();
-  return ![M.ChannelTypes.GUILD_CATEGORY, ...(0, _.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
-    S.default.whenReady(e.id, () => t()), u.default.fetchMessages({
+  return ![M.ChannelTypes.GUILD_CATEGORY, ...(0, h.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
+    p.default.whenReady(e.id, () => t()), u.default.fetchMessages({
       channelId: e.id,
       limit: M.MAX_MESSAGES_PER_CHANNEL
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = !e.isNSFW() || (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0,
-      l = s && t ? S.default.getMessages(e.id).toArray().map(k) : [],
+    let s = !e.isNSFW() || (null === (n = T.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0,
+      l = s && t ? p.default.getMessages(e.id).toArray().map(k) : [],
       i = Object.values(g.default.getVoiceStatesForChannel(e.id)).map(t => F(a, e.id, t));
     return {
       id: e.id,
@@ -136,7 +136,7 @@ function k(e) {
       channelId: e.channel_id
     }).map(U),
     n = C.default.getChannel(e.channel_id),
-    a = null != e.author ? (0, f.getUserAuthor)(new h.default(e.author), n) : void 0;
+    a = null != e.author ? (0, f.getUserAuthor)(new _.default(e.author), n) : void 0;
   return {
     id: e.id,
     blocked: e.blocked,
@@ -167,13 +167,13 @@ function F(e, t, n) {
     selfDeaf: i,
     suppress: r,
     userId: o
-  } = n, u = m.default.getUser(o);
+  } = n, u = T.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: N.default.getName(e, t, u),
-    mute: T.default.isLocalMute(u.id),
-    volume: T.default.getLocalVolume(u.id),
-    pan: T.default.getLocalPan(u.id),
+    mute: S.default.isLocalMute(u.id),
+    volume: S.default.getLocalVolume(u.id),
+    pan: S.default.getLocalPan(u.id),
     voice_state: {
       mute: a,
       deaf: s,
@@ -181,18 +181,18 @@ function F(e, t, n) {
       self_deaf: i,
       suppress: r
     },
-    user: (0, L.default)(u)
+    user: (0, v.default)(u)
   }
 }
 
 function B(e, t, n) {
-  let a = m.default.getUser(t);
+  let a = T.default.getUser(t);
   return {
     type: e,
-    user: null != a ? (0, L.default)(a) : null,
+    user: null != a ? (0, v.default)(a) : null,
     presence: {
-      status: p.default.getStatus(t),
-      activity: null != n ? p.default.getApplicationActivity(t, n) : p.default.getPrimaryActivity(t)
+      status: m.default.getStatus(t),
+      activity: null != n ? m.default.getApplicationActivity(t, n) : m.default.getPrimaryActivity(t)
     }
   }
 }
@@ -260,7 +260,7 @@ function z(e, t, n) {
       }
     } = a;
     if ("string" == typeof n) {
-      if (e.transport === v.TransportTypes.POST_MESSAGE) {
+      if (e.transport === L.TransportTypes.POST_MESSAGE) {
         let e = (0, d.default)(t);
         if (null == e || !j(n, [e])) throw new O.default({
           closeCode: M.RPCCloseCodes.INVALID_ORIGIN
@@ -288,11 +288,11 @@ async function q(e, t) {
 }
 
 function Q(e, t) {
-  null == t && (e.authorization.scopes = [v.RPC_LOCAL_SCOPE])
+  null == t && (e.authorization.scopes = [L.RPC_LOCAL_SCOPE])
 }
 
 function Z(e) {
-  let t = T.default.getSettings(),
+  let t = S.default.getSettings(),
     n = e => Object.values(e).sort((e, t) => e.index - t.index).map(e => ({
       id: e.id,
       name: e.name
@@ -300,12 +300,12 @@ function Z(e) {
     a = e(t);
   return {
     input: {
-      available_devices: n(T.default.getInputDevices()),
+      available_devices: n(S.default.getInputDevices()),
       device_id: t.inputDeviceId,
       volume: t.inputVolume
     },
     output: {
-      available_devices: n(T.default.getOutputDevices()),
+      available_devices: n(S.default.getOutputDevices()),
       device_id: t.outputDeviceId,
       volume: t.outputVolume
     },
@@ -327,7 +327,7 @@ function Z(e) {
 }
 
 function X(e, t) {
-  let n = T.default.getSettings(e),
+  let n = S.default.getSettings(e),
     a = t(n);
   return {
     input_mode: {
@@ -342,7 +342,7 @@ function X(e, t) {
 }
 
 function J(e) {
-  if (e !== v.TransportTypes.POST_MESSAGE) throw new O.default({
+  if (e !== L.TransportTypes.POST_MESSAGE) throw new O.default({
     errorCode: M.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }
