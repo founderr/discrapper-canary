@@ -652,7 +652,7 @@ function eE(e) {
     tier2CTAButton: i,
     className: l,
     variant: a = 0,
-    toggleState: s
+    selectedPremiumType: s
   } = e, {
     AnalyticsLocationProvider: o
   } = (0, O.default)(R.default.PREMIUM_MARKETING_TIER_CARD), u = 1 === a, d = s === X.PremiumTypes.TIER_0;
