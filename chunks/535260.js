@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return P
   }
 }), n("808653"), n("424973"), n("222007");
 var a = n("37983"),
@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("206230"),
   f = n("679653"),
   h = n("619335"),
-  p = n("70845"),
-  m = n("95045"),
+  m = n("70845"),
+  p = n("95045"),
   E = n("393414"),
-  C = n("144491"),
+  S = n("144491"),
   g = n("845579"),
-  S = n("42203"),
+  C = n("42203"),
   _ = n("305961"),
   I = n("957255"),
   T = n("27618"),
@@ -35,15 +35,15 @@ var a = n("37983"),
   O = n("782340"),
   y = n("211631");
 
-function b(e) {
+function P(e) {
   var t;
   let {
     search: n,
     searchId: f,
     renderEmbeds: h,
-    scrollTo: p,
-    searchResults: m,
-    blockCount: C,
+    scrollTo: m,
+    searchResults: p,
+    blockCount: S,
     onChangePage: g
   } = e, {
     offset: _,
@@ -63,7 +63,7 @@ function b(e) {
       confirmText: O.default.Messages.OKAY
     });
     else {
-      let t = S.default.getChannel(e.channel_id),
+      let t = C.default.getChannel(e.channel_id),
         n = null != t ? t.getGuildId() : null;
       o.default.trackJump(e.channel_id, e.id, "Search Results", {
         search_id: v.default.getAnalyticsId(f)
@@ -71,31 +71,31 @@ function b(e) {
     }
   }, [f]), j = l.useMemo(() => {
     let e;
-    if (null == m) return [];
+    if (null == p) return [];
     let t = 0;
-    return m.reduce((n, a) => {
+    return p.reduce((n, a) => {
       let l = a.find(e => e.isSearchHit);
       if (!N && null != l && T.default.isBlocked(l.author.id)) return n;
-      let s = S.default.getChannel(a[0].channel_id);
+      let s = C.default.getChannel(a[0].channel_id);
       return null == s ? n : ((null == e || e !== s.id) && n.push({
         channel: s,
         results: [],
         startIndex: t
       }), t += 1, n[n.length - 1].results.push(a), e = null == s ? void 0 : s.id, n)
     }, [])
-  }, [m, N]), b = l.useRef([]), D = j.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
+  }, [p, N]), P = l.useRef([]), D = j.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
     if (!c.default.keyboardModeEnabled) return;
-    let n = b.current,
+    let n = P.current,
       a = null != t ? n[t] : void 0;
     if (null == a || null == a.hitRef.current) return;
     let l = a.hitRef.current.getClientRects()[0],
       s = l.top - .5 * l.height;
-    p(s, !1, () => {
+    m(s, !1, () => {
       var t;
       null === (t = document.getElementById(e)) || void 0 === t || t.focus()
     })
-  }, [p]), w = l.useCallback(e => {
-    let t = b.current[e];
+  }, [m]), w = l.useCallback(e => {
+    let t = P.current[e];
     null == t || t.jumpTo()
   }, []), F = (0, s.useListNavigator)({
     navId: "search-results",
@@ -109,14 +109,14 @@ function b(e) {
       results: n,
       startIndex: l
     } = e;
-    return (0, a.jsx)(P, {
+    return (0, a.jsx)(b, {
       channel: t,
       results: n,
       highlighter: B,
       startIndex: l,
-      resultRefs: b,
+      resultRefs: P,
       totalResults: I,
-      scrollTo: p,
+      scrollTo: m,
       searchId: f,
       renderEmbeds: h,
       offset: _,
@@ -130,7 +130,7 @@ function b(e) {
   l.useLayoutEffect(() => {
     var e;
     null === (e = G.current) || void 0 === e || e.focus()
-  }, [m]);
+  }, [p]);
   let W = (0, i.useFocusJumpSection)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
@@ -139,7 +139,7 @@ function b(e) {
       ...W,
       "aria-busy": x,
       children: H
-    }), C > 0 ? (0, a.jsxs)(i.Clickable, {
+    }), S > 0 ? (0, a.jsxs)(i.Clickable, {
       tag: "div",
       className: y.resultsBlocked,
       onClick: () => u.setShowBlockedResults(f, !N),
@@ -148,9 +148,9 @@ function b(e) {
       }), (0, a.jsx)("div", {
         className: y.resultsBlockedText,
         children: N ? O.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
-          count: C
+          count: S
         }) : O.default.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({
-          count: C
+          count: S
         })
       })]
     }) : null, !x && !V && (0, a.jsx)(R.default, {
@@ -162,7 +162,7 @@ function b(e) {
   })
 }
 
-function P(e) {
+function b(e) {
   var t, n;
   let {
     channel: s,
@@ -175,16 +175,16 @@ function P(e) {
     searchId: v,
     renderEmbeds: R,
     offset: O,
-    jumpToMessage: b,
-    listNavigator: P,
+    jumpToMessage: P,
+    listNavigator: b,
     favoriteSearch: D
   } = e, U = g.RenderSpoilers.useSetting(), w = l.useCallback(e => {
     if (e === x.default.getChannelId()) return;
-    let t = S.default.getChannel(e);
-    if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, C.transitionToChannel)(t.id)
-  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == s ? void 0 : s.parent_id) != null ? S.default.getChannel(s.parent_id) : null, B = null != V ? V.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != V ? (0, h.default)(V) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
+    let t = C.default.getChannel(e);
+    if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, S.transitionToChannel)(t.id)
+  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, B = null != V ? V.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != V ? (0, h.default)(V) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
     content: Y
-  } = (0, m.default)({
+  } = (0, p.default)({
     content: F,
     embeds: []
   }, {
@@ -196,7 +196,7 @@ function P(e) {
   }, []);
   let X = [F, B, k].filter(e => null != e).join(", ");
   return (0, a.jsx)(A.ObscuredDisplayContext.Provider, {
-    value: (0, p.default)(U, W),
+    value: (0, m.default)(U, W),
     children: (0, a.jsxs)("ul", {
       role: "group",
       className: y.searchResultGroup,
@@ -247,8 +247,8 @@ function P(e) {
           pageResultsLength: r.length,
           result: e,
           index: n,
-          onJump: b,
-          listItemProps: P.getItemProps({
+          onJump: P,
+          listItemProps: b.getItemProps({
             index: n
           })
         }, "search-result-".concat(n))

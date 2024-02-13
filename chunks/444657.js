@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("860345"),
   f = n("865821"),
   h = n("441821"),
-  p = n("478272"),
-  m = n("812204"),
+  m = n("478272"),
+  p = n("812204"),
   E = n("685665"),
-  C = n("10641"),
+  S = n("10641"),
   g = n("36562"),
-  S = n("945330"),
+  C = n("945330"),
   _ = n("381546"),
   I = n("564875"),
   T = n("82636"),
@@ -49,7 +49,7 @@ function y(e) {
   }, {
     autoTrackExposure: !1
   });
-  return l < 250 ? (0, a.jsx)(b, {
+  return l < 250 ? (0, a.jsx)(P, {
     channel: t,
     guild: n,
     width: l,
@@ -63,7 +63,7 @@ function y(e) {
     inPopout: s,
     handleClose: i,
     userParticipantCount: r
-  }) : (0, a.jsx)(P, {
+  }) : (0, a.jsx)(b, {
     channel: t,
     guild: n,
     width: l,
@@ -71,7 +71,7 @@ function y(e) {
   })
 }
 
-function b(e) {
+function P(e) {
   let {
     channel: t,
     inPopout: n,
@@ -79,8 +79,8 @@ function b(e) {
   } = e, {
     analyticsLocations: s,
     AnalyticsLocationProvider: r
-  } = (0, E.default)(m.default.VC_TILE_ACTIVITY_SHELF_BUTTON), c = (0, d.useAnalyticsContext)(), f = (0, u.useToken)(o.default.colors.INTERACTIVE_NORMAL).hex(), h = () => {
-    (0, p.default)({
+  } = (0, E.default)(p.default.VC_TILE_ACTIVITY_SHELF_BUTTON), c = (0, d.useAnalyticsContext)(), f = (0, u.useToken)(o.default.colors.INTERACTIVE_NORMAL).hex(), h = () => {
+    (0, m.default)({
       channel: t,
       guildId: t.guild_id,
       locationObject: c.location,
@@ -129,7 +129,7 @@ function b(e) {
   })
 }
 
-function P(e) {
+function b(e) {
   let {
     channel: t,
     guild: s,
@@ -146,7 +146,7 @@ function P(e) {
     {
       analyticsLocations: c,
       AnalyticsLocationProvider: f
-    } = (0, E.default)(m.default.VC_TILE_ACTIVITY_INVITE);
+    } = (0, E.default)(p.default.VC_TILE_ACTIVITY_INVITE);
   return (0, a.jsx)(f, {
     children: (0, a.jsxs)(A.default, {
       className: L.root,
@@ -192,7 +192,7 @@ function P(e) {
           className: L.button,
           innerClassName: L.buttonContents,
           onClick: function() {
-            (0, p.default)({
+            (0, m.default)({
               channel: t,
               guildId: t.guild_id,
               locationObject: o.location,
@@ -260,7 +260,7 @@ function U(e) {
     }),
     {
       AnalyticsLocationProvider: f
-    } = (0, E.default)(m.default.VC_TILE_ACTIVITY_SUGGESTION);
+    } = (0, E.default)(p.default.VC_TILE_ACTIVITY_SUGGESTION);
   return (0, a.jsx)(f, {
     children: (0, a.jsxs)(A.default, {
       className: L.root,
@@ -289,7 +289,7 @@ function U(e) {
             tile_type: "activity suggestion",
             close_type: "permanent",
             n_participants: d
-          }), (0, C.markDismissibleContentAsDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT)
+          }), (0, S.markDismissibleContentAsDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT)
         },
         children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(u.Text, {
           variant: "text-sm/medium",
@@ -304,7 +304,7 @@ function U(e) {
             n_participants: d
           }), s()
         },
-        children: (0, a.jsx)(S.default, {
+        children: (0, a.jsx)(C.default, {
           className: L.closeButton
         })
       })]

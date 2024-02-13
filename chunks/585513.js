@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -63,7 +63,7 @@ function h(e) {
   })
 }
 
-function p(e) {
+function m(e) {
   var t;
   let {
     className: n,
@@ -71,13 +71,13 @@ function p(e) {
     mentionCount: s,
     isTyping: r,
     canBadge: o
-  } = e, u = null != s && s > 0, d = null !== (t = u ? s : l) && void 0 !== t ? t : 0, p = o && null != l && l > 0;
+  } = e, u = null != s && s > 0, d = null !== (t = u ? s : l) && void 0 !== t ? t : 0, m = o && null != l && l > 0;
   return (0, a.jsxs)("div", {
     className: i(f.chatIcon, n),
     children: [(0, a.jsx)(h, {
-      isBadged: p,
+      isBadged: m,
       isTyping: r
-    }), p && (0, a.jsx)(c.default, {
+    }), m && (0, a.jsx)(c.default, {
       hasMentions: u,
       truncatedCount: d > 99 ? "99+" : d,
       className: f.badge

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 });
 var a = n("37983"),
@@ -15,17 +15,17 @@ var a = n("37983"),
   c = n("508229"),
   f = n("660478"),
   h = n("590514"),
-  p = n("249561"),
-  m = n("782340");
+  m = n("249561"),
+  p = n("782340");
 let E = [];
 
-function C(e) {
+function S(e) {
   let {
     channel: t,
-    onJump: C
+    onJump: S
   } = e, {
     messages: g,
-    loading: S
+    loading: C
   } = (0, s.useStateFromStoresObject)([c.default], () => {
     let e = c.default.getPinnedMessages(t.id),
       n = null != e ? e.messages : E;
@@ -41,28 +41,28 @@ function C(e) {
   }, []), l.useEffect(() => {
     _ && o.default.ackPins(t.id)
   }, [_, t.id]), (0, a.jsx)(r.Dialog, {
-    "aria-label": m.default.Messages.PINNED_MESSAGES,
+    "aria-label": p.default.Messages.PINNED_MESSAGES,
     children: (0, a.jsx)(h.default, {
       onFetch: function() {
         o.default.ackPins(t.id), o.default.fetchPins(t.id)
       },
       channel: t,
       messages: g,
-      loading: S,
+      loading: C,
       analyticsName: "Channel Pins",
       onCloseMessage: function(e, n) {
-        null != e && (n.shiftKey ? o.default.unpinMessage(t, e.id) : p.default.confirmUnpin(t, e))
+        null != e && (n.shiftKey ? o.default.unpinMessage(t, e.id) : m.default.confirmUnpin(t, e))
       },
-      onJump: C,
+      onJump: S,
       getProTip: function() {
-        return t.isPrivate() ? m.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : m.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL
+        return t.isPrivate() ? p.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : p.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL
       },
       renderHeader: () => (0, a.jsx)(h.Header, {
-        title: m.default.Messages.PINNED_MESSAGES
+        title: p.default.Messages.PINNED_MESSAGES
       }),
       renderEmptyState: function(e) {
-        let l = m.default.Messages.NO_PINS_IN_CHANNEL;
-        t.isPrivate() && (l = m.default.Messages.NO_PINS_IN_DM);
+        let l = p.default.Messages.NO_PINS_IN_CHANNEL;
+        t.isPrivate() && (l = p.default.Messages.NO_PINS_IN_DM);
         let s = (0, i.isThemeLight)(e) ? n("615184") : n("992507");
         return (0, a.jsx)(h.EmptyStateCenter, {
           msg: l,

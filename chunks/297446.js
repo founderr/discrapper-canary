@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return L
   },
   default: function() {
-    return b
+    return P
   }
 });
 var a = n("37983"),
@@ -18,12 +18,12 @@ var a = n("37983"),
   c = n("990766"),
   f = n("244201"),
   h = n("191145"),
-  p = n("76393"),
-  m = n("374014"),
+  m = n("76393"),
+  p = n("374014"),
   E = n("223913"),
-  C = n("506885"),
+  S = n("506885"),
   g = n("981601"),
-  S = n("373469"),
+  C = n("373469"),
   _ = n("305961"),
   I = n("957255"),
   T = n("800762"),
@@ -49,11 +49,11 @@ let L = 16 / 9,
     } = e, {
       reducedMotion: h
     } = l.useContext(o.AccessibilityPreferencesContext), {
-      blocked: p,
-      id: m
+      blocked: m,
+      id: p
     } = t;
     return (0, a.jsx)(o.Popout, {
-      preload: null == n ? void 0 : () => (0, C.default)(n.user.id, n.user.getAvatarURL(s.guild_id, 80), {
+      preload: null == n ? void 0 : () => (0, S.default)(n.user.id, n.user.getAvatarURL(s.guild_id, 80), {
         guildId: s.guild_id,
         channelId: s.id
       }),
@@ -71,7 +71,7 @@ let L = 16 / 9,
         children: (0, a.jsx)(N.default, {
           participant: n,
           aspectRatio: L,
-          blocked: p,
+          blocked: m,
           channel: s,
           className: j.tile,
           inCall: !0,
@@ -80,7 +80,7 @@ let L = 16 / 9,
           pulseSpeakingIndicator: !h.enabled,
           width: u,
           children: d && (0, a.jsx)(A.default, {})
-        }, m)
+        }, p)
       })
     })
   },
@@ -92,29 +92,29 @@ let L = 16 / 9,
       width: i,
       isModerator: d,
       onContextMenu: f,
-      inPopout: C
+      inPopout: S
     } = e, {
       reducedMotion: g
     } = l.useContext(o.AccessibilityPreferencesContext), {
       id: x,
       blocked: O
-    } = t, y = (0, r.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams(), []), {
-      selectedParticipant: b,
-      largeStream: P
+    } = t, y = (0, r.useStateFromStoresArray)([C.default], () => C.default.getAllActiveStreams(), []), {
+      selectedParticipant: P,
+      largeStream: b
     } = (0, r.useStateFromStoresObject)([h.default], () => ({
       selectedParticipant: null != s ? h.default.getSelectedParticipant(s.id) : null,
       largeStream: null != s && h.default.getStageStreamSize(s.id)
     })), D = l.useCallback((e, t) => {
       if (e.type === R.ParticipantTypes.STREAM) {
-        let n = y.filter(t => (0, m.encodeStreamKey)(t) === e.id && t.state !== M.ApplicationStreamStates.ENDED);
+        let n = y.filter(t => (0, p.encodeStreamKey)(t) === e.id && t.state !== M.ApplicationStreamStates.ENDED);
         if (0 === n.length) {
-          if (!(0, E.canWatchStream)(s, T.default, _.default, I.default, p.default)[0]) return;
-          (0, c.watchStream)((0, m.decodeStreamKey)(e.id), {
+          if (!(0, E.canWatchStream)(s, T.default, _.default, I.default, m.default)[0]) return;
+          (0, c.watchStream)((0, p.decodeStreamKey)(e.id), {
             forceMultiple: t.shiftKey
           })
         }
-      }(null == b ? void 0 : b.id) === e.id ? P ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
-    }, [y, s, b, P]);
+      }(null == P ? void 0 : P.id) === e.id ? b ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
+    }, [y, s, P, b]);
     return (0, a.jsx)(N.default, {
       participant: n,
       aspectRatio: L,
@@ -123,7 +123,7 @@ let L = 16 / 9,
       channel: s,
       className: j.tile,
       inCall: !0,
-      inPopout: C,
+      inPopout: S,
       onClick: D,
       onContextMenu: f,
       paused: !1,
@@ -132,7 +132,7 @@ let L = 16 / 9,
       children: d && n.type === R.ParticipantTypes.USER && (0, a.jsx)(A.default, {})
     }, x)
   };
-var b = l.memo(function(e) {
+var P = l.memo(function(e) {
   var t;
   let {
     participant: l,
@@ -141,10 +141,10 @@ var b = l.memo(function(e) {
   } = e, u = (0, f.useAppContext)(), c = s.getGuildId();
   i(null != c, "Channel cannot be guildless");
   let {
-    user: p
-  } = l, m = (0, r.useStateFromStores)([h.default], () => h.default.getParticipant(s.id, l.id), [s.id, l.id]), E = (0, r.useStateFromStores)([x.default], () => x.default.isModerator(p.id, s.id), [s.id, p.id]);
-  if (null == m || m.type === R.ParticipantTypes.ACTIVITY) return null;
-  let C = (e, t) => {
+    user: m
+  } = l, p = (0, r.useStateFromStores)([h.default], () => h.default.getParticipant(s.id, l.id), [s.id, l.id]), E = (0, r.useStateFromStores)([x.default], () => x.default.isModerator(m.id, s.id), [s.id, m.id]);
+  if (null == p || p.type === R.ParticipantTypes.ACTIVITY) return null;
+  let S = (e, t) => {
       switch (e.type) {
         case R.ParticipantTypes.HIDDEN_STREAM:
         case R.ParticipantTypes.STREAM:
@@ -170,7 +170,7 @@ var b = l.memo(function(e) {
             } = await n.el("834247").then(n.bind(n, "834247"));
             return t => (0, a.jsx)(e, {
               ...t,
-              user: p,
+              user: m,
               guildId: c,
               channel: s,
               showMediaItems: !0,
@@ -182,27 +182,27 @@ var b = l.memo(function(e) {
           })
       }
     },
-    g = m.type === R.ParticipantTypes.USER && !(null === (t = m.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+    g = p.type === R.ParticipantTypes.USER && !(null === (t = p.voiceState) || void 0 === t ? void 0 : t.selfVideo);
   return (0, a.jsx)(a.Fragment, {
     children: g ? (0, a.jsx)(O, {
       stageParticipant: l,
-      rtcParticipant: m,
+      rtcParticipant: p,
       channel: s,
       guildId: c,
-      user: p,
+      user: m,
       width: o,
       isModerator: E,
-      onContextMenu: C,
+      onContextMenu: S,
       inPopout: u === M.AppContext.POPOUT
     }) : (0, a.jsx)(y, {
       stageParticipant: l,
-      rtcParticipant: m,
+      rtcParticipant: p,
       channel: s,
       guildId: c,
-      user: p,
+      user: m,
       width: o,
       isModerator: E,
-      onContextMenu: C,
+      onContextMenu: S,
       inPopout: u === M.AppContext.POPOUT
     })
   })

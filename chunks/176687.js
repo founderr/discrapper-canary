@@ -48,13 +48,13 @@ function c(e) {
       }
     }),
     h = null == f ? void 0 : f.subscription_plans[0],
-    p = null == h ? void 0 : h.id,
-    m = null == h ? void 0 : h.sku_id,
-    E = (0, l.useStateFromStores)([i.default], () => null != p ? i.default.get(p) : null),
-    C = null == f ? void 0 : f.soft_deleted;
+    m = null == h ? void 0 : h.id,
+    p = null == h ? void 0 : h.sku_id,
+    E = (0, l.useStateFromStores)([i.default], () => null != m ? i.default.get(m) : null),
+    S = null == f ? void 0 : f.soft_deleted;
   return a.useEffect(() => {
-    null == E && null != m && !i.default.isFetchingForSKU(m) && (0, s.fetchSubscriptionPlansForSKU)(m, void 0, void 0, C)
-  }, [E, m, C]), {
+    null == E && null != p && !i.default.isFetchingForSKU(p) && (0, s.fetchSubscriptionPlansForSKU)(p, void 0, void 0, S)
+  }, [E, p, S]), {
     activeSubscription: c,
     activeSubscriptionListing: f,
     activeSubscriptionPlanFromStore: E

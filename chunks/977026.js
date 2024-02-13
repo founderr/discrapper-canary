@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return eC
+    return eS
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("191145"),
   f = n("266392"),
   h = n("458685"),
-  p = n("338677"),
-  m = n("76393"),
+  m = n("338677"),
+  p = n("76393"),
   E = n("479788"),
-  C = n("398604"),
+  S = n("398604"),
   g = n("109526"),
-  S = n("487984"),
+  C = n("487984"),
   _ = n("817963"),
   I = n("999180"),
   T = n("830210"),
@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("116439"),
   O = n("271938"),
   y = n("42887"),
-  b = n("957255"),
-  P = n("18494"),
+  P = n("957255"),
+  b = n("18494"),
   D = n("697218"),
   U = n("887657"),
   w = n("293137"),
@@ -80,7 +80,7 @@ function eu(e) {
   var t, n;
   let {
     channel: l
-  } = e, s = (0, en.default)(l.id), [i, o] = (0, el.default)(l), u = (0, r.useStateFromStores)([b.default], () => b.default.can(es.Permissions.REQUEST_TO_SPEAK, l));
+  } = e, s = (0, en.default)(l.id), [i, o] = (0, el.default)(l), u = (0, r.useStateFromStores)([P.default], () => P.default.can(es.Permissions.REQUEST_TO_SPEAK, l));
   if (s) return null;
   return (0, a.jsx)(R.CenterControlButton, {
     isActive: i,
@@ -96,10 +96,10 @@ function eu(e) {
 let ed = l.memo(function(e) {
   let {
     channel: t
-  } = e, n = (0, r.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === t.id, [t.id]);
+  } = e, n = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]);
   return (0, a.jsxs)("div", {
     className: er.container,
-    children: [(0, a.jsx)(ep, {
+    children: [(0, a.jsx)(em, {
       channelId: t.id
     }), n ? (0, a.jsx)(eu, {
       channel: t
@@ -139,10 +139,10 @@ function ef(e) {
     onSelect: n
   } = e, l = (0, d.useAppContext)(), {
     canManageGuildEvent: s
-  } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([J.default], () => J.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([C.default], () => C.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === t.id, [t.id]), {
+  } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([J.default], () => J.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([S.default], () => S.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), {
     suppress: h
-  } = (0, x.default)(t), p = O.default.getId(), [m] = (0, el.default)(t), E = X.default.isModerator(p, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
-  return f ? (E || S) && null != u ? (0, a.jsx)(o.Popout, {
+  } = (0, x.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = X.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), C = s(c);
+  return f ? (E || C) && null != u ? (0, a.jsx)(o.Popout, {
     renderPopout: e => {
       let {
         closePopout: s
@@ -188,7 +188,7 @@ function ef(e) {
         popoutOpen: i
       })
     }
-  }) : h && !g || m ? (0, a.jsx)(o.Button, {
+  }) : h && !g || p ? (0, a.jsx)(o.Button, {
     size: o.Button.Sizes.MEDIUM,
     color: o.Button.Colors.RED,
     className: i(er.buttonSpacing, er.buttonWithTextButton),
@@ -267,7 +267,7 @@ function eh(e) {
   })
 }
 
-function ep(e) {
+function em(e) {
   let {
     channelId: t
   } = e, n = (0, r.useStateFromStores)([ee.default], () => ee.default.isMuted()), l = (0, $.useShowStageMusicMuteButton)(t), s = (0, r.useStateFromStores)([ee.default], () => ee.default.shouldPlay());
@@ -297,20 +297,20 @@ function ep(e) {
     onClick: () => (0, Q.updateStageMusicShouldPlay)(!s)
   })
 }
-let em = l.memo(function(e) {
+let ep = l.memo(function(e) {
   let {
     channel: t
   } = e, {
     suppress: n,
     selfMute: l,
     mute: s
-  } = (0, x.default)(t), u = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([m.default], () => null != m.default.getAwaitingRemoteSessionInfo()), {
-    cameraUnavailable: C,
+  } = (0, x.default)(t), u = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([p.default], () => null != p.default.getAwaitingRemoteSessionInfo()), {
+    cameraUnavailable: S,
     enabled: g
-  } = (0, I.default)(), S = (0, v.default)(t), {
+  } = (0, I.default)(), C = (0, v.default)(t), {
     limit: _,
     reachedLimit: R
-  } = (0, T.default)(t), O = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), b = (0, r.useStateFromStores)([y.default], () => (0, E.default)(y.default)), U = (0, r.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, V = R && !F || null != w && w.user.id !== (null == O ? void 0 : O.id);
+  } = (0, T.default)(t), O = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), P = (0, r.useStateFromStores)([y.default], () => (0, E.default)(y.default)), U = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, V = R && !F || null != w && w.user.id !== (null == O ? void 0 : O.id);
   if (null == O) return null;
   let B = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Popout, {
@@ -335,9 +335,9 @@ let em = l.memo(function(e) {
         } = t;
         return (0, a.jsx)(L.default, {
           centerButton: !0,
-          hasPermission: S,
+          hasPermission: C,
           enabled: g,
-          cameraUnavailable: C,
+          cameraUnavailable: S,
           onChange: N.handleToggleVideo,
           onCameraUnavailable: A.default,
           channelLimitReached: R,
@@ -350,14 +350,14 @@ let em = l.memo(function(e) {
       channel: t,
       currentUser: O,
       exitFullScreen: () => null,
-      canGoLive: b,
-      hasPermission: S,
+      canGoLive: P,
+      hasPermission: C,
       disabled: V
     })]
   });
   return (0, a.jsxs)("div", {
     className: er.container,
-    children: [(0, a.jsx)(ep, {
+    children: [(0, a.jsx)(em, {
       channelId: t.id
     }), U && (0, a.jsx)(eu, {
       channel: t
@@ -392,7 +392,7 @@ let em = l.memo(function(e) {
             serverMute: s,
             suppress: n,
             popoutOpen: r,
-            onClick: () => (0, p.default)(s, n),
+            onClick: () => (0, m.default)(s, n),
             awaitingRemote: d
           })
         }
@@ -413,18 +413,18 @@ function eE(e) {
   } = e;
   return (0, a.jsxs)("div", {
     className: er.container,
-    children: [(0, a.jsx)(ep, {
+    children: [(0, a.jsx)(em, {
       channelId: t.id
     }), (0, a.jsx)(ef, {
       channel: t
     })]
   })
 }
-var eC = l.memo(function(e) {
+var eS = l.memo(function(e) {
   let {
     channel: t,
     isOnStartStageScreen: n
-  } = e, l = (0, en.default)(t.id), s = (0, K.useCanModerateRequestToSpeak)(t.id), i = (0, r.useStateFromStores)([b.default], () => b.default.can(Z.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), o = (0, ea.default)(t.id), u = (0, r.useStateFromStores)([c.default], () => null != t ? c.default.getSelectedParticipant(t.id) : null), d = !o && null == u;
+  } = e, l = (0, en.default)(t.id), s = (0, K.useCanModerateRequestToSpeak)(t.id), i = (0, r.useStateFromStores)([P.default], () => P.default.can(Z.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), o = (0, ea.default)(t.id), u = (0, r.useStateFromStores)([c.default], () => null != t ? c.default.getSelectedParticipant(t.id) : null), d = !o && null == u;
   return n ? (0, a.jsx)(eE, {
     channel: t
   }) : l || s ? (0, a.jsxs)("div", {
@@ -435,13 +435,13 @@ var eC = l.memo(function(e) {
         channelId: null == t ? void 0 : t.id
       }) : null, (0, a.jsx)("div", {
         className: er.separator
-      }), d && i ? (0, a.jsx)(S.default, {
+      }), d && i ? (0, a.jsx)(C.default, {
         highlight: !0,
         channel: t
       }) : null, (0, a.jsx)("div", {
         className: er.separator
       })]
-    }), (0, a.jsx)(em, {
+    }), (0, a.jsx)(ep, {
       channel: t
     })]
   }) : (0, a.jsx)(ed, {

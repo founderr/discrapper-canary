@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = n("37983");
@@ -16,7 +16,7 @@ var l = n("414456"),
   c = n("773336"),
   f = n("550410"),
   h = n("397651"),
-  p = i.default.connectStores([o.default], e => {
+  m = i.default.connectStores([o.default], e => {
     let {
       userId: t,
       context: n
@@ -32,8 +32,8 @@ var l = n("414456"),
       sliderClassName: l,
       userId: i,
       currentVolume: o,
-      muted: p,
-      context: m,
+      muted: m,
+      context: p,
       currentWindow: E = window
     } = e;
     return (0, a.jsx)(f.default, {
@@ -43,15 +43,15 @@ var l = n("414456"),
         sliderClassName: l,
         className: t,
         value: (0, d.amplitudeToPerceptual)(o),
-        muted: p,
+        muted: m,
         maxValue: c.isPlatformEmbedded ? 200 : 100,
         onValueChange: e => {
           var t, n, a, l;
-          return t = e, n = i, a = p, l = m, void(t > 0 && a && r.default.toggleLocalMute(n, l), r.default.setLocalVolume(n, (0, d.perceptualToAmplitude)(t), l))
+          return t = e, n = i, a = m, l = p, void(t > 0 && a && r.default.toggleLocalMute(n, l), r.default.setLocalVolume(n, (0, d.perceptualToAmplitude)(t), l))
         },
         onToggleMute: () => {
           var e, t;
-          return e = i, t = m, void r.default.toggleLocalMute(e, t)
+          return e = i, t = p, void r.default.toggleLocalMute(e, t)
         }
       })
     })

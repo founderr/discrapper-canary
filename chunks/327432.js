@@ -15,18 +15,18 @@ var a = n("37983"),
   c = n("557809"),
   f = n("393414"),
   h = n("503220"),
-  p = n("42203"),
-  m = n("474643"),
+  m = n("42203"),
+  p = n("474643"),
   E = n("305961"),
-  C = n("664336"),
+  S = n("664336"),
   g = n("867965"),
-  S = n("782340"),
+  C = n("782340"),
   _ = n("435599");
 
 function I(e) {
   let {
     channelId: t
-  } = e, I = (0, s.useStateFromStores)([p.default], () => p.default.getChannel(t)), T = (0, s.useStateFromStores)([p.default], () => p.default.getChannel(null == I ? void 0 : I.parent_id)), v = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == I ? void 0 : I.getGuildId())), x = (0, o.default)(I), N = l.useRef(!1);
+  } = e, I = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(t)), T = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(null == I ? void 0 : I.parent_id)), v = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == I ? void 0 : I.getGuildId())), x = (0, o.default)(I), N = l.useRef(!1);
   if (l.useEffect(() => {
       null != I && !N.current && (N.current = !0, (0, g.trackForumPostSidebarViewed)(I))
     }, [I]), null == I || null == v) return null;
@@ -36,10 +36,10 @@ function I(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(r.default, {
       channel: I,
-      draftType: m.DraftType.ChannelMessage
-    }), (0, a.jsx)(C.default, {
+      draftType: p.DraftType.ChannelMessage
+    }), (0, a.jsx)(S.default, {
       toolbar: A,
-      "aria-label": S.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
+      "aria-label": C.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, c.renderTitle)({
         channel: I,
         parentChannel: T,

@@ -17,11 +17,11 @@ var i = n("917351"),
   h = n("169602"),
   p = n("568307"),
   g = n("697218"),
-  E = n("703370"),
-  m = n("901165"),
+  m = n("703370"),
+  E = n("901165"),
   S = n("158998"),
   v = n("522019"),
-  y = l.default.connectStores([p.default, E.default, d.default, g.default, m.default, f.default, u.default, h.default, c.default, s.default], () => {
+  y = l.default.connectStores([p.default, m.default, d.default, g.default, E.default, f.default, u.default, h.default, c.default, s.default], () => {
     var e, t;
     let n;
     let i = f.default.getLobbiesWithVoice().find(e => null != u.default.getApplication(e.application_id)),
@@ -39,9 +39,9 @@ var i = n("917351"),
         })
       })
     }
-    let y = (0, o.default)(p.default, E.default),
-      I = d.default.getCurrentUserActiveStream(),
-      O = d.default.getStreamerActiveStreamMetadata();
+    let y = (0, o.default)(p.default, m.default),
+      O = d.default.getCurrentUserActiveStream(),
+      C = d.default.getStreamerActiveStreamMetadata();
     return {
       title: v,
       context: n,
@@ -52,13 +52,13 @@ var i = n("917351"),
         return t
       }),
       lobbyId: null != i ? i.id : void 0,
-      displayUserMode: m.default.getDisplayUserMode(),
-      displayNameMode: m.default.getDisplayNameMode(),
-      avatarSizeMode: m.default.getAvatarSizeMode(),
+      displayUserMode: E.default.getDisplayUserMode(),
+      displayNameMode: E.default.getDisplayNameMode(),
+      avatarSizeMode: E.default.getAvatarSizeMode(),
       application: null != y ? s.default.getApplication(null !== (t = null === (e = c.default.getGameByGameData(y)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : "") : null,
       streamApplication: (0, r.default)(y),
-      stream: I,
-      streamMetadata: O,
+      stream: O,
+      streamMetadata: C,
       hasStream: !1
     }
   })(v.VoiceWidget)

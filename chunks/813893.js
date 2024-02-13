@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
 var a = n("37983");
@@ -16,29 +16,29 @@ var l = n("627445"),
   c = n("591526"),
   f = n("21719"),
   h = n("117861");
-let p = null;
+let m = null;
 
-function m(e) {
+function p(e) {
   let {
     onDismiss: t,
     onAccept: n,
     popoutPosition: l,
     gameConsoleAccounts: i
   } = e;
-  s(i.length > 0, "Rendering ConsoleNUXTooltip without a game console account"), (null == p || null == i.find(e => e.type === p)) && (p = r.shuffle(i)[0].type);
-  let m = null,
+  s(i.length > 0, "Rendering ConsoleNUXTooltip without a game console account"), (null == m || null == i.find(e => e.type === m)) && (m = r.shuffle(i)[0].type);
+  let p = null,
     E = null;
-  switch (p) {
+  switch (m) {
     case u.PlatformTypes.XBOX:
-      m = d.default.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, E = h;
+      p = d.default.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, E = h;
       break;
     case u.PlatformTypes.PLAYSTATION:
     case u.PlatformTypes.PLAYSTATION_STAGING:
-      m = d.default.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5, E = f
+      p = d.default.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5, E = f
   }
   return (0, a.jsx)(o.default, {
     header: d.default.Messages.CONSOLE_NUX_TOOLTIP_HEADER,
-    content: m,
+    content: p,
     asset: (0, a.jsx)("img", {
       src: E,
       alt: "",

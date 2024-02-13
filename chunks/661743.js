@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("77078"),
   f = n("943722"),
   h = n("10641"),
-  p = n("697218"),
-  m = n("468759"),
+  m = n("697218"),
+  p = n("468759"),
   E = n("987772"),
-  C = n("956089"),
+  S = n("956089"),
   g = n("315102"),
-  S = n("233965"),
+  C = n("233965"),
   _ = n("32346"),
   I = n("808742"),
   T = n("342845"),
@@ -48,14 +48,14 @@ let M = e => {
   R = e => {
     let {
       currentStatus: t
-    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = l.useState(null != t ? t : null), O = (0, u.useStateFromStores)([p.default], () => p.default.getCurrentUser()), y = () => {
+    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = l.useState(null != t ? t : null), O = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), y = () => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
-    }, b = (e, t) => {
-      e.stopPropagation(), (0, S.updateHangStatus)(t, !0), y()
     }, P = (e, t) => {
-      e.stopPropagation(), (0, S.updateCustomHangStatus)(t.status, t.emoji, !0), y()
+      e.stopPropagation(), (0, C.updateHangStatus)(t, !0), y()
+    }, b = (e, t) => {
+      e.stopPropagation(), (0, C.updateCustomHangStatus)(t.status, t.emoji, !0), y()
     }, D = l.useCallback(e => {
-      e.stopPropagation(), (0, S.clearHangStatus)(!0)
+      e.stopPropagation(), (0, C.clearHangStatus)(!0)
     }, []), U = e => {
       e.stopPropagation(), (0, c.openModalLazy)(async () => {
         let {
@@ -93,7 +93,7 @@ let M = e => {
               variant: "text-md/semibold",
               color: "header-primary",
               children: N.default.Messages.ACTIVITY_STATUS
-            }), (0, a.jsx)(C.TextBadge, {
+            }), (0, a.jsx)(S.TextBadge, {
               text: N.default.Messages.BETA,
               disableColor: !0,
               className: A.newBadge
@@ -130,7 +130,7 @@ let M = e => {
             return (0, a.jsx)(c.Clickable, {
               "aria-label": l.title,
               onMouseEnter: () => w(n),
-              onClick: e => b(e, n),
+              onClick: e => P(e, n),
               children: (0, a.jsx)(M, {
                 className: i(A.iconWidget, {
                   [A.selectedWidget]: n === (null == t ? void 0 : t.state)
@@ -153,7 +153,7 @@ let M = e => {
             children: (0, a.jsx)(M, {
               className: A.optionButton,
               name: N.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
-              icon: (0, a.jsx)(m.default, {
+              icon: (0, a.jsx)(p.default, {
                 className: A.editIcon,
                 foreground: A.editIconColor
               })
@@ -168,7 +168,7 @@ let M = e => {
             return (0, a.jsx)(c.Clickable, {
               "aria-label": e.status,
               onMouseEnter: () => F(e),
-              onClick: t => P(t, e),
+              onClick: t => b(t, e),
               children: (0, a.jsx)(M, {
                 className: i(A.iconWidget, {
                   [A.selectedWidget]: l

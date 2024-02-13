@@ -21,8 +21,8 @@ function h(e) {
     renderExternalHeader: n
   } = e, {
     connectedChannelId: h,
-    connectedActivity: p,
-    activityPanelMode: m
+    connectedActivity: m,
+    activityPanelMode: p
   } = (0, s.useStateFromStoresObject)([u.default], () => {
     var e;
     let t = u.default.getConnectedActivityChannelId();
@@ -31,12 +31,12 @@ function h(e) {
       connectedActivity: null != t && null !== (e = u.default.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
       activityPanelMode: u.default.getActivityPanelMode()
     }
-  }), E = (0, r.useIsActivitiesInTextEnabled)(h, "ActivityPanelUI"), C = (0, i.default)(h);
+  }), E = (0, r.useIsActivitiesInTextEnabled)(h, "ActivityPanelUI"), S = (0, i.default)(h);
   if (l.useEffect(() => {
-      null != h && null == C && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
-    }, [h, C]), !E) return null;
-  let g = null == p ? void 0 : p.applicationId;
-  return m !== f.ActivityPanelModes.PANEL || null == g ? null : null == h || null == p || (0, d.default)(h) || null == g ? null : (0, a.jsx)(c.default, {
+      null != h && null == S && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
+    }, [h, S]), !E) return null;
+  let g = null == m ? void 0 : m.applicationId;
+  return p !== f.ActivityPanelModes.PANEL || null == g ? null : null == h || null == m || (0, d.default)(h) || null == g ? null : (0, a.jsx)(c.default, {
     maxHeight: t,
     connectedChannelId: h,
     renderExternalHeader: n

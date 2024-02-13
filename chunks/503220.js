@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("400501"),
   f = n("542640"),
   h = n("255228"),
-  p = n("772371"),
-  m = n("604656"),
+  m = n("772371"),
+  p = n("604656"),
   E = n("861370"),
-  C = n("565298"),
+  S = n("565298"),
   g = n("144491"),
-  S = n("945330"),
+  C = n("945330"),
   _ = n("758710"),
   I = n("433487"),
   T = n("664336"),
@@ -73,12 +73,12 @@ function j(e) {
     channel: t,
     closePopout: n,
     onSelect: l
-  } = e, C = (0, o.default)(t, "Sidebar Overflow"), S = (0, d.default)(t), I = (0, h.default)(t), T = (0, p.default)(t), x = (0, i.default)(t), N = (0, u.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), O = (0, E.default)({
+  } = e, S = (0, o.default)(t, "Sidebar Overflow"), C = (0, d.default)(t), I = (0, h.default)(t), T = (0, m.default)(t), x = (0, i.default)(t), N = (0, u.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), O = (0, E.default)({
     id: t.id,
     label: M.default.Messages.COPY_ID_THREAD
-  }), y = (0, m.default)(t);
+  }), y = (0, p.default)(t);
 
-  function b() {
+  function P() {
     (0, g.transitionToChannel)(t.id)
   }
   return (0, a.jsxs)(s.Menu, {
@@ -87,22 +87,22 @@ function j(e) {
     "aria-label": M.default.Messages.THREAD_ACTIONS_MENU_LABEL,
     onSelect: l,
     children: [(0, a.jsxs)(s.MenuGroup, {
-      children: [C, (0, a.jsx)(s.MenuItem, {
+      children: [S, (0, a.jsx)(s.MenuItem, {
         id: "open",
         label: M.default.Messages.OPEN_IN_FULL_VIEW,
-        action: b
+        action: P
       })]
     }), (0, a.jsxs)(s.MenuGroup, {
       children: [I, T]
     }), (0, a.jsxs)(s.MenuGroup, {
-      children: [j, S, R]
+      children: [j, C, R]
     }), (0, a.jsxs)(s.MenuGroup, {
       children: [(0, a.jsx)(s.MenuItem, {
         id: "search",
         label: M.default.Messages.SEARCH,
         icon: _.default,
         action: function() {
-          b(), setTimeout(() => {
+          P(), setTimeout(() => {
             v.ComponentDispatch.dispatch(A.ComponentActions.FOCUS_SEARCH, {
               prefillCurrentChannel: !1
             })
@@ -113,7 +113,7 @@ function j(e) {
         label: M.default.Messages.PINS,
         icon: _.default,
         action: function() {
-          b(), v.ComponentDispatch.dispatch(A.ComponentActions.TOGGLE_CHANNEL_PINS)
+          P(), v.ComponentDispatch.dispatch(A.ComponentActions.TOGGLE_CHANNEL_PINS)
         }
       })]
     }), (0, a.jsxs)(s.MenuGroup, {
@@ -135,9 +135,9 @@ function L(e) {
     }), (0, a.jsx)(R, {
       channel: t
     }), (0, a.jsx)(T.default.Icon, {
-      icon: S.default,
+      icon: C.default,
       tooltip: M.default.Messages.CLOSE,
-      onClick: () => (0, N.closeThreadSidebar)((0, C.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)
+      onClick: () => (0, N.closeThreadSidebar)((0, S.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)
     })]
   })
 }

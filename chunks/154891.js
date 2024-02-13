@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 }), n("424973");
 var a = n("884691"),
@@ -15,13 +15,13 @@ var a = n("884691"),
   c = n("315841"),
   f = n("52477"),
   h = n("553930"),
-  p = n("717482"),
-  m = n("827520");
+  m = n("717482"),
+  p = n("827520");
 let E = 1e3 / 60;
 
-function C(e, t, n, C) {
+function S(e, t, n, S) {
   let g = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
-    S = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
+    C = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
     _ = (0, i.useToken)(s.default.unsafe_rawColors.WHITE_500).hex(),
     I = a.useRef({}),
     T = a.useRef(new l.Interval),
@@ -41,11 +41,11 @@ function C(e, t, n, C) {
         if (0 === n.length) return;
         let f = t.current;
         if (null == f) return;
-        let m = f.getContext("2d");
-        if (null == m) return;
+        let p = f.getContext("2d");
+        if (null == p) return;
         let {
           width: E,
-          height: C
+          height: S
         } = f.getBoundingClientRect(), g = [];
         n.forEach(e => {
           let t = null != o.default.getVoiceStateForChannel(i, e.userId);
@@ -67,7 +67,7 @@ function C(e, t, n, C) {
             } = e;
             switch (t.type) {
               case c.DrawableType.LINE:
-                return (0, p.default)({
+                return (0, m.default)({
                   line: t,
                   context: n,
                   canvasWidth: a,
@@ -93,9 +93,9 @@ function C(e, t, n, C) {
             }
           }({
             drawable: e,
-            context: m,
+            context: p,
             canvasWidth: E,
-            canvasHeight: C,
+            canvasHeight: S,
             fallbackColor: a,
             outlineColorDark: r,
             outlineColorLight: d,
@@ -110,11 +110,11 @@ function C(e, t, n, C) {
         fallbackColor: g,
         linesDrawnAt: I,
         streamerId: t,
-        outlineColorDark: S,
+        outlineColorDark: C,
         outlineColorLight: _,
-        channelId: C
+        channelId: S
       })
-    }, [e, C, g, S, _]);
+    }, [e, S, g, C, _]);
   a.useEffect(() => {
     let t = new ResizeObserver(() => {
       let t = e.current;
@@ -135,7 +135,7 @@ function C(e, t, n, C) {
   }, [e, v, n]);
   a.useEffect(() => {
     let e = T.current;
-    return d.default.addChangeListener(x), x(), (0, r.maybeFetchColors)(t.getAvatarURL(null, m.AVATAR_COLOR_AVATAR_SIZE)), () => {
+    return d.default.addChangeListener(x), x(), (0, r.maybeFetchColors)(t.getAvatarURL(null, p.AVATAR_COLOR_AVATAR_SIZE)), () => {
       d.default.removeChangeListener(x), e.stop()
     }
   })

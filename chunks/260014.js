@@ -15,13 +15,13 @@ var a = n("37983"),
   c = n("430568"),
   f = n("206230"),
   h = n("962367");
-let p = [h.emoji1, h.emoji2, h.emoji3, h.emoji4],
-  m = l.memo(function(e) {
+let m = [h.emoji1, h.emoji2, h.emoji3, h.emoji4],
+  p = l.memo(function(e) {
     var t;
     let {
       emoji: n,
       onAnimationEnd: s
-    } = e, o = (0, r.sample)(p), u = l.useCallback(() => {
+    } = e, o = (0, r.sample)(m), u = l.useCallback(() => {
       s(n.key)
     }, [n.key, s]);
     return (0, a.jsx)("div", {
@@ -64,7 +64,7 @@ function E(e) {
       top: n - 16
     },
     "aria-hidden": !0,
-    children: i.map(e => (0, a.jsx)(m, {
+    children: i.map(e => (0, a.jsx)(p, {
       emoji: e,
       onAnimationEnd: c
     }, e.key))

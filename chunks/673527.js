@@ -53,15 +53,15 @@ function h(e) {
   l.useEffect(() => {
     !d && (h.current = o)
   }, [o, d]);
-  let p = null == o || d ? h.current : o;
-  return null == p ? (0, a.jsx)(f, {
+  let m = null == o || d ? h.current : o;
+  return null == m ? (0, a.jsx)(f, {
     className: n,
     isLoading: d,
     noText: s
   }) : (0, a.jsx)("div", {
     className: i(n, c.root),
     children: (0, a.jsx)("img", {
-      src: p,
+      src: m,
       alt: "",
       className: c.image
     })

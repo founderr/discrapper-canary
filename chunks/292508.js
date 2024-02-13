@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("77078"),
   f = n("988738"),
   h = n("244201"),
-  p = n("206230"),
-  m = n("320679"),
+  m = n("206230"),
+  p = n("320679"),
   E = n("191225"),
-  C = n("229661"),
+  S = n("229661"),
   g = n("812204"),
-  S = n("685665"),
+  C = n("685665"),
   _ = n("338733"),
   I = n("779601"),
   T = n("967889"),
@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("471671"),
   O = n("983782"),
   y = n("587974"),
-  b = n("773336"),
-  P = n("439932"),
+  P = n("773336"),
+  b = n("439932"),
   D = n("50885"),
   U = n("336921"),
   w = n("292687"),
@@ -119,20 +119,20 @@ class B extends l.Component {
       windowKey: r,
       mouseModeEnabled: o,
       keyboardModeEnabled: d,
-      reducedMotionEnabled: p,
+      reducedMotionEnabled: m,
       fontScaleClass: E,
-      saturation: C,
+      saturation: S,
       withTitleBar: g,
-      guestWindow: S,
+      guestWindow: C,
       clientThemesClassName: _,
       contentClassName: x
-    } = this.props, N = (0, b.getPlatform)(), M = i(E, {
+    } = this.props, N = (0, P.getPlatform)(), M = i(E, {
       "mouse-mode": o,
-      "reduce-motion": p,
-      "full-motion": !p,
+      "reduce-motion": m,
+      "full-motion": !m,
       "keyboard-mode": d,
       "app-focused": n || l,
-      "low-saturation": C <= .4
+      "low-saturation": S <= .4
     });
     return (0, a.jsx)(u.BrowserRouter, {
       children: (0, a.jsx)(A.default, {
@@ -142,14 +142,14 @@ class B extends l.Component {
             children: (0, a.jsx)("div", {
               "data-popout-root": !0,
               ref: this.rootRef,
-              className: i((0, P.getThemeClass)(e), (0, I.default)(), M, _),
+              className: i((0, b.getThemeClass)(e), (0, I.default)(), M, _),
               children: (0, a.jsx)(c.FocusRingScope, {
                 containerRef: this.rootRef,
-                children: (0, a.jsx)(m.default, {
+                children: (0, a.jsx)(p.default, {
                   children: (0, a.jsxs)(T.default, {
                     children: [(0, a.jsx)(y.MaskLibrary, {}), (0, a.jsx)(h.AppWindowContextProvider, {
                       appContext: F.AppContext.POPOUT,
-                      renderWindow: S,
+                      renderWindow: C,
                       children: (0, a.jsxs)(O.AppLayerProvider, {
                         children: [(0, a.jsxs)("div", {
                           className: V.popout,
@@ -176,8 +176,8 @@ class B extends l.Component {
   }
   constructor(...e) {
     super(...e), this.rootRef = l.createRef(), this._cleanupWindowActionCreators = void 0, this.warnPopoutClose = e => {
-      this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, b.isPlatformEmbedded && (0, C.default)(() => {
-        w.default.unmountWindow(this.props.windowKey), b.isPlatformEmbedded && D.default.close(this.props.windowKey)
+      this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, P.isPlatformEmbedded && (0, S.default)(() => {
+        w.default.unmountWindow(this.props.windowKey), P.isPlatformEmbedded && D.default.close(this.props.windowKey)
       }))
     }, this.handleBlur = () => {
       var e, t;
@@ -207,26 +207,26 @@ let H = l.forwardRef(function(e, t) {
       locale: M.default.locale,
       theme: R.default.theme
     })),
-    u = (0, d.useStateFromStores)([p.default], () => p.default.useForcedColors ? "yes" : "no"),
+    u = (0, d.useStateFromStores)([m.default], () => m.default.useForcedColors ? "yes" : "no"),
     {
       fontScale: f,
       keyboardModeEnabled: h,
-      reducedMotionEnabled: m,
-      fontScaleClass: C,
+      reducedMotionEnabled: p,
+      fontScaleClass: S,
       saturation: I
-    } = (0, d.useStateFromStoresObject)([p.default], () => ({
-      fontScale: p.default.fontScale,
-      keyboardModeEnabled: p.default.keyboardModeEnabled,
-      reducedMotionEnabled: p.default.useReducedMotion,
-      fontScaleClass: p.default.fontScaleClass,
-      saturation: p.default.saturation
+    } = (0, d.useStateFromStoresObject)([m.default], () => ({
+      fontScale: m.default.fontScale,
+      keyboardModeEnabled: m.default.keyboardModeEnabled,
+      reducedMotionEnabled: m.default.useReducedMotion,
+      fontScaleClass: m.default.fontScaleClass,
+      saturation: m.default.saturation
     })),
     T = (0, d.useStateFromStores)([E.default], () => null != e.channelId && null !== E.default.getSelfEmbeddedActivityForChannel(e.channelId));
   (0, x.default)(n, !1);
   let v = (0, N.default)(n, l),
     {
       AnalyticsLocationProvider: A
-    } = (0, S.default)(g.default.POPOUT_WINDOW),
+    } = (0, C.default)(g.default.POPOUT_WINDOW),
     {
       clientThemesClassName: j,
       clientThemesCSS: O
@@ -245,9 +245,9 @@ let H = l.forwardRef(function(e, t) {
         fontScale: f,
         keyboardModeEnabled: h,
         mouseModeEnabled: v,
-        reducedMotionEnabled: m,
+        reducedMotionEnabled: p,
         connectedToEmbeddedActivity: T,
-        fontScaleClass: C,
+        fontScaleClass: S,
         saturation: I,
         clientThemesClassName: j,
         clientThemesCSS: O

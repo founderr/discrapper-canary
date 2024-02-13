@@ -20,21 +20,21 @@ var l = n("446674"),
       displayProfile: n,
       channel: f,
       animateAssets: h,
-      forceShowPremiumBadge: p
-    } = e, m = t.isNonUserBot(), [E, C] = (0, l.useStateFromStoresArray)([i.default], () => [m ? null : i.default.getStatus(t.id), i.default.isMobileOnline(t.id)]), g = null == n ? void 0 : n.profileEffectId;
+      forceShowPremiumBadge: m
+    } = e, p = t.isNonUserBot(), [E, S] = (0, l.useStateFromStoresArray)([i.default], () => [p ? null : i.default.getStatus(t.id), i.default.isMobileOnline(t.id)]), g = null == n ? void 0 : n.profileEffectId;
     return (0, a.jsxs)("div", {
       children: [(0, a.jsx)(r.default, {
         user: t,
         displayProfile: n,
         profileType: d.UserProfileTypes.PANEL,
         showPremiumBadgeUpsell: !0,
-        isHovering: p,
+        isHovering: m,
         animateOnHover: !h
       }), (0, a.jsx)(u.UserPopoutAvatar, {
         user: t,
         displayProfile: n,
         status: E,
-        isMobile: C,
+        isMobile: S,
         channelId: f.id,
         disableUserProfileLink: !0,
         hasBanner: (null == n ? void 0 : n.banner) != null,
@@ -51,7 +51,7 @@ var l = n("446674"),
         profileEffectId: g,
         maxLoops: 0,
         resetOnHover: !0,
-        isHovering: p,
+        isHovering: m,
         urlQueryString: "dm-view",
         noBorderRadius: !0
       })]

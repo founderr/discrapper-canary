@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("446674"),
   f = n("233736"),
   h = n("77078"),
-  p = n("272030"),
-  m = n("666020"),
+  m = n("272030"),
+  p = n("666020"),
   E = n("352674"),
-  C = n("888503"),
+  S = n("888503"),
   g = n("206230"),
-  S = n("716241"),
+  C = n("716241"),
   _ = n("95039"),
   I = n("405645"),
   T = n("12896"),
@@ -34,14 +34,14 @@ var a = n("37983"),
   L = n("826684"),
   O = n("483093"),
   y = n("659500"),
-  b = n("449008"),
-  P = n("158998"),
+  P = n("449008"),
+  b = n("158998"),
   D = n("50885"),
   U = n("49111"),
   w = n("782340"),
   F = n("881235");
 let k = D.default.getEnableHardwareAcceleration(),
-  V = 44 + C.AVATAR_DECORATION_PADDING,
+  V = 44 + S.AVATAR_DECORATION_PADDING,
   B = {
     origin: {
       x: 38,
@@ -71,11 +71,11 @@ class H extends l.Component {
       status: u,
       channel: c,
       guildId: f,
-      isTyping: p,
-      isMobileOnline: m,
+      isTyping: m,
+      isMobileOnline: p,
       premiumSince: E,
       ...g
-    } = this.props, S = null != E ? new Date(E) : null;
+    } = this.props, C = null != E ? new Date(E) : null;
     return (0, a.jsx)(h.Popout, {
       preload: () => (0, v.default)(s.id, s.getAvatarURL(f, 80), {
         guildId: f,
@@ -89,7 +89,7 @@ class H extends l.Component {
         let {
           isShown: E
         } = h;
-        return (0, a.jsx)(C.default, {
+        return (0, a.jsx)(S.default, {
           className: F.member,
           onContextMenu: this.renderUserContextMenu,
           shouldAnimateStatus: k,
@@ -100,13 +100,13 @@ class H extends l.Component {
           activities: r,
           applicationStream: o,
           isOwner: n,
-          premiumSince: S,
+          premiumSince: C,
           colorString: e,
           colorRoleName: t,
-          isTyping: p,
+          isTyping: m,
           channel: c,
           guildId: f,
-          isMobile: m,
+          isMobile: p,
           onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
           selected: E,
           itemProps: g,
@@ -117,7 +117,7 @@ class H extends l.Component {
   }
   constructor(...e) {
     super(...e), this.renderUserContextMenu = e => {
-      (0, p.openContextMenuLazy)(e, async () => {
+      (0, m.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("834247").then(n.bind(n, "834247"));
@@ -133,7 +133,7 @@ class H extends l.Component {
       let {
         user: e,
         channel: t
-      } = this.props, n = "@".concat(P.default.getUserTag(e, {
+      } = this.props, n = "@".concat(b.default.getUserTag(e, {
         decoration: "never"
       })), a = "<@".concat(e.id, ">");
       y.ComponentDispatch.dispatchToLastSubscribed(U.ComponentActions.INSERT_TEXT, {
@@ -222,7 +222,7 @@ function Y(e) {
   let {
     index: t
   } = e, n = (0, u.useListItem)("".concat(t));
-  return (0, a.jsx)(C.default, {
+  return (0, a.jsx)(S.default, {
     itemProps: n
   })
 }
@@ -395,7 +395,7 @@ class z extends l.Component {
         y: a,
         height: l
       } = this.getDimensions();
-      (0, m.subscribeChannelDimensions)({
+      (0, p.subscribeChannelDimensions)({
         guildId: t.guild_id,
         channelId: t.id,
         y: a,
@@ -410,7 +410,7 @@ class z extends l.Component {
           rowsVisible: n
         } = this.getDimensions();
       if (void 0 === n || 0 === n || null == t) return;
-      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(b.isNotNullish);
+      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(P.isNotNullish);
       if (0 === a.length) return;
       let l = a.reduce((e, t) => t.type !== N.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === U.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
         num_users_visible: 0,
@@ -419,7 +419,7 @@ class z extends l.Component {
         num_users_visible_with_activity: 0,
         num_users_visible_with_avatar_decoration: 0
       });
-      this.lastReportedAnalyticsChannel = this.props.channel.id, S.default.trackWithMetadata(U.AnalyticEvents.MEMBER_LIST_VIEWED, {
+      this.lastReportedAnalyticsChannel = this.props.channel.id, C.default.trackWithMetadata(U.AnalyticEvents.MEMBER_LIST_VIEWED, {
         ...l
       })
     }
@@ -452,13 +452,13 @@ function K(e) {
         })
       }
     })
-  }, []), p = l.useCallback(() => new Promise(e => {
+  }, []), m = l.useCallback(() => new Promise(e => {
     let t = f.current;
     if (null == t) return e();
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), m = l.useCallback(() => new Promise(e => {
+  }), []), p = l.useCallback(() => new Promise(e => {
     let t = f.current;
     if (null == t) return e();
     t.scrollToBottom({
@@ -470,8 +470,8 @@ function K(e) {
     id: "members-".concat(t.id),
     setFocus: h,
     isEnabled: s,
-    scrollToStart: p,
-    scrollToEnd: m
+    scrollToStart: m,
+    scrollToEnd: p
   });
   return (0, a.jsx)("div", {
     className: i(F.container, n),

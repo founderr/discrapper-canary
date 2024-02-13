@@ -18,12 +18,12 @@ var a = n("37983"),
   c = n("407063"),
   f = n("239380"),
   h = n("813006"),
-  p = n("305961"),
-  m = n("580357"),
+  m = n("305961"),
+  p = n("580357"),
   E = n("476263"),
-  C = n("433487"),
+  S = n("433487"),
   g = n("987772"),
-  S = n("587974"),
+  C = n("587974"),
   _ = n("149279"),
   I = n("315102"),
   T = n("187163"),
@@ -114,7 +114,7 @@ function j(e) {
                   null == l || l(), t(e)
                 },
                 "aria-label": N.default.Messages.MORE,
-                children: (0, a.jsx)(C.default, {
+                children: (0, a.jsx)(S.default, {
                   className: A.overflowIcon
                 })
               })
@@ -129,14 +129,14 @@ var L = e => {
   var t;
   let {
     entry: s
-  } = e, [i, C] = l.useState(!1), g = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(s.guildId)), _ = null != g, T = async () => {
-    C(!0);
+  } = e, [i, S] = l.useState(!1), g = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(s.guildId)), _ = null != g, T = async () => {
+    S(!0);
     try {
       _ ? (0, f.transitionToGuild)(s.guildId) : await d.default.joinGuild(s.guildId, {
         source: x.JoinGuildSources.DIRECTORY_ENTRY
       })
     } finally {
-      C(!1)
+      S(!1)
     }
   }, v = I.default.getGuildSplashURL({
     id: s.guildId,
@@ -171,8 +171,8 @@ var L = e => {
         })
       }), (0, a.jsx)("div", {
         className: A.guildIcon,
-        children: (0, a.jsx)(S.default, {
-          mask: S.default.Masks.SQUIRCLE,
+        children: (0, a.jsx)(C.default, {
+          mask: C.default.Masks.SQUIRCLE,
           width: 48,
           height: 48,
           children: (0, a.jsx)("div", {
@@ -191,7 +191,7 @@ var L = e => {
       className: A.guildInfo,
       children: [(0, a.jsxs)("div", {
         className: A.title,
-        children: [(0, a.jsx)(m.default, {
+        children: [(0, a.jsx)(p.default, {
           className: A.guildBadge,
           guild: s,
           tooltipColor: o.Tooltip.Colors.PRIMARY

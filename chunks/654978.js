@@ -15,11 +15,11 @@ var a = n("37983"),
   c = n("841283"),
   f = n("782340"),
   h = n("398990");
-let p = {
+let m = {
     position: "bottom",
     autoInvert: !1
   },
-  m = e => {
+  p = e => {
     let {
       region: t,
       className: n = h.regionSelectName
@@ -40,7 +40,7 @@ class E extends l.PureComponent {
       className: i({
         selected: t
       }),
-      children: [(0, a.jsx)(m, {
+      children: [(0, a.jsx)(p, {
         region: e,
         className: h.regionSelectName
       }), t ? (0, a.jsx)("i", {
@@ -49,7 +49,7 @@ class E extends l.PureComponent {
     })
   }
 }
-class C extends l.PureComponent {
+class S extends l.PureComponent {
   componentDidMount() {
     null == this.props.regions && o.default.fetchRegions(null)
   }
@@ -74,7 +74,7 @@ class C extends l.PureComponent {
       value: n,
       onChange: this.handleChangeVoiceRegion,
       renderOption: this.renderOption,
-      popoutProps: p,
+      popoutProps: m,
       popoutClassName: h.regionSelectPopout
     })
   }
@@ -115,4 +115,4 @@ class C extends l.PureComponent {
 }
 var g = r.default.connectStores([u.default], () => ({
   regions: u.default.getRegions(null)
-}))(C)
+}))(S)

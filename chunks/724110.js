@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("506885"),
   f = n("401642"),
   h = n("315102"),
-  p = n("701909"),
-  m = n("253981"),
+  m = n("701909"),
+  p = n("253981"),
   E = n("252063"),
-  C = n("49111"),
+  S = n("49111"),
   g = n("782340"),
-  S = n("402739"),
+  C = n("402739"),
   _ = n("271861");
 let I = new Set(["Spacebar", " ", "Enter"]);
 
@@ -37,7 +37,7 @@ function T(e) {
     channelId: t
   });
   l.useEffect(() => {
-    (0, o.trackWithMetadata)(C.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
+    (0, o.trackWithMetadata)(S.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
   }, []);
   let N = e => {
       var t;
@@ -57,35 +57,35 @@ function T(e) {
       let {
         host: a,
         path: l
-      } = i.parse(n, !0), r = m.default.isDiscordHostname(a) || window.location.host === a;
-      return !!r && l === C.Routes.OAUTH2_AUTHORIZED && (null != t && s(), !0)
+      } = i.parse(n, !0), r = p.default.isDiscordHostname(a) || window.location.host === a;
+      return !!r && l === S.Routes.OAUTH2_AUTHORIZED && (null != t && s(), !0)
     }, [s]);
   return (0, a.jsxs)(r.ModalRoot, {
     transitionState: n,
     size: r.ModalSize.DYNAMIC,
-    className: S.modal,
+    className: C.modal,
     children: [(0, a.jsx)(r.ModalContent, {
-      className: S.modalContent,
+      className: C.modalContent,
       children: (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("img", {
           src: _,
           alt: "",
-          className: S.image
+          className: C.image
         }), (0, a.jsxs)("div", {
-          className: S.headingContainer,
+          className: C.headingContainer,
           children: [(0, a.jsx)(r.Heading, {
             variant: "heading-xl/bold",
-            className: S.modalHeader,
+            className: C.modalHeader,
             children: g.default.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
           }), (0, a.jsx)(r.Text, {
             variant: "text-md/medium",
-            className: S.modalHeader,
+            className: C.modalHeader,
             children: g.default.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
-              helpCenterLink: p.default.getArticleURL(C.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+              helpCenterLink: m.default.getArticleURL(S.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
             })
           })]
         }), (0, a.jsx)("div", {
-          className: S.applicationRowContainer,
+          className: C.applicationRowContainer,
           children: T ? v.map(e => {
             if (null != x.find(t => t.application.id === e.id)) return null;
             let n = null != e.description ? (0, u.parseBioReact)(e.description) : null,
@@ -96,16 +96,16 @@ function T(e) {
               }),
               s = (0, a.jsxs)(a.Fragment, {
                 children: [null != l && (0, a.jsx)("img", {
-                  className: S.applicationIcon,
+                  className: C.applicationIcon,
                   alt: "",
                   "aria-hidden": !0,
                   src: l,
                   width: 40,
                   height: 40
                 }), (0, a.jsxs)("div", {
-                  className: S.applicationRowContent,
+                  className: C.applicationRowContent,
                   children: [(0, a.jsxs)("div", {
-                    className: S.applicationText,
+                    className: C.applicationText,
                     children: [(0, a.jsx)(r.Heading, {
                       variant: "heading-md/medium",
                       children: e.name
@@ -117,11 +117,11 @@ function T(e) {
                     })]
                   }), (0, a.jsx)(r.Button, {
                     type: "button",
-                    innerClassName: S.applicationButtonHack,
+                    innerClassName: C.applicationButtonHack,
                     onClick: n => {
                       n.stopPropagation(), (0, d.openOAuth2Modal)({
                         clientId: e.id,
-                        scopes: [C.OAuth2Scopes.APPLICATIONS_COMMANDS],
+                        scopes: [S.OAuth2Scopes.APPLICATIONS_COMMANDS],
                         channelId: t,
                         disableGuildSelect: !0,
                         callback: M
@@ -139,13 +139,13 @@ function T(e) {
             return null != i ? (0, a.jsx)(r.ClickableContainer, {
               onMouseDown: () => N(i),
               onKeyDown: e => A(e, i),
-              className: S.applicationRow,
+              className: C.applicationRow,
               onClick: () => {
                 (0, f.openUserProfileModal)({
                   userId: i.id,
                   channelId: t,
                   analyticsLocation: {
-                    section: C.AnalyticsSections.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
+                    section: S.AnalyticsSections.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
                   }
                 })
               },
@@ -154,17 +154,17 @@ function T(e) {
               }),
               children: s
             }, e.id) : (0, a.jsx)("div", {
-              className: S.applicationRow,
+              className: C.applicationRow,
               children: s
             }, e.id)
           }) : (0, a.jsx)(r.Spinner, {
-            className: S.spinner,
+            className: C.spinner,
             type: r.Spinner.Type.SPINNING_CIRCLE
           })
         })]
       })
     }), (0, a.jsxs)(r.ModalFooter, {
-      className: S.modalFooter,
+      className: C.modalFooter,
       children: [(0, a.jsx)(r.Button, {
         onClick: s,
         children: g.default.Messages.DONE

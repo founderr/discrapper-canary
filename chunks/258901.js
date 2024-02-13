@@ -15,19 +15,19 @@ var a = n("37983"),
   c = n("252744"),
   f = n("788506"),
   h = n("86678"),
-  p = n("867805"),
-  m = n("986632"),
+  m = n("867805"),
+  p = n("986632"),
   E = n("882641"),
-  C = n("476765"),
+  S = n("476765"),
   g = n("837899"),
-  S = n("402671"),
+  C = n("402671"),
   _ = n("449008"),
   I = n("99795"),
   T = n("958706"),
   v = n("894282"),
   x = n("321353");
 let N = T.EmojiIntention.CHAT,
-  A = [p.default.getByName("thumbsup"), p.default.getByName("eyes"), p.default.getByName("laughing"), p.default.getByName("watermelon"), p.default.getByName("fork_and_knife"), p.default.getByName("yum")].filter(_.isNotNullish);
+  A = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(_.isNotNullish);
 
 function M(e) {
   let {
@@ -102,18 +102,18 @@ function j(e) {
     onFocus: o,
     onSelectEmoji: d,
     onSelectDisabledEmoji: c,
-    onExpandedToggle: p,
+    onExpandedToggle: m,
     emojiSearchProps: E,
     recentlyUsedEmojis: g,
     analyticsOverride: _
-  } = e, j = (0, C.useUID)(), [L, O] = l.useState(!1), y = (0, f.useFrequentlyUsedEmojis)(t.guild_id), b = (0, r.uniqBy)([...y, ...A], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+  } = e, j = (0, S.useUID)(), [L, O] = l.useState(!1), y = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...y, ...A], "name").filter(e => !C.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
     intention: N
   })).slice(0, I.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
-  null != g && g.length > 0 && b.splice(b.length - 1, 1, g[0]);
-  let P = e => {
-      O(e), null == p || p(e)
+  null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
+  let b = e => {
+      O(e), null == m || m(e)
     },
     D = (e, t) => {
       if (null == e && t) {
@@ -121,7 +121,7 @@ function j(e) {
         return
       }
       null != e && d(e);
-      P(!t), t && m.EmojiPickerStore.setSearchPlaceholder(null)
+      b(!t), t && p.EmojiPickerStore.setSearchPlaceholder(null)
     };
   return (0, a.jsxs)(u.Dialog, {
     "aria-labelledby": j,
@@ -154,19 +154,19 @@ function j(e) {
           accessory: (0, a.jsx)(R, {
             otherAccessories: null == E ? void 0 : E.accessory,
             isEmojiPickerExpanded: L,
-            onSetExpanded: P,
+            onSetExpanded: b,
             onFocus: o
           }),
           onKeyDown: e => {
-            null != e && e.key !== v.KeyboardKeysUpdated.TAB && (e.key !== v.KeyboardKeysUpdated.ENTER || e.shiftKey ? P(!0) : P(!L))
+            null != e && e.key !== v.KeyboardKeysUpdated.TAB && (e.key !== v.KeyboardKeysUpdated.ENTER || e.shiftKey ? b(!0) : b(!L))
           }
         }
       }), (0, a.jsx)("div", {
         className: x.slotsContainer,
         children: (0, a.jsx)("div", {
           className: i(x.slots, x.slotsWide),
-          children: b.map(e => {
-            let n = S.default.isEmojiDisabled({
+          children: P.map(e => {
+            let n = C.default.isEmojiDisabled({
               emoji: e,
               channel: t,
               intention: T.EmojiIntention.CHAT

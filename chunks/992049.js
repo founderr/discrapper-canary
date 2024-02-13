@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumPaymentConfirmStep: function() {
-    return E
+    return f
   }
 });
 var s = n("37983"),
@@ -15,15 +15,15 @@ var s = n("37983"),
   c = n("635357"),
   _ = n("642906"),
   I = n("650484"),
-  f = n("367767");
+  E = n("367767");
 
-function E(e) {
+function f(e) {
   var t, n;
   let l, {
-      handleClose: E,
+      handleClose: f,
       planGroup: S,
-      onSubscriptionConfirmation: m,
-      renderPurchaseConfirmation: P,
+      onSubscriptionConfirmation: P,
+      renderPurchaseConfirmation: m,
       postSuccessGuild: p,
       followupSKUInfo: T
     } = e,
@@ -41,23 +41,23 @@ function E(e) {
       isGift: x,
       giftRecipient: h,
       giftCode: y,
-      hasSentMessage: b,
-      isSendingMessage: U,
+      hasSentMessage: U,
+      isSendingMessage: b,
       sendGiftMessage: k
     } = (0, c.useGiftContext)();
   a(null != R, "Expected plan to selected"), a(null != L, "Expected selectedSkuId"), a(null != A, "Step should be set");
   let j = r.useCallback(() => {
-    E(), null == m || m()
-  }, [E, m]);
+    f(), null == P || P()
+  }, [f, P]);
   return r.useEffect(() => {
-    if (!x || null == h || null == y || b || U || (0, o.shouldShowCustomGiftExperience)(h)) return;
+    if (!x || null == h || null == y || U || b || (0, o.shouldShowCustomGiftExperience)(h)) return;
     let e = i.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
       location: "36b986_1"
     }).enabled;
     e && k({
-      onSubscriptionConfirmation: m
+      onSubscriptionConfirmation: P
     })
-  }, [k, x, h, y, b, U, m]), l = null != P ? P(R, j, g) : x ? (0, s.jsx)(u.PremiumSubscriptionGiftPurchaseConfirmation, {
+  }, [k, x, h, y, U, b, P]), l = null != m ? m(R, j, g) : x ? (0, s.jsx)(u.PremiumSubscriptionGiftPurchaseConfirmation, {
     planId: R.id,
     onClose: j
   }) : O.current === R.id ? (0, s.jsx)(u.default, {
@@ -74,7 +74,7 @@ function E(e) {
     paymentSourceType: null === (n = M[null != C ? C : ""]) || void 0 === n ? void 0 : n.type
   }), (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)(I.PaymentPortalBody, {
-      children: [(0, s.jsx)(f.default, {}), l]
+      children: [(0, s.jsx)(E.default, {}), l]
     })
   })
 }

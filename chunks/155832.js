@@ -19,17 +19,17 @@ var l = n("446674"),
 function h(e) {
   let {
     channelId: t
-  } = e, n = (0, l.useStateFromStores)([r.default], () => r.default.getSection(t)), h = (0, l.useStateFromStores)([o.default], () => o.default.getGuildId()), p = n === c.ChannelSections.MEMBERS;
+  } = e, n = (0, l.useStateFromStores)([r.default], () => r.default.getSection(t)), h = (0, l.useStateFromStores)([o.default], () => o.default.getGuildId()), m = n === c.ChannelSections.MEMBERS;
   return (0, a.jsx)(d.Icon, {
-    tooltip: p ? f.default.Messages.MEMBER_LIST_SHOWN : f.default.Messages.MEMBER_LIST_HIDDEN,
+    tooltip: m ? f.default.Messages.MEMBER_LIST_SHOWN : f.default.Messages.MEMBER_LIST_HIDDEN,
     icon: u.default,
     onClick: () => {
       i.default.trackWithMetadata(c.AnalyticEvents.MEMBER_LIST_TOGGLED, {
         channel_id: t,
         guild_id: h,
-        member_list_open: !p
+        member_list_open: !m
       }), s.default.toggleMembersSection()
     },
-    selected: p
+    selected: m
   })
 }

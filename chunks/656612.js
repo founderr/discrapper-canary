@@ -15,14 +15,14 @@ var a = n("37983"),
   c = n("49111"),
   f = n("782340"),
   h = n("845871"),
-  p = n("242412"),
-  m = n("846770"),
+  m = n("242412"),
+  p = n("846770"),
   E = () => {
     let e = (0, r.default)();
     l.useEffect(() => {
       o.default.trackWithMetadata(c.AnalyticEvents.GUILD_OUTAGE_VIEWED, {})
     }, []);
-    let t = (0, s.isThemeDark)(e) ? p : m;
+    let t = (0, s.isThemeDark)(e) ? m : p;
     return (0, a.jsxs)("div", {
       className: h.container,
       children: [(0, a.jsxs)(u.default, {

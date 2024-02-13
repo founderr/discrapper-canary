@@ -12,8 +12,8 @@ var a = s("37983"),
   i = s("730290"),
   r = s("90915"),
   l = s("446674"),
-  u = s("971178"),
-  o = s("850068"),
+  o = s("971178"),
+  u = s("850068"),
   d = s("901582"),
   c = s("984376"),
   _ = s("737960"),
@@ -23,8 +23,8 @@ var a = s("37983"),
   f = s("269936"),
   S = s("967889"),
   R = s("393414"),
-  A = s("970366"),
-  m = s("592433"),
+  m = s("970366"),
+  A = s("592433"),
   N = s("489749"),
   p = s("75576"),
   g = s("49111"),
@@ -41,9 +41,9 @@ function M(e) {
 l.default.initialize();
 class h extends n.PureComponent {
   componentDidMount() {
-    (0, u.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
-      e.pathname.startsWith(g.Routes.APPLICATION_STORE) && (0, u.updateLocation)(e)
-    }), this.props.isAuthenticated && (0, o.fetchPaymentSources)(), T.default.disable(), T.default.setLayout(E.APPLICATION_STORE_LAYOUT), T.default.enable(), (0, A.trackAppUIViewed)("application_store")
+    (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
+      e.pathname.startsWith(g.Routes.APPLICATION_STORE) && (0, o.updateLocation)(e)
+    }), this.props.isAuthenticated && (0, u.fetchPaymentSources)(), T.default.disable(), T.default.setLayout(E.APPLICATION_STORE_LAYOUT), T.default.enable(), (0, m.trackAppUIViewed)("application_store")
   }
   componentWillUnmount() {
     null != this.stopListeningToHistory && this.stopListeningToHistory(), T.default.disable(), T.default.setLayout(I.DEFAULT_LAYOUT), T.default.enable()
@@ -87,7 +87,7 @@ class h extends n.PureComponent {
         location: r
       } = e, {
         width: l
-      } = this.props, u = (0, i.parse)(r.search);
+      } = this.props, o = (0, i.parse)(r.search);
       return (0, a.jsx)(d.default, {
         page: g.AnalyticsPages.STORE_LISTING,
         root: !0,
@@ -96,7 +96,7 @@ class h extends n.PureComponent {
           applicationId: s,
           slug: n,
           location: r,
-          storeListingId: u.store_listing_id,
+          storeListingId: o.store_listing_id,
           pageSize: M(l)
         })
       })
@@ -107,7 +107,7 @@ class h extends n.PureComponent {
         render: () => (0, a.jsx)(d.default, {
           page: g.AnalyticsPages.STORE_DIRECTORY_HOME,
           root: !0,
-          children: (0, a.jsx)(m.default, {})
+          children: (0, a.jsx)(A.default, {})
         })
       }), (0, a.jsx)(r.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),

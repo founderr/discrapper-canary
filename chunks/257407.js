@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("206230"),
   f = n("716241"),
   h = n("384997"),
-  p = n("788506"),
-  m = n("867805"),
+  m = n("788506"),
+  p = n("867805"),
   E = n("5667"),
-  C = n("697218"),
+  S = n("697218"),
   g = n("402671"),
-  S = n("449008"),
+  C = n("449008"),
   _ = n("719923"),
   I = n("229502"),
   T = n("82230"),
@@ -34,23 +34,23 @@ var a = n("37983"),
   L = n("99795"),
   O = n("958706"),
   y = n("646718"),
-  b = n("397336"),
-  P = n("782340"),
+  P = n("397336"),
+  b = n("782340"),
   D = n("308036");
 let U = O.EmojiIntention.CHAT,
   w = {
     section: j.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
     openPopoutType: "voice_channel_effect_emoji_picker"
   },
-  F = [m.default.getByName("thumbsup"), m.default.getByName("eyes"), m.default.getByName("laughing"), m.default.getByName("watermelon"), m.default.getByName("fork_and_knife"), m.default.getByName("yum")].filter(S.isNotNullish);
+  F = [p.default.getByName("thumbsup"), p.default.getByName("eyes"), p.default.getByName("laughing"), p.default.getByName("watermelon"), p.default.getByName("fork_and_knife"), p.default.getByName("yum")].filter(C.isNotNullish);
 
 function k(e) {
   var t;
   let {
     channel: n,
-    closePopout: m,
-    onFocus: S
-  } = e, O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([C.default], () => C.default.getCurrentUser()), V = _.default.canUseFancyVoiceChannelReactions(k), B = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), H = l.useRef(!1), G = (0, p.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...G, ...F], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
+    closePopout: p,
+    onFocus: C
+  } = e, O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), V = _.default.canUseFancyVoiceChannelReactions(k), B = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), H = l.useRef(!1), G = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...G, ...F], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: n,
     intention: U
@@ -106,37 +106,37 @@ function k(e) {
       } = e, s = O && t === r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
       return (0, a.jsx)(o.Popout, {
         position: "left",
-        "aria-label": P.default.Messages.VOICE_CHANNEL_EFFECTS_MORE,
+        "aria-label": b.default.Messages.VOICE_CHANNEL_EFFECTS_MORE,
         shouldShow: s,
         renderPopout: () => (0, a.jsx)("div", {
-          onMouseEnter: S,
+          onMouseEnter: C,
           children: (0, a.jsx)(E.default, {
             className: D.reducedMotionTooltip,
-            header: P.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
-            content: P.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
+            header: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
+            content: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
             onClick: () => {
               d.default.open(j.UserSettingsSections.ACCESSIBILITY, null, {
-                scrollPosition: b.AccessibilityScrollPositions.REDUCED_MOTION
-              }), m()
+                scrollPosition: P.AccessibilityScrollPositions.REDUCED_MOTION
+              }), p()
             },
             markAsDismissed: l,
-            buttonCTA: P.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
-            secondaryButtonCTA: P.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
+            buttonCTA: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
+            secondaryButtonCTA: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
             caretPosition: E.CaretPosition.RIGHT_CENTER
           })
         }),
         children: () => (0, a.jsx)(M.default, {
-          title: P.default.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
+          title: b.default.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
           channel: n,
-          closePopout: m,
+          closePopout: p,
           onSelectEmoji: Z,
           onSelectDisabledEmoji: X,
-          onFocus: S,
+          onFocus: C,
           onExpandedToggle: J,
           analyticsOverride: w,
           emojiSearchProps: {
             accessory: (0, a.jsx)(N.default, {
-              labelText: P.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
+              labelText: b.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: ee,
               onChange: () => {
                 if (V) return f.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {

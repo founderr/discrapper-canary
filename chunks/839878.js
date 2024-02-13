@@ -17,16 +17,16 @@ var i = n("37983"),
   h = n("557809"),
   p = n("233069"),
   g = n("950104"),
-  E = n("42203"),
-  m = n("305961"),
+  m = n("42203"),
+  E = n("305961"),
   S = n("27618"),
   v = n("18494"),
   y = n("887657"),
-  I = n("293137"),
-  O = n("945330"),
-  T = n("673220"),
-  C = n("960086"),
-  N = n("519794"),
+  O = n("293137"),
+  C = n("945330"),
+  N = n("673220"),
+  T = n("960086"),
+  I = n("519794"),
   _ = n("393900"),
   A = n("560995"),
   x = n("423741"),
@@ -49,7 +49,7 @@ class M extends a.Component {
     if (!(0, p.isPrivate)(n.type)) return null;
     let o = y.default,
       d = !1;
-    return a ? l ? (e = R.default.Messages.LEAVE_CALL, o = I.default) : e = R.default.Messages.JOIN_CALL : s ? (e = R.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, t = r.Tooltip.Colors.RED, d = !0) : e = R.default.Messages.START_VOICE_CALL, (0, i.jsx)(f.default.Icon, {
+    return a ? l ? (e = R.default.Messages.LEAVE_CALL, o = O.default) : e = R.default.Messages.JOIN_CALL : s ? (e = R.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, t = r.Tooltip.Colors.RED, d = !0) : e = R.default.Messages.START_VOICE_CALL, (0, i.jsx)(f.default.Icon, {
       icon: o,
       tooltip: e,
       onClick: this.handleClickCall,
@@ -75,7 +75,7 @@ class M extends a.Component {
     return p && !n ? (0, i.jsxs)(A.default.Bar, {
       className: L.opacityHeader,
       children: [(0, i.jsx)(x.default, {}), (0, i.jsx)(f.default.Icon, {
-        icon: O.default,
+        icon: C.default,
         onClick: this.handleCloseOpacitySettings,
         tooltip: R.default.Messages.CLOSE
       })]
@@ -90,7 +90,7 @@ class M extends a.Component {
           channelId: a.id,
           toolbar: this.renderWidgetButtons(),
           transparent: !0,
-          children: [u || n || c ? null : (0, i.jsx)(T.default, {
+          children: [u || n || c ? null : (0, i.jsx)(N.default, {
             className: s(L.dragIcon, t),
             width: 20,
             height: 20
@@ -143,11 +143,11 @@ class M extends a.Component {
       } = this.props, l = n ? R.default.Messages.OVERLAY_WIDGET_HIDE_IN_GAME : R.default.Messages.OVERLAY_WIDGET_SHOW_IN_GAME;
       return e ? null : (0, i.jsxs)(a.Fragment, {
         children: [this.renderCallButton(), n ? (0, i.jsx)(f.default.Icon, {
-          icon: C.default,
+          icon: T.default,
           tooltip: R.default.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY,
           onClick: this.handleOpenOpacitySettings
         }) : null, (0, i.jsx)(f.default.Icon, {
-          icon: n ? _.default : N.default,
+          icon: n ? _.default : I.default,
           tooltip: l,
           selected: n,
           onClick: t
@@ -161,10 +161,10 @@ function D(e) {
   let {
     channel: t,
     ...n
-  } = e, a = (0, o.useStateFromStores)([v.default, E.default], () => {
+  } = e, a = (0, o.useStateFromStores)([v.default, m.default], () => {
     let e = v.default.getVoiceChannelId();
-    return E.default.getChannel(e)
-  }), l = (0, o.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([g.default], () => g.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
+    return m.default.getChannel(e)
+  }), l = (0, o.useStateFromStores)([E.default], () => E.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([g.default], () => g.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
   return (0, i.jsx)(M, {
     channel: t,
     channelName: r,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = n("37983");
@@ -17,19 +17,19 @@ var l = n("446674"),
   f = n("99795"),
   h = n("782340");
 
-function p(e) {
+function m(e) {
   let {
     channelId: t,
     onClose: n,
-    appContext: p,
-    exitFullScreen: m,
+    appContext: m,
+    exitFullScreen: p,
     onSelect: E
-  } = e, C = (0, l.useStateFromStores)([i.default], () => i.default.getSelectedParticipant(t)), g = (null == C ? void 0 : C.type) === f.ParticipantTypes.STREAM ? C.stream : null, S = (0, r.default)(t), _ = (0, u.default)(), I = (0, o.default)(t), T = (0, c.default)(t);
+  } = e, S = (0, l.useStateFromStores)([i.default], () => i.default.getSelectedParticipant(t)), g = (null == S ? void 0 : S.type) === f.ParticipantTypes.STREAM ? S.stream : null, C = (0, r.default)(t), _ = (0, u.default)(), I = (0, o.default)(t), T = (0, c.default)(t);
   return (0, a.jsxs)(s.Menu, {
     navId: "channel-call-overflow-popout",
     onClose: n,
     "aria-label": h.default.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
     onSelect: E,
-    children: [S, _, I, T, (0, d.default)(g, p, m)]
+    children: [C, _, I, T, (0, d.default)(g, m, p)]
   })
 }

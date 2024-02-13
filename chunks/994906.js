@@ -18,8 +18,8 @@ function u(e, t, n) {
   };
   if (!(0, r.canAccessGuildMemberModViewWithExperiment)(e)) return;
   let h = null !== (u = f.modViewPanel) && void 0 !== u ? u : o.ModViewPanel.INFO,
-    p = null !== (d = f.sourceLocation) && void 0 !== d ? d : a.default.MEMBER_SAFETY_PAGE;
-  (0, i.trackModViewOpened)(e, t, h, p), l.default.openGuildSidebar({
+    m = null !== (d = f.sourceLocation) && void 0 !== d ? d : a.default.MEMBER_SAFETY_PAGE;
+  (0, i.trackModViewOpened)(e, t, h, m), l.default.openGuildSidebar({
     guildId: e,
     baseChannelId: n,
     sidebarType: s.GuildSidebarType.GUILD_MEMBER_MOD_VIEW,

@@ -15,32 +15,32 @@ var l = n("917351"),
   c = n("158998"),
   f = n("42203"),
   h = n("319781"),
-  p = n("27618"),
-  m = n("697218"),
+  m = n("27618"),
+  p = n("697218"),
   E = n("49111");
-let C = !1,
+let S = !1,
   g = "",
-  S = 0,
+  C = 0,
   _ = [],
   I = !1,
   T = new Set,
   v = null;
 
 function x() {
-  g = "", S = 0, _ = [], T = new Set, C = !1, v = null
+  g = "", C = 0, _ = [], T = new Set, S = !1, v = null
 }
 
 function N(e) {
-  g = e, S = 0, A()
+  g = e, C = 0, A()
 }
 
 function A() {
-  if (!C) return !1;
+  if (!S) return !1;
   let e = f.default.getChannel(v);
   if (0 === g.trim().length) return null != a && a.clearQuery(), _ = function(e) {
-    let t = p.default.getFriendIDs();
+    let t = m.default.getFriendIDs();
     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
-      let n = m.default.getUser(t);
+      let n = p.default.getUser(t);
       return null == n ? e : (e.push({
         user: n
       }), e)
@@ -62,7 +62,7 @@ function A() {
     return t.forEach(e => {
       let t = h.default.getScoreWithoutFetchingLatest(e.id),
         l = e.getRecipientId(),
-        s = p.default.isFriend(l) ? .2 : 0,
+        s = m.default.isFriend(l) ? .2 : 0,
         i = null != f.default.getDMFromUserId(l) ? .1 : 0;
       a[l] = 1 + t / n + s + i
     }), a
@@ -70,9 +70,9 @@ function A() {
 }
 
 function M() {
-  if (!C) return !1;
+  if (!S) return !1;
   let e = I;
-  return (I = s.some(p.default.getRelationships(), e => e === E.RelationshipTypes.FRIEND)) !== e
+  return (I = s.some(m.default.getRelationships(), e => e === E.RelationshipTypes.FRIEND)) !== e
 }
 
 function R(e, t) {
@@ -83,12 +83,12 @@ function j(e) {
   let {
     results: t
   } = e;
-  C && "" !== g && (_ = t.map(e => {
+  S && "" !== g && (_ = t.map(e => {
     let {
       id: t
     } = e;
     return {
-      user: m.default.getUser(t)
+      user: p.default.getUser(t)
     }
   }).filter(e => null != e.user), D.emitChange())
 }
@@ -99,20 +99,20 @@ function L() {
 
 function O(e) {
   if (e.key !== E.NEW_GROUP_DM_POPOUT_ID) return !1;
-  C = !0, M(), a = L(), v = null, N("")
+  S = !0, M(), a = L(), v = null, N("")
 }
 
 function y(e) {
   if (e.key !== E.NEW_GROUP_DM_POPOUT_ID) return !1;
-  b()
+  P()
 }
 
-function b() {
+function P() {
   null != a && (a.destroy(), a = null), x()
 }
-class P extends i.default.Store {
+class b extends i.default.Store {
   initialize() {
-    this.waitFor(m.default, f.default, p.default), this.syncWith([m.default, f.default], A), this.syncWith([p.default], M)
+    this.waitFor(p.default, f.default, m.default), this.syncWith([p.default, f.default], A), this.syncWith([m.default], M)
   }
   getResults() {
     return _
@@ -129,15 +129,15 @@ class P extends i.default.Store {
   getState() {
     return {
       query: g,
-      selectedRow: S,
+      selectedRow: C,
       selectedUsers: T,
       results: _,
       hasFriends: I
     }
   }
 }
-P.displayName = "PrivateChannelRecipientsInviteStore";
-let D = new P(r.default, {
+b.displayName = "PrivateChannelRecipientsInviteStore";
+let D = new b(r.default, {
   CONNECTION_OPEN: function() {
     x()
   },
@@ -147,22 +147,22 @@ let D = new P(r.default, {
       channelId: n
     } = e;
     if (null != t) return !1;
-    let a = C;
-    return x(), C = a, v = n, A()
+    let a = S;
+    return x(), S = a, v = n, A()
   },
   MODAL_PUSH: O,
   SHOW_ACTION_SHEET: O,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    C = !0, M(), a = L(), v = e.channelId, N("")
+    S = !0, M(), a = L(), v = e.channelId, N("")
   },
   MODAL_POP: y,
   HIDE_ACTION_SHEET: y,
-  PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: b,
+  PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: P,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function(e) {
     v = e.channelId, N(e.query)
   },
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function(e) {
-    S = e.row
+    C = e.row
   },
   PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function(e) {
     let {

@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("716241"),
   f = n("701916"),
   h = n("679653"),
-  p = n("176347"),
-  m = n("850391"),
+  m = n("176347"),
+  p = n("850391"),
   E = n("557809"),
-  C = n("144491"),
+  S = n("144491"),
   g = n("42203"),
-  S = n("474643"),
+  C = n("474643"),
   _ = n("305961"),
   I = n("800762"),
   T = n("664336"),
@@ -42,7 +42,7 @@ function R(e) {
       t && null != e && (o.default.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
-      }), (0, C.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
+      }), (0, S.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(j);
   let y = l.useRef(!1);
@@ -59,16 +59,16 @@ function R(e) {
         channel_view: R
       })
     }, [j, R]), null == j || null == L) return null;
-  let b = (0, a.jsx)(v.default, {
+  let P = (0, a.jsx)(v.default, {
     channel: j,
     baseChannelId: s
   });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.default, {
       channel: j,
-      draftType: S.DraftType.ChannelMessage
+      draftType: C.DraftType.ChannelMessage
     }), (0, a.jsx)(T.default, {
-      toolbar: b,
+      toolbar: P,
       "aria-label": A.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, E.renderTitle)({
         channel: j,
@@ -87,15 +87,15 @@ function R(e) {
           })
         },
         handleClick: function() {
-          null != j && (0, C.transitionToChannel)(j.id)
+          null != j && (0, S.transitionToChannel)(j.id)
         }
       })
     }), (0, a.jsx)("div", {
       className: M.chat,
-      children: (0, a.jsx)(p.default, {
+      children: (0, a.jsx)(m.default, {
         channel: j,
         guild: L,
-        chatInputType: m.ChatInputTypes.SIDEBAR
+        chatInputType: p.ChatInputTypes.SIDEBAR
       }, t)
     })]
   })

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return h
   },
   useVisibleParticipants: function() {
-    return C
+    return S
   },
   default: function() {
     return g
@@ -21,8 +21,8 @@ var a = n("37983"),
   c = n("99795"),
   f = n("987162");
 let h = 112,
-  p = 16 / 9 * h + 8,
-  m = 10 * o.default.Millis.SECOND;
+  m = 16 / 9 * h + 8,
+  p = 10 * o.default.Millis.SECOND;
 
 function E(e) {
   var t;
@@ -30,12 +30,12 @@ function E(e) {
   return e.type === c.ParticipantTypes.USER && e.user.id === n && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo)
 }
 
-function C(e, t) {
+function S(e, t) {
   let [n, a] = l.useState(Date.now());
   l.useEffect(() => {
     let e = setTimeout(() => {
       a(Date.now())
-    }, m);
+    }, p);
     return () => {
       clearTimeout(e)
     }
@@ -57,7 +57,7 @@ function C(e, t) {
             case c.ParticipantTypes.USER:
               var n;
               let a = "\x05";
-              return e.speaking ? a = "\x02" : t - e.lastSpoke < m ? a = "\x03" : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (a = "\x04"), "".concat(a).concat(function(e) {
+              return e.speaking ? a = "\x02" : t - e.lastSpoke < p ? a = "\x03" : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (a = "\x04"), "".concat(a).concat(function(e) {
                 let t = String(864e13).length;
                 return String(864e13 - e).padStart(t, "0")
               }(e.lastSpoke)).concat((0, i.default)(e.userNick, e.user))
@@ -66,18 +66,18 @@ function C(e, t) {
         [l, o] = (0, s.partition)(a, c.isStreamParticipant),
         d = o.findIndex(E),
         f = null; - 1 !== d && (f = o[d], o.splice(d, 1));
-      let h = null != f ? e - p - 8 : e,
-        C = Math.max(0, Math.min(Math.floor((h - 8) / 132), 12, t.length)),
-        g = Math.min((h - 8) / C - 8, p),
-        S = Math.max(0, C - l.length),
-        _ = l.slice(0, C),
-        I = o.slice(0, S),
-        T = Array(S);
-      if (S > 0) {
+      let h = null != f ? e - m - 8 : e,
+        S = Math.max(0, Math.min(Math.floor((h - 8) / 132), 12, t.length)),
+        g = Math.min((h - 8) / S - 8, m),
+        C = Math.max(0, S - l.length),
+        _ = l.slice(0, S),
+        I = o.slice(0, C),
+        T = Array(C);
+      if (C > 0) {
         let e = [];
         for (let t of I) {
           let n = r.current[t.id];
-          null != n && n < S ? T[n] = t : e.push(t)
+          null != n && n < C ? T[n] = t : e.push(t)
         }
         for (let t = 0; t < T.length; t++) {
           if (null != T[t]) continue;
@@ -113,7 +113,7 @@ function g(e) {
     inCall: u,
     popoutWindow: c,
     paused: h = !1
-  } = e, m = null != c;
+  } = e, p = null != c;
   return (0, a.jsx)("div", {
     className: f.root,
     children: t.map(e => {
@@ -133,10 +133,10 @@ function g(e) {
           onClick: r,
           onDoubleClick: s,
           onContextMenu: i,
-          width: t ? p : n,
+          width: t ? m : n,
           inCall: u,
           paused: h,
-          inPopout: m
+          inPopout: p
         })
       }, e.id)
     })

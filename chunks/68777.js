@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("252073"),
   f = n("309021"),
   h = n("917397"),
-  p = n("553275"),
-  m = n("287103"),
+  m = n("553275"),
+  p = n("287103"),
   E = n("817343"),
-  C = n("26989"),
+  S = n("26989"),
   g = n("305961"),
-  S = n("987663"),
+  C = n("987663"),
   _ = n("387111"),
   I = n("136281"),
   T = n("782340"),
@@ -33,8 +33,8 @@ function A(e) {
     log: t,
     member: n,
     guild: s
-  } = e, r = f.getSimpleAuditLogTitleFromChange(t), c = f.getSimpleAuditLogTitleContextFromChange(t), m = f.getStringForBanReason(t), g = f.getSimpleAuditLogChangeDetails(t), S = (0, h.useAuditLogDate)(t.id), I = (0, u.default)([C.default], () => null != t.userId ? C.default.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), N = l.useCallback(e => t => {
-    t.preventDefault(), t.stopPropagation(), null != e && (0, p.openMemberProfile)(e)
+  } = e, r = f.getSimpleAuditLogTitleFromChange(t), c = f.getSimpleAuditLogTitleContextFromChange(t), p = f.getStringForBanReason(t), g = f.getSimpleAuditLogChangeDetails(t), C = (0, h.useAuditLogDate)(t.id), I = (0, u.default)([S.default], () => null != t.userId ? S.default.getMember(n.guildId, t.userId) : null, [n.guildId, t.userId]), N = l.useCallback(e => t => {
+    t.preventDefault(), t.stopPropagation(), null != e && (0, m.openMemberProfile)(e)
   }, []), A = l.useCallback(() => null == t.user ? null : (0, a.jsx)(d.Tooltip, {
     text: T.default.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
     children: e => {
@@ -81,10 +81,10 @@ function A(e) {
         children: (0, a.jsx)(d.Text, {
           variant: "text-sm/medium",
           color: "header-primary",
-          children: S
+          children: C
         })
       })]
-    }), null != m && (0, a.jsx)("div", {
+    }), null != p && (0, a.jsx)("div", {
       className: v.auditLogSecondaryContainer,
       children: (0, a.jsxs)("div", {
         className: v.auditLogReason,
@@ -92,10 +92,10 @@ function A(e) {
           variant: "text-sm/normal",
           color: "text-muted",
           tag: "span",
-          children: m
+          children: p
         })]
       })
-    }), null == m && null != g && (0, a.jsx)("div", {
+    }), null == p && null != g && (0, a.jsx)("div", {
       className: v.auditLogSecondaryContainer,
       children: (0, a.jsxs)("div", {
         className: v.auditLogSecondary,
@@ -106,7 +106,7 @@ function A(e) {
           children: g
         })]
       })
-    }), null == m && null == g && (0, a.jsx)("div", {
+    }), null == p && null == g && (0, a.jsx)("div", {
       className: v.auditLogSecondaryContainer,
       children: (0, a.jsx)("div", {
         className: v.auditLogSecondary,
@@ -129,9 +129,9 @@ function A(e) {
 function M(e) {
   let {
     member: t
-  } = e, n = (0, u.default)([g.default], () => g.default.getGuild(t.guildId), [t.guildId]), s = (0, u.default)([m.default], () => {
-    let e = m.default.logs;
-    return null == e || null == n ? [] : S.transformLogs(e, n)
+  } = e, n = (0, u.default)([g.default], () => g.default.getGuild(t.guildId), [t.guildId]), s = (0, u.default)([p.default], () => {
+    let e = p.default.logs;
+    return null == e || null == n ? [] : C.transformLogs(e, n)
   }, [n]);
   return (l.useEffect(() => {
     (async function e(e, t) {

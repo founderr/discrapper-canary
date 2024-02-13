@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -18,20 +18,20 @@ var a = n("37983"),
 function h(e) {
   return "dismissible_content_".concat(f.DismissibleContentGroupName.GUILD_TAKEOVER_MODAL, "-").concat(e)
 }
-var p = l.memo(function() {
+var m = l.memo(function() {
   return ! function() {
     let e = function() {
         let e = (0, s.default)([d.default], () => d.default.isConnected());
         return e ? [] : []
       }(),
-      [t, p] = (0, u.useSelectedDismissibleContent)(e, f.DismissibleContentGroupName.GUILD_TAKEOVER_MODAL),
-      m = (0, r.useHasAnyModalOpen)(),
+      [t, m] = (0, u.useSelectedDismissibleContent)(e, f.DismissibleContentGroupName.GUILD_TAKEOVER_MODAL),
+      p = (0, r.useHasAnyModalOpen)(),
       E = l.useRef(null);
     l.useEffect(() => {
       if (null == t) {
         E.current = null;
         return
-      }!m && E.current !== t && (! function(e) {
+      }!p && E.current !== t && (! function(e) {
         let {
           dismissibleContent: t,
           markAsDismissed: l
@@ -51,9 +51,9 @@ var p = l.memo(function() {
         }, s)
       }({
         dismissibleContent: t,
-        markAsDismissed: p
+        markAsDismissed: m
       }), E.current = t)
-    }, [t, m, p]), l.useEffect(() => () => {
+    }, [t, p, m]), l.useEffect(() => () => {
       null != t && (0, r.closeModal)(h(t))
     }, [t])
   }(), null

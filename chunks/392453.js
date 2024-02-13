@@ -9,8 +9,8 @@ var l = n("917351"),
   s = n("446674"),
   i = n("913144"),
   r = n("126939"),
-  o = n("501260"),
-  u = n("152311"),
+  u = n("501260"),
+  o = n("152311"),
   d = n("429928"),
   c = n("36539"),
   f = n("502651"),
@@ -21,8 +21,8 @@ var l = n("917351"),
   E = n("177589"),
   g = n("67139"),
   I = n("671071"),
-  S = n("322631"),
-  _ = n("947297"),
+  _ = n("322631"),
+  S = n("947297"),
   N = n("373469"),
   T = n("42203"),
   A = n("350522"),
@@ -58,7 +58,7 @@ function K(e) {
   let t = F[e];
   return null == t && (F = {
     ...F,
-    [e]: new _.default({
+    [e]: new S.default({
       name: e
     })
   }), F[e]
@@ -68,7 +68,7 @@ function W(e) {
   let t = B[e];
   return null == t && (B = {
     ...B,
-    [e]: new S.default({
+    [e]: new _.default({
       url: e
     })
   }), B[e]
@@ -124,12 +124,12 @@ function J(e, t, n) {
           tags: {
             source: "ACTIVITIES"
           }
-        }), null) : e === I.SPOTIFY_APPLICATION_ID ? I.SpotifyApplication : e.startsWith(_.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(_.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(S.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(S.TWITCH_APPLICATION_ID_PREFIX.length)) : (Z(e), null)
+        }), null) : e === I.SPOTIFY_APPLICATION_ID ? I.SpotifyApplication : e.startsWith(S.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(S.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(_.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(_.TWITCH_APPLICATION_ID_PREFIX.length)) : (Z(e), null)
       }(c),
       m = null === (l = d.timestamps) || void 0 === l ? void 0 : l.start;
-    if ((0, u.default)(d)) {
+    if ((0, o.default)(d)) {
       let t = (0, r.getIsActivitiesEnabledForCurrentPlatform)(),
-        n = (0, o.default)({
+        n = (0, u.default)({
           activity: d,
           userId: e.id,
           application: f,
@@ -140,7 +140,7 @@ function J(e, t, n) {
           VoiceStateStore: D.default,
           PermissionStore: x.default,
           GuildStore: v.default
-        }) !== o.EmbeddedActivityJoinability.CAN_JOIN;
+        }) !== u.EmbeddedActivityJoinability.CAN_JOIN;
       if (n) continue
     } else if (null == m) continue;
     if (!g.shouldShowActivity(d) || null == f || j.has(f.id)) continue;

@@ -15,12 +15,12 @@ var a = n("917351"),
   c = n("824563"),
   f = n("101125"),
   h = n("697218"),
-  p = n("449008"),
-  m = n("991170"),
+  m = n("449008"),
+  p = n("991170"),
   E = n("158998"),
-  C = n("49111");
+  S = n("49111");
 let g = {};
-class S {
+class C {
   rebuild(e) {
     this.version++, this.sections = {}, null != e && (this.allUserIds = new Set(e));
     let t = o.default.getChannel(this.parentId);
@@ -112,15 +112,15 @@ class S {
       i = h.default.getCurrentUser(),
       r = (null == s ? void 0 : s.id) === (null == i ? void 0 : i.id),
       o = r ? f.default.getStatus() : c.default.getStatus(e, this.guildId),
-      d = null != s && null != t && m.default.can({
-        permission: C.Permissions.VIEW_CHANNEL,
+      d = null != s && null != t && p.default.can({
+        permission: S.Permissions.VIEW_CHANNEL,
         user: s,
         context: t
       }),
-      p = o !== C.StatusTypes.OFFLINE && o !== C.StatusTypes.INVISIBLE && o !== C.StatusTypes.UNKNOWN,
-      g = p ? null !== (n = null == l ? void 0 : l.hoistRoleId) && void 0 !== n ? n : "online" : "offline",
-      S = null !== (a = null == l ? void 0 : l.nick) && void 0 !== a ? a : E.default.getName(s);
-    return [g, null == S ? void 0 : S.toLowerCase(), d]
+      m = o !== S.StatusTypes.OFFLINE && o !== S.StatusTypes.INVISIBLE && o !== S.StatusTypes.UNKNOWN,
+      g = m ? null !== (n = null == l ? void 0 : l.hoistRoleId) && void 0 !== n ? n : "online" : "offline",
+      C = null !== (a = null == l ? void 0 : l.nick) && void 0 !== a ? a : E.default.getName(s);
+    return [g, null == C ? void 0 : C.toLowerCase(), d]
   }
   constructor(e, t, n) {
     this.guildId = e, this.parentId = t, this.threadId = n, this.version = 0, this.sections = {}, this.allUserIds = new Set
@@ -216,7 +216,7 @@ var x = new v(r.default, {
       guildId: n,
       members: a
     } = e, l = o.default.getChannel(t), s = null == l ? void 0 : l.parent_id;
-    null != s && (g[t] = new S(n, s, t), g[t].rebuild(a.map(e => e.user_id)))
+    null != s && (g[t] = new C(n, s, t), g[t].rebuild(a.map(e => e.user_id)))
   },
   USER_UPDATE: _,
   PRESENCE_UPDATES: function(e) {
@@ -239,7 +239,7 @@ var x = new v(r.default, {
     } = e, n = l(t).map(e => {
       var t;
       return null === (t = e.user) || void 0 === t ? void 0 : t.id
-    }).filter(p.isNotNullish).uniq().value(), a = !1;
+    }).filter(m.isNotNullish).uniq().value(), a = !1;
     for (let e in g) g[e].updateMultipleUserIds(n) && (a = !0);
     return a
   },

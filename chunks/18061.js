@@ -14,7 +14,7 @@ var a, l = n("37983"),
   c = n("699473"),
   f = n("42203"),
   h = n("782340"),
-  p = n("821867");
+  m = n("821867");
 a = class extends s.PureComponent {
   render() {
     let {
@@ -30,10 +30,10 @@ a = class extends s.PureComponent {
     let d = "search-result-".concat(i.id);
     return (0, l.jsx)(u.FocusRing, {
       ringTarget: this.hitRef,
-      ringClassName: p.searchResultFocusRing,
+      ringClassName: m.searchResultFocusRing,
       offset: 4,
       children: (0, l.jsxs)("li", {
-        className: p.container,
+        className: m.container,
         ...t,
         "aria-posinset": 1 + n + a,
         "aria-setsize": s,
@@ -42,13 +42,13 @@ a = class extends s.PureComponent {
           tabIndex: -1,
           onClick: this.handleMessageClick,
           innerRef: this.containerRef,
-          className: p.searchResult,
+          className: m.searchResult,
           focusProps: {
             enabled: !1
           },
           children: (0, l.jsx)("div", {
             ref: this.hitRef,
-            className: p.message,
+            className: m.message,
             children: (0, l.jsx)(c.default, {
               id: d,
               message: i,
@@ -60,10 +60,10 @@ a = class extends s.PureComponent {
             })
           }, i.id)
         }), (0, l.jsx)("div", {
-          className: p.buttonsContainer,
+          className: m.buttonsContainer,
           "aria-hidden": !0,
           children: (0, l.jsx)(u.Clickable, {
-            className: p.button,
+            className: m.button,
             onClick: this.jumpTo,
             children: h.default.Messages.JUMP
           })

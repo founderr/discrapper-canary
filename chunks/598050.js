@@ -13,12 +13,12 @@ var a, l, s = n("37983"),
   c = n("567469"),
   f = n("998716"),
   h = n("223378"),
-  p = n("973137"),
-  m = n("661917"),
+  m = n("973137"),
+  p = n("661917"),
   E = n("85427"),
-  C = n("620103"),
+  S = n("620103"),
   g = n("297446"),
-  S = n("782340"),
+  C = n("782340"),
   _ = n("478107");
 let I = {
   singleSpeaker: 424,
@@ -50,23 +50,23 @@ var N = (0, o.default)(e => {
     selectedParticipantId: u.default.getSelectedParticipantId(a.id),
     largeStream: u.default.getStageStreamSize(a.id),
     chatOpen: u.default.getChatOpen(a.id)
-  }), [a.id]), M = (0, c.useActualStageSpeakerCount)(a.id), R = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), j = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(a.id, I) : null), L = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), O = L.filter(e => e.type === f.StageChannelParticipantTypes.VOICE), y = null != L.find(e => e.type === f.StageChannelParticipantTypes.STREAM), b = x(l), P = v(l, A), D = {
-    [f.StageChannelParticipantNamedIndex.SPEAKER]: P,
-    [f.StageChannelParticipantNamedIndex.AUDIENCE]: b,
+  }), [a.id]), M = (0, c.useActualStageSpeakerCount)(a.id), R = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), j = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(a.id, I) : null), L = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), O = L.filter(e => e.type === f.StageChannelParticipantTypes.VOICE), y = null != L.find(e => e.type === f.StageChannelParticipantTypes.STREAM), P = x(l), b = v(l, A), D = {
+    [f.StageChannelParticipantNamedIndex.SPEAKER]: b,
+    [f.StageChannelParticipantNamedIndex.AUDIENCE]: P,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
   }, U = (0, h.useThrottleDurationForChannel)(a.id), [w, F] = (0, h.useStageChannelParticipantsListThrottled)(a.id, D, U), k = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
     speakerTileWidth: V,
     speakerTileHeight: B
-  } = T(l, P), H = N ? l - 32 : Math.min(l - 64, 3 * V + 8), G = e => e === w.length - 1 || 0 === R && 1 === e, [W, Y] = i.useState(!1), [z, K] = i.useState(!1);
-  return (0, s.jsx)(m.default, {
+  } = T(l, b), H = N ? l - 32 : Math.min(l - 64, 3 * V + 8), G = e => e === w.length - 1 || 0 === R && 1 === e, [W, Y] = i.useState(!1), [z, K] = i.useState(!1);
+  return (0, s.jsx)(p.default, {
     sections: k,
     renderSection: e => {
       let {
         section: t
       } = e;
-      if (1 === t) return 0 === M ? null : (0, s.jsx)(C.default, {
+      if (1 === t) return 0 === M ? null : (0, s.jsx)(S.default, {
         participantCount: M,
-        label: S.default.Messages.SPEAKER_LABEL,
+        label: C.default.Messages.SPEAKER_LABEL,
         className: _.header,
         onClick: () => Y(!W),
         collapsed: W,
@@ -74,9 +74,9 @@ var N = (0, o.default)(e => {
         channel: a,
         isStreamLive: y
       }, "speaker-header-".concat(t));
-      if (2 === t) return 0 === R ? null : (0, s.jsx)(C.default, {
+      if (2 === t) return 0 === R ? null : (0, s.jsx)(S.default, {
         participantCount: R,
-        label: S.default.Messages.AUDIENCE_LABEL,
+        label: C.default.Messages.AUDIENCE_LABEL,
         className: _.header,
         onClick: () => K(!z),
         collapsed: z,
@@ -114,10 +114,10 @@ var N = (0, o.default)(e => {
           }, "speakers-".concat(t, "-").concat(n));
         case 2:
           if (z) return null;
-          return (0, s.jsx)(p.default, {
+          return (0, s.jsx)(m.default, {
             channel: a,
             participants: l,
-            maxTiles: b
+            maxTiles: P
           }, "audience-".concat(t, "-").concat(n));
         default:
           return null

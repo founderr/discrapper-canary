@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("515496"),
   f = n("568088"),
   h = n("624567"),
-  p = n("49111"),
-  m = n("143561"),
+  m = n("49111"),
+  p = n("143561"),
   E = e => {
     let {
       channel: t,
@@ -24,18 +24,18 @@ var a = n("37983"),
     } = e, {
       isHovered: s,
       setIsHovered: E,
-      onMouseEnter: C,
+      onMouseEnter: S,
       onMouseLeave: g,
-      cancelTimers: S
+      cancelTimers: C
     } = (0, d.default)(200, 300), [_, I] = l.useState(!1), T = (0, r.useStateFromStores)([f.default], () => f.default.effectCooldownEndTime), v = l.useMemo(() => null != T ? (T.getTime() - Date.now()) / 1e3 : 0, [T]), {
       seconds: x
     } = (0, u.default)(null != T ? T : new Date), N = x > 0, A = l.useCallback(e => {
-      if ("focus" !== e.type) !_ && !N && C()
-    }, [_, N, C]), M = l.useCallback(() => {
+      if ("focus" !== e.type) !_ && !N && S()
+    }, [_, N, S]), M = l.useCallback(() => {
       !_ && g()
     }, [g, _]), R = l.useCallback((e, t) => {
-      S(), I(!_), (!s || _) && (null == t || t(e))
-    }, [S, _, s]), j = s || _;
+      C(), I(!_), (!s || _) && (null == t || t(e))
+    }, [C, _, s]), j = s || _;
     return (0, a.jsx)(o.Popout, {
       shouldShow: j,
       animationPosition: "bottom",
@@ -53,7 +53,7 @@ var a = n("37983"),
           isHovered: j,
           channel: t,
           closePopout: n,
-          onMouseEnter: C,
+          onMouseEnter: S,
           onMouseLeave: M,
           onFocus: () => I(!0)
         })
@@ -67,10 +67,10 @@ var a = n("37983"),
           isCenterButton: !0,
           totalCooldownSeconds: v,
           remainingCooldownSeconds: x,
-          className: i(m.controlButton, n),
+          className: i(p.controlButton, n),
           onKeyDown: e => {
             var t, n;
-            return t = e, n = l, void(t.keyCode === p.KeyboardKeys.ENTER && t.keyCode === p.KeyboardKeys.SPACE && R(t, n))
+            return t = e, n = l, void(t.keyCode === m.KeyboardKeys.ENTER && t.keyCode === m.KeyboardKeys.SPACE && R(t, n))
           },
           onClick: e => {
             R(e, t)

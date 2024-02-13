@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useEmojiHoseStore: function() {
-    return p
+    return m
   },
   default: function() {
     return E
@@ -29,44 +29,44 @@ let h = {
     SIZE_MIN: f.EMOJI_HOSE_EMOJI_SIZE / 2,
     SIZE_MAX: f.EMOJI_HOSE_EMOJI_SIZE
   },
-  p = (0, i.default)(() => ({
+  m = (0, i.default)(() => ({
     particles: {},
     lastSpawned: {}
   }));
 
-function m(e, t) {
+function p(e, t) {
   var n;
-  l(null !== (n = p.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t)
+  l(null !== (n = m.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t)
 }
 
 function E(e) {
   var t, n, a, i;
   let {
     emojiHose: E,
-    context: C,
+    context: S,
     canvasWidth: g,
-    canvasHeight: S,
+    canvasHeight: C,
     fallbackColor: _,
     outlineColorDark: I,
     outlineColorLight: T,
     streamerId: v,
     deadDrawables: x
   } = e;
-  C.save();
+  S.save();
   let N = o.default.getEmojiImage(null !== (n = null !== (t = E.emojiId) && void 0 !== t ? t : E.emojiName) && void 0 !== n ? n : ""),
     A = (0, d.normalizeCoordinate)(E.x, g),
-    M = (0, d.normalizeCoordinate)(E.y, S),
+    M = (0, d.normalizeCoordinate)(E.y, C),
     {
       outlineColor: R
     } = (0, d.getUserColors)(E.userId, I, T, _);
-  if (m(E, e => {
+  if (p(E, e => {
       var t, n;
-      return t = E, n = e, void(n.x += n.xSpeed * window.devicePixelRatio, n.y += n.ySpeed * window.devicePixelRatio, n.opacity -= n.opacitySpeed, n.opacity <= 0 && p.setState(e => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e)))
+      return t = E, n = e, void(n.x += n.xSpeed * window.devicePixelRatio, n.y += n.ySpeed * window.devicePixelRatio, n.opacity -= n.opacitySpeed, n.opacity <= 0 && m.setState(e => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e)))
     }), ! function(e, t, n) {
       var a;
-      let i = null !== (a = p.getState().lastSpawned[e.id]) && void 0 !== a ? a : 0,
+      let i = null !== (a = m.getState().lastSpawned[e.id]) && void 0 !== a ? a : 0,
         r = Date.now();
-      if (!(i + 100 > r) && e.state !== u.EmojiHoseState.STOP)(.8 >= Math.random() || i + 300 < r) && p.setState(a => {
+      if (!(i + 100 > r) && e.state !== u.EmojiHoseState.STOP)(.8 >= Math.random() || i + 300 < r) && m.setState(a => {
         var i, r, o;
         let u = null !== (i = a.particles[e.id]) && void 0 !== i ? i : {},
           d = l.random(1, 2);
@@ -86,12 +86,12 @@ function E(e) {
         }
         return a.particles[e.id] = u, a.lastSpawned[e.id] = Date.now(), a
       })
-    }(E, A, M), (0, c.renderAvatarCursorOutline)(C, A, M, R, f.OUTLINE_WIDTH), (0, c.renderAvatarCursor)(C, A, M, E.userId), m(E, e => (function(e, t, n) {
+    }(E, A, M), (0, c.renderAvatarCursorOutline)(S, A, M, R, f.OUTLINE_WIDTH), (0, c.renderAvatarCursor)(S, A, M, E.userId), p(E, e => (function(e, t, n) {
       if (null == t) return;
       let a = n.size * window.devicePixelRatio,
         l = n.x - a / 2 * window.devicePixelRatio,
         s = n.y - 1.2 * a * window.devicePixelRatio;
       e.globalAlpha = n.opacity, e.drawImage(t, a / 2 + l, a / 2 + s, a, a)
-    })(C, N, e)), E.lastUpdatedAt + f.EMOJI_HOSE_PING_DELAY < Date.now() && (0, r.stopRenderedEmojiHose)(v, E), E.state === u.EmojiHoseState.STOP && (a = E, !(Object.keys(null !== (i = p.getState().particles[a.id]) && void 0 !== i ? i : {}).length > 0))) x.push(E);
-  C.restore()
+    })(S, N, e)), E.lastUpdatedAt + f.EMOJI_HOSE_PING_DELAY < Date.now() && (0, r.stopRenderedEmojiHose)(v, E), E.state === u.EmojiHoseState.STOP && (a = E, !(Object.keys(null !== (i = m.getState().particles[a.id]) && void 0 !== i ? i : {}).length > 0))) x.push(E);
+  S.restore()
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var l = n("37983");
@@ -11,7 +11,7 @@ var a = n("414456"),
   i = n("587974"),
   r = n("467573");
 
-function o(e) {
+function u(e) {
   let {
     className: t
   } = e;

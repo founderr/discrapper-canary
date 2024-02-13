@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useThrottleDurationForChannel: function() {
-    return p
+    return m
   },
   useStageChannelParticipantsListThrottled: function() {
-    return m
+    return p
   }
 }), n("424973"), n("222007");
 var a, l, s = n("884691"),
@@ -17,7 +17,7 @@ var a, l, s = n("884691"),
   f = n("567469"),
   h = n("998716");
 
-function p(e) {
+function m(e) {
   let t = (0, f.useStageParticipantsCount)(e, h.StageChannelParticipantNamedIndex.AUDIENCE),
     [n, a] = s.useState(!1);
   return s.useEffect(() => {
@@ -25,7 +25,7 @@ function p(e) {
   }, [t]), n ? 5e3 : 0
 }
 
-function m(e, t, n) {
+function p(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     l = function(e, t, n) {
       let a = (0, r.useStateFromStores)([c.default], () => [e, c.default.getParticipantsVersion(e)], [e], d.isVersionEqual),
@@ -52,9 +52,9 @@ function m(e, t, n) {
         }), d(u, 1, !1), [s, r]
       }, [a, t, l, n, e])
     }(e, t, a),
-    [f, p] = l,
-    [m, E] = (0, o.useThrottledState)(l, n, [t[h.StageChannelParticipantNamedIndex.AUDIENCE]]),
-    C = [f[a ? 3 : 0], f[1], m[2]],
-    g = [p[a ? 3 : 0], p[1], E[2]];
-  return [C, g]
+    [f, m] = l,
+    [p, E] = (0, o.useThrottledState)(l, n, [t[h.StageChannelParticipantNamedIndex.AUDIENCE]]),
+    S = [f[a ? 3 : 0], f[1], p[2]],
+    g = [m[a ? 3 : 0], m[1], E[2]];
+  return [S, g]
 }(l = a || (a = {}))[l.SELECTED = 0] = "SELECTED", l[l.SPEAKER = 1] = "SPEAKER", l[l.AUDIENCE = 2] = "AUDIENCE", l[l.MEDIA = 3] = "MEDIA"

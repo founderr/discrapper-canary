@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("327037"),
   f = n("841098"),
   h = n("699209"),
-  p = n("795696"),
-  m = n("635792"),
+  m = n("795696"),
+  p = n("635792"),
   E = n("252063"),
-  C = n("724110"),
+  S = n("724110"),
   g = n("373469"),
-  S = n("42203"),
+  C = n("42203"),
   _ = n("957255"),
   I = n("824563"),
   T = n("102985"),
@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("217513"),
   O = n("893980"),
   y = n("58351"),
-  b = n("430312"),
-  P = n("789321"),
+  P = n("430312"),
+  b = n("789321"),
   D = n("627601"),
   U = n("10532"),
   w = n("915712"),
@@ -73,22 +73,22 @@ var a = n("37983"),
         channelId: n.id
       }),
       ef = !el && !s,
-      eh = (0, u.useStateFromStores)([x.default, S.default], () => {
+      eh = (0, u.useStateFromStores)([x.default, C.default], () => {
         var e;
-        return null != es ? S.default.getChannel(null === (e = x.default.getVoiceStateForUser(es.id)) || void 0 === e ? void 0 : e.channelId) : null
+        return null != es ? C.default.getChannel(null === (e = x.default.getVoiceStateForUser(es.id)) || void 0 === e ? void 0 : e.channelId) : null
       }),
       {
-        enableHangStatus: ep
+        enableHangStatus: em
       } = h.HangStatusExperiment.useExperiment({
         guildId: null == eh ? void 0 : eh.guild_id,
         location: "ActivityStatus"
       }),
       {
-        activity: em,
+        activity: ep,
         hangStatusActivity: eE,
-        customStatusActivity: eC,
+        customStatusActivity: eS,
         isApplicationStreaming: eg,
-        isMobile: eS,
+        isMobile: eC,
         status: e_
       } = (0, u.useStateFromStoresObject)([g.default, I.default, _.default], () => {
         let e = null != g.default.getAnyStreamForUser(es.id);
@@ -99,7 +99,7 @@ var a = n("37983"),
             } = t;
             return e ? n === q.ActivityTypes.PLAYING : n !== q.ActivityTypes.CUSTOM_STATUS && n !== q.ActivityTypes.HANG_STATUS
           }),
-          hangStatusActivity: ep && null != eh && _.default.can(q.Permissions.CONNECT, eh) ? I.default.findActivity(es.id, e => {
+          hangStatusActivity: em && null != eh && _.default.can(q.Permissions.CONNECT, eh) ? I.default.findActivity(es.id, e => {
             let {
               type: t
             } = e;
@@ -116,7 +116,7 @@ var a = n("37983"),
           status: ei ? null : I.default.getStatus(es.id)
         }
       }),
-      eI = null != em || null != eE || eg,
+      eI = null != ep || null != eE || eg,
       eT = null !== (t = N.default.getNickname(null, n.id, es)) && void 0 !== t ? t : A.default.getName(es),
       ev = (0, u.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
       [ex, eN, eA, eM, eR] = (0, u.useStateFromStoresArray)([M.default], () => [M.default.getMutualFriendsCount(es.id), M.default.getMutualFriends(es.id), M.default.getMutualGuilds(es.id), M.default.isFetchingProfile(es.id), M.default.isFetchingFriends(es.id)]),
@@ -131,13 +131,13 @@ var a = n("37983"),
       }),
       {
         enabled: ey
-      } = p.default.useExperiment({
+      } = m.default.useExperiment({
         location: "user DM panel"
       }, {
         autoTrackExposure: ef
       }),
-      eb = !es.bot && null != eA && eA.length > 0,
-      eP = !es.bot && null != ex && ex > 0,
+      eP = !es.bot && null != eA && eA.length > 0,
+      eb = !es.bot && null != ex && ex > 0,
       eD = (0, W.useShouldShowUserPopoutCollectiblesUpsell)({
         popoutUser: es,
         source: D.UserPopoutUpsellSource.PROFILE_PANEL
@@ -153,13 +153,13 @@ var a = n("37983"),
     }, [es]), l.useEffect(() => {
       null != er && ef && (0, O.trackProfilePanelViewed)({
         displayProfile: er,
-        isMobile: eS,
+        isMobile: eC,
         loadDurationMs: Date.now() - ea.current,
-        activity: em,
-        customStatusActivity: eC,
+        activity: ep,
+        customStatusActivity: eS,
         status: e_
       })
-    }, [er, eS, em, eC, e_, ef]);
+    }, [er, eC, ep, eS, e_, ef]);
     let ew = null == eA ? void 0 : eA.map(e => (0, a.jsx)(Z.default, {
         connection: e,
         user: es,
@@ -181,11 +181,11 @@ var a = n("37983"),
       className: ee.profilePanel,
       onMouseEnter: eB,
       onMouseLeave: eH,
-      children: (0, a.jsxs)(b.default, {
+      children: (0, a.jsxs)(P.default, {
         user: es,
         profileType: J.UserProfileTypes.PANEL,
         useDefaultClientTheme: !0,
-        children: [eD.shouldShow && (0, a.jsx)(P.default, {
+        children: [eD.shouldShow && (0, a.jsx)(b.default, {
           user: es,
           upsellSource: D.UserPopoutUpsellSource.PROFILE_PANEL,
           displayProfile: er,
@@ -198,13 +198,13 @@ var a = n("37983"),
             channel: n,
             animateAssets: et,
             forceShowPremiumBadge: et
-          }), (0, a.jsxs)(b.default.Inner, {
+          }), (0, a.jsxs)(P.default.Inner, {
             children: [(0, a.jsx)(H.default, {
               user: es,
               nickname: eT,
               pronouns: null == er ? void 0 : er.pronouns
             }), (0, a.jsx)(k.default, {
-              customStatusActivity: eC,
+              customStatusActivity: eS,
               animate: et
             }), (0, a.jsx)(U.default, {}), (0, a.jsx)(F.default, {
               bio: null == er ? void 0 : er.bio,
@@ -220,15 +220,15 @@ var a = n("37983"),
               setNote: !1,
               hideNote: !1
             })]
-          }), eO && eL ? (0, a.jsx)(b.default.Inner, {
+          }), eO && eL ? (0, a.jsx)(P.default.Inner, {
             children: (0, a.jsx)(G.default, {
               voiceGuild: ej.voiceGuild,
               voiceChannel: ej.voiceChannel,
               color: ee.appButtonColor
             })
-          }) : null, eI ? (0, a.jsx)(b.default.Inner, {
+          }) : null, eI ? (0, a.jsx)(P.default.Inner, {
             children: (0, a.jsx)(w.default, {
-              activity: null != em ? em : eE,
+              activity: null != ep ? ep : eE,
               user: es,
               channelId: n.id,
               analyticsParams: {
@@ -238,18 +238,18 @@ var a = n("37983"),
                 }
               }
             })
-          }) : null, (eb || eP) && (0, a.jsxs)(b.default.Inner, {
+          }) : null, (eP || eb) && (0, a.jsxs)(P.default.Inner, {
             className: ee.profilePanelConnections,
-            children: [eb ? (0, a.jsx)(z.default, {
+            children: [eP ? (0, a.jsx)(z.default, {
               className: ee.mutualGuildsList,
               header: $.default.Messages.MUTUAL_GUILDS_COUNT.format({
                 count: null == eA ? void 0 : eA.length
               }),
               isLoadingHeader: eM,
               children: ew
-            }) : null, eP ? (0, a.jsx)(z.default, {
+            }) : null, eb ? (0, a.jsx)(z.default, {
               className: i(ee.mutualFriendsList, {
-                [ee.mutualFriendsDivider]: eb
+                [ee.mutualFriendsDivider]: eP
               }),
               header: $.default.Messages.MUTUAL_FRIENDS_COUNT.format({
                 count: ex
@@ -262,7 +262,7 @@ var a = n("37983"),
               itemType: z.ListType.MutualFriendsList,
               children: eF
             }) : null]
-          }), ed && (0, a.jsx)(b.default.Inner, {
+          }), ed && (0, a.jsx)(P.default.Inner, {
             className: i(ee.profilePanelConnections, ee.appListThemedContainer),
             children: (0, a.jsxs)(z.default, {
               header: ek.length > 0 ? $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
@@ -279,7 +279,7 @@ var a = n("37983"),
                   children: $.default.Messages.PRIVATE_CHANNEL_ADD_APPS_INFO
                 }), (0, a.jsx)(d.Button, {
                   onClick: () => {
-                    (0, d.openModal)(e => (0, a.jsx)(C.default, {
+                    (0, d.openModal)(e => (0, a.jsx)(S.default, {
                       channelId: n.id,
                       ...e
                     }))
@@ -294,7 +294,7 @@ var a = n("37983"),
             })
           }), ey && (0, a.jsx)("div", {
             className: ee.giftButtonContainer,
-            children: (0, a.jsx)(m.default, {
+            children: (0, a.jsx)(p.default, {
               className: ee.giftButton,
               look: d.Button.Looks.FILLED,
               buttonText: $.default.Messages.GIFT_NITRO,

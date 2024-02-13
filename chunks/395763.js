@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return O
   },
   default: function() {
-    return b
+    return P
   }
 }), n("222007");
 var a, l, s = n("37983");
@@ -17,12 +17,12 @@ var i = n("414456"),
   c = n("191225"),
   f = n("706508"),
   h = n("501260"),
-  p = n("577261"),
-  m = n("698372"),
+  m = n("577261"),
+  p = n("698372"),
   E = n("969380"),
-  C = n("401207"),
+  S = n("401207"),
   g = n("141962"),
-  S = n("320817"),
+  C = n("320817"),
   _ = n("812204"),
   I = n("685665"),
   T = n("442939"),
@@ -68,19 +68,19 @@ function y(e) {
   var t, n, a, l;
   let {
     participants: i,
-    application: p,
-    currentEmbeddedApplication: m,
+    application: m,
+    currentEmbeddedApplication: p,
     channel: E,
-    width: C
+    width: S
   } = e;
-  let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
-  let [_] = (l = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, o.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === p.id)), {
+  let C = (a = S) > 400 ? 2 : a > 300 ? 1 : 0;
+  let [_] = (l = S) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, o.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
     analyticsLocations: L
-  } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), b = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), P = (0, h.useEmbeddedActivityJoinability)({
+  } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, h.useEmbeddedActivityJoinability)({
     userId: null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
     channelId: E.id,
-    application: p
-  }), D = P === h.EmbeddedActivityJoinability.CAN_JOIN, U = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
+    application: m
+  }), D = b === h.EmbeddedActivityJoinability.CAN_JOIN, U = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
   return (0, s.jsxs)("div", {
     className: j.splash,
     children: [(0, s.jsx)(O, {
@@ -90,30 +90,30 @@ function y(e) {
       users: T
     }), (0, s.jsx)(u.Text, {
       className: r(j.subheader, {
-        [j.small]: 0 === S,
-        [j.medium]: 1 === S
+        [j.small]: 0 === C,
+        [j.medium]: 1 === C
       }),
       variant: "text-sm/normal",
       children: T.length > 1 ? R.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
-        username: b,
+        username: P,
         count: T.length - 1
       }) : R.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
-        username: b
+        username: P
       })
     }), (0, s.jsx)(u.Text, {
       className: r(j.header, {
-        [j.small]: 0 === S,
-        [j.medium]: 1 === S
+        [j.small]: 0 === C,
+        [j.medium]: 1 === C
       }),
       variant: "text-sm/normal",
-      children: p.name
+      children: m.name
     }), (0, s.jsx)("div", {
       className: j.buttons,
       children: D ? (0, s.jsx)(u.Button, {
         onClick: function(e) {
           e.stopPropagation(), null != N && (0, f.default)({
             applicationId: N.applicationId,
-            currentEmbeddedApplication: m,
+            currentEmbeddedApplication: p,
             activityChannelId: E.id,
             locationObject: y.location,
             embeddedActivitiesManager: g.default,
@@ -129,7 +129,7 @@ function y(e) {
             case 0:
               return u.Button.Sizes.SMALL
           }
-        }(S),
+        }(C),
         className: j.button,
         color: u.Button.Colors.PRIMARY,
         children: R.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
@@ -138,7 +138,7 @@ function y(e) {
   })
 }
 
-function b(e) {
+function P(e) {
   let {
     participant: t,
     width: n,
@@ -149,7 +149,7 @@ function b(e) {
     AnalyticsLocationProvider: r
   } = (0, I.default)(_.default.ACTIVITY_TILE), {
     id: o
-  } = t, u = (0, p.default)(), d = (null == u ? void 0 : u.channelId) === i.id && u.applicationId === o, c = (0, m.default)(), [f] = (0, T.default)([o]), {
+  } = t, u = (0, m.default)(), d = (null == u ? void 0 : u.channelId) === i.id && u.applicationId === o, c = (0, p.default)(), [f] = (0, T.default)([o]), {
     url: h
   } = (0, E.default)({
     applicationId: o,
@@ -160,9 +160,9 @@ function b(e) {
     children: (0, s.jsx)("div", {
       className: j.container,
       children: (0, s.jsxs)(s.Fragment, {
-        children: [!a && d && (0, s.jsx)(C.default, {
+        children: [!a && d && (0, s.jsx)(S.default, {
           className: j.iframe,
-          embedId: (0, S.default)(i.id, o)
+          embedId: (0, C.default)(i.id, o)
         }), g && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
           className: j.splashImage,
           alt: f.name,

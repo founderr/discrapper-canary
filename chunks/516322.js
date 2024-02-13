@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var a = s("37983");
@@ -10,14 +10,14 @@ var n = s("414456"),
   i = s.n(n),
   r = s("956089"),
   l = s("782340"),
-  u = s("171684");
+  o = s("171684");
 
-function o(e) {
+function u(e) {
   let {
     className: t
   } = e;
   return (0, a.jsx)(r.TextBadge, {
-    className: i(u.tag, t),
+    className: i(o.tag, t),
     text: l.default.Messages.EARLY_ACCESS
   })
 }

@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("970728"),
   f = n("378438"),
   h = n("716241"),
-  p = n("161778"),
-  m = n("845579"),
+  m = n("161778"),
+  p = n("845579"),
   E = n("744983"),
-  C = n("18494"),
+  S = n("18494"),
   g = n("230559"),
-  S = n("659500"),
+  C = n("659500"),
   _ = n("767094"),
   I = n("565996"),
   T = n("535260"),
@@ -81,10 +81,10 @@ let M = e => {
 };
 class R extends l.PureComponent {
   componentDidMount() {
-    S.ComponentDispatch.subscribe(v.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
+    C.ComponentDispatch.subscribe(v.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
   }
   componentWillUnmount() {
-    S.ComponentDispatch.unsubscribe(v.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
+    C.ComponentDispatch.unsubscribe(v.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
   }
   componentDidUpdate(e) {
     let {
@@ -145,7 +145,7 @@ class R extends l.PureComponent {
         callback: n
       })
     }, this.selectChannel = e => {
-      e !== C.default.getChannelId() && c.default.transitionToInviteChannelSync(e)
+      e !== S.default.getChannelId() && c.default.transitionToInviteChannelSync(e)
     }, this.searchPrevious = () => {
       let {
         searchId: e,
@@ -273,12 +273,12 @@ function j(e) {
       searchType: E.default.getSearchType()
     }), [t]),
     ...(0, _.default)(t),
-    renderEmbeds: m.RenderEmbeds.useSetting(),
-    developerMode: m.DeveloperMode.useSetting(),
-    ...(0, u.useStateFromStoresObject)([p.default], () => {
+    renderEmbeds: p.RenderEmbeds.useSetting(),
+    developerMode: p.DeveloperMode.useSetting(),
+    ...(0, u.useStateFromStoresObject)([m.default], () => {
       let {
         theme: e
-      } = p.default;
+      } = m.default;
       return {
         theme: e
       }

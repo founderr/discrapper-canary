@@ -15,19 +15,19 @@ var a = n("37983"),
   c = n("664336"),
   f = n("659500"),
   h = n("34676"),
-  p = n("957825"),
-  m = n("49111"),
+  m = n("957825"),
+  p = n("49111"),
   E = n("782340"),
-  C = n("290236");
+  S = n("290236");
 
 function g(e) {
   let {
     channel: t
-  } = e, n = (0, i.useRedesignIconContext)().enabled, [g, S] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.isChannelMuted(t.getGuildId(), t.id), o.default.resolvedMessageNotifications(t)], [t]), [_, I] = l.useState(!1);
+  } = e, n = (0, i.useRedesignIconContext)().enabled, [g, C] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.isChannelMuted(t.getGuildId(), t.id), o.default.resolvedMessageNotifications(t)], [t]), [_, I] = l.useState(!1);
   l.useEffect(() => {
     let e = () => I(!0);
-    return f.ComponentDispatch.subscribe(m.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
-      f.ComponentDispatch.unsubscribe(m.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
+    return f.ComponentDispatch.subscribe(p.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
+      f.ComponentDispatch.unsubscribe(p.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
     }
   }, []);
   let T = e => {
@@ -43,7 +43,7 @@ function g(e) {
     align: "right",
     autoInvert: !1,
     onRequestClose: () => I(!1),
-    renderPopout: e => (0, a.jsx)(p.default, {
+    renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
       channel: t,
       navId: "channel-context",
@@ -57,8 +57,8 @@ function g(e) {
         ...e,
         onClick: T,
         tooltip: l ? null : v,
-        icon: g || S !== m.UserNotificationSettings.ALL_MESSAGES ? d.default : u.default,
-        foreground: g && !n ? C.strikethrough : null,
+        icon: g || C !== p.UserNotificationSettings.ALL_MESSAGES ? d.default : u.default,
+        foreground: g && !n ? S.strikethrough : null,
         "aria-label": v,
         selected: l
       })

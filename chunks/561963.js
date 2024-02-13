@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("446674"),
   f = n("77078"),
   h = n("272030"),
-  p = n("352674"),
-  m = n("206230"),
+  m = n("352674"),
+  p = n("206230"),
   E = n("95039"),
-  C = n("405645"),
+  S = n("405645"),
   g = n("256648"),
-  S = n("593752"),
+  C = n("593752"),
   _ = n("506885"),
   I = n("981601"),
   T = n("373469"),
@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("45029"),
   O = n("155207"),
   y = n("826684"),
-  b = n("483093"),
-  P = n("599110"),
+  P = n("483093"),
+  b = n("599110"),
   D = n("659500"),
   U = n("991170"),
   w = n("158998"),
@@ -53,10 +53,10 @@ let W = F.default.getEnableHardwareAcceleration(),
       sectionId: s,
       userId: i,
       guildOwnerId: r
-    } = e, o = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), m = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), C = (0, c.useStateFromStores)([x.default], () => {
+    } = e, o = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), S = (0, c.useStateFromStores)([x.default], () => {
       var e, n;
-      return (null == m ? void 0 : m.colorRoleId) != null ? null === (n = x.default.getGuild(t.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(m.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-    }, [t.guild_id, m]), g = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == g ? void 0 : g.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), b = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), P = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, u.useListItem)(i), F = (0, c.useStateFromStores)([S.default], () => S.default.canUserViewChannel(t.id, s, i)), H = (null == g ? void 0 : g.id) != null && g.id === r, G = l.useCallback(e => {
+      return (null == p ? void 0 : p.colorRoleId) != null ? null === (n = x.default.getGuild(t.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(p.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
+    }, [t.guild_id, p]), g = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == g ? void 0 : g.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), b = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, u.useListItem)(i), F = (0, c.useStateFromStores)([C.default], () => C.default.canUserViewChannel(t.id, s, i)), H = (null == g ? void 0 : g.id) != null && g.id === r, G = l.useCallback(e => {
       null != g && (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -77,7 +77,7 @@ let W = F.default.getEnableHardwareAcceleration(),
       D.ComponentDispatch.dispatchToLastSubscribed(V.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
-      }), p.default.startTyping(t.id)
+      }), m.default.startTyping(t.id)
     }, [g, t]), z = l.useCallback(e => {
       e.stopPropagation(), (0, E.openGuildBoostingMarketingModal)({
         guildId: t.guild_id,
@@ -88,7 +88,7 @@ let W = F.default.getEnableHardwareAcceleration(),
       })
     }, [t.guild_id]);
     if (null == g) return null;
-    let K = null == m ? void 0 : m.premiumSince;
+    let K = null == p ? void 0 : p.premiumSince;
     return (0, a.jsx)(f.Popout, {
       preload: () => (0, _.default)(g.id, g.getAvatarURL(t.guild_id, 80), {
         guildId: t.guild_id,
@@ -118,17 +118,17 @@ let W = F.default.getEnableHardwareAcceleration(),
           shouldAnimateStatus: W,
           user: g,
           currentUser: j,
-          nick: null == m ? void 0 : m.nick,
+          nick: null == p ? void 0 : p.nick,
           status: O,
-          activities: b,
-          colorString: null == m ? void 0 : m.colorString,
-          colorRoleName: C,
+          activities: P,
+          colorString: null == p ? void 0 : p.colorString,
+          colorRoleName: S,
           isTyping: o,
           channel: t,
           guildId: t.guild_id,
           isMobile: y,
           selected: l,
-          applicationStream: P,
+          applicationStream: b,
           premiumSince: null == K ? null : new Date(K),
           onClickPremiumGuildIcon: z,
           itemProps: U,
@@ -145,7 +145,7 @@ let W = F.default.getEnableHardwareAcceleration(),
       label: n,
       count: l,
       guildId: s
-    } = e, i = (0, C.useRoleIcon)({
+    } = e, i = (0, S.useRoleIcon)({
       roleId: t,
       guildId: s,
       size: 16
@@ -161,7 +161,7 @@ let W = F.default.getEnableHardwareAcceleration(),
         title: n,
         count: l
       }),
-      children: [null != i ? (0, a.jsx)(b.default, {
+      children: [null != i ? (0, a.jsx)(P.default, {
         className: G.roleIcon,
         ...i
       }) : null, (0, a.jsxs)("span", {
@@ -200,9 +200,9 @@ function X(e) {
     guild: n
   } = e, s = "members-".concat(t.id), r = (0, g.useThreadMemberListSections)(t.id, n), d = r.filter(e => e.userIds.length > 0).reverse()[0], {
     navigator: h,
-    listRef: p
+    listRef: m
   } = function(e, t) {
-    let n = (0, c.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled),
+    let n = (0, c.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled),
       a = l.useRef(null),
       s = l.useCallback((e, n) => {
         let l = a.current;
@@ -253,7 +253,7 @@ function X(e) {
     }
   }(s, Y), E = 0 === r.length || r.every(e => 0 === e.userIds.length);
   if (l.useEffect(() => {
-      P.default.track(V.AnalyticEvents.MEMBER_LIST_VIEWED, {
+      b.default.track(V.AnalyticEvents.MEMBER_LIST_VIEWED, {
         channel_id: t.id,
         channel_type: t.type,
         guild_id: t.guild_id
@@ -261,15 +261,15 @@ function X(e) {
     }, [t.guild_id, t.id, t.type]), E) return (0, a.jsx)(J, {
     channel: t
   });
-  let C = o.omit(h.containerProps, ["ref"]),
-    S = U.default.getGuildVisualOwnerId(n);
+  let S = o.omit(h.containerProps, ["ref"]),
+    C = U.default.getGuildVisualOwnerId(n);
   return (0, a.jsx)(u.ListNavigatorProvider, {
     navigator: h,
     children: (0, a.jsx)(f.FocusJumpSection, {
       children: e => (0, a.jsx)("div", {
         className: i(G.membersWrap, G.hiddenMembers),
         children: (0, a.jsx)(f.List, {
-          ref: p,
+          ref: m,
           className: G.members,
           paddingTop: 0,
           sectionHeight: 40,
@@ -297,7 +297,7 @@ function X(e) {
               channel: t,
               sectionId: i,
               userId: s[l],
-              guildOwnerId: S
+              guildOwnerId: C
             }, s[l])
           },
           footerHeight: e => r[e] === d && t.type === V.ChannelTypes.PRIVATE_THREAD ? 80 : 0,
@@ -308,7 +308,7 @@ function X(e) {
           innerTag: "ul",
           sections: r.map(e => e.userIds.length),
           fade: !0,
-          ...C,
+          ...S,
           ...e
         }, s)
       })

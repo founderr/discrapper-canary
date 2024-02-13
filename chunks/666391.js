@@ -20,12 +20,12 @@ function r(e) {
     analyticsObject: c,
     analyticsLocation: f,
     analyticsLocations: h,
-    analyticsSubscriptionType: p,
-    renderHeader: m,
+    analyticsSubscriptionType: m,
+    renderHeader: p,
     renderPurchaseConfirmation: E,
-    planGroup: C,
+    planGroup: S,
     reviewWarningMessage: g,
-    skuId: S
+    skuId: C
   } = e;
   (0, l.openModalLazy)(async () => {
     let {
@@ -43,7 +43,7 @@ function r(e) {
       return (0, a.jsx)(e, {
         activeSubscription: r,
         stepConfigs: i,
-        skuIDs: [S],
+        skuIDs: [C],
         children: (0, a.jsx)(s.GiftContextProvider, {
           children: (0, a.jsx)(l, {
             ...I,
@@ -54,11 +54,11 @@ function r(e) {
             analyticsLocations: h,
             analyticsObject: c,
             analyticsLocation: f,
-            analyticsSubscriptionType: p,
-            skuId: S,
-            renderHeader: m,
+            analyticsSubscriptionType: m,
+            skuId: C,
+            renderHeader: p,
             renderPurchaseConfirmation: E,
-            planGroup: C,
+            planGroup: S,
             trialId: o,
             trialFooterMessageOverride: u,
             reviewWarningMessage: g

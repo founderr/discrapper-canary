@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007"), n("808653");
 var a = n("917351"),
@@ -18,7 +18,7 @@ let d = {},
 function h() {
   d = {}, c = {}
 }
-class p extends s.default.Store {
+class m extends s.default.Store {
   getPreviewURL(e, t, n) {
     let a = (0, o.encodeStreamKey)({
         streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
@@ -49,8 +49,8 @@ class p extends s.default.Store {
     return f.has(a)
   }
 }
-p.displayName = "ApplicationStreamPreviewStore";
-var m = new p(i.default, {
+m.displayName = "ApplicationStreamPreviewStore";
+var p = new m(i.default, {
   CONNECTION_OPEN: h,
   LOGOUT: h,
   STREAM_PREVIEW_FETCH_START: function(e) {

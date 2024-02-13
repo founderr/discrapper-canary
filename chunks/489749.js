@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return u
+    return o
   }
 }), s("222007");
 var a = s("37983"),
@@ -44,4 +44,4 @@ class l extends n.Component {
     }
   }
 }
-var u = l
+var o = l

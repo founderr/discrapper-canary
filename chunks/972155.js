@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("117582"),
   f = n("943349"),
   h = n("428958"),
-  p = n("191145"),
-  m = n("393171"),
+  m = n("191145"),
+  p = n("393171"),
   E = n("242757"),
-  C = n("305961"),
+  S = n("305961"),
   g = n("957255"),
-  S = n("466079"),
+  C = n("466079"),
   _ = n("444657"),
   I = n("679243"),
   T = n("832897"),
@@ -39,9 +39,9 @@ function A(e) {
     inCall: L,
     totalNumberOfParticipants: O,
     paused: y = !1
-  } = e, b = (0, o.useAppContext)(), P = b === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(R.guild_id), [R.guild_id]), {
+  } = e, P = (0, o.useAppContext)(), b = P === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(R.guild_id), [R.guild_id]), {
     dismissedActivityEntryPointTileChannel: U
-  } = (0, T.useChannelCallVideoGridStore)(), w = (0, i.useStateFromStores)([p.default], () => p.default.getUserParticipantCount(R.id), [R]), F = l.useCallback(() => {
+  } = (0, T.useChannelCallVideoGridStore)(), w = (0, i.useStateFromStores)([m.default], () => m.default.getUserParticipantCount(R.id), [R]), F = l.useCallback(() => {
     T.useChannelCallVideoGridStore.setState({
       dismissedActivityEntryPointTileChannel: R.id
     })
@@ -65,7 +65,7 @@ function A(e) {
     location: "8711e9_2"
   });
   let G = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(R.id).length <= 0),
-    W = (0, m.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
+    W = (0, p.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
     Y = (0, f.useEmbeddedActivityLaunchability)(R.id),
     z = Y !== f.EmbeddedActivityLaunchability.CAN_LAUNCH,
     K = null != U && U === R.id,
@@ -86,7 +86,7 @@ function A(e) {
       onContextMenu: M,
       inCall: L,
       width: t,
-      inPopout: P
+      inPopout: b
     }, e.id));
   (0, h.default)({
     type: s.ImpressionTypes.VIEW,
@@ -103,26 +103,26 @@ function A(e) {
     channel: R,
     guild: D,
     width: e,
-    inPopout: P,
+    inPopout: b,
     handleClose: F,
     userParticipantCount: w
   })) : (H !== c.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== w) && (H !== c.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(w >= 2)) || !G || z || W || K ? B && 1 === w && k && ([c.VcTileActivityExperimentType.ONE_OR_TWO_USERS, c.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(H) && G && !z ? X.push(e => (0, a.jsx)(_.ActivityEntryPointTile, {
     channel: R,
     guild: D,
     width: e,
-    inPopout: P,
+    inPopout: b,
     handleClose: F,
     userParticipantCount: w
   })) : X.push(e => (0, a.jsx)(v.default, {
     width: e,
     channel: R,
     guild: D,
-    inPopout: P
+    inPopout: b
   }))) : X.push(e => (0, a.jsx)(_.ActivityEntryPointTile, {
     channel: R,
     guild: D,
     width: e,
-    inPopout: P,
+    inPopout: b,
     handleClose: F,
     userParticipantCount: w
   })));
@@ -130,7 +130,7 @@ function A(e) {
     var n, a;
     return null !== (a = null === (n = t[e]) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : "empty-tile"
   }, [t]);
-  return (0, a.jsx)(S.default, {
+  return (0, a.jsx)(C.default, {
     className: j,
     keyExtractor: J,
     paddingTop: 64,

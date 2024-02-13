@@ -53,7 +53,7 @@ let c = (e, t, n) => {
     }, !0, 2 + 2 / 3));
     let c = o.activitySize + o.padding + o.imagePadding;
     s.setColor("dark" === d ? "white" : "rgb(6, 6, 7)"), s.setFont({
-      size: 14,
+      size: 16,
       family: '"gg sans", sans-serif',
       weight: 700
     }), s.drawText("".concat(t.name), {

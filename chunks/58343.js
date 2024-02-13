@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("913144"),
   f = n("731898"),
   h = n("244201"),
-  p = n("191145"),
-  m = n("161306"),
+  m = n("191145"),
+  p = n("161306"),
   E = n("412090"),
-  C = n("452027"),
+  S = n("452027"),
   g = n("383294"),
-  S = n("292687"),
+  C = n("292687"),
   _ = n("393414"),
   I = n("486030"),
   T = n("115531"),
@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("957255"),
   O = n("18494"),
   y = n("773336"),
-  b = n("439932"),
-  P = n("50885"),
+  P = n("439932"),
+  b = n("50885"),
   D = n("716214"),
   U = n("567469"),
   w = n("998716"),
@@ -73,19 +73,19 @@ function en(e) {
     popoutWindow: i,
     popoutWindowAlwaysOnTop: r,
     selectedParticipant: u
-  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([O.default], () => O.default.getMostRecentSelectedTextChannelId(d), [d]), f = M.default.getId(), h = (0, o.useStateFromStores)([p.default], () => p.default.isFullscreenInContext(n)), E = !h && (!y.isPlatformEmbedded || y.isPlatformEmbedded && P.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS)), C = null != u && u.type !== X.ParticipantTypes.ACTIVITY && u.user.id !== f, g = l.useMemo(() => {
+  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([O.default], () => O.default.getMostRecentSelectedTextChannelId(d), [d]), f = M.default.getId(), h = (0, o.useStateFromStores)([m.default], () => m.default.isFullscreenInContext(n)), E = !h && (!y.isPlatformEmbedded || y.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS)), S = null != u && u.type !== X.ParticipantTypes.ACTIVITY && u.user.id !== f, g = l.useMemo(() => {
     var e;
     return null !== (e = null == i ? void 0 : i.window) && void 0 !== e ? e : window
-  }, [i]), S = (0, z.default)({
+  }, [i]), C = (0, z.default)({
     channel: t,
     appContext: n,
     popoutOpen: s,
     popoutWindow: i,
     currentWindow: g
-  }), _ = n === Z.AppContext.POPOUT && y.isPlatformEmbedded && P.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS);
+  }), _ = n === Z.AppContext.POPOUT && y.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS);
   return (0, a.jsxs)(a.Fragment, {
-    children: [C ? (0, a.jsx)(A.default, {
-      context: (0, m.default)(u.type),
+    children: [S ? (0, a.jsx)(A.default, {
+      context: (0, p.default)(u.type),
       userId: u.user.id,
       currentWindow: g,
       sliderClassName: q.volumeSlider
@@ -98,7 +98,7 @@ function en(e) {
       popoutOpen: s,
       onOpenPopout: $(t, c),
       onClosePopout: ee
-    }) : null, S]
+    }) : null, C]
   })
 }
 
@@ -122,14 +122,14 @@ function el(e) {
       popoutWindow: d,
       popoutWindowAlwaysOnTop: c,
       popoutOpen: f,
-      chatOpen: m
+      chatOpen: p
     } = e,
-    C = (0, h.useAppContext)(),
+    S = (0, h.useAppContext)(),
     g = (0, o.useStateFromStores)([O.default], () => O.default.getVoiceChannelId() === n.id, [n.id]),
-    S = (0, o.useStateFromStores)([L.default], () => L.default.can(Z.Permissions.CONNECT, n)),
+    C = (0, o.useStateFromStores)([L.default], () => L.default.can(Z.Permissions.CONNECT, n)),
     _ = (0, U.useStageParticipants)(n.id, w.StageChannelParticipantNamedIndex.SPEAKER),
-    I = (0, o.useStateFromStores)([p.default], () => p.default.getSelectedParticipant(n.id)),
-    x = f && C !== Z.AppContext.POPOUT,
+    I = (0, o.useStateFromStores)([m.default], () => m.default.getSelectedParticipant(n.id)),
+    x = f && S !== Z.AppContext.POPOUT,
     [N, A] = l.useState(0),
     {
       isOnStartStageScreen: M
@@ -137,7 +137,7 @@ function el(e) {
   (0, k.useUpdateIsOnStartStageScreenEffect)(n);
   let j = (0, o.useStateFromStores)([R.default], () => R.default.getToastsEnabled(n.id)),
     y = (0, K.default)(n),
-    b = y ? null != I ? "84px" : "124px" : null != I ? "0px" : "48px";
+    P = y ? null != I ? "84px" : "124px" : null != I ? "0px" : "48px";
   return t = M ? (0, a.jsx)(Y.default, {
     channel: n,
     onContinueClick: () => {
@@ -156,11 +156,11 @@ function el(e) {
   }) : (0, a.jsx)(B.default, {
     participants: _,
     channel: n,
-    hasConnectPermission: S
+    hasConnectPermission: C
   }), (0, a.jsx)(v.default, {
     style: {
-      height: "calc(100% - ".concat(b, ")"),
-      paddingTop: b
+      height: "calc(100% - ".concat(P, ")"),
+      paddingTop: P
     },
     disableGradients: 0 === N && v.DisableGradient.TOP,
     renderBottomLeft: () => (0, a.jsx)(ea, {
@@ -172,19 +172,19 @@ function el(e) {
     }) : null,
     renderBottomRight: () => g ? (0, a.jsx)(en, {
       channel: n,
-      appContext: C,
+      appContext: S,
       popoutOpen: f,
       popoutWindow: d,
       popoutWindowAlwaysOnTop: c,
       selectedParticipant: I
     }) : null,
     renderHeader: () => (0, a.jsx)(H.default, {
-      inPopout: C === Z.AppContext.POPOUT,
+      inPopout: S === Z.AppContext.POPOUT,
       toggleRequestToSpeakSidebar: s,
       showRequestToSpeakSidebar: u,
       channel: n
     }),
-    renderChatToasts: () => !j || m || x ? null : (0, a.jsx)(E.default, {
+    renderChatToasts: () => !j || p || x ? null : (0, a.jsx)(E.default, {
       children: (0, a.jsx)(T.default, {
         className: i(q.chatToasts, {
           [q.rtsSidebarOpen]: u
@@ -210,12 +210,12 @@ function es(e) {
   } = e, [s, r] = l.useState(!1), c = l.useCallback(() => {
     r(!s)
   }, [s, r]), {
-    popoutWindow: m,
+    popoutWindow: p,
     popoutWindowAlwaysOnTop: g
-  } = (0, o.useStateFromStoresObject)([S.default], () => ({
-    popoutWindow: S.default.getWindow(Z.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
-    popoutWindowAlwaysOnTop: S.default.getIsAlwaysOnTop(Z.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
-  })), _ = null != m && !m.closed, I = (0, h.useAppContext)(), T = (0, o.useStateFromStores)([p.default], () => p.default.getChatOpen(t.id), [t.id]), v = (0, o.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id), [t.guild_id]);
+  } = (0, o.useStateFromStoresObject)([C.default], () => ({
+    popoutWindow: C.default.getWindow(Z.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
+    popoutWindowAlwaysOnTop: C.default.getIsAlwaysOnTop(Z.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
+  })), _ = null != p && !p.closed, I = (0, h.useAppContext)(), T = (0, o.useStateFromStores)([m.default], () => m.default.getChatOpen(t.id), [t.id]), v = (0, o.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id), [t.guild_id]);
   l.useEffect(() => {
     null == u.default.get(Q) && ((0, d.openModalLazy)(async () => {
       let {
@@ -235,7 +235,7 @@ function es(e) {
       className: q.container,
       ref: N,
       children: [(0, a.jsx)("div", {
-        className: i(q.callContainer, (0, b.getThemeClass)(Z.ThemeTypes.DARK), {
+        className: i(q.callContainer, (0, P.getThemeClass)(Z.ThemeTypes.DARK), {
           [q.sidebarVisible]: s,
           [q.sidebarOrChatVisible]: s || T
         }),
@@ -243,7 +243,7 @@ function es(e) {
           channel: t,
           toggleRequestToSpeakSidebar: c,
           showRequestToSpeakSidebar: s,
-          popoutWindow: m,
+          popoutWindow: p,
           popoutWindowAlwaysOnTop: g,
           popoutOpen: _,
           chatOpen: T
@@ -254,7 +254,7 @@ function es(e) {
         chatOpen: T
       }) : null, (0, a.jsx)("div", {
         className: q.channelChatWrapper,
-        children: T && (!_ || _ && I === Z.AppContext.POPOUT) && (0, a.jsx)(C.default, {
+        children: T && (!_ || _ && I === Z.AppContext.POPOUT) && (0, a.jsx)(S.default, {
           channel: t,
           guild: v,
           maxWidth: x - 550

@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("614175"),
   f = n("903178"),
   h = n("296998"),
-  p = n("926128"),
-  m = n("191225"),
+  m = n("926128"),
+  p = n("191225"),
   E = n("426631"),
-  C = n("380691"),
+  S = n("380691"),
   g = n("943349"),
-  S = n("702173"),
+  C = n("702173"),
   _ = n("801852"),
   I = n("10524"),
   T = n("478272"),
@@ -41,12 +41,12 @@ function L(e) {
     location: "7152d0_1"
   }, {
     autoTrackExposure: !0
-  }), L = (0, s.useStateFromStores)([m.default], () => m.default.isLaunchingActivity()), O = (0, g.useEmbeddedActivityLaunchability)(t.id), y = (0, g.getEmbeddedActivityLaunchabilityLabel)(O), b = O !== g.EmbeddedActivityLaunchability.CAN_LAUNCH || L, {
-    isHovered: P,
+  }), L = (0, s.useStateFromStores)([p.default], () => p.default.isLaunchingActivity()), O = (0, g.useEmbeddedActivityLaunchability)(t.id), y = (0, g.getEmbeddedActivityLaunchabilityLabel)(O), P = O !== g.EmbeddedActivityLaunchability.CAN_LAUNCH || L, {
+    isHovered: b,
     setIsHovered: D,
     onMouseEnter: U,
     onMouseLeave: w
-  } = (0, N.default)(200, 300), F = (0, C.useShowActivityIndicator)(), {
+  } = (0, N.default)(200, 300), F = (0, S.useShowActivityIndicator)(), {
     enabled: k
   } = c.ActivitiesGameNightExperiment.useExperiment({
     location: "7152d0_2"
@@ -54,7 +54,7 @@ function L(e) {
     autoTrackExposure: !1
   }), V = F && !k, B = (0, E.default)({
     channelId: t.id
-  }), H = !b && n, G = l.useCallback(e => {
+  }), H = !P && n, G = l.useCallback(e => {
     "focus" !== e.type && U()
   }, [U]), W = (0, o.useAnalyticsContext)(), Y = (0, u.useAppContext)(), z = Y === M.AppContext.POPOUT, {
     analyticsLocations: K
@@ -67,13 +67,13 @@ function L(e) {
       analyticsLocations: K
     })
   }, [W.location, K, t, z]), X = [];
-  n && !b && X.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES);
-  let J = (0, S.default)(t.id);
-  J && !b && X.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE);
+  n && !P && X.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES);
+  let J = (0, C.default)(t.id);
+  J && !P && X.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE);
   let q = (0, f.useIsWatchTogetherPromoEnabled)(),
     Q = (0, h.useIsWatchTogetherPromoWeek1SparklesEnabled)(),
-    $ = (0, p.useIsWatchTogetherPromoWeek2SparklesEnabled)();
-  return q && Q && !b && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES), q && $ && !b && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES), (0, a.jsx)(x.default, {
+    $ = (0, m.useIsWatchTogetherPromoWeek2SparklesEnabled)();
+  return q && Q && !P && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES), q && $ && !P && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES), (0, a.jsx)(x.default, {
     contentTypes: X,
     children: e => {
       let {
@@ -82,7 +82,7 @@ function L(e) {
       } = e;
       return (0, a.jsx)(r.Popout, {
         fixed: !0,
-        shouldShow: P,
+        shouldShow: b,
         animationPosition: "bottom",
         position: "bottom",
         align: "center",
@@ -101,16 +101,16 @@ function L(e) {
             closePopout: n,
             onMouseEnter: U,
             onMouseLeave: w,
-            isHovered: P,
+            isHovered: b,
             onClick: () => l(R.ContentDismissActionType.UNKNOWN)
           }) : (0, a.jsx)(a.Fragment, {})
         },
         children: () => (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(A.default, {
-            disabled: b,
+            disabled: P,
             "aria-label": y,
             label: H ? void 0 : y,
-            isActivityActive: B || P,
+            isActivityActive: B || b,
             className: j.controlButton,
             onClick: () => {
               Z(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(R.ContentDismissActionType.UNKNOWN)

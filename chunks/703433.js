@@ -16,12 +16,12 @@ var l = n("414456"),
   c = n("715072"),
   f = n("77078"),
   h = n("917397"),
-  p = n("290491"),
-  m = n("305961"),
+  m = n("290491"),
+  p = n("305961"),
   E = n("18494"),
-  C = n("124969"),
+  S = n("124969"),
   g = n("153769"),
-  S = n("994906"),
+  C = n("994906"),
   _ = n("136281"),
   I = n("782340"),
   T = n("63893");
@@ -29,7 +29,7 @@ var l = n("414456"),
 function v(e) {
   let {
     member: t
-  } = e, n = (0, i.default)([m.default], () => m.default.getGuild(t.guildId), [t.guildId]), l = (0, h.useUserAccountVerified)(t.userId), v = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), x = (0, h.useUserAccountAgeDate)(t.userId), N = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
+  } = e, n = (0, i.default)([p.default], () => p.default.getGuild(t.guildId), [t.guildId]), l = (0, h.useUserAccountVerified)(t.userId), v = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), x = (0, h.useUserAccountAgeDate)(t.userId), N = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
   return null == n ? null : (0, a.jsx)("div", {
     className: s(T.safetySignalsMainContainer),
     children: (0, a.jsx)(f.FormItem, {
@@ -92,9 +92,9 @@ function v(e) {
             children: x
           })
         }), (0, a.jsx)(_.UserModInfoItem, {
-          icon: (0, a.jsx)(C.GuildIcon, {
+          icon: (0, a.jsx)(S.GuildIcon, {
             guild: n,
-            size: C.GuildIcon.Sizes.SMOL,
+            size: S.GuildIcon.Sizes.SMOL,
             animate: !1,
             className: T.guildIcon
           }),
@@ -121,13 +121,13 @@ function v(e) {
           description: (0, a.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: (0, a.jsx)(p.default, {
+            children: (0, a.jsx)(m.default, {
               userId: t.userId,
               guildId: t.guildId,
               showInviterAsFooter: !0,
               onClickInviter: e => {
                 let n = E.default.getChannelId();
-                (0, S.openGuildMemberModViewSidebar)(t.guildId, e.id, null != n ? n : "")
+                (0, C.openGuildMemberModViewSidebar)(t.guildId, e.id, null != n ? n : "")
               }
             })
           })

@@ -13,12 +13,12 @@ var a, l, s = n("37983"),
   c = n("669491"),
   f = n("77078"),
   h = n("697218"),
-  p = n("45029"),
-  m = n("216422"),
+  m = n("45029"),
+  p = n("216422"),
   E = n("719923"),
-  C = n("439932"),
+  S = n("439932"),
   g = n("15264"),
-  S = n("607573"),
+  C = n("607573"),
   _ = n("817039"),
   I = n("687292"),
   T = n("141962"),
@@ -43,8 +43,8 @@ function R(e) {
     onActivityItemSelected: L,
     imageBackground: O,
     activityAction: y,
-    labelType: b
-  } = (0, S.default)({
+    labelType: P
+  } = (0, C.default)({
     channel: n,
     activityItem: a,
     guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
@@ -52,7 +52,7 @@ function R(e) {
     onActivityItemSelected: l,
     embeddedActivitiesManager: T.default,
     assetNames: A
-  }), [P, D] = i.useState(!1), U = i.useCallback(() => {
+  }), [b, D] = i.useState(!1), U = i.useCallback(() => {
     D(!0)
   }, [D]), w = i.useCallback(() => {
     D(!1)
@@ -62,14 +62,14 @@ function R(e) {
       className: N.badgeContainer,
       children: (0, s.jsx)(I.default, {
         name: a.application.name,
-        labelType: b
+        labelType: P
       })
     })
-  }), [a.application.name, b]), V = i.useMemo(() => (0, g.default)(a.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
+  }), [a.application.name, P]), V = i.useMemo(() => (0, g.default)(a.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
     className: N.iconOuterContainer,
     children: (0, s.jsx)("div", {
       className: o(N.iconInnerContainer, N.nitroIconContainer),
-      children: (0, s.jsx)(m.default, {
+      children: (0, s.jsx)(p.default, {
         width: 16,
         height: 16,
         color: F.hex(),
@@ -80,14 +80,14 @@ function R(e) {
     className: o(N.iconOuterContainer, N.lockBackground),
     children: (0, s.jsx)("div", {
       className: o(N.iconInnerContainer, N.lockIconContainer),
-      children: (0, s.jsx)(p.default, {
+      children: (0, s.jsx)(m.default, {
         color: "var(--interactive-active)",
         className: N.lock
       })
     })
   }), [a.activity, F, j]), B = i.useMemo(() => {
     switch (y) {
-      case S.ActivityAction.JOIN:
+      case C.ActivityAction.JOIN:
         return (0, s.jsx)("div", {
           className: N.activityAction,
           children: (0, s.jsx)("div", {
@@ -99,7 +99,7 @@ function R(e) {
             })
           })
         });
-      case S.ActivityAction.LEAVE:
+      case C.ActivityAction.LEAVE:
         return (0, s.jsx)("div", {
           className: N.activityAction,
           children: (0, s.jsx)("div", {
@@ -111,7 +111,7 @@ function R(e) {
             })
           })
         });
-      case S.ActivityAction.START:
+      case C.ActivityAction.START:
       default:
         return (0, s.jsx)(s.Fragment, {})
     }
@@ -132,14 +132,14 @@ function R(e) {
         value: 0
       },
       to: {
-        value: P ? 1 : 0
+        value: b ? 1 : 0
       },
       children: e => {
         let {
           value: t
         } = e;
         return (0, s.jsx)(u.animated.div, {
-          className: o((0, C.getThemeClass)(v.ThemeTypes.DARK), N.activityItem, R, {
+          className: o((0, S.getThemeClass)(v.ThemeTypes.DARK), N.activityItem, R, {
             [N.activityItem_13_11]: 0 === r,
             [N.activityItem_16_9]: 1 === r
           }),

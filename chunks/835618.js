@@ -10,8 +10,8 @@ var n = s("414456"),
   i = s.n(n),
   r = s("77078"),
   l = s("685665"),
-  u = s("53253"),
-  o = s("635956"),
+  o = s("53253"),
+  u = s("635956"),
   d = s("782340"),
   c = s("903610"),
   _ = s("35257"),
@@ -25,13 +25,13 @@ var n = s("414456"),
       analyticsLocation: T
     } = e, {
       AnalyticsLocationProvider: f
-    } = (0, l.default)(I), S = (0, u.useIsSeasonalGiftingActive)(), {
+    } = (0, l.default)(I), S = (0, o.useIsSeasonalGiftingActive)(), {
       enabled: R
-    } = u.SeasonalGiftingMarketingExperiment.useExperiment({
+    } = o.SeasonalGiftingMarketingExperiment.useExperiment({
       location: "GiftNitro"
     }, {
       autoTrackExposure: S
-    }), A = R && S;
+    }), m = R && S;
     return (0, a.jsx)(f, {
       children: (0, a.jsxs)("div", {
         className: i(c.container, t),
@@ -41,11 +41,11 @@ var n = s("414456"),
           children: [(0, a.jsx)(r.Heading, {
             variant: "heading-lg/extrabold",
             className: c.heading,
-            children: A ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.default.Messages.GIFT_NITRO
+            children: m ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.default.Messages.GIFT_NITRO
           }), (0, a.jsx)(r.Text, {
             variant: "text-sm/medium",
-            children: A ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
-          }), (0, a.jsx)(o.default, {
+            children: m ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+          }), (0, a.jsx)(u.default, {
             isGift: !0,
             className: c.giftCardButton,
             look: r.Button.Looks.OUTLINED,
@@ -55,7 +55,7 @@ var n = s("414456"),
             premiumModalAnalyticsLocation: T
           })]
         }), (0, a.jsx)("img", {
-          src: A ? E : _,
+          src: m ? E : _,
           className: i(c.bannerImage, s),
           alt: "gift nitro banner"
         })]

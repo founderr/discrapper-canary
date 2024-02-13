@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   shouldShowCallscopeUI: function() {
-    return C
+    return S
   },
   setCallscopeIssue: function() {
     return g
@@ -21,7 +21,7 @@ var a = n("811022"),
   c = n("697218"),
   f = n("773336"),
   h = n("49111");
-class p {
+class m {
   async getDescription() {
     let e = {
         callStartedAt: this.callStartedAt.toISOString(),
@@ -38,7 +38,7 @@ class p {
     return e
   }
   shouldShowUI() {
-    return m.isInCallscopeCall
+    return p.isInCallscopeCall
   }
   async submit() {
     if (!this.hasIssues) return;
@@ -71,23 +71,23 @@ class p {
     this.isInCallscopeCall = !1, this.rtcConnections = new Set, this.callStartedAt = new Date, this.blindIds = [], this.hasIssues = !1, this.issues = []
   }
 }
-let m = new p;
+let p = new m;
 
 function E() {
-  return m
+  return p
 }
 
-function C() {
-  return m.shouldShowUI()
+function S() {
+  return p.shouldShowUI()
 }
 
 function g(e) {
-  m.issues.push({
+  p.issues.push({
     date: new Date,
     description: e
-  }), m.hasIssues = !0
+  }), p.hasIssues = !0
 }
-let S = new a.default("CallscopeStore");
+let C = new a.default("CallscopeStore");
 class _ {
   static async shouldUpload() {
     var e, t;
@@ -98,10 +98,10 @@ class _ {
   static async handleDisconnected(e) {
     if (e.state !== h.RTCConnectionStates.DISCONNECTED || null == e.channelId || null == e.rtcLogEphemeralKey) return;
     if (!await _.shouldUpload()) {
-      S.info("CallscopeManager: USAGE_STATISTICS is disabled or is not desktop. Not uploading.");
+      C.info("CallscopeManager: USAGE_STATISTICS is disabled or is not desktop. Not uploading.");
       return
     }
-    S.info("CallscopeManager: Uploading rtc logs in ".concat(1e4, " ms..."));
+    C.info("CallscopeManager: Uploading rtc logs in ".concat(1e4, " ms..."));
     let t = d.default.getId();
     await (0, s.sleep)(1e4), await (0, u.uploadCallscopeLogs)(e.channelId, t, e.rtcLogEphemeralKey, e.context)
   }
@@ -113,19 +113,19 @@ I.displayName = "CallscopeStore", new I(i.default, __OVERLAY__ ? {} : {
     let n = (null !== (t = e.channelId) && void 0 !== t ? t : "unknown") + e.context;
     switch (e.state) {
       case h.RTCConnectionStates.DISCONNECTED:
-        m.rtcConnections.delete(n), 0 === m.rtcConnections.size ? ((async t => {
+        p.rtcConnections.delete(n), 0 === p.rtcConnections.size ? ((async t => {
           await _.handleDisconnected(e), await t.submit()
-        })(m), m = new p) : _.handleDisconnected(e);
+        })(p), p = new m) : _.handleDisconnected(e);
         break;
       case h.RTCConnectionStates.RTC_CONNECTED:
         if (null != e.rtcLogEphemeralKey) {
           let t = d.default.getId(),
             a = (0, u.getBlindIds)(e.channelId, t, e.rtcLogEphemeralKey);
-          0 === m.rtcConnections.size && (m.callStartedAt = new Date), m.isInCallscopeCall = !0, m.blindIds.push({
+          0 === p.rtcConnections.size && (p.callStartedAt = new Date), p.isInCallscopeCall = !0, p.blindIds.push({
             date: new Date,
             context: e.context,
             ids: a
-          }), m.rtcConnections.add(n)
+          }), p.rtcConnections.add(n)
         }
     }
   }

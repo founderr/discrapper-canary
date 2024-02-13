@@ -23,24 +23,24 @@ function d(e) {
     handleScroll: c,
     handleSetScrollerRef: f,
     handleSetContainerRef: h
-  } = (0, o.default)(t), p = (0, a.jsx)("div", {
+  } = (0, o.default)(t), m = (0, a.jsx)("div", {
     className: u.tierPreviewsContainer,
     children: (0, a.jsx)("div", {
       className: s(u.tierPreviews, l),
       children: n
     })
   });
-  return !i.isMobile && (p = (0, a.jsxs)(a.Fragment, {
+  return !i.isMobile && (m = (0, a.jsxs)(a.Fragment, {
     children: [d, (0, a.jsx)(r.AdvancedScroller, {
       className: u.scroller,
       orientation: "horizontal",
       ref: f,
       onScroll: c,
-      children: p
+      children: m
     })]
   })), (0, a.jsx)("div", {
     className: u.carouselMaxWidth,
     ref: h,
-    children: p
+    children: m
   })
 }

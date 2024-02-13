@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
 var a = n("37983"),
@@ -16,42 +16,42 @@ var a = n("37983"),
   f = n("154891"),
   h = n("522253");
 
-function p(e) {
+function m(e) {
   let {
     focused: t,
     channelId: n,
     streamerId: s,
     stream: d
-  } = e, p = l.useRef(null), m = (0, r.default)([u.default], () => u.default.getCurrentUser());
-  i(null != m, "user cannot be null"), (0, f.default)(p, m, s, n);
+  } = e, m = l.useRef(null), p = (0, r.default)([u.default], () => u.default.getCurrentUser());
+  i(null != p, "user cannot be null"), (0, f.default)(m, p, s, n);
   let {
     handleClick: E,
-    handleMouseDown: C,
+    handleMouseDown: S,
     handleMouseEnter: g,
-    handleMouseMove: S,
+    handleMouseMove: C,
     handleMouseUp: _
   } = (0, c.default)({
-    user: m,
+    user: p,
     channelId: n,
     streamerId: s,
     stream: d,
     focused: t,
-    canvas: p.current
+    canvas: m.current
   });
   return (0, a.jsx)(o.default, {
     children: (0, a.jsx)("canvas", {
-      ref: p,
+      ref: m,
       onClick: E,
-      onMouseDown: C,
+      onMouseDown: S,
       onMouseEnter: g,
-      onMouseMove: S,
+      onMouseMove: C,
       onMouseUp: _,
       className: h.sharedCanvas
     })
   })
 }
 
-function m(e) {
+function p(e) {
   let {
     isSharedCanvasEnabled: t
   } = d.default.useExperiment({
@@ -60,7 +60,7 @@ function m(e) {
   }, {
     autoTrackExposure: !0
   });
-  return !t || e.hasScreenMessage ? null : (0, a.jsx)(p, {
+  return !t || e.hasScreenMessage ? null : (0, a.jsx)(m, {
     ...e
   })
 }

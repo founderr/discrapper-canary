@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return h
   },
   GuildRoleSubscriptionCardBasicInfo: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a = n("37983");
@@ -42,14 +42,14 @@ function h(e) {
     className: c.tierImage
   })
 }
-let p = e => {
+let m = e => {
   let {
     listingId: t,
     isListingPublished: n
-  } = e, p = (0, u.default)(), [m] = o.useName(t), [E] = o.useImage(t, p), [C] = o.useSubscriptionPlan(t);
+  } = e, m = (0, u.default)(), [p] = o.useName(t), [E] = o.useImage(t, m), [S] = o.useSubscriptionPlan(t);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(f, {
-      listingName: m
+      listingName: p
     }), (0, a.jsx)(h, {
       image: E
     }), !n && (0, a.jsx)("div", {
@@ -59,15 +59,15 @@ let p = e => {
       variant: "heading-xl/semibold",
       className: c.tierPrice,
       tag: "div",
-      children: (0, i.formatPrice)(C.price, C.currency)
+      children: (0, i.formatPrice)(S.price, S.currency)
     }), (0, a.jsx)(l.Text, {
       variant: "text-xs/normal",
       color: "interactive-normal",
       className: c.tierPeriod,
       children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
         period: (0, r.formatPlanInterval)({
-          interval: C.interval,
-          interval_count: C.interval_count
+          interval: S.interval,
+          interval_count: S.interval_count
         })
       })
     })]

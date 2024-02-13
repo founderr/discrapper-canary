@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,17 +15,17 @@ var a = n("37983"),
   c = n("393414"),
   f = n("697218"),
   h = n("471671"),
-  p = n("181114"),
-  m = n("978679"),
+  m = n("181114"),
+  p = n("978679"),
   E = n("49111"),
-  C = n("782340"),
+  S = n("782340"),
   g = n("516042"),
-  S = function(e) {
+  C = function(e) {
     let {
       subscriptionTier: t,
       onClick: n,
       size: s,
-      className: S,
+      className: C,
       buttonText: _,
       buttonTextClassName: I,
       onSubscribeModalClose: T,
@@ -37,10 +37,10 @@ var a = n("37983"),
     } = e, R = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()), j = (0, r.useStateFromStores)([h.default], () => h.default.isFocused()), [L, O] = l.useState(!1), {
       analyticsLocations: y
     } = (0, u.default)();
-    return (0, a.jsxs)(p.default, {
+    return (0, a.jsxs)(m.default, {
       pauseAnimation: !j || x,
       size: s,
-      className: i(g.giftButton, S),
+      className: i(g.giftButton, C),
       onlyShineOnHover: !0,
       innerClassName: g.innerGiftButton,
       color: o.Button.Colors.PRIMARY,
@@ -70,13 +70,13 @@ var a = n("37983"),
         className: i(g.gradientBackground, {
           [g.gradientBackgroundHover]: L
         })
-      }), (0, a.jsx)(m.default, {
+      }), (0, a.jsx)(p.default, {
         className: g.giftIcon
       }), (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "none",
         className: i(g.buttonText, I),
-        children: null != _ ? _ : C.default.Messages.PREMIUM_GIFTING_BUTTON
+        children: null != _ ? _ : S.default.Messages.PREMIUM_GIFTING_BUTTON
       })]
     })
   }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 });
 var a = n("37983"),
@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("506885"),
   f = n("981601"),
   h = n("533403"),
-  p = n("315102"),
-  m = n("324328");
+  m = n("315102"),
+  p = n("324328");
 
 function E(e) {
   let {
@@ -24,10 +24,10 @@ function E(e) {
     speaker: s,
     className: h
   } = e, E = (0, d.useAppContext)(), {
-    reducedMotion: C
+    reducedMotion: S
   } = l.useContext(r.AccessibilityPreferencesContext), g = (0, u.default)({
     userId: s.id
-  }), S = null != s.member ? (0, p.getGuildMemberAvatarURL)(s.member) : null, _ = e => {
+  }), C = null != s.member ? (0, m.getGuildMemberAvatarURL)(s.member) : null, _ = e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -69,24 +69,24 @@ function E(e) {
         },
         onContextMenu: _,
         children: (0, a.jsx)(r.Avatar, {
-          src: null != S ? S : s.user.getAvatarURL(t.guild_id, 24),
+          src: null != C ? C : s.user.getAvatarURL(t.guild_id, 24),
           size: r.AvatarSizes.SIZE_24,
-          className: i(m.avatar, h),
+          className: i(p.avatar, h),
           "aria-label": s.userNick,
-          isSpeaking: g && !C.enabled
+          isSpeaking: g && !S.enabled
         })
       })
     })
   })
 }
 
-function C(e) {
+function S(e) {
   let {
     speakers: t,
     channel: n
   } = e;
   return (0, a.jsx)(h.default, {
-    className: m.summary,
+    className: p.summary,
     guildId: n.guild_id,
     users: t,
     max: 10,
@@ -96,7 +96,7 @@ function C(e) {
       className: t
     }, l),
     renderMoreUsers: (e, t, n) => (0, a.jsx)("div", {
-      className: i(m.speakers, t),
+      className: i(p.speakers, t),
       children: e
     }, n)
   })

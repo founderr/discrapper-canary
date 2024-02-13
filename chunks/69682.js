@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   default: function() {
-    return C
+    return S
   }
 });
 var a = n("37983"),
@@ -18,8 +18,8 @@ var a = n("37983"),
   c = n("713135"),
   f = n("401642"),
   h = n("49111"),
-  p = n("782340"),
-  m = n("568719");
+  m = n("782340"),
+  p = n("568719");
 
 function E(e) {
   let {
@@ -29,7 +29,7 @@ function E(e) {
     onContextMenu: r
   } = e, o = (0, s.useStateFromStores)([d.default], () => d.default.isMobileOnline(t.id));
   return (0, a.jsxs)(i.Clickable, {
-    className: m.listRow,
+    className: p.listRow,
     onClick: () => l(t.id),
     onContextMenu: e => r(e, t),
     children: [(0, a.jsx)(i.Avatar, {
@@ -38,21 +38,21 @@ function E(e) {
       size: i.AvatarSizes.SIZE_40,
       status: n,
       isMobile: o,
-      className: m.listAvatar
+      className: p.listAvatar
     }), (0, a.jsx)(u.default, {
       user: t,
-      className: m.listName,
-      discriminatorClass: m.listDiscriminator
+      className: p.listName,
+      discriminatorClass: p.listDiscriminator
     })]
   })
 }
 
-function C(e) {
+function S(e) {
   let t, {
       user: u,
       onClose: d
     } = e,
-    C = (0, s.useStateFromStores)([c.default], () => c.default.getMutualFriends(u.id));
+    S = (0, s.useStateFromStores)([c.default], () => c.default.getMutualFriends(u.id));
 
   function g(e) {
     d(), (0, f.openUserProfileModal)({
@@ -63,7 +63,7 @@ function C(e) {
     })
   }
 
-  function S(e, t) {
+  function C(e, t) {
     (0, r.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -75,25 +75,25 @@ function C(e) {
     })
   }
   return l.useEffect(() => {
-    null == C && (0, o.fetchMutualFriends)(u.id)
-  }, [C, u.id]), t = null == C ? (0, a.jsx)("div", {
-    className: m.empty,
+    null == S && (0, o.fetchMutualFriends)(u.id)
+  }, [S, u.id]), t = null == S ? (0, a.jsx)("div", {
+    className: p.empty,
     children: (0, a.jsx)(i.Spinner, {})
-  }) : 0 === C.length ? (0, a.jsxs)("div", {
-    className: m.empty,
+  }) : 0 === S.length ? (0, a.jsxs)("div", {
+    className: p.empty,
     children: [(0, a.jsx)("div", {
-      className: m.emptyIconFriends
+      className: p.emptyIconFriends
     }), (0, a.jsx)("div", {
-      className: m.emptyText,
-      children: p.default.Messages.NO_MUTUAL_FRIENDS
+      className: p.emptyText,
+      children: m.default.Messages.NO_MUTUAL_FRIENDS
     })]
-  }) : C.map(e => (0, a.jsx)(E, {
+  }) : S.map(e => (0, a.jsx)(E, {
     user: e.user,
     status: e.status,
     onSelect: g,
-    onContextMenu: S
+    onContextMenu: C
   }, e.key)), (0, a.jsx)(i.ScrollerThin, {
-    className: m.listScroller,
+    className: p.listScroller,
     fade: !0,
     children: t
   })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var a = s("37983"),
@@ -9,7 +9,7 @@ var a = s("37983"),
   i = s("895530"),
   r = s("782340"),
   l = s("473911");
-class u extends n.PureComponent {
+class o extends n.PureComponent {
   render() {
     let {
       className: e,
@@ -26,4 +26,4 @@ class u extends n.PureComponent {
     })
   }
 }
-var o = u
+var u = o

@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("812204"),
   f = n("685665"),
   h = n("645266"),
-  p = n("506885"),
-  m = n("430312"),
+  m = n("506885"),
+  p = n("430312"),
   E = n("26989"),
-  C = n("697218"),
+  S = n("697218"),
   g = n("459824"),
-  S = n("516832"),
+  C = n("516832"),
   _ = n("986358"),
   I = n("590456"),
   T = n("623529");
@@ -33,7 +33,7 @@ function v(e) {
     className: v,
     infoPanelClassName: x,
     style: N
-  } = e, A = (0, g.useCanAccessGuildMemberModView)(n), M = (0, r.useStateFromStores)([C.default], () => C.default.getUser(t), [t]), R = (0, r.useStateFromStores)([E.default], () => E.default.getMember(n, t), [n, t]), j = null == M || null == R, {
+  } = e, A = (0, g.useCanAccessGuildMemberModView)(n), M = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), R = (0, r.useStateFromStores)([E.default], () => E.default.getMember(n, t), [n, t]), j = null == M || null == R, {
     AnalyticsLocationProvider: L
   } = (0, f.default)(c.default.GUILD_MEMBER_MOD_VIEW);
   return (l.useEffect(() => {
@@ -41,7 +41,7 @@ function v(e) {
   }, [A, s]), (0, d.useSubscribeGuildMembers)({
     [n]: [t]
   }), l.useEffect(() => {
-    u.default.requestMembersById(n, [t]), (0, p.default)(t, void 0, {
+    u.default.requestMembersById(n, [t]), (0, m.default)(t, void 0, {
       guildId: n
     }), (0, h.getMemberSupplemental)(n, [t])
   }, [n, t]), A) ? j ? (0, a.jsx)("div", {
@@ -55,7 +55,7 @@ function v(e) {
     children: (0, a.jsx)("div", {
       className: i(T.sidebarContianer, v),
       style: N,
-      children: (0, a.jsx)(m.default, {
+      children: (0, a.jsx)(p.default, {
         user: M,
         guildId: n,
         profileType: I.UserProfileTypes.MODAL,
@@ -67,7 +67,7 @@ function v(e) {
             userId: t,
             guildId: n,
             onClose: s
-          }), (0, a.jsx)(S.default, {
+          }), (0, a.jsx)(C.default, {
             userId: t,
             guildId: n,
             onClose: s,

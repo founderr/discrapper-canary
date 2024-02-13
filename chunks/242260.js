@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   }
 }), n("424973"), n("222007");
 var a = n("446674"),
@@ -15,8 +15,8 @@ var a = n("446674"),
 let c = {},
   f = {},
   h = {},
-  p = !0,
-  m = null;
+  m = !0,
+  p = null;
 
 function E(e) {
   if (null == f[e]) {
@@ -27,9 +27,9 @@ function E(e) {
     a.src = n, f[e] = a
   }
 }
-class C extends a.default.Store {
+class S extends a.default.Store {
   get visibleOverlayCanvas() {
-    return p
+    return m
   }
   getDrawables(e) {
     return null != c[e] ? c[e] : []
@@ -41,11 +41,11 @@ class C extends a.default.Store {
     return h[e]
   }
   getDrawMode() {
-    return m
+    return p
   }
 }
-C.displayName = "SharedCanvasStore";
-let g = new C(l.default, {
+S.displayName = "SharedCanvasStore";
+let g = new S(l.default, {
   SHARED_CANVAS_UPDATE_LINE_POINTS: function(e) {
     let {
       lineId: t,
@@ -88,10 +88,10 @@ let g = new C(l.default, {
         ...f
       } : c[i].push(f)
     }
-    let p = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : "";
-    if (null == h[p]) {
+    let m = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : "";
+    if (null == h[m]) {
       let e = null != l.emojiName ? s.default.convertNameToSurrogate(l.emojiName) : null;
-      h[p] = new Image, h[p].src = (0, r.getEmojiUrl)({
+      h[m] = new Image, h[m].src = (0, r.getEmojiUrl)({
         id: l.emojiId,
         name: null !== (a = null != e ? e : l.emojiName) && void 0 !== a ? a : "",
         animated: !1
@@ -113,11 +113,11 @@ let g = new C(l.default, {
     let {
       drawMode: t
     } = e;
-    m = t
+    p = t
   },
   TOGGLE_OVERLAY_CANVAS: function(e) {
     let {} = e;
-    p = !p
+    m = !m
   }
 });
-var S = g
+var C = g

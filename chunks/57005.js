@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return o
+    return d
   }
 });
-var l = n("37983");
-n("884691");
-var a = n("77078"),
-  s = n("679653"),
-  i = n("782340"),
-  r = n("21893");
+var s = a("37983");
+a("884691");
+var r = a("77078"),
+  n = a("679653"),
+  l = a("782340"),
+  u = a("21893");
 
-function o(e) {
+function d(e) {
   let {
     channel: t,
-    category: n,
-    ...o
-  } = e, u = (0, s.default)(t, !0), d = (0, s.default)(n);
-  return (0, l.jsx)(a.ConfirmModal, {
-    header: i.default.Messages.CONFIRM_CHANNEL_DRAG_TITLE,
-    confirmText: i.default.Messages.SYNC_PERMISSIONS,
-    cancelText: i.default.Messages.KEEP_PERMISSIONS,
-    confirmButtonColor: a.Button.Colors.BRAND,
-    ...o,
-    children: (0, l.jsx)(a.Text, {
+    category: a,
+    ...d
+  } = e, o = (0, n.default)(t, !0), c = (0, n.default)(a);
+  return (0, s.jsx)(r.ConfirmModal, {
+    header: l.default.Messages.CONFIRM_CHANNEL_DRAG_TITLE,
+    confirmText: l.default.Messages.SYNC_PERMISSIONS,
+    cancelText: l.default.Messages.KEEP_PERMISSIONS,
+    confirmButtonColor: r.Button.Colors.BRAND,
+    ...d,
+    children: (0, s.jsx)(r.Text, {
       variant: "text-md/normal",
-      className: r.message,
+      className: u.message,
       selectable: !1,
-      children: i.default.Messages.SYNC_PERMISSIONS_EXPLANATION.format({
-        channelName: u,
-        categoryName: d
+      children: l.default.Messages.SYNC_PERMISSIONS_EXPLANATION.format({
+        channelName: o,
+        categoryName: c
       })
     })
   })

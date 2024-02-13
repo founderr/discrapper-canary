@@ -19,12 +19,12 @@ var l = n("414456"),
   c = n("305961"),
   f = n("945330"),
   h = n("271560"),
-  p = n("577357"),
-  m = n("837008"),
+  m = n("577357"),
+  p = n("837008"),
   E = n("41391"),
-  C = n("833531"),
+  S = n("833531"),
   g = n("393381"),
-  S = n("677795"),
+  C = n("677795"),
   _ = n("782340"),
   I = n("751071");
 let T = e => {
@@ -33,7 +33,7 @@ let T = e => {
       listing: n,
       step: l,
       guildId: i
-    } = e, o = (0, m.useSubscriptionsSettings)(i), c = (0, u.default)(S.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY), p = (() => {
+    } = e, o = (0, p.useSubscriptionsSettings)(i), c = (0, u.default)(C.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY), m = (() => {
       var e;
       if (c) return null;
       let t = (null == o ? void 0 : null === (e = o.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null ? (0, h.getAssetURL)(o.cover_image_asset.application_id, o.cover_image_asset, 440) : void 0;
@@ -47,9 +47,9 @@ let T = e => {
     })();
     return (0, a.jsxs)("div", {
       className: s(I.headerContainer, {
-        [I.headerEmpty]: c || null == p
+        [I.headerEmpty]: c || null == m
       }),
-      children: [p, (() => {
+      children: [m, (() => {
         if (l !== d.Step.CONFIRM) return null;
         let e = null == n.image_asset ? void 0 : (0, h.getAssetURL)(n.application_id, n.image_asset, 80);
         return (0, a.jsx)("div", {
@@ -75,7 +75,7 @@ let T = e => {
       onClose: t,
       listing: n,
       guildId: l
-    } = e, s = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(l), [l]), u = (0, E.default)(l), d = u.filter(e => e.roles.includes(n.role_id)), f = n.role_benefits.benefits.filter(p.isChannelBenefit).slice(0, null === d.length ? 4 : 3), h = (0, C.default)(f).slice(0, null === d.length ? 4 : 3);
+    } = e, s = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(l), [l]), u = (0, E.default)(l), d = u.filter(e => e.roles.includes(n.role_id)), f = n.role_benefits.benefits.filter(m.isChannelBenefit).slice(0, null === d.length ? 4 : 3), h = (0, S.default)(f).slice(0, null === d.length ? 4 : 3);
     return (0, a.jsxs)("div", {
       className: I.confirmationContainer,
       children: [(0, a.jsx)(r.Heading, {
@@ -104,7 +104,7 @@ let T = e => {
             benefit: e,
             guildId: l,
             onClick: () => t(!0)
-          }, (0, p.getBenefitKey)(e)))
+          }, (0, m.getBenefitKey)(e)))
         })]
       }), (() => {
         var e;

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return E
   },
   useCreateForumPost: function() {
-    return C
+    return S
   }
 });
 var a = n("884691"),
@@ -18,8 +18,8 @@ var a = n("884691"),
   c = n("305961"),
   f = n("254490"),
   h = n("730498"),
-  p = n("49111"),
-  m = n("782340");
+  m = n("49111"),
+  p = n("782340");
 
 function E(e) {
   let {
@@ -53,7 +53,7 @@ function E(e) {
   })
 }
 
-function C(e) {
+function S(e) {
   let {
     parentChannel: t
   } = e, {
@@ -77,27 +77,27 @@ function C(e) {
       return new Promise((l, i) => {
         let o = new r.default(e);
         o.on("error", (e, n, a) => {
-          if (n === p.AbortCodes.EXPLICIT_CONTENT) {
+          if (n === m.AbortCodes.EXPLICIT_CONTENT) {
             var l;
-            let e = c.default.getGuild(null !== (l = t.getGuildId()) && void 0 !== l ? l : p.EMPTY_STRING_GUILD_ID);
+            let e = c.default.getGuild(null !== (l = t.getGuildId()) && void 0 !== l ? l : m.EMPTY_STRING_GUILD_ID);
             null != e && s.default.show({
-              title: m.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-              body: m.default.Messages.BOT_GUILD_EXPLICIT_CONTENT.format({
+              title: p.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+              body: p.default.Messages.BOT_GUILD_EXPLICIT_CONTENT.format({
                 name: e.toString()
               })
             })
-          } else if (n === p.AbortCodes.ENTITY_TOO_LARGE) {
+          } else if (n === m.AbortCodes.ENTITY_TOO_LARGE) {
             let e = (0, f.maxFileSize)(t.getGuildId());
             s.default.show({
-              title: m.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-              body: m.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+              title: p.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+              body: p.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
                 maxSize: (0, f.sizeString)(e)
               })
             })
-          } else n === p.AbortCodes.TOO_MANY_ATTACHMENTS && s.default.show({
-            title: m.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-            body: m.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
-              limit: p.MAX_UPLOAD_COUNT
+          } else n === m.AbortCodes.TOO_MANY_ATTACHMENTS && s.default.show({
+            title: p.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+            body: p.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
+              limit: m.MAX_UPLOAD_COUNT
             })
           });
           i({

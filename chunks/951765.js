@@ -12,14 +12,14 @@ var a = s("37983"),
   i = s("446674"),
   r = s("77078"),
   l = s("272030"),
-  u = s("741130"),
-  o = s("698041"),
+  o = s("741130"),
+  u = s("698041"),
   d = s("782340");
 let c = {
-  DropdownSizes: u.default.DropdownSizes,
-  Sizes: u.default.Sizes,
-  Colors: u.default.Colors,
-  Looks: u.default.Looks
+  DropdownSizes: o.default.DropdownSizes,
+  Sizes: o.default.Sizes,
+  Colors: o.default.Colors,
+  Looks: o.default.Looks
 };
 class _ extends n.PureComponent {
   render() {
@@ -31,7 +31,7 @@ class _ extends n.PureComponent {
       currentStoreListingId: i,
       ...r
     } = this.props, l = null != t ? 1 : 0;
-    return (l += e.length) < 2 ? null : (0, a.jsx)(u.default, {
+    return (l += e.length) < 2 ? null : (0, a.jsx)(o.default, {
       onClick: this.handleContextMenu,
       onDropdownClick: this.handleContextMenu,
       onContextMenu: this.handleContextMenu,
@@ -65,12 +65,12 @@ class _ extends n.PureComponent {
     }
   }
 }
-var E = i.default.connectStores([o.default], e => {
+var E = i.default.connectStores([u.default], e => {
   let {
     skuId: t
   } = e;
   return {
-    storeListings: o.default.getUnpublishedForSKU(t),
-    primaryStoreListing: o.default.getForSKU(t)
+    storeListings: u.default.getUnpublishedForSKU(t),
+    primaryStoreListing: u.default.getForSKU(t)
   }
 })(_)

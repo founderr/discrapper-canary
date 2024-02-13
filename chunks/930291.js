@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("271938"),
   f = n("26989"),
   h = n("957255"),
-  p = n("945956"),
-  m = n("697218"),
+  m = n("945956"),
+  p = n("697218"),
   E = n("599110"),
-  C = n("233965"),
+  S = n("233965"),
   g = n("699209"),
-  S = n("808742"),
+  C = n("808742"),
   _ = n("342845"),
   I = n("661743"),
   T = n("49111"),
@@ -37,7 +37,7 @@ var a = n("37983"),
     } = g.HangStatusExperiment.useExperiment({
       guildId: N.guild_id,
       location: "HangStatusPopout"
-    }), R = (0, r.default)([c.default], () => c.default.getId()), j = (0, r.default)([m.default], () => m.default.getUser(s)), L = (0, r.default)([p.default], () => p.default.getChannelId() === N.id), O = (0, r.default)([h.default], () => h.default.can(T.Permissions.CONNECT, N)), y = (0, r.default)([f.default], () => null != N.guild_id && null != j ? f.default.getMember(N.guild_id, s) : null), b = l.useMemo(() => null != j ? (0, d.getPreviewAvatar)(void 0, y, j, {
+    }), R = (0, r.default)([c.default], () => c.default.getId()), j = (0, r.default)([p.default], () => p.default.getUser(s)), L = (0, r.default)([m.default], () => m.default.getChannelId() === N.id), O = (0, r.default)([h.default], () => h.default.can(T.Permissions.CONNECT, N)), y = (0, r.default)([f.default], () => null != N.guild_id && null != j ? f.default.getMember(N.guild_id, s) : null), P = l.useMemo(() => null != j ? (0, d.getPreviewAvatar)(void 0, y, j, {
       size: 40
     }) : void 0, [y, j]);
     return (l.useEffect(() => {
@@ -71,7 +71,7 @@ var a = n("37983"),
               variant: "text-sm/semibold",
               color: "text-normal",
               className: x.statusText,
-              children: (0, S.getHangStatusText)(t)
+              children: (0, C.getHangStatusText)(t)
             })]
           }), (0, a.jsxs)("div", {
             className: x.iconGroup,
@@ -83,7 +83,7 @@ var a = n("37983"),
               children: [(0, a.jsx)(o.Avatar, {
                 className: x.avatar,
                 size: o.AvatarSizes.SIZE_40,
-                src: b,
+                src: P,
                 "aria-hidden": !0
               }), (0, a.jsx)("div", {
                 className: x.outline
@@ -115,10 +115,10 @@ var a = n("37983"),
                 startingText: t.details,
                 startingEmoji: t.emoji
               })
-            }) : (0, C.updateHangStatus)(e, !0), E.default.track(T.AnalyticEvents.SWIPE_HANG_STATUS, {
+            }) : (0, S.updateHangStatus)(e, !0), E.default.track(T.AnalyticEvents.SWIPE_HANG_STATUS, {
               guild_id: N.guild_id,
               channel_id: N.id,
-              media_session_id: p.default.getMediaSessionId()
+              media_session_id: m.default.getMediaSessionId()
             })
           },
           children: v.default.Messages.CUSTOM_HANGS_STATUS_COPY_CTA

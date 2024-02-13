@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("168973"),
   f = n("981913"),
   h = n("576242"),
-  p = n("18494"),
-  m = n("697218"),
+  m = n("18494"),
+  p = n("697218"),
   E = n("717018"),
-  C = n("811305"),
+  S = n("811305"),
   g = n("659500"),
-  S = n("439932"),
+  C = n("439932"),
   _ = n("550766"),
   I = n("191225"),
   T = n("575136"),
@@ -41,9 +41,9 @@ function y(e) {
   var t, n, s;
   let {
     maxHeight: y,
-    connectedChannelId: b,
-    renderExternalHeader: P
-  } = e, D = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != b ? I.default.getEmbeddedActivitiesForChannel(b) : [], [b]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), k = l.useCallback(() => {
+    connectedChannelId: P,
+    renderExternalHeader: b
+  } = e, D = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != P ? I.default.getEmbeddedActivitiesForChannel(P) : [], [P]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), k = l.useCallback(() => {
     (0, _.updateActivityPanelMode)(M.ActivityPanelModes.PIP)
   }, []), V = l.useRef(null), B = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), H = B !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = l.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : y), Y = l.useCallback(e => {
     u.default.updatedUnsyncedSettings({
@@ -72,19 +72,19 @@ function y(e) {
     $ = K.width,
     ee = K.height;
   J ? ((ee = K.width / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > K.height && ($ = (ee = K.height) * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), Q = (K.height - ee) / 2) : (($ = Math.min(K.height * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > K.width && (ee = ($ = K.width) / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), q = (K.width - $) / 2);
-  let et = (0, r.useStateFromStores)([p.default], () => p.default.getChannelId());
+  let et = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId());
   if (null == D) return null;
   let en = F.get(null === (n = w[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
     ea = [];
-  return null != en && (ea = Array.from(en.embeddedActivity.userIds).map(e => m.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, a.jsxs)("div", {
-    className: i(L.wrapper, O[B], (0, S.getThemeClass)(R.ThemeTypes.DARK)),
+  return null != en && (ea = Array.from(en.embeddedActivity.userIds).map(e => p.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, a.jsxs)("div", {
+    className: i(L.wrapper, O[B], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
     ref: V,
     style: H && null != G ? {
       minHeight: 200,
       maxHeight: y,
       height: G
     } : void 0,
-    children: [null == P ? void 0 : P(), (0, a.jsxs)("div", {
+    children: [null == b ? void 0 : b(), (0, a.jsxs)("div", {
       className: L.activityPanelContainer,
       children: [H ? null : (0, a.jsx)("div", {
         className: L.header,
@@ -105,11 +105,11 @@ function y(e) {
         ref: z,
         children: (0, a.jsx)(x.default, {
           className: L.iframe,
-          embedId: (0, N.default)(b, D.id)
+          embedId: (0, N.default)(P, D.id)
         })
       }), null != et ? (0, a.jsxs)("div", {
         className: L.footer,
-        children: [(0, a.jsx)(C.default, {
+        children: [(0, a.jsx)(S.default, {
           renderIcon: !1,
           users: ea,
           size: 32,
@@ -123,7 +123,7 @@ function y(e) {
             className: L.leaveButtonContainer,
             children: (0, a.jsx)(h.default, {
               applicationId: D.id,
-              channelId: b,
+              channelId: P,
               className: L.leaveActivityButton,
               iconClassName: L.leaveActivityIcon,
               centerButton: !0,

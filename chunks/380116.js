@@ -19,7 +19,7 @@ function f(e) {
     channel: t
   } = e, n = (0, s.useStateFromStores)([u.default], () => u.default.effectCooldownEndTime), f = l.useMemo(() => null != n ? (n.getTime() - Date.now()) / 1e3 : 0, [n]), {
     seconds: h
-  } = (0, i.default)(null != n ? n : new Date), p = h > 0;
+  } = (0, i.default)(null != n ? n : new Date), m = h > 0;
   return (0, a.jsx)(c.default, {
     renderPopout: e => {
       let {
@@ -44,7 +44,7 @@ function f(e) {
         remainingCooldownSeconds: h,
         onMouseEnter: e => {
           var n, a;
-          return n = e, a = t, void(!p && a(n))
+          return n = e, a = t, void(!m && a(n))
         },
         ...n
       })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   usePerkCards: function() {
-    return k
+    return B
   }
 });
 var a = s("65597"),
@@ -9,8 +9,8 @@ var a = s("65597"),
   i = s("79112"),
   r = s("841098"),
   l = s("697218"),
-  u = s("719923"),
-  o = s("49111"),
+  o = s("719923"),
+  u = s("49111"),
   d = s("397336"),
   c = s("782340"),
   _ = s("737117"),
@@ -20,8 +20,8 @@ var a = s("65597"),
   f = s("404875"),
   S = s("118536"),
   R = s("411389"),
-  A = s("840456"),
-  m = s("720917"),
+  m = s("840456"),
+  A = s("720917"),
   N = s("982784"),
   p = s("19530"),
   g = s("215541"),
@@ -33,19 +33,19 @@ var a = s("65597"),
   L = s("578770"),
   x = s("761708"),
   v = s("224456"),
-  U = s("656564"),
-  D = s("124989"),
+  D = s("656564"),
+  U = s("124989"),
   b = s("14528"),
   j = s("443817"),
   G = s("759308");
-let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
-  k = e => {
+let k = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
+  B = e => {
     let {
       styles: t
     } = e, s = (0, r.default)(), n = (0, a.default)([l.default], () => {
       let e = l.default.getCurrentUser();
-      return u.default.canUsePremiumProfileCustomization(e)
-    }), k = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, y = {
+      return o.default.canUsePremiumProfileCustomization(e)
+    }), B = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, y = {
       badge: {
         title: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_DESCRIPTION,
@@ -55,7 +55,7 @@ let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
       badgeAlt: {
         title: c.default.Messages.PREMIUM_MARKETING_PERK_GRID_ITEM_HEADING_PREMIUM_SUBSCRIPTION_BADGE,
         description: c.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_BADGE_DESCRIPTION_VARIANT_1,
-        imageSource: B(s, _, E),
+        imageSource: k(s, _, E),
         imageClassName: t.badgeNewImage
       },
       clientThemes: {
@@ -81,7 +81,7 @@ let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
         title: c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
         description: e => {
           let t = () => {
-            i.default.open(o.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
+            i.default.open(u.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
               scrollPosition: d.ProfileCustomizationScrollPositions.TRY_IT_OUT,
               analyticsLocations: e
             })
@@ -98,50 +98,50 @@ let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
       longerMessages: {
         title: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-        imageSource: B(s, v, U),
+        imageSource: k(s, v, D),
         imageClassName: t.longerMessagesImage
       },
       moreGuilds: {
         title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: B(s, T, D),
+        imageSource: k(s, T, U),
         imageClassName: t.moreGuildsImage
       },
       moreGuildsAlt: {
         title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: B(s, A, m),
+        imageSource: k(s, m, A),
         imageClassName: t.moreGuildsAltImage
       },
       remix: {
         title: c.default.Messages.REMIXING_PERKS_CARD_TITLE,
         description: c.default.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-        imageSource: B(s, S, R),
+        imageSource: k(s, S, R),
         imageClassName: t.remixingImage,
         isEarlyAccess: !0
       },
       soundboard: {
         title: c.default.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
         description: c.default.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-        imageSource: B(s, N, p),
+        imageSource: k(s, N, p),
         imageClassName: t.soundboardImage
       },
       stickers: {
         title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
         description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: B(s, g, b),
+        imageSource: k(s, g, b),
         imageClassName: t.stickersImage
       },
       stickersBurst: {
         title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: B(s, g, b),
+        imageSource: k(s, g, b),
         imageClassName: t.stickersImage
       },
       stickersPerkDiscoverability: {
         title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-        imageSource: B(s, g, b),
+        imageSource: k(s, g, b),
         imageClassName: t.stickersImage
       },
       streaming: {
@@ -153,15 +153,15 @@ let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
       superReactions: {
         title: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION,
-        imageSource: B(s, C, P),
+        imageSource: k(s, C, P),
         imageClassName: t.superReactionsImage
       },
       upload: {
         title: c.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({
-          premiumMaxSize: k
+          premiumMaxSize: B
         }),
         description: c.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({
-          premiumMaxSize: k
+          premiumMaxSize: B
         }),
         imageSource: G,
         imageClassName: t.uploadImage
@@ -169,7 +169,7 @@ let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
       videoBackground: {
         title: c.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-        imageSource: B(s, O, M),
+        imageSource: k(s, O, M),
         imageClassName: t.videoBackgroundImage
       }
     };

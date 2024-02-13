@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -16,40 +16,40 @@ var a = n("37983"),
   f = n("212029");
 let h = "CameraPreviewPosition";
 
-function p(e) {
+function m(e) {
   let {
     width: t,
     onContextMenuParticipant: n,
     height: s,
-    channel: p,
-    participants: m
-  } = e, [E, C] = function() {
+    channel: m,
+    participants: p
+  } = e, [E, S] = function() {
     let [e, t] = l.useState(() => r.default.get(h, d.PictureInPicturePositions.BOTTOM_RIGHT));
     return [e, l.useCallback(e => {
       r.default.set(h, e), t(e)
     }, [])]
-  }(), g = l.useRef(null), S = null == p.getGuildId() ? 70 : 50;
+  }(), g = l.useRef(null), C = null == m.getGuildId() ? 70 : 50;
   return l.useLayoutEffect(() => {
     var e;
     null === (e = g.current) || void 0 === e || e.ensureIsInPosition()
-  }, [m.length]), (0, a.jsx)("div", {
+  }, [p.length]), (0, a.jsx)("div", {
     className: c.container,
     children: (0, a.jsx)(o.PictureInPictureWindow, {
       position: E,
       id: 0,
       ref: g,
-      onMove: (e, t) => C(t),
+      onMove: (e, t) => S(t),
       maxX: t,
       maxY: s,
-      edgeOffsetTop: S,
+      edgeOffsetTop: C,
       edgeOffsetBottom: 70,
       edgeOffsetLeft: 16,
       edgeOffsetRight: 16,
       children: (0, a.jsx)("div", {
         className: c.tileContainer,
-        children: m.map(e => (0, a.jsx)(u.default, {
+        children: p.map(e => (0, a.jsx)(u.default, {
           participant: e,
-          channel: p,
+          channel: m,
           onContextMenu: n,
           className: i(c.tile, f.elevationHigh),
           fit: u.CallTileFit.COVER,

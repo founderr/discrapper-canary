@@ -16,22 +16,22 @@ var l = n("627445"),
   c = n("76539"),
   f = n("924506"),
   h = n("981913"),
-  p = n("49111"),
-  m = n("782340");
+  m = n("49111"),
+  p = n("782340");
 
 function E(e) {
   var t, l;
   let {
     applicationId: E,
-    stream: C,
+    stream: S,
     channel: g,
-    exitFullScreen: S,
+    exitFullScreen: C,
     appContext: _,
     analyticsLocation: I,
     guildScheduledEvent: T,
     ...v
   } = e, x = (0, o.useAppContext)(), N = null == g ? void 0 : g.getGuildId(), A = (0, i.useStateFromStores)([u.default], () => null != N ? u.default.getGuild(N) : null, [N]);
-  return (t = A, l = g, null != t && null != l && d.default.can(p.Permissions.CREATE_INSTANT_INVITE, l)) ? (0, a.jsx)(h.default, {
+  return (t = A, l = g, null != t && null != l && d.default.can(m.Permissions.CREATE_INSTANT_INVITE, l)) ? (0, a.jsx)(h.default, {
     onClick: () => {
       s(null != A, "guild cannot be null"), s(null != g, "channel cannot be null"), ! function(e) {
         let {
@@ -55,26 +55,26 @@ function E(e) {
             streamUserId: s,
             applicationId: i,
             analyticsLocation: d,
-            source: l.isGuildStageVoice() ? p.InstantInviteSources.STAGE_CHANNEL : p.InstantInviteSources.STREAM_INVITE,
+            source: l.isGuildStageVoice() ? m.InstantInviteSources.STAGE_CHANNEL : m.InstantInviteSources.STREAM_INVITE,
             guildScheduledEvent: c
           })
         }, {
           modalKey: "stream-invite-modal",
-          contextKey: o === p.AppContext.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
+          contextKey: o === m.AppContext.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
         })
       }({
         guild: A,
         channel: g,
-        streamUserId: null == C ? void 0 : C.ownerId,
+        streamUserId: null == S ? void 0 : S.ownerId,
         applicationId: E,
         appContext: null != _ ? _ : x,
-        exitFullScreen: S,
+        exitFullScreen: C,
         analyticsLocation: I,
         guildScheduledEvent: T
       })
     },
     iconComponent: null != E ? f.default : c.default,
-    label: null != E ? m.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : m.default.Messages.ACTIVITY_INVITE_MODAL_INVITE,
+    label: null != E ? p.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : p.default.Messages.ACTIVITY_INVITE_MODAL_INVITE,
     ...v
   }) : null
 }

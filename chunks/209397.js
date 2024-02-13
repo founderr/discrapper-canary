@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("446674"),
@@ -15,7 +15,7 @@ let r = Object.freeze({}),
   c = {},
   f = {},
   h = {};
-class p extends a.default.Store {
+class m extends a.default.Store {
   isFetching() {
     return o
   }
@@ -43,8 +43,8 @@ class p extends a.default.Store {
     return h[e]
   }
 }
-p.displayName = "GuildDirectoryStore";
-var m = new p(l.default, {
+m.displayName = "GuildDirectoryStore";
+var p = new m(l.default, {
   GUILD_DIRECTORY_FETCH_START: function() {
     o = !0
   },
@@ -77,18 +77,18 @@ var m = new p(l.default, {
       ...u[o],
       [h.guildId]: h
     };
-    let p = null !== (a = h.primaryCategoryId) && void 0 !== a ? a : i.DirectoryEntryCategories.UNCATEGORIZED;
+    let m = null !== (a = h.primaryCategoryId) && void 0 !== a ? a : i.DirectoryEntryCategories.UNCATEGORIZED;
     if (c[o] = {
         ...c[o],
-        [p]: {
-          ...null === (n = c[o]) || void 0 === n ? void 0 : n[p],
+        [m]: {
+          ...null === (n = c[o]) || void 0 === n ? void 0 : n[m],
           [h.guildId]: h
         }
       }, null != f[o]) {
-      let e = null !== (r = null === (l = f[o]) || void 0 === l ? void 0 : l[p]) && void 0 !== r ? r : 0;
+      let e = null !== (r = null === (l = f[o]) || void 0 === l ? void 0 : l[m]) && void 0 !== r ? r : 0;
       f[o] = {
         ...f[o],
-        [p]: e + 1
+        [m]: e + 1
       }
     }
   },
@@ -115,35 +115,35 @@ var m = new p(l.default, {
     }
   },
   GUILD_DIRECTORY_ENTRY_UPDATE: function(e) {
-    var t, n, a, l, r, o, d, h, p;
+    var t, n, a, l, r, o, d, h, m;
     let {
-      channelId: m,
+      channelId: p,
       entry: E
-    } = e, C = (0, s.guildDirectoryEntryFromServer)(E), g = null === (t = u[m]) || void 0 === t ? void 0 : t[C.guildId];
-    u[m] = {
-      ...u[m],
-      [C.guildId]: {
+    } = e, S = (0, s.guildDirectoryEntryFromServer)(E), g = null === (t = u[p]) || void 0 === t ? void 0 : t[S.guildId];
+    u[p] = {
+      ...u[p],
+      [S.guildId]: {
         ...g,
-        ...C
+        ...S
       }
     };
-    let S = null !== (l = null == g ? void 0 : g.primaryCategoryId) && void 0 !== l ? l : i.DirectoryEntryCategories.UNCATEGORIZED,
-      _ = null !== (r = C.primaryCategoryId) && void 0 !== r ? r : i.DirectoryEntryCategories.UNCATEGORIZED,
-      I = Object.assign({}, null === (n = c[m]) || void 0 === n ? void 0 : n[S]);
-    null != g && S !== _ && delete I[C.guildId], c[m] = {
-      ...c[m],
-      [S]: I,
+    let C = null !== (l = null == g ? void 0 : g.primaryCategoryId) && void 0 !== l ? l : i.DirectoryEntryCategories.UNCATEGORIZED,
+      _ = null !== (r = S.primaryCategoryId) && void 0 !== r ? r : i.DirectoryEntryCategories.UNCATEGORIZED,
+      I = Object.assign({}, null === (n = c[p]) || void 0 === n ? void 0 : n[C]);
+    null != g && C !== _ && delete I[S.guildId], c[p] = {
+      ...c[p],
+      [C]: I,
       [_]: {
-        ...null === (a = c[m]) || void 0 === a ? void 0 : a[_],
-        [C.guildId]: {
+        ...null === (a = c[p]) || void 0 === a ? void 0 : a[_],
+        [S.guildId]: {
           ...g,
-          ...C
+          ...S
         }
       }
-    }, _ !== S && null != f[m] && (f[m] = {
-      ...f[m],
-      [S]: (null === (o = f[m]) || void 0 === o ? void 0 : o[S]) > 0 ? (null === (d = f[m]) || void 0 === d ? void 0 : d[S]) - 1 : 0,
-      [_]: (null !== (p = null === (h = f[m]) || void 0 === h ? void 0 : h[_]) && void 0 !== p ? p : 0) + 1
+    }, _ !== C && null != f[p] && (f[p] = {
+      ...f[p],
+      [C]: (null === (o = f[p]) || void 0 === o ? void 0 : o[C]) > 0 ? (null === (d = f[p]) || void 0 === d ? void 0 : d[C]) - 1 : 0,
+      [_]: (null !== (m = null === (h = f[p]) || void 0 === h ? void 0 : h[_]) && void 0 !== m ? m : 0) + 1
     })
   },
   GUILD_DIRECTORY_CATEGORY_SELECT: function(e) {

@@ -15,19 +15,19 @@ var a = n("37983"),
   c = n("679243"),
   f = n("449008"),
   h = n("387111"),
-  p = n("998716"),
-  m = n("782340"),
+  m = n("998716"),
+  p = n("782340"),
   E = n("704414");
-let C = (e, t) => h.default.getName(e.getGuildId(), e.id, t.user);
+let S = (e, t) => h.default.getName(e.getGuildId(), e.id, t.user);
 var g = function(e) {
   var t, n;
   let {
     participants: h,
     channel: g,
-    hasConnectPermission: S
+    hasConnectPermission: C
   } = e, _ = (0, d.useShowMemberVerificationGate)(g.guild_id), I = l.useCallback(() => {
     _ ? (0, u.openMemberVerificationModal)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id)
-  }, [g.id, g.guild_id, _]), T = h.filter(e => e.type === p.StageChannelParticipantTypes.VOICE), v = 4 === T.length ? 2 : 3, x = (0, s.useStateFromStoresArray)([o.default], () => T.map(e => o.default.getParticipant(g.id, e.id)).filter(f.isNotNullish), [g.id, T]);
+  }, [g.id, g.guild_id, _]), T = h.filter(e => e.type === m.StageChannelParticipantTypes.VOICE), v = 4 === T.length ? 2 : 3, x = (0, s.useStateFromStoresArray)([o.default], () => T.map(e => o.default.getParticipant(g.id, e.id)).filter(f.isNotNullish), [g.id, T]);
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)("div", {
@@ -54,24 +54,24 @@ var g = function(e) {
       children: (0, a.jsx)(i.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: (t = g, 0 === (n = T).length ? m.default.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? m.default.Messages.CURRENTLY_IN_STAGE_1.format({
-          a: C(t, n[0])
-        }) : 2 === n.length ? m.default.Messages.CURRENTLY_IN_STAGE_2.format({
-          a: C(t, n[0]),
-          b: C(t, n[1])
-        }) : n.length > 2 ? m.default.Messages.CURRENTLY_IN_STAGE_2_N.format({
-          a: C(t, n[0]),
-          b: C(t, n[1]),
+        children: (t = g, 0 === (n = T).length ? p.default.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? p.default.Messages.CURRENTLY_IN_STAGE_1.format({
+          a: S(t, n[0])
+        }) : 2 === n.length ? p.default.Messages.CURRENTLY_IN_STAGE_2.format({
+          a: S(t, n[0]),
+          b: S(t, n[1])
+        }) : n.length > 2 ? p.default.Messages.CURRENTLY_IN_STAGE_2_N.format({
+          a: S(t, n[0]),
+          b: S(t, n[1]),
           n: n.length - 2
         }) : void 0)
       })
     }), (0, a.jsx)(i.Button, {
-      disabled: !S,
+      disabled: !C,
       className: E.joinButton,
-      color: S ? i.Button.Colors.GREEN : i.Button.Colors.PRIMARY,
+      color: C ? i.Button.Colors.GREEN : i.Button.Colors.PRIMARY,
       onClick: I,
       size: i.Button.Sizes.MEDIUM,
-      children: S ? m.default.Messages.STAGE_CHANNEL_JOIN : m.default.Messages.CHANNEL_LOCKED_SHORT
+      children: C ? p.default.Messages.STAGE_CHANNEL_JOIN : p.default.Messages.CHANNEL_LOCKED_SHORT
     })]
   })
 }

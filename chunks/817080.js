@@ -15,15 +15,15 @@ var a = n("37983"),
   c = n("315102"),
   f = n("506885"),
   h = n("981601"),
-  p = n("568719"),
-  m = n("599466");
+  m = n("568719"),
+  p = n("599466");
 
 function E(e) {
   var t;
   let {
     channel: s,
     integration: E
-  } = e, C = c.default.getApplicationIconURL({
+  } = e, S = c.default.getApplicationIconURL({
     id: E.application.id,
     icon: E.application.icon,
     size: 40
@@ -38,32 +38,32 @@ function E(e) {
         integration: E
       })
     })
-  }, [E, s]), S = (0, a.jsxs)("div", {
-    className: p.listRow,
+  }, [E, s]), C = (0, a.jsxs)("div", {
+    className: m.listRow,
     onContextMenu: g,
     children: [(0, a.jsx)("img", {
-      className: i(p.listAvatar, m.icon),
+      className: i(m.listAvatar, p.icon),
       alt: "",
       "aria-hidden": !0,
-      src: C,
+      src: S,
       width: 40,
       height: 40
     }), (0, a.jsx)("div", {
-      className: p.listRowContent,
+      className: m.listRowContent,
       children: (0, a.jsx)(d.default, {
         name: E.application.name,
         botType: d.BotTypes.BOT,
         botVerified: null === (t = E.application.bot) || void 0 === t ? void 0 : t.isVerifiedBot(),
-        className: p.listName
+        className: m.listName
       })
     })]
   }), {
     bot: _
   } = E.application;
   return null == _ ? (0, a.jsx)("li", {
-    children: S
+    children: C
   }) : (0, a.jsx)(o.Popout, {
-    preload: () => (0, f.default)(_.id, C),
+    preload: () => (0, f.default)(_.id, S),
     renderPopout: e => (0, a.jsx)(h.default, {
       ...e,
       userId: _.id,
@@ -72,7 +72,7 @@ function E(e) {
     position: r.isMobile ? "window_center" : "left",
     children: e => (0, a.jsx)("li", {
       ...e,
-      children: S
+      children: C
     })
   })
 }

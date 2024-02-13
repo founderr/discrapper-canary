@@ -15,11 +15,11 @@ var a = n("37983"),
   c = n("316194"),
   f = n("546206"),
   h = n("782340");
-let p = {
+let m = {
     marginTop: "12px",
     marginBottom: "12px"
   },
-  m = {
+  p = {
     marginTop: "12px",
     marginBottom: "12px"
   },
@@ -27,7 +27,7 @@ let p = {
     marginLeft: ".5em"
   };
 
-function C() {
+function S() {
   return (0, a.jsx)(o.default, {
     width: "1em",
     height: "1em"
@@ -53,19 +53,19 @@ function g(e) {
       return null != e && e.isStaff()
     }() ? (0, a.jsx)(a.Fragment, {}) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)(s.FormItem, {
-        style: p,
+        style: m,
         children: [(0, a.jsx)(s.Text, {
           variant: "text-md/normal",
-          style: m,
+          style: p,
           children: "Because all user and channel data is anonymized some additional information is needed for Discord to retrieve the logs. You may be asked to provide these IDs so we can associate the incident."
         }), (0, a.jsx)(_, {
           description: i
         })]
       }), (0, a.jsx)(s.FormItem, {
-        style: p,
+        style: m,
         children: (0, a.jsxs)(s.Text, {
           variant: "text-md/normal",
-          style: m,
+          style: p,
           children: ["Shortly after the call, you can enter the blinded channel ID into the", " ", (0, a.jsx)(s.Anchor, {
             href: "https://callscope.discord.tools/",
             children: "callscope visualizer"
@@ -79,14 +79,14 @@ function g(e) {
     children: [(0, a.jsxs)(s.ModalContent, {
       children: [(0, a.jsx)(s.Heading, {
         variant: "heading-xl/semibold",
-        style: p,
+        style: m,
         children: h.default.Messages.NOTICE_CALLSCOPE_DIALOG_HEADER
       }), (0, a.jsxs)(s.FormItem, {
-        style: p,
+        style: m,
         children: [(0, a.jsxs)(s.Text, {
           variant: "text-md/normal",
-          style: m,
-          children: ["We marked the time of your ", (0, a.jsx)(C, {}), " ", h.default.Messages.NOTICE_CALLSCOPE_MARK_ISSUE, " button press in the analytics logs. It can be used multiple times during your call."]
+          style: p,
+          children: ["We marked the time of your ", (0, a.jsx)(S, {}), " ", h.default.Messages.NOTICE_CALLSCOPE_MARK_ISSUE, " button press in the analytics logs. It can be used multiple times during your call."]
         }), (0, a.jsx)(s.TextArea, {
           placeholder: h.default.Messages.NOTICE_CALLSCOPE_DIALOG_INPUT,
           autoFocus: !0,
@@ -112,7 +112,7 @@ function g(e) {
   })
 }
 
-function S(e) {
+function C(e) {
   let t = l.useCallback(() => {
     d.default.copy(e.text)
   }, [e.text]);
@@ -152,7 +152,7 @@ function _(e) {
                   userSelect: "text"
                 },
                 children: n.blindChannelId
-              }), (0, a.jsx)(S, {
+              }), (0, a.jsx)(C, {
                 text: n.blindChannelId
               })]
             }), (0, a.jsxs)("li", {
@@ -163,7 +163,7 @@ function _(e) {
                   userSelect: "text"
                 },
                 children: n.blindUserId
-              }), (0, a.jsx)(S, {
+              }), (0, a.jsx)(C, {
                 text: n.blindUserId
               })]
             })]

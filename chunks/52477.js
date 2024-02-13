@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return h
   },
   isLine: function() {
-    return p
+    return m
   },
   getUserColors: function() {
-    return m
+    return p
   }
 });
 var a = n("656280"),
@@ -58,11 +58,11 @@ function h(e, t, n) {
   }
 }
 
-function p(e) {
+function m(e) {
   return e.type === o.DrawableType.LINE
 }
 
-function m(e, t, n, a) {
+function p(e, t, n, a) {
   var o;
   let d = r.default.getUser(e),
     c = null == d ? void 0 : d.getAvatarURL(null, u.AVATAR_COLOR_AVATAR_SIZE),
@@ -72,9 +72,9 @@ function m(e, t, n, a) {
       g: f[1],
       b: f[2]
     }).toHex()) : a,
-    p = (0, s.getDarkness)((0, s.hex2int)(h)) > .5 ? n : t;
+    m = (0, s.getDarkness)((0, s.hex2int)(h)) > .5 ? n : t;
   return {
     fillColor: h,
-    outlineColor: p
+    outlineColor: m
   }
 }

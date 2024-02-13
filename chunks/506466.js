@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -52,7 +52,7 @@ function h(e) {
   })
 }
 
-function p(e) {
+function m(e) {
   let {
     className: t,
     numRequestToSpeak: n
@@ -69,7 +69,7 @@ function p(e) {
   })
 }
 
-function m(e) {
+function p(e) {
   let {
     toggleRequestToSpeakSidebar: t,
     showRequestToSpeakSidebar: n,
@@ -84,7 +84,7 @@ function m(e) {
     onClick: u,
     label: n ? c.default.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : c.default.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
     className: s,
-    iconComponent: () => (0, a.jsx)(p, {
+    iconComponent: () => (0, a.jsx)(m, {
       numRequestToSpeak: i,
       className: s
     }),

@@ -19,16 +19,16 @@ n.r(t), n.d(t, {
     return h
   },
   updateEmojiHose: function() {
-    return p
+    return m
   },
   clearDrawables: function() {
-    return m
+    return p
   },
   setDrawMode: function() {
     return E
   },
   toggleOverlayCanvas: function() {
-    return C
+    return S
   }
 });
 var a = n("981980"),
@@ -93,7 +93,7 @@ function h(e, t) {
   })
 }
 
-function p(e, t, n) {
+function m(e, t, n) {
   s.default.dispatch({
     type: "SHARED_CANVAS_UPDATE_EMOJI_HOSE",
     emojiHose: e,
@@ -102,7 +102,7 @@ function p(e, t, n) {
   })
 }
 
-function m(e, t) {
+function p(e, t) {
   s.default.dispatch({
     type: "SHARED_CANVAS_CLEAR_DRAWABLES",
     drawables: e,
@@ -117,7 +117,7 @@ function E(e) {
   })
 }
 
-function C() {
+function S() {
   s.default.dispatch({
     type: "TOGGLE_OVERLAY_CANVAS"
   })

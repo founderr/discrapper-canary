@@ -10,8 +10,8 @@ var n = s("748802"),
   i = s("77078"),
   r = s("181114"),
   l = s("599110"),
-  u = s("598739"),
-  o = s("49111"),
+  o = s("598739"),
+  u = s("49111"),
   d = s("782340"),
   c = s("137537"),
   _ = e => {
@@ -25,9 +25,9 @@ var n = s("748802"),
       shineSize: r.ShineSizes.SMALL,
       className: c.seeAllPerksButton,
       onClick: () => {
-        t(!0), l.default.track(o.AnalyticEvents.NITRO_HOME_NAVIGATION, {
+        t(!0), l.default.track(u.AnalyticEvents.NITRO_HOME_NAVIGATION, {
           current_component: s,
-          next_component: u.NitroLandingPages.SEE_ALL,
+          next_component: o.NitroLandingPages.SEE_ALL,
           interaction_component: "See All Button"
         })
       },

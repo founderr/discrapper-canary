@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("308798"),
   f = n("646240"),
   h = n("13777"),
-  p = n("37774"),
-  m = n("117399"),
+  m = n("37774"),
+  p = n("117399"),
   E = n("400501"),
-  C = n("542640"),
+  S = n("542640"),
   g = n("604656"),
-  S = n("861370"),
+  C = n("861370"),
   _ = n("845579"),
   I = n("800762"),
   T = n("433487"),
@@ -71,10 +71,10 @@ function M(e) {
     channel: t,
     closePopout: n,
     onSelect: l
-  } = e, s = (0, u.default)(t), T = (0, p.default)(t), v = (0, C.default)(t.id), A = (0, E.default)(t), M = (0, S.default)({
+  } = e, s = (0, u.default)(t), T = (0, m.default)(t), v = (0, S.default)(t.id), A = (0, E.default)(t), M = (0, C.default)({
     id: t.id,
     label: N.default.Messages.COPY_ID_THREAD
-  }), R = (0, d.default)(t), j = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), O = (0, m.default)(t), y = (0, h.default)(t), b = (0, g.default)(t), P = _.UseThreadSidebar.useSetting(), D = (0, r.useStateFromStores)([I.default], () => !i.isEmpty(I.default.getVoiceStatesForChannel(t.id)));
+  }), R = (0, d.default)(t), j = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), O = (0, p.default)(t), y = (0, h.default)(t), P = (0, g.default)(t), b = _.UseThreadSidebar.useSetting(), D = (0, r.useStateFromStores)([I.default], () => !i.isEmpty(I.default.getVoiceStatesForChannel(t.id)));
   return (0, a.jsxs)(o.Menu, {
     navId: "thread-context",
     onClose: n,
@@ -83,7 +83,7 @@ function M(e) {
     children: [(0, a.jsxs)(o.MenuGroup, {
       children: [L, y]
     }), (0, a.jsxs)(o.MenuGroup, {
-      children: [A, O, v, P && !D ? (0, a.jsx)(o.MenuItem, {
+      children: [A, O, v, b && !D ? (0, a.jsx)(o.MenuItem, {
         id: "open",
         label: N.default.Messages.OPEN_IN_SPLIT_VIEW,
         action: function() {
@@ -91,7 +91,7 @@ function M(e) {
         }
       }) : null]
     }), (0, a.jsxs)(o.MenuGroup, {
-      children: [b, s, T, j]
+      children: [P, s, T, j]
     }), (0, a.jsxs)(o.MenuGroup, {
       children: [R, M]
     })]

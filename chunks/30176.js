@@ -19,10 +19,10 @@ var l = n("77078"),
       searchQuery: n,
       setSearchQuery: f,
       mostRecentQuery: h,
-      handleClearSearch: p,
-      handleSearchKeyPress: m,
+      handleClearSearch: m,
+      handleSearchKeyPress: p,
       handleCreateOrAddGuild: E,
-      searchResults: C,
+      searchResults: S,
       searchFetching: g
     } = e;
     if (g) t = (0, a.jsx)("div", {
@@ -31,7 +31,7 @@ var l = n("77078"),
         className: u.spinner
       })
     });
-    else if (0 === C.length) {
+    else if (0 === S.length) {
       let e = null != E ? o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
         addServerHook: function(e, t) {
           return (0, a.jsx)(l.Anchor, {
@@ -60,7 +60,7 @@ var l = n("77078"),
       })
     } else t = (0, a.jsx)("div", {
       className: u.cardsContainer,
-      children: C.map(e => (0, a.jsx)(r.default, {
+      children: S.map(e => (0, a.jsx)(r.default, {
         entry: e
       }, e.guildId))
     });
@@ -73,7 +73,7 @@ var l = n("77078"),
           children: [(0, a.jsxs)("div", {
             className: d.headerTitleWrapper,
             children: [(0, a.jsx)(l.Clickable, {
-              onClick: p,
+              onClick: m,
               className: d.arrow,
               children: (0, a.jsx)(i.default, {
                 direction: i.default.Directions.LEFT
@@ -82,7 +82,7 @@ var l = n("77078"),
               variant: "heading-xl/semibold",
               className: d.searchPageTitle,
               children: o.default.Messages.DIRECTORY_SEARCH_RESULTS_HEADER.format({
-                numResults: C.length,
+                numResults: S.length,
                 query: h
               })
             })]
@@ -93,8 +93,8 @@ var l = n("77078"),
             label: o.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
             placeholder: o.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
             onChange: f,
-            onClear: p,
-            onKeyPress: m,
+            onClear: m,
+            onKeyPress: p,
             cta: null != n && n.length > 0 ? o.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
           })]
         }), t]

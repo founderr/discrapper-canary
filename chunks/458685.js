@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = n("37983");
@@ -17,14 +17,14 @@ var l = n("627445"),
   f = n("49111"),
   h = n("782340");
 
-function p(e) {
+function m(e) {
   let {
     onClose: t,
     onSelect: n
   } = e, l = (0, i.useStateFromStores)([u.default], () => {
     let e = u.default.getCurrentUser();
     return s(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e
-  }), p = (0, d.default)(), m = (0, c.default)(l.id);
+  }), m = (0, d.default)(), p = (0, c.default)(l.id);
   return (0, a.jsx)(o.default, {
     object: f.AnalyticsObjects.CONTEXT_MENU,
     children: (0, a.jsxs)(r.Menu, {
@@ -34,9 +34,9 @@ function p(e) {
       onSelect: n,
       children: [(0, a.jsx)(r.MenuGroup, {
         label: h.default.Messages.FORM_LABEL_VIDEO_DEVICE,
-        children: p
-      }), (0, a.jsx)(r.MenuGroup, {
         children: m
+      }), (0, a.jsx)(r.MenuGroup, {
+        children: p
       })]
     })
   })

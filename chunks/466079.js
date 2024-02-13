@@ -33,14 +33,14 @@ function f(e) {
     children: s,
     keyExtractor: f,
     paddingTop: h = 0,
-    paddingBottom: p = 0
-  } = e, [m, E] = l.useState({
+    paddingBottom: m = 0
+  } = e, [p, E] = l.useState({
     width: 0,
     height: 0
   }), {
-    width: C,
+    width: S,
     height: g
-  } = m, S = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, _ = C - 16, I = g - (h + p), {
+  } = p, C = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, _ = S - 16, I = g - (h + m), {
     tileStyle: T,
     tileWidth: v,
     rows: x,
@@ -84,11 +84,11 @@ function f(e) {
       rows: a,
       columns: l
     }
-  })(S, _, I), [S, _, I]), A = N + 1, M = A * v + (A - 1) * 8, R = M <= C, j = Math.floor(v / u) + 8, L = Math.max(0, I - j * x) / 2;
+  })(C, _, I), [C, _, I]), A = N + 1, M = A * v + (A - 1) * 8, R = M <= S, j = Math.floor(v / u) + 8, L = Math.max(0, I - j * x) / 2;
   return (0, a.jsx)(r.default, {
     fade: !0,
     className: n,
-    listPadding: [h + L, 0, p + L - 8, 8],
+    listPadding: [h + L, 0, m + L - 8, 8],
     renderRow: function(e) {
       var t;
       let n = e * N;
@@ -102,7 +102,7 @@ function f(e) {
             className: i(o.tile, {
               [o.padColumn]: R,
               [o.noVerticalMargin]: s >= (x - 1) * N,
-              [o.noHorizontalMargin]: (s + 1) % N == 0 || s === S - 1
+              [o.noHorizontalMargin]: (s + 1) % N == 0 || s === C - 1
             }),
             children: (0, a.jsx)("div", {
               className: o.tileSizer,

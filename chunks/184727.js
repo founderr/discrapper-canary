@@ -19,30 +19,30 @@ function h(e) {
   let {
     entry: t,
     onSelect: h,
-    closePopout: p,
-    forceLightTheme: m,
+    closePopout: m,
+    forceLightTheme: p,
     hideEditButton: E = !1
   } = e, {
-    isEntryAdmin: C,
+    isEntryAdmin: S,
     canEdit: g,
-    canRemove: S
+    canRemove: C
   } = (0, c.default)(t), _ = (0, r.default)({
     id: t.guildId,
     label: f.default.Messages.COPY_ID_GUILD,
-    onSuccess: p
+    onSuccess: m
   });
   l.useEffect(() => {
-    !g && !S && null == _ && (0, i.closeContextMenu)()
+    !g && !C && null == _ && (0, i.closeContextMenu)()
   });
   let I = () => {
     d.removeDirectoryGuildEntry(t.channelId, t.guildId)
   };
 
   function T() {
-    (0, i.closeContextMenu)(), null == p || p()
+    (0, i.closeContextMenu)(), null == m || m()
   }
   return (0, a.jsxs)(s.Menu, {
-    className: m ? "theme-light" : null,
+    className: p ? "theme-light" : null,
     navId: "guild-entry-context",
     onClose: T,
     "aria-label": f.default.Messages.GUILD_ACTIONS_MENU_LABEL,
@@ -62,7 +62,7 @@ function h(e) {
             })
           }), T()
         }
-      }) : null, S ? (0, a.jsx)(s.MenuItem, {
+      }) : null, C ? (0, a.jsx)(s.MenuItem, {
         id: "remove-from-hub",
         label: f.default.Messages.HUB_ENTRY_REMOVE,
         action: function() {
@@ -81,7 +81,7 @@ function h(e) {
           })), T()
         },
         color: "danger"
-      }) : null, C ? null : (0, a.jsx)(a.Fragment, {
+      }) : null, S ? null : (0, a.jsx)(a.Fragment, {
         children: (0, a.jsx)(s.MenuItem, {
           id: "report-server-listing",
           label: f.default.Messages.REPORT_SERVER_NO_NAME,

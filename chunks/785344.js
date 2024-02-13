@@ -31,11 +31,11 @@ function c(e) {
     centerButton: r = !1,
     awaitingRemote: u,
     ...c
-  } = e, f = t || n || l, h = r ? o.CenterControlButton : o.default, p = (0, s.default)(t, n, l, u), m = f ? d : i.default;
+  } = e, f = t || n || l, h = r ? o.CenterControlButton : o.default, m = (0, s.default)(t, n, l, u), p = f ? d : i.default;
   return (0, a.jsx)(h, {
     isActive: !f,
-    iconComponent: m,
-    label: p,
+    iconComponent: p,
+    label: m,
     ...c
   })
 }

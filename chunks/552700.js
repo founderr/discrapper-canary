@@ -18,12 +18,12 @@ var a = n("37983"),
   c = n("77078"),
   f = n("272030"),
   h = n("244201"),
-  p = n("506885"),
-  m = n("981601"),
+  m = n("506885"),
+  p = n("981601"),
   E = n("26989"),
-  C = n("328275"),
+  S = n("328275"),
   g = n("118503"),
-  S = n("711486"),
+  C = n("711486"),
   _ = n("387111"),
   I = n("808422"),
   T = n("5668");
@@ -37,7 +37,7 @@ let v = l.memo(function(e) {
     } = e;
     return (0, a.jsxs)("div", {
       className: T.textContainer,
-      children: [i ? (0, a.jsx)(C.default, {
+      children: [i ? (0, a.jsx)(S.default, {
         className: T.blockedIcon,
         color: d.default.unsafe_rawColors.RED_400.css
       }) : null, (0, a.jsx)(c.Text, {
@@ -66,7 +66,7 @@ let v = l.memo(function(e) {
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
         className: T.avatarContainer,
-        children: [f && (0, a.jsx)(S.default, {
+        children: [f && (0, a.jsx)(C.default, {
           className: i(T.icon, {
             [T.invited]: c
           })
@@ -97,11 +97,11 @@ var A = l.memo(function(e) {
   } = e, {
     user: r,
     blocked: d
-  } = t, C = s.getGuildId(), g = (0, h.useAppContext)(), S = (0, u.useStateFromStores)([E.default], () => {
+  } = t, S = s.getGuildId(), g = (0, h.useAppContext)(), C = (0, u.useStateFromStores)([E.default], () => {
     var e;
-    return null != C && (null === (e = E.default.getMember(C, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
-  }, [C, r.id]);
-  o(null != C, "Channel cannot be guildless");
+    return null != S && (null === (e = E.default.getMember(S, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
+  }, [S, r.id]);
+  o(null != S, "Channel cannot be guildless");
   let _ = l.useCallback(e => {
       (0, f.openContextMenuLazy)(e, async () => {
         let {
@@ -110,7 +110,7 @@ var A = l.memo(function(e) {
         return t => (0, a.jsx)(e, {
           ...t,
           user: r,
-          guildId: C,
+          guildId: S,
           channel: s,
           showMediaItems: !0,
           showStageChannelItems: !0,
@@ -119,15 +119,15 @@ var A = l.memo(function(e) {
       }, {
         context: g
       })
-    }, [r, C, s, g]),
-    I = l.useCallback(e => (0, a.jsx)(m.default, {
+    }, [r, S, s, g]),
+    I = l.useCallback(e => (0, a.jsx)(p.default, {
       ...e,
-      guildId: C,
+      guildId: S,
       channelId: s.id,
       userId: r.id
-    }), [s.id, C, r.id]);
+    }), [s.id, S, r.id]);
   return (0, a.jsx)(c.Popout, {
-    preload: () => (0, p.default)(r.id, r.getAvatarURL(s.guild_id, 80), {
+    preload: () => (0, m.default)(r.id, r.getAvatarURL(s.guild_id, 80), {
       guildId: s.guild_id,
       channelId: s.id
     }),
@@ -136,16 +136,16 @@ var A = l.memo(function(e) {
     spacing: 8,
     children: e => (0, a.jsx)(c.Clickable, {
       className: i(T.tileContainer, {
-        [T.singleIcon]: S || d,
-        [T.doubleIcon]: S && d
+        [T.singleIcon]: C || d,
+        [T.doubleIcon]: C && d
       }),
       onContextMenu: _,
       ...e,
       children: (0, a.jsx)(x, {
         participant: t,
-        guildId: C,
+        guildId: S,
         channel: s,
-        isPremium: S
+        isPremium: C
       })
     })
   })

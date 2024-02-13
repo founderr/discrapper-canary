@@ -43,32 +43,32 @@ function d(e) {
     onKeyDown: c,
     onMouseEnter: f,
     onMouseLeave: h,
-    isActive: p = !1,
-    isCenterButton: m = !1,
+    isActive: m = !1,
+    isCenterButton: p = !1,
     ...E
-  } = e, C = n > 0, g = (0, l.useSpring)({
+  } = e, S = n > 0, g = (0, l.useSpring)({
     percentComplete: 0 !== n ? (t - n) / t : 0,
     config: {
       ...l.config.molasses,
       duration: 1e3
     }
-  }), S = C ? r.default.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
+  }), C = S ? r.default.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
     seconds: n
-  }) : void 0, _ = m ? i.CenterControlButton : i.default;
+  }) : void 0, _ = p ? i.CenterControlButton : i.default;
   return (0, a.jsxs)("div", {
     className: o.container,
-    children: [C ? (0, a.jsx)(u, {
+    children: [S ? (0, a.jsx)(u, {
       percentComplete: g.percentComplete
     }) : null, (0, a.jsx)(_, {
       ...E,
-      disabled: C,
-      label: S,
+      disabled: S,
+      label: C,
       iconComponent: s.default,
       onClick: d,
       onKeyDown: c,
       onMouseEnter: f,
       onMouseLeave: h,
-      isActive: p,
+      isActive: m,
       grow: !1
     })]
   })

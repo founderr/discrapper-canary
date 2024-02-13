@@ -10,8 +10,8 @@ var n = s("414456"),
   i = s.n(n),
   r = s("819855"),
   l = s("77078"),
-  u = s("841098"),
-  o = s("635956"),
+  o = s("841098"),
+  u = s("635956"),
   d = s("646718"),
   c = s("782340"),
   _ = s("843051"),
@@ -22,8 +22,8 @@ var n = s("414456"),
       giftMessage: n,
       subscriptionTier: E,
       ...I
-    } = e, T = (0, u.default)(), f = (0, r.isThemeDark)(T) || s, S = f ? l.ButtonColors.WHITE : l.ButtonColors.BRAND, R = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
-    return (0, a.jsx)(o.default, {
+    } = e, T = (0, o.default)(), f = (0, r.isThemeDark)(T) || s, S = f ? l.ButtonColors.WHITE : l.ButtonColors.BRAND, R = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
+    return (0, a.jsx)(u.default, {
       isGift: !0,
       color: S,
       look: l.ButtonLooks.OUTLINED,

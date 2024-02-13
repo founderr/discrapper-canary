@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("660478"),
   f = n("18494"),
   h = n("191542"),
-  p = n("378765"),
-  m = n("115531"),
+  m = n("378765"),
+  p = n("115531"),
   E = n("585513"),
-  C = n("981913"),
+  S = n("981913"),
   g = n("49111"),
-  S = n("782340");
+  C = n("782340");
 
 function _(e) {
   let t = (0, o.useStateFromStores)([h.default], () => !(0, r.isEmpty)(h.default.getTypingUsers(e)), [e]),
@@ -89,7 +89,7 @@ function T(e) {
         i(t > 0);
         let e = setTimeout(() => {
           i(!1)
-        }, m.TOAST_LINGER_MS);
+        }, p.TOAST_LINGER_MS);
         return () => {
           clearTimeout(e), i(!1)
         }
@@ -115,28 +115,28 @@ function T(e) {
       var e;
       null === (e = x.current) || void 0 === e || e.focus()
     }, []);
-  (0, p.useComponentAction)({
+  (0, m.useComponentAction)({
     event: g.ComponentActions.FOCUS_CHAT_BUTTON,
     handler: v ? null : O
   });
-  let [y, b] = l.useState(!1), P = l.useCallback(() => {
-    f && b(!0)
+  let [y, P] = l.useState(!1), b = l.useCallback(() => {
+    f && P(!0)
   }, [f]);
-  (0, p.useComponentAction)({
+  (0, m.useComponentAction)({
     event: g.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-    handler: P
+    handler: b
   }), l.useEffect(() => {
     let e;
     return y && (e = setTimeout(() => {
-      b(!1)
+      P(!1)
     }, 3e3)), () => {
       clearTimeout(e)
     }
-  }, [y]), t = f && v ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT;
+  }, [y]), t = f && v ? C.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? C.default.Messages.VIDEO_CALL_HIDE_CHAT : C.default.Messages.VIDEO_CALL_SHOW_CHAT;
   let D = [t];
-  return R > 0 && D.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+  return R > 0 && D.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: R
-  })), M > 0 && D.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
+  })), M > 0 && D.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(S.default, {
     buttonRef: x,
     onClick: j,
     label: t,

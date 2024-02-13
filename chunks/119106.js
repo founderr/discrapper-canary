@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = n("37983"),
@@ -15,15 +15,15 @@ var a = n("37983"),
   c = n("99795"),
   f = n("782340"),
   h = n("704414"),
-  p = function(e) {
+  m = function(e) {
     var t, n;
     let {
-      participants: p,
-      channel: m,
+      participants: m,
+      channel: p,
       hasConnectPermission: E
-    } = e, C = p.filter(c.isUserParticipant), g = (0, o.useShowMemberVerificationGate)(m.guild_id), S = l.useCallback(() => {
-      g ? (0, r.openMemberVerificationModal)(m.guild_id, () => i.default.selectVoiceChannel(m.id)) : i.default.selectVoiceChannel(m.id)
-    }, [m.id, m.guild_id, g]), _ = 4 === C.length ? 2 : 3;
+    } = e, S = m.filter(c.isUserParticipant), g = (0, o.useShowMemberVerificationGate)(p.guild_id), C = l.useCallback(() => {
+      g ? (0, r.openMemberVerificationModal)(p.guild_id, () => i.default.selectVoiceChannel(p.id)) : i.default.selectVoiceChannel(p.id)
+    }, [p.id, p.guild_id, g]), _ = 4 === S.length ? 2 : 3;
     return (0, a.jsxs)("div", {
       className: h.container,
       children: [(0, a.jsx)("div", {
@@ -31,9 +31,9 @@ var a = n("37983"),
         style: {
           maxWidth: 168 * _
         },
-        children: C.slice(0, 5).map(e => (0, a.jsx)(d.default, {
+        children: S.slice(0, 5).map(e => (0, a.jsx)(d.default, {
           participant: e,
-          channel: m,
+          channel: p,
           className: h.tile,
           paused: !0,
           inCall: !0,
@@ -44,13 +44,13 @@ var a = n("37983"),
       }), (0, a.jsx)(s.Heading, {
         className: h.channelName,
         variant: "heading-xxl/semibold",
-        children: m.name
+        children: p.name
       }), (0, a.jsx)("div", {
         className: h.participantsRow,
         children: (0, a.jsx)(s.Text, {
           color: "header-secondary",
           variant: "text-sm/normal",
-          children: (t = m, 0 === (n = C).length ? f.default.Messages.CURRENTLY_IN_VOICE_EMPTY : 1 === n.length ? f.default.Messages.CURRENTLY_IN_VOICE_1.format({
+          children: (t = p, 0 === (n = S).length ? f.default.Messages.CURRENTLY_IN_VOICE_EMPTY : 1 === n.length ? f.default.Messages.CURRENTLY_IN_VOICE_1.format({
             a: (0, u.default)(t, n[0])
           }) : 2 === n.length ? f.default.Messages.CURRENTLY_IN_VOICE_2.format({
             a: (0, u.default)(t, n[0]),
@@ -65,7 +65,7 @@ var a = n("37983"),
         disabled: !E,
         className: h.joinButton,
         color: E ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
-        onClick: S,
+        onClick: C,
         size: s.Button.Sizes.MEDIUM,
         children: E ? f.default.Messages.JOIN_VOICE : f.default.Messages.CHANNEL_LOCKED_SHORT
       })]

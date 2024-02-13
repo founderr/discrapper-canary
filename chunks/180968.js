@@ -22,7 +22,7 @@ let f = {
     lastMessage: null
   },
   h = (0, i.default)(() => new Map),
-  p = (e, t) => {
+  m = (e, t) => {
     h.setState(n => {
       let a = n.get(e);
       return null == a ? n.set(e, {
@@ -34,7 +34,7 @@ let f = {
       }), n
     })
   },
-  m = e => h(t => t.get(e), r.default);
+  p = e => h(t => t.get(e), r.default);
 
 function E(e, t, n) {
   let a = function(e, t, n, a) {
@@ -43,7 +43,7 @@ function E(e, t, n) {
           l = JSON.stringify(a);
         return "guild_".concat(t, "_search_").concat(n, "_for_").concat(e, "_with_additonal_").concat(l)
       })(e, t, n, a), [e, t, n, a]),
-      i = m(l),
+      i = p(l),
       r = (0, o.default)(l),
       [h, E] = s.useState({});
     return s.useEffect(() => {
@@ -62,21 +62,21 @@ function E(e, t, n) {
             }
           }(e, n, a),
           i = new u.default(t, d.SearchTypes.GUILD, s);
-        p(l, {
+        m(l, {
           searchFetcher: i,
           messageCount: c,
           lastMessage: null
         }), setTimeout(() => {
           i.fetch(e => {
             let t = e.body.messages[0];
-            p(l, {
+            m(l, {
               searchFetcher: i,
               result: e.body,
               messageCount: e.body.total_results,
               lastMessage: t
             }), E({})
           }, e => {}, e => {
-            p(l, {
+            m(l, {
               messageCount: 0,
               lastMessage: null
             }), E({})

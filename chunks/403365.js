@@ -16,11 +16,11 @@ var r = n("414456"),
   c = n("719923"),
   _ = n("635357"),
   I = n("642906"),
-  f = n("85336"),
-  E = n("176108"),
+  E = n("85336"),
+  f = n("176108"),
   S = n("254350"),
-  m = n("646718"),
-  P = n("782340"),
+  P = n("646718"),
+  m = n("782340"),
   p = n("600465");
 
 function T(e) {
@@ -34,7 +34,7 @@ function T(e) {
     startedPaymentFlowWithPaymentSourcesRef: o,
     setSelectedPlanId: d
   } = (0, I.usePaymentContext)(), {
-    isGift: P
+    isGift: m
   } = (0, _.useGiftContext)(), p = (0, u.usePremiumTrialOffer)(r), T = (0, i.useIsInPremiumOfferExperience)();
   return (0, s.jsx)(N, {
     selectSku: e => (function(e) {
@@ -49,23 +49,23 @@ function T(e) {
         startedPaymentFlowWithPaymentSources: u
       } = e;
       s(n);
-      let o = f.Step.PLAN_SELECT,
+      let o = E.Step.PLAN_SELECT,
         d = (0, c.getPremiumSkuIdForSubscription)(t);
-      (d === m.PremiumSubscriptionSKUs.TIER_1 || d === m.PremiumSubscriptionSKUs.TIER_2) && n === m.PremiumSubscriptionSKUs.TIER_0 && !l && (o = f.Step.WHAT_YOU_LOSE);
+      (d === P.PremiumSubscriptionSKUs.TIER_1 || d === P.PremiumSubscriptionSKUs.TIER_2) && n === P.PremiumSubscriptionSKUs.TIER_0 && !l && (o = E.Step.WHAT_YOU_LOSE);
       let _ = (0, S.isInTrialRedemption)({
           userTrialOffer: a,
           isGift: l,
           skuId: n
         }),
-        I = (0, E.inOneStepSubscriptionCheckout)({
+        I = (0, f.inOneStepSubscriptionCheckout)({
           isTrial: _,
           isGift: l,
           selectedSkuId: n,
           startedPaymentFlowWithPaymentSources: u
         });
-      if (o !== f.Step.WHAT_YOU_LOSE && I) {
-        o = f.Step.REVIEW;
-        let e = (0, E.getDefaultPlanOneStepCheckout)(n, t);
+      if (o !== E.Step.WHAT_YOU_LOSE && I) {
+        o = E.Step.REVIEW;
+        let e = (0, f.getDefaultPlanOneStepCheckout)(n, t);
         i(e)
       }
       r(o, {
@@ -78,13 +78,13 @@ function T(e) {
       newSkuId: e,
       setSelectedSkuId: l,
       handleStepChange: t,
-      isGift: P,
+      isGift: m,
       userTrialOffer: p,
       startedPaymentFlowWithPaymentSources: o.current,
       setSelectedPlanId: d
     }),
     onClose: n,
-    isGift: P,
+    isGift: m,
     inOfferExperience: T
   })
 }
@@ -102,7 +102,7 @@ function N(e) {
       separator: !1,
       children: [(0, s.jsx)(a.FormTitle, {
         tag: a.FormTitleTags.H4,
-        children: P.default.Messages.BILLING_STEP_SELECT_PLAN
+        children: m.default.Messages.BILLING_STEP_SELECT_PLAN
       }), (0, s.jsx)(a.ModalCloseButton, {
         onClick: n
       })]

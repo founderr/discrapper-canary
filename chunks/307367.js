@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return m
   }
 }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
 var s = n("37983"),
@@ -15,17 +15,17 @@ var s = n("37983"),
   c = n("85336"),
   _ = n("149833"),
   I = n("523591"),
-  f = n("153727"),
-  E = n("650484"),
+  E = n("153727"),
+  f = n("650484"),
   S = n("49111"),
-  m = n("646718");
+  P = n("646718");
 
-function P(e) {
+function m(e) {
   let {
     handleStepChange: t
   } = e, {
     selectedPlan: n,
-    browserCheckoutState: P,
+    browserCheckoutState: m,
     browserCheckoutStateLoadId: p,
     contextMetadata: T
   } = (0, d.usePaymentContext)(), {
@@ -48,13 +48,13 @@ function P(e) {
       }, () => {
         s()
       })
-    }(null !== (e = null == n ? void 0 : n.id) && void 0 !== e ? e : m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, N, T.loadId, () => t(c.Step.ADD_PAYMENT_STEPS)))
+    }(null !== (e = null == n ? void 0 : n.id) && void 0 !== e ? e : P.SubscriptionPlans.PREMIUM_MONTH_TIER_2, N, T.loadId, () => t(c.Step.ADD_PAYMENT_STEPS)))
   }, [n, N, M, C, T, t]), r.useEffect(() => {
-    p === T.loadId && P === I.BrowserCheckoutState.DONE && t(c.Step.CONFIRM)
-  }, [P, p, T, t]), (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(f.default, {}), (0, s.jsx)(E.PaymentPortalBody, {
+    p === T.loadId && m === I.BrowserCheckoutState.DONE && t(c.Step.CONFIRM)
+  }, [m, p, T, t]), (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(E.default, {}), (0, s.jsx)(f.PaymentPortalBody, {
       children: (0, s.jsx)(_.AwaitingBrowserCheckoutStepBody, {})
-    }), (0, s.jsx)(E.PaymentPortalFooter, {
+    }), (0, s.jsx)(f.PaymentPortalFooter, {
       children: (0, s.jsx)(_.AwaitingBrowserCheckoutStepFooter, {
         onStepChange: t,
         onBackClick: () => t(c.Step.PLAN_SELECT)

@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("599110"),
   f = n("15433"),
   h = n("71102"),
-  p = n("393467"),
-  m = n("209397"),
+  m = n("393467"),
+  p = n("209397"),
   E = n("187163"),
-  C = n("132615"),
+  S = n("132615"),
   g = n("663685"),
-  S = n("516056"),
+  C = n("516056"),
   _ = n("30176"),
   I = n("730647"),
   T = n("49111"),
@@ -36,12 +36,12 @@ var a = n("37983"),
       categoryCounts: R,
       allEntriesCount: j,
       isLoading: L
-    } = (0, s.useStateFromStoresObject)([m.default], () => {
-      let e = m.default.getCurrentCategoryId(x.id),
-        t = m.default.getDirectoryEntries(x.id, e === I.DirectoryEntryCategories.ALL ? null : e),
-        n = m.default.getDirectoryCategoryCounts(x.id),
-        a = m.default.getDirectoryAllEntriesCount(x.id),
-        l = m.default.isFetching();
+    } = (0, s.useStateFromStoresObject)([p.default], () => {
+      let e = p.default.getCurrentCategoryId(x.id),
+        t = p.default.getDirectoryEntries(x.id, e === I.DirectoryEntryCategories.ALL ? null : e),
+        n = p.default.getDirectoryCategoryCounts(x.id),
+        a = p.default.getDirectoryAllEntriesCount(x.id),
+        l = p.default.isFetching();
       return {
         currentCategoryId: e,
         directoryEntries: t,
@@ -56,20 +56,20 @@ var a = n("37983"),
         (0, o.ack)(x.id, !0, !0, e)
       })
     }, [x.id]);
-    let O = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
+    let O = l.useMemo(() => null != M ? (0, C.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
       {
         mostRecentQuery: y,
-        searchFetching: b,
-        searchResults: P
-      } = (0, s.useStateFromStoresObject)([p.default], () => {
+        searchFetching: P,
+        searchResults: b
+      } = (0, s.useStateFromStoresObject)([m.default], () => {
         let {
           mostRecentQuery: e,
           fetching: t
-        } = p.default.getSearchState(x.id);
+        } = m.default.getSearchState(x.id);
         return {
           mostRecentQuery: e,
           searchFetching: t,
-          searchResults: p.default.getSearchResults(x.id, e)
+          searchResults: m.default.getSearchResults(x.id, e)
         }
       }),
       [D, U] = l.useState(y),
@@ -122,8 +122,8 @@ var a = n("37983"),
       handleSearchKeyPress: B,
       handleClearSearch: H,
       handleCreateOrAddGuild: V,
-      searchResults: P,
-      searchFetching: b
+      searchResults: b,
+      searchFetching: P
     }) : null == O && null == A ? (0, a.jsx)("div", {
       className: v.pageContainer,
       children: (0, a.jsx)(i.Spinner, {
@@ -131,7 +131,7 @@ var a = n("37983"),
       })
     }) : (null == O ? void 0 : O.length) === 0 && null == A ? (0, a.jsx)("div", {
       className: v.pageContainer,
-      children: (0, a.jsx)(C.default, {
+      children: (0, a.jsx)(S.default, {
         guild: N,
         onAddGuild: V
       })

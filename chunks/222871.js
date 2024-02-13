@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 }), n("222007");
 var l = n("37983"),
@@ -10,10 +10,10 @@ var l = n("37983"),
   i = n("669491"),
   r = n("77078");
 
-function o(e) {
+function u(e) {
   let t = (0, a.useRef)(null),
-    [n, o] = (0, a.useState)(null),
-    [u] = (0, a.useState)(() => new s.TimelineDataSeries),
+    [n, u] = (0, a.useState)(null),
+    [o] = (0, a.useState)(() => new s.TimelineDataSeries),
     d = (0, r.useToken)(i.default.colors.BACKGROUND_PRIMARY).hsl(),
     c = (0, r.useToken)(i.default.colors.TEXT_NORMAL).hsl(),
     f = (0, r.useToken)(i.default.colors.BACKGROUND_ACCENT).hsl(),
@@ -25,8 +25,8 @@ function o(e) {
     let l = new s.TimelineGraphView(n, null !== (e = window.devicePixelRatio) && void 0 !== e ? e : 1);
     l.backgroundColor = d, l.textColor = c, l.gridColor = f, l.timeOptions = {
       timeStyle: "short"
-    }, l.fontFamily = "gg sans", l.fontSize = 11, u.setColor(h), l.addDataSeries(u), l.updateEndDate(), o(l)
-  }, [t, d, h, f, c, u]), u.setPoints(e.dataPoints), null == n || n.updateEndDate();
+    }, l.fontFamily = "gg sans", l.fontSize = 11, o.setColor(h), l.addDataSeries(o), l.updateEndDate(), u(l)
+  }, [t, d, h, f, c, o]), o.setPoints(e.dataPoints), null == n || n.updateEndDate();
   let C = {
     width: e.width,
     height: e.height

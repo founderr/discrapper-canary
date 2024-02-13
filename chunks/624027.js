@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("941886"),
   f = n("664336"),
   h = n("49111"),
-  p = n("782340"),
-  m = n("889175");
+  m = n("782340"),
+  p = n("889175");
 
 function E(e) {
   let t, {
@@ -25,23 +25,23 @@ function E(e) {
   l.useEffect(() => {
     o.default.loadThread(E)
   });
-  let C = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
-    g = C === h.FAVORITES,
-    S = (0, i.useStateFromStores)([u.default], () => u.default.theme);
+  let S = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
+    g = S === h.FAVORITES,
+    C = (0, i.useStateFromStores)([u.default], () => u.default.theme);
   return t = g ? (0, a.jsx)(c.EmptyStateText, {
-    note: p.default.Messages.FAVORITES_EMPTY_BODY,
-    children: p.default.Messages.FAVORITES_EMPTY_TITLE
+    note: m.default.Messages.FAVORITES_EMPTY_BODY,
+    children: m.default.Messages.FAVORITES_EMPTY_TITLE
   }) : null != E ? (0, a.jsx)(r.Spinner, {
     type: r.Spinner.Type.SPINNING_CIRCLE
   }) : (0, a.jsx)(c.EmptyStateText, {
-    note: p.default.Messages.CHANNELS_UNAVAILABLE_BODY,
-    children: p.default.Messages.CHANNELS_UNAVAILABLE_TITLE
+    note: m.default.Messages.CHANNELS_UNAVAILABLE_BODY,
+    children: m.default.Messages.CHANNELS_UNAVAILABLE_TITLE
   }), (0, a.jsxs)("div", {
-    className: m.noChannel,
+    className: p.noChannel,
     children: [s.isMobile && (0, a.jsx)(f.default, {
       children: (0, a.jsx)(l.Fragment, {})
     }), (0, a.jsxs)(c.default, {
-      theme: S,
+      theme: C,
       children: [(0, a.jsx)(c.EmptyStateImage, {
         darkSrc: g ? n("41912") : n("605834"),
         lightSrc: g ? n("706692") : n("976585"),

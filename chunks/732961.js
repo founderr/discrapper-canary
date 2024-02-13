@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("42887"),
   f = n("659500"),
   h = n("679243"),
-  p = n("876715"),
-  m = n("842044"),
+  m = n("876715"),
+  p = n("842044"),
   E = n("329515"),
-  C = n("49111"),
+  S = n("49111"),
   g = n("99795"),
-  S = n("111647"),
+  C = n("111647"),
   _ = n("542377");
 let I = 16 / 9,
   T = 8 + E.PARTICIPANTS_HEIGHT;
@@ -39,8 +39,8 @@ function v(e) {
       showParticipants: L = !0,
       className: O,
       paused: y,
-      width: b,
-      height: P,
+      width: P,
+      height: b,
       layout: D,
       idle: U
     } = e,
@@ -53,17 +53,17 @@ function v(e) {
     z = j.type === g.ParticipantTypes.ACTIVITY,
     K = !z && null != j.streamId,
     Z = K && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : I,
-    X = P <= 2 * T + 144,
+    X = b <= 2 * T + 144,
     J = L && !X,
     q = (0, o.default)(J),
     Q = 0;
   (z || J) && (Q += 72), z && !J && (Q += 48), J && (Q += .5 * T + 8);
-  let $ = P - 2 * Q,
+  let $ = b - 2 * Q,
     ee = $ * Z,
-    et = Math.floor(Math.min(b, ee) / Z),
-    en = P > b / Z + 72 + T + 8,
+    et = Math.floor(Math.min(P, ee) / Z),
+    en = b > P / Z + 72 + T + 8,
     ea = !J && !z;
-  t = ea ? 40 + Math.max(0, 72 - (P - et) / 2) : J ? -16 : -8, l.useEffect(() => {
+  t = ea ? 40 + Math.max(0, 72 - (b - et) / 2) : J ? -16 : -8, l.useEffect(() => {
     let e = setTimeout(() => {
       G(!1)
     }, 250);
@@ -79,9 +79,9 @@ function v(e) {
         clamp: !0
       },
       onStart: () => Y(!0),
-      onChange: () => f.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET),
+      onChange: () => f.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET),
       onRest: () => {
-        Y(!1), f.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
+        Y(!1), f.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET)
       }
     }),
     es = (0, r.useSpring)({
@@ -126,13 +126,13 @@ function v(e) {
     eu = l.useCallback(e => {
       B(e), G(!1)
     }, []),
-    ed = J || y ? [] : (0, m.getPipParticipants)(x, j, k),
+    ed = J || y ? [] : (0, p.getPipParticipants)(x, j, k),
     {
       visibleParticipants: ec,
       participantTileWidth: ef
-    } = (0, E.useVisibleParticipants)(b, N);
+    } = (0, E.useVisibleParticipants)(P, N);
   return (0, a.jsxs)("div", {
-    className: i(_.root, S.flexCenter, O),
+    className: i(_.root, C.flexCenter, O),
     children: [(0, a.jsxs)("div", {
       className: _.tileWrapper,
       style: {
@@ -149,7 +149,7 @@ function v(e) {
           },
           className: _.videoWrapper,
           children: (0, a.jsx)("div", {
-            className: i(S.videoSizer),
+            className: i(C.videoSizer),
             style: {
               aspectRatio: Z
             },
@@ -158,16 +158,16 @@ function v(e) {
                 key: i
               } = l;
               return null != t ? (0, a.jsx)(r.animated.div, {
-                className: S.videoWrapperAnimated,
+                className: C.videoWrapperAnimated,
                 style: e,
                 children: (0, a.jsx)(h.default, {
                   focused: !0,
-                  noBorder: ee >= b || $ >= P,
+                  noBorder: ee >= P || $ >= b,
                   channel: R,
-                  className: S.focusedVideo,
+                  className: C.focusedVideo,
                   videoComponent: F,
                   paused: y,
-                  width: b,
+                  width: P,
                   participant: t,
                   onClick: n,
                   onDoubleClick: v,
@@ -179,7 +179,7 @@ function v(e) {
               }, i) : null
             })
           })
-        }), X || D === C.ChannelLayouts.MINIMUM || D === C.ChannelLayouts.NORMAL ? null : (0, a.jsx)(r.animated.div, {
+        }), X || D === S.ChannelLayouts.MINIMUM || D === S.ChannelLayouts.NORMAL ? null : (0, a.jsx)(r.animated.div, {
           className: i(_.actionRow, {
             [_.idle]: U
           }),
@@ -212,10 +212,10 @@ function v(e) {
           popoutWindow: A
         })
       })]
-    }), ed.length > 0 ? (0, a.jsx)(p.default, {
+    }), ed.length > 0 ? (0, a.jsx)(m.default, {
       onContextMenuParticipant: s,
-      width: b,
-      height: P,
+      width: P,
+      height: b,
       channel: R,
       participants: ed
     }) : null]

@@ -7,22 +7,22 @@ n.r(t), n.d(t, {
     return h
   },
   addDirectoryGuildEntry: function() {
-    return p
+    return m
   },
   removeDirectoryGuildEntry: function() {
-    return m
+    return p
   },
   searchDirectoryEntries: function() {
     return E
   },
   clearDirectorySearch: function() {
-    return C
+    return S
   },
   updateDirectoryEntry: function() {
     return g
   },
   selectDirectoryCategory: function() {
-    return S
+    return C
   },
   fetchGuildEntriesForIds: function() {
     return _
@@ -71,7 +71,7 @@ let f = l(async (e, t) => {
       })
     } catch (e) {}
   }, 200);
-async function p(e, t, n) {
+async function m(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.DirectoryEntryCategories.UNCATEGORIZED,
     l = await o.default.post({
       url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),
@@ -95,7 +95,7 @@ async function p(e, t, n) {
   })
 }
 
-function m(e, t) {
+function p(e, t) {
   o.default.delete({
     url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),
     trackedActionData: {
@@ -145,7 +145,7 @@ let E = l(async (e, t) => {
       })
     }
   }, 200),
-  C = e => {
+  S = e => {
     r.default.dispatch({
       type: "GUILD_DIRECTORY_SEARCH_CLEAR",
       channelId: e
@@ -165,7 +165,7 @@ let E = l(async (e, t) => {
       channelId: e,
       entry: l.body
     })
-  }, S = (e, t) => {
+  }, C = (e, t) => {
     r.default.dispatch({
       type: "GUILD_DIRECTORY_CATEGORY_SELECT",
       channelId: e,

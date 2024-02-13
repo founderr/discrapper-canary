@@ -12,11 +12,11 @@ s("884691");
 var r = s("819855"),
   l = s("841098");
 (a = n || (n = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM";
-let u = "premium_tier_2_gradient",
-  o = "premium_tier_2_fill",
+let o = "premium_tier_2_gradient",
+  u = "premium_tier_2_fill",
   d = "white_gradient",
   c = (0, i.jsxs)("linearGradient", {
-    id: u,
+    id: o,
     x1: "0%",
     y1: "0%",
     x2: "100%",
@@ -40,7 +40,7 @@ let u = "premium_tier_2_gradient",
     })]
   }),
   _ = (0, i.jsxs)("linearGradient", {
-    id: o,
+    id: u,
     x1: "0%",
     y1: "0%",
     x2: "100%",
@@ -145,7 +145,7 @@ var S = e => {
   let {
     className: t,
     variant: s
-  } = e, a = (0, l.default)(), n = (0, r.isThemeDark)(a) ? d : u, c = (0, r.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(o, ")");
+  } = e, a = (0, l.default)(), n = (0, r.isThemeDark)(a) ? d : o, c = (0, r.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(u, ")");
   switch (s) {
     case 0:
       return (0, i.jsx)(f, {

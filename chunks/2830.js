@@ -15,12 +15,12 @@ var a = n("37983"),
   c = n("777274"),
   f = n("76813"),
   h = n("992207"),
-  p = n("374014"),
-  m = n("336804"),
+  m = n("374014"),
+  p = n("336804"),
   E = n("311197"),
-  C = n("830251"),
+  S = n("830251"),
   g = n("170643"),
-  S = n("550410"),
+  C = n("550410"),
   _ = n("124824"),
   I = n("640553"),
   T = n("104815"),
@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("980423"),
   O = n("191145"),
   y = n("598785"),
-  b = n("226735"),
-  P = n("340513"),
+  P = n("226735"),
+  b = n("340513"),
   D = n("99795"),
   U = n("49111"),
   w = n("782340"),
@@ -45,7 +45,7 @@ function k(e) {
   let {
     channelId: t,
     guildId: n
-  } = e, l = Date.now(), s = (0, u.useStateFromStores)([M.default, O.default], () => o(M.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, C.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
+  } = e, l = Date.now(), s = (0, u.useStateFromStores)([M.default, O.default], () => o(M.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, S.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
   return 0 === s.length ? null : (0, a.jsx)(a.Fragment, {
     children: s.map((e, t) => (0, a.jsx)(d.Tooltip, {
       position: "bottom",
@@ -75,20 +75,20 @@ function V(e) {
     inCall: i,
     isChatOpen: r,
     exitFullScreen: o
-  } = e, C = n.id, {
+  } = e, S = n.id, {
     voiceParticipantsHidden: M,
     selectedParticipant: j,
     userParticipantCount: w
   } = (0, u.useStateFromStoresObject)([O.default], () => ({
-    selectedParticipant: O.default.getSelectedParticipant(C),
-    voiceParticipantsHidden: O.default.getVoiceParticipantsHidden(C),
-    userParticipantCount: O.default.getUserParticipantCount(C)
-  }), [C]), V = (0, y.default)(n), {
+    selectedParticipant: O.default.getSelectedParticipant(S),
+    voiceParticipantsHidden: O.default.getVoiceParticipantsHidden(S),
+    userParticipantCount: O.default.getUserParticipantCount(S)
+  }), [S]), V = (0, y.default)(n), {
     preventIdle: B,
     allowIdle: H
-  } = (0, S.usePreventIdle)("popup"), G = [];
+  } = (0, C.usePreventIdle)("popup"), G = [];
   if (V) {
-    let e = (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM ? (0, p.decodeStreamKey)(j.id) : void 0,
+    let e = (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(j.id) : void 0,
       t = (null == j ? void 0 : j.type) === D.ParticipantTypes.ACTIVITY ? j.id : void 0;
     G.push((0, a.jsx)(x.default, {
       className: F.button,
@@ -100,15 +100,15 @@ function V(e) {
     }, "invite-button"))
   }
   return M && G.push((0, a.jsx)(k, {
-    channelId: C,
+    channelId: S,
     guildId: n.guild_id
   }, "current-speaker")), G.push((0, a.jsx)(h.default, {
     className: F.button,
-    channelId: C
+    channelId: S
   }, "clips-enabled-indicator")), (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM && (G.push((0, a.jsx)(g.default, {
     className: F.button,
     participant: j
-  }, "warning")), G.push((0, a.jsx)(m.default, {
+  }, "warning")), G.push((0, a.jsx)(p.default, {
     size: L.default.Sizes.LARGE,
     className: F.button,
     participant: j,
@@ -116,7 +116,7 @@ function V(e) {
   }, "live-indicator"))), M && G.push((0, a.jsx)(d.Popout, {
     position: "bottom",
     renderPopout: () => (0, a.jsx)(_.default, {
-      children: (0, a.jsx)(P.default, {
+      children: (0, a.jsx)(b.default, {
         channel: n
       })
     }),
@@ -134,10 +134,10 @@ function V(e) {
     }
   }, "call-members-popout")), i && G.push(null != j ? (0, a.jsx)(v.default, {
     className: F.button,
-    channelId: C
+    channelId: S
   }, "deselect-participant") : (0, a.jsx)(A.default, {
     className: F.button,
-    channelId: C,
+    channelId: S,
     isHorizontal: !0
   }, "select-participant")), !t && G.push((0, a.jsx)(f.default, {
     className: F.button
@@ -154,8 +154,8 @@ function V(e) {
         closePopout: t
       } = e;
       return (0, a.jsx)(_.default, {
-        children: (0, a.jsx)(b.default, {
-          channelId: C,
+        children: (0, a.jsx)(P.default, {
+          channelId: S,
           onClose: t,
           appContext: s,
           exitFullScreen: o

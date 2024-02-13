@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,18 +15,18 @@ var a = n("37983"),
   c = n("487269"),
   f = n("537560"),
   h = n("782340"),
-  p = n("16064");
+  m = n("16064");
 
-function m(e) {
+function p(e) {
   let {
     channel: t
-  } = e, [n, m] = l.useState(!1), E = (0, s.useStateFromStores)([r.default, o.default], () => {
+  } = e, [n, p] = l.useState(!1), E = (0, s.useStateFromStores)([r.default, o.default], () => {
     let e = o.default.getCurrentUser();
     return null == e || t.isNSFW() && (!e.nsfwAllowed || !r.default.didAgree(t.getGuildId()))
-  }, [t]), C = l.useCallback(() => {
-    m(!1)
+  }, [t]), S = l.useCallback(() => {
+    p(!1)
   }, []), g = l.useCallback(() => {
-    !n && (0, c.trackThreadBrowserOpened)("Popout"), m(!n)
+    !n && (0, c.trackThreadBrowserOpened)("Popout"), p(!n)
   }, [n]);
   return (0, a.jsx)(i.Popout, {
     animation: i.Popout.Animation.NONE,
@@ -34,13 +34,13 @@ function m(e) {
     align: "right",
     autoInvert: !1,
     shouldShow: n,
-    onRequestClose: C,
+    onRequestClose: S,
     renderPopout: function() {
       return (0, a.jsx)(i.Dialog, {
         children: (0, a.jsx)(f.default, {
-          className: p.browser,
+          className: m.browser,
           channel: t,
-          onClose: C
+          onClose: S
         })
       })
     },
@@ -50,7 +50,7 @@ function m(e) {
       } = t;
       return (0, a.jsx)(d.Icon, {
         ...e,
-        className: p.icon,
+        className: m.icon,
         onClick: g,
         icon: u.default,
         "aria-label": h.default.Messages.THREADS,

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   },
   openEffectsUpsellModal: function() {
-    return m
+    return p
   }
 });
 var a = n("37983");
@@ -20,12 +20,12 @@ var l = n("77078"),
   f = n("331470"),
   h = n("534044");
 
-function p(e) {
+function m(e) {
   let {
     onClose: t,
     analytics: n,
     ...l
-  } = e, p = c.default.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
+  } = e, m = c.default.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
     onPressMore: function() {
       (0, s.default)(), t(), u.default.track(d.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
         location_section: d.AnalyticsSections.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
@@ -35,8 +35,8 @@ function p(e) {
   });
   return (0, a.jsx)(r.default, {
     title: c.default.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_HEADER_2,
-    glowUp: p,
-    body: p,
+    glowUp: m,
+    body: m,
     artContainerClassName: f.artContainer,
     enableArtBoxShadow: !1,
     type: n.type,
@@ -60,7 +60,7 @@ function p(e) {
   })
 }
 
-function m(e) {
+function p(e) {
   let {
     analytics: t
   } = e;

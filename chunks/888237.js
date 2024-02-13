@@ -22,14 +22,14 @@ function d(e) {
     title: c,
     description: f,
     userCount: h,
-    onClick: p,
-    highlight: m
+    onClick: m,
+    highlight: p
   } = e;
   return (0, a.jsxs)(i.Clickable, {
-    className: s(u.container, t, null != m && {
-      [u.pulse]: m
+    className: s(u.container, t, null != p && {
+      [u.pulse]: p
     }),
-    onClick: p,
+    onClick: m,
     children: [(0, a.jsx)("div", {
       style: {
         backgroundColor: d

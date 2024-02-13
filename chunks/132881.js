@@ -23,7 +23,7 @@ function c(e) {
     messageHistoryState: f
   } = (0, i.useServerActivityForUser)(t, n), {
     messageCount: h
-  } = f, p = new Intl.NumberFormat(u.default.getLocale()).format(h);
+  } = f, m = new Intl.NumberFormat(u.default.getLocale()).format(h);
   return (0, a.jsx)(l.FormItem, {
     title: u.default.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
     titleClassName: d.infoTitle,
@@ -44,7 +44,7 @@ function c(e) {
         }) : (0, a.jsx)(l.Text, {
           variant: "text-sm/semibold",
           color: "interactive-normal",
-          children: p
+          children: m
         }),
         onNavigate: h > 0 ? () => null == c ? void 0 : c(o.ModViewPanel.MESSAGE_HISTORY) : void 0
       })

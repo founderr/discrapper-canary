@@ -15,16 +15,16 @@ var a = n("37983"),
   c = n("391591"),
   f = n("397485"),
   h = n("738258"),
-  p = n("49111"),
-  m = n("182797");
+  m = n("49111"),
+  p = n("182797");
 
 function E(e) {
   let {
     channelId: t,
     guildId: n,
     userId: E,
-    containerDimensions: C
-  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), [S, _] = l.useState([]), I = S.length < 50;
+    containerDimensions: S
+  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), [C, _] = l.useState([]), I = C.length < 50;
   l.useEffect(() => {
     function e(e) {
       var a;
@@ -36,8 +36,8 @@ function E(e) {
         animationId: h
       } = e;
       if (null != E && E !== i || d.default.getEnabled() && (0, c.default)(null !== (a = null == r ? void 0 : r.name) && void 0 !== a ? a : "")) return;
-      let m = null != r && null != o && null != h;
-      if (l === t && !g && I && m) {
+      let p = null != r && null != o && null != h;
+      if (l === t && !g && I && p) {
         let e = (0, f.getEffectUrl)(r),
           a = null != r.id && !r.animated,
           l = {
@@ -48,7 +48,7 @@ function E(e) {
             url: e,
             userId: i
           };
-        _(e => [...e, l]), u.default.trackWithMetadata(p.AnalyticEvents.VOICE_CHANNEL_EFFECT_VIEWED, {
+        _(e => [...e, l]), u.default.trackWithMetadata(m.AnalyticEvents.VOICE_CHANNEL_EFFECT_VIEWED, {
           channel_id: t,
           guild_id: n
         })
@@ -66,14 +66,14 @@ function E(e) {
     })
   }, []);
   return g ? null : (0, a.jsx)("div", {
-    className: m.effectsWrapper,
+    className: p.effectsWrapper,
     style: {
-      width: C.width
+      width: S.width
     },
     children: (0, a.jsx)("div", {
-      className: m.effects,
-      children: S.map(e => (0, a.jsx)(h.default, {
-        containerDimensions: C,
+      className: p.effects,
+      children: C.map(e => (0, a.jsx)(h.default, {
+        containerDimensions: S,
         effect: e,
         onComplete: T
       }, e.id))

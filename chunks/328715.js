@@ -16,12 +16,12 @@ var l = n("414456"),
   c = n("442939"),
   f = n("207273"),
   h = n("679653"),
-  p = n("619335"),
-  m = n("534222"),
+  m = n("619335"),
+  p = n("534222"),
   E = n("822516"),
-  C = n("941298"),
+  S = n("941298"),
   g = n("539938"),
-  S = n("557809"),
+  C = n("557809"),
   _ = n("367376"),
   I = n("616718"),
   T = n("550410"),
@@ -35,8 +35,8 @@ var l = n("414456"),
   L = n("2830"),
   O = n("836087"),
   y = n("843624"),
-  b = n("99795"),
-  P = n("49111"),
+  P = n("99795"),
+  b = n("49111"),
   D = n("843455"),
   U = n("782340"),
   w = n("125738"),
@@ -54,7 +54,7 @@ function k(e) {
       maxVisibleUsers: 5,
       guildId: n.getGuildId(),
       channelId: n.id,
-      disableInteraction: l === P.AppContext.POPOUT || s === P.ChannelLayouts.FULL_SCREEN
+      disableInteraction: l === b.AppContext.POPOUT || s === b.ChannelLayouts.FULL_SCREEN
     })
   })
 }
@@ -88,10 +88,10 @@ function B(e) {
       channel: s
     } = e,
     i = (0, j.default)(s, !0),
-    o = (0, m.useActiveEvent)(s.id),
+    o = (0, p.useActiveEvent)(s.id),
     u = null != o ? (0, E.getNextRecurrenceIdInEvent)(o) : null,
     c = null != o;
-  if ((null == l ? void 0 : l.type) === b.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
+  if ((null == l ? void 0 : l.type) === P.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(A.default.Divider, {
       className: w.divider
     }), (0, a.jsx)(x.default, {
@@ -107,7 +107,7 @@ function B(e) {
       focusedParticipant: l
     })]
   }));
-  else if ((null == l ? void 0 : l.type) === b.ParticipantTypes.STREAM) {
+  else if ((null == l ? void 0 : l.type) === P.ParticipantTypes.STREAM) {
     let e = l.user,
       n = l.stream;
     t = (0, a.jsxs)(a.Fragment, {
@@ -123,7 +123,7 @@ function B(e) {
         focusedParticipant: l
       })]
     })
-  } else c && (t = (0, a.jsx)(C.default, {
+  } else c && (t = (0, a.jsx)(S.default, {
     guildEvent: o,
     recurrenceId: u
   }));
@@ -140,17 +140,17 @@ function H(e) {
     appContext: o,
     inCall: u,
     isChatOpen: d,
-    exitFullScreen: m
+    exitFullScreen: p
   } = e, {
     focusedParticipant: E
   } = (0, i.useStateFromStoresObject)([R.default], () => ({
     focusedParticipant: R.default.getSelectedParticipant(t.id),
     participantsOpen: R.default.getParticipantsOpen(t.id)
-  }), [t.id]), C = (0, h.default)(t), I = (0, p.default)(t), [T] = (0, c.default)((null == E ? void 0 : E.type) === b.ParticipantTypes.ACTIVITY ? [E.id] : []), x = U.default.Messages.VOICE_CHANNEL;
+  }), [t.id]), S = (0, h.default)(t), I = (0, m.default)(t), [T] = (0, c.default)((null == E ? void 0 : E.type) === P.ParticipantTypes.ACTIVITY ? [E.id] : []), x = U.default.Messages.VOICE_CHANNEL;
   t.isDM() ? x = U.default.Messages.DM : t.isGroupDM() && (x = U.default.Messages.GROUP_DM);
   let j = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
     O = t.isGuildVoice() && u && null != j && j.length > 0,
-    k = (0, i.useStateFromStores)([v.default], () => v.default.can(P.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
+    k = (0, i.useStateFromStores)([v.default], () => v.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
     V = O ? (0, a.jsx)(r.Tooltip, {
       text: U.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
@@ -199,20 +199,20 @@ function H(e) {
       className: (0, M.getThemeClass)(D.ThemeTypes.DARK),
       childrenBottom: V,
       toolbar: (0, a.jsx)(L.default, {
-        inPopout: o === P.AppContext.POPOUT,
+        inPopout: o === b.AppContext.POPOUT,
         channel: t,
         appContext: o,
         inCall: u,
         isChatOpen: d,
-        exitFullScreen: m
+        exitFullScreen: p
       }),
       children: [null != I ? (0, a.jsx)(A.default.Icon, {
         icon: I,
         disabled: !0,
         "aria-label": x
       }) : null, (0, a.jsx)(A.default.Title, {
-        children: C
-      }), (0, a.jsx)(S.HeaderGuildBreadcrumb, {
+        children: S
+      }), (0, a.jsx)(C.HeaderGuildBreadcrumb, {
         channel: t,
         guild: l
       }), (0, a.jsx)(B, {

@@ -16,12 +16,12 @@ var l = n("627445"),
   c = n("245463"),
   f = n("42887"),
   h = n("697218"),
-  p = n("991170"),
-  m = n("456127"),
+  m = n("991170"),
+  p = n("456127"),
   E = n("888814"),
-  C = n("943917"),
+  S = n("943917"),
   g = n("380116"),
-  S = n("149882"),
+  C = n("149882"),
   _ = n("568009"),
   I = n("49111"),
   T = n("621262");
@@ -48,21 +48,21 @@ function v(e) {
   }), M = (0, r.default)(f.default);
   if (null == t || null != x) return null;
   let R = (0, c.default)(t),
-    j = p.default.can({
+    j = m.default.can({
       permission: I.Permissions.ADD_REACTIONS,
       user: v,
       context: t
     });
   return (0, a.jsxs)("div", {
     className: T.voiceEffectsActionBar,
-    children: [R && (0, a.jsx)(S.default, {
+    children: [R && (0, a.jsx)(C.default, {
       channel: t,
       themeable: l
     }), j && (0, a.jsx)(g.default, {
       channel: t
-    }), A && M && (0, a.jsx)(m.default, {
+    }), A && M && (0, a.jsx)(p.default, {
       channel: t
-    }), N && n && (0, a.jsx)(E.default, {}), N && n && (0, a.jsx)(C.default, {
+    }), N && n && (0, a.jsx)(E.default, {}), N && n && (0, a.jsx)(S.default, {
       channel: t
     }), N && n && (0, a.jsx)(_.default, {})]
   })
