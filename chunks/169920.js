@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("65597"),
   i = n("84339"),
   r = n("427953"),
@@ -32,11 +32,11 @@ function h(e) {
       activityPanelMode: u.default.getActivityPanelMode()
     }
   }), E = (0, r.useIsActivitiesInTextEnabled)(h, "ActivityPanelUI"), S = (0, i.default)(h);
-  if (a.useEffect(() => {
+  if (l.useEffect(() => {
       null != h && null == S && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
     }, [h, S]), !E) return null;
   let g = null == m ? void 0 : m.applicationId;
-  return p !== f.ActivityPanelModes.PANEL || null == g ? null : null == h || null == m || (0, d.default)(h) || null == g ? null : (0, l.jsx)(c.default, {
+  return p !== f.ActivityPanelModes.PANEL || null == g ? null : null == h || null == m || (0, d.default)(h) || null == g ? null : (0, a.jsx)(c.default, {
     maxHeight: t,
     connectedChannelId: h,
     renderExternalHeader: n

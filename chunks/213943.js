@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("561288"),
+var l = n("561288"),
   s = n("945330"),
   i = n("981913"),
   r = n("782340");
@@ -16,10 +16,10 @@ function o(e) {
     channel: t,
     ...n
   } = e;
-  return (0, l.jsx)(i.CenterControlButton, {
+  return (0, a.jsx)(i.CenterControlButton, {
     ...n,
     iconComponent: s.default,
     label: r.default.Messages.DISMISS,
-    onClick: () => a.default.stopRinging(t.id)
+    onClick: () => l.default.stopRinging(t.id)
   })
 }

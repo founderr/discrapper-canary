@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("446674"),
-  a = n("6263"),
+var a = n("446674"),
+  l = n("6263"),
   s = n("233069"),
   i = n("42203"),
   r = n("305961"),
@@ -13,12 +13,12 @@ var l = n("446674"),
   u = n("49111");
 
 function d(e, t) {
-  let n = (0, l.useStateFromStores)([r.default], () => r.default.getGuild(t)),
-    d = (0, l.useStateFromStores)([i.default], () => i.default.getChannel(e)),
-    c = (0, l.useStateFromStores)([o.default], () => o.default.getChannelId(t)),
+  let n = (0, a.useStateFromStores)([r.default], () => r.default.getGuild(t)),
+    d = (0, a.useStateFromStores)([i.default], () => i.default.getChannel(e)),
+    c = (0, a.useStateFromStores)([o.default], () => o.default.getChannelId(t)),
     {
       showOnboardingHome: f
-    } = a.default.useExperiment({
+    } = l.default.useExperiment({
       location: "52235f_1"
     }, {
       autoTrackExposure: !1

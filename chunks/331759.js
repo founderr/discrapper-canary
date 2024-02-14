@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return E
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("627445"),
-  s = n.n(a),
+var l = n("627445"),
+  s = n.n(l),
   i = n("446674"),
   r = n("77078"),
   o = n("244201"),
@@ -20,7 +20,7 @@ var a = n("627445"),
   p = n("782340");
 
 function E(e) {
-  var t, a;
+  var t, l;
   let {
     applicationId: E,
     stream: S,
@@ -31,12 +31,12 @@ function E(e) {
     guildScheduledEvent: T,
     ...v
   } = e, x = (0, o.useAppContext)(), N = null == g ? void 0 : g.getGuildId(), A = (0, i.useStateFromStores)([u.default], () => null != N ? u.default.getGuild(N) : null, [N]);
-  return (t = A, a = g, null != t && null != a && d.default.can(m.Permissions.CREATE_INSTANT_INVITE, a)) ? (0, l.jsx)(h.default, {
+  return (t = A, l = g, null != t && null != l && d.default.can(m.Permissions.CREATE_INSTANT_INVITE, l)) ? (0, a.jsx)(h.default, {
     onClick: () => {
       s(null != A, "guild cannot be null"), s(null != g, "channel cannot be null"), ! function(e) {
         let {
           guild: t,
-          channel: a,
+          channel: l,
           streamUserId: s,
           applicationId: i,
           appContext: o,
@@ -48,14 +48,14 @@ function E(e) {
           let {
             default: e
           } = await n.el("310688").then(n.bind(n, "310688"));
-          return n => (0, l.jsx)(e, {
+          return n => (0, a.jsx)(e, {
             ...n,
             guild: t,
-            channel: a,
+            channel: l,
             streamUserId: s,
             applicationId: i,
             analyticsLocation: d,
-            source: a.isGuildStageVoice() ? m.InstantInviteSources.STAGE_CHANNEL : m.InstantInviteSources.STREAM_INVITE,
+            source: l.isGuildStageVoice() ? m.InstantInviteSources.STAGE_CHANNEL : m.InstantInviteSources.STREAM_INVITE,
             guildScheduledEvent: c
           })
         }, {

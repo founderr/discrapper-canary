@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
+var l = n("446674"),
   s = n("289867"),
   i = n("716241"),
   r = n("982108"),
@@ -19,8 +19,8 @@ var a = n("446674"),
 function h(e) {
   let {
     channelId: t
-  } = e, n = (0, a.useStateFromStores)([r.default], () => r.default.getSection(t)), h = (0, a.useStateFromStores)([o.default], () => o.default.getGuildId()), m = n === c.ChannelSections.MEMBERS;
-  return (0, l.jsx)(d.Icon, {
+  } = e, n = (0, l.useStateFromStores)([r.default], () => r.default.getSection(t)), h = (0, l.useStateFromStores)([o.default], () => o.default.getGuildId()), m = n === c.ChannelSections.MEMBERS;
+  return (0, a.jsx)(d.Icon, {
     tooltip: m ? f.default.Messages.MEMBER_LIST_SHOWN : f.default.Messages.MEMBER_LIST_HIDDEN,
     icon: u.default,
     onClick: () => {

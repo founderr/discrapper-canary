@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var l = n("884691"),
-  a = n("917351"),
-  s = n.n(a),
+var a = n("884691"),
+  l = n("917351"),
+  s = n.n(l),
   i = n("748820"),
   r = n("862337"),
   o = n("760679"),
@@ -17,16 +17,16 @@ let c = s.debounce(o.startEmojiHose, d.EVENT_TICK_RATE, {
 });
 
 function f(e, t, n) {
-  let a = l.useRef((0, i.v4)()),
-    s = l.useRef(new r.Interval),
-    f = l.useCallback(l => {
-      l.lastUpdatedAt = Date.now(), (0, o.updateEmojiHose)(l, e, n), (0, o.startEmojiHose)(t, n, l)
+  let l = a.useRef((0, i.v4)()),
+    s = a.useRef(new r.Interval),
+    f = a.useCallback(a => {
+      a.lastUpdatedAt = Date.now(), (0, o.updateEmojiHose)(a, e, n), (0, o.startEmojiHose)(t, n, a)
     }, [t, n, e]),
-    h = l.useCallback((l, r, c) => {
-      a.current = (0, i.v4)();
+    h = a.useCallback((a, r, c) => {
+      l.current = (0, i.v4)();
       let h = {
-        ...l,
-        id: a.current,
+        ...a,
+        id: l.current,
         x: r,
         y: c,
         userId: e,
@@ -35,10 +35,10 @@ function f(e, t, n) {
       };
       (0, o.startEmojiHose)(t, n, h), (0, o.updateEmojiHose)(h, e, n), s.current.start(d.EMOJI_HOSE_PING_DELAY, () => f(h))
     }, [e, t, n, f]),
-    m = l.useCallback((l, i, r) => {
+    m = a.useCallback((a, i, r) => {
       let h = {
-        ...l,
-        id: a.current,
+        ...a,
+        id: l.current,
         x: i,
         y: r,
         userId: e,
@@ -47,10 +47,10 @@ function f(e, t, n) {
       };
       c(t, n, h), (0, o.updateEmojiHose)(h, e, n), s.current.start(d.EMOJI_HOSE_PING_DELAY, () => f(h))
     }, [e, t, n, f]),
-    p = l.useCallback((l, i, r) => {
-      c.cancel(), (0, o.stopEmojiHose)(t, n, a.current), (0, o.updateEmojiHose)({
-        ...l,
-        id: a.current,
+    p = a.useCallback((a, i, r) => {
+      c.cancel(), (0, o.stopEmojiHose)(t, n, l.current), (0, o.updateEmojiHose)({
+        ...a,
+        id: l.current,
         x: i,
         y: r,
         userId: e,
@@ -58,8 +58,8 @@ function f(e, t, n) {
         lastUpdatedAt: Date.now()
       }, e, n), s.current.stop()
     }, [t, n, e]),
-    E = l.useCallback((e, t, n) => m(e, t, n), [m]);
-  return l.useMemo(() => ({
+    E = a.useCallback((e, t, n) => m(e, t, n), [m]);
+  return a.useMemo(() => ({
     handleMouseDown: h,
     handleMouseMove: m,
     handleMouseUp: p,

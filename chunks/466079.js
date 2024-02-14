@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("124299"),
@@ -17,11 +17,11 @@ function d(e, t) {
 }
 
 function c(e, t, n) {
-  let l = t - e;
-  for (; l > 0;) {
+  let a = t - e;
+  for (; a > 0;) {
     let t = e,
-      a = Math.floor(l / 2);
-    n(t += a) ? (e = t + 1, l -= a + 1) : l = a
+      l = Math.floor(a / 2);
+    n(t += l) ? (e = t + 1, a -= l + 1) : a = l
   }
   return e
 }
@@ -34,7 +34,7 @@ function f(e) {
     keyExtractor: f,
     paddingTop: h = 0,
     paddingBottom: m = 0
-  } = e, [p, E] = a.useState({
+  } = e, [p, E] = l.useState({
     width: 0,
     height: 0
   }), {
@@ -45,33 +45,33 @@ function f(e) {
     tileWidth: v,
     rows: x,
     columns: N
-  } = a.useMemo(() => (function(e, t, n) {
+  } = l.useMemo(() => (function(e, t, n) {
     let {
-      rows: l,
-      columns: a,
+      rows: a,
+      columns: l,
       tileWidth: s
     } = function(e, t, n) {
-      let l;
-      let a = Math.floor(t / 25);
-      l = e > 25 ? c(a, t, e => {
-        let l = d(e, t),
-          a = function(e, t) {
+      let a;
+      let l = Math.floor(t / 25);
+      a = e > 25 ? c(l, t, e => {
+        let a = d(e, t),
+          l = function(e, t) {
             let n = e / u;
             return Math.ceil((t - n) / (8 + n)) + 1
           }(e, n);
-        return l * a > 25
-      }) : c(a, t, l => {
-        let a = d(l, t),
+        return a * l > 25
+      }) : c(l, t, a => {
+        let l = d(a, t),
           s = function(e, t) {
             let n = e / u;
             return Math.floor((t - n) / (8 + n)) + 1
-          }(l, n);
-        return a * s >= e
+          }(a, n);
+        return l * s >= e
       }) - 1;
-      let s = d(l, t),
+      let s = d(a, t),
         i = Math.ceil(e / s);
       return {
-        tileWidth: l,
+        tileWidth: a,
         columns: Math.max(1, s),
         rows: i
       }
@@ -81,34 +81,34 @@ function f(e) {
         width: s
       },
       tileWidth: s,
-      rows: l,
-      columns: a
+      rows: a,
+      columns: l
     }
   })(C, _, I), [C, _, I]), A = N + 1, M = A * v + (A - 1) * 8, R = M <= S, j = Math.floor(v / u) + 8, L = Math.max(0, I - j * x) / 2;
-  return (0, l.jsx)(r.default, {
+  return (0, a.jsx)(r.default, {
     fade: !0,
     className: n,
     listPadding: [h + L, 0, m + L - 8, 8],
     renderRow: function(e) {
       var t;
       let n = e * N;
-      return (0, l.jsx)("div", {
+      return (0, a.jsx)("div", {
         className: o.row,
         children: null == s ? void 0 : null === (t = s.slice(n, n + N)) || void 0 === t ? void 0 : t.map((e, t) => {
-          var a;
+          var l;
           let s = n + t;
-          return (0, l.jsx)("div", {
+          return (0, a.jsx)("div", {
             style: T,
             className: i(o.tile, {
               [o.padColumn]: R,
               [o.noVerticalMargin]: s >= (x - 1) * N,
               [o.noHorizontalMargin]: (s + 1) % N == 0 || s === C - 1
             }),
-            children: (0, l.jsx)("div", {
+            children: (0, a.jsx)("div", {
               className: o.tileSizer,
               children: e(v)
             })
-          }, null !== (a = null == f ? void 0 : f(s)) && void 0 !== a ? a : s)
+          }, null !== (l = null == f ? void 0 : f(s)) && void 0 !== l ? l : s)
         })
       }, e)
     },

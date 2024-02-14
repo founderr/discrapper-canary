@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var l = n("77078"),
   s = n("466857"),
   i = n("246053"),
   r = n("791679"),
@@ -25,60 +25,60 @@ var a = n("77078"),
       searchResults: S,
       searchFetching: g
     } = e;
-    if (g) t = (0, l.jsx)("div", {
+    if (g) t = (0, a.jsx)("div", {
       className: u.pageContainer,
-      children: (0, l.jsx)(a.Spinner, {
+      children: (0, a.jsx)(l.Spinner, {
         className: u.spinner
       })
     });
     else if (0 === S.length) {
       let e = null != E ? o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
         addServerHook: function(e, t) {
-          return (0, l.jsx)(a.Anchor, {
+          return (0, a.jsx)(l.Anchor, {
             onClick: E,
             children: e
           }, t)
         }
       }) : o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_NO_ADD;
-      t = (0, l.jsxs)("div", {
+      t = (0, a.jsxs)("div", {
         className: d.emptySearchWrapper,
-        children: [(0, l.jsx)("img", {
+        children: [(0, a.jsx)("img", {
           className: d.emptySearchImage,
           alt: "",
           src: c
-        }), (0, l.jsx)(a.Heading, {
+        }), (0, a.jsx)(l.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
           className: d.emptySearchTitle,
           children: o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_TITLE
-        }), (0, l.jsx)(a.Text, {
+        }), (0, a.jsx)(l.Text, {
           variant: "text-md/normal",
           color: "header-secondary",
           className: d.emptySearchSubtitle,
           children: e
         })]
       })
-    } else t = (0, l.jsx)("div", {
+    } else t = (0, a.jsx)("div", {
       className: u.cardsContainer,
-      children: S.map(e => (0, l.jsx)(r.default, {
+      children: S.map(e => (0, a.jsx)(r.default, {
         entry: e
       }, e.guildId))
     });
-    return (0, l.jsx)("div", {
+    return (0, a.jsx)("div", {
       className: u.pageContainer,
-      children: (0, l.jsxs)(a.ScrollerAuto, {
+      children: (0, a.jsxs)(l.ScrollerAuto, {
         className: u.scroller,
-        children: [(0, l.jsxs)("div", {
+        children: [(0, a.jsxs)("div", {
           className: d.searchHeader,
-          children: [(0, l.jsxs)("div", {
+          children: [(0, a.jsxs)("div", {
             className: d.headerTitleWrapper,
-            children: [(0, l.jsx)(a.Clickable, {
+            children: [(0, a.jsx)(l.Clickable, {
               onClick: m,
               className: d.arrow,
-              children: (0, l.jsx)(i.default, {
+              children: (0, a.jsx)(i.default, {
                 direction: i.default.Directions.LEFT
               })
-            }), (0, l.jsx)(a.Heading, {
+            }), (0, a.jsx)(l.Heading, {
               variant: "heading-xl/semibold",
               className: d.searchPageTitle,
               children: o.default.Messages.DIRECTORY_SEARCH_RESULTS_HEADER.format({
@@ -86,7 +86,7 @@ var a = n("77078"),
                 query: h
               })
             })]
-          }), (0, l.jsx)(s.default, {
+          }), (0, a.jsx)(s.default, {
             searchTerm: n,
             className: d.searchPageBox,
             inputClassName: d.searchPageInput,

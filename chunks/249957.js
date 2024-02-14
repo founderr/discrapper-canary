@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return _
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("414456"),
-  s = n.n(a),
+var l = n("414456"),
+  s = n.n(l),
   i = n("65597"),
   r = n("77078"),
   o = n("26989"),
@@ -26,23 +26,23 @@ function C(e) {
   let {
     userId: t,
     guildId: n
-  } = e, a = (0, c.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
-  return (0, l.jsxs)("div", {
+  } = e, l = (0, c.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
+  return (0, a.jsxs)("div", {
     className: s(g.header),
     style: {
-      backgroundColor: a
+      backgroundColor: l
     },
-    children: [(0, l.jsxs)("div", {
+    children: [(0, a.jsxs)("div", {
       className: s(g.headerTitle),
-      children: [(0, l.jsx)(d.default, {
+      children: [(0, a.jsx)(d.default, {
         width: 16,
         height: 16
-      }), (0, l.jsx)(r.Heading, {
+      }), (0, a.jsx)(r.Heading, {
         variant: "heading-md/semibold",
         children: "Mod View"
       })]
-    }), (0, l.jsx)("div", {
-      children: (0, l.jsx)(r.KeyCombo, {
+    }), (0, a.jsx)("div", {
+      children: (0, a.jsx)(r.KeyCombo, {
         shortcut: "esc",
         keyClassName: g.keyComboInner,
         className: g.keyComboContainer
@@ -55,33 +55,33 @@ function _(e) {
   let {
     userId: t,
     guildId: n,
-    location: a,
+    location: l,
     className: d,
     onNavigate: _
   } = e, I = (0, i.default)([u.default], () => u.default.getUser(t), [t]), T = (0, i.default)([o.default], () => o.default.getMember(n, t), [n, t]), v = (0, c.useProfileThemedPanelBackground)(t, n);
-  return null == I || null == T ? null : (0, l.jsxs)(r.Scroller, {
+  return null == I || null == T ? null : (0, a.jsxs)(r.Scroller, {
     className: s(g.container, d),
     style: {
       backgroundColor: v
     },
-    children: [(0, l.jsx)(C, {
+    children: [(0, a.jsx)(C, {
       userId: t,
       guildId: n
-    }), (0, l.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: s(g.innerContainer),
-      children: [(0, l.jsx)(E.default, {
+      children: [(0, a.jsx)(E.default, {
         member: T
-      }), (0, l.jsx)(S.default, {
+      }), (0, a.jsx)(S.default, {
         userId: t,
         guildId: n
-      }), (0, l.jsx)(p.default, {
+      }), (0, a.jsx)(p.default, {
         member: T,
         onNavigate: _
-      }), (0, l.jsx)(h.default, {
+      }), (0, a.jsx)(h.default, {
         member: T
-      }), (0, l.jsx)(f.default, {
+      }), (0, a.jsx)(f.default, {
         member: T
-      }), (0, l.jsx)(m.default, {
+      }), (0, a.jsx)(m.default, {
         member: T
       })]
     })]

@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var l = n("582415"),
-  a = n("387111"),
+var a = n("582415"),
+  l = n("387111"),
   s = n("782340");
 
 function i(e, t, n) {
-  let i = (0, l.useGetStreamApplication)(n),
-    r = a.default.getName(e.getGuildId(), e.id, t);
+  let i = (0, a.useGetStreamApplication)(n),
+    r = l.default.getName(e.getGuildId(), e.id, t);
   return null == n ? r : (null == i ? void 0 : i.name) != null ? s.default.Messages.GO_LIVE_USER_PLAYING.format({
     applicationName: null == i ? void 0 : i.name,
     username: r

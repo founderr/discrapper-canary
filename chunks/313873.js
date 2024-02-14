@@ -42,9 +42,9 @@ var l, i, a = n("37983"),
   k = n("49111"),
   w = n("954016"),
   F = n("782340"),
-  B = n("542371");
+  G = n("542371");
 (i = l || (l = {})).USER_POPOUT = "UserPopout", i.USER_POPOUT_V2 = "UserPopoutV2", i.ACTIVITY_FEED = "ActivityFeed", i.PROFILE = "Profile", i.PROFILE_V2 = "ProfileV2", i.STREAM_PREVIEW = "StreamPreview", i.VOICE_CHANNEL = "VoiceChannel";
-let G = {
+let B = {
     StreamPreview: [108, 60],
     UserPopout: [108, 60],
     UserPopoutV2: [108, 60],
@@ -59,7 +59,7 @@ let G = {
   V = (0, m.default)(class extends s.PureComponent {
     render() {
       return (0, a.jsx)("div", {
-        className: B.timestamp,
+        className: G.timestamp,
         children: this.props.message
       })
     }
@@ -75,7 +75,7 @@ function K(e) {
   return (0, a.jsx)("img", {
     alt: "",
     src: (0, c.isThemeLight)(l) ? i.icon.lightSVG : i.icon.darkSVG,
-    className: B.platformIcon
+    className: G.platformIcon
   })
 }
 class W extends s.PureComponent {
@@ -90,7 +90,7 @@ class W extends s.PureComponent {
     } : e
   }
   getTypeClass(e, t) {
-    return (0, R.getClass)(B, e, this.props.type, t)
+    return (0, R.getClass)(G, e, this.props.type, t)
   }
   isStreamerOnTypeProfile() {
     return (0, v.default)(this.activity) && ("Profile" === this.props.type || "ProfileV2" === this.props.type)
@@ -147,11 +147,11 @@ class W extends s.PureComponent {
     }(null == u ? void 0 : u.type) === k.ActivityTypes.HANG_STATUS && (t = F.default.Messages.STATUS_LEAD_IN_JUST);
     let m = (0, I.getChannelIconComponent)(i, l);
     return null != i && (t = i.name), (0, a.jsxs)("div", {
-      className: B.headerContainer,
+      className: G.headerContainer,
       children: [null != i && null !== m ? (0, a.jsx)(m, {
-        className: o(B.icon)
+        className: o(G.icon)
       }) : null, (0, a.jsx)(f.Heading, {
-        className: (0, R.getClass)(B, "headerText", e ? "EmptyBody" : "Normal"),
+        className: (0, R.getClass)(G, "headerText", e ? "EmptyBody" : "Normal"),
         variant: "heading-deprecated-12/semibold",
         color: "ProfileV2" === r ? "header-primary" : void 0,
         children: (0, a.jsx)(b.default, {
@@ -162,7 +162,7 @@ class W extends s.PureComponent {
   }
   renderXboxImage() {
     return (0, a.jsx)("div", {
-      className: B.assets,
+      className: G.assets,
       children: (0, a.jsx)("img", {
         alt: "",
         src: h.default.get(k.PlatformTypes.XBOX).icon.customPNG,
@@ -174,10 +174,10 @@ class W extends s.PureComponent {
     var t, n, l;
     let i, r;
     if (e.type === k.ActivityTypes.HANG_STATUS) return (0, a.jsx)("div", {
-      className: B.assets,
+      className: G.assets,
       children: (0, a.jsx)(N.default, {
         hangStatusActivity: e,
-        className: o(B.assetsHangStatus, this.getTypeClass("assetsSmallImage", "WithoutLargeImage"))
+        className: o(G.assetsHangStatus, this.getTypeClass("assetsSmallImage", "WithoutLargeImage"))
       })
     });
     let {
@@ -187,7 +187,7 @@ class W extends s.PureComponent {
       application_id: c
     } = e;
     if (null == d || null == d.large_image && null == d.small_image) return null;
-    (0, v.default)(e) && (i = G[u]);
+    (0, v.default)(e) && (i = B[u]);
     let m = (0, C.default)(e),
       p = null != d.large_image ? (0, a.jsx)("img", {
         alt: null !== (t = d.large_text) && void 0 !== t ? t : "",
@@ -195,7 +195,7 @@ class W extends s.PureComponent {
         className: o(this.getTypeClass("assetsLargeImage", this.isStreamerOnTypeProfile() || this.isStreamerOnTypeActivityFeed() ? k.PlatformTypes.TWITCH : ""), {
           [null !== (n = this.getTypeClass("assetsLargeMask")) && void 0 !== n ? n : ""]: null != d.small_image
         }, {
-          [B.assetsLargeImageSpotify]: m
+          [G.assetsLargeImageSpotify]: m
         })
       }) : null;
     if (m) p = (0, a.jsx)(f.Anchor, {
@@ -215,26 +215,26 @@ class W extends s.PureComponent {
             icon: d.small_image,
             size: w.ImageSizes.SMALL
           })) && void 0 !== l ? l : void 0,
-          className: B.assetsLargeImageVoiceChannel,
+          className: G.assetsLargeImageVoiceChannel,
           alt: ""
         })
       })
     }
     return (this.isStreamerOnTypeActivityFeed() && null != e.url && "" !== e.url && (p = (0, a.jsxs)("div", {
-      className: B.twitchImageContainer,
+      className: G.twitchImageContainer,
       children: [(0, a.jsxs)("div", {
-        className: B.twitchImageOverlay,
+        className: G.twitchImageOverlay,
         children: [(0, a.jsx)(f.H, {
-          className: B.streamName,
+          className: G.streamName,
           children: e.name
         }), (0, a.jsx)("div", {
-          className: B.streamGame,
+          className: G.streamGame,
           children: F.default.Messages.STREAMER_PLAYING.format({
             game: e.details
           })
         })]
       }), (0, a.jsx)(f.Anchor, {
-        className: B.twitchBackgroundImage,
+        className: G.twitchBackgroundImage,
         href: e.url,
         children: p
       })]
@@ -251,10 +251,10 @@ class W extends s.PureComponent {
         })
       }
     })), null == p) ? (0, a.jsx)("div", {
-      className: B.assets,
+      className: G.assets,
       children: r
     }) : (0, a.jsxs)("div", {
-      className: B.assets,
+      className: G.assets,
       children: [(0, a.jsx)(f.Tooltip, {
         text: null != d.large_text ? d.large_text : null,
         position: "top",
@@ -279,9 +279,9 @@ class W extends s.PureComponent {
       activityGuild: i
     } = this.props;
     return null != e.assets || (0, g.default)(e) || e.type !== k.ActivityTypes.PLAYING || "ActivityFeed" === n || t.bot ? null : null == l && null != i ? (0, a.jsx)("div", {
-      className: o(B.gameIcon, B.screenshareIcon)
+      className: o(G.gameIcon, G.screenshareIcon)
     }) : (0, a.jsx)(P.default, {
-      className: B.gameIcon,
+      className: G.gameIcon,
       game: l
     })
   }
@@ -301,16 +301,16 @@ class W extends s.PureComponent {
       o = e.name,
       u = o;
     return (s === k.ActivityTypes.HANG_STATUS ? u = (0, _.getHangStatusText)(e) : r && null != n ? u = (0, a.jsx)("span", {
-      className: B.activityName,
+      className: G.activityName,
       children: u
     }) : !r && (o = i, u = i, (0, C.default)(e) && null != e.sync_id && null != i ? u = (0, a.jsx)(f.Anchor, {
-      className: B.bodyLink,
+      className: G.bodyLink,
       onClick: this.handleOpenSpotifyTrack,
       children: i
     }) : (0, y.isStageActivity)(e) && (u = e.name)), null == u) ? null : (0, a.jsx)(f.Text, {
       title: o,
       variant: "text-sm/semibold",
-      className: (0, R.getClass)(B, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"),
+      className: (0, R.getClass)(G, "name", t.bot || this.isStreamerOnTypeProfile() ? "wrap" : "normal"),
       children: u
     })
   }
@@ -333,7 +333,7 @@ class W extends s.PureComponent {
         artists: r,
         artistsHook: (t, n) => (0, a.jsx)(U.default, {
           artists: l,
-          linkClassName: B.bodyLink,
+          linkClassName: G.bodyLink,
           canOpen: null != e.sync_id,
           onOpenSpotifyArtist: this.handleOpenSpotifyArtist
         }, n)
@@ -348,11 +348,11 @@ class W extends s.PureComponent {
     })), null != t) ? (0, a.jsx)(f.Clickable, {
       onClick: t,
       title: null != r ? r : void 0,
-      className: B.clickableDetails,
+      className: G.clickableDetails,
       children: s
     }) : (0, a.jsx)("div", {
       title: null != r ? r : void 0,
-      className: (0, v.default)(e) || (0, C.default)(e) ? B.detailsWrap : B.details,
+      className: (0, v.default)(e) || (0, C.default)(e) ? G.detailsWrap : G.details,
       children: s
     })
   }
@@ -369,7 +369,7 @@ class W extends s.PureComponent {
     }) : (0, a.jsx)(j.default, {
       start: n.start,
       location: j.default.Locations.USER_ACTIVITY,
-      className: B.playTime,
+      className: G.playTime,
       isApplicationStreaming: null != t
     })
   }
@@ -401,7 +401,7 @@ class W extends s.PureComponent {
     return (!(0, S.default)(e) && (d = u = null == o ? void 0 : o.large_text, (0, C.default)(e) && null != u && (u = F.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
       album: d,
       albumHook: (t, n) => null != e.sync_id && null != d ? (0, a.jsx)(f.Anchor, {
-        className: B.bodyLink,
+        className: G.bodyLink,
         onClick: this.handleOpenSpotifyAlbum,
         children: d
       }, n) : d
@@ -415,7 +415,7 @@ class W extends s.PureComponent {
       count: r.size[0],
       max: r.size[1]
     })), (0, a.jsxs)("div", {
-      className: B.state,
+      className: G.state,
       children: [(0, a.jsx)("span", {
         title: d,
         children: u
@@ -450,9 +450,9 @@ class W extends s.PureComponent {
     return (0, a.jsxs)("div", {
       className: o(this.getTypeClass("activity"), l),
       children: [this.renderHeader(v), (0, a.jsxs)("div", {
-        className: o(m ? B.bodyAlignCenter : B.bodyNormal, s && B.wrap),
+        className: o(m ? G.bodyAlignCenter : G.bodyNormal, s && G.wrap),
         children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(L.default.Child, {
-          className: o((0, R.getClass)(B, "content", m ? "GameImage" : null != e ? "Images" : "NoImages", t)),
+          className: o((0, R.getClass)(G, "content", m ? "GameImage" : null != e ? "Images" : "NoImages", t)),
           children: [p, h, E, g, u || f ? null : C, c ? S : null]
         }), d ? S : null]
       }), u ? C : null, u || f ? S : null, (0, a.jsx)(K, {

@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return w
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
@@ -87,18 +87,18 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
       } = (0, h.useAnalyticsContext)(),
       U = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
       w = o && !I.default.isPremium(U, N.PremiumTypes.TIER_1) && !I.default.canStreamQuality(I.default.StreamQuality.MID, U),
-      F = a.useCallback(() => {
+      F = l.useCallback(() => {
         w && b && (0, f.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("754534").then(n.bind(n, "754534"));
-          return t => (0, l.jsx)(e, {
+          return t => (0, a.jsx)(e, {
             ...t,
             analyticsSource: D
           })
         })
       }, [w, b, D]);
-    if (a.useEffect(() => {
+    if (l.useEffect(() => {
         !R && b && (_.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
@@ -106,27 +106,27 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
           location_stack: y
         }), j(!0))
       }, [t, s, b, R, j, y]), null == O) return null;
-    let k = (0, l.jsx)(f.Tooltip, {
+    let k = (0, a.jsx)(f.Tooltip, {
       text: P ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
       color: f.Tooltip.Colors.GREY,
-      children: e => (0, l.jsxs)(f.Clickable, {
+      children: e => (0, a.jsxs)(f.Clickable, {
         ...e,
         onClick: F,
         className: i(M.qualityIndicator, p, C.LiveIndicatorShapes[c], P ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
           [M.clickable]: w && b
         }),
-        children: [b ? (0, l.jsx)(S.default, {
+        children: [b ? (0, a.jsx)(S.default, {
           className: M.premiumStreamIcon
-        }) : null, (0, l.jsx)("span", {
+        }) : null, (0, a.jsx)("span", {
           className: M.qualityResolution,
           children: (0, T.getResolutionText)(O.maxResolution)
-        }), (0, l.jsx)("span", {
+        }), (0, a.jsx)("span", {
           children: (0, T.getFPSText)(O.maxFrameRate)
         })]
       })
     });
-    return (0, l.jsx)(g.TextBadge, {
+    return (0, a.jsx)(g.TextBadge, {
       text: k,
       className: i(L, M.qualityIndicatorBadge),
       color: d.default.unsafe_rawColors.PRIMARY_500.css,
@@ -140,10 +140,10 @@ var w = e => {
     isUpsellEnabled: s = !0,
     size: o,
     className: u
-  } = e, [d, c] = a.useState(!1), h = (0, T.getMaxQuality)(t), {
+  } = e, [d, c] = l.useState(!1), h = (0, T.getMaxQuality)(t), {
     reducedMotion: m
-  } = a.useContext(f.AccessibilityPreferencesContext), E = n && null != h;
-  a.useEffect(() => {
+  } = l.useContext(f.AccessibilityPreferencesContext), E = n && null != h;
+  l.useEffect(() => {
     (0, p.default)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
       dispatchWait: !0
     })
@@ -163,14 +163,14 @@ var w = e => {
   return (e => {
     let {
       className: n,
-      popoutProps: a
+      popoutProps: l
     } = e;
-    return (0, l.jsxs)("div", {
+    return (0, a.jsxs)("div", {
       className: i(M.streamQualityIndicator, n),
-      ...a,
-      children: [S((e, n) => n ? (0, l.jsx)(r.animated.div, {
+      ...l,
+      children: [S((e, n) => n ? (0, a.jsx)(r.animated.div, {
         style: e,
-        children: (0, l.jsx)(U, {
+        children: (0, a.jsx)(U, {
           className: M.liveQualityIndicator,
           participant: t,
           size: o,
@@ -179,10 +179,10 @@ var w = e => {
           didTrackUpsellViewed: d,
           setDidTrackUpsellViewed: c
         })
-      }) : null), (0, l.jsx)(r.animated.div, {
+      }) : null), (0, a.jsx)(r.animated.div, {
         style: _,
         className: M.liveIndicator,
-        children: (0, l.jsx)(C.default, {
+        children: (0, a.jsx)(C.default, {
           look: C.LiveIndicatorLooks.RED,
           size: o,
           shape: E ? g.BadgeShapes.ROUND_RIGHT : g.BadgeShapes.ROUND

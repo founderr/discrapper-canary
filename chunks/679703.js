@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return v
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
+var l = n("446674"),
   s = n("669491"),
   i = n("77078"),
   r = n("888237"),
@@ -28,9 +28,9 @@ function I(e) {
   let {
     onClick: t
   } = e;
-  return (0, l.jsx)(r.default, {
+  return (0, a.jsx)(r.default, {
     iconContainerClassName: _.continueIconContainer,
-    icon: (0, l.jsx)(h.default, {
+    icon: (0, a.jsx)(h.default, {
       className: _.continueIcon,
       height: 20,
       width: 20
@@ -47,16 +47,16 @@ function T(e) {
     channel: t
   } = e, {
     participants: n,
-    usersInSummary: a
+    usersInSummary: l
   } = (0, E.default)(t.id);
-  return (0, l.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: _.audienceSummary,
-    children: [(0, l.jsx)(m.default, {
+    children: [(0, a.jsx)(m.default, {
       className: _.summaryItem,
       guildId: t.guild_id,
-      users: a,
+      users: l,
       size: m.Sizes.SIZE_16
-    }), (0, l.jsx)(i.Text, {
+    }), (0, a.jsx)(i.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
       children: function(e) {
@@ -83,45 +83,45 @@ function v(e) {
   let {
     channel: t,
     onContinueClick: n
-  } = e, s = (0, a.useStateFromStores)([f.default], () => f.default.can(p.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), r = t.guild_id, {
+  } = e, s = (0, l.useStateFromStores)([f.default], () => f.default.can(p.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), r = t.guild_id, {
     canCreateGuildEvent: m
   } = (0, c.useManageResourcePermissions)(t), v = (0, S.default)(t.id), {
     usersInSummary: x
   } = (0, E.default)(t.id);
-  return (0, l.jsxs)("div", {
-    children: [(0, l.jsx)(g.default, {
-      children: (0, l.jsx)("div", {
+  return (0, a.jsxs)("div", {
+    children: [(0, a.jsx)(g.default, {
+      children: (0, a.jsx)("div", {
         className: _.iconBackground,
-        children: (0, l.jsx)(h.default, {
+        children: (0, a.jsx)(h.default, {
           width: 40,
           height: 40,
           className: _.icon
         })
       })
-    }), (0, l.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: _.headerContainer,
-      children: [(0, l.jsx)(i.Heading, {
+      children: [(0, a.jsx)(i.Heading, {
         className: _.title,
         variant: "heading-xl/semibold",
         children: C.default.Messages.STAGE_START_PROMPT_TITLE_MODERATOR
-      }), (0, l.jsx)(i.Text, {
+      }), (0, a.jsx)(i.Text, {
         className: _.subtitle,
         variant: "text-sm/normal",
         children: C.default.Messages.STAGE_START_PROMPT_SUBTITLE
       })]
-    }), v ? null : (0, l.jsx)(u.default, {
+    }), v ? null : (0, a.jsx)(u.default, {
       channelId: t.id
-    }), s ? (0, l.jsx)(d.default, {
+    }), s ? (0, a.jsx)(d.default, {
       className: _.eventPrompt,
       channel: t
-    }) : null, m ? (0, l.jsx)(o.default, {
+    }) : null, m ? (0, a.jsx)(o.default, {
       className: _.eventPrompt,
       guildId: r
-    }) : null, (s || x.length > 0) && (0, l.jsx)("hr", {
+    }) : null, (s || x.length > 0) && (0, a.jsx)("hr", {
       className: _.separator
-    }), s ? (0, l.jsx)(I, {
+    }), s ? (0, a.jsx)(I, {
       onClick: n
-    }) : null, (0, l.jsx)(T, {
+    }) : null, (0, a.jsx)(T, {
       channel: t
     })]
   })

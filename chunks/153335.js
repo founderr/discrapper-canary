@@ -52,21 +52,21 @@ var l = n("37983"),
         activeEntitlement: w
       } = (0, h.useActiveSubscriptionListingForApplication)(O, v),
       F = (0, h.useEligibleApplicationSubscriptionGuilds)(O, v),
-      B = (0, c.default)(),
-      G = null != a && (0, E.isApplicationUserSubscription)(a.sku_flags),
+      G = (0, c.default)(),
+      B = null != a && (0, E.isApplicationUserSubscription)(a.sku_flags),
       H = null != w && w.userId === (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
       V = null == w || H,
       K = null == w || U.length > 1,
       W = null != v || F.length > 0,
-      Y = G && H,
-      z = null != P && null != b && V && K && (W || G) && !Y;
+      Y = B && H,
+      z = null != P && null != b && V && K && (W || B) && !Y;
     V ? W ? Y && null != P && (n = T.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
       tierName: P.name
     })) : n = T.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = T.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, i.useEffect(() => {
-      M && null != L && B && o.default.wait(() => {
+      M && null != L && G && o.default.wait(() => {
         (0, u.fetchSubscriptionPlansForSKU)(L)
       })
-    }, [M, L, B]);
+    }, [M, L, G]);
     let Z = i.useCallback(() => {
       s(null != a, "No subscription listing"), s(null != b, "No application"), s(null != x, "No subscription plan"), s(M, "Cannot purchase this unpublished plan");
       let e = () => {
@@ -91,12 +91,12 @@ var l = n("37983"),
           forcesTransitionToGuild: y
         })
       };
-      !W && G ? (0, S.confirmNoSharedServerSubscribeWarningModal)({
+      !W && B ? (0, S.confirmNoSharedServerSubscribeWarningModal)({
         application: b,
         onConfirm: e,
         onCancel: () => {}
       }) : e()
-    }, [M, a, x, U, b, v, W, G, D, _, k, N, F, A, y]);
+    }, [M, a, x, U, b, v, W, B, D, _, k, N, F, A, y]);
     return {
       openModal: Z,
       canOpenModal: z,

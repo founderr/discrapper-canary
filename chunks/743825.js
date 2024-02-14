@@ -184,8 +184,8 @@ l = class extends a.Component {
       accessibilityLabel: w
     } = this.props, {
       submitting: F,
-      popup: B
-    } = this.state, G = {
+      popup: G
+    } = this.state, B = {
       channel: E,
       className: r(y, P.textArea, {
         [P.textAreaSlate]: C,
@@ -220,24 +220,24 @@ l = class extends a.Component {
       useNewSlashCommands: v,
       disableAutoFocus: p.isMobile || null !== (n = g.disableAutoFocus) && void 0 !== n && n,
       disableEnterToSubmit: null !== (l = null === (e = g.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== l && l,
-      "aria-controls": null !== (a = B.id) && void 0 !== a ? a : void 0,
+      "aria-controls": null !== (a = G.id) && void 0 !== a ? a : void 0,
       "aria-haspopup": "listbox",
-      "aria-expanded": null !== B.id || void 0,
-      "aria-activedescendant": null !== (s = B.activeDescendant) && void 0 !== s ? s : void 0,
+      "aria-expanded": null !== G.id || void 0,
+      "aria-activedescendant": null !== (s = G.activeDescendant) && void 0 !== s ? s : void 0,
       "aria-invalid": o.length > b,
       "aria-describedby": D,
       "aria-labelledby": k,
       "aria-autocomplete": "list"
     }, H = C ? (0, i.jsx)(O.default, {
       ref: this.ref,
-      ...G,
+      ...B,
       type: g,
       value: d ? (0, A.toRichValue)("") : u,
       canUseCommands: null === (t = g.commands) || void 0 === t ? void 0 : t.enabled,
       canOnlyUseTextCommands: _
     }) : (0, i.jsx)(x.default, {
       ref: this.ref,
-      ...G,
+      ...B,
       value: d ? "" : o
     });
     return (0, i.jsxs)(i.Fragment, {

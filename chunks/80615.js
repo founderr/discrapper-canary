@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("272030"),
+var l = n("272030"),
   s = n("239380"),
   i = n("446509"),
   r = e => {
@@ -18,17 +18,17 @@ var a = n("272030"),
       guild: u,
       nick: d
     } = t;
-    return (0, l.jsx)(i.GuildRow, {
+    return (0, a.jsx)(i.GuildRow, {
       guild: u,
       nick: d,
       theme: o,
       user: r,
       onContextMenu: function(e, t) {
-        (0, a.openContextMenuLazy)(e, async () => {
+        (0, l.openContextMenuLazy)(e, async () => {
           let {
             default: e
           } = await n.el("374705").then(n.bind(n, "374705"));
-          return n => (0, l.jsx)(e, {
+          return n => (0, a.jsx)(e, {
             ...n,
             guild: t
           })

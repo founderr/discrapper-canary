@@ -4,23 +4,23 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("907002"),
+var l = n("907002"),
   s = n("46829"),
   i = n("981913"),
   r = n("782340"),
   o = n("643708");
-let u = (0, a.animated)(e => {
+let u = (0, l.animated)(e => {
   let {
     percentComplete: t
   } = e, n = 20;
-  return (0, l.jsx)("svg", {
+  return (0, a.jsx)("svg", {
     className: o.countdown,
     width: 40,
     height: 40,
     viewBox: "0 0 ".concat(40, " ").concat(40),
-    children: (0, l.jsx)("circle", {
+    children: (0, a.jsx)("circle", {
       style: {
         strokeDashoffset: Math.round(100 * t)
       },
@@ -46,20 +46,20 @@ function d(e) {
     isActive: m = !1,
     isCenterButton: p = !1,
     ...E
-  } = e, S = n > 0, g = (0, a.useSpring)({
+  } = e, S = n > 0, g = (0, l.useSpring)({
     percentComplete: 0 !== n ? (t - n) / t : 0,
     config: {
-      ...a.config.molasses,
+      ...l.config.molasses,
       duration: 1e3
     }
   }), C = S ? r.default.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
     seconds: n
   }) : void 0, _ = p ? i.CenterControlButton : i.default;
-  return (0, l.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: o.container,
-    children: [S ? (0, l.jsx)(u, {
+    children: [S ? (0, a.jsx)(u, {
       percentComplete: g.percentComplete
-    }) : null, (0, l.jsx)(_, {
+    }) : null, (0, a.jsx)(_, {
       ...E,
       disabled: S,
       label: C,

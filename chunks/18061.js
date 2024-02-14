@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 }), n("222007");
-var l, a = n("37983"),
+var a, l = n("37983"),
   s = n("884691"),
   i = n("917351"),
   r = n.n(i),
@@ -15,30 +15,30 @@ var l, a = n("37983"),
   f = n("42203"),
   h = n("782340"),
   m = n("139868");
-l = class extends s.PureComponent {
+a = class extends s.PureComponent {
   render() {
     let {
       result: e,
       listItemProps: t,
       searchOffset: n,
-      index: l,
+      index: a,
       totalResults: s
     } = this.props, i = r.find(e, e => e.isSearchHit);
     if (null == i) return null;
     let o = f.default.getChannel(i.channel_id);
     if (null == o) return null;
     let d = "search-result-".concat(i.id);
-    return (0, a.jsx)(u.FocusRing, {
+    return (0, l.jsx)(u.FocusRing, {
       ringTarget: this.hitRef,
       ringClassName: m.searchResultFocusRing,
       offset: 4,
-      children: (0, a.jsxs)("li", {
+      children: (0, l.jsxs)("li", {
         className: m.container,
         ...t,
-        "aria-posinset": 1 + n + l,
+        "aria-posinset": 1 + n + a,
         "aria-setsize": s,
         "aria-labelledby": d,
-        children: [(0, a.jsx)(u.Clickable, {
+        children: [(0, l.jsx)(u.Clickable, {
           tabIndex: -1,
           onClick: this.handleMessageClick,
           innerRef: this.containerRef,
@@ -46,10 +46,10 @@ l = class extends s.PureComponent {
           focusProps: {
             enabled: !1
           },
-          children: (0, a.jsx)("div", {
+          children: (0, l.jsx)("div", {
             ref: this.hitRef,
             className: m.message,
-            children: (0, a.jsx)(c.default, {
+            children: (0, l.jsx)(c.default, {
               id: d,
               message: i,
               channel: o,
@@ -59,10 +59,10 @@ l = class extends s.PureComponent {
               trackAnnouncementViews: !0
             })
           }, i.id)
-        }), (0, a.jsx)("div", {
+        }), (0, l.jsx)("div", {
           className: m.buttonsContainer,
           "aria-hidden": !0,
-          children: (0, a.jsx)(u.Clickable, {
+          children: (0, l.jsx)(u.Clickable, {
             className: m.button,
             onClick: this.jumpTo,
             children: h.default.Messages.JUMP
@@ -73,15 +73,15 @@ l = class extends s.PureComponent {
   }
   constructor(...e) {
     super(...e), this.containerRef = s.createRef(), this.hitRef = s.createRef(), this.handleContextMenu = (e, t) => {
-      let l = f.default.getChannel(t.channel_id);
-      null != l && (e.stopPropagation(), (0, d.openContextMenuLazy)(e, async () => {
+      let a = f.default.getChannel(t.channel_id);
+      null != a && (e.stopPropagation(), (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("13406").then(n.bind(n, "13406"));
-        return n => (0, a.jsx)(e, {
+        return n => (0, l.jsx)(e, {
           ...n,
           message: t,
-          channel: l
+          channel: a
         })
       }))
     }, this.jumpTo = e => {
@@ -89,13 +89,13 @@ l = class extends s.PureComponent {
       let {
         onJump: t,
         result: n
-      } = this.props, l = n.find(e => e.isSearchHit);
-      null != l && t(l)
+      } = this.props, a = n.find(e => e.isSearchHit);
+      null != a && t(a)
     }, this.handleMessageClick = e => {
       if (function(e, t) {
           var n;
-          let l = null === (n = window) || void 0 === n ? void 0 : n.getSelection();
-          if (null != l && !l.isCollapsed) return !0;
+          let a = null === (n = window) || void 0 === n ? void 0 : n.getSelection();
+          if (null != a && !a.isCollapsed) return !0;
           if (null == e || null == t) return !1;
           for (;
             (0, o.isElement)(e) && e !== t;) {

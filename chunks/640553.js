@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return T
   }
 }), n("222007"), n("424973");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
@@ -26,15 +26,15 @@ function _(e) {
   let t = (0, o.useStateFromStores)([h.default], () => !(0, r.isEmpty)(h.default.getTypingUsers(e)), [e]),
     n = (0, o.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === e, [e]),
     {
-      unreadCount: l,
-      mentionCount: a
+      unreadCount: a,
+      mentionCount: l
     } = (0, o.useStateFromStoresObject)([c.default], () => ({
       unreadCount: c.default.getUnreadCount(e),
       mentionCount: c.default.getMentionCount(e)
     }), [e]);
   return {
-    unreadCount: l,
-    mentionCount: a,
+    unreadCount: a,
+    mentionCount: l,
     voiceChannelIsSelected: n,
     isTyping: t
   }
@@ -45,14 +45,14 @@ function I(e) {
     className: t,
     channelId: n
   } = e, {
-    unreadCount: a,
+    unreadCount: l,
     mentionCount: s,
     isTyping: i,
     voiceChannelIsSelected: r
   } = _(n);
-  return (0, l.jsx)(E.default, {
+  return (0, a.jsx)(E.default, {
     className: t,
-    unreadCount: a,
+    unreadCount: l,
     mentionCount: s,
     isTyping: i,
     canBadge: r
@@ -73,7 +73,7 @@ function T(e) {
     {
       disabled: v
     } = T,
-    x = a.useRef(null),
+    x = l.useRef(null),
     N = (0, o.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
     {
       isShowing: A,
@@ -83,9 +83,9 @@ function T(e) {
       let {
         unreadCount: t,
         mentionCount: n,
-        isTyping: l
-      } = _(e), [s, i] = a.useState(!1);
-      return a.useEffect(() => {
+        isTyping: a
+      } = _(e), [s, i] = l.useState(!1);
+      return l.useEffect(() => {
         i(t > 0);
         let e = setTimeout(() => {
           i(!1)
@@ -94,24 +94,24 @@ function T(e) {
           clearTimeout(e), i(!1)
         }
       }, [t]), {
-        isShowing: s || n > 0 || l,
+        isShowing: s || n > 0 || a,
         unreadCount: t,
         mentionCount: n
       }
     }(n),
-    j = a.useCallback(() => {
+    j = l.useCallback(() => {
       null == c || c(), !N && h && (null == E || E()), u.default.updateChatOpen(n, !N)
     }, [n, N, c, h, E]),
-    L = a.useCallback(e => {
+    L = l.useCallback(e => {
       let {
         className: t
       } = e;
-      return (0, l.jsx)(I, {
+      return (0, a.jsx)(I, {
         className: t,
         channelId: n
       })
     }, [n]),
-    O = a.useCallback(() => {
+    O = l.useCallback(() => {
       var e;
       null === (e = x.current) || void 0 === e || e.focus()
     }, []);
@@ -119,13 +119,13 @@ function T(e) {
     event: g.ComponentActions.FOCUS_CHAT_BUTTON,
     handler: v ? null : O
   });
-  let [y, P] = a.useState(!1), b = a.useCallback(() => {
+  let [y, P] = l.useState(!1), b = l.useCallback(() => {
     f && P(!0)
   }, [f]);
   (0, m.useComponentAction)({
     event: g.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
     handler: b
-  }), a.useEffect(() => {
+  }), l.useEffect(() => {
     let e;
     return y && (e = setTimeout(() => {
       P(!1)
@@ -136,7 +136,7 @@ function T(e) {
   let D = [t];
   return R > 0 && D.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: R
-  })), M > 0 && D.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, l.jsx)(S.default, {
+  })), M > 0 && D.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(S.default, {
     buttonRef: x,
     onClick: j,
     label: t,

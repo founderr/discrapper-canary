@@ -45,8 +45,8 @@ function k(e) {
     activity: k,
     customStatusActivity: w,
     user: F,
-    displayProfile: B,
-    guild: G,
+    displayProfile: G,
+    guild: B,
     guildMember: H,
     channelId: V,
     onClose: K,
@@ -58,7 +58,7 @@ function k(e) {
   } = e, q = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation), X = (0, r.useStateFromStores)([h.default], () => {
     var e;
     return null === (e = h.default.getUserProfile(F.id)) || void 0 === e ? void 0 : e.application
-  }), Q = (0, r.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(F.id)), $ = (0, r.useStateFromStores)([c.default], () => c.default.findActivity(F.id, e => e.type === j.ActivityTypes.HANG_STATUS)), ee = (0, b.useGetVoiceChannelInfoForVoiceActivitySection)(F.id, null == G ? void 0 : G.id), et = !Q && null != ee && null == $, {
+  }), Q = (0, r.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(F.id)), $ = (0, r.useStateFromStores)([c.default], () => c.default.findActivity(F.id, e => e.type === j.ActivityTypes.HANG_STATUS)), ee = (0, b.useGetVoiceChannelInfoForVoiceActivitySection)(F.id, null == B ? void 0 : B.id), et = !Q && null != ee && null == $, {
     showVoiceActivityInProfile: en
   } = E.VoiceActivityProfileExperiment.useExperiment({
     location: "user popout"
@@ -66,7 +66,7 @@ function k(e) {
     autoTrackExposure: et
   }), el = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(V)), {
     profileTheme: ei
-  } = (0, g.default)(F, B), ea = i.useRef(null), [es, er] = i.useState(!0), eo = i.useCallback(() => {
+  } = (0, g.default)(F, G), ea = i.useRef(null), [es, er] = i.useState(!0), eo = i.useCallback(() => {
     let {
       current: e
     } = ea;
@@ -88,7 +88,7 @@ function k(e) {
     className: U.usernameSection,
     lastSection: !0
   });
-  let eu = null !== (t = m.default.getNickname(null == G ? void 0 : G.id, V, F)) && void 0 !== t ? t : p.default.getName(F),
+  let eu = null !== (t = m.default.getNickname(null == B ? void 0 : B.id, V, F)) && void 0 !== t ? t : p.default.getName(F),
     ed = {
       location: {
         page: j.AnalyticsPages.USER_POPOUT,
@@ -100,8 +100,8 @@ function k(e) {
       className: U.usernameSection,
       user: F,
       nickname: eu,
-      pronouns: null == B ? void 0 : B.pronouns,
-      usernameIcon: F.hasAvatarForGuild(null == G ? void 0 : G.id) && (0, l.jsx)(C.default, {
+      pronouns: null == G ? void 0 : G.pronouns,
+      usernameIcon: F.hasAvatarForGuild(null == B ? void 0 : B.id) && (0, l.jsx)(C.default, {
         user: F,
         nickname: eu
       }),
@@ -120,15 +120,15 @@ function k(e) {
         ref: ea,
         children: [(0, l.jsx)(_.default, {
           user: F,
-          guildId: null == G ? void 0 : G.id
+          guildId: null == B ? void 0 : B.id
         }), (0, l.jsx)(I.default, {
-          isUsingGuildBio: null !== (n = null == B ? void 0 : B.isUsingGuildMemberBio()) && void 0 !== n && n,
-          bio: null == B ? void 0 : B.bio,
-          guild: G,
+          isUsingGuildBio: null !== (n = null == G ? void 0 : G.isUsingGuildMemberBio()) && void 0 !== n && n,
+          bio: null == G ? void 0 : G.bio,
+          guild: B,
           hidePersonalInformation: q
         }), (0, l.jsx)(x.default, {
           userId: F.id,
-          guild: G,
+          guild: B,
           guildMember: H
         }), en && et && (0, l.jsx)(b.default, {
           voiceChannel: ee.voiceChannel,
@@ -138,7 +138,7 @@ function k(e) {
         }), (0, l.jsx)(T.default, {
           activity: k,
           user: F,
-          guild: G,
+          guild: B,
           channelId: V,
           onClose: K,
           analyticsParams: (null == J ? void 0 : J.location) != null ? J : ed
@@ -146,20 +146,20 @@ function k(e) {
           applicationId: X.id,
           commandIds: X.popularApplicationCommandIds,
           channel: el,
-          guildId: null == G ? void 0 : G.id,
+          guildId: null == B ? void 0 : B.id,
           onClick: K
         }) : null, (0, l.jsx)(v.default, {
           user: F,
-          guildId: null == G ? void 0 : G.id
+          guildId: null == B ? void 0 : B.id
         }), (0, l.jsx)(L.default, {
           user: F,
-          guild: G,
+          guild: B,
           guildMember: H,
-          showBorder: null !== (a = null == B ? void 0 : B.canEditThemes) && void 0 !== a && a
+          showBorder: null !== (a = null == G ? void 0 : G.canEditThemes) && void 0 !== a && a
         }), (0, l.jsx)(N.default, {
           userId: F.id,
           channelId: V,
-          guild: G,
+          guild: B,
           onClose: K,
           theme: ei
         }), null != X && void 0 !== V && (0, l.jsx)(M.default, {

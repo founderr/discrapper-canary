@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return P
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("627445"),
   i = n.n(s),
   r = n("446674"),
@@ -48,16 +48,16 @@ let L = 16 / 9,
       inPopout: f
     } = e, {
       reducedMotion: h
-    } = a.useContext(o.AccessibilityPreferencesContext), {
+    } = l.useContext(o.AccessibilityPreferencesContext), {
       blocked: m,
       id: p
     } = t;
-    return (0, l.jsx)(o.Popout, {
+    return (0, a.jsx)(o.Popout, {
       preload: null == n ? void 0 : () => (0, S.default)(n.user.id, n.user.getAvatarURL(s.guild_id, 80), {
         guildId: s.guild_id,
         channelId: s.id
       }),
-      renderPopout: e => (0, l.jsx)(g.default, {
+      renderPopout: e => (0, a.jsx)(g.default, {
         ...e,
         guildId: i,
         channelId: s.id,
@@ -65,10 +65,10 @@ let L = 16 / 9,
       }),
       position: "right",
       spacing: 8,
-      children: e => (0, l.jsx)(o.Clickable, {
+      children: e => (0, a.jsx)(o.Clickable, {
         onContextMenu: e => c(n, e),
         ...e,
-        children: (0, l.jsx)(N.default, {
+        children: (0, a.jsx)(N.default, {
           participant: n,
           aspectRatio: L,
           blocked: m,
@@ -79,7 +79,7 @@ let L = 16 / 9,
           paused: !1,
           pulseSpeakingIndicator: !h.enabled,
           width: u,
-          children: d && (0, l.jsx)(A.default, {})
+          children: d && (0, a.jsx)(A.default, {})
         }, p)
       })
     })
@@ -95,7 +95,7 @@ let L = 16 / 9,
       inPopout: S
     } = e, {
       reducedMotion: g
-    } = a.useContext(o.AccessibilityPreferencesContext), {
+    } = l.useContext(o.AccessibilityPreferencesContext), {
       id: x,
       blocked: O
     } = t, y = (0, r.useStateFromStoresArray)([C.default], () => C.default.getAllActiveStreams(), []), {
@@ -104,7 +104,7 @@ let L = 16 / 9,
     } = (0, r.useStateFromStoresObject)([h.default], () => ({
       selectedParticipant: null != s ? h.default.getSelectedParticipant(s.id) : null,
       largeStream: null != s && h.default.getStageStreamSize(s.id)
-    })), D = a.useCallback((e, t) => {
+    })), D = l.useCallback((e, t) => {
       if (e.type === R.ParticipantTypes.STREAM) {
         let n = y.filter(t => (0, p.encodeStreamKey)(t) === e.id && t.state !== M.ApplicationStreamStates.ENDED);
         if (0 === n.length) {
@@ -115,7 +115,7 @@ let L = 16 / 9,
         }
       }(null == P ? void 0 : P.id) === e.id ? b ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
     }, [y, s, P, b]);
-    return (0, l.jsx)(N.default, {
+    return (0, a.jsx)(N.default, {
       participant: n,
       aspectRatio: L,
       fit: n.type === R.ParticipantTypes.USER ? v.VideoStreamFit.COVER : void 0,
@@ -129,20 +129,20 @@ let L = 16 / 9,
       paused: !1,
       pulseSpeakingIndicator: !g.enabled,
       width: i,
-      children: d && n.type === R.ParticipantTypes.USER && (0, l.jsx)(A.default, {})
+      children: d && n.type === R.ParticipantTypes.USER && (0, a.jsx)(A.default, {})
     }, x)
   };
-var P = a.memo(function(e) {
+var P = l.memo(function(e) {
   var t;
   let {
-    participant: a,
+    participant: l,
     channel: s,
     width: o
   } = e, u = (0, f.useAppContext)(), c = s.getGuildId();
   i(null != c, "Channel cannot be guildless");
   let {
     user: m
-  } = a, p = (0, r.useStateFromStores)([h.default], () => h.default.getParticipant(s.id, a.id), [s.id, a.id]), E = (0, r.useStateFromStores)([x.default], () => x.default.isModerator(m.id, s.id), [s.id, m.id]);
+  } = l, p = (0, r.useStateFromStores)([h.default], () => h.default.getParticipant(s.id, l.id), [s.id, l.id]), E = (0, r.useStateFromStores)([x.default], () => x.default.isModerator(m.id, s.id), [s.id, m.id]);
   if (null == p || p.type === R.ParticipantTypes.ACTIVITY) return null;
   let S = (e, t) => {
       switch (e.type) {
@@ -152,7 +152,7 @@ var P = a.memo(function(e) {
             let {
               default: t
             } = await n.el("172844").then(n.bind(n, "172844"));
-            return n => (0, l.jsx)(t, {
+            return n => (0, a.jsx)(t, {
               ...n,
               stream: e.stream,
               appContext: u,
@@ -168,7 +168,7 @@ var P = a.memo(function(e) {
             let {
               default: e
             } = await n.el("834247").then(n.bind(n, "834247"));
-            return t => (0, l.jsx)(e, {
+            return t => (0, a.jsx)(e, {
               ...t,
               user: m,
               guildId: c,
@@ -183,9 +183,9 @@ var P = a.memo(function(e) {
       }
     },
     g = p.type === R.ParticipantTypes.USER && !(null === (t = p.voiceState) || void 0 === t ? void 0 : t.selfVideo);
-  return (0, l.jsx)(l.Fragment, {
-    children: g ? (0, l.jsx)(O, {
-      stageParticipant: a,
+  return (0, a.jsx)(a.Fragment, {
+    children: g ? (0, a.jsx)(O, {
+      stageParticipant: l,
       rtcParticipant: p,
       channel: s,
       guildId: c,
@@ -194,8 +194,8 @@ var P = a.memo(function(e) {
       isModerator: E,
       onContextMenu: S,
       inPopout: u === M.AppContext.POPOUT
-    }) : (0, l.jsx)(y, {
-      stageParticipant: a,
+    }) : (0, a.jsx)(y, {
+      stageParticipant: l,
       rtcParticipant: p,
       channel: s,
       guildId: c,

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("255397"),
+var l = n("255397"),
   s = n("407691"),
   i = n("981913"),
   r = n("782340");
@@ -16,9 +16,9 @@ function o(e) {
     channelId: t,
     ...n
   } = e;
-  return (0, l.jsx)(i.default, {
+  return (0, a.jsx)(i.default, {
     onClick: function() {
-      a.default.selectParticipant(t, null)
+      l.default.selectParticipant(t, null)
     },
     label: r.default.Messages.VIDEO_CALL_RETURN_TO_GRID,
     iconComponent: s.default,

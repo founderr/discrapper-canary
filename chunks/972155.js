@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return A
   }
 }), n("424973");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("759843"),
   i = n("446674"),
   r = n("151426"),
@@ -41,12 +41,12 @@ function A(e) {
     paused: y = !1
   } = e, P = (0, o.useAppContext)(), b = P === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(R.guild_id), [R.guild_id]), {
     dismissedActivityEntryPointTileChannel: U
-  } = (0, T.useChannelCallVideoGridStore)(), w = (0, i.useStateFromStores)([m.default], () => m.default.getUserParticipantCount(R.id), [R]), F = a.useCallback(() => {
+  } = (0, T.useChannelCallVideoGridStore)(), w = (0, i.useStateFromStores)([m.default], () => m.default.getUserParticipantCount(R.id), [R]), F = l.useCallback(() => {
     T.useChannelCallVideoGridStore.setState({
       dismissedActivityEntryPointTileChannel: R.id
     })
   }, [R.id]);
-  a.useEffect(() => {
+  l.useEffect(() => {
     null != U && R.id !== U && T.useChannelCallVideoGridStore.setState({
       dismissedActivityEntryPointTileChannel: null
     })
@@ -55,7 +55,7 @@ function A(e) {
     V = (null == D ? void 0 : D.afkChannelId) === R.id,
     B = R.userLimit <= 0 || R.userLimit > 1,
     {
-      vcTileActivityExperimentType: G
+      vcTileActivityExperimentType: H
     } = c.VcTileActivitiesEntryPointExperiment.useExperiment({
       location: "8711e9_1"
     }, {
@@ -64,7 +64,7 @@ function A(e) {
   R.isGuildVoice() && c.VcTileActivitiesEntryPointExperiment.trackExposure({
     location: "8711e9_2"
   });
-  let H = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(R.id).length <= 0),
+  let G = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(R.id).length <= 0),
     W = (0, p.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
     Y = (0, f.useEmbeddedActivityLaunchability)(R.id),
     z = Y !== f.EmbeddedActivityLaunchability.CAN_LAUNCH,
@@ -76,7 +76,7 @@ function A(e) {
     }, {
       autoTrackExposure: !1
     }),
-    X = t.map(e => t => (0, l.jsx)(I.default, {
+    X = t.map(e => t => (0, a.jsx)(I.default, {
       participant: e,
       channel: R,
       className: N.tile,
@@ -99,26 +99,26 @@ function A(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != D && !V && (Z ? X.push(e => (0, l.jsx)(_.ActivityEntryPointTile, {
+  }, []), null != D && !V && (Z ? X.push(e => (0, a.jsx)(_.ActivityEntryPointTile, {
     channel: R,
     guild: D,
     width: e,
     inPopout: b,
     handleClose: F,
     userParticipantCount: w
-  })) : (G !== c.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== w) && (G !== c.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(w >= 2)) || !H || z || W || K ? B && 1 === w && k && ([c.VcTileActivityExperimentType.ONE_OR_TWO_USERS, c.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(G) && H && !z ? X.push(e => (0, l.jsx)(_.ActivityEntryPointTile, {
+  })) : (H !== c.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== w) && (H !== c.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(w >= 2)) || !G || z || W || K ? B && 1 === w && k && ([c.VcTileActivityExperimentType.ONE_OR_TWO_USERS, c.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(H) && G && !z ? X.push(e => (0, a.jsx)(_.ActivityEntryPointTile, {
     channel: R,
     guild: D,
     width: e,
     inPopout: b,
     handleClose: F,
     userParticipantCount: w
-  })) : X.push(e => (0, l.jsx)(v.default, {
+  })) : X.push(e => (0, a.jsx)(v.default, {
     width: e,
     channel: R,
     guild: D,
     inPopout: b
-  }))) : X.push(e => (0, l.jsx)(_.ActivityEntryPointTile, {
+  }))) : X.push(e => (0, a.jsx)(_.ActivityEntryPointTile, {
     channel: R,
     guild: D,
     width: e,
@@ -126,11 +126,11 @@ function A(e) {
     handleClose: F,
     userParticipantCount: w
   })));
-  let J = a.useCallback(e => {
-    var n, l;
-    return null !== (l = null === (n = t[e]) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : "empty-tile"
+  let J = l.useCallback(e => {
+    var n, a;
+    return null !== (a = null === (n = t[e]) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : "empty-tile"
   }, [t]);
-  return (0, l.jsx)(C.default, {
+  return (0, a.jsx)(C.default, {
     className: j,
     keyExtractor: J,
     paddingTop: 64,

@@ -42,18 +42,18 @@ var l = n("37983"),
   w = n("450484"),
   F = n("154477");
 
-function B(e) {
+function G(e) {
   e.stopPropagation()
 }
 
-function G(e) {
+function B(e) {
   let {
     user: t,
     guildId: n,
     channelId: a,
     setNote: s,
     closePopout: N,
-    setPopoutRef: G,
+    setPopoutRef: B,
     disableUserProfileLink: H = __OVERLAY__,
     analyticsParams: V = {}
   } = e, K = i.useRef(null), W = (0, O.default)(t.id, n), Y = (0, d.default)(K), z = (0, r.useStateFromStores)([y.default], () => {
@@ -100,8 +100,8 @@ function G(e) {
   (0, c.default)(() => eu(!0), er.shouldShow ? 250 : null);
   let ed = (0, S.useGetOrFetchApplication)(null == Q ? void 0 : Q.application_id);
   return i.useEffect(() => {
-    null == G || G(null == K ? void 0 : K.current)
-  }, [K, G]), i.useEffect(() => {
+    null == B || B(null == K ? void 0 : K.current)
+  }, [K, B]), i.useEffect(() => {
     if (!el)((null == Q ? void 0 : Q.application_id) == null || null != ed) && (null == n || (null == q ? void 0 : q.fullProfileLoadedTimestamp) != null) && (function() {
       var e;
       let l, i, s;
@@ -151,8 +151,8 @@ function G(e) {
       children: (0, l.jsx)(o.Dialog, {
         ref: K,
         "aria-label": t.username,
-        onClick: B,
-        onContextMenu: B,
+        onClick: G,
+        onContextMenu: G,
         style: er.shouldShow ? {
           marginTop: P.DEFAULT_COLLECTIBLES_UPSELL_HEIGHT
         } : void 0,
@@ -208,7 +208,7 @@ var H = i.memo(function(e) {
     user: n,
     ...i
   } = e, a = (0, r.useStateFromStores)([N.default], () => N.default.getUser(t), [t]), o = null != n ? n : a;
-  return s(null != o, "Unexpected missing user"), (0, l.jsx)(G, {
+  return s(null != o, "Unexpected missing user"), (0, l.jsx)(B, {
     user: o,
     ...i
   })

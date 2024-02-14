@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var l = n("446674"),
-  a = n("139375"),
+var a = n("446674"),
+  l = n("139375"),
   s = n("242740"),
   i = n("393414"),
   r = n("42203"),
@@ -14,13 +14,13 @@ var l = n("446674"),
   d = n("49111");
 
 function c(e, t) {
-  let n = (0, l.useStateFromStores)([r.default], () => r.default.getChannel(t)),
+  let n = (0, a.useStateFromStores)([r.default], () => r.default.getChannel(t)),
     {
       needSubscriptionToAccess: c
     } = (0, u.default)(null == n ? void 0 : n.id);
   if (null == n || c) return null;
   let f = n.isGuildVocal(),
-    h = (0, a.default)({
+    h = (0, l.default)({
       channel: n
     });
   return {

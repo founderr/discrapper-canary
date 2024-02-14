@@ -34,16 +34,16 @@ function g(e) {
     location: "PaymentContextProvider"
   }, {
     autoTrackExposure: _ && N
-  }), [y, x] = i.useState(_ ? A && N ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : f : m), [O, R] = i.useState(t && (0, o.getGiftExperience)(g) === o.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? c.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : r), [M, L] = i.useState(void 0), [P, b] = i.useState(void 0), j = (0, o.useGetGiftCode)(E, t), [U, D] = i.useState(!1), [k, w] = i.useState(!1), [F, B] = i.useState(), G = i.useCallback(e => {
+  }), [y, x] = i.useState(_ ? A && N ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : f : m), [O, R] = i.useState(t && (0, o.getGiftExperience)(g) === o.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? c.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : r), [M, L] = i.useState(void 0), [P, b] = i.useState(void 0), j = (0, o.useGetGiftCode)(E, t), [U, D] = i.useState(!1), [k, w] = i.useState(!1), [F, G] = i.useState(), B = i.useCallback(e => {
     let {
       onSubscriptionConfirmation: t
     } = e;
     return w(!0), (0, a.sendGiftMessage)(g, j).then(() => {
       w(!1), null == t || t(), D(!0)
     }).catch(e => {
-      w(!1), B(e), D(!0)
+      w(!1), G(e), D(!0)
     })
-  }, [g, j, w, D, B]);
+  }, [g, j, w, D, G]);
   return (0, l.jsx)(p.Provider, {
     value: {
       isGift: t,
@@ -63,7 +63,7 @@ function g(e) {
       setCustomGiftMessage: R,
       selectedGiftStyle: y,
       setSelectedGiftStyle: x,
-      sendGiftMessage: G,
+      sendGiftMessage: B,
       hasSentMessage: U,
       isSendingMessage: k,
       giftMessageError: F

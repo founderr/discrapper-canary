@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   }
 }), n("222007");
-var l = n("446674"),
-  a = n("913144");
+var a = n("446674"),
+  l = n("913144");
 let s = {};
-class i extends l.default.PersistedStore {
+class i extends a.default.PersistedStore {
   initialize(e) {
     for (let t in e) {
       let n = e[t];
@@ -23,13 +23,13 @@ class i extends l.default.PersistedStore {
   }
 }
 i.displayName = "GuildPromptsStore", i.persistKey = "GuildPromptsStore";
-var r = new i(a.default, {
+var r = new i(l.default, {
   GUILD_PROMPT_VIEWED: function(e) {
     let {
       prompt: t,
       guildId: n
-    } = e, l = s[n];
-    return null == l ? (s[n] = new Set, s[n].add(t), !0) : !l.has(t) && (l.add(t), !0)
+    } = e, a = s[n];
+    return null == a ? (s[n] = new Set, s[n].add(t), !0) : !a.has(t) && (a.add(t), !0)
   },
   GUILD_DELETE: function(e) {
     let {

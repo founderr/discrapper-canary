@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return C
   }
 }), n("424973"), n("222007");
-var l = n("446674"),
-  a = n("913144"),
+var a = n("446674"),
+  l = n("913144"),
   s = n("867805"),
   i = n("697218"),
   r = n("402671"),
@@ -23,11 +23,11 @@ function E(e) {
     let t = i.default.getUser(e);
     if (null == t) return;
     let n = t.getAvatarURL(null, d.AVATAR_COLOR_AVATAR_SIZE),
-      l = new Image;
-    l.src = n, f[e] = l
+      a = new Image;
+    a.src = n, f[e] = a
   }
 }
-class S extends l.default.Store {
+class S extends a.default.Store {
   get visibleOverlayCanvas() {
     return m
   }
@@ -45,18 +45,18 @@ class S extends l.default.Store {
   }
 }
 S.displayName = "SharedCanvasStore";
-let g = new S(a.default, {
+let g = new S(l.default, {
   SHARED_CANVAS_UPDATE_LINE_POINTS: function(e) {
     let {
       lineId: t,
       newPoints: n,
-      userId: l,
-      streamerId: a
-    } = e, s = c[a];
-    if (null == s) c[a] = [{
+      userId: a,
+      streamerId: l
+    } = e, s = c[l];
+    if (null == s) c[l] = [{
       type: o.DrawableType.LINE,
       id: t,
-      userId: l,
+      userId: a,
       points: n
     }];
     else {
@@ -64,36 +64,36 @@ let g = new S(a.default, {
       null == e ? s.push({
         type: o.DrawableType.LINE,
         id: t,
-        userId: l,
+        userId: a,
         points: n
       }) : (0, u.isLine)(e) && e.points.push(...n)
     }
-    E(l)
+    E(a)
   },
   SHARED_CANVAS_UPDATE_EMOJI_HOSE: function(e) {
-    var t, n, l;
+    var t, n, a;
     let {
-      emojiHose: a,
+      emojiHose: l,
       streamerId: i,
       userId: u
     } = e, f = {
-      ...a,
+      ...l,
       type: o.DrawableType.EMOJI_HOSE
     };
     if (null == c[i]) c[i] = [f];
     else {
-      let e = c[i].findIndex(e => e.id === a.id);
+      let e = c[i].findIndex(e => e.id === l.id);
       e >= 0 ? c[i][e] = {
         ...c[i][e],
         ...f
       } : c[i].push(f)
     }
-    let m = null !== (n = null !== (t = a.emojiId) && void 0 !== t ? t : a.emojiName) && void 0 !== n ? n : "";
+    let m = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : "";
     if (null == h[m]) {
-      let e = null != a.emojiName ? s.default.convertNameToSurrogate(a.emojiName) : null;
+      let e = null != l.emojiName ? s.default.convertNameToSurrogate(l.emojiName) : null;
       h[m] = new Image, h[m].src = (0, r.getEmojiUrl)({
-        id: a.emojiId,
-        name: null !== (l = null != e ? e : a.emojiName) && void 0 !== l ? l : "",
+        id: l.emojiId,
+        name: null !== (a = null != e ? e : l.emojiName) && void 0 !== a ? a : "",
         animated: !1
       }, d.EMOJI_HOSE_EMOJI_SIZE)
     }

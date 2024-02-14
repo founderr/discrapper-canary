@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return R
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("917351"),
   i = n.n(s),
   r = n("446674"),
@@ -38,15 +38,15 @@ function R(e) {
   } = e, j = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), O = (0, h.default)(j);
   (function(e) {
     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i.isEmpty(I.default.getVoiceStatesForChannel(e.id)));
-    a.useEffect(() => {
+    l.useEffect(() => {
       t && null != e && (o.default.dispatch({
         type: "SIDEBAR_CLOSE",
         baseChannelId: e.parent_id
       }), (0, S.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(j);
-  let y = a.useRef(!1);
-  if (a.useEffect(() => {
+  let y = l.useRef(!1);
+  if (l.useEffect(() => {
       if (null == j || y.current) return;
       y.current = !0;
       let e = (0, f.collectThreadMetadata)(g.default.getChannel(j.id), !0);
@@ -59,15 +59,15 @@ function R(e) {
         channel_view: R
       })
     }, [j, R]), null == j || null == L) return null;
-  let P = (0, l.jsx)(v.default, {
+  let P = (0, a.jsx)(v.default, {
     channel: j,
     baseChannelId: s
   });
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(d.default, {
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(d.default, {
       channel: j,
       draftType: C.DraftType.ChannelMessage
-    }), (0, l.jsx)(T.default, {
+    }), (0, a.jsx)(T.default, {
       toolbar: P,
       "aria-label": A.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, E.renderTitle)({
@@ -80,7 +80,7 @@ function R(e) {
             let {
               default: e
             } = await n.el("994827").then(n.bind(n, "994827"));
-            return t => (0, l.jsx)(e, {
+            return t => (0, a.jsx)(e, {
               ...t,
               channel: j
             })
@@ -90,9 +90,9 @@ function R(e) {
           null != j && (0, S.transitionToChannel)(j.id)
         }
       })
-    }), (0, l.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: M.chat,
-      children: (0, l.jsx)(m.default, {
+      children: (0, a.jsx)(m.default, {
         channel: j,
         guild: L,
         chatInputType: p.ChatInputTypes.SIDEBAR

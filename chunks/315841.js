@@ -1,10 +1,10 @@
 "use strict";
-var l, a, s, i;
+var a, l, s, i;
 n.r(t), n.d(t, {
   DrawableType: function() {
-    return l
+    return a
   },
   EmojiHoseState: function() {
-    return a
+    return l
   }
-}), (s = l || (l = {})).LINE = "line", s.EMOJI_HOSE = "emoji_hose", (i = a || (a = {})).START = "START", i.STOP = "STOP"
+}), (s = a || (a = {})).LINE = "line", s.EMOJI_HOSE = "emoji_hose", (i = l || (l = {})).START = "START", i.STOP = "STOP"

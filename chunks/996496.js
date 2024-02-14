@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("414456"),
-  s = n.n(a),
+var l = n("414456"),
+  s = n.n(l),
   i = n("77078"),
   r = n("882587");
 
@@ -15,10 +15,10 @@ function o(e) {
   let {
     hasMentions: t,
     truncatedCount: n,
-    className: a
+    className: l
   } = e;
-  return (0, l.jsx)(i.Text, {
-    className: s(r.unreadCount, a, {
+  return (0, a.jsx)(i.Text, {
+    className: s(r.unreadCount, l, {
       [r.mention]: t
     }),
     variant: "text-xs/normal",

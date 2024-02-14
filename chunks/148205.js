@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return C
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("917351"),
   i = n.n(s),
   r = n("446674"),
@@ -20,12 +20,12 @@ var l = n("37983"),
   E = n("659500"),
   S = n("49111"),
   g = n("782340"),
-  C = a.memo(function(e) {
+  C = l.memo(function(e) {
     let {
       channel: t
     } = e, n = (0, u.default)(), s = (0, r.useStateFromStores)([h.default], () => h.default.isInChannel(t.id)), C = (0, r.useStateFromStores)([h.default], () => !i.isEmpty(h.default.getVoiceStatesForChannel(t.id))), _ = (0, r.useStateFromStores)([f.default], () => f.default.can(S.Permissions.CONNECT, t)), {
       needSubscriptionToAccess: I
-    } = (0, d.default)(t.id), T = (0, c.useIsActiveChannelOrUnarchivableThread)(t), v = a.useCallback(() => {
+    } = (0, d.default)(t.id), T = (0, c.useIsActiveChannelOrUnarchivableThread)(t), v = l.useCallback(() => {
       o.default.handleVoiceConnect({
         channel: t,
         connected: s,
@@ -33,14 +33,14 @@ var l = n("37983"),
         locked: !1
       })
     }, [t, s, I]);
-    return (a.useEffect(() => (E.ComponentDispatch.subscribe(S.ComponentActions.CALL_START, v), () => {
+    return (l.useEffect(() => (E.ComponentDispatch.subscribe(S.ComponentActions.CALL_START, v), () => {
       E.ComponentDispatch.unsubscribe(S.ComponentActions.CALL_START, v)
     }), [v]), c.VoiceInThreadsExperiment.useExperiment({
       guildId: t.guild_id,
       location: "63250c_1"
     }, {
       autoTrackExposure: !1
-    }).enabled && !n && !s && _ && T && t.isVocalThread()) ? (0, l.jsx)(p.default.Icon, {
+    }).enabled && !n && !s && _ && T && t.isVocalThread()) ? (0, a.jsx)(p.default.Icon, {
       icon: m.default,
       onClick: v,
       tooltip: C ? g.default.Messages.JOIN_VOICE_CALL : g.default.Messages.START_VOICE_CALL

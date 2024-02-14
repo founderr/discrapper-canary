@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return E
   }
 }), n("424973");
-var l = n("917351"),
-  a = n.n(l),
+var a = n("917351"),
+  l = n.n(a),
   s = n("748820"),
   i = n("308503"),
   r = n("760679"),
@@ -36,11 +36,11 @@ let h = {
 
 function p(e, t) {
   var n;
-  a(null !== (n = m.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t)
+  l(null !== (n = m.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t)
 }
 
 function E(e) {
-  var t, n, l, i;
+  var t, n, a, i;
   let {
     emojiHose: E,
     context: S,
@@ -63,35 +63,35 @@ function E(e) {
       var t, n;
       return t = E, n = e, void(n.x += n.xSpeed * window.devicePixelRatio, n.y += n.ySpeed * window.devicePixelRatio, n.opacity -= n.opacitySpeed, n.opacity <= 0 && m.setState(e => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e)))
     }), ! function(e, t, n) {
-      var l;
-      let i = null !== (l = m.getState().lastSpawned[e.id]) && void 0 !== l ? l : 0,
+      var a;
+      let i = null !== (a = m.getState().lastSpawned[e.id]) && void 0 !== a ? a : 0,
         r = Date.now();
-      if (!(i + 100 > r) && e.state !== u.EmojiHoseState.STOP)(.8 >= Math.random() || i + 300 < r) && m.setState(l => {
+      if (!(i + 100 > r) && e.state !== u.EmojiHoseState.STOP)(.8 >= Math.random() || i + 300 < r) && m.setState(a => {
         var i, r, o;
-        let u = null !== (i = l.particles[e.id]) && void 0 !== i ? i : {},
-          d = a.random(1, 2);
+        let u = null !== (i = a.particles[e.id]) && void 0 !== i ? i : {},
+          d = l.random(1, 2);
         for (let e = 0; e < d; e++) {
           ;
           let e = (r = t, o = n, {
             id: (0, s.v4)(),
-            x: r + a.random(-h.X_OFFSET, h.X_OFFSET),
-            y: o + a.random(-h.Y_OFFSET, h.Y_OFFSET),
-            xSpeed: a.random(-h.X_SPEED, h.X_SPEED),
-            ySpeed: a.random(h.Y_SPEED_MIN, h.Y_SPEED_MAX),
+            x: r + l.random(-h.X_OFFSET, h.X_OFFSET),
+            y: o + l.random(-h.Y_OFFSET, h.Y_OFFSET),
+            xSpeed: l.random(-h.X_SPEED, h.X_SPEED),
+            ySpeed: l.random(h.Y_SPEED_MIN, h.Y_SPEED_MAX),
             opacity: h.OPACITY,
-            opacitySpeed: a.random(h.OPACITY_SPEED_MIN, h.OPACITY_SPEED_MAX),
-            size: a.random(h.SIZE_MIN, h.SIZE_MAX)
+            opacitySpeed: l.random(h.OPACITY_SPEED_MIN, h.OPACITY_SPEED_MAX),
+            size: l.random(h.SIZE_MIN, h.SIZE_MAX)
           });
           u[e.id] = e
         }
-        return l.particles[e.id] = u, l.lastSpawned[e.id] = Date.now(), l
+        return a.particles[e.id] = u, a.lastSpawned[e.id] = Date.now(), a
       })
     }(E, A, M), (0, c.renderAvatarCursorOutline)(S, A, M, R, f.OUTLINE_WIDTH), (0, c.renderAvatarCursor)(S, A, M, E.userId), p(E, e => (function(e, t, n) {
       if (null == t) return;
-      let l = n.size * window.devicePixelRatio,
-        a = n.x - l / 2 * window.devicePixelRatio,
-        s = n.y - 1.2 * l * window.devicePixelRatio;
-      e.globalAlpha = n.opacity, e.drawImage(t, l / 2 + a, l / 2 + s, l, l)
-    })(S, N, e)), E.lastUpdatedAt + f.EMOJI_HOSE_PING_DELAY < Date.now() && (0, r.stopRenderedEmojiHose)(v, E), E.state === u.EmojiHoseState.STOP && (l = E, !(Object.keys(null !== (i = m.getState().particles[l.id]) && void 0 !== i ? i : {}).length > 0))) x.push(E);
+      let a = n.size * window.devicePixelRatio,
+        l = n.x - a / 2 * window.devicePixelRatio,
+        s = n.y - 1.2 * a * window.devicePixelRatio;
+      e.globalAlpha = n.opacity, e.drawImage(t, a / 2 + l, a / 2 + s, a, a)
+    })(S, N, e)), E.lastUpdatedAt + f.EMOJI_HOSE_PING_DELAY < Date.now() && (0, r.stopRenderedEmojiHose)(v, E), E.state === u.EmojiHoseState.STOP && (a = E, !(Object.keys(null !== (i = m.getState().particles[a.id]) && void 0 !== i ? i : {}).length > 0))) x.push(E);
   S.restore()
 }

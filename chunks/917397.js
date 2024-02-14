@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   UserRulesAgreementLevel: function() {
-    return l
+    return a
   },
   useUserRulesAgreementLevel: function() {
     return p
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return C
   }
 }), n("702976"), n("222007");
-var l, a, s = n("884691"),
+var a, l, s = n("884691"),
   i = n("866227"),
   r = n.n(i),
   o = n("65597"),
@@ -32,12 +32,12 @@ n("178406"), n("645266");
 var m = n("657944");
 
 function p(e, t) {
-  var n, l;
-  let a = (0, o.default)([c.default], () => c.default.getUser(e), [e]),
+  var n, a;
+  let l = (0, o.default)([c.default], () => c.default.getUser(e), [e]),
     s = (0, o.default)([u.default], () => u.default.getMember(t, e), [t, e]),
     i = (0, o.default)([d.default], () => d.default.getGuild(t), [t]),
     r = null == i ? void 0 : i.hasVerificationGate();
-  return r ? null == a || null == s || null == i ? 1 : (0, f.hasFlag)(null !== (n = s.flags) && void 0 !== n ? n : 0, m.GuildMemberFlags.BYPASSES_VERIFICATION) || (0, f.hasFlag)(null !== (l = s.flags) && void 0 !== l ? l : 0, m.GuildMemberFlags.COMPLETED_ONBOARDING) ? 2 : 1 : 0
+  return r ? null == l || null == s || null == i ? 1 : (0, f.hasFlag)(null !== (n = s.flags) && void 0 !== n ? n : 0, m.GuildMemberFlags.BYPASSES_VERIFICATION) || (0, f.hasFlag)(null !== (a = s.flags) && void 0 !== a ? a : 0, m.GuildMemberFlags.COMPLETED_ONBOARDING) ? 2 : 1 : 0
 }
 
 function E(e) {
@@ -63,6 +63,6 @@ function g(e) {
 
 function C(e, t) {
   let n = (0, o.default)([u.default], () => u.default.getMember(t, e), [t, e]),
-    l = null == n ? void 0 : n.joinedAt;
-  return s.useMemo(() => null == l ? "" : r(new Date(l)).format("MMM DD, YYYY"), [l])
-}(a = l || (l = {}))[a.NO_GATE = 0] = "NO_GATE", a[a.NO_AGREEMENT = 1] = "NO_AGREEMENT", a[a.AGREED = 2] = "AGREED"
+    a = null == n ? void 0 : n.joinedAt;
+  return s.useMemo(() => null == a ? "" : r(new Date(a)).format("MMM DD, YYYY"), [a])
+}(l = a || (a = {}))[l.NO_GATE = 0] = "NO_GATE", l[l.NO_AGREEMENT = 1] = "NO_AGREEMENT", l[l.AGREED = 2] = "AGREED"

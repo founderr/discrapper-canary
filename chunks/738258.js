@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("917351"),
   i = n("865981"),
   r = n.n(i),
@@ -16,11 +16,11 @@ let c = async e => {
   var t;
   let {
     animationType: n,
-    animationId: l,
-    url: a,
+    animationId: a,
+    url: l,
     shouldResize: i
-  } = e, r = null !== (t = o.AnimationTypeToAnimations[n]) && void 0 !== t ? t : o.AnimationTypeToAnimations[u.VoiceChannelEffectAnimationType.BASIC], d = null != l && l < r.length ? r[l] : (0, s.sample)(r), c = JSON.parse(JSON.stringify(d));
-  return c.assets[0].p = i ? await (0, o.getResizedEmojiData)(a) : a, c
+  } = e, r = null !== (t = o.AnimationTypeToAnimations[n]) && void 0 !== t ? t : o.AnimationTypeToAnimations[u.VoiceChannelEffectAnimationType.BASIC], d = null != a && a < r.length ? r[a] : (0, s.sample)(r), c = JSON.parse(JSON.stringify(d));
+  return c.assets[0].p = i ? await (0, o.getResizedEmojiData)(l) : l, c
 };
 
 function f(e) {
@@ -28,8 +28,8 @@ function f(e) {
     containerDimensions: t,
     effect: n,
     onComplete: s
-  } = e, i = a.useRef(null);
-  return a.useEffect(() => {
+  } = e, i = l.useRef(null);
+  return l.useEffect(() => {
     let e;
     return !async function() {
       if (null != i.current) {
@@ -48,7 +48,7 @@ function f(e) {
     }(), () => {
       null == e || e.destroy()
     }
-  }, [s, n]), (0, l.jsx)("div", {
+  }, [s, n]), (0, a.jsx)("div", {
     className: d.effect,
     style: {
       height: t.height,

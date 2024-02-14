@@ -52,8 +52,8 @@ var x = function(e) {
     channel: k,
     guildId: w,
     className: F,
-    onMouseDown: B,
-    onKeyDown: G,
+    onMouseDown: G,
+    onKeyDown: B,
     onClick: H,
     onContextMenu: V,
     onClickPremiumGuildIcon: K,
@@ -116,8 +116,8 @@ var x = function(e) {
     }),
     innerClassName: A.memberInner,
     onClick: H,
-    onKeyDown: G,
-    onMouseDown: B,
+    onKeyDown: B,
+    onMouseDown: G,
     onContextMenu: V,
     onMouseEnter: () => {
       et(!0)

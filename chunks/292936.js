@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return G
   }
 }), n("222007");
 var l, i, a = n("37983"),
@@ -81,7 +81,7 @@ function F(e) {
     })]
   })
 }(i = l || (l = {}))[i.STICKER = 0] = "STICKER";
-var B = s.memo(function(e) {
+var G = s.memo(function(e) {
   var t;
   let {
     editorRef: n,
@@ -90,7 +90,7 @@ var B = s.memo(function(e) {
     onSelectSticker: r,
     stickerIconVisible: c = !1,
     submitButtonVisible: f = !1
-  } = e, I = s.useContext(E.default), [_, x] = s.useState(null), [j, U] = s.useState(!1), [D, B] = s.useState(null), G = (0, g.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, j, l), {
+  } = e, I = s.useContext(E.default), [_, x] = s.useState(null), [j, U] = s.useState(!1), [D, G] = s.useState(null), B = (0, g.useExpressionPickerStore)(e => null != e.activeView), H = s.useRef(null), [V, K] = s.useState(""), [W, Y] = s.useState(""), [z, Z] = s.useState(!1), [J, q] = s.useState(!1), X = (0, R.useStickerSuggestionResults)(V, j, l), {
     analyticsLocations: Q,
     AnalyticsLocationProvider: $
   } = (0, h.default)(p.default.EXPRESSION_SUGGESTIONS), {
@@ -117,7 +117,7 @@ var B = s.memo(function(e) {
       I.removeListener("text-changed", ee), I.removeListener("autocomplete-visibility-change", e), I.removeListener("selection-changed", t)
     }
   }, [ee, n, I]), s.useLayoutEffect(() => {
-    null == _ && B(null)
+    null == _ && G(null)
   }, [_]);
   let [en, el] = s.useState(!1);
   s.useLayoutEffect(() => {
@@ -127,7 +127,7 @@ var B = s.memo(function(e) {
     })
   }, [i]);
   let ei = X.length > 0,
-    ea = en && !G && !z && !j && !J && ei,
+    ea = en && !B && !z && !j && !J && ei,
     {
       stickersNavigator: es
     } = function(e) {
@@ -183,7 +183,7 @@ var B = s.memo(function(e) {
       focusedSuggestionType: _,
       setFocusedSuggestionType: x,
       setHasDismissed: U,
-      setFocusedStickerListItem: B,
+      setFocusedStickerListItem: G,
       setTextInputValue: K
     }),
     er = (e, t) => {
@@ -242,7 +242,7 @@ var B = s.memo(function(e) {
                   t.current = e
                 },
                 onMouseLeave: () => {
-                  null == _ && B(null)
+                  null == _ && G(null)
                 },
                 tabIndex: ed ? -1 : n,
                 ...l,
@@ -257,7 +257,7 @@ var B = s.memo(function(e) {
                     sendability: l,
                     listIndex: t,
                     onMouseOver: () => {
-                      es.setFocus("".concat(t)), B("".concat(t))
+                      es.setFocus("".concat(t)), G("".concat(t))
                     },
                     onSelectSticker: er,
                     sticker: n

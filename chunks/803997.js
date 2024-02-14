@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return I
   }
 }), n("424973");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
@@ -27,7 +27,7 @@ function I(e) {
   let {
     channelId: t,
     ...n
-  } = e, s = a.useRef(null), I = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout() === S.FocusedActivityLayouts.RESIZABLE), T = a.useCallback(() => {
+  } = e, s = l.useRef(null), I = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout() === S.FocusedActivityLayouts.RESIZABLE), T = l.useCallback(() => {
     let e = I ? S.FocusedActivityLayouts.NO_CHAT : S.FocusedActivityLayouts.RESIZABLE;
     (0, p.updateFocusedActivityLayout)(e)
   }, [I]), {
@@ -37,17 +37,17 @@ function I(e) {
     let t = (0, o.useStateFromStores)([f.default], () => !(0, r.isEmpty)(f.default.getTypingUsers(e)), [e]),
       {
         unreadCount: n,
-        mentionCount: l
+        mentionCount: a
       } = (0, o.useStateFromStoresObject)([c.default], () => ({
         unreadCount: c.default.getUnreadCount(e),
         mentionCount: c.default.getMentionCount(e)
       }), [e]);
     return {
       unreadCount: n,
-      mentionCount: l,
+      mentionCount: a,
       isTyping: t
     }
-  }(t), N = a.useCallback(() => {
+  }(t), N = l.useCallback(() => {
     var e;
     null === (e = s.current) || void 0 === e || e.focus()
   }, []);
@@ -63,9 +63,9 @@ function I(e) {
   let R = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout()),
     j = x > 0 ? x : v,
     L = j > 0;
-  return (0, l.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: _.wrapper,
-    children: [(0, l.jsx)(d.default, {
+    children: [(0, a.jsx)(d.default, {
       buttonRef: s,
       onClick: T,
       label: A,
@@ -75,7 +75,7 @@ function I(e) {
       themeable: !0,
       className: i(_.circularButton, R === S.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow),
       ...n
-    }), L ? (0, l.jsx)(u.default, {
+    }), L ? (0, a.jsx)(u.default, {
       hasMentions: x > 0,
       truncatedCount: j > 99 ? "99+" : j,
       className: _.badge

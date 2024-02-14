@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return C
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("907002"),
   i = n("446674"),
   r = n("413197"),
@@ -23,10 +23,10 @@ var l = n("37983"),
 function g(e, t) {
   return n => {
     if (0 === n) return "auto";
-    let l = "forwards" === t.current,
-      a = n > 0,
+    let a = "forwards" === t.current,
+      l = n > 0,
       s = !1;
-    return a && l && "left" === e && (s = !0), a && !l && "right" === e && (s = !0), !a && l && "right" === e && (s = !0), !a && !l && "left" === e && (s = !0), s ? "calc(".concat(100 * Math.abs(n), "% + ").concat(Math.round(12 * Math.abs(n)), "px)") : "auto"
+    return l && a && "left" === e && (s = !0), l && !a && "right" === e && (s = !0), !l && a && "right" === e && (s = !0), !l && !a && "left" === e && (s = !0), s ? "calc(".concat(100 * Math.abs(n), "% + ").concat(Math.round(12 * Math.abs(n)), "px)") : "auto"
   }
 }
 
@@ -43,13 +43,13 @@ function C(e) {
     R = (0, c.default)(M),
     {
       reducedMotion: j
-    } = a.useContext(r.AccessibilityPreferencesContext),
-    L = a.useCallback(e => {
+    } = l.useContext(r.AccessibilityPreferencesContext),
+    L = l.useCallback(e => {
       null != x && (0, f.openGuildMemberModViewSidebar)(_, C, x.baseChannelId, {
         modViewPanel: e
       })
     }, [x, _, C]),
-    O = a.useMemo(() => ({
+    O = l.useMemo(() => ({
       [S.KeybindActions.CLOSE_MODAL]: {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
@@ -59,7 +59,7 @@ function C(e) {
         }
       }
     }), [I, N, L]);
-  a.useEffect(() => (u.default.enable(), u.default.enableTemp(O), () => u.default.disableTemp()), [O]);
+  l.useEffect(() => (u.default.enable(), u.default.enableTemp(O), () => u.default.disableTemp()), [O]);
   let y = (0, s.useTransition)(N, {
     immediate: A !== C,
     value: 0,
@@ -73,7 +73,7 @@ function C(e) {
       value: -1
     }
   });
-  return (0, l.jsx)(s.animated.div, {
+  return (0, a.jsx)(s.animated.div, {
     style: {
       position: "relative",
       height: "100%",
@@ -81,11 +81,11 @@ function C(e) {
       overflow: "hidden"
     },
     children: y((e, t, n) => {
-      var a, i, r;
+      var l, i, r;
       let {
         key: o
       } = n;
-      return (0, l.jsx)(s.animated.div, {
+      return (0, a.jsx)(s.animated.div, {
         style: {
           position: "absolute",
           display: "flex",
@@ -94,7 +94,7 @@ function C(e) {
           width: "100%",
           height: "100%",
           ...j.enabled ? {
-            opacity: null === (a = e.value) || void 0 === a ? void 0 : a.to(e => 1 - Math.abs(e))
+            opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to(e => 1 - Math.abs(e))
           } : {
             left: null === (i = e.value) || void 0 === i ? void 0 : i.to(g("left", R)),
             right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g("right", R))
@@ -103,21 +103,21 @@ function C(e) {
         children: function(e) {
           switch (e) {
             case E.ModViewPanel.INFO:
-              return (0, l.jsx)(h.default, {
+              return (0, a.jsx)(h.default, {
                 userId: C,
                 guildId: _,
                 onNavigate: L,
                 className: v
               });
             case E.ModViewPanel.MESSAGE_HISTORY:
-              return (0, l.jsx)(m.default, {
+              return (0, a.jsx)(m.default, {
                 userId: C,
                 guildId: _,
                 onNavigate: () => L(E.ModViewPanel.INFO),
                 className: v
               });
             case E.ModViewPanel.PERMISSIONS:
-              return (0, l.jsx)(p.default, {
+              return (0, a.jsx)(p.default, {
                 userId: C,
                 guildId: _,
                 onNavigate: () => L(E.ModViewPanel.INFO),

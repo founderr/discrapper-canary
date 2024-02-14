@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("414456"),
-  s = n.n(a),
+var l = n("414456"),
+  s = n.n(l),
   i = n("394846"),
   r = n("77078"),
   o = n("548683"),
@@ -17,28 +17,28 @@ function d(e) {
   let {
     guildId: t,
     children: n,
-    className: a
+    className: l
   } = e, {
     horizontalScrollNotice: d,
     handleScroll: c,
     handleSetScrollerRef: f,
     handleSetContainerRef: h
-  } = (0, o.default)(t), m = (0, l.jsx)("div", {
+  } = (0, o.default)(t), m = (0, a.jsx)("div", {
     className: u.tierPreviewsContainer,
-    children: (0, l.jsx)("div", {
-      className: s(u.tierPreviews, a),
+    children: (0, a.jsx)("div", {
+      className: s(u.tierPreviews, l),
       children: n
     })
   });
-  return !i.isMobile && (m = (0, l.jsxs)(l.Fragment, {
-    children: [d, (0, l.jsx)(r.AdvancedScroller, {
+  return !i.isMobile && (m = (0, a.jsxs)(a.Fragment, {
+    children: [d, (0, a.jsx)(r.AdvancedScroller, {
       className: u.scroller,
       orientation: "horizontal",
       ref: f,
       onScroll: c,
       children: m
     })]
-  })), (0, l.jsx)("div", {
+  })), (0, a.jsx)("div", {
     className: u.carouselMaxWidth,
     ref: h,
     children: m

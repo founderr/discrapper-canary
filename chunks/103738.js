@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return _
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("737960"),
@@ -44,34 +44,34 @@ var l = n("37983"),
       popoutWindow: b,
       awaitingRemoteSessionInfo: D
     } = e;
-    a.useEffect(() => {
+    l.useEffect(() => {
       c.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET)
     }, [L, O]);
-    let U = a.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
-    if ((null == D ? void 0 : D.channelId) === x.id) return (0, l.jsx)(h.default, {
+    let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
+    if ((null == D ? void 0 : D.channelId) === x.id) return (0, a.jsx)(h.default, {
       height: O
     });
-    if ((null == x ? void 0 : x.isGuildVocal()) && !M) return (0, l.jsx)(f.default, {
+    if ((null == x ? void 0 : x.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
       channel: x,
       participants: t,
       hasConnectPermission: N
     });
-    if (P === S.ChannelModes.VOICE) return (0, l.jsx)(o.default, {
+    if (P === S.ChannelModes.VOICE) return (0, a.jsx)(o.default, {
       guildId: x.guild_id,
       width: L,
       className: C.voiceCallWrapper,
       participants: t,
       onContextMenu: T
     });
-    if (n = M ? n : t, null == s) return 0 === n.length ? (0, l.jsx)(E.default, {
+    if (n = M ? n : t, null == s) return 0 === n.length ? (0, a.jsx)(E.default, {
       className: i(C.videoGrid, C.hiddenParticipants),
       channelId: x.id,
       width: L
-    }) : (0, l.jsx)(d.default, {
+    }) : (0, a.jsx)(d.default, {
       className: C.videoGridWrapper,
       justify: d.default.Justify.CENTER,
       align: d.default.Align.CENTER,
-      children: (0, l.jsx)(m.default, {
+      children: (0, a.jsx)(m.default, {
         channel: x,
         className: C.videoGrid,
         participants: U,
@@ -83,7 +83,7 @@ var l = n("37983"),
         inCall: M
       })
     });
-    return (0, l.jsx)(p.default, {
+    return (0, a.jsx)(p.default, {
       onFullscreenParticipant: v,
       onContextMenuParticipant: T,
       onSelectParticipant: I,

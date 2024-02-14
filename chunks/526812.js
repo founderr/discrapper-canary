@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   }
 }), n("222007");
-var l = n("446674"),
-  a = n("913144");
+var a = n("446674"),
+  l = n("913144");
 let s = new Set;
-class i extends l.default.PersistedStore {
+class i extends a.default.PersistedStore {
   initialize(e) {
     null != e && (s = new Set(e))
   }
@@ -19,7 +19,7 @@ class i extends l.default.PersistedStore {
   }
 }
 i.displayName = "ForumChannelAdminOnboardingGuideStore", i.persistKey = "ForumChannelAdminOnboardingGuideStore";
-var r = new i(a.default, {
+var r = new i(l.default, {
   ADMIN_ONBOARDING_GUIDE_HIDE: function(e) {
     let {
       channelId: t,

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var l = n("77078"),
   s = n("592407"),
   i = n("479756"),
   r = n("432153"),
@@ -19,24 +19,24 @@ function f(e) {
   let {
     guildId: t
   } = e;
-  return (0, l.jsx)("div", {
+  return (0, a.jsx)("div", {
     className: d.upsellPage,
-    children: (0, l.jsxs)("div", {
+    children: (0, a.jsxs)("div", {
       className: d.upsellContainer,
-      children: [(0, l.jsx)("img", {
+      children: [(0, a.jsx)("img", {
         src: c,
         alt: ""
-      }), (0, l.jsxs)("div", {
+      }), (0, a.jsxs)("div", {
         className: d.upsellContent,
-        children: [(0, l.jsx)(a.Heading, {
+        children: [(0, a.jsx)(l.Heading, {
           variant: "heading-xl/semibold",
           children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL_UPSELL_HEADER
-        }), (0, l.jsx)(a.Text, {
+        }), (0, a.jsx)(l.Text, {
           variant: "text-sm/normal",
           className: d.bodyText,
           children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL_UPSELL_BODY
-        }), (0, l.jsx)(a.Button, {
-          size: a.Button.Sizes.MEDIUM,
+        }), (0, a.jsx)(l.Button, {
+          size: l.Button.Sizes.MEDIUM,
           onClick: () => {
             (0, i.stopImpersonating)(t), s.default.open(t, o.GuildSettingsSections.ROLE_SUBSCRIPTIONS, void 0, o.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIERS), (0, r.announceDeleteTemplateChannels)(t)
           },

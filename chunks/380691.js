@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var l = n("446674"),
-  a = n("191225");
+var a = n("446674"),
+  l = n("191225");
 let s = () => {
-  let e = (0, l.useStateFromStores)([a.default], () => a.default.getState().shouldShowNewActivityIndicator);
+  let e = (0, a.useStateFromStores)([l.default], () => l.default.getState().shouldShowNewActivityIndicator);
   return e
 }

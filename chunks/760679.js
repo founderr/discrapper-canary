@@ -31,45 +31,45 @@ n.r(t), n.d(t, {
     return S
   }
 });
-var l = n("981980"),
-  a = n("872717"),
+var a = n("981980"),
+  l = n("872717"),
   s = n("913144"),
   i = n("315841"),
   r = n("49111");
 
-function o(e, t, n, l, a) {
+function o(e, t, n, a, l) {
   s.default.dispatch({
     type: "SHARED_CANVAS_DRAW_LINE_POINT",
     channelId: e,
     userId: n,
     lineId: t,
-    streamerId: l,
-    point: a
+    streamerId: a,
+    point: l
   })
 }
 
-function u(e, t, n, l) {
-  return a.default.post({
+function u(e, t, n, a) {
+  return l.default.post({
     url: r.Endpoints.SHARED_CANVAS_LINES(e, n),
     body: {
       line_id: t,
-      points: l
+      points: a
     }
   })
 }
 
-function d(e, t, n, l) {
+function d(e, t, n, a) {
   s.default.dispatch({
     type: "SHARED_CANVAS_UPDATE_LINE_POINTS",
     userId: t,
     lineId: e,
-    newPoints: l,
+    newPoints: a,
     streamerId: n
   })
 }
 
 function c(e, t, n) {
-  return a.default.post({
+  return l.default.post({
     url: r.Endpoints.SHARED_CANVAS_EMOJI_HOSES(e, t),
     body: {
       emoji_hose: n
@@ -78,9 +78,9 @@ function c(e, t, n) {
 }
 
 function f(e, t, n) {
-  a.default.delete({
+  l.default.delete({
     url: r.Endpoints.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
-    backoff: new l.default
+    backoff: new a.default
   })
 }
 

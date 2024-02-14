@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return S
   }
 }), n("424973");
-var l = n("884691"),
-  a = n("862337"),
+var a = n("884691"),
+  l = n("862337"),
   s = n("669491"),
   i = n("77078"),
   r = n("462274"),
@@ -23,16 +23,16 @@ function S(e, t, n, S) {
   let g = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
     C = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
     _ = (0, i.useToken)(s.default.unsafe_rawColors.WHITE_500).hex(),
-    I = l.useRef({}),
-    T = l.useRef(new a.Interval),
-    v = l.useCallback(t => {
+    I = a.useRef({}),
+    T = a.useRef(new l.Interval),
+    v = a.useCallback(t => {
       let n = d.default.getDrawables(t);
       (0, f.clearCanvas)(e), ! function(e) {
         let {
           canvasRef: t,
           drawables: n,
-          fallbackColor: l,
-          linesDrawnAt: a,
+          fallbackColor: a,
+          linesDrawnAt: l,
           streamerId: s,
           channelId: i,
           outlineColorDark: r,
@@ -56,8 +56,8 @@ function S(e, t, n, S) {
             let {
               drawable: t,
               context: n,
-              canvasWidth: l,
-              canvasHeight: a,
+              canvasWidth: a,
+              canvasHeight: l,
               fallbackColor: s,
               outlineColorDark: i,
               outlineColorLight: r,
@@ -70,8 +70,8 @@ function S(e, t, n, S) {
                 return (0, m.default)({
                   line: t,
                   context: n,
-                  canvasWidth: l,
-                  canvasHeight: a,
+                  canvasWidth: a,
+                  canvasHeight: l,
                   fallbackColor: s,
                   outlineColorDark: i,
                   outlineColorLight: r,
@@ -82,8 +82,8 @@ function S(e, t, n, S) {
                 return (0, h.default)({
                   emojiHose: t,
                   context: n,
-                  canvasWidth: l,
-                  canvasHeight: a,
+                  canvasWidth: a,
+                  canvasHeight: l,
                   fallbackColor: s,
                   outlineColorDark: i,
                   outlineColorLight: r,
@@ -96,10 +96,10 @@ function S(e, t, n, S) {
             context: p,
             canvasWidth: E,
             canvasHeight: S,
-            fallbackColor: l,
+            fallbackColor: a,
             outlineColorDark: r,
             outlineColorLight: d,
-            linesDrawnAt: a,
+            linesDrawnAt: l,
             deadDrawables: g,
             streamerId: s
           })
@@ -115,25 +115,25 @@ function S(e, t, n, S) {
         channelId: S
       })
     }, [e, S, g, C, _]);
-  l.useEffect(() => {
+  a.useEffect(() => {
     let t = new ResizeObserver(() => {
       let t = e.current;
       if (null == t) return;
       let {
-        width: l,
-        height: a
+        width: a,
+        height: l
       } = t.getBoundingClientRect();
-      t.width = l * window.devicePixelRatio, t.height = a * window.devicePixelRatio, v(n)
+      t.width = a * window.devicePixelRatio, t.height = l * window.devicePixelRatio, v(n)
     });
     return null != e.current && t.observe(e.current), () => t.disconnect()
   }, [e, v, n]);
-  let x = l.useCallback(() => {
+  let x = a.useCallback(() => {
     let t = d.default.getDrawables(n),
-      l = h.useEmojiHoseStore.getState().particles,
-      a = t.length > 0 || Object.keys(l).length > 0;
-    a && null == T.current._ref && (null == T.current._ref ? (v(n), T.current.start(E, () => v(n))) : !a && null != T.current._ref && (T.current.stop(), (0, f.clearCanvas)(e)))
+      a = h.useEmojiHoseStore.getState().particles,
+      l = t.length > 0 || Object.keys(a).length > 0;
+    l && null == T.current._ref && (null == T.current._ref ? (v(n), T.current.start(E, () => v(n))) : !l && null != T.current._ref && (T.current.stop(), (0, f.clearCanvas)(e)))
   }, [e, v, n]);
-  l.useEffect(() => {
+  a.useEffect(() => {
     let e = T.current;
     return d.default.addChangeListener(x), x(), (0, r.maybeFetchColors)(t.getAvatarURL(null, p.AVATAR_COLOR_AVATAR_SIZE)), () => {
       d.default.removeChangeListener(x), e.stop()

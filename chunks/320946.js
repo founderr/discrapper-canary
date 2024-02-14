@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return y
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("627445"),
   i = n.n(s),
   r = n("866227"),
@@ -46,9 +46,9 @@ var l = n("37983"),
       V = (0, u.useStateFromStores)([_.default], () => null != w ? _.default.get(w) : null),
       {
         activeSubscription: B,
-        activeSubscriptionPlanFromStore: G
+        activeSubscriptionPlanFromStore: H
       } = (0, N.default)(n),
-      H = null == B || null != G,
+      G = null == B || null != H,
       W = (0, v.useSubscriptionListingsForGroup)(n, {
         includeSoftDeleted: !0
       }),
@@ -69,19 +69,19 @@ var l = n("37983"),
       changeDate: null != B ? o(B.currentPeriodEnd).format("MMM DD, YYYY") : ""
     }) : K ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : Z ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : $ && (r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
     let ee = (0, f.default)(j.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
-    a.useEffect(() => {
+    l.useEffect(() => {
       F && null != k && d.default.wait(() => {
         (0, c.fetchSubscriptionPlansForSKU)(k)
       })
     }, [F, k]);
-    let et = a.useCallback(async () => {
-        let n, a;
+    let et = l.useCallback(async () => {
+        let n, l;
         if (i(null != e, "No subscription listing"), i(null != U, "No subscription plan"), i(F, "Cannot purchase this unpublished plan"), (null == q ? void 0 : q.active_trial) != null) {
-          let l = await J(t, e.id, q.active_trial.id);
-          if ((null == l ? void 0 : l.is_eligible) === !0) {
+          let a = await J(t, e.id, q.active_trial.id);
+          if ((null == a ? void 0 : a.is_eligible) === !0) {
             var r;
             n = null == q ? void 0 : null === (r = q.active_trial) || void 0 === r ? void 0 : r.id
-          } else a = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
+          } else l = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
         }(0, C.default)({
           activeSubscription: B,
           analyticsSubscriptionType: L.SubscriptionTypes.GUILD,
@@ -98,8 +98,8 @@ var l = n("37983"),
           }) : void 0,
           analyticsLocations: Q,
           analyticsLocation: s,
-          renderHeader: (n, a, s) => (0, l.jsx)(R.Header, {
-            onClose: a,
+          renderHeader: (n, l, s) => (0, a.jsx)(R.Header, {
+            onClose: l,
             listing: e,
             step: s,
             guildId: t
@@ -107,24 +107,24 @@ var l = n("37983"),
           initialPlanId: U.id,
           skuId: U.sku_id,
           planGroup: Y,
-          renderPurchaseConfirmation: (n, a) => ee ? (0, l.jsx)(M.PurchaseConfirmationLite, {
+          renderPurchaseConfirmation: (n, l) => ee ? (0, a.jsx)(M.PurchaseConfirmationLite, {
             listing: e,
-            onClose: a,
+            onClose: l,
             guildId: t
-          }) : (0, l.jsx)(R.PurchaseConfirmation, {
+          }) : (0, a.jsx)(R.PurchaseConfirmation, {
             listing: e,
-            onClose: a,
+            onClose: l,
             guildId: t
           }),
-          reviewWarningMessage: a
+          reviewWarningMessage: l
         })
       }, [F, e, U, B, Y, t, Q, s, J, q, ee]),
-      en = a.useCallback(() => {
+      en = l.useCallback(() => {
         (0, m.openMemberVerificationModal)(t)
       }, [t]);
     return {
       openModal: P ? en : et,
-      canOpenModal: !y && null != V && H && !D && !K && !Z && !$,
+      canOpenModal: !y && null != V && G && !D && !K && !Z && !$,
       cannotOpenReason: r,
       isCheckingTrialEligibility: X
     }

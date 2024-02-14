@@ -45,8 +45,8 @@ var l = n("37983"),
       required: k,
       textAreaPaddingClassName: w,
       onChange: F,
-      onPaste: B,
-      onResize: G,
+      onPaste: G,
+      onResize: B,
       onFocus: H,
       onBlur: V,
       onKeyDown: K,
@@ -161,7 +161,7 @@ var l = n("37983"),
         ignoreTrailingEmptyNodes: !0
       }), t, e)
     }, [L.id, ev, Z, eI, $]);
-    (0, v.default)(t, ev, L, e_), (0, N.default)(ev, em, G);
+    (0, v.default)(t, ev, L, e_), (0, N.default)(ev, em, B);
     let {
       handleKeyDown: eN,
       handleKeyUp: eA
@@ -180,7 +180,7 @@ var l = n("37983"),
     }), {
       handlePaste: ey,
       handleGlobalPaste: ex
-    } = (0, _.default)(ev, eg, B), eO = i.useCallback(e => {
+    } = (0, _.default)(ev, eg, G), eO = i.useCallback(e => {
       null == J || J()
     }, [J]), eR = i.useCallback(e => {
       e !== ep.current ? eE.current && (null == F || F(null, (0, E.toTextValue)(e, {

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
+var l = n("446674"),
   s = n("272030"),
   i = n("824563"),
   r = n("401642"),
@@ -17,8 +17,8 @@ var a = n("446674"),
       connection: t
     } = e, {
       user: d
-    } = t, c = d.isNonUserBot(), f = (0, a.useStateFromStores)([i.default], () => c ? null : i.default.getStatus(d.id));
-    return (0, l.jsx)(o.FriendRow, {
+    } = t, c = d.isNonUserBot(), f = (0, l.useStateFromStores)([i.default], () => c ? null : i.default.getStatus(d.id));
+    return (0, a.jsx)(o.FriendRow, {
       user: d,
       status: null != f ? f : u.StatusTypes.UNKNOWN,
       onSelect: () => {
@@ -30,14 +30,14 @@ var a = n("446674"),
         })
       },
       onContextMenu: e => {
-        var t, a;
-        return t = e, a = d, void(0, s.openContextMenuLazy)(t, async () => {
+        var t, l;
+        return t = e, l = d, void(0, s.openContextMenuLazy)(t, async () => {
           let {
             default: e
           } = await n.el("406784").then(n.bind(n, "406784"));
-          return t => (0, l.jsx)(e, {
+          return t => (0, a.jsx)(e, {
             ...t,
-            user: a
+            user: l
           })
         })
       }

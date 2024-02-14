@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
-var l = n("782340");
+var a = n("782340");
 
-function a(e, t, n, a) {
-  return a ? l.default.Messages.CONSOLE_CONNECTING_DISABLED : n ? l.default.Messages.SUPPRESSED : t ? l.default.Messages.SERVER_MUTED_DIALOG_TITLE : e ? l.default.Messages.UNMUTE : l.default.Messages.MUTE
+function l(e, t, n, l) {
+  return l ? a.default.Messages.CONSOLE_CONNECTING_DISABLED : n ? a.default.Messages.SUPPRESSED : t ? a.default.Messages.SERVER_MUTED_DIALOG_TITLE : e ? a.default.Messages.UNMUTE : a.default.Messages.MUTE
 }

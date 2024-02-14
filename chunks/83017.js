@@ -57,7 +57,7 @@ let P = e => {
     canCreateExpressions: k
   } = (0, T.useManageResourcePermissions)(p), w = C.getCustomEmoji(), F = e => {
     if (e.type === E.EmojiTypes.GUILD) return e.guildId
-  }, B = u.useMemo(() => c.groupBy(w, F), [w]);
+  }, G = u.useMemo(() => c.groupBy(w, F), [w]);
   return u.useMemo(() => {
     let e = [],
       u = [],
@@ -141,7 +141,7 @@ let P = e => {
         for (let e of d)
           if (e === R.EmojiCategories.CUSTOM) {
             let n = n => {
-              let l = B[n];
+              let l = G[n];
               if (null == l) return;
               let a = l.filter(e => A.default.getEmojiUnavailableReason({
                 emoji: e,
@@ -229,7 +229,7 @@ let P = e => {
       rowCountBySection: e,
       sectionDescriptors: u
     }
-  }, [C, s, o, r, a, n, t, i, d, p, B, D, U, j, b, P, k, l])
+  }, [C, s, o, r, a, n, t, i, d, p, G, D, U, j, b, P, k, l])
 };
 (o = a || (a = {}))[o.PREMIUM = 0] = "PREMIUM", o[o.ROLE_SUBSCRIPTION = 1] = "ROLE_SUBSCRIPTION";
 let b = e => {

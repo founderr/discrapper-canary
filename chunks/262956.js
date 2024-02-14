@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("446674"),
   i = n("77078"),
   r = n("112821"),
@@ -25,16 +25,16 @@ var l = n("37983"),
     } = e, n = (0, s.useStateFromStores)([d.default, f.default], () => {
       let e = f.default.getCurrentUser();
       return null == e || t.isNSFW() && (!e.nsfwAllowed || !d.default.didAgree(t.getGuildId()))
-    }, [t]), [g, C] = a.useState(!1), _ = (0, s.useStateFromStores)([c.default], () => c.default.hasUnreadPins(t.id), [t]), I = (0, o.useWindowDispatch)(), T = (0, u.useIsBroadcastingGDM)(t.id), v = a.useCallback(() => {
+    }, [t]), [g, C] = l.useState(!1), _ = (0, s.useStateFromStores)([c.default], () => c.default.hasUnreadPins(t.id), [t]), I = (0, o.useWindowDispatch)(), T = (0, u.useIsBroadcastingGDM)(t.id), v = l.useCallback(() => {
       !n && C(e => !e)
     }, [n]);
 
     function x(e) {
       !(null == e ? void 0 : e.shiftKey) && I.dispatch(E.ComponentActions.POPOUT_CLOSE)
     }
-    return (a.useEffect(() => (p.ComponentDispatch.subscribe(E.ComponentActions.TOGGLE_CHANNEL_PINS, v), () => {
+    return (l.useEffect(() => (p.ComponentDispatch.subscribe(E.ComponentActions.TOGGLE_CHANNEL_PINS, v), () => {
       p.ComponentDispatch.unsubscribe(E.ComponentActions.TOGGLE_CHANNEL_PINS, v)
-    }), [v]), T) ? null : (0, l.jsx)(i.Popout, {
+    }), [v]), T) ? null : (0, a.jsx)(i.Popout, {
       shouldShow: g,
       animation: i.Popout.Animation.NONE,
       position: "bottom",
@@ -43,7 +43,7 @@ var l = n("37983"),
       ignoreModalClicks: !0,
       onRequestClose: () => C(!1),
       renderPopout: function(e) {
-        return (0, l.jsx)(r.default, {
+        return (0, a.jsx)(r.default, {
           ...e,
           onJump: x,
           channel: t
@@ -51,17 +51,17 @@ var l = n("37983"),
       },
       children: (e, t) => {
         let {
-          isShown: a
+          isShown: l
         } = t;
-        return (0, l.jsx)(m.Icon, {
+        return (0, a.jsx)(m.Icon, {
           ...e,
           onClick: v,
-          tooltip: a ? null : S.default.Messages.PINNED_MESSAGES,
+          tooltip: l ? null : S.default.Messages.PINNED_MESSAGES,
           icon: h.default,
           "aria-label": S.default.Messages.PINNED_MESSAGES,
           disabled: n,
           showBadge: _,
-          selected: a
+          selected: l
         })
       }
     })

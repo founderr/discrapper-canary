@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return S
   }
 });
-var l = n("884691"),
-  a = n("16470"),
+var a = n("884691"),
+  l = n("16470"),
   s = n("404118"),
   i = n("783480"),
   r = n("681736"),
@@ -25,18 +25,18 @@ function E(e) {
   let {
     parentChannel: t,
     parentMessageId: n,
-    threadSettings: a,
+    threadSettings: l,
     privateThreadMode: s,
     location: r,
     onThreadCreated: o,
     useDefaultThreadName: c
-  } = e, f = l.useCallback((e, t, n, l) => {
+  } = e, f = a.useCallback((e, t, n, a) => {
     i.default.uploadFiles({
       channelId: e.id,
       uploads: t,
       draftType: d.DraftType.FirstThreadMessage,
       options: {
-        stickerIds: l
+        stickerIds: a
       },
       parsedMessage: u.default.parse(e, n)
     })
@@ -44,7 +44,7 @@ function E(e) {
   return (0, h.useCreateThreadCommon)({
     parentChannel: t,
     parentMessageId: n,
-    threadSettings: a,
+    threadSettings: l,
     privateThreadMode: s,
     location: r,
     onThreadCreated: o,
@@ -58,7 +58,7 @@ function S(e) {
     parentChannel: t
   } = e, {
     name: n,
-    appliedTags: l
+    appliedTags: a
   } = (0, o.useForumPostComposerStore)(e => {
     let {
       name: t,
@@ -68,18 +68,18 @@ function S(e) {
       name: t,
       appliedTags: n
     }
-  }, a.default);
+  }, l.default);
   return (0, h.useCreateForumPostCommon)({
     parentChannel: t,
     name: n,
-    appliedTags: l,
-    upload: function(e, n, l) {
-      return new Promise((a, i) => {
+    appliedTags: a,
+    upload: function(e, n, a) {
+      return new Promise((l, i) => {
         let o = new r.default(e);
-        o.on("error", (e, n, l) => {
+        o.on("error", (e, n, a) => {
           if (n === m.AbortCodes.EXPLICIT_CONTENT) {
-            var a;
-            let e = c.default.getGuild(null !== (a = t.getGuildId()) && void 0 !== a ? a : m.EMPTY_STRING_GUILD_ID);
+            var l;
+            let e = c.default.getGuild(null !== (l = t.getGuildId()) && void 0 !== l ? l : m.EMPTY_STRING_GUILD_ID);
             null != e && s.default.show({
               title: p.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
               body: p.default.Messages.BOT_GUILD_EXPLICIT_CONTENT.format({
@@ -101,13 +101,13 @@ function S(e) {
             })
           });
           i({
-            body: l
+            body: a
           })
         }), o.on("complete", (e, t) => {
-          a({
+          l({
             body: t
           })
-        }), o.uploadFiles(l, n, {
+        }), o.uploadFiles(a, n, {
           addFilesTo: "message.attachments"
         })
       })

@@ -19,11 +19,11 @@ var a = s("37983"),
   E = s("271938"),
   T = s("824563"),
   p = s("697218"),
-  x = s("713135"),
-  N = s("765698"),
-  h = s("217513"),
+  N = s("713135"),
+  x = s("765698"),
+  A = s("217513"),
   v = s("641055"),
-  A = s("430312"),
+  h = s("430312"),
   I = s("453649"),
   _ = s("481923"),
   U = s("759210"),
@@ -40,9 +40,9 @@ function M(e) {
     section: l,
     setSection: o,
     hasActivity: n
-  } = e, u = (0, i.useStateFromStores)([x.default], () => {
+  } = e, u = (0, i.useStateFromStores)([N.default], () => {
     var e, s;
-    return (null === (s = x.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
+    return (null === (s = N.default.getUserProfile(t.id)) || void 0 === s ? void 0 : null === (e = s.application) || void 0 === e ? void 0 : e.id) != null
   });
   return (0, a.jsx)("div", {
     className: R.tabBarContainer,
@@ -79,7 +79,7 @@ function M(e) {
 function P(e) {
   var t, s;
   let {
-    user: x,
+    user: N,
     guildId: P,
     channelId: O,
     friendToken: F,
@@ -89,7 +89,7 @@ function P(e) {
     onClose: b
   } = e, {
     AnalyticsLocationProvider: G
-  } = (0, f.default)(c.default.PROFILE_MODAL), k = null !== (t = (0, i.useStateFromStores)([p.default], () => p.default.getUser(x.id))) && void 0 !== t ? t : x, w = (0, h.default)(null !== (s = null == k ? void 0 : k.id) && void 0 !== s ? s : "");
+  } = (0, f.default)(c.default.PROFILE_MODAL), k = null !== (t = (0, i.useStateFromStores)([p.default], () => p.default.getUser(N.id))) && void 0 !== t ? t : N, w = (0, A.default)(null !== (s = null == k ? void 0 : k.id) && void 0 !== s ? s : "");
   (0, u.useSubscribeGuildMembers)({
     [P]: [k.id]
   });
@@ -101,7 +101,7 @@ function P(e) {
     W = (0, i.useStateFromStores)([E.default], () => E.default.getId() === k.id),
     {
       showVoiceActivityInProfile: q
-    } = N.VoiceActivityProfileExperiment.useExperiment({
+    } = x.VoiceActivityProfileExperiment.useExperiment({
       location: "user profile modal container"
     }, {
       autoTrackExposure: !1
@@ -124,7 +124,7 @@ function P(e) {
         "aria-label": g.default.Messages.USER_PROFILE_MODAL,
         children: [(0, a.jsx)("div", {
           ref: $,
-          children: (0, a.jsxs)(A.default, {
+          children: (0, a.jsxs)(h.default, {
             user: k,
             profileType: j.UserProfileTypes.MODAL,
             children: [(0, a.jsx)("div", {
@@ -139,7 +139,7 @@ function P(e) {
                 channelId: O,
                 hasProfileEffect: null != es
               })
-            }), (0, a.jsxs)(A.default.Inner, {
+            }), (0, a.jsxs)(h.default.Inner, {
               children: [L === r.ModalTransitionState.ENTERED && (0, a.jsx)(v.default, {
                 onTooltipClose: b
               }), (0, a.jsxs)("div", {

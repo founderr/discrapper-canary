@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return I
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("446674"),
   i = n("272030"),
   r = n("264732"),
@@ -26,18 +26,18 @@ var l = n("37983"),
 function I(e) {
   let {
     channelId: t
-  } = e, I = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(t)), T = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(null == I ? void 0 : I.parent_id)), v = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == I ? void 0 : I.getGuildId())), x = (0, o.default)(I), N = a.useRef(!1);
-  if (a.useEffect(() => {
+  } = e, I = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(t)), T = (0, s.useStateFromStores)([m.default], () => m.default.getChannel(null == I ? void 0 : I.parent_id)), v = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == I ? void 0 : I.getGuildId())), x = (0, o.default)(I), N = l.useRef(!1);
+  if (l.useEffect(() => {
       null != I && !N.current && (N.current = !0, (0, g.trackForumPostSidebarViewed)(I))
     }, [I]), null == I || null == v) return null;
-  let A = (0, l.jsx)(h.default, {
+  let A = (0, a.jsx)(h.default, {
     channel: I
   });
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(r.default, {
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(r.default, {
       channel: I,
       draftType: p.DraftType.ChannelMessage
-    }), (0, l.jsx)(S.default, {
+    }), (0, a.jsx)(S.default, {
       toolbar: A,
       "aria-label": C.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, c.renderTitle)({
@@ -51,7 +51,7 @@ function I(e) {
             let {
               default: e
             } = await n.el("994827").then(n.bind(n, "994827"));
-            return t => (0, l.jsx)(e, {
+            return t => (0, a.jsx)(e, {
               ...t,
               channel: I
             })
@@ -61,9 +61,9 @@ function I(e) {
           null != I && (0, f.transitionToGuild)(I.guild_id, I.id)
         }
       })
-    }), (0, l.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: _.chat,
-      children: (0, l.jsx)(u.default, {
+      children: (0, a.jsx)(u.default, {
         channel: I,
         guild: v,
         chatInputType: d.ChatInputTypes.SIDEBAR

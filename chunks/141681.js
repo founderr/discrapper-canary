@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return v
   }
 }), n("424973"), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("458960"),
@@ -37,7 +37,7 @@ let C = {
     DURATION_IN: 200,
     DURATION_OUT: 125
   };
-class T extends a.PureComponent {
+class T extends l.PureComponent {
   componentDidMount() {
     this.componentDidAppear()
   }
@@ -66,10 +66,10 @@ class T extends a.PureComponent {
     let {
       scaleAnimation: t,
       spriteAnimation: n,
-      spriteOpacity: l,
-      widthAnimation: a
+      spriteOpacity: a,
+      widthAnimation: l
     } = this;
-    l.setValue(1), n.setValue(0);
+    a.setValue(1), n.setValue(0);
     let s = [];
     for (let e = 0; e < C.STEPS; e++) s.push(r.default.timing(n, {
       toValue: -C.FRAME_SIZE * e,
@@ -79,7 +79,7 @@ class T extends a.PureComponent {
       toValue: 0,
       duration: _.DURATION_OUT,
       easing: _.EASING_OUT
-    }), r.default.sequence(s), r.default.timing(a, {
+    }), r.default.sequence(s), r.default.timing(l, {
       toValue: 0,
       duration: 125
     })]).start(e)
@@ -121,20 +121,20 @@ class T extends a.PureComponent {
       theme: e,
       children: t,
       className: n
-    } = this.props, a = (0, d.isThemeDark)(e), s = i(E.sprite, {
-      [g.crossWhite]: a,
-      [g.crossGrey]: !a
+    } = this.props, l = (0, d.isThemeDark)(e), s = i(E.sprite, {
+      [g.crossWhite]: l,
+      [g.crossGrey]: !l
     });
-    return (0, l.jsxs)(r.default.div, {
+    return (0, a.jsxs)(r.default.div, {
       className: i(E.transition, n),
       style: this.getWidthStyle(),
-      children: [(0, l.jsx)("div", {
+      children: [(0, a.jsx)("div", {
         className: i(E.spriteWrapper, S.horizontal, S.justifyCenter, S.alignCenter),
-        children: (0, l.jsx)(r.default.div, {
+        children: (0, a.jsx)(r.default.div, {
           className: s,
           style: this.getSpriteStyle()
         })
-      }), (0, l.jsx)(r.default.div, {
+      }), (0, a.jsx)(r.default.div, {
         style: this.getScaleStyle(),
         children: t
       })]
@@ -148,30 +148,30 @@ class T extends a.PureComponent {
 function v(e) {
   var t, n;
   let {
-    participants: a,
+    participants: l,
     onContextMenu: s,
     className: r,
     onClick: d,
     width: S,
     guildId: g
   } = e, C = (0, f.default)();
-  let _ = (t = S, n = a.length, ((0, c.getAvatarSize)(c.AvatarSizes.SIZE_80) + 16) * n > t ? c.AvatarSizes.SIZE_40 : c.AvatarSizes.SIZE_80),
+  let _ = (t = S, n = l.length, ((0, c.getAvatarSize)(c.AvatarSizes.SIZE_80) + 16) * n > t ? c.AvatarSizes.SIZE_40 : c.AvatarSizes.SIZE_80),
     I = (0, o.useStateFromStores)([h.default], () => h.default.isFocused()),
-    v = a.map(e => {
+    v = l.map(e => {
       var t, n;
       if (e.type !== p.ParticipantTypes.USER) return null;
       let {
-        user: a,
+        user: l,
         voiceState: i,
         speaking: r,
         ringing: o
       } = e;
-      return (0, l.jsx)(T, {
+      return (0, a.jsx)(T, {
         className: E.participant,
         width: (0, c.getAvatarSize)(_),
         theme: C,
-        children: (0, l.jsx)(m.default, {
-          src: a.getAvatarURL(g, (0, c.getAvatarSize)(_), r && I),
+        children: (0, a.jsx)(m.default, {
+          src: l.getAvatarURL(g, (0, c.getAvatarSize)(_), r && I),
           size: _,
           muted: null !== (t = null == i ? void 0 : i.isVoiceMuted()) && void 0 !== t && t,
           deafen: null !== (n = null == i ? void 0 : i.isVoiceDeafened()) && void 0 !== n && n,
@@ -180,9 +180,9 @@ function v(e) {
           onClick: t => null == d ? void 0 : d(e, t),
           onContextMenu: t => null == s ? void 0 : s(e, t)
         }, e.id)
-      }, a.id)
+      }, l.id)
     });
-  return (0, l.jsx)(u.default, {
+  return (0, a.jsx)(u.default, {
     component: "div",
     className: i(E.root, r),
     children: v

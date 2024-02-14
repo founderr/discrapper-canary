@@ -1,7 +1,7 @@
 "use strict";
-var l;
+var a;
 n.r(t), n.d(t, {
   GuildPrompts: function() {
-    return l
+    return a
   }
-}), (l || (l = {})).REAL_NAME_PROMPT = "REAL_NAME_PROMPT"
+}), (a || (a = {})).REAL_NAME_PROMPT = "REAL_NAME_PROMPT"

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("679243"),
+var l = n("679243"),
   s = n("42887"),
   i = n("24541");
 
@@ -31,17 +31,17 @@ function r(e) {
     width: I,
     ...T
   } = e, v = s.default.getVideoComponent();
-  return (0, l.jsx)("div", {
+  return (0, a.jsx)("div", {
     style: {
       width: I
     },
     className: i.spaceBetweenTiles,
-    children: (0, l.jsxs)("div", {
+    children: (0, a.jsxs)("div", {
       className: i.tileSizer,
       style: {
         aspectRatio: t
       },
-      children: [(0, l.jsx)(a.default, {
+      children: [(0, a.jsx)(l.default, {
         blocked: n,
         channel: r,
         className: o,

@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var l = n("446674"),
-  a = n("191225");
+var a = n("446674"),
+  l = n("191225");
 
 function s(e) {
   let {
     channelId: t
   } = e;
-  return (0, l.useStateFromStores)([a.default], () => a.default.getEmbeddedActivitiesForChannel(t).some(e => e.userIds.size > 0))
+  return (0, a.useStateFromStores)([l.default], () => l.default.getEmbeddedActivitiesForChannel(t).some(e => e.userIds.size > 0))
 }

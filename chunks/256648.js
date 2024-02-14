@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return d
   }
 }), n("222007"), n("424973");
-var l = n("884691"),
-  a = n("917351"),
-  s = n.n(a),
+var a = n("884691"),
+  l = n("917351"),
+  s = n.n(l),
   i = n("446674"),
   r = n("593752"),
   o = n("782340");
@@ -15,18 +15,18 @@ let u = [];
 function d(e, t) {
   let {
     version: n,
-    members: a
+    members: l
   } = (0, i.useStateFromStoresObject)([r.default], () => ({
     version: r.default.getMemberListVersion(e),
     members: r.default.getMemberListSections(e)
-  })), d = l.useMemo(() => {
+  })), d = a.useMemo(() => {
     if (null == t) return u;
     let e = s(t.roles).values().filter(e => e.hoist).sortBy(e => e.position).reverse().map(e => e.id).value();
     return e.push("online", "offline"), e.map(e => {
-      var n, l;
+      var n, a;
       let s = t.roles[e],
         i = "online" === e ? o.default.Messages.STATUS_ONLINE : "offline" === e ? o.default.Messages.STATUS_OFFLINE : s.name,
-        r = null !== (l = null == a ? void 0 : null === (n = a[e]) || void 0 === n ? void 0 : n.userIds) && void 0 !== l ? l : [];
+        r = null !== (a = null == l ? void 0 : null === (n = l[e]) || void 0 === n ? void 0 : n.userIds) && void 0 !== a ? a : [];
       return {
         label: i,
         userIds: r,
@@ -34,6 +34,6 @@ function d(e, t) {
         roleId: e
       }
     })
-  }, [null == t ? void 0 : t.roles, a, n]);
-  return null != a ? d : u
+  }, [null == t ? void 0 : t.roles, l, n]);
+  return null != l ? d : u
 }

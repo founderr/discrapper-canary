@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("669491"),
+var l = n("669491"),
   s = n("77078"),
   i = n("943232"),
   r = n("842672"),
@@ -18,13 +18,13 @@ function d(e) {
     className: t,
     guildId: d
   } = e, c = (0, r.default)();
-  return (0, l.jsx)(o.default, {
+  return (0, a.jsx)(o.default, {
     className: t,
-    icon: (0, l.jsx)(i.default, {
+    icon: (0, a.jsx)(i.default, {
       height: 20,
       width: 20
     }),
-    color: a.default.unsafe_rawColors.BRAND_500.css,
+    color: l.default.unsafe_rawColors.BRAND_500.css,
     title: u.default.Messages.SCHEDULE_EVENT,
     description: u.default.Messages.SCHEDULE_EVENT_DESCRIPTION,
     onClick: function() {
@@ -32,7 +32,7 @@ function d(e) {
         let {
           default: e
         } = await n.el("590942").then(n.bind(n, "590942"));
-        return t => (0, l.jsx)(e, {
+        return t => (0, a.jsx)(e, {
           ...t,
           guildId: d
         })

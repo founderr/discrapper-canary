@@ -48,8 +48,8 @@ var i = n("414456"),
         color: k = d.Button.Colors.WHITE,
         look: w = d.Button.Looks.OUTLINED,
         type: F,
-        onAction: B,
-        isEmbedded: G = !1
+        onAction: G,
+        isEmbedded: B = !1
       } = e,
       H = (0, v.default)(),
       V = (0, u.useStateFromStores)([h.default], () => {
@@ -134,7 +134,7 @@ var i = n("414456"),
           isCurrentUser: V.id === i.id,
           color: k,
           look: w,
-          isEmbedded: G
+          isEmbedded: B
         }, "join-activity-button"),
         s = (0, l.jsx)(x.default, {
           activity: n,
@@ -159,7 +159,7 @@ var i = n("414456"),
       wrap: Q ? g.default.Wrap.WRAP : g.default.Wrap.NO_WRAP,
       className: a(c, b.buttonsWrapper, Q ? b.vertical : b.horizontal),
       onClick: function(e) {
-        (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == B || B())
+        (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == G || G())
       },
       children: t
     })

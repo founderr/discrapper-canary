@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useChannelCallVideoGridStore: function() {
-    return a
+    return l
   }
 });
-var l = n("308503");
-let a = (0, l.default)(() => ({
+var a = n("308503");
+let l = (0, a.default)(() => ({
   dismissedActivityEntryPointTileChannel: null
 }))

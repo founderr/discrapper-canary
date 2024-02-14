@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var l = n("917351"),
-  a = n.n(l),
+var a = n("917351"),
+  l = n.n(a),
   s = n("446674"),
   i = n("913144"),
   r = n("305961");
@@ -24,7 +24,7 @@ class d extends s.default.Store {
         optimal: t
       } = e;
       return t
-    })) && void 0 !== e ? e : a.sample(n) : null
+    })) && void 0 !== e ? e : l.sample(n) : null
   }
   getOptimalRegionId() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -34,7 +34,7 @@ class d extends s.default.Store {
   getRandomRegion() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
       t = this.getRegions(e);
-    return null != t ? a.sample(t) : null
+    return null != t ? l.sample(t) : null
   }
   getRandomRegionId() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -48,7 +48,7 @@ class d extends s.default.Store {
 d.displayName = "RegionStore";
 var c = new d(i.default, {
   LOAD_REGIONS: function(e) {
-    let t = a.sortBy(e.regions, e => e.name);
+    let t = l.sortBy(e.regions, e => e.name);
     null != e.guildId ? u[e.guildId] = t : o = t
   },
   GUILD_DELETE: function(e) {

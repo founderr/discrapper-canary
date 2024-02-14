@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("255397"),
+var l = n("255397"),
   s = n("229997"),
   i = n("763984"),
   r = n("981913"),
@@ -19,9 +19,9 @@ function d(e) {
     isHorizontal: n,
     ...d
   } = e;
-  return (0, l.jsx)(r.default, {
+  return (0, a.jsx)(r.default, {
     onClick: function() {
-      a.default.selectParticipant(t, o.ParticipantSelectionTypes.AUTO)
+      l.default.selectParticipant(t, o.ParticipantSelectionTypes.AUTO)
     },
     label: u.default.Messages.VIDEO_CALL_AUTO_SELECT,
     iconComponent: n ? s.default : i.default,

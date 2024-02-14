@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("781738"), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
@@ -23,33 +23,33 @@ let m = {
     let {
       region: t,
       className: n = h.regionSelectName
-    } = e, a = t.name.replace(/ \(VIP\)$/, "");
-    return (0, l.jsx)("div", {
+    } = e, l = t.name.replace(/ \(VIP\)$/, "");
+    return (0, a.jsx)("div", {
       className: n,
-      children: a
+      children: l
     })
   };
-class E extends a.PureComponent {
+class E extends l.PureComponent {
   render() {
     let {
       region: e,
       selected: t
     } = this.props;
-    return (0, l.jsxs)(d.default, {
+    return (0, a.jsxs)(d.default, {
       align: d.default.Align.CENTER,
       className: i({
         selected: t
       }),
-      children: [(0, l.jsx)(p, {
+      children: [(0, a.jsx)(p, {
         region: e,
         className: h.regionSelectName
-      }), t ? (0, l.jsx)("i", {
+      }), t ? (0, a.jsx)("i", {
         className: h.check
       }) : null]
     })
   }
 }
-class S extends a.PureComponent {
+class S extends l.PureComponent {
   componentDidMount() {
     null == this.props.regions && o.default.fetchRegions(null)
   }
@@ -63,14 +63,14 @@ class S extends a.PureComponent {
         label: t.name,
         value: t
       },
-      a = e.filter(e => !e.deprecated && !e.hidden).map(e => ({
+      l = e.filter(e => !e.deprecated && !e.hidden).map(e => ({
         label: e.name,
         value: e,
         key: e.id
       }));
-    return (0, l.jsx)(c.default, {
+    return (0, a.jsx)(c.default, {
       label: f.default.Messages.REGION,
-      options: a,
+      options: l,
       value: n,
       onChange: this.handleChangeVoiceRegion,
       renderOption: this.renderOption,
@@ -79,7 +79,7 @@ class S extends a.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), this.renderOption = (e, t) => (0, l.jsx)(E, {
+    super(...e), this.renderOption = (e, t) => (0, a.jsx)(E, {
       region: e.value,
       selected: t
     }, e.value.id), this.getSelectedRegion = () => {

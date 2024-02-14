@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return _
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("446674"),
   i = n("913144"),
   r = n("255397"),
@@ -31,27 +31,27 @@ function _(e) {
     popoutOpen: i,
     popoutWindow: d,
     currentWindow: _
-  } = e, I = n === S.AppContext.POPOUT, T = a.useRef(null), {
+  } = e, I = n === S.AppContext.POPOUT, T = l.useRef(null), {
     currentLayout: v,
     mode: x
   } = (0, s.useStateFromStoresObject)([u.default], () => {
     let e = u.default.getMode(t.id),
-      l = n === S.AppContext.POPOUT;
-    l && (e = S.ChannelModes.VIDEO);
-    let a = e === S.ChannelModes.VIDEO ? u.default.getLayout(t.id, n) : S.ChannelLayouts.MINIMUM;
-    return l && a !== S.ChannelLayouts.FULL_SCREEN && (a = S.ChannelLayouts.NO_CHAT), {
-      currentLayout: a,
+      a = n === S.AppContext.POPOUT;
+    a && (e = S.ChannelModes.VIDEO);
+    let l = e === S.ChannelModes.VIDEO ? u.default.getLayout(t.id, n) : S.ChannelLayouts.MINIMUM;
+    return a && l !== S.ChannelLayouts.FULL_SCREEN && (l = S.ChannelLayouts.NO_CHAT), {
+      currentLayout: l,
       mode: e
     }
   }, [t, n]), N = (0, s.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === t.id, [t.id]);
-  a.useEffect(() => {
+  l.useEffect(() => {
     T.current = x
   });
-  let A = a.useRef(v),
+  let A = l.useRef(v),
     {
       currentDocument: M,
       rootNode: R
-    } = a.useMemo(() => {
+    } = l.useMemo(() => {
       let e = null != d && I ? d.document : document,
         t = _.document.getElementById("app-mount");
       return {
@@ -62,34 +62,34 @@ function _(e) {
     }, [d, I, _]),
     j = i && !I,
     L = x === S.ChannelModes.VIDEO && N && !j,
-    O = a.useCallback((e, l) => {
-      l !== e && (r.default.updateLayout(t.id, l, n), l === S.ChannelLayouts.FULL_SCREEN && t.isPrivate() && m.ComponentDispatch.dispatch(S.ComponentActions.TEXTAREA_BLUR))
+    O = l.useCallback((e, a) => {
+      a !== e && (r.default.updateLayout(t.id, a, n), a === S.ChannelLayouts.FULL_SCREEN && t.isPrivate() && m.ComponentDispatch.dispatch(S.ComponentActions.TEXTAREA_BLUR))
     }, [n, t]),
-    y = a.useCallback(e => {
+    y = l.useCallback(e => {
       if (null != R) e === S.ChannelLayouts.FULL_SCREEN && (O(e, A.current), (0, E.exitFullScreen)(e => {
         A.current = e
       }, M))
     }, [M, O, R]),
-    P = a.useCallback(e => () => {
+    P = l.useCallback(e => () => {
       null != R && (e !== S.ChannelLayouts.FULL_SCREEN ? (A.current = e, O(e, S.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(R)) : y(e))
     }, [O, y, R]);
-  return (a.useEffect(() => {
+  return (l.useEffect(() => {
     let e = () => {
       null != R && !(0, E.isFullScreen)(R, M) && v === S.ChannelLayouts.FULL_SCREEN && P(v)()
     };
     return M.addEventListener(E.FULLSCREEN_CHANGE_EVENT, e), () => {
       M.removeEventListener(E.FULLSCREEN_CHANGE_EVENT, e)
     }
-  }, [M, v, P, R]), a.useEffect(() => (h.default.track(S.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
+  }, [M, v, P, R]), l.useEffect(() => (h.default.track(S.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
     video_layout: I ? "popout" : v,
     ...(0, o.collectVoiceAnalyticsMetadata)(t.id)
   }), () => {
     !(I && (0, p.isMac)()) && y(v)
-  }), [v, I]), a.useEffect(() => {
+  }), [v, I]), l.useEffect(() => {
     null != R && T.current === S.ChannelModes.VIDEO && x === S.ChannelModes.VOICE && (0, E.exitFullScreen)(R, M)
-  }, [M, x, T, R]), a.useEffect(() => {
+  }, [M, x, T, R]), l.useEffect(() => {
     !N && I && C()
-  }, [N, I]), L) ? (0, l.jsx)(c.default, {
+  }, [N, I]), L) ? (0, a.jsx)(c.default, {
     themeable: !1,
     node: R,
     guestWindow: d,

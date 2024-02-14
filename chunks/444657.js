@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return y
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("151426"),
@@ -38,7 +38,7 @@ function y(e) {
   let {
     channel: t,
     guild: n,
-    width: a,
+    width: l,
     inPopout: s,
     handleClose: i,
     userParticipantCount: r
@@ -49,24 +49,24 @@ function y(e) {
   }, {
     autoTrackExposure: !1
   });
-  return a < 250 ? (0, l.jsx)(P, {
+  return l < 250 ? (0, a.jsx)(P, {
     channel: t,
     guild: n,
-    width: a,
+    width: l,
     inPopout: s,
     handleClose: i,
     userParticipantCount: r
-  }) : r > 1 || o ? (0, l.jsx)(U, {
+  }) : r > 1 || o ? (0, a.jsx)(U, {
     channel: t,
     guild: n,
-    width: a,
+    width: l,
     inPopout: s,
     handleClose: i,
     userParticipantCount: r
-  }) : (0, l.jsx)(b, {
+  }) : (0, a.jsx)(b, {
     channel: t,
     guild: n,
-    width: a,
+    width: l,
     inPopout: s
   })
 }
@@ -75,7 +75,7 @@ function P(e) {
   let {
     channel: t,
     inPopout: n,
-    handleClose: a
+    handleClose: l
   } = e, {
     analyticsLocations: s,
     AnalyticsLocationProvider: r
@@ -88,26 +88,26 @@ function P(e) {
       analyticsLocations: s
     })
   };
-  return (0, l.jsx)(r, {
-    children: (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(u.Tooltip, {
+  return (0, a.jsx)(r, {
+    children: (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(u.Tooltip, {
         text: j.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
         children: e => {
           let {
             onClick: t,
             ...n
           } = e;
-          return (0, l.jsx)(u.Clickable, {
+          return (0, a.jsx)(u.Clickable, {
             ...n,
             className: L.clickableTile,
             onClick: () => {
               null == t || t(), h()
             },
-            children: (0, l.jsx)(A.default, {
+            children: (0, a.jsx)(A.default, {
               className: L.root,
-              children: (0, l.jsx)("div", {
+              children: (0, a.jsx)("div", {
                 className: L.iconContainer,
-                children: (0, l.jsx)(v.default, {
+                children: (0, a.jsx)(v.default, {
                   width: 40,
                   height: 40
                 })
@@ -115,10 +115,10 @@ function P(e) {
             })
           })
         }
-      }), (0, l.jsx)(u.Clickable, {
-        onClick: a,
+      }), (0, a.jsx)(u.Clickable, {
+        onClick: l,
         className: i((0, N.getThemeClass)(M.ThemeTypes.DARK), L.shelfButtonCloseButton),
-        children: (0, l.jsx)(_.default, {
+        children: (0, a.jsx)(_.default, {
           width: 24,
           height: 24,
           className: L.closeButtonIcon,
@@ -136,7 +136,7 @@ function b(e) {
     inPopout: i,
     width: r
   } = e;
-  a.useEffect(() => {
+  l.useEffect(() => {
     x.default.track(M.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
       tile_type: "activity invite",
       n_participants: 1
@@ -147,20 +147,20 @@ function b(e) {
       analyticsLocations: c,
       AnalyticsLocationProvider: f
     } = (0, E.default)(p.default.VC_TILE_ACTIVITY_INVITE);
-  return (0, l.jsx)(f, {
-    children: (0, l.jsxs)(A.default, {
+  return (0, a.jsx)(f, {
+    children: (0, a.jsxs)(A.default, {
       className: L.root,
-      children: [r > 400 ? (0, l.jsx)("img", {
+      children: [r > 400 ? (0, a.jsx)("img", {
         src: O,
         className: L.art,
         alt: j.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
-      }) : null, (0, l.jsx)(u.Text, {
+      }) : null, (0, a.jsx)(u.Text, {
         className: L.heading,
         variant: "text-md/semibold",
         children: j.default.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_INVITE
-      }), (0, l.jsxs)("div", {
+      }), (0, a.jsxs)("div", {
         className: L.buttonContainer,
-        children: [(0, l.jsxs)(u.Button, {
+        children: [(0, a.jsxs)(u.Button, {
           size: u.Button.Sizes.LARGE,
           color: u.Button.Colors.PRIMARY,
           className: L.button,
@@ -170,7 +170,7 @@ function b(e) {
               let {
                 default: e
               } = await n.el("310688").then(n.bind(n, "310688"));
-              return n => (0, l.jsx)(e, {
+              return n => (0, a.jsx)(e, {
                 ...n,
                 guild: s,
                 channel: t,
@@ -180,14 +180,14 @@ function b(e) {
               contextKey: i ? u.POPOUT_MODAL_CONTEXT : u.DEFAULT_MODAL_CONTEXT
             })
           },
-          children: [(0, l.jsx)(I.default, {
+          children: [(0, a.jsx)(I.default, {
             width: 16,
             height: 16
-          }), (0, l.jsx)(u.Text, {
+          }), (0, a.jsx)(u.Text, {
             variant: "text-sm/medium",
             children: j.default.Messages.INVITE_FRIENDS
           })]
-        }), (0, l.jsxs)(u.Button, {
+        }), (0, a.jsxs)(u.Button, {
           size: u.Button.Sizes.LARGE,
           className: L.button,
           innerClassName: L.buttonContents,
@@ -200,10 +200,10 @@ function b(e) {
               analyticsLocations: c
             })
           },
-          children: [(0, l.jsx)(T.default, {
+          children: [(0, a.jsx)(T.default, {
             width: 16,
             height: 16
-          }), (0, l.jsx)(u.Text, {
+          }), (0, a.jsx)(u.Text, {
             variant: "text-sm/medium",
             children: j.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_ENTRY_POINT_TILE_CHOOSE_AN_ACTIVITY
           })]
@@ -217,27 +217,27 @@ let D = e => {
     userParticipantCount: t,
     guildId: n
   } = e, {
-    enabled: l
+    enabled: a
   } = c.PaxVcTileActivitiesExperiment.useExperiment({
     location: "4934f1_2"
   }, {
     autoTrackExposure: !1
-  }), a = (0, f.default)({
+  }), l = (0, f.default)({
     guildId: n
   });
-  if (l) {
+  if (a) {
     let e = new Set([R.PUTT_PARTY_APPLICATION_ID, R.LAND_IO_APPLICATION_ID, R.GARTIC_PHONE_APPLICATION_ID]);
-    return a.filter(t => e.has(t.application.id))
+    return l.filter(t => e.has(t.application.id))
   }
   if (2 === t) {
     let e = [],
       t = [(0, R.WATCH_YOUTUBE_PROD_APP_ID), (0, R.PUTT_PARTY_APPLICATION_ID), (0, R.CHESS_IN_THE_PARK_APP_ID)].filter(Boolean).slice(0, 3);
-    return a.forEach(n => {
-      let l = t.indexOf(n.application.id);
-      !(l < 0) && (e[l] = n)
+    return l.forEach(n => {
+      let a = t.indexOf(n.application.id);
+      !(a < 0) && (e[a] = n)
     }), e
   }
-  return a.slice(0, 3)
+  return l.slice(0, 3)
 };
 
 function U(e) {
@@ -248,7 +248,7 @@ function U(e) {
     width: o,
     userParticipantCount: d
   } = e;
-  a.useEffect(() => {
+  l.useEffect(() => {
     x.default.track(M.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
       tile_type: "activity suggestion",
       n_participants: d
@@ -261,28 +261,28 @@ function U(e) {
     {
       AnalyticsLocationProvider: f
     } = (0, E.default)(p.default.VC_TILE_ACTIVITY_SUGGESTION);
-  return (0, l.jsx)(f, {
-    children: (0, l.jsxs)(A.default, {
+  return (0, a.jsx)(f, {
+    children: (0, a.jsxs)(A.default, {
       className: L.root,
-      children: [o > 480 ? (0, l.jsx)("img", {
+      children: [o > 480 ? (0, a.jsx)("img", {
         className: L.art,
         src: O,
         alt: j.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
-      }) : null, o > 300 ? (0, l.jsx)(u.Text, {
+      }) : null, o > 300 ? (0, a.jsx)(u.Text, {
         className: L.heading,
         variant: o > 550 ? "text-md/semibold" : "text-sm/semibold",
         children: j.default.Messages.EMBEDDED_ACTIVITIES_VC_TILE_ENTRY_POINT_TITLE
-      }) : null, (0, l.jsx)("div", {
+      }) : null, (0, a.jsx)("div", {
         className: i(L.activitiesContainer, {
           [L.activitiesContainerSmol]: o <= 300
         }),
-        children: c.map(e => (0, l.jsx)(h.ActivitySuggestion, {
+        children: c.map(e => (0, a.jsx)(h.ActivitySuggestion, {
           channel: t,
           activityItem: e,
           aspectRatio: h.ActivitySuggestion.AspectRatio.SIXTEEN_BY_NINE,
           animatedDivClass: L.activitySuggestion
         }, e.application.id))
-      }), (0, l.jsxs)(u.Clickable, {
+      }), (0, a.jsxs)(u.Clickable, {
         className: L.checkboxContainer,
         onClick: function() {
           x.default.track(M.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
@@ -291,11 +291,11 @@ function U(e) {
             n_participants: d
           }), (0, S.markDismissibleContentAsDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT)
         },
-        children: [(0, l.jsx)(g.default, {}), (0, l.jsx)(u.Text, {
+        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(u.Text, {
           variant: "text-sm/medium",
           children: j.default.Messages.DONT_SHOW_AGAIN
         })]
-      }), (0, l.jsx)(u.Clickable, {
+      }), (0, a.jsx)(u.Clickable, {
         className: L.closeButtonContainer,
         onClick: function() {
           x.default.track(M.AnalyticEvents.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
@@ -304,7 +304,7 @@ function U(e) {
             n_participants: d
           }), s()
         },
-        children: (0, l.jsx)(C.default, {
+        children: (0, a.jsx)(C.default, {
           className: L.closeButton
         })
       })]

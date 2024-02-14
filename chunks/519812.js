@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("843762");
-var l = n("917351"),
-  a = n.n(l),
+var a = n("917351"),
+  l = n.n(a),
   s = n("449008");
 
 function i(e, t) {
-  return a(e).map(t.getUser).unshift(t.getCurrentUser()).filter(s.isNotNullish).sortBy(e => e.username.toLowerCase()).value()
+  return l(e).map(t.getUser).unshift(t.getCurrentUser()).filter(s.isNotNullish).sortBy(e => e.username.toLowerCase()).value()
 }

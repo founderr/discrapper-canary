@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("424973"), n("222007");
-var l = n("811022"),
-  a = n("446674"),
+var a = n("811022"),
+  l = n("446674"),
   s = n("398183"),
   i = n("913144"),
   r = n("629803"),
@@ -87,7 +87,7 @@ function g(e) {
     description: e
   }), p.hasIssues = !0
 }
-let C = new l.default("CallscopeStore");
+let C = new a.default("CallscopeStore");
 class _ {
   static async shouldUpload() {
     var e, t;
@@ -106,7 +106,7 @@ class _ {
     await (0, s.sleep)(1e4), await (0, u.uploadCallscopeLogs)(e.channelId, t, e.rtcLogEphemeralKey, e.context)
   }
 }
-class I extends a.default.Store {}
+class I extends l.default.Store {}
 I.displayName = "CallscopeStore", new I(i.default, __OVERLAY__ ? {} : {
   RTC_CONNECTION_STATE: function(e) {
     var t;
@@ -120,11 +120,11 @@ I.displayName = "CallscopeStore", new I(i.default, __OVERLAY__ ? {} : {
       case h.RTCConnectionStates.RTC_CONNECTED:
         if (null != e.rtcLogEphemeralKey) {
           let t = d.default.getId(),
-            l = (0, u.getBlindIds)(e.channelId, t, e.rtcLogEphemeralKey);
+            a = (0, u.getBlindIds)(e.channelId, t, e.rtcLogEphemeralKey);
           0 === p.rtcConnections.size && (p.callStartedAt = new Date), p.isInCallscopeCall = !0, p.blindIds.push({
             date: new Date,
             context: e.context,
-            ids: l
+            ids: a
           }), p.rtcConnections.add(n)
         }
     }

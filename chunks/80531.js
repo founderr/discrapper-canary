@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("222007");
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
+var l = n("446674"),
   s = n("635471"),
   i = n("824563"),
   r = n("289918"),
@@ -21,16 +21,16 @@ var a = n("446674"),
       channel: f,
       animateAssets: h,
       forceShowPremiumBadge: m
-    } = e, p = t.isNonUserBot(), [E, S] = (0, a.useStateFromStoresArray)([i.default], () => [p ? null : i.default.getStatus(t.id), i.default.isMobileOnline(t.id)]), g = null == n ? void 0 : n.profileEffectId;
-    return (0, l.jsxs)("div", {
-      children: [(0, l.jsx)(r.default, {
+    } = e, p = t.isNonUserBot(), [E, S] = (0, l.useStateFromStoresArray)([i.default], () => [p ? null : i.default.getStatus(t.id), i.default.isMobileOnline(t.id)]), g = null == n ? void 0 : n.profileEffectId;
+    return (0, a.jsxs)("div", {
+      children: [(0, a.jsx)(r.default, {
         user: t,
         displayProfile: n,
         profileType: d.UserProfileTypes.PANEL,
         showPremiumBadgeUpsell: !0,
         isHovering: m,
         animateOnHover: !h
-      }), (0, l.jsx)(u.UserPopoutAvatar, {
+      }), (0, a.jsx)(u.UserPopoutAvatar, {
         user: t,
         displayProfile: n,
         status: E,
@@ -40,14 +40,14 @@ var a = n("446674"),
         hasBanner: (null == n ? void 0 : n.banner) != null,
         profileType: d.UserProfileTypes.PANEL,
         animateOnHover: !h
-      }), (0, l.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: c.badgelistGroup,
-        children: (0, l.jsx)(o.default, {
+        children: (0, a.jsx)(o.default, {
           className: c.badgeList,
           user: t,
           size: o.BadgeSizes.SIZE_22
         })
-      }), null != g && (0, l.jsx)(s.default, {
+      }), null != g && (0, a.jsx)(s.default, {
         profileEffectId: g,
         maxLoops: 0,
         resetOnHover: !0,

@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   setRtcLogMarker: function() {
-    return a
+    return l
   }
 });
-var l = n("913144");
+var a = n("913144");
 
-function a() {
+function l() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-  console.log("[callscope] Issue marker pressed."), l.default.dispatch({
+  console.log("[callscope] Issue marker pressed."), a.default.dispatch({
     type: "RTC_LOG_MARKER",
     marker: e
   })

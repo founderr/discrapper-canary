@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
@@ -28,7 +28,7 @@ function g(e) {
   } = e, {
     emoji: c,
     sentAt: g
-  } = n, C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), [_, I] = a.useState(!0), T = !C, v = (0, r.useTransition)(_, {
+  } = n, C = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), [_, I] = l.useState(!0), T = !C, v = (0, r.useTransition)(_, {
     from: {
       rotate: -120
     },
@@ -47,7 +47,7 @@ function g(e) {
       "leave" === n && s()
     }
   });
-  return (a.useEffect(() => {
+  return (l.useEffect(() => {
     let e;
     return Date.now() - g >= E ? (0, f.clearVoiceChannelEffectForUser)(t) : e = setTimeout(() => {
       I(!1), T && (0, f.clearVoiceChannelEffectForUser)(t)
@@ -57,14 +57,14 @@ function g(e) {
   }, [g, t, T]), T) ? null : v((e, t) => {
     var n;
     let {
-      rotate: a
+      rotate: l
     } = e;
-    return t && (0, l.jsx)(r.animated.div, {
+    return t && (0, a.jsx)(r.animated.div, {
       className: h.voiceChannelEffectEmojiContainer,
       style: {
-        transform: a.to(S)
+        transform: l.to(S)
       },
-      children: (0, l.jsx)(u.default, {
+      children: (0, a.jsx)(u.default, {
         className: i(h.voiceChannelEffectEmoji),
         emojiId: c.id,
         emojiName: c.name,

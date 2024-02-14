@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return L
   }
 }), n("424973");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("446674"),
   i = n("151426"),
   r = n("77078"),
@@ -54,11 +54,11 @@ function L(e) {
     autoTrackExposure: !1
   }), V = F && !k, B = (0, E.default)({
     channelId: t.id
-  }), G = !P && n, H = a.useCallback(e => {
+  }), H = !P && n, G = l.useCallback(e => {
     "focus" !== e.type && U()
   }, [U]), W = (0, o.useAnalyticsContext)(), Y = (0, u.useAppContext)(), z = Y === M.AppContext.POPOUT, {
     analyticsLocations: K
-  } = (0, v.default)(), Z = a.useCallback(() => {
+  } = (0, v.default)(), Z = l.useCallback(() => {
     (0, T.default)({
       channel: t,
       guildId: t.guild_id,
@@ -73,14 +73,14 @@ function L(e) {
   let q = (0, f.useIsWatchTogetherPromoEnabled)(),
     Q = (0, h.useIsWatchTogetherPromoWeek1SparklesEnabled)(),
     $ = (0, m.useIsWatchTogetherPromoWeek2SparklesEnabled)();
-  return q && Q && !P && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES), q && $ && !P && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES), (0, l.jsx)(x.default, {
+  return q && Q && !P && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES), q && $ && !P && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES), (0, a.jsx)(x.default, {
     contentTypes: X,
     children: e => {
       let {
         visibleContent: n,
-        markAsDismissed: a
+        markAsDismissed: l
       } = e;
-      return (0, l.jsx)(r.Popout, {
+      return (0, a.jsx)(r.Popout, {
         fixed: !0,
         shouldShow: b,
         animationPosition: "bottom",
@@ -95,29 +95,29 @@ function L(e) {
             closePopout: n,
             setPopoutRef: s
           } = e;
-          return G ? (0, l.jsx)(_.ActivitiesMiniShelf, {
+          return H ? (0, a.jsx)(_.ActivitiesMiniShelf, {
             ref: s,
             channel: t,
             closePopout: n,
             onMouseEnter: U,
             onMouseLeave: w,
             isHovered: b,
-            onClick: () => a(R.ContentDismissActionType.UNKNOWN)
-          }) : (0, l.jsx)(l.Fragment, {})
+            onClick: () => l(R.ContentDismissActionType.UNKNOWN)
+          }) : (0, a.jsx)(a.Fragment, {})
         },
-        children: () => (0, l.jsxs)(l.Fragment, {
-          children: [(0, l.jsx)(A.default, {
+        children: () => (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)(A.default, {
             disabled: P,
             "aria-label": y,
-            label: G ? void 0 : y,
+            label: H ? void 0 : y,
             isActivityActive: B || b,
             className: j.controlButton,
             onClick: () => {
-              Z(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(R.ContentDismissActionType.UNKNOWN)
+              Z(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(R.ContentDismissActionType.UNKNOWN)
             },
-            onMouseEnter: H,
+            onMouseEnter: G,
             onMouseLeave: w
-          }), V ? (0, l.jsx)(I.FreeActivityIndicatorDot, {
+          }), V ? (0, a.jsx)(I.FreeActivityIndicatorDot, {
             top: 4,
             right: 10,
             size: 12,

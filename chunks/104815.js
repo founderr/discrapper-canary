@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("433487"),
+var l = n("433487"),
   s = n("981913"),
   i = n("782340");
 
@@ -14,9 +14,9 @@ function r(e) {
   let {
     ...t
   } = e;
-  return (0, l.jsx)(s.default, {
+  return (0, a.jsx)(s.default, {
     label: i.default.Messages.MORE,
-    iconComponent: a.default,
+    iconComponent: l.default,
     tooltipPosition: "bottom",
     ...t
   })

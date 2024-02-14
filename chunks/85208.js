@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var l = n("830251"),
-  a = n("99795");
+var a = n("830251"),
+  l = n("99795");
 
 function s(e, t) {
   var n, s;
@@ -15,12 +15,12 @@ function s(e, t) {
     u = !1,
     d = !1;
   switch (e.type) {
-    case a.ParticipantTypes.ACTIVITY:
+    case l.ParticipantTypes.ACTIVITY:
       break;
-    case a.ParticipantTypes.USER:
+    case l.ParticipantTypes.USER:
       i = e.streamId, o = e.voiceState, u = e.speaking, d = e.ringing;
       break;
-    case a.ParticipantTypes.STREAM:
+    case l.ParticipantTypes.STREAM:
       i = e.streamId, r = e.stream
   }
   return {
@@ -30,7 +30,7 @@ function s(e, t) {
     ringing: d,
     muted: null !== (n = null == o ? void 0 : o.isVoiceMuted()) && void 0 !== n && n,
     deafen: null !== (s = null == o ? void 0 : o.isVoiceDeafened()) && void 0 !== s && s,
-    mirror: e.type === a.ParticipantTypes.USER && e.user.id === t,
-    hasVideo: (0, l.default)(e)
+    mirror: e.type === l.ParticipantTypes.USER && e.user.id === t,
+    hasVideo: (0, a.default)(e)
   }
 }

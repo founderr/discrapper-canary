@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   AVATAR_COLOR_AVATAR_SIZE: function() {
-    return l
+    return a
   },
   EMOJI_HOSE_EMOJI_SIZE: function() {
-    return a
+    return l
   },
   OUTLINE_WIDTH: function() {
     return s
@@ -16,8 +16,8 @@ n.r(t), n.d(t, {
     return r
   }
 });
-let l = 80,
-  a = 48,
+let a = 80,
+  l = 48,
   s = 3,
   i = 500,
   r = 5e3

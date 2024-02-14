@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("222007"), n("424973");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("917351"),
   i = n("246846"),
   r = n("271938"),
@@ -31,22 +31,22 @@ function E(e) {
 }
 
 function S(e, t) {
-  let [n, l] = a.useState(Date.now());
-  a.useEffect(() => {
+  let [n, a] = l.useState(Date.now());
+  l.useEffect(() => {
     let e = setTimeout(() => {
-      l(Date.now())
+      a(Date.now())
     }, p);
     return () => {
       clearTimeout(e)
     }
   }, [t]);
-  let r = a.useRef({}),
+  let r = l.useRef({}),
     {
       visibleParticipants: o,
       participantTileWidth: d
-    } = a.useMemo(() => {
+    } = l.useMemo(() => {
       let n = Date.now(),
-        l = (0, s.sortBy)(t, e => (function(e) {
+        a = (0, s.sortBy)(t, e => (function(e) {
           let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
           switch (e.type) {
             case c.ParticipantTypes.ACTIVITY:
@@ -56,21 +56,21 @@ function S(e, t) {
               return "\x01".concat((0, i.default)(e.userNick, e.user));
             case c.ParticipantTypes.USER:
               var n;
-              let l = "\x05";
-              return e.speaking ? l = "\x02" : t - e.lastSpoke < p ? l = "\x03" : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (l = "\x04"), "".concat(l).concat(function(e) {
+              let a = "\x05";
+              return e.speaking ? a = "\x02" : t - e.lastSpoke < p ? a = "\x03" : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (a = "\x04"), "".concat(a).concat(function(e) {
                 let t = String(864e13).length;
                 return String(864e13 - e).padStart(t, "0")
               }(e.lastSpoke)).concat((0, i.default)(e.userNick, e.user))
           }
         })(e, n)),
-        [a, o] = (0, s.partition)(l, c.isStreamParticipant),
+        [l, o] = (0, s.partition)(a, c.isStreamParticipant),
         d = o.findIndex(E),
         f = null; - 1 !== d && (f = o[d], o.splice(d, 1));
       let h = null != f ? e - m - 8 : e,
         S = Math.max(0, Math.min(Math.floor((h - 8) / 132), 12, t.length)),
         g = Math.min((h - 8) / S - 8, m),
-        C = Math.max(0, S - a.length),
-        _ = a.slice(0, S),
+        C = Math.max(0, S - l.length),
+        _ = l.slice(0, S),
         I = o.slice(0, C),
         T = Array(C);
       if (C > 0) {
@@ -105,7 +105,7 @@ function g(e) {
   let {
     participants: t,
     participantTileWidth: n,
-    selectedParticipantId: a,
+    selectedParticipantId: l,
     onDoubleClick: s,
     onContextMenu: i,
     onClick: r,
@@ -114,19 +114,19 @@ function g(e) {
     popoutWindow: c,
     paused: h = !1
   } = e, p = null != c;
-  return (0, l.jsx)("div", {
+  return (0, a.jsx)("div", {
     className: f.root,
     children: t.map(e => {
       if (null == e) return null;
       let t = E(e);
-      return (0, l.jsx)("div", {
+      return (0, a.jsx)("div", {
         className: f.tileSizer,
         style: t ? {
           flexShrink: 0
         } : void 0,
-        children: (0, l.jsx)(d.default, {
+        children: (0, a.jsx)(d.default, {
           participant: e,
-          selected: a === e.id,
+          selected: l === e.id,
           channel: o,
           className: f.tile,
           fit: d.CallTileFit.COVER,

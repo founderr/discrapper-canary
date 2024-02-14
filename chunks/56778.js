@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return j
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
@@ -27,7 +27,7 @@ var l = n("37983"),
   v = n("49111"),
   x = n("782340"),
   N = n("427877");
-class A extends a.Component {
+class A extends l.Component {
   componentDidMount() {
     this.autoAnalytics()
   }
@@ -43,11 +43,11 @@ class A extends a.Component {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
       if (null == t.props.searchAnalyticsId) return;
       let n = 0,
-        l = 0,
         a = 0,
+        l = 0,
         s = 0;
       null != t.props.searchResults && o(t.props.searchResults).flatten().filter(e => e.isSearchHit).forEach(e => {
-        null != e.content && "" !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++), null != e.embeds && e.embeds.length > 0 && a++, null != e.attachments && e.attachments.length > 0 && l++
+        null != e.content && "" !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++), null != e.embeds && e.embeds.length > 0 && l++, null != e.attachments && e.attachments.length > 0 && a++
       }), h.default.trackWithMetadata(v.AnalyticEvents.SEARCH_RESULT_VIEWED, {
         search_type: t.props.searchType,
         search_id: t.props.searchAnalyticsId,
@@ -61,8 +61,8 @@ class A extends a.Component {
         is_indexing: t.props.searchIsIndexing,
         page_num_messages: n,
         page_num_links: s,
-        page_num_embeds: a,
-        page_num_attach: l
+        page_num_embeds: l,
+        page_num_attach: a
       })
     }
   }
@@ -71,15 +71,15 @@ let M = e => {
   let {
     children: t
   } = e;
-  return (0, l.jsx)("div", {
+  return (0, a.jsx)("div", {
     className: N.emptyResultsWrap,
-    children: (0, l.jsx)("div", {
+    children: (0, a.jsx)("div", {
       className: N.emptyResultsContent,
       children: t
     })
   })
 };
-class R extends a.PureComponent {
+class R extends l.PureComponent {
   componentDidMount() {
     C.ComponentDispatch.subscribe(v.ComponentActions.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose)
   }
@@ -107,23 +107,23 @@ class R extends a.PureComponent {
       searchType: t,
       searchResults: n
     } = this.props, {
-      offset: a,
+      offset: l,
       hasError: s,
       totalResults: i,
       isHistoricalIndexing: r
     } = this.props.search;
-    return (0, l.jsxs)("section", {
+    return (0, a.jsxs)("section", {
       className: N.searchResultsWrap,
       "aria-label": x.default.Messages.SEARCH_RESULTS_SECTION_LABEL,
-      children: [this.renderHeader(), (0, l.jsx)(d.AdvancedScroller, {
+      children: [this.renderHeader(), (0, a.jsx)(d.AdvancedScroller, {
         ref: this.scrollerRef,
         className: N.scroller,
         children: this.renderContent()
-      }), (0, l.jsx)(A, {
+      }), (0, a.jsx)(A, {
         searchType: t,
         searchAnalyticsId: e,
         searchResults: n,
-        searchOffset: a,
+        searchOffset: l,
         searchLimit: v.SEARCH_PAGE_SIZE,
         searchHasError: s,
         searchTotalResults: i,
@@ -135,12 +135,12 @@ class R extends a.PureComponent {
     super(...e), this.state = {
       searchMode: v.SearchModes.NEWEST,
       searchQuery: null
-    }, this.scrollerRef = a.createRef(), this.scrollTo = (e, t, n) => {
-      let l = this.scrollerRef.current;
-      if (null == l) return;
-      let a = l.getScrollerState().scrollTop - e;
-      l.scrollTo({
-        to: a,
+    }, this.scrollerRef = l.createRef(), this.scrollTo = (e, t, n) => {
+      let a = this.scrollerRef.current;
+      if (null == a) return;
+      let l = a.getScrollerState().scrollTop - e;
+      a.scrollTo({
+        to: l,
         animate: t,
         callback: n
       })
@@ -174,9 +174,9 @@ class R extends a.PureComponent {
           isSearching: n
         }
       } = this.props, {
-        searchMode: l
+        searchMode: a
       } = this.state;
-      e !== l && !n && (h.default.trackWithMetadata(v.AnalyticEvents.SEARCH_RESULT_SORT_CHANGED, {
+      e !== a && !n && (h.default.trackWithMetadata(v.AnalyticEvents.SEARCH_RESULT_SORT_CHANGED, {
         search_id: E.default.getAnalyticsId(t),
         new_sort_type: e
       }), f.searchByMode(t, e), this.setState({
@@ -196,22 +196,22 @@ class R extends a.PureComponent {
       } = this.state, {
         totalResults: t,
         isSearching: n,
-        isHistoricalIndexing: a,
+        isHistoricalIndexing: l,
         documentsIndexed: s
       } = this.props.search;
-      return (0, l.jsx)(I.default, {
+      return (0, a.jsx)(I.default, {
         searchMode: e,
         searchByMode: this.searchByMode,
         totalResults: t,
         isSearching: n,
-        isIndexing: a,
+        isIndexing: l,
         documentsIndexed: s
       })
     }, this.renderIndexing = () => {
       let e = E.default.getSearchType(this.props.searchId),
         t = e === v.SearchTypes.GUILD ? x.default.Messages.SEARCH_GUILD_STILL_INDEXING : x.default.Messages.SEARCH_DM_STILL_INDEXING;
-      return (0, l.jsxs)(M, {
-        children: [(0, l.jsx)(g.default, {}), (0, l.jsx)("div", {
+      return (0, a.jsxs)(M, {
+        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)("div", {
           className: (N.emptyResultsText, N.stillIndexing),
           children: t
         })]
@@ -220,22 +220,22 @@ class R extends a.PureComponent {
       let {
         showNoResultsAlt: e
       } = this.props.search, t = e ? x.default.Messages.SEARCH_NO_RESULTS_ALT : x.default.Messages.SEARCH_NO_RESULTS;
-      return (0, l.jsxs)(M, {
-        children: [(0, l.jsx)("div", {
+      return (0, a.jsxs)(M, {
+        children: [(0, a.jsx)("div", {
           className: i(N.noResultsImage, {
             [N.alt]: e
           })
-        }), (0, l.jsx)("div", {
+        }), (0, a.jsx)("div", {
           className: i(N.emptyResultsText, N.noResults, {
             [N.alt]: e
           }),
           children: t
         })]
       })
-    }, this.renderError = () => (0, l.jsxs)(M, {
-      children: [(0, l.jsx)("div", {
+    }, this.renderError = () => (0, a.jsxs)(M, {
+      children: [(0, a.jsx)("div", {
         className: N.errorImage
-      }), (0, l.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: i(N.emptyResultsText, N.errorMessage),
         children: x.default.Messages.SEARCH_ERROR
       })]
@@ -245,11 +245,11 @@ class R extends a.PureComponent {
         blockCount: t
       } = this.props, {
         totalResults: n,
-        isSearching: a,
+        isSearching: l,
         isIndexing: s,
         hasError: i
       } = this.props.search;
-      return i ? this.renderError() : s ? this.renderIndexing() : a ? null : n > 0 ? (0, l.jsx)(T.default, {
+      return i ? this.renderError() : s ? this.renderIndexing() : l ? null : n > 0 ? (0, a.jsx)(T.default, {
         search: this.props.search,
         searchResults: e,
         blockCount: t,
@@ -265,7 +265,7 @@ function j(e) {
   let {
     searchId: t
   } = e;
-  return (0, l.jsx)(R, {
+  return (0, a.jsx)(R, {
     searchId: t,
     ...(0, u.useStateFromStoresObject)([E.default], () => ({
       search: E.default.getResultsState(t),

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return p
   }
 }), n("222007");
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var l = n("77078"),
   s = n("944371"),
   i = n("837899"),
   r = n("425190"),
@@ -24,17 +24,17 @@ let p = e => {
     expanded: p,
     onToggleExpanded: E
   } = e, S = (0, c.default)(), [g] = d.useName(t), [C] = d.useImage(t, S), [_] = d.useSubscriptionPlan(t);
-  return (0, l.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: m.container,
-    children: [(0, l.jsx)(f.GuildRoleSubscriptionCardTierImage, {
+    children: [(0, a.jsx)(f.GuildRoleSubscriptionCardTierImage, {
       image: C
-    }), (0, l.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: m.tierTextInfoContainer,
-      children: [(0, l.jsx)(f.GuildRoleSubscriptionCardTierName, {
+      children: [(0, a.jsx)(f.GuildRoleSubscriptionCardTierName, {
         listingName: g
-      }), (0, l.jsxs)("div", {
+      }), (0, a.jsxs)("div", {
         className: m.tierPriceContainer,
-        children: [!n && (0, l.jsx)(s.MonetizationListingDraftBadge, {}), (0, l.jsxs)(a.Text, {
+        children: [!n && (0, a.jsx)(s.MonetizationListingDraftBadge, {}), (0, a.jsxs)(l.Text, {
           variant: "text-xs/normal",
           className: m.tierPrice,
           children: [(0, o.formatPrice)(_.price, _.currency), " ", h.default.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
@@ -45,11 +45,11 @@ let p = e => {
           })]
         })]
       })]
-    }), (0, l.jsx)(a.Clickable, {
+    }), (0, a.jsx)(l.Clickable, {
       onClick: E,
-      children: p ? (0, l.jsx)(r.default, {
+      children: p ? (0, a.jsx)(r.default, {
         className: m.toggleButton
-      }) : (0, l.jsx)(i.default, {
+      }) : (0, a.jsx)(i.default, {
         className: m.toggleButton
       })
     })]

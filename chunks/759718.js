@@ -4,24 +4,24 @@ n.r(t), n.d(t, {
     return r
   }
 }), n("222007"), n("424973");
-var l = n("446674"),
-  a = n("334572"),
+var a = n("446674"),
+  l = n("334572"),
   s = n("488464"),
   i = n("998716");
 
 function r(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
-    [n] = (0, l.useStateFromStores)([s.default], () => {
+    [n] = (0, a.useStateFromStores)([s.default], () => {
       let n = s.default.getMutableParticipants(e).filter(e => e.type === i.StageChannelParticipantTypes.VOICE),
-        l = [];
+        a = [];
       for (let e of n) {
-        if (l.length >= t) break;
-        null == l.find(t => t.id === e.user.id) && l.push(e.user)
+        if (a.length >= t) break;
+        null == a.find(t => t.id === e.user.id) && a.push(e.user)
       }
       return [{
         participants: n,
-        usersInSummary: l
+        usersInSummary: a
       }, s.default.getParticipantsVersion(e)]
-    }, [e, t], a.isVersionEqual);
+    }, [e, t], l.isVersionEqual);
   return n
 }

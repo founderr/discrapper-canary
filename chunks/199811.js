@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return x
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("627445"),
-  s = n.n(a),
+var l = n("627445"),
+  s = n.n(l),
   i = n("446674"),
   r = n("77078"),
   o = n("244201"),
@@ -31,10 +31,10 @@ function x(e) {
   let {
     channelId: t,
     closePopout: n,
-    appContext: a,
+    appContext: l,
     onSelect: x
   } = e, N = (0, i.useStateFromStores)([u.default], () => u.default.getSelectedParticipant(t)), A = (null == N ? void 0 : N.type) === T.ParticipantTypes.STREAM ? N.stream : null, M = (0, h.default)(t);
-  return (0, l.jsxs)(r.Menu, {
+  return (0, a.jsxs)(r.Menu, {
     navId: "stage-channel-call-overflow-popout",
     onClose: n,
     "aria-label": v.default.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
@@ -42,14 +42,14 @@ function x(e) {
     children: [function(e) {
       let t = (0, i.useStateFromStores)([S.default], () => S.default.getChannel(e), [e]),
         n = (0, i.useStateFromStores)([g.default], () => g.default.can(_.MODERATE_STAGE_CHANNEL_PERMISSIONS, t)),
-        a = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(e), [e]),
+        l = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(e), [e]),
         s = (0, o.useAppContext)(),
         u = () => null != t && (0, C.openStageChannelSettings)(t, s);
-      return (null == t ? void 0 : t.isGuildStageVoice()) && n ? null != a ? (0, l.jsx)(r.MenuItem, {
+      return (null == t ? void 0 : t.isGuildStageVoice()) && n ? null != l ? (0, a.jsx)(r.MenuItem, {
         id: "edit-stage",
         label: v.default.Messages.EDIT_STAGE_SUBTITLE,
         action: u
-      }) : (0, l.jsx)(r.MenuItem, {
+      }) : (0, a.jsx)(r.MenuItem, {
         id: "start-stage",
         label: v.default.Messages.STAGE_CHANNEL_START_TITLE,
         action: u
@@ -58,9 +58,9 @@ function x(e) {
       let t = (0, i.useStateFromStores)([S.default], () => S.default.getChannel(e), [e]);
       s(null != t, "useNotificationSettingsItem: channel cannot be undefined");
       let n = (0, E.useShouldUseNewNotificationSystem)("StageChannelCallOverflowMenu"),
-        l = (0, p.default)(t),
-        a = (0, m.default)(t);
-      return n ? l : a
-    }(t), (0, c.default)(), (0, d.default)(t), M, (0, f.default)(A, a)]
+        a = (0, p.default)(t),
+        l = (0, m.default)(t);
+      return n ? a : l
+    }(t), (0, c.default)(), (0, d.default)(t), M, (0, f.default)(A, l)]
   })
 }

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   VideoSpinnerContext: function() {
-    return l
+    return a
   },
   VideoSpinnerTimer: function() {
     return p
   }
 }), n("222007");
-var l, a, s = n("811022"),
+var a, l, s = n("811022"),
   i = n("398183"),
   r = n("271938"),
   o = n("42203"),
@@ -16,7 +16,7 @@ var l, a, s = n("811022"),
   c = n("800762"),
   f = n("599110"),
   h = n("49111");
-(a = l || (l = {})).SELF_VIDEO = "self_video", a.SELF_STREAM = "self_stream", a.REMOTE_VIDEO = "remote_video", a.REMOTE_STREAM = "remote_stream", a.CHANGE_VIDEO_BACKGROUND = "change_video_background", a.VIDEO_PLAYER = "video_player", a.REPLAY_VIDEO_STREAM = "replay_video_stream";
+(l = a || (a = {})).SELF_VIDEO = "self_video", l.SELF_STREAM = "self_stream", l.REMOTE_VIDEO = "remote_video", l.REMOTE_STREAM = "remote_stream", l.CHANGE_VIDEO_BACKGROUND = "change_video_background", l.VIDEO_PLAYER = "video_player", l.REPLAY_VIDEO_STREAM = "replay_video_stream";
 let m = new Map;
 class p {
   onSpinnerStarted() {
@@ -24,17 +24,17 @@ class p {
   }
   trackSpinnerDuration(e, t, n) {
     if (null == this.spinnerVisibleStart) return;
-    let l = function(e) {
+    let a = function(e) {
         var t;
         let n = (null !== (t = m.get(e)) && void 0 !== t ? t : 0) + 1;
         return m.set(e, n), n
       }(n),
-      a = (0, i.now)() - this.spinnerVisibleStart;
-    if (this.spinnerVisibleStart = null, a < 0) {
-      this.logger.warn("spinner duration is negative: ".concat(a, " ms\n        [").concat(e, ", count for stream: ").concat(l, "]"));
+      l = (0, i.now)() - this.spinnerVisibleStart;
+    if (this.spinnerVisibleStart = null, l < 0) {
+      this.logger.warn("spinner duration is negative: ".concat(l, " ms\n        [").concat(e, ", count for stream: ").concat(a, "]"));
       return
     }
-    this.logger.info("spinner visible for ".concat(a, " ms\n      [").concat(e, ", count for stream: ").concat(l, "]"));
+    this.logger.info("spinner visible for ".concat(l, " ms\n      [").concat(e, ", count for stream: ").concat(a, "]"));
     let s = d.default.getGuildId(),
       p = c.default.getUserVoiceChannelId(s, r.default.getId()),
       E = function(e) {
@@ -48,10 +48,10 @@ class p {
       }(o.default.getChannel(p));
     f.default.track(h.AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, {
       video_spinner_context: e,
-      duration_video_spinner_visible_ms: a,
+      duration_video_spinner_visible_ms: l,
       rtc_connection_id: d.default.getRTCConnectionId(),
       media_session_id: d.default.getMediaSessionId(),
-      event_count_for_stream: l,
+      event_count_for_stream: a,
       guild_id: s,
       channel_id: p,
       channel_type: E,

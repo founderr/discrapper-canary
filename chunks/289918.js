@@ -39,27 +39,27 @@ var l, i, a = n("37983"),
   k = n("581295"),
   w = n("878569"),
   F = n("236100"),
-  B = n("590456"),
-  G = n("49111"),
+  G = n("590456"),
+  B = n("49111"),
   H = n("646718"),
   V = n("782340"),
   K = n("320399");
 (i = l || (l = {}))[i.SHOULD_LOAD = 0] = "SHOULD_LOAD", i[i.LOADING = 1] = "LOADING", i[i.COMPLETE = 2] = "COMPLETE";
 let W = {
-    [B.UserProfileTypes.POPOUT]: 18,
-    [B.UserProfileTypes.MODAL]: 24,
-    [B.UserProfileTypes.SETTINGS]: 0,
-    [B.UserProfileTypes.PANEL]: 18,
-    [B.UserProfileTypes.POMELO_POPOUT]: 18,
-    [B.UserProfileTypes.CANCEL_MODAL]: 0
+    [G.UserProfileTypes.POPOUT]: 18,
+    [G.UserProfileTypes.MODAL]: 24,
+    [G.UserProfileTypes.SETTINGS]: 0,
+    [G.UserProfileTypes.PANEL]: 18,
+    [G.UserProfileTypes.POMELO_POPOUT]: 18,
+    [G.UserProfileTypes.CANCEL_MODAL]: 0
   },
   Y = {
-    [B.UserProfileTypes.MODAL]: G.AnalyticsPages.USER_PROFILE,
-    [B.UserProfileTypes.POPOUT]: G.AnalyticsPages.USER_POPOUT,
-    [B.UserProfileTypes.SETTINGS]: G.AnalyticsPages.USER_POPOUT,
-    [B.UserProfileTypes.PANEL]: G.AnalyticsPages.DM_CHANNEL,
-    [B.UserProfileTypes.POMELO_POPOUT]: G.AnalyticsPages.POMELO_POPOUT,
-    [B.UserProfileTypes.CANCEL_MODAL]: G.AnalyticsPages.USER_POPOUT
+    [G.UserProfileTypes.MODAL]: B.AnalyticsPages.USER_PROFILE,
+    [G.UserProfileTypes.POPOUT]: B.AnalyticsPages.USER_POPOUT,
+    [G.UserProfileTypes.SETTINGS]: B.AnalyticsPages.USER_POPOUT,
+    [G.UserProfileTypes.PANEL]: B.AnalyticsPages.DM_CHANNEL,
+    [G.UserProfileTypes.POMELO_POPOUT]: B.AnalyticsPages.POMELO_POPOUT,
+    [G.UserProfileTypes.CANCEL_MODAL]: B.AnalyticsPages.USER_POPOUT
   };
 
 function z(e) {
@@ -74,12 +74,12 @@ function z(e) {
     analyticsLocations: c
   } = (0, h.default)(p.default.BADGE);
   return s.useEffect(() => {
-    l && !u.current && (u.current = !0, b.default.track(G.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    l && !u.current && (u.current = !0, b.default.track(B.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: H.PremiumUpsellTypes.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
       location: {
         page: Y[t],
-        section: G.AnalyticsSections.NITRO_BANNER,
-        object: G.AnalyticsObjects.NITRO_BADGE
+        section: B.AnalyticsSections.NITRO_BANNER,
+        object: B.AnalyticsObjects.NITRO_BADGE
       },
       location_stack: c
     }))
@@ -104,7 +104,7 @@ function z(e) {
               title: V.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
               description: V.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
                 onAndMoreWithPremiumClick: () => {
-                  l(), m.default.open(G.UserSettingsSections.PREMIUM, null, {
+                  l(), m.default.open(B.UserSettingsSections.PREMIUM, null, {
                     analyticsLocations: e
                   })
                 }
@@ -163,7 +163,7 @@ function J(e) {
     bannerSrc: m,
     onClose: p,
     guildId: h,
-    profileType: A = B.UserProfileTypes.POPOUT,
+    profileType: A = G.UserProfileTypes.POPOUT,
     isHovering: R,
     animateOnHover: M,
     allowEdit: L = !0,
@@ -196,8 +196,8 @@ function J(e) {
   }, [en, Q, m, r, er]);
   let eE = (0, C.default)({
     analyticsLocation: {
-      page: G.AnalyticsPages.USER_POPOUT,
-      section: G.AnalyticsSections.PROFILE_POPOUT
+      page: B.AnalyticsPages.USER_POPOUT,
+      section: B.AnalyticsSections.PROFILE_POPOUT
     }
   });
   return (0, a.jsx)(k.default, {
@@ -252,13 +252,13 @@ function J(e) {
           profileType: A
         })
       }) : (() => {
-        let e = P && eu && A !== B.UserProfileTypes.SETTINGS;
+        let e = P && eu && A !== G.UserProfileTypes.SETTINGS;
         return e ? (0, a.jsx)(z, {
           type: A,
           shown: void 0 === R ? $ : R,
           onClick: p
         }) : null
-      })(), eh ? A !== B.UserProfileTypes.MODAL ? null : (0, a.jsx)(f.Clickable, {
+      })(), eh ? A !== G.UserProfileTypes.MODAL ? null : (0, a.jsx)(f.Clickable, {
         onClick: p,
         "aria-label": V.default.Messages.BACK,
         className: K.pencilContainer,

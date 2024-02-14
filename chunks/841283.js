@@ -4,32 +4,32 @@ n.r(t), n.d(t, {
     return o
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("77078"),
   i = n("6466");
-class r extends a.PureComponent {
+class r extends l.PureComponent {
   render() {
     let {
       label: e,
       value: t,
       renderValue: n,
-      className: a,
+      className: l,
       popoutProps: r
     } = this.props;
-    return (0, l.jsx)(s.Popout, {
+    return (0, a.jsx)(s.Popout, {
       ...r,
       renderPopout: this.renderPopout,
       children: (r, o) => {
         let {
           isShown: u
         } = o;
-        return (0, l.jsx)(s.Clickable, {
+        return (0, a.jsx)(s.Clickable, {
           ...r,
-          className: a,
+          className: l,
           "aria-haspopup": "listbox",
           "aria-expanded": u,
-          children: (0, l.jsx)(i.default, {
+          children: (0, a.jsx)(i.default, {
             label: e,
             value: t,
             renderValue: n
@@ -44,16 +44,16 @@ class r extends a.PureComponent {
         closePopout: t
       } = e, {
         options: n,
-        value: a,
+        value: l,
         renderOption: s,
         popoutClassName: r,
         scroller: o
       } = this.props;
-      return (0, l.jsx)(i.QuickSelectPopout, {
+      return (0, a.jsx)(i.QuickSelectPopout, {
         scroller: !!o,
         className: r,
         options: n,
-        value: a,
+        value: l,
         renderOption: s,
         onChange: e => {
           this.handleChange(e), t()

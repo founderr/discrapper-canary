@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
+var l = n("446674"),
   s = n("793237"),
   i = n("347738"),
   r = n("909004"),
@@ -19,8 +19,8 @@ var a = n("446674"),
 function h(e) {
   let {
     channel: t
-  } = e, n = (0, a.useStateFromStores)([i.default], () => i.default.shouldShowTopicsBar());
-  return (0, l.jsx)(o.default.Icon, {
+  } = e, n = (0, l.useStateFromStores)([i.default], () => i.default.shouldShowTopicsBar());
+  return (0, a.jsx)(o.default.Icon, {
     icon: r.default,
     onClick: () => {
       u.default.track(d.AnalyticEvents.SUMMARIES_SIDEBAR_TOGGLED, {

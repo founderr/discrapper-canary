@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   PaxVcTileActivitiesExperiment: function() {
-    return a
+    return l
   }
 });
-var l = n("862205");
-let a = (0, l.createExperiment)({
+var a = n("862205");
+let l = (0, a.createExperiment)({
   kind: "user",
   id: "2023-03_pax_vc_tile_activities",
   label: "PAX VC Tile Activities",

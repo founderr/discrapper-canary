@@ -65,16 +65,16 @@ var l = n("37983"),
       onClick: e => P.onResultClick(e)
     })) && void 0 !== a ? a : null;
     if (null == F) return null;
-    let B = {
+    let G = {
         [T.autocompleteAttached]: null == k,
         [T.autocompletePopout]: null != k,
         [T.bottom]: null == k && "bottom" === e.position
       },
-      G = 490;
-    null != k && (G = (null === (v = A.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (I = L.query) || void 0 === I ? void 0 : I.type) === g.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), G = Math.min(window.innerHeight - 175, G);
+      B = 490;
+    null != k && (B = (null === (v = A.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (I = L.query) || void 0 === I ? void 0 : I.type) === g.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
     let H = (0, l.jsx)(f.default, {
       id: O,
-      className: s(T.autocomplete, B),
+      className: s(T.autocomplete, G),
       innerClassName: T.autocompleteInner,
       onMouseDown: e => e.preventDefault(),
       children: (0, l.jsx)(r.ListNavigatorProvider, {
@@ -94,7 +94,7 @@ var l = n("37983"),
               ...n,
               className: T.scroller,
               style: {
-                maxHeight: G
+                maxHeight: B
               },
               role: "listbox",
               "aria-labelledby": (0, f.getAutocompleteTitleId)(O),

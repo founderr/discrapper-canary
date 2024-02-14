@@ -41,8 +41,8 @@ var l = n("37983"),
 let k = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
   w = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
   F = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
-  B = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-  G = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
+  G = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
+  B = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
   H = (0, N.cssValueToNumber)(c.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
   V = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_SECTION_MARGIN_BOTTOM),
   K = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_HEIGHT) + (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_MARGIN_TOP),
@@ -212,7 +212,7 @@ let k = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         var n;
         return e === h.length - 1 || t.has(null === (n = h[e]) || void 0 === n ? void 0 : n.sectionId) || et(e) || ee(e) ? 0 : V
       }, [t, h, et, ee]),
-      ec = i.useMemo(() => ["" !== f ? G : k, w, F, B], [f]),
+      ec = i.useMemo(() => ["" !== f ? B : k, w, F, G], [f]),
       ef = i.useCallback(e => {
         let t = h[e];
         return t.type === P.EmojiCategoryTypes.SEARCH_RESULTS ? 0 : H
@@ -257,8 +257,8 @@ let k = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       listPadding: k,
       renderRow: w,
       renderSection: F,
-      renderSectionHeader: B,
-      renderSectionFooter: G,
+      renderSectionHeader: G,
+      renderSectionFooter: B,
       sectionMarginBottom: H,
       sectionHeaderHeight: V,
       sectionFooterHeight: K
@@ -308,8 +308,8 @@ let k = (0, N.cssValueToNumber)(c.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         onScroll: W,
         renderRow: w,
         renderSection: F,
-        renderSectionHeader: B,
-        renderSectionFooter: G,
+        renderSectionHeader: G,
+        renderSectionFooter: B,
         rowCount: S,
         rowCountBySection: u,
         rowHeight: Y(s),

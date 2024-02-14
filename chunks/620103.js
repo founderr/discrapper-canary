@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return m
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
@@ -15,39 +15,39 @@ var l = n("37983"),
   c = n("980423"),
   f = n("215536"),
   h = n("232027"),
-  m = a.memo(function(e) {
+  m = l.memo(function(e) {
     let {
       label: t,
       participantCount: n,
-      onClick: a,
+      onClick: l,
       className: s,
       collapsed: m,
       speakers: p,
       channel: E,
       isStreamLive: S
     } = e;
-    return (0, l.jsxs)(r.Clickable, {
-      onClick: a,
+    return (0, a.jsxs)(r.Clickable, {
+      onClick: l,
       className: i(h.container, s),
-      children: [null == p ? (0, l.jsx)(d.default, {
+      children: [null == p ? (0, a.jsx)(d.default, {
         width: 20,
         height: 20,
         className: h.micIcon
-      }) : (0, l.jsx)(u.default, {
+      }) : (0, a.jsx)(u.default, {
         width: 20,
         height: 20,
         className: h.micIcon
-      }), (0, l.jsxs)(r.Text, {
+      }), (0, a.jsxs)(r.Text, {
         color: "header-primary",
         variant: "text-md/semibold",
         className: h.text,
         children: [t, " — ", n]
-      }), m && null != E && null != p && p.length > 0 && (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(f.default, {
+      }), m && null != E && null != p && p.length > 0 && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(f.default, {
           channel: E,
           speakers: p
-        }), S && (0, l.jsx)(c.default, {})]
-      }), (0, l.jsx)(o.default, {
+        }), S && (0, a.jsx)(c.default, {})]
+      }), (0, a.jsx)(o.default, {
         width: 20,
         height: 20,
         className: i(h.downIcon, {

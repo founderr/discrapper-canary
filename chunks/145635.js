@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return F
   }
 }), n("222007");
-var l, a, s = n("37983"),
+var a, l, s = n("37983"),
   i = n("884691"),
   r = n("414456"),
   o = n.n(r),
@@ -37,13 +37,13 @@ let b = i.memo(function(e) {
     let {
       toggleRequestToSpeakSidebar: t,
       chatOpen: n
-    } = e, l = (0, s.jsx)(x.default.Icon, {
+    } = e, a = (0, s.jsx)(x.default.Icon, {
       icon: I.default,
       tooltip: y.default.Messages.CLOSE,
       onClick: t
     });
     return (0, s.jsxs)(x.default, {
-      toolbar: l,
+      toolbar: a,
       className: o(P.headerContainer, {
         [P.chatOpen]: n
       }),
@@ -59,9 +59,9 @@ let b = i.memo(function(e) {
   D = i.memo(function(e) {
     let {
       channel: t,
-      participant: l,
-      tempDisableOnInit: a = !1
-    } = e, [r, u] = i.useState(a);
+      participant: a,
+      tempDisableOnInit: l = !1
+    } = e, [r, u] = i.useState(l);
     i.useEffect(() => {
       if (!r) return;
       let e = setTimeout(() => u(!1), 1e3);
@@ -73,20 +73,20 @@ let b = i.memo(function(e) {
       isMobile: v,
       status: x
     } = (0, c.useStateFromStoresObject)([_.default], () => ({
-      isMobile: _.default.isMobileOnline(l.user.id),
-      status: _.default.getStatus(l.user.id, C)
-    })), A = (0, c.useStateFromStores)([g.default], () => g.default.getMember(C, l.user.id)), j = i.useMemo(() => ({
-      [C]: [l.user.id]
-    }), [C, l.user.id]);
+      isMobile: _.default.isMobileOnline(a.user.id),
+      status: _.default.getStatus(a.user.id, C)
+    })), A = (0, c.useStateFromStores)([g.default], () => g.default.getMember(C, a.user.id)), j = i.useMemo(() => ({
+      [C]: [a.user.id]
+    }), [C, a.user.id]);
     (0, p.useSubscribeGuildMembers)(j);
-    let L = l.rtsState === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+    let L = a.rtsState === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 
     function O() {
-      (0, N.setUserSuppress)(t, l.user.id, !1)
+      (0, N.setUserSuppress)(t, a.user.id, !1)
     }
 
     function b() {
-      (0, N.setUserSuppress)(t, l.user.id, !0)
+      (0, N.setUserSuppress)(t, a.user.id, !0)
     }
     let D = e => {
       (0, h.openContextMenuLazy)(e, async () => {
@@ -95,7 +95,7 @@ let b = i.memo(function(e) {
         } = await n.el("834247").then(n.bind(n, "834247"));
         return n => (0, s.jsx)(e, {
           ...n,
-          user: l.user,
+          user: a.user,
           guildId: C,
           channel: t,
           showMediaItems: !0
@@ -105,13 +105,13 @@ let b = i.memo(function(e) {
     return (0, s.jsxs)("div", {
       className: P.participantRowContainer,
       children: [(0, s.jsx)(f.Popout, {
-        preload: () => (0, E.default)(l.user.id, l.user.getAvatarURL(t.guild_id, 80), {
+        preload: () => (0, E.default)(a.user.id, a.user.getAvatarURL(t.guild_id, 80), {
           guildId: t.guild_id,
           channelId: t.id
         }),
         renderPopout: e => (0, s.jsx)(S.default, {
           ...e,
-          userId: l.user.id,
+          userId: a.user.id,
           guildId: C,
           channelId: t.id
         }),
@@ -126,19 +126,19 @@ let b = i.memo(function(e) {
             children: [(0, s.jsx)(m.default, {
               size: f.AvatarSizes.SIZE_40,
               className: P.participantAvatar,
-              user: l.user,
+              user: a.user,
               isMobile: v,
               status: x
             }), (0, s.jsxs)("div", {
               className: P.participantTextContainer,
               children: [(0, s.jsx)(f.NameWithRole, {
-                name: l.userNick,
+                name: a.userNick,
                 color: null !== (t = null == A ? void 0 : A.colorString) && void 0 !== t ? t : void 0,
                 className: P.participantName
               }), (0, s.jsx)(f.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
-                children: (0, M.participantMemberInfo)(l)
+                children: (0, M.participantMemberInfo)(a)
               })]
             })]
           })
@@ -176,10 +176,10 @@ let b = i.memo(function(e) {
   U = i.memo(function(e) {
     let {
       channel: t
-    } = e, [n, l] = (0, j.useRequestToSpeakPermission)(t.id);
+    } = e, [n, a] = (0, j.useRequestToSpeakPermission)(t.id);
     return (0, s.jsx)(f.FormSwitch, {
       className: P.toggle,
-      onChange: l,
+      onChange: a,
       value: n,
       children: y.default.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
     })
@@ -205,15 +205,15 @@ function F(e) {
   let {
     channel: t,
     toggleRequestToSpeakSidebar: n,
-    chatOpen: l
-  } = e, a = (0, A.useSortedRequestToSpeakParticipants)(t.id), i = (0, c.useStateFromStores)([C.default], () => C.default.can(O.Permissions.MANAGE_CHANNELS, t) || C.default.can(O.Permissions.MANAGE_ROLES, t)), r = [i ? 1 : 0, Math.max(1, a.length)];
+    chatOpen: a
+  } = e, l = (0, A.useSortedRequestToSpeakParticipants)(t.id), i = (0, c.useStateFromStores)([C.default], () => C.default.can(O.Permissions.MANAGE_CHANNELS, t) || C.default.can(O.Permissions.MANAGE_ROLES, t)), r = [i ? 1 : 0, Math.max(1, l.length)];
   return (0, s.jsxs)("div", {
     className: o(P.container, {
-      [P.chatOpen]: l
+      [P.chatOpen]: a
     }),
     children: [(0, s.jsx)(b, {
       toggleRequestToSpeakSidebar: n,
-      chatOpen: l
+      chatOpen: a
     }), (0, s.jsx)(f.List, {
       className: P.contentContainer,
       sections: r,
@@ -226,7 +226,7 @@ function F(e) {
           case 0:
             return 66;
           case 1:
-            if (0 === a.length) return 178;
+            if (0 === l.length) return 178;
             return 48
         }
         return 0
@@ -234,7 +234,7 @@ function F(e) {
       renderRow: function(e) {
         let {
           section: n,
-          row: l
+          row: a
         } = e;
         switch (n) {
           case 0:
@@ -242,8 +242,8 @@ function F(e) {
               channel: t
             }, "rts-toggle");
           case 1: {
-            if (0 === a.length) return (0, s.jsx)(w, {}, "participants-empty");
-            let e = a[l];
+            if (0 === l.length) return (0, s.jsx)(w, {}, "participants-empty");
+            let e = l[a];
             return (0, s.jsx)(D, {
               channel: t,
               participant: e,
@@ -261,12 +261,12 @@ function F(e) {
           className: P.listTitle,
           variant: "text-xs/bold",
           color: "header-secondary",
-          children: a.length > 0 ? y.default.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({
-            numHands: a.length
+          children: l.length > 0 ? y.default.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({
+            numHands: l.length
           }) : y.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
         }, "participants-section");
         return null
       }
     })]
   })
-}(a = l || (l = {}))[a.TOGGLE_REQUEST_TO_SPEAK = 0] = "TOGGLE_REQUEST_TO_SPEAK", a[a.PARTICIPANTS = 1] = "PARTICIPANTS"
+}(l = a || (a = {}))[l.TOGGLE_REQUEST_TO_SPEAK = 0] = "TOGGLE_REQUEST_TO_SPEAK", l[l.PARTICIPANTS = 1] = "PARTICIPANTS"

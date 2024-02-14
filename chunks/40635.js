@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return x
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("446674"),
   i = n("77078"),
   r = n("913144"),
@@ -40,23 +40,23 @@ var l = n("37983"),
       let e = p.default.getCurrentCategoryId(x.id),
         t = p.default.getDirectoryEntries(x.id, e === I.DirectoryEntryCategories.ALL ? null : e),
         n = p.default.getDirectoryCategoryCounts(x.id),
-        l = p.default.getDirectoryAllEntriesCount(x.id),
-        a = p.default.isFetching();
+        a = p.default.getDirectoryAllEntriesCount(x.id),
+        l = p.default.isFetching();
       return {
         currentCategoryId: e,
         directoryEntries: t,
         categoryCounts: n,
-        allEntriesCount: l,
-        isLoading: a
+        allEntriesCount: a,
+        isLoading: l
       }
     });
-    a.useEffect(() => () => {
+    l.useEffect(() => () => {
       let e = d.default.lastMessageId(x.id);
       null != e && r.default.wait(() => {
         (0, o.ack)(x.id, !0, !0, e)
       })
     }, [x.id]);
-    let O = a.useMemo(() => null != M ? (0, C.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
+    let O = l.useMemo(() => null != M ? (0, C.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
       {
         mostRecentQuery: y,
         searchFetching: P,
@@ -72,7 +72,7 @@ var l = n("37983"),
           searchResults: m.default.getSearchResults(x.id, e)
         }
       }),
-      [D, U] = a.useState(y),
+      [D, U] = l.useState(y),
       w = "" !== y,
       {
         showHubEventsList: F
@@ -82,9 +82,9 @@ var l = n("37983"),
       }, {
         autoTrackExposure: !1
       });
-    a.useEffect(() => {
+    l.useEffect(() => {
       h.fetchDirectoryEntries(x.id), h.fetchDirectoryCounts(x.id), F && f.fetchDirectoryEntries(x.id), U(y)
-    }, [x.id]), a.useEffect(() => {
+    }, [x.id]), l.useEffect(() => {
       c.default.track(T.AnalyticEvents.GUILD_DIRECTORY_CHANNEL_VIEWED, {
         directory_channel_id: x.id,
         directory_guild_id: N.id,
@@ -97,7 +97,7 @@ var l = n("37983"),
           let {
             default: e
           } = await n.el("467085").then(n.bind(n, "467085"));
-          return t => (0, l.jsx)(e, {
+          return t => (0, a.jsx)(e, {
             ...t,
             directoryGuildName: N.name,
             directoryGuildId: N.id,
@@ -112,35 +112,35 @@ var l = n("37983"),
           directory_guild_id: N.id
         }))
       },
-      G = () => {
+      H = () => {
         U(""), h.clearDirectorySearch(x.id)
       };
-    return w ? (0, l.jsx)(_.default, {
+    return w ? (0, a.jsx)(_.default, {
       searchQuery: D,
       setSearchQuery: U,
       mostRecentQuery: y,
       handleSearchKeyPress: B,
-      handleClearSearch: G,
+      handleClearSearch: H,
       handleCreateOrAddGuild: V,
       searchResults: b,
       searchFetching: P
-    }) : null == O && null == A ? (0, l.jsx)("div", {
+    }) : null == O && null == A ? (0, a.jsx)("div", {
       className: v.pageContainer,
-      children: (0, l.jsx)(i.Spinner, {
+      children: (0, a.jsx)(i.Spinner, {
         className: v.spinner
       })
-    }) : (null == O ? void 0 : O.length) === 0 && null == A ? (0, l.jsx)("div", {
+    }) : (null == O ? void 0 : O.length) === 0 && null == A ? (0, a.jsx)("div", {
       className: v.pageContainer,
-      children: (0, l.jsx)(S.default, {
+      children: (0, a.jsx)(S.default, {
         guild: N,
         onAddGuild: V
       })
-    }) : (0, l.jsx)(g.default, {
+    }) : (0, a.jsx)(g.default, {
       channel: x,
       searchQuery: D,
       setSearchQuery: U,
       handleSearchKeyPress: B,
-      handleClearSearch: G,
+      handleClearSearch: H,
       handleCreateOrAddGuild: V,
       currentCategoryId: A,
       handleSelectCategory: e => {

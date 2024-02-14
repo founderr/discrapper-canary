@@ -1,13 +1,13 @@
 "use strict";
-var l, a;
+var a, l;
 n.r(t), n.d(t, {
   ModViewPanel: function() {
-    return l
+    return a
   },
   ModViewPanelNameMap: function() {
     return s
   }
-}), (a = l || (l = {}))[a.UNKNOWN = 0] = "UNKNOWN", a[a.INFO = 1] = "INFO", a[a.MESSAGE_HISTORY = 2] = "MESSAGE_HISTORY", a[a.PERMISSIONS = 3] = "PERMISSIONS";
+}), (l = a || (a = {}))[l.UNKNOWN = 0] = "UNKNOWN", l[l.INFO = 1] = "INFO", l[l.MESSAGE_HISTORY = 2] = "MESSAGE_HISTORY", l[l.PERMISSIONS = 3] = "PERMISSIONS";
 let s = {
   0: "UNKNOWN",
   1: "INFO",

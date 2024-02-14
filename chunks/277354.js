@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return g
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("446674"),
   i = n("77078"),
   r = n("987317"),
@@ -25,17 +25,17 @@ var g = function(e) {
     participants: h,
     channel: g,
     hasConnectPermission: C
-  } = e, _ = (0, d.useShowMemberVerificationGate)(g.guild_id), I = a.useCallback(() => {
+  } = e, _ = (0, d.useShowMemberVerificationGate)(g.guild_id), I = l.useCallback(() => {
     _ ? (0, u.openMemberVerificationModal)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id)
   }, [g.id, g.guild_id, _]), T = h.filter(e => e.type === m.StageChannelParticipantTypes.VOICE), v = 4 === T.length ? 2 : 3, x = (0, s.useStateFromStoresArray)([o.default], () => T.map(e => o.default.getParticipant(g.id, e.id)).filter(f.isNotNullish), [g.id, T]);
-  return (0, l.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: E.container,
-    children: [(0, l.jsx)("div", {
+    children: [(0, a.jsx)("div", {
       className: E.tiles,
       style: {
         maxWidth: 168 * v
       },
-      children: x.slice(0, 5).map(e => (0, l.jsx)(c.default, {
+      children: x.slice(0, 5).map(e => (0, a.jsx)(c.default, {
         participant: e,
         channel: g,
         className: E.tile,
@@ -45,13 +45,13 @@ var g = function(e) {
         inPopout: !1,
         width: 48
       }, e.id))
-    }), (0, l.jsx)(i.Heading, {
+    }), (0, a.jsx)(i.Heading, {
       className: E.channelName,
       variant: "heading-xxl/semibold",
       children: g.name
-    }), (0, l.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: E.participantsRow,
-      children: (0, l.jsx)(i.Text, {
+      children: (0, a.jsx)(i.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
         children: (t = g, 0 === (n = T).length ? p.default.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? p.default.Messages.CURRENTLY_IN_STAGE_1.format({
@@ -65,7 +65,7 @@ var g = function(e) {
           n: n.length - 2
         }) : void 0)
       })
-    }), (0, l.jsx)(i.Button, {
+    }), (0, a.jsx)(i.Button, {
       disabled: !C,
       className: E.joinButton,
       color: C ? i.Button.Colors.GREEN : i.Button.Colors.PRIMARY,

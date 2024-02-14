@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return m
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("95410"),
@@ -24,17 +24,17 @@ function m(e) {
     channel: m,
     participants: p
   } = e, [E, S] = function() {
-    let [e, t] = a.useState(() => r.default.get(h, d.PictureInPicturePositions.BOTTOM_RIGHT));
-    return [e, a.useCallback(e => {
+    let [e, t] = l.useState(() => r.default.get(h, d.PictureInPicturePositions.BOTTOM_RIGHT));
+    return [e, l.useCallback(e => {
       r.default.set(h, e), t(e)
     }, [])]
-  }(), g = a.useRef(null), C = null == m.getGuildId() ? 70 : 50;
-  return a.useLayoutEffect(() => {
+  }(), g = l.useRef(null), C = null == m.getGuildId() ? 70 : 50;
+  return l.useLayoutEffect(() => {
     var e;
     null === (e = g.current) || void 0 === e || e.ensureIsInPosition()
-  }, [p.length]), (0, l.jsx)("div", {
+  }, [p.length]), (0, a.jsx)("div", {
     className: c.container,
-    children: (0, l.jsx)(o.PictureInPictureWindow, {
+    children: (0, a.jsx)(o.PictureInPictureWindow, {
       position: E,
       id: 0,
       ref: g,
@@ -45,9 +45,9 @@ function m(e) {
       edgeOffsetBottom: 70,
       edgeOffsetLeft: 16,
       edgeOffsetRight: 16,
-      children: (0, l.jsx)("div", {
+      children: (0, a.jsx)("div", {
         className: c.tileContainer,
-        children: p.map(e => (0, l.jsx)(u.default, {
+        children: p.map(e => (0, a.jsx)(u.default, {
           participant: e,
           channel: m,
           onContextMenu: n,

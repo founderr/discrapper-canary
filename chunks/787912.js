@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("414456"),
-  s = n.n(a),
+var l = n("414456"),
+  s = n.n(l),
   i = n("77078"),
   r = n("423487"),
   o = n("550410"),
@@ -18,13 +18,13 @@ function d(e) {
     errorMessage: t,
     className: n
   } = e;
-  return (0, l.jsx)(i.TooltipContainer, {
+  return (0, a.jsx)(i.TooltipContainer, {
     className: s(n, u.root),
     text: t,
     position: "bottom",
     color: i.TooltipColors.GREY,
-    children: (0, l.jsx)(o.default, {
-      children: (0, l.jsx)(r.default, {
+    children: (0, a.jsx)(o.default, {
+      children: (0, a.jsx)(r.default, {
         "aria-label": null != t ? t : "",
         className: u.warningIcon
       })

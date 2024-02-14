@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return E
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("748820"),
   i = n("446674"),
   r = n("913144"),
@@ -24,31 +24,31 @@ function E(e) {
     guildId: n,
     userId: E,
     containerDimensions: S
-  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), [C, _] = a.useState([]), I = C.length < 50;
-  a.useEffect(() => {
+  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), [C, _] = l.useState([]), I = C.length < 50;
+  l.useEffect(() => {
     function e(e) {
-      var l;
+      var a;
       let {
-        channelId: a,
+        channelId: l,
         userId: i,
         emoji: r,
         animationType: o,
         animationId: h
       } = e;
-      if (null != E && E !== i || d.default.getEnabled() && (0, c.default)(null !== (l = null == r ? void 0 : r.name) && void 0 !== l ? l : "")) return;
+      if (null != E && E !== i || d.default.getEnabled() && (0, c.default)(null !== (a = null == r ? void 0 : r.name) && void 0 !== a ? a : "")) return;
       let p = null != r && null != o && null != h;
-      if (a === t && !g && I && p) {
+      if (l === t && !g && I && p) {
         let e = (0, f.getEffectUrl)(r),
-          l = null != r.id && !r.animated,
-          a = {
+          a = null != r.id && !r.animated,
+          l = {
             id: (0, s.v4)(),
             animationType: o,
             animationId: h,
-            shouldResize: l,
+            shouldResize: a,
             url: e,
             userId: i
           };
-        _(e => [...e, a]), u.default.trackWithMetadata(m.AnalyticEvents.VOICE_CHANNEL_EFFECT_VIEWED, {
+        _(e => [...e, l]), u.default.trackWithMetadata(m.AnalyticEvents.VOICE_CHANNEL_EFFECT_VIEWED, {
           channel_id: t,
           guild_id: n
         })
@@ -58,21 +58,21 @@ function E(e) {
       r.default.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e)
     }
   }, [t, n, E, g, I]);
-  let T = a.useCallback(e => {
+  let T = l.useCallback(e => {
     _(t => {
       let n = [...t],
-        l = n.findIndex(t => t.id === e);
-      return n.splice(l, 1), n
+        a = n.findIndex(t => t.id === e);
+      return n.splice(a, 1), n
     })
   }, []);
-  return g ? null : (0, l.jsx)("div", {
+  return g ? null : (0, a.jsx)("div", {
     className: p.effectsWrapper,
     style: {
       width: S.width
     },
-    children: (0, l.jsx)("div", {
+    children: (0, a.jsx)("div", {
       className: p.effects,
-      children: C.map(e => (0, l.jsx)(h.default, {
+      children: C.map(e => (0, a.jsx)(h.default, {
         containerDimensions: S,
         effect: e,
         onComplete: T

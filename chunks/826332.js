@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
-var l = n("913144"),
-  a = {
+var a = n("913144"),
+  l = {
     setCallChatToastsEnabled(e, t) {
-      l.default.dispatch({
+      a.default.dispatch({
         type: "CALL_CHAT_TOASTS_SET_ENABLED",
         channelId: e,
         toastsEnabled: t

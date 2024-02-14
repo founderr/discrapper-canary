@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var l = n("77078"),
   s = n("461380"),
   i = n("484456"),
   r = n("559979"),
@@ -18,34 +18,34 @@ function d(e) {
     benefit: t,
     guildId: n,
     onClick: d
-  } = e, c = (0, o.default)(n, t.ref_id), f = (0, l.jsx)(i.default, {
+  } = e, c = (0, o.default)(n, t.ref_id), f = (0, a.jsx)(i.default, {
     guildId: n,
     emojiId: t.emoji_id,
     emojiName: t.emoji_name
   });
-  return (0, l.jsxs)(a.Clickable, {
+  return (0, a.jsxs)(l.Clickable, {
     className: u.container,
     onClick: () => {
       null == c || c.navigateToChannel(), d()
     },
     "aria-label": null == c ? void 0 : c.ariaLabel,
     role: "link",
-    children: [(0, l.jsx)("div", {
+    children: [(0, a.jsx)("div", {
       className: u.emojiContainer,
       children: f
-    }), (0, l.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: u.infoContainer,
-      children: [(0, l.jsx)(a.Text, {
+      children: [(0, a.jsx)(l.Text, {
         variant: "text-md/medium",
         color: "header-primary",
         className: u.name,
         children: (0, r.default)(t)
-      }), (0, l.jsx)(a.Text, {
+      }), (0, a.jsx)(l.Text, {
         color: "interactive-normal",
         variant: "text-sm/normal",
         children: t.description
       })]
-    }), (0, l.jsx)(s.default, {
+    }), (0, a.jsx)(s.default, {
       direction: s.default.Directions.RIGHT,
       className: u.caret
     })]
