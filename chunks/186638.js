@@ -5,113 +5,115 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var a = n("37983"),
-  l = n("884691"),
-  d = n("171210"),
-  s = n("446674"),
-  i = n("77078"),
-  r = n("298878"),
+  i = n("884691"),
+  l = n("171210"),
+  r = n("446674"),
+  d = n("77078"),
+  s = n("298878"),
   u = n("305961"),
   o = n("45029"),
   c = n("599110"),
-  _ = n("311340"),
-  I = n("311161"),
-  f = n("54346"),
-  E = n("421127"),
-  N = n("49111"),
-  h = n("782340"),
-  D = n("809313");
+  f = n("311340"),
+  _ = n("701203"),
+  E = n("311161"),
+  I = n("54346"),
+  R = n("421127"),
+  A = n("49111"),
+  m = n("782340"),
+  N = n("809313");
 
 function g(e) {
   let {
     guildId: t,
     transitionState: g,
-    onClose: R,
-    analyticsData: A
-  } = e, S = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), T = null == S ? void 0 : S.hasFeature(N.GuildFeatures.INVITES_DISABLED), [x] = l.useState(!1), [m, C] = l.useState(E.DEFAULT_LOCKDOWN_DURATION), L = (0, s.useStateFromStores)([f.default], () => f.default.getGuildIncident(t)), v = (0, I.hasInvitesDisabled)(L), p = (0, I.hasDMsDisabled)(L), [M, O] = l.useState(v), [G, j] = l.useState(p), [b, B] = l.useState(!1), U = M !== v || G !== p || b;
-  if (null == S) return R(), null;
+    onClose: h,
+    analyticsData: D
+  } = e, S = (0, r.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), T = !!(null == S ? void 0 : S.hasFeature(A.GuildFeatures.INVITES_DISABLED)), [x] = i.useState(!1), [v, L] = i.useState(R.DEFAULT_LOCKDOWN_DURATION), M = (0, r.useStateFromStores)([I.default], () => I.default.getGuildIncident(t)), p = (0, _.useCanEnableRaidAlerts)(S), C = (0, E.hasInvitesDisabled)(M) || T, G = (0, E.hasDMsDisabled)(M), [b, O] = i.useState(C), [B, j] = i.useState(G), [U, y] = i.useState(!1), k = b !== C || B !== G || U, F = T && !p;
+  if (null == S) return h(), null;
 
-  function y() {
+  function w() {
     O(e => !e)
   }
-  return (0, a.jsxs)(i.ModalRoot, {
+  return (0, a.jsxs)(d.ModalRoot, {
     transitionState: g,
-    size: i.ModalSize.MEDIUM,
-    children: [(0, a.jsx)(i.ModalHeader, {
+    size: d.ModalSize.MEDIUM,
+    children: [(0, a.jsx)(d.ModalHeader, {
       separator: !0,
       children: (0, a.jsxs)("div", {
-        className: D.headerContainer,
+        className: N.headerContainer,
         children: [(0, a.jsx)(o.default, {
-          color: d.default.INTERACTIVE_NORMAL,
+          color: l.default.INTERACTIVE_NORMAL,
           width: 16,
           height: 16
-        }), (0, a.jsx)(i.Heading, {
+        }), (0, a.jsx)(d.Heading, {
           color: "header-primary",
           variant: "heading-md/semibold",
-          children: h.default.Messages.GUILD_SERVER_LOCKDOWN_TITLE
-        }), (0, a.jsx)(r.default, {})]
+          children: m.default.Messages.GUILD_SERVER_LOCKDOWN_TITLE
+        }), (0, a.jsx)(s.default, {})]
       })
-    }), (0, a.jsx)(i.ModalContent, {
+    }), (0, a.jsx)(d.ModalContent, {
       children: (0, a.jsxs)("div", {
-        className: D.mainContainer,
-        children: [(0, a.jsx)(i.Select, {
-          placeholder: h.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_PLACEHOLDER,
-          options: (0, E.getTimeframes)(),
+        className: N.mainContainer,
+        children: [(0, a.jsx)(d.Select, {
+          placeholder: m.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_PLACEHOLDER,
+          options: (0, R.getTimeframes)(),
           select: e => {
-            C(e), B(!0)
+            L(e), y(!0)
           },
-          isSelected: e => e === m,
+          isSelected: e => e === v,
           serialize: e => String(e)
         }), (0, a.jsxs)("div", {
-          className: D.pauseContainer,
+          className: N.pauseContainer,
           children: [(0, a.jsxs)("div", {
-            className: D.pauseText,
-            children: [(0, a.jsx)(i.Text, {
+            className: N.pauseText,
+            children: [(0, a.jsx)(d.Text, {
               variant: "text-md/semibold",
               color: "header-primary",
-              children: h.default.Messages.DISABLE_INVITES
-            }), (0, a.jsx)(i.Text, {
+              children: m.default.Messages.DISABLE_INVITES
+            }), (0, a.jsx)(d.Text, {
               variant: "text-sm/normal",
               color: "text-muted",
-              children: h.default.Messages.GUILD_INVITE_DISABLE_ACTION_SHEET_DESCRIPTION
+              children: m.default.Messages.GUILD_INVITE_DISABLE_ACTION_SHEET_DESCRIPTION
             })]
-          }), (0, a.jsx)(i.Tooltip, {
-            text: h.default.Messages.INVITES_PERMANENTLY_DISABLED_TIP,
+          }), (0, a.jsx)(d.Tooltip, {
+            text: m.default.Messages.INVITES_PERMANENTLY_DISABLED_TIP,
+            shouldShow: T,
             children: e => (0, a.jsx)("div", {
               ...e,
-              children: (0, a.jsx)(i.Switch, {
-                className: D.toggle,
-                onChange: y,
-                checked: M || T,
-                disabled: T
+              children: (0, a.jsx)(d.Switch, {
+                className: N.toggle,
+                onChange: w,
+                checked: b,
+                disabled: F
               })
             })
           })]
         }), (0, a.jsxs)("div", {
-          className: D.pauseContainer,
+          className: N.pauseContainer,
           children: [(0, a.jsxs)("div", {
-            className: D.pauseText,
-            children: [(0, a.jsx)(i.Text, {
+            className: N.pauseText,
+            children: [(0, a.jsx)(d.Text, {
               variant: "text-md/semibold",
               color: "header-primary",
-              children: h.default.Messages.DISABLE_DMS
-            }), (0, a.jsx)(i.Text, {
+              children: m.default.Messages.DISABLE_DMS
+            }), (0, a.jsx)(d.Text, {
               variant: "text-sm/normal",
               color: "text-muted",
-              children: h.default.Messages.GUILD_DMS_DISABLE_ACTION_SHEET_DESCRIPTION
+              children: m.default.Messages.GUILD_DMS_DISABLE_ACTION_SHEET_DESCRIPTION
             })]
-          }), (0, a.jsx)(i.Switch, {
-            className: D.toggle,
+          }), (0, a.jsx)(d.Switch, {
+            className: N.toggle,
             onChange: function() {
               j(e => !e)
             },
-            checked: G
+            checked: B
           })]
         })]
       })
-    }), (0, a.jsxs)(i.ModalFooter, {
-      children: [(0, a.jsx)(i.Button, {
+    }), (0, a.jsxs)(d.ModalFooter, {
+      children: [(0, a.jsx)(d.Button, {
         onClick: () => {
-          (v || p) && !M && !G ? ((0, _.setGuildIncidentActions)(S.id, !1, !1), (0, i.openModalLazy)(async () => {
+          (C || G) && !b && !B ? ((0, f.setGuildIncidentActions)(S.id, !1, !1), (0, d.openModalLazy)(async () => {
             let {
               default: e
             } = await n.el("187317").then(n.bind(n, "187317"));
@@ -119,33 +121,33 @@ function g(e) {
               ...n,
               guildId: t
             })
-          })) : (0, _.setGuildIncidentActions)(S.id, M, G, m);
+          })) : (0, f.setGuildIncidentActions)(S.id, b, B, v);
           let {
             source: e,
-            alertType: l,
-            messageId: d
-          } = A;
-          c.default.track(N.AnalyticEvents.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
+            alertType: i,
+            messageId: l
+          } = D;
+          c.default.track(A.AnalyticEvents.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
             guild_id: t,
             source: e,
-            raid_alert_id: d,
-            raid_alert_type: l,
-            intervention_type_enabled: (0, I.getEnabledInterventions)(M, G),
-            intervention_type_disabled: (0, I.getDisabledInterventions)(M, G),
-            duration: 60 * m
-          }), R()
+            raid_alert_id: l,
+            raid_alert_type: i,
+            intervention_type_enabled: (0, E.getEnabledInterventions)(b, B),
+            intervention_type_disabled: (0, E.getDisabledInterventions)(b, B),
+            duration: 60 * v
+          }), h()
         },
-        color: i.Button.Colors.BRAND_NEW,
-        look: i.Button.Looks.FILLED,
+        color: d.Button.Colors.BRAND_NEW,
+        look: d.Button.Looks.FILLED,
         submitting: x,
-        disabled: !U,
-        children: h.default.Messages.GUILD_SERVER_LOCKDOWN_MODAL_CTA
-      }), (0, a.jsx)(i.Button, {
-        onClick: R,
-        color: i.Button.Colors.PRIMARY,
-        look: i.Button.Looks.LINK,
+        disabled: !k,
+        children: m.default.Messages.GUILD_SERVER_LOCKDOWN_MODAL_CTA
+      }), (0, a.jsx)(d.Button, {
+        onClick: h,
+        color: d.Button.Colors.PRIMARY,
+        look: d.Button.Looks.LINK,
         disabled: x,
-        children: h.default.Messages.CANCEL
+        children: m.default.Messages.CANCEL
       })]
     })]
   })
