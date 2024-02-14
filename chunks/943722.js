@@ -106,6 +106,8 @@ var C = e => {
   } = T.HangStatusExperiment.useExperiment({
     guildId: null == x ? void 0 : x.guild_id,
     location: "ActivityStatus"
+  }, {
+    autoTrackExposure: !1
   }), R = null, j = L && null != M && v.default.can(N.Permissions.CONNECT, x);
   j ? R = (0, r.jsx)(m.default, {
     className: o,

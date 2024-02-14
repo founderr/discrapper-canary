@@ -81,6 +81,8 @@ var P = function(e) {
   } = g.HangStatusExperiment.useExperiment({
     guildId: null == L ? void 0 : L.guild_id,
     location: "UserActivityContainer"
+  }, {
+    autoTrackExposure: !1
   }), b = (0, r.useStateFromStores)([C.default], () => a ? C.default.getAnyStreamForUser(n.id) : null), j = P && I.default.can(O.Permissions.CONNECT, L), U = (null == t ? void 0 : t.type) === O.ActivityTypes.HANG_STATUS && j ? L : null, D = (0, r.useStateFromStores)([v.default, y.default, T.default], () => {
     var e, l;
     return (0, u.default)(t, O.ActivityFlags.EMBEDDED) ? v.default.getGuild(null === (e = T.default.getChannel(null === (l = y.default.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === l ? void 0 : l.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != U ? v.default.getGuild(U.getGuildId()) : null

@@ -82,6 +82,8 @@ var a = n("37983"),
       } = h.HangStatusExperiment.useExperiment({
         guildId: null == eh ? void 0 : eh.guild_id,
         location: "ActivityStatus"
+      }, {
+        autoTrackExposure: !1
       }),
       {
         activity: ep,

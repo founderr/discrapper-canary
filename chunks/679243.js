@@ -130,8 +130,6 @@ let eu = l.memo(e => {
   } = I.HangStatusExperiment.useExperiment({
     guildId: B.guild_id,
     location: "VoiceUsers"
-  }, {
-    autoTrackExposure: !1
   }), {
     showGameIcon: eL
   } = _.default.useExperiment({
