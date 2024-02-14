@@ -18,7 +18,7 @@ var t = E("689988"),
 let O = 5 * r.default.Millis.SECOND,
   A = 12 * r.default.Millis.HOUR,
   R = 1 * r.default.Millis.MINUTE,
-  l = 15 * r.default.Millis.SECOND;
+  l = 30 * r.default.Millis.SECOND;
 class L extends t.default {
   maybeFetchCurrentQuests() {
     (0, T.getIsEligibleForQuests)({
@@ -50,7 +50,7 @@ class L extends t.default {
       let {
         streamProgressSeconds: E
       } = _.userStatus, t = 60 * _.config.streamDurationRequirementMinutes;
-      return Math.min(Math.max((t - E) * 30, l), R)
+      return t - E <= .1 * t ? l : R
     }, this.terminateHeartbeat = e => {
       window.clearTimeout(this.sendHeartbeatIntervalIds.get(e)), this.sendHeartbeatIntervalIds.delete(e)
     }, this.handleEnrollmentSuccess = e => {
