@@ -159,14 +159,14 @@ let Y = s.forwardRef(function(e, t) {
               className: x.questAcceptedContentCopyHeading,
               color: "always-white",
               variant: "heading-sm/semibold",
-              children: F ? y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_HEADING_COMPLETE : y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_HEADING_INCOMPLETE
+              children: (0, A.getContextualEntrypointHeading)(m)
             }), (0, a.jsx)(c.Text, {
               className: x.questAcceptedContentCopySubheading,
               color: "always-white",
               variant: "text-xxs/normal",
-              children: F ? y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_COMPLETE.format({
+              children: F ? y.default.Messages.QUESTS_CLAIM_BY.format({
                 expirationDate: U
-              }) : y.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_INCOMPLETE.format({
+              }) : y.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
                 expirationDate: U
               })
             })]

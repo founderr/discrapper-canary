@@ -4,5 +4,6 @@ e.exports = {
   percentCompleteLabelOffset: "percentCompleteLabelOffset__738e1",
   percentCompleteWrapper: "percentCompleteWrapper_fb73d6",
   progressBar: "progressBar_eaa4be",
-  progressBarFill: "progressBarFill_e448b3"
+  progressBarFill: "progressBarFill_e448b3",
+  wrapper: "wrapper_a9c598"
 }

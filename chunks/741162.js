@@ -1,4 +1,5 @@
 "use strict";
 e.exports = {
-  sponsoredTag: "sponsoredTag_faf66e"
+  sponsoredTag: "sponsoredTag_faf66e",
+  sponsoredTagBackground: "sponsoredTagBackground_ede118"
 }

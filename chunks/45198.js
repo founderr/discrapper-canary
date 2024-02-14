@@ -1,28 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return u
   }
 });
 var a = n("37983");
 n("884691");
-var s = n("77078"),
-  l = n("782340"),
-  i = n("741162"),
-  r = function(e) {
+var l = n("414456"),
+  s = n.n(l),
+  i = n("77078"),
+  r = n("782340"),
+  o = n("741162"),
+  u = function(e) {
     let {
-      color: t = "header-primary",
-      opacity: n = .9
+      className: t,
+      color: n = "header-primary",
+      textOpacity: l = .9,
+      bgOpacity: u = .2
     } = e;
-    return (0, a.jsx)(s.Text, {
+    return (0, a.jsxs)(i.Text, {
       variant: "text-xxs/medium",
-      color: t,
-      className: i.sponsoredTag,
-      children: (0, a.jsx)("span", {
+      color: n,
+      className: s(o.sponsoredTag, t),
+      children: [(0, a.jsx)("span", {
+        className: o.sponsoredTagBackground,
         style: {
-          opacity: n
+          opacity: u
+        }
+      }), (0, a.jsx)("span", {
+        style: {
+          opacity: l
         },
-        children: l.default.Messages.QUESTS_SPONSORED
-      })
+        children: r.default.Messages.QUESTS_SPONSORED
+      })]
     })
   }

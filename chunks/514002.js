@@ -76,7 +76,7 @@ var f = e => {
           })
         })]
       }), h && (0, a.jsx)(d.default, {
-        color: m ? l.tokens.colors.TEXT_POSITIVE.css : l.tokens.colors.BG_BRAND.css,
+        color: m ? l.tokens.colors.TEXT_POSITIVE : l.tokens.colors.BG_BRAND,
         quest: f
       })]
     })]
