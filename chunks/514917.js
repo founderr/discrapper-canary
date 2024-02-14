@@ -123,7 +123,7 @@ var l = n("37983"),
       ev = (0, u.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
       [ex, eN, eA, eM, eR] = (0, u.useStateFromStoresArray)([M.default], () => [M.default.getMutualFriendsCount(es.id), M.default.getMutualFriends(es.id), M.default.getMutualGuilds(es.id), M.default.isFetchingProfile(es.id), M.default.isFetchingFriends(es.id)]),
       ej = (0, H.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
-      eL = null != ej && !eg,
+      eL = null != ej && !eg && null == eE,
       {
         showVoiceActivityInProfile: eO
       } = R.VoiceActivityProfileExperiment.useExperiment({

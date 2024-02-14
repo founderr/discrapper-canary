@@ -36,7 +36,7 @@ function f(e) {
       color: n,
       look: f,
       fullWidth: !0,
-      children: c.default.Messages.JOIN
+      children: c.default.Messages.PROFILE_JOIN_VOICE_CHANNEL
     }, "join-hang")
   })
 }

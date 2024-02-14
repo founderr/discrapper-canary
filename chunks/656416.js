@@ -20,13 +20,13 @@ var a = s("37983"),
 function E(e) {
   let {
     user: t
-  } = e, s = (0, i.useStateFromStores)([n.default], () => null != n.default.getAnyStreamForUser(t.id)), E = (0, i.useStateFromStores)([u.default], () => u.default.getActivities(t.id)), T = l.useMemo(() => E.filter(e => e.type !== f.ActivityTypes.CUSTOM_STATUS), [E]), p = l.useMemo(() => s ? T.find(e => e.type === f.ActivityTypes.PLAYING) : null, [T, s]), x = l.useMemo(() => T.filter(e => e !== p), [p, T]), N = (0, c.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), h = null != N && !s, {
-    showVoiceActivityInProfile: v
+  } = e, s = (0, i.useStateFromStores)([n.default], () => null != n.default.getAnyStreamForUser(t.id)), E = (0, i.useStateFromStores)([u.default], () => u.default.getActivities(t.id)), T = l.useMemo(() => E.filter(e => e.type !== f.ActivityTypes.CUSTOM_STATUS), [E]), p = E.some(e => e.type === f.ActivityTypes.HANG_STATUS), N = l.useMemo(() => s ? T.find(e => e.type === f.ActivityTypes.PLAYING) : null, [T, s]), x = l.useMemo(() => T.filter(e => e !== N), [N, T]), A = (0, c.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), v = null != A && !s && !p, {
+    showVoiceActivityInProfile: h
   } = d.VoiceActivityProfileExperiment.useExperiment({
     location: "user profile modal"
   }, {
-    autoTrackExposure: h
-  }), A = {
+    autoTrackExposure: v
+  }), I = {
     location: {
       page: f.AnalyticsPages.USER_PROFILE,
       section: f.AnalyticsSections.PROFILE_MODAL
@@ -35,10 +35,10 @@ function E(e) {
   return (0, a.jsxs)(r.ScrollerThin, {
     className: m.listScroller,
     fade: !0,
-    children: [v && h ? (0, a.jsx)("div", {
+    children: [h && v ? (0, a.jsx)("div", {
       className: S.voiceActivity,
       children: (0, a.jsx)(c.default, {
-        ...N,
+        ...A,
         color: S.actionColor
       })
     }) : null, s ? (0, a.jsx)(o.default, {
@@ -46,9 +46,9 @@ function E(e) {
       user: t,
       source: "Profile Modal",
       className: S.userProfileActivity,
-      activity: p,
+      activity: N,
       actionColor: S.actionColor,
-      analyticsParams: A
+      analyticsParams: I
     }) : null, x.map(e => (0, a.jsx)(o.default, {
       type: o.UserActivityTypes.PROFILE_V2,
       activity: e,
@@ -57,7 +57,7 @@ function E(e) {
       source: "Profile Modal",
       className: S.userProfileActivity,
       actionColor: S.actionColor,
-      analyticsParams: A
+      analyticsParams: I
     }, "".concat(e.application_id, "-").concat(e.session_id, "-").concat(e.name)))]
   })
 }
