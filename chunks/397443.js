@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return E
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("748820"),
   i = n("446674"),
   r = n("913144"),
@@ -16,7 +16,7 @@ var a = n("37983"),
   f = n("397485"),
   h = n("738258"),
   m = n("49111"),
-  p = n("182797");
+  p = n("83686");
 
 function E(e) {
   let {
@@ -24,31 +24,31 @@ function E(e) {
     guildId: n,
     userId: E,
     containerDimensions: S
-  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), [C, _] = l.useState([]), I = C.length < 50;
-  l.useEffect(() => {
+  } = e, g = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), [C, _] = a.useState([]), I = C.length < 50;
+  a.useEffect(() => {
     function e(e) {
-      var a;
+      var l;
       let {
-        channelId: l,
+        channelId: a,
         userId: i,
         emoji: r,
         animationType: o,
         animationId: h
       } = e;
-      if (null != E && E !== i || d.default.getEnabled() && (0, c.default)(null !== (a = null == r ? void 0 : r.name) && void 0 !== a ? a : "")) return;
+      if (null != E && E !== i || d.default.getEnabled() && (0, c.default)(null !== (l = null == r ? void 0 : r.name) && void 0 !== l ? l : "")) return;
       let p = null != r && null != o && null != h;
-      if (l === t && !g && I && p) {
+      if (a === t && !g && I && p) {
         let e = (0, f.getEffectUrl)(r),
-          a = null != r.id && !r.animated,
-          l = {
+          l = null != r.id && !r.animated,
+          a = {
             id: (0, s.v4)(),
             animationType: o,
             animationId: h,
-            shouldResize: a,
+            shouldResize: l,
             url: e,
             userId: i
           };
-        _(e => [...e, l]), u.default.trackWithMetadata(m.AnalyticEvents.VOICE_CHANNEL_EFFECT_VIEWED, {
+        _(e => [...e, a]), u.default.trackWithMetadata(m.AnalyticEvents.VOICE_CHANNEL_EFFECT_VIEWED, {
           channel_id: t,
           guild_id: n
         })
@@ -58,21 +58,21 @@ function E(e) {
       r.default.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e)
     }
   }, [t, n, E, g, I]);
-  let T = l.useCallback(e => {
+  let T = a.useCallback(e => {
     _(t => {
       let n = [...t],
-        a = n.findIndex(t => t.id === e);
-      return n.splice(a, 1), n
+        l = n.findIndex(t => t.id === e);
+      return n.splice(l, 1), n
     })
   }, []);
-  return g ? null : (0, a.jsx)("div", {
+  return g ? null : (0, l.jsx)("div", {
     className: p.effectsWrapper,
     style: {
       width: S.width
     },
-    children: (0, a.jsx)("div", {
+    children: (0, l.jsx)("div", {
       className: p.effects,
-      children: C.map(e => (0, a.jsx)(h.default, {
+      children: C.map(e => (0, l.jsx)(h.default, {
         containerDimensions: S,
         effect: e,
         onComplete: T

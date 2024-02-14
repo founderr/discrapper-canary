@@ -27,7 +27,7 @@ var n = l("37983"),
   x = l("444276"),
   v = l("353927"),
   A = l("782340"),
-  R = l("45122");
+  R = l("142716");
 async function T() {
   let e = m.default.getVideoDevices(),
     t = (0, o.default)(m.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {

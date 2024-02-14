@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
 var s = i("37983");
@@ -11,19 +11,19 @@ var n = i("414456"),
   r = i("791106"),
   o = i("216422"),
   a = i("258078"),
-  u = i("63625");
+  u = i("916834");
 
-function c(e) {
+function d(e) {
   let {
     text: t,
     textSize: i = a.default.Sizes.SIZE_12,
     textColor: n = a.default.Colors.STANDARD,
-    className: c,
-    button: d,
-    reducedRightPadding: h = !1
+    className: d,
+    button: c,
+    reducedRightPadding: f = !1
   } = e;
   return (0, s.jsxs)("div", {
-    className: l(h ? u.noticeWithoutRightPadding : u.noticeWithRightPadding, c),
+    className: l(f ? u.noticeWithoutRightPadding : u.noticeWithRightPadding, d),
     children: [(0, s.jsxs)("div", {
       className: u.noticeLeft,
       children: [(0, s.jsx)(o.default, {
@@ -35,6 +35,6 @@ function c(e) {
         color: n,
         children: t
       })]
-    }), d]
+    }), c]
   })
 }

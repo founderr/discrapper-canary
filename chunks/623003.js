@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return c
   }
 });
 var s = n("37983"),
   r = n("884691"),
-  l = n("414456"),
-  a = n.n(l),
-  i = n("849085");
-let o = r.forwardRef(function(e, t) {
+  a = n("414456"),
+  l = n.n(a),
+  i = n("4263");
+let u = r.forwardRef(function(e, t) {
   let {
     isActive: n,
     children: r
   } = e;
   return (0, s.jsx)("div", {
-    className: a(i.wrapper, {
+    className: l(i.wrapper, {
       [i.wrapperActive]: n
     }),
     ref: t,
     children: r
   })
 });
-var u = o
+var c = u

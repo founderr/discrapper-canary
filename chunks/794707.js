@@ -9,7 +9,7 @@ var l = n("37983"),
   a = n("124299"),
   s = n("538282"),
   r = n("45961"),
-  o = n("594755");
+  o = n("95279");
 let u = i.forwardRef(function(e, t) {
   let {
     store: n,
@@ -17,8 +17,8 @@ let u = i.forwardRef(function(e, t) {
     listPadding: d,
     renderRow: c,
     renderSection: f,
-    renderSectionHeader: p,
-    renderSectionFooter: m,
+    renderSectionHeader: m,
+    renderSectionFooter: p,
     renderInspector: h,
     renderEmptySearchState: E,
     rowCount: g,
@@ -26,16 +26,16 @@ let u = i.forwardRef(function(e, t) {
     rowHeight: C,
     sectionHeaderHeight: T,
     sectionFooterHeight: v
-  } = e, I = i.useRef(!1), _ = i.useRef(null), y = (0, s.useExpressionPickerStore)(e => e.searchQuery), A = n.useStore(e => e.activeCategoryIndex), N = (0, r.useSynchronizedActiveCategoryIndexForScrollPosition)({
+  } = e, I = i.useRef(!1), _ = i.useRef(null), N = (0, s.useExpressionPickerStore)(e => e.searchQuery), A = n.useStore(e => e.activeCategoryIndex), y = (0, r.useSynchronizedActiveCategoryIndexForScrollPosition)({
     activeCategoryIndex: A,
     isScrolling: I,
     listRef: _,
     onActiveCategoryIndexChange: n.setActiveCategoryIndex,
     scrollOffset: 20,
-    searchQuery: y
+    searchQuery: N
   });
   return (0, r.useSynchronizedScrollPositionForActiveCategoryIndex)({
-    searchQuery: y,
+    searchQuery: N,
     activeCategoryIndex: A,
     listRef: _
   }), i.useImperativeHandle(t, () => ({
@@ -76,14 +76,14 @@ let u = i.forwardRef(function(e, t) {
     }
   }), []), (0, l.jsxs)("div", {
     className: o.wrapper,
-    children: [y.length > 0 && !u && null != E ? E() : (0, l.jsx)(a.default, {
+    children: [N.length > 0 && !u && null != E ? E() : (0, l.jsx)(a.default, {
       role: "none presentation",
       listPadding: d,
-      onScroll: N,
+      onScroll: y,
       renderRow: c,
       renderSection: f,
-      renderSectionHeader: p,
-      renderSectionFooter: m,
+      renderSectionHeader: m,
+      renderSectionFooter: p,
       rowCount: g,
       rowCountBySection: S,
       rowHeight: C,

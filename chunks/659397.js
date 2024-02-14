@@ -11,7 +11,7 @@ var i = n("37983"),
   r = n("884691"),
   s = n("414456"),
   a = n.n(s),
-  o = n("791380");
+  o = n("55258");
 let l = {
   PRIMARY: o.cardPrimary,
   DANGER: o.cardDanger,

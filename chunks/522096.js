@@ -10,7 +10,7 @@ var l = n("37983"),
   s = n("45961"),
   r = n("794707"),
   o = n("195638"),
-  u = n("44058");
+  u = n("890832");
 
 function d(e) {
   let {
@@ -19,8 +19,8 @@ function d(e) {
     containerWidth: d,
     store: c,
     onSelectItem: f,
-    onSearchExpressions: p,
-    hasSearchResults: m,
+    onSearchExpressions: m,
+    hasSearchResults: p,
     defaultSearchPlaceholder: h,
     emptySearchPlaceholder: E,
     renderEmptyState: g,
@@ -30,9 +30,9 @@ function d(e) {
     renderSectionFooter: v,
     renderInspector: I,
     renderEmptySearchState: _,
-    renderCategoryList: y,
+    renderCategoryList: N,
     renderHeaderAccessories: A,
-    rowHeight: N,
+    rowHeight: y,
     sectionHeaderHeight: x,
     sectionFooterHeight: O,
     itemNodeWidth: R,
@@ -42,7 +42,7 @@ function d(e) {
     gridNavigatorId: b,
     gridNotice: j,
     renderHeader: U
-  } = e, D = i.useRef(null), k = i.useRef(null), w = i.useRef(null), F = 0 === t.length, G = (0, a.useExpressionPickerStore)(e => e.searchQuery), B = c.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
+  } = e, D = i.useRef(null), k = i.useRef(null), w = i.useRef(null), F = 0 === t.length, B = (0, a.useExpressionPickerStore)(e => e.searchQuery), G = c.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
     gridWrapperRef: D,
     containerWidth: d,
     showingEmptyState: F
@@ -60,9 +60,9 @@ function d(e) {
     itemNodeWidth: R,
     itemNodeMargin: L
   }), {
-    getItemProps: J,
-    getRowProps: q,
-    gridContainerProps: Z,
+    getItemProps: Z,
+    getRowProps: J,
+    gridContainerProps: q,
     handleGridContainerKeyDown: X,
     isUsingKeyboardNavigation: Q
   } = (0, s.useKeyboardNavigation)({
@@ -74,18 +74,18 @@ function d(e) {
     gridNavigatorId: b
   }), $ = i.useCallback(e => {
     let t = V[e];
-    return S(t, q(e), {
+    return S(t, J(e), {
       isUsingKeyboardNavigation: Q.current,
       gutterWidth: z,
       rowIndex: e
-    }, t => J(e, t), t => c.setInspectedExpressionPosition(t, e))
-  }, [V, J, q, z, Q, S, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
+    }, t => Z(e, t), t => c.setInspectedExpressionPosition(t, e))
+  }, [V, Z, J, z, Q, S, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
     var e;
-    return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
-  }, [V, B.columnIndex, B.rowIndex, I]);
+    return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[G.rowIndex]) || void 0 === e ? void 0 : e[G.columnIndex])
+  }, [V, G.columnIndex, G.rowIndex, I]);
   i.useEffect(() => {
-    p(G)
-  }, [p, G]), i.useEffect(() => c.resetStoreState, [c.resetStoreState]), i.useLayoutEffect(() => {
+    m(B)
+  }, [m, B]), i.useEffect(() => c.resetStoreState, [c.resetStoreState]), i.useLayoutEffect(() => {
     var e;
     null === (e = w.current) || void 0 === e || e.focus()
   }, []);
@@ -106,18 +106,18 @@ function d(e) {
       className: u.header,
       children: [" ", ei, " "]
     }), F && null != g ? g(u.emptyState) : (0, l.jsxs)(l.Fragment, {
-      children: [y(k), null != j && (0, l.jsx)("div", {
+      children: [N(k), null != j && (0, l.jsx)("div", {
         className: u.gridNoticeWrapper,
         children: j
       }), (0, l.jsx)("div", {
         ref: D,
         className: u.listWrapper,
         id: b,
-        ...Z,
+        ...q,
         children: null != H ? (0, l.jsx)(r.default, {
           ref: k,
           store: c,
-          hasSearchResults: m,
+          hasSearchResults: p,
           listPadding: P,
           renderRow: $,
           renderSection: null != C ? ee : void 0,
@@ -127,7 +127,7 @@ function d(e) {
           renderEmptySearchState: _,
           rowCount: K,
           rowCountBySection: W,
-          rowHeight: N,
+          rowHeight: y,
           sectionHeaderHeight: x,
           sectionFooterHeight: O
         }) : null

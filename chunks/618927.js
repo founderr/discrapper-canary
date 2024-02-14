@@ -1,88 +1,88 @@
 "use strict";
-let r, a;
-l.r(t), l.d(t, {
+let l, i;
+n.r(t), n.d(t, {
   CopiableField: function() {
-    return P
+    return g
   }
-}), l("222007");
-var n = l("37983"),
-  s = l("884691"),
-  i = l("414456"),
-  o = l.n(i),
-  u = l("862337"),
-  d = l("77078"),
-  c = l("599110"),
-  f = l("306160"),
-  T = l("413709"),
-  p = l("49111"),
-  m = l("782340"),
-  E = l("72797");
+}), n("222007");
+var a = n("37983"),
+  s = n("884691"),
+  r = n("414456"),
+  o = n.n(r),
+  u = n("862337"),
+  d = n("77078"),
+  c = n("599110"),
+  f = n("306160"),
+  m = n("413709"),
+  p = n("49111"),
+  h = n("782340"),
+  E = n("966133");
 
-function P(e) {
+function g(e) {
   var t;
   let {
-    className: l,
-    copyValue: i,
-    copyMetaData: P,
+    className: n,
+    copyValue: r,
+    copyMetaData: g,
     copyTooltip: S,
-    children: v,
-    disableCopy: h,
-    showCopyIcon: g
-  } = e, [_, N] = s.useState(0), [O, U] = s.useState(!1), [A, C] = s.useState(!1);
-  if (s.useEffect(() => (r = new u.Timeout, a = new u.Timeout, function() {
-      r.stop(), a.stop()
-    }), []), !f.SUPPORTS_COPY || h) return (0, n.jsx)(n.Fragment, {
-    children: v
+    children: C,
+    disableCopy: T,
+    showCopyIcon: v
+  } = e, [I, _] = s.useState(0), [N, A] = s.useState(!1), [y, x] = s.useState(!1);
+  if (s.useEffect(() => (l = new u.Timeout, i = new u.Timeout, function() {
+      l.stop(), i.stop()
+    }), []), !f.SUPPORTS_COPY || T) return (0, a.jsx)(a.Fragment, {
+    children: C
   });
-  let I = [m.default.Messages.COPY_SUCCESS_1, m.default.Messages.COPY_SUCCESS_2, m.default.Messages.COPY_SUCCESS_3, m.default.Messages.COPY_SUCCESS_4, m.default.Messages.COPY_SUCCESS_5, m.default.Messages.COPY_SUCCESS_6, m.default.Messages.COPY_SUCCESS_7, m.default.Messages.COPY_SUCCESS_8, m.default.Messages.COPY_SUCCESS_9, m.default.Messages.COPY_SUCCESS_10, m.default.Messages.COPY_SUCCESS_11],
-    y = Math.min(Math.max(_ - 1, 0), I.length - 1),
-    M = null !== (t = I[y]) && void 0 !== t ? t : I[0],
-    x = _ >= I.length - 1,
-    L = x ? d.TooltipColors.RED : d.TooltipColors.GREEN,
-    R = O ? L : d.TooltipColors.PRIMARY,
+  let O = [h.default.Messages.COPY_SUCCESS_1, h.default.Messages.COPY_SUCCESS_2, h.default.Messages.COPY_SUCCESS_3, h.default.Messages.COPY_SUCCESS_4, h.default.Messages.COPY_SUCCESS_5, h.default.Messages.COPY_SUCCESS_6, h.default.Messages.COPY_SUCCESS_7, h.default.Messages.COPY_SUCCESS_8, h.default.Messages.COPY_SUCCESS_9, h.default.Messages.COPY_SUCCESS_10, h.default.Messages.COPY_SUCCESS_11],
+    R = Math.min(Math.max(I - 1, 0), O.length - 1),
+    M = null !== (t = O[R]) && void 0 !== t ? t : O[0],
+    L = I >= O.length - 1,
+    P = L ? d.TooltipColors.RED : d.TooltipColors.GREEN,
+    b = N ? P : d.TooltipColors.PRIMARY,
     j = () => {
-      r.stop(), C(!1)
+      l.stop(), x(!1)
     },
-    b = e => {
-      (0, f.copy)(i), c.default.track(p.AnalyticEvents.TEXT_COPIED, {
-        type: P
-      }), "function" == typeof e && e(), !A && N(_ + 1), C(!0), U(!0), r.start(1e3, () => C(!1)), a.start(2e3, () => N(0))
+    U = e => {
+      (0, f.copy)(r), c.default.track(p.AnalyticEvents.TEXT_COPIED, {
+        type: g
+      }), "function" == typeof e && e(), !y && _(I + 1), x(!0), A(!0), l.start(1e3, () => x(!1)), i.start(2e3, () => _(0))
     };
-  return (0, n.jsx)(d.Tooltip, {
+  return (0, a.jsx)(d.Tooltip, {
     delay: 500,
-    color: R,
-    forceOpen: A,
-    text: O ? (0, n.jsx)(d.Shaker, {
-      isShaking: x,
+    color: b,
+    forceOpen: y,
+    text: N ? (0, a.jsx)(d.Shaker, {
+      isShaking: L,
       children: M
     }) : S,
     onAnimationRest: (e, t) => {
-      !A && O && t.phase === p.SpringTransitionPhases.LEAVE && U(!1)
+      !y && N && t.phase === p.SpringTransitionPhases.LEAVE && A(!1)
     },
     "aria-label": S,
     children: e => {
       let {
         onClick: t,
-        onMouseEnter: r,
-        ...a
+        onMouseEnter: l,
+        ...i
       } = e;
-      return (0, n.jsx)(d.Clickable, {
-        ...a,
+      return (0, a.jsx)(d.Clickable, {
+        ...i,
         className: E.clickTarget,
         onMouseEnter: () => {
-          O ? j() : "function" == typeof r && r()
+          N ? j() : "function" == typeof l && l()
         },
         onClick: () => {
-          b(t)
+          U(t)
         },
-        children: (0, n.jsxs)("div", {
-          className: o(l, E.copiableWrapper),
-          children: [(0, n.jsx)("div", {
+        children: (0, a.jsxs)("div", {
+          className: o(n, E.copiableWrapper),
+          children: [(0, a.jsx)("div", {
             className: E.childWrapper,
-            children: v
-          }), g ? (0, n.jsx)("div", {
+            children: C
+          }), v ? (0, a.jsx)("div", {
             className: E.copyIconWrapper,
-            children: (0, n.jsx)(T.default, {
+            children: (0, a.jsx)(m.default, {
               width: 18,
               height: 18,
               className: E.copyIcon

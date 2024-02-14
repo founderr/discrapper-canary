@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("77078"),
   c = n("450911"),
   f = n("54239"),
-  p = n("819689"),
-  m = n("850391"),
+  m = n("819689"),
+  p = n("850391"),
   h = n("884351"),
   E = n("42203"),
   g = n("27618"),
@@ -23,7 +23,7 @@ var l = n("37983"),
   C = n("718422"),
   T = n("49111"),
   v = n("782340"),
-  I = n("22531");
+  I = n("925063");
 
 function _(e) {
   let {
@@ -32,12 +32,12 @@ function _(e) {
     onClose: a,
     className: r,
     inputClassName: _
-  } = e, y = i.useRef(null), A = (0, u.useStateFromStores)([g.default], () => g.default.isBlocked(t.id)), N = i.useCallback(e => {
+  } = e, N = i.useRef(null), A = (0, u.useStateFromStores)([g.default], () => g.default.isBlocked(t.id)), y = i.useCallback(e => {
     if ("Enter" === e.key) {
-      e.preventDefault(), o(null != y.current, "Keypress on Input when not mounted");
-      let n = y.current.value.trim();
+      e.preventDefault(), o(null != N.current, "Keypress on Input when not mounted");
+      let n = N.current.value.trim();
       return (0, C.applyChatRestrictions)({
-        type: m.ChatInputTypes.NORMAL,
+        type: p.ChatInputTypes.NORMAL,
         content: n,
         channel: null
       }).then(e => {
@@ -46,7 +46,7 @@ function _(e) {
         } = e;
         l && (c.default.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
           let t = E.default.getChannel(e);
-          o(null != t, "Newly created PrivateChannel is null"), p.default.sendMessage(t.id, h.default.parse(t, n)), (0, f.popLayer)()
+          o(null != t, "Newly created PrivateChannel is null"), m.default.sendMessage(t.id, h.default.parse(t, n)), (0, f.popLayer)()
         }), null == a || a())
       }), !0
     }
@@ -57,11 +57,11 @@ function _(e) {
   return (0, l.jsx)(d.TextInput, {
     className: r,
     inputClassName: s(_, I.input),
-    inputRef: y,
+    inputRef: N,
     autoFocus: n,
     placeholder: x,
     "aria-label": x,
-    onKeyPress: N,
+    onKeyPress: y,
     disabled: A
   })
 }

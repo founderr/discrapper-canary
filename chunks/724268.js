@@ -32,7 +32,7 @@ var n = l("37983"),
   R = l("49111"),
   j = l("724210"),
   b = l("782340"),
-  L = l("360330");
+  L = l("88056");
 let M = new Set([R.ChannelTypes.GUILD_FORUM, R.ChannelTypes.GUILD_MEDIA]),
   D = new Set([R.ChannelTypes.GUILD_VOICE, R.ChannelTypes.GUILD_STAGE_VOICE]);
 

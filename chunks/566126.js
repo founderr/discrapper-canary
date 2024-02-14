@@ -16,7 +16,7 @@ var a = s("37983"),
   S = s("659632"),
   E = s("49111"),
   T = s("782340"),
-  f = s("882553");
+  f = s("45829");
 class m extends n.Component {
   get analyticsLocation() {
     let {

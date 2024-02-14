@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return A
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
@@ -26,36 +26,36 @@ var a = n("37983"),
   C = n("711486"),
   _ = n("387111"),
   I = n("808422"),
-  T = n("5668");
-let v = l.memo(function(e) {
+  T = n("26324");
+let v = a.memo(function(e) {
     let {
       guildId: t,
       channelId: n,
-      user: l,
+      user: a,
       isPremium: s,
       isBlocked: i
     } = e;
-    return (0, a.jsxs)("div", {
+    return (0, l.jsxs)("div", {
       className: T.textContainer,
-      children: [i ? (0, a.jsx)(S.default, {
+      children: [i ? (0, l.jsx)(S.default, {
         className: T.blockedIcon,
         color: d.default.unsafe_rawColors.RED_400.css
-      }) : null, (0, a.jsx)(c.Text, {
+      }) : null, (0, l.jsx)(c.Text, {
         className: T.text,
         variant: "text-sm/normal",
         color: "header-primary",
-        children: _.default.getName(t, n, l)
-      }), s ? (0, a.jsx)(g.default, {
+        children: _.default.getName(t, n, a)
+      }), s ? (0, l.jsx)(g.default, {
         className: T.boost,
         color: d.default.unsafe_rawColors.GUILD_BOOSTING_PINK.css
       }) : null]
     })
   }),
-  x = l.memo(function(e) {
+  x = a.memo(function(e) {
     var t;
     let {
       participant: n,
-      guildId: l,
+      guildId: a,
       channel: s,
       isPremium: r
     } = e, {
@@ -63,14 +63,14 @@ let v = l.memo(function(e) {
       blocked: u,
       rtsState: d
     } = n, c = d === I.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, f = d === I.RequestToSpeakStates.REQUESTED_TO_SPEAK || c;
-    return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsxs)("div", {
+    return (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsxs)("div", {
         className: T.avatarContainer,
-        children: [f && (0, a.jsx)(C.default, {
+        children: [f && (0, l.jsx)(C.default, {
           className: i(T.icon, {
             [T.invited]: c
           })
-        }), (0, a.jsx)("img", {
+        }), (0, l.jsx)("img", {
           src: null !== (t = o.getAvatarURL(s.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
           alt: o.username,
           "aria-label": o.username,
@@ -78,8 +78,8 @@ let v = l.memo(function(e) {
             [T.faded]: u
           })
         })]
-      }), (0, a.jsx)(v, {
-        guildId: l,
+      }), (0, l.jsx)(v, {
+        guildId: a,
         channelId: s.id,
         user: o,
         isPremium: r,
@@ -87,10 +87,10 @@ let v = l.memo(function(e) {
       })]
     })
   }),
-  N = () => (0, a.jsx)("div", {
+  N = () => (0, l.jsx)("div", {
     className: T.tileBaseContainer
   });
-var A = l.memo(function(e) {
+var A = a.memo(function(e) {
   let {
     participant: t,
     channel: s
@@ -102,12 +102,12 @@ var A = l.memo(function(e) {
     return null != S && (null === (e = E.default.getMember(S, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
   }, [S, r.id]);
   o(null != S, "Channel cannot be guildless");
-  let _ = l.useCallback(e => {
+  let _ = a.useCallback(e => {
       (0, f.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("834247").then(n.bind(n, "834247"));
-        return t => (0, a.jsx)(e, {
+        return t => (0, l.jsx)(e, {
           ...t,
           user: r,
           guildId: S,
@@ -120,13 +120,13 @@ var A = l.memo(function(e) {
         context: g
       })
     }, [r, S, s, g]),
-    I = l.useCallback(e => (0, a.jsx)(p.default, {
+    I = a.useCallback(e => (0, l.jsx)(p.default, {
       ...e,
       guildId: S,
       channelId: s.id,
       userId: r.id
     }), [s.id, S, r.id]);
-  return (0, a.jsx)(c.Popout, {
+  return (0, l.jsx)(c.Popout, {
     preload: () => (0, m.default)(r.id, r.getAvatarURL(s.guild_id, 80), {
       guildId: s.guild_id,
       channelId: s.id
@@ -134,14 +134,14 @@ var A = l.memo(function(e) {
     renderPopout: I,
     position: "right",
     spacing: 8,
-    children: e => (0, a.jsx)(c.Clickable, {
+    children: e => (0, l.jsx)(c.Clickable, {
       className: i(T.tileContainer, {
         [T.singleIcon]: C || d,
         [T.doubleIcon]: C && d
       }),
       onContextMenu: _,
       ...e,
-      children: (0, a.jsx)(x, {
+      children: (0, l.jsx)(x, {
         participant: t,
         guildId: S,
         channel: s,

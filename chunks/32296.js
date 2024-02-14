@@ -22,7 +22,7 @@ var a = n("37983"),
   _ = n("599110"),
   C = n("49111"),
   I = n("782340"),
-  S = n("626009");
+  S = n("22940");
 class p extends s.PureComponent {
   componentDidMount() {
     this._initTimeout.start(1e3, this.setupVoiceActivity)

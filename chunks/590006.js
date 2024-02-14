@@ -1,48 +1,48 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   BadgeSizes: function() {
-    return r
+    return l
   },
   default: function() {
-    return v
+    return C
   }
-}), l("424973");
-var r, a, n = l("37983");
-l("884691");
-var s = l("414456"),
-  i = l.n(s),
-  o = l("77078"),
-  u = l("572544"),
-  d = l("244201"),
-  c = l("298878"),
-  f = l("643121"),
-  T = l("217513"),
-  p = l("590456"),
-  m = l("49111"),
-  E = l("782340"),
-  P = l("730684"),
-  S = l("696246");
+}), n("424973");
+var l, i, a = n("37983");
+n("884691");
+var s = n("414456"),
+  r = n.n(s),
+  o = n("77078"),
+  u = n("572544"),
+  d = n("244201"),
+  c = n("298878"),
+  f = n("643121"),
+  m = n("217513"),
+  p = n("590456"),
+  h = n("49111"),
+  E = n("782340"),
+  g = n("77374"),
+  S = n("696246");
 
-function v(e) {
+function C(e) {
   let {
     user: t,
-    guildId: l,
-    className: r,
-    shrinkAtCount: a,
+    guildId: n,
+    className: l,
+    shrinkAtCount: i,
     shrinkToSize: s,
-    isTryItOutFlow: v,
-    size: h = 0
-  } = e, g = (0, T.default)(t.id, l), _ = (0, f.default)(g).map(e => ({
+    isTryItOutFlow: C,
+    size: T = 0
+  } = e, v = (0, m.default)(t.id, n), I = (0, f.default)(v).map(e => ({
     ...e,
     src: (0, p.getBadgeAsset)(e.icon)
-  })), N = (0, d.useWindowDispatch)();
-  if (t.isClyde()) return (0, n.jsx)("div", {
-    className: i(r, P.container, P.clydeBadgeList),
+  })), _ = (0, d.useWindowDispatch)();
+  if (t.isClyde()) return (0, a.jsx)("div", {
+    className: r(l, g.container, g.clydeBadgeList),
     "aria-label": E.default.Messages.PROFILE_USER_BADGES,
     role: "group",
-    children: (0, n.jsx)(c.default, {})
+    children: (0, a.jsx)(c.default, {})
   });
-  v && null == _.find(e => "premium" === e.id) && _.push({
+  C && null == I.find(e => "premium" === e.id) && I.push({
     id: "premium",
     icon: S,
     src: S,
@@ -50,35 +50,35 @@ function v(e) {
       date: new Date
     })
   });
-  let O = null != a && null != s && _.length > a ? s : h;
-  return (0, n.jsx)("div", {
-    className: i(r, _.length > 0 ? P.containerWithContent : P.container),
+  let N = null != i && null != s && I.length > i ? s : T;
+  return (0, a.jsx)("div", {
+    className: r(l, I.length > 0 ? g.containerWithContent : g.container),
     "aria-label": E.default.Messages.PROFILE_USER_BADGES,
     role: "group",
-    children: _.map(e => (0, n.jsx)(o.Tooltip, {
+    children: I.map(e => (0, a.jsx)(o.Tooltip, {
       position: "top",
       text: e.description,
       spacing: 12,
-      children: t => (0, n.jsx)(o.Anchor, {
+      children: t => (0, a.jsx)(o.Anchor, {
         ...t,
-        onClick: l => {
-          var r;
-          null === (r = t.onClick) || void 0 === r || r.call(t);
-          let a = null != e.link ? (0, u.default)(e.link) : null;
-          if (null != a) return N.dispatch(m.ComponentActions.POPOUT_CLOSE), a(l)
+        onClick: n => {
+          var l;
+          null === (l = t.onClick) || void 0 === l || l.call(t);
+          let i = null != e.link ? (0, u.default)(e.link) : null;
+          if (null != i) return _.dispatch(h.ComponentActions.POPOUT_CLOSE), i(n)
         },
         href: e.link,
-        children: (0, n.jsx)("img", {
+        children: (0, a.jsx)("img", {
           alt: " ",
           "aria-hidden": !0,
           src: e.src,
-          className: i({
-            [P.profileBadge24]: 0 === O,
-            [P.profileBadge22]: 1 === O,
-            [P.profileBadge18]: 2 === O
+          className: r({
+            [g.profileBadge24]: 0 === N,
+            [g.profileBadge22]: 1 === N,
+            [g.profileBadge18]: 2 === N
           })
         })
       })
     }, e.id))
   })
-}(a = r || (r = {}))[a.SIZE_24 = 0] = "SIZE_24", a[a.SIZE_22 = 1] = "SIZE_22", a[a.SIZE_18 = 2] = "SIZE_18"
+}(i = l || (l = {}))[i.SIZE_24 = 0] = "SIZE_24", i[i.SIZE_22 = 1] = "SIZE_22", i[i.SIZE_18 = 2] = "SIZE_18"

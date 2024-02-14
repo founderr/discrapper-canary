@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return S
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
@@ -16,8 +16,8 @@ var a = n("37983"),
   f = n("701909"),
   h = n("49111"),
   m = n("782340"),
-  p = n("42217");
-class E extends l.PureComponent {
+  p = n("188298");
+class E extends a.PureComponent {
   componentDidMount() {
     let {
       current: e
@@ -31,7 +31,7 @@ class E extends l.PureComponent {
     t = e ? m.default.Messages.AGE_GATE_NSFW_UNDERAGE_BODY.format({
       helpURL: f.default.getArticleURL(h.HelpdeskArticles.NSFW_AGE_GATING)
     }) : m.default.Messages.AGE_GATE_NSFW_DESCRIPTION;
-    let n = e ? (0, a.jsx)(c.default, {
+    let n = e ? (0, l.jsx)(c.default, {
       onAgree: this.handleAgree,
       onDisagree: this.handleDisagree,
       title: m.default.Messages.AGE_GATE_NSFW_UNDERAGE_HEADER,
@@ -39,7 +39,7 @@ class E extends l.PureComponent {
       agreement: null,
       disagreement: m.default.Messages.BACK,
       imageClassName: p.ageGatedImage
-    }) : (0, a.jsx)(c.default, {
+    }) : (0, l.jsx)(c.default, {
       onAgree: this.handleAgree,
       onDisagree: this.handleDisagree,
       title: m.default.Messages.NSFW_TITLE,
@@ -47,17 +47,17 @@ class E extends l.PureComponent {
       agreement: m.default.Messages.NSFW_ACCEPT,
       disagreement: m.default.Messages.NSFW_DECLINE
     });
-    return (0, a.jsx)(o.AdvancedScroller, {
+    return (0, l.jsx)(o.AdvancedScroller, {
       ref: this.scroller,
       className: p.scroller,
-      children: (0, a.jsx)("div", {
+      children: (0, l.jsx)("div", {
         className: i(this.props.className, p.wrapper),
         children: n
       })
     })
   }
   constructor(...e) {
-    super(...e), this.scroller = l.createRef(), this.handleDisagree = () => {
+    super(...e), this.scroller = a.createRef(), this.handleDisagree = () => {
       let {
         guild: e
       } = this.props;

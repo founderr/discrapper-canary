@@ -37,7 +37,7 @@ var a = s("37983"),
   G = s("49111"),
   U = s("846325"),
   P = s("782340"),
-  b = s("28058");
+  b = s("6516");
 let B = D.isPlatformEmbedded || "Safari" !== o.name && "Firefox" !== o.name;
 
 function y() {

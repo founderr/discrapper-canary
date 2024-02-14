@@ -11,7 +11,7 @@ var n = a("414456"),
   o = a("506838"),
   u = a("956089"),
   c = a("782340"),
-  d = a("224609");
+  d = a("53248");
 (s = l || (l = {})).BANNER = "banner", s.MODAL = "modal", s.CARD = "card";
 var f = e => {
   let {

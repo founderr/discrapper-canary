@@ -11,7 +11,7 @@ var i = n("414456"),
   u = n("469563"),
   l = n("65969"),
   o = n("75196"),
-  s = n("76150"),
+  s = n("188291"),
   c = (0, u.replaceIcon)(function(e) {
     let {
       width: t = 24,

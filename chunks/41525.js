@@ -21,7 +21,7 @@ var a = s("37983"),
   _ = s("271445"),
   g = s("49111"),
   h = s("782340"),
-  N = s("393149");
+  N = s("26423");
 
 function I() {
   let [e] = n.useState(() => f.default.getEnableHardwareAcceleration()), t = m.DisableGamesTab.useSetting(), s = m.DeveloperMode.useSetting(), I = m.DisableHomeAutoNav.useSetting(), {

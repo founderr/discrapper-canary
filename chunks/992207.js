@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return g
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("446674"),
   r = n("669491"),
   o = n("77078"),
@@ -19,28 +19,28 @@ var l = n("414456"),
   m = n("386045"),
   p = n("99795"),
   E = n("782340"),
-  S = n("75606"),
+  S = n("688257"),
   g = e => {
     let {
       className: t,
       channelId: n
-    } = e, l = (0, i.useStateFromStores)([d.default, u.default, m.default, c.default], () => {
+    } = e, a = (0, i.useStateFromStores)([d.default, u.default, m.default, c.default], () => {
       var e;
       if (null == n) return !1;
       let t = d.default.getCurrentUserActiveStream(),
-        a = null === (e = c.default.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
-      return null != t && !!m.default.getSettings().clipsEnabled || null != a && !!m.default.getSettings().decoupledClipsEnabled || u.default.getParticipants(n).some(e => e.type === p.ParticipantTypes.USER && m.default.isClipsEnabledForUser(e.user.id))
+        l = null === (e = c.default.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
+      return null != t && !!m.default.getSettings().clipsEnabled || null != l && !!m.default.getSettings().decoupledClipsEnabled || u.default.getParticipants(n).some(e => e.type === p.ParticipantTypes.USER && m.default.isClipsEnabledForUser(e.user.id))
     });
-    return l ? (0, a.jsxs)(o.TooltipContainer, {
+    return a ? (0, l.jsxs)(o.TooltipContainer, {
       text: E.default.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
       color: o.TooltipColors.GREY,
       className: s(t, S.clipsEnabledIndicator),
-      children: [(0, a.jsx)(h.IconBadge, {
+      children: [(0, l.jsx)(h.IconBadge, {
         icon: f.default,
         shape: h.BadgeShapes.ROUND_LEFT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
         className: S.clipBadgeIcon
-      }), (0, a.jsx)(h.TextBadge, {
+      }), (0, l.jsx)(h.TextBadge, {
         text: E.default.Messages.CLIPS_ENABLED_BADGE,
         shape: h.BadgeShapes.ROUND_RIGHT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,

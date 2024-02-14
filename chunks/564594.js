@@ -12,7 +12,7 @@ var i = n("376341"),
   r = n("145131"),
   o = n("936629"),
   u = n("996866"),
-  d = n("228974");
+  d = n("8626");
 
 function c(e) {
   let {
@@ -22,13 +22,13 @@ function c(e) {
     ...c
   } = e, {
     label: f,
-    tooltip: p,
-    loading: m,
+    tooltip: m,
+    loading: p,
     disabled: h,
     onClick: E
   } = (0, u.useSpotifyPlayAction)(t, n, i);
   return (0, l.jsx)(s.Tooltip, {
-    text: p,
+    text: m,
     children: e => {
       let {
         onMouseEnter: t,
@@ -40,7 +40,7 @@ function c(e) {
         onMouseEnter: t,
         onMouseLeave: n,
         disabled: h,
-        submitting: m,
+        submitting: p,
         children: (0, l.jsxs)(r.default, {
           align: r.default.Align.CENTER,
           children: [(0, l.jsx)(o.default, {

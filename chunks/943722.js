@@ -1,136 +1,136 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   ActivityEmoji: function() {
-    return U
+    return A
   },
   default: function() {
-    return C
+    return x
   }
-}), l("222007");
-var r = l("37983"),
-  a = l("884691"),
-  n = l("414456"),
-  s = l.n(n),
-  i = l("446674"),
-  o = l("77078"),
-  u = l("430568"),
-  d = l("309570"),
-  c = l("29088"),
-  f = l("867805"),
-  T = l("699209"),
-  p = l("32346"),
-  m = l("342845"),
-  E = l("845579"),
-  P = l("271938"),
-  S = l("42203"),
-  v = l("957255"),
-  h = l("824563"),
-  g = l("800762"),
-  _ = l("137783"),
-  N = l("49111"),
-  O = l("205341");
+}), n("222007");
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("446674"),
+  o = n("77078"),
+  u = n("430568"),
+  d = n("309570"),
+  c = n("29088"),
+  f = n("867805"),
+  m = n("699209"),
+  p = n("32346"),
+  h = n("342845"),
+  E = n("845579"),
+  g = n("271938"),
+  S = n("42203"),
+  C = n("957255"),
+  T = n("824563"),
+  v = n("800762"),
+  I = n("137783"),
+  _ = n("49111"),
+  N = n("73276");
 
-function U(e) {
+function A(e) {
   let {
     emoji: t,
-    className: l,
-    animate: a = !0,
-    hideTooltip: n
-  } = e, i = E.AnimateEmoji.useSetting(), d = null != t.id ? ":".concat(t.name, ":") : f.default.translateSurrogatesToInlineEmoji(t.name), c = {
-    className: s(O.emoji, l),
+    className: n,
+    animate: i = !0,
+    hideTooltip: a
+  } = e, r = E.AnimateEmoji.useSetting(), d = null != t.id ? ":".concat(t.name, ":") : f.default.translateSurrogatesToInlineEmoji(t.name), c = {
+    className: s(N.emoji, n),
     emojiId: t.id,
     emojiName: t.name,
     autoplay: !0,
-    animated: !!(t.animated && i && a)
+    animated: !!(t.animated && r && i)
   };
-  return n ? (0, r.jsx)(u.default, {
+  return a ? (0, l.jsx)(u.default, {
     ...c
-  }) : (0, r.jsx)(o.Tooltip, {
+  }) : (0, l.jsx)(o.Tooltip, {
     text: d,
-    children: e => (0, r.jsx)(u.default, {
+    children: e => (0, l.jsx)(u.default, {
       ...e,
       ...c
     })
   })
 }
-let A = e => {
+let y = e => {
   let {
     className: t,
-    text: l
-  } = e, n = a.useRef(null), i = a.useRef(null), [u, d] = a.useState(!1);
-  return a.useLayoutEffect(() => {
+    text: n
+  } = e, a = i.useRef(null), r = i.useRef(null), [u, d] = i.useState(!1);
+  return i.useLayoutEffect(() => {
     let {
       current: e
-    } = n, {
+    } = a, {
       current: t
-    } = i;
+    } = r;
     if (null == e || null == t) return;
-    let l = e.clientWidth < t.clientWidth && e.clientHeight <= t.clientHeight;
-    d(!l)
-  }, [l]), (0, r.jsx)(o.Tooltip, {
-    text: u || null == l || "" === l ? null : l,
+    let n = e.clientWidth < t.clientWidth && e.clientHeight <= t.clientHeight;
+    d(!n)
+  }, [n]), (0, l.jsx)(o.Tooltip, {
+    text: u || null == n || "" === n ? null : n,
     delay: 150,
     "aria-label": !1,
-    children: e => (0, r.jsxs)(r.Fragment, {
-      children: [(0, r.jsx)("div", {
+    children: e => (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsx)("div", {
         ...e,
         className: t,
-        ref: n,
-        children: l
-      }), (0, r.jsx)("div", {
-        className: s(O.textRuler, t),
-        ref: i,
+        ref: a,
+        children: n
+      }), (0, l.jsx)("div", {
+        className: s(N.textRuler, t),
+        ref: r,
         "aria-hidden": !0,
-        children: l
+        children: n
       })]
     })
   })
 };
-var C = e => {
+var x = e => {
   var t;
   let {
-    activities: l,
-    applicationStream: a,
-    className: n,
+    activities: n,
+    applicationStream: i,
+    className: a,
     textClassName: s,
     emojiClassName: o,
     animate: u = !0,
     hideTooltip: f = !1,
     hideEmoji: E = !1,
-    user: C
-  } = e, I = null != l ? l.find(e => e.type === N.ActivityTypes.CUSTOM_STATUS) : null, y = (0, i.useStateFromStores)([P.default], () => P.default.getId() === (null == C ? void 0 : C.id)), M = (0, i.useStateFromStores)([p.default], () => y ? p.default.getHangStatusActivity() : null != l ? l.find(e => e.type === N.ActivityTypes.HANG_STATUS) : null), x = (0, i.useStateFromStores)([g.default, S.default], () => {
+    user: x
+  } = e, O = null != n ? n.find(e => e.type === _.ActivityTypes.CUSTOM_STATUS) : null, R = (0, r.useStateFromStores)([g.default], () => g.default.getId() === (null == x ? void 0 : x.id)), M = (0, r.useStateFromStores)([p.default], () => R ? p.default.getHangStatusActivity() : null != n ? n.find(e => e.type === _.ActivityTypes.HANG_STATUS) : null), L = (0, r.useStateFromStores)([v.default, S.default], () => {
     var e;
-    return null != M && null != C ? S.default.getChannel(null === (e = g.default.getVoiceStateForUser(C.id)) || void 0 === e ? void 0 : e.channelId) : null
+    return null != M && null != x ? S.default.getChannel(null === (e = v.default.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null
   }), {
-    enableHangStatus: L
-  } = T.HangStatusExperiment.useExperiment({
-    guildId: null == x ? void 0 : x.guild_id,
+    enableHangStatus: P
+  } = m.HangStatusExperiment.useExperiment({
+    guildId: null == L ? void 0 : L.guild_id,
     location: "ActivityStatus"
   }, {
     autoTrackExposure: !1
-  }), R = null, j = L && null != M && v.default.can(N.Permissions.CONNECT, x);
-  j ? R = (0, r.jsx)(m.default, {
+  }), b = null, j = P && null != M && C.default.can(_.Permissions.CONNECT, L);
+  j ? b = (0, l.jsx)(h.default, {
     className: o,
     hangStatusActivity: M
-  }) : null != I && null != I.emoji && !E && (R = (0, r.jsx)(U, {
-    emoji: I.emoji,
+  }) : null != O && null != O.emoji && !E && (b = (0, l.jsx)(A, {
+    emoji: O.emoji,
     animate: u,
     hideTooltip: f,
     className: o
   }));
-  let b = (0, i.useStateFromStores)([h.default], () => null != C ? h.default.getStatus(C.id) : null),
-    B = null !== b && [N.StatusTypes.OFFLINE, N.StatusTypes.INVISIBLE].includes(b),
-    D = null === (t = (0, c.default)(l, a, void 0, j)) || void 0 === t ? void 0 : t.activityText,
-    H = null != D && D.length > 0;
-  return B || null == R && !H ? null : (0, r.jsxs)("div", {
-    className: n,
-    children: [R, (0, r.jsx)(A, {
-      text: D,
+  let U = (0, r.useStateFromStores)([T.default], () => null != x ? T.default.getStatus(x.id) : null),
+    D = null !== U && [_.StatusTypes.OFFLINE, _.StatusTypes.INVISIBLE].includes(U),
+    k = null === (t = (0, c.default)(n, i, void 0, j)) || void 0 === t ? void 0 : t.activityText,
+    w = null != k && k.length > 0;
+  return D || null == b && !w ? null : (0, l.jsxs)("div", {
+    className: a,
+    children: [b, (0, l.jsx)(y, {
+      text: k,
       className: s
-    }), null != l && l.some(d.default) ? (0, r.jsx)(_.default, {
+    }), null != n && n.some(d.default) ? (0, l.jsx)(I.default, {
       width: 16,
       height: 16,
-      className: O.icon
+      className: N.icon
     }) : null]
   })
 }

@@ -25,7 +25,7 @@ var _ = E("37983"),
   G = E("645266"),
   O = E("835257"),
   c = E("782340"),
-  U = E("50183");
+  U = E("724023");
 let C = s.memo(function() {
     return (0, _.jsx)(A.Tooltip, {
       text: c.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN_TOOLTIP,

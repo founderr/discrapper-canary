@@ -14,7 +14,7 @@ var i, r, a = s("37983"),
   u = s("77078"),
   d = s("206230"),
   c = s("526887"),
-  E = s("890891");
+  E = s("95291");
 
 function _(e) {
   let {
@@ -23,7 +23,7 @@ function _(e) {
     setConfettiCount: i,
     setShouldFireConfetti: r,
     tooltipProps: c
-  } = e, [_, T] = l.useState(0), I = l.useRef(-1), f = l.useRef(!0), N = (0, n.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
+  } = e, [_, T] = l.useState(0), I = l.useRef(-1), N = l.useRef(!0), f = (0, n.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
     scaleFactor: R
   } = (0, o.useSpring)({
     from: {
@@ -38,8 +38,8 @@ function _(e) {
     }
   });
   return (l.useEffect(() => () => {
-    f.current = !1
-  }, []), N) ? (0, a.jsx)(a.Fragment, {
+    N.current = !1
+  }, []), f) ? (0, a.jsx)(a.Fragment, {
     children: t
   }) : (0, a.jsx)(o.animated.div, {
     className: E.confettiTriggerWrapper,
@@ -50,7 +50,7 @@ function _(e) {
       className: E.confettiTrigger,
       onMouseDown: () => {
         T(1), r(!0), i(e => Math.min(e + 2, 200)), window.clearTimeout(I.current), I.current = window.setTimeout(() => {
-          f.current && i(0)
+          N.current && i(0)
         }, 200)
       },
       onMouseUp: () => {

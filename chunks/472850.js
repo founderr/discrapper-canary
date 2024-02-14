@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return f
   },
   MultipleChoiceFormField: function() {
-    return p
+    return E
   }
 });
 var r = n("37983"),
@@ -17,7 +17,7 @@ var r = n("37983"),
   l = n("77078"),
   o = n("272460"),
   u = n("621115"),
-  c = n("847121");
+  c = n("28551");
 
 function d(e) {
   let {
@@ -29,14 +29,14 @@ function d(e) {
     onChange: d
   } = e, {
     choices: f
-  } = n, p = i.useMemo(() => f.map((e, t) => ({
+  } = n, E = i.useMemo(() => f.map((e, t) => ({
     name: e,
     value: t,
     radioItemIconClassName: a(c.multipleChoiceIcon, u)
   })), [f, u]);
   return (0, r.jsx)(l.RadioGroup, {
     disabled: t,
-    options: p,
+    options: E,
     value: s,
     onChange: d,
     radioItemClassName: o,
@@ -58,7 +58,7 @@ function f(e) {
   })
 }
 
-function p(e) {
+function E(e) {
   let {
     formField: t,
     onChange: n

@@ -11,10 +11,10 @@ if (s("923771")() || s("391938")()) {
 } else {
   var o = s("621792"),
     f = s("264871"),
-    u = s("37549"),
+    u = s("911718"),
     a = u("%Map%", !0),
     d = u("%Set%", !0),
-    p = s("812095"),
+    p = s("314970"),
     b = p("Array.prototype.push"),
     h = p("String.prototype.charCodeAt"),
     l = p("String.prototype.slice"),
@@ -64,8 +64,8 @@ if (s("923771")() || s("391938")()) {
         S = p("Set.prototype.iterator", !0)
     }
     var k = p("Map.prototype.@@iterator", !0) || p("Map.prototype._es6-shim iterator_", !0),
-      E = p("Set.prototype.@@iterator", !0) || p("Set.prototype._es6-shim iterator_", !0),
-      A = function(t) {
+      A = p("Set.prototype.@@iterator", !0) || p("Set.prototype._es6-shim iterator_", !0),
+      E = function(t) {
         if (m(t)) {
           if (M) return n(M(t));
           if (k) return k(t);
@@ -78,7 +78,7 @@ if (s("923771")() || s("391938")()) {
         }
         if (y(t)) {
           if (S) return n(S(t));
-          if (E) return E(t);
+          if (A) return A(t);
           if (w) {
             var s = [];
             return w(t, function(t) {
@@ -88,7 +88,7 @@ if (s("923771")() || s("391938")()) {
         }
       };
     t.exports = function(t) {
-      return A(t) || x(t)
+      return E(t) || x(t)
     }
   } else t.exports = function(t) {
     if (null != t) return x(t, !0)

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return G
   }
 }), s("222007");
 var i = s("37983"),
@@ -17,37 +17,37 @@ var i = s("37983"),
   _ = s("904519"),
   T = s("738463"),
   I = s("141075"),
-  f = s("706081"),
-  N = s("695561"),
+  N = s("706081"),
+  f = s("695561"),
   R = s("56186"),
   g = s("390604"),
   m = s("49111"),
   S = s("782340"),
-  M = s("635303"),
-  h = function(e) {
+  M = s("76996"),
+  G = function(e) {
     let {
       analyticsLocation: t,
       guild: s,
-      onClose: h
-    } = e, [G, p] = r.useState(!0), x = r.useRef(!1), v = (0, a.useLazyValue)(() => Date.now()), {
+      onClose: G
+    } = e, [h, O] = r.useState(!0), p = r.useRef(!1), C = (0, a.useLazyValue)(() => Date.now()), {
       analyticsLocations: A
     } = (0, u.default)(), B = r.useCallback(() => {
-      h(), d.default.track(m.AnalyticEvents.MODAL_DISMISSED, {
+      G(), d.default.track(m.AnalyticEvents.MODAL_DISMISSED, {
         type: m.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
         location_stack: A,
         location_section: t.section,
         location_object: t.object,
         guild_id: s.id,
-        duration_open_ms: Date.now() - v
+        duration_open_ms: Date.now() - C
       })
-    }, [h, t, A, v, s.id]), C = r.useCallback(e => {
-      e && !x.current && (d.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+    }, [G, t, A, C, s.id]), x = r.useCallback(e => {
+      e && !p.current && (d.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
         type: m.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
         location_stack: A,
         location_section: t.section,
         location_object: t.object,
         guild_id: s.id
-      }), x.current = !0)
+      }), p.current = !0)
     }, [t, A, s.id]);
     return r.useEffect(() => {
       d.default.track(m.AnalyticEvents.OPEN_MODAL, {
@@ -87,10 +87,10 @@ var i = s("37983"),
             }), (0, i.jsx)(E.default, {
               guild: s,
               closeLayer: B,
-              onCtaVisibilityChange: p
+              onCtaVisibilityChange: O
             }), (0, i.jsx)(I.default, {
               guild: s
-            }), (0, i.jsx)(f.default, {
+            }), (0, i.jsx)(N.default, {
               guild: s
             })]
           }), (0, i.jsx)(g.HeaderWave, {})]
@@ -101,7 +101,7 @@ var i = s("37983"),
           className: M.lowerBody,
           children: [(0, i.jsxs)("div", {
             className: M.lowerBodyContentWrapper,
-            children: [(0, i.jsx)(N.default, {
+            children: [(0, i.jsx)(f.default, {
               className: M.tierComparisonTable,
               guild: s
             }), (0, i.jsx)(c.default, {}), (0, i.jsx)(_.default, {})]
@@ -109,14 +109,14 @@ var i = s("37983"),
             className: M.lowerBodyBackgroundImage
           })]
         }), (0, i.jsx)(l.VisibilitySensor, {
-          onChange: C,
+          onChange: x,
           children: (0, i.jsx)("div", {
             className: M.persistentCtaSpacer
           })
         })]
       }), (0, i.jsx)(T.default, {
         guild: s,
-        isVisible: !G,
+        isVisible: !h,
         closeLayer: B
       })]
     })

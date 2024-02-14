@@ -32,7 +32,7 @@ var l = n("37983"),
   R = n("255991"),
   M = n("49111"),
   O = n("782340"),
-  y = n("789978");
+  y = n("99725");
 let D = {
   analyticsSource: {
     page: M.AnalyticsPages.GUILD_CHANNEL,

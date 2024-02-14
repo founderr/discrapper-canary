@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("240249"),
   c = n("524768"),
   f = n("355263"),
-  p = n("462274"),
-  m = n("368639"),
+  m = n("462274"),
+  p = n("368639"),
   h = n("945330"),
   E = n("256170"),
   g = n("315102"),
@@ -25,9 +25,9 @@ var l = n("37983"),
   v = n("540843"),
   I = n("49111"),
   _ = n("317041"),
-  y = n("782340"),
-  A = n("253072"),
-  N = n("632215");
+  N = n("782340"),
+  A = n("23429"),
+  y = n("919163");
 
 function x(e) {
   let {
@@ -91,11 +91,11 @@ function O(e) {
       C.dismissAppDetail()
     }, []),
     M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-    L = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
+    L = (0, m.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
     P = (0, f.getIconComponent)(u),
     b = i.useMemo(() => {
       var e, t;
-      return (0, m.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
+      return (0, p.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
     }, [null === (n = u.application) || void 0 === n ? void 0 : n.description]);
   return (0, l.jsxs)(r.ScrollerNone, {
     className: A.container,
@@ -106,7 +106,7 @@ function O(e) {
         backgroundColor: L
       },
       children: (0, l.jsx)(r.Clickable, {
-        "aria-label": y.default.Messages.CLOSE,
+        "aria-label": N.default.Messages.CLOSE,
         onClick: R,
         className: A.headerCloseButton,
         children: (0, l.jsx)(h.default, {})
@@ -129,7 +129,7 @@ function O(e) {
           variant: "heading-lg/bold",
           children: u.name
         }), (0, l.jsx)(r.Text, {
-          className: s(A.appDescription, N.markup),
+          className: s(A.appDescription, y.markup),
           variant: "text-sm/medium",
           lineClamp: 3,
           children: b

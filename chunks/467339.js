@@ -14,19 +14,19 @@ var l = n("37983"),
   d = n("149022"),
   c = n("217535"),
   f = n("474643"),
-  p = n("599110"),
-  m = n("773336"),
+  m = n("599110"),
+  p = n("773336"),
   h = n("50885"),
   E = n("49111"),
   g = n("782340"),
-  S = n("831839"),
-  C = n("926622");
+  S = n("1065"),
+  C = n("890957");
 
 function T(e) {
   var t, n, a, r;
   let {
     file: o
-  } = e, [u, d] = i.useState(), [c, f] = i.useState(!1), [p, m] = i.useState({}), h = i.useRef(null);
+  } = e, [u, d] = i.useState(), [c, f] = i.useState(!1), [m, p] = i.useState({}), h = i.useRef(null);
   i.useEffect(() => {
     let e = h.current;
     if (null != e && f(!1), null == o) return;
@@ -39,13 +39,13 @@ function T(e) {
     null != e && (e.onload = () => {
       let t = e.naturalWidth / e.naturalHeight,
         n = Math.max(.66, Math.min(t, 4));
-      1 === n ? m({
+      1 === n ? p({
         width: 104,
         height: 104
-      }) : n > 1 ? m({
+      }) : n > 1 ? p({
         width: 104 * n,
         height: void 0
-      }) : m({
+      }) : p({
         width: void 0,
         height: 104 / n
       }), f(!0)
@@ -61,11 +61,11 @@ function T(e) {
     "aria-hidden": !0,
     alt: "",
     style: {
-      width: null !== (a = p.width) && void 0 !== a ? a : "initial",
-      height: null !== (r = p.height) && void 0 !== r ? r : 104,
+      width: null !== (a = m.width) && void 0 !== a ? a : "initial",
+      height: null !== (r = m.height) && void 0 !== r ? r : 104,
       marginLeft: E,
       marginRight: E,
-      marginTop: null != p.height ? 104 - p.height - 33 : -33
+      marginTop: null != m.height ? 104 - m.height - 33 : -33
     }
   })
 }
@@ -86,10 +86,10 @@ class v extends i.Component {
 class I extends i.Component {
   componentDidMount() {
     var e;
-    (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) && this.props.upload.item.platform === u.UploadPlatform.WEB && p.default.track(E.AnalyticEvents.OPEN_MODAL, {
+    (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) && this.props.upload.item.platform === u.UploadPlatform.WEB && m.default.track(E.AnalyticEvents.OPEN_MODAL, {
       type: "Upload Large Message",
       message_content_length: this.props.upload.item.file.size
-    }), m.isPlatformEmbedded && h.default.focus()
+    }), p.isPlatformEmbedded && h.default.focus()
   }
   shouldComponentUpdate(e) {
     return null != e.upload

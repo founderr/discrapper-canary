@@ -14,7 +14,7 @@ var l = n("414456"),
   u = n("415844"),
   d = n("49111"),
   c = n("782340"),
-  E = n("50536");
+  E = n("926494");
 let f = {
   [d.OperatingSystems.WINDOWS]: {
     icon: u.default,

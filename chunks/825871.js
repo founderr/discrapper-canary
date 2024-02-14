@@ -24,8 +24,8 @@ var i = n("271841"),
   d = n("240249"),
   c = n("972620"),
   f = n("166004"),
-  p = n("383018"),
-  m = n("524768"),
+  m = n("383018"),
+  p = n("524768"),
   h = n("389153"),
   E = n("396465"),
   g = n("355263"),
@@ -35,9 +35,9 @@ var i = n("271841"),
   v = n("200294"),
   I = n("851745"),
   _ = n("406291"),
-  y = n("317041"),
+  N = n("317041"),
   A = n("782340"),
-  N = n("94885");
+  y = n("826214");
 let x = {
   results: {
     entries: []
@@ -66,8 +66,8 @@ function M(e) {
 }
 let L = {
   sentinel: _.COMMAND_SENTINEL,
-  stores: [p.default, f.default, u.default, S.default],
-  matches: (e, t, n, l, i) => i.commands !== I.CommandMode.DISABLED && null == p.default.getActiveCommand(e.id) && (l || i.commands !== I.CommandMode.OLD_BUILT_INS),
+  stores: [m.default, f.default, u.default, S.default],
+  matches: (e, t, n, l, i) => i.commands !== I.CommandMode.DISABLED && null == m.default.getActiveCommand(e.id) && (l || i.commands !== I.CommandMode.OLD_BUILT_INS),
   queryResults(e, t, n, l, i) {
     if (0 === n.length && l.commands !== I.CommandMode.OLD_BUILT_INS) return x;
     let a = M("CommandAutocompletes");
@@ -78,7 +78,7 @@ let L = {
           channel: e,
           guild: t
         }, a),
-        u = o.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN];
+        u = o.BUILT_IN_SECTIONS[N.BuiltInSectionId.BUILT_IN];
       return 0 === r.length ? x : {
         results: {
           entries: r.map(e => ({
@@ -102,15 +102,15 @@ let L = {
         allowFetch: i
       });
     if (null == u) return x;
-    let p = u;
+    let m = u;
     if (r.hasSpaceTerminator) {
       let e = r.text.trim(),
         t = e + " ";
-      p = p.filter(n => n.name === e || n.name.startsWith(t))
+      m = m.filter(n => n.name === e || n.name.startsWith(t))
     }
-    return 0 === p.length ? x : {
+    return 0 === m.length ? x : {
       results: {
-        entries: p.slice(0, a).map(e => ({
+        entries: m.slice(0, a).map(e => ({
           command: e,
           section: null == f ? void 0 : f.find(t => t.id === e.applicationId)
         }))
@@ -164,7 +164,7 @@ let L = {
         }
       },
       key: "commands",
-      headerClassName: f ? N.legacyInputCommandHeader : null,
+      headerClassName: f ? y.legacyInputCommandHeader : null,
       headerTrailingContent: f ? (0, l.jsx)(i.Button, {
         type: "button",
         look: i.Button.Looks.LINK,
@@ -191,13 +191,13 @@ let L = {
       command: u,
       section: d
     } = t[n];
-    if (u.inputType === m.ApplicationCommandInputType.PLACEHOLDER) return null;
+    if (u.inputType === p.ApplicationCommandInputType.PLACEHOLDER) return null;
     if (i.commands === I.CommandMode.OLD_BUILT_INS) i.insertText(function(e) {
       return "".concat(_.COMMAND_SENTINEL).concat(e.name)
     }(u));
     else {
       let e = s;
-      null == e && (e = o ? m.ApplicationCommandTriggerLocations.QUERY : m.ApplicationCommandTriggerLocations.DISCOVERY), r.setActiveCommand({
+      null == e && (e = o ? p.ApplicationCommandTriggerLocations.QUERY : p.ApplicationCommandTriggerLocations.DISCOVERY), r.setActiveCommand({
         channelId: a.id,
         command: u,
         section: null != d ? d : null,

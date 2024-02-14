@@ -29,7 +29,7 @@ var a = s("37983"),
   O = s("380186"),
   x = s("646718"),
   R = s("782340"),
-  M = s("664829");
+  M = s("43965");
 class v extends n.PureComponent {
   componentWillUnmount() {
     this._copyModeTimeout.stop()

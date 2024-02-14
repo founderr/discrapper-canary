@@ -25,7 +25,7 @@ var a = s("37983"),
   I = s("915639"),
   p = s("49111"),
   C = s("782340"),
-  A = s("952984");
+  A = s("60638");
 class O extends n.PureComponent {
   componentDidMount() {
     d.default.wait(() => {

@@ -12,7 +12,7 @@ var a = s("37983"),
   u = s("980428"),
   o = s("772280"),
   d = s("782340"),
-  c = s("911545"),
+  c = s("45604"),
   f = n.forwardRef(function(e, t) {
     let {
       currentPageIndex: s,

@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var r, i, l = n("831839");
-(r = i || (i = {}))[r.IMAGE = 0] = "IMAGE", r[r.DOCUMENT = 1] = "DOCUMENT", r[r.CODE = 2] = "CODE";
+var i, r, l = n("1065");
+(i = r || (r = {}))[i.IMAGE = 0] = "IMAGE", i[i.DOCUMENT = 1] = "DOCUMENT", i[i.CODE = 2] = "CODE";
 let a = {
     0: l.image,
     1: l.document,

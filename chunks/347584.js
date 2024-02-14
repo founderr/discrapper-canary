@@ -26,7 +26,7 @@ var a = s("37983"),
   C = s("817343"),
   R = s("49111"),
   x = s("782340"),
-  L = s("254984");
+  L = s("15994");
 class O extends l.PureComponent {
   render() {
     let {

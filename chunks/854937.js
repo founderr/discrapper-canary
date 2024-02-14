@@ -12,7 +12,7 @@ var i = n("414456"),
   r = n("616225"),
   o = n("387111"),
   u = n("996866"),
-  d = n("228974");
+  d = n("8626");
 
 function c(e) {
   let {
@@ -21,8 +21,8 @@ function c(e) {
     channelId: i,
     guildId: c,
     source: f,
-    size: p,
-    className: m,
+    size: m,
+    className: p,
     ...h
   } = e, {
     tooltip: E,
@@ -39,8 +39,8 @@ function c(e) {
       } = e;
       return (0, l.jsx)(s.Button, {
         ...h,
-        size: a(p, d.iconButtonSize),
-        className: a(m, d.iconButton),
+        size: a(m, d.iconButtonSize),
+        className: a(p, d.iconButton),
         onClick: C,
         onMouseEnter: n,
         onMouseLeave: i,

@@ -12,7 +12,7 @@ s("884691");
 var l = s("414456"),
   o = s.n(l),
   r = s("77078"),
-  i = s("53895");
+  i = s("754908");
 let a = {
   RED: i.redMessageBlock,
   YELLOW: i.yellowMessageBlock,

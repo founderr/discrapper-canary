@@ -31,7 +31,7 @@ var l = a("37983"),
   j = a("815619"),
   M = a("515631"),
   D = a("782340"),
-  F = a("846928");
+  F = a("15452");
 let L = n.memo(function(e) {
     let {
       guildId: t

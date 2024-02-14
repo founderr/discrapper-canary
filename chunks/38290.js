@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var l = n("37983");
@@ -12,23 +12,23 @@ var i = n("414456"),
   r = n("857171"),
   o = n("339524"),
   u = n("782340"),
-  d = n("625499"),
-  c = n("831839");
+  d = n("301773"),
+  c = n("1065");
 let f = [{
   name: "Custom Upload",
   extensions: ["jpg", "jpeg", "png", "gif", "webp"]
 }];
 
-function p(e) {
+function m(e) {
   let {
     onCustomUpload: t,
     customUploadFilters: n = f
   } = e, {
     dragRef: i,
-    hover: p
+    hover: m
   } = (0, o.default)({
     onDrop: t
-  }), m = {
+  }), p = {
     color: s.ButtonColors.CUSTOM,
     hover: s.ButtonHovers.DEFAULT
   };
@@ -45,13 +45,13 @@ function p(e) {
       filters: n,
       "aria-label": u.default.Messages.EXPRESSION_PICKER_UPLOAD_ARIA,
       className: a(d.clickable, {
-        [d.clickableActive]: p
+        [d.clickableActive]: m
       }),
-      ...m,
+      ...p,
       children: [(0, l.jsx)(s.Text, {
         variant: "text-xs/semibold",
         className: a(d.tag, {
-          [d.tagActive]: p
+          [d.tagActive]: m
         }),
         children: u.default.Messages.EXPRESSION_PICKER_UPLOAD_IMAGE_TAG
       }), (0, l.jsxs)("div", {

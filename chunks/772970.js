@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return f
   },
   TermsFieldCheckbox: function() {
-    return p
+    return E
   },
   DisabledTermsRequirementFormField: function() {
     return _
   },
   TermsFormField: function() {
-    return E
+    return T
   }
 }), n("222007");
 var r = n("37983");
@@ -22,7 +22,7 @@ var i = n("414456"),
   o = n("213523"),
   u = n("272460"),
   c = n("782340"),
-  d = n("847121");
+  d = n("28551");
 
 function f(e) {
   let {
@@ -49,7 +49,7 @@ function f(e) {
   })
 }
 
-function p(e) {
+function E(e) {
   let {
     onChange: t,
     checked: n,
@@ -82,7 +82,7 @@ function _(e) {
     meetsRequirement: !!t.response
   })
 }
-let E = e => {
+let T = e => {
   let {
     channelId: t,
     formField: n,
@@ -94,7 +94,7 @@ let E = e => {
       className: d.fieldBackground,
       terms: n.values,
       channelId: t
-    }), (0, r.jsx)(p, {
+    }), (0, r.jsx)(E, {
       onChange: i,
       checked: n.response
     })]

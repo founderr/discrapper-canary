@@ -17,7 +17,7 @@ var a = s("37983"),
   E = s("75576"),
   I = s("49111"),
   T = s("782340"),
-  f = s("502604");
+  f = s("28918");
 let S = {
   [I.OperatingSystems.WINDOWS]: _.PlatformTypes.WINDOWS,
   [I.OperatingSystems.MACOS]: _.PlatformTypes.OSX,

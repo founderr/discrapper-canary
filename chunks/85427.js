@@ -4,23 +4,23 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("297446"),
-  i = n("602580"),
-  r = l.memo(function(e) {
+  i = n("18272"),
+  r = a.memo(function(e) {
     let {
       channel: t,
       participants: n,
-      tileWidth: l,
+      tileWidth: a,
       selectedParticipant: r
     } = e;
-    return (0, a.jsx)("div", {
+    return (0, l.jsx)("div", {
       className: i.rowContainer,
-      children: n.map(e => e.id === (null == r ? void 0 : r.id) ? null : (0, a.jsx)(s.default, {
+      children: n.map(e => e.id === (null == r ? void 0 : r.id) ? null : (0, l.jsx)(s.default, {
         channel: t,
         participant: e,
-        width: l
+        width: a
       }, e.id))
     })
   })

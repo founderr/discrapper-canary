@@ -15,23 +15,23 @@ var i = n("446674"),
   d = n("153335"),
   c = n("191814"),
   f = n("8161"),
-  p = n("613676"),
-  m = n("713135"),
+  m = n("613676"),
+  p = n("713135"),
   h = n("999203"),
   E = n("609734"),
   g = n("777003"),
   S = n("49111"),
   C = n("782340"),
-  T = n("431375");
+  T = n("44492");
 
 function v(e) {
   let {
     user: t,
     guildId: n
-  } = e, a = (0, i.useStateFromStores)([m.default], () => {
+  } = e, a = (0, i.useStateFromStores)([p.default], () => {
     var e;
-    return null === (e = m.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-  }), s = null != a && (0, p.canInstallApplication)(a.id, a.customInstallUrl, a.installParams), {
+    return null === (e = p.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
+  }), s = null != a && (0, m.canInstallApplication)(a.id, a.customInstallUrl, a.installParams), {
     botUpgradeable: o,
     subscriptionGroupListing: u
   } = (0, h.default)({

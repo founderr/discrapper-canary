@@ -33,7 +33,7 @@ var a = n("414456"),
   R = n("262141"),
   M = n("49111"),
   O = n("695838"),
-  y = n("708995");
+  y = n("65369");
 class D extends L.default {
   componentWillUnmount() {
     this.resetTextChannelPopoutTimers()

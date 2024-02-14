@@ -11,7 +11,7 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("256023"),
-  r = n("517614");
+  r = n("38879");
 let s = (0, i.createScroller)(r.thin, r.fade),
   a = (0, i.createScroller)(r.auto, r.fade),
   o = (0, i.createScroller)(r.none, r.fade)

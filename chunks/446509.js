@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return T
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("446674"),
   r = n("819855"),
   o = n("77078"),
@@ -24,19 +24,19 @@ var l = n("414456"),
   E = n("713135"),
   S = n("49111"),
   g = n("782340"),
-  C = n("568719"),
-  _ = n("175321");
+  C = n("155502"),
+  _ = n("56083");
 
 function I(e) {
   let {
     guild: t,
     nick: n,
-    theme: l,
+    theme: a,
     onSelect: i,
     onContextMenu: u,
     user: d
   } = e, c = d.hasAvatarForGuild(t.id);
-  return (0, a.jsxs)(o.Clickable, {
+  return (0, l.jsxs)(o.Clickable, {
     focusProps: {
       offset: {
         right: 8
@@ -45,22 +45,22 @@ function I(e) {
     className: C.listRow,
     onClick: () => i(t.id),
     onContextMenu: e => u(e, t),
-    children: [(0, a.jsx)(m.default, {
+    children: [(0, l.jsx)(m.default, {
       tabIndex: -1,
       guild: t,
       showBadge: !0,
       className: s(C.listAvatar, null == t.icon ? _.guildAvatarWithoutIcon : null),
-      badgeStrokeColor: (0, f.getColor)((0, r.isThemeDark)(l) ? S.Color.PRIMARY_600 : S.Color.WHITE_500),
+      badgeStrokeColor: (0, f.getColor)((0, r.isThemeDark)(a) ? S.Color.PRIMARY_600 : S.Color.WHITE_500),
       size: m.default.Sizes.MEDIUM,
       active: !0
-    }), (0, a.jsxs)("div", {
+    }), (0, l.jsxs)("div", {
       className: C.listRowContent,
-      children: [(0, a.jsx)("div", {
+      children: [(0, l.jsx)("div", {
         className: C.listName,
         children: t.toString()
-      }), c || null != n ? (0, a.jsxs)("div", {
+      }), c || null != n ? (0, l.jsxs)("div", {
         className: _.guildNick,
-        children: [c && (0, a.jsx)(o.Avatar, {
+        children: [c && (0, l.jsx)(o.Avatar, {
           src: d.getAvatarURL(t.id, 16),
           size: o.AvatarSizes.SIZE_16,
           className: _.guildAvatar,
@@ -73,10 +73,10 @@ function I(e) {
 
 function T(e) {
   let t, {
-      user: l,
+      user: a,
       onClose: s
     } = e,
-    r = (0, i.useStateFromStores)([E.default], () => E.default.getMutualGuilds(l.id)),
+    r = (0, i.useStateFromStores)([E.default], () => E.default.getMutualGuilds(a.id)),
     f = (0, c.default)();
 
   function m(e) {
@@ -88,17 +88,17 @@ function T(e) {
       let {
         default: e
       } = await n.el("374705").then(n.bind(n, "374705"));
-      return n => (0, a.jsx)(e, {
+      return n => (0, l.jsx)(e, {
         ...n,
         guild: t
       })
     })
   }
-  return t = null == r || 0 === r.length ? (0, a.jsxs)("div", {
+  return t = null == r || 0 === r.length ? (0, l.jsxs)("div", {
     className: C.empty,
-    children: [(0, a.jsx)("div", {
+    children: [(0, l.jsx)("div", {
       className: C.emptyIconGuilds
-    }), (0, a.jsx)("div", {
+    }), (0, l.jsx)("div", {
       className: C.emptyText,
       children: g.default.Messages.NO_MUTUAL_GUILDS
     })]
@@ -107,15 +107,15 @@ function T(e) {
       guild: t,
       nick: n
     } = e;
-    return (0, a.jsx)(I, {
-      user: l,
+    return (0, l.jsx)(I, {
+      user: a,
       guild: t,
       nick: n,
       theme: f,
       onSelect: m,
       onContextMenu: p
     }, t.id)
-  }), (0, a.jsx)(o.ScrollerThin, {
+  }), (0, l.jsx)(o.ScrollerThin, {
     className: C.listScroller,
     fade: !0,
     children: t

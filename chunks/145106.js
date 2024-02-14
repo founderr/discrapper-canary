@@ -1,35 +1,35 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return a
   }
-}), l("222007");
-var s = l("37983"),
-  n = l("884691"),
-  a = l("133403"),
-  o = l("49622");
+}), n("222007");
+var i = n("37983"),
+  r = n("884691"),
+  l = n("133403"),
+  s = n("164527");
 
-function i(e) {
+function a(e) {
   let {
     hasSetEmoji: t,
-    onClick: l,
-    children: i
-  } = e, [r, d] = n.useState(!1);
-  return (0, s.jsxs)("div", {
-    className: o.container,
+    onClick: n,
+    children: a
+  } = e, [u, o] = r.useState(!1);
+  return (0, i.jsxs)("div", {
+    className: s.container,
     onMouseEnter: () => {
       if (t) {
-        d(!0);
+        o(!0);
         return
       }
-      d(!1)
+      o(!1)
     },
     onMouseLeave: () => {
-      d(!1)
+      o(!1)
     },
-    children: [i, t && r && (0, s.jsx)(a.default, {
-      onClick: l,
-      className: o.removeButton
+    children: [a, t && u && (0, i.jsx)(l.default, {
+      onClick: n,
+      className: s.removeButton
     })]
   })
 }

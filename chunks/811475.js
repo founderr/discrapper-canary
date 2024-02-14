@@ -28,7 +28,7 @@ var a = n("37983"),
   A = n("718422"),
   T = n("49111"),
   M = n("782340"),
-  N = n("216220");
+  N = n("49077");
 let I = "ActivityInvite";
 class v extends s.PureComponent {
   componentDidMount() {

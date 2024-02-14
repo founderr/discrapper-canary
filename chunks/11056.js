@@ -1,93 +1,93 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
 });
-var a = l("37983"),
-  n = l("884691"),
-  r = l("414456"),
-  i = l.n(r),
-  u = l("90915"),
-  s = l("77078"),
-  o = l("726446");
-let d = n.forwardRef(function(e, t) {
-  var l;
+var l = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("90915"),
+  o = n("77078"),
+  u = n("94334");
+let d = i.forwardRef(function(e, t) {
+  var n;
   let {
-    avatar: n,
-    name: r,
+    avatar: i,
+    name: a,
     children: d,
     subText: c,
     decorators: f,
     onClick: m,
-    selected: h,
-    muted: p,
+    selected: p,
+    muted: h,
     to: E,
-    avatarClassName: v,
-    selectedClassName: _,
-    innerClassName: x,
-    wrapContent: I,
-    highlighted: S,
-    focusProps: g,
-    ...L
+    avatarClassName: g,
+    selectedClassName: S,
+    innerClassName: C,
+    wrapContent: T,
+    highlighted: v,
+    focusProps: I,
+    ..._
   } = e;
-  L.className = i(L.className, o.container, {
-    [o.selected]: h,
-    [o.highlighted]: S,
-    [null != _ ? _ : ""]: h,
-    [o.clickable]: !h && (null != E || null != m)
-  }), L["aria-selected"] = null !== (l = L["aria-selected"]) && void 0 !== l ? l : h;
-  let M = (0, a.jsxs)("div", {
-    className: i(x, o.layout, {
-      [o.muted]: !h && p,
-      [o.wrappedLayout]: I
+  _.className = s(_.className, u.container, {
+    [u.selected]: p,
+    [u.highlighted]: v,
+    [null != S ? S : ""]: p,
+    [u.clickable]: !p && (null != E || null != m)
+  }), _["aria-selected"] = null !== (n = _["aria-selected"]) && void 0 !== n ? n : p;
+  let N = (0, l.jsxs)("div", {
+    className: s(C, u.layout, {
+      [u.muted]: !p && h,
+      [u.wrappedLayout]: T
     }),
-    children: [(0, a.jsx)("div", {
-      className: i(o.avatar, v),
-      children: n
-    }), (0, a.jsxs)("div", {
-      className: o.content,
-      children: [(0, a.jsxs)("div", {
-        className: o.nameAndDecorators,
-        children: [(0, a.jsx)("div", {
-          className: i(o.name, {
-            [o.wrappedName]: I
+    children: [(0, l.jsx)("div", {
+      className: s(u.avatar, g),
+      children: i
+    }), (0, l.jsxs)("div", {
+      className: u.content,
+      children: [(0, l.jsxs)("div", {
+        className: u.nameAndDecorators,
+        children: [(0, l.jsx)("div", {
+          className: s(u.name, {
+            [u.wrappedName]: T
           }),
-          children: r
+          children: a
         }), f]
-      }), null != c ? (0, a.jsx)("div", {
-        className: o.subText,
+      }), null != c ? (0, l.jsx)("div", {
+        className: u.subText,
         children: c
       }) : null]
-    }), null != d ? (0, a.jsx)("div", {
-      className: o.children,
+    }), null != d ? (0, l.jsx)("div", {
+      className: u.children,
       children: d
     }) : null]
   });
-  return null != E ? (0, a.jsx)(s.FocusRing, {
-    ...g,
-    children: (0, a.jsx)(u.Link, {
+  return null != E ? (0, l.jsx)(o.FocusRing, {
+    ...I,
+    children: (0, l.jsx)(r.Link, {
       to: E,
       onClick: m,
-      ...L,
+      ..._,
       role: "listitem",
       ref: t,
-      children: M
+      children: N
     })
-  }) : null != m ? (0, a.jsx)(s.Clickable, {
+  }) : null != m ? (0, l.jsx)(o.Clickable, {
     onClick: m,
-    focusProps: g,
-    ...L,
+    focusProps: I,
+    ..._,
     role: "listitem",
     innerRef: t,
-    children: M
-  }) : (0, a.jsx)(s.FocusRing, {
-    ...g,
-    children: (0, a.jsx)("div", {
-      ...L,
+    children: N
+  }) : (0, l.jsx)(o.FocusRing, {
+    ...I,
+    children: (0, l.jsx)("div", {
+      ..._,
       role: "listitem",
       ref: t,
-      children: M
+      children: N
     })
   })
 });
