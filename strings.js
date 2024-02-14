@@ -16351,6 +16351,7 @@ e.exports = Object.freeze({
   SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "About safety alerts",
   SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION: "We take teen safety seriously at Discord. When we detect a possible safety risk in a conversation, we'll let you know. [Learn more about safety alerts]({learnMoreLink})",
   SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Go to settings",
+  SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Dismiss",
   STRANGER_DANGER_BANNER_HEADER: "Unwanted message?",
   STRANGER_DANGER_BANNER_DESCRIPTION: "If you don't want to chat with this person, you can block or mute them.",
   STRANGER_DANGER_BANNER_MORE_TIPS: "More tips",
