@@ -12,7 +12,7 @@ var l = n("866227"),
   r = n("243632"),
   o = n("994428"),
   u = n("782340"),
-  d = n("623158");
+  d = n("132576");
 let c = (e, t) => ({
   bodyText: u.default.Messages.DROPS_BANNER_NOTICE.format({
     gameName: e.title,

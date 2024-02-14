@@ -15,8 +15,8 @@ var i = n("65597"),
   d = n("917764"),
   c = n("538282"),
   f = n("562323"),
-  p = n("305961"),
-  m = n("227602"),
+  m = n("305961"),
+  p = n("227602"),
   h = n("471671"),
   E = n("945330"),
   g = n("95689"),
@@ -26,20 +26,20 @@ var i = n("65597"),
   v = n("235004"),
   I = n("49111"),
   _ = n("782340"),
-  y = n("762484");
+  N = n("870477");
 
 function A(e) {
   let {
     soundboardSound: t,
     closePicker: A
-  } = e, N = (0, c.useExpressionPickerStore)(e => e.searchQuery), x = (0, i.default)([v.default], () => null != t && v.default.isFavoriteSound(t.soundId)), O = (0, i.default)([p.default], () => p.default.getGuild(null == t ? void 0 : t.guildId)), R = (0, i.default)([o.default], () => o.default.useReducedMotion, []), M = (0, i.default)([h.default], () => h.default.isFocused()), L = (0, i.default)([m.default], () => m.default.getKeybindForAction(I.GlobalKeybindActions.SOUNDBOARD_HOLD));
-  if (null != t && N.length > 0) return (0, l.jsx)(f.default, {
+  } = e, y = (0, c.useExpressionPickerStore)(e => e.searchQuery), x = (0, i.default)([v.default], () => null != t && v.default.isFavoriteSound(t.soundId)), O = (0, i.default)([m.default], () => m.default.getGuild(null == t ? void 0 : t.guildId)), R = (0, i.default)([o.default], () => o.default.useReducedMotion, []), M = (0, i.default)([h.default], () => h.default.isFocused()), L = (0, i.default)([p.default], () => p.default.getKeybindForAction(I.GlobalKeybindActions.SOUNDBOARD_HOLD));
+  if (null != t && y.length > 0) return (0, l.jsx)(f.default, {
     graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, l.jsx)(r.default, {
       emojiId: t.emojiId,
       emojiName: t.emojiName,
-      className: y.emoji
+      className: N.emoji
     }) : (0, l.jsx)(g.default, {
-      className: y.emoji
+      className: N.emoji
     }),
     graphicSecondary: null != O ? (0, l.jsx)(d.default, {
       guild: O,
@@ -68,16 +68,16 @@ function A(e) {
       }, t)
     }) : null;
   return null == j ? null : (0, l.jsxs)("div", {
-    className: y.keybindHint,
+    className: N.keybindHint,
     children: [(0, l.jsx)(S.default, {
-      className: y.warningIcon
+      className: N.warningIcon
     }), (0, l.jsx)(s.Text, {
       variant: "text-sm/medium",
       color: "text-normal",
-      className: y.keybindHintText,
+      className: N.keybindHintText,
       children: j
     }), (0, l.jsx)(s.Clickable, {
-      className: y.closeButton,
+      className: N.closeButton,
       onClick: () => (0, u.markDismissibleContentAsDismissed)(a.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
       children: (0, l.jsx)(E.default, {
         width: 16,

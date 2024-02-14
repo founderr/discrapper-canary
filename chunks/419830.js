@@ -11,8 +11,8 @@ t.r(l), t.d(l, {
   }
 });
 var n = t("677315"),
-  a = t("157186"),
-  s = t("26989"),
+  s = t("157186"),
+  a = t("26989"),
   r = t("305961"),
   i = t("88093"),
   c = t("697218"),
@@ -27,20 +27,20 @@ var n = t("677315"),
   p = t("593195"),
   H = t("361777"),
   M = t("497757"),
-  V = t("109264"),
-  N = t("991497"),
-  g = t("393621"),
-  x = t("905999"),
+  g = t("109264"),
+  x = t("991497"),
+  N = t("393621"),
+  V = t("905999"),
   I = t("660074"),
-  T = t("223383"),
-  w = t("45029"),
-  m = t("990745"),
-  Z = t("190986"),
+  w = t("223383"),
+  T = t("45029"),
+  Z = t("990745"),
+  m = t("190986"),
   R = t("721618"),
-  E = t("733160"),
-  j = t("990864"),
-  _ = t("274652"),
-  A = t("357077"),
+  j = t("733160"),
+  E = t("990864"),
+  A = t("274652"),
+  _ = t("357077"),
   O = t("133661"),
   y = t("841307"),
   D = t("846254"),
@@ -68,10 +68,10 @@ function q(e, l, t, n) {
       if ((0, X.default)(e)) return K.default.Messages.CHANNEL_TOOLTIP_TEXT_LIMITED;
       return K.default.Messages.CHANNEL_TOOLTIP_TEXT;
     case b.ChannelTypes.GUILD_FORUM:
-      let a = e.isMediaChannel();
-      if (e.isNSFW()) return a ? K.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW : K.default.Messages.CHANNEL_TOOLTIP_FORUM_NSFW;
-      if ((0, X.default)(e)) return a ? K.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : K.default.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
-      return a ? K.default.Messages.MEDIA_CHANNEL : K.default.Messages.FORUM;
+      let s = e.isMediaChannel();
+      if (e.isNSFW()) return s ? K.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW : K.default.Messages.CHANNEL_TOOLTIP_FORUM_NSFW;
+      if ((0, X.default)(e)) return s ? K.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : K.default.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
+      return s ? K.default.Messages.MEDIA_CHANNEL : K.default.Messages.FORUM;
     case b.ChannelTypes.GUILD_MEDIA:
       if (e.isNSFW()) return K.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW;
       if ((0, X.default)(e)) return K.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED;
@@ -116,19 +116,19 @@ function J(e, l) {
     } = t;
   if (null == e) return null;
   null == l && (l = r.default.getGuild(e.getGuildId()));
-  let ee = (0, a.shouldShowMembershipVerificationGate)(null == l ? void 0 : l.id, [r.default, i.default, c.default, s.default]),
+  let ee = (0, s.shouldShowMembershipVerificationGate)(null == l ? void 0 : l.id, [r.default, i.default, c.default, a.default]),
     el = null != l && (0, n.canSeeGuildHome)(null == l ? void 0 : l.id);
   if ((null == e ? void 0 : e.id) === (null == l ? void 0 : l.rulesChannelId)) return L.default;
   switch (e.type) {
     case b.ChannelTypes.GUILD_ANNOUNCEMENT:
       if (Q) {
-        if (e.isNSFW()) return A.default;
+        if (e.isNSFW()) return _.default;
         if ((0, X.default)(e)) return y.default;
         else return u.default
       }
-      if (e.isNSFW()) return _.default;
-      if ((0, X.default)(e)) return j.default;
-      return E.default;
+      if (e.isNSFW()) return A.default;
+      if ((0, X.default)(e)) return E.default;
+      return j.default;
     case b.ChannelTypes.GUILD_STORE:
       return F.default;
     case b.ChannelTypes.DM:
@@ -152,27 +152,27 @@ function J(e, l) {
       return p.default;
     case b.ChannelTypes.GUILD_FORUM:
       let et = e.isMediaChannel();
-      if (e.isNSFW()) return et ? R.default : x.default;
-      if ((0, X.default)(e)) return et ? Z.default : g.default;
-      else return et ? m.default : N.default;
+      if (e.isNSFW()) return et ? R.default : V.default;
+      if ((0, X.default)(e)) return et ? m.default : N.default;
+      else return et ? Z.default : x.default;
     case b.ChannelTypes.GUILD_MEDIA:
       if (e.isNSFW()) return R.default;
-      if ((0, X.default)(e)) return Z.default;
-      else return m.default;
+      if ((0, X.default)(e)) return m.default;
+      else return Z.default;
     case b.ChannelTypes.GUILD_STAGE_VOICE:
-      if (ee) return (0, X.default)(e) ? w.default : z.default;
-      if (K) return w.default;
+      if (ee) return (0, X.default)(e) ? T.default : z.default;
+      if (K) return T.default;
       if ((0, X.default)(e)) return z.default;
       else return P.default;
     case b.ChannelTypes.GUILD_VOICE:
-      if ($) return V.default;
+      if ($) return g.default;
       if (e.isNSFW()) return G.default;
       if (J) return W.default;
       if (ee) {
-        if ((0, X.default)(e)) return w.default;
+        if ((0, X.default)(e)) return T.default;
         return q ? f.default : S.default
       }
-      if (K) return w.default;
+      if (K) return T.default;
       if ((0, X.default)(e)) return q ? f.default : S.default;
       else return q ? o.default : U.default;
     case b.ChannelTypes.GUILD_DIRECTORY:
@@ -182,7 +182,7 @@ function J(e, l) {
     default:
       if (Y.StaticChannelIds.has(e.id)) {
         if (e.id === Y.StaticChannelId.GUILD_HOME || e.id === Y.StaticChannelId.SERVER_GUIDE) {
-          if (el) return T.default;
+          if (el) return w.default;
           return B.default
         }
         if (e.id === Y.StaticChannelId.CHANNEL_BROWSER || e.id === Y.StaticChannelId.CUSTOMIZE_COMMUNITY) return C.default
@@ -194,7 +194,7 @@ function J(e, l) {
 function Q(e) {
   switch (e) {
     case b.ChannelTypes.GUILD_ANNOUNCEMENT:
-      return E.default;
+      return j.default;
     case b.ChannelTypes.GUILD_STORE:
       return F.default;
     case b.ChannelTypes.DM:

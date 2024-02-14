@@ -15,13 +15,13 @@ var i = n("446674"),
   d = n("223913"),
   c = n("373469"),
   f = n("42203"),
-  p = n("30672"),
-  m = n("619911"),
+  m = n("30672"),
+  p = n("619911"),
   h = n("659500"),
   E = n("295999"),
   g = n("49111"),
   S = n("782340"),
-  C = n("317468");
+  C = n("570075");
 
 function T(e) {
   let {
@@ -40,13 +40,13 @@ function T(e) {
       } = e;
       return t !== v.ownerId
     }).length > 0
-  })), y = (0, i.useStateFromStores)([f.default], () => f.default.getChannel(null == v ? void 0 : v.channelId)), [A, N] = (0, d.useCanWatchStream)(y), x = (0, u.useWindowDispatch)(), O = null != I && null != v && I.state !== g.ApplicationStreamStates.ENDED && I.ownerId === v.ownerId, R = e => {
+  })), N = (0, i.useStateFromStores)([f.default], () => f.default.getChannel(null == v ? void 0 : v.channelId)), [A, y] = (0, d.useCanWatchStream)(N), x = (0, u.useWindowDispatch)(), O = null != I && null != v && I.state !== g.ApplicationStreamStates.ENDED && I.ownerId === v.ownerId, R = e => {
     null != v && (r.default.selectVoiceChannel(v.channelId), !O && (0, o.watchStreamAndTransitionToStream)(v, {
       forceMultiple: e
     }), x.dispatch(g.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(g.ComponentActions.MODAL_CLOSE), s.default.popAll())
   };
   if (null == v) return null;
-  let M = (0, d.getStreamCTAString)(N);
+  let M = (0, d.getStreamCTAString)(y);
   t ? M = S.default.Messages.WATCH_STREAM_STREAMING : O && (M = S.default.Messages.WATCH_STREAM_WATCHING);
   let L = {
     color: n,
@@ -58,7 +58,7 @@ function T(e) {
       onClick: () => R(!1),
       ...L,
       fullWidth: !0,
-      children: [(0, l.jsx)(m.default, {
+      children: [(0, l.jsx)(p.default, {
         className: C.streamIcon
       }), M]
     }, "play"), _ && !O ? (0, l.jsx)(a.Tooltip, {
@@ -72,7 +72,7 @@ function T(e) {
         ...L,
         className: C.iconButton,
         size: C.iconButtonSize,
-        children: (0, l.jsx)(p.default, {
+        children: (0, l.jsx)(m.default, {
           className: C.iconSize
         })
       })

@@ -19,8 +19,8 @@ function o(e) {
     openInPopout: d,
     initialSelectedApplicationId: c,
     initialSlide: f = s.ActivityShelfSlides.DIRECTORY,
-    enableSelectedTextChannelInvite: p = !1,
-    analyticsLocations: m
+    enableSelectedTextChannelInvite: m = !1,
+    analyticsLocations: p
   } = e;
   d && (0, a.default)(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   let h = d ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
@@ -35,8 +35,8 @@ function o(e) {
       locationObject: u,
       initialSlide: f,
       initialSelectedApplicationId: c,
-      enableSelectedTextChannelInvite: p,
-      analyticsLocations: m
+      enableSelectedTextChannelInvite: m,
+      analyticsLocations: p
     })
   }, {
     modalKey: s.ACTIVITY_SHELF_WEB_MODAL_KEY,

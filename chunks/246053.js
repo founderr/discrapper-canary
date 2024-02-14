@@ -9,7 +9,7 @@ n("884691");
 var o = n("414456"),
   i = n.n(o),
   s = n("75196"),
-  c = n("741460");
+  c = n("774889");
 (r = l || (l = {})).LEFT = "LEFT", r.RIGHT = "RIGHT", r.UP = "UP", r.DOWN = "DOWN", r.UP_LEFT = "UP_LEFT", r.DOWN_RIGHT = "DOWN_RIGHT";
 let a = e => {
   let {

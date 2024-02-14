@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   buildPermissionContext: function() {
-    return _
+    return I
   },
   usePermissionContext: function() {
-    return T
+    return C
   },
   computeCommandContextType: function() {
     return E
@@ -16,44 +16,44 @@ n.r(t), n.d(t, {
 var i = n("884691"),
   l = n("316693"),
   a = n("446674"),
-  s = n("798609"),
+  o = n("798609"),
   r = n("38654"),
-  o = n("845579"),
+  s = n("845579"),
   u = n("233069"),
   d = n("271938"),
   c = n("42203"),
   p = n("26989"),
   f = n("957255"),
   m = n("697218"),
-  I = n("49111");
+  _ = n("49111");
 
-function _(e, t) {
-  var n, i, l, a, s;
+function I(e, t) {
+  var n, i, l, a, o;
   let f;
   f = e instanceof u.ChannelRecordBase && e.isThread() ? null !== (l = c.default.getChannel(e.parent_id)) && void 0 !== l ? l : e : e;
-  let I = N(f),
-    _ = o.ViewNsfwCommands.getSetting(),
-    T = d.default.getId(),
+  let _ = N(f),
+    I = s.ViewNsfwCommands.getSetting(),
+    C = d.default.getId(),
     E = null !== (a = null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
-    S = null != I && null !== (s = null === (i = p.default.getMember(I, T)) || void 0 === i ? void 0 : i.roles) && void 0 !== s ? s : [],
-    g = r.default.isViewingRoles(I),
+    g = null != _ && null !== (o = null === (i = p.default.getMember(_, C)) || void 0 === i ? void 0 : i.roles) && void 0 !== o ? o : [],
+    h = r.default.isViewingRoles(_),
     {
-      computedPermissions: O,
-      hasBaseAccessPermissions: M
+      computedPermissions: S,
+      hasBaseAccessPermissions: O
     } = A(f);
   return {
     context: f,
-    userId: T,
-    roleIds: S,
-    isImpersonating: g,
+    userId: C,
+    roleIds: g,
+    isImpersonating: h,
     commandType: t,
-    computedPermissions: O,
-    hasBaseAccessPermissions: M,
-    allowNsfw: C(f, E, _)
+    computedPermissions: S,
+    hasBaseAccessPermissions: O,
+    allowNsfw: T(f, E, I)
   }
 }
 
-function T(e, t) {
+function C(e, t) {
   let n = i.useMemo(() => {
       if (e instanceof u.ChannelRecordBase && e.isThread()) {
         var t;
@@ -62,17 +62,17 @@ function T(e, t) {
       return e
     }, [e]),
     l = N(n),
-    s = o.ViewNsfwCommands.useSetting(),
+    o = s.ViewNsfwCommands.useSetting(),
     f = (0, a.useStateFromStores)([d.default], () => d.default.getId()),
-    I = (0, a.useStateFromStores)([m.default], () => {
+    _ = (0, a.useStateFromStores)([m.default], () => {
       var e, t;
       return null !== (t = null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) && void 0 !== t && t
     }),
-    _ = (0, a.useStateFromStoresArray)([p.default], () => {
+    I = (0, a.useStateFromStoresArray)([p.default], () => {
       var e, t;
       return null != l && null !== (t = null === (e = p.default.getMember(l, f)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : []
     }),
-    T = (0, a.useStateFromStores)([r.default], () => r.default.isViewingRoles(l));
+    C = (0, a.useStateFromStores)([r.default], () => r.default.isViewingRoles(l));
   return i.useMemo(() => {
     let {
       computedPermissions: e,
@@ -81,17 +81,17 @@ function T(e, t) {
     return {
       context: n,
       userId: f,
-      roleIds: _,
+      roleIds: I,
       commandType: t,
-      isImpersonating: T,
+      isImpersonating: C,
       computedPermissions: e,
       hasBaseAccessPermissions: i,
-      allowNsfw: C(n, I, s)
+      allowNsfw: T(n, _, o)
     }
-  }, [t, n, T, _, f, I, s])
+  }, [t, n, C, I, f, _, o])
 }
 
-function C(e, t, n) {
+function T(e, t, n) {
   return !!t && (!(e instanceof u.ChannelRecordBase) || (null != e.guild_id ? e.nsfw : n))
 }
 
@@ -102,14 +102,14 @@ function A(e) {
     hasBaseAccessPermissions: !0
   };
   let n = f.default.computePermissions(e);
-  return t = !!l.default.has(n, I.Permissions.ADMINISTRATOR) || (e instanceof u.ChannelRecordBase ? l.default.has(n, I.Permissions.VIEW_CHANNEL) && l.default.has(n, I.Permissions.USE_APPLICATION_COMMANDS) : l.default.has(n, I.Permissions.VIEW_CHANNEL)), {
+  return t = !!l.default.has(n, _.Permissions.ADMINISTRATOR) || (e instanceof u.ChannelRecordBase ? l.default.has(n, _.Permissions.VIEW_CHANNEL) && l.default.has(n, _.Permissions.USE_APPLICATION_COMMANDS) : l.default.has(n, _.Permissions.VIEW_CHANNEL)), {
     computedPermissions: n,
     hasBaseAccessPermissions: t
   }
 }
 
 function E(e, t) {
-  return e instanceof u.ChannelRecordBase && null == e.guild_id ? e.type === I.ChannelTypes.DM && e.getRecipientId() === t ? s.ApplicationCommandContextType.BOT_DM : s.ApplicationCommandContextType.PRIVATE_CHANNEL : s.ApplicationCommandContextType.GUILD
+  return e instanceof u.ChannelRecordBase && null == e.guild_id ? e.type === _.ChannelTypes.DM && e.getRecipientId() === t ? o.ApplicationCommandContextType.BOT_DM : o.ApplicationCommandContextType.PRIVATE_CHANNEL : o.ApplicationCommandContextType.GUILD
 }
 
 function N(e) {

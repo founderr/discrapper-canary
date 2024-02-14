@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   getFilteredTopCommands: function() {
-    return I
+    return _
   },
   default: function() {
     return A
@@ -13,16 +13,16 @@ n.r(t), n.d(t, {
 var i = n("917351"),
   l = n.n(i),
   a = n("446674"),
-  s = n("913144"),
+  o = n("913144"),
   r = n("798609"),
-  o = n("80507"),
+  s = n("80507"),
   u = n("374363"),
   d = n("317041"),
   c = n("397336");
 let p = {
     pendingUsages: []
   },
-  f = new o.default({
+  f = new s.default({
     computeBonus: () => 1,
     computeWeight: e => e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 0,
     lookupKey: e => e,
@@ -39,18 +39,18 @@ function m(e) {
   return [...t]
 }
 
-function I(e, t) {
+function _(e, t) {
   return e.filter(e => {
     if (e.includes(":")) return null != t.guild && t.guild.id === e.split(":")[1];
     return !0
   }).map(e => e.split(":")[0])
 }
 
-function _(e, t) {
+function I(e, t) {
   return 0 > Number(t.id) ? t.id : null != e.guild && null != t.guildId ? "".concat(t.id, ":").concat(e.guild.id) : t.id
 }
 
-function T() {
+function C() {
   var e, t;
   let n = u.default.frecencyWithoutFetchingLatest,
     i = null !== (t = null === (e = n.applicationCommandFrecency) || void 0 === e ? void 0 : e.applicationCommands) && void 0 !== t ? t : {};
@@ -59,9 +59,9 @@ function T() {
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), p.pendingUsages)
 }
-class C extends a.default.PersistedStore {
+class T extends a.default.PersistedStore {
   initialize(e) {
-    null != e && (p = e), this.syncWith([u.default], T)
+    null != e && (p = e), this.syncWith([u.default], C)
   }
   getState() {
     return p
@@ -74,21 +74,21 @@ class C extends a.default.PersistedStore {
   }
   getScoreWithoutLoadingLatest(e, t) {
     var n;
-    return null !== (n = f.getScore(_(e, t))) && void 0 !== n ? n : 0
+    return null !== (n = f.getScore(I(e, t))) && void 0 !== n ? n : 0
   }
   getTopCommandsWithoutLoadingLatest() {
     return f.frequently
   }
 }
-C.displayName = "ApplicationCommandFrecencyStore", C.persistKey = "ApplicationCommandFrecencyV2";
-var A = new C(s.default, {
+T.displayName = "ApplicationCommandFrecencyStore", T.persistKey = "ApplicationCommandFrecencyV2";
+var A = new T(o.default, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t,
       context: n
     } = e;
     if (t.type !== r.ApplicationCommandType.CHAT) return !1;
-    let i = _(n, t);
+    let i = I(n, t);
     p.pendingUsages.push({
       key: i,
       timestamp: Date.now()

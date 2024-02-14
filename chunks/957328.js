@@ -29,7 +29,7 @@ var a = n("37983"),
   R = n("50885"),
   O = n("49111"),
   v = n("782340"),
-  L = n("923075");
+  L = n("782260");
 class M extends s.PureComponent {
   createSound() {
     let {

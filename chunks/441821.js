@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return R
   }
 }), n("222007");
-var a, l, s = n("37983"),
+var l, a, s = n("37983"),
   i = n("884691"),
   r = n("414456"),
   o = n.n(r),
@@ -24,7 +24,7 @@ var a, l, s = n("37983"),
   T = n("141962"),
   v = n("49111"),
   x = n("782340"),
-  N = n("193879");
+  N = n("839430");
 let A = ["embedded_cover"],
   M = {
     tension: 800,
@@ -35,8 +35,8 @@ function R(e) {
   var t;
   let {
     channel: n,
-    activityItem: a,
-    onClick: l,
+    activityItem: l,
+    onClick: a,
     aspectRatio: r = 0,
     animatedDivClass: R
   } = e, j = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser(), []), {
@@ -46,10 +46,10 @@ function R(e) {
     labelType: P
   } = (0, C.default)({
     channel: n,
-    activityItem: a,
+    activityItem: l,
     guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
     locationObject: {},
-    onActivityItemSelected: l,
+    onActivityItemSelected: a,
     embeddedActivitiesManager: T.default,
     assetNames: A
   }), [b, D] = i.useState(!1), U = i.useCallback(() => {
@@ -61,11 +61,11 @@ function R(e) {
     children: (0, s.jsx)("div", {
       className: N.badgeContainer,
       children: (0, s.jsx)(I.default, {
-        name: a.application.name,
+        name: l.application.name,
         labelType: P
       })
     })
-  }), [a.application.name, P]), V = i.useMemo(() => (0, g.default)(a.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
+  }), [l.application.name, P]), V = i.useMemo(() => (0, g.default)(l.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
     className: N.iconOuterContainer,
     children: (0, s.jsx)("div", {
       className: o(N.iconInnerContainer, N.nitroIconContainer),
@@ -85,7 +85,7 @@ function R(e) {
         className: N.lock
       })
     })
-  }), [a.activity, F, j]), B = i.useMemo(() => {
+  }), [l.activity, F, j]), B = i.useMemo(() => {
     switch (y) {
       case C.ActivityAction.JOIN:
         return (0, s.jsx)("div", {
@@ -149,7 +149,7 @@ function R(e) {
           children: (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(_.default, {
               imageBackground: O,
-              applicationName: a.application.name,
+              applicationName: l.application.name,
               imageClassName: N.activitySuggestionImage,
               imageNotFoundClassName: N.brokenImageIconWrapper
             }), k, V, B]
@@ -158,4 +158,4 @@ function R(e) {
       }
     })
   })
-}(l = a || (a = {}))[l.THIRTEEN_BY_ELEVEN = 0] = "THIRTEEN_BY_ELEVEN", l[l.SIXTEEN_BY_NINE = 1] = "SIXTEEN_BY_NINE", R.AspectRatio = a
+}(a = l || (l = {}))[a.THIRTEEN_BY_ELEVEN = 0] = "THIRTEEN_BY_ELEVEN", a[a.SIXTEEN_BY_NINE = 1] = "SIXTEEN_BY_NINE", R.AspectRatio = l

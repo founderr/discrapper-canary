@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   handleOpenSelectImageModal: function() {
-    return f
+    return m
   },
   showFileSizeErrorModal: function() {
     return _
@@ -16,12 +16,12 @@ n.r(t), n.d(t, {
     return I
   },
   isColorDark: function() {
-    return p
+    return C
   }
 });
-var r = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("509043"),
+var r = n("509043"),
   l = n("77078"),
   a = n("336522"),
   s = n("315102"),
@@ -29,23 +29,23 @@ var i = n("509043"),
   u = n("737403"),
   d = n("453252"),
   c = n("75015"),
-  m = n("782340");
+  f = n("782340");
 
-function f(e, t, i, a) {
+function m(e, t, r, a) {
   (0, l.openModalLazy)(async () => {
     let {
       default: l
     } = await n.el("420333").then(n.bind(n, "420333"));
-    return n => (0, r.jsx)(l, {
+    return n => (0, i.jsx)(l, {
       filters: a,
       maxFileSizeBytes: d.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-      imageSpecifications: e === c.UploadTypes.BANNER && m.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
-      onComplete: (n, r) => (0, u.maybeOpenProfilePreviewModal)({
+      imageSpecifications: e === c.UploadTypes.BANNER && f.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
+      onComplete: (n, i) => (0, u.maybeOpenProfilePreviewModal)({
         imageSrc: n,
-        file: r,
+        file: i,
         uploadType: e,
         guildId: t,
-        isTryItOutFlow: i
+        isTryItOutFlow: r
       }),
       uploadType: e,
       showUpsellHeader: !0,
@@ -56,21 +56,21 @@ function f(e, t, i, a) {
 
 function _() {
   (0, a.openUploadError)({
-    title: m.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-    help: m.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+    title: f.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+    help: f.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
       maxSize: (0, o.sizeString)(d.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
     })
   })
 }
 
 function E(e, t, n) {
-  let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+  let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
   if (null != e) return e;
   let {
-    size: i = 80,
+    size: r = 80,
     canAnimate: l = !0
-  } = r, a = null === e;
-  return a && null == t ? s.default.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, l) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, l)
+  } = i, a = null === e;
+  return a && null == t ? s.default.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, r, l) : n.getAvatarURL(null == t ? void 0 : t.guildId, r, l)
 }
 
 function T(e, t) {
@@ -81,7 +81,7 @@ function I(e, t) {
   return "" === e ? null : null != e ? e : t
 }
 
-function p(e) {
-  let t = null != e ? (0, i.getDarkness)(e) : 1;
+function C(e) {
+  let t = null != e ? (0, r.getDarkness)(e) : 1;
   return t > .25
 }

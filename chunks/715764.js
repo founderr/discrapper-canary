@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return j
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
@@ -27,7 +27,7 @@ var a = n("37983"),
   v = n("49111"),
   x = n("353927"),
   N = n("782340"),
-  A = n("146789");
+  A = n("532351");
 let M = o.AvatarSizes.SIZE_80,
   R = o.AvatarSizes.SIZE_40;
 
@@ -48,7 +48,7 @@ function j(e) {
     user: F,
     streamId: k,
     speaking: V
-  } = t, B = F.id === w, H = (0, T.default)(t), G = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([S.default], () => null != F.id && S.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = V && (W || G), X = o < 124 ? R : M, {
+  } = t, B = F.id === w, G = (0, T.default)(t), H = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([S.default], () => null != F.id && S.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = V && (W || H), X = o < 124 ? R : M, {
     avatarSrc: J,
     avatarDecorationSrc: q
   } = (0, m.default)({
@@ -57,9 +57,9 @@ function j(e) {
     size: X,
     animateOnHover: !Z
   }), Q = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
-  return (l.useEffect(() => {
-    n.isGuildStageVoice() && !H && (null == Q ? void 0 : Q.id) === F.id && u.default.selectParticipant(n.id, null)
-  }, [H]), s && !Y && !b && H && !L && null != U && S.default.supports(x.Features.VIDEO)) ? (0, a.jsx)(_.default, {
+  return (a.useEffect(() => {
+    n.isGuildStageVoice() && !G && (null == Q ? void 0 : Q.id) === F.id && u.default.selectParticipant(n.id, null)
+  }, [G]), s && !Y && !b && G && !L && null != U && S.default.supports(x.Features.VIDEO)) ? (0, l.jsx)(_.default, {
     onResize: y,
     wrapperClassName: A.videoWrapper,
     className: A.content,
@@ -70,11 +70,11 @@ function j(e) {
     paused: j,
     videoSpinnerContext: F.id === w ? d.VideoSpinnerContext.SELF_VIDEO : d.VideoSpinnerContext.REMOTE_VIDEO,
     userId: F.id
-  }, k) : (0, a.jsx)("div", {
+  }, k) : (0, l.jsx)("div", {
     className: i(A.content, {
       [A.blockedAvatar]: P
     }),
-    children: (0, a.jsx)(C.default, {
+    children: (0, l.jsx)(C.default, {
       "aria-label": K,
       src: J,
       avatarDecoration: q,

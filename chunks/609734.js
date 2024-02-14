@@ -15,15 +15,15 @@ var i = n("414456"),
   d = n("252063"),
   c = n("42203"),
   f = n("18494"),
-  p = n("191814"),
-  m = n("758710"),
+  m = n("191814"),
+  p = n("758710"),
   h = n("351825"),
   E = n("306160"),
   g = n("253981"),
   S = n("613676"),
   C = n("49111"),
   T = n("782340"),
-  v = n("834680");
+  v = n("796440");
 
 function I(e) {
   var t;
@@ -32,12 +32,12 @@ function I(e) {
     className: i
   } = e, I = c.default.getChannel(f.default.getChannelId()), {
     appsInGDMEnabled: _,
-    availableApplications: y
+    availableApplications: N
   } = (0, d.usePrivateChannelIntegrationState)({
     channelId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : ""
   });
   if (null == n || !(0, S.canInstallApplication)(n.id, n.customInstallUrl, n.installParams)) return null;
-  let A = _ && null != y.find(e => e.id === (null == n ? void 0 : n.id));
+  let A = _ && null != N.find(e => e.id === (null == n ? void 0 : n.id));
   return (0, l.jsx)(s.Button, {
     color: s.Button.Colors.PRIMARY,
     look: s.Button.Looks.FILLED,
@@ -82,13 +82,13 @@ function I(e) {
       children: [(0, l.jsx)(h.default, {
         width: 16,
         height: 16
-      }), (0, l.jsx)(p.default, {
+      }), (0, l.jsx)(m.default, {
         size: 4,
         horizontal: !0
       }), (0, l.jsx)("span", {
         className: v.applicationInstallButtonText,
         children: A ? T.default.Messages.ADD : T.default.Messages.APPLICATION_ADD_BUTTON
-      }), null == n.customInstallUrl || g.default.isDiscordUrl(n.customInstallUrl) ? null : (0, l.jsx)(m.default, {
+      }), null == n.customInstallUrl || g.default.isDiscordUrl(n.customInstallUrl) ? null : (0, l.jsx)(p.default, {
         className: v.launchIcon,
         width: 16,
         height: 16

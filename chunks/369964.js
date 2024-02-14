@@ -15,7 +15,7 @@ var n = l("37983"),
   c = l("216422"),
   f = l("994428"),
   m = l("782340"),
-  S = l("804920"),
+  S = l("175787"),
   C = a.forwardRef(function(e, t) {
     let {
       body: l,

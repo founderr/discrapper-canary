@@ -4,16 +4,16 @@ n.r(t), n.d(t, {
     return r
   },
   NONE_ITEM: function() {
-    return C
+    return E
   },
   SHOP_ITEM: function() {
-    return v
+    return C
   },
   default: function() {
     return p
   }
 }), n("222007"), n("808653"), n("424973");
-var r, s, i = n("884691"),
+var r, i, s = n("884691"),
   l = n("917351"),
   a = n("65597"),
   o = n("853987"),
@@ -22,26 +22,26 @@ var r, s, i = n("884691"),
   d = n("697218"),
   f = n("719923"),
   h = n("782340");
-(s = r || (r = {})).PURCHASE = "purchase", s.PREMIUM_PURCHASE = "premium_purchase", s.PREVIEW = "preview";
-let C = {
+(i = r || (r = {})).PURCHASE = "purchase", i.PREMIUM_PURCHASE = "premium_purchase", i.PREVIEW = "preview";
+let E = {
     id: "None"
   },
-  v = {
+  C = {
     id: "Shop"
   };
 var p = () => {
   let e = (0, a.default)([d.default], () => d.default.getCurrentUser()),
     t = f.default.canUseCollectibles(e),
     n = (0, a.default)([u.default], () => u.default.purchases),
-    [r, s] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.categories, o.default.products]);
-  return (0, i.useMemo)(() => {
+    [r, i] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.categories, o.default.products]);
+  return (0, s.useMemo)(() => {
     let e = (0, l.uniqBy)([...(0, c.getProfileEffectsFromPurchases)(n), ...(0, c.getProfileEffectsFromCategories)(r)], "id"),
-      i = e.reduce((e, r) => {
-        let i = n.get(r.skuId),
-          l = (0, c.isPremiumCollectiblesPurchase)(i);
+      s = e.reduce((e, r) => {
+        let s = n.get(r.skuId),
+          l = (0, c.isPremiumCollectiblesPurchase)(s);
         if (l) return e.premium_purchase.push(r), e;
-        if (null != i) return e.purchase.push(r), e;
-        if (!t && (0, c.isPremiumCollectiblesProduct)(s.get(r.skuId))) {
+        if (null != s) return e.purchase.push(r), e;
+        if (!t && (0, c.isPremiumCollectiblesProduct)(i.get(r.skuId))) {
           let t = e.premium_purchase;
           return t.push(r), e
         }
@@ -53,17 +53,17 @@ var p = () => {
       });
     return [{
       section: "purchase",
-      items: [C, v, ...i.purchase],
+      items: [E, C, ...s.purchase],
       height: 12,
       header: h.default.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER
     }, {
       section: "premium_purchase",
-      items: i.premium_purchase,
+      items: s.premium_purchase,
       height: 12,
       header: h.default.Messages.CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER
     }, {
       section: "preview",
-      items: i.preview,
+      items: s.preview,
       height: 12,
       header: h.default.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
     }].filter(e => {
@@ -72,5 +72,5 @@ var p = () => {
       } = e;
       return t.length > 0
     })
-  }, [r, s, n, t])
+  }, [r, i, n, t])
 }

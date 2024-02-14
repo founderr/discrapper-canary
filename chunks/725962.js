@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("37983"),
-  a = n("884691"),
-  s = n("143435"),
-  i = n("77078"),
+  i = n("884691"),
+  a = n("143435"),
+  s = n("77078"),
   r = n("599110"),
   o = n("195812"),
   u = n("49111"),
@@ -17,38 +17,38 @@ var l = n("37983"),
       href: t,
       className: n,
       iconClassName: c,
-      rel: m,
-      target: f,
-      mimeType: h,
-      fileName: p,
-      focusProps: g,
-      onClick: E,
-      ...C
-    } = e, v = a.useMemo(() => s.designConfig.getDefaultLinkInterceptor(t), [t]), I = a.useCallback(e => {
+      rel: f,
+      target: m,
+      mimeType: p,
+      fileName: h,
+      focusProps: E,
+      onClick: g,
+      ...S
+    } = e, C = i.useMemo(() => a.designConfig.getDefaultLinkInterceptor(t), [t]), T = i.useCallback(e => {
       r.default.track(u.AnalyticEvents.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-        attachment_type: null == h ? void 0 : h[0],
-        attachment_subtype: null == h ? void 0 : h[1]
-      }), null == E || E(), null == v || v(e)
-    }, [v, h, E]);
-    return null != p ? (0, l.jsx)(i.Anchor, {
+        attachment_type: null == p ? void 0 : p[0],
+        attachment_subtype: null == p ? void 0 : p[1]
+      }), null == g || g(), null == C || C(e)
+    }, [C, p, g]);
+    return null != h ? (0, l.jsx)(s.Anchor, {
       href: t,
-      onClick: I,
-      target: f,
-      rel: m,
+      onClick: T,
+      target: m,
+      rel: f,
       className: n,
       "aria-label": d.default.Messages.DOWNLOAD,
-      focusProps: g,
-      ...C,
-      children: p
-    }) : (0, l.jsx)(i.Anchor, {
+      focusProps: E,
+      ...S,
+      children: h
+    }) : (0, l.jsx)(s.Anchor, {
       href: t,
-      onClick: I,
-      target: f,
-      rel: m,
+      onClick: T,
+      target: m,
+      rel: f,
       className: n,
       "aria-label": d.default.Messages.DOWNLOAD,
-      focusProps: g,
-      ...C,
+      focusProps: E,
+      ...S,
       children: (0, l.jsx)(o.default, {
         className: c
       })

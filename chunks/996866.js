@@ -20,8 +20,8 @@ var l = n("884691"),
   d = n("662285"),
   c = n("782911"),
   f = n("629414"),
-  p = n("53887"),
-  m = n("486150"),
+  m = n("53887"),
+  p = n("486150"),
   h = n("555759"),
   E = n("450484");
 let g = 30 * o.default.Millis.SECOND;
@@ -49,7 +49,7 @@ function S(e) {
 }
 
 function C(e, t) {
-  return (0, i.useStateFromStoresObject)([d.default, r.default], () => (0, p.default)(d.default, r.default, t, e), [e, t])
+  return (0, i.useStateFromStoresObject)([d.default, r.default], () => (0, m.default)(d.default, r.default, t, e), [e, t])
 }
 
 function T(e, t, n) {
@@ -64,7 +64,7 @@ function T(e, t, n) {
       startLoading: u,
       clearLoading: d
     } = S(i),
-    p = l.useCallback(() => {
+    m = l.useCallback(() => {
       u(), (0, h.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_PLAY, n).catch(d)
     }, [i, n, u, d]);
   return {
@@ -72,7 +72,7 @@ function T(e, t, n) {
     tooltip: (0, f.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_PLAY),
     disabled: !o && (s || a || r),
     loading: o,
-    onClick: p,
+    onClick: m,
     spotifyData: i
   }
 }
@@ -86,18 +86,18 @@ function v(e, t, n, i) {
       isCurrentUser: d
     } = s,
     {
-      loading: p,
+      loading: m,
       startLoading: h,
       clearLoading: g
     } = S(s),
     T = l.useCallback(() => {
-      h(), (0, m.default)(s, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, n).catch(g)
+      h(), (0, p.default)(s, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, n).catch(g)
     }, [s, n, h, g]);
   return {
     label: (0, c.default)(s, E.SpotifyActionTypes.USER_ACTIVITY_SYNC),
     tooltip: (0, f.default)(s, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, a),
-    disabled: !p && (d || r || o),
-    loading: p,
+    disabled: !m && (d || r || o),
+    loading: m,
     onClick: T,
     spotifyData: s
   }
@@ -114,11 +114,11 @@ function I(e, t, n) {
     {
       loading: u,
       startLoading: d,
-      clearLoading: p
+      clearLoading: m
     } = S(i),
     h = l.useCallback(() => {
-      d(), (0, m.default)(i, E.SpotifyActionTypes.EMBED_SYNC, n).catch(p)
-    }, [i, n, d, p]);
+      d(), (0, p.default)(i, E.SpotifyActionTypes.EMBED_SYNC, n).catch(m)
+    }, [i, n, d, m]);
   return {
     label: (0, c.default)(i, E.SpotifyActionTypes.EMBED_SYNC),
     tooltip: (0, f.default)(i, E.SpotifyActionTypes.EMBED_SYNC),

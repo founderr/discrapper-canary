@@ -19,7 +19,7 @@ var r = n("37983"),
   E = n("49111"),
   A = n("917219"),
   p = n("782340"),
-  T = n("879777"),
+  T = n("304379"),
   I = e => {
     let {
       file: t,
@@ -31,18 +31,18 @@ var r = n("37983"),
       uploadType: N = _.UploadTypes.AVATAR,
       showUpsellHeader: v = !1,
       analyticsPage: C
-    } = e, [M, w] = i.useState({
+    } = e, [M, S] = i.useState({
       width: 0,
       height: 0
-    }), [S, O] = i.useState({
+    }), [w, O] = i.useState({
       top: 0,
       bottom: 0,
       left: 0,
       right: 0
-    }), [D, L] = i.useState(!1), [y, b] = i.useState(1), [U, x] = i.useState({
+    }), [D, L] = i.useState(!1), [y, b] = i.useState(1), [U, P] = i.useState({
       x: 0,
       y: 0
-    }), [P, H] = i.useState(null), [B, G] = i.useState(!1), {
+    }), [x, H] = i.useState(null), [B, G] = i.useState(!1), {
       AnalyticsLocationProvider: V
     } = (0, l.default)(u.default.IMAGE_CROPPING_MODAL), j = i.useRef({
       x: 0,
@@ -85,10 +85,10 @@ var r = n("37983"),
             }
         }
       },
-      Z = i.useCallback((e, t, n) => {
+      X = i.useCallback((e, t, n) => {
         j.current = (0, f.getBoundedCoordinates)(e, t, n), null != F.current && (F.current.style.transform = "translate3d(".concat(j.current.x, "px, ").concat(j.current.y, "px, 0)"))
       }, [F]),
-      X = i.useCallback(() => {
+      Y = i.useCallback(() => {
         if (null == F.current || y > 1) return;
         let {
           width: e,
@@ -100,9 +100,9 @@ var r = n("37983"),
         H({
           width: n,
           height: r
-        }), w(i), O((0, f.calculateDragBoundaries)(n, r, i))
+        }), S(i), O((0, f.calculateDragBoundaries)(n, r, i))
       }, [N, y]),
-      Y = i.useCallback(e => {
+      Z = i.useCallback(e => {
         let {
           x: t,
           y: n
@@ -110,8 +110,8 @@ var r = n("37983"),
         if (!D || e.clientX === t && e.clientY === n) return;
         let r = e.clientX - U.x,
           i = e.clientY - U.y;
-        Z(r, i, S)
-      }, [S, D, U, Z]),
+        X(r, i, w)
+      }, [w, D, U, X]),
       K = () => {
         L(!1)
       },
@@ -137,15 +137,15 @@ var r = n("37983"),
         } else e = (0, f.cropStaticImage)(n, M, j.current, r);
         await g(e, t), G(!1), R()
       };
-    return i.useEffect(() => (window.addEventListener("mouseup", K), window.addEventListener("resize", X), () => {
-      window.removeEventListener("mouseup", K), window.removeEventListener("resize", X)
-    }), [X]), i.useEffect(() => () => {
+    return i.useEffect(() => (window.addEventListener("mouseup", K), window.addEventListener("resize", Y), () => {
+      window.removeEventListener("mouseup", K), window.removeEventListener("resize", Y)
+    }), [Y]), i.useEffect(() => () => {
       null != W.current && W.current()
     }, []), i.useEffect(() => {
-      if (D) return window.addEventListener("mousemove", Y), () => window.removeEventListener("mousemove", Y)
-    }, [Y, D]), (0, r.jsx)(V, {
+      if (D) return window.addEventListener("mousemove", Z), () => window.removeEventListener("mousemove", Z)
+    }, [Z, D]), (0, r.jsx)(V, {
       children: (0, r.jsxs)(s.ModalRoot, {
-        onAnimationEnd: X,
+        onAnimationEnd: Y,
         transitionState: I,
         size: s.ModalSize.MEDIUM,
         children: [v && (0, r.jsx)(o.default, {
@@ -167,16 +167,16 @@ var r = n("37983"),
             className: T.editingContainer,
             children: [(0, r.jsx)("img", {
               style: {
-                opacity: null == P ? 0 : 1,
+                opacity: null == x ? 0 : 1,
                 transform: "translate3d(".concat(j.current.x, "px, ").concat(j.current.y, "px, 0px)"),
                 ...(() => {
-                  if (null == P) return {};
-                  let e = P.width / P.height,
-                    t = q() && e > _.BANNER_ASPECT_RATIO ? M.height / P.height : 1;
+                  if (null == x) return {};
+                  let e = x.width / x.height,
+                    t = q() && e > _.BANNER_ASPECT_RATIO ? M.height / x.height : 1;
                   return {
-                    width: P.width * y * t,
-                    minWidth: P.width * y * t,
-                    height: P.height * y * t
+                    width: x.width * y * t,
+                    minWidth: x.width * y * t,
+                    height: x.height * y * t
                   }
                 })()
               },
@@ -187,7 +187,7 @@ var r = n("37983"),
               onMouseDown: e => {
                 let t = e.clientX - j.current.x,
                   n = e.clientY - j.current.y;
-                x({
+                P({
                   x: t,
                   y: n
                 }), L(!0)
@@ -196,7 +196,7 @@ var r = n("37983"),
             }), (0, r.jsx)("div", {
               className: N === _.UploadTypes.AVATAR ? T.overlayAvatar : T.overlayBanner,
               style: {
-                opacity: null == P ? 0 : 1,
+                opacity: null == x ? 0 : 1,
                 width: M.width,
                 height: M.height
               }
@@ -213,15 +213,15 @@ var r = n("37983"),
               maxValue: 2,
               keyboardStep: .025,
               asValueChanges: e => {
-                if (null == P) return;
+                if (null == x) return;
                 let {
                   width: t,
                   height: n
-                } = P, r = (0, f.calculateDragBoundaries)(t * e, n * e, M), {
+                } = x, r = (0, f.calculateDragBoundaries)(t * e, n * e, M), {
                   x: i,
                   y: s
                 } = j.current;
-                (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && Z(i, s, r), b(e), O(r)
+                (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && X(i, s, r), b(e), O(r)
               },
               disabled: B,
               equidistant: !0,

@@ -15,7 +15,7 @@ var a = s("37983"),
   c = s("143460"),
   E = s("49111"),
   _ = s("782340"),
-  I = s("493265");
+  I = s("772806");
 let T = o.default.getArticleURL(E.HelpdeskArticles.GUILD_AUTOMOD_REGEX);
 
 function f(e) {

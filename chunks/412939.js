@@ -35,7 +35,7 @@ var a = s("37983"),
   v = s("677795"),
   j = s("874146"),
   G = s("782340"),
-  U = s("254981");
+  U = s("518891");
 let P = (0, L.cssValueToNumber)(_.default.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 
 function b() {

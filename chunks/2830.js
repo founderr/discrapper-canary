@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return V
   }
 }), n("424973");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
@@ -39,22 +39,22 @@ var a = n("37983"),
   D = n("99795"),
   U = n("49111"),
   w = n("782340"),
-  F = n("878717");
+  F = n("963405");
 
 function k(e) {
   let {
     channelId: t,
     guildId: n
-  } = e, l = Date.now(), s = (0, u.useStateFromStores)([M.default, O.default], () => o(M.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, S.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
-  return 0 === s.length ? null : (0, a.jsx)(a.Fragment, {
-    children: s.map((e, t) => (0, a.jsx)(d.Tooltip, {
+  } = e, a = Date.now(), s = (0, u.useStateFromStores)([M.default, O.default], () => o(M.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, S.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, a)).slice(0, 3).value());
+  return 0 === s.length ? null : (0, l.jsx)(l.Fragment, {
+    children: s.map((e, t) => (0, l.jsx)(d.Tooltip, {
       position: "bottom",
       color: d.Tooltip.Colors.GREY,
       text: w.default.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({
         username: e.user.username
       }),
-      children: l => (0, a.jsx)(j.default, {
-        ...l,
+      children: a => (0, l.jsx)(j.default, {
+        ...a,
         className: i(F.speaker, {
           [F.last]: t === s.length - 1
         }),
@@ -85,12 +85,12 @@ function V(e) {
     userParticipantCount: O.default.getUserParticipantCount(S)
   }), [S]), V = (0, y.default)(n), {
     preventIdle: B,
-    allowIdle: H
-  } = (0, C.usePreventIdle)("popup"), G = [];
+    allowIdle: G
+  } = (0, C.usePreventIdle)("popup"), H = [];
   if (V) {
     let e = (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(j.id) : void 0,
       t = (null == j ? void 0 : j.type) === D.ParticipantTypes.ACTIVITY ? j.id : void 0;
-    G.push((0, a.jsx)(x.default, {
+    H.push((0, l.jsx)(x.default, {
       className: F.button,
       channel: n,
       applicationId: t,
@@ -99,24 +99,24 @@ function V(e) {
       analyticsLocation: n.type === U.ChannelTypes.GUILD_VOICE ? U.AnalyticsPages.GUILD_CHANNEL : U.AnalyticsPages.DM_CHANNEL
     }, "invite-button"))
   }
-  return M && G.push((0, a.jsx)(k, {
+  return M && H.push((0, l.jsx)(k, {
     channelId: S,
     guildId: n.guild_id
-  }, "current-speaker")), G.push((0, a.jsx)(h.default, {
+  }, "current-speaker")), H.push((0, l.jsx)(h.default, {
     className: F.button,
     channelId: S
-  }, "clips-enabled-indicator")), (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM && (G.push((0, a.jsx)(g.default, {
+  }, "clips-enabled-indicator")), (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM && (H.push((0, l.jsx)(g.default, {
     className: F.button,
     participant: j
-  }, "warning")), G.push((0, a.jsx)(p.default, {
+  }, "warning")), H.push((0, l.jsx)(p.default, {
     size: L.default.Sizes.LARGE,
     className: F.button,
     participant: j,
     showQuality: !0
-  }, "live-indicator"))), M && G.push((0, a.jsx)(d.Popout, {
+  }, "live-indicator"))), M && H.push((0, l.jsx)(d.Popout, {
     position: "bottom",
-    renderPopout: () => (0, a.jsx)(_.default, {
-      children: (0, a.jsx)(b.default, {
+    renderPopout: () => (0, l.jsx)(_.default, {
+      children: (0, l.jsx)(b.default, {
         channel: n
       })
     }),
@@ -124,7 +124,7 @@ function V(e) {
       let {
         isShown: n
       } = t;
-      return (0, l.createElement)(N.default, {
+      return (0, a.createElement)(N.default, {
         ...e,
         isActive: n,
         count: w,
@@ -132,29 +132,29 @@ function V(e) {
         className: F.button
       })
     }
-  }, "call-members-popout")), i && G.push(null != j ? (0, a.jsx)(v.default, {
+  }, "call-members-popout")), i && H.push(null != j ? (0, l.jsx)(v.default, {
     className: F.button,
     channelId: S
-  }, "deselect-participant") : (0, a.jsx)(A.default, {
+  }, "deselect-participant") : (0, l.jsx)(A.default, {
     className: F.button,
     channelId: S,
     isHorizontal: !0
-  }, "select-participant")), !t && G.push((0, a.jsx)(f.default, {
+  }, "select-participant")), !t && H.push((0, l.jsx)(f.default, {
     className: F.button
-  }, "clips")), G.push((0, a.jsx)(E.default, {
+  }, "clips")), H.push((0, l.jsx)(E.default, {
     onOpen: B,
-    onClose: H,
+    onClose: G,
     className: F.button
-  }, "recents")), G.push((0, a.jsx)(c.CallscopeChannelCallIssueMarker, {
+  }, "recents")), H.push((0, l.jsx)(c.CallscopeChannelCallIssueMarker, {
     className: F.button
-  }, "callscope-marker")), G.push((0, a.jsx)(d.Popout, {
+  }, "callscope-marker")), H.push((0, l.jsx)(d.Popout, {
     position: "bottom",
     renderPopout: e => {
       let {
         closePopout: t
       } = e;
-      return (0, a.jsx)(_.default, {
-        children: (0, a.jsx)(P.default, {
+      return (0, l.jsx)(_.default, {
+        children: (0, l.jsx)(P.default, {
           channelId: S,
           onClose: t,
           appContext: s,
@@ -166,20 +166,20 @@ function V(e) {
       let {
         isShown: n
       } = t;
-      return (0, l.createElement)(T.default, {
+      return (0, a.createElement)(T.default, {
         ...e,
         key: "more-options",
         isActive: n,
         className: F.lastButton
       })
     }
-  }, "more-options-popout")), !r && (G.push((0, a.jsx)(R.default.Divider, {
+  }, "more-options-popout")), !r && (H.push((0, l.jsx)(R.default.Divider, {
     className: F.divider
-  }, "divider")), G.push((0, a.jsx)(I.ChatButton, {
+  }, "divider")), H.push((0, l.jsx)(I.ChatButton, {
     channelId: n.id,
     className: F.chatButtonSpacer,
     disabled: !0
-  }, "chat-spacer"))), (0, a.jsx)(a.Fragment, {
-    children: G
+  }, "chat-spacer"))), (0, l.jsx)(l.Fragment, {
+    children: H
   })
 }

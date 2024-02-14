@@ -11,8 +11,8 @@ var r = n("414456"),
   a = n("773179"),
   o = n.n(a),
   l = n("669491"),
-  u = n("383817"),
-  c = n("339010");
+  u = n("619974"),
+  c = n("323805");
 let d = Object.fromEntries(Object.keys(l.default.colors).map(e => [o.kebabCase(e), e])),
   Text = e => {
     let t, {

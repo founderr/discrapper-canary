@@ -21,7 +21,7 @@ var a = s("37983"),
   S = s("31225"),
   R = s("49111"),
   m = s("782340"),
-  A = s("786832");
+  A = s("413037");
 let N = [{
     feature: R.SKUFeatureTypes.SINGLE_PLAYER,
     getText: () => m.default.Messages.APPLICATION_STORE_SINGLE_PLAYER,

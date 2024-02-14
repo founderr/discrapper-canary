@@ -19,7 +19,7 @@ var n = s("414456"),
   I = s("646718"),
   T = s("49111"),
   f = s("782340"),
-  S = s("737047"),
+  S = s("334081"),
   R = function(e) {
     let {
       isFullscreen: t

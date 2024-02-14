@@ -113,7 +113,7 @@ let c = (e, t, n) => {
       y: o.fontPadding + 2 * o.lineHeight
     }, !0)
   },
-  p = (e, t, n) => {
+  m = (e, t, n) => {
     var l;
     let {
       canvas: i
@@ -146,23 +146,23 @@ let c = (e, t, n) => {
       w: o.activitySize,
       h: o.activitySize
     }, 8);
-    let p = o.activitySize + o.padding + o.imagePadding;
+    let m = o.activitySize + o.padding + o.imagePadding;
     i.setColor("dark" === f ? "white" : "rgb(6, 6, 7)"), i.setFont({
       size: 14,
       family: '"gg sans", sans-serif',
       weight: 700
     }), i.drawText("".concat(t.details), {
-      x: p,
+      x: m,
       y: o.fontPadding + 1 * o.lineHeight
     }, !0, (null === (l = i.assetMap) || void 0 === l ? void 0 : l.has(o.AssetTypes.Platform)) ? o.titleMaxWidthPlatform : o.titleMaxWidthNoPlatform), i.setFont({
       size: 14,
       weight: 400
     }), i.drawText("".concat(t.state), {
-      x: p,
+      x: m,
       y: o.fontPadding + 2 * o.lineHeight
     }, !0)
   },
-  m = (e, t, n) => {
+  p = (e, t, n) => {
     var l, i, a;
     let {
       canvas: s
@@ -236,7 +236,7 @@ var h = e => {
     } = C;
   T.setFont({
     truncate: !0
-  }), null != S ? m(C, h, E) : (0, a.default)(h) ? f(C, h, E) : (0, i.default)(h) && h.name === l.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? p(C, h, E) : c(C, h, E), (null === (t = T.assetMap) || void 0 === t ? void 0 : t.has(o.AssetTypes.Platform)) && T.drawImage(o.AssetTypes.Platform, {
+  }), null != S ? p(C, h, E) : (0, a.default)(h) ? f(C, h, E) : (0, i.default)(h) && h.name === l.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? m(C, h, E) : c(C, h, E), (null === (t = T.assetMap) || void 0 === t ? void 0 : t.has(o.AssetTypes.Platform)) && T.drawImage(o.AssetTypes.Platform, {
     x: o.canvasWidth - o.padding - o.platformSize,
     y: o.padding
   }, {

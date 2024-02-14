@@ -15,15 +15,15 @@ var i = n("759843"),
   d = n("685665"),
   c = n("428958"),
   f = n("393414"),
-  p = n("305961"),
-  m = n("191814"),
+  m = n("305961"),
+  p = n("191814"),
   h = n("945330"),
   E = n("256941"),
   g = n("270295"),
   S = n("49111"),
   C = n("724210"),
   T = n("782340"),
-  v = n("814163");
+  v = n("560158");
 let I = () => {
   let e = (0, o.default)();
   return (0, s.isThemeLight)(e) ? n("602291") : n("609708")
@@ -46,10 +46,10 @@ function _(e) {
       emoji_id: null != s ? s : null
     }
   });
-  let y = (0, a.useStateFromStores)([p.default], () => p.default.getGuild(n)),
+  let N = (0, a.useStateFromStores)([m.default], () => m.default.getGuild(n)),
     A = (0, a.useStateFromStores)([E.default], () => null != n && E.default.getUserSubscriptionRoles(n).size > 0),
-    N = A ? T.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : T.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({
-      serverName: null == y ? void 0 : y.name
+    y = A ? T.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : T.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({
+      serverName: null == N ? void 0 : N.name
     }),
     x = A ? T.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : T.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
   return (0, l.jsxs)("div", {
@@ -73,21 +73,21 @@ function _(e) {
         alt: "",
         src: o,
         className: v.upsellImage
-      }), (0, l.jsx)(m.default, {
+      }), (0, l.jsx)(p.default, {
         size: 22
       }), (0, l.jsx)(r.Heading, {
         color: "header-primary",
         variant: "heading-lg/extrabold",
         className: v.header,
         children: T.default.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
-      }), (0, l.jsx)(m.default, {
+      }), (0, l.jsx)(p.default, {
         size: 4
       }), (0, l.jsx)(r.Text, {
         color: "header-secondary",
         variant: "text-md/normal",
         className: v.description,
-        children: N
-      }), (0, l.jsx)(m.default, {
+        children: y
+      }), (0, l.jsx)(p.default, {
         size: 24
       }), (0, l.jsx)(g.default, {
         onClick: () => {

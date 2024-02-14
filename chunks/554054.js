@@ -17,7 +17,7 @@ var s = n("37983"),
   l = n("725484"),
   f = n("331756"),
   _ = n("289382"),
-  c = n("634984");
+  c = n("261145");
 let g = (0, u.cssValueToNumber)(o.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
 
 function m(e, t) {

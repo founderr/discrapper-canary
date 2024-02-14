@@ -20,17 +20,17 @@ function f(e) {
     className: t,
     color: n,
     look: f,
-    hangStatusChannel: p
-  } = e, m = (0, i.useStateFromStores)([r.default], () => r.default.getChannelId() === p.id);
+    hangStatusChannel: m
+  } = e, p = (0, i.useStateFromStores)([r.default], () => r.default.getChannelId() === m.id);
   return (0, l.jsx)(l.Fragment, {
     children: (0, l.jsx)(u.default, {
       className: t,
-      disabled: m,
+      disabled: p,
       onClick: () => {
-        s.default.can(d.Permissions.CONNECT, p), a.default.selectVoiceChannel(p.id), o.default.track(d.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
+        s.default.can(d.Permissions.CONNECT, m), a.default.selectVoiceChannel(m.id), o.default.track(d.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
           source: "UserProfilePopout",
-          guild_id: p.guild_id,
-          channel_id: p.id
+          guild_id: m.guild_id,
+          channel_id: m.id
         })
       },
       color: n,

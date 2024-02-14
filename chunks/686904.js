@@ -8,7 +8,7 @@ var i = n("884691"),
   r = n("448993");
 
 function l(e, t) {
-  let [n, l] = i.useState(!1), [s, a] = i.useState(null), u = async () => {
+  let [n, l] = i.useState(!1), [u, a] = i.useState(null), s = async () => {
     l(!0), a(null);
     try {
       let t = await e();
@@ -18,8 +18,8 @@ function l(e, t) {
       return null == t || t(e), a(e), l(!1), null
     }
   };
-  return [u, {
+  return [s, {
     loading: n,
-    error: s
+    error: u
   }]
 }

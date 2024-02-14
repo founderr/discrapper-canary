@@ -12,11 +12,11 @@ n.r(t), n.d(t, {
 }), n("70102"), n("424973");
 var r = n("959708");
 
-function o(e, t) {
+function a(e, t) {
   if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
 }
 
-function a(e, t) {
+function o(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
@@ -24,7 +24,7 @@ function a(e, t) {
 }
 
 function i(e, t, n) {
-  return t && a(e.prototype, t), n && a(e, n), e
+  return t && o(e.prototype, t), n && o(e, n), e
 }
 
 function s(e, t, n) {
@@ -37,7 +37,7 @@ function s(e, t, n) {
 }
 var c = function() {
   function e(t) {
-    o(this, e), s(this, "isDisposed", !1), s(this, "action", void 0), this.action = (0, r.isFunction)(t) ? t : r.noop
+    a(this, e), s(this, "isDisposed", !1), s(this, "action", void 0), this.action = (0, r.isFunction)(t) ? t : r.noop
   }
   return i(e, [{
     key: "dispose",
@@ -66,7 +66,7 @@ s(c, "empty", {
 });
 var l = function() {
     function e() {
-      o(this, e), s(this, "isDisposed", !1), s(this, "disposables", void 0);
+      a(this, e), s(this, "isDisposed", !1), s(this, "disposables", void 0);
       for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
       this.disposables = n
     }
@@ -107,7 +107,7 @@ var l = function() {
   }(),
   u = function() {
     function e() {
-      o(this, e), s(this, "isDisposed", !1), s(this, "current", void 0)
+      a(this, e), s(this, "isDisposed", !1), s(this, "current", void 0)
     }
     return i(e, [{
       key: "getDisposable",

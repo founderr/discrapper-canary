@@ -17,8 +17,8 @@ var n = s("77078"),
   S = s("845579"),
   E = s("49111"),
   T = s("782340"),
-  f = s("852003"),
-  m = s("926622");
+  f = s("436557"),
+  m = s("890957");
 
 function _() {
   let e = S.ShowCurrentGame.useSetting(),

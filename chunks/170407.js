@@ -1,22 +1,22 @@
 "use strict";
 n("426094");
-var r, o, a = Function.prototype.toString,
+var r, a, o = Function.prototype.toString,
   i = "object" == typeof Reflect && null !== Reflect && Reflect.apply;
 if ("function" == typeof i && "function" == typeof Object.defineProperty) try {
   r = Object.defineProperty({}, "length", {
     get: function() {
-      throw o
+      throw a
     }
-  }), o = {}, i(function() {
+  }), a = {}, i(function() {
     throw 42
   }, null, r)
 } catch (e) {
-  e !== o && (i = null)
+  e !== a && (i = null)
 } else i = null;
 var s = /^\s*class\b/,
   c = function(e) {
     try {
-      var t = a.call(e);
+      var t = o.call(e);
       return s.test(t)
     } catch (e) {
       return !1
@@ -25,7 +25,7 @@ var s = /^\s*class\b/,
   l = function(e) {
     try {
       if (c(e)) return !1;
-      return a.call(e), !0
+      return o.call(e), !0
     } catch (e) {
       return !1
     }
@@ -52,7 +52,7 @@ e.exports = i ? function(e) {
   try {
     i(e, null, r)
   } catch (e) {
-    if (e !== o) return !1
+    if (e !== a) return !1
   }
   return !c(e) && l(e)
 } : function(e) {

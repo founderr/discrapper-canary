@@ -25,7 +25,7 @@ var r = n("414456"),
   _ = n("439932"),
   v = n("50885"),
   T = n("782340"),
-  I = n("793804");
+  I = n("804392");
 let A = e => v.default.close(e),
   M = e => v.default.minimize(e),
   x = (e, t) => {

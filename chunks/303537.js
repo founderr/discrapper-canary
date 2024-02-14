@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("70102");
 var r = n("330762"),
-  o = n("679640"),
-  a = n("373589");
+  a = n("679640"),
+  o = n("373589");
 
 function i(e, t) {
   for (var n = 0; n < t.length; n++) {
@@ -32,10 +32,10 @@ var c = function() {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }(this, c), s(this, "hooks", (0, r.wrapConnectorHooks)({
       dragSource: function(e, n) {
-        t.clearDragSource(), t.dragSourceOptions = n || null, (0, o.isRef)(e) ? t.dragSourceRef = e : t.dragSourceNode = e, t.reconnectDragSource()
+        t.clearDragSource(), t.dragSourceOptions = n || null, (0, a.isRef)(e) ? t.dragSourceRef = e : t.dragSourceNode = e, t.reconnectDragSource()
       },
       dragPreview: function(e, n) {
-        t.clearDragPreview(), t.dragPreviewOptions = n || null, (0, o.isRef)(e) ? t.dragPreviewRef = e : t.dragPreviewNode = e, t.reconnectDragPreview()
+        t.clearDragPreview(), t.dragPreviewOptions = n || null, (0, a.isRef)(e) ? t.dragPreviewRef = e : t.dragPreviewNode = e, t.reconnectDragPreview()
       }
     })), s(this, "handlerId", null), s(this, "dragSourceRef", null), s(this, "dragSourceNode", void 0), s(this, "dragSourceOptionsInternal", null), s(this, "dragSourceUnsubscribe", void 0), s(this, "dragPreviewRef", null), s(this, "dragPreviewNode", void 0), s(this, "dragPreviewOptionsInternal", null), s(this, "dragPreviewUnsubscribe", void 0), s(this, "lastConnectedHandlerId", null), s(this, "lastConnectedDragSource", null), s(this, "lastConnectedDragSourceOptions", null), s(this, "lastConnectedDragPreview", null), s(this, "lastConnectedDragPreviewOptions", null), s(this, "backend", void 0), this.backend = e
   }
@@ -114,12 +114,12 @@ var c = function() {
   }, {
     key: "didDragSourceOptionsChange",
     value: function() {
-      return !(0, a.shallowEqual)(this.lastConnectedDragSourceOptions, this.dragSourceOptions)
+      return !(0, o.shallowEqual)(this.lastConnectedDragSourceOptions, this.dragSourceOptions)
     }
   }, {
     key: "didDragPreviewOptionsChange",
     value: function() {
-      return !(0, a.shallowEqual)(this.lastConnectedDragPreviewOptions, this.dragPreviewOptions)
+      return !(0, o.shallowEqual)(this.lastConnectedDragPreviewOptions, this.dragPreviewOptions)
     }
   }, {
     key: "disconnectDragSource",

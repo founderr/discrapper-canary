@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var a = n("446674"),
-  l = n("913144");
+var l = n("446674"),
+  a = n("913144");
 let s = {
     toastsEnabledForChannel: {}
   },
   i = s;
-class r extends a.default.PersistedStore {
+class r extends l.default.PersistedStore {
   initialize(e) {
     i = null != e ? e : s
   }
@@ -23,7 +23,7 @@ class r extends a.default.PersistedStore {
   }
 }
 r.displayName = "CallChatToastsStore", r.persistKey = "CallChatToasts";
-var o = new r(l.default, {
+var o = new r(a.default, {
   CALL_CHAT_TOASTS_SET_ENABLED: function(e) {
     let {
       channelId: t,

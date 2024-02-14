@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return l
   },
   CHANNEL_SENTINEL: function() {
-    return a
+    return i
   },
   EMOJI_SENTINEL: function() {
-    return s
+    return a
   },
   REACTION_START_SENTINEL: function() {
-    return i
+    return s
   },
   REACTION_END_SENTINEL: function() {
     return r
@@ -20,8 +20,8 @@ n.r(t), n.d(t, {
   }
 });
 let l = "@",
-  a = "#",
-  s = ":",
-  i = "+:",
+  i = "#",
+  a = ":",
+  s = "+:",
   r = ":",
   o = "/"

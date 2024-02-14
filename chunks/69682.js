@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return S
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("446674"),
   i = n("77078"),
   r = n("272030"),
@@ -19,27 +19,27 @@ var a = n("37983"),
   f = n("401642"),
   h = n("49111"),
   m = n("782340"),
-  p = n("568719");
+  p = n("155502");
 
 function E(e) {
   let {
     user: t,
     status: n,
-    onSelect: l,
+    onSelect: a,
     onContextMenu: r
   } = e, o = (0, s.useStateFromStores)([d.default], () => d.default.isMobileOnline(t.id));
-  return (0, a.jsxs)(i.Clickable, {
+  return (0, l.jsxs)(i.Clickable, {
     className: p.listRow,
-    onClick: () => l(t.id),
+    onClick: () => a(t.id),
     onContextMenu: e => r(e, t),
-    children: [(0, a.jsx)(i.Avatar, {
+    children: [(0, l.jsx)(i.Avatar, {
       src: t.getAvatarURL(void 0, 40),
       "aria-label": t.username,
       size: i.AvatarSizes.SIZE_40,
       status: n,
       isMobile: o,
       className: p.listAvatar
-    }), (0, a.jsx)(u.default, {
+    }), (0, l.jsx)(u.default, {
       user: t,
       className: p.listName,
       discriminatorClass: p.listDiscriminator
@@ -68,31 +68,31 @@ function S(e) {
       let {
         default: e
       } = await n.el("406784").then(n.bind(n, "406784"));
-      return n => (0, a.jsx)(e, {
+      return n => (0, l.jsx)(e, {
         ...n,
         user: t
       })
     })
   }
-  return l.useEffect(() => {
+  return a.useEffect(() => {
     null == S && (0, o.fetchMutualFriends)(u.id)
-  }, [S, u.id]), t = null == S ? (0, a.jsx)("div", {
+  }, [S, u.id]), t = null == S ? (0, l.jsx)("div", {
     className: p.empty,
-    children: (0, a.jsx)(i.Spinner, {})
-  }) : 0 === S.length ? (0, a.jsxs)("div", {
+    children: (0, l.jsx)(i.Spinner, {})
+  }) : 0 === S.length ? (0, l.jsxs)("div", {
     className: p.empty,
-    children: [(0, a.jsx)("div", {
+    children: [(0, l.jsx)("div", {
       className: p.emptyIconFriends
-    }), (0, a.jsx)("div", {
+    }), (0, l.jsx)("div", {
       className: p.emptyText,
       children: m.default.Messages.NO_MUTUAL_FRIENDS
     })]
-  }) : S.map(e => (0, a.jsx)(E, {
+  }) : S.map(e => (0, l.jsx)(E, {
     user: e.user,
     status: e.status,
     onSelect: g,
     onContextMenu: C
-  }, e.key)), (0, a.jsx)(i.ScrollerThin, {
+  }, e.key)), (0, l.jsx)(i.ScrollerThin, {
     className: p.listScroller,
     fade: !0,
     children: t

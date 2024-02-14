@@ -34,7 +34,7 @@ var l = n("37983"),
   A = n("944305"),
   L = n("49111"),
   v = n("782340"),
-  x = n("503561");
+  x = n("395914");
 let R = (0, _.cssValueToNumber)(o.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
   M = e => {
     let {

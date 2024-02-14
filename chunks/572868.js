@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 }), n("222007"), n("70102");
-var l, i = n("44170"),
-  o = n("917351"),
-  a = n.n(o),
+var i, l = n("44170"),
+  a = n("917351"),
+  o = n.n(a),
   r = n("605250"),
   s = n("402752"),
   u = n("894488");
-let c = new r.default("UploaderBase.tsx");
-l = class extends i.EventEmitter {
+let d = new r.default("UploaderBase.tsx");
+i = class extends l.EventEmitter {
   _addAttachmentsToPayload(e, t, n) {
-    let l = {
+    let i = {
         ...e
       },
-      i = [...a.get(l, t, []), ...n];
-    return a.set(l, t, i)
+      l = [...o.get(i, t, []), ...n];
+    return o.set(i, t, l)
   }
   clearProcessingMessageInterval() {
     null != this.processingMessageChangeInterval && (clearInterval(this.processingMessageChangeInterval), this.processingMessageChangeInterval = void 0)
   }
   cancel() {
-    c.log("cancel() for ".concat(this.id)), this._aborted = !0, null != this._cancel && this._cancel(), this._handleComplete()
+    d.log("cancel() for ".concat(this.id)), this._aborted = !0, null != this._cancel && this._cancel(), this._handleComplete()
   }
   cancelItem(e) {
     throw Error("cancelItem() is not implemented on UploaderBase; must implement cancelItem() on subclass")
@@ -47,24 +47,24 @@ l = class extends i.EventEmitter {
     }
   }
   constructor(e, t = "POST", n) {
-    var l;
+    var i;
     super(), this._token = "", this._lastUpdate = 0, this._loaded = 0, this._aborted = !1, this._errored = !1, this._raiseEndpointErrors = !1, this.alreadyStarted = !1, this._handleStart = e => {
       this._cancel = e, !this.alreadyStarted && this.emit("start", this._file), this.alreadyStarted = !0
     }, this._handleProgress = (e, t, n) => {
-      let l = Date.now(),
-        i = (0, s.calculateProgress)(e, t),
-        o = Math.floor((e - this._loaded) / ((l - this._lastUpdate) / 1e3));
+      let i = Date.now(),
+        l = (0, s.calculateProgress)(e, t),
+        a = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
       if (null != n) {
-        var a;
-        null === (a = this._file.items) || void 0 === a || a.forEach(e => {
+        var o;
+        null === (o = this._file.items) || void 0 === o || o.forEach(e => {
           e.item.progress = n[e.id]
         })
       }
-      this._lastUpdate = l, this._loaded = e, this._file = {
+      this._lastUpdate = i, this._loaded = e, this._file = {
         ...this._file,
         currentSize: t,
-        progress: i,
-        rate: o
+        progress: l,
+        rate: a
       }, this.emit("progress", this._file)
     }, this._handleException = e => {
       this._handleError({
@@ -79,11 +79,11 @@ l = class extends i.EventEmitter {
       let {
         code: t,
         reason: n,
-        body: l
+        body: i
       } = e;
-      this.clearProcessingMessageInterval(), !this._aborted && (this._errored = !0, c.log("_handleError: ".concat(t, " (").concat(JSON.stringify(n), ") for ").concat(this.id)), this.emit("error", this._file, t, l, n), this.removeAllListeners())
+      this.clearProcessingMessageInterval(), !this._aborted && (this._errored = !0, d.log("_handleError: ".concat(t, " (").concat(JSON.stringify(n), ") for ").concat(this.id)), this.emit("error", this._file, t, i, n), this.removeAllListeners())
     }, this._handleComplete = e => {
-      this.clearProcessingMessageInterval(), c.log("_handleComplete for ".concat(this.id)), this.emit("complete", this._file, e), this.removeAllListeners()
-    }, this.id = a.uniqueId("Uploader"), this._url = e, this._method = t, this._raiseEndpointErrors = null !== (l = null == n ? void 0 : n.raiseEndpointErrors) && void 0 !== l && l
+      this.clearProcessingMessageInterval(), d.log("_handleComplete for ".concat(this.id)), this.emit("complete", this._file, e), this.removeAllListeners()
+    }, this.id = o.uniqueId("Uploader"), this._url = e, this._method = t, this._raiseEndpointErrors = null !== (i = null == n ? void 0 : n.raiseEndpointErrors) && void 0 !== i && i
   }
 }

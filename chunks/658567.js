@@ -29,18 +29,18 @@ var f = (e, t) => {
   let l;
   let {
     theme: a
-  } = (0, u.getProfileInfo)(t, "black"), f = "dark" === a, p = (0, u.getActivityPlatform)(e), {
-    assets: m,
+  } = (0, u.getProfileInfo)(t, "black"), f = "dark" === a, m = (0, u.getActivityPlatform)(e), {
+    assets: p,
     application_id: h
   } = e;
   l = null != e.application_id ? i.default.getApplication(e.application_id) : i.default.getApplicationByName(e.name);
   let E = s.default.getAnyStreamForUser(t.id),
-    g = (0, r.getAssetImage)(h, null == m ? void 0 : m.large_image, 64),
+    g = (0, r.getAssetImage)(h, null == p ? void 0 : p.large_image, 64),
     S = null == l ? void 0 : l.getIconURL(64),
     C = [];
-  null != p ? C.push({
+  null != m ? C.push({
     name: o.AssetTypes.Platform,
-    url: f ? p.icon.darkPNG : p.icon.lightPNG
+    url: f ? m.icon.darkPNG : m.icon.lightPNG
   }) : e.type === d.ActivityTypes.PLAYING && C.push({
     name: "Platform",
     url: f ? n("944857") : n("248073")

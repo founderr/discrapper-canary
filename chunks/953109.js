@@ -12,7 +12,7 @@ var s = l("414456"),
   r = l("476263"),
   c = l("547620"),
   u = l("646718"),
-  o = l("257920");
+  o = l("877670");
 let d = {
     XXSMALL: o.xxsmall,
     XSMALL: o.xsmall,

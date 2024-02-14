@@ -14,7 +14,7 @@ n.r(t), n.d(t, {
   }
 }), n("881410"), n("222007");
 var r = n("884691");
-let o = {
+let a = {
     badInput: !1,
     customError: !1,
     patternMismatch: !1,
@@ -27,14 +27,14 @@ let o = {
     valueMissing: !1,
     valid: !0
   },
-  a = {
-    ...o,
+  o = {
+    ...a,
     customError: !0,
     valid: !1
   },
   i = {
     isInvalid: !1,
-    validationDetails: o,
+    validationDetails: a,
     validationErrors: []
   },
   s = (0, r.createContext)({}),
@@ -46,22 +46,22 @@ function l(e) {
       realtimeValidation: t,
       displayValidation: n,
       updateValidation: r,
-      resetValidation: o,
-      commitValidation: a
+      resetValidation: a,
+      commitValidation: o
     } = e[c];
     return {
       realtimeValidation: t,
       displayValidation: n,
       updateValidation: r,
-      resetValidation: o,
-      commitValidation: a
+      resetValidation: a,
+      commitValidation: o
     }
   }
   return function(e) {
     let {
       isInvalid: t,
       validationState: n,
-      name: o,
+      name: a,
       value: c,
       builtinValidation: l,
       validate: f,
@@ -71,7 +71,7 @@ function l(e) {
     let m = t ? {
         isInvalid: !0,
         validationErrors: [],
-        validationDetails: a
+        validationDetails: o
       } : null,
       v = (0, r.useMemo)(() => d(function(e, t) {
         if ("function" == typeof e) {
@@ -82,7 +82,7 @@ function l(e) {
       }(f, c)), [f, c]);
     (null == l ? void 0 : l.validationDetails.valid) && (l = null);
     let g = (0, r.useContext)(s),
-      y = (0, r.useMemo)(() => o ? Array.isArray(o) ? o.flatMap(e => u(g[e])) : u(g[o]) : [], [g, o]),
+      y = (0, r.useMemo)(() => a ? Array.isArray(a) ? a.flatMap(e => u(g[e])) : u(g[a]) : [], [g, a]),
       [b, x] = (0, r.useState)(g),
       [S, w] = (0, r.useState)(!1);
     g !== b && (x(g), w(!1));
@@ -120,7 +120,7 @@ function d(e) {
   return e.length ? {
     isInvalid: !0,
     validationErrors: e,
-    validationDetails: a
+    validationDetails: o
   } : null
 }
 
@@ -134,16 +134,16 @@ function p(e, t) {
 function f() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
   let r = new Set,
-    a = !1,
+    o = !1,
     i = {
-      ...o
+      ...a
     };
   for (let e of t) {
     for (let t of e.validationErrors) r.add(t);
-    for (let t in a || (a = e.isInvalid), i) i[t] || (i[t] = e.validationDetails[t])
+    for (let t in o || (o = e.isInvalid), i) i[t] || (i[t] = e.validationDetails[t])
   }
-  return i.valid = !a, {
-    isInvalid: a,
+  return i.valid = !o, {
+    isInvalid: o,
     validationErrors: [...r],
     validationDetails: i
   }

@@ -400,11 +400,11 @@ var r = {
     Z̧: "Z",
     z̧: "z"
   },
-  o = Object.keys(r).join("|"),
-  a = RegExp(o, "g"),
-  i = RegExp(o, ""),
+  a = Object.keys(r).join("|"),
+  o = RegExp(a, "g"),
+  i = RegExp(a, ""),
   s = function(e) {
-    return e.replace(a, function(e) {
+    return e.replace(o, function(e) {
       return r[e]
     })
   };

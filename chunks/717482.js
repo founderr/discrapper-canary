@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("424973");
-var a = n("52477"),
-  l = n("357304"),
+var l = n("52477"),
+  a = n("357304"),
   s = n("827520");
 
 function i(e) {
@@ -21,7 +21,7 @@ function i(e) {
     deadDrawables: f
   } = e;
   null == c.current[t.id] && (c.current[t.id] = Date.now()), n.lineCap = "round", n.lineJoin = "round";
-  let h = t.points.map(e => (0, a.normalizeCoordinates)(e, i, r)),
+  let h = t.points.map(e => (0, l.normalizeCoordinates)(e, i, r)),
     m = c.current[t.id],
     p = e => m + e.deltaTime,
     E = e => p(e) + 1500 >= Date.now(),
@@ -32,19 +32,19 @@ function i(e) {
     return
   }
   let C = (e, t) => {
-      let a = null;
+      let l = null;
       n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(g.x, g.y);
       for (let e = 1; e < h.length; e++) {
         let t = h[e];
-        S(t) && (n.lineTo(t.x, t.y), a = t)
+        S(t) && (n.lineTo(t.x, t.y), l = t)
       }
-      return n.stroke(), a
+      return n.stroke(), l
     },
     {
       fillColor: _,
       outlineColor: I
-    } = (0, a.getUserColors)(t.userId, u, d, o),
+    } = (0, l.getUserColors)(t.userId, u, d, o),
     T = C(I, 6 + s.OUTLINE_WIDTH),
     v = null != T && S(T);
-  v && (0, l.renderAvatarCursorOutline)(n, T.x, T.y, I, s.OUTLINE_WIDTH), C(_, 6), v && (0, l.renderAvatarCursor)(n, T.x, T.y, t.userId)
+  v && (0, a.renderAvatarCursorOutline)(n, T.x, T.y, I, s.OUTLINE_WIDTH), C(_, 6), v && (0, a.renderAvatarCursor)(n, T.x, T.y, t.userId)
 }

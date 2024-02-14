@@ -20,7 +20,7 @@ async function _(e, t, _) {
     (0, i.openModalLazy)(async () => {
       let {
         default: e
-      } = await n.el("657233").then(n.bind(n, "657233"));
+      } = await n.el("332579").then(n.bind(n, "332579"));
       return t => (0, s.jsx)(e, {
         ...t
       })

@@ -11,20 +11,20 @@ var l = n("37983"),
   r = n("137223"),
   o = n("986632"),
   u = n("538282"),
-  d = n("595713");
+  d = n("535260");
 let c = i.forwardRef(function(e, t) {
   let {
     store: n,
     hasSendableExpressions: c,
     onKeyDown: f,
-    gridNavigatorId: p,
-    expressionsListRef: m,
+    gridNavigatorId: m,
+    expressionsListRef: p,
     defaultSearchPlaceholder: h,
     emptySearchPlaceholder: E
   } = e, g = i.useRef(null), [S, C] = (0, u.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], a.default), T = n.useStore(e => e.searchPlaceholder), v = n.useStore(e => e.inspectedExpressionPosition, a.default), I = i.useCallback(e => {
     var t;
-    n.setActiveCategoryIndex("" === e ? 0 : o.INACTIVE_CATEGORY_INDEX), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = m.current) || void 0 === t || t.scrollTo(0)
-  }, [m, n]), _ = i.useCallback(() => {
+    n.setActiveCategoryIndex("" === e ? 0 : o.INACTIVE_CATEGORY_INDEX), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0)
+  }, [p, n]), _ = i.useCallback(() => {
     (0, u.setSearchQuery)("")
   }, []);
   return i.useImperativeHandle(t, () => ({
@@ -54,9 +54,9 @@ let c = i.forwardRef(function(e, t) {
       useKeyboardNavigation: !1,
       inputProps: {
         "aria-haspopup": "grid",
-        "aria-controls": p,
+        "aria-controls": m,
         "aria-expanded": !0,
-        "aria-activedescendant": (0, s.makeGridId)(p, v.columnIndex, v.rowIndex)
+        "aria-activedescendant": (0, s.makeGridId)(m, v.columnIndex, v.rowIndex)
       }
     })
   })

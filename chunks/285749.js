@@ -17,8 +17,8 @@ var l = n("37983"),
     } = e, [u, d] = i.useState(null), {
       assetMap: c,
       loaded: f,
-      stream: p
-    } = (0, r.default)(t, o), m = i.useCallback(e => {
+      stream: m
+    } = (0, r.default)(t, o), p = i.useCallback(e => {
       null != e && f && d(new a.default(e, c))
     }, [c, f]);
     return i.useEffect(() => {
@@ -27,14 +27,14 @@ var l = n("37983"),
         activity: t,
         user: o,
         onComplete: n,
-        stream: p
+        stream: m
       })
-    }, [u, f, t, o, n, p]), (0, l.jsx)("canvas", {
+    }, [u, f, t, o, n, m]), (0, l.jsx)("canvas", {
       style: {
         marginTop: 16,
         position: "fixed",
         zIndex: 10
       },
-      ref: m
+      ref: p
     })
   }

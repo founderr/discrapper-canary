@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("808653"), n("424973");
 var r = n("261438"),
-  o = n("433165"),
-  a = n.n(o),
+  a = n("433165"),
+  o = n.n(a),
   i = {
     CASE_SENSITIVE_EQUAL: 7,
     EQUAL: 6,
@@ -24,28 +24,28 @@ var s = function(e, t) {
 
 function c(e, t, n) {
   void 0 === n && (n = {});
-  var o = n,
-    a = o.keys,
-    c = o.threshold,
+  var a = n,
+    o = a.keys,
+    c = a.threshold,
     u = void 0 === c ? i.MATCHES : c,
-    p = o.baseSort,
+    p = a.baseSort,
     f = void 0 === p ? s : p,
-    h = o.sorter;
+    h = a.sorter;
   return (void 0 === h ? function(e) {
     return e.sort(function(e, t) {
       return function(e, t, n) {
         var r = e.rank,
-          o = e.keyIndex,
-          a = t.rank,
+          a = e.keyIndex,
+          o = t.rank,
           i = t.keyIndex;
-        return r !== a ? r > a ? -1 : 1 : o === i ? n(e, t) : o < i ? -1 : 1
+        return r !== o ? r > o ? -1 : 1 : a === i ? n(e, t) : a < i ? -1 : 1
       }(e, t, f)
     })
-  } : h)(e.reduce(function(e, o, s) {
-    var c = function(e, t, n, o) {
+  } : h)(e.reduce(function(e, a, s) {
+    var c = function(e, t, n, a) {
         return t ? (function(e, t) {
-          for (var n = [], o = 0, a = t.length; o < a; o++) {
-            for (var i = t[o], s = function(e) {
+          for (var n = [], a = 0, o = t.length; a < o; a++) {
+            for (var i = t[a], s = function(e) {
                 return "string" == typeof e ? d : (0, r.default)({}, d, e)
               }(i), c = function(e, t) {
                 var n;
@@ -54,8 +54,8 @@ function c(e, t, n) {
                 else if (Object.hasOwnProperty.call(e, t)) n = e[t];
                 else {
                   if (t.includes(".")) return function(e, t) {
-                    for (var n = e.split("."), r = [t], o = 0, a = n.length; o < a; o++) {
-                      for (var i = n[o], s = [], c = 0, l = r.length; c < l; c++) {
+                    for (var n = e.split("."), r = [t], a = 0, o = n.length; a < o; a++) {
+                      for (var i = n[a], s = [], c = 0, l = r.length; c < l; c++) {
                         var u = r[c];
                         if (null != u) {
                           if (Object.hasOwnProperty.call(u, i)) {
@@ -82,20 +82,20 @@ function c(e, t, n) {
           }
           return n
         })(e, t).reduce(function(e, t, r) {
-          var a = e.rank,
+          var o = e.rank,
             s = e.rankedValue,
             c = e.keyIndex,
             u = e.keyThreshold,
             d = t.itemValue,
             p = t.attributes,
-            f = l(d, n, o),
+            f = l(d, n, a),
             h = s,
             m = p.minRanking,
             v = p.maxRanking,
             g = p.threshold;
-          return f < m && f >= i.MATCHES ? f = m : f > v && (f = v), f > a && (a = f, c = r, u = g, h = d), {
+          return f < m && f >= i.MATCHES ? f = m : f > v && (f = v), f > o && (o = f, c = r, u = g, h = d), {
             rankedValue: h,
-            rank: a,
+            rank: o,
             keyIndex: c,
             keyThreshold: u
           }
@@ -103,18 +103,18 @@ function c(e, t, n) {
           rankedValue: e,
           rank: i.NO_MATCH,
           keyIndex: -1,
-          keyThreshold: o.threshold
+          keyThreshold: a.threshold
         }) : {
           rankedValue: e,
-          rank: l(e, n, o),
+          rank: l(e, n, a),
           keyIndex: -1,
-          keyThreshold: o.threshold
+          keyThreshold: a.threshold
         }
-      }(o, a, t, n),
+      }(a, o, t, n),
       p = c.rank,
       f = c.keyThreshold;
     return p >= (void 0 === f ? u : f) && e.push((0, r.default)({}, c, {
-      item: o,
+      item: a,
       index: s
     })), e
   }, [])).map(function(e) {
@@ -131,26 +131,26 @@ function l(e, t, n) {
       })
     }), t
   })(e).includes(t) ? i.ACRONYM : function(e, t) {
-    var n, r, o = 0,
-      a = 0;
+    var n, r, a = 0,
+      o = 0;
 
     function s(e, t, n) {
-      for (var r = n, a = t.length; r < a; r++)
-        if (t[r] === e) return o += 1, r + 1;
+      for (var r = n, o = t.length; r < o; r++)
+        if (t[r] === e) return a += 1, r + 1;
       return -1
     }
     var c = s(t[0], e, 0);
     if (c < 0) return i.NO_MATCH;
-    a = c;
+    o = c;
     for (var l = 1, u = t.length; l < u; l++)
-      if (!((a = s(t[l], e, a)) > -1)) return i.NO_MATCH;
-    return n = a - c, r = o / t.length, i.MATCHES + r * (1 / n)
+      if (!((o = s(t[l], e, o)) > -1)) return i.NO_MATCH;
+    return n = o - c, r = a / t.length, i.MATCHES + r * (1 / n)
   }(e, t)
 }
 
 function u(e, t) {
   var n = t.keepDiacritics;
-  return e = "" + e, !n && (e = a(e)), e
+  return e = "" + e, !n && (e = o(e)), e
 }
 var d = {
   maxRanking: 1 / 0,

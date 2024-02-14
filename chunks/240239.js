@@ -21,7 +21,7 @@ var l = n("37983"),
   E = n("64657"),
   g = n("49111"),
   I = n("782340"),
-  _ = n("909130");
+  _ = n("377960");
 let S = [{
   icon: (0, l.jsx)(c.default, {
     className: _.icon

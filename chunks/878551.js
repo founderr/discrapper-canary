@@ -21,7 +21,7 @@ var n = a("37983"),
   _ = a("49111"),
   m = a("474695"),
   S = a("782340"),
-  I = a("132852");
+  I = a("272916");
 let A = function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.default.locale;
   return "https://".concat(_.SUPPORT_DOMAIN, "/hc/").concat(e.toLowerCase(), "/requests/new?ticket_form_id=360000168511")

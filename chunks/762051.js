@@ -9,7 +9,7 @@ var a, l, n = s("37983"),
   r = s("207353"),
   o = s("442379"),
   d = s("782340"),
-  u = s("781564");
+  u = s("652692");
 (a = l || (l = {})).LISTING_NAME = "LISTING_NAME", a.PAYMENTS_COUNT = "PAYMENTS_COUNT", a.PRICE = "PRICE";
 let c = (0, r.createTableColumns)([(0, r.createListingNameColumn)({
   key: "LISTING_NAME",

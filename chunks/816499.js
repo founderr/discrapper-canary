@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   generateRedditMetadataItems: function() {
-    return m
+    return p
   },
   generateTwitterMetadataItems: function() {
     return h
@@ -33,9 +33,9 @@ var i = n("414456"),
   d = n("535013"),
   c = n("214509"),
   f = n("782340"),
-  p = n("536271");
+  m = n("483263");
 
-function m(e) {
+function p(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     i = [],
@@ -46,10 +46,10 @@ function m(e) {
     className: n,
     count: a,
     label: f.default.Messages.CONNECTIONS_PROFILE_REDDIT_KARMA
-  }, c.MetadataFields.REDDIT_TOTAL_KARMA)), s && i.push((0, l.jsx)(y, {
+  }, c.MetadataFields.REDDIT_TOTAL_KARMA)), s && i.push((0, l.jsx)(N, {
     className: n,
     label: f.default.Messages.CONNECTIONS_REDDIT_GOLD
-  }, c.MetadataFields.REDDIT_GOLD)), r && i.push((0, l.jsx)(y, {
+  }, c.MetadataFields.REDDIT_GOLD)), r && i.push((0, l.jsx)(N, {
     className: n,
     label: f.default.Messages.CONNECTIONS_REDDIT_MOD
   }, c.MetadataFields.REDDIT_MOD)), i
@@ -104,8 +104,8 @@ function g(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     n = [],
     i = "1" === e[c.MetadataFields.PAYPAL_VERIFIED];
-  return i && n.push((0, l.jsx)(y, {
-    className: a(t, p.paypalVerifiedTag),
+  return i && n.push((0, l.jsx)(N, {
+    className: a(t, m.paypalVerifiedTag),
     label: f.default.Messages.CONNECTIONS_PAYPAL_VERIFIED
   }, c.MetadataFields.PAYPAL_VERIFIED)), n
 }
@@ -121,7 +121,7 @@ function S(e) {
     count: a,
     label: f.default.Messages.CONNECTIONS_PROFILE_EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
     percent: !0
-  }, c.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), s && i.push((0, l.jsx)(y, {
+  }, c.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), s && i.push((0, l.jsx)(N, {
     className: n,
     label: f.default.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER
   }, c.MetadataFields.EBAY_TOP_RATED_SELLER)), i
@@ -147,7 +147,7 @@ function C(e) {
     className: a,
     count: d,
     label: f.default.Messages.CONNECTIONS_PROFILE_TIKTOK_LIKES
-  }, c.MetadataFields.TIKTOK_LIKES_COUNT)), r && s.push((0, l.jsx)(y, {
+  }, c.MetadataFields.TIKTOK_LIKES_COUNT)), r && s.push((0, l.jsx)(N, {
     className: a,
     label: f.default.Messages.CONNECTIONS_TIKTOK_VERIFIED
   }, c.MetadataFields.TIKTOK_VERIFIED)), s
@@ -172,7 +172,7 @@ function T(e) {
         case c.MetadataItemTypes.BOOLEAN_EQUAL:
         case c.MetadataItemTypes.BOOLEAN_NOT_EQUAL: {
           let e = s.type === c.MetadataItemTypes.BOOLEAN_EQUAL && "1" === r || s.type === c.MetadataItemTypes.BOOLEAN_NOT_EQUAL && "1" !== r;
-          e && i.push((0, l.jsx)(y, {
+          e && i.push((0, l.jsx)(N, {
             className: t,
             label: s.name
           }, s.key))
@@ -216,7 +216,7 @@ function v(e) {
   }) : i.format({
     value: d
   }), (0, l.jsx)(o.Text, {
-    className: a(p.connectedAccountVanityMetadata, s),
+    className: a(m.connectedAccountVanityMetadata, s),
     variant: "text-xs/normal",
     color: "interactive-active",
     children: t
@@ -231,7 +231,7 @@ function I(e) {
     className: s
   } = e;
   return (0, l.jsx)(o.Text, {
-    className: a(p.connectedAccountVanityMetadata, s),
+    className: a(m.connectedAccountVanityMetadata, s),
     variant: "text-xs/normal",
     color: "interactive-active",
     children: f.default.Messages.CONNECTIONS_PROFILE_GENERIC_VANITY_METRIC.format({
@@ -249,14 +249,14 @@ function _(e) {
     className: s
   } = e;
   return (0, l.jsxs)("div", {
-    className: a(p.connectedAccountVanityMetadata, p.connectedAccountVanityMetadataItem, s),
+    className: a(m.connectedAccountVanityMetadata, m.connectedAccountVanityMetadataItem, s),
     children: [(0, l.jsx)(o.Tooltip, {
       text: i,
       children: e => (0, l.jsx)("img", {
         ...e,
         src: n,
         alt: i,
-        className: p.connectedAccountVanityMetadataItemIcon
+        className: m.connectedAccountVanityMetadataItemIcon
       })
     }), (0, l.jsx)(o.Text, {
       variant: "text-xs/normal",
@@ -266,7 +266,7 @@ function _(e) {
   })
 }
 
-function y(e) {
+function N(e) {
   let {
     label: t,
     className: n
@@ -274,7 +274,7 @@ function y(e) {
   return (0, l.jsx)(o.Text, {
     variant: "text-xs/semibold",
     color: "interactive-active",
-    className: a(p.connectedAccountVanityMetadata, p.connectedAccountVanityMetadataTag, n),
+    className: a(m.connectedAccountVanityMetadata, m.connectedAccountVanityMetadataTag, n),
     children: t
   })
 }

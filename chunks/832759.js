@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("446674"),
+var a = n("446674"),
   s = n("77078"),
   i = n("629109"),
   r = n("42887"),
@@ -15,11 +15,11 @@ var l = n("446674"),
   d = n("782340");
 
 function c() {
-  let e = (0, l.useStateFromStores)([r.default], () => (0, o.amplitudeToPerceptual)(r.default.getOutputVolume()));
-  return (0, a.jsx)(s.MenuControlItem, {
+  let e = (0, a.useStateFromStores)([r.default], () => (0, o.amplitudeToPerceptual)(r.default.getOutputVolume()));
+  return (0, l.jsx)(s.MenuControlItem, {
     id: "output",
     label: d.default.Messages.FORM_LABEL_OUTPUT_VOLUME,
-    control: (t, n) => (0, a.jsx)(s.MenuSliderControl, {
+    control: (t, n) => (0, l.jsx)(s.MenuSliderControl, {
       ...t,
       ref: n,
       value: e,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   registerFetchedSupplementals: function() {
-    return v
+    return F
   },
   JoinSourceType: function() {
     return i
@@ -13,84 +13,84 @@ n.r(t), n.d(t, {
     return A
   },
   useGetIntegrationIconString: function() {
-    return g
+    return N
   },
   fetchMemberSupplemental: function() {
-    return N
+    return D
   }
 }), n("424973");
-var s, i, a, r, u, l, o = n("872717"),
-  d = n("819855"),
+var s, i, a, l, r, u, d = n("872717"),
+  o = n("819855"),
   c = n("841098"),
   h = n("376556"),
-  f = n("572943"),
-  I = n("49111"),
-  E = n("782340");
-let m = {};
+  E = n("572943"),
+  f = n("49111"),
+  I = n("782340");
+let _ = {};
 
-function _(e, t) {
+function m(e, t) {
   return e + t
 }
 
-function p(e, t) {
+function T(e, t) {
   return t.map(t => e + t)
 }
 
 function M(e) {
   return e.split("-")[1]
-}(r = s || (s = {}))[r.FAILED = 0] = "FAILED", r[r.UNFETCHED = 1] = "UNFETCHED", r[r.PENDING = 2] = "PENDING", r[r.SUCCEEDED = 3] = "SUCCEEDED", r[r.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
+}(l = s || (s = {}))[l.FAILED = 0] = "FAILED", l[l.UNFETCHED = 1] = "UNFETCHED", l[l.PENDING = 2] = "PENDING", l[l.SUCCEEDED = 3] = "SUCCEEDED", l[l.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
 
-function T(e, t) {
+function p(e, t) {
   e.forEach(e => {
-    m[e] = t
+    _[e] = t
   })
 }
 
-function v(e, t) {
+function F(e, t) {
   t.forEach(t => (function(e, t, n) {
-    m[e + t] = 3
+    _[e + t] = 3
   })(e, t, 3))
-}(u = i || (i = {}))[u.UNSPECIFIED = 0] = "UNSPECIFIED", u[u.BOT = 1] = "BOT", u[u.INTEGRATION = 2] = "INTEGRATION", u[u.DISCOVERY = 3] = "DISCOVERY", u[u.HUB = 4] = "HUB", u[u.INVITE = 5] = "INVITE", u[u.VANITY_URL = 6] = "VANITY_URL";
+}(r = i || (i = {}))[r.UNSPECIFIED = 0] = "UNSPECIFIED", r[r.BOT = 1] = "BOT", r[r.INTEGRATION = 2] = "INTEGRATION", r[r.DISCOVERY = 3] = "DISCOVERY", r[r.HUB = 4] = "HUB", r[r.INVITE = 5] = "INVITE", r[r.VANITY_URL = 6] = "VANITY_URL";
 let S = function(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0;
   switch (e) {
     case 1:
-      return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;
     case 2:
-      return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION;
     case 3:
-      return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_DISCOVERY;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_DISCOVERY;
     case 4:
-      return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_HUB;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_HUB;
     case 5:
-      return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;
     case 6:
-      if (null != t) return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({
+      if (null != t) return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({
         vanityUrl: t
       });
-      return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;
     default:
-      return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN
+      return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN
   }
 };
-(l = a || (a = {})).DISCORD = "discord", l.TWITCH = "twitch", l.YOUTUBE = "youtube", l.GUILD_SUBSCRIPTION = "guild_subscription";
+(u = a || (a = {})).DISCORD = "discord", u.TWITCH = "twitch", u.YOUTUBE = "youtube", u.GUILD_SUBSCRIPTION = "guild_subscription";
 let A = e => {
     switch (e) {
       case "twitch":
-        return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
+        return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
       case "youtube":
-        return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_YOUTUBE;
+        return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_YOUTUBE;
       default:
-        return E.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION
+        return I.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION
     }
   },
-  g = e => {
-    let t = h.default.get((0, f.useLegacyPlatformType)(e)),
+  N = e => {
+    let t = h.default.get((0, E.useLegacyPlatformType)(e)),
       n = (0, c.default)();
-    return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, d.isThemeDark)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
+    return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, o.isThemeDark)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
   };
 
-function F(e) {
+function g(e) {
   return {
     userId: e.user_id,
     sourceInviteCode: e.source_invite_code,
@@ -99,20 +99,20 @@ function F(e) {
     integrationType: e.integration_type
   }
 }
-async function N(e, t) {
-  let n = p(e, t),
-    s = n.filter(e => m[e] <= 1).map(M);
+async function D(e, t) {
+  let n = T(e, t),
+    s = n.filter(e => _[e] <= 1).map(M);
   if (0 === s.length) return [];
-  T(n, 2);
+  p(n, 2);
   try {
-    let t = await o.default.post({
-      url: I.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
+    let t = await d.default.post({
+      url: f.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
       body: {
         user_ids: s
       }
     });
-    if (!Array.isArray(t.body)) return T(n, 0), [];
-    let i = t.body.map(F),
+    if (!Array.isArray(t.body)) return p(n, 0), [];
+    let i = t.body.map(g),
       a = [];
     i.forEach(e => {
       let {
@@ -120,12 +120,12 @@ async function N(e, t) {
       } = e;
       return a.push(t)
     });
-    let r = p(e, a),
-      u = s.filter(e => !a.includes(e)),
-      l = p(e, u);
-    return T(r, 3), T(l, 0), i
+    let l = T(e, a),
+      r = s.filter(e => !a.includes(e)),
+      u = T(e, r);
+    return p(l, 3), p(u, 0), i
   } catch (e) {
-    T(n, 0)
+    p(n, 0)
   }
   return []
 }

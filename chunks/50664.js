@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("781738");
 var r = n("240849"),
-  o = n("932165"),
-  a = n("884691"),
+  a = n("932165"),
+  o = n("884691"),
   i = n("564341");
 let s = new WeakMap;
 
@@ -20,7 +20,7 @@ function c(e, t, n) {
 }
 
 function l(e, t, n) {
-  var a;
+  var o;
   let {
     key: i,
     isDisabled: s,
@@ -31,7 +31,7 @@ function l(e, t, n) {
   } = t, p = i === d, f = s || t.isDisabled || t.disabledKeys.has(i), {
     itemProps: h,
     isPressed: m
-  } = (0, o.useSelectableItem)({
+  } = (0, a.useSelectableItem)({
     selectionManager: u,
     key: i,
     ref: n,
@@ -41,7 +41,7 @@ function l(e, t, n) {
   }), v = c(t, i, "tab"), g = c(t, i, "tabpanel"), {
     tabIndex: y
   } = h, b = t.collection.getItem(i), x = (0, r.filterDOMProps)(null == b ? void 0 : b.props, {
-    isLink: !!(null == b ? void 0 : null === (a = b.props) || void 0 === a ? void 0 : a.href),
+    isLink: !!(null == b ? void 0 : null === (o = b.props) || void 0 === o ? void 0 : o.href),
     labelable: !0
   });
   return delete x.id, {
@@ -102,9 +102,9 @@ function d(e, t, n) {
     disabledKeys: f
   } = t, {
     direction: h
-  } = (0, i.useLocale)(), m = (0, a.useMemo)(() => new u(d, h, c, f), [d, f, c, h]), {
+  } = (0, i.useLocale)(), m = (0, o.useMemo)(() => new u(d, h, c, f), [d, f, c, h]), {
     collectionProps: v
-  } = (0, o.useSelectableCollection)({
+  } = (0, a.useSelectableCollection)({
     ref: n,
     selectionManager: p,
     keyboardDelegate: m,

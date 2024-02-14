@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var l = n("37983"),
@@ -14,41 +14,41 @@ var l = n("37983"),
   d = n("381546"),
   c = n("898260"),
   f = n("782340"),
-  p = n("108755"),
-  m = i.memo(function(e) {
+  m = n("308747"),
+  p = i.memo(function(e) {
     var t;
     let {
       channelId: n,
-      chatInputType: m
-    } = e, [h, E] = i.useState(null), g = (0, a.useStateFromStores)([r.default], () => r.default.getStickerPreview(n, m.drafts.type));
-    return (null === (t = m.stickers) || void 0 === t ? void 0 : t.allowSending) && null != g && 0 !== g.length ? (0, l.jsxs)(l.Fragment, {
+      chatInputType: p
+    } = e, [h, E] = i.useState(null), g = (0, a.useStateFromStores)([r.default], () => r.default.getStickerPreview(n, p.drafts.type));
+    return (null === (t = p.stickers) || void 0 === t ? void 0 : t.allowSending) && null != g && 0 !== g.length ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
-        className: p.stickerPreviews,
+        className: m.stickerPreviews,
         children: g.map(e => (0, l.jsxs)("div", {
-          className: p.stickerPreviewContainer,
+          className: m.stickerPreviewContainer,
           children: [(0, l.jsx)(s.Clickable, {
             onFocus: () => E(e.id),
             onBlur: () => E(null),
-            className: p.closeButton,
+            className: m.closeButton,
             "aria-label": f.default.Messages.GUILD_STICKER_A11Y_REMOVE_STICKER.format({
               name: e.name
             }),
-            onClick: () => (0, o.clearStickerPreview)(n, m.drafts.type),
+            onClick: () => (0, o.clearStickerPreview)(n, p.drafts.type),
             children: (0, l.jsx)("div", {
-              className: p.closeIconContainer,
+              className: m.closeIconContainer,
               children: (0, l.jsx)(d.default, {
-                className: p.closeIcon
+                className: m.closeIcon
               })
             })
           }), (0, l.jsx)(u.default, {
             isInteracting: h === e.id,
-            className: p.stickerPreview,
+            className: m.stickerPreview,
             size: 48,
             sticker: e
           })]
         }, e.id))
       }), (0, l.jsx)(c.default, {
-        className: p.stickerPreviewDivider
+        className: m.stickerPreviewDivider
       })]
     }) : null
   })

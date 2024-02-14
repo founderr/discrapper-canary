@@ -27,7 +27,7 @@ var a = n("37983"),
   C = n("609023"),
   A = n("49111"),
   M = n("782340"),
-  v = n("951244");
+  v = n("859831");
 let x = l.memo(function(e) {
   let {
     channel: t,

@@ -23,9 +23,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("424973"), n("70102"), n("843762");
 var r = n("884691");
-class o {
+class a {
   build(e, t) {
-    return this.context = t, a(() => this.iterateCollection(e))
+    return this.context = t, o(() => this.iterateCollection(e))
   }* iterateCollection(e) {
     let {
       children: t,
@@ -54,10 +54,10 @@ class o {
   getKey(e, t, n, r) {
     if (null != e.key) return e.key;
     if ("cell" === t.type && null != t.key) return "".concat(r).concat(t.key);
-    let o = t.value;
-    if (null != o) {
-      var a;
-      let e = null !== (a = o.key) && void 0 !== a ? a : o.id;
+    let a = t.value;
+    if (null != a) {
+      var o;
+      let e = null !== (o = a.key) && void 0 !== o ? o : a.id;
       if (null == e) throw Error("No key found for item");
       return e
     }
@@ -67,12 +67,12 @@ class o {
     return {
       renderer: t.renderer || e.renderer
     }
-  }* getFullNode(e, t, n, o) {
+  }* getFullNode(e, t, n, a) {
     let s = e.element;
     if (!s && e.value && t && t.renderer) {
       let n = this.cache.get(e.value);
       if (n && (!n.shouldInvalidate || !n.shouldInvalidate(this.context))) {
-        n.index = e.index, n.parentKey = o ? o.key : null, yield n;
+        n.index = e.index, n.parentKey = a ? a.key : null, yield n;
         return
       }
       s = t.renderer(e.value)
@@ -83,9 +83,9 @@ class o {
         let e = "function" == typeof s.type ? s.type.name : s.type;
         throw Error("Unknown element <".concat(e, "> in collection."))
       }
-      let a = r.getCollectionNode(s.props, this.context),
+      let o = r.getCollectionNode(s.props, this.context),
         c = e.index,
-        l = a.next();
+        l = o.next();
       for (; !l.done && l.value;) {
         let r = l.value;
         e.index = c;
@@ -98,12 +98,12 @@ class o {
           wrapper: function(e, t) {
             return e && t ? n => e(t(n)) : e ? e : t ? t : void 0
           }(e.wrapper, r.wrapper)
-        }, this.getChildState(t, r), n ? "".concat(n).concat(s.key) : s.key, o)];
+        }, this.getChildState(t, r), n ? "".concat(n).concat(s.key) : s.key, a)];
         for (let t of d) {
-          if (t.value = r.value || e.value, t.value && this.cache.set(t.value, t), e.type && t.type !== e.type) throw Error("Unsupported type <".concat(i(t.type), "> in <").concat(i(o.type), ">. Only <").concat(i(e.type), "> is supported."));
+          if (t.value = r.value || e.value, t.value && this.cache.set(t.value, t), e.type && t.type !== e.type) throw Error("Unsupported type <".concat(i(t.type), "> in <").concat(i(a.type), ">. Only <").concat(i(e.type), "> is supported."));
           c++, yield t
         }
-        l = a.next(d)
+        l = o.next(d)
       }
       return
     }
@@ -113,9 +113,9 @@ class o {
         type: e.type,
         props: e.props,
         key: e.key,
-        parentKey: o ? o.key : null,
+        parentKey: a ? a.key : null,
         value: e.value,
-        level: o ? o.level + 1 : 0,
+        level: a ? a.level + 1 : 0,
         index: e.index,
         rendered: e.rendered,
         textValue: e.textValue,
@@ -123,7 +123,7 @@ class o {
         wrapper: e.wrapper,
         shouldInvalidate: e.shouldInvalidate,
         hasChildNodes: e.hasChildNodes,
-        childNodes: a(function*() {
+        childNodes: o(function*() {
           if (!e.hasChildNodes) return;
           let n = 0;
           for (let r of e.childNodes())
@@ -137,7 +137,7 @@ class o {
   }
 }
 
-function a(e) {
+function o(e) {
   let t = [],
     n = null;
   return {
@@ -153,16 +153,16 @@ function i(e) {
 }
 
 function s(e, t, n) {
-  let a = (0, r.useMemo)(() => new o, []),
+  let o = (0, r.useMemo)(() => new a, []),
     {
       children: i,
       items: s,
       collection: c
     } = e;
-  return (0, r.useMemo)(() => c ? c : t(a.build({
+  return (0, r.useMemo)(() => c ? c : t(o.build({
     children: i,
     items: s
-  }, n)), [a, i, s, c, n, t])
+  }, n)), [o, i, s, c, n, t])
 }
 
 function c(e, t) {
@@ -191,9 +191,9 @@ function d(e) {
 function p(e, t, n) {
   if (t.parentKey === n.parentKey) return t.index - n.index;
   let r = [...f(e, t), t],
-    o = [...f(e, n), n],
-    a = r.slice(0, o.length).findIndex((e, t) => e !== o[t]);
-  return -1 !== a ? (t = r[a], n = o[a], t.index - n.index) : r.findIndex(e => e === n) >= 0 ? 1 : (o.findIndex(e => e === t), -1)
+    a = [...f(e, n), n],
+    o = r.slice(0, a.length).findIndex((e, t) => e !== a[t]);
+  return -1 !== o ? (t = r[o], n = a[o], t.index - n.index) : r.findIndex(e => e === n) >= 0 ? 1 : (a.findIndex(e => e === t), -1)
 }
 
 function f(e, t) {
@@ -209,7 +209,7 @@ function m(e) {
   if (null != t) return t;
   t = 0;
   let n = r => {
-    for (let o of r) "section" === o.type ? n(c(o, e)) : t++
+    for (let a of r) "section" === a.type ? n(c(a, e)) : t++
   };
   return n(e), h.set(e, t), t
 }

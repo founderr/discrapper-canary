@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("997289"),
   c = n("685665"),
   f = n("442939"),
-  p = n("860285"),
-  m = n("42203"),
+  m = n("860285"),
+  p = n("42203"),
   h = n("86878"),
   E = n("525065"),
   g = n("305961"),
@@ -25,9 +25,9 @@ var l = n("37983"),
   v = n("18494"),
   I = n("697218"),
   _ = n("800762"),
-  y = n("953998"),
+  N = n("953998"),
   A = n("535974"),
-  N = n("773336"),
+  y = n("773336"),
   x = n("602043"),
   O = n("191225"),
   R = n("706508"),
@@ -46,20 +46,20 @@ function F(e) {
     activity: t,
     currentEmbeddedApplication: n,
     isCurrentUser: F,
-    color: G,
-    look: B,
+    color: B,
+    look: G,
     hover: H,
     user: V,
     isEmbedded: K = !1
   } = e, {
     analyticsLocations: W
-  } = (0, c.default)(), [Y, z] = i.useState(!1), J = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), q = null == t ? void 0 : t.application_id, Z = (0, a.useStateFromStores)([O.default], () => K ? O.default.getEmbeddedActivityForUserId(V.id, q) : null, [V.id, K, q]), X = (0, L.default)({
-    channelId: null == Z ? void 0 : Z.channelId,
+  } = (0, c.default)(), [Y, z] = i.useState(!1), Z = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), J = null == t ? void 0 : t.application_id, q = (0, a.useStateFromStores)([O.default], () => K ? O.default.getEmbeddedActivityForUserId(V.id, J) : null, [V.id, K, J]), X = (0, L.default)({
+    channelId: null == q ? void 0 : q.channelId,
     userId: V.id,
     activity: t
-  }), Q = (0, a.useStateFromStores)([S.default, p.default, A.default, h.default], () => K || (null == t ? void 0 : t.application_id) != null && (0, x.isLaunchable)({
+  }), Q = (0, a.useStateFromStores)([S.default, m.default, A.default, h.default], () => K || (null == t ? void 0 : t.application_id) != null && (0, x.isLaunchable)({
     LibraryApplicationStore: S.default,
-    LaunchableGameStore: p.default,
+    LaunchableGameStore: m.default,
     DispatchApplicationStore: A.default,
     ConnectedAppsStore: h.default,
     applicationId: t.application_id
@@ -69,21 +69,21 @@ function F(e) {
       channelId: l
     } = e;
     return n === (null == t ? void 0 : t.application_id) && l === X
-  })), ee = (0, a.useStateFromStores)([y.default], () => null != t && null != t.application_id && y.default.getState(t.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), [et] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, a.useStateFromStores)([m.default, g.default, E.default, T.default, v.default, _.default, C.default], () => (0, M.default)({
+  })), ee = (0, a.useStateFromStores)([N.default], () => null != t && null != t.application_id && N.default.getState(t.application_id, k.ActivityActionTypes.JOIN) === k.ActivityActionStates.LOADING), [et] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), en = (0, a.useStateFromStores)([p.default, g.default, E.default, T.default, v.default, _.default, C.default], () => (0, M.default)({
     user: V,
     activity: t,
     application: et,
     channelId: X,
-    currentUser: J,
+    currentUser: Z,
     isEmbedded: K,
-    ChannelStore: m.default,
+    ChannelStore: p.default,
     GuildStore: g.default,
     GuildMemberCountStore: E.default,
     RelationshipStore: T.default,
     SelectedChannelStore: v.default,
     VoiceStateStore: _.default,
     PermissionStore: C.default
-  })), el = (0, d.useAnalyticsContext)(), ei = !N.isPlatformEmbedded, ea = (0, P.default)(t, k.ActivityFlags.JOIN) || K;
+  })), el = (0, d.useAnalyticsContext)(), ei = !y.isPlatformEmbedded, ea = (0, P.default)(t, k.ActivityFlags.JOIN) || K;
   if (null == t || !ea || null == t.application_id) return null;
   let es = !F && (ei || Q) && !Y && !$ && (!K || en),
     er = null;
@@ -143,8 +143,8 @@ function F(e) {
         onClick: eu,
         onMouseEnter: t,
         onMouseLeave: n,
-        color: G,
-        look: B,
+        color: B,
+        look: G,
         hover: H,
         disabled: !es,
         submitting: ee,

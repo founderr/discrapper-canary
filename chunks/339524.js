@@ -49,7 +49,7 @@ function r(e) {
     }
   }, [r, d]), f = l.useCallback(e => {
     r && (e.stopPropagation(), e.preventDefault(), o(!1))
-  }, [r]), p = l.useCallback(e => {
+  }, [r]), m = l.useCallback(e => {
     if (!d(e, !0)) return !1;
     let {
       dataTransfer: n
@@ -62,10 +62,10 @@ function r(e) {
   }, [r, t, d]);
   return l.useEffect(() => {
     let e = n.current;
-    return null != e && (e.addEventListener("dragover", c, !1), e.addEventListener("dragleave", f, !1), e.addEventListener("drop", p, !1)), () => {
-      null != e && (e.removeEventListener("dragover", c, !1), e.removeEventListener("dragleave", f, !1), e.removeEventListener("drop", p, !1))
+    return null != e && (e.addEventListener("dragover", c, !1), e.addEventListener("dragleave", f, !1), e.addEventListener("drop", m, !1)), () => {
+      null != e && (e.removeEventListener("dragover", c, !1), e.removeEventListener("dragleave", f, !1), e.removeEventListener("drop", m, !1))
     }
-  }, [p, c, f]), {
+  }, [m, c, f]), {
     dragRef: n,
     hover: r
   }

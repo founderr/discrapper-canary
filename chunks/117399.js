@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return _
+    return v
   }
 });
-var a = n("37983");
-n("884691");
-var l = n("446674"),
-  i = n("77078"),
-  u = n("477566"),
-  r = n("680986"),
-  s = n("263024"),
-  d = n("300322"),
-  o = n("42203"),
-  f = n("724210"),
-  c = n("782340");
+var n = a("37983");
+a("884691");
+var r = a("446674"),
+  i = a("77078"),
+  s = a("477566"),
+  u = a("680986"),
+  l = a("263024"),
+  o = a("300322"),
+  d = a("42203"),
+  f = a("724210"),
+  c = a("782340");
 
-function _(e) {
-  let t = (0, l.useStateFromStores)([o.default], () => o.default.getChannel(e.parent_id)),
-    n = (0, d.useIsThreadModerator)(e),
-    _ = (0, r.useExistingPin)(e);
-  return (null == t ? void 0 : t.isForumLikeChannel()) && n ? e.hasFlag(f.ChannelFlags.PINNED) ? (0, a.jsx)(i.MenuItem, {
+function v(e) {
+  let t = (0, r.useStateFromStores)([d.default], () => d.default.getChannel(e.parent_id)),
+    a = (0, o.useIsThreadModerator)(e),
+    v = (0, u.useExistingPin)(e);
+  return (null == t ? void 0 : t.isForumLikeChannel()) && a ? e.hasFlag(f.ChannelFlags.PINNED) ? (0, n.jsx)(i.MenuItem, {
     id: "unpin-thread",
     label: c.default.Messages.UNPIN_POST,
-    action: () => s.default.unpin(e)
-  }) : (0, a.jsx)(i.MenuItem, {
+    action: () => l.default.unpin(e)
+  }) : (0, n.jsx)(i.MenuItem, {
     id: "pin-thread",
     label: c.default.Messages.PIN_POST,
     action: function() {
-      null != _ ? u.default.show({
+      null != v ? s.default.show({
         title: c.default.Messages.FORUM_PIN_CONFIRM_TITLE,
         body: c.default.Messages.FORUM_PIN_CONFIRM_BODY,
         onConfirm: async () => {
-          await s.default.unpin(_), s.default.pin(e)
+          await l.default.unpin(v), l.default.pin(e)
         }
-      }) : s.default.pin(e)
+      }) : l.default.pin(e)
     }
   }) : null
 }

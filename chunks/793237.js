@@ -1,57 +1,57 @@
 "use strict";
 n.r(t), n.d(t, {
   setHighlightedSummary: function() {
-    return x
+    return _
   },
   toggleTopicsBar: function() {
     return N
   },
   setSelectedSummary: function() {
-    return T
+    return A
   },
   updateVisibleMessages: function() {
-    return M
+    return y
   },
   useSummaryPolling: function() {
     return O
   },
   setSummaryFeedback: function() {
-    return j
-  },
-  deleteSummary: function() {
     return R
   },
-  default: function() {
+  deleteSummary: function() {
     return P
+  },
+  default: function() {
+    return j
   }
 }), n("222007");
 var l = n("884691"),
-  a = n("917351"),
-  s = n.n(a),
-  i = n("394846"),
+  i = n("917351"),
+  a = n.n(i),
+  s = n("394846"),
   r = n("65597"),
   o = n("872717"),
   u = n("913144"),
   d = n("448993"),
   c = n("734575"),
-  m = n("104589"),
-  f = n("116460"),
-  h = n("42203"),
-  p = n("718517"),
-  g = n("347738");
-let E = 30 * p.default.Millis.SECOND,
-  C = 5 * p.default.Millis.SECOND,
-  v = {},
-  I = {};
-async function S(e, t) {
+  f = n("104589"),
+  m = n("116460"),
+  p = n("42203"),
+  h = n("718517"),
+  E = n("347738");
+let g = 30 * h.default.Millis.SECOND,
+  S = 5 * h.default.Millis.SECOND,
+  C = {},
+  T = {};
+async function v(e, t) {
   let n, l;
-  if (!g.default.shouldFetch(e, t)) return;
-  let a = Date.now();
+  if (!E.default.shouldFetch(e, t)) return;
+  let i = Date.now();
   u.default.dispatch({
     type: "REQUEST_CHANNEL_SUMMARY",
     channelId: e,
     summaryId: t,
-    requestedAt: a
+    requestedAt: i
   });
   try {
     let n = await o.default.get("/channels/".concat(e, "/summaries/").concat(t));
@@ -64,37 +64,37 @@ async function S(e, t) {
     channelId: e,
     summary: l,
     error: n,
-    requestedAt: a,
-    receivedAt: Date.now()
-  })
-}
-async function _(e) {
-  var t, n;
-  let l, a;
-  if (!g.default.shouldFetch(e)) return;
-  let i = Date.now();
-  u.default.dispatch({
-    type: "REQUEST_CHANNEL_SUMMARIES",
-    channelId: e,
-    requestedAt: i
-  });
-  try {
-    a = await o.default.get("/channels/".concat(e, "/summaries"))
-  } catch (e) {
-    l = new d.APIError(e)
-  }
-  let r = (null == a ? void 0 : null === (t = a.body) || void 0 === t ? void 0 : t.summaries) instanceof Array ? a.body.summaries : null !== (n = null == a ? void 0 : a.body) && void 0 !== n ? n : [];
-  r = s.takeRight(r, 75), u.default.dispatch({
-    type: "RECEIVE_CHANNEL_SUMMARIES",
-    channelId: e,
-    summaries: r,
-    error: null != l ? l : void 0,
     requestedAt: i,
     receivedAt: Date.now()
   })
 }
+async function I(e) {
+  var t, n;
+  let l, i;
+  if (!E.default.shouldFetch(e)) return;
+  let s = Date.now();
+  u.default.dispatch({
+    type: "REQUEST_CHANNEL_SUMMARIES",
+    channelId: e,
+    requestedAt: s
+  });
+  try {
+    i = await o.default.get("/channels/".concat(e, "/summaries"))
+  } catch (e) {
+    l = new d.APIError(e)
+  }
+  let r = (null == i ? void 0 : null === (t = i.body) || void 0 === t ? void 0 : t.summaries) instanceof Array ? i.body.summaries : null !== (n = null == i ? void 0 : i.body) && void 0 !== n ? n : [];
+  r = a.takeRight(r, 75), u.default.dispatch({
+    type: "RECEIVE_CHANNEL_SUMMARIES",
+    channelId: e,
+    summaries: r,
+    error: null != l ? l : void 0,
+    requestedAt: s,
+    receivedAt: Date.now()
+  })
+}
 
-function x(e, t) {
+function _(e, t) {
   u.default.dispatch({
     type: "SET_HIGHLIGHTED_SUMMARY",
     channelId: e,
@@ -108,15 +108,15 @@ function N() {
   })
 }
 
-function T(e, t) {
-  null != e && null != t && S(e, t), u.default.dispatch({
+function A(e, t) {
+  null != e && null != t && v(e, t), u.default.dispatch({
     type: "SET_SELECTED_SUMMARY",
     channelId: e,
     summaryId: null != t ? t : null
   })
 }
 
-function M(e, t) {
+function y(e, t) {
   u.default.dispatch({
     type: "UPDATE_VISIBLE_MESSAGES",
     topVisibleMessage: null != e ? e : null,
@@ -124,37 +124,37 @@ function M(e, t) {
   })
 }
 
-function A(e, t) {
-  return null == v[e] && (v[e] = 0), null === t ? v[e] = 0 : v[e] += t, v[e]
+function x(e, t) {
+  return null == C[e] && (C[e] = 0), null === t ? C[e] = 0 : C[e] += t, C[e]
 }
 
 function O(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    n = (0, r.default)([h.default], () => h.default.getChannel(e), [e]),
-    [a, s] = l.useState(null),
-    o = (0, c.useChannelSummariesExperiment)(n) && !i.isMobile;
+    n = (0, r.default)([p.default], () => p.default.getChannel(e), [e]),
+    [i, a] = l.useState(null),
+    o = (0, c.useChannelSummariesExperiment)(n) && !s.isMobile;
   l.useEffect(() => {
-    if (o) return s(e), () => {
-      s(null)
+    if (o) return a(e), () => {
+      a(null)
     }
   }, [e, o]), l.useEffect(() => {
-    if (a !== e && null != a && b.stopPolling(e), o && null != a) return (t || null != e && a !== e) && b.fetchSummaries(e), b.startPolling(e), () => {
-      null != a && b.stopPolling(e)
+    if (i !== e && null != i && b.stopPolling(e), o && null != i) return (t || null != e && i !== e) && b.fetchSummaries(e), b.startPolling(e), () => {
+      null != i && b.stopPolling(e)
     }
-  }, [e, t, a, o])
+  }, [e, t, i, o])
 }
 
-function j(e, t) {
+function R(e, t) {
   u.default.dispatch({
     type: "SET_SUMMARY_FEEDBACK",
     summary: e,
     rating: t
   })
 }
-async function y() {
+async function M() {
   var e;
   let t, n;
-  if (!g.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
+  if (!E.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
   let l = Date.now();
   u.default.dispatch({
     type: "REQUEST_CHANNEL_AFFINITIES",
@@ -165,10 +165,10 @@ async function y() {
   } catch (e) {
     t = new d.APIError(e)
   }
-  let a = null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.channel_affinities;
+  let i = null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.channel_affinities;
   u.default.dispatch({
     type: "RECEIVE_CHANNEL_AFFINITIES",
-    affinities: a,
+    affinities: i,
     error: null != t ? t : void 0,
     requestedAt: l,
     receivedAt: Date.now()
@@ -177,27 +177,27 @@ async function y() {
 async function L(e) {
   let t, n, {
     useQuickSwitcher: l = !0,
-    useChannelAffinities: a = !0
+    useChannelAffinities: i = !0
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   e = null != e ? e : [];
-  let s = Date.now();
-  if (0 === (e = e.concat(g.default.defaultChannelIds({
+  let a = Date.now();
+  if (0 === (e = e.concat(E.default.defaultChannelIds({
       withQuickSwitcher: l,
-      withChannelAffinities: a
+      withChannelAffinities: i
     })).filter(e => {
-      let t = h.default.getChannel(e);
+      let t = p.default.getChannel(e);
       return (0, c.canSeeChannelSummaries)(t, !1, !0)
     }).filter(e => {
       let t = Date.now(),
-        n = g.default.status(e);
+        n = E.default.status(e);
       if (null == n ? void 0 : n.fetching) return !1;
       let l = null == n ? void 0 : n.lastReceivedAt;
-      return null == l || t - l > E
+      return null == l || t - l > g
     }).slice(0, 50)).length) return Promise.resolve(null);
   u.default.dispatch({
     type: "REQUEST_CHANNEL_SUMMARIES_BULK",
     channelIds: e,
-    requestedAt: s
+    requestedAt: a
   });
   try {
     n = await o.default.post({
@@ -209,19 +209,19 @@ async function L(e) {
   } catch (e) {
     t = new d.APIError(e)
   }
-  let i = null == n ? void 0 : n.body.summaries;
+  let s = null == n ? void 0 : n.body.summaries;
   u.default.dispatch({
     type: "RECEIVE_CHANNEL_SUMMARIES_BULK",
-    requestedAt: s,
+    requestedAt: a,
     receivedAt: Date.now(),
-    summaries: i,
+    summaries: s,
     requestArgs: {
       channelIds: e
     },
     error: t
   })
 }
-async function R(e) {
+async function P(e) {
   try {
     await o.default.delete("/channels/".concat(e.channelId, "/summaries/").concat(e.id)), u.default.dispatch({
       type: "DELETE_SUMMARY",
@@ -233,21 +233,21 @@ async function R(e) {
 }
 let b = {
   startPolling: function(e) {
-    let t = A(e, 1);
-    t - 1 == 0 && (I[e] = setInterval(async () => {
+    let t = x(e, 1);
+    t - 1 == 0 && (T[e] = setInterval(async () => {
       await b.fetchSummaries(e)
-    }, C))
+    }, S))
   },
   stopPolling: function(e) {
-    let t = A(e, -1);
-    t <= 0 && (A(e, 0), clearInterval(I[e]))
+    let t = x(e, -1);
+    t <= 0 && (x(e, 0), clearInterval(T[e]))
   },
-  setSummaryFeedback: j,
+  setSummaryFeedback: R,
   useSummaryPolling: O,
-  updateVisibleMessages: M,
-  setSelectedSummary: T,
-  setHighlightedSummary: x,
-  fetchSummaries: _,
+  updateVisibleMessages: y,
+  setSelectedSummary: A,
+  setHighlightedSummary: _,
+  fetchSummaries: I,
   fetchSummariesBulk: L,
   useChannelSummaries: function(e) {
     let {
@@ -259,17 +259,17 @@ let b = {
       l.useEffect(() => {
         (async function e() {
           try {
-            await y()
+            await M()
           } catch (e) {}
           try {
             var e, n;
-            (null === (e = f.default.getProps().results) || void 0 === e ? void 0 : e.length) === 0 && (0, m.search)(null !== (n = f.default.getProps().query) && void 0 !== n ? n : "")
+            (null === (e = m.default.getProps().results) || void 0 === e ? void 0 : e.length) === 0 && (0, f.search)(null !== (n = m.default.getProps().query) && void 0 !== n ? n : "")
           } catch (e) {}
           await L(t.split(","))
         })()
       }, [t])
-    }(t), (0, r.useStateFromStoresArray)([g.default], () => g.default.topSummaries(), [])
+    }(t), (0, r.useStateFromStoresArray)([E.default], () => E.default.topSummaries(), [])
   },
-  deleteSummary: R
+  deleteSummary: P
 };
-var P = b
+var j = b

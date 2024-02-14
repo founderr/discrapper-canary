@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   VcTileActivityExperimentType: function() {
-    return l
+    return a
   },
   VcTileActivitiesEntryPointExperiment: function() {
     return i
   }
 });
-var a, l, s = n("862205");
-(a = l || (l = {})).CONTROL = "CONTROL", a.ONE_OR_TWO_USERS = "ONE_OR_TWO_USERS", a.ANY_NUMBER_OF_USERS = "ANY_NUMBER_OF_USERS";
+var l, a, s = n("862205");
+(l = a || (a = {})).CONTROL = "CONTROL", l.ONE_OR_TWO_USERS = "ONE_OR_TWO_USERS", l.ANY_NUMBER_OF_USERS = "ANY_NUMBER_OF_USERS";
 let i = (0, s.createExperiment)({
   kind: "user",
   id: "2023-01_vc_tile_activities_entry_point",

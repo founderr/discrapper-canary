@@ -16,8 +16,8 @@ var i = s("37983"),
   E = s("49111"),
   _ = s("646718"),
   T = s("782340"),
-  I = s("264528");
-let f = [{
+  I = s("553922");
+let N = [{
   getPerkHeading: () => T.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_EMOJI_SLOTS,
   getPerkPreviewLightTheme: () => s("209988"),
   getPerkPreviewDarkTheme: () => s("949004"),
@@ -143,7 +143,7 @@ let f = [{
   getTier3Value: () => !0
 }];
 
-function N(e) {
+function f(e) {
   let {
     children: t,
     className: s,
@@ -251,26 +251,26 @@ var m = function(e) {
         children: [(0, i.jsx)("thead", {
           children: (0, i.jsxs)("tr", {
             className: I.tableRow,
-            children: [(0, i.jsx)(N, {
+            children: [(0, i.jsx)(f, {
               className: I.tableRowHeading,
               children: T.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS
-            }), !m && (0, i.jsx)(N, {
+            }), !m && (0, i.jsx)(f, {
               tier: E.BoostedGuildTiers.NONE,
               children: T.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME
-            }), (0, i.jsx)(N, {
+            }), (0, i.jsx)(f, {
               tier: E.BoostedGuildTiers.TIER_1,
               children: T.default.Messages.PREMIUM_GUILD_TIER_1
-            }), (0, i.jsx)(N, {
+            }), (0, i.jsx)(f, {
               tier: E.BoostedGuildTiers.TIER_2,
               children: T.default.Messages.PREMIUM_GUILD_TIER_2
-            }), (0, i.jsx)(N, {
+            }), (0, i.jsx)(f, {
               tier: E.BoostedGuildTiers.TIER_3,
               children: T.default.Messages.PREMIUM_GUILD_TIER_3
             })]
           })
         }), (0, i.jsx)("tbody", {
           className: I.tableBody,
-          children: f.map((e, r) => {
+          children: N.map((e, r) => {
             let u = s === r;
 
             function d() {

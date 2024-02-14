@@ -31,7 +31,7 @@ function f(e, t, n) {
   return (u & n) === n
 }
 
-function p(e, t) {
+function N(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = E.get(e);
   if (null == r) return !1;
@@ -42,7 +42,7 @@ function p(e, t) {
   return !1
 }
 
-function N(e) {
+function p(e) {
   let {
     user: t,
     sessionId: n
@@ -78,7 +78,7 @@ class A extends r.default.Store {
   }
   isAnyoneElseSpeaking() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.MediaEngineContextTypes.DEFAULT;
-    return p(e, _.SpeakingFlags.VOICE, !0)
+    return N(e, _.SpeakingFlags.VOICE, !0)
   }
   isCurrentUserSpeaking() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.MediaEngineContextTypes.DEFAULT;
@@ -86,7 +86,7 @@ class A extends r.default.Store {
   }
   isAnyonePrioritySpeaking() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.MediaEngineContextTypes.DEFAULT;
-    return p(e, _.SpeakingFlags.VOICE | _.SpeakingFlags.PRIORITY)
+    return N(e, _.SpeakingFlags.VOICE | _.SpeakingFlags.PRIORITY)
   }
   isCurrentUserPrioritySpeaking() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.MediaEngineContextTypes.DEFAULT;
@@ -95,8 +95,8 @@ class A extends r.default.Store {
 }
 A.displayName = "SpeakingStore";
 var R = new A(i.default, {
-  CONNECTION_OPEN: N,
-  OVERLAY_INITIALIZE: N,
+  CONNECTION_OPEN: p,
+  OVERLAY_INITIALIZE: p,
   SPEAKING: function(e) {
     let {
       context: t,

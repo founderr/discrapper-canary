@@ -15,17 +15,17 @@ var s = n("37983"),
   c = n("766274"),
   f = n("476108"),
   E = n("124969"),
-  _ = n("49111"),
-  I = n("853994"),
+  I = n("49111"),
+  _ = n("853994"),
   p = n("782340"),
-  h = n("926622");
+  h = n("890957");
 i.default.initialize();
 class T extends a.PureComponent {
   componentDidMount() {
     let e = (0, o.default)(this.props.location),
       t = (0, l.parse)(this.props.location.search);
     r.default.post({
-      url: _.Endpoints.DISABLE_EMAIL_NOTIFICATIONS,
+      url: I.Endpoints.DISABLE_EMAIL_NOTIFICATIONS,
       body: {
         token: e,
         pixel_uuid: t.hash,
@@ -76,7 +76,7 @@ class T extends a.PureComponent {
         className: h.marginTop8,
         color: E.Button.Colors.LINK,
         look: E.Button.Looks.LINK,
-        onClick: () => a(_.Routes.SETTINGS("notifications", I.EMAILS_SUBSECTION)),
+        onClick: () => a(I.Routes.SETTINGS("notifications", _.EMAILS_SUBSECTION)),
         children: p.default.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
       })]
     })
@@ -90,7 +90,7 @@ class T extends a.PureComponent {
       category: a
     } = this.state;
     if (null != a) {
-      let e = I.EmailCategoriesList.find(e => e.category === a);
+      let e = _.EmailCategoriesList.find(e => e.category === a);
       if (null != e) return this.renderCategorySuccess(a, e.label())
     }
     return (0, s.jsxs)(E.default, {

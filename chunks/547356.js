@@ -9,47 +9,47 @@ n.r(t), n.d(t, {
 });
 var a = n("37983");
 n("884691");
-var l = n("77078"),
-  i = n("724038"),
-  s = n("782340"),
-  r = n("22019");
+var s = n("77078"),
+  l = n("724038"),
+  i = n("782340"),
+  r = n("61790");
 let u = e => {
   let {
     onConfirm: t,
     onCancel: n,
     title: u,
     subtitle: o,
-    confirmCta: c,
-    showOpenDiscord: d = !0
+    confirmCta: d,
+    showOpenDiscord: c = !0
   } = e;
   return (0, a.jsxs)("div", {
     className: r.confirmationContainer,
-    children: [(0, a.jsx)(l.Heading, {
+    children: [(0, a.jsx)(s.Heading, {
       className: r.confirmationHeader,
       variant: "heading-lg/extrabold",
       children: u
-    }), null != o ? (0, a.jsx)(l.Text, {
+    }), null != o ? (0, a.jsx)(s.Text, {
       className: r.confirmationSubtitle,
       variant: "text-sm/normal",
       color: "header-secondary",
       children: o
     }) : null, (0, a.jsxs)("div", {
       className: r.buttonContainer,
-      children: [d && (0, a.jsx)(l.Button, {
+      children: [c && (0, a.jsx)(s.Button, {
         fullWidth: !0,
-        onClick: () => (0, i.default)("application_sub_mweb_success_modal"),
-        children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
-      }), (0, a.jsx)(l.Button, {
+        onClick: () => (0, l.default)("application_sub_mweb_success_modal"),
+        children: i.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
+      }), (0, a.jsx)(s.Button, {
         fullWidth: !0,
-        color: l.Button.Colors.PRIMARY,
+        color: s.Button.Colors.PRIMARY,
         onClick: t,
-        children: c
-      }), null != n && (0, a.jsx)(l.Button, {
+        children: d
+      }), null != n && (0, a.jsx)(s.Button, {
         fullWidth: !0,
-        color: l.Button.Colors.PRIMARY,
-        look: l.Button.Looks.LINK,
+        color: s.Button.Colors.PRIMARY,
+        look: s.Button.Looks.LINK,
         onClick: n,
-        children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CANCEL_BUTTON
+        children: i.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CANCEL_BUTTON
       })]
     })]
   })
@@ -63,30 +63,30 @@ function o(e) {
   } = e;
   return (0, a.jsxs)("div", {
     className: r.confirmationContainer,
-    children: [(0, a.jsx)(l.Heading, {
+    children: [(0, a.jsx)(s.Heading, {
       className: r.confirmationHeader,
       variant: "heading-lg/extrabold",
-      children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({
+      children: i.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({
         tier: n
       })
-    }), (0, a.jsx)(l.Text, {
+    }), (0, a.jsx)(s.Text, {
       className: r.confirmationSubtitle,
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
+      children: i.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
         timestamp: null == u ? void 0 : u.currentPeriodEnd
       })
     }), (0, a.jsxs)("div", {
       className: r.buttonContainer,
-      children: [(0, a.jsx)(l.Button, {
+      children: [(0, a.jsx)(s.Button, {
         className: r.openDiscordButton,
-        onClick: () => (0, i.default)("application_sub_mweb_success_modal"),
-        children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
-      }), (0, a.jsx)(l.Button, {
+        onClick: () => (0, l.default)("application_sub_mweb_success_modal"),
+        children: i.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
+      }), (0, a.jsx)(s.Button, {
         className: r.doneButton,
-        look: l.Button.Looks.BLANK,
+        look: s.Button.Looks.BLANK,
         onClick: t,
-        children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
+        children: i.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
       })]
     })]
   })

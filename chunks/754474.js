@@ -1,53 +1,53 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(x), t.d(x, {
   BotTypes: function() {
-    return a.BotTagTypes
+    return d.BotTagTypes
   },
   default: function() {
-    return u
+    return r
   }
 });
-var r = n("37983");
-n("884691");
-var s = n("414456"),
-  i = n.n(s),
-  l = n("79798"),
-  a = n("988268"),
-  o = n("888770"),
-  u = e => {
+var s = t("37983");
+t("884691");
+var a = t("414456"),
+  o = t.n(a),
+  y = t("79798"),
+  d = t("988268"),
+  k = t("293005"),
+  r = i => {
     let {
-      name: t,
-      discriminator: n,
-      invertBotTagColor: s,
-      nameColor: a,
-      className: u,
-      botType: c,
-      usernameClass: d,
-      discriminatorClass: f,
-      botClass: h,
-      botVerified: C = !1,
-      style: v,
-      useRemSizes: p = !1,
-      usernameIcon: E
-    } = e;
-    return (0, r.jsxs)("div", {
-      className: i(u, o.nameTag),
-      style: v,
-      children: [(0, r.jsxs)("span", {
-        className: i(o.username, d),
-        style: null != a ? {
-          color: a
+      name: x,
+      discriminator: t,
+      invertBotTagColor: a,
+      nameColor: d,
+      className: r,
+      botType: e,
+      usernameClass: p,
+      discriminatorClass: n,
+      botClass: m,
+      botVerified: c = !1,
+      style: l,
+      useRemSizes: f = !1,
+      usernameIcon: _
+    } = i;
+    return (0, s.jsxs)("div", {
+      className: o(r, k.nameTag),
+      style: l,
+      children: [(0, s.jsxs)("span", {
+        className: o(k.username, p),
+        style: null != d ? {
+          color: d
         } : void 0,
-        children: [E, t]
-      }), null != n ? (0, r.jsxs)("span", {
-        className: null != f ? f : void 0,
-        children: ["#", n]
-      }) : null, null != c ? (0, r.jsx)(l.default, {
-        type: c,
-        invertColor: s,
-        className: i(h, o.bot),
-        verified: C,
-        useRemSizes: p
+        children: [_, x]
+      }), null != t ? (0, s.jsxs)("span", {
+        className: null != n ? n : void 0,
+        children: ["#", t]
+      }) : null, null != e ? (0, s.jsx)(y.default, {
+        type: e,
+        invertColor: a,
+        className: o(m, k.bot),
+        verified: c,
+        useRemSizes: f
       }) : null]
     })
   }

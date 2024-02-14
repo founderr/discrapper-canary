@@ -1,14 +1,14 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   navigateToPremiumMarketingPage: function() {
-    return a
+    return l
   }
 });
-var n = i("79112"),
-  s = i("49111");
-let a = function() {
+var i = n("79112"),
+  r = n("49111");
+let l = function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  n.default.open(s.UserSettingsSections.PREMIUM, null, {
+  i.default.open(r.UserSettingsSections.PREMIUM, null, {
     openWithoutBackstack: e
   })
 }

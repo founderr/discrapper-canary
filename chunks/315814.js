@@ -14,13 +14,13 @@ var l = n("37983"),
   d = n("685665"),
   c = n("166960"),
   f = n("488705"),
-  p = n("551305"),
-  m = n("433328"),
+  m = n("551305"),
+  p = n("433328"),
   h = n("599110"),
   E = n("49111"),
   g = n("646718"),
   S = n("782340"),
-  C = n("537461"),
+  C = n("350583"),
   T = i.memo(function(e) {
     let {
       disabled: t,
@@ -33,7 +33,7 @@ var l = n("37983"),
       location: "ec41f5_1"
     }, {
       autoTrackExposure: !0
-    }), _ = I ? S.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : v ? S.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : S.default.Messages.SHARE_NITRO_TOOLTIP, y = I ? S.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [A, N] = i.useState(!1), [x, O] = i.useState(!1), R = (0, r.default)(null, () => O(!1)), {
+    }), _ = I ? S.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : v ? S.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : S.default.Messages.SHARE_NITRO_TOOLTIP, N = I ? S.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [A, y] = i.useState(!1), [x, O] = i.useState(!1), R = (0, r.default)(null, () => O(!1)), {
       analyticsLocations: M
     } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), L = T.isDM() && void 0 !== T.recipients ? T.recipients[0] : null, P = (0, o.default)();
     return t ? null : (0, l.jsxs)("div", {
@@ -48,23 +48,23 @@ var l = n("37983"),
       }), (0, l.jsx)(a.Tooltip, {
         text: _,
         shouldShow: !x,
-        "aria-label": null != y ? y : _,
+        "aria-label": null != N ? N : _,
         children: e => (0, l.jsx)("div", {
           onMouseEnter: () => {
-            !x && !A && (N(!0), h.default.track(E.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+            !x && !A && (y(!0), h.default.track(E.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
               location_stack: M,
               step: g.ReferralTrialsAnalyticSteps.BADGE_TOOLTIP_VIEWED,
               other_user_id: Number(L)
             }))
           },
           onMouseLeave: () => {
-            N(!1)
+            y(!1)
           },
-          children: (0, l.jsx)(p.default, {
+          children: (0, l.jsx)(m.default, {
             ...e,
             innerClassName: C.button,
             isActive: x,
-            "aria-label": null != y ? y : _,
+            "aria-label": null != N ? N : _,
             "aria-haspopup": "dialog",
             onClick: () => {
               O(e => !e), h.default.track(E.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
@@ -73,7 +73,7 @@ var l = n("37983"),
                 other_user_id: Number(L)
               })
             },
-            children: (0, l.jsx)(m.default, {
+            children: (0, l.jsx)(p.default, {
               referralsRemaining: n,
               hovered: A,
               isResending: v,

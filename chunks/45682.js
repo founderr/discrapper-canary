@@ -14,14 +14,14 @@ var l = n("37983"),
   d = n("856567"),
   c = n("77078"),
   f = n("206230"),
-  p = n("384997"),
-  m = n("697218"),
+  m = n("384997"),
+  p = n("697218"),
   h = n("181114"),
   E = n("216422"),
   g = n("719923"),
   S = n("994428"),
   C = n("782340"),
-  T = n("985330");
+  T = n("577827");
 let v = {
   tension: 750,
   mass: 2.5,
@@ -58,11 +58,11 @@ function _(e) {
     checked: t,
     onClick: n,
     id: a = "burst-reaction-toggle-button"
-  } = e, E = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), _ = m.default.getCurrentUser(), y = null != _ && !(0, g.isPremium)(_), A = y ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [N, x] = (0, p.useSelectedDismissibleContent)(A), [O, R] = i.useState(!1), [M, L] = (0, r.useSpring)(() => ({})), P = (0, r.animated)(d.SuperReactionIcon);
+  } = e, E = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), _ = p.default.getCurrentUser(), N = null != _ && !(0, g.isPremium)(_), A = N ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [y, x] = (0, m.useSelectedDismissibleContent)(A), [O, R] = i.useState(!1), [M, L] = (0, r.useSpring)(() => ({})), P = (0, r.animated)(d.SuperReactionIcon);
   i.useEffect(() => {
-    let e = N === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+    let e = y === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
     e && (x(S.ContentDismissActionType.DISMISS), setTimeout(() => R(e), 200))
-  }, [N, x]);
+  }, [y, x]);
   let b = O ? C.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? C.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : C.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
     j = O ? C.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
   return (0, l.jsxs)(c.TooltipContainer, {

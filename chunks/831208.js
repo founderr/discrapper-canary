@@ -1,6 +1,6 @@
 e = n.nmd(e), n("70102"), n("781738"), n("424973"), ! function(r) {
-  var o = "object" == typeof t && t && !t.nodeType && t,
-    a = "object" == typeof e && e && !e.nodeType && e,
+  var a = "object" == typeof t && t && !t.nodeType && t,
+    o = "object" == typeof e && e && !e.nodeType && e,
     i = "object" == typeof n.g && n.g;
   (i.global === i || i.window === i || i.self === i) && (r = i);
   var s, c, l = /^xn--/,
@@ -31,7 +31,7 @@ e = n.nmd(e), n("70102"), n("781738"), n("424973"), ! function(r) {
   }
 
   function b(e) {
-    for (var t, n, r = [], o = 0, a = e.length; o < a;)(t = e.charCodeAt(o++)) >= 55296 && t <= 56319 && o < a ? (64512 & (n = e.charCodeAt(o++))) == 56320 ? r.push(((1023 & t) << 10) + (1023 & n) + 65536) : (r.push(t), o--) : r.push(t);
+    for (var t, n, r = [], a = 0, o = e.length; a < o;)(t = e.charCodeAt(a++)) >= 55296 && t <= 56319 && a < o ? (64512 & (n = e.charCodeAt(a++))) == 56320 ? r.push(((1023 & t) << 10) + (1023 & n) + 65536) : (r.push(t), a--) : r.push(t);
     return r
   }
 
@@ -53,16 +53,16 @@ e = n.nmd(e), n("70102"), n("781738"), n("424973"), ! function(r) {
   }
 
   function D(e) {
-    var t, n, r, o, a, i, s, c, l, u, d, p = [],
+    var t, n, r, a, o, i, s, c, l, u, d, p = [],
       f = e.length,
       m = 0,
       g = 128,
       y = 72;
-    for ((r = e.lastIndexOf("-")) < 0 && (r = 0), o = 0; o < r; ++o) e.charCodeAt(o) >= 128 && v("not-basic"), p.push(e.charCodeAt(o));
-    for (a = r > 0 ? r + 1 : 0; a < f;) {
+    for ((r = e.lastIndexOf("-")) < 0 && (r = 0), a = 0; a < r; ++a) e.charCodeAt(a) >= 128 && v("not-basic"), p.push(e.charCodeAt(a));
+    for (o = r > 0 ? r + 1 : 0; o < f;) {
       for (i = m, s = 1, c = 36;; c += 36) {
         ;
-        if (a >= f && v("invalid-input"), ((l = (t = e.charCodeAt(a++)) - 48 < 10 ? t - 22 : t - 65 < 26 ? t - 65 : t - 97 < 26 ? t - 97 : 36) >= 36 || l > h((2147483647 - m) / s)) && v("overflow"), m += l * s, l < (u = c <= y ? 1 : c >= y + 26 ? 26 : c - y)) break;
+        if (o >= f && v("invalid-input"), ((l = (t = e.charCodeAt(o++)) - 48 < 10 ? t - 22 : t - 65 < 26 ? t - 65 : t - 97 < 26 ? t - 97 : 36) >= 36 || l > h((2147483647 - m) / s)) && v("overflow"), m += l * s, l < (u = c <= y ? 1 : c >= y + 26 ? 26 : c - y)) break;
         s > h(2147483647 / (d = 36 - u)) && v("overflow"), s *= d
       }
       y = w(m - i, n = p.length + 1, 0 == i), h(m / n) > 2147483647 - g && v("overflow"), g += h(m / n), m %= n, p.splice(m++, 0, g)
@@ -71,17 +71,17 @@ e = n.nmd(e), n("70102"), n("781738"), n("424973"), ! function(r) {
   }
 
   function C(e) {
-    var t, n, r, o, a, i, s, c, l, u, d, p, f, g, y, x = [];
-    for (i = 0, p = (e = b(e)).length, t = 128, n = 0, a = 72; i < p; ++i)(d = e[i]) < 128 && x.push(m(d));
-    for (r = o = x.length, o && x.push("-"); r < p;) {
+    var t, n, r, a, o, i, s, c, l, u, d, p, f, g, y, x = [];
+    for (i = 0, p = (e = b(e)).length, t = 128, n = 0, o = 72; i < p; ++i)(d = e[i]) < 128 && x.push(m(d));
+    for (r = a = x.length, a && x.push("-"); r < p;) {
       for (s = 2147483647, i = 0; i < p; ++i)(d = e[i]) >= t && d < s && (s = d);
       for (s - t > h((2147483647 - n) / (f = r + 1)) && v("overflow"), n += (s - t) * f, t = s, i = 0; i < p; ++i)
         if ((d = e[i]) < t && ++n > 2147483647 && v("overflow"), d == t) {
-          for (c = n, l = 36; !(c < (u = l <= a ? 1 : l >= a + 26 ? 26 : l - a)); l += 36) {
+          for (c = n, l = 36; !(c < (u = l <= o ? 1 : l >= o + 26 ? 26 : l - o)); l += 36) {
             ;
             y = c - u, g = 36 - u, x.push(m(S(u + y % g, 0))), c = h(y / g)
           }
-          x.push(m(S(c, 0))), a = w(n, f, r == o), n = 0, ++r
+          x.push(m(S(c, 0))), o = w(n, f, r == a), n = 0, ++r
         }++ n, ++t
     }
     return x.join("")
@@ -107,9 +107,9 @@ e = n.nmd(e), n("70102"), n("781738"), n("424973"), ! function(r) {
     }, "function" == typeof define && "object" == typeof define.amd && define.amd) define("punycode", function() {
     return s
   });
-  else if (o && a) {
-    if (e.exports == o) a.exports = s;
+  else if (a && o) {
+    if (e.exports == a) o.exports = s;
     else
-      for (c in s) s.hasOwnProperty(c) && (o[c] = s[c])
+      for (c in s) s.hasOwnProperty(c) && (a[c] = s[c])
   } else r.punycode = s
 }(this)

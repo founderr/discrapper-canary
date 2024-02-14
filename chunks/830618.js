@@ -15,13 +15,13 @@ var i = n("414456"),
   d = n("217535"),
   c = n("917247"),
   f = n("697218"),
-  p = n("216422"),
-  m = n("719923"),
+  m = n("216422"),
+  p = n("719923"),
   h = n("30278"),
   E = n("49111"),
   g = n("646718"),
   S = n("782340"),
-  C = n("789539");
+  C = n("981496");
 
 function T(e) {
   var t, n, i, T;
@@ -29,9 +29,9 @@ function T(e) {
     type: v,
     textValue: I,
     maxCharacterCount: _,
-    showRemainingCharsAfterCount: y,
+    showRemainingCharsAfterCount: N,
     className: A
-  } = e, N = (0, s.useStateFromStores)([f.default], () => m.default.canUseIncreasedMessageLength(f.default.getCurrentUser())), x = (0, d.default)(), O = null != _ ? _ : x, R = null !== (T = null != y ? y : _) && void 0 !== T ? T : x / 10, M = I.length, L = null != v.upsellLongMessages && (null != M ? M : 0) > E.MAX_MESSAGE_LENGTH && N, P = null != v.upsellLongMessages && !N, b = (null === (n = (0, c.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === g.PremiumSubscriptionSKUs.TIER_2, j = O - M, U = j > R, D = j < 0 && b, k = 0 === j ? S.default.Messages.CHARACTER_COUNT_AT_LIMIT : j > 0 ? S.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+  } = e, y = (0, s.useStateFromStores)([f.default], () => p.default.canUseIncreasedMessageLength(f.default.getCurrentUser())), x = (0, d.default)(), O = null != _ ? _ : x, R = null !== (T = null != N ? N : _) && void 0 !== T ? T : x / 10, M = I.length, L = null != v.upsellLongMessages && (null != M ? M : 0) > E.MAX_MESSAGE_LENGTH && y, P = null != v.upsellLongMessages && !y, b = (null === (n = (0, c.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === g.PremiumSubscriptionSKUs.TIER_2, j = O - M, U = j > R, D = j < 0 && b, k = 0 === j ? S.default.Messages.CHARACTER_COUNT_AT_LIMIT : j > 0 ? S.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
     count: j
   }) : S.default.Messages.CHARACTER_COUNT_OVER_LIMIT, {
     AnalyticsLocationProvider: w
@@ -48,7 +48,7 @@ function T(e) {
             maxLength: O
           }),
           position: "top",
-          children: e => (0, l.jsx)(p.default, {
+          children: e => (0, l.jsx)(m.default, {
             className: C.premiumFlair,
             ...e
           })

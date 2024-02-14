@@ -16,7 +16,7 @@ var a = n("37983"),
   f = n("945330"),
   E = n("50647"),
   h = n("782340"),
-  _ = n("805244");
+  _ = n("531639");
 let C = "isHideDevBanner";
 var I = () => {
   var e;
@@ -48,7 +48,7 @@ var I = () => {
     children: [(0, a.jsx)(E.default, {
       className: _.icon
     }), h.default.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "266116"
+      buildNumber: "266210"
     }), (0, a.jsx)(S, {})]
   }) : null
 }

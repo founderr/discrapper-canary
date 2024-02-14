@@ -36,7 +36,7 @@ var t = n("37983"),
   B = n("936965"),
   D = n("745049"),
   k = n("782340"),
-  y = n("336179");
+  y = n("673843");
 let G = (e, l) => n => {
     n.stopPropagation(), d.default.selectVoiceChannel(e.channel_id, !1), null == l || l(n)
   },

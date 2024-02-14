@@ -67,7 +67,7 @@ var a = s("37983"),
   eu = s("49111"),
   ed = s("724210"),
   ec = s("782340"),
-  em = s("842875");
+  em = s("528282");
 let eh = C.ChatInputTypes.CREATE_FORUM_POST;
 
 function ef(e) {

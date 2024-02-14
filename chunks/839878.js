@@ -31,7 +31,7 @@ var i = n("37983"),
   A = n("560995"),
   x = n("423741"),
   R = n("782340"),
-  L = n("972607");
+  L = n("871151");
 class M extends a.Component {
   componentDidUpdate() {
     this.props.locked && this.state.showOpacitySlider && this.setState({

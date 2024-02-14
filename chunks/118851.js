@@ -1,38 +1,38 @@
 "use strict";
 n.r(t), n.d(t, {
   resolvePlaintextInlineVoid: function() {
-    return g
+    return I
   },
   resolveApplicationCommandOption: function() {
-    return _
+    return C
   }
 }), n("222007");
-var l = n("679653"),
-  i = n("980215"),
-  o = n("385976"),
-  a = n("867805"),
+var i = n("679653"),
+  l = n("980215"),
+  a = n("385976"),
+  o = n("867805"),
   r = n("401690"),
   s = n("42203"),
   u = n("923959"),
-  c = n("26989"),
-  d = n("305961"),
+  d = n("26989"),
+  c = n("305961"),
   p = n("697218"),
-  m = n("25292"),
-  f = n("149022"),
-  h = n("680894");
+  f = n("25292"),
+  m = n("149022"),
+  _ = n("680894");
 
-function g(e, t, n, p) {
+function I(e, t, n, p) {
   let {
-    allowUsers: f = !0,
-    allowRoles: g = !0
+    allowUsers: m = !0,
+    allowRoles: I = !0
   } = null != p ? p : {};
   switch (e[0]) {
     case "@":
-      return function(e, t, n, l, o) {
-        let [a, r] = e.slice(1).split("#", 2), u = null != t ? d.default.getGuild(t) : null, p = (0, i.getClydeExperimentEnabled)(u);
-        if (o && null == r && null != u) {
+      return function(e, t, n, i, a) {
+        let [o, r] = e.slice(1).split("#", 2), u = null != t ? c.default.getGuild(t) : null, p = (0, l.getClydeExperimentEnabled)(u);
+        if (a && null == r && null != u) {
           for (let e of Object.values(u.roles))
-            if (a === e.name) return {
+            if (o === e.name) return {
               type: "roleMention",
               roleId: e.id,
               children: [{
@@ -40,12 +40,12 @@ function g(e, t, n, p) {
               }]
             }
         }
-        if (l) {
+        if (i) {
           let e = null != n ? s.default.getChannel(n) : null;
           if (null != e) {
             if (e.isPrivate()) {
               for (let t of e.recipients)
-                if (C(a, r, t)) return {
+                if (T(o, r, t)) return {
                   type: "userMention",
                   userId: t,
                   children: [{
@@ -53,21 +53,21 @@ function g(e, t, n, p) {
                   }]
                 }
             } else {
-              let e = c.default.getMembers(t);
+              let e = d.default.getMembers(t);
               for (let {
                   userId: t
                 }
                 of e)
-                if (C(a, r, t)) return {
+                if (T(o, r, t)) return {
                   type: "userMention",
                   userId: t,
                   children: [{
                     text: ""
                   }]
                 };
-              if (p && C(a, r, h.CLYDE_AI_USER_ID)) return {
+              if (p && T(o, r, _.CLYDE_AI_USER_ID)) return {
                 type: "userMention",
-                userId: h.CLYDE_AI_USER_ID,
+                userId: _.CLYDE_AI_USER_ID,
                 children: [{
                   text: ""
                 }]
@@ -76,15 +76,15 @@ function g(e, t, n, p) {
           }
         }
         return null
-      }(e, t, n, f, g);
+      }(e, t, n, m, I);
     case ":":
       return function(e, t) {
-        let n = a.default.EMOJI_NAME_RE.exec(e);
+        let n = o.default.EMOJI_NAME_RE.exec(e);
         if (null == n) return null;
-        let l = n[1],
-          i = o.default.getDisambiguatedEmojiContext(t).getCustomEmoji();
-        if (null != i && l in i) {
-          let e = i[l];
+        let i = n[1],
+          l = a.default.getDisambiguatedEmojiContext(t).getCustomEmoji();
+        if (null != l && i in l) {
+          let e = l[i];
           return {
             type: "customEmoji",
             emoji: {
@@ -104,23 +104,23 @@ function g(e, t, n, p) {
       return function(e, t) {
         let n;
         if (null == t) return null;
-        n = e.length > 3 && '"' === e[1] && '"' === e[e.length - 1] ? (0, l.unescapeChannelName)(e.slice(2, e.length - 1)) : e.slice(1);
-        let i = u.default.getTextChannelNameDisambiguations(t);
-        for (let e of Object.keys(i))
-          if (i[e].name === n) return {
+        n = e.length > 3 && '"' === e[1] && '"' === e[e.length - 1] ? (0, i.unescapeChannelName)(e.slice(2, e.length - 1)) : e.slice(1);
+        let l = u.default.getTextChannelNameDisambiguations(t);
+        for (let e of Object.keys(l))
+          if (l[e].name === n) return {
             type: "channelMention",
             channelId: e,
             children: [{
               text: ""
             }]
           };
-        for (let e of m.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS) {
+        for (let e of f.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS) {
           if (e === u.GUILD_SELECTABLE_CHANNELS_KEY) continue;
-          let l = u.default.getChannels(t)[e];
+          let i = u.default.getChannels(t)[e];
           for (let {
               channel: e
             }
-            of l)
+            of i)
             if (e.name === n) return {
               type: "channelMention",
               channelId: e.id,
@@ -129,15 +129,15 @@ function g(e, t, n, p) {
               }]
             }
         }
-        let o = r.default.getActiveJoinedThreadsForGuild(t);
-        for (let e of Object.keys(o))
-          for (let t of Object.keys(o[e])) {
+        let a = r.default.getActiveJoinedThreadsForGuild(t);
+        for (let e of Object.keys(a))
+          for (let t of Object.keys(a[e])) {
             let {
-              channel: l
-            } = o[e][t];
-            if (l.name === n) return {
+              channel: i
+            } = a[e][t];
+            if (i.name === n) return {
               type: "channelMention",
-              channelId: l.id,
+              channelId: i.id,
               children: [{
                 text: ""
               }]
@@ -149,12 +149,12 @@ function g(e, t, n, p) {
   return null
 }
 
-function _(e, t, n, l) {
-  let i = g(e, t, n, l);
-  return null == i ? null : (0, f.voidToOptionValue)(i)
+function C(e, t, n, i) {
+  let l = I(e, t, n, i);
+  return null == l ? null : (0, m.voidToOptionValue)(l)
 }
 
-function C(e, t, n) {
-  let l = p.default.getUser(n);
-  return null != l && (n === h.CLYDE_AI_USER_ID && "clyde" === e.toLowerCase() || l.username === e && l.discriminator === (null != t ? t : "0"))
+function T(e, t, n) {
+  let i = p.default.getUser(n);
+  return null != i && (n === _.CLYDE_AI_USER_ID && "clyde" === e.toLowerCase() || i.username === e && i.discriminator === (null != t ? t : "0"))
 }

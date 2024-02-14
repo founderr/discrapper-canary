@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return r
   }
 });
 var s = n("803182"),
   i = n("308503"),
   a = n("49111");
 
-function r(e) {
+function l(e) {
   let t = (0, s.matchPath)(null != e ? e : "", {
     path: a.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
   });
@@ -33,7 +33,7 @@ function r(e) {
     channelId: null
   }
 }
-var u = (0, i.default)(e => ({
+var r = (0, i.default)(e => ({
   path: null,
   basePath: "/",
   guildId: null,
@@ -42,7 +42,7 @@ var u = (0, i.default)(e => ({
     let {
       guildId: n,
       channelId: s
-    } = r(t);
+    } = l(t);
     e({
       path: t,
       guildId: n,
@@ -53,7 +53,7 @@ var u = (0, i.default)(e => ({
     let {
       guildId: n,
       channelId: s
-    } = r(t);
+    } = l(t);
     e({
       path: null,
       guildId: n,

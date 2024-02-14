@@ -10,7 +10,7 @@ var i = n("414456"),
   a = n.n(i),
   s = n("77078"),
   r = n("258078"),
-  o = n("504515");
+  o = n("393626");
 
 function u(e) {
   var t;
@@ -20,19 +20,19 @@ function u(e) {
     state: u,
     isInline: d,
     onClick: c
-  } = e, f = null, p = r.default.Colors.HEADER_PRIMARY;
+  } = e, f = null, m = r.default.Colors.HEADER_PRIMARY;
   (null == u ? void 0 : u.isActive) && !d ? f = o.active : (null == u ? void 0 : null === (t = u.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? f = o.error : (null == u ? void 0 : u.hasValue) && !d && (f = o.set);
-  let m = (0, l.jsx)(r.default, {
+  let p = (0, l.jsx)(r.default, {
     size: d ? r.default.Sizes.SIZE_16 : r.default.Sizes.SIZE_14,
-    color: p,
+    color: m,
     className: a(o.option, {
       [o.inline]: d
     }, f, i),
     children: n + (d ? ":" : "")
   });
-  return null == c ? m : (0, l.jsx)(s.Clickable, {
+  return null == c ? p : (0, l.jsx)(s.Clickable, {
     className: o.clickable,
     onClick: () => c(n),
-    children: m
+    children: p
   })
 }

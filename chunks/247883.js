@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var l, a = n("188904");
+var l, i = n("188904");
 l = class {
   getCurrentValue() {
     if (null == this.animationDetails) return this.value;
     let e = performance.now() - this.animationDetails.animationStart,
       t = this.value < this.animationDetails.lastValue ? 150 : 500;
-    return e > t ? (this.animationDetails = null, this.value) : this.value < this.animationDetails.lastValue ? a.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : a.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4)
+    return e > t ? (this.animationDetails = null, this.value) : this.value < this.animationDetails.lastValue ? i.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : i.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4)
   }
   animateTo(e) {
     this.isReset = !1, this.value !== e && (this.animationDetails = {

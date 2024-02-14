@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return p
   }
 }), n("222007"), n("808653");
-var a = n("917351"),
-  l = n.n(a),
+var l = n("917351"),
+  a = n.n(l),
   s = n("446674"),
   i = n("913144"),
   r = n("990766"),
@@ -20,33 +20,33 @@ function h() {
 }
 class m extends s.default.Store {
   getPreviewURL(e, t, n) {
-    let a = (0, o.encodeStreamKey)({
+    let l = (0, o.encodeStreamKey)({
         streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
         guildId: e,
         channelId: t,
         ownerId: n
       }),
-      l = d[a];
-    return null == l || Date.now() > l.expires ? (!f.has(a) && (f.add(a), Promise.resolve().then(() => {
+      a = d[l];
+    return null == a || Date.now() > a.expires ? (!f.has(l) && (f.add(l), Promise.resolve().then(() => {
       (0, r.fetchStreamPreview)(e, t, n)
-    })), null) : l.url
+    })), null) : a.url
   }
   getPreviewURLForStreamKey(e) {
     let {
       guildId: t,
       channelId: n,
-      ownerId: a
+      ownerId: l
     } = (0, o.decodeStreamKey)(e);
-    return this.getPreviewURL(t, n, a)
+    return this.getPreviewURL(t, n, l)
   }
   getIsPreviewLoading(e, t, n) {
-    let a = (0, o.encodeStreamKey)({
+    let l = (0, o.encodeStreamKey)({
       streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
       guildId: e,
       channelId: t,
       ownerId: n
     });
-    return f.has(a)
+    return f.has(l)
   }
 }
 m.displayName = "ApplicationStreamPreviewStore";
@@ -84,18 +84,18 @@ var p = new m(i.default, {
     let {
       voiceStates: t
     } = e;
-    return !(l.isEmpty(d) && l.isEmpty(c)) && t.reduce((e, t) => {
+    return !(a.isEmpty(d) && a.isEmpty(c)) && t.reduce((e, t) => {
       let {
         userId: n,
-        guildId: a,
-        channelId: l,
+        guildId: l,
+        channelId: a,
         selfStream: s
       } = t;
       if (s) return e;
       let i = (0, o.encodeStreamKey)({
-        streamType: null != a ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
-        guildId: a,
-        channelId: l,
+        streamType: null != l ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
+        guildId: l,
+        channelId: a,
         ownerId: n
       });
       return delete d[i], delete c[i], !0

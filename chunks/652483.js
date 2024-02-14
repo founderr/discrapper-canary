@@ -8,15 +8,15 @@ n.r(t), n.d(t, {
     return s
   }
 }), n("781738"), n("70102"), n("424973"), n("808653"), n("466501");
-var o = "function" == typeof Symbol && Symbol.observable || "@@observable",
-  a = function() {
+var a = "function" == typeof Symbol && Symbol.observable || "@@observable",
+  o = function() {
     return Math.random().toString(36).substring(7).split("").join(".")
   },
   i = {
-    INIT: "@@redux/INIT" + a(),
-    REPLACE: "@@redux/REPLACE" + a(),
+    INIT: "@@redux/INIT" + o(),
+    REPLACE: "@@redux/REPLACE" + o(),
     PROBE_UNKNOWN_ACTION: function() {
-      return "@@redux/PROBE_UNKNOWN_ACTION" + a()
+      return "@@redux/PROBE_UNKNOWN_ACTION" + o()
     }
   };
 
@@ -27,7 +27,7 @@ function s(e, t, n) {
     return n(s)(e, t)
   }
   if ("function" != typeof e) throw Error(r(2));
-  var a, c = e,
+  var o, c = e,
     l = t,
     u = [],
     d = u,
@@ -75,7 +75,7 @@ function s(e, t, n) {
   }
   return v({
     type: i.INIT
-  }), (a = {
+  }), (o = {
     dispatch: v,
     subscribe: m,
     getState: h,
@@ -85,7 +85,7 @@ function s(e, t, n) {
         type: i.REPLACE
       })
     }
-  })[o] = function() {
+  })[a] = function() {
     var e;
     return (e = {
       subscribe: function(e) {
@@ -98,8 +98,8 @@ function s(e, t, n) {
           unsubscribe: m(t)
         }
       }
-    })[o] = function() {
+    })[a] = function() {
       return this
     }, e
-  }, a
+  }, o
 }

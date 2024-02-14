@@ -4,20 +4,20 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
+var a = n("77078"),
   s = n("14124"),
   i = n("849467"),
   r = n("97347"),
   o = n("981913"),
-  u = n("870320");
+  u = n("365064");
 
 function d(e) {
   let {
     className: t
-  } = e, n = (0, l.useRedesignIconContext)().enabled;
-  return (0, a.jsx)(r.default, {
+  } = e, n = (0, a.useRedesignIconContext)().enabled;
+  return (0, l.jsx)(r.default, {
     foreground: n ? void 0 : u.slash,
     className: t
   })
@@ -27,12 +27,12 @@ function c(e) {
   let {
     selfMute: t,
     serverMute: n,
-    suppress: l,
+    suppress: a,
     centerButton: r = !1,
     awaitingRemote: u,
     ...c
-  } = e, f = t || n || l, h = r ? o.CenterControlButton : o.default, m = (0, s.default)(t, n, l, u), p = f ? d : i.default;
-  return (0, a.jsx)(h, {
+  } = e, f = t || n || a, h = r ? o.CenterControlButton : o.default, m = (0, s.default)(t, n, a, u), p = f ? d : i.default;
+  return (0, l.jsx)(h, {
     isActive: !f,
     iconComponent: p,
     label: m,

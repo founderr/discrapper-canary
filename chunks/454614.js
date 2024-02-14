@@ -14,14 +14,14 @@ var l = n("42203"),
   d = n("646718");
 
 function c(e, t, n, c) {
-  var f, p, m;
+  var f, m, p;
   let h = l.default.getChannel(s.default.getVoiceChannelId()),
     E = null == h ? void 0 : h.getGuildId(),
     g = i.default.getMediaSessionId(),
     S = i.default.getRTCConnectionId(),
     C = null === (f = a.default.getCurrentGameForAnalytics()) || void 0 === f ? void 0 : f.name,
     T = E !== n.guildId && n.guildId !== o.DEFAULT_SOUND_GUILD_ID;
-  let v = (p = n, m = T, p.guildId === o.DEFAULT_SOUND_GUILD_ID ? "default" : m ? "custom-external" : "custom");
+  let v = (m = n, p = T, m.guildId === o.DEFAULT_SOUND_GUILD_ID ? "default" : p ? "custom-external" : "custom");
   r.default.track(u.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
     feature_name: d.AnalyticsPremiumFeatureNames.SOUNDBOARD_PLAY,
     feature_tier: T ? d.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD : d.AnalyticsPremiumFeatureTiers.FREE,

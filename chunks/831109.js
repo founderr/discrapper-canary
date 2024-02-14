@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
-var i = n("446674"),
-  l = n("913144");
+var l = n("446674"),
+  i = n("913144");
 let a = [],
-  r = null;
-class s extends i.default.Store {
+  s = null;
+class r extends l.default.Store {
   getLastFetchTimeMs() {
-    return r
+    return s
   }
   getCategories() {
     return a
   }
 }
-s.displayName = "ApplicationDirectoryCategoriesStore";
-var u = new s(l.default, {
+r.displayName = "ApplicationDirectoryCategoriesStore";
+var o = new r(i.default, {
   APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: function(e) {
     let {
       categories: t
     } = e;
-    a = t, r = Date.now()
+    a = t, s = Date.now()
   }
 })

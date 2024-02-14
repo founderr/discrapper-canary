@@ -19,7 +19,7 @@ var l = s("281071"),
   I = s("35018"),
   T = s("739726"),
   f = s("782340"),
-  S = s("540583");
+  S = s("464583");
 let m = "guild-product-listings-header";
 
 function N(e) {

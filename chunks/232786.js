@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("685665"),
   c = n("649844"),
   f = n("552917"),
-  p = n("843647"),
-  m = n("791106"),
+  m = n("843647"),
+  p = n("791106"),
   h = n("945330"),
   E = n("216422"),
   g = n("599110"),
@@ -23,7 +23,7 @@ var l = n("37983"),
   C = n("49111"),
   T = n("646718"),
   v = n("782340"),
-  I = n("624698"),
+  I = n("230537"),
   _ = function(e) {
     let {
       bodyCopy: t = v.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,
@@ -31,13 +31,13 @@ var l = n("37983"),
       onDismiss: a,
       onCtaClick: _
     } = e, {
-      location: y
+      location: N
     } = (0, u.useAnalyticsContext)(), {
       analyticsLocations: A
     } = (0, d.default)(), {
-      isLoading: N,
+      isLoading: y,
       suggestedPremiumType: x
-    } = (0, p.default)({
+    } = (0, m.default)({
       autoTrackExposure: !0,
       experiment: f.default,
       location: T.PremiumUpsellTypes.EMOJI_PICKER_SEARCH
@@ -46,21 +46,21 @@ var l = n("37983"),
         subscriptionTier: S.default.getSkuIdForPremiumType(x),
         analyticsLocations: A,
         analyticsObject: {
-          ...y,
+          ...N,
           object: C.AnalyticsObjects.BUTTON_CTA,
           objectType: C.AnalyticsObjectTypes.TIER_2
         }
       }), null == _ || _()
-    }, [A, y, _, x]), M = x === T.PremiumTypes.TIER_0;
+    }, [A, N, _, x]), M = x === T.PremiumTypes.TIER_0;
     return (0, l.jsx)("div", {
       className: s(I.wrapper, n),
-      children: N ? (0, l.jsx)(o.Spinner, {
+      children: y ? (0, l.jsx)(o.Spinner, {
         type: o.SpinnerTypes.PULSING_ELLIPSIS
       }) : (0, l.jsx)(r.default, {
         onChange: e => {
           e && !O.current && (g.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
             type: T.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
-            location: y,
+            location: N,
             location_stack: A,
             sku_id: S.default.getSkuIdForPremiumType(x)
           }), O.current = !0)
@@ -68,7 +68,7 @@ var l = n("37983"),
         children: (0, l.jsxs)("div", {
           className: I.upsell,
           children: [(0, l.jsx)(E.default, {
-            color: M ? m.GradientCssUrls.PREMIUM_TIER_0 : m.GradientCssUrls.PREMIUM_TIER_2,
+            color: M ? p.GradientCssUrls.PREMIUM_TIER_0 : p.GradientCssUrls.PREMIUM_TIER_2,
             className: I.premiumIcon
           }), (0, l.jsx)(o.Text, {
             color: "interactive-normal",

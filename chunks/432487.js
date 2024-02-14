@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var u = n("37983");
+var a = n("37983");
 n("884691");
-var r = n("446674"),
-  a = n("77078"),
-  i = n("450911"),
-  l = n("42203"),
-  s = n("697218"),
+var s = n("446674"),
+  r = n("77078"),
+  u = n("450911"),
+  i = n("42203"),
+  l = n("697218"),
   d = n("782340");
 
 function o(e, t) {
-  let n = (0, r.useStateFromStores)([s.default], () => s.default.getCurrentUser(), []),
-    o = (0, r.useStateFromStores)([l.default], () => l.default.getChannel(t), [t]);
-  return null == o || o.isOwner(e) || null == n || !o.isOwner(n.id) ? null : (0, u.jsx)(a.MenuItem, {
+  let n = (0, s.useStateFromStores)([l.default], () => l.default.getCurrentUser(), []),
+    o = (0, s.useStateFromStores)([i.default], () => i.default.getChannel(t), [t]);
+  return null == o || o.isOwner(e) || null == n || !o.isOwner(n.id) ? null : (0, a.jsx)(r.MenuItem, {
     id: "remove",
     label: d.default.Messages.REMOVE_FROM_GROUP,
-    action: () => i.default.removeRecipient(t, e),
+    action: () => u.default.removeRecipient(t, e),
     color: "danger"
   })
 }

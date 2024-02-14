@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return d
   }
 }), n("70102");
-var a = n("872717"),
-  l = n("913144"),
+var l = n("872717"),
+  a = n("913144"),
   s = n("49111"),
   i = n("782340");
 
 function r(e) {
-  return null != e && null != e.body && l.default.dispatch({
+  return null != e && null != e.body && a.default.dispatch({
     type: "UPDATE_CONSENTS",
     consents: {
       ...e.body
@@ -27,14 +27,14 @@ function o(e) {
 }
 
 function u() {
-  return a.default.get({
+  return l.default.get({
     url: s.Endpoints.SETTINGS_CONSENT,
     oldFormErrors: !0
   }).then(r, e => Promise.reject(Error(e.body.message)))
 }
 
 function d(e, t) {
-  return a.default.post({
+  return l.default.post({
     url: s.Endpoints.SETTINGS_CONSENT,
     body: {
       grant: e,

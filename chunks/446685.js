@@ -1,25 +1,25 @@
 "use strict";
-l.r(t), l.d(t, {
+t.r(l), t.d(l, {
   default: function() {
-    return r
+    return i
   }
 });
-var n = l("37983");
-l("884691");
-var s = l("469563"),
-  a = l("713876"),
-  i = l("75196"),
-  r = (0, s.replaceIcon)(function(e) {
+var n = t("37983");
+t("884691");
+var s = t("469563"),
+  a = t("713876"),
+  r = t("75196"),
+  i = (0, s.replaceIcon)(function(e) {
     let {
-      width: t = 24,
-      height: l = 24,
+      width: l = 24,
+      height: t = 24,
       color: s = "currentColor",
       ...a
     } = e;
     return (0, n.jsxs)("svg", {
-      ...(0, i.default)(a),
-      width: t,
-      height: l,
+      ...(0, r.default)(a),
+      width: l,
+      height: t,
       viewBox: "0 0 20 20",
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",

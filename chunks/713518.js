@@ -1,87 +1,87 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   fetchSubscriptionPlansOnNewPaymentSource: function() {
     return E
   },
   getCurrencies: function() {
-    return _
+    return m
   },
   planHasCurrency: function() {
-    return T
+    return p
   },
   useCurrencyWithPaymentSourceChange: function() {
     return S
   }
-}), n("222007");
-var u = n("884691"),
-  r = n("627445"),
-  a = n.n(r),
-  i = n("913144"),
-  o = n("775433"),
-  l = n("308592"),
-  s = n("10514"),
-  c = n("719923"),
-  d = n("49111"),
-  f = n("646718");
+}), r("222007");
+var n = r("884691"),
+  a = r("627445"),
+  u = r.n(a),
+  i = r("913144"),
+  s = r("775433"),
+  l = r("308592"),
+  o = r("10514"),
+  c = r("719923"),
+  d = r("49111"),
+  f = r("646718");
 
 function E(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...f.ACTIVE_PREMIUM_SKUS];
-  return null == e || s.default.hasPaymentSourceForSKUIds(e, t) ? Promise.resolve() : new Promise(e => {
+  return null == e || o.default.hasPaymentSourceForSKUIds(e, t) ? Promise.resolve() : new Promise(e => {
     i.default.wait(async () => {
-      await (0, o.fetchSubscriptionPlansBySKUs)(t), e()
+      await (0, s.fetchSubscriptionPlansBySKUs)(t), e()
     })
   })
 }
 
-function _(e, t, n) {
-  let u, r = [],
+function m(e, t, r) {
+  let n, a = [],
     i = [],
-    o = {
-      purchaseType: n ? d.PriceSetAssignmentPurchaseTypes.GIFT : d.PriceSetAssignmentPurchaseTypes.DEFAULT
+    s = {
+      purchaseType: r ? d.PriceSetAssignmentPurchaseTypes.GIFT : d.PriceSetAssignmentPurchaseTypes.DEFAULT
     };
-  return a(u = "string" == typeof e ? s.default.get(e) : e, "subscription plan not loaded"), null != t && s.default.hasPaymentSourceForSKUId(t, u.skuId) && (o.paymentSourceId = t), (r = (i = (0, c.experimentalGetPrices)(u.id, o)).map(e => e.currency)).length < 1 && (r = [d.CurrencyCodes.USD]), r
+  return u(n = "string" == typeof e ? o.default.get(e) : e, "subscription plan not loaded"), null != t && o.default.hasPaymentSourceForSKUId(t, n.skuId) && (s.paymentSourceId = t), (a = (i = (0, c.experimentalGetPrices)(n.id, s)).map(e => e.currency)).length < 1 && (a = [d.CurrencyCodes.USD]), a
 }
 
-function T(e, t, n) {
-  let u = s.default.get(e);
-  a(null != u, "plan is undefined");
-  let r = _(u, n, !1);
-  return r.includes(t)
+function p(e, t, r) {
+  let n = o.default.get(e);
+  u(null != n, "plan is undefined");
+  let a = m(n, r, !1);
+  return a.includes(t)
 }
 
-function S(e, t, n, r, a) {
-  let [i, o] = u.useReducer((e, t) => ({
+function S(e, t, r, a, u) {
+  let [i, s] = n.useReducer((e, t) => ({
     ...e,
     ...t
-  }), null != n ? {
-    paymentSourceId: n,
+  }), null != r ? {
+    paymentSourceId: r,
     currency: e,
     loaded: !1
   } : {
     currency: e,
     loaded: !1
-  }), c = (0, l.useSubscriptionPlansLoaded)(a);
-  u.useEffect(() => {
+  }), c = (0, l.useSubscriptionPlansLoaded)(u);
+  n.useEffect(() => {
     let e = async () => {
-      await E(n, a);
+      await E(r, u);
       let e = [];
-      null != t && null != s.default.get(t) && (e = _(t, n, r)), e.length > 0 ? o({
-        paymentSourceId: n,
+      null != t && null != o.default.get(t) && (e = m(t, r, a)), e.length > 0 ? s({
+        paymentSourceId: r,
         currency: e[0],
         loaded: !0
-      }) : o({
-        paymentSourceId: n,
+      }) : s({
+        paymentSourceId: r,
         loaded: !1
       })
     };
     e()
-  }, [n, JSON.stringify(a), t, r, c]);
-  let d = i.paymentSourceId !== n || null == t || !c || !0 !== i.loaded;
+  }, [r, JSON.stringify(u), t, a, c]);
+  let d = i.paymentSourceId !== r || null == t || !c || !0 !== i.loaded;
   return {
     hasFetchedSubscriptionPlans: c,
     priceOptions: i,
     setCurrency: e => {
-      o({
+      s({
         currency: e
       })
     },

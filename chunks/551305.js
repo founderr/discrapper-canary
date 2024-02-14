@@ -15,8 +15,8 @@ var l, i, a = n("37983"),
   d = n("77078"),
   c = n("128295"),
   f = n("414868"),
-  p = n("587974"),
-  m = n("299341");
+  m = n("587974"),
+  p = n("179859");
 (l = i || (i = {}))[l.UPDATE = 0] = "UPDATE", l[l.NEW = 1] = "NEW";
 let h = {
   config: {
@@ -57,9 +57,9 @@ var E = s.memo(function(e) {
     onFocus: v,
     onBlur: I,
     pulse: _,
-    sparkle: y,
+    sparkle: N,
     notification: A,
-    "aria-label": N,
+    "aria-label": y,
     "aria-expanded": x,
     "aria-haspopup": O,
     "aria-controls": R
@@ -71,31 +71,31 @@ var E = s.memo(function(e) {
       component: t
     } = e;
     return null != A ? (0, a.jsxs)("div", {
-      className: m.buttonContent,
-      children: [(0, a.jsx)(p.default, {
-        className: m.iconMask,
-        mask: p.MaskIDs.CHAT_INPUT_BUTTON_NOTIFICATION,
+      className: p.buttonContent,
+      children: [(0, a.jsx)(m.default, {
+        className: p.iconMask,
+        mask: m.MaskIDs.CHAT_INPUT_BUTTON_NOTIFICATION,
         width: 24,
         height: 24,
         children: t
       }), (0, a.jsx)("span", {
-        className: m.notificationDot
+        className: p.notificationDot
       })]
     }) : t
   };
   return (0, a.jsxs)(d.Button, {
     look: d.Button.Looks.BLANK,
     size: d.Button.Sizes.NONE,
-    "aria-label": N,
+    "aria-label": y,
     "aria-expanded": x,
     "aria-haspopup": O,
     "aria-controls": R,
     disabled: n,
     className: o(t, {
-      [m.active]: S
+      [p.active]: S
     }),
-    innerClassName: o(m.button, l, {
-      [m.pulseButton]: _
+    innerClassName: o(p.button, l, {
+      [p.pulseButton]: _
     }),
     onClick: g,
     onMouseEnter: C,
@@ -114,27 +114,27 @@ var E = s.memo(function(e) {
       } = n;
       return t ? (0, a.jsx)(u.animated.div, {
         style: e,
-        className: o(m.buttonWrapper, i),
+        className: o(p.buttonWrapper, i),
         children: L({
           component: E
         })
       }, l) : null != r ? (0, a.jsx)(u.animated.div, {
         style: e,
-        className: o(m.buttonWrapper, i),
+        className: o(p.buttonWrapper, i),
         children: L({
           component: (0, a.jsx)(r, {
-            className: o(m.icon, s, {
-              [m.pulseIcon]: _
+            className: o(p.icon, s, {
+              [p.pulseIcon]: _
             })
           })
         })
       }, l) : void 0
-    }), y && (0, a.jsxs)("div", {
-      className: m.sparkleContainer,
+    }), N && (0, a.jsxs)("div", {
+      className: p.sparkleContainer,
       children: [(0, a.jsx)(f.default, {
-        className: m.sparkleStar
+        className: p.sparkleStar
       }), (0, a.jsx)(c.default, {
-        className: m.sparklePlus
+        className: p.sparklePlus
       })]
     })]
   })

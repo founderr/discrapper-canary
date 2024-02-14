@@ -38,8 +38,8 @@ var r = n("299192"),
             C = (0, a.default)(j),
             H = (0, l.default)(j) === u.start,
             F = [(0, u.top), (0, u.bottom)].indexOf(C) >= 0,
-            I = F ? "width" : "height",
-            N = (0, i.default)(t, {
+            N = F ? "width" : "height",
+            I = (0, i.default)(t, {
               placement: j,
               boundary: y,
               rootBoundary: g,
@@ -47,10 +47,10 @@ var r = n("299192"),
               padding: _
             }),
             R = F ? H ? u.right : u.left : H ? u.bottom : u.top;
-          S[I] > Y[I] && (R = (0, r.default)(R));
+          S[N] > Y[N] && (R = (0, r.default)(R));
           var A = (0, r.default)(R),
             z = [];
-          if (f && z.push(N[C] <= 0), m && z.push(N[R] <= 0, N[A] <= 0), z.every(function(e) {
+          if (f && z.push(I[C] <= 0), m && z.push(I[R] <= 0, I[A] <= 0), z.every(function(e) {
               return e
             })) {
             E = j, O = !1;

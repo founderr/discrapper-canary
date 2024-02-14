@@ -17,8 +17,8 @@ var l = n("913144"),
   d = n("884351"),
   c = n("166257"),
   f = n("432173"),
-  p = n("271938"),
-  m = n("42203"),
+  m = n("271938"),
+  p = n("42203"),
   h = n("474643"),
   E = n("462495");
 let g = async (e, t) => {
@@ -38,8 +38,8 @@ let g = async (e, t) => {
   var l;
   let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     a = arguments.length > 3 ? arguments[3] : void 0,
-    u = m.default.getChannel(t);
-  l = p.default.getToken(), d.default.parse(u, "");
+    u = p.default.getChannel(t);
+  l = m.default.getToken(), d.default.parse(u, "");
   let c = o.UploadPlatform.WEB;
   if (i) s.default.addFile({
     file: {
@@ -52,7 +52,7 @@ let g = async (e, t) => {
     draftType: h.DraftType.ChannelMessage
   });
   else {
-    let l = m.default.getChannel(t);
+    let l = p.default.getChannel(t);
     if (null == l) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(t));
     {
       let l = n("783480").default,
@@ -93,7 +93,7 @@ let g = async (e, t) => {
     requireConfirmation: o = !1
   } = e, u = await i.default.openPrivateChannel(l.id, !1, !1), c = await g(t, s);
   C(c, u, o, r), await S(u);
-  let f = m.default.getChannel(u),
-    p = d.default.parse(f, n);
-  a.default.sendMessage(u, p)
+  let f = p.default.getChannel(u),
+    m = d.default.parse(f, n);
+  a.default.sendMessage(u, m)
 }

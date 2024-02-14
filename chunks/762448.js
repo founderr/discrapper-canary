@@ -17,8 +17,8 @@ var a = n("37983"),
   E = n("773336"),
   h = n("50885"),
   _ = n("782340"),
-  C = n("148738"),
-  I = n("926622");
+  C = n("378716"),
+  I = n("890957");
 class S extends s.PureComponent {
   renderDiskUsageCircle() {
     let {

@@ -21,7 +21,7 @@ var s = n("414456"),
   C = n("80028"),
   I = n("49111"),
   S = n("782340"),
-  p = n("410876");
+  p = n("292271");
 
 function m(e) {
   o.default.open(I.UserSettingsSections.CLIPS), (0, _.dismissClipsUserEducation)(e)

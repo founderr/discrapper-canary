@@ -4,31 +4,31 @@ n.r(t), n.d(t, {
     return r
   },
   useTopRealCommands: function() {
-    return o
+    return s
   }
 });
 var i = n("884691"),
   l = n("446674"),
   a = n("872173"),
-  s = n("342564");
+  o = n("342564");
 
 function r(e) {
   i.useEffect(() => {
     a.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []);
-  let t = (0, l.useStateFromStores)([s.default], () => s.default.getTopCommandsWithoutLoadingLatest()),
-    n = i.useMemo(() => (0, s.getFilteredTopCommands)(t, e), [t, e]);
+  let t = (0, l.useStateFromStores)([o.default], () => o.default.getTopCommandsWithoutLoadingLatest()),
+    n = i.useMemo(() => (0, o.getFilteredTopCommands)(t, e), [t, e]);
   return n
 }
 
-function o(e) {
+function s(e) {
   i.useEffect(() => {
     a.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []);
-  let t = (0, l.useStateFromStores)([s.default], () => s.default.getTopCommandsWithoutLoadingLatest()),
+  let t = (0, l.useStateFromStores)([o.default], () => o.default.getTopCommandsWithoutLoadingLatest()),
     n = i.useMemo(() => {
-      let n = (0, s.getFilteredTopCommands)(t, e);
-      return (0, s.getTopRealCommands)(n)
+      let n = (0, o.getFilteredTopCommands)(t, e);
+      return (0, o.getTopRealCommands)(n)
     }, [t, e]);
   return n
 }

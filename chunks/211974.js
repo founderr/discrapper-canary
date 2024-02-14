@@ -6,8 +6,8 @@ r.r(t), r.d(t, {
 }), r("424973");
 var n = r("243546"),
   u = r("987291"),
-  o = r("909639"),
-  a = r("334935"),
+  a = r("909639"),
+  o = r("334935"),
   i = function() {
     var e = 1 / 0,
       t = [];
@@ -16,8 +16,8 @@ var n = r("243546"),
         var n = [];
         r.activeTargets.forEach(function(t) {
           var r = new u.ResizeObserverEntry(t.target),
-            i = (0, o.calculateDepthForNode)(t.target);
-          n.push(r), t.lastReportedSize = (0, a.calculateBoxSize)(t.target, t.observedBox), i < e && (e = i)
+            i = (0, a.calculateDepthForNode)(t.target);
+          n.push(r), t.lastReportedSize = (0, o.calculateBoxSize)(t.target, t.observedBox), i < e && (e = i)
         }), t.push(function() {
           r.callback.call(r.observer, n, r.observer)
         }), r.activeTargets.splice(0, r.activeTargets.length)

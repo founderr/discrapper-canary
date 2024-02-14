@@ -4,17 +4,17 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("222007"), n("424973");
-var a = n("513688"),
-  l = n("730647"),
+var l = n("513688"),
+  a = n("730647"),
   s = n("782340");
 
 function i(e, t) {
-  if (t !== l.DirectoryEntryCategories.ALL) return [{
-    entries: (0, a.rankGuildEntries)(e),
+  if (t !== a.DirectoryEntryCategories.ALL) return [{
+    entries: (0, l.rankGuildEntries)(e),
     appendEndCard: !0
   }];
   let n = [],
-    i = (0, a.rankByDateAdded)(e),
+    i = (0, l.rankByDateAdded)(e),
     r = new Set(i.map(e => e.guildId));
   i.length > 0 && n.push({
     header: s.default.Messages.SEARCH_NEWEST,
@@ -22,7 +22,7 @@ function i(e, t) {
     appendEndCard: !1
   });
   let o = e.filter(e => !r.has(e.guildId));
-  return (o = (0, a.orderByTotalMemberCount)(o)).length > 0 && n.push({
+  return (o = (0, l.orderByTotalMemberCount)(o)).length > 0 && n.push({
     header: s.default.Messages.ALL_SERVERS,
     entries: o,
     appendEndCard: !0

@@ -17,8 +17,8 @@ var l = n("37983"),
   d = n("467339"),
   c = n("966724"),
   f = n("411723"),
-  p = n("20606"),
-  m = n("42203"),
+  m = n("20606"),
+  p = n("42203"),
   h = n("505684"),
   E = n("462579"),
   g = n("867544"),
@@ -28,10 +28,10 @@ var l = n("37983"),
   v = n("58608"),
   I = n("103603"),
   _ = n("299039"),
-  y = n("9560"),
+  N = n("9560"),
   A = n("271972"),
-  N = n("782340"),
-  x = n("454101");
+  y = n("782340"),
+  x = n("483099");
 let O = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
 
 function R(e) {
@@ -58,10 +58,10 @@ function R(e) {
           className: x.tags,
           children: [null != t && "" !== t ? (0, l.jsx)("span", {
             className: x.altTag,
-            children: N.default.Messages.IMAGE_ALT
+            children: y.default.Messages.IMAGE_ALT
           }) : null, r && n ? (0, l.jsx)("span", {
             className: x.altTag,
-            children: N.default.Messages.SPOILER
+            children: y.default.Messages.SPOILER
           }) : null]
         })]
       })
@@ -76,10 +76,10 @@ function M(e) {
     spoiler: a,
     size: r = A.AttachmentListItemSizes.MEDIUM,
     onMouseEnter: u
-  } = e, [d, c] = i.useState(), [f, p] = i.useState({
+  } = e, [d, c] = i.useState(), [f, m] = i.useState({
     width: 0,
     height: 0
-  }), m = r === A.AttachmentListItemSizes.SMALL;
+  }), p = r === A.AttachmentListItemSizes.SMALL;
   i.useEffect(() => {
     if (null == t || !1 === O.includes(t.type)) return;
     let e = URL.createObjectURL(t);
@@ -90,12 +90,12 @@ function M(e) {
         width: e,
         height: t
       } = (0, I.zoomFit)(n.width, n.height);
-      p({
+      m({
         width: e,
         height: t
       })
     }, n.src = e, () => {
-      c(void 0), p({
+      c(void 0), m({
         width: 0,
         height: 0
       }), URL.revokeObjectURL(e)
@@ -107,26 +107,26 @@ function M(e) {
         src: d,
         className: s(x.media, {
           [x.spoiler]: e,
-          [x.imageSmall]: m
+          [x.imageSmall]: p
         }),
         "aria-hidden": !0,
         alt: null != n ? n : "",
         style: t ? f : {}
       })
-    }, [d, m, n, f]),
+    }, [d, p, n, f]),
     E = i.useCallback(() => {
       null != d && (0, o.openModal)(e => (0, l.jsx)(o.ModalRoot, {
         className: x.modal,
         ...e,
         size: o.ModalSize.DYNAMIC,
-        "aria-label": N.default.Messages.IMAGE,
+        "aria-label": y.default.Messages.IMAGE,
         children: h(!1, !0)
       }))
     }, [d, h]);
   return (0, l.jsx)("div", {
     onMouseEnter: u,
     className: s(x.mediaContainer, {
-      [x.imageSmall]: m
+      [x.imageSmall]: p
     }),
     children: (0, l.jsx)(o.Clickable, {
       onClick: E,
@@ -208,7 +208,7 @@ function P(e) {
       className: x.tags,
       children: n.spoiler ? (0, l.jsx)("span", {
         className: x.altTag,
-        children: N.default.Messages.SPOILER
+        children: y.default.Messages.SPOILER
       }) : null
     })
   })
@@ -228,9 +228,9 @@ function b(e) {
   } = e, M = null != R;
   v = M ? A.AttachmentListItemSizes.CLIP : v;
   let L = v === A.AttachmentListItemSizes.SMALL,
-    b = (0, r.useStateFromStores)([m.default], () => {
+    b = (0, r.useStateFromStores)([p.default], () => {
       var e;
-      return null === (e = m.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
+      return null === (e = p.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
     }),
     j = e => {
       e.stopPropagation(), (0, o.openModal)(e => (0, l.jsx)(d.default, {
@@ -254,11 +254,11 @@ function b(e) {
     };
   return (0, l.jsxs)(A.default, {
     actions: (0, l.jsxs)(i.Fragment, {
-      children: [I ? (0, l.jsx)(y.default, {
+      children: [I ? (0, l.jsx)(N.default, {
         className: s({
           [x.action]: L
         }),
-        tooltip: M ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : N.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
+        tooltip: M ? y.default.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : y.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
         onClick: () => u.default.update(t, a.id, n, {
           spoiler: !a.spoiler
         }),
@@ -271,22 +271,22 @@ function b(e) {
             [x.actionBarIcon]: L
           })
         })
-      }) : null, I && !M ? (0, l.jsx)(y.default, {
+      }) : null, I && !M ? (0, l.jsx)(N.default, {
         className: s({
           [x.action]: L
         }),
-        tooltip: N.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
+        tooltip: y.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
         onClick: j,
         children: (0, l.jsx)(S.default, {
           className: s({
             [x.actionBarIcon]: L
           })
         })
-      }) : null, (0, l.jsx)(y.default, {
+      }) : null, (0, l.jsx)(N.default, {
         className: s({
           [x.action]: L
         }),
-        tooltip: M ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : N.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
+        tooltip: M ? y.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : y.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
         onClick: () => u.default.remove(t, a.id, n),
         dangerous: !0,
         children: (0, l.jsx)(C.default, {
@@ -324,9 +324,9 @@ function b(e) {
         title: R.name,
         guildId: b
       }), (0, l.jsx)(T.TextBadge, {
-        color: p.default.BG_BRAND,
+        color: m.default.BG_BRAND,
         className: x.clipsBadge,
-        text: N.default.Messages.CLIP_TAG
+        text: y.default.Messages.CLIP_TAG
       })]
     })]
   })

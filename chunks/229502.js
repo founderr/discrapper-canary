@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return _
   },
   sendVoiceChannelSoundboardEffect: function() {
-    return y
+    return N
   },
   sendVoiceChannelEffect: function() {
     return A
@@ -21,8 +21,8 @@ var l, i, a = n("917351"),
   d = n("385976"),
   c = n("389480"),
   f = n("454614"),
-  p = n("18494"),
-  m = n("718517"),
+  m = n("18494"),
+  p = n("718517"),
   h = n("402671"),
   E = n("82230"),
   g = n("568088"),
@@ -34,7 +34,7 @@ var l, i, a = n("917351"),
 function I(e) {
   let t = new AbortController,
     n = (0, a.throttle)(n => {
-      p.default.getVoiceChannelId() !== e && t.abort()
+      m.default.getVoiceChannelId() !== e && t.abort()
     }, 1e3);
   return {
     abortController: t,
@@ -61,21 +61,21 @@ function _(e, t, n) {
   }), (0, f.default)([o.default.CHANNEL_CALL], n, t, c.AnalyticsSoundType.ENTRY)
 }
 
-function y(e, t, n, l) {
+function N(e, t, n, l) {
   var i, a;
   let r = d.default.getCustomEmojiById(null !== (i = t.emojiId) && void 0 !== i ? i : ""),
     {
       abortController: o,
       onRequestProgress: u
     } = I(e),
-    p = {
+    m = {
       sound_id: t.soundId,
       emoji_id: t.emojiId,
       emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == r ? void 0 : r.name
     };
-  t.guildId !== v.DEFAULT_SOUND_GUILD_ID && (p.source_guild_id = t.guildId), s.default.post({
+  t.guildId !== v.DEFAULT_SOUND_GUILD_ID && (m.source_guild_id = t.guildId), s.default.post({
     url: T.Endpoints.SEND_SOUNDBOARD_SOUND(e),
-    body: p,
+    body: m,
     signal: o.signal,
     onRequestProgress: u
   }).then(T.NOOP_NULL, () => {
@@ -113,14 +113,14 @@ let A = async e => {
     })
   } catch (e) {
     if (429 === e.status && null != e.body.retry_after) {
-      let t = e.body.retry_after * m.default.Millis.SECOND;
+      let t = e.body.retry_after * p.default.Millis.SECOND;
       r.default.dispatch({
         type: "VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP",
         cooldownEndsAtMs: t
       })
     }
   }
-}, N = {
+}, y = {
   [C.VoiceChannelEffectAnimationType.BASIC]: "Basic",
   [C.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
 }, x = (e, t, n, l) => {
@@ -131,7 +131,7 @@ let A = async e => {
     managed: r,
     managedExternal: o,
     animated: d
-  } = (0, h.countEmoji)([t], e.getGuildId()), c = N[l];
+  } = (0, h.countEmoji)([t], e.getGuildId()), c = y[l];
   u.default.trackWithMetadata(T.AnalyticEvents.VOICE_CHANNEL_EFFECT_SENT, {
     channel_id: e.id,
     guild_id: e.getGuildId(),

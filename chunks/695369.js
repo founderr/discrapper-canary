@@ -14,12 +14,12 @@ var l = n("37983"),
   d = n("538282"),
   c = n("374363"),
   f = n("551305"),
-  p = n("110006"),
-  m = n("378765"),
+  m = n("110006"),
+  p = n("378765"),
   h = n("49111"),
   E = n("13030"),
   g = n("782340"),
-  S = n("537461"),
+  S = n("350583"),
   C = i.memo(i.forwardRef(function(e, t) {
     let {
       disabled: n,
@@ -27,16 +27,16 @@ var l = n("37983"),
     } = e, [C, T] = i.useState(!1), v = (0, o.useStateFromStores)([c.default], () => {
       var e, t;
       return C && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-    }), [I, _, y] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), A = i.useRef(0), N = i.useCallback(() => {
+    }), [I, _, N] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), A = i.useRef(0), y = i.useCallback(() => {
       T(!0), clearTimeout(A.current), A.current = setTimeout(() => {
         T(!1)
       }, 1500)
     }, []);
     i.useEffect(() => () => {
       clearTimeout(A.current)
-    }), (0, m.useComponentAction)({
+    }), (0, p.useComponentAction)({
       event: h.ComponentActions.FAVORITE_GIF,
-      handler: N
+      handler: y
     });
     let x = i.useCallback(() => {
       (0, d.toggleExpressionPicker)(E.ExpressionPickerViewType.GIF, a)
@@ -52,14 +52,14 @@ var l = n("37983"),
         ...e,
         children: (0, l.jsx)(f.default, {
           innerClassName: S.button,
-          icon: p.default,
+          icon: m.default,
           onClick: x,
           isActive: O,
           pulse: C,
           "aria-label": g.default.Messages.GIF_BUTTON_LABEL,
           "aria-expanded": O,
           "aria-haspopup": "dialog",
-          "aria-controls": y
+          "aria-controls": N
         })
       })
     })

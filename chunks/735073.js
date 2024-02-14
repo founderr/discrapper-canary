@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("783575"),
-  o = n("239201"),
-  a = n("146664"),
+  a = n("239201"),
+  o = n("146664"),
   i = n("82302"),
   s = n("785618"),
   c = n("991498"),
@@ -32,13 +32,13 @@ var r = n("783575"),
   T = n("907614"),
   M = n("284744"),
   R = n("904110"),
-  I = n("727020"),
-  O = n("941741"),
+  O = n("727020"),
+  I = n("941741"),
   A = n("481425"),
   L = n("906689"),
   N = n("212869"),
-  F = n("555016"),
-  j = n("240849"),
+  j = n("555016"),
+  F = n("240849"),
   K = n("564341"),
   _ = {};
 
@@ -48,20 +48,20 @@ function V(e) {
     "aria-label": n,
     ...r
   } = e;
-  let o = (0, K.useLocalizedStringFormatter)((t = _) && t.__esModule ? t.default : t, "@react-aria/breadcrumbs");
+  let a = (0, K.useLocalizedStringFormatter)((t = _) && t.__esModule ? t.default : t, "@react-aria/breadcrumbs");
   return {
     navProps: {
-      ...(0, j.filterDOMProps)(r, {
+      ...(0, F.filterDOMProps)(r, {
         labelable: !0
       }),
-      "aria-label": n || o.format("breadcrumbs")
+      "aria-label": n || a.format("breadcrumbs")
     }
   }
 }
 _ = {
   "ar-AE": r.default,
-  "bg-BG": o.default,
-  "cs-CZ": a.default,
+  "bg-BG": a.default,
+  "cs-CZ": o.default,
   "da-DK": i.default,
   "de-DE": s.default,
   "el-GR": c.default,
@@ -87,10 +87,10 @@ _ = {
   "ru-RU": T.default,
   "sk-SK": M.default,
   "sl-SI": R.default,
-  "sr-SP": I.default,
-  "sv-SE": O.default,
+  "sr-SP": O.default,
+  "sv-SE": I.default,
   "tr-TR": A.default,
   "uk-UA": L.default,
   "zh-CN": N.default,
-  "zh-TW": F.default
+  "zh-TW": j.default
 }

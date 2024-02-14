@@ -14,11 +14,11 @@ var l = n("37983"),
   d = n("383018"),
   c = n("474643"),
   f = n("585722"),
-  p = n("640830"),
-  m = n("939563"),
+  m = n("640830"),
+  p = n("939563"),
   h = n("385887"),
   E = n("782340"),
-  g = n("835906");
+  g = n("165555");
 
 function S(e, t, n) {
   let {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         u = 0;
       if (null != r && r.id === s.command.id) {
         var c;
-        let t = p.getOptionNames(e);
+        let t = m.getOptionNames(e);
         for (let e of null !== (c = r.options) && void 0 !== c ? c : []) t.includes(e.name) ? u++ : o++
       }
       let f = {};
@@ -66,7 +66,7 @@ let C = e => {
   let t, {
       channelId: n,
       element: a,
-      attributes: p,
+      attributes: m,
       children: S
     } = e,
     C = (0, r.useSelected)(),
@@ -82,32 +82,32 @@ let C = e => {
         errored: (null === (l = d.default.getOptionState(n, a.optionName)) || void 0 === l ? void 0 : null === (t = l.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
       }
     }, [n, a.optionName]),
-    y = (0, o.useStateFromStores)([f.default], () => f.default.getUpload(n, a.optionName, c.DraftType.SlashCommand), [n, a.optionName]),
+    N = (0, o.useStateFromStores)([f.default], () => f.default.getUpload(n, a.optionName, c.DraftType.SlashCommand), [n, a.optionName]),
     A = a.children[a.children.length - 1],
-    N = null != A && h.TextUtils.isText(A) && A.text.endsWith("\n"),
+    y = null != A && h.TextUtils.isText(A) && A.text.endsWith("\n"),
     x = s(g.inlineElement, g.optionPill, {
       [g.selectedPill]: T && C,
       [g.erroredPill]: (!T || !C) && _
     }),
     O = i.useCallback(() => {
-      !h.EditorUtils.isVoid(v, a) && m.SlateTransforms.selectCommandOption(v, a.optionName, !0)
+      !h.EditorUtils.isVoid(v, a) && p.SlateTransforms.selectCommandOption(v, a.optionName, !0)
     }, [v, a]);
-  return t = I === u.ApplicationCommandOptionType.ATTACHMENT ? (null == y ? void 0 : y.filename) != null ? (0, l.jsxs)("span", {
+  return t = I === u.ApplicationCommandOptionType.ATTACHMENT ? (null == N ? void 0 : N.filename) != null ? (0, l.jsxs)("span", {
     className: s(g.optionPillValue, g.attachmentFilename),
     contentEditable: !1,
-    children: [y.filename, S]
+    children: [N.filename, S]
   }) : (0, l.jsxs)("span", {
     className: s(g.optionPillValue, g.readonlyPillValue),
     contentEditable: !1,
     children: [E.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, S]
   }) : (0, l.jsxs)("span", {
     className: g.optionPillValue,
-    children: [S, N ? (0, l.jsx)("span", {
+    children: [S, y ? (0, l.jsx)("span", {
       className: g.newLine,
       contentEditable: !1
     }) : null]
   }), (0, l.jsxs)("span", {
-    ...p,
+    ...m,
     className: x,
     children: [(0, l.jsxs)("span", {
       className: g.optionPillKey,

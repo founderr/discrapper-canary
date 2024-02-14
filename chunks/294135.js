@@ -66,7 +66,7 @@ var a = s("37983"),
   eo = s("49111"),
   eu = s("492249"),
   ed = s("782340"),
-  ec = s("772734");
+  ec = s("434576");
 class e_ extends n.PureComponent {
   get isChannelType() {
     return null != this.props.channel

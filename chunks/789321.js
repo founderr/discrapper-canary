@@ -17,8 +17,8 @@ var l = n("37983"),
   d = n("731898"),
   c = n("206230"),
   f = n("812204"),
-  p = n("685665"),
-  m = n("606292"),
+  m = n("685665"),
+  p = n("606292"),
   h = n("688318"),
   E = n("21526"),
   g = n("853987"),
@@ -28,9 +28,9 @@ var l = n("37983"),
   v = n("945330"),
   I = n("719923"),
   _ = n("627601"),
-  y = n("994428"),
+  N = n("994428"),
   A = n("782340"),
-  N = n("304118"),
+  y = n("154477"),
   x = n("604689");
 
 function O(e) {
@@ -38,11 +38,11 @@ function O(e) {
     onClick: t
   } = e;
   return (0, l.jsx)(u.Clickable, {
-    className: N.closeButton,
+    className: y.closeButton,
     onClick: t,
     "aria-label": A.default.Messages.DISMISS,
     children: (0, l.jsx)(v.default, {
-      className: N.closeIcon,
+      className: y.closeIcon,
       width: 18,
       height: 18
     })
@@ -53,7 +53,7 @@ let R = 76,
     variant: "text-sm/normal",
     color: "text-normal",
     tag: "span",
-    className: N.ctaLink,
+    className: y.ctaLink,
     children: e
   }),
   L = e => {
@@ -64,10 +64,10 @@ let R = 76,
       avatarDecorationSrc: i
     } = (0, h.default)({
       user: t,
-      size: (0, m.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_48)
+      size: (0, p.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_48)
     });
     return (0, l.jsx)(u.Clickable, {
-      className: N.avatarButton,
+      className: y.avatarButton,
       onClick: n,
       "aria-label": A.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
       children: (0, l.jsx)(u.Avatar, {
@@ -83,7 +83,7 @@ var P = e => {
   let {
     user: n,
     displayProfile: a,
-    onClose: m,
+    onClose: p,
     onDismiss: h,
     isInSidebar: v = !1,
     canShowAvatarDecorationUpsell: x = !1,
@@ -91,18 +91,18 @@ var P = e => {
     upsellSource: b
   } = e, {
     analyticsLocations: j
-  } = (0, p.default)(f.default.COLLECTIBLES_USER_POPOUT_UPSELL), U = (0, o.default)([c.default], () => c.default.useReducedMotion), {
+  } = (0, m.default)(f.default.COLLECTIBLES_USER_POPOUT_UPSELL), U = (0, o.default)([c.default], () => c.default.useReducedMotion), {
     ref: D,
     height: k
   } = (0, d.default)(), w = i.useMemo(() => ({
     top: "-".concat((null != k ? k : R) + 6, "px")
-  }), [k]), F = (0, o.default)([T.default], () => T.default.getCurrentUser()), G = I.default.canUseCollectibles(F), {
-    setUpsellSource: B,
+  }), [k]), F = (0, o.default)([T.default], () => T.default.getCurrentUser()), B = I.default.canUseCollectibles(F), {
+    setUpsellSource: G,
     reset: H
   } = (0, _.useUserPopoutCollectiblesUpsellStore)();
-  i.useEffect(() => (B(b), () => {
+  i.useEffect(() => (G(b), () => {
     H()
-  }), [B, b, H]);
+  }), [G, b, H]);
   let V = (0, o.default)([C.default], () => C.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
     [K, W] = (0, o.useStateFromStoresArray)([g.default], () => {
       var e;
@@ -110,27 +110,27 @@ var P = e => {
     }),
     Y = i.useCallback(() => {
       var e, t, l, i;
-      null == h || h(y.ContentDismissActionType.PRIMARY), null == m || m(), (0, E.openCollectiblesShop)({
+      null == h || h(N.ContentDismissActionType.PRIMARY), null == p || p(), (0, E.openCollectiblesShop)({
         analyticsLocations: j,
         analyticsSource: f.default.COLLECTIBLES_USER_POPOUT_UPSELL,
         initialProductSkuId: K ? null !== (l = null == V ? void 0 : V.skuId) && void 0 !== l ? l : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId : null !== (i = null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId) && void 0 !== i ? i : null == V ? void 0 : V.skuId
       })
-    }, [h, m, j, null == V ? void 0 : V.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, K]),
+    }, [h, p, j, null == V ? void 0 : V.skuId, null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.skuId, K]),
     z = i.useCallback(() => {
-      null == h || h(y.ContentDismissActionType.DISMISS)
+      null == h || h(N.ContentDismissActionType.DISMISS)
     }, [h]);
   if (!x && !P) return null;
-  let J = (0, r.match)([x, P]).with([!0, !0], () => K && W && G ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+  let Z = (0, r.match)([x, P]).with([!0, !0], () => K && W && B ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : K && W ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: M
   }) : A.default.Messages.COMBINED_COLLECTIBLES_SOCIAL_UPSELL.format({
     openShop: M
-  })).with([!0, !1], () => K && G ? A.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
+  })).with([!0, !1], () => K && B ? A.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : A.default.Messages.AVATAR_DECORATIONS_SOCIAL_UPSELL.format({
     openShop: M
-  })).with([!1, !0], () => W && G ? A.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
+  })).with([!1, !0], () => W && B ? A.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : (W && A.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: M
@@ -139,28 +139,28 @@ var P = e => {
   }))).otherwise(() => null);
   return (0, l.jsx)("div", {
     style: w,
-    className: s(N.containerWrapper, {
-      [N.animation]: !U,
-      [N.inSidebar]: v
+    className: s(y.containerWrapper, {
+      [y.animation]: !U,
+      [y.inSidebar]: v
     }),
     ref: D,
     children: (0, l.jsxs)("div", {
-      className: N.container,
+      className: y.container,
       children: [x && (0, l.jsx)(L, {
         user: n,
         onClick: Y
       }), (0, l.jsx)(u.Clickable, {
-        className: x ? N.contentWithAvatar : N.content,
+        className: x ? y.contentWithAvatar : y.content,
         onClick: Y,
         "aria-label": A.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
         children: (0, l.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "text-normal",
           tag: "span",
-          children: J
+          children: Z
         })
       }), (0, l.jsx)("div", {
-        className: N.buttons,
+        className: y.buttons,
         children: (0, l.jsx)(O, {
           onClick: z
         })

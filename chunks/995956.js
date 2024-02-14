@@ -13,7 +13,7 @@ var n = s("77078"),
   o = s("49111"),
   d = s("646718"),
   u = s("782340"),
-  c = s("400111"),
+  c = s("999509"),
   S = function(e) {
     let {
       hasAppliedGuildBoosts: t,

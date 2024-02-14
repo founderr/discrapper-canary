@@ -23,15 +23,15 @@ var l = n("509043"),
   d = n("49111"),
   c = n("782340");
 let f = e => "".concat(e).length < 13 ? 1e3 * e : e,
-  p = e => {
+  m = e => {
     let t = Date.now() / 1e3;
-    return null != e.end ? m(t, f(e.end) / 1e3) : null != e.start ? m(f(e.start) / 1e3, t) : {
+    return null != e.end ? p(t, f(e.end) / 1e3) : null != e.start ? p(f(e.start) / 1e3, t) : {
       hours: 0,
       minutes: 0,
       seconds: 0
     }
   },
-  m = (e, t) => {
+  p = (e, t) => {
     let n = Math.max(t - e, 0);
     return {
       hours: Math.floor(n / 3600) % 24,
@@ -40,7 +40,7 @@ let f = e => "".concat(e).length < 13 ? 1e3 * e : e,
     }
   },
   h = e => {
-    let t = p(e);
+    let t = m(e);
     return t.hours > 0 ? "".concat(t.hours, " hours") : t.minutes > 0 ? "".concat(t.minutes, " minutes") : "".concat(t.seconds, " seconds")
   },
   E = e => (0, a.default)(e) ? i.default.get(d.PlatformTypes.SPOTIFY) : (0, s.default)(e) ? i.default.get(d.PlatformTypes.XBOX) : null != e.platform && [d.ActivityGamePlatforms.PS4, d.ActivityGamePlatforms.PS5].includes(e.platform) ? i.default.get(d.PlatformTypes.PLAYSTATION) : e.name === i.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS).name ? i.default.get(d.PlatformTypes.LEAGUE_OF_LEGENDS) : void(e.type, d.ActivityTypes.PLAYING),

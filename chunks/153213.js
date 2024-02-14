@@ -12,19 +12,19 @@ var l = n("37983"),
   o = n("882641"),
   u = n("848471"),
   d = n("958706"),
-  c = n("223797");
+  c = n("681426");
 
 function f(e) {
   var t;
   let {
     editorRef: n,
     options: f,
-    channel: p
-  } = e, m = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), h = i.useCallback((e, t) => {
+    channel: m
+  } = e, p = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), h = i.useCallback((e, t) => {
     let l = n.current;
     null != e && null != l && l.insertEmoji(e, t, !1), t && (0, r.closeExpressionPicker)()
   }, [n]);
-  return null == m ? null : (0, l.jsxs)("div", {
+  return null == p ? null : (0, l.jsxs)("div", {
     id: "slate-toolbar",
     className: c.staticToolbar,
     children: [(0, l.jsx)("div", {
@@ -42,7 +42,7 @@ function f(e) {
         } = e;
         return (0, l.jsx)(s.default, {
           persistSearch: !0,
-          channel: p,
+          channel: m,
           closePopout: t,
           onSelectEmoji: (e, n) => {
             h(e, n), n && t()

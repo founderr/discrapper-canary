@@ -47,10 +47,10 @@ function S(t, e, i) {
       if ("function" != typeof d) throw new g;
       if ((s = u).writing = !1, s.writecb = null, s.length -= s.writelen, s.writelen = 0, e) {
         ;
-        r = t, i = u, c = a, o = e, f = d, --i.pendingcb, c ? (n.nextTick(f, o), n.nextTick(j, r, i), r._writableState.errorEmitted = !0, w(r, o)) : (f(o), r._writableState.errorEmitted = !0, w(r, o), j(r, i))
+        r = t, i = u, c = a, o = e, f = d, --i.pendingcb, c ? (n.nextTick(f, o), n.nextTick(P, r, i), r._writableState.errorEmitted = !0, w(r, o)) : (f(o), r._writableState.errorEmitted = !0, w(r, o), P(r, i))
       } else {
         var p = I(u) || t.destroyed;
-        !p && !u.corked && !u.bufferProcessing && u.bufferedRequest && B(t, u), a ? n.nextTick(A, t, u, p, d) : A(t, u, p, d)
+        !p && !u.corked && !u.bufferProcessing && u.bufferedRequest && B(t, u), a ? n.nextTick(E, t, u, p, d) : E(t, u, p, d)
       }
     })(e, t)
   }, this.writecb = null, this.writelen = 0, this.bufferedRequest = null, this.lastBufferedRequest = null, this.pendingcb = 0, this.prefinished = !1, this.errorEmitted = !1, this.emitClose = !1 !== t.emitClose, this.autoDestroy = !!t.autoDestroy, this.bufferedRequestCount = 0, this.corkedRequestsFree = new c(this)
@@ -111,7 +111,7 @@ k.prototype.write = function(t, e, s) {
           callback: n,
           next: null
         }, b ? b.next = e.lastBufferedRequest : e.bufferedRequest = e.lastBufferedRequest, e.bufferedRequestCount += 1
-      } else E(t, e, !1, d, r, i, n);
+      } else A(t, e, !1, d, r, i, n);
       return p
     }(this, v, _, t, e, s)
   }
@@ -137,14 +137,14 @@ Object.defineProperty(k.prototype, "writableHighWaterMark", {
   }
 });
 
-function E(t, e, s, r, i, n, c) {
+function A(t, e, s, r, i, n, c) {
   e.writelen = r, e.writecb = c, e.writing = !0, e.sync = !0, e.destroyed ? e.onwrite(new x("write")) : s ? t._writev(i, e.onwrite) : t._write(i, n, e.onwrite), e.sync = !1
 }
 
-function A(t, e, s, r) {
+function E(t, e, s, r) {
   !s && function(t, e) {
     0 === e.length && e.needDrain && (e.needDrain = !1, t.emit("drain"))
-  }(t, e), e.pendingcb--, r(), j(t, e)
+  }(t, e), e.pendingcb--, r(), P(t, e)
 }
 
 function B(t, e) {
@@ -155,14 +155,14 @@ function B(t, e) {
       i = e.corkedRequestsFree;
     i.entry = s;
     for (var n = 0, o = !0; s;) r[n] = s, !s.isBuf && (o = !1), s = s.next, n += 1;
-    r.allBuffers = o, E(t, e, !0, e.length, r, "", i.finish), e.pendingcb++, e.lastBufferedRequest = null, i.next ? (e.corkedRequestsFree = i.next, i.next = null) : e.corkedRequestsFree = new c(e), e.bufferedRequestCount = 0
+    r.allBuffers = o, A(t, e, !0, e.length, r, "", i.finish), e.pendingcb++, e.lastBufferedRequest = null, i.next ? (e.corkedRequestsFree = i.next, i.next = null) : e.corkedRequestsFree = new c(e), e.bufferedRequestCount = 0
   } else {
     for (; s;) {
       var f = s.chunk,
         u = s.encoding,
         a = s.callback,
         d = e.objectMode ? 1 : f.length;
-      if (E(t, e, !1, d, f, u, a), s = s.next, e.bufferedRequestCount--, e.writing) break
+      if (A(t, e, !1, d, f, u, a), s = s.next, e.bufferedRequestCount--, e.writing) break
     }
     null === s && (e.lastBufferedRequest = null)
   }
@@ -175,7 +175,7 @@ function I(t) {
 
 function R(t, e) {
   t._final(function(s) {
-    e.pendingcb--, s && w(t, s), e.prefinished = !0, t.emit("prefinish"), j(t, e)
+    e.pendingcb--, s && w(t, s), e.prefinished = !0, t.emit("prefinish"), P(t, e)
   })
 }
 k.prototype._write = function(t, e, s) {
@@ -183,7 +183,7 @@ k.prototype._write = function(t, e, s) {
 }, k.prototype._writev = null, k.prototype.end = function(t, e, s) {
   var r = this._writableState;
   return "function" == typeof t ? (s = t, t = null, e = null) : "function" == typeof e && (s = e, e = null), null != t && this.write(t, e), r.corked && (r.corked = 1, this.uncork()), !r.ending && function(t, e, s) {
-    e.ending = !0, j(t, e), s && (e.finished ? n.nextTick(s) : t.once("finish", s)), e.ended = !0, t.writable = !1
+    e.ending = !0, P(t, e), s && (e.finished ? n.nextTick(s) : t.once("finish", s)), e.ended = !0, t.writable = !1
   }(this, r, s), this
 }, Object.defineProperty(k.prototype, "writableLength", {
   enumerable: !1,
@@ -192,7 +192,7 @@ k.prototype._write = function(t, e, s) {
   }
 });
 
-function j(t, e) {
+function P(t, e) {
   var s, r, i = I(e);
   if (i) {
     ;

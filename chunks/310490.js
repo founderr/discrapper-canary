@@ -23,7 +23,7 @@ var a = s("37983"),
   N = s("900938"),
   g = s("49111"),
   h = s("782340"),
-  C = s("686184");
+  C = s("927253");
 let R = "NO_INSTANT_INVITE",
   x = r.default.combine(g.Permissions.VIEW_CHANNEL, g.Permissions.CREATE_INSTANT_INVITE);
 class L extends l.PureComponent {

@@ -1,47 +1,47 @@
 "use strict";
-n("424973"), e.exports.parse = function(e) {
-  var t = /^(?:(en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))$|^((?:[a-z]{2,3}(?:(?:-[a-z]{3}){1,3})?)|[a-z]{4}|[a-z]{5,8})(?:-([a-z]{4}))?(?:-([a-z]{2}|\d{3}))?((?:-(?:[\da-z]{5,8}|\d[\da-z]{3}))*)?((?:-[\da-wy-z](?:-[\da-z]{2,8})+)*)?(-x(?:-[\da-z]{1,8})+)?$|^(x(?:-[\da-z]{1,8})+)$/i.exec(e);
-  if (!t) return null;
-  t.shift();
-  var n = null,
-    s = [];
-  t[2] && (n = (a = t[2].split("-")).shift(), s = a);
-  var r = [];
-  t[5] && (r = t[5].split("-")).shift();
-  var l = [];
-  if (t[6]) {
-    (a = t[6].split("-")).shift();
-    for (var a, i, o = []; a.length;) {
-      var u = a.shift();
-      1 === u.length ? i ? (l.push({
-        singleton: i,
-        extension: o
-      }), i = u, o = []) : i = u : o.push(u)
+r("424973"), t.exports.parse = function(t) {
+  var n = /^(?:(en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))$|^((?:[a-z]{2,3}(?:(?:-[a-z]{3}){1,3})?)|[a-z]{4}|[a-z]{5,8})(?:-([a-z]{4}))?(?:-([a-z]{2}|\d{3}))?((?:-(?:[\da-z]{5,8}|\d[\da-z]{3}))*)?((?:-[\da-wy-z](?:-[\da-z]{2,8})+)*)?(-x(?:-[\da-z]{1,8})+)?$|^(x(?:-[\da-z]{1,8})+)$/i.exec(t);
+  if (!n) return null;
+  n.shift();
+  var r = null,
+    i = [];
+  n[2] && (r = (e = n[2].split("-")).shift(), i = e);
+  var o = [];
+  n[5] && (o = n[5].split("-")).shift();
+  var u = [];
+  if (n[6]) {
+    (e = n[6].split("-")).shift();
+    for (var e, s, a = []; e.length;) {
+      var h = e.shift();
+      1 === h.length ? s ? (u.push({
+        singleton: s,
+        extension: a
+      }), s = h, a = []) : s = h : a.push(h)
     }
-    l.push({
-      singleton: i,
-      extension: o
+    u.push({
+      singleton: s,
+      extension: a
     })
   }
+  var f = [];
+  n[7] && ((f = n[7].split("-")).shift(), f.shift());
   var c = [];
-  t[7] && ((c = t[7].split("-")).shift(), c.shift());
-  var d = [];
-  return t[8] && (d = t[8].split("-")).shift(), {
+  return n[8] && (c = n[8].split("-")).shift(), {
     langtag: {
       language: {
-        language: n,
-        extlang: s
+        language: r,
+        extlang: i
       },
-      script: t[3] || null,
-      region: t[4] || null,
-      variant: r,
-      extension: l,
-      privateuse: c
+      script: n[3] || null,
+      region: n[4] || null,
+      variant: o,
+      extension: u,
+      privateuse: f
     },
-    privateuse: d,
+    privateuse: c,
     grandfathered: {
-      irregular: t[0] || null,
-      regular: t[1] || null
+      irregular: n[0] || null,
+      regular: n[1] || null
     }
   }
 }

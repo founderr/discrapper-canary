@@ -1,5 +1,5 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
     return i
   }
@@ -7,17 +7,17 @@ n.r(e), n.d(e, {
 var i, r = n("913144");
 i = class {
   initialize() {
-    this.initializedCount++, !(this.initializedCount > 1) && (this._initialize(), Object.entries(this.actions).forEach(t => {
-      let [e, n] = t;
-      r.default.subscribe(e, "function" == typeof n ? n : n.callback)
-    }), this.stores.forEach((t, e) => {
-      e.addChangeListener(t), t()
+    this.initializedCount++, !(this.initializedCount > 1) && (this._initialize(), Object.entries(this.actions).forEach(e => {
+      let [t, n] = e;
+      r.default.subscribe(t, "function" == typeof n ? n : n.callback)
+    }), this.stores.forEach((e, t) => {
+      t.addChangeListener(e), e()
     }))
   }
-  terminate(t) {
-    !(this.initializedCount <= 0) && (t ? this.initializedCount = 0 : this.initializedCount--, 0 === this.initializedCount && (this._terminate(), Object.entries(this.actions).forEach(t => {
-      let [e, n] = t;
-      r.default.unsubscribe(e, "function" == typeof n ? n : n.callback)
+  terminate(e) {
+    !(this.initializedCount <= 0) && (e ? this.initializedCount = 0 : this.initializedCount--, 0 === this.initializedCount && (this._terminate(), Object.entries(this.actions).forEach(e => {
+      let [t, n] = e;
+      r.default.unsubscribe(t, "function" == typeof n ? n : n.callback)
     })))
   }
   _initialize() {}

@@ -1,39 +1,39 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return T
+    return m
   }
 });
-var r = l("37983");
-l("884691");
-var a = l("414456"),
-  n = l.n(a),
-  s = l("77078"),
-  i = l("145079"),
-  o = l("618927"),
-  u = l("158998"),
-  d = l("777003"),
-  c = l("782340"),
-  f = l("119111");
+var l = n("37983");
+n("884691");
+var i = n("414456"),
+  a = n.n(i),
+  s = n("77078"),
+  r = n("145079"),
+  o = n("618927"),
+  u = n("158998"),
+  d = n("777003"),
+  c = n("782340"),
+  f = n("918829");
 
-function T(e) {
+function m(e) {
   let {
     user: t,
-    shouldCopyOnClick: l,
-    nickname: a,
-    pronouns: T,
+    shouldCopyOnClick: n,
+    nickname: i,
+    pronouns: m,
     usernameIcon: p,
-    identityCTA: m,
+    identityCTA: h,
     className: E,
-    isTryItOut: P = !1,
+    isTryItOut: g = !1,
     lastSection: S
   } = e;
-  return (0, r.jsx)(d.default, {
-    className: n(f.container, E),
+  return (0, l.jsx)(d.default, {
+    className: a(f.container, E),
     lastSection: S,
-    children: (0, r.jsxs)("div", {
-      className: l ? f.copiableNameTag : void 0,
-      children: [(0, r.jsx)(o.CopiableField, {
+    children: (0, l.jsxs)("div", {
+      className: n ? f.copiableNameTag : void 0,
+      children: [(0, l.jsx)(o.CopiableField, {
         className: f.copiableField,
         copyMetaData: "User Tag",
         copyTooltip: c.default.Messages.ACCOUNT_CLICK_TO_COPY,
@@ -42,31 +42,31 @@ function T(e) {
           identifiable: "always"
         }),
         showCopyIcon: !0,
-        disableCopy: !l,
-        children: (0, r.jsxs)("div", {
+        disableCopy: !n,
+        children: (0, l.jsxs)("div", {
           className: f.userText,
-          children: [null != a ? (0, r.jsx)(s.Heading, {
+          children: [null != i ? (0, l.jsx)(s.Heading, {
             variant: "heading-lg/semibold",
             className: f.nickname,
-            children: a
-          }) : null, (0, r.jsx)(i.default, {
+            children: i
+          }) : null, (0, l.jsx)(r.default, {
             usernameIcon: p,
             user: t,
             forceUsername: !0,
-            forcePomelo: P,
-            className: null == a ? f.userTagNoNickname : f.userTagWithNickname,
-            usernameClass: null == a ? f.userTagUsernameNoNickname : f.userTagUsernameBase,
-            discriminatorClass: null == a ? f.userTagDiscriminatorNoNickname : f.discrimBase,
-            botClass: null == a ? f.headerBotTag : f.headerBotTagWithNickname
-          }), m]
+            forcePomelo: g,
+            className: null == i ? f.userTagNoNickname : f.userTagWithNickname,
+            usernameClass: null == i ? f.userTagUsernameNoNickname : f.userTagUsernameBase,
+            discriminatorClass: null == i ? f.userTagDiscriminatorNoNickname : f.discrimBase,
+            botClass: null == i ? f.headerBotTag : f.headerBotTagWithNickname
+          }), h]
         })
-      }), null != T && "" !== T && (0, r.jsx)(s.Tooltip, {
+      }), null != m && "" !== m && (0, l.jsx)(s.Tooltip, {
         text: c.default.Messages.USER_PROFILE_PRONOUNS,
-        children: e => (0, r.jsx)(s.Text, {
+        children: e => (0, l.jsx)(s.Text, {
           ...e,
           variant: "text-sm/normal",
           className: f.pronouns,
-          children: T
+          children: m
         })
       })]
     })

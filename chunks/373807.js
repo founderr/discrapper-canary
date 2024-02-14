@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getSeasonalGiftingBody: function() {
-    return p
+    return m
   },
   default: function() {
     return h
@@ -16,17 +16,17 @@ var l = n("37983"),
   u = n("49111"),
   d = n("994428"),
   c = n("782340"),
-  f = n("843011");
+  f = n("554584");
 
-function p(e) {
+function m(e) {
   return e || !(a.isMobile || a.isTablet) ? c.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : c.default.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP
 }
 
-function m(e) {
+function p(e) {
   let {
     onComplete: t,
     onDMCheckItOutClick: d,
-    isDM: m
+    isDM: p
   } = e;
   i.useEffect(() => {
     o.default.track(u.AnalyticEvents.PREMIUM_GIFT_UPSELL_VIEWED, {
@@ -34,7 +34,7 @@ function m(e) {
     })
   }, []);
   let h = i.useMemo(() => [() => n.el("540902").then(n.t.bind(n, "540902", 19)), () => n.el("915604").then(n.t.bind(n, "915604", 19)), () => n.el("166505").then(n.t.bind(n, "166505", 19))], []),
-    E = m || !(a.isMobile || a.isTablet),
+    E = p || !(a.isMobile || a.isTablet),
     g = E ? c.default.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : c.default.Messages.SEASONAL_GIFTING_POPUP_HEADER,
     S = E ? c.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.default.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
   return (0, l.jsxs)("div", {
@@ -51,7 +51,7 @@ function m(e) {
       }), (0, l.jsx)(s.Text, {
         className: f.text,
         variant: "text-sm/normal",
-        children: p(m)
+        children: m(p)
       })]
     }), (0, l.jsxs)("div", {
       className: f.dmButtonContainer,
@@ -86,7 +86,7 @@ function h(e) {
     shouldShow: !0,
     position: "top",
     align: "center",
-    renderPopout: e => (0, l.jsx)(m, {
+    renderPopout: e => (0, l.jsx)(p, {
       ...e,
       onComplete: () => {
         t(), i(d.ContentDismissActionType.USER_DISMISS)

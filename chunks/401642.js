@@ -1,61 +1,61 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   openUserProfileModal: function() {
-    return o
+    return a
   },
   closeUserProfileModal: function() {
-    return u
+    return s
   }
 });
-var r = n("913144"),
-  s = n("327037"),
+var u = n("913144"),
+  r = n("327037"),
   i = n("697218"),
   l = n("506885"),
-  a = n("49111");
+  o = n("49111");
 
-function o(e) {
+function a(t) {
   let {
-    userId: t,
+    userId: e,
     section: n,
-    guildId: o = a.ME,
-    channelId: u,
-    friendToken: c,
-    autoFocusNote: d,
-    analyticsLocation: f
-  } = e, h = i.default.getUser(t), C = o !== a.ME ? o : void 0;
-  if (null == h) return (0, s.fetchProfile)(t, {
-    friendToken: c,
-    guildId: C
+    guildId: a = o.ME,
+    channelId: s,
+    friendToken: d,
+    autoFocusNote: c,
+    analyticsLocation: E
+  } = t, _ = i.default.getUser(e), f = a !== o.ME ? a : void 0;
+  if (null == _) return (0, r.fetchProfile)(e, {
+    friendToken: d,
+    guildId: f
   }).then(() => {
-    r.default.dispatch({
+    u.default.dispatch({
       type: "USER_PROFILE_MODAL_OPEN",
-      userId: t,
+      userId: e,
       section: n,
-      guildId: o,
-      channelId: u,
-      friendToken: c,
-      autoFocusNote: d,
-      analyticsLocation: f
+      guildId: a,
+      channelId: s,
+      friendToken: d,
+      autoFocusNote: c,
+      analyticsLocation: E
     })
   });
-  (0, l.default)(t, h.getAvatarURL(void 0, 80), {
+  (0, l.default)(e, _.getAvatarURL(void 0, 80), {
     withMutualGuilds: !0,
-    friendToken: c,
-    guildId: C
-  }), r.default.dispatch({
+    friendToken: d,
+    guildId: f
+  }), u.default.dispatch({
     type: "USER_PROFILE_MODAL_OPEN",
-    userId: t,
+    userId: e,
     section: n,
-    guildId: o,
-    channelId: u,
-    friendToken: c,
-    autoFocusNote: d,
-    analyticsLocation: f
+    guildId: a,
+    channelId: s,
+    friendToken: d,
+    autoFocusNote: c,
+    analyticsLocation: E
   })
 }
 
-function u() {
-  r.default.dispatch({
+function s() {
+  u.default.dispatch({
     type: "USER_PROFILE_MODAL_CLOSE"
   })
 }

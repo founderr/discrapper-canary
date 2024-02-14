@@ -4,23 +4,23 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("77078"),
   i = n("952999"),
   r = n("49111"),
   o = n("782340"),
-  u = n("760472"),
+  u = n("125833"),
   d = e => {
     let {
       guild: t,
       onAddGuild: d
-    } = e, c = l.useCallback(() => {
+    } = e, c = a.useCallback(() => {
       (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("310688").then(n.bind(n, "310688"));
-        return n => (0, a.jsx)(e, {
+        return n => (0, l.jsx)(e, {
           ...n,
           guild: t,
           source: r.InstantInviteSources.HUB_DIRECTORY,
@@ -30,29 +30,29 @@ var a = n("37983"),
         })
       })
     }, [t]);
-    return (0, a.jsxs)("div", {
+    return (0, l.jsxs)("div", {
       className: u.emptyWrapper,
-      children: [(0, a.jsx)("img", {
+      children: [(0, l.jsx)("img", {
         className: u.emptyImage,
         alt: "",
         src: n("704176")
-      }), (0, a.jsx)(s.Heading, {
+      }), (0, l.jsx)(s.Heading, {
         className: u.emptyTitle,
         variant: "heading-xl/semibold",
         children: o.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_TITLE.format({
           guildName: t.name
         })
-      }), (0, a.jsx)(s.Text, {
+      }), (0, l.jsx)(s.Text, {
         variant: "text-md/normal",
         className: u.emptySubtitle,
         children: o.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_SUBTITLE
-      }), null != d ? (0, a.jsx)(i.WelcomeMessageCTA, {
+      }), null != d ? (0, l.jsx)(i.WelcomeMessageCTA, {
         className: u.emptyCTA,
         iconUrl: n("233135"),
         header: o.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_ADD_SERVER,
         completed: !1,
         onClick: d
-      }) : null, (0, a.jsx)(i.WelcomeMessageCTA, {
+      }) : null, (0, l.jsx)(i.WelcomeMessageCTA, {
         className: u.emptyCTA,
         iconUrl: n("243826"),
         header: o.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_INVITE,

@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var l = s("77078"),
-  n = s("216375");
+  n = s("836996");
 
 function i() {
   return (0, a.jsx)("div", {

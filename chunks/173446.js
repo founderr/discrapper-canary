@@ -44,7 +44,7 @@ var l = s("37983"),
   H = s("51944"),
   w = s("49111"),
   U = s("782340"),
-  B = s("896888");
+  B = s("590135");
 let G = o.default.connectStores([p.default, M.default], () => {
   let e = M.default.getChannel(),
     t = p.default.formState;

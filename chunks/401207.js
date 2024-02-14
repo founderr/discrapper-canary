@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return E
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("446674"),
   i = n("913144"),
   r = n("600965"),
@@ -37,29 +37,29 @@ function E(e) {
     var _;
     t = null !== (_ = null == E ? void 0 : E.window) && void 0 !== _ ? _ : window
   }
-  let I = l.useRef(null),
-    T = l.useMemo(() => {
+  let I = a.useRef(null),
+    T = a.useMemo(() => {
       let e = null;
       return () => {
         null == e && (e = t.requestAnimationFrame(() => {
-          var t, a;
-          p(n, null !== (a = null === (t = I.current) || void 0 === t ? void 0 : t.getBoundingClientRect()) && void 0 !== a ? a : null), e = null
+          var t, l;
+          p(n, null !== (l = null === (t = I.current) || void 0 === t ? void 0 : t.getBoundingClientRect()) && void 0 !== l ? l : null), e = null
         }))
       }
     }, [n, t]);
-  return l.useEffect(() => (t.addEventListener("resize", T), u.ComponentDispatch.subscribe(m.ComponentActions.REMEASURE_TARGET, T), () => {
+  return a.useEffect(() => (t.addEventListener("resize", T), u.ComponentDispatch.subscribe(m.ComponentActions.REMEASURE_TARGET, T), () => {
     t.removeEventListener("resize", T), u.ComponentDispatch.unsubscribe(m.ComponentActions.REMEASURE_TARGET, T)
-  }), [T, t]), l.useLayoutEffect(() => {
+  }), [T, t]), a.useLayoutEffect(() => {
     let e = I.current;
     if (null == e) return;
     let t = e.ownerDocument.defaultView;
     if (null == t) return;
     T();
-    let a = new t.ResizeObserver(T);
-    return a.observe(e), () => {
-      a.disconnect(), p(n, null)
+    let l = new t.ResizeObserver(T);
+    return l.observe(e), () => {
+      l.disconnect(), p(n, null)
     }
-  }, [n, T]), (0, a.jsx)("div", {
+  }, [n, T]), (0, l.jsx)("div", {
     ref: I,
     style: r,
     className: i

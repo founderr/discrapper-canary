@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return N
   }
 });
 var l = n("37983"),
@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("685665"),
   c = n("154889"),
   f = n("917247"),
-  p = n("956597"),
-  m = n("42203"),
+  m = n("956597"),
+  p = n("42203"),
   h = n("18494"),
   E = n("791106"),
   g = n("216422"),
@@ -23,7 +23,7 @@ var l = n("37983"),
   C = n("49111"),
   T = n("646718"),
   v = n("782340"),
-  I = n("317478");
+  I = n("936369");
 
 function _() {
   (0, o.openModalLazy)(async () => {
@@ -37,17 +37,17 @@ function _() {
   })
 }
 
-function y(e) {
+function N(e) {
   var t;
   let {
     className: n,
     iconOnly: a,
-    remaining: y
-  } = e, A = (0, r.useStateFromStores)([h.default, m.default], () => {
-    let e = m.default.getChannel(h.default.getChannelId());
+    remaining: N
+  } = e, A = (0, r.useStateFromStores)([h.default, p.default], () => {
+    let e = p.default.getChannel(h.default.getChannelId());
     return (null == e ? void 0 : e.isPrivate()) ? C.AnalyticsPages.DM_CHANNEL : C.AnalyticsPages.GUILD_CHANNEL
   }), {
-    analyticsLocations: N
+    analyticsLocations: y
   } = (0, d.default)(u.default.PREMIUM_UPSELL), x = (0, c.usePremiumDiscountOffer)(), O = (0, f.usePremiumTrialOffer)(), R = (0, c.discountOfferHasTier)(x, T.PremiumSubscriptionSKUs.TIER_2), M = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.PremiumSubscriptionSKUs.TIER_2;
   return (i.useEffect(() => {
     S.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
@@ -56,12 +56,12 @@ function y(e) {
         location_page: A,
         location_section: C.AnalyticsSections.CHANNEL_TEXT_AREA
       },
-      location_stack: N
+      location_stack: y
     })
-  }, [A, N]), (M || R) && y < 0) ? (0, l.jsx)(p.default, {
+  }, [A, y]), (M || R) && N < 0) ? (0, l.jsx)(m.default, {
     type: T.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
     subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
-    context: y,
+    context: N,
     discountOffer: x,
     trialOffer: O,
     children: v.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({

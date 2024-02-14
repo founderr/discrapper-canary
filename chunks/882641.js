@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EMOJI_BUTTON_SPRING_CONFIG: function() {
-    return m
+    return p
   },
   default: function() {
     return h
@@ -17,8 +17,8 @@ var l = n("37983"),
   d = n("474293"),
   c = n("958706"),
   f = n("782340"),
-  p = n("505436");
-let m = {
+  m = n("321573");
+let p = {
   tension: 800,
   friction: 24
 };
@@ -32,15 +32,15 @@ var h = function(e) {
     onClick: g,
     "aria-controls": S,
     focusProps: C
-  } = e, [T, v] = i.useState(!1), [I, _] = i.useState(50), y = T || E, A = (0, d.getClass)(p, "emojiButton", y ? "Hovered" : "Normal");
-  let N = (t = I, {
+  } = e, [T, v] = i.useState(!1), [I, _] = i.useState(50), N = T || E, A = (0, d.getClass)(m, "emojiButton", N ? "Hovered" : "Normal");
+  let y = (t = I, {
       "--custom-emoji-sprite-size": "".concat(24, "px"),
       "--custom-emoji-sprite-row": Math.floor(t / 20),
       "--custom-emoji-sprite-col": t % 20
     }),
     x = i.useCallback(() => {
-      if (!y) v(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
-    }, [y, v, _]),
+      if (!N) v(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
+    }, [N, v, _]),
     O = i.useCallback(() => {
       v(!1)
     }, [v]),
@@ -61,24 +61,24 @@ var h = function(e) {
     "aria-haspopup": "dialog",
     focusProps: C,
     children: null != h ? h() : (0, l.jsx)(r.Spring, {
-      config: m,
+      config: p,
       to: {
-        value: y ? 1 : 0
+        value: N ? 1 : 0
       },
       children: e => {
         let {
           value: t
         } = e;
         return (0, l.jsxs)(r.animated.div, {
-          className: p.spriteContainer,
+          className: m.spriteContainer,
           style: {
-            ...N,
+            ...y,
             transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
           },
           children: [(0, l.jsx)("div", {
-            className: s(p.sprite, p.spriteColored, y ? p.active : p.inactive)
+            className: s(m.sprite, m.spriteColored, N ? m.active : m.inactive)
           }), (0, l.jsx)("div", {
-            className: s(p.sprite, p.spriteGreyscale, y ? p.inactive : p.active)
+            className: s(m.sprite, m.spriteGreyscale, N ? m.inactive : m.active)
           })]
         })
       }

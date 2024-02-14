@@ -25,7 +25,7 @@ var n = t("37983"),
   k = t("810567"),
   v = t("945330"),
   C = t("811199"),
-  S = t("694735");
+  S = t("699412");
 
 function j() {
   let e = (0, a._)(["\n    import {defineColorTokens, themedToken} from '../tools/define';\n\n    const semanticTokenValues = {\n      ", "\n    };\n\n    export const semanticTokens = defineColorTokens(() => semanticTokenValues);\n    export type SemanticTokenValue = typeof semanticTokenValues;\n  "]);

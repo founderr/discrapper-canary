@@ -98,7 +98,7 @@ function L(e, t, n, y) {
     T = (0, m.getDefaultOptions)(),
     S = null !== (C = null !== (H = null == y ? void 0 : y.locale) && void 0 !== H ? H : T.locale) && void 0 !== C ? C : r.default;
   if (!S.match) throw RangeError("locale must contain match property");
-  var Y = (0, c.default)(null !== (F = null !== (I = null !== (N = null !== (R = null == y ? void 0 : y.firstWeekContainsDate) && void 0 !== R ? R : null == y ? void 0 : null === (A = y.locale) || void 0 === A ? void 0 : null === (z = A.options) || void 0 === z ? void 0 : z.firstWeekContainsDate) && void 0 !== N ? N : T.firstWeekContainsDate) && void 0 !== I ? I : null === (W = T.locale) || void 0 === W ? void 0 : null === (B = W.options) || void 0 === B ? void 0 : B.firstWeekContainsDate) && void 0 !== F ? F : 1);
+  var Y = (0, c.default)(null !== (F = null !== (N = null !== (I = null !== (R = null == y ? void 0 : y.firstWeekContainsDate) && void 0 !== R ? R : null == y ? void 0 : null === (A = y.locale) || void 0 === A ? void 0 : null === (z = A.options) || void 0 === z ? void 0 : z.firstWeekContainsDate) && void 0 !== I ? I : T.firstWeekContainsDate) && void 0 !== N ? N : null === (W = T.locale) || void 0 === W ? void 0 : null === (B = W.options) || void 0 === B ? void 0 : B.firstWeekContainsDate) && void 0 !== F ? F : 1);
   if (!(Y >= 1 && Y <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
   var x = (0, c.default)(null !== (U = null !== (K = null !== (V = null !== (J = null == y ? void 0 : y.weekStartsOn) && void 0 !== J ? J : null == y ? void 0 : null === (G = y.locale) || void 0 === G ? void 0 : null === (q = G.options) || void 0 === q ? void 0 : q.weekStartsOn) && void 0 !== V ? V : T.weekStartsOn) && void 0 !== K ? K : null === ($ = T.locale) || void 0 === $ ? void 0 : null === (Q = $.options) || void 0 === Q ? void 0 : Q.weekStartsOn) && void 0 !== U ? U : 0);
   if (!(x >= 0 && x <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
@@ -114,7 +114,7 @@ function L(e, t, n, y) {
       return t in s.default ? (0, s.default[t])(e, S.formatLong) : e
     }).join("").match(g),
     j = [],
-    C, H, F, I, N, R, A, z, W, B, U, K, V, J, G, q, $, Q, Z, X = _(P);
+    C, H, F, N, I, R, A, z, W, B, U, K, V, J, G, q, $, Q, Z, X = _(P);
   try {
     for (X.s(); !(Z = X.n()).done;) {
       var ee = function() {

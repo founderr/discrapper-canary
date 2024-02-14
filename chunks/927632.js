@@ -22,7 +22,7 @@ var s = n("37983"),
   N = n("49111"),
   p = n("406291"),
   S = n("782340"),
-  A = n("532560");
+  A = n("607602");
 let C = {
     tag: "span",
     variant: "text-md/normal",

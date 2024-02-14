@@ -1,117 +1,117 @@
 "use strict";
 n.r(t), n.d(t, {
   ApplicationBenefitsModalIcon: function() {
-    return c
+    return d
   },
   ApplicationBenefitsModalHeading: function() {
-    return d
+    return c
   },
   ApplicationBenefitsModalDivider: function() {
     return f
   },
   ApplicationBenefitsModalDescription: function() {
-    return p
+    return m
   },
   ApplicationBenefitsModalBenefits: function() {
-    return I
+    return p
   },
   ApplicationBenefitsModalContent: function() {
-    return S
+    return h
   }
 });
-var i = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  a = n.n(l),
-  r = n("77078"),
-  s = n("850644"),
-  u = n("899604"),
-  o = n("114067");
-let c = e => {
+var i = n("414456"),
+  a = n.n(i),
+  s = n("77078"),
+  r = n("850644"),
+  o = n("899604"),
+  u = n("622723");
+let d = e => {
     let {
       application: t,
       asset: n,
-      className: l,
+      className: i,
       ...a
     } = e;
-    return (0, i.jsx)(s.default, {
+    return (0, l.jsx)(r.default, {
       application: t,
-      size: s.ApplicationIconSize.MEDIUM,
+      size: r.ApplicationIconSize.MEDIUM,
       asset: n,
-      className: l,
+      className: i,
       ...a
     })
   },
-  d = e => {
+  c = e => {
     let {
       children: t,
       className: n,
-      id: l,
-      ...s
+      id: i,
+      ...r
     } = e;
-    return (0, i.jsx)(r.Heading, {
-      className: a(o.header, n),
+    return (0, l.jsx)(s.Heading, {
+      className: a(u.header, n),
       variant: "heading-xl/extrabold",
-      id: l,
-      ...s,
+      id: i,
+      ...r,
       children: t
     })
   };
 
 function f() {
-  return (0, i.jsx)("hr", {
-    className: o.divider
+  return (0, l.jsx)("hr", {
+    className: u.divider
   })
 }
-let p = e => {
+let m = e => {
     let {
       className: t,
       title: n,
-      description: l,
+      description: i,
       ...a
     } = e;
-    return (0, i.jsxs)("div", {
+    return (0, l.jsxs)("div", {
       className: t,
       ...a,
-      children: [(0, i.jsx)(r.Heading, {
+      children: [(0, l.jsx)(s.Heading, {
         variant: "heading-md/bold",
         color: "header-primary",
         children: n
-      }), (0, i.jsx)(r.Heading, {
+      }), (0, l.jsx)(s.Heading, {
         variant: "heading-sm/normal",
         color: "header-secondary",
-        children: l
+        children: i
       })]
     })
   },
-  I = e => {
+  p = e => {
     let {
       applicationId: t,
       storeListingBenefits: n,
-      skuBenefits: l,
-      className: r,
-      ...s
+      skuBenefits: i,
+      className: s,
+      ...r
     } = e;
-    return (0, i.jsx)("div", {
-      className: a(o.benefitsContainer, r),
-      ...s,
-      children: (0, i.jsx)(u.SubscriptionListingBenefits, {
+    return (0, l.jsx)("div", {
+      className: a(u.benefitsContainer, s),
+      ...r,
+      children: (0, l.jsx)(o.SubscriptionListingBenefits, {
         applicationId: t,
         storeListingBenefits: n,
-        skuBenefits: l,
-        className: o.benefit
+        skuBenefits: i,
+        className: u.benefit
       })
     })
   },
-  S = e => {
+  h = e => {
     let {
       children: t,
       className: n,
-      ...l
+      ...i
     } = e;
-    return (0, i.jsx)("div", {
-      className: a(o.container, n),
-      ...l,
+    return (0, l.jsx)("div", {
+      className: a(u.container, n),
+      ...i,
       children: t
     })
   }

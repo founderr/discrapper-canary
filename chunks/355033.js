@@ -14,7 +14,7 @@ var l = s("265586"),
   u = s("601095"),
   d = s("697218"),
   c = s("853987"),
-  f = s("929392");
+  f = s("284105");
 let p = n.AvatarSizes.SIZE_152,
   h = (0, r.getDecorationSizeForAvatarSize)(p),
   m = t => {

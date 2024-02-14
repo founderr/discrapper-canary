@@ -35,7 +35,7 @@ var a = s("37983"),
   A = s("49111"),
   M = s("447621"),
   D = s("782340"),
-  v = s("409616");
+  v = s("629976");
 let j = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
   G = () => {
     let {

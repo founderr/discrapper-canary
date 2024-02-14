@@ -17,8 +17,8 @@ var l = n("37983"),
   d = n("798609"),
   c = n("716241"),
   f = n("296141"),
-  p = n("986632"),
-  m = n("45961"),
+  m = n("986632"),
+  p = n("45961"),
   h = n("515059"),
   E = n("501536"),
   g = n("124299"),
@@ -28,13 +28,13 @@ var l = n("37983"),
   v = n("972620"),
   I = n("524768"),
   _ = n("389153"),
-  y = n("586450"),
+  N = n("586450"),
   A = n("41884"),
-  N = n("355263"),
+  y = n("355263"),
   x = n("317041"),
   O = n("49111"),
   R = n("782340"),
-  M = n("253184"),
+  M = n("847948"),
   L = n("327769");
 let P = 56,
   b = [8, 8, 0, 8],
@@ -45,7 +45,7 @@ var U = i.forwardRef(function(e, t) {
   let {
     channel: n,
     canOnlyUseTextCommands: a
-  } = e, r = i.useRef(!1), o = i.useRef(0), [U, k] = i.useState(0), w = i.useRef(null), [F, G] = i.useState(!1), B = p.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
+  } = e, r = i.useRef(!1), o = i.useRef(0), [U, k] = i.useState(0), w = i.useRef(null), [F, B] = i.useState(!1), G = m.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
   i.useEffect(() => {
     (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
@@ -56,8 +56,8 @@ var U = i.forwardRef(function(e, t) {
     hasMoreAfter: W,
     commands: Y,
     filteredSectionId: z,
-    scrollDown: J,
-    filterSection: q
+    scrollDown: Z,
+    filterSection: J
   } = T.useDiscovery(n, {
     commandType: d.ApplicationCommandType.CHAT,
     builtIns: a ? v.BuiltInCommandFilter.ONLY_TEXT : v.BuiltInCommandFilter.ALLOW,
@@ -66,15 +66,15 @@ var U = i.forwardRef(function(e, t) {
     placeholderCount: 7,
     limit: x.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
-  }), Z = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
-    activeCategoryIndex: B,
+  }), q = (0, p.useSynchronizedActiveCategoryIndexForScrollPosition)({
+    activeCategoryIndex: G,
     isScrolling: r,
     listRef: w,
     onActiveCategoryIndexChange: e => {
       let t = V[e];
       if (null != t) {
         let e = H.findIndex(e => e.id === t.id);
-        p.ApplicationCommandDiscoveryPickerStore.setActiveCategoryIndex(e)
+        m.ApplicationCommandDiscoveryPickerStore.setActiveCategoryIndex(e)
       }
     },
     scrollOffset: 20,
@@ -83,7 +83,7 @@ var U = i.forwardRef(function(e, t) {
     let t = V.length,
       n = K.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
       l = 48 * t + n * P - 512;
-    W && e + 420 > l && J(), Z(e), j(), o.current = e
+    W && e + 420 > l && Z(), q(e), j(), o.current = e
   };
   i.useEffect(() => {
     X(o.current)
@@ -104,9 +104,9 @@ var U = i.forwardRef(function(e, t) {
   let ee = i.useCallback(e => {
       if (e.id === z || e.id === x.BuiltInSectionId.FRECENCY) {
         var t;
-        q(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
-      } else q(e.id)
-    }, [q, z]),
+        J(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
+      } else J(e.id)
+    }, [J, z]),
     et = i.useCallback((e, t, l) => {
       C.setActiveCommand({
         channelId: n.id,
@@ -135,13 +135,13 @@ var U = i.forwardRef(function(e, t) {
       let t = W ? 7 : 0,
         n = Y.length + t,
         l = null == U ? 0 : U + e;
-      return l >= n ? l = n - 1 : l < 0 && (l = 0), k(l), G(!0), !0
+      return l >= n ? l = n - 1 : l < 0 && (l = 0), k(l), B(!0), !0
     }
   }), [Y.length, K, W, H, et, U]);
   let en = i.useCallback(e => {
       let t = V[e];
       if (null == t) return null;
-      let i = (0, N.getIconComponent)(t),
+      let i = (0, y.getIconComponent)(t),
         a = (0, l.jsx)(i, {
           channel: n,
           section: t,
@@ -193,7 +193,7 @@ var U = i.forwardRef(function(e, t) {
         section: o,
         onClick: () => et(s, o, (0, _.getCommandTriggerSection)(a.section)),
         onHover: () => {
-          k(null), G(!1)
+          k(null), B(!1)
         }
       }, r)
     }, [n, K, et, H, U]),
@@ -205,12 +205,12 @@ var U = i.forwardRef(function(e, t) {
     className: M.outerWrapper,
     innerClassName: M.wrapper,
     onMouseDown: D,
-    children: [(0, l.jsx)(y.default, {
+    children: [(0, l.jsx)(N.default, {
       className: M.rail,
       channel: n,
       sections: H,
       filteredSectionId: z,
-      activeCategoryIndex: B,
+      activeCategoryIndex: G,
       onSectionClick: ee,
       applicationCommandListRef: w
     }), (0, l.jsx)(g.default, {

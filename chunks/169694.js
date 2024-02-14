@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return y
   },
   unsetCommand: function() {
     return x
@@ -17,8 +17,8 @@ var l = n("798609"),
   d = n("343952"),
   c = n("355263"),
   f = n("511104"),
-  p = n("42203"),
-  m = n("305961"),
+  m = n("42203"),
+  p = n("305961"),
   h = n("697218"),
   E = n("640830"),
   g = n("83800"),
@@ -28,15 +28,15 @@ var l = n("798609"),
   v = n("566819"),
   I = n("406291");
 let _ = new Set(["applicationCommandOption"]),
-  y = new Set([l.ApplicationCommandOptionType.ATTACHMENT]),
+  N = new Set([l.ApplicationCommandOptionType.ATTACHMENT]),
   A = new Set(["line", "applicationCommand"]);
 
-function N(e, t, n, d) {
+function y(e, t, n, d) {
   let {
-    insertData: p,
-    isInline: m,
+    insertData: m,
+    isInline: p,
     isVoid: h,
-    onChange: N,
+    onChange: y,
     deleteBackward: b,
     deleteForward: j,
     deleteFragment: U
@@ -50,9 +50,9 @@ function N(e, t, n, d) {
         } = (0, u.extractInteractionDataProps)(e),
         {
           application: f,
-          command: p
+          command: m
         } = s.getCachedCommand(t, d);
-      if (null != p) {
+      if (null != m) {
         var l, r;
         let e = null != f ? {
           type: o.ApplicationCommandSectionType.APPLICATION,
@@ -63,15 +63,15 @@ function N(e, t, n, d) {
         } : null;
         return i.setActiveCommand({
           channelId: t.id,
-          command: p,
+          command: m,
           section: e,
           location: o.ApplicationCommandTriggerLocations.PASTE,
-          initialValues: (0, a.getInitialValuesFromInteractionOptions)(p, null != c ? c : [])
+          initialValues: (0, a.getInitialValuesFromInteractionOptions)(m, null != c ? c : [])
         }), null
       }
     }
-    return p(n)
-  }, e.isInline = e => !!_.has(e.type) || m(e), e.isVoid = e => !!("applicationCommandOption" === e.type && y.has(e.optionType)) || h(e), e.deleteBackward = t => {
+    return m(n)
+  }, e.isInline = e => !!_.has(e.type) || p(e), e.isVoid = e => !!("applicationCommandOption" === e.type && N.has(e.optionType)) || h(e), e.deleteBackward = t => {
     L(e, () => b(t))
   }, e.deleteForward = t => {
     L(e, () => j(t))
@@ -82,15 +82,15 @@ function N(e, t, n, d) {
     k = null,
     w = null,
     F = null,
-    G = null;
+    B = null;
   return e.onChange = () => {
     if (null != t) {
       var a;
       let u = r.default.getState(t.id),
-        p = T.EditorUtils.getFirstText(e),
-        m = (0, c.getCommandQuery)(t, null !== (a = null == p ? void 0 : p.text) && void 0 !== a ? a : ""),
-        h = s.getChangeKeys(t, l.ApplicationCommandType.CHAT, m.text);
-      if (T.EditorUtils.richValue(e) !== D || !T.SelectionUtils.equals(e.selection, k) || u.activeCommand !== w || null == G || h.some((e, t) => G[t] !== e)) {
+        m = T.EditorUtils.getFirstText(e),
+        p = (0, c.getCommandQuery)(t, null !== (a = null == m ? void 0 : m.text) && void 0 !== a ? a : ""),
+        h = s.getChangeKeys(t, l.ApplicationCommandType.CHAT, p.text);
+      if (T.EditorUtils.richValue(e) !== D || !T.SelectionUtils.equals(e.selection, k) || u.activeCommand !== w || null == B || h.some((e, t) => B[t] !== e)) {
         let a = g.HistoryUtils.withMergedEntry(e, () => {
           var a;
           return function(e) {
@@ -101,15 +101,15 @@ function N(e, t, n, d) {
               canUseCommands: r,
               canOnlyUseTextCommands: u,
               commandChanged: d,
-              previousOptionValues: p
+              previousOptionValues: m
             } = e, {
-              command: m,
+              command: p,
               commandText: h
             } = M(t), g = n.activeCommand;
-            if (!r || u && (null == g ? void 0 : g.inputType) !== o.ApplicationCommandInputType.BUILT_IN_TEXT && (null == g ? void 0 : g.inputType) !== o.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return null != m && x(t, a.id, g, !0), null;
-            if (null != m) {
+            if (!r || u && (null == g ? void 0 : g.inputType) !== o.ApplicationCommandInputType.BUILT_IN_TEXT && (null == g ? void 0 : g.inputType) !== o.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return null != p && x(t, a.id, g, !0), null;
+            if (null != p) {
               if (T.EditorUtils.isEditorEmpty(t) || null == g) return x(t, a.id, g, !1), null;
-              let e = "".concat(I.COMMAND_SENTINEL).concat(m.displayName);
+              let e = "".concat(I.COMMAND_SENTINEL).concat(p.displayName);
               if (null == h || !h.startsWith(e) || 0 === E.getOptionNames(t).length && (h.length < e.length + 1 || " " !== h[e.length])) return x(t, a.id, g, !0), null
             } else {
               if (null != g && d) {
@@ -122,21 +122,21 @@ function N(e, t, n, d) {
                     } = n;
                     if (null == d) return null;
                     let c = (null !== (a = null === (l = d.options) || void 0 === l ? void 0 : l.length) && void 0 !== a ? a : 0) > 0 ? E.findTextOptions(e, d) : null,
-                      p = (0, S.toTextValue)(T.EditorUtils.richValue(e), {
+                      m = (0, S.toTextValue)(T.EditorUtils.richValue(e), {
                         mode: "raw",
                         range: {
                           anchor: T.EditorUtils.start(e, []),
                           focus: null !== (s = null == c ? void 0 : null === (i = c[0]) || void 0 === i ? void 0 : i.keyRange.anchor) && void 0 !== s ? s : T.EditorUtils.end(e, [])
                         }
                       }),
-                      m = "",
-                      h = p.toLocaleLowerCase(),
+                      p = "",
+                      h = m.toLocaleLowerCase(),
                       g = f.PREFIX_COMMAND_REGEX.exec(h);
                     null != g && (h = I.COMMAND_SENTINEL + h.substring(g.length));
                     let _ = "".concat(I.COMMAND_SENTINEL).concat(d.displayName).toLocaleLowerCase(),
                       A = "".concat(I.COMMAND_SENTINEL).concat(d.name).toLocaleLowerCase();
-                    h.startsWith(_) && h.length > _.length ? m = p.substring(_.length).trim() : h.startsWith(A) && h.length > A.length && (m = p.substring(A.length).trim());
-                    let N = [],
+                    h.startsWith(_) && h.length > _.length ? p = m.substring(_.length).trim() : h.startsWith(A) && h.length > A.length && (p = m.substring(A.length).trim());
+                    let y = [],
                       x = null,
                       R = null;
                     if (null != d.options) {
@@ -154,12 +154,12 @@ function N(e, t, n, d) {
                                 text: i
                               }]
                             };
-                          N.push(a), 0 === l.text.length && null == x && (x = a)
+                          y.push(a), 0 === l.text.length && null == x && (x = a)
                         }
                       for (let l of d.options)
                         if (!e.has(l.name) && (l.required || null != u[l.name])) {
                           let e, i;
-                          m.length > 0 && !y.has(l.type) ? (e = m, m = "") : e = null != (i = P(n, t, l.name)) ? i : "";
+                          p.length > 0 && !N.has(l.type) ? (e = p, p = "") : e = null != (i = P(n, t, l.name)) ? i : "";
                           let a = {
                             type: "applicationCommandOption",
                             optionName: l.name,
@@ -169,15 +169,15 @@ function N(e, t, n, d) {
                               text: e
                             }]
                           };
-                          N.push(a), 0 === e.length && null == x && (x = a), null == i && (R = a)
+                          y.push(a), 0 === e.length && null == x && (x = a), null == i && (R = a)
                         }
                     }
-                    o = m.length > 0 ? "".concat(I.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(I.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(I.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
+                    o = p.length > 0 ? "".concat(I.COMMAND_SENTINEL).concat(d.displayName, " ").concat(p.replace(/\r|\n/g, " ")) : 0 === y.length ? "".concat(I.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(I.COMMAND_SENTINEL).concat(d.displayName), y.unshift({
                       text: o
                     });
                     let M = {
                       type: "applicationCommand",
-                      children: N,
+                      children: y,
                       command: {
                         id: d.id,
                         name: d.name,
@@ -251,7 +251,7 @@ function N(e, t, n, d) {
                 }), null
               }
             }
-            if (null != g && null != m) {
+            if (null != g && null != p) {
               var _;
               ! function(e, t) {
                 if (null == t.options || 0 === t.options.length) return !1;
@@ -299,11 +299,11 @@ function N(e, t, n, d) {
                 command: g,
                 activeOption: l,
                 currentOptionValues: e,
-                previousOptionValues: p,
+                previousOptionValues: m,
                 validateAll: !1,
                 allowEmpty: !1
               }), {
-                commandId: m.id,
+                commandId: p.id,
                 optionValues: e
               }
             }
@@ -322,10 +322,10 @@ function N(e, t, n, d) {
           let t = g.HistoryUtils.currentEntry(e);
           null != t && (t.commandId = a.commandId), F = a.optionValues
         } else F = null;
-        D = T.EditorUtils.richValue(e), k = e.selection, w = u.activeCommand, G = h
+        D = T.EditorUtils.richValue(e), k = e.selection, w = u.activeCommand, B = h
       }
     }
-    N()
+    y()
   }, e
 }
 
@@ -352,7 +352,7 @@ function x(e, t, n, l) {
 }
 
 function O(e, t) {
-  if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || y.has(t.options[0].type) || E.getOptionNames(e).length > 0) return !1;
+  if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || N.has(t.options[0].type) || E.getOptionNames(e).length > 0) return !1;
   let n = E.getCommandBlock(e);
   if (null == n) return !1;
   let l = T.EditorUtils.getFirstText(e);
@@ -393,12 +393,12 @@ function R(e) {
   } = e;
   if (null == l.options) return !1;
   let f = u ? null : r.default.getActiveOptionName(n),
-    p = {},
-    m = r.default.getOptionStates(n),
+    m = {},
+    p = r.default.getOptionStates(n),
     h = !1;
   for (let e of l.options) {
     var E, g, S;
-    let l = m[e.name],
+    let l = p[e.name],
       i = u || e.name === f && f !== a || (null == l ? void 0 : null === (E = l.lastValidationResult) || void 0 === E ? void 0 : E.success) === !1 && (null == s ? void 0 : s[e.name]) !== (null == o ? void 0 : o[e.name]),
       r = {
         hasValue: null != s && e.name in s,
@@ -411,9 +411,9 @@ function R(e) {
           allowEmptyValues: c
         }) : null == l ? void 0 : l.lastValidationResult
       };
-    (null == l || l.hasValue !== r.hasValue || l.isActive !== r.isActive || i && (null === (g = l.lastValidationResult) || void 0 === g ? void 0 : g.success) === !1) && (p[e.name] = r, h = !0)
+    (null == l || l.hasValue !== r.hasValue || l.isActive !== r.isActive || i && (null === (g = l.lastValidationResult) || void 0 === g ? void 0 : g.success) === !1) && (m[e.name] = r, h = !0)
   }
-  h && i.updateOptionStates(n, p)
+  h && i.updateOptionStates(n, m)
 }
 
 function M(e) {
@@ -454,5 +454,5 @@ function P(e, t, n) {
   if (null == u || null == d) return null;
   if (null != u.choices) return null === (o = u.choices.find(e => e.value === d.value)) || void 0 === o ? void 0 : o.displayName;
   let c = null === (s = d.value) || void 0 === s ? void 0 : s.toString();
-  return u.type === l.ApplicationCommandOptionType.CHANNEL || u.type === l.ApplicationCommandOptionType.MENTIONABLE && null != p.default.getChannel(c) ? "<#".concat(c, ">	") : u.type === l.ApplicationCommandOptionType.USER || u.type === l.ApplicationCommandOptionType.MENTIONABLE && null != h.default.getUser(c) ? "<@".concat(c, ">") : u.type === l.ApplicationCommandOptionType.ROLE || u.type === l.ApplicationCommandOptionType.MENTIONABLE && (null === (r = m.default.getGuild(t.guild_id)) || void 0 === r ? void 0 : r.getRole(null != c ? c : "")) != null ? "<@&".concat(c, ">") : c
+  return u.type === l.ApplicationCommandOptionType.CHANNEL || u.type === l.ApplicationCommandOptionType.MENTIONABLE && null != m.default.getChannel(c) ? "<#".concat(c, ">	") : u.type === l.ApplicationCommandOptionType.USER || u.type === l.ApplicationCommandOptionType.MENTIONABLE && null != h.default.getUser(c) ? "<@".concat(c, ">") : u.type === l.ApplicationCommandOptionType.ROLE || u.type === l.ApplicationCommandOptionType.MENTIONABLE && (null === (r = p.default.getGuild(t.guild_id)) || void 0 === r ? void 0 : r.getRole(null != c ? c : "")) != null ? "<@&".concat(c, ">") : c
 }

@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return A
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("917351"),
   i = n.n(s),
   r = n("446674"),
@@ -31,13 +31,13 @@ var a = n("37983"),
 function A(e) {
   let {
     channel: t
-  } = e, [n, s] = l.useState(!1);
+  } = e, [n, s] = a.useState(!1);
 
   function i() {
     s(e => !e)
   }
   let r = N.default.Messages.MORE;
-  return (0, a.jsx)(o.Popout, {
+  return (0, l.jsx)(o.Popout, {
     shouldShow: n,
     animation: o.Popout.Animation.NONE,
     position: "bottom",
@@ -45,7 +45,7 @@ function A(e) {
     autoInvert: !1,
     onRequestClose: () => s(!1),
     renderPopout: function(e) {
-      return (0, a.jsx)(M, {
+      return (0, l.jsx)(M, {
         ...e,
         channel: t
       })
@@ -54,7 +54,7 @@ function A(e) {
       let {
         isShown: n
       } = t;
-      return (0, a.jsx)(v.default.Icon, {
+      return (0, l.jsx)(v.default.Icon, {
         ...e,
         onClick: i,
         tooltip: n ? null : r,
@@ -70,29 +70,29 @@ function M(e) {
   let {
     channel: t,
     closePopout: n,
-    onSelect: l
+    onSelect: a
   } = e, s = (0, u.default)(t), T = (0, m.default)(t), v = (0, S.default)(t.id), A = (0, E.default)(t), M = (0, C.default)({
     id: t.id,
     label: N.default.Messages.COPY_ID_THREAD
   }), R = (0, d.default)(t), j = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), O = (0, p.default)(t), y = (0, h.default)(t), P = (0, g.default)(t), b = _.UseThreadSidebar.useSetting(), D = (0, r.useStateFromStores)([I.default], () => !i.isEmpty(I.default.getVoiceStatesForChannel(t.id)));
-  return (0, a.jsxs)(o.Menu, {
+  return (0, l.jsxs)(o.Menu, {
     navId: "thread-context",
     onClose: n,
     "aria-label": N.default.Messages.THREAD_ACTIONS_MENU_LABEL,
-    onSelect: l,
-    children: [(0, a.jsxs)(o.MenuGroup, {
+    onSelect: a,
+    children: [(0, l.jsxs)(o.MenuGroup, {
       children: [L, y]
-    }), (0, a.jsxs)(o.MenuGroup, {
-      children: [A, O, v, b && !D ? (0, a.jsx)(o.MenuItem, {
+    }), (0, l.jsxs)(o.MenuGroup, {
+      children: [A, O, v, b && !D ? (0, l.jsx)(o.MenuItem, {
         id: "open",
         label: N.default.Messages.OPEN_IN_SPLIT_VIEW,
         action: function() {
           (0, x.openThreadSidebarForViewing)(t)
         }
       }) : null]
-    }), (0, a.jsxs)(o.MenuGroup, {
+    }), (0, l.jsxs)(o.MenuGroup, {
       children: [P, s, T, j]
-    }), (0, a.jsxs)(o.MenuGroup, {
+    }), (0, l.jsxs)(o.MenuGroup, {
       children: [R, M]
     })]
   })

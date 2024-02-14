@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("244201"),
   c = n("206230"),
   f = n("427953"),
-  p = n("550766"),
-  m = n("292655"),
+  m = n("550766"),
+  p = n("292655"),
   h = n("478272"),
   E = n("685665"),
   g = n("384997"),
@@ -25,7 +25,7 @@ var l = n("37983"),
   v = n("994428"),
   I = n("13030"),
   _ = n("782340"),
-  y = n("851855");
+  N = n("868387");
 
 function A(e) {
   let {
@@ -34,9 +34,9 @@ function A(e) {
     markAsDismissed: a,
     visibleContent: g,
     innerRef: A
-  } = e, N = (0, d.useAppContext)(), {
+  } = e, y = (0, d.useAppContext)(), {
     analyticsLocations: x
-  } = (0, E.default)(), O = N === T.AppContext.POPOUT, R = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), L = i.useCallback(() => {
+  } = (0, E.default)(), O = y === T.AppContext.POPOUT, R = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), L = i.useCallback(() => {
     a(v.ContentDismissActionType.UNKNOWN), (0, h.default)({
       channel: M ? n : void 0,
       guildId: n.guild_id,
@@ -49,19 +49,19 @@ function A(e) {
       openInPopout: O,
       enableSelectedTextChannelInvite: !0,
       analyticsLocations: x
-    }), (0, p.fetchShelf)({
+    }), (0, m.fetchShelf)({
       guildId: n.guild_id
     })
   }, [x, n, M, a, O]), P = () => {
     if (g === o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, l.jsxs)("div", {
-      className: y.sparkleContainer,
+      className: N.sparkleContainer,
       children: [(0, l.jsx)(C.default, {
-        className: s(y.sparkleStar, {
-          [y.noAnimation]: R
+        className: s(N.sparkleStar, {
+          [N.noAnimation]: R
         })
       }), (0, l.jsx)(S.default, {
-        className: s(y.sparklePlus, {
-          [y.noAnimation]: R
+        className: s(N.sparklePlus, {
+          [N.noAnimation]: R
         })
       })]
     });
@@ -71,9 +71,9 @@ function A(e) {
     text: _.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
     children: e => (0, l.jsxs)("div", {
       ...e,
-      className: s(I.CHAT_INPUT_BUTTON_CLASSNAME, y.buttonContainer),
+      className: s(I.CHAT_INPUT_BUTTON_CLASSNAME, N.buttonContainer),
       ref: A,
-      children: [(0, l.jsx)(m.default, {
+      children: [(0, l.jsx)(p.default, {
         onClick: L,
         tabIndex: 0,
         focusProps: {
@@ -88,10 +88,10 @@ function A(e) {
     })
   })
 }
-let N = [o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
+let y = [o.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
 var x = i.memo(i.forwardRef(function(e, t) {
   return (0, l.jsx)(g.default, {
-    contentTypes: N,
+    contentTypes: y,
     children: n => {
       let {
         visibleContent: i,

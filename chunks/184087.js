@@ -13,14 +13,14 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("70102");
 
-function o(e, t) {
+function a(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
   }
 }
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -34,15 +34,15 @@ var i = function() {
   function i(e, t, n) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, i), a(this, "spec", void 0), a(this, "monitor", void 0), a(this, "connector", void 0), this.spec = e, this.monitor = t, this.connector = n
+    }(this, i), o(this, "spec", void 0), o(this, "monitor", void 0), o(this, "connector", void 0), this.spec = e, this.monitor = t, this.connector = n
   }
   return e = i, t = [{
     key: "beginDrag",
     value: function() {
       var e, t = this.spec,
         n = this.monitor,
-        o = null;
-      return null !== (e = o = "object" === r(t.item) ? t.item : "function" == typeof t.item ? t.item(n) : {}) && void 0 !== e ? e : null
+        a = null;
+      return null !== (e = a = "object" === r(t.item) ? t.item : "function" == typeof t.item ? t.item(n) : {}) && void 0 !== e ? e : null
     }
   }, {
     key: "canDrag",
@@ -56,8 +56,8 @@ var i = function() {
     value: function(e, t) {
       var n = this.spec,
         r = this.monitor,
-        o = n.isDragging;
-      return o ? o(r) : t === e.getSourceId()
+        a = n.isDragging;
+      return a ? a(r) : t === e.getSourceId()
     }
   }, {
     key: "endDrag",
@@ -68,5 +68,5 @@ var i = function() {
         r = e.end;
       r && r(t.getItem(), t), n.reconnect()
     }
-  }], o(e.prototype, t), n && o(e, n), i
+  }], a(e.prototype, t), n && a(e, n), i
 }()

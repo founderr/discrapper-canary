@@ -10,43 +10,43 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("426383"),
   r = n("77078"),
-  o = n("558595");
+  o = n("499559");
 let u = 16;
 
 function d(e) {
   let {
     description: t,
     name: n,
-    icon: l,
+    icon: a,
     onNavigate: d,
     className: c,
     missingNavIcon: f
   } = e;
-  return (0, a.jsxs)(r.Clickable, {
+  return (0, l.jsxs)(r.Clickable, {
     onClick: d,
     className: s(o.modInfoItem, null != d && o.modInfoAction, c),
-    children: [null != l && (0, a.jsx)("div", {
+    children: [null != a && (0, l.jsx)("div", {
       className: s(o.modInfoItemIcon),
-      children: l
-    }), null != n && (0, a.jsx)("div", {
+      children: a
+    }), null != n && (0, l.jsx)("div", {
       className: s(o.modInfoItemName),
       children: n
-    }), (0, a.jsx)("div", {
+    }), (0, l.jsx)("div", {
       className: s(o.modInfoItemDescription),
       children: t
-    }), null != d && (0, a.jsx)("div", {
+    }), null != d && (0, l.jsx)("div", {
       className: s(o.modInfoItemActionIcon),
-      children: (0, a.jsx)(i.ChevronLargeRightIcon, {
+      children: (0, l.jsx)(i.ChevronLargeRightIcon, {
         width: u,
         height: u
       })
-    }), null == d && null != f && (0, a.jsx)("div", {
+    }), null == d && null != f && (0, l.jsx)("div", {
       className: s(o.modInfoItemActionIcon),
       children: f
     })]
@@ -57,7 +57,7 @@ function c(e) {
   let {
     children: t
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: s(o.modInfoItemContainer),
     children: t
   })

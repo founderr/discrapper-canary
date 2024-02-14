@@ -1,9 +1,9 @@
-var r, o = n("390493");
-n("843762"), n("781738"), n("70102"), n("424973"), t = e.exports = f, r = "object" == typeof o && o.env && o.env.NODE_DEBUG && /\bsemver\b/i.test(o.env.NODE_DEBUG) ? function() {
+var r, a = n("390493");
+n("843762"), n("781738"), n("70102"), n("424973"), t = e.exports = f, r = "object" == typeof a && a.env && a.env.NODE_DEBUG && /\bsemver\b/i.test(a.env.NODE_DEBUG) ? function() {
   var e = Array.prototype.slice.call(arguments, 0);
   e.unshift("SEMVER"), console.log.apply(console, e)
 } : function() {}, t.SEMVER_SPEC_VERSION = "2.0.0";
-var a = Number.MAX_SAFE_INTEGER || 9007199254740991,
+var o = Number.MAX_SAFE_INTEGER || 9007199254740991,
   i = t.re = [],
   s = t.src = [],
   c = t.tokens = {},
@@ -52,13 +52,13 @@ function f(e, t) {
   r("SemVer", e, t), this.options = t, this.loose = !!t.loose;
   var n = e.trim().match(t.loose ? i[c.LOOSE] : i[c.FULL]);
   if (!n) throw TypeError("Invalid Version: " + e);
-  if (this.raw = e, this.major = +n[1], this.minor = +n[2], this.patch = +n[3], this.major > a || this.major < 0) throw TypeError("Invalid major version");
-  if (this.minor > a || this.minor < 0) throw TypeError("Invalid minor version");
-  if (this.patch > a || this.patch < 0) throw TypeError("Invalid patch version");
+  if (this.raw = e, this.major = +n[1], this.minor = +n[2], this.patch = +n[3], this.major > o || this.major < 0) throw TypeError("Invalid major version");
+  if (this.minor > o || this.minor < 0) throw TypeError("Invalid minor version");
+  if (this.patch > o || this.patch < 0) throw TypeError("Invalid patch version");
   n[4] ? this.prerelease = n[4].split(".").map(function(e) {
     if (/^[0-9]+$/.test(e)) {
       var t = +e;
-      if (t >= 0 && t < a) return t
+      if (t >= 0 && t < o) return t
     }
     return e
   }) : this.prerelease = [], this.build = n[5] ? n[5].split(".") : [], this.format()
@@ -78,24 +78,24 @@ t.SemVer = f, f.prototype.format = function() {
   var t = 0;
   do {
     var n = this.prerelease[t],
-      o = e.prerelease[t];
-    if (r("prerelease compare", t, n, o), void 0 === n && void 0 === o) return 0;
-    if (void 0 === o) return 1;
+      a = e.prerelease[t];
+    if (r("prerelease compare", t, n, a), void 0 === n && void 0 === a) return 0;
+    if (void 0 === a) return 1;
     else if (void 0 === n) return -1;
-    else if (n === o) continue;
-    else return m(n, o)
+    else if (n === a) continue;
+    else return m(n, a)
   } while (++t)
 }, f.prototype.compareBuild = function(e) {
   !(e instanceof f) && (e = new f(e, this.options));
   var t = 0;
   do {
     var n = this.build[t],
-      o = e.build[t];
-    if (r("prerelease compare", t, n, o), void 0 === n && void 0 === o) return 0;
-    if (void 0 === o) return 1;
+      a = e.build[t];
+    if (r("prerelease compare", t, n, a), void 0 === n && void 0 === a) return 0;
+    if (void 0 === a) return 1;
     else if (void 0 === n) return -1;
-    else if (n === o) continue;
-    else return m(n, o)
+    else if (n === a) continue;
+    else return m(n, a)
   } while (++t)
 }, f.prototype.inc = function(e, t) {
   switch (e) {
@@ -143,14 +143,14 @@ t.diff = function(e, t) {
   if (b(e, t)) return null;
   var n = p(e),
     r = p(t),
-    o = "";
+    a = "";
   if (n.prerelease.length || r.prerelease.length) {
-    o = "pre";
-    var a = "prerelease"
+    a = "pre";
+    var o = "prerelease"
   }
   for (var i in n)
-    if (("major" === i || "minor" === i || "patch" === i) && n[i] !== r[i]) return o + i;
-  return a
+    if (("major" === i || "minor" === i || "patch" === i) && n[i] !== r[i]) return a + i;
+  return o
 };
 t.compareIdentifiers = m;
 var h = /^[0-9]+$/;
@@ -181,8 +181,8 @@ t.compare = v, t.compareLoose = function(e, t) {
 };
 t.compareBuild = function(e, t, n) {
   var r = new f(e, n),
-    o = new f(t, n);
-  return r.compare(o) || r.compareBuild(o)
+    a = new f(t, n);
+  return r.compare(a) || r.compareBuild(a)
 };
 t.rcompare = function(e, t, n) {
   return v(t, e, n)
@@ -277,9 +277,9 @@ function Range(e, t) {
 }
 
 function P(e, t) {
-  for (var n = !0, r = e.slice(), o = r.pop(); n && r.length;) n = r.every(function(e) {
-    return o.intersects(e, t)
-  }), o = r.pop();
+  for (var n = !0, r = e.slice(), a = r.pop(); n && r.length;) n = r.every(function(e) {
+    return a.intersects(e, t)
+  }), a = r.pop();
   return n
 }
 C.prototype.parse = function(e) {
@@ -305,12 +305,12 @@ C.prototype.parse = function(e) {
     }), "" === this.operator) return "" === this.value || (n = new Range(e.value, t), M(this.value, n, t));
   if ("" === e.operator) return "" === e.value || (n = new Range(this.value, t), M(e.semver, n, t));
   var n, r = (">=" === this.operator || ">" === this.operator) && (">=" === e.operator || ">" === e.operator),
-    o = ("<=" === this.operator || "<" === this.operator) && ("<=" === e.operator || "<" === e.operator),
-    a = this.semver.version === e.semver.version,
+    a = ("<=" === this.operator || "<" === this.operator) && ("<=" === e.operator || "<" === e.operator),
+    o = this.semver.version === e.semver.version,
     i = (">=" === this.operator || "<=" === this.operator) && (">=" === e.operator || "<=" === e.operator),
     s = D(this.semver, "<", e.semver, t) && (">=" === this.operator || ">" === this.operator) && ("<=" === e.operator || "<" === e.operator),
     c = D(this.semver, ">", e.semver, t) && ("<=" === this.operator || "<" === this.operator) && (">=" === e.operator || ">" === e.operator);
-  return r || o || a && i || s || c
+  return r || a || o && i || s || c
 }, t.Range = Range, Range.prototype.format = function() {
   return this.range = this.set.map(function(e) {
     return e.join(" ").trim()
@@ -322,17 +322,17 @@ C.prototype.parse = function(e) {
   e = e.trim();
   var n = t ? i[c.HYPHENRANGELOOSE] : i[c.HYPHENRANGE];
   e = e.replace(n, T), r("hyphen replace", e), e = e.replace(i[c.COMPARATORTRIM], "$1$2$3"), r("comparator trim", e, i[c.COMPARATORTRIM]), e = (e = (e = e.replace(i[c.TILDETRIM], "$1~")).replace(i[c.CARETTRIM], "$1^")).split(/\s+/).join(" ");
-  var o = t ? i[c.COMPARATORLOOSE] : i[c.COMPARATOR],
-    a = e.split(" ").map(function(e) {
+  var a = t ? i[c.COMPARATORLOOSE] : i[c.COMPARATOR],
+    o = e.split(" ").map(function(e) {
       return function(e, t) {
         return r("comp", e, t), e = function(e, t) {
           return e.trim().split(/\s+/).map(function(e) {
             return function(e, t) {
               r("caret", e, t);
               var n = t.loose ? i[c.CARETLOOSE] : i[c.CARET];
-              return e.replace(n, function(t, n, o, a, i) {
+              return e.replace(n, function(t, n, a, o, i) {
                 var s;
-                return r("caret", e, t, n, o, a, i), E(n) ? s = "" : E(o) ? s = ">=" + n + ".0.0 <" + (+n + 1) + ".0.0" : E(a) ? s = "0" === n ? ">=" + n + "." + o + ".0 <" + n + "." + (+o + 1) + ".0" : ">=" + n + "." + o + ".0 <" + (+n + 1) + ".0.0" : i ? (r("replaceCaret pr", i), s = "0" === n ? "0" === o ? ">=" + n + "." + o + "." + a + "-" + i + " <" + n + "." + o + "." + (+a + 1) : ">=" + n + "." + o + "." + a + "-" + i + " <" + n + "." + (+o + 1) + ".0" : ">=" + n + "." + o + "." + a + "-" + i + " <" + (+n + 1) + ".0.0") : (r("no pr"), s = "0" === n ? "0" === o ? ">=" + n + "." + o + "." + a + " <" + n + "." + o + "." + (+a + 1) : ">=" + n + "." + o + "." + a + " <" + n + "." + (+o + 1) + ".0" : ">=" + n + "." + o + "." + a + " <" + (+n + 1) + ".0.0"), r("caret return", s), s
+                return r("caret", e, t, n, a, o, i), E(n) ? s = "" : E(a) ? s = ">=" + n + ".0.0 <" + (+n + 1) + ".0.0" : E(o) ? s = "0" === n ? ">=" + n + "." + a + ".0 <" + n + "." + (+a + 1) + ".0" : ">=" + n + "." + a + ".0 <" + (+n + 1) + ".0.0" : i ? (r("replaceCaret pr", i), s = "0" === n ? "0" === a ? ">=" + n + "." + a + "." + o + "-" + i + " <" + n + "." + a + "." + (+o + 1) : ">=" + n + "." + a + "." + o + "-" + i + " <" + n + "." + (+a + 1) + ".0" : ">=" + n + "." + a + "." + o + "-" + i + " <" + (+n + 1) + ".0.0") : (r("no pr"), s = "0" === n ? "0" === a ? ">=" + n + "." + a + "." + o + " <" + n + "." + a + "." + (+o + 1) : ">=" + n + "." + a + "." + o + " <" + n + "." + (+a + 1) + ".0" : ">=" + n + "." + a + "." + o + " <" + (+n + 1) + ".0.0"), r("caret return", s), s
               })
             }(e, t)
           }).join(" ")
@@ -340,9 +340,9 @@ C.prototype.parse = function(e) {
           return e.trim().split(/\s+/).map(function(e) {
             return function(e, t) {
               var n = t.loose ? i[c.TILDELOOSE] : i[c.TILDE];
-              return e.replace(n, function(t, n, o, a, i) {
+              return e.replace(n, function(t, n, a, o, i) {
                 var s;
-                return r("tilde", e, t, n, o, a, i), E(n) ? s = "" : E(o) ? s = ">=" + n + ".0.0 <" + (+n + 1) + ".0.0" : E(a) ? s = ">=" + n + "." + o + ".0 <" + n + "." + (+o + 1) + ".0" : i ? (r("replaceTilde pr", i), s = ">=" + n + "." + o + "." + a + "-" + i + " <" + n + "." + (+o + 1) + ".0") : s = ">=" + n + "." + o + "." + a + " <" + n + "." + (+o + 1) + ".0", r("tilde return", s), s
+                return r("tilde", e, t, n, a, o, i), E(n) ? s = "" : E(a) ? s = ">=" + n + ".0.0 <" + (+n + 1) + ".0.0" : E(o) ? s = ">=" + n + "." + a + ".0 <" + n + "." + (+a + 1) + ".0" : i ? (r("replaceTilde pr", i), s = ">=" + n + "." + a + "." + o + "-" + i + " <" + n + "." + (+a + 1) + ".0") : s = ">=" + n + "." + a + "." + o + " <" + n + "." + (+a + 1) + ".0", r("tilde return", s), s
               })
             }(e, t)
           }).join(" ")
@@ -351,12 +351,12 @@ C.prototype.parse = function(e) {
             return function(e, t) {
               e = e.trim();
               var n = t.loose ? i[c.XRANGELOOSE] : i[c.XRANGE];
-              return e.replace(n, function(n, o, a, i, s, c) {
-                r("xRange", e, n, o, a, i, s, c);
-                var l = E(a),
+              return e.replace(n, function(n, a, o, i, s, c) {
+                r("xRange", e, n, a, o, i, s, c);
+                var l = E(o),
                   u = l || E(i),
                   d = u || E(s);
-                return "=" === o && d && (o = ""), c = t.includePrerelease ? "-0" : "", l ? n = ">" === o || "<" === o ? "<0.0.0-0" : "*" : o && d ? (u && (i = 0), s = 0, ">" === o ? (o = ">=", u ? (a = +a + 1, i = 0) : i = +i + 1, s = 0) : "<=" === o && (o = "<", u ? a = +a + 1 : i = +i + 1), n = o + a + "." + i + "." + s + c) : u ? n = ">=" + a + ".0.0" + c + " <" + (+a + 1) + ".0.0" + c : d && (n = ">=" + a + "." + i + ".0" + c + " <" + a + "." + (+i + 1) + ".0" + c), r("xRange return", n), n
+                return "=" === a && d && (a = ""), c = t.includePrerelease ? "-0" : "", l ? n = ">" === a || "<" === a ? "<0.0.0-0" : "*" : a && d ? (u && (i = 0), s = 0, ">" === a ? (a = ">=", u ? (o = +o + 1, i = 0) : i = +i + 1, s = 0) : "<=" === a && (a = "<", u ? o = +o + 1 : i = +i + 1), n = a + o + "." + i + "." + s + c) : u ? n = ">=" + o + ".0.0" + c + " <" + (+o + 1) + ".0.0" + c : d && (n = ">=" + o + "." + i + ".0" + c + " <" + o + "." + (+i + 1) + ".0" + c), r("xRange return", n), n
               })
             }(e, t)
           }).join(" ")
@@ -365,9 +365,9 @@ C.prototype.parse = function(e) {
         }(e, t), r("stars", e), e
       }(e, this.options)
     }, this).join(" ").split(/\s+/);
-  return this.options.loose && (a = a.filter(function(e) {
-    return !!e.match(o)
-  })), a = a.map(function(e) {
+  return this.options.loose && (o = o.filter(function(e) {
+    return !!e.match(a)
+  })), o = o.map(function(e) {
     return new C(e, this.options)
   }, this)
 }, Range.prototype.intersects = function(e, t) {
@@ -393,8 +393,8 @@ function E(e) {
   return !e || "x" === e.toLowerCase() || "*" === e
 }
 
-function T(e, t, n, r, o, a, i, s, c, l, u, d, p) {
-  return t = E(n) ? "" : E(r) ? ">=" + n + ".0.0" : E(o) ? ">=" + n + "." + r + ".0" : ">=" + t, (t + " " + (s = E(c) ? "" : E(l) ? "<" + (+c + 1) + ".0.0" : E(u) ? "<" + c + "." + (+l + 1) + ".0" : d ? "<=" + c + "." + l + "." + u + "-" + d : "<=" + s)).trim()
+function T(e, t, n, r, a, o, i, s, c, l, u, d, p) {
+  return t = E(n) ? "" : E(r) ? ">=" + n + ".0.0" : E(a) ? ">=" + n + "." + r + ".0" : ">=" + t, (t + " " + (s = E(c) ? "" : E(l) ? "<" + (+c + 1) + ".0.0" : E(u) ? "<" + c + "." + (+l + 1) + ".0" : d ? "<=" + c + "." + l + "." + u + "-" + d : "<=" + s)).trim()
 }
 Range.prototype.test = function(e) {
   if (!e) return !1;
@@ -405,13 +405,13 @@ Range.prototype.test = function(e) {
   }
   for (var t = 0; t < this.set.length; t++)
     if (function(e, t, n) {
-        for (var o = 0; o < e.length; o++)
-          if (!e[o].test(t)) return !1;
+        for (var a = 0; a < e.length; a++)
+          if (!e[a].test(t)) return !1;
         if (t.prerelease.length && !n.includePrerelease) {
-          for (o = 0; o < e.length; o++)
-            if (r(e[o].semver), e[o].semver !== k && e[o].semver.prerelease.length > 0) {
-              var a = e[o].semver;
-              if (a.major === t.major && a.minor === t.minor && a.patch === t.patch) return !0
+          for (a = 0; a < e.length; a++)
+            if (r(e[a].semver), e[a].semver !== k && e[a].semver.prerelease.length > 0) {
+              var o = e[a].semver;
+              if (o.major === t.major && o.minor === t.minor && o.patch === t.patch) return !0
             } return !1
         }
         return !0
@@ -429,26 +429,26 @@ function M(e, t, n) {
 }
 t.satisfies = M, t.maxSatisfying = function(e, t, n) {
   var r = null,
-    o = null;
+    a = null;
   try {
-    var a = new Range(t, n)
+    var o = new Range(t, n)
   } catch (e) {
     return null
   }
   return e.forEach(function(e) {
-    a.test(e) && (!r || -1 === o.compare(e)) && (o = new f(r = e, n))
+    o.test(e) && (!r || -1 === a.compare(e)) && (a = new f(r = e, n))
   }), r
 };
 t.minSatisfying = function(e, t, n) {
   var r = null,
-    o = null;
+    a = null;
   try {
-    var a = new Range(t, n)
+    var o = new Range(t, n)
   } catch (e) {
     return null
   }
   return e.forEach(function(e) {
-    a.test(e) && (!r || 1 === o.compare(e)) && (o = new f(r = e, n))
+    o.test(e) && (!r || 1 === a.compare(e)) && (a = new f(r = e, n))
   }), r
 };
 t.minVersion = function(e, t) {
@@ -492,23 +492,23 @@ t.gtr = function(e, t, n) {
 function R(e, t, n, r) {
   switch (e = new f(e, r), t = new Range(t, r), n) {
     case ">":
-      o = g, a = w, i = y, s = ">", c = ">=";
+      a = g, o = w, i = y, s = ">", c = ">=";
       break;
     case "<":
-      o = y, a = S, i = g, s = "<", c = "<=";
+      a = y, o = S, i = g, s = "<", c = "<=";
       break;
     default:
       throw TypeError('Must provide a hilo val of "<" or ">"')
   }
   if (M(e, t, r)) return !1;
-  for (var o, a, i, s, c, l = 0; l < t.set.length; ++l) {
+  for (var a, o, i, s, c, l = 0; l < t.set.length; ++l) {
     var u = t.set[l],
       d = null,
       p = null;
     if (u.forEach(function(e) {
-        e.semver === k && (e = new C(">=0.0.0")), d = d || e, p = p || e, o(e.semver, d.semver, r) ? d = e : i(e.semver, p.semver, r) && (p = e)
+        e.semver === k && (e = new C(">=0.0.0")), d = d || e, p = p || e, a(e.semver, d.semver, r) ? d = e : i(e.semver, p.semver, r) && (p = e)
       }), d.operator === s || d.operator === c) return !1;
-    if ((!p.operator || p.operator === s) && a(e, p.semver)) return !1;
+    if ((!p.operator || p.operator === s) && o(e, p.semver)) return !1;
     if (p.operator === c && i(e, p.semver)) return !1
   }
   return !0

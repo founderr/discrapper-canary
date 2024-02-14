@@ -14,12 +14,12 @@ var l = n("37983"),
   d = n("986632"),
   c = n("405607"),
   f = n("423080"),
-  p = n("93393"),
-  m = n("153769"),
+  m = n("93393"),
+  p = n("153769"),
   h = n("671434"),
   E = n("389480"),
   g = n("782340"),
-  S = n("510585");
+  S = n("108886");
 let C = [8, 8, 8, 8];
 
 function T(e) {
@@ -87,7 +87,7 @@ function v(e, t, n, i) {
         case E.SoundboardSoundGridSectionType.RECENTLY_HEARD:
           return (0, l.jsx)(T, {
             ...i,
-            icon: p.default,
+            icon: m.default,
             onClick: t,
             isSelected: n
           }, e.key);
@@ -111,7 +111,7 @@ function v(e, t, n, i) {
         case E.SoundboardSoundGridSectionType.DEFAULTS:
           return (0, l.jsx)(T, {
             ...i,
-            icon: m.default,
+            icon: p.default,
             onClick: t,
             isSelected: n
           }, e.key);

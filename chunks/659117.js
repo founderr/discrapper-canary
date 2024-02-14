@@ -1,125 +1,125 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return g
+    return I
   }
 }), r("794252");
-var a = r("37983");
+var n = r("37983");
 r("884691");
-var s = r("414456"),
-  n = r.n(s),
+var a = r("414456"),
+  u = r.n(a),
   i = r("506838"),
-  l = r("446674"),
-  u = r("77078"),
+  s = r("446674"),
+  l = r("77078"),
   o = r("491232"),
   c = r("984002"),
   d = r("716120"),
   f = r("915639"),
   E = r("824563"),
   m = r("719923"),
-  C = r("795158"),
-  p = r("782340"),
-  _ = r("632000");
-let S = [{
-    avatarSize: u.AvatarSizes.SIZE_40,
+  p = r("795158"),
+  S = r("782340"),
+  h = r("295166");
+let _ = [{
+    avatarSize: l.AvatarSizes.SIZE_40,
     showStatus: !1
   }, {
-    avatarSize: u.AvatarSizes.SIZE_32,
+    avatarSize: l.AvatarSizes.SIZE_32,
     showStatus: !1
   }, {
-    avatarSize: u.AvatarSizes.SIZE_40,
+    avatarSize: l.AvatarSizes.SIZE_40,
     showStatus: !0
   }, {
-    avatarSize: u.AvatarSizes.SIZE_32,
+    avatarSize: l.AvatarSizes.SIZE_32,
     showStatus: !0
   }],
-  A = e => {
+  C = e => {
     let {
       purchase: t
-    } = e, r = (0, l.useStateFromStores)([f.default], () => f.default.locale), s = (0, o.isPremiumCollectiblesPurchase)(t);
-    return (0, a.jsxs)("div", {
-      className: _.purchaseInfo,
-      children: [(0, a.jsx)(u.Text, {
+    } = e, r = (0, s.useStateFromStores)([f.default], () => f.default.locale), a = (0, o.isPremiumCollectiblesPurchase)(t);
+    return (0, n.jsxs)("div", {
+      className: h.purchaseInfo,
+      children: [(0, n.jsx)(l.Text, {
         variant: "text-sm/semibold",
         color: "header-primary",
         children: t.name
-      }), (0, a.jsx)(u.Text, {
+      }), (0, n.jsx)(l.Text, {
         variant: "text-sm/normal",
         children: t.summary
-      }), (0, a.jsxs)(u.Text, {
+      }), (0, n.jsxs)(l.Text, {
         variant: "text-xxs/normal",
         color: "text-muted",
-        children: [p.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
+        children: [S.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
           date: t.purchasedAt.toLocaleDateString(r, {
             month: "long",
             year: "numeric"
           })
-        }), s && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)("br", {}), p.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
+        }), a && (0, n.jsxs)(n.Fragment, {
+          children: [(0, n.jsx)("br", {}), S.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
         })]
       })]
     })
   };
-var g = e => {
+var I = e => {
   let {
     user: t,
     avatarDecorationOverride: r,
-    className: s
-  } = e, f = (0, l.useStateFromStores)([E.default], () => E.default.getStatus(t.id)), {
-    category: g,
-    product: h,
-    purchase: v
-  } = (0, c.default)(null == r ? void 0 : r.skuId), I = m.default.canUseCollectibles(t), N = (0, o.isPremiumCollectiblesPurchase)(v), T = (0, o.isPremiumCollectiblesProduct)(h), x = !I && N;
-  return null != h && (null == v || x) ? (0, a.jsxs)("div", {
-    className: n(_.modalPreview, _.shopPreviewContainer, s),
-    children: [(0, a.jsx)(d.default, {
-      asset: null == g ? void 0 : g.banner,
-      className: _.shopPreviewBanner,
-      children: (0, a.jsx)(C.default, {
+    className: a
+  } = e, f = (0, s.useStateFromStores)([E.default], () => E.default.getStatus(t.id)), {
+    category: I,
+    product: g,
+    purchase: T
+  } = (0, c.default)(null == r ? void 0 : r.skuId), N = m.default.canUseCollectibles(t), v = (0, o.isPremiumCollectiblesPurchase)(T), A = (0, o.isPremiumCollectiblesProduct)(g), R = !N && v;
+  return null != g && (null == T || R) ? (0, n.jsxs)("div", {
+    className: u(h.modalPreview, h.shopPreviewContainer, a),
+    children: [(0, n.jsx)(d.default, {
+      asset: null == I ? void 0 : I.banner,
+      className: h.shopPreviewBanner,
+      children: (0, n.jsx)(p.default, {
         user: t,
         avatarDecorationOverride: r
       })
-    }), (0, a.jsxs)("div", {
-      className: _.shopPreviewTextContainer,
-      children: [(0, a.jsx)(u.Text, {
+    }), (0, n.jsxs)("div", {
+      className: h.shopPreviewTextContainer,
+      children: [(0, n.jsx)(l.Text, {
         variant: "text-sm/semibold",
-        children: h.name
-      }), (0, a.jsx)(u.Text, {
+        children: g.name
+      }), (0, n.jsx)(l.Text, {
         variant: "text-sm/normal",
-        children: x ? p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([T, I]).with([!0, !0], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: R ? S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([A, N]).with([!0, !0], () => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
-  }) : (0, a.jsxs)("div", {
-    className: n(_.modalPreview, s),
-    children: [(0, a.jsxs)("div", {
-      className: _.previewSections,
-      children: [(0, a.jsx)("div", {
-        className: _.decorationPreview,
-        children: (0, a.jsx)(C.default, {
+  }) : (0, n.jsxs)("div", {
+    className: u(h.modalPreview, a),
+    children: [(0, n.jsxs)("div", {
+      className: h.previewSections,
+      children: [(0, n.jsx)("div", {
+        className: h.decorationPreview,
+        children: (0, n.jsx)(p.default, {
           user: t,
           avatarDecorationOverride: r
         })
-      }), (0, a.jsx)("div", {
-        className: _.smallDecorationPreviewsContainer,
-        children: S.map(e => {
+      }), (0, n.jsx)("div", {
+        className: h.smallDecorationPreviewsContainer,
+        children: _.map(e => {
           let {
-            avatarSize: s,
-            showStatus: n
+            avatarSize: a,
+            showStatus: u
           } = e;
-          return (0, a.jsx)("div", {
-            className: _.smallDecorationPreview,
-            children: (0, a.jsx)(C.default, {
+          return (0, n.jsx)("div", {
+            className: h.smallDecorationPreview,
+            children: (0, n.jsx)(p.default, {
               user: t,
-              avatarSize: s,
+              avatarSize: a,
               avatarDecorationOverride: r,
-              status: n ? f : void 0,
+              status: u ? f : void 0,
               "aria-hidden": !0
             })
-          }, "".concat(s).concat(n))
+          }, "".concat(a).concat(u))
         })
       })]
-    }), null != v && (0, a.jsx)(A, {
-      purchase: v
+    }), null != T && (0, n.jsx)(C, {
+      purchase: T
     })]
   })
 }

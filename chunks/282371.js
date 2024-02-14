@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   CirclePlayIcon: function() {
-    return i
+    return s
   }
 });
 var l = n("37983");
 n("884691");
-var a = n("669491"),
-  s = n("82169");
-let i = e => {
+var i = n("669491"),
+  a = n("82169");
+let s = e => {
   let {
     width: t = 24,
     height: n = 24,
-    secondaryColor: i = "transparent",
+    secondaryColor: s = "transparent",
     secondaryColorClass: r = "",
-    color: o = a.default.colors.INTERACTIVE_NORMAL,
+    color: o = i.default.colors.INTERACTIVE_NORMAL,
     colorClass: u = "",
     ...d
   } = e;
   return (0, l.jsxs)("svg", {
-    ...(0, s.default)(d),
+    ...(0, a.default)(d),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
@@ -29,7 +29,7 @@ let i = e => {
       cx: "12",
       cy: "12",
       r: "10",
-      fill: "string" == typeof i ? i : i.css,
+      fill: "string" == typeof s ? s : s.css,
       className: r
     }), (0, l.jsx)("path", {
       fill: "string" == typeof o ? o : o.css,

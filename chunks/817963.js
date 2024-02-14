@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   useManageResourcePermissions: function() {
-    return I
+    return _
   },
   getManageResourcePermissions: function() {
-    return f
+    return S
   }
 }), n("222007");
 var i = n("884691"),
   r = n("316693"),
-  u = n("446674"),
-  l = n("813006");
+  l = n("446674"),
+  u = n("813006");
 n("923959");
-var s = n("957255"),
-  a = n("697218");
+var a = n("957255"),
+  s = n("697218");
 n("991170");
 var o = n("270161"),
   d = n("843455");
@@ -25,7 +25,7 @@ let c = {
     canManageGuildExpression: () => !1,
     canManageGuildEvent: () => !1
   },
-  E = (e, t, n, i) => {
+  f = (e, t, n, i) => {
     if (null == e) return !1;
     if (n) return !0;
     if ("creator_id" in e) return i && null != t && e.creator_id === t.id;
@@ -36,37 +36,37 @@ let c = {
     }
     return !1
   },
-  _ = e => {
+  E = e => {
     if (null == e) return [d.Permissions.CREATE_EVENTS, d.Permissions.MANAGE_EVENTS];
     let t = o.CREATE_GUILD_EVENT_CORE_PERMISSIONS;
     return e.isGuildStageVoice() ? t = o.CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS : e.isGuildVoice() && (t = o.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS), [r.default.combine(t, d.Permissions.CREATE_EVENTS), r.default.combine(t, d.Permissions.MANAGE_EVENTS)]
   },
-  I = e => {
-    let [t, n] = e instanceof l.default ? [d.Permissions.CREATE_EVENTS, d.Permissions.MANAGE_EVENTS] : _(e), [r, o, I, f] = (0, u.useStateFromStoresArray)([s.default], () => [s.default.can(d.Permissions.CREATE_GUILD_EXPRESSIONS, e), s.default.can(d.Permissions.MANAGE_GUILD_EXPRESSIONS, e), s.default.can(t, e), s.default.can(n, e)]), S = (0, u.useStateFromStores)([a.default], () => a.default.getCurrentUser()), T = i.useCallback(e => E(e, S, o, r), [r, o, S]), N = i.useCallback(e => E(e, S, f, I), [f, I, S]);
+  _ = e => {
+    let [t, n] = e instanceof u.default ? [d.Permissions.CREATE_EVENTS, d.Permissions.MANAGE_EVENTS] : E(e), [r, o, _, S] = (0, l.useStateFromStoresArray)([a.default], () => [a.default.can(d.Permissions.CREATE_GUILD_EXPRESSIONS, e), a.default.can(d.Permissions.MANAGE_GUILD_EXPRESSIONS, e), a.default.can(t, e), a.default.can(n, e)]), T = (0, l.useStateFromStores)([s.default], () => s.default.getCurrentUser()), I = i.useCallback(e => f(e, T, o, r), [r, o, T]), h = i.useCallback(e => f(e, T, S, _), [S, _, T]);
     return null == e ? c : {
       canCreateExpressions: r,
-      canCreateGuildEvent: I,
+      canCreateGuildEvent: _,
       canManageAllExpressions: o,
-      canManageAllEvents: f,
-      canManageGuildExpression: T,
-      canManageGuildEvent: N
+      canManageAllEvents: S,
+      canManageGuildExpression: I,
+      canManageGuildEvent: h
     }
   },
-  f = function(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.default,
-      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.default,
-      [i, r] = e instanceof l.default ? [d.Permissions.CREATE_EVENTS, d.Permissions.MANAGE_EVENTS] : _(e),
-      u = t.can(d.Permissions.CREATE_GUILD_EXPRESSIONS, e),
+  S = function(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default,
+      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.default,
+      [i, r] = e instanceof u.default ? [d.Permissions.CREATE_EVENTS, d.Permissions.MANAGE_EVENTS] : E(e),
+      l = t.can(d.Permissions.CREATE_GUILD_EXPRESSIONS, e),
       o = t.can(d.Permissions.MANAGE_GUILD_EXPRESSIONS, e),
-      I = t.can(i, e),
-      f = t.can(r, e),
-      S = n.getCurrentUser();
+      _ = t.can(i, e),
+      S = t.can(r, e),
+      T = n.getCurrentUser();
     return null == e ? c : {
-      canCreateExpressions: u,
-      canCreateGuildEvent: I,
+      canCreateExpressions: l,
+      canCreateGuildEvent: _,
       canManageAllExpressions: o,
-      canManageAllEvents: f,
-      canManageGuildExpression: e => E(e, S, o, u),
-      canManageGuildEvent: e => E(e, S, f, I)
+      canManageAllEvents: S,
+      canManageGuildExpression: e => f(e, T, o, l),
+      canManageGuildEvent: e => f(e, T, S, _)
     }
   }

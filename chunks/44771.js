@@ -17,7 +17,7 @@ var i = n("37983"),
   m = n("605475"),
   h = n("49111"),
   g = n("782340"),
-  _ = n("279732");
+  _ = n("113037");
 let S = () => [g.default.Messages.APP_ICON_PIRATE, g.default.Messages.APP_ICON_PIRATE_1, g.default.Messages.APP_ICON_PIRATE_2, g.default.Messages.APP_ICON_PIRATE_3, g.default.Messages.APP_ICON_PIRATE_4],
   p = () => {
     var e;

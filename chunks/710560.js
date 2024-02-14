@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return N
   }
 }), n("222007"), n("424973");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("446674"),
   i = n("151426"),
   r = n("77078"),
@@ -24,19 +24,19 @@ var a = n("37983"),
   _ = n("49111"),
   I = n("994428"),
   T = n("782340"),
-  v = n("309607");
+  v = n("819741");
 
 function x(e) {
   let {
     onClose: t,
     channel: n
-  } = e, l = (0, g.default)(n);
-  return (0, a.jsx)(r.Menu, {
+  } = e, a = (0, g.default)(n);
+  return (0, l.jsx)(r.Menu, {
     onClose: t,
     onSelect: () => null,
     navId: "transfer-menu",
     "aria-label": T.default.Messages.TRANSFER,
-    children: l
+    children: a
   })
 }
 
@@ -48,21 +48,21 @@ function N(e) {
   } = e, N = (0, m.default)(), A = (0, s.useStateFromStores)([h.default], () => {
     var e, t;
     return null === (e = h.default.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
-  }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, j] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), L = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, p.default)(), y = O.filter(e => e.twoWayLink), [P, b] = l.useState(!1);
+  }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, j] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), L = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, p.default)(), y = O.filter(e => e.twoWayLink), [P, b] = a.useState(!1);
   if (null == N && 0 === O.length || t.isBroadcastChannel()) return null;
   let D = _.ChannelModes.VOICE !== R && [_.ChannelLayouts.NO_CHAT, _.ChannelLayouts.FULL_SCREEN].includes(j) ? "top" : "bottom",
     U = [];
-  return y.length > 0 && U.push(i.DismissibleContent.DONUT_DESKTOP_NUX), (0, a.jsx)(u.default, {
+  return y.length > 0 && U.push(i.DismissibleContent.DONUT_DESKTOP_NUX), (0, l.jsx)(u.default, {
     contentTypes: U,
     children: e => {
       let {
-        visibleContent: l,
+        visibleContent: a,
         markAsDismissed: s
-      } = e, o = l === i.DismissibleContent.DONUT_DESKTOP_NUX;
-      return (0, a.jsxs)(a.Fragment, {
-        children: [n ? (0, a.jsx)("div", {
+      } = e, o = a === i.DismissibleContent.DONUT_DESKTOP_NUX;
+      return (0, l.jsxs)(l.Fragment, {
+        children: [n ? (0, l.jsx)("div", {
           className: v.leftDivider
-        }) : null, (0, a.jsx)(r.Popout, {
+        }) : null, (0, l.jsx)(r.Popout, {
           position: D,
           spacing: o ? 16 : void 0,
           positionKey: "".concat(R, ":").concat(j),
@@ -72,15 +72,15 @@ function N(e) {
             let {
               closePopout: n
             } = e;
-            return (0, a.jsx)(d.default, {
-              children: o ? (0, a.jsx)(E.default, {
+            return (0, l.jsx)(d.default, {
+              children: o ? (0, l.jsx)(E.default, {
                 popoutPosition: D,
                 onDismiss: () => s(I.ContentDismissActionType.UNKNOWN),
                 onAccept: () => {
                   s(I.ContentDismissActionType.UNKNOWN), b(!0)
                 },
                 gameConsoleAccounts: y
-              }) : (0, a.jsx)(x, {
+              }) : (0, l.jsx)(x, {
                 onClose: () => {
                   n()
                 },
@@ -90,7 +90,7 @@ function N(e) {
           },
           children: e => {
             var t;
-            return (0, a.jsx)(c.default, {
+            return (0, l.jsx)(c.default, {
               ...e,
               ...g,
               onClick: () => b(!0),

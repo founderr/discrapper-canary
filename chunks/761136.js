@@ -18,7 +18,7 @@ var a = n("37983"),
   m = n("49111"),
   M = n("143460"),
   g = n("782340"),
-  p = n("490291");
+  p = n("974020");
 let I = M.AutomodTriggerType.KEYWORD;
 
 function S(e, t) {

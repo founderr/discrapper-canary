@@ -1,49 +1,49 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return M
+    return N
   }
-}), l("222007");
-var a = l("917351"),
-  n = l.n(a),
-  r = l("933805"),
-  i = l("52140"),
-  u = l("888198"),
-  s = l("788554");
-let o = null;
+}), n("222007");
+var l = n("917351"),
+  i = n.n(l),
+  a = n("933805"),
+  s = n("52140"),
+  r = n("888198"),
+  o = n("788554");
+let u = null;
 
 function d(e, t) {
-  let l = {};
-  return null != e.mention && null != o && (l = {
-    mention: o
-  }), (0, s.default)([e, ...t, l])
+  let n = {};
+  return null != e.mention && null != u && (n = {
+    mention: u
+  }), (0, o.default)([e, ...t, n])
 }
-o = l("236180").default;
+u = n("236180").default;
 let c = {
     enableBuildOverrides: !1,
     enableEmojiClick: !0
   },
-  f = d(u.default.RULES, [(0, i.default)({
+  f = d(r.default.RULES, [(0, s.default)({
     enableBuildOverrides: !0
   })]),
-  m = n.omit(d(u.default.RULES, [(0, i.default)(c)]), "paragraph", "newline"),
-  h = d(u.default.CHANNEL_TOPIC_RULES, [(0, i.default)({
+  m = i.omit(d(r.default.RULES, [(0, s.default)(c)]), "paragraph", "newline"),
+  p = d(r.default.CHANNEL_TOPIC_RULES, [(0, s.default)({
     ...c,
     emojiTooltipPosition: "bottom"
   }), {
     codeBlock: {
-      react: u.default.RULES.text.react
+      react: r.default.RULES.text.react
     }
   }]),
-  p = d(u.default.VOICE_CHANNEL_STATUS_RULES, [(0, i.default)({
+  h = d(r.default.VOICE_CHANNEL_STATUS_RULES, [(0, s.default)({
     ...c,
     enableEmojiClick: !1
   })]),
-  E = d(u.default.EMBED_TITLE_RULES, [(0, i.default)(c)]),
-  v = d(u.default.INLINE_REPLY_RULES, [(0, i.default)(c)]),
-  _ = d(u.default.GUILD_VERIFICATION_FORM_RULES, [(0, i.default)(c)]),
-  x = d(u.default.GUILD_EVENT_RULES, [(0, i.default)(c)]),
-  I = d(u.default.INLINE_REPLY_RULES, [(0, i.default)({
+  E = d(r.default.EMBED_TITLE_RULES, [(0, s.default)(c)]),
+  g = d(r.default.INLINE_REPLY_RULES, [(0, s.default)(c)]),
+  S = d(r.default.GUILD_VERIFICATION_FORM_RULES, [(0, s.default)(c)]),
+  C = d(r.default.GUILD_EVENT_RULES, [(0, s.default)(c)]),
+  T = d(r.default.INLINE_REPLY_RULES, [(0, s.default)({
     ...c,
     emoji: {
       height: 14,
@@ -51,39 +51,39 @@ let c = {
       lineHeight: 18
     }
   })]),
-  S = d(u.default.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, i.default)(c)]),
-  g = n.omit(d(u.default.RULES, [(0, i.default)({
+  v = d(r.default.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.default)(c)]),
+  I = i.omit(d(r.default.RULES, [(0, s.default)({
     ...c,
     emoji: {
       height: 14,
       width: 14
     }
   })]), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading"),
-  L = n.omit(u.default.RULES, "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading", "roleMention", "channelMention");
-var M = {
+  _ = i.omit(r.default.RULES, "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading", "roleMention", "channelMention");
+var N = {
   combineAndInjectMentionRule: d,
-  createReactRules: i.default,
+  createReactRules: s.default,
   defaultReactRuleOptions: c,
   defaultRules: f,
-  guildEventRules: x,
-  notifCenterV2MessagePreviewRules: g,
-  lockscreenWidgetMessageRules: L,
-  astParserFor: r.astParserFor,
-  reactParserFor: r.reactParserFor,
-  parse: r.reactParserFor(f),
-  parseTopic: r.reactParserFor(h),
-  parseVoiceChannelStatus: r.reactParserFor(p),
-  parseEmbedTitle: r.reactParserFor(E),
-  parseInlineReply: r.reactParserFor(v),
-  parseGuildVerificationFormRule: r.reactParserFor(_),
-  parseGuildEventDescription: r.reactParserFor(x),
-  parseAutoModerationSystemMessage: r.reactParserFor(S),
-  parseForumPostGuidelines: r.reactParserFor(m),
-  parseForumPostMostRecentMessage: r.reactParserFor(I),
-  parseNotifCenterMessagePreview: r.reactParserFor(g),
-  parseToAST: r.astParserFor(f),
-  parseTopicToAST: r.astParserFor(h),
-  parseEmbedTitleToAST: r.astParserFor(E),
-  parseInlineReplyToAST: r.astParserFor(v),
-  parseAutoModerationSystemMessageToAST: r.astParserFor(S)
+  guildEventRules: C,
+  notifCenterV2MessagePreviewRules: I,
+  lockscreenWidgetMessageRules: _,
+  astParserFor: a.astParserFor,
+  reactParserFor: a.reactParserFor,
+  parse: a.reactParserFor(f),
+  parseTopic: a.reactParserFor(p),
+  parseVoiceChannelStatus: a.reactParserFor(h),
+  parseEmbedTitle: a.reactParserFor(E),
+  parseInlineReply: a.reactParserFor(g),
+  parseGuildVerificationFormRule: a.reactParserFor(S),
+  parseGuildEventDescription: a.reactParserFor(C),
+  parseAutoModerationSystemMessage: a.reactParserFor(v),
+  parseForumPostGuidelines: a.reactParserFor(m),
+  parseForumPostMostRecentMessage: a.reactParserFor(T),
+  parseNotifCenterMessagePreview: a.reactParserFor(I),
+  parseToAST: a.astParserFor(f),
+  parseTopicToAST: a.astParserFor(p),
+  parseEmbedTitleToAST: a.astParserFor(E),
+  parseInlineReplyToAST: a.astParserFor(g),
+  parseAutoModerationSystemMessageToAST: a.astParserFor(v)
 }

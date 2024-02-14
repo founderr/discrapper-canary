@@ -15,8 +15,8 @@ var i = n("414456"),
   d = n("77078"),
   c = n("86621"),
   f = n("376556"),
-  p = n("118033"),
-  m = n("42203"),
+  m = n("118033"),
+  p = n("42203"),
   h = n("697218"),
   E = n("800762"),
   g = n("145131"),
@@ -26,16 +26,16 @@ var i = n("414456"),
   v = n("698372"),
   I = n("770370"),
   _ = n("667618"),
-  y = n("865677"),
+  N = n("865677"),
   A = n("15874"),
-  N = n("774713"),
+  y = n("774713"),
   x = n("510788"),
   O = n("756731"),
   R = n("762806"),
   M = n("438278"),
   L = n("898481"),
   P = n("49111"),
-  b = n("278433"),
+  b = n("279453"),
   j = (0, c.default)(e => {
     let t, {
         activity: n,
@@ -48,8 +48,8 @@ var i = n("414456"),
         color: k = d.Button.Colors.WHITE,
         look: w = d.Button.Looks.OUTLINED,
         type: F,
-        onAction: G,
-        isEmbedded: B = !1
+        onAction: B,
+        isEmbedded: G = !1
       } = e,
       H = (0, v.default)(),
       V = (0, u.useStateFromStores)([h.default], () => {
@@ -59,13 +59,13 @@ var i = n("414456"),
       K = F === S.Types.PROFILE || F === S.Types.PROFILE_V2,
       W = F === S.Types.STREAM_PREVIEW || null != s,
       Y = (0, C.default)(n),
-      z = (0, p.isStageActivity)(n),
-      J = K ? g.default.Align.END : g.default.Align.STRETCH,
-      q = Y || W ? g.default.Direction.HORIZONTAL : g.default.Direction.VERTICAL,
-      Z = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
-      X = (0, u.useStateFromStores)([E.default, m.default], () => {
+      z = (0, m.isStageActivity)(n),
+      Z = K ? g.default.Align.END : g.default.Align.STRETCH,
+      J = Y || W ? g.default.Direction.HORIZONTAL : g.default.Direction.VERTICAL,
+      q = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
+      X = (0, u.useStateFromStores)([E.default, p.default], () => {
         var e;
-        return Z ? m.default.getChannel(null === (e = E.default.getVoiceStateForUser(i.id)) || void 0 === e ? void 0 : e.channelId) : null
+        return q ? p.default.getChannel(null === (e = E.default.getVoiceStateForUser(i.id)) || void 0 === e ? void 0 : e.channelId) : null
       });
     if ((0, T.default)(n)) t = [(0, l.jsx)(I.default, {
       look: w,
@@ -98,8 +98,8 @@ var i = n("414456"),
         }, "spotify-activity-play-button");
       t = [a, e]
     } else if (z) {
-      let e = (0, p.unpackStageChannelParty)(n);
-      null != e && (t = [(0, l.jsx)(N.default, {
+      let e = (0, m.unpackStageChannelParty)(n);
+      null != e && (t = [(0, l.jsx)(y.default, {
         guildId: e.guildId,
         channelId: e.channelId,
         color: k,
@@ -114,7 +114,7 @@ var i = n("414456"),
         applicationStream: s
       }, "watch-button");
       t = [e]
-    } else if (Z && null != X) {
+    } else if (q && null != X) {
       let e = (0, l.jsx)(A.default, {
         color: k,
         look: w,
@@ -127,14 +127,14 @@ var i = n("414456"),
           color: k,
           look: w
         }, "watch-button"),
-        a = (0, l.jsx)(y.default, {
+        a = (0, l.jsx)(N.default, {
           activity: n,
           currentEmbeddedApplication: H,
           user: i,
           isCurrentUser: V.id === i.id,
           color: k,
           look: w,
-          isEmbedded: B
+          isEmbedded: G
         }, "join-activity-button"),
         s = (0, l.jsx)(x.default, {
           activity: n,
@@ -151,15 +151,15 @@ var i = n("414456"),
       if (null == a && null == s && null == e && null == r) return null;
       t = [a, s, e, r]
     }
-    let Q = q === g.default.Direction.VERTICAL;
+    let Q = J === g.default.Direction.VERTICAL;
     return (0, l.jsx)(g.default, {
       grow: 0,
-      align: J,
-      direction: q,
+      align: Z,
+      direction: J,
       wrap: Q ? g.default.Wrap.WRAP : g.default.Wrap.NO_WRAP,
       className: a(c, b.buttonsWrapper, Q ? b.vertical : b.horizontal),
       onClick: function(e) {
-        (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == G || G())
+        (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == B || B())
       },
       children: t
     })

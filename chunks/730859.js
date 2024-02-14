@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var l = n("37983"),
@@ -14,24 +14,24 @@ var l = n("37983"),
   d = n("272030"),
   c = n("427302"),
   f = n("158998"),
-  p = n("393724");
+  m = n("305130");
 
-function m(e) {
+function p(e) {
   let {
     className: t,
     maxUsers: a,
     users: r,
-    guildId: m,
+    guildId: p,
     onFocus: h
   } = e, [E, g] = i.useState(!1);
 
   function S() {
     return (0, l.jsx)(u.Dialog, {
-      className: p.popoutWrapper,
+      className: m.popoutWrapper,
       children: (0, l.jsx)(u.Scroller, {
-        className: p.scroller,
+        className: m.scroller,
         children: r.map(e => (0, l.jsx)(c.default, {
-          guildId: m,
+          guildId: p,
           user: e,
           nick: f.default.getName(e),
           onContextMenu: t => (0, d.openContextMenuLazy)(t, async () => {
@@ -50,15 +50,15 @@ function m(e) {
     })
   }
   return r.length <= 0 ? null : (0, l.jsx)("div", {
-    className: s(t, p.avatars),
+    className: s(t, m.avatars),
     children: function() {
       let e = o(r).take(a).map(e => {
           let t = f.default.getName(e);
           return (0, l.jsx)(u.TooltipContainer, {
             text: t,
-            className: p.avatar,
+            className: m.avatar,
             children: (0, l.jsx)(u.Avatar, {
-              src: e.getAvatarURL(m, 24),
+              src: e.getAvatarURL(p, 24),
               "aria-label": t,
               size: u.AvatarSizes.SIZE_24
             })
@@ -71,7 +71,7 @@ function m(e) {
         position: "bottom",
         onRequestClose: () => g(!1),
         children: () => (0, l.jsxs)(u.Button, {
-          className: s(p.avatar, p.overflow),
+          className: s(m.avatar, m.overflow),
           onFocus: h,
           onClick: () => g(!0),
           look: u.Button.Looks.BLANK,

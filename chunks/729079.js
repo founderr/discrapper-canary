@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return N
   }
 });
 var l = n("37983"),
@@ -14,13 +14,13 @@ var l = n("37983"),
   d = n("383018"),
   c = n("524768"),
   f = n("318981"),
-  p = n("501536"),
-  m = n("145131"),
+  m = n("501536"),
+  p = n("145131"),
   h = n("851745"),
   E = n("406291"),
   g = n("49111"),
   S = n("782340"),
-  C = n("567484");
+  C = n("804330");
 let T = {
   results: {
     command: null,
@@ -87,7 +87,7 @@ let I = {
         n = t.map((t, n) => {
           if (t.type === g.ChannelTextAreaIntegrationTypes.GIF) {
             var i, s, r;
-            return e = !0, (0, l.jsx)(p.default.GIFIntegration, {
+            return e = !0, (0, l.jsx)(m.default.GIFIntegration, {
               className: C.horizontalAutocomplete,
               onClick: f,
               onHover: c,
@@ -106,9 +106,9 @@ let I = {
           command: r
         }) : null != r ? r : E;
       return (0, l.jsxs)(i.Fragment, {
-        children: [(0, l.jsx)(p.default.Title, {
+        children: [(0, l.jsx)(m.default.Title, {
           title: o
-        }), e ? (0, l.jsx)(m.default, {
+        }), e ? (0, l.jsx)(p.default, {
           className: C.horizontalAutocompletes,
           children: n
         }) : n]
@@ -155,4 +155,4 @@ let I = {
 function _(e) {
   return e.meta.url
 }
-var y = I
+var N = I

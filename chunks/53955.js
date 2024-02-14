@@ -5,14 +5,14 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("884691"),
-  o = n("29150"),
-  a = n("119076"),
+  a = n("29150"),
+  o = n("119076"),
   i = n("634115");
 
 function s(e, t) {
-  var n = (0, a.useDragDropManager)(),
+  var n = (0, o.useDragDropManager)(),
     s = (0, r.useMemo)(function() {
-      return new o.SourceConnector(n.getBackend())
+      return new a.SourceConnector(n.getBackend())
     }, [n]);
   return (0, i.useIsomorphicLayoutEffect)(function() {
     return s.dragSourceOptions = e || null, s.reconnect(),

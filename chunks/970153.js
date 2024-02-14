@@ -17,15 +17,15 @@ var l = n("627445"),
   d = n("27618"),
   c = n("162771"),
   f = n("697218"),
-  p = n("158998"),
-  m = n("385887");
+  m = n("158998"),
+  p = n("385887");
 
 function h(e, t) {
   let {
     mode: n,
     ignoreTrailingEmptyNodes: l,
     preventEmojiSurrogates: i
-  } = null != t ? t : {}, [a, s] = (null == t ? void 0 : t.range) != null ? m.RangeUtils.edges(t.range) : [void 0, void 0];
+  } = null != t ? t : {}, [a, s] = (null == t ? void 0 : t.range) != null ? p.RangeUtils.edges(t.range) : [void 0, void 0];
   return E(e, {
     mode: n,
     start: a,
@@ -45,36 +45,36 @@ function E(e, t) {
     ignoreEmptyNodes: o,
     ignoreTrailingEmptyNodes: u,
     preventEmojiSurrogates: d
-  } = null != t ? t : {}, c = e.length > 0 && !m.TextUtils.isText(e[0]);
+  } = null != t ? t : {}, c = e.length > 0 && !p.TextUtils.isText(e[0]);
   null == r && (r = c ? "\n" : "");
   let f = null !== (n = null == a ? void 0 : a.path[0]) && void 0 !== n ? n : 0,
-    p = null !== (l = null == s ? void 0 : s.path[0]) && void 0 !== l ? l : e.length - 1;
+    m = null !== (l = null == s ? void 0 : s.path[0]) && void 0 !== l ? l : e.length - 1;
   if (u)
-    for (let t = p; t >= f; t--) {
+    for (let t = m; t >= f; t--) {
       let n = e[t];
-      if (m.TextUtils.isText(n)) {
+      if (p.TextUtils.isText(n)) {
         if (n.text.length > 0) {
-          p = t;
+          m = t;
           break
         }
-      } else if (!m.ElementUtils.isEmpty(n)) {
-        p = t;
+      } else if (!p.ElementUtils.isEmpty(n)) {
+        m = t;
         break
       }
       if (t === f) return ""
     }
-  let h = f > 0 && m.NodeUtils.isType(e[f - 1], "blockQuote"),
-    E = m.NodeUtils.isType(e[f], "blockQuote"),
-    S = m.NodeUtils.isType(e[p], "blockQuote"),
+  let h = f > 0 && p.NodeUtils.isType(e[f - 1], "blockQuote"),
+    E = p.NodeUtils.isType(e[f], "blockQuote"),
+    S = p.NodeUtils.isType(e[m], "blockQuote"),
     C = [];
-  for (let t = f; t <= p; t++) {
+  for (let t = f; t <= m; t++) {
     let n = e[t];
-    if (o && m.TextUtils.isText(n) && 0 === n.text.length) continue;
+    if (o && p.TextUtils.isText(n) && 0 === n.text.length) continue;
     let l = null != a && t === f ? {
         path: a.path.slice(1),
         offset: a.offset
       } : void 0,
-      r = null != s && t === p ? {
+      r = null != s && t === m ? {
         path: s.path.slice(1),
         offset: s.offset
       } : void 0,
@@ -98,7 +98,7 @@ function g(e, t) {
     allowBlockQuotePrefix: h = !1,
     preventEmojiSurrogates: g = !1
   } = null != t ? t : {};
-  if (m.TextUtils.isText(e)) return function(e, t) {
+  if (p.TextUtils.isText(e)) return function(e, t) {
     var n, l;
     let {
       start: a,
@@ -168,7 +168,7 @@ function g(e, t) {
       if ("raw" === n) return t;
       let l = f.default.getUser(e.userId);
       if (null == l) return t;
-      return "@".concat(p.default.getUserTag(l, {
+      return "@".concat(m.default.getUserTag(l, {
         decoration: "never"
       }))
     }

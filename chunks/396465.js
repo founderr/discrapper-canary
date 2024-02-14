@@ -14,11 +14,11 @@ var l = n("37983"),
   d = n("240249"),
   c = n("972620"),
   f = n("524768"),
-  p = n("529190"),
-  m = n("41884"),
+  m = n("529190"),
+  p = n("41884"),
   h = n("406291"),
   E = n("782340"),
-  g = n("253184");
+  g = n("847948");
 
 function S(e) {
   let {
@@ -30,7 +30,7 @@ function S(e) {
   } = e, v = i.useRef(null), {
     commands: I,
     sections: _,
-    scrollDown: y
+    scrollDown: N
   } = d.useQuery(C, {
     commandType: a.ApplicationCommandType.CHAT,
     text: t
@@ -43,7 +43,7 @@ function S(e) {
     if (null == I) return null;
     let i = I[e],
       a = null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : e;
-    if (null == i || i.inputType === f.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(m.default, {}, a);
+    if (null == i || i.inputType === f.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(p.default, {}, a);
     let s = _.find(e => e.id === i.applicationId);
     return (0, l.jsx)(o.default.NewCommand, {
       index: e,
@@ -70,13 +70,13 @@ function S(e) {
       listPadding: [0, 8, 0, 8],
       onScroll: e => {
         if (null == I) return;
-        let t = I.length * p.ITEM_HEIGHT,
+        let t = I.length * m.ITEM_HEIGHT,
           n = v.current.getListDimensions().height;
-        t - e - n < 9 * p.ITEM_HEIGHT && y()
+        t - e - n < 9 * m.ITEM_HEIGHT && N()
       },
       renderRow: A,
       rowCount: I.length,
-      rowHeight: p.ITEM_HEIGHT
+      rowHeight: m.ITEM_HEIGHT
     })]
   })
 }

@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
+var a = n("77078"),
   s = n("349171"),
   i = n("626301"),
   r = n("789946"),
@@ -17,14 +17,14 @@ var l = n("77078"),
   u = n("599110"),
   d = n("49111"),
   c = n("782340"),
-  f = n("331470"),
+  f = n("469347"),
   h = n("534044");
 
 function m(e) {
   let {
     onClose: t,
     analytics: n,
-    ...l
+    ...a
   } = e, m = c.default.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
     onPressMore: function() {
       (0, s.default)(), t(), u.default.track(d.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
@@ -33,7 +33,7 @@ function m(e) {
       }), (0, i.navigateToPremiumMarketingPage)()
     }
   });
-  return (0, a.jsx)(r.default, {
+  return (0, l.jsx)(r.default, {
     title: c.default.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_HEADER_2,
     glowUp: m,
     body: m,
@@ -50,13 +50,13 @@ function m(e) {
     },
     onClose: t,
     onSubscribeClick: s.default,
-    artElement: (0, a.jsx)(o.default, {
+    artElement: (0, l.jsx)(o.default, {
       className: f.video,
       src: h,
       loop: !0,
       autoPlay: !0
     }),
-    ...l
+    ...a
   })
 }
 
@@ -64,11 +64,11 @@ function p(e) {
   let {
     analytics: t
   } = e;
-  (0, l.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("718350").then(n.bind(n, "718350"));
-    return n => (0, a.jsx)(e, {
+    return n => (0, l.jsx)(e, {
       analytics: t,
       ...n
     })

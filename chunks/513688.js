@@ -19,15 +19,15 @@ n.r(t), n.d(t, {
     return h
   }
 }), n("222007");
-var a = n("627445"),
-  l = n.n(a),
+var l = n("627445"),
+  a = n.n(l),
   s = n("917351"),
   i = n.n(s),
   r = n("730647");
 
 function o(e) {
-  var t, n, a, s, i, o, u;
-  return l(e.type === r.DirectoryEntryTypes.GUILD, "Directory entries must be connected to a guild!"), {
+  var t, n, l, s, i, o, u;
+  return a(e.type === r.DirectoryEntryTypes.GUILD, "Directory entries must be connected to a guild!"), {
     channelId: e.directory_channel_id,
     guildId: e.entity_id,
     type: e.type,
@@ -37,7 +37,7 @@ function o(e) {
     primaryCategoryId: e.primary_category_id,
     name: null === (t = e.guild) || void 0 === t ? void 0 : t.name,
     icon: null === (n = e.guild) || void 0 === n ? void 0 : n.icon,
-    splash: null === (a = e.guild) || void 0 === a ? void 0 : a.splash,
+    splash: null === (l = e.guild) || void 0 === l ? void 0 : l.splash,
     features: new Set(null === (s = e.guild) || void 0 === s ? void 0 : s.features),
     approximateMemberCount: null === (i = e.guild) || void 0 === i ? void 0 : i.approximate_member_count,
     approximatePresenceCount: null === (o = e.guild) || void 0 === o ? void 0 : o.approximate_presence_count,

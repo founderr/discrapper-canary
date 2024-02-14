@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return f
   },
   findCommandOptionAutocompleteType: function() {
-    return p
+    return m
   }
 }), n("222007"), n("70102");
 var l = n("798609"),
@@ -28,8 +28,8 @@ function d(e) {
     canMentionEveryone: d,
     canMentionClyde: c = !1,
     useNewSlashCommands: f,
-    canOnlyUseTextCommands: p,
-    canSendStickers: m,
+    canOnlyUseTextCommands: m,
+    canSendStickers: p,
     hideMentionDescription: h,
     hidePersonalInformation: E,
     type: g,
@@ -47,7 +47,7 @@ function d(e) {
       clyde: o.ClydeMentionMode.DENY
     },
     commands: o.CommandMode.DISABLED,
-    allowStickers: !0 === m,
+    allowStickers: !0 === p,
     forNonStringCommandOption: null != n && n.type !== l.ApplicationCommandOptionType.STRING,
     hideMentionDescription: !0 === h,
     hidePersonalInformation: !0 === E,
@@ -71,7 +71,7 @@ function d(e) {
     let e = (0, i.getApplicationCommandOptionQueryOptions)(n);
     e.canMentionChannels && (_.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), e.canMentionEveryone && (_.mentions.global = e.canMentionHere ? o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE : o.GlobalMentionMode.ALLOW_EVERYONE), e.canMentionRoles && (_.mentions.role = e.canMentionNonMentionableRoles ? o.RoleMentionMode.ALLOW_ALL : o.RoleMentionMode.ALLOW_MENTIONABLE), e.canMentionUsers && (_.mentions.user = e.canMentionAnyGuildUser ? o.UserMentionMode.ALLOW_GUILD : o.UserMentionMode.ALLOW_CHANNEL), _.hideMentionDescription = !0
   } else u && (_.mentions.channel = o.ChannelMentionMode.ALLOW_SELECTABLE), r && (_.mentions.role = o.RoleMentionMode.ALLOW_MENTIONABLE), s && (_.mentions.user = o.UserMentionMode.ALLOW_CHANNEL), d && (_.mentions.global = o.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE), c && (_.mentions.clyde = o.ClydeMentionMode.ALLOW);
-  return (null === (t = g.commands) || void 0 === t ? void 0 : t.enabled) && (f ? _.commands = p ? o.CommandMode.NEW_TEXT_ONLY : o.CommandMode.NEW : _.commands = o.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (_.allowedChannelTypes = n.channelTypes), _
+  return (null === (t = g.commands) || void 0 === t ? void 0 : t.enabled) && (f ? _.commands = m ? o.CommandMode.NEW_TEXT_ONLY : o.CommandMode.NEW : _.commands = o.CommandMode.OLD_BUILT_INS), null != n && null != n.channelTypes && (_.allowedChannelTypes = n.channelTypes), _
 }
 
 function c(e) {
@@ -99,9 +99,9 @@ function f(e) {
     currentWordIsAtStart: a,
     textValue: d,
     optionText: f
-  } = e, p = null;
+  } = e, m = null;
   for (let e of r.AUTOCOMPLETE_PRIORITY) {
-    var m, h, E, g, S, C;
+    var p, h, E, g, S, C;
     let T = r.AUTOCOMPLETE_OPTIONS[e];
     if (e === o.AutocompleteOptionTypes.GIFS || e === o.AutocompleteOptionTypes.CHOICES) {
       if (l.commands === o.CommandMode.OLD_BUILT_INS) {
@@ -113,7 +113,7 @@ function f(e) {
             isAtStart: !1,
             options: l
           })) {
-          p = {
+          m = {
             type: e,
             typeInfo: T,
             query: d
@@ -141,10 +141,10 @@ function f(e) {
           isAtStart: !0,
           options: l
         })) {
-        p = {
+        m = {
           type: e,
           typeInfo: T,
-          query: d.substring(null !== (h = null === (m = T.sentinel) || void 0 === m ? void 0 : m.length) && void 0 !== h ? h : 0)
+          query: d.substring(null !== (h = null === (p = T.sentinel) || void 0 === p ? void 0 : p.length) && void 0 !== h ? h : 0)
         };
         break
       }
@@ -157,7 +157,7 @@ function f(e) {
           isAtStart: a,
           options: l
         })) {
-        p = {
+        m = {
           type: e,
           typeInfo: T,
           query: d
@@ -173,7 +173,7 @@ function f(e) {
           isAtStart: a,
           options: l
         })) {
-        p = {
+        m = {
           type: e,
           typeInfo: T,
           query: i.substring(null !== (g = null === (E = T.sentinel) || void 0 === E ? void 0 : E.length) && void 0 !== g ? g : 0)
@@ -188,7 +188,7 @@ function f(e) {
         isAtStart: a,
         options: l
       })) {
-      p = {
+      m = {
         type: e,
         typeInfo: T,
         query: i.substring(null !== (C = null === (S = T.sentinel) || void 0 === S ? void 0 : S.length) && void 0 !== C ? C : 0)
@@ -196,10 +196,10 @@ function f(e) {
       break
     }
   }
-  return null == p ? null : (p.query = p.query.toLocaleLowerCase(), p)
+  return null == m ? null : (m.query = m.query.toLocaleLowerCase(), m)
 }
 
-function p(e, t) {
+function m(e, t) {
   let n;
   if (null == t || null == e) return null;
   if (null != e.choices || e.autocomplete) n = o.AutocompleteOptionTypes.CHOICES;

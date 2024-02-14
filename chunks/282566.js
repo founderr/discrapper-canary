@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("812204"),
   c = n("685665"),
   f = n("538282"),
-  p = n("626301"),
-  m = n("552917"),
+  m = n("626301"),
+  p = n("552917"),
   h = n("843647"),
   E = n("154889"),
   g = n("917247"),
@@ -25,12 +25,12 @@ var l = n("37983"),
   v = n("402671"),
   I = n("719923"),
   _ = n("788506"),
-  y = n("115279"),
+  N = n("115279"),
   A = n("49111"),
-  N = n("958706"),
+  y = n("958706"),
   x = n("646718"),
   O = n("782340"),
-  R = n("350028"),
+  R = n("187971"),
   M = e => {
     var t, a, M;
     let {
@@ -40,22 +40,22 @@ var l = n("37983"),
       emojiDescriptor: j,
       pickerIntention: U,
       analyticsLocation: D
-    } = e, k = (0, u.default)(), [w, F] = i.useState(!1), G = () => {
-      (0, _.trackPremiumSettingsPaneOpened)(b), (0, p.navigateToPremiumMarketingPage)(), L()
-    }, B = (0, r.isThemeLight)(k) ? n("602291") : n("609708"), H = (0, g.usePremiumTrialOffer)(), V = (0, E.usePremiumDiscountOffer)(), K = null != H || null != V, {
+    } = e, k = (0, u.default)(), [w, F] = i.useState(!1), B = () => {
+      (0, _.trackPremiumSettingsPaneOpened)(b), (0, m.navigateToPremiumMarketingPage)(), L()
+    }, G = (0, r.isThemeLight)(k) ? n("602291") : n("609708"), H = (0, g.usePremiumTrialOffer)(), V = (0, E.usePremiumDiscountOffer)(), K = null != H || null != V, {
       isLoading: W,
       suggestedPremiumType: Y
     } = (0, h.default)({
       autoTrackExposure: !K,
-      experiment: m.default,
+      experiment: p.default,
       location: "emoji_picker"
     }), z = (0, f.useExpressionPickerStore)(e => e.searchQuery), {
-      analyticsLocations: J
-    } = (0, c.default)(d.default.EMOJI_PICKER), q = null == H ? void 0 : null === (t = H.subscription_trial) || void 0 === t ? void 0 : t.sku_id, Z = null != q ? q === x.PremiumSubscriptionSKUs.TIER_0 : Y === x.PremiumTypes.TIER_0;
+      analyticsLocations: Z
+    } = (0, c.default)(d.default.EMOJI_PICKER), J = null == H ? void 0 : null === (t = H.subscription_trial) || void 0 === t ? void 0 : t.sku_id, q = null != J ? J === x.PremiumSubscriptionSKUs.TIER_0 : Y === x.PremiumTypes.TIER_0;
     return i.useEffect(() => {
       if (!W) {
         let e;
-        e = U === N.EmojiIntention.REACTION ? x.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : j.subCategory === y.EmojiSubCategory.TOP_GUILD_EMOJI ? x.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : j.subCategory === y.EmojiSubCategory.NEWLY_ADDED_EMOJI ? x.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : x.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
+        e = U === y.EmojiIntention.REACTION ? x.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : j.subCategory === N.EmojiSubCategory.TOP_GUILD_EMOJI ? x.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : j.subCategory === N.EmojiSubCategory.NEWLY_ADDED_EMOJI ? x.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : x.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
         let t = j.emoji;
         T.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: e,
@@ -66,11 +66,11 @@ var l = n("37983"),
             ...D,
             object: A.AnalyticsObjects.EMOJI
           },
-          location_stack: J,
+          location_stack: Z,
           sku_id: I.default.getSkuIdForPremiumType(Y)
         })
       }
-    }, [W, Y, j, b, D, J, U, z]), (0, l.jsxs)("div", {
+    }, [W, Y, j, b, D, Z, U, z]), (0, l.jsxs)("div", {
       className: s(R.premiumPromo, {
         [R.unifyTrialUpsell]: K
       }),
@@ -85,31 +85,31 @@ var l = n("37983"),
           onClose: P,
           trialOffer: H,
           discountOffer: V,
-          children: Z ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
+          children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
             planName: (0, I.getTierDisplayName)(x.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-            onClick: G
+            onClick: B
           }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-            onClick: G
+            onClick: B
           })
         }) : (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)("img", {
             alt: "",
             className: R.premiumPromoImage,
-            src: B
+            src: G
           }), (0, l.jsx)("div", {
             className: R.premiumPromoTitle,
             children: O.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
           }), (0, l.jsx)("div", {
             className: R.premiumPromoDescription,
-            children: Z ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
+            children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
               planName: (0, I.getTierDisplayName)(x.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-              onClick: G
+              onClick: B
             }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-              onClick: G
+              onClick: B
             })
           })]
         }), !K && (0, l.jsx)(C.default, {
-          subscriptionTier: Z ? x.PremiumSubscriptionSKUs.TIER_0 : x.PremiumSubscriptionSKUs.TIER_2,
+          subscriptionTier: q ? x.PremiumSubscriptionSKUs.TIER_0 : x.PremiumSubscriptionSKUs.TIER_2,
           submitting: w,
           premiumModalAnalyticsLocation: {
             section: A.AnalyticsSections.EMOJI_PICKER_POPOUT,
@@ -124,8 +124,8 @@ var l = n("37983"),
             F(!1), e && P()
           },
           buttonText: (() => {
-            if (K) return Z ? O.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : O.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT;
-            return Z ? O.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : O.default.Messages.PREMIUM_REQUIRED_GET_NITRO
+            if (K) return q ? O.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : O.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT;
+            return q ? O.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : O.default.Messages.PREMIUM_REQUIRED_GET_NITRO
           })()
         })]
       })]

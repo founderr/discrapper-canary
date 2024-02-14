@@ -14,8 +14,8 @@ var l = n("627445"),
   d = n("647374"),
   c = n("888198"),
   f = n("290689"),
-  p = n("788554"),
-  m = n("718517"),
+  m = n("788554"),
+  p = n("718517"),
   h = n("23690"),
   E = n("10680");
 let g = {
@@ -219,13 +219,13 @@ let I = {
       }
     }
   },
-  _ = (0, p.default)([C, I]),
-  y = (0, p.default)([T, I]),
+  _ = (0, m.default)([C, I]),
+  N = (0, m.default)([T, I]),
   A = o.astParserFor(_),
-  N = o.astParserFor(y),
+  y = o.astParserFor(N),
   x = {
     max: 1 / 0,
-    maxAge: 1 * m.default.Millis.MINUTE,
+    maxAge: 1 * p.default.Millis.MINUTE,
     updateAgeOnGet: !0
   },
   O = new s(x),
@@ -266,7 +266,7 @@ function M(e, t) {
                 0: ""
               },
               type: "paragraph",
-              content: (n ? N : A)(s, !1, {
+              content: (n ? y : A)(s, !1, {
                 returnMentionIds: !0,
                 disableAutoBlockNewlines: !0,
                 guildId: t

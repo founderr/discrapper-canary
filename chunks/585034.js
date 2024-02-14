@@ -1,7 +1,7 @@
 "use strict";
 var r = n("886639"),
-  o = n("868822"),
-  a = n("418855"),
+  a = n("868822"),
+  o = n("418855"),
   i = n("649675"),
   s = n("763589"),
   c = n("308274"),
@@ -25,7 +25,7 @@ e.exports = function(e, t, n) {
       return v && p(v, "normal", e), new h(!0, e)
     },
     R = function(e) {
-      return C ? (a(e), E ? T(e[0], e[1], M) : T(e[0], e[1])) : E ? T(e, M) : T(e)
+      return C ? (o(e), E ? T(e[0], e[1], M) : T(e[0], e[1])) : E ? T(e, M) : T(e)
     };
   if (k) v = e.iterator;
   else if (P) v = e;
@@ -38,7 +38,7 @@ e.exports = function(e, t, n) {
     }
     v = u(e, g)
   }
-  for (S = k ? e.next : v.next; !(w = o(S, v)).done;) {
+  for (S = k ? e.next : v.next; !(w = a(S, v)).done;) {
     try {
       x = R(w.value)
     } catch (e) {

@@ -15,19 +15,19 @@ var i = n("798609"),
   d = n("697218"),
   c = n("501536"),
   f = n("387111"),
-  p = n("511104"),
-  m = n("200294"),
+  m = n("511104"),
+  p = n("200294"),
   h = n("851745"),
   E = n("825871"),
   g = n("782340");
 
 function S(e) {
-  let t = p.PREFIX_COMMAND_REGEX.exec(e);
+  let t = m.PREFIX_COMMAND_REGEX.exec(e);
   if (null != t) return {
     type: "prefix",
     cleanedQuery: e.substring(t[0].length).trim()
   };
-  let n = p.BOT_MENTION_COMMAND_REGEX.exec(e);
+  let n = m.BOT_MENTION_COMMAND_REGEX.exec(e);
   if (null != n) {
     let t = n[1],
       l = d.default.getUser(t);
@@ -55,8 +55,8 @@ let C = {
     let c = (0, E.getLimit)("LegacyCommandAutocompletes"),
       f = (0, o.getCommandQuery)(e, d.cleanedQuery),
       {
-        commands: p,
-        sections: m
+        commands: m,
+        sections: p
       } = a.executeQuery(e, {
         commandType: i.ApplicationCommandType.CHAT,
         text: f.text
@@ -66,8 +66,8 @@ let C = {
         scoreMethod: s.ScoreMethod.COMMAND_OR_APPLICATION,
         allowFetch: r
       });
-    if (null == p) return E.EMPTY_RESULTS;
-    let g = p;
+    if (null == m) return E.EMPTY_RESULTS;
+    let g = m;
     if (f.hasSpaceTerminator) {
       let e = f.text.trim(),
         t = e + " ";
@@ -77,7 +77,7 @@ let C = {
       results: {
         entries: g.slice(0, c).map(e => ({
           command: e,
-          section: null == m ? void 0 : m.find(t => t.id === e.applicationId)
+          section: null == p ? void 0 : p.find(t => t.id === e.applicationId)
         }))
       }
     }
@@ -95,7 +95,7 @@ let C = {
       onHover: o,
       onClick: u
     } = e;
-    return (0, m.renderAutocompleteGroup)({
+    return (0, p.renderAutocompleteGroup)({
       query: s,
       selectedIndex: n,
       autocompletes: t,
@@ -122,7 +122,7 @@ let C = {
         let t = S(e);
         if ("mention" !== t.type) return e;
         let n = f.default.getName(null == i ? void 0 : i.id, a.id, t.user);
-        return e.replace(p.BOT_MENTION_COMMAND_REGEX, "@".concat(n))
+        return e.replace(m.BOT_MENTION_COMMAND_REGEX, "@".concat(n))
       },
       key: "commands",
       footer: (0, l.jsx)(E.FakeFooter, {})

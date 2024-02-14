@@ -1,12 +1,12 @@
 "use strict";
-var a, r, i, l;
+var a, l, i, s;
 n.r(t), n.d(t, {
   default: function() {
     return u
   }
 }), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102"), n("222007"), n("808653"), n("990131"), n("424973");
 (i = a || (a = {}))[i.NONE = 0] = "NONE", i[i.CONTINUATION = 1] = "CONTINUATION", i[i.BEGINNING_OF_STREAM = 2] = "BEGINNING_OF_STREAM", i[i.END_OF_STREAM = 4] = "END_OF_STREAM";
-class s {
+class r {
   appendBytes(e) {
     if (this._offset + e.length > this._buffer.length) {
       let t = this._offset + e.length,
@@ -24,24 +24,24 @@ class s {
       n = 27 + e.segments.length + t;
     if (n > 65307) throw Error("Page too large (size ".concat(n, " exceeds ").concat(65307, ")"));
     let a = this._offset,
-      r = 0;
+      l = 0;
     switch (e.pageType) {
       case 1:
-        r = 1;
+        l = 1;
         break;
       case 2:
-        r = 2;
+        l = 2;
         break;
       case 4:
-        r = 4
+        l = 4
     }
-    this.appendBytes([79, 103, 103, 83, 0, r, 255 & e.granulePosition, e.granulePosition >> 8 & 255, e.granulePosition >> 16 & 255, e.granulePosition >> 24 & 255, 0, 0, 0, 0, 0, 0, 0, 1, 255 & this._pageSequenceNumber, this._pageSequenceNumber >> 8 & 255, this._pageSequenceNumber >> 16 & 255, this._pageSequenceNumber >> 24 & 255]);
+    this.appendBytes([79, 103, 103, 83, 0, l, 255 & e.granulePosition, e.granulePosition >> 8 & 255, e.granulePosition >> 16 & 255, e.granulePosition >> 24 & 255, 0, 0, 0, 0, 0, 0, 0, 1, 255 & this._pageSequenceNumber, this._pageSequenceNumber >> 8 & 255, this._pageSequenceNumber >> 16 & 255, this._pageSequenceNumber >> 24 & 255]);
     let i = this._offset;
     for (let t of (this.appendBytes([0, 0, 0, 0, e.segments.length]), this.appendBytes(e.segments.map(e => e.length)), e.segments)) this.appendBytes(t);
-    let l = function(e) {
+    let s = function(e) {
       return e.reduce((e, t) => e << 8 >>> 0 ^ o[e >>> 24 ^ t], 0) >>> 0
     }(this._buffer.subarray(a, this._offset));
-    this._buffer.set([255 & l, l >> 8 & 255, l >> 16 & 255, l >> 24 & 255], i), this._pageSequenceNumber++
+    this._buffer.set([255 & s, s >> 8 & 255, s >> 16 & 255, s >> 24 & 255], i), this._pageSequenceNumber++
   }
   finalize(e) {
     this.addPage({
@@ -61,14 +61,14 @@ class s {
 function u(e, t) {
   let n = new Uint8Array([79, 112, 117, 115, 72, 101, 97, 100, 1, t.channelCount, 0, 0, 255 & t.inputSampleRate, t.inputSampleRate >> 8 & 255, t.inputSampleRate >> 16 & 255, t.inputSampleRate >> 24 & 255, 255 & t.outputGain, t.outputGain >> 8 & 255, t.channelMappingFamily]),
     a = new Uint8Array([79, 112, 117, 115, 84, 97, 103, 115, 0, 0, 0, 0, 0, 0, 0, 0]),
-    r = new s;
-  r.addPage({
+    l = new r;
+  l.addPage({
     pageType: 2,
     granulePosition: 0,
     segments: [n]
   });
   let i = 0;
-  for (let t of (r.addPage({
+  for (let t of (l.addPage({
       pageType: 0,
       granulePosition: i,
       segments: [a]
@@ -77,20 +77,20 @@ function u(e, t) {
       let t = Math.floor(e.length / 255),
         n = [];
       for (let a = 0; a <= t; a++) {
-        let r = 0 === a ? 0 : 255 * a,
+        let l = 0 === a ? 0 : 255 * a,
           i = a === t ? e.length : (a + 1) * 255;
-        n.push(e.slice(r, i))
+        n.push(e.slice(l, i))
       }
       return n
     }(t.buffer);
-    i += t.numSamples, r.addPage({
+    i += t.numSamples, l.addPage({
       pageType: 0,
       granulePosition: i,
       segments: e
     })
   }
-  return r.finalize(i)
-}(l = r || (r = {}))[l.ZERO = 0] = "ZERO";
+  return l.finalize(i)
+}(s = l || (l = {}))[s.ZERO = 0] = "ZERO";
 let o = function() {
   let e = new Uint32Array(256);
   for (let t = 256; t > 0; t--) {

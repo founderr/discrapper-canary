@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var r = n("884691"),
-  o = n("240849"),
-  a = n("708966"),
+  a = n("240849"),
+  o = n("708966"),
   i = n("113581"),
   s = n("447259"),
   c = n("759840"),
@@ -23,7 +23,7 @@ function u(e, t) {
     isReadOnly: p = !1,
     type: f = "text",
     validationBehavior: h = "aria"
-  } = e, [m, v] = (0, a.useControlledState)(e.value, e.defaultValue || "", e.onChange), {
+  } = e, [m, v] = (0, o.useControlledState)(e.value, e.defaultValue || "", e.onChange), {
     focusableProps: g
   } = (0, s.useFocusable)(e, t), y = (0, l.useFormValidationState)({
     ...e,
@@ -41,14 +41,14 @@ function u(e, t) {
     ...e,
     isInvalid: b,
     errorMessage: e.errorMessage || x
-  }), P = (0, o.filterDOMProps)(e, {
+  }), P = (0, a.filterDOMProps)(e, {
     labelable: !0
   }), E = {
     type: f,
     pattern: e.pattern
   };
-  return (0, o.useFormReset)(t, m, v), (0, c.useFormValidation)(e, y, t), (0, r.useEffect)(() => {
-    if (t.current instanceof(0, o.getOwnerWindow)(t.current).HTMLTextAreaElement) {
+  return (0, a.useFormReset)(t, m, v), (0, c.useFormValidation)(e, y, t), (0, r.useEffect)(() => {
+    if (t.current instanceof(0, a.getOwnerWindow)(t.current).HTMLTextAreaElement) {
       let e = t.current;
       Object.defineProperty(e, "defaultValue", {
         get: () => e.value,
@@ -58,7 +58,7 @@ function u(e, t) {
     }
   }, [t]), {
     labelProps: w,
-    inputProps: (0, o.mergeProps)(P, "input" === n && E, {
+    inputProps: (0, a.mergeProps)(P, "input" === n && E, {
       disabled: u,
       readOnly: p,
       required: d && "native" === h,
@@ -102,8 +102,8 @@ function d() {
 }
 
 function p(e, t, n) {
-  let a = (0, o.useEffectEvent)(e => {
-    let r, o = n.current;
+  let o = (0, a.useEffectEvent)(e => {
+    let r, a = n.current;
     switch (e.inputType) {
       case "historyUndo":
       case "historyRedo":
@@ -111,29 +111,29 @@ function p(e, t, n) {
       case "deleteContent":
       case "deleteByCut":
       case "deleteByDrag":
-        r = o.value.slice(0, o.selectionStart) + o.value.slice(o.selectionEnd);
+        r = a.value.slice(0, a.selectionStart) + a.value.slice(a.selectionEnd);
         break;
       case "deleteContentForward":
-        r = o.selectionEnd === o.selectionStart ? o.value.slice(0, o.selectionStart) + o.value.slice(o.selectionEnd + 1) : o.value.slice(0, o.selectionStart) + o.value.slice(o.selectionEnd);
+        r = a.selectionEnd === a.selectionStart ? a.value.slice(0, a.selectionStart) + a.value.slice(a.selectionEnd + 1) : a.value.slice(0, a.selectionStart) + a.value.slice(a.selectionEnd);
         break;
       case "deleteContentBackward":
-        r = o.selectionEnd === o.selectionStart ? o.value.slice(0, o.selectionStart - 1) + o.value.slice(o.selectionStart) : o.value.slice(0, o.selectionStart) + o.value.slice(o.selectionEnd);
+        r = a.selectionEnd === a.selectionStart ? a.value.slice(0, a.selectionStart - 1) + a.value.slice(a.selectionStart) : a.value.slice(0, a.selectionStart) + a.value.slice(a.selectionEnd);
         break;
       case "deleteSoftLineBackward":
       case "deleteHardLineBackward":
-        r = o.value.slice(o.selectionStart);
+        r = a.value.slice(a.selectionStart);
         break;
       default:
-        null != e.data && (r = o.value.slice(0, o.selectionStart) + e.data + o.value.slice(o.selectionEnd))
+        null != e.data && (r = a.value.slice(0, a.selectionStart) + e.data + a.value.slice(a.selectionEnd))
     }(null == r || !t.validate(r)) && e.preventDefault()
   });
   (0, r.useEffect)(() => {
     if (!d()) return;
     let e = n.current;
-    return e.addEventListener("beforeinput", a, !1), () => {
-      e.removeEventListener("beforeinput", a, !1)
+    return e.addEventListener("beforeinput", o, !1), () => {
+      e.removeEventListener("beforeinput", o, !1)
     }
-  }, [n, a]);
+  }, [n, o]);
   let i = d() ? null : e => {
       let n = e.target.value.slice(0, e.target.selectionStart) + e.data + e.target.value.slice(e.target.selectionEnd);
       !t.validate(n) && e.preventDefault()
@@ -147,7 +147,7 @@ function p(e, t, n) {
     } = u(e, n),
     h = (0, r.useRef)(null);
   return {
-    inputProps: (0, o.mergeProps)(c, {
+    inputProps: (0, a.mergeProps)(c, {
       onBeforeInput: i,
       onCompositionStart() {
         let {
@@ -166,9 +166,9 @@ function p(e, t, n) {
           let {
             value: e,
             selectionStart: r,
-            selectionEnd: o
+            selectionEnd: a
           } = h.current;
-          n.current.value = e, n.current.setSelectionRange(r, o), t.setInputValue(e)
+          n.current.value = e, n.current.setSelectionRange(r, a), t.setInputValue(e)
         }
       }
     }),

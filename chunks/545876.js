@@ -18,7 +18,7 @@ var a = l("37983"),
   p = l("49111"),
   I = l("646718"),
   A = l("782340"),
-  L = l("461503");
+  L = l("180978");
 class m extends s.Component {
   componentDidMount() {
     this.props.onChange(this.hasAcceptedNeccessaryTerms(this.props, this.state))

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("424973");
 var l = n("37983"),
@@ -13,24 +13,24 @@ var l = n("37983"),
   u = n("228226"),
   d = n("829290"),
   c = n("503063"),
-  f = n("537461"),
-  p = i.memo(e => {
+  f = n("350583"),
+  m = i.memo(e => {
     let {
       channel: t,
       type: n,
       activeCommand: i,
       pendingReply: a
     } = e, {
-      activeCommandOption: p,
-      activeCommandOptionStates: m
+      activeCommandOption: m,
+      activeCommandOptionStates: p
     } = (0, r.useStateFromStoresObject)([o.default], () => ({
       activeCommandOption: o.default.getActiveOption(t.id),
       activeCommandOptionStates: o.default.getOptionStates(t.id)
     })), h = (0, d.useShouldShowPTONotice)(t), E = [];
     return (null != i && E.push((0, l.jsx)(u.default, {
       activeCommand: i,
-      activeOption: null != p ? p : null,
-      optionStates: m
+      activeOption: null != m ? m : null,
+      optionStates: p
     })), null != a && E.push((0, l.jsx)(c.default, {
       reply: a,
       chatInputType: n

@@ -17,11 +17,11 @@ var l = n("37983"),
   d = n("506885"),
   c = n("981601"),
   f = n("766274"),
-  p = n("697218"),
-  m = n("368121"),
+  m = n("697218"),
+  p = n("368121"),
   h = n("523096"),
   E = n("587974"),
-  g = n("494101");
+  g = n("856614");
 let S = {
   SIZE_16: 16,
   SIZE_24: 24,
@@ -87,7 +87,7 @@ class T extends i.PureComponent {
     }
   }
   renderIcon() {
-    return this.props.renderIcon ? (0, l.jsx)(m.default, {
+    return this.props.renderIcon ? (0, l.jsx)(p.default, {
       foreground: g.foreground,
       className: g.icon
     }) : null
@@ -102,17 +102,17 @@ class T extends i.PureComponent {
       useFallbackUserForPopout: r
     } = this.props, {
       popoutUserId: f
-    } = this.state, m = n.find(e => null != e && e.id === f), h = r && null == p.default.getUser(f);
+    } = this.state, p = n.find(e => null != e && e.id === f), h = r && null == m.default.getUser(f);
     return (0, l.jsx)(u.Popout, {
       position: "right",
-      preload: null == m ? void 0 : () => (0, d.default)(m.id, m.getAvatarURL(i, 80), {
+      preload: null == p ? void 0 : () => (0, d.default)(p.id, p.getAvatarURL(i, 80), {
         guildId: i
       }),
       shouldShow: !0 === a && null != f,
       fixed: !0,
       renderPopout: e => (o(null != f, "UserSummaryItem.render - renderPopout: popoutUserId cannot be null"), (0, l.jsx)(c.default, {
         ...this.props,
-        user: h && null != m ? m : void 0,
+        user: h && null != p ? p : void 0,
         ...e,
         userId: f,
         guildId: this.props.guildId

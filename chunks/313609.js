@@ -8,7 +8,7 @@ var s = n("37983"),
   i = n("884691"),
   r = n("414456"),
   a = n.n(r),
-  o = n("508330");
+  o = n("897027");
 let d = e => new Promise((t, n) => {
   null == e && n(Error("No image src passed"));
   let s = new Image;

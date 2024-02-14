@@ -14,7 +14,7 @@ var s = n("65597"),
   u = n("158998"),
   d = n("539938"),
   c = n("782340"),
-  f = n("305794");
+  f = n("250455");
 
 function h(e) {
   let t = e.channel.getRecipientId(),

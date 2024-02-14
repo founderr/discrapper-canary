@@ -46,20 +46,20 @@ function k(t, e, s) {
   S(t, s[2 * e], s[2 * e + 1])
 }
 
-function E(t, e) {
+function A(t, e) {
   var s = 0;
   do s |= 1 & t, t >>>= 1, s <<= 1; while (--e > 0);
   return s >>> 1
 }
 o(m);
 
-function A(t, e, s) {
+function E(t, e, s) {
   var r, i, n = Array(16),
     c = 0;
   for (r = 1; r <= 15; r++) n[r] = c = c + s[r - 1] << 1;
   for (i = 0; i <= e; i++) {
     var o = t[2 * i + 1];
-    0 !== o && (t[2 * i] = E(n[o]++, o))
+    0 !== o && (t[2 * i] = A(n[o]++, o))
   }
 }
 
@@ -81,7 +81,7 @@ function R(t, e, s, r) {
   return t[i] < t[n] || t[i] === t[n] && r[e] <= r[s]
 }
 
-function j(t, e, s) {
+function P(t, e, s) {
   for (var r = t.heap[s], i = s << 1; i <= t.heap_len && (i < t.heap_len && R(e, t.heap[i + 1], t.heap[i], t.depth) && i++, !R(e, r, t.heap[i], t.depth));) {
     ;
     t.heap[s] = t.heap[i], s = i, i <<= 1
@@ -89,14 +89,14 @@ function j(t, e, s) {
   t.heap[s] = r
 }
 
-function C(t, e, s) {
+function j(t, e, s) {
   var r, i, n, c, o = 0;
   if (0 !== t.last_lit)
     do r = t.pending_buf[t.d_buf + 2 * o] << 8 | t.pending_buf[t.d_buf + 2 * o + 1], i = t.pending_buf[t.l_buf + o], o++, 0 === r ? k(t, i, e) : (k(t, (n = v[i]) + 256 + 1, e), 0 !== (c = a[n]) && S(t, i -= x[n], c), k(t, n = w(--r), s), 0 !== (c = d[n]) && S(t, r -= m[n], c)); while (o < t.last_lit);
   k(t, 256, e)
 }
 
-function O(t, e) {
+function C(t, e) {
   var s, r, i, n = e.dyn_tree,
     c = e.stat_desc.static_tree,
     o = e.stat_desc.has_stree,
@@ -104,9 +104,9 @@ function O(t, e) {
     a = -1;
   for (s = 0, t.heap_len = 0, t.heap_max = u; s < f; s++) 0 !== n[2 * s] ? (t.heap[++t.heap_len] = a = s, t.depth[s] = 0) : n[2 * s + 1] = 0;
   for (; t.heap_len < 2;) n[2 * (i = t.heap[++t.heap_len] = a < 2 ? ++a : 0)] = 1, t.depth[i] = 0, t.opt_len--, o && (t.static_len -= c[2 * i + 1]);
-  for (e.max_code = a, s = t.heap_len >> 1; s >= 1; s--) j(t, n, s);
+  for (e.max_code = a, s = t.heap_len >> 1; s >= 1; s--) P(t, n, s);
   i = f;
-  do s = t.heap[1], t.heap[1] = t.heap[t.heap_len--], j(t, n, 1), r = t.heap[1], t.heap[--t.heap_max] = s, t.heap[--t.heap_max] = r, n[2 * i] = n[2 * s] + n[2 * r], t.depth[i] = (t.depth[s] >= t.depth[r] ? t.depth[s] : t.depth[r]) + 1, n[2 * s + 1] = n[2 * r + 1] = i, t.heap[1] = i++, j(t, n, 1); while (t.heap_len >= 2);
+  do s = t.heap[1], t.heap[1] = t.heap[t.heap_len--], P(t, n, 1), r = t.heap[1], t.heap[--t.heap_max] = s, t.heap[--t.heap_max] = r, n[2 * i] = n[2 * s] + n[2 * r], t.depth[i] = (t.depth[s] >= t.depth[r] ? t.depth[s] : t.depth[r]) + 1, n[2 * s + 1] = n[2 * r + 1] = i, t.heap[1] = i++, P(t, n, 1); while (t.heap_len >= 2);
   t.heap[--t.heap_max] = t.heap[1], ! function(t, e) {
     var s, r, i, n, c, o, f = e.dyn_tree,
       a = e.max_code,
@@ -128,10 +128,10 @@ function O(t, e) {
           if (!((i = t.heap[--s]) > a)) f[2 * i + 1] !== n && (t.opt_len += (n - f[2 * i + 1]) * f[2 * i], f[2 * i + 1] = n), r--
         }
     }
-  }(t, e), A(n, a, t.bl_count)
+  }(t, e), E(n, a, t.bl_count)
 }
 
-function P(t, e, s) {
+function O(t, e, s) {
   var r, i, n = -1,
     c = e[1],
     o = 0,
@@ -180,7 +180,7 @@ e._tr_init = function(t) {
     for (; t <= 255;) h[2 * t + 1] = 9, t++, u[9]++;
     for (; t <= 279;) h[2 * t + 1] = 7, t++, u[7]++;
     for (; t <= 287;) h[2 * t + 1] = 8, t++, u[8]++;
-    for (A(h, f + 1, u), t = 0; t < 30; t++) l[2 * t + 1] = 5, l[2 * t] = E(t, 5);
+    for (E(h, f + 1, u), t = 0; t < 30; t++) l[2 * t + 1] = 5, l[2 * t] = A(t, 5);
     r = new y(h, a, 257, f, 15), i = new y(l, d, 0, 30, 15), n = new y([], p, 0, 19, 7)
   }(), D = !0), t.l_desc = new _(t.dyn_ltree, r), t.d_desc = new _(t.dyn_dtree, i), t.bl_desc = new _(t.bl_tree, n), t.bi_buf = 0, t.bi_valid = 0, B(t)
 }, e._tr_stored_block = z, e._tr_flush_block = function(t, e, s, r) {
@@ -193,15 +193,15 @@ e._tr_init = function(t) {
     for (e = 32; e < 256; e++)
       if (0 !== t.dyn_ltree[2 * e]) return 1;
     return 0
-  }(t)), O(t, t.l_desc), O(t, t.d_desc), c = function(t) {
+  }(t)), C(t, t.l_desc), C(t, t.d_desc), c = function(t) {
     var e;
-    for (P(t, t.dyn_ltree, t.l_desc.max_code), P(t, t.dyn_dtree, t.d_desc.max_code), O(t, t.bl_desc), e = 18; e >= 3 && 0 === t.bl_tree[2 * b[e] + 1]; e--);
+    for (O(t, t.dyn_ltree, t.l_desc.max_code), O(t, t.dyn_dtree, t.d_desc.max_code), C(t, t.bl_desc), e = 18; e >= 3 && 0 === t.bl_tree[2 * b[e] + 1]; e--);
     return t.opt_len += 3 * (e + 1) + 5 + 5 + 4, e
-  }(t), i = t.opt_len + 3 + 7 >>> 3, (n = t.static_len + 3 + 7 >>> 3) <= i && (i = n)) : i = n = s + 5, s + 4 <= i && -1 !== e ? z(t, e, s, r) : 4 === t.strategy || n === i ? (S(t, 2 + (r ? 1 : 0), 3), C(t, h, l)) : (S(t, 4 + (r ? 1 : 0), 3), ! function(t, e, s, r) {
+  }(t), i = t.opt_len + 3 + 7 >>> 3, (n = t.static_len + 3 + 7 >>> 3) <= i && (i = n)) : i = n = s + 5, s + 4 <= i && -1 !== e ? z(t, e, s, r) : 4 === t.strategy || n === i ? (S(t, 2 + (r ? 1 : 0), 3), j(t, h, l)) : (S(t, 4 + (r ? 1 : 0), 3), ! function(t, e, s, r) {
     var i;
     for (S(t, e - 257, 5), S(t, s - 1, 5), S(t, r - 4, 4), i = 0; i < r; i++) S(t, t.bl_tree[2 * b[i] + 1], 3);
     T(t, t.dyn_ltree, e - 1), T(t, t.dyn_dtree, s - 1)
-  }(t, t.l_desc.max_code + 1, t.d_desc.max_code + 1, c + 1), C(t, t.dyn_ltree, t.dyn_dtree)), B(t), r && I(t)
+  }(t, t.l_desc.max_code + 1, t.d_desc.max_code + 1, c + 1), j(t, t.dyn_ltree, t.dyn_dtree)), B(t), r && I(t)
 }, e._tr_tally = function(t, e, s) {
   return t.pending_buf[t.d_buf + 2 * t.last_lit] = e >>> 8 & 255, t.pending_buf[t.d_buf + 2 * t.last_lit + 1] = 255 & e, t.pending_buf[t.l_buf + t.last_lit] = 255 & s, t.last_lit++, 0 === e ? t.dyn_ltree[2 * s]++ : (t.matches++, e--, t.dyn_ltree[(v[s] + 256 + 1) * 2]++, t.dyn_dtree[2 * w(e)]++), t.last_lit === t.lit_bufsize - 1
 }, e._tr_align = function(t) {

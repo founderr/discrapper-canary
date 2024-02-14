@@ -1,28 +1,28 @@
 "use strict";
-var r = n("342646"),
-  o = n("37549"),
-  a = o("%Function.prototype.apply%"),
-  i = o("%Function.prototype.call%"),
-  s = o("%Reflect.apply%", !0) || r.call(i, a),
-  c = o("%Object.getOwnPropertyDescriptor%", !0),
-  l = o("%Object.defineProperty%", !0),
-  u = o("%Math.max%");
-if (l) try {
-  l({}, "a", {
+var r = s("342646"),
+  i = s("37549"),
+  n = i("%Function.prototype.apply%"),
+  c = i("%Function.prototype.call%"),
+  o = i("%Reflect.apply%", !0) || r.call(c, n),
+  f = i("%Object.getOwnPropertyDescriptor%", !0),
+  u = i("%Object.defineProperty%", !0),
+  a = i("%Math.max%");
+if (u) try {
+  u({}, "a", {
     value: 1
   })
-} catch (e) {
-  l = null
+} catch (t) {
+  u = null
 }
-e.exports = function(e) {
-  var t = s(r, i, arguments);
-  return c && l && c(t, "length").configurable && l(t, "length", {
-    value: 1 + u(0, e.length - (arguments.length - 1))
-  }), t
+t.exports = function(t) {
+  var e = o(r, c, arguments);
+  return f && u && f(e, "length").configurable && u(e, "length", {
+    value: 1 + a(0, t.length - (arguments.length - 1))
+  }), e
 };
 var d = function() {
-  return s(r, a, arguments)
+  return o(r, n, arguments)
 };
-l ? l(e.exports, "apply", {
+u ? u(t.exports, "apply", {
   value: d
-}) : e.exports.apply = d
+}) : t.exports.apply = d

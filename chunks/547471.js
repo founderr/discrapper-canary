@@ -23,8 +23,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var r = n("884691"),
-  o = n("638915"),
-  a = n("231420"),
+  a = n("638915"),
+  o = n("231420"),
   i = n("24899"),
   s = n("240849"),
   c = n("546262");
@@ -63,7 +63,7 @@ let v = r.createContext(null);
 
 function g() {
   let e = function() {
-    let e = (0, o.useIsSSR)(),
+    let e = (0, a.useIsSSR)(),
       [t, n] = (0, r.useState)(f);
     return ((0, r.useEffect)(() => (0 === h.size && window.addEventListener("languagechange", m), h.add(n), () => {
       h.delete(n), 0 === h.size && window.removeEventListener("languagechange", m)
@@ -79,14 +79,14 @@ let y = new WeakMap;
 function b(e, t) {
   var n;
   let r;
-  return t && a.LocalizedStringDictionary.getGlobalDictionaryForPackage(t) || (n = e, !(r = y.get(n)) && (r = new a.LocalizedStringDictionary(n), y.set(n, r)), r)
+  return t && o.LocalizedStringDictionary.getGlobalDictionaryForPackage(t) || (n = e, !(r = y.get(n)) && (r = new o.LocalizedStringDictionary(n), y.set(n, r)), r)
 }
 
 function x(e, t) {
   let {
     locale: n
-  } = g(), o = b(e, t);
-  return (0, r.useMemo)(() => new a.LocalizedStringFormatter(n, o), [n, o])
+  } = g(), a = b(e, t);
+  return (0, r.useMemo)(() => new o.LocalizedStringFormatter(n, a), [n, a])
 }
 
 function S(e) {
@@ -131,21 +131,21 @@ function P(e) {
       ...e
     }),
     n = (0, r.useCallback)((e, n) => 0 === n.length || (e = e.normalize("NFC"), n = n.normalize("NFC"), 0 === t.compare(e.slice(0, n.length), n)), [t]),
-    o = (0, r.useCallback)((e, n) => 0 === n.length || (e = e.normalize("NFC"), n = n.normalize("NFC"), 0 === t.compare(e.slice(-n.length), n)), [t]),
-    a = (0, r.useCallback)((e, n) => {
+    a = (0, r.useCallback)((e, n) => 0 === n.length || (e = e.normalize("NFC"), n = n.normalize("NFC"), 0 === t.compare(e.slice(-n.length), n)), [t]),
+    o = (0, r.useCallback)((e, n) => {
       if (0 === n.length) return !0;
       e = e.normalize("NFC"), n = n.normalize("NFC");
       let r = 0,
-        o = n.length;
-      for (; r + o <= e.length; r++) {
-        let a = e.slice(r, r + o);
-        if (0 === t.compare(n, a)) return !0
+        a = n.length;
+      for (; r + a <= e.length; r++) {
+        let o = e.slice(r, r + a);
+        if (0 === t.compare(n, o)) return !0
       }
       return !1
     }, [t]);
   return (0, r.useMemo)(() => ({
     startsWith: n,
-    endsWith: o,
-    contains: a
-  }), [n, o, a])
+    endsWith: a,
+    contains: o
+  }), [n, a, o])
 }

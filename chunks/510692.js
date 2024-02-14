@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return o
   }
 });
-var l = n("37983");
-n("884691");
-var u = n("446674"),
-  a = n("77078"),
-  d = n("817963"),
-  i = n("398604"),
-  s = n("534222"),
-  r = n("782340");
+var n = l("37983");
+l("884691");
+var a = l("446674"),
+  u = l("77078"),
+  s = l("817963"),
+  d = l("398604"),
+  r = l("534222"),
+  i = l("782340");
 
 function o(e, t, o) {
   var c;
   let {
-    canManageGuildEvent: E
-  } = (0, d.useManageResourcePermissions)(null != o ? o : t), f = (0, u.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(e), [e]), _ = E(f), T = null != (0, s.useActiveEvent)(null !== (c = null == o ? void 0 : o.id) && void 0 !== c ? c : ""), S = null != f && (0, i.isGuildScheduledEventActive)(f);
-  return _ && !S && !T ? (0, l.jsx)(a.MenuItem, {
-    id: r.default.Messages.START_EVENT,
-    label: r.default.Messages.START_EVENT,
+    canManageGuildEvent: f
+  } = (0, s.useManageResourcePermissions)(null != o ? o : t), E = (0, a.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(e), [e]), _ = f(E), T = null != (0, r.useActiveEvent)(null !== (c = null == o ? void 0 : o.id) && void 0 !== c ? c : ""), M = null != E && (0, d.isGuildScheduledEventActive)(E);
+  return _ && !M && !T ? (0, n.jsx)(u.MenuItem, {
+    id: i.default.Messages.START_EVENT,
+    label: i.default.Messages.START_EVENT,
     action: function() {
-      null != f && (0, a.openModalLazy)(async () => {
+      null != E && (0, u.openModalLazy)(async () => {
         let {
           default: e
-        } = await n.el("298843").then(n.bind(n, "298843"));
-        return t => (0, l.jsx)(e, {
+        } = await l.el("298843").then(l.bind(l, "298843"));
+        return t => (0, n.jsx)(e, {
           ...t,
-          event: f
+          event: E
         })
       })
     }

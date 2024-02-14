@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   },
   ADD_TARGET: function() {
-    return o
+    return a
   },
   REMOVE_SOURCE: function() {
-    return a
+    return o
   },
   REMOVE_TARGET: function() {
     return i
@@ -26,8 +26,8 @@ n.r(t), n.d(t, {
   }
 });
 var r = "dnd-core/ADD_SOURCE",
-  o = "dnd-core/ADD_TARGET",
-  a = "dnd-core/REMOVE_SOURCE",
+  a = "dnd-core/ADD_TARGET",
+  o = "dnd-core/REMOVE_SOURCE",
   i = "dnd-core/REMOVE_TARGET";
 
 function s(e) {
@@ -41,7 +41,7 @@ function s(e) {
 
 function c(e) {
   return {
-    type: o,
+    type: a,
     payload: {
       targetId: e
     }
@@ -50,7 +50,7 @@ function c(e) {
 
 function l(e) {
   return {
-    type: a,
+    type: o,
     payload: {
       sourceId: e
     }

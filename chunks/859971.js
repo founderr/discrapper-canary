@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   },
   toSeconds: function() {
-    return l
+    return s
   },
   getMaxValue: function() {
-    return s
+    return r
   },
   getStartHandleValue: function() {
     return u
@@ -23,24 +23,24 @@ n.r(t), n.d(t, {
   }
 }), n("70102"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
 var a = n("89050"),
-  r = n("782340");
+  l = n("782340");
 let i = (e, t, n) => -1 === e ? 0 : e - t * e / n;
 
-function l(e) {
+function s(e) {
   return e / 1e3
 }
-let s = (e, t, n) => -1 === e ? n : e + t * (n - e) / n,
+let r = (e, t, n) => -1 === e ? n : e + t * (n - e) / n,
   u = (e, t, n, a) => {
-    let r = 0;
-    return (r = t >= 0 && n > 0 ? (e - (t - n * t / a)) * 100 / n : 100 * e / a).toFixed(4)
+    let l = 0;
+    return (l = t >= 0 && n > 0 ? (e - (t - n * t / a)) * 100 / n : 100 * e / a).toFixed(4)
   },
   o = (e, t, n, a) => {
-    let r = 0;
-    return (r = t >= 0 && n > 0 ? -((e - (t + n * (a - t) / a)) * 100) / n : -100 * e / a + 100).toFixed(4)
+    let l = 0;
+    return (l = t >= 0 && n > 0 ? -((e - (t + n * (a - t) / a)) * 100) / n : -100 * e / a + 100).toFixed(4)
   };
 async function d(e) {
   var t;
-  if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !a.SUPPORTED_AUDIO_FILE_TYPES.has(e.type)) throw Error(r.default.Messages.SOUNDBOARD_ERROR_INVALID_FILE_TYPE.format({
+  if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !a.SUPPORTED_AUDIO_FILE_TYPES.has(e.type)) throw Error(l.default.Messages.SOUNDBOARD_ERROR_INVALID_FILE_TYPE.format({
     fileType: e.type
   }));
   let n = URL.createObjectURL(e),

@@ -11,19 +11,19 @@ var l = n("37983"),
   r = n("272030"),
   o = n("406291"),
   u = n("782340"),
-  d = n("755203");
+  d = n("267336");
 
 function c(e) {
   var t;
   let a, c, f, {
-      className: p,
-      activeCommand: m,
+      className: m,
+      activeCommand: p,
       activeOption: h,
       optionStates: E
     } = e,
     g = i.useCallback(e => {
       var t;
-      let i = null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id;
+      let i = null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id;
       if (null == i) {
         e.preventDefault();
         return
@@ -37,14 +37,14 @@ function c(e) {
           label: u.default.Messages.COPY_ID_COMMAND
         })
       })
-    }, [null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id]);
-  if (null == m) return null;
+    }, [null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id]);
+  if (null == p) return null;
   if (null != h) {
     let e = E[h.name].lastValidationResult;
     a = h.displayName, c = h.displayDescription, f = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error
-  } else a = "".concat(o.COMMAND_SENTINEL).concat(m.displayName), c = m.displayDescription, f = null;
+  } else a = "".concat(o.COMMAND_SENTINEL).concat(p.displayName), c = p.displayDescription, f = null;
   return (0, l.jsxs)("div", {
-    className: s(p, d.bar),
+    className: s(m, d.bar),
     onContextMenu: g,
     children: [(0, l.jsx)("span", {
       className: d.name,

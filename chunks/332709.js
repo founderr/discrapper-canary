@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   useMeter: function() {
-    return o
+    return a
   }
 });
 var r = n("141788");
 
-function o(e) {
+function a(e) {
   let {
     progressBarProps: t,
     labelProps: n

@@ -20,8 +20,8 @@ var l = n("37983"),
   d = n("669491"),
   c = n("77078"),
   f = n("430568"),
-  p = n("206230"),
-  m = n("526887"),
+  m = n("206230"),
+  p = n("526887"),
   h = n("697218"),
   E = n("118849"),
   g = n("671434"),
@@ -31,12 +31,12 @@ var l = n("37983"),
   v = n("305122"),
   I = n("235004"),
   _ = n("389480"),
-  y = n("78581"),
+  N = n("78581"),
   A = n("23106"),
-  N = n("796864"),
+  y = n("796864"),
   x = n("172858"),
   O = n("782340"),
-  R = n("955761");
+  R = n("802501");
 
 function M(e) {
   let {
@@ -94,8 +94,8 @@ var P = i.forwardRef(function(e, t) {
     interactive: k = !0,
     enableSecondaryActions: w = !1,
     suppressPlaySound: F,
-    onMouseEnter: G,
-    onSelectItem: B,
+    onMouseEnter: B,
+    onSelectItem: G,
     analyticsLocations: H,
     buttonOverlay: V = _.SoundButtonOverlay.PLAY,
     ...K
@@ -103,14 +103,14 @@ var P = i.forwardRef(function(e, t) {
     soundId: W,
     name: Y,
     emojiId: z,
-    emojiName: J
-  } = P, q = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), Z = (0, N.useSoundButtonContextMenu)(P, null == b ? void 0 : b.guild_id), {
+    emojiName: Z
+  } = P, J = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), q = (0, y.useSoundButtonContextMenu)(P, null == b ? void 0 : b.guild_id), {
     playSoundboardSound: X,
     previewSound: Q,
     isPlayingSound: $
   } = (0, A.default)(P, null !== (n = null == b ? void 0 : b.id) && void 0 !== n ? n : null), {
     createMultipleConfettiAt: ee
-  } = i.useContext(m.ConfettiCannonContext), et = i.useRef(null);
+  } = i.useContext(p.ConfettiCannonContext), et = i.useRef(null);
   let en = (a = P.soundId, T = et.current, i.useMemo(() => {
       if (null == T || "1" !== a) return {
         x: 0,
@@ -122,25 +122,25 @@ var P = i.forwardRef(function(e, t) {
         y: e.top + e.height / 2
       }
     }, [T, a])),
-    el = (0, o.useStateFromStores)([p.default], () => p.default.useReducedMotion),
+    el = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion),
     ei = i.useRef(.01),
     ea = i.useRef(new u.Interval),
     es = "1" === P.soundId,
     er = (0, o.useStateFromStores)([I.default], () => I.default.isFavoriteSound(W), [W]),
     eo = "sound-".concat(P.soundId),
     eu = (0, r.useListItem)(eo),
-    ed = null != z || null != J,
-    ec = !(0, y.canUseSoundboardSound)(q, P, b),
+    ed = null != z || null != Z,
+    ec = !(0, N.canUseSoundboardSound)(J, P, b),
     ef = D || w && !ec;
 
-  function ep(e) {
+  function em(e) {
     e.stopPropagation(), e.currentTarget.blur(), er ? (0, v.removeFavoriteSound)(W) : (0, v.addFavoriteSound)(W)
   }
 
-  function em() {
+  function ep() {
     return (0, l.jsx)(M, {
       disabled: !k && !D,
-      onClick: ep,
+      onClick: em,
       text: O.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
         emojiName: P.emojiName,
         soundName: P.name
@@ -168,7 +168,7 @@ var P = i.forwardRef(function(e, t) {
         className: R.buttonOverlayActions,
         children: [ef && eh, !F && !ec && (0, l.jsx)(S.default, {
           className: R.playIcon
-        }), ef && em()]
+        }), ef && ep()]
       })]
     });
   return i.useEffect(() => {
@@ -179,7 +179,7 @@ var P = i.forwardRef(function(e, t) {
   }, [es]), (0, l.jsxs)("li", {
     ref: t,
     className: R.soundButtonWrapper,
-    onMouseEnter: G,
+    onMouseEnter: B,
     children: [(0, l.jsxs)(c.ClickableContainer, {
       ...K,
       buttonProps: {
@@ -203,20 +203,20 @@ var P = i.forwardRef(function(e, t) {
       onClick: function() {
         if (es && !el && (ei.current = Math.min(ei.current + .01, .1), Math.random() < ei.current && ee(en.x, en.y, void 0, void 0, {
             sprite: x.DUCK_CONFETTI_SPRITE
-          })), null != B) {
-          B();
+          })), null != G) {
+          G();
           return
         }
         F || X(H)
       },
-      onContextMenu: w && !ec ? Z : void 0,
+      onContextMenu: w && !ec ? q : void 0,
       children: [(0, l.jsxs)("div", {
         className: R.soundInfo,
         "aria-hidden": !0,
         ref: et,
         children: [ed && (0, l.jsx)(f.default, {
           emojiId: z,
-          emojiName: J,
+          emojiName: Z,
           className: R.emoji
         }), (0, l.jsx)(c.Text, {
           variant: "text-xs/medium",
@@ -244,7 +244,7 @@ var P = i.forwardRef(function(e, t) {
                     color: "header-primary",
                     children: O.default.Messages.GIFT_SELECT_SOUNDBOARD_ADD
                   })]
-                }), ef && em()]
+                }), ef && ep()]
               })]
             });
           case _.SoundButtonOverlay.PLAY:

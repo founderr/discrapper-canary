@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return N
   }
 }), n("222007");
 var l = n("37983"),
@@ -14,36 +14,36 @@ var l = n("37983"),
   d = n("850068"),
   c = n("79112"),
   f = n("521012"),
-  p = n("791106"),
-  m = n("945330"),
+  m = n("791106"),
+  p = n("945330"),
   h = n("216422"),
   E = n("719923"),
   g = n("788506"),
   S = n("49111"),
   C = n("646718"),
   T = n("782340"),
-  v = n("764942");
+  v = n("669821");
 let I = "premiumRetentionEmojiPickerNotice",
   _ = o.default.get(I);
-var y = e => {
+var N = e => {
   let {
     closePopout: t,
     channel: n
-  } = e, [a, y] = i.useState(!1), {
+  } = e, [a, N] = i.useState(!1), {
     subscription: A,
-    hasFetchedSubscriptions: N
+    hasFetchedSubscriptions: y
   } = (0, r.useStateFromStoresObject)([f.default], () => ({
     subscription: f.default.getPremiumSubscription(),
     hasFetchedSubscriptions: f.default.hasFetchedSubscriptions()
   }));
   if (i.useEffect(() => {
-      !N && (0, d.fetchSubscriptions)()
-    }, [N]), null == A || !(0, E.isSubscriptionStatusFailedPayment)(A.status) || a) return null;
+      !y && (0, d.fetchSubscriptions)()
+    }, [y]), null == A || !(0, E.isSubscriptionStatusFailedPayment)(A.status) || a) return null;
   let x = A.status === S.SubscriptionStatusTypes.PAST_DUE ? (0, E.getBillingGracePeriodDays)(A) : C.MAX_ACCOUNT_HOLD_DAYS,
     O = s(A.currentPeriodStart).add(x, "days"),
     R = "".concat(A.id, ":").concat(O.toISOString());
   if (_ === R) return null;
-  let M = E.default.getPremiumType(A.planId) === C.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : E.default.getPremiumType(A.planId) === C.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;
+  let M = E.default.getPremiumType(A.planId) === C.PremiumTypes.TIER_0 ? m.GradientCssUrls.PREMIUM_TIER_0 : E.default.getPremiumType(A.planId) === C.PremiumTypes.TIER_1 ? m.GradientCssUrls.PREMIUM_TIER_1 : m.GradientCssUrls.PREMIUM_TIER_2;
   return (0, l.jsxs)("div", {
     className: v.premiumRetentionNotice,
     children: [(0, l.jsx)(h.default, {
@@ -67,9 +67,9 @@ var y = e => {
       })]
     }), (0, l.jsx)(u.Clickable, {
       onClick: () => {
-        o.default.set(I, R), _ = R, y(!0)
+        o.default.set(I, R), _ = R, N(!0)
       },
-      children: (0, l.jsx)(m.default, {
+      children: (0, l.jsx)(p.default, {
         className: v.premiumRetentionNoticeClose
       })
     })]

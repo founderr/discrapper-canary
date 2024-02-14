@@ -1,16 +1,16 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
 });
-var r = l("37983");
-l("884691");
-var a = l("77078"),
-  n = l("38766"),
-  s = l("49111"),
-  i = l("782340"),
-  o = l("364547");
+var l = n("37983");
+n("884691");
+var i = n("77078"),
+  a = n("38766"),
+  s = n("49111"),
+  r = n("782340"),
+  o = n("769143");
 let u = {
     page: s.AnalyticsPages.GUILD_CHANNEL,
     section: s.AnalyticsSections.PROFILE_POPOUT,
@@ -24,29 +24,29 @@ let u = {
 function c(e) {
   let {
     onSelect: t,
-    onClose: l,
+    onClose: n,
     guild: s
-  } = e, c = (0, n.default)({
+  } = e, c = (0, a.default)({
     guild: s,
     analyticsLocation: u
-  }), f = (0, n.default)({
+  }), f = (0, a.default)({
     analyticsLocation: d
   });
-  return (0, r.jsxs)(a.Menu, {
+  return (0, l.jsxs)(i.Menu, {
     className: o.popoutMenu,
     onSelect: t,
     navId: "edit-profile-popout",
-    onClose: l,
-    "aria-label": i.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-    children: [(0, r.jsx)(a.MenuItem, {
+    onClose: n,
+    "aria-label": r.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
+    children: [(0, l.jsx)(i.MenuItem, {
       id: "edit-server-profile",
-      label: i.default.Messages.CHANGE_IDENTITY,
-      subtext: i.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
+      label: r.default.Messages.CHANGE_IDENTITY,
+      subtext: r.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
       action: () => c()
-    }), (0, r.jsx)(a.MenuItem, {
+    }), (0, l.jsx)(i.MenuItem, {
       id: "edit-default-profile",
-      label: i.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
-      subtext: i.default.Messages.USER_PROFILE_MENU_HELP,
+      label: r.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
+      subtext: r.default.Messages.USER_PROFILE_MENU_HELP,
       action: () => f()
     })]
   })

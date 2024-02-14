@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("70102");
 var r = n("900255"),
-  o = n("959708");
+  a = n("959708");
 
-function a(e, t) {
+function o(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
@@ -28,11 +28,11 @@ var s = ["canDrag", "beginDrag", "isDragging", "endDrag"],
     var e, t, n;
 
     function r(e, t, n) {
-      var o = this;
+      var a = this;
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
       }(this, r), i(this, "props", null), i(this, "spec", void 0), i(this, "monitor", void 0), i(this, "ref", void 0), i(this, "beginDrag", function() {
-        if (o.props) return o.spec.beginDrag(o.props, o.monitor, o.ref.current)
+        if (a.props) return a.spec.beginDrag(a.props, a.monitor, a.ref.current)
       }), this.spec = e, this.monitor = t, this.ref = n
     }
     return e = r, t = [{
@@ -53,9 +53,9 @@ var s = ["canDrag", "beginDrag", "isDragging", "endDrag"],
     }, {
       key: "endDrag",
       value: function() {
-        if (!!this.props) this.spec.endDrag && this.spec.endDrag(this.props, this.monitor, (0, o.getDecoratedComponent)(this.ref))
+        if (!!this.props) this.spec.endDrag && this.spec.endDrag(this.props, this.monitor, (0, a.getDecoratedComponent)(this.ref))
       }
-    }], a(e.prototype, t), n && a(e, n), r
+    }], o(e.prototype, t), n && o(e, n), r
   }();
 
 function u(e) {

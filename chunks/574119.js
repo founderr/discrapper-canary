@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("424973");
 var r = n("900255"),
-  o = n("897345"),
-  a = n("125692");
+  a = n("897345"),
+  o = n("125692");
 
 function i(e, t) {
   var n = Object.keys(e);
@@ -49,15 +49,15 @@ function c(e) {
       var t = e.getTargetIds().filter(e.canDropOnTarget, e);
       return t.reverse(), t
     })(n).forEach(function(c, l) {
-      var u = function(e, t, n, o) {
+      var u = function(e, t, n, a) {
           var i = n.getTarget(e),
-            s = i ? i.drop(o, e) : void 0;
+            s = i ? i.drop(a, e) : void 0;
           return function(e) {
-            (0, r.invariant)(void 0 === e || (0, a.isObject)(e), "Drop result must either be an object or undefined.")
-          }(s), void 0 === s && (s = 0 === t ? {} : o.getDropResult()), s
+            (0, r.invariant)(void 0 === e || (0, o.isObject)(e), "Drop result must either be an object or undefined.")
+          }(s), void 0 === s && (s = 0 === t ? {} : a.getDropResult()), s
         }(c, l, i, n),
         d = {
-          type: o.DROP,
+          type: a.DROP,
           payload: {
             dropResult: s(s({}, t), u)
           }

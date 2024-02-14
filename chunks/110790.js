@@ -9,46 +9,46 @@ t.exports = function(t, e, s, f, u, a, d, p) {
     M = 0,
     S = 0,
     k = 0,
-    E = 0,
     A = 0,
+    E = 0,
     B = 0,
     I = 0,
     R = 0,
-    j = 0,
-    C = 0,
-    O = null,
     P = 0,
+    j = 0,
+    C = null,
+    O = 0,
     T = new r.Buf16(16),
     D = new r.Buf16(16),
     z = null,
-    L = 0;
+    N = 0;
   for (M = 0; M <= 15; M++) T[M] = 0;
   for (S = 0; S < f; S++) T[e[s + S]]++;
-  for (E = 15, A = w; E >= 1 && 0 === T[E]; E--);
-  if (A > E && (A = E), 0 === E) return u[a++] = 20971520, u[a++] = 20971520, p.bits = 1, 0;
-  for (k = 1; k < E && 0 === T[k]; k++);
-  for (A < k && (A = k), R = 1, M = 1; M <= 15; M++)
+  for (A = 15, E = w; A >= 1 && 0 === T[A]; A--);
+  if (E > A && (E = A), 0 === A) return u[a++] = 20971520, u[a++] = 20971520, p.bits = 1, 0;
+  for (k = 1; k < A && 0 === T[k]; k++);
+  for (E < k && (E = k), R = 1, M = 1; M <= 15; M++)
     if (R <<= 1, (R -= T[M]) < 0) return -1;
-  if (R > 0 && (0 === t || 1 !== E)) return -1;
+  if (R > 0 && (0 === t || 1 !== A)) return -1;
   for (M = 1, D[1] = 0; M < 15; M++) D[M + 1] = D[M] + T[M];
   for (S = 0; S < f; S++) 0 !== e[s + S] && (d[D[e[s + S]]++] = S);
-  if (0 === t ? (O = z = d, x = 19) : 1 === t ? (O = i, P -= 257, z = n, L -= 257, x = 256) : (O = c, z = o, x = -1), C = 0, S = 0, M = k, v = a, B = A, I = 0, l = -1, g = (j = 1 << A) - 1, 1 === t && j > 852 || 2 === t && j > 592) return 1;
+  if (0 === t ? (C = z = d, x = 19) : 1 === t ? (C = i, O -= 257, z = n, N -= 257, x = 256) : (C = c, z = o, x = -1), j = 0, S = 0, M = k, v = a, B = E, I = 0, l = -1, g = (P = 1 << E) - 1, 1 === t && P > 852 || 2 === t && P > 592) return 1;
   for (;;) {
-    m = M - I, d[S] < x ? (y = 0, _ = d[S]) : d[S] > x ? (y = z[L + d[S]], _ = O[P + d[S]]) : (y = 96, _ = 0), b = 1 << M - I, k = h = 1 << B;
-    do u[v + (C >> I) + (h -= b)] = m << 24 | y << 16 | _ | 0; while (0 !== h);
-    for (b = 1 << M - 1; C & b;) b >>= 1;
-    if (0 !== b ? (C &= b - 1, C += b) : C = 0, S++, 0 == --T[M]) {
-      if (M === E) break;
+    m = M - I, d[S] < x ? (y = 0, _ = d[S]) : d[S] > x ? (y = z[N + d[S]], _ = C[O + d[S]]) : (y = 96, _ = 0), b = 1 << M - I, k = h = 1 << B;
+    do u[v + (j >> I) + (h -= b)] = m << 24 | y << 16 | _ | 0; while (0 !== h);
+    for (b = 1 << M - 1; j & b;) b >>= 1;
+    if (0 !== b ? (j &= b - 1, j += b) : j = 0, S++, 0 == --T[M]) {
+      if (M === A) break;
       M = e[s + d[S]]
     }
-    if (M > A && (C & g) !== l) {
-      for (0 === I && (I = A), v += k, R = 1 << (B = M - I); B + I < E && !((R -= T[B + I]) <= 0);) {
+    if (M > E && (j & g) !== l) {
+      for (0 === I && (I = E), v += k, R = 1 << (B = M - I); B + I < A && !((R -= T[B + I]) <= 0);) {
         ;
         B++, R <<= 1
       }
-      if (j += 1 << B, 1 === t && j > 852 || 2 === t && j > 592) return 1;
-      u[l = C & g] = A << 24 | B << 16 | v - a | 0
+      if (P += 1 << B, 1 === t && P > 852 || 2 === t && P > 592) return 1;
+      u[l = j & g] = E << 24 | B << 16 | v - a | 0
     }
   }
-  return 0 !== C && (u[v + C] = M - I << 24 | 4194304), p.bits = A, 0
+  return 0 !== j && (u[v + j] = M - I << 24 | 4194304), p.bits = E, 0
 }

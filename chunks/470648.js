@@ -1,67 +1,67 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return g
+    return I
   }
 });
-var a = l("37983");
-l("884691");
-var n = l("627445"),
-  r = l.n(n),
-  i = l("394846"),
-  u = l("446674"),
-  s = l("77078"),
-  o = l("272030"),
-  d = l("980215"),
-  c = l("506885"),
-  f = l("981601"),
-  m = l("42203"),
-  h = l("26989"),
-  p = l("305961"),
-  E = l("27618"),
-  v = l("697218"),
-  _ = l("666897"),
-  x = l("387111"),
-  I = l("158998"),
-  S = l("680894");
+var l = n("37983");
+n("884691");
+var i = n("627445"),
+  a = n.n(i),
+  s = n("394846"),
+  r = n("446674"),
+  o = n("77078"),
+  u = n("272030"),
+  d = n("980215"),
+  c = n("506885"),
+  f = n("981601"),
+  m = n("42203"),
+  p = n("26989"),
+  h = n("305961"),
+  E = n("27618"),
+  g = n("697218"),
+  S = n("666897"),
+  C = n("387111"),
+  T = n("158998"),
+  v = n("680894");
 
-function g(e) {
+function I(e) {
   let {
     className: t,
-    userId: n,
-    channelId: g,
-    inlinePreview: L = !1
-  } = e, M = (0, u.useStateFromStores)([v.default], () => v.default.getUser(n)), C = (0, u.useStateFromStores)([m.default], () => m.default.getChannel(g)), R = null != C ? C.getGuildId() : null, T = L || null == M || null == R || null == g ? void 0 : e => {
-    null != C && (0, o.openContextMenuLazy)(e, async () => {
+    userId: i,
+    channelId: I,
+    inlinePreview: _ = !1
+  } = e, N = (0, r.useStateFromStores)([g.default], () => g.default.getUser(i)), A = (0, r.useStateFromStores)([m.default], () => m.default.getChannel(I)), y = null != A ? A.getGuildId() : null, x = _ || null == N || null == y || null == I ? void 0 : e => {
+    null != A && (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await l.el("834247").then(l.bind(l, "834247"));
-      return t => (0, a.jsx)(e, {
+      } = await n.el("834247").then(n.bind(n, "834247"));
+      return t => (0, l.jsx)(e, {
         ...t,
-        user: M,
-        channel: C,
-        guildId: R
+        user: N,
+        channel: A,
+        guildId: y
       })
     })
-  }, N = I.default.useName(M), j = (0, u.useStateFromStores)([m.default, h.default, E.default], () => x.default.getNickname(R, g, M)), A = p.default.getGuild(R), U = (0, d.useClydeEnabled)(A, C), y = U && n === S.CLYDE_AI_USER_ID ? S.CLYDE_AI_MENTION_COLOR : null, P = e => (0, a.jsx)(_.default, {
+  }, O = T.default.useName(N), R = (0, r.useStateFromStores)([m.default, p.default, E.default], () => C.default.getNickname(y, I, N)), M = h.default.getGuild(y), L = (0, d.useClydeEnabled)(M, A), P = L && i === v.CLYDE_AI_USER_ID ? v.CLYDE_AI_MENTION_COLOR : null, b = e => (0, l.jsx)(S.default, {
     className: t,
-    onContextMenu: T,
-    color: y,
+    onContextMenu: x,
+    color: P,
     ...e,
-    children: "@".concat(null != j ? j : N)
+    children: "@".concat(null != R ? R : O)
   });
-  return L ? P() : (0, a.jsx)(s.Popout, {
-    preload: null == M ? void 0 : () => (0, c.default)(M.id, M.getAvatarURL(R, 80), {
-      guildId: null != R ? R : void 0,
-      channelId: null != g ? g : void 0
+  return _ ? b() : (0, l.jsx)(o.Popout, {
+    preload: null == N ? void 0 : () => (0, c.default)(N.id, N.getAvatarURL(y, 80), {
+      guildId: null != y ? y : void 0,
+      channelId: null != I ? I : void 0
     }),
-    renderPopout: e => (r(null != M, "Unexpected missing user"), (0, a.jsx)(f.default, {
-      userId: M.id,
-      guildId: null != R ? R : void 0,
-      channelId: g,
+    renderPopout: e => (a(null != N, "Unexpected missing user"), (0, l.jsx)(f.default, {
+      userId: N.id,
+      guildId: null != y ? y : void 0,
+      channelId: I,
       ...e
     })),
-    position: i.isMobile ? "top" : "right",
-    children: e => P(e)
+    position: s.isMobile ? "top" : "right",
+    children: e => b(e)
   })
 }

@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return a
   },
   getWaveformId: function() {
-    return r
+    return l
   },
   getAudioFileId: function() {
     return i
   },
   SUPPORTED_AUDIO_FILE_TYPES: function() {
-    return l
+    return s
   }
 }), n("222007");
 let a = {
@@ -20,9 +20,9 @@ let a = {
     fineTuningScale: 10,
     loudnessThreshold: .3
   },
-  r = (e, t) => {
+  l = (e, t) => {
     let n = "".concat(e[0], "-").concat(e[e.length - 1], "-").concat(e.byteLength);
     return "".concat(n, "-").concat(JSON.stringify(t))
   },
   i = e => "".concat(e.name, "-").concat(e.size, "-").concat(e.lastModified),
-  l = new Set(["audio/mpeg", "audio/mp3", "audio/wav", "audio/x-wav", "audio/ogg", "video/mp4"])
+  s = new Set(["audio/mpeg", "audio/mp3", "audio/wav", "audio/x-wav", "audio/ogg", "video/mp4"])

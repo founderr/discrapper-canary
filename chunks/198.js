@@ -14,9 +14,9 @@ var l = n("37983"),
   d = n("978679"),
   c = n("158998"),
   f = n("49111"),
-  p = n("646718"),
-  m = n("782340"),
-  h = n("537461"),
+  m = n("646718"),
+  p = n("782340"),
+  h = n("350583"),
   E = i.memo(function(e) {
     let {
       disabled: t,
@@ -29,7 +29,7 @@ var l = n("37983"),
       isGift: !0,
       giftRecipient: null === E ? void 0 : E,
       initialPlanId: null,
-      subscriptionTier: p.PremiumSubscriptionSKUs.TIER_2,
+      subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
       analyticsLocations: i,
       analyticsObject: {
         page: n.isPrivate() ? f.AnalyticsPages.DM_CHANNEL : f.AnalyticsPages.GUILD_CHANNEL,
@@ -39,12 +39,12 @@ var l = n("37983"),
       }
     });
     return (0, l.jsx)(a.Tooltip, {
-      text: m.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
+      text: p.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
       children: e => (0, l.jsx)(u.default, {
         ...e,
         innerClassName: h.button,
         isActive: !1,
-        "aria-label": m.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+        "aria-label": p.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
         "aria-haspopup": "dialog",
         onClick: g,
         children: (0, l.jsx)(d.default, {})

@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   usePreventIdle: function() {
-    return i
+    return s
   },
   default: function() {
     return r
   }
 });
 var l = n("37983"),
-  a = n("884691"),
-  s = n("908583");
+  i = n("884691"),
+  a = n("908583");
 
-function i(e) {
+function s(e) {
   let {
     onPreventIdle: t,
     onAllowIdle: n,
     onActive: l
-  } = a.useContext(s.IdleHandlerContext), i = a.useCallback(() => {
+  } = i.useContext(a.IdleHandlerContext), s = i.useCallback(() => {
     t(e)
-  }, [e, t]), r = a.useCallback(() => {
+  }, [e, t]), r = i.useCallback(() => {
     n(e)
   }, [e, n]);
   return {
-    preventIdle: i,
+    preventIdle: s,
     allowIdle: r,
     onActive: l
   }
@@ -35,12 +35,12 @@ function r(e) {
   } = e, {
     onForceIdle: r,
     onActive: o
-  } = a.useContext(s.IdleHandlerContext), {
+  } = i.useContext(a.IdleHandlerContext), {
     preventIdle: u,
     allowIdle: d
-  } = i("interact");
-  a.useEffect(() => () => d(), [d]);
-  let c = a.useCallback(e => {
+  } = s("interact");
+  i.useEffect(() => () => d(), [d]);
+  let c = i.useCallback(e => {
     var t;
     let n = null !== (t = e.target.ownerDocument) && void 0 !== t ? t : document;
     !e.currentTarget.contains(n.activeElement) && r()

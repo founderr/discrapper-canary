@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useExpressionPickerGridWidth: function() {
-    return p
+    return m
   },
   useSynchronizedScrollPositionForActiveCategoryIndex: function() {
-    return m
+    return p
   },
   useSynchronizedActiveCategoryIndexForScrollPosition: function() {
     return h
@@ -29,7 +29,7 @@ var l = n("884691"),
   d = n("246511"),
   c = n("49111");
 let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-  p = e => {
+  m = e => {
     let {
       gridWrapperRef: t,
       containerWidth: n,
@@ -47,7 +47,7 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       return window.addEventListener("resize", e), () => window.removeEventListener("resize", e)
     }, [d]), o
   },
-  m = e => {
+  p = e => {
     let {
       activeCategoryIndex: t,
       listRef: n,
@@ -79,7 +79,7 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       disableForSearch: u = !0
     } = e, d = l.useRef(c.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), f = l.useMemo(() => a.debounce(() => {
       i.current = !1
-    }, 250), [i]), p = l.useMemo(() => a.debounce(e => {
+    }, 250), [i]), m = l.useMemo(() => a.debounce(e => {
       ("" === s || !u) && (window.cancelAnimationFrame(d.current), d.current = window.requestAnimationFrame(() => {
         var l;
         let i = null === (l = n.current) || void 0 === l ? void 0 : l.getSectionDescriptors();
@@ -93,10 +93,10 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           s = -1 === a ? 0 : a;
         t !== s && o(s)
       }))
-    }, 0), [s, n, t, r, o, u]), m = l.useCallback(e => {
-      i.current = !0, f(), p(e)
-    }, [i, f, p]);
-    return m
+    }, 0), [s, n, t, r, o, u]), p = l.useCallback(e => {
+      i.current = !0, f(), m(e)
+    }, [i, f, m]);
+    return p
   },
   E = e => {
     let {
@@ -136,11 +136,11 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         case s.ActionType.NAVIGATE_CROSSLINE_END:
           c(t)
       }
-    }, [c]), p = l.useCallback((e, t, n) => {
+    }, [c]), m = l.useCallback((e, t, n) => {
       let l = d(e, t);
       null != l && r(l, n)
     }, [d, r]), {
-      dispatch: m,
+      dispatch: p,
       getItemProps: h,
       getRowProps: E,
       getContainerProps: g
@@ -148,7 +148,7 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       navId: n,
       columnCounts: t,
       onDispatch: f,
-      onSelect: p,
+      onSelect: m,
       autoFocusElement: !1,
       useVirtualFocus: !0
     }), {
@@ -167,7 +167,7 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       };
       return window.addEventListener("mousemove", e), () => window.removeEventListener("mousemove", e)
     }, []), {
-      gridDispatch: m,
+      gridDispatch: p,
       getItemProps: h,
       getRowProps: E,
       gridContainerProps: S,
@@ -193,7 +193,7 @@ function g(e) {
       d = [],
       c = 0,
       f = 0,
-      p = 0;
+      m = 0;
     if (0 !== i) {
       let l = function(t, n) {
         let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -207,17 +207,17 @@ function g(e) {
               gridSectionIndex: f,
               rowIndex: c,
               columnIndex: t,
-              visibleRowIndex: p,
+              visibleRowIndex: m,
               category: n
             }));
-          !l && (p++, d.push(r), o.push(r.length)), c++
+          !l && (m++, d.push(r), o.push(r.length)), c++
         }
         f++
       };
       for (let e of t)
         if (e.items.length > 0) {
-          var m;
-          l(e.items, e.categoryInfo.type, null !== (m = null == n ? void 0 : n.has("".concat(e.key))) && void 0 !== m && m)
+          var p;
+          l(e.items, e.categoryInfo.type, null !== (p = null == n ? void 0 : n.has("".concat(e.key))) && void 0 !== p && p)
         }
     }
     return {
@@ -242,8 +242,8 @@ function S(e) {
     gridDispatch: u,
     getItemProps: c,
     getRowProps: f,
-    gridContainerProps: p,
-    handleGridContainerKeyDown: m,
+    gridContainerProps: m,
+    handleGridContainerKeyDown: p,
     isUsingKeyboardNavigation: h
   } = E({
     columnCounts: t,
@@ -268,8 +268,8 @@ function S(e) {
   }, e => e.inspectedExpressionPosition), [u, a]), {
     getItemProps: c,
     getRowProps: f,
-    gridContainerProps: p,
-    handleGridContainerKeyDown: m,
+    gridContainerProps: m,
+    handleGridContainerKeyDown: p,
     isUsingKeyboardNavigation: h
   }
 }

@@ -19,19 +19,19 @@ function c(e) {
 
 function f(e, t, n) {
   let i = (0, o.default)(),
-    [f, p] = l.useState(!1),
-    m = l.useMemo(() => a.debounce(e => {
+    [f, m] = l.useState(!1),
+    p = l.useMemo(() => a.debounce(e => {
       (function(e, t, n, l) {
         let i = u.default.getProps(n, l).groups;
         return !!c(i) || !(e.length < d.length) && !(e.length > t) && -1 !== e.indexOf(d) && ((0, s.subscribeChannel)(n, l, r.DEFAULT_RANGES), !0)
-      })(e, i, t, n) && p(!0)
+      })(e, i, t, n) && m(!0)
     }, 200, {
       maxWait: 500
     }), [i, t, n]);
   l.useEffect(() => {
     let l = u.default.getProps(t, n).groups;
-    if (null != t && !c(l) && !f) return e.addListener("text-changed", m), () => {
-      e.removeListener("text-changed", m), m.cancel()
+    if (null != t && !c(l) && !f) return e.addListener("text-changed", p), () => {
+      e.removeListener("text-changed", p), p.cancel()
     }
-  }, [f, m, e, t, n])
+  }, [f, p, e, t, n])
 }

@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var n = r("604676");
@@ -9,14 +9,14 @@ var n = r("604676");
 function u(e) {
   return e === Object(e) && 0 !== Object.keys(e).length
 }
-var o = function(e, t) {
+var a = function(e, t) {
   var r = e.isConnected || e.ownerDocument.documentElement.contains(e);
   if (u(t) && "function" == typeof t.behavior) return t.behavior(r ? (0, n.default)(e, t) : []);
   if (r) {
-    var o, a = !1 === (o = t) ? {
+    var a, o = !1 === (a = t) ? {
       block: "end",
       inline: "nearest"
-    } : u(o) ? o : {
+    } : u(a) ? a : {
       block: "start",
       inline: "nearest"
     };
@@ -26,13 +26,13 @@ var o = function(e, t) {
       e.forEach(function(e) {
         var n = e.el,
           u = e.top,
-          o = e.left;
+          a = e.left;
         n.scroll && r ? n.scroll({
           top: u,
-          left: o,
+          left: a,
           behavior: t
-        }) : (n.scrollTop = u, n.scrollLeft = o)
+        }) : (n.scrollTop = u, n.scrollLeft = a)
       })
-    }((0, n.default)(e, a), a.behavior)
+    }((0, n.default)(e, o), o.behavior)
   }
 }

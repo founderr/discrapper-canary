@@ -22,7 +22,7 @@ var l = s("446674"),
   S = s("49111"),
   m = s("560241"),
   N = s("782340"),
-  g = s("163810");
+  g = s("986433");
 let h = {
     page: S.AnalyticsPages.GUILD_SETTINGS,
     section: S.AnalyticsSections.GUILD_SETTINGS_STICKERS,

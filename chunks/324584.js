@@ -11,7 +11,7 @@ var r = n("37983"),
   o = n.n(a),
   l = n("111749"),
   u = n("718776"),
-  c = n("862839");
+  c = n("356410");
 let d = ["letter-spacing", "line-height", "padding-top", "padding-bottom", "font-family", "font-weight", "font-size", "text-transform", "width", "padding-left", "padding-right", "border-width", "box-sizing"];
 class f extends s.PureComponent {
   componentDidMount() {

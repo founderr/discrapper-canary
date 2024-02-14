@@ -14,8 +14,8 @@ var l = n("77078"),
   d = n("979911"),
   c = n("282928"),
   f = n("966724"),
-  p = n("681736"),
-  m = n("447435"),
+  m = n("681736"),
+  p = n("447435"),
   h = n("600798"),
   E = n("692038"),
   g = n("815297"),
@@ -25,9 +25,9 @@ var l = n("77078"),
   v = n("685841"),
   I = n("804888"),
   _ = n("474643"),
-  y = n("585722"),
+  N = n("585722"),
   A = n("568734"),
-  N = n("305515"),
+  y = n("305515"),
   x = n("49111"),
   O = n("782340");
 async function R(e) {
@@ -40,8 +40,8 @@ async function R(e) {
       options: P = {},
       raiseEndpointErrors: b = !1
     } = e,
-    j = new p.default(x.Endpoints.MESSAGES(f)),
-    U = new N.Future,
+    j = new m.default(x.Endpoints.MESSAGES(f)),
+    U = new y.Future,
     D = {
       content: "",
       nonce: "",
@@ -55,20 +55,20 @@ async function R(e) {
   null != k && (D.type = x.MessageTypes.REPLY, D.message_reference = P.messageReference, D.allowed_mentions = P.allowedMentions, (0, T.deletePendingReply)(f));
   let [w, F] = (0, I.default)(D.content);
   w && (D.content = F, D.flags = (0, A.addFlag)(null !== (t = D.flags) && void 0 !== t ? t : 0, x.MessageFlags.SUPPRESS_NOTIFICATIONS));
-  let G = null !== (n = P.nonce) && void 0 !== n ? n : (0, g.createNonce)(),
-    B = (0, g.default)({
+  let B = null !== (n = P.nonce) && void 0 !== n ? n : (0, g.createNonce)(),
+    G = (0, g.default)({
       channelId: f,
       content: D.content,
       tts: null !== (l = null == L ? void 0 : L.tts) && void 0 !== l && l,
       type: D.type,
       messageReference: D.message_reference,
       flags: D.flags,
-      nonce: G,
+      nonce: B,
       poll: (0, C.createPollServerDataFromCreateRequest)(P.poll)
     });
-  return (D.nonce = G, j.on("start", e => {
+  return (D.nonce = B, j.on("start", e => {
     c = (0, E.createMessageRecord)({
-      ...B,
+      ...G,
       id: e.id
     }), i.default.dispatch({
       type: "UPLOAD_START",
@@ -94,7 +94,7 @@ async function R(e) {
         failureCode: t,
         errorMessage: null == l ? void 0 : l.msg
       }), t === x.AbortCodes.EXPLICIT_CONTENT) {
-      s.default.sendExplicitMediaClydeError(f, null == n ? void 0 : n.attachments, m.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+      s.default.sendExplicitMediaClydeError(f, null == n ? void 0 : n.attachments, p.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
       return
     }
     if (t === x.AbortCodes.AUTOMOD_MESSAGE_BLOCKED) {
@@ -121,7 +121,7 @@ async function R(e) {
     }, t)) : (0, o.openUploadError)({
       title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
       help: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
-    }), "" !== D.content && "" === _.default.getDraft(f, M) && a.default.saveDraft(f, D.content, M), 0 === y.default.getUploadCount(f, M) && r.default.setUploads({
+    }), "" !== D.content && "" === _.default.getDraft(f, M) && a.default.saveDraft(f, D.content, M), 0 === N.default.getUploadCount(f, M) && r.default.setUploads({
       channelId: f,
       uploads: R,
       draftType: M
@@ -181,7 +181,7 @@ var M = {
         h.type = x.MessageTypes.REPLY, h.message_reference = t.messageReference, h.allowed_mentions = t.allowedMentions, (0, T.deletePendingReply)(n)
       }
     }
-    let E = new p.default(x.Endpoints.MESSAGES(n));
+    let E = new m.default(x.Endpoints.MESSAGES(n));
     E.on("start", e => {
       i.default.dispatch({
         type: "UPLOAD_START",
@@ -204,7 +204,7 @@ var M = {
           fileItems: t.items,
           failureCode: c
         }), c === x.AbortCodes.EXPLICIT_CONTENT) {
-        s.default.sendExplicitMediaClydeError(n, null == f ? void 0 : f.attachments, m.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+        s.default.sendExplicitMediaClydeError(n, null == f ? void 0 : f.attachments, p.TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
         return
       }(0, o.openUploadError)({
         title: O.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,

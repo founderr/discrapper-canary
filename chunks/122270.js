@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
 var l = n("37983"),
@@ -14,7 +14,7 @@ var l = n("37983"),
   d = n("851745"),
   c = n("406291"),
   f = n("782340");
-let p = {
+let m = {
   sentinel: c.MENTION_SENTINEL,
   stores: [a.default],
   matches: (e, t, n, l, i) => (i.mentions.user !== d.UserMentionMode.DENY || i.mentions.role !== d.RoleMentionMode.DENY || i.mentions.global !== d.GlobalMentionMode.DENY) && !0,
@@ -25,7 +25,7 @@ let p = {
       u = l.mentions.role !== d.RoleMentionMode.DENY,
       c = l.mentions.user === d.UserMentionMode.ALLOW_GUILD,
       f = l.mentions.role === d.RoleMentionMode.ALLOW_ALL,
-      p = r.default.queryMentionResults({
+      m = r.default.queryMentionResults({
         query: n,
         channel: e,
         canMentionEveryone: a,
@@ -37,7 +37,7 @@ let p = {
         request: i
       });
     return {
-      results: p
+      results: m
     }
   },
   renderResults(e) {
@@ -47,18 +47,18 @@ let p = {
           globals: r,
           roles: o
         },
-        selectedIndex: p,
-        channel: m,
+        selectedIndex: m,
+        channel: p,
         query: h,
         options: E,
         onHover: g,
         onClick: S
       } = e,
       C = a.map((e, t) => (0, l.jsx)(s.default.User, {
-        guildId: m.guild_id,
+        guildId: p.guild_id,
         onClick: S,
         onHover: g,
-        selected: p === t,
+        selected: m === t,
         index: t,
         user: e.user,
         nick: e.nick,
@@ -68,7 +68,7 @@ let p = {
       T = r.map((e, t) => (0, l.jsx)(s.default.Generic, {
         onClick: S,
         onHover: g,
-        selected: p === t + a.length,
+        selected: m === t + a.length,
         index: a.length + t,
         text: e.text,
         description: E.hideMentionDescription ? null : e.description,
@@ -77,7 +77,7 @@ let p = {
       v = o.map((e, t) => (0, l.jsx)(s.default.Role, {
         onClick: S,
         onHover: g,
-        selected: p === t + a.length + r.length,
+        selected: m === t + a.length + r.length,
         index: a.length + r.length + t,
         role: e,
         hideDescription: E.hideMentionDescription
@@ -102,7 +102,7 @@ let p = {
       index: i,
       options: a,
       channel: s
-    } = e, u = t[i], f = n[i - t.length], p = l[i - t.length - n.length];
+    } = e, u = t[i], f = n[i - t.length], m = l[i - t.length - n.length];
     return null != u ? a.insertText(function(e, t, n) {
       return r.default.hasSameRoleAsUsername(t, e) ? "".concat(c.MENTION_SENTINEL).concat(e.tag) : "".concat(c.MENTION_SENTINEL).concat(o.default.getUserTag(e, {
         identifiable: n ? "never" : "always"
@@ -111,13 +111,13 @@ let p = {
       return "<@".concat(e.id, ">")
     }(u.user)) : null != f ? a.insertText(function(e) {
       return e.text
-    }(f)) : null != p && a.insertText(function(e) {
+    }(f)) : null != m && a.insertText(function(e) {
       return "".concat(c.MENTION_SENTINEL).concat(e.name)
-    }(p), function(e) {
+    }(m), function(e) {
       return "<@&".concat(e.id, ">")
-    }(p)), {
+    }(m)), {
       type: d.AutocompleteSelectionTypes.MENTION
     }
   }
 };
-var m = p
+var p = m

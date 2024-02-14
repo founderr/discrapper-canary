@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("424973");
 var r = n("234160"),
-  o = n("714413"),
-  a = n("579934"),
+  a = n("714413"),
+  o = n("579934"),
   i = n("930056"),
   s = n("125692");
 
@@ -16,10 +16,10 @@ function c() {
   switch (e.type) {
     case r.HOVER:
       break;
-    case o.ADD_SOURCE:
-    case o.ADD_TARGET:
-    case o.REMOVE_TARGET:
-    case o.REMOVE_SOURCE:
+    case a.ADD_SOURCE:
+    case a.ADD_TARGET:
+    case a.REMOVE_TARGET:
+    case a.REMOVE_SOURCE:
       return i.NONE;
     case r.BEGIN_DRAG:
     case r.PUBLISH_DRAG_SOURCE:
@@ -34,7 +34,7 @@ function c() {
     l = t.prevTargetIds,
     u = void 0 === l ? [] : l,
     d = (0, s.xor)(c, u);
-  if (!(d.length > 0 || !(0, a.areArraysEqual)(c, u))) return i.NONE;
+  if (!(d.length > 0 || !(0, o.areArraysEqual)(c, u))) return i.NONE;
   var p = u[u.length - 1],
     f = c[c.length - 1];
   return p !== f && (p && d.push(p), f && d.push(f)), d

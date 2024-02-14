@@ -14,15 +14,15 @@ var l = n("37983"),
   d = n("286235"),
   c = n("149022"),
   f = n("83800"),
-  p = n("903782"),
-  m = n("939563"),
+  m = n("903782"),
+  p = n("939563"),
   h = n("385887"),
   E = n("368555"),
   g = n("30550"),
   S = n("760120"),
   C = n("632550"),
-  T = n("783059"),
-  v = n("632215");
+  T = n("235541"),
+  v = n("919163");
 class I extends i.PureComponent {
   componentDidMount() {
     this.props.editor.events.addListener("onChange", this.handleOnChange)
@@ -158,7 +158,7 @@ class I extends i.PureComponent {
       mode: "lowest"
     }) : null;
     if (null != a && (l.startedInsideInline = !0), h.EditorUtils.isEditorEmpty(n)) {
-      m.SlateTransforms.insertNodes(n, {
+      p.SlateTransforms.insertNodes(n, {
         text: "\uFEFF"
       }, {
         select: !0
@@ -177,7 +177,7 @@ class I extends i.PureComponent {
         exactMatch: !1,
         suppressThrow: !0
       });
-      n.selection = null, null != e ? m.SlateTransforms.select(n, e) : m.SlateTransforms.select(n, null !== (t = n.selection) && void 0 !== t ? t : h.EditorUtils.end(n, []))
+      n.selection = null, null != e ? p.SlateTransforms.select(n, e) : p.SlateTransforms.select(n, null !== (t = n.selection) && void 0 !== t ? t : h.EditorUtils.end(n, []))
     }
     n.composition = l
   }
@@ -194,7 +194,7 @@ class I extends i.PureComponent {
         n = h.NodeUtils.leaf(t, e);
       h.EditorUtils.withoutNormalizing(t, () => {
         let e = n.text.replace(/^\uFEFF/, "");
-        m.SlateTransforms.delete(t, {
+        p.SlateTransforms.delete(t, {
           unit: "offset",
           distance: n.text.length,
           reverse: !0
@@ -214,7 +214,7 @@ class I extends i.PureComponent {
       editor: t,
       onBlur: n
     } = this.props, l = e.relatedTarget, i = r.ReactEditor.findDocumentOrShadowRoot(this.props.editor), a = i.getElementById("textarea-context"), s = i.getElementById("slate-toolbar");
-    if (null != l && !(0, p.hasDomParent)(l, a) && !(0, p.hasDomParent)(l, s)) {
+    if (null != l && !(0, m.hasDomParent)(l, a) && !(0, m.hasDomParent)(l, s)) {
       let e = r.ReactEditor.findDocumentOrShadowRoot(t),
         n = e.getSelection();
       null != n && this.isSelectionEscaping(n) && n.removeAllRanges()
@@ -226,7 +226,7 @@ class I extends i.PureComponent {
     if (null != e && null != t)
       for (let n = e.rangeCount - 1; n >= 0; n--) {
         let l = e.getRangeAt(n);
-        if ((0, p.hasDomParent)(l.startContainer, t) || !l.collapsed && (0, p.hasDomParent)(l.endContainer, t)) return !0
+        if ((0, m.hasDomParent)(l.startContainer, t) || !l.collapsed && (0, m.hasDomParent)(l.endContainer, t)) return !0
       }
     return !1
   }
@@ -237,7 +237,7 @@ class I extends i.PureComponent {
     if (null != e && null != t)
       for (let i = e.rangeCount - 1; i >= 0; i--) {
         let a = e.getRangeAt(i);
-        if ((0, p.hasDomParent)(a.startContainer, t)) {
+        if ((0, m.hasDomParent)(a.startContainer, t)) {
           if (l) return !0;
           n = !0
         } else {
@@ -245,7 +245,7 @@ class I extends i.PureComponent {
           l = !0
         }
         if (!a.collapsed) {
-          if ((0, p.hasDomParent)(a.startContainer, t)) {
+          if ((0, m.hasDomParent)(a.startContainer, t)) {
             if (l) return !0;
             n = !0
           } else {
@@ -293,8 +293,8 @@ class I extends i.PureComponent {
       guildId: d,
       onChange: c,
       onFocus: f,
-      onBlur: p,
-      onKeyDown: m,
+      onBlur: m,
+      onKeyDown: p,
       onKeyUp: h,
       decorateExtra: E,
       renderExtraElement: g,

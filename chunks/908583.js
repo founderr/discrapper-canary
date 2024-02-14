@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   IdleHandlerContext: function() {
-    return i
+    return s
   },
   IdleStateContext: function() {
     return r
@@ -11,58 +11,58 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var l = n("37983"),
-  a = n("884691"),
-  s = n("862337");
-let i = a.createContext({
+  i = n("884691"),
+  a = n("862337");
+let s = i.createContext({
     onPreventIdle: () => null,
     onAllowIdle: () => null,
     onForceIdle: () => null,
     onActive: () => null
   }),
-  r = a.createContext(!1);
+  r = i.createContext(!1);
 
 function o(e) {
   let {
     children: t,
     timeout: n
-  } = e, [o, u] = a.useState(!1), d = a.useRef(new Set), c = a.useRef(null);
-  a.useEffect(() => (c.current = new s.DelayedCall(n, () => u(!0)), c.current.delay(), () => {
+  } = e, [o, u] = i.useState(!1), d = i.useRef(new Set), c = i.useRef(null);
+  i.useEffect(() => (c.current = new a.DelayedCall(n, () => u(!0)), c.current.delay(), () => {
     var e;
     null === (e = c.current) || void 0 === e || e.cancel(), c.current = null
   }), [n]);
-  let m = a.useCallback(e => {
+  let f = i.useCallback(e => {
       var t;
       u(!1), d.current.add(e), null === (t = c.current) || void 0 === t || t.cancel()
     }, [d, c, u]),
-    f = a.useCallback(e => {
+    m = i.useCallback(e => {
       if (d.current.delete(e), 0 === d.current.size) {
         var t;
         null === (t = c.current) || void 0 === t || t.delay()
       }
     }, [d, c]),
-    h = a.useCallback(() => {
+    p = i.useCallback(() => {
       if (u(!1), 0 === d.current.size) {
         var e;
         null === (e = c.current) || void 0 === e || e.delay()
       }
     }, [d, c, u]),
-    p = a.useCallback(() => {
+    h = i.useCallback(() => {
       var e;
       !(d.current.size > 0) && (null === (e = c.current) || void 0 === e || e.cancel(), u(!0))
     }, [c, u]),
-    g = a.useMemo(() => ({
-      onAllowIdle: f,
-      onPreventIdle: m,
-      onActive: h,
-      onForceIdle: p
-    }), [f, m, h, p]);
+    E = i.useMemo(() => ({
+      onAllowIdle: m,
+      onPreventIdle: f,
+      onActive: p,
+      onForceIdle: h
+    }), [m, f, p, h]);
   return (0, l.jsx)(r.Provider, {
     value: o,
-    children: (0, l.jsx)(i.Provider, {
-      value: g,
+    children: (0, l.jsx)(s.Provider, {
+      value: E,
       children: t({
         idle: o,
-        ...g
+        ...E
       })
     })
   })

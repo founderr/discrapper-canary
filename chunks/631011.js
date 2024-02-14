@@ -15,8 +15,8 @@ var a, l, n = s("37983"),
   _ = s("900938"),
   I = s("999905"),
   T = s("782340"),
-  f = s("812735"),
-  S = s("756058");
+  f = s("924928"),
+  S = s("750235");
 (l = a || (a = {}))[l.LOADING = 0] = "LOADING", l[l.INTRO = 1] = "INTRO", l[l.SETTINGS = 2] = "SETTINGS";
 let m = e => {
   let {

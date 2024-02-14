@@ -1,82 +1,82 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
-}), l("222007");
-var r = l("808742"),
-  a = l("204947"),
-  n = l("152311"),
-  s = l("502651"),
-  i = l("49111"),
-  o = l("782340");
+}), n("222007");
+var l = n("808742"),
+  i = n("204947"),
+  a = n("152311"),
+  s = n("502651"),
+  r = n("49111"),
+  o = n("782340");
 
 function u(e) {
   return {
-    [i.ActivityTypes.STREAMING]: e ? o.default.Messages.UNFORMATTED_STREAMING : o.default.Messages.STREAMING,
-    [i.ActivityTypes.LISTENING]: e ? o.default.Messages.UNFORMATTED_LISTENING_TO : o.default.Messages.LISTENING_TO,
-    [i.ActivityTypes.WATCHING]: e ? o.default.Messages.UNFORMATTED_WATCHING : o.default.Messages.WATCHING,
-    [i.ActivityTypes.COMPETING]: e ? o.default.Messages.UNFORMATTED_COMPETING : o.default.Messages.COMPETING
+    [r.ActivityTypes.STREAMING]: e ? o.default.Messages.UNFORMATTED_STREAMING : o.default.Messages.STREAMING,
+    [r.ActivityTypes.LISTENING]: e ? o.default.Messages.UNFORMATTED_LISTENING_TO : o.default.Messages.LISTENING_TO,
+    [r.ActivityTypes.WATCHING]: e ? o.default.Messages.UNFORMATTED_WATCHING : o.default.Messages.WATCHING,
+    [r.ActivityTypes.COMPETING]: e ? o.default.Messages.UNFORMATTED_COMPETING : o.default.Messages.COMPETING
   }
 }
 
 function d(e, t) {
-  let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+  let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     d = arguments.length > 3 ? arguments[3] : void 0;
-  if (null != e && e.type === i.ActivityTypes.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
-  if (null != t) return null == e || e.type !== i.ActivityTypes.PLAYING ? o.default.Messages.SHARING_SCREEN : u(l)[i.ActivityTypes.STREAMING].format({
+  if (null != e && e.type === r.ActivityTypes.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
+  if (null != t) return null == e || e.type !== r.ActivityTypes.PLAYING ? o.default.Messages.SHARING_SCREEN : u(n)[r.ActivityTypes.STREAMING].format({
     name: e.name
   });
-  if (d && null != e && e.type === i.ActivityTypes.HANG_STATUS) return (0, r.getHangStatusText)(e);
+  if (d && null != e && e.type === r.ActivityTypes.HANG_STATUS) return (0, l.getHangStatusText)(e);
   if (null == e || null == e.name) return null;
   if ((0, s.default)(e)) {
     let t = null != e.details && "" !== e.details ? e.details : e.name;
-    return u(l)[i.ActivityTypes.STREAMING].format({
+    return u(n)[r.ActivityTypes.STREAMING].format({
       name: t
     })
   }
-  return (0, n.default)(e) ? (0, a.default)(e.name) : function(e, t, l) {
-    let r = u(l);
+  return (0, a.default)(e) ? (0, i.default)(e.name) : function(e, t, n) {
+    let l = u(n);
     switch (e) {
-      case i.ActivityTypes.LISTENING:
-      case i.ActivityTypes.WATCHING:
-      case i.ActivityTypes.COMPETING:
-        return r[e].format({
+      case r.ActivityTypes.LISTENING:
+      case r.ActivityTypes.WATCHING:
+      case r.ActivityTypes.COMPETING:
+        return l[e].format({
           name: t
         });
-      case i.ActivityTypes.CUSTOM_STATUS:
-      case i.ActivityTypes.HANG_STATUS:
+      case r.ActivityTypes.CUSTOM_STATUS:
+      case r.ActivityTypes.HANG_STATUS:
         return null;
-      case i.ActivityTypes.PLAYING:
+      case r.ActivityTypes.PLAYING:
       default:
-        return l ? o.default.Messages.UNFORMATTED_PLAYING_GAME.format({
+        return n ? o.default.Messages.UNFORMATTED_PLAYING_GAME.format({
           game: t
         }) : o.default.Messages.PLAYING_GAME.format({
           game: t
         })
     }
-  }(e.type, e.name, l)
+  }(e.type, e.name, n)
 }
 
 function c(e, t) {
-  let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    r = arguments.length > 3 ? arguments[3] : void 0;
+  let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    l = arguments.length > 3 ? arguments[3] : void 0;
   if (Array.isArray(e)) {
-    let a = e;
-    null != t && (a = [...a, null]);
-    let n = null;
-    for (let e of a) {
-      let a = d(e, t, l, r);
-      if (null != a) return {
+    let i = e;
+    null != t && (i = [...i, null]);
+    let a = null;
+    for (let e of i) {
+      let i = d(e, t, n, l);
+      if (null != i) return {
         activity: e,
-        activityText: a
+        activityText: i
       };
-      (null == e ? void 0 : e.type) === i.ActivityTypes.CUSTOM_STATUS && null != e.emoji && (n = e)
+      (null == e ? void 0 : e.type) === r.ActivityTypes.CUSTOM_STATUS && null != e.emoji && (a = e)
     }
-    return (null == n ? void 0 : n.emoji) != null ? {
-      activity: n,
+    return (null == a ? void 0 : a.emoji) != null ? {
+      activity: a,
       activityText: null
     } : null
   }
-  return d(e, t, l, r)
+  return d(e, t, n, l)
 }

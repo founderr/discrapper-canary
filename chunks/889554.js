@@ -17,7 +17,7 @@ var s = n("37983"),
   m = n("64798"),
   _ = n("646718"),
   E = n("782340"),
-  p = n("734203");
+  p = n("421404");
 let I = [_.PremiumGiftStyles.STANDARD_BOX, _.PremiumGiftStyles.CAKE, _.PremiumGiftStyles.COFFEE, _.PremiumGiftStyles.CHEST],
   S = () => {
     let {

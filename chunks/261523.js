@@ -11,8 +11,8 @@ var i = n("77078"),
   s = n("999203"),
   r = n("777003"),
   o = n("782340"),
-  u = n("391119"),
-  d = n("814076");
+  u = n("910077"),
+  d = n("862939");
 
 function c(e) {
   var t;
@@ -21,19 +21,19 @@ function c(e) {
     guildId: c
   } = e, {
     botUpgraded: f,
-    activeSubscriptionListing: p
+    activeSubscriptionListing: m
   } = (0, s.default)({
     user: n,
     guildId: c
-  }), m = null == p ? void 0 : null === (t = p.sku_benefits) || void 0 === t ? void 0 : t.benefits;
-  return null != c && f && null != m && 0 !== m.length ? (0, l.jsxs)(r.default, {
+  }), p = null == m ? void 0 : null === (t = m.sku_benefits) || void 0 === t ? void 0 : t.benefits;
+  return null != c && f && null != p && 0 !== p.length ? (0, l.jsxs)(r.default, {
     children: [(0, l.jsx)(i.Heading, {
       variant: "eyebrow",
       className: d.title,
       children: o.default.Messages.BOT_PROFILE_BENEFITS_HEADING
     }), (0, l.jsx)("div", {
       className: u.benefitsContainer,
-      children: m.map((e, t) => (0, l.jsx)(a.default, {
+      children: p.map((e, t) => (0, l.jsx)(a.default, {
         showsDescription: !1,
         emojiContainerClassName: u.emojiContainer,
         nameTextVariant: "text-sm/normal",

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   useCommandContext: function() {
-    return s
+    return o
   }
 });
 var i = n("884691"),
@@ -17,6 +17,6 @@ function a(e) {
   }
 }
 
-function s(e) {
+function o(e) {
   return i.useMemo(() => a(e), [e])
 }

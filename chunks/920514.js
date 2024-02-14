@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var l = n("37983");
@@ -14,14 +14,14 @@ var i = n("414456"),
   u = n("974634"),
   d = n("115279"),
   c = n("958706"),
-  f = n("431364"),
-  p = e => {
+  f = n("296323"),
+  m = e => {
     let {
       accessory: t,
       pickerIntention: n,
       headerClassName: i,
-      emojiListRef: p,
-      onKeyDown: m,
+      emojiListRef: m,
+      onKeyDown: p,
       onFocus: h,
       autoFocus: E,
       searchBarRef: g,
@@ -32,9 +32,9 @@ var i = n("414456"),
       renderHeader: I
     } = e, _ = (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(u.default, {
-        emojiListRef: p,
+        emojiListRef: m,
         gridNavigatorId: d.GRID_NAVIGATOR_ID,
-        onKeyDown: m,
+        onKeyDown: p,
         className: f.searchBar,
         ref: g,
         isFullRow: n === c.EmojiIntention.COMMUNITY_CONTENT_ONLY,

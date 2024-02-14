@@ -14,7 +14,7 @@ var s = n("446674"),
   u = n("11056"),
   d = n("447621"),
   c = n("782340"),
-  f = n("763065"),
+  f = n("791666"),
   E = e => {
     let {
       handleCategorySelect: t,

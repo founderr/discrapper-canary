@@ -21,8 +21,8 @@ function o(e) {
     "aria-describedby": d,
     filters: c,
     multiple: f = !1,
-    disabled: p = !1,
-    submitting: m = !1,
+    disabled: m = !1,
+    submitting: p = !1,
     ...h
   } = e;
   return (0, l.jsx)(s.FocusRing, {
@@ -30,10 +30,10 @@ function o(e) {
     children: (0, l.jsxs)("div", {
       className: a(n, (0, s.getButtonStyle)({
         ...h,
-        submitting: m,
-        disabled: p
+        submitting: p,
+        disabled: m
       })),
-      "aria-disabled": p,
+      "aria-disabled": m,
       children: [(0, l.jsx)("span", {
         "aria-hidden": !0,
         className: i,
@@ -45,7 +45,7 @@ function o(e) {
         multiple: f,
         "aria-label": u,
         "aria-describedby": d,
-        disabled: p
+        disabled: m
       })]
     })
   })

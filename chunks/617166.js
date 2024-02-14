@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var r = n("240849"),
-  o = n("679750"),
-  a = n("884691");
+  a = n("679750"),
+  o = n("884691");
 
 function i(e) {
   var t;
@@ -17,10 +17,10 @@ function i(e) {
     numberFormatter: d,
     step: p = 1,
     orientation: f = "horizontal"
-  } = e, h = (0, a.useMemo)(() => {
+  } = e, h = (0, o.useMemo)(() => {
     let e = (u - i) / 10;
     return Math.max(e = (0, r.snapValueToStep)(e, 0, e + p, p), p)
-  }, [p, u, i]), m = (0, a.useMemo)(() => c(e.value), [e.value]), v = (0, a.useMemo)(() => null !== (t = c(e.defaultValue)) && void 0 !== t ? t : [i], [e.defaultValue, i]), g = l(e.value, e.defaultValue, e.onChange), y = l(e.value, e.defaultValue, e.onChangeEnd), [b, x] = (0, o.useControlledState)(m, v, g), [S, w] = (0, a.useState)(Array(b.length).fill(!1)), D = (0, a.useRef)(Array(b.length).fill(!0)), [C, k] = (0, a.useState)(void 0), P = (0, a.useRef)(b), E = (0, a.useRef)(S), T = e => {
+  }, [p, u, i]), m = (0, o.useMemo)(() => c(e.value), [e.value]), v = (0, o.useMemo)(() => null !== (t = c(e.defaultValue)) && void 0 !== t ? t : [i], [e.defaultValue, i]), g = l(e.value, e.defaultValue, e.onChange), y = l(e.value, e.defaultValue, e.onChangeEnd), [b, x] = (0, a.useControlledState)(m, v, g), [S, w] = (0, o.useState)(Array(b.length).fill(!1)), D = (0, o.useRef)(Array(b.length).fill(!0)), [C, k] = (0, o.useState)(void 0), P = (0, o.useRef)(b), E = (0, o.useRef)(S), T = e => {
     P.current = e, x(e)
   }, M = e => {
     E.current = e, w(e)
@@ -30,11 +30,11 @@ function i(e) {
     return (e - i) / (u - i)
   }
 
-  function I(e) {
+  function O(e) {
     return 0 === e ? i : b[e - 1]
   }
 
-  function O(e) {
+  function I(e) {
     return e === b.length - 1 ? u : b[e + 1]
   }
 
@@ -44,16 +44,16 @@ function i(e) {
 
   function L(e, t) {
     if (n || !A(e)) return;
-    let o = I(e),
-      a = O(e);
-    t = (0, r.snapValueToStep)(t, o, a, p), T(s(P.current, e, t))
+    let a = O(e),
+      o = I(e);
+    t = (0, r.snapValueToStep)(t, a, o, p), T(s(P.current, e, t))
   }
 
   function N(e) {
     return d.format(e)
   }
 
-  function F(e) {
+  function j(e) {
     let t = e * (u - i) + i;
     return (0, r.clamp)(Math.round((t - i) / p) * p + i, i, u)
   }
@@ -62,7 +62,7 @@ function i(e) {
     getThumbValue: e => b[e],
     setThumbValue: L,
     setThumbPercent: function(e, t) {
-      L(e, F(t))
+      L(e, j(t))
     },
     isThumbDragging: e => S[e],
     setThumbDragging: function(e, t) {
@@ -76,9 +76,9 @@ function i(e) {
     getValuePercent: R,
     getThumbValueLabel: e => N(b[e]),
     getFormattedValue: N,
-    getThumbMinValue: I,
-    getThumbMaxValue: O,
-    getPercentValue: F,
+    getThumbMinValue: O,
+    getThumbMaxValue: I,
+    getPercentValue: j,
     isThumbEditable: A,
     setThumbEditable: function(e, t) {
       D.current[e] = t

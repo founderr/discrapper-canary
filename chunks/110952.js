@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getSourceClientOffset: function() {
-    return o
+    return a
   },
   getDifferenceFromInitialOffset: function() {
-    return a
+    return o
   }
 });
 
@@ -15,18 +15,18 @@ function r(e, t) {
   }
 }
 
-function o(e) {
-  var t, n, o = e.clientOffset,
-    a = e.initialClientOffset,
+function a(e) {
+  var t, n, a = e.clientOffset,
+    o = e.initialClientOffset,
     i = e.initialSourceClientOffset;
-  if (!o || !a || !i) return null;
-  return r((t = o, n = i, {
+  if (!a || !o || !i) return null;
+  return r((t = a, n = i, {
     x: t.x + n.x,
     y: t.y + n.y
-  }), a)
+  }), o)
 }
 
-function a(e) {
+function o(e) {
   var t = e.clientOffset,
     n = e.initialClientOffset;
   return t && n ? r(t, n) : null

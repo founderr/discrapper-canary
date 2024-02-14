@@ -15,11 +15,11 @@ var l, i, a = n("37983"),
   d = n("77078"),
   c = n("81594"),
   f = n("149279"),
-  p = n("659500"),
-  m = n("645406"),
+  m = n("659500"),
+  p = n("645406"),
   h = n("49111"),
   E = n("782340"),
-  g = n("864147");
+  g = n("831594");
 
 function S(e) {
   e.stopPropagation()
@@ -37,16 +37,16 @@ var C = s.forwardRef(function(e, t) {
     draftType: I,
     size: _ = 1
   } = e, {
-    onFocus: y,
+    onFocus: N,
     ...A
   } = (0, u.useListItem)(n), {
-    handleFocus: N,
+    handleFocus: y,
     handleBlur: x
-  } = (0, m.useFocusInside)(y), O = 0 === _, R = null != r;
+  } = (0, p.useFocusInside)(N), O = 0 === _, R = null != r;
   return (0, a.jsx)(d.FocusRing, {
     children: (0, a.jsx)("li", {
       ...A,
-      onFocus: N,
+      onFocus: y,
       onBlur: x,
       onKeyDown: e => {
         if (T) {
@@ -63,7 +63,7 @@ var C = s.forwardRef(function(e, t) {
             case h.KeyboardKeys.ARROW_UP:
               let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
               if (t) return;
-              e.preventDefault(), p.ComponentDispatch.dispatchToLastSubscribed(h.ComponentActions.FOCUS_MESSAGES, {
+              e.preventDefault(), m.ComponentDispatch.dispatchToLastSubscribed(h.ComponentActions.FOCUS_MESSAGES, {
                 atEnd: !0
               })
           }

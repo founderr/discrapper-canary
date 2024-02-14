@@ -4,36 +4,36 @@ r.r(t), r.d(t, {
     return o
   }
 });
-var a = r("37983");
+var n = r("37983");
 r("884691");
-var s = r("77078"),
-  n = r("106435"),
+var a = r("77078"),
+  u = r("106435"),
   i = r("50885"),
-  l = r("782340");
-let u = i.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+  s = r("782340");
+let l = i.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 var o = e => {
   let {
     user: t,
     avatarDecorationOverride: r,
     status: i,
-    avatarSize: o = s.AvatarSizes.SIZE_120,
+    avatarSize: o = a.AvatarSizes.SIZE_120,
     "aria-hidden": c = !1
   } = e, {
     avatarDecorationSrc: d,
     avatarSrc: f,
     eventHandlers: E
-  } = (0, n.default)({
+  } = (0, u.default)({
     user: t,
     size: o,
     showPending: !0,
     avatarDecorationOverride: r
   });
-  return (0, a.jsx)(u, {
+  return (0, n.jsx)(l, {
     avatarDecoration: d,
     src: f,
     size: o,
     status: i,
-    "aria-label": c ? void 0 : l.default.Messages.USER_SETTINGS_AVATAR,
+    "aria-label": c ? void 0 : s.default.Messages.USER_SETTINGS_AVATAR,
     "aria-hidden": c,
     ...E
   })

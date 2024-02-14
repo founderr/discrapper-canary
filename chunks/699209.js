@@ -1,11 +1,11 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   HangStatusExperiment: function() {
-    return a
+    return i
   }
 });
-var r = l("862205");
-let a = (0, r.createExperiment)({
+var l = n("862205");
+let i = (0, l.createExperiment)({
   kind: "guild",
   id: "2023-11_enable_hang_status",
   label: "Hang Statuses",

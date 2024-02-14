@@ -16,7 +16,7 @@ var a = s("37983"),
   _ = s("158998"),
   E = s("49111"),
   I = s("782340"),
-  T = s("997672");
+  T = s("496743");
 let f = {
   [E.StoreRecommendationTypes.NOW_PLAYING]: {
     single: (e, t) => I.default.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({

@@ -1,49 +1,49 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
-}), l("222007");
-var r = l("884691"),
-  a = l("509043"),
-  n = l("446674"),
-  s = l("841098"),
-  i = l("206230"),
-  o = l("388491"),
-  u = l("528438");
+}), n("222007");
+var l = n("884691"),
+  i = n("509043"),
+  a = n("446674"),
+  s = n("841098"),
+  r = n("206230"),
+  o = n("388491"),
+  u = n("528438");
 let d = ["--profile-gradient-primary-color", "--profile-gradient-secondary-color", "--profile-gradient-button-color", "--profile-gradient-overlay-color", "--profile-body-background-color", "--profile-body-divider-color", "--profile-avatar-border-color", "--profile-message-input-border-color", "--profile-note-background-color", "--profile-body-background-hover", "--account-profile-modal-list-item-hover", "--profile-role-pill-background-color", "--profile-role-pill-border-color"];
 
-function c(e, t, l) {
-  var r;
-  null == e || null === (r = e.current) || void 0 === r || r.style.setProperty(t, null != l ? l : null)
+function c(e, t, n) {
+  var l;
+  null == e || null === (l = e.current) || void 0 === l || l.style.setProperty(t, null != n ? n : null)
 }
 
 function f(e, t) {
   let {
-    themeElementRef: l,
+    themeElementRef: n,
     pendingThemeColors: f,
-    isPreview: T,
+    isPreview: m,
     useDefaultClientTheme: p
-  } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, [m, E] = (0, u.default)(e, t, {
+  } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, [h, E] = (0, u.default)(e, t, {
     pendingThemeColors: f,
-    isPreview: T
-  }), [P, S, v] = (0, n.useStateFromStoresArray)([i.default], () => [i.default.desaturateUserColors, i.default.saturation, i.default.syncProfileThemeWithUserTheme]), h = (0, s.default)(), g = r.useCallback(() => v || p ? h : (0, o.getProfileTheme)(m), [p, v, h, m]), [_, N] = r.useState(g()), O = (0, o.useProfileThemeValues)(_), U = (0, o.useDividerColor)(_, m), A = (0, o.useMessageInputBorderColor)(_, E), C = r.useCallback((e, t) => (0, a.int2hsl)(e, P, null, t), [P]);
-  r.useEffect(() => {
-    N(g())
-  }, [m, v, h, p, g]);
-  let I = (0, o.useAvatarBorderColor)(_, m, v),
-    y = null != I ? (0, a.int2hsl)(I, !1, P ? S : null) : null,
+    isPreview: m
+  }), [g, S, C] = (0, a.useStateFromStoresArray)([r.default], () => [r.default.desaturateUserColors, r.default.saturation, r.default.syncProfileThemeWithUserTheme]), T = (0, s.default)(), v = l.useCallback(() => C || p ? T : (0, o.getProfileTheme)(h), [p, C, T, h]), [I, _] = l.useState(v()), N = (0, o.useProfileThemeValues)(I), A = (0, o.useDividerColor)(I, h), y = (0, o.useMessageInputBorderColor)(I, E), x = l.useCallback((e, t) => (0, i.int2hsl)(e, g, null, t), [g]);
+  l.useEffect(() => {
+    _(v())
+  }, [h, C, T, p, v]);
+  let O = (0, o.useAvatarBorderColor)(I, h, C),
+    R = null != O ? (0, i.int2hsl)(O, !1, g ? S : null) : null,
     M = e => d.forEach(t => {
       e.style.removeProperty(t)
     });
-  return r.useEffect(() => {
-    if (null != m && null != E && null != _ && null != I && null != U && null != A) {
-      let e = v && _ !== h ? null == O ? void 0 : O.overlaySyncedWithUserTheme : null == O ? void 0 : O.overlay;
-      c(l, "--profile-gradient-primary-color", C(m)), c(l, "--profile-gradient-secondary-color", C(E)), c(l, "--profile-gradient-button-color", C((0, o.calculateButtonColor)(m))), c(l, "--profile-gradient-overlay-color", e), c(l, "--profile-body-background-color", null == O ? void 0 : O.sectionBox), c(l, "--profile-body-background-hover", null == O ? void 0 : O.profileBodyBackgroundHover), c(l, "--profile-body-divider-color", C(U, null == O ? void 0 : O.dividerOpacity)), c(l, "--profile-avatar-border-color", C(I)), c(l, "--profile-message-input-border-color", C(A)), c(l, "--profile-note-background-color", null == O ? void 0 : O.noteBackgroundColor), c(l, "--profile-role-pill-background-color", null == O ? void 0 : O.rolePillBackgroundColor), c(l, "--profile-role-pill-border-color", null == O ? void 0 : O.rolePillBorderColor)
-    } else(null == l ? void 0 : l.current) != null && M(null == l ? void 0 : l.current)
-  }, [m, E, I, _, h, l, C, v, U, null == O ? void 0 : O.overlaySyncedWithUserTheme, null == O ? void 0 : O.overlay, null == O ? void 0 : O.sectionBox, null == O ? void 0 : O.profileBodyBackgroundHover, null == O ? void 0 : O.dividerOpacity, null == O ? void 0 : O.noteBackgroundColor, null == O ? void 0 : O.rolePillBackgroundColor, null == O ? void 0 : O.rolePillBorderColor, A]), {
-    profileTheme: null != _ ? _ : h,
-    primaryProfileColor: m,
-    avatarBorderColor: y
+  return l.useEffect(() => {
+    if (null != h && null != E && null != I && null != O && null != A && null != y) {
+      let e = C && I !== T ? null == N ? void 0 : N.overlaySyncedWithUserTheme : null == N ? void 0 : N.overlay;
+      c(n, "--profile-gradient-primary-color", x(h)), c(n, "--profile-gradient-secondary-color", x(E)), c(n, "--profile-gradient-button-color", x((0, o.calculateButtonColor)(h))), c(n, "--profile-gradient-overlay-color", e), c(n, "--profile-body-background-color", null == N ? void 0 : N.sectionBox), c(n, "--profile-body-background-hover", null == N ? void 0 : N.profileBodyBackgroundHover), c(n, "--profile-body-divider-color", x(A, null == N ? void 0 : N.dividerOpacity)), c(n, "--profile-avatar-border-color", x(O)), c(n, "--profile-message-input-border-color", x(y)), c(n, "--profile-note-background-color", null == N ? void 0 : N.noteBackgroundColor), c(n, "--profile-role-pill-background-color", null == N ? void 0 : N.rolePillBackgroundColor), c(n, "--profile-role-pill-border-color", null == N ? void 0 : N.rolePillBorderColor)
+    } else(null == n ? void 0 : n.current) != null && M(null == n ? void 0 : n.current)
+  }, [h, E, O, I, T, n, x, C, A, null == N ? void 0 : N.overlaySyncedWithUserTheme, null == N ? void 0 : N.overlay, null == N ? void 0 : N.sectionBox, null == N ? void 0 : N.profileBodyBackgroundHover, null == N ? void 0 : N.dividerOpacity, null == N ? void 0 : N.noteBackgroundColor, null == N ? void 0 : N.rolePillBackgroundColor, null == N ? void 0 : N.rolePillBorderColor, y]), {
+    profileTheme: null != I ? I : T,
+    primaryProfileColor: h,
+    avatarBorderColor: R
   }
 }

@@ -14,11 +14,11 @@ var l = n("37983"),
   d = n("256860"),
   c = n("560241"),
   f = n("782340"),
-  p = n("296937");
-let m = i.forwardRef(function(e, t) {
+  m = n("750116");
+let p = i.forwardRef(function(e, t) {
   let {
     onKeyDown: n,
-    stickersListRef: m,
+    stickersListRef: p,
     channel: h
   } = e, E = (0, d.useHasSendableSticker)(h), g = i.useRef(null), {
     searchQuery: S,
@@ -28,8 +28,8 @@ let m = i.forwardRef(function(e, t) {
     isSearchSuggestion: e.isSearchSuggestion
   }), a.default), T = o.StickerPickerStore.useStore(e => e.searchPlaceholder), v = o.StickerPickerStore.useStore(e => e.inspectedExpressionPosition, a.default), I = i.useCallback(e => {
     var t;
-    o.StickerPickerStore.setActiveCategoryIndex("" === e ? 0 : c.INACTIVE_CATEGORY_INDEX), o.StickerPickerStore.setInspectedExpressionPosition(0, 0), o.StickerPickerStore.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = m.current) || void 0 === t || t.scrollTo(0)
-  }, [m]), _ = i.useCallback(() => {
+    o.StickerPickerStore.setActiveCategoryIndex("" === e ? 0 : c.INACTIVE_CATEGORY_INDEX), o.StickerPickerStore.setInspectedExpressionPosition(0, 0), o.StickerPickerStore.setSearchPlaceholder(null), (0, u.setSearchQuery)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0)
+  }, [p]), _ = i.useCallback(() => {
     (0, u.setSearchQuery)("")
   }, []);
   return i.useImperativeHandle(t, () => ({
@@ -43,7 +43,7 @@ let m = i.forwardRef(function(e, t) {
       null === (e = g.current) || void 0 === e || e.focus()
     }
   }, [C]), (0, l.jsx)("div", {
-    className: p.wrapper,
+    className: m.wrapper,
     children: (0, l.jsx)(r.default, {
       autoFocus: E,
       disabled: !E,
@@ -54,7 +54,7 @@ let m = i.forwardRef(function(e, t) {
       onClear: _,
       onKeyDown: n,
       onQueryChange: I,
-      className: p.searchBar,
+      className: m.searchBar,
       preventEscapePropagation: !1,
       useKeyboardNavigation: !1,
       inputProps: {
@@ -66,4 +66,4 @@ let m = i.forwardRef(function(e, t) {
     })
   })
 });
-var h = m
+var h = p

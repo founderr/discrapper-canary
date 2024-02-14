@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("900255"),
-  o = n("266087"),
-  a = n("897345");
+  a = n("266087"),
+  o = n("897345");
 
 function i(e) {
   return function(t) {
@@ -20,18 +20,18 @@ function i(e) {
       l = e.getRegistry();
     return function(e, t, n) {
         (0, r.invariant)(t.isDragging(), "Cannot call hover while not dragging."), (0, r.invariant)(!t.didDrop(), "Cannot call hover after drop.");
-        for (var o = 0; o < e.length; o++) {
-          var a = e[o];
-          (0, r.invariant)(e.lastIndexOf(a) === o, "Expected targetIds to be unique in the passed array.");
-          var i = n.getTarget(a);
+        for (var a = 0; a < e.length; a++) {
+          var o = e[a];
+          (0, r.invariant)(e.lastIndexOf(o) === a, "Expected targetIds to be unique in the passed array.");
+          var i = n.getTarget(o);
           (0, r.invariant)(i, "Expected targetIds to be registered.")
         }
       }(s, c, l),
       function(e, t, n) {
         for (var r = e.length - 1; r >= 0; r--) {
-          var a = e[r],
-            i = t.getTargetType(a);
-          !(0, o.matchesType)(i, n) && e.splice(r, 1)
+          var o = e[r],
+            i = t.getTargetType(o);
+          !(0, a.matchesType)(i, n) && e.splice(r, 1)
         }
       }(s, l, c.getItemType()),
       function(e, t, n) {
@@ -39,7 +39,7 @@ function i(e) {
           n.getTarget(e).hover(t, e)
         })
       }(s, c, l), {
-        type: a.HOVER,
+        type: o.HOVER,
         payload: {
           targetIds: s,
           clientOffset: i || null

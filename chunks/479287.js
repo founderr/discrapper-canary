@@ -25,8 +25,8 @@ var a = s("37983"),
   E = s("439932"),
   N = s("49111"),
   _ = s("782340"),
-  M = s("698995"),
-  R = s("926622");
+  M = s("994613"),
+  R = s("890957");
 class O extends r.PureComponent {
   componentDidMount() {
     window.addEventListener("keydown", this.handleTabOrEnter)

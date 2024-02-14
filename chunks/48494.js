@@ -1,13 +1,13 @@
 "use strict";
 var r = n("520462"),
-  o = n("745378"),
-  a = n("648644"),
-  i = n("812095"),
+  a = n("745378"),
+  o = n("214401"),
+  i = n("314970"),
   s = n("293471"),
   c = i("Object.prototype.toString"),
   l = n("149384")(),
   u = "undefined" == typeof globalThis ? n.g : globalThis,
-  d = o(),
+  d = a(),
   p = i("String.prototype.slice"),
   f = Object.getPrototypeOf,
   h = i("Array.prototype.indexOf", !0) || function(e, t) {
@@ -23,11 +23,11 @@ l && s && f ? r(d, function(e) {
   if (Symbol.toStringTag in t) {
     var n = f(t),
       r = s(n, Symbol.toStringTag);
-    !r && (r = s(f(n), Symbol.toStringTag)), m["$" + e] = a(r.get)
+    !r && (r = s(f(n), Symbol.toStringTag)), m["$" + e] = o(r.get)
   }
 }) : r(d, function(e) {
   var t = new u[e];
-  m["$" + e] = a(t.slice)
+  m["$" + e] = o(t.slice)
 });
 var v = function(e) {
     var t = !1;

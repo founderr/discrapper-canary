@@ -17,8 +17,8 @@ var l = n("37983"),
   d = n("769846"),
   c = n("77078"),
   f = n("191225"),
-  p = n("51565"),
-  m = n("567054"),
+  m = n("51565"),
+  p = n("567054"),
   h = n("5367"),
   E = n("100835"),
   g = n("38654"),
@@ -28,9 +28,9 @@ var l = n("37983"),
   v = n("170183"),
   I = n("689275"),
   _ = n("373469"),
-  y = n("546463"),
+  N = n("546463"),
   A = n("923959"),
-  N = n("824563"),
+  y = n("824563"),
   x = n("282109"),
   O = n("697218"),
   R = n("316133"),
@@ -44,11 +44,11 @@ var l = n("37983"),
   k = n("619911"),
   w = n("811305"),
   F = n("159885"),
-  G = n("471374"),
-  B = n("49111"),
+  B = n("471374"),
+  G = n("49111"),
   H = n("782340"),
-  V = n("455547"),
-  K = n("805959");
+  V = n("379333"),
+  K = n("716175");
 let W = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE),
   Y = (0, F.cssValueToNumber)(d.default.GUILD_TOOLTIP_ICON_SIZE_V_2);
 
@@ -65,7 +65,7 @@ function z(e, t, n) {
   })
 }
 
-function J(e) {
+function Z(e) {
   let {
     muteConfig: t,
     className: n
@@ -81,16 +81,16 @@ function J(e) {
   })
 }
 
-function q(e) {
+function J(e) {
   var t, n, a;
   let {
     guild: r
-  } = e, d = r.id, p = (0, u.useStateFromStoresArray)([A.default, I.default], () => {
+  } = e, d = r.id, m = (0, u.useStateFromStoresArray)([A.default, I.default], () => {
     let e = A.default.getChannels(d)[A.GUILD_VOCAL_CHANNELS_KEY].filter(e => {
         let {
           channel: t
         } = e;
-        return t.type === B.ChannelTypes.GUILD_VOICE
+        return t.type === G.ChannelTypes.GUILD_VOICE
       }).map(e => {
         let {
           channel: t
@@ -99,7 +99,7 @@ function q(e) {
       }),
       t = Object.values(I.default.getThreadsForGuild(d)).flatMap(e => Object.keys(e));
     return [...e, ...t]
-  }, [d]), m = (0, v.default)(d), h = i.useMemo(() => m.map(e => e.id), [m]), E = (0, u.useStateFromStores)([R.default], () => R.default.getVoiceStates(d), [d]), g = o.flatMap(p, e => {
+  }, [d]), p = (0, v.default)(d), h = i.useMemo(() => p.map(e => e.id), [p]), E = (0, u.useStateFromStores)([R.default], () => R.default.getVoiceStates(d), [d]), g = o.flatMap(m, e => {
     var t;
     if (e === r.afkChannelId) return [];
     let n = null !== (t = E[e]) && void 0 !== t ? t : [];
@@ -122,7 +122,7 @@ function q(e) {
     let e = 0;
     for (let t of h) e += C.default.getParticipantCount(t, T.StageChannelParticipantNamedIndex.AUDIENCE);
     return e
-  }), L = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, G.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([N.default, y.default], () => g.filter(e => N.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != y.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(P.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), q = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), Z = (0, u.useStateFromStoresArray)([O.default], () => L.map(e => O.default.getUser(e)), [L]), X = z(U.default, g.filter(e => !L.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
+  }), L = (0, u.useStateFromStoresArray)([_.default], () => _.default.getAllApplicationStreams().filter(e => e.guildId === d).map(e => e.ownerId), [d]), F = (0, B.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([y.default, N.default], () => g.filter(e => y.default.getActivities(e.id, d).some(e => (null == e ? void 0 : e.application_id) != null && null != N.default.getDetectableGame(null == e ? void 0 : e.application_id)))), K = z(P.default, H, d), W = F ? H.map(e => e.id) : [], Y = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(d).flatMap(e => Array.from(e.userIds)), [d]), J = (0, u.useStateFromStoresArray)([O.default], () => Y.map(e => O.default.getUser(e)), [Y]), q = (0, u.useStateFromStoresArray)([O.default], () => L.map(e => O.default.getUser(e)), [L]), X = z(U.default, g.filter(e => !L.includes(e.id) && !Y.includes(e.id) && !W.includes(e.id)), d);
   let Q = (t = d, n = S, a = M, 0 === n.length ? null : (0, l.jsxs)("div", {
       className: V.row,
       children: [(0, l.jsx)(D.default, {
@@ -144,8 +144,8 @@ function q(e) {
         })]
       })]
     })),
-    $ = z(k.default, Z.filter(e => null != e && !Y.includes(e.id)), d),
-    ee = z(j.default, q, d),
+    $ = z(k.default, q.filter(e => null != e && !Y.includes(e.id)), d),
+    ee = z(j.default, J, d),
     {
       isMuted: et,
       muteConfig: en
@@ -153,10 +153,10 @@ function q(e) {
       isMuted: x.default.isMuted(d),
       muteConfig: x.default.getMuteConfig(d)
     }), [d]);
-  return null != K && G.default.trackExposure({
+  return null != K && B.default.trackExposure({
     location: "Guild Tooltip"
   }), (0, l.jsxs)(l.Fragment, {
-    children: [Q, X, $, F && K, ee, et ? (0, l.jsx)(J, {
+    children: [Q, X, $, F && K, ee, et ? (0, l.jsx)(Z, {
       muteConfig: en,
       className: s(V.muteText, {
         [V.muteTextWithActivity]: null != X || null != $
@@ -165,7 +165,7 @@ function q(e) {
   })
 }
 
-function Z(e) {
+function q(e) {
   let {
     guildJoinRequestStatus: t
   } = e;
@@ -175,11 +175,11 @@ function Z(e) {
     variant: "text-xs/normal",
     children: function(e) {
       switch (e) {
-        case m.GuildJoinRequestApplicationStatuses.SUBMITTED:
+        case p.GuildJoinRequestApplicationStatuses.SUBMITTED:
           return H.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_PENDING;
-        case m.GuildJoinRequestApplicationStatuses.REJECTED:
+        case p.GuildJoinRequestApplicationStatuses.REJECTED:
           return H.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_REJECTED;
-        case m.GuildJoinRequestApplicationStatuses.APPROVED:
+        case p.GuildJoinRequestApplicationStatuses.APPROVED:
           return H.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_APPROVED;
         default:
           return H.default.Messages.GUILD_JOIN_REQUEST_STATUS_TOOLTIP_STARTED
@@ -192,9 +192,9 @@ function X(e) {
   let {
     guild: t,
     includeActivity: n = !0
-  } = e, i = (0, p.default)(t), a = (0, h.useCurrentUserGuildBadgeStatus)(t.id), r = null != a ? (0, l.jsx)(Z, {
+  } = e, i = (0, m.default)(t), a = (0, h.useCurrentUserGuildBadgeStatus)(t.id), r = null != a ? (0, l.jsx)(q, {
     guildJoinRequestStatus: a
-  }) : null, o = n ? (0, l.jsx)(q, {
+  }) : null, o = n ? (0, l.jsx)(J, {
     guild: t
   }) : null, d = (0, u.useStateFromStores)([g.default], () => g.default.isViewingRoles(t.id)), f = (0, E.useShouldShowInvitesDisabledNotif)(t);
   return (0, l.jsxs)(l.Fragment, {

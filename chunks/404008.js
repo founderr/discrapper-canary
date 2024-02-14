@@ -55,9 +55,9 @@ var r = n("316693"),
   S = n("991170"),
   T = n("49111"),
   f = n("646718"),
-  p = n("782340");
+  N = n("782340");
 let {
-  GUILD_VOICE: N,
+  GUILD_VOICE: p,
   GUILD_CATEGORY: A,
   GUILD_STAGE_VOICE: R
 } = T.ChannelTypes;
@@ -68,7 +68,7 @@ function C(e, t) {
 
 function L(e, t, n) {
   let i = S.default.NONE;
-  return ((0, s.isGuildSelectableChannelType)(t) || t === A) && (i = r.default.add(i, T.Permissions.VIEW_CHANNEL)), (C(t, N) || C(t, R)) && (i = r.default.add(i, T.Permissions.VIEW_CHANNEL), i = r.default.add(i, T.Permissions.CONNECT)), {
+  return ((0, s.isGuildSelectableChannelType)(t) || t === A) && (i = r.default.add(i, T.Permissions.VIEW_CHANNEL)), (C(t, p) || C(t, R)) && (i = r.default.add(i, T.Permissions.VIEW_CHANNEL), i = r.default.add(i, T.Permissions.CONNECT)), {
     id: e,
     type: n,
     deny: S.default.NONE,
@@ -82,7 +82,7 @@ function O(e, t, n) {
   if (n.length > 0 || l) {
     var a, o, d;
     let n;
-    u.push((a = e, o = t, d = i.PermissionOverwriteType.ROLE, n = S.default.NONE, ((0, s.isGuildSelectableChannelType)(o) || o === A) && (n = r.default.add(n, T.Permissions.VIEW_CHANNEL)), C(o, N) && (n = r.default.add(n, T.Permissions.VIEW_CHANNEL), n = r.default.add(n, T.Permissions.CONNECT)), {
+    u.push((a = e, o = t, d = i.PermissionOverwriteType.ROLE, n = S.default.NONE, ((0, s.isGuildSelectableChannelType)(o) || o === A) && (n = r.default.add(n, T.Permissions.VIEW_CHANNEL)), C(o, p) && (n = r.default.add(n, T.Permissions.VIEW_CHANNEL), n = r.default.add(n, T.Permissions.CONNECT)), {
       id: a,
       type: d,
       allow: S.default.NONE,
@@ -165,25 +165,25 @@ function v(e) {
   } = e;
   switch (t) {
     case T.ChannelTypes.DM:
-      return p.default.Messages.DM;
+      return N.default.Messages.DM;
     case T.ChannelTypes.GROUP_DM:
-      return p.default.Messages.GROUP_DM;
+      return N.default.Messages.GROUP_DM;
     case T.ChannelTypes.GUILD_TEXT:
-      return p.default.Messages.TEXT_CHANNEL;
+      return N.default.Messages.TEXT_CHANNEL;
     case T.ChannelTypes.GUILD_FORUM:
-      return p.default.Messages.FORUM_CHANNEL;
+      return N.default.Messages.FORUM_CHANNEL;
     case T.ChannelTypes.GUILD_MEDIA:
-      return p.default.Messages.MEDIA_CHANNEL;
+      return N.default.Messages.MEDIA_CHANNEL;
     case T.ChannelTypes.GUILD_VOICE:
-      return p.default.Messages.VOICE_CHANNEL;
+      return N.default.Messages.VOICE_CHANNEL;
     case T.ChannelTypes.GUILD_STAGE_VOICE:
-      return p.default.Messages.STAGE_CHANNEL;
+      return N.default.Messages.STAGE_CHANNEL;
     case T.ChannelTypes.GUILD_ANNOUNCEMENT:
-      return p.default.Messages.NEWS_CHANNEL;
+      return N.default.Messages.NEWS_CHANNEL;
     case T.ChannelTypes.GUILD_STORE:
-      return p.default.Messages.STORE_CHANNEL;
+      return N.default.Messages.STORE_CHANNEL;
     case T.ChannelTypes.GUILD_CATEGORY:
-      return p.default.Messages.CATEGORY;
+      return N.default.Messages.CATEGORY;
     default:
       return null
   }

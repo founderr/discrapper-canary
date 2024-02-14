@@ -11,15 +11,15 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var r = n("884691"),
-  o = n("759840"),
-  a = n("444324"),
+  a = n("759840"),
+  o = n("444324"),
   i = n("914644"),
   s = n("240849"),
   c = n("113581"),
   l = n("223986");
 
 function u(e, t, n) {
-  let s = (0, a.useFormValidationState)({
+  let s = (0, o.useFormValidationState)({
       ...e,
       value: t.isSelected
     }),
@@ -39,7 +39,7 @@ function u(e, t, n) {
       ...e,
       isInvalid: c
     }, t, n);
-  (0, o.useFormValidation)(e, s, n);
+  (0, a.useFormValidation)(e, s, n);
   let {
     isIndeterminate: g,
     isRequired: y,
@@ -70,9 +70,9 @@ function p(e, t) {
   let {
     isDisabled: n,
     name: r,
-    validationBehavior: o = "aria"
+    validationBehavior: a = "aria"
   } = e, {
-    isInvalid: a,
+    isInvalid: o,
     validationErrors: i,
     validationDetails: l
   } = t.displayValidation, {
@@ -83,14 +83,14 @@ function p(e, t) {
   } = (0, c.useField)({
     ...e,
     labelElementType: "span",
-    isInvalid: a,
+    isInvalid: o,
     errorMessage: e.errorMessage || i
   });
   d.set(t, {
     name: r,
     descriptionId: f.id,
     errorMessageId: h.id,
-    validationBehavior: o
+    validationBehavior: a
   });
   let m = (0, s.filterDOMProps)(e, {
     labelable: !0
@@ -104,14 +104,14 @@ function p(e, t) {
     labelProps: u,
     descriptionProps: f,
     errorMessageProps: h,
-    isInvalid: a,
+    isInvalid: o,
     validationErrors: i,
     validationDetails: l
   }
 }
 
 function f(e, t, n) {
-  var o, i;
+  var a, i;
   let s = (0, l.useToggleState)({
       isReadOnly: e.isReadOnly || t.isReadOnly,
       isSelected: t.isSelected(e.value),
@@ -125,15 +125,15 @@ function f(e, t, n) {
       errorMessageId: f,
       validationBehavior: h
     } = d.get(t);
-  h = null !== (o = e.validationBehavior) && void 0 !== o ? o : h;
+  h = null !== (a = e.validationBehavior) && void 0 !== a ? a : h;
   let {
     realtimeValidation: m
-  } = (0, a.useFormValidationState)({
+  } = (0, o.useFormValidationState)({
     ...e,
     value: s.isSelected,
     name: void 0,
     validationBehavior: "aria"
-  }), v = (0, r.useRef)(a.DEFAULT_VALIDATION_RESULT), g = () => {
+  }), v = (0, r.useRef)(o.DEFAULT_VALIDATION_RESULT), g = () => {
     t.setInvalid(e.value, m.isInvalid ? m : v.current)
   };
   (0, r.useEffect)(g);
@@ -146,7 +146,7 @@ function f(e, t, n) {
       name: e.name || c,
       isRequired: null !== (i = e.isRequired) && void 0 !== i ? i : t.isRequired,
       validationBehavior: h,
-      [a.privateValidationStateProp]: {
+      [o.privateValidationStateProp]: {
         realtimeValidation: y,
         displayValidation: b,
         resetValidation: t.resetValidation,

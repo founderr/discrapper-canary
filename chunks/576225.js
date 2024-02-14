@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   AsapQueue: function() {
-    return o
+    return a
   }
 }), n("424973");
 var r = n("806705");
-class o {
+class a {
   enqueueTask(e) {
     let {
       queue: t,

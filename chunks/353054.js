@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("446674"),
   i = n("77078"),
   r = n("519705"),
@@ -18,13 +18,13 @@ var a = n("37983"),
   m = n("957825"),
   p = n("49111"),
   E = n("782340"),
-  S = n("290236");
+  S = n("752024");
 
 function g(e) {
   let {
     channel: t
-  } = e, n = (0, i.useRedesignIconContext)().enabled, [g, C] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.isChannelMuted(t.getGuildId(), t.id), o.default.resolvedMessageNotifications(t)], [t]), [_, I] = l.useState(!1);
-  l.useEffect(() => {
+  } = e, n = (0, i.useRedesignIconContext)().enabled, [g, C] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.isChannelMuted(t.getGuildId(), t.id), o.default.resolvedMessageNotifications(t)], [t]), [_, I] = a.useState(!1);
+  a.useEffect(() => {
     let e = () => I(!0);
     return f.ComponentDispatch.subscribe(p.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
       f.ComponentDispatch.unsubscribe(p.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
@@ -36,14 +36,14 @@ function g(e) {
       }, h.NotificationLabel.muted(!g)) : I(e => !e)
     },
     v = E.default.Messages.NOTIFICATION_SETTINGS;
-  return (0, a.jsx)(i.Popout, {
+  return (0, l.jsx)(i.Popout, {
     shouldShow: _,
     animation: i.Popout.Animation.NONE,
     position: "bottom",
     align: "right",
     autoInvert: !1,
     onRequestClose: () => I(!1),
-    renderPopout: e => (0, a.jsx)(m.default, {
+    renderPopout: e => (0, l.jsx)(m.default, {
       ...e,
       channel: t,
       navId: "channel-context",
@@ -51,16 +51,16 @@ function g(e) {
     }),
     children: (e, t) => {
       let {
-        isShown: l
+        isShown: a
       } = t;
-      return (0, a.jsx)(c.default.Icon, {
+      return (0, l.jsx)(c.default.Icon, {
         ...e,
         onClick: T,
-        tooltip: l ? null : v,
+        tooltip: a ? null : v,
         icon: g || C !== p.UserNotificationSettings.ALL_MESSAGES ? d.default : u.default,
         foreground: g && !n ? S.strikethrough : null,
         "aria-label": v,
-        selected: l
+        selected: a
       })
     }
   })

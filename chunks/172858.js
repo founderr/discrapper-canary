@@ -1,16 +1,16 @@
 "use strict";
 r.r(t), r.d(t, {
   DUCK_CONFETTI_SPRITE: function() {
-    return n
+    return u
   },
   COMMON_CONFETTI_COLORS: function() {
     return i
   },
   COMMON_CONFETTI_SPRITES: function() {
-    return l
+    return s
   },
   COMMON_CONFETTI_MAX_SPRITE_SIZE: function() {
-    return u
+    return l
   },
   COMMON_CONFETTI_BASE_CONFIG: function() {
     return o
@@ -19,15 +19,15 @@ r.r(t), r.d(t, {
     return c
   }
 });
-var a = r("516555"),
-  s = r("839491");
-let n = s,
+var n = r("516555"),
+  a = r("839491");
+let u = a,
   i = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
-  l = [r("606863"), n, r("164654"), r("540346"), r("526094"), r("367469"), r("23933"), {
+  s = [r("606863"), u, r("164654"), r("540346"), r("526094"), r("367469"), r("23933"), {
     src: r("283397"),
     colorize: !1
   }],
-  u = 28,
+  l = 28,
   o = {
     velocity: {
       type: "static-random",
@@ -50,7 +50,7 @@ let n = s,
     size: {
       type: "static-random",
       minValue: 14,
-      maxValue: u
+      maxValue: l
     }
   },
-  c = new a.Environment
+  c = new n.Environment

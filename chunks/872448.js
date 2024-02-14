@@ -11,11 +11,11 @@ var r = function(e) {
       return ""
   }
 };
-e.exports = function(e, t, n, o) {
-  return (t = t || "&", n = n || "=", null === e && (e = void 0), "object" == typeof e) ? Object.keys(e).map(function(o) {
-    var a = encodeURIComponent(r(o)) + n;
-    return Array.isArray(e[o]) ? e[o].map(function(e) {
-      return a + encodeURIComponent(r(e))
-    }).join(t) : a + encodeURIComponent(r(e[o]))
-  }).filter(Boolean).join(t) : o ? encodeURIComponent(r(o)) + n + encodeURIComponent(r(e)) : ""
+e.exports = function(e, t, n, a) {
+  return (t = t || "&", n = n || "=", null === e && (e = void 0), "object" == typeof e) ? Object.keys(e).map(function(a) {
+    var o = encodeURIComponent(r(a)) + n;
+    return Array.isArray(e[a]) ? e[a].map(function(e) {
+      return o + encodeURIComponent(r(e))
+    }).join(t) : o + encodeURIComponent(r(e[a]))
+  }).filter(Boolean).join(t) : a ? encodeURIComponent(r(a)) + n + encodeURIComponent(r(e)) : ""
 }

@@ -14,36 +14,36 @@ var l = n("37983"),
   d = n("216049"),
   c = n("915639"),
   f = n("102985"),
-  p = n("461380"),
-  m = n("713135"),
+  m = n("461380"),
+  p = n("713135"),
   h = n("824140"),
   E = n("401642"),
   g = n("777003"),
   S = n("590456"),
   C = n("49111"),
   T = n("782340"),
-  v = n("843482"),
-  I = n("814076");
+  v = n("715392"),
+  I = n("862939");
 
 function _(e) {
   var t, n;
   let a, _, {
-      userId: y,
+      userId: N,
       channelId: A,
-      guild: N,
+      guild: y,
       theme: x,
       onClose: O,
       className: R
     } = e,
-    M = (0, d.default)(N, y, A),
+    M = (0, d.default)(y, N, A),
     [L, P] = i.useState(new Set),
-    b = (0, r.useStateFromStores)([m.default], () => m.default.getUserProfile(y)),
+    b = (0, r.useStateFromStores)([p.default], () => p.default.getUserProfile(N)),
     j = null !== (t = null == b ? void 0 : b.connectedAccounts) && void 0 !== t ? t : [],
     U = null !== (n = null == b ? void 0 : b.applicationRoleConnections) && void 0 !== n ? n : [],
     D = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation),
     k = (0, r.useStateFromStores)([c.default], () => c.default.locale);
   if (i.useEffect(() => {
-      (null == N ? void 0 : N.id) != null && (null == M ? void 0 : M.id) != null && u.default.fetchGuildRoleConnectionsEligibility(N.id, M.id).then(e => {
+      (null == y ? void 0 : y.id) != null && (null == M ? void 0 : M.id) != null && u.default.fetchGuildRoleConnectionsEligibility(y.id, M.id).then(e => {
         let t = new Set;
         for (let n of e)
           for (let {
@@ -52,14 +52,14 @@ function _(e) {
             of n) t.add(e);
         P(t)
       })
-    }, [null == N ? void 0 : N.id, null == M ? void 0 : M.id]), D || null == M) return null;
+    }, [null == y ? void 0 : y.id, null == M ? void 0 : M.id]), D || null == M) return null;
   let w = Array.from(L).map(e => {
     let t = j.find(t => t.type === e);
     return null == t ? null : (0, l.jsx)(h.ConnectedUserAccount, {
       connectedAccount: t,
       theme: x,
       locale: k,
-      userId: y
+      userId: N
     }, "".concat(t.type, ":").concat(t.id))
   }).filter(e => null != e);
   return (w.length > 0 && (a = (0, l.jsxs)(l.Fragment, {
@@ -72,8 +72,8 @@ function _(e) {
       children: [w, (0, l.jsxs)(o.Clickable, {
         onClick: function() {
           (0, E.openUserProfileModal)({
-            userId: y,
-            guildId: null == N ? void 0 : N.id,
+            userId: N,
+            guildId: null == y ? void 0 : y.id,
             channelId: A,
             section: S.UserProfileSections.USER_INFO_CONNECTIONS,
             analyticsLocation: {
@@ -87,8 +87,8 @@ function _(e) {
           color: "interactive-active",
           className: v.connectionsText,
           children: T.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
-        }), (0, l.jsx)(p.default, {
-          direction: p.default.Directions.RIGHT,
+        }), (0, l.jsx)(m.default, {
+          direction: m.default.Directions.RIGHT,
           className: v.connectionsCaret
         })]
       })]

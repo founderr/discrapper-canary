@@ -15,8 +15,8 @@ var s = n("37983"),
   c = n("124969"),
   f = n("457108"),
   E = n("49111"),
-  _ = n("782340"),
-  I = n("926622");
+  I = n("782340"),
+  _ = n("890957");
 i.default.initialize();
 class p extends a.PureComponent {
   componentDidMount() {
@@ -60,24 +60,24 @@ class p extends a.PureComponent {
     } = this.state;
     return (0, s.jsxs)(c.default, {
       children: [(0, s.jsx)(c.Title, {
-        className: I.marginBottom8,
-        children: _.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
+        className: _.marginBottom8,
+        children: I.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_HEADER
       }), (0, s.jsx)(c.SubTitle, {
-        children: _.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({
+        children: I.default.Messages.SERVER_HIGHLIGHT_UNSUBSCRIBE_BODY.format({
           guildName: n.name
         })
       }), (0, s.jsx)(c.Button, {
-        className: I.marginTop40,
+        className: _.marginTop40,
         onClick: () => t(e),
-        children: _.default.Messages.CONTINUE_TO_WEBAPP
+        children: I.default.Messages.CONTINUE_TO_WEBAPP
       }), (0, s.jsx)(c.Button, {
-        className: I.marginTop8,
+        className: _.marginTop8,
         color: c.Button.Colors.LINK,
         look: c.Button.Looks.LINK,
         onClick: () => {
           t(E.Routes.USER_GUILD_NOTIFICATION_SETTINGS(n.id))
         },
-        children: _.default.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
+        children: I.default.Messages.SERVER_HIGHLIGHT_MANAGE_SETTINGS
       })]
     })
   }
@@ -89,16 +89,16 @@ class p extends a.PureComponent {
     return (0, s.jsxs)(c.default, {
       children: [(0, s.jsx)(c.Image, {
         src: n("2862"),
-        className: I.marginBottom20
+        className: _.marginBottom20
       }), (0, s.jsx)(c.Title, {
-        className: I.marginBottom8,
-        children: _.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+        className: _.marginBottom8,
+        children: I.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
       }), (0, s.jsx)(c.SubTitle, {
-        children: _.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
+        children: I.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
       }), (0, s.jsx)(c.Button, {
-        className: I.marginTop40,
+        className: _.marginTop40,
         onClick: () => t(e),
-        children: _.default.Messages.CONTINUE_TO_WEBAPP
+        children: I.default.Messages.CONTINUE_TO_WEBAPP
       })]
     })
   }

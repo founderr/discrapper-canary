@@ -8,29 +8,29 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var r = n("884691");
-let o = {
+let a = {
     prefix: String(Math.round(1e10 * Math.random())),
     current: 0
   },
-  a = r.createContext(o),
+  o = r.createContext(a),
   i = r.createContext(!1),
   s = !!("undefined" != typeof window && window.document && window.document.createElement),
   c = new WeakMap,
   l = "function" == typeof r.useId ? function(e) {
     let t = r.useId(),
       [n] = (0, r.useState)(f()),
-      a = n ? "react-aria" : "react-aria".concat(o.prefix);
-    return e || "".concat(a, "-").concat(t)
+      o = n ? "react-aria" : "react-aria".concat(a.prefix);
+    return e || "".concat(o, "-").concat(t)
   } : function(e) {
-    let t = (0, r.useContext)(a);
-    t === o && !s && console.warn("When server rendering, you must wrap your application in an <SSRProvider> to ensure consistent ids are generated between the client and server.");
+    let t = (0, r.useContext)(o);
+    t === a && !s && console.warn("When server rendering, you must wrap your application in an <SSRProvider> to ensure consistent ids are generated between the client and server.");
     let n = function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          t = (0, r.useContext)(a),
+          t = (0, r.useContext)(o),
           n = (0, r.useRef)(null);
         if (null === n.current && !e) {
-          var o, i;
-          let e = null === (i = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) || void 0 === i ? void 0 : null === (o = i.ReactCurrentOwner) || void 0 === o ? void 0 : o.current;
+          var a, i;
+          let e = null === (i = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) || void 0 === i ? void 0 : null === (a = i.ReactCurrentOwner) || void 0 === a ? void 0 : a.current;
           if (e) {
             let n = c.get(e);
             null == n ? c.set(e, {

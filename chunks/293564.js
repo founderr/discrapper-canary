@@ -22,13 +22,13 @@ var i = l("37983"),
   m = l("161778"),
   I = l("305961"),
   E = l("697218"),
-  p = l("58608"),
-  x = l("614175"),
+  x = l("58608"),
+  p = l("614175"),
   C = l("903178"),
   T = l("955153"),
   S = l("84460"),
-  g = l("550766"),
-  A = l("337697"),
+  A = l("550766"),
+  g = l("337697"),
   _ = l("686569"),
   N = l("91761"),
   j = l("607384"),
@@ -38,7 +38,7 @@ var i = l("37983"),
   L = l("954016"),
   V = l("49111"),
   R = l("782340"),
-  b = l("145468"),
+  b = l("638675"),
   O = l("661825"),
   H = l("846175"),
   B = l("888181"),
@@ -62,11 +62,11 @@ function G(e) {
     scrollerRef: G
   } = e, [Z, W] = a.useState(0), z = (0, d.useStateFromStores)([m.default], () => m.default.getState().theme), K = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion), {
     enabled: X
-  } = A.ExperimentBirthdayGoodbye.useExperiment({
+  } = g.ExperimentBirthdayGoodbye.useExperiment({
     location: "a48d9e_1"
   }), {
     enabled: q
-  } = x.ActivitiesGameNightExperiment.useExperiment({
+  } = p.ActivitiesGameNightExperiment.useExperiment({
     location: "a48d9e_2"
   }, {
     autoTrackExposure: !1
@@ -107,7 +107,7 @@ function G(e) {
     autoTrackExposure: !0
   });
   if (a.useEffect(() => {
-      (ei || null != l) && (0, g.fetchShelf)({
+      (ei || null != l) && (0, A.fetchShelf)({
         guildId: l,
         force: !0
       })
@@ -125,7 +125,7 @@ function G(e) {
     },
     eu = (() => {
       if (q) return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(p.default, {
+        children: [(0, i.jsx)(x.default, {
           autoPlay: !K,
           src: "https://cdn.discordapp.com/attachments/860252504826445825/1093286971708813382/game_night_desktop.mp4",
           poster: "https://cdn.discordapp.com/attachments/860252504826445825/1093287297950175272/game_night_desktop.jpg",
@@ -158,7 +158,7 @@ function G(e) {
         children: [(0, i.jsx)(r.Link, {
           to: V.Routes.ACTIVITIES,
           onClick: c,
-          children: (0, i.jsx)(p.default, {
+          children: (0, i.jsx)(x.default, {
             autoPlay: !0,
             src: B,
             poster: F,

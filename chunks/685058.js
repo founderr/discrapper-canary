@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return u
+    return d
   }
 });
 var l = n("37983");
@@ -36,7 +36,7 @@ function r(e) {
   })
 }
 
-function u(e) {
+function d(e) {
   let t = (0, s.isVerifiedRolesChannelVisible)(e);
   return t ? (0, l.jsx)(a.MenuItem, {
     id: "guild-connection-roles",

@@ -29,7 +29,7 @@ var a = s("37983"),
   L = s("584027"),
   O = s("614840"),
   p = s("782340"),
-  A = s("917323");
+  A = s("163182");
 
 function M() {
   let e = (0, r.useStateFromStores)([_.default], () => _.default.getGuildId());

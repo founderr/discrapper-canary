@@ -25,7 +25,7 @@ var a = n("37983"),
   A = n("49111"),
   T = n("590456"),
   M = n("782340"),
-  N = n("961282");
+  N = n("724539");
 class I {
   updateData(e, t) {
     this.userId = e, this.user = t

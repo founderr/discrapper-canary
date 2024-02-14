@@ -1,8 +1,8 @@
 "use strict";
 n("424973"), n("808653"), n("781738");
 var r = n("280973"),
-  o = Object.prototype.hasOwnProperty,
-  a = Array.isArray,
+  a = Object.prototype.hasOwnProperty,
+  o = Array.isArray,
   i = function() {
     for (var e = [], t = 0; t < 256; ++t) e.push("%" + ((t < 16 ? "0" : "") + t.toString(16)).toUpperCase());
     return e
@@ -11,8 +11,8 @@ var r = n("280973"),
     for (; e.length > 1;) {
       var t = e.pop(),
         n = t.obj[t.prop];
-      if (a(n)) {
-        for (var r = [], o = 0; o < n.length; ++o) void 0 !== n[o] && r.push(n[o]);
+      if (o(n)) {
+        for (var r = [], a = 0; a < n.length; ++a) void 0 !== n[a] && r.push(n[a]);
         t.obj[t.prop] = r
       }
     }
@@ -38,11 +38,11 @@ e.exports = {
         },
         prop: "o"
       }], n = [], r = 0; r < t.length; ++r) {
-      for (var o = t[r], a = o.obj[o.prop], i = Object.keys(a), c = 0; c < i.length; ++c) {
+      for (var a = t[r], o = a.obj[a.prop], i = Object.keys(o), c = 0; c < i.length; ++c) {
         var l = i[c],
-          u = a[l];
+          u = o[l];
         "object" == typeof u && null !== u && -1 === n.indexOf(u) && (t.push({
-          obj: a,
+          obj: o,
           prop: l
         }), n.push(u))
       }
@@ -58,7 +58,7 @@ e.exports = {
       return r
     }
   },
-  encode: function(e, t, n, o, a) {
+  encode: function(e, t, n, a, o) {
     if (0 === e.length) return e;
     var s = e;
     if ("symbol" == typeof e ? s = Symbol.prototype.toString.call(e) : "string" != typeof e && (s = String(e)), "iso-8859-1" === n) return escape(s).replace(/%u[0-9a-f]{4}/gi, function(e) {
@@ -66,7 +66,7 @@ e.exports = {
     });
     for (var c = "", l = 0; l < s.length; ++l) {
       var u = s.charCodeAt(l);
-      if (45 === u || 46 === u || 95 === u || 126 === u || u >= 48 && u <= 57 || u >= 65 && u <= 90 || u >= 97 && u <= 122 || a === r.RFC1738 && (40 === u || 41 === u)) {
+      if (45 === u || 46 === u || 95 === u || 126 === u || u >= 48 && u <= 57 || u >= 65 && u <= 90 || u >= 97 && u <= 122 || o === r.RFC1738 && (40 === u || 41 === u)) {
         c += s.charAt(l);
         continue
       }
@@ -93,7 +93,7 @@ e.exports = {
     return "[object RegExp]" === Object.prototype.toString.call(e)
   },
   maybeMap: function(e, t) {
-    if (a(e)) {
+    if (o(e)) {
       for (var n = [], r = 0; r < e.length; r += 1) n.push(t(e[r]));
       return n
     }
@@ -102,23 +102,23 @@ e.exports = {
   merge: function e(t, n, r) {
     if (!n) return t;
     if ("object" != typeof n) {
-      if (a(t)) t.push(n);
+      if (o(t)) t.push(n);
       else {
         if (!t || "object" != typeof t) return [t, n];
-        (r && (r.plainObjects || r.allowPrototypes) || !o.call(Object.prototype, n)) && (t[n] = !0)
+        (r && (r.plainObjects || r.allowPrototypes) || !a.call(Object.prototype, n)) && (t[n] = !0)
       }
       return t
     }
     if (!t || "object" != typeof t) return [t].concat(n);
     var i = t;
-    return (a(t) && !a(n) && (i = c(t, r)), a(t) && a(n)) ? (n.forEach(function(n, a) {
-      if (o.call(t, a)) {
-        var i = t[a];
-        i && "object" == typeof i && n && "object" == typeof n ? t[a] = e(i, n, r) : t.push(n)
-      } else t[a] = n
-    }), t) : Object.keys(n).reduce(function(t, a) {
-      var i = n[a];
-      return o.call(t, a) ? t[a] = e(t[a], i, r) : t[a] = i, t
+    return (o(t) && !o(n) && (i = c(t, r)), o(t) && o(n)) ? (n.forEach(function(n, o) {
+      if (a.call(t, o)) {
+        var i = t[o];
+        i && "object" == typeof i && n && "object" == typeof n ? t[o] = e(i, n, r) : t.push(n)
+      } else t[o] = n
+    }), t) : Object.keys(n).reduce(function(t, o) {
+      var i = n[o];
+      return a.call(t, o) ? t[o] = e(t[o], i, r) : t[o] = i, t
     }, i)
   }
 }

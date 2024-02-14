@@ -4,46 +4,46 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
   o = n("808388"),
   u = n("782340"),
-  d = n("635845");
+  d = n("705542");
 
 function c(e) {
   let {
     text: t,
     hasScrolled: n
   } = e;
-  return (0, a.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: i(d.container, {
       [d.containerHide]: n
     }),
-    children: [(0, a.jsx)("div", {
+    children: [(0, l.jsx)("div", {
       className: d.notice,
-      children: (0, a.jsx)(r.Text, {
+      children: (0, l.jsx)(r.Text, {
         className: d.label,
         variant: "text-md/medium",
         color: "header-primary",
         children: t
       })
-    }), (0, a.jsx)("div", {
+    }), (0, l.jsx)("div", {
       className: d.noticeArrow
     })]
   })
 }
 
 function f(e) {
-  let [t, n] = l.useState(), [s, i] = l.useState(), [r, d] = l.useState(!1), [f, h] = l.useState(!1), {
+  let [t, n] = a.useState(), [s, i] = a.useState(), [r, d] = a.useState(!1), [f, h] = a.useState(!1), {
     enabled: m
   } = (0, o.useRoleSubscriptionMaxTiersExperiment)(e);
-  l.useEffect(() => {
+  a.useEffect(() => {
     m && null != t && null != s ? d(t < s) : d(!1)
   }, [m, t, s]);
-  let p = l.useMemo(() => r ? (0, a.jsx)(c, {
+  let p = a.useMemo(() => r ? (0, l.jsx)(c, {
     text: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_LISTINGS_SCROLLABLE_NOTICE,
     hasScrolled: f
   }) : null, [r, f]);

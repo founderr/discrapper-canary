@@ -1,53 +1,53 @@
 "use strict";
-i.r(t), i.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return v
+    return I
   }
 });
-var s, n, l = i("37983");
-i("884691");
-var r = i("414456"),
-  o = i.n(r),
-  a = i("394846"),
-  u = i("77078"),
-  c = i("945330"),
-  d = i("381546"),
-  h = i("782340"),
-  f = i("955892");
-(s = n || (n = {})).DEFAULT = "", s.BOLD = "Bold", s.SOLID = "Solid";
-let p = e => {
+var i, r, a = s("37983");
+s("884691");
+var l = s("414456"),
+  o = s.n(l),
+  n = s("394846"),
+  u = s("77078"),
+  d = s("945330"),
+  c = s("381546"),
+  E = s("782340"),
+  _ = s("371938");
+(i = r || (r = {})).DEFAULT = "", i.BOLD = "Bold", i.SOLID = "Solid";
+let T = e => {
   let {
     closeAction: t,
-    variant: i,
-    keybind: s,
-    className: n
+    variant: s,
+    keybind: i,
+    className: r
   } = e;
-  return (0, l.jsxs)("div", {
-    className: o(f.container, n),
-    children: [(0, l.jsx)(u.Clickable, {
-      className: o(f.closeButton, {
-        [f.closeButtonBold]: "Bold" === i,
-        [f.closeButtonSolid]: "Solid" === i
+  return (0, a.jsxs)("div", {
+    className: o(_.container, r),
+    children: [(0, a.jsx)(u.Clickable, {
+      className: o(_.closeButton, {
+        [_.closeButtonBold]: "Bold" === s,
+        [_.closeButtonSolid]: "Solid" === s
       }),
       onClick: t,
-      "aria-label": h.default.Messages.CLOSE,
-      children: "Solid" === i ? (0, l.jsx)(d.default, {
+      "aria-label": E.default.Messages.CLOSE,
+      children: "Solid" === s ? (0, a.jsx)(c.default, {
         width: 24,
         height: 24,
         "aria-hidden": !0
-      }) : (0, l.jsx)(c.default, {
+      }) : (0, a.jsx)(d.default, {
         width: 18,
         height: 18,
         "aria-hidden": !0
       })
-    }), a.isMobile ? null : (0, l.jsx)("div", {
-      className: o(f.keybind),
+    }), n.isMobile ? null : (0, a.jsx)("div", {
+      className: o(_.keybind),
       "aria-hidden": !0,
-      children: s
+      children: i
     })]
   })
 };
-p.defaultProps = {
+T.defaultProps = {
   variant: ""
-}, p.Variants = n;
-var v = p
+}, T.Variants = r;
+var I = T

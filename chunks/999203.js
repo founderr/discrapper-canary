@@ -27,13 +27,13 @@ function o(e) {
   }), {
     activeSubscriptionListing: c,
     activeEntitlement: f,
-    subscriptionGroupListing: p
-  } = (0, i.useActiveSubscriptionListingForApplication)(null == u ? void 0 : u.id, o), m = null !== (t = null == p ? void 0 : p.sku_flags) && void 0 !== t ? t : 0, h = (0, a.isApplicationUserSubscription)(m) || null != o && o !== r.ME && (0, a.isApplicationGuildSubscription)(m), E = null != f;
+    subscriptionGroupListing: m
+  } = (0, i.useActiveSubscriptionListingForApplication)(null == u ? void 0 : u.id, o), p = null !== (t = null == m ? void 0 : m.sku_flags) && void 0 !== t ? t : 0, h = (0, a.isApplicationUserSubscription)(p) || null != o && o !== r.ME && (0, a.isApplicationGuildSubscription)(p), E = null != f;
   return d ? {
     botUpgraded: E,
     botUpgradeable: !E && d && h,
     activeSubscriptionListing: c,
-    subscriptionGroupListing: p
+    subscriptionGroupListing: m
   } : {
     botUpgraded: !1,
     botUpgradeable: !1,

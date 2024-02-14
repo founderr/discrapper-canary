@@ -8,13 +8,13 @@ function r(e) {
   })(e)
 }
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t.split(".").reduce(function(e, t) {
     return e && e[t] ? e[t] : n || null
   }, e)
 }
 
-function a(e, t) {
+function o(e, t) {
   return e.filter(function(e) {
     return e !== t
   })
@@ -30,10 +30,10 @@ function s(e, t) {
       n.set(e, n.has(e) ? n.get(e) + 1 : 1)
     };
   e.forEach(r), t.forEach(r);
-  var o = [];
+  var a = [];
   return n.forEach(function(e, t) {
-    1 === e && o.push(t)
-  }), o
+    1 === e && a.push(t)
+  }), a
 }
 
 function c(e, t) {
@@ -43,10 +43,10 @@ function c(e, t) {
 }
 n.r(t), n.d(t, {
   get: function() {
-    return o
+    return a
   },
   without: function() {
-    return a
+    return o
   },
   isObject: function() {
     return i

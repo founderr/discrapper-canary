@@ -14,8 +14,8 @@ var l = n("917351"),
   d = n("374363"),
   c = n("697218"),
   f = n("880342"),
-  p = n("235004"),
-  m = n("389480"),
+  m = n("235004"),
+  p = n("389480"),
   h = n("846325"),
   E = n("397336");
 let g = [],
@@ -28,7 +28,7 @@ let g = [],
       let t = 0;
       return e <= 3 ? t = 100 : e <= 15 ? t = 70 : e <= 30 ? t = 50 : e <= 45 ? t = 30 : e <= 80 && (t = 10), t
     },
-    lookupKey: e => p.default.getSoundById(e),
+    lookupKey: e => m.default.getSoundById(e),
     afterCompute: () => {},
     numFrequentlyItems: h.NUM_FREQUENTLY_USED_SOUNDS
   });
@@ -51,7 +51,7 @@ function v() {
 }
 class I extends r.default.PersistedStore {
   initialize(e) {
-    this.waitFor(c.default, p.default), (null == e ? void 0 : e.recentlyHeardCache) != null && S.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (g = e.playedEventsPendingFlush), this.syncWith([d.default], T)
+    this.waitFor(c.default, m.default), (null == e ? void 0 : e.recentlyHeardCache) != null && S.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (g = e.playedEventsPendingFlush), this.syncWith([d.default], T)
   }
   getState() {
     return {
@@ -81,7 +81,7 @@ var _ = new I(o.default, {
     } = e;
     if (!v()) return;
     let l = t.soundId.toString();
-    n === m.LocalSoundTrigger.SOUNDBOARD && function(e) {
+    n === p.LocalSoundTrigger.SOUNDBOARD && function(e) {
       C.track(e), g.push({
         key: e,
         timestamp: Date.now()
@@ -103,7 +103,7 @@ var _ = new I(o.default, {
     let i = n.toString(),
       a = null === (t = c.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
     l !== a && function(e) {
-      let t = p.default.getSounds();
+      let t = m.default.getSounds();
       for (let n of t.values()) {
         let t = n.find(t => t.soundId.toString() === e);
         if (null != t) return !0

@@ -1,49 +1,49 @@
 "use strict";
-r.r(t), r.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return E
+    return m
   }
 });
-var a = r("37983");
-r("884691");
-var s = r("414456"),
-  n = r.n(s),
-  i = r("65597"),
-  l = r("854588"),
-  u = r("206230"),
-  o = r("284679"),
-  c = r("491232"),
-  d = r("408381"),
-  f = r("268779"),
-  E = e => {
+var l = a("37983");
+a("884691");
+var s = a("414456"),
+  r = a.n(s),
+  n = a("65597"),
+  i = a("854588"),
+  o = a("206230"),
+  u = a("284679"),
+  c = a("491232"),
+  d = a("408381"),
+  f = a("467618"),
+  m = e => {
     let {
       asset: t,
-      size: r = d.MAX_CONTENT_WIDTH,
+      size: a = d.MAX_CONTENT_WIDTH,
       className: s,
-      style: E,
-      children: m
-    } = e, C = (0, i.default)([u.default], () => u.default.saturation);
-    return (0, a.jsx)("div", {
-      className: n(f.banner, s),
+      style: m,
+      children: C
+    } = e, E = (0, n.default)([o.default], () => o.default.saturation);
+    return (0, l.jsx)("div", {
+      className: r(f.banner, s),
       style: (() => {
-        if (null == t) return E;
+        if (null == t) return m;
         let e = (0, c.getCollectiblesAssetURL)(t, {
-          size: r,
+          size: a,
           format: "jpg"
         });
-        if (1 === C) return {
-          ...E,
+        if (1 === E) return {
+          ...m,
           backgroundImage: "url(".concat(e, ")"),
           backgroundSize: "cover"
         };
-        let a = (0, o.hexOpacityToRgba)(l.default.unsafe_rawColors.BLACK_500, 1 - C);
+        let l = (0, u.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - E);
         return {
-          ...E,
-          backgroundImage: "linear-gradient(".concat(a, ", ").concat(a, "), url(").concat(e, ")"),
+          ...m,
+          backgroundImage: "linear-gradient(".concat(l, ", ").concat(l, "), url(").concat(e, ")"),
           backgroundBlendMode: "saturation",
           backgroundSize: "cover"
         }
       })(),
-      children: m
+      children: C
     })
   }

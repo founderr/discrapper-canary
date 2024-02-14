@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("913144"),
   c = n("81594"),
   f = n("798609"),
-  p = n("206230"),
-  m = n("302437"),
+  m = n("206230"),
+  p = n("302437"),
   h = n("383018"),
   E = n("474643"),
   g = n("585722"),
@@ -24,15 +24,15 @@ var l = n("37983"),
   T = n("393377"),
   v = n("761354"),
   I = n("49111"),
-  _ = n("735189"),
-  y = n("862839");
+  _ = n("986548"),
+  N = n("356410");
 let A = [];
 
-function N(e) {
+function y(e) {
   let {
     channelId: t,
     type: n
-  } = e, a = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), N = (0, m.default)("attachments", o.Orientations.HORIZONTAL), x = (0, u.useStateFromStores)([g.default], () => g.default.getUploads(t, n.drafts.type)), {
+  } = e, a = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), y = (0, p.default)("attachments", o.Orientations.HORIZONTAL), x = (0, u.useStateFromStores)([g.default], () => g.default.getUploads(t, n.drafts.type)), {
     isApplicationCommand: O,
     commandOptions: R,
     commandOptionStates: M
@@ -63,8 +63,8 @@ function N(e) {
     return d.default.subscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e), () => d.default.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
   }, [t, n]);
   let j = i.useCallback(() => {
-    N.focusFirstVisibleItem()
-  }, [N]);
+    y.focusFirstVisibleItem()
+  }, [y]);
   return ((0, C.useComponentAction)({
     event: I.ComponentActions.FOCUS_ATTACHMENT_AREA,
     handler: j
@@ -79,7 +79,7 @@ function N(e) {
     }
   }, [t, L.length, n]), !O && 0 === x.length || O && 0 === L.length) ? null : (0, l.jsxs)(i.Fragment, {
     children: [(0, l.jsx)(r.ListNavigatorProvider, {
-      navigator: N,
+      navigator: y,
       children: (0, l.jsx)(r.ListNavigatorContainer, {
         children: e => {
           let {
@@ -89,7 +89,7 @@ function N(e) {
           return (0, l.jsx)("ul", {
             ref: i,
             ...r,
-            className: s(_.channelAttachmentArea, y.scrollbarGhost),
+            className: s(_.channelAttachmentArea, N.scrollbarGhost),
             children: O ? L.map(e => (0, l.jsx)(T.default, {
               channelId: t,
               keyboardModeEnabled: a,
@@ -113,7 +113,7 @@ var x = i.memo(function(e) {
     type: n,
     canAttachFiles: i
   } = e;
-  return i ? (0, l.jsx)(N, {
+  return i ? (0, l.jsx)(y, {
     channelId: t,
     type: n
   }) : null

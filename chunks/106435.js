@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var r = n("884691"),
-  i = n("77078"),
+var i = n("884691"),
+  r = n("77078"),
   l = n("606292"),
   a = n("688318"),
   s = n("19287");
@@ -18,8 +18,8 @@ function o(e) {
     showPending: u = !1,
     showTryItOut: d = !1,
     animateOnHover: c = !1,
-    avatarDecorationOverride: m,
-    avatarOverride: f
+    avatarDecorationOverride: f,
+    avatarOverride: m
   } = e, {
     avatarSrc: _,
     isAvatarAnimating: E,
@@ -27,34 +27,34 @@ function o(e) {
   } = (0, s.useAnimatedAvatarSrc)({
     user: t,
     guildId: n,
-    size: (0, i.getAvatarSize)(o),
+    size: (0, r.getAvatarSize)(o),
     showPending: u,
     animateOnHover: c,
-    avatarOverride: f
+    avatarOverride: m
   }), {
     avatarPlaceholderSrc: I,
-    avatarDecorationSrc: p,
-    eventHandlers: P
+    avatarDecorationSrc: C,
+    eventHandlers: p
   } = (0, a.default)({
     user: t,
     size: (0, l.getDecorationSizeForAvatarSize)(o),
     showPending: u,
     animateOnHover: c,
-    avatarDecorationOverride: m,
+    avatarDecorationOverride: f,
     showTryItOut: d
-  }), S = r.useCallback(() => {
-    T.onMouseEnter(), P.onMouseEnter()
-  }, [T, P]), R = r.useCallback(() => {
-    T.onMouseLeave(), P.onMouseLeave()
-  }, [T, P]);
+  }), P = i.useCallback(() => {
+    T.onMouseEnter(), p.onMouseEnter()
+  }, [T, p]), S = i.useCallback(() => {
+    T.onMouseLeave(), p.onMouseLeave()
+  }, [T, p]);
   return {
     avatarPlaceholderSrc: I,
-    avatarDecorationSrc: p,
+    avatarDecorationSrc: C,
     avatarSrc: _,
     isAnimating: E,
     eventHandlers: {
-      onMouseEnter: S,
-      onMouseLeave: R
+      onMouseEnter: P,
+      onMouseLeave: S
     }
   }
 }

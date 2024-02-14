@@ -1,7 +1,7 @@
 var n = r("954873"),
   u = r("203080"),
-  o = r("738279"),
-  a = r("840132"),
+  a = r("738279"),
+  o = r("840132"),
   i = r("569787");
 e.exports = function(e, t, r) {
   var s = e.constructor;
@@ -30,8 +30,8 @@ e.exports = function(e, t, r) {
     case "[object String]":
       return new s(e);
     case "[object RegExp]":
-      return o(e);
+      return a(e);
     case "[object Symbol]":
-      return a(e)
+      return o(e)
   }
 }

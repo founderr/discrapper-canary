@@ -1,33 +1,33 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return y
   }
 }), n("222007");
 var l = n("37983"),
-  a = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
   r = n("868233"),
   o = n("77078"),
   u = n("903962"),
   d = n("993105"),
   c = n("410889"),
-  m = n("461380"),
-  f = n("195812"),
-  h = n("967685"),
-  p = n("204591"),
-  g = n("782340"),
-  E = n("219127"),
-  C = n("862839");
+  f = n("461380"),
+  m = n("195812"),
+  p = n("967685"),
+  h = n("204591"),
+  E = n("782340"),
+  g = n("482211"),
+  S = n("356410");
 
-function v(e) {
+function C(e) {
   let {
     text: t,
-    language: a
-  } = e, s = () => (0, l.jsx)("pre", {
+    language: i
+  } = e, a = () => (0, l.jsx)("pre", {
     children: (0, l.jsx)("code", {
-      className: i(C.scrollbarGhostHairline, E.codeView, "hljs"),
+      className: s(S.scrollbarGhostHairline, g.codeView, "hljs"),
       children: t
     })
   });
@@ -35,46 +35,46 @@ function v(e) {
     createPromise: () => n.el("86256").then(n.bind(n, "86256")),
     webpackId: "86256",
     render: e => {
-      if (!e.hasLanguage(a)) return s();
-      let n = e.highlight(a, t, !0);
-      return null == n ? s() : (0, l.jsx)("pre", {
+      if (!e.hasLanguage(i)) return a();
+      let n = e.highlight(i, t, !0);
+      return null == n ? a() : (0, l.jsx)("pre", {
         children: (0, l.jsx)("code", {
-          className: i(C.scrollbarGhostHairline, E.codeView, "hljs", n.language),
+          className: s(S.scrollbarGhostHairline, g.codeView, "hljs", n.language),
           dangerouslySetInnerHTML: {
             __html: n.value
           }
         })
       })
     },
-    renderFallback: () => s()
+    renderFallback: () => a()
   })
 }
 
-function I(e) {
+function T(e) {
   let {
     expanded: t,
     setExpanded: n,
-    isWholeFile: a,
-    numLines: s
-  } = e, i = (a ? g.default.Messages.PREVIEW_NUM_LINES : g.default.Messages.PREVIEW_NUM_LINES_AT_LEAST).format({
-    lines: s
+    isWholeFile: i,
+    numLines: a
+  } = e, s = (i ? E.default.Messages.PREVIEW_NUM_LINES : E.default.Messages.PREVIEW_NUM_LINES_AT_LEAST).format({
+    lines: a
   });
   return (0, l.jsx)(o.Tooltip, {
-    text: "".concat(t ? g.default.Messages.COLLAPSE : g.default.Messages.EXPAND, " (").concat(i, ")"),
+    text: "".concat(t ? E.default.Messages.COLLAPSE : E.default.Messages.EXPAND, " (").concat(s, ")"),
     children: e => (0, l.jsxs)(o.Clickable, {
       ...e,
-      className: E.toggleExpandSection,
+      className: g.toggleExpandSection,
       onClick: () => {
         n(!t)
       },
-      children: [(0, l.jsx)(m.default, {
-        direction: t ? m.default.Directions.UP : m.default.Directions.DOWN
-      }), t ? g.default.Messages.COLLAPSE : g.default.Messages.EXPAND]
+      children: [(0, l.jsx)(f.default, {
+        direction: t ? f.default.Directions.UP : f.default.Directions.DOWN
+      }), t ? E.default.Messages.COLLAPSE : E.default.Messages.EXPAND]
     })
   })
 }
 
-function S(e) {
+function v(e) {
   let {
     attachment: t
   } = e, n = "".concat(t.filename, " (").concat((0, d.formatKbSize)(t.size), ")");
@@ -83,26 +83,26 @@ function S(e) {
       text: n,
       children: e => (0, l.jsx)("span", {
         ...e,
-        className: i(E.downloadSection, E.attachmentName),
+        className: s(g.downloadSection, g.attachmentName),
         children: t.filename
       })
     }), (0, l.jsx)(o.Tooltip, {
       text: n,
       children: e => (0, l.jsx)("span", {
         ...e,
-        className: i(E.downloadSection, E.formattedSize),
+        className: s(g.downloadSection, g.formattedSize),
         children: (0, d.formatKbSize)(t.size)
       })
     }), (0, l.jsx)(o.Tooltip, {
-      text: "".concat(g.default.Messages.DOWNLOAD, " ").concat(n),
+      text: "".concat(E.default.Messages.DOWNLOAD, " ").concat(n),
       children: e => (0, l.jsx)(o.Anchor, {
         ...e,
-        className: E.downloadSection,
+        className: g.downloadSection,
         href: t.url,
         target: "_blank",
         rel: "noreferrer noopener",
-        children: (0, l.jsx)(f.default, {
-          className: E.downloadButton,
+        children: (0, l.jsx)(m.default, {
+          className: g.downloadButton,
           width: 24,
           height: 24
         })
@@ -111,7 +111,7 @@ function S(e) {
   })
 }
 
-function _(e) {
+function I(e) {
   let {
     language: t,
     setLanguage: n
@@ -120,18 +120,18 @@ function _(e) {
     position: "left",
     renderPopout: e => {
       let {
-        closePopout: a
+        closePopout: i
       } = e;
       return (0, l.jsx)(o.Dialog, {
-        "aria-label": g.default.Messages.PREVIEW_CHANGE_LANGUAGE,
+        "aria-label": E.default.Messages.PREVIEW_CHANGE_LANGUAGE,
         children: (0, l.jsx)(o.Combobox, {
-          className: E.languageSelector,
+          className: g.languageSelector,
           multiSelect: !1,
-          placeholder: g.default.Messages.PREVIEW_SEARCH_LANGUAGE_PLACEHOLDER,
+          placeholder: E.default.Messages.PREVIEW_SEARCH_LANGUAGE_PLACEHOLDER,
           value: new Set([t]),
           autoFocus: !0,
           onChange: e => {
-            n(e), a()
+            n(e), i()
           },
           children: e => Array.from(u.PLAINTEXT_FILE_EXTENSIONS).filter(t => t.toLowerCase().includes(e.toLowerCase())).map(e => (0, l.jsx)(o.ComboboxItem, {
             value: e,
@@ -143,31 +143,31 @@ function _(e) {
       })
     },
     children: e => (0, l.jsx)(o.Tooltip, {
-      text: g.default.Messages.PREVIEW_CHANGE_LANGUAGE,
-      children: t => (0, l.jsx)(p.default, {
+      text: E.default.Messages.PREVIEW_CHANGE_LANGUAGE,
+      children: t => (0, l.jsx)(h.default, {
         width: 24,
         height: 24,
         ...t,
         ...e,
-        className: E.codeIcon
+        className: g.codeIcon
       })
     })
   })
 }
 
-function x(e) {
+function _(e) {
   return (0, l.jsx)(o.Tooltip, {
-    text: g.default.Messages.PREVIEW_WHOLE_FILE,
+    text: E.default.Messages.PREVIEW_WHOLE_FILE,
     children: t => (0, l.jsx)(o.Clickable, {
       ...t,
-      className: E.openFullPreviewSection,
+      className: g.openFullPreviewSection,
       onClick: () => {
-        (0, o.openModal)(t => (0, l.jsx)(T, {
+        (0, o.openModal)(t => (0, l.jsx)(A, {
           ...e,
           ...t
         }))
       },
-      children: (0, l.jsx)(h.default, {})
+      children: (0, l.jsx)(p.default, {})
     })
   })
 }
@@ -176,54 +176,54 @@ function N(e) {
   var t;
   let {
     attachment: n,
-    fileContents: a,
-    expanded: s,
+    fileContents: i,
+    expanded: a,
     setExpanded: r,
     language: u,
     setLanguage: c,
-    bytesLeft: m,
-    className: f
-  } = e, h = null == a ? void 0 : a.split("\n"), p = null !== (t = null == h ? void 0 : h.length) && void 0 !== t ? t : 0, C = s ? 100 : 6, N = 0 === m, T = "";
-  N && s && p > C ? T = "\n..." : !N && (T = "..."), "" !== T && (N ? T += " " + g.default.Messages.PREVIEW_LINES_LEFT.format({
-    lines: p - C
-  }) : T += " " + g.default.Messages.PREVIEW_BYTES_LEFT.format({
-    formattedBytes: (0, d.formatKbSize)(m)
+    bytesLeft: f,
+    className: m
+  } = e, p = null == i ? void 0 : i.split("\n"), h = null !== (t = null == p ? void 0 : p.length) && void 0 !== t ? t : 0, S = a ? 100 : 6, N = 0 === f, A = "";
+  N && a && h > S ? A = "\n..." : !N && (A = "..."), "" !== A && (N ? A += " " + E.default.Messages.PREVIEW_LINES_LEFT.format({
+    lines: h - S
+  }) : A += " " + E.default.Messages.PREVIEW_BYTES_LEFT.format({
+    formattedBytes: (0, d.formatKbSize)(f)
   }));
-  let M = (null == h ? void 0 : h.slice(0, C).join("\n")) + T,
-    A = s || C < p;
+  let y = (null == p ? void 0 : p.slice(0, S).join("\n")) + A,
+    x = a || S < h;
   return (0, l.jsxs)("div", {
-    className: i(f, E.container),
+    className: s(m, g.container),
     children: [(0, l.jsx)("div", {
-      className: i(E.textContainer, {
-        [E.expanded]: s
+      className: s(g.textContainer, {
+        [g.expanded]: a
       }),
-      children: null == a ? (0, l.jsx)(o.Spinner, {
-        className: E.spinner
-      }) : (0, l.jsx)(v, {
-        text: M,
+      children: null == i ? (0, l.jsx)(o.Spinner, {
+        className: g.spinner
+      }) : (0, l.jsx)(C, {
+        text: y,
         language: u
       })
     }), (0, l.jsxs)(o.Text, {
       color: "header-secondary",
-      className: E.footer,
+      className: g.footer,
       variant: "text-sm/normal",
-      children: [A ? (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(I, {
-          expanded: s,
+      children: [x ? (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(T, {
+          expanded: a,
           setExpanded: r,
           isWholeFile: N,
-          numLines: p
-        }), (0, l.jsx)(x, {
+          numLines: h
+        }), (0, l.jsx)(_, {
           language: u,
-          fileContents: a,
-          bytesLeft: m,
+          fileContents: i,
+          bytesLeft: f,
           attachment: n
         })]
       }) : null, (0, l.jsx)("div", {
-        className: E.footerGap
-      }), (0, l.jsx)(S, {
+        className: g.footerGap
+      }), (0, l.jsx)(v, {
         attachment: n
-      }), (0, l.jsx)(_, {
+      }), (0, l.jsx)(I, {
         language: u,
         setLanguage: c
       })]
@@ -231,40 +231,40 @@ function N(e) {
   })
 }
 
-function T(e) {
+function A(e) {
   let {
     transitionState: t,
     language: n,
-    fileContents: s,
-    bytesLeft: i,
+    fileContents: a,
+    bytesLeft: s,
     attachment: r
-  } = e, [u, c] = a.useState(n), m = null != s ? s : "";
-  return 0 !== i && (m += "... ".concat(g.default.Messages.PREVIEW_BYTES_LEFT.format({
-    formattedBytes: (0, d.formatKbSize)(i)
+  } = e, [u, c] = i.useState(n), f = null != a ? a : "";
+  return 0 !== s && (f += "... ".concat(E.default.Messages.PREVIEW_BYTES_LEFT.format({
+    formattedBytes: (0, d.formatKbSize)(s)
   }))), (0, l.jsx)(o.ModalRoot, {
     transitionState: t,
-    "aria-label": g.default.Messages.PREVIEW_MODAL_LABEL,
+    "aria-label": E.default.Messages.PREVIEW_MODAL_LABEL,
     size: o.ModalSize.LARGE,
-    className: E.modalRoot,
+    className: g.modalRoot,
     children: (0, l.jsxs)("div", {
-      className: E.modalContent,
+      className: g.modalContent,
       children: [(0, l.jsx)(o.ScrollerThin, {
-        className: E.modalTextContainer,
-        children: null == s ? (0, l.jsx)(o.Spinner, {
-          className: E.spinner
-        }) : (0, l.jsx)(v, {
-          text: m,
+        className: g.modalTextContainer,
+        children: null == a ? (0, l.jsx)(o.Spinner, {
+          className: g.spinner
+        }) : (0, l.jsx)(C, {
+          text: f,
           language: u
         })
       }), (0, l.jsxs)(o.Text, {
         color: "header-secondary",
-        className: E.footer,
+        className: g.footer,
         variant: "text-sm/normal",
         children: [(0, l.jsx)("div", {
-          className: E.footerGap
-        }), (0, l.jsx)(S, {
+          className: g.footerGap
+        }), (0, l.jsx)(v, {
           attachment: r
-        }), (0, l.jsx)(_, {
+        }), (0, l.jsx)(I, {
           language: u,
           setLanguage: c
         })]
@@ -272,23 +272,23 @@ function T(e) {
     })
   })
 }
-var M = a.memo(function(e) {
+var y = i.memo(function(e) {
   let {
     attachment: t,
     className: n,
-    onClick: s,
+    onClick: a,
     onContextMenu: r
-  } = e, [o, u] = a.useState(!1), [d, m] = a.useState(t.filename.split(".").slice(-1)[0]), {
-    fileContents: f,
-    bytesLeft: h,
-    hadError: p
+  } = e, [o, u] = i.useState(!1), [d, f] = i.useState(t.filename.split(".").slice(-1)[0]), {
+    fileContents: m,
+    bytesLeft: p,
+    hadError: h
   } = function(e, t) {
-    let [n, l] = a.useState(!1), [s, i] = a.useState(null), [r, o] = a.useState(1);
-    return a.useEffect(() => {
+    let [n, l] = i.useState(!1), [a, s] = i.useState(null), [r, o] = i.useState(1);
+    return i.useEffect(() => {
       (async function n() {
         try {
-          var n, a;
-          let s = await fetch(e, {
+          var n, i;
+          let a = await fetch(e, {
               headers: {
                 Range: "bytes=0-".concat(5e4),
                 Accept: "text/plain"
@@ -305,37 +305,37 @@ var M = a.memo(function(e) {
                 throw t
               }
             }(t),
-            u = r.decode(await s.arrayBuffer()),
-            d = null !== (n = s.headers.get("content-range")) && void 0 !== n ? n : "0",
-            c = null !== (a = s.headers.get("content-length")) && void 0 !== a ? a : "1",
-            m = parseInt(d.split("/")[1]),
-            f = m - parseInt(c);
-          i(0 === f ? u : u.slice(0, -1)), o(f), l(!1)
+            u = r.decode(await a.arrayBuffer()),
+            d = null !== (n = a.headers.get("content-range")) && void 0 !== n ? n : "0",
+            c = null !== (i = a.headers.get("content-length")) && void 0 !== i ? i : "1",
+            f = parseInt(d.split("/")[1]),
+            m = f - parseInt(c);
+          s(0 === m ? u : u.slice(0, -1)), o(m), l(!1)
         } catch (e) {
           o(0), l(!0)
         }
       })()
     }, [e, t]), {
-      fileContents: s,
+      fileContents: a,
       bytesLeft: r,
       hadError: n
     }
   }(t.url, t.content_type);
-  return p ? (0, l.jsx)(c.default, {
+  return h ? (0, l.jsx)(c.default, {
     url: t.url,
     filename: t.filename,
     size: t.size,
-    onClick: s,
+    onClick: a,
     onContextMenu: r,
     className: n
   }) : (0, l.jsx)(N, {
     attachment: t,
-    fileContents: f,
-    bytesLeft: h,
+    fileContents: m,
+    bytesLeft: p,
     expanded: o,
     setExpanded: u,
     language: d,
-    setLanguage: m,
-    className: i(E.newMosaicStyle, n)
+    setLanguage: f,
+    className: s(g.newMosaicStyle, n)
   })
 }, (e, t) => e.attachment.id === t.attachment.id && e.className === t.className)

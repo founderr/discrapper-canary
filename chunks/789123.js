@@ -31,8 +31,8 @@ var a = s("37983"),
   h = s("900938"),
   C = s("579033"),
   R = s("782340"),
-  x = s("282567"),
-  L = s("926622");
+  x = s("987107"),
+  L = s("890957");
 class O extends d.default.Store {
   getTemplate() {
     let e = h.default.getProps().guild;

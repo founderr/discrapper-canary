@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var l = n("884691"),
-  a = n("866227"),
-  s = n.n(a),
-  i = n("775560"),
+  i = n("866227"),
+  a = n.n(i),
+  s = n("775560"),
   r = n("718517"),
   o = n("646630");
 let u = [
@@ -19,18 +19,18 @@ let u = [
   d = 2 * r.default.Seconds.HOUR;
 
 function c(e) {
-  let t = (0, i.useForceUpdate)();
+  let t = (0, s.useForceUpdate)();
   return (l.useEffect(() => {
     if ("R" !== e.format) return;
     let n = 1e3 * d,
-      l = Math.abs(e.parsed.diff(s()));
+      l = Math.abs(e.parsed.diff(a()));
     for (let [e, t] of u)
       if (l < 1e3 * e) {
         n = 1e3 * t;
         break
-      } let a = setInterval(() => {
+      } let i = setInterval(() => {
       t()
     }, n);
-    return () => clearInterval(a)
+    return () => clearInterval(i)
   }, [t, e.format, e.parsed]), "R" === e.format) ? o.TIMESTAMP_FORMATS.R(e.parsed) : e.formatted
 }

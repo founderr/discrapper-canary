@@ -7,19 +7,19 @@ n.r(t), n.d(t, {
     return N
   },
   getCachedResults: function() {
-    return S
-  },
-  getChangeKeys: function() {
     return g
   },
+  getChangeKeys: function() {
+    return h
+  },
   useDiscovery: function() {
-    return O
+    return S
   },
   executeQuery: function() {
-    return M
+    return O
   },
   useQuery: function() {
-    return h
+    return M
   },
   useCommand: function() {
     return v
@@ -37,19 +37,19 @@ n.r(t), n.d(t, {
 var i = n("884691"),
   l = n("446674"),
   a = n("938767"),
-  s = n("305961"),
+  o = n("305961"),
   r = n("697218"),
-  o = n("449008"),
+  s = n("449008"),
   u = n("507217"),
   d = n("589777"),
   c = n("14090"),
   p = n("988721"),
   f = n("972620"),
   m = n("216193"),
-  I = n("166004"),
-  _ = n("524768"),
-  T = n("389153"),
-  C = n("317041"),
+  _ = n("166004"),
+  I = n("524768"),
+  C = n("389153"),
+  T = n("317041"),
   A = n("49111");
 
 function E(e, t) {
@@ -68,10 +68,10 @@ function E(e, t) {
       application: n
     }
   }
-  let s = p.default.getUserState(),
+  let o = p.default.getUserState(),
     r = p.default.getContextState(e),
-    o = Object.values(null !== (l = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {}).concat(Object.values(null !== (a = null === (i = r.result) || void 0 === i ? void 0 : i.sections) && void 0 !== a ? a : {}));
-  for (let e of o) {
+    s = Object.values(null !== (l = null === (n = o.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {}).concat(Object.values(null !== (a = null === (i = r.result) || void 0 === i ? void 0 : i.sections) && void 0 !== a ? a : {}));
+  for (let e of s) {
     let n = e.commands[t];
     if (null != n) return {
       application: e.descriptor.application,
@@ -85,24 +85,24 @@ function E(e, t) {
 }
 
 function N(e, t, n) {
-  var i, l, a, s, r, o;
+  var i, l, a, o, r, s;
   if (!R({
       location: "getCachedApplicationSection"
-    })) return null === (r = I.default.getApplicationSections(e.id, t)) || void 0 === r ? void 0 : r.find(e => e.id === n);
+    })) return null === (r = _.default.getApplicationSections(e.id, t)) || void 0 === r ? void 0 : r.find(e => e.id === n);
   let u = p.default.getUserState(),
     d = p.default.getContextState(e),
-    c = null !== (o = null === (l = u.result) || void 0 === l ? void 0 : null === (i = l.sections) || void 0 === i ? void 0 : i[n]) && void 0 !== o ? o : null === (s = d.result) || void 0 === s ? void 0 : null === (a = s.sections) || void 0 === a ? void 0 : a[n];
+    c = null !== (s = null === (l = u.result) || void 0 === l ? void 0 : null === (i = l.sections) || void 0 === i ? void 0 : i[n]) && void 0 !== s ? s : null === (o = d.result) || void 0 === o ? void 0 : null === (a = o.sections) || void 0 === a ? void 0 : a[n];
   return null == c ? void 0 : c.descriptor
 }
 
-function S(e, t, n) {
+function g(e, t, n) {
   if (!R({
       location: "getCachedResults"
     })) {
     var i, l;
     return {
-      commands: null !== (i = I.default.getQueryCommands(e.id, t, n)) && void 0 !== i ? i : [],
-      sections: null !== (l = I.default.getApplicationSections(e.id, t)) && void 0 !== l ? l : []
+      commands: null !== (i = _.default.getQueryCommands(e.id, t, n)) && void 0 !== i ? i : [],
+      sections: null !== (l = _.default.getApplicationSections(e.id, t)) && void 0 !== l ? l : []
     }
   }
   let a = p.default.query(e, {
@@ -118,41 +118,41 @@ function S(e, t, n) {
   }
 }
 
-function g(e, t, n) {
+function h(e, t, n) {
   if (!R({
       location: "getChangeKeys"
     }, {
       autoTrackExposure: !1
-    })) return [I.default.getQueryCommands(e.id, t, n)];
+    })) return [_.default.getQueryCommands(e.id, t, n)];
   let i = p.default.getUserState(),
     l = p.default.getContextState(e);
   return [null == i ? void 0 : i.result, null == l ? void 0 : l.result]
 }
 
-function O(e, t, n) {
-  if (!P({
+function S(e, t, n) {
+  if (!L({
       location: "useDiscovery"
     })) {
     var a, r;
-    return (0, I.useDiscoveryState)(e, t.commandType, null !== (a = n.placeholderCount) && void 0 !== a ? a : 0, null !== (r = n.limit) && void 0 !== r ? r : 10, {
+    return (0, _.useDiscoveryState)(e, t.commandType, null !== (a = n.placeholderCount) && void 0 !== a ? a : 0, null !== (r = n.limit) && void 0 !== r ? r : 10, {
       canOnlyUseTextCommands: t.builtIns === f.BuiltInCommandFilter.ONLY_TEXT,
       canUseFrecency: n.includeFrecency
     })
   }
-  let o = (0, l.useStateFromStores)([s.default], () => s.default.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
+  let s = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
     {
       descriptors: u,
       commands: c,
       sectionedCommands: m,
-      loading: _
-    } = (0, p.useDiscoveryState)(e, o, t, {
+      loading: I
+    } = (0, p.useDiscoveryState)(e, s, t, {
       ...n,
       allowFetch: !0
     }),
-    [T, E] = i.useState(null),
+    [C, E] = i.useState(null),
     N = i.useRef(!1);
-  N.current = _;
-  let S = i.useMemo(() => {
+  N.current = I;
+  let g = i.useMemo(() => {
     let e = [];
     if (null != n.placeholderCount)
       for (let i = 0; i < n.placeholderCount; i++) e.push(U(i, t.commandType));
@@ -164,72 +164,72 @@ function O(e, t, n) {
       commands: c,
       activeSections: u,
       commandsByActiveSection: m,
-      filteredSectionId: T,
+      filteredSectionId: C,
       hasMoreAfter: !1,
-      placeholders: _ ? S : [],
+      placeholders: I ? g : [],
       sectionDescriptors: u,
       filterSection: e => {
         E(e)
       },
       scrollDown: A.NOOP
     };
-    if (null != T) {
-      let t = m.find(e => e.section.id === T);
+    if (null != C) {
+      let t = m.find(e => e.section.id === C);
       e.activeSections = null != t ? [t.section] : [], e.commandsByActiveSection = null != t ? [t] : []
     }
-    if (_) {
+    if (I) {
       let t = m[0];
       if (null != t) e.commandsByActiveSection = [{
         section: t.section,
-        data: [...t.data, ...S]
+        data: [...t.data, ...g]
       }, ...m.slice(1)];
       else {
-        let t = d.BUILT_IN_SECTIONS[C.BuiltInSectionId.BUILT_IN];
+        let t = d.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN];
         e.activeSections = [t], e.commandsByActiveSection = [{
           section: t,
-          data: S
+          data: g
         }]
       }
-      e.commands = [...c, ...S]
+      e.commands = [...c, ...g]
     }
     return e
-  }, [c, u, T, m, _, S])
+  }, [c, u, C, m, I, g])
 }
 
-function M(e, t, n) {
+function O(e, t, n) {
   if (!R({
       location: "executeQuery"
     })) {
-    var i, l, s, r, o;
+    var i, l, o, r, s;
     return !0 === n.allowFetch && u.querySearchManager((0, a.getCommandContext)(e), null !== (i = t.text) && void 0 !== i ? i : "", null !== (l = n.limit) && void 0 !== l ? l : 10, t.commandType), {
-      commands: null !== (r = I.default.getQueryCommands(e.id, t.commandType, null !== (s = t.text) && void 0 !== s ? s : "")) && void 0 !== r ? r : [],
-      sections: null !== (o = I.default.getApplicationSections(e.id, t.commandType)) && void 0 !== o ? o : []
+      commands: null !== (r = _.default.getQueryCommands(e.id, t.commandType, null !== (o = t.text) && void 0 !== o ? o : "")) && void 0 !== r ? r : [],
+      sections: null !== (s = _.default.getApplicationSections(e.id, t.commandType)) && void 0 !== s ? s : []
     }
   }
   let {
     descriptors: c,
     commands: f,
     loading: m
-  } = p.default.query(e, t, n), _ = [];
+  } = p.default.query(e, t, n), I = [];
   if (null != n.placeholderCount && m)
-    for (let e = 0; e < n.placeholderCount; e++) _.push(U(e, t.commandType));
+    for (let e = 0; e < n.placeholderCount; e++) I.push(U(e, t.commandType));
   return {
-    commands: m ? [...f, ..._] : f,
-    sections: m && 0 === c.length ? [d.BUILT_IN_SECTIONS[C.BuiltInSectionId.BUILT_IN]] : c
+    commands: m ? [...f, ...I] : f,
+    sections: m && 0 === c.length ? [d.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN]] : c
   }
 }
 
-function h(e, t, n) {
-  if (!P({
+function M(e, t, n) {
+  if (!L({
       location: "useQuery"
     })) {
     var l, a;
-    return (0, I.useQueryState)(e, t.commandType, null !== (l = t.text) && void 0 !== l ? l : "", null !== (a = n.limit) && void 0 !== a ? a : 10)
+    return (0, _.useQueryState)(e, t.commandType, null !== (l = t.text) && void 0 !== l ? l : "", null !== (a = n.limit) && void 0 !== a ? a : 10)
   }
   let {
-    descriptors: s,
+    descriptors: o,
     commands: r,
-    loading: o
+    loading: s
   } = (0, p.useQueryState)(e, t, {
     ...n,
     allowFetch: !0
@@ -240,14 +240,14 @@ function h(e, t, n) {
     return e
   }, [t.commandType, n.placeholderCount]);
   return i.useMemo(() => ({
-    commands: o ? [...r, ...u] : r,
-    sections: o && 0 === s.length ? [d.BUILT_IN_SECTIONS[C.BuiltInSectionId.BUILT_IN]] : s,
+    commands: s ? [...r, ...u] : r,
+    sections: s && 0 === o.length ? [d.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN]] : o,
     scrollDown: A.NOOP
-  }), [o, r, s, u])
+  }), [s, r, o, u])
 }
 
 function v(e, t) {
-  if (!P({
+  if (!L({
       location: "useCommand"
     })) {
     var n;
@@ -260,8 +260,8 @@ function v(e, t) {
         return null
       }, [e]),
       {
-        command: s,
-        application: o
+        command: o,
+        application: s
       } = (0, l.useStateFromStoresObject)([m.default], () => {
         let e = null != t ? m.default.getCommand(t) : void 0,
           n = m.default.getApplication(null == e ? void 0 : e.applicationId);
@@ -271,25 +271,25 @@ function v(e, t) {
         }
       });
     return (i.useEffect(() => {
-      null != e && null == s && (null != a ? u.fetchCommandsForApplication({
+      null != e && null == o && (null != a ? u.fetchCommandsForApplication({
         guildId: null,
         channelId: e.id,
         applicationId: a.id
       }) : null != e.guild_id && null != t && u.fetchCommand(e.guild_id, e.id, t))
-    }, [a, e, s, t]), null == e || null == e.guild_id && (null == a || null == o || a.id !== (null === (n = o.bot) || void 0 === n ? void 0 : n.id))) ? {
+    }, [a, e, o, t]), null == e || null == e.guild_id && (null == a || null == s || a.id !== (null === (n = s.bot) || void 0 === n ? void 0 : n.id))) ? {
       command: void 0,
       application: void 0
     } : {
-      command: s,
-      application: o
+      command: o,
+      application: s
     }
   }
   let a = (0, p.useUserIndexState)(!0, !0),
-    s = (0, p.useContextIndexState)(e, !0, !0);
+    o = (0, p.useContextIndexState)(e, !0, !0);
   return i.useMemo(() => {
     if (null != t) {
       var e, n, i, l;
-      let r = Object.values(null !== (i = null === (e = a.result) || void 0 === e ? void 0 : e.sections) && void 0 !== i ? i : {}).concat(Object.values(null !== (l = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {}));
+      let r = Object.values(null !== (i = null === (e = a.result) || void 0 === e ? void 0 : e.sections) && void 0 !== i ? i : {}).concat(Object.values(null !== (l = null === (n = o.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {}));
       for (let e of r) {
         let n = e.commands[t];
         if (null != n) return {
@@ -302,11 +302,11 @@ function v(e, t) {
       command: void 0,
       application: void 0
     }
-  }, [s.result, a.result, t])
+  }, [o.result, a.result, t])
 }
 
 function y(e, t, n) {
-  if (!P({
+  if (!L({
       location: "useCommandsForApplication"
     })) return i.useEffect(() => {
     u.fetchCommands(e.guild_id, e.id, n)
@@ -319,52 +319,52 @@ function y(e, t, n) {
     }
   });
   let a = (0, p.useUserIndexState)(!0, !0),
-    s = (0, p.useContextIndexState)(e, !0, !0);
+    o = (0, p.useContextIndexState)(e, !0, !0);
   return i.useMemo(() => {
     var e, i, l, r, u, d;
-    let c = null !== (u = null === (i = a.result) || void 0 === i ? void 0 : null === (e = i.sections) || void 0 === e ? void 0 : e[t]) && void 0 !== u ? u : null === (l = s.result) || void 0 === l ? void 0 : l.sections[t],
-      p = Object.values(null !== (d = null == c ? void 0 : c.commands) && void 0 !== d ? d : {}).map(e => null == e.rootCommand ? e : (0, T.buildCommand)({
+    let c = null !== (u = null === (i = a.result) || void 0 === i ? void 0 : null === (e = i.sections) || void 0 === e ? void 0 : e[t]) && void 0 !== u ? u : null === (l = o.result) || void 0 === l ? void 0 : l.sections[t],
+      p = Object.values(null !== (d = null == c ? void 0 : c.commands) && void 0 !== d ? d : {}).map(e => null == e.rootCommand ? e : (0, C.buildCommand)({
         rootCommand: e.rootCommand,
         command: e.rootCommand,
         applicationId: e.applicationId
       })).reduce((e, t) => (e[t.id] = t, e), {});
     return {
       application: null == c ? void 0 : null === (r = c.descriptor) || void 0 === r ? void 0 : r.application,
-      commands: n.map(e => p[e]).filter(o.isNotNullish)
+      commands: n.map(e => p[e]).filter(s.isNotNullish)
     }
-  }, [null == a ? void 0 : a.result, null == s ? void 0 : s.result, t, n])
+  }, [null == a ? void 0 : a.result, null == o ? void 0 : o.result, t, n])
 }
 
 function D() {
-  !P({
+  !L({
     location: "useSearchOpenState"
-  }) && (0, I.useSearchStoreOpenState)()
+  }) && (0, _.useSearchStoreOpenState)()
 }
 
 function R(e, t) {
   return c.default.getCurrentConfig(e, t).enabled
 }
 
-function P(e, t) {
+function L(e, t) {
   let [n] = i.useState(R(e, t));
   return n
 }
-let L = {
+let P = {
   id: "placeholder-section",
-  type: _.ApplicationCommandSectionType.APPLICATION,
+  type: I.ApplicationCommandSectionType.APPLICATION,
   name: ""
 };
 
 function U(e, t) {
   return {
     type: t,
-    inputType: _.ApplicationCommandInputType.PLACEHOLDER,
+    inputType: I.ApplicationCommandInputType.PLACEHOLDER,
     id: "placeholder-".concat(e),
     name: "",
     displayName: "",
     description: "",
     displayDescription: "",
     applicationId: "",
-    section: L
+    section: P
   }
 }

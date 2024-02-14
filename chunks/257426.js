@@ -14,7 +14,7 @@ var s = n("759843"),
   u = n("49111"),
   d = n("994428"),
   c = n("782340"),
-  f = n("436815");
+  f = n("169489");
 let E = (e, t) => ({
   body: e.messages.completionTooltip(t),
   imgSrc: e.assets.tooltipSrc,

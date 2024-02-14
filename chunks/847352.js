@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("77078"),
   c = n("901582"),
   f = n("244201"),
-  p = n("983782"),
-  m = n("659500"),
+  m = n("983782"),
+  p = n("659500"),
   h = n("791776"),
   E = n("82372"),
   g = n("426969"),
@@ -23,15 +23,15 @@ var l = n("37983"),
   C = n("634114"),
   T = n("49111"),
   v = n("13030"),
-  I = n("652277"),
+  I = n("942838"),
   _ = i.memo(function(e) {
     let {
       positionTargetRef: t,
       channel: n,
       closeOnModalOuterClick: a = !1,
       parentModalKey: _
-    } = e, y = i.useRef(null), A = i.useRef(null), {
-      renderWindow: N,
+    } = e, N = i.useRef(null), A = i.useRef(null), {
+      renderWindow: y,
       windowDispatch: x
     } = i.useContext(f.default), O = null != _, R = (0, u.useIsModalAtTop)(null != _ ? _ : ""), M = () => {
       E.dismissAppLauncherPopup()
@@ -49,19 +49,19 @@ var l = n("37983"),
       }
       M();
       let l = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      (null == l || "BODY" === l.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.TEXTAREA_FOCUS)
+      (null == l || "BODY" === l.tagName) && p.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.TEXTAREA_FOCUS)
     }, [a, R, O]), P = i.useCallback(() => {
       M()
     }, []);
-    i.useLayoutEffect(() => (N.addEventListener("mousedown", L), N.addEventListener("contextmenu", L), x.subscribe(T.ComponentActions.POPOUT_CLOSE, P), () => {
-      N.removeEventListener("mousedown", L), N.removeEventListener("contextmenu", L), x.unsubscribe(T.ComponentActions.POPOUT_CLOSE, P)
-    }), [P, L, N, x]), (0, d.useFocusLock)(y), i.useEffect(() => {
+    i.useLayoutEffect(() => (y.addEventListener("mousedown", L), y.addEventListener("contextmenu", L), x.subscribe(T.ComponentActions.POPOUT_CLOSE, P), () => {
+      y.removeEventListener("mousedown", L), y.removeEventListener("contextmenu", L), x.unsubscribe(T.ComponentActions.POPOUT_CLOSE, P)
+    }), [P, L, y, x]), (0, d.useFocusLock)(N), i.useEffect(() => {
       (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
     }, [R, O]);
     let b = (0, o.useStateFromStores)([g.default], () => g.default.getCurrentAppDetail());
     return (0, l.jsx)(c.default, {
       section: T.AnalyticsSections.EXPRESSION_PICKER,
-      children: (0, l.jsx)(p.AppReferencePositionLayer, {
+      children: (0, l.jsx)(m.AppReferencePositionLayer, {
         className: I.positionLayer,
         reference: t,
         position: "top",
@@ -74,7 +74,7 @@ var l = n("37983"),
           } = e;
           return (0, l.jsx)("section", {
             className: s(I.positionContainer),
-            ref: y,
+            ref: N,
             role: "dialog",
             "aria-label": "Application Launcher",
             children: t ? (0, l.jsxs)("div", {

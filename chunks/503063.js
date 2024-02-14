@@ -14,14 +14,14 @@ var l = n("37983"),
   d = n("574073"),
   c = n("529805"),
   f = n("393414"),
-  p = n("300322"),
-  m = n("967241"),
+  m = n("300322"),
+  p = n("967241"),
   h = n("377253"),
   E = n("116320"),
   g = n("381546"),
   S = n("49111"),
   C = n("782340"),
-  T = n("650593");
+  T = n("731851");
 
 function v(e) {
   let {
@@ -38,7 +38,7 @@ function v(e) {
     })
   }, [t]), (0, l.jsxs)(o.Clickable, {
     onClick: function() {
-      (0, c.deletePendingReply)(t.id), (0, m.openThreadSidebarForCreating)(t, n, "Reply Chain Nudge")
+      (0, c.deletePendingReply)(t.id), (0, p.openThreadSidebarForCreating)(t, n, "Reply Chain Nudge")
     },
     className: T.threadSuggestionBar,
     focusProps: {
@@ -71,11 +71,11 @@ function I(e) {
     channel: i,
     message: a,
     shouldMention: u,
-    showMentionToggle: m
+    showMentionToggle: p
   } = t, {
     nick: I,
     colorString: _,
-    colorRoleName: y
+    colorRoleName: N
   } = (0, d.default)(a), A = function(e, t) {
     let n = e.id,
       l = t.id;
@@ -88,7 +88,7 @@ function I(e) {
       }
       return 10
     }, [n, l])
-  }(i, a), N = (0, p.useCanStartPublicThread)(i, a), x = n.showThreadPromptOnReply && A >= 2 && N;
+  }(i, a), y = (0, m.useCanStartPublicThread)(i, a), x = n.showThreadPromptOnReply && A >= 2 && y;
 
   function O(e) {
     e.stopPropagation(), (0, c.setPendingReplyShouldMention)(i.id, !u)
@@ -118,13 +118,13 @@ function I(e) {
                 className: T.name,
                 name: I,
                 color: _,
-                roleName: y
+                roleName: N
               }, t)
             })
           })
         }), (0, l.jsxs)("div", {
           className: T.actions,
-          children: [m && (0, l.jsxs)(l.Fragment, {
+          children: [p && (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(o.Tooltip, {
               text: u ? C.default.Messages.REPLY_MENTION_ON_TOOLTIP : C.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
               children: e => {

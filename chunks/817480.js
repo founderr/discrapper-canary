@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return E
   }
 }), n("222007");
 var l = n("37983"),
-  a = n("884691"),
-  s = n("118810"),
-  i = n("77078"),
+  i = n("884691"),
+  a = n("118810"),
+  s = n("77078"),
   r = n("244201"),
   o = n("952368"),
   u = n("924444"),
   d = n("103603"),
   c = n("866190"),
-  m = n("782340"),
-  f = n("842992");
-let h = "Zoomed Lazy Image Modal";
-class p extends a.PureComponent {
+  f = n("782340"),
+  m = n("542624");
+let p = "Zoomed Lazy Image Modal";
+class h extends i.PureComponent {
   render() {
     let {
       appContext: e,
@@ -36,70 +36,70 @@ class p extends a.PureComponent {
         preloadImage: n
       } = t, {
         width: l,
-        height: a
+        height: i
       } = this.props;
-      n((0, d.zoomFit)(l, a))
-    }, this.modalContext = (0, i.modalContextFromAppContext)(this.props.appContext), this.onCloseImage = () => {
-      (0, i.closeModal)(h, this.modalContext)
+      n((0, d.zoomFit)(l, i))
+    }, this.modalContext = (0, s.modalContextFromAppContext)(this.props.appContext), this.onCloseImage = () => {
+      (0, s.closeModal)(p, this.modalContext)
     }, this.onZoom = (e, t) => {
       let {
         zoomThumbnailPlaceholder: n
       } = t;
       e.preventDefault();
       let {
-        alt: a,
+        alt: i,
         src: r,
         original: o,
         width: d,
         height: c,
-        animated: p,
-        children: g,
-        renderLinkComponent: E,
-        isWindowFocused: C,
-        shouldHideMediaOptions: v = !1
-      } = this.props, I = {
-        alt: a,
+        animated: h,
+        children: E,
+        renderLinkComponent: g,
+        isWindowFocused: S,
+        shouldHideMediaOptions: C = !1
+      } = this.props, T = {
+        alt: i,
         src: r,
         original: null != o ? o : r,
         width: d,
         height: c,
-        animated: p,
-        children: g,
+        animated: h,
+        children: E,
         zoomThumbnailPlaceholder: n,
-        renderLinkComponent: E,
-        onContextMenu: v ? e => {
+        renderLinkComponent: g,
+        onContextMenu: C ? e => {
           e.stopPropagation(), e.preventDefault()
         } : void 0
       };
-      (0, s.isElement)(e.currentTarget) && e.currentTarget.blur(), (0, i.openModal)(e => (0, l.jsx)(i.ModalRoot, {
-        className: f.modal,
+      (0, a.isElement)(e.currentTarget) && e.currentTarget.blur(), (0, s.openModal)(e => (0, l.jsx)(s.ModalRoot, {
+        className: m.modal,
         ...e,
-        size: i.ModalSize.DYNAMIC,
-        "aria-label": m.default.Messages.IMAGE,
+        size: s.ModalSize.DYNAMIC,
+        "aria-label": f.default.Messages.IMAGE,
         children: (0, l.jsx)(u.ImageModal, {
-          ...I,
-          className: f.image,
-          shouldAnimate: C,
+          ...T,
+          className: m.image,
+          shouldAnimate: S,
           onClose: this.onCloseImage,
-          shouldHideMediaOptions: v
+          shouldHideMediaOptions: C
         })
       }), {
-        modalKey: h
+        modalKey: p
       }, this.modalContext)
     }
   }
 }
 
-function g(e) {
+function E(e) {
   let t = (0, r.useAppContext)(),
     n = (0, c.useIsWindowFocused)();
-  return (0, l.jsx)(p, {
+  return (0, l.jsx)(h, {
     ...e,
     isWindowFocused: n,
     appContext: t
   })
 }
-p.defaultProps = {
+h.defaultProps = {
   shouldLink: !0,
   autoPlay: !1,
   animated: !1

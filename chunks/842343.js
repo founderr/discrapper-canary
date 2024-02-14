@@ -14,28 +14,28 @@ var l = n("37983"),
   d = n("296141"),
   c = n("305961"),
   f = n("501536"),
-  p = n("476765"),
-  m = n("983782"),
+  m = n("476765"),
+  p = n("983782"),
   h = n("659186"),
   E = n("418062"),
   g = n("851745"),
   S = n("280214"),
   C = n("497858"),
-  T = n("551221"),
+  T = n("892149"),
   v = i.forwardRef(function(e, t) {
     var n, a, v, I, _;
     let {
-      channel: y,
+      channel: N,
       type: A,
-      editorHeight: N,
+      editorHeight: y,
       onVisibilityChange: x
-    } = e, O = (0, p.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
+    } = e, O = (0, m.useUID)(), R = (0, o.useStateFromStores)([c.default], () => {
       var e;
-      return null !== (e = c.default.getGuild(y.guild_id)) && void 0 !== e ? e : null
-    }, [y.guild_id]), M = i.useRef(), [L, P, b] = (0, C.default)({
+      return null !== (e = c.default.getGuild(N.guild_id)) && void 0 !== e ? e : null
+    }, [N.guild_id]), M = i.useRef(), [L, P, b] = (0, C.default)({
       ...e,
       guild: R
-    }, t, M), j = (null === (n = A.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, U = (0, f.getAutocompleteRowId)(L.selectedIndex);
+    }, t, M), j = (null === (n = A.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : p.default, U = (0, f.getAutocompleteRowId)(L.selectedIndex);
     (0, d.useChannelEditorPopup)(O, L.isVisible, U), E.default.trackExposure({
       location: "6e9811_1"
     });
@@ -46,7 +46,7 @@ var l = n("37983"),
     }, {
       autoTrackExposure: !1
     }), k = (0, S.useChannelAutocompleteLayerPosition)({
-      editorHeight: N,
+      editorHeight: y,
       type: A,
       state: L,
       isInPopoutExperiment: D
@@ -57,7 +57,7 @@ var l = n("37983"),
     let F = null !== (a = L.query.typeInfo.renderResults({
       results: L.query.results,
       selectedIndex: L.selectedIndex,
-      channel: y,
+      channel: N,
       guild: R,
       query: L.query.queryText,
       options: L.query.options,
@@ -65,16 +65,16 @@ var l = n("37983"),
       onClick: e => P.onResultClick(e)
     })) && void 0 !== a ? a : null;
     if (null == F) return null;
-    let G = {
+    let B = {
         [T.autocompleteAttached]: null == k,
         [T.autocompletePopout]: null != k,
         [T.bottom]: null == k && "bottom" === e.position
       },
-      B = 490;
-    null != k && (B = (null === (v = A.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (I = L.query) || void 0 === I ? void 0 : I.type) === g.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), B = Math.min(window.innerHeight - 175, B);
+      G = 490;
+    null != k && (G = (null === (v = A.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (I = L.query) || void 0 === I ? void 0 : I.type) === g.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), G = Math.min(window.innerHeight - 175, G);
     let H = (0, l.jsx)(f.default, {
       id: O,
-      className: s(T.autocomplete, G),
+      className: s(T.autocomplete, B),
       innerClassName: T.autocompleteInner,
       onMouseDown: e => e.preventDefault(),
       children: (0, l.jsx)(r.ListNavigatorProvider, {
@@ -94,7 +94,7 @@ var l = n("37983"),
               ...n,
               className: T.scroller,
               style: {
-                maxHeight: B
+                maxHeight: G
               },
               role: "listbox",
               "aria-labelledby": (0, f.getAutocompleteTitleId)(O),

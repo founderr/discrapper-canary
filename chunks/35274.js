@@ -42,11 +42,11 @@ function v(t, e, s, r) {
 e.inflateReset = b, e.inflateReset2 = h, e.inflateResetKeep = p, e.inflateInit = function(t) {
   return l(t, 15)
 }, e.inflateInit2 = l, e.inflate = function(t, e) {
-  var s, d, p, b, h, l, x, m, y, _, w, M, S, k, E, A, B, I, R, j, C, O, P, T, D = 0,
+  var s, d, p, b, h, l, x, m, y, _, w, M, S, k, A, E, B, I, R, P, j, C, O, T, D = 0,
     z = new n.Buf8(4),
-    L = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
+    N = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
   if (!t || !t.state || !t.output || !t.input && 0 !== t.avail_in) return -2;
-  12 === (s = t.state).mode && (s.mode = 13), h = t.next_out, p = t.output, x = t.avail_out, b = t.next_in, d = t.input, l = t.avail_in, m = s.hold, y = s.bits, _ = l, w = x, O = 0;
+  12 === (s = t.state).mode && (s.mode = 13), h = t.next_out, p = t.output, x = t.avail_out, b = t.next_in, d = t.input, l = t.avail_in, m = s.hold, y = s.bits, _ = l, w = x, C = 0;
   s: for (;;) switch (s.mode) {
     case 1:
       if (0 === s.wrap) {
@@ -69,12 +69,12 @@ e.inflateReset = b, e.inflateReset2 = h, e.inflateResetKeep = p, e.inflateInit =
         t.msg = "unknown compression method", s.mode = 30;
         break
       }
-      if (m >>>= 4, y -= 4, C = (15 & m) + 8, 0 === s.wbits) s.wbits = C;
-      else if (C > s.wbits) {
+      if (m >>>= 4, y -= 4, j = (15 & m) + 8, 0 === s.wbits) s.wbits = j;
+      else if (j > s.wbits) {
         t.msg = "invalid window size", s.mode = 30;
         break
       }
-      s.dmax = 1 << C, t.adler = s.check = 1, s.mode = 512 & m ? 10 : 12, m = 0, y = 0;
+      s.dmax = 1 << j, t.adler = s.check = 1, s.mode = 512 & m ? 10 : 12, m = 0, y = 0;
       break;
     case 2:
       for (; y < 16;) {
@@ -112,22 +112,22 @@ e.inflateReset = b, e.inflateReset2 = h, e.inflateResetKeep = p, e.inflateInit =
       } else s.head && (s.head.extra = null);
       s.mode = 6;
     case 6:
-      if (1024 & s.flags && ((M = s.length) > l && (M = l), M && (s.head && (C = s.head.extra_len - s.length, !s.head.extra && (s.head.extra = Array(s.head.extra_len)), n.arraySet(s.head.extra, d, b, M, C)), 512 & s.flags && (s.check = o(s.check, d, M, b)), l -= M, b += M, s.length -= M), s.length)) break s;
+      if (1024 & s.flags && ((M = s.length) > l && (M = l), M && (s.head && (j = s.head.extra_len - s.length, !s.head.extra && (s.head.extra = Array(s.head.extra_len)), n.arraySet(s.head.extra, d, b, M, j)), 512 & s.flags && (s.check = o(s.check, d, M, b)), l -= M, b += M, s.length -= M), s.length)) break s;
       s.length = 0, s.mode = 7;
     case 7:
       if (2048 & s.flags) {
         if (0 === l) break s;
         M = 0;
-        do C = d[b + M++], s.head && C && s.length < 65536 && (s.head.name += String.fromCharCode(C)); while (C && M < l);
-        if (512 & s.flags && (s.check = o(s.check, d, M, b)), l -= M, b += M, C) break s
+        do j = d[b + M++], s.head && j && s.length < 65536 && (s.head.name += String.fromCharCode(j)); while (j && M < l);
+        if (512 & s.flags && (s.check = o(s.check, d, M, b)), l -= M, b += M, j) break s
       } else s.head && (s.head.name = null);
       s.length = 0, s.mode = 8;
     case 8:
       if (4096 & s.flags) {
         if (0 === l) break s;
         M = 0;
-        do C = d[b + M++], s.head && C && s.length < 65536 && (s.head.comment += String.fromCharCode(C)); while (C && M < l);
-        if (512 & s.flags && (s.check = o(s.check, d, M, b)), l -= M, b += M, C) break s
+        do j = d[b + M++], s.head && j && s.length < 65536 && (s.head.comment += String.fromCharCode(j)); while (j && M < l);
+        if (512 & s.flags && (s.check = o(s.check, d, M, b)), l -= M, b += M, j) break s
       } else s.head && (s.head.comment = null);
       s.mode = 9;
     case 9:
@@ -233,53 +233,53 @@ e.inflateReset = b, e.inflateReset2 = h, e.inflateResetKeep = p, e.inflateInit =
           if (0 === l) break s;
           l--, m += d[b++] << y, y += 8
         }
-        s.lens[L[s.have++]] = 7 & m, m >>>= 3, y -= 3
+        s.lens[N[s.have++]] = 7 & m, m >>>= 3, y -= 3
       }
-      for (; s.have < 19;) s.lens[L[s.have++]] = 0;
-      if (s.lencode = s.lendyn, s.lenbits = 7, P = {
+      for (; s.have < 19;) s.lens[N[s.have++]] = 0;
+      if (s.lencode = s.lendyn, s.lenbits = 7, O = {
           bits: s.lenbits
-        }, O = u(0, s.lens, 0, 19, s.lencode, 0, s.work, P), s.lenbits = P.bits, O) {
+        }, C = u(0, s.lens, 0, 19, s.lencode, 0, s.work, O), s.lenbits = O.bits, C) {
         t.msg = "invalid code lengths set", s.mode = 30;
         break
       }
       s.have = 0, s.mode = 19;
     case 19:
       for (; s.have < s.nlen + s.ndist;) {
-        for (; E = (D = s.lencode[m & (1 << s.lenbits) - 1]) >>> 24, A = D >>> 16 & 255, B = 65535 & D, !(E <= y);) {
+        for (; A = (D = s.lencode[m & (1 << s.lenbits) - 1]) >>> 24, E = D >>> 16 & 255, B = 65535 & D, !(A <= y);) {
           ;
           if (0 === l) break s;
           l--, m += d[b++] << y, y += 8
         }
-        if (B < 16) m >>>= E, y -= E, s.lens[s.have++] = B;
+        if (B < 16) m >>>= A, y -= A, s.lens[s.have++] = B;
         else {
           if (16 === B) {
-            for (T = E + 2; y < T;) {
+            for (T = A + 2; y < T;) {
               if (0 === l) break s;
               l--, m += d[b++] << y, y += 8
             }
-            if (m >>>= E, y -= E, 0 === s.have) {
+            if (m >>>= A, y -= A, 0 === s.have) {
               t.msg = "invalid bit length repeat", s.mode = 30;
               break
             }
-            C = s.lens[s.have - 1], M = 3 + (3 & m), m >>>= 2, y -= 2
+            j = s.lens[s.have - 1], M = 3 + (3 & m), m >>>= 2, y -= 2
           } else if (17 === B) {
-            for (T = E + 3; y < T;) {
+            for (T = A + 3; y < T;) {
               if (0 === l) break s;
               l--, m += d[b++] << y, y += 8
             }
-            m >>>= E, y -= E, C = 0, M = 3 + (7 & m), m >>>= 3, y -= 3
+            m >>>= A, y -= A, j = 0, M = 3 + (7 & m), m >>>= 3, y -= 3
           } else {
-            for (T = E + 7; y < T;) {
+            for (T = A + 7; y < T;) {
               if (0 === l) break s;
               l--, m += d[b++] << y, y += 8
             }
-            m >>>= E, y -= E, C = 0, M = 11 + (127 & m), m >>>= 7, y -= 7
+            m >>>= A, y -= A, j = 0, M = 11 + (127 & m), m >>>= 7, y -= 7
           }
           if (s.have + M > s.nlen + s.ndist) {
             t.msg = "invalid bit length repeat", s.mode = 30;
             break
           }
-          for (; M--;) s.lens[s.have++] = C
+          for (; M--;) s.lens[s.have++] = j
         }
       }
       if (30 === s.mode) break;
@@ -287,15 +287,15 @@ e.inflateReset = b, e.inflateReset2 = h, e.inflateResetKeep = p, e.inflateInit =
         t.msg = "invalid code -- missing end-of-block", s.mode = 30;
         break
       }
-      if (s.lenbits = 9, P = {
+      if (s.lenbits = 9, O = {
           bits: s.lenbits
-        }, O = u(1, s.lens, 0, s.nlen, s.lencode, 0, s.work, P), s.lenbits = P.bits, O) {
+        }, C = u(1, s.lens, 0, s.nlen, s.lencode, 0, s.work, O), s.lenbits = O.bits, C) {
         t.msg = "invalid literal/lengths set", s.mode = 30;
         break
       }
-      if (s.distbits = 6, s.distcode = s.distdyn, P = {
+      if (s.distbits = 6, s.distcode = s.distdyn, O = {
           bits: s.distbits
-        }, O = u(2, s.lens, s.nlen, s.ndist, s.distcode, 0, s.work, P), s.distbits = P.bits, O) {
+        }, C = u(2, s.lens, s.nlen, s.ndist, s.distcode, 0, s.work, O), s.distbits = O.bits, C) {
         t.msg = "invalid distances set", s.mode = 30;
         break
       }
@@ -307,32 +307,32 @@ e.inflateReset = b, e.inflateReset2 = h, e.inflateResetKeep = p, e.inflateInit =
         t.next_out = h, t.avail_out = x, t.next_in = b, t.avail_in = l, s.hold = m, s.bits = y, f(t, w), h = t.next_out, p = t.output, x = t.avail_out, b = t.next_in, d = t.input, l = t.avail_in, m = s.hold, y = s.bits, 12 === s.mode && (s.back = -1);
         break
       }
-      for (s.back = 0; E = (D = s.lencode[m & (1 << s.lenbits) - 1]) >>> 24, A = D >>> 16 & 255, B = 65535 & D, !(E <= y);) {
+      for (s.back = 0; A = (D = s.lencode[m & (1 << s.lenbits) - 1]) >>> 24, E = D >>> 16 & 255, B = 65535 & D, !(A <= y);) {
         ;
         if (0 === l) break s;
         l--, m += d[b++] << y, y += 8
       }
-      if (A && (240 & A) == 0) {
-        for (I = E, R = A, j = B; E = (D = s.lencode[j + ((m & (1 << I + R) - 1) >> I)]) >>> 24, A = D >>> 16 & 255, B = 65535 & D, !(I + E <= y);) {
+      if (E && (240 & E) == 0) {
+        for (I = A, R = E, P = B; A = (D = s.lencode[P + ((m & (1 << I + R) - 1) >> I)]) >>> 24, E = D >>> 16 & 255, B = 65535 & D, !(I + A <= y);) {
           ;
           if (0 === l) break s;
           l--, m += d[b++] << y, y += 8
         }
         m >>>= I, y -= I, s.back += I
       }
-      if (m >>>= E, y -= E, s.back += E, s.length = B, 0 === A) {
+      if (m >>>= A, y -= A, s.back += A, s.length = B, 0 === E) {
         s.mode = 26;
         break
       }
-      if (32 & A) {
+      if (32 & E) {
         s.back = -1, s.mode = 12;
         break
       }
-      if (64 & A) {
+      if (64 & E) {
         t.msg = "invalid literal/length code", s.mode = 30;
         break
       }
-      s.extra = 15 & A, s.mode = 22;
+      s.extra = 15 & E, s.mode = 22;
     case 22:
       if (s.extra) {
         for (T = s.extra; y < T;) {
@@ -343,24 +343,24 @@ e.inflateReset = b, e.inflateReset2 = h, e.inflateResetKeep = p, e.inflateInit =
       }
       s.was = s.length, s.mode = 23;
     case 23:
-      for (; E = (D = s.distcode[m & (1 << s.distbits) - 1]) >>> 24, A = D >>> 16 & 255, B = 65535 & D, !(E <= y);) {
+      for (; A = (D = s.distcode[m & (1 << s.distbits) - 1]) >>> 24, E = D >>> 16 & 255, B = 65535 & D, !(A <= y);) {
         ;
         if (0 === l) break s;
         l--, m += d[b++] << y, y += 8
       }
-      if ((240 & A) == 0) {
-        for (I = E, R = A, j = B; E = (D = s.distcode[j + ((m & (1 << I + R) - 1) >> I)]) >>> 24, A = D >>> 16 & 255, B = 65535 & D, !(I + E <= y);) {
+      if ((240 & E) == 0) {
+        for (I = A, R = E, P = B; A = (D = s.distcode[P + ((m & (1 << I + R) - 1) >> I)]) >>> 24, E = D >>> 16 & 255, B = 65535 & D, !(I + A <= y);) {
           ;
           if (0 === l) break s;
           l--, m += d[b++] << y, y += 8
         }
         m >>>= I, y -= I, s.back += I
       }
-      if (m >>>= E, y -= E, s.back += E, 64 & A) {
+      if (m >>>= A, y -= A, s.back += A, 64 & E) {
         t.msg = "invalid distance code", s.mode = 30;
         break
       }
-      s.offset = B, s.extra = 15 & A, s.mode = 24;
+      s.offset = B, s.extra = 15 & E, s.mode = 24;
     case 24:
       if (s.extra) {
         for (T = s.extra; y < T;) {
@@ -418,17 +418,17 @@ e.inflateReset = b, e.inflateReset2 = h, e.inflateResetKeep = p, e.inflateInit =
       }
       s.mode = 29;
     case 29:
-      O = 1;
+      C = 1;
       break s;
     case 30:
-      O = -3;
+      C = -3;
       break s;
     case 31:
       return -4;
     default:
       return -2
   }
-  return (t.next_out = h, t.avail_out = x, t.next_in = b, t.avail_in = l, s.hold = m, s.bits = y, (s.wsize || w !== t.avail_out && s.mode < 30 && (s.mode < 27 || 4 !== e)) && v(t, t.output, t.next_out, w - t.avail_out)) ? (s.mode = 31, -4) : (_ -= t.avail_in, w -= t.avail_out, t.total_in += _, t.total_out += w, s.total += w, s.wrap && w && (t.adler = s.check = s.flags ? o(s.check, p, w, t.next_out - w) : c(s.check, p, w, t.next_out - w)), t.data_type = s.bits + (s.last ? 64 : 0) + (12 === s.mode ? 128 : 0) + (20 === s.mode || 15 === s.mode ? 256 : 0), (0 === _ && 0 === w || 4 === e) && 0 === O && (O = -5), O)
+  return (t.next_out = h, t.avail_out = x, t.next_in = b, t.avail_in = l, s.hold = m, s.bits = y, (s.wsize || w !== t.avail_out && s.mode < 30 && (s.mode < 27 || 4 !== e)) && v(t, t.output, t.next_out, w - t.avail_out)) ? (s.mode = 31, -4) : (_ -= t.avail_in, w -= t.avail_out, t.total_in += _, t.total_out += w, s.total += w, s.wrap && w && (t.adler = s.check = s.flags ? o(s.check, p, w, t.next_out - w) : c(s.check, p, w, t.next_out - w)), t.data_type = s.bits + (s.last ? 64 : 0) + (12 === s.mode ? 128 : 0) + (20 === s.mode || 15 === s.mode ? 256 : 0), (0 === _ && 0 === w || 4 === e) && 0 === C && (C = -5), C)
 }, e.inflateEnd = function(t) {
   if (!t || !t.state) return -2;
   var e = t.state;

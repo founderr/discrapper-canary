@@ -19,18 +19,18 @@ var i = l("37983"),
   m = l("811305"),
   I = l("58608"),
   E = l("449008"),
-  p = l("387111"),
-  x = l("159885"),
+  x = l("387111"),
+  p = l("159885"),
   C = l("84460"),
   T = l("549548"),
   S = l("607573"),
-  g = l("555584"),
-  A = l("817039"),
+  A = l("555584"),
+  g = l("817039"),
   _ = l("687292"),
   N = l("141962"),
   j = l("639028"),
   D = l("782340"),
-  M = l("277277"),
+  M = l("453193"),
   y = l("728791");
 
 function L(e) {
@@ -62,8 +62,8 @@ function V(e) {
       let [t] = e;
       return f.default.getUser(t)
     }).filter(E.isNotNullish)
-  }), o = p.default.getName(n, null == a ? void 0 : a.id, null == d ? void 0 : d[0]);
-  if (o = (0, x.truncateText)(o, 15), null == t || 0 === d.length) {
+  }), o = x.default.getName(n, null == a ? void 0 : a.id, null == d ? void 0 : d[0]);
+  if (o = (0, p.truncateText)(o, 15), null == t || 0 === d.length) {
     var u, v;
     let e = "".concat((0, T.default)(null !== (u = l.maxParticipants) && void 0 !== u ? u : 0));
     return s && (e = null !== (v = l.description) && void 0 !== v ? v : ""), (0, i.jsx)(c.Text, {
@@ -101,8 +101,8 @@ function R(e) {
     guildId: f,
     locationObject: m,
     onActivityItemVisible: E,
-    onActivityItemSelected: p,
-    large: x = !1
+    onActivityItemSelected: x,
+    large: p = !1
   } = e, {
     imageBackground: R,
     videoUrl: b,
@@ -117,7 +117,7 @@ function R(e) {
     guildId: f,
     locationObject: m,
     onActivityItemVisible: E,
-    onActivityItemSelected: p,
+    onActivityItemSelected: x,
     embeddedActivitiesManager: N.default
   }), k = (0, r.useStateFromStores)([C.default, v.default], () => C.default.inDevModeForApplication(l.application.id) || v.default.inTestModeForApplication(l.application.id), [l.application.id]), {
     application: Y
@@ -139,23 +139,23 @@ function R(e) {
       }))
     } : void 0,
     className: s(M.activityItem, {
-      [M.large]: !0 === x,
+      [M.large]: !0 === p,
       [M.disabled]: O !== S.ActivityAction.START
     }),
     children: [(0, i.jsxs)("div", {
       ref: U,
       className: s(M.activityImageContainer, {
-        [M.large]: !0 === x
+        [M.large]: !0 === p
       }),
       onMouseEnter: K,
       onFocus: K,
       onMouseLeave: X,
       onBlur: X,
-      children: [(0, i.jsx)(A.default, {
+      children: [(0, i.jsx)(g.default, {
         imageBackground: R,
         applicationName: Y.name,
         imageClassName: s(M.activityImage, {
-          [M.large]: !0 === x
+          [M.large]: !0 === p
         }),
         imageNotFoundClassName: M.brokenImageIconWrapper
       }), null != b && W && O === S.ActivityAction.START ? (0, i.jsx)("div", {
@@ -170,7 +170,7 @@ function R(e) {
           autoPlay: !0,
           muted: !0
         })
-      }) : null, O !== S.ActivityAction.START ? (0, i.jsx)(g.ActivityActionOverlayButton, {
+      }) : null, O !== S.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
         action: O,
         onClick: B
       }) : null, (0, i.jsx)("div", {
@@ -194,9 +194,9 @@ function R(e) {
       }) : null]
     }), (0, i.jsxs)("div", {
       className: s(M.activityTextContainer, {
-        [M.large]: x
+        [M.large]: p
       }),
-      children: [x ? (0, i.jsx)(c.Text, {
+      children: [p ? (0, i.jsx)(c.Text, {
         className: M.activityMaxParticipantsLarge,
         variant: "text-xs/normal",
         color: "interactive-normal",
@@ -222,7 +222,7 @@ function R(e) {
         application: Y,
         channel: n,
         guildId: f,
-        large: x
+        large: p
       }), (0, i.jsx)("div", {
         className: M.activityTagsContainer,
         children: Y.tags.slice(0, 3).map(e => (0, i.jsx)(L, {

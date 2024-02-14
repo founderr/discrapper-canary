@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return E
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("819855"),
   i = n("77078"),
   r = n("841098"),
@@ -14,36 +14,36 @@ var a = n("37983"),
   d = n("593195"),
   c = n("49111"),
   f = n("782340"),
-  h = n("845871"),
+  h = n("932454"),
   m = n("242412"),
   p = n("846770"),
   E = () => {
     let e = (0, r.default)();
-    l.useEffect(() => {
+    a.useEffect(() => {
       o.default.trackWithMetadata(c.AnalyticEvents.GUILD_OUTAGE_VIEWED, {})
     }, []);
     let t = (0, s.isThemeDark)(e) ? m : p;
-    return (0, a.jsxs)("div", {
+    return (0, l.jsxs)("div", {
       className: h.container,
-      children: [(0, a.jsxs)(u.default, {
-        toolbar: (0, a.jsx)(l.Fragment, {}),
-        children: [(0, a.jsx)(u.default.Icon, {
+      children: [(0, l.jsxs)(u.default, {
+        toolbar: (0, l.jsx)(a.Fragment, {}),
+        children: [(0, l.jsx)(u.default.Icon, {
           icon: d.default,
           "aria-hidden": !0
-        }), (0, a.jsx)(u.default.Title, {
+        }), (0, l.jsx)(u.default.Title, {
           children: f.default.Messages.GUILD_UNAVAILABLE_HEADER
         })]
-      }), (0, a.jsxs)("div", {
+      }), (0, l.jsxs)("div", {
         className: h.content,
-        children: [(0, a.jsx)("img", {
+        children: [(0, l.jsx)("img", {
           alt: "",
           className: h.splashImage,
           src: t
-        }), (0, a.jsx)(i.Heading, {
+        }), (0, l.jsx)(i.Heading, {
           className: h.splashHeader,
           variant: "heading-lg/medium",
           children: f.default.Messages.GUILD_UNAVAILABLE_TITLE
-        }), (0, a.jsx)(i.Text, {
+        }), (0, l.jsx)(i.Text, {
           className: h.splashText,
           variant: "text-md/normal",
           children: f.default.Messages.GUILD_UNAVAILABLE_BODY

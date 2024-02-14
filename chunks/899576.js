@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   StopIcon: function() {
-    return l
+    return s
   }
 });
 var a = n("37983");
 n("884691");
-var r = n("669491"),
+var l = n("669491"),
   i = n("82169");
-let l = e => {
+let s = e => {
   let {
     width: t = 24,
     height: n = 24,
-    color: l = r.default.colors.INTERACTIVE_NORMAL,
-    colorClass: s = "",
+    color: s = l.default.colors.INTERACTIVE_NORMAL,
+    colorClass: r = "",
     ...u
   } = e;
   return (0, a.jsx)("svg", {
@@ -28,9 +28,9 @@ let l = e => {
       height: n,
       x: "3",
       y: "3",
-      fill: "string" == typeof l ? l : l.css,
+      fill: "string" == typeof s ? s : s.css,
       rx: "3",
-      className: s
+      className: r
     })
   })
 }

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
 var i = n("872717"),
   l = n("819689"),
   a = n("49111"),
-  s = n("782340"),
+  o = n("782340"),
   r = {
     changeNickname: (e, t, n, r) => i.default.patch({
       url: a.Endpoints.GUILD_MEMBER_NICK(e, n),
@@ -16,10 +16,10 @@ var i = n("872717"),
       },
       oldFormErrors: !0
     }).then(e => {
-      r = e.body.nick, l.default.sendBotMessage(t, null != r && "" !== r ? s.default.Messages.COMMAND_NICK_SUCCESS.plainFormat({
+      r = e.body.nick, l.default.sendBotMessage(t, null != r && "" !== r ? o.default.Messages.COMMAND_NICK_SUCCESS.plainFormat({
         nick: r
-      }) : s.default.Messages.COMMAND_NICK_RESET)
+      }) : o.default.Messages.COMMAND_NICK_RESET)
     }, e => {
-      403 === e.status ? l.default.sendBotMessage(t, s.default.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat()) : l.default.sendBotMessage(t, s.default.Messages.COMMAND_NICK_FAILURE)
+      403 === e.status ? l.default.sendBotMessage(t, o.default.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat()) : l.default.sendBotMessage(t, o.default.Messages.COMMAND_NICK_FAILURE)
     })
   }

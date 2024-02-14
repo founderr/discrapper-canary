@@ -12,7 +12,7 @@ var s = n("37983"),
   u = n("49111"),
   c = n("958706"),
   o = n("782340"),
-  d = n("347609");
+  d = n("517184");
 let f = {
     section: u.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
     openPopoutType: "gift_effect_emoji_picker"

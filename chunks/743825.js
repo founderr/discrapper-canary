@@ -13,8 +13,8 @@ var l, i = n("37983"),
   d = n("87682"),
   c = n.n(d),
   f = n("746379"),
-  p = n.n(f),
-  m = n("394846"),
+  m = n.n(f),
+  p = n("394846"),
   h = n("295426"),
   E = n("81594"),
   g = n("798609"),
@@ -24,15 +24,15 @@ var l, i = n("37983"),
   v = n("585722"),
   I = n("378765"),
   _ = n("254490"),
-  y = n("850391"),
+  N = n("850391"),
   A = n("149022"),
-  N = n("296141"),
+  y = n("296141"),
   x = n("606013"),
   O = n("32647"),
   R = n("970153"),
   M = n("49111"),
   L = n("782340"),
-  P = n("537461");
+  P = n("350583");
 new T.default("ChannelEditor.tsx");
 let b = function() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
@@ -165,7 +165,7 @@ l = class extends a.Component {
       disabled: d,
       onChange: c,
       onKeyDown: f,
-      onResize: p,
+      onResize: m,
       onSubmit: h,
       channel: E,
       type: g,
@@ -174,7 +174,7 @@ l = class extends a.Component {
       spellcheckEnabled: T,
       useNewSlashCommands: v,
       canOnlyUseTextCommands: _,
-      className: N,
+      className: y,
       id: R,
       required: L,
       maxCharacterCount: b,
@@ -184,10 +184,10 @@ l = class extends a.Component {
       accessibilityLabel: w
     } = this.props, {
       submitting: F,
-      popup: G
-    } = this.state, B = {
+      popup: B
+    } = this.state, G = {
       channel: E,
-      className: r(N, P.textArea, {
+      className: r(y, P.textArea, {
         [P.textAreaSlate]: C,
         [P.textAreaDisabled]: d || F
       }),
@@ -197,7 +197,7 @@ l = class extends a.Component {
       accessibilityLabel: w,
       disabled: d || !1,
       submitting: F,
-      isEdit: g === y.ChatInputTypes.EDIT,
+      isEdit: g === N.ChatInputTypes.EDIT,
       onFocus: this.handleFocus,
       onBlur: this.handleBlur,
       onPaste: this.handlePaste,
@@ -208,36 +208,36 @@ l = class extends a.Component {
       hideAutocomplete: this.hideAutocomplete,
       allowNewLines: U,
       onChange: c,
-      onResize: p,
+      onResize: m,
       onKeyDown: f,
       onSubmit: h,
       textAreaPaddingClassName: r(j[S], {
-        [P.textAreaWithoutAttachmentButton]: g !== y.ChatInputTypes.NORMAL && g !== y.ChatInputTypes.OVERLAY && g !== y.ChatInputTypes.THREAD_CREATION && g !== y.ChatInputTypes.SIDEBAR,
-        [P.textAreaForPostCreation]: g === y.ChatInputTypes.CREATE_FORUM_POST,
-        [P.textAreaCustomGift]: g === y.ChatInputTypes.CUSTOM_GIFT
+        [P.textAreaWithoutAttachmentButton]: g !== N.ChatInputTypes.NORMAL && g !== N.ChatInputTypes.OVERLAY && g !== N.ChatInputTypes.THREAD_CREATION && g !== N.ChatInputTypes.SIDEBAR,
+        [P.textAreaForPostCreation]: g === N.ChatInputTypes.CREATE_FORUM_POST,
+        [P.textAreaCustomGift]: g === N.ChatInputTypes.CUSTOM_GIFT
       }),
       spellcheckEnabled: T,
       useNewSlashCommands: v,
-      disableAutoFocus: m.isMobile || null !== (n = g.disableAutoFocus) && void 0 !== n && n,
+      disableAutoFocus: p.isMobile || null !== (n = g.disableAutoFocus) && void 0 !== n && n,
       disableEnterToSubmit: null !== (l = null === (e = g.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== l && l,
-      "aria-controls": null !== (a = G.id) && void 0 !== a ? a : void 0,
+      "aria-controls": null !== (a = B.id) && void 0 !== a ? a : void 0,
       "aria-haspopup": "listbox",
-      "aria-expanded": null !== G.id || void 0,
-      "aria-activedescendant": null !== (s = G.activeDescendant) && void 0 !== s ? s : void 0,
+      "aria-expanded": null !== B.id || void 0,
+      "aria-activedescendant": null !== (s = B.activeDescendant) && void 0 !== s ? s : void 0,
       "aria-invalid": o.length > b,
       "aria-describedby": D,
       "aria-labelledby": k,
       "aria-autocomplete": "list"
     }, H = C ? (0, i.jsx)(O.default, {
       ref: this.ref,
-      ...B,
+      ...G,
       type: g,
       value: d ? (0, A.toRichValue)("") : u,
       canUseCommands: null === (t = g.commands) || void 0 === t ? void 0 : t.enabled,
       canOnlyUseTextCommands: _
     }) : (0, i.jsx)(x.default, {
       ref: this.ref,
-      ...B,
+      ...G,
       value: d ? "" : o
     });
     return (0, i.jsxs)(i.Fragment, {
@@ -359,7 +359,7 @@ l = class extends a.Component {
                   try {
                     let {
                       pathname: t
-                    } = p.parse(l.src);
+                    } = m.parse(l.src);
                     null != t && t.length > 0 && (e = c.basename(t).split(".")[0])
                   } catch (e) {}
                   if (null != e && e.length > 0) return "".concat(e, ".png")
@@ -426,7 +426,7 @@ l = class extends a.Component {
           }
         })
       })(r), this.focus(), !0)
-    }, this._unsubscribe = N.channelEditorPopupStore.subscribe(e => {
+    }, this._unsubscribe = y.channelEditorPopupStore.subscribe(e => {
       requestAnimationFrame(() => {
         this.setState({
           popup: e
@@ -435,7 +435,7 @@ l = class extends a.Component {
     }), this.state = {
       focused: !1,
       submitting: !1,
-      popup: N.channelEditorPopupStore.getState()
+      popup: y.channelEditorPopupStore.getState()
     }
   }
 }

@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("974667"),
   c = n("895547"),
   f = n("769846"),
-  p = n("77078"),
-  m = n("150021"),
+  m = n("77078"),
+  p = n("150021"),
   h = n("206625"),
   E = n("302437"),
   g = n("867805"),
@@ -24,10 +24,10 @@ var l = n("37983"),
   T = n("159885"),
   v = n("49111"),
   I = n("782340"),
-  _ = n("576643");
-let y = (0, S.uid)(),
+  _ = n("756249");
+let N = (0, S.uid)(),
   A = c.default.convert.fromCodePoint("1f44f"),
-  N = (0, T.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+  y = (0, T.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
   x = (0, T.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
   O = e => {
     let {
@@ -43,7 +43,7 @@ let y = (0, S.uid)(),
       },
       delay: a
     });
-    return (0, l.jsx)(p.Clickable, {
+    return (0, l.jsx)(m.Clickable, {
       ...r,
       role: "option",
       "aria-selected": 0 === s,
@@ -82,7 +82,7 @@ let y = (0, S.uid)(),
       onClick: a,
       hasTabWrapper: r
     } = e, c = (0, E.default)("diversity"), f = (0, u.useSpring)({
-      height: (x + 2 * N) * (g.DIVERSITY_SURROGATES.length + 1),
+      height: (x + 2 * y) * (g.DIVERSITY_SURROGATES.length + 1),
       from: {
         height: x
       },
@@ -93,8 +93,8 @@ let y = (0, S.uid)(),
     i.useEffect(() => {
       c.focusFirstVisibleItem()
     }, [c]);
-    let p = ["", ...g.DIVERSITY_SURROGATES];
-    return o.remove(p, e => e === n), p.unshift(n), (0, l.jsx)(d.ListNavigatorProvider, {
+    let m = ["", ...g.DIVERSITY_SURROGATES];
+    return o.remove(m, e => e === n), m.unshift(n), (0, l.jsx)(d.ListNavigatorProvider, {
       navigator: c,
       children: (0, l.jsx)(d.ListNavigatorContainer, {
         children: e => {
@@ -111,7 +111,7 @@ let y = (0, S.uid)(),
             }),
             style: f,
             role: "listbox",
-            children: p.map((e, t) => (0, l.jsx)(O, {
+            children: m.map((e, t) => (0, l.jsx)(O, {
               index: t,
               fade: 0 !== t,
               delay: 20 * t,
@@ -133,7 +133,7 @@ var M = e => {
   return (0, l.jsxs)("div", {
     ref: d,
     className: a,
-    children: [(0, l.jsx)(p.Clickable, {
+    children: [(0, l.jsx)(m.Clickable, {
       innerRef: c,
       className: _.diversitySelectorButton,
       onClick: () => {
@@ -142,7 +142,7 @@ var M = e => {
       "aria-label": I.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
       "aria-haspopup": !0,
       "aria-expanded": o,
-      "aria-controls": y,
+      "aria-controls": N,
       tabIndex: o ? -1 : 0,
       children: (0, l.jsx)("div", {
         className: _.diversityEmojiItemImage,
@@ -155,12 +155,12 @@ var M = e => {
         e.keyCode === v.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != c.current && c.current.focus())
       },
       children: (0, l.jsx)(R, {
-        id: y,
+        id: N,
         hasTabWrapper: s,
         selectedSurrogate: n,
         onClick: e => {
           var n;
-          (0, m.setDiversityColor)(e), u(!1), null === (n = t.current) || void 0 === n || n.focus()
+          (0, p.setDiversityColor)(e), u(!1), null === (n = t.current) || void 0 === n || n.focus()
         }
       })
     }) : null]

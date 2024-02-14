@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return N
   }
 }), n("222007");
-var a, l, s = n("37983"),
+var l, a, s = n("37983"),
   i = n("884691"),
   r = n("446674"),
   o = n("737960"),
@@ -19,19 +19,19 @@ var a, l, s = n("37983"),
   S = n("620103"),
   g = n("297446"),
   C = n("782340"),
-  _ = n("478107");
+  _ = n("956630");
 let I = {
   singleSpeaker: 424,
   twoSpeakers: 624,
   threeSpeakers: 824
 };
-(l = a || (a = {}))[l.SELECTED = 0] = "SELECTED", l[l.SPEAKER = 1] = "SPEAKER", l[l.AUDIENCE = 2] = "AUDIENCE";
+(a = l || (l = {}))[a.SELECTED = 0] = "SELECTED", a[a.SPEAKER = 1] = "SPEAKER", a[a.AUDIENCE = 2] = "AUDIENCE";
 let T = (e, t) => {
     let n = Math.floor(e / t - 8),
-      a = Math.floor(n / g.SPEAKER_TILE_ASPECT_RATIO);
+      l = Math.floor(n / g.SPEAKER_TILE_ASPECT_RATIO);
     return {
       speakerTileWidth: n,
-      speakerTileHeight: a
+      speakerTileHeight: l
     }
   },
   v = (e, t) => e < I.singleSpeaker ? 1 : e < I.twoSpeakers ? 2 : e < I.threeSpeakers ? 3 : t ? 3 : 4,
@@ -39,25 +39,25 @@ let T = (e, t) => {
 var N = (0, o.default)(e => {
   var t, n;
   let {
-    channel: a,
-    width: l,
+    channel: l,
+    width: a,
     onScroll: o
   } = e, {
     selectedParticipantId: I,
     largeStream: N,
     chatOpen: A
   } = (0, r.useStateFromStoresObject)([u.default], () => ({
-    selectedParticipantId: u.default.getSelectedParticipantId(a.id),
-    largeStream: u.default.getStageStreamSize(a.id),
-    chatOpen: u.default.getChatOpen(a.id)
-  }), [a.id]), M = (0, c.useActualStageSpeakerCount)(a.id), R = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), j = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(a.id, I) : null), L = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), O = L.filter(e => e.type === f.StageChannelParticipantTypes.VOICE), y = null != L.find(e => e.type === f.StageChannelParticipantTypes.STREAM), P = x(l), b = v(l, A), D = {
+    selectedParticipantId: u.default.getSelectedParticipantId(l.id),
+    largeStream: u.default.getStageStreamSize(l.id),
+    chatOpen: u.default.getChatOpen(l.id)
+  }), [l.id]), M = (0, c.useActualStageSpeakerCount)(l.id), R = (0, c.useStageParticipantsCount)(l.id, f.StageChannelParticipantNamedIndex.AUDIENCE), j = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(l.id, I) : null), L = (0, c.useStageParticipants)(l.id, f.StageChannelParticipantNamedIndex.SPEAKER), O = L.filter(e => e.type === f.StageChannelParticipantTypes.VOICE), y = null != L.find(e => e.type === f.StageChannelParticipantTypes.STREAM), P = x(a), b = v(a, A), D = {
     [f.StageChannelParticipantNamedIndex.SPEAKER]: b,
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: P,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
-  }, U = (0, h.useThrottleDurationForChannel)(a.id), [w, F] = (0, h.useStageChannelParticipantsListThrottled)(a.id, D, U), k = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
+  }, U = (0, h.useThrottleDurationForChannel)(l.id), [w, F] = (0, h.useStageChannelParticipantsListThrottled)(l.id, D, U), k = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
     speakerTileWidth: V,
     speakerTileHeight: B
-  } = T(l, b), H = N ? l - 32 : Math.min(l - 64, 3 * V + 8), G = e => e === w.length - 1 || 0 === R && 1 === e, [W, Y] = i.useState(!1), [z, K] = i.useState(!1);
+  } = T(a, b), G = N ? a - 32 : Math.min(a - 64, 3 * V + 8), H = e => e === w.length - 1 || 0 === R && 1 === e, [W, Y] = i.useState(!1), [z, K] = i.useState(!1);
   return (0, s.jsx)(p.default, {
     sections: k,
     renderSection: e => {
@@ -71,7 +71,7 @@ var N = (0, o.default)(e => {
         onClick: () => Y(!W),
         collapsed: W,
         speakers: O,
-        channel: a,
+        channel: l,
         isStreamLive: y
       }, "speaker-header-".concat(t));
       if (2 === t) return 0 === R ? null : (0, s.jsx)(S.default, {
@@ -80,7 +80,7 @@ var N = (0, o.default)(e => {
         className: _.header,
         onClick: () => K(!z),
         collapsed: z,
-        channel: a
+        channel: l
       }, "audience-header-".concat(t));
       return null
     },
@@ -89,17 +89,17 @@ var N = (0, o.default)(e => {
       let {
         section: t,
         row: n
-      } = e, l = F[t][n];
-      if ((null == l ? void 0 : l.length) == null) return null;
+      } = e, a = F[t][n];
+      if ((null == a ? void 0 : a.length) == null) return null;
       switch (t) {
         case 0:
-          if (0 === l.length || null == l[0]) return null;
+          if (0 === a.length || null == a[0]) return null;
           return (0, s.jsx)("div", {
             className: _.focusedRow,
             children: (0, s.jsx)(g.default, {
-              channel: a,
-              participant: l[0],
-              width: H
+              channel: l,
+              participant: a[0],
+              width: G
             })
           }, "selected-participant");
         case 1:
@@ -107,16 +107,16 @@ var N = (0, o.default)(e => {
           return (0, s.jsx)(i.Fragment, {
             children: (0, s.jsx)(E.default, {
               tileWidth: V,
-              channel: a,
-              participants: l,
+              channel: l,
+              participants: a,
               selectedParticipant: j
             })
           }, "speakers-".concat(t, "-").concat(n));
         case 2:
           if (z) return null;
           return (0, s.jsx)(m.default, {
-            channel: a,
-            participants: l,
+            channel: l,
+            participants: a,
             maxTiles: P
           }, "audience-".concat(t, "-").concat(n));
         default:
@@ -125,17 +125,17 @@ var N = (0, o.default)(e => {
     },
     rowHeight: e => {
       let t = null == F[e][0];
-      return t ? 0 : 0 === e ? H / g.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? W ? 0 : B : z ? 0 : 98
+      return t ? 0 : 0 === e ? G / g.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? W ? 0 : B : z ? 0 : 98
     },
     renderFooter: e => {
       let {
         section: t
       } = e;
-      return G(t) ? (0, s.jsx)("div", {
+      return H(t) ? (0, s.jsx)("div", {
         className: _.spacer
       }, "bottom-spacer") : null
     },
-    footerHeight: e => 1 === e ? 8 : 0 === e ? 12 : G(e) ? 88 : 0,
+    footerHeight: e => 1 === e ? 8 : 0 === e ? 12 : H(e) ? 88 : 0,
     className: _.scroller,
     chunkSize: 60,
     onScroll: o

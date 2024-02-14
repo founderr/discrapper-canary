@@ -40,7 +40,7 @@ var a = s("37983"),
   B = s("935583"),
   y = s("590456"),
   F = s("782340"),
-  G = s("594129");
+  G = s("648663");
 let k = L.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
 function H(e) {

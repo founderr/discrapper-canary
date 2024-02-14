@@ -7,10 +7,10 @@ r.r(t), r.d(t, {
     return u
   },
   isElement: function() {
-    return o
+    return a
   },
   isReplacedElement: function() {
-    return a
+    return o
   }
 });
 var n = function(e) {
@@ -23,16 +23,16 @@ var n = function(e) {
         u = t.height;
       return !r && !u
     }
-    var o = e.offsetWidth,
-      a = e.offsetHeight;
-    return !(o || a || e.getClientRects().length)
+    var a = e.offsetWidth,
+      o = e.offsetHeight;
+    return !(a || o || e.getClientRects().length)
   },
-  o = function(e) {
+  a = function(e) {
     if (e instanceof Element) return !0;
     var t, r = null === (t = null == e ? void 0 : e.ownerDocument) || void 0 === t ? void 0 : t.defaultView;
     return !!(r && e instanceof r.Element)
   },
-  a = function(e) {
+  o = function(e) {
     switch (e.tagName) {
       case "INPUT":
         if ("image" !== e.type) break;

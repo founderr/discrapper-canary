@@ -13,7 +13,7 @@ var r = n("626301"),
   l = n("646718"),
   s = n("49111"),
   c = n("782340"),
-  d = n("718116"),
+  d = n("965289"),
   f = n("431036");
 
 function E(e) {
@@ -34,7 +34,7 @@ function E(e) {
     autoTrackExposure: !0,
     experiment: a.default,
     location: "video_backgrounds_upsell"
-  }), A = p === l.PremiumTypes.TIER_0 ? l.PremiumSubscriptionSKUs.TIER_0 : l.PremiumSubscriptionSKUs.TIER_2, C = A === l.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY_TIER_0.format({
+  }), A = p === l.PremiumTypes.TIER_0 ? l.PremiumSubscriptionSKUs.TIER_0 : l.PremiumSubscriptionSKUs.TIER_2, I = A === l.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY_TIER_0.format({
     onLearnMore: T
   }) : c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY.format({
     onLearnMore: T
@@ -44,8 +44,8 @@ function E(e) {
     artContainerClassName: d.videoBackgroundArt,
     type: l.PremiumUpsellTypes.VIDEO_BACKGROUNDS_MODAL,
     title: c.default.Messages.VIDEO_BACKGROUND_UPSELL_TITLE,
-    body: C,
-    glowUp: C,
+    body: I,
+    glowUp: I,
     analyticsSource: n,
     analyticsLocation: {
       page: s.AnalyticsPages.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,

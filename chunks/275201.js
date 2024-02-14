@@ -84,9 +84,9 @@ t.exports = f, f.prototype.point = function() {
     }
     if (o >= 0 && S++, w = w.dblp(S), o < 0) break;
     for (f = 0; f < r; f++) {
-      var E = M[f];
-      if (0 !== E) {
-        E > 0 ? u = d[f][E - 1 >> 1] : E < 0 && (u = d[f][-E - 1 >> 1].neg());
+      var A = M[f];
+      if (0 !== A) {
+        A > 0 ? u = d[f][A - 1 >> 1] : A < 0 && (u = d[f][-A - 1 >> 1].neg());
         w = "affine" === u.type ? w.mixedAdd(u) : w.add(u)
       }
     }

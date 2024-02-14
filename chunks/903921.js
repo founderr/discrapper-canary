@@ -21,14 +21,14 @@ var r = s("414456"),
   _ = s("427459"),
   T = s("954296"),
   I = s("651971"),
-  f = s("49111"),
-  N = s("782340"),
-  R = s("633640");
+  N = s("49111"),
+  f = s("782340"),
+  R = s("319519");
 let g = {
-  [f.BoostedGuildTiers.NONE]: 0,
-  [f.BoostedGuildTiers.TIER_1]: 1 / 3,
-  [f.BoostedGuildTiers.TIER_2]: 2 / 3,
-  [f.BoostedGuildTiers.TIER_3]: 1
+  [N.BoostedGuildTiers.NONE]: 0,
+  [N.BoostedGuildTiers.TIER_1]: 1 / 3,
+  [N.BoostedGuildTiers.TIER_2]: 2 / 3,
+  [N.BoostedGuildTiers.TIER_3]: 1
 };
 var m = function(e) {
   let {
@@ -38,54 +38,54 @@ var m = function(e) {
     isProgressBarAnimationComplete: m,
     setConfettiCount: S,
     setShouldFireConfetti: M,
-    tier: h,
-    tierMarkerAnimationPosition: G
-  } = e, p = (0, o.default)([u.default], () => u.default.useReducedMotion), {
-    analyticsLocations: x
-  } = (0, d.default)(), v = f.AppliedGuildBoostsRequiredForBoostedGuildTier[h], A = v - r.premiumSubscriberCount, B = h <= G || m, C = B && h <= r.premiumTier, O = B && h < r.premiumTier, P = B && h === r.premiumTier, {
+    tier: G,
+    tierMarkerAnimationPosition: h
+  } = e, O = (0, o.default)([u.default], () => u.default.useReducedMotion), {
+    analyticsLocations: p
+  } = (0, d.default)(), C = N.AppliedGuildBoostsRequiredForBoostedGuildTier[G], A = C - r.premiumSubscriberCount, B = G <= h || m, x = B && G <= r.premiumTier, v = B && G < r.premiumTier, P = B && G === r.premiumTier, {
     scaleFactor: L
   } = (0, l.useSpring)({
     from: {
       scaleFactor: 0
     },
     to: {
-      scaleFactor: G >= h || m && G + 1 === h || m && -1 === G && h === f.BoostedGuildTiers.NONE ? 1 : 0
+      scaleFactor: h >= G || m && h + 1 === G || m && -1 === h && G === N.BoostedGuildTiers.NONE ? 1 : 0
     },
     config: {
       tension: 360,
       friction: 12
     },
-    immediate: p
+    immediate: O
   }), j = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.animated.div, {
       className: R.progressBarMarkerIndicator,
       style: {
         transform: L.to(e => "translate(-50%, -50%) scale(".concat(e, ")"))
       }
-    }), h !== f.BoostedGuildTiers.NONE && (0, i.jsx)(c.default, {
-      tier: h,
+    }), G !== N.BoostedGuildTiers.NONE && (0, i.jsx)(c.default, {
+      tier: G,
       className: R.boostedTierIcon
     })]
-  }), D = C ? "div" : n.Clickable, w = C ? {} : {
+  }), D = x ? "div" : n.Clickable, b = x ? {} : {
     onClick: function() {
       B && (0, T.addAppliedGuildBoosts)({
-        analyticsLocations: x,
+        analyticsLocations: p,
         analyticsLocation: {
-          page: f.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-          section: f.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
-          object: f.AnalyticsObjects.SUBSCRIBE_TO_TIER_BUTTON,
+          page: N.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+          section: N.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
+          object: N.AnalyticsObjects.SUBSCRIBE_TO_TIER_BUTTON,
           objectType: function(e) {
             switch (e) {
-              case f.BoostedGuildTiers.TIER_3:
-                return f.AnalyticsObjectTypes.TIER_3;
-              case f.BoostedGuildTiers.TIER_2:
-                return f.AnalyticsObjectTypes.TIER_2;
-              case f.BoostedGuildTiers.TIER_1:
-                return f.AnalyticsObjectTypes.TIER_1;
+              case N.BoostedGuildTiers.TIER_3:
+                return N.AnalyticsObjectTypes.TIER_3;
+              case N.BoostedGuildTiers.TIER_2:
+                return N.AnalyticsObjectTypes.TIER_2;
+              case N.BoostedGuildTiers.TIER_1:
+                return N.AnalyticsObjectTypes.TIER_1;
               default:
                 throw Error("Unsupported Boosting tier: ".concat(e))
             }
-          }(h)
+          }(G)
         },
         numberOfBoostsToAdd: A,
         guild: r
@@ -93,32 +93,32 @@ var m = function(e) {
     }
   };
   return (0, i.jsx)(n.Tooltip, {
-    text: C ? N.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({
-      tierName: (0, _.getTierName)(h, {
+    text: x ? f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({
+      tierName: (0, _.getTierName)(G, {
         useLevels: !1
       })
-    }) : N.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format({
+    }) : f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format({
       numBoostsRequired: A,
-      tierName: (0, _.getTierName)(h, {
+      tierName: (0, _.getTierName)(G, {
         useLevels: !1
       })
     }),
-    shouldShow: h !== f.BoostedGuildTiers.NONE,
+    shouldShow: G !== N.BoostedGuildTiers.NONE,
     children: e => (0, i.jsxs)(D, {
       className: a(R.progressBarMarker, {
-        [R.progressBarMarkerUnlocked]: C,
-        [R.progressBarMarkerLocked]: !C,
-        [R.progressBarMarkerLower]: O,
+        [R.progressBarMarkerUnlocked]: x,
+        [R.progressBarMarkerLocked]: !x,
+        [R.progressBarMarkerLower]: v,
         [R.progressBarMarkerCurrent]: P
       }),
       style: {
-        left: "".concat(100 * g[h], "%")
+        left: "".concat(100 * g[G], "%")
       },
       ...e,
-      ...w,
-      children: [!C && (0, i.jsx)("div", {
+      ...b,
+      children: [!x && (0, i.jsx)("div", {
         className: R.boostedTierIconBackground
-      }), C && h === f.BoostedGuildTiers.TIER_3 ? (0, i.jsx)(I.ProgressBarConfettiTrigger, {
+      }), x && G === N.BoostedGuildTiers.TIER_3 ? (0, i.jsx)(I.ProgressBarConfettiTrigger, {
         confettiTriggerRef: s,
         setConfettiCount: S,
         setShouldFireConfetti: M,
@@ -126,7 +126,7 @@ var m = function(e) {
       }) : j, (0, i.jsxs)(n.Text, {
         className: R.progressBarMarkerLabel,
         variant: "text-md/normal",
-        children: [C && h !== f.BoostedGuildTiers.NONE && (0, i.jsx)(E.default, {
+        children: [x && G !== N.BoostedGuildTiers.NONE && (0, i.jsx)(E.default, {
           className: R.progressBarMarkerUnlockedIcon
         }), t]
       })]

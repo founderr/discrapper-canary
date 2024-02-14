@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("383018"),
   c = n("378765"),
   f = n("773336"),
-  p = n("573055"),
-  m = n("149022"),
+  m = n("573055"),
+  p = n("149022"),
   h = n("49111");
 let E = /(\t|\s)/;
 class g extends i.PureComponent {
@@ -99,7 +99,7 @@ class g extends i.PureComponent {
       {
         onChange: s
       } = this.props;
-    null == s || s(null, a, (0, m.toRichValue)(a));
+    null == s || s(null, a, (0, p.toRichValue)(a));
     let r = t.length + e.length;
     this.setState({
       nextSelection: r
@@ -124,8 +124,8 @@ class g extends i.PureComponent {
       id: u,
       submitting: d,
       textAreaPaddingClassName: f,
-      spellcheckEnabled: p,
-      "aria-controls": m,
+      spellcheckEnabled: m,
+      "aria-controls": p,
       "aria-expanded": E,
       "aria-activedescendant": g
     } = this.props;
@@ -154,8 +154,8 @@ class g extends i.PureComponent {
         onContextMenu: this.handleContextMenu,
         value: t ? "" : e,
         tabIndex: 0,
-        spellCheck: p,
-        "aria-controls": m,
+        spellCheck: m,
+        "aria-controls": p,
         "aria-expanded": E,
         "aria-activedescendant": g,
         "aria-haspopup": "listbox",
@@ -239,7 +239,7 @@ class g extends i.PureComponent {
         return t => (0, l.jsx)(e, {
           ...t,
           isChannelTextArea: !0,
-          text: (0, p.getSelectionText)()
+          text: (0, m.getSelectionText)()
         })
       }, {
         align: "bottom",
@@ -250,7 +250,7 @@ class g extends i.PureComponent {
         onChange: t,
         allowNewLines: n
       } = this.props, l = e.currentTarget.value, i = n ? l : l.replace("\n", "");
-      null == t || t(e, i, (0, m.toRichValue)(i))
+      null == t || t(e, i, (0, p.toRichValue)(i))
     }
   }
 }

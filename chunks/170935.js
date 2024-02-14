@@ -14,7 +14,7 @@ var a = n("37983"),
   u = n("49111"),
   d = n("234222"),
   h = n("782340"),
-  p = n("287794");
+  p = n("898545");
 class g extends l.PureComponent {
   componentDidMount() {
     this.mountedAt = Date.now(), this.maxScrolledPercentage = 0, this.track(u.AnalyticEvents.CHANGE_LOG_OPENED, {}, !0)

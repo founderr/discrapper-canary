@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return v
   },
   useLayoutEffect: function() {
-    return a
+    return o
   },
   useResizeObserver: function() {
     return g
@@ -29,8 +29,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("424973");
 var r = n("884691"),
-  o = n("38736");
-let a = "undefined" != typeof document ? r.useLayoutEffect : () => {},
+  a = n("38736");
+let o = "undefined" != typeof document ? r.useLayoutEffect : () => {},
   i = new Map;
 
 function s() {
@@ -42,20 +42,20 @@ function s() {
     let n = t[e];
     for (let e in n) {
       let t = r[e],
-        a = n[e];
-      "function" == typeof t && "function" == typeof a && "o" === e[0] && "n" === e[1] && e.charCodeAt(2) >= 65 && 90 >= e.charCodeAt(2) ? r[e] = function() {
+        o = n[e];
+      "function" == typeof t && "function" == typeof o && "o" === e[0] && "n" === e[1] && e.charCodeAt(2) >= 65 && 90 >= e.charCodeAt(2) ? r[e] = function() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return function() {
           for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
           for (let e of t) "function" == typeof e && e(...n)
         }
-      }(t, a) : ("className" === e || "UNSAFE_className" === e) && "string" == typeof t && "string" == typeof a ? r[e] = (0, o.default)(t, a) : "id" === e && t && a ? r.id = function(e, t) {
+      }(t, o) : ("className" === e || "UNSAFE_className" === e) && "string" == typeof t && "string" == typeof o ? r[e] = (0, a.default)(t, o) : "id" === e && t && o ? r.id = function(e, t) {
         if (e === t) return e;
         let n = i.get(e);
         if (n) return n(t), t;
         let r = i.get(t);
         return r ? (r(e), e) : t
-      }(t, a) : r[e] = void 0 !== a ? a : t
+      }(t, o) : r[e] = void 0 !== o ? o : t
     }
   }
   return r
@@ -77,9 +77,9 @@ function p(e) {
       labelable: n,
       propNames: r
     } = t,
-    o = {};
-  for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (l.has(t) || n && u.has(t) || (null == r ? void 0 : r.has(t)) || d.test(t)) && (o[t] = e[t]);
-  return o
+    a = {};
+  for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (l.has(t) || n && u.has(t) || (null == r ? void 0 : r.has(t)) || d.test(t)) && (a[t] = e[t]);
+  return a
 }
 let f = new Map,
   h = new Set;

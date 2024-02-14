@@ -23,7 +23,7 @@ var s, l, a = n("37983"),
   A = n("439932"),
   C = n("49111"),
   h = n("782340"),
-  g = n("777016");
+  g = n("847674");
 (l = s || (s = {}))[l.OSX = 0] = "OSX", l[l.WINDOWS = 1] = "WINDOWS", l[l.LINUX = 2] = "LINUX", l[l.IOS = 3] = "IOS", l[l.ANDROID = 4] = "ANDROID";
 let M = [{
     getOs: () => h.default.Messages.PLATFORM_MACOS,

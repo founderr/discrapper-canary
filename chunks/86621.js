@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
 var l = n("37983"),
-  a = n("884691"),
-  s = n("599110");
+  i = n("884691"),
+  a = n("599110");
 
-function i(e) {
+function s(e) {
   var t;
-  let n = a.forwardRef((t, n) => (0, l.jsx)(s.AnalyticsContext.Consumer, {
-    children: a => (0, l.jsx)(e, {
+  let n = i.forwardRef((t, n) => (0, l.jsx)(a.AnalyticsContext.Consumer, {
+    children: i => (0, l.jsx)(e, {
       ...t,
       ref: n,
-      analyticsContext: a
+      analyticsContext: i
     })
   }));
   return n.displayName = "withAnalyticsContext(".concat(null !== (t = e.displayName) && void 0 !== t ? t : e.name, ")"), n

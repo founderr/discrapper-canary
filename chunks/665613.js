@@ -48,14 +48,14 @@ function s(e) {
         o(t);
         return
       }
-      let p = a.RangeUtils.isForward(e.selection);
+      let m = a.RangeUtils.isForward(e.selection);
       if (null != c) {
         let [, t] = c, [i, s] = a.EditorUtils.edges(e, t);
-        p && a.PointUtils.equals(u, i) ? u = null !== (n = a.EditorUtils.before(e, i)) && void 0 !== n ? n : a.EditorUtils.start(e, []) : !p && a.PointUtils.equals(u, s) && (u = null !== (l = a.EditorUtils.after(e, s)) && void 0 !== l ? l : a.EditorUtils.end(e, []))
+        m && a.PointUtils.equals(u, i) ? u = null !== (n = a.EditorUtils.before(e, i)) && void 0 !== n ? n : a.EditorUtils.start(e, []) : !m && a.PointUtils.equals(u, s) && (u = null !== (l = a.EditorUtils.after(e, s)) && void 0 !== l ? l : a.EditorUtils.end(e, []))
       }
       if (null != f) {
         let [, t] = f, [n, l] = a.EditorUtils.edges(e, t);
-        !p && a.PointUtils.equals(d, n) ? d = null !== (s = a.EditorUtils.before(e, n)) && void 0 !== s ? s : a.EditorUtils.start(e, []) : p && a.PointUtils.equals(d, l) && (d = null !== (r = a.EditorUtils.after(e, l)) && void 0 !== r ? r : a.EditorUtils.end(e, []))
+        !m && a.PointUtils.equals(d, n) ? d = null !== (s = a.EditorUtils.before(e, n)) && void 0 !== s ? s : a.EditorUtils.start(e, []) : m && a.PointUtils.equals(d, l) && (d = null !== (r = a.EditorUtils.after(e, l)) && void 0 !== r ? r : a.EditorUtils.end(e, []))
       }
       i.SlateTransforms.delete(e, {
         at: {
@@ -135,14 +135,14 @@ function* u(e) {
   let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
       at: f = e.selection,
-      unit: p = "offset",
-      reverse: m = !1,
+      unit: m = "offset",
+      reverse: p = !1,
       voids: h = !1
     } = null != c ? c : {};
-  if ("word" !== p) {
+  if ("word" !== m) {
     for (let t of o(e, {
         ...c,
-        voids: h || "block" === p
+        voids: h || "block" === m
       })) yield t;
     return
   }
@@ -150,23 +150,23 @@ function* u(e) {
   let E = a.EditorUtils.range(e, f),
     [g, S] = a.RangeUtils.edges(E),
     C = a.EditorUtils.richValue(e),
-    T = m ? -1 : 1,
+    T = p ? -1 : 1,
     v = null !== (l = null === (t = g.path) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : 0,
     I = null !== (i = null === (n = S.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : C.length - 1,
-    _ = m ? v : I,
-    y = m ? I : v;
+    _ = p ? v : I,
+    N = p ? I : v;
   for (;;) {
-    let t = C[y],
-      n = null !== (u = y === v ? null === (s = g.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
-      l = null !== (d = y === I ? null === (r = S.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
-      i = m ? l : n,
-      f = m ? n : l,
-      p = i;
+    let t = C[N],
+      n = null !== (u = N === v ? null === (s = g.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
+      l = null !== (d = N === I ? null === (r = S.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
+      i = p ? l : n,
+      f = p ? n : l,
+      m = i;
     for (;;) {
       let n, l;
-      let i = t.children[p],
-        s = [y, p];
-      if (n = a.PathUtils.equals(s, g.path) || a.PathUtils.isAncestor(s, g.path) ? !m && a.EditorUtils.isEnd(e, g, s) ? null : g : a.EditorUtils.start(e, s), l = a.PathUtils.equals(s, S.path) || a.PathUtils.isAncestor(s, S.path) ? m && a.EditorUtils.isStart(e, S, s) ? null : S : a.EditorUtils.end(e, s), null != n && null != l) {
+      let i = t.children[m],
+        s = [N, m];
+      if (n = a.PathUtils.equals(s, g.path) || a.PathUtils.isAncestor(s, g.path) ? !p && a.EditorUtils.isEnd(e, g, s) ? null : g : a.EditorUtils.start(e, s), l = a.PathUtils.equals(s, S.path) || a.PathUtils.isAncestor(s, S.path) ? p && a.EditorUtils.isStart(e, S, s) ? null : S : a.EditorUtils.end(e, s), null != n && null != l) {
         if (a.TextUtils.isText(i) && 0 === i.text.length) {
           let e = {
             path: s,
@@ -190,10 +190,10 @@ function* u(e) {
             })) yield n
         }
       }
-      if (p === f) break;
-      p += T
+      if (m === f) break;
+      m += T
     }
-    if (y === _) break;
-    y += T
+    if (N === _) break;
+    N += T
   }
 }

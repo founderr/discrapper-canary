@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return a
+    return o
   }
 });
-var l = n("884691");
-let i = 1e3 / 24;
-var a = function(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i,
-    n = l.useRef(0),
-    a = l.useRef(),
-    s = l.useRef(!0),
-    r = l.useCallback(() => {
-      s.current = !1, cancelAnimationFrame(n.current)
+var n = r("884691");
+let u = 1e3 / 24;
+var o = function(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u,
+    r = n.useRef(0),
+    o = n.useRef(),
+    l = n.useRef(!0),
+    i = n.useCallback(() => {
+      l.current = !1, cancelAnimationFrame(r.current)
     }, []),
-    o = l.useCallback(l => {
-      null == a.current && (a.current = l);
-      let i = l - a.current;
-      i >= t && (a.current = l, e(i)), s.current && (n.current = requestAnimationFrame(o))
+    a = n.useCallback(n => {
+      null == o.current && (o.current = n);
+      let u = n - o.current;
+      u >= t && (o.current = n, e(u)), l.current && (r.current = requestAnimationFrame(a))
     }, [e, t]),
-    u = l.useCallback(() => {
-      s.current = !0, a.current = void 0, n.current = requestAnimationFrame(o)
-    }, [o]);
-  return l.useEffect(() => (n.current = requestAnimationFrame(o), () => cancelAnimationFrame(n.current)), []), {
-    stop: r,
-    reset: u,
-    ticking: s
+    s = n.useCallback(() => {
+      l.current = !0, o.current = void 0, r.current = requestAnimationFrame(a)
+    }, [a]);
+  return n.useEffect(() => (r.current = requestAnimationFrame(a), () => cancelAnimationFrame(r.current)), []), {
+    stop: i,
+    reset: s,
+    ticking: l
   }
 }

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
+var a = n("77078"),
   s = n("901582"),
   i = n("252227"),
   r = n("143082"),
@@ -16,7 +16,7 @@ var l = n("77078"),
   c = n("736747"),
   f = n("49111"),
   h = n("782340"),
-  m = n("394782");
+  m = n("978450");
 
 function p(e) {
   let {
@@ -28,24 +28,24 @@ function p(e) {
     renderOutputVolume: g = !1,
     onSelect: C
   } = e, _ = (0, c.default)(), I = (0, u.default)(), T = (0, d.default)(), v = (0, i.default)(), x = (0, r.default)(), N = (0, o.default)();
-  return (0, a.jsx)(s.default, {
+  return (0, l.jsx)(s.default, {
     object: f.AnalyticsObjects.CONTEXT_MENU,
-    children: (0, a.jsxs)(l.Menu, {
+    children: (0, l.jsxs)(a.Menu, {
       onSelect: C,
       className: m.menu,
       onClose: t,
       navId: "audio-device-context",
       "aria-label": h.default.Messages.AUDIO_DEVICE_ACTIONS,
-      children: [p ? (0, a.jsx)(l.MenuGroup, {
+      children: [p ? (0, l.jsx)(a.MenuGroup, {
         label: h.default.Messages.INPUT_DEVICE,
         children: I
-      }) : null, n ? (0, a.jsx)(l.MenuGroup, {
+      }) : null, n ? (0, l.jsx)(a.MenuGroup, {
         label: h.default.Messages.OUTPUT_DEVICE,
         children: T
-      }) : null, E ? (0, a.jsx)(l.MenuGroup, {
+      }) : null, E ? (0, l.jsx)(a.MenuGroup, {
         label: h.default.Messages.FORM_LABEL_INPUT_MODE,
         children: v
-      }) : null, (0, a.jsxs)(l.MenuGroup, {
+      }) : null, (0, l.jsxs)(a.MenuGroup, {
         children: [S ? x : null, g ? N : null, _]
       })]
     })

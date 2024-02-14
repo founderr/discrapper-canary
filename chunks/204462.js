@@ -21,7 +21,7 @@ var i = n("414456"),
   g = n("49111"),
   p = n("958706"),
   I = n("782340"),
-  S = n("791507");
+  S = n("755640");
 let v = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 
 function h(e) {

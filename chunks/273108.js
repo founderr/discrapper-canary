@@ -1,50 +1,50 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return p
   }
 }), n("222007");
-var s = n("37983"),
-  r = n("884691"),
-  l = n("414456"),
-  a = n.n(l),
-  i = n("446674"),
-  o = n("206230"),
-  u = n("471671"),
-  c = n("629758");
-class d extends r.PureComponent {
+var i = n("37983"),
+  a = n("884691"),
+  r = n("414456"),
+  l = n.n(r),
+  s = n("446674"),
+  u = n("206230"),
+  o = n("471671"),
+  c = n("708721");
+class d extends a.PureComponent {
   async componentDidMount() {
     let {
       importData: e,
       nextScene: t,
-      pauseWhileUnfocused: s,
-      pause: r,
-      isWindowFocused: l,
-      useReducedMotion: a
-    } = this.props, [i, {
-      default: o
+      pauseWhileUnfocused: i,
+      pause: a,
+      isWindowFocused: r,
+      useReducedMotion: l
+    } = this.props, [s, {
+      default: u
     }] = await Promise.all([e(), n.el("865981").then(n.t.bind(n, "865981", 23))]);
-    null != this.animationRef && (this.animation = o.loadAnimation({
+    null != this.animationRef && (this.animation = u.loadAnimation({
       container: this.animationRef,
       renderer: "svg",
       loop: !0,
       autoplay: !0,
-      animationData: i
-    }), this.animation.addEventListener("loopComplete", this.handleLoopComplete), this.animation.addEventListener("complete", this.handleComplete), this.playScene(t), (s && !l || r || a) && this.animation.pause())
+      animationData: s
+    }), this.animation.addEventListener("loopComplete", this.handleLoopComplete), this.animation.addEventListener("complete", this.handleComplete), this.playScene(t), (i && !r || a || l) && this.animation.pause())
   }
   componentWillUnmount() {
     this.isUnmounted = !0, null != this.animation && (this.animation.destroy(), this.animation = void 0)
   }
   componentDidUpdate(e) {
-    var t, n, s;
+    var t, n, i;
     let {
-      nextScene: r,
-      pauseWhileUnfocused: l,
-      pause: a,
-      isWindowFocused: i,
-      useReducedMotion: o
+      nextScene: a,
+      pauseWhileUnfocused: r,
+      pause: l,
+      isWindowFocused: s,
+      useReducedMotion: u
     } = this.props;
-    r !== this.currentScene && this.shouldForcePlayAfter() && !a && this.playScene(r), null != this.animation && (l && !e.isWindowFocused && i && !o && !0 !== a ? this.animation.play() : (o || l && e.isWindowFocused && !i) && this.animation.pause()), !e.pause && a ? null === (t = this.animation) || void 0 === t || t.pause() : e.pause && !a && !o && (null === (n = this.animation) || void 0 === n || n.play()), e.nextScene !== r && a && (this.playScene(r), null === (s = this.animation) || void 0 === s || s.pause())
+    a !== this.currentScene && this.shouldForcePlayAfter() && !l && this.playScene(a), null != this.animation && (r && !e.isWindowFocused && s && !u && !0 !== l ? this.animation.play() : (u || r && e.isWindowFocused && !s) && this.animation.pause()), !e.pause && l ? null === (t = this.animation) || void 0 === t || t.pause() : e.pause && !l && !u && (null === (n = this.animation) || void 0 === n || n.play()), e.nextScene !== a && l && (this.playScene(a), null === (i = this.animation) || void 0 === i || i.pause())
   }
   shouldForcePlayAfter() {
     let {
@@ -57,17 +57,17 @@ class d extends r.PureComponent {
     let {
       onScenePlay: t,
       sceneSegments: n,
-      useReducedMotion: s
-    } = this.props, r = n[e], l = n[this.currentScene];
-    if (null != this.animation && (e === this.currentScene || r.BEG !== l.BEG || r.END !== l.END) && this.animation.playSegments([r.BEG, r.END], !0), this.currentScene = e, null != t && t(this.currentScene), s) {
-      var a;
-      null === (a = this.animation) || void 0 === a || a.pause()
+      useReducedMotion: i
+    } = this.props, a = n[e], r = n[this.currentScene];
+    if (null != this.animation && (e === this.currentScene || a.BEG !== r.BEG || a.END !== r.END) && this.animation.playSegments([a.BEG, a.END], !0), this.currentScene = e, null != t && t(this.currentScene), i) {
+      var l;
+      null === (l = this.animation) || void 0 === l || l.pause()
     }
   }
   render() {
-    return (0, s.jsx)("div", {
+    return (0, i.jsx)("div", {
       ref: this.handleSetRef,
-      className: a(this.props.className, c.wrapper)
+      className: l(this.props.className, c.wrapper)
     })
   }
   constructor(...e) {
@@ -95,15 +95,15 @@ d.defaultProps = {
   pauseWhileUnfocused: !0,
   pause: !1
 };
-var f = e => {
+var p = e => {
   let {
     componentRef: t,
     ...n
-  } = e, r = (0, i.useStateFromStores)([u.default], () => u.default.isFocused()), l = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
-  return (0, s.jsx)(d, {
+  } = e, a = (0, s.useStateFromStores)([o.default], () => o.default.isFocused()), r = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion);
+  return (0, i.jsx)(d, {
     ...n,
-    isWindowFocused: r,
-    useReducedMotion: l,
+    isWindowFocused: a,
+    useReducedMotion: r,
     ref: t
   })
 }

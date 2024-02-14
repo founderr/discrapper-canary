@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return m
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("65597"),
+var a = n("65597"),
   s = n("760679"),
   i = n("242260"),
   r = n("315841"),
@@ -20,30 +20,30 @@ var l = n("65597"),
 function m(e) {
   let {
     channel: t
-  } = e, n = (0, l.default)([i.default], () => i.default.getDrawMode()), m = (null == n ? void 0 : n.type) === r.DrawableType.EMOJI_HOSE, p = (e, t) => {
+  } = e, n = (0, a.default)([i.default], () => i.default.getDrawMode()), m = (null == n ? void 0 : n.type) === r.DrawableType.EMOJI_HOSE, p = (e, t) => {
     null != e ? (0, s.setDrawMode)({
       type: r.DrawableType.EMOJI_HOSE,
       emojiName: e.name,
       emojiId: e.id
     }) : m && (0, s.setDrawMode)(null), null == t || t()
   };
-  return (0, a.jsx)(f.default, {
+  return (0, l.jsx)(f.default, {
     renderPopout: e => {
       let {
         closePopout: n,
-        onFocus: l
+        onFocus: a
       } = e;
-      return (0, a.jsx)(o.default, {
-        children: (0, a.jsx)(d.default, {
+      return (0, l.jsx)(o.default, {
+        children: (0, l.jsx)(d.default, {
           title: h.default.Messages.SHARED_CANVAS_DRAW_MODE_EMOJI_HOSE,
           channel: t,
           closePopout: n,
-          onFocus: l,
+          onFocus: a,
           onSelectEmoji: e => p(e, n)
         })
       })
     },
-    children: e => (0, a.jsx)(u.default, {
+    children: e => (0, l.jsx)(u.default, {
       ...e,
       iconComponent: c.default,
       isActive: m || e.isActive,

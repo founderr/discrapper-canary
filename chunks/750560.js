@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   useSubscribeGuildMembers: function() {
-    return s
+    return d
   }
 }), n("37983");
 var i = n("884691"),
-  l = n("917351"),
-  a = n.n(l);
+  u = n("917351"),
+  r = n.n(u);
 n("233736");
-var r = n("666020");
+var a = n("666020");
 
-function s(e) {
-  i.useEffect(() => (a.forEach(e, (e, t) => (0, r.subscribeMembers)(t, e)), () => {
-    a.forEach(e, (e, t) => (0, r.unsubscribeMembers)(t, e))
-  }), [e])
+function d(t) {
+  i.useEffect(() => (r.forEach(t, (t, e) => (0, a.subscribeMembers)(e, t)), () => {
+    r.forEach(t, (t, e) => (0, a.unsubscribeMembers)(e, t))
+  }), [t])
 }

@@ -1,42 +1,42 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return c
   }
-}), n("222007");
-var l = n("37983");
-n("884691");
-var u = n("446674"),
-  a = n("77078"),
-  d = n("817963"),
-  i = n("398604"),
-  s = n("322224"),
-  r = n("397680"),
-  o = n("782340");
+}), l("222007");
+var n = l("37983");
+l("884691");
+var a = l("446674"),
+  u = l("77078"),
+  s = l("817963"),
+  d = l("398604"),
+  r = l("322224"),
+  i = l("397680"),
+  o = l("782340");
 
 function c(e) {
   let {
     guildEventId: t,
-    recurrenceId: n,
+    recurrenceId: l,
     guild: c,
-    channel: E
-  } = e, f = null != n, {
+    channel: f
+  } = e, E = null != l, {
     canManageGuildEvent: _
-  } = (0, d.useManageResourcePermissions)(null != E ? E : c), [T, S] = (0, u.useStateFromStoresArray)([i.default], () => [i.default.isActive(t), i.default.getGuildScheduledEvent(t)]), v = (0, r.default)(n, null == S ? void 0 : S.id), g = null != S && _(S), I = f && (null == v ? void 0 : v.is_canceled) && g;
-  return I && (!T || f) ? (0, l.jsx)(a.MenuItem, {
+  } = (0, s.useManageResourcePermissions)(null != f ? f : c), [T, M] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), v = (0, i.default)(l, null == M ? void 0 : M.id), g = null != M && _(M), m = E && (null == v ? void 0 : v.is_canceled) && g;
+  return m && (!T || E) ? (0, n.jsx)(u.MenuItem, {
     id: o.default.Messages.RESTORE_EVENT,
     label: o.default.Messages.RESTORE_EVENT,
     action: () => {
-      if (null == n || null == v) return;
+      if (null == l || null == v) return;
       let {
         scheduled_start_time: e,
-        scheduled_end_time: l
+        scheduled_end_time: n
       } = v;
-      null == e && null == l ? s.default.deleteGuildEventException(c.id, t, n) : s.default.updateGuildEventException({
+      null == e && null == n ? r.default.deleteGuildEventException(c.id, t, l) : r.default.updateGuildEventException({
         scheduled_start_time: e,
-        scheduled_end_time: l,
+        scheduled_end_time: n,
         is_canceled: !1
-      }, c.id, t, n)
+      }, c.id, t, l)
     }
   }) : null
 }

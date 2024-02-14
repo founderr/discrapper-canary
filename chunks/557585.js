@@ -17,8 +17,8 @@ var l = n("884691"),
   d = n("697218"),
   c = n("719923"),
   f = n("880342"),
-  p = n("469607"),
-  m = n("235004"),
+  m = n("469607"),
+  p = n("235004"),
   h = n("389480"),
   E = n("774473"),
   g = n("846325");
@@ -79,18 +79,18 @@ function T(e, t) {
 function v(e) {
   let {
     filterOutEmptyCurrentGuild: t = !1
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()), [g, v, I] = (0, a.useStateFromStoresArray)([m.default], () => [m.default.getSounds(), m.default.getFavorites(), m.default.isFetching()]), _ = (0, E.useSortedGuildIdsForSoundboard)(e, !1), y = (0, a.useStateFromStoresArray)([o.default], () => {
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()), [g, v, I] = (0, a.useStateFromStoresArray)([p.default], () => [p.default.getSounds(), p.default.getFavorites(), p.default.isFetching()]), _ = (0, E.useSortedGuildIdsForSoundboard)(e, !1), N = (0, a.useStateFromStoresArray)([o.default], () => {
     let e = [];
     return _.forEach(t => {
       let n = o.default.getGuild(t);
       null != n && e.push(n)
     }), e
-  }), A = c.default.canUseSoundboardEverywhere(i), N = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(null == e ? void 0 : e.guild_id)), x = (0, a.useStateFromStores)([u.default], () => {
+  }), A = c.default.canUseSoundboardEverywhere(i), y = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(null == e ? void 0 : e.guild_id)), x = (0, a.useStateFromStores)([u.default], () => {
     let {
       canCreateExpressions: e
-    } = (0, s.getManageResourcePermissions)(N);
+    } = (0, s.getManageResourcePermissions)(y);
     return e
-  }, [N]), {
+  }, [y]), {
     canSeeRecentlyHeard: O,
     canSeeFrequentlyPlayed: R
   } = (0, f.useRecentlyHeardExperiment)({
@@ -100,9 +100,9 @@ function v(e) {
     l.useEffect(() => {
       r.FrecencyUserSettingsActionCreators.loadIfNecessary()
     }, []);
-    let e = (0, a.useStateFromStores)([p.default], () => p.default.frecentlyPlayedSounds);
+    let e = (0, a.useStateFromStores)([m.default], () => m.default.frecentlyPlayedSounds);
     return e
-  }(), L = (0, a.useStateFromStoresArray)([p.default], () => p.default.recentlyHeardSoundIds);
+  }(), L = (0, a.useStateFromStoresArray)([m.default], () => m.default.recentlyHeardSoundIds);
   return l.useMemo(() => {
     let e = [];
     return n ? (T(e, g), {
@@ -148,7 +148,7 @@ function v(e) {
         key: t.id,
         items: r
       })
-    }(e, N, x, g, t), !A && T(e, g), ! function(e, t, n, l) {
+    }(e, y, x, g, t), !A && T(e, g), ! function(e, t, n, l) {
       for (let a of t) {
         var i;
         if (a.id === n) continue;
@@ -163,11 +163,11 @@ function v(e) {
           items: s
         })
       }
-    }(e, y, null == N ? void 0 : N.id, g), A && T(e, g), {
+    }(e, N, null == y ? void 0 : y.id, g), A && T(e, g), {
       categories: e,
       isFetching: I
     })
-  }, [_, g, v, L, M, R, O, N, x, t, A, y, n, I])
+  }, [_, g, v, L, M, R, O, y, x, t, A, N, n, I])
 }
 
 function I(e, t, n) {

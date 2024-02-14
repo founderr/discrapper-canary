@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return c
   },
   default: function() {
-    return T
+    return C
   }
 }), n("424973");
 var i = n("917351"),
   l = n.n(i),
   a = n("446674"),
-  s = n("913144"),
+  o = n("913144"),
   r = n("798609"),
-  o = n("80507"),
+  s = n("80507"),
   u = n("374363"),
   d = n("397336");
 let c = 250,
   p = {
     pendingUsages: []
   },
-  f = new o.default({
+  f = new s.default({
     computeBonus: () => 100,
     computeWeight: e => e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 0,
     lookupKey: e => e,
@@ -34,7 +34,7 @@ function m(e) {
   }), f.track(e), f.compute()
 }
 
-function I() {
+function _() {
   var e, t;
   let n = u.default.frecencyWithoutFetchingLatest,
     i = null !== (t = null === (e = n.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
@@ -43,9 +43,9 @@ function I() {
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), p.pendingUsages)
 }
-class _ extends a.default.PersistedStore {
+class I extends a.default.PersistedStore {
   initialize(e) {
-    null != e && (p = e), this.syncWith([u.default], I)
+    null != e && (p = e), this.syncWith([u.default], _)
   }
   getState() {
     return p
@@ -64,8 +64,8 @@ class _ extends a.default.PersistedStore {
     return f.frequently
   }
 }
-_.displayName = "ApplicationFrecencyStore", _.persistKey = "ApplicationFrecency";
-var T = new _(s.default, {
+I.displayName = "ApplicationFrecencyStore", I.persistKey = "ApplicationFrecency";
+var C = new I(o.default, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t

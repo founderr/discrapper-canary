@@ -20,8 +20,8 @@ var l = n("627445"),
   d = n("970153"),
   c = n("939563"),
   f = n("385887");
-let p = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-  m = new Set(["emoji", "customEmoji", "textMention", "userMention", "roleMention", "channelMention", "staticRouteLink", "soundboard", "timestamp"]),
+let m = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
+  p = new Set(["emoji", "customEmoji", "textMention", "userMention", "roleMention", "channelMention", "staticRouteLink", "soundboard", "timestamp"]),
   h = new Set(["line", "blockQuote"]),
   E = new Set(["applicationCommandOption"]);
 
@@ -31,7 +31,7 @@ function g(e, t, n) {
     isVoid: i,
     onChange: a
   } = e;
-  e.isVoid = e => !!m.has(e.type) || i(e), e.isInline = e => !!m.has(e.type) || l(e);
+  e.isVoid = e => !!p.has(e.type) || i(e), e.isInline = e => !!p.has(e.type) || l(e);
   let s = null,
     r = !0;
   return e.onChange = () => {
@@ -66,27 +66,27 @@ function C(e, t, n, l) {
   T(e, t, s, o) && (t = f.ElementUtils.updateElement(e, t), o = f.ElementUtils.markdown(t[0], n)), !s && (v(e, t, l, o) && (t = f.ElementUtils.updateElement(e, t), o = f.ElementUtils.markdown(t[0], n)), function(e, t, n, l, a) {
     let [s, o] = t, u = !1;
     for (let d = s.children.length - 1; d >= 0; d--) {
-      let m;
+      let p;
       let h = s.children[d];
       if (!f.TextUtils.isText(h)) continue;
       let E = f.PathUtils.child(o, d),
         g = [];
-      for (p.lastIndex = 0; null != (m = p.exec(h.text));) {
-        if (0 !== m.index && null == h.text.charAt(m.index - 1).match(/(\t|\s)/)) {
-          p.lastIndex = m.index + 1;
+      for (m.lastIndex = 0; null != (p = m.exec(h.text));) {
+        if (0 !== p.index && null == h.text.charAt(p.index - 1).match(/(\t|\s)/)) {
+          m.lastIndex = p.index + 1;
           continue
         }
         let i = {
           path: E,
-          offset: m.index
+          offset: p.index
         };
         if (I(e, o, i, a)) continue;
-        let s = (0, r.resolvePlaintextInlineVoid)(m[0], n, l);
+        let s = (0, r.resolvePlaintextInlineVoid)(p[0], n, l);
         null != s && _(l, t[0], s) ? g.push({
-          index: m.index,
-          length: m[0].length,
+          index: p.index,
+          length: p[0].length,
           node: s
-        }) : p.lastIndex = m.index + 1
+        }) : m.lastIndex = p.index + 1
       }
       for (let t of g.reverse()) {
         let n = [h, f.PathUtils.child(o, d)];

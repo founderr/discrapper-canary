@@ -1,101 +1,101 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return w
+    return y
   }
-}), n("222007");
-var r = n("37983"),
-  a = n("884691"),
-  i = n("414456"),
-  o = n.n(i),
-  l = n("77078"),
-  s = n("812204"),
-  c = n("685665"),
-  u = n("873622"),
-  d = n("476765"),
-  f = n("599110"),
-  h = n("652914"),
-  m = n("254398"),
-  p = n("49111"),
-  g = n("782340"),
-  v = n("369522");
+}), a("222007");
+var n = a("37983"),
+  l = a("884691"),
+  o = a("414456"),
+  s = a.n(o),
+  i = a("77078"),
+  c = a("812204"),
+  r = a("685665"),
+  u = a("873622"),
+  d = a("476765"),
+  f = a("599110"),
+  p = a("652914"),
+  h = a("254398"),
+  A = a("49111"),
+  _ = a("782340"),
+  g = a("699111");
 
-function w(e) {
+function y(e) {
   let {
     transitionState: t,
-    onClose: i,
-    onComplete: w,
-    uploadType: y,
-    showUpsellHeader: b,
-    analyticsPage: E
-  } = e, [S, A] = a.useState(!1), R = (0, l.useModalContext)(), _ = (0, d.useUID)(), {
-    AnalyticsLocationProvider: O
-  } = (0, c.default)(s.default.GIF_PICKER);
-  async function x(e) {
+    onClose: o,
+    onComplete: y,
+    uploadType: m,
+    showUpsellHeader: E,
+    analyticsPage: w
+  } = e, [R, x] = l.useState(!1), I = (0, i.useModalContext)(), L = (0, d.useUID)(), {
+    AnalyticsLocationProvider: N
+  } = (0, r.default)(c.default.GIF_PICKER);
+  async function S(e) {
     let {
       gifSrc: t
     } = e;
-    if (null == t || S) return;
-    A(!0);
-    let a = (0, m.makeTenorProxyURL)(t),
-      o = await fetch(a),
-      s = await o.blob();
-    i(), (0, l.openModalLazy)(async () => {
+    if (null == t || R) return;
+    x(!0);
+    let l = (0, h.makeTenorProxyURL)(t),
+      s = await fetch(l),
+      c = await s.blob();
+    o(), (0, i.openModalLazy)(async () => {
       let {
         default: e
-      } = await n.el("57015").then(n.bind(n, "57015"));
-      return t => (0, r.jsx)(e, {
-        imgURI: a,
-        file: new File([s], "tenor.gif", {
+      } = await a.el("57015").then(a.bind(a, "57015"));
+      return t => (0, n.jsx)(e, {
+        imgURI: l,
+        file: new File([c], "tenor.gif", {
           type: "image/gif"
         }),
-        onCrop: w,
-        uploadType: y,
-        showUpsellHeader: b,
+        onCrop: y,
+        uploadType: m,
+        showUpsellHeader: E,
         ...t
       })
     }, {
-      contextKey: R
+      contextKey: I
     })
   }
-  return a.useEffect(() => {
-    f.default.track(p.AnalyticEvents.OPEN_MODAL, {
-      type: p.AnalyticsSections.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+  return l.useEffect(() => {
+    f.default.track(A.AnalyticEvents.OPEN_MODAL, {
+      type: A.AnalyticsSections.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
       location: {
-        page: E
+        page: w
       }
     })
-  }, [E]), (0, r.jsx)(O, {
-    children: (0, r.jsxs)(l.ModalRoot, {
-      className: v.gifPickerCroppingModal,
-      "aria-labelledby": _,
+  }, [w]), (0, n.jsx)(N, {
+    children: (0, n.jsxs)(i.ModalRoot, {
+      className: g.gifPickerCroppingModal,
+      "aria-labelledby": L,
       transitionState: t,
-      size: l.ModalSize.SMALL,
-      children: [b ? (0, r.jsx)(h.default, {
-        type: y,
-        analyticsPage: E,
-        analyticsSection: p.AnalyticsSections.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+      size: i.ModalSize.SMALL,
+      children: [E ? (0, n.jsx)(p.default, {
+        type: m,
+        analyticsPage: w,
+        analyticsSection: A.AnalyticsSections.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
         isGIF: !0
-      }) : null, (0, r.jsxs)(l.ModalHeader, {
-        className: v.modalHeader,
+      }) : null, (0, n.jsxs)(i.ModalHeader, {
+        className: g.modalHeader,
         separator: !1,
-        children: [(0, r.jsx)(l.FormTitle, {
-          className: v.titleCase,
-          tag: l.FormTitleTags.H1,
-          children: g.default.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF
-        }), (0, r.jsx)(l.ModalCloseButton, {
-          onClick: i,
-          className: v.modalCloseButton
+        children: [(0, n.jsx)(i.FormTitle, {
+          className: g.titleCase,
+          tag: i.FormTitleTags.H1,
+          children: _.default.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF
+        }), (0, n.jsx)(i.ModalCloseButton, {
+          onClick: o,
+          className: g.modalCloseButton
         })]
-      }), (0, r.jsxs)("div", {
-        children: [(0, r.jsx)(u.default, {
-          className: o(v.gifPicker, {
-            [v.loadingOverlay]: S
+      }), (0, n.jsxs)("div", {
+        children: [(0, n.jsx)(u.default, {
+          className: s(g.gifPicker, {
+            [g.loadingOverlay]: R
           }),
-          onSelectGIF: x,
+          onSelectGIF: S,
           hideFavorites: !0
-        }), S && (0, r.jsx)(l.Spinner, {
-          className: v.spinner
+        }), R && (0, n.jsx)(i.Spinner, {
+          className: g.spinner
         })]
       })]
     })

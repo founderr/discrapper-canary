@@ -19,20 +19,20 @@ var i = l("37983"),
   m = l("811305"),
   I = l("58608"),
   E = l("659500"),
-  p = l("449008"),
-  x = l("387111"),
+  x = l("449008"),
+  p = l("387111"),
   C = l("159885"),
   T = l("191225"),
   S = l("686569"),
-  g = l("607573"),
-  A = l("555584"),
+  A = l("607573"),
+  g = l("555584"),
   _ = l("817039"),
   N = l("687292"),
   j = l("141962"),
   D = l("905647"),
   M = l("49111"),
   y = l("782340"),
-  L = l("753587"),
+  L = l("962529"),
   V = l("728791");
 
 function R(e) {
@@ -50,7 +50,7 @@ function R(e) {
     staffReleasePhase: k,
     onActivityItemSelected: Y,
     labelType: P
-  } = (0, g.default)({
+  } = (0, A.default)({
     activityItem: t,
     channel: n,
     guildId: R,
@@ -66,7 +66,7 @@ function R(e) {
   }), Z = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), W = (0, r.useStateFromStoresArray)([T.default, f.default], () => T.default.getUsersHavePlayedByApp(t.application.id).filter(e => {
     var t;
     return (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) !== e
-  }).map(e => f.default.getUser(e)).filter(p.isNotNullish), [t.application.id]), z = null != W[0] ? (0, C.truncateText)(x.default.getName(null, null, W[0]), 25) : null, K = null;
+  }).map(e => f.default.getUser(e)).filter(x.isNotNullish), [t.application.id]), z = null != W[0] ? (0, C.truncateText)(p.default.getName(null, null, W[0]), 25) : null, K = null;
   null != z && W.length > 1 ? K = y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
     username1: z,
     extras: W.length - 1
@@ -90,7 +90,7 @@ function R(e) {
     ea = a.useCallback(() => {
       U ? E.ComponentDispatch.dispatch(M.ComponentActions.SHOW_ACTIVITY_DETAILS, {
         applicationId: t.application.id
-      }) : w === g.ActivityAction.START && Y()
+      }) : w === A.ActivityAction.START && Y()
     }, [w, t, U, Y]),
     en = D.ACTIVITIES_EXTRA_DETAILS[t.application.id],
     es = (null == en ? void 0 : en.playersSuggestionMin) != null && (null == en ? void 0 : en.playersSuggestionMax) != null ? "".concat(en.playersSuggestionMin, " - ").concat(en.playersSuggestionMax) : void 0;
@@ -135,7 +135,7 @@ function R(e) {
           autoPlay: !0,
           muted: !0
         })
-      }) : null, w !== g.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
+      }) : null, w !== A.ActivityAction.START ? (0, i.jsx)(g.ActivityActionOverlayButton, {
         action: w,
         onClick: Y
       }) : null, G && null != es ? (0, i.jsx)("div", {

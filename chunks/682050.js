@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getNodeClientOffset: function() {
-    return a
+    return o
   },
   getEventClientOffset: function() {
     return i
@@ -11,9 +11,9 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("219999"),
-  o = n("908834");
+  a = n("908834");
 
-function a(e) {
+function o(e) {
   var t = 1 === e.nodeType ? e : e.parentElement;
   if (!t) return null;
   var n = t.getBoundingClientRect(),
@@ -33,7 +33,7 @@ function i(e) {
 
 function s(e, t, n, i, s) {
   var c, l, u, d, p, f, h, m, v, g = "IMG" === (c = t).nodeName && ((0, r.isFirefox)() || !(null !== (l = document.documentElement) && void 0 !== l && l.contains(c))),
-    y = a(g ? e : t),
+    y = o(g ? e : t),
     b = {
       x: n.x - y.x,
       y: n.y - y.y
@@ -51,7 +51,7 @@ function s(e, t, n, i, s) {
     E = s.offsetX,
     T = s.offsetY;
   return {
-    x: 0 === E || E ? E : new o.MonotonicInterpolant([0, .5, 1], [b.x, b.x / x * k, b.x + k - x]).interpolate(w),
-    y: 0 === T || T ? T : (v = new o.MonotonicInterpolant([0, .5, 1], [b.y, b.y / S * P, b.y + P - S]).interpolate(D), (0, r.isSafari)() && g && (v += (window.devicePixelRatio - 1) * P), v)
+    x: 0 === E || E ? E : new a.MonotonicInterpolant([0, .5, 1], [b.x, b.x / x * k, b.x + k - x]).interpolate(w),
+    y: 0 === T || T ? T : (v = new a.MonotonicInterpolant([0, .5, 1], [b.y, b.y / S * P, b.y + P - S]).interpolate(D), (0, r.isSafari)() && g && (v += (window.devicePixelRatio - 1) * P), v)
   }
 }

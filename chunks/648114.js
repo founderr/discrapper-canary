@@ -43,7 +43,7 @@ var i, a, s = n("37983"),
   x = n("397336"),
   L = n("843455"),
   U = n("782340"),
-  j = n("809404");
+  j = n("845797");
 (a = i || (i = {})).EDITOR = "EDITOR", a.SETTINGS = "SETTINGS";
 let k = Object.freeze({
     EDITOR: x.UserSettingsDelay.SLOW_USER_ACTION,

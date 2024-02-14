@@ -4,7 +4,7 @@ s.r(e), s.d(e, {
     return G
   },
   match: function() {
-    return X
+    return $
   }
 }), s("222007"), s("424973"), s("70102"), s("808653");
 let r = Symbol.for("@ts-pattern/matcher"),
@@ -198,40 +198,40 @@ let w = d(v(function(t) {
   }),
   S = M(v(y)),
   k = (t, e) => v(s => m(s) && t <= s && e >= s),
-  E = t => v(e => m(e) && e < t),
-  A = t => v(e => m(e) && e > t),
+  A = t => v(e => m(e) && e < t),
+  E = t => v(e => m(e) && e > t),
   B = t => v(e => m(e) && e <= t),
   I = t => v(e => m(e) && e >= t),
   R = () => v(t => m(t) && Number.isInteger(t)),
-  j = () => v(t => m(t) && Number.isFinite(t)),
-  C = () => v(t => m(t) && t > 0),
-  O = () => v(t => m(t) && t < 0),
-  P = t => Object.assign(d(t), {
-    between: (e, s) => P(l(t, k(e, s))),
-    lt: e => P(l(t, E(e))),
-    gt: e => P(l(t, A(e))),
-    lte: e => P(l(t, B(e))),
-    gte: e => P(l(t, I(e))),
-    int: () => P(l(t, R())),
-    finite: () => P(l(t, j())),
-    positive: () => P(l(t, C())),
-    negative: () => P(l(t, O()))
+  P = () => v(t => m(t) && Number.isFinite(t)),
+  j = () => v(t => m(t) && t > 0),
+  C = () => v(t => m(t) && t < 0),
+  O = t => Object.assign(d(t), {
+    between: (e, s) => O(l(t, k(e, s))),
+    lt: e => O(l(t, A(e))),
+    gt: e => O(l(t, E(e))),
+    lte: e => O(l(t, B(e))),
+    gte: e => O(l(t, I(e))),
+    int: () => O(l(t, R())),
+    finite: () => O(l(t, P())),
+    positive: () => O(l(t, j())),
+    negative: () => O(l(t, C()))
   }),
-  T = P(v(m)),
+  T = O(v(m)),
   D = (t, e) => v(s => _(s) && t <= s && e >= s),
   z = t => v(e => _(e) && e < t),
-  L = t => v(e => _(e) && e > t),
-  N = t => v(e => _(e) && e <= t),
-  q = t => v(e => _(e) && e >= t),
-  U = () => v(t => _(t) && t > 0),
+  N = t => v(e => _(e) && e > t),
+  L = t => v(e => _(e) && e <= t),
+  U = t => v(e => _(e) && e >= t),
+  q = () => v(t => _(t) && t > 0),
   F = () => v(t => _(t) && t < 0),
   K = t => Object.assign(d(t), {
     between: (e, s) => K(l(t, D(e, s))),
     lt: e => K(l(t, z(e))),
-    gt: e => K(l(t, L(e))),
-    lte: e => K(l(t, N(e))),
-    gte: e => K(l(t, q(e))),
-    positive: () => K(l(t, U())),
+    gt: e => K(l(t, N(e))),
+    lte: e => K(l(t, L(e))),
+    gte: e => K(l(t, U(e))),
+    positive: () => K(l(t, q())),
     negative: () => K(l(t, F()))
   }),
   H = K(v(_)),
@@ -374,21 +374,21 @@ var G = {
   _: w,
   string: S,
   between: k,
-  lt: E,
-  gt: A,
+  lt: A,
+  gt: E,
   lte: B,
   gte: I,
   int: R,
-  finite: j,
-  positive: C,
-  negative: O,
+  finite: P,
+  positive: j,
+  negative: C,
   number: T,
   betweenBigInt: D,
   ltBigInt: z,
-  gtBigInt: L,
-  lteBigInt: N,
-  gteBigInt: q,
-  positiveBigInt: U,
+  gtBigInt: N,
+  lteBigInt: L,
+  gteBigInt: U,
+  positiveBigInt: q,
   negativeBigInt: F,
   bigint: H,
   boolean: W,
@@ -413,13 +413,13 @@ var G = {
     }(t)))
   }
 };
-let $ = {
+let X = {
   matched: !1,
   value: void 0
 };
 
-function X(t) {
-  return new Y(t, $)
+function $(t) {
+  return new Y(t, X)
 }
 class Y {
   with() {
@@ -437,7 +437,7 @@ class Y {
       d = c.some(t => f(t, this.input, a)) && (!t || t(this.input)) ? {
         matched: !0,
         value: i(o ? n in u ? u[n] : u : this.input, this.input)
-      } : $;
+      } : X;
     return new Y(this.input, d)
   }
   when(t, e) {
@@ -446,7 +446,7 @@ class Y {
     return new Y(this.input, s ? {
       matched: !0,
       value: e(this.input, this.input)
-    } : $)
+    } : X)
   }
   otherwise(t) {
     return this.state.matched ? this.state.value : t(this.input)

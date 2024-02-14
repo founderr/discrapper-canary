@@ -11,8 +11,8 @@ var i = n("77078"),
   s = n("252063"),
   r = n("777003"),
   o = n("782340"),
-  u = n("932741"),
-  d = n("814076");
+  u = n("356219"),
+  d = n("862939");
 
 function c(e) {
   let {
@@ -23,8 +23,8 @@ function c(e) {
     fetched: f
   } = (0, s.usePrivateChannelIntegrationState)({
     channelId: n
-  }), p = f && void 0 !== c.find(e => e.application.id === t);
-  return p ? (0, l.jsxs)(r.default, {
+  }), m = f && void 0 !== c.find(e => e.application.id === t);
+  return m ? (0, l.jsxs)(r.default, {
     children: [(0, l.jsx)(i.Heading, {
       variant: "eyebrow",
       className: d.title,

@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("884691"),
-  a = n("716241"),
-  s = n("42203"),
-  i = n("18494"),
+  i = n("716241"),
+  a = n("42203"),
+  s = n("18494"),
   r = n("599110"),
   o = n("558986"),
   u = n("958706"),
@@ -17,21 +17,21 @@ let c = e => {
     emojiId: t,
     currentGuildId: n,
     popoutData: c,
-    nonce: m,
-    demoMode: f
+    nonce: f,
+    demoMode: m
   } = e, {
-    current: h
+    current: p
   } = l.useRef({
     guild_id: n,
     emoji_id: t,
-    ...(0, a.collectChannelAnalyticsMetadata)(s.default.getChannel(i.default.getChannelId(n)))
+    ...(0, i.collectChannelAnalyticsMetadata)(a.default.getChannel(s.default.getChannelId(n)))
   });
   return l.useEffect(() => {
     var e;
-    (0, o.initiateEmojiInteraction)(u.EmojiInteractionPoint.TrackOpenPopoutUsed), !f && r.default.track(d.AnalyticEvents.OPEN_POPOUT, {
+    (0, o.initiateEmojiInteraction)(u.EmojiInteractionPoint.TrackOpenPopoutUsed), !m && r.default.track(d.AnalyticEvents.OPEN_POPOUT, {
       type: null !== (e = null == c ? void 0 : c.analyticsType) && void 0 !== e ? e : "Standard Emoji Popout",
-      nonce: m,
-      ...h
+      nonce: f,
+      ...p
     })
-  }, []), h
+  }, []), p
 }

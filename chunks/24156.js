@@ -8,24 +8,24 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var l = n("884691"),
-  a = n("65597"),
-  s = n("305961"),
-  i = n("299039"),
+  i = n("65597"),
+  a = n("305961"),
+  s = n("299039"),
   r = n("235004");
 
 function o(e, t) {
-  let n = i.default.keys(e);
+  let n = s.default.keys(e);
   return n.filter(e => null == t.get(e))
 }
 
 function u() {
-  let e = (0, a.default)([s.default], () => s.default.getGuilds()),
-    t = (0, a.default)([r.default], () => r.default.getSounds());
+  let e = (0, i.default)([a.default], () => a.default.getGuilds()),
+    t = (0, i.default)([r.default], () => r.default.getSounds());
   return (0, l.useMemo)(() => o(e, t), [e, t])
 }
 
 function d() {
-  let e = s.default.getGuilds(),
+  let e = a.default.getGuilds(),
     t = r.default.getSounds();
   return o(e, t)
 }

@@ -20,10 +20,10 @@ var l = n("436443"),
   d = n("939563"),
   c = n("385887"),
   f = n("566819");
-let p = new Set(["line"]),
-  m = l.default.listLanguages(),
+let m = new Set(["line"]),
+  p = l.default.listLanguages(),
   h = {};
-for (let e of m) {
+for (let e of p) {
   e = e.toLowerCase();
   let t = l.default.getLanguage(e);
   if (null == t) continue;
@@ -55,7 +55,7 @@ function S(e) {
               let s = function(e) {
                   let t;
                   let [n, l] = e;
-                  if (!p.has(n.type)) return [];
+                  if (!m.has(n.type)) return [];
                   let i = [],
                     a = /\\|```/g;
                   for (let e = 0; e < n.children.length; e++) {
@@ -83,7 +83,7 @@ function S(e) {
               }
               let d = n && null != r,
                 f = n && 0 === s.length,
-                m = l && 0 === s.length,
+                p = l && 0 === s.length,
                 E = d ? s.slice(1) : s,
                 S = E.length % 2 == 1,
                 C = S && (null == u || "" === u || null != u.match(g)),
@@ -92,7 +92,7 @@ function S(e) {
                 blockEntry: t,
                 wasInCodeBlock: n,
                 isInCodeBlock: f,
-                isStyledCodeBlockLine: m,
+                isStyledCodeBlockLine: p,
                 lang: S || d ? T : i,
                 hljsTypes: null,
                 closesCodeBlock: d,

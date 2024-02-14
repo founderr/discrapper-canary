@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SeasonalGiftIcon: function() {
-    return G
+    return B
   },
   default: function() {
-    return B
+    return G
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -17,8 +17,8 @@ var l = n("37983"),
   d = n("77078"),
   c = n("373807"),
   f = n("841098"),
-  p = n("812204"),
-  m = n("685665"),
+  m = n("812204"),
+  p = n("685665"),
   h = n("10641"),
   E = n("384997"),
   g = n("649844"),
@@ -28,15 +28,15 @@ var l = n("37983"),
   v = n("551305"),
   I = n("978679"),
   _ = n("953957"),
-  y = n("762974"),
+  N = n("762974"),
   A = n("718517"),
-  N = n("158998"),
+  y = n("158998"),
   x = n("49111"),
   O = n("994428"),
   R = n("646718"),
   M = n("782340"),
-  L = n("426068"),
-  P = n("537461");
+  L = n("240497"),
+  P = n("350583");
 let b = [{
     box: "#FFD89E",
     ribbon: "#FF7476"
@@ -84,10 +84,10 @@ let b = [{
   U = 1 / 300,
   D = A.default.Millis.DAYS_30,
   k = (0, a.animated)(_.default),
-  w = (0, a.animated)(y.default),
+  w = (0, a.animated)(N.default),
   F = (0, a.animated)(I.default);
 
-function G(e) {
+function B(e) {
   let {
     themeOverride: t,
     hovered: n,
@@ -107,7 +107,7 @@ function G(e) {
         a(e)
       }
     }, [e]), [t, l]
-  }(n), p = (0, a.useSpring)({
+  }(n), m = (0, a.useSpring)({
     reverse: !n,
     reset: !0,
     from: {
@@ -120,23 +120,23 @@ function G(e) {
       tension: 800,
       friction: 24
     }
-  }), m = s ? c : 0, h = (0, u.isThemeDark)(null != t ? t : o) ? r.dark[m] : r.light[m];
+  }), p = s ? c : 0, h = (0, u.isThemeDark)(null != t ? t : o) ? r.dark[p] : r.light[p];
   return !n && s ? (0, l.jsx)(F, {}) : s && d ? (0, l.jsx)(w, {
     isDark: (0, u.isThemeDark)(o),
-    style: p
+    style: m
   }) : (0, l.jsx)(k, {
     boxColor: h.box,
     ribbonColor: h.ribbon,
-    style: p
+    style: m
   })
 }
-var B = i.memo(function(e) {
+var G = i.memo(function(e) {
   let {
     disabled: t,
     channel: n
   } = e, {
     analyticsLocations: a
-  } = (0, m.default)(p.default.GIFT_BUTTON), [u, f] = i.useState(!1), I = (0, r.useStateFromStores)([C.default], () => !(null === C.default || void 0 === C.default ? void 0 : C.default.hasLayers())), _ = (0, r.useStateFromStores)([T.default], () => T.default.getCurrentUser()), y = null != _ ? s.default.age(_.id) : 0, A = !t && I && y >= D, {
+  } = (0, p.default)(m.default.GIFT_BUTTON), [u, f] = i.useState(!1), I = (0, r.useStateFromStores)([C.default], () => !(null === C.default || void 0 === C.default ? void 0 : C.default.hasLayers())), _ = (0, r.useStateFromStores)([T.default], () => T.default.getCurrentUser()), N = null != _ ? s.default.age(_.id) : 0, A = !t && I && N >= D, {
     enabled: b
   } = S.SeasonalGiftingMarketingExperiment.useExperiment({
     location: "ChannelPremiumGiftButton"
@@ -144,7 +144,7 @@ var B = i.memo(function(e) {
     autoTrackExposure: A
   }), j = [];
   b && A && j.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-  let [U, k] = (0, E.useSelectedDismissibleContent)(j), w = null != U, F = (0, N.useDirectMessageRecipient)(n), B = null != F;
+  let [U, k] = (0, E.useSelectedDismissibleContent)(j), w = null != U, F = (0, y.useDirectMessageRecipient)(n), G = null != F;
   if (t) return null;
   let H = () => {
       (0, g.default)({
@@ -173,7 +173,7 @@ var B = i.memo(function(e) {
         onComplete: () => f(!1),
         onDMCheckItOutClick: H,
         markAsDismissed: k,
-        isDM: B
+        isDM: G
       }), (0, l.jsx)(v.default, {
         innerClassName: P.button,
         "aria-label": M.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
@@ -185,7 +185,7 @@ var B = i.memo(function(e) {
         },
         children: (0, l.jsx)("div", {
           className: L.noPointerEvents,
-          children: (0, l.jsx)(G, {
+          children: (0, l.jsx)(B, {
             hovered: u,
             isContentDismissed: !w
           })
@@ -194,7 +194,7 @@ var B = i.memo(function(e) {
     });
   return w ? V : (0, l.jsx)(d.TooltipContainer, {
     className: L.container,
-    text: (0, c.getSeasonalGiftingBody)(B),
+    text: (0, c.getSeasonalGiftingBody)(G),
     children: V
   })
 })

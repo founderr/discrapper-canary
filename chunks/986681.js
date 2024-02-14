@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return o
+    return s
   }
-}), n("222007");
-var u = n("884691"),
-  r = n("446674"),
-  a = n("850068"),
-  i = n("357957");
+}), r("222007");
+var n = r("884691"),
+  a = r("446674"),
+  u = r("850068"),
+  i = r("357957");
 
-function o(e) {
+function s(e) {
   let {
     isGift: t,
-    activeSubscription: n
+    activeSubscription: r
   } = e, {
-    defaultPaymentSourceId: o,
+    defaultPaymentSourceId: s,
     paymentSources: l,
-    hasFetchedPaymentSources: s
-  } = (0, r.useStateFromStoresObject)([i.default], () => ({
+    hasFetchedPaymentSources: o
+  } = (0, a.useStateFromStoresObject)([i.default], () => ({
     defaultPaymentSourceId: i.default.defaultPaymentSourceId,
     paymentSources: i.default.paymentSources,
     hasFetchedPaymentSources: i.default.hasFetchedPaymentSources
-  })), c = (e, t, n) => e || (null == t ? void 0 : t.paymentSourceId) == null ? n : t.paymentSourceId, [d, f] = u.useState(() => c(t, n, o));
-  return u.useEffect(() => {
-    s ? f(c(t, n, o)) : (0, a.fetchPaymentSources)()
-  }, [s, t, n, o]), {
+  })), c = (e, t, r) => e || (null == t ? void 0 : t.paymentSourceId) == null ? r : t.paymentSourceId, [d, f] = n.useState(() => c(t, r, s));
+  return n.useEffect(() => {
+    o ? f(c(t, r, s)) : (0, u.fetchPaymentSources)()
+  }, [o, t, r, s]), {
     paymentSources: l,
     hasPaymentSources: Object.keys(l).length > 0,
     paymentSourceId: d,
     setPaymentSourceId: f,
-    hasFetchedPaymentSources: s
+    hasFetchedPaymentSources: o
   }
 }

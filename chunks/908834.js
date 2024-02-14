@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MonotonicInterpolant: function() {
-    return a
+    return o
   }
 }), n("70102"), n("424973");
 
@@ -12,7 +12,7 @@ function r(e, t) {
   }
 }
 
-function o(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,13 +20,13 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var a = function() {
+var o = function() {
   var e, t, n;
 
-  function a(e, t) {
+  function o(e, t) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, a), o(this, "xs", void 0), o(this, "ys", void 0), o(this, "c1s", void 0), o(this, "c2s", void 0), o(this, "c3s", void 0);
+    }(this, o), a(this, "xs", void 0), a(this, "ys", void 0), a(this, "c1s", void 0), a(this, "c2s", void 0), a(this, "c3s", void 0);
     for (var n, r, i, s = e.length, c = [], l = 0; l < s; l++) c.push(l);
     c.sort(function(t, n) {
       return e[t] < e[n] ? -1 : 1
@@ -53,13 +53,13 @@ var a = function() {
     }
     this.xs = e, this.ys = t, this.c1s = h, this.c2s = x, this.c3s = S
   }
-  return e = a, t = [{
+  return e = o, t = [{
     key: "interpolate",
     value: function(e) {
       var t, n = this.xs,
         r = this.ys,
-        o = this.c1s,
-        a = this.c2s,
+        a = this.c1s,
+        o = this.c2s,
         i = this.c3s,
         s = n.length - 1;
       if (e === n[s]) return r[s];
@@ -73,7 +73,7 @@ var a = function() {
       }
       var d = e - n[s = Math.max(0, l)],
         p = d * d;
-      return r[s] + o[s] * d + a[s] * p + i[s] * d * p
+      return r[s] + a[s] * d + o[s] * p + i[s] * d * p
     }
-  }], r(e.prototype, t), n && r(e, n), a
+  }], r(e.prototype, t), n && r(e, n), o
 }()

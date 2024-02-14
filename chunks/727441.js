@@ -25,7 +25,7 @@ var a = l("37983"),
   T = l("391820"),
   E = l("49111"),
   N = l("782340"),
-  v = l("861144");
+  v = l("842277");
 class M extends s.Component {
   fetchInstallSize() {
     let {

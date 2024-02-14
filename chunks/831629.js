@@ -22,7 +22,7 @@ var l = a("37983"),
   _ = a("99384"),
   x = a("49111"),
   v = a("782340"),
-  S = a("139238");
+  S = a("332100");
 let C = n.memo(function(e) {
     let {
       guild: t

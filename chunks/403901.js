@@ -1,89 +1,89 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return y
   }
 });
 var i = n("37983");
 n("884691");
 var r = n("414456"),
   l = n.n(r),
-  s = n("446674"),
+  u = n("446674"),
   a = n("77078"),
-  u = n("272030"),
+  s = n("272030"),
   o = n("145079"),
-  c = n("119184"),
-  d = n("506885"),
+  d = n("119184"),
+  c = n("506885"),
   f = n("981601"),
-  h = n("271938"),
-  v = n("824563"),
-  C = n("101125"),
-  p = n("697218"),
+  E = n("271938"),
+  _ = n("824563"),
+  S = n("101125"),
+  T = n("697218"),
   I = n("155207"),
-  E = n("398604"),
-  S = n("745049"),
-  m = n("782340"),
-  g = n("758024");
+  h = n("398604"),
+  v = n("745049"),
+  N = n("782340"),
+  C = n("519951");
 
-function _(e) {
+function p(e) {
   let {
     children: t
   } = e;
   return (0, i.jsxs)("div", {
-    className: g.emptyContainer,
-    children: [(0, i.jsx)(c.default, {
+    className: C.emptyContainer,
+    children: [(0, i.jsx)(d.default, {
       children: (0, i.jsx)("div", {
-        className: g.circle,
+        className: C.circle,
         children: (0, i.jsx)(I.default, {
           height: 40,
           width: 40,
-          className: g.icon
+          className: C.icon
         })
       })
     }), t]
   })
 }
 
-function N() {
-  return (0, i.jsx)(_, {
+function g() {
+  return (0, i.jsx)(p, {
     children: (0, i.jsx)(a.Heading, {
       color: "header-primary",
       variant: "heading-xl/semibold",
-      className: g.title,
-      children: m.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
+      className: C.title,
+      children: N.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
     })
   })
 }
 
-function x() {
-  return (0, i.jsx)(_, {
+function A() {
+  return (0, i.jsx)(p, {
     children: (0, i.jsx)(a.Heading, {
       color: "header-secondary",
       variant: "heading-md/semibold",
-      className: g.errorTitle,
-      children: m.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
+      className: C.errorTitle,
+      children: N.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
     })
   })
 }
 
-function T(e) {
+function m(e) {
   let {
     count: t
   } = e;
   return (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
-      className: g.listRow,
+      className: C.listRow,
       children: [(0, i.jsx)("div", {
-        className: l(g.listRowCircle, g.listAvatar),
+        className: l(C.listRowCircle, C.listAvatar),
         children: (0, i.jsx)(I.default, {
           height: 14,
           width: 14,
-          className: g.icon
+          className: C.icon
         })
       }), (0, i.jsx)(a.Text, {
         color: "text-normal",
         variant: "text-md/normal",
-        children: m.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
+        children: N.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
           userRemainCount: t
         })
       })]
@@ -91,86 +91,86 @@ function T(e) {
   })
 }
 
-function y(e) {
+function R(e) {
   var t;
   let {
     eventUser: n,
     onContextMenu: r
-  } = e, u = (0, s.useStateFromStores)([p.default], () => p.default.getUser(n.user_id)), c = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, I = (0, s.useStateFromStores)([C.default, v.default, h.default], () => n.user_id === h.default.getId() ? C.default.getStatus() : v.default.getStatus(n.user_id, c), [n.user_id, c]);
-  return null == u ? null : (0, i.jsx)(a.Popout, {
-    preload: () => (0, d.default)(u.id, u.getAvatarURL(c, 80), {
-      guildId: c
+  } = e, s = (0, u.useStateFromStores)([T.default], () => T.default.getUser(n.user_id)), d = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, I = (0, u.useStateFromStores)([S.default, _.default, E.default], () => n.user_id === E.default.getId() ? S.default.getStatus() : _.default.getStatus(n.user_id, d), [n.user_id, d]);
+  return null == s ? null : (0, i.jsx)(a.Popout, {
+    preload: () => (0, c.default)(s.id, s.getAvatarURL(d, 80), {
+      guildId: d
     }),
     renderPopout: e => (0, i.jsx)(f.default, {
       ...e,
       userId: n.user_id,
-      guildId: c
+      guildId: d
     }),
     position: "left",
     spacing: 16,
     children: (e, t) => {
-      var s, c;
+      var u, d;
       let {
-        isShown: d
+        isShown: c
       } = t;
       return (0, i.jsxs)(a.Clickable, {
-        className: l(g.listRow, g.interactiveRow, {
-          [g.selected]: d
+        className: l(C.listRow, C.interactiveRow, {
+          [C.selected]: c
         }),
-        onContextMenu: e => r(e, u),
+        onContextMenu: e => r(e, s),
         ...e,
         children: [(0, i.jsx)(a.Avatar, {
-          src: u.getAvatarURL(null === (s = n.member) || void 0 === s ? void 0 : s.guildId, 24),
-          "aria-label": u.username,
+          src: s.getAvatarURL(null === (u = n.member) || void 0 === u ? void 0 : u.guildId, 24),
+          "aria-label": s.username,
           size: a.AvatarSizes.SIZE_24,
-          className: g.listAvatar,
+          className: C.listAvatar,
           status: I
         }), (0, i.jsx)(o.default, {
-          user: u,
-          className: g.listName,
-          discriminatorClass: g.listDiscriminator,
-          nick: null === (c = n.member) || void 0 === c ? void 0 : c.nick
+          user: s,
+          className: C.listName,
+          discriminatorClass: C.listDiscriminator,
+          nick: null === (d = n.member) || void 0 === d ? void 0 : d.nick
         })]
       })
     }
   })
 }
 
-function A(e) {
+function L(e) {
   let {
     eventUsers: t,
     usersNotShownCount: n = 0,
     onContextMenu: r
   } = e;
   return (0, i.jsxs)(a.ScrollerThin, {
-    className: g.listScroller,
-    children: [t.map(e => (0, i.jsx)(y, {
+    className: C.listScroller,
+    children: [t.map(e => (0, i.jsx)(R, {
       eventUser: e,
       onContextMenu: r
-    }, e.user_id)), n > 0 && (0, i.jsx)(T, {
+    }, e.user_id)), n > 0 && (0, i.jsx)(m, {
       count: n
     })]
   })
 }
 
-function L(e) {
+function P(e) {
   let {
     children: t,
     style: n
   } = e;
   return (0, i.jsx)("div", {
-    className: g.container,
+    className: C.container,
     style: null != n ? n : {},
     children: t
   })
 }
 
-function R(e) {
+function D(e) {
   let {
     children: t,
     height: n
   } = e;
-  return (0, i.jsx)(L, {
+  return (0, i.jsx)(P, {
     style: {
       height: n
     },
@@ -178,35 +178,35 @@ function R(e) {
   })
 }
 
-function M(e) {
+function y(e) {
   let {
     guildEvent: t,
     recurrenceId: r,
     eventUsers: l,
     loading: o,
-    error: c,
-    containerHeight: d
-  } = e, f = (0, s.useStateFromStores)([E.default], () => E.default.getUserCount(t.id, r));
-  if (o && 0 === l.length) return (0, i.jsx)(R, {
-    height: d,
+    error: d,
+    containerHeight: c
+  } = e, f = (0, u.useStateFromStores)([h.default], () => h.default.getUserCount(t.id, r));
+  if (o && 0 === l.length) return (0, i.jsx)(D, {
+    height: c,
     children: (0, i.jsx)(a.Spinner, {
       type: a.Spinner.Type.SPINNING_CIRCLE,
-      className: g.spinner
+      className: C.spinner
     })
   });
-  if (null != c && 0 === l.length) return (0, i.jsx)(R, {
-    height: d,
-    children: (0, i.jsx)(x, {})
+  if (null != d && 0 === l.length) return (0, i.jsx)(D, {
+    height: c,
+    children: (0, i.jsx)(A, {})
   });
-  let h = 0;
-  return l.length >= S.MAX_RSVP_USER_DISPLAY_COUNT && f > S.MAX_RSVP_USER_DISPLAY_COUNT && (h = Math.max(f - l.length, 0)), 0 === l.length ? (0, i.jsx)(R, {
-    height: d,
-    children: (0, i.jsx)(N, {})
-  }) : (0, i.jsx)(L, {
-    children: (0, i.jsx)(A, {
+  let E = 0;
+  return l.length >= v.MAX_RSVP_USER_DISPLAY_COUNT && f > v.MAX_RSVP_USER_DISPLAY_COUNT && (E = Math.max(f - l.length, 0)), 0 === l.length ? (0, i.jsx)(D, {
+    height: c,
+    children: (0, i.jsx)(g, {})
+  }) : (0, i.jsx)(P, {
+    children: (0, i.jsx)(L, {
       eventUsers: l,
       onContextMenu: function(e, t) {
-        (0, u.openContextMenuLazy)(e, async () => {
+        (0, s.openContextMenuLazy)(e, async () => {
           let {
             default: e
           } = await n.el("406784").then(n.bind(n, "406784"));
@@ -216,7 +216,7 @@ function M(e) {
           })
         })
       },
-      usersNotShownCount: h
+      usersNotShownCount: E
     })
   })
 }

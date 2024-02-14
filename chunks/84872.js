@@ -15,12 +15,12 @@ var i = n("551042"),
   d = n("305961"),
   c = n("501536"),
   f = n("25292"),
-  p = n("200294"),
-  m = n("851745"),
+  m = n("200294"),
+  p = n("851745"),
   h = n("406291"),
   E = n("49111"),
   g = n("782340"),
-  S = n("106226");
+  S = n("522572");
 
 function C(e, t) {
   return (0, l.jsx)(u.default, {
@@ -83,7 +83,7 @@ let T = {
       onClick: f
     } = e;
     return (0, l.jsxs)(l.Fragment, {
-      children: [(0, p.renderAutocompleteGroup)({
+      children: [(0, m.renderAutocompleteGroup)({
         query: o,
         selectedIndex: r,
         autocompletes: t,
@@ -100,7 +100,7 @@ let T = {
         }),
         getQuery: e => "".concat(h.EMOJI_SENTINEL).concat(e),
         key: "emoji"
-      }), s.length > 0 ? (0, p.renderAutocompleteGroup)({
+      }), s.length > 0 ? (0, m.renderAutocompleteGroup)({
         query: o,
         selectedIndex: r,
         autocompletes: s,
@@ -132,7 +132,7 @@ let T = {
         indexOffset: t.length
       }) : null, (t.length > 0 || s.length > 0) && a.length > 0 && (0, l.jsx)(c.default.Divider, {
         className: S.emojiStickersDivider
-      }), (0, p.renderAutocompleteGroup)({
+      }), (0, m.renderAutocompleteGroup)({
         query: o,
         selectedIndex: r,
         autocompletes: a,
@@ -179,7 +179,7 @@ let T = {
         let n = e.animated ? "a" : "";
         return e.managed || null == e.id ? "".concat(h.EMOJI_SENTINEL).concat(e.name).concat(h.EMOJI_SENTINEL) : "<".concat(n, ":").concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ":").concat(e.id, ">")
       }(e)), {
-        type: m.AutocompleteSelectionTypes.EMOJI,
+        type: p.AutocompleteSelectionTypes.EMOJI,
         metadata: {
           emojiId: e.id,
           numEmojiResults: t.length,
@@ -196,7 +196,7 @@ let T = {
     if ((i -= n.length) < l.length) {
       let e = l[i];
       return a.insertText(""), a.sendSticker(e.sticker, o.StickerSelectLocation.AUTOCOMPLETE), {
-        type: m.AutocompleteSelectionTypes.STICKER,
+        type: p.AutocompleteSelectionTypes.STICKER,
         metadata: {
           numEmojiResults: t.length,
           numStickerResults: l.length,

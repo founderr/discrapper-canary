@@ -1,6 +1,6 @@
 var n = r("129673"),
   u = r("492692"),
-  o = r("276440"),
-  a = o && o.isSet,
-  i = a ? u(a) : n;
+  a = r("276440"),
+  o = a && a.isSet,
+  i = o ? u(o) : n;
 e.exports = i

@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   DisableGradient: function() {
-    return l
+    return a
   },
   default: function() {
     return f
   }
 });
-var a, l, s = n("37983");
+var l, a, s = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
   o = n("145131"),
   u = n("600123"),
-  d = n("434018");
+  d = n("890317");
 
 function c(e) {
   let {
     disableGradients: t = !1,
     renderHeader: n,
-    renderBottomLeft: a,
-    renderBottomCenter: l,
+    renderBottomLeft: l,
+    renderBottomCenter: a,
     renderBottomRight: i,
     renderCenter: r
   } = e;
@@ -40,12 +40,12 @@ function c(e) {
         shrink: 1,
         basis: "50%",
         align: o.default.Align.CENTER,
-        children: null == a ? void 0 : a()
+        children: null == l ? void 0 : l()
       }), (0, s.jsx)(o.default, {
         grow: 1,
         justify: o.default.Justify.CENTER,
         align: o.default.Align.CENTER,
-        children: null == l ? void 0 : l()
+        children: null == a ? void 0 : a()
       }), (0, s.jsx)(o.default, {
         grow: 0,
         shrink: 1,
@@ -62,8 +62,8 @@ function f(e) {
   let {
     screenMessage: t,
     onDoubleClick: n,
-    onActive: a,
-    onForceIdle: l,
+    onActive: l,
+    onForceIdle: a,
     idle: i,
     children: o,
     renderChatButton: f,
@@ -77,9 +77,9 @@ function f(e) {
       [d.idle]: i
     }),
     style: p,
-    onMouseMove: a,
-    onMouseDown: a,
-    onMouseLeave: l,
+    onMouseMove: l,
+    onMouseDown: l,
+    onMouseLeave: a,
     onDoubleClick: n,
     children: [o, null != t ? (0, s.jsx)(u.default, {
       size: "large",
@@ -91,4 +91,4 @@ function f(e) {
       showingClassName: d.chatButtonShowing
     }), null == h ? void 0 : h(), null == m ? void 0 : m()]
   })
-}(a = l || (l = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM"
+}(l = a || (a = {}))[l.TOP = 0] = "TOP", l[l.BOTTOM = 1] = "BOTTOM"

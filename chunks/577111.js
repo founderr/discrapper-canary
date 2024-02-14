@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("70102"), n("424973"), n("426094"), n("854508");
 var r = n("37983"),
-  o = n("884691"),
-  a = n("373589"),
+  a = n("884691"),
+  o = n("373589"),
   i = n("900255"),
   s = n("388588"),
   c = n("635246"),
@@ -71,7 +71,7 @@ function b(e) {
     w = e.getType,
     D = e.collect,
     C = e.options.arePropsEqual,
-    k = void 0 === C ? a.shallowEqual : C,
+    k = void 0 === C ? o.shallowEqual : C,
     P = t.displayName || t.name || "Component",
     E = function(e) {
       ! function(e, t) {
@@ -109,9 +109,9 @@ function b(e) {
         var t;
         return ! function(e, t) {
           if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-        }(this, R), y(v(t = M.call(this, e)), "decoratedRef", (0, o.createRef)()), y(v(t), "handlerId", void 0), y(v(t), "manager", void 0), y(v(t), "handlerMonitor", void 0), y(v(t), "handlerConnector", void 0), y(v(t), "handler", void 0), y(v(t), "disposable", void 0), y(v(t), "currentType", void 0), y(v(t), "handleChange", function() {
+        }(this, R), y(v(t = M.call(this, e)), "decoratedRef", (0, a.createRef)()), y(v(t), "handlerId", void 0), y(v(t), "manager", void 0), y(v(t), "handlerMonitor", void 0), y(v(t), "handlerConnector", void 0), y(v(t), "handler", void 0), y(v(t), "disposable", void 0), y(v(t), "currentType", void 0), y(v(t), "handleChange", function() {
           var e = t.getCurrentState();
-          !(0, a.shallowEqual)(e, t.state) && t.setState(e)
+          !(0, o.shallowEqual)(e, t.state) && t.setState(e)
         }), t.disposable = new c.SerialDisposable, t.receiveProps(e), t.dispose(), t
       }
       return C = R, E = [{
@@ -127,7 +127,7 @@ function b(e) {
       }, {
         key: "shouldComponentUpdate",
         value: function(e, t) {
-          return !k(e, this.props) || !(0, a.shallowEqual)(t, this.state)
+          return !k(e, this.props) || !(0, o.shallowEqual)(t, this.state)
         }
       }, {
         key: "componentDidMount",
@@ -158,23 +158,23 @@ function b(e) {
               var t, n, r = (n = 2, function(e) {
                   if (Array.isArray(e)) return e
                 }(t = x(e, this.handler, this.manager)) || function(e, t) {
-                  var n, r, o = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
-                  if (null != o) {
-                    var a = [],
+                  var n, r, a = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
+                  if (null != a) {
+                    var o = [],
                       i = !0,
                       s = !1;
                     try {
-                      for (o = o.call(e); !(i = (n = o.next()).done) && (a.push(n.value), !t || a.length !== t); i = !0);
+                      for (a = a.call(e); !(i = (n = a.next()).done) && (o.push(n.value), !t || o.length !== t); i = !0);
                     } catch (e) {
                       s = !0, r = e
                     } finally {
                       try {
-                        !i && null != o.return && o.return()
+                        !i && null != a.return && a.return()
                       } finally {
                         if (s) throw r
                       }
                     }
-                    return a
+                    return o
                   }
                 }(t, n) || function(e, t) {
                   if (e) {
@@ -186,13 +186,13 @@ function b(e) {
                 }(t, n) || function() {
                   throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()),
-                o = r[0],
-                a = r[1];
-              this.handlerId = o, this.handlerMonitor.receiveHandlerId(o), this.handlerConnector.receiveHandlerId(o);
+                a = r[0],
+                o = r[1];
+              this.handlerId = a, this.handlerMonitor.receiveHandlerId(a), this.handlerConnector.receiveHandlerId(a);
               var i = this.manager.getMonitor().subscribeToStateChange(this.handleChange, {
-                handlerIds: [o]
+                handlerIds: [a]
               });
-              this.disposable.setDisposable(new c.CompositeDisposable(new c.Disposable(i), new c.Disposable(a)))
+              this.disposable.setDisposable(new c.CompositeDisposable(new c.Disposable(i), new c.Disposable(o)))
             }
           }
         }
@@ -212,8 +212,8 @@ function b(e) {
           var e = this;
           return (0, r.jsx)(s.DndContext.Consumer, {
             children: function(n) {
-              var o = n.dragDropManager;
-              return e.receiveDragDropManager(o), "undefined" != typeof requestAnimationFrame && requestAnimationFrame(function() {
+              var a = n.dragDropManager;
+              return e.receiveDragDropManager(a), "undefined" != typeof requestAnimationFrame && requestAnimationFrame(function() {
                 var t;
                 return null === (t = e.handlerConnector) || void 0 === t ? void 0 : t.reconnect()
               }), (0, r.jsx)(t, Object.assign({}, e.props, e.getCurrentState(), {
@@ -228,6 +228,6 @@ function b(e) {
           if (void 0 === this.manager)(0, i.invariant)(void 0 !== e, "Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context", P, P), void 0 !== e && (this.manager = e, this.handlerMonitor = u(e), this.handlerConnector = b(e.getBackend()), this.handler = n(this.handlerMonitor, this.decoratedRef))
         }
       }], h(C.prototype, E), T && h(C, T), R
-    }(o.Component);
+    }(a.Component);
   return y(E, "DecoratedComponent", t), y(E, "displayName", "".concat(S, "(").concat(P, ")")), d(E, t)
 }

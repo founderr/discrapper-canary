@@ -19,8 +19,8 @@ var a = s("37983"),
   f = s("49111"),
   m = s("646718"),
   _ = s("782340"),
-  g = s("393842"),
-  h = s("926622");
+  g = s("307046"),
+  h = s("890957");
 let N = () => {
     r.default.dispatch({
       type: "APP_ICON_EDITOR_OPEN"

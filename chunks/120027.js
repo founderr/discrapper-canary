@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
 var l = n("37983");
 n("884691");
-var a = n("75196");
+var i = n("75196");
 
-function s(e) {
+function a(e) {
   let {
     width: t = 24,
     height: n = 24,
-    color: s = "currentColor",
-    ...i
+    color: a = "currentColor",
+    ...s
   } = e;
   return (0, l.jsx)("svg", {
-    ...(0, a.default)(i),
+    ...(0, i.default)(s),
     width: t,
     height: n,
     viewBox: "0 0 4 4",
@@ -24,7 +24,7 @@ function s(e) {
       cx: "2",
       cy: "2",
       r: "2",
-      fill: s
+      fill: a
     })
   })
 }

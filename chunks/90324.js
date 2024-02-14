@@ -19,7 +19,7 @@ var i = s("65597"),
   f = s("500307"),
   h = s("49111"),
   L = s("782340"),
-  S = s("391536");
+  S = s("255008");
 
 function x() {
   let e = o.GifAutoPlay.useSetting(),

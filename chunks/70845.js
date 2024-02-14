@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return i
   }
 }), n("65597"), n("845579"), n("957255");
 var l = n("49111");
 
-function a(e, t) {
+function i(e, t) {
   switch (e) {
     case l.SpoilerRenderSetting.ALWAYS:
       return !0;

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("70102"), n("222007"), n("424973");
 var r = n("900255"),
-  o = n("714413"),
-  a = n("820733"),
+  a = n("714413"),
+  o = n("820733"),
   i = n("101752"),
   s = n("910028"),
   c = n("891521");
@@ -39,37 +39,37 @@ function p(e, t) {
   var n = e.entries(),
     r = !1;
   do {
-    var o, a, i = n.next(),
+    var a, o, i = n.next(),
       s = i.done;
-    if ((o = i.value, a = 2, function(e) {
+    if ((a = i.value, o = 2, function(e) {
         if (Array.isArray(e)) return e
-      }(o) || function(e, t) {
+      }(a) || function(e, t) {
         if ("undefined" != typeof Symbol && Symbol.iterator in Object(e)) {
           var n = [],
             r = !0,
-            o = !1,
-            a = void 0;
+            a = !1,
+            o = void 0;
           try {
             for (var i, s = e[Symbol.iterator](); !(r = (i = s.next()).done) && (n.push(i.value), !t || n.length !== t); r = !0);
           } catch (e) {
-            o = !0, a = e
+            a = !0, o = e
           } finally {
             try {
               !r && null != s.return && s.return()
             } finally {
-              if (o) throw a
+              if (a) throw o
             }
           }
           return n
         }
-      }(o, a) || function(e, t) {
+      }(a, o) || function(e, t) {
         if (e) {
           if ("string" == typeof e) return u(e, t);
           var n = Object.prototype.toString.call(e).slice(8, -1);
           if ("Object" === n && e.constructor && (n = e.constructor.name), "Map" === n || "Set" === n) return Array.from(e);
           if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return u(e, t)
         }
-      }(o, a) || function() {
+      }(a, o) || function() {
         throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }())[1] === t) return !0;
     r = !!s
@@ -89,14 +89,14 @@ var f = function() {
     value: function(e, t) {
       (0, s.validateType)(e), (0, s.validateSourceContract)(t);
       var n = this.addHandler(i.HandlerRole.SOURCE, e, t);
-      return this.store.dispatch((0, o.addSource)(n)), n
+      return this.store.dispatch((0, a.addSource)(n)), n
     }
   }, {
     key: "addTarget",
     value: function(e, t) {
       (0, s.validateType)(e, !0), (0, s.validateTargetContract)(t);
       var n = this.addHandler(i.HandlerRole.TARGET, e, t);
-      return this.store.dispatch((0, o.addTarget)(n)), n
+      return this.store.dispatch((0, a.addTarget)(n)), n
     }
   }, {
     key: "containsHandler",
@@ -138,14 +138,14 @@ var f = function() {
     key: "removeSource",
     value: function(e) {
       var t = this;
-      (0, r.invariant)(this.getSource(e), "Expected an existing source."), this.store.dispatch((0, o.removeSource)(e)), (0, c.asap)(function() {
+      (0, r.invariant)(this.getSource(e), "Expected an existing source."), this.store.dispatch((0, a.removeSource)(e)), (0, c.asap)(function() {
         t.dragSources.delete(e), t.types.delete(e)
       })
     }
   }, {
     key: "removeTarget",
     value: function(e) {
-      (0, r.invariant)(this.getTarget(e), "Expected an existing target."), this.store.dispatch((0, o.removeTarget)(e)), this.dropTargets.delete(e), this.types.delete(e)
+      (0, r.invariant)(this.getTarget(e), "Expected an existing target."), this.store.dispatch((0, a.removeTarget)(e)), this.dropTargets.delete(e), this.types.delete(e)
     }
   }, {
     key: "pinSource",
@@ -162,7 +162,7 @@ var f = function() {
     key: "addHandler",
     value: function(e, t, n) {
       var r = function(e) {
-        var t = (0, a.getNextUniqueId)().toString();
+        var t = (0, o.getNextUniqueId)().toString();
         switch (e) {
           case i.HandlerRole.SOURCE:
             return "S".concat(t);

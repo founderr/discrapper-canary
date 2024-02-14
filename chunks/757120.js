@@ -33,7 +33,7 @@ var a = s("37983"),
   O = s("49111"),
   p = s("944305"),
   A = s("782340"),
-  M = s("311438");
+  M = s("705289");
 let D = r.default.connectStores([C.default, x.default], () => {
   let e = x.default.vanityURLCode,
     t = C.default.getGuildId();

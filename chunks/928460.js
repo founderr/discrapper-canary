@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
-var i, l = n("666038"),
+var l, i = n("666038"),
   a = n("560350"),
-  r = n("766274");
-i = class e extends l.default {
+  s = n("766274");
+l = class e extends i.default {
   static createFromServer(t) {
     let n = t.staff_notes;
     return new e({
@@ -26,7 +26,7 @@ i = class e extends l.default {
       assets: null != t.assets ? t.assets.map(a.transformStoreAssetFromServer) : null,
       staffNotes: null != n ? {
         content: n.content,
-        user: null != n.user ? new r.default(n.user) : null
+        user: null != n.user ? new s.default(n.user) : null
       } : null,
       guild: null != t.guild ? {
         id: t.guild.id,

@@ -14,22 +14,22 @@ var l = n("37983"),
   d = n("538282"),
   c = n("551305"),
   f = n("595086"),
-  p = n("88497"),
-  m = n("13030"),
+  m = n("88497"),
+  p = n("13030"),
   h = n("782340"),
-  E = n("537461"),
+  E = n("350583"),
   g = i.memo(i.forwardRef(function(e, t) {
     let n, {
         disabled: a,
-        type: p
+        type: m
       } = e,
       [g, S] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default),
       C = i.useContext(u.default),
       [T, v] = i.useState(!1),
-      I = g === m.ExpressionPickerViewType.STICKER,
+      I = g === p.ExpressionPickerViewType.STICKER,
       _ = i.useCallback(() => {
-        (0, d.toggleExpressionPicker)(m.ExpressionPickerViewType.STICKER, p)
-      }, [p]);
+        (0, d.toggleExpressionPicker)(p.ExpressionPickerViewType.STICKER, m)
+      }, [m]);
     i.useEffect(() => {
       let e = () => {
           requestAnimationFrame(() => {
@@ -45,13 +45,13 @@ var l = n("37983"),
         C.removeListener("sticker-suggestions-shown", e), C.removeListener("sticker-suggestions-hidden", t)
       }
     }, [C]);
-    let y = (0, o.useRedesignIconContext)().enabled;
+    let N = (0, o.useRedesignIconContext)().enabled;
     return a ? null : (n = (0, l.jsx)(f.default, {
-      className: y ? "" : E.stickerIcon,
+      className: N ? "" : E.stickerIcon,
       winking: T,
       color: "currentColor"
     }), (0, l.jsx)("div", {
-      className: s(m.CHAT_INPUT_BUTTON_CLASSNAME, E.buttonContainer),
+      className: s(p.CHAT_INPUT_BUTTON_CLASSNAME, E.buttonContainer),
       ref: t,
       children: (0, l.jsx)(c.default, {
         innerClassName: s(E.button, E.stickerButton, {

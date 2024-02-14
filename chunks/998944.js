@@ -18,7 +18,7 @@ var i, a, n = l("37983"),
   m = l("315102"),
   _ = l("159885"),
   f = l("782340"),
-  h = l("875612");
+  h = l("541304");
 (a = i || (i = {}))[a.SMALL = (0, _.cssValueToNumber)(o.default.GUILD_COUNT_SMALL_ICON_SIZE)] = "SMALL", a[a.LARGE = (0, _.cssValueToNumber)(o.default.GUILD_COUNT_LARGE_ICON_SIZE)] = "LARGE";
 let C = {
     [i.SMALL]: h.moreGuildsSmall,

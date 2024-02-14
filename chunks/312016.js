@@ -24,8 +24,8 @@ var E = n("337543"),
   S = n("139514"),
   T = n("49111");
 let f = /^\/([a-zA-Z0-9-]+)$/,
-  p = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-  N = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
+  N = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
+  p = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
   A = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
   R = /^\/application-directory\/([0-9-]+)\/?$/,
   C = /^\/activities\/([0-9-]+)\/?$/,
@@ -101,14 +101,14 @@ function V(e) {
       let e = (0, _.generateInviteKeyFromUrlParams)(i.substring(1), r.search);
       E.default.getInvite(e), I(S.CodedLinkType.INVITE, e)
     }(null == s ? void 0 : s.match(f)) != null && I(S.CodedLinkType.TEMPLATE, s.substring(1));
-    let T = null == c ? void 0 : c.match(N);
+    let T = null == c ? void 0 : c.match(p);
     if (null != T) {
       let e = T[1].toUpperCase();
       if (e === S.CodedLinkType.INVITE) {
         let e = (0, _.generateInviteKeyFromUrlParams)(T[2], r.search);
         I(S.CodedLinkType.INVITE, e)
       } else I(e, T[2])
-    }(null == c ? void 0 : c.match(p)) != null && I(S.CodedLinkType.CHANNEL_LINK, c.replace("/channels/", ""));
+    }(null == c ? void 0 : c.match(N)) != null && I(S.CodedLinkType.CHANNEL_LINK, c.replace("/channels/", ""));
     let P = function(e) {
       if (null == e) return null;
       let t = e.match(A);

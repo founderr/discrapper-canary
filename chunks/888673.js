@@ -4,86 +4,86 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var l, a = n("37983"),
-  s = n("884691"),
-  i = n("254490"),
+var l, i = n("37983"),
+  a = n("884691"),
+  s = n("254490"),
   r = n("952368"),
   o = n("170113"),
   u = n("49111"),
   d = n("782340");
-l = class extends s.Component {
+l = class extends a.Component {
   render() {
     let {
       src: e,
       fileSize: t,
       className: n,
       mediaPlayerClassName: l,
-      poster: s,
+      poster: a,
       fileName: c,
-      naturalWidth: m,
-      naturalHeight: f,
-      playable: h,
-      downloadable: p = !0,
-      volume: g,
-      autoPlay: E,
-      autoMute: C,
-      responsive: v,
-      mediaLayoutType: I,
-      mimeType: S,
-      renderOverlayContent: _,
-      renderLinkComponent: x,
+      naturalWidth: f,
+      naturalHeight: m,
+      playable: p,
+      downloadable: h = !0,
+      volume: E,
+      autoPlay: g,
+      autoMute: S,
+      responsive: C,
+      mediaLayoutType: T,
+      mimeType: v,
+      renderOverlayContent: I,
+      renderLinkComponent: _,
       onClick: N,
-      onPlay: T,
-      onEnded: M,
-      onVolumeChange: A,
+      onPlay: A,
+      onEnded: y,
+      onVolumeChange: x,
       onMute: O,
-      alt: j = d.default.Messages.VIDEO,
-      ...y
+      alt: R = d.default.Messages.VIDEO,
+      ...M
     } = this.props;
-    return (0, a.jsx)(r.default, {
-      alt: j,
+    return (0, i.jsx)(r.default, {
+      alt: R,
       className: n,
-      src: s,
-      ...y,
+      src: a,
+      ...M,
       minWidth: o.default.minWidth,
       minHeight: o.default.minHeight,
       shouldLink: !1,
       shouldAnimate: !1,
-      mediaLayoutType: I,
-      responsive: v,
+      mediaLayoutType: T,
+      responsive: C,
       children: n => {
         let {
-          src: s,
+          src: a,
           size: {
             width: r,
             height: d
           }
-        } = n, j = !(m <= u.MAX_VIDEO_WIDTH && f <= u.MAX_VIDEO_HEIGHT || m <= u.MAX_VIDEO_HEIGHT && f <= u.MAX_VIDEO_WIDTH);
-        return (0, a.jsx)(o.default, {
+        } = n, R = !(f <= u.MAX_VIDEO_WIDTH && m <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && m <= u.MAX_VIDEO_WIDTH);
+        return (0, i.jsx)(o.default, {
           className: l,
-          forceExternal: j,
+          forceExternal: R,
           src: e,
-          poster: s,
+          poster: a,
           width: r,
           height: d,
-          responsive: v,
-          volume: g,
-          autoPlay: null != E && E,
-          autoMute: null != C && C,
+          responsive: C,
+          volume: E,
+          autoPlay: null != g && g,
+          autoMute: null != S && S,
           type: o.default.Types.VIDEO,
-          mediaLayoutType: I,
+          mediaLayoutType: T,
           fileName: c,
-          fileSize: null == t ? void 0 : (0, i.sizeString)(t),
-          playable: h,
-          renderLinkComponent: x,
-          renderOverlayContent: _,
+          fileSize: null == t ? void 0 : (0, s.sizeString)(t),
+          playable: p,
+          renderLinkComponent: _,
+          renderOverlayContent: I,
           onClick: N,
-          onPlay: T,
-          onEnded: M,
-          onVolumeChange: A,
+          onPlay: A,
+          onEnded: y,
+          onVolumeChange: x,
           onMute: O,
-          mimeType: S,
-          downloadable: p
+          mimeType: v,
+          downloadable: h
         })
       }
     })

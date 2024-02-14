@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("77078"),
   c = n("54239"),
   f = n("812204"),
-  p = n("685665"),
-  m = n("599110"),
+  m = n("685665"),
+  p = n("599110"),
   h = n("888400"),
   E = n("701909"),
   g = n("179935"),
@@ -23,11 +23,11 @@ var l = n("37983"),
   C = n("646718"),
   T = n("49111"),
   v = n("782340"),
-  I = n("503330"),
+  I = n("486433"),
   _ = n("278410"),
-  y = n("410957"),
+  N = n("410957"),
   A = n("730708"),
-  N = n("754702");
+  y = n("754702");
 let x = async (e, t, n) => {
   n(!0), await (0, g.createReferralTrial)(e).then(() => {
     t(), (0, c.popAllLayers)()
@@ -54,7 +54,7 @@ let x = async (e, t, n) => {
         className: I.closeButton
       }), (0, l.jsx)("img", {
         alt: "",
-        src: o ? y : A,
+        src: o ? N : A,
         className: I.confirmationImage
       }), (0, l.jsx)(d.Heading, {
         variant: "heading-xl/bold",
@@ -77,7 +77,7 @@ let x = async (e, t, n) => {
         className: I.confirmationShareButton,
         submitting: u,
         onClick: () => {
-          x(a, t, c), m.default.track(T.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+          x(a, t, c), p.default.track(T.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
             location_stack: r,
             step: C.ReferralTrialsAnalyticSteps.FLOW_COMPLETED,
             other_user_id: Number(a)
@@ -107,7 +107,7 @@ function R(e) {
     isResending: r
   } = e, [u, c] = i.useState(!1), [g, A] = i.useState(!1), R = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
     analyticsLocations: M
-  } = (0, p.default)(f.default.REFERRAL_TRIALS_POPOUT), {
+  } = (0, m.default)(f.default.REFERRAL_TRIALS_POPOUT), {
     enabled: L
   } = S.default.useExperiment({
     location: "200c24_1"
@@ -126,7 +126,7 @@ function R(e) {
       className: I.generalBodyContainer,
       children: [(0, l.jsx)("img", {
         alt: "",
-        src: L ? y : N,
+        src: L ? N : y,
         className: I.generalBodyImage
       }), (0, l.jsxs)("div", {
         className: I.innerContent,
@@ -168,7 +168,7 @@ function R(e) {
         className: I.generalShareButton,
         submitting: g,
         onClick: () => {
-          r ? x(R, a, A) : (c(!0), m.default.track(T.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+          r ? x(R, a, A) : (c(!0), p.default.track(T.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
             location_stack: M,
             step: C.ReferralTrialsAnalyticSteps.FLOW_STARTED,
             other_user_id: Number(R)

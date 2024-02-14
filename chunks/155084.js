@@ -1,48 +1,48 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 }), n("222007"), n("424973");
-var s = n("615361"),
-  r = n("872717"),
-  l = n("773336"),
-  a = n("827032"),
-  i = n("49111");
-let o = new Set(["darwin", "linux", "win32", "ios", "android"]);
-var u = new class e {
+var l = n("615361"),
+  i = n("872717"),
+  a = n("773336"),
+  s = n("827032"),
+  r = n("49111");
+let u = new Set(["darwin", "linux", "win32", "ios", "android"]);
+var o = new class e {
   increment(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       {
         name: n,
-        tags: r
+        tags: i
       } = e,
-      i = {
+      r = {
         name: n,
-        tags: (0, a.getGlobalTagsArray)()
+        tags: (0, s.getGlobalTagsArray)()
       };
-    null != r && r.forEach(e => {
-      i.tags.push(e)
+    null != i && i.forEach(e => {
+      r.tags.push(e)
     });
-    let u = function() {
-      if ((0, l.isWeb)()) return "web";
+    let o = function() {
+      if ((0, a.isWeb)()) return "web";
       {
-        let e = (0, l.getPlatformName)();
-        return o.has(e) ? e : null
+        let e = (0, a.getPlatformName)();
+        return u.has(e) ? e : null
       }
     }();
-    null != u && i.tags.push("platform:".concat(u));
-    let c = function() {
+    null != o && r.tags.push("platform:".concat(o));
+    let d = function() {
       let e = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
-      return s.ReleaseChannelsSets.ALL.has(e) ? e : null
+      return l.ReleaseChannelsSets.ALL.has(e) ? e : null
     }();
-    null != c && i.tags.push("release_channel:".concat(c)), this._metrics.push(i), (t || this._metrics.length >= 100) && this._flush()
+    null != d && r.tags.push("release_channel:".concat(d)), this._metrics.push(r), (t || this._metrics.length >= 100) && this._flush()
   }
   _flush() {
     if (this._metrics.length > 0) {
       let e = [...this._metrics];
-      r.default.post({
-        url: i.Endpoints.METRICS,
+      i.default.post({
+        url: r.Endpoints.METRICS,
         body: {
           metrics: e
         },

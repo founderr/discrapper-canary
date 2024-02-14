@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
+var a = n("77078"),
   s = n("629109"),
   i = n("135230"),
   r = n("723872"),
@@ -14,18 +14,18 @@ var l = n("77078"),
 
 function u(e, t) {
   if (t && (0, r.isRTCConnectedInHub)()) {
-    (0, l.openModalLazy)(async () => {
+    (0, a.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("109253").then(n.bind(n, "109253"));
-      return t => (0, a.jsx)(e, {
+      return t => (0, l.jsx)(e, {
         ...t
       })
     });
     return
   }
   if (t) {
-    (0, l.openModal)(e => (0, a.jsx)(i.default, {
+    (0, a.openModal)(e => (0, l.jsx)(i.default, {
       ...e,
       title: o.default.Messages.SUPPRESSED,
       body: o.default.Messages.SUPPRESSED_PERMISSION_BODY
@@ -33,7 +33,7 @@ function u(e, t) {
     return
   }
   if (e) {
-    (0, l.openModal)(e => (0, a.jsx)(i.default, {
+    (0, a.openModal)(e => (0, l.jsx)(i.default, {
       ...e,
       title: o.default.Messages.SERVER_MUTED_DIALOG_TITLE,
       body: o.default.Messages.SERVER_MUTED_DIALOG_BODY

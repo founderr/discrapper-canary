@@ -26,13 +26,13 @@ let i = !1;
         exactMatch: u,
         suppressThrow: c
       }),
-      p = o ? f : l.ReactEditor.toSlatePoint(e, [s, r], {
+      m = o ? f : l.ReactEditor.toSlatePoint(e, [s, r], {
         exactMatch: u,
         suppressThrow: c
       });
-    return null != f && null != p ? {
+    return null != f && null != m ? {
       anchor: f,
-      focus: p
+      focus: m
     } : null
   };
   let e = l.ReactEditor.toSlatePoint;

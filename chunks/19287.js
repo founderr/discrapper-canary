@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return d
   }
 }), n("222007");
-var r = n("884691"),
-  i = n("446674"),
+var i = n("884691"),
+  r = n("446674"),
   l = n("206230"),
   a = n("771325"),
   s = n("26989"),
@@ -18,20 +18,20 @@ function d(e) {
     guildId: n,
     size: d,
     showPending: c = !1,
-    animateOnHover: m = !1,
-    avatarOverride: f
-  } = e, [_, E] = r.useState(!1), T = (0, i.useStateFromStores)([l.default], () => l.default.useReducedMotion), I = (0, i.useStateFromStores)([o.default], () => o.default.isFocused()), p = I && (_ || !T && !m), {
-    pendingAvatar: P
-  } = (0, u.default)({}), S = (0, i.useStateFromStores)([s.default], () => null != n && null != t ? s.default.getMember(n, t.id) : null), R = r.useMemo(() => null != t ? (0, a.getPreviewAvatar)(c ? null != f ? f : P : void 0, S, t, {
-    canAnimate: p,
+    animateOnHover: f = !1,
+    avatarOverride: m
+  } = e, [_, E] = i.useState(!1), T = (0, r.useStateFromStores)([l.default], () => l.default.useReducedMotion), I = (0, r.useStateFromStores)([o.default], () => o.default.isFocused()), C = I && (_ || !T && !f), {
+    pendingAvatar: p
+  } = (0, u.default)({}), P = (0, r.useStateFromStores)([s.default], () => null != n && null != t ? s.default.getMember(n, t.id) : null), S = i.useMemo(() => null != t ? (0, a.getPreviewAvatar)(c ? null != m ? m : p : void 0, P, t, {
+    canAnimate: C,
     size: d
-  }) : void 0, [c, P, S, t, p, d, f]), O = r.useCallback(() => E(!0), []), C = r.useCallback(() => E(!1), []);
+  }) : void 0, [c, p, P, t, C, d, m]), R = i.useCallback(() => E(!0), []), O = i.useCallback(() => E(!1), []);
   return {
-    avatarSrc: R,
-    isAvatarAnimating: p,
+    avatarSrc: S,
+    isAvatarAnimating: C,
     eventHandlers: {
-      onMouseEnter: O,
-      onMouseLeave: C
+      onMouseEnter: R,
+      onMouseLeave: O
     }
   }
 }

@@ -11,7 +11,7 @@ var l = n("37983"),
   r = n("77078"),
   o = n("82636"),
   u = n("782340"),
-  d = n("491422");
+  d = n("497855");
 
 function c(e) {
   let {
@@ -20,8 +20,8 @@ function c(e) {
     onClick: a,
     "aria-expanded": c,
     "aria-controls": f,
-    focusProps: p
-  } = e, [m, h] = i.useState(!1);
+    focusProps: m
+  } = e, [p, h] = i.useState(!1);
 
   function E() {
     h(!0)
@@ -44,9 +44,9 @@ function c(e) {
     "aria-label": u.default.Messages.SELECT_ACTIVITY,
     "aria-expanded": c,
     "aria-controls": f,
-    focusProps: p,
+    focusProps: m,
     children: (0, l.jsx)(o.default, {
-      className: s(d.rocket, m ? d.rocketHovered : d.rocketUnhovered)
+      className: s(d.rocket, p ? d.rocketHovered : d.rocketUnhovered)
     })
   })
 }

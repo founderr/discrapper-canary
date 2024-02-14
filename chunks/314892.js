@@ -12,8 +12,8 @@ var a = s("37983"),
   o = s("468759"),
   d = s("49111"),
   u = s("782340"),
-  c = s("363188"),
-  S = s("926622");
+  c = s("299867"),
+  S = s("890957");
 let E = 0,
   T = () => "notification-position-selector-".concat(E++),
   f = e => {

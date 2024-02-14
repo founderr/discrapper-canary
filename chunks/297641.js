@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("240849"),
-  o = n("447259"),
-  a = n("388032");
+  a = n("447259"),
+  o = n("388032");
 
 function i(e, t) {
   let {
@@ -24,10 +24,10 @@ function i(e, t) {
   });
   let {
     focusableProps: f
-  } = (0, o.useFocusable)(e, t), {
+  } = (0, a.useFocusable)(e, t), {
     pressProps: h,
     isPressed: m
-  } = (0, a.usePress)({
+  } = (0, o.usePress)({
     onPress: i,
     onPressStart: s,
     onPressEnd: c,

@@ -13,7 +13,7 @@ var T, l, a = s("37983"),
   r = s("903303"),
   _ = s("96928"),
   i = s("782340"),
-  S = s("846699");
+  S = s("650766");
 (l = T || (T = {})).ACTIONS = "ACTIONS", l.ABOUT_SAFETY_ALERTS = "ABOUT_SAFETY_ALERTS";
 var u = e => {
   let {

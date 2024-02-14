@@ -63,33 +63,33 @@ r.inherits(m, v), t.exports = m, m.blockSize = 1024, m.outSize = 512, m.hmacStre
     M = this.h[12],
     S = this.h[13],
     k = this.h[14],
-    E = this.h[15];
+    A = this.h[15];
   n(this.k.length === s.length);
-  for (var A = 0; A < s.length; A += 2) {
+  for (var E = 0; E < s.length; E += 2) {
     var B = k,
-      I = E,
+      I = A,
       R = function(t, e) {
         var s = c(t, e, 14) ^ c(t, e, 18) ^ c(e, t, 9);
         return s < 0 && (s += 4294967296), s
       }(m, y),
-      j = function(t, e) {
+      P = function(t, e) {
         var s = o(t, e, 14) ^ o(t, e, 18) ^ o(e, t, 9);
         return s < 0 && (s += 4294967296), s
       }(m, y),
-      C = function(t, e, s, r, i) {
+      j = function(t, e, s, r, i) {
         var n = t & s ^ ~t & i;
         return n < 0 && (n += 4294967296), n
       }(m, y, _, w, M, S),
-      O = function(t, e, s, r, i, n) {
+      C = function(t, e, s, r, i, n) {
         var c = e & r ^ ~e & n;
         return c < 0 && (c += 4294967296), c
       }(m, y, _, w, M, S),
-      P = this.k[A],
-      T = this.k[A + 1],
-      D = s[A],
-      z = s[A + 1],
-      L = l(B, I, R, j, C, O, P, T, D, z),
-      N = g(B, I, R, j, C, O, P, T, D, z);
+      O = this.k[E],
+      T = this.k[E + 1],
+      D = s[E],
+      z = s[E + 1],
+      N = l(B, I, R, P, j, C, O, T, D, z),
+      L = g(B, I, R, P, j, C, O, T, D, z);
     B = function(t, e) {
       var s = c(t, e, 28) ^ c(e, t, 2) ^ c(e, t, 7);
       return s < 0 && (s += 4294967296), s
@@ -100,14 +100,14 @@ r.inherits(m, v), t.exports = m, m.blockSize = 1024, m.outSize = 512, m.hmacStre
       var n = t & s ^ t & i ^ s & i;
       return n < 0 && (n += 4294967296), n
     }(r, i, f, u, b, h);
-    var q = d(B, I, R, j = function(t, e, s, r, i, n) {
+    var U = d(B, I, R, P = function(t, e, s, r, i, n) {
         var c = e & r ^ e & n ^ r & n;
         return c < 0 && (c += 4294967296), c
       }(r, i, f, u, b, h)),
-      U = p(B, I, R, j);
-    k = M, E = S, M = _, S = w, _ = m, w = y, m = d(v, x, L, N), y = p(x, x, L, N), v = b, x = h, b = f, h = u, f = r, u = i, r = d(L, N, q, U), i = p(L, N, q, U)
+      q = p(B, I, R, P);
+    k = M, A = S, M = _, S = w, _ = m, w = y, m = d(v, x, N, L), y = p(x, x, N, L), v = b, x = h, b = f, h = u, f = r, u = i, r = d(N, L, U, q), i = p(N, L, U, q)
   }
-  a(this.h, 0, r, i), a(this.h, 2, f, u), a(this.h, 4, b, h), a(this.h, 6, v, x), a(this.h, 8, m, y), a(this.h, 10, _, w), a(this.h, 12, M, S), a(this.h, 14, k, E)
+  a(this.h, 0, r, i), a(this.h, 2, f, u), a(this.h, 4, b, h), a(this.h, 6, v, x), a(this.h, 8, m, y), a(this.h, 10, _, w), a(this.h, 12, M, S), a(this.h, 14, k, A)
 }, m.prototype._digest = function(t) {
   return "hex" === t ? r.toHex32(this.h, "big") : r.split32(this.h, "big")
 }

@@ -14,7 +14,7 @@ var s = n("759843"),
   u = n("669499"),
   d = n("49111"),
   c = n("782340"),
-  f = n("762874");
+  f = n("950258");
 
 function E() {
   (0, u.closeAgeGateModal)(), (0, i.transitionTo)(d.Routes.LOGIN)

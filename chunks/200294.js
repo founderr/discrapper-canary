@@ -41,8 +41,8 @@ function r(e) {
     titleWithoutQuery: d,
     Component: c,
     getProps: f,
-    getQuery: p,
-    key: m,
+    getQuery: m,
+    key: p,
     indexOffset: h = 0,
     headerClassName: E,
     headerTrailingContent: g,
@@ -66,9 +66,9 @@ function r(e) {
       titleWithQuery: u,
       titleWithoutQuery: d,
       query: t,
-      getQuery: p,
+      getQuery: m,
       headerClassName: E,
       headerTrailingContent: g
     }) : null, C, S]
-  }, m)
+  }, p)
 }

@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("70102");
 var r = n("900255"),
-  o = n("959708");
+  a = n("959708");
 
-function a(e, t) {
+function o(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
@@ -49,14 +49,14 @@ var s = ["canDrop", "hover", "drop"],
     }, {
       key: "hover",
       value: function() {
-        this.spec.hover && this.props && this.spec.hover(this.props, this.monitor, (0, o.getDecoratedComponent)(this.ref))
+        this.spec.hover && this.props && this.spec.hover(this.props, this.monitor, (0, a.getDecoratedComponent)(this.ref))
       }
     }, {
       key: "drop",
       value: function() {
         if (this.spec.drop) return this.spec.drop(this.props, this.monitor, this.ref.current)
       }
-    }], a(e.prototype, t), n && a(e, n), r
+    }], o(e.prototype, t), n && o(e, n), r
   }();
 
 function l(e) {

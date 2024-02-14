@@ -29,8 +29,8 @@ var a = l("37983"),
   L = l("561909"),
   H = l("49111"),
   N = l("782340"),
-  I = l("579550"),
-  R = l("946032");
+  I = l("655295"),
+  R = l("639826");
 let v = [p.JoinSourceType.DISCOVERY, p.JoinSourceType.VANITY_URL, p.JoinSourceType.BOT, p.JoinSourceType.HUB];
 
 function j(e) {

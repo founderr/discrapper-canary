@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("383018"),
   c = n("619935"),
   f = n("540692"),
-  p = n("53253"),
-  m = n("795696"),
+  m = n("53253"),
+  p = n("795696"),
   h = n("1607"),
   E = n("328511"),
   g = n("585722"),
@@ -25,13 +25,13 @@ var l = n("37983"),
   v = n("35385"),
   I = n("695369"),
   _ = n("198"),
-  y = n("315814"),
+  N = n("315814"),
   A = n("108486"),
-  N = n("923582"),
+  y = n("923582"),
   x = n("80921"),
   O = n("954016"),
   R = n("646718"),
-  M = n("537461");
+  M = n("350583");
 
 function L(e) {
   let {
@@ -39,13 +39,13 @@ function L(e) {
     channel: n
   } = e, {
     enabled: a
-  } = p.default.useExperiment({
+  } = m.default.useExperiment({
     location: "dc120b_1"
   }, {
     autoTrackExposure: !1
-  }), s = (0, p.useIsSeasonalGiftingActive)();
+  }), s = (0, m.useIsSeasonalGiftingActive)();
   i.useEffect(() => {
-    s && p.default.trackExposure({
+    s && m.default.trackExposure({
       location: "dc120b_2"
     })
   }, [s]);
@@ -59,14 +59,14 @@ function L(e) {
   })
 }
 var P = i.memo(function(e) {
-  var t, n, i, p, _, A, P, b, j;
+  var t, n, i, m, _, A, P, b, j;
   let {
     type: U,
     disabled: D,
     channel: k,
     handleSubmit: w,
     isEmpty: F
-  } = e, G = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), B = (0, s.useStateFromStores)([E.default], () => E.default.getStickerPreview(k.id, U.drafts.type)), H = null != B && B.length > 0, V = (0, s.useStateFromStores)([g.default], () => g.default.getUploads(k.id, U.drafts.type)), {
+  } = e, B = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), G = (0, s.useStateFromStores)([E.default], () => E.default.getStickerPreview(k.id, U.drafts.type)), H = null != G && G.length > 0, V = (0, s.useStateFromStores)([g.default], () => g.default.getUploads(k.id, U.drafts.type)), {
     activeCommand: K,
     activeCommandOption: W
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
@@ -79,13 +79,13 @@ var P = i.memo(function(e) {
   }, {
     autoTrackExposure: !1
   }), z = [], {
-    enabled: J
+    enabled: Z
   } = h.default.getCurrentConfig({
     location: "dc120b_4"
   }, {
     autoTrackExposure: !1
-  }), q = S.default.getCurrentUser(), Z = null !== (p = (0, s.useStateFromStores)([f.default], () => J && C.default.isPremiumExactly(q, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== p ? p : 0, X = (0, s.useStateFromStores)([f.default], () => {
-    if (!k.isDM() || void 0 === k.recipients || k.recipients.length > 1 || !J) return !1;
+  }), J = S.default.getCurrentUser(), q = null !== (m = (0, s.useStateFromStores)([f.default], () => Z && C.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) ? f.default.getReferralsRemaining() : 0)) && void 0 !== m ? m : 0, X = (0, s.useStateFromStores)([f.default], () => {
+    if (!k.isDM() || void 0 === k.recipients || k.recipients.length > 1 || !Z) return !1;
     let e = k.recipients[0],
       t = f.default.getSentUserIds();
     return t.includes(e)
@@ -97,16 +97,16 @@ var P = i.memo(function(e) {
     if (null == n) return e;
     let l = n.bot;
     if (l) return e;
-    let i = X || Z > 0,
+    let i = X || q > 0,
       a = f.default.getRecipientEligibility(t);
-    return [J && i && a, a]
+    return [Z && i && a, a]
   }), ee = (0, u.useActivitiesInTextButtonVisibility)(k.id, "ChannelTextAreaButtons");
   if (!a.isMobile) {
-    if (k.isDM() && (null === (_ = U.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (C.default.isPremiumExactly(q, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
+    if (k.isDM() && (null === (_ = U.gifts) || void 0 === _ ? void 0 : _.button) != null && null == K && (C.default.isPremiumExactly(J, R.PremiumTypes.TIER_2) && $ && h.default.trackExposure({
         location: "dc120b_5"
-      }), Q && z.push((0, l.jsx)(y.default, {
+      }), Q && z.push((0, l.jsx)(N.default, {
         disabled: D,
-        referralsRemaining: Z,
+        referralsRemaining: q,
         channel: k,
         isResending: X
       }, "referral"))), (null == ee ? void 0 : ee.showChatInputButton) && O.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(k.type) && null == K && (null === (A = U.commands) || void 0 === A ? void 0 : A.enabled) && z.push((0, l.jsx)(T.default, {
@@ -116,7 +116,7 @@ var P = i.memo(function(e) {
       }, "activity")), (null === (P = U.gifts) || void 0 === P ? void 0 : P.button) != null && null == K && !Y) {
       let {
         hideChannelGiftButton: e
-      } = m.default.getCurrentConfig({
+      } = p.default.getCurrentConfig({
         location: "ChannelTextAreaButtons"
       }, {
         autoTrackExposure: k.isDM()
@@ -136,7 +136,7 @@ var P = i.memo(function(e) {
   return ((null === (t = U.emojis) || void 0 === t ? void 0 : t.button) != null && (null == K || null != W && W.type !== r.ApplicationCommandOptionType.ATTACHMENT) && z.push((0, l.jsx)(v.default, {
     disabled: D,
     type: U
-  }, "emoji")), (null === (n = U.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (i = U.submit) || void 0 === i ? void 0 : i.ignorePreference) || G) && z.push((0, l.jsx)(N.default, {
+  }, "emoji")), (null === (n = U.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (i = U.submit) || void 0 === i ? void 0 : i.ignorePreference) || B) && z.push((0, l.jsx)(y.default, {
     onClick: w,
     disabled: D || 0 === V.length && F && !H
   }, "submit")), 0 === z.length) ? null : (0, l.jsx)("div", {

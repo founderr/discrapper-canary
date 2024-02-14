@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   ExperimentColonistMiniShelfBanner: function() {
-    return l
+    return a
   }
 });
-var a = n("862205");
-let l = (0, a.createExperiment)({
+var l = n("862205");
+let a = (0, l.createExperiment)({
   kind: "user",
   id: "2023-11_colonist_minishelf_banner",
   label: "Actvity Colonist Mini-Shelf Banner",

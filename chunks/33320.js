@@ -13,7 +13,7 @@ var n, o, a = s("37983"),
   l = s("271201"),
   u = s("330460"),
   d = s("763332"),
-  c = s("215909");
+  c = s("417365");
 (o = n || (n = {}))[o.INTRO = 0] = "INTRO", o[o.SAFETY_TIPS = 1] = "SAFETY_TIPS", o[o.TAKE_ACTION = 2] = "TAKE_ACTION";
 var N = e => {
   let {

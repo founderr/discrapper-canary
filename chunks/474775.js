@@ -12,13 +12,13 @@ var n = s("597755"),
   r = s("49671"),
   o = s("618927"),
   d = s("782340"),
-  u = s("172588");
+  u = s("425375");
 
 function c() {
   var e, t, s, n, c;
   let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    E = "266116",
-    T = (e = "843ffa783d0598193e0522ce19ce0309357db31b", e.substring(0, 7)),
+    E = "266210",
+    T = (e = "81788c6533f295bb4c2701c152d461787821beb9", e.substring(0, 7)),
     f = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
     m = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
     _ = null === r.default || void 0 === r.default ? void 0 : null === (n = (c = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(c),

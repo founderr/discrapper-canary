@@ -1,32 +1,32 @@
 "use strict";
 n.r(t), n.d(t, {
   getNextShownUpcomingEventNoticeType: function() {
-    return i
+    return r
   }
 });
-var l = n("866227"),
-  u = n.n(l),
-  a = n("249654"),
+var u = n("866227"),
+  l = n.n(u),
+  i = n("249654"),
   d = n("745049");
 
-function i(e, t, n, l) {
-  let i = u(),
-    s = new Date(e.scheduled_start_time).getTime(),
-    r = {
-      start: s - d.EVENT_STARTING_SOON_WINDOW_MILLISECONDS,
-      end: s
+function r(e, t, n, u) {
+  let r = l(),
+    a = new Date(e.scheduled_start_time).getTime(),
+    s = {
+      start: a - d.EVENT_STARTING_SOON_WINDOW_MILLISECONDS,
+      end: a
     };
-  if (i.isBetween(r.start, r.end)) {
+  if (r.isBetween(s.start, s.end)) {
     if (null != t) {
-      let e = u(t),
-        n = e.isBetween(r.start, r.end),
-        a = e.isBetween(u(s).subtract(d.ACKED_RECENTLY_WINDOW_DAYS, "days"), s);
-      return n || a && !l ? void 0 : d.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
+      let e = l(t),
+        n = e.isBetween(s.start, s.end),
+        i = e.isBetween(l(a).subtract(d.ACKED_RECENTLY_WINDOW_DAYS, "days"), a);
+      return n || i && !u ? void 0 : d.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
     }
     return d.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
   }
-  let o = a.default.extractTimestamp(e.id),
-    c = Math.min((null != n ? n : o) + d.NEW_EVENT_WINDOW_MILLISECONDS, s),
-    E = i.isBetween(o, c);
-  if (E && null == t && !l) return d.UpcomingGuildEventNoticeTypes.NEW_EVENT
+  let E = i.default.extractTimestamp(e.id),
+    c = Math.min((null != n ? n : E) + d.NEW_EVENT_WINDOW_MILLISECONDS, a),
+    o = r.isBetween(E, c);
+  if (o && null == t && !u) return d.UpcomingGuildEventNoticeTypes.NEW_EVENT
 }

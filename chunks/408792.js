@@ -15,7 +15,7 @@ var s = n("819855"),
   d = n("300113"),
   c = n("106413"),
   f = n("843455"),
-  E = n("406307");
+  E = n("365696");
 let h = {
     trophy: f.Color.PRIMARY_400,
     locked: f.Color.PRIMARY_400,

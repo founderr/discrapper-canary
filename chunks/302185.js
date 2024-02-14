@@ -8,10 +8,10 @@ n.r(t), n.d(t, {
   }
 }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
 var a = n("884691"),
-  r = n("748820"),
+  l = n("748820"),
   i = n("129722"),
-  l = n("89050");
-let s = new Worker(new URL(n.p + n.u("21401"), n.b)),
+  s = n("89050");
+let r = new Worker(new URL(n.p + n.u("21401"), n.b)),
   u = new AudioContext;
 async function o(e) {
   let t = await e.arrayBuffer(),
@@ -20,37 +20,37 @@ async function o(e) {
 }
 
 function d(e) {
-  let [t, n] = a.useState(null), [r, i] = a.useState(null);
+  let [t, n] = a.useState(null), [l, i] = a.useState(null);
   return a.useEffect(() => {
     if (null == e) return;
-    let t = (0, l.getAudioFileId)(e);
-    t !== r && (i(t), n(null), o(e).then(n))
-  }, [r, e]), t
+    let t = (0, s.getAudioFileId)(e);
+    t !== l && (i(t), n(null), o(e).then(n))
+  }, [l, e]), t
 }
 let c = {
-  ...l.defaultWaveformConfig
+  ...s.defaultWaveformConfig
 };
 
 function f(e, t, n) {
   let [u, o] = a.useState(null), [d, f] = a.useState(null), [h, m] = a.useState(1), {
     setMaxVolume: g
-  } = (0, i.useAudioTrimmerStore)(), p = a.useCallback((e, t) => {
-    var a, i, l, u, o;
-    f(null), (a = e, i = t.offsetWidth, l = n, u = c, o = m, new Promise(e => {
-      let t = (0, r.v4)(),
+  } = (0, i.useAudioTrimmerStore)(), E = a.useCallback((e, t) => {
+    var a, i, s, u, o;
+    f(null), (a = e, i = t.offsetWidth, s = n, u = c, o = m, new Promise(e => {
+      let t = (0, l.v4)(),
         n = a => {
           let {
             data: {
-              waveform: r,
+              waveform: l,
               id: i,
-              normalizedVolumeMultipler: l
+              normalizedVolumeMultipler: s
             }
           } = a;
-          t === i && (e(r), o(l)), null == s || s.removeEventListener("message", n)
+          t === i && (e(l), o(s)), null == r || r.removeEventListener("message", n)
         };
-      null == s || s.addEventListener("message", n), null == s || s.postMessage({
+      null == r || r.addEventListener("message", n), null == r || r.postMessage({
         id: t,
-        options: l,
+        options: s,
         config: u,
         width: i,
         rawBufferData: a
@@ -59,9 +59,9 @@ function f(e, t, n) {
   }, [n]);
   return a.useEffect(() => {
     if (null == e || null == t) return;
-    let a = (0, l.getWaveformId)(e, n);
-    u !== a && (o(a), p(e, t))
-  }, [e, p, t, n, u]), a.useEffect(() => {
+    let a = (0, s.getWaveformId)(e, n);
+    u !== a && (o(a), E(e, t))
+  }, [e, E, t, n, u]), a.useEffect(() => {
     g(h)
   }, [h, g]), d
 }

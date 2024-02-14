@@ -32,19 +32,19 @@ let r = {
     }
     let [c, f] = a.RangeUtils.isRange(n) ? a.RangeUtils.edges(n) : a.EditorUtils.edges(e, n);
     if (null != i || null != s) {
-      var p, m, h;
+      var m, p, h;
       if (r) {
-        let t = null !== (p = a.EditorUtils.before(e, c, {
+        let t = null !== (m = a.EditorUtils.before(e, c, {
           distance: i,
           unit: s
-        })) && void 0 !== p ? p : a.EditorUtils.start(e, []);
+        })) && void 0 !== m ? m : a.EditorUtils.start(e, []);
         if ("character" === s && (null != i ? i : 1) === 1 && a.PathUtils.equals(c.path, f.path)) {
           let n = a.EditorUtils.leaf(e, c.path),
             l = null != n ? n[0].text : "";
-          l.length > 0 && null != l[l.length - 1].match(/[\u0E00-\u0E7F]/) && (t = null !== (m = a.EditorUtils.before(e, c, {
+          l.length > 0 && null != l[l.length - 1].match(/[\u0E00-\u0E7F]/) && (t = null !== (p = a.EditorUtils.before(e, c, {
             distance: i,
             unit: "offset"
-          })) && void 0 !== m ? m : a.EditorUtils.start(e, []))
+          })) && void 0 !== p ? p : a.EditorUtils.start(e, []))
         }
         c = t
       } else f = null !== (h = a.EditorUtils.after(e, f, {

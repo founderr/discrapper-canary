@@ -5,14 +5,14 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var r = n("679750"),
-  o = n("884691");
-let a = Math.round(1e10 * Math.random()),
+  a = n("884691");
+let o = Math.round(1e10 * Math.random()),
   i = 0;
 
 function s(e) {
-  let t = (0, o.useMemo)(() => e.name || "radio-group-".concat(a, "-").concat(++i), [e.name]),
+  let t = (0, a.useMemo)(() => e.name || "radio-group-".concat(o, "-").concat(++i), [e.name]),
     [n, s] = (0, r.useControlledState)(e.value, e.defaultValue, e.onChange),
-    [c, l] = (0, o.useState)(null);
+    [c, l] = (0, a.useState)(null);
   return {
     name: t,
     selectedValue: n,

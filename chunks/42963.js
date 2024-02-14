@@ -58,7 +58,7 @@ function E(e, t) {
   })
 }
 
-function _(e, t) {
+function I(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     s = e;
   if (e === r.FlowType.ANY) {
@@ -110,14 +110,14 @@ f.subscribe(e => {
   }
 }, e => null != e.currentFlow ? e.flows[e.currentFlow] : void 0);
 
-function I() {
+function _() {
   return null != f.getState().activeFlow()
 }
 var p = {
   flowStart: E,
   flowStepOrStart: function(e, t) {
-    I() ? _(e, t) : E(e, t)
+    _() ? I(e, t) : E(e, t)
   },
-  flowStep: _,
-  hasActiveFlow: I
+  flowStep: I,
+  hasActiveFlow: _
 }

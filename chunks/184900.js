@@ -54,7 +54,7 @@ var l = t("37983"),
   X = t("75015"),
   J = t("590456"),
   Q = t("782340"),
-  $ = t("923843"),
+  $ = t("248549"),
   ee = t("375832");
 let ea = V.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar,
   et = (0, E.buildGetPremiumUserBannerStyles)({
@@ -133,7 +133,7 @@ function el(e) {
         }
       })
     })
-  }, [V, e8, er]), e7 = (e, a) => {
+  }, [V, e8, er]), e4 = (e, a) => {
     if (null == e || null == a) return es(null);
     (0, d.openModalLazy)(async () => {
       let {
@@ -150,7 +150,7 @@ function el(e) {
     })
   };
 
-  function e4() {
+  function e7() {
     let e = null != eZ ? (0, d.getStatusBackdropColor)(eZ) : null;
     return (0, l.jsxs)("div", {
       className: $.status,
@@ -221,7 +221,7 @@ function el(e) {
             disabled: !ei || eU,
             image: eK,
             makeURL: () => eK,
-            onChange: e7,
+            onChange: e4,
             imageStyle: {
               backgroundColor: eY
             },
@@ -300,7 +300,7 @@ function el(e) {
               className: $.hoverIcon,
               color: "white"
             })
-          }), e4()]
+          }), e7()]
         })
       }() : function() {
         let e = null != eD && !ei,
@@ -328,7 +328,7 @@ function el(e) {
               src: ew,
               alt: " ",
               "aria-hidden": !0
-            }), e4()]
+            }), e7()]
           });
         return e ? (0, l.jsx)(d.Clickable, {
           onClickCapture: e => {

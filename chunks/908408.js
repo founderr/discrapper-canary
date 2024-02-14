@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   StickersPremiumUpsell: function() {
-    return y
+    return N
   }
 });
 var l = n("37983"),
@@ -14,42 +14,42 @@ var l = n("37983"),
   d = n("154889"),
   c = n("917247"),
   f = n("956597"),
-  p = n("945330"),
-  m = n("599110"),
+  m = n("945330"),
+  p = n("599110"),
   h = n("719923"),
   E = n("570759"),
   g = n("281072"),
   S = n("49111"),
   C = n("646718"),
   T = n("782340"),
-  v = n("416841"),
+  v = n("350327"),
   I = n("481927");
 let _ = () => (0, E.setShowPremiumUpsell)(!1),
-  y = e => {
+  N = e => {
     var t, n, a;
     let {
       onLearnMore: E
     } = e, {
-      analyticsLocations: y
+      analyticsLocations: N
     } = (0, u.default)(o.default.PREMIUM_UPSELL);
     i.useEffect(() => {
-      m.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      p.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         location_section: S.AnalyticsSections.STICKER_PICKER_UPSELL,
         type: C.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
-        location_stack: y
+        location_stack: N
       })
-    }, [y]);
+    }, [N]);
     let A = (0, c.usePremiumTrialOffer)(),
-      N = (0, d.usePremiumDiscountOffer)(),
+      y = (0, d.usePremiumDiscountOffer)(),
       x = (null == A ? void 0 : null === (t = A.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === C.PremiumSubscriptionSKUs.TIER_0,
-      O = null != A || null != N;
+      O = null != A || null != y;
     return (0, l.jsxs)("div", {
       className: s(v.upsellWrapper, {
         [v.unifyTrialUpsell]: O
       }),
       children: [O ? (0, l.jsx)(f.default, {
         trialOffer: A,
-        discountOffer: N,
+        discountOffer: y,
         onClose: _,
         type: C.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
         subscriptionTier: null !== (a = null == A ? void 0 : null === (n = A.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : C.PremiumSubscriptionSKUs.TIER_2,
@@ -82,7 +82,7 @@ let _ = () => (0, E.setShowPremiumUpsell)(!1),
       }), (0, l.jsx)(r.Clickable, {
         className: v.upsellClose,
         onClick: _,
-        children: (0, l.jsx)(p.default, {})
+        children: (0, l.jsx)(m.default, {})
       })]
     })
   }

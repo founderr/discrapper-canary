@@ -13,29 +13,29 @@ t.r(x), t.d(x, {
     return D
   },
   getEffectUrl: function() {
-    return V
+    return j
   },
   getEffectAnnouncement: function() {
-    return Y
+    return P
   }
 });
 var s = t("917351"),
   a = t.n(s),
   o = t("440540"),
   y = t("811217"),
-  k = t("504936"),
-  d = t("988078"),
+  d = t("504936"),
+  k = t("988078"),
   r = t("939118"),
-  p = t("101559"),
-  e = t("326209"),
+  e = t("101559"),
+  p = t("326209"),
   n = t("610237"),
   m = t("733261"),
   c = t("596926"),
   l = t("761999"),
   f = t("189580"),
   _ = t("679126"),
-  h = t("101593"),
-  u = t("414668"),
+  u = t("101593"),
+  h = t("414668"),
   I = t("97656"),
   b = t("812007"),
   w = t("721336"),
@@ -44,10 +44,10 @@ var s = t("917351"),
   A = t("155232"),
   R = t("843093"),
   O = t("867805"),
-  T = t("407063"),
-  N = t("697218"),
-  v = t("315102"),
-  M = t("402671"),
+  v = t("407063"),
+  T = t("697218"),
+  M = t("315102"),
+  N = t("402671"),
   S = t("626334"),
   C = t("782340");
 let L = {
@@ -56,7 +56,7 @@ let L = {
   },
   F = {
     BASIC: [o],
-    PREMIUM: [y, k, d, r, p, e, n, m, c, l, f, _, h, u, I, b, w, E, g, A, R]
+    PREMIUM: [y, d, k, r, e, p, n, m, c, l, f, _, u, h, I, b, w, E, g, A, R]
   },
   U = {
     [S.VoiceChannelEffectAnimationType.BASIC]: F.BASIC,
@@ -65,7 +65,7 @@ let L = {
   B = a.memoize(i => new Promise(x => {
     let t = new Image;
     t.src = i, t.crossOrigin = "Anonymous", t.onload = () => {
-      let s = S.EMOJI_SIZE * (0, T.getDevicePixelRatio)();
+      let s = S.EMOJI_SIZE * (0, v.getDevicePixelRatio)();
       if (t.width === s && t.height === s) x(i);
       else {
         var a;
@@ -83,11 +83,11 @@ let L = {
     return Math.floor(Math.random() * t.length)
   };
 
-function V(i) {
+function j(i) {
   let x = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.EMOJI_SIZE;
   if (null != i.id) {
     var t;
-    return v.default.getEmojiURL({
+    return M.default.getEmojiURL({
       id: i.id,
       animated: null !== (t = i.animated) && void 0 !== t && t,
       size: x
@@ -95,36 +95,36 @@ function V(i) {
   }
   let s = O.default.convertSurrogateToName(i.name, !1),
     a = O.default.getByName(s);
-  return null != a ? M.default.getURL(a.surrogates) : ""
+  return null != a ? N.default.getURL(a.surrogates) : ""
 }
 
-function P(i, x) {
+function V(i, x) {
   return a(i).map(i => {
     var t;
     return null !== (t = i[x]) && void 0 !== t ? t : null
   }).filter(i => null != i).uniq().value()
 }
 
-function Y(i) {
+function P(i) {
   var x, t, s, a, o, y;
   if (i.length < 1) return "";
-  let k = P(i, "userId"),
-    d = P(i, "emojiName"),
-    r = d.length < 2 ? null !== (x = null == d ? void 0 : d[0]) && void 0 !== x ? x : "" : d.join(", ");
-  if (k.length < 1) return "";
-  if (1 === k.length) return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
-    firstUsername: null === (t = N.default.getUser(k[0])) || void 0 === t ? void 0 : t.username,
+  let d = V(i, "userId"),
+    k = V(i, "emojiName"),
+    r = k.length < 2 ? null !== (x = null == k ? void 0 : k[0]) && void 0 !== x ? x : "" : k.join(", ");
+  if (d.length < 1) return "";
+  if (1 === d.length) return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
+    firstUsername: null === (t = T.default.getUser(d[0])) || void 0 === t ? void 0 : t.username,
     emojiNames: r
   });
-  if (2 === k.length) return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
-    firstUsername: null === (s = N.default.getUser(k[0])) || void 0 === s ? void 0 : s.username,
-    secondUsername: null === (a = N.default.getUser(k[1])) || void 0 === a ? void 0 : a.username,
+  if (2 === d.length) return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
+    firstUsername: null === (s = T.default.getUser(d[0])) || void 0 === s ? void 0 : s.username,
+    secondUsername: null === (a = T.default.getUser(d[1])) || void 0 === a ? void 0 : a.username,
     emojiNames: r
   });
   else return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
-    firstUsername: null === (o = N.default.getUser(k[0])) || void 0 === o ? void 0 : o.username,
-    secondUsername: null === (y = N.default.getUser(k[1])) || void 0 === y ? void 0 : y.username,
-    count: k.length - 2,
+    firstUsername: null === (o = T.default.getUser(d[0])) || void 0 === o ? void 0 : o.username,
+    secondUsername: null === (y = T.default.getUser(d[1])) || void 0 === y ? void 0 : y.username,
+    count: d.length - 2,
     emojiNames: r
   })
 }

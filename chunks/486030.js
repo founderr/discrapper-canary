@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return S
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("627445"),
   r = n.n(i),
   o = n("446674"),
@@ -18,10 +18,10 @@ var l = n("414456"),
   h = n("957255"),
   m = n("49111"),
   p = n("782340"),
-  E = n("134152");
+  E = n("363768");
 
 function S(e) {
-  var t, l;
+  var t, a;
   let {
     stream: i,
     applicationId: S,
@@ -32,17 +32,17 @@ function S(e) {
     className: T,
     ...v
   } = e, x = null == g ? void 0 : g.getGuildId(), N = null == g ? void 0 : g.id, A = (0, o.useStateFromStores)([f.default], () => null != x ? f.default.getGuild(x) : null, [x]), M = (0, o.useStateFromStores)([d.default], () => d.default.getActiveEventByChannel(N), [N]);
-  if (t = A, l = g, !(null != t && null != l && h.default.can(m.Permissions.CREATE_INSTANT_INVITE, l))) return null;
+  if (t = A, a = g, !(null != t && null != a && h.default.can(m.Permissions.CREATE_INSTANT_INVITE, a))) return null;
   let R = p.default.Messages.INSTANT_INVITE;
-  return null != i ? R = p.default.Messages.INVITE_STREAM_HEADER : null != S && (R = p.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(u.Button, {
+  return null != i ? R = p.default.Messages.INVITE_STREAM_HEADER : null != S && (R = p.default.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY), (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsx)(u.Button, {
       size: u.Button.Sizes.SMALL,
       color: E.buttonColor,
       onClick: () => {
         r(null != A, "guild cannot be null"), r(null != g, "channel cannot be null"), ! function(e) {
           let {
             guild: t,
-            channel: l,
+            channel: a,
             streamUserId: s,
             applicationId: i,
             appContext: r,
@@ -54,14 +54,14 @@ function S(e) {
             let {
               default: e
             } = await n.el("310688").then(n.bind(n, "310688"));
-            return n => (0, a.jsx)(e, {
+            return n => (0, l.jsx)(e, {
               ...n,
               guild: t,
-              channel: l,
+              channel: a,
               streamUserId: s,
               applicationId: i,
               analyticsLocation: d,
-              source: l.isGuildStageVoice() ? m.InstantInviteSources.STAGE_CHANNEL : m.InstantInviteSources.STREAM_INVITE,
+              source: a.isGuildStageVoice() ? m.InstantInviteSources.STAGE_CHANNEL : m.InstantInviteSources.STREAM_INVITE,
               guildScheduledEvent: c
             })
           }, {
@@ -82,7 +82,7 @@ function S(e) {
       className: s(T, E.textButton),
       ...v,
       children: R
-    }), (0, a.jsx)(c.default, {
+    }), (0, l.jsx)(c.default, {
       channel: g,
       stream: i,
       appContext: _,

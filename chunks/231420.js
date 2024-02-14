@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
     return l
   }
 }), n("70102"), n("222007");
-let o = Symbol.for("react-aria.i18n.locale"),
-  a = Symbol.for("react-aria.i18n.strings");
+let a = Symbol.for("react-aria.i18n.locale"),
+  o = Symbol.for("react-aria.i18n.strings");
 class i {
   getStringForLocale(e, t) {
     let n = this.getStringsForLocale(t)[e];
@@ -32,9 +32,9 @@ class i {
   }
   static getGlobalDictionaryForPackage(e) {
     if ("undefined" == typeof window) return null;
-    let t = window[o];
+    let t = window[a];
     if (void 0 === r) {
-      let e = window[a];
+      let e = window[o];
       if (!e) return null;
       for (let n in r = {}, e) r[n] = new i({
         [t]: e[n]
@@ -61,11 +61,11 @@ class l {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "cardinal",
       r = t["=" + e];
     if (r) return "function" == typeof r ? r() : r;
-    let o = this.locale + ":" + n,
-      a = s.get(o);
-    return !a && (a = new Intl.PluralRules(this.locale, {
+    let a = this.locale + ":" + n,
+      o = s.get(a);
+    return !o && (o = new Intl.PluralRules(this.locale, {
       type: n
-    }), s.set(o, a)), "function" == typeof(r = t[a.select(e)] || t.other) ? r() : r
+    }), s.set(a, o)), "function" == typeof(r = t[o.select(e)] || t.other) ? r() : r
   }
   number(e) {
     let t = c.get(this.locale);

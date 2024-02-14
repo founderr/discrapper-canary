@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return P
   }
 }), n("222007");
-var a, l, s = n("37983");
+var l, a, s = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
@@ -32,25 +32,25 @@ var i = n("414456"),
   A = n("449008"),
   M = n("387111"),
   R = n("782340"),
-  j = n("699996");
-(l = a || (a = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.LARGE = 2] = "LARGE";
+  j = n("734837");
+(a = l || (l = {}))[a.SMALL = 0] = "SMALL", a[a.MEDIUM = 1] = "MEDIUM", a[a.LARGE = 2] = "LARGE";
 let L = ["embedded_background"];
 
 function O(e) {
   let {
     avatarSize: t,
     guildId: n,
-    channelId: a,
-    users: l
+    channelId: l,
+    users: a
   } = e, i = null != t ? t : u.AvatarSizes.SIZE_32, r = (0, u.getAvatarSize)(i);
   return (0, s.jsx)(N.default, {
     size: r,
     guildId: n,
-    users: l,
+    users: a,
     max: 4,
     renderUser: e => {
       if (null == e) return null;
-      let t = M.default.getName(n, a, e);
+      let t = M.default.getName(n, l, e);
       return (0, s.jsx)(u.TooltipContainer, {
         text: t,
         color: u.TooltipColors.GREY,
@@ -65,7 +65,7 @@ function O(e) {
 }
 
 function y(e) {
-  var t, n, a, l;
+  var t, n, l, a;
   let {
     participants: i,
     application: m,
@@ -73,8 +73,8 @@ function y(e) {
     channel: E,
     width: S
   } = e;
-  let C = (a = S) > 400 ? 2 : a > 300 ? 1 : 0;
-  let [_] = (l = S) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, o.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
+  let C = (l = S) > 400 ? 2 : l > 300 ? 1 : 0;
+  let [_] = (a = S) > 400 ? [u.AvatarSizes.SIZE_56, 56] : a > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, o.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === m.id)), {
     analyticsLocations: L
   } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, h.useEmbeddedActivityJoinability)({
     userId: null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -142,8 +142,8 @@ function P(e) {
   let {
     participant: t,
     width: n,
-    selected: a,
-    interactible: l,
+    selected: l,
+    interactible: a,
     channel: i
   } = e, {
     AnalyticsLocationProvider: r
@@ -160,20 +160,20 @@ function P(e) {
     children: (0, s.jsx)("div", {
       className: j.container,
       children: (0, s.jsxs)(s.Fragment, {
-        children: [!a && d && (0, s.jsx)(S.default, {
+        children: [!l && d && (0, s.jsx)(S.default, {
           className: j.iframe,
           embedId: (0, C.default)(i.id, o)
         }), g && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
           className: j.splashImage,
           alt: f.name,
           src: h
-        }) : null, !d && !a && null != f && (0, s.jsx)(y, {
+        }) : null, !d && !l && null != f && (0, s.jsx)(y, {
           width: n,
           channel: i,
           participants: t.participants,
           application: f,
           currentEmbeddedApplication: c
-        }), l || g ? null : (0, s.jsx)("div", {
+        }), a || g ? null : (0, s.jsx)("div", {
           className: j.clickShield
         })]
       })

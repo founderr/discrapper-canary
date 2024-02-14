@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 }), n("70102");
 var r = n("988641");
 
-function o(e, t) {
+function a(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
   }
 }
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -27,7 +27,7 @@ var i = function() {
   function i(e) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, i), a(this, "entered", []), a(this, "isNodeInDocument", void 0), this.isNodeInDocument = e
+    }(this, i), o(this, "entered", []), o(this, "isNodeInDocument", void 0), this.isNodeInDocument = e
   }
   return e = i, t = [{
     key: "enter",
@@ -49,5 +49,5 @@ var i = function() {
     value: function() {
       this.entered = []
     }
-  }], o(e.prototype, t), n && o(e, n), i
+  }], a(e.prototype, t), n && a(e, n), i
 }()

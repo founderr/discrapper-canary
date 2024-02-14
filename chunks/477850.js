@@ -1,23 +1,23 @@
 e = n.nmd(e), n("781738"), (function() {
   var n = this,
     r = n.humanize,
-    o = {};
-  void 0 !== t ? (void 0 !== e && e.exports && (t = e.exports = o), t.humanize = o) : ("function" == typeof define && define.amd && define("humanize", function() {
-    return o
-  }), n.humanize = o), o.noConflict = function() {
+    a = {};
+  void 0 !== t ? (void 0 !== e && e.exports && (t = e.exports = a), t.humanize = a) : ("function" == typeof define && define.amd && define("humanize", function() {
+    return a
+  }), n.humanize = a), a.noConflict = function() {
     return n.humanize = r, this
-  }, o.pad = function(e, t, n, r) {
+  }, a.pad = function(e, t, n, r) {
     if (e += "", n ? n.length > 1 && (n = n.charAt(0)) : n = " ", "right" == (r = void 0 === r ? "left" : "right"))
       for (; e.length < t;) e += n;
     else
       for (; e.length < t;) e = n + e;
     return e
-  }, o.time = function() {
+  }, a.time = function() {
     return new Date().getTime() / 1e3
   };
-  var a = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
+  var o = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
     i = [0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
-  o.date = function(e, t) {
+  a.date = function(e, t) {
     var n = void 0 === t ? new Date : new Date(t instanceof Date ? t : 1e3 * t),
       r = /\\?([a-z])/gi,
       s = function(e, t) {
@@ -27,7 +27,7 @@ e = n.nmd(e), n("781738"), (function() {
       l = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
       u = {
         d: function() {
-          return o.pad(u.j(), 2, "0")
+          return a.pad(u.j(), 2, "0")
         },
         D: function() {
           return u.l().slice(0, 3)
@@ -53,17 +53,17 @@ e = n.nmd(e), n("781738"), (function() {
           return n.getDay()
         },
         z: function() {
-          return (u.L() ? i[u.n()] : a[u.n()]) + u.j() - 1
+          return (u.L() ? i[u.n()] : o[u.n()]) + u.j() - 1
         },
         W: function() {
           var e = u.z() - u.N() + 1.5;
-          return o.pad(1 + Math.floor(Math.abs(e) / 7) + (e % 7 > 3.5 ? 1 : 0), 2, "0")
+          return a.pad(1 + Math.floor(Math.abs(e) / 7) + (e % 7 > 3.5 ? 1 : 0), 2, "0")
         },
         F: function() {
           return l[n.getMonth()]
         },
         m: function() {
-          return o.pad(u.n(), 2, "0")
+          return a.pad(u.n(), 2, "0")
         },
         M: function() {
           return u.F().slice(0, 3)
@@ -108,24 +108,24 @@ e = n.nmd(e), n("781738"), (function() {
           return n.getHours()
         },
         h: function() {
-          return o.pad(u.g(), 2, "0")
+          return a.pad(u.g(), 2, "0")
         },
         H: function() {
-          return o.pad(u.G(), 2, "0")
+          return a.pad(u.G(), 2, "0")
         },
         i: function() {
-          return o.pad(n.getMinutes(), 2, "0")
+          return a.pad(n.getMinutes(), 2, "0")
         },
         s: function() {
-          return o.pad(n.getSeconds(), 2, "0")
+          return a.pad(n.getSeconds(), 2, "0")
         },
         u: function() {
-          return o.pad(1e3 * n.getMilliseconds(), 6, "0")
+          return a.pad(1e3 * n.getMilliseconds(), 6, "0")
         },
         O: function() {
           var e = n.getTimezoneOffset(),
             t = Math.abs(e);
-          return (e > 0 ? "-" : "+") + o.pad(100 * Math.floor(t / 60) + t % 60, 4, "0")
+          return (e > 0 ? "-" : "+") + a.pad(100 * Math.floor(t / 60) + t % 60, 4, "0")
         },
         P: function() {
           var e = u.O();
@@ -145,23 +145,23 @@ e = n.nmd(e), n("781738"), (function() {
         }
       };
     return e.replace(r, s)
-  }, o.numberFormat = function(e, t, n, r) {
+  }, a.numberFormat = function(e, t, n, r) {
     t = isNaN(t) ? 2 : Math.abs(t), n = void 0 === n ? "." : n, r = void 0 === r ? "," : r;
-    var o = e < 0 ? "-" : "",
-      a = parseInt((e = Math.abs(+e || 0)).toFixed(t), 10) + "",
-      i = a.length > 3 ? a.length % 3 : 0;
-    return o + (i ? a.substr(0, i) + r : "") + a.substr(i).replace(/(\d{3})(?=\d)/g, "$1" + r) + (t ? n + Math.abs(e - a).toFixed(t).slice(2) : "")
-  }, o.naturalDay = function(e, t) {
-    e = void 0 === e ? o.time() : e, t = void 0 === t ? "Y-m-d" : t;
+    var a = e < 0 ? "-" : "",
+      o = parseInt((e = Math.abs(+e || 0)).toFixed(t), 10) + "",
+      i = o.length > 3 ? o.length % 3 : 0;
+    return a + (i ? o.substr(0, i) + r : "") + o.substr(i).replace(/(\d{3})(?=\d)/g, "$1" + r) + (t ? n + Math.abs(e - o).toFixed(t).slice(2) : "")
+  }, a.naturalDay = function(e, t) {
+    e = void 0 === e ? a.time() : e, t = void 0 === t ? "Y-m-d" : t;
     var n = new Date,
       r = new Date(n.getFullYear(), n.getMonth(), n.getDate()).getTime() / 1e3;
     if (e < r && e >= r - 86400) return "yesterday";
     if (e >= r && e < r + 86400) return "today";
     if (e >= r + 86400 && e < r + 172800) return "tomorrow";
-    return o.date(t, e)
-  }, o.relativeTime = function(e) {
-    e = void 0 === e ? o.time() : e;
-    var t = o.time(),
+    return a.date(t, e)
+  }, a.relativeTime = function(e) {
+    e = void 0 === e ? a.time() : e;
+    var t = a.time(),
       n = t - e;
     if (n < 2 && n > -2) return (n >= 0 ? "just " : "") + "now";
     if (n < 60 && n > -60) return n >= 0 ? Math.floor(n) + " seconds ago" : "in " + Math.floor(-n) + " seconds";
@@ -172,13 +172,13 @@ e = n.nmd(e), n("781738"), (function() {
     if (n < 172800 && n > -172800) return n >= 0 ? "1 day ago" : "in 1 day";
     if (n < 2505600 && n > -2505600) return n >= 0 ? Math.floor(n / 86400) + " days ago" : "in " + Math.floor(-n / 86400) + " days";
     if (n < 5184e3 && n > -5184e3) return n >= 0 ? "about a month ago" : "in about a month";
-    var r = parseInt(o.date("Y", t), 10),
-      a = parseInt(o.date("Y", e), 10),
-      i = 12 * r + parseInt(o.date("n", t), 10) - (12 * a + parseInt(o.date("n", e), 10));
+    var r = parseInt(a.date("Y", t), 10),
+      o = parseInt(a.date("Y", e), 10),
+      i = 12 * r + parseInt(a.date("n", t), 10) - (12 * o + parseInt(a.date("n", e), 10));
     if (i < 12 && i > -12) return i >= 0 ? i + " months ago" : "in " + -i + " months";
-    var s = r - a;
+    var s = r - o;
     return s < 2 && s > -2 ? s >= 0 ? "a year ago" : "in a year" : s >= 0 ? s + " years ago" : "in " + -s + " years"
-  }, o.ordinal = function(e) {
+  }, a.ordinal = function(e) {
     var t = (e = isNaN(e = parseInt(e, 10)) ? 0 : e) < 0 ? "-" : "",
       n = (e = Math.abs(e)) % 100;
     return t + e + (n > 4 && n < 21 ? "th" : ({
@@ -186,24 +186,24 @@ e = n.nmd(e), n("781738"), (function() {
       2: "nd",
       3: "rd"
     })[e % 10] || "th")
-  }, o.filesize = function(e, t, n, r, a, i) {
-    return (t = void 0 === t ? 1024 : t, e <= 0) ? "0 bytes" : (e < t && void 0 === n && (n = 0), void 0 === i && (i = " "), o.intword(e, ["bytes", "KB", "MB", "GB", "TB", "PB"], t, n, r, a, i))
-  }, o.intword = function(e, t, n, r, a, i, s) {
-    l = (t = t || ["", "K", "M", "B", "T"]).length - 1, n = n || 1e3, r = isNaN(r) ? 2 : Math.abs(r), a = a || ".", i = i || ",", s = s || "";
+  }, a.filesize = function(e, t, n, r, o, i) {
+    return (t = void 0 === t ? 1024 : t, e <= 0) ? "0 bytes" : (e < t && void 0 === n && (n = 0), void 0 === i && (i = " "), a.intword(e, ["bytes", "KB", "MB", "GB", "TB", "PB"], t, n, r, o, i))
+  }, a.intword = function(e, t, n, r, o, i, s) {
+    l = (t = t || ["", "K", "M", "B", "T"]).length - 1, n = n || 1e3, r = isNaN(r) ? 2 : Math.abs(r), o = o || ".", i = i || ",", s = s || "";
     for (var c, l, u = 0; u < t.length; u++)
       if (e < Math.pow(n, u + 1)) {
         l = u;
         break
       } c = e / Math.pow(n, l);
     var d = t[l] ? s + t[l] : "";
-    return o.numberFormat(c, r, a, i) + d
-  }, o.linebreaks = function(e) {
+    return a.numberFormat(c, r, o, i) + d
+  }, a.linebreaks = function(e) {
     return "<p>" + (e = (e = (e = (e = (e = e.replace(/^([\n|\r]*)/, "")).replace(/([\n|\r]*)$/, "")).replace(/(\r\n|\n|\r)/g, "\n")).replace(/(\n{2,})/g, "</p><p>")).replace(/\n/g, "<br />")) + "</p>"
-  }, o.nl2br = function(e) {
+  }, a.nl2br = function(e) {
     return e.replace(/(\r\n|\n|\r)/g, "<br />")
-  }, o.truncatechars = function(e, t) {
+  }, a.truncatechars = function(e, t) {
     return e.length <= t ? e : e.substr(0, t) + "…"
-  }, o.truncatewords = function(e, t) {
+  }, a.truncatewords = function(e, t) {
     var n = e.split(" ");
     return n.length < t ? e : n.slice(0, t).join(" ") + "…"
   }

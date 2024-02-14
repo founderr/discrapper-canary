@@ -20,7 +20,7 @@ var a = n("506838"),
   S = n("50885"),
   h = n("635357"),
   P = n("782340"),
-  I = n("433264"),
+  I = n("285311"),
   v = n("93902");
 let E = S.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 

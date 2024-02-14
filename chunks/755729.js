@@ -100,7 +100,7 @@ var a = n("37983"),
   eH = n("49111"),
   eV = n("411511"),
   eY = n("782340"),
-  eW = n("374555");
+  eW = n("895493");
 let eK = eB.default.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
   ez = 30 * ew.default.Millis.DAY;
 class eq extends s.PureComponent {

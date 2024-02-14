@@ -1,5 +1,5 @@
 var r = Math.floor,
-  o = Math.random;
+  a = Math.random;
 e.exports = function(e, t) {
-  return e + r(o() * (t - e + 1))
+  return e + r(a() * (t - e + 1))
 }

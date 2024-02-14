@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return U
+    return j
   }
 }), n("222007");
 var s, a, l = n("37983"),
@@ -13,19 +13,19 @@ var s, a, l = n("37983"),
   c = n("724853"),
   f = n("731898"),
   E = n("970366"),
-  _ = n("271938"),
-  I = n("337543"),
+  I = n("271938"),
+  _ = n("337543"),
   p = n("124969"),
   h = n("599110"),
   T = n("315102"),
   N = n("449008"),
-  m = n("9294"),
-  g = n("800118"),
+  g = n("9294"),
+  m = n("800118"),
   A = n("243961"),
   S = n("570683"),
-  C = n("49111"),
-  v = n("782340"),
-  R = n("43730");
+  v = n("49111"),
+  C = n("782340"),
+  R = n("46121");
 
 function O() {
   return (0, l.jsx)("div", {
@@ -33,42 +33,42 @@ function O() {
     children: (0, l.jsx)(o.Spinner, {})
   })
 }(a = s || (s = {}))[a.LOADING = 0] = "LOADING", a[a.DETAILS = 1] = "DETAILS", a[a.ERROR = 2] = "ERROR";
-let L = e => {
+let x = e => {
   let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
   if (null == e || null == e.state || t) return 0;
   let n = e.state;
   switch (n) {
-    case C.InviteStates.RESOLVED:
-    case C.InviteStates.ACCEPTED:
-    case C.InviteStates.APP_NOT_OPENED:
-    case C.InviteStates.APP_OPENED:
-    case C.InviteStates.ACCEPTING:
-    case C.InviteStates.APP_OPENING:
+    case v.InviteStates.RESOLVED:
+    case v.InviteStates.ACCEPTED:
+    case v.InviteStates.APP_NOT_OPENED:
+    case v.InviteStates.APP_OPENED:
+    case v.InviteStates.ACCEPTING:
+    case v.InviteStates.APP_OPENING:
       return 1;
-    case C.InviteStates.EXPIRED:
-    case C.InviteStates.BANNED:
-    case C.InviteStates.ERROR:
+    case v.InviteStates.EXPIRED:
+    case v.InviteStates.BANNED:
+    case v.InviteStates.ERROR:
       return 2;
-    case C.InviteStates.RESOLVING:
+    case v.InviteStates.RESOLVING:
       return 0;
     default:
       (0, N.assertNever)(n)
   }
 };
 
-function x(e) {
+function L(e) {
   let {
     invite: t,
     onAcceptInvite: n
   } = e;
-  if ((null == t ? void 0 : t.state) === C.InviteStates.BANNED) return (0, l.jsx)(c.InvalidMobileCodedLinkInner, {
-    text: v.default.Messages.AUTH_BANNED_INVITE_BODY,
-    buttonCta: v.default.Messages.INVITE_INVALID_CTA,
+  if ((null == t ? void 0 : t.state) === v.InviteStates.BANNED) return (0, l.jsx)(c.InvalidMobileCodedLinkInner, {
+    text: C.default.Messages.AUTH_BANNED_INVITE_BODY,
+    buttonCta: C.default.Messages.INVITE_INVALID_CTA,
     onClick: n
   });
   return (0, l.jsx)(c.InvalidMobileCodedLinkInner, {
-    text: v.default.Messages.INVITE_INVALID_ERROR,
-    buttonCta: v.default.Messages.INVITE_INVALID_CTA,
+    text: C.default.Messages.INVITE_INVALID_ERROR,
+    buttonCta: C.default.Messages.INVITE_INVALID_CTA,
     onClick: n
   })
 }
@@ -82,22 +82,22 @@ function M(e) {
     ...u
   } = e, {
     invite: o
-  } = u, [d, c] = i.useState(L(o)), {
+  } = u, [d, c] = i.useState(x(o)), {
     ref: E,
-    height: _
-  } = (0, f.default)(), I = (0, r.useSpring)({
-    height: null != _ && 0 !== _ ? "".concat(_, "px") : "".concat(s, "px"),
+    height: I
+  } = (0, f.default)(), _ = (0, r.useSpring)({
+    height: null != I && 0 !== I ? "".concat(I, "px") : "".concat(s, "px"),
     config: r.config.stiff
   });
   return i.useEffect(() => {
-    let e = L(o);
+    let e = x(o);
     e !== d && c(e)
   }, [o, d]), (0, l.jsxs)(r.animated.div, {
     className: R.inviteCard,
-    style: I,
+    style: _,
     children: [(0, l.jsx)(r.animated.div, {
       className: R.inviteChildContainer,
-      style: I,
+      style: _,
       children: (0, l.jsx)("section", {
         ref: E,
         className: null == a ? void 0 : a(d),
@@ -111,7 +111,7 @@ function D(e) {
   let {
     invite: t
   } = e;
-  if (null == t || !(0, g.isEnhancedCommunityInvite)(t)) return null;
+  if (null == t || !(0, m.isEnhancedCommunityInvite)(t)) return null;
   let n = e => {
     if (null == t) return null;
     if (1 === e) return (0, l.jsx)(S.GuildInfoCard, {
@@ -139,7 +139,7 @@ function P(e) {
           invite: t
         });
       case 2:
-        return (0, l.jsx)(x, {
+        return (0, l.jsx)(L, {
           ...e,
           invite: t
         });
@@ -159,7 +159,7 @@ function P(e) {
   })
 }
 
-function j(e) {
+function U(e) {
   let {
     invite: t,
     onAcceptInvite: n
@@ -174,7 +174,7 @@ function j(e) {
     null != e && (a.backgroundImage = "url(".concat(e, ")"), a.backgroundSize = "cover")
   }
   return (0, l.jsxs)(p.default, {
-    theme: C.ThemeTypes.DARK,
+    theme: v.ThemeTypes.DARK,
     className: R.splashBackground,
     style: a,
     contentClassName: R.centerAuthBoxContent,
@@ -187,34 +187,34 @@ function j(e) {
   })
 }
 
-function U(e) {
+function j(e) {
   let {
     inviteKey: t,
     transitionTo: n
-  } = e, s = (0, u.useStateFromStores)([I.default], () => I.default.getInvite(t));
+  } = e, s = (0, u.useStateFromStores)([_.default], () => _.default.getInvite(t));
   return i.useEffect(() => {
     (0, E.trackAppUIViewed)("invite_mobile")
   }, []), i.useEffect(() => {
-    null != s && s.state === C.InviteStates.RESOLVED && h.default.track(C.AnalyticEvents.INVITE_VIEWED, {
+    null != s && s.state === v.InviteStates.RESOLVED && h.default.track(v.AnalyticEvents.INVITE_VIEWED, {
       invite_code: t,
       friends_count: null == s ? void 0 : s.friends_count
     }, {
       flush: !0
     })
-  }, [s, t]), (0, l.jsx)(j, {
+  }, [s, t]), (0, l.jsx)(U, {
     invite: s,
     onAcceptInvite: e => {
       ! function(e, t, n) {
         var s, a, l;
-        null == e || e.preventDefault(), h.default.track(C.AnalyticEvents.INVITE_APP_OPENED, {
-          invite_code: (0, m.parseInviteCodeFromInviteKey)(t),
+        null == e || e.preventDefault(), h.default.track(v.AnalyticEvents.INVITE_APP_OPENED, {
+          invite_code: (0, g.parseInviteCodeFromInviteKey)(t),
           guild_id: null == n ? void 0 : null === (s = n.guild) || void 0 === s ? void 0 : s.id,
           channel_id: null == n ? void 0 : null === (a = n.channel) || void 0 === a ? void 0 : a.id,
           inviter_id: null == n ? void 0 : null === (l = n.inviter) || void 0 === l ? void 0 : l.id
         });
-        let i = null != n && n.state !== C.InviteStates.EXPIRED && n.state !== C.InviteStates.BANNED ? t : void 0,
-          r = _.default.getFingerprint(),
-          u = null != r ? r : _.default.getId(),
+        let i = null != n && n.state !== v.InviteStates.EXPIRED && n.state !== v.InviteStates.BANNED ? t : void 0,
+          r = I.default.getFingerprint(),
+          u = null != r ? r : I.default.getId(),
           o = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
         d.default.openApp(i, void 0, u, void 0, o)
       }(e, t, s)

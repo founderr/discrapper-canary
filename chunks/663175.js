@@ -4,44 +4,44 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var l, a = n("37983"),
-  s = n("884691"),
-  i = n("254490"),
+var l, i = n("37983"),
+  a = n("884691"),
+  s = n("254490"),
   r = n("170113");
-l = class extends s.PureComponent {
+l = class extends a.PureComponent {
   render() {
     let {
       src: e,
       fileSize: t,
       fileName: n,
       className: l,
-      playable: s,
+      playable: a,
       volume: o,
       renderLinkComponent: u,
       onVolumeChange: d,
       onVolumeShow: c,
-      onVolumeHide: m,
-      autoMute: f,
-      onMute: h,
-      mimeType: p,
-      onPlay: g
+      onVolumeHide: f,
+      autoMute: m,
+      onMute: p,
+      mimeType: h,
+      onPlay: E
     } = this.props;
-    return (0, a.jsx)(r.default, {
+    return (0, i.jsx)(r.default, {
       src: e,
       fileName: n,
-      fileSize: (0, i.sizeString)(t),
+      fileSize: (0, s.sizeString)(t),
       type: r.default.Types.AUDIO,
       className: l,
-      playable: s,
+      playable: a,
       volume: o,
-      onMute: h,
-      autoMute: f,
+      onMute: p,
+      autoMute: m,
       onVolumeChange: d,
       onVolumeShow: c,
-      onVolumeHide: m,
+      onVolumeHide: f,
       renderLinkComponent: u,
-      mimeType: p,
-      onPlay: g
+      mimeType: h,
+      onPlay: E
     })
   }
 }

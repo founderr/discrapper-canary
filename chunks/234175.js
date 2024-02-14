@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("917764"),
   c = n("986632"),
   f = n("538282"),
-  p = n("405607"),
-  m = n("305961"),
+  m = n("405607"),
+  p = n("305961"),
   h = n("841811"),
   E = n("290581"),
   g = n("595086"),
@@ -25,11 +25,11 @@ var l = n("37983"),
   v = n("364685"),
   I = n("161585"),
   _ = n("24373"),
-  y = n("41170"),
+  N = n("41170"),
   A = n("49111"),
-  N = n("13030"),
+  y = n("13030"),
   x = n("782340"),
-  O = n("75754");
+  O = n("11693");
 let R = (0, C.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
   M = (0, C.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
   L = (0, C.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
@@ -46,7 +46,7 @@ let R = (0, C.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
       categoryListRef: a,
       firstStandardStickerCategoryOffsetTop: r,
       setShouldRenderShortcut: c
-    } = e, p = (0, u.useAnalyticsContext)(), g = (0, f.useExpressionPickerStore)(e => "" !== e.searchQuery), C = i.useCallback((e, a, r) => {
+    } = e, m = (0, u.useAnalyticsContext)(), g = (0, f.useExpressionPickerStore)(e => "" !== e.searchQuery), C = i.useCallback((e, a, r) => {
       var u, c;
       let f;
       let C = (null === (u = n[0]) || void 0 === u ? void 0 : u.type) === I.StickerCategoryTypes.FAVORITE,
@@ -96,16 +96,16 @@ let R = (0, C.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         k = null != D && U.type === I.StickerCategoryTypes.GUILD && D.type !== I.StickerCategoryTypes.GUILD,
         w = U.type === I.StickerCategoryTypes.PACK,
         F = "",
-        G = null;
+        B = null;
       if (U.type === I.StickerCategoryTypes.GUILD || U.type === I.StickerCategoryTypes.EMPTY_GUILD_UPSELL) {
-        let e = m.default.getGuild(U.id);
-        null != e && (f = e.id, F = e.name, G = (0, l.jsx)(d.default, {
+        let e = p.default.getGuild(U.id);
+        null != e && (f = e.id, F = e.name, B = (0, l.jsx)(d.default, {
           guild: e,
           isSelected: j
         }))
       } else if (w) {
         let e = v.default.getStickerPack(U.id);
-        null != e && (F = e.name, G = (0, l.jsx)(y.default, {
+        null != e && (F = e.name, B = (0, l.jsx)(N.default, {
           disableAnimation: !j || g,
           size: M,
           sticker: (0, _.getStickerPackPreviewSticker)(e)
@@ -129,20 +129,20 @@ let R = (0, C.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
               }),
               onClick: () => {
                 U.type === I.StickerCategoryTypes.PACK && S.default.track(A.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
-                  location: null == p ? void 0 : p.location,
-                  tab: N.ExpressionPickerViewType.STICKER,
+                  location: null == m ? void 0 : m.location,
+                  tab: y.ExpressionPickerViewType.STICKER,
                   sticker_pack_id: U.id,
                   guild_id: f
                 }), r()
               },
-              children: G
+              children: B
             })
           })
         }), k ? (0, l.jsx)("hr", {
           className: O.guildCategorySeparator
         }, "separator") : null]
       }, U.id)
-    }, [t, p, g, n]), T = i.useCallback((e, t) => t ? D : 0, []), R = i.useCallback((e, t) => {
+    }, [t, m, g, n]), T = i.useCallback((e, t) => t ? D : 0, []), R = i.useCallback((e, t) => {
       let l = n[t],
         i = n[t + 1],
         a = null != i && l.type === I.StickerCategoryTypes.GUILD && i.type !== I.StickerCategoryTypes.GUILD;
@@ -166,7 +166,7 @@ var F = e => {
     stickersListRef: t,
     channel: n
   } = e, a = i.useRef(null), [r, u] = i.useState(!0), d = c.StickerPickerStore.useStore(e => e.activeCategoryIndex), f = (0, T.useFilteredStickerPackCategories)(n), {
-    firstStandardStickerCategoryIndex: m,
+    firstStandardStickerCategoryIndex: p,
     firstStandardStickerCategoryOffsetTop: h,
     guildCategoryCount: E,
     hasFirstPartyStickerPacks: S
@@ -198,11 +198,11 @@ var F = e => {
     categoryListRef: a,
     firstStandardStickerCategoryOffsetTop: h,
     setShouldRenderShortcut: u
-  }), y = i.useCallback(e => {
+  }), N = i.useCallback(e => {
     var t;
-    e(m), null === (t = a.current) || void 0 === t || t.scrollTo(h)
-  }, [m, h]);
-  return (0, l.jsx)(p.default, {
+    e(p), null === (t = a.current) || void 0 === t || t.scrollTo(h)
+  }, [p, h]);
+  return (0, l.jsx)(m.default, {
     className: O.categoryList,
     categoryListRef: a,
     expressionsListRef: t,
@@ -217,7 +217,7 @@ var F = e => {
       className: s(O.standardStickerShortcut, {
         [O.invisibleShortcut]: !r
       }),
-      onClick: () => y(e),
+      onClick: () => N(e),
       children: (0, l.jsx)(g.default, {
         height: 24,
         width: 24

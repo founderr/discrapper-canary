@@ -15,7 +15,7 @@ var a = n("37983"),
   o = n("769846"),
   u = n("159885"),
   d = n("874293"),
-  c = n("976143");
+  c = n("879104");
 let f = (0, u.cssValueToNumber)(o.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
   E = Object.freeze({
     BLACK: c.black,

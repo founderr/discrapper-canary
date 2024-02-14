@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return A
   },
   CustomEmoji: function() {
-    return N
+    return y
   },
   TextMention: function() {
     return x
@@ -42,8 +42,8 @@ var i = n("446674"),
   d = n("361572"),
   c = n("82300"),
   f = n("235004"),
-  p = n("42203"),
-  m = n("305961"),
+  m = n("42203"),
+  p = n("305961"),
   h = n("102985"),
   E = n("697218"),
   g = n("666897"),
@@ -52,8 +52,8 @@ var i = n("446674"),
   T = n("158998"),
   v = n("680894"),
   I = n("782340"),
-  _ = n("503241"),
-  y = n("632215");
+  _ = n("918841"),
+  N = n("919163");
 
 function A(e) {
   let {
@@ -72,7 +72,7 @@ function A(e) {
   })
 }
 
-function N(e) {
+function y(e) {
   let {
     emoji: t
   } = e;
@@ -94,7 +94,7 @@ function x(e) {
     text: t,
     channelId: n,
     guildId: i
-  } = e, a = m.default.getGuild(i), s = p.default.getChannel(n), r = (0, u.useClydeEnabled)(a, s), o = r && "@Clyde" === t ? v.CLYDE_AI_MENTION_COLOR : null;
+  } = e, a = p.default.getGuild(i), s = m.default.getChannel(n), r = (0, u.useClydeEnabled)(a, s), o = r && "@Clyde" === t ? v.CLYDE_AI_MENTION_COLOR : null;
   return (0, l.jsx)(g.default, {
     color: o,
     children: t
@@ -146,8 +146,8 @@ function R(e) {
   let {
     id: t,
     guildId: n
-  } = e, s = (0, i.useStateFromStores)([m.default], () => {
-    let e = m.default.getGuild(n);
+  } = e, s = (0, i.useStateFromStores)([p.default], () => {
+    let e = p.default.getGuild(n);
     return null == e ? null : e.roles[t]
   }), r = (0, i.useStateFromStores)([o.default], () => o.default.roleStyle);
   if (null == s) return (0, l.jsx)("span", {
@@ -167,7 +167,7 @@ function R(e) {
 function M(e) {
   let {
     id: t
-  } = e, n = (0, i.useStateFromStores)([p.default], () => p.default.getChannel(t)), a = I.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
+  } = e, n = (0, i.useStateFromStores)([m.default], () => m.default.getChannel(t)), a = I.default.Messages.UNKNOWN_CHANNEL, s = "text", r = !0;
   if (null != n) {
     var o;
     a = (0, d.canViewChannel)(n) ? n.name : I.default.Messages.NO_ACCESS, s = (0, d.canViewChannel)(n) ? null !== (o = (0, S.getMentionIconType)(n)) && void 0 !== o ? o : "text" : "locked", r = (0, c.isChannelTypeMentionable)(n.type)
@@ -220,7 +220,7 @@ function j(e) {
     timestamp: t
   } = e;
   return (0, l.jsx)("span", {
-    className: y.timestamp,
+    className: N.timestamp,
     children: t.formatted
   })
 }

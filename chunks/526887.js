@@ -33,7 +33,7 @@ function c(e) {
     baseConfig: c,
     addClickListener: E,
     removeClickListener: _
-  } = e, T = (0, a.useConfettiCannon)(s, n), I = (0, l.default)([o.default], () => o.default.useReducedMotion), f = r.useMemo(() => I ? u : {
+  } = e, T = (0, a.useConfettiCannon)(s, n), I = (0, l.default)([o.default], () => o.default.useReducedMotion), N = r.useMemo(() => I ? u : {
     confettiCanvas: s,
     cannon: T,
     createConfetti: (e, t) => T.createConfetti({
@@ -78,7 +78,7 @@ function c(e) {
     removeClickListener: _
   }, [E, c, T, s, I, _]);
   return (0, i.jsx)(d.Provider, {
-    value: f,
+    value: N,
     children: t
   })
 }

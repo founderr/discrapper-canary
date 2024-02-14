@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("884691"),
-  o = n("29150"),
-  a = n("119076");
+  a = n("29150"),
+  o = n("119076");
 
 function i() {
-  var e = (0, a.useDragDropManager)();
+  var e = (0, o.useDragDropManager)();
   return (0, r.useMemo)(function() {
-    return new o.DragSourceMonitorImpl(e)
+    return new a.DragSourceMonitorImpl(e)
   }, [e])
 }

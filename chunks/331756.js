@@ -18,7 +18,7 @@ var s = n("37983"),
   g = n("401059"),
   m = n("289382"),
   h = n("49111"),
-  v = n("606474");
+  v = n("611787");
 let E = (0, f.cssValueToNumber)(d.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
   p = 1 / 120;
 class y extends i.Component {

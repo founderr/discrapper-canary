@@ -1,60 +1,60 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return T
+    return m
   }
 });
-var r = l("37983");
-l("884691");
-var a = l("65597"),
-  n = l("77078"),
-  s = l("535013"),
-  i = l("915639"),
-  o = l("476263"),
-  u = l("153769"),
-  d = l("299039"),
-  c = l("782340"),
-  f = l("334099");
+var l = n("37983");
+n("884691");
+var i = n("65597"),
+  a = n("77078"),
+  s = n("535013"),
+  r = n("915639"),
+  o = n("476263"),
+  u = n("153769"),
+  d = n("299039"),
+  c = n("782340"),
+  f = n("687941");
 
-function T(e) {
+function m(e) {
   let {
     userId: t,
-    headingClassName: l,
-    textClassName: T,
+    headingClassName: n,
+    textClassName: m,
     guild: p,
-    guildMember: m
-  } = e, E = (0, a.default)([i.default], () => i.default.locale), P = null != p && null != m;
-  return (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(n.Heading, {
+    guildMember: h
+  } = e, E = (0, i.default)([r.default], () => r.default.locale), g = null != p && null != h;
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsx)(a.Heading, {
       variant: "eyebrow",
-      className: l,
-      children: P ? c.default.Messages.USER_PROFILE_MEMBER_SINCE : c.default.Messages.USER_PROFILE_DISCORD_MEMBER_SINCE
-    }), (0, r.jsxs)("div", {
+      className: n,
+      children: g ? c.default.Messages.USER_PROFILE_MEMBER_SINCE : c.default.Messages.USER_PROFILE_DISCORD_MEMBER_SINCE
+    }), (0, l.jsxs)("div", {
       className: f.memberSinceContainer,
-      children: [P && (0, r.jsx)(n.Tooltip, {
+      children: [g && (0, l.jsx)(a.Tooltip, {
         text: c.default.Messages.DISCORD_NAME,
-        children: e => (0, r.jsx)(u.default, {
+        children: e => (0, l.jsx)(u.default, {
           ...e,
           className: f.discordIcon
         })
-      }), (0, r.jsx)(n.Text, {
-        className: T,
+      }), (0, l.jsx)(a.Text, {
+        className: m,
         variant: "text-sm/normal",
         children: (0, s.getCreatedAtDate)(d.default.extractTimestamp(t), E)
-      }), null != p && null != m && (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)("div", {
+      }), null != p && null != h && (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)("div", {
           className: f.divider
-        }), (0, r.jsx)(n.Tooltip, {
+        }), (0, l.jsx)(a.Tooltip, {
           text: p.name,
-          children: e => (0, r.jsx)(o.default, {
+          children: e => (0, l.jsx)(o.default, {
             ...e,
             guild: p,
             size: o.default.Sizes.SMOL
           })
-        }), (0, r.jsx)(n.Text, {
-          className: T,
+        }), (0, l.jsx)(a.Text, {
+          className: m,
           variant: "text-sm/normal",
-          children: (0, s.getCreatedAtDate)(m.joinedAt, E)
+          children: (0, s.getCreatedAtDate)(h.joinedAt, E)
         })]
       })]
     })]

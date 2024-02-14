@@ -1,12 +1,12 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   shouldDisableUserPresenceInChannel: function() {
-    return a
+    return i
   }
 });
-var r = l("42203");
+var l = n("42203");
 
-function a(e, t) {
-  let l = r.default.getChannel(t);
-  return null != l && e.bot && l.isPrivate() && null == l.rawRecipients.find(t => t.id === e.id)
+function i(e, t) {
+  let n = l.default.getChannel(t);
+  return null != n && e.bot && n.isPrivate() && null == n.rawRecipients.find(t => t.id === e.id)
 }

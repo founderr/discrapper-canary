@@ -7,31 +7,31 @@ function r(e) {
   }
 }
 
-function o(e, t) {
+function a(e, t) {
   return e.filter(function(e) {
     return e !== t
   })
 }
 
-function a(e, t) {
+function o(e, t) {
   var n = new Set,
     r = function(e) {
       return n.add(e)
     };
   e.forEach(r), t.forEach(r);
-  var o = [];
+  var a = [];
   return n.forEach(function(e) {
-    return o.push(e)
-  }), o
+    return a.push(e)
+  }), a
 }
 n.r(t), n.d(t, {
   memoize: function() {
     return r
   },
   without: function() {
-    return o
+    return a
   },
   union: function() {
-    return a
+    return o
   }
 }), n("222007"), n("424973")

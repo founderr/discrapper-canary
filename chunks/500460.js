@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var l = n("884691"),
-  a = n("65597"),
-  s = n("305961"),
-  i = n("385976"),
+  i = n("65597"),
+  a = n("305961"),
+  s = n("385976"),
   r = n("858619"),
   o = n("101263"),
   u = n("49111");
@@ -29,23 +29,23 @@ let d = (e, t, n) => {
     } = e, {
       joinedEmojiSourceGuildRecord: r,
       emoji: c
-    } = (0, a.useStateFromStoresObject)([i.default, s.default], () => d(i.default, s.default, t)), m = null != r, f = null != r && r.hasFeature(u.GuildFeatures.DISCOVERABLE), h = (!m || f) && null != t, [p, g] = l.useState(h), E = null != r ? o.default.createFromGuildRecord(r) : null, [C, v] = l.useState(E);
+    } = (0, i.useStateFromStoresObject)([s.default, a.default], () => d(s.default, a.default, t)), f = null != r, m = null != r && r.hasFeature(u.GuildFeatures.DISCOVERABLE), p = (!f || m) && null != t, [h, E] = l.useState(p), g = null != r ? o.default.createFromGuildRecord(r) : null, [S, C] = l.useState(g);
     return l.useEffect(() => {
       null == n || n();
       let e = async () => {
         let e = null != t ? await o.default.getGuildFromEmojiId(t) : null;
-        v(e), g(!1), null == n || n()
+        C(e), E(!1), null == n || n()
       };
-      if (h) {
+      if (p) {
         e();
         return
       }
       null == n || n()
-    }, [t, h]), {
-      expressionSourceGuild: C,
+    }, [t, p]), {
+      expressionSourceGuild: S,
       joinedEmojiSourceGuildRecord: r,
-      hasJoinedEmojiSourceGuild: m,
+      hasJoinedEmojiSourceGuild: f,
       emoji: c,
-      isFetching: p
+      isFetching: h
     }
   }

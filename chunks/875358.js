@@ -20,7 +20,7 @@ var a = n("37983"),
   C = n("780009"),
   I = n("49111"),
   S = n("782340"),
-  p = n("948063");
+  p = n("960245");
 class m extends s.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)

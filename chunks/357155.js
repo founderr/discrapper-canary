@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("424973");
 var r = n("344581"),
-  o = n("915717"),
-  a = n("882846"),
+  a = n("915717"),
+  o = n("882846"),
   i = n("526114"),
   s = n("650789"),
   c = n("125692");
@@ -52,8 +52,8 @@ function d() {
       })
     }),
     dragOffset: (0, r.reduce)(e.dragOffset, t),
-    refCount: (0, a.reduce)(e.refCount, t),
-    dragOperation: (0, o.reduce)(e.dragOperation, t),
+    refCount: (0, o.reduce)(e.refCount, t),
+    dragOperation: (0, a.reduce)(e.dragOperation, t),
     stateId: (0, s.reduce)(e.stateId)
   }
 }

@@ -1,6 +1,6 @@
 "use strict";
 
-function i(e) {
+function l(e) {
   return {
     id: e.id,
     filename: e.filename,
@@ -12,6 +12,6 @@ function i(e) {
 }
 n.r(t), n.d(t, {
   transformStoreAssetFromServer: function() {
-    return i
+    return l
   }
 })

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("240849"),
-  o = n("113581"),
-  a = n("564341");
+  a = n("113581"),
+  o = n("564341");
 
 function i(e) {
   let {
@@ -23,10 +23,10 @@ function i(e) {
   }), {
     labelProps: d,
     fieldProps: p
-  } = (0, o.useLabel)({
+  } = (0, a.useLabel)({
     ...e,
     labelElementType: "span"
-  }), f = ((t = (0, r.clamp)(t, n, i)) - n) / (i - n), h = (0, a.useNumberFormatter)(l);
+  }), f = ((t = (0, r.clamp)(t, n, i)) - n) / (i - n), h = (0, o.useNumberFormatter)(l);
   if (!c && !s) {
     let e = "percent" === l.style ? f : t;
     s = h.format(e)

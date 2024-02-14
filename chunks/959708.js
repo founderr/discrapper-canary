@@ -8,16 +8,16 @@ function r(e) {
   })(e)
 }
 
-function o(e) {
+function a(e) {
   var t = e.current;
   return null == t ? null : t.decoratedRef ? t.decoratedRef.current : t
 }
 n.r(t), n.d(t, {
   getDecoratedComponent: function() {
-    return o
+    return a
   },
   isRefable: function() {
-    return a
+    return o
   },
   checkDecoratorArguments: function() {
     return i
@@ -40,7 +40,7 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 
-function a(e) {
+function o(e) {
   var t, n, r;
   return (t = e) && t.prototype && "function" == typeof t.prototype.render || (null == (n = e) ? void 0 : null === (r = n.$$typeof) || void 0 === r ? void 0 : r.toString()) === "Symbol(react.forward_ref)"
 }

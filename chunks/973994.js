@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("240849"),
-  o = n("447259"),
-  a = n("884691"),
+  a = n("447259"),
+  o = n("884691"),
   i = n("195711");
 
 function s(e, t) {
@@ -14,12 +14,12 @@ function s(e, t) {
     role: n = "dialog"
   } = e, s = (0, r.useSlotId)();
   s = e["aria-label"] ? void 0 : s;
-  let c = (0, a.useRef)(!1);
-  return (0, a.useEffect)(() => {
+  let c = (0, o.useRef)(!1);
+  return (0, o.useEffect)(() => {
     if (t.current && !t.current.contains(document.activeElement)) {
-      (0, o.focusSafely)(t.current);
+      (0, a.focusSafely)(t.current);
       let e = setTimeout(() => {
-        document.activeElement === t.current && (c.current = !0, t.current && (t.current.blur(), (0, o.focusSafely)(t.current)), c.current = !1)
+        document.activeElement === t.current && (c.current = !0, t.current && (t.current.blur(), (0, a.focusSafely)(t.current)), c.current = !1)
       }, 500);
       return () => {
         clearTimeout(e)

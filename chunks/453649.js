@@ -18,12 +18,12 @@ var i = n("446674"),
   d = n("945956"),
   c = n("800762"),
   f = n("476263"),
-  p = n("368121"),
-  m = n("777003"),
+  m = n("368121"),
+  p = n("777003"),
   h = n("49111"),
   E = n("782340"),
-  g = n("814076"),
-  S = n("293773");
+  g = n("862939"),
+  S = n("463147");
 
 function C(e, t) {
   let n = (0, i.useStateFromStores)([c.default], () => {
@@ -47,7 +47,7 @@ function T(e) {
     onClose: r,
     color: o
   } = e, u = (0, i.useStateFromStores)([d.default], () => d.default.getChannelId() === n.id), c = u ? E.default.Messages.PROFILE_OPEN_VOICE_CHANNEL : n.isGuildStageVoice() ? E.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : E.default.Messages.PROFILE_JOIN_VOICE_CHANNEL;
-  return (0, l.jsxs)(m.default, {
+  return (0, l.jsxs)(p.default, {
     children: [(0, l.jsx)(a.Heading, {
       variant: "eyebrow",
       className: g.title,
@@ -62,7 +62,7 @@ function T(e) {
           guild: t
         }), (0, l.jsx)("div", {
           className: S.speakerIconContainer,
-          children: (0, l.jsx)(p.default, {
+          children: (0, l.jsx)(m.default, {
             className: S.speakerIcon
           })
         })]

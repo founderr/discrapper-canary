@@ -1,12 +1,12 @@
 n("854508"), n("222007"), n("843762"), e.exports = l;
 var r, Map = n("333222"),
-  o = n("151293"),
-  a = n("860860"),
+  a = n("151293"),
+  o = n("860860"),
   i = {};
 
 function s(e, t, n) {
-  var o;
-  return (i[t] ? o = i[t] : (o = r(t), i[t] = o), 2 == arguments.length) ? e[o] : (e[o] = n, n)
+  var a;
+  return (i[t] ? a = i[t] : (a = r(t), i[t] = a), 2 == arguments.length) ? e[a] : (e[a] = n, n)
 }
 
 function c() {
@@ -25,17 +25,17 @@ function l(e) {
 }
 
 function u(e, t, n, r) {
-  var o = n.value;
-  p(e, o) && (h(e, n), !s(e, "allowStale") && (o = void 0)), o && t.call(r, o.value, o.key, e)
+  var a = n.value;
+  p(e, a) && (h(e, n), !s(e, "allowStale") && (a = void 0)), a && t.call(r, a.value, a.key, e)
 }
 
 function d(e, t, n) {
   var r = s(e, "cache").get(t);
   if (r) {
-    var o = r.value;
-    p(e, o) ? (h(e, r), !s(e, "allowStale") && (o = void 0)) : n && s(e, "lruList").unshiftNode(r), o && (o = o.value)
+    var a = r.value;
+    p(e, a) ? (h(e, r), !s(e, "allowStale") && (a = void 0)) : n && s(e, "lruList").unshiftNode(r), a && (a = a.value)
   }
-  return o
+  return a
 }
 
 function p(e, t) {
@@ -60,8 +60,8 @@ function h(e, t) {
   }
 }
 
-function m(e, t, n, r, o) {
-  this.key = e, this.value = t, this.length = n, this.now = r, this.maxAge = o || 0
+function m(e, t, n, r, a) {
+  this.key = e, this.value = t, this.length = n, this.now = r, this.maxAge = a || 0
 }
 r = "function" == typeof Symbol ? function(e) {
   return Symbol.for(e)
@@ -134,7 +134,7 @@ r = "function" == typeof Symbol ? function(e) {
 }, l.prototype.reset = function() {
   s(this, "dispose") && s(this, "lruList") && s(this, "lruList").length && s(this, "lruList").forEach(function(e) {
     s(this, "dispose").call(this, e.key, e.value)
-  }, this), s(this, "cache", new Map), s(this, "lruList", new a), s(this, "length", 0)
+  }, this), s(this, "cache", new Map), s(this, "lruList", new o), s(this, "length", 0)
 }, l.prototype.dump = function() {
   return s(this, "lruList").map(function(e) {
     if (!p(this, e)) return {
@@ -151,30 +151,30 @@ r = "function" == typeof Symbol ? function(e) {
   var n = "LRUCache {",
     r = !1;
   s(this, "allowStale") && (n += "\n  allowStale: true", r = !0);
-  var a = s(this, "max");
-  a && a !== 1 / 0 && (r && (n += ","), n += "\n  max: " + o.inspect(a, t), r = !0);
+  var o = s(this, "max");
+  o && o !== 1 / 0 && (r && (n += ","), n += "\n  max: " + a.inspect(o, t), r = !0);
   var i = s(this, "maxAge");
-  i && (r && (n += ","), n += "\n  maxAge: " + o.inspect(i, t), r = !0);
+  i && (r && (n += ","), n += "\n  maxAge: " + a.inspect(i, t), r = !0);
   var l = s(this, "lengthCalculator");
-  l && l !== c && (r && (n += ","), n += "\n  length: " + o.inspect(s(this, "length"), t), r = !0);
+  l && l !== c && (r && (n += ","), n += "\n  length: " + a.inspect(s(this, "length"), t), r = !0);
   var u = !1;
   return s(this, "lruList").forEach(function(e) {
     u ? n += ",\n  " : (r && (n += ",\n"), u = !0, n += "\n  ");
-    var a = o.inspect(e.key).split("\n").join("\n  "),
+    var o = a.inspect(e.key).split("\n").join("\n  "),
       s = {
         value: e.value
       };
-    e.maxAge !== i && (s.maxAge = e.maxAge), l !== c && (s.length = e.length), p(this, e) && (s.stale = !0), s = o.inspect(s, t).split("\n").join("\n  "), n += a + " => " + s
+    e.maxAge !== i && (s.maxAge = e.maxAge), l !== c && (s.length = e.length), p(this, e) && (s.stale = !0), s = a.inspect(s, t).split("\n").join("\n  "), n += o + " => " + s
   }), (u || r) && (n += "\n"), n += "}"
 }, l.prototype.set = function(e, t, n) {
   var r = (n = n || s(this, "maxAge")) ? Date.now() : 0,
-    o = s(this, "lengthCalculator").call(this, t, e);
+    a = s(this, "lengthCalculator").call(this, t, e);
   if (s(this, "cache").has(e)) {
-    if (o > s(this, "max")) return h(this, s(this, "cache").get(e)), !1;
-    var a = s(this, "cache").get(e).value;
-    return s(this, "dispose") && s(this, "dispose").call(this, e, a.value), a.now = r, a.maxAge = n, a.value = t, s(this, "length", s(this, "length") + (o - a.length)), a.length = o, this.get(e), f(this), !0
+    if (a > s(this, "max")) return h(this, s(this, "cache").get(e)), !1;
+    var o = s(this, "cache").get(e).value;
+    return s(this, "dispose") && s(this, "dispose").call(this, e, o.value), o.now = r, o.maxAge = n, o.value = t, s(this, "length", s(this, "length") + (a - o.length)), o.length = a, this.get(e), f(this), !0
   }
-  var i = new m(e, t, o, r, n);
+  var i = new m(e, t, a, r, n);
   return i.length > s(this, "max") ? (s(this, "dispose") && s(this, "dispose").call(this, e, t), !1) : (s(this, "length", s(this, "length") + i.length), s(this, "lruList").unshift(i), s(this, "cache").set(e, s(this, "lruList").head), f(this), !0)
 }, l.prototype.has = function(e) {
   return !(!s(this, "cache").has(e) || p(this, s(this, "cache").get(e).value)) && !0
@@ -191,11 +191,11 @@ r = "function" == typeof Symbol ? function(e) {
   this.reset();
   for (var t = Date.now(), n = e.length - 1; n >= 0; n--) {
     var r = e[n],
-      o = r.e || 0;
-    if (0 === o) this.set(r.k, r.v);
+      a = r.e || 0;
+    if (0 === a) this.set(r.k, r.v);
     else {
-      var a = o - t;
-      a > 0 && this.set(r.k, r.v, a)
+      var o = a - t;
+      o > 0 && this.set(r.k, r.v, o)
     }
   }
 }, l.prototype.prune = function() {

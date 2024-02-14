@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var r = n("240849"),
-  o = n("884691"),
-  a = n("932165"),
+  a = n("884691"),
+  o = n("932165"),
   i = n("388032"),
   s = n("564341"),
   c = n("113581"),
@@ -28,7 +28,7 @@ function f(e, t, n) {
   } = e, v = (0, s.useCollator)({
     usage: "search",
     sensitivity: "base"
-  }), g = (0, o.useMemo)(() => u || new a.ListKeyboardDelegate(t.collection, t.disabledKeys, null, v), [u, t.collection, t.disabledKeys, v]), {
+  }), g = (0, a.useMemo)(() => u || new o.ListKeyboardDelegate(t.collection, t.disabledKeys, null, v), [u, t.collection, t.disabledKeys, v]), {
     menuTriggerProps: y,
     menuProps: b
   } = (0, l.useMenuTrigger)({
@@ -36,7 +36,7 @@ function f(e, t, n) {
     type: "listbox"
   }, t, n), {
     typeSelectProps: x
-  } = (0, a.useTypeSelect)({
+  } = (0, o.useTypeSelect)({
     keyboardDelegate: g,
     selectionManager: t.selectionManager,
     onTypeSelect(e) {
@@ -129,26 +129,26 @@ function h(e) {
   var t;
   let {
     state: n,
-    triggerRef: a,
+    triggerRef: o,
     label: s,
     name: c,
     isDisabled: l
-  } = e, f = (0, o.useRef)(null), {
+  } = e, f = (0, a.useRef)(null), {
     containerProps: h,
     inputProps: m,
     selectProps: v
   } = function(e, t, n) {
-    var o;
-    let a = p.get(t) || {},
+    var a;
+    let o = p.get(t) || {},
       {
         autoComplete: s,
-        name: c = a.name,
-        isDisabled: l = a.isDisabled
+        name: c = o.name,
+        isDisabled: l = o.isDisabled
       } = e,
       {
         validationBehavior: f,
         isRequired: h
-      } = a,
+      } = o,
       m = (0, i.useInteractionModality)(),
       {
         visuallyHiddenProps: v
@@ -177,27 +177,27 @@ function h(e) {
         disabled: l,
         required: "native" === f && h,
         name: c,
-        value: null !== (o = t.selectedKey) && void 0 !== o ? o : "",
+        value: null !== (a = t.selectedKey) && void 0 !== a ? a : "",
         onChange: e => t.setSelectedKey(e.target.value)
       }
     }
   }({
     ...e,
     selectRef: f
-  }, n, a);
-  return n.collection.size <= 300 ? o.createElement("div", {
+  }, n, o);
+  return n.collection.size <= 300 ? a.createElement("div", {
     ...h,
     "data-testid": "hidden-select-container"
-  }, o.createElement("input", m), o.createElement("label", null, s, o.createElement("select", {
+  }, a.createElement("input", m), a.createElement("label", null, s, a.createElement("select", {
     ...v,
     ref: f
-  }, o.createElement("option", null), [...n.collection.getKeys()].map(e => {
+  }, a.createElement("option", null), [...n.collection.getKeys()].map(e => {
     let t = n.collection.getItem(e);
-    if ("item" === t.type) return o.createElement("option", {
+    if ("item" === t.type) return a.createElement("option", {
       key: t.key,
       value: t.key
     }, t.textValue)
-  })))) : c ? o.createElement("input", {
+  })))) : c ? a.createElement("input", {
     type: "hidden",
     autoComplete: v.autoComplete,
     name: c,

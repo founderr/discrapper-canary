@@ -1,11 +1,11 @@
 "use strict";
 n("70102"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("115278"), n("222007"), n("370692"), n("667500"), n("453061"), n("477315"), n("527135"), n("426094"), n("332822"), n("659510"), n("990131"), n("781738");
 var r = SyntaxError,
-  o = Function,
-  a = TypeError,
+  a = Function,
+  o = TypeError,
   i = function(e) {
     try {
-      return o('"use strict"; return (' + e + ").constructor;")()
+      return a('"use strict"; return (' + e + ").constructor;")()
     } catch (e) {}
   },
   s = Object.getOwnPropertyDescriptor;
@@ -15,7 +15,7 @@ if (s) try {
   s = null
 }
 var c = function() {
-    throw new a
+    throw new o
   },
   l = s ? function() {
     try {
@@ -62,7 +62,7 @@ var c = function() {
     "%Float32Array%": "undefined" == typeof Float32Array ? void 0 : Float32Array,
     "%Float64Array%": "undefined" == typeof Float64Array ? void 0 : Float64Array,
     "%FinalizationRegistry%": "undefined" == typeof FinalizationRegistry ? void 0 : FinalizationRegistry,
-    "%Function%": o,
+    "%Function%": a,
     "%GeneratorFunction%": f,
     "%Int8Array%": "undefined" == typeof Int8Array ? void 0 : Int8Array,
     "%Int16Array%": "undefined" == typeof Int16Array ? void 0 : Int16Array,
@@ -93,7 +93,7 @@ var c = function() {
     "%SyntaxError%": r,
     "%ThrowTypeError%": l,
     "%TypedArray%": h,
-    "%TypeError%": a,
+    "%TypeError%": o,
     "%Uint8Array%": "undefined" == typeof Uint8Array ? void 0 : Uint8Array,
     "%Uint8ClampedArray%": "undefined" == typeof Uint8ClampedArray ? void 0 : Uint8ClampedArray,
     "%Uint16Array%": "undefined" == typeof Uint16Array ? void 0 : Uint16Array,
@@ -118,8 +118,8 @@ var g = function e(t) {
       var r = e("%AsyncGeneratorFunction%");
       r && (n = r.prototype)
     } else if ("%AsyncIteratorPrototype%" === t) {
-      var o = e("%AsyncGenerator%");
-      o && p && (n = p(o.prototype))
+      var a = e("%AsyncGenerator%");
+      a && p && (n = p(a.prototype))
     }
     return m[t] = n, n
   },
@@ -190,45 +190,45 @@ var g = function e(t) {
       n = C(e, -1);
     if ("%" === t && "%" !== n) throw new r("invalid intrinsic syntax, expected closing `%`");
     if ("%" === n && "%" !== t) throw new r("invalid intrinsic syntax, expected opening `%`");
-    var o = [];
+    var a = [];
     return D(e, P, function(e, t, n, r) {
-      o[o.length] = n ? D(r, E, "$1") : t || e
-    }), o
+      a[a.length] = n ? D(r, E, "$1") : t || e
+    }), a
   },
   M = function(e, t) {
-    var n, o = e;
-    if (x(y, o) && (o = "%" + (n = y[o])[0] + "%"), x(m, o)) {
-      var i = m[o];
-      if (i === f && (i = g(o)), void 0 === i && !t) throw new a("intrinsic " + e + " exists, but is not available. Please file an issue!");
+    var n, a = e;
+    if (x(y, a) && (a = "%" + (n = y[a])[0] + "%"), x(m, a)) {
+      var i = m[a];
+      if (i === f && (i = g(a)), void 0 === i && !t) throw new o("intrinsic " + e + " exists, but is not available. Please file an issue!");
       return {
         alias: n,
-        name: o,
+        name: a,
         value: i
       }
     }
     throw new r("intrinsic " + e + " does not exist!")
   };
 e.exports = function(e, t) {
-  if ("string" != typeof e || 0 === e.length) throw new a("intrinsic name must be a non-empty string");
-  if (arguments.length > 1 && "boolean" != typeof t) throw new a('"allowMissing" argument must be a boolean');
+  if ("string" != typeof e || 0 === e.length) throw new o("intrinsic name must be a non-empty string");
+  if (arguments.length > 1 && "boolean" != typeof t) throw new o('"allowMissing" argument must be a boolean');
   if (null === k(/^%?[^%]*%?$/, e)) throw new r("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
   var n = T(e),
-    o = n.length > 0 ? n[0] : "",
-    i = M("%" + o + "%", t),
+    a = n.length > 0 ? n[0] : "",
+    i = M("%" + a + "%", t),
     c = i.name,
     l = i.value,
     u = !1,
     d = i.alias;
-  d && (o = d[0], w(n, S([0, 1], d)));
+  d && (a = d[0], w(n, S([0, 1], d)));
   for (var p = 1, f = !0; p < n.length; p += 1) {
     var h = n[p],
       v = C(h, 0, 1),
       g = C(h, -1);
     if (('"' === v || "'" === v || "`" === v || '"' === g || "'" === g || "`" === g) && v !== g) throw new r("property names with quotes must have matching quotes");
-    if (("constructor" === h || !f) && (u = !0), o += "." + h, x(m, c = "%" + o + "%")) l = m[c];
+    if (("constructor" === h || !f) && (u = !0), a += "." + h, x(m, c = "%" + a + "%")) l = m[c];
     else if (null != l) {
       if (!(h in l)) {
-        if (!t) throw new a("base intrinsic for " + e + " exists, but the property is not available.");
+        if (!t) throw new o("base intrinsic for " + e + " exists, but the property is not available.");
         return
       }
       if (s && p + 1 >= n.length) {

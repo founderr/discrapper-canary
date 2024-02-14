@@ -11,10 +11,10 @@ n.r(t), n.d(t, {
   }
 }), n("70102"), n("424973"), n("370692"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("311790");
 var a = n("627445"),
-  r = n.n(a),
+  l = n.n(a),
   i = n("718517"),
-  l = n("305122"),
-  s = n("108391");
+  s = n("305122"),
+  r = n("108391");
 let u = new AudioContext({
   sampleRate: Math.min(new AudioContext().sampleRate, 48e3)
 });
@@ -30,10 +30,10 @@ async function d(e) {
     t.readAsDataURL(e)
   }, new Promise((e, n) => {
     let a = new FileReader,
-      r = () => {
-        a.removeEventListener("load", r), a.removeEventListener("error", n), e(a.result)
+      l = () => {
+        a.removeEventListener("load", l), a.removeEventListener("error", n), e(a.result)
       };
-    a.addEventListener("load", r), a.addEventListener("error", n), t(a)
+    a.addEventListener("load", l), a.addEventListener("error", n), t(a)
   }));
   if ("string" != typeof n) throw Error("Unexpected file type");
   return n
@@ -43,17 +43,17 @@ async function c(e) {
     readPromise: t,
     guildId: n,
     name: a,
-    volume: r,
+    volume: l,
     emojiId: i,
-    emojiName: s
+    emojiName: r
   } = e;
-  return (0, l.uploadSound)({
+  return (0, s.uploadSound)({
     guildId: n,
     name: a,
     sound: await t,
-    volume: r,
+    volume: l,
     emojiId: i,
-    emojiName: s
+    emojiName: r
   })
 }
 async function f(e) {
@@ -72,8 +72,8 @@ async function f(e) {
           n = e[1],
           a = [];
         for (let e = 0; e < t.length; e++) a.push(t[e]), a.push(n[e]);
-        let r = new Float32Array(a.length);
-        return r.set(a), r
+        let l = new Float32Array(a.length);
+        return l.set(a), l
       }
       throw Error("Only handles up to 2 channels")
     }(n),
@@ -85,9 +85,9 @@ async function f(e) {
       timestamp: 1e6 * e.duration,
       data: a
     }),
-    l = new AudioEncoder({
+    s = new AudioEncoder({
       output: function(n) {
-        r(null != n.duration, "Chunk duration must not be null");
+        l(null != n.duration, "Chunk duration must not be null");
         let a = n.duration / 1e6 * e.sampleRate,
           i = new Uint8Array(n.byteLength);
         n.copyTo(i), t.push({
@@ -99,12 +99,12 @@ async function f(e) {
         throw Error("Audio encoding error: ".concat(e.message))
       }
     });
-  l.configure({
+  s.configure({
     codec: "opus",
     sampleRate: e.sampleRate,
     numberOfChannels: e.numberOfChannels
-  }), l.encode(i), await l.flush();
-  let u = (0, s.default)(t, {
+  }), s.encode(i), await s.flush();
+  let u = (0, r.default)(t, {
     channelCount: e.numberOfChannels,
     inputSampleRate: e.sampleRate,
     outputGain: 0,
@@ -121,24 +121,24 @@ async function h(e, t) {
         startMs: n,
         endMs: a
       } = t, {
-        sampleRate: r,
-        numberOfChannels: l,
-        duration: s
-      } = e, o = s * i.default.Millis.SECOND, d = Math.min(a, o);
+        sampleRate: l,
+        numberOfChannels: s,
+        duration: r
+      } = e, o = r * i.default.Millis.SECOND, d = Math.min(a, o);
       if (0 === n && d === o) return e;
       let c = Math.floor(n / o * e.length),
         f = Math.floor(d / o * e.length),
-        h = u.createBuffer(l, f - c, r);
-      for (let t = 0; t < l; t++) {
+        h = u.createBuffer(s, f - c, l);
+      for (let t = 0; t < s; t++) {
         let n = h.getChannelData(t),
           a = e.getChannelData(t),
-          r = 0;
-        for (let e = c; e <= f; e++) n[r] = a[e], r++
+          l = 0;
+        for (let e = c; e <= f; e++) n[l] = a[e], l++
       }
       return h
     }(n, t),
-    r = await f(a);
-  return new File([r], "sound.ogg", {
+    l = await f(a);
+  return new File([l], "sound.ogg", {
     type: "audio/ogg"
   })
 }

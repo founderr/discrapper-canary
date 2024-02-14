@@ -1,115 +1,115 @@
 "use strict";
 n.r(t), n.d(t, {
   PurchaseHeader: function() {
-    return h
+    return E
   },
   BenefitsConfirmation: function() {
-    return _
+    return g
   },
   PurchaseConfirmation: function() {
-    return T
+    return S
   }
 });
-var i = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
+var i = n("77078"),
   a = n("834897"),
-  r = n("85336"),
-  s = n("159149"),
-  u = n("650484"),
-  o = n("945330"),
-  c = n("829805"),
-  d = n("425480"),
+  s = n("85336"),
+  r = n("159149"),
+  o = n("650484"),
+  u = n("945330"),
+  d = n("829805"),
+  c = n("425480"),
   f = n("782340"),
-  p = n("370184"),
-  I = n("137852"),
-  S = n("511117");
-let h = e => {
+  m = n("846039"),
+  p = n("137852"),
+  h = n("511117");
+let E = e => {
     let {
       step: t,
       onClose: n
-    } = e, s = (0, a.default)(d.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
-    return t === r.Step.CONFIRM || t === r.Step.BENEFITS ? (0, i.jsx)("div", {}) : (0, i.jsxs)("div", {
-      className: p.headerContainer,
-      children: [!s && (0, i.jsx)("div", {
-        className: p.headerImageContainer,
+    } = e, r = (0, a.default)(c.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
+    return t === s.Step.CONFIRM || t === s.Step.BENEFITS ? (0, l.jsx)("div", {}) : (0, l.jsxs)("div", {
+      className: m.headerContainer,
+      children: [!r && (0, l.jsx)("div", {
+        className: m.headerImageContainer,
         "aria-hidden": "true",
-        children: (0, i.jsx)("img", {
-          src: S,
+        children: (0, l.jsx)("img", {
+          src: h,
           alt: "",
-          className: p.headerImage
+          className: m.headerImage
         })
-      }), (0, i.jsx)(l.Clickable, {
-        className: p.closeContainer,
+      }), (0, l.jsx)(i.Clickable, {
+        className: m.closeContainer,
         onClick: () => n(),
         "aria-label": f.default.Messages.CLOSE,
-        children: (0, i.jsx)(o.default, {
-          className: p.closeIcon
+        children: (0, l.jsx)(u.default, {
+          className: m.closeIcon
         })
       })]
     })
   },
-  _ = e => {
+  g = e => {
     let {
       icon: t,
       storeListingBenefits: n,
-      skuBenefits: l,
+      skuBenefits: i,
       application: a,
-      title: r,
-      subtitle: s,
-      description: u
+      title: s,
+      subtitle: r,
+      description: o
     } = e;
-    return null == a ? null : (0, i.jsx)("div", {
-      className: p.confirmationContainer,
-      children: (0, i.jsxs)(c.ApplicationBenefitsModalContent, {
-        children: [(0, i.jsx)(c.ApplicationBenefitsModalIcon, {
+    return null == a ? null : (0, l.jsx)("div", {
+      className: m.confirmationContainer,
+      children: (0, l.jsxs)(d.ApplicationBenefitsModalContent, {
+        children: [(0, l.jsx)(d.ApplicationBenefitsModalIcon, {
           application: a,
           asset: t
-        }), (0, i.jsx)(c.ApplicationBenefitsModalHeading, {
-          children: r
-        }), (0, i.jsx)(c.ApplicationBenefitsModalDivider, {}), (0, i.jsx)(c.ApplicationBenefitsModalDescription, {
-          title: s,
-          description: u
-        }), (0, i.jsx)(c.ApplicationBenefitsModalBenefits, {
+        }), (0, l.jsx)(d.ApplicationBenefitsModalHeading, {
+          children: s
+        }), (0, l.jsx)(d.ApplicationBenefitsModalDivider, {}), (0, l.jsx)(d.ApplicationBenefitsModalDescription, {
+          title: r,
+          description: o
+        }), (0, l.jsx)(d.ApplicationBenefitsModalBenefits, {
           applicationId: a.id,
           storeListingBenefits: n,
-          skuBenefits: l
+          skuBenefits: i
         })]
       })
     })
   };
 
-function T(e) {
+function S(e) {
   let {
     tierName: t,
     onConfirm: n,
     subscription: a
   } = e;
-  return (0, i.jsxs)("div", {
-    className: p.purchaseConfirmation,
-    children: [(0, i.jsx)("img", {
-      src: I,
+  return (0, l.jsxs)("div", {
+    className: m.purchaseConfirmation,
+    children: [(0, l.jsx)("img", {
+      src: p,
       alt: "",
       width: 300,
       height: 126
-    }), (0, i.jsx)(l.Heading, {
-      className: p.confirmationTitle,
+    }), (0, l.jsx)(i.Heading, {
+      className: m.confirmationTitle,
       variant: "heading-xl/extrabold",
       color: "header-primary",
       children: f.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({
         tier: t
       })
-    }), (0, i.jsx)(l.Text, {
-      className: p.confirmationSubtitle,
+    }), (0, l.jsx)(i.Text, {
+      className: m.confirmationSubtitle,
       variant: "text-md/medium",
       color: "header-secondary",
       children: f.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
         timestamp: null == a ? void 0 : a.currentPeriodEnd
       })
-    }), (0, i.jsx)(u.PaymentPortalFooter, {
-      children: (0, i.jsx)(s.default, {
+    }), (0, l.jsx)(o.PaymentPortalFooter, {
+      children: (0, l.jsx)(r.default, {
         onPrimary: n,
-        primaryCTA: s.CTAType.CONTINUE,
+        primaryCTA: r.CTAType.CONTINUE,
         primaryText: f.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
       })
     })]

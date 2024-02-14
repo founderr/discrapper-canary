@@ -10,7 +10,7 @@ var l = n("37983"),
   s = n.n(a),
   r = n("600785"),
   o = n("587974"),
-  u = n("333380"),
+  u = n("205631"),
   d = e => {
     let {
       className: t,
@@ -19,8 +19,8 @@ var l = n("37983"),
       width: d = 32,
       height: c = 32,
       shouldAnimate: f = !0,
-      isLocked: p = !1
-    } = e, [m, h] = i.useState(!1), E = n.getIconURL(32, f && a), g = () => h(!0), S = () => h(!1);
+      isLocked: m = !1
+    } = e, [p, h] = i.useState(!1), E = n.getIconURL(32, f && a), g = () => h(!0), S = () => h(!1);
     return (0, l.jsxs)("div", {
       onFocus: g,
       onBlur: S,
@@ -28,7 +28,7 @@ var l = n("37983"),
       onMouseLeave: S,
       children: [(0, l.jsx)(o.default, {
         className: s(u.mask, t),
-        mask: a || m ? o.MaskIDs.SQUIRCLE : o.MaskIDs.AVATAR_DEFAULT,
+        mask: a || p ? o.MaskIDs.SQUIRCLE : o.MaskIDs.AVATAR_DEFAULT,
         width: d,
         height: c,
         children: null == E ? (0, l.jsx)("div", {
@@ -42,7 +42,7 @@ var l = n("37983"),
           src: E,
           className: u.guildIcon
         })
-      }), p ? (0, l.jsx)("div", {
+      }), m ? (0, l.jsx)("div", {
         className: u.categoryItemLockIconContainer,
         children: (0, l.jsx)(r.default, {
           width: 10,

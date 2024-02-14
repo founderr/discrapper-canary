@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var r = n("866227"),
-  i = n.n(r),
+var i = n("866227"),
+  r = n.n(i),
   l = n("446674"),
   a = n("521012"),
   s = n("324878"),
@@ -19,14 +19,14 @@ function d() {
   let e = (0, u.usePremiumTrialOffer)(),
     t = (0, s.useHasActiveTrial)(),
     n = (0, o.usePremiumDiscountOffer)(),
-    r = c();
-  return null != e || t || null != n || r
+    i = c();
+  return null != e || t || null != n || i
 }
 let c = () => {
   var e, t;
   let n = (0, l.useStateFromStores)([a.default], () => a.default.getPremiumTypeSubscription()),
-    r = null == n ? void 0 : null === (e = n.metadata) || void 0 === e ? void 0 : e.nitro_likelihood_discount_expires_at,
+    i = null == n ? void 0 : null === (e = n.metadata) || void 0 === e ? void 0 : e.nitro_likelihood_discount_expires_at,
     s = null == n ? void 0 : null === (t = n.metadata) || void 0 === t ? void 0 : t.nitro_reactivation_discount_expires_at,
-    o = null != r ? r : s;
-  return null != o && i(Date.now()) <= i(o)
+    o = null != i ? i : s;
+  return null != o && r(Date.now()) <= r(o)
 }

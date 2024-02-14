@@ -1,101 +1,101 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
-}), s("222007");
-var n = s("37983"),
-  l = s("884691"),
-  o = s("907002"),
-  r = s("669491"),
-  i = s("77078"),
-  a = s("659500"),
-  u = s("49111"),
-  c = s("782340"),
-  d = s("317404"),
-  E = function(e) {
+}), n("222007");
+var r = n("37983"),
+  i = n("884691"),
+  s = n("907002"),
+  a = n("669491"),
+  l = n("77078"),
+  o = n("659500"),
+  u = n("49111"),
+  c = n("782340"),
+  d = n("645780"),
+  f = function(e) {
     var t;
     let {
-      message: s,
-      errorMessage: E,
-      submitting: f,
-      onReset: C,
-      onSave: _,
+      message: n,
+      errorMessage: f,
+      submitting: E,
+      onReset: _,
+      onSave: T,
       onSaveText: h,
       onResetText: I,
-      onSaveButtonColor: N,
+      onSaveButtonColor: S,
       disabled: p,
-      saveButtonTooltip: g
-    } = e, R = l.useRef(null), [{
-      spring: T
-    }, m] = (0, o.useSpring)(() => ({
+      saveButtonTooltip: N
+    } = e, C = i.useRef(null), [{
+      spring: A
+    }, v] = (0, s.useSpring)(() => ({
       spring: 0
     }));
-    l.useEffect(() => {
+    i.useEffect(() => {
       function e() {
-        m({
+        v({
           spring: 1,
-          config: o.config.gentle
-        }), m({
+          config: s.config.gentle
+        }), v({
           spring: 0,
-          config: o.config.gentle,
+          config: s.config.gentle,
           delay: 1e3
         })
       }
-      return a.ComponentDispatch.subscribe(u.ComponentActions.EMPHASIZE_NOTICE, e), () => {
-        a.ComponentDispatch.unsubscribe(u.ComponentActions.EMPHASIZE_NOTICE, e)
+      return o.ComponentDispatch.subscribe(u.ComponentActions.EMPHASIZE_NOTICE, e), () => {
+        o.ComponentDispatch.unsubscribe(u.ComponentActions.EMPHASIZE_NOTICE, e)
       }
-    }, [m]);
-    let L = T.to({
+    }, [v]);
+    let m = A.to({
         range: [0, 1],
-        output: [(0, i.useToken)(r.default.colors.TEXT_NORMAL).hex(), (0, i.useToken)(r.default.unsafe_rawColors.WHITE_500).hex()]
+        output: [(0, l.useToken)(a.default.colors.TEXT_NORMAL).hex(), (0, l.useToken)(a.default.unsafe_rawColors.WHITE_500).hex()]
       }),
-      x = T.to({
+      R = A.to({
         range: [0, 1],
-        output: [(0, i.useToken)(r.default.colors.BACKGROUND_FLOATING).hex(), (0, i.useToken)(r.default.colors.STATUS_DANGER).hex()]
+        output: [(0, l.useToken)(a.default.colors.BACKGROUND_FLOATING).hex(), (0, l.useToken)(a.default.colors.STATUS_DANGER).hex()]
       }),
-      v = (0, i.useToken)(r.default.colors.TEXT_DANGER).hex();
-    return (0, n.jsx)(o.animated.div, {
+      g = (0, l.useToken)(a.default.colors.TEXT_DANGER).hex();
+    return (0, r.jsx)(s.animated.div, {
       className: d.container,
       style: {
-        backgroundColor: x
+        backgroundColor: R
       },
-      children: (0, n.jsx)("div", {
+      children: (0, r.jsx)("div", {
         className: d.flexContainer,
-        ref: R,
-        children: (0, n.jsxs)(i.FocusRingScope, {
-          containerRef: R,
-          children: [(0, n.jsx)("div", {
+        ref: C,
+        children: (0, r.jsxs)(l.FocusRingScope, {
+          containerRef: C,
+          children: [(0, r.jsx)("div", {
             className: d.shrinkingContainer,
-            children: (0, n.jsx)(o.animated.div, {
+            children: (0, r.jsx)(s.animated.div, {
               className: d.message,
               style: {
-                color: null != E ? v : L
+                color: null != f ? g : m
               },
-              children: null !== (t = null != E ? E : s) && void 0 !== t ? t : c.default.Messages.SETTINGS_NOTICE_MESSAGE
+              children: null !== (t = null != f ? f : n) && void 0 !== t ? t : c.default.Messages.SETTINGS_NOTICE_MESSAGE
             })
-          }), (0, n.jsxs)("div", {
+          }), (0, r.jsxs)("div", {
             className: d.actions,
-            children: [null != C && (0, n.jsx)(i.Button, {
+            children: [null != _ && (0, r.jsx)(l.Button, {
               className: d.resetButton,
-              size: i.Button.Sizes.SMALL,
-              color: i.Button.Colors.PRIMARY,
-              look: i.Button.Looks.LINK,
-              onClick: C,
-              children: (0, n.jsx)(o.animated.span, {
+              size: l.Button.Sizes.SMALL,
+              color: l.Button.Colors.PRIMARY,
+              look: l.Button.Looks.LINK,
+              onClick: _,
+              children: (0, r.jsx)(s.animated.span, {
                 style: {
-                  color: L
+                  color: m
                 },
                 children: null != I ? I : c.default.Messages.RESET
               })
-            }), null != _ ? (0, n.jsx)(i.Tooltip, {
-              text: g,
-              children: e => (0, n.jsx)(i.Button, {
-                size: i.Button.Sizes.SMALL,
-                color: null != N ? N : i.Button.Colors.GREEN,
-                submitting: f,
+            }), null != T ? (0, r.jsx)(l.Tooltip, {
+              text: N,
+              children: e => (0, r.jsx)(l.Button, {
+                size: l.Button.Sizes.SMALL,
+                color: null != S ? S : l.Button.Colors.GREEN,
+                submitting: E,
                 disabled: p,
-                onClick: _,
+                onClick: T,
                 ...e,
                 children: null != h ? h : c.default.Messages.SAVE_CHANGES
               })

@@ -14,7 +14,7 @@ var n = s("446674"),
   d = s("119052"),
   u = s("49111"),
   c = s("782340"),
-  S = s("180437");
+  S = s("824905");
 
 function E() {
   let e = (0, n.useStateFromStores)([r.default], () => r.default.getSettings().storageLocation);

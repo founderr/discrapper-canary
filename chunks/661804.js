@@ -21,7 +21,7 @@ var a, s = n("37983"),
   S = n("129215"),
   p = n("49111"),
   m = n("492249"),
-  T = n("677654");
+  T = n("424902");
 a = class extends l.PureComponent {
   componentDidMount() {
     d.setHomeLink(p.Routes.APPLICATION_LIBRARY), (0, h.deepLinkRouteIfLanded)(m.RPCDeepLinks.LIBRARY), u.default.wait(() => (0, c.fetchBranches)()), (0, f.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)

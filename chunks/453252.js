@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MAX_IMAGE_UPLOAD_FILESIZE_BYTES: function() {
-    return r
+    return i
   }
 });
-let r = 10485760
+let i = 10485760

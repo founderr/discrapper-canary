@@ -16,8 +16,8 @@ var a = n("37983"),
   f = n("109507"),
   E = n("49111"),
   h = n("782340"),
-  _ = n("291273"),
-  C = n("926622");
+  _ = n("450552"),
+  C = n("890957");
 let I = d.default.getArticleURL(E.HelpdeskArticles.VERIFICATION_FAQ);
 class S extends s.PureComponent {
   renderFields() {

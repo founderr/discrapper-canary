@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return N
   }
 });
 var l = n("37983"),
@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("685665"),
   c = n("154889"),
   f = n("917247"),
-  p = n("956597"),
-  m = n("599110"),
+  m = n("956597"),
+  p = n("599110"),
   h = n("256860"),
   E = n("364685"),
   g = n("41170"),
@@ -24,36 +24,36 @@ var l = n("37983"),
   T = n("49111"),
   v = n("646718"),
   I = n("782340"),
-  _ = n("817028");
+  _ = n("192465");
 
-function y(e) {
+function N(e) {
   var t, n, a;
   let {
-    className: y,
+    className: N,
     onClose: A
   } = e;
   (0, h.useFetchStickerPacks)();
   let {
-    analyticsLocations: N
+    analyticsLocations: y
   } = (0, d.default)(u.default.EMPTY_STATE), x = (0, r.useStateFromStoresArray)([E.default], () => C.EMPTY_STATE_STICKERS.map(e => E.default.getStickerById(e)));
   i.useEffect(() => {
-    m.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    p.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: v.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
       source: {
         section: T.AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL
       },
-      location_stack: N
+      location_stack: y
     })
-  }, [N]);
+  }, [y]);
   let O = (0, f.usePremiumTrialOffer)(),
     R = (0, c.usePremiumDiscountOffer)(),
     M = null != O || null != R,
     L = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === v.PremiumSubscriptionSKUs.TIER_0;
   return (0, l.jsxs)("div", {
-    className: s(_.emptyState, y, {
+    className: s(_.emptyState, N, {
       [_.unifyTrialUpsell]: M
     }),
-    children: [M ? (0, l.jsx)(p.default, {
+    children: [M ? (0, l.jsx)(m.default, {
       discountOffer: R,
       trialOffer: O,
       onClose: A,

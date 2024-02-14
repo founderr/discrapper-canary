@@ -17,7 +17,7 @@ var l = s("37983"),
   h = s("843455"),
   N = s("53452"),
   m = s("792788"),
-  g = s("641282");
+  g = s("161934");
 let k = "Footer Navigation",
   f = {
     BLURPLE: "Blurple",

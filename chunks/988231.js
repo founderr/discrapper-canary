@@ -21,7 +21,7 @@ var a = s("37983"),
   _ = s("49111"),
   g = s("353927"),
   h = s("782340"),
-  N = s("926622");
+  N = s("890957");
 async function I() {
   let e = await d.default.fileManager.getModulePath(),
     t = d.default.fileManager.join(e, "discord_voice");

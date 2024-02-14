@@ -13,7 +13,7 @@ var a, l, n = A("37983"),
   i = A("191814"),
   o = A("423487"),
   d = A("782340"),
-  u = A("55472");
+  u = A("41387");
 (l = a || (a = {})).DANGER = "danger", l.WARNING = "warning";
 
 function c(e) {

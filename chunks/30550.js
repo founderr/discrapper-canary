@@ -24,12 +24,12 @@ function r(e, t, n) {
         s = u[t + 1],
         r = (0, l.getPointFromPosition)(e, o, d, n.start),
         f = (0, l.getPointFromPosition)(e, o, d, n.start + n.text.length),
-        p = {
+        m = {
           anchor: r,
           focus: f
         },
-        m = i.EditorUtils.nodes(e, {
-          at: p,
+        p = i.EditorUtils.nodes(e, {
+          at: m,
           mode: "lowest",
           voids: !1
         }),
@@ -39,13 +39,13 @@ function r(e, t, n) {
           for (let e of s.attributes) h["before_".concat(e)] = !0;
         else if ("syntaxAfter" === e && null != a)
         for (let e of a.attributes) h["after_".concat(e)] = !0;
-      for (let [t, n] of m) {
+      for (let [t, n] of p) {
         if (i.EditorUtils.isVoid(e, t)) continue;
         let l = {
           anchor: i.EditorUtils.start(e, n),
           focus: i.EditorUtils.end(e, n)
         };
-        i.PointUtils.isBefore(l.anchor, p.anchor) && (l.anchor = p.anchor), i.PointUtils.isAfter(l.focus, p.focus) && (l.focus = p.focus), c.push({
+        i.PointUtils.isBefore(l.anchor, m.anchor) && (l.anchor = m.anchor), i.PointUtils.isAfter(l.focus, m.focus) && (l.focus = m.focus), c.push({
           ...h,
           ...l
         })

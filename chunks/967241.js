@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return _
   },
   closeThreadSidebar: function() {
-    return y
+    return N
   },
   closeAndClearThreadSidebar: function() {
     return A
@@ -23,8 +23,8 @@ var l = n("627445"),
   d = n("716241"),
   c = n("565298"),
   f = n("393414"),
-  p = n("144491"),
-  m = n("845579"),
+  m = n("144491"),
+  p = n("845579"),
   h = n("474643"),
   E = n("18494"),
   g = n("800762"),
@@ -36,16 +36,16 @@ var l = n("627445"),
 function I(e, t, n) {
   u.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE);
   let l = !s.isEmpty(g.default.getVoiceStatesForChannel(e.id));
-  if (t || !m.UseThreadSidebar.getSetting() || __OVERLAY__ || l) {
+  if (t || !p.UseThreadSidebar.getSetting() || __OVERLAY__ || l) {
     r.default.dispatch({
       type: "SIDEBAR_CLOSE",
       baseChannelId: e.parent_id
-    }), null != n ? (0, p.transitionToThread)(e, n) : (0, p.transitionToChannel)(e.id);
+    }), null != n ? (0, m.transitionToThread)(e, n) : (0, m.transitionToChannel)(e.id);
     return
   }
   i(null != e.parent_id, "all threads must have parents");
   let a = E.default.getChannelId();
-  e.parent_id !== a && !(0, v.isGuildHomeChannel)(a) && (0, p.transitionToChannel)(e.parent_id), (0, f.transitionTo)(T.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, v.isGuildHomeChannel)(a) ? v.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? C.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+  e.parent_id !== a && !(0, v.isGuildHomeChannel)(a) && (0, m.transitionToChannel)(e.parent_id), (0, f.transitionTo)(T.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, v.isGuildHomeChannel)(a) ? v.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? C.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
     S.ComponentDispatch.dispatch(T.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: e.id
     })
@@ -57,7 +57,7 @@ function _(e, t, n) {
     location: n,
     channel_id: e.id,
     guild_id: e.guild_id
-  }), u.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE), E.default.getChannelId() !== e.id && (0, p.transitionToChannel)(e.id);
+  }), u.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE), E.default.getChannelId() !== e.id && (0, m.transitionToChannel)(e.id);
   let l = h.default.getDraft(e.id, h.DraftType.FirstThreadMessage);
   if ("" === l) {
     let t = h.default.getDraft(e.id, h.DraftType.ChannelMessage);
@@ -73,7 +73,7 @@ function _(e, t, n) {
   }, 0)
 }
 
-function y(e, t) {
+function N(e, t) {
   (0, f.transitionTo)(T.Routes.CHANNEL(e, (0, v.isGuildHomeChannel)(t) ? v.StaticChannelRoute.GUILD_HOME : t)), r.default.dispatch({
     type: "SIDEBAR_CLOSE",
     baseChannelId: t

@@ -30,7 +30,7 @@ var s = n("37983"),
   C = n("534291"),
   b = n("49111"),
   _ = n("782340"),
-  x = n("634917");
+  x = n("380640");
 let v = Object.freeze({
     shouldPreventNavigation: !1,
     onPreventNavigation: null,

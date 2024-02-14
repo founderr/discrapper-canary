@@ -9,8 +9,8 @@ r.r(t), r.d(t, {
 }), r("222007");
 var n = r("252089"),
   u = r("235583"),
-  o = r("358806"),
-  a = r("467980"),
+  a = r("358806"),
+  o = r("467980"),
   i = r("26098"),
   s = r("344502"),
   l = new WeakMap,
@@ -27,13 +27,13 @@ var n = r("252089"),
     devicePixelContentBoxSize: h(),
     borderBoxSize: h(),
     contentBoxSize: h(),
-    contentRect: new o.DOMRectReadOnly(0, 0, 0, 0)
+    contentRect: new a.DOMRectReadOnly(0, 0, 0, 0)
   }),
   p = function(e, t) {
     if (void 0 === t && (t = !1), l.has(e) && !t) return l.get(e);
-    if ((0, a.isHidden)(e)) return l.set(e, v), v;
+    if ((0, o.isHidden)(e)) return l.set(e, v), v;
     var r = getComputedStyle(e),
-      n = (0, a.isSVG)(e) && e.ownerSVGElement && e.getBBox(),
+      n = (0, o.isSVG)(e) && e.ownerSVGElement && e.getBBox(),
       u = !d && "border-box" === r.boxSizing,
       s = f.test(r.writingMode || ""),
       p = !n && c.test(r.overflowY || ""),
@@ -55,26 +55,26 @@ var n = r("252089"),
       S = n ? n.width : D(r.width) - (u ? w + O : 0) - j,
       T = n ? n.height : D(r.height) - (u ? x + k : 0) - P,
       R = S + w + j + O,
-      N = T + x + P + k,
-      M = (0, i.freeze)({
+      M = T + x + P + k,
+      N = (0, i.freeze)({
         devicePixelContentBoxSize: h(Math.round(S * devicePixelRatio), Math.round(T * devicePixelRatio), s),
-        borderBoxSize: h(R, N, s),
+        borderBoxSize: h(R, M, s),
         contentBoxSize: h(S, T, s),
-        contentRect: new o.DOMRectReadOnly(m, g, S, T)
+        contentRect: new a.DOMRectReadOnly(m, g, S, T)
       });
-    return l.set(e, M), M
+    return l.set(e, N), N
   },
   C = function(e, t, r) {
     var u = p(e, r),
-      o = u.borderBoxSize,
-      a = u.contentBoxSize,
+      a = u.borderBoxSize,
+      o = u.contentBoxSize,
       i = u.devicePixelContentBoxSize;
     switch (t) {
       case n.ResizeObserverBoxOptions.DEVICE_PIXEL_CONTENT_BOX:
         return i;
       case n.ResizeObserverBoxOptions.BORDER_BOX:
-        return o;
+        return a;
       default:
-        return a
+        return o
     }
   }

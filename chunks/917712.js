@@ -9,8 +9,8 @@ r.r(t), r.d(t, {
 });
 var n = r("812587"),
   u = r("344502"),
-  o = r("118141"),
-  a = 0,
+  a = r("118141"),
+  o = 0,
   i = {
     attributes: !0,
     characterData: !0,
@@ -34,12 +34,12 @@ var n = r("812587"),
       if (void 0 === e && (e = 250), !c) {
         c = !0;
         var r = l(e);
-        (0, o.queueResizeObserver)(function() {
+        (0, a.queueResizeObserver)(function() {
           var u = !1;
           try {
             u = (0, n.process)()
           } finally {
-            if (c = !1, e = r - l(), !a) return;
+            if (c = !1, e = r - l(), !o) return;
             u ? t.run(1e3) : e > 0 ? t.run(e) : t.start()
           }
         })
@@ -65,5 +65,5 @@ var n = r("812587"),
     }, e
   }()),
   d = function(e) {
-    !a && e > 0 && f.start(), (a += e) || f.stop()
+    !o && e > 0 && f.start(), (o += e) || f.stop()
   }

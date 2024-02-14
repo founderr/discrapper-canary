@@ -1,53 +1,53 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return f
   }
 });
-var a = n("37983");
-n("884691");
-var r = n("77078"),
-  l = n("945330"),
-  i = n("959097"),
-  s = n("557872"),
-  u = n("967241"),
-  o = n("648564"),
-  d = n("782340"),
-  c = n("728360");
+var l = a("37983");
+a("884691");
+var n = a("77078"),
+  r = a("945330"),
+  s = a("959097"),
+  i = a("557872"),
+  u = a("967241"),
+  o = a("648564"),
+  d = a("782340"),
+  c = a("464771");
 
 function f(e) {
   let {
     guildId: t,
-    onClose: n,
+    onClose: a,
     transitionState: f
   } = e;
-  return (0, a.jsx)(r.ModalRoot, {
+  return (0, l.jsx)(n.ModalRoot, {
     className: c.modal,
     transitionState: f,
     "aria-label": d.default.Messages.THREADS,
-    size: r.ModalSize.DYNAMIC,
-    children: (0, a.jsxs)("div", {
+    size: n.ModalSize.DYNAMIC,
+    children: (0, l.jsxs)("div", {
       className: c.container,
-      children: [(0, a.jsxs)("div", {
+      children: [(0, l.jsxs)("div", {
         className: c.header,
-        children: [(0, a.jsx)(i.default, {
+        children: [(0, l.jsx)(s.default, {
           className: c.threadIcon
-        }), (0, a.jsx)(r.Heading, {
+        }), (0, l.jsx)(n.Heading, {
           variant: "heading-md/semibold",
           className: c.title,
           children: d.default.Messages.ALL_ACTIVE_THREADS
-        }), (0, a.jsx)("div", {
+        }), (0, l.jsx)("div", {
           className: c.spacer
-        }), (0, a.jsx)(r.Clickable, {
+        }), (0, l.jsx)(n.Clickable, {
           className: c.closeIcon,
-          onClick: n,
+          onClick: a,
           "aria-label": d.default.Messages.CLOSE,
-          children: (0, a.jsx)(l.default, {})
+          children: (0, l.jsx)(r.default, {})
         })]
-      }), (0, a.jsx)(s.default, {
+      }), (0, l.jsx)(i.default, {
         guildId: t,
         goToThread: (e, t) => {
-          n(), (0, u.openThreadSidebarForViewing)(e, !t, o.OpenThreadAnalyticsLocations.GUILD_ACTIVE_THREADS_MODAL)
+          a(), (0, u.openThreadSidebarForViewing)(e, !t, o.OpenThreadAnalyticsLocations.GUILD_ACTIVE_THREADS_MODAL)
         }
       })]
     })

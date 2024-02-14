@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return S
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
@@ -16,7 +16,7 @@ var a = n("37983"),
   f = n("981601"),
   h = n("533403"),
   m = n("315102"),
-  p = n("324328");
+  p = n("893127");
 
 function E(e) {
   let {
@@ -25,14 +25,14 @@ function E(e) {
     className: h
   } = e, E = (0, d.useAppContext)(), {
     reducedMotion: S
-  } = l.useContext(r.AccessibilityPreferencesContext), g = (0, u.default)({
+  } = a.useContext(r.AccessibilityPreferencesContext), g = (0, u.default)({
     userId: s.id
   }), C = null != s.member ? (0, m.getGuildMemberAvatarURL)(s.member) : null, _ = e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("834247").then(n.bind(n, "834247"));
-      return n => (0, a.jsx)(e, {
+      return n => (0, l.jsx)(e, {
         ...n,
         user: s.user,
         guildId: t.guild_id,
@@ -45,12 +45,12 @@ function E(e) {
       context: E
     })
   };
-  return (0, a.jsx)(r.Popout, {
+  return (0, l.jsx)(r.Popout, {
     preload: () => (0, c.default)(s.user.id, s.user.getAvatarURL(t.guild_id, 80), {
       guildId: t.guild_id,
       channelId: t.id
     }),
-    renderPopout: e => (0, a.jsx)(f.default, {
+    renderPopout: e => (0, l.jsx)(f.default, {
       ...e,
       guildId: t.guild_id,
       channelId: t.id,
@@ -58,17 +58,17 @@ function E(e) {
     }),
     position: "right",
     spacing: 8,
-    children: e => (0, a.jsx)(r.Tooltip, {
+    children: e => (0, l.jsx)(r.Tooltip, {
       text: s.userNick,
       position: "bottom",
-      children: n => (0, a.jsx)(r.Clickable, {
+      children: n => (0, l.jsx)(r.Clickable, {
         ...n,
         ...e,
         onClick: t => {
           t.stopPropagation(), e.onClick(t)
         },
         onContextMenu: _,
-        children: (0, a.jsx)(r.Avatar, {
+        children: (0, l.jsx)(r.Avatar, {
           src: null != C ? C : s.user.getAvatarURL(t.guild_id, 24),
           size: r.AvatarSizes.SIZE_24,
           className: i(p.avatar, h),
@@ -85,17 +85,17 @@ function S(e) {
     speakers: t,
     channel: n
   } = e;
-  return (0, a.jsx)(h.default, {
+  return (0, l.jsx)(h.default, {
     className: p.summary,
     guildId: n.guild_id,
     users: t,
     max: 10,
-    renderUser: (e, t, l) => (0, a.jsx)(E, {
+    renderUser: (e, t, a) => (0, l.jsx)(E, {
       channel: n,
       speaker: e,
       className: t
-    }, l),
-    renderMoreUsers: (e, t, n) => (0, a.jsx)("div", {
+    }, a),
+    renderMoreUsers: (e, t, n) => (0, l.jsx)("div", {
       className: i(p.speakers, t),
       children: e
     }, n)

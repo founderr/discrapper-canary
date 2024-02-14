@@ -1,95 +1,95 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useTrackThreadBrowserTab: function() {
-    return S
+    return N
   },
   useActiveThreads: function() {
-    return g
+    return S
   },
   useActiveGuildThreads: function() {
-    return E
+    return I
   },
   useArchivedThreads: function() {
-    return M
+    return E
   }
-}), n("222007");
-var a = n("884691"),
-  r = n("917351"),
-  l = n.n(r),
-  i = n("446674"),
-  s = n("404607"),
-  u = n("42203"),
-  o = n("957255"),
-  d = n("660478"),
-  c = n("449008"),
-  f = n("299039"),
-  h = n("689275"),
-  C = n("821343"),
-  p = n("755624"),
-  v = n("263024"),
-  m = n("487269"),
-  I = n("843455");
+}), a("222007");
+var l = a("884691"),
+  n = a("917351"),
+  r = a.n(n),
+  s = a("446674"),
+  i = a("404607"),
+  u = a("42203"),
+  o = a("957255"),
+  d = a("660478"),
+  c = a("449008"),
+  f = a("299039"),
+  C = a("689275"),
+  h = a("821343"),
+  m = a("755624"),
+  p = a("263024"),
+  v = a("487269"),
+  g = a("843455");
 
-function S() {
-  a.useEffect(() => {
-    (0, m.trackThreadBrowserTab)()
+function N() {
+  l.useEffect(() => {
+    (0, v.trackThreadBrowserTab)()
   }, [])
 }
 
-function g(e) {
+function S(e) {
   let t = function(e) {
-      let t = (0, i.useStateFromStoresArray)([o.default, h.default, u.default], () => l(h.default.getThreadsForParent(e.guild_id, e.id)).values().map(e => {
+      let t = (0, s.useStateFromStoresArray)([o.default, C.default, u.default], () => r(C.default.getThreadsForParent(e.guild_id, e.id)).values().map(e => {
         let {
           id: t
         } = e;
         return u.default.getChannel(t)
-      }).filter(c.isNotNullish).filter(e => o.default.can(I.Permissions.VIEW_CHANNEL, e)).map(e => e.id).value(), [e.guild_id, e.id]);
-      return a.useMemo(() => l(t).sort((e, t) => f.default.compare(d.default.lastMessageId(e), d.default.lastMessageId(t))).reverse().value(), [t])
+      }).filter(c.isNotNullish).filter(e => o.default.can(g.Permissions.VIEW_CHANNEL, e)).map(e => e.id).value(), [e.guild_id, e.id]);
+      return l.useMemo(() => r(t).sort((e, t) => f.default.compare(d.default.lastMessageId(e), d.default.lastMessageId(t))).reverse().value(), [t])
     }(e),
-    [n, r] = (0, i.useStateFromStores)([p.default], () => l.partition(t, e => p.default.hasJoined(e)), [t], i.statesWillNeverBeEqual);
+    [a, n] = (0, s.useStateFromStores)([m.default], () => r.partition(t, e => m.default.hasJoined(e)), [t], s.statesWillNeverBeEqual);
   return {
-    joinedThreadIds: n,
-    unjoinedThreadIds: r
+    joinedThreadIds: a,
+    unjoinedThreadIds: n
   }
 }
 
-function E(e) {
-  let t = (0, i.useStateFromStoresArray)([o.default, h.default, u.default], () => l(h.default.getThreadsForGuild(e)).values().map(e => l.values(e)).flatten().map(e => {
+function I(e) {
+  let t = (0, s.useStateFromStoresArray)([o.default, C.default, u.default], () => r(C.default.getThreadsForGuild(e)).values().map(e => r.values(e)).flatten().map(e => {
     let {
       id: t
     } = e;
     return u.default.getChannel(t)
-  }).filter(c.isNotNullish).filter(e => o.default.can(I.Permissions.VIEW_CHANNEL, e)).map(e => e.id).value(), [e]);
-  return a.useMemo(() => l(t).sort((e, t) => f.default.compare(d.default.lastMessageId(e), d.default.lastMessageId(t))).reverse().value(), [t])
+  }).filter(c.isNotNullish).filter(e => o.default.can(g.Permissions.VIEW_CHANNEL, e)).map(e => e.id).value(), [e]);
+  return l.useMemo(() => r(t).sort((e, t) => f.default.compare(d.default.lastMessageId(e), d.default.lastMessageId(t))).reverse().value(), [t])
 }
 
-function M(e, t, n) {
+function E(e, t, a) {
   let {
-    canLoadMore: r,
+    canLoadMore: n,
     loading: d,
     nextOffset: c,
     isInitialLoad: f
-  } = (0, i.useStateFromStoresObject)([C.default], () => ({
-    loading: C.default.isLoading(e.id, t, n),
-    isInitialLoad: C.default.isInitialLoad,
-    canLoadMore: C.default.canLoadMore,
-    nextOffset: C.default.nextOffset
-  })), h = a.useCallback(() => {
-    o.default.can(I.Permissions.READ_MESSAGE_HISTORY, e) && v.default.loadArchivedThreads(e.guild_id, e.id, t, n, c)
-  }, [e, t, n, c]);
-  a.useEffect(() => {
-    f && h()
-  }, [e.id, t, n, f]), a.useEffect(() => {
-    s.default.resort(e.id)
+  } = (0, s.useStateFromStoresObject)([h.default], () => ({
+    loading: h.default.isLoading(e.id, t, a),
+    isInitialLoad: h.default.isInitialLoad,
+    canLoadMore: h.default.canLoadMore,
+    nextOffset: h.default.nextOffset
+  })), C = l.useCallback(() => {
+    o.default.can(g.Permissions.READ_MESSAGE_HISTORY, e) && p.default.loadArchivedThreads(e.guild_id, e.id, t, a, c)
+  }, [e, t, a, c]);
+  l.useEffect(() => {
+    f && C()
+  }, [e.id, t, a, f]), l.useEffect(() => {
+    i.default.resort(e.id)
   }, [e.id]);
-  let p = (0, i.useStateFromStoresArray)([C.default, u.default, o.default], () => l(C.default.getThreads(e.id, t, n)).filter(e => {
+  let m = (0, s.useStateFromStoresArray)([h.default, u.default, o.default], () => r(h.default.getThreads(e.id, t, a)).filter(e => {
     let t = u.default.getChannel(e);
-    return null != t && o.default.can(I.Permissions.VIEW_CHANNEL, t)
+    return null != t && o.default.can(g.Permissions.VIEW_CHANNEL, t)
   }).value());
   return {
-    threadIds: p,
-    canLoadMore: r,
+    threadIds: m,
+    canLoadMore: n,
     loading: d || f,
-    loadMore: h
+    loadMore: C
   }
 }

@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return Z
   }
 }), n("222007"), n("808653");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
@@ -39,7 +39,7 @@ var a = n("37983"),
   D = n("50885"),
   U = n("49111"),
   w = n("782340"),
-  F = n("881235");
+  F = n("559571");
 let k = D.default.getEnableHardwareAcceleration(),
   V = 44 + S.AVATAR_DECORATION_PADDING,
   B = {
@@ -54,7 +54,7 @@ let k = D.default.getEnableHardwareAcceleration(),
       y: 0
     }
   };
-class H extends l.Component {
+class G extends a.Component {
   shouldComponentUpdate(e) {
     return !(0, f.default)(this.props, e, ["channelId"])
   }
@@ -63,7 +63,7 @@ class H extends l.Component {
       colorString: e,
       colorRoleName: t,
       isOwner: n,
-      nick: l,
+      nick: a,
       user: s,
       currentUser: i,
       activities: r,
@@ -76,7 +76,7 @@ class H extends l.Component {
       premiumSince: E,
       ...g
     } = this.props, C = null != E ? new Date(E) : null;
-    return (0, a.jsx)(h.Popout, {
+    return (0, l.jsx)(h.Popout, {
       preload: () => (0, v.default)(s.id, s.getAvatarURL(f, 80), {
         guildId: f,
         channelId: c.id
@@ -89,13 +89,13 @@ class H extends l.Component {
         let {
           isShown: E
         } = h;
-        return (0, a.jsx)(S.default, {
+        return (0, l.jsx)(S.default, {
           className: F.member,
           onContextMenu: this.renderUserContextMenu,
           shouldAnimateStatus: k,
           user: s,
           currentUser: i,
-          nick: l,
+          nick: a,
           status: u,
           activities: r,
           applicationStream: o,
@@ -121,7 +121,7 @@ class H extends l.Component {
         let {
           default: e
         } = await n.el("834247").then(n.bind(n, "834247"));
-        return t => (0, a.jsx)(e, {
+        return t => (0, l.jsx)(e, {
           ...t,
           user: this.props.user,
           guildId: this.props.guildId,
@@ -135,10 +135,10 @@ class H extends l.Component {
         channel: t
       } = this.props, n = "@".concat(b.default.getUserTag(e, {
         decoration: "never"
-      })), a = "<@".concat(e.id, ">");
+      })), l = "<@".concat(e.id, ">");
       y.ComponentDispatch.dispatchToLastSubscribed(U.ComponentActions.INSERT_TEXT, {
         plainText: n,
-        rawText: a
+        rawText: l
       }), E.default.startTyping(t.id)
     }, this.openGuildSubscriptionModal = e => {
       let {
@@ -151,7 +151,7 @@ class H extends l.Component {
           object: U.AnalyticsObjects.BOOST_GEM_ICON
         }
       }))
-    }, this.renderUserPopout = e => (0, a.jsx)(x.default, {
+    }, this.renderUserPopout = e => (0, l.jsx)(x.default, {
       ...e,
       userId: this.props.user.id,
       guildId: this.props.guildId,
@@ -165,19 +165,19 @@ class H extends l.Component {
     })
   }
 }
-let G = l.memo(e => {
+let H = a.memo(e => {
     let {
       colorRoleId: t,
       ...n
     } = e, {
-      channel: l,
+      channel: a,
       user: s,
       index: i
-    } = e, r = (0, u.useListItem)("".concat(i)), o = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(l.id, s.id)), d = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), f = (0, c.useStateFromStores)([A.default], () => {
+    } = e, r = (0, u.useListItem)("".concat(i)), o = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(a.id, s.id)), d = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), f = (0, c.useStateFromStores)([A.default], () => {
       var e, n;
-      return null != t ? null === (n = A.default.getGuild(l.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(t)) || void 0 === e ? void 0 : e.name : void 0
-    }, [l, t]);
-    return (0, a.jsx)(H, {
+      return null != t ? null === (n = A.default.getGuild(a.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(t)) || void 0 === e ? void 0 : e.name : void 0
+    }, [a, t]);
+    return (0, l.jsx)(G, {
       ...n,
       ...r,
       isTyping: o,
@@ -185,35 +185,35 @@ let G = l.memo(e => {
       colorRoleName: f
     })
   }),
-  W = l.memo(function(e) {
+  W = a.memo(function(e) {
     let {
       id: t,
       title: n,
-      count: l,
+      count: a,
       guildId: s
     } = e, i = (0, I.useRoleIcon)({
       roleId: t,
       guildId: s,
       size: 16
     });
-    return t === U.StatusTypes.UNKNOWN ? (0, a.jsx)("div", {
+    return t === U.StatusTypes.UNKNOWN ? (0, l.jsx)("div", {
       className: F.membersGroup,
-      children: (0, a.jsx)("div", {
+      children: (0, l.jsx)("div", {
         className: F.memberGroupsPlaceholder
       })
-    }) : (0, a.jsxs)(L.default, {
+    }) : (0, l.jsxs)(L.default, {
       className: F.membersGroup,
-      children: [(0, a.jsx)(h.HiddenVisually, {
+      children: [(0, l.jsx)(h.HiddenVisually, {
         children: w.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
           title: n,
-          count: l
+          count: a
         })
-      }), (0, a.jsxs)("span", {
+      }), (0, l.jsxs)("span", {
         "aria-hidden": !0,
-        children: [null != i ? (0, a.jsx)(O.default, {
+        children: [null != i ? (0, l.jsx)(O.default, {
           className: F.roleIcon,
           ...i
-        }) : null, n, " — ", l]
+        }) : null, n, " — ", a]
       })]
     })
   });
@@ -222,11 +222,11 @@ function Y(e) {
   let {
     index: t
   } = e, n = (0, u.useListItem)("".concat(t));
-  return (0, a.jsx)(S.default, {
+  return (0, l.jsx)(S.default, {
     itemProps: n
   })
 }
-class z extends l.Component {
+class z extends a.Component {
   shouldComponentUpdate(e) {
     return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length
   }
@@ -246,11 +246,11 @@ class z extends l.Component {
     let {
       offsetHeight: t,
       scrollTop: n
-    } = e.getScrollerState(), a = Math.floor(t / V);
+    } = e.getScrollerState(), l = Math.floor(t / V);
     return {
       height: t,
       rowHeight: V,
-      rowsVisible: a,
+      rowsVisible: l,
       y: n
     }
   }
@@ -260,28 +260,28 @@ class z extends l.Component {
       listId: t,
       channel: n
     } = this.props;
-    return (0, a.jsx)(h.FocusJumpSection, {
-      children: l => (0, a.jsx)(j.UID, {
-        children: s => (0, a.jsx)("aside", {
+    return (0, l.jsx)(h.FocusJumpSection, {
+      children: a => (0, l.jsx)(j.UID, {
+        children: s => (0, l.jsx)("aside", {
           className: i(F.membersWrap, F.hiddenMembers),
           "aria-labelledby": s,
-          children: (0, a.jsx)(h.HeadingLevel, {
-            component: (0, a.jsx)(h.HiddenVisually, {
-              children: (0, a.jsx)(h.H, {
+          children: (0, l.jsx)(h.HeadingLevel, {
+            component: (0, l.jsx)(h.HiddenVisually, {
+              children: (0, l.jsx)(h.H, {
                 id: s,
                 children: w.default.Messages.MEMBERS_LIST_LANDMARK_LABEL.format({
                   channel: n.name
                 })
               })
             }),
-            children: (0, a.jsx)(u.ListNavigatorContainer, {
+            children: (0, l.jsx)(u.ListNavigatorContainer, {
               children: n => {
                 let {
                   ref: s,
                   role: r,
                   ...o
                 } = n;
-                return (0, a.jsx)(h.List, {
+                return (0, l.jsx)(h.List, {
                   innerRole: r,
                   innerAriaLabel: w.default.Messages.MEMBERS,
                   ref: e => {
@@ -301,7 +301,7 @@ class z extends l.Component {
                   fade: !0,
                   customTheme: !0,
                   ...o,
-                  ...l
+                  ...a
                 }, t)
               }
             })
@@ -320,15 +320,15 @@ class z extends l.Component {
         groups: n,
         channel: s
       } = this.props, i = n[t];
-      return 0 === t ? (0, a.jsx)(T.default, {
+      return 0 === t ? (0, l.jsx)(T.default, {
         tutorialId: "whos-online",
         position: "left",
         inlineSpecs: B,
-        children: (0, a.jsx)(W, {
+        children: (0, l.jsx)(W, {
           ...i,
           guildId: s.guild_id
         })
-      }, "section-".concat(t)) : (0, l.createElement)(W, {
+      }, "section-".concat(t)) : (0, a.createElement)(W, {
         ...i,
         key: "section-".concat(t),
         guildId: s.guild_id
@@ -337,22 +337,22 @@ class z extends l.Component {
       let {
         groups: t,
         rows: n
-      } = this.props, a = t[e.section];
-      if (null == a) return null;
+      } = this.props, l = t[e.section];
+      if (null == l) return null;
       let {
-        index: l
-      } = a;
-      return null == l || "row" !== e.type ? null : n[l + 1 + e.row]
+        index: a
+      } = l;
+      return null == a || "row" !== e.type ? null : n[a + 1 + e.row]
     }, this.renderRow = e => {
       let {
         section: t,
         row: n,
-        rowIndex: l
+        rowIndex: a
       } = e, {
         channel: s
       } = this.props, i = this.getRowProps(e);
-      if (null == i || i.type !== N.MemberListRowTypes.MEMBER || !("user" in i)) return (0, a.jsx)(Y, {
-        index: l
+      if (null == i || i.type !== N.MemberListRowTypes.MEMBER || !("user" in i)) return (0, l.jsx)(Y, {
+        index: a
       }, "placeholder-".concat(t, ":").concat(n));
       {
         let {
@@ -367,7 +367,7 @@ class z extends l.Component {
           applicationStream: f,
           premiumSince: h
         } = i;
-        return (0, a.jsx)(G, {
+        return (0, l.jsx)(H, {
           colorString: e,
           colorRoleId: t,
           user: n,
@@ -380,7 +380,7 @@ class z extends l.Component {
           guildId: s.guild_id,
           premiumSince: h,
           isMobileOnline: u,
-          index: l
+          index: a
         }, "member-".concat(i.user.id))
       }
     }, this.handleScroll = () => {
@@ -392,14 +392,14 @@ class z extends l.Component {
         channel: t
       } = this.props, {
         rowHeight: n,
-        y: a,
-        height: l
+        y: l,
+        height: a
       } = this.getDimensions();
       (0, p.subscribeChannelDimensions)({
         guildId: t.guild_id,
         channelId: t.id,
-        y: a,
-        height: l,
+        y: l,
+        height: a,
         rowHeight: n
       })
     }, 50), this.trackMemberListViewed = () => {
@@ -410,9 +410,9 @@ class z extends l.Component {
           rowsVisible: n
         } = this.getDimensions();
       if (void 0 === n || 0 === n || null == t) return;
-      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(P.isNotNullish);
-      if (0 === a.length) return;
-      let l = a.reduce((e, t) => t.type !== N.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === U.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
+      let l = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(P.isNotNullish);
+      if (0 === l.length) return;
+      let a = l.reduce((e, t) => t.type !== N.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === U.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
         num_users_visible: 0,
         num_users_visible_with_mobile_indicator: 0,
         num_users_visible_with_game_activity: 0,
@@ -420,7 +420,7 @@ class z extends l.Component {
         num_users_visible_with_avatar_decoration: 0
       });
       this.lastReportedAnalyticsChannel = this.props.channel.id, C.default.trackWithMetadata(U.AnalyticEvents.MEMBER_LIST_VIEWED, {
-        ...l
+        ...a
       })
     }
   }
@@ -433,14 +433,14 @@ function K(e) {
   } = e, s = (0, c.useStateFromStores)([g.default], () => g.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([N.default], () => N.default.getProps(t.guild_id, t.id)), {
     rows: o,
     groups: d
-  } = r, f = l.useRef(null), h = l.useCallback((e, t) => {
+  } = r, f = a.useRef(null), h = a.useCallback((e, t) => {
     let n = f.current;
     if (null == n) return;
-    let a = parseInt(t, 10),
-      [l, s] = n.getSectionRowFromIndex(a),
-      i = 0 === l && 0 === s ? V : 0;
+    let l = parseInt(t, 10),
+      [a, s] = n.getSectionRowFromIndex(l),
+      i = 0 === a && 0 === s ? V : 0;
     n.scrollToIndex({
-      section: l,
+      section: a,
       row: s,
       padding: i,
       callback: () => {
@@ -452,13 +452,13 @@ function K(e) {
         })
       }
     })
-  }, []), m = l.useCallback(() => new Promise(e => {
+  }, []), m = a.useCallback(() => new Promise(e => {
     let t = f.current;
     if (null == t) return e();
     t.scrollToTop({
       callback: () => requestAnimationFrame(() => e())
     })
-  }), []), p = l.useCallback(() => new Promise(e => {
+  }), []), p = a.useCallback(() => new Promise(e => {
     let t = f.current;
     if (null == t) return e();
     t.scrollToBottom({
@@ -473,11 +473,11 @@ function K(e) {
     scrollToStart: m,
     scrollToEnd: p
   });
-  return (0, a.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: i(F.container, n),
-    children: (0, a.jsx)(u.ListNavigatorProvider, {
+    children: (0, l.jsx)(u.ListNavigatorProvider, {
       navigator: E,
-      children: (0, a.jsx)(z, {
+      children: (0, l.jsx)(z, {
         ...e,
         ...r,
         groups: d,
@@ -492,8 +492,8 @@ function Z(e) {
   let {
     channel: t,
     className: n
-  } = e, s = l.useDeferredValue(t);
-  return l.useMemo(() => (0, a.jsx)(K, {
+  } = e, s = a.useDeferredValue(t);
+  return a.useMemo(() => (0, l.jsx)(K, {
     channel: s,
     className: n
   }), [s, n])

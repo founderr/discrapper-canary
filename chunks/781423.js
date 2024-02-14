@@ -1,53 +1,53 @@
 "use strict";
 n.r(t), n.d(t, {
   CommandClickable: function() {
-    return T
+    return A
   },
   default: function() {
-    return M
+    return y
   }
 });
 var l = n("37983"),
-  a = n("884691"),
-  s = n("446674"),
-  i = n("77078"),
+  i = n("884691"),
+  a = n("446674"),
+  s = n("77078"),
   r = n("507217"),
   o = n("240249"),
   u = n("524768"),
   d = n("300322"),
   c = n("845579"),
-  m = n("42203"),
-  f = n("474643"),
-  h = n("957255"),
-  p = n("18494"),
-  g = n("666897"),
-  E = n("659500"),
-  C = n("49111"),
-  v = n("317041"),
-  I = n("406291"),
-  S = n("782340"),
-  _ = n("781606");
+  f = n("42203"),
+  m = n("474643"),
+  p = n("957255"),
+  h = n("18494"),
+  E = n("666897"),
+  g = n("659500"),
+  S = n("49111"),
+  C = n("317041"),
+  T = n("406291"),
+  v = n("782340"),
+  I = n("816411");
 
-function x(e, t, n, a) {
+function _(e, t, n, i) {
   if (null == e) return;
-  let s = () => {
-    let l = m.default.getChannel(e);
+  let a = () => {
+    let l = f.default.getChannel(e);
     if (null == l) return;
     let {
-      command: s,
-      application: i
+      command: a,
+      application: s
     } = o.getCachedCommand(l, n);
-    if (null != s && s.name === t) {
+    if (null != a && a.name === t) {
       var d, c;
-      E.ComponentDispatch.dispatch(C.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+      g.ComponentDispatch.dispatch(S.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
         channelId: e
       });
-      let t = null != i ? {
+      let t = null != s ? {
         type: u.ApplicationCommandSectionType.APPLICATION,
-        id: i.id,
-        icon: null !== (c = null == i ? void 0 : null === (d = i.bot) || void 0 === d ? void 0 : d.username) && void 0 !== c ? c : i.icon,
-        name: i.name,
-        application: i
+        id: s.id,
+        icon: null !== (c = null == s ? void 0 : null === (d = s.bot) || void 0 === d ? void 0 : d.username) && void 0 !== c ? c : s.icon,
+        name: s.name,
+        application: s
       } : null;
       r.setActiveCommand({
         channelId: e,
@@ -55,29 +55,29 @@ function x(e, t, n, a) {
         section: null
       }), r.setActiveCommand({
         channelId: e,
-        command: s,
+        command: a,
         section: t,
-        location: a
+        location: i
       })
     }
   };
-  "" !== f.default.getDraft(e, f.DraftType.ChannelMessage) ? (0, i.openModal)(t => (0, l.jsx)(i.ConfirmModal, {
-    header: S.default.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_HEADER,
-    confirmText: S.default.Messages.CLEAR,
-    cancelText: S.default.Messages.CANCEL,
-    onConfirm: () => s(),
-    confirmButtonColor: i.Button.Colors.BRAND,
+  "" !== m.default.getDraft(e, m.DraftType.ChannelMessage) ? (0, s.openModal)(t => (0, l.jsx)(s.ConfirmModal, {
+    header: v.default.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_HEADER,
+    confirmText: v.default.Messages.CLEAR,
+    cancelText: v.default.Messages.CANCEL,
+    onConfirm: () => a(),
+    confirmButtonColor: s.Button.Colors.BRAND,
     onCloseCallback: () => {
-      E.ComponentDispatch.dispatch(C.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+      g.ComponentDispatch.dispatch(S.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
         channelId: e
       })
     },
     ...t,
-    children: (0, l.jsx)(i.Text, {
+    children: (0, l.jsx)(s.Text, {
       variant: "text-md/normal",
-      children: S.default.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_BODY
+      children: v.default.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_BODY
     })
-  })) : s()
+  })) : a()
 }
 
 function N(e) {
@@ -85,84 +85,84 @@ function N(e) {
   let {
     node: n,
     output: r,
-    state: f
-  } = e, E = (0, s.useStateFromStores)([m.default, p.default], () => {
+    state: m
+  } = e, g = (0, a.useStateFromStores)([f.default, h.default], () => {
     var e;
-    return m.default.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : p.default.getChannelId())
+    return f.default.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : h.default.getChannelId())
   }, [n.channelId]), {
-    hasSendMessagePerm: S,
-    hasUseAppCommandsPerm: _
-  } = (0, s.useStateFromStoresObject)([h.default], () => {
-    let e = h.default.can(C.Permissions.SEND_MESSAGES, E),
-      t = h.default.can(C.Permissions.USE_APPLICATION_COMMANDS, E);
+    hasSendMessagePerm: v,
+    hasUseAppCommandsPerm: I
+  } = (0, a.useStateFromStoresObject)([p.default], () => {
+    let e = p.default.can(S.Permissions.SEND_MESSAGES, g),
+      t = p.default.can(S.Permissions.USE_APPLICATION_COMMANDS, g);
     return {
       hasSendMessagePerm: e,
       hasUseAppCommandsPerm: t
     }
   }), {
     command: N
-  } = o.useCommand(E, null !== (t = n.commandKey) && void 0 !== t ? t : ""), T = c.UseLegacyChatInput.useSetting(), M = a.useMemo(() => {
-    if (null == N || null == E || N.name !== n.commandName || T) return !1;
-    let e = E.isPrivate(),
-      t = (0, d.computeIsReadOnlyThread)(E);
-    if (t || !e && !S) return !1;
-    let l = (null == N ? void 0 : N.applicationId) === v.BuiltInSectionId.BUILT_IN;
-    return !!e || !!l || !!_ || !1
-  }, [E, N, S, _, n.commandName, T]), A = a.useCallback(e => {
-    null == e || e.stopPropagation(), null != E && null != n.commandName && null != n.commandKey && x(E.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
-  }, [E, n.commandKey, n.commandName]);
-  return M ? (0, l.jsx)(i.Tooltip, {
+  } = o.useCommand(g, null !== (t = n.commandKey) && void 0 !== t ? t : ""), A = c.UseLegacyChatInput.useSetting(), y = i.useMemo(() => {
+    if (null == N || null == g || N.name !== n.commandName || A) return !1;
+    let e = g.isPrivate(),
+      t = (0, d.computeIsReadOnlyThread)(g);
+    if (t || !e && !v) return !1;
+    let l = (null == N ? void 0 : N.applicationId) === C.BuiltInSectionId.BUILT_IN;
+    return !!e || !!l || !!I || !1
+  }, [g, N, v, I, n.commandName, A]), x = i.useCallback(e => {
+    null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && _(g.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
+  }, [g, n.commandKey, n.commandName]);
+  return y ? (0, l.jsx)(s.Tooltip, {
     text: n.output,
     position: "top",
     children: e => {
       let {
         onMouseEnter: t,
-        onMouseLeave: a
+        onMouseLeave: i
       } = e;
-      return (0, l.jsxs)(g.default, {
+      return (0, l.jsxs)(E.default, {
         role: "link",
-        onClick: A,
+        onClick: x,
         onMouseEnter: t,
-        onMouseLeave: a,
-        children: [I.COMMAND_SENTINEL, r(n.content, f)]
-      }, f.key)
+        onMouseLeave: i,
+        children: [T.COMMAND_SENTINEL, r(n.content, m)]
+      }, m.key)
     }
-  }, f.key) : (0, l.jsxs)("span", {
-    children: [I.COMMAND_SENTINEL, r(n.content, f)]
+  }, m.key) : (0, l.jsxs)("span", {
+    children: [T.COMMAND_SENTINEL, r(n.content, m)]
   })
 }
 
-function T(e) {
+function A(e) {
   let {
     commandId: t,
     commandName: n,
-    commandDescription: a,
+    commandDescription: i,
     onClick: r
-  } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getChannelId()), d = e => {
-    null == e || e.stopPropagation(), x(o, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == r || r(t)
+  } = e, o = (0, a.useStateFromStores)([h.default], () => h.default.getChannelId()), d = e => {
+    null == e || e.stopPropagation(), _(o, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == r || r(t)
   };
-  return (0, l.jsx)(i.Tooltip, {
-    text: a,
+  return (0, l.jsx)(s.Tooltip, {
+    text: i,
     position: "top",
-    tooltipContentClassName: _.tooltip,
+    tooltipContentClassName: I.tooltip,
     children: e => {
       let {
         onMouseEnter: t,
-        onMouseLeave: a
+        onMouseLeave: i
       } = e;
-      return (0, l.jsxs)(i.Button, {
-        color: i.ButtonColors.PRIMARY,
-        size: i.ButtonSizes.ICON,
+      return (0, l.jsxs)(s.Button, {
+        color: s.ButtonColors.PRIMARY,
+        size: s.ButtonSizes.ICON,
         onClick: d,
         onMouseEnter: t,
-        onMouseLeave: a,
+        onMouseLeave: i,
         children: ["/", n]
       })
     }
   })
 }
 
-function M(e) {
+function y(e) {
   return {
     react: (e, t, n) => (0, l.jsx)(N, {
       node: e,

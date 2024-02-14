@@ -16,7 +16,7 @@ var n, l = s("37983"),
   h = s("156713"),
   N = s("843455"),
   m = s("352220"),
-  g = s("321994");
+  g = s("116161");
 let k = N.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
 n = class extends a.PureComponent {
   componentDidMount() {

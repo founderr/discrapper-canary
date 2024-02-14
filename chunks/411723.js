@@ -15,10 +15,10 @@ var i = n("414456"),
   d = n("442939"),
   c = n("730859"),
   f = n("697218"),
-  p = n("953109"),
-  m = n("449008"),
+  m = n("953109"),
+  p = n("449008"),
   h = n("782340"),
-  E = n("127789"),
+  E = n("291488"),
   g = function(e) {
     let {
       createdAt: t,
@@ -29,11 +29,11 @@ var i = n("414456"),
       className: S
     } = e, C = (0, d.useGetOrFetchApplication)(i), T = (0, o.useStateFromStoresArray)([f.default], () => {
       var e;
-      return null !== (e = n.map(e => f.default.getUser(e)).filter(m.isNotNullish)) && void 0 !== e ? e : []
+      return null !== (e = n.map(e => f.default.getUser(e)).filter(p.isNotNullish)) && void 0 !== e ? e : []
     }), v = null == C ? void 0 : C.name, I = r(t).fromNow();
     return null == t ? null : (0, l.jsxs)("div", {
       className: a(S, E.container),
-      children: [(0, l.jsx)(p.default, {
+      children: [(0, l.jsx)(m.default, {
         game: C
       }), (0, l.jsxs)("div", {
         className: E.textSection,

@@ -20,8 +20,8 @@ var l = n("37983"),
   d = n("77078"),
   c = n("206230"),
   f = n("524768"),
-  p = n("596182"),
-  m = n("41884"),
+  m = n("596182"),
+  p = n("41884"),
   h = n("679653"),
   E = n("419830"),
   g = n("404345"),
@@ -31,12 +31,12 @@ var l = n("37983"),
   v = n("27618"),
   I = n("697218"),
   _ = n("158998"),
-  y = n("563911"),
+  N = n("563911"),
   A = n("346955"),
-  N = n("548775"),
+  y = n("548775"),
   x = n("49111"),
   O = n("782340"),
-  R = n("241970");
+  R = n("723199");
 
 function M(e) {
   return null != e ? "autocomplete-".concat(e) : null
@@ -143,12 +143,12 @@ j.Generic = class e extends b {
       text: e,
       description: t
     } = this.props;
-    return (0, l.jsxs)(y.AutocompleteRowContent, {
-      children: [(0, l.jsx)(y.AutocompleteRowContentPrimary, {
-        children: (0, l.jsx)(y.AutocompleteRowHeading, {
+    return (0, l.jsxs)(N.AutocompleteRowContent, {
+      children: [(0, l.jsx)(N.AutocompleteRowContentPrimary, {
+        children: (0, l.jsx)(N.AutocompleteRowHeading, {
           children: e
         })
-      }), null != t ? (0, l.jsx)(y.AutocompleteRowContentSecondary, {
+      }), null != t ? (0, l.jsx)(N.AutocompleteRowContentSecondary, {
         children: t
       }) : null]
     })
@@ -158,9 +158,9 @@ j.Generic = class e extends b {
   return (0, l.jsx)("div", {
     className: R.base,
     "aria-busy": !0,
-    children: (0, l.jsx)(y.AutocompleteRowContent, {
-      children: (0, l.jsx)(y.AutocompleteRowContentPrimary, {
-        children: (0, l.jsx)(y.AutocompleteRowHeading, {
+    children: (0, l.jsx)(N.AutocompleteRowContent, {
+      children: (0, l.jsx)(N.AutocompleteRowContentPrimary, {
+        children: (0, l.jsx)(N.AutocompleteRowHeading, {
           children: (0, l.jsx)("div", {
             className: R.autocompletePlaceholder,
             style: {
@@ -207,19 +207,19 @@ j.Generic = class e extends b {
       hidePersonalInformation: i,
       guildId: a
     } = this.props;
-    return (0, l.jsxs)(y.AutocompleteRowContent, {
-      children: [(0, l.jsx)(y.AutocompleteRowIcon, {
+    return (0, l.jsxs)(N.AutocompleteRowContent, {
+      children: [(0, l.jsx)(N.AutocompleteRowIcon, {
         children: (0, l.jsx)(d.Avatar, {
           size: d.AvatarSizes.SIZE_24,
           src: e.getAvatarURL(a, 24),
           "aria-hidden": !0,
           status: n
         })
-      }), (0, l.jsx)(y.AutocompleteRowContentPrimary, {
-        children: (0, l.jsx)(y.AutocompleteRowHeading, {
+      }), (0, l.jsx)(N.AutocompleteRowContentPrimary, {
+        children: (0, l.jsx)(N.AutocompleteRowHeading, {
           children: null != t ? t : _.default.getName(e)
         })
-      }), (0, l.jsxs)(y.AutocompleteRowContentSecondary, {
+      }), (0, l.jsxs)(N.AutocompleteRowContentSecondary, {
         children: [(0, l.jsx)("span", {
           className: R.descriptionUsername,
           children: _.default.getUserTag(e, {
@@ -243,9 +243,9 @@ j.Generic = class e extends b {
     } = e, i = "dot" === c.default.roleStyle, a = "username" === c.default.roleStyle && null != n, s = a ? {
       color: n
     } : void 0;
-    return (0, l.jsxs)(y.AutocompleteRowContent, {
-      children: [(0, l.jsx)(y.AutocompleteRowContentPrimary, {
-        children: (0, l.jsxs)(y.AutocompleteRowHeading, {
+    return (0, l.jsxs)(N.AutocompleteRowContent, {
+      children: [(0, l.jsx)(N.AutocompleteRowContentPrimary, {
+        children: (0, l.jsxs)(N.AutocompleteRowHeading, {
           children: [i && (0, l.jsx)(d.RoleDot, {
             className: R.roleDot,
             color: n,
@@ -255,7 +255,7 @@ j.Generic = class e extends b {
             children: ["@", e.name]
           })]
         })
-      }), t ? null : (0, l.jsx)(y.AutocompleteRowContentSecondary, {
+      }), t ? null : (0, l.jsx)(N.AutocompleteRowContentSecondary, {
         children: O.default.Messages.MENTION_USERS_WITH_ROLE
       })]
     })
@@ -266,16 +266,16 @@ j.Generic = class e extends b {
       channel: e,
       category: t
     } = this.props, n = e.type === x.ChannelTypes.GUILD_CATEGORY ? A.default : (0, E.getChannelIconComponent)(e);
-    return (0, l.jsxs)(y.AutocompleteRowContent, {
-      children: [null != n && (0, l.jsx)(y.AutocompleteRowIcon, {
+    return (0, l.jsxs)(N.AutocompleteRowContent, {
+      children: [null != n && (0, l.jsx)(N.AutocompleteRowIcon, {
         children: (0, l.jsx)(n, {
           className: R.icon
         })
-      }), (0, l.jsx)(y.AutocompleteRowContentPrimary, {
-        children: (0, l.jsx)(y.AutocompleteRowHeading, {
+      }), (0, l.jsx)(N.AutocompleteRowContentPrimary, {
+        children: (0, l.jsx)(N.AutocompleteRowHeading, {
           children: (0, h.computeChannelName)(e, I.default, v.default)
         })
-      }), null != t ? (0, l.jsx)(y.AutocompleteRowContentSecondary, {
+      }), null != t ? (0, l.jsx)(N.AutocompleteRowContentSecondary, {
         children: t.name
       }) : null]
     })
@@ -285,17 +285,17 @@ j.Generic = class e extends b {
     let {
       command: e
     } = this.props;
-    return (0, l.jsxs)(y.AutocompleteRowContent, {
-      children: [(0, l.jsx)(y.AutocompleteRowIcon, {
-        children: (0, l.jsx)(N.default, {
+    return (0, l.jsxs)(N.AutocompleteRowContent, {
+      children: [(0, l.jsx)(N.AutocompleteRowIcon, {
+        children: (0, l.jsx)(y.default, {
           className: R.icon,
           foreground: R.iconForeground
         })
-      }), (0, l.jsx)(y.AutocompleteRowContentPrimary, {
-        children: (0, l.jsx)(y.AutocompleteRowHeading, {
+      }), (0, l.jsx)(N.AutocompleteRowContentPrimary, {
+        children: (0, l.jsx)(N.AutocompleteRowHeading, {
           children: e.name
         })
-      }), (0, l.jsx)(y.AutocompleteRowContentSecondary, {
+      }), (0, l.jsx)(N.AutocompleteRowContentSecondary, {
         children: e.description
       })]
     })
@@ -314,7 +314,7 @@ j.Generic = class e extends b {
     } = this.props, {
       hovered: s
     } = this.state, r = this.isSelectable();
-    return e.inputType === f.ApplicationCommandInputType.PLACEHOLDER ? (0, l.jsx)(m.default, {}) : (0, l.jsx)(p.default, {
+    return e.inputType === f.ApplicationCommandInputType.PLACEHOLDER ? (0, l.jsx)(p.default, {}) : (0, l.jsx)(m.default, {
       command: e,
       channel: t,
       showImage: n,
@@ -336,14 +336,14 @@ j.Generic = class e extends b {
     }) : (0, l.jsx)("span", {
       className: R.emojiRaw,
       children: e.surrogates
-    }), a = null != n ? (0, l.jsx)(y.AutocompleteRowContentSecondary, {
+    }), a = null != n ? (0, l.jsx)(N.AutocompleteRowContentSecondary, {
       children: n.name
     }) : null;
-    return (0, l.jsxs)(y.AutocompleteRowContent, {
-      children: [(0, l.jsx)(y.AutocompleteRowIcon, {
+    return (0, l.jsxs)(N.AutocompleteRowContent, {
+      children: [(0, l.jsx)(N.AutocompleteRowIcon, {
         children: i
-      }), (0, l.jsx)(y.AutocompleteRowContentPrimary, {
-        children: (0, l.jsxs)(y.AutocompleteRowHeading, {
+      }), (0, l.jsx)(N.AutocompleteRowContentPrimary, {
+        children: (0, l.jsxs)(N.AutocompleteRowHeading, {
           children: [t, e.name, t]
         })
       }), a]
@@ -381,19 +381,19 @@ j.Generic = class e extends b {
     } = this.props, {
       hovered: o
     } = this.state;
-    return (0, C.isStandardSticker)(r) ? n = null === (e = S.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, C.isGuildSticker)(r) && (n = null === (t = T.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, l.jsxs)(y.AutocompleteRowContent, {
-      children: [(0, l.jsx)(y.AutocompleteRowIcon, {
+    return (0, C.isStandardSticker)(r) ? n = null === (e = S.default.getStickerPack(r.pack_id)) || void 0 === e ? void 0 : e.name : (0, C.isGuildSticker)(r) && (n = null === (t = T.default.getGuild(r.guild_id)) || void 0 === t ? void 0 : t.name), (0, l.jsxs)(N.AutocompleteRowContent, {
+      children: [(0, l.jsx)(N.AutocompleteRowIcon, {
         children: a(r, o || !0 === s)
-      }), (0, l.jsxs)(y.AutocompleteRowContentPrimary, {
-        children: [(0, l.jsx)(y.AutocompleteRowHeading, {
+      }), (0, l.jsxs)(N.AutocompleteRowContentPrimary, {
+        children: [(0, l.jsx)(N.AutocompleteRowHeading, {
           className: R.stickerName,
           children: r.name
-        }), null != i && (0, l.jsx)(y.AutocompleteRowSubheading, {
+        }), null != i && (0, l.jsx)(N.AutocompleteRowSubheading, {
           children: O.default.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({
             queryMatch: i
           })
         })]
-      }), null != n && (0, l.jsx)(y.AutocompleteRowContentSecondary, {
+      }), null != n && (0, l.jsx)(N.AutocompleteRowContentSecondary, {
         children: n
       })]
     })

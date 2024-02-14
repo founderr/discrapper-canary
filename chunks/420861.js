@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
-  s = n("102499");
+var a = n("77078"),
+  s = n("416190");
 
 function i(e) {
   let {
@@ -16,9 +16,9 @@ function i(e) {
     totalResults: i,
     pageLength: r
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: s.container,
-    children: (0, a.jsx)(l.Paginator, {
+    children: (0, l.jsx)(a.Paginator, {
       currentPage: Math.floor(n / r) + 1,
       totalCount: i,
       pageSize: r,

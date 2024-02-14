@@ -19,8 +19,8 @@ var i, a, l = n("37983"),
   E = n("999819"),
   S = n("49111"),
   v = n("782340"),
-  y = n("406638"),
-  O = n("926622");
+  y = n("233327"),
+  O = n("890957");
 (a = i || (i = {})).GENERAL = "GENERAL", a.VOICE = "VOICE", a.DEVELOPER = "DEVELOPER";
 let C = () => [{
     value: S.OverlayAvatarSizes.LARGE,

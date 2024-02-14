@@ -15,17 +15,17 @@ var l = {
   "./icon-file-webcode.svg": "164059"
 };
 
-function a(e) {
-  return n(s(e))
+function i(e) {
+  return n(a(e))
 }
 
-function s(e) {
+function a(e) {
   if (!n.o(l, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
   }
   return l[e]
 }
-a.id = '"777483"', a.keys = function() {
+i.id = '"777483"', i.keys = function() {
   return Object.keys(l)
-}, a.resolve = s, e.exports = a
+}, i.resolve = a, e.exports = i

@@ -7,7 +7,7 @@ for (var n = "undefined" != typeof window && /Mac|iPod|iPhone|iPad/.test(window.
     control: "ctrlKey",
     meta: "metaKey",
     shift: "shiftKey"
-  }, o = {
+  }, a = {
     add: "+",
     break: "pause",
     cmd: "meta",
@@ -29,7 +29,7 @@ for (var n = "undefined" != typeof window && /Mac|iPod|iPhone|iPad/.test(window.
     up: "arrowup",
     win: "meta",
     windows: "meta"
-  }, a = {
+  }, o = {
     backspace: 8,
     tab: 9,
     enter: 13,
@@ -64,7 +64,7 @@ for (var n = "undefined" != typeof window && /Mac|iPod|iPhone|iPad/.test(window.
     "\\": 220,
     "]": 221,
     "'": 222
-  }, i = 1; i < 20; i++) a["f" + i] = 111 + i;
+  }, i = 1; i < 20; i++) o["f" + i] = 111 + i;
 
 function s(e, t, r) {
   t && !("byKey" in t) && (r = t, t = null), !Array.isArray(e) && (e = [e]);
@@ -82,20 +82,20 @@ function s(e, t, r) {
 function l(e, t) {
   var r = t && t.byKey,
     n = {},
-    o = (e = e.replace("++", "+add")).split("+"),
-    a = o.length;
+    a = (e = e.replace("++", "+add")).split("+"),
+    o = a.length;
   for (var i in u) n[u[i]] = !1;
   var s = !0,
     l = !1,
     c = void 0;
   try {
-    for (var D, h = o[Symbol.iterator](); !(s = (D = h.next()).done); s = !0) {
+    for (var D, h = a[Symbol.iterator](); !(s = (D = h.next()).done); s = !0) {
       var v = D.value,
         p = v.endsWith("?") && v.length > 1;
       p && (v = v.slice(0, -1));
       var C = d(v),
         g = u[C];
-      (1 === a || !g) && (r ? n.key = C : n.which = f(v)), g && (n[g] = !p || null)
+      (1 === o || !g) && (r ? n.key = C : n.which = f(v)), g && (n[g] = !p || null)
     }
   } catch (e) {
     l = !0, c = e
@@ -121,11 +121,11 @@ function c(e, t) {
 }
 
 function f(e) {
-  return a[e = d(e)] || e.toUpperCase().charCodeAt(0)
+  return o[e = d(e)] || e.toUpperCase().charCodeAt(0)
 }
 
 function d(e) {
-  return e = o[e = e.toLowerCase()] || e
+  return e = a[e = e.toLowerCase()] || e
 }
 t.default = s, t.isHotkey = s, t.isCodeHotkey = function(e, t) {
   return s(e, t)

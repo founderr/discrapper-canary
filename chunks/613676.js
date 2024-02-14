@@ -1,54 +1,54 @@
 "use strict";
 n.r(t), n.d(t, {
   canInstallApplication: function() {
-    return o
+    return u
   },
   installApplication: function() {
-    return c
+    return d
   }
 });
-var i = n("394846"),
-  l = n("316693"),
+var l = n("394846"),
+  i = n("316693"),
   a = n("33942"),
-  r = n("599110"),
-  s = n("128259"),
-  u = n("49111");
+  s = n("599110"),
+  r = n("128259"),
+  o = n("49111");
 
-function o(e, t, n) {
+function u(e, t, n) {
   return null != t || null != n
 }
 
-function c(e) {
+function d(e) {
   let {
     applicationId: t,
     customInstallUrl: n,
-    installParams: o,
-    guildId: c,
-    channelId: d,
+    installParams: u,
+    guildId: d,
+    channelId: c,
     disableGuildSelect: f,
-    source: p
+    source: m
   } = e;
-  if (null != n) return r.default.track(u.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
+  if (null != n) return s.default.track(o.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
     application_id: t,
-    guild_id: c,
+    guild_id: d,
     auth_type: "custom_url",
-    source: p,
-    device_platform: i.isMobile ? "mobile_web" : "desktop_web"
-  }), (0, s.handleClick)({
+    source: m,
+    device_platform: l.isMobile ? "mobile_web" : "desktop_web"
+  }), (0, r.handleClick)({
     href: n
   });
-  null != o && (r.default.track(u.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
+  null != u && (s.default.track(o.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
     application_id: t,
-    guild_id: c,
+    guild_id: d,
     auth_type: "in_app",
-    source: p,
-    device_platform: i.isMobile ? "mobile_web" : "desktop_web"
+    source: m,
+    device_platform: l.isMobile ? "mobile_web" : "desktop_web"
   }), (0, a.openOAuth2Modal)({
-    guildId: c,
+    guildId: d,
     clientId: t,
-    scopes: o.scopes,
-    channelId: d,
+    scopes: u.scopes,
+    channelId: c,
     disableGuildSelect: f,
-    permissions: null != o.permissions ? l.default.deserialize(o.permissions) : void 0
+    permissions: null != u.permissions ? i.default.deserialize(u.permissions) : void 0
   }))
 }

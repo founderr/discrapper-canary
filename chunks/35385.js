@@ -12,12 +12,12 @@ var l = n("37983"),
   o = n("538282"),
   u = n("882641"),
   d = n("13030"),
-  c = n("537461"),
+  c = n("350583"),
   f = i.memo(i.forwardRef(function(e, t) {
     let {
       disabled: n,
       type: a
-    } = e, [f, p, m] = (0, o.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), h = i.useCallback(() => {
+    } = e, [f, m, p] = (0, o.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), h = i.useCallback(() => {
       (0, o.toggleExpressionPicker)(d.ExpressionPickerViewType.EMOJI, a)
     }, [a]);
     return n ? null : (0, l.jsx)("div", {
@@ -26,8 +26,8 @@ var l = n("37983"),
       children: (0, l.jsx)(u.default, {
         className: c.emojiButton,
         onClick: h,
-        active: f === d.ExpressionPickerViewType.EMOJI && p === a,
-        "aria-controls": m,
+        active: f === d.ExpressionPickerViewType.EMOJI && m === a,
+        "aria-controls": p,
         tabIndex: 0,
         focusProps: {
           offset: {

@@ -23,7 +23,7 @@ var T = n("454589"),
   R = n("718517"),
   I = n("49111"),
   N = n("782340"),
-  p = n("129429");
+  p = n("540700");
 let C = new Set([f.Step.SKU_SELECT, f.Step.AWAITING_AUTHENTICATION, f.Step.AWAITING_PURCHASE_TOKEN_AUTH, f.Step.CONFIRM]);
 
 function P(e) {

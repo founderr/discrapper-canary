@@ -14,17 +14,17 @@ var i = s("37983"),
   d = s("903921"),
   c = s("49111"),
   E = s("782340"),
-  _ = s("764878");
+  _ = s("782050");
 let T = [c.BoostedGuildTiers.NONE, c.BoostedGuildTiers.TIER_1, c.BoostedGuildTiers.TIER_2, c.BoostedGuildTiers.TIER_3];
 
 function I(e) {
   let {
     guild: t
-  } = e, s = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), [I, f] = r.useState(!1), [N, R] = r.useState(0), g = r.useRef(null), m = Math.min(c.BoostedGuildTiers.TIER_3, t.premiumTier + 1), S = c.AppliedGuildBoostsRequiredForBoostedGuildTier[t.premiumTier], M = c.AppliedGuildBoostsRequiredForBoostedGuildTier[m], h = (t.premiumSubscriberCount - S) / (M - S), G = d.TierMarkerPositions[t.premiumTier], p = d.TierMarkerPositions[m], x = t.premiumTier === c.BoostedGuildTiers.TIER_3, v = I || s, {
+  } = e, s = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), [I, N] = r.useState(!1), [f, R] = r.useState(0), g = r.useRef(null), m = Math.min(c.BoostedGuildTiers.TIER_3, t.premiumTier + 1), S = c.AppliedGuildBoostsRequiredForBoostedGuildTier[t.premiumTier], M = c.AppliedGuildBoostsRequiredForBoostedGuildTier[m], G = (t.premiumSubscriberCount - S) / (M - S), h = d.TierMarkerPositions[t.premiumTier], O = d.TierMarkerPositions[m], p = t.premiumTier === c.BoostedGuildTiers.TIER_3, C = I || s, {
     progressBarFillWidthFactor: A,
     isProgressBarAnimationComplete: B,
-    setShouldFireConfetti: C,
-    shouldFireConfetti: O,
+    setShouldFireConfetti: x,
+    shouldFireConfetti: v,
     tierMarkerAnimationPosition: P
   } = function(e) {
     let {
@@ -33,8 +33,8 @@ function I(e) {
       premiumTier: i,
       isRevealed: l,
       useReducedMotion: o
-    } = e, [n, u] = r.useState(o ? i : -1), [E, _] = r.useState(0 === s), [T, I] = r.useState(!1), f = r.useRef(!0), {
-      widthFactor: N
+    } = e, [n, u] = r.useState(o ? i : -1), [E, _] = r.useState(0 === s), [T, I] = r.useState(!1), N = r.useRef(!0), {
+      widthFactor: f
     } = (0, a.useSpring)({
       from: {
         widthFactor: 0
@@ -63,29 +63,29 @@ function I(e) {
       },
       onRest: () => {
         _(!0), i === c.BoostedGuildTiers.TIER_3 && (I(!0), window.setTimeout(() => {
-          f.current && I(!1)
+          N.current && I(!1)
         }, 200))
       }
     });
     return r.useEffect(() => () => {
-      f.current = !1
+      N.current = !1
     }, []), {
       isProgressBarAnimationComplete: E,
-      progressBarFillWidthFactor: N,
+      progressBarFillWidthFactor: f,
       setShouldFireConfetti: I,
       shouldFireConfetti: T,
       tierMarkerAnimationPosition: n
     }
   }({
-    fillFactor: x ? 1 : h * (p - G) + G,
-    isRevealed: v,
+    fillFactor: p ? 1 : G * (O - h) + h,
+    isRevealed: C,
     useReducedMotion: s,
     premiumTier: t.premiumTier,
     guildBoostCount: t.premiumSubscriberCount
   });
   return r.useEffect(() => {
     let e = window.setTimeout(() => {
-      f(!0)
+      N(!0)
     }, 250);
     return () => {
       window.clearTimeout(e)
@@ -120,14 +120,14 @@ function I(e) {
       guild: t,
       isProgressBarAnimationComplete: B,
       setConfettiCount: R,
-      setShouldFireConfetti: C,
+      setShouldFireConfetti: x,
       tier: e,
       tierMarkerAnimationPosition: P,
       children: (0, n.getTierName)(e)
     }, e)), (0, i.jsx)(u.default, {
-      confettiCount: N,
+      confettiCount: f,
       confettiTriggerRef: g,
-      isFiring: O
+      isFiring: v
     })]
   })
 }

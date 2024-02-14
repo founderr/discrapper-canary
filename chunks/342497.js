@@ -105,8 +105,8 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
           type: "other",
           description: "optionalWhitespace"
         },
-        I = /^[0-9]/,
-        N = {
+        N = /^[0-9]/,
+        I = {
           type: "class",
           value: "[0-9]",
           description: "[0-9]"
@@ -387,7 +387,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
 
       function ed() {
         var t;
-        return I.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(N)), t
+        return N.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(I)), t
       }
 
       function ef() {

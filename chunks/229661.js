@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
+var a = n("77078"),
   s = n("452804"),
   i = n("135230"),
   r = n("168973"),
@@ -20,17 +20,17 @@ function u(e) {
       }), t(), e()
     },
     u = !r.default.disableEmbeddedActivityPopOutAlert;
-  u ? (0, l.openModal)(l => (0, a.jsx)(i.default, {
+  u ? (0, a.openModal)(a => (0, l.jsx)(i.default, {
     confirmText: o.default.Messages.EMBEDDED_ACTIVITIES_YEP,
     secondaryConfirmText: o.default.Messages.DONT_ASK_AGAIN,
     title: o.default.Messages.EMBEDDED_ACTIVITIES_CAREFUL,
     cancelText: o.default.Messages.EMBEDDED_ACTIVITIES_NVM,
     onConfirm: () => {
-      l.onClose(), e()
+      a.onClose(), e()
     },
     onCancel: t,
-    onConfirmSecondary: () => n(l.onClose),
+    onConfirmSecondary: () => n(a.onClose),
     body: o.default.Messages.EMBEDDED_ACTIVITIES_POP_IN_WARNING,
-    ...l
-  }), {}, l.POPOUT_MODAL_CONTEXT) : e()
+    ...a
+  }), {}, a.POPOUT_MODAL_CONTEXT) : e()
 }

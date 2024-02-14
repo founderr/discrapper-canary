@@ -29,7 +29,7 @@ var n = u("414456"),
   a = u("599110"),
   d = u("49111"),
   s = u("782340"),
-  f = u("105029");
+  f = u("125792");
 let _ = Object.freeze({
   DEFAULT: f.colorDefault,
   NEUTRAL: f.colorNeutral,

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("669491"),
+var a = n("669491"),
   s = n("244201"),
   i = n("751661"),
   r = n("228427"),
@@ -19,14 +19,14 @@ function d(e) {
     channel: n,
     highlight: d
   } = e, c = (0, s.useAppContext)();
-  return (0, a.jsx)(o.default, {
+  return (0, l.jsx)(o.default, {
     highlight: null != d && d,
     className: t,
-    icon: (0, a.jsx)(r.default, {
+    icon: (0, l.jsx)(r.default, {
       height: 20,
       width: 20
     }),
-    color: l.default.unsafe_rawColors.GREEN_360.css,
+    color: a.default.unsafe_rawColors.GREEN_360.css,
     title: u.default.Messages.STAGE_CHANNEL_START_TITLE,
     description: u.default.Messages.STAGE_CHANNEL_START_SUBTITLE,
     onClick: function() {

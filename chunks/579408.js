@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("594203"),
-  i = n("701268");
+  i = n("592550");
 
 function r(e) {
   let {
@@ -16,8 +16,8 @@ function r(e) {
     onResizeEnd: r,
     minHeight: o,
     maxHeight: u
-  } = e, [d, c] = l.useState(null);
-  l.useEffect(() => {
+  } = e, [d, c] = a.useState(null);
+  a.useEffect(() => {
     var e, n;
     c(null !== (n = null === (e = t.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== n ? n : null)
   }, [t]);
@@ -30,7 +30,7 @@ function r(e) {
     onElementResizeEnd: r,
     orientation: s.ResizeOrientation.VERTICAL_BOTTOM
   });
-  return (0, a.jsx)("div", {
+  return (0, l.jsx)("div", {
     onMouseDown: f,
     className: i.resizeHandle
   })

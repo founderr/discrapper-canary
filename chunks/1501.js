@@ -11,8 +11,8 @@
       c = t("693051"),
       r = t("607542"),
       o = t("153498"),
-      f = t("934306"),
-      l = t("742171"),
+      l = t("934306"),
+      f = t("742171"),
       u = t("393027"),
       p = t("393414"),
       b = t("49111"),
@@ -29,7 +29,7 @@
             pathname: t
           } = e, s = (0, c.getRootNavigationRef)(), n = (0, i.isInMainTabsExperiment)();
           if (null != s && s.isReady()) {
-            if (n && (0, f.isSplitMessagesTab)() && t === b.Routes.ME) {
+            if (n && (0, l.isSplitMessagesTab)() && t === b.Routes.ME) {
               (0, o.navigateToRootTab)({
                 screen: "messages",
                 resetRoot: e.navigationReplace
@@ -62,7 +62,7 @@
                   voiceChannelId: t,
                   voiceMessageId: s
                 } = i.params;
-                (0, l.isOldVoiceUIEnabled)() && (0, o.navigateToChannel)({
+                (0, f.isOldVoiceUIEnabled)() && (0, o.navigateToChannel)({
                   channelId: t,
                   guildId: a,
                   messageId: s,
@@ -76,7 +76,7 @@
                   guildId: d,
                   messageId: n
                 } = a.params;
-                if (!(0, f.isSplitMessagesTab)()) {
+                if (!(0, l.isSplitMessagesTab)()) {
                   (0, o.navigateToRootTab)({
                     screen: "guilds",
                     guildId: d,
@@ -84,17 +84,17 @@
                   });
                   return
                 }
-                if ((0, f.isOnNewPanels)()) {
+                if ((0, l.isOnNewPanels)()) {
                   let [e, a] = (0, r.default)(s.getCurrentRoute());
                   if (e === d && a === t) return
                 }
-                null == t || (0, f.shouldHandleNewPanelsRoute)(d) && !1 !== e.navigationReplace ? d === b.ME ? (0, o.navigateToRootTab)({
+                null == t || (0, l.shouldHandleNewPanelsRoute)(d) && !1 !== e.navigationReplace ? d === b.ME ? (0, o.navigateToRootTab)({
                   screen: "messages",
                   resetRoot: e.navigationReplace
                 }) : (0, o.navigateToRootTab)({
                   screen: "guilds",
                   guildId: d,
-                  channelId: (0, f.isOnNewPanels)() ? t : void 0,
+                  channelId: (0, l.isOnNewPanels)() ? t : void 0,
                   resetRoot: e.navigationReplace
                 }) : null != d && (0, o.navigateToChannel)({
                   channelId: t,

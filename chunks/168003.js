@@ -1,45 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return B
   }
 });
 var a = n("37983");
 n("884691");
-var l = n("446674"),
-  i = n("77078"),
+var i = n("446674"),
+  l = n("77078"),
   u = n("272030"),
-  s = n("838446"),
-  d = n("158534"),
-  r = n("846883"),
-  o = n("812204"),
+  r = n("838446"),
+  s = n("158534"),
+  o = n("846883"),
+  d = n("812204"),
   c = n("861370"),
   f = n("20209"),
-  _ = n("972701"),
-  E = n("390008"),
+  E = n("972701"),
+  _ = n("390008"),
   S = n("41205"),
   N = n("936947"),
-  T = n("379304"),
-  g = n("534222"),
-  h = n("601131"),
-  C = n("47495"),
-  M = n("834052"),
+  C = n("379304"),
+  T = n("534222"),
+  v = n("601131"),
+  h = n("47495"),
+  g = n("834052"),
   A = n("715243"),
-  I = n("458574"),
-  v = n("963150"),
-  p = n("308798"),
-  m = n("47006"),
-  L = n("809259"),
+  M = n("458574"),
+  m = n("963150"),
+  I = n("308798"),
+  L = n("47006"),
+  p = n("809259"),
   O = n("878526"),
   U = n("44141"),
-  R = n("531674"),
+  F = n("531674"),
   y = n("619436"),
   G = n("625399"),
-  b = n("339876"),
+  R = n("339876"),
   x = n("702741"),
-  V = n("782000"),
+  b = n("782000"),
   D = n("45593"),
-  F = n("604887"),
+  V = n("604887"),
   H = n("958936"),
   j = n("49111"),
   P = n("782340");
@@ -48,76 +48,76 @@ function w(e) {
   let {
     channel: t,
     guild: n,
-    onSelect: s
-  } = e, d = t.isGuildStageVoice(), o = (0, l.useStateFromStores)([M.default], () => d ? M.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, I.default)(t), T = (0, g.useActiveEvent)(t.id), A = (0, h.default)(null == T ? void 0 : T.id, n, t), v = (0, V.default)(t, o), p = (0, _.useAddToFavoritesItem)(t), O = (0, _.useRemoveFromFavoritesItem)(t), U = (0, E.default)(t), R = (0, S.default)(t), b = (0, N.default)(t), D = (0, L.default)(t), F = (0, y.default)(t), j = (0, m.default)(t), w = (0, H.default)(t, n), B = (0, c.default)({
+    onSelect: r
+  } = e, s = t.isGuildStageVoice(), d = (0, i.useStateFromStores)([g.default], () => s ? g.default.getStageInstanceByChannel(t.id) : void 0, [s, t.id]), f = (0, M.default)(t), C = (0, T.useActiveEvent)(t.id), A = (0, v.default)(null == C ? void 0 : C.id, n, t), m = (0, b.default)(t, d), I = (0, E.useAddToFavoritesItem)(t), O = (0, E.useRemoveFromFavoritesItem)(t), U = (0, _.default)(t), F = (0, S.default)(t), R = (0, N.default)(t), D = (0, p.default)(t), V = (0, y.default)(t), j = (0, L.default)(t), w = (0, H.default)(t, n), Y = (0, c.default)({
     id: t.id,
     label: P.default.Messages.COPY_ID_CHANNEL
-  }), k = (0, x.default)(t), Y = (0, r.default)(t), W = (0, C.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuFavorite"), q = (0, G.default)(t);
-  return (0, a.jsxs)(i.Menu, {
+  }), B = (0, x.default)(t), k = (0, o.default)(t), Q = (0, h.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuFavorite"), W = (0, G.default)(t);
+  return (0, a.jsxs)(l.Menu, {
     navId: "channel-context",
     onClose: u.closeContextMenu,
     "aria-label": P.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    onSelect: s,
-    children: [(0, a.jsx)(i.MenuGroup, {
-      children: null != T ? A : v
-    }), (0, a.jsxs)(i.MenuGroup, {
-      children: [R, b, U, p]
-    }), (0, a.jsxs)(i.MenuGroup, {
-      children: [D, W ? q : F, j]
-    }), (0, a.jsx)(i.MenuGroup, {
-      children: Y
-    }), (0, a.jsx)(i.MenuGroup, {
-      children: O
-    }), (0, a.jsxs)(i.MenuGroup, {
-      children: [w, f]
-    }), (0, a.jsx)(i.MenuGroup, {
+    onSelect: r,
+    children: [(0, a.jsx)(l.MenuGroup, {
+      children: null != C ? A : m
+    }), (0, a.jsxs)(l.MenuGroup, {
+      children: [F, R, U, I]
+    }), (0, a.jsxs)(l.MenuGroup, {
+      children: [D, Q ? W : V, j]
+    }), (0, a.jsx)(l.MenuGroup, {
       children: k
-    }), (0, a.jsx)(i.MenuGroup, {
+    }), (0, a.jsx)(l.MenuGroup, {
+      children: O
+    }), (0, a.jsxs)(l.MenuGroup, {
+      children: [w, f]
+    }), (0, a.jsx)(l.MenuGroup, {
       children: B
+    }), (0, a.jsx)(l.MenuGroup, {
+      children: Y
     })]
   })
 }
 
-function B(e) {
+function Y(e) {
   let {
     channel: t,
     guild: n,
-    onSelect: s
-  } = e, d = t.isGuildStageVoice(), o = (0, l.useStateFromStores)([M.default], () => d ? M.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, U.default)(t), E = (0, I.default)(t), S = (0, g.useActiveEvent)(t.id), N = (0, h.default)(null == S ? void 0 : S.id, n, t), j = (0, V.default)(t, o), w = (0, _.useAddToFavoritesItem)(t), B = (0, _.useRemoveFromFavoritesItem)(t), k = (0, L.default)(t), Y = (0, y.default)(t), W = (0, m.default)(t), q = (0, O.default)(t, n, o), K = (0, H.default)(t, n), Z = (0, D.default)(t, n), X = (0, F.default)(t, n.id), J = (0, A.default)(t, n), Q = (0, v.default)(t, n), z = (0, p.default)(t), $ = (0, c.default)({
+    onSelect: r
+  } = e, s = t.isGuildStageVoice(), d = (0, i.useStateFromStores)([g.default], () => s ? g.default.getStageInstanceByChannel(t.id) : void 0, [s, t.id]), f = (0, U.default)(t), _ = (0, M.default)(t), S = (0, T.useActiveEvent)(t.id), N = (0, v.default)(null == S ? void 0 : S.id, n, t), j = (0, b.default)(t, d), w = (0, E.useAddToFavoritesItem)(t), Y = (0, E.useRemoveFromFavoritesItem)(t), B = (0, p.default)(t), k = (0, y.default)(t), Q = (0, L.default)(t), W = (0, O.default)(t, n, d), Z = (0, H.default)(t, n), X = (0, D.default)(t, n), J = (0, V.default)(t, n.id), z = (0, A.default)(t, n), K = (0, m.default)(t, n), q = (0, I.default)(t), $ = (0, c.default)({
     id: t.id,
     label: P.default.Messages.COPY_ID_CHANNEL
-  }), ee = (0, x.default)(t), et = (0, r.default)(t), en = (0, b.default)(t), ea = (0, T.default)(t), el = (0, R.default)(t), ei = (0, C.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuNormal"), eu = (0, G.default)(t);
-  return (0, a.jsxs)(i.Menu, {
+  }), ee = (0, x.default)(t), et = (0, o.default)(t), en = (0, R.default)(t), ea = (0, C.default)(t), ei = (0, F.default)(t), el = (0, h.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuNormal"), eu = (0, G.default)(t);
+  return (0, a.jsxs)(l.Menu, {
     navId: "channel-context",
     onClose: u.closeContextMenu,
     "aria-label": P.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    onSelect: s,
-    children: [(0, a.jsx)(i.MenuGroup, {
+    onSelect: r,
+    children: [(0, a.jsx)(l.MenuGroup, {
       children: null != S ? N : j
-    }), (0, a.jsxs)(i.MenuGroup, {
+    }), (0, a.jsxs)(l.MenuGroup, {
       children: [f, w]
-    }, "mark-as-read-or-favorite"), (0, a.jsxs)(i.MenuGroup, {
-      children: [q, et, en, E]
-    }, "channel-actions"), (0, a.jsxs)(i.MenuGroup, {
-      children: [X, K, Z, k, ea, ee]
-    }, "voice-actions"), (0, a.jsxs)(i.MenuGroup, {
-      children: [el, ei ? eu : Y]
-    }, "notifications"), (0, a.jsx)(i.MenuGroup, {
-      children: B
-    }), (0, a.jsxs)(i.MenuGroup, {
-      children: [W, J, Q, z]
-    }, "admin-actions"), (0, a.jsx)(i.MenuGroup, {
+    }, "mark-as-read-or-favorite"), (0, a.jsxs)(l.MenuGroup, {
+      children: [W, et, en, _]
+    }, "channel-actions"), (0, a.jsxs)(l.MenuGroup, {
+      children: [J, Z, X, B, ea, ee]
+    }, "voice-actions"), (0, a.jsxs)(l.MenuGroup, {
+      children: [ei, el ? eu : k]
+    }, "notifications"), (0, a.jsx)(l.MenuGroup, {
+      children: Y
+    }), (0, a.jsxs)(l.MenuGroup, {
+      children: [Q, z, K, q]
+    }, "admin-actions"), (0, a.jsx)(l.MenuGroup, {
       children: $
     }, "developer-actions")]
   })
 }
-var k = (0, d.default)((0, s.default)(function(e) {
+var B = (0, s.default)((0, r.default)(function(e) {
   let t = (0, f.default)();
   return t ? (0, a.jsx)(w, {
     ...e
-  }) : (0, a.jsx)(B, {
+  }) : (0, a.jsx)(Y, {
     ...e
   })
 }, {
   object: j.AnalyticsObjects.CONTEXT_MENU
-}), [o.default.CONTEXT_MENU, o.default.CHANNEL_LIST_VOICE_CHANNEL_MENU])
+}), [d.default.CONTEXT_MENU, d.default.CHANNEL_LIST_VOICE_CHANNEL_MENU])

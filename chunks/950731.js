@@ -33,24 +33,24 @@ function b(t, e) {
 f.prototype._update = function(t) {
   for (var e = this._w, s = 0 | this._ah, r = 0 | this._bh, i = 0 | this._ch, n = 0 | this._dh, o = 0 | this._eh, f = 0 | this._fh, u = 0 | this._gh, a = 0 | this._hh, h = 0 | this._al, l = 0 | this._bl, g = 0 | this._cl, v = 0 | this._dl, x = 0 | this._el, m = 0 | this._fl, y = 0 | this._gl, _ = 0 | this._hl, w = 0; w < 32; w += 2) e[w] = t.readInt32BE(4 * w), e[w + 1] = t.readInt32BE(4 * w + 4);
   for (; w < 160; w += 2) {
-    var M, S, k, E, A, B, I, R, j = e[w - 30],
-      C = e[w - 30 + 1];
-    var O = ((M = j) >>> 1 | (S = C) << 31) ^ (M >>> 8 | S << 24) ^ M >>> 7;
-    var P = ((k = C) >>> 1 | (E = j) << 31) ^ (k >>> 8 | E << 24) ^ (k >>> 7 | E << 25);
-    j = e[w - 4], C = e[w - 4 + 1];
-    var T = ((A = j) >>> 19 | (B = C) << 13) ^ (B >>> 29 | A << 3) ^ A >>> 6;
-    var D = ((I = C) >>> 19 | (R = j) << 13) ^ (R >>> 29 | I << 3) ^ (I >>> 6 | R << 26),
+    var M, S, k, A, E, B, I, R, P = e[w - 30],
+      j = e[w - 30 + 1];
+    var C = ((M = P) >>> 1 | (S = j) << 31) ^ (M >>> 8 | S << 24) ^ M >>> 7;
+    var O = ((k = j) >>> 1 | (A = P) << 31) ^ (k >>> 8 | A << 24) ^ (k >>> 7 | A << 25);
+    P = e[w - 4], j = e[w - 4 + 1];
+    var T = ((E = P) >>> 19 | (B = j) << 13) ^ (B >>> 29 | E << 3) ^ E >>> 6;
+    var D = ((I = j) >>> 19 | (R = P) << 13) ^ (R >>> 29 | I << 3) ^ (I >>> 6 | R << 26),
       z = e[w - 14],
-      L = e[w - 14 + 1],
-      N = e[w - 32],
-      q = e[w - 32 + 1],
-      U = P + L | 0,
-      F = O + z + b(U, P) | 0;
-    F = F + T + b(U = U + D | 0, D) | 0, F = F + N + b(U = U + q | 0, q) | 0, e[w] = F, e[w + 1] = U
+      N = e[w - 14 + 1],
+      L = e[w - 32],
+      U = e[w - 32 + 1],
+      q = O + N | 0,
+      F = C + z + b(q, O) | 0;
+    F = F + T + b(q = q + D | 0, D) | 0, F = F + L + b(q = q + U | 0, U) | 0, e[w] = F, e[w + 1] = q
   }
   for (var K = 0; K < 160; K += 2) {
-    F = e[K], U = e[K + 1];
-    var H, W, V, Z, G, $, X, Y, J, Q, tt = (H = s) & (W = r) | i & (H | W);
+    F = e[K], q = e[K + 1];
+    var H, W, V, Z, G, X, $, Y, J, Q, tt = (H = s) & (W = r) | i & (H | W);
     var te = (V = h) & (Z = l) | g & (V | Z),
       ts = d(s, h),
       tr = d(h, s),
@@ -58,11 +58,11 @@ f.prototype._update = function(t) {
       tn = p(x, o),
       tc = c[K],
       to = c[K + 1];
-    var tf = (G = o, $ = f, (X = u) ^ G & ($ ^ X));
+    var tf = (G = o, X = f, ($ = u) ^ G & (X ^ $));
     var tu = (Y = x, J = m, (Q = y) ^ Y & (J ^ Q)),
       ta = _ + tn | 0,
       td = a + ti + b(ta, _) | 0;
-    td = td + tf + b(ta = ta + tu | 0, tu) | 0, td = td + tc + b(ta = ta + to | 0, to) | 0, td = td + F + b(ta = ta + U | 0, U) | 0;
+    td = td + tf + b(ta = ta + tu | 0, tu) | 0, td = td + tc + b(ta = ta + to | 0, to) | 0, td = td + F + b(ta = ta + q | 0, q) | 0;
     var tp = tr + te | 0,
       tb = ts + tt + b(tp, tr) | 0;
     a = u, _ = y, u = f, y = m, f = o, m = x, o = n + td + b(x = v + ta | 0, v) | 0, n = i, v = g, i = r, g = l, r = s, l = h, s = td + tb + b(h = ta + tp | 0, ta) | 0

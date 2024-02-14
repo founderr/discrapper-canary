@@ -10,7 +10,7 @@ var s = n("77078"),
   l = n("368874"),
   i = n("328911"),
   r = n("782340"),
-  o = n("186614"),
+  o = n("866260"),
   u = n("392963"),
   d = () => {
     let e = (0, l.useAgeSpecificText)(r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_TEEN, r.default.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_PARENT);

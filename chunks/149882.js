@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("222007");
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("65597"),
+var a = n("65597"),
   s = n("151426"),
   i = n("272030"),
   r = n("235145"),
@@ -28,7 +28,7 @@ function g(e) {
   } = e, C = t.getGuildId(), {
     mute: _,
     suppress: I
-  } = (0, c.default)(t), T = (0, l.default)([m.default], () => m.default.isDeaf()), v = _ || I || T, x = (0, o.useSoundBoardDismissContentTypes)({
+  } = (0, c.default)(t), T = (0, a.default)([m.default], () => m.default.isDeaf()), v = _ || I || T, x = (0, o.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: v
   }), [N, A] = (0, r.useGetDismissibleContent)(x);
 
@@ -37,23 +37,23 @@ function g(e) {
       let {
         default: e
       } = await n.el("136137").then(n.bind(n, "136137"));
-      return t => (0, a.jsx)(e, {
+      return t => (0, l.jsx)(e, {
         guildId: C,
         ...t
       })
     })
   }
-  return (0, a.jsx)(E.default, {
+  return (0, l.jsx)(E.default, {
     renderPopout: e => {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(f.default, {
-        children: (0, a.jsx)(d.default, {
+      return (0, l.jsx)(f.default, {
+        children: (0, l.jsx)(d.default, {
           guildId: C,
           channel: t,
           onClose: n,
-          gridNotice: N === s.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(u.CustomCallSoundUpsell, {
+          gridNotice: N === s.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, l.jsx)(u.CustomCallSoundUpsell, {
             onClose: n,
             markAsDismissed: A
           }),
@@ -61,7 +61,7 @@ function g(e) {
         })
       })
     },
-    children: e => (0, a.jsx)(h.default, {
+    children: e => (0, l.jsx)(h.default, {
       themeable: g,
       label: function() {
         if (_) return S.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;

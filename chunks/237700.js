@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   AUTOCOMPLETE_PRIORITY: function() {
-    return p
+    return m
   },
   AUTOCOMPLETE_OPTIONS: function() {
-    return m
+    return p
   }
 });
 var l = n("851745"),
@@ -17,8 +17,8 @@ var l = n("851745"),
   d = n("845247"),
   c = n("122270"),
   f = n("684396");
-let p = [l.AutocompleteOptionTypes.CHOICES, l.AutocompleteOptionTypes.GIFS, l.AutocompleteOptionTypes.COMMAND_OPTIONS, l.AutocompleteOptionTypes.EMOJIS_AND_STICKERS, l.AutocompleteOptionTypes.REACTIONS, l.AutocompleteOptionTypes.CHANNELS, l.AutocompleteOptionTypes.MENTIONS, l.AutocompleteOptionTypes.COMMANDS, l.AutocompleteOptionTypes.LEGACY_COMMANDS],
-  m = {
+let m = [l.AutocompleteOptionTypes.CHOICES, l.AutocompleteOptionTypes.GIFS, l.AutocompleteOptionTypes.COMMAND_OPTIONS, l.AutocompleteOptionTypes.EMOJIS_AND_STICKERS, l.AutocompleteOptionTypes.REACTIONS, l.AutocompleteOptionTypes.CHANNELS, l.AutocompleteOptionTypes.MENTIONS, l.AutocompleteOptionTypes.COMMANDS, l.AutocompleteOptionTypes.LEGACY_COMMANDS],
+  p = {
     [l.AutocompleteOptionTypes.CHANNELS]: i.default,
     [l.AutocompleteOptionTypes.COMMANDS]: a.default,
     [l.AutocompleteOptionTypes.COMMAND_OPTIONS]: r.default,

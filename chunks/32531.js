@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   updateBackgroundGradientPreset: function() {
-    return i
+    return r
   },
   resetBackgroundGradientPreset: function() {
     return l
@@ -16,31 +16,31 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var r = n("913144");
-let i = e => {
-    r.default.dispatch({
+var i = n("913144");
+let r = e => {
+    i.default.dispatch({
       type: "UPDATE_BACKGROUND_GRADIENT_PRESET",
       presetId: e
     })
   },
   l = () => {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "UPDATE_BACKGROUND_GRADIENT_PRESET",
       presetId: null
     })
   },
   a = () => {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "CLIENT_THEMES_EDITOR_OPEN"
     })
   },
   s = () => {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "CLIENT_THEMES_EDITOR_CLOSE"
     })
   },
   o = () => {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "RESET_PREVIEW_CLIENT_THEME"
     })
   }

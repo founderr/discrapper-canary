@@ -1,6 +1,6 @@
 var n = r("285162"),
   u = Object.create,
-  o = function() {
+  a = function() {
     function e() {}
     return function(t) {
       if (!n(t)) return {};
@@ -10,4 +10,4 @@ var n = r("285162"),
       return e.prototype = void 0, r
     }
   }();
-e.exports = o
+e.exports = a

@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   reduce: function() {
-    return o
+    return a
   }
 });
 var r = n("714413");
 
-function o() {
+function a() {
   var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
     t = arguments.length > 1 ? arguments[1] : void 0;
   switch (t.type) {

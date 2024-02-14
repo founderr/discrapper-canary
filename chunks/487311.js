@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var l = n("37983");
@@ -14,23 +14,23 @@ var i = n("448105"),
   u = n("77078"),
   d = n("49111"),
   c = n("782340"),
-  f = n("558062"),
-  p = function(e) {
+  f = n("262092"),
+  m = function(e) {
     let {
       className: t,
       guild: n,
       roleStyle: i,
       roleFilter: s,
-      onSelect: p,
-      onClose: m
+      onSelect: m,
+      onClose: p
     } = e, h = e => r(n.roles).filter(s).filter(t => a(e.toLowerCase(), t.name.toLowerCase())).value();
     return (0, l.jsx)(u.ComboboxPopout, {
       className: t,
       value: new Set,
-      onChange: p,
+      onChange: m,
       placeholder: c.default.Messages.ADD_ROLE_PLACEHOLDER,
       "aria-label": c.default.Messages.ADD_ROLE_A11Y_LABEL,
-      onClose: m,
+      onClose: p,
       children: e => h(e).map(e => {
         var t, n;
         return (0, l.jsxs)(u.ComboboxItem, {

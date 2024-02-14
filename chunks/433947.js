@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   BOGOAnnouncementModalExperiment: function() {
-    return i
+    return r
   }
 });
-var r = n("862205");
-let i = (0, r.createExperiment)({
+var i = n("862205");
+let r = (0, i.createExperiment)({
   kind: "user",
   id: "2023-06_bogo_announcement_modal",
   label: "BOGO Announcement Modal",

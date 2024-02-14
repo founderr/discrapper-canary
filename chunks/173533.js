@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("70102"), n("222007"), n("424973");
 var r = n("37983"),
-  o = n("884691"),
-  a = n("515769"),
+  a = n("884691"),
+  o = n("515769"),
   i = n("772110"),
   s = ["children"];
 
@@ -17,7 +17,7 @@ function c(e, t) {
 }
 var l = 0,
   u = Symbol.for("__REACT_DND_CONTEXT_INSTANCE__"),
-  d = (0, o.memo)(function(e) {
+  d = (0, a.memo)(function(e) {
     var t, n, d = e.children;
     var f = (n = 2, function(e) {
         if (Array.isArray(e)) return e
@@ -29,43 +29,43 @@ var l = 0,
             n = arguments.length > 2 ? arguments[2] : void 0,
             r = arguments.length > 3 ? arguments[3] : void 0;
           return !t[u] && (t[u] = {
-            dragDropManager: (0, a.createDragDropManager)(e, t, n, r)
+            dragDropManager: (0, o.createDragDropManager)(e, t, n, r)
           }), t[u]
         }(e.backend, e.context, e.options, e.debugMode), !e.context]
       }(function(e, t) {
         if (null == e) return {};
-        var n, r, o = function(e, t) {
+        var n, r, a = function(e, t) {
           if (null == e) return {};
-          var n, r, o = {},
-            a = Object.keys(e);
-          for (r = 0; r < a.length; r++) n = a[r], !(t.indexOf(n) >= 0) && (o[n] = e[n]);
-          return o
+          var n, r, a = {},
+            o = Object.keys(e);
+          for (r = 0; r < o.length; r++) n = o[r], !(t.indexOf(n) >= 0) && (a[n] = e[n]);
+          return a
         }(e, t);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
-          for (r = 0; r < a.length; r++) {
-            if (n = a[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n])
+          var o = Object.getOwnPropertySymbols(e);
+          for (r = 0; r < o.length; r++) {
+            if (n = o[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n])
           }
         }
-        return o
+        return a
       }(e, s))) || function(e, t) {
-        var n, r, o = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
-        if (null != o) {
-          var a = [],
+        var n, r, a = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
+        if (null != a) {
+          var o = [],
             i = !0,
             s = !1;
           try {
-            for (o = o.call(e); !(i = (n = o.next()).done) && (a.push(n.value), !t || a.length !== t); i = !0);
+            for (a = a.call(e); !(i = (n = a.next()).done) && (o.push(n.value), !t || o.length !== t); i = !0);
           } catch (e) {
             s = !0, r = e
           } finally {
             try {
-              !i && null != o.return && o.return()
+              !i && null != a.return && a.return()
             } finally {
               if (s) throw r
             }
           }
-          return a
+          return o
         }
       }(t, n) || function(e, t) {
         if (e) {
@@ -79,7 +79,7 @@ var l = 0,
       }()),
       h = f[0],
       m = f[1];
-    return (0, o.useEffect)(function() {
+    return (0, a.useEffect)(function() {
       if (m) {
         var e = p();
         return ++l,

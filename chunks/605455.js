@@ -19,13 +19,13 @@ var i = l("37983"),
   m = l("685665"),
   I = l("442939"),
   E = l("944654"),
-  p = l("42203"),
-  x = l("471671"),
+  x = l("42203"),
+  p = l("471671"),
   C = l("145131"),
   T = l("980428"),
   S = l("599110"),
-  g = l("659500"),
-  A = l("159885"),
+  A = l("659500"),
+  g = l("159885"),
   _ = l("84460"),
   N = l("550766"),
   j = l("686569"),
@@ -36,14 +36,14 @@ var i = l("37983"),
   V = l("954016"),
   R = l("49111"),
   b = l("782340"),
-  O = l("203509"),
+  O = l("413432"),
   H = l("851815"),
   B = l("255293");
-let F = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
-  w = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
-  k = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MIN_WIDTH),
-  Y = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_WIDTH),
-  P = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + F + (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
+let F = (0, g.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
+  w = (0, g.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
+  k = (0, g.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MIN_WIDTH),
+  Y = (0, g.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_WIDTH),
+  P = (0, g.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + F + (0, g.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
 
 function U(e) {
   let {
@@ -52,8 +52,8 @@ function U(e) {
     locationObject: n,
     onClose: d,
     initialSelectedApplicationId: f,
-    initialSlide: x = V.ActivityShelfSlides.DIRECTORY,
-    enableSelectedTextChannelInvite: A,
+    initialSlide: p = V.ActivityShelfSlides.DIRECTORY,
+    enableSelectedTextChannelInvite: g,
     analyticsLocations: P,
     ...U
   } = e, {
@@ -66,7 +66,7 @@ function U(e) {
     width: W
   } = (0, E.useScreenDimensions)(), z = a.useMemo(() => Z ? Math.max(k, Math.min(W - 2 * F, Y)) : w, [W, Z]), K = (0, c.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), {
     AnalyticsLocationProvider: X
-  } = (0, m.default)(P), [q, J] = a.useState(x), Q = (0, u.default)(q), [$, ee] = a.useState(null), [et, el] = a.useState(f), [ei, ea] = a.useState(void 0), [en] = (0, I.default)(null == et ? [] : [et]), es = a.useRef(null), er = a.useMemo(() => ({
+  } = (0, m.default)(P), [q, J] = a.useState(p), Q = (0, u.default)(q), [$, ee] = a.useState(null), [et, el] = a.useState(f), [ei, ea] = a.useState(void 0), [en] = (0, I.default)(null == et ? [] : [et]), es = a.useRef(null), er = a.useMemo(() => ({
     application_id: et,
     source_section: n.section,
     impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
@@ -98,10 +98,10 @@ function U(e) {
       channel_id: null == t ? void 0 : t.id,
       guild_id: l
     })
-  }, [t, l]), a.useEffect(() => (g.ComponentDispatch.subscribe(R.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ec), () => {
-    g.ComponentDispatch.unsubscribe(R.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ec)
-  }), [ec]), a.useEffect(() => (g.ComponentDispatch.subscribe(R.ComponentActions.SHOW_ACTIVITY_DETAILS, ed), () => {
-    g.ComponentDispatch.unsubscribe(R.ComponentActions.SHOW_ACTIVITY_DETAILS, ed)
+  }, [t, l]), a.useEffect(() => (A.ComponentDispatch.subscribe(R.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ec), () => {
+    A.ComponentDispatch.unsubscribe(R.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ec)
+  }), [ec]), a.useEffect(() => (A.ComponentDispatch.subscribe(R.ComponentActions.SHOW_ACTIVITY_DETAILS, ed), () => {
+    A.ComponentDispatch.unsubscribe(R.ComponentActions.SHOW_ACTIVITY_DETAILS, ed)
   }), [ed]), a.useEffect(() => {
     N.dismissNewActivityIndicator()
   }, []);
@@ -133,7 +133,7 @@ function U(e) {
         guild_id: l,
         location: (0, h.getLocation)(),
         ...(0, v.collectGuildAnalyticsMetadata)(l),
-        ...(0, v.collectChannelAnalyticsMetadata)(p.default.getChannel(null == t ? void 0 : t.id)),
+        ...(0, v.collectChannelAnalyticsMetadata)(x.default.getChannel(null == t ? void 0 : t.id)),
         ...er,
         ...e
       };
@@ -233,7 +233,7 @@ function U(e) {
               selectedChannelId: ei,
               setSelectedChannelId: ea,
               guildId: l,
-              enableSelectedTextChannelInvite: A
+              enableSelectedTextChannelInvite: g
             })
           })
         }), (0, i.jsx)(o.Slide, {
@@ -273,7 +273,7 @@ function U(e) {
                     applicationId: et,
                     locationObject: n,
                     selectedChannelId: ei,
-                    enableSelectedTextChannelInvite: A
+                    enableSelectedTextChannelInvite: g
                   })
                 })]
               });
@@ -291,7 +291,7 @@ let G = e => {
   let {
     children: t,
     slide: l
-  } = e, n = (0, c.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), r = a.useContext(f.default), d = (0, c.useStateFromStores)([x.default], () => x.default.windowSize(r.windowId).height, [r.windowId]);
+  } = e, n = (0, c.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), r = a.useContext(f.default), d = (0, c.useStateFromStores)([p.default], () => p.default.windowSize(r.windowId).height, [r.windowId]);
   return (0, i.jsx)("div", {
     className: s(O.slideContentOuterContainerSquished, {
       [O.slideContentOuterContainerSquishedWithDev]: l === V.ActivityShelfSlides.DIRECTORY && n,

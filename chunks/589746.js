@@ -1,7 +1,7 @@
 "use strict";
 var r = n("911718"),
-  o = n("307904"),
-  a = n("638839")(),
+  a = n("307904"),
+  o = n("638839")(),
   i = n("293471"),
   s = r("%TypeError%"),
   c = r("%Math.floor%");
@@ -15,5 +15,5 @@ e.exports = function(e, t) {
     var u = i(e, "length");
     u && !u.configurable && (r = !1), u && !u.writable && (l = !1)
   }
-  return (r || l || !n) && (a ? o(e, "length", t, !0, !0) : o(e, "length", t)), e
+  return (r || l || !n) && (o ? a(e, "length", t, !0, !0) : a(e, "length", t)), e
 }

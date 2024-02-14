@@ -1,37 +1,37 @@
 "use strict";
 r.r(t), r.d(t, {
   hasUserTrialOfferExpired: function() {
-    return a
+    return f
   },
   useTrialOffer: function() {
-    return E
+    return o
   }
 }), r("222007");
-var l = r("884691"),
+var n = r("884691"),
   i = r("446674"),
-  n = r("862337"),
+  l = r("862337"),
   u = r("697218"),
   s = r("340412"),
-  f = r("719923");
+  a = r("719923");
 
-function a(e) {
+function f(e) {
   return null != e && null != e.expires_at && Date.now() > Date.parse(e.expires_at)
 }
 
-function E(e) {
+function o(e) {
   let t = (0, i.useStateFromStores)([s.default], () => s.default.getUserTrialOffer(e)),
-    [r, E] = l.useState(a(t)),
-    _ = (0, i.useStateFromStores)([u.default], () => (0, f.isPremium)(u.default.getCurrentUser()));
-  return l.useEffect(() => {
+    [r, o] = n.useState(f(t)),
+    E = (0, i.useStateFromStores)([u.default], () => (0, a.isPremium)(u.default.getCurrentUser()));
+  return n.useEffect(() => {
     if (null != t && null != t.expires_at) {
-      let e = new n.Timeout,
-        l = () => {
+      let e = new l.Timeout,
+        n = () => {
           let i = null != t.expires_at ? Date.parse(t.expires_at) - Date.now() : 0;
           null == e || e.start(i, () => {
-            !r && a(t) ? E(!0) : l()
+            !r && f(t) ? o(!0) : n()
           })
         };
-      return l(), () => e.stop()
+      return n(), () => e.stop()
     }
-  }, [r, t]), r || _ ? null : t
+  }, [r, t]), r || E ? null : t
 }

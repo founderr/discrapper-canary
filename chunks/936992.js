@@ -1,137 +1,137 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildSelectModalHeader: function() {
-    return S
+    return I
   },
   GuildSelectModalBody: function() {
-    return g
+    return C
   },
   default: function() {
-    return L
+    return g
   }
 }), n("808653"), n("424973"), n("222007");
 var s = n("37983"),
-  r = n("884691"),
-  l = n("448105"),
-  a = n.n(l),
-  i = n("446674"),
+  a = n("884691"),
+  r = n("448105"),
+  i = n.n(r),
+  l = n("446674"),
   o = n("77078"),
   u = n("54239"),
-  c = n("393414"),
-  d = n("305961"),
+  d = n("393414"),
+  c = n("305961"),
   f = n("677099"),
-  h = n("476263"),
+  _ = n("476263"),
   E = n("810567"),
-  _ = n("427459"),
-  p = n("49111"),
-  m = n("782340"),
-  I = n("109396");
+  h = n("427459"),
+  m = n("49111"),
+  p = n("782340"),
+  S = n("198591");
 
-function S(e) {
+function I(e) {
   let {
     isTransfer: t = !1,
     setQuery: n,
-    query: r
+    query: a
   } = e;
   return (0, s.jsxs)(o.ModalHeader, {
-    className: I.selectHeaderContainer,
+    className: S.selectHeaderContainer,
     children: [(0, s.jsx)(o.Heading, {
-      className: I.selectHeader,
+      className: S.selectHeader,
       variant: "heading-md/semibold",
-      children: t ? m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
+      children: t ? p.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : p.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
     }), (0, s.jsx)(E.default, {
       size: E.default.Sizes.MEDIUM,
-      placeholder: m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
-      "aria-label": m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
-      className: I.selectSearch,
-      query: r,
+      placeholder: p.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
+      "aria-label": p.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
+      className: S.selectSearch,
+      query: a,
       onChange: n,
       onClear: () => n("")
     })]
   })
 }
 
-function g(e) {
+function C(e) {
   let {
     isTransfer: t = !1,
     selectedSlotGuilds: n,
-    onClose: r,
-    onSelectGuild: l,
+    onClose: a,
+    onSelectGuild: r,
     query: E
-  } = e, S = (0, i.useStateFromStores)([f.default], () => f.default.getFlattenedGuildIds()), g = (0, i.useStateFromStoresArray)([d.default], () => S.reduce((e, t) => {
-    let s = d.default.getGuild(t);
-    return null == s || null != n && n.some(e => e.id === t) ? e : ((E.length <= 0 || a(E.toLowerCase(), null == s ? void 0 : s.name.toLowerCase())) && e.push(s), e)
+  } = e, I = (0, l.useStateFromStores)([f.default], () => f.default.getFlattenedGuildIds()), C = (0, l.useStateFromStoresArray)([c.default], () => I.reduce((e, t) => {
+    let s = c.default.getGuild(t);
+    return null == s || null != n && n.some(e => e.id === t) ? e : ((E.length <= 0 || i(E.toLowerCase(), null == s ? void 0 : s.name.toLowerCase())) && e.push(s), e)
   }, []));
 
-  function L() {
-    r(), (0, u.popLayer)(), (0, c.transitionTo)(p.Routes.GUILD_DISCOVERY)
+  function g() {
+    a(), (0, u.popLayer)(), (0, d.transitionTo)(m.Routes.GUILD_DISCOVERY)
   }
   return (0, s.jsxs)(s.Fragment, {
-    children: [0 === g.length && (0, s.jsx)("div", {
-      className: I.emptyStateWrapper,
+    children: [0 === C.length && (0, s.jsx)("div", {
+      className: S.emptyStateWrapper,
       children: (0, s.jsx)(o.Text, {
         variant: "text-md/normal",
-        children: 0 === S.length ? m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
+        children: 0 === I.length ? p.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
           publicGuildDirectoryHook: (e, t) => (0, s.jsx)(o.Clickable, {
-            onClick: L,
+            onClick: g,
             tag: "a",
             children: e
           }, t)
-        }) : m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
+        }) : p.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
       })
-    }), g.map(e => (0, s.jsxs)(o.Clickable, {
-      className: I.selectGuild,
+    }), C.map(e => (0, s.jsxs)(o.Clickable, {
+      className: S.selectGuild,
       onClick: () => {
-        l(e)
+        r(e)
       },
-      children: [(0, s.jsx)(h.default, {
-        className: I.selectGuildIcon,
+      children: [(0, s.jsx)(_.default, {
+        className: S.selectGuildIcon,
         guild: e,
-        size: h.default.Sizes.SMALL
+        size: _.default.Sizes.SMALL
       }), (0, s.jsxs)("div", {
-        className: I.selectGuildCopy,
+        className: S.selectGuildCopy,
         children: [(0, s.jsx)(o.Text, {
-          className: I.selectGuildName,
+          className: S.selectGuildName,
           variant: "text-md/normal",
           children: e.name
         }), (0, s.jsx)(o.Text, {
-          className: I.selectGuildLevel,
+          className: S.selectGuildLevel,
           color: "text-muted",
           variant: "text-xs/normal",
-          children: (0, _.getTierName)(e.premiumTier)
+          children: (0, h.getTierName)(e.premiumTier)
         })]
       }), (0, s.jsx)(o.Text, {
-        className: I.selectGuildPseudoCta,
+        className: S.selectGuildPseudoCta,
         color: "always-white",
         variant: "text-sm/medium",
-        children: t ? m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
+        children: t ? p.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : p.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
       })]
     }, e.id))]
   })
 }
 
-function L(e) {
+function g(e) {
   let {
     onClose: t,
     onSelectGuild: n,
-    transitionState: l
-  } = e, [a, i] = r.useState("");
+    transitionState: r
+  } = e, [i, l] = a.useState("");
   return (0, s.jsxs)(o.ModalRoot, {
-    transitionState: l,
-    className: I.modal,
+    transitionState: r,
+    className: S.modal,
     size: o.ModalSize.SMALL,
-    children: [(0, s.jsx)(S, {
-      query: a,
-      setQuery: i
+    children: [(0, s.jsx)(I, {
+      query: i,
+      setQuery: l
     }), (0, s.jsx)(o.ModalContent, {
-      className: I.modalContent,
-      children: (0, s.jsx)(g, {
+      className: S.modalContent,
+      children: (0, s.jsx)(C, {
         onClose: t,
         onSelectGuild: n,
-        query: a
+        query: i
       })
     }), (0, s.jsx)(o.ModalCloseButton, {
-      className: I.modalCloseButton,
+      className: S.modalCloseButton,
       onClick: t
     })]
   })

@@ -16,7 +16,7 @@ var a = n("37983"),
   f = n("294135"),
   E = n("404247"),
   h = n("49111"),
-  _ = n("128403");
+  _ = n("504659");
 class C extends s.Component {
   componentDidMount() {
     this.fetchStoreListing(), (0, u.trackAppUIViewed)("channel_store_listing")

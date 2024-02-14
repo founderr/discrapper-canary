@@ -1,34 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageStandardEmoji: function() {
-    return v
+    return C
   },
   MessageCustomEmoji: function() {
-    return I
+    return T
   }
 }), n("222007");
 var l = n("37983"),
-  a = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
   r = n("748820"),
   o = n("77078"),
   u = n("430568"),
   d = n("716241"),
   c = n("558986"),
-  m = n("599110"),
-  f = n("459698"),
-  h = n("933629"),
-  p = n("49111"),
-  g = n("958706"),
-  E = n("646718"),
-  C = n("228551");
-let v = e => {
+  f = n("599110"),
+  m = n("459698"),
+  p = n("933629"),
+  h = n("49111"),
+  E = n("958706"),
+  g = n("646718"),
+  S = n("903985");
+let C = e => {
     var t;
     let {
       node: n,
-      tooltipPosition: a = h.EXPRESSION_TOOLTIP_PROPS.position,
-      enableClick: s = !0
+      tooltipPosition: i = p.EXPRESSION_TOOLTIP_PROPS.position,
+      enableClick: a = !0
     } = e, r = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0], d = null != r ? r : n.name, c = e => (0, l.jsx)(u.default, {
       ...e,
       emojiName: n.name,
@@ -36,13 +36,13 @@ let v = e => {
       src: n.src,
       alt: r,
       animated: !1
-    }), m = e => (0, l.jsx)(o.Tooltip, {
-      text: (0, h.renderClickableTooltipNode)(n.name, s),
+    }), f = e => (0, l.jsx)(o.Tooltip, {
+      text: (0, p.renderClickableTooltipNode)(n.name, a),
       "aria-label": d,
-      ...h.EXPRESSION_TOOLTIP_PROPS,
-      position: a,
+      ...p.EXPRESSION_TOOLTIP_PROPS,
+      position: i,
       onTooltipShow: () => {
-        s && S({
+        a && v({
           emojiNode: n,
           isCustomEmoji: !1
         })
@@ -50,32 +50,32 @@ let v = e => {
       children: t => (0, l.jsx)(o.Clickable, {
         ...e,
         tag: "span",
-        className: i(C.emojiContainer, {
-          [C.emojiContainerClickable]: s
+        className: s(S.emojiContainer, {
+          [S.emojiContainerClickable]: a
         }),
         children: c(t)
       })
     });
-    return s ? (0, l.jsx)(o.Popout, {
+    return a ? (0, l.jsx)(o.Popout, {
       animation: o.Popout.Animation.TRANSLATE,
       align: "center",
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
       position: "right",
-      renderPopout: e => (0, l.jsx)(f.MessageStandardEmojiPopout, {
+      renderPopout: e => (0, l.jsx)(m.MessageStandardEmojiPopout, {
         ...e,
         node: n
       }),
-      children: m
-    }) : m()
+      children: f
+    }) : f()
   },
-  I = e => {
+  T = e => {
     let {
       node: t,
       isInteracting: n,
-      tooltipPosition: s = h.EXPRESSION_TOOLTIP_PROPS.position,
+      tooltipPosition: a = p.EXPRESSION_TOOLTIP_PROPS.position,
       enableClick: d = !0
-    } = e, [E, v] = a.useState(String(Date.now())), [I, _] = a.useState(!1), x = function() {
+    } = e, [g, C] = i.useState(String(Date.now())), [T, I] = i.useState(!1), _ = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return (0, l.jsx)(u.default, {
         ...e,
@@ -85,17 +85,17 @@ let v = e => {
         animated: t.animated,
         isInteracting: n
       })
-    }, N = (0, r.v4)(), T = e => (0, l.jsx)(o.Tooltip, {
-      text: (0, h.renderClickableTooltipNode)(t.name, d),
+    }, N = (0, r.v4)(), A = e => (0, l.jsx)(o.Tooltip, {
+      text: (0, p.renderClickableTooltipNode)(t.name, d),
       "aria-label": t.name,
-      ...h.EXPRESSION_TOOLTIP_PROPS,
-      position: s,
+      ...p.EXPRESSION_TOOLTIP_PROPS,
+      position: a,
       onTooltipShow: () => {
-        _(!0), d && (S({
+        I(!0), d && (v({
           emojiNode: t,
           isCustomEmoji: !0,
           nonce: N
-        }), (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.CustomEmojiTooltipShown))
+        }), (0, c.initiateEmojiInteraction)(E.EmojiInteractionPoint.CustomEmojiTooltipShown))
       },
       children: t => (0, l.jsx)(o.Clickable, {
         ...e,
@@ -105,49 +105,49 @@ let v = e => {
         },
         onClick: t => {
           var n;
-          _(!1), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
+          I(!1), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
-          I && (m.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
+          T && (f.default.track(h.AnalyticEvents.CLOSE_POPOUT, {
             nonce: N
-          }), _(!1))
+          }), I(!1))
         },
         tag: "span",
-        className: i(C.emojiContainer, {
-          [C.emojiContainerClickable]: d
+        className: s(S.emojiContainer, {
+          [S.emojiContainerClickable]: d
         }),
-        children: x(t)
+        children: _(t)
       })
     });
     return d ? (0, l.jsx)(o.Popout, {
       animation: o.Popout.Animation.FADE,
       align: "center",
       onRequestClose: () => {
-        m.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
+        f.default.track(h.AnalyticEvents.CLOSE_POPOUT, {
           nonce: N
-        }), _(!1)
+        }), I(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
       position: "right",
-      renderPopout: e => (0, l.jsx)(f.MessageCustomEmojiPopout, {
+      renderPopout: e => (0, l.jsx)(m.MessageCustomEmojiPopout, {
         ...e,
         node: t,
-        refreshPositionKey: () => v(String(Date.now())),
+        refreshPositionKey: () => C(String(Date.now())),
         nonce: N
       }),
-      positionKey: E,
-      children: T
-    }) : T()
+      positionKey: g,
+      children: A
+    }) : A()
   },
-  S = e => {
+  v = e => {
     let {
       emojiNode: t,
       isCustomEmoji: n,
       nonce: l
     } = e;
-    d.default.trackWithMetadata(p.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
-      type: E.PremiumUpsellTypes.EMOJI_IN_MESSAGE_HOVER,
+    d.default.trackWithMetadata(h.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
+      type: g.PremiumUpsellTypes.EMOJI_IN_MESSAGE_HOVER,
       expression_id: t.emojiId,
       expression_name: t.name,
       is_animated: t.animated,

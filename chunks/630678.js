@@ -146,7 +146,7 @@ function k(t) {
   return t && t.state ? (t.total_in = t.total_out = 0, t.data_type = 2, (e = t.state).pending = 0, e.pending_out = 0, e.wrap < 0 && (e.wrap = -e.wrap), e.status = e.wrap ? 42 : 113, t.adler = 2 === e.wrap ? 0 : 1, e.last_flush = 0, n._tr_init(e), 0) : p(t, -2)
 }
 
-function E(t) {
+function A(t) {
   var e, s = k(t);
   if (0 === s) {
     ;
@@ -155,17 +155,17 @@ function E(t) {
   return s
 }
 
-function A(t, e, s, r, n, c) {
+function E(t, e, s, r, n, c) {
   if (!t) return -2;
   var o = 1;
   if (-1 === e && (e = 6), r < 0 ? (o = 0, r = -r) : r > 15 && (o = 2, r -= 16), n < 1 || n > 9 || 8 !== s || r < 8 || r > 15 || e < 0 || e > 9 || c < 0 || c > 4) return p(t, -2);
   8 === r && (r = 9);
   var f = new S;
-  return t.state = f, f.strm = t, f.wrap = o, f.gzhead = null, f.w_bits = r, f.w_size = 1 << f.w_bits, f.w_mask = f.w_size - 1, f.hash_bits = n + 7, f.hash_size = 1 << f.hash_bits, f.hash_mask = f.hash_size - 1, f.hash_shift = ~~((f.hash_bits + 3 - 1) / 3), f.window = new i.Buf8(2 * f.w_size), f.head = new i.Buf16(f.hash_size), f.prev = new i.Buf16(f.w_size), f.lit_bufsize = 1 << n + 6, f.pending_buf_size = 4 * f.lit_bufsize, f.pending_buf = new i.Buf8(f.pending_buf_size), f.d_buf = 1 * f.lit_bufsize, f.l_buf = 3 * f.lit_bufsize, f.level = e, f.strategy = c, f.method = s, E(t)
+  return t.state = f, f.strm = t, f.wrap = o, f.gzhead = null, f.w_bits = r, f.w_size = 1 << f.w_bits, f.w_mask = f.w_size - 1, f.hash_bits = n + 7, f.hash_size = 1 << f.hash_bits, f.hash_mask = f.hash_size - 1, f.hash_shift = ~~((f.hash_bits + 3 - 1) / 3), f.window = new i.Buf8(2 * f.w_size), f.head = new i.Buf16(f.hash_size), f.prev = new i.Buf16(f.w_size), f.lit_bufsize = 1 << n + 6, f.pending_buf_size = 4 * f.lit_bufsize, f.pending_buf = new i.Buf8(f.pending_buf_size), f.d_buf = 1 * f.lit_bufsize, f.l_buf = 3 * f.lit_bufsize, f.level = e, f.strategy = c, f.method = s, A(t)
 }
 e.deflateInit = function(t, e) {
-  return A(t, e, 8, 15, 8, 0)
-}, e.deflateInit2 = A, e.deflateReset = E, e.deflateResetKeep = k, e.deflateSetHeader = function(t, e) {
+  return E(t, e, 8, 15, 8, 0)
+}, e.deflateInit2 = E, e.deflateReset = A, e.deflateResetKeep = k, e.deflateSetHeader = function(t, e) {
   return t && t.state && 2 === t.state.wrap ? (t.state.gzhead = e, 0) : -2
 }, e.deflate = function(t, e) {
   if (!t || !t.state || e > 5 || e < 0) return t ? p(t, -2) : -2;

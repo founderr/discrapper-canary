@@ -4,27 +4,27 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("872717"),
-  l = n("913144"),
+var l = n("872717"),
+  a = n("913144"),
   s = n("49111"),
   i = {
     fetchRegions(e) {
-      a.default.get({
+      l.default.get({
         url: s.Endpoints.REGIONS(e),
         retries: 1,
         oldFormErrors: !0
-      }).then(t => l.default.dispatch({
+      }).then(t => a.default.dispatch({
         type: "LOAD_REGIONS",
         regions: t.body,
         guildId: e
-      }), () => l.default.dispatch({
+      }), () => a.default.dispatch({
         type: "LOAD_REGIONS",
         regions: [],
         guildId: e
       }))
     },
     changeCallRegion(e, t) {
-      a.default.patch({
+      l.default.patch({
         url: s.Endpoints.CALL(e),
         body: {
           region: t

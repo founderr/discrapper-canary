@@ -16,23 +16,23 @@ r.r(t), r.d(t, {
     return I
   },
   fetchCollectiblesProduct: function() {
-    return L
-  },
-  claimPremiumCollectiblesProduct: function() {
-    return T
-  },
-  validateCollectiblesRecipient: function() {
     return A
   },
+  claimPremiumCollectiblesProduct: function() {
+    return S
+  },
+  validateCollectiblesRecipient: function() {
+    return L
+  },
   setCollectiblesCategoryItemsViewed: function() {
-    return p
+    return T
   }
 });
 var u = r("872717"),
   n = r("913144"),
   i = r("54239"),
-  s = r("448993"),
-  E = r("514296"),
+  E = r("448993"),
+  s = r("514296"),
   l = r("407788"),
   c = r("489134"),
   o = r("49111");
@@ -71,13 +71,13 @@ let a = e => {
       });
       n.default.dispatch({
         type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-        categories: t.body.map(E.default.fromServer)
+        categories: t.body.map(s.default.fromServer)
       })
     } catch (e) {
       throw n.default.dispatch({
         type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
         error: e
-      }), new s.APIError(e)
+      }), new E.APIError(e)
     }
   }, I = async () => {
     n.default.dispatch({
@@ -93,9 +93,9 @@ let a = e => {
       throw n.default.dispatch({
         type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
         error: e
-      }), new s.APIError(e)
+      }), new E.APIError(e)
     }
-  }, L = async (e, t) => {
+  }, A = async (e, t) => {
     n.default.dispatch({
       type: "COLLECTIBLES_PRODUCT_FETCH"
     });
@@ -114,9 +114,9 @@ let a = e => {
       throw n.default.dispatch({
         type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
         error: e
-      }), new s.APIError(e)
+      }), new E.APIError(e)
     }
-  }, T = async e => {
+  }, S = async e => {
     n.default.dispatch({
       type: "COLLECTIBLES_CLAIM",
       skuId: e
@@ -139,9 +139,9 @@ let a = e => {
         type: "COLLECTIBLES_CLAIM_FAILURE",
         skuId: e,
         error: t
-      }), new s.APIError(t)
+      }), new E.APIError(t)
     }
-  }, A = async (e, t) => {
+  }, L = async (e, t) => {
     try {
       let r = await u.default.get({
         url: o.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,
@@ -152,9 +152,9 @@ let a = e => {
       });
       return r.body.valid
     } catch (e) {
-      throw new s.APIError(e)
+      throw new E.APIError(e)
     }
-  }, p = e => {
+  }, T = e => {
     n.default.dispatch({
       type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
       ...e

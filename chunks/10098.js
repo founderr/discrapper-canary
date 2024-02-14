@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("70102");
 var r = n("900255"),
-  o = n("235485"),
-  a = n("125692"),
+  a = n("235485"),
+  o = n("125692"),
   i = n("897345"),
   s = {
     type: i.INIT_COORDS,
@@ -27,7 +27,7 @@ function c(e) {
       u = n.getSourceClientOffset,
       d = e.getMonitor(),
       p = e.getRegistry();
-    e.dispatch((0, o.setClientOffset)(l)),
+    e.dispatch((0, a.setClientOffset)(l)),
       function(e, t, n) {
         (0, r.invariant)(!t.isDragging(), "Cannot call beginDrag while dragging."), e.forEach(function(e) {
           (0, r.invariant)(n.getSource(e), "Expected sourceIds to be registered.")
@@ -51,11 +51,11 @@ function c(e) {
         (0, r.invariant)("function" == typeof e, "When clientOffset is provided, getSourceClientOffset must be a function.")
       })(u), h = u(f)
     }
-    e.dispatch((0, o.setClientOffset)(l, h));
+    e.dispatch((0, a.setClientOffset)(l, h));
     var m = p.getSource(f).beginDrag(d, f);
     if (null != m) {
       (function(e) {
-        (0, r.invariant)((0, a.isObject)(e), "Item must be an object.")
+        (0, r.invariant)((0, o.isObject)(e), "Item must be an object.")
       })(m), p.pinSource(f);
       var v = p.getSourceType(f);
       return {

@@ -25,7 +25,7 @@ var l, a, s = n("37983"),
   T = n("828184"),
   A = n("49111"),
   L = n("782340"),
-  v = n("812931");
+  v = n("383059");
 (a = l || (l = {})).UP = "UP", a.DOWN = "DOWN", a.LEFT = "LEFT", a.RIGHT = "RIGHT";
 let x = {
     UP: f.throttle(() => (0, N.playSound)("ddr-up"), 100),

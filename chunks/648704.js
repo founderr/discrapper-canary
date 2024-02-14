@@ -37,7 +37,7 @@ var a = s("37983"),
   G = s("832931"),
   U = s("49111"),
   P = s("782340"),
-  b = s("505324");
+  b = s("182574");
 
 function B() {
   let e = (0, o.useStateFromStores)([g.default], () => g.default.getGuild());

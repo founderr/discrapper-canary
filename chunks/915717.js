@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("424973");
 var r = n("234160"),
-  o = n("714413"),
-  a = n("125692");
+  a = n("714413"),
+  o = n("125692");
 
 function i(e, t) {
   var n = Object.keys(e);
@@ -69,10 +69,10 @@ function l() {
       return s(s({}, e), {}, {
         targetIds: n.targetIds
       });
-    case o.REMOVE_TARGET:
+    case a.REMOVE_TARGET:
       if (-1 === e.targetIds.indexOf(n.targetId)) return e;
       return s(s({}, e), {}, {
-        targetIds: (0, a.without)(e.targetIds, n.targetId)
+        targetIds: (0, o.without)(e.targetIds, n.targetId)
       });
     case r.DROP:
       return s(s({}, e), {}, {

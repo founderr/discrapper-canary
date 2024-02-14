@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 }), n("70102");
 var r = n("900255");
 
-function o(e, t) {
+function a(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
   }
 }
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -28,7 +28,7 @@ var i = !1,
     function s(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, s), a(this, "internalMonitor", void 0), a(this, "targetId", null), this.internalMonitor = e.getMonitor()
+      }(this, s), o(this, "internalMonitor", void 0), o(this, "targetId", null), this.internalMonitor = e.getMonitor()
     }
     return e = s, t = [{
       key: "receiveHandlerId",
@@ -106,5 +106,5 @@ var i = !1,
       value: function() {
         return this.internalMonitor.getDifferenceFromInitialOffset()
       }
-    }], o(e.prototype, t), n && o(e, n), s
+    }], a(e.prototype, t), n && a(e, n), s
   }()

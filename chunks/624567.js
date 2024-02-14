@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("124824"),
   i = n("257407"),
   r = e => {
@@ -17,13 +17,13 @@ var a = n("37983"),
       onFocus: u,
       channel: d
     } = e;
-    return l.useEffect(() => {
+    return a.useEffect(() => {
       !t && n()
-    }, [n, t]), (0, a.jsx)(s.default, {
-      children: (0, a.jsx)("div", {
+    }, [n, t]), (0, l.jsx)(s.default, {
+      children: (0, l.jsx)("div", {
         onMouseEnter: r,
         onMouseLeave: o,
-        children: (0, a.jsx)(i.default, {
+        children: (0, l.jsx)(i.default, {
           channel: d,
           closePopout: n,
           onFocus: u

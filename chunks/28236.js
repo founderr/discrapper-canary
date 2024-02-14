@@ -1,90 +1,90 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return C
   }
 }), n("222007");
 var l = n("37983"),
-  a = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
+  i = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
   r = n("65597"),
   o = n("77078"),
   u = n("430568"),
   d = n("277855"),
   c = n("305122"),
-  m = n("462550"),
-  f = n("235004"),
-  h = n("520497"),
-  p = n("812809"),
-  g = n("948613"),
-  E = n("368121"),
-  C = n("653110"),
-  v = function(e) {
+  f = n("462550"),
+  m = n("235004"),
+  p = n("520497"),
+  h = n("812809"),
+  E = n("948613"),
+  g = n("368121"),
+  S = n("706014"),
+  C = function(e) {
     let {
       soundId: t,
       jumbo: n = !1
     } = e, {
-      currentPreviewRef: s
-    } = a.useContext(m.default), v = (0, r.default)([f.default], () => f.default.getSoundById(t)), I = (null == v ? void 0 : v.emojiId) != null || (null == v ? void 0 : v.emojiName) != null, [S, _] = a.useState(!1), x = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), N = a.useCallback(() => {
+      currentPreviewRef: a
+    } = i.useContext(f.default), C = (0, r.default)([m.default], () => m.default.getSoundById(t)), T = (null == C ? void 0 : C.emojiId) != null || (null == C ? void 0 : C.emojiName) != null, [v, I] = i.useState(!1), _ = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), N = i.useCallback(() => {
       var e;
-      null == v && (0, c.maybeFetchSoundboardSounds)();
-      let n = new Audio((0, h.default)(t));
-      null != s.current && s.current.pause(), s.current = n, n.currentTime = 0, n.volume = (0, p.default)(null !== (e = null == v ? void 0 : v.volume) && void 0 !== e ? e : .5), _(!0), n.play(), n.addEventListener("ended", () => {
-        _(!1)
+      null == C && (0, c.maybeFetchSoundboardSounds)();
+      let n = new Audio((0, p.default)(t));
+      null != a.current && a.current.pause(), a.current = n, n.currentTime = 0, n.volume = (0, h.default)(null !== (e = null == C ? void 0 : C.volume) && void 0 !== e ? e : .5), I(!0), n.play(), n.addEventListener("ended", () => {
+        I(!1)
       }, {
         once: !0
       })
-    }, [t, v, s, _]);
-    return x ? null == v ? (0, l.jsxs)(o.Clickable, {
+    }, [t, C, a, I]);
+    return _ ? null == C ? (0, l.jsxs)(o.Clickable, {
       title: "Risky Click",
       tag: "span",
       onClick: N,
-      className: C.container,
-      children: [(0, l.jsx)(E.default, {
-        className: C.unknownSound
+      className: S.container,
+      children: [(0, l.jsx)(g.default, {
+        className: S.unknownSound
       }), (0, l.jsx)(o.Text, {
         tag: "span",
         variant: "text-md/normal",
         color: "none",
-        className: C.text,
+        className: S.text,
         children: "Unknown"
       })]
     }) : n ? (0, l.jsxs)(o.Clickable, {
       onClick: N,
-      className: C.jumboContainer,
+      className: S.jumboContainer,
       children: [(0, l.jsx)("div", {
-        className: i(C.jumboOverlay, {
-          [C.playing]: S
+        className: s(S.jumboOverlay, {
+          [S.playing]: v
         }),
-        children: (0, l.jsx)(g.default, {
-          className: C.jumboPlayIcon
+        children: (0, l.jsx)(E.default, {
+          className: S.jumboPlayIcon
         })
-      }), I && (0, l.jsx)(u.default, {
-        emojiId: null == v ? void 0 : v.emojiId,
-        emojiName: null == v ? void 0 : v.emojiName,
-        className: C.jumboEmoji
+      }), T && (0, l.jsx)(u.default, {
+        emojiId: null == C ? void 0 : C.emojiId,
+        emojiName: null == C ? void 0 : C.emojiName,
+        className: S.jumboEmoji
       }), (0, l.jsx)(o.Text, {
         tag: "span",
         variant: "text-lg/normal",
         color: "none",
-        className: C.text,
-        children: v.name
+        className: S.text,
+        children: C.name
       })]
     }) : (0, l.jsxs)(o.Clickable, {
       tag: "span",
       onClick: N,
-      className: C.container,
-      children: [I && (0, l.jsx)(u.default, {
-        emojiId: null == v ? void 0 : v.emojiId,
-        emojiName: null == v ? void 0 : v.emojiName,
-        className: C.emoji
+      className: S.container,
+      children: [T && (0, l.jsx)(u.default, {
+        emojiId: null == C ? void 0 : C.emojiId,
+        emojiName: null == C ? void 0 : C.emojiName,
+        className: S.emoji
       }), (0, l.jsx)(o.Text, {
         tag: "span",
         variant: "text-md/normal",
         color: "none",
-        className: C.text,
-        children: v.name
+        className: S.text,
+        children: C.name
       })]
     }) : null
   }

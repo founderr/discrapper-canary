@@ -15,8 +15,8 @@ var i = n("77078"),
   d = n("599110"),
   c = n("267625"),
   f = n("719923"),
-  p = n("49111"),
-  m = n("782340");
+  m = n("49111"),
+  p = n("782340");
 
 function h(e) {
   let {
@@ -46,23 +46,23 @@ function h(e) {
     if (0 === E.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == g || 0 === g.length) && (null == S || 0 === S.length)) {
       _({
         valid: !1,
-        failureReason: p.MessageRestrictionTypes.EMPTY_MESSAGE
+        failureReason: m.MessageRestrictionTypes.EMPTY_MESSAGE
       });
       return
     }
-    let y = I ? p.MAX_MESSAGE_LENGTH_PREMIUM : p.MAX_MESSAGE_LENGTH;
-    if (E.length > y) {
+    let N = I ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
+    if (E.length > N) {
       if (I || null == C) {
         ;
-        n = E.length, u = y, (0, i.openModal)(e => (0, l.jsx)(s.default, {
-          title: m.default.Messages.MESSAGE_TOO_LONG_HEADER,
-          body: m.default.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
+        n = E.length, u = N, (0, i.openModal)(e => (0, l.jsx)(s.default, {
+          title: p.default.Messages.MESSAGE_TOO_LONG_HEADER,
+          body: p.default.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
             currentLength: n,
             maxLength: u
           }),
-          confirmText: m.default.Messages.OKAY,
+          confirmText: p.default.Messages.OKAY,
           ...e
-        })), d.default.track(p.AnalyticEvents.OPEN_MODAL, {
+        })), d.default.track(m.AnalyticEvents.OPEN_MODAL, {
           type: "Message Too Long Alert",
           message_content_length: n
         })
@@ -73,7 +73,7 @@ function h(e) {
       });
       _({
         valid: !1,
-        failureReason: p.MessageRestrictionTypes.MESSAGE_TOO_LONG
+        failureReason: m.MessageRestrictionTypes.MESSAGE_TOO_LONG
       });
       return
     }
@@ -81,7 +81,7 @@ function h(e) {
       if (null != C.getGuildId() && v && o.default.getSlowmodeCooldownGuess(C.id) > 0) {
         _({
           valid: !1,
-          failureReason: p.MessageRestrictionTypes.SLOWMODE_COOLDOWN
+          failureReason: m.MessageRestrictionTypes.SLOWMODE_COOLDOWN
         });
         return
       }
@@ -99,7 +99,7 @@ function h(e) {
               channel: C,
               onCancel: () => _({
                 valid: !1,
-                failureReason: p.MessageRestrictionTypes.SHOUTING_CANCELLED
+                failureReason: m.MessageRestrictionTypes.SHOUTING_CANCELLED
               }),
               onConfirm: () => _({
                 valid: !0
@@ -113,15 +113,15 @@ function h(e) {
     }
     if (r.default.isFull()) {
       (0, i.openModal)(e => (0, l.jsx)(s.default, {
-        title: m.default.Messages.MESSAGE_RATE_LIMITED_HEADER,
-        body: m.default.Messages.MESSAGE_RATE_LIMITED_BODY,
-        confirmText: m.default.Messages.MESSAGE_RATE_LIMITED_BUTTON,
+        title: p.default.Messages.MESSAGE_RATE_LIMITED_HEADER,
+        body: p.default.Messages.MESSAGE_RATE_LIMITED_BODY,
+        confirmText: p.default.Messages.MESSAGE_RATE_LIMITED_BUTTON,
         ...e
       }), {
-        onCloseRequest: p.NOOP
+        onCloseRequest: m.NOOP
       }), _({
         valid: !1,
-        failureReason: p.MessageRestrictionTypes.RATE_LIMITED
+        failureReason: m.MessageRestrictionTypes.RATE_LIMITED
       });
       return
     }

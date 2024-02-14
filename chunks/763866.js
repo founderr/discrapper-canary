@@ -14,8 +14,8 @@ var l = n("37983"),
   d = n("42203"),
   c = n("102985"),
   f = n("387111"),
-  p = n("158998"),
-  m = n("713135"),
+  m = n("158998"),
+  p = n("713135"),
   h = n("765698"),
   E = n("906889"),
   g = n("10532"),
@@ -25,9 +25,9 @@ var l = n("37983"),
   v = n("369869"),
   I = n("545590"),
   _ = n("316095"),
-  y = n("802279"),
+  N = n("802279"),
   A = n("577172"),
-  N = n("465215"),
+  y = n("465215"),
   x = n("301998"),
   O = n("379657"),
   R = n("853780"),
@@ -35,8 +35,8 @@ var l = n("37983"),
   L = n("491250"),
   P = n("453649"),
   b = n("49111"),
-  j = n("956330"),
-  U = n("477691");
+  j = n("838133"),
+  U = n("787678");
 
 function D(e) {
   var t, n, a;
@@ -45,19 +45,19 @@ function D(e) {
     customStatusActivity: k,
     user: w,
     displayProfile: F,
-    guild: G,
-    guildMember: B,
+    guild: B,
+    guildMember: G,
     channelId: H,
     onClose: V,
     setNote: K = !1,
     canDM: W,
     hideNote: Y = !1,
     showCopiableUsername: z = !1,
-    analyticsParams: J
-  } = e, q = (0, r.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), Z = (0, r.useStateFromStores)([m.default], () => {
+    analyticsParams: Z
+  } = e, J = (0, r.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), q = (0, r.useStateFromStores)([p.default], () => {
     var e;
-    return null === (e = m.default.getUserProfile(w.id)) || void 0 === e ? void 0 : e.application
-  }), X = (0, r.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(w.id)), Q = (0, P.useGetVoiceChannelInfoForVoiceActivitySection)(w.id, null == G ? void 0 : G.id), $ = !X && null != Q, {
+    return null === (e = p.default.getUserProfile(w.id)) || void 0 === e ? void 0 : e.application
+  }), X = (0, r.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(w.id)), Q = (0, P.useGetVoiceChannelInfoForVoiceActivitySection)(w.id, null == B ? void 0 : B.id), $ = !X && null != Q, {
     showVoiceActivityInProfile: ee
   } = h.VoiceActivityProfileExperiment.useExperiment({
     location: "user popout"
@@ -87,7 +87,7 @@ function D(e) {
     className: j.usernameSection,
     lastSection: !0
   });
-  let er = null !== (t = f.default.getNickname(null == G ? void 0 : G.id, H, w)) && void 0 !== t ? t : p.default.getName(w),
+  let er = null !== (t = f.default.getNickname(null == B ? void 0 : B.id, H, w)) && void 0 !== t ? t : m.default.getName(w),
     eo = {
       location: {
         page: b.AnalyticsPages.USER_POPOUT,
@@ -100,13 +100,13 @@ function D(e) {
       user: w,
       nickname: er,
       pronouns: null == F ? void 0 : F.pronouns,
-      usernameIcon: w.hasAvatarForGuild(null == G ? void 0 : G.id) && (0, l.jsx)(S.default, {
+      usernameIcon: w.hasAvatarForGuild(null == B ? void 0 : B.id) && (0, l.jsx)(S.default, {
         user: w,
         nickname: er
       }),
       shouldCopyOnClick: z
     }), (0, l.jsxs)(o.HeadingLevel, {
-      children: [(0, l.jsx)(y.default, {
+      children: [(0, l.jsx)(N.default, {
         className: j.customStatusSection,
         customStatusActivity: k
       }), (0, l.jsx)(g.default, {
@@ -119,16 +119,16 @@ function D(e) {
         ref: el,
         children: [(0, l.jsx)(I.default, {
           user: w,
-          guildId: null == G ? void 0 : G.id
+          guildId: null == B ? void 0 : B.id
         }), (0, l.jsx)(v.default, {
           isUsingGuildBio: null !== (n = null == F ? void 0 : F.isUsingGuildMemberBio()) && void 0 !== n && n,
           bio: null == F ? void 0 : F.bio,
-          guild: G,
-          hidePersonalInformation: q
-        }), (0, l.jsx)(N.default, {
+          guild: B,
+          hidePersonalInformation: J
+        }), (0, l.jsx)(y.default, {
           userId: w.id,
-          guild: G,
-          guildMember: B
+          guild: B,
+          guildMember: G
         }), ee && $ && (0, l.jsx)(P.default, {
           voiceChannel: Q.voiceChannel,
           voiceGuild: Q.voiceGuild,
@@ -137,39 +137,39 @@ function D(e) {
         }), (0, l.jsx)(C.default, {
           activity: D,
           user: w,
-          guild: G,
+          guild: B,
           channelId: H,
           onClose: V,
-          analyticsParams: (null == J ? void 0 : J.location) != null ? J : eo
-        }), (null == Z ? void 0 : Z.popularApplicationCommandIds) != null && null != et ? (0, l.jsx)(O.default, {
-          applicationId: Z.id,
-          commandIds: Z.popularApplicationCommandIds,
+          analyticsParams: (null == Z ? void 0 : Z.location) != null ? Z : eo
+        }), (null == q ? void 0 : q.popularApplicationCommandIds) != null && null != et ? (0, l.jsx)(O.default, {
+          applicationId: q.id,
+          commandIds: q.popularApplicationCommandIds,
           channel: et,
-          guildId: null == G ? void 0 : G.id,
+          guildId: null == B ? void 0 : B.id,
           onClick: V
         }) : null, (0, l.jsx)(T.default, {
           user: w,
-          guildId: null == G ? void 0 : G.id
+          guildId: null == B ? void 0 : B.id
         }), (0, l.jsx)(M.default, {
           user: w,
-          guild: G,
-          guildMember: B,
+          guild: B,
+          guildMember: G,
           showBorder: null !== (a = null == F ? void 0 : F.canEditThemes) && void 0 !== a && a
         }), (0, l.jsx)(_.default, {
           userId: w.id,
           channelId: H,
-          guild: G,
+          guild: B,
           onClose: V,
           theme: en
-        }), null != Z && void 0 !== H && (0, l.jsx)(R.default, {
+        }), null != q && void 0 !== H && (0, l.jsx)(R.default, {
           channelId: H,
-          applicationId: Z.id
+          applicationId: q.id
         }), (0, l.jsx)(x.default, {
           user: w,
           setNote: K,
           autoFocus: !W,
           lastSection: !W,
-          hideNote: q || Y
+          hideNote: J || Y
         }), (0, l.jsx)(A.default, {
           user: w,
           setNote: K,

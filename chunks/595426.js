@@ -37,7 +37,7 @@ var a = s("37983"),
   U = s("840326"),
   b = s("646718"),
   j = s("49111"),
-  G = s("265921"),
+  G = s("666026"),
   k = function(e) {
     let {
       entrypoint: t = b.PremiumMarketingEntrypoints.UserSettings

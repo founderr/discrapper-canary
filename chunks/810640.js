@@ -4,42 +4,42 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("77078"),
   r = n("673527"),
   o = n("821391"),
   u = n("782340"),
-  d = n("146789");
+  d = n("532351");
 
 function c(e) {
   let {
     stream: t,
     isSmall: n,
-    selected: l,
+    selected: a,
     isSelfStream: c
   } = e;
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(r.default, {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsx)(r.default, {
       className: s(d.absoluteFill, d.streamPreviewOpacity),
       stream: t,
       noText: !0
-    }), !l && (0, a.jsxs)("div", {
+    }), !a && (0, l.jsxs)("div", {
       className: s(d.content, d.streamUnavailable, {
         [d.small]: n
       }),
-      children: [(0, a.jsx)(i.Text, {
+      children: [(0, l.jsx)(i.Text, {
         className: d.streamUnavailableText,
         color: "always-white",
         variant: n ? "text-sm/semibold" : "text-md/semibold",
         children: c ? u.default.Messages.CONSOLE_STREAMING : u.default.Messages.CONSOLE_STREAM_UNAVAILABLE
-      }), (0, a.jsx)(i.TooltipContainer, {
+      }), (0, l.jsx)(i.TooltipContainer, {
         text: c ? u.default.Messages.CONSOLE_STREAMING_TOOLTIP : u.default.Messages.CONSOLE_STREAM_UNAVAILABLE_TOOLTIP,
         className: d.darkCircle,
-        children: (0, a.jsx)("div", {
-          children: (0, a.jsx)(o.default, {
+        children: (0, l.jsx)("div", {
+          children: (0, l.jsx)(o.default, {
             className: d.stopStreamIcon,
             foreground: d.stopStreamForeground
           })

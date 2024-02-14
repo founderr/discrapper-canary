@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   useOverlayTriggerState: function() {
-    return a
+    return o
   }
 }), n("222007");
 var r = n("884691"),
-  o = n("679750");
+  a = n("679750");
 
-function a(e) {
-  let [t, n] = (0, o.useControlledState)(e.isOpen, e.defaultOpen || !1, e.onOpenChange), a = (0, r.useCallback)(() => {
+function o(e) {
+  let [t, n] = (0, a.useControlledState)(e.isOpen, e.defaultOpen || !1, e.onOpenChange), o = (0, r.useCallback)(() => {
     n(!0)
   }, [n]), i = (0, r.useCallback)(() => {
     n(!1)
@@ -18,7 +18,7 @@ function a(e) {
   return {
     isOpen: t,
     setOpen: n,
-    open: a,
+    open: o,
     close: i,
     toggle: s
   }

@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 }), n("222007");
-var a = n("884691");
+var l = n("884691");
 
-function l() {
+function a() {
   var e;
-  let [t, n] = a.useState((e = window.innerWidth < 1132, e));
-  return a.useEffect(() => {
+  let [t, n] = l.useState((e = window.innerWidth < 1132, e));
+  return l.useEffect(() => {
     function e() {
       n(window.innerWidth < 1132)
     }

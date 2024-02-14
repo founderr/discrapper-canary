@@ -8,8 +8,8 @@ var i = n("37983");
 n("884691");
 var r = n("414456"),
   s = n.n(r),
-  a = n("426656"),
-  o = n("851706");
+  a = n("145873"),
+  o = n("548122");
 let l = Object.freeze({
     STANDARD: a.colorStandard,
     MUTED: a.colorMuted,

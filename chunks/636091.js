@@ -2,16 +2,16 @@ n("424973"), n("808653");
 var r = function(e) {
     return String(Number(e)) === e ? Number(e) : e
   },
-  o = function(e, t, n, o) {
-    if (o && !n) t[o] = r(e[1]);
+  a = function(e, t, n, a) {
+    if (a && !n) t[a] = r(e[1]);
     else
-      for (var a = 0; a < n.length; a += 1) null != e[a + 1] && (t[n[a]] = r(e[a + 1]))
+      for (var o = 0; o < n.length; o += 1) null != e[o + 1] && (t[n[o]] = r(e[o + 1]))
   },
-  a = function(e, t, n) {
+  o = function(e, t, n) {
     var r = e.name && e.names;
     e.push && !t[e.push] ? t[e.push] = [] : r && !t[e.name] && (t[e.name] = {});
-    var a = e.push ? {} : r ? t[e.name] : t;
-    o(n.match(e.reg), a, e.names, e.name), e.push && t[e.push].push(a)
+    var o = e.push ? {} : r ? t[e.name] : t;
+    a(n.match(e.reg), o, e.names, e.name), e.push && t[e.push].push(o)
   },
   i = n("258169"),
   s = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
@@ -21,14 +21,14 @@ t.parse = function(e) {
     r = t;
   return e.split(/(\r\n|\r|\n)/).filter(s).forEach(function(e) {
     var t = e[0],
-      o = e.slice(2);
+      a = e.slice(2);
     "m" === t && (n.push({
       rtp: [],
       fmtp: []
     }), r = n[n.length - 1]);
     for (var s = 0; s < (i[t] || []).length; s += 1) {
       var c = i[t][s];
-      if (c.reg.test(o)) return a(c, r, o)
+      if (c.reg.test(a)) return o(c, r, a)
     }
   }), t.media = n, t
 };
@@ -41,10 +41,10 @@ t.parseParams = function(e) {
 }, t.parseFmtpConfig = t.parseParams, t.parsePayloads = function(e) {
   return e.split(" ").map(Number)
 }, t.parseRemoteCandidates = function(e) {
-  for (var t = [], n = e.split(" ").map(r), o = 0; o < n.length; o += 3) t.push({
-    component: n[o],
-    ip: n[o + 1],
-    port: n[o + 2]
+  for (var t = [], n = e.split(" ").map(r), a = 0; a < n.length; a += 3) t.push({
+    component: n[a],
+    ip: n[a + 1],
+    port: n[a + 2]
   });
   return t
 }, t.parseImageAttributes = function(e) {

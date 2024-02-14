@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("781738");
 var r = n("105476"),
-  o = n("719623"),
-  a = n("152626"),
+  a = n("719623"),
+  o = n("152626"),
   i = n("572815"),
   s = n("703094"),
   c = n("156983"),
@@ -32,13 +32,13 @@ var r = n("105476"),
   T = n("702313"),
   M = n("369760"),
   R = n("520016"),
-  I = n("452155"),
-  O = n("636311"),
+  O = n("452155"),
+  I = n("636311"),
   A = n("244754"),
   L = n("640455"),
   N = n("436488"),
-  F = n("906362"),
-  j = n("362561"),
+  j = n("906362"),
+  F = n("362561"),
   K = n("884691"),
   _ = n("240849"),
   V = n("564341"),
@@ -49,8 +49,8 @@ function B(e) {
   let n = (0, K.useRef)(),
     {
       value: r,
-      textValue: o,
-      minValue: a,
+      textValue: a,
+      minValue: o,
       maxValue: i,
       isDisabled: s,
       isReadOnly: c,
@@ -72,9 +72,9 @@ function B(e) {
     x = () => {
       y.current = !1
     };
-  o = "" === o ? v.format("Empty") : (o || "".concat(r)).replace("-", "−"), (0, K.useEffect)(() => {
-    y.current && ((0, j.clearAnnouncer)("assertive"), (0, j.announce)(o, "assertive"))
-  }, [o]);
+  a = "" === a ? v.format("Empty") : (a || "".concat(r)).replace("-", "−"), (0, K.useEffect)(() => {
+    y.current && ((0, F.clearAnnouncer)("assertive"), (0, F.announce)(a, "assertive"))
+  }, [a]);
   let S = (0, _.useEffectEvent)(e => {
       g(), u(), n.current = window.setTimeout(() => {
         (isNaN(i) || isNaN(r) || r < i) && S(60)
@@ -82,7 +82,7 @@ function B(e) {
     }),
     w = (0, _.useEffectEvent)(e => {
       g(), p(), n.current = window.setTimeout(() => {
-        (isNaN(a) || isNaN(r) || r > a) && w(60)
+        (isNaN(o) || isNaN(r) || r > o) && w(60)
       }, e)
     }),
     D = e => {
@@ -96,8 +96,8 @@ function B(e) {
     spinButtonProps: {
       role: "spinbutton",
       "aria-valuenow": isNaN(r) ? null : r,
-      "aria-valuetext": o,
-      "aria-valuemin": a,
+      "aria-valuetext": a,
+      "aria-valuemin": o,
       "aria-valuemax": i,
       "aria-disabled": s || null,
       "aria-readonly": c || null,
@@ -156,8 +156,8 @@ function B(e) {
 }
 z = {
   "ar-AE": r.default,
-  "bg-BG": o.default,
-  "cs-CZ": a.default,
+  "bg-BG": a.default,
+  "cs-CZ": o.default,
   "da-DK": i.default,
   "de-DE": s.default,
   "el-GR": c.default,
@@ -183,10 +183,10 @@ z = {
   "ru-RU": T.default,
   "sk-SK": M.default,
   "sl-SI": R.default,
-  "sr-SP": I.default,
-  "sv-SE": O.default,
+  "sr-SP": O.default,
+  "sv-SE": I.default,
   "tr-TR": A.default,
   "uk-UA": L.default,
   "zh-CN": N.default,
-  "zh-TW": F.default
+  "zh-TW": j.default
 }

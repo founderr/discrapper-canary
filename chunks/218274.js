@@ -22,19 +22,19 @@ var i = l("37983"),
   m = l("18494"),
   I = l("944832"),
   E = l("58608"),
-  p = l("550766"),
-  x = l("191225"),
+  x = l("550766"),
+  p = l("191225"),
   C = l("986214"),
   T = l("161918"),
   S = l("248210"),
-  g = l("525167"),
-  A = l("698372"),
+  A = l("525167"),
+  g = l("698372"),
   _ = l("969380"),
   N = l("141962"),
   j = l("231457"),
   D = l("49111"),
   M = l("782340"),
-  y = l("943453");
+  y = l("424263");
 
 function L(e) {
   let t = (0, n.useStateFromStores)([v.default, h.default], () => {
@@ -51,19 +51,19 @@ function R(e) {
     applicationId: d,
     guildId: o,
     selectedChannelId: h,
-    setSelectedChannelId: x,
+    setSelectedChannelId: p,
     enableSelectedTextChannelInvite: C
-  } = e, A = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), N = (0, T.useActivityShelfItemData)(null != o ? o : null, null != d ? d : ""), [D, R] = a.useState(C && !u.default.disableInviteWithTextChannelActivityLaunch), b = (0, S.useSelectVoiceChannelOptions)(o);
+  } = e, g = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), N = (0, T.useActivityShelfItemData)(null != o ? o : null, null != d ? d : ""), [D, R] = a.useState(C && !u.default.disableInviteWithTextChannelActivityLaunch), b = (0, S.useSelectVoiceChannelOptions)(o);
   a.useEffect(() => {
     var e;
-    p.fetchShelf({
+    x.fetchShelf({
       guildId: o
-    }), x(null !== (e = (0, S.getActivityVoiceChannelSuggestion)({
+    }), p(null !== (e = (0, S.getActivityVoiceChannelSuggestion)({
       guildId: o
     })) && void 0 !== e ? e : void 0)
-  }, [o, x]);
+  }, [o, p]);
   let O = null == N ? void 0 : N.activity.activity_preview_video_asset_id,
-    H = null != O ? (0, g.default)(null !== (t = null == N ? void 0 : N.application.id) && void 0 !== t ? t : "", O) : null,
+    H = null != O ? (0, A.default)(null !== (t = null == N ? void 0 : N.application.id) && void 0 !== t ? t : "", O) : null,
     {
       url: B
     } = (0, _.default)({
@@ -85,7 +85,7 @@ function R(e) {
         className: y.video,
         src: H,
         loop: !0,
-        autoPlay: !A,
+        autoPlay: !g,
         poster: B,
         muted: !0
       })
@@ -113,7 +113,7 @@ function R(e) {
         let {
           channel: t
         } = e;
-        return x(t.id)
+        return p(t.id)
       },
       serialize: e => {
         let {
@@ -175,18 +175,18 @@ function b(e) {
   } = e, {
     AnalyticsLocationProvider: I,
     analyticsLocations: E
-  } = (0, o.default)(d.default.ACTIVITY_CHANNEL_SELECTOR), S = (0, T.useActivityShelfItemData)(null != l ? l : null, null != t ? t : null), g = (0, A.default)(), _ = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())), j = (0, n.useStateFromStores)([u.default], () => h && !u.default.disableInviteWithTextChannelActivityLaunch), V = (0, n.useStateFromStores)([x.default], () => null != v && "" !== v && x.default.getEmbeddedActivitiesForChannel(v).some(e => e.applicationId === t)), R = L(l), b = async () => {
+  } = (0, o.default)(d.default.ACTIVITY_CHANNEL_SELECTOR), S = (0, T.useActivityShelfItemData)(null != l ? l : null, null != t ? t : null), A = (0, g.default)(), _ = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())), j = (0, n.useStateFromStores)([u.default], () => h && !u.default.disableInviteWithTextChannelActivityLaunch), V = (0, n.useStateFromStores)([p.default], () => null != v && "" !== v && p.default.getEmbeddedActivitiesForChannel(v).some(e => e.applicationId === t)), R = L(l), b = async () => {
     if (null == v || "" === v || null == S || null == l || "" === l) return;
     let e = await (0, C.default)({
       activityItem: S,
-      currentActivity: g,
+      currentActivity: A,
       locationObject: a,
       channelId: v,
       guildId: l,
       embeddedActivitiesManager: N.default,
       analyticsLocations: E
     });
-    e && (c(), null != _ && R && j && await p.sendEmbeddedActivityInvite({
+    e && (c(), null != _ && R && j && await x.sendEmbeddedActivityInvite({
       activityChannelId: v,
       invitedChannelId: _.id,
       applicationId: S.application.id,

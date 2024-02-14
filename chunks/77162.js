@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return C
+    return T
   }
 });
 var r = i("37983"),
@@ -11,88 +11,88 @@ var r = i("37983"),
   a = i("917351"),
   u = i("617258"),
   c = i("77078"),
-  o = i("272030"),
-  d = i("997289"),
+  d = i("272030"),
+  o = i("997289"),
   f = i("246511"),
   S = i("151185"),
-  m = i("599110"),
-  h = i("866353"),
-  k = i("161585"),
+  h = i("599110"),
+  m = i("866353"),
+  E = i("161585"),
   p = i("24373"),
-  E = i("41170"),
-  I = i("591522"),
-  g = i("49111"),
+  I = i("41170"),
+  k = i("591522"),
+  C = i("49111"),
   v = i("782340"),
-  y = i("267005");
-let R = (0, u.cssValueToNumber)(y.stickerPickerPreviewDimensions),
-  _ = (0, u.cssValueToNumber)(y.stickerPickerPreviewPadding),
-  T = n.memo(function(e) {
+  g = i("677930");
+let y = (0, u.cssValueToNumber)(g.stickerPickerPreviewDimensions),
+  _ = (0, u.cssValueToNumber)(g.stickerPickerPreviewPadding),
+  R = n.memo(function(e) {
     let {
       isDisplayingIndividualStickers: t = !1,
       preferAnimation: s = !0,
       getStickerItemProps: u,
-      getStickerRowProps: T,
-      gutterWidth: C,
-      inspectedStickerPosition: x,
-      isScrolling: L,
-      isUsingKeyboardNavigation: M,
-      onInspect: N,
-      onSelect: U,
-      rowIndex: A,
-      stickerClassName: F,
-      stickerDescriptors: P,
+      getStickerRowProps: R,
+      gutterWidth: T,
+      inspectedStickerPosition: L,
+      isScrolling: x,
+      isUsingKeyboardNavigation: A,
+      onInspect: P,
+      onSelect: N,
+      rowIndex: U,
+      stickerClassName: M,
+      stickerDescriptors: F,
       stickerPadding: b = _,
-      stickerSize: O = R,
-      ownedStickerPacks: j,
-      enlargeOnInteraction: K = !1,
-      channel: w,
+      stickerSize: w = y,
+      ownedStickerPacks: K,
+      enlargeOnInteraction: j = !1,
+      channel: O,
       currentUser: G,
       checkSendability: D = !0
     } = e, {
       location: H
-    } = (0, d.useAnalyticsContext)(), V = O + 2 * b, z = n.useMemo(() => ({
-      gridColumnGap: C,
+    } = (0, o.useAnalyticsContext)(), V = w + 2 * b, B = n.useMemo(() => ({
+      gridColumnGap: T,
       gridTemplateColumns: "repeat(auto-fill, ".concat(V, "px)"),
       height: V,
       paddingRight: t ? void 0 : V
-    }), [t, C, V]), B = n.useMemo(() => ({
-      width: O,
-      height: O,
+    }), [t, T, V]), z = n.useMemo(() => ({
+      width: w,
+      height: w,
       padding: b
-    }), [b, O]);
+    }), [b, w]);
     return (0, r.jsx)("div", {
-      className: y.row,
-      style: z,
-      ...null == T ? void 0 : T(A),
-      children: P.map(e => {
-        var d;
-        let R = e.visibleRowIndex === (null == x ? void 0 : x.rowIndex) && e.columnIndex === (null == x ? void 0 : x.columnIndex),
-          _ = e.type === k.StickerGridItemTypes.STICKER && K && R,
-          T = (0, a.throttle)(() => {
-            (null == L ? void 0 : L.current) !== !0 && (null == M ? void 0 : M.current) !== !0 && !R && (null == N || N(e))
+      className: g.row,
+      style: B,
+      ...null == R ? void 0 : R(U),
+      children: F.map(e => {
+        var o;
+        let y = e.visibleRowIndex === (null == L ? void 0 : L.rowIndex) && e.columnIndex === (null == L ? void 0 : L.columnIndex),
+          _ = e.type === E.StickerGridItemTypes.STICKER && j && y,
+          R = (0, a.throttle)(() => {
+            (null == x ? void 0 : x.current) !== !0 && (null == A ? void 0 : A.current) !== !0 && !y && (null == P || P(e))
           }, 250),
           {
-            ref: C,
-            tabIndex: P,
+            ref: T,
+            tabIndex: F,
             onFocus: b,
             ...V
-          } = null !== (d = null == u ? void 0 : u(e.columnIndex, A)) && void 0 !== d ? d : {};
+          } = null !== (o = null == u ? void 0 : u(e.columnIndex, U)) && void 0 !== o ? o : {};
         switch (e.type) {
-          case k.StickerGridItemTypes.CREATE_STICKER:
+          case E.StickerGridItemTypes.CREATE_STICKER:
             return (0, r.jsx)("div", {
               ...V,
               children: (0, r.jsxs)(c.Clickable, {
                 "aria-label": e.name,
-                className: l(y.createSticker, F, {
-                  [y.createInspected]: R
+                className: l(g.createSticker, M, {
+                  [g.createInspected]: y
                 }),
-                innerRef: C,
-                tabIndex: P,
-                onFocus: null != b ? b : T,
-                onMouseMove: T,
+                innerRef: T,
+                tabIndex: F,
+                onFocus: null != b ? b : R,
+                onMouseMove: R,
                 onClick: () => {
-                  e.type === k.StickerGridItemTypes.CREATE_STICKER && (m.default.track(g.AnalyticEvents.OPEN_MODAL, {
-                    type: g.AnalyticsSections.CREATE_STICKER_MODAL,
+                  e.type === E.StickerGridItemTypes.CREATE_STICKER && (h.default.track(C.AnalyticEvents.OPEN_MODAL, {
+                    type: C.AnalyticsSections.CREATE_STICKER_MODAL,
                     location: H
                   }), (0, c.openModalLazy)(async () => {
                     let {
@@ -104,13 +104,13 @@ let R = (0, u.cssValueToNumber)(y.stickerPickerPreviewDimensions),
                     })
                   }))
                 },
-                style: B,
-                children: [!K && (0, r.jsx)("div", {
-                  className: y.inspectedIndicator
+                style: z,
+                children: [!j && (0, r.jsx)("div", {
+                  className: g.inspectedIndicator
                 }), (0, r.jsx)("div", {
-                  className: y.iconWrapper,
+                  className: g.iconWrapper,
                   children: (0, r.jsx)(S.default, {
-                    className: y.icon
+                    className: g.icon
                   })
                 }), (0, r.jsx)(c.Text, {
                   color: "interactive-active",
@@ -119,24 +119,24 @@ let R = (0, u.cssValueToNumber)(y.stickerPickerPreviewDimensions),
                 })]
               })
             }, e.guild_id);
-          case k.StickerGridItemTypes.STICKER: {
-            let a = t && null != j && (0, p.isStandardSticker)(e.sticker) && !j.has(e.sticker.pack_id);
+          case E.StickerGridItemTypes.STICKER: {
+            let a = t && null != K && (0, p.isStandardSticker)(e.sticker) && !K.has(e.sticker.pack_id);
             return (0, n.createElement)("div", {
               ...V,
               key: e.sticker.id
             }, (0, r.jsxs)(c.Clickable, {
-              className: l(y.sticker, F, {
-                [y.stickerInspected]: R
+              className: l(g.sticker, M, {
+                [g.stickerInspected]: y
               }),
-              innerRef: C,
-              tabIndex: P,
-              onFocus: null != b ? b : T,
-              onMouseMove: T,
+              innerRef: T,
+              tabIndex: F,
+              onFocus: null != b ? b : R,
+              onMouseMove: R,
               onClick: t => {
-                (null == L ? void 0 : L.current) !== !0 && (null == M ? void 0 : M.current) !== !0 && (null == U || U(e, t))
+                (null == x ? void 0 : x.current) !== !0 && (null == A ? void 0 : A.current) !== !0 && (null == N || N(e, t))
               },
               onContextMenu: e => {
-                (0, o.openContextMenuLazy)(e, async () => {
+                (0, d.openContextMenuLazy)(e, async () => {
                   let {
                     default: e
                   } = await i.el("367343").then(i.bind(i, "367343"));
@@ -145,28 +145,28 @@ let R = (0, u.cssValueToNumber)(y.stickerPickerPreviewDimensions),
                   })
                 })
               },
-              style: B,
+              style: z,
               "data-type": f.PickerContextMenuDataTypes.STICKER,
               "data-id": e.sticker.id,
               children: [(0, r.jsx)(c.HiddenVisually, {
-                children: (0, E.getStickerAltText)(e.sticker)
+                children: (0, I.getStickerAltText)(e.sticker)
               }), (0, r.jsxs)("div", {
                 "aria-hidden": !0,
-                children: [!K && (0, r.jsx)("div", {
-                  className: y.inspectedIndicator
-                }), (0, r.jsx)(E.default, {
-                  className: l(y.stickerNode, {
-                    [y.stickerNodeDimmed]: K && !R && null != x && -1 !== x.rowIndex && -1 !== x.columnIndex,
-                    [y.stickerNodeHidden]: _,
-                    [y.stickerUnsendable]: D && !(0, h.isSendableSticker)(e.sticker, G, w)
+                children: [!j && (0, r.jsx)("div", {
+                  className: g.inspectedIndicator
+                }), (0, r.jsx)(I.default, {
+                  className: l(g.stickerNode, {
+                    [g.stickerNodeDimmed]: j && !y && null != L && -1 !== L.rowIndex && -1 !== L.columnIndex,
+                    [g.stickerNodeHidden]: _,
+                    [g.stickerUnsendable]: D && !(0, m.isSendableSticker)(e.sticker, G, O)
                   }),
-                  disableAnimation: !R && !s,
-                  enlargeOnInteraction: K,
-                  isInteracting: R,
-                  maskAsset: R,
+                  disableAnimation: !y && !s,
+                  enlargeOnInteraction: j,
+                  isInteracting: y,
+                  maskAsset: y,
                   sticker: e.sticker,
-                  size: O
-                }), a ? (0, r.jsx)(I.default, {
+                  size: w
+                }), a ? (0, r.jsx)(k.default, {
                   size: 20
                 }) : null]
               })]
@@ -176,4 +176,4 @@ let R = (0, u.cssValueToNumber)(y.stickerPickerPreviewDimensions),
       })
     })
   });
-var C = T
+var T = R

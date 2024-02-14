@@ -19,18 +19,18 @@ var i = l("37983"),
   m = l("550766"),
   I = l("986214"),
   E = l("161918"),
-  p = l("744203"),
-  x = l("248210"),
+  x = l("744203"),
+  p = l("248210"),
   C = l("525167"),
   T = l("698372"),
   S = l("969380"),
-  g = l("817039"),
-  A = l("141962"),
+  A = l("817039"),
+  g = l("141962"),
   _ = l("231457"),
   N = l("707181"),
   j = l("905647"),
   D = l("782340"),
-  M = l("185767");
+  M = l("425354");
 
 function y(e) {
   var t;
@@ -47,15 +47,15 @@ function y(e) {
       guildId: n
     })
   }, [n]);
-  let p = (0, S.default)({
+  let x = (0, S.default)({
       applicationId: null != l ? l : "",
       size: 2048
     }),
-    x = (0, E.useActivityShelfItemData)(null != n ? n : null, l);
-  if (null == x) return null;
-  let T = null != x.activity.activity_preview_video_asset_id ? (0, C.default)(l, x.activity.activity_preview_video_asset_id) : null,
-    g = j.ACTIVITIES_EXTRA_DETAILS[l],
-    A = (null == g ? void 0 : g.playersSuggestionMin) != null && (null == g ? void 0 : g.playersSuggestionMax) != null ? "".concat(g.playersSuggestionMin, " - ").concat(g.playersSuggestionMax) : void 0;
+    p = (0, E.useActivityShelfItemData)(null != n ? n : null, l);
+  if (null == p) return null;
+  let T = null != p.activity.activity_preview_video_asset_id ? (0, C.default)(l, p.activity.activity_preview_video_asset_id) : null,
+    A = j.ACTIVITIES_EXTRA_DETAILS[l],
+    g = (null == A ? void 0 : A.playersSuggestionMin) != null && (null == A ? void 0 : A.playersSuggestionMax) != null ? "".concat(A.playersSuggestionMin, " - ").concat(A.playersSuggestionMax) : void 0;
   return (0, i.jsx)(I, {
     children: (0, i.jsx)("div", {
       className: M.scrollContainer,
@@ -64,7 +64,7 @@ function y(e) {
         children: [(0, i.jsx)("div", {
           className: M.launcherOuterContainer,
           children: (0, i.jsx)(L, {
-            activityItem: x,
+            activityItem: p,
             onLaunch: f,
             channelId: d
           })
@@ -79,17 +79,17 @@ function y(e) {
                 muted: !0,
                 className: M.heroVideo,
                 src: T,
-                poster: p.url
+                poster: x.url
               })
             }) : null, (0, i.jsx)("div", {
               className: M.detailsTitle,
               children: (0, i.jsx)(s.Heading, {
                 variant: "heading-xxl/bold",
-                children: x.application.name
+                children: p.application.name
               })
             }), (0, i.jsxs)("div", {
               className: M.detailsDetails,
-              children: [null != A ? (0, i.jsxs)("div", {
+              children: [null != g ? (0, i.jsxs)("div", {
                 className: M.detailItem,
                 children: [(0, i.jsx)(u.default, {
                   width: 16,
@@ -98,10 +98,10 @@ function y(e) {
                   variant: "text-xs/semibold",
                   className: M.detailItemText,
                   children: D.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({
-                    nPlayers: A
+                    nPlayers: g
                   })
                 })]
-              }) : null, (null == g ? void 0 : g.timeSuggestionMinutes) != null ? (0, i.jsxs)("div", {
+              }) : null, (null == A ? void 0 : A.timeSuggestionMinutes) != null ? (0, i.jsxs)("div", {
                 className: M.detailItem,
                 children: [(0, i.jsx)(o.default, {
                   width: 16,
@@ -110,7 +110,7 @@ function y(e) {
                   variant: "text-xs/semibold",
                   className: M.detailItemText,
                   children: D.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({
-                    nMinutes: g.timeSuggestionMinutes
+                    nMinutes: A.timeSuggestionMinutes
                   })
                 })]
               }) : null, (0, i.jsxs)("div", {
@@ -121,22 +121,22 @@ function y(e) {
                 }), (0, i.jsx)(s.Text, {
                   variant: "text-xs/semibold",
                   className: M.detailItemText,
-                  children: x.application.tags.slice(0, 3).join(", ")
+                  children: p.application.tags.slice(0, 3).join(", ")
                 })]
               })]
             })]
           }), (0, i.jsx)(s.Heading, {
             variant: "heading-lg/medium",
             className: M.detailsDescription,
-            children: x.application.description
+            children: p.application.description
           }), (0, i.jsx)("div", {
             className: M.divider
           }), (0, i.jsx)("div", {
             className: M.imagesContainer,
-            children: (null !== (t = null == g ? void 0 : g.gameplayImageUrls) && void 0 !== t ? t : []).map(e => (0, i.jsx)("img", {
+            children: (null !== (t = null == A ? void 0 : A.gameplayImageUrls) && void 0 !== t ? t : []).map(e => (0, i.jsx)("img", {
               src: e,
               alt: D.default.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({
-                activityName: x.application.name
+                activityName: p.application.name
               }),
               className: M.activityImage
             }, e))
@@ -158,18 +158,18 @@ function L(e) {
     size: 2048
   }), {
     analyticsLocations: m
-  } = (0, c.default)(), E = (0, T.default)(), [C, j] = a.useState(null !== (t = (0, p.getActivityGuildSuggestion)({
+  } = (0, c.default)(), E = (0, T.default)(), [C, j] = a.useState(null !== (t = (0, x.getActivityGuildSuggestion)({
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== t ? t : void 0), [y, L] = a.useState(null !== (r = (0, x.getActivityVoiceChannelSuggestion)({
+  })) && void 0 !== t ? t : void 0), [y, L] = a.useState(null !== (r = (0, p.getActivityVoiceChannelSuggestion)({
     guildId: C,
     allowGdmActivityChannelSuggestion: !0
-  })) && void 0 !== r ? r : void 0), V = (0, n.default)([d.default], () => d.default.getChannel(y), [y]), R = (0, p.useSelectGuildOptions)(), b = (0, x.useSelectVoiceChannelOptions)(C), O = a.useCallback(() => {
+  })) && void 0 !== r ? r : void 0), V = (0, n.default)([d.default], () => d.default.getChannel(y), [y]), R = (0, x.useSelectGuildOptions)(), b = (0, p.useSelectVoiceChannelOptions)(C), O = a.useCallback(() => {
     null != y && (0, I.default)({
       activityItem: o,
       currentActivity: E,
       channelId: y,
       guildId: C,
-      embeddedActivitiesManager: A.default,
+      embeddedActivitiesManager: g.default,
       analyticsLocations: m
     }).then(u)
   }, [o, m, E, u, y, C]), H = a.useCallback(() => {
@@ -186,7 +186,7 @@ function L(e) {
   }, [o, m]), B = null == V || null != V.guild_id && !(null != C && null != y && R.some(e => e.value === C) && b.some(e => e.value.channel.id === y)) && !0;
   return (0, i.jsxs)("div", {
     className: M.launcherInnerContainer,
-    children: [(0, i.jsx)(g.default, {
+    children: [(0, i.jsx)(A.default, {
       applicationName: o.application.name,
       imageBackground: h,
       imageClassName: M.launchImage,
@@ -216,7 +216,7 @@ function L(e) {
         isSelected: e => e === C,
         select: e => {
           var t;
-          j(e), L(null !== (t = (0, x.getActivityVoiceChannelSuggestion)({
+          j(e), L(null !== (t = (0, p.getActivityVoiceChannelSuggestion)({
             guildId: e
           })) && void 0 !== t ? t : void 0)
         },
