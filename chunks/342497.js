@@ -111,8 +111,8 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
           value: "[0-9]",
           description: "[0-9]"
         },
-        A = /^[0-9a-f]/i,
-        R = {
+        R = /^[0-9a-f]/i,
+        A = {
           type: "class",
           value: "[0-9a-f]i",
           description: "[0-9a-f]i"
@@ -160,8 +160,8 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
           description: '"\\\\u"'
         },
         Q = 0,
-        X = 0,
-        Z = {
+        Z = 0,
+        X = {
           line: 1,
           column: 1,
           seenCR: !1
@@ -392,7 +392,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
 
       function ef() {
         var t;
-        return A.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(R)), t
+        return R.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(A)), t
       }
 
       function ep() {
@@ -431,14 +431,14 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
       throw s !== l && Q < e.length && er({
         type: "end",
         description: "end of input"
-      }), t = null, n = et, o = (X !== (a = r = ee) && (X > a && (X = 0, Z = {
+      }), t = null, n = et, o = (Z !== (a = r = ee) && (Z > a && (Z = 0, X = {
         line: 1,
         column: 1,
         seenCR: !1
       }), ! function(t, n, r) {
         var a, o;
         for (a = n; a < r; a++) "\n" === (o = e.charAt(a)) ? (!t.seenCR && t.line++, t.column = 1, t.seenCR = !1) : "\r" === o || "\u2028" === o || "\u2029" === o ? (t.line++, t.column = 1, t.seenCR = !0) : (t.column++, t.seenCR = !1)
-      }(Z, X, a), X = a), Z), i = r < e.length ? e.charAt(r) : null, null !== n && ! function(e) {
+      }(X, Z, a), Z = a), X), i = r < e.length ? e.charAt(r) : null, null !== n && ! function(e) {
         var t = 1;
         for (e.sort(function(e, t) {
             return e.description < t.description ? -1 : e.description > t.description ? 1 : 0

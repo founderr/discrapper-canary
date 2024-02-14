@@ -1,16 +1,16 @@
 "use strict";
 E.r(_), E.d(_, {
   UserSettingsManager: function() {
-    return r
+    return a
   },
   default: function() {
-    return i
+    return r
   }
 }), E("860677"), E("222007");
 var t = E("689988"),
   o = E("845579");
 let n = !1;
-class r extends t.default {
+class a extends t.default {
   maybeShowChangeLanguageToast() {}
   setVerifyTimezone() {
     n = !0
@@ -31,4 +31,4 @@ class r extends t.default {
     }
   }
 }
-var i = new r
+var r = new a

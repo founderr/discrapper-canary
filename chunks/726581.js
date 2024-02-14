@@ -1,236 +1,236 @@
 "use strict";
 
-function r(e) {
-  return (r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
-    return typeof e
-  } : function(e) {
-    return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-  })(e)
+function n(t) {
+  return (n = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) {
+    return typeof t
+  } : function(t) {
+    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
+  })(t)
 }
-n("222007"), n("854508"), n("70102"), n("781738"), n("424973"), n("101997"), "undefined" != typeof window ? a = window : "undefined" == typeof self ? (console.warn("Using browser-only version of superagent in non-browser environment"), a = void 0) : a = self;
-var a, o = n("58732"),
-  i = n("92400"),
-  s = n("105555"),
-  u = n("102321"),
-  l = n("646564"),
-  c = n("567173");
+e("222007"), e("854508"), e("70102"), e("781738"), e("424973"), e("101997"), "undefined" != typeof window ? i = window : "undefined" == typeof self ? (console.warn("Using browser-only version of superagent in non-browser environment"), i = void 0) : i = self;
+var i, o = e("58732"),
+  u = e("92400"),
+  a = e("105555"),
+  f = e("102321"),
+  s = e("646564"),
+  c = e("567173");
 
-function d() {}
-e.exports = function(e, n) {
-  return "function" == typeof n ? new t.Request("GET", e).end(n) : 1 == arguments.length ? new t.Request("GET", e) : new t.Request(e, n)
+function l() {}
+t.exports = function(t, e) {
+  return "function" == typeof e ? new r.Request("GET", t).end(e) : 1 == arguments.length ? new r.Request("GET", t) : new r.Request(t, e)
 };
-var f = t = e.exports;
-t.Request = Request, f.getXHR = function() {
-  if (a.XMLHttpRequest && (!a.location || "file:" !== a.location.protocol || !a.ActiveXObject)) return new XMLHttpRequest;
+var h = r = t.exports;
+r.Request = Request, h.getXHR = function() {
+  if (i.XMLHttpRequest && (!i.location || "file:" !== i.location.protocol || !i.ActiveXObject)) return new XMLHttpRequest;
   try {
     return new ActiveXObject("Microsoft.XMLHTTP")
-  } catch (e) {}
+  } catch (t) {}
   try {
     return new ActiveXObject("Msxml2.XMLHTTP.6.0")
-  } catch (e) {}
+  } catch (t) {}
   try {
     return new ActiveXObject("Msxml2.XMLHTTP.3.0")
-  } catch (e) {}
+  } catch (t) {}
   try {
     return new ActiveXObject("Msxml2.XMLHTTP")
-  } catch (e) {}
+  } catch (t) {}
   throw Error("Browser-only version of superagent could not find XHR")
 };
-var p = "".trim ? function(e) {
-  return e.trim()
-} : function(e) {
-  return e.replace(/(^\s*|\s*$)/g, "")
+var p = "".trim ? function(t) {
+  return t.trim()
+} : function(t) {
+  return t.replace(/(^\s*|\s*$)/g, "")
 };
 
-function m(e) {
-  if (!u(e)) return e;
-  var t = [];
-  for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && function e(t, n, r) {
-    if (void 0 !== r) {
-      if (null === r) {
-        t.push(encodeURIComponent(n));
+function v(t) {
+  if (!f(t)) return t;
+  var r = [];
+  for (var e in t) Object.prototype.hasOwnProperty.call(t, e) && function t(r, e, n) {
+    if (void 0 !== n) {
+      if (null === n) {
+        r.push(encodeURIComponent(e));
         return
       }
-      if (Array.isArray(r)) r.forEach(function(r) {
-        e(t, n, r)
+      if (Array.isArray(n)) n.forEach(function(n) {
+        t(r, e, n)
       });
-      else if (u(r))
-        for (var a in r) Object.prototype.hasOwnProperty.call(r, a) && e(t, "".concat(n, "[").concat(a, "]"), r[a]);
-      else t.push(encodeURIComponent(n) + "=" + encodeURIComponent(r))
+      else if (f(n))
+        for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && t(r, "".concat(e, "[").concat(i, "]"), n[i]);
+      else r.push(encodeURIComponent(e) + "=" + encodeURIComponent(n))
     }
-  }(t, n, e[n]);
-  return t.join("&")
+  }(r, e, t[e]);
+  return r.join("&")
 }
 
-function h(e) {
-  for (var t, n, r = {}, a = e.split("&"), o = 0, i = a.length; o < i; ++o) - 1 === (n = (t = a[o]).indexOf("=")) ? r[decodeURIComponent(t)] = "" : r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1));
-  return r
+function d(t) {
+  for (var r, e, n = {}, i = t.split("&"), o = 0, u = i.length; o < u; ++o) - 1 === (e = (r = i[o]).indexOf("=")) ? n[decodeURIComponent(r)] = "" : n[decodeURIComponent(r.slice(0, e))] = decodeURIComponent(r.slice(e + 1));
+  return n
 }
-f.serializeObject = m, f.parseString = h, f.types = {
+h.serializeObject = v, h.parseString = d, h.types = {
   html: "text/html",
   json: "application/json",
   xml: "text/xml",
   urlencoded: "application/x-www-form-urlencoded",
   form: "application/x-www-form-urlencoded",
   "form-data": "application/x-www-form-urlencoded"
-}, f.serialize = {
-  "application/x-www-form-urlencoded": m,
-  "application/json": i
-}, f.parse = {
-  "application/x-www-form-urlencoded": h,
+}, h.serialize = {
+  "application/x-www-form-urlencoded": v,
+  "application/json": u
+}, h.parse = {
+  "application/x-www-form-urlencoded": d,
   "application/json": JSON.parse
 };
 
-function _(e) {
-  return /[/+]json($|[^-\w])/.test(e)
+function g(t) {
+  return /[/+]json($|[^-\w])/.test(t)
 }
 
-function Response(e) {
-  this.req = e, this.xhr = this.req.xhr, this.text = "HEAD" !== this.req.method && ("" === this.xhr.responseType || "text" === this.xhr.responseType) || void 0 === this.xhr.responseType ? this.xhr.responseText : null, this.statusText = this.req.xhr.statusText;
-  var t = this.xhr.status;
-  1223 === t && (t = 204), this._setStatusProperties(t), this.headers = function(e) {
-    for (var t, n, r, a, o = e.split(/\r?\n/), i = {}, s = 0, u = o.length; s < u; ++s) - 1 !== (t = (n = o[s]).indexOf(":")) && (r = n.slice(0, t).toLowerCase(), a = p(n.slice(t + 1)), i[r] = a);
-    return i
-  }(this.xhr.getAllResponseHeaders()), this.header = this.headers, this.header["content-type"] = this.xhr.getResponseHeader("content-type"), this._setHeaderProperties(this.header), null === this.text && e._responseType ? this.body = this.xhr.response : this.body = "HEAD" === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response)
+function Response(t) {
+  this.req = t, this.xhr = this.req.xhr, this.text = "HEAD" !== this.req.method && ("" === this.xhr.responseType || "text" === this.xhr.responseType) || void 0 === this.xhr.responseType ? this.xhr.responseText : null, this.statusText = this.req.xhr.statusText;
+  var r = this.xhr.status;
+  1223 === r && (r = 204), this._setStatusProperties(r), this.headers = function(t) {
+    for (var r, e, n, i, o = t.split(/\r?\n/), u = {}, a = 0, f = o.length; a < f; ++a) - 1 !== (r = (e = o[a]).indexOf(":")) && (n = e.slice(0, r).toLowerCase(), i = p(e.slice(r + 1)), u[n] = i);
+    return u
+  }(this.xhr.getAllResponseHeaders()), this.header = this.headers, this.header["content-type"] = this.xhr.getResponseHeader("content-type"), this._setHeaderProperties(this.header), null === this.text && t._responseType ? this.body = this.xhr.response : this.body = "HEAD" === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response)
 }
 
-function Request(e, t) {
-  var n = this;
-  this._query = this._query || [], this.method = e, this.url = t, this.header = {}, this._header = {}, this.on("end", function() {
-    var e, t = null,
-      r = null;
+function Request(t, r) {
+  var e = this;
+  this._query = this._query || [], this.method = t, this.url = r, this.header = {}, this._header = {}, this.on("end", function() {
+    var t, r = null,
+      n = null;
     try {
-      r = new Response(n)
-    } catch (e) {
-      return (t = Error("Parser is unable to parse the response")).parse = !0, t.original = e, n.xhr ? (t.rawResponse = void 0 === n.xhr.responseType ? n.xhr.responseText : n.xhr.response, t.status = n.xhr.status ? n.xhr.status : null, t.statusCode = t.status) : (t.rawResponse = null, t.status = null), n.callback(t)
-    }
-    n.emit("response", r);
-    try {
-      !n._isResponseOK(r) && (e = Error(r.statusText || "Unsuccessful HTTP response"))
+      n = new Response(e)
     } catch (t) {
-      e = t
+      return (r = Error("Parser is unable to parse the response")).parse = !0, r.original = t, e.xhr ? (r.rawResponse = void 0 === e.xhr.responseType ? e.xhr.responseText : e.xhr.response, r.status = e.xhr.status ? e.xhr.status : null, r.statusCode = r.status) : (r.rawResponse = null, r.status = null), e.callback(r)
     }
-    e ? (e.original = t, e.response = r, e.status = r.status, n.callback(e, r)) : n.callback(null, r)
+    e.emit("response", n);
+    try {
+      !e._isResponseOK(n) && (t = Error(n.statusText || "Unsuccessful HTTP response"))
+    } catch (r) {
+      t = r
+    }
+    t ? (t.original = r, t.response = n, t.status = n.status, e.callback(t, n)) : e.callback(null, n)
   })
 }
 
-function y(e, t, n) {
-  var r = f("DELETE", e);
-  return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
+function y(t, r, e) {
+  var n = h("DELETE", t);
+  return "function" == typeof r && (e = r, r = null), r && n.send(r), e && n.end(e), n
 }
-l(Response.prototype), Response.prototype._parseBody = function(e) {
-  var t = f.parse[this.type];
-  return this.req._parser ? this.req._parser(this, e) : (!t && _(this.type) && (t = f.parse["application/json"]), t && e && (e.length > 0 || e instanceof Object) ? t(e) : null)
+s(Response.prototype), Response.prototype._parseBody = function(t) {
+  var r = h.parse[this.type];
+  return this.req._parser ? this.req._parser(this, t) : (!r && g(this.type) && (r = h.parse["application/json"]), r && t && (t.length > 0 || t instanceof Object) ? r(t) : null)
 }, Response.prototype.toError = function() {
-  var e = this.req,
-    t = e.method,
-    n = e.url,
-    r = Error("cannot ".concat(t, " ").concat(n, " (").concat(this.status, ")"));
-  return r.status = this.status, r.method = t, r.url = n, r
-}, f.Response = Response, o(Request.prototype), s(Request.prototype), Request.prototype.type = function(e) {
-  return this.set("Content-Type", f.types[e] || e), this
-}, Request.prototype.accept = function(e) {
-  return this.set("Accept", f.types[e] || e), this
-}, Request.prototype.auth = function(e, t, n) {
-  return 1 == arguments.length && (t = ""), "object" === r(t) && null !== t && (n = t, t = ""), !n && (n = {
+  var t = this.req,
+    r = t.method,
+    e = t.url,
+    n = Error("cannot ".concat(r, " ").concat(e, " (").concat(this.status, ")"));
+  return n.status = this.status, n.method = r, n.url = e, n
+}, h.Response = Response, o(Request.prototype), a(Request.prototype), Request.prototype.type = function(t) {
+  return this.set("Content-Type", h.types[t] || t), this
+}, Request.prototype.accept = function(t) {
+  return this.set("Accept", h.types[t] || t), this
+}, Request.prototype.auth = function(t, r, e) {
+  return 1 == arguments.length && (r = ""), "object" === n(r) && null !== r && (e = r, r = ""), !e && (e = {
     type: "function" == typeof btoa ? "basic" : "auto"
-  }), this._auth(e, t, n, function(e) {
-    if ("function" == typeof btoa) return btoa(e);
+  }), this._auth(t, r, e, function(t) {
+    if ("function" == typeof btoa) return btoa(t);
     throw Error("Cannot use basic auth, btoa is not a function")
   })
-}, Request.prototype.query = function(e) {
-  return "string" != typeof e && (e = m(e)), e && this._query.push(e), this
-}, Request.prototype.attach = function(e, t, n) {
-  if (t) {
+}, Request.prototype.query = function(t) {
+  return "string" != typeof t && (t = v(t)), t && this._query.push(t), this
+}, Request.prototype.attach = function(t, r, e) {
+  if (r) {
     if (this._data) throw Error("superagent can't mix .send() and .attach()");
-    this._getFormData().append(e, t, n || t.name)
+    this._getFormData().append(t, r, e || r.name)
   }
   return this
 }, Request.prototype._getFormData = function() {
-  return !this._formData && (this._formData = new a.FormData), this._formData
-}, Request.prototype.callback = function(e, t) {
-  if (this._shouldRetry(e, t)) return this._retry();
-  var n = this._callback;
-  this.clearTimeout(), e && (this._maxRetries && (e.retries = this._retries - 1), this.emit("error", e)), n(e, t)
+  return !this._formData && (this._formData = new i.FormData), this._formData
+}, Request.prototype.callback = function(t, r) {
+  if (this._shouldRetry(t, r)) return this._retry();
+  var e = this._callback;
+  this.clearTimeout(), t && (this._maxRetries && (t.retries = this._retries - 1), this.emit("error", t)), e(t, r)
 }, Request.prototype.crossDomainError = function() {
-  var e = Error("Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.");
-  e.crossDomain = !0, e.status = this.status, e.method = this.method, e.url = this.url, this.callback(e)
+  var t = Error("Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.");
+  t.crossDomain = !0, t.status = this.status, t.method = this.method, t.url = this.url, this.callback(t)
 }, Request.prototype.agent = function() {
   return console.warn("This is not supported in browser version of superagent"), this
 }, Request.prototype.buffer = Request.prototype.ca, Request.prototype.ca = Request.prototype.agent, Request.prototype.write = function() {
   throw Error("Streaming is not supported in browser version of superagent")
-}, Request.prototype.pipe = Request.prototype.write, Request.prototype._isHost = function(e) {
-  return e && "object" === r(e) && !Array.isArray(e) && "[object Object]" !== Object.prototype.toString.call(e)
-}, Request.prototype.end = function(e) {
-  this._endCalled && console.warn("Warning: .end() was called twice. This is not supported in superagent"), this._endCalled = !0, this._callback = e || d, this._finalizeQueryString(), this._end()
+}, Request.prototype.pipe = Request.prototype.write, Request.prototype._isHost = function(t) {
+  return t && "object" === n(t) && !Array.isArray(t) && "[object Object]" !== Object.prototype.toString.call(t)
+}, Request.prototype.end = function(t) {
+  this._endCalled && console.warn("Warning: .end() was called twice. This is not supported in superagent"), this._endCalled = !0, this._callback = t || l, this._finalizeQueryString(), this._end()
 }, Request.prototype._setUploadTimeout = function() {
-  var e = this;
+  var t = this;
   this._uploadTimeout && !this._uploadTimeoutTimer && (this._uploadTimeoutTimer = setTimeout(function() {
-    e._timeoutError("Upload timeout of ", e._uploadTimeout, "ETIMEDOUT")
+    t._timeoutError("Upload timeout of ", t._uploadTimeout, "ETIMEDOUT")
   }, this._uploadTimeout))
 }, Request.prototype._end = function() {
   if (this._aborted) return this.callback(Error("The request has been aborted even before .end() was called"));
-  var e = this;
-  this.xhr = f.getXHR();
-  var t = this.xhr,
-    n = this._formData || this._data;
-  this._setTimeouts(), t.onreadystatechange = function() {
-    var n, r = t.readyState;
-    if (r >= 2 && e._responseTimeoutTimer && clearTimeout(e._responseTimeoutTimer), 4 === r) {
+  var t = this;
+  this.xhr = h.getXHR();
+  var r = this.xhr,
+    e = this._formData || this._data;
+  this._setTimeouts(), r.onreadystatechange = function() {
+    var e, n = r.readyState;
+    if (n >= 2 && t._responseTimeoutTimer && clearTimeout(t._responseTimeoutTimer), 4 === n) {
       try {
-        n = t.status
-      } catch (e) {
-        n = 0
+        e = r.status
+      } catch (t) {
+        e = 0
       }
-      if (!n) {
-        if (e.timedout || e._aborted) return;
-        return e.crossDomainError()
+      if (!e) {
+        if (t.timedout || t._aborted) return;
+        return t.crossDomainError()
       }
-      e.emit("end")
+      t.emit("end")
     }
   };
-  var r = function(t, n) {
-    n.total > 0 && (n.percent = n.loaded / n.total * 100, 100 === n.percent && clearTimeout(e._uploadTimeoutTimer)), n.direction = t, e.emit("progress", n)
+  var n = function(r, e) {
+    e.total > 0 && (e.percent = e.loaded / e.total * 100, 100 === e.percent && clearTimeout(t._uploadTimeoutTimer)), e.direction = r, t.emit("progress", e)
   };
   if (this.hasListeners("progress")) try {
-    t.addEventListener("progress", r.bind(null, "download")), t.upload && t.upload.addEventListener("progress", r.bind(null, "upload"))
-  } catch (e) {}
-  t.upload && this._setUploadTimeout();
+    r.addEventListener("progress", n.bind(null, "download")), r.upload && r.upload.addEventListener("progress", n.bind(null, "upload"))
+  } catch (t) {}
+  r.upload && this._setUploadTimeout();
   try {
-    this.username && this.password ? t.open(this.method, this.url, !0, this.username, this.password) : t.open(this.method, this.url, !0)
-  } catch (e) {
-    return this.callback(e)
+    this.username && this.password ? r.open(this.method, this.url, !0, this.username, this.password) : r.open(this.method, this.url, !0)
+  } catch (t) {
+    return this.callback(t)
   }
-  if (this._withCredentials && (t.withCredentials = !0), !this._formData && "GET" !== this.method && "HEAD" !== this.method && "string" != typeof n && !this._isHost(n)) {
-    var a = this._header["content-type"],
-      o = this._serializer || f.serialize[a ? a.split(";")[0] : ""];
-    !o && _(a) && (o = f.serialize["application/json"]), o && (n = o(n))
+  if (this._withCredentials && (r.withCredentials = !0), !this._formData && "GET" !== this.method && "HEAD" !== this.method && "string" != typeof e && !this._isHost(e)) {
+    var i = this._header["content-type"],
+      o = this._serializer || h.serialize[i ? i.split(";")[0] : ""];
+    !o && g(i) && (o = h.serialize["application/json"]), o && (e = o(e))
   }
-  for (var i in this.header) null !== this.header[i] && Object.prototype.hasOwnProperty.call(this.header, i) && t.setRequestHeader(i, this.header[i]);
-  this._responseType && (t.responseType = this._responseType), this.emit("request", this), t.send(void 0 === n ? null : n)
-}, f.agent = function() {
+  for (var u in this.header) null !== this.header[u] && Object.prototype.hasOwnProperty.call(this.header, u) && r.setRequestHeader(u, this.header[u]);
+  this._responseType && (r.responseType = this._responseType), this.emit("request", this), r.send(void 0 === e ? null : e)
+}, h.agent = function() {
   return new c
-}, ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"].forEach(function(e) {
-  c.prototype[e.toLowerCase()] = function(t, n) {
-    var r = new f.Request(e, t);
-    return this._setDefaults(r), n && r.end(n), r
+}, ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"].forEach(function(t) {
+  c.prototype[t.toLowerCase()] = function(r, e) {
+    var n = new h.Request(t, r);
+    return this._setDefaults(n), e && n.end(e), n
   }
-}), c.prototype.del = c.prototype.delete, f.get = function(e, t, n) {
-  var r = f("GET", e);
-  return "function" == typeof t && (n = t, t = null), t && r.query(t), n && r.end(n), r
-}, f.head = function(e, t, n) {
-  var r = f("HEAD", e);
-  return "function" == typeof t && (n = t, t = null), t && r.query(t), n && r.end(n), r
-}, f.options = function(e, t, n) {
-  var r = f("OPTIONS", e);
-  return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
-}, f.del = y, f.delete = y, f.patch = function(e, t, n) {
-  var r = f("PATCH", e);
-  return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
-}, f.post = function(e, t, n) {
-  var r = f("POST", e);
-  return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
-}, f.put = function(e, t, n) {
-  var r = f("PUT", e);
-  return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
+}), c.prototype.del = c.prototype.delete, h.get = function(t, r, e) {
+  var n = h("GET", t);
+  return "function" == typeof r && (e = r, r = null), r && n.query(r), e && n.end(e), n
+}, h.head = function(t, r, e) {
+  var n = h("HEAD", t);
+  return "function" == typeof r && (e = r, r = null), r && n.query(r), e && n.end(e), n
+}, h.options = function(t, r, e) {
+  var n = h("OPTIONS", t);
+  return "function" == typeof r && (e = r, r = null), r && n.send(r), e && n.end(e), n
+}, h.del = y, h.delete = y, h.patch = function(t, r, e) {
+  var n = h("PATCH", t);
+  return "function" == typeof r && (e = r, r = null), r && n.send(r), e && n.end(e), n
+}, h.post = function(t, r, e) {
+  var n = h("POST", t);
+  return "function" == typeof r && (e = r, r = null), r && n.send(r), e && n.end(e), n
+}, h.put = function(t, r, e) {
+  var n = h("PUT", t);
+  return "function" == typeof r && (e = r, r = null), r && n.send(r), e && n.end(e), n
 }

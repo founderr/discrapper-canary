@@ -1,49 +1,49 @@
 "use strict";
-var e = n("859514"),
-  i = n("503486"),
-  o = n("434978"),
-  u = n("16447"),
-  a = n("541368").f,
-  f = n("59393"),
-  c = n("88052"),
-  s = n("688358"),
-  l = n("391358"),
-  h = n("60683"),
-  p = n("350142"),
-  v = n("814026"),
-  g = n("140925"),
-  d = "DOMException",
+var n = e("859514"),
+  i = e("503486"),
+  o = e("434978"),
+  u = e("16447"),
+  a = e("541368").f,
+  f = e("59393"),
+  s = e("88052"),
+  c = e("688358"),
+  l = e("391358"),
+  h = e("60683"),
+  p = e("350142"),
+  v = e("814026"),
+  d = e("140925"),
+  g = "DOMException",
   Error = o("Error"),
-  y = o(d),
+  y = o(g),
   b = function() {
-    c(this, m);
+    s(this, m);
     var t = arguments.length,
       r = l(t < 1 ? void 0 : arguments[0]),
-      n = l(t < 2 ? void 0 : arguments[1], "Error"),
-      e = new y(r, n),
+      e = l(t < 2 ? void 0 : arguments[1], "Error"),
+      n = new y(r, e),
       i = Error(r);
-    return i.name = d, a(e, "stack", u(1, p(i.stack, 1))), s(e, this, b), e
+    return i.name = g, a(n, "stack", u(1, p(i.stack, 1))), c(n, this, b), n
   },
   m = b.prototype = y.prototype,
-  _ = "stack" in Error(d),
+  _ = "stack" in Error(g),
   w = "stack" in new y(1, 2),
-  k = y && v && Object.getOwnPropertyDescriptor(i, d),
-  E = !!k && !(k.writable && k.configurable),
-  R = _ && !E && !w;
-e({
+  E = y && v && Object.getOwnPropertyDescriptor(i, g),
+  k = !!E && !(E.writable && E.configurable),
+  A = _ && !k && !w;
+n({
   global: !0,
   constructor: !0,
-  forced: g || R
+  forced: d || A
 }, {
-  DOMException: R ? b : y
+  DOMException: A ? b : y
 });
-var x = o(d),
-  A = x.prototype;
-if (A.constructor !== x) {
-  for (var S in !g && a(A, "constructor", u(1, x)), h)
+var x = o(g),
+  R = x.prototype;
+if (R.constructor !== x) {
+  for (var S in !d && a(R, "constructor", u(1, x)), h)
     if (f(h, S)) {
-      var M = h[S],
-        O = M.s;
-      !f(x, O) && a(x, O, u(6, M.c))
+      var O = h[S],
+        T = O.s;
+      !f(x, T) && a(x, T, u(6, O.c))
     }
 }

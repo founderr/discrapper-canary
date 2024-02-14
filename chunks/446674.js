@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   Store: function() {
-    return r.default
+    return a.default
   },
   Dispatcher: function() {
     return o.Dispatcher
@@ -10,24 +10,24 @@ E.r(_), E.d(_, {
     return t.default
   },
   useStateFromStores: function() {
-    return i.default
+    return r.default
   },
   useStateFromStoresObject: function() {
-    return i.useStateFromStoresObject
+    return r.useStateFromStoresObject
   },
   useStateFromStoresArray: function() {
-    return i.useStateFromStoresArray
+    return r.useStateFromStoresArray
   },
   statesWillNeverBeEqual: function() {
-    return i.statesWillNeverBeEqual
+    return r.statesWillNeverBeEqual
   },
   default: function() {
-    return a
+    return i
   }
 });
 var t = E("995113"),
   o = E("893346"),
   n = E("35092"),
-  r = E("75247"),
-  i = E("65597"),
-  a = n.default
+  a = E("75247"),
+  r = E("65597"),
+  i = n.default

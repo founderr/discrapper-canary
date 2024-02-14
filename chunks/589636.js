@@ -7,24 +7,24 @@ E.r(_), E.d(_, {
 var t = E("689988"),
   o = E("704341"),
   n = E("393414"),
-  r = E("49111");
+  a = E("49111");
 
-function i(e) {
+function r(e) {
   var _, E, t;
   let {
-    guild: i
+    guild: r
   } = e.invite;
-  if (null != i && (null == i ? void 0 : null === (_ = i.features) || void 0 === _ ? void 0 : _.includes(r.GuildFeatures.HUB))) {
+  if (null != r && (null == r ? void 0 : null === (_ = r.features) || void 0 === _ ? void 0 : _.includes(a.GuildFeatures.HUB))) {
     o.default.onOpenHubInvite(e.invite);
     return
   }
-  null != i && (null == i ? void 0 : null === (E = i.features) || void 0 === E ? void 0 : E.includes(r.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)) && !(null == i ? void 0 : null === (t = i.features) || void 0 === t ? void 0 : t.includes(r.GuildFeatures.PREVIEW_ENABLED)) && (0, n.transitionTo)(r.Routes.GUILD_MEMBER_VERIFICATION(i.id, e.invite.code))
+  null != r && (null == r ? void 0 : null === (E = r.features) || void 0 === E ? void 0 : E.includes(a.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)) && !(null == r ? void 0 : null === (t = r.features) || void 0 === t ? void 0 : t.includes(a.GuildFeatures.PREVIEW_ENABLED)) && (0, n.transitionTo)(a.Routes.GUILD_MEMBER_VERIFICATION(r.id, e.invite.code))
 }
-class a extends t.default {
+class i extends t.default {
   constructor(...e) {
     super(...e), this.actions = {
-      INVITE_ACCEPT_SUCCESS: i
+      INVITE_ACCEPT_SUCCESS: r
     }
   }
 }
-var I = new a
+var I = new i

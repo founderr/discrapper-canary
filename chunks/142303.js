@@ -7,18 +7,18 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("469563"),
-  i = n("157697"),
-  s = n("75196"),
+  s = n("157697"),
+  i = n("75196"),
   l = (0, r.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
       color: r = "currentColor",
-      foreground: i,
+      foreground: s,
       ...l
     } = e;
     return (0, a.jsxs)("svg", {
-      ...(0, s.default)(l),
+      ...(0, i.default)(l),
       width: t,
       height: n,
       viewBox: "0 0 24 24",
@@ -32,10 +32,10 @@ var r = n("469563"),
         width: "26",
         height: "2",
         transform: "rotate(-45 0 19.9623)",
-        className: i,
+        className: s,
         fill: r
       })]
     })
-  }, i.VideoSlashIcon, void 0, {
+  }, s.VideoSlashIcon, void 0, {
     size: 24
   })

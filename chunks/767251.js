@@ -1,16 +1,16 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return i
+    return r
   }
 });
 var t = E("37983");
 E("884691");
 var o = E("404828"),
   n = E.n(o),
-  r = E("77078");
+  a = E("77078");
 
-function i(e) {
+function r(e) {
   return e.paragraph = {
     ...e.paragraph,
     react: function(e, _, E) {
@@ -26,7 +26,7 @@ function i(e) {
         let _ = e.context[e.target];
         _ && _.onClick ? (o.onClick = _.onClick, o.onContextMenu = _.onContextMenu) : o.onClick = _
       }
-      return null == o.onClick && (o.href = n.sanitizeUrl(e.target)), (0, t.jsx)(r.Anchor, {
+      return null == o.onClick && (o.href = n.sanitizeUrl(e.target)), (0, t.jsx)(a.Anchor, {
         title: e.title,
         ...o,
         children: _(e.content, E)

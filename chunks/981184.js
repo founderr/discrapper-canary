@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
 var a = n("37983");
 n("884691");
 var r = n("364082"),
-  i = e => {
+  s = e => {
     let {
       children: t,
       shouldAnimate: n

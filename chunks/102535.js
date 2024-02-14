@@ -47,13 +47,13 @@ t = class extends o.FrameLoop {
           let e = this.timeoutQueue.findIndex(e => e.cancel === t);
           e >= 0 && this.timeoutQueue.splice(e, 1)
         },
-        r = n(this.timeoutQueue, e => e.time > E),
-        i = {
+        a = n(this.timeoutQueue, e => e.time > E),
+        r = {
           time: E,
           handler: e,
           cancel: t
         };
-      return this.timeoutQueue.splice(r, 0, i), this.startLoop(), i
+      return this.timeoutQueue.splice(a, 0, r), this.startLoop(), r
     }, this.onFrame = e => {
       this.frameQueue.add(e), this.startLoop()
     }, this.onWrite = e => {

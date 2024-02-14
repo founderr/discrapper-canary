@@ -1,22 +1,22 @@
 "use strict";
 E.r(_), E.d(_, {
   MAX_STORED_MESSAGES: function() {
-    return s
+    return T
   },
   default: function() {
-    return L
+    return u
   }
 }), E("424973"), E("222007"), E("808653");
 var t = E("917351"),
   o = E.n(t),
   n = E("446674"),
-  r = E("913144"),
-  i = E("42203");
+  a = E("913144"),
+  r = E("42203");
 E("162771");
-var a = E("299039"),
+var i = E("299039"),
   I = E("724210");
-let s = 26,
-  T = {},
+let T = 26,
+  s = {},
   S = {},
   N = {},
   O = {};
@@ -24,18 +24,18 @@ let s = 26,
 function A(e) {
   let _ = S[e];
   if (null == _) return;
-  let E = a.default.fromTimestamp(Date.now() - 9e5),
-    t = o.findIndex(_, e => a.default.compare(e.id, E) > 0);
+  let E = i.default.fromTimestamp(Date.now() - 9e5),
+    t = o.findIndex(_, e => i.default.compare(e.id, E) > 0);
   if (-1 === t) S[e] = [];
   else {
-    let E = Math.max(t, _.length - s);
+    let E = Math.max(t, _.length - T);
     S[e] = o.slice(_, E)
   }
   N[e] = Date.now()
 }
 
 function R(e, _, E, t) {
-  T[e].add(_);
+  s[e].add(_);
   let o = N[_];
   (null == o || o + 3e5 > Date.now()) && A(_), null == S[_] && (S[_] = []), S[_].push({
     id: E,
@@ -49,30 +49,30 @@ function l(e) {
   } = e;
   delete S[_.id], delete N[_.id]
 }
-class u extends n.default.Store {
+class L extends n.default.Store {
   getActiveChannelsFetchStatus(e) {
     return O[e]
   }
   getActiveChannelIds(e) {
-    return T[e]
+    return s[e]
   }
   getChannelMessageData(e) {
     return S[e]
   }
   shouldFetch(e) {
     var _;
-    return null == T[e] && !(null === (_ = O[e]) || void 0 === _ ? void 0 : _.loading)
+    return null == s[e] && !(null === (_ = O[e]) || void 0 === _ ? void 0 : _.loading)
   }
 }
-u.displayName = "ActiveChannelsStore";
-var L = new u(r.default, {
+L.displayName = "ActiveChannelsStore";
+var u = new L(a.default, {
   CHANNEL_SELECT: function(e) {
     let {
       channelId: _,
       guildId: E
     } = e;
     if (!(0, I.isGuildHomeChannel)(_) || null == E) return !1;
-    let t = T[E];
+    let t = s[E];
     if (null == t) return !1;
     t.forEach(e => {
       var _;
@@ -82,7 +82,7 @@ var L = new u(r.default, {
       var _, E;
       return -(null !== (E = null === (_ = S[e]) || void 0 === _ ? void 0 : _.length) && void 0 !== E ? E : 0)
     }).value();
-    T[E] = new Set(n)
+    s[E] = new Set(n)
   },
   MESSAGE_CREATE: function(e) {
     var _;
@@ -93,17 +93,17 @@ var L = new u(r.default, {
       isPushNotification: n
     } = e;
     if (o || n) return !1;
-    let r = i.default.getChannel(E);
-    if (null == r) return !1;
-    let a = r.guild_id;
-    if (null == a || null == T[a]) return !1;
-    R(a, E, t.id, null === (_ = t.author) || void 0 === _ ? void 0 : _.id)
+    let a = r.default.getChannel(E);
+    if (null == a) return !1;
+    let i = a.guild_id;
+    if (null == i || null == s[i]) return !1;
+    R(i, E, t.id, null === (_ = t.author) || void 0 === _ ? void 0 : _.id)
   },
   GUILD_DELETE: function(e) {
     let {
       guild: _
     } = e;
-    delete T[_.id]
+    delete s[_.id]
   },
   CHANNEL_DELETE: l,
   THREAD_DELETE: l,
@@ -126,7 +126,7 @@ var L = new u(r.default, {
       loading: !1,
       error: null,
       fetchedAt: Date.now()
-    }, T[_] = new Set, E.forEach(e => {
+    }, s[_] = new Set, E.forEach(e => {
       let {
         channel_id: E,
         messages: t

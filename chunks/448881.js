@@ -4,10 +4,10 @@ E.r(_), E.d(_, {
     return I
   },
   sendHeartbeat: function() {
-    return s
+    return T
   },
   enrollInQuest: function() {
-    return T
+    return s
   },
   claimQuestRewardCode: function() {
     return S
@@ -19,18 +19,18 @@ E.r(_), E.d(_, {
 var t = E("872717"),
   o = E("913144"),
   n = E("599417"),
-  r = E("2973"),
-  i = E("227231"),
-  a = E("49111");
+  a = E("2973"),
+  r = E("227231"),
+  i = E("49111");
 async function I() {
   o.default.dispatch({
     type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
   });
   try {
     let e = await t.default.get({
-        url: a.Endpoints.QUESTS_CURRENT_QUESTS
+        url: i.Endpoints.QUESTS_CURRENT_QUESTS
       }),
-      _ = e.body.quests.map(e => (0, i.questWithUserStatusFromServer)(e)),
+      _ = e.body.quests.map(e => (0, r.questWithUserStatusFromServer)(e)),
       E = _.filter(e => {
         var _;
         return (null === (_ = e.userStatus) || void 0 === _ ? void 0 : _.claimedAt) != null || e.config.rewardCodePlatforms.length > 0
@@ -46,24 +46,24 @@ async function I() {
     })
   }
 }
-async function s(e) {
+async function T(e) {
   let {
     questId: _,
     streamKey: E,
-    applicationId: r
+    applicationId: a
   } = e;
   try {
     let e = await t.default.post({
-      url: a.Endpoints.QUESTS_HEARTBEAT(_),
+      url: i.Endpoints.QUESTS_HEARTBEAT(_),
       body: {
         stream_key: E,
-        application_id: r
+        application_id: a
       }
     });
     o.default.dispatch({
       type: "QUESTS_SEND_HEARTBEAT_SUCCESS",
-      userStatus: (0, i.questUserStatusFromServer)(e.body),
-      applicationId: r,
+      userStatus: (0, r.questUserStatusFromServer)(e.body),
+      applicationId: a,
       questId: _,
       streamKey: E
     })
@@ -76,8 +76,8 @@ async function s(e) {
     })
   }
 }
-async function T(e) {
-  let _ = r.default.isEnrolling(e);
+async function s(e) {
+  let _ = a.default.isEnrolling(e);
   if (!_) {
     o.default.dispatch({
       type: "QUESTS_ENROLL_BEGIN",
@@ -85,11 +85,11 @@ async function T(e) {
     });
     try {
       let _ = await t.default.post({
-        url: a.Endpoints.QUESTS_ENROLL(e)
+        url: i.Endpoints.QUESTS_ENROLL(e)
       });
       o.default.dispatch({
         type: "QUESTS_ENROLL_SUCCESS",
-        enrolledQuestUserStatus: (0, i.questUserStatusFromServer)(_.body)
+        enrolledQuestUserStatus: (0, r.questUserStatusFromServer)(_.body)
       })
     } catch (_) {
       o.default.dispatch({
@@ -100,7 +100,7 @@ async function T(e) {
   }
 }
 async function S(e, _) {
-  let E = r.default.isClaimingRewardCode(e);
+  let E = a.default.isClaimingRewardCode(e);
   if (!E) {
     o.default.dispatch({
       type: "QUESTS_CLAIM_REWARD_CODE_BEGIN",
@@ -108,7 +108,7 @@ async function S(e, _) {
     });
     try {
       let E = await t.default.post({
-        url: a.Endpoints.QUESTS_REWARD_CODE(e),
+        url: i.Endpoints.QUESTS_REWARD_CODE(e),
         body: {
           platform: _
         }
@@ -116,7 +116,7 @@ async function S(e, _) {
       o.default.dispatch({
         type: "QUESTS_CLAIM_REWARD_CODE_SUCCESS",
         questId: e,
-        rewardCode: (0, i.questsRewardCodeFromServer)(E.body)
+        rewardCode: (0, r.questsRewardCodeFromServer)(E.body)
       })
     } catch (_) {
       throw o.default.dispatch({
@@ -128,7 +128,7 @@ async function S(e, _) {
   }
 }
 async function N(e) {
-  let _ = r.default.isFetchingRewardCode(e);
+  let _ = a.default.isFetchingRewardCode(e);
   if (!_) {
     o.default.dispatch({
       type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
@@ -136,12 +136,12 @@ async function N(e) {
     });
     try {
       let _ = await t.default.get({
-        url: a.Endpoints.QUESTS_REWARD_CODE(e)
+        url: i.Endpoints.QUESTS_REWARD_CODE(e)
       });
       o.default.dispatch({
         type: "QUESTS_FETCH_REWARD_CODE_SUCCESS",
         questId: e,
-        rewardCode: (0, i.questsRewardCodeFromServer)(_.body)
+        rewardCode: (0, r.questsRewardCodeFromServer)(_.body)
       })
     } catch (_) {
       throw o.default.dispatch({

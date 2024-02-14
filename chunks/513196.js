@@ -1,5 +1,5 @@
 "use strict";
-var t, o, n, r, i;
+var t, o, n, a, r;
 E.r(_), E.d(_, {
   FreemiumAppIconIds: function() {
     return t
@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
   PremiumAppIconIds: function() {
     return o
   }
-}), (t || (t = {})).DEFAULT = "AppIcon", (r = o || (o = {})).BRAND_DARK = "BrandDarkIcon", r.BRAND_INVERTED = "BrandInvertedIcon", r.MATTE_LIGHT = "MatteLightIcon", r.MATTE_DARK = "MatteDarkIcon", r.PASTEL = "PastelIcon", r.PIRATE = "PirateIcon", r.CAMO = "CamoIcon", r.SUNSET = "SunsetIcon", r.GALAXY = "GalaxyIcon", r.Y2K = "Y2KIcon", r.CHERRY_BLOSSOM = "CherryBlossomIcon", r.BEANIE = "BeanieIcon", r.GAMING = "GamingIcon", r.CIRCUIT = "CircuitIcon", r.HOLO_WAVES = "HoloWavesIcon", r.BLUSH = "BlushIcon", r.ANGRY = "AngryIcon", r.MANGA = "MangaIcon", r.CONTROLLER = "ControllerIcon", r.MUSHROOM = "MushroomIcon", (i = n || (n = {})).DRIP = "DripIcon", i.SLIMY = "SlimyIcon", i.ZOMBIE = "ZombieIcon", i.CLYDE_STEIN = "ClydeSteinIcon", {
+}), (t || (t = {})).DEFAULT = "AppIcon", (a = o || (o = {})).BRAND_DARK = "BrandDarkIcon", a.BRAND_INVERTED = "BrandInvertedIcon", a.MATTE_LIGHT = "MatteLightIcon", a.MATTE_DARK = "MatteDarkIcon", a.PASTEL = "PastelIcon", a.PIRATE = "PirateIcon", a.CAMO = "CamoIcon", a.SUNSET = "SunsetIcon", a.GALAXY = "GalaxyIcon", a.Y2K = "Y2KIcon", a.CHERRY_BLOSSOM = "CherryBlossomIcon", a.BEANIE = "BeanieIcon", a.GAMING = "GamingIcon", a.CIRCUIT = "CircuitIcon", a.HOLO_WAVES = "HoloWavesIcon", a.BLUSH = "BlushIcon", a.ANGRY = "AngryIcon", a.MANGA = "MangaIcon", a.CONTROLLER = "ControllerIcon", a.MUSHROOM = "MushroomIcon", (r = n || (n = {})).DRIP = "DripIcon", r.SLIMY = "SlimyIcon", r.ZOMBIE = "ZombieIcon", r.CLYDE_STEIN = "ClydeSteinIcon", {
   ...t,
   ...o,
   ...n

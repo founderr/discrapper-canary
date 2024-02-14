@@ -1,20 +1,20 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return a
+    return i
   }
 }), E("222007");
 var t = E("689988"),
   o = E("718517"),
   n = E("931318"),
-  r = E("979268");
-class i extends t.default {
+  a = E("979268");
+class r extends t.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
     }, this.handlePostConnectionOpen = () => {
       ! function e() {
-        r.default.getCurrentConfig({
+        a.default.getCurrentConfig({
           location: "e391b1_1"
         }, {
           autoTrackExposure: !1
@@ -23,4 +23,4 @@ class i extends t.default {
     }
   }
 }
-var a = new i
+var i = new r

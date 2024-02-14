@@ -1,16 +1,16 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return r
+    return a
   }
 });
 var t = E("701909"),
   o = E("171644"),
   n = E("782340");
 
-function r(e, _, E) {
-  let r = null;
-  return "failed" === _ ? r = function(e, _) {
+function a(e, _, E) {
+  let a = null;
+  return "failed" === _ ? a = function(e, _) {
     let {
       platform: E,
       name: t
@@ -51,7 +51,7 @@ function r(e, _, E) {
           })
         }
     }
-  }(e, E.code) : "n/a" === _ && (r = function(e, _) {
+  }(e, E.code) : "n/a" === _ && (a = function(e, _) {
     let {
       platform: E,
       name: t
@@ -65,8 +65,8 @@ function r(e, _, E) {
       })
     };
     return null
-  }(e, E.code)), null != r && (r.errorCodeMessage = n.default.Messages.CONSOLE_ERROR_CODE_SUPPORT.format({
+  }(e, E.code)), null != a && (a.errorCodeMessage = n.default.Messages.CONSOLE_ERROR_CODE_SUPPORT.format({
     supportURL: t.default.getSubmitRequestURL(),
     errorCode: E.code
-  })), r
+  })), a
 }

@@ -1,19 +1,19 @@
 "use strict";
 E.r(_), E.d(_, {
   getQuestByApplicationId: function() {
-    return r
+    return a
   },
   questUserStatusFromServer: function() {
-    return a
+    return i
   },
   questWithUserStatusFromServer: function() {
     return I
   },
   questsRewardCodeFromServer: function() {
-    return s
+    return T
   },
   getRewardAssetUrl: function() {
-    return T
+    return s
   },
   getHeroAssetUrl: function() {
     return S
@@ -34,31 +34,31 @@ E.r(_), E.d(_, {
     return l
   },
   getPlatformString: function() {
-    return u
+    return L
   },
   calculatePercentComplete: function() {
-    return L
+    return u
   }
 }), E("222007");
 var t = E("588025"),
   o = E("782340");
 let n = "https://cdn.discordapp.com/assets/quests/";
 
-function r(e, _) {
+function a(e, _) {
   let E;
   for (let [t, o] of e)
-    if (o.config.applicationId === _ && !i(o)) {
+    if (o.config.applicationId === _ && !r(o)) {
       E = o;
       break
     } return E
 }
 
-function i(e) {
+function r(e) {
   let _ = new Date(e.config.expiresAt);
   return _.valueOf() <= Date.now()
 }
 
-function a(e) {
+function i(e) {
   return {
     userId: e.user_id,
     questId: e.quest_id,
@@ -103,12 +103,12 @@ function I(e) {
       rewardCodePlatforms: _.reward_code_platforms.filter(e => t.QUEST_REWARD_CODE_PLATFORMS_SET.has(e)),
       videoAssets: _.video_assets
     },
-    userStatus: null == e.user_status ? null : a(e.user_status),
+    userStatus: null == e.user_status ? null : i(e.user_status),
     targetedContent: e.targeted_content
   }
 }
 
-function s(e) {
+function T(e) {
   return {
     userId: e.user_id,
     questId: e.quest_id,
@@ -117,7 +117,7 @@ function s(e) {
     claimedAt: e.claimed_at
   }
 }
-let T = e => "".concat(n).concat(e).concat("/reward.png"),
+let s = e => "".concat(n).concat(e).concat("/reward.png"),
   S = e => "".concat(n).concat(e).concat("/hero.png"),
   N = e => "".concat(n).concat(e).concat("/quests_bar_hero.png"),
   O = e => "".concat(n).concat(e).concat("/quests_bar_hero.webm"),
@@ -126,10 +126,10 @@ let T = e => "".concat(n).concat(e).concat("/reward.png"),
 
 function l(e, _) {
   for (let [E, t] of e)
-    if (!i(t) && t.targetedContent.includes(_)) return t;
+    if (!r(t) && t.targetedContent.includes(_)) return t;
   return null
 }
-let u = e => {
+let L = e => {
   switch (e) {
     case t.QuestRewardCodePlatforms.XBOX:
       return o.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -144,7 +144,7 @@ let u = e => {
   }
 };
 
-function L(e) {
+function u(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: _,

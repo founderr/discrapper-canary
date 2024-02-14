@@ -5,20 +5,20 @@ E.r(_), E.d(_, {
     return M
   }
 }), E("222007");
-var r = E("450911"),
-  i = E("267363"),
-  a = E("990766"),
+var a = E("450911"),
+  r = E("267363"),
+  i = E("990766"),
   I = E("689988"),
-  s = E("374014"),
-  T = E("845579"),
+  T = E("374014"),
+  s = E("845579"),
   S = E("271938"),
   N = E("42203"),
   O = E("546463"),
   A = E("568307"),
   R = E("18494"),
   l = E("101125"),
-  u = E("713726"),
-  L = E("9759"),
+  L = E("713726"),
+  u = E("9759"),
   C = E("705565"),
   D = E("754493"),
   c = E("49111");
@@ -29,19 +29,19 @@ class U extends I.default {
     if (null == e) return;
     let {
       canBroadcast: _
-    } = L.default.getCurrentConfig({
+    } = u.default.getCurrentConfig({
       location: "handle_running_games_change"
     }, {
       autoTrackExposure: !1
-    }), E = l.default.getBroadcast(), t = (0, u.getGameName)(e), o = null != O.default.getGameByName(t), n = (0, D.getIsBroadcastingToAnyone)();
-    if (!_ || null != E || !T.BroadcastAutoBroadcast.getSetting() || !o || !n) return;
-    let r = null != d.find(_ => _.pid === e.pid);
-    if (r) return;
+    }), E = l.default.getBroadcast(), t = (0, L.getGameName)(e), o = null != O.default.getGameByName(t), n = (0, D.getIsBroadcastingToAnyone)();
+    if (!_ || null != E || !s.BroadcastAutoBroadcast.getSetting() || !o || !n) return;
+    let a = null != d.find(_ => _.pid === e.pid);
+    if (a) return;
     d = A.default.getRunningGames();
-    let i = (0, C.getCanStartBroadcast)();
-    if (!i) return;
+    let r = (0, C.getCanStartBroadcast)();
+    if (!r) return;
     let I = R.default.getVoiceChannelId();
-    (0, a.createBroadcastChannelOrStartStream)({
+    (0, i.createBroadcastChannelOrStartStream)({
       pid: e.pid,
       channelId: I
     })
@@ -50,24 +50,24 @@ class U extends I.default {
     let {
       streamKey: _
     } = e;
-    (0, u.startBroadcastForStream)(_, t)
+    (0, L.startBroadcastForStream)(_, t)
   }
   handleStreamStop(e) {
     let {
       streamKey: _
     } = e;
     if (null == t) return;
-    let E = (0, s.decodeStreamKey)(_),
+    let E = (0, T.decodeStreamKey)(_),
       {
-        ownerId: r,
-        channelId: i
+        ownerId: a,
+        channelId: r
       } = E;
-    if (null == r || null == i) return;
-    let a = S.default.getId();
-    if (r !== a) return;
-    let I = N.default.getChannel(i),
-      T = null != I && I.isBroadcastChannel();
-    null != I && r === I.ownerId && T && (t = null, o = null, n = null, (0, u.stopBroadcast)())
+    if (null == a || null == r) return;
+    let i = S.default.getId();
+    if (a !== i) return;
+    let I = N.default.getChannel(r),
+      s = null != I && I.isBroadcastChannel();
+    null != I && a === I.ownerId && s && (t = null, o = null, n = null, (0, L.stopBroadcast)())
   }
   handleStartBroadcastStream(e) {
     let {
@@ -81,8 +81,8 @@ class U extends I.default {
     } = e;
     if (null == _ || null == t && null == o && null == n) return;
     let E = S.default.getId(),
-      r = N.default.getChannel(_);
-    null != r && E === r.ownerId && r.isBroadcastChannel() && (0, a.startStream)(null, _, {
+      a = N.default.getChannel(_);
+    null != a && E === a.ownerId && a.isBroadcastChannel() && (0, i.startStream)(null, _, {
       pid: t,
       sourceId: o,
       sourceName: n
@@ -97,15 +97,15 @@ class U extends I.default {
     let t = R.default.getChannelId(),
       o = N.default.getChannel(_);
     if (null == o || !o.isBroadcastChannel()) return;
-    r.default.closePrivateChannel(_, t === _, !0);
+    a.default.closePrivateChannel(_, t === _, !0);
     let n = l.default.getBroadcast();
-    null != n && o.id === n.channelId && (0, u.stopBroadcast)()
+    null != n && o.id === n.channelId && (0, L.stopBroadcast)()
   }
   handleChannelDelete(e) {
     let {
       channel: _
     } = e, E = l.default.getBroadcast();
-    null != E && _.id === E.channelId && (0, u.stopBroadcast)()
+    null != E && _.id === E.channelId && (0, L.stopBroadcast)()
   }
   handleMessageCreate(e) {
     let {
@@ -117,7 +117,7 @@ class U extends I.default {
     if (null == t || !t.isBroadcastChannel()) return;
     let o = R.default.getVoiceChannelId(),
       n = o !== t.id;
-    n && (0, i.localAck)(_)
+    n && (0, r.localAck)(_)
   }
   constructor(...e) {
     super(...e), this.actions = {

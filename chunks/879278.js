@@ -46,11 +46,11 @@ var r = n("299192"),
               altBoundary: v,
               padding: _
             }),
-            A = F ? H ? u.right : u.left : H ? u.bottom : u.top;
-          S[I] > Y[I] && (A = (0, r.default)(A));
-          var R = (0, r.default)(A),
+            R = F ? H ? u.right : u.left : H ? u.bottom : u.top;
+          S[I] > Y[I] && (R = (0, r.default)(R));
+          var A = (0, r.default)(R),
             z = [];
-          if (f && z.push(N[C] <= 0), m && z.push(N[A] <= 0, N[R] <= 0), z.every(function(e) {
+          if (f && z.push(N[C] <= 0), m && z.push(N[R] <= 0, N[A] <= 0), z.every(function(e) {
               return e
             })) {
             E = j, O = !1;

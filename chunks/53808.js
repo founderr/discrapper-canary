@@ -1,13 +1,13 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return i
+    return r
   }
 }), E("222007");
 var t = E("850068"),
   o = E("689988"),
   n = E("843663");
-class r extends o.default {
+class a extends o.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: () => {
@@ -23,4 +23,4 @@ class r extends o.default {
     }
   }
 }
-var i = new r
+var r = new a

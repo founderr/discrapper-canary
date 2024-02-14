@@ -10,10 +10,10 @@ E.r(_), E.d(_, {
     return n
   },
   UNSAFE_RE_ALL: function() {
-    return r
+    return a
   }
 });
 let t = /\{.+?\}/,
   o = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
   n = /!!/,
-  r = /!!/g
+  a = /!!/g

@@ -1,19 +1,19 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return a
+    return i
   }
 }), E("222007");
 var t = E("689988"),
   o = E("162771"),
   n = E("630400"),
-  r = E("958706");
-class i extends t.default {
+  a = E("958706");
+class r extends t.default {
   handleInteraction(e) {
     let {
       interaction: _
     } = e;
-    if ([r.EmojiInteractionPoint.EmojiButtonMouseEntered].includes(_)) {
+    if ([a.EmojiInteractionPoint.EmojiButtonMouseEntered].includes(_)) {
       let e = o.default.getGuildId();
       (0, n.maybeFetchTopEmojisByGuild)(e)
     }
@@ -24,4 +24,4 @@ class i extends t.default {
     }
   }
 }
-var a = new i
+var i = new r

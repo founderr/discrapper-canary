@@ -13,20 +13,20 @@ E.r(_), E.d(_, {
 var t = E("917351"),
   o = E.n(t),
   n = E("915934"),
-  r = E("217696"),
-  i = E("766249"),
-  a = E("512772"),
+  a = E("217696"),
+  r = E("766249"),
+  i = E("512772"),
   I = E("947146"),
-  s = E("301071"),
-  T = E("162551"),
+  T = E("301071"),
+  s = E("162551"),
   S = E("698060"),
   N = E("541272"),
   O = E("20995"),
   A = E("709048"),
   R = E("91801"),
   l = E("340431"),
-  u = E("538184"),
-  L = E("974893"),
+  L = E("538184"),
+  u = E("974893"),
   C = E("236734"),
   D = E("832254"),
   c = E("514594"),
@@ -36,7 +36,7 @@ var t = E("917351"),
 let h = 60,
   P = [{
     id: U.FreemiumAppIconIds.DEFAULT,
-    iconSource: r,
+    iconSource: a,
     name: M.default.Messages.APP_ICON_DEFAULT,
     isPremium: !1
   }].concat([{
@@ -51,12 +51,12 @@ let h = 60,
     name: M.default.Messages.APP_ICON_MANGA
   }, {
     id: U.PremiumAppIconIds.MATTE_DARK,
-    iconSource: u,
+    iconSource: L,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_MATTE_DARK
   }, {
     id: U.PremiumAppIconIds.MATTE_LIGHT,
-    iconSource: L,
+    iconSource: u,
     name: M.default.Messages.APP_ICON_MATTE_LIGHT,
     isPremium: !0
   }, {
@@ -71,7 +71,7 @@ let h = 60,
     name: M.default.Messages.APP_ICON_PIRATE
   }, {
     id: U.PremiumAppIconIds.CAMO,
-    iconSource: s,
+    iconSource: T,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_CAMO
   }, {
@@ -91,12 +91,12 @@ let h = 60,
     name: M.default.Messages.APP_ICON_Y2K
   }, {
     id: U.PremiumAppIconIds.CHERRY_BLOSSOM,
-    iconSource: T,
+    iconSource: s,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_CHERRY_BLOSSOM
   }, {
     id: U.PremiumAppIconIds.BEANIE,
-    iconSource: i,
+    iconSource: r,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_BEANIE
   }, {
@@ -116,7 +116,7 @@ let h = 60,
     name: M.default.Messages.APP_ICON_HOLO_WAVES
   }, {
     id: U.PremiumAppIconIds.BLUSH,
-    iconSource: a,
+    iconSource: i,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_BLUSH
   }, {

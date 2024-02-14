@@ -1,62 +1,62 @@
 "use strict";
-n("422200");
-var e = n("859514"),
-  i = n("503486"),
-  o = n("868822"),
-  u = n("64980"),
-  a = n("814026"),
-  f = n("768897"),
-  c = n("484784"),
-  s = n("18563"),
-  l = n("985797"),
-  h = n("89157"),
-  p = n("662918"),
-  v = n("515011"),
-  g = n("88052"),
-  d = n("125359"),
-  y = n("59393"),
-  b = n("886639"),
-  m = n("681802"),
-  _ = n("418855"),
-  w = n("472960"),
-  k = n("998270"),
-  E = n("148066"),
-  R = n("16447"),
-  x = n("55082"),
-  A = n("579697"),
-  S = n("79807"),
-  M = n("174669"),
-  O = n("492470"),
-  I = M("iterator"),
-  N = "URLSearchParams",
-  L = N + "Iterator",
+e("422200");
+var n = e("859514"),
+  i = e("503486"),
+  o = e("868822"),
+  u = e("64980"),
+  a = e("814026"),
+  f = e("768897"),
+  s = e("484784"),
+  c = e("18563"),
+  l = e("985797"),
+  h = e("89157"),
+  p = e("662918"),
+  v = e("515011"),
+  d = e("88052"),
+  g = e("125359"),
+  y = e("59393"),
+  b = e("886639"),
+  m = e("681802"),
+  _ = e("418855"),
+  w = e("472960"),
+  E = e("998270"),
+  k = e("148066"),
+  A = e("16447"),
+  x = e("55082"),
+  R = e("579697"),
+  S = e("79807"),
+  O = e("174669"),
+  T = e("492470"),
+  I = O("iterator"),
+  M = "URLSearchParams",
+  L = M + "Iterator",
   j = v.set,
-  P = v.getterFor(N),
+  P = v.getterFor(M),
   U = v.getterFor(L),
-  q = Object.getOwnPropertyDescriptor,
+  N = Object.getOwnPropertyDescriptor,
   B = function(t) {
     if (!a) return i[t];
-    var r = q(i, t);
+    var r = N(i, t);
     return r && r.value
   },
   C = B("fetch"),
-  T = B("Request"),
+  q = B("Request"),
   Headers = B("Headers"),
-  z = T && T.prototype,
-  D = Headers && Headers.prototype,
+  D = q && q.prototype,
+  z = Headers && Headers.prototype,
   RegExp = i.RegExp,
   TypeError = i.TypeError,
   F = i.decodeURIComponent,
-  W = i.encodeURIComponent,
-  $ = u("".charAt),
-  H = u([].join),
+  H = i.encodeURIComponent,
+  W = u("".charAt),
+  $ = u([].join),
   Z = u([].push),
   G = u("".replace),
   J = u([].shift),
-  V = u([].splice),
+  X = u([].splice),
   Y = u("".split),
-  K = u("".slice),
-  X = /\+/g,
+  V = u("".slice),
+  K = /\+/g,
   Q = [, , , , ],
   tt = function(t) {
     try {
@@ -66,20 +66,20 @@ var e = n("859514"),
     }
   },
   tr = function(t) {
-    var r, n = G(t, X, " "),
-      e = 4;
+    var r, e = G(t, K, " "),
+      n = 4;
     try {
-      return F(n)
+      return F(e)
     } catch (t) {
-      for (; e;) {
+      for (; n;) {
         ;
-        n = G(n, Q[(r = e--) - 1] || (Q[r - 1] = RegExp("((?:%[\\da-f]{2}){" + r + "})", "gi")), tt)
+        e = G(e, Q[(r = n--) - 1] || (Q[r - 1] = RegExp("((?:%[\\da-f]{2}){" + r + "})", "gi")), tt)
       }
-      return n
+      return e
     }
   },
-  tn = /[!'()~]|%20/g,
-  te = {
+  te = /[!'()~]|%20/g,
+  tn = {
     "!": "%21",
     "'": "%27",
     "(": "%28",
@@ -88,10 +88,10 @@ var e = n("859514"),
     "%20": "+"
   },
   ti = function(t) {
-    return te[t]
+    return tn[t]
   },
   to = function(t) {
-    return G(W(t), tn, ti)
+    return G(H(t), te, ti)
   },
   tu = p(function(t, r) {
     j(this, {
@@ -102,44 +102,44 @@ var e = n("859514"),
   }, "Iterator", function() {
     var t = U(this),
       r = t.kind,
-      n = t.iterator.next(),
-      e = n.value;
-    return !n.done && (n.value = "keys" === r ? e.key : "values" === r ? e.value : [e.key, e.value]), n
+      e = t.iterator.next(),
+      n = e.value;
+    return !e.done && (e.value = "keys" === r ? n.key : "values" === r ? n.value : [n.key, n.value]), e
   }, !0),
   ta = function(t) {
-    this.entries = [], this.url = null, void 0 !== t && (w(t) ? this.parseObject(t) : this.parseQuery("string" == typeof t ? "?" === $(t, 0) ? K(t, 1) : t : k(t)))
+    this.entries = [], this.url = null, void 0 !== t && (w(t) ? this.parseObject(t) : this.parseQuery("string" == typeof t ? "?" === W(t, 0) ? V(t, 1) : t : E(t)))
   };
 ta.prototype = {
-  type: N,
+  type: M,
   bindURL: function(t) {
     this.url = t, this.update()
   },
   parseObject: function(t) {
-    var r, n, e, i, u, a, f, c = A(t);
-    if (c)
-      for (n = (r = x(t, c)).next; !(e = o(n, r)).done;) {
-        if ((a = o(u = (i = x(_(e.value))).next, i)).done || (f = o(u, i)).done || !o(u, i).done) throw TypeError("Expected sequence with length 2");
+    var r, e, n, i, u, a, f, s = R(t);
+    if (s)
+      for (e = (r = x(t, s)).next; !(n = o(e, r)).done;) {
+        if ((a = o(u = (i = x(_(n.value))).next, i)).done || (f = o(u, i)).done || !o(u, i).done) throw TypeError("Expected sequence with length 2");
         Z(this.entries, {
-          key: k(a.value),
-          value: k(f.value)
+          key: E(a.value),
+          value: E(f.value)
         })
       } else
-        for (var s in t) y(t, s) && Z(this.entries, {
-          key: s,
-          value: k(t[s])
+        for (var c in t) y(t, c) && Z(this.entries, {
+          key: c,
+          value: E(t[c])
         })
   },
   parseQuery: function(t) {
     if (t) {
-      for (var r, n, e = Y(t, "&"), i = 0; i < e.length;)(r = e[i++]).length && (n = Y(r, "="), Z(this.entries, {
-        key: tr(J(n)),
-        value: tr(H(n, "="))
+      for (var r, e, n = Y(t, "&"), i = 0; i < n.length;)(r = n[i++]).length && (e = Y(r, "="), Z(this.entries, {
+        key: tr(J(e)),
+        value: tr($(e, "="))
       }))
     }
   },
   serialize: function() {
-    for (var t, r = this.entries, n = [], e = 0; e < r.length;) Z(n, to((t = r[e++]).key) + "=" + to(t.value));
-    return H(n, "&")
+    for (var t, r = this.entries, e = [], n = 0; n < r.length;) Z(e, to((t = r[n++]).key) + "=" + to(t.value));
+    return $(e, "&")
   },
   update: function() {
     this.entries.length = 0, this.parseQuery(this.url.query)
@@ -149,65 +149,65 @@ ta.prototype = {
   }
 };
 var tf = function() {
-    g(this, tc);
+    d(this, ts);
     var t = arguments.length > 0 ? arguments[0] : void 0,
       r = j(this, new ta(t));
     !a && (this.size = r.entries.length)
   },
-  tc = tf.prototype;
-if (l(tc, {
+  ts = tf.prototype;
+if (l(ts, {
     append: function(t, r) {
-      var n = P(this);
-      S(arguments.length, 2), Z(n.entries, {
-        key: k(t),
-        value: k(r)
-      }), !a && this.length++, n.updateURL()
+      var e = P(this);
+      S(arguments.length, 2), Z(e.entries, {
+        key: E(t),
+        value: E(r)
+      }), !a && this.length++, e.updateURL()
     },
     delete: function(t) {
-      for (var r = P(this), n = S(arguments.length, 1), e = r.entries, i = k(t), o = n < 2 ? void 0 : arguments[1], u = void 0 === o ? o : k(o), f = 0; f < e.length;) {
-        var c = e[f];
-        if (c.key === i && (void 0 === u || c.value === u)) {
-          if (V(e, f, 1), void 0 !== u) break
+      for (var r = P(this), e = S(arguments.length, 1), n = r.entries, i = E(t), o = e < 2 ? void 0 : arguments[1], u = void 0 === o ? o : E(o), f = 0; f < n.length;) {
+        var s = n[f];
+        if (s.key === i && (void 0 === u || s.value === u)) {
+          if (X(n, f, 1), void 0 !== u) break
         } else f++
-      }!a && (this.size = e.length), r.updateURL()
+      }!a && (this.size = n.length), r.updateURL()
     },
     get: function(t) {
       var r = P(this).entries;
       S(arguments.length, 1);
-      for (var n = k(t), e = 0; e < r.length; e++)
-        if (r[e].key === n) return r[e].value;
+      for (var e = E(t), n = 0; n < r.length; n++)
+        if (r[n].key === e) return r[n].value;
       return null
     },
     getAll: function(t) {
       var r = P(this).entries;
       S(arguments.length, 1);
-      for (var n = k(t), e = [], i = 0; i < r.length; i++) r[i].key === n && Z(e, r[i].value);
-      return e
+      for (var e = E(t), n = [], i = 0; i < r.length; i++) r[i].key === e && Z(n, r[i].value);
+      return n
     },
     has: function(t) {
-      for (var r = P(this).entries, n = S(arguments.length, 1), e = k(t), i = n < 2 ? void 0 : arguments[1], o = void 0 === i ? i : k(i), u = 0; u < r.length;) {
+      for (var r = P(this).entries, e = S(arguments.length, 1), n = E(t), i = e < 2 ? void 0 : arguments[1], o = void 0 === i ? i : E(i), u = 0; u < r.length;) {
         var a = r[u++];
-        if (a.key === e && (void 0 === o || a.value === o)) return !0
+        if (a.key === n && (void 0 === o || a.value === o)) return !0
       }
       return !1
     },
     set: function(t, r) {
-      var n, e = P(this);
+      var e, n = P(this);
       S(arguments.length, 1);
-      for (var i = e.entries, o = !1, u = k(t), f = k(r), c = 0; c < i.length; c++)(n = i[c]).key === u && (o ? V(i, c--, 1) : (o = !0, n.value = f));
+      for (var i = n.entries, o = !1, u = E(t), f = E(r), s = 0; s < i.length; s++)(e = i[s]).key === u && (o ? X(i, s--, 1) : (o = !0, e.value = f));
       !o && Z(i, {
         key: u,
         value: f
-      }), !a && (this.size = i.length), e.updateURL()
+      }), !a && (this.size = i.length), n.updateURL()
     },
     sort: function() {
       var t = P(this);
-      O(t.entries, function(t, r) {
+      T(t.entries, function(t, r) {
         return t.key > r.key ? 1 : -1
       }), t.updateURL()
     },
     forEach: function(t) {
-      for (var r, n = P(this).entries, e = b(t, arguments.length > 1 ? arguments[1] : void 0), i = 0; i < n.length;) e((r = n[i++]).value, r.key, this)
+      for (var r, e = P(this).entries, n = b(t, arguments.length > 1 ? arguments[1] : void 0), i = 0; i < e.length;) n((r = e[i++]).value, r.key, this)
     },
     keys: function() {
       return new tu(this, "keys")
@@ -220,38 +220,38 @@ if (l(tc, {
     }
   }, {
     enumerable: !0
-  }), c(tc, I, tc.entries, {
+  }), s(ts, I, ts.entries, {
     name: "entries"
-  }), c(tc, "toString", function() {
+  }), s(ts, "toString", function() {
     return P(this).serialize()
   }, {
     enumerable: !0
-  }), a && s(tc, "size", {
+  }), a && c(ts, "size", {
     get: function() {
       return P(this).entries.length
     },
     configurable: !0,
     enumerable: !0
-  }), h(tf, N), e({
+  }), h(tf, M), n({
     global: !0,
     constructor: !0,
     forced: !f
   }, {
     URLSearchParams: tf
-  }), !f && d(Headers)) {
-  var ts = u(D.has),
-    tl = u(D.set),
+  }), !f && g(Headers)) {
+  var tc = u(z.has),
+    tl = u(z.set),
     th = function(t) {
       if (w(t)) {
-        var r, n = t.body;
-        if (m(n) === N) return !ts(r = t.headers ? new Headers(t.headers) : new Headers, "content-type") && tl(r, "content-type", "application/x-www-form-urlencoded;charset=UTF-8"), E(t, {
-          body: R(0, k(n)),
-          headers: R(0, r)
+        var r, e = t.body;
+        if (m(e) === M) return !tc(r = t.headers ? new Headers(t.headers) : new Headers, "content-type") && tl(r, "content-type", "application/x-www-form-urlencoded;charset=UTF-8"), k(t, {
+          body: A(0, E(e)),
+          headers: A(0, r)
         })
       }
       return t
     };
-  if (d(C) && e({
+  if (g(C) && n({
       global: !0,
       enumerable: !0,
       dontCallGetSet: !0,
@@ -260,11 +260,11 @@ if (l(tc, {
       fetch: function(t) {
         return C(t, arguments.length > 1 ? th(arguments[1]) : {})
       }
-    }), d(T)) {
+    }), g(q)) {
     var tp = function(t) {
-      return g(this, z), new T(t, arguments.length > 1 ? th(arguments[1]) : {})
+      return d(this, D), new q(t, arguments.length > 1 ? th(arguments[1]) : {})
     };
-    z.constructor = tp, tp.prototype = z, e({
+    D.constructor = tp, tp.prototype = D, n({
       global: !0,
       constructor: !0,
       dontCallGetSet: !0,

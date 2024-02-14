@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("414456"),
-  i = n.n(r),
-  s = n("77078"),
+  s = n.n(r),
+  i = n("77078"),
   l = n("145131"),
   u = n("929422");
 
@@ -40,25 +40,25 @@ function d(e) {
       padding: 4
     },
     children: [!h && null != f && (0, a.jsx)("div", {
-      className: i(u.art, u[d]),
+      className: s(u.art, u[d]),
       style: {
         backgroundImage: "url(".concat(f, ")")
       }
-    }), null != r ? (0, a.jsx)(s.Text, {
+    }), null != r ? (0, a.jsx)(i.Text, {
       color: "none",
       variant: "text-md/semibold",
       className: u.header,
       children: r
-    }) : null, null != o ? (0, a.jsx)(s.Text, {
+    }) : null, null != o ? (0, a.jsx)(i.Text, {
       color: "none",
       className: u.description,
       variant: "text-sm/medium",
       children: o
-    }) : null, p || null == n ? null : (0, a.jsx)(s.Button, {
+    }) : null, p || null == n ? null : (0, a.jsx)(i.Button, {
       className: u.outerButton,
-      size: s.Button.Sizes.NONE,
-      color: s.Button.Colors.WHITE,
-      look: s.Button.Looks.BLANK,
+      size: i.Button.Sizes.NONE,
+      color: i.Button.Colors.WHITE,
+      look: i.Button.Looks.BLANK,
       innerClassName: u.button,
       onClick: e => {
         e.stopPropagation(), null == t || t(e)

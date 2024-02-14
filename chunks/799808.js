@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("77078"),
-  i = n("990766"),
-  s = n("773356"),
+  s = n("990766"),
+  i = n("773356"),
   l = n("349171"),
   u = n("292687"),
   o = n("305961"),
@@ -32,7 +32,7 @@ function E(e, t, E) {
   });
   else {
     var m;
-    let n = (0, s.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, p.ApplicationStreamResolutions.RESOLUTION_1080, p.ApplicationStreamFPS.FPS_30, c.default.getCurrentUser(), null === (m = o.default.getGuild(e)) || void 0 === m ? void 0 : m.premiumTier) ? {
+    let n = (0, i.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, p.ApplicationStreamResolutions.RESOLUTION_1080, p.ApplicationStreamFPS.FPS_30, c.default.getCurrentUser(), null === (m = o.default.getGuild(e)) || void 0 === m ? void 0 : m.premiumTier) ? {
       width: 1920,
       height: 1080
     } : {
@@ -40,7 +40,7 @@ function E(e, t, E) {
       height: 720
     };
     d.default.getMediaEngine().getDesktopSource(n, !0).then(n => {
-      (0, i.startStream)(e, t, {
+      (0, s.startStream)(e, t, {
         pid: null,
         sourceId: n,
         sourceName: null

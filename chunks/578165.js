@@ -7,49 +7,49 @@ E.r(_), E.d(_, {
 var t = E("689988"),
   o = E("42203"),
   n = E("18494"),
-  r = E("821240"),
-  i = E("761771"),
-  a = E("537597");
+  a = E("821240"),
+  r = E("761771"),
+  i = E("537597");
 
 function I(e) {
   let {
     channelId: _
   } = e;
-  if (null == _ || !(0, i.isEligibleForInappropriateConversationWarning)({
+  if (null == _ || !(0, r.isEligibleForInappropriateConversationWarning)({
       location: "channel_select"
     })) return !1;
   let E = o.default.getChannel(_);
   if (null == E || !E.isDM()) return !1;
-  let t = (0, r.getInappropriateConversationTakeoverForChannel)(_);
-  return null != t && ((0, a.showTakeoverModal)({
+  let t = (0, a.getInappropriateConversationTakeoverForChannel)(_);
+  return null != t && ((0, i.showTakeoverModal)({
     warningId: t.id,
     senderId: E.getRecipientId()
   }), !0)
 }
 
-function s(e) {
+function T(e) {
   let {
     channels: _
   } = e;
-  if (!(0, i.isEligibleForInappropriateConversationWarning)({
+  if (!(0, r.isEligibleForInappropriateConversationWarning)({
       location: "channel_updates"
     })) return !1;
   let E = n.default.getCurrentlySelectedChannelId();
   if (null == E) return !1;
   let t = _.find(e => e.id === E);
   if (null == t) return !1;
-  let o = (0, r.getInappropriateConversationTakeoverForChannel)(t.id);
-  return !!(null != o && t.isDM()) && ((0, a.showTakeoverModal)({
+  let o = (0, a.getInappropriateConversationTakeoverForChannel)(t.id);
+  return !!(null != o && t.isDM()) && ((0, i.showTakeoverModal)({
     warningId: o.id,
     senderId: t.getRecipientId()
   }), !0)
 }
-class T extends t.default {
+class s extends t.default {
   constructor(...e) {
     super(...e), this.actions = {
       CHANNEL_SELECT: I,
-      CHANNEL_UPDATES: s
+      CHANNEL_UPDATES: T
     }
   }
 }
-var S = new T
+var S = new s

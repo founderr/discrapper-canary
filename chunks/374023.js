@@ -1,10 +1,10 @@
 "use strict";
 E.r(_), E.d(_, {
   getIsEligibleForQuests: function() {
-    return r
+    return a
   },
   useIsEligibleForQuests: function() {
-    return i
+    return r
   }
 });
 var t = E("619935"),
@@ -30,7 +30,7 @@ let n = (0, o.createExperiment)({
       }
     }]
   }),
-  r = e => {
+  a = e => {
     let {
       location: _,
       autoTrackExposure: E
@@ -38,14 +38,14 @@ let n = (0, o.createExperiment)({
       location: _
     }, {
       autoTrackExposure: E
-    }), r = t.default.getCurrentConfig({
+    }), a = t.default.getCurrentConfig({
       location: _
     }, {
       autoTrackExposure: E
     });
-    return o.enabled && !r.paymentsBlocked
+    return o.enabled && !a.paymentsBlocked
   },
-  i = e => {
+  r = e => {
     let {
       location: _,
       autoTrackExposure: E
@@ -53,10 +53,10 @@ let n = (0, o.createExperiment)({
       location: _
     }, {
       autoTrackExposure: E
-    }), r = t.default.useExperiment({
+    }), a = t.default.useExperiment({
       location: _
     }, {
       autoTrackExposure: E
     });
-    return o.enabled && !r.paymentsBlocked
+    return o.enabled && !a.paymentsBlocked
   }

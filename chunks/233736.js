@@ -5,15 +5,15 @@ function t(e, _, E, t) {
   let o = Object.keys(e),
     n = Object.keys(_);
   if (o.length !== n.length) return null != t && t("shallowEqual: unequal key lengths ".concat(o.length, " !=== ").concat(n.length)), !1;
-  let r = [];
+  let a = [];
   for (let n = 0; n < o.length; n++) {
-    let i = o[n];
-    if (e[i] !== _[i] && (null == E || !E.includes(i))) {
+    let r = o[n];
+    if (e[r] !== _[r] && (null == E || !E.includes(r))) {
       if (null == t) return !1;
-      r.push(i)
+      a.push(r)
     }
   }
-  return null != t && r.length > 0 && t("shallowEqual: unequal keys: ".concat(r.join(", "))), 0 === r.length
+  return null != t && a.length > 0 && t("shallowEqual: unequal keys: ".concat(a.join(", "))), 0 === a.length
 }
 
 function o(e, _) {

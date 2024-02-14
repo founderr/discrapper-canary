@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   r = n("884691"),
-  i = n("669491"),
-  s = n("77078"),
+  s = n("669491"),
+  i = n("77078"),
   l = n("462274"),
   u = n("181832"),
   o = n("981184"),
@@ -24,7 +24,7 @@ var a = n("37983"),
       pulseSpeakingIndicator: C = !1,
       speaking: m = !1,
       ...S
-    } = e, g = null != p ? p : n, _ = (0, l.default)(g, i.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, T = (0, c.default)(null != E ? E : ""), I = null == T ? void 0 : T.getBannerURL({
+    } = e, g = null != p ? p : n, _ = (0, l.default)(g, s.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, T = (0, c.default)(null != E ? E : ""), I = null == T ? void 0 : T.getBannerURL({
       size: 1024,
       canAnimate: f.GifAutoPlay.getSetting()
     });
@@ -33,7 +33,7 @@ var a = n("37983"),
           dispatchWait: !0
         })
       }, [v, E]), null == n) return null;
-    let A = (0, a.jsx)(s.Avatar, {
+    let A = (0, a.jsx)(i.Avatar, {
         className: h.avatarWrapper,
         src: n,
         ...S

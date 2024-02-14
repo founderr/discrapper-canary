@@ -7,13 +7,13 @@ E.r(_), E.d(_, {
     return n
   },
   setHighFiveEnabled: function() {
-    return r
+    return a
   },
   completeHighFive: function() {
-    return i
+    return r
   },
   clearCompletedHighFive: function() {
-    return a
+    return i
   }
 });
 var t = E("913144");
@@ -35,14 +35,14 @@ function n(e, _) {
   })
 }
 
-function r(e) {
+function a(e) {
   t.default.dispatch({
     type: "HIGH_FIVE_SET_ENABLED",
     enabled: e
   })
 }
 
-function i(e, _, E, o) {
+function r(e, _, E, o) {
   t.default.dispatch({
     type: "HIGH_FIVE_COMPLETE",
     waitingUserId: e,
@@ -52,7 +52,7 @@ function i(e, _, E, o) {
   })
 }
 
-function a(e, _, E) {
+function i(e, _, E) {
   t.default.dispatch({
     type: "HIGH_FIVE_COMPLETE_CLEAR",
     firstUserId: e,

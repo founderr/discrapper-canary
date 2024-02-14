@@ -8,30 +8,30 @@ var t = E("404828");
 let {
   newline: o,
   paragraph: n,
-  url: r,
-  link: i,
-  strong: a,
+  url: a,
+  link: r,
+  strong: i,
   u: I,
-  br: s,
-  em: T,
+  br: T,
+  em: s,
   image: S,
   text: N
 } = t.defaultRules;
 var O = {
   newline: o,
   paragraph: n,
-  url: r,
+  url: a,
   link: {
-    ...i,
+    ...r,
     parse(e, _, E) {
-      let t = i.parse(e, _, E);
+      let t = r.parse(e, _, E);
       return t.context = E.context, t
     }
   },
-  strong: a,
+  strong: i,
   u: I,
-  br: s,
-  em: T,
+  br: T,
+  em: s,
   image: S,
   hook: {
     order: N.order,

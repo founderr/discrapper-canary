@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
     return n
   },
   getMainWindowId: function() {
-    return r
+    return a
   }
 });
 var t = E("917351");
@@ -21,6 +21,6 @@ function n(e) {
   return e.__DISCORD_WINDOW_ID = _, _
 }
 
-function r() {
+function a() {
   return o(window)
 }

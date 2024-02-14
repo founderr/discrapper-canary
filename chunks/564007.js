@@ -7,38 +7,38 @@ E.r(_), E.d(_, {
 var t = E("37983"),
   o = E("884691"),
   n = E("446674"),
-  r = E("77078"),
-  i = E("363658"),
-  a = E("135230"),
+  a = E("77078"),
+  r = E("363658"),
+  i = E("135230"),
   I = E("723872"),
-  s = E("130473"),
-  T = E("782340");
+  T = E("130473"),
+  s = E("782340");
 let S = () => {
-    i.default.clearSuppressWarning()
+    r.default.clearSuppressWarning()
   },
   N = () => {
-    i.default.clearSuppressWarning(!0)
+    r.default.clearSuppressWarning(!0)
   };
 var O = () => {
   let e = o.useRef(null);
 
   function _() {
-    null !== e.current && ((0, r.closeModal)(e.current), e.current = null)
+    null !== e.current && ((0, a.closeModal)(e.current), e.current = null)
   }
-  let [i, O] = (0, n.useStateFromStoresArray)([s.default], () => [s.default.shouldShowWarning(), s.default.isAFKChannel()], []), A = o.useCallback(() => {
+  let [r, O] = (0, n.useStateFromStoresArray)([T.default], () => [T.default.shouldShowWarning(), T.default.isAFKChannel()], []), A = o.useCallback(() => {
     let _ = "",
       E = "";
-    O ? (_ = T.default.Messages.SUPPRESSED_AFK_TITLE, E = T.default.Messages.SUPPRESSED_AFK_BODY) : (_ = T.default.Messages.SUPPRESSED, E = T.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, r.openModal)(e => (0, t.jsx)(a.default, {
+    O ? (_ = s.default.Messages.SUPPRESSED_AFK_TITLE, E = s.default.Messages.SUPPRESSED_AFK_BODY) : (_ = s.default.Messages.SUPPRESSED, E = s.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, a.openModal)(e => (0, t.jsx)(i.default, {
       title: _,
       body: E,
       onConfirm: S,
-      confirmText: T.default.Messages.OKAY,
-      secondaryConfirmText: T.default.Messages.DONT_SHOW_AGAIN,
+      confirmText: s.default.Messages.OKAY,
+      secondaryConfirmText: s.default.Messages.DONT_SHOW_AGAIN,
       onConfirmSecondary: N,
       ...e
     }))
   }, [O]), R = o.useCallback(() => {
-    (0, r.openModalLazy)(async () => {
+    (0, a.openModalLazy)(async () => {
       let {
         default: e
       } = await E.el("109253").then(E.bind(E, "109253"));
@@ -50,7 +50,7 @@ var O = () => {
       null != _ && (e.current = _)
     })
   }, []);
-  return o.useEffect(() => (i && (0, I.isRTCConnectedInHub)() ? R() : i ? A() : _(), () => {
+  return o.useEffect(() => (r && (0, I.isRTCConnectedInHub)() ? R() : r ? A() : _(), () => {
     _()
-  }), [i, A, R]), null
+  }), [r, A, R]), null
 }

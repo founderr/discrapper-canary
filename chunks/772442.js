@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("990766"),
-  i = n("374014"),
-  s = n("701909"),
+  s = n("374014"),
+  i = n("701909"),
   l = n("607391"),
   u = n("49111"),
   o = n("782340");
@@ -28,9 +28,9 @@ function c(e) {
     noArt: f,
     selected: c,
     description: o.default.Messages.STREAM_FAILED_DESCRIPTION.format({
-      helpUrl: s.default.getArticleURL(u.HelpdeskArticles.STREAM_FAILED)
+      helpUrl: i.default.getArticleURL(u.HelpdeskArticles.STREAM_FAILED)
     }),
-    onCTAClick: () => (0, r.closeStream)((0, i.encodeStreamKey)(t)),
+    onCTAClick: () => (0, r.closeStream)((0, s.encodeStreamKey)(t)),
     callToAction: o.default.Messages.CLOSE_STREAM
   })
 }

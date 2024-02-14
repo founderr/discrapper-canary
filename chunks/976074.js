@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var r = n("446674"),
-  i = n("77078"),
-  s = n("374014"),
+  s = n("77078"),
+  i = n("374014"),
   l = n("582415"),
   u = n("271938"),
   o = n("205817"),
@@ -18,7 +18,7 @@ function c(e, t, c) {
   var f;
   let h = (0, l.useGetStreamApplication)(e),
     p = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-    E = null != e ? (0, s.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
+    E = null != e ? (0, i.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
     C = null !== (f = o.default.getVideoStats(E)) && void 0 !== f ? f : {},
     m = {
       media_session_id: o.default.getMediaSessionId(E),
@@ -27,11 +27,11 @@ function c(e, t, c) {
       max_viewers: o.default.getMaxViewers(E),
       ...C
     };
-  return null == e ? null : (0, a.jsx)(i.MenuItem, {
+  return null == e ? null : (0, a.jsx)(s.MenuItem, {
     id: "report-stream-problem",
     label: d.default.Messages.STREAM_REPORT_PROBLEM_MENU_ITEM,
     action: () => {
-      null == c || c(), null != e && (0, i.openModalLazy)(async () => {
+      null == c || c(), null != e && (0, s.openModalLazy)(async () => {
         let {
           default: t
         } = await n.el("485857").then(n.bind(n, "485857"));

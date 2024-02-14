@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return n
   },
   completeRTCLatencyTest: function() {
-    return r
+    return a
   }
 });
 var t = E("872717"),
@@ -15,7 +15,7 @@ function n() {
   return t.default.get("".concat((e = "https:", "https:")).concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT))
 }
 
-function r(e, _) {
+function a(e, _) {
   o.default.dispatch({
     type: "RTC_LATENCY_TEST_COMPLETE",
     latencyRankedRegions: e,

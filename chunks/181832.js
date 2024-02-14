@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useCallBannerBackgroundExperiment: function() {
-    return i
+    return s
   }
 });
 var a = n("862205");
@@ -21,7 +21,7 @@ let r = (0, a.createExperiment)({
   }]
 });
 
-function i(e, t) {
+function s(e, t) {
   return r.useExperiment({
     location: t
   }, {

@@ -1,20 +1,20 @@
 "use strict";
-var e = n("868822"),
-  i = n("418855"),
-  o = n("47361");
-t.exports = function(t, r, n) {
+var n = e("868822"),
+  i = e("418855"),
+  o = e("47361");
+t.exports = function(t, r, e) {
   var u, a;
   i(t);
   try {
     if (!(u = o(t, "return"))) {
-      if ("throw" === r) throw n;
-      return n
+      if ("throw" === r) throw e;
+      return e
     }
-    u = e(u, t)
+    u = n(u, t)
   } catch (t) {
     a = !0, u = t
   }
-  if ("throw" === r) throw n;
+  if ("throw" === r) throw e;
   if (a) throw u;
-  return i(u), n
+  return i(u), e
 }

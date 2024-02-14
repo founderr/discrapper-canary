@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   },
   close: function() {
-    return i
+    return s
   },
   hide: function() {
-    return s
+    return i
   },
   show: function() {
     return l
@@ -34,14 +34,14 @@ function r(e, t) {
   })
 }
 
-function i(e) {
+function s(e) {
   a.default.dispatch({
     type: "PICTURE_IN_PICTURE_CLOSE",
     id: e
   })
 }
 
-function s(e) {
+function i(e) {
   a.default.dispatch({
     type: "PICTURE_IN_PICTURE_HIDE",
     id: e

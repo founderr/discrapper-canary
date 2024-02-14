@@ -1,13 +1,13 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return i
+    return r
   }
 }), E("222007");
 var t = E("689988"),
   o = E("42203"),
   n = E("612278");
-class r extends t.default {
+class a extends t.default {
   handleChannelPreload(e) {
     let {
       channelId: _
@@ -20,4 +20,4 @@ class r extends t.default {
     }
   }
 }
-var i = new r
+var r = new a

@@ -1,8 +1,8 @@
 "use strict";
-var e = n("859514"),
-  i = n("427191").findLast,
-  o = n("505713");
-e({
+var n = e("859514"),
+  i = e("427191").findLast,
+  o = e("505713");
+n({
   target: "Array",
   proto: !0
 }, {

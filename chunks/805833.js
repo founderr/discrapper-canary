@@ -1,19 +1,19 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return i
+    return r
   }
 }), E("860677"), E("70102"), E("222007"), E("704744");
 var t = E("811022"),
   o = E("377678");
 let n = new t.default("Flux"),
-  r = e => e();
-var i = new class e {
+  a = e => e();
+var r = new class e {
   destroy() {
-    this.changedStores.clear(), this.reactChangedStores.clear(), r = e => e()
+    this.changedStores.clear(), this.reactChangedStores.clear(), a = e => e()
   }
   injectBatchEmitChanges(e) {
-    r = e
+    a = e
   }
   pause() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
@@ -34,7 +34,7 @@ var i = new class e {
     }
   }
   emit() {
-    !this.isBatchEmitting && !this.isPaused && r(() => {
+    !this.isBatchEmitting && !this.isPaused && a(() => {
       try {
         this.isBatchEmitting = !0, this.changeSentinel++;
         let e = 0;

@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return y
   }
 });
 var a = n("37983");
 n("884691");
 var r = n("414456"),
-  i = n.n(r),
-  s = n("446674"),
+  s = n.n(r),
+  i = n("446674"),
   l = n("77078"),
   u = n("368598"),
   o = n("49671"),
@@ -31,14 +31,14 @@ let A = e => v.default.close(e),
   x = (e, t) => {
     (0, g.isMac)() && !t.altKey ? v.default.fullscreen(e) : v.default.maximize(e)
   },
-  R = e => {
+  N = e => {
     let {
       windowKey: t,
       themeOverride: n,
       hasOpenLayer: r
     } = e;
     return (0, a.jsxs)("div", {
-      className: i(I.typeWindows, (0, _.getThemeClass)(n), {
+      className: s(I.typeWindows, (0, _.getThemeClass)(n), {
         [I.withBackgroundOverride]: !r
       }),
       children: [(0, a.jsx)("div", {
@@ -65,16 +65,16 @@ let A = e => v.default.close(e),
       })]
     })
   },
-  N = e => {
+  R = e => {
     let {
       focused: t,
       windowKey: n,
       frame: r,
-      themeOverride: s,
+      themeOverride: i,
       hasOpenLayer: u
     } = e;
     return (0, a.jsxs)(l.Clickable, {
-      className: i(r ? I.typeMacOSWithFrame : I.typeMacOS, t ? I.focused : I.unfocused, (0, _.getThemeClass)(s), {
+      className: s(r ? I.typeMacOSWithFrame : I.typeMacOS, t ? I.focused : I.unfocused, (0, _.getThemeClass)(i), {
         [I.withBackgroundOverride]: !u
       }),
       onDoubleClick: () => v.default.maximize(n),
@@ -117,27 +117,27 @@ let A = e => v.default.close(e),
     })
   };
 
-function L(e) {
+function y(e) {
   let {
     focused: t,
     type: n,
     windowKey: r,
-    macOSFrame: i = !1,
+    macOSFrame: s = !1,
     themeOverride: l
-  } = e, o = (0, d.useAppContext)(), f = (0, s.useStateFromStores)([c.default], () => c.default.isFullscreenInContext(o)), h = (0, u.default)();
+  } = e, o = (0, d.useAppContext)(), f = (0, i.useStateFromStores)([c.default], () => c.default.isFullscreenInContext(o)), h = (0, u.default)();
   if (f) return null;
   switch (n) {
     case g.PlatformTypes.WINDOWS:
-      return (0, a.jsx)(R, {
+      return (0, a.jsx)(N, {
         windowKey: r,
         themeOverride: l,
         hasOpenLayer: h
       });
     case g.PlatformTypes.OSX:
-      return (0, a.jsx)(N, {
+      return (0, a.jsx)(R, {
         focused: t,
         windowKey: r,
-        frame: i,
+        frame: s,
         themeOverride: l,
         hasOpenLayer: h
       });

@@ -1,25 +1,25 @@
 "use strict";
-var r = n("644367");
+var n = e("644367");
 
-function a(e) {
-  if (e) return function(e) {
-    for (var t in a.prototype) Object.prototype.hasOwnProperty.call(a.prototype, t) && (e[t] = a.prototype[t]);
-    return e
-  }(e)
+function i(t) {
+  if (t) return function(t) {
+    for (var r in i.prototype) Object.prototype.hasOwnProperty.call(i.prototype, r) && (t[r] = i.prototype[r]);
+    return t
+  }(t)
 }
-e.exports = a;
-a.prototype.get = function(e) {
-  return this.header[e.toLowerCase()]
-}, a.prototype._setHeaderProperties = function(e) {
-  var t = e["content-type"] || "";
-  this.type = r.type(t);
-  var n = r.params(t);
-  for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (this[a] = n[a]);
+t.exports = i;
+i.prototype.get = function(t) {
+  return this.header[t.toLowerCase()]
+}, i.prototype._setHeaderProperties = function(t) {
+  var r = t["content-type"] || "";
+  this.type = n.type(r);
+  var e = n.params(r);
+  for (var i in e) Object.prototype.hasOwnProperty.call(e, i) && (this[i] = e[i]);
   this.links = {};
   try {
-    e.link && (this.links = r.parseLinks(e.link))
-  } catch (e) {}
-}, a.prototype._setStatusProperties = function(e) {
-  var t = e / 100 | 0;
-  this.statusCode = e, this.status = this.statusCode, this.statusType = t, this.info = 1 === t, this.ok = 2 === t, this.redirect = 3 === t, this.clientError = 4 === t, this.serverError = 5 === t, this.error = (4 === t || 5 === t) && this.toError(), this.created = 201 === e, this.accepted = 202 === e, this.noContent = 204 === e, this.badRequest = 400 === e, this.unauthorized = 401 === e, this.notAcceptable = 406 === e, this.forbidden = 403 === e, this.notFound = 404 === e, this.unprocessableEntity = 422 === e
+    t.link && (this.links = n.parseLinks(t.link))
+  } catch (t) {}
+}, i.prototype._setStatusProperties = function(t) {
+  var r = t / 100 | 0;
+  this.statusCode = t, this.status = this.statusCode, this.statusType = r, this.info = 1 === r, this.ok = 2 === r, this.redirect = 3 === r, this.clientError = 4 === r, this.serverError = 5 === r, this.error = (4 === r || 5 === r) && this.toError(), this.created = 201 === t, this.accepted = 202 === t, this.noContent = 204 === t, this.badRequest = 400 === t, this.unauthorized = 401 === t, this.notAcceptable = 406 === t, this.forbidden = 403 === t, this.notFound = 404 === t, this.unprocessableEntity = 422 === t
 }

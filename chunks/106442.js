@@ -1,12 +1,12 @@
 "use strict";
-var e = n("859514"),
-  i = n("64980"),
-  o = n("590455"),
-  u = n("969708"),
-  a = n("998270"),
-  f = n("664144"),
-  c = i("".charAt);
-e({
+var n = e("859514"),
+  i = e("64980"),
+  o = e("590455"),
+  u = e("969708"),
+  a = e("998270"),
+  f = e("664144"),
+  s = i("".charAt);
+n({
   target: "String",
   proto: !0,
   forced: f(function() {
@@ -15,9 +15,9 @@ e({
 }, {
   at: function(t) {
     var r = a(o(this)),
-      n = r.length,
-      e = u(t),
-      i = e >= 0 ? e : n + e;
-    return i < 0 || i >= n ? void 0 : c(r, i)
+      e = r.length,
+      n = u(t),
+      i = n >= 0 ? n : e + n;
+    return i < 0 || i >= e ? void 0 : s(r, i)
   }
 })

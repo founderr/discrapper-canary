@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 });
 var a = n("913144"),
   r = n("42203"),
-  i = n("945956"),
-  s = n("18494"),
+  s = n("945956"),
+  i = n("18494"),
   l = n("599110"),
   u = n("49111");
 
@@ -29,9 +29,9 @@ function o(e, t) {
     saveAsDefault: t
   }), l.default.track(u.AnalyticEvents.SET_HANG_STATUS, {
     status_type: e,
-    channel_id: s.default.getVoiceChannelId(),
-    guild_id: null === (n = r.default.getChannel(s.default.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
-    media_session_id: i.default.getMediaSessionId()
+    channel_id: i.default.getVoiceChannelId(),
+    guild_id: null === (n = r.default.getChannel(i.default.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
+    media_session_id: s.default.getMediaSessionId()
   })
 }
 
@@ -48,9 +48,9 @@ function d(e, t, n) {
     saveAsDefault: n
   }), l.default.track(u.AnalyticEvents.SET_HANG_STATUS, {
     status_type: e,
-    channel_id: s.default.getVoiceChannelId(),
-    guild_id: null === (o = r.default.getChannel(s.default.getVoiceChannelId())) || void 0 === o ? void 0 : o.guild_id,
-    media_session_id: i.default.getMediaSessionId()
+    channel_id: i.default.getVoiceChannelId(),
+    guild_id: null === (o = r.default.getChannel(i.default.getVoiceChannelId())) || void 0 === o ? void 0 : o.guild_id,
+    media_session_id: s.default.getMediaSessionId()
   })
 }
 
@@ -60,8 +60,8 @@ function c(e) {
     type: "CLEAR_HANG_STATUS",
     saveAsDefault: e
   }), l.default.track(u.AnalyticEvents.CLEAR_HANG_STATUS, {
-    channel_id: s.default.getVoiceChannelId(),
-    guild_id: null === (t = r.default.getChannel(s.default.getVoiceChannelId())) || void 0 === t ? void 0 : t.guild_id,
-    media_session_id: i.default.getMediaSessionId()
+    channel_id: i.default.getVoiceChannelId(),
+    guild_id: null === (t = r.default.getChannel(i.default.getVoiceChannelId())) || void 0 === t ? void 0 : t.guild_id,
+    media_session_id: s.default.getMediaSessionId()
   })
 }

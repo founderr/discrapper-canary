@@ -6,46 +6,46 @@ E.r(_), E.d(_, {
 }), E("222007");
 var t, o = E("917351"),
   n = E.n(o),
-  r = E("95410"),
-  i = E("689988"),
-  a = E("139321"),
+  a = E("95410"),
+  r = E("689988"),
+  i = E("139321"),
   I = E("269596"),
-  s = E("945956"),
-  T = E("200521");
+  T = E("945956"),
+  s = E("200521");
 let S = {
     chance: .2,
     cooldown: 864e5
   },
   N = {
-    [T.FeedbackType.VOICE]: {
+    [s.FeedbackType.VOICE]: {
       ...S,
-      hotspot: a.HotspotLocations.VOICE_CALL_FEEDBACK,
+      hotspot: i.HotspotLocations.VOICE_CALL_FEEDBACK,
       storageKey: "lastVoiceFeedback",
       eligibilityChecks: [function(e) {
-        let _ = s.default.getWasEverRtcConnected();
-        return !_ || s.default.getWasEverMultiParticipant()
+        let _ = T.default.getWasEverRtcConnected();
+        return !_ || T.default.getWasEverMultiParticipant()
       }]
     },
-    [T.FeedbackType.STREAM]: {
+    [s.FeedbackType.STREAM]: {
       ...S,
-      hotspot: a.HotspotLocations.REPORT_PROBLEM_POST_STREAM,
+      hotspot: i.HotspotLocations.REPORT_PROBLEM_POST_STREAM,
       storageKey: "lastStreamFeedback"
     },
-    [T.FeedbackType.VIDEO_BACKGROUND]: {
+    [s.FeedbackType.VIDEO_BACKGROUND]: {
       ...S,
-      hotspot: a.HotspotLocations.VIDEO_BACKGROUND_FEEDBACK,
+      hotspot: i.HotspotLocations.VIDEO_BACKGROUND_FEEDBACK,
       storageKey: "lastVideoBackgroundFeedback"
     },
-    [T.FeedbackType.ACTIVITY]: {
+    [s.FeedbackType.ACTIVITY]: {
       cooldown: 0,
       chance: .5,
-      hotspot: a.HotspotLocations.POST_ACTIVITY_FEEDBACK,
+      hotspot: i.HotspotLocations.POST_ACTIVITY_FEEDBACK,
       storageKey: "lastActivityFeedback"
     },
-    [T.FeedbackType.IN_APP_REPORTS]: {
+    [s.FeedbackType.IN_APP_REPORTS]: {
       cooldown: 1728e5,
       chance: .5,
-      hotspot: a.HotspotLocations.IN_APP_REPORTS_FEEDBACK,
+      hotspot: i.HotspotLocations.IN_APP_REPORTS_FEEDBACK,
       storageKey: "inAppReportsFeedback"
     }
   };
@@ -60,12 +60,12 @@ function A(e) {
 
 function R(e) {
   if (null != e.storageKey) {
-    let _ = r.default.get(e.storageKey);
+    let _ = a.default.get(e.storageKey);
     if (null != _ && Date.now() - _ < e.cooldown) return !1
   }
   return !0
 }
-t = class extends i.default {
+t = class extends r.default {
   possiblyShowFeedbackModal(e, _) {
     (function(e) {
       var _;
@@ -73,13 +73,13 @@ t = class extends i.default {
       let E = N[e],
         t = null !== (_ = E.eligibilityChecks) && void 0 !== _ ? _ : [];
       return [R, A, O].every(e => e(E)) && t.every(e => e(E))
-    })(e) && (null == this.feedbackTypeToShow || !(T.FeedbackTypePrecedence[this.feedbackTypeToShow] < T.FeedbackTypePrecedence[e])) && (this.feedbackTypeToShow = e, this.showFeedbackModalDebounced(_))
+    })(e) && (null == this.feedbackTypeToShow || !(s.FeedbackTypePrecedence[this.feedbackTypeToShow] < s.FeedbackTypePrecedence[e])) && (this.feedbackTypeToShow = e, this.showFeedbackModalDebounced(_))
   }
   constructor(...e) {
     super(...e), this.feedbackTypeToShow = null, this.showFeedbackModalDebounced = n.debounce(e => {
       null != this.feedbackTypeToShow && (! function(e) {
         let _ = N[e];
-        null != _.storageKey && r.default.set(_.storageKey, Date.now())
+        null != _.storageKey && a.default.set(_.storageKey, Date.now())
       }(this.feedbackTypeToShow), this.feedbackTypeToShow = null, e())
     }, 200)
   }

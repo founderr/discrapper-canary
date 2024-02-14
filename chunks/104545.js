@@ -1,13 +1,13 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return i
+    return r
   }
 }), E("222007");
 var t = E("862337"),
   o = E("913144"),
   n = E("689988");
-class r extends n.default {
+class a extends n.default {
   _terminate() {
     this.clearErrorTimeout.stop()
   }
@@ -21,4 +21,4 @@ class r extends n.default {
     }
   }
 }
-var i = new r
+var r = new a

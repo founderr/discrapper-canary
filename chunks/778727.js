@@ -1,15 +1,15 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return s
+    return T
   }
 }), E("222007");
 var t = E("689988"),
   o = E("191145"),
   n = E("721281"),
-  r = E("42203"),
-  i = E("800762"),
-  a = E("818766");
+  a = E("42203"),
+  r = E("800762"),
+  i = E("818766");
 class I extends t.default {
   handleVoiceChannelSelect(e) {
     let {
@@ -17,12 +17,12 @@ class I extends t.default {
       guildId: E
     } = e;
     if (null == _ || null == E) return;
-    let t = r.default.getChannel(_);
+    let t = a.default.getChannel(_);
     if (null != t && (0, n.hasVoiceChannelActivityNotifsEnabled)(t) && t.isGuildVoice()) {
       let e = o.default.getParticipants(_).length,
-        E = i.default.isInChannel(_),
+        E = r.default.isInChannel(_),
         t = e === (E ? 1 : 0);
-      t ? a.sendVoiceChannelActivityNotification(_, t) : e === (E ? 2 : 1) && a.sendVoiceChannelActivityNotification(_, t)
+      t ? i.sendVoiceChannelActivityNotification(_, t) : e === (E ? 2 : 1) && i.sendVoiceChannelActivityNotification(_, t)
     }
   }
   constructor(...e) {
@@ -31,4 +31,4 @@ class I extends t.default {
     }
   }
 }
-var s = new I
+var T = new I

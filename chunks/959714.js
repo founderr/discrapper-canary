@@ -19,8 +19,8 @@ class o extends t.MessageType {
   }
   internalBinaryRead(e, _, E, o) {
     let n = null != o ? o : this.create(),
-      r = e.pos + _;
-    for (; e.pos < r;) {
+      a = e.pos + _;
+    for (; e.pos < a;) {
       let [_, o] = e.tag();
       switch (_) {
         case 1:
@@ -33,10 +33,10 @@ class o extends t.MessageType {
           n.dataVersion = e.uint32();
           break;
         default:
-          let r = E.readUnknownField;
-          if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-          let i = e.skip(o);
-          !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+          let a = E.readUnknownField;
+          if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+          let r = e.skip(o);
+          !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, r)
       }
     }
     return n

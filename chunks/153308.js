@@ -530,7 +530,7 @@ function H() {
 
 function F(e, t, n) {
   var r, a = et(e),
-    o = X();
+    o = Z();
   if (!0 === a["[[initializedIntlObject]]"]) throw TypeError("`this` object has already been initialized as an Intl object");
   l(e, "__getInternalProperties", {
     value: function() {
@@ -549,7 +549,7 @@ function F(e, t, n) {
     m = j(n, "style", "string", new Q("decimal", "percent", "currency"), "decimal");
   a["[[style]]"] = m;
   var h = j(n, "currency", "string");
-  if (void 0 !== h && (r = Z(String(h)), !1 === k.test(r))) throw RangeError("'" + h + "' is not a valid currency code");
+  if (void 0 !== h && (r = X(String(h)), !1 === k.test(r))) throw RangeError("'" + h + "' is not a valid currency code");
   if ("currency" === m && void 0 === h) throw TypeError("Currency code is required when style is currency");
   if ("currency" === m) {
     h = h.toUpperCase(), a["[[currency]]"] = h;
@@ -595,7 +595,7 @@ function I() {
 }
 
 function N(e, t) {
-  var n, r = X(),
+  var n, r = Z(),
     a = et(e),
     o = a["[[dataLocale]]"],
     i = a["[[numberingSystem]]"],
@@ -630,8 +630,8 @@ function N(e, t) {
         for (u && (o = o.slice(0, a).replace(".", ""), o += h.call(Array(u - (o.length - 1) + 1), "0") + "." + h.call(Array(r + 1), "0"), i = o.length); s > 0 && "0" === o.slice(-1);) o = o.slice(0, -1), s--;
         if ("." === o.slice(-1) && (o = o.slice(0, -1)), i < t) var l = h.call(Array(t - i + 1), "0");
         return (l || "") + o
-      }(t, a["[[minimumIntegerDigits]]"], a["[[minimumFractionDigits]]"], a["[[maximumFractionDigits]]"]), A[i]) {
-      var d = A[a["[[numberingSystem]]"]];
+      }(t, a["[[minimumIntegerDigits]]"], a["[[minimumFractionDigits]]"], a["[[maximumFractionDigits]]"]), R[i]) {
+      var d = R[a["[[numberingSystem]]"]];
       n = String(n).replace(/\d/g, function(e) {
         return d[e]
       })
@@ -674,7 +674,7 @@ g.NumberFormat = {
   configurable: !0,
   get: I
 });
-var A = {
+var R = {
   arab: ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"],
   arabext: ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"],
   bali: ["᭐", "᭑", "᭒", "᭓", "᭔", "᭕", "᭖", "᭗", "᭘", "᭙"],
@@ -699,7 +699,7 @@ var A = {
   tibt: ["༠", "༡", "༢", "༣", "༤", "༥", "༦", "༧", "༨", "༩"]
 };
 
-function R() {
+function A() {
   var e = arguments[0],
     t = arguments[1];
   return this && this !== Intl ? z(ee(this), e, t) : new Intl.DateTimeFormat(e, t)
@@ -707,7 +707,7 @@ function R() {
 
 function z(e, t, n) {
   var r = et(e),
-    o = X();
+    o = Z();
   if (!0 === r["[[initializedIntlObject]]"]) throw TypeError("`this` object has already been initialized as an Intl object");
   l(e, "__getInternalProperties", {
     value: function() {
@@ -724,7 +724,7 @@ function z(e, t, n) {
   r["[[locale]]"] = p["[[locale]]"], r["[[calendar]]"] = p["[[ca]]"], r["[[numberingSystem]]"] = p["[[nu]]"], r["[[dataLocale]]"] = p["[[dataLocale]]"];
   var m = p["[[dataLocale]]"],
     h = n.timeZone;
-  if (void 0 !== h && "UTC" !== (h = Z(h))) throw RangeError("timeZone is not supported.");
+  if (void 0 !== h && "UTC" !== (h = X(h))) throw RangeError("timeZone is not supported.");
   for (var _ in r["[[timeZone]]"] = h, c = new $, W)
     if (u.call(W, _)) {
       var y = j(n, _, "string", W[_]);
@@ -770,8 +770,8 @@ l(Intl.NumberFormat.prototype, "resolvedOptions", {
 }), l(Intl, "DateTimeFormat", {
   configurable: !0,
   writable: !0,
-  value: R
-}), l(R, "prototype", {
+  value: A
+}), l(A, "prototype", {
   writable: !1
 });
 var W = {
@@ -834,7 +834,7 @@ function K() {
 function V(e, t) {
   if (!isFinite(t)) throw RangeError("Invalid valid date passed to format");
   var n = e.__getInternalProperties(v),
-    r = X(),
+    r = Z(),
     a = n["[[locale]]"],
     o = new Intl.NumberFormat([a], {
       useGrouping: !1
@@ -931,7 +931,7 @@ J.Number.toLocaleString = function() {
   var t = arguments[0],
     n = arguments[1],
     n = B(n, "any", "all");
-  return V(new R(t, n), e)
+  return V(new A(t, n), e)
 }, J.Date.toLocaleDateString = function() {
   if ("[object Date]" !== Object.prototype.toString.call(this)) throw TypeError("`this` value must be a Date instance for Date.prototype.toLocaleDateString()");
   var e = +this;
@@ -939,7 +939,7 @@ J.Number.toLocaleString = function() {
   var t = arguments[0],
     n = arguments[1],
     n = B(n, "date", "date");
-  return V(new R(t, n), e)
+  return V(new A(t, n), e)
 }, J.Date.toLocaleTimeString = function() {
   if ("[object Date]" !== Object.prototype.toString.call(this)) throw TypeError("`this` value must be a Date instance for Date.prototype.toLocaleTimeString()");
   var e = +this;
@@ -947,7 +947,7 @@ J.Number.toLocaleString = function() {
   var t = arguments[0],
     n = arguments[1],
     n = B(n, "time", "time");
-  return V(new R(t, n), e)
+  return V(new A(t, n), e)
 }, l(Intl, "__applyLocaleSensitivePrototypes", {
   writable: !0,
   configurable: !0,
@@ -981,7 +981,7 @@ J.Number.toLocaleString = function() {
 
 function G(e) {
   if (!u.call(this, "[[availableLocales]]")) throw TypeError("supportedLocalesOf() is not a constructor");
-  var t = X(),
+  var t = Z(),
     n = arguments[1],
     r = this["[[availableLocales]]"],
     a = Y(e);
@@ -1032,7 +1032,7 @@ function Q() {
   }), arguments.length && m.apply(this, f.call(arguments))
 }
 
-function X() {
+function Z() {
   for (var e = /[.?*+^$[\]\\(){}|-]/g, t = RegExp.lastMatch || "", n = RegExp.multiline ? "m" : "", r = {
       input: RegExp.input
     }, a = new Q, o = !1, i = {}, s = 1; s <= 9; s++) o = (i["$" + s] = RegExp["$" + s]) || o;
@@ -1044,7 +1044,7 @@ function X() {
   return r.exp = new RegExp(h.call(a, "") + t, n), r
 }
 
-function Z(e) {
+function X(e) {
   for (var t = e.length; t--;) {
     var n = e.charAt(t);
     n >= "a" && n <= "z" && (e = e.slice(0, t) + n.toUpperCase() + e.slice(t + 1))
