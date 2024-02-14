@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return N
   }
 });
 var r = n("917351"),
@@ -45,7 +45,15 @@ function S(e) {
   } = e, r = s.default.getChannel(t);
   return null != r && null != r.guild_id && I(r.guild_id, n)
 }
-class T extends l.default.Store {
+
+function T(e) {
+  let {
+    guildId: t,
+    messages: n
+  } = e;
+  return null != t && I(t, i.flatten(n))
+}
+class f extends l.default.Store {
   initialize() {
     this.waitFor(s.default, d.default)
   }
@@ -53,8 +61,8 @@ class T extends l.default.Store {
     c(e, t)
   }
 }
-T.displayName = "GuildMemberRequesterStore";
-var f = new T(u.default, {
+f.displayName = "GuildMemberRequesterStore";
+var N = new f(u.default, {
   CONNECTION_CLOSED: E,
   CONNECTION_OPEN: E,
   CONNECTION_RESUMED: function() {
@@ -70,13 +78,8 @@ var f = new T(u.default, {
       _.acknowledge(t, e.user.id)
     }), null != r && r.forEach(e => _.acknowledge(t, e)), !1
   },
-  SEARCH_FINISH: function(e) {
-    let {
-      guildId: t,
-      messages: n
-    } = e;
-    return null != t && I(t, i.flatten(n))
-  },
+  SEARCH_FINISH: T,
+  MOD_VIEW_SEARCH_FINISH: T,
   LOCAL_MESSAGES_LOADED: S,
   LOAD_MESSAGES_SUCCESS: S,
   LOAD_MESSAGES_AROUND_SUCCESS: S,

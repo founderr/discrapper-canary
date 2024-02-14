@@ -96,6 +96,7 @@ class s extends t.default {
       LOAD_RECENT_MENTIONS_SUCCESS: this.handleLoadRecentMentions,
       LOAD_PINNED_MESSAGES_SUCCESS: this.handleLoadPinnedMessages,
       SEARCH_FINISH: this.handleSearchFinish,
+      MOD_VIEW_SEARCH_FINISH: this.handleSearchFinish,
       GUILD_FEED_FETCH_SUCCESS: this.handleGuildFeedFetchSuccess,
       CHANNEL_SELECT: {
         callback: this.handleChannelSelect,

@@ -54,12 +54,8 @@ function C(e) {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-          switch (N) {
-            case E.ModViewPanel.INFO:
-              return I();
-            case E.ModViewPanel.MESSAGE_HISTORY:
-              return L(E.ModViewPanel.INFO)
-          }
+          if (N === E.ModViewPanel.INFO) return I();
+          return L(E.ModViewPanel.INFO)
         }
       }
     }), [I, N, L]);

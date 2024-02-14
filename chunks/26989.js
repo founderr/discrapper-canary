@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return w
   },
   default: function() {
-    return q
+    return X
   }
 }), n("222007"), n("702976"), n("424973");
 var i, r, s = n("917351"),
@@ -345,7 +345,16 @@ function K(e) {
     })
   })(e))
 }
-class z extends l.default.Store {
+
+function z(e) {
+  let {
+    messages: t
+  } = e;
+  t.forEach(e => K({
+    messages: e
+  }))
+}
+class q extends l.default.Store {
   initialize() {
     this.waitFor(m.default, _.default, E.default)
   }
@@ -443,8 +452,8 @@ class z extends l.default.Store {
     return N
   }
 }
-z.displayName = "GuildMemberStore";
-var q = new z(u.default, {
+q.displayName = "GuildMemberStore";
+var X = new q(u.default, {
   CONNECTION_OPEN: function(e) {
     A ? A = !1 : I = {}, v = {}, F(e)
   },
@@ -638,14 +647,8 @@ var q = new z(u.default, {
   LOAD_MESSAGES_AROUND_SUCCESS: K,
   LOAD_PINNED_MESSAGES_SUCCESS: K,
   LOAD_RECENT_MENTIONS_SUCCESS: K,
-  SEARCH_FINISH: function(e) {
-    let {
-      messages: t
-    } = e;
-    t.forEach(e => K({
-      messages: e
-    }))
-  },
+  SEARCH_FINISH: z,
+  MOD_VIEW_SEARCH_FINISH: z,
   MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function(e) {
     let {
       guildId: t,

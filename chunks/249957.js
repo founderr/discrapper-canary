@@ -73,8 +73,7 @@ function _(e) {
         member: T
       }), (0, a.jsx)(S.default, {
         userId: t,
-        guildId: n,
-        onNavigate: _
+        guildId: n
       }), (0, a.jsx)(p.default, {
         member: T,
         onNavigate: _

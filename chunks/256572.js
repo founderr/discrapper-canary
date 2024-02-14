@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return N
+    return O
   }
 }), n("222007"), n("424973");
 var s, i, r = n("693566"),
@@ -127,27 +127,34 @@ function T(e) {
 }
 
 function C(e) {
+  let {
+    messages: t
+  } = e;
+  return y(t, e => y(e, e => p(e)))
+}
+
+function I(e) {
   return E.deleteChannelCache(e.channel.id)
 }
 
-function I(e, t) {
+function S(e, t) {
   if (!E.has(e, t)) return !1;
   E.set(e, t, {
     state: 2
   })
 }
 
-function S() {
+function A() {
   E.clear()
 }
 
-function A(e) {
+function D(e) {
   let {
     firstMessages: t
   } = e;
   return null != t && y(t, e => p(e))
 }
-class D extends o.default.Store {
+class N extends o.default.Store {
   initialize() {
     this.waitFor(c.default, _.default)
   }
@@ -164,8 +171,8 @@ class D extends o.default.Store {
     return null != e && (t = E.getCachedMessageIdsForChannel(e)), null != t ? t : h
   }
 }
-D.displayName = "ReferencedMessageStore";
-var N = new D(d.default, {
+N.displayName = "ReferencedMessageStore";
+var O = new N(d.default, {
   CACHE_LOADED: function(e) {
     let {
       messages: t
@@ -175,20 +182,16 @@ var N = new D(d.default, {
   LOCAL_MESSAGES_LOADED: T,
   LOAD_MESSAGES_SUCCESS: T,
   LOAD_MESSAGES_AROUND_SUCCESS: T,
-  SEARCH_FINISH: function(e) {
-    let {
-      messages: t
-    } = e;
-    return y(t, e => y(e, e => p(e)))
-  },
+  SEARCH_FINISH: C,
+  MOD_VIEW_SEARCH_FINISH: C,
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       data: t
     } = e, n = (0, l.getMessagesFromGuildFeedFetch)(t);
     return y(n, e => p(e))
   },
-  LOAD_THREADS_SUCCESS: A,
-  LOAD_ARCHIVED_THREADS_SUCCESS: A,
+  LOAD_THREADS_SUCCESS: D,
+  LOAD_ARCHIVED_THREADS_SUCCESS: D,
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
     let {
       messageId: t,
@@ -236,14 +239,14 @@ var N = new D(d.default, {
       id: t,
       channelId: n
     } = e;
-    return I(n, t)
+    return S(n, t)
   },
   MESSAGE_DELETE_BULK: function(e) {
     let {
       ids: t,
       channelId: n
     } = e;
-    return y(t, e => I(n, e))
+    return y(t, e => S(n, e))
   },
   CREATE_PENDING_REPLY: function(e) {
     let {
@@ -254,12 +257,12 @@ var N = new D(d.default, {
       message: t
     })
   },
-  CHANNEL_DELETE: C,
-  THREAD_DELETE: C,
+  CHANNEL_DELETE: I,
+  THREAD_DELETE: I,
   GUILD_DELETE: function() {
     let e = E.retainWhere(e => null != _.default.getChannel(e));
     if (0 === e) return !1
   },
-  CONNECTION_OPEN: S,
-  LOGOUT: S
+  CONNECTION_OPEN: A,
+  LOGOUT: A
 })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return I
   }
 }), n("222007");
 var i = n("917351"),
@@ -78,7 +78,17 @@ function C(e) {
   } = e;
   t.forEach(N)
 }
-class O extends a.default.Store {
+
+function O(e) {
+  let {
+    messages: t,
+    threads: n
+  } = e;
+  for (let e of t)
+    for (let t of e) N(t.thread);
+  n.forEach(N)
+}
+class R extends a.default.Store {
   initialize() {
     this.waitFor(_.default, f.default)
   }
@@ -98,8 +108,8 @@ class O extends a.default.Store {
     return m
   }
 }
-O.displayName = "ThreadMessageStore";
-var R = new O(s.default, {
+R.displayName = "ThreadMessageStore";
+var I = new R(s.default, {
   CONNECTION_OPEN: function(e) {
     A = {}, g.clear(), e.guilds.forEach(S)
   },
@@ -149,15 +159,8 @@ var R = new O(s.default, {
   },
   LOAD_THREADS_SUCCESS: C,
   LOAD_ARCHIVED_THREADS_SUCCESS: C,
-  SEARCH_FINISH: function(e) {
-    let {
-      messages: t,
-      threads: n
-    } = e;
-    for (let e of t)
-      for (let t of e) N(t.thread);
-    n.forEach(N)
-  },
+  SEARCH_FINISH: O,
+  MOD_VIEW_SEARCH_FINISH: O,
   THREAD_DELETE: function(e) {
     let {
       channel: t

@@ -106,7 +106,7 @@ var I = l.memo(function(e) {
         children: g.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE
       }), (0, a.jsxs)(u.Clickable, {
         className: C.viewAllPermissions,
-        onClick: () => null == n ? void 0 : n(E.ModViewPanel.PERMISSIONS),
+        onClick: () => n(E.ModViewPanel.PERMISSIONS),
         children: [(0, a.jsx)(u.Text, {
           variant: "eyebrow",
           color: "interactive-normal",

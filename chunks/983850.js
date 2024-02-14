@@ -374,6 +374,7 @@ class q extends d.default {
       MESSAGE_UPDATE: G,
       LOGOUT: N,
       SEARCH_FINISH: B,
+      MOD_VIEW_SEARCH_FINISH: B,
       CHANNEL_SELECT: j,
       LOAD_PINNED_MESSAGES_SUCCESS: B,
       USER_SETTINGS_PROTO_UPDATE: K,

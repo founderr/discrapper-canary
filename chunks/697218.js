@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return C
   },
   default: function() {
-    return x
+    return F
   }
 }), n("222007"), n("702976"), n("808653"), n("581081"), n("424973");
 var i = n("917351"),
@@ -125,13 +125,22 @@ function O(e) {
 
 function D(e) {
   let {
+    messages: t
+  } = e;
+  return t.forEach(e => O({
+    messages: e
+  })), !1
+}
+
+function y(e) {
+  let {
     firstMessages: t,
     owners: n
   } = e;
   null != t && t.forEach(e => A(e, !0)), null != n && n.forEach(e => C(e.user, !0))
 }
 
-function y(e) {
+function P(e) {
   let {
     message: t
   } = e;
@@ -141,17 +150,17 @@ function y(e) {
   }
   return !1
 }
-let P = ["username", "avatar", "global_name", "discriminator", "bot"];
+let L = ["username", "avatar", "global_name", "discriminator", "bot"];
 
-function L(e) {
+function b(e) {
   return C(e.user)
 }
 
-function b(e) {
+function M(e) {
   return !!e.isMember && C(e.user)
 }
 
-function M(e) {
+function U(e) {
   let t = C(e.user),
     n = _[e.user.id];
   if (null == n) return t;
@@ -162,7 +171,7 @@ function M(e) {
   return T(n, r, i) || t
 }
 
-function U(e) {
+function G(e) {
   let {
     users: t
   } = e;
@@ -171,11 +180,11 @@ function U(e) {
   })
 }
 
-function G(e) {
+function w(e) {
   return C(e.member.user)
 }
 
-function w(e) {
+function k(e) {
   let {
     request: t
   } = e, {
@@ -184,7 +193,7 @@ function w(e) {
   } = t, r = !1;
   return null != n && (r = r || C(n)), null != i && (r = r || C(i)), r
 }
-class k extends r.default.Store {
+class x extends r.default.Store {
   initialize() {
     this.waitFor(E.default)
   }
@@ -221,8 +230,8 @@ class k extends r.default.Store {
     return _[E.default.getId()]
   }
 }
-k.displayName = "UserStore";
-var x = new k(s.default, {
+x.displayName = "UserStore";
+var F = new x(s.default, {
   CONNECTION_OPEN: function(e) {
     let {
       user: t,
@@ -291,7 +300,7 @@ var x = new k(s.default, {
     return t.map(e => {
       let t = _[e.user.id];
       if (null == t) return !1;
-      let n = P.reduce((n, r) => {
+      let n = L.reduce((n, r) => {
         if (e.user.hasOwnProperty(r)) {
           let s = t.set((0, i.camelCase)(r), e.user[r]);
           n = n || s !== t, t = s
@@ -301,14 +310,8 @@ var x = new k(s.default, {
       return !!n && (_[t.id] = t, n)
     }).some(e => e)
   },
-  SEARCH_FINISH: function(e) {
-    let {
-      messages: t
-    } = e;
-    return t.forEach(e => O({
-      messages: e
-    })), !1
-  },
+  SEARCH_FINISH: D,
+  MOD_VIEW_SEARCH_FINISH: D,
   LOAD_MESSAGES_SUCCESS: O,
   LOAD_MESSAGES_AROUND_SUCCESS: O,
   LOAD_PINNED_MESSAGES_SUCCESS: O,
@@ -319,8 +322,8 @@ var x = new k(s.default, {
     } = e;
     return null == t || t.forEach(e => A(e, !1)), !1
   },
-  MESSAGE_CREATE: y,
-  MESSAGE_UPDATE: y,
+  MESSAGE_CREATE: P,
+  MESSAGE_UPDATE: P,
   GUILD_SETTINGS_LOADED_BANS: function(e) {
     let {
       bans: t
@@ -359,14 +362,14 @@ var x = new k(s.default, {
       null != l && T(l, t.id, o)
     })
   },
-  GUILD_BAN_ADD: L,
-  GUILD_BAN_REMOVE: L,
-  CHANNEL_RECIPIENT_ADD: b,
-  CHANNEL_RECIPIENT_REMOVE: b,
-  GUILD_JOIN_REQUEST_CREATE: w,
-  GUILD_JOIN_REQUEST_UPDATE: w,
-  GUILD_MEMBER_ADD: M,
-  GUILD_MEMBER_UPDATE: M,
+  GUILD_BAN_ADD: b,
+  GUILD_BAN_REMOVE: b,
+  CHANNEL_RECIPIENT_ADD: M,
+  CHANNEL_RECIPIENT_REMOVE: M,
+  GUILD_JOIN_REQUEST_CREATE: k,
+  GUILD_JOIN_REQUEST_UPDATE: k,
+  GUILD_MEMBER_ADD: U,
+  GUILD_MEMBER_UPDATE: U,
   GUILD_MEMBERS_CHUNK: function(e) {
     let {
       members: t,
@@ -434,16 +437,16 @@ var x = new k(s.default, {
     } = e;
     return t.reduce((e, t) => C(t.suggested_user) || e, !1)
   },
-  AUDIT_LOG_FETCH_SUCCESS: U,
-  AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: U,
+  AUDIT_LOG_FETCH_SUCCESS: G,
+  AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: G,
   LOBBY_CREATE: function(e) {
     let {
       lobby: t
     } = e;
     return t.members.reduce((e, t) => C(t.user) || e, !1)
   },
-  LOBBY_MEMBER_CONNECT: G,
-  LOBBY_MEMBER_UPDATE: G,
+  LOBBY_MEMBER_CONNECT: w,
+  LOBBY_MEMBER_UPDATE: w,
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
     let {
       giftCode: t
@@ -467,8 +470,8 @@ var x = new k(s.default, {
     } = e;
     (0, o.getMessagesFromGuildFeedFetch)(t).forEach(e => A(e, !0))
   },
-  LOAD_THREADS_SUCCESS: D,
-  LOAD_ARCHIVED_THREADS_SUCCESS: D,
+  LOAD_THREADS_SUCCESS: y,
+  LOAD_ARCHIVED_THREADS_SUCCESS: y,
   LOAD_FORUM_POSTS: function(e) {
     let {
       threads: t

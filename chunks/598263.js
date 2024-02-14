@@ -35,9 +35,10 @@ function N(e) {
     location: A,
     className: M,
     onNavigate: R
-  } = e, j = l.useRef(null), L = (0, o.default)([p.default], () => p.default.getGuildSidebarState(N), [N]), O = l.useRef(0), [y, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), {
-    messageHistoryState: b
-  } = (0, C.useServerActivityForUser)(s, N, y), D = (0, o.default)([S.default], () => S.default.getUser(s), [s]), U = (0, o.default)([E.default], () => E.default.getMember(N, s), [N, s]), w = (0, I.useProfileThemedPanelBackground)(s, N);
+  } = e, j = l.useRef(null), L = (0, o.default)([p.default], () => p.default.getGuildSidebarState(N), [N]), O = l.useRef(0), [y, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), b = (0, C.useServerMessageHistoryForUser)(s, N, {
+    addtionalQuery: y,
+    shouldDispatch: !0
+  }), D = (0, o.default)([S.default], () => S.default.getUser(s), [s]), U = (0, o.default)([E.default], () => E.default.getMember(N, s), [N, s]), w = (0, I.useProfileThemedPanelBackground)(s, N);
   l.useLayoutEffect(() => {
     let e = null == L ? void 0 : L.details.scrollOffset;
     if (null != e) {

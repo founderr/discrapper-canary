@@ -333,6 +333,7 @@ var Q = new X(o.default, {
   LOAD_THREADS_SUCCESS: A,
   LOAD_ARCHIVED_THREADS_SUCCESS: A,
   SEARCH_FINISH: A,
+  MOD_VIEW_SEARCH_FINISH: A,
   GUILD_CREATE: function(e) {
     let {
       guild: t

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return ei
+    return er
   }
 }), n("222007"), n("581081"), n("70102");
 var i = n("917351"),
@@ -185,18 +185,34 @@ function $(e) {
 }
 
 function ee(e) {
+  let {
+    messages: t,
+    threads: n,
+    channels: i
+  } = e;
+  for (let e of t)
+    for (let t of e) et(t.thread);
+  n.forEach(et), null == i || i.forEach(e => {
+    let t = (0, S.createChannelRecordFromServer)(e),
+      n = null != B(e.id),
+      i = null != U[e.id];
+    t.isPrivate() && (!n || i) ? U[t.id] = t : !n && H(t)
+  })
+}
+
+function et(e) {
   null != e && !(e.id in D) && S.ALL_CHANNEL_TYPES.has(e.type) && Y((0, S.createChannelRecordFromServer)(e))
 }
 
-function et() {
+function en() {
   for (let e in b = {}, h.default.getFavoriteChannels()) {
     let t = h.default.getCategoryRecord(e);
     null != t && (b[e] = t)
   }
 }
-class en extends o.default.Store {
+class ei extends o.default.Store {
   initialize() {
-    this.waitFor(f.default, g.default, T.default, h.default), this.syncWith([h.default], et)
+    this.waitFor(f.default, g.default, T.default, h.default), this.syncWith([h.default], en)
   }
   hasChannel(e) {
     return null != V(e)
@@ -256,8 +272,8 @@ class en extends o.default.Store {
     }
   }
 }
-en.displayName = "ChannelStore";
-var ei = new en(l.default, {
+ei.displayName = "ChannelStore";
+var er = new ei(l.default, {
   BACKGROUND_SYNC: function(e) {
     let {
       guilds: t
@@ -310,7 +326,7 @@ var ei = new en(l.default, {
   CONNECTION_OPEN: function(e) {
     let t = R;
     for (let n of (y = {}, A = {}, R = {}, D = {}, L = {}, U = {}, M = new Set, O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(j), e.guilds)) "partial" === n.dataMode && r.forEach(t[n.id], W), K(n);
-    et()
+    en()
   },
   GUILD_CREATE: function(e) {
     K(e.guild)
@@ -333,21 +349,8 @@ var ei = new en(l.default, {
     z()
   },
   OVERLAY_INITIALIZE: q,
-  SEARCH_FINISH: function(e) {
-    let {
-      messages: t,
-      threads: n,
-      channels: i
-    } = e;
-    for (let e of t)
-      for (let t of e) ee(t.thread);
-    n.forEach(ee), null == i || i.forEach(e => {
-      let t = (0, S.createChannelRecordFromServer)(e),
-        n = null != B(e.id),
-        i = null != U[e.id];
-      t.isPrivate() && (!n || i) ? U[t.id] = t : !n && H(t)
-    })
-  },
+  SEARCH_FINISH: ee,
+  MOD_VIEW_SEARCH_FINISH: ee,
   THREAD_CREATE: X,
   THREAD_DELETE: J,
   THREAD_LIST_SYNC: function(e) {

@@ -25,7 +25,8 @@ function d(e) {
     name: n,
     icon: l,
     onNavigate: d,
-    className: c
+    className: c,
+    missingNavIcon: f
   } = e;
   return (0, a.jsxs)(r.Clickable, {
     onClick: d,
@@ -45,6 +46,9 @@ function d(e) {
         width: u,
         height: u
       })
+    }), null == d && null != f && (0, a.jsx)("div", {
+      className: s(o.modInfoItemActionIcon),
+      children: f
     })]
   })
 }

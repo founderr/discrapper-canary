@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return A
   }
 }), n("222007");
 var i = n("917351"),
@@ -46,17 +46,26 @@ function h(e) {
   let {
     threads: t
   } = e;
-  t.forEach(E)
+  t.forEach(g)
 }
 
 function E(e) {
+  let t = !1;
+  for (let n of e.messages)
+    for (let e of n) t = g(e.thread) || t;
+  return e.threads.forEach(e => {
+    t = g(e) || t
+  }), t
+}
+
+function g(e) {
   if (null != e && !(e.id in o)) {
     let t = d.default.getChannel(e.id);
     if (null != t) return _(t), !0
   }
   return !1
 }
-class g extends a.default.Store {
+class m extends a.default.Store {
   initialize() {
     this.waitFor(d.default)
   }
@@ -72,8 +81,8 @@ class g extends a.default.Store {
     return o
   }
 }
-g.displayName = "ThreadMembersStore";
-var m = new g(s.default, {
+m.displayName = "ThreadMembersStore";
+var A = new m(s.default, {
   CONNECTION_OPEN: function(e) {
     o = {}, e.guilds.forEach(c)
   },
@@ -118,14 +127,8 @@ var m = new g(s.default, {
     if (null == t) return !1;
     null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), t.memberCount = e.memberCount
   },
-  SEARCH_FINISH: function(e) {
-    let t = !1;
-    for (let n of e.messages)
-      for (let e of n) t = E(e.thread) || t;
-    return e.threads.forEach(e => {
-      t = E(e) || t
-    }), t
-  },
+  SEARCH_FINISH: E,
+  MOD_VIEW_SEARCH_FINISH: E,
   LOAD_THREADS_SUCCESS: h,
   LOAD_ARCHIVED_THREADS_SUCCESS: h,
   THREAD_DELETE: function(e) {
@@ -136,14 +139,14 @@ var m = new g(s.default, {
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let t = !1;
-    for (let n of e.messages) t = E(n.thread) || t;
+    for (let n of e.messages) t = g(n.thread) || t;
     return t
   },
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       data: t
     } = e, n = !1;
-    for (let e of (0, r.getThreadsFromGuildFeedFetch)(t)) n = E(e) || n;
+    for (let e of (0, r.getThreadsFromGuildFeedFetch)(t)) n = g(e) || n;
     return n
   }
 })

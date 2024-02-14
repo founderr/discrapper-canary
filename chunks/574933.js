@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return c
   }
 }), n("808653");
 var s = n("446674"),
@@ -15,10 +15,16 @@ function u(e) {
   return "".concat(e.channel_id, ":").concat(e.id)
 }
 
-function l() {
+function l(e) {
+  return !!(0, a.isEligibleForExplicitMediaRedaction)() && null != e.messages && (d = e.messages.reduce((e, t) => (t.forEach(t => {
+    e[u(t)] = (0, r.createMessageRecord)(t)
+  }), e), {}), !0)
+}
+
+function f() {
   d = {}
 }
-class f extends s.default.Store {
+class _ extends s.default.Store {
   getMessage(e, t) {
     return d[u({
       id: e,
@@ -26,13 +32,10 @@ class f extends s.default.Store {
     })]
   }
 }
-f.displayName = "SearchMessageStore";
-var _ = new f(i.default, {
-  SEARCH_FINISH: function(e) {
-    return !!(0, a.isEligibleForExplicitMediaRedaction)() && null != e.messages && (d = e.messages.reduce((e, t) => (t.forEach(t => {
-      e[u(t)] = (0, r.createMessageRecord)(t)
-    }), e), {}), !0)
-  },
+_.displayName = "SearchMessageStore";
+var c = new _(i.default, {
+  SEARCH_FINISH: l,
+  MOD_VIEW_SEARCH_FINISH: l,
   MESSAGE_UPDATE: function(e) {
     let {
       message: t

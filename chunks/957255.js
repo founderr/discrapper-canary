@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return W
+    return K
   }
 }), n("222007");
 var i = n("917351"),
@@ -103,6 +103,14 @@ function x() {
 
 function F(e) {
   let {
+    messages: t,
+    threads: n
+  } = e;
+  return !!(n.length > 0) || t.some(e => e.some(e => null != e.thread))
+}
+
+function V(e) {
+  let {
     guildId: t
   } = e;
   delete N[t];
@@ -112,7 +120,7 @@ function F(e) {
   }), y += 1, M(t)
 }
 
-function V(e) {
+function B(e) {
   let {
     instance: t
   } = e, n = T.default.getChannel(t.channel_id);
@@ -126,7 +134,7 @@ function V(e) {
   O[n.id] = r, y += 1
 }
 
-function B(e) {
+function H(e) {
   let {
     guildId: t
   } = e;
@@ -137,12 +145,12 @@ function B(e) {
   }), y += 1, M(t)
 }
 
-function H(e, t, n, i) {
+function j(e, t, n, i) {
   let r = m.default.NONE;
   if (e instanceof p.ChannelRecordBase) {
     if (p.THREAD_CHANNEL_TYPES.has(e.type)) {
       let r = T.default.getChannel(e.parent_id);
-      return null == r ? m.default.NONE : m.default.applyThreadPermissions(e, H(r, t, n, i), f.default.hasJoined(e.id))
+      return null == r ? m.default.NONE : m.default.applyThreadPermissions(e, j(r, t, n, i), f.default.hasJoined(e.id))
     }
     r = b(e.id)
   } else e instanceof h.default && (r = P(e.id));
@@ -155,7 +163,7 @@ function H(e, t, n, i) {
     excludeGuildPermissions: i
   }) : r
 }
-class j extends a.default.Store {
+class Y extends a.default.Store {
   initialize() {
     this.waitFor(v.default, C.default, T.default, I.default, g.default, f.default, d.default, u.default)
   }
@@ -195,17 +203,17 @@ class j extends a.default.Store {
     return "channelId" in t && "string" == typeof t.channelId ? this.can(e, T.default.getChannel(t.channelId)) : "guildId" in t && "string" == typeof t.guildId && this.can(e, C.default.getGuild(t.guildId))
   }
   can(e, t, n, i, r) {
-    let a = H(t, n, i, r);
+    let a = j(t, n, i, r);
     return s.default.has(a, e)
   }
   canBasicChannel(e, t, n, i, r) {
-    return "basicPermissions" in t ? S.default.has(t.basicPermissions, e) : s.default.has(H(t, n, i, r), S.default.asBigFlag(e))
+    return "basicPermissions" in t ? S.default.has(t.basicPermissions, e) : s.default.has(j(t, n, i, r), S.default.asBigFlag(e))
   }
   computePermissions(e, t, n, i) {
-    return H(e, t, n, i)
+    return j(e, t, n, i)
   }
   computeBasicPermissions(e) {
-    return "basicPermissions" in e ? e.basicPermissions : S.default.asBasicFlag(H(e))
+    return "basicPermissions" in e ? e.basicPermissions : S.default.asBasicFlag(j(e))
   }
   canManageUser(e, t, n) {
     let i = t instanceof _.default ? t.id : t;
@@ -240,18 +248,18 @@ class j extends a.default.Store {
   }
 }
 
-function Y() {
+function W() {
   O = {}, N = {}, D = {}, y = 0
 }
-j.displayName = "PermissionStore";
-var W = new j(o.default, {
+Y.displayName = "PermissionStore";
+var K = new Y(o.default, {
   BACKGROUND_SYNC: G,
   CONNECTION_OPEN: G,
   OVERLAY_INITIALIZE: G,
   CACHE_LOADED: G,
   CACHE_LOADED_LAZY: G,
   CONNECTION_CLOSED: function() {
-    Y()
+    W()
   },
   GUILD_CREATE: w,
   GUILD_UPDATE: w,
@@ -304,13 +312,8 @@ var W = new j(o.default, {
     } = e;
     return t.some(e => null != e.thread)
   },
-  SEARCH_FINISH: function(e) {
-    let {
-      messages: t,
-      threads: n
-    } = e;
-    return !!(n.length > 0) || t.some(e => e.some(e => null != e.thread))
-  },
+  SEARCH_FINISH: F,
+  MOD_VIEW_SEARCH_FINISH: F,
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       data: t
@@ -330,13 +333,13 @@ var W = new j(o.default, {
     } = e;
     return delete O[t.id], y += 1, M(t.guild_id), !1
   },
-  GUILD_ROLE_CREATE: F,
-  GUILD_ROLE_UPDATE: F,
-  GUILD_ROLE_DELETE: F,
-  LOGOUT: Y,
-  STAGE_INSTANCE_CREATE: V,
-  STAGE_INSTANCE_UPDATE: V,
-  STAGE_INSTANCE_DELETE: V,
-  IMPERSONATE_UPDATE: B,
-  IMPERSONATE_STOP: B
+  GUILD_ROLE_CREATE: V,
+  GUILD_ROLE_UPDATE: V,
+  GUILD_ROLE_DELETE: V,
+  LOGOUT: W,
+  STAGE_INSTANCE_CREATE: B,
+  STAGE_INSTANCE_UPDATE: B,
+  STAGE_INSTANCE_DELETE: B,
+  IMPERSONATE_UPDATE: H,
+  IMPERSONATE_STOP: H
 })
