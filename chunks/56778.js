@@ -98,7 +98,10 @@ class R extends l.PureComponent {
     let n = E.default.getQuery(this.props.searchId);
     JSON.stringify(n) !== JSON.stringify(this.state.searchQuery) && this.setState({
       searchQuery: n,
-      searchMode: v.SearchModes.NEWEST
+      searchMode: (null == n ? void 0 : n.sort_by) != null && null != n.sort_order ? f.searchQueryParamsToSearchMode({
+        sort_by: n.sort_by,
+        sort_order: n.sort_order
+      }) : v.SearchModes.NEWEST
     })
   }
   render() {
