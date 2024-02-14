@@ -1,17 +1,17 @@
-    "use strict";
+"use strict";
 
-    function e() {
-      return r.el("225629").then(r.bind(r, "225629"))
-    }
-    async function o(t, n, r, o, u) {
-      let i = await e();
-      return i.crop_gif(t, n, r, o, u)
-    }
-    r.r(n), r.d(n, {
-      default: function() {
-        return e
-      },
-      wasmCropGIF: function() {
-        return o
-      }
-    })
+function i() {
+  return n.el("225629").then(n.bind(n, "225629"))
+}
+async function r(t, e, n, r, a) {
+  let s = await i();
+  return s.crop_gif(t, e, n, r, a)
+}
+n.r(e), n.d(e, {
+  default: function() {
+    return i
+  },
+  wasmCropGIF: function() {
+    return r
+  }
+})

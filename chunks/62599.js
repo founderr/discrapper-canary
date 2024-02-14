@@ -9,12 +9,9 @@ e.exports = {
   familyCenterPendingBadge: "familyCenterPendingBadge_ac950c",
   hideGameUpdateProgressIndicator: "hideGameUpdateProgressIndicator_b4115e",
   localizeBadge: "localizeBadge_be6a3a",
-  marketingBadgeTooltipContent: "marketingBadgeTooltipContent__720d9",
-  newBadgeTooltip: "newBadgeTooltip_e29756",
   privateChannels: "privateChannels__93473",
   searchBar: "searchBar_e4ea2a",
   searchBarComponent: "searchBarComponent__22760",
-  shopSparkle: "shopSparkle_c8751f",
   tabBadge: "tabBadge__002b3",
   themedHeaderMobile: "themedHeaderMobile_d96dbb",
   themedSearchBarMobile: "themedSearchBarMobile__06312"
