@@ -20,10 +20,10 @@ var a = s("37983"),
   m = s("477774");
 
 function _(e, t) {
-  return e.map(e => {
-    let s = "object" == typeof t ? t[e + 1] : E.default.getExperimentBucketName(e);
+  return e.map((e, s) => {
+    let a = "object" == typeof t ? t[s] : E.default.getExperimentBucketName(e);
     return {
-      label: s,
+      label: a,
       value: e
     }
   })
