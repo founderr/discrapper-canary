@@ -16469,6 +16469,11 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
     flex-direction: column
 }
 
+.replyHeader__46dc1 {
+    margin-bottom: 8px;
+    text-transform: uppercase
+}
+
 .replyInput__0bc23 {
     background: var(--input-background)
 }
