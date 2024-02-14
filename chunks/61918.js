@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return Z
+    return X
   }
 }), n("222007"), n("808653");
 var a = n("37983"),
@@ -21,28 +21,29 @@ var a = n("37983"),
   S = n("888503"),
   g = n("206230"),
   C = n("716241"),
-  _ = n("95039"),
-  I = n("405645"),
-  T = n("12896"),
-  v = n("506885"),
-  x = n("981601"),
-  N = n("19766"),
-  A = n("305961"),
-  M = n("191542"),
-  R = n("697218"),
-  j = n("476765"),
-  L = n("826684"),
-  y = n("483093"),
-  O = n("659500"),
-  P = n("449008"),
-  b = n("158998"),
-  D = n("50885"),
-  U = n("49111"),
-  w = n("782340"),
-  F = n("559571");
-let k = D.default.getEnableHardwareAcceleration(),
-  V = 44 + S.AVATAR_DECORATION_PADDING,
-  B = {
+  _ = n("86097"),
+  I = n("95039"),
+  T = n("405645"),
+  v = n("12896"),
+  x = n("506885"),
+  N = n("981601"),
+  A = n("19766"),
+  M = n("305961"),
+  R = n("191542"),
+  j = n("697218"),
+  L = n("476765"),
+  y = n("826684"),
+  O = n("483093"),
+  P = n("659500"),
+  b = n("449008"),
+  D = n("158998"),
+  U = n("50885"),
+  w = n("49111"),
+  F = n("782340"),
+  k = n("559571");
+let V = U.default.getEnableHardwareAcceleration(),
+  B = 44 + S.AVATAR_DECORATION_PADDING,
+  H = {
     origin: {
       x: 38,
       y: 11
@@ -54,7 +55,7 @@ let k = D.default.getEnableHardwareAcceleration(),
       y: 0
     }
   };
-class H extends l.Component {
+class G extends l.Component {
   shouldComponentUpdate(e) {
     return !(0, f.default)(this.props, e, ["channelId"])
   }
@@ -77,7 +78,7 @@ class H extends l.Component {
       ...g
     } = this.props, C = null != E ? new Date(E) : null;
     return (0, a.jsx)(h.Popout, {
-      preload: () => (0, v.default)(s.id, s.getAvatarURL(f, 80), {
+      preload: () => (0, x.default)(s.id, s.getAvatarURL(f, 80), {
         guildId: f,
         channelId: c.id
       }),
@@ -90,9 +91,9 @@ class H extends l.Component {
           isShown: E
         } = h;
         return (0, a.jsx)(S.default, {
-          className: F.member,
+          className: k.member,
           onContextMenu: this.renderUserContextMenu,
-          shouldAnimateStatus: k,
+          shouldAnimateStatus: V,
           user: s,
           currentUser: i,
           nick: l,
@@ -133,10 +134,10 @@ class H extends l.Component {
       let {
         user: e,
         channel: t
-      } = this.props, n = "@".concat(b.default.getUserTag(e, {
+      } = this.props, n = "@".concat(D.default.getUserTag(e, {
         decoration: "never"
       })), a = "<@".concat(e.id, ">");
-      O.ComponentDispatch.dispatchToLastSubscribed(U.ComponentActions.INSERT_TEXT, {
+      P.ComponentDispatch.dispatchToLastSubscribed(w.ComponentActions.INSERT_TEXT, {
         plainText: n,
         rawText: a
       }), E.default.startTyping(t.id)
@@ -144,28 +145,28 @@ class H extends l.Component {
       let {
         guildId: t
       } = this.props;
-      null != t && (e.stopPropagation(), (0, _.openGuildBoostingMarketingModal)({
+      null != t && (e.stopPropagation(), (0, I.openGuildBoostingMarketingModal)({
         guildId: t,
         location: {
-          section: U.AnalyticsSections.MEMBER_LIST,
-          object: U.AnalyticsObjects.BOOST_GEM_ICON
+          section: w.AnalyticsSections.MEMBER_LIST,
+          object: w.AnalyticsObjects.BOOST_GEM_ICON
         }
       }))
-    }, this.renderUserPopout = e => (0, a.jsx)(x.default, {
+    }, this.renderUserPopout = e => (0, a.jsx)(N.default, {
       ...e,
       userId: this.props.user.id,
       guildId: this.props.guildId,
       channelId: this.props.channel.id,
       analyticsParams: {
         location: {
-          page: U.AnalyticsPages.GUILD_CHANNEL,
-          section: U.AnalyticsSections.MEMBER_LIST
+          page: w.AnalyticsPages.GUILD_CHANNEL,
+          section: w.AnalyticsSections.MEMBER_LIST
         }
       }
     })
   }
 }
-let G = l.memo(e => {
+let W = l.memo(e => {
     let {
       colorRoleId: t,
       ...n
@@ -173,11 +174,11 @@ let G = l.memo(e => {
       channel: l,
       user: s,
       index: i
-    } = e, r = (0, u.useListItem)("".concat(i)), o = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(l.id, s.id)), d = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), f = (0, c.useStateFromStores)([A.default], () => {
+    } = e, r = (0, u.useListItem)("".concat(i)), o = (0, c.useStateFromStores)([R.default], () => R.default.isTyping(l.id, s.id)), d = (0, c.useStateFromStores)([j.default], () => j.default.getCurrentUser()), f = (0, c.useStateFromStores)([M.default], () => {
       var e, n;
-      return null != t ? null === (n = A.default.getGuild(l.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(t)) || void 0 === e ? void 0 : e.name : void 0
+      return null != t ? null === (n = M.default.getGuild(l.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(t)) || void 0 === e ? void 0 : e.name : void 0
     }, [l, t]);
-    return (0, a.jsx)(H, {
+    return (0, a.jsx)(G, {
       ...n,
       ...r,
       isTyping: o,
@@ -185,40 +186,40 @@ let G = l.memo(e => {
       colorRoleName: f
     })
   }),
-  W = l.memo(function(e) {
+  Y = l.memo(function(e) {
     let {
       id: t,
       title: n,
       count: l,
       guildId: s
-    } = e, i = (0, I.useRoleIcon)({
+    } = e, i = (0, T.useRoleIcon)({
       roleId: t,
       guildId: s,
       size: 16
     });
-    return t === U.StatusTypes.UNKNOWN ? (0, a.jsx)("div", {
-      className: F.membersGroup,
+    return t === w.StatusTypes.UNKNOWN ? (0, a.jsx)("div", {
+      className: k.membersGroup,
       children: (0, a.jsx)("div", {
-        className: F.memberGroupsPlaceholder
+        className: k.memberGroupsPlaceholder
       })
-    }) : (0, a.jsxs)(L.default, {
-      className: F.membersGroup,
+    }) : (0, a.jsxs)(y.default, {
+      className: k.membersGroup,
       children: [(0, a.jsx)(h.HiddenVisually, {
-        children: w.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+        children: F.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
           title: n,
           count: l
         })
       }), (0, a.jsxs)("span", {
         "aria-hidden": !0,
-        children: [null != i ? (0, a.jsx)(y.default, {
-          className: F.roleIcon,
+        children: [null != i ? (0, a.jsx)(O.default, {
+          className: k.roleIcon,
           ...i
         }) : null, n, " — ", l]
       })]
     })
   });
 
-function Y(e) {
+function z(e) {
   let {
     index: t
   } = e, n = (0, u.useListItem)("".concat(t));
@@ -226,12 +227,12 @@ function Y(e) {
     itemProps: n
   })
 }
-class z extends l.Component {
+class K extends l.Component {
   shouldComponentUpdate(e) {
     return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length
   }
   componentDidMount() {
-    this.updateSubscription(), this.trackMemberListViewed()
+    this.updateSubscription(), this.trackMemberListViewed(), this._areActivitiesExperimentallyHidden = (0, _.isMemberListActivityHidden)("ChannelMembers")
   }
   componentDidUpdate(e) {
     e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed()
@@ -246,10 +247,10 @@ class z extends l.Component {
     let {
       offsetHeight: t,
       scrollTop: n
-    } = e.getScrollerState(), a = Math.floor(t / V);
+    } = e.getScrollerState(), a = Math.floor(t / B);
     return {
       height: t,
-      rowHeight: V,
+      rowHeight: B,
       rowsVisible: a,
       y: n
     }
@@ -261,15 +262,15 @@ class z extends l.Component {
       channel: n
     } = this.props;
     return (0, a.jsx)(h.FocusJumpSection, {
-      children: l => (0, a.jsx)(j.UID, {
+      children: l => (0, a.jsx)(L.UID, {
         children: s => (0, a.jsx)("aside", {
-          className: i(F.membersWrap, F.hiddenMembers),
+          className: i(k.membersWrap, k.hiddenMembers),
           "aria-labelledby": s,
           children: (0, a.jsx)(h.HeadingLevel, {
             component: (0, a.jsx)(h.HiddenVisually, {
               children: (0, a.jsx)(h.H, {
                 id: s,
-                children: w.default.Messages.MEMBERS_LIST_LANDMARK_LABEL.format({
+                children: F.default.Messages.MEMBERS_LIST_LANDMARK_LABEL.format({
                   channel: n.name
                 })
               })
@@ -283,17 +284,17 @@ class z extends l.Component {
                 } = n;
                 return (0, a.jsx)(h.List, {
                   innerRole: r,
-                  innerAriaLabel: w.default.Messages.MEMBERS,
+                  innerAriaLabel: F.default.Messages.MEMBERS,
                   ref: e => {
                     var t;
                     this._list = e, this.props.listRef.current = e, s.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
                   },
-                  className: i(F.members, {
-                    [F.fullWidth]: d.isMobile
+                  className: i(k.members, {
+                    [k.fullWidth]: d.isMobile
                   }),
                   paddingTop: 0,
                   sectionHeight: 40,
-                  rowHeight: V,
+                  rowHeight: B,
                   renderSection: this.renderSection,
                   renderRow: this.renderRow,
                   sections: e.map(e => e.count),
@@ -311,7 +312,7 @@ class z extends l.Component {
     })
   }
   constructor(...e) {
-    super(...e), this._list = null, this.setList = e => {
+    super(...e), this._list = null, this._areActivitiesExperimentallyHidden = !1, this.setList = e => {
       this._list = e, this.props.listRef.current = e
     }, this.renderSection = e => {
       let {
@@ -320,15 +321,15 @@ class z extends l.Component {
         groups: n,
         channel: s
       } = this.props, i = n[t];
-      return 0 === t ? (0, a.jsx)(T.default, {
+      return 0 === t ? (0, a.jsx)(v.default, {
         tutorialId: "whos-online",
         position: "left",
-        inlineSpecs: B,
-        children: (0, a.jsx)(W, {
+        inlineSpecs: H,
+        children: (0, a.jsx)(Y, {
           ...i,
           guildId: s.guild_id
         })
-      }, "section-".concat(t)) : (0, l.createElement)(W, {
+      }, "section-".concat(t)) : (0, l.createElement)(Y, {
         ...i,
         key: "section-".concat(t),
         guildId: s.guild_id
@@ -351,7 +352,7 @@ class z extends l.Component {
       } = e, {
         channel: s
       } = this.props, i = this.getRowProps(e);
-      if (null == i || i.type !== N.MemberListRowTypes.MEMBER || !("user" in i)) return (0, a.jsx)(Y, {
+      if (null == i || i.type !== A.MemberListRowTypes.MEMBER || !("user" in i)) return (0, a.jsx)(z, {
         index: l
       }, "placeholder-".concat(t, ":").concat(n));
       {
@@ -367,14 +368,14 @@ class z extends l.Component {
           applicationStream: f,
           premiumSince: h
         } = i;
-        return (0, a.jsx)(G, {
+        return (0, a.jsx)(W, {
           colorString: e,
           colorRoleId: t,
           user: n,
           status: r,
           isOwner: o,
           nick: d,
-          activities: c,
+          activities: this._areActivitiesExperimentallyHidden ? [] : c,
           applicationStream: f,
           channel: s,
           guildId: s.guild_id,
@@ -410,27 +411,27 @@ class z extends l.Component {
           rowsVisible: n
         } = this.getDimensions();
       if (void 0 === n || 0 === n || null == t) return;
-      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(P.isNotNullish);
+      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(b.isNotNullish);
       if (0 === a.length) return;
-      let l = a.reduce((e, t) => t.type !== N.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === U.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
+      let l = a.reduce((e, t) => t.type !== A.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === w.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
         num_users_visible: 0,
         num_users_visible_with_mobile_indicator: 0,
         num_users_visible_with_game_activity: 0,
         num_users_visible_with_activity: 0,
         num_users_visible_with_avatar_decoration: 0
       });
-      this.lastReportedAnalyticsChannel = this.props.channel.id, C.default.trackWithMetadata(U.AnalyticEvents.MEMBER_LIST_VIEWED, {
+      this.lastReportedAnalyticsChannel = this.props.channel.id, C.default.trackWithMetadata(w.AnalyticEvents.MEMBER_LIST_VIEWED, {
         ...l
       })
     }
   }
 }
 
-function K(e) {
+function Z(e) {
   let {
     channel: t,
     className: n
-  } = e, s = (0, c.useStateFromStores)([g.default], () => g.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([N.default], () => N.default.getProps(t.guild_id, t.id)), {
+  } = e, s = (0, c.useStateFromStores)([g.default], () => g.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([A.default], () => A.default.getProps(t.guild_id, t.id)), {
     rows: o,
     groups: d
   } = r, f = l.useRef(null), h = l.useCallback((e, t) => {
@@ -438,7 +439,7 @@ function K(e) {
     if (null == n) return;
     let a = parseInt(t, 10),
       [l, s] = n.getSectionRowFromIndex(a),
-      i = 0 === l && 0 === s ? V : 0;
+      i = 0 === l && 0 === s ? B : 0;
     n.scrollToIndex({
       section: l,
       row: s,
@@ -474,10 +475,10 @@ function K(e) {
     scrollToEnd: p
   });
   return (0, a.jsx)("div", {
-    className: i(F.container, n),
+    className: i(k.container, n),
     children: (0, a.jsx)(u.ListNavigatorProvider, {
       navigator: E,
-      children: (0, a.jsx)(z, {
+      children: (0, a.jsx)(K, {
         ...e,
         ...r,
         groups: d,
@@ -488,12 +489,12 @@ function K(e) {
   })
 }
 
-function Z(e) {
+function X(e) {
   let {
     channel: t,
     className: n
   } = e, s = l.useDeferredValue(t);
-  return l.useMemo(() => (0, a.jsx)(K, {
+  return l.useMemo(() => (0, a.jsx)(Z, {
     channel: s,
     className: n
   }), [s, n])
