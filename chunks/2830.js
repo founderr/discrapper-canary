@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("664336"),
   j = n("68148"),
   L = n("980423"),
-  O = n("191145"),
-  y = n("598785"),
+  y = n("191145"),
+  O = n("598785"),
   P = n("226735"),
   b = n("340513"),
   D = n("99795"),
@@ -45,7 +45,7 @@ function k(e) {
   let {
     channelId: t,
     guildId: n
-  } = e, l = Date.now(), s = (0, u.useStateFromStores)([M.default, O.default], () => o(M.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, S.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
+  } = e, l = Date.now(), s = (0, u.useStateFromStores)([M.default, y.default], () => o(M.default.getSpeakers()).map(e => y.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, S.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
   return 0 === s.length ? null : (0, a.jsx)(a.Fragment, {
     children: s.map((e, t) => (0, a.jsx)(d.Tooltip, {
       position: "bottom",
@@ -79,11 +79,11 @@ function V(e) {
     voiceParticipantsHidden: M,
     selectedParticipant: j,
     userParticipantCount: w
-  } = (0, u.useStateFromStoresObject)([O.default], () => ({
-    selectedParticipant: O.default.getSelectedParticipant(S),
-    voiceParticipantsHidden: O.default.getVoiceParticipantsHidden(S),
-    userParticipantCount: O.default.getUserParticipantCount(S)
-  }), [S]), V = (0, y.default)(n), {
+  } = (0, u.useStateFromStoresObject)([y.default], () => ({
+    selectedParticipant: y.default.getSelectedParticipant(S),
+    voiceParticipantsHidden: y.default.getVoiceParticipantsHidden(S),
+    userParticipantCount: y.default.getUserParticipantCount(S)
+  }), [S]), V = (0, O.default)(n), {
     preventIdle: B,
     allowIdle: H
   } = (0, C.usePreventIdle)("popup"), G = [];

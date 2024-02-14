@@ -7,8 +7,8 @@ E.r(_), E.d(_, {
 var t, o = E("917351"),
   n = E.n(o),
   a = E("95410"),
-  r = E("689988"),
-  i = E("139321"),
+  i = E("689988"),
+  r = E("139321"),
   I = E("269596"),
   T = E("945956"),
   s = E("200521");
@@ -19,7 +19,7 @@ let S = {
   N = {
     [s.FeedbackType.VOICE]: {
       ...S,
-      hotspot: i.HotspotLocations.VOICE_CALL_FEEDBACK,
+      hotspot: r.HotspotLocations.VOICE_CALL_FEEDBACK,
       storageKey: "lastVoiceFeedback",
       eligibilityChecks: [function(e) {
         let _ = T.default.getWasEverRtcConnected();
@@ -28,24 +28,24 @@ let S = {
     },
     [s.FeedbackType.STREAM]: {
       ...S,
-      hotspot: i.HotspotLocations.REPORT_PROBLEM_POST_STREAM,
+      hotspot: r.HotspotLocations.REPORT_PROBLEM_POST_STREAM,
       storageKey: "lastStreamFeedback"
     },
     [s.FeedbackType.VIDEO_BACKGROUND]: {
       ...S,
-      hotspot: i.HotspotLocations.VIDEO_BACKGROUND_FEEDBACK,
+      hotspot: r.HotspotLocations.VIDEO_BACKGROUND_FEEDBACK,
       storageKey: "lastVideoBackgroundFeedback"
     },
     [s.FeedbackType.ACTIVITY]: {
       cooldown: 0,
       chance: .5,
-      hotspot: i.HotspotLocations.POST_ACTIVITY_FEEDBACK,
+      hotspot: r.HotspotLocations.POST_ACTIVITY_FEEDBACK,
       storageKey: "lastActivityFeedback"
     },
     [s.FeedbackType.IN_APP_REPORTS]: {
       cooldown: 1728e5,
       chance: .5,
-      hotspot: i.HotspotLocations.IN_APP_REPORTS_FEEDBACK,
+      hotspot: r.HotspotLocations.IN_APP_REPORTS_FEEDBACK,
       storageKey: "inAppReportsFeedback"
     }
   };
@@ -65,7 +65,7 @@ function R(e) {
   }
   return !0
 }
-t = class extends r.default {
+t = class extends i.default {
   possiblyShowFeedbackModal(e, _) {
     (function(e) {
       var _;

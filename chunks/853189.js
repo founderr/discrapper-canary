@@ -32,18 +32,18 @@ var a = n("37983"),
   R = n("664336"),
   j = n("58608"),
   L = n("659500"),
-  O = n("701909"),
-  y = n("49111"),
+  y = n("701909"),
+  O = n("49111"),
   P = n("994428"),
   b = n("353927"),
   D = n("782340"),
   U = n("319373");
 class w extends l.PureComponent {
   componentDidMount() {
-    L.ComponentDispatch.subscribe(y.ComponentActions.CALL_START, this.handleVoiceClick)
+    L.ComponentDispatch.subscribe(O.ComponentActions.CALL_START, this.handleVoiceClick)
   }
   componentWillUnmount() {
-    L.ComponentDispatch.unsubscribe(y.ComponentActions.CALL_START, this.handleVoiceClick)
+    L.ComponentDispatch.unsubscribe(O.ComponentActions.CALL_START, this.handleVoiceClick)
   }
   renderVideoCallButton() {
     let e, t;
@@ -55,11 +55,11 @@ class w extends l.PureComponent {
       channel: o,
       mode: u
     } = this.props;
-    if (n || l && u === y.ChannelModes.VOICE) return null;
+    if (n || l && u === O.ChannelModes.VOICE) return null;
     let d = o.isManaged(),
       c = null,
       f = !1;
-    return T.default.supports(b.Features.VIDEO) ? i ? (c = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : l && u === y.ChannelModes.VIDEO ? (t = this.handleJoinVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.START_VIDEO_CALL) : (f = !0, t = this.handleBrowserNotSupported, c = D.default.Messages.BROWSER_NOT_SUPPORTED), (0, a.jsx)(R.default.Icon, {
+    return T.default.supports(b.Features.VIDEO) ? i ? (c = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : l && u === O.ChannelModes.VIDEO ? (t = this.handleJoinVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.START_VIDEO_CALL) : (f = !0, t = this.handleBrowserNotSupported, c = D.default.Messages.BROWSER_NOT_SUPPORTED), (0, a.jsx)(R.default.Icon, {
       icon: M.default,
       onClick: t,
       disabled: f || s,
@@ -130,7 +130,7 @@ class w extends l.PureComponent {
                   color: "always-white",
                   children: D.default.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
                 }), (0, a.jsx)(r.Anchor, {
-                  href: O.default.getArticleURL(y.HelpdeskArticles.ACTIVITIES),
+                  href: y.default.getArticleURL(O.HelpdeskArticles.ACTIVITIES),
                   children: D.default.Messages.LEARN_MORE
                 })]
               }),
@@ -199,14 +199,14 @@ function F(e) {
     notFriend: g,
     isBlocked: C
   } = (0, s.useStateFromStoresObject)([v.default], () => ({
-    notFriend: t.type === y.ChannelTypes.DM && null != S && !v.default.isFriend(S),
-    isBlocked: t.type === y.ChannelTypes.DM && null != S && v.default.isBlocked(S)
+    notFriend: t.type === O.ChannelTypes.DM && null != S && !v.default.isFriend(S),
+    isBlocked: t.type === O.ChannelTypes.DM && null != S && v.default.isBlocked(S)
   })), T = (0, s.useStateFromStores)([x.default], () => x.default.getUser(S)), A = (0, d.useAppContext)(), M = [], R = (0, f.default)(t.id), j = (0, s.useStateFromStores)([I.default], () => I.default.hasLayers());
   R && !j && M.push(i.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP);
-  let [L, O] = l.useState(!1);
+  let [L, y] = l.useState(!1);
   return (l.useEffect(() => {
     let e = setTimeout(() => {
-      O(!0)
+      y(!0)
     }, 250);
     return () => clearTimeout(e)
   }, []), n || (null == T ? void 0 : T.bot)) ? null : (0, a.jsx)(w, {

@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return a
   },
   useIsEligibleForQuests: function() {
-    return r
+    return i
   }
 });
 var t = E("619935"),
@@ -45,7 +45,7 @@ let n = (0, o.createExperiment)({
     });
     return o.enabled && !a.paymentsBlocked
   },
-  r = e => {
+  i = e => {
     let {
       location: _,
       autoTrackExposure: E

@@ -41,8 +41,8 @@ function R(e) {
     animatedDivClass: R
   } = e, j = (0, d.useStateFromStores)([h.default], () => h.default.getCurrentUser(), []), {
     onActivityItemSelected: L,
-    imageBackground: O,
-    activityAction: y,
+    imageBackground: y,
+    activityAction: O,
     labelType: P
   } = (0, C.default)({
     channel: n,
@@ -86,7 +86,7 @@ function R(e) {
       })
     })
   }), [a.activity, F, j]), B = i.useMemo(() => {
-    switch (y) {
+    switch (O) {
       case C.ActivityAction.JOIN:
         return (0, s.jsx)("div", {
           className: N.activityAction,
@@ -115,7 +115,7 @@ function R(e) {
       default:
         return (0, s.jsx)(s.Fragment, {})
     }
-  }, [y]);
+  }, [O]);
   return (0, s.jsx)(f.Button, {
     onClick: L,
     color: "transparent",
@@ -148,7 +148,7 @@ function R(e) {
           },
           children: (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(_.default, {
-              imageBackground: O,
+              imageBackground: y,
               applicationName: a.application.name,
               imageClassName: N.activitySuggestionImage,
               imageNotFoundClassName: N.brokenImageIconWrapper

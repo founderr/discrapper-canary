@@ -1,14 +1,14 @@
 "use strict";
 E.r(_), E.d(_, {
   ActionLogger: function() {
-    return r
+    return i
   }
 }), E("424973"), E("222007"), E("70102");
 var t = E("44170"),
   o = E("811022"),
   n = E("279295");
 let a = new o.default("Flux");
-class r extends t.EventEmitter {
+class i extends t.EventEmitter {
   log(e, _) {
     let E = new I(e);
     E.startTime = n.performance.now();
@@ -19,11 +19,11 @@ class r extends t.EventEmitter {
             name: _,
             time: -1
           },
-          r = n.performance.now();
+          i = n.performance.now();
         try {
           o = t()
         } finally {
-          a.time = n.performance.now() - r, this.persist && E.traces.push(a), this.emit("trace", e.type, _, a.time)
+          a.time = n.performance.now() - i, this.persist && E.traces.push(a), this.emit("trace", e.type, _, a.time)
         }
         return o
       })
@@ -43,15 +43,15 @@ class r extends t.EventEmitter {
         for (let e of _.traces) o.push([e.name, _.name, e.time]);
     o.sort((e, _) => _[2] - e[2]), o.length > t && (o.length = t);
     let n = 0,
-      r = 0,
-      i = o.map(_ => {
+      i = 0,
+      r = o.map(_ => {
         let [E, t, o] = _, a = "".concat(E);
         return null == e && (a += "<".concat(t, ">")), n = Math.max(a.length, n), [a, o]
       }).map(e => {
         let [_, E] = e;
-        return r += E, "".concat(_.padEnd(n + 1, " "), " - ").concat(E, "ms")
+        return i += E, "".concat(_.padEnd(n + 1, " "), " - ").concat(E, "ms")
       }).join("\n");
-    return 0 === o.length || o[0][2] < 10 || r < 20 ? o : (a.log("Using Hermes:", void 0 !== (null === (_ = E.g) || void 0 === _ ? void 0 : _.HermesInternal)), a.log("".concat(null != e ? "\n\n=== ".concat(e, " ===") : "", "\n").concat(i, "\n")), a.log("Total Time: ".concat(r, "ms")), o)
+    return 0 === o.length || o[0][2] < 10 || i < 20 ? o : (a.log("Using Hermes:", void 0 !== (null === (_ = E.g) || void 0 === _ ? void 0 : _.HermesInternal)), a.log("".concat(null != e ? "\n\n=== ".concat(e, " ===") : "", "\n").concat(r, "\n")), a.log("Total Time: ".concat(i, "ms")), o)
   }
   getLastActionMetrics(e) {
     var _;
@@ -61,16 +61,16 @@ class r extends t.EventEmitter {
       for (let _ of e.traces) o[_.name] = [_.name, e.name, _.time];
     let n = Object.values(o);
     n.sort((e, _) => _[2] - e[2]), n.length > t && (n.length = t);
-    let r = 0,
-      i = 0,
+    let i = 0,
+      r = 0,
       I = n.map(e => {
         let [_, E, t] = e;
-        return r = Math.max(_.length, r), [_, t]
+        return i = Math.max(_.length, i), [_, t]
       }).map(e => {
         let [_, E] = e;
-        return i += E, "".concat(_.padEnd(r + 1, " "), " - ").concat(E, "ms")
+        return r += E, "".concat(_.padEnd(i + 1, " "), " - ").concat(E, "ms")
       }).join("\n");
-    return 0 === n.length || i < 8 ? n : (a.log("\nUsing Hermes: ".concat(void 0 !== (null === (_ = E.g) || void 0 === _ ? void 0 : _.HermesInternal)), "\n\n=== ".concat(e, " ===\n").concat(I), "\nTotal Time: ".concat(i, "ms\n\n")), n)
+    return 0 === n.length || r < 8 ? n : (a.log("\nUsing Hermes: ".concat(void 0 !== (null === (_ = E.g) || void 0 === _ ? void 0 : _.HermesInternal)), "\n\n=== ".concat(e, " ===\n").concat(I), "\nTotal Time: ".concat(r, "ms\n\n")), n)
   }
   constructor({
     persist: e = !1
@@ -78,7 +78,7 @@ class r extends t.EventEmitter {
     super(), this.logs = [], this.persist = e
   }
 }
-let i = 0;
+let r = 0;
 class I {
   get name() {
     return this.action.type
@@ -93,6 +93,6 @@ class I {
     }
   }
   constructor(e) {
-    this.startTime = 0, this.totalTime = 0, this.traces = [], this.id = i++, this.action = e, this.createdAt = new Date
+    this.startTime = 0, this.totalTime = 0, this.traces = [], this.id = r++, this.action = e, this.createdAt = new Date
   }
 }

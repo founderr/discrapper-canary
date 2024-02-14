@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("91761"),
   j = n("441821"),
   L = n("766914"),
-  O = n("478272"),
-  y = n("954016"),
+  y = n("478272"),
+  O = n("954016"),
   P = n("49111"),
   b = n("782340"),
   D = n("73687"),
@@ -68,7 +68,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
     } = N.ExperimentBirthdayGoodbye.useExperiment({
       location: "8009ca_4"
     }), {
-      enableKrunkerStrikeMiniShelfBanner: J
+      enableKrunkerStrikeMiniShelfBanner: Q
     } = M.ExperimentKrunkerStrikeMiniShelfBanner.useExperiment({
       location: "activties_mini_shelf"
     }, {
@@ -79,7 +79,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
       location: "activties_mini_shelf"
     }, {
       autoTrackExposure: !0
-    }), Q = (0, u.useStateFromStores)([S.default], () => S.default.getState().theme), $ = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
+    }), J = (0, u.useStateFromStores)([S.default], () => S.default.getState().theme), $ = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
       id: ee,
       guild_id: et
     } = n;
@@ -118,7 +118,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
     }, []);
     let ed = l.useCallback(() => {
         var e;
-        (0, O.default)({
+        (0, y.default)({
           channel: n,
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
           locationObject: eo.location,
@@ -164,17 +164,17 @@ let H = "vc-activities-".concat((0, o.v4)()),
         to: P.Routes.ACTIVITIES,
         children: [(0, a.jsx)("img", {
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
-          src: "light" === Q ? U : w,
+          src: "light" === J ? U : w,
           className: D.poster
         }), (0, a.jsx)("div", {
           className: D.posterDivider
         })]
-      }) : J ? (0, a.jsxs)(d.Clickable, {
+      }) : Q ? (0, a.jsxs)(d.Clickable, {
         className: i(D.clickableBanner, {
           [D.clickableBannerReducedMotion]: $
         }),
         onClick: () => {
-          Y(), o(), (0, E.transitionTo)(P.Routes.ACTIVITY_DETAILS(y.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, es)
+          Y(), o(), (0, E.transitionTo)(P.Routes.ACTIVITY_DETAILS(O.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, es)
         },
         children: [(0, a.jsx)("img", {
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT,
@@ -188,7 +188,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
           [D.clickableBannerReducedMotion]: $
         }),
         onClick: () => {
-          Y(), o(), (0, E.transitionTo)(P.Routes.ACTIVITY_DETAILS(y.COLONIST_APPLICATION_ID), void 0, void 0, es)
+          Y(), o(), (0, E.transitionTo)(P.Routes.ACTIVITY_DETAILS(O.COLONIST_APPLICATION_ID), void 0, void 0, es)
         },
         children: [(0, a.jsx)("img", {
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_COLONIST_POSTER_ALT,

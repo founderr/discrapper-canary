@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return r
+    return i
   }
 });
 var t = E("37983");
@@ -10,7 +10,7 @@ var o = E("404828"),
   n = E.n(o),
   a = E("77078");
 
-function r(e) {
+function i(e) {
   return e.paragraph = {
     ...e.paragraph,
     react: function(e, _, E) {

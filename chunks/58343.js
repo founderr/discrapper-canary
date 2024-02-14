@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("712234"),
   j = n("305961"),
   L = n("957255"),
-  O = n("18494"),
-  y = n("773336"),
+  y = n("18494"),
+  O = n("773336"),
   P = n("439932"),
   b = n("50885"),
   D = n("716214"),
@@ -51,9 +51,9 @@ var a = n("37983"),
   K = n("96151"),
   Z = n("49111"),
   X = n("99795"),
-  J = n("782340"),
+  Q = n("782340"),
   q = n("716208");
-let Q = "HasBeenInStageChannel",
+let J = "HasBeenInStageChannel",
   $ = (e, t) => () => {
     let n = e.getGuildId();
     null != n && null != t && (0, _.transitionToGuild)(n, t), g.openChannelCallPopout(e)
@@ -73,7 +73,7 @@ function en(e) {
     popoutWindow: i,
     popoutWindowAlwaysOnTop: r,
     selectedParticipant: u
-  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([O.default], () => O.default.getMostRecentSelectedTextChannelId(d), [d]), f = M.default.getId(), h = (0, o.useStateFromStores)([m.default], () => m.default.isFullscreenInContext(n)), E = !h && (!y.isPlatformEmbedded || y.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS)), S = null != u && u.type !== X.ParticipantTypes.ACTIVITY && u.user.id !== f, g = l.useMemo(() => {
+  } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([y.default], () => y.default.getMostRecentSelectedTextChannelId(d), [d]), f = M.default.getId(), h = (0, o.useStateFromStores)([m.default], () => m.default.isFullscreenInContext(n)), E = !h && (!O.isPlatformEmbedded || O.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS)), S = null != u && u.type !== X.ParticipantTypes.ACTIVITY && u.user.id !== f, g = l.useMemo(() => {
     var e;
     return null !== (e = null == i ? void 0 : i.window) && void 0 !== e ? e : window
   }, [i]), C = (0, z.default)({
@@ -82,7 +82,7 @@ function en(e) {
     popoutOpen: s,
     popoutWindow: i,
     currentWindow: g
-  }), _ = n === Z.AppContext.POPOUT && y.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS);
+  }), _ = n === Z.AppContext.POPOUT && O.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS);
   return (0, a.jsxs)(a.Fragment, {
     children: [S ? (0, a.jsx)(A.default, {
       context: (0, p.default)(u.type),
@@ -125,7 +125,7 @@ function el(e) {
       chatOpen: p
     } = e,
     S = (0, h.useAppContext)(),
-    g = (0, o.useStateFromStores)([O.default], () => O.default.getVoiceChannelId() === n.id, [n.id]),
+    g = (0, o.useStateFromStores)([y.default], () => y.default.getVoiceChannelId() === n.id, [n.id]),
     C = (0, o.useStateFromStores)([L.default], () => L.default.can(Z.Permissions.CONNECT, n)),
     _ = (0, U.useStageParticipants)(n.id, w.StageChannelParticipantNamedIndex.SPEAKER),
     I = (0, o.useStateFromStores)([m.default], () => m.default.getSelectedParticipant(n.id)),
@@ -136,8 +136,8 @@ function el(e) {
     } = (0, k.default)();
   (0, k.useUpdateIsOnStartStageScreenEffect)(n);
   let j = (0, o.useStateFromStores)([R.default], () => R.default.getToastsEnabled(n.id)),
-    y = (0, K.default)(n),
-    P = y ? null != I ? "84px" : "124px" : null != I ? "0px" : "48px";
+    O = (0, K.default)(n),
+    P = O ? null != I ? "84px" : "124px" : null != I ? "0px" : "48px";
   return t = M ? (0, a.jsx)(Y.default, {
     channel: n,
     onContinueClick: () => {
@@ -197,7 +197,7 @@ function el(e) {
     onAllowIdle: () => {},
     onForceIdle: () => {},
     screenMessage: x ? {
-      mainText: J.default.Messages.POPOUT_PLAYER_OPENED
+      mainText: Q.default.Messages.POPOUT_PLAYER_OPENED
     } : null,
     idle: !1,
     children: !x && t
@@ -217,14 +217,14 @@ function es(e) {
     popoutWindowAlwaysOnTop: C.default.getIsAlwaysOnTop(Z.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
   })), _ = null != p && !p.closed, I = (0, h.useAppContext)(), T = (0, o.useStateFromStores)([m.default], () => m.default.getChatOpen(t.id), [t.id]), v = (0, o.useStateFromStores)([j.default], () => j.default.getGuild(t.guild_id), [t.guild_id]);
   l.useEffect(() => {
-    null == u.default.get(Q) && ((0, d.openModalLazy)(async () => {
+    null == u.default.get(J) && ((0, d.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("108838").then(n.bind(n, "108838"));
       return t => (0, a.jsx)(e, {
         ...t
       })
-    }), u.default.set(Q, Date.now()))
+    }), u.default.set(J, Date.now()))
   }, []);
   let {
     width: x = 0,

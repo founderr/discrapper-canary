@@ -19,14 +19,14 @@ function f(e) {
     stream: t,
     width: n,
     noArt: f = !1,
-    selected: h = !1
-  } = e, p = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(t.channelId));
+    selected: E = !1
+  } = e, S = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(t.channelId));
   return r.useEffect(() => {
-    (null == p ? void 0 : p.isGuildStageVoice()) && (0, i.closeStream)((0, l.encodeStreamKey)(t), !1)
+    (null == S ? void 0 : S.isGuildStageVoice()) && (0, i.closeStream)((0, l.encodeStreamKey)(t), !1)
   }, []), (0, a.jsx)(o.default, {
     artURL: c,
     noArt: f,
-    selected: h,
+    selected: E,
     size: (0, o.getSizeForWidth)(n),
     header: d.default.Messages.STREAM_ENDED,
     onCTAClick: () => (0, i.closeStream)((0, l.encodeStreamKey)(t)),

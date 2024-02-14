@@ -11,14 +11,14 @@ var t = E("689988"),
   o = E("809810"),
   n = E("599110"),
   a = E("533686"),
-  r = E("62355"),
-  i = E("49111");
+  i = E("62355"),
+  r = E("49111");
 let I = "interaction_iframe_modal";
 async function T(e) {
   let {
     openInteractionModal: _
   } = await E.el("394816").then(E.bind(E, "394816"));
-  _(e), n.default.track(i.AnalyticEvents.OPEN_MODAL, {
+  _(e), n.default.track(r.AnalyticEvents.OPEN_MODAL, {
     type: "interaction_modal",
     application_id: e.application.id
   })
@@ -31,7 +31,7 @@ class s extends t.default {
       },
       INTERACTION_IFRAME_MODAL_CREATE: e => {
         var _;
-        this.iframeModalOpenTimeMs = Date.now(), _ = e, (0, r.default)(_), n.default.track(i.AnalyticEvents.OPEN_MODAL, {
+        this.iframeModalOpenTimeMs = Date.now(), _ = e, (0, i.default)(_), n.default.track(r.AnalyticEvents.OPEN_MODAL, {
           type: I,
           application_id: _.application.id
         })
@@ -39,7 +39,7 @@ class s extends t.default {
       INTERACTION_IFRAME_MODAL_CLOSE: e => {
         ! function(e, _) {
           let E = null != _ ? Date.now() - _ : void 0;
-          n.default.track(i.AnalyticEvents.MODAL_DISMISSED, {
+          n.default.track(r.AnalyticEvents.MODAL_DISMISSED, {
             type: I,
             application_id: e.applicationId,
             duration_open_ms: E

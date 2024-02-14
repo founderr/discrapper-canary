@@ -7,8 +7,8 @@ E.r(_), E.d(_, {
 var t, o = E("773364"),
   n = E("913144"),
   a = E("689988"),
-  r = E("49671"),
-  i = E("374014"),
+  i = E("49671"),
+  r = E("374014"),
   I = E("103979"),
   T = E("271938"),
   s = E("42887"),
@@ -36,7 +36,7 @@ t = class extends a.default {
     if (_ === o.MediaEngineContextTypes.STREAM && null != t) {
       let {
         ownerId: e
-      } = (0, i.decodeStreamKey)(t);
+      } = (0, r.decodeStreamKey)(t);
       if (e !== n) return;
       let _ = N.default.getRTCConnection(t);
       if (null == _) return;
@@ -57,7 +57,7 @@ t = class extends a.default {
       guildId: t
     } = e;
     this.maybeShowClipsWarning(_), this.applyUserVoiceRecording(_);
-    let o = N.default.getRTCConnection(i.encodeStreamKey({
+    let o = N.default.getRTCConnection(r.encodeStreamKey({
       streamType: null != t ? c.StreamTypes.GUILD : c.StreamTypes.CALL,
       ownerId: _,
       channelId: E,
@@ -105,7 +105,7 @@ t = class extends a.default {
       guildId: n
     } = e;
     if (E !== o.MediaEngineContextTypes.STREAM || !(0, u.default)(s.default)) return;
-    let a = N.default.getRTCConnection(i.encodeStreamKey({
+    let a = N.default.getRTCConnection(r.encodeStreamKey({
       streamType: null != n ? c.StreamTypes.GUILD : c.StreamTypes.CALL,
       ownerId: _,
       channelId: t,
@@ -115,7 +115,7 @@ t = class extends a.default {
   }
   async classifyHardwareAndTrack() {
     try {
-      let e = await r.default.processUtils.getSystemInfo(),
+      let e = await i.default.processUtils.getSystemInfo(),
         _ = this.classifyHardware(e);
       return O.default.track(D.AnalyticEvents.CLIPS_HARDWARE_CLASSIFICATION, {
         classification: _,

@@ -8,8 +8,8 @@ var t = E("689988"),
   o = E("191152"),
   n = E("713810"),
   a = E("435123"),
-  r = E("558130"),
-  i = E("677315"),
+  i = E("558130"),
+  r = E("677315"),
   I = E("724210");
 class T extends t.default {
   handleChannelPreload(e) {
@@ -17,11 +17,11 @@ class T extends t.default {
       guildId: _,
       channelId: E
     } = e;
-    if (null == _ || E !== I.StaticChannelRoute.GUILD_HOME || !(0, i.canSeeGuildHome)(_)) return !1;
+    if (null == _ || E !== I.StaticChannelRoute.GUILD_HOME || !(0, r.canSeeGuildHome)(_)) return !1;
     (0, a.shouldFetchGuildFeed)(_, !1) && (0, n.fetchGuildFeed)({
       guildId: _,
       refresh: !0
-    }), r.default.shouldFetch(_) && (0, o.fetchActiveChannels)(_)
+    }), i.default.shouldFetch(_) && (0, o.fetchActiveChannels)(_)
   }
   constructor(...e) {
     super(...e), this.actions = {

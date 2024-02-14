@@ -48,12 +48,12 @@ let M = e => {
   R = e => {
     let {
       currentStatus: t
-    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = l.useState(null != t ? t : null), O = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), y = () => {
+    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = l.useState(null != t ? t : null), y = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), O = () => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
     }, P = (e, t) => {
-      e.stopPropagation(), (0, C.updateHangStatus)(t, !0), y()
+      e.stopPropagation(), (0, C.updateHangStatus)(t, !0), O()
     }, b = (e, t) => {
-      e.stopPropagation(), (0, C.updateCustomHangStatus)(t.status, t.emoji, !0), y()
+      e.stopPropagation(), (0, C.updateCustomHangStatus)(t.status, t.emoji, !0), O()
     }, D = l.useCallback(e => {
       e.stopPropagation(), (0, C.clearHangStatus)(!0)
     }, []), U = e => {
@@ -64,7 +64,7 @@ let M = e => {
         return t => (0, a.jsx)(e, {
           ...t
         })
-      }), y()
+      }), O()
     }, w = l.useCallback(e => {
       L({
         type: v.ActivityTypes.HANG_STATUS,
@@ -105,12 +105,12 @@ let M = e => {
             children: N.default.Messages.HANG_STATUS_HELP
           }), (0, a.jsxs)("div", {
             className: A.iconGroup,
-            children: [null != O && (0, a.jsxs)("div", {
+            children: [null != y && (0, a.jsxs)("div", {
               className: A.avatarWrapper,
               children: [(0, a.jsx)(c.Avatar, {
                 className: A.avatar,
                 size: c.AvatarSizes.SIZE_40,
-                src: (0, g.getUserAvatarURL)(O),
+                src: (0, g.getUserAvatarURL)(y),
                 "aria-hidden": !0
               }), (0, a.jsx)("div", {
                 className: A.outline

@@ -8,8 +8,8 @@ var t = E("913144"),
   o = E("987317"),
   n = E("689988"),
   a = E("393414"),
-  r = E("239380"),
-  i = E("42887"),
+  i = E("239380"),
+  r = E("42887"),
   I = E("18494"),
   T = E("162771"),
   s = E("49111");
@@ -18,7 +18,7 @@ class S extends n.default {
     let {
       guild: _
     } = e, E = I.default.getChannelId(s.ME), t = I.default.getVoiceChannelId();
-    _.id === E && (0, r.transitionToGuild)(_.id);
+    _.id === E && (0, i.transitionToGuild)(_.id);
     let n = _.id === t;
     n && !1 !== _.unavailable && null == t && o.default.selectVoiceChannel((0, I.findFirstVoiceChannelId)(_.id))
   }
@@ -29,7 +29,7 @@ class S extends n.default {
     if (_.type !== s.ChannelTypes.GROUP_DM) return;
     let E = _.originChannelId,
       t = I.default.getChannelId(s.NULL_STRING_GUILD_ID);
-    null == T.default.getGuildId() && null != E && E === t && (0, a.transitionTo)(s.Routes.CHANNEL(s.ME, _.id)), null != E && E === I.default.getVoiceChannelId() && o.default.selectVoiceChannel(_.id, i.default.isVideoEnabled())
+    null == T.default.getGuildId() && null != E && E === t && (0, a.transitionTo)(s.Routes.CHANNEL(s.ME, _.id)), null != E && E === I.default.getVoiceChannelId() && o.default.selectVoiceChannel(_.id, r.default.isVideoEnabled())
   }
   handleLogout() {
     t.default.dispatch({

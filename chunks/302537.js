@@ -8,8 +8,8 @@ var t = E("37983"),
   o = E("884691"),
   n = E("414456"),
   a = E.n(n),
-  r = E("703809"),
-  i = E("90915"),
+  i = E("703809"),
+  r = E("90915"),
   I = E("394846"),
   T = E("446674"),
   s = E("825573"),
@@ -42,7 +42,7 @@ var h = o.memo(function(e) {
   } = (0, O.default)(), P = o.createElement("style", {
     [O.CLIENT_THEMES_DATA_ATTRIBUTE]: !0
   }, h);
-  return (0, t.jsxs)(r.Helmet, {
+  return (0, t.jsxs)(i.Helmet, {
     children: [function(e) {
       let {
         locale: _,
@@ -51,7 +51,7 @@ var h = o.memo(function(e) {
         locale: R.default.locale,
         theme: l.default.theme
       })), n = (0, T.useStateFromStores)([L.default], () => L.default.isFocused(), []), {
-        reducedMotion: r,
+        reducedMotion: i,
         alwaysShowLinkDecorations: s
       } = o.useContext(S.AccessibilityPreferencesContext), {
         fontScale: O,
@@ -80,7 +80,7 @@ var h = o.memo(function(e) {
           useForcedColors: n,
           systemForcedColors: a
         }
-      }), p = (0, i.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
+      }), p = (0, r.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
       (0, c.default)(window, g);
       let y = (0, d.default)(window, __OVERLAY__ || n),
         B = (0, T.useStateFromStores)([A.default], () => A.default.sidebarWidth),
@@ -92,8 +92,8 @@ var h = o.memo(function(e) {
           overlay: __OVERLAY__,
           "mouse-mode": y,
           "keyboard-mode": U,
-          "reduce-motion": r.enabled,
-          "full-motion": !r.enabled,
+          "reduce-motion": i.enabled,
+          "full-motion": !i.enabled,
           "is-mobile": I.isMobile,
           "app-focused": n,
           "low-saturation": h <= S.LOW_SATURATION_THRESHOLD,

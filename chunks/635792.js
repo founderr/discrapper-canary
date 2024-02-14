@@ -34,8 +34,8 @@ var a = n("37983"),
       giftMessage: N,
       giftRecipient: A,
       ...M
-    } = e, R = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()), j = (0, r.useStateFromStores)([h.default], () => h.default.isFocused()), [L, O] = l.useState(!1), {
-      analyticsLocations: y
+    } = e, R = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()), j = (0, r.useStateFromStores)([h.default], () => h.default.isFocused()), [L, y] = l.useState(!1), {
+      analyticsLocations: O
     } = (0, u.default)();
     return (0, a.jsxs)(m.default, {
       pauseAnimation: !j || x,
@@ -52,7 +52,7 @@ var a = n("37983"),
         null == n || n(e), (0, d.default)({
           isGift: !0,
           subscriptionTier: t,
-          analyticsLocations: y,
+          analyticsLocations: O,
           analyticsObject: {
             object: E.AnalyticsObjects.BUTTON_CTA,
             objectType: E.AnalyticsObjectTypes.GIFT,
@@ -63,8 +63,8 @@ var a = n("37983"),
           giftRecipient: A
         })
       },
-      onMouseEnter: () => O(!0),
-      onMouseLeave: () => O(!1),
+      onMouseEnter: () => y(!0),
+      onMouseLeave: () => y(!1),
       ...M,
       children: [(0, a.jsx)("div", {
         className: i(g.gradientBackground, {

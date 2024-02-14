@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("957255"),
   j = n("585722"),
   L = n("476765"),
-  O = n("945330"),
-  y = n("745183"),
+  y = n("945330"),
+  O = n("745183"),
   P = n("959097"),
   b = n("664336"),
   D = n("378765"),
@@ -68,7 +68,7 @@ function Z(e) {
           draftType: A.DraftType.FirstThreadMessage
         }), (0, a.jsxs)(b.default, {
           toolbar: (0, a.jsx)(b.default.Icon, {
-            icon: O.default,
+            icon: y.default,
             tooltip: W.default.Messages.CLOSE,
             onClick: () => (0, B.closeAndClearThreadSidebar)(t)
           }),
@@ -206,7 +206,7 @@ function X(e) {
     privateThreadMode: I,
     textAreaState: g,
     location: s
-  }), R = (0, k.getIsPrivate)(m, I) ? y.default : P.default;
+  }), R = (0, k.getIsPrivate)(m, I) ? O.default : P.default;
   return (0, a.jsx)("div", {
     className: Y.chat,
     onMouseDown: f,
@@ -236,7 +236,7 @@ function X(e) {
                 threadSettings: m,
                 updateThreadSettings: E,
                 error: x
-              }), t.type === G.ChannelTypes.GUILD_TEXT ? (0, a.jsx)(J, {
+              }), t.type === G.ChannelTypes.GUILD_TEXT ? (0, a.jsx)(Q, {
                 startedFromMessage: null != n,
                 threadSettings: m,
                 updateThreadSettings: E,
@@ -249,7 +249,7 @@ function X(e) {
           })
         }), (0, a.jsxs)("div", {
           className: Y.submitContainer,
-          children: [(0, a.jsx)(Q, {
+          children: [(0, a.jsx)(J, {
             parentChannel: t,
             textAreaState: g,
             setTextAreaState: C,
@@ -265,7 +265,7 @@ function X(e) {
   })
 }
 
-function J(e) {
+function Q(e) {
   let {
     startedFromMessage: t,
     threadSettings: n,
@@ -340,7 +340,7 @@ function q(e) {
   })
 }
 
-function Q(e) {
+function J(e) {
   let {
     parentChannel: t,
     textAreaState: n,

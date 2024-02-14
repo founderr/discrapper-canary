@@ -38,18 +38,18 @@ var a = n("37983"),
       showParticipants: R = !0,
       paused: j = !1,
       width: L,
-      height: O,
-      idle: y,
+      height: y,
+      idle: O,
       mode: P,
       popoutWindow: b,
       awaitingRemoteSessionInfo: D
     } = e;
     l.useEffect(() => {
       c.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET)
-    }, [L, O]);
+    }, [L, y]);
     let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
     if ((null == D ? void 0 : D.channelId) === x.id) return (0, a.jsx)(h.default, {
-      height: O
+      height: y
     });
     if ((null == x ? void 0 : x.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
       channel: x,
@@ -92,8 +92,8 @@ var a = n("37983"),
       participants: t,
       popoutWindow: b,
       className: A,
-      idle: y,
-      height: O,
+      idle: O,
+      height: y,
       width: L,
       layout: _,
       inCall: M,

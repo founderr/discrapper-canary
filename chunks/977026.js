@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("981913"),
   j = n("785344"),
   L = n("116439"),
-  O = n("271938"),
-  y = n("42887"),
+  y = n("271938"),
+  O = n("42887"),
   P = n("957255"),
   b = n("18494"),
   D = n("697218"),
@@ -51,9 +51,9 @@ var a = n("37983"),
   K = n("619395"),
   Z = n("923510"),
   X = n("325861"),
-  J = n("834052"),
+  Q = n("834052"),
   q = n("819450"),
-  Q = n("111542"),
+  J = n("111542"),
   $ = n("924872"),
   ee = n("274438"),
   et = n("734019"),
@@ -139,9 +139,9 @@ function ef(e) {
     onSelect: n
   } = e, l = (0, d.useAppContext)(), {
     canManageGuildEvent: s
-  } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([J.default], () => J.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([S.default], () => S.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), {
+  } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([Q.default], () => Q.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([S.default], () => S.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), {
     suppress: h
-  } = (0, x.default)(t), m = O.default.getId(), [p] = (0, el.default)(t), E = X.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), C = s(c);
+  } = (0, x.default)(t), m = y.default.getId(), [p] = (0, el.default)(t), E = X.default.isModerator(m, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), C = s(c);
   return f ? (E || C) && null != u ? (0, a.jsx)(o.Popout, {
     renderPopout: e => {
       let {
@@ -282,7 +282,7 @@ function em(e) {
       height: 24,
       width: 24
     }),
-    onClick: () => (0, Q.updateStageMusicMuted)(!n)
+    onClick: () => (0, J.updateStageMusicMuted)(!n)
   }) : (0, a.jsx)(R.CenterControlButton, {
     isActive: s,
     className: er.buttonSpacing,
@@ -294,7 +294,7 @@ function em(e) {
       height: 24,
       width: 24
     }),
-    onClick: () => (0, Q.updateStageMusicShouldPlay)(!s)
+    onClick: () => (0, J.updateStageMusicShouldPlay)(!s)
   })
 }
 let ep = l.memo(function(e) {
@@ -310,8 +310,8 @@ let ep = l.memo(function(e) {
   } = (0, I.default)(), C = (0, v.default)(t), {
     limit: _,
     reachedLimit: R
-  } = (0, T.default)(t), O = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), P = (0, r.useStateFromStores)([y.default], () => (0, E.default)(y.default)), U = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, V = R && !F || null != w && w.user.id !== (null == O ? void 0 : O.id);
-  if (null == O) return null;
+  } = (0, T.default)(t), y = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, V = R && !F || null != w && w.user.id !== (null == y ? void 0 : y.id);
+  if (null == y) return null;
   let B = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.Popout, {
       renderPopout: e => {
@@ -348,7 +348,7 @@ let ep = l.memo(function(e) {
       }
     }), (0, a.jsx)(N.GoLiveButton, {
       channel: t,
-      currentUser: O,
+      currentUser: y,
       exitFullScreen: () => null,
       canGoLive: P,
       hasPermission: C,

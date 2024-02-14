@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("146350"),
   N = n("901582"),
   R = n("415929"),
-  O = n("687531"),
-  v = n("875212"),
+  v = n("687531"),
+  O = n("875212"),
   L = n("899633"),
   M = n("606292"),
   P = n("489740"),
@@ -81,8 +81,8 @@ var a = n("37983"),
   eA = n("837899"),
   eN = n("425190"),
   eR = n("474571"),
-  eO = n("272339"),
-  ev = n("200639"),
+  ev = n("272339"),
+  eO = n("200639"),
   eL = n("925877"),
   eM = n("849467"),
   eP = n("97347"),
@@ -672,15 +672,15 @@ function eQ() {
     Y = (0, r.useStateFromStores)([H.default], () => H.default.isCurrentQuestCompleted),
     W = (0, r.useStateFromStores)([H.default], () => H.default.currentDropQuestGameTitle),
     Q = (0, z.useIsHomeSelected)(),
-    $ = (0, O.useIsDmSpamFilterCoachmarkEnabled)(),
+    $ = (0, v.useIsDmSpamFilterCoachmarkEnabled)(),
     en = (0, ee.useCanSeeSafetyEducationBlockMuteCoachmark)(),
     ea = (0, R.useIsSafetyConsumerEducationBlockMuteBucket)(),
     es = (0, et.useCanSeeSafetyEducationReportingCoachmark)(),
     ei = "account";
-  (0, v.useTriggerDebuggingAA)({
+  (0, O.useTriggerDebuggingAA)({
     location: ei + " auto on",
     autoTrackExposure: !0
-  }), (0, v.useTriggerDebuggingAA)({
+  }), (0, O.useTriggerDebuggingAA)({
     location: ei + " auto off",
     autoTrackExposure: !1
   }), (0, ee.useSafetyEducationAATriggerPoint)();
@@ -814,7 +814,7 @@ function eJ(e) {
       color: null != s ? s : "currentColor"
     })
   } {
-    let e = t ? ev.default : eO.default;
+    let e = t ? eO.default : ev.default;
     return (0, a.jsx)(e, {
       width: 20,
       height: 20,

@@ -8,27 +8,27 @@ var t = E("913144"),
   o = E("689988"),
   n = E("271938"),
   a = E("366679"),
-  r = E("42203"),
-  i = E("18494"),
+  i = E("42203"),
+  r = E("18494"),
   I = E("123647"),
   T = E("49111");
 
 function s() {
   ! function() {
-    let e = i.default.getVoiceChannelId(),
+    let e = r.default.getVoiceChannelId(),
       _ = a.default.bitrate;
     if (null == e) return;
-    let E = r.default.getChannel(e);
+    let E = i.default.getChannel(e);
     if (null != E) _ !== E.bitrate && t.default.dispatch({
       type: "SET_CHANNEL_BITRATE",
       bitrate: E.bitrate
     })
   }(), ! function() {
     var e;
-    let _ = i.default.getVoiceChannelId(),
+    let _ = r.default.getVoiceChannelId(),
       E = I.default.mode;
     if (null == _) return;
-    let o = r.default.getChannel(_);
+    let o = i.default.getChannel(_);
     if (null == o) return;
     let n = null !== (e = o.videoQualityMode) && void 0 !== e ? e : T.VideoQualityMode.AUTO;
     E !== n && t.default.dispatch({
@@ -42,7 +42,7 @@ function S(e) {
   let {
     channels: _
   } = e;
-  for (let e of _) i.default.getVoiceChannelId() === e.id && s()
+  for (let e of _) r.default.getVoiceChannelId() === e.id && s()
 }
 
 function N(e) {

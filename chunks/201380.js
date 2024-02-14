@@ -38,8 +38,8 @@ var a = n("37983"),
   R = n("68148"),
   j = n("49111"),
   L = n("171644"),
-  O = n("706530"),
-  y = n("782340"),
+  y = n("706530"),
+  O = n("782340"),
   P = n("698964");
 
 function b(e) {
@@ -60,7 +60,7 @@ function D(e) {
   let {
     numAudience: t,
     collapsed: n
-  } = e, l = n ? t : y.default.Messages.LISTENING_COUNT.format({
+  } = e, l = n ? t : O.default.Messages.LISTENING_COUNT.format({
     count: t
   });
   return (0, a.jsxs)("div", {
@@ -158,7 +158,7 @@ class U extends l.PureComponent {
       } = this.props;
       if (!this.canWatchStream) return;
       let l = {
-        streamType: O.StreamTypes.GUILD,
+        streamType: y.StreamTypes.GUILD,
         ownerId: e.id,
         channelId: t.id,
         guildId: t.guild_id
@@ -253,7 +253,7 @@ class U extends l.PureComponent {
         hangStatusActivity: A,
         showHangStatus: M,
         isSelf: j,
-        application: O
+        application: y
       } = this.props, {
         userPopoutOpen: b,
         isHoveringHangStatus: D
@@ -289,13 +289,13 @@ class U extends l.PureComponent {
         hangStatusActivity: A,
         showHangStatus: M,
         isSelf: j,
-        application: O,
+        application: y,
         channelId: N.id
       };
       if (t) {
         var F;
         return (0, a.jsx)(o.Tooltip, {
-          text: null !== (F = (0, p.default)(n)) && void 0 !== F ? F : y.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+          text: null !== (F = (0, p.default)(n)) && void 0 !== F ? F : O.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
               onClick: t,

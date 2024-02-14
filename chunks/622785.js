@@ -8,8 +8,8 @@ var t = E("446674"),
   o = E("913144"),
   n = E("271938"),
   a = E("42203"),
-  r = E("42887"),
-  i = E("957255"),
+  i = E("42887"),
+  r = E("957255"),
   I = E("945956"),
   T = E("800762"),
   s = E("49111");
@@ -24,7 +24,7 @@ function O() {
     var E;
     let t = a.default.getChannel(_),
       o = T.default.getVoiceState(null == t ? void 0 : t.getGuildId(), n.default.getId());
-    e = r.default.getMode() !== s.InputModes.VOICE_ACTIVITY || null == t || t.isPrivate() || t.isGuildStageVoice() || i.default.can(s.Permissions.USE_VAD, t) || null == (E = o) || !!E.suppress || null != E.requestToSpeakTimestamp || !1
+    e = i.default.getMode() !== s.InputModes.VOICE_ACTIVITY || null == t || t.isPrivate() || t.isGuildStageVoice() || r.default.can(s.Permissions.USE_VAD, t) || null == (E = o) || !!E.suppress || null != E.requestToSpeakTimestamp || !1
   }
   if (S === e) return !1;
   N = e, S = e, o.default.dispatch({
@@ -34,7 +34,7 @@ function O() {
 }
 class A extends t.default.Store {
   initialize() {
-    this.waitFor(i.default, r.default, I.default, T.default)
+    this.waitFor(r.default, i.default, I.default, T.default)
   }
   shouldShowWarning() {
     return !N

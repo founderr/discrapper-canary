@@ -37,8 +37,8 @@ function A(e) {
     channel: R,
     className: j,
     inCall: L,
-    totalNumberOfParticipants: O,
-    paused: y = !1
+    totalNumberOfParticipants: y,
+    paused: O = !1
   } = e, P = (0, o.useAppContext)(), b = P === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(R.guild_id), [R.guild_id]), {
     dismissedActivityEntryPointTileChannel: U
   } = (0, T.useChannelCallVideoGridStore)(), w = (0, i.useStateFromStores)([m.default], () => m.default.getUserParticipantCount(R.id), [R]), F = l.useCallback(() => {
@@ -80,7 +80,7 @@ function A(e) {
       participant: e,
       channel: R,
       className: N.tile,
-      paused: y,
+      paused: O,
       onClick: n,
       onDoubleClick: A,
       onContextMenu: M,
@@ -92,7 +92,7 @@ function A(e) {
     type: s.ImpressionTypes.VIEW,
     name: s.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
     properties: {
-      total_participants: O,
+      total_participants: y,
       can_invite: k,
       is_afk_channel: V,
       channel_user_limit: R.userLimit
@@ -126,13 +126,13 @@ function A(e) {
     handleClose: F,
     userParticipantCount: w
   })));
-  let J = l.useCallback(e => {
+  let Q = l.useCallback(e => {
     var n, a;
     return null !== (a = null === (n = t[e]) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : "empty-tile"
   }, [t]);
   return (0, a.jsx)(C.default, {
     className: j,
-    keyExtractor: J,
+    keyExtractor: Q,
     paddingTop: 64,
     paddingBottom: 64,
     children: X

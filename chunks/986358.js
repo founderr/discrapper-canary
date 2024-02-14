@@ -33,8 +33,8 @@ var l = n("414456"),
   R = n("387111"),
   j = n("158998"),
   L = n("763225"),
-  O = n("49111"),
-  y = n("782340"),
+  y = n("49111"),
+  O = n("782340"),
   P = n("105871");
 
 function b(e) {
@@ -124,8 +124,8 @@ function U(e) {
     canBanUser: C,
     canModerateMembers: x
   } = (0, i.useStateFromStoresObject)([S.default, _.default, E.default], () => ({
-    canKickUser: null != p && S.default.canManageUser(O.Permissions.KICK_MEMBERS, l, p),
-    canBanUser: null != p && S.default.canManageUser(O.Permissions.BAN_MEMBERS, l, p),
+    canKickUser: null != p && S.default.canManageUser(y.Permissions.KICK_MEMBERS, l, p),
+    canBanUser: null != p && S.default.canManageUser(y.Permissions.BAN_MEMBERS, l, p),
     canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, l.id, [_.default, E.default, S.default])
   }), [l, p]), R = (0, d.isMemberCommunicationDisabled)(s), {
     analyticsLocations: j,
@@ -138,7 +138,7 @@ function U(e) {
   return (0, a.jsxs)("div", {
     className: P.bottomRow,
     children: [(0, a.jsxs)(D, {
-      "aria-label": y.default.Messages.SEND_DM,
+      "aria-label": O.default.Messages.SEND_DM,
       style: {
         backgroundColor: t
       },
@@ -151,11 +151,11 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: y.default.Messages.SEND_DM
+        children: O.default.Messages.SEND_DM
       })]
     }), (0, a.jsxs)(D, {
       disabled: !g,
-      "aria-label": y.default.Messages.KICK,
+      "aria-label": O.default.Messages.KICK,
       style: {
         backgroundColor: t
       },
@@ -179,11 +179,11 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: y.default.Messages.KICK
+        children: O.default.Messages.KICK
       })]
     }), (0, a.jsxs)(D, {
       disabled: !C,
-      "aria-label": y.default.Messages.BAN,
+      "aria-label": O.default.Messages.BAN,
       style: {
         backgroundColor: t
       },
@@ -207,11 +207,11 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: y.default.Messages.BAN
+        children: O.default.Messages.BAN
       })]
     }), (0, a.jsxs)(D, {
       disabled: !x,
-      "aria-label": y.default.Messages.TIMEOUT_USER,
+      "aria-label": O.default.Messages.TIMEOUT_USER,
       style: {
         backgroundColor: t
       },
@@ -225,10 +225,10 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: R ? y.default.Messages.REMOVE : y.default.Messages.TIMEOUT_USER
+        children: R ? O.default.Messages.REMOVE : O.default.Messages.TIMEOUT_USER
       })]
     }), (0, a.jsxs)(D, {
-      "aria-label": y.default.Messages.COPY_ID,
+      "aria-label": O.default.Messages.COPY_ID,
       style: {
         backgroundColor: t
       },
@@ -243,7 +243,7 @@ function U(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
-        children: y.default.Messages.COPY_ID
+        children: O.default.Messages.COPY_ID
       })]
     })]
   })

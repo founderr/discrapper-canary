@@ -8,14 +8,14 @@ var t = E("689988"),
   o = E("697218"),
   n = E("719923"),
   a = E("538620"),
-  r = E("646718");
-class i extends t.default {
+  i = E("646718");
+class r extends t.default {
   onPostConnectionOpen() {
     this.maybeFetchActiveOutboundPromotions()
   }
   maybeFetchActiveOutboundPromotions() {
     let e = o.default.getCurrentUser();
-    null != e && n.default.isPremiumExactly(e, r.PremiumTypes.TIER_2) && (0, a.fetchActiveOutboundPromotions)()
+    null != e && n.default.isPremiumExactly(e, i.PremiumTypes.TIER_2) && (0, a.fetchActiveOutboundPromotions)()
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -23,4 +23,4 @@ class i extends t.default {
     }
   }
 }
-var I = new i
+var I = new r

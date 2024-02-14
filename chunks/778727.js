@@ -8,8 +8,8 @@ var t = E("689988"),
   o = E("191145"),
   n = E("721281"),
   a = E("42203"),
-  r = E("800762"),
-  i = E("818766");
+  i = E("800762"),
+  r = E("818766");
 class I extends t.default {
   handleVoiceChannelSelect(e) {
     let {
@@ -20,9 +20,9 @@ class I extends t.default {
     let t = a.default.getChannel(_);
     if (null != t && (0, n.hasVoiceChannelActivityNotifsEnabled)(t) && t.isGuildVoice()) {
       let e = o.default.getParticipants(_).length,
-        E = r.default.isInChannel(_),
+        E = i.default.isInChannel(_),
         t = e === (E ? 1 : 0);
-      t ? i.sendVoiceChannelActivityNotification(_, t) : e === (E ? 2 : 1) && i.sendVoiceChannelActivityNotification(_, t)
+      t ? r.sendVoiceChannelActivityNotification(_, t) : e === (E ? 2 : 1) && r.sendVoiceChannelActivityNotification(_, t)
     }
   }
   constructor(...e) {

@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("697218"),
   j = n("543289"),
   L = n("45029"),
-  O = n("155207"),
-  y = n("826684"),
+  y = n("155207"),
+  O = n("826684"),
   P = n("483093"),
   b = n("599110"),
   D = n("659500"),
@@ -56,7 +56,7 @@ let W = F.default.getEnableHardwareAcceleration(),
     } = e, o = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), S = (0, c.useStateFromStores)([x.default], () => {
       var e, n;
       return (null == p ? void 0 : p.colorRoleId) != null ? null === (n = x.default.getGuild(t.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(p.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-    }, [t.guild_id, p]), g = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == g ? void 0 : g.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), b = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, u.useListItem)(i), F = (0, c.useStateFromStores)([C.default], () => C.default.canUserViewChannel(t.id, s, i)), H = (null == g ? void 0 : g.id) != null && g.id === r, G = l.useCallback(e => {
+    }, [t.guild_id, p]), g = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == g ? void 0 : g.id) === (null == j ? void 0 : j.id), y = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), O = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), b = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, u.useListItem)(i), F = (0, c.useStateFromStores)([C.default], () => C.default.canUserViewChannel(t.id, s, i)), H = (null == g ? void 0 : g.id) != null && g.id === r, G = l.useCallback(e => {
       null != g && (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -119,14 +119,14 @@ let W = F.default.getEnableHardwareAcceleration(),
           user: g,
           currentUser: j,
           nick: null == p ? void 0 : p.nick,
-          status: O,
+          status: y,
           activities: P,
           colorString: null == p ? void 0 : p.colorString,
           colorRoleName: S,
           isTyping: o,
           channel: t,
           guildId: t.guild_id,
-          isMobile: y,
+          isMobile: O,
           selected: l,
           applicationStream: b,
           premiumSince: null == K ? null : new Date(K),
@@ -155,7 +155,7 @@ let W = F.default.getEnableHardwareAcceleration(),
       children: (0, a.jsx)("div", {
         className: G.memberGroupsPlaceholder
       })
-    }) : (0, a.jsxs)(y.default, {
+    }) : (0, a.jsxs)(O.default, {
       className: G.membersGroup,
       "aria-label": B.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
         title: n,
@@ -258,7 +258,7 @@ function X(e) {
         channel_type: t.type,
         guild_id: t.guild_id
       })
-    }, [t.guild_id, t.id, t.type]), E) return (0, a.jsx)(J, {
+    }, [t.guild_id, t.id, t.type]), E) return (0, a.jsx)(Q, {
     channel: t
   });
   let S = o.omit(h.containerProps, ["ref"]),
@@ -316,7 +316,7 @@ function X(e) {
   })
 }
 
-function J(e) {
+function Q(e) {
   let {
     channel: t
   } = e;
@@ -331,7 +331,7 @@ function J(e) {
       className: H.emptyStateIconContainer,
       children: [(0, a.jsx)("div", {
         className: H.emptyStateIcon,
-        children: (0, a.jsx)(O.default, {
+        children: (0, a.jsx)(y.default, {
           width: 32,
           height: 32
         })

@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("420861"),
   j = n("18061"),
   L = n("49111"),
-  O = n("782340"),
-  y = n("680221");
+  y = n("782340"),
+  O = n("680221");
 
 function P(e) {
   var t;
@@ -56,11 +56,11 @@ function P(e) {
     null == g || g(t), u.changePage(f, t)
   }, [f, x, g]), M = l.useCallback(e => {
     if (e.blocked) r.default.show({
-      title: O.default.Messages.UNBLOCK_TO_JUMP_TITLE,
-      body: O.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
+      title: y.default.Messages.UNBLOCK_TO_JUMP_TITLE,
+      body: y.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
         name: e.author.username
       }),
-      confirmText: O.default.Messages.OKAY
+      confirmText: y.default.Messages.OKAY
     });
     else {
       let t = C.default.getChannel(e.channel_id),
@@ -141,15 +141,15 @@ function P(e) {
       children: H
     }), S > 0 ? (0, a.jsxs)(i.Clickable, {
       tag: "div",
-      className: y.resultsBlocked,
+      className: O.resultsBlocked,
       onClick: () => u.setShowBlockedResults(f, !N),
       children: [(0, a.jsx)("div", {
-        className: y.resultsBlockedImage
+        className: O.resultsBlockedImage
       }), (0, a.jsx)("div", {
-        className: y.resultsBlockedText,
-        children: N ? O.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
+        className: O.resultsBlockedText,
+        children: N ? y.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
           count: S
-        }) : O.default.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({
+        }) : y.default.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({
           count: S
         })
       })]
@@ -174,7 +174,7 @@ function b(e) {
     scrollTo: E,
     searchId: v,
     renderEmbeds: R,
-    offset: O,
+    offset: y,
     jumpToMessage: P,
     listNavigator: b,
     favoriteSearch: D
@@ -199,14 +199,14 @@ function b(e) {
     value: (0, m.default)(U, W),
     children: (0, a.jsxs)("ul", {
       role: "group",
-      className: y.searchResultGroup,
+      className: O.searchResultGroup,
       "aria-label": X,
       children: [(0, a.jsx)(i.Clickable, {
         onClick: () => w(s.id),
         children: (0, a.jsxs)("div", {
-          className: y.channelNameContainer,
+          className: O.channelNameContainer,
           children: [(0, a.jsx)(H, {
-            className: y.channelNameIcon,
+            className: O.channelNameIcon,
             width: 16,
             height: 16
           }), (0, a.jsx)(i.Tooltip, {
@@ -215,20 +215,20 @@ function b(e) {
             children: e => (0, a.jsxs)("span", {
               ...e,
               ref: z,
-              className: y.channelNameText,
+              className: O.channelNameText,
               children: [D && null !== k && "".concat(k, " : "), Y]
             })
           }), null != V && null != B && null != G ? (0, a.jsxs)(i.Clickable, {
-            className: y.parentChannelNameClickable,
+            className: O.parentChannelNameClickable,
             onClick: e => {
               e.stopPropagation(), w(V.id)
             },
             children: [(0, a.jsx)(G, {
-              className: y.parentChannelNameIcon,
+              className: O.parentChannelNameIcon,
               width: 12,
               height: 12
             }), (0, a.jsx)(i.Text, {
-              className: y.parentChannelNameText,
+              className: O.parentChannelNameText,
               variant: "text-xs/medium",
               color: "header-secondary",
               children: B
@@ -243,7 +243,7 @@ function b(e) {
           scrollTo: E,
           searchId: v,
           renderEmbeds: R,
-          searchOffset: O,
+          searchOffset: y,
           pageResultsLength: r.length,
           result: e,
           index: n,

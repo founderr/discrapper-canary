@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return S
   }
 });
 var a = n("37983"),
@@ -14,40 +14,40 @@ var a = n("37983"),
   d = n("506885"),
   c = n("217513"),
   f = n("845579"),
-  h = n("491595"),
-  p = function(e) {
+  E = n("491595"),
+  S = function(e) {
     let {
       style: t,
       src: n,
-      backgroundSrc: p,
-      userId: E,
+      backgroundSrc: S,
+      userId: h,
       pulseSpeakingIndicator: C = !1,
-      speaking: m = !1,
-      ...S
-    } = e, g = null != p ? p : n, _ = (0, l.default)(g, s.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, T = (0, c.default)(null != E ? E : ""), I = null == T ? void 0 : T.getBannerURL({
+      speaking: _ = !1,
+      ...p
+    } = e, m = null != S ? S : n, g = (0, l.default)(m, s.default.unsafe_rawColors.PRIMARY_800.css), T = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, v = (0, c.default)(null != h ? h : ""), A = null == v ? void 0 : v.getBannerURL({
       size: 1024,
       canAnimate: f.GifAutoPlay.getSetting()
     });
     if (r.useEffect(() => {
-        null != E && v && (0, d.default)(E, void 0, {
+        null != h && T && (0, d.default)(h, void 0, {
           dispatchWait: !0
         })
-      }, [v, E]), null == n) return null;
-    let A = (0, a.jsx)(i.Avatar, {
-        className: h.avatarWrapper,
+      }, [T, h]), null == n) return null;
+    let I = (0, a.jsx)(i.Avatar, {
+        className: E.avatarWrapper,
         src: n,
-        ...S
+        ...p
       }),
-      M = {
+      R = {
         ...t,
-        backgroundColor: _
+        backgroundColor: g
       };
-    return null != I && m && v && (M.backgroundImage = "url(".concat(I, ")"), M.backgroundSize = "cover"), (0, a.jsx)("div", {
-      style: M,
-      className: h.background,
+    return null != A && _ && T && (R.backgroundImage = "url(".concat(A, ")"), R.backgroundSize = "cover"), (0, a.jsx)("div", {
+      style: R,
+      className: E.background,
       children: C ? (0, a.jsx)(o.default, {
-        shouldAnimate: m,
-        children: A
-      }) : A
+        shouldAnimate: _,
+        children: I
+      }) : I
     })
   }

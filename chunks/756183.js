@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("86959"),
   N = n("748753"),
   R = n("144521"),
-  O = n("59678"),
-  v = n("49111"),
+  v = n("59678"),
+  O = n("49111"),
   L = n("782340"),
   M = n("512807"),
   P = function(e) {
@@ -40,7 +40,7 @@ var a = n("37983"),
       section: P
     } = (0, r.useStateFromStoresObject)([_.default], () => _.default.getState()), D = (0, r.useStateFromStores)([C.default], () => C.default.isFocused()), y = (0, r.useStateFromStores)([h.default], () => h.default.getRelationshipCount()), x = (0, S.useIsClearIncomingFriendRequestsEnabled)(), [b, U] = s.useState(() => {
       let e = {};
-      for (let t of Object.values(v.FriendsSections)) e[t] = "";
+      for (let t of Object.values(O.FriendsSections)) e[t] = "";
       return e
     }), G = s.useCallback(e => {
       U({
@@ -55,44 +55,44 @@ var a = n("37983"),
     }, [b, t]), w = l.filter(t, b[t]);
     if (0 === w.length && "" === b[t]) return (0, a.jsxs)("div", {
       className: M.emptyStateContainer,
-      children: [t === v.FriendsSections.ONLINE && (0, a.jsx)(E.default, {}), (0, a.jsx)(T.default, {
+      children: [t === O.FriendsSections.ONLINE && (0, a.jsx)(E.default, {}), (0, a.jsx)(T.default, {
         type: t,
         onClick: () => {
-          u.default.setSection(v.FriendsSections.ADD_FRIEND)
+          u.default.setSection(O.FriendsSections.ADD_FRIEND)
         }
       }, P)]
     });
     let k = 0 === w.length && "" !== b[t],
-      F = w.filter(e => e.type === v.RelationshipTypes.PENDING_INCOMING).length,
-      B = t === v.FriendsSections.PENDING && F > 0,
-      H = B && x && F >= O.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+      F = w.filter(e => e.type === O.RelationshipTypes.PENDING_INCOMING).length,
+      B = t === O.FriendsSections.PENDING && F > 0,
+      H = B && x && F >= v.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
     return (0, a.jsxs)(c.default, {
-      section: v.AnalyticsSections.FRIENDS_LIST,
+      section: O.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(I.default, {
         className: i(M.searchBar, k ? M.searchEmptyState : null),
         query: b[t],
         onChange: G,
         onClear: j,
         size: I.default.Sizes.MEDIUM
-      }), t === v.FriendsSections.ONLINE && "" === b[t] && (0, a.jsx)(E.default, {}), (0, a.jsxs)("div", {
+      }), t === O.FriendsSections.ONLINE && "" === b[t] && (0, a.jsx)(E.default, {}), (0, a.jsxs)("div", {
         className: M.sectionTitle,
         children: [(0, a.jsx)(N.default, {
           id: n,
           title: function(e, t) {
             switch (e) {
-              case v.FriendsSections.ONLINE:
+              case O.FriendsSections.ONLINE:
                 return L.default.Messages.FRIENDS_ONLINE_HEADER.format({
                   online: t.toString()
                 });
-              case v.FriendsSections.PENDING:
+              case O.FriendsSections.PENDING:
                 return L.default.Messages.FRIENDS_PENDING_HEADER.format({
                   count: t.toString()
                 });
-              case v.FriendsSections.SUGGESTIONS:
+              case O.FriendsSections.SUGGESTIONS:
                 return L.default.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({
                   count: t.toString()
                 });
-              case v.FriendsSections.BLOCKED:
+              case O.FriendsSections.BLOCKED:
                 return L.default.Messages.FRIENDS_BLOCKED_HEADER.format({
                   count: t.toString()
                 });
@@ -123,23 +123,23 @@ var a = n("37983"),
         statusSections: [w],
         renderRow: function(e) {
           switch (t) {
-            case v.FriendsSections.BLOCKED:
+            case O.FriendsSections.BLOCKED:
               return (0, a.jsx)(p.default, {
                 ...e,
                 isFocused: D
               });
-            case v.FriendsSections.PENDING:
+            case O.FriendsSections.PENDING:
               return (0, a.jsx)(g.default, {
                 ...e,
                 isFocused: D
               });
-            case v.FriendsSections.SUGGESTIONS:
+            case O.FriendsSections.SUGGESTIONS:
               return (0, a.jsx)(R.default, {
                 ...e,
                 isFocused: D
               });
-            case v.FriendsSections.ONLINE:
-            case v.FriendsSections.ALL:
+            case O.FriendsSections.ONLINE:
+            case O.FriendsSections.ALL:
             default:
               return (0, a.jsx)(m.default, {
                 ...e,

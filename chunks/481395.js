@@ -27,8 +27,8 @@ var a = n("913144"),
   A = n("357046"),
   N = n("49111"),
   R = n("782340");
-let O = [],
-  v = null,
+let v = [],
+  O = null,
   L = null,
   M = null,
   P = /\|\|([\s\S]+?)\|\|/g;
@@ -69,7 +69,7 @@ function y() {
 }
 async function x(e, t, n, a, l) {
   let i = s.createUtterance(e, n);
-  null !== i && (null == L && y(), t ? await (0, T.stopSpeaking)() : null == v || v.removeEventListener("end", T.stopSpeaking), i.addEventListener("end", T.stopSpeaking), null != a && i.addEventListener("start", a), null != l && i.addEventListener("end", l), v = i, s.speakUtterance(i, L))
+  null !== i && (null == L && y(), t ? await (0, T.stopSpeaking)() : null == O || O.removeEventListener("end", T.stopSpeaking), i.addEventListener("end", T.stopSpeaking), null != a && i.addEventListener("start", a), null != l && i.addEventListener("end", l), O = i, s.speakUtterance(i, L))
 }
 
 function b(e, t, n, a, s) {
@@ -90,7 +90,7 @@ function U(e) {
 }
 
 function G() {
-  return null !== v && v.removeEventListener("end", T.stopSpeaking), s.cancelAll(), v = null, !0
+  return null !== O && O.removeEventListener("end", T.stopSpeaking), s.cancelAll(), O = null, !0
 }
 
 function j(e) {
@@ -113,14 +113,14 @@ function w(e) {
   let g = c.default.getChannel(E);
   if (null == g) return !1;
   let R = I.default.getChannelId(),
-    v = d.default.getCurrentSidebarChannelId(R),
-    L = E === R || E === v,
+    O = d.default.getCurrentSidebarChannelId(R),
+    L = E === R || E === O,
     M = o.EnableTTSCommand.getSetting() && p.tts && L,
     P = _.default.getTTSType(),
     y = (null === (t = p.author) || void 0 === t ? void 0 : t.id) !== u.default.getId() && (P === N.TTSNotificationTypes.ALL_CHANNELS || P === N.TTSNotificationTypes.SELECTED_CHANNEL && L);
   if ((M || y) && ((null === (n = p.author) || void 0 === n ? void 0 : n.id) == null || !C.default.isBlocked(p.author.id))) {
-    if (O.indexOf(p.id) >= 0) return !1;
-    O.unshift(p.id) > 10 && O.pop();
+    if (v.indexOf(p.id) >= 0) return !1;
+    v.unshift(p.id) > 10 && v.pop();
     let e = g.getGuildId();
     if (null != e && S.default.getMutedChannels(e).has(E)) return !1;
     let t = null !== (i = null !== (l = f.default.getNick(e, null === (a = p.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : m.default.getName(p.author)) && void 0 !== i ? i : "",

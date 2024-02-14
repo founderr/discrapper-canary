@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("158998"),
   j = n("774539"),
   L = n("201380"),
-  O = n("49111"),
-  y = n("39141"),
+  y = n("49111"),
+  O = n("39141"),
   P = n("886604");
 let b = l.memo(e => {
   var t;
@@ -52,29 +52,29 @@ let b = l.memo(e => {
       userIds: t
     } = e;
     return t.has(A)
-  }), [A, i.id]), B = (0, f.default)(null != V ? [V.applicationId] : []), H = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), G = (0, r.useStateFromStores)([I.default, T.default], () => P ? T.default.getActivities() : I.default.getActivities(A, i.guild_id)), W = G.find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([c.default], () => (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
+  }), [A, i.id]), B = (0, f.default)(null != V ? [V.applicationId] : []), H = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), G = (0, r.useStateFromStores)([I.default, T.default], () => P ? T.default.getActivities() : I.default.getActivities(A, i.guild_id)), W = G.find(e => null != e.application_id && e.type === y.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([c.default], () => (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
   null != Y && j.default.trackExposure({
     location: "voice_users"
   });
-  let [z, K] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(A, i.getGuildId()), E.default.getActiveStreamForUser(A, i.getGuildId())], [i, A]), Z = (0, r.useStateFromStores)([v.default], () => v.default.getSessionById(o)), X = R.default.useName(s), J = (0, r.useStateFromStores)([N.default], () => N.default.getVoicePlatformForChannel(i.id, A), [i.id, A]), {
+  let [z, K] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(A, i.getGuildId()), E.default.getActiveStreamForUser(A, i.getGuildId())], [i, A]), Z = (0, r.useStateFromStores)([v.default], () => v.default.getSessionById(o)), X = R.default.useName(s), Q = (0, r.useStateFromStores)([N.default], () => N.default.getVoicePlatformForChannel(i.id, A), [i.id, A]), {
     enableHangStatus: q
   } = h.HangStatusExperiment.useExperiment({
     guildId: i.guild_id,
     location: "VoiceUsers"
-  }), Q = M.default.can({
-    permission: O.Permissions.SET_VOICE_CHANNEL_STATUS,
+  }), J = M.default.can({
+    permission: y.Permissions.SET_VOICE_CHANNEL_STATUS,
     user: s,
     context: i
-  }), $ = (0, r.useStateFromStores)([m.default], () => P ? m.default.getHangStatusActivity() : null, [P]), ee = (0, r.useStateFromStores)([I.default], () => I.default.findActivity(A, e => e.type === O.ActivityTypes.HANG_STATUS), [A]);
+  }), $ = (0, r.useStateFromStores)([m.default], () => P ? m.default.getHangStatusActivity() : null, [P]), ee = (0, r.useStateFromStores)([I.default], () => I.default.findActivity(A, e => e.type === y.ActivityTypes.HANG_STATUS), [A]);
   return (0, a.jsx)(p.default, {
-    shakeLocation: y.ShakeLocation.VOICE_USER,
+    shakeLocation: O.ShakeLocation.VOICE_USER,
     isShaking: F,
     children: (0, a.jsx)(L.default, {
       ...e,
       nick: null != _ ? _ : X,
       canDrag: e.canDrag && !k,
       otherClientSessionType: null == Z ? void 0 : null === (t = Z.clientInfo) || void 0 === t ? void 0 : t.os,
-      voicePlatform: J,
+      voicePlatform: Q,
       localMute: b && !P,
       localVideoDisabled: U,
       mute: n || b,
@@ -83,9 +83,9 @@ let b = l.memo(e => {
       priority: w,
       embeddedApplication: B[0],
       isStreaming: null != z && z.channelId === i.id,
-      isWatching: null != K && K.state !== O.ApplicationStreamStates.ENDED,
+      isWatching: null != K && K.state !== y.ApplicationStreamStates.ENDED,
       isGuest: k,
-      showHangStatus: Q && q && (S.default.getId() === s.id || null != ee),
+      showHangStatus: J && q && (S.default.getId() === s.id || null != ee),
       hangStatusActivity: P ? $ : ee,
       isSelf: S.default.getId() === s.id,
       application: H ? Y : void 0
@@ -111,7 +111,7 @@ var D = function(e) {
     v(M.current), M.current = null
   })), j = l.useRef(new o.DelayedCall(175, () => {
     v(null)
-  })), y = l.useCallback(e => {
+  })), O = l.useCallback(e => {
     t && (N(!0), j.current.cancel(), M.current = e, R.current.delay())
   }, [t]), D = l.useCallback(e => {
     t && (R.current.cancel(), T === e && (N(!1), j.current.delay()))
@@ -150,8 +150,8 @@ var D = function(e) {
           sessionId: null !== (t = r.sessionId) && void 0 !== t ? t : "",
           channel: s,
           collapsed: d,
-          canDrag: n && _.default.can(O.Permissions.MOVE_MEMBERS, s),
-          showPreview: y,
+          canDrag: n && _.default.can(y.Permissions.MOVE_MEMBERS, s),
+          showPreview: O,
           hidePreview: D,
           previewIsOpen: x,
           shouldShowPreview: T === l.id,

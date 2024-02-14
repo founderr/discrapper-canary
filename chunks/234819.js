@@ -9,8 +9,8 @@ E("884691");
 var o = E("446674"),
   n = E("77078"),
   a = E("313915"),
-  r = E("603699"),
-  i = E("697218"),
+  i = E("603699"),
+  r = E("697218"),
   I = E("983782"),
   T = E("843455"),
   s = E("619774");
@@ -18,11 +18,11 @@ var o = E("446674"),
 function S() {
   var e;
   let _ = (0, o.useStateFromStores)([a.default], () => a.default.isIdleStatusIndicatorEnabled),
-    E = (0, o.useStateFromStores)([i.default], () => {
+    E = (0, o.useStateFromStores)([r.default], () => {
       var e, _;
-      return null !== (_ = null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== _ && _
+      return null !== (_ = null === (e = r.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== _ && _
     }),
-    [S, N] = (0, o.useStateFromStoresArray)([r.default], () => [r.default.isIdle(), r.default.isAFK()]),
+    [S, N] = (0, o.useStateFromStoresArray)([i.default], () => [i.default.isIdle(), i.default.isAFK()]),
     O = [];
   return !S && !N && O.push("ACTIVE"), S && O.push("IDLE"), N && O.push("AFK"), E && _ ? (0, t.jsx)(I.default, {
     children: (0, t.jsxs)("div", {
@@ -44,7 +44,7 @@ function S() {
         })]
       }), S && (0, t.jsxs)(n.Text, {
         variant: "text-md/normal",
-        children: ["Idle since:", " ", new Date(null !== (e = r.default.getIdleSince()) && void 0 !== e ? e : 0).toLocaleDateString(void 0, {
+        children: ["Idle since:", " ", new Date(null !== (e = i.default.getIdleSince()) && void 0 !== e ? e : 0).toLocaleDateString(void 0, {
           year: "numeric",
           day: "numeric",
           month: "numeric",

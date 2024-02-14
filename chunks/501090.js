@@ -97,12 +97,12 @@ function L() {
   return null != a && (a.destroy(), a = null), o.default.getSearchContext(j, 1e3)
 }
 
-function O(e) {
+function y(e) {
   if (e.key !== E.NEW_GROUP_DM_POPOUT_ID) return !1;
   S = !0, M(), a = L(), v = null, N("")
 }
 
-function y(e) {
+function O(e) {
   if (e.key !== E.NEW_GROUP_DM_POPOUT_ID) return !1;
   P()
 }
@@ -150,13 +150,13 @@ let D = new b(r.default, {
     let a = S;
     return x(), S = a, v = n, A()
   },
-  MODAL_PUSH: O,
-  SHOW_ACTION_SHEET: O,
+  MODAL_PUSH: y,
+  SHOW_ACTION_SHEET: y,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
     S = !0, M(), a = L(), v = e.channelId, N("")
   },
-  MODAL_POP: y,
-  HIDE_ACTION_SHEET: y,
+  MODAL_POP: O,
+  HIDE_ACTION_SHEET: O,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: P,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function(e) {
     v = e.channelId, N(e.query)

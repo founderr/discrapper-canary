@@ -11,8 +11,8 @@ var t = E("444095"),
   o = E("913144"),
   n = E("970728"),
   a = E("689988"),
-  r = E("271938"),
-  i = E("773336"),
+  i = E("271938"),
+  r = E("773336"),
   I = E("49111");
 let T = "guestInviteToAccept";
 class s extends a.default {
@@ -20,9 +20,9 @@ class s extends a.default {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: () => this.handleConnectionOpen()
     }, this.handleConnectionOpen = async () => {
-      if ((0, i.isWeb)()) {
+      if ((0, r.isWeb)()) {
         let e = t.default.get(T);
-        if (null != e && "string" == typeof e && r.default.isAuthenticated()) {
+        if (null != e && "string" == typeof e && i.default.isAuthenticated()) {
           let {
             invite: _
           } = await n.default.resolveInvite(e, "Desktop Modal");

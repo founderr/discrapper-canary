@@ -8,15 +8,15 @@ var t = E("446674"),
   o = E("913144"),
   n = E("689988"),
   a = E("404607"),
-  r = E("271938"),
-  i = E("42203");
+  i = E("271938"),
+  r = E("42203");
 class I extends n.default {
   handleChannelDelete(e) {
     let {
       channel: _
     } = e;
     if (null != _.guild_id) {
-      let e = i.default.getAllThreadsForParent(_.id);
+      let e = r.default.getAllThreadsForParent(_.id);
       e.length > 0 && t.default.Emitter.batched(() => {
         for (let _ of e) o.default.dispatch({
           type: "THREAD_DELETE",
@@ -30,8 +30,8 @@ class I extends n.default {
     let {
       channelId: o,
       message: n
-    } = e, I = i.default.getChannel(o);
-    if ((null === (_ = n.author) || void 0 === _ ? void 0 : _.id) !== r.default.getId() || !(null == I ? void 0 : I.isActiveThread())) return;
+    } = e, I = r.default.getChannel(o);
+    if ((null === (_ = n.author) || void 0 === _ ? void 0 : _.id) !== i.default.getId() || !(null == I ? void 0 : I.isActiveThread())) return;
     let T = new Date(null !== (t = null === (E = I.threadMetadata) || void 0 === E ? void 0 : E.archiveTimestamp) && void 0 !== t ? t : 0).getTime(),
       s = Date.now() - T;
     s < 5e3 && a.default.resort(I.parent_id)

@@ -28,8 +28,8 @@ function d(e) {
     size: d,
     className: c,
     artURL: f,
-    noArt: h = !1,
-    selected: p = !1
+    noArt: E = !1,
+    selected: S = !1
   } = e;
   return (0, a.jsxs)(l.default, {
     className: c,
@@ -39,7 +39,7 @@ function d(e) {
     style: {
       padding: 4
     },
-    children: [!h && null != f && (0, a.jsx)("div", {
+    children: [!E && null != f && (0, a.jsx)("div", {
       className: s(u.art, u[d]),
       style: {
         backgroundImage: "url(".concat(f, ")")
@@ -54,7 +54,7 @@ function d(e) {
       className: u.description,
       variant: "text-sm/medium",
       children: o
-    }) : null, p || null == n ? null : (0, a.jsx)(i.Button, {
+    }) : null, S || null == n ? null : (0, a.jsx)(i.Button, {
       className: u.outerButton,
       size: i.Button.Sizes.NONE,
       color: i.Button.Colors.WHITE,

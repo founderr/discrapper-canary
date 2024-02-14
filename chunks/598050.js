@@ -50,7 +50,7 @@ var N = (0, o.default)(e => {
     selectedParticipantId: u.default.getSelectedParticipantId(a.id),
     largeStream: u.default.getStageStreamSize(a.id),
     chatOpen: u.default.getChatOpen(a.id)
-  }), [a.id]), M = (0, c.useActualStageSpeakerCount)(a.id), R = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), j = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(a.id, I) : null), L = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), O = L.filter(e => e.type === f.StageChannelParticipantTypes.VOICE), y = null != L.find(e => e.type === f.StageChannelParticipantTypes.STREAM), P = x(l), b = v(l, A), D = {
+  }), [a.id]), M = (0, c.useActualStageSpeakerCount)(a.id), R = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), j = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(a.id, I) : null), L = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), y = L.filter(e => e.type === f.StageChannelParticipantTypes.VOICE), O = null != L.find(e => e.type === f.StageChannelParticipantTypes.STREAM), P = x(l), b = v(l, A), D = {
     [f.StageChannelParticipantNamedIndex.SPEAKER]: b,
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: P,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
@@ -70,9 +70,9 @@ var N = (0, o.default)(e => {
         className: _.header,
         onClick: () => Y(!W),
         collapsed: W,
-        speakers: O,
+        speakers: y,
         channel: a,
-        isStreamLive: y
+        isStreamLive: O
       }, "speaker-header-".concat(t));
       if (2 === t) return 0 === R ? null : (0, s.jsx)(S.default, {
         participantCount: R,

@@ -9,8 +9,8 @@ E("884691");
 var o = E("414456"),
   n = E.n(o),
   a = E("945330"),
-  r = E("774223"),
-  i = E("587974"),
+  i = E("774223"),
+  r = E("587974"),
   I = E("457774");
 
 function T(e) {
@@ -21,11 +21,11 @@ function T(e) {
   } = e;
   return (0, t.jsxs)("div", {
     className: n(I.icon, o),
-    children: [(0, t.jsx)(i.default, {
-      mask: i.default.Masks.STATUS_SCREENSHARE,
+    children: [(0, t.jsx)(r.default, {
+      mask: r.default.Masks.STATUS_SCREENSHARE,
       width: _,
       height: E,
-      children: (0, t.jsx)(r.default, {
+      children: (0, t.jsx)(i.default, {
         width: _,
         height: E
       })

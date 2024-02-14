@@ -8,13 +8,13 @@ var t = E("446674"),
   o = E("913144"),
   n = E("697218"),
   a = E("599110"),
-  r = E("719923"),
-  i = E("513196"),
+  i = E("719923"),
+  r = E("513196"),
   I = E("49111"),
   T = E("994428"),
   s = E("646718");
 let S = {
-    desktop: i.FreemiumAppIconIds.DEFAULT,
+    desktop: r.FreemiumAppIconIds.DEFAULT,
     coachmarkImpressions: 0
   },
   N = {
@@ -23,7 +23,7 @@ let S = {
   O = !1,
   A = !0,
   R = () => {
-    A = !r.default.canUsePremiumAppIcons(n.default.getCurrentUser())
+    A = !i.default.canUsePremiumAppIcons(n.default.getCurrentUser())
   },
   l = e => {
     if (N.client.desktop = e, !A) {
@@ -31,14 +31,14 @@ let S = {
       a.default.track(I.AnalyticEvents.APP_ICON_UPDATED, {
         icon_id: e,
         user_premium_tier: null === (_ = n.default.getCurrentUser()) || void 0 === _ ? void 0 : _.premiumType,
-        icon_premium_tier: e !== i.FreemiumAppIconIds.DEFAULT ? s.PremiumTypes.TIER_2 : null
+        icon_premium_tier: e !== r.FreemiumAppIconIds.DEFAULT ? s.PremiumTypes.TIER_2 : null
       })
     }
   };
 
 function L() {
   A && (N.client = {
-    desktop: i.FreemiumAppIconIds.DEFAULT,
+    desktop: r.FreemiumAppIconIds.DEFAULT,
     coachmarkImpressions: 2
   }), O = !1
 }

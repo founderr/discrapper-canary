@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("49111"),
   j = n("782340"),
   L = n("591665"),
-  O = n("559571");
-let y = A.default.getEnableHardwareAcceleration();
+  y = n("559571");
+let O = A.default.getEnableHardwareAcceleration();
 
 function P(e) {
   let {
@@ -81,7 +81,7 @@ function P(e) {
       currentUser: C,
       isOwner: t.id === l.ownerId,
       ownerTooltipText: j.default.Messages.GROUP_OWNER,
-      shouldAnimateStatus: y,
+      shouldAnimateStatus: O,
       isTyping: g,
       status: d,
       activities: S,
@@ -182,14 +182,14 @@ function D(e) {
   }, [t.guild_id, t.id, t.type]);
   let v = o && u.every(e => e.isStaff());
   return (0, a.jsx)("div", {
-    className: O.membersWrap,
+    className: y.membersWrap,
     children: (0, a.jsxs)(r.Scroller, {
-      className: O.members,
+      className: y.members,
       fade: !0,
       children: [(0, a.jsxs)(_.default, {
-        className: O.membersGroup,
+        className: y.membersGroup,
         children: ["".concat(j.default.Messages.MEMBERS, "—").concat(u.length, " "), v ? (0, a.jsx)(S.default, {
-          className: O.decorator,
+          className: y.decorator,
           type: S.default.Types.STAFF_ONLY_DM
         }) : null]
       }), u.map(e => (0, a.jsx)(P, {
@@ -197,7 +197,7 @@ function D(e) {
         channel: t
       }, e.id)), p && (f.length > 0 || m && h.length > 0) && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(_.default, {
-          className: O.membersGroup,
+          className: y.membersGroup,
           children: "".concat(j.default.Messages.APPS, "—").concat(f.length)
         }), f.map(e => (0, a.jsx)(b, {
           integration: e,
@@ -216,7 +216,7 @@ function D(e) {
             })
           },
           avatar: (0, a.jsx)("div", {
-            className: O.appIconWrapper,
+            className: y.appIconWrapper,
             children: (0, a.jsx)(g.default, {
               width: 18,
               height: 18

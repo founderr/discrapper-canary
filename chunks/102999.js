@@ -8,8 +8,8 @@ var t = E("37983"),
   o = E("884691"),
   n = E("446674"),
   a = E("318696"),
-  r = E("915639"),
-  i = E("787910"),
+  i = E("915639"),
+  r = E("787910"),
   I = E("90404"),
   T = E("782340"),
   s = E("386161");
@@ -18,7 +18,7 @@ function S(e) {
   let {
     locale: _,
     children: E
-  } = e, [o, a] = (0, n.useStateFromStoresArray)([i.default], () => [i.default.isLoading(), i.default.getError()]);
+  } = e, [o, a] = (0, n.useStateFromStoresArray)([r.default], () => [r.default.isLoading(), r.default.getError()]);
   return null != a ? (0, t.jsx)(I.default, {
     title: T.default.Messages.I18N_LOCALE_LOADING_ERROR.format({
       locale: _
@@ -45,6 +45,6 @@ class N extends o.Component {
     super(e), a.updateLocaleLoadingStatus(e.locale, !0)
   }
 }
-var O = n.default.connectStores([r.default], () => ({
-  locale: r.default.locale
+var O = n.default.connectStores([i.default], () => ({
+  locale: i.default.locale
 }))(N)

@@ -8,8 +8,8 @@ var t = E("37983"),
   o = E("884691"),
   n = E("414456"),
   a = E.n(n),
-  r = E("506838"),
-  i = E("446674"),
+  i = E("506838"),
+  r = E("446674"),
   I = E("151426"),
   T = E("77078"),
   s = E("452804"),
@@ -73,8 +73,8 @@ let B = () => (0, t.jsx)("div", {
       onSubscribeSuccess: n,
       markAsDismissed: a
     } = e, {
-      analyticsLocations: r
-    } = (0, R.default)(A.default.CLIENT_THEMES_EDITOR), [S, N] = (0, i.useStateFromStoresArray)([C.default, M.default], () => [M.default.gradientPreset, d.default.isPremium(C.default.getCurrentUser())]), O = (0, l.usePremiumTrialOffer)(), u = (0, d.formatTrialCtaIntervalDuration)({
+      analyticsLocations: i
+    } = (0, R.default)(A.default.CLIENT_THEMES_EDITOR), [S, N] = (0, r.useStateFromStoresArray)([C.default, M.default], () => [M.default.gradientPreset, d.default.isPremium(C.default.getCurrentUser())]), O = (0, l.usePremiumTrialOffer)(), u = (0, d.formatTrialCtaIntervalDuration)({
       intervalType: null == O ? void 0 : null === (_ = O.subscription_trial) || void 0 === _ ? void 0 : _.interval,
       intervalCount: null == O ? void 0 : null === (E = O.subscription_trial) || void 0 === E ? void 0 : E.interval_count
     });
@@ -86,7 +86,7 @@ let B = () => (0, t.jsx)("div", {
         if (!!e) null == n || n(), null != a && a(G.ContentDismissActionType.PRIMARY), null != S && ((0, P.trackClientThemeUpdated)({
           isPersisted: !0,
           themeName: I.BackgroundGradientPresetId[S.id],
-          analyticsLocations: r
+          analyticsLocations: i
         }), (0, s.saveClientTheme)({
           backgroundGradientPresetId: S.id,
           theme: S.theme
@@ -100,10 +100,10 @@ let B = () => (0, t.jsx)("div", {
     } = e, {
       isPreview: E,
       isCoachmark: n
-    } = (0, i.useStateFromStoresObject)([M.default], () => ({
+    } = (0, r.useStateFromStoresObject)([M.default], () => ({
       isPreview: M.default.isPreview,
       isCoachmark: M.default.isCoachmark
-    })), [a, I] = o.useState(!1), s = (0, h.useTrackClientThemePreviewEvent)(), N = (0, r.match)({
+    })), [a, I] = o.useState(!1), s = (0, h.useTrackClientThemePreviewEvent)(), N = (0, i.match)({
       isPreview: E,
       isCoachmark: n,
       forceShowCloseButton: a
@@ -140,27 +140,27 @@ function b(e) {
     analyticsLocations: E,
     AnalyticsLocationProvider: n
   } = (0, R.default)(A.default.CLIENT_THEMES_EDITOR), {
-    isPreview: r,
+    isPreview: i,
     isCoachmark: I,
     isEditorOpen: s,
     shouldEditorAnimate: S
-  } = (0, i.useStateFromStoresObject)([M.default, O.default], () => ({
+  } = (0, r.useStateFromStoresObject)([M.default, O.default], () => ({
     isPreview: M.default.isPreview,
     isCoachmark: M.default.isCoachmark,
     isEditorOpen: M.default.isEditorOpen,
     shouldEditorAnimate: M.default.isCoachmark && !O.default.useReducedMotion
   })), l = (0, h.useTrackClientThemePreviewEvent)();
   o.useEffect(() => l(m.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [l]), o.useEffect(() => {
-    r && c.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    i && c.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: p.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
       location_stack: E
     })
-  }, [r, E]);
+  }, [i, E]);
   let L = (0, h.useResetClientThemePreview)(),
-    u = (0, N.default)(null, r ? L : m.NOOP);
+    u = (0, N.default)(null, i ? L : m.NOOP);
   return o.useEffect(() => {
-    if (r && !s) return L
-  }, [r, s, L]), (0, t.jsx)(n, {
+    if (i && !s) return L
+  }, [i, s, L]), (0, t.jsx)(n, {
     children: (0, t.jsx)("div", {
       ref: u,
       className: a(y.themeEditor, S ? y.editorAnimate : null),
@@ -171,7 +171,7 @@ function b(e) {
           className: y.editorBody,
           children: (0, t.jsxs)(P.default, {
             type: P.ThemeSelectionGroupType.EDITOR,
-            children: [!r && (0, t.jsx)(P.default.Basic, {
+            children: [!i && (0, t.jsx)(P.default.Basic, {
               className: y.selectionGroup
             }), (0, t.jsx)(P.default.Gradient, {
               className: y.selectionGroup

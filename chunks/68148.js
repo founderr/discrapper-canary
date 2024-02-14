@@ -35,8 +35,8 @@ var a = n("37983"),
   R = n("568734"),
   j = n("158998"),
   L = n("49111"),
-  O = n("99795"),
-  y = n("171644"),
+  y = n("99795"),
+  O = n("171644"),
   P = n("782340"),
   b = n("274750");
 let D = e => {
@@ -187,12 +187,12 @@ class w extends l.Component {
       children: (0, a.jsx)(A.default, {
         className: i(b.icon, p)
       })
-    }, "activity")), S === y.GameConsoleTypes.XBOX || g === O.VoicePlatforms.XBOX ? G.push((0, a.jsx)("div", {
+    }, "activity")), S === O.GameConsoleTypes.XBOX || g === y.VoicePlatforms.XBOX ? G.push((0, a.jsx)("div", {
       className: i(b.iconSpacing),
       children: (0, a.jsx)(N.default, {
         className: i(b.icon, p)
       })
-    }, "xbox")) : (S === y.GameConsoleTypes.PLAYSTATION || g === O.VoicePlatforms.PLAYSTATION) && G.push((0, a.jsx)("div", {
+    }, "xbox")) : (S === O.GameConsoleTypes.PLAYSTATION || g === y.VoicePlatforms.PLAYSTATION) && G.push((0, a.jsx)("div", {
       className: i(b.iconSpacing),
       children: (0, a.jsx)(x.default, {
         className: i(b.icon, p)

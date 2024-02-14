@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("394846"),
+var a = n("394846"),
   l = n("77078"),
   i = n("558986"),
   r = n("79945"),
@@ -23,25 +23,25 @@ function f(e) {
     renderEmojiPicker: h,
     shouldShow: C
   } = e;
-  return (0, a.jsx)(l.Popout, {
+  return (0, s.jsx)(l.Popout, {
     renderPopout: e => {
       let {
-        closePopout: a
+        closePopout: s
       } = e;
-      return h(t, n, a, !1)
+      return h(t, n, s, !1)
     },
     shouldShow: C,
     onRequestClose: f,
-    position: s.isMobile ? "top" : "left",
-    align: s.isMobile ? "center" : "top",
+    position: a.isMobile ? "top" : "left",
+    align: a.isMobile ? "center" : "top",
     children: (e, t) => {
       let {
         onClick: n,
-        ...s
+        ...a
       } = e, {
         isShown: h
       } = t;
-      return (0, a.jsx)(l.Tooltip, {
+      return (0, s.jsx)(l.Tooltip, {
         disableTooltipPointerEvents: !1,
         text: d.default.Messages.ADD_REACTION,
         color: l.TooltipColors.PRIMARY,
@@ -54,7 +54,7 @@ function f(e) {
             onMouseLeave: n,
             onClick: l
           } = e;
-          return (0, a.jsx)(o.Button, {
+          return (0, s.jsx)(o.Button, {
             onMouseEnter: () => {
               null == t || t(), (0, i.initiateEmojiInteraction)(u.EmojiInteractionPoint.MessageContextMenuMouseEntered)
             },
@@ -64,8 +64,8 @@ function f(e) {
             },
             "aria-label": d.default.Messages.ADD_REACTION,
             selected: h,
-            ...s,
-            children: (0, a.jsx)(r.default, {
+            ...a,
+            children: (0, s.jsx)(r.default, {
               className: c.icon
             })
           })

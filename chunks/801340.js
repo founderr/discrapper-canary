@@ -64,8 +64,8 @@ class o extends t.MessageType {
         default:
           let a = E.readUnknownField;
           if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-          let r = e.skip(o);
-          !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, r)
+          let i = e.skip(o);
+          !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, i)
       }
     }
     return n

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  l = n.n(r),
+  l = n("414456"),
+  r = n.n(l),
   a = n("546671"),
   u = n("711603");
 let o = {
@@ -29,7 +29,7 @@ class d extends i.PureComponent {
       className: t
     } = this.props;
     return (0, s.jsx)(a.default, {
-      className: l(u.arrow, t, {
+      className: r(u.arrow, t, {
         [c[e]]: !0
       })
     })

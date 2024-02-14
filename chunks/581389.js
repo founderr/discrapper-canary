@@ -36,8 +36,8 @@ var a, l, s = n("37983"),
   R = n("191145"),
   j = n("598785"),
   L = n("266392"),
-  O = n("458685"),
-  y = n("338677"),
+  y = n("458685"),
+  O = n("338677"),
   P = n("76393"),
   b = n("261552"),
   D = n("374014"),
@@ -55,9 +55,9 @@ var a, l, s = n("37983"),
   K = n("54727"),
   Z = n("785344"),
   X = n("954519"),
-  J = n("719874"),
+  Q = n("719874"),
   q = n("116439"),
-  Q = n("373469"),
+  J = n("373469"),
   $ = n("950104"),
   ee = n("42887"),
   et = n("568307"),
@@ -94,7 +94,7 @@ function eI(e) {
     canGoLive: l,
     hasPermission: r,
     disabled: o
-  } = e, u = (0, g.useAppContext)(), d = (0, f.useStateFromStoresArray)([Q.default], () => Q.default.getAllActiveStreams()), c = d.find(e => e.ownerId === n.id), m = t.getGuildId(), p = i.useCallback(() => {
+  } = e, u = (0, g.useAppContext)(), d = (0, f.useStateFromStoresArray)([J.default], () => J.default.getAllActiveStreams()), c = d.find(e => e.ownerId === n.id), m = t.getGuildId(), p = i.useCallback(() => {
     if (null == a || a(), !l) return (0, em.default)();
     (0, ep.default)(m, t.id, eS.AnalyticsPages.GUILD_CHANNEL)
   }, [m, t.id, l, a]), S = (0, f.useStateFromStores)([et.default, el.default], () => (0, w.default)(et.default, el.default)), C = (0, N.default)(), _ = (0, x.default)() && null != S, I = () => {
@@ -132,7 +132,7 @@ function eI(e) {
       onPopoutClick: l ? n : null,
       popoutOpen: t,
       shouldShowTooltip: !t
-    }) : (0, s.jsx)(J.default, {
+    }) : (0, s.jsx)(Q.default, {
       ...a,
       centerButton: !0,
       className: eC.controlButton,
@@ -197,7 +197,7 @@ let ev = i.memo(function(e) {
     channel: l
   } = e, r = (0, f.useStateFromStores)([R.default], () => R.default.getSelectedParticipant(l.id)), {
     reducedMotion: o
-  } = i.useContext(h.AccessibilityPreferencesContext), [u, d] = i.useState(!1), m = null == r ? void 0 : r.id, S = (0, f.useStateFromStores)([Q.default], () => null != m ? Q.default.getActiveStreamForStreamKey(m) : null, [m]), g = (null == r ? void 0 : r.type) === eg.ParticipantTypes.STREAM && null != S && S.ownerId !== (null == n ? void 0 : n.id), C = (0, f.useStateFromStoresArray)([Q.default], () => Q.default.getAllActiveStreamsForChannel(l.id).filter(e => {
+  } = i.useContext(h.AccessibilityPreferencesContext), [u, d] = i.useState(!1), m = null == r ? void 0 : r.id, S = (0, f.useStateFromStores)([J.default], () => null != m ? J.default.getActiveStreamForStreamKey(m) : null, [m]), g = (null == r ? void 0 : r.type) === eg.ParticipantTypes.STREAM && null != S && S.ownerId !== (null == n ? void 0 : n.id), C = (0, f.useStateFromStoresArray)([J.default], () => J.default.getAllActiveStreamsForChannel(l.id).filter(e => {
     let {
       ownerId: t
     } = e;
@@ -412,7 +412,7 @@ var eN = function(e) {
               closePopout: t
             } = e;
             return (0, s.jsx)(G.default, {
-              children: (0, s.jsx)(O.default, {
+              children: (0, s.jsx)(y.default, {
                 onClose: t
               })
             })
@@ -480,7 +480,7 @@ var eN = function(e) {
               suppress: m,
               popoutOpen: a,
               awaitingRemote: v,
-              onClick: () => (0, y.default)(E, m)
+              onClick: () => (0, O.default)(E, m)
             })
           }
         }), F && !x ? (0, s.jsx)("div", {

@@ -35,8 +35,8 @@ var a = n("37983"),
   R = n("607391"),
   j = n("466211"),
   L = n("683245"),
-  O = n("772442"),
-  y = n("211019"),
+  y = n("772442"),
+  O = n("211019"),
   P = n("810640"),
   b = n("170643"),
   D = n("144565"),
@@ -82,9 +82,9 @@ function G(e) {
     stream: Y,
     user: z,
     streamId: K
-  } = t, Z = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(Y.channelId)), X = (0, r.useStateFromStores)([C.default], () => C.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), J = (0, r.useStateFromStores)([C.default], () => C.default.getAllActiveStreams().length > 0), q = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), Q = (null == X ? void 0 : X.ownerId) === G, $ = Q && !q && !A, ee = null != X ? (0, m.default)(X, z, z.id === G, $) : null, et = b < 195;
+  } = t, Z = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(Y.channelId)), X = (0, r.useStateFromStores)([C.default], () => C.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), Q = (0, r.useStateFromStores)([C.default], () => C.default.getAllActiveStreams().length > 0), q = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), J = (null == X ? void 0 : X.ownerId) === G, $ = J && !q && !A, ee = null != X ? (0, m.default)(X, z, z.id === G, $) : null, et = b < 195;
   if (l.useEffect(() => {
-      !J && (null == Z ? void 0 : Z.isGuildStageVoice()) && !Q && ((0, d.watchStream)(Y), u.default.updateStageStreamSize(Y.channelId, !1))
+      !Q && (null == Z ? void 0 : Z.isGuildStageVoice()) && !J && ((0, d.watchStream)(Y), u.default.updateStageStreamSize(Y.channelId, !1))
     }, []), l.useEffect(() => {
       B.info("Stream Tile State - activeStream: ".concat(null != X, " | selected: ").concat(n, " | Video: ").concat(null != H, " | MediaEngine: ").concat(T.default.supports(F.Features.VIDEO)))
     }, [H, X, n]), W) return (0, a.jsx)(P.default, {
@@ -98,12 +98,12 @@ function G(e) {
     stream: X,
     width: b
   });
-  if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.FAILED) return (0, a.jsx)(O.default, {
+  if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.FAILED) return (0, a.jsx)(y.default, {
     selected: n,
     stream: X,
     width: b
   });
-  else if (t.type === w.ParticipantTypes.HIDDEN_STREAM) return (0, a.jsx)(y.default, {
+  else if (t.type === w.ParticipantTypes.HIDDEN_STREAM) return (0, a.jsx)(O.default, {
     selected: n,
     participant: t,
     width: b
@@ -124,7 +124,7 @@ function G(e) {
       videoComponent: H,
       fit: E,
       paused: f || $,
-      videoSpinnerContext: Q ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,
+      videoSpinnerContext: J ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,
       userId: z.id
     }, K), null != ee ? (0, a.jsx)(g.default, {
       size: (0, R.getSizeForWidth)(b),
@@ -152,7 +152,7 @@ function G(e) {
           color: "none",
           children: b < 175 ? k.default.Messages.WATCH : k.default.Messages.WATCH_STREAM
         })
-      }), J ? (0, a.jsx)(M.CallTileCTA, {
+      }), Q ? (0, a.jsx)(M.CallTileCTA, {
         className: V.addCTA,
         tooltip: k.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
         onClick: e => {

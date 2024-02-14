@@ -12,8 +12,8 @@ E("884691");
 var o = E("77078"),
   n = E("437822"),
   a = E("689988"),
-  r = E("697218"),
-  i = E("599110"),
+  i = E("697218"),
+  r = E("599110"),
   I = E("197881"),
   T = E("56676"),
   s = E("49111"),
@@ -21,7 +21,7 @@ var o = E("77078"),
 let N = "LOGIN_REQUIRED_ACTIONS_MODAL_KEY";
 class O extends a.default {
   handleConnectionOpen() {
-    let e = r.default.getCurrentUser();
+    let e = i.default.getCurrentUser();
     if (null == e || I.ProcessArgs.isDisallowPopupsSet()) return;
     let _ = T.default.requiredActionsIncludes(e.id, [s.LoginRequiredActions.UPDATE_PASSWORD]),
       a = T.default.wasLoginAttemptedInSession(e.id);
@@ -33,7 +33,7 @@ class O extends a.default {
         return (0, t.jsx)(e, {
           ..._,
           onSuccess: () => {
-            i.default.track(s.AnalyticEvents.FORCED_UPDATE_PASSWORD_SUCCEEDED), _.onClose()
+            r.default.track(s.AnalyticEvents.FORCED_UPDATE_PASSWORD_SUCCEEDED), _.onClose()
           },
           onClose: () => {
             _.onClose(), n.default.logout(s.Routes.LOGIN)

@@ -8,8 +8,8 @@ E.r(_), E.d(_, {
     return L
   }
 }), E("424973");
-var n, a, r = E("171718"),
-  i = E("446674"),
+var n, a, i = E("171718"),
+  r = E("446674"),
   I = E("913144"),
   T = E("746574"),
   s = E("995802"),
@@ -24,7 +24,7 @@ function A(e) {
       id: E
     } = _;
     return E !== e
-  }), r.default.removeToken(e)
+  }), i.default.removeToken(e)
 }
 
 function R(e, _) {
@@ -37,7 +37,7 @@ function R(e, _) {
     });
   null != t && (t.tokenStatus = _, N = E)
 }
-class l extends i.default.PersistedStore {
+class l extends r.default.PersistedStore {
   initialize(e) {
     if (null != e) {
       var _;

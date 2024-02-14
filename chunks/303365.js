@@ -12,8 +12,8 @@ E.r(_), E.d(_, {
 }), E("222007"), E("70102");
 var t, o, n = E("773179"),
   a = E.n(n),
-  r = E("102053"),
-  i = E("95410"),
+  i = E("102053"),
+  r = E("95410"),
   I = E("75247");
 let T = {
     _state: void 0,
@@ -28,7 +28,7 @@ let T = {
     return s = _, null == e._clearAllPromise && (e._clearAllPromise = new Promise(E => {
       requestIdleCallback(() => {
         e.clearPersistQueue(_), e.allPersistKeys.forEach(E => {
-          e.shouldClear(_, E) && i.default.remove(E)
+          e.shouldClear(_, E) && r.default.remove(E)
         }), I.default.getAll().forEach(E => {
           E instanceof e && e.shouldClear(_, E.getClass().persistKey) && (E._isInitialized = !1, E.initializeIfNeeded())
         }), e._clearAllPromise = null, E()
@@ -52,7 +52,7 @@ let T = {
       let _ = {};
       return e.allPersistKeys.forEach(e => {
         var E;
-        _[e] = (null !== (E = i.default.get(e)) && void 0 !== E ? E : T)._state
+        _[e] = (null !== (E = r.default.get(e)) && void 0 !== E ? E : T)._state
       }), _
     })
   }
@@ -82,25 +82,25 @@ let T = {
       } = e.migrateAndReadStoreState(this.getClass().persistKey, this.getClass().migrations);
       this.initialize(E) && this.asyncPersist(), t && this.asyncPersist(), this._isInitialized = !0;
       let o = Date.now() - _;
-      o > 5 && r.default.mark("\uD83E\uDDA5", this.getName() + ".initialize()", o)
+      o > 5 && i.default.mark("\uD83E\uDDA5", this.getName() + ".initialize()", o)
     }
   }
   static migrateAndReadStoreState(_, E) {
-    if (null != s && e.shouldClear(s, _)) return i.default.remove(_), {
+    if (null != s && e.shouldClear(s, _)) return r.default.remove(_), {
       state: void 0,
       requiresPersist: !1
     };
-    let t = null != e._clearAllPromise ? null : i.default.get(_),
+    let t = null != e._clearAllPromise ? null : r.default.get(_),
       {
         _state: o,
         _version: n,
         ...a
       } = null != t ? t : T,
-      r = null == E ? 0 : E.length;
-    if (0 !== r && n !== r && null != E) {
+      i = null == E ? 0 : E.length;
+    if (0 !== i && n !== i && null != E) {
       let e = null != n ? n : 0,
         _ = o;
-      for (null == n && (_ = a); e < r;) {
+      for (null == n && (_ = a); e < i;) {
         let t = E[e];
         _ = t(_), e++
       }
@@ -137,7 +137,7 @@ let T = {
     let {
       persistKey: e
     } = this.getClass(), _ = this.getState(), E = this._version;
-    i.default.set(e, {
+    r.default.set(e, {
       _state: _,
       _version: E
     })
@@ -146,7 +146,7 @@ let T = {
     let {
       persistKey: e
     } = this.getClass();
-    i.default.remove(e)
+    r.default.remove(e)
   }
   constructor(_, E) {
     if (super(_, E), this._version = null == this.getClass().migrations ? 0 : this.getClass().migrations.length, this.callback = _ => {

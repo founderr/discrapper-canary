@@ -11,8 +11,8 @@ var t = E("884691"),
   o = E("446674"),
   n = E("151426"),
   a = E("505093"),
-  r = E("168973"),
-  i = E("374363"),
+  i = E("168973"),
+  r = E("374363"),
   I = E("599110"),
   T = E("32531"),
   s = E("714657"),
@@ -21,7 +21,7 @@ var t = E("884691"),
   O = E("116319");
 let A = () => {
     let e = (0, o.useStateFromStores)([s.default], () => s.default.gradientPreset),
-      _ = (0, o.useStateFromStores)([r.default], () => r.default.useSystemTheme === O.SystemThemeState.ON),
+      _ = (0, o.useStateFromStores)([i.default], () => i.default.useSystemTheme === O.SystemThemeState.ON),
       [E, n] = (0, t.useState)(_);
     return (0, t.useEffect)(() => {
       null == e && n(_)
@@ -34,9 +34,9 @@ let A = () => {
       previewPaneVariant: e
     } = (0, o.useStateFromStoresObject)([s.default], () => ({
       previewPaneVariant: s.default.isPreview ? N.AnalyticsPremiumFeatureTiers.FREE : N.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
-    })), _ = (0, o.useStateFromStores)([i.default], () => {
+    })), _ = (0, o.useStateFromStores)([r.default], () => {
       var e;
-      let _ = null === (e = i.default.settings.appearance) || void 0 === e ? void 0 : e.theme;
+      let _ = null === (e = r.default.settings.appearance) || void 0 === e ? void 0 : e.theme;
       return "default ".concat(_ === n.Theme.LIGHT ? S.ThemeTypes.LIGHT : S.ThemeTypes.DARK)
     });
     return (0, t.useCallback)(E => {

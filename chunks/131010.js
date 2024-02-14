@@ -6,18 +6,18 @@ E.r(_), E.d(_, {
   }
 });
 var n, a = E("171718"),
-  r = E("913144"),
-  i = E("689988"),
+  i = E("913144"),
+  r = E("689988"),
   I = E("697218"),
   T = E("599110"),
   s = E("770032"),
   S = E("49111");
-n = class extends i.default {
+n = class extends r.default {
   _initialize() {
-    r.default.subscribe("CONNECTION_OPEN", () => this.handleConnectionOpen()), this.handleConnectionOpen()
+    i.default.subscribe("CONNECTION_OPEN", () => this.handleConnectionOpen()), this.handleConnectionOpen()
   }
   _terminate() {
-    r.default.unsubscribe("CONNECTION_OPEN", () => this.handleConnectionOpen())
+    i.default.unsubscribe("CONNECTION_OPEN", () => this.handleConnectionOpen())
   }
   constructor({
     onSwitchStart: e,
@@ -48,8 +48,8 @@ n = class extends i.default {
         o = null
       }
       t = n.id;
-      let r = a.default.getToken();
-      null != r && "" !== r && a.default.setToken(r, n.id), null === (e = this.onTokenSet) || void 0 === e || e.call(this, n)
+      let i = a.default.getToken();
+      null != i && "" !== i && a.default.setToken(i, n.id), null === (e = this.onTokenSet) || void 0 === e || e.call(this, n)
     }, this.handleLogout = e => {
       if (e.isSwitchingAccount) {
         var _;

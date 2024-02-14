@@ -56,9 +56,9 @@ var a = n("37983"),
         (0, o.ack)(x.id, !0, !0, e)
       })
     }, [x.id]);
-    let O = l.useMemo(() => null != M ? (0, C.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
+    let y = l.useMemo(() => null != M ? (0, C.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
       {
-        mostRecentQuery: y,
+        mostRecentQuery: O,
         searchFetching: P,
         searchResults: b
       } = (0, s.useStateFromStoresObject)([m.default], () => {
@@ -72,8 +72,8 @@ var a = n("37983"),
           searchResults: m.default.getSearchResults(x.id, e)
         }
       }),
-      [D, U] = l.useState(y),
-      w = "" !== y,
+      [D, U] = l.useState(O),
+      w = "" !== O,
       {
         showHubEventsList: F
       } = u.default.useExperiment({
@@ -83,7 +83,7 @@ var a = n("37983"),
         autoTrackExposure: !1
       });
     l.useEffect(() => {
-      h.fetchDirectoryEntries(x.id), h.fetchDirectoryCounts(x.id), F && f.fetchDirectoryEntries(x.id), U(y)
+      h.fetchDirectoryEntries(x.id), h.fetchDirectoryCounts(x.id), F && f.fetchDirectoryEntries(x.id), U(O)
     }, [x.id]), l.useEffect(() => {
       c.default.track(T.AnalyticEvents.GUILD_DIRECTORY_CHANNEL_VIEWED, {
         directory_channel_id: x.id,
@@ -118,18 +118,18 @@ var a = n("37983"),
     return w ? (0, a.jsx)(_.default, {
       searchQuery: D,
       setSearchQuery: U,
-      mostRecentQuery: y,
+      mostRecentQuery: O,
       handleSearchKeyPress: B,
       handleClearSearch: H,
       handleCreateOrAddGuild: V,
       searchResults: b,
       searchFetching: P
-    }) : null == O && null == A ? (0, a.jsx)("div", {
+    }) : null == y && null == A ? (0, a.jsx)("div", {
       className: v.pageContainer,
       children: (0, a.jsx)(i.Spinner, {
         className: v.spinner
       })
-    }) : (null == O ? void 0 : O.length) === 0 && null == A ? (0, a.jsx)("div", {
+    }) : (null == y ? void 0 : y.length) === 0 && null == A ? (0, a.jsx)("div", {
       className: v.pageContainer,
       children: (0, a.jsx)(S.default, {
         guild: N,
@@ -146,7 +146,7 @@ var a = n("37983"),
       handleSelectCategory: e => {
         h.selectDirectoryCategory(x.id, e)
       },
-      directoryEntries: O,
+      directoryEntries: y,
       categoryCounts: R,
       allEntriesCount: j,
       isLoading: L

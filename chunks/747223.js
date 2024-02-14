@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("564875"),
   N = n("956089"),
   R = n("439932"),
-  O = n("161011"),
-  v = n("756183"),
+  v = n("161011"),
+  O = n("756183"),
   L = n("49111"),
   M = n("586391"),
   P = n("782340"),
@@ -141,7 +141,7 @@ var x = function(e) {
         id: x,
         className: D.peopleColumn,
         "aria-labelledby": j,
-        children: x === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(O.default, {}) : (0, a.jsx)(v.default, {
+        children: x === L.FriendsSections.ADD_FRIEND ? (0, a.jsx)(v.default, {}) : (0, a.jsx)(O.default, {
           titleId: j,
           sectionFilter: x
         })

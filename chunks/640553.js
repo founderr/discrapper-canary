@@ -111,15 +111,15 @@ function T(e) {
         channelId: n
       })
     }, [n]),
-    O = l.useCallback(() => {
+    y = l.useCallback(() => {
       var e;
       null === (e = x.current) || void 0 === e || e.focus()
     }, []);
   (0, m.useComponentAction)({
     event: g.ComponentActions.FOCUS_CHAT_BUTTON,
-    handler: v ? null : O
+    handler: v ? null : y
   });
-  let [y, P] = l.useState(!1), b = l.useCallback(() => {
+  let [O, P] = l.useState(!1), b = l.useCallback(() => {
     f && P(!0)
   }, [f]);
   (0, m.useComponentAction)({
@@ -127,12 +127,12 @@ function T(e) {
     handler: b
   }), l.useEffect(() => {
     let e;
-    return y && (e = setTimeout(() => {
+    return O && (e = setTimeout(() => {
       P(!1)
     }, 3e3)), () => {
       clearTimeout(e)
     }
-  }, [y]), t = f && v ? C.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? C.default.Messages.VIDEO_CALL_HIDE_CHAT : C.default.Messages.VIDEO_CALL_SHOW_CHAT;
+  }, [O]), t = f && v ? C.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? C.default.Messages.VIDEO_CALL_HIDE_CHAT : C.default.Messages.VIDEO_CALL_SHOW_CHAT;
   let D = [t];
   return R > 0 && D.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: R
@@ -146,7 +146,7 @@ function T(e) {
     wrapperClassName: i(s, null != r && {
       [r]: A
     }),
-    forceTooltipOpen: y,
+    forceTooltipOpen: O,
     ...T
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ActivityEntryPointTile: function() {
-    return y
+    return O
   }
 }), n("222007");
 var a = n("37983"),
@@ -32,9 +32,9 @@ var a = n("37983"),
   R = n("954016"),
   j = n("782340"),
   L = n("885399"),
-  O = n("861948");
+  y = n("861948");
 
-function y(e) {
+function O(e) {
   let {
     channel: t,
     guild: n,
@@ -151,7 +151,7 @@ function b(e) {
     children: (0, a.jsxs)(A.default, {
       className: L.root,
       children: [r > 400 ? (0, a.jsx)("img", {
-        src: O,
+        src: y,
         className: L.art,
         alt: j.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
       }) : null, (0, a.jsx)(u.Text, {
@@ -266,7 +266,7 @@ function U(e) {
       className: L.root,
       children: [o > 480 ? (0, a.jsx)("img", {
         className: L.art,
-        src: O,
+        src: y,
         alt: j.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
       }) : null, o > 300 ? (0, a.jsx)(u.Text, {
         className: L.heading,

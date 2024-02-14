@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return O
   }
 }), n("222007");
 var a = n("37983"),
@@ -32,20 +32,20 @@ var a = n("37983"),
   R = n("49111"),
   j = n("782340"),
   L = n("986304");
-let O = {
+let y = {
   [M.FocusedActivityLayouts.NO_CHAT]: L.noChat,
   [M.FocusedActivityLayouts.RESIZABLE]: L.resizable
 };
 
-function y(e) {
+function O(e) {
   var t, n, s;
   let {
-    maxHeight: y,
+    maxHeight: O,
     connectedChannelId: P,
     renderExternalHeader: b
   } = e, D = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != P ? I.default.getEmbeddedActivitiesForChannel(P) : [], [P]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), k = l.useCallback(() => {
     (0, _.updateActivityPanelMode)(M.ActivityPanelModes.PIP)
-  }, []), V = l.useRef(null), B = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), H = B !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = l.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : y), Y = l.useCallback(e => {
+  }, []), V = l.useRef(null), B = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), H = B !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = l.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : O), Y = l.useCallback(e => {
     u.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
@@ -66,22 +66,22 @@ function y(e) {
     return e.observe(z.current), () => e.disconnect()
   }, []);
   let X = K.width / Math.max(K.height, 1),
-    J = X < M.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
+    Q = X < M.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
     q = 0,
-    Q = 0,
+    J = 0,
     $ = K.width,
     ee = K.height;
-  J ? ((ee = K.width / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > K.height && ($ = (ee = K.height) * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), Q = (K.height - ee) / 2) : (($ = Math.min(K.height * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > K.width && (ee = ($ = K.width) / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), q = (K.width - $) / 2);
+  Q ? ((ee = K.width / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > K.height && ($ = (ee = K.height) * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (K.height - ee) / 2) : (($ = Math.min(K.height * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > K.width && (ee = ($ = K.width) / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO), q = (K.width - $) / 2);
   let et = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId());
   if (null == D) return null;
   let en = F.get(null === (n = w[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
     ea = [];
   return null != en && (ea = Array.from(en.embeddedActivity.userIds).map(e => p.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, a.jsxs)("div", {
-    className: i(L.wrapper, O[B], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
+    className: i(L.wrapper, y[B], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
     ref: V,
     style: H && null != G ? {
       minHeight: 200,
-      maxHeight: y,
+      maxHeight: O,
       height: G
     } : void 0,
     children: [null == b ? void 0 : b(), (0, a.jsxs)("div", {
@@ -99,8 +99,8 @@ function y(e) {
         style: {
           paddingLeft: q,
           paddingRight: q,
-          paddingTop: Q,
-          paddingBottom: Q
+          paddingTop: J,
+          paddingBottom: J
         },
         ref: z,
         children: (0, a.jsx)(x.default, {
@@ -143,7 +143,7 @@ function y(e) {
       }) : null]
     }), H ? (0, a.jsx)(d.default, {
       minHeight: 480,
-      maxHeight: y,
+      maxHeight: O,
       resizableNode: V,
       onResize: e => {
         g.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {

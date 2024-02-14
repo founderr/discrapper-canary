@@ -35,7 +35,7 @@ function R(e) {
     channelId: t,
     baseChannelId: s,
     channelViewSource: R = "Split View"
-  } = e, j = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), O = (0, h.default)(j);
+  } = e, j = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), y = (0, h.default)(j);
   (function(e) {
     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i.isEmpty(I.default.getVoiceStatesForChannel(e.id)));
     l.useEffect(() => {
@@ -45,10 +45,10 @@ function R(e) {
       }), (0, S.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
     }, [t, e])
   })(j);
-  let y = l.useRef(!1);
+  let O = l.useRef(!1);
   if (l.useEffect(() => {
-      if (null == j || y.current) return;
-      y.current = !0;
+      if (null == j || O.current) return;
+      O.current = !0;
       let e = (0, f.collectThreadMetadata)(g.default.getChannel(j.id), !0);
       (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
         ...e,
@@ -72,7 +72,7 @@ function R(e) {
       "aria-label": A.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
       children: (0, E.renderTitle)({
         channel: j,
-        channelName: O,
+        channelName: y,
         guild: L,
         inSidebar: !0,
         handleContextMenu: function(e) {

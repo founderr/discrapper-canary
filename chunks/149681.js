@@ -10,30 +10,30 @@ var o = E("560208"),
   n = E("883069"),
   a = E("569808");
 E("487946"), E("337543");
-var r = E("139514"),
-  i = E("312016");
+var i = E("139514"),
+  r = E("312016");
 let I = new Set;
 
 function T(e) {
   let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (_ && !I.has(e.channel_id)) return;
-  let E = (0, i.default)(e.content);
+  let E = (0, r.default)(e.content);
   null != E && 0 !== E.length && E.forEach(e => {
     let {
       type: _,
       code: E
     } = e;
-    if (_ === r.CodedLinkType.INVITE);
-    else if (_ === r.CodedLinkType.TEMPLATE) null == a.default.getGuildTemplate(E) && n.default.resolveGuildTemplate(E);
-    else if (_ === r.CodedLinkType.BUILD_OVERRIDE || _ === r.CodedLinkType.MANUAL_BUILD_OVERRIDE);
-    else if (_ === r.CodedLinkType.EVENT);
-    else if (_ === r.CodedLinkType.CHANNEL_LINK);
-    else if (_ === r.CodedLinkType.APP_DIRECTORY_PROFILE);
-    else if (_ === r.CodedLinkType.ACTIVITY_BOOKMARK);
-    else if (_ === r.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
-    else if (_ === r.CodedLinkType.GUILD_PRODUCT);
-    else if (_ === r.CodedLinkType.SERVER_SHOP);
-    else if (_ === r.CodedLinkType.CLYDE_PROFILE);
+    if (_ === i.CodedLinkType.INVITE);
+    else if (_ === i.CodedLinkType.TEMPLATE) null == a.default.getGuildTemplate(E) && n.default.resolveGuildTemplate(E);
+    else if (_ === i.CodedLinkType.BUILD_OVERRIDE || _ === i.CodedLinkType.MANUAL_BUILD_OVERRIDE);
+    else if (_ === i.CodedLinkType.EVENT);
+    else if (_ === i.CodedLinkType.CHANNEL_LINK);
+    else if (_ === i.CodedLinkType.APP_DIRECTORY_PROFILE);
+    else if (_ === i.CodedLinkType.ACTIVITY_BOOKMARK);
+    else if (_ === i.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
+    else if (_ === i.CodedLinkType.GUILD_PRODUCT);
+    else if (_ === i.CodedLinkType.SERVER_SHOP);
+    else if (_ === i.CodedLinkType.CLYDE_PROFILE);
     else throw Error("Unknown coded link type: ".concat(_))
   })
 }

@@ -91,7 +91,7 @@ function N(e) {
     location: s,
     className: u,
     onNavigate: d
-  } = e, c = (0, r.default)([p.default], () => p.default.getUser(t), [t]), m = (0, r.default)([h.default], () => h.default.getGuild(n), [n]), N = (0, r.default)([f.default], () => f.default.getMember(n, t), [n, t]), A = (0, g.useProfileThemedPanelBackground)(t, n), M = (0, C.useUserPermissionsAndRoles)(t, n, C.ALL_PERMISSIONS), R = Object.keys(M).length, j = l.useMemo(() => null != m ? E.default.getGuildPermissionSpecMap(m) : null, [m]), L = l.useMemo(() => null != m ? E.default.generateGuildPermissionSpec(m) : null, [m]), O = l.useMemo(() => {
+  } = e, c = (0, r.default)([p.default], () => p.default.getUser(t), [t]), m = (0, r.default)([h.default], () => h.default.getGuild(n), [n]), N = (0, r.default)([f.default], () => f.default.getMember(n, t), [n, t]), A = (0, g.useProfileThemedPanelBackground)(t, n), M = (0, C.useUserPermissionsAndRoles)(t, n, C.ALL_PERMISSIONS), R = Object.keys(M).length, j = l.useMemo(() => null != m ? E.default.getGuildPermissionSpecMap(m) : null, [m]), L = l.useMemo(() => null != m ? E.default.generateGuildPermissionSpec(m) : null, [m]), y = l.useMemo(() => {
     if (null == m || null == j || null == N) return null;
     if (0 === R) return (0, a.jsx)("div", {
       className: i(v.permissionChiplet, v.noModPerms),
@@ -134,7 +134,7 @@ function N(e) {
         titleClassName: v.infoTitle,
         children: (0, a.jsx)("div", {
           className: v.permissionsItemContainer,
-          children: O
+          children: y
         })
       })
     })]

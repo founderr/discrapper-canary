@@ -41,7 +41,7 @@ function L(e) {
     location: "7152d0_1"
   }, {
     autoTrackExposure: !0
-  }), L = (0, s.useStateFromStores)([p.default], () => p.default.isLaunchingActivity()), O = (0, g.useEmbeddedActivityLaunchability)(t.id), y = (0, g.getEmbeddedActivityLaunchabilityLabel)(O), P = O !== g.EmbeddedActivityLaunchability.CAN_LAUNCH || L, {
+  }), L = (0, s.useStateFromStores)([p.default], () => p.default.isLaunchingActivity()), y = (0, g.useEmbeddedActivityLaunchability)(t.id), O = (0, g.getEmbeddedActivityLaunchabilityLabel)(y), P = y !== g.EmbeddedActivityLaunchability.CAN_LAUNCH || L, {
     isHovered: b,
     setIsHovered: D,
     onMouseEnter: U,
@@ -68,12 +68,12 @@ function L(e) {
     })
   }, [W.location, K, t, z]), X = [];
   n && !P && X.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES);
-  let J = (0, C.default)(t.id);
-  J && !P && X.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE);
+  let Q = (0, C.default)(t.id);
+  Q && !P && X.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE);
   let q = (0, f.useIsWatchTogetherPromoEnabled)(),
-    Q = (0, h.useIsWatchTogetherPromoWeek1SparklesEnabled)(),
+    J = (0, h.useIsWatchTogetherPromoWeek1SparklesEnabled)(),
     $ = (0, m.useIsWatchTogetherPromoWeek2SparklesEnabled)();
-  return q && Q && !P && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES), q && $ && !P && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES), (0, a.jsx)(x.default, {
+  return q && J && !P && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES), q && $ && !P && X.push(i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES), (0, a.jsx)(x.default, {
     contentTypes: X,
     children: e => {
       let {
@@ -108,8 +108,8 @@ function L(e) {
         children: () => (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(A.default, {
             disabled: P,
-            "aria-label": y,
-            label: H ? void 0 : y,
+            "aria-label": O,
+            label: H ? void 0 : O,
             isActivityActive: B || b,
             className: j.controlButton,
             onClick: () => {

@@ -30,8 +30,8 @@ var a, l, s = n("37983"),
   R = n("808422"),
   j = n("413882"),
   L = n("876534"),
-  O = n("843455"),
-  y = n("782340"),
+  y = n("843455"),
+  O = n("782340"),
   P = n("512908");
 let b = i.memo(function(e) {
     let {
@@ -39,7 +39,7 @@ let b = i.memo(function(e) {
       chatOpen: n
     } = e, a = (0, s.jsx)(x.default.Icon, {
       icon: I.default,
-      tooltip: y.default.Messages.CLOSE,
+      tooltip: O.default.Messages.CLOSE,
       onClick: t
     });
     return (0, s.jsxs)(x.default, {
@@ -50,9 +50,9 @@ let b = i.memo(function(e) {
       children: [(0, s.jsx)(x.default.Icon, {
         icon: v.default,
         disabled: !0,
-        "aria-label": y.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
+        "aria-label": O.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
       }), (0, s.jsx)(x.default.Title, {
-        children: y.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
+        children: O.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
       })]
     })
   }),
@@ -81,7 +81,7 @@ let b = i.memo(function(e) {
     (0, p.useSubscribeGuildMembers)(j);
     let L = a.rtsState === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 
-    function O() {
+    function y() {
       (0, N.setUserSuppress)(t, a.user.id, !1)
     }
 
@@ -144,13 +144,13 @@ let b = i.memo(function(e) {
           })
         }
       }), (0, s.jsx)(f.Tooltip, {
-        text: L ? y.default.Messages.REQUEST_TO_SPEAK_INVITATION_SEND : y.default.Messages.REQUEST_TO_SPEAK_ACCEPT,
+        text: L ? O.default.Messages.REQUEST_TO_SPEAK_INVITATION_SEND : O.default.Messages.REQUEST_TO_SPEAK_ACCEPT,
         children: e => (0, s.jsx)(f.Button, {
           ...e,
           innerClassName: P.buttonContainer,
           look: f.Button.Looks.BLANK,
           size: f.Button.Sizes.NONE,
-          onClick: O,
+          onClick: y,
           disabled: L || r,
           children: (0, s.jsx)(T.default, {
             width: 16,
@@ -158,7 +158,7 @@ let b = i.memo(function(e) {
           })
         })
       }), (0, s.jsx)(f.Tooltip, {
-        text: y.default.Messages.REQUEST_TO_SPEAK_DECLINE,
+        text: O.default.Messages.REQUEST_TO_SPEAK_DECLINE,
         children: e => (0, s.jsx)(f.Button, {
           ...e,
           innerClassName: o(P.buttonContainer, P.buttonMargin),
@@ -181,7 +181,7 @@ let b = i.memo(function(e) {
       className: P.toggle,
       onChange: a,
       value: n,
-      children: y.default.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
+      children: O.default.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
     })
   }),
   w = i.memo(function() {
@@ -191,12 +191,12 @@ let b = i.memo(function(e) {
         className: P.emptyStateTitle,
         variant: "text-lg/semibold",
         color: "header-primary",
-        children: y.default.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_TITLE
+        children: O.default.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_TITLE
       }), (0, s.jsx)(f.Text, {
         className: P.emptyStateBody,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: y.default.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_BODY
+        children: O.default.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_BODY
       })]
     })
   });
@@ -206,7 +206,7 @@ function F(e) {
     channel: t,
     toggleRequestToSpeakSidebar: n,
     chatOpen: a
-  } = e, l = (0, A.useSortedRequestToSpeakParticipants)(t.id), i = (0, c.useStateFromStores)([C.default], () => C.default.can(O.Permissions.MANAGE_CHANNELS, t) || C.default.can(O.Permissions.MANAGE_ROLES, t)), r = [i ? 1 : 0, Math.max(1, l.length)];
+  } = e, l = (0, A.useSortedRequestToSpeakParticipants)(t.id), i = (0, c.useStateFromStores)([C.default], () => C.default.can(y.Permissions.MANAGE_CHANNELS, t) || C.default.can(y.Permissions.MANAGE_ROLES, t)), r = [i ? 1 : 0, Math.max(1, l.length)];
   return (0, s.jsxs)("div", {
     className: o(P.container, {
       [P.chatOpen]: a
@@ -261,9 +261,9 @@ function F(e) {
           className: P.listTitle,
           variant: "text-xs/bold",
           color: "header-secondary",
-          children: l.length > 0 ? y.default.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({
+          children: l.length > 0 ? O.default.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({
             numHands: l.length
-          }) : y.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
+          }) : O.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
         }, "participants-section");
         return null
       }

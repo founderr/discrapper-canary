@@ -8,8 +8,8 @@ var t = E("37983"),
   o = E("884691"),
   n = E("868233"),
   a = E("446674"),
-  r = E("773336"),
-  i = E("370492"),
+  i = E("773336"),
+  r = E("370492"),
   I = E("584369");
 let T = (0, n.makeLazy)({
   createPromise: () => E.el("304207").then(E.bind(E, "304207")),
@@ -26,8 +26,8 @@ function s(e) {
     devToolsEnabled: I.default.devToolsEnabled,
     displayTools: I.default.displayTools
   })), s = o.useCallback(e => {
-    let _ = (0, r.isMac)() ? e.metaKey : e.ctrlKey;
-    _ && e.altKey && "KeyO" === e.code && (0, i.toggleDisplayDevTools)()
+    let _ = (0, i.isMac)() ? e.metaKey : e.ctrlKey;
+    _ && e.altKey && "KeyO" === e.code && (0, r.toggleDisplayDevTools)()
   }, []);
   return (o.useLayoutEffect(() => (window.addEventListener("keydown", s), () => {
     window.removeEventListener("keydown", s)

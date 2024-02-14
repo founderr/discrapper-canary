@@ -8,8 +8,8 @@ var t = E("446674"),
   o = E("95410"),
   n = E("913144"),
   a = E("915639"),
-  r = E("234222");
-let i = {},
+  i = E("234222");
+let r = {},
   I = {},
   T = null,
   s = null,
@@ -32,14 +32,14 @@ class L extends t.default.Store {
   }
   getChangelog(e, _) {
     var E, t;
-    return null !== (t = null === (E = i[e]) || void 0 === E ? void 0 : E[_]) && void 0 !== t ? t : null
+    return null !== (t = null === (E = r[e]) || void 0 === E ? void 0 : E[_]) && void 0 !== t ? t : null
   }
   latestChangelogId() {
     return T
   }
   getChangelogLoadStatus(e, _) {
     var E, t;
-    return null !== (t = null === (E = I[e]) || void 0 === E ? void 0 : E[_]) && void 0 !== t ? t : r.ChangelogLoadState.NOT_LOADED
+    return null !== (t = null === (E = I[e]) || void 0 === E ? void 0 : E[_]) && void 0 !== t ? t : i.ChangelogLoadState.NOT_LOADED
   }
   hasLoadedConfig() {
     return null != S
@@ -96,22 +96,22 @@ var u = new L(n.default, {
       id: _,
       changelog: E
     } = e;
-    null == i[_] && (i[_] = {}), i[_][E.locale] = {
+    null == r[_] && (r[_] = {}), r[_][E.locale] = {
       id: _,
       date: E.date,
       body: E.content,
       revision: 1,
       locale: E.locale,
-      [E.asset_type === r.AssetType.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: E.asset
-    }, null == I[_] && (I[_] = {}), I[_][E.locale] = r.ChangelogLoadState.LOADED_SUCCESS
+      [E.asset_type === i.AssetType.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: E.asset
+    }, null == I[_] && (I[_] = {}), I[_][E.locale] = i.ChangelogLoadState.LOADED_SUCCESS
   },
   CHANGE_LOG_FETCH_FAILED: function(e) {
     let {
       id: _,
       locale: E
     } = e;
-    if (null != i[_] && null != i[_][E]) return !1;
-    null == I[_] && (I[_] = {}), I[_][E] = r.ChangelogLoadState.LOADED_FAILURE
+    if (null != r[_] && null != r[_][E]) return !1;
+    null == I[_] && (I[_] = {}), I[_][E] = i.ChangelogLoadState.LOADED_FAILURE
   },
   CHANGE_LOG_SET_OVERRIDE: function(e) {
     let {

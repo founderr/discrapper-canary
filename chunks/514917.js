@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("765698"),
   j = n("506885"),
   L = n("217513"),
-  O = n("893980"),
-  y = n("58351"),
+  y = n("893980"),
+  O = n("58351"),
   P = n("430312"),
   b = n("789321"),
   D = n("627601"),
@@ -51,9 +51,9 @@ var a = n("37983"),
   K = n("104649"),
   Z = n("80615"),
   X = n("80531"),
-  J = n("590456"),
+  Q = n("590456"),
   q = n("49111"),
-  Q = n("646718"),
+  J = n("646718"),
   $ = n("782340"),
   ee = n("620310"),
   et = e => {
@@ -61,7 +61,7 @@ var a = n("37983"),
     let {
       channel: n,
       showCall: s
-    } = e, r = n.recipients[0], [et, en] = l.useState(!1), ea = l.useRef(0), el = (0, y.default)(), es = (0, u.useStateFromStores)([v.default], () => v.default.getUser(r)), ei = null == es ? void 0 : es.isNonUserBot();
+    } = e, r = n.recipients[0], [et, en] = l.useState(!1), ea = l.useRef(0), el = (0, O.default)(), es = (0, u.useStateFromStores)([v.default], () => v.default.getUser(r)), ei = null == es ? void 0 : es.isNonUserBot();
     o(null != es, "Profile Panel: user cannot be undefined");
     let er = (0, L.default)(es.id),
       {
@@ -125,14 +125,14 @@ var a = n("37983"),
       ej = (0, G.useGetVoiceChannelInfoForVoiceActivitySection)(es.id),
       eL = null != ej && !eg && null == eE,
       {
-        showVoiceActivityInProfile: eO
+        showVoiceActivityInProfile: ey
       } = R.VoiceActivityProfileExperiment.useExperiment({
         location: "user DM panel"
       }, {
         autoTrackExposure: eL && ef
       }),
       {
-        enabled: ey
+        enabled: eO
       } = m.default.useExperiment({
         location: "user DM panel"
       }, {
@@ -153,7 +153,7 @@ var a = n("37983"),
         withMutualFriendsCount: !es.bot
       })
     }, [es]), l.useEffect(() => {
-      null != er && ef && (0, O.trackProfilePanelViewed)({
+      null != er && ef && (0, y.trackProfilePanelViewed)({
         displayProfile: er,
         isMobile: eC,
         loadDurationMs: Date.now() - ea.current,
@@ -185,7 +185,7 @@ var a = n("37983"),
       onMouseLeave: eH,
       children: (0, a.jsxs)(P.default, {
         user: es,
-        profileType: J.UserProfileTypes.PANEL,
+        profileType: Q.UserProfileTypes.PANEL,
         useDefaultClientTheme: !0,
         children: [eD.shouldShow && (0, a.jsx)(b.default, {
           user: es,
@@ -222,7 +222,7 @@ var a = n("37983"),
               setNote: !1,
               hideNote: !1
             })]
-          }), eO && eL ? (0, a.jsx)(P.default.Inner, {
+          }), ey && eL ? (0, a.jsx)(P.default.Inner, {
             children: (0, a.jsx)(G.default, {
               voiceGuild: ej.voiceGuild,
               voiceChannel: ej.voiceChannel,
@@ -294,7 +294,7 @@ var a = n("37983"),
                 })]
               })]
             })
-          }), ey && (0, a.jsx)("div", {
+          }), eO && (0, a.jsx)("div", {
             className: ee.giftButtonContainer,
             children: (0, a.jsx)(p.default, {
               className: ee.giftButton,
@@ -303,7 +303,7 @@ var a = n("37983"),
               buttonTextClassName: ee.giftButtonCTA,
               color: d.Button.Colors.CUSTOM,
               giftRecipient: es,
-              subscriptionTier: Q.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: J.PremiumSubscriptionSKUs.TIER_2,
               premiumModalAnalyticsLocation: {
                 section: q.AnalyticsSections.DM_PROFILE
               }

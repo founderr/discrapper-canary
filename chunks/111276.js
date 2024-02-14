@@ -8,8 +8,8 @@ var t = E("689988"),
   o = E("305961"),
   n = E("718517"),
   a = E("299039"),
-  r = E("388142"),
-  i = E("711454"),
+  i = E("388142"),
+  r = E("711454"),
   I = E("578899");
 let T = 0;
 class s extends t.default {
@@ -27,11 +27,11 @@ class s extends t.default {
           guildId: e,
           location: "manager"
         }).triggerDeadchat);
-      _.length > 0 && (T = Date.now(), (0, r.initiateChannelPrompts)(_))
+      _.length > 0 && (T = Date.now(), (0, i.initiateChannelPrompts)(_))
     }, this._triggerGamingStatsSetupExperiment = () => {
       let e = o.default.getGuilds();
       a.default.keys(e).forEach(e => {
-        i.GamingStatsSetupExperiment.trackExposure({
+        r.GamingStatsSetupExperiment.trackExposure({
           guildId: e,
           location: "manager"
         })

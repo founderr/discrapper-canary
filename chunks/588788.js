@@ -8,8 +8,8 @@ var t = E("862337"),
   o = E("689988"),
   n = E("575365"),
   a = E("42203"),
-  r = E("42887"),
-  i = E("945956"),
+  i = E("42887"),
+  r = E("945956"),
   I = E("568307"),
   T = E("101125"),
   s = E("280168"),
@@ -20,55 +20,55 @@ var t = E("862337"),
 let R = 1 * N.default.Millis.MINUTE;
 class l extends o.default {
   _initialize() {
-    __OVERLAY__ ? this.stores = new Map : (this.stores = new Map().set(s.default, () => this._handleSpeakingStoreChanged()).set(i.default, () => this._handleRTCConnectionStoreChanged()), this._reset())
+    __OVERLAY__ ? this.stores = new Map : (this.stores = new Map().set(s.default, () => this._handleSpeakingStoreChanged()).set(r.default, () => this._handleRTCConnectionStoreChanged()), this._reset())
   }
   _reset() {
     this._currentUserSpeaking = !1, this._anyoneElseSpeaking = !1, null != this._reportInterval && (this._reportInterval.stop(), this._reportInterval = null)
   }
   _trackStartSpeaking() {
     if (this._currentUserSpeaking) {
-      let e = i.default.getChannelId(),
-        _ = i.default.getGuildId(),
+      let e = r.default.getChannelId(),
+        _ = r.default.getGuildId(),
         E = a.default.getChannel(e),
         t = null == E ? void 0 : E.isBroadcastChannel();
       (0, O.trackWithMetadata)(A.AnalyticEvents.START_SPEAKING, {
-        mode: r.default.getMode(),
+        mode: i.default.getMode(),
         priority: s.default.isCurrentUserPrioritySpeaking(),
         channel: e,
         server: _,
         channel_id: e,
         guild_id: _,
         is_broadcast: t,
-        rtc_connection_id: i.default.getRTCConnectionId(),
-        media_session_id: i.default.getMediaSessionId(),
+        rtc_connection_id: r.default.getRTCConnectionId(),
+        media_session_id: r.default.getMediaSessionId(),
         voice_state_count: S.default.countVoiceStatesForChannel(this._voiceChannelId),
         ...this.getGameMetadata(),
-        ...i.default.getPacketStats()
+        ...r.default.getPacketStats()
       })
     }
   }
   _trackStartListening() {
-    if (r.default.isDeaf() || !this._anyoneElseSpeaking) return;
-    let e = i.default.getChannelId(),
-      _ = i.default.getGuildId(),
+    if (i.default.isDeaf() || !this._anyoneElseSpeaking) return;
+    let e = r.default.getChannelId(),
+      _ = r.default.getGuildId(),
       E = a.default.getChannel(e),
       t = null == E ? void 0 : E.isBroadcastChannel();
     (0, O.trackWithMetadata)(A.AnalyticEvents.START_LISTENING, {
-      mute: r.default.isMute(),
+      mute: i.default.isMute(),
       anyone_priority: s.default.isAnyonePrioritySpeaking(),
       channel: e,
       server: _,
       channel_id: e,
       guild_id: _,
       is_broadcast: t,
-      rtc_connection_id: i.default.getRTCConnectionId(),
-      media_session_id: i.default.getMediaSessionId(),
+      rtc_connection_id: r.default.getRTCConnectionId(),
+      media_session_id: r.default.getMediaSessionId(),
       voice_state_count: S.default.countVoiceStatesForChannel(this._voiceChannelId),
       ...this.getGameMetadata()
     })
   }
   _terminate() {
-    this._reset(), s.default.removeChangeListener(this._handleSpeakingStoreChanged), i.default.removeChangeListener(this._handleRTCConnectionStoreChanged)
+    this._reset(), s.default.removeChangeListener(this._handleSpeakingStoreChanged), r.default.removeChangeListener(this._handleRTCConnectionStoreChanged)
   }
   getGameMetadata() {
     let e = T.default.findActivity(e => e.type === A.ActivityTypes.PLAYING),
@@ -82,7 +82,7 @@ class l extends o.default {
   }
   constructor(...e) {
     super(...e), this._currentUserSpeaking = !1, this._anyoneElseSpeaking = !1, this._handleRTCConnectionStoreChanged = () => {
-      let e = i.default.getChannelId();
+      let e = r.default.getChannelId();
       if (this._voiceChannelId !== e) {
         if (this._voiceChannelId = e, null == e) {
           this._reset();

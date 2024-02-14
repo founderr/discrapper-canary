@@ -28,8 +28,8 @@ var s = n("316693"),
   A = n("42203"),
   N = n("305961"),
   R = n("18494"),
-  O = n("162771"),
-  v = n("697218"),
+  v = n("162771"),
+  O = n("697218"),
   L = n("287850"),
   M = n("831588"),
   P = n("718517"),
@@ -77,24 +77,24 @@ function Q() {
       version: k,
       channels: Z(),
       guilds: function() {
-        let e = N.default.getGuild(O.default.getGuildId());
+        let e = N.default.getGuild(v.default.getGuildId());
         return null != e ? [e] : []
       }(),
       users: function(e) {
         let t = new Set;
         e.forEach(e => {
           e.isPrivate() && e.recipients.forEach(e => {
-            let n = v.default.getUser(e);
+            let n = O.default.getUser(e);
             null != n && t.add(n)
           })
         }), L.default.getPrivateChannelIds().forEach(e => {
           let n = A.default.getChannel(e);
           (null == n ? void 0 : n.isPrivate()) && n.recipients.forEach(e => {
-            let n = v.default.getUser(e);
+            let n = O.default.getUser(e);
             null != n && t.add(n)
           })
         });
-        let n = v.default.getCurrentUser();
+        let n = O.default.getCurrentUser();
         return null != n && t.add(n), Array.from(t)
       }(e)
     };
@@ -164,20 +164,20 @@ async function ee(e, t, n) {
   j.verbose("loading early cache");
   let f = m.default.getSocket();
   f.connect();
-  let I = null !== (s = O.default.getGuildId()) && void 0 !== s ? s : null,
+  let I = null !== (s = v.default.getGuildId()) && void 0 !== s ? s : null,
     S = null !== (i = R.default.getChannelId()) && void 0 !== i ? i : null,
     p = performance.now(),
     g = T.default.loadCachedMessages.measureAsyncWithoutNesting(() => J(e, I, S)),
     A = T.default.loadMiniCache.measureAsyncWithoutNesting($),
     N = T.default.fetchInitialGuildCache.measureAsync(() => et(e, f, n)),
-    v = null != e && "private-channels" === n.page ? a.default.timeAsync("\uD83D\uDCBE", "cache: private_channels", () => C.default.getAsync(e, null)) : Promise.resolve([]),
+    O = null != e && "private-channels" === n.page ? a.default.timeAsync("\uD83D\uDCBE", "cache: private_channels", () => C.default.getAsync(e, null)) : Promise.resolve([]),
     L = null == e ? Promise.resolve({}) : a.default.timeAsync("\uD83D\uDCBE", "cache: user_settings", () => _.default.getAll(e)),
     M = null == e ? Promise.resolve([]) : a.default.timeAsync("\uD83D\uDCBE", "cache: read_states", () => E.default.getAll(e)),
     P = null == e ? Promise.resolve([]) : a.default.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => h.default.getAll(e)),
     [
       [D, y],
       [x, b], G, w, k, F, B
-    ] = await Promise.all([A, g, N, v, L, M, P]),
+    ] = await Promise.all([A, g, N, O, L, M, P]),
     H = performance.now() - p;
   if (j.verbose("cache loaded in ".concat(H, "ms (legacy ").concat(D, "ms, channel_history ").concat(x, "ms)")), null == y || null == b) return null == y && null == b ? (0, U.default)("database:legacy_and_history_cache_null") : null == y ? (0, U.default)("database:legacy_cache_null") : (0, U.default)("database:history_cache_null"), j.verbose("finished without dispatching CACHE_LOADED"), [!1, null, 0];
   {
@@ -310,13 +310,13 @@ async function en(e, t, n, s, l) {
         let [n, a] = t;
         return e + a.length
       }, 0),
-      O = N - R,
-      v = 0 === _.stale.length ? "" : " \xb7 ".concat(_.stale.join(", "));
-    j.verbose("lazy_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: ".concat(t, "\n          nonce: ").concat(c, "\n          initial_guild: ").concat(n, "\n          database: ").concat(null != e, "\n            ok: ").concat(E, "\n            name: ").concat(null == e ? void 0 : e.name, "\n        data:\n          database:\n            guilds: ").concat(h.length, "\n            private_channels: ").concat("private-channels" === s.page ? "skipped" : I.length, "\n            basic_channels:\n              total: ").concat(N, " (").concat(_.channels.length, " guilds)\n              stale: ").concat(O, " (").concat(_.stale.length, " guilds").concat(v, ")\n              unstale: ").concat(R, "\n            full_channels (guilds_with_stale_basic_channels):\n              total: ").concat(g, " (").concat(S.length, " guilds)\n          legacy:\n              saveable_channels: ").concat(null === (i = m.saveableChannels) || void 0 === i ? void 0 : null === (a = i.channels) || void 0 === a ? void 0 : a.length, "\n              users: ").concat(null === (o = m.users) || void 0 === o ? void 0 : o.length, "\n      )")), T.default.setCacheInfo({
+      v = N - R,
+      O = 0 === _.stale.length ? "" : " \xb7 ".concat(_.stale.join(", "));
+    j.verbose("lazy_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: ".concat(t, "\n          nonce: ").concat(c, "\n          initial_guild: ").concat(n, "\n          database: ").concat(null != e, "\n            ok: ").concat(E, "\n            name: ").concat(null == e ? void 0 : e.name, "\n        data:\n          database:\n            guilds: ").concat(h.length, "\n            private_channels: ").concat("private-channels" === s.page ? "skipped" : I.length, "\n            basic_channels:\n              total: ").concat(N, " (").concat(_.channels.length, " guilds)\n              stale: ").concat(v, " (").concat(_.stale.length, " guilds").concat(O, ")\n              unstale: ").concat(R, "\n            full_channels (guilds_with_stale_basic_channels):\n              total: ").concat(g, " (").concat(S.length, " guilds)\n          legacy:\n              saveable_channels: ").concat(null === (i = m.saveableChannels) || void 0 === i ? void 0 : null === (a = i.channels) || void 0 === a ? void 0 : a.length, "\n              users: ").concat(null === (o = m.users) || void 0 === o ? void 0 : o.length, "\n      )")), T.default.setCacheInfo({
       guilds: h.length,
       privateChannels: l + I.length,
       basicChannels: N,
-      basicChannelsStale: O,
+      basicChannelsStale: v,
       fullChannels: g,
       fullChannelGuilds: A
     })

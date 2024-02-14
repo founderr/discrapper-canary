@@ -48,12 +48,12 @@ t = class extends o.FrameLoop {
           e >= 0 && this.timeoutQueue.splice(e, 1)
         },
         a = n(this.timeoutQueue, e => e.time > E),
-        r = {
+        i = {
           time: E,
           handler: e,
           cancel: t
         };
-      return this.timeoutQueue.splice(a, 0, r), this.startLoop(), r
+      return this.timeoutQueue.splice(a, 0, i), this.startLoop(), i
     }, this.onFrame = e => {
       this.frameQueue.add(e), this.startLoop()
     }, this.onWrite = e => {

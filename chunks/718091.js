@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("679653"),
   j = n("52393"),
   L = n("393414"),
-  O = n("233069"),
-  y = n("42203"),
+  y = n("233069"),
+  O = n("42203"),
   P = n("330154"),
   b = n("501090"),
   D = n("945956"),
@@ -51,9 +51,9 @@ var a = n("37983"),
   K = n("659500"),
   Z = n("449008"),
   X = n("158998"),
-  J = n("993063"),
+  Q = n("993063"),
   q = n("849324"),
-  Q = n("49111"),
+  J = n("49111"),
   $ = n("782340"),
   ee = n("366160"),
   et = n("182893"),
@@ -87,7 +87,7 @@ let ei = e => {
     });
     return (0, a.jsx)(m.Clickable, {
       onClick: () => {
-        (0, L.transitionToGuild)(Q.ME, n.id), l()
+        (0, L.transitionToGuild)(J.ME, n.id), l()
       },
       children: (0, a.jsxs)("div", {
         className: ee.confirmChannelItemContainer,
@@ -110,7 +110,7 @@ let ei = e => {
       onConfirm: t,
       channelIds: n,
       ...l
-    } = e, s = (0, h.useStateFromStoresArray)([y.default], () => Array.from(n).map(y.default.getChannel), [n]);
+    } = e, s = (0, h.useStateFromStoresArray)([O.default], () => Array.from(n).map(O.default.getChannel), [n]);
     return (0, a.jsxs)(m.ConfirmModal, {
       header: $.default.Messages.GROUP_DM_INVITE_CONFIRM,
       confirmText: $.default.Messages.GROUP_DM_INVITE_CONFIRM_BUTTON,
@@ -145,23 +145,23 @@ class eo extends l.PureComponent {
     } = this.props;
     p.default.wait(() => _.default.open(null == e ? void 0 : e.id));
     let t = (0, N.collectChannelAnalyticsMetadata)(e);
-    null != e ? e.isDM() ? Y.default.track(Q.AnalyticEvents.OPEN_POPOUT, {
+    null != e ? e.isDM() ? Y.default.track(J.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "Add Friends to DM",
       source: "DM",
       is_friend: !this.isNotFriends()
-    }) : Y.default.track(Q.AnalyticEvents.OPEN_POPOUT, {
+    }) : Y.default.track(J.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "Add Friends to DM",
       source: "Group DM"
-    }) : Y.default.track(Q.AnalyticEvents.OPEN_POPOUT, {
+    }) : Y.default.track(J.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "New Group DM",
       source: "Friends List"
-    }), K.ComponentDispatch.subscribe(Q.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), K.ComponentDispatch.subscribe(Q.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown)
+    }), K.ComponentDispatch.subscribe(J.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), K.ComponentDispatch.subscribe(J.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown)
   }
   componentWillUnmount() {
-    K.ComponentDispatch.unsubscribe(Q.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), K.ComponentDispatch.unsubscribe(Q.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), p.default.wait(() => _.default.close())
+    K.ComponentDispatch.unsubscribe(J.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), K.ComponentDispatch.unsubscribe(J.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), p.default.wait(() => _.default.close())
   }
   isNotFriends() {
     let {
@@ -179,14 +179,14 @@ class eo extends l.PureComponent {
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
     let {
       inviteMaxAgeSeconds: t
-    } = J.default.getCurrentConfig({
+    } = Q.default.getCurrentConfig({
       location: "5326c5_1"
     }, {
       autoTrackExposure: !1
     });
     C.default.createInvite(e.id, {
       max_age: t
-    }, Q.InstantInviteSources.GROUP_DM)
+    }, J.InstantInviteSources.GROUP_DM)
   }
   isPartyFull() {
     let {
@@ -198,7 +198,7 @@ class eo extends l.PureComponent {
     let {
       channel: e
     } = this.props, t = k.default.getCurrentUser();
-    return null != t && t.isStaff() ? Q.MAX_GROUP_DM_STAFF_PARTICIPANTS : null != e && e.isBroadcastChannel() ? Q.MAX_GROUP_DM_BROADCAST_PARTICIPANTS : null != e && e.userLimit > 0 ? e.userLimit : Q.MAX_GROUP_DM_PARTICIPANTS
+    return null != t && t.isStaff() ? J.MAX_GROUP_DM_STAFF_PARTICIPANTS : null != e && e.isBroadcastChannel() ? J.MAX_GROUP_DM_BROADCAST_PARTICIPANTS : null != e && e.userLimit > 0 ? e.userLimit : J.MAX_GROUP_DM_PARTICIPANTS
   }
   getRemaining() {
     let {
@@ -319,7 +319,7 @@ class eo extends l.PureComponent {
       if (null == t) throw Error("no recipient in DM");
       let n = k.default.getUser(t),
         l = null != n ? n.username : "",
-        s = null != n && w.default.getRelationshipType(n.id) === Q.RelationshipTypes.PENDING_OUTGOING;
+        s = null != n && w.default.getRelationshipType(n.id) === J.RelationshipTypes.PENDING_OUTGOING;
       return (0, a.jsxs)(es, {
         className: ee.notFriends,
         children: [(0, a.jsx)("div", {
@@ -578,7 +578,7 @@ class eo extends l.PureComponent {
       } = this.props, l = !t.has(e);
       l ? (_.default.addUser(e), n.length > 0 && _.default.clear(null == a ? void 0 : a.id)) : _.default.removeUser(e), this.forceFocus()
     }, this.handleAddFriendNavigation = () => {
-      (0, L.transitionTo)(Q.Routes.FRIENDS), g.default.setSection(Q.FriendsSections.ADD_FRIEND), this.props.onClose()
+      (0, L.transitionTo)(J.Routes.FRIENDS), g.default.setSection(J.FriendsSections.ADD_FRIEND), this.props.onClose()
     }, this.handleScroll = () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({
@@ -588,7 +588,7 @@ class eo extends l.PureComponent {
       S.default.openPrivateChannel(e, !1, !1, "New Group DM")
     }, this.pushToExistingDM = (e, t) => {
       let n = D.default.getChannelId() === e.id;
-      S.default.addRecipients(e.id, t, Q.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
+      S.default.addRecipients(e.id, t, J.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
         if (n) {
           if (e.isDM() && a !== e.id) {
             E.default.call(a, !1, !0);
@@ -630,11 +630,11 @@ class eo extends l.PureComponent {
         this.setState({
           copied: !1
         })
-      }, 1e3), Y.default.track(Q.AnalyticEvents.COPY_INSTANT_INVITE, {
+      }, 1e3), Y.default.track(J.AnalyticEvents.COPY_INSTANT_INVITE, {
         server: null,
         channel: null != t ? t.id : null,
         channel_type: null != t ? t.type : null,
-        location: Q.AnalyticsLocations.ADD_FRIENDS_TO_DM,
+        location: J.AnalyticsLocations.ADD_FRIENDS_TO_DM,
         code: null != n ? n.code : null
       })
     }
@@ -664,8 +664,8 @@ function ed(e) {
     popoutAlign: u = "right",
     subscribeToGlobalHotkey: d = !1
   } = e, [c, f] = l.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), h = (0, A.useIsBroadcastingGDM)(null == t ? void 0 : t.id), p = l.useCallback(() => f(e => !e), []);
-  return (l.useEffect(() => (d && K.ComponentDispatch.subscribe(Q.ComponentActions.TOGGLE_DM_CREATE, p), () => {
-    K.ComponentDispatch.unsubscribe(Q.ComponentActions.TOGGLE_DM_CREATE, p)
+  return (l.useEffect(() => (d && K.ComponentDispatch.subscribe(J.ComponentActions.TOGGLE_DM_CREATE, p), () => {
+    K.ComponentDispatch.unsubscribe(J.ComponentActions.TOGGLE_DM_CREATE, p)
   }), [d, p]), h) ? null : (0, a.jsx)(m.Popout, {
     renderPopout: e => (0, a.jsx)(eu, {
       ...e,
@@ -691,7 +691,7 @@ function ed(e) {
 
 function ec(e) {
   let t = ef(e);
-  return new Set(o(y.default.getMutablePrivateChannels()).values().filter(e => (0, O.isMultiUserDM)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value())
+  return new Set(o(O.default.getMutablePrivateChannels()).values().filter(e => (0, y.isMultiUserDM)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value())
 }
 
 function ef(e) {

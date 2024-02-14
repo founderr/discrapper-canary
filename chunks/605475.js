@@ -14,8 +14,8 @@ var t = E("917351"),
   o = E.n(t),
   n = E("915934"),
   a = E("217696"),
-  r = E("766249"),
-  i = E("512772"),
+  i = E("766249"),
+  r = E("512772"),
   I = E("947146"),
   T = E("301071"),
   s = E("162551"),
@@ -96,7 +96,7 @@ let h = 60,
     name: M.default.Messages.APP_ICON_CHERRY_BLOSSOM
   }, {
     id: U.PremiumAppIconIds.BEANIE,
-    iconSource: r,
+    iconSource: i,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_BEANIE
   }, {
@@ -116,7 +116,7 @@ let h = 60,
     name: M.default.Messages.APP_ICON_HOLO_WAVES
   }, {
     id: U.PremiumAppIconIds.BLUSH,
-    iconSource: i,
+    iconSource: r,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_BLUSH
   }, {

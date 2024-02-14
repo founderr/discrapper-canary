@@ -1,54 +1,54 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return m
   }
 });
 var a = n("37983"),
-  s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+  l = n("884691"),
+  s = n("414456"),
+  i = n.n(s),
   r = n("446674"),
   o = n("669491"),
   u = n("77078"),
   d = n("915639"),
   c = n("240481"),
   f = n("227231"),
-  E = n("220350"),
-  h = function(e) {
+  h = n("220350"),
+  m = function(e) {
     let {
       className: t,
-      color: n = o.default.colors.WHITE.css,
-      quest: l
-    } = e, h = (0, r.useStateFromStores)([d.default], () => d.default.locale), _ = s.useMemo(() => (0, f.calculatePercentComplete)(l), [l]), C = 100 * _;
+      color: n = o.default.colors.WHITE,
+      quest: s
+    } = e, m = (0, r.useStateFromStores)([d.default], () => d.default.locale), p = l.useMemo(() => (0, f.calculatePercentComplete)(s), [s]), E = 100 * p;
     return (0, a.jsxs)("div", {
-      className: i(E.wrapper, t),
+      className: i(h.wrapper, t),
       style: {
-        color: n
+        color: n.css
       },
       children: [(0, a.jsxs)("div", {
-        className: E.percentCompleteWrapper,
+        className: h.percentCompleteWrapper,
         children: [(0, a.jsx)(u.Text, {
           variant: "text-xs/semibold",
-          className: E.percentCompleteLabel,
+          className: h.percentCompleteLabel,
           color: "none",
-          children: (0, c.formatPercent)(h, _, {
+          children: (0, c.formatPercent)(m, p, {
             roundingMode: "floor"
           })
         }), (0, a.jsx)("div", {
-          className: E.percentCompleteLabelOffset,
+          className: h.percentCompleteLabelOffset,
           style: {
-            width: "".concat(100 - C, "%")
+            width: "".concat(100 - E, "%")
           }
         })]
       }), (0, a.jsx)("div", {
-        className: E.progressBar,
+        className: h.progressBar,
         role: "progressbar",
-        "aria-valuenow": C,
+        "aria-valuenow": E,
         children: (0, a.jsx)("div", {
-          className: E.progressBarFill,
+          className: h.progressBarFill,
           style: {
-            width: "".concat(C, "%")
+            width: "".concat(E, "%")
           }
         })
       })]

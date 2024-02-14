@@ -9,8 +9,8 @@ E("884691");
 var o = E("917351"),
   n = E("77078"),
   a = E("913144"),
-  r = E("629109"),
-  i = E("990766"),
+  i = E("629109"),
+  r = E("990766"),
   I = E("845579"),
   T = E("373469"),
   s = E("271938"),
@@ -22,7 +22,7 @@ var o = E("917351"),
   l = E("16916"),
   L = E("706530"),
   u = E("49111");
-let C = (0, o.debounce)(i.notifyStreamStart, 1e3);
+let C = (0, o.debounce)(r.notifyStreamStart, 1e3);
 var D = {
   init() {
     A.default.init(), a.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
@@ -31,10 +31,10 @@ var D = {
       } = e, E = T.default.getCurrentUserActiveStream();
       if (null != E) {
         let e = _ === u.MediaEngineVideoStates.PAUSED;
-        (0, i.setStreamPaused)(E, e)
+        (0, r.setStreamPaused)(E, e)
       }
     }), a.default.subscribe("STREAM_DELETE", e => {
-      e.reason === u.ApplicationStreamDeleteReasons.STREAM_FULL && ((0, i.closeStream)(e.streamKey, !1), (0, n.openModalLazy)(async () => {
+      e.reason === u.ApplicationStreamDeleteReasons.STREAM_FULL && ((0, r.closeStream)(e.streamKey, !1), (0, n.openModalLazy)(async () => {
         let {
           default: e
         } = await E.el("748168").then(E.bind(E, "748168"));
@@ -50,7 +50,7 @@ var D = {
       if (E) return;
       let t = (0, R.decodeStreamKey)(_);
       T.default.getAllActiveStreams().forEach(e => {
-        if (e.ownerId !== t.ownerId) e.ownerId !== s.default.getId() && (e.ownerId === s.default.getId() && r.default.setGoLiveSource(null), (0, i.closeStream)((0, R.encodeStreamKey)(e), !1))
+        if (e.ownerId !== t.ownerId) e.ownerId !== s.default.getId() && (e.ownerId === s.default.getId() && i.default.setGoLiveSource(null), (0, r.closeStream)((0, R.encodeStreamKey)(e), !1))
       })
     }), a.default.subscribe("VOICE_STATE_UPDATES", e => {
       let {

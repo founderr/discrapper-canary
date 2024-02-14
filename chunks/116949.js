@@ -41,15 +41,15 @@ var t = E("849266"),
   o = E("917351"),
   n = E.n(o),
   a = E("713349"),
-  r = E("151426"),
-  i = E("959714"),
+  i = E("151426"),
+  r = E("959714"),
   I = E("397336"),
   T = E("49111");
 let s = {
     readerFactory: e => new t.BinaryReader(e, new TextDecoder("utf-8"))
   },
   S = {
-    [I.UserSettingsTypes.PRELOADED_USER_SETTINGS]: r.PreloadedUserSettings,
+    [I.UserSettingsTypes.PRELOADED_USER_SETTINGS]: i.PreloadedUserSettings,
     [I.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: a.FrecencyUserSettings
   };
 
@@ -68,7 +68,7 @@ function O(e, _) {
 }
 
 function A(e) {
-  return O(r.PreloadedUserSettings, e)
+  return O(i.PreloadedUserSettings, e)
 }
 
 function R(e, _) {
@@ -87,20 +87,20 @@ function L(e, _, E) {
 }
 
 function u(e, _, E) {
-  return (null == _ || "null" === _) && (_ = T.ZERO_STRING_GUILD_ID), !(_ in e.guilds) && (e.guilds[_] = r.GuildSettings.create()), E(e.guilds[_])
+  return (null == _ || "null" === _) && (_ = T.ZERO_STRING_GUILD_ID), !(_ in e.guilds) && (e.guilds[_] = i.GuildSettings.create()), E(e.guilds[_])
 }
 
 function C(e, _, E, t) {
   var o, n, a;
-  return o = e, n = _, a = e => D(e, E, t), null == o.guilds && (o.guilds = r.AllGuildSettings.create()), u(o.guilds, n, a)
+  return o = e, n = _, a = e => D(e, E, t), null == o.guilds && (o.guilds = i.AllGuildSettings.create()), u(o.guilds, n, a)
 }
 
 function D(e, _, E) {
-  return !(_ in e.channels) && (e.channels[_] = r.ChannelSettings.create()), E(e.channels[_])
+  return !(_ in e.channels) && (e.channels[_] = i.ChannelSettings.create()), E(e.channels[_])
 }
 
 function c(e, _) {
-  null == e.versions && (e.versions = i.Versions.create());
+  null == e.versions && (e.versions = r.Versions.create());
   let E = 0;
   for (let e of _) {
     if (e.version <= E) throw Error("Migrations are out of order or there is a duplicate version");
@@ -110,14 +110,14 @@ function c(e, _) {
     o = !1,
     n = [];
   for (let E of _) {
-    var a, r;
+    var a, i;
     if (E.version <= e.versions.clientVersion) {
       t && (null === (a = E.cleanup) || void 0 === a || a.call(E));
       continue
     }
     let _ = E.run(e);
     if (e.versions.clientVersion = E.version, !1 === _) {
-      null === (r = E.cleanup) || void 0 === r || r.call(E);
+      null === (i = E.cleanup) || void 0 === i || i.call(E);
       continue
     }
     o = !0, null != E.cleanup && n.push(E.cleanup)

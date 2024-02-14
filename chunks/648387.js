@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   cleanupTempFiles: function() {
-    return r
+    return i
   }
 });
 var t = E("811022"),
@@ -9,11 +9,11 @@ var t = E("811022"),
   n = E("697218"),
   a = E("147746");
 
-function r() {
+function i() {
   var e;
   (null === o.default || void 0 === o.default ? void 0 : null === (e = o.default.fileManager) || void 0 === e ? void 0 : e.cleanupTempFiles) != null && setTimeout(() => void I(), 1e4)
 }
-let i = new t.default("tempFiles");
+let r = new t.default("tempFiles");
 async function I() {
   var e;
   if ((null === o.default || void 0 === o.default ? void 0 : null === (e = o.default.fileManager) || void 0 === e ? void 0 : e.cleanupTempFiles) != null) try {
@@ -21,9 +21,9 @@ async function I() {
     if ((null == e ? void 0 : e.callscopeLogFiles) != null && e.callscopeLogFiles.length > 0) {
       let _ = Math.floor(1e3 * Math.random()).toString(),
         E = n.default.getCurrentUser();
-      (null == E ? void 0 : E.isStaff()) && (_ = E.id), i.log("Uploading ".concat(e.callscopeLogFiles.length, " callscope logs as user ").concat(_)), await (0, a.uploadCallscopeLogFiles)(_, e.callscopeLogFiles)
+      (null == E ? void 0 : E.isStaff()) && (_ = E.id), r.log("Uploading ".concat(e.callscopeLogFiles.length, " callscope logs as user ").concat(_)), await (0, a.uploadCallscopeLogFiles)(_, e.callscopeLogFiles)
     }
   } catch (e) {
-    i.error("Exception ".concat(null == e ? void 0 : e.message), e)
+    r.error("Exception ".concat(null == e ? void 0 : e.message), e)
   }
 }

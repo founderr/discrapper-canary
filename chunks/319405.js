@@ -8,17 +8,17 @@ var t = E("689988"),
   o = E("374014"),
   n = E("373469"),
   a = E("271938"),
-  r = E("568307"),
-  i = E("718517"),
+  i = E("568307"),
+  r = E("718517"),
   I = E("448881"),
   T = E("374023"),
   s = E("2973"),
   S = E("227231"),
   N = E("166604");
-let O = 5 * i.default.Millis.SECOND,
-  A = 12 * i.default.Millis.HOUR,
-  R = 1 * i.default.Millis.MINUTE,
-  l = 15 * i.default.Millis.SECOND;
+let O = 5 * r.default.Millis.SECOND,
+  A = 12 * r.default.Millis.HOUR,
+  R = 1 * r.default.Millis.MINUTE,
+  l = 15 * r.default.Millis.SECOND;
 class L extends t.default {
   maybeFetchCurrentQuests() {
     (0, T.getIsEligibleForQuests)({
@@ -60,13 +60,13 @@ class L extends t.default {
         }
       } = e, E = n.default.getStreamerActiveStreamMetadata();
       if (null == E || null == E.pid) return;
-      let t = r.default.getGameForPID(E.pid);
+      let t = i.default.getGameForPID(E.pid);
       if (null == t || null == t.id) return;
       let a = (0, S.getQuestByApplicationId)(s.default.quests, t.id);
       if (null == a || a.id !== _) return;
-      let i = n.default.getCurrentUserActiveStream();
-      null != i && this.initiateHeartbeat({
-        streamKey: (0, o.encodeStreamKey)(i),
+      let r = n.default.getCurrentUserActiveStream();
+      null != r && this.initiateHeartbeat({
+        streamKey: (0, o.encodeStreamKey)(r),
         applicationId: a.config.applicationId,
         questId: a.id
       })
@@ -85,16 +85,16 @@ class L extends t.default {
       let {
         streamType: t,
         guildId: n,
-        channelId: i,
+        channelId: r,
         pid: I
-      } = e, T = null != I ? r.default.getGameForPID(I) : null;
+      } = e, T = null != I ? i.default.getGameForPID(I) : null;
       if (null == T) return;
       let N = null != T.id ? (0, S.getQuestByApplicationId)(s.default.quests, T.id) : null;
       (null == N ? void 0 : null === (_ = N.userStatus) || void 0 === _ ? void 0 : _.enrolledAt) != null && (null == N ? void 0 : null === (E = N.userStatus) || void 0 === E ? void 0 : E.completedAt) == null && this.initiateHeartbeat({
         streamKey: (0, o.encodeStreamKey)({
           streamType: t,
           guildId: n,
-          channelId: i,
+          channelId: r,
           ownerId: a.default.getId()
         }),
         applicationId: N.config.applicationId,

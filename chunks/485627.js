@@ -8,8 +8,8 @@ var t = E("95410"),
   o = E("689988"),
   n = E("697218"),
   a = E("553257"),
-  r = E("363613"),
-  i = E("42060"),
+  i = E("363613"),
+  r = E("42060"),
   I = E("275803"),
   T = E("935583");
 let s = "lastSawPomelo";
@@ -27,7 +27,7 @@ class S extends o.default {
           if (!e) return !1;
           let _ = n.default.getCurrentUser();
           if (null == _ || _.isPomelo() || !_.hasVerifiedEmailOrPhone()) return !1;
-          let E = (0, i.getForceMigration)(),
+          let E = (0, r.getForceMigration)(),
             o = t.default.get(E ? "lastSawPomeloMigration" : s);
           return !(null != o && Date.now() - o < 6048e5) && !0
         }()) {
@@ -36,7 +36,7 @@ class S extends o.default {
           }, {
             autoTrackExposure: !1
           }).enabled,
-          _ = (0, r.openPomeloModal)(T.PomeloEntrypoints.APP_START, e, !1);
+          _ = (0, i.openPomeloModal)(T.PomeloEntrypoints.APP_START, e, !1);
         _ && t.default.set(s, Date.now())
       }
     }

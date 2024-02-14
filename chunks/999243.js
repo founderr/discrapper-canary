@@ -8,8 +8,8 @@ var t = E("689988"),
   o = E("393414"),
   n = E("26989"),
   a = E("305961"),
-  r = E("162771"),
-  i = E("718517"),
+  i = E("162771"),
+  r = E("718517"),
   I = E("568734"),
   T = E("685829"),
   s = E("863636"),
@@ -27,7 +27,7 @@ class L extends t.default {
       POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e)
     }, this.handleConnectionOpen = e => {
       var _;
-      null != (R = null !== (_ = null != R ? R : r.default.getGuildId()) && void 0 !== _ ? _ : null) && this._openOnboardingIfIncomplete(R)
+      null != (R = null !== (_ = null != R ? R : i.default.getGuildId()) && void 0 !== _ ? _ : null) && this._openOnboardingIfIncomplete(R)
     }, this.handleChannelSelect = e => {
       let {
         guildId: _,
@@ -36,7 +36,7 @@ class L extends t.default {
       if (R === _ && l === E) return;
       if (R = null != _ ? _ : null, l = null != E ? E : null, null == R || null == l) return;
       let t = a.default.getGuild(_);
-      null != t && t.hasFeature(N.GuildFeatures.COMMUNITY) && s.default.shouldFetchPrompts(R, 8 * i.default.Millis.HOUR) && (0, T.loadOnboardingPrompts)(R), this._openOnboardingIfIncomplete(R, E)
+      null != t && t.hasFeature(N.GuildFeatures.COMMUNITY) && s.default.shouldFetchPrompts(R, 8 * r.default.Millis.HOUR) && (0, T.loadOnboardingPrompts)(R), this._openOnboardingIfIncomplete(R, E)
     }, this.handleGuildDelete = e => {
       let {
         guild: _
@@ -48,10 +48,10 @@ class L extends t.default {
         (0, o.transitionTo)(N.Routes.CHANNEL(e, O.StaticChannelRoute.GUILD_ONBOARDING));
         return
       }
-      let r = a.default.getGuild(e);
-      if (null == r || !r.hasFeature(N.GuildFeatures.GUILD_ONBOARDING)) return;
-      let i = n.default.getSelfMember(e);
-      !(null == i || (0, I.hasFlag)(null !== (E = i.flags) && void 0 !== E ? E : 0, A.GuildMemberFlags.COMPLETED_ONBOARDING)) && (0, I.hasFlag)(null !== (t = i.flags) && void 0 !== t ? t : 0, A.GuildMemberFlags.STARTED_ONBOARDING) && (await (0, S.default)({
+      let i = a.default.getGuild(e);
+      if (null == i || !i.hasFeature(N.GuildFeatures.GUILD_ONBOARDING)) return;
+      let r = n.default.getSelfMember(e);
+      !(null == r || (0, I.hasFlag)(null !== (E = r.flags) && void 0 !== E ? E : 0, A.GuildMemberFlags.COMPLETED_ONBOARDING)) && (0, I.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, A.GuildMemberFlags.STARTED_ONBOARDING) && (await (0, S.default)({
         guildId: e
       }), (0, o.transitionTo)(N.Routes.CHANNEL(e, _)))
     }

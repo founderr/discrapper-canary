@@ -1,32 +1,32 @@
 "use strict";
-s.r(S), s.d(S, {
+S.r(s), S.d(s, {
   default: function() {
     return g
   }
-}), s("222007");
-var e = s("200900"),
-  i = s("79112"),
-  _ = s("980215"),
-  n = s("250666"),
-  I = s("680986"),
-  t = s("867965"),
-  r = s("348934"),
-  N = s("520141"),
-  o = s("592407"),
-  R = s("819450"),
-  A = s("178225"),
-  O = s("300322"),
-  P = s("146932"),
-  T = s("233069"),
-  M = s("305961"),
-  C = s("701909"),
-  a = s("49111"),
-  l = s("606762"),
-  m = s("782340");
+}), S("222007");
+var e = S("200900"),
+  i = S("79112"),
+  _ = S("980215"),
+  n = S("250666"),
+  I = S("680986"),
+  t = S("867965"),
+  r = S("348934"),
+  N = S("520141"),
+  o = S("592407"),
+  R = S("819450"),
+  A = S("178225"),
+  O = S("300322"),
+  P = S("146932"),
+  T = S("233069"),
+  M = S("305961"),
+  C = S("701909"),
+  a = S("49111"),
+  l = S("606762"),
+  m = S("782340");
 
 function D(E) {
-  let S = (0, A.isGuildEligibleForStageChannels)(E),
-    s = (0, I.getEnableForumPermissions)(E),
+  let s = (0, A.isGuildEligibleForStageChannels)(E),
+    S = (0, I.getEnableForumPermissions)(E),
     e = (0, N.isMemberVerificationManualApproval)(E),
     t = M.default.getGuild(E),
     r = null != t && (0, n.isCreatorMonetizationEnabledGuild)(t),
@@ -45,9 +45,9 @@ function D(E) {
     SOUNDBOARD_DESCRIPTION: m.default.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_LEARN_MORE.format({
       helpCenterArticle: C.default.getArticleURL(a.HelpdeskArticles.SOUNDBOARD)
     }),
-    showStageChannelPermissions: S,
+    showStageChannelPermissions: s,
     showExperimental: !0,
-    showForumPermissions: s,
+    showForumPermissions: S,
     showMembershipManualApprovalPermissions: e,
     showCreatorMonetizationAnalyticsPermission: r,
     showClydeAIPermissions: o,
@@ -55,25 +55,25 @@ function D(E) {
   }
 }
 
-function L(E, S) {
-  return E ? [S()] : []
+function L(E, s) {
+  return E ? [s()] : []
 }
 var g = {
-  generateChannelPermissionSpec: function(E, S, s, i) {
+  generateChannelPermissionSpec: function(E, s, S, i) {
     var n, N, A, P, C, L;
     let g = (0, I.getEnableForumPermissions)(E),
-      u = (0, l.getChannelPermissionSpecMap)(S, s, g, i),
+      u = (0, l.getChannelPermissionSpecMap)(s, S, g, i),
       c = D(E),
       d = O.VoiceInThreadsExperiment.getCurrentConfig({
         guildId: E,
         location: "3ad37d_1"
-      }).enabled && T.VOICE_THREAD_PARENT_CHANNEL_TYPES.has(S.type),
+      }).enabled && T.VOICE_THREAD_PARENT_CHANNEL_TYPES.has(s.type),
       G = (0, R.isStageVideoEnabled)(E),
       f = (0, r.canCurrentUserManageMessageFilters)(E),
-      U = S.isMediaChannel(),
+      U = s.isMediaChannel(),
       p = M.default.getGuild(E),
       V = (0, _.getClydeExperimentEnabled)(p);
-    switch (S.type) {
+    switch (s.type) {
       case a.ChannelTypes.GUILD_CATEGORY:
         ;
         return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CATEGORY), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
@@ -119,19 +119,19 @@ var g = {
       default:
         ;
         return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
-          showPrivateThreads: S.type !== a.ChannelTypes.GUILD_ANNOUNCEMENT,
+          showPrivateThreads: s.type !== a.ChannelTypes.GUILD_ANNOUNCEMENT,
           showCreateThreads: !0,
           showClydeAIPermissions: V
         }), ...(C = d, L = () => e.generateChannelVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), C ? [L()] : [])]
     }
   },
   generateGuildPermissionSpec: function(E) {
-    var S, s;
+    var s, S;
     let i = new Set,
       _ = E.hasFeature(a.GuildFeatures.COMMUNITY);
-    return !_ && i.add(a.Permissions.VIEW_GUILD_ANALYTICS.toString()), S = e.generateGuildPermissionSpec(m.default.Messages, D(E.id)), 0 === (s = i).size ? S : S.map(E => ({
+    return !_ && i.add(a.Permissions.VIEW_GUILD_ANALYTICS.toString()), s = e.generateGuildPermissionSpec(m.default.Messages, D(E.id)), 0 === (S = i).size ? s : s.map(E => ({
       ...E,
-      permissions: E.permissions.filter(E => !s.has(E.flag.toString()))
+      permissions: E.permissions.filter(E => !S.has(E.flag.toString()))
     }))
   },
   getGuildPermissionSpecMap: function(E) {

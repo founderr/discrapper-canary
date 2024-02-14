@@ -85,7 +85,7 @@ function g() {
 function A() {
   d.default.addBreadcrumb({
     message: "Initializing SessionHeartbeatScheduler"
-  }), i.default.addChangeListener(R), l.default.subscribe("WINDOW_FOCUS", O), l.default.subscribe("APP_STATE_UPDATE", v), l.default.subscribe("LOGIN_SUCCESS", N), g()
+  }), i.default.addChangeListener(R), l.default.subscribe("WINDOW_FOCUS", v), l.default.subscribe("APP_STATE_UPDATE", O), l.default.subscribe("LOGIN_SUCCESS", N), g()
 }
 
 function N() {
@@ -97,14 +97,14 @@ function R() {
   m !== e && (m = e, g())
 }
 
-function O(e) {
+function v(e) {
   let {
     focused: t
   } = e;
   T = t, g()
 }
 
-function v(e) {
+function O(e) {
   let {
     state: t
   } = e;

@@ -35,8 +35,8 @@ function N(e) {
     location: A,
     className: M,
     onNavigate: R
-  } = e, j = l.useRef(null), L = (0, o.default)([p.default], () => p.default.getGuildSidebarState(N), [N]), O = l.useRef(0), [y, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), b = (0, C.useServerMessageHistoryForUser)(s, N, {
-    addtionalQuery: y,
+  } = e, j = l.useRef(null), L = (0, o.default)([p.default], () => p.default.getGuildSidebarState(N), [N]), y = l.useRef(0), [O, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), b = (0, C.useServerMessageHistoryForUser)(s, N, {
+    addtionalQuery: O,
     shouldDispatch: !0
   }), D = (0, o.default)([S.default], () => S.default.getUser(s), [s]), U = (0, o.default)([E.default], () => E.default.getMember(N, s), [N, s]), w = (0, I.useProfileThemedPanelBackground)(s, N);
   l.useLayoutEffect(() => {
@@ -52,26 +52,26 @@ function N(e) {
   let F = l.useCallback(e => {
       if (null == L) return;
       let t = e.target.scrollTop;
-      O.current = t, (0, g.openGuildMemberModViewSidebar)(N, s, L.baseChannelId, {
+      y.current = t, (0, g.openGuildMemberModViewSidebar)(N, s, L.baseChannelId, {
         modViewPanel: T.ModViewPanel.MESSAGE_HISTORY,
-        additionalSearchQuery: y,
-        scrollOffset: O.current
+        additionalSearchQuery: O,
+        scrollOffset: y.current
       })
-    }, [N, s, L, y]),
+    }, [N, s, L, O]),
     k = (0, r.throttle)(F, 300),
     V = l.useCallback(e => {
       if (null == L) return;
       let t = {
-        ...y,
+        ...O,
         offset: 25 * e
       };
       P(t), (0, g.openGuildMemberModViewSidebar)(N, s, L.baseChannelId, {
         modViewPanel: T.ModViewPanel.MESSAGE_HISTORY,
         additionalSearchQuery: t,
-        scrollOffset: O.current
+        scrollOffset: y.current
       })
-    }, [N, s, L, y]),
-    B = null !== (n = null == y ? void 0 : y.offset) && void 0 !== n ? n : 0,
+    }, [N, s, L, O]),
+    B = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
     H = (0, o.default)([c.default], () => {
       if (null == b.result) return [];
       let e = b.result.messages,

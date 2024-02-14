@@ -9,8 +9,8 @@ E("884691");
 var o = E("77078"),
   n = E("299285"),
   a = E("374014"),
-  r = E("582415"),
-  i = E("643130"),
+  i = E("582415"),
+  r = E("643130"),
   I = E("292687"),
   T = E("271938"),
   s = E("42203"),
@@ -22,7 +22,7 @@ var o = E("77078"),
   l = E("49111");
 class L extends A.default {
   _initialize() {
-    i.default.init()
+    r.default.init()
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -50,15 +50,15 @@ class L extends A.default {
       var _;
       let {
         streamKey: n,
-        canShowFeedback: i
-      } = e, I = (0, a.decodeStreamKey)(n), s = (0, r.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
+        canShowFeedback: r
+      } = e, I = (0, a.decodeStreamKey)(n), s = (0, i.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
         media_session_id: O.default.getMediaSessionId(n),
         rtc_connection_id: O.default.getRtcConnectionId(n),
         stream_region: O.default.getRegion(n),
         max_viewers: O.default.getMaxViewers(n),
         ...N
       };
-      i && this.possiblyShowFeedbackModal(R.FeedbackType.STREAM, () => {
+      r && this.possiblyShowFeedbackModal(R.FeedbackType.STREAM, () => {
         (0, o.openModalLazy)(async () => {
           let {
             default: e
@@ -91,19 +91,19 @@ class L extends A.default {
       let {
         applicationId: _,
         channelId: a,
-        showFeedback: r
-      } = e, i = n.default.getApplication(_), T = s.default.getChannel(a), S = {
+        showFeedback: i
+      } = e, r = n.default.getApplication(_), T = s.default.getChannel(a), S = {
         rtc_connection_id: N.default.getRTCConnectionId(),
         media_session_id: N.default.getMediaSessionId()
       }, O = I.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT), A = O ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT;
-      null != i && null != T && r && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
+      null != r && null != T && i && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
         (0, o.openModalLazy)(async () => {
           let {
             default: e
           } = await E.el("959350").then(E.bind(E, "959350"));
           return _ => (0, t.jsx)(e, {
             ..._,
-            activityApplication: i,
+            activityApplication: r,
             channel: T,
             analyticsData: S
           })

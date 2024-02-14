@@ -9,13 +9,13 @@ var t = E("487445"),
   n = E.n(o),
   a = E("102053");
 E("704744");
-var r = E("811022"),
-  i = E("435660"),
+var i = E("811022"),
+  r = E("435660"),
   I = E("805833"),
   T = E("377678"),
   s = E("120082");
 let S = new Set(["APP_STATE_UPDATE", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_CONNECTION", "SESSION_START", "UPLOAD_FAIL"]),
-  N = new r.default("Flux");
+  N = new i.default("Flux");
 class O {
   isDispatching() {
     return null != this._currentDispatchActionType
@@ -60,7 +60,7 @@ class O {
     this._dispatchWithLogging(e)
   }
   _dispatchWithLogging(e) {
-    n(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), n(e.type, "Dispatch.dispatch(...) called without an action type"), S.has(e.type) && N.log("Dispatching ".concat(e.type)), (0, i.mark)(e.type), T.add(e.type);
+    n(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), n(e.type, "Dispatch.dispatch(...) called without an action type"), S.has(e.type) && N.log("Dispatching ".concat(e.type)), (0, r.mark)(e.type), T.add(e.type);
     let _ = this.actionLogger.log(e, _ => {
       try {
         this._currentDispatchActionType = e.type, this._dispatch(e, _)
@@ -70,7 +70,7 @@ class O {
     });
     _.totalTime > 100 && N.verbose("Slow dispatch on ".concat(e.type, ": ").concat(_.totalTime, "ms"));
     try {
-      (0, i.measure)("DISPATCH[".concat(e.type, "]"), e.type)
+      (0, r.measure)("DISPATCH[".concat(e.type, "]"), e.type)
     } catch (e) {}
   }
   _dispatch(e, _) {
@@ -172,10 +172,10 @@ class A {
         name: o,
         actionHandler: n,
         storeDidChange: a
-      } = this._dependencyGraph.getNodeData(E[_]), r = n[e];
-      null != r && t.push({
+      } = this._dependencyGraph.getNodeData(E[_]), i = n[e];
+      null != i && t.push({
         name: o,
-        actionHandler: r,
+        actionHandler: i,
         storeDidChange: a
       })
     }

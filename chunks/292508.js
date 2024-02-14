@@ -32,8 +32,8 @@ var a = n("37983"),
   R = n("161778"),
   j = n("168973"),
   L = n("471671"),
-  O = n("983782"),
-  y = n("587974"),
+  y = n("983782"),
+  O = n("587974"),
   P = n("773336"),
   b = n("439932"),
   D = n("50885"),
@@ -147,10 +147,10 @@ class B extends l.Component {
                 containerRef: this.rootRef,
                 children: (0, a.jsx)(p.default, {
                   children: (0, a.jsxs)(T.default, {
-                    children: [(0, a.jsx)(y.MaskLibrary, {}), (0, a.jsx)(h.AppWindowContextProvider, {
+                    children: [(0, a.jsx)(O.MaskLibrary, {}), (0, a.jsx)(h.AppWindowContextProvider, {
                       appContext: F.AppContext.POPOUT,
                       renderWindow: C,
-                      children: (0, a.jsxs)(O.AppLayerProvider, {
+                      children: (0, a.jsxs)(y.AppLayerProvider, {
                         children: [(0, a.jsxs)("div", {
                           className: V.popout,
                           children: [g && null != N ? (0, a.jsx)(v.default, {
@@ -162,7 +162,7 @@ class B extends l.Component {
                             className: i(V.content, x),
                             children: s
                           })]
-                        }), (0, a.jsx)(c.Modals, {}), (0, a.jsx)(f.default, {}), (0, a.jsx)(O.AppLayerContainer, {})]
+                        }), (0, a.jsx)(c.Modals, {}), (0, a.jsx)(f.default, {}), (0, a.jsx)(y.AppLayerContainer, {})]
                       })
                     })]
                   })
@@ -229,7 +229,7 @@ let H = l.forwardRef(function(e, t) {
     } = (0, C.default)(g.default.POPOUT_WINDOW),
     {
       clientThemesClassName: j,
-      clientThemesCSS: O
+      clientThemesCSS: y
     } = (0, _.default)();
   return null == n ? null : (0, a.jsx)(c.DnDProvider, {
     children: (0, a.jsx)(A, {
@@ -250,7 +250,7 @@ let H = l.forwardRef(function(e, t) {
         fontScaleClass: S,
         saturation: I,
         clientThemesClassName: j,
-        clientThemesCSS: O
+        clientThemesCSS: y
       })
     })
   })

@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("915639"),
   N = n("161778"),
   R = n("350522"),
-  O = n("926787"),
-  v = n("305961"),
+  v = n("926787"),
+  O = n("305961"),
   L = n("251013"),
   M = n("664336"),
   P = n("794818"),
@@ -59,7 +59,7 @@ class W extends s.PureComponent {
       currentHomepageCategoryId: r,
       mostRecentQuery: o
     } = this.props;
-    if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
+    if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == v.default.getSearchIndex() && (0, _.createAlgoliaIndex)(), h.default.wait(() => {
         (0, I.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
       }), !a && 0 === o.length && P.trackDiscoveryViewed({
         loadId: this.loadId,
@@ -174,7 +174,7 @@ class W extends s.PureComponent {
       categoryName: u
     }) : r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: u
-    }), f = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[r]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
+    }), f = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[r]) && void 0 !== t ? t : v.EMPTY_DISCOVERABLE_GUILDS_SECTION;
     return (0, a.jsx)(j.default, {
       loadId: this.loadId,
       searchResults: f,
@@ -203,7 +203,7 @@ class W extends s.PureComponent {
       loadingGuildId: c
     } = this.state, f = u === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: d
-    }), E = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[u]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
+    }), E = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[u]) && void 0 !== t ? t : v.EMPTY_DISCOVERABLE_GUILDS_SECTION;
     return (0, a.jsx)(G.default, {
       loadId: this.loadId,
       availableLanguages: l,
@@ -433,7 +433,7 @@ class W extends s.PureComponent {
     }
   }
 }
-let K = f.default.connectStores([N.default, A.default, L.default, R.default, O.default, b.default, v.default], () => {
+let K = f.default.connectStores([N.default, A.default, L.default, R.default, v.default, b.default, O.default], () => {
   var e;
   let t = k.LANGUAGE_OPTIONS,
     n = A.default.locale,
@@ -443,18 +443,18 @@ let K = f.default.connectStores([N.default, A.default, L.default, R.default, O.d
     s = L.default.applicationStatistics,
     l = Object.keys(s),
     i = R.default.hasConsented(F.Consents.PERSONALIZATION) && l.length > 0,
-    r = O.default.getCurrentCategoryId(),
-    u = O.default.getCurrentHomepageCategoryId();
+    r = v.default.getCurrentCategoryId(),
+    u = v.default.getCurrentHomepageCategoryId();
   return {
-    isFetching: O.default.isFetching(),
-    isFetchingSearch: O.default.isFetchingSearch(),
-    guilds: O.default.getDiscoverableGuilds(),
-    mostRecentQuery: O.default.getMostRecentQuery(),
+    isFetching: v.default.isFetching(),
+    isFetchingSearch: v.default.isFetchingSearch(),
+    guilds: v.default.getDiscoverableGuilds(),
+    mostRecentQuery: v.default.getMostRecentQuery(),
     currentCategoryId: r,
     currentHomepageCategoryId: u,
     currentCategoryName: b.default.getCategoryName(r),
     categories: b.default.getDiscoveryCategories(),
-    userGuilds: v.default.getGuilds(),
+    userGuilds: O.default.getGuilds(),
     theme: N.default.theme,
     mightHaveGamesYouPlay: i,
     availableLanguages: t,

@@ -9,8 +9,8 @@ E("884691");
 var o = E("77078"),
   n = E("689988"),
   a = E("38654"),
-  r = E("271938"),
-  i = E("42203"),
+  i = E("271938"),
+  r = E("42203"),
   I = E("26989"),
   T = E("162771"),
   s = E("568734"),
@@ -39,11 +39,11 @@ class u extends n.default {
         user: n,
         guildId: a
       } = e;
-      if (n.id === r.default.getId()) {
+      if (n.id === i.default.getId()) {
         if (!this.onboardingCompleteGuilds.has(a) && (0, s.hasFlag)(null != _ ? _ : 0, L.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
-          var i, I;
+          var r, I;
           this.onboardingCompleteGuilds.add(a);
-          let e = null !== (I = null === (i = N.default.getNewMemberActions(a)) || void 0 === i ? void 0 : i.length) && void 0 !== I ? I : 0;
+          let e = null !== (I = null === (r = N.default.getNewMemberActions(a)) || void 0 === r ? void 0 : r.length) && void 0 !== I ? I : 0;
           if (0 === e) return;
           (0, o.openModalLazy)(async () => {
             let {
@@ -80,8 +80,8 @@ class u extends n.default {
         channelId: t,
         message: o
       } = e;
-      if (null == E || null == t || (null === (_ = o.author) || void 0 === _ ? void 0 : _.id) !== r.default.getId()) return;
-      let n = i.default.getChannel(t);
+      if (null == E || null == t || (null === (_ = o.author) || void 0 === _ ? void 0 : _.id) !== i.default.getId()) return;
+      let n = r.default.getChannel(t);
       (null == n ? void 0 : n.isForumPost()) && (null == n ? void 0 : n.parent_id) != null && this._completeChatAction(E, n.parent_id), this._completeChatAction(E, t)
     }, this.handleThreadCreate = e => {
       var _;
@@ -89,7 +89,7 @@ class u extends n.default {
         channel: E,
         isNewlyCreated: t
       } = e;
-      if (!!t && null != E.parent_id && !!(null === (_ = i.default.getChannel(E.parent_id)) || void 0 === _ ? void 0 : _.isForumLikeChannel())) E.ownerId === r.default.getId() && this._completeChatAction(E.guild_id, E.parent_id)
+      if (!!t && null != E.parent_id && !!(null === (_ = r.default.getChannel(E.parent_id)) || void 0 === _ ? void 0 : _.isForumLikeChannel())) E.ownerId === i.default.getId() && this._completeChatAction(E.guild_id, E.parent_id)
     }, this._completeChatAction = async (e, _) => {
       let {
         memberActions: E,

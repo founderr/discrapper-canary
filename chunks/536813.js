@@ -8,14 +8,14 @@ var t = E("917351"),
   o = E.n(t),
   n = E("862337"),
   a = E("689988"),
-  r = E("271938"),
-  i = E("718517"),
+  i = E("271938"),
+  r = E("718517"),
   I = E("709681"),
   T = E("636371"),
   s = E("170152"),
   S = E("391591");
-let N = 15 * i.default.Millis.SECOND,
-  O = 15 * i.default.Millis.SECOND,
+let N = 15 * r.default.Millis.SECOND,
+  O = 15 * r.default.Millis.SECOND,
   A = ["\uD83C\uDDE9", "\uD83C\uDDF4", "\uD83C\uDDF9", "\uD83C\uDDE6"],
   R = A.length,
   l = function(e, _) {
@@ -33,17 +33,17 @@ function d(e) {
     emoji: _,
     channelId: E,
     userId: t
-  } = e, a = r.default.getId(), i = s.default.getEnabled();
+  } = e, a = i.default.getId(), r = s.default.getEnabled();
   if (null != _) {
-    if (i && (0, S.default)(_.name)) return function(e, _, E) {
+    if (r && (0, S.default)(_.name)) return function(e, _, E) {
       var t;
       let o = l(_, E);
       if (null != s.default.getWaitingHighFive(E, _)) return;
-      let [a, r] = null !== (t = Object.entries(C).find(e => {
+      let [a, i] = null !== (t = Object.entries(C).find(e => {
         let [_] = e;
         return _ !== o
       })) && void 0 !== t ? t : [];
-      if (null != a && null != r) r.cancel(), c.play(), delete C[a], (0, T.completeHighFive)(a.split(":")[0], _, E, e);
+      if (null != a && null != i) i.cancel(), c.play(), delete C[a], (0, T.completeHighFive)(a.split(":")[0], _, E, e);
       else {
         (0, T.queueHighFive)(e, _, E), D.play();
         let t = new n.DelayedCall(O, () => {
@@ -52,7 +52,7 @@ function d(e) {
         C[_] = t, t.delay()
       }
     }(_.name, t, E);
-    t === a && (u = [...u, _.name].slice(-1 * R), o.isEqual(u, A) ? (D.play(), L.stop(), u = [], (0, T.setHighFiveEnabled)(!i)) : L.start(N, () => u = []))
+    t === a && (u = [...u, _.name].slice(-1 * R), o.isEqual(u, A) ? (D.play(), L.stop(), u = [], (0, T.setHighFiveEnabled)(!r)) : L.start(N, () => u = []))
   }
 }
 

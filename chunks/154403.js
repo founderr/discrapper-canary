@@ -8,8 +8,8 @@ var t = E("37983"),
   o = E("884691"),
   n = E("414456"),
   a = E.n(n),
-  r = E("446674"),
-  i = E("77078"),
+  i = E("446674"),
+  r = E("77078"),
   I = E("368694"),
   T = E("313915"),
   s = E("578706"),
@@ -27,7 +27,7 @@ function L() {
   } = (0, R.useImpressionStore)(e => ({
     debugTrackedData: e.debugTrackedData,
     impressions: e.impressions
-  })), E = (0, r.useStateFromStores)([T.default], () => T.default.isAnalyticsDebuggerEnabled), n = (0, r.useStateFromStores)([I.default], () => I.default.isDeveloper), [L, u] = o.useState(!1), {
+  })), E = (0, i.useStateFromStores)([T.default], () => T.default.isAnalyticsDebuggerEnabled), n = (0, i.useStateFromStores)([I.default], () => I.default.isDeveloper), [L, u] = o.useState(!1), {
     name: C,
     ...D
   } = null != e ? e : {}, c = null != C;
@@ -37,7 +37,7 @@ function L() {
         [l.containerMinimized]: L,
         [l.notTracked]: !c
       }),
-      children: [(0, t.jsx)(i.Clickable, {
+      children: [(0, t.jsx)(r.Clickable, {
         className: l.minimizeButton,
         onClick: () => {
           u(!L)
@@ -47,7 +47,7 @@ function L() {
         className: a(l.content, {
           [l.contentMinimized]: L
         }),
-        children: [(0, t.jsxs)(i.Text, {
+        children: [(0, t.jsxs)(r.Text, {
           className: a(l.label, {
             [l.notTracked]: !c
           }),
@@ -60,7 +60,7 @@ function L() {
         }), (0, t.jsx)("div", {
           className: l.current,
           children: JSON.stringify(D, void 0, 2)
-        }), (0, t.jsx)(i.Text, {
+        }), (0, t.jsx)(r.Text, {
           className: a(l.label, {
             [l.notTracked]: !c
           }),

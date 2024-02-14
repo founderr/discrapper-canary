@@ -7,8 +7,8 @@ E.r(_), E.d(_, {
 var t, o = E("917351"),
   n = E.n(o),
   a = E("597755"),
-  r = E.n(a),
-  i = E("49671"),
+  i = E.n(a),
+  r = E("49671"),
   I = E("385649"),
   T = E("102985"),
   s = E("599110"),
@@ -17,13 +17,13 @@ var t, o = E("917351"),
   O = E("50885"),
   A = E("49111");
 let R = S.isPlatformEmbedded && (0, S.isWindows)(),
-  l = R && 10 > parseFloat(i.default.os.release),
+  l = R && 10 > parseFloat(r.default.os.release),
   L = !0;
 if (R && !l) {
-  let [e, , _] = i.default.os.release.split(".");
+  let [e, , _] = r.default.os.release.split(".");
   L = parseInt(e) > 10 || parseInt(_) >= 15063
 }
-let u = R && L || "Chrome" === r.name && 47 > parseFloat(r.version) || "Firefox" === r.name && 52 > parseFloat(r.version),
+let u = R && L || "Chrome" === i.name && 47 > parseFloat(i.version) || "Firefox" === i.name && 52 > parseFloat(i.version),
   C = n.throttle(N.playSound, 1e3, {
     leading: !0
   });
@@ -79,13 +79,13 @@ var M = {
     })
   },
   showNotification: function(e, _, E, t, o) {
-    var a, r, i, T;
+    var a, i, r, T;
     let N;
     if (U(o)) {
-      null != o.sound && !1 !== o.playSoundIfDisabled && d(o.sound, null !== (r = o.volume) && void 0 !== r ? r : 1);
+      null != o.sound && !1 !== o.playSoundIfDisabled && d(o.sound, null !== (i = o.volume) && void 0 !== i ? i : 1);
       return
     }
-    null != o.sound && d(o.sound, null !== (i = o.volume) && void 0 !== i ? i : 1);
+    null != o.sound && d(o.sound, null !== (r = o.volume) && void 0 !== r ? r : 1);
     let l = null !== (T = null == o ? void 0 : o.tag) && void 0 !== T ? T : null;
     (0, S.isLinux)() && (E = n.escape(E));
     let C = {

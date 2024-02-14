@@ -8,14 +8,14 @@ var t = E("689988"),
   o = E("271938"),
   n = E("42203"),
   a = E("78581"),
-  r = E("49111");
-class i extends t.default {
+  i = E("49111");
+class r extends t.default {
   constructor(...e) {
     super(...e), this.prevConnected = !1, this.tempMutedChannel = null, this.handleRTCConnectionState = e => {
       let {
         state: _,
         channelId: E
-      } = e, t = _ === r.RTCConnectionStates.RTC_CONNECTED, o = t && !this.prevConnected, i = n.default.getChannel(E), I = null == i ? void 0 : i.getGuildId(), T = this.tempMutedChannel === E;
+      } = e, t = _ === i.RTCConnectionStates.RTC_CONNECTED, o = t && !this.prevConnected, r = n.default.getChannel(E), I = null == r ? void 0 : r.getGuildId(), T = this.tempMutedChannel === E;
       o && null != I && (T ? this.tempMutedChannel = null : (0, a.maybePlayCustomJoinSound)(I)), this.prevConnected = t
     }, this.handleMute = e => {
       let {
@@ -41,4 +41,4 @@ class i extends t.default {
     }
   }
 }
-var I = new i
+var I = new r

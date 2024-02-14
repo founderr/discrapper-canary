@@ -16,8 +16,8 @@ function r(e) {
     muted: n = !1,
     highlighted: a = !1,
     wrapContent: r = !1,
-    avatar: u,
-    decorators: o,
+    avatar: o,
+    decorators: u,
     name: d,
     subText: c,
     avatarClassName: f,
@@ -31,7 +31,7 @@ function r(e) {
     }),
     children: [(0, l.jsx)("div", {
       className: s(i.avatar, f),
-      children: u
+      children: o
     }), (0, l.jsxs)("div", {
       className: i.content,
       children: [(0, l.jsxs)("div", {
@@ -41,7 +41,7 @@ function r(e) {
             [i.wrappedName]: r
           }),
           children: d
-        }), o]
+        }), u]
       }), null != c ? (0, l.jsx)("div", {
         className: i.subText,
         children: c

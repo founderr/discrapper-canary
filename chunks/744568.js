@@ -34,16 +34,16 @@ function x(e) {
     className: x,
     infoPanelClassName: N,
     style: A
-  } = e, M = (0, C.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([g.default], () => g.default.getUser(t), [t]), j = (0, r.useStateFromStores)([S.default], () => S.default.getMember(n, t), [n, t]), [L, O] = l.useState(null == R || null == j), y = (0, d.default)(j), P = l.useRef(null), {
+  } = e, M = (0, C.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([g.default], () => g.default.getUser(t), [t]), j = (0, r.useStateFromStores)([S.default], () => S.default.getMember(n, t), [n, t]), [L, y] = l.useState(null == R || null == j), O = (0, d.default)(j), P = l.useRef(null), {
     AnalyticsLocationProvider: b
   } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW);
   return (l.useEffect(() => {
     !M && s()
   }, [M, s]), l.useEffect(() => {
-    let e = null != y && null == j;
+    let e = null != O && null == j;
     e && !L && s()
-  }, [L, j, s, y]), l.useEffect(() => {
-    null != R && null != j && O(!1)
+  }, [L, j, s, O]), l.useEffect(() => {
+    null != R && null != j && y(!1)
   }, [R, j]), l.useEffect(() => {
     let e = null == j;
     return !L && e && (P.current = window.setTimeout(s, 500)), () => {
@@ -57,7 +57,7 @@ function x(e) {
         guildId: n,
         dispatchWait: !0
       })];
-      await Promise.all(e), O(!1)
+      await Promise.all(e), y(!1)
     })()
   }, [n, t]), M) ? L || null == R || null == j ? (0, a.jsx)("div", {
     className: i(v.sidebarContianer, v.loadingContainer, x),

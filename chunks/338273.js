@@ -74,16 +74,16 @@ function M(e) {
   } = e, s = (0, u.default)(t), T = (0, m.default)(t), v = (0, S.default)(t.id), A = (0, E.default)(t), M = (0, C.default)({
     id: t.id,
     label: N.default.Messages.COPY_ID_THREAD
-  }), R = (0, d.default)(t), j = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), O = (0, p.default)(t), y = (0, h.default)(t), P = (0, g.default)(t), b = _.UseThreadSidebar.useSetting(), D = (0, r.useStateFromStores)([I.default], () => !i.isEmpty(I.default.getVoiceStatesForChannel(t.id)));
+  }), R = (0, d.default)(t), j = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), y = (0, p.default)(t), O = (0, h.default)(t), P = (0, g.default)(t), b = _.UseThreadSidebar.useSetting(), D = (0, r.useStateFromStores)([I.default], () => !i.isEmpty(I.default.getVoiceStatesForChannel(t.id)));
   return (0, a.jsxs)(o.Menu, {
     navId: "thread-context",
     onClose: n,
     "aria-label": N.default.Messages.THREAD_ACTIONS_MENU_LABEL,
     onSelect: l,
     children: [(0, a.jsxs)(o.MenuGroup, {
-      children: [L, y]
+      children: [L, O]
     }), (0, a.jsxs)(o.MenuGroup, {
-      children: [A, O, v, b && !D ? (0, a.jsx)(o.MenuItem, {
+      children: [A, y, v, b && !D ? (0, a.jsx)(o.MenuItem, {
         id: "open",
         label: N.default.Messages.OPEN_IN_SPLIT_VIEW,
         action: function() {

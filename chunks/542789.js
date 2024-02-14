@@ -27,8 +27,8 @@ async function I(e) {
       guildId: A = h.ME,
       channelId: N,
       friendToken: R,
-      autoFocusNote: O,
-      analyticsLocation: v
+      autoFocusNote: v,
+      analyticsLocation: O
     } = e,
     L = c.default.getUser(T),
     M = E.default.getUserProfile(T);
@@ -45,7 +45,7 @@ async function I(e) {
     return t => (0, a.jsx)(e, {
       ...t,
       user: L,
-      autoFocusNote: O,
+      autoFocusNote: v,
       guildId: A,
       friendToken: R,
       initialSection: g,
@@ -68,7 +68,7 @@ async function I(e) {
     profile_user_status: x,
     profile_has_nitro_customization: (null == M ? void 0 : M.banner) != null,
     profile_has_profile_effect: (null == M ? void 0 : M.profileEffectId) != null,
-    ...null == v ? null : (0, f.expandLocation)(v)
+    ...null == O ? null : (0, f.expandLocation)(O)
   })
 }
 

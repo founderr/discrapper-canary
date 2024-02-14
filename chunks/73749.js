@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return r
+    return i
   }
 });
 var t = E("37983");
@@ -10,20 +10,20 @@ var o = E("90915"),
   n = E("759843"),
   a = E("428958");
 
-function r(e) {
+function i(e) {
   var _;
   let {
     impressionName: E,
-    impressionProperties: r,
-    disableTrack: i,
+    impressionProperties: i,
+    disableTrack: r,
     ...I
-  } = e, T = r;
+  } = e, T = i;
   return "function" == typeof T && (T = T(I)), (0, a.default)({
     type: n.ImpressionTypes.PAGE,
     name: E,
     properties: T
   }, {
-    disableTrack: i
+    disableTrack: r
   }, [null === (_ = I.location) || void 0 === _ ? void 0 : _.pathname]), (0, t.jsx)(o.Route, {
     ...I
   })
