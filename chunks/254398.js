@@ -5,7 +5,7 @@ a.r(t), a.d(t, {
   }
 }), a("511434"), a("313619"), a("654714"), a("287168"), a("956660"), a("222007"), a("70102");
 var l = a("49111");
-let n = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-]+\.gif)$/;
+let n = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/;
 
 function s(e) {
   let t = new URL("".concat(window.location.protocol).concat(e)),
