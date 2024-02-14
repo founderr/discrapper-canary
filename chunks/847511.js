@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return y
   }
 }), n("70102"), n("222007"), n("881410");
 var s = n("627445"),
@@ -152,6 +152,21 @@ async function P(e) {
 async function D(e) {
   let {
     channelId: t,
+    messageId: n
+  } = e;
+  return (0, h.updatePollState)(t, n, () => ({
+    channelId: t,
+    selectedAnswerIds: new Set,
+    submitting: !1,
+    editing: !1
+  })), await P({
+    channelId: t,
+    messageId: n
+  })
+}
+async function x(e) {
+  let {
+    channelId: t,
     messageId: n,
     type: s
   } = e;
@@ -162,11 +177,10 @@ async function D(e) {
         messageId: n
       });
       break;
-    case "edit":
-      R({
+    case "remove":
+      await D({
         channelId: t,
-        messageId: n,
-        isEditing: !0
+        messageId: n
       });
       break;
     case "cancel":
@@ -180,7 +194,7 @@ async function D(e) {
       l(!1, "Unknown poll action type: ".concat(s))
   }
 }
-var x = {
+var y = {
   handlePollAnswerTapped: function(e) {
     var t, n, s, l, a;
     let {
@@ -233,7 +247,7 @@ var x = {
   },
   handlePollSubmitVote: P,
   handleUpdateVoteEditingState: R,
-  handlePollActionTapped: D,
+  handlePollActionTapped: x,
   createPoll: async function e(e) {
     let {
       channel: t,

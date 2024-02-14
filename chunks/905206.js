@@ -93,7 +93,7 @@ function g(e, t) {
   return {
     poll: a,
     canTapAnswers: i && (!p || E || C),
-    canEditVote: !c && A && i && !u,
+    canRemoveVote: !c && A && i && !u,
     canShowVoteCounts: C,
     canSubmitVote: !c && I && !A && i,
     expirationLabel: r,
@@ -133,7 +133,7 @@ function M(e, t, n) {
   if (null == D) return;
   let {
     canTapAnswers: x,
-    canEditVote: y,
+    canRemoveVote: y,
     canShowVoteCounts: U,
     canSubmitVote: j,
     expirationLabel: b,
@@ -217,7 +217,7 @@ function M(e, t, n) {
     canSubmitVote: j,
     hasVoted: B,
     isEditingVote: k,
-    canEditVote: y,
+    canRemoveVote: y,
     isInteractive: w
   }).with({
     isInteractive: !1
@@ -231,12 +231,12 @@ function M(e, t, n) {
     enabled: G,
     type: "submit"
   })).with({
-    canEditVote: !0
+    canRemoveVote: !0
   }, () => ({
-    label: p.default.Messages.POLL_EDIT_VOTE,
+    label: p.default.Messages.POLL_REMOVE_VOTE,
     presentation: "textButton",
     enabled: !0,
-    type: "edit"
+    type: "remove"
   })).otherwise(() => ({
     label: p.default.Messages.POLL_SUBMIT_VOTE,
     presentation: "button",

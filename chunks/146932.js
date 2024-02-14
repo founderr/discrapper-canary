@@ -1,10 +1,10 @@
 "use strict";
-s.r(S), s.d(S, {
+S.r(s), S.d(s, {
   default: function() {
     return e
   }
 });
-var e = (0, s("862205").createExperiment)({
+var e = (0, S("862205").createExperiment)({
   kind: "guild",
   id: "2024-01_voice_call_backgrounds_mobile",
   label: "Custom backgrounds for mobile voice calls",
@@ -13,9 +13,16 @@ var e = (0, s("862205").createExperiment)({
   },
   treatments: [{
     id: 1,
-    label: "Enable custom voice backgrounds",
+    label: "Enable custom voice backgrounds (full set)",
     config: {
       enabled: !0
+    }
+  }, {
+    id: 2,
+    label: "Enable custom voice backgrounds (small set)",
+    config: {
+      enabled: !0,
+      useSmallSet: !0
     }
   }]
 })

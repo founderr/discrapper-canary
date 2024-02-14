@@ -50,9 +50,9 @@ function f() {
 function E(e) {
   if (T(e)) return Promise.resolve(function(e) {
     let t = e.match(m);
-    if (null == t || 3 !== t.length) return null;
-    let n = t[1],
-      i = t[2];
+    if (null == t || 2 !== t.length) return null;
+    let n = (0, a.getNativePlatform)(),
+      i = t[1];
     return {
       targetBuildOverride: {
         ["discord_".concat(n)]: {
@@ -91,7 +91,7 @@ let _ = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__devel
 function S(e) {
   return null != e && _.test(e)
 }
-let m = RegExp("^dev://bo/(ios|android|web)/([\\w-./]+)$", "i");
+let m = RegExp("^dev://branch/([\\w-./]+)$", "i");
 
 function T(e) {
   return null != e && m.test(e)
