@@ -1123,7 +1123,7 @@ class tg extends S.default.Store {
         location: "MediaEngineStore"
       }) : null,
       s = i.canSupportSecureFrames || (null == r ? void 0 : r.canSupportSecureFrames),
-      a = !(0, ee.isIOS)() && !(0, ee.isAndroid)() && (i.canSupportMls || (null == r ? void 0 : r.canSupportMls)),
+      a = i.canSupportMls || (null == r ? void 0 : r.canSupportMls),
       o = Math.max(i.protocolVersionFloor, null !== (t = null == r ? void 0 : r.protocolVersionFloor) && void 0 !== t ? t : 0);
     return s && n % 100 >= o ? a ? n : n % 100 : 0
   }
