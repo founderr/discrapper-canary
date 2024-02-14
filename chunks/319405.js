@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return L
+    return u
   }
 }), E("222007");
 var t = E("689988"),
@@ -17,8 +17,9 @@ var t = E("689988"),
   N = E("166604");
 let O = 5 * i.default.Millis.SECOND,
   A = 12 * i.default.Millis.HOUR,
-  R = 1 * i.default.Millis.MINUTE;
-class l extends t.default {
+  R = 1 * i.default.Millis.MINUTE,
+  l = 15 * i.default.Millis.SECOND;
+class L extends t.default {
   maybeFetchCurrentQuests() {
     (0, T.getIsEligibleForQuests)({
       location: N.QuestsExperimentLocations.QUESTS_MANAGER,
@@ -32,17 +33,26 @@ class l extends t.default {
         streamKey: E,
         applicationId: t
       } = e;
-
-      function o() {
-        null != n.default.getRTCStream(E) && 0 !== n.default.getViewerIds(E).length && (0, I.sendHeartbeat)({
+      window.clearTimeout(this.sendHeartbeatIntervalIds.get(E));
+      let o = () => {
+        (null != n.default.getRTCStream(E) || n.default.getViewerIds(E).length > 0) && (0, I.sendHeartbeat)({
           questId: _,
           streamKey: E,
           applicationId: t
-        })
-      }
-      window.clearInterval(this.sendHeartbeatIntervalIds.get(E)), o(), this.sendHeartbeatIntervalIds.set(E, window.setInterval(o, R))
+        });
+        let e = this.calculateHeartbeatDurationMs(t);
+        this.sendHeartbeatIntervalIds.set(E, window.setTimeout(o, e))
+      };
+      o()
+    }, this.calculateHeartbeatDurationMs = e => {
+      let _ = s.default.quests.get(e);
+      if (null == _ || null == _.config || null == _.userStatus) return R;
+      let {
+        streamProgressSeconds: E
+      } = _.userStatus, t = 60 * _.config.streamDurationRequirementMinutes;
+      return Math.min(Math.max((t - E) * 30, l), R)
     }, this.terminateHeartbeat = e => {
-      window.clearInterval(this.sendHeartbeatIntervalIds.get(e)), this.sendHeartbeatIntervalIds.delete(e)
+      window.clearTimeout(this.sendHeartbeatIntervalIds.get(e)), this.sendHeartbeatIntervalIds.delete(e)
     }, this.handleEnrollmentSuccess = e => {
       let {
         enrolledQuestUserStatus: {
@@ -105,4 +115,4 @@ class l extends t.default {
     }
   }
 }
-var L = new l
+var u = new L
