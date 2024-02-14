@@ -18,10 +18,15 @@ var a = s("37983"),
 let T = e => {
   let {
     quest: t
-  } = e;
+  } = e, [s, l] = n.useState(!1), i = n.useCallback(() => l(!0), []), r = n.useCallback(() => l(!1), []);
   return (0, a.jsxs)("div", {
     className: E.questsCard,
+    onFocus: i,
+    onMouseEnter: i,
+    onBlur: r,
+    onMouseLeave: r,
     children: [(0, a.jsx)(c.default, {
+      isFocused: s,
       quest: t
     }), (0, a.jsx)(u.default, {
       quest: t

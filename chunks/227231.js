@@ -15,32 +15,35 @@ n.r(t), n.d(t, {
   getRewardAssetUrl: function() {
     return c
   },
-  getHeroAssetUrl: function() {
+  getHeroStaticAssetUrl: function() {
     return f
   },
-  getQuestBarStaticHeroAssetUrl: function() {
+  getHeroAnimatedAssetUrl: function() {
     return E
   },
-  getQuestBarAnimatedHeroAssetUrl: function() {
+  getQuestBarStaticHeroAssetUrl: function() {
     return S
   },
-  getGameTileAssetUrl: function() {
+  getQuestBarAnimatedHeroAssetUrl: function() {
     return h
   },
-  getGameLogotypeAssetUrl: function() {
+  getGameTileAssetUrl: function() {
     return C
   },
-  getQuestForTargetedContent: function() {
+  getGameLogotypeAssetUrl: function() {
     return _
   },
-  getPlatformString: function() {
+  getQuestForTargetedContent: function() {
     return p
   },
-  calculatePercentComplete: function() {
+  getPlatformString: function() {
     return m
   },
-  getContextualEntrypointHeading: function() {
+  calculatePercentComplete: function() {
     return g
+  },
+  getContextualEntrypointHeading: function() {
+    return T
   }
 }), n("222007");
 var a = n("588025"),
@@ -122,17 +125,18 @@ function d(e) {
 }
 let c = e => "".concat(s).concat(e).concat("/reward.png"),
   f = e => "".concat(s).concat(e).concat("/hero.png"),
-  E = e => "".concat(s).concat(e).concat("/quests_bar_hero.png"),
-  S = e => "".concat(s).concat(e).concat("/quests_bar_hero.webm"),
-  h = e => "".concat(s).concat(e).concat("/game_tile.png"),
-  C = (e, t) => "".concat(s).concat(e, "/").concat(t).concat("/game_logotype.png");
+  E = e => "".concat(s).concat(e).concat("/hero.webm"),
+  S = e => "".concat(s).concat(e).concat("/quests_bar_hero.png"),
+  h = e => "".concat(s).concat(e).concat("/quests_bar_hero.webm"),
+  C = e => "".concat(s).concat(e).concat("/game_tile.png"),
+  _ = (e, t) => "".concat(s).concat(e, "/").concat(t).concat("/game_logotype.png");
 
-function _(e, t) {
+function p(e, t) {
   for (let [n, a] of e)
     if (!l(a) && a.targetedContent.includes(t)) return a;
   return null
 }
-let p = e => {
+let m = e => {
   switch (e) {
     case a.QuestRewardCodePlatforms.XBOX:
       return r.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -147,7 +151,7 @@ let p = e => {
   }
 };
 
-function m(e) {
+function g(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: t,
@@ -160,11 +164,11 @@ function m(e) {
   return Math.min(t / 60 / a, 1)
 }
 
-function g(e) {
+function T(e) {
   var t, n;
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return r.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-    let t = m(e);
+    let t = g(e);
     return t >= .75 ? r.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? r.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? r.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : r.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
   }
   return r.default.Messages.QUESTS_TITLE.format({

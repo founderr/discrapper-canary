@@ -1,55 +1,70 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return S
+    return m
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("446674"),
-  l = s("77078"),
-  i = s("915639"),
-  r = s("161778"),
-  o = s("227231"),
-  d = s("45198"),
-  u = s("782340"),
-  c = s("908616"),
-  S = e => {
+var a = s("37983"),
+  n = s("884691"),
+  l = s("446674"),
+  i = s("77078"),
+  r = s("206230"),
+  o = s("915639"),
+  d = s("161778"),
+  u = s("58608"),
+  c = s("588025"),
+  S = s("227231"),
+  E = s("45198"),
+  T = s("782340"),
+  f = s("908616"),
+  m = e => {
     let {
-      quest: t
-    } = e, s = (0, n.useStateFromStores)([i.default], () => i.default.locale), S = (0, n.useStateFromStores)([r.default], () => r.default.getState().theme), E = new Date(t.config.expiresAt).toLocaleDateString(s, {
+      isFocused: t,
+      quest: s
+    } = e, m = (0, l.useStateFromStores)([o.default], () => o.default.locale), _ = (0, l.useStateFromStores)([d.default], () => d.default.getState().theme), g = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), h = n.useMemo(() => s.config.videoAssets.includes(c.QuestContent.QUEST_INVENTORY_CARD), [s]), N = n.useRef(null), I = new Date(s.config.expiresAt).toLocaleDateString(m, {
       year: "numeric",
       month: "long",
       day: "numeric"
     });
-    return (0, a.jsxs)("div", {
-      className: c.questsCardHeader,
-      children: [(0, a.jsx)("img", {
-        src: (0, o.getHeroAssetUrl)(t.id),
-        alt: "",
-        className: c.questSplash
+    return n.useEffect(() => {
+      null != N.current && (t ? N.current.play() : (N.current.pause(), N.current.currentTime = 0))
+    }, [t]), (0, a.jsxs)("div", {
+      className: f.questsCardHeader,
+      children: [(0, a.jsx)(u.default, {
+        autoPlay: !1,
+        loop: !1,
+        muted: !0,
+        playsInline: !0,
+        className: f.questSplash,
+        controls: !1,
+        poster: (0, S.getHeroStaticAssetUrl)(s.id),
+        ref: N,
+        children: !g && h && (0, a.jsx)("source", {
+          src: (0, S.getHeroAnimatedAssetUrl)(s.id),
+          type: "video/webm"
+        })
       }), (0, a.jsxs)("div", {
-        className: c.headerContent,
+        className: f.headerContent,
         children: [(0, a.jsxs)("div", {
-          className: c.iconLogotypeContainer,
+          className: f.iconLogotypeContainer,
           children: [(0, a.jsx)("img", {
-            src: (0, o.getGameTileAssetUrl)(t.id),
+            src: (0, S.getGameTileAssetUrl)(s.id),
             alt: "",
-            className: c.questIcon
+            className: f.questIcon
           }), (0, a.jsx)("img", {
-            src: (0, o.getGameLogotypeAssetUrl)(t.id, S),
+            src: (0, S.getGameLogotypeAssetUrl)(s.id, _),
             alt: "",
-            className: c.questLogotype
-          }), (0, a.jsx)(d.default, {})]
+            className: f.questLogotype
+          }), (0, a.jsx)(E.default, {})]
         }), (0, a.jsxs)("div", {
-          className: c.questInfo,
-          children: [(0, a.jsx)(l.Heading, {
+          className: f.questInfo,
+          children: [(0, a.jsx)(i.Heading, {
             variant: "heading-xxl/bold",
-            children: t.config.messages.questName
-          }), (0, a.jsx)(l.Text, {
+            children: s.config.messages.questName
+          }), (0, a.jsx)(i.Text, {
             variant: "text-xs/normal",
-            children: u.default.Messages.QUESTS_AVAILABLE_THROUGH.format({
-              date: E
+            children: T.default.Messages.QUESTS_AVAILABLE_THROUGH.format({
+              date: I
             })
           })]
         })]
