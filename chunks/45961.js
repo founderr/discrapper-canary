@@ -6,17 +6,20 @@ n.r(t), n.d(t, {
   useSynchronizedScrollPositionForActiveCategoryIndex: function() {
     return p
   },
-  useSynchronizedActiveCategoryIndexForScrollPosition: function() {
+  useShowUpsellForScrollPosition: function() {
     return h
   },
-  useExpressionPickerGridKeyboardNavigation: function() {
+  useSynchronizedActiveCategoryIndexForScrollPosition: function() {
     return E
   },
-  useExpressionGrid: function() {
+  useExpressionPickerGridKeyboardNavigation: function() {
     return g
   },
-  useKeyboardNavigation: function() {
+  useExpressionGrid: function() {
     return S
+  },
+  useKeyboardNavigation: function() {
+    return C
   }
 }), n("222007"), n("424973");
 var l = n("884691"),
@@ -70,6 +73,53 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
   },
   h = e => {
     let {
+      listRef: t,
+      searchQuery: n,
+      setShowUpsell: i,
+      setUpsellGlowOpacity: a,
+      emojiSectionDescriptors: s
+    } = e, r = l.useCallback(e => {
+      if ("" !== n) {
+        a(0);
+        return
+      }
+      if (null == t.current) return;
+      let l = s.findIndex(e => e.isNitroLocked);
+      if (-1 === l) {
+        a(0);
+        return
+      }
+      let i = t.current.getSectionDescriptors();
+      if (null == i || 0 === i.length || i.length !== s.length) return;
+      let r = i[l],
+        o = e + t.current.getListDimensions().height,
+        u = Math.min(Math.max((r.offset.top - (o - 250)) / 250, 0), 1);
+      a(u)
+    }, [n, t, s, a]), o = l.useCallback(e => {
+      if ("" !== n) {
+        i(!1);
+        return
+      }
+      if (null == t.current) return;
+      let l = t.current.getSectionDescriptors();
+      if (null == l || 0 === l.length || l.length !== s.length) return;
+      let a = t.current.getListDimensions().height,
+        r = e + .7 * a,
+        o = e + .85 * a,
+        u = !1,
+        d = !1;
+      s.forEach((e, t) => {
+        if (!e.isNitroLocked) return;
+        let n = l[t];
+        n.offset.top <= o && n.offset.bottom >= o && (d = !0), n.offset.top <= r && n.offset.bottom >= r && (u = !0)
+      }), i(d && u)
+    }, [n, t, s, i]), u = l.useCallback(e => {
+      o(e), r(e)
+    }, [o, r]);
+    return u
+  },
+  E = e => {
+    let {
       activeCategoryIndex: t,
       listRef: n,
       isScrolling: i,
@@ -98,7 +148,7 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
     }, [i, f, m]);
     return p
   },
-  E = e => {
+  g = e => {
     let {
       columnCounts: t,
       gridNavigatorId: n,
@@ -176,7 +226,7 @@ let f = (0, o.cssValueToNumber)(u.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
     }
   };
 
-function g(e) {
+function S(e) {
   let {
     categories: t,
     collapsedCategories: n,
@@ -230,7 +280,7 @@ function g(e) {
   }, [t, n, i, r, s, a])
 }
 
-function S(e) {
+function C(e) {
   let {
     columnCounts: t,
     expressionsGrid: n,
@@ -245,7 +295,7 @@ function S(e) {
     gridContainerProps: m,
     handleGridContainerKeyDown: p,
     isUsingKeyboardNavigation: h
-  } = E({
+  } = g({
     columnCounts: t,
     gridNavigatorId: s,
     itemGrid: n,
