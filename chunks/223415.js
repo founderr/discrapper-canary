@@ -43,8 +43,8 @@ var g = () => {
     A = f.default.useIsRingtoneDisabled(),
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
     R = (0, u.useStateFromStores)([E.default], () => E.default.getSoundpack()),
-    v = s.useRef(!1),
-    O = (0, r.useStableMemo)(() => {
+    O = s.useRef(!1),
+    v = (0, r.useStableMemo)(() => {
       let e = "call_ringing";
       if (g && !A) return (0, S.createSound)(c.default.ringtone, e);
       if (R === p.Soundpacks.CLASSIC) {
@@ -54,14 +54,14 @@ var g = () => {
       return (0, S.createSoundForPack)("call_ringing", R)
     }, [R, A, g]);
   s.useEffect(() => () => {
-    O.stop()
-  }, [O]), s.useEffect(() => {
+    v.stop()
+  }, [v]), s.useEffect(() => {
     if (N || l) {
-      v.current && (O.stop(), v.current = !1);
+      O.current && (v.stop(), O.current = !1);
       return
     }
-    n && !v.current ? (O.loop(), v.current = !0) : !n && v.current && (O.stop(), v.current = !1)
-  }, [l, N, n, O]);
+    n && !O.current ? (v.loop(), O.current = !0) : !n && O.current && (v.stop(), O.current = !1)
+  }, [l, N, n, v]);
   let L = (0, o.useTransition)(t, {
     keys: e => {
       var t;

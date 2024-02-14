@@ -40,12 +40,12 @@ var C = e => {
     currentCategoryId: A,
     loadId: N,
     onTagClick: R,
-    showMoreCards: v = !1
+    showMoreCards: O = !1
   } = e;
   s.useEffect(() => {
     i.default.wait(() => T())
   }, [A]);
-  let O = (0, c.default)(v ? _ : h),
+  let v = (0, c.default)(O ? _ : h),
     {
       analyticsLocations: L
     } = (0, r.default)();
@@ -73,9 +73,9 @@ var C = e => {
   };
   if (P || null == M) {
     let e = [];
-    for (let t = 0; t < O; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
+    for (let t = 0; t < v; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
-  } else t = M.slice(0, O).map(e => (0, a.jsx)(d.default, {
+  } else t = M.slice(0, v).map(e => (0, a.jsx)(d.default, {
     className: E.guildCard,
     guild: e,
     onView: y,

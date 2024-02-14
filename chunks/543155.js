@@ -221,23 +221,23 @@ function I(e) {
       let {
         clientWidth: g,
         clientHeight: A
-      } = a, N = n - this._offsetY, R = t - this._offsetX, v = C(E({
+      } = a, N = n - this._offsetY, R = t - this._offsetX, O = C(E({
         top: N,
         left: R
       }, s, l, g, A));
       if (c) {
-        v = _(v);
-        let e = h(v);
+        O = _(O);
+        let e = h(O);
         p = e[0], m = e[1]
-      } else v = {
-        top: v.top,
-        left: v.left
+      } else O = {
+        top: O.top,
+        left: O.left
       };
-      2 === r && m !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, T = !0), 2 === i && p !== this.state.verticalOrientation && (this._offsetY = A - this._offsetY, T = !0), this.setDOMPositions(v), !S && (null == o || o(v, a)), null == u || u(v, a), T && (null == d || d([p, m])), this.setState({
+      2 === r && m !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, T = !0), 2 === i && p !== this.state.verticalOrientation && (this._offsetY = A - this._offsetY, T = !0), this.setDOMPositions(O), !S && (null == o || o(O, a)), null == u || u(O, a), T && (null == d || d([p, m])), this.setState({
         dragging: I,
         verticalOrientation: p,
         horizontalOrientation: m,
-        atTopEdge: 0 === v.top
+        atTopEdge: 0 === O.top
       })
     }, this.handleMouseUp = () => {
       window.removeEventListener("mousemove", this.handleMouseMove), window.removeEventListener("mouseup", this.handleMouseUp), this.state.dragging && this.setState({

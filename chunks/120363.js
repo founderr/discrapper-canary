@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   useChannelListUpsellLocationTrackerRef: function() {
-    return u
+    return o
   }
 });
 var l = n("884691"),
@@ -22,7 +22,7 @@ function r(e) {
   }, s.default)
 }
 
-function o(e) {
+function u(e) {
   if (null == e) return !1;
   try {
     let t = window.getComputedStyle(e);
@@ -32,7 +32,7 @@ function o(e) {
   }
 }
 
-function u(e, t) {
+function o(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     a = l.useRef(null);
   return l.useLayoutEffect(() => {
@@ -40,12 +40,12 @@ function u(e, t) {
       s = () => {
         requestAnimationFrame(() => {
           var l, s, r;
-          let o = null !== (s = null === (l = a.current) || void 0 === l ? void 0 : l.getBoundingClientRect()) && void 0 !== s ? s : null;
+          let u = null !== (s = null === (l = a.current) || void 0 === l ? void 0 : l.getBoundingClientRect()) && void 0 !== s ? s : null;
           r = {
             name: t,
             guildId: e,
             disabled: n,
-            boundingRect: null != o ? o : null
+            boundingRect: null != u ? u : null
           }, i.setState(e => {
             var t, n;
             return {
@@ -63,8 +63,8 @@ function u(e, t) {
     if (null == l) return s(), () => {};
     let r = function(e) {
       let t = e.parentNode;
-      for (; null != t && t !== document.body && !o(t);) t = t.parentNode;
-      return o(t) ? t : null
+      for (; null != t && t !== document.body && !u(t);) t = t.parentNode;
+      return u(t) ? t : null
     }(l);
     return s(), null == r || r.addEventListener("scroll", s, {
       passive: !0

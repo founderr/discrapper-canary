@@ -30,8 +30,8 @@ var a = n("37983"),
   A = n("155207"),
   N = n("956089"),
   R = n("599110"),
-  v = n("439932"),
-  O = n("544556"),
+  O = n("439932"),
+  v = n("544556"),
   L = n("822825"),
   M = n("104887"),
   P = n("771783"),
@@ -95,7 +95,7 @@ function W(e) {
     handleItemSelect: s
   } = e, l = (0, g.useUID)(), o = (0, y.usePendingRequestCount)();
   return (0, a.jsxs)(C.default, {
-    className: i((0, v.getThemeClass)(t), B.sidebarTabBar),
+    className: i((0, O.getThemeClass)(t), B.sidebarTabBar),
     scrollable: r.isMobile,
     role: "navigation",
     "aria-labelledby": l,
@@ -144,7 +144,7 @@ function K() {
     A = null != e,
     N = l && null != m && !A;
   return (s.useEffect(() => {
-    (0, S.trackAppUIViewed)("family-center"), O.default.initialPageLoad(), !n && (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+    (0, S.trackAppUIViewed)("family-center"), v.default.initialPageLoad(), !n && (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
       dismissAction: k.ContentDismissActionType.AUTO,
       forceTrack: !0
     })
@@ -190,12 +190,12 @@ function z() {
       selectedTab: A,
       handleTabChange: N
     } = (0, M.default)(),
-    v = (0, g.useUID)(),
+    O = (0, g.useUID)(),
     x = T.default.getCurrentUser(),
     b = null != e,
     U = l && null != x && !b;
   if (s.useEffect(() => {
-      f.setHomeLink(j.Routes.FAMILY_CENTER), (0, S.trackAppUIViewed)("family-center"), !L.default.isLoading() && L.default.canRefetch() && O.default.initialPageLoad(), !n && (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+      f.setHomeLink(j.Routes.FAMILY_CENTER), (0, S.trackAppUIViewed)("family-center"), !L.default.isLoading() && L.default.canRefetch() && v.default.initialPageLoad(), !n && (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
         dismissAction: k.ContentDismissActionType.AUTO,
         forceTrack: !0
       })
@@ -228,7 +228,7 @@ function z() {
       }
     }), (0, a.jsx)(c.TabBar.Panel, {
       id: H,
-      "aria-labelledby": v,
+      "aria-labelledby": O,
       className: B.contentPanel,
       children: (0, a.jsx)("div", {
         className: B.sideNavContent,

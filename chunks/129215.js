@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("535974"),
   N = n("352326"),
   R = n("471671"),
-  v = n("145131"),
-  O = n("953109"),
+  O = n("145131"),
+  v = n("953109"),
   L = n("280174"),
   M = n("158352"),
   P = n("546671"),
@@ -269,8 +269,8 @@ class Q extends s.PureComponent {
       foregroundGradientColor: s,
       message: l
     } = e;
-    return (0, a.jsxs)(v.default, {
-      direction: v.default.Direction.VERTICAL,
+    return (0, a.jsxs)(O.default, {
+      direction: O.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
@@ -288,8 +288,8 @@ class Q extends s.PureComponent {
       percents: t,
       message: n
     } = e;
-    return (0, a.jsxs)(v.default, {
-      direction: v.default.Direction.VERTICAL,
+    return (0, a.jsxs)(O.default, {
+      direction: O.default.Direction.VERTICAL,
       children: [(0, a.jsx)(f.StackedProgress, {
         percents: t,
         size: f.Progress.Sizes.SMALL,
@@ -497,12 +497,12 @@ let Z = () => (0, a.jsx)(V, {
   ee = [{
     key: q.NAME,
     cellClassName: F.nameCell,
-    render: e => (0, a.jsxs)(v.default, {
-      align: v.default.Align.CENTER,
-      children: [(0, a.jsx)(O.default, {
+    render: e => (0, a.jsxs)(O.default, {
+      align: O.default.Align.CENTER,
+      children: [(0, a.jsx)(v.default, {
         game: e.application,
         className: F.gameIcon,
-        size: O.default.Sizes.SMALL
+        size: v.default.Sizes.SMALL
       }), (0, a.jsx)("div", {
         className: F.nameCellText,
         children: e.application.name
@@ -535,8 +535,8 @@ let Z = () => (0, a.jsx)(V, {
         item: e
       })) : s = (0, a.jsx)($, {
         item: e
-      }), (0, a.jsxs)(v.default, {
-        justify: v.default.Justify.END,
+      }), (0, a.jsxs)(O.default, {
+        justify: O.default.Justify.END,
         children: [n, s]
       })
     }

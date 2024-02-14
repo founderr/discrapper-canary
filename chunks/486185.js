@@ -32,8 +32,8 @@ function m(e) {
   } = e, {
     mute: N,
     suppress: R
-  } = (0, f.default)(t), v = (0, l.default)([E.default], () => E.default.isDeaf()), O = N || R || v, [L, M] = s.useState(!1), P = t.getGuildId(), D = (0, _.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: O
+  } = (0, f.default)(t), O = (0, l.default)([E.default], () => E.default.isDeaf()), v = N || R || O, [L, M] = s.useState(!1), P = t.getGuildId(), D = (0, _.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: v
   }), [y, x] = (0, c.useGetDismissibleContent)(D), {
     AnalyticsLocationProvider: b
   } = (0, d.default)(u.default.SOUNDBOARD_BUTTON);
@@ -75,7 +75,7 @@ function m(e) {
         className: T,
         wrapperClassName: T,
         innerClassName: g,
-        disabled: O,
+        disabled: v,
         onClick: () => {
           var t, n;
           null == n || n(), null != y && y !== i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && x(S.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!L)
@@ -95,7 +95,7 @@ function m(e) {
       text: function() {
         if (N) return p.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
         if (R) return p.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (v) return p.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        if (O) return p.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
         return p.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => G(e)

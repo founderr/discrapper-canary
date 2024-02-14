@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return O
   }
 });
 var i = n("884691"),
@@ -16,12 +16,12 @@ var i = n("884691"),
   f = n("305961"),
   h = n("957255"),
   p = n("18494"),
-  E = n("162771"),
-  g = n("697218"),
-  m = n("901165"),
+  g = n("162771"),
+  m = n("697218"),
+  E = n("901165"),
   S = n("819068"),
   v = n("49111");
-class I extends i.Component {
+class y extends i.Component {
   componentDidUpdate(e) {
     if (this.props.locked) return null;
     let {
@@ -51,28 +51,28 @@ class I extends i.Component {
     return null
   }
 }
-var y = l.default.connectStores([E.default, p.default, d.default, f.default, g.default, m.default, c.default, u.default, h.default], () => {
+var O = l.default.connectStores([g.default, p.default, d.default, f.default, m.default, E.default, c.default, u.default, h.default], () => {
   var e, t, n;
-  let i = E.default.getGuildId(),
+  let i = g.default.getGuildId(),
     l = p.default.getChannelId(i),
     s = d.default.getChannel(l),
     o = f.default.getGuild(i),
-    r = g.default.getCurrentUser(),
-    I = null !== (t = u.default.getChannels(null == o ? void 0 : o.id)[u.GUILD_SELECTABLE_CHANNELS_KEY]) && void 0 !== t ? t : [],
-    y = I.length > 0 ? I.filter(e => {
+    r = m.default.getCurrentUser(),
+    y = null !== (t = u.default.getChannels(null == o ? void 0 : o.id)[u.GUILD_SELECTABLE_CHANNELS_KEY]) && void 0 !== t ? t : [],
+    O = y.length > 0 ? y.filter(e => {
       let {
         channel: t
       } = e;
       return h.default.can(a.default.combine(v.Permissions.SEND_MESSAGES, v.Permissions.VIEW_CHANNEL), t)
     }).length : 0,
-    _ = null != r && null != i && null !== (n = null === (e = c.default.getMember(i, r.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== n && n;
+    C = null != r && null != i && null !== (n = null === (e = c.default.getMember(i, r.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== n && n;
   return {
     selectedGuild: i,
     selectedChannel: l,
     isNSFWChannel: null == s ? void 0 : s.nsfw,
-    locked: m.default.isUILocked((0, S.getPID)()),
+    locked: E.default.isUILocked((0, S.getPID)()),
     hasPreviewEnabled: null == o ? void 0 : o.features.has(v.GuildFeatures.PREVIEW_ENABLED),
-    isMemberPending: _,
-    postableChannelCount: y
+    isMemberPending: C,
+    postableChannelCount: O
   }
-})(I)
+})(y)

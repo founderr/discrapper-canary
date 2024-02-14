@@ -44,13 +44,13 @@ function N(e) {
       isGracePeriodVisible: S.default.isVisible(n)
     })),
     R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
-    v = (0, i.useStateFromStores)([m.default], () => m.default.isVisible(e)),
-    O = (0, i.useStateFromStores)([I.default], () => I.default.can(A.Permissions.ADMINISTRATOR, e)),
+    O = (0, i.useStateFromStores)([m.default], () => m.default.isVisible(e)),
+    v = (0, i.useStateFromStores)([I.default], () => I.default.can(A.Permissions.ADMINISTRATOR, e)),
     L = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     M = null != e ? e.premiumSubscriberCount : 0,
     P = (0, g.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
     D = null != a && Date.now() - a <= 432e5,
-    y = !D && !L && O && P,
+    y = !D && !L && v && P,
     x = (0, c.useGuildHasLiveChannelNotice)(n),
     b = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
     U = h.default.useShouldShowChannelNotice(n),
@@ -80,7 +80,7 @@ function N(e) {
       }
     }, [n, y]), R) return 0;
   if (N) return 1;
-  if (v) return 2;
+  if (O) return 2;
   else if (x || F && null != B) return 3;
   else if (b) return 4;
   else if (U) return 5;

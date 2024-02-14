@@ -89640,6 +89640,8 @@ html .tabBadge__002b3 {
 }
 
 .questSplash__4e680 {
+    -o-object-fit: cover;
+    object-fit: cover;
     position: absolute;
     height: 185px;
     width: 660px

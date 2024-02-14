@@ -59,7 +59,7 @@ function R(e) {
   })
 }
 
-function v() {
+function O() {
   return (0, a.jsxs)("div", {
     className: i(g.box, g.linkingBanner, g.linkingBannerParent),
     children: [(0, a.jsxs)("div", {
@@ -102,7 +102,7 @@ function v() {
   })
 }
 
-function O() {
+function v() {
   let e = (0, h.useHasMaxConnections)();
   return (0, a.jsxs)("div", {
     className: i(g.box, g.linkingBanner),
@@ -274,6 +274,6 @@ var x = () => {
   let e = (0, E.default)();
   return (0, a.jsxs)("div", {
     className: g.container,
-    children: [e ? (0, a.jsx)(v, {}) : (0, a.jsx)(O, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(D, {})]
+    children: [e ? (0, a.jsx)(O, {}) : (0, a.jsx)(v, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(D, {})]
   })
 }

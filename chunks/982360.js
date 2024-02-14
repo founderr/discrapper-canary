@@ -10,8 +10,8 @@ var a = n("446674"),
   s = n("77078"),
   i = n("987317"),
   r = n("9759"),
-  o = n("42203"),
-  u = n("660478"),
+  u = n("42203"),
+  o = n("660478"),
   d = n("18494"),
   c = n("697218"),
   f = n("476765"),
@@ -24,10 +24,10 @@ var a = n("446674"),
 function g() {
   var e;
   let t = (0, f.useUID)(),
-    [n, g] = (0, a.useStateFromStoresArray)([d.default, o.default], () => [o.default.getChannel(d.default.getVoiceChannelId()), d.default.getCurrentlySelectedChannelId(null)]),
-    S = (0, a.useStateFromStores)([u.default], () => null != n ? u.default.getMentionCount(n.id) : 0),
-    I = (0, a.useStateFromStores)([c.default], () => c.default.getUser(null == n ? void 0 : n.ownerId)),
-    _ = null !== (e = C.default.getGlobalName(I)) && void 0 !== e ? e : C.default.getUserTag(I),
+    [n, g] = (0, a.useStateFromStoresArray)([d.default, u.default], () => [u.default.getChannel(d.default.getVoiceChannelId()), d.default.getCurrentlySelectedChannelId(null)]),
+    I = (0, a.useStateFromStores)([o.default], () => null != n ? o.default.getMentionCount(n.id) : 0),
+    _ = (0, a.useStateFromStores)([c.default], () => c.default.getUser(null == n ? void 0 : n.ownerId)),
+    S = null !== (e = C.default.getGlobalName(_)) && void 0 !== e ? e : C.default.getUserTag(_),
     {
       canViewBroadcasts: N
     } = r.default.useExperiment({
@@ -43,15 +43,15 @@ function g() {
       T && null != n && i.default.selectPrivateChannel(n.id)
     },
     icon: h.default,
-    tooltip: null != _ ? E.default.Messages.BROADCASTING_CHANNEL_NAME.format({
-      name: _
+    tooltip: null != S ? E.default.Messages.BROADCASTING_CHANNEL_NAME.format({
+      name: S
     }) : void 0,
     selected: A,
     upperBadge: (0, l.jsx)(s.Avatar, {
       size: s.AvatarSizes.SIZE_16,
-      src: null == I ? void 0 : I.getAvatarURL(null, 16),
-      "aria-label": _
+      src: null == _ ? void 0 : _.getAvatarURL(null, 16),
+      "aria-label": S
     }),
-    lowerBadge: S > 0 ? (0, m.renderMentionBadge)(S) : null
+    lowerBadge: I > 0 ? (0, m.renderMentionBadge)(I) : null
   }) : null
 }

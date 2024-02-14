@@ -27,8 +27,8 @@ var a = n("37983"),
   A = n("171984"),
   N = n("551254"),
   R = n("893399"),
-  v = n("353681"),
-  O = n("256430"),
+  O = n("353681"),
+  v = n("256430"),
   L = n("390236"),
   M = n("546102"),
   P = n("380710"),
@@ -196,7 +196,7 @@ let eC = () => (0, a.jsx)("div", {
     } = (0, q.default)(), n = (0, f.useStateFromStores)([ee.default], () => null != t ? t : ee.default.getChannelId(e));
     return function() {
       return window.location.pathname.startsWith(ec.Routes.GUILD_DISCOVERY)
-    }() ? (0, a.jsx)(O.default, {}) : null != e ? (0, a.jsx)(x.default, {
+    }() ? (0, a.jsx)(v.default, {}) : null != e ? (0, a.jsx)(x.default, {
       selectedChannelId: n,
       guildId: e
     }, e) : (0, a.jsx)(er.default, {})
@@ -214,13 +214,13 @@ function eR(e) {
     guildId: t
   })
 }
-let ev = e => (0, a.jsx)(eA, {
+let eO = e => (0, a.jsx)(eA, {
     ...e
   }),
-  eO = e => {
+  ev = e => {
     let t = null != e && e.length > 0 && e.startsWith("?"),
       n = t ? e.split("?")[1] : null;
-    return (0, a.jsx)(v.default, {
+    return (0, a.jsx)(O.default, {
       searchRoute: n
     })
   },
@@ -453,7 +453,7 @@ function eF() {
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
                   path: [ec.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), ec.Routes.CHANNEL(ec.ME, ":channelId"), ec.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                  render: ev,
+                  render: eO,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
                 }), (0, a.jsx)(p.default, {
@@ -462,7 +462,7 @@ function eF() {
                     let {
                       location: t
                     } = e;
-                    return eO(t.search)
+                    return ev(t.search)
                   },
                   impressionName: u.ImpressionNames.GUILD_DISCOVERY,
                   disableTrack: !0

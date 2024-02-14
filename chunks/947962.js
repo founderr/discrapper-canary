@@ -1,11 +1,11 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   usePomeloDebounceDelay: function() {
-    return i
+    return r
   }
 });
-var s = a("862205");
-let n = (0, s.createExperiment)({
+var s = n("862205");
+let a = (0, s.createExperiment)({
     kind: "user",
     label: "Pomelo Debounce Delay",
     id: "2023-03_pomelo_debounce_delay",
@@ -44,7 +44,7 @@ let n = (0, s.createExperiment)({
       }
     }]
   }),
-  i = () => n.useExperiment({
+  r = () => a.useExperiment({
     location: "52560d_1"
   }, {
     autoTrackExposure: !1

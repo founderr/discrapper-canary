@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return h
   }
 }), n("222007");
-var s = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var s = n("77078"),
   l = n("812204"),
   i = n("685665"),
   r = n("594864"),
@@ -27,9 +27,9 @@ function h(e) {
     analyticsLocations: C,
     openWithoutBackstack: !0
   }), E = m ? c.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : c.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION, g = m ? c.default.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : c.default.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
-  return (0, s.jsx)("div", {
-    children: (0, s.jsx)(r.MessageNoticeBanner, {
-      bannerIcon: (0, s.jsx)(o.default, {
+  return (0, a.jsx)("div", {
+    children: (0, a.jsx)(r.MessageNoticeBanner, {
+      bannerIcon: (0, a.jsx)(o.default, {
         className: f.bannerIcon,
         width: 32,
         height: 32
@@ -40,11 +40,11 @@ function h(e) {
       bannerSubtext: E,
       containerStyles: f.bannerContainer,
       headerStyles: f.bannerHeader,
-      children: (0, s.jsx)(a.Button, {
+      children: (0, a.jsx)(s.Button, {
         onClick: () => {
           p()
         },
-        size: a.Button.Sizes.SMALL,
+        size: s.Button.Sizes.SMALL,
         children: g
       })
     })

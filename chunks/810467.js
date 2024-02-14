@@ -25,8 +25,8 @@ var a, s, l = n("37983"),
   A = n("393414"),
   N = n("716214"),
   R = n("488464"),
-  v = n("998716"),
-  O = n("834052"),
+  O = n("998716"),
+  v = n("834052"),
   L = n("160870"),
   M = n("506885"),
   P = n("981601"),
@@ -48,7 +48,7 @@ function V(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, a = (0, p.useActiveEventOrStageInstanceChannel)(t.id), s = (0, m.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([O.default], () => O.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+  } = e, a = (0, p.useActiveEventOrStageInstanceChannel)(t.id), s = (0, m.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([v.default], () => v.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: V,
     isEventNoticeHidden: Y
   } = (0, u.useStateFromStoresObject)([I.default], () => ({
@@ -58,7 +58,7 @@ function V(e) {
     isEventNoticeHidden: I.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), W = null == a ? void 0 : a.id, K = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(W, v.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [W]), z = (0, u.useStateFromStores)([R.default], () => null != W ? R.default.getParticipantCount(W, v.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [W]), q = (0, u.useStateFromStores)([D.default], () => D.default.can(k.Permissions.CONNECT, a)), Q = (0, L.default)(null == a ? void 0 : a.id), Z = null == s ? void 0 : s.creator_id, X = (0, u.useStateFromStores)([y.default], () => y.default.getUser(Z), [Z]);
+  }), [r, s]), W = null == a ? void 0 : a.id, K = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(W, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [W]), z = (0, u.useStateFromStores)([R.default], () => null != W ? R.default.getParticipantCount(W, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [W]), q = (0, u.useStateFromStores)([D.default], () => D.default.can(k.Permissions.CONNECT, a)), Q = (0, L.default)(null == a ? void 0 : a.id), Z = null == s ? void 0 : s.creator_id, X = (0, u.useStateFromStores)([y.default], () => y.default.getUser(Z), [Z]);
   i.useEffect(() => {
     null != Z && (0, f.getUser)(Z)
   }, [Z]);

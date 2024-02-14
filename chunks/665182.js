@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   ChatSidebarType: function() {
-    return s
+    return a
   },
   default: function() {
     return E
   }
 }), n("222007");
-var s, a, l = n("37983"),
+var a, s, l = n("37983"),
   i = n("884691"),
   r = n("414456"),
   o = n.n(r),
@@ -18,20 +18,20 @@ var s, a, l = n("37983"),
   h = n("168973"),
   C = n("332374"),
   p = n("758534");
-(a = s || (s = {}))[a.PostSidebar = 0] = "PostSidebar", a[a.ThreadSidebar = 1] = "ThreadSidebar", a[a.CallChatSidebar = 2] = "CallChatSidebar", a[a.MessageRequestSidebar = 3] = "MessageRequestSidebar", a[a.HomeSidebar = 4] = "HomeSidebar";
+(s = a || (a = {}))[s.PostSidebar = 0] = "PostSidebar", s[s.ThreadSidebar = 1] = "ThreadSidebar", s[s.CallChatSidebar = 2] = "CallChatSidebar", s[s.MessageRequestSidebar = 3] = "MessageRequestSidebar", s[s.HomeSidebar = 4] = "HomeSidebar";
 
 function m(e) {
   let {
     resizableNode: t,
     onResize: n,
-    onResizeEnd: s,
-    maxWidth: a
+    onResizeEnd: a,
+    maxWidth: s
   } = e, i = (0, f.default)({
     minDimension: C.MIN_CHAT_SIDEBAR_WIDTH,
-    maxDimension: a,
+    maxDimension: s,
     resizableDomNodeRef: t,
     onElementResize: n,
-    onElementResizeEnd: s,
+    onElementResizeEnd: a,
     orientation: f.ResizeOrientation.HORIZONTAL_LEFT
   });
   return (0, l.jsx)("div", {
@@ -44,8 +44,8 @@ function E(e) {
   let {
     sidebarType: t,
     maxWidth: n,
-    onWidthChange: s,
-    children: a,
+    onWidthChange: a,
+    children: s,
     floatingLayer: r
   } = e, f = i.useRef(null), E = function(e) {
     switch (e) {
@@ -68,8 +68,8 @@ function E(e) {
     maxWidth: n
   }), T = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = A ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
   i.useEffect(() => {
-    null == s || s(T, A)
-  }, [T, s, A]);
+    null == a || a(T, A)
+  }, [T, a, A]);
   let N = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: o(p.chatTarget, {
@@ -92,7 +92,7 @@ function E(e) {
       style: {
         width: T
       },
-      children: a
+      children: s
     })]
   });
   if (A) {
