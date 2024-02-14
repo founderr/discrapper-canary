@@ -485,6 +485,9 @@ let H = new F(r.default, {
       isRejoiningFromCurrentSession: s
     } = e;
     s && I.set(t, n)
+  },
+  CONNECTION_INTERRUPTED: function(e) {
+    e.code === v.RPCCloseCodes.CLOSE_ABNORMAL && (s = void 0, y.clear(), S = !1, R = h.ActivityPanelModes.DISCONNECTED)
   }
 });
 var B = H
