@@ -397,16 +397,6 @@ let j = (0, _.default)([{
     }
   }
 }, r.omit(P, ["url"])]);
-r.omit((0, _.default)([P, {
-  mention: {
-    match(e, t, n) {
-      let l = P.codeBlock.match(e, t, n);
-      if (null != l) return l;
-      let r = P.inlineCode.match(e, t, n);
-      if (null != r) return r
-    }
-  }
-}]), ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]);
 var Q = {
   RULES: P,
   CHANNEL_TOPIC_RULES: w,

@@ -59,7 +59,9 @@ let c = {
       width: 14
     }
   })]), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading"),
-  _ = i.omit(r.default.RULES, "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading", "roleMention", "channelMention");
+  _ = {
+    text: r.default.RULES.text
+  };
 var N = {
   combineAndInjectMentionRule: d,
   createReactRules: s.default,
