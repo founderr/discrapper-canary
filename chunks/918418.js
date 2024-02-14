@@ -30,11 +30,18 @@ let c = e => {
     link: i.LinkMarkupRule
   })), [x, p] = l.useState(""), [g, N] = l.useState("");
   l.useEffect(() => {
-    p(null != E ? E : "")
+    var e;
+    p(null !== (e = null == E ? void 0 : E.value) && void 0 !== e ? e : "")
   }, [E]);
   let T = l.useCallback(e => {
     let t = null != _ ? new RegExp(_) : null;
-    null != t && null == t.exec(e) ? (N(d.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), p(""), h("")) : null != e && (N(""), p(e), h(e))
+    null != t && null == t.exec(e) ? (N(d.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), h({
+      value: e,
+      isValid: !1
+    })) : null != e && (N(""), p(e), h({
+      value: e,
+      isValid: !0
+    }))
   }, [h, _]);
   return (0, a.jsxs)("div", {
     className: o.marginBottom8,
@@ -73,7 +80,7 @@ var m = e => {
     let r = e.name;
     return (0, a.jsx)(c, {
       data: e.data,
-      onChange: e => n(r, e),
+      onChange: e => n(r, e.value, e.isValid),
       initialText: null !== (t = null == l ? void 0 : l[r]) && void 0 !== t ? t : void 0,
       isRequired: e.should_submit_data
     }, r)

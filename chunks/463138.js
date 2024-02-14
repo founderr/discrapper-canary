@@ -67,22 +67,26 @@ var O = e => {
     multiSelect: B,
     reportId: G,
     textInput: P
-  } = e, w = D(t, "checkbox"), F = D(t, "text_line_resource"), H = A(t, "external_link"), V = A(t, "free_text"), z = A(t, "dropdown"), [Y, W] = l.useState(!1), [K, q] = l.useState(!1), [Z, X] = l.useState(() => ({})), [J, Q] = l.useState(() => ({})), [$, ee] = l.useState((0, i.areRequiredElementsUnfilled)(V, z, w, P, B)), et = (e, t) => {
-    let n = {
-      ...J
-    };
-    n[e] = t, Q(n), ee((0, i.areRequiredElementsUnfilled)(V, z, w, n, Z))
+  } = e, w = D(t, "checkbox"), V = D(t, "text_line_resource"), F = A(t, "external_link"), H = A(t, "free_text"), z = A(t, "dropdown"), [Y, W] = l.useState(!1), [K, q] = l.useState(!1), [Z, X] = l.useState(() => ({})), [J, Q] = l.useState(() => ({})), [$, ee] = l.useState((0, i.areRequiredElementsUnfilled)(H, z, w, P, B)), et = function(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+      a = {
+        ...J
+      };
+    a[e] = {
+      value: t,
+      isValid: n
+    }, Q(a), ee((0, i.areRequiredElementsUnfilled)(H, z, w, a, Z))
   }, en = l.useMemo(() => e => {
     U({
       nodeRef: t.id,
       destination: e,
-      textInput: null != V || null != z ? J : void 0,
+      textInput: null != H || null != z ? J : void 0,
       multiSelect: null != w ? {
         name: w.name,
         state: Z
       } : void 0
     })
-  }, [t, U, w, Z, J, V, z]);
+  }, [t, U, w, Z, J, H, z]);
   l.useEffect(() => {
     null != B && X(B), null != P && Q(P)
   }, [B, P]);
@@ -111,8 +115,8 @@ var O = e => {
       })]
     }), (0, a.jsxs)(r.ModalContent, {
       className: L.body,
-      children: [null != F ? (0, a.jsx)(j.default, {
-        element: F
+      children: [null != V ? (0, a.jsx)(j.default, {
+        element: V
       }) : null, null != D(t, "breadcrumbs") && (0, a.jsx)(o.default, {
         history: O
       }), null != D(t, "message_preview") && ("message" === n.name || "first_dm" === n.name) && (0, a.jsx)(T.default, {
@@ -157,22 +161,22 @@ var O = e => {
           let n = {
             ...Z
           };
-          e in Z ? delete n[e] : n[e] = t, X(n), ee((0, i.areRequiredElementsUnfilled)(V, z, w, J, n))
+          e in Z ? delete n[e] : n[e] = t, X(n), ee((0, i.areRequiredElementsUnfilled)(H, z, w, J, n))
         },
         state: Z
       }), ("user_urf" === n.name || "message_urf" === n.name) && null != z && z.length > 0 && (0, a.jsx)(f.default, {
         elements: z,
         onChange: et,
         state: J
-      }), ("user_urf" === n.name || "message_urf" === n.name) && null != V && V.length > 0 && (0, a.jsx)(E.default, {
-        elements: V,
+      }), ("user_urf" === n.name || "message_urf" === n.name) && null != H && H.length > 0 && (0, a.jsx)(E.default, {
+        elements: H,
         onChange: et,
         state: J
       }), (0, a.jsx)(c.default, {
         node: t,
         onSelectChild: en
-      }), null != H && H.length > 0 ? (0, a.jsx)(h.default, {
-        elements: H
+      }), null != F && F.length > 0 ? (0, a.jsx)(h.default, {
+        elements: F
       }) : null, (0, a.jsx)(_.default, {
         hasError: K,
         onClose: () => {

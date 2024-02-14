@@ -50,13 +50,13 @@ var u = e => {
     onChange: n,
     state: l
   } = e, r = t.map(e => {
-    var t;
-    let r = e.name;
+    var t, r;
+    let s = e.name;
     return (0, a.jsx)(d, {
       element: e,
-      initialOption: null !== (t = null == l ? void 0 : l[r]) && void 0 !== t ? t : void 0,
-      onChange: e => n(r, e)
-    }, r)
+      initialOption: null !== (r = null == l ? void 0 : null === (t = l[s]) || void 0 === t ? void 0 : t.value) && void 0 !== r ? r : void 0,
+      onChange: e => n(s, e)
+    }, s)
   });
   return (0, a.jsx)("div", {
     children: r
