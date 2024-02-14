@@ -21,11 +21,11 @@ var a = n("37983"),
     let {
       guildId: t,
       inviteCode: n
-    } = e, [C, I] = s.useState(h.WaveStates.INITIAL), [S, p] = s.useState(null != n);
+    } = e, [C, I] = s.useState(h.WaveStates.INITIAL), [S, m] = s.useState(null != n);
     s.useEffect(() => {
-      null != n && i.default.resolveInvite(n, "Hub").finally(() => p(!1))
+      null != n && i.default.resolveInvite(n, "Hub").finally(() => m(!1))
     }, [n]);
-    let m = (0, l.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
+    let p = (0, l.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
       T = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t));
     s.useEffect(() => {
       null != T && (0, r.transitionTo)(E.Routes.CHANNEL(t))
@@ -47,7 +47,7 @@ var a = n("37983"),
         }), (0, a.jsx)("div", {
           className: _.contentWrapper,
           children: !S && (0, a.jsx)(f.HubEmailConnectionModalView, {
-            invite: m
+            invite: p
           })
         })]
       })

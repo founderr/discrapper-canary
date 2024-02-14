@@ -20,10 +20,10 @@ let h = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack(
   C = !1,
   I = [],
   S = null,
-  p = () => {
+  m = () => {
     !_ && (h.loop(), _ = !0)
   },
-  m = () => {
+  p = () => {
     h.stop(), _ = !1
   },
   T = () => {
@@ -64,10 +64,10 @@ class R extends s.default {
     let {
       userId: t
     } = e, n = i.default.getId();
-    n === t && m()
+    n === t && p()
   }
   stopAudio() {
-    m()
+    p()
   }
   startAudio() {
     var e;
@@ -78,7 +78,7 @@ class R extends s.default {
       a = u.default.isTyping(t, n),
       s = f.default.getUserCombo(n, t),
       l = null !== (e = null == s ? void 0 : s.multiplier) && void 0 !== e ? e : 1;
-    a && l >= 7 ? p() : m()
+    a && l >= 7 ? m() : p()
   }
   playAchievementUnlockSound() {
     T() && N("poggermode_achievement_unlock")

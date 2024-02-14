@@ -54,8 +54,8 @@ var N = i.memo(function(e) {
       onError: k
     } = e,
     w = i.useRef(null),
-    [F, G] = i.useState(0),
-    [B, H] = i.useState(P),
+    [F, B] = i.useState(0),
+    [G, H] = i.useState(P),
     [V, K] = i.useState(!1),
     [W, Y] = i.useState(!1),
     [z, Z] = i.useState(!1),
@@ -98,14 +98,14 @@ var N = i.memo(function(e) {
       Z(!0)
     }, []),
     ec = i.useCallback(() => {
-      Z(!1), F === B && ea()
-    }, [F, B, ea]),
+      Z(!1), F === G && ea()
+    }, [F, G, ea]),
     ef = i.useCallback(e => {
       let t = w.current;
-      if (null == B || null == t) return;
-      let n = e * B;
-      G(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
-    }, [B]);
+      if (null == G || null == t) return;
+      let n = e * G;
+      B(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
+    }, [G]);
   i.useEffect(() => {
     !J && W && q(!0)
   }, [W, J]);
@@ -121,7 +121,7 @@ var N = i.memo(function(e) {
         null == D || D(F, null != t ? (e - t) / 1e3 : 0), em.current = null
       }
     }
-  }, [W]), t = w, n = W, a = G, i.useEffect(() => {
+  }, [W]), t = w, n = W, a = B, i.useEffect(() => {
     let e;
     return ! function l() {
       let i = t.current;
@@ -204,7 +204,7 @@ var N = i.memo(function(e) {
       className: v.waveform,
       waveform: L,
       currentTime: F,
-      duration: null != B ? B : 1,
+      duration: null != G ? G : 1,
       playing: W,
       played: J,
       onDrag: ef,
@@ -213,7 +213,7 @@ var N = i.memo(function(e) {
     }), (0, l.jsx)(_, {
       played: J,
       currentTime: F,
-      duration: B
+      duration: G
     }), (0, l.jsx)(f.default, {
       className: v.volumeButton,
       iconClassName: v.volumeButtonIcon,

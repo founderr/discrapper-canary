@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("982527"),
   I = n("444752"),
   S = n("437942"),
-  p = n("267235"),
-  m = n("49111"),
+  m = n("267235"),
+  p = n("49111"),
   T = n("289382"),
   g = n("782340"),
   A = n("176967"),
@@ -38,7 +38,7 @@ var a = n("37983"),
       guildPreviewDisabled: C.default.getJoinRequestGuild(n)
     }));
     s.useEffect(() => {
-      null != M && (0, r.transitionTo)(m.Routes.CHANNEL(n))
+      null != M && (0, r.transitionTo)(p.Routes.CHANNEL(n))
     }, [M, n]), s.useEffect(() => {
       !P && f.default.fetchRequestToJoinGuilds()
     }, [P]);
@@ -67,7 +67,7 @@ var a = n("37983"),
       }, G = x(g.default.Messages.LEAVE_SERVER_BODY.format({
         name: null == M ? void 0 : M.toString()
       }), () => {
-        O(Math.max(R, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(n), (0, r.transitionTo)(m.Routes.ME)
+        O(Math.max(R, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(n), (0, r.transitionTo)(p.Routes.ME)
       }), j = (null == v ? void 0 : null === (t = v.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
         id: v.guild.id,
         splash: v.guild.splash
@@ -102,7 +102,7 @@ var a = n("37983"),
                   guild: D
                 });
               default:
-                return (0, a.jsx)(p.default, {
+                return (0, a.jsx)(m.default, {
                   guildId: n,
                   inviteCode: N,
                   onComplete: b

@@ -16,7 +16,7 @@ var s = n("77078"),
   c = (0, u.default)((e, t, n, r, o, u, d, c, f, E, h, _, C) => {
     let I = "OAuth2Authorize_".concat(e, "_").concat(E, "_").concat(h);
     return new Promise(S => {
-      let p = e => {
+      let m = e => {
         let {
           location: t
         } = e;
@@ -27,7 +27,7 @@ var s = n("77078"),
         authorization: t,
         clientId: e,
         scopes: null != n ? n : [],
-        callback: p,
+        callback: m,
         responseType: o,
         redirectUri: u,
         codeChallenge: d,

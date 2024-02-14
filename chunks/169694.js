@@ -82,7 +82,7 @@ function y(e, t, n, d) {
     k = null,
     w = null,
     F = null,
-    G = null;
+    B = null;
   return e.onChange = () => {
     if (null != t) {
       var a;
@@ -90,7 +90,7 @@ function y(e, t, n, d) {
         m = T.EditorUtils.getFirstText(e),
         p = (0, c.getCommandQuery)(t, null !== (a = null == m ? void 0 : m.text) && void 0 !== a ? a : ""),
         h = s.getChangeKeys(t, l.ApplicationCommandType.CHAT, p.text);
-      if (T.EditorUtils.richValue(e) !== D || !T.SelectionUtils.equals(e.selection, k) || u.activeCommand !== w || null == G || h.some((e, t) => G[t] !== e)) {
+      if (T.EditorUtils.richValue(e) !== D || !T.SelectionUtils.equals(e.selection, k) || u.activeCommand !== w || null == B || h.some((e, t) => B[t] !== e)) {
         let a = g.HistoryUtils.withMergedEntry(e, () => {
           var a;
           return function(e) {
@@ -322,7 +322,7 @@ function y(e, t, n, d) {
           let t = g.HistoryUtils.currentEntry(e);
           null != t && (t.commandId = a.commandId), F = a.optionValues
         } else F = null;
-        D = T.EditorUtils.richValue(e), k = e.selection, w = u.activeCommand, G = h
+        D = T.EditorUtils.richValue(e), k = e.selection, w = u.activeCommand, B = h
       }
     }
     y()

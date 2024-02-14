@@ -23,10 +23,10 @@ function l(e) {
       let e = a.default.getPlanIdsForSkus(o).filter(e => !d || i.PREMIUM_PLANS.has(e));
       return e.length > 0 ? a.default.get(e[0]) : null
     }),
-    E = null == f ? [] : (0, u.getCurrencies)(f.id, c, d),
-    m = null !== (r = null !== (t = E.find(e => e === (null == l ? void 0 : l.currency))) && void 0 !== t ? t : E[0]) && void 0 !== r ? r : s.CurrencyCodes.USD;
+    m = null == f ? [] : (0, u.getCurrencies)(f.id, c, d),
+    p = null !== (r = null !== (t = m.find(e => e === (null == l ? void 0 : l.currency))) && void 0 !== t ? t : m[0]) && void 0 !== r ? r : s.CurrencyCodes.USD;
   return {
-    ...(0, u.useCurrencyWithPaymentSourceChange)(m, null == f ? void 0 : f.id, c, d, o),
-    currencies: E
+    ...(0, u.useCurrencyWithPaymentSourceChange)(p, null == f ? void 0 : f.id, c, d, o),
+    currencies: m
   }
 }

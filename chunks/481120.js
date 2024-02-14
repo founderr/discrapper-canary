@@ -32,7 +32,7 @@ let i = (e, t, a, l) => {
       o = (0, r.useThrottledFunction)(i, 5e3, [], {
         trailing: !0
       }),
-      u = l.useCallback(() => {
+      c = l.useCallback(() => {
         var l;
         let s = null === (l = a.current) || void 0 === l ? void 0 : l.getScrollerNode();
         null != s && o(e, n.current, t, {
@@ -44,7 +44,7 @@ let i = (e, t, a, l) => {
       }, [o, e, t]);
     return {
       scrollerRef: a,
-      scrollHandler: u,
+      scrollHandler: c,
       sessionId: n.current
     }
   }

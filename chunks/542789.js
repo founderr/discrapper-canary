@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
 var a = n("37983");
@@ -21,7 +21,7 @@ var s = n("77078"),
 let C = null;
 async function I(e) {
   var t, l, i, I;
-  let S, p, m, {
+  let S, m, p, {
       userId: T,
       section: g,
       guildId: A = h.ME,
@@ -34,7 +34,7 @@ async function I(e) {
     M = E.default.getUserProfile(T);
   if (null == L) return;
   let P = u.default.getPrimaryActivity(T);
-  null != P && (S = P.party, p = P.assets, m = null != P.application_id ? o.default.getApplication(P.application_id) : null);
+  null != P && (S = P.party, m = P.assets, p = null != P.application_id ? o.default.getApplication(P.application_id) : null);
   let D = u.default.getStatus(T),
     y = u.default.isMobileOnline(T),
     x = D;
@@ -58,9 +58,9 @@ async function I(e) {
     other_user_id: T,
     application_id: null !== (l = null == P ? void 0 : P.application_id) && void 0 !== l ? l : null,
     application_name: null == P ? void 0 : P.name,
-    sku_id: null !== (i = null == m ? void 0 : m.primarySkuId) && void 0 !== i ? i : null,
+    sku_id: null !== (i = null == p ? void 0 : p.primarySkuId) && void 0 !== i ? i : null,
     is_friend: d.default.isFriend(T),
-    has_images: !!(null !== (I = null == p ? void 0 : p.large_image) && void 0 !== I ? I : null == p ? void 0 : p.small_image),
+    has_images: !!(null !== (I = null == m ? void 0 : m.large_image) && void 0 !== I ? I : null == m ? void 0 : m.small_image),
     party_max: null == S ? void 0 : null === (t = S.size) || void 0 === t ? void 0 : t[1],
     party_id: null == S ? void 0 : S.id,
     party_platform: (0, _.isSpotifyParty)(null == S ? void 0 : S.id) ? h.PlatformTypes.SPOTIFY : null,
@@ -75,7 +75,7 @@ async function I(e) {
 function S() {
   null != C && (0, s.closeModal)(C), C = null
 }
-class p extends i.default {
+class m extends i.default {
   _initialize() {
     l.default.subscribe("USER_PROFILE_MODAL_OPEN", I), l.default.subscribe("USER_PROFILE_MODAL_CLOSE", S)
   }
@@ -83,4 +83,4 @@ class p extends i.default {
     l.default.unsubscribe("USER_PROFILE_MODAL_OPEN", I), l.default.unsubscribe("USER_PROFILE_MODAL_CLOSE", S)
   }
 }
-var m = new p
+var p = new m

@@ -1,42 +1,42 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   NitroWheelIcon: function() {
-    return o
+    return s
   }
 });
-var r = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("669491"),
-  u = n("82169");
-let o = e => {
+var r = n("669491"),
+  a = n("82169");
+let s = t => {
   let {
-    width: t = 24,
+    width: e = 24,
     height: n = 24,
-    color: o = i.default.colors.INTERACTIVE_NORMAL,
-    colorClass: s = "",
-    ...a
-  } = e;
-  return (0, r.jsxs)("svg", {
-    ...(0, u.default)(a),
+    color: s = r.default.colors.INTERACTIVE_NORMAL,
+    colorClass: l = "",
+    ...u
+  } = t;
+  return (0, i.jsxs)("svg", {
+    ...(0, a.default)(u),
     xmlns: "http://www.w3.org/2000/svg",
-    width: t,
+    width: e,
     height: n,
     fill: "none",
     viewBox: "0 0 24 24",
-    children: [(0, r.jsx)("path", {
-      fill: "string" == typeof o ? o : o.css,
+    children: [(0, i.jsx)("path", {
+      fill: "string" == typeof s ? s : s.css,
       d: "M15 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z",
-      className: s
-    }), (0, r.jsx)("path", {
-      fill: "string" == typeof o ? o : o.css,
+      className: l
+    }), (0, i.jsx)("path", {
+      fill: "string" == typeof s ? s : s.css,
       fillRule: "evenodd",
       d: "M7 4a1 1 0 0 0 0 2h3a1 1 0 1 1 0 2H5.5a1 1 0 0 0 0 2H8a1 1 0 1 1 0 2H6a1 1 0 1 0 0 2h1.25A8 8 0 1 0 15 4H7Zm8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z",
       clipRule: "evenodd",
-      className: s
-    }), (0, r.jsx)("path", {
-      fill: "string" == typeof o ? o : o.css,
+      className: l
+    }), (0, i.jsx)("path", {
+      fill: "string" == typeof s ? s : s.css,
       d: "M2.5 10a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2h.5Z",
-      className: s
+      className: l
     })]
   })
 }

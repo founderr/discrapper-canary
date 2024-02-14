@@ -32,8 +32,8 @@ async function I() {
   }), e > t && (n = 0), d.default.addBreadcrumb({
     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
   }), S(!1), h = setTimeout(() => {
-    p(), E = setInterval(() => {
-      p()
+    m(), E = setInterval(() => {
+      m()
     }, 15 * o.default.Millis.MINUTE)
   }, Math.max(n, 0))
 }
@@ -42,7 +42,7 @@ function S() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   null != h && (clearTimeout(h), h = null), null != E && (clearInterval(E), E = null), null != _ && e && (clearTimeout(_), _ = null)
 }
-async function p() {
+async function m() {
   let e = Date.now(),
     t = await (0, a.getSession)(),
     n = Date.now();
@@ -69,11 +69,11 @@ async function p() {
   let o = u.default.getMemoryUsageElectronRendererUsedHeapSize();
   null != o && (l.client_heartbeat_renderer_memory_used_heap = o), r.default.track(c.AnalyticEvents.CLIENT_HEARTBEAT, l), s.default.set(f, Date.now().toString())
 }
-let m = null,
+let p = null,
   T = !0;
 
 function g() {
-  if (T || null != m && m !== c.RTCConnectionStates.DISCONNECTED && m !== c.RTCConnectionStates.RTC_DISCONNECTED) try {
+  if (T || null != p && p !== c.RTCConnectionStates.DISCONNECTED && p !== c.RTCConnectionStates.RTC_DISCONNECTED) try {
     I()
   } catch (e) {
     d.default.captureException(e)
@@ -89,12 +89,12 @@ function A() {
 }
 
 function N() {
-  p()
+  m()
 }
 
 function R() {
   let e = i.default.getState();
-  m !== e && (m = e, g())
+  p !== e && (p = e, g())
 }
 
 function O(e) {

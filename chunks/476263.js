@@ -17,8 +17,8 @@ var l = n("37983"),
   E = n("103603"),
   h = n("474293"),
   g = n("580357"),
-  v = n("356659");
-let _ = {
+  _ = n("356659");
+let v = {
     SMOL: "Smol",
     MINI: "Mini",
     SMALLER: "Smaller",
@@ -29,24 +29,24 @@ let _ = {
     XLARGE: "XLarge"
   },
   S = {
-    [_.SMOL]: 16,
-    [_.MINI]: 20,
-    [_.SMALLER]: 24,
-    [_.SMALL]: 30,
-    [_.MEDIUM]: 40,
-    [_.LARGE]: 50,
-    [_.LARGER]: 64,
-    [_.XLARGE]: 100
+    [v.SMOL]: 16,
+    [v.MINI]: 20,
+    [v.SMALLER]: 24,
+    [v.SMALL]: 30,
+    [v.MEDIUM]: 40,
+    [v.LARGE]: 50,
+    [v.LARGER]: 64,
+    [v.XLARGE]: 100
   },
   R = {
-    [_.SMOL]: [10, 10, 8, 6, 6, 4],
-    [_.MINI]: [12, 12, 10, 10, 8, 6, 4],
-    [_.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-    [_.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-    [_.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-    [_.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-    [_.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-    [_.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+    [v.SMOL]: [10, 10, 8, 6, 6, 4],
+    [v.MINI]: [12, 12, 10, 10, 8, 6, 4],
+    [v.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+    [v.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+    [v.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+    [v.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+    [v.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+    [v.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
   };
 class m extends a.PureComponent {
   renderAcronym() {
@@ -55,7 +55,7 @@ class m extends a.PureComponent {
       iconSrc: t
     } = this.props;
     return null != e.icon || null != t ? null : (0, l.jsx)("div", {
-      className: v.acronym,
+      className: _.acronym,
       children: e.acronym
     })
   }
@@ -66,7 +66,7 @@ class m extends a.PureComponent {
       badgeStrokeColor: n
     } = this.props;
     return e && null != t.hasFeature ? (0, l.jsx)(g.default, {
-      className: v.guildIconBadge,
+      className: _.guildIconBadge,
       guild: t,
       badgeStrokeColor: n
     }) : null
@@ -84,7 +84,7 @@ class m extends a.PureComponent {
       showTooltip: f,
       tooltipPosition: E,
       onClick: g,
-      to: _,
+      to: v,
       badgeStrokeColor: S,
       animate: m,
       tabIndex: N,
@@ -93,17 +93,17 @@ class m extends a.PureComponent {
       ...p
     } = this.props, I = R[u], x = null != g ? c.Clickable : "div";
     return (0, l.jsxs)(x, {
-      className: s(v.icon, a, (0, h.getClass)(v, "iconSize", u), {
-        [null !== (e = (0, h.getClass)(v, "iconActive", u)) && void 0 !== e ? e : ""]: i,
-        [v.iconInactive]: !i,
-        [v.noIcon]: null == n.icon
+      className: s(_.icon, a, (0, h.getClass)(_, "iconSize", u), {
+        [null !== (e = (0, h.getClass)(_, "iconActive", u)) && void 0 !== e ? e : ""]: i,
+        [_.iconInactive]: !i,
+        [_.noIcon]: null == n.icon
       }),
       "aria-hidden": C,
       style: null == n.icon ? {
         fontSize: (null !== (t = I[n.acronym.length]) && void 0 !== t ? t : I[I.length - 1]) * d,
         ...o
       } : o,
-      onClick: null != _ || null == g ? void 0 : g,
+      onClick: null != v || null == g ? void 0 : g,
       tabIndex: N,
       ...p,
       children: [this.renderAcronym(), this.renderBadge()]
@@ -170,8 +170,8 @@ class T extends a.PureComponent {
     })
   }
 }
-T.Sizes = _, T.defaultProps = {
-  size: _.LARGE,
+T.Sizes = v, T.defaultProps = {
+  size: v.LARGE,
   textScale: 1,
   showBadge: !1,
   showTooltip: !1,

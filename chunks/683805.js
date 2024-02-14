@@ -19,8 +19,8 @@ var i = n("391679"),
   C = n("271938"),
   I = n("697218"),
   S = n("599110"),
-  p = n("253981"),
-  m = n("50885"),
+  m = n("253981"),
+  p = n("50885"),
   T = n("861309"),
   g = n("492249"),
   A = n("49111");
@@ -74,7 +74,7 @@ var R = {
       if (null == a) throw new T.default({
         errorCode: A.RPCErrors.INVALID_GUILD_TEMPLATE
       }, "Invalid guild template id: ".concat(t));
-      return m.default.focus(), (0, r.openModalLazy)(async () => {
+      return p.default.focus(), (0, r.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("843456").then(n.bind(n, "843456"));
@@ -102,7 +102,7 @@ var R = {
             let {
               giftCode: s
             } = a;
-            m.default.focus(), S.default.track(A.AnalyticEvents.OPEN_MODAL, {
+            p.default.focus(), S.default.track(A.AnalyticEvents.OPEN_MODAL, {
               type: "gift_accept",
               location: A.DIRECT_ANALYTICS_LOCATION
             }), (0, r.openModalLazy)(async () => {
@@ -132,12 +132,12 @@ var R = {
           params: n
         }
       } = e;
-      switch (m.default.focus(), t) {
+      switch (p.default.focus(), t) {
         case g.RPCDeepLinks.USER_SETTINGS:
           null != n && ((0, _.replaceWith)(A.Routes.SETTINGS(n.section, n.subsection)), N(n.fingerprint, "settings"));
           break;
         case g.RPCDeepLinks.CHANGELOG:
-          null != n && ((0, _.replaceWith)(p.default.formatPathWithQuery(A.Routes.CHANGELOGS(n.date), n.query)), N(n.fingerprint, "changelog"));
+          null != n && ((0, _.replaceWith)(m.default.formatPathWithQuery(A.Routes.CHANGELOGS(n.date), n.query)), N(n.fingerprint, "changelog"));
           break;
         case g.RPCDeepLinks.LIBRARY:
           (0, _.replaceWith)(A.Routes.APPLICATION_LIBRARY), null != n && N(n.fingerprint, "library");
@@ -171,7 +171,7 @@ var R = {
           fingerprint: n
         }
       } = e;
-      m.default.focus(null, !0), (0, d.handoffEnd)(t, n)
+      p.default.focus(null, !0), (0, d.handoffEnd)(t, n)
     }
   },
   [A.RPCCommands.CONNECTIONS_CALLBACK]: {

@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("302437"),
   I = n("665182"),
   S = n("442174"),
-  p = n("69927"),
-  m = n("10641"),
+  m = n("69927"),
+  p = n("10641"),
   T = n("384997"),
   g = n("539938"),
   A = n("155084"),
@@ -94,7 +94,7 @@ function ee() {
         hasSingleMessageRequest: l
       }, d)
     }, [l, n, _]),
-    p = s.useCallback(() => (0, a.jsxs)(x.default, {
+    m = s.useCallback(() => (0, a.jsxs)(x.default, {
       className: J.sectionTitle,
       children: [t > 0 ? X.default.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({
         count: t
@@ -141,7 +141,7 @@ function ee() {
           paddingBottom: 24,
           sectionHeight: q.LIST_SECTION_HEIGHT,
           rowHeight: q.LIST_ROW_HEIGHT,
-          renderSection: p,
+          renderSection: m,
           renderRow: S,
           sections: [n.length],
           chunkSize: 30,
@@ -190,7 +190,7 @@ let en = function(e) {
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       l = (0, u.useStateFromStores)([_.default], () => _.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, m.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+      (0, p.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
     }, []), (0, a.jsx)(T.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
@@ -251,7 +251,7 @@ let el = (0, E.default)(function(e) {
       return null != e && e.type === R.SidebarType.VIEW_MESSAGE_REQUEST && (G.default.isMessageRequest(e.channelId) || j.default.isSpam(e.channelId))
     }),
     [_, C] = s.useState(q.MessageRequestSections.REQUESTS);
-  return (0, p.usePageTitle)({
+  return (0, m.usePageTitle)({
     location: X.default.Messages.MESSAGE_REQUESTS
   }), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {

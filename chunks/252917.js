@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("597590"),
   I = n("987697"),
   S = n("464682"),
-  p = n("73749"),
-  m = n("191145"),
+  m = n("73749"),
+  p = n("191145"),
   T = n("533466"),
   g = n("837844"),
   A = n("171984"),
@@ -87,13 +87,13 @@ let eC = () => (0, a.jsx)("div", {
     name: "GuildMemberApplicationReview",
     renderLoader: eC
   }),
-  ep = (0, d.makeLazy)({
+  em = (0, d.makeLazy)({
     createPromise: () => n.el("144295").then(n.bind(n, "144295")),
     webpackId: "144295",
     name: "GuildHomePage",
     renderLoader: eC
   }),
-  em = (0, d.makeLazy)({
+  ep = (0, d.makeLazy)({
     createPromise: () => n.el("112265").then(n.bind(n, "112265")),
     webpackId: "112265",
     name: "MemberSafetyPage",
@@ -152,7 +152,7 @@ let eC = () => (0, a.jsx)("div", {
           guildId: s
         });
       case ef.StaticChannelRoute.GUILD_HOME:
-        return (0, a.jsx)(ep, {
+        return (0, a.jsx)(em, {
           guildId: s
         });
       case ef.StaticChannelRoute.CHANNEL_BROWSER:
@@ -170,7 +170,7 @@ let eC = () => (0, a.jsx)("div", {
           selectedSection: eE.GuildOnboardingTab.CUSTOMIZE
         });
       case ef.StaticChannelRoute.MEMBER_SAFETY:
-        return (0, a.jsx)(em, {
+        return (0, a.jsx)(ep, {
           guildId: s
         });
       default:
@@ -314,7 +314,7 @@ function ek(e) {
   }), h.UserTriggerAAExperiment.trackExposure({
     location: l
   });
-  let r = (0, f.useStateFromStores)([m.default], () => m.default.isFullscreenInContext());
+  let r = (0, f.useStateFromStores)([p.default], () => p.default.isFullscreenInContext());
   return s ? null : (0, a.jsxs)("div", {
     className: i(e_.sidebar, (0, ea.getThemeClass)(n), {
       [e_.hasNotice]: t,
@@ -389,17 +389,17 @@ function eF() {
             }), (0, a.jsx)(C.default.Provider, {
               value: S,
               children: (0, a.jsxs)(o.Switch, {
-                children: [(0, a.jsx)(p.default, {
+                children: [(0, a.jsx)(m.default, {
                   path: ec.Routes.ACTIVITY,
                   disableTrack: !0,
                   children: (0, a.jsx)(o.Redirect, {
                     to: ec.Routes.ME
                   })
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.ACTIVITIES_HAPPENING_NOW,
                   render: eb,
                   impressionName: u.ImpressionNames.ACTIVITIES
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.ACTIVITY_DETAILS(":applicationId"),
                   render: ex,
                   impressionName: u.ImpressionNames.ACTIVITY_DETAILS,
@@ -411,52 +411,52 @@ function eF() {
                       application_id: t.params.applicationId
                     }
                   }
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.ACTIVITIES,
                   render: eb,
                   impressionName: u.ImpressionNames.ACTIVITIES
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.APPLICATION_LIBRARY,
                   render: eP,
                   impressionName: u.ImpressionNames.APPLICATION_LIBRARY,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.APPLICATION_STORE,
                   render: eD,
                   impressionName: u.ImpressionNames.APPLICATION_STORE,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.COLLECTIBLES_SHOP_FULLSCREEN,
                   render: ey(!0),
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.COLLECTIBLES_SHOP,
                   render: ey(!1),
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
                   render: ey(!1),
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.MESSAGE_REQUESTS,
                   render: eG,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.FAMILY_CENTER,
                   render: ej,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.ME,
                   exact: !0,
                   render: eU,
                   impressionName: u.ImpressionNames.FRIENDS,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: [ec.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), ec.Routes.CHANNEL(ec.ME, ":channelId"), ec.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
                   render: eO,
                   impressionName: u.ImpressionNames.GUILD_CHANNEL,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.GUILD_DISCOVERY,
                   render: e => {
                     let {
@@ -466,12 +466,12 @@ function eF() {
                   },
                   impressionName: u.ImpressionNames.GUILD_DISCOVERY,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"),
                   render: eL,
                   impressionName: u.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                   disableTrack: !0
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"),
                   render: eM,
                   impressionName: u.ImpressionNames.HUB_EMAIL_SIGNUP,
@@ -483,7 +483,7 @@ function eF() {
                       has_invite: void 0 !== t.params.inviteCode
                     }
                   }
-                }), (0, a.jsx)(p.default, {
+                }), (0, a.jsx)(m.default, {
                   path: ec.Routes.FEATURE(":feature"),
                   exact: !0,
                   render: ew,

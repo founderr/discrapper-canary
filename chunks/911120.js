@@ -42,13 +42,13 @@ var I = () => {
       className: _.icon
     }), h.default.Messages.BUILD_OVERRIDE, (0, a.jsx)(S, {})]
   });
-  let p = window.GLOBAL_ENV.RELEASE_CHANNEL;
-  return "staging" === p ? (0, a.jsxs)("div", {
+  let m = window.GLOBAL_ENV.RELEASE_CHANNEL;
+  return "staging" === m ? (0, a.jsxs)("div", {
     className: i(_.devBanner, _.staging),
     children: [(0, a.jsx)(E.default, {
       className: _.icon
     }), h.default.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "266440"
+      buildNumber: "266498"
     }), (0, a.jsx)(S, {})]
   }) : null
 }

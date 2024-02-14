@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = n("37983"),
@@ -21,12 +21,12 @@ var a = n("37983"),
   I = n("782340"),
   S = n("289984");
 
-function p(e) {
+function m(e) {
   let {
     user: t,
     type: n,
-    status: p,
-    isFocused: m
+    status: m,
+    isFocused: p
   } = e, T = s.useContext(f.AnalyticsContext), g = e => {
     e.stopPropagation(), i.default.cancelFriendRequest(t.id, {
       location: "Friends"
@@ -38,9 +38,9 @@ function p(e) {
         location: "Friends"
       }
     })
-  }, N = p === C.StatusTypes.OFFLINE ? C.StatusTypes.UNKNOWN : p, R = n === C.RelationshipTypes.PENDING_INCOMING ? I.default.Messages.INCOMING_FRIEND_REQUEST : I.default.Messages.OUTGOING_FRIEND_REQUEST;
+  }, N = m === C.StatusTypes.OFFLINE ? C.StatusTypes.UNKNOWN : m, R = n === C.RelationshipTypes.PENDING_INCOMING ? I.default.Messages.INCOMING_FRIEND_REQUEST : I.default.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, a.jsx)(h.default, {
-    isFocused: m,
+    isFocused: p,
     user: t,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,

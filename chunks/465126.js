@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("315102"),
   I = n("794818"),
   S = n("580357"),
-  p = n("587974"),
-  m = n("49111"),
+  m = n("587974"),
+  p = n("49111"),
   T = n("782340"),
   g = n("196779"),
   A = n("68422"),
@@ -31,9 +31,9 @@ class O extends s.PureComponent {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
-      case m.ThemeTypes.DARK:
+      case p.ThemeTypes.DARK:
         return A;
-      case m.ThemeTypes.LIGHT:
+      case p.ThemeTypes.LIGHT:
         return N
     }
   }
@@ -55,7 +55,7 @@ class O extends s.PureComponent {
       presenceCount: L,
       memberCount: M,
       keywords: P
-    } = t, D = null === (e = t.features) || void 0 === e ? void 0 : e.has(m.GuildFeatures.HUB), y = C.default.getGuildDiscoverySplashURL({
+    } = t, D = null === (e = t.features) || void 0 === e ? void 0 : e.has(p.GuildFeatures.HUB), y = C.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
       size: 300 * (0, h.getDevicePixelRatio)()
@@ -128,14 +128,14 @@ class O extends s.PureComponent {
                 })
               }) : null, (0, a.jsx)("div", {
                 className: g.guildIcon,
-                children: (0, a.jsx)(p.default, {
-                  mask: p.default.Masks.SQUIRCLE,
+                children: (0, a.jsx)(m.default, {
+                  mask: m.default.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, a.jsx)("div", {
                     className: g.iconMask,
-                    children: (0, a.jsx)(p.default, {
-                      mask: p.default.Masks.SQUIRCLE,
+                    children: (0, a.jsx)(m.default, {
+                      mask: m.default.Masks.SQUIRCLE,
                       width: 40,
                       height: 40,
                       children: (0, a.jsx)("img", {

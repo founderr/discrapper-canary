@@ -55,8 +55,8 @@ function C(e, t, n) {
     navId: "channel-autocomplete",
     scrollerRef: n,
     state: O,
-    onFocus: e => B.setSelectedIndex(e)
-  }), F = null === (C = e.editorRef.current) || void 0 === C ? void 0 : C.getCurrentWord(), G = {
+    onFocus: e => G.setSelectedIndex(e)
+  }), F = null === (C = e.editorRef.current) || void 0 === C ? void 0 : C.getCurrentWord(), B = {
     ...e,
     navigator: w,
     activeCommand: D,
@@ -72,23 +72,23 @@ function C(e, t, n) {
     optionText: null != k ? (0, s.getString)({
       [k.name]: null !== (A = null === (v = e.editorRef.current) || void 0 === v ? void 0 : v.getCurrentCommandOptionValue()) && void 0 !== A ? A : []
     }, k.name) : ""
-  }, [B] = l.useState(() => new p.default(G));
+  }, [G] = l.useState(() => new p.default(B));
   return l.useEffect(() => {
-    B.updateProps(G)
-  }), l.useImperativeHandle(t, () => B, [B]), l.useEffect(() => {
+    G.updateProps(B)
+  }), l.useImperativeHandle(t, () => G, [G]), l.useEffect(() => {
     let e = e => R(e);
-    return B.on("change", e), B.on("update", M), () => {
-      B.off("change", e), B.off("update", M)
+    return G.on("change", e), G.on("update", M), () => {
+      G.off("change", e), G.off("update", M)
     }
-  }, [M, B]), l.useEffect(() => {
+  }, [M, G]), l.useEffect(() => {
     var e;
     let t = null === (e = O.query) || void 0 === e ? void 0 : e.typeInfo.stores;
     if (null != t) {
-      let e = () => B.queryResults();
+      let e = () => G.queryResults();
       for (let n of t) n.addChangeListener(e);
       return () => {
         for (let n of t) n.removeChangeListener(e)
       }
     }
-  }, [B, null === (I = O.query) || void 0 === I ? void 0 : I.typeInfo]), [O, B, w]
+  }, [G, null === (I = O.query) || void 0 === I ? void 0 : I.typeInfo]), [O, G, w]
 }

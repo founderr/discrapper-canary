@@ -21,35 +21,35 @@ var s = n("65597"),
   C = n("893302"),
   I = n("490013"),
   S = n("922832"),
-  p = n("782340"),
-  m = n("496420"),
+  m = n("782340"),
+  p = n("496420"),
   T = () => {
     let e = (0, f.useUserForLinkStatus)(S.UserLinkStatus.ACTIVE),
       t = (0, c.useSelectedTeenUser)(),
       n = (0, s.default)([r.default], () => r.default.getCurrentUser()),
-      T = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
-      g = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
-      A = (0, d.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, p.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
+      T = (0, d.useAgeSpecificText)(m.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, m.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
+      g = (0, d.useAgeSpecificText)(m.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, m.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
+      A = (0, d.useAgeSpecificText)(m.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, m.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
       N = (0, i.useRedesignIconContext)().enabled;
     return void 0 === n ? null : (0, a.jsxs)("div", {
-      className: m.container,
+      className: p.container,
       children: [(0, a.jsx)("div", {
-        className: m.banner,
+        className: p.banner,
         children: (0, a.jsx)(E.default, {})
       }), (0, a.jsxs)("div", {
-        className: m.featureCards,
+        className: p.featureCards,
         children: [(0, a.jsx)(C.default, {
-          iconClassName: m.chatCheckIcon,
+          iconClassName: p.chatCheckIcon,
           icon: o.default,
-          header: p.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
+          header: m.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
           description: T
         }), (0, a.jsx)(C.default, {
           icon: u.default,
-          header: p.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
+          header: m.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
           description: g
         }), (0, a.jsx)(C.default, {
           icon: N ? l.QrCodeCameraIcon : I.default,
-          header: p.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
+          header: m.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
           description: A
         })]
       }), 0 === e.length ? (0, a.jsx)(_.default, {}) : null, void 0 !== t && e.length > 0 ? (0, a.jsx)(h.default, {

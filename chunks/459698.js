@@ -53,8 +53,8 @@ var l = n("37983"),
   k = n("794818"),
   w = n("719923"),
   F = n("412745"),
-  G = n("933629"),
-  B = n("49111"),
+  B = n("933629"),
+  G = n("49111"),
   H = n("724210"),
   V = n("646718"),
   K = n("782340"),
@@ -62,8 +62,8 @@ var l = n("37983"),
 let Y = () => {
     let e = (0, o.useStateFromStores)([x.default], () => x.default.getGuildId());
     return {
-      page: null != e ? B.AnalyticsPages.GUILD_CHANNEL : B.AnalyticsPages.DM_CHANNEL,
-      section: B.AnalyticsSections.EMOJI_UPSELL_POPOUT
+      page: null != e ? G.AnalyticsPages.GUILD_CHANNEL : G.AnalyticsPages.DM_CHANNEL,
+      section: G.AnalyticsSections.EMOJI_UPSELL_POPOUT
     }
   },
   z = e => {
@@ -74,7 +74,7 @@ let Y = () => {
       emojiId: t.emojiId,
       currentGuildId: x.default.getGuildId()
     }), (0, l.jsx)(u.Dialog, {
-      children: (0, l.jsx)(G.MessagePopoutContent, {
+      children: (0, l.jsx)(B.MessagePopoutContent, {
         children: (0, l.jsxs)(R.default, {
           className: W.emojiSection,
           children: [(0, l.jsx)(f.default, {
@@ -120,7 +120,7 @@ let Y = () => {
     n = null == n || n;
     let c = n || t.isDiscoverable(),
       f = () => {
-        t.isDiscoverable() ? (0, k.startLurking)(a, {}) : n && (0, A.transitionTo)(B.Routes.CHANNEL(a, y.default.getChannelId(a)))
+        t.isDiscoverable() ? (0, k.startLurking)(a, {}) : n && (0, A.transitionTo)(G.Routes.CHANNEL(a, y.default.getChannelId(a)))
       },
       m = t.isDiscoverable() && null != t.presenceCount,
       p = () => {
@@ -222,7 +222,7 @@ let Y = () => {
       emojiId: t.emojiId,
       refreshPositionKey: i
     });
-    return d ? (0, l.jsx)(G.PopoutLoadingAnimation, {}) : (0, l.jsx)(u.Dialog, {
+    return d ? (0, l.jsx)(B.PopoutLoadingAnimation, {}) : (0, l.jsx)(u.Dialog, {
       "aria-label": t.name,
       children: (0, l.jsx)(q, {
         node: t,
@@ -289,7 +289,7 @@ let Y = () => {
         isDiscoverable: $,
         shouldHideRoleSubscriptionCTA: ei,
         onOpenPremiumSettings: () => {
-          y(), U.default.track(B.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+          y(), U.default.track(G.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
             location_page: ee.page,
             location_section: ee.section
           }), (0, _.navigateToPremiumMarketingPage)()
@@ -309,7 +309,7 @@ let Y = () => {
       ef = er.type === F.EmojiPopoutType.GET_PREMIUM,
       [em, ep] = i.useState(!1),
       eh = $ || Q && !q || null != g;
-    return (0, l.jsxs)(G.MessagePopoutContent, {
+    return (0, l.jsxs)(B.MessagePopoutContent, {
       className: W.popoutContent,
       children: [(() => {
         let e = async () => {
@@ -372,7 +372,7 @@ let Y = () => {
       })(), eh && (() => {
         let e = null != g && !Q && $,
           t = () => {
-            e && (null == M || M(), !em && !j && U.default.track(B.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ed), ep(!em))
+            e && (null == M || M(), !em && !j && U.default.track(G.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ed), ep(!em))
           };
         return (0, l.jsxs)("div", {
           className: W.guildSection,
@@ -436,7 +436,7 @@ let Y = () => {
       className: W.otherEmojisContainer,
       children: [a ? null : u.map(e => (0, l.jsx)(d.Tooltip, {
         text: e.require_colons ? ":".concat(e.name, ":") : e.name,
-        ...G.EXPRESSION_TOOLTIP_PROPS,
+        ...B.EXPRESSION_TOOLTIP_PROPS,
         children: t => (0, l.jsx)(f.default, {
           className: W.otherEmoji,
           emojiId: e.id,

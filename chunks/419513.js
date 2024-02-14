@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return _
+    return N
   }
 });
 var l = a("37983"),
@@ -10,35 +10,35 @@ var l = a("37983"),
   n = a.n(r),
   i = a("635058"),
   o = a("65597"),
-  u = a("77078"),
-  c = a("685665"),
+  c = a("77078"),
+  u = a("685665"),
   d = a("649844"),
   f = a("697218"),
   m = a("153769"),
   C = a("270227"),
-  E = a("719923"),
-  h = a("491232"),
-  p = a("716120"),
-  g = a("342676"),
-  T = a("408381"),
-  L = a("177586"),
+  p = a("719923"),
+  g = a("491232"),
+  E = a("716120"),
+  h = a("342676"),
+  b = a("408381"),
+  T = a("177586"),
   x = a("646718"),
-  b = a("782340"),
-  v = a("858422");
-let S = (0, h.getLogoSize)(96),
+  L = a("782340"),
+  S = a("858422");
+let v = (0, g.getLogoSize)(96),
   I = e => {
     let {
       category: t
     } = e, {
       analyticsLocations: a
-    } = (0, c.default)(), r = s.useRef(null), n = (0, o.default)([f.default], () => f.default.getCurrentUser());
-    return E.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
+    } = (0, u.default)(), r = s.useRef(null), n = (0, o.default)([f.default], () => f.default.getCurrentUser());
+    return p.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
-      children: b.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
-        getPremium: e => (0, l.jsx)(u.Clickable, {
+      children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
+        getPremium: e => (0, l.jsx)(c.Clickable, {
           innerRef: r,
-          className: v.getPremiumHook,
+          className: S.getPremiumHook,
           onClick: () => {
             (0, d.default)({
               subscriptionTier: x.PremiumSubscriptionSKUs.TIER_2,
@@ -47,7 +47,7 @@ let S = (0, h.getLogoSize)(96),
             })
           },
           tag: "span",
-          children: (0, l.jsx)(u.Text, {
+          children: (0, l.jsx)(c.Text, {
             variant: "text-md/normal",
             color: "always-white",
             tag: "span",
@@ -58,43 +58,43 @@ let S = (0, h.getLogoSize)(96),
     })
   };
 
-function _(e) {
+function N(e) {
   let {
     category: t,
     className: a
   } = e, {
     backgroundColors: s
-  } = (0, L.default)(t.styles);
-  return (0, l.jsxs)(p.default, {
+  } = (0, T.default)(t.styles);
+  return (0, l.jsxs)(E.default, {
     asset: t.banner,
-    className: n(v.shopBanner, a),
+    className: n(S.shopBanner, a),
     style: null != s ? {
-      background: "".concat((0, T.getBackgroundGradient)(s), " border-box border-box"),
+      background: "".concat((0, b.getBackgroundGradient)(s), " border-box border-box"),
       outlineColor: s.border.toHslString()
     } : void 0,
     children: [(0, l.jsxs)("div", {
-      className: v.discordLogo,
+      className: S.discordLogo,
       children: [(0, l.jsx)(m.default, {
-        className: v.discordIcon
+        className: S.discordIcon
       }), (0, l.jsx)(C.default, {
-        className: v.discordWordmark
+        className: S.discordWordmark
       })]
     }), (0, l.jsx)("img", {
-      className: v.categoryLogo,
-      src: (0, h.getCollectiblesAssetURL)(t.logo, {
-        size: S
+      className: S.categoryLogo,
+      src: (0, g.getCollectiblesAssetURL)(t.logo, {
+        size: v
       }),
       alt: t.name
-    }), (0, l.jsx)(u.Text, {
-      className: v.summary,
+    }), (0, l.jsx)(c.Text, {
+      className: S.summary,
       variant: "text-md/normal",
       color: "always-white",
       children: t.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, l.jsx)(I, {
         category: t
       }) : t.summary
-    }), (0, l.jsx)(g.default, {
+    }), (0, l.jsx)(h.default, {
       category: t,
-      className: v.limitedTimeBadge,
+      className: S.limitedTimeBadge,
       display: "banner"
     })]
   })

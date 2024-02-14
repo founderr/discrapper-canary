@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return E
+    return p
   }
 }), a("222007");
 var l = a("656280"),
@@ -10,10 +10,10 @@ var l = a("656280"),
   n = a("669491"),
   i = a("206230"),
   o = a("388491");
-let u = s(n.default.unsafe_rawColors.WHITE_500.resolve({
+let c = s(n.default.unsafe_rawColors.WHITE_500.resolve({
     saturation: 1
   }).hex()),
-  c = s(n.default.unsafe_rawColors.BLACK_500.resolve({
+  u = s(n.default.unsafe_rawColors.BLACK_500.resolve({
     saturation: 1
   }).hex()),
   d = (e, t) => {
@@ -41,11 +41,11 @@ let u = s(n.default.unsafe_rawColors.WHITE_500.resolve({
     if (0 !== e.length) return 1 === e.length ? {
       primary: e[0],
       secondary: e[0],
-      text: e[0].isLight() ? c : u
+      text: e[0].isLight() ? u : c
     } : {
       primary: e[0],
       secondary: e[1],
-      text: d(e[0], e[1]).isLight() ? c : u
+      text: d(e[0], e[1]).isLight() ? u : c
     }
   },
   C = (e, t) => {
@@ -60,7 +60,7 @@ let u = s(n.default.unsafe_rawColors.WHITE_500.resolve({
       l: r
     })
   };
-var E = e => {
+var p = e => {
   let t = (0, r.default)([i.default], () => i.default.saturation);
   if (null == e) return {};
   let a = {

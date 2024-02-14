@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return h.NotchBackground
   },
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -23,7 +23,7 @@ var a = n("37983"),
   C = n("49111"),
   I = n("782340"),
   S = n("22940");
-class p extends s.PureComponent {
+class m extends s.PureComponent {
   componentDidMount() {
     this._initTimeout.start(1e3, this.setupVoiceActivity)
   }
@@ -170,7 +170,7 @@ class p extends s.PureComponent {
     }
   }
 }
-var m = r.default.connectStores([E.default, f.default], () => {
+var p = r.default.connectStores([E.default, f.default], () => {
   let e = f.default.getInputDeviceId(),
     t = f.default.getInputDevices(),
     n = i.find(t, t => {
@@ -199,4 +199,4 @@ var m = r.default.connectStores([E.default, f.default], () => {
     inputDeviceName: null != n ? n.name : "",
     outputDeviceName: null != l ? l.name : ""
   }
-})(p)
+})(m)

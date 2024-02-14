@@ -96,13 +96,13 @@ var P = e => {
     height: k
   } = (0, d.default)(), w = i.useMemo(() => ({
     top: "-".concat((null != k ? k : R) + 6, "px")
-  }), [k]), F = (0, o.default)([T.default], () => T.default.getCurrentUser()), G = I.default.canUseCollectibles(F), {
-    setUpsellSource: B,
+  }), [k]), F = (0, o.default)([T.default], () => T.default.getCurrentUser()), B = I.default.canUseCollectibles(F), {
+    setUpsellSource: G,
     reset: H
   } = (0, _.useUserPopoutCollectiblesUpsellStore)();
-  i.useEffect(() => (B(b), () => {
+  i.useEffect(() => (G(b), () => {
     H()
-  }), [B, b, H]);
+  }), [G, b, H]);
   let V = (0, o.default)([C.default], () => C.default.getProfileEffectById(null == a ? void 0 : a.profileEffectId)),
     [K, W] = (0, o.useStateFromStoresArray)([g.default], () => {
       var e;
@@ -120,17 +120,17 @@ var P = e => {
       null == h || h(N.ContentDismissActionType.DISMISS)
     }, [h]);
   if (!x && !P) return null;
-  let Z = (0, r.match)([x, P]).with([!0, !0], () => K && W && G ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+  let Z = (0, r.match)([x, P]).with([!0, !0], () => K && W && B ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : K && W ? A.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: M
   }) : A.default.Messages.COMBINED_COLLECTIBLES_SOCIAL_UPSELL.format({
     openShop: M
-  })).with([!0, !1], () => K && G ? A.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
+  })).with([!0, !1], () => K && B ? A.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : A.default.Messages.AVATAR_DECORATIONS_SOCIAL_UPSELL.format({
     openShop: M
-  })).with([!1, !0], () => W && G ? A.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
+  })).with([!1, !0], () => W && B ? A.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
     openShop: M
   }) : (W && A.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: M

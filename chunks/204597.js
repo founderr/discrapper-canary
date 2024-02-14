@@ -48,7 +48,7 @@ var a = n("37983"),
         padding: 8,
         callback: () => null == t ? void 0 : t.focus()
       })
-    }, []), p = (0, l.default)({
+    }, []), m = (0, l.default)({
       id: "people-list",
       isEnabled: h,
       scrollToStart: C,
@@ -56,7 +56,7 @@ var a = n("37983"),
       setFocus: S
     });
     return (0, a.jsx)(l.ListNavigatorProvider, {
-      navigator: p,
+      navigator: m,
       children: (0, a.jsx)(l.ListNavigatorContainer, {
         children: e => {
           let {

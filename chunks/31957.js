@@ -23,8 +23,8 @@ let f = "IncomingCallStore",
   C = new Map,
   I = new Set,
   S = 0,
-  p = 0,
-  m = !1;
+  m = 0,
+  p = !1;
 
 function T(e) {
   if (null == e || null == C.get(e)) return !1;
@@ -43,7 +43,7 @@ function g(e) {
     C.set(t, {
       channel: e,
       x: S + n,
-      y: p + n
+      y: m + n
     }), (I = new Set(I)).add(t)
   } else {
     if (!I.has(t) || a) return !1;
@@ -51,31 +51,31 @@ function g(e) {
   }
 }! function() {
   let e = s.default.get(f);
-  if (null != e) S = +e.x, p = +e.y;
+  if (null != e) S = +e.x, m = +e.y;
   else {
     let e = n("471671").default.windowSize();
-    S = e.width / 2 - E.width / 2, p = e.height / 2 - E.height / 2
+    S = e.width / 2 - E.width / 2, m = e.height / 2 - E.height / 2
   }
 }();
 
 function A() {
-  m = d.default.getStatus() === c.StatusTypes.DND || i.QuietMode.getSetting()
+  p = d.default.getStatus() === c.StatusTypes.DND || i.QuietMode.getSetting()
 }
 class N extends a.default.Store {
   initialize() {
     this.waitFor(u.default, d.default), this.syncWith([d.default], A), this.syncWith([r.default], A)
   }
   getIncomingCalls() {
-    return m ? _ : Array.from(C.values())
+    return p ? _ : Array.from(C.values())
   }
   getIncomingCallChannelIds() {
-    return m ? h : I
+    return p ? h : I
   }
   getFirstIncomingCallId() {
-    return m ? null : I.values().next().value
+    return p ? null : I.values().next().value
   }
   hasIncomingCalls() {
-    return !m && I.size > 0
+    return !p && I.size > 0
   }
 }
 N.displayName = "IncomingCallStore";
@@ -99,9 +99,9 @@ var R = new N(l.default, {
       x: t,
       y: n
     } = e;
-    return S = t, p = n, s.default.set(f, {
+    return S = t, m = n, s.default.set(f, {
       x: S,
-      y: p
+      y: m
     }), !1
   },
   CHANNEL_DELETE: function(e) {

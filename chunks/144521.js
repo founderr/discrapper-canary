@@ -25,7 +25,7 @@ function I(e) {
     nickname: n,
     status: I,
     isFocused: S
-  } = e, p = s.useContext(d.AnalyticsContext), m = e => {
+  } = e, m = s.useContext(d.AnalyticsContext), p = e => {
     null == e || e.stopPropagation(), l.default.addRelationship({
       userId: t.id,
       context: {
@@ -43,7 +43,7 @@ function I(e) {
     user: t,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
-      analyticsLocation: p.location
+      analyticsLocation: m.location
     }),
     children: e => {
       let s = (0, a.jsxs)(a.Fragment, {
@@ -51,7 +51,7 @@ function I(e) {
           icon: o.default,
           actionType: c.default.ActionTypes.ACCEPT,
           tooltip: _.default.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: m,
+          onClick: p,
           shouldHighlight: e
         }), (0, a.jsx)(c.default, {
           icon: u.default,

@@ -15,9 +15,9 @@ var a = r("414456"),
   c = r("984002"),
   d = r("716120"),
   f = r("915639"),
-  E = r("824563"),
-  m = r("719923"),
-  p = r("795158"),
+  m = r("824563"),
+  p = r("719923"),
+  E = r("795158"),
   S = r("782340"),
   h = r("295166");
 let _ = [{
@@ -65,17 +65,17 @@ var I = e => {
     user: t,
     avatarDecorationOverride: r,
     className: a
-  } = e, f = (0, s.useStateFromStores)([E.default], () => E.default.getStatus(t.id)), {
+  } = e, f = (0, s.useStateFromStores)([m.default], () => m.default.getStatus(t.id)), {
     category: I,
-    product: g,
-    purchase: T
-  } = (0, c.default)(null == r ? void 0 : r.skuId), N = m.default.canUseCollectibles(t), v = (0, o.isPremiumCollectiblesPurchase)(T), A = (0, o.isPremiumCollectiblesProduct)(g), R = !N && v;
-  return null != g && (null == T || R) ? (0, n.jsxs)("div", {
+    product: T,
+    purchase: g
+  } = (0, c.default)(null == r ? void 0 : r.skuId), v = p.default.canUseCollectibles(t), N = (0, o.isPremiumCollectiblesPurchase)(g), A = (0, o.isPremiumCollectiblesProduct)(T), P = !v && N;
+  return null != T && (null == g || P) ? (0, n.jsxs)("div", {
     className: u(h.modalPreview, h.shopPreviewContainer, a),
     children: [(0, n.jsx)(d.default, {
       asset: null == I ? void 0 : I.banner,
       className: h.shopPreviewBanner,
-      children: (0, n.jsx)(p.default, {
+      children: (0, n.jsx)(E.default, {
         user: t,
         avatarDecorationOverride: r
       })
@@ -83,10 +83,10 @@ var I = e => {
       className: h.shopPreviewTextContainer,
       children: [(0, n.jsx)(l.Text, {
         variant: "text-sm/semibold",
-        children: g.name
+        children: T.name
       }), (0, n.jsx)(l.Text, {
         variant: "text-sm/normal",
-        children: R ? S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([A, N]).with([!0, !0], () => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: P ? S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([A, v]).with([!0, !0], () => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
   }) : (0, n.jsxs)("div", {
@@ -95,7 +95,7 @@ var I = e => {
       className: h.previewSections,
       children: [(0, n.jsx)("div", {
         className: h.decorationPreview,
-        children: (0, n.jsx)(p.default, {
+        children: (0, n.jsx)(E.default, {
           user: t,
           avatarDecorationOverride: r
         })
@@ -108,7 +108,7 @@ var I = e => {
           } = e;
           return (0, n.jsx)("div", {
             className: h.smallDecorationPreview,
-            children: (0, n.jsx)(p.default, {
+            children: (0, n.jsx)(E.default, {
               user: t,
               avatarSize: a,
               avatarDecorationOverride: r,
@@ -118,8 +118,8 @@ var I = e => {
           }, "".concat(a).concat(u))
         })
       })]
-    }), null != T && (0, n.jsx)(C, {
-      purchase: T
+    }), null != g && (0, n.jsx)(C, {
+      purchase: g
     })]
   })
 }

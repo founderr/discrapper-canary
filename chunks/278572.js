@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("393414"),
   I = n("659558"),
   S = n("439141"),
-  p = n("648911"),
-  m = n("999180"),
+  m = n("648911"),
+  p = n("999180"),
   T = n("289180"),
   g = n("19065"),
   A = n("981913"),
@@ -56,7 +56,7 @@ let k = {
 function H(e) {
   let {
     header: t
-  } = e, n = O.default.getCameraComponent(), l = (0, o.useStateFromStores)([O.default], () => O.default.getVideoDeviceId()), i = (0, p.default)();
+  } = e, n = O.default.getCameraComponent(), l = (0, o.useStateFromStores)([O.default], () => O.default.getVideoDeviceId()), i = (0, m.default)();
   return s.useEffect(() => {
     let e = v.default.getCurrentUser();
     if (i && null != e) {
@@ -90,7 +90,7 @@ function V(e) {
   } = e, {
     cameraUnavailable: l,
     enabled: r
-  } = (0, m.default)(), o = (0, T.default)(n);
+  } = (0, p.default)(), o = (0, T.default)(n);
   return (0, a.jsxs)("div", {
     className: j.actions,
     children: [(0, a.jsx)(A.CenterControlButton, {
@@ -150,7 +150,7 @@ function Y(e) {
     y: n,
     x: l,
     channel: f
-  } = e, [C, I] = s.useState(!1), S = (0, h.getChannelIconURL)(f), p = (0, _.default)(f), [m, T] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, I] = s.useState(!1), S = (0, h.getChannelIconURL)(f), m = (0, _.default)(f), [p, T] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), g = (0, o.useStateFromStores)([L.default], () => L.default.isFocused()), A = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), R = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -165,7 +165,7 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let v = A === b.ChannelModes.VIDEO && m && T > 0,
+  let v = A === b.ChannelModes.VIDEO && p && T > 0,
     M = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(P.default, {
         className: j.icon,
@@ -179,7 +179,7 @@ function Y(e) {
           className: j.title,
           color: "header-primary",
           variant: C ? "text-md/semibold" : "text-lg/semibold",
-          children: p
+          children: m
         }), (0, a.jsx)(u.Text, {
           color: "header-secondary",
           className: j.subtitle,

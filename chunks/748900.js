@@ -19,8 +19,8 @@ var a, s = n("917351"),
   C = n("824563"),
   I = n("945956"),
   S = n("27618"),
-  p = n("18494"),
-  m = n("843823"),
+  m = n("18494"),
+  p = n("843823"),
   T = n("697218"),
   g = n("800762"),
   A = n("599110"),
@@ -94,7 +94,7 @@ a = class {
     if (0 === this.rpcServer.subscriptions.length) return;
     let t = 0 !== e.speakingFlags ? M.RPCEvents.SPEAKING_START : M.RPCEvents.SPEAKING_STOP;
     if (e.context === D.MediaEngineContextTypes.DEFAULT) {
-      let n = p.default.getVoiceChannelId();
+      let n = m.default.getVoiceChannelId();
       if (null != n) {
         let a = d.default.getChannel(n);
         if (null == a) return;
@@ -304,7 +304,7 @@ a = class {
       } = e;
       if (null != t) return;
       let a = S.default.getRelationshipType(n);
-      a === M.RelationshipTypes.NONE && m.default.getUserAffinitiesUserIds().has(n) && (a = M.RelationshipTypes.IMPLICIT), a !== M.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, O.transformRelationship)(a, n))
+      a === M.RelationshipTypes.NONE && p.default.getUserAffinitiesUserIds().has(n) && (a = M.RelationshipTypes.IMPLICIT), a !== M.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, O.transformRelationship)(a, n))
     })
   }
   handlePresencesReplace() {

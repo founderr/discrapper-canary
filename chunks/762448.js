@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -200,7 +200,7 @@ class S extends s.PureComponent {
     }
   }
 }
-class p extends s.PureComponent {
+class m extends s.PureComponent {
   componentDidMount() {
     (0, r.fetchMetadata)(this.props.installationPaths.map(e => {
       let {
@@ -259,8 +259,8 @@ class p extends s.PureComponent {
     }
   }
 }
-var m = l.default.connectStores([o.default], () => ({
+var p = l.default.connectStores([o.default], () => ({
   installationPaths: o.default.installationPaths,
   installationPathsMetadata: o.default.installationPathsMetadata,
   defaultInstallationPath: o.default.defaultInstallationPath
-}))(p)
+}))(m)

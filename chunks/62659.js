@@ -18,8 +18,8 @@ var a, s, l = n("37983"),
   C = n("287585"),
   I = n("309570"),
   S = n("985677"),
-  p = n("429928"),
-  m = n("502651"),
+  m = n("429928"),
+  p = n("502651"),
   T = n("29088"),
   g = n("698372"),
   A = n("141962"),
@@ -95,7 +95,7 @@ class et extends i.Component {
     } = this.props, {
       timestamps: n
     } = t;
-    return null == n || !(0, S.default)(t) || (0, p.default)(t) ? null : J(e = (0, I.default)(t) ? (0, l.jsx)($, {
+    return null == n || !(0, S.default)(t) || (0, m.default)(t) ? null : J(e = (0, I.default)(t) ? (0, l.jsx)($, {
       timestamps: n
     }) : (0, l.jsx)(U.default, {
       start: n.start,
@@ -404,7 +404,7 @@ es.Header = ea, es.Body = e => {
       assets: f,
       application_id: E
     } = a;
-  if (null != f && (0, m.default)(a)) {
+  if (null != f && (0, p.default)(a)) {
     var _;
     t = (0, l.jsx)(x.default, {
       className: q.twitchSectionPreviewWrapper,
@@ -503,10 +503,10 @@ es.Header = ea, es.Body = e => {
   if (null == f) return null;
   let S = R.default.getApplication(f);
   if (null == S) return null;
-  let p = null != t.created_at && t.created_at > 0 ? {
+  let m = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    m = (0, H.getAssetImage)(S.id, o, 300);
+    p = (0, H.getAssetImage)(S.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
@@ -520,20 +520,20 @@ es.Header = ea, es.Body = e => {
           variant: "text-sm/semibold",
           children: S.name
         })
-      }), null != p ? (0, l.jsx)("div", {
+      }), null != m ? (0, l.jsx)("div", {
         className: q.embeddedActivityTimeElapsed,
         children: (0, l.jsx)(c.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
           children: (0, l.jsx)($, {
-            timestamps: p
+            timestamps: m
           })
         })
       }) : null]
     }), (0, l.jsxs)("div", {
       className: q.embeddedActivityPlayerContainer,
-      children: [null != m ? (0, l.jsx)("img", {
-        src: m,
+      children: [null != p ? (0, l.jsx)("img", {
+        src: p,
         alt: S.name,
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {

@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("599110"),
   I = n("718517"),
   S = n("744923"),
-  p = n("333705"),
-  m = n("749554"),
+  m = n("333705"),
+  p = n("749554"),
   T = n("62659"),
   g = n("36512"),
   A = n("638441"),
@@ -38,10 +38,10 @@ let L = 15 * I.default.Millis.MINUTE,
       registerQuestEntrypoint: i,
       unregisterQuestEntrypoint: r,
       shouldRenderQuestEntrypoint: u
-    } = e, c = (0, a.jsx)(m.default, {
+    } = e, c = (0, a.jsx)(p.default, {
       party: t,
       onUserContextMenu: n
-    }), f = (0, a.jsx)(p.default, {
+    }), f = (0, a.jsx)(m.default, {
       party: t,
       onChannelContextMenu: l,
       registerQuestEntrypoint: i,

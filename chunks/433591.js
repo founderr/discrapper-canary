@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("7643"),
   I = n("785770"),
   S = n("521702"),
-  p = n("452229"),
-  m = n("196986"),
+  m = n("452229"),
+  p = n("196986"),
   T = n("92918"),
   g = n("973199"),
   A = n("49111"),
@@ -31,7 +31,7 @@ var a = n("37983"),
 function O() {
   let e = s.useRef(null),
     t = (0, S.default)(),
-    n = (0, p.useSpamMessageRequestCount)(),
+    n = (0, m.useSpamMessageRequestCount)(),
     l = (0, _.useListHasSingleSpamMessageRequest)(),
     O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     v = (0, c.default)("message-requests-spam-list"),
@@ -95,7 +95,7 @@ function O() {
         })]
       }) : null]
     }, "message-requests-spam-title"), [n, D, O]);
-  return 0 === t.length ? (0, a.jsx)(m.default, {
+  return 0 === t.length ? (0, a.jsx)(p.default, {
     section: g.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: v,

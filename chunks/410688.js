@@ -28,8 +28,8 @@ function h(e) {
   }, []), S = s.useCallback(() => {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), _ && (0, i.transitionToChannel)(h.id)
   }, [h.id, _]), {
-    acceptMessageRequest: p,
-    rejectMessageRequest: m,
+    acceptMessageRequest: m,
+    rejectMessageRequest: p,
     isAcceptLoading: T,
     isRejectLoading: g,
     isUserProfileLoading: A,
@@ -54,7 +54,7 @@ function h(e) {
         color: l.ButtonColors.PRIMARY,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), m(h.id)
+          e.stopPropagation(), p(h.id)
         },
         disabled: O,
         submitting: g || R,
@@ -64,7 +64,7 @@ function h(e) {
         color: l.ButtonColors.BRAND,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), p(h.id)
+          e.stopPropagation(), m(h.id)
         },
         disabled: O,
         submitting: T || A || N,

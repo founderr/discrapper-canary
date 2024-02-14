@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("686098"),
   I = n("255697"),
   S = n("49111"),
-  p = n("782340"),
-  m = n("647439");
+  m = n("782340"),
+  p = n("647439");
 
 function T(e) {
   var t;
@@ -31,25 +31,25 @@ function T(e) {
     dateStyle: "short"
   }), [n.config.expiresAt, l]), u = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
-    className: m.heading,
+    className: p.heading,
     children: [(0, a.jsx)("img", {
-      className: m.headingGameTile,
+      className: p.headingGameTile,
       alt: "",
       src: (0, h.getGameTileAssetUrl)(n.id)
     }), (0, a.jsxs)("div", {
-      className: m.headingCopy,
+      className: p.headingCopy,
       children: [(0, a.jsx)(o.Heading, {
         variant: "heading-md/semibold",
         color: "header-primary",
-        children: u ? p.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE : p.default.Messages.QUESTS_TITLE.format({
+        children: u ? m.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE : m.default.Messages.QUESTS_TITLE.format({
           questName: n.config.messages.questName
         })
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
-        children: u ? p.default.Messages.QUESTS_CLAIM_BY.format({
+        children: u ? m.default.Messages.QUESTS_CLAIM_BY.format({
           expirationDate: i
-        }) : p.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
+        }) : m.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
           expirationDate: i
         })
       })]
@@ -77,73 +77,73 @@ var g = function(e) {
   let L = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
     M = (null === (n = d.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
   return (0, a.jsxs)("div", {
-    className: i(m.wrapper, {
-      [m.wrapperQuestAccepted]: L
+    className: i(p.wrapper, {
+      [p.wrapperQuestAccepted]: L
     }),
     onClick: A,
     onKeyPress: A,
     children: [(0, a.jsxs)("div", {
-      className: m.utils,
+      className: p.utils,
       children: [L ? (0, a.jsx)(T, {
         quest: d
       }) : (0, a.jsx)(_.default, {
         textOpacity: .5
       }), (0, a.jsx)(o.Clickable, {
-        className: m.submenuWrapper,
+        className: p.submenuWrapper,
         onClick: N,
         children: (0, a.jsx)(c.default, {
-          className: m.submenuIcon
+          className: p.submenuIcon
         })
       })]
     }), !L && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(T, {
         quest: d
       }), (0, a.jsx)(o.Text, {
-        className: m.instructions,
+        className: p.instructions,
         variant: "text-sm/normal",
         color: "text-normal",
-        children: p.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
+        children: m.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
           gameTitle: d.config.messages.gameTitle,
           questReward: d.config.messages.rewardNameWithArticle,
           streamingDurationRequirement: d.config.streamDurationRequirementMinutes
         })
       })]
     }), L && !M && (0, a.jsx)(I.default, {
-      className: m.rewardTileWithInstructions,
+      className: p.rewardTileWithInstructions,
       quest: d
     }), (0, a.jsxs)("div", {
-      className: m.ctas,
+      className: p.ctas,
       children: [!L && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(o.Button, {
-          className: m.cta,
+          className: p.cta,
           color: o.Button.Colors.PRIMARY,
           fullWidth: !0,
           size: o.Button.Sizes.SMALL,
           onClick: O,
-          children: p.default.Messages.QUESTS_LEARN_MORE_V2
+          children: m.default.Messages.QUESTS_LEARN_MORE_V2
         }), (0, a.jsx)(o.Button, {
-          className: m.cta,
+          className: p.cta,
           color: o.Button.Colors.GREEN,
           fullWidth: !0,
           onClick: R,
           size: o.Button.Sizes.SMALL,
           submitting: h,
-          children: p.default.Messages.QUESTS_ACCEPT_QUEST
+          children: m.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), L && !M && (0, a.jsx)(o.Button, {
-        className: m.cta,
+        className: p.cta,
         color: o.Button.Colors.BRAND,
         fullWidth: !0,
         onClick: O,
         size: o.Button.Sizes.SMALL,
-        children: p.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
+        children: m.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
       }), M && (0, a.jsx)(o.Button, {
-        className: m.cta,
+        className: p.cta,
         color: o.Button.Colors.BRAND,
         fullWidth: !0,
         onClick: v,
         size: o.Button.Sizes.SMALL,
-        children: p.default.Messages.QUESTS_CLAIM_YOUR_REWARD
+        children: m.default.Messages.QUESTS_CLAIM_YOUR_REWARD
       })]
     })]
   })

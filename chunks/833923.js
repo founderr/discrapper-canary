@@ -81,15 +81,15 @@ class u extends s.PureComponent {
       let I = s.length >= o ? o : s.length;
       E.setTransform(1, 0, 0, -1, 0, a.height), E.clearRect(0, 0, a.width, a.height), E.translate(0, .5 * E.lineWidth);
       let S = Math.floor(a.width / (I - 3)),
-        p = .5 * S;
+        m = .5 * S;
       E.translate(S - S * f, 0), E.beginPath();
-      let m = -S;
+      let p = -S;
       s.forEach((e, a) => {
         t = {
-          x: m,
+          x: p,
           y: _ * e / h
-        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + p, n.y, t.x - p, t.y, t.x, t.y), n = t, m += S
-      }), E.stroke(), E.lineTo(m - S, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
+        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + m, n.y, t.x - m, t.y, t.x, t.y), n = t, p += S
+      }), E.stroke(), E.lineTo(p - S, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
     }
   }
 }

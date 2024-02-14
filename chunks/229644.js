@@ -41,8 +41,8 @@ var a = n("37983"),
   j = n("367226"),
   w = n("104589"),
   k = n("393027"),
-  B = n("12896"),
-  F = n("161778"),
+  F = n("12896"),
+  B = n("161778"),
   H = n("845579"),
   V = n("686470"),
   Y = n("27618"),
@@ -177,7 +177,7 @@ let eE = e => {
       route: n,
       locationState: s,
       ...l
-    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([F.default], () => F.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
+    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([B.default], () => B.default.getState().theme), c = (0, C.useActivitiesWhatsNewCount)();
     return (0, a.jsx)(er.LinkButton, {
       selected: t,
       route: n,
@@ -307,7 +307,7 @@ let eg = e => {
   return (0, a.jsxs)("nav", {
     className: ef.privateChannels,
     "aria-label": ec.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-    children: [(0, a.jsx)(B.default, {
+    children: [(0, a.jsx)(F.default, {
       tutorialId: "direct-messages",
       position: "right",
       offsetX: -52,
@@ -386,8 +386,8 @@ function eA() {
     n = !H.DisableGamesTab.useSetting(),
     {
       theme: s
-    } = (0, d.useStateFromStoresObject)([F.default], () => ({
-      theme: F.default.theme
+    } = (0, d.useStateFromStoresObject)([B.default], () => ({
+      theme: B.default.theme
     })),
     l = (0, d.useStateFromStores)([V.default], () => V.default.hasLibraryApplication()),
     i = (0, d.useStateFromStores)([q.default], () => q.default.getCurrentPath());

@@ -87,8 +87,8 @@ function k(e) {
     hasProfileEffect: _
   } = e, {
     profileTheme: A
-  } = i.useContext(y.UserProfileContext), U = i.useContext(S.AnalyticsContext), k = t.isNonUserBot() && !t.isClyde(), w = C.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, M.PremiumTypes.TIER_2), F = i.useMemo(() => (0, m.shouldDisableUserPresenceInChannel)(t, p), [t, p]), G = E || t.isClyde(), {
-    avatarDecorationSrc: B,
+  } = i.useContext(y.UserProfileContext), U = i.useContext(S.AnalyticsContext), k = t.isNonUserBot() && !t.isClyde(), w = C.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, M.PremiumTypes.TIER_2), F = i.useMemo(() => (0, m.shouldDisableUserPresenceInChannel)(t, p), [t, p]), B = E || t.isClyde(), {
+    avatarDecorationSrc: G,
     avatarSrc: H,
     eventHandlers: V
   } = (0, I.default)({
@@ -101,7 +101,7 @@ function k(e) {
     ...V,
     children: (0, l.jsx)(D, {
       src: null != a ? a : H,
-      avatarDecoration: B,
+      avatarDecoration: G,
       size: b,
       "aria-label": t.username,
       status: F ? R.StatusTypes.UNKNOWN : u,
@@ -124,11 +124,11 @@ function k(e) {
   return (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)(d.Clickable, {
       className: s({
-        [P.clickable]: !G,
+        [P.clickable]: !B,
         [P.avatarWrapperNonUserBot]: k,
         [P.avatarWrapperNormal]: !k
       }, W),
-      onClick: k || G ? void 0 : function() {
+      onClick: k || B ? void 0 : function() {
         (0, x.openUserProfileModal)({
           userId: t.id,
           guildId: null != f ? f : void 0,
@@ -136,8 +136,8 @@ function k(e) {
           analyticsLocation: U.location
         }), null == h || h()
       },
-      children: [K, !G && function() {
-        let e = null != B,
+      children: [K, !B && function() {
+        let e = null != G,
           t = e ? j : (0, d.getAvatarSize)(b);
         return (0, l.jsx)(g.default, {
           mask: null == u || u === R.StatusTypes.UNKNOWN || F ? g.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, c]).with([!0, !0], () => g.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => g.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => g.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => g.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),

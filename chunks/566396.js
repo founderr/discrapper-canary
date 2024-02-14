@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -20,7 +20,7 @@ var a = n("37983"),
   C = n("663449"),
   I = n("449008"),
   S = n("782340");
-class p extends s.PureComponent {
+class m extends s.PureComponent {
   hasParty(e) {
     return e.length > 1
   }
@@ -73,7 +73,7 @@ class p extends s.PureComponent {
     }
   }
 }
-var m = r.default.connectStores([c.default, _.default, h.default, E.default], () => {
+var p = r.default.connectStores([c.default, _.default, h.default, E.default], () => {
   let e, t;
   let n = c.default.getSyncingWith(),
     a = c.default.getActivity(),
@@ -88,4 +88,4 @@ var m = r.default.connectStores([c.default, _.default, h.default, E.default], ()
     host: e,
     party: l
   }
-})(p)
+})(m)

@@ -21,8 +21,8 @@ var s = n("446674"),
   C = n("550368"),
   I = n("67139"),
   S = n("62659"),
-  p = n("636174"),
-  m = n("49111");
+  m = n("636174"),
+  p = n("49111");
 
 function T(e) {
   let {
@@ -117,8 +117,8 @@ function T(e) {
       activityUser: G
     } = e;
     if (null == x || null == x.type) return null;
-    if (R.length > 1 && x.type === m.ActivityTypes.PLAYING && !(0, r.default)(x) && null != b) D((0, a.jsx)(S.default.GameSection, {
-      icon: b.getIconURL(p.ICON_SIZE),
+    if (R.length > 1 && x.type === p.ActivityTypes.PLAYING && !(0, r.default)(x) && null != b) D((0, a.jsx)(S.default.GameSection, {
+      icon: b.getIconURL(m.ICON_SIZE),
       name: b.name,
       partySize: {
         knownSize: U.length,
@@ -136,7 +136,7 @@ function T(e) {
         channel: t,
         guildId: t.guild_id
       }, "embedded-activity-".concat(x.application_id)))
-    } else if ((null != x.assets || (0, r.default)(x)) && x.type === m.ActivityTypes.PLAYING) D((0, a.jsx)(S.default.RichPresenceSection, {
+    } else if ((null != x.assets || (0, r.default)(x)) && x.type === p.ActivityTypes.PLAYING) D((0, a.jsx)(S.default.RichPresenceSection, {
       activity: x,
       getAssetImage: C.getAssetImage
     }, "rich-presence-".concat(null !== (f = x.session_id) && void 0 !== f ? f : n, "-").concat(G.id)));
@@ -159,7 +159,7 @@ function T(e) {
       },
       getAssetImage: C.getAssetImage,
       members: U
-    }, "spotify-".concat(null !== (I = x.session_id) && void 0 !== I ? I : n, "-").concat(G.id))) : (null != x.assets || (0, r.default)(x)) && x.type === m.ActivityTypes.LISTENING ? D((0, a.jsx)(S.default.RichPresenceSection, {
+    }, "spotify-".concat(null !== (I = x.session_id) && void 0 !== I ? I : n, "-").concat(G.id))) : (null != x.assets || (0, r.default)(x)) && x.type === p.ActivityTypes.LISTENING ? D((0, a.jsx)(S.default.RichPresenceSection, {
       activity: x,
       getAssetImage: C.getAssetImage
     }, "rich-presence-".concat(null !== (v = x.session_id) && void 0 !== v ? v : n, "-").concat(G.id))) : (0, d.default)(x) && D((0, a.jsx)(S.default.XboxSection, {

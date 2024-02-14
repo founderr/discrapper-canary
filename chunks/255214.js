@@ -1,28 +1,28 @@
 "use strict";
 i.r(t), i.d(t, {
   getEmojiHotrail: function() {
-    return r
+    return o
   },
   default: function() {
     return u
   }
 });
 var n = i("884691"),
-  o = i("115279");
+  r = i("115279");
 
-function r(e) {
+function o(e) {
   let {
     topEmojis: t,
     newlyAddedEmojis: i,
-    rowSize: n = o.EMOJI_ROW_SIZE
-  } = e, r = t.slice(0, n - i.length);
+    rowSize: n = r.EMOJI_ROW_SIZE
+  } = e, o = t.slice(0, n - i.length);
   return {
-    visibleTopEmojis: r,
+    visibleTopEmojis: o,
     visibleNewlyAddedEmojis: i,
-    allEmojis: r.concat(i)
+    allEmojis: o.concat(i)
   }
 }
 
 function u(e) {
-  return n.useMemo(() => r(e), [e])
+  return n.useMemo(() => o(e), [e])
 }

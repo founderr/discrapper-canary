@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return R
   },
   InviteDestinationIcon: function() {
-    return x
+    return L
   },
   InviteMemberCounts: function() {
-    return L
+    return x
   },
   InviteJoinContext: function() {
     return M
@@ -36,13 +36,13 @@ var s = n("37983"),
   c = n("258078"),
   f = n("315102"),
   E = n("158998"),
-  I = n("91366"),
-  _ = n("49111"),
+  _ = n("91366"),
+  I = n("49111"),
   p = n("238055"),
   h = n("782340"),
   T = n("573905");
 let N = 100,
-  g = e => {
+  m = e => {
     var t, n;
     let s = {
       onlineCount: null !== (t = e.approximate_presence_count) && void 0 !== t ? t : 0,
@@ -50,26 +50,26 @@ let N = 100,
     };
     return 0 === s.memberCount && 0 === s.memberCount ? null : s
   },
-  m = e => e.target_type === I.InviteTargetTypes.STREAM && null != e.target_user,
+  g = e => e.target_type === _.InviteTargetTypes.STREAM && null != e.target_user,
   A = e => {
     var t;
-    return (null === (t = e.channel) || void 0 === t ? void 0 : t.type) === _.ChannelTypes.GROUP_DM
+    return (null === (t = e.channel) || void 0 === t ? void 0 : t.type) === I.ChannelTypes.GROUP_DM
   },
   S = e => null == e.channel && null == e.guild && null != e.inviter,
-  v = e => {
+  C = e => {
     var t;
-    let n = g(e);
+    let n = m(e);
     return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > N
   },
-  C = e => e.state === _.InviteStates.ACCEPTED,
+  v = e => e.state === I.InviteStates.ACCEPTED,
   R = e => {
     let {
       guild_scheduled_event: t
     } = e;
     return null != t || !1
   },
-  O = e => !R(e) && (!!S(e) || null != e.inviter && !C(e) && !v(e)),
-  x = e => {
+  O = e => !R(e) && (!!S(e) || null != e.inviter && !v(e) && !C(e)),
+  L = e => {
     let {
       guild: t,
       user: n,
@@ -94,13 +94,13 @@ let N = 100,
     else return null
   };
 
-function L(e) {
+function x(e) {
   var t;
   let {
     invite: n,
     textClassName: a,
     className: l
-  } = e, r = g(n);
+  } = e, r = m(n);
   return null == r || O(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, s.jsx)(d.ActivityCount, {
     className: i(T.activityCount, l),
     online: r.onlineCount,
@@ -114,15 +114,15 @@ function M(e) {
   let {
     invite: t,
     showBigUserIcon: n
-  } = e, l = a.useMemo(() => n ? null : m(t) && null != t.target_user ? f.default.getUserAvatarURL(t.target_user) : O(t) && null != t.inviter ? f.default.getUserAvatarURL(t.inviter) : null, [t, n]), i = h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN;
+  } = e, l = a.useMemo(() => n ? null : g(t) && null != t.target_user ? f.default.getUserAvatarURL(t.target_user) : O(t) && null != t.inviter ? f.default.getUserAvatarURL(t.inviter) : null, [t, n]), i = h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN;
   if (A(t)) {
     var u, o;
     i = (null === (u = t.channel) || void 0 === u ? void 0 : u.name) != null && (null === (o = t.inviter) || void 0 === o ? void 0 : o.username) != null ? h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM_BY_USER.format({
       username: t.inviter.username
     }) : h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM
-  } else m(t) && null != t.target_user ? i = h.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
+  } else g(t) && null != t.target_user ? i = h.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
     username: t.target_user.username
-  }) : C(t) ? i = h.default.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF : O(t) && null != t.inviter && (i = h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({
+  }) : v(t) ? i = h.default.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF : O(t) && null != t.inviter && (i = h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({
     username: E.default.getFormattedName(t.inviter)
   }));
   return (0, s.jsxs)("div", {
@@ -146,9 +146,9 @@ function D(e) {
     guild: i,
     channel: u,
     application: f,
-    showBigUserIcon: I
+    showBigUserIcon: _
   } = e;
-  if (null != i) I && null == f && (t = (0, s.jsx)(d.GuildIcon, {
+  if (null != i) _ && null == f && (t = (0, s.jsx)(d.GuildIcon, {
     guild: i,
     size: d.GuildIcon.Sizes.SMALL
   })), n = i.name, null != f && (n = f.name, a = (0, s.jsxs)("div", {

@@ -55,20 +55,20 @@ async function R(e) {
   null != k && (D.type = x.MessageTypes.REPLY, D.message_reference = P.messageReference, D.allowed_mentions = P.allowedMentions, (0, T.deletePendingReply)(f));
   let [w, F] = (0, I.default)(D.content);
   w && (D.content = F, D.flags = (0, A.addFlag)(null !== (t = D.flags) && void 0 !== t ? t : 0, x.MessageFlags.SUPPRESS_NOTIFICATIONS));
-  let G = null !== (n = P.nonce) && void 0 !== n ? n : (0, g.createNonce)(),
-    B = (0, g.default)({
+  let B = null !== (n = P.nonce) && void 0 !== n ? n : (0, g.createNonce)(),
+    G = (0, g.default)({
       channelId: f,
       content: D.content,
       tts: null !== (l = null == L ? void 0 : L.tts) && void 0 !== l && l,
       type: D.type,
       messageReference: D.message_reference,
       flags: D.flags,
-      nonce: G,
+      nonce: B,
       poll: (0, C.createPollServerDataFromCreateRequest)(P.poll)
     });
-  return (D.nonce = G, j.on("start", e => {
+  return (D.nonce = B, j.on("start", e => {
     c = (0, E.createMessageRecord)({
-      ...B,
+      ...G,
       id: e.id
     }), i.default.dispatch({
       type: "UPLOAD_START",

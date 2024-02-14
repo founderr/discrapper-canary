@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a = n("37983");
@@ -21,7 +21,7 @@ var s = n("872717"),
   C = n("492249"),
   I = n("49111");
 let S = 10 * E.default.Millis.SECOND;
-var p = {
+var m = {
   [I.RPCCommands.VALIDATE_APPLICATION]: {
     scope: C.RPC_LOCAL_SCOPE,
     handler(e) {

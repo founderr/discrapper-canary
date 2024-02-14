@@ -25,8 +25,8 @@ function C(e) {
     content: C,
     renderModalProps: I,
     analyticsLocations: S,
-    analyticsLocation: p,
-    isLightTheme: m
+    analyticsLocation: m,
+    isLightTheme: p
   } = e, T = "AnnouncementModalVariant1", {
     onClose: g
   } = I, A = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
@@ -35,7 +35,7 @@ function C(e) {
     subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: S,
     analyticsObject: {
-      ...p,
+      ...m,
       object: f.AnalyticsObjects.BUTTON_CTA,
       objectType: f.AnalyticsObjectTypes.TIER_2
     },
@@ -52,11 +52,11 @@ function C(e) {
     })
   }) : void 0, v = {
     type: "video",
-    src: m ? C.heroArtVideoLinkLightTheme : C.videoLink
+    src: p ? C.heroArtVideoLinkLightTheme : C.videoLink
   };
   return ("" !== C.heroArtImageLinkDarkTheme || "" !== C.heroArtImageLinkLightTheme) && (v = {
     type: "image",
-    src: m ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
+    src: p ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
   }), {
     renderModalProps: I,
     header: C.header,
@@ -66,7 +66,7 @@ function C(e) {
     featureCards: C.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
-      imageSrc: m ? e.imageLinkLightTheme : e.imageLink,
+      imageSrc: p ? e.imageLinkLightTheme : e.imageLink,
       tagText: "" !== e.pill ? e.pill : void 0
     })),
     changeLogId: T,

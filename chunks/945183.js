@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("271938"),
   I = n("42203"),
   S = n("305961"),
-  p = n("42887"),
-  m = n("385649"),
+  m = n("42887"),
+  p = n("385649"),
   T = n("945956"),
   g = n("18494"),
   A = n("280168"),
@@ -37,18 +37,18 @@ function M(e, t, n, a) {
       l = new r.BatchedStoreListener(e, () => {
         let e = t(),
           l = n(s, e);
-        null != l && !m.default.isSoundDisabled(l) && (0, v.playSound)(l, null != a ? a : .4), s = e
+        null != l && !p.default.isSoundDisabled(l) && (0, v.playSound)(l, null != a ? a : .4), s = e
       });
     return l.attach("useSound"), () => l.detach()
   })
 }
 
 function P() {
-  return M([p.default, g.default], () => ({
+  return M([m.default, g.default], () => ({
     inVoiceChannel: null != g.default.getVoiceChannelId(),
-    selfMute: p.default.isSelfMute(),
-    selfDeaf: p.default.isSelfDeaf(),
-    audioPermissionReady: p.default.isNativeAudioPermissionReady()
+    selfMute: m.default.isSelfMute(),
+    selfDeaf: m.default.isSelfDeaf(),
+    audioPermissionReady: m.default.isNativeAudioPermissionReady()
   }), (e, t) => {
     let {
       inVoiceChannel: n,
@@ -97,18 +97,18 @@ function D() {
 function y() {
   return M([A.default], () => A.default.isCurrentUserSpeaking(), (e, t) => {
     if (e !== t) {
-      let e = p.default.isSelfMute(),
-        n = p.default.getMode();
+      let e = m.default.isSelfMute(),
+        n = m.default.getMode();
       if (n === L.InputModes.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop"
     }
   }), null
 }
 
 function x() {
-  return M([p.default], () => p.default.isSelfMutedTemporarily(), (e, t) => {
+  return M([m.default], () => m.default.isSelfMutedTemporarily(), (e, t) => {
     if (e !== t) {
-      let e = p.default.isSelfMute(),
-        n = p.default.getMode();
+      let e = m.default.isSelfMute(),
+        n = m.default.getMode();
       if (n === L.InputModes.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start"
     }
   }), null

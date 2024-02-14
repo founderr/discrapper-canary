@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("389495"),
   I = n("49111"),
   S = n("719347"),
-  p = n("782340"),
-  m = n("196417"),
+  m = n("782340"),
+  p = n("196417"),
   T = n("919163");
 let g = s.memo(function(e) {
   let {
@@ -39,49 +39,49 @@ let g = s.memo(function(e) {
     content: null
   }, [g]), v = null;
   if (l) v = (0, a.jsx)(o.Text, {
-    className: m.messageReplacement,
+    className: p.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
-    children: p.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
+    children: m.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
     if (null != g && A) v = (0, a.jsx)(o.Text, {
-      className: m.messageReplacement,
+      className: p.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: p.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
+      children: m.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
     });
     else if (null != g) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, _.renderSingleLineMessage)(g, O, A, i(m.messageContent, T.inlineFormat, T.smallFontSize), {
-        iconClass: m.messageContentIcon,
+      } = (0, _.renderSingleLineMessage)(g, O, A, i(p.messageContent, T.inlineFormat, T.smallFontSize), {
+        iconClass: p.messageContentIcon,
         iconSize: S.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
       v = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: m.messageContent,
+        className: p.messageContent,
         children: t
       }) : (0, a.jsx)(o.Text, {
         tag: "span",
         variant: "text-sm/normal",
         color: "text-muted",
-        className: m.messageReplacement,
+        className: p.messageReplacement,
         children: e
       })
     } else v = (0, a.jsx)(o.Text, {
-      className: m.messageReplacement,
+      className: p.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: p.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
+      children: m.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
   } else v = null;
   return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {
     value: (0, u.default)(R, N),
     children: (0, a.jsx)(o.FocusBlock, {
-      className: m.messageFocusBlock,
+      className: p.messageFocusBlock,
       children: v
     })
   })

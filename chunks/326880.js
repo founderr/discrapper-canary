@@ -1,31 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
 var r = n("37983");
 n("884691");
 var i = n("469563"),
-  a = n("470131"),
+  l = n("470131"),
   u = n("75196"),
-  l = (0, i.replaceIcon)(function(e) {
+  a = (0, i.replaceIcon)(function(e) {
     let {
       width: t = 6,
       height: n = 11,
       color: i = "currentColor",
-      foreground: a,
-      ...l
+      foreground: l,
+      ...a
     } = e;
     return (0, r.jsx)("svg", {
-      ...(0, u.default)(l),
+      ...(0, u.default)(a),
       width: t,
       height: n,
       viewBox: "0 0 6 11",
       children: (0, r.jsxs)("g", {
         fill: i,
         fillRule: "evenodd",
-        className: a,
+        className: l,
         children: [(0, r.jsx)("path", {
           d: "M2 4.42007V6.79007L3 7.79007L4 6.79007V4.42007L3.01 3.42007L2 4.42007Z"
         }), (0, r.jsx)("path", {
@@ -33,6 +33,6 @@ var i = n("469563"),
         })]
       })
     })
-  }, a.BoostTier2SimpleIcon, void 0, {
+  }, l.BoostTier2SimpleIcon, void 0, {
     size: 11
   })

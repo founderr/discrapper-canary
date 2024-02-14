@@ -23,8 +23,8 @@ var a = n("37983"),
   C = n("161778"),
   I = n("330387"),
   S = n("642400"),
-  p = n("668596"),
-  m = n("892313"),
+  m = n("668596"),
+  p = n("892313"),
   T = n("49111"),
   g = n("482931"),
   A = n("782340");
@@ -37,7 +37,7 @@ function R() {
   } = (0, i.useStateFromStoresObject)([I.default, C.default], () => ({
     action: I.default.getAction(),
     theme: C.default.theme
-  })), R = m.default.getVerificationTypes(e), [O, v] = s.useState(0), L = (0, f.default)(R);
+  })), R = p.default.getVerificationTypes(e), [O, v] = s.useState(0), L = (0, f.default)(R);
   (0, h.default)({
     type: l.ImpressionTypes.MODAL,
     name: l.ImpressionNames.USER_ACTION_REQUIRED,
@@ -56,7 +56,7 @@ function R() {
         })
       }, {
         modalKey: N,
-        Layer: p.default
+        Layer: m.default
       })
     },
     P = () => {
@@ -70,7 +70,7 @@ function R() {
         })
       }, {
         modalKey: g.PHONE_VERIFICATION_MODAL_KEY,
-        Layer: p.default
+        Layer: m.default
       })
     };
   return s.useEffect(() => (E.default.disable(), () => {
@@ -88,7 +88,7 @@ function R() {
       })
     }, {
       modalKey: "PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY",
-      Layer: p.default,
+      Layer: m.default,
       onCloseCallback: M
     })
   }, [R, L]), (0, a.jsx)(S.default, {
@@ -127,7 +127,7 @@ function R() {
           })
         })
       }, {
-        Layer: p.default
+        Layer: m.default
       })
     }
   })

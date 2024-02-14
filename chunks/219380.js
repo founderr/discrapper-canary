@@ -20,8 +20,8 @@ var a = n("901165"),
   C = n("825734"),
   I = n("766383"),
   S = n("696287"),
-  p = n("778117"),
-  m = n("195180"),
+  m = n("778117"),
+  p = n("195180"),
   T = n("357147");
 let g = {
     ...l.crossPlatformCommands,
@@ -32,8 +32,8 @@ let g = {
     ..._.default,
     ...C.default,
     ...S.default,
-    ...m.default,
     ...p.default,
+    ...m.default,
     ...f.default,
     ...I.default
   },

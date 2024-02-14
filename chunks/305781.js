@@ -11,33 +11,33 @@ i.r(t), i.d(t, {
   }
 });
 var n = i("872717"),
-  o = i("913144"),
-  r = i("49111");
+  r = i("913144"),
+  o = i("49111");
 
 function u(e) {
-  o.default.dispatch({
+  r.default.dispatch({
     type: "TOP_EMOJIS_FETCH",
     guildId: e
   }), n.default.get({
-    url: r.Endpoints.TOP_EMOJIS_FOR_GUILD(e),
+    url: o.Endpoints.TOP_EMOJIS_FOR_GUILD(e),
     oldFormErrors: !0
-  }).then(t => o.default.dispatch({
+  }).then(t => r.default.dispatch({
     type: "TOP_EMOJIS_FETCH_SUCCESS",
     guildId: e,
     topEmojisMetadata: t.body.items.map(e => ({
       emojiId: e.emoji_id,
       rank: e.emoji_rank
     })).sort((e, t) => e.rank - t.rank)
-  }), () => o.default.dispatch({
+  }), () => r.default.dispatch({
     type: "TOP_EMOJIS_FETCH_FAILURE",
     guildId: e
   }))
 }
 
 function a(e, t) {
-  o.default.dispatch({
+  r.default.dispatch({
     type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED"
-  }), null != e && null != t && o.default.dispatch({
+  }), null != e && null != t && r.default.dispatch({
     type: "NEWLY_ADDED_EMOJI_SEEN_PENDING",
     guildId: e,
     emojiId: t
@@ -45,7 +45,7 @@ function a(e, t) {
 }
 
 function s(e, t) {
-  null != e && null != t && o.default.dispatch({
+  null != e && null != t && r.default.dispatch({
     type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED",
     guildId: e,
     emojiId: t

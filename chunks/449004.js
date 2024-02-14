@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007"), n("808653");
 var a = n("917351"),
@@ -49,7 +49,7 @@ class S extends l.default.Store {
   }
 }
 S.displayName = "FriendSuggestionStore";
-var p = new S(i.default, {
+var m = new S(i.default, {
   CONNECTION_OPEN: function(e) {
     c = {}, (f = e.friendSuggestionCount) > 0 && (h = !0, E || !h || (E = !0, h = !1, d.default.fetch()))
   },

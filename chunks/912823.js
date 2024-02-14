@@ -66,7 +66,7 @@ var P = i.memo(function(e) {
     channel: k,
     handleSubmit: w,
     isEmpty: F
-  } = e, G = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), B = (0, s.useStateFromStores)([E.default], () => E.default.getStickerPreview(k.id, U.drafts.type)), H = null != B && B.length > 0, V = (0, s.useStateFromStores)([g.default], () => g.default.getUploads(k.id, U.drafts.type)), {
+  } = e, B = (0, s.useStateFromStores)([o.default], () => o.default.isSubmitButtonEnabled), G = (0, s.useStateFromStores)([E.default], () => E.default.getStickerPreview(k.id, U.drafts.type)), H = null != G && G.length > 0, V = (0, s.useStateFromStores)([g.default], () => g.default.getUploads(k.id, U.drafts.type)), {
     activeCommand: K,
     activeCommandOption: W
   } = (0, s.useStateFromStoresObject)([d.default], () => ({
@@ -136,7 +136,7 @@ var P = i.memo(function(e) {
   return ((null === (t = U.emojis) || void 0 === t ? void 0 : t.button) != null && (null == K || null != W && W.type !== r.ApplicationCommandOptionType.ATTACHMENT) && z.push((0, l.jsx)(v.default, {
     disabled: D,
     type: U
-  }, "emoji")), (null === (n = U.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (i = U.submit) || void 0 === i ? void 0 : i.ignorePreference) || G) && z.push((0, l.jsx)(y.default, {
+  }, "emoji")), (null === (n = U.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (i = U.submit) || void 0 === i ? void 0 : i.ignorePreference) || B) && z.push((0, l.jsx)(y.default, {
     onClick: w,
     disabled: D || 0 === V.length && F && !H
   }, "submit")), 0 === z.length) ? null : (0, l.jsx)("div", {

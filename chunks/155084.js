@@ -1,54 +1,54 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
     return o
   }
 }), n("222007"), n("424973");
-var l = n("615361"),
-  i = n("872717"),
+var i = n("615361"),
+  r = n("872717"),
   a = n("773336"),
   s = n("827032"),
-  r = n("49111");
+  l = n("49111");
 let u = new Set(["darwin", "linux", "win32", "ios", "android"]);
-var o = new class e {
-  increment(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+var o = new class t {
+  increment(t) {
+    let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       {
         name: n,
-        tags: i
-      } = e,
-      r = {
+        tags: r
+      } = t,
+      l = {
         name: n,
         tags: (0, s.getGlobalTagsArray)()
       };
-    null != i && i.forEach(e => {
-      r.tags.push(e)
+    null != r && r.forEach(t => {
+      l.tags.push(t)
     });
     let o = function() {
       if ((0, a.isWeb)()) return "web";
       {
-        let e = (0, a.getPlatformName)();
-        return u.has(e) ? e : null
+        let t = (0, a.getPlatformName)();
+        return u.has(t) ? t : null
       }
     }();
-    null != o && r.tags.push("platform:".concat(o));
-    let d = function() {
-      let e = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
-      return l.ReleaseChannelsSets.ALL.has(e) ? e : null
+    null != o && l.tags.push("platform:".concat(o));
+    let c = function() {
+      let t = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
+      return i.ReleaseChannelsSets.ALL.has(t) ? t : null
     }();
-    null != d && r.tags.push("release_channel:".concat(d)), this._metrics.push(r), (t || this._metrics.length >= 100) && this._flush()
+    null != c && l.tags.push("release_channel:".concat(c)), this._metrics.push(l), (e || this._metrics.length >= 100) && this._flush()
   }
   _flush() {
     if (this._metrics.length > 0) {
-      let e = [...this._metrics];
-      i.default.post({
-        url: r.Endpoints.METRICS,
+      let t = [...this._metrics];
+      r.default.post({
+        url: l.Endpoints.METRICS,
         body: {
-          metrics: e
+          metrics: t
         },
         retries: 1
-      }).catch(t => {
-        this._metrics.length + e.length < 100 && (this._metrics = [...this._metrics, ...e])
+      }).catch(e => {
+        this._metrics.length + t.length < 100 && (this._metrics = [...this._metrics, ...t])
       })
     }
     this._metrics = []

@@ -11,8 +11,8 @@ var s = a("819855"),
   n = a("841098"),
   i = a("782340"),
   o = a("731390"),
-  u = a("321220"),
-  c = a("684386"),
+  c = a("321220"),
+  u = a("684386"),
   d = e => {
     let {
       onRetry: t
@@ -21,7 +21,7 @@ var s = a("819855"),
       className: o.wrapper,
       children: [(0, l.jsx)("img", {
         className: o.loadIssueImg,
-        src: (0, s.isThemeDark)(a) ? u : c,
+        src: (0, s.isThemeDark)(a) ? c : u,
         alt: ""
       }), (0, l.jsx)(r.Heading, {
         className: o.heading1,

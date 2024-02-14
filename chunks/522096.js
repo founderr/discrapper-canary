@@ -42,7 +42,7 @@ function d(e) {
     gridNavigatorId: b,
     gridNotice: j,
     renderHeader: U
-  } = e, D = i.useRef(null), k = i.useRef(null), w = i.useRef(null), F = 0 === t.length, G = (0, a.useExpressionPickerStore)(e => e.searchQuery), B = c.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
+  } = e, D = i.useRef(null), k = i.useRef(null), w = i.useRef(null), F = 0 === t.length, B = (0, a.useExpressionPickerStore)(e => e.searchQuery), G = c.useStore(e => e.inspectedExpressionPosition), H = (0, s.useExpressionPickerGridWidth)({
     gridWrapperRef: D,
     containerWidth: d,
     showingEmptyState: F
@@ -81,11 +81,11 @@ function d(e) {
     }, t => Z(e, t), t => c.setInspectedExpressionPosition(t, e))
   }, [V, Z, J, z, Q, S, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
     var e;
-    return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[B.rowIndex]) || void 0 === e ? void 0 : e[B.columnIndex])
-  }, [V, B.columnIndex, B.rowIndex, I]);
+    return null == I ? void 0 : I(null == V ? void 0 : null === (e = V[G.rowIndex]) || void 0 === e ? void 0 : e[G.columnIndex])
+  }, [V, G.columnIndex, G.rowIndex, I]);
   i.useEffect(() => {
-    m(G)
-  }, [m, G]), i.useEffect(() => c.resetStoreState, [c.resetStoreState]), i.useLayoutEffect(() => {
+    m(B)
+  }, [m, B]), i.useEffect(() => c.resetStoreState, [c.resetStoreState]), i.useLayoutEffect(() => {
     var e;
     null === (e = w.current) || void 0 === e || e.focus()
   }, []);

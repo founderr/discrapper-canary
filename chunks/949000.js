@@ -21,8 +21,8 @@ var s = n("77078"),
   C = n("520497"),
   I = n("812809"),
   S = n("435895"),
-  p = n("49111"),
-  m = n("353927");
+  m = n("49111"),
+  p = n("353927");
 class T extends f.default {
   _initialize() {
     super._initialize(), !__OVERLAY__ && l.default.subscribe("OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", this._handleOverlaySoundboardSoundsFetchRequest)
@@ -33,7 +33,7 @@ class T extends f.default {
   constructor(...e) {
     var t;
     super(...e), t = this, this.playingSoundsWeb = new Map, this._stopAndClearSounds = () => {
-      u.default.supports(m.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
+      u.default.supports(p.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
         e.stopAllSamplesLocalPlayback()
       }), this.playingSoundsWeb.forEach(e => {
         e.pause(), e.src = ""
@@ -50,7 +50,7 @@ class T extends f.default {
           soundVolume: (0, I.default)(n),
           reportSoundStartedPlaying: () => (0, E.reportSoundStartedPlaying)(e, a)
         };
-        u.default.supports(m.Features.SAMPLE_PLAYBACK) ? await (0, S.playDesktopSound)(s) : await (0, S.playWebSound)(s, t.playingSoundsWeb)
+        u.default.supports(p.Features.SAMPLE_PLAYBACK) ? await (0, S.playDesktopSound)(s) : await (0, S.playWebSound)(s, t.playingSoundsWeb)
       } finally {
         (0, E.reportSoundFinishedPlaying)(e, a)
       }
@@ -59,7 +59,7 @@ class T extends f.default {
     }, this._handleOpenEducationModal = (e, t) => {
       if (null == e) return;
       let l = o.default.getChannel(t),
-        u = c.default.getKeybindForAction(p.GlobalKeybindActions.SOUNDBOARD_HOLD);
+        u = c.default.getKeybindForAction(m.GlobalKeybindActions.SOUNDBOARD_HOLD);
       null != l && (0, _.default)(l) && null != u && r.default.hasHotspot(i.HotspotLocations.SOUNDBOARD_WHEEL_EDUCATION_MODAL) && (0, s.openModalLazy)(async () => {
         let {
           default: t

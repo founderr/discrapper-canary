@@ -21,7 +21,7 @@ var o = e => {
   } = e, {
     avatarDecorationSrc: d,
     avatarSrc: f,
-    eventHandlers: E
+    eventHandlers: m
   } = (0, u.default)({
     user: t,
     size: o,
@@ -35,6 +35,6 @@ var o = e => {
     status: i,
     "aria-label": c ? void 0 : s.default.Messages.USER_SETTINGS_AVATAR,
     "aria-hidden": c,
-    ...E
+    ...m
   })
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SeasonalGiftIcon: function() {
-    return G
+    return B
   },
   default: function() {
-    return B
+    return G
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -87,7 +87,7 @@ let b = [{
   w = (0, a.animated)(N.default),
   F = (0, a.animated)(I.default);
 
-function G(e) {
+function B(e) {
   let {
     themeOverride: t,
     hovered: n,
@@ -130,7 +130,7 @@ function G(e) {
     style: m
   })
 }
-var B = i.memo(function(e) {
+var G = i.memo(function(e) {
   let {
     disabled: t,
     channel: n
@@ -144,7 +144,7 @@ var B = i.memo(function(e) {
     autoTrackExposure: A
   }), j = [];
   b && A && j.push(o.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-  let [U, k] = (0, E.useSelectedDismissibleContent)(j), w = null != U, F = (0, y.useDirectMessageRecipient)(n), B = null != F;
+  let [U, k] = (0, E.useSelectedDismissibleContent)(j), w = null != U, F = (0, y.useDirectMessageRecipient)(n), G = null != F;
   if (t) return null;
   let H = () => {
       (0, g.default)({
@@ -173,7 +173,7 @@ var B = i.memo(function(e) {
         onComplete: () => f(!1),
         onDMCheckItOutClick: H,
         markAsDismissed: k,
-        isDM: B
+        isDM: G
       }), (0, l.jsx)(v.default, {
         innerClassName: P.button,
         "aria-label": M.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
@@ -185,7 +185,7 @@ var B = i.memo(function(e) {
         },
         children: (0, l.jsx)("div", {
           className: L.noPointerEvents,
-          children: (0, l.jsx)(G, {
+          children: (0, l.jsx)(B, {
             hovered: u,
             isContentDismissed: !w
           })
@@ -194,7 +194,7 @@ var B = i.memo(function(e) {
     });
   return w ? V : (0, l.jsx)(d.TooltipContainer, {
     className: L.container,
-    text: (0, c.getSeasonalGiftingBody)(B),
+    text: (0, c.getSeasonalGiftingBody)(G),
     children: V
   })
 })

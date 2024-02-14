@@ -43,7 +43,7 @@ var l = n("37983"),
       messageId: j,
       isBurstReaction: U,
       inNitroLockedSection: D
-    } = e, k = c.EmojiPickerStore.getState(), [w, F] = i.useState(k.inspectedExpressionPosition), [G, B] = (0, o.default)(null, 300), H = i.useRef(null);
+    } = e, k = c.EmojiPickerStore.getState(), [w, F] = i.useState(k.inspectedExpressionPosition), [B, G] = (0, o.default)(null, 300), H = i.useRef(null);
     i.useEffect(() => c.EmojiPickerStore.useStore.subscribe(e => F(e), e => e.inspectedExpressionPosition), []), i.useEffect(() => {
       m.FrecencyUserSettingsActionCreators.loadIfNecessary()
     }, []);
@@ -87,7 +87,7 @@ var l = n("37983"),
                     [v.emojiItemMedium]: K,
                     [v.emojiItemSelected]: u,
                     [null != b ? b : ""]: u,
-                    [v.showPulse]: G === t
+                    [v.showPulse]: B === t
                   }),
                   onFocus: null != h ? h : c,
                   onMouseOver: c,
@@ -127,8 +127,8 @@ var l = n("37983"),
               getEmojiItemProps: N,
               isMediumSize: K,
               isLargeSize: V,
-              pulseItemKey: G,
-              setPulseItemKey: B,
+              pulseItemKey: B,
+              setPulseItemKey: G,
               showEmojiFavoriteTooltip: M,
               messageId: j,
               isBurstReaction: U,

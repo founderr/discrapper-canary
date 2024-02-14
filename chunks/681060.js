@@ -41,8 +41,8 @@ var l = n("37983"),
   k = n("300322"),
   w = n("845579"),
   F = n("26989"),
-  G = n("957255"),
-  B = n("18494"),
+  B = n("957255"),
+  G = n("18494"),
   H = n("769264"),
   V = n("585722"),
   K = n("697218"),
@@ -86,8 +86,8 @@ var l = n("37983"),
       pendingReply: ek,
       onChange: ew,
       onResize: eF,
-      onBlur: eG,
-      onFocus: eB,
+      onBlur: eB,
+      onFocus: eG,
       onKeyDown: eH,
       onSubmit: eV,
       promptToUpload: eK,
@@ -140,10 +140,10 @@ var l = n("37983"),
           let n = K.default.getCurrentUser();
           return null !== (t = null != i && null != n ? null === (e = F.default.getMember(i, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
         }),
-        r = (0, m.useStateFromStoresObject)([G.default], () => {
+        r = (0, m.useStateFromStoresObject)([B.default], () => {
           var i, a;
           let r = e.isPrivate(),
-            o = G.default.computePermissions(e),
+            o = B.default.computePermissions(e),
             u = f.default.has(o, ea.Permissions.CREATE_PUBLIC_THREADS) || f.default.has(o, ea.Permissions.CREATE_PRIVATE_THREADS),
             d = (!(null === (i = t.permissions) || void 0 === i ? void 0 : i.requireCreateTherads) || u) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || f.default.has(o, ea.Permissions.SEND_MESSAGES)),
             c = d && f.default.has(o, ea.Permissions.ATTACH_FILES),
@@ -245,7 +245,7 @@ var l = n("37983"),
           let c = (n = u, l = t, null !== (r = n && (null === (i = l.submit) || void 0 === i ? void 0 : i.clearOnSubmit)) && void 0 !== r && r),
             f = null != a.current;
           if (c) {
-            if (s !== B.default.getChannelId()) h.default.saveDraft(s, "", t.drafts.type);
+            if (s !== G.default.getChannelId()) h.default.saveDraft(s, "", t.drafts.type);
             else f && a.current.clearValue()
           }
           f && (o(!1), (0, x.closeExpressionPicker)(), d && a.current.focus())
@@ -393,13 +393,13 @@ var l = n("37983"),
       }, {
         autoTrackExposure: !1
       }).enabled,
-      tG = (0, m.useStateFromStores)([T.default], () => T.default.shouldShowPopup(), []);
+      tB = (0, m.useStateFromStores)([T.default], () => T.default.shouldShowPopup(), []);
     (0, Z.useHereMentionCallback)(tg, eL.guild_id, eL.id);
-    let tB = null != ek,
+    let tG = null != ek,
       tH = ts && !((ti || ta) && tu) || tC && (null === (o = eP.submit) || void 0 === o ? void 0 : o.useDisabledStylesOnSubmit),
       tV = null,
       tK = null;
-    null != tn ? tV = null == eD ? void 0 : eD(tn, tl, eo.attachButton) : (!ts || to) && (tV = null == ej ? void 0 : ej(tB, eo.attachButton), tF && (tK = null == eU ? void 0 : eU()));
+    null != tn ? tV = null == eD ? void 0 : eD(tn, tl, eo.attachButton) : (!ts || to) && (tV = null == ej ? void 0 : ej(tG, eo.attachButton), tF && (tK = null == eU ? void 0 : eU()));
     let tW = tc && null != eI && !ts && eP.showCharacterCount && null == tn,
       tY = tc && !__OVERLAY__ && null != eI && null == tn,
       tz = function(e, t, n, l) {
@@ -485,8 +485,8 @@ var l = n("37983"),
                   "aria-describedby": eQ,
                   onChange: ew,
                   onResize: tL,
-                  onBlur: eG,
-                  onFocus: eB,
+                  onBlur: eB,
+                  onFocus: eG,
                   onKeyDown: eH,
                   onSubmit: tT,
                   onTab: tP,
@@ -498,7 +498,7 @@ var l = n("37983"),
                   promptToUpload: eK,
                   fontSize: th,
                   spellcheckEnabled: tE,
-                  canOnlyUseTextCommands: tB,
+                  canOnlyUseTextCommands: tG,
                   className: s({
                     [eo.textAreaThreadCreation]: eP === J.ChatInputTypes.THREAD_CREATION,
                     [eo.profileBioInput]: eP === J.ChatInputTypes.PROFILE_BIO_INPUT
@@ -516,14 +516,14 @@ var l = n("37983"),
           }), tf ? null : (0, l.jsx)(_.default, {
             ref: e7,
             channel: eL,
-            canOnlyUseTextCommands: tB
+            canOnlyUseTextCommands: tG
           }), (0, l.jsx)(A.default, {
             ref: tI,
             channel: eL,
             canMentionRoles: eY,
             canMentionChannels: ez,
             useNewSlashCommands: tc,
-            canOnlyUseTextCommands: tB,
+            canOnlyUseTextCommands: tG,
             canSendStickers: null === (ed = eP.stickers) || void 0 === ed ? void 0 : ed.allowSending,
             textValue: ev,
             focused: eb,
@@ -568,7 +568,7 @@ var l = n("37983"),
           position: "top",
           align: "right",
           positionLayerClassName: eo.expressionPickerPositionLayer
-        }), tG ? (0, l.jsx)(v.default, {
+        }), tB ? (0, l.jsx)(v.default, {
           positionTargetRef: e9,
           channel: eL,
           closeOnModalOuterClick: e8,

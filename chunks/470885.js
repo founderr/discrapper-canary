@@ -20,9 +20,9 @@ var s = n("913144"),
   C = n("162771"),
   I = n("800762"),
   S = n("49111"),
-  p = n("353927");
+  m = n("353927");
 
-function m() {
+function p() {
   var e;
   let t = a;
   if (null == t || !E.default.isOpen(t)) return !1;
@@ -35,7 +35,7 @@ function T() {
   return function() {
     let e = h.default.getChannelId(),
       t = _.default.getChannelId(),
-      n = f.default.supports(p.Features.VIDEO);
+      n = f.default.supports(m.Features.VIDEO);
     if (!n) return !0;
     let a = o.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
     if (a) return !0;
@@ -53,7 +53,7 @@ function T() {
     if (i) return !0;
     let d = e === t;
     return !!d || !1
-  }() ? m() : (!t && m(), null != e && function(e) {
+  }() ? p() : (!t && p(), null != e && function(e) {
     var t;
     let n = d.default.getChannel(e);
     if (null == n || E.default.isOpen(e)) return !1;

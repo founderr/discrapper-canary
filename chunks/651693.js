@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   isImageFile: function() {
     return s
   },
@@ -7,22 +7,22 @@ n.r(t), n.d(t, {
     return u
   },
   isVideoUrl: function() {
-    return d
+    return c
   },
   isVideoFile: function() {
-    return c
+    return d
   }
 }), n("222007");
-var l = n("773336");
-let i = (e, t) => {
-    if (null == e) return !1;
-    let [n, l] = e.split(/\?/, 1);
-    return t.test(n)
+var i = n("773336");
+let r = (t, e) => {
+    if (null == t) return !1;
+    let [n, i] = t.split(/\?/, 1);
+    return e.test(n)
   },
   a = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
-  s = e => null != e && a.test(e),
-  r = /\.(webp|gif)$/i,
-  u = e => i(e, r),
-  o = (0, l.isIOS)() ? /\.(mp4|mov)$/i : ((0, l.isAndroid)(), /\.(mp4|webm|mov)$/i),
-  d = e => i(e, o),
-  c = e => null != e && o.test(e)
+  s = t => null != t && a.test(t),
+  l = /\.(webp|gif)$/i,
+  u = t => r(t, l),
+  o = (0, i.isIOS)() ? /\.(mp4|mov)$/i : ((0, i.isAndroid)(), /\.(mp4|webm|mov)$/i),
+  c = t => r(t, o),
+  d = t => null != t && o.test(t)

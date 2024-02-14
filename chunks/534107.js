@@ -111,8 +111,8 @@ function N(e) {
     lastBackgroundFillColor: k,
     backgroundFillColor: w,
     lastActiveFillColor: F,
-    activeFillColor: G,
-    lastInactiveFillColor: B,
+    activeFillColor: B,
+    lastInactiveFillColor: G,
     inactiveFillColor: H
   } = function(e, t) {
     let n = (0, o.useToken)(r.default.colors.INTERACTIVE_MUTED).hex(),
@@ -182,9 +182,9 @@ function N(e) {
         constrainMin: !0
       });
       i.fill();
-      let [d, c] = _(B, H, n, U.current);
+      let [d, c] = _(G, H, n, U.current);
       s = s || c;
-      let [f, m] = _(F, G, n, U.current);
+      let [f, m] = _(F, B, n, U.current);
       s = s || m;
       for (let e = 0; e < a.length; e++) {
         let t = a[e],
@@ -202,7 +202,7 @@ function N(e) {
     }), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [O, D, P, R, a, c, S, N, k, w, F, G, B, H]);
+  }, [O, D, P, R, a, c, S, N, k, w, F, B, G, H]);
   let [, V] = (0, d.default)({
     ref: O,
     onDrag: A,

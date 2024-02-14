@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return v
   }
 });
 var l = n("37983");
@@ -18,14 +18,14 @@ var a = n("866227"),
   E = n("844808"),
   h = n("49111"),
   g = n("782340"),
-  v = n("785548");
+  _ = n("785548");
 
-function _(e) {
+function v(e) {
   let {
     className: t,
     guildId: n,
     onScheduleChange: a,
-    onRecurrenceChange: _,
+    onRecurrenceChange: v,
     onTimeChange: S,
     timeSelected: R = !0,
     schedule: m,
@@ -46,10 +46,10 @@ function _(e) {
   if (null == m) return null;
   let L = null,
     A = m.startDate,
-    D = r(),
-    y = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
+    y = r(),
+    D = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
     M = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
-  null != N && (y.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"), M.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"));
+  null != N && (D.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"), M.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"));
   let j = e => {
     a({
       ...m,
@@ -61,7 +61,7 @@ function _(e) {
     location: I[0]
   }), T && (L = null != m.endDate || C ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
-      className: v.doubleInput,
+      className: _.doubleInput,
       children: [(0, l.jsx)(s.FormItem, {
         title: g.default.Messages.CREATE_EVENT_END_DATE_LABEL,
         required: C,
@@ -86,11 +86,11 @@ function _(e) {
       look: s.Button.Looks.BLANK,
       size: s.Button.Sizes.MIN,
       children: (0, l.jsxs)("div", {
-        className: v.link,
+        className: _.link,
         children: [(0, l.jsx)(o.default, {
           width: 17,
           height: 17,
-          className: v.removeIcon
+          className: _.removeIcon
         }), (0, l.jsx)(s.Text, {
           variant: "text-sm/normal",
           children: g.default.Messages.CREATE_EVENT_REMOVE_END_TIME_LABEL
@@ -104,11 +104,11 @@ function _(e) {
       j(r(m.startDate).add(1, "hour"))
     },
     children: (0, l.jsxs)("div", {
-      className: v.link,
+      className: _.link,
       children: [(0, l.jsx)(c.default, {
         width: 20,
         height: 20,
-        className: v.addIcon
+        className: _.addIcon
       }), (0, l.jsx)(s.Text, {
         variant: "text-sm/normal",
         children: g.default.Messages.CREATE_EVENT_ADD_END_TIME_LABEL
@@ -117,7 +117,7 @@ function _(e) {
   })), (0, l.jsxs)("div", {
     className: t,
     children: [(0, l.jsxs)("div", {
-      className: v.doubleInput,
+      className: _.doubleInput,
       children: [(0, l.jsx)(s.FormItem, {
         title: g.default.Messages.CREATE_EVENT_START_DATE_LABEL,
         required: !0,
@@ -129,8 +129,8 @@ function _(e) {
               startDate: e
             })
           },
-          minDate: D,
-          maxDate: y,
+          minDate: y,
+          maxDate: D,
           disabled: p
         })
       }), (0, l.jsx)(s.FormItem, {
@@ -148,8 +148,8 @@ function _(e) {
           disabled: p
         })
       })]
-    }), L, x && null != A && null != _ && (0, l.jsx)(E.default, {
-      onRecurrenceChange: _,
+    }), L, x && null != A && null != v && (0, l.jsx)(E.default, {
+      onRecurrenceChange: v,
       startDate: A,
       recurrenceRule: N
     })]

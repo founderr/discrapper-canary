@@ -72,7 +72,7 @@ function k(e) {
           numRoles: t.length
         })
       })]
-    }), (0, l.jsx)(B, {
+    }), (0, l.jsx)(G, {
       ...i,
       wrap: !0,
       userRoles: t
@@ -108,8 +108,8 @@ let w = i.forwardRef(function(e, t) {
         label: j.default.Messages.COPY_ID_ROLE
       })
     })
-  }, [v.id]), D = (0, p.useToken)(m.default.unsafe_rawColors.PRIMARY_300).hsl(), k = null !== (r = v.colorString) && void 0 !== r ? r : D, w = null !== (o = (0, c.hex2rgb)(k, .6)) && void 0 !== o ? o : void 0, F = m.default.unsafe_rawColors.WHITE_500.css, G = (0, c.hex2int)(k);
-  null != G && .3 > (0, c.getDarkness)(G) && (F = m.default.unsafe_rawColors.PRIMARY_630.css), u = P ? (0, l.jsx)(C.default, {
+  }, [v.id]), D = (0, p.useToken)(m.default.unsafe_rawColors.PRIMARY_300).hsl(), k = null !== (r = v.colorString) && void 0 !== r ? r : D, w = null !== (o = (0, c.hex2rgb)(k, .6)) && void 0 !== o ? o : void 0, F = m.default.unsafe_rawColors.WHITE_500.css, B = (0, c.hex2int)(k);
+  null != B && .3 > (0, c.getDarkness)(B) && (F = m.default.unsafe_rawColors.PRIMARY_630.css), u = P ? (0, l.jsx)(C.default, {
     className: U.roleFlowerStar,
     iconClassName: E ? U.roleVerifiedIcon : void 0,
     color: k,
@@ -122,7 +122,7 @@ let w = i.forwardRef(function(e, t) {
   }) : (0, l.jsx)(p.RoleCircle, {
     color: k
   });
-  let B = i.useMemo(() => {
+  let G = i.useMemo(() => {
     var t;
     return {
       borderColor: N ? void 0 : w,
@@ -133,7 +133,7 @@ let w = i.forwardRef(function(e, t) {
     children: (0, l.jsxs)("div", {
       ref: t,
       className: s(U.role, g),
-      style: B,
+      style: G,
       onContextMenu: b,
       onMouseDown: A,
       "aria-label": v.name,
@@ -201,7 +201,7 @@ function F(e) {
   })
 }
 
-function G(e) {
+function B(e) {
   let {
     guild: t,
     user: n,
@@ -239,7 +239,7 @@ function G(e) {
   })
 }
 
-function B(e) {
+function G(e) {
   let t;
   let {
     user: n,
@@ -294,7 +294,7 @@ function B(e) {
       scrollToEnd: D,
       wrap: !0
     }),
-    B = y.map(e => {
+    G = y.map(e => {
       var t;
       return (0, l.jsx)(w, {
         className: h,
@@ -312,7 +312,7 @@ function B(e) {
   return null != I && 0 !== x ? t = (0, l.jsx)(F, {
     ...e,
     numRolesHidden: x
-  }) : R && (t = (0, l.jsx)(G, {
+  }) : R && (t = (0, l.jsx)(B, {
     ...e,
     handleAddRole: T
   })), (0, l.jsx)(d.ListNavigatorProvider, {
@@ -330,13 +330,13 @@ function B(e) {
           }),
           ref: n,
           ...i,
-          children: [B, t]
+          children: [G, t]
         })
       }
     })
   })
 }
-let H = (0, g.default)(B);
+let H = (0, g.default)(G);
 
 function V(e) {
   return (0, f.useStateFromStores)([_.default], () => {
@@ -344,7 +344,7 @@ function V(e) {
     return _.default.getGuildVersion(null === (t = e.guild) || void 0 === t ? void 0 : t.id)
   }), !1 === e.wrap ? (0, l.jsx)(H, {
     ...e
-  }) : (0, l.jsx)(B, {
+  }) : (0, l.jsx)(G, {
     ...e
   })
 }

@@ -94,8 +94,8 @@ var P = i.forwardRef(function(e, t) {
     interactive: k = !0,
     enableSecondaryActions: w = !1,
     suppressPlaySound: F,
-    onMouseEnter: G,
-    onSelectItem: B,
+    onMouseEnter: B,
+    onSelectItem: G,
     analyticsLocations: H,
     buttonOverlay: V = _.SoundButtonOverlay.PLAY,
     ...K
@@ -179,7 +179,7 @@ var P = i.forwardRef(function(e, t) {
   }, [es]), (0, l.jsxs)("li", {
     ref: t,
     className: R.soundButtonWrapper,
-    onMouseEnter: G,
+    onMouseEnter: B,
     children: [(0, l.jsxs)(c.ClickableContainer, {
       ...K,
       buttonProps: {
@@ -203,8 +203,8 @@ var P = i.forwardRef(function(e, t) {
       onClick: function() {
         if (es && !el && (ei.current = Math.min(ei.current + .01, .1), Math.random() < ei.current && ee(en.x, en.y, void 0, void 0, {
             sprite: x.DUCK_CONFETTI_SPRITE
-          })), null != B) {
-          B();
+          })), null != G) {
+          G();
           return
         }
         F || X(H)

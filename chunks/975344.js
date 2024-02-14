@@ -28,8 +28,8 @@ var _ = e => {
     I = null,
     S = h[h.length - 1];
   if (null == n.icon && null != _) {
-    var p;
-    S = null !== (p = h[(I = (0, i.getAcronym)(_)).length - 1]) && void 0 !== p ? p : h[h.length - 1]
+    var m;
+    S = null !== (m = h[(I = (0, i.getAcronym)(_)).length - 1]) && void 0 !== m ? m : h[h.length - 1]
   }
   return (0, a.jsxs)("div", {
     className: E.container,

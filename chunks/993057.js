@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("305961"),
   I = n("160299"),
   S = n("257869"),
-  p = n("638779"),
-  m = n("459736"),
+  m = n("638779"),
+  p = n("459736"),
   T = n("967251"),
   g = n("663831"),
   A = n("170185"),
@@ -33,7 +33,7 @@ var a = n("37983"),
 function L(e) {
   let {
     guildId: t
-  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), P = (0, p.default)(t), D = (0, i.useStateFromStores)([I.default], () => I.default.isSubscriptionFetching), y = (0, S.useGroupListingsFetchContext)(), {
+  } = e, n = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), L = (0, i.useStateFromStores)([h.default], () => h.default.isConnected()), M = (0, f.default)(t), P = (0, m.default)(t), D = (0, i.useStateFromStores)([I.default], () => I.default.isSubscriptionFetching), y = (0, S.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: x,
     restrictionsLoading: b
   } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !y || D || b;
@@ -58,7 +58,7 @@ function L(e) {
       toolbar: (0, a.jsx)(s.Fragment, {}),
       className: v.headerBar,
       children: [(0, a.jsx)(_.default.Icon, {
-        icon: m.default,
+        icon: p.default,
         "aria-hidden": !0
       }), (0, a.jsx)(_.default.Title, {
         children: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE

@@ -8,25 +8,25 @@ i.r(t), i.d(t, {
   }
 });
 var n = i("65597"),
-  o = i("385976"),
-  r = i("958706");
+  r = i("385976"),
+  o = i("958706");
 let u = [];
 
 function a(e) {
   let {
-    emojiStoreInstance: t = o.default,
+    emojiStoreInstance: t = r.default,
     guildId: i,
     pickerIntention: n
   } = e;
   return {
-    topEmojis: n !== r.EmojiIntention.REACTION ? t.getTopEmoji(i) : u,
-    newlyAddedEmojis: n !== r.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(i) : u
+    topEmojis: n !== o.EmojiIntention.REACTION ? t.getTopEmoji(i) : u,
+    newlyAddedEmojis: n !== o.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(i) : u
   }
 }
 
 function s(e, t) {
-  return (0, n.useStateFromStoresObject)([o.default], () => a({
-    emojiStoreInstance: o.default,
+  return (0, n.useStateFromStoresObject)([r.default], () => a({
+    emojiStoreInstance: r.default,
     guildId: e,
     pickerIntention: t
   }), [e, t])

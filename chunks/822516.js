@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return A
   },
   areDatesIdentical: function() {
-    return D
+    return y
   },
   areSchedulesIdentical: function() {
-    return y
+    return D
   },
   getRRule: function() {
     return M
@@ -46,10 +46,10 @@ n.r(t), n.d(t, {
     return w
   },
   recurrenceOptionToRecurrenceRule: function() {
-    return U
+    return G
   },
   recurrenceRuleToOption: function() {
-    return G
+    return U
   }
 }), n("222007"), n("424973");
 var l = n("917351"),
@@ -66,8 +66,8 @@ let d = 365,
   E = 4,
   h = [s.RRule.MO.weekday, s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday, s.RRule.FR.weekday],
   g = [s.RRule.SU.weekday, s.RRule.MO.weekday, s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday],
-  v = [s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday, s.RRule.FR.weekday, s.RRule.SA.weekday],
-  _ = [s.RRule.SU.weekday, s.RRule.MO.weekday, s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday, s.RRule.FR.weekday, s.RRule.SA.weekday],
+  _ = [s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday, s.RRule.FR.weekday, s.RRule.SA.weekday],
+  v = [s.RRule.SU.weekday, s.RRule.MO.weekday, s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday, s.RRule.FR.weekday, s.RRule.SA.weekday],
   S = new Set([0, 6]);
 
 function R(e) {
@@ -134,7 +134,7 @@ function C(e, t, n) {
 }
 
 function p(e) {
-  return new s.Weekday(_[e])
+  return new s.Weekday(v[e])
 }
 
 function I(e, t) {
@@ -171,12 +171,12 @@ function A(e) {
   return I(e.scheduledStartTime, e.scheduledEndTime)
 }
 
-function D(e, t) {
+function y(e, t) {
   return null == e || null == t ? null == e && null == t : e.isSame(t)
 }
 
-function y(e, t) {
-  return null == e || null == t ? null == e && null == t : D(e.startDate, t.startDate) && D(e.endDate, t.endDate)
+function D(e, t) {
+  return null == e || null == t ? null == e && null == t : y(e.startDate, t.startDate) && y(e.endDate, t.endDate)
 }
 
 function M(e) {
@@ -238,10 +238,10 @@ function w(e, t) {
 function k(e) {
   let t = p(e.toDate().getDay()),
     n = p(e.toDate().getUTCDay());
-  return n.weekday - t.weekday > 0 ? v : n.weekday - t.weekday < 0 ? g : h
+  return n.weekday - t.weekday > 0 ? _ : n.weekday - t.weekday < 0 ? g : h
 }
 
-function U(e, t) {
+function G(e, t) {
   let n = function(e, t) {
     let n = k(t),
       l = p(t.toDate().getDay()),
@@ -310,7 +310,7 @@ function U(e, t) {
   }
 }
 
-function G(e, t) {
+function U(e, t) {
   if (null == t) return o.RecurrenceOptions.NONE;
   let n = M(t);
   switch (n.options.freq) {

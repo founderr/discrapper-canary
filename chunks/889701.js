@@ -41,8 +41,8 @@ var l = n("37983"),
   k = n("641680"),
   w = n("560241"),
   F = n("49111"),
-  G = n("253763");
-let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+  B = n("253763");
+let G = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
   H = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
   V = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
   K = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
@@ -101,7 +101,7 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       eT = i.useCallback(e => {
         "" === ei ? (0, x.trackStickerSelect)(e) : (0, x.trackStickerSearchSelect)(e, ei, eC), N(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
       }, [N, ei, eC]),
-      ev = null != eu && eu > B,
+      ev = null != eu && eu > G,
       {
         rowCount: eI,
         rowCountBySection: e_,
@@ -189,7 +189,7 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     }, [Y]);
     return (0, l.jsxs)(Z, {
       children: [!($ && eo) && (0, l.jsx)("div", {
-        className: G.header,
+        className: B.header,
         children: (0, l.jsx)(U.default, {
           ref: en,
           onKeyDown: eL,
@@ -197,12 +197,12 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           channel: u
         })
       }), eo ? (0, l.jsx)(b.default, {
-        className: G.emptyState,
+        className: B.emptyState,
         onClose: Y
       }) : (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)("div", {
           ref: ee,
-          className: G.listWrapper,
+          className: B.listWrapper,
           id: w.GRID_NAVIGATOR_ID,
           ...eM,
           children: null != eu ? (0, l.jsx)(j.default, {
@@ -231,12 +231,12 @@ let B = (0, N.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     })
   });
 var ee = i.forwardRef((e, t) => ((0, O.useFetchStickerPacks)(), (0, l.jsx)("div", {
-  className: G.wrapper,
+  className: B.wrapper,
   id: w.STICKER_PICKER_TAB_PANEL_ID,
   "aria-labelledby": w.STICKER_PICKER_TAB_ID,
   role: "tabpanel",
   children: e.isLoading ? (0, l.jsx)(d.Spinner, {
-    className: G.loadingIndicator
+    className: B.loadingIndicator
   }) : (0, l.jsx)($, {
     ...e,
     ref: t

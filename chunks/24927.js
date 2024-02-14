@@ -24,8 +24,8 @@ var a = n("37983"),
       isFocused: C,
       isActive: I,
       onOtherHover: S,
-      className: p
-    } = e, [m, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
+      className: m
+    } = e, [p, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
       T(!0), C && !I && !g && (null == S || S())
     }, R = () => {
       T(!1)
@@ -52,7 +52,7 @@ var a = n("37983"),
           right: -8
         },
         children: (0, a.jsx)(r.default.div, {
-          className: i(f.messageRequestItem, p, {
+          className: i(f.messageRequestItem, m, {
             [f.active]: I || g,
             [f.firstItem]: 0 === t
           }),
@@ -65,7 +65,7 @@ var a = n("37983"),
             opacity: 1
           },
           ...e,
-          children: l(m || I || g)
+          children: l(p || I || g)
         })
       })
     })

@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("506885"),
   I = n("981601"),
   S = n("271938"),
-  p = n("42887"),
-  m = n("211248"),
+  m = n("42887"),
+  p = n("211248"),
   T = n("200639"),
   g = n("97347"),
   A = n("151185"),
@@ -92,8 +92,8 @@ function y(e) {
     mute: d,
     deaf: c,
     serverMute: S,
-    serverDeaf: m
-  } = e, T = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), g = (0, h.default)({
+    serverDeaf: p
+  } = e, T = (0, r.useStateFromStores)([m.default], () => m.default.isLocalMute(o.id)), g = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
   }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), y = null != u ? u : R.default.getName(o), {
@@ -114,7 +114,7 @@ function y(e) {
     else if (l) return i ? D.localMute : P.mute;
     else if (s) return i ? D.mute : P.mute
   }({
-    serverDeaf: m,
+    serverDeaf: p,
     deaf: c,
     serverMute: S,
     mute: d,
@@ -198,11 +198,11 @@ function x(e) {
     voiceStates: t,
     channel: n,
     className: l
-  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, a.jsx)(m.default, {
+  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, a.jsx)(p.default, {
     className: L.expandButton,
     onClick: () => u(!o),
-    color: m.CircleIconButtonColors.PRIMARY,
-    size: m.CircleIconButtonSizes.SIZE_24,
+    color: p.CircleIconButtonColors.PRIMARY,
+    size: p.CircleIconButtonSizes.SIZE_24,
     tooltip: o ? v.default.Messages.VOICE_PANEL_HIDE_EXTRAS : v.default.Messages.VOICE_PANEL_SHOW_EXTRAS,
     icon: (0, a.jsx)(d, {
       width: 16,

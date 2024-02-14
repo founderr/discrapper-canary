@@ -33,8 +33,8 @@ var C = e => {
     subtitle: C,
     guildsData: I,
     analyticsContext: S,
-    theme: p,
-    onViewGuild: m,
+    theme: m,
+    onViewGuild: p,
     fetchGuilds: T,
     onGuildCardSeen: g,
     currentCategoryId: A,
@@ -68,7 +68,7 @@ var C = e => {
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await m(e, t, S, N)
+      await p(e, t, S, N)
     }
   };
   if (P || null == M) {
@@ -79,7 +79,7 @@ var C = e => {
     className: E.guildCard,
     guild: e,
     onView: y,
-    theme: p,
+    theme: m,
     onGuildCardSeen: g,
     onTagClick: R
   }, e.id));

@@ -18,8 +18,8 @@ var a = n("446674"),
   E = n("567469"),
   h = n("998716"),
   g = n("911457"),
-  v = n("49111"),
-  _ = n("745049"),
+  _ = n("49111"),
+  v = n("745049"),
   S = n("782340"),
   R = n("290145");
 
@@ -67,12 +67,12 @@ function T(e) {
     channel_id: r.id,
     topic: i.topic,
     description: i.description,
-    privacy_level: null !== (t = i.privacyLevel) && void 0 !== t ? t : _.GuildScheduledEventPrivacyLevel.PUBLIC
-  }, c = (0, E.useStageParticipants)(r.id, h.StageChannelParticipantNamedIndex.SPEAKER), d = (0, E.useStageParticipantsCount)(r.id, h.StageChannelParticipantNamedIndex.AUDIENCE), v = c.slice(0, 5);
-  return null == v.find(e => {
+    privacy_level: null !== (t = i.privacyLevel) && void 0 !== t ? t : v.GuildScheduledEventPrivacyLevel.PUBLIC
+  }, c = (0, E.useStageParticipants)(r.id, h.StageChannelParticipantNamedIndex.SPEAKER), d = (0, E.useStageParticipantsCount)(r.id, h.StageChannelParticipantNamedIndex.AUDIENCE), _ = c.slice(0, 5);
+  return null == _.find(e => {
     var t;
     return (null === (t = e.user) || void 0 === t ? void 0 : t.id) === (null == u ? void 0 : u.id)
-  }) && v.push({
+  }) && _.push({
     user: u,
     userNick: f.default.getName(n.id, r.id, u)
   }), (0, l.jsx)("div", {
@@ -85,7 +85,7 @@ function T(e) {
         showGuildPopout: !1,
         setShowGuildPopout: () => {},
         source: g.StageDiscoveryRecommendationSource.UNSPECIFIED,
-        speakers: v,
+        speakers: _,
         speakerCount: c.length,
         audienceCount: Math.max(1337, d),
         channelName: r.name
@@ -150,7 +150,7 @@ function C(e) {
             height: 40
           }),
           text: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format({
-            articleURL: d.default.getArticleURL(v.HelpdeskArticles.STAGE_CHANNEL_GUIDELINES)
+            articleURL: d.default.getArticleURL(_.HelpdeskArticles.STAGE_CHANNEL_GUIDELINES)
           })
         })]
       })]

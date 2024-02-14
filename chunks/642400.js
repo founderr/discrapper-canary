@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -103,4 +103,4 @@ S.defaultProps = {
   onCaptchaVerify: E.NOOP,
   onLogout: E.NOOP
 };
-var p = S
+var m = S

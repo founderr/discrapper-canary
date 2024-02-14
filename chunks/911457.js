@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return v
+    return _
   }
 });
 var l, a, r = n("37983");
@@ -20,15 +20,15 @@ var s = n("414456"),
   h = n("193038"),
   g = n("743494");
 
-function v(e) {
+function _(e) {
   let {
     guild: t,
     stageInstance: n,
     showGuildPopout: l,
     setShowGuildPopout: a,
     handleGuildNameClick: s,
-    source: v,
-    speakers: _,
+    source: _,
+    speakers: v,
     speakerCount: S,
     audienceCount: R,
     channelName: m
@@ -66,7 +66,7 @@ function v(e) {
           })
         }), (0, r.jsxs)("div", {
           className: g.rightJustifiedContent,
-          children: [6 === v && (0, r.jsx)("div", {
+          children: [6 === _ && (0, r.jsx)("div", {
             className: g.featuredTag,
             children: (0, r.jsx)(u.Text, {
               variant: "text-sm/normal",
@@ -90,7 +90,7 @@ function v(e) {
         children: n.description
       }), (0, r.jsx)(c.default, {
         guild: t,
-        speakers: _,
+        speakers: v,
         speakerCount: S,
         className: g.speakers
       }), null != m && (0, r.jsxs)(r.Fragment, {

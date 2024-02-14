@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return g
   },
   startLurking: function() {
-    return v
+    return _
   },
   viewGuild: function() {
-    return _
+    return v
   },
   makeDiscoverableGuild: function() {
     return S
@@ -52,7 +52,7 @@ var l, a, r = n("522632"),
   h = n("49111");
 (a = l || (l = {})).SEARCH = "Search", a.RECOMMENDED = "Recommended", a.POPULAR = "Popular", a.RECOMMENDED_E3 = "Recommended - E3", a.HEADER = "Header";
 let g = ">200";
-async function v(e, t) {
+async function _(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
     {
       channelId: l,
@@ -82,7 +82,7 @@ async function v(e, t) {
     search: E.location.search
   }, l)), null == a || a()
 }
-async function _(e) {
+async function v(e) {
   let t, {
     loadId: n,
     guildId: a,
@@ -96,7 +96,7 @@ async function _(e) {
     object: h.AnalyticsObjects.CARD,
     section: t
   };
-  await v(a, u, {
+  await _(a, u, {
       loadId: n
     }),
     function(e) {

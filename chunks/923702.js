@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return s
   }
 }), n("222007");
-var o = n("37983"),
-  r = n("884691"),
+var r = n("37983"),
+  o = n("884691"),
   a = n("516555"),
   l = n("172858"),
   s = function(e) {
@@ -14,12 +14,12 @@ var o = n("37983"),
       confettiCanvas: n,
       sprites: s,
       colors: i
-    } = e, [c, u] = r.useState(null), d = (0, a.useConfettiCannon)(n, c), [f, C] = r.useState(!1);
-    return r.useEffect(() => {
+    } = e, [c, u] = o.useState(null), d = (0, a.useConfettiCannon)(n, c), [f, C] = o.useState(!1);
+    return o.useEffect(() => {
       let e = Array(10).fill(0);
-      return null != t && d.isReady && !f && (e = e.map((n, o) => setTimeout(() => {
+      return null != t && d.isReady && !f && (e = e.map((n, r) => setTimeout(() => {
         var n;
-        o === e.length - 1 && C(!0), d.createMultipleConfetti((n = t.getBoundingClientRect(), {
+        r === e.length - 1 && C(!0), d.createMultipleConfetti((n = t.getBoundingClientRect(), {
           ...l.COMMON_CONFETTI_BASE_CONFIG,
           position: {
             type: "static-random",
@@ -48,10 +48,10 @@ var o = n("37983"),
             value: 1e-4
           }
         }), 50)
-      }, 100 * o))), () => {
+      }, 100 * r))), () => {
         for (let t of e) clearTimeout(t)
       }
-    }, [d, t, f]), (0, o.jsx)(a.SpriteCanvas, {
+    }, [d, t, f]), (0, r.jsx)(a.SpriteCanvas, {
       ref: u,
       sprites: null != s ? s : l.COMMON_CONFETTI_SPRITES,
       colors: null != i ? i : l.COMMON_CONFETTI_COLORS,

@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return u
   },
   default: function() {
-    return p
+    return m
   }
 });
 var o, u, d = n("627445"),
@@ -23,7 +23,7 @@ class S extends f.default.Store {
   }
 }
 S.displayName = "InteractionModalStore";
-var p = new S(E.default, {
+var m = new S(E.default, {
   LOGOUT: function() {
     return a = null, s = null, l = null, i = null, r = null, !0
   },

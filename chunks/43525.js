@@ -11,8 +11,8 @@ var s = a("414456"),
   n = a("77078"),
   i = a("782340"),
   o = a("313506"),
-  u = a("247329"),
-  c = a("333838"),
+  c = a("247329"),
+  u = a("333838"),
   d = a("399637"),
   f = a("976076"),
   m = function(e) {
@@ -41,12 +41,12 @@ var s = a("414456"),
         children: (0, l.jsx)("img", {
           className: o.bannerBackground,
           alt: "",
-          src: u
+          src: c
         })
       }), (0, l.jsx)("img", {
         className: o.bannerForeground,
         alt: "",
-        src: c
+        src: u
       }), (0, l.jsx)("img", {
         className: o.bannerHand,
         alt: "",

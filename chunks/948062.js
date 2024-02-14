@@ -23,8 +23,8 @@ var a = n("37983"),
   C = n("794818"),
   I = n("378662"),
   S = n("574921"),
-  p = n("311092"),
-  m = n("613088"),
+  m = n("311092"),
+  p = n("613088"),
   T = n("49111"),
   g = n("782340"),
   A = n("198112"),
@@ -170,9 +170,9 @@ var v = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: x
-          }), K && null != G && null != L && (0, a.jsx)(p.DiscoveryTags, {
+          }), K && null != G && null != L && (0, a.jsx)(m.DiscoveryTags, {
             guildId: l.id,
-            discoveryTagStyle: p.DiscoveryTagStyle.ALT,
+            discoveryTagStyle: m.DiscoveryTagStyle.ALT,
             onTagClick: e => L(e, l.id),
             tags: G,
             section: C.AnalyticsContexts.SEARCH
@@ -204,7 +204,7 @@ var v = e => {
           })]
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
-          children: (0, a.jsx)(m.default, {
+          children: (0, a.jsx)(p.default, {
             guild: l
           })
         }) : null]

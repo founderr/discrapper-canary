@@ -24,11 +24,11 @@ function I(e) {
     active: t,
     user: n,
     channel: I
-  } = e, S = (0, c.useListHasSingleSpamMessageRequest)(), p = s.useCallback(() => {
+  } = e, S = (0, c.useListHasSingleSpamMessageRequest)(), m = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(_.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
       name: l.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
-  }, []), m = s.useCallback(() => {
+  }, []), p = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), T = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), S && (0, o.transitionToChannel)(I.id)
@@ -40,8 +40,8 @@ function I(e) {
   } = (0, f.useMessageRequestActions)({
     user: n,
     onAcceptSuccess: T,
-    onRejectSuccess: m,
-    onError: p
+    onRejectSuccess: p,
+    onError: m
   }), O = A || N, v = O || R;
   return (0, a.jsxs)("div", {
     className: C.container,

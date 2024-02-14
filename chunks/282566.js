@@ -40,9 +40,9 @@ var l = n("37983"),
       emojiDescriptor: j,
       pickerIntention: U,
       analyticsLocation: D
-    } = e, k = (0, u.default)(), [w, F] = i.useState(!1), G = () => {
+    } = e, k = (0, u.default)(), [w, F] = i.useState(!1), B = () => {
       (0, _.trackPremiumSettingsPaneOpened)(b), (0, m.navigateToPremiumMarketingPage)(), L()
-    }, B = (0, r.isThemeLight)(k) ? n("602291") : n("609708"), H = (0, g.usePremiumTrialOffer)(), V = (0, E.usePremiumDiscountOffer)(), K = null != H || null != V, {
+    }, G = (0, r.isThemeLight)(k) ? n("602291") : n("609708"), H = (0, g.usePremiumTrialOffer)(), V = (0, E.usePremiumDiscountOffer)(), K = null != H || null != V, {
       isLoading: W,
       suggestedPremiumType: Y
     } = (0, h.default)({
@@ -87,15 +87,15 @@ var l = n("37983"),
           discountOffer: V,
           children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
             planName: (0, I.getTierDisplayName)(x.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-            onClick: G
+            onClick: B
           }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-            onClick: G
+            onClick: B
           })
         }) : (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)("img", {
             alt: "",
             className: R.premiumPromoImage,
-            src: B
+            src: G
           }), (0, l.jsx)("div", {
             className: R.premiumPromoTitle,
             children: O.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
@@ -103,9 +103,9 @@ var l = n("37983"),
             className: R.premiumPromoDescription,
             children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
               planName: (0, I.getTierDisplayName)(x.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-              onClick: G
+              onClick: B
             }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-              onClick: G
+              onClick: B
             })
           })]
         }), !K && (0, l.jsx)(C.default, {

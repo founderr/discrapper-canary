@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -20,12 +20,12 @@ var a = n("37983"),
   C = n("429829"),
   I = n("191191"),
   S = n("994428"),
-  p = n("782340");
+  m = n("782340");
 
-function m(e) {
+function p(e) {
   let {
     channel: t,
-    iconClassName: m,
+    iconClassName: p,
     className: T,
     innerClassName: g,
     ...A
@@ -85,7 +85,7 @@ function m(e) {
         size: r.Button.Sizes.SMALL,
         ...A,
         children: (0, a.jsx)(h.default, {
-          className: m
+          className: p
         })
       })
     })
@@ -93,10 +93,10 @@ function m(e) {
   return (0, a.jsx)(b, {
     children: (0, a.jsx)(r.Tooltip, {
       text: function() {
-        if (N) return p.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (R) return p.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (O) return p.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
-        return p.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
+        if (N) return m.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+        if (R) return m.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (O) return m.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        return m.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
       children: e => G(e)
     })

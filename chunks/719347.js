@@ -2,10 +2,10 @@
 var r, i;
 n.r(t), n.d(t, {
   MEDIA_MOSAIC_MAX_WIDTH: function() {
-    return a
+    return s
   },
   MEDIA_MOSAIC_MAX_HEIGHT: function() {
-    return u
+    return a
   },
   MINIMUM_MEDIA_MOSAIC_DIM: function() {
     return l
@@ -14,11 +14,11 @@ n.r(t), n.d(t, {
     return r
   },
   SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE: function() {
-    return o
+    return u
   }
 });
-let a = 550,
-  u = 350,
+let s = 550,
+  a = 350,
   l = 40;
 (i = r || (r = {})).STATIC = "STATIC", i.RESPONSIVE = "RESPONSIVE", i.MOSAIC = "MOSAIC";
-let o = 20
+let u = 20

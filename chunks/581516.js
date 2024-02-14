@@ -21,7 +21,7 @@ var s = n("913144"),
   I = n("320817"),
   S = n("49111");
 
-function p() {
+function m() {
   let e = c.default.getChannelId(),
     t = _.default.getConnectedActivityChannelId(),
     n = _.default.getSelfEmbeddedActivityForChannel(null != t ? t : ""),
@@ -43,7 +43,7 @@ function p() {
   }
 }
 
-function m() {
+function p() {
   let e = u.default.hasLayers(),
     t = r.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   return e && !t ? function() {
@@ -56,10 +56,10 @@ function m() {
 }
 class T extends i.default {
   _initialize() {
-    f.default.addChangeListener(p), E.default.addChangeListener(p), c.default.addChangeListener(p), h.default.addChangeListener(p), r.default.addChangeListener(p), _.default.addChangeListener(p), u.default.addChangeListener(m)
+    f.default.addChangeListener(m), E.default.addChangeListener(m), c.default.addChangeListener(m), h.default.addChangeListener(m), r.default.addChangeListener(m), _.default.addChangeListener(m), u.default.addChangeListener(p)
   }
   _terminate() {
-    f.default.removeChangeListener(p), E.default.removeChangeListener(p), c.default.removeChangeListener(p), h.default.removeChangeListener(p), r.default.removeChangeListener(p), _.default.removeChangeListener(p), u.default.removeChangeListener(m)
+    f.default.removeChangeListener(m), E.default.removeChangeListener(m), c.default.removeChangeListener(m), h.default.removeChangeListener(m), r.default.removeChangeListener(m), _.default.removeChangeListener(m), u.default.removeChangeListener(p)
   }
 }
 var g = new T

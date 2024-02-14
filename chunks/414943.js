@@ -14,8 +14,8 @@ var s, a, l, i, r = n("37983"),
   c = n("773392"),
   f = n("77078"),
   E = n("49111"),
-  I = n("782340"),
-  _ = n("852968");
+  _ = n("782340"),
+  I = n("852968");
 (i = a || (a = {})).TOP = "top", i.BOTTOM = "bottom";
 let p = {
   container: (e, t) => {
@@ -183,14 +183,14 @@ let p = {
       disabled: h,
       clearable: T,
       searchable: N,
-      styleOverrides: g,
-      isMulti: m,
+      styleOverrides: m,
+      isMulti: g,
       placeholder: A,
       filterOption: S,
-      closeMenuOnSelect: v = !0,
-      ...C
+      closeMenuOnSelect: C = !0,
+      ...v
     } = this.props, R = {
-      ...C
+      ...v
     };
     null != E && (R.autoFocus = E), null != h && (R.isDisabled = h), null != T && (R.isClearable = T), null != N && (R.isSearchable = N);
     let O = {
@@ -203,8 +203,8 @@ let p = {
       ...e,
       children: a(e.data)
     })), null != i && (O.MultiValue = e => i(e.data));
-    let x = null != g ? g : p;
-    if (m && Array.isArray(o)) {
+    let L = null != m ? m : p;
+    if (g && Array.isArray(o)) {
       let t = {};
       u.forEach(e => {
         t[String(e.value)] = e
@@ -214,30 +214,30 @@ let p = {
       focused: this.state.isFocused && !this.state.isOpen,
       ringTarget: this._containerRef,
       children: (0, r.jsxs)("div", {
-        className: d(_.select, t, {
-          [_.error]: null != s
+        className: d(I.select, t, {
+          [I.error]: null != s
         }),
         ref: this._containerRef,
         children: [(0, r.jsx)(c.default, {
           ...R,
           className: n,
           ref: this._selectRef,
-          isMulti: m,
+          isMulti: g,
           components: O,
           options: u,
-          styles: x,
+          styles: L,
           onFocus: this.handleFocus,
           onBlur: this.handleBlur,
           onMenuOpen: this.handleMenuOpen,
           onMenuClose: this.handleMenuClose,
-          closeMenuOnSelect: v,
+          closeMenuOnSelect: C,
           value: e,
           onKeyDown: this.handleKeyDown,
-          placeholder: null != A ? A : I.default.Messages.SELECT,
-          noOptionsMessage: () => I.default.Messages.NO_RESULTS_FOUND,
+          placeholder: null != A ? A : _.default.Messages.SELECT,
+          noOptionsMessage: () => _.default.Messages.NO_RESULTS_FOUND,
           filterOption: S
         }), null != s ? (0, r.jsx)("div", {
-          className: _.errorMessage,
+          className: I.errorMessage,
           children: s
         }) : null]
       })

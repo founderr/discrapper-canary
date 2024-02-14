@@ -210,8 +210,8 @@ function I(e) {
       } = this.props, {
         dragging: I,
         dragging: S,
-        verticalOrientation: p,
-        horizontalOrientation: m
+        verticalOrientation: m,
+        horizontalOrientation: p
       } = this.state, T = !1;
       if (null == a || !I && 9 > f(this._dragStart, {
           x: t,
@@ -228,15 +228,15 @@ function I(e) {
       if (c) {
         O = _(O);
         let e = h(O);
-        p = e[0], m = e[1]
+        m = e[0], p = e[1]
       } else O = {
         top: O.top,
         left: O.left
       };
-      2 === r && m !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, T = !0), 2 === i && p !== this.state.verticalOrientation && (this._offsetY = A - this._offsetY, T = !0), this.setDOMPositions(O), !S && (null == o || o(O, a)), null == u || u(O, a), T && (null == d || d([p, m])), this.setState({
+      2 === r && p !== this.state.horizontalOrientation && (this._offsetX = g - this._offsetX, T = !0), 2 === i && m !== this.state.verticalOrientation && (this._offsetY = A - this._offsetY, T = !0), this.setDOMPositions(O), !S && (null == o || o(O, a)), null == u || u(O, a), T && (null == d || d([m, p])), this.setState({
         dragging: I,
-        verticalOrientation: p,
-        horizontalOrientation: m,
+        verticalOrientation: m,
+        horizontalOrientation: p,
         atTopEdge: 0 === O.top
       })
     }, this.handleMouseUp = () => {

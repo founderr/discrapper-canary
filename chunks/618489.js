@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("412026"),
   I = n("86621"),
   S = n("997289"),
-  p = n("244201"),
-  m = n("266790"),
+  m = n("244201"),
+  p = n("266790"),
   T = n("191225"),
   g = n("372610"),
   A = n("380691"),
@@ -74,8 +74,8 @@ var a = n("37983"),
   eC = n("697218"),
   eI = n("800762"),
   eS = n("316133"),
-  ep = n("145131"),
-  em = n("437825"),
+  em = n("145131"),
+  ep = n("437825"),
   eT = n("142303"),
   eg = n("406019"),
   eA = n("220075"),
@@ -141,8 +141,8 @@ function eB() {
       tag: c.FormTitleTags.H5,
       className: i(ek.marginBottom8, ek.marginTop20),
       children: ej.default.Messages.NOISE_CANCELLATION_POPOUT_FOOTER
-    }), (0, a.jsxs)(ep.default, {
-      justify: ep.default.Justify.BETWEEN,
+    }), (0, a.jsxs)(em.default, {
+      justify: em.default.Justify.BETWEEN,
       className: ew.footer,
       children: [(0, a.jsx)(c.Anchor, {
         href: eU.MarketingURLs.KRISP,
@@ -181,14 +181,14 @@ function eV(e) {
     limit: _
   } = (0, $.default)(t), C = s.useCallback(() => {
     (0, en.default)()
-  }, []), I = (0, p.useAppContext)(), S = s.useCallback(e => {
+  }, []), I = (0, m.useAppContext)(), S = s.useCallback(e => {
     if (ef.default.isVideoEnabled() === e) return;
     let n = () => {
       var n;
       f.default.setVideoEnabled(e), e && (0, B.transitionTo)(eU.Routes.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eU.ME, t.id))
     };
     e ? (0, el.default)(n, I) : n()
-  }, [t, I]), m = u || n || E;
+  }, [t, I]), p = u || n || E;
   return (0, a.jsx)(ei.VideoButtonWrapper, {
     onChange: S,
     onCameraUnavailable: C,
@@ -204,9 +204,9 @@ function eV(e) {
         label: s,
         iconComponent: l,
         ...r
-      } = e, o = n ? em.default : eT.default, u = (0, a.jsx)(o, {
+      } = e, o = n ? ep.default : eT.default, u = (0, a.jsx)(o, {
         className: i(ew.buttonIcon, {
-          [ew.withText]: !m
+          [ew.withText]: !p
         })
       });
       return (0, a.jsx)(c.Popout, {
@@ -251,8 +251,8 @@ function eV(e) {
               innerClassName: ew.buttonContents,
               wrapperClassName: ew.button,
               fullWidth: !0,
-              children: m ? u : (0, a.jsxs)(ep.default, {
-                align: ep.default.Align.CENTER,
+              children: p ? u : (0, a.jsxs)(em.default, {
+                align: em.default.Align.CENTER,
                 children: [u, ej.default.Messages.VIDEO]
               })
             })
@@ -267,10 +267,10 @@ function eY(e) {
   let {
     channel: t,
     enableActivities: n
-  } = e, s = (0, p.useAppContext)(), {
+  } = e, s = (0, m.useAppContext)(), {
     analyticsLocations: l
   } = (0, M.default)(), r = s === eU.AppContext.POPOUT, o = t.getGuildId();
-  (0, m.useActivitiesRolloutExperiments)(o);
+  (0, p.useActivitiesRolloutExperiments)(o);
   let u = (0, N.useEmbeddedActivityLaunchability)(t.id),
     f = (0, N.getEmbeddedActivityLaunchabilityLabel)(u),
     [E] = (0, d.useStateFromStores)([T.default], () => null != t.id && "" !== t.id ? T.default.getEmbeddedActivitiesForChannel(t.id) : T.NO_ACTIVITIES),
@@ -332,9 +332,9 @@ function eW(e) {
       (0, es.default)(h, n.id, eU.AnalyticsSections.ACTIVITY_PANEL)
     }, [h, n.id]),
     S = f.find(e => e.ownerId === (null == u ? void 0 : u.id)),
-    p = (0, et.useOtherStreams)(n, u, f);
+    m = (0, et.useOtherStreams)(n, u, f);
   t = null == S ? l ? I : ea.default : () => (0, j.default)(S);
-  let m = null != S || p.length > 0,
+  let p = null != S || m.length > 0,
     g = E ? ej.default.Messages.SHARE_YOUR_SCREEN : ej.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
     A = _ || r || C,
     N = (0, a.jsx)(eR.default, {
@@ -370,18 +370,18 @@ function eW(e) {
           size: c.Button.Sizes.SMALL,
           onClick: a => {
             var s;
-            m ? n(a) : t(), null === (s = e.onClick) || void 0 === s || s.call(e)
+            p ? n(a) : t(), null === (s = e.onClick) || void 0 === s || s.call(e)
           },
           disabled: !E || o,
           className: i(ew.button, ew.buttonColor, {
             [ew.buttonActive]: null != S,
             [ew.disabled]: !E || o
           }),
-          ...m ? s : null,
+          ...p ? s : null,
           innerClassName: ew.buttonContents,
           wrapperClassName: ew.button,
-          children: A ? N : (0, a.jsxs)(ep.default, {
-            align: ep.default.Align.CENTER,
+          children: A ? N : (0, a.jsxs)(em.default, {
+            align: em.default.Align.CENTER,
             children: [N, ej.default.Messages.GO_LIVE_SHARE_SCREEN]
           })
         })
@@ -540,13 +540,13 @@ class eK extends s.PureComponent {
       shouldShow: n,
       children: () => (0, a.jsxs)("div", {
         className: ew.container,
-        children: [(0, a.jsxs)(ep.default, {
+        children: [(0, a.jsxs)(em.default, {
           className: ew.connection,
-          align: ep.default.Align.CENTER,
+          align: em.default.Align.CENTER,
           children: [(0, a.jsx)("div", {
             className: ew.inner,
             children: this.renderConnectionStatus()
-          }), (0, a.jsxs)(ep.default, {
+          }), (0, a.jsxs)(em.default, {
             grow: 0,
             shrink: 0,
             children: [t ? this.renderNoiseCancellation() : null, (0, a.jsx)(ex.default, {
@@ -650,8 +650,8 @@ var ez = (0, I.default)(function(e) {
     C = (0, d.useStateFromStores)([er.default], () => er.default.getCurrentUserActiveStream()),
     I = (0, d.useStateFromStores)([ec.default], () => ec.default.hasLayers()),
     S = (0, d.useStateFromStores)([F.default], () => F.default.isViewingRoles(u)),
-    p = (0, d.useStateFromStores)([eE.default], () => S && !eE.default.can(eU.Permissions.VIEW_CHANNEL, o), [S, o]),
-    m = X.RtcPanelShowVoiceStates.useSetting(),
+    m = (0, d.useStateFromStores)([eE.default], () => S && !eE.default.can(eU.Permissions.VIEW_CHANNEL, o), [S, o]),
+    p = X.RtcPanelShowVoiceStates.useSetting(),
     [T, A, N] = (0, d.useStateFromStoresArray)([eS.default, Y.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [Y.default.getMutableParticipants(o.id, W.StageChannelParticipantNamedIndex.SPEAKER), Y.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eS.default.getVoiceStatesForChannel(o) : null], [o]),
     O = s.useMemo(() => {
       var e, t;
@@ -670,8 +670,8 @@ var ez = (0, I.default)(function(e) {
     }, [T, A, N]),
     [v, D] = s.useState(!1);
   s.useEffect(() => {
-    (S || p) && D(!1)
-  }, [S, p, D]);
+    (S || m) && D(!1)
+  }, [S, m, D]);
   let {
     AnalyticsLocationProvider: y
   } = (0, M.default)(L.default.RTC_PANEL), j = (0, g.default)(null != u ? u : eU.EMPTY_STRING_GUILD_ID, null == o ? void 0 : o.id), w = (0, R.default)(null == o ? void 0 : o.id), B = (0, P.default)();
@@ -693,7 +693,7 @@ var ez = (0, I.default)(function(e) {
         selfStream: C,
         hasLayers: I,
         voiceStates: O,
-        showVoiceStates: m,
+        showVoiceStates: p,
         shouldShowVoicePanelIntroduction: h,
         isPrivateChannelWithEnabledActivities: w,
         isBroadcasting: B
@@ -702,7 +702,7 @@ var ez = (0, I.default)(function(e) {
         children: [(0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           className: ew.viewAsRolesWarningText,
-          children: p ? ej.default.Messages.VIEW_AS_ROLES_HIDDEN_VC_WARNING : ej.default.Messages.VIEW_AS_ROLES_VOICE_WARNING
+          children: m ? ej.default.Messages.VIEW_AS_ROLES_HIDDEN_VC_WARNING : ej.default.Messages.VIEW_AS_ROLES_VOICE_WARNING
         }), (0, a.jsx)(c.Button, {
           className: ew.viewAsRolesWarningButton,
           size: c.Button.Sizes.MIN,

@@ -18,8 +18,8 @@ var i = n("917351"),
 let C = [],
   I = null,
   S = !1,
-  p = _.FormStates.CLOSED,
-  m = {},
+  m = _.FormStates.CLOSED,
+  p = {},
   T = !1,
   g = null;
 
@@ -28,7 +28,7 @@ function A() {
     let e = R(I.id);
     null != e && (I = e)
   }
-  p = _.FormStates.OPEN, m = {}, T = !1
+  m = _.FormStates.OPEN, p = {}, T = !1
 }
 let N = r.debounce(() => {
   T && ((null == I || r.isEqual(I, R(I.id))) && (T = !1), !T && v.emitChange())
@@ -56,7 +56,7 @@ class O extends o.default.Store {
     return I
   }
   get formState() {
-    return p
+    return m
   }
   getWebhook(e) {
     return R(e)
@@ -66,14 +66,14 @@ class O extends o.default.Store {
   }
   getProps() {
     return {
-      submitting: p === _.FormStates.SUBMITTING,
+      submitting: m === _.FormStates.SUBMITTING,
       webhooks: C,
       editedWebhook: I,
       section: l,
       sectionId: g,
       hasChanges: this.hasChanges(),
       isFetching: S,
-      errors: m
+      errors: p
     }
   }
 }
@@ -104,10 +104,10 @@ let v = new O(u.default, __OVERLAY__ ? {} : {
       webhookId: t
     } = e, n = R(t);
     if (null == n) return !1;
-    I = n, m = {}, T = !1
+    I = n, p = {}, T = !1
   },
   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
-    I = null, m = {}, T = !1
+    I = null, p = {}, T = !1
   },
   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
     let {
@@ -119,7 +119,7 @@ let v = new O(u.default, __OVERLAY__ ? {} : {
     }, null != t.name && I.name !== t.name && (I.name = t.name, T = !0), void 0 !== t.avatar && I.avatar !== t.avatar && (I.avatar = t.avatar, T = !0), null != t.channelId && I.channel_id !== t.channelId && (I.channel_id = t.channelId, T = !0), T && N()
   },
   CHANNEL_SETTINGS_CLOSE: function() {
-    s = null, a = null, C = [], I = null, p = _.FormStates.CLOSED
+    s = null, a = null, C = [], I = null, m = _.FormStates.CLOSED
   },
   WEBHOOKS_UPDATE: function(e) {
     let {
@@ -127,7 +127,7 @@ let v = new O(u.default, __OVERLAY__ ? {} : {
       channelId: n,
       webhooks: l
     } = e;
-    if (null == a || t !== a.id || null == s || n !== s.id || null == l || p === _.FormStates.SUBMITTING) return !1;
+    if (null == a || t !== a.id || null == s || n !== s.id || null == l || m === _.FormStates.SUBMITTING) return !1;
     S = !1;
     for (let e = C.length - 1; e >= 0; e--) {
       let t = C[e];
@@ -158,12 +158,12 @@ let v = new O(u.default, __OVERLAY__ ? {} : {
     C = [...C], N()
   },
   INTEGRATION_SETTINGS_SUBMITTING: function() {
-    p = _.FormStates.SUBMITTING, m = {}
+    m = _.FormStates.SUBMITTING, p = {}
   },
   INTEGRATION_SETTINGS_SAVE_FAILURE: function(e) {
     var t;
-    if (p !== _.FormStates.SUBMITTING) return !1;
-    p = _.FormStates.OPEN, m = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (m !== _.FormStates.SUBMITTING) return !1;
+    m = _.FormStates.OPEN, p = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
 var L = v

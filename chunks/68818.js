@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("956089"),
   I = n("49111"),
   S = n("853994"),
-  p = n("782340"),
-  m = n("788217"),
+  m = n("782340"),
+  p = n("788217"),
   T = n("890957"),
   g = () => {
     let e = h.FamilyCenterEnabled.useSetting(),
@@ -32,20 +32,20 @@ var a = n("37983"),
     return s.useEffect(() => {
       null == n && (0, f.fetchEmailSettings)()
     }, [n]), (0, a.jsxs)("div", {
-      className: m.container,
+      className: p.container,
       children: [(0, a.jsx)(d.Text, {
         variant: "eyebrow",
         color: "text-muted",
-        children: p.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
+        children: m.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
       }), (0, a.jsx)(d.FormSwitch, {
         className: i(T.marginTop8, T.marginBottom20),
         value: e,
-        note: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
+        note: m.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
         hideBorder: !0,
         onChange: h.FamilyCenterEnabled.updateSetting,
-        children: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
+        children: m.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
       }), e ? (0, a.jsx)(d.Card, {
-        className: m.enableCard,
+        className: p.enableCard,
         type: d.Card.Types.CUSTOM,
         outline: !0,
         children: (0, a.jsxs)(o.default, {
@@ -54,7 +54,7 @@ var a = n("37983"),
             children: (0, a.jsx)(d.Text, {
               variant: "text-sm/semibold",
               color: "text-normal",
-              children: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
+              children: m.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_PROMPT
             })
           }), (0, a.jsx)(d.Clickable, {
             children: (0, a.jsx)(r.Link, {
@@ -65,23 +65,23 @@ var a = n("37983"),
                   scrollRestoration: !1
                 }
               },
-              children: p.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
+              children: m.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_CTA
             })
           }), (0, a.jsx)(C.IconBadge, {
             icon: _.default,
-            className: m.arrow,
+            className: p.arrow,
             disableColor: !0
           })]
         })
       }) : null, (0, a.jsx)(d.FormSwitch, {
         className: i(T.marginTop20, T.marginBottom20),
         value: !!t[S.EmailCategories.FAMILY_CENTER_DIGEST],
-        note: p.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
+        note: m.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
         hideBorder: !0,
         onChange: function(e) {
           (0, f.updateEmailSetting)(S.EmailCategories.FAMILY_CENTER_DIGEST, e)
         },
-        children: p.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
+        children: m.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
       })]
     })
   }

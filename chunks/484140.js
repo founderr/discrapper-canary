@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("697218"),
   I = n("953109"),
   S = n("277174"),
-  p = n("368121"),
-  m = n("811305"),
+  m = n("368121"),
+  p = n("811305"),
   T = n("158998"),
   g = n("882278"),
   A = n("754493"),
@@ -37,16 +37,16 @@ function M(e) {
   } = e;
   return (0, a.jsxs)("div", {
     className: L.viewers,
-    children: [(0, a.jsx)(p.default, {
+    children: [(0, a.jsx)(m.default, {
       width: 16,
       height: 16,
       color: i.default.colors.HEADER_PRIMARY.css
-    }), (0, a.jsx)(m.default, {
+    }), (0, a.jsx)(p.default, {
       showUserPopout: !0,
       useFallbackUserForPopout: !0,
       users: t,
       max: 6,
-      size: m.Sizes.SIZE_24
+      size: p.Sizes.SIZE_24
     })]
   })
 }
@@ -57,13 +57,13 @@ function P(e) {
     broadcast: n
   } = e, {
     userId: i,
-    applicationId: p,
-    channelId: m,
+    applicationId: m,
+    channelId: p,
     streamKey: P
-  } = n, [D, y] = s.useState(!1), x = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([p]), U = null !== (t = T.default.getGlobalName(x)) && void 0 !== t ? t : T.default.getUserTag(x), G = (0, N.default)(), j = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, m, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), F = (0, g.default)(m);
+  } = n, [D, y] = s.useState(!1), x = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([m]), U = null !== (t = T.default.getGlobalName(x)) && void 0 !== t ? t : T.default.getUserTag(x), G = (0, N.default)(), j = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, i)), w = (0, l.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()), k = (0, A.default)(), F = (0, g.default)(p);
   if (s.useEffect(() => {
-      D && w === m && y(!1)
-    }, [w, D, m]), null == x || null == U) return null;
+      D && w === p && y(!1)
+    }, [w, D, p]), null == x || null == U) return null;
   let {
     buttonColor: B,
     buttonCTA: H,
@@ -101,15 +101,15 @@ function P(e) {
           users: F
         }), (0, a.jsxs)(r.Button, {
           onClick: () => {
-            if (w === m) {
-              o.default.selectPrivateChannel(m);
+            if (w === p) {
+              o.default.selectPrivateChannel(p);
               return
             }
-            y(!0), (0, u.joinPrivateChannelAndWatchStream)(m, P), d.default.trackWithMetadata(R.AnalyticEvents.BROADCAST_VIEWED, {
+            y(!0), (0, u.joinPrivateChannelAndWatchStream)(p, P), d.default.trackWithMetadata(R.AnalyticEvents.BROADCAST_VIEWED, {
               num_active_broadcasts: G.length,
               broadcast_position: G.findIndex(e => e.userId === i) + 1,
               is_broadcasting: k,
-              broadcast_channel_id: m
+              broadcast_channel_id: p
             })
           },
           color: B,
@@ -128,7 +128,7 @@ function P(e) {
       stream: {
         streamType: O.StreamTypes.CALL,
         ownerId: i,
-        channelId: m
+        channelId: p
       }
     }) : (0, a.jsx)(I.default, {
       game: b,

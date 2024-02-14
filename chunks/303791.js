@@ -46,7 +46,7 @@ function E(e) {
     if (!C) return !1;
     let I = Date.now() - a > c.CLIPS_EDUCATION_COOLDOWN,
       S = s >= c.CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD,
-      p = _ ? c.CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED : c.CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED;
-    return I && S && E < p && !h
+      m = _ ? c.CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED : c.CLIPS_EDUCATION_MAX_DISMISSALS_DISABLED;
+    return I && S && E < m && !h
   })
 }

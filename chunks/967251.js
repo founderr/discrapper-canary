@@ -31,8 +31,8 @@ var s = n("77078"),
       relevantSubscriptionListingIds: null == S ? void 0 : S.subscription_listings_ids
     });
     let {
-      activeSubscription: p
-    } = (0, r.default)(null == S ? void 0 : S.id), m = (0, l.useSubscriptionsSettings)(I.id), T = null == m ? void 0 : m.description, {
+      activeSubscription: m
+    } = (0, r.default)(null == S ? void 0 : S.id), p = (0, l.useSubscriptionsSettings)(I.id), T = null == p ? void 0 : p.description, {
       editStateIds: g
     } = i.useEditStateIds(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : null, I.id);
     return (0, a.jsxs)(a.Fragment, {
@@ -41,14 +41,14 @@ var s = n("77078"),
           serverName: I.toString()
         }),
         description: null != T ? T : null,
-        coverImageAsset: null !== (n = null == m ? void 0 : m.cover_image_asset) && void 0 !== n ? n : null,
+        coverImageAsset: null !== (n = null == p ? void 0 : p.cover_image_asset) && void 0 !== n ? n : null,
         guild: I,
         children: [null != S ? (0, a.jsx)(u.default, {
           className: C.pendingPlanChangeNotice,
           groupListingId: S.id,
-          subscription: p
+          subscription: m
         }) : null, (0, a.jsx)(d.default, {
-          subscription: p
+          subscription: m
         })]
       }), (0, a.jsx)(s.HeadingLevel, {
         children: (0, a.jsx)(c.default, {

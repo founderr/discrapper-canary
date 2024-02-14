@@ -23,8 +23,8 @@ var a = n("37983"),
   C = n("539938"),
   I = n("155084"),
   S = n("970366"),
-  p = n("161778"),
-  m = n("845579"),
+  m = n("161778"),
+  p = n("845579"),
   T = n("697218"),
   g = n("476765"),
   A = n("155207"),
@@ -139,10 +139,10 @@ function K() {
       selectedTab: f,
       handleTabChange: C
     } = (0, M.default)(),
-    p = (0, g.useUID)(),
-    m = T.default.getCurrentUser(),
+    m = (0, g.useUID)(),
+    p = T.default.getCurrentUser(),
     A = null != e,
-    N = l && null != m && !A;
+    N = l && null != p && !A;
   return (s.useEffect(() => {
     (0, S.trackAppUIViewed)("family-center"), v.default.initialPageLoad(), !n && (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
       dismissAction: k.ContentDismissActionType.AUTO,
@@ -170,7 +170,7 @@ function K() {
       }
     }), (0, a.jsx)(c.TabBar.Panel, {
       id: f,
-      "aria-labelledby": p,
+      "aria-labelledby": m,
       className: B.contentPanel,
       children: (0, a.jsx)("div", {
         children: H[f]()
@@ -185,7 +185,7 @@ function z() {
     n = (0, _.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE),
     l = (0, u.default)([L.default], () => L.default.getIsInitialized()),
     r = (0, P.useSelectedTeenId)(),
-    C = (0, u.default)([p.default], () => p.default.theme),
+    C = (0, u.default)([m.default], () => m.default.theme),
     {
       selectedTab: A,
       handleTabChange: N
@@ -210,8 +210,8 @@ function z() {
         name: o.MetricEvents.FAMILY_CENTER_VIEW
       }))
     }, [l, b]), s.useEffect(() => {
-      let t = m.FamilyCenterEnabled.getSetting();
-      l && e && void 0 === t && m.FamilyCenterEnabled.updateSetting(!0)
+      let t = p.FamilyCenterEnabled.getSetting();
+      l && e && void 0 === t && p.FamilyCenterEnabled.updateSetting(!0)
     }, [l, e]), U) return (0, E.openAgeGateModal)(w.AgeGateSource.FAMILY_CENTER), null;
   let H = A !== G.FamilyCenterSubPages.SETTINGS ? A : G.FamilyCenterSubPages.ACTIVITY,
     Y = V[H];

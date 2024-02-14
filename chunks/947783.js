@@ -21,9 +21,9 @@ var s = n("414456"),
   C = n("80028"),
   I = n("49111"),
   S = n("782340"),
-  p = n("292271");
+  m = n("292271");
 
-function m(e) {
+function p(e) {
   o.default.open(I.UserSettingsSections.CLIPS), (0, _.dismissClipsUserEducation)(e)
 }
 
@@ -37,7 +37,7 @@ function T() {
     children: S.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
       keybind: t,
       keybindHook: () => (0, a.jsx)("span", {
-        className: p.keyCombo,
+        className: m.keyCombo,
         children: (0, a.jsx)(r.KeyCombo, {
           shortcut: t
         })
@@ -52,14 +52,14 @@ let g = {
     buttonColor: r.Button.Colors.PRIMARY,
     bodyCopy: () => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(c.default, {
-        className: p.errorWarningIcon
+        className: m.errorWarningIcon
       }), S.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
     }),
     buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
     ctaOnClick: () => {
       window.open(f.default.getArticleURL(I.HelpdeskArticles.CLIPS), "_blank")
     },
-    containerClass: p.container
+    containerClass: m.container
   },
   [C.ClipsUserEducationType.Disabled]: {
     textColor: "text-primary",
@@ -67,8 +67,8 @@ let g = {
     buttonColor: r.Button.Colors.BRAND,
     bodyCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
     buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => m(C.ClipsUserEducationType.Disabled),
-    containerClass: p.container
+    ctaOnClick: () => p(C.ClipsUserEducationType.Disabled),
+    containerClass: m.container
   },
   [C.ClipsUserEducationType.Enabled]: {
     textColor: "always-white",
@@ -76,8 +76,8 @@ let g = {
     buttonColor: r.Button.Colors.BRAND,
     bodyCopy: () => (0, a.jsx)(T, {}),
     buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => m(C.ClipsUserEducationType.Enabled),
-    containerClass: l(p.container, p.containerEnabled)
+    ctaOnClick: () => p(C.ClipsUserEducationType.Enabled),
+    containerClass: l(m.container, m.containerEnabled)
   }
 };
 
@@ -110,15 +110,15 @@ function A() {
       onClick: () => (0, _.dismissClipsUserEducation)(s),
       size: r.Button.Sizes.NONE,
       look: r.Button.Looks.BLANK,
-      className: p.buttonClose,
+      className: m.buttonClose,
       children: (0, a.jsx)(d.default, {
-        className: p.dismissIcon,
+        className: m.dismissIcon,
         width: 16,
         height: 16
       })
     }), (0, a.jsx)(r.Button, {
       onClick: u,
-      className: p.buttonCTA,
+      className: m.buttonCTA,
       color: f,
       look: E,
       fullWidth: !0,

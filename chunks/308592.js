@@ -28,8 +28,8 @@ function d() {
     c = r.paymentSourceIds,
     d = r.defaultPaymentSourceId,
     f = n.isLoadedForSKUs(t),
-    E = null === (e = a.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.paymentSourceId;
-  if (null != E && !n.hasPaymentSourceForSKUIds(E, t)) return o("subscription payment source ".concat(E, " not loaded for ").concat(t)), !1;
+    m = null === (e = a.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.paymentSourceId;
+  if (null != m && !n.hasPaymentSourceForSKUIds(m, t)) return o("subscription payment source ".concat(m, " not loaded for ").concat(t)), !1;
   if (null != d && !n.hasPaymentSourceForSKUIds(d, t)) return o("default payment source ".concat(d, " not loaded for ").concat(t)), !1;
   for (let e of c)
     if (!n.hasPaymentSourceForSKUIds(e, t)) return o("payment source ".concat(e, " not loaded for ").concat(t)), !1;

@@ -21,8 +21,8 @@ var a, s, l = n("884691"),
   C = n("735201"),
   I = n("957255"),
   S = n("833781"),
-  p = n("572182"),
-  m = n("201952"),
+  m = n("572182"),
+  p = n("201952"),
   T = n("718517"),
   g = n("427459"),
   A = n("49111");
@@ -44,7 +44,7 @@ function N(e) {
       isGracePeriodVisible: S.default.isVisible(n)
     })),
     R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
-    O = (0, i.useStateFromStores)([m.default], () => m.default.isVisible(e)),
+    O = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
     v = (0, i.useStateFromStores)([I.default], () => I.default.can(A.Permissions.ADMINISTRATOR, e)),
     L = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     M = null != e ? e.premiumSubscriberCount : 0,
@@ -52,7 +52,7 @@ function N(e) {
     D = null != a && Date.now() - a <= 432e5,
     y = !D && !L && v && P,
     x = (0, c.useGuildHasLiveChannelNotice)(n),
-    b = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
+    b = (0, i.useStateFromStores)([m.default], () => m.default.isVisible(e)),
     U = h.default.useShouldShowChannelNotice(n),
     G = (0, o.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {

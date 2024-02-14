@@ -18,8 +18,8 @@ function f(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
     [f, E] = l.useState(!1),
     [h, g] = l.useState(null),
-    v = l.useMemo(() => c.default.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
-    _ = (0, u.useCanSendStageStartNotification)(e),
+    _ = l.useMemo(() => c.default.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
+    v = (0, u.useCanSendStageStartNotification)(e),
     S = async l => {
       let {
         topic: u,
@@ -30,7 +30,7 @@ function f(e, t) {
         E(!0), g(null), null != n && (a.default.selectGuild(n), r.default.selectVoiceChannel(e.id));
         try {
           let n;
-          null != v ? n = await o.editStage(e, u, c) : (n = await o.startStage(e, u, c, null != f && f), _ && i.hideHotspot(d.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), t(n)
+          null != _ ? n = await o.editStage(e, u, c) : (n = await o.startStage(e, u, c, null != f && f), v && i.hideHotspot(d.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), t(n)
         } catch (t) {
           let e = new s.APIError(t);
           g(e), E(!1)

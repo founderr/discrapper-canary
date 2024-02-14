@@ -17,7 +17,7 @@ let r = "collectibles shop product details modal",
       category: n,
       analyticsSource: i,
       analyticsLocations: o,
-      returnRef: u
+      returnRef: c
     } = e;
     (0, s.openModalLazy)(async () => {
       let {
@@ -29,7 +29,7 @@ let r = "collectibles shop product details modal",
         category: n,
         analyticsSource: i,
         analyticsLocations: o,
-        returnRef: u
+        returnRef: c
       })
     }, {
       modalKey: r

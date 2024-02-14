@@ -82,8 +82,8 @@ var _ = {
         S = (0, d.computeActivityFlags)(_, I);
       S > 0 && (_.flags = S), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
       let {
-        assets: p,
-        party: m,
+        assets: m,
+        party: p,
         secrets: T,
         timestamps: g,
         buttons: A,
@@ -91,7 +91,7 @@ var _ = {
       } = _;
       if ((null == N || N !== E.ActivityTypes.PLAYING && !I) && (_.type = E.ActivityTypes.PLAYING), null != T) {
         let e = s.values(T).filter(e => !!e);
-        if (null != m && s.intersection(e, [m.id]).length > 0 && !h.includes(a.application.id)) throw new u.default({
+        if (null != p && s.intersection(e, [p.id]).length > 0 && !h.includes(a.application.id)) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
         if (s.uniq(e).length < e.length) throw new u.default({
@@ -105,14 +105,14 @@ var _ = {
           button_urls: A.map(e => e.url)
         }, _.buttons = A.map(e => e.label)), null != g)
         for (let e of Object.keys(g)) Date.now().toString().length - g[e].toString().length > 2 && (g[e] = Math.floor(g[e] * o.default.Millis.SECOND));
-      if (null == p) n = Promise.resolve([]);
+      if (null == m) n = Promise.resolve([]);
       else {
         if (null == a.application || null == a.application.id) throw Error();
-        n = (0, r.fetchAssetIds)(a.application.id, [p.large_image, p.small_image])
+        n = (0, r.fetchAssetIds)(a.application.id, [m.large_image, m.small_image])
       }
       return n.then(e => {
         let [t, n] = e;
-        if (null != p && (null != t ? p.large_image = t : delete p.large_image, null != n ? p.small_image = n : delete p.small_image), !C()) return;
+        if (null != m && (null != t ? m.large_image = t : delete m.large_image, null != n ? m.small_image = n : delete m.small_image), !C()) return;
         l.default.dispatch({
           type: "LOCAL_ACTIVITY_UPDATE",
           socketId: a.id,
@@ -126,7 +126,7 @@ var _ = {
           application_id: a.application.id,
           type: _.type
         };
-        return null != s && (o.has_match_secret = !!s.match, o.has_join_secret = !!s.join), null != p && (o.has_images = !!(p.large_image || p.small_image)), null != r && (o.party_max = null != r.size ? r.size[1] : void 0, o.party_id = r.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, o), _
+        return null != s && (o.has_match_secret = !!s.match, o.has_join_secret = !!s.join), null != m && (o.has_images = !!(m.large_image || m.small_image)), null != r && (o.party_max = null != r.size ? r.size[1] : void 0, o.party_id = r.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, o), _
       })
     }
   }

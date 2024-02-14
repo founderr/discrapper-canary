@@ -18,8 +18,8 @@ var a, s, l = n("37983"),
   C = n("395869"),
   I = n("824650"),
   S = n("1339"),
-  p = n("593897"),
-  m = n("534222"),
+  m = n("593897"),
+  p = n("534222"),
   T = n("841363"),
   g = n("822516"),
   A = n("393414"),
@@ -48,7 +48,7 @@ function V(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, a = (0, p.useActiveEventOrStageInstanceChannel)(t.id), s = (0, m.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([v.default], () => v.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+  } = e, a = (0, m.useActiveEventOrStageInstanceChannel)(t.id), s = (0, p.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([v.default], () => v.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: V,
     isEventNoticeHidden: Y
   } = (0, u.useStateFromStoresObject)([I.default], () => ({
@@ -85,7 +85,7 @@ function V(e) {
       isEventNoticeHidden: d,
       isStageNoticeHidden: f,
       isStudyRoomNotice: h
-    } = e, I = null != n && null != a && !f, p = null != t ? (0, g.getNextRecurrenceIdInEvent)(t) : null;
+    } = e, I = null != n && null != a && !f, m = null != t ? (0, g.getNextRecurrenceIdInEvent)(t) : null;
     if (h && null != a) {
       let e = (0, E.getChannelIconComponent)(a);
       return {
@@ -174,7 +174,7 @@ function V(e) {
         if (null == e) return {
           noticeType: null
         };
-        let n = _.default.getUserCount(t.id, p);
+        let n = _.default.getUserCount(t.id, m);
         return {
           noticeType: 1,
           title: t.name,
@@ -206,7 +206,7 @@ function V(e) {
         }
       } else if (t.entity_type === F.GuildScheduledEventEntityTypes.VOICE && null != a) {
         let e = (0, E.getChannelIconComponent)(a),
-          n = _.default.getUserCount(t.id, p);
+          n = _.default.getUserCount(t.id, m);
         return {
           noticeType: 2,
           title: t.name,

@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("86878"),
   I = n("686470"),
   S = n("568307"),
-  p = n("535974"),
-  m = n("599110"),
+  m = n("535974"),
+  p = n("599110"),
   T = n("602043"),
   g = n("780009"),
   A = n("49111"),
@@ -50,8 +50,8 @@ function O(e) {
   }(e), v = function(e) {
     let {
       currentActivities: t
-    } = e, n = s.useContext(m.AnalyticsContext);
-    return (0, l.useStateFromStoresArray)([S.default, I.default, h.default, p.default, C.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
+    } = e, n = s.useContext(p.AnalyticsContext);
+    return (0, l.useStateFromStoresArray)([S.default, I.default, h.default, m.default, C.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
       let {
         activity: t,
         game: a
@@ -63,7 +63,7 @@ function O(e) {
         canPlay: (0, T.isLaunchable)({
           LibraryApplicationStore: I.default,
           LaunchableGameStore: h.default,
-          DispatchApplicationStore: p.default,
+          DispatchApplicationStore: m.default,
           ConnectedAppsStore: C.default,
           applicationId: a.id,
           branchId: null != s ? s.branchId : null

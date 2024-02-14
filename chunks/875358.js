@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("780009"),
   I = n("49111"),
   S = n("782340"),
-  p = n("960245");
-class m extends s.Component {
+  m = n("960245");
+class p extends s.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)
   }
@@ -54,11 +54,11 @@ class m extends s.Component {
     } = this.state;
     return (0, a.jsx)("div", {
       className: i({
-        [p.libraryFilter]: !0,
-        [p.focused]: t
+        [m.libraryFilter]: !0,
+        [m.focused]: t
       }),
       children: (0, a.jsx)(h.default, {
-        className: p.searchBar,
+        className: m.searchBar,
         ref: this.setRef,
         onChange: d.updateLibraryFilter,
         onFocus: () => this.setState({
@@ -129,7 +129,7 @@ class m extends s.Component {
 function T() {
   let e = (0, r.useStateFromStores)([c.default], () => c.default.hasLayers()),
     t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, a.jsx)(m, {
+  return (0, a.jsx)(p, {
     activeRowKey: (0, r.useStateFromStores)([E.default], () => E.default.activeRowKey),
     hasModalOpen: t || e,
     filterQuery: (0, r.useStateFromStores)([f.default], () => f.default.applicationFilterQuery),

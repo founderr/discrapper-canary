@@ -70,21 +70,21 @@ let y = e => {
         newlyAddedEmojis: w
       } = (0, C.default)(x, O),
       F = P.id,
-      G = (null == L ? void 0 : L.type) === v.EmojiGridItemTypes.EMOJI ? L.subCategory : I.EmojiSubCategory.NONE;
+      B = (null == L ? void 0 : L.type) === v.EmojiGridItemTypes.EMOJI ? L.subCategory : I.EmojiSubCategory.NONE;
     if (i.useEffect(() => {
         let e = Date.now();
         return () => {
           let t = Date.now() - e;
-          t >= 250 && A(P) && G !== I.EmojiSubCategory.NONE && (G === I.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== P && P.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(P.guildId, w[0].id), null != M.source && (0, S.trackEmojiFocus)({
+          t >= 250 && A(P) && B !== I.EmojiSubCategory.NONE && (B === I.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== P && P.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(P.guildId, w[0].id), null != M.source && (0, S.trackEmojiFocus)({
             emoji: P,
-            subCategory: G,
+            subCategory: B,
             position: L.columnIndex + 1,
-            newlyAddedHighlight: G === I.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(x, F)
+            newlyAddedHighlight: B === I.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(x, F)
           }))
         }
       }), null == P) return null;
     if (A(P)) {
-      var B;
+      var G;
       let e = null != P.id ? g.default.getEmojiURL({
         id: P.id,
         animated: D && P.animated,
@@ -95,7 +95,7 @@ let y = e => {
         className: N.glyphEmoji,
         children: "surrogates" in P ? P.surrogates : null
       }) : (0, l.jsx)("img", {
-        alt: null !== (B = P.allNamesString) && void 0 !== B ? B : "",
+        alt: null !== (G = P.allNamesString) && void 0 !== G ? G : "",
         src: e,
         className: N.emoji
       })
@@ -123,6 +123,6 @@ let y = e => {
         guild: b
       }),
       isFavorite: k,
-      emojiSubCategory: G
+      emojiSubCategory: B
     })
   })

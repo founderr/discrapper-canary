@@ -30,8 +30,8 @@ function E() {
     I = t === d.DEFAULT_DEVICE_ID && o.default.lastInputSystemDevice.justChanged || s === d.DEFAULT_DEVICE_ID && o.default.lastOutputSystemDevice.justChanged;
   if (I && !C) return;
   let S = l.first(Object.keys(o.default.lastDeviceConnected)),
-    p = null != S && "" !== S ? o.default.lastDeviceConnected[S] : null;
-  null != p && (o.default.initialized && null != S && (r.default.isCertified(o.default.inputDevices[S]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[S]) : r.default.isCertified(o.default.outputDevices[S]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[S]))), f = !0, (0, i.openModalLazy)(async () => {
+    m = null != S && "" !== S ? o.default.lastDeviceConnected[S] : null;
+  null != m && (o.default.initialized && null != S && (r.default.isCertified(o.default.inputDevices[S]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[S]) : r.default.isCertified(o.default.outputDevices[S]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[S]))), f = !0, (0, i.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("134064").then(n.bind(n, "134064"));
@@ -41,7 +41,7 @@ function E() {
         onClose: l
       } = n;
       return (0, a.jsx)(t, {
-        device: p,
+        device: m,
         certifiedDeviceMetadata: e,
         transitionState: s,
         onClose: () => (f = !1, l())

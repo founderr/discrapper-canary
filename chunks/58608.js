@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var r = n("37983"),
-  i = n("884691"),
-  u = n("118810"),
-  o = n("446674"),
-  s = n("206230"),
+var i = n("37983"),
+  r = n("884691"),
+  o = n("118810"),
+  s = n("446674"),
+  u = n("206230"),
   a = n("719347");
 let l = e => {
   let {
@@ -17,39 +17,39 @@ let l = e => {
     playOnHover: l,
     responsive: c,
     mediaLayoutType: d,
-    ...E
-  } = e, f = (0, o.useStateFromStores)([s.default], () => s.default.useReducedMotion), _ = i.useRef(null);
+    ...f
+  } = e, _ = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion), h = r.useRef(null);
 
-  function h() {
+  function E() {
     var e;
-    l && (null == _ || null === (e = _.current) || void 0 === e || e.play())
+    l && (null == h || null === (e = h.current) || void 0 === e || e.play())
   }
 
-  function I() {
+  function A() {
     var e;
-    l && (null == _ || null === (e = _.current) || void 0 === e || e.pause())
+    l && (null == h || null === (e = h.current) || void 0 === e || e.pause())
   }
-  return i.useLayoutEffect(() => () => {
+  return r.useLayoutEffect(() => () => {
     let {
       current: e
-    } = _;
+    } = h;
     null != e && function(e) {
       e.removeAttribute("src"), Array.from(e.children).forEach(e => {
-        (0, u.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, u.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
+        (0, o.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, o.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
       });
       try {
         e.load()
       } catch (e) {}
     }(e)
-  }, []), i.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(_.current)) : null != t && (t.current = _.current), () => {
+  }, []), r.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(h.current)) : null != t && (t.current = h.current), () => {
     "function" == typeof t ? t(null) : null != t && (t.current = null)
-  }), [t, _]), (0, r.jsx)("video", {
-    ref: _,
-    autoPlay: !f && !l && n,
-    onMouseEnter: h,
-    onMouseLeave: I,
-    onFocus: h,
-    onBlur: I,
+  }), [t, h]), (0, i.jsx)("video", {
+    ref: h,
+    autoPlay: !_ && !l && n,
+    onMouseEnter: E,
+    onMouseLeave: A,
+    onFocus: E,
+    onBlur: A,
     style: d === a.MediaLayoutType.MOSAIC ? {
       width: "100%",
       height: "100%",
@@ -57,16 +57,16 @@ let l = e => {
       objectFit: "cover"
     } : c ? function() {
       return {
-        maxWidth: E.width,
-        maxHeight: E.height,
+        maxWidth: f.width,
+        maxHeight: f.height,
         width: "100%",
         height: "100%"
       }
     }() : {},
-    ...E
+    ...f
   })
 };
-var c = i.forwardRef((e, t) => (0, r.jsx)(l, {
+var c = r.forwardRef((e, t) => (0, i.jsx)(l, {
   ...e,
   externalRef: t
 }))

@@ -84,8 +84,8 @@ var l, i, a = n("37983"),
   k = n("599110"),
   w = n("449008"),
   F = n("874276"),
-  G = n("49111"),
-  B = n("894282"),
+  B = n("49111"),
+  G = n("894282"),
   H = n("995307"),
   V = n("719347"),
   K = n("782340"),
@@ -183,7 +183,7 @@ function Q(e) {
       "aria-label": K.default.Messages.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE,
       className: W.mediaMosaicAltTextPopout,
       onKeyDown: e => {
-        e.key === B.KeyboardEventKey.Escape && setTimeout(() => {
+        e.key === G.KeyboardEventKey.Escape && setTimeout(() => {
           var e;
           return null === (e = g.current) || void 0 === e ? void 0 : e.focus()
         }, 0)
@@ -400,7 +400,7 @@ function ei(e) {
     return null !== (e = I.default.summaries(i.id)) && void 0 !== e ? e : []
   }, [i]), F = (0, C.default)(L);
   s.useEffect(() => {
-    !d.isEqual(F, L) && k.default.track(G.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !d.isEqual(F, L) && k.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: L.length,
       message_counts: L.map(e => e.count),
       start_message_ids: L.map(e => e.startId),
@@ -411,7 +411,7 @@ function ei(e) {
       channel_type: i.type
     })
   }, [L, F, i.guild_id, i.id, i.type]);
-  let B = (0, f.useStateFromStores)([x.default], () => {
+  let G = (0, f.useStateFromStores)([x.default], () => {
       var e;
       return null !== (e = null == L ? void 0 : L.map(e => {
         var t;
@@ -438,7 +438,7 @@ function ei(e) {
     }, [z, Z]),
     [q, X] = s.useState(!1),
     Q = s.useCallback(() => {
-      k.default.track(G.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      k.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !q,
         num_summaries: L.length,
         message_counts: L.map(e => e.count),
@@ -460,7 +460,7 @@ function ei(e) {
           u.addAutomaticAnchorCallback(J, !1)
         }, 100)
       };
-      u.removeAutomaticAnchorCallback(J), u.addScrollCompleteCallback(l), k.default.track(G.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+      u.removeAutomaticAnchorCallback(J), u.addScrollCompleteCallback(l), k.default.track(B.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: i.guild_id,
@@ -491,7 +491,7 @@ function ei(e) {
   }, [O, q]);
   let et = s.useCallback(e => {
     var t;
-    !((0, c.isElement)(e.target) && (null === (t = A.current) || void 0 === t ? void 0 : t.contains(e.target))) && (q && k.default.track(G.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    !((0, c.isElement)(e.target) && (null === (t = A.current) || void 0 === t ? void 0 : t.contains(e.target))) && (q && k.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: L.length,
       message_counts: L.map(e => e.count),
@@ -511,10 +511,10 @@ function ei(e) {
   let en = s.useMemo(() => (0, a.jsx)(_.default, {
       channel: i,
       summaries: L,
-      summariesMembers: B,
+      summariesMembers: G,
       selectTopic: $,
       setOpen: ee
-    }), [L, B, $, ee, i]),
+    }), [L, G, $, ee, i]),
     el = s.useCallback(() => {
       let e = y.default.ackMessageId(i.id);
       null != e ? p.default.jumpToMessage({
@@ -629,7 +629,7 @@ function es(e) {
     return null !== (e = I.default.summaries(i.id)) && void 0 !== e ? e : []
   }, [i]), R = (0, C.default)(O);
   s.useEffect(() => {
-    !d.isEqual(R, O) && k.default.track(G.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !d.isEqual(R, O) && k.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: O.length,
       message_counts: O.map(e => e.count),
       start_message_ids: O.map(e => e.startId),
@@ -654,7 +654,7 @@ function es(e) {
     j = null == O ? void 0 : null === (t = O[L]) || void 0 === t ? void 0 : t.topic;
   null == j && null == h && (null == O ? void 0 : O.length) >= 1 && (j = null === (l = O[0]) || void 0 === l ? void 0 : l.topic);
   let F = s.useMemo(() => d.get(O, L - 1), [L, O]),
-    B = s.useMemo(() => d.get(O, L + 1), [L, O]),
+    G = s.useMemo(() => d.get(O, L + 1), [L, O]),
     V = s.useMemo(() => d.debounce(e => {
       var t;
       E(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
@@ -669,7 +669,7 @@ function es(e) {
     }, [V, Y]),
     [Z, J] = s.useState(!1),
     q = s.useCallback(() => {
-      k.default.track(G.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      k.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !Z,
         num_summaries: O.length,
         message_counts: O.map(e => e.count),
@@ -691,7 +691,7 @@ function es(e) {
           r.addAutomaticAnchorCallback(z, !1)
         }, 100)
       };
-      r.removeAutomaticAnchorCallback(z), r.addScrollCompleteCallback(l), k.default.track(G.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+      r.removeAutomaticAnchorCallback(z), r.addScrollCompleteCallback(l), k.default.track(B.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: i.guild_id,
@@ -728,7 +728,7 @@ function es(e) {
   }, [N, Z]);
   let et = s.useCallback(e => {
     var t;
-    !((0, c.isElement)(e.target) && (null === (t = g.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && k.default.track(G.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    !((0, c.isElement)(e.target) && (null === (t = g.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && k.default.track(B.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: O.length,
       message_counts: O.map(e => e.count),
@@ -790,7 +790,7 @@ function es(e) {
           "aria-label": K.default.Messages.SUMMARY_PILL_NEXT,
           onClick: $,
           className: o(W.topicsPillCaret, W.topicsCaretLeft, {
-            [W.topicsPillCaretDisabled]: null == B
+            [W.topicsPillCaretDisabled]: null == G
           }),
           children: (0, a.jsx)(b.default, {
             width: 16,
