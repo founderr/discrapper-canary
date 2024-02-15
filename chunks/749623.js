@@ -34,34 +34,33 @@ var l = a("37983"),
 
 function j(e) {
   let {
-    channelId: t,
-    title: a,
-    channelName: n,
-    emojiId: s,
-    emojiName: d,
-    icon: r,
-    completed: u,
-    Icon: o
-  } = e, c = I.default.getNewMemberActionIconURL({
-    channelId: t,
-    icon: r
-  });
+    title: t,
+    emojiId: a,
+    emojiName: n,
+    icon: s,
+    completed: d,
+    Icon: r,
+    ...u
+  } = e, o = "channel" === u.variant ? u.channelId : null, c = "static" === u.variant ? u.subtitle : u.channelName, f = null != o ? I.default.getNewMemberActionIconURL({
+    channelId: o,
+    icon: s
+  }) : null;
   return (0, l.jsxs)("div", {
     className: A.action,
-    children: [null != c ? (0, l.jsx)("img", {
-      src: c,
+    children: [null != f ? (0, l.jsx)("img", {
+      src: f,
       className: A.icon,
       width: 32,
       height: 32,
       alt: "",
       "aria-hidden": !0
     }) : (0, l.jsx)(C.default, {
-      emojiId: s,
-      emojiName: d,
+      emojiId: a,
+      emojiName: n,
       size: C.CTAEmojiSize.LARGE,
       defaultComponent: (0, l.jsx)("div", {
         className: A.channelIconContainer,
-        children: (0, l.jsx)(o, {
+        children: (0, l.jsx)(r, {
           className: A.channelIcon
         })
       })
@@ -70,13 +69,13 @@ function j(e) {
       children: [(0, l.jsx)(i.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: a
-      }), null != n ? (0, l.jsx)(i.Text, {
+        children: t
+      }), null != c ? (0, l.jsx)(i.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: n
+        children: c
       }) : null]
-    }), u ? (0, l.jsx)(h.default, {
+    }), d ? (0, l.jsx)(h.default, {
       backgroundColor: "#fff",
       className: A.checkCircleCompleted,
       width: 24,
@@ -112,6 +111,7 @@ function M(e) {
     className: A.clickableAction,
     onClick: p,
     children: (0, l.jsx)(j, {
+      variant: "channel",
       channelId: c,
       title: h,
       channelName: S,

@@ -231,17 +231,17 @@ function M() {
               message: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_WELCOME_MESSAGE
             }
           }), (0, a.jsx)(N.NewMemberAction, {
-            channelId: e,
             title: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_TITLE,
-            channelName: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_CHANNEL_NAME,
+            subtitle: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_CHANNEL_NAME,
             completed: !0,
-            Icon: f.default
+            Icon: f.default,
+            variant: "static"
           }), (0, a.jsx)(N.NewMemberAction, {
-            channelId: e,
             title: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_TITLE,
-            channelName: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_CHANNEL_NAME,
+            subtitle: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_CHANNEL_NAME,
             completed: !0,
-            Icon: f.default
+            Icon: f.default,
+            variant: "static"
           })]
         })]
       }), (0, a.jsxs)("div", {
