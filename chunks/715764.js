@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return j
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
@@ -57,9 +57,9 @@ function j(e) {
     size: X,
     animateOnHover: !Z
   }), J = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
-  return (l.useEffect(() => {
+  return (a.useEffect(() => {
     n.isGuildStageVoice() && !H && (null == J ? void 0 : J.id) === F.id && u.default.selectParticipant(n.id, null)
-  }, [H]), s && !Y && !b && H && !L && null != U && S.default.supports(x.Features.VIDEO)) ? (0, a.jsx)(_.default, {
+  }, [H]), s && !Y && !b && H && !L && null != U && S.default.supports(x.Features.VIDEO)) ? (0, l.jsx)(_.default, {
     onResize: O,
     wrapperClassName: A.videoWrapper,
     className: A.content,
@@ -70,11 +70,11 @@ function j(e) {
     paused: j,
     videoSpinnerContext: F.id === w ? d.VideoSpinnerContext.SELF_VIDEO : d.VideoSpinnerContext.REMOTE_VIDEO,
     userId: F.id
-  }, k) : (0, a.jsx)("div", {
+  }, k) : (0, l.jsx)("div", {
     className: i(A.content, {
       [A.blockedAvatar]: P
     }),
-    children: (0, a.jsx)(C.default, {
+    children: (0, l.jsx)(C.default, {
       "aria-label": K,
       src: Q,
       avatarDecoration: q,

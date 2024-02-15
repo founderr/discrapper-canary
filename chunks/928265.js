@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
-var a = n("913144"),
-  l = {
+var l = n("913144"),
+  a = {
     viewPrompt: function(e, t) {
-      a.default.wait(() => {
-        a.default.dispatch({
+      l.default.wait(() => {
+        l.default.dispatch({
           type: "GUILD_PROMPT_VIEWED",
           prompt: e,
           guildId: t

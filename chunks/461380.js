@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return T
   }
 });
 var i = n("37983");
 n("884691");
 var r = n("414456"),
-  l = n.n(r),
-  u = n("384737"),
-  a = n("448052"),
-  s = n("748802"),
+  u = n.n(r),
+  a = n("384737"),
+  s = n("448052"),
+  l = n("748802"),
   o = n("260792"),
-  d = n("77078"),
-  c = n("75196"),
+  c = n("77078"),
+  d = n("75196"),
   f = n("366842");
 let E = {
     UP: f.directionUp,
@@ -27,24 +27,24 @@ let E = {
       width: n = 24,
       height: r = 24,
       color: _ = "currentColor",
-      transition: S = f.transition,
-      className: T,
+      transition: T = f.transition,
+      className: S,
       foreground: I,
       expanded: h,
-      ...v
+      ...N
     } = e, {
-      enabled: N
-    } = (0, d.useRedesignIconContext)(), C = t;
-    if (!0 === h ? C = E.DOWN : !1 === h && (C = E.RIGHT), N) {
+      enabled: p
+    } = (0, c.useRedesignIconContext)(), C = t;
+    if (!0 === h ? C = E.DOWN : !1 === h && (C = E.RIGHT), p) {
       let e = {
         [E.UP]: o.ChevronSmallUpIcon,
-        [E.DOWN]: u.ChevronSmallDownIcon,
-        [E.LEFT]: a.ChevronSmallLeftIcon,
-        [E.RIGHT]: s.ChevronSmallRightIcon
+        [E.DOWN]: a.ChevronSmallDownIcon,
+        [E.LEFT]: s.ChevronSmallLeftIcon,
+        [E.RIGHT]: l.ChevronSmallRightIcon
       } [C];
       return (0, i.jsx)(e, {
-        ...v,
-        className: T,
+        ...N,
+        className: S,
         width: n,
         height: r,
         color: _,
@@ -52,11 +52,11 @@ let E = {
       })
     }
     return (0, i.jsx)("svg", {
-      className: l(T, S, C),
+      className: u(S, T, C),
       width: n,
       height: r,
       viewBox: "0 0 24 24",
-      ...(0, c.default)(v),
+      ...(0, d.default)(N),
       children: (0, i.jsx)("path", {
         className: I,
         fill: "none",
@@ -70,4 +70,4 @@ let E = {
     })
   };
 _.Directions = E;
-var S = _
+var T = _

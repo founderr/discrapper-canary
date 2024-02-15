@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("812204"),
-  l = n("208021"),
+var l = n("812204"),
+  a = n("208021"),
   s = n("582713"),
   i = n("383606"),
   r = n("459824"),
@@ -18,8 +18,8 @@ function u(e, t, n) {
   };
   if (!(0, r.canAccessGuildMemberModViewWithExperiment)(e)) return Promise.resolve();
   let h = null !== (u = f.modViewPanel) && void 0 !== u ? u : o.ModViewPanel.INFO,
-    m = null !== (d = f.sourceLocation) && void 0 !== d ? d : a.default.MEMBER_SAFETY_PAGE;
-  return (0, i.trackModViewOpened)(e, t, h, m), l.default.openGuildSidebar({
+    m = null !== (d = f.sourceLocation) && void 0 !== d ? d : l.default.MEMBER_SAFETY_PAGE;
+  return (0, i.trackModViewOpened)(e, t, h, m), a.default.openGuildSidebar({
     guildId: e,
     baseChannelId: n,
     sidebarType: s.GuildSidebarType.GUILD_MEMBER_MOD_VIEW,

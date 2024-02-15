@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a = n("862205");
-let l = (0, a.createExperiment)({
+var l = n("862205");
+let a = (0, l.createExperiment)({
     kind: "user",
     id: "2023-03_activities_watch_together_promo_sparkles_week_1",
     label: "Activities Watch Together Promo Week 1 Sparkles",
@@ -23,7 +23,7 @@ let l = (0, a.createExperiment)({
   s = () => {
     let {
       enableWatchTogetherPromoWeek1Sparkles: e
-    } = l.useExperiment({
+    } = a.useExperiment({
       location: "703243_1"
     }, {
       autoTrackExposure: !1

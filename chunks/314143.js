@@ -26,12 +26,12 @@ function m(e) {
     label: Number(e).toLocaleString()
   })), []), x = new Intl.NumberFormat(f.default.getLocale()).format(M), S = f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
     count: _ ? "..." : x
-  }), A = M > h.pageSize || _, g = M > r.PAGINATION_PAGE_SIZE_OPTIONS[0];
+  }), A = M > h.pageSize || _, p = M > r.PAGINATION_PAGE_SIZE_OPTIONS[0];
   return (0, a.jsxs)("div", {
     className: i(E.paginationContainer),
     children: [(0, a.jsx)("div", {
       className: i(E.pageSizeSelection),
-      children: g ? (0, a.jsxs)(a.Fragment, {
+      children: p ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.Text, {
           variant: "text-md/normal",
           color: "text-muted",

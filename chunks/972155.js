@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return N
   }
 }), n("424973");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("759843"),
   i = n("446674"),
   r = n("151426"),
@@ -40,12 +40,12 @@ function N(e) {
     paused: y = !1
   } = e, O = (0, o.useAppContext)(), P = O === v.AppContext.POPOUT, b = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(M.guild_id), [M.guild_id]), {
     dismissedActivityEntryPointTileChannel: D
-  } = (0, I.useChannelCallVideoGridStore)(), U = (0, i.useStateFromStores)([h.default], () => h.default.getUserParticipantCount(M.id), [M]), w = l.useCallback(() => {
+  } = (0, I.useChannelCallVideoGridStore)(), U = (0, i.useStateFromStores)([h.default], () => h.default.getUserParticipantCount(M.id), [M]), w = a.useCallback(() => {
     I.useChannelCallVideoGridStore.setState({
       dismissedActivityEntryPointTileChannel: M.id
     })
   }, [M.id]);
-  l.useEffect(() => {
+  a.useEffect(() => {
     null != D && M.id !== D && I.useChannelCallVideoGridStore.setState({
       dismissedActivityEntryPointTileChannel: null
     })
@@ -68,7 +68,7 @@ function N(e) {
     W = (0, c.useEmbeddedActivityLaunchability)(M.id),
     Y = W !== c.EmbeddedActivityLaunchability.CAN_LAUNCH,
     z = null != D && D === M.id,
-    K = t.map(e => t => (0, a.jsx)(_.default, {
+    K = t.map(e => t => (0, l.jsx)(_.default, {
       participant: e,
       channel: M,
       className: x.tile,
@@ -91,19 +91,19 @@ function N(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != b && !k && ((B !== d.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== U) && (B !== d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(U >= 2)) || !H || Y || G || z ? V && 1 === U && F && ([d.VcTileActivityExperimentType.ONE_OR_TWO_USERS, d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(B) && H && !Y ? K.push(e => (0, a.jsx)(C.ActivityEntryPointTile, {
+  }, []), null != b && !k && ((B !== d.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== U) && (B !== d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(U >= 2)) || !H || Y || G || z ? V && 1 === U && F && ([d.VcTileActivityExperimentType.ONE_OR_TWO_USERS, d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(B) && H && !Y ? K.push(e => (0, l.jsx)(C.ActivityEntryPointTile, {
     channel: M,
     guild: b,
     width: e,
     inPopout: P,
     handleClose: w,
     userParticipantCount: U
-  })) : K.push(e => (0, a.jsx)(T.default, {
+  })) : K.push(e => (0, l.jsx)(T.default, {
     width: e,
     channel: M,
     guild: b,
     inPopout: P
-  }))) : K.push(e => (0, a.jsx)(C.ActivityEntryPointTile, {
+  }))) : K.push(e => (0, l.jsx)(C.ActivityEntryPointTile, {
     channel: M,
     guild: b,
     width: e,
@@ -111,11 +111,11 @@ function N(e) {
     handleClose: w,
     userParticipantCount: U
   })));
-  let Z = l.useCallback(e => {
-    var n, a;
-    return null !== (a = null === (n = t[e]) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : "empty-tile"
+  let Z = a.useCallback(e => {
+    var n, l;
+    return null !== (l = null === (n = t[e]) || void 0 === n ? void 0 : n.id) && void 0 !== l ? l : "empty-tile"
   }, [t]);
-  return (0, a.jsx)(g.default, {
+  return (0, l.jsx)(g.default, {
     className: R,
     keyExtractor: Z,
     paddingTop: 64,

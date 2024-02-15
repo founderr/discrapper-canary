@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a = n("862205");
-let l = (0, a.createExperiment)({
+var l = n("862205");
+let a = (0, l.createExperiment)({
   kind: "user",
   id: "2021-04_longer_group_dm_invites",
   label: "Longer Group DM Invites",
@@ -20,4 +20,4 @@ let l = (0, a.createExperiment)({
     }
   }]
 });
-var s = l
+var s = a

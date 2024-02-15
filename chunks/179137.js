@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a = n("761771"),
-  l = n("888203");
+var l = n("761771"),
+  a = n("888203");
 
 function s(e) {
-  let t = (0, a.useIsEligibleForInappropriateConversationWarning)({
+  let t = (0, l.useIsEligibleForInappropriateConversationWarning)({
       location: "safety-tools-button"
     }),
-    n = (0, l.useInappropriateConversationWarningsForChannel)(e);
+    n = (0, a.useInappropriateConversationWarningsForChannel)(e);
   return !!t && n.length > 0 && n.some(e => null != e.dismiss_timestamp)
 }

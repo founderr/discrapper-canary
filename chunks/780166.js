@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a = n("862205");
-let l = (0, a.createExperiment)({
+var l = n("862205");
+let a = (0, l.createExperiment)({
   kind: "guild",
   id: "2023-01_shared_canvas",
   label: "Shared Canvas",
@@ -20,4 +20,4 @@ let l = (0, a.createExperiment)({
     }
   }]
 });
-var s = l
+var s = a

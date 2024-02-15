@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return P
   }
 }), n("808653"), n("424973"), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("880317"),
   i = n("77078"),
   r = n("404118"),
@@ -50,11 +50,11 @@ function P(e) {
     totalResults: I,
     isSearching: x,
     showBlockedResults: N
-  } = n, A = l.useCallback(e => {
+  } = n, A = a.useCallback(e => {
     if (x) return;
     let t = e - 1;
     null == g || g(t), u.changePage(f, t)
-  }, [f, x, g]), M = l.useCallback(e => {
+  }, [f, x, g]), M = a.useCallback(e => {
     if (e.blocked) r.default.show({
       title: y.default.Messages.UNBLOCK_TO_JUMP_TITLE,
       body: y.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
@@ -69,32 +69,32 @@ function P(e) {
         search_id: v.default.getAnalyticsId(f)
       }), (0, E.transitionTo)(L.Routes.CHANNEL(n, e.channel_id, e.id))
     }
-  }, [f]), j = l.useMemo(() => {
+  }, [f]), j = a.useMemo(() => {
     let e;
     if (null == p) return [];
     let t = 0;
-    return p.reduce((n, a) => {
-      let l = a.find(e => e.isSearchHit);
-      if (!N && null != l && T.default.isBlocked(l.author.id)) return n;
-      let s = C.default.getChannel(a[0].channel_id);
+    return p.reduce((n, l) => {
+      let a = l.find(e => e.isSearchHit);
+      if (!N && null != a && T.default.isBlocked(a.author.id)) return n;
+      let s = C.default.getChannel(l[0].channel_id);
       return null == s ? n : ((null == e || e !== s.id) && n.push({
         channel: s,
         results: [],
         startIndex: t
-      }), t += 1, n[n.length - 1].results.push(a), e = null == s ? void 0 : s.id, n)
+      }), t += 1, n[n.length - 1].results.push(l), e = null == s ? void 0 : s.id, n)
     }, [])
-  }, [p, N]), P = l.useRef([]), D = j.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
+  }, [p, N]), P = a.useRef([]), D = j.reduce((e, t) => e + 1 + t.results.length, 0), U = a.useCallback((e, t) => {
     if (!c.default.keyboardModeEnabled) return;
     let n = P.current,
-      a = null != t ? n[t] : void 0;
-    if (null == a || null == a.hitRef.current) return;
-    let l = a.hitRef.current.getClientRects()[0],
-      s = l.top - .5 * l.height;
+      l = null != t ? n[t] : void 0;
+    if (null == l || null == l.hitRef.current) return;
+    let a = l.hitRef.current.getClientRects()[0],
+      s = a.top - .5 * a.height;
     m(s, !1, () => {
       var t;
       null === (t = document.getElementById(e)) || void 0 === t || t.focus()
     })
-  }, [m]), w = l.useCallback(e => {
+  }, [m]), w = a.useCallback(e => {
     let t = P.current[e];
     null == t || t.jumpTo()
   }, []), F = (0, s.useListNavigator)({
@@ -107,13 +107,13 @@ function P(e) {
     let {
       channel: t,
       results: n,
-      startIndex: l
+      startIndex: a
     } = e;
-    return (0, a.jsx)(b, {
+    return (0, l.jsx)(b, {
       channel: t,
       results: n,
       highlighter: B,
-      startIndex: l,
+      startIndex: a,
       resultRefs: P,
       totalResults: I,
       scrollTo: m,
@@ -123,29 +123,29 @@ function P(e) {
       jumpToMessage: M,
       listNavigator: F,
       favoriteSearch: V
-    }, "".concat(t.id, "-").concat(l))
+    }, "".concat(t.id, "-").concat(a))
   });
   H.push();
-  let G = l.useRef(null);
-  l.useLayoutEffect(() => {
+  let G = a.useRef(null);
+  a.useLayoutEffect(() => {
     var e;
     null === (e = G.current) || void 0 === e || e.focus()
   }, [p]);
   let W = (0, i.useFocusJumpSection)();
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsx)("div", {
       ref: G,
       ...F.getContainerProps(),
       ...W,
       "aria-busy": x,
       children: H
-    }), S > 0 ? (0, a.jsxs)(i.Clickable, {
+    }), S > 0 ? (0, l.jsxs)(i.Clickable, {
       tag: "div",
       className: O.resultsBlocked,
       onClick: () => u.setShowBlockedResults(f, !N),
-      children: [(0, a.jsx)("div", {
+      children: [(0, l.jsx)("div", {
         className: O.resultsBlockedImage
-      }), (0, a.jsx)("div", {
+      }), (0, l.jsx)("div", {
         className: O.resultsBlockedText,
         children: N ? y.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
           count: S
@@ -153,7 +153,7 @@ function P(e) {
           count: S
         })
       })]
-    }) : null, !x && !V && (0, a.jsx)(R.default, {
+    }) : null, !x && !V && (0, l.jsx)(R.default, {
       changePage: A,
       offset: _,
       totalResults: I,
@@ -178,7 +178,7 @@ function b(e) {
     jumpToMessage: P,
     listNavigator: b,
     favoriteSearch: D
-  } = e, U = g.RenderSpoilers.useSetting(), w = l.useCallback(e => {
+  } = e, U = g.RenderSpoilers.useSetting(), w = a.useCallback(e => {
     if (e === x.default.getChannelId()) return;
     let t = C.default.getChannel(e);
     if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, S.transitionToChannel)(t.id)
@@ -189,45 +189,45 @@ function b(e) {
     embeds: []
   }, {
     postProcessor: o
-  }), z = l.useRef(null), [K, Z] = l.useState(!1);
-  l.useEffect(() => {
+  }), z = a.useRef(null), [K, Z] = a.useState(!1);
+  a.useEffect(() => {
     let e = z.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth)
   }, []);
   let X = [F, B, k].filter(e => null != e).join(", ");
-  return (0, a.jsx)(A.ObscuredDisplayContext.Provider, {
+  return (0, l.jsx)(A.ObscuredDisplayContext.Provider, {
     value: (0, m.default)(U, W),
-    children: (0, a.jsxs)("ul", {
+    children: (0, l.jsxs)("ul", {
       role: "group",
       className: O.searchResultGroup,
       "aria-label": X,
-      children: [(0, a.jsx)(i.Clickable, {
+      children: [(0, l.jsx)(i.Clickable, {
         onClick: () => w(s.id),
-        children: (0, a.jsxs)("div", {
+        children: (0, l.jsxs)("div", {
           className: O.channelNameContainer,
-          children: [(0, a.jsx)(H, {
+          children: [(0, l.jsx)(H, {
             className: O.channelNameIcon,
             width: 16,
             height: 16
-          }), (0, a.jsx)(i.Tooltip, {
+          }), (0, l.jsx)(i.Tooltip, {
             text: F,
             shouldShow: K,
-            children: e => (0, a.jsxs)("span", {
+            children: e => (0, l.jsxs)("span", {
               ...e,
               ref: z,
               className: O.channelNameText,
               children: [D && null !== k && "".concat(k, " : "), Y]
             })
-          }), null != V && null != B && null != G ? (0, a.jsxs)(i.Clickable, {
+          }), null != V && null != B && null != G ? (0, l.jsxs)(i.Clickable, {
             className: O.parentChannelNameClickable,
             onClick: e => {
               e.stopPropagation(), w(V.id)
             },
-            children: [(0, a.jsx)(G, {
+            children: [(0, l.jsx)(G, {
               className: O.parentChannelNameIcon,
               width: 12,
               height: 12
-            }), (0, a.jsx)(i.Text, {
+            }), (0, l.jsx)(i.Text, {
               className: O.parentChannelNameText,
               variant: "text-xs/medium",
               color: "header-secondary",
@@ -237,7 +237,7 @@ function b(e) {
         })
       }), r.map((e, t) => {
         let n = u + t;
-        return (0, a.jsx)(j.default, {
+        return (0, l.jsx)(j.default, {
           ref: e => d.current[n] = e,
           totalResults: c,
           scrollTo: E,

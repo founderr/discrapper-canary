@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return E
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("77078"),
   i = n("660279"),
   r = n("998650"),
@@ -21,22 +21,22 @@ var a = n("37983"),
 function E(e) {
   let {
     channel: t
-  } = e, n = (0, d.useThreadNotificationSetting)(t), [E, S] = l.useState(!1), g = (0, s.useRedesignIconContext)().enabled;
-  l.useEffect(() => {
+  } = e, n = (0, d.useThreadNotificationSetting)(t), [E, S] = a.useState(!1), g = (0, s.useRedesignIconContext)().enabled;
+  a.useEffect(() => {
     let e = () => S(!0);
     return u.ComponentDispatch.subscribe(h.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
       u.ComponentDispatch.unsubscribe(h.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
     }
   }, []);
   let C = m.default.Messages.NOTIFICATION_SETTINGS;
-  return (0, a.jsx)(s.Popout, {
+  return (0, l.jsx)(s.Popout, {
     shouldShow: E,
     animation: s.Popout.Animation.NONE,
     position: "bottom",
     align: "right",
     autoInvert: !1,
     onRequestClose: () => S(!1),
-    renderPopout: e => (0, a.jsx)(c.default, {
+    renderPopout: e => (0, l.jsx)(c.default, {
       ...e,
       channel: t,
       navId: "thread-context",
@@ -44,16 +44,16 @@ function E(e) {
     }),
     children: (e, t) => {
       let {
-        isShown: l
+        isShown: a
       } = t;
-      return (0, a.jsx)(o.default.Icon, {
+      return (0, l.jsx)(o.default.Icon, {
         ...e,
         onClick: () => S(e => !e),
-        tooltip: l ? null : C,
+        tooltip: a ? null : C,
         icon: n === f.ThreadMemberFlags.NO_MESSAGES ? r.default : i.default,
         foreground: n !== f.ThreadMemberFlags.NO_MESSAGES || g ? null : p.strikethrough,
         "aria-label": C,
-        selected: l
+        selected: a
       })
     }
   })

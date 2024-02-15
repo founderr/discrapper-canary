@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return L
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
@@ -36,13 +36,13 @@ let R = e => {
   let {
     onClick: t
   } = e;
-  return (0, a.jsxs)(o.Clickable, {
+  return (0, l.jsxs)(o.Clickable, {
     onClick: t,
     className: A.addEntryCard,
-    children: [(0, a.jsx)("img", {
+    children: [(0, l.jsx)("img", {
       alt: "",
       src: M
-    }), (0, a.jsx)(o.Text, {
+    }), (0, l.jsx)(o.Text, {
       variant: "text-sm/semibold",
       color: "header-primary",
       className: A.addServerText,
@@ -54,42 +54,42 @@ let R = e => {
 function j(e) {
   let {
     entry: t
-  } = e, [s, r] = l.useState(!1), {
+  } = e, [s, r] = a.useState(!1), {
     canEdit: u
   } = (0, T.default)(t);
-  return (0, a.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: i(A.actionButtonsContainer, {
       [A.forceButtonsShow]: s
     }),
-    children: (0, a.jsxs)(_.default, {
-      children: [u ? (0, a.jsx)(o.Tooltip, {
+    children: (0, l.jsxs)(_.default, {
+      children: [u ? (0, l.jsx)(o.Tooltip, {
         text: N.default.Messages.HUB_ENTRY_UPDATE,
         hideOnClick: !0,
         children: e => {
           let {
-            onClick: l,
+            onClick: a,
             ...s
           } = e;
-          return (0, a.jsx)(_.Button, {
+          return (0, l.jsx)(_.Button, {
             ...s,
             onClick: () => {
-              null == l || l(), (0, o.openModalLazy)(async () => {
+              null == a || a(), (0, o.openModalLazy)(async () => {
                 let {
                   default: e
                 } = await n.el("895792").then(n.bind(n, "895792"));
-                return n => (0, a.jsx)(e, {
+                return n => (0, l.jsx)(e, {
                   ...n,
                   entry: t
                 })
               })
             },
             "aria-label": N.default.Messages.HUB_ENTRY_UPDATE,
-            children: (0, a.jsx)(g.default, {
+            children: (0, l.jsx)(g.default, {
               className: A.overflowIcon
             })
           })
         }
-      }) : null, (0, a.jsx)(v.default, {
+      }) : null, (0, l.jsx)(v.default, {
         onRequestOpen: () => r(!0),
         onRequestClose: () => r(!1),
         entry: t,
@@ -99,22 +99,22 @@ function j(e) {
             onClick: t,
             ...n
           } = e;
-          return (0, a.jsx)(o.Tooltip, {
+          return (0, l.jsx)(o.Tooltip, {
             text: N.default.Messages.MORE,
             hideOnClick: !0,
             children: e => {
               let {
-                onClick: l,
+                onClick: a,
                 ...s
               } = e;
-              return (0, a.jsx)(_.Button, {
+              return (0, l.jsx)(_.Button, {
                 ...n,
                 ...s,
                 onClick: e => {
-                  null == l || l(), t(e)
+                  null == a || a(), t(e)
                 },
                 "aria-label": N.default.Messages.MORE,
-                children: (0, a.jsx)(S.default, {
+                children: (0, l.jsx)(S.default, {
                   className: A.overflowIcon
                 })
               })
@@ -129,7 +129,7 @@ var L = e => {
   var t;
   let {
     entry: s
-  } = e, [i, S] = l.useState(!1), g = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(s.guildId)), _ = null != g, T = async () => {
+  } = e, [i, S] = a.useState(!1), g = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(s.guildId)), _ = null != g, T = async () => {
     S(!0);
     try {
       _ ? (0, f.transitionToGuild)(s.guildId) : await d.default.joinGuild(s.guildId, {
@@ -147,37 +147,37 @@ var L = e => {
     icon: s.icon,
     size: 40
   })) && void 0 !== t ? t : void 0, R = N.default.Messages.JOIN;
-  return _ && (R = N.default.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, a.jsxs)("div", {
+  return _ && (R = N.default.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, l.jsxs)("div", {
     className: A.card,
     onContextMenu: e => {
       (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("184727").then(n.bind(n, "184727"));
-        return t => (0, a.jsx)(e, {
+        return t => (0, l.jsx)(e, {
           ...t,
           entry: s
         })
       })
     },
-    children: [(0, a.jsxs)("div", {
+    children: [(0, l.jsxs)("div", {
       className: A.cardHeader,
-      children: [(0, a.jsx)("div", {
+      children: [(0, l.jsx)("div", {
         className: A.splash,
-        children: null != v && (0, a.jsx)("img", {
+        children: null != v && (0, l.jsx)("img", {
           src: v,
           alt: "",
           className: A.splashImage
         })
-      }), (0, a.jsx)("div", {
+      }), (0, l.jsx)("div", {
         className: A.guildIcon,
-        children: (0, a.jsx)(C.default, {
+        children: (0, l.jsx)(C.default, {
           mask: C.default.Masks.SQUIRCLE,
           width: 48,
           height: 48,
-          children: (0, a.jsx)("div", {
+          children: (0, l.jsx)("div", {
             className: A.iconMask,
-            children: (0, a.jsx)(E.default, {
+            children: (0, l.jsx)(E.default, {
               className: A.icon,
               iconSrc: M,
               guild: new h.default(s),
@@ -187,43 +187,43 @@ var L = e => {
           })
         })
       })]
-    }), (0, a.jsxs)("div", {
+    }), (0, l.jsxs)("div", {
       className: A.guildInfo,
-      children: [(0, a.jsxs)("div", {
+      children: [(0, l.jsxs)("div", {
         className: A.title,
-        children: [(0, a.jsx)(p.default, {
+        children: [(0, l.jsx)(p.default, {
           className: A.guildBadge,
           guild: s,
           tooltipColor: o.Tooltip.Colors.PRIMARY
-        }), (0, a.jsx)(o.Text, {
+        }), (0, l.jsx)(o.Text, {
           className: A.guildName,
           variant: "heading-md/semibold",
           color: "header-primary",
           children: s.name
         })]
-      }), (0, a.jsx)(o.Text, {
+      }), (0, l.jsx)(o.Text, {
         className: A.description,
         variant: "text-sm/normal",
         color: "header-secondary",
         children: s.description
-      }), (0, a.jsxs)("div", {
+      }), (0, l.jsxs)("div", {
         className: A.memberInfo,
-        children: [null != s.approximatePresenceCount && (0, a.jsxs)("div", {
+        children: [null != s.approximatePresenceCount && (0, l.jsxs)("div", {
           className: A.memberCount,
-          children: [(0, a.jsx)("div", {
+          children: [(0, l.jsx)("div", {
             className: A.dotOnline
-          }), (0, a.jsx)(o.Text, {
+          }), (0, l.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
             children: N.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
               membersOnline: s.approximatePresenceCount
             })
           })]
-        }), null != s.approximateMemberCount && (0, a.jsxs)("div", {
+        }), null != s.approximateMemberCount && (0, l.jsxs)("div", {
           className: A.memberCount,
-          children: [(0, a.jsx)("div", {
+          children: [(0, l.jsx)("div", {
             className: A.dotOffline
-          }), (0, a.jsx)(o.Text, {
+          }), (0, l.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
             children: N.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
@@ -231,14 +231,14 @@ var L = e => {
             })
           })]
         })]
-      }), (0, a.jsx)(o.Button, {
+      }), (0, l.jsx)(o.Button, {
         submitting: i,
         className: A.joinButton,
         color: _ ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
         onClick: T,
         children: R
       })]
-    }), (0, a.jsx)(j, {
+    }), (0, l.jsx)(j, {
       entry: s
     })]
   })

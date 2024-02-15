@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   MaskColor: function() {
-    return l
+    return a
   },
   FreeActivityIndicatorDot: function() {
     return u
   }
 });
-var a, l, s = n("37983");
+var l, a, s = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
   o = n("520696");
-(a = l || (l = {}))[a.POPOUT = 0] = "POPOUT", a[a.SECONDARY = 1] = "SECONDARY", a[a.BLACK = 2] = "BLACK";
+(l = a || (a = {}))[l.POPOUT = 0] = "POPOUT", l[l.SECONDARY = 1] = "SECONDARY", l[l.BLACK = 2] = "BLACK";
 let u = e => {
   let {
     left: t,
     top: n = 0,
-    right: a = 0,
-    bottom: l,
+    right: l = 0,
+    bottom: a,
     size: i = 8,
     alert: u = !1,
     maskColor: d = 1
@@ -35,8 +35,8 @@ let u = e => {
       width: i,
       left: t,
       top: n,
-      right: a,
-      bottom: l
+      right: l,
+      bottom: a
     }
   })
 }

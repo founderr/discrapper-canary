@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("77078"),
   r = n("227231"),
   o = n("782340"),
@@ -17,16 +17,16 @@ var l = n("414456"),
       className: t,
       quest: n
     } = e;
-    return (0, a.jsxs)("div", {
+    return (0, l.jsxs)("div", {
       className: s(u.wrapper, t),
       style: {
         color: n.config.colors.primary
       },
-      children: [(0, a.jsx)("img", {
+      children: [(0, l.jsx)("img", {
         alt: n.config.messages.rewardName,
         className: u.rewardTile,
         src: (0, r.getRewardAssetUrl)(n.id)
-      }), (0, a.jsx)(i.Text, {
+      }), (0, l.jsx)(i.Text, {
         className: u.instructions,
         variant: "text-sm/normal",
         color: "text-normal",

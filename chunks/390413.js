@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   ListType: function() {
-    return a
+    return l
   },
   default: function() {
     return m
   }
 }), n("222007");
-var a, l, s = n("37983"),
+var l, a, s = n("37983"),
   i = n("884691"),
   r = n("414456"),
   o = n.n(r),
@@ -16,13 +16,13 @@ var a, l, s = n("37983"),
   c = n("67602"),
   f = n("274210"),
   h = n("228450");
-(l = a || (a = {}))[l.MutualFriendsList = 0] = "MutualFriendsList", l[l.MutualGuildList = 1] = "MutualGuildList", l[l.AppsList = 2] = "AppsList";
+(a = l || (l = {}))[a.MutualFriendsList = 0] = "MutualFriendsList", a[a.MutualGuildList = 1] = "MutualGuildList", a[a.AppsList = 2] = "AppsList";
 var m = e => {
   let {
     header: t,
     children: n,
-    itemType: a = 1,
-    isLoadingHeader: l,
+    itemType: l = 1,
+    isLoadingHeader: a,
     isLoadingContents: r,
     loadingContentsCount: m = 0,
     className: p,
@@ -43,7 +43,7 @@ var m = e => {
       onMouseEnter: E,
       onFocus: S,
       onClick: () => C(!g),
-      children: l ? (0, s.jsxs)(s.Fragment, {
+      children: a ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(c.ContentBlob, {
           width: 34,
           opacity: .08
@@ -65,8 +65,8 @@ var m = e => {
         length: m
       }).map((e, t) => (0, s.jsxs)("div", {
         className: o({
-          [h.mutualFriendItem]: 0 === a,
-          [h.mutualGuildsItem]: 1 === a
+          [h.mutualFriendItem]: 0 === l,
+          [h.mutualGuildsItem]: 1 === l
         }),
         children: [(0, s.jsx)(c.ContentBlob, {
           width: 34,

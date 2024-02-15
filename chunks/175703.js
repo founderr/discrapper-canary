@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
+var a = n("77078"),
   s = n("184727"),
   i = e => {
     let {
@@ -17,20 +17,20 @@ var l = n("77078"),
       onRequestOpen: o,
       onRequestClose: u
     } = e;
-    return (0, a.jsx)(l.Popout, {
+    return (0, l.jsx)(a.Popout, {
       onRequestOpen: o,
       onRequestClose: u,
-      animation: l.Popout.Animation.NONE,
+      animation: a.Popout.Animation.NONE,
       position: "bottom",
       spacing: 4,
       align: "right",
       renderPopout: e => {
         let {
-          closePopout: l
+          closePopout: a
         } = e;
-        return (0, a.jsx)(s.default, {
+        return (0, l.jsx)(s.default, {
           entry: t,
-          closePopout: l,
+          closePopout: a,
           forceLightTheme: n,
           hideEditButton: i
         })

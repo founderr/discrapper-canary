@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a = n("884691"),
-  l = n("446674"),
+var l = n("884691"),
+  a = n("446674"),
   s = n("374014"),
   i = n("205817"),
   r = n("599110"),
@@ -18,18 +18,18 @@ function d(e, t) {
     handleMouseMove: d,
     handleMouseUp: c,
     handleMouseEnter: f
-  } = e, h = a.useRef(null), m = (0, l.useStateFromStores)([i.default], () => i.default.getRTCConnection((0, s.encodeStreamKey)(t))), p = a.useCallback((e, t, a) => {
-    h.current = Date.now(), n(e, t, a)
-  }, [n]), E = a.useCallback((e, t, n) => {
+  } = e, h = l.useRef(null), m = (0, a.useStateFromStores)([i.default], () => i.default.getRTCConnection((0, s.encodeStreamKey)(t))), p = l.useCallback((e, t, l) => {
+    h.current = Date.now(), n(e, t, l)
+  }, [n]), E = l.useCallback((e, t, n) => {
     if (c(e, t, n), null != h.current) {
       if (null != m) {
-        var a, l, s;
-        a = e, l = m, s = Date.now() - h.current, r.default.track(o.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
-          feature_name: "".concat(u.AnalyticsPremiumFeatureNames.SHARED_CANVAS, "_").concat(a.type),
+        var l, a, s;
+        l = e, a = m, s = Date.now() - h.current, r.default.track(o.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
+          feature_name: "".concat(u.AnalyticsPremiumFeatureNames.SHARED_CANVAS, "_").concat(l.type),
           feature_tier: u.AnalyticsPremiumFeatureTiers.FREE,
-          media_session_id: l.getMediaSessionId(),
-          parent_media_session_id: l.parentMediaSessionId,
-          guild_id: l.guildId,
+          media_session_id: a.getMediaSessionId(),
+          parent_media_session_id: a.parentMediaSessionId,
+          guild_id: a.guildId,
           duration: s
         })
       }

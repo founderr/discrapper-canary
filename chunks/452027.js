@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return T
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("151426"),
   i = n("255397"),
   r = n("264732"),
@@ -29,39 +29,39 @@ var a = n("37983"),
       guild: n,
       maxWidth: T
     } = e;
-    l.useEffect(() => {
+    a.useEffect(() => {
       (0, c.markDismissibleContentAsDismissed)(s.DismissibleContent.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, {
         dismissAction: C.ContentDismissActionType.AUTO
       })
     }, []);
-    let v = l.useCallback(() => {
+    let v = a.useCallback(() => {
         i.default.updateChatOpen(t.id, !1), E.ComponentDispatch.safeDispatch(g.ComponentActions.FOCUS_CHAT_BUTTON)
       }, [t.id]),
-      x = (0, a.jsx)(p.default.Icon, {
+      x = (0, l.jsx)(p.default.Icon, {
         icon: m.default,
         tooltip: _.default.Messages.CLOSE,
         onClick: v
       });
-    return (0, a.jsxs)(u.default, {
+    return (0, l.jsxs)(u.default, {
       sidebarType: u.ChatSidebarType.CallChatSidebar,
       maxWidth: T,
       floatingLayer: S.default,
-      children: [(0, a.jsx)(r.default, {
+      children: [(0, l.jsx)(r.default, {
         channel: t,
         draftType: f.DraftType.ChannelMessage
-      }), (0, a.jsxs)(p.default, {
+      }), (0, l.jsxs)(p.default, {
         toolbar: x,
         "aria-label": _.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
-        children: [(0, a.jsx)(p.default.Icon, {
+        children: [(0, l.jsx)(p.default.Icon, {
           icon: h.default,
           disabled: !0,
           "aria-label": _.default.Messages.VOICE_CHAT_TEXT_CHANNEL
-        }), (0, a.jsx)(p.default.Title, {
+        }), (0, l.jsx)(p.default.Title, {
           children: t.name
         })]
-      }), (0, a.jsx)("div", {
+      }), (0, l.jsx)("div", {
         className: I.chat,
-        children: (0, a.jsx)(o.default, {
+        children: (0, l.jsx)(o.default, {
           channel: t,
           guild: n,
           chatInputType: d.ChatInputTypes.SIDEBAR

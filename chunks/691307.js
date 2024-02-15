@@ -24,14 +24,14 @@ var a = l("37983"),
   x = l("553275"),
   S = l("151123"),
   A = l("337092"),
-  g = l("850646"),
-  p = l("894282"),
-  L = l("465314");
-let H = {
+  p = l("850646"),
+  L = l("894282"),
+  H = l("465314");
+let N = {
     transform: "translate3d(15%, 0, 0)",
     opacity: .3
   },
-  N = {
+  g = {
     transform: "translate3d(5%, 0, 0)",
     opacity: .5
   },
@@ -44,7 +44,7 @@ let H = {
     friction: 24,
     tension: 260
   },
-  v = e => e.shiftKey || e.key === p.KeyboardKeysUpdated.SHIFT,
+  v = e => e.shiftKey || e.key === L.KeyboardKeysUpdated.SHIFT,
   j = e => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
   D = n.memo(function(e) {
     let {
@@ -55,7 +55,7 @@ let H = {
       compact: d,
       onSelectRow: f,
       onResetForNewMembers: E
-    } = e, M = (0, u.default)([c.default], () => c.default.useReducedMotion), p = (0, C.useHasAnyModalOpen)(), D = (0, m.useIsWindowFocused)(), [b, O] = n.useState(!1), [B, V] = n.useState(!1), y = !p && b && B;
+    } = e, M = (0, u.default)([c.default], () => c.default.useReducedMotion), L = (0, C.useHasAnyModalOpen)(), D = (0, m.useIsWindowFocused)(), [b, O] = n.useState(!1), [B, V] = n.useState(!1), y = !L && b && B;
     n.useEffect(() => {
       !D && (O(!1), V(!1))
     }, [D]), n.useLayoutEffect(() => {
@@ -71,32 +71,32 @@ let H = {
     }, []), n.useEffect(() => {
       (0, _.getMemberSupplemental)(l.id, t)
     }, [l.id, t]);
-    let F = t.length > 30,
-      U = (0, r.useTransition)(t, {
+    let U = t.length > 30,
+      F = (0, r.useTransition)(t, {
         key: e => e,
-        trail: F ? 5 : 15,
+        trail: U ? 5 : 15,
         immediate: M,
         from(e) {
           let t = h.default.getEnhancedMember(l.id, e),
             a = h.default.getLastRefreshTimestamp(l.id),
             n = null != t && t.refreshTimestamp === a;
-          return null != t && 0 !== a && n ? F ? N : H : I
+          return null != t && 0 !== a && n ? U ? g : N : I
         },
         enter: I,
         config: R
       }),
       w = !M && o === x.SearchState.LOADING;
     return (0, a.jsxs)("table", {
-      className: i(L.table, s),
+      className: i(H.table, s),
       children: [(0, a.jsx)(S.default, {
         guildId: l.id,
         currentPagedMembers: t
       }), (0, a.jsx)("tbody", {
         children: o === x.SearchState.SUCCESS_FULL || o === x.SearchState.LOADING ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(g.default, {
+          children: [(0, a.jsx)(p.default, {
             guild: l,
             onSubmit: E
-          }), U((e, t) => (0, a.jsx)(A.default, {
+          }), F((e, t) => (0, a.jsx)(A.default, {
             userId: t,
             guildId: l.id,
             style: e,

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("446674"),
+var a = n("446674"),
   s = n("77078"),
   i = n("629109"),
   r = n("42887"),
@@ -16,8 +16,8 @@ var l = n("446674"),
 
 function c() {
   let e = !o.isPlatformEmbedded,
-    t = (0, l.useStateFromStores)([r.default], () => r.default.getMode()),
-    n = (e, n) => (0, a.jsx)(s.MenuRadioItem, {
+    t = (0, a.useStateFromStores)([r.default], () => r.default.getMode()),
+    n = (e, n) => (0, l.jsx)(s.MenuRadioItem, {
       id: e,
       group: "input-modes",
       label: n,

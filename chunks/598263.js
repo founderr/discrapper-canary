@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return N
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
@@ -35,11 +35,11 @@ function N(e) {
     location: A,
     className: M,
     onNavigate: R
-  } = e, j = l.useRef(null), L = (0, o.default)([p.default], () => p.default.getGuildSidebarState(N), [N]), y = l.useRef(0), [O, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), b = (0, C.useServerMessageHistoryForUser)(s, N, {
+  } = e, j = a.useRef(null), L = (0, o.default)([p.default], () => p.default.getGuildSidebarState(N), [N]), y = a.useRef(0), [O, P] = a.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), b = (0, C.useServerMessageHistoryForUser)(s, N, {
     addtionalQuery: O,
     shouldDispatch: !0
   }), D = (0, o.default)([S.default], () => S.default.getUser(s), [s]), U = (0, o.default)([E.default], () => E.default.getMember(N, s), [N, s]), w = (0, I.useProfileThemedPanelBackground)(s, N);
-  l.useLayoutEffect(() => {
+  a.useLayoutEffect(() => {
     let e = null == L ? void 0 : L.details.scrollOffset;
     if (null != e) {
       var t;
@@ -49,7 +49,7 @@ function N(e) {
       })
     }
   }, []);
-  let F = l.useCallback(e => {
+  let F = a.useCallback(e => {
       if (null == L) return;
       let t = e.target.scrollTop;
       y.current = t, (0, g.openGuildMemberModViewSidebar)(N, s, L.baseChannelId, {
@@ -59,7 +59,7 @@ function N(e) {
       })
     }, [N, s, L, O]),
     k = (0, r.throttle)(F, 300),
-    V = l.useCallback(e => {
+    V = a.useCallback(e => {
       if (null == L) return;
       let t = {
         ...O,
@@ -78,19 +78,19 @@ function N(e) {
         t = (0, d.createASTHighlighter)("");
       return e.map(e => e.map(e => {
         let n = c.default.getMessage(e.id, e.channel_id),
-          a = (0, f.createMessageRecord)(e);
-        return null != n && (a = a.merge({
+          l = (0, f.createMessageRecord)(e);
+        return null != n && (l = l.merge({
           attachments: n.attachments,
           embeds: n.embeds
-        })), a.isSearchHit ? a.set("customRenderedContent", (0, h.default)(a, {
+        })), l.isSearchHit ? l.set("customRenderedContent", (0, h.default)(l, {
           postProcessor: t,
           allowHeading: !0,
           allowList: !0
-        })) : a
+        })) : l
       }))
     }, [b.result]),
-    G = l.useMemo(() => {
-      var e, t, n, a;
+    G = a.useMemo(() => {
+      var e, t, n, l;
       return null == b.result ? {
         documentsIndexed: 0,
         isSearching: !0,
@@ -107,26 +107,26 @@ function N(e) {
         isIndexing: null !== (t = b.result.doing_deep_historical_index) && void 0 !== t && t,
         isHistoricalIndexing: null !== (n = b.result.doing_deep_historical_index) && void 0 !== n && n,
         offset: B,
-        totalResults: null !== (a = b.result.total_results) && void 0 !== a ? a : 0,
+        totalResults: null !== (l = b.result.total_results) && void 0 !== l ? l : 0,
         hasError: !1,
         showBlockedResults: !1,
         showNoResultsAlt: !1
       }
     }, [b.result, B]);
-  return null == D || null == U || null == G ? null : (0, a.jsxs)("div", {
+  return null == D || null == U || null == G ? null : (0, l.jsxs)("div", {
     className: i(v.container, M),
     style: {
       backgroundColor: w
     },
-    children: [(0, a.jsx)(_.default, {
+    children: [(0, l.jsx)(_.default, {
       guildId: N,
       userId: s,
       onNavigate: R
-    }), (0, a.jsx)(u.AdvancedScroller, {
+    }), (0, l.jsx)(u.AdvancedScroller, {
       className: i(x.innerContainer),
       ref: j,
       onScroll: k,
-      children: (0, a.jsx)(m.default, {
+      children: (0, l.jsx)(m.default, {
         searchResults: H,
         search: G,
         searchId: s,

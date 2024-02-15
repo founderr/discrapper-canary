@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("627445"),
   i = n.n(s),
   r = n("65597"),
@@ -22,7 +22,7 @@ function m(e) {
     channelId: n,
     streamerId: s,
     stream: d
-  } = e, m = l.useRef(null), p = (0, r.default)([u.default], () => u.default.getCurrentUser());
+  } = e, m = a.useRef(null), p = (0, r.default)([u.default], () => u.default.getCurrentUser());
   i(null != p, "user cannot be null"), (0, f.default)(m, p, s, n);
   let {
     handleClick: E,
@@ -38,8 +38,8 @@ function m(e) {
     focused: t,
     canvas: m.current
   });
-  return (0, a.jsx)(o.default, {
-    children: (0, a.jsx)("canvas", {
+  return (0, l.jsx)(o.default, {
+    children: (0, l.jsx)("canvas", {
       ref: m,
       onClick: E,
       onMouseDown: S,
@@ -60,7 +60,7 @@ function p(e) {
   }, {
     autoTrackExposure: !0
   });
-  return !t || e.hasScreenMessage ? null : (0, a.jsx)(m, {
+  return !t || e.hasScreenMessage ? null : (0, l.jsx)(m, {
     ...e
   })
 }

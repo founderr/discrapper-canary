@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return v
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("627445"),
-  s = n.n(l),
+var a = n("627445"),
+  s = n.n(a),
   i = n("446674"),
   r = n("18346"),
   o = n("261552"),
@@ -30,7 +30,7 @@ function v(e) {
   let {
     channel: t,
     hasActiveStream: n,
-    themeable: l = !1
+    themeable: a = !1
   } = e, v = (0, i.useStateFromStores)([h.default], () => {
     let e = h.default.getCurrentUser();
     return s(null != e, "CenterControlTray: currentUser cannot be undefined"), e
@@ -53,17 +53,17 @@ function v(e) {
       user: v,
       context: t
     });
-  return (0, a.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: T.voiceEffectsActionBar,
-    children: [R && (0, a.jsx)(C.default, {
+    children: [R && (0, l.jsx)(C.default, {
       channel: t,
-      themeable: l
-    }), j && (0, a.jsx)(g.default, {
+      themeable: a
+    }), j && (0, l.jsx)(g.default, {
       channel: t
-    }), A && M && (0, a.jsx)(p.default, {
+    }), A && M && (0, l.jsx)(p.default, {
       channel: t
-    }), N && n && (0, a.jsx)(E.default, {}), N && n && (0, a.jsx)(S.default, {
+    }), N && n && (0, l.jsx)(E.default, {}), N && n && (0, l.jsx)(S.default, {
       channel: t
-    }), N && n && (0, a.jsx)(_.default, {})]
+    }), N && n && (0, l.jsx)(_.default, {})]
   })
 }

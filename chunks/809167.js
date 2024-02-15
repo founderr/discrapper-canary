@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return o
   }
 }), n("222007"), n("424973");
-var a = n("884691"),
-  l = n("133797"),
+var l = n("884691"),
+  a = n("133797"),
   s = n("577357"),
   i = n("41391"),
   r = n("782340");
@@ -20,7 +20,7 @@ function o(e) {
   let c = n.role_id,
     f = (0, i.default)(o),
     h = f.filter(e => e.roles.includes(c)).length;
-  return a.useMemo(() => {
+  return l.useMemo(() => {
     let e = [];
     return !0 === t && e.push(r.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_VISUAL_FLAIR), 0 !== u && e.push(r.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EXCLUSIVE_CHANNELS_SUBTITLE.format({
       channelCount: u
@@ -28,6 +28,6 @@ function o(e) {
       benefitCount: d
     })), 0 !== h && e.push(r.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EMOJI_SUBTITLE.format({
       emojiCount: h
-    })), new l.default(e)
+    })), new a.default(e)
   }, [u, d, h, t])
 }

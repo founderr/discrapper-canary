@@ -43,10 +43,10 @@ function A(e) {
     menuName: C,
     onClose: T,
     onSelectDateOption: A,
-    onToggleCustomDateRange: g,
-    onSelectStartDate: p,
-    onSelectEndDate: L
-  } = e, H = [{
+    onToggleCustomDateRange: p,
+    onSelectStartDate: L,
+    onSelectEndDate: H
+  } = e, N = [{
     id: 0,
     option: null,
     label: h.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_ALL
@@ -92,7 +92,7 @@ function A(e) {
       unit: "M"
     },
     label: h.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_3_MONTHS
-  }], [N, I] = i.useState(!1), R = function() {
+  }], [g, I] = i.useState(!1), R = function() {
     if (7 !== o) return null;
     if (null != t && null != l) return "".concat(t, " - ").concat(l);
     if (null != t) return h.default.Messages.MEMBER_SAFETY_DATE_OPTION_AFTER_ONLY.format({
@@ -103,12 +103,12 @@ function A(e) {
     });
     return null
   }(), v = i.useCallback(() => {
-    I(!0), g()
-  }, [g]), j = i.useCallback(e => {
-    p(e)
-  }, [p]), D = i.useCallback(e => {
+    I(!0), p()
+  }, [p]), j = i.useCallback(e => {
     L(e)
-  }, [L]), b = i.useCallback(() => {
+  }, [L]), D = i.useCallback(e => {
+    H(e)
+  }, [H]), b = i.useCallback(() => {
     null == n && null == a && A(0, null), I(!1)
   }, [a, n, A]);
   return (0, s.jsx)(c.Menu, {
@@ -117,7 +117,7 @@ function A(e) {
     "aria-label": h.default.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
     onSelect: M.NOOP,
     children: (0, s.jsx)(c.MenuGroup, {
-      children: N ? (0, s.jsxs)(s.Fragment, {
+      children: g ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(c.MenuItem, {
           id: "back",
           action: b,
@@ -167,7 +167,7 @@ function A(e) {
           })
         })]
       }) : (0, s.jsxs)(s.Fragment, {
-        children: [H.map(e => {
+        children: [N.map(e => {
           let {
             id: t,
             option: l,

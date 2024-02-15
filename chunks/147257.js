@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return C
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("446674"),
+var a = n("446674"),
   s = n("77078"),
   i = n("244201"),
   r = n("817963"),
@@ -26,7 +26,7 @@ function C(e) {
   let {
     channelId: t,
     onClick: n
-  } = e, C = (0, i.useAppContext)(), _ = (0, E.useActiveEvent)(t), I = (0, l.useStateFromStores)([d.default], () => d.default.getChannel(t), [t]), {
+  } = e, C = (0, i.useAppContext)(), _ = (0, E.useActiveEvent)(t), I = (0, a.useStateFromStores)([d.default], () => d.default.getChannel(t), [t]), {
     canManageGuildEvent: T
   } = (0, r.useManageResourcePermissions)(I), v = T(_);
   if (null == _) return null;
@@ -40,18 +40,18 @@ function C(e) {
     N = () => {
       m.default.endEvent(_.id, _.guild_id)
     };
-  return v ? (0, a.jsx)(s.Popout, {
+  return v ? (0, l.jsx)(s.Popout, {
     renderPopout: e => {
       let {
         closePopout: t
       } = e;
-      return (0, a.jsx)(o.default, {
-        children: (0, a.jsx)(s.Menu, {
+      return (0, l.jsx)(o.default, {
+        children: (0, l.jsx)(s.Menu, {
           navId: "exit-options",
           onSelect: () => {},
           "aria-label": S.default.Messages.DISCONNECT_MENU,
           onClose: t,
-          children: (0, a.jsx)(s.MenuItem, {
+          children: (0, l.jsx)(s.MenuItem, {
             id: "end-voice-event",
             color: "danger",
             action: N,
@@ -68,7 +68,7 @@ function C(e) {
       let {
         onClick: t
       } = e;
-      return (0, a.jsx)(u.CenterControlButton, {
+      return (0, l.jsx)(u.CenterControlButton, {
         label: S.default.Messages.DISCONNECT_SELF,
         color: "red",
         iconComponent: c.default,
@@ -77,7 +77,7 @@ function C(e) {
         className: g.buttonSpacing
       })
     }
-  }) : (0, a.jsx)(u.CenterControlButton, {
+  }) : (0, l.jsx)(u.CenterControlButton, {
     className: g.buttonSpacing,
     label: S.default.Messages.DISCONNECT_SELF,
     color: "red",

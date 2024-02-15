@@ -24,14 +24,14 @@ var a = l("37983"),
   x = l("71216"),
   S = l("741919"),
   A = l("178406"),
-  g = l("645266"),
-  p = l("835257"),
-  L = l("561909"),
-  H = l("49111"),
-  N = l("782340"),
+  p = l("645266"),
+  L = l("835257"),
+  H = l("561909"),
+  N = l("49111"),
+  g = l("782340"),
   I = l("655295"),
   R = l("639826");
-let v = [p.JoinSourceType.DISCOVERY, p.JoinSourceType.VANITY_URL, p.JoinSourceType.BOT, p.JoinSourceType.HUB];
+let v = [L.JoinSourceType.DISCOVERY, L.JoinSourceType.VANITY_URL, L.JoinSourceType.BOT, L.JoinSourceType.HUB];
 
 function j(e) {
   let {
@@ -42,32 +42,32 @@ function j(e) {
     isFocused: o
   } = e, d = null != n ? n : 16, r = function(e, t) {
     switch (e) {
-      case p.JoinSourceType.BOT:
+      case L.JoinSourceType.BOT:
         return (0, a.jsx)(x.default, {
           className: I.icon,
           height: t,
           width: t
         });
-      case p.JoinSourceType.INTEGRATION:
+      case L.JoinSourceType.INTEGRATION:
         return (0, a.jsx)(S.default, {
           className: I.icon,
           height: t,
           width: t
         });
-      case p.JoinSourceType.DISCOVERY:
+      case L.JoinSourceType.DISCOVERY:
         return (0, a.jsx)(E.default, {
           className: I.icon,
           height: t,
           width: t
         });
-      case p.JoinSourceType.HUB:
+      case L.JoinSourceType.HUB:
         return (0, a.jsx)(m.default, {
           className: I.icon,
           height: t,
           width: t
         });
-      case p.JoinSourceType.INVITE:
-      case p.JoinSourceType.VANITY_URL:
+      case L.JoinSourceType.INVITE:
+      case L.JoinSourceType.VANITY_URL:
         return (0, a.jsx)(h.default, {
           className: I.icon,
           height: t,
@@ -76,7 +76,7 @@ function j(e) {
       default:
         return null
     }
-  }(t, d), u = (0, p.getJoinSourceTypeLabel)(t, s);
+  }(t, d), u = (0, L.getJoinSourceTypeLabel)(t, s);
   return (0, a.jsxs)("div", {
     className: i(I.labelWithIconContainer),
     "aria-label": u,
@@ -96,21 +96,21 @@ function D(e) {
     onClose: l
   } = e, s = (0, C.default)([A.default], () => A.default.getSearchStateByGuildId(t), [t], u), {
     inviteCodes: o
-  } = (0, L.useGuildInvites)(t), r = (0, C.default)([f.default], () => f.default.getGuild(t)), E = null == r ? void 0 : r.vanityURLCode, [m, h] = n.useState(!1), {
+  } = (0, H.useGuildInvites)(t), r = (0, C.default)([f.default], () => f.default.getGuild(t)), E = null == r ? void 0 : r.vanityURLCode, [m, h] = n.useState(!1), {
     selectedSourceInviteCode: x,
     selectedJoinSourceType: S
-  } = s, D = null != S && S !== p.JoinSourceType.UNSPECIFIED, b = n.useCallback(e => {
+  } = s, D = null != S && S !== L.JoinSourceType.UNSPECIFIED, b = n.useCallback(e => {
     let l = e.trim();
-    (0, g.updateSearchState)(t, {
+    (0, p.updateSearchState)(t, {
       ...s,
       selectedSourceInviteCode: "" !== l ? l : void 0,
       selectedJoinSourceType: void 0
     })
   }, [t, s]), O = n.useCallback(e => {
-    e === S ? (0, g.updateSearchState)(t, {
+    e === S ? (0, p.updateSearchState)(t, {
       selectedSourceInviteCode: void 0,
       selectedJoinSourceType: void 0
-    }) : (0, g.updateSearchState)(t, {
+    }) : (0, p.updateSearchState)(t, {
       selectedSourceInviteCode: null,
       selectedJoinSourceType: e
     }), h(!1)
@@ -122,8 +122,8 @@ function D(e) {
     onClose: () => {
       l()
     },
-    "aria-label": N.default.Messages.MEMBER_SAFETY_JOIN_METHOD_LABEL,
-    onSelect: H.NOOP,
+    "aria-label": g.default.Messages.MEMBER_SAFETY_JOIN_METHOD_LABEL,
+    onSelect: N.NOOP,
     children: m ? (0, a.jsxs)(c.MenuGroup, {
       children: [(0, a.jsx)(c.MenuItem, {
         id: "back",
@@ -138,7 +138,7 @@ function D(e) {
           }), (0, a.jsx)(c.Text, {
             variant: "eyebrow",
             color: "header-primary",
-            children: N.default.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
+            children: g.default.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
           })]
         })
       }), v.map(e => (0, a.jsx)(c.MenuRadioItem, {
@@ -147,7 +147,7 @@ function D(e) {
           ...t,
           type: e,
           vanityUrl: E,
-          text: (0, p.getJoinSourceTypeLabel)(e, E)
+          text: (0, L.getJoinSourceTypeLabel)(e, E)
         }),
         checked: S === e,
         disabled: !1,
@@ -162,11 +162,11 @@ function D(e) {
           query: null != x ? x : "",
           onChange: V,
           ref: t,
-          placeholder: N.default.Messages.MEMBER_SAFETY_INVITE_CODE_SEARCH_PLACEHOLDER
+          placeholder: g.default.Messages.MEMBER_SAFETY_INVITE_CODE_SEARCH_PLACEHOLDER
         })
       }, "invite-code-filter-search"), (0, a.jsx)(c.MenuSeparator, {}), (0, a.jsx)(c.MenuRadioItem, {
         id: "join-source-type-option-all",
-        label: N.default.Messages.GUILD_SETTINGS_FILTER_ALL,
+        label: g.default.Messages.GUILD_SETTINGS_FILTER_ALL,
         checked: null == x && null == S,
         disabled: !1,
         action: () => O(null),
@@ -175,7 +175,7 @@ function D(e) {
         id: "join-source-type-option-".concat(e),
         label: t => (0, a.jsx)(j, {
           ...t,
-          type: p.JoinSourceType.INVITE,
+          type: L.JoinSourceType.INVITE,
           vanityUrl: E,
           text: e
         }),
@@ -195,13 +195,13 @@ function D(e) {
               className: i(I.selectedRadio, I.labelText, {
                 [I.focused]: e.isFocused
               }),
-              children: N.default.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
+              children: g.default.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
             }), D ? (0, a.jsx)("div", {
               className: I.selectedOption,
               children: (0, a.jsx)(j, {
                 ...e,
                 size: 12,
-                text: (0, p.getJoinSourceTypeLabel)(S, E),
+                text: (0, L.getJoinSourceTypeLabel)(S, E),
                 type: S,
                 vanityUrl: E
               })

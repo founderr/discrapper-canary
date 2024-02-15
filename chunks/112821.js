@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return S
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("446674"),
   i = n("819855"),
   r = n("77078"),
@@ -34,15 +34,15 @@ function S(e) {
       loading: null == n || null != e && e.loading
     }
   }), _ = (0, s.useStateFromStores)([f.default], () => f.default.hasUnreadPins(t.id));
-  return l.useEffect(() => {
+  return a.useEffect(() => {
     u.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "pins"
     }).enabled && g.some(d.messageHasExpiredAttachmentUrl) && o.default.fetchPins(t.id, !0)
-  }, []), l.useEffect(() => {
+  }, []), a.useEffect(() => {
     _ && o.default.ackPins(t.id)
-  }, [_, t.id]), (0, a.jsx)(r.Dialog, {
+  }, [_, t.id]), (0, l.jsx)(r.Dialog, {
     "aria-label": p.default.Messages.PINNED_MESSAGES,
-    children: (0, a.jsx)(h.default, {
+    children: (0, l.jsx)(h.default, {
       onFetch: function() {
         o.default.ackPins(t.id), o.default.fetchPins(t.id)
       },
@@ -57,15 +57,15 @@ function S(e) {
       getProTip: function() {
         return t.isPrivate() ? p.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : p.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL
       },
-      renderHeader: () => (0, a.jsx)(h.Header, {
+      renderHeader: () => (0, l.jsx)(h.Header, {
         title: p.default.Messages.PINNED_MESSAGES
       }),
       renderEmptyState: function(e) {
-        let l = p.default.Messages.NO_PINS_IN_CHANNEL;
-        t.isPrivate() && (l = p.default.Messages.NO_PINS_IN_DM);
+        let a = p.default.Messages.NO_PINS_IN_CHANNEL;
+        t.isPrivate() && (a = p.default.Messages.NO_PINS_IN_DM);
         let s = (0, i.isThemeLight)(e) ? n("615184") : n("992507");
-        return (0, a.jsx)(h.EmptyStateCenter, {
-          msg: l,
+        return (0, l.jsx)(h.EmptyStateCenter, {
+          msg: a,
           image: s
         }, "emptystate")
       },

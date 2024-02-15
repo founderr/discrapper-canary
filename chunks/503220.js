@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return L
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("77078"),
   i = n("30874"),
   r = n("308798"),
@@ -33,13 +33,13 @@ var a = n("37983"),
 function R(e) {
   let {
     channel: t
-  } = e, [n, i] = l.useState(!1);
+  } = e, [n, i] = a.useState(!1);
 
   function r() {
     i(e => !e)
   }
   let o = M.default.Messages.MORE;
-  return (0, a.jsx)(s.Popout, {
+  return (0, l.jsx)(s.Popout, {
     shouldShow: n,
     animation: s.Popout.Animation.NONE,
     position: "bottom",
@@ -47,7 +47,7 @@ function R(e) {
     autoInvert: !1,
     onRequestClose: () => i(!1),
     renderPopout: function(e) {
-      return (0, a.jsx)(j, {
+      return (0, l.jsx)(j, {
         ...e,
         channel: t
       })
@@ -56,7 +56,7 @@ function R(e) {
       let {
         isShown: n
       } = t;
-      return (0, a.jsx)(T.default.Icon, {
+      return (0, l.jsx)(T.default.Icon, {
         ...e,
         onClick: r,
         tooltip: n ? null : o,
@@ -72,7 +72,7 @@ function j(e) {
   let {
     channel: t,
     closePopout: n,
-    onSelect: l
+    onSelect: a
   } = e, S = (0, o.default)(t, "Sidebar Overflow"), C = (0, d.default)(t), I = (0, h.default)(t), T = (0, m.default)(t), x = (0, i.default)(t), N = (0, u.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), y = (0, E.default)({
     id: t.id,
     label: M.default.Messages.COPY_ID_THREAD
@@ -81,23 +81,23 @@ function j(e) {
   function P() {
     (0, g.transitionToChannel)(t.id)
   }
-  return (0, a.jsxs)(s.Menu, {
+  return (0, l.jsxs)(s.Menu, {
     navId: "thread-context",
     onClose: n,
     "aria-label": M.default.Messages.THREAD_ACTIONS_MENU_LABEL,
-    onSelect: l,
-    children: [(0, a.jsxs)(s.MenuGroup, {
-      children: [S, (0, a.jsx)(s.MenuItem, {
+    onSelect: a,
+    children: [(0, l.jsxs)(s.MenuGroup, {
+      children: [S, (0, l.jsx)(s.MenuItem, {
         id: "open",
         label: M.default.Messages.OPEN_IN_FULL_VIEW,
         action: P
       })]
-    }), (0, a.jsxs)(s.MenuGroup, {
+    }), (0, l.jsxs)(s.MenuGroup, {
       children: [I, T]
-    }), (0, a.jsxs)(s.MenuGroup, {
+    }), (0, l.jsxs)(s.MenuGroup, {
       children: [j, C, R]
-    }), (0, a.jsxs)(s.MenuGroup, {
-      children: [(0, a.jsx)(s.MenuItem, {
+    }), (0, l.jsxs)(s.MenuGroup, {
+      children: [(0, l.jsx)(s.MenuItem, {
         id: "search",
         label: M.default.Messages.SEARCH,
         icon: _.default,
@@ -108,7 +108,7 @@ function j(e) {
             })
           }, 2e3)
         }
-      }), (0, a.jsx)(s.MenuItem, {
+      }), (0, l.jsx)(s.MenuItem, {
         id: "pins",
         label: M.default.Messages.PINS,
         icon: _.default,
@@ -116,9 +116,9 @@ function j(e) {
           P(), v.ComponentDispatch.dispatch(A.ComponentActions.TOGGLE_CHANNEL_PINS)
         }
       })]
-    }), (0, a.jsxs)(s.MenuGroup, {
+    }), (0, l.jsxs)(s.MenuGroup, {
       children: [O, x, N, L]
-    }), (0, a.jsx)(s.MenuGroup, {
+    }), (0, l.jsx)(s.MenuGroup, {
       children: y
     })]
   })
@@ -129,12 +129,12 @@ function L(e) {
     channel: t,
     baseChannelId: n
   } = e;
-  return (0, a.jsxs)(a.Fragment, {
-    children: [t.isForumPost() ? null : (0, a.jsx)(x.default, {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [t.isForumPost() ? null : (0, l.jsx)(x.default, {
       channel: t
-    }), (0, a.jsx)(R, {
+    }), (0, l.jsx)(R, {
       channel: t
-    }), (0, a.jsx)(T.default.Icon, {
+    }), (0, l.jsx)(T.default.Icon, {
       icon: C.default,
       tooltip: M.default.Messages.CLOSE,
       onClick: () => (0, N.closeThreadSidebar)((0, S.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)

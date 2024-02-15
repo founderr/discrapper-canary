@@ -4,9 +4,9 @@ a.r(t), a.d(t, {
     return o
   }
 });
-var l = a("37983");
+var s = a("37983");
 a("884691");
-var s = a("77078"),
+var l = a("77078"),
   n = a("461380"),
   i = a("165296");
 
@@ -16,17 +16,17 @@ function o(e) {
     text: a,
     onClick: o
   } = e;
-  return (0, l.jsx)(s.Anchor, {
+  return (0, s.jsx)(l.Anchor, {
     href: t,
     onClick: o,
     className: i.externalLinkWrapper,
-    children: (0, l.jsxs)(s.Clickable, {
+    children: (0, s.jsxs)(l.Clickable, {
       className: i.childButton,
-      children: [(0, l.jsx)(s.Text, {
+      children: [(0, s.jsx)(l.Text, {
         className: i.childText,
         variant: "text-md/semibold",
         children: a
-      }), (0, l.jsx)(n.default, {
+      }), (0, s.jsx)(n.default, {
         className: i.childIcon,
         direction: n.default.Directions.RIGHT
       })]

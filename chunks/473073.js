@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("891722"),
   r = n("77078"),
   o = n("763225"),
@@ -20,31 +20,31 @@ function h(e) {
   let {
     userId: t,
     guildId: n,
-    onNavigate: l,
+    onNavigate: a,
     backPanel: h = u.ModViewPanel.INFO
   } = e, m = (0, o.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
-  return (0, a.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: s(f.header),
     style: {
       backgroundColor: m
     },
-    children: [(0, a.jsx)("div", {
+    children: [(0, l.jsx)("div", {
       className: s(f.headerTitle),
-      children: (0, a.jsxs)(r.Clickable, {
+      children: (0, l.jsxs)(r.Clickable, {
         className: s(c.backButton),
-        onClick: () => null == l ? void 0 : l(h),
-        children: [(0, a.jsx)(i.ArrowSmallLeftIcon, {
+        onClick: () => null == a ? void 0 : a(h),
+        children: [(0, l.jsx)(i.ArrowSmallLeftIcon, {
           className: s(c.backButtonIcon),
           width: 20,
           height: 20
-        }), (0, a.jsx)(r.Heading, {
+        }), (0, l.jsx)(r.Heading, {
           variant: "heading-md/semibold",
           children: d.default.Messages.BACK
         })]
       })
-    }), (0, a.jsx)("div", {
+    }), (0, l.jsx)("div", {
       className: s(c.options),
-      children: (0, a.jsx)(r.KeyCombo, {
+      children: (0, l.jsx)(r.KeyCombo, {
         shortcut: "esc",
         keyClassName: c.keyComboInner,
         className: c.keyComboContainer

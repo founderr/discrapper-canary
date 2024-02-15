@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("77078");
+var l = n("77078");
 let {
-  Layer: l,
+  Layer: a,
   LayerContainer: s,
   LayerProvider: i
-} = (0, a.createLayer)("ChannelCallChat"), r = s, o = i;
-var u = l
+} = (0, l.createLayer)("ChannelCallChat"), r = s, o = i;
+var u = a

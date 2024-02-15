@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a = n("862205");
-let l = (0, a.createExperiment)({
+var l = n("862205");
+let a = (0, l.createExperiment)({
   kind: "user",
   id: "2024-02_hide_member_list_activities",
   label: "Hide member list activities",
@@ -22,7 +22,7 @@ let l = (0, a.createExperiment)({
 });
 
 function s(e) {
-  return l.getCurrentConfig({
+  return a.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !0

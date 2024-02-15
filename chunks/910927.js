@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var a, l, s = n("600798"),
+var l, a, s = n("600798"),
   i = n("782340");
 
 function r(e, t) {
@@ -42,4 +42,4 @@ function c(e, t) {
 function f(e, t) {
   var n;
   return null == e || 0 === e.type && null != t.content && t.content.trim().length > 0 ? null : null !== (n = e.message) && void 0 !== n ? n : null
-}(a = l || (l = {}))[a.EmptyContent = 0] = "EmptyContent", a[a.AutomodViolation = 1] = "AutomodViolation"
+}(l = a || (a = {}))[l.EmptyContent = 0] = "EmptyContent", l[l.AutomodViolation = 1] = "AutomodViolation"

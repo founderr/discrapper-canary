@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return D
   }
 }), n("222007"), n("424973");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
@@ -35,11 +35,11 @@ var a = n("37983"),
   y = n("49111"),
   O = n("39141"),
   P = n("886604");
-let b = l.memo(e => {
+let b = a.memo(e => {
   var t;
   let {
     mute: n,
-    deaf: l,
+    deaf: a,
     user: s,
     channel: i,
     sessionId: o,
@@ -66,10 +66,10 @@ let b = l.memo(e => {
     user: s,
     context: i
   }), $ = (0, r.useStateFromStores)([m.default], () => P ? m.default.getHangStatusActivity() : null, [P]), ee = (0, r.useStateFromStores)([I.default], () => I.default.findActivity(A, e => e.type === y.ActivityTypes.HANG_STATUS), [A]);
-  return (0, a.jsx)(p.default, {
+  return (0, l.jsx)(p.default, {
     shakeLocation: O.ShakeLocation.VOICE_USER,
     isShaking: F,
-    children: (0, a.jsx)(L.default, {
+    children: (0, l.jsx)(L.default, {
       ...e,
       nick: null != _ ? _ : X,
       canDrag: e.canDrag && !k,
@@ -78,7 +78,7 @@ let b = l.memo(e => {
       localMute: b && !P,
       localVideoDisabled: U,
       mute: n || b,
-      deaf: l || D,
+      deaf: a || D,
       speaking: F,
       priority: w,
       embeddedApplication: B[0],
@@ -107,13 +107,13 @@ var D = function(e) {
     withGuildIcon: E = !1,
     className: g,
     children: C
-  } = e, [T, v] = l.useState(null), [x, N] = l.useState(!1), M = l.useRef(null), R = l.useRef(new o.DelayedCall(50, () => {
+  } = e, [T, v] = a.useState(null), [x, N] = a.useState(!1), M = a.useRef(null), R = a.useRef(new o.DelayedCall(50, () => {
     v(M.current), M.current = null
-  })), j = l.useRef(new o.DelayedCall(175, () => {
+  })), j = a.useRef(new o.DelayedCall(175, () => {
     v(null)
-  })), O = l.useCallback(e => {
+  })), O = a.useCallback(e => {
     t && (N(!0), j.current.cancel(), M.current = e, R.current.delay())
-  }, [t]), D = l.useCallback(e => {
+  }, [t]), D = a.useCallback(e => {
     t && (R.current.cancel(), T === e && (N(!1), j.current.delay()))
   }, [t, T]), U = (0, r.useStateFromStoresArray)([I.default], () => {
     if (d) return [];
@@ -121,8 +121,8 @@ var D = function(e) {
     return null == u || u.forEach(t => {
       let {
         user: n
-      } = t, a = I.default.getActivities(n.id, s.guild_id);
-      a.forEach(t => {
+      } = t, l = I.default.getActivities(n.id, s.guild_id);
+      l.forEach(t => {
         null != t.application_id && e.add(t.application_id)
       })
     }), Array.from(e)
@@ -134,14 +134,14 @@ var D = function(e) {
       t = e.map(e => {
         var t;
         let {
-          user: l,
+          user: a,
           nick: i,
           voiceState: r
         } = e;
-        return (0, a.jsx)(b, {
-          user: l,
+        return (0, l.jsx)(b, {
+          user: a,
           nick: i,
-          isSelfOnOtherClient: S.default.getId() === l.id && r.sessionId !== S.default.getSessionId(),
+          isSelfOnOtherClient: S.default.getId() === a.id && r.sessionId !== S.default.getSessionId(),
           mute: r.isVoiceMuted(),
           deaf: r.isVoiceDeafened(),
           video: r.selfVideo,
@@ -154,19 +154,19 @@ var D = function(e) {
           showPreview: O,
           hidePreview: D,
           previewIsOpen: x,
-          shouldShowPreview: T === l.id,
+          shouldShowPreview: T === a.id,
           tabIndex: h,
           location: m
-        }, l.id)
+        }, a.id)
       });
-    return null != p && p > 0 ? t.push((0, a.jsx)(L.AudienceVoiceUser, {
+    return null != p && p > 0 ? t.push((0, l.jsx)(L.AudienceVoiceUser, {
       collapsed: d,
       numAudience: p
-    })) : d && u.length > c + 1 && t.push((0, a.jsx)(L.MoreVoiceUser, {
+    })) : d && u.length > c + 1 && t.push((0, l.jsx)(L.MoreVoiceUser, {
       numUsers: u.length - c
     })), t
   })();
-  return null == w && null == C ? null : (0, a.jsxs)(A.VoiceUserList, {
+  return null == w && null == C ? null : (0, l.jsxs)(A.VoiceUserList, {
     className: i(g, P.list, {
       [P.collapsed]: d,
       [P.withGuildIcon]: E

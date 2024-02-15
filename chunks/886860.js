@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   ActivitiesAutoSuggestExperiment: function() {
-    return l
+    return a
   }
 });
-var a = n("862205");
-let l = (0, a.createExperiment)({
+var l = n("862205");
+let a = (0, l.createExperiment)({
   kind: "user",
   id: "2022-12_activities_auto_suggest",
   label: "Activities Auto Suggest",

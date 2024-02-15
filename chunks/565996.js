@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
+var a = n("77078"),
   s = n("701909"),
   i = n("49111"),
   r = n("782340"),
@@ -17,22 +17,22 @@ function u(e) {
     searchMode: t,
     searchByMode: n
   } = e;
-  return (0, a.jsxs)("header", {
+  return (0, l.jsxs)("header", {
     className: o.searchHeader,
-    children: [(0, a.jsx)(d, {
+    children: [(0, l.jsx)(d, {
       ...e
-    }), (0, a.jsxs)(l.TabBar, {
+    }), (0, l.jsxs)(a.TabBar, {
       orientation: "horizontal",
       className: o.searchHeaderTabList,
       selectedItem: t,
       onItemSelect: n,
-      children: [(0, a.jsx)(l.TabBar.Item, {
+      children: [(0, l.jsx)(a.TabBar.Item, {
         id: i.SearchModes.NEWEST,
         children: r.default.Messages.SEARCH_NEWEST_SHORT
-      }), (0, a.jsx)(l.TabBar.Item, {
+      }), (0, l.jsx)(a.TabBar.Item, {
         id: i.SearchModes.OLDEST,
         children: r.default.Messages.SEARCH_OLDEST_SHORT
-      }), (0, a.jsx)(l.TabBar.Item, {
+      }), (0, l.jsx)(a.TabBar.Item, {
         id: i.SearchModes.MOST_RELEVANT,
         children: r.default.Messages.SEARCH_MOST_RELEVANT_SHORT
       })]
@@ -47,30 +47,30 @@ function d(e) {
     isIndexing: s,
     documentsIndexed: i
   } = e;
-  (s || n) && (t = (0, a.jsx)("div", {
+  (s || n) && (t = (0, l.jsx)("div", {
     className: o.spinnerWrapper,
-    children: (0, a.jsx)(l.Spinner, {
-      type: l.Spinner.Type.SPINNING_CIRCLE,
+    children: (0, l.jsx)(a.Spinner, {
+      type: a.Spinner.Type.SPINNING_CIRCLE,
       className: o.spinner,
       itemClassName: o.spinnerPath
     })
   }));
   let u = s && !n;
-  return (0, a.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: o.totalResults,
     role: "status",
-    children: [u ? (0, a.jsx)(l.Tooltip, {
+    children: [u ? (0, l.jsx)(a.Tooltip, {
       text: r.default.Messages.SEARCH_STILL_INDEXING_HINT.format({
         count: i
       }),
-      children: n => (0, a.jsxs)("div", {
+      children: n => (0, l.jsxs)("div", {
         className: o.totalResultsWrapper,
         ...n,
-        children: [(0, a.jsx)(c, {
+        children: [(0, l.jsx)(c, {
           ...e
         }), t]
       })
-    }) : (0, a.jsx)(c, {
+    }) : (0, l.jsx)(c, {
       ...e
     }), u ? null : t]
   })
@@ -82,22 +82,22 @@ function c(e) {
     isIndexing: n,
     totalResults: u
   } = e;
-  if (t) return (0, a.jsx)(l.Text, {
+  if (t) return (0, l.jsx)(a.Text, {
     variant: "text-md/normal",
     color: "header-primary",
     children: r.default.Messages.SEARCHING
   });
   {
-    if (n) return (0, a.jsx)(l.Text, {
+    if (n) return (0, l.jsx)(a.Text, {
       variant: "text-md/normal",
-      children: (0, a.jsx)(l.Anchor, {
+      children: (0, l.jsx)(a.Anchor, {
         className: o.helpdeskLink,
         href: s.default.getArticleURL(i.HelpdeskArticles.SEARCH_INDEXING),
         children: r.default.Messages.STILL_INDEXING
       })
     });
     let e = u.toLocaleString();
-    return (0, a.jsx)(l.Text, {
+    return (0, l.jsx)(a.Text, {
       variant: "text-md/normal",
       color: "header-primary",
       children: r.default.Messages.TOTAL_RESULTS.format({

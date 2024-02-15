@@ -27,8 +27,8 @@ var l = n("37983"),
   s = n("77078"),
   i = n("843962"),
   r = n("679653"),
-  u = n("419830"),
-  o = n("222481"),
+  o = n("419830"),
+  u = n("222481"),
   d = n("361572"),
   c = n("305961"),
   f = n("27618"),
@@ -38,9 +38,9 @@ var l = n("37983"),
   m = n("953109"),
   E = n("476263"),
   g = n("533403"),
-  I = n("20837"),
-  _ = n("83900"),
-  S = n("45029"),
+  S = n("20837"),
+  I = n("83900"),
+  _ = n("45029"),
   N = n("782340"),
   T = n("229649");
 class A extends a.PureComponent {
@@ -188,9 +188,9 @@ class v extends a.Component {
     var e;
     let {
       channel: t
-    } = this.props, n = (0, u.getChannelIconComponent)(t);
+    } = this.props, n = (0, o.getChannelIconComponent)(t);
     if (null == n) return null;
-    let a = null !== (e = (0, o.default)(t)) && void 0 !== e ? e : "";
+    let a = null !== (e = (0, u.default)(t)) && void 0 !== e ? e : "";
     return (0, l.jsx)("div", {
       className: T.iconContainer,
       role: "img",
@@ -261,7 +261,7 @@ class v extends a.Component {
     var e;
     let {
       channel: t
-    } = this.props, n = null === (e = c.default.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name, l = (0, r.computeChannelName)(t, h.default, f.default), a = (0, o.default)(t);
+    } = this.props, n = null === (e = c.default.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name, l = (0, r.computeChannelName)(t, h.default, f.default), a = (0, u.default)(t);
     return N.default.Messages.QUICK_SWITCHER_RESULTS_CHANNEL_LABEL.format({
       name: l,
       type: a,
@@ -526,13 +526,13 @@ class y extends a.Component {
       link: n,
       children: a
     } = this.props, s = (0, d.tryParseChannelPath)(n.path);
-    return null == s || void 0 === s.messageId ? (e = N.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, l.jsx)(_.default, {
+    return null == s || void 0 === s.messageId ? (e = N.default.Messages.QUICKSWITCHER_LINK_UNKNOWN, t = (0, l.jsx)(I.default, {
       width: 16,
       height: 16
-    })) : (0, d.isAccessibleChannelPath)(s) ? (e = N.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, l.jsx)(I.default, {
+    })) : (0, d.isAccessibleChannelPath)(s) ? (e = N.default.Messages.QUICKSWITCHER_LINK_MESSAGE, t = (0, l.jsx)(S.default, {
       width: 16,
       height: 16
-    })) : (e = N.default.Messages.QUICKSWITCHER_LINK_NO_ACCESS, t = (0, l.jsx)(S.default, {
+    })) : (e = N.default.Messages.QUICKSWITCHER_LINK_NO_ACCESS, t = (0, l.jsx)(_.default, {
       width: 16,
       height: 16
     })), (0, l.jsxs)("div", {

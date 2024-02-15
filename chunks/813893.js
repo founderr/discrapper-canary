@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("627445"),
-  s = n.n(l),
+var a = n("627445"),
+  s = n.n(a),
   i = n("917351"),
   r = n.n(i),
   o = n("5667"),
@@ -22,7 +22,7 @@ function p(e) {
   let {
     onDismiss: t,
     onAccept: n,
-    popoutPosition: l,
+    popoutPosition: a,
     gameConsoleAccounts: i
   } = e;
   s(i.length > 0, "Rendering ConsoleNUXTooltip without a game console account"), (null == m || null == i.find(e => e.type === m)) && (m = r.shuffle(i)[0].type);
@@ -36,10 +36,10 @@ function p(e) {
     case u.PlatformTypes.PLAYSTATION_STAGING:
       p = d.default.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5, E = f
   }
-  return (0, a.jsx)(o.default, {
+  return (0, l.jsx)(o.default, {
     header: d.default.Messages.CONSOLE_NUX_TOOLTIP_HEADER,
     content: p,
-    asset: (0, a.jsx)("img", {
+    asset: (0, l.jsx)("img", {
       src: E,
       alt: "",
       className: c.art
@@ -49,6 +49,6 @@ function p(e) {
     markAsDismissed: t,
     buttonCTA: d.default.Messages.CONSOLE_NUX_TOOLTIP_ACCEPT,
     secondaryButtonCTA: d.default.Messages.CONSOLE_NUX_TOOLTIP_DISMISS,
-    caretPosition: "top" === l ? o.CaretPosition.BOTTOM_LEFT : o.CaretPosition.TOP_LEFT
+    caretPosition: "top" === a ? o.CaretPosition.BOTTOM_LEFT : o.CaretPosition.TOP_LEFT
   })
 }

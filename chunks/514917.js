@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return et
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
@@ -61,7 +61,7 @@ var a = n("37983"),
     let {
       channel: n,
       showCall: s
-    } = e, r = n.recipients[0], [et, en] = l.useState(!1), ea = l.useRef(0), el = (0, O.default)(), es = (0, u.useStateFromStores)([v.default], () => v.default.getUser(r)), ei = null == es ? void 0 : es.isNonUserBot();
+    } = e, r = n.recipients[0], [et, en] = a.useState(!1), el = a.useRef(0), ea = (0, O.default)(), es = (0, u.useStateFromStores)([v.default], () => v.default.getUser(r)), ei = null == es ? void 0 : es.isNonUserBot();
     o(null != es, "Profile Panel: user cannot be undefined");
     let er = (0, L.default)(es.id),
       {
@@ -72,7 +72,7 @@ var a = n("37983"),
       } = (0, E.usePrivateChannelIntegrationState)({
         channelId: n.id
       }),
-      ef = !el && !s,
+      ef = !ea && !s,
       eh = (0, u.useStateFromStores)([x.default, C.default], () => {
         var e;
         return null != es ? C.default.getChannel(null === (e = x.default.getVoiceStateForUser(es.id)) || void 0 === e ? void 0 : e.channelId) : null
@@ -153,91 +153,91 @@ var a = n("37983"),
         source: D.UserPopoutUpsellSource.PROFILE_PANEL
       }),
       ew = (0, f.default)();
-    l.useEffect(() => {
-      ea.current = Date.now()
-    }, []), l.useEffect(() => {
+    a.useEffect(() => {
+      el.current = Date.now()
+    }, []), a.useEffect(() => {
       (0, j.default)(es.id, es.getAvatarURL(void 0, 80), {
         withMutualGuilds: !es.bot,
         withMutualFriendsCount: !es.bot
       })
-    }, [es]), l.useEffect(() => {
+    }, [es]), a.useEffect(() => {
       null != er && ef && (0, y.trackProfilePanelViewed)({
         displayProfile: er,
         isMobile: eg,
-        loadDurationMs: Date.now() - ea.current,
+        loadDurationMs: Date.now() - el.current,
         activity: ep,
         customStatusActivity: eE,
         status: eC
       })
     }, [er, eg, ep, eE, eC, ef]);
-    let eF = null == eM ? void 0 : eM.map(e => (0, a.jsx)(Z.default, {
+    let eF = null == eM ? void 0 : eM.map(e => (0, l.jsx)(Z.default, {
         connection: e,
         user: es,
         theme: ew
       }, e.guild.id)),
-      ek = null == eA ? void 0 : eA.map(e => (0, a.jsx)(K.default, {
+      ek = null == eA ? void 0 : eA.map(e => (0, l.jsx)(K.default, {
         connection: e
       }, e.key)),
-      eV = eo.map(e => (0, a.jsx)(Y.default, {
+      eV = eo.map(e => (0, l.jsx)(Y.default, {
         channel: n,
         integration: e
       }, e.application.id)),
-      eB = l.useCallback(() => {
+      eB = a.useCallback(() => {
         !es.bot && !ej && null == ek && (0, c.fetchMutualFriends)(es.id)
       }, [ej, ek, es.id, es.bot]),
-      eH = l.useCallback(() => en(!0), []),
-      eG = l.useCallback(() => en(!1), []);
-    return ef ? (0, a.jsx)("aside", {
+      eH = a.useCallback(() => en(!0), []),
+      eG = a.useCallback(() => en(!1), []);
+    return ef ? (0, l.jsx)("aside", {
       className: ee.profilePanel,
       onMouseEnter: eH,
       onMouseLeave: eG,
-      children: (0, a.jsxs)(P.default, {
+      children: (0, l.jsxs)(P.default, {
         user: es,
         profileType: Q.UserProfileTypes.PANEL,
         useDefaultClientTheme: !0,
-        children: [eU.shouldShow && (0, a.jsx)(b.default, {
+        children: [eU.shouldShow && (0, l.jsx)(b.default, {
           user: es,
           upsellSource: D.UserPopoutUpsellSource.PROFILE_PANEL,
           displayProfile: er,
           isInSidebar: !0,
           ...eU
-        }, es.id), (0, a.jsxs)(d.ScrollerNone, {
-          children: [(0, a.jsx)(X.default, {
+        }, es.id), (0, l.jsxs)(d.ScrollerNone, {
+          children: [(0, l.jsx)(X.default, {
             user: es,
             displayProfile: er,
             channel: n,
             animateAssets: et,
             forceShowPremiumBadge: et
-          }), (0, a.jsxs)(P.default.Inner, {
-            children: [(0, a.jsx)(H.default, {
+          }), (0, l.jsxs)(P.default.Inner, {
+            children: [(0, l.jsx)(H.default, {
               user: es,
               nickname: ev,
               pronouns: null == er ? void 0 : er.pronouns
-            }), (0, a.jsx)(k.default, {
+            }), (0, l.jsx)(k.default, {
               customStatusActivity: eE,
               animate: et
-            }), (0, a.jsx)(U.default, {}), (0, a.jsx)(F.default, {
+            }), (0, l.jsx)(U.default, {}), (0, l.jsx)(F.default, {
               bio: null == er ? void 0 : er.bio,
               hidePersonalInformation: ex,
               animateOnHover: !0,
               isHovering: et
-            }), !es.isSystemUser() && (0, a.jsxs)(a.Fragment, {
-              children: [(0, a.jsx)(V.default, {
+            }), !es.isSystemUser() && (0, l.jsxs)(l.Fragment, {
+              children: [(0, l.jsx)(V.default, {
                 userId: r
-              }), (0, a.jsx)(U.default, {})]
-            }), (0, a.jsx)(B.default, {
+              }), (0, l.jsx)(U.default, {})]
+            }), (0, l.jsx)(B.default, {
               user: es,
               setNote: !1,
               hideNote: !1
             })]
-          }), eO && ey ? (0, a.jsx)(P.default.Inner, {
-            children: (0, a.jsx)(G.default, {
+          }), eO && ey ? (0, l.jsx)(P.default.Inner, {
+            children: (0, l.jsx)(G.default, {
               voiceGuild: eL.voiceGuild,
               voiceChannel: eL.voiceChannel,
               color: ee.appButtonColor
             })
-          }) : null, eT ? (0, a.jsx)(P.default.Inner, {
-            children: (0, a.jsx)(w.default, {
+          }) : null, eT ? (0, l.jsx)(P.default.Inner, {
+            children: (0, l.jsx)(w.default, {
               activity: null != ep ? ep : e_,
               user: es,
               channelId: n.id,
@@ -248,16 +248,16 @@ var a = n("37983"),
                 }
               }
             })
-          }) : null, (eb || eD) && (0, a.jsxs)(P.default.Inner, {
+          }) : null, (eb || eD) && (0, l.jsxs)(P.default.Inner, {
             className: ee.profilePanelConnections,
-            children: [eb ? (0, a.jsx)(z.default, {
+            children: [eb ? (0, l.jsx)(z.default, {
               className: ee.mutualGuildsList,
               header: $.default.Messages.MUTUAL_GUILDS_COUNT.format({
                 count: null == eM ? void 0 : eM.length
               }),
               isLoadingHeader: eR,
               children: eF
-            }) : null, eD ? (0, a.jsx)(z.default, {
+            }) : null, eD ? (0, l.jsx)(z.default, {
               className: i(ee.mutualFriendsList, {
                 [ee.mutualFriendsDivider]: eb
               }),
@@ -272,24 +272,24 @@ var a = n("37983"),
               itemType: z.ListType.MutualFriendsList,
               children: ek
             }) : null]
-          }), ed && (0, a.jsx)(P.default.Inner, {
+          }), ed && (0, l.jsx)(P.default.Inner, {
             className: i(ee.profilePanelConnections, ee.appListThemedContainer),
-            children: (0, a.jsxs)(z.default, {
+            children: (0, l.jsxs)(z.default, {
               header: eV.length > 0 ? $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
                 count: eV.length
               }) : $.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
               isLoadingContents: !eu,
               isLoadingHeader: !1,
               itemType: z.ListType.AppsList,
-              children: [eV, ec.length > 0 && (0, a.jsxs)("div", {
+              children: [eV, ec.length > 0 && (0, l.jsxs)("div", {
                 className: ee.appButtonContainer,
-                children: [0 === eo.length && (0, a.jsx)(d.Text, {
+                children: [0 === eo.length && (0, l.jsx)(d.Text, {
                   variant: "text-xs/normal",
                   color: "header-secondary",
                   children: $.default.Messages.PRIVATE_CHANNEL_ADD_APPS_INFO
-                }), (0, a.jsx)(d.Button, {
+                }), (0, l.jsx)(d.Button, {
                   onClick: () => {
-                    (0, d.openModal)(e => (0, a.jsx)(S.default, {
+                    (0, d.openModal)(e => (0, l.jsx)(S.default, {
                       channelId: n.id,
                       ...e
                     }))
@@ -302,9 +302,9 @@ var a = n("37983"),
                 })]
               })]
             })
-          }), eP && (0, a.jsx)("div", {
+          }), eP && (0, l.jsx)("div", {
             className: ee.giftButtonContainer,
-            children: (0, a.jsx)(p.default, {
+            children: (0, l.jsx)(p.default, {
               className: ee.giftButton,
               look: d.Button.Looks.FILLED,
               buttonText: $.default.Messages.GIFT_NITRO,

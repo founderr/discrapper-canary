@@ -24,15 +24,15 @@ var a, n, s, i, o, d, r = l("37983"),
   x = l("405645"),
   S = l("19766"),
   A = l("42203"),
-  g = l("305961"),
-  p = l("27618"),
-  L = l("697218"),
-  H = l("476765"),
-  N = l("483093"),
+  p = l("305961"),
+  L = l("27618"),
+  H = l("697218"),
+  N = l("476765"),
+  g = l("483093"),
   I = l("782340"),
   R = l("761394");
-let v = (0, H.uid)(),
-  j = (0, H.uid)(),
+let v = (0, N.uid)(),
+  j = (0, N.uid)(),
   D = "text-sm/medium";
 
 function b(e) {
@@ -60,7 +60,7 @@ function B(e) {
 }
 
 function V(e) {
-  let t = (0, _.computeChannelName)(e, L.default, p.default);
+  let t = (0, _.computeChannelName)(e, H.default, L.default);
   return {
     tag: {
       type: h.RichTagTypes.CHANNEL,
@@ -87,8 +87,8 @@ let y = u.memo(function(e) {
     guildId: a,
     roleId: s,
     size: 16
-  }), d = (0, m.useStateFromStores)([g.default], () => {
-    let e = g.default.getGuild(a);
+  }), d = (0, m.useStateFromStores)([p.default], () => {
+    let e = p.default.getGuild(a);
     return null == e ? null : e.roles[s]
   }, [s, a]), u = i.includes(S.EVERYONE_ID) ? "" : "@", C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), f = null !== (t = null == d ? void 0 : d.colorString) && void 0 !== t ? t : C;
   return (0, r.jsxs)("div", {
@@ -98,7 +98,7 @@ let y = u.memo(function(e) {
       color: f,
       background: !1,
       tooltip: !1
-    }), null != o ? (0, r.jsx)(N.default, {
+    }), null != o ? (0, r.jsx)(g.default, {
       className: R.roleTagIcon,
       ...o,
       enableTooltip: !1
@@ -110,7 +110,7 @@ let y = u.memo(function(e) {
   })
 });
 
-function F(e) {
+function U(e) {
   let {
     channel: t,
     row: l,
@@ -131,12 +131,12 @@ function F(e) {
   })
 }
 
-function U(e, t, l) {
+function F(e, t, l) {
   return b(e) ? (0, r.jsx)(y, {
     row: e,
     guildId: t,
     className: l
-  }, e.record.id) : O(e) ? (0, r.jsx)(F, {
+  }, e.record.id) : O(e) ? (0, r.jsx)(U, {
     row: e,
     channel: e.record,
     className: l
@@ -154,9 +154,9 @@ function w(e) {
     placeholder: o,
     helperText: d,
     className: C
-  } = e, f = (0, m.useStateFromStores)([g.default], () => {
+  } = e, f = (0, m.useStateFromStores)([p.default], () => {
     var e, l;
-    return null !== (l = null === (e = g.default.getGuild(t)) || void 0 === e ? void 0 : e.roles) && void 0 !== l ? l : {}
+    return null !== (l = null === (e = p.default.getGuild(t)) || void 0 === e ? void 0 : e.roles) && void 0 !== l ? l : {}
   }, [t]), _ = u.useMemo(() => (function(e, t, l) {
     if (null == e) return {};
     let a = {};
@@ -166,7 +166,7 @@ function w(e) {
     }), t.forEach(e => {
       e in l && (a[e] = B(l[e]))
     }), a
-  })(n, s, f), [n, s, f]), T = u.useMemo(() => Object.keys(_), [_]), [x, S] = u.useState(""), [p, L] = u.useState(!1), [H, N] = u.useState(!1), [D, y] = u.useState(!1), F = u.useRef(null), {
+  })(n, s, f), [n, s, f]), T = u.useMemo(() => Object.keys(_), [_]), [x, S] = u.useState(""), [L, H] = u.useState(!1), [N, g] = u.useState(!1), [D, y] = u.useState(!1), U = u.useRef(null), {
     sections: w,
     sectionCounts: k
   } = u.useMemo(() => {
@@ -194,18 +194,18 @@ function w(e) {
       }).map(e => e.row.record.id);
     i(new Set(l), new Set(a))
   }, [i]), P = () => {
-    L(!1), N(!1)
+    H(!1), g(!1)
   };
   u.useEffect(() => {
     let e = setTimeout(() => {
-      y(p || H)
+      y(L || N)
     }, 32);
     return () => {
       clearTimeout(e)
     }
-  }, [p, H]);
+  }, [L, N]);
   let Y = (e, t, l) => {
-      l.stopPropagation(), l.preventDefault(), 2 === t ? L(e) : (1 === t || L(e), N(e))
+      l.stopPropagation(), l.preventDefault(), 2 === t ? H(e) : (1 === t || H(e), g(e))
     },
     G = u.useCallback(e => {
       let t = {
@@ -213,7 +213,7 @@ function w(e) {
       };
       O(e) ? t[e.id] = V(e.record) : b(e) && (t[e.id] = B(e.record)), Z(t), S(""), P(), setTimeout(() => {
         var e;
-        let t = null === (e = F.current) || void 0 === e ? void 0 : e.containerRef.current,
+        let t = null === (e = U.current) || void 0 === e ? void 0 : e.containerRef.current,
           l = null == t ? void 0 : t.firstChild;
         null != l && l.scrollTo({
           top: l.scrollHeight,
@@ -233,7 +233,7 @@ function w(e) {
         },
         children: (0, r.jsx)("div", {
           className: R.rowContainer,
-          children: U(n, t, R.searchRowLabel)
+          children: F(n, t, R.searchRowLabel)
         })
       }, n.id)
     }, [t, G, w]),
@@ -241,7 +241,7 @@ function w(e) {
       var l, a;
       return l = _[e], a = t, {
         ...l.tag,
-        label: U(l.row, a, R.noIndent)
+        label: F(l.row, a, R.noIndent)
       }
     }), [_, T, t]);
   return (0, r.jsxs)("div", {
@@ -253,7 +253,7 @@ function w(e) {
         maxHeight: 98,
         size: h.default.Sizes.MEDIUM,
         query: x,
-        ref: F,
+        ref: U,
         onRemoveTag: e => {
           let t = T[e],
             {

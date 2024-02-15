@@ -19,25 +19,25 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var a = n("872717"),
-  s = n("913144"),
+var s = n("872717"),
+  a = n("913144"),
   l = n("437822"),
   i = n("773163"),
   r = n("49111");
 async function o(e) {
-  await a.default.put({
+  await s.default.put({
     url: r.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
     body: {
       consent_status: i.MessageRequestConsentStatusTypes.ACCEPTED
     }
-  }), s.default.dispatch({
+  }), a.default.dispatch({
     type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC",
     channelId: e
   })
 }
 
 function u(e) {
-  return a.default.put({
+  return s.default.put({
     url: r.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
     body: {
       consent_status: i.MessageRequestConsentStatusTypes.UNSPECIFIED
@@ -46,7 +46,7 @@ function u(e) {
 }
 
 function d(e) {
-  return a.default.put({
+  return s.default.put({
     url: r.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
     body: {
       consent_status: i.MessageRequestConsentStatusTypes.PENDING
@@ -55,13 +55,13 @@ function d(e) {
 }
 
 function c(e) {
-  return a.default.delete({
+  return s.default.delete({
     url: r.Endpoints.CHANNEL_RECIPIENT_CONSENT(e)
   })
 }
 
 function f(e) {
-  return a.default.put({
+  return s.default.put({
     url: r.Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(),
     body: {
       channel_ids: e

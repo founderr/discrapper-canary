@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("446674"),
   r = n("77078"),
   o = n("206230"),
@@ -19,25 +19,25 @@ var l = n("414456"),
 function h(e) {
   let {
     height: t
-  } = e, l = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
-  return (0, a.jsxs)("div", {
+  } = e, a = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+  return (0, l.jsxs)("div", {
     className: f.root,
-    children: [(0, a.jsx)(d.default, {
+    children: [(0, l.jsx)(d.default, {
       importData: () => n.el("210565").then(n.t.bind(n, "210565", 19)).then(e => {
         let {
           default: t
         } = e;
         return t
       }),
-      shouldAnimate: !l,
+      shouldAnimate: !a,
       className: s(f.art, {
         [f.hidden]: t <= 280
       })
-    }), (0, a.jsx)(r.Heading, {
+    }), (0, l.jsx)(r.Heading, {
       className: f.header,
       variant: "heading-md/bold",
       children: c.default.Messages.PLAYSTATION_TRANSFERRING
-    }), (0, a.jsx)(r.Text, {
+    }), (0, l.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       children: c.default.Messages.CONSOLE_TRANSFERRING_SUBTITLE.format({

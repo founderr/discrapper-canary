@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return M
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
@@ -38,18 +38,18 @@ var a = n("37983"),
     } = (0, r.useStateFromStoresObject)([h.default, d.default, S.default], () => {
       let e = d.default.getParticipants(s),
         t = function(e, t, n) {
-          for (let l of e)
-            if (l.type === x.ParticipantTypes.STREAM) {
-              var a;
-              let e = (0, c.getStreamerApplication)(l.stream, n),
+          for (let a of e)
+            if (a.type === x.ParticipantTypes.STREAM) {
+              var l;
+              let e = (0, c.getStreamerApplication)(a.stream, n),
                 s = (null == e ? void 0 : e.id) != null ? (0, g.getQuestByApplicationId)(t, e.id) : null;
-              if (null != s && (null === (a = s.userStatus) || void 0 === a ? void 0 : a.claimedAt) == null) return s
+              if (null != s && (null === (l = s.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null) return s
             } return null
         }(e, S.default.quests, h.default),
-        n = null != t && null != M && function(e, t, n, a) {
+        n = null != t && null != M && function(e, t, n, l) {
           for (let s of e) {
-            var l;
-            if (s.type === x.ParticipantTypes.STREAM && s.user.id === n.id && t.config.applicationId === (null === (l = (0, c.getStreamerApplication)(s.stream, a)) || void 0 === l ? void 0 : l.id)) return !0
+            var a;
+            if (s.type === x.ParticipantTypes.STREAM && s.user.id === n.id && t.config.applicationId === (null === (a = (0, c.getStreamerApplication)(s.stream, l)) || void 0 === a ? void 0 : a.id)) return !0
           }
           return !1
         }(e, t, M, h.default);
@@ -57,61 +57,61 @@ var a = n("37983"),
         isCurrentUserStreamingQuestApplication: n,
         quest: t
       }
-    }, [s, M]), L = (0, r.useStateFromStores)([f.default], () => f.default.locale), y = (0, r.useStateFromStores)([S.default], () => null != j && S.default.isEnrolling(j.id), [j]), O = (0, r.useStateFromStores)([d.default], () => ((null == M ? void 0 : M.id) == null ? null : d.default.getParticipant(s, M.id)) != null, [s, M]), P = l.useMemo(() => null == j ? "" : new Date(j.config.expiresAt).toLocaleDateString(L, {
+    }, [s, M]), L = (0, r.useStateFromStores)([f.default], () => f.default.locale), y = (0, r.useStateFromStores)([S.default], () => null != j && S.default.isEnrolling(j.id), [j]), O = (0, r.useStateFromStores)([d.default], () => ((null == M ? void 0 : M.id) == null ? null : d.default.getParticipant(s, M.id)) != null, [s, M]), P = a.useMemo(() => null == j ? "" : new Date(j.config.expiresAt).toLocaleDateString(L, {
       dateStyle: "short"
-    }), [j, L]), b = l.useCallback(() => {}, []), D = l.useCallback(() => {
+    }), [j, L]), b = a.useCallback(() => {}, []), D = a.useCallback(() => {
       null != j && (0, E.enrollInQuest)(j.id)
-    }, [j]), U = l.useCallback(() => {
+    }, [j]), U = a.useCallback(() => {
       u.default.open(v.UserSettingsSections.INVENTORY)
     }, []), w = (0, I.useHandleClaimQuestsReward)(j);
     if (null == j) return null;
     let F = (null === (t = j.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
       k = (null === (n = j.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
-    return O ? (0, a.jsxs)("div", {
+    return O ? (0, l.jsxs)("div", {
       className: i(A.wrapper, {
         [A.wrapperAccepted]: F
       }),
-      children: [!F && (0, a.jsxs)("div", {
+      children: [!F && (0, l.jsxs)("div", {
         className: A.rewardTileWrapper,
-        children: [(0, a.jsx)("img", {
+        children: [(0, l.jsx)("img", {
           alt: j.config.messages.rewardName,
           className: A.rewardTile,
           src: (0, g.getRewardAssetUrl)(j.id)
-        }), (0, a.jsx)(_.default, {
+        }), (0, l.jsx)(_.default, {
           bgOpacity: .32,
           className: A.sponsoredTag
         })]
-      }), (0, a.jsxs)("div", {
+      }), (0, l.jsxs)("div", {
         className: A.content,
-        children: [(0, a.jsxs)("div", {
+        children: [(0, l.jsxs)("div", {
           className: A.heading,
-          children: [F && R ? (0, a.jsx)("img", {
+          children: [F && R ? (0, l.jsx)("img", {
             alt: j.config.messages.rewardName,
             className: A.rewardTile,
             src: (0, g.getRewardAssetUrl)(j.id)
-          }) : (0, a.jsx)("img", {
+          }) : (0, l.jsx)("img", {
             className: A.gameTile,
             alt: j.config.messages.gameTitle,
             src: (0, g.getGameTileAssetUrl)(j.id)
-          }), (0, a.jsxs)("div", {
+          }), (0, l.jsxs)("div", {
             className: A.details,
-            children: [(0, a.jsxs)("div", {
+            children: [(0, l.jsxs)("div", {
               className: A.headingWithSubmenu,
-              children: [(0, a.jsx)(o.Heading, {
+              children: [(0, l.jsx)(o.Heading, {
                 className: A.questTitle,
                 variant: "heading-md/semibold",
                 color: "header-primary",
                 children: R ? (0, g.getContextualEntrypointHeading)(j) : N.default.Messages.QUESTS_TITLE.format({
                   questName: j.config.messages.questName
                 })
-              }), (0, a.jsx)(o.Clickable, {
+              }), (0, l.jsx)(o.Clickable, {
                 className: A.submenuWrapper,
                 onClick: b,
-                children: (0, a.jsx)(p.default, {
+                children: (0, l.jsx)(p.default, {
                   className: A.submenuIcon
                 })
               })]
-            }), (0, a.jsx)(o.Text, {
+            }), (0, l.jsx)(o.Text, {
               color: "header-secondary",
               variant: "text-xs/medium",
               children: k ? N.default.Messages.QUESTS_CLAIM_BY.format({
@@ -121,19 +121,19 @@ var a = n("37983"),
               })
             })]
           })]
-        }), F && !k && !R && (0, a.jsx)(T.default, {
+        }), F && !k && !R && (0, l.jsx)(T.default, {
           quest: j
-        }), (0, a.jsxs)("div", {
+        }), (0, l.jsxs)("div", {
           className: A.ctas,
-          children: [!F && (0, a.jsxs)(a.Fragment, {
-            children: [(0, a.jsx)(o.Button, {
+          children: [!F && (0, l.jsxs)(l.Fragment, {
+            children: [(0, l.jsx)(o.Button, {
               className: A.cta,
               color: o.Button.Colors.PRIMARY,
               fullWidth: !0,
               size: o.Button.Sizes.SMALL,
               onClick: U,
               children: N.default.Messages.QUESTS_LEARN_MORE_V2
-            }), (0, a.jsx)(o.Button, {
+            }), (0, l.jsx)(o.Button, {
               className: A.cta,
               color: o.Button.Colors.GREEN,
               fullWidth: !0,
@@ -142,17 +142,17 @@ var a = n("37983"),
               submitting: y,
               children: N.default.Messages.QUESTS_ACCEPT_QUEST
             })]
-          }), F && !k && R && (0, a.jsx)(C.default, {
+          }), F && !k && R && (0, l.jsx)(C.default, {
             color: o.tokens.colors.BG_BRAND,
             quest: j
-          }), F && !k && !R && (0, a.jsx)(o.Button, {
+          }), F && !k && !R && (0, l.jsx)(o.Button, {
             className: A.cta,
             color: o.Button.Colors.BRAND,
             fullWidth: !0,
             onClick: U,
             size: o.Button.Sizes.SMALL,
             children: N.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
-          }), k && (0, a.jsx)(o.Button, {
+          }), k && (0, l.jsx)(o.Button, {
             className: A.cta,
             color: o.Button.Colors.BRAND,
             fullWidth: !0,

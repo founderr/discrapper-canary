@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("446674"),
+var a = n("446674"),
   s = n("526812"),
   i = n("404607"),
   r = n("670902"),
@@ -22,10 +22,10 @@ function p(e) {
   var t, n;
   let {
     channel: p
-  } = e, E = (0, u.useCanManageChannel)(p), S = (0, l.useStateFromStores)([s.default], () => s.default.hasHidden(p.id)), g = (0, d.isOnboardingDismissed)(p.id), {
+  } = e, E = (0, u.useCanManageChannel)(p), S = (0, a.useStateFromStores)([s.default], () => s.default.hasHidden(p.id)), g = (0, d.isOnboardingDismissed)(p.id), {
     sortOrder: C,
     tagFilter: _
-  } = (0, o.useForumChannelStore)(p.id), I = (0, l.useStateFromStores)([r.default, c.default], () => {
+  } = (0, o.useForumChannelStore)(p.id), I = (0, a.useStateFromStores)([r.default, c.default], () => {
     let e = r.default.getThreadIds(p.id, C, _);
     if (e.length > 0) return !0;
     let t = c.default.getThreads(p.id, C, _);
@@ -33,7 +33,7 @@ function p(e) {
   }, [p.id, C, _]), T = p.isMediaChannel();
   if (!E || g || T && I) return null;
   let v = (t = S, n = T, t ? n ? m.default.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : m.default.Messages.FORUM_CHANNEL_ONBOARDING_SHOW : n ? m.default.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : m.default.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
-  return (0, a.jsx)(h.Icon, {
+  return (0, l.jsx)(h.Icon, {
     tooltip: v,
     icon: f.default,
     onClick: () => i.default.hideAdminOnboarding(p.id, !S),

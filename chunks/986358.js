@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return w
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("65597"),
   r = n("77078"),
   o = n("450911"),
@@ -41,50 +41,50 @@ function b(e) {
   let {
     user: t,
     backgroundColor: n,
-    guildId: l,
+    guildId: a,
     onClose: s
-  } = e, o = t.id, u = (0, i.default)([C.default, g.default, m.default], () => o === m.default.getId() ? C.default.getStatus() : g.default.getStatus(o, l), [o, l]);
-  return (0, a.jsxs)("div", {
+  } = e, o = t.id, u = (0, i.default)([C.default, g.default, m.default], () => o === m.default.getId() ? C.default.getStatus() : g.default.getStatus(o, a), [o, a]);
+  return (0, l.jsxs)("div", {
     className: P.topRow,
     style: {
       backgroundColor: n
     },
-    children: [(0, a.jsxs)("div", {
+    children: [(0, l.jsxs)("div", {
       className: P.memberNameContainer,
-      children: [(0, a.jsx)("div", {
+      children: [(0, l.jsx)("div", {
         className: P.memberAvatar,
-        children: (0, a.jsx)(r.Avatar, {
-          src: t.getAvatarURL(l, 48),
+        children: (0, l.jsx)(r.Avatar, {
+          src: t.getAvatarURL(a, 48),
           "aria-label": t.username,
           size: r.AvatarSizes.SIZE_48,
           status: u
         })
-      }), (0, a.jsx)("div", {
+      }), (0, l.jsx)("div", {
         className: P.memberName,
-        children: (0, a.jsx)(r.Text, {
+        children: (0, l.jsx)(r.Text, {
           variant: "text-lg/medium",
-          children: (0, a.jsx)(r.NameWithRole, {
-            name: R.default.getName(l, null, t),
+          children: (0, l.jsx)(r.NameWithRole, {
+            name: R.default.getName(a, null, t),
             color: r.tokens.colors.HEADER_PRIMARY.css
           })
         })
-      }), (0, a.jsx)("div", {
+      }), (0, l.jsx)("div", {
         className: P.memberGlobalName,
-        children: (0, a.jsx)(r.Text, {
+        children: (0, l.jsx)(r.Text, {
           variant: "text-md/medium",
           color: "text-normal",
           children: j.default.getUserTag(t)
         })
       })]
-    }), (0, a.jsx)("div", {
+    }), (0, l.jsx)("div", {
       className: P.close,
-      children: (0, a.jsx)(r.Text, {
+      children: (0, l.jsx)(r.Text, {
         variant: "text-md/medium",
         color: "text-normal",
-        children: (0, a.jsx)(r.Clickable, {
+        children: (0, l.jsx)(r.Clickable, {
           className: P.closeAction,
           onClick: s,
-          children: (0, a.jsx)(x.default, {})
+          children: (0, l.jsx)(x.default, {})
         })
       })
     })]
@@ -95,20 +95,20 @@ function D(e) {
   let {
     tag: t = "div",
     disabled: n,
-    children: l,
+    children: a,
     onClick: i,
     ...o
   } = e;
-  return (0, a.jsx)(r.Clickable, {
+  return (0, l.jsx)(r.Clickable, {
     ...o,
     tag: t,
     className: s(P.bottomRowAction, {
       [P.bottomRowActionDisabled]: n
     }),
     onClick: n ? void 0 : i,
-    children: (0, a.jsx)("div", {
+    children: (0, l.jsx)("div", {
       className: P.innerBottomRowAction,
-      children: l
+      children: a
     })
   })
 }
@@ -116,7 +116,7 @@ function D(e) {
 function U(e) {
   let {
     backgroundColor: t,
-    user: l,
+    user: a,
     member: s,
     guildId: m
   } = e, p = (0, i.default)([E.default], () => E.default.getGuild(m)), {
@@ -124,36 +124,36 @@ function U(e) {
     canBanUser: C,
     canModerateMembers: x
   } = (0, i.useStateFromStoresObject)([S.default, _.default, E.default], () => ({
-    canKickUser: null != p && S.default.canManageUser(y.Permissions.KICK_MEMBERS, l, p),
-    canBanUser: null != p && S.default.canManageUser(y.Permissions.BAN_MEMBERS, l, p),
-    canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, l.id, [_.default, E.default, S.default])
-  }), [l, p]), R = (0, d.isMemberCommunicationDisabled)(s), {
+    canKickUser: null != p && S.default.canManageUser(y.Permissions.KICK_MEMBERS, a, p),
+    canBanUser: null != p && S.default.canManageUser(y.Permissions.BAN_MEMBERS, a, p),
+    canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, a.id, [_.default, E.default, S.default])
+  }), [a, p]), R = (0, d.isMemberCommunicationDisabled)(s), {
     analyticsLocations: j,
     newestAnalyticsLocation: L
   } = (0, u.default)(), b = (0, h.useTrackModerationAction)(m, {
-    targetUserId: l.id,
+    targetUserId: a.id,
     location: L,
     locations: j
   });
-  return (0, a.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: P.bottomRow,
-    children: [(0, a.jsxs)(D, {
+    children: [(0, l.jsxs)(D, {
       "aria-label": O.default.Messages.SEND_DM,
       style: {
         backgroundColor: t
       },
       onClick: () => {
-        o.default.openPrivateChannel(l.id)
+        o.default.openPrivateChannel(a.id)
       },
-      children: [(0, a.jsx)(T.default, {
+      children: [(0, l.jsx)(T.default, {
         width: 22,
         height: 22
-      }), (0, a.jsx)(r.Text, {
+      }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
         children: O.default.Messages.SEND_DM
       })]
-    }), (0, a.jsxs)(D, {
+    }), (0, l.jsxs)(D, {
       disabled: !g,
       "aria-label": O.default.Messages.KICK,
       style: {
@@ -164,24 +164,24 @@ function U(e) {
           let {
             default: e
           } = await n.el("125104").then(n.bind(n, "125104"));
-          return t => (0, a.jsx)(e, {
+          return t => (0, l.jsx)(e, {
             ...t,
             location: L,
             guildId: m,
-            user: l
+            user: a
           })
         })
       },
-      children: [(0, a.jsx)(A.default, {
+      children: [(0, l.jsx)(A.default, {
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css
-      }), (0, a.jsx)(r.Text, {
+      }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
         children: O.default.Messages.KICK
       })]
-    }), (0, a.jsxs)(D, {
+    }), (0, l.jsxs)(D, {
       disabled: !C,
       "aria-label": O.default.Messages.BAN,
       style: {
@@ -192,24 +192,24 @@ function U(e) {
           let {
             default: e
           } = await n.el("743506").then(n.bind(n, "743506"));
-          return t => (0, a.jsx)(e, {
+          return t => (0, l.jsx)(e, {
             ...t,
             location: L,
             guildId: m,
-            user: l
+            user: a
           })
         })
       },
-      children: [(0, a.jsx)(I.default, {
+      children: [(0, l.jsx)(I.default, {
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css
-      }), (0, a.jsx)(r.Text, {
+      }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
         children: O.default.Messages.BAN
       })]
-    }), (0, a.jsxs)(D, {
+    }), (0, l.jsxs)(D, {
       disabled: !x,
       "aria-label": O.default.Messages.TIMEOUT_USER,
       style: {
@@ -218,29 +218,29 @@ function U(e) {
       onClick: () => {
         R ? (0, c.openEnableCommunication)(s.guildId, s.userId, j) : (0, c.openDisableCommunication)(s.guildId, s.userId, j)
       },
-      children: [(0, a.jsx)(v.default, {
+      children: [(0, l.jsx)(v.default, {
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css
-      }), (0, a.jsx)(r.Text, {
+      }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
         children: R ? O.default.Messages.REMOVE : O.default.Messages.TIMEOUT_USER
       })]
-    }), (0, a.jsxs)(D, {
+    }), (0, l.jsxs)(D, {
       "aria-label": O.default.Messages.COPY_ID,
       style: {
         backgroundColor: t
       },
       onClick: () => {
-        b(h.ModerationActionType.COPY_ID), (0, M.copy)(l.id)
+        b(h.ModerationActionType.COPY_ID), (0, M.copy)(a.id)
       },
       disabled: !M.SUPPORTS_COPY,
-      children: [(0, a.jsx)(N.default, {
+      children: [(0, l.jsx)(N.default, {
         width: 22,
         height: 22,
         color: r.tokens.colors.TEXT_NORMAL.css
-      }), (0, a.jsx)(r.Text, {
+      }), (0, l.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "none",
         children: O.default.Messages.COPY_ID
@@ -253,16 +253,16 @@ function w(e) {
   let {
     userId: t,
     guildId: n,
-    onClose: l
+    onClose: a
   } = e, s = (0, i.default)([_.default], () => _.default.getUser(t), [t]), o = (0, i.default)([p.default], () => p.default.getMember(n, t), [n, t]), u = (0, L.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
-  return null == s || null == o ? null : (0, a.jsxs)("div", {
+  return null == s || null == o ? null : (0, l.jsxs)("div", {
     className: P.container,
-    children: [(0, a.jsx)(b, {
+    children: [(0, l.jsx)(b, {
       user: s,
       guildId: n,
-      onClose: l,
+      onClose: a,
       backgroundColor: u
-    }), (0, a.jsx)(U, {
+    }), (0, l.jsx)(U, {
       user: s,
       member: o,
       guildId: n,

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var a = n("476042"),
-  l = n("851387"),
+var l = n("476042"),
+  a = n("851387"),
   s = n("305961"),
   i = n("957255"),
   r = n("800762"),
@@ -17,19 +17,19 @@ var a = n("476042"),
 let d = "DRAGGABLE_USER";
 
 function c(e) {
-  return (0, a.DropTarget)(d, {
+  return (0, l.DropTarget)(d, {
     canDrop(e) {
       var t, n;
       let {
-        channel: a
-      } = e, l = a.getGuildId(), d = null !== (n = null === (t = s.default.getGuild(l)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1, c = o.default.countVoiceStatesForChannel(a.id), f = null != l && r.default.hasVideo(a.id) && d > 0 && c >= d + 1;
-      return i.default.can(u.Permissions.MOVE_MEMBERS, a) && i.default.can(u.Permissions.CONNECT, a) && !f
+        channel: l
+      } = e, a = l.getGuildId(), d = null !== (n = null === (t = s.default.getGuild(a)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1, c = o.default.countVoiceStatesForChannel(l.id), f = null != a && r.default.hasVideo(l.id) && d > 0 && c >= d + 1;
+      return i.default.can(u.Permissions.MOVE_MEMBERS, l) && i.default.can(u.Permissions.CONNECT, l) && !f
     },
     drop(e, t) {
       let {
         channel: n
-      } = e, a = r.default.getVoiceStateForUser(t.getItem().user.id);
-      (null == a ? void 0 : a.channelId) !== n.id && l.default.setChannel(n.getGuildId(), t.getItem().user.id, n.id)
+      } = e, l = r.default.getVoiceStateForUser(t.getItem().user.id);
+      (null == l ? void 0 : l.channelId) !== n.id && a.default.setChannel(n.getGuildId(), t.getItem().user.id, n.id)
     }
   }, (e, t) => ({
     connectUserDropTarget: e.dropTarget(),
@@ -38,7 +38,7 @@ function c(e) {
 }
 
 function f(e) {
-  return (0, a.DragSource)(d, {
+  return (0, l.DragSource)(d, {
     canDrag(e) {
       let {
         user: t,

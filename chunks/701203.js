@@ -1,56 +1,56 @@
 "use strict";
 n.r(t), n.d(t, {
   useCanReportRaid: function() {
-    return c
+    return d
   },
   useCanEnableRaidAlerts: function() {
-    return _
+    return f
   }
 });
 var i = n("884691"),
-  a = n("446674");
+  r = n("446674");
 n("926809");
-var l = n("957255"),
-  d = n("610174"),
+var u = n("957255"),
+  a = n("610174"),
   s = n("413476"),
-  r = n("311161"),
-  u = n("54346"),
-  o = n("49111");
+  l = n("311161"),
+  o = n("54346"),
+  c = n("49111");
 
-function c(e) {
+function d(e) {
   var t;
-  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : o.EMPTY_STRING_GUILD_ID,
+  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_GUILD_ID,
     {
-      enableRaidReporting: d
+      enableRaidReporting: a
     } = s.ReportRaidExperiment.useExperiment({
       guildId: n,
       location: "4467c7_1"
     }, {
       autoTrackExposure: !1
     }),
-    c = (0, a.useStateFromStores)([l.default], () => (function(e) {
-      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.default;
-      return t.can(o.Permissions.BAN_MEMBERS, e) || t.can(o.Permissions.KICK_MEMBERS, e) || t.can(o.Permissions.MANAGE_GUILD, e)
-    })(e, l.default), [e]),
-    _ = (0, a.useStateFromStores)([u.default], () => null != e ? u.default.getGuildIncident(e.id) : null, [e]),
-    E = null != _ && (0, r.hasDetectedActivity)(_);
+    d = (0, r.useStateFromStores)([u.default], () => (function(e) {
+      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default;
+      return t.can(c.Permissions.BAN_MEMBERS, e) || t.can(c.Permissions.KICK_MEMBERS, e) || t.can(c.Permissions.MANAGE_GUILD, e)
+    })(e, u.default), [e]),
+    f = (0, r.useStateFromStores)([o.default], () => null != e ? o.default.getGuildIncident(e.id) : null, [e]),
+    E = null != f && (0, l.hasDetectedActivity)(f);
   return i.useEffect(() => {
-    !E && c && s.ReportRaidExperiment.trackExposure({
+    !E && d && s.ReportRaidExperiment.trackExposure({
       guildId: n,
       location: "4467c7_2"
     })
-  }, [E, c, n]), !E && c && d
+  }, [E, d, n]), !E && d && a
 }
 
-function _(e) {
+function f(e) {
   var t;
-  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : o.EMPTY_STRING_GUILD_ID,
-    i = (0, a.useStateFromStores)([l.default], () => (function(e) {
-      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.default;
-      return t.can(o.Permissions.MANAGE_GUILD, e)
-    })(e, l.default), [e]),
+  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : c.EMPTY_STRING_GUILD_ID,
+    i = (0, r.useStateFromStores)([u.default], () => (function(e) {
+      let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default;
+      return t.can(c.Permissions.MANAGE_GUILD, e)
+    })(e, u.default), [e]),
     {
-      enableRaidAlerts: r
+      enableRaidAlerts: l
     } = s.RaidAlertExperiment.useExperiment({
       guildId: n,
       location: "4467c7_3"
@@ -58,7 +58,7 @@ function _(e) {
       autoTrackExposure: i
     }),
     {
-      showAlertMode: u
-    } = (0, d.useGuildAlertModeEnabled)(n);
-  return i && (r || u)
+      showAlertMode: o
+    } = (0, a.useGuildAlertModeEnabled)(n);
+  return i && (l || o)
 }

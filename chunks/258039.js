@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("866227"),
-  l = n.n(a),
+var l = n("866227"),
+  a = n.n(l),
   s = n("249654");
 let i = e => {
   let t = s.default.extractTimestamp(e),
-    n = l().isBefore(l(t).add(l.duration(15, "days")));
+    n = a().isBefore(a(t).add(a.duration(15, "days")));
   return !n
 }

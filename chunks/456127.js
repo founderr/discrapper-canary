@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return S
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("446674"),
   i = n("598165"),
   r = n("386045"),
@@ -34,11 +34,11 @@ function S(e) {
   } = (0, s.useStateFromStoresObject)([r.default], () => ({
     viewerClippingAllowed: null != g && (r.default.isViewerClippingAllowedForUser(g.ownerId) || C),
     isAtMaxSavingClipOperations: r.default.getIsAtMaxSaveClipOperations()
-  })), T = (null == g ? void 0 : g.ownerId) === f.default.getId(), v = !(T || _) || I || null == n, x = l.useCallback(e => (0, a.jsx)(i.CameraIcon, {
+  })), T = (null == g ? void 0 : g.ownerId) === f.default.getId(), v = !(T || _) || I || null == n, x = a.useCallback(e => (0, l.jsx)(i.CameraIcon, {
     ...e,
     color: "currentColor"
   }), []);
-  return (0, a.jsx)(d.default, {
+  return (0, l.jsx)(d.default, {
     className: E.actionBarButton,
     onClick: () => {
       !v && (T ? (0, o.saveClip)() : (0, o.saveClip)(n.id))

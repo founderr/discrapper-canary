@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return V
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
@@ -45,29 +45,29 @@ let U = e => {
       benefits: t,
       header: n,
       guildId: s
-    } = e, [i, r] = l.useState(!1), u = i ? t : t.slice(0, 5), d = t.length > 5, c = t.length - 5, m = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
+    } = e, [i, r] = a.useState(!1), u = i ? t : t.slice(0, 5), d = t.length > 5, c = t.length - 5, m = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
       numTruncated: c
     }), p = (0, h.useUID)();
-    return 0 === t.length ? null : (0, a.jsxs)("div", {
+    return 0 === t.length ? null : (0, l.jsxs)("div", {
       className: D.benefitsSection,
-      children: [(0, a.jsx)(o.Heading, {
+      children: [(0, l.jsx)(o.Heading, {
         variant: "text-xs/bold",
         color: "header-secondary",
         className: D.sectionHeader,
         id: p,
         children: n
-      }), (0, a.jsx)(f.default, {
+      }), (0, l.jsx)(f.default, {
         size: 12
-      }), (0, a.jsx)("ul", {
+      }), (0, l.jsx)("ul", {
         className: D.benefitsList,
         "aria-labelledby": p,
-        children: u.map((e, t) => (0, a.jsx)("li", {
-          children: (0, a.jsx)(R.default, {
+        children: u.map((e, t) => (0, l.jsx)("li", {
+          children: (0, l.jsx)(R.default, {
             guildId: s,
             benefit: e
           }, (0, g.getBenefitKey)(e))
         }, t))
-      }), d && (0, a.jsx)(k, {
+      }), d && (0, l.jsx)(k, {
         isViewAll: i,
         onToggle: () => r(e => !e),
         showMoreText: m
@@ -78,28 +78,28 @@ let U = e => {
     let {
       guildId: t,
       listingId: n
-    } = e, l = (0, v.default)(t), [s] = _.useTierEmojiIds(n, t), i = l.filter(e => s.has(e.id));
-    return 0 === i.length ? null : (0, a.jsxs)("div", {
+    } = e, a = (0, v.default)(t), [s] = _.useTierEmojiIds(n, t), i = a.filter(e => s.has(e.id));
+    return 0 === i.length ? null : (0, l.jsxs)("div", {
       className: D.benefitsSection,
-      children: [(0, a.jsx)(o.Heading, {
+      children: [(0, l.jsx)(o.Heading, {
         variant: "text-xs/bold",
         color: "header-secondary",
         className: D.sectionHeader,
         children: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_EMOJI_SECTION_TITLE.format({
           count: i.length
         })
-      }), (0, a.jsx)(f.default, {
+      }), (0, l.jsx)(f.default, {
         size: 12
-      }), (0, a.jsx)("div", {
+      }), (0, l.jsx)("div", {
         className: D.emojiList,
         children: i.map((e, t) => {
           var n;
-          return (0, a.jsx)(o.Tooltip, {
+          return (0, l.jsx)(o.Tooltip, {
             text: e.name,
             "aria-label": !1,
             children: t => {
               var n;
-              return (0, a.jsx)("img", {
+              return (0, l.jsx)("img", {
                 ...t,
                 className: D.emojiListEmoji,
                 src: (n = e, S.default.getEmojiURL({
@@ -121,33 +121,33 @@ let U = e => {
     let {
       listingId: t,
       guildId: n,
-      className: l
+      className: a
     } = e, s = (0, x.default)(n, t), [r] = _.useChannelBenefits(t), u = (0, N.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
-    return null == s && 0 === u.length && 0 === d.length && 0 === h.size ? null : (0, a.jsxs)("div", {
-      className: i(D.subscriptionPerks, l),
-      children: [null != s && (0, a.jsxs)(o.HeadingLevel, {
-        component: (0, a.jsx)(o.Heading, {
+    return null == s && 0 === u.length && 0 === d.length && 0 === h.size ? null : (0, l.jsxs)("div", {
+      className: i(D.subscriptionPerks, a),
+      children: [null != s && (0, l.jsxs)(o.HeadingLevel, {
+        component: (0, l.jsx)(o.Heading, {
           variant: "text-xs/bold",
           color: "header-secondary",
           className: D.sectionHeader,
           children: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_MEMBER_PREVIEW
         }),
-        children: [(0, a.jsx)(f.default, {
+        children: [(0, l.jsx)(f.default, {
           size: 8
-        }), (0, a.jsx)(M.default, {
+        }), (0, l.jsx)(M.default, {
           role: c,
           guildId: n,
           className: D.roleMessagePreview
         })]
-      }), (0, a.jsx)(U, {
+      }), (0, l.jsx)(U, {
         header: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_EXCLUSIVE_CHANNELS_SECTION_TITLE,
         benefits: u,
         guildId: n
-      }), (0, a.jsx)(U, {
+      }), (0, l.jsx)(U, {
         header: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_ADDITIONAL_BENEFITS_SECTION_TITLE,
         benefits: d,
         guildId: n
-      }), (0, a.jsx)(w, {
+      }), (0, l.jsx)(w, {
         guildId: n,
         listingId: t
       })]
@@ -156,18 +156,18 @@ let U = e => {
   k = e => {
     let t, {
       onToggle: n,
-      isViewAll: l,
+      isViewAll: a,
       showMoreText: s
     } = e;
-    return t = l ? (0, a.jsxs)(a.Fragment, {
-      children: [b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_LESS_DESCRIPTION, (0, a.jsx)(p.default, {
+    return t = a ? (0, l.jsxs)(l.Fragment, {
+      children: [b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_LESS_DESCRIPTION, (0, l.jsx)(p.default, {
         className: D.toggleTruncationButtonIcon
       })]
-    }) : (0, a.jsxs)(a.Fragment, {
-      children: [s, (0, a.jsx)(m.default, {
+    }) : (0, l.jsxs)(l.Fragment, {
+      children: [s, (0, l.jsx)(m.default, {
         className: D.toggleTruncationButtonIcon
       })]
-    }), (0, a.jsx)(o.Button, {
+    }), (0, l.jsx)(o.Button, {
       look: o.Button.Looks.BLANK,
       size: o.Button.Sizes.NONE,
       className: D.toggleTruncationButton,
@@ -191,55 +191,55 @@ var V = e => {
   } = (0, y.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: R,
     activeSubscriptionListing: U
-  } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, V = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [B, H] = l.useState(!1), [G, W] = l.useState(!1), Y = l.useCallback(e => {
+  } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, V = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [B, H] = a.useState(!1), [G, W] = a.useState(!1), Y = a.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
-  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), Q = (0, T.default)(s, n), q = null != Z && null == R && Q, J = (0, u.default)(O.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), ea = (null == p ? void 0 : p.published) === !0, el = (null == p ? void 0 : p.soft_deleted) === !0, es = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
-  return (ea || en) && !el ? (0, a.jsxs)("article", {
+  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), Q = (0, T.default)(s, n), q = null != Z && null == R && Q, J = (0, u.default)(O.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = a.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), el = (null == p ? void 0 : p.published) === !0, ea = (null == p ? void 0 : p.soft_deleted) === !0, es = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  return (el || en) && !ea ? (0, l.jsxs)("article", {
     className: D.container,
     "aria-label": z,
-    children: [q && (0, a.jsxs)("div", {
+    children: [q && (0, l.jsxs)("div", {
       className: i(D.tierTrialIndicator, D.tierTopIndicator),
       children: [b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_PERIOD.format({
         trialPeriodDuration: (0, g.formatPlanIntervalDuration)({
           interval: Z.interval,
           interval_count: Z.interval_count
         })
-      }), (0, a.jsx)(o.Tooltip, {
+      }), (0, l.jsx)(o.Tooltip, {
         clickableOnMobile: !0,
         text: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
           activeTrialUserLimit: null != X ? X : 0
         }),
-        children: e => (0, a.jsx)(E.default, {
+        children: e => (0, l.jsx)(E.default, {
           className: D.tierTrialIndicatorIcon,
           ...e
         })
       })]
-    }), (0, a.jsxs)("div", {
+    }), (0, l.jsxs)("div", {
       className: q ? void 0 : D.cardContainerWithoutTopIndicator,
-      children: [(0, a.jsxs)("div", {
+      children: [(0, l.jsxs)("div", {
         className: D.tierInfoContainer,
-        children: [J ? (0, a.jsx)(L.GuildRoleSubscriptionCollapsibleCardBasicInfo, {
+        children: [J ? (0, l.jsx)(L.GuildRoleSubscriptionCollapsibleCardBasicInfo, {
           listingId: n,
-          isListingPublished: ea,
+          isListingPublished: el,
           expanded: et,
           onToggleExpanded: () => ee(e => !e)
-        }) : (0, a.jsx)(j.GuildRoleSubscriptionCardBasicInfo, {
+        }) : (0, l.jsx)(j.GuildRoleSubscriptionCardBasicInfo, {
           listingId: n,
-          isListingPublished: ea
-        }), et && (0, a.jsxs)(a.Fragment, {
-          children: [J && (0, a.jsx)("div", {
+          isListingPublished: el
+        }), et && (0, l.jsxs)(l.Fragment, {
+          children: [J && (0, l.jsx)("div", {
             className: D.divider
-          }), w ? (0, a.jsx)(o.Button, {
+          }), w ? (0, l.jsx)(o.Button, {
             fullWidth: !0,
             look: o.Button.Looks.OUTLINED,
             color: o.Button.Colors.PRIMARY,
             disabled: !0,
             children: V ? b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
-          }) : (0, a.jsx)(o.Tooltip, {
+          }) : (0, l.jsx)(o.Tooltip, {
             text: v ? null : x,
             "aria-label": null !== (t = v && x) && void 0 !== t && t,
-            children: e => (0, a.jsx)(A.default, {
+            children: e => (0, l.jsx)(A.default, {
               ...e,
               fullWidth: !0,
               disabled: !v || M,
@@ -248,24 +248,24 @@ var V = e => {
               onlyShineOnHover: !0,
               children: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
             })
-          }), (0, a.jsx)(f.default, {
+          }), (0, l.jsx)(f.default, {
             size: 16
-          }), (0, a.jsx)(o.Text, {
+          }), (0, l.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "text-normal",
             className: i((!G || !B) && D.tierDescriptionTruncate),
-            children: (0, a.jsx)("div", {
+            children: (0, l.jsx)("div", {
               ref: Y,
               children: K
             })
-          }), G && (0, a.jsx)(k, {
+          }), G && (0, l.jsx)(k, {
             isViewAll: B,
             onToggle: () => H(e => !e),
             showMoreText: es
           })]
         })]
-      }), et && (0, a.jsx)(o.HeadingLevel, {
-        children: (0, a.jsx)(F, {
+      }), et && (0, l.jsx)(o.HeadingLevel, {
+        children: (0, l.jsx)(F, {
           listingId: n,
           guildId: s
         })

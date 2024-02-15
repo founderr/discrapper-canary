@@ -1,12 +1,12 @@
 "use strict";
-let a;
+let l;
 n.r(t), n.d(t, {
   default: function() {
     return U
   }
 }), n("222007"), n("808653"), n("424973");
-var l = n("917351"),
-  s = n.n(l),
+var a = n("917351"),
+  s = n.n(a),
   i = n("446674"),
   r = n("913144"),
   o = n("447909"),
@@ -37,7 +37,7 @@ function N(e) {
 function A() {
   if (!S) return !1;
   let e = f.default.getChannel(v);
-  if (0 === g.trim().length) return null != a && a.clearQuery(), _ = function(e) {
+  if (0 === g.trim().length) return null != l && l.clearQuery(), _ = function(e) {
     let t = m.default.getFriendIDs();
     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
       let n = p.default.getUser(t);
@@ -47,7 +47,7 @@ function A() {
     }, []).sort(R)
   }(e), !0;
   let t = null != e ? e.recipients : [];
-  return null != a && a.setQuery(g, {
+  return null != l && l.setQuery(g, {
     friends: !0
   }, t, function() {
     let e = h.default.getFrequentlyWithoutFetchingLatest(),
@@ -58,14 +58,14 @@ function A() {
         } = e;
         return h.default.getScoreWithoutFetchingLatest(t)
       })),
-      a = {};
+      l = {};
     return t.forEach(e => {
       let t = h.default.getScoreWithoutFetchingLatest(e.id),
-        l = e.getRecipientId(),
-        s = m.default.isFriend(l) ? .2 : 0,
-        i = null != f.default.getDMFromUserId(l) ? .1 : 0;
-      a[l] = 1 + t / n + s + i
-    }), a
+        a = e.getRecipientId(),
+        s = m.default.isFriend(a) ? .2 : 0,
+        i = null != f.default.getDMFromUserId(a) ? .1 : 0;
+      l[a] = 1 + t / n + s + i
+    }), l
   }()), !1
 }
 
@@ -94,12 +94,12 @@ function j(e) {
 }
 
 function L() {
-  return null != a && (a.destroy(), a = null), o.default.getSearchContext(j, 1e3)
+  return null != l && (l.destroy(), l = null), o.default.getSearchContext(j, 1e3)
 }
 
 function y(e) {
   if (e.key !== E.NEW_GROUP_DM_POPOUT_ID) return !1;
-  S = !0, M(), a = L(), v = null, N("")
+  S = !0, M(), l = L(), v = null, N("")
 }
 
 function O(e) {
@@ -108,7 +108,7 @@ function O(e) {
 }
 
 function P() {
-  null != a && (a.destroy(), a = null), x()
+  null != l && (l.destroy(), l = null), x()
 }
 class b extends i.default.Store {
   initialize() {
@@ -147,13 +147,13 @@ let D = new b(r.default, {
       channelId: n
     } = e;
     if (null != t) return !1;
-    let a = S;
-    return x(), S = a, v = n, A()
+    let l = S;
+    return x(), S = l, v = n, A()
   },
   MODAL_PUSH: y,
   SHOW_ACTION_SHEET: y,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function(e) {
-    S = !0, M(), a = L(), v = e.channelId, N("")
+    S = !0, M(), l = L(), v = e.channelId, N("")
   },
   MODAL_POP: O,
   HIDE_ACTION_SHEET: O,

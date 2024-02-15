@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
@@ -34,15 +34,15 @@ function g(e) {
     collapseWhenChecked: x = !0,
     onClick: N,
     disabled: A
-  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = l.useState(!1), L = (0, c.default)(), y = (0, o.isThemeDark)(L) || t ? S : E, {
+  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = a.useState(!1), L = (0, c.default)(), y = (0, o.isThemeDark)(L) || t ? S : E, {
     width: O = 0,
     ref: P
   } = (0, d.default)(), {
     width: b = 0,
     ref: D
   } = (0, d.default)();
-  return (0, a.jsxs)(u.TooltipContainer, {
-    text: (0, a.jsx)(h.NitroTooltipLabel, {
+  return (0, l.jsxs)(u.TooltipContainer, {
+    text: (0, l.jsx)(h.NitroTooltipLabel, {
       textColor: "always-white",
       tooltipText: s
     }),
@@ -51,7 +51,7 @@ function g(e) {
     "aria-label": s,
     tooltipClassName: p.tooltip,
     className: p.tooltipContainer,
-    children: [(0, a.jsx)("input", {
+    children: [(0, l.jsx)("input", {
       className: p.visuallyHidden,
       checked: t,
       onChange: function() {
@@ -64,7 +64,7 @@ function g(e) {
       id: v,
       type: "checkbox",
       disabled: A
-    }), (0, a.jsxs)("label", {
+    }), (0, l.jsxs)("label", {
       htmlFor: v,
       className: i(p.label, T, {
         [p.transition]: R,
@@ -74,16 +74,16 @@ function g(e) {
       style: x ? {
         width: t ? O : O + b
       } : void 0,
-      children: [t ? (0, a.jsx)(m.Shine, {
+      children: [t ? (0, l.jsx)(m.Shine, {
         className: p.shine,
         shinePaused: M
-      }) : null, (0, a.jsx)("img", {
+      }) : null, (0, l.jsx)("img", {
         ref: P,
         src: y,
         alt: C
-      }), (0, a.jsx)("span", {
+      }), (0, l.jsx)("span", {
         ref: D,
-        children: (0, a.jsx)(u.Text, {
+        children: (0, l.jsx)(u.Text, {
           className: i(p.burstText, {
             [p.visuallyHidden]: t && x,
             [p.burstTextChecked]: t

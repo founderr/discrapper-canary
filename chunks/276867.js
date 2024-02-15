@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return N
   }
 }), n("424973");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("65597"),
@@ -34,48 +34,48 @@ function x(e) {
     guild: E,
     specMap: S,
     categoryTitle: g
-  } = e, T = _.Permissions[h], x = null !== (s = null === (t = S[T.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, c.getPermissionName)(T), N = null !== (f = null === (n = S[T.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== f ? f : "", A = C.ELEVATED_PERMISSIONS.has(T), M = p.length, R = (0, r.default)([m.default], () => m.default.can(_.Permissions.MANAGE_ROLES, E), [E]), j = l.useCallback(async e => {
+  } = e, T = _.Permissions[h], x = null !== (s = null === (t = S[T.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, c.getPermissionName)(T), N = null !== (f = null === (n = S[T.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== f ? f : "", A = C.ELEVATED_PERMISSIONS.has(T), M = p.length, R = (0, r.default)([m.default], () => m.default.can(_.Permissions.MANAGE_ROLES, E), [E]), j = a.useCallback(async e => {
     R && (await d.default.open(E.id, _.GuildSettingsSections.ROLES), await d.default.selectRole(e))
   }, [R, E.id]);
-  return (0, a.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: i(v.permissionItemContainer, {
       [v.elevatedPermission]: A
     }),
-    children: [(0, a.jsxs)("div", {
+    children: [(0, l.jsxs)("div", {
       className: i(v.permissionItemHeader),
-      children: [(0, a.jsxs)("div", {
+      children: [(0, l.jsxs)("div", {
         className: v.permissionTitle,
-        children: [(0, a.jsx)(o.Text, {
+        children: [(0, l.jsx)(o.Text, {
           variant: "text-md/medium",
           color: A ? "text-danger" : "header-primary",
           children: x
-        }), null != g && (0, a.jsx)(o.Text, {
+        }), null != g && (0, l.jsx)(o.Text, {
           variant: "text-xs/normal",
           color: "header-muted",
           children: g
         })]
-      }), (0, a.jsx)(o.Text, {
+      }), (0, l.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "text-normal",
         children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({
           roleCount: M
         })
       })]
-    }), null != N && (0, a.jsx)("div", {
+    }), null != N && (0, l.jsx)("div", {
       className: v.permissionItemDescription,
-      children: (0, a.jsx)(o.Text, {
+      children: (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-secondary",
         children: N
       })
-    }), (0, a.jsx)("div", {
+    }), (0, l.jsx)("div", {
       className: v.permissionItemRoleContainer,
-      children: p.map(e => (0, a.jsx)(o.Clickable, {
+      children: p.map(e => (0, l.jsx)(o.Clickable, {
         className: i(v.roleTooltipItem, {
           [v.editable]: R && e !== E.id
         }),
         onClick: () => j(e),
-        children: (0, a.jsx)(u.default, {
+        children: (0, l.jsx)(u.default, {
           role: E.getRole(e),
           guildId: E.id
         })
@@ -91,11 +91,11 @@ function N(e) {
     location: s,
     className: u,
     onNavigate: d
-  } = e, c = (0, r.default)([p.default], () => p.default.getUser(t), [t]), m = (0, r.default)([h.default], () => h.default.getGuild(n), [n]), N = (0, r.default)([f.default], () => f.default.getMember(n, t), [n, t]), A = (0, g.useProfileThemedPanelBackground)(t, n), M = (0, C.useUserPermissionsAndRoles)(t, n, C.ALL_PERMISSIONS), R = Object.keys(M).length, j = l.useMemo(() => null != m ? E.default.getGuildPermissionSpecMap(m) : null, [m]), L = l.useMemo(() => null != m ? E.default.generateGuildPermissionSpec(m) : null, [m]), y = l.useMemo(() => {
+  } = e, c = (0, r.default)([p.default], () => p.default.getUser(t), [t]), m = (0, r.default)([h.default], () => h.default.getGuild(n), [n]), N = (0, r.default)([f.default], () => f.default.getMember(n, t), [n, t]), A = (0, g.useProfileThemedPanelBackground)(t, n), M = (0, C.useUserPermissionsAndRoles)(t, n, C.ALL_PERMISSIONS), R = Object.keys(M).length, j = a.useMemo(() => null != m ? E.default.getGuildPermissionSpecMap(m) : null, [m]), L = a.useMemo(() => null != m ? E.default.generateGuildPermissionSpec(m) : null, [m]), y = a.useMemo(() => {
     if (null == m || null == j || null == N) return null;
-    if (0 === R) return (0, a.jsx)("div", {
+    if (0 === R) return (0, l.jsx)("div", {
       className: i(v.permissionChiplet, v.noModPerms),
-      children: (0, a.jsx)(o.Text, {
+      children: (0, l.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-positive",
         children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND
@@ -104,11 +104,11 @@ function N(e) {
     let e = [];
     return null == L || L.forEach(t => {
       t.permissions.forEach(n => {
-        let l = n.flag,
-          s = C.ALL_PERMISSIONS.find(e => _.Permissions[e] === l);
+        let a = n.flag,
+          s = C.ALL_PERMISSIONS.find(e => _.Permissions[e] === a);
         if (null == s) return;
         let i = M[s];
-        null != i && e.push((0, a.jsx)(x, {
+        null != i && e.push((0, l.jsx)(x, {
           permission: s,
           roleIds: i,
           guild: m,
@@ -118,21 +118,21 @@ function N(e) {
       })
     }), e
   }, [m, j, N, R, M, L]);
-  return null == c || null == N ? null : (0, a.jsxs)("div", {
+  return null == c || null == N ? null : (0, l.jsxs)("div", {
     className: i(T.container, u),
     style: {
       backgroundColor: A
     },
-    children: [(0, a.jsx)(S.default, {
+    children: [(0, l.jsx)(S.default, {
       guildId: n,
       userId: t,
       onNavigate: d
-    }), (0, a.jsx)(o.Scroller, {
+    }), (0, l.jsx)(o.Scroller, {
       className: v.permissionsGroupContainer,
-      children: (0, a.jsx)(o.FormItem, {
+      children: (0, l.jsx)(o.FormItem, {
         title: I.default.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE,
         titleClassName: v.infoTitle,
-        children: (0, a.jsx)("div", {
+        children: (0, l.jsx)("div", {
           className: v.permissionsItemContainer,
           children: y
         })

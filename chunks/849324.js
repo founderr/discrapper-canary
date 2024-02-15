@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("974667"),
   r = n("446674"),
   o = n("77078"),
@@ -22,7 +22,7 @@ function p(e) {
   let {
     user: t,
     row: n,
-    hideDiscriminator: l,
+    hideDiscriminator: a,
     comparator: p,
     selected: E,
     checked: S,
@@ -31,7 +31,7 @@ function p(e) {
     "aria-setsize": _,
     "aria-posinset": I
   } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getStatus(t.id)), v = (0, i.useListItem)(String(t.id));
-  return (0, a.jsx)(o.Clickable, {
+  return (0, l.jsx)(o.Clickable, {
     id: "user-row-".concat(n),
     className: m.friendWrapper,
     onClick: () => {
@@ -45,33 +45,33 @@ function p(e) {
     "aria-selected": S,
     "aria-setsize": _,
     "aria-posinset": I,
-    children: (0, a.jsxs)(f.default, {
+    children: (0, l.jsxs)(f.default, {
       align: f.default.Align.CENTER,
       className: s(m.friend, {
         [m.friendSelected]: E
       }),
-      children: [(0, a.jsx)(d.default, {
+      children: [(0, l.jsx)(d.default, {
         user: t,
         status: T,
         className: m.avatar
-      }), (0, a.jsxs)(f.default, {
+      }), (0, l.jsxs)(f.default, {
         className: m.match,
         align: f.default.Align.BASELINE,
-        children: [(0, a.jsx)(o.Text, {
+        children: [(0, l.jsx)(o.Text, {
           tag: "strong",
           className: m.nickname,
           "aria-hidden": !0,
           variant: "text-md/medium",
           children: null != p && p === t.tag ? h.default.getName(t) : null != p && "" !== p ? p : h.default.getName(t)
-        }), (0, a.jsx)(u.default, {
+        }), (0, l.jsx)(u.default, {
           user: t,
-          hideDiscriminator: l,
+          hideDiscriminator: a,
           className: m.discordTag,
           usernameClass: m.weightMedium,
           discriminatorClass: m.weightMedium,
           forceUsername: !0
         })]
-      }), (0, a.jsx)(o.Checkbox, {
+      }), (0, l.jsx)(o.Checkbox, {
         displayOnly: !0,
         size: 22,
         value: S,

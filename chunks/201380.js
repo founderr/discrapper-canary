@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return w
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("316693"),
@@ -46,9 +46,9 @@ function b(e) {
   let {
     numUsers: t
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: P.moreContainer,
-    children: (0, a.jsxs)(o.Text, {
+    children: (0, l.jsxs)(o.Text, {
       color: "text-muted",
       variant: "text-sm/medium",
       children: ["+", t]
@@ -60,26 +60,26 @@ function D(e) {
   let {
     numAudience: t,
     collapsed: n
-  } = e, l = n ? t : O.default.Messages.LISTENING_COUNT.format({
+  } = e, a = n ? t : O.default.Messages.LISTENING_COUNT.format({
     count: t
   });
-  return (0, a.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: i(P.audienceContainer, {
       [P.audienceContainerCollapsed]: n
     }),
-    children: [(0, a.jsx)("div", {
+    children: [(0, l.jsx)("div", {
       className: P.audienceIconContainer,
-      children: (0, a.jsx)(M.default, {
+      children: (0, l.jsx)(M.default, {
         className: P.audienceIcon
       })
-    }), (0, a.jsx)(o.Text, {
+    }), (0, l.jsx)(o.Text, {
       color: "text-muted",
       variant: "text-sm/medium",
-      children: l
+      children: a
     })]
   })
 }
-class U extends l.PureComponent {
+class U extends a.PureComponent {
   get canWatchStream() {
     let {
       channel: e,
@@ -93,15 +93,15 @@ class U extends l.PureComponent {
     } = this.state, {
       connectUserDragSource: t,
       canDrag: n,
-      isSelfOnOtherClient: l,
+      isSelfOnOtherClient: a,
       user: s,
       channel: i
-    } = this.props, r = (0, a.jsx)("div", {
+    } = this.props, r = (0, l.jsx)("div", {
       className: P.draggable,
       "data-dnd-name": i.name,
-      onMouseEnter: l ? void 0 : this.handleMouseEnter,
-      onMouseLeave: l ? void 0 : this.handleHidePreview,
-      children: (0, a.jsx)(o.Popout, {
+      onMouseEnter: a ? void 0 : this.handleMouseEnter,
+      onMouseLeave: a ? void 0 : this.handleHidePreview,
+      children: (0, l.jsx)(o.Popout, {
         preload: () => (0, I.default)(s.id, s.getAvatarURL(i.guild_id, 80), {
           guildId: i.guild_id,
           channelId: i.id
@@ -116,7 +116,7 @@ class U extends l.PureComponent {
     return n ? t(r) : r
   }
   constructor(...e) {
-    super(...e), this.domElementRef = l.createRef(), this.state = {
+    super(...e), this.domElementRef = a.createRef(), this.state = {
       userPopoutOpen: !1,
       isHoveringHangStatus: !1
     }, this.handleClickUser = () => {
@@ -132,9 +132,9 @@ class U extends l.PureComponent {
         hidePreview: e,
         isStreaming: t,
         user: n,
-        showHangStatus: a
+        showHangStatus: l
       } = this.props;
-      (t || a) && (null == e || e(n.id)), this.setState({
+      (t || l) && (null == e || e(n.id)), this.setState({
         isHoveringHangStatus: !1
       })
     }, this.handleMouseEnter = () => {
@@ -142,9 +142,9 @@ class U extends l.PureComponent {
         user: e,
         showPreview: t,
         isStreaming: n,
-        showHangStatus: a
+        showHangStatus: l
       } = this.props;
-      (n || a) && (null == t || t(e.id))
+      (n || l) && (null == t || t(e.id))
     }, this.handleHoverHangStatus = e => {
       this.setState({
         isHoveringHangStatus: e
@@ -154,16 +154,16 @@ class U extends l.PureComponent {
         user: e,
         channel: t,
         isWatching: n,
-        hidePreview: a
+        hidePreview: l
       } = this.props;
       if (!this.canWatchStream) return;
-      let l = {
+      let a = {
         streamType: y.StreamTypes.GUILD,
         ownerId: e.id,
         channelId: t.id,
         guildId: t.guild_id
       };
-      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, g.default)(l), u.default.selectParticipant(l.channelId, (0, E.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
+      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, g.default)(a), u.default.selectParticipant(a.channelId, (0, E.encodeStreamKey)(a))) : (0, f.watchStreamAndTransitionToStream)(a), null == l || l(e.id)
     }, this.handleJoinVoice = () => {
       let {
         user: e,
@@ -174,15 +174,15 @@ class U extends l.PureComponent {
     }, this.handleUserContextMenu = e => {
       let {
         channel: t,
-        user: l
+        user: a
       } = this.props;
       (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("834247").then(n.bind(n, "834247"));
-        return n => (0, a.jsx)(e, {
+        return n => (0, l.jsx)(e, {
           ...n,
-          user: l,
+          user: a,
           guildId: t.guild_id,
           channel: t,
           showMediaItems: !0,
@@ -193,10 +193,10 @@ class U extends l.PureComponent {
       let {
         channel: t,
         user: n
-      } = this.props, l = t.getGuildId();
-      return (0, a.jsx)(T.default, {
+      } = this.props, a = t.getGuildId();
+      return (0, l.jsx)(T.default, {
         userId: n.id,
-        guildId: null != l ? l : void 0,
+        guildId: null != a ? a : void 0,
         channelId: t.id,
         ...e
       })
@@ -205,25 +205,25 @@ class U extends l.PureComponent {
         user: e,
         channel: t,
         previewIsOpen: n,
-        location: l
+        location: a
       } = this.props;
-      return (0, a.jsx)(C.default, {
+      return (0, l.jsx)(C.default, {
         user: e,
         channel: t,
         onWatch: this.handleWatchStream,
         previewIsOpen: n,
-        location: l
+        location: a
       })
     }, this.renderHangStatusPopout = () => {
       let {
         hangStatusActivity: e,
         previewIsOpen: t,
         user: n,
-        channel: l
+        channel: a
       } = this.props;
-      return (0, a.jsx)(_.default, {
+      return (0, l.jsx)(_.default, {
         userId: n.id,
-        channel: l,
+        channel: a,
         hangStatusActivity: e,
         previewIsOpen: t
       })
@@ -231,7 +231,7 @@ class U extends l.PureComponent {
       let {
         isSelfOnOtherClient: t,
         otherClientSessionType: n,
-        voicePlatform: l,
+        voicePlatform: a,
         shouldShowPreview: s,
         mute: r,
         localMute: u,
@@ -275,7 +275,7 @@ class U extends l.PureComponent {
         serverDeaf: T,
         tabIndex: v,
         otherClientSessionType: n,
-        voicePlatform: l,
+        voicePlatform: a,
         embeddedApplication: x,
         avatarContainerClass: i({
           [P.userAvatar]: !0
@@ -294,28 +294,28 @@ class U extends l.PureComponent {
       };
       if (t) {
         var F;
-        return (0, a.jsx)(o.Tooltip, {
+        return (0, l.jsx)(o.Tooltip, {
           text: null !== (F = (0, p.default)(n)) && void 0 !== F ? F : O.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
               onClick: t,
               onContextMenu: n,
-              ...l
+              ...a
             } = e;
-            return (0, a.jsx)(R.default, {
+            return (0, l.jsx)(R.default, {
               ...w,
-              ...l
+              ...a
             })
           }
         })
       }
-      return (0, a.jsx)(o.Popout, {
+      return (0, l.jsx)(o.Popout, {
         position: "right",
         renderPopout: M && D || !S ? this.renderHangStatusPopout : this.renderStreamPopout,
         shouldShow: s && !b,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
-        children: () => (0, a.jsx)(R.default, {
+        children: () => (0, l.jsx)(R.default, {
           ...w,
           onMouseDown: e.onMouseDown,
           onKeyDown: e.onKeyDown,

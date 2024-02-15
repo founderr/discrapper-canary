@@ -14,7 +14,7 @@ function d(e) {
   let {
     guildId: t,
     isWatchTogetherPromoEnabled: i = !1,
-    disableFilter: d = !1
+    enableFilter: d = !1
   } = e, {
     filter: u
   } = (0, l.useStateFromStoresObject)([a.default], () => ({
@@ -22,6 +22,6 @@ function d(e) {
   })), c = (0, o.default)(t, i), s = (0, n.default)(c), f = (0, r.useDeveloperActivityShelfItems)();
   return [...f, ...s].map(e => {
     let [t, i] = e;
-    return [t, i.filter(e => d || "" === u || e.application.name.toLocaleLowerCase().includes(u.toLocaleLowerCase()))]
+    return [t, i.filter(e => !d || "" === u || e.application.name.toLocaleLowerCase().includes(u.toLocaleLowerCase()))]
   })
 }

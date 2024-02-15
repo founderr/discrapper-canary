@@ -43,7 +43,7 @@ var a = (0, t("237436").defineColorTokens)({
   },
   "blur-fallback-pressed": {
     light: {
-      color: "primary.530",
+      color: "primary.560",
       opacity: .96
     },
     dark: {
@@ -51,11 +51,11 @@ var a = (0, t("237436").defineColorTokens)({
       opacity: .96
     },
     darker: {
-      color: "plum.17",
+      color: "plum.18",
       opacity: .96
     },
     midnight: {
-      color: "plum.19",
+      color: "plum.20",
       opacity: .96
     }
   },

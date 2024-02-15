@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return G
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
@@ -42,7 +42,7 @@ var a = n("37983"),
   F = n("49111"),
   k = n("782340"),
   V = n("928319");
-class B extends l.Component {
+class B extends a.Component {
   componentDidMount() {
     let {
       guestWindow: e
@@ -53,10 +53,10 @@ class B extends l.Component {
     let {
       title: t,
       fontScale: n,
-      locale: a,
-      clientThemesCSS: l
+      locale: l,
+      clientThemesCSS: a
     } = this.props;
-    e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== a && this.updateLocale(), e.clientThemesCSS !== l && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor()
+    e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== l && this.updateLocale(), e.clientThemesCSS !== a && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor()
   }
   componentWillUnmount() {
     let {
@@ -99,22 +99,22 @@ class B extends l.Component {
     let {
       clientThemesCSS: e,
       guestWindow: t
-    } = this.props, n = t.document, a = (0, n.head);
-    o(null != a, "Window document ".concat("head", " was null"));
-    let l = a.querySelector("style[".concat(_.CLIENT_THEMES_DATA_ATTRIBUTE, "]"));
-    if (null != l) {
-      l.textContent = e;
+    } = this.props, n = t.document, l = (0, n.head);
+    o(null != l, "Window document ".concat("head", " was null"));
+    let a = l.querySelector("style[".concat(_.CLIENT_THEMES_DATA_ATTRIBUTE, "]"));
+    if (null != a) {
+      a.textContent = e;
       return
     }
     let s = n.createElement("style");
-    s.setAttribute(_.CLIENT_THEMES_DATA_ATTRIBUTE, "true"), s.textContent = e, a.appendChild(s)
+    s.setAttribute(_.CLIENT_THEMES_DATA_ATTRIBUTE, "true"), s.textContent = e, l.appendChild(s)
   }
   render() {
     let {
       theme: e,
       forcedColors: t,
       focused: n,
-      appFocused: l,
+      appFocused: a,
       children: s,
       windowKey: r,
       mouseModeEnabled: o,
@@ -131,38 +131,38 @@ class B extends l.Component {
       "reduce-motion": m,
       "full-motion": !m,
       "keyboard-mode": d,
-      "app-focused": n || l,
+      "app-focused": n || a,
       "low-saturation": S <= .4
     });
-    return (0, a.jsx)(u.BrowserRouter, {
-      children: (0, a.jsx)(A.default, {
-        children: (0, a.jsx)(c.ThemeContextProvider, {
+    return (0, l.jsx)(u.BrowserRouter, {
+      children: (0, l.jsx)(A.default, {
+        children: (0, l.jsx)(c.ThemeContextProvider, {
           theme: e,
-          children: (0, a.jsx)(c.RedesignIconContextProvider, {
-            children: (0, a.jsx)("div", {
+          children: (0, l.jsx)(c.RedesignIconContextProvider, {
+            children: (0, l.jsx)("div", {
               "data-popout-root": !0,
               ref: this.rootRef,
               className: i((0, b.getThemeClass)(e), (0, I.default)(), M, _),
-              children: (0, a.jsx)(c.FocusRingScope, {
+              children: (0, l.jsx)(c.FocusRingScope, {
                 containerRef: this.rootRef,
-                children: (0, a.jsx)(p.default, {
-                  children: (0, a.jsxs)(T.default, {
-                    children: [(0, a.jsx)(O.MaskLibrary, {}), (0, a.jsx)(h.AppWindowContextProvider, {
+                children: (0, l.jsx)(p.default, {
+                  children: (0, l.jsxs)(T.default, {
+                    children: [(0, l.jsx)(O.MaskLibrary, {}), (0, l.jsx)(h.AppWindowContextProvider, {
                       appContext: F.AppContext.POPOUT,
                       renderWindow: C,
-                      children: (0, a.jsxs)(y.AppLayerProvider, {
-                        children: [(0, a.jsxs)("div", {
+                      children: (0, l.jsxs)(y.AppLayerProvider, {
+                        children: [(0, l.jsxs)("div", {
                           className: V.popout,
-                          children: [g && null != N ? (0, a.jsx)(v.default, {
+                          children: [g && null != N ? (0, l.jsx)(v.default, {
                             focused: n,
                             type: N,
                             windowKey: r,
                             macOSFrame: !0
-                          }) : null, (0, a.jsx)("div", {
+                          }) : null, (0, l.jsx)("div", {
                             className: i(V.content, x),
                             children: s
                           })]
-                        }), (0, a.jsx)(c.Modals, {}), (0, a.jsx)(f.default, {}), (0, a.jsx)(y.AppLayerContainer, {})]
+                        }), (0, l.jsx)(c.Modals, {}), (0, l.jsx)(f.default, {}), (0, l.jsx)(y.AppLayerContainer, {})]
                       })
                     })]
                   })
@@ -175,7 +175,7 @@ class B extends l.Component {
     })
   }
   constructor(...e) {
-    super(...e), this.rootRef = l.createRef(), this._cleanupWindowActionCreators = void 0, this.warnPopoutClose = e => {
+    super(...e), this.rootRef = a.createRef(), this._cleanupWindowActionCreators = void 0, this.warnPopoutClose = e => {
       this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, P.isPlatformEmbedded && (0, S.default)(() => {
         w.default.unmountWindow(this.props.windowKey), P.isPlatformEmbedded && D.default.close(this.props.windowKey)
       }))
@@ -190,10 +190,10 @@ class B extends l.Component {
 B.defaultProps = {
   withTitleBar: !0
 };
-let H = l.forwardRef(function(e, t) {
+let H = a.forwardRef(function(e, t) {
   let {
     guestWindow: n,
-    focused: l
+    focused: a
   } = (0, d.useStateFromStoresObject)([w.default], () => ({
     guestWindow: w.default.getWindow(e.windowKey),
     focused: w.default.getWindowFocused(e.windowKey)
@@ -223,7 +223,7 @@ let H = l.forwardRef(function(e, t) {
     })),
     T = (0, d.useStateFromStores)([E.default], () => null != e.channelId && null !== E.default.getSelfEmbeddedActivityForChannel(e.channelId));
   (0, x.default)(n, !1);
-  let v = (0, N.default)(n, l),
+  let v = (0, N.default)(n, a),
     {
       AnalyticsLocationProvider: A
     } = (0, C.default)(g.default.POPOUT_WINDOW),
@@ -231,13 +231,13 @@ let H = l.forwardRef(function(e, t) {
       clientThemesClassName: j,
       clientThemesCSS: y
     } = (0, _.default)();
-  return null == n ? null : (0, a.jsx)(c.DnDProvider, {
-    children: (0, a.jsx)(A, {
-      children: (0, a.jsx)(B, {
+  return null == n ? null : (0, l.jsx)(c.DnDProvider, {
+    children: (0, l.jsx)(A, {
+      children: (0, l.jsx)(B, {
         ref: t,
         ...e,
         guestWindow: n,
-        focused: l,
+        focused: a,
         appFocused: s,
         locale: i,
         theme: r,

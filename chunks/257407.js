@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return k
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("917351"),
   i = n("446674"),
   r = n("151426"),
@@ -50,7 +50,7 @@ function k(e) {
     channel: n,
     closePopout: p,
     onFocus: C
-  } = e, y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), V = _.default.canUseFancyVoiceChannelReactions(k), B = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), H = l.useRef(!1), G = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...G, ...F], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
+  } = e, y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), V = _.default.canUseFancyVoiceChannelReactions(k), B = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), H = a.useRef(!1), G = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...G, ...F], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: n,
     intention: U
@@ -89,7 +89,7 @@ function k(e) {
       id: q,
       guild_id: J
     } = n;
-  l.useEffect(() => {
+  a.useEffect(() => {
     f.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
       channel_id: q,
       guild_id: J
@@ -97,20 +97,20 @@ function k(e) {
   }, [q, J]);
   let $ = y ? [r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
     ee = B === R.VoiceChannelEffectAnimationType.PREMIUM;
-  return (0, a.jsx)(h.default, {
+  return (0, l.jsx)(h.default, {
     contentTypes: $,
     children: e => {
       let {
         visibleContent: t,
-        markAsDismissed: l
+        markAsDismissed: a
       } = e, s = y && t === r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
-      return (0, a.jsx)(o.Popout, {
+      return (0, l.jsx)(o.Popout, {
         position: "left",
         "aria-label": b.default.Messages.VOICE_CHANNEL_EFFECTS_MORE,
         shouldShow: s,
-        renderPopout: () => (0, a.jsx)("div", {
+        renderPopout: () => (0, l.jsx)("div", {
           onMouseEnter: C,
-          children: (0, a.jsx)(E.default, {
+          children: (0, l.jsx)(E.default, {
             className: D.reducedMotionTooltip,
             header: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
             content: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
@@ -119,13 +119,13 @@ function k(e) {
                 scrollPosition: P.AccessibilityScrollPositions.REDUCED_MOTION
               }), p()
             },
-            markAsDismissed: l,
+            markAsDismissed: a,
             buttonCTA: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
             secondaryButtonCTA: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
             caretPosition: E.CaretPosition.RIGHT_CENTER
           })
         }),
-        children: () => (0, a.jsx)(M.default, {
+        children: () => (0, l.jsx)(M.default, {
           title: b.default.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
           channel: n,
           closePopout: p,
@@ -135,7 +135,7 @@ function k(e) {
           onExpandedToggle: Q,
           analyticsOverride: w,
           emojiSearchProps: {
-            accessory: (0, a.jsx)(N.default, {
+            accessory: (0, l.jsx)(N.default, {
               labelText: b.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: ee,
               onChange: () => {

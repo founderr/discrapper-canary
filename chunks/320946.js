@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return O
   }
 });
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("627445"),
   i = n.n(s),
   r = n("866227"),
@@ -69,19 +69,19 @@ var a = n("37983"),
       changeDate: null != B ? o(B.currentPeriodEnd).format("MMM DD, YYYY") : ""
     }) : K ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : Z ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : $ && (r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
     let ee = (0, f.default)(j.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
-    l.useEffect(() => {
+    a.useEffect(() => {
       F && null != k && d.default.wait(() => {
         (0, c.fetchSubscriptionPlansForSKU)(k)
       })
     }, [F, k]);
-    let et = l.useCallback(async () => {
-        let n, l;
+    let et = a.useCallback(async () => {
+        let n, a;
         if (i(null != e, "No subscription listing"), i(null != U, "No subscription plan"), i(F, "Cannot purchase this unpublished plan"), (null == q ? void 0 : q.active_trial) != null) {
-          let a = await Q(t, e.id, q.active_trial.id);
-          if ((null == a ? void 0 : a.is_eligible) === !0) {
+          let l = await Q(t, e.id, q.active_trial.id);
+          if ((null == l ? void 0 : l.is_eligible) === !0) {
             var r;
             n = null == q ? void 0 : null === (r = q.active_trial) || void 0 === r ? void 0 : r.id
-          } else l = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
+          } else a = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
         }(0, C.default)({
           activeSubscription: B,
           analyticsSubscriptionType: L.SubscriptionTypes.GUILD,
@@ -98,8 +98,8 @@ var a = n("37983"),
           }) : void 0,
           analyticsLocations: J,
           analyticsLocation: s,
-          renderHeader: (n, l, s) => (0, a.jsx)(R.Header, {
-            onClose: l,
+          renderHeader: (n, a, s) => (0, l.jsx)(R.Header, {
+            onClose: a,
             listing: e,
             step: s,
             guildId: t
@@ -107,19 +107,19 @@ var a = n("37983"),
           initialPlanId: U.id,
           skuId: U.sku_id,
           planGroup: Y,
-          renderPurchaseConfirmation: (n, l) => ee ? (0, a.jsx)(M.PurchaseConfirmationLite, {
+          renderPurchaseConfirmation: (n, a) => ee ? (0, l.jsx)(M.PurchaseConfirmationLite, {
             listing: e,
-            onClose: l,
+            onClose: a,
             guildId: t
-          }) : (0, a.jsx)(R.PurchaseConfirmation, {
+          }) : (0, l.jsx)(R.PurchaseConfirmation, {
             listing: e,
-            onClose: l,
+            onClose: a,
             guildId: t
           }),
-          reviewWarningMessage: l
+          reviewWarningMessage: a
         })
       }, [F, e, U, B, Y, t, J, s, Q, q, ee]),
-      en = l.useCallback(() => {
+      en = a.useCallback(() => {
         (0, m.openMemberVerificationModal)(t)
       }, [t]);
     return {

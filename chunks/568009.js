@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("65597"),
+var a = n("65597"),
   s = n("760679"),
   i = n("242260"),
   r = n("981913"),
@@ -15,14 +15,14 @@ var l = n("65597"),
   d = n("782340");
 
 function c() {
-  let e = (0, l.default)([i.default], () => !i.default.visibleOverlayCanvas);
-  return (0, a.jsx)(u.default, {
+  let e = (0, a.default)([i.default], () => !i.default.visibleOverlayCanvas);
+  return (0, l.jsx)(u.default, {
     renderPopout: () => null,
     children: t => {
       let {
         ...n
       } = t;
-      return (0, a.jsx)(r.default, {
+      return (0, l.jsx)(r.default, {
         ...n,
         label: d.default.Messages.SHARED_CANVAS_HIDE_OVERLAY_DRAWINGS,
         isActive: e,

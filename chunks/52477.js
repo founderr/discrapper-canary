@@ -19,8 +19,8 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var a = n("656280"),
-  l = n.n(a),
+var l = n("656280"),
+  a = n.n(l),
   s = n("509043"),
   i = n("462274"),
   r = n("697218"),
@@ -36,10 +36,10 @@ function d(e) {
 function c(e, t) {
   let {
     width: n,
-    height: a,
-    left: l,
+    height: l,
+    left: a,
     top: s
-  } = e.getBoundingClientRect(), i = (t.clientX - l) / n, r = (t.clientY - s) / a;
+  } = e.getBoundingClientRect(), i = (t.clientX - a) / n, r = (t.clientY - s) / l;
   return {
     x: i,
     y: r
@@ -62,16 +62,16 @@ function m(e) {
   return e.type === o.DrawableType.LINE
 }
 
-function p(e, t, n, a) {
+function p(e, t, n, l) {
   var o;
   let d = r.default.getUser(e),
     c = null == d ? void 0 : d.getAvatarURL(null, u.AVATAR_COLOR_AVATAR_SIZE),
     f = null != c ? null === (o = i.useColorStore.getState().palette[c]) || void 0 === o ? void 0 : o[0] : null,
-    h = null != f ? "#".concat(l({
+    h = null != f ? "#".concat(a({
       r: f[0],
       g: f[1],
       b: f[2]
-    }).toHex()) : a,
+    }).toHex()) : l,
     m = (0, s.getDarkness)((0, s.hex2int)(h)) > .5 ? n : t;
   return {
     fillColor: h,

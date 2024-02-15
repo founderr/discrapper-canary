@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   isVideoCompact: function() {
-    return a
+    return l
   },
   isNamesCompact: function() {
-    return l
+    return a
   }
 });
 
-function a(e) {
+function l(e) {
   return e <= 220
 }
 
-function l(e) {
+function a(e) {
   return e <= 124
 }

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return g
+    return p
   }
 });
 var a, n, s = l("37983"),
@@ -207,7 +207,7 @@ function A(e) {
   })
 }
 
-function g(e) {
+function p(e) {
   let {
     guild: t,
     incidentData: a,

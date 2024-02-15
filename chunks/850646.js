@@ -40,7 +40,7 @@ function T(e) {
         onConfirm: S
       })
     })
-  }, [S, x]), g = new Intl.NumberFormat(M.default.getLocale()).format(o), p = (0, f.useCanAccessInviteCodeFeature)(t.id), L = (0, f.useCanAccessBulkBanningFeature)(t.id), H = n.useMemo(() => 1 + (p ? 1 : 0) + (L ? 1 : 0), [p, L]);
+  }, [S, x]), p = new Intl.NumberFormat(M.default.getLocale()).format(o), L = (0, f.useCanAccessInviteCodeFeature)(t.id), H = (0, f.useCanAccessBulkBanningFeature)(t.id), N = n.useMemo(() => 1 + (L ? 1 : 0) + (H ? 1 : 0), [L, H]);
   return 0 === o ? null : (0, a.jsxs)("tr", {
     className: i(_.newMembersNotice),
     onClick: A,
@@ -50,12 +50,12 @@ function T(e) {
         variant: "text-sm/normal",
         color: "always-white",
         children: M.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
-          count: g,
+          count: p,
           date: T
         })
       })
     }), (0, a.jsx)("td", {
-      colSpan: H
+      colSpan: N
     }), (0, a.jsx)("td", {
       colSpan: 2,
       children: (0, a.jsx)("div", {
