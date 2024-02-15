@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 }), n("222007");
 var a = n("884691"),
@@ -10,47 +10,40 @@ var a = n("884691"),
   i = n("384997"),
   r = n("697218"),
   o = n("158998"),
-  u = n("351348"),
-  d = n("543557"),
-  c = n("801894"),
-  f = n("819852"),
-  E = n("994428"),
-  h = () => {
+  u = n("543557"),
+  d = n("801894"),
+  c = n("819852"),
+  f = n("994428"),
+  E = () => {
     let e = (0, s.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
       {
         marketingEnabled: t,
         variant: n
-      } = (0, d.default)({
-        location: "useCollectiblesShopTabNewBadge"
-      }),
-      {
-        newBadgeEnabled: h
       } = (0, u.default)({
         location: "useCollectiblesShopTabNewBadge"
       }),
       {
-        newBadgeEnabled: _
-      } = (0, c.default)({
+        newBadgeEnabled: E
+      } = (0, d.default)({
         location: "useCollectiblesShopTabNewBadge"
       }),
-      C = a.useMemo(() => {
+      h = a.useMemo(() => {
         if ((0, o.ageEligibleForPremiumUpsell)(e)) {
           if (t) switch (n) {
-              case f.CollectiblesMarketingVariant.TOOLTIP:
-                return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP];
-              case f.CollectiblesMarketingVariant.COACHTIP:
-                return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]
-            } else if (_) return [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE];
-            else if (h) return [l.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE]
+            case c.CollectiblesMarketingVariant.TOOLTIP:
+              return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP];
+            case c.CollectiblesMarketingVariant.COACHTIP:
+              return [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]
+          } else if (E) return [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]
         }
         return []
-      }, [h, _, t, n, e]),
-      [I, S] = (0, i.useSelectedDismissibleContent)(C, void 0, !0),
-      m = null != I ? f.CollectiblesDCToDisplayOptions[I] : null;
+      }, [E, t, n, e]),
+      [_, C] = (0, i.useSelectedDismissibleContent)(h, void 0, !0),
+      I = null != _ ? c.CollectiblesDCToDisplayOptions[_] : null;
     return {
-      collectiblesShopTabNewBadgeDisplayOptions: m,
+      collectiblesShopTabNewBadgeDisplayOptions: I,
       dismissCollectiblesShopTabNewBadge: () => {
-        null != m && S(E.ContentDismissActionType.AUTO)
+        null != I && C(f.ContentDismissActionType.AUTO)
       }
     }
   }

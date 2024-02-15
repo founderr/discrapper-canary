@@ -27,6 +27,6 @@ let o = {
     title: () => i.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_TITLE,
     body: () => i.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION,
     imageSrc: r,
-    assetIds: ["a_b9a64088e30fd3a6f2456c2e0f44f173", "a_ea8e2e628bacdddb1ef18cb382aa454c", "a_0f5d6c4dd8ae74662ee9c40722a56cbd"]
+    assetIds: ["a_a065206df7b011a5510e4e5bca7d49be", "a_554b7c34f7b6c709f19535aacb128e7b", "a_250640ab00a8837a1d56f35879138177", "a_fa014594d4b2b4249e1098c0adc85b47"]
   }
 }
