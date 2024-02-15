@@ -10,10 +10,10 @@ var l = i("884691"),
 function n(e) {
   let {
     guildId: t,
-    disableFilter: i = !1
+    enableFilter: i = !1
   } = e, n = (0, a.default)({
     guildId: t,
-    disableFilter: i
+    enableFilter: i
   });
   return l.useMemo(() => {
     let e = [];

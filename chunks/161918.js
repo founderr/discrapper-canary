@@ -9,8 +9,7 @@ var s = n("884691"),
 
 function a(e, t) {
   let n = (0, i.default)({
-    guildId: e,
-    disableFilter: !0
+    guildId: e
   });
   return s.useMemo(() => {
     var e;

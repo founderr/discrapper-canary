@@ -76,7 +76,8 @@ function G(e) {
     location: "a48d9e_4"
   }), Q = (0, C.useIsWatchTogetherPromoEnabled)(), $ = (0, N.default)({
     guildId: l,
-    isWatchTogetherPromoEnabled: Q
+    isWatchTogetherPromoEnabled: Q,
+    enableFilter: !0
   }), ee = (0, d.useStateFromStores)([E.default], () => E.default.getCurrentUser()), et = (0, d.useStateFromStores)([I.default], () => I.default.getGuild(l), [l]), {
     AnalyticsLocationProvider: el
   } = (0, h.default)(v.default.ACTIVITY_DIRECTORY), ei = (0, D.default)(null == t ? void 0 : t.id), {
