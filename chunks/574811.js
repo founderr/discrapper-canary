@@ -45,11 +45,12 @@ function A(e) {
   return (0, s.jsx)(n.ModalRoot, {
     transitionState: a,
     disableTrack: !0,
+    size: n.ModalSize.DYNAMIC,
     children: (0, s.jsx)("div", {
       className: _.container,
       children: (0, s.jsxs)(n.Slides, {
         activeSlide: N,
-        width: 440,
+        width: 500,
         children: [(0, s.jsx)(n.Slide, {
           id: E.AppealIngestionSlideTypes.SPEED_BUMP,
           children: (0, s.jsx)(u.default, {
