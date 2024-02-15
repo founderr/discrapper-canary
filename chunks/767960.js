@@ -4,8 +4,8 @@ l.r(t), l.d(t, {
     return S
   }
 });
-var a = l("446674"),
-  n = l("913144"),
+var n = l("446674"),
+  a = l("913144"),
   s = l("773336"),
   r = l("50885"),
   i = l("288207"),
@@ -14,7 +14,7 @@ var a = l("446674"),
 let d = !1,
   c = !0,
   f = !1;
-class m extends a.default.Store {
+class m extends n.default.Store {
   initialize() {
     !(!s.isPlatformEmbedded || __OVERLAY__) && r.default.getGPUDriverVersions().then(e => {
       d = (0, o.default)(e), c = (0, i.default)(e), f = (0, u.default)(e), this.emitChange()
@@ -38,7 +38,7 @@ class m extends a.default.Store {
   }
 }
 m.displayName = "StreamingCapabilitiesStore";
-var S = new m(n.default, {
+var S = new m(a.default, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       streamingCapabilitiesStoreState: t

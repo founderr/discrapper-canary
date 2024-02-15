@@ -7,8 +7,8 @@ function i(e) {
     i = window.getSelection(),
     r = document.createElement("textarea");
   r.value = e, r.contentEditable = "true", r.style.visibility = "none", t.appendChild(r), n.selectNodeContents(r), null == i || i.removeAllRanges(), null == i || i.addRange(n), r.focus(), r.setSelectionRange(0, e.length);
-  let u = document.execCommand("copy");
-  return t.removeChild(r), u
+  let l = document.execCommand("copy");
+  return t.removeChild(r), l
 }
 n.r(t), n.d(t, {
   copy: function() {

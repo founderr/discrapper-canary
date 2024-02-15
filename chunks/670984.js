@@ -10,8 +10,8 @@ var a = n("77078"),
   s = n("913144"),
   i = n("135230"),
   r = n("316272"),
-  o = n("782340");
-let u = "ActivityInviteManager",
+  u = n("782340");
+let o = "ActivityInviteManager",
   d = () => {
     s.default.dispatch({
       type: "ACTIVITY_INVITE_MODAL_CLOSE"
@@ -30,15 +30,15 @@ class c extends r.default {
       isPrivate: s
     } = e;
     s ? (0, a.openModal)(e => (0, l.jsx)(i.default, {
-      title: o.default.Messages.ACTIVITY_INVITE_MODAL_HEADER.format({
+      title: u.default.Messages.ACTIVITY_INVITE_MODAL_HEADER.format({
         name: t.name
       }),
-      body: o.default.Messages.ACTIVITY_INVITE_PRIVATE,
-      confirmText: o.default.Messages.OKAY,
+      body: u.default.Messages.ACTIVITY_INVITE_PRIVATE,
+      confirmText: u.default.Messages.OKAY,
       ...e
     }), {
       onCloseCallback: d,
-      modalKey: u
+      modalKey: o
     }) : (0, a.openModalLazy)(async () => {
       let {
         default: e
@@ -48,11 +48,11 @@ class c extends r.default {
       })
     }, {
       onCloseCallback: d,
-      modalKey: u
+      modalKey: o
     })
   }
   handleModalClose(e) {
-    (0, a.closeModal)(u)
+    (0, a.closeModal)(o)
   }
 }
 var f = new c

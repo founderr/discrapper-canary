@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return v
   }
 });
-var s = n("884691"),
-  a = n("819689"),
+var a = n("884691"),
+  s = n("819689"),
   l = n("267567"),
   i = n("625149"),
   r = n("300322"),
@@ -31,15 +31,15 @@ function I(e) {
   return m.default.can(N.Permissions.MANAGE_MESSAGES, e)
 }
 var v = function(e, t, n) {
-  let v = s.useRef(n);
-  return v.current = n, s.useCallback(n => {
-    var s, L, x, R, y;
+  let v = a.useRef(n);
+  return v.current = n, a.useCallback(n => {
+    var a, L, x, R, y;
     if (!v.current || n.target !== n.currentTarget) return;
     let O = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       D = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
       j = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
-      b = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
-      P = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
+      P = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
+      b = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
       H = p.default.getMessage(t, e),
       F = c.default.getChannel(t);
     if (null == H || null == F) return;
@@ -50,26 +50,26 @@ var v = function(e, t, n) {
         O && (I(F) || k) && (n.preventDefault(), (0, M.deleteMessage)(F, H, n));
         break;
       case "c":
-        ((0, S.isMac)() ? b : j) && E.SUPPORTS_COPY && (n.preventDefault(), (0, E.copy)(H.content));
+        ((0, S.isMac)() ? P : j) && E.SUPPORTS_COPY && (n.preventDefault(), (0, E.copy)(H.content));
         break;
       case "e":
         if (O) {
           ;
-          if (s = U, L = F, x = H, !L.isSystemDM() && (0, _.default)(x, s)) n.preventDefault(), (0, M.editMessage)(F, H)
+          if (a = U, L = F, x = H, !L.isSystemDM() && (0, _.default)(x, a)) n.preventDefault(), (0, M.editMessage)(F, H)
         }
         break;
       case "p":
-        if (O || P) {
+        if (O || b) {
           ;
           if (R = F, y = H, !R.isSystemDM() && !(0, A.default)(y) && (I(R) || R.isPrivate())) n.preventDefault(), (0, M.pinMessage)(F, H, n)
         }
         break;
       case "+":
-        (O || P) && function(e) {
+        (O || b) && function(e) {
           let t = null == e.guild_id || C.default.canChatInGuild(e.guild_id),
             n = u.RenderReactions.getSetting(),
             {
-              disableReactionCreates: s
+              disableReactionCreates: a
             } = (0, T.default)({
               channel: e,
               canChat: t,
@@ -79,26 +79,26 @@ var v = function(e, t, n) {
               isGuest: null != e.guild_id && h.default.isCurrentUserGuest(e.guild_id),
               isActiveChannelOrUnarchivableThread: (0, r.getIsActiveChannelOrUnarchivableThread)(e)
             });
-          return !s && n
+          return !a && n
         }(F) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(N.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, H.id, {
           emojiPicker: !0
         }));
         break;
       case "r":
-        (O || P) && (0, i.canReplyToMessage)(F, H) && (n.preventDefault(), (0, M.replyToMessage)(F, H, n));
+        (O || b) && (0, i.canReplyToMessage)(F, H) && (n.preventDefault(), (0, M.replyToMessage)(F, H, n));
         break;
       case "t":
         if (O && (0, r.computeCanStartPublicThread)(F, H)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(F, H, "Message Shortcut");
         else if (H.hasFlag(N.MessageFlags.HAS_THREAD)) {
           let e = c.default.getChannel(H.id);
-          null != e && (O || P) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, P))
+          null != e && (O || b) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, b))
         }
         break;
       case "enter":
         D && (n.preventDefault(), (0, M.markMessageUnread)(F, H));
         break;
       case "escape":
-        f.default.isEditing(F.id, H.id) ? a.default.endEditMessage(F.id) : g.ComponentDispatch.dispatch(N.ComponentActions.TEXTAREA_FOCUS)
+        f.default.isEditing(F.id, H.id) ? s.default.endEditMessage(F.id) : g.ComponentDispatch.dispatch(N.ComponentActions.TEXTAREA_FOCUS)
     }
   }, [e, t])
 }

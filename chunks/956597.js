@@ -39,7 +39,7 @@ var i = n("37983"),
   U = n("821535"),
   b = n("481927");
 
-function y(e) {
+function D(e) {
   if (null == e) return null;
   let t = d(e),
     n = t.diff(d(), "h");
@@ -58,7 +58,7 @@ function y(e) {
   })
 }
 
-function D(e) {
+function y(e) {
   var t, n, r;
   let {
     className: l,
@@ -95,7 +95,7 @@ function D(e) {
     }), (0, i.jsx)(_.Text, {
       variant: "eyebrow",
       className: U.countdownText,
-      children: y(c)
+      children: D(c)
     })]
   })
 }
@@ -204,7 +204,7 @@ function w(e) {
     }), (0, i.jsx)(_.Text, {
       variant: "eyebrow",
       className: U.countdownTextInSetting,
-      children: y(null == r ? void 0 : r.expires_at)
+      children: D(null == r ? void 0 : r.expires_at)
     })]
   })
 }
@@ -226,7 +226,7 @@ function H(e) {
       className: U.context,
       variant: "text-md/normal",
       children: n
-    }), (0, i.jsx)(D, {
+    }), (0, i.jsx)(y, {
       trialOffer: l,
       discountOffer: a,
       children: r
@@ -263,7 +263,7 @@ function G(e) {
             variant: "heading-xl/bold",
             color: "header-primary",
             children: v.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_TITLE
-          }), (0, i.jsx)(D, {
+          }), (0, i.jsx)(y, {
             trialOffer: S,
             discountOffer: R,
             children: v.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
@@ -294,7 +294,7 @@ function G(e) {
             variant: "heading-xl/bold",
             color: "header-primary",
             children: v.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
-          }), (0, i.jsx)(D, {
+          }), (0, i.jsx)(y, {
             trialOffer: S,
             discountOffer: R,
             children: v.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
@@ -327,7 +327,7 @@ function G(e) {
             variant: "heading-xl/bold",
             color: "header-primary",
             children: v.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
-          }), (0, i.jsx)(D, {
+          }), (0, i.jsx)(y, {
             trialOffer: S,
             discountOffer: R,
             children: v.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL_NO_BOLD_V2.format({
@@ -394,7 +394,7 @@ function G(e) {
           }), (0, i.jsx)(_.Text, {
             variant: "text-md/normal",
             children: r
-          }), (0, i.jsx)(D, {
+          }), (0, i.jsx)(y, {
             trialOffer: S,
             discountOffer: R,
             children: x
@@ -411,7 +411,7 @@ function G(e) {
         }), (0, i.jsx)(_.Text, {
           variant: "text-md/normal",
           children: r
-        }), (0, i.jsx)(D, {
+        }), (0, i.jsx)(y, {
           trialOffer: S,
           discountOffer: R,
           children: v.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format({
@@ -428,7 +428,7 @@ function G(e) {
         })]
       });
     case N.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
-      return o(null != l, "You must specify children for this upsell type"), (0, i.jsx)(D, {
+      return o(null != l, "You must specify children for this upsell type"), (0, i.jsx)(y, {
         trialOffer: S,
         discountOffer: R,
         children: v.default.Messages.CLIENT_THEMES_EDITOR_UPSELL.format({
@@ -453,7 +453,7 @@ function G(e) {
           children: v.default.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_CONTEXT_NO_COUNT
         }), (0, i.jsx)("div", {
           className: U.divider
-        }), (0, i.jsx)(D, {
+        }), (0, i.jsx)(y, {
           trialOffer: S,
           discountOffer: R,
           className: U.messageLengthBrandedContainer,

@@ -39,8 +39,8 @@ function O(e) {
     modalClassName: v,
     artContainerClassName: U,
     bodyClassName: b,
-    transitionState: y,
-    onClose: D,
+    transitionState: D,
+    onClose: y,
     onSubscribeClick: j,
     onSecondaryClick: F,
     secondaryCTA: B,
@@ -86,7 +86,7 @@ function O(e) {
   }) : Z.artElement, (0, i.jsxs)(s.ModalRoot, {
     className: a(S.root, v),
     "aria-label": O,
-    transitionState: y,
+    transitionState: D,
     children: [(0, i.jsxs)("div", {
       className: en,
       children: [ei, H ? (0, i.jsx)("img", {
@@ -95,14 +95,14 @@ function O(e) {
         src: R
       }) : null]
     }), ee ? (0, i.jsx)(s.ModalCloseButton, {
-      onClick: D,
+      onClick: y,
       className: S.closeButton
     }) : null, (0, i.jsx)(s.ModalContent, {
       className: S.content,
       children: K ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsx)(i.Fragment, {
         children: J ? (0, i.jsx)(i.Fragment, {
           children: (0, i.jsx)(T.default, {
-            onClose: D,
+            onClose: y,
             type: M,
             subscriptionTier: null !== (l = null == Y ? void 0 : null === (n = Y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : C.PremiumSubscriptionSKUs.TIER_2,
             headingText: O,
@@ -148,7 +148,7 @@ function O(e) {
           if (z) return (0, i.jsx)(d.default, {
             analyticsLocation: h,
             guild: L.guild,
-            onClose: D
+            onClose: y
           });
           let t = ee ? P.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
           if (J) {
@@ -172,13 +172,13 @@ function O(e) {
             size: s.Button.Sizes.SMALL,
             color: et ? s.Button.Colors.CUSTOM : s.Button.Colors.GREEN,
             onClick: () => {
-              null == j || j(), D()
+              null == j || j(), y()
             },
             buttonText: null != w ? w : t
           })
         })()]
       }), !V && !ee && (0, i.jsx)(s.Button, {
-        onClick: D,
+        onClick: y,
         size: s.Button.Sizes.SMALL,
         color: s.Button.Colors.PRIMARY,
         look: s.Button.Looks.LINK,

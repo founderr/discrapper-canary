@@ -1,75 +1,75 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return I
+    return g
   }
 });
-var a = l("37983"),
-  n = l("884691"),
-  u = l("446674"),
-  i = l("77078"),
-  s = l("750560"),
-  d = l("38766"),
-  r = l("506885"),
-  o = l("271938"),
-  c = l("26989"),
-  f = l("305961"),
-  m = l("957255"),
-  M = l("697218"),
-  E = l("49111"),
-  S = l("782340"),
-  g = l("576398");
+var n = a("37983"),
+  l = a("884691"),
+  s = a("446674"),
+  u = a("77078"),
+  i = a("750560"),
+  r = a("38766"),
+  d = a("506885"),
+  o = a("271938"),
+  c = a("26989"),
+  f = a("305961"),
+  E = a("957255"),
+  C = a("697218"),
+  h = a("49111"),
+  v = a("782340"),
+  I = a("576398");
 
-function I(e) {
+function g(e) {
   let {
     guildId: t,
-    userId: I,
-    analyticsLocation: C,
-    analyticsLocations: _,
-    context: v,
-    icon: N
-  } = e, A = f.default.getGuild(t), O = o.default.getId(), R = (0, u.useStateFromStores)([M.default], () => M.default.getUser(I)), b = (0, u.useStateFromStores)([c.default], () => c.default.isGuestOrLurker(t, I), [t, I]);
-  (0, u.useStateFromStores)([m.default], () => m.default.getGuildVersion(t), [t]);
-  let h = n.useMemo(() => ({
-    [t]: [I]
-  }), [t, I]);
-  (0, s.useSubscribeGuildMembers)(h);
-  let L = v === E.AppContext.POPOUT,
-    T = (0, d.default)({
-      guild: A,
-      analyticsLocation: C
+    userId: g,
+    analyticsLocation: M,
+    analyticsLocations: m,
+    context: N,
+    icon: _
+  } = e, p = f.default.getGuild(t), L = o.default.getId(), S = (0, s.useStateFromStores)([C.default], () => C.default.getUser(g)), A = (0, s.useStateFromStores)([c.default], () => c.default.isGuestOrLurker(t, g), [t, g]);
+  (0, s.useStateFromStores)([E.default], () => E.default.getGuildVersion(t), [t]);
+  let V = l.useMemo(() => ({
+    [t]: [g]
+  }), [t, g]);
+  (0, i.useSubscribeGuildMembers)(V);
+  let G = N === h.AppContext.POPOUT,
+    x = (0, r.default)({
+      guild: p,
+      analyticsLocation: M
     });
-  if (null == A || L) return null;
-  let p = O === I && (m.default.can(E.Permissions.CHANGE_NICKNAME, A) || m.default.can(E.Permissions.MANAGE_NICKNAMES, A)),
-    F = O === I,
-    U = m.default.canManageUser(E.Permissions.MANAGE_NICKNAMES, I, A);
-  if (!(p || U || F) || null == R || b) return null;
-  let x = A.hasFeature(E.GuildFeatures.HUB),
-    D = x ? S.default.Messages.HUB_EDIT_PROFILE : S.default.Messages.CHANGE_IDENTITY,
-    P = F ? D : S.default.Messages.CHANGE_NICKNAME;
-  return (0, a.jsx)(i.MenuItem, {
+  if (null == p || G) return null;
+  let H = L === g && (E.default.can(h.Permissions.CHANGE_NICKNAME, p) || E.default.can(h.Permissions.MANAGE_NICKNAMES, p)),
+    T = L === g,
+    O = E.default.canManageUser(h.Permissions.MANAGE_NICKNAMES, g, p);
+  if (!(H || O || T) || null == S || A) return null;
+  let b = p.hasFeature(h.GuildFeatures.HUB),
+    U = b ? v.default.Messages.HUB_EDIT_PROFILE : v.default.Messages.CHANGE_IDENTITY,
+    D = T ? U : v.default.Messages.CHANGE_NICKNAME;
+  return (0, n.jsx)(u.MenuItem, {
     id: "change-nickname",
-    label: (0, a.jsx)("div", {
-      className: g.labelWrapper,
-      children: (0, a.jsx)("span", {
-        className: g.label,
-        children: P
+    label: (0, n.jsx)("div", {
+      className: I.labelWrapper,
+      children: (0, n.jsx)("span", {
+        className: I.label,
+        children: D
       })
     }),
-    icon: N,
+    icon: _,
     action: () => {
-      F ? ((0, r.default)(R.id, R.getAvatarURL(t, 80), {
+      T ? ((0, d.default)(S.id, S.getAvatarURL(t, 80), {
         guildId: t
-      }), T()) : (0, i.openModalLazy)(async () => {
+      }), x()) : (0, u.openModalLazy)(async () => {
         let {
           default: e
-        } = await l.el("59709").then(l.bind(l, "59709"));
-        return l => (0, a.jsx)(e, {
-          ...l,
+        } = await a.el("59709").then(a.bind(a, "59709"));
+        return a => (0, n.jsx)(e, {
+          ...a,
           guildId: t,
-          user: R,
-          analyticsSource: C,
-          analyticsLocations: _
+          user: S,
+          analyticsSource: M,
+          analyticsLocations: m
         })
       })
     }

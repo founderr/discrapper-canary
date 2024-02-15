@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return E
   }
 }), n("222007");
-var s = n("884691"),
-  a = n("767590"),
-  l = n.n(a),
+var a = n("884691"),
+  s = n("767590"),
+  l = n.n(s),
   i = n("448993"),
   r = n("377114"),
   o = n("713135"),
@@ -23,9 +23,9 @@ function E(e) {
   let {
     user: t,
     onAcceptSuccess: n,
-    onRejectSuccess: a,
+    onRejectSuccess: s,
     onError: E
-  } = e, g = (0, C.default)(), [S, _] = s.useState(!1), [A, T] = s.useState(!1), [M, N] = s.useState(!1), [I, v] = s.useState(!1), [L, x] = s.useState(!1), R = S || A || M, y = s.useCallback(async e => {
+  } = e, g = (0, C.default)(), [S, _] = a.useState(!1), [A, T] = a.useState(!1), [M, N] = a.useState(!1), [I, v] = a.useState(!1), [L, x] = a.useState(!1), R = S || A || M, y = a.useCallback(async e => {
     if (!R) {
       _(!0);
       try {
@@ -37,11 +37,11 @@ function E(e) {
         _(!1)
       }
     }
-  }, [R, n, E]), O = s.useCallback(async e => {
+  }, [R, n, E]), O = a.useCallback(async e => {
     if (!R) {
       T(!0);
       try {
-        await (0, f.rejectMessageRequest)(e), x(!0), null == a || a()
+        await (0, f.rejectMessageRequest)(e), x(!0), null == s || s()
       } catch (t) {
         let e = new i.APIError(t);
         null == E || E(e)
@@ -49,20 +49,20 @@ function E(e) {
         T(!1)
       }
     }
-  }, [R, a, E]), D = s.useCallback(async e => {
+  }, [R, s, E]), D = a.useCallback(async e => {
     if (R) return;
     T(!0);
     let t = l(e, p.BATCH_REJECT_LIMIT);
     try {
       for (let e of t) await (0, f.rejectMessageRequestBatch)(e);
-      x(!0), null == a || a()
+      x(!0), null == s || s()
     } catch (t) {
       let e = new i.APIError(t);
       null == E || E(e)
     } finally {
       T(!1)
     }
-  }, [R, a, E]), j = s.useCallback(async e => {
+  }, [R, s, E]), j = a.useCallback(async e => {
     if (R) return;
     if (null != t && null == o.default.getMutualGuilds(t.id)) {
       N(!0);
@@ -77,11 +77,11 @@ function E(e) {
     }
     let n = async () => {
       var n;
-      let s = null != t ? null === (n = o.default.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
+      let a = null != t ? null === (n = o.default.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
       c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
         action: p.MessageRequestAnalyticsAction.ACCEPT_CONFIRMATION_PROMPT,
         channel_id: e,
-        mutual_guild_ids: null != s ? s : [],
+        mutual_guild_ids: null != a ? a : [],
         other_user_id: null == t ? void 0 : t.id
       }), await y(e)
     };
@@ -90,41 +90,41 @@ function E(e) {
       onConfirm: n,
       onCancel: () => {
         var n;
-        let s = null != t ? null === (n = o.default.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
+        let a = null != t ? null === (n = o.default.getMutualGuilds(t.id)) || void 0 === n ? void 0 : n.map(e => e.guild.id) : [];
         c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.DISMISS_CONFIRMATION_PROMPT,
           channel_id: e,
-          mutual_guild_ids: null != s ? s : [],
+          mutual_guild_ids: null != a ? a : [],
           other_user_id: null == t ? void 0 : t.id
         })
       }
     })
-  }, [y, R, t]), b = s.useCallback((e, t, n) => {
-    let s = (s, a) => {
-        a && d.NonSpamRetrainingOptIn.updateSetting(s), s && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
+  }, [y, R, t]), P = a.useCallback((e, t, n) => {
+    let a = (a, s) => {
+        s && d.NonSpamRetrainingOptIn.updateSetting(a), a && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,
           channel_id: e.id,
-          is_dont_show_again_checked: a,
-          non_spam_retraining_opt_in: s
+          is_dont_show_again_checked: s,
+          non_spam_retraining_opt_in: a
         }), null != n && n()
       },
-      a = d.NonSpamRetrainingOptIn.getSetting();
-    null == a ? (0, h.onMarkAsNotSpamConfirmationModal)({
+      s = d.NonSpamRetrainingOptIn.getSetting();
+    null == s ? (0, h.onMarkAsNotSpamConfirmationModal)({
       channel: e,
-      onConfirm: s,
+      onConfirm: a,
       onCancel: () => {
         c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.DISMISS_HAM_CONFIRMATION_PROMPT,
           channel_id: e.id
         })
       }
-    }) : s(a)
+    }) : a(s)
   }, [y]);
   return {
     acceptMessageRequest: g ? j : y,
     rejectMessageRequest: O,
     rejectAll: D,
-    markAsNotSpam: b,
+    markAsNotSpam: P,
     isAcceptLoading: S,
     isRejectLoading: A,
     isUserProfileLoading: M,

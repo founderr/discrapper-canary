@@ -15,16 +15,16 @@ var n = a("37983"),
   u = a("446674"),
   m = a("411723"),
   h = a("42203"),
-  g = a("328620"),
+  A = a("328620"),
   _ = a("568734"),
-  A = a("994402"),
-  M = a("719347"),
-  I = a("49111"),
+  g = a("994402"),
+  I = a("719347"),
+  M = a("49111"),
   p = a("997328");
-let E = Math.round((M.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
-  f = Math.round((M.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
-  C = Math.round((M.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
-  x = Math.round(2 * (M.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
+let E = Math.round((I.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
+  f = Math.round((I.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
+  C = Math.round((I.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
+  x = Math.round(2 * (I.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
   v = x / 2,
   y = e => {
     let {
@@ -82,7 +82,7 @@ let E = Math.round((M.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
         [p.oneByOneGridMosaic]: !l,
         [p.hasFooter]: null != i
       }),
-      children: (0, n.jsx)(b, {
+      children: (0, n.jsx)(F, {
         props: r,
         attachmentKind: a(r.attachment.id),
         useFullWidth: !l,
@@ -100,7 +100,7 @@ let E = Math.round((M.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
       className: p.oneByTwoGrid,
       children: t.map(e => (0, n.jsx)("div", {
         className: p.oneByTwoGridItem,
-        children: (0, n.jsx)(b, {
+        children: (0, n.jsx)(F, {
           props: e,
           attachmentKind: a(e.attachment.id),
           maxWidth: f,
@@ -118,7 +118,7 @@ let E = Math.round((M.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
       className: s(p.oneByTwoGrid, p.oneByTwoLayoutThreeGrid),
       children: [(0, n.jsx)("div", {
         className: p.oneByTwoSoloItem,
-        children: (0, n.jsx)(b, {
+        children: (0, n.jsx)(F, {
           props: t[0],
           attachmentKind: a(t[0].attachment.id),
           maxWidth: x
@@ -129,7 +129,7 @@ let E = Math.round((M.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
           className: p.twoByOneGrid,
           children: t.splice(1).map(e => (0, n.jsx)("div", {
             className: p.twoByOneGridItem,
-            children: (0, n.jsx)(b, {
+            children: (0, n.jsx)(F, {
               props: e,
               attachmentKind: a(e.attachment.id),
               maxWidth: v,
@@ -147,7 +147,7 @@ let E = Math.round((M.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
     } = e;
     return (0, n.jsx)("div", {
       className: p.twoByTwoGrid,
-      children: t.map(e => (0, n.jsx)(b, {
+      children: t.map(e => (0, n.jsx)(F, {
         props: e,
         attachmentKind: a(e.attachment.id),
         maxWidth: f,
@@ -162,7 +162,7 @@ let E = Math.round((M.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
     } = e;
     return (0, n.jsx)("div", {
       className: p.threeByThreeGrid,
-      children: t.map(e => (0, n.jsx)(b, {
+      children: t.map(e => (0, n.jsx)(F, {
         props: e,
         attachmentKind: a(e.attachment.id),
         maxWidth: E,
@@ -178,12 +178,12 @@ let E = Math.round((M.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
   L = e => ({
     className: s(e, p.lazyImg)
   }),
-  b = e => {
+  F = e => {
     let {
       props: t,
       attachmentKind: a,
-      maxWidth: l = M.MEDIA_MOSAIC_MAX_WIDTH,
-      maxHeight: i = M.MEDIA_MOSAIC_MAX_HEIGHT,
+      maxWidth: l = I.MEDIA_MOSAIC_MAX_WIDTH,
+      maxHeight: i = I.MEDIA_MOSAIC_MAX_HEIGHT,
       useFullWidth: s = !0,
       isSingleItem: r = !1,
       footer: o
@@ -191,15 +191,15 @@ let E = Math.round((M.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
       ...t,
       ..."IMAGE" === a && D(t.className),
       ..."VIDEO" === a && L(t.className),
-      mediaLayoutType: M.MediaLayoutType.MOSAIC,
+      mediaLayoutType: I.MediaLayoutType.MOSAIC,
       maxWidth: l,
       maxHeight: i,
       useFullWidth: s,
       isSingleMosaicItem: r
     };
-    return (0, n.jsx)(g.GIFAccessoryContext.Provider, {
+    return (0, n.jsx)(A.GIFAccessoryContext.Provider, {
       value: t.gifFavoriteButton,
-      children: (0, n.jsx)(A.default, {
+      children: (0, n.jsx)(g.default, {
         ...d,
         footer: o
       })
@@ -211,25 +211,25 @@ var w = e => {
   } = e, a = t[0].message.channel_id, i = (0, u.useStateFromStores)([h.default], () => {
     var e;
     return null === (e = h.default.getBasicChannel(a)) || void 0 === e ? void 0 : e.guild_id
-  }), s = l.useMemo(() => new Map(t.map(e => [e.attachment.id, (0, A.getAttachmentKind)(e.attachment, e.inlineMedia)])), [t]), r = l.useCallback(e => {
+  }), s = l.useMemo(() => new Map(t.map(e => [e.attachment.id, (0, g.getAttachmentKind)(e.attachment, e.inlineMedia)])), [t]), r = l.useCallback(e => {
     var t;
     return null !== (t = s.get(e)) && void 0 !== t ? t : "INVALID"
   }, [s]), [o, d] = l.useMemo(() => c.partition(t, e => {
     var t;
-    return (0, _.hasFlag)(null !== (t = e.attachment.flags) && void 0 !== t ? t : 0, I.MessageAttachmentFlags.IS_CLIP)
-  }), [t]), [g, M] = l.useMemo(() => c.partition(d, e => (0, A.isMediaAttachment)(r(e.attachment.id))), [d, r]);
+    return (0, _.hasFlag)(null !== (t = e.attachment.flags) && void 0 !== t ? t : 0, M.MessageAttachmentFlags.IS_CLIP)
+  }), [t]), [A, I] = l.useMemo(() => c.partition(d, e => (0, g.isMediaAttachment)(r(e.attachment.id))), [d, r]);
   return (0, n.jsxs)(n.Fragment, {
-    children: [g.length > 0 && (0, n.jsx)("div", {
+    children: [A.length > 0 && (0, n.jsx)("div", {
       className: p.mediaAttachmentsContainer,
       children: (0, n.jsx)(y, {
-        mediaAttachments: g,
+        mediaAttachments: A,
         getAttachmentKind: r
       })
-    }), M.length > 0 && (0, n.jsx)("div", {
+    }), I.length > 0 && (0, n.jsx)("div", {
       className: p.nonMediaAttachmentsContainer,
-      children: M.map(e => (0, n.jsx)("div", {
+      children: I.map(e => (0, n.jsx)("div", {
         className: p.nonMediaAttachmentItem,
-        children: (0, n.jsx)(b, {
+        children: (0, n.jsx)(F, {
           props: e,
           attachmentKind: r(e.attachment.id)
         })

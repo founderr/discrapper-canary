@@ -31,7 +31,7 @@ function x(e) {
   l.useEffect(() => {
     p(null != g ? g : ""), m(T === A.AppealIngestionSignal.SOMETHING_ELSE)
   }, [g, T]);
-  let h = e => {
+  let M = e => {
       m(e === A.AppealIngestionSignal.SOMETHING_ELSE), e !== A.AppealIngestionSignal.SOMETHING_ELSE && (p(""), r.default.dispatch({
         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
         userInput: ""
@@ -40,7 +40,7 @@ function x(e) {
         signal: e
       })
     },
-    M = A.AppealIngestionSignalOrder.map(e => ({
+    h = A.AppealIngestionSignalOrder.map(e => ({
       value: e,
       name: (0, E.getAppealSignalDisplayText)(e)
     }));
@@ -70,12 +70,12 @@ function x(e) {
         radioItemClassName: I.radioItem,
         size: d.RadioGroup.Sizes.NOT_SET,
         value: T,
-        options: M,
+        options: h,
         onChange: e => {
           let {
             value: t
           } = e;
-          return h(t)
+          return M(t)
         }
       }), L && (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(d.TextArea, {

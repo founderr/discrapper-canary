@@ -49,8 +49,8 @@ var f = n("414456"),
   v = n("118503"),
   U = n("41250"),
   b = n("379863"),
-  y = n("216422"),
-  D = n("619911"),
+  D = n("216422"),
+  y = n("619911"),
   j = n("698015"),
   F = n("75196"),
   B = n("240481"),
@@ -397,7 +397,7 @@ function ec() {
       Icon: x.default,
       text: q.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED
     }), (0, c.jsx)(eo, {
-      Icon: y.default,
+      Icon: D.default,
       text: q.default.Messages.PREMIUM_TIER_NITRO_BADGE_ITEM
     })]
   })
@@ -516,7 +516,7 @@ function em(e) {
       Icon: A.default,
       text: q.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
     }), (0, c.jsx)(eo, {
-      Icon: D.default,
+      Icon: y.default,
       text: q.default.Messages.PREMIUM_TIER_HD_STREAMING_ITEM
     }), (0, c.jsx)(eo, {
       Icon: N.default,
@@ -538,7 +538,7 @@ function em(e) {
       Icon: x.default,
       text: q.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED
     }), (0, c.jsx)(eo, {
-      Icon: D.default,
+      Icon: y.default,
       text: q.default.Messages.PREMIUM_TIER_HD_STREAMING_ITEM
     }), (0, c.jsx)(eo, {
       Icon: v.default,

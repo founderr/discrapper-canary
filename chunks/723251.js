@@ -54,33 +54,33 @@ function u(e) {
       for (let u = 0; u < r; u++)
         for (let i = u ? 0 : 1; i * r < t * (r - u); i++) n.push(((e[_ + (C >> 1)] >> ((1 & C++) << 2) & 15) / 7.5 - 1) * a);
       return n
-    }, g = I(p, E, (s >> 18 & 31) / 31), T = I(3, 3, 1.25 * ((l >> 3 & 63) / 63)), v = I(3, 3, 1.25 * ((l >> 9 & 63) / 63)), A = f && I(5, 5, h), P = a(e), N = i(P > 1 ? 32 : 32 * P), L = i(P > 1 ? 32 / P : 32), R = new Uint8Array(N * L * 4), y = [], x = [];
-    for (let e = 0, a = 0; e < L; e++)
-      for (let i = 0; i < N; i++, a += 4) {
+    }, g = I(p, E, (s >> 18 & 31) / 31), T = I(3, 3, 1.25 * ((l >> 3 & 63) / 63)), v = I(3, 3, 1.25 * ((l >> 9 & 63) / 63)), A = f && I(5, 5, h), P = a(e), L = i(P > 1 ? 32 : 32 * P), N = i(P > 1 ? 32 / P : 32), R = new Uint8Array(L * N * 4), y = [], b = [];
+    for (let e = 0, a = 0; e < N; e++)
+      for (let i = 0; i < L; i++, a += 4) {
         let s = o,
           l = c,
           m = d,
           h = S;
-        for (let e = 0, r = n(p, f ? 5 : 3); e < r; e++) y[e] = u(t / N * (i + .5) * e);
-        for (let r = 0, a = n(E, f ? 5 : 3); r < a; r++) x[r] = u(t / L * (e + .5) * r);
+        for (let e = 0, r = n(p, f ? 5 : 3); e < r; e++) y[e] = u(t / L * (i + .5) * e);
+        for (let r = 0, a = n(E, f ? 5 : 3); r < a; r++) b[r] = u(t / N * (e + .5) * r);
         for (let e = 0, t = 0; e < E; e++)
-          for (let r = e ? 0 : 1, a = 2 * x[e]; r * E < p * (E - e); r++, t++) s += g[t] * y[r] * a;
+          for (let r = e ? 0 : 1, a = 2 * b[e]; r * E < p * (E - e); r++, t++) s += g[t] * y[r] * a;
         for (let e = 0, t = 0; e < 3; e++)
-          for (let r = e ? 0 : 1, a = 2 * x[e]; r < 3 - e; r++, t++) {
+          for (let r = e ? 0 : 1, a = 2 * b[e]; r < 3 - e; r++, t++) {
             let e = y[r] * a;
             l += T[t] * e, m += v[t] * e
           }
         if (f)
           for (let e = 0, t = 0; e < 5; e++)
-            for (let r = e ? 0 : 1, a = 2 * x[e]; r < 5 - e; r++, t++) h += A[t] * y[r] * a;
+            for (let r = e ? 0 : 1, a = 2 * b[e]; r < 5 - e; r++, t++) h += A[t] * y[r] * a;
         let _ = s - 2 / 3 * l,
           C = (3 * s - _ + m) / 2,
           I = C - m;
         R[a] = n(0, 255 * r(1, C)), R[a + 1] = n(0, 255 * r(1, I)), R[a + 2] = n(0, 255 * r(1, _)), R[a + 3] = n(0, 255 * r(1, h))
       }
     return {
-      w: N,
-      h: L,
+      w: L,
+      h: N,
       rgba: R
     }
   }(e);

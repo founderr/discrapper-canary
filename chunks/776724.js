@@ -27,7 +27,7 @@ function I(e) {
     onBack: x
   } = e, f = (0, n.useStateFromStores)([c.default], () => c.default.getAppealClassificationId()), {
     classification: T
-  } = (0, E.useSafetyHubClassification)(null != f ? f : ""), g = (0, u.capitalizeText)(null == T ? void 0 : T.description), C = (0, n.useStateFromStores)([c.default], () => c.default.getIsSubmitting()), p = (0, n.useStateFromStores)([c.default], () => c.default.getAppealSignal()), L = (0, n.useStateFromStores)([c.default], () => c.default.getFreeTextAppealReason()), [m, h] = l.useState(!1), [M, O] = l.useState(""), P = l.useCallback(e => {
+  } = (0, E.useSafetyHubClassification)(null != f ? f : ""), g = (0, u.capitalizeText)(null == T ? void 0 : T.description), C = (0, n.useStateFromStores)([c.default], () => c.default.getIsSubmitting()), p = (0, n.useStateFromStores)([c.default], () => c.default.getAppealSignal()), L = (0, n.useStateFromStores)([c.default], () => c.default.getFreeTextAppealReason()), [m, M] = l.useState(!1), [h, O] = l.useState(""), P = l.useCallback(e => {
     o.default.dispatch({
       type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
       userInput: e
@@ -77,7 +77,7 @@ function I(e) {
       }), (0, s.jsx)("div", {
         className: S.anchorContainer,
         children: (0, s.jsx)(i.Anchor, {
-          onClick: () => h(e => !e),
+          onClick: () => M(e => !e),
           children: (0, s.jsx)(i.Heading, {
             variant: "heading-md/normal",
             color: "text-link",
@@ -104,11 +104,11 @@ function I(e) {
       })]
     }), (0, s.jsxs)(i.ModalFooter, {
       direction: d.default.Direction.VERTICAL,
-      children: ["" !== M && (0, s.jsx)(i.Text, {
+      children: ["" !== h && (0, s.jsx)(i.Text, {
         className: S.errorText,
         variant: "text-lg/normal",
         color: "text-danger",
-        children: M
+        children: h
       }), (0, s.jsxs)("div", {
         className: S.buttonContainer,
         children: [(0, s.jsx)(i.Button, {

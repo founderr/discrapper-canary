@@ -27,9 +27,9 @@ var a = r("37983"),
   v = r("49111"),
   A = r("646718"),
   P = r("782340"),
-  N = r("446812");
+  L = r("446812");
 
-function L(e) {
+function N(e) {
   let {
     user: t,
     categories: r,
@@ -43,7 +43,7 @@ function L(e) {
   } = (0, S.default)({
     analyticsLocations: u,
     isTryItOut: m
-  }), [v, L] = n.useState(() => {
+  }), [v, N] = n.useState(() => {
     var e;
     if (null != o) return o;
     if (void 0 !== h) return h;
@@ -53,7 +53,7 @@ function L(e) {
   }), {
     product: R,
     purchase: y
-  } = (0, f.default)(null == v ? void 0 : v.skuId), x = C.default.canUseCollectibles(t), b = n.useRef(null), M = (0, p.default)(u), U = (0, I.isEqualAvatarDecoration)(v, void 0 === h ? null == t ? void 0 : t.avatarDecoration : h), O = () => {
+  } = (0, f.default)(null == v ? void 0 : v.skuId), b = C.default.canUseCollectibles(t), x = n.useRef(null), M = (0, p.default)(u), U = (0, I.isEqualAvatarDecoration)(v, void 0 === h ? null == t ? void 0 : t.avatarDecoration : h), O = () => {
     _(v), i()
   }, F = n.useCallback(() => {
     i(), (0, c.openCollectiblesShop)({
@@ -65,42 +65,42 @@ function L(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(s.ModalHeader, {
       separator: !1,
-      className: N.modalHeader,
+      className: L.modalHeader,
       children: [(0, a.jsx)(s.Heading, {
         variant: "heading-lg/semibold",
         children: P.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), (0, a.jsx)(s.ModalCloseButton, {
-        className: N.modalCloseButton,
+        className: L.modalCloseButton,
         onClick: i
       })]
     }), (0, a.jsxs)(s.ModalContent, {
-      className: N.modalContent,
+      className: L.modalContent,
       scrollbarType: "none",
       children: [(0, a.jsx)(T.default, {
         user: t,
         pendingAvatarDecoration: v,
-        selectedAvatarDecorationRef: b,
+        selectedAvatarDecorationRef: x,
         onSelect: e => {
-          L(e), null != e && M(e)
+          N(e), null != e && M(e)
         },
         onOpenShop: F
       }), (0, a.jsx)(g.default, {
-        className: N.modalPreview,
+        className: L.modalPreview,
         user: t,
         avatarDecorationOverride: v
       })]
     }), (0, a.jsxs)(s.ModalFooter, {
-      className: N.modalFooter,
+      className: L.modalFooter,
       children: [(() => {
-        let e = null != y && (!(0, d.isPremiumCollectiblesPurchase)(y) || x);
+        let e = null != y && (!(0, d.isPremiumCollectiblesPurchase)(y) || b);
         if (e || null === v) return (0, a.jsx)(s.Button, {
           onClick: O,
           disabled: U,
           children: P.default.Messages.AVATAR_DECORATION_MODAL_APPLY
         });
-        let r = x || !(0, d.isPremiumCollectiblesProduct)(R);
+        let r = b || !(0, d.isPremiumCollectiblesProduct)(R);
         return r ? (0, a.jsx)(s.Button, {
-          className: N.modalFooterShopButton,
+          className: L.modalFooterShopButton,
           onClick: F,
           children: P.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
         }) : (0, a.jsx)(E.default, {
@@ -146,12 +146,12 @@ function R(e) {
   }, [I]), null == E ? null : (0, a.jsx)(S, {
     children: (0, a.jsx)(s.ModalRoot, {
       transitionState: t,
-      className: N.modal,
+      className: L.modal,
       size: P ? s.ModalSize.DYNAMIC : s.ModalSize.MEDIUM,
       children: P ? (0, a.jsx)(s.Spinner, {
-        className: N.spinner,
+        className: L.spinner,
         type: s.Spinner.Type.SPINNING_CIRCLE
-      }) : (0, a.jsx)(L, {
+      }) : (0, a.jsx)(N, {
         user: E,
         categories: I,
         analyticsLocations: C,

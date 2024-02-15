@@ -69,8 +69,8 @@ var I = e => {
     category: I,
     product: g,
     purchase: T
-  } = (0, c.default)(null == r ? void 0 : r.skuId), v = p.default.canUseCollectibles(t), A = (0, o.isPremiumCollectiblesPurchase)(T), P = (0, o.isPremiumCollectiblesProduct)(g), N = !v && A;
-  return null != g && (null == T || N) ? (0, a.jsxs)("div", {
+  } = (0, c.default)(null == r ? void 0 : r.skuId), v = p.default.canUseCollectibles(t), A = (0, o.isPremiumCollectiblesPurchase)(T), P = (0, o.isPremiumCollectiblesProduct)(g), L = !v && A;
+  return null != g && (null == T || L) ? (0, a.jsxs)("div", {
     className: u(h.modalPreview, h.shopPreviewContainer, n),
     children: [(0, a.jsx)(d.default, {
       asset: null == I ? void 0 : I.banner,
@@ -86,7 +86,7 @@ var I = e => {
         children: g.name
       }), (0, a.jsx)(l.Text, {
         variant: "text-sm/normal",
-        children: N ? S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([P, v]).with([!0, !0], () => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: L ? S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([P, v]).with([!0, !0], () => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
   }) : (0, a.jsxs)("div", {

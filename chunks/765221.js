@@ -27,7 +27,7 @@ var a = r("37983"),
   v = r("782340"),
   A = r("585872");
 let P = () => 80,
-  N = e => {
+  L = e => {
     let {
       children: t,
       className: r,
@@ -42,7 +42,7 @@ let P = () => 80,
       children: t
     })
   },
-  L = e => {
+  N = e => {
     let {
       user: t,
       avatarDecoration: r,
@@ -53,23 +53,23 @@ let P = () => 80,
     } = e, E = (0, o.default)([f.default], () => {
       let e = f.default.getProduct(r.skuId);
       return (0, p.isPremiumCollectiblesProduct)(e)
-    }), h = (0, o.default)([m.default], () => m.default.isItemViewed(r)), P = I.default.canUseCollectibles(t), L = i === g.Section.PREMIUM_PURCHASE && !P, [R, y] = n.useState(s);
+    }), h = (0, o.default)([m.default], () => m.default.isItemViewed(r)), P = I.default.canUseCollectibles(t), N = i === g.Section.PREMIUM_PURCHASE && !P, [R, y] = n.useState(s);
     n.useEffect(() => {
       s && y(!0)
     }, [s]);
-    let x = n.useRef(null),
-      b = (0, d.default)(null != u ? u : x),
+    let b = n.useRef(null),
+      x = (0, d.default)(null != u ? u : b),
       {
         avatarDecorationSrc: M
       } = (0, T.default)({
         user: t,
         avatarDecorationOverride: r,
         size: 80,
-        animateOnHover: !b
+        animateOnHover: !x
       });
-    return (0, a.jsxs)(N, {
-      className: L ? A.decorationGridItemChurned : void 0,
-      innerRef: null != u ? u : x,
+    return (0, a.jsxs)(L, {
+      className: N ? A.decorationGridItemChurned : void 0,
+      innerRef: null != u ? u : b,
       isSelected: s,
       ...c,
       children: [(0, a.jsx)("img", {
@@ -131,7 +131,7 @@ var R = e => {
         section: m,
         items: p
       } = l[e];
-      return (0, s.match)(p[o]).with(g.NONE_ITEM, () => (0, a.jsxs)(N, {
+      return (0, s.match)(p[o]).with(g.NONE_ITEM, () => (0, a.jsxs)(L, {
         style: {
           ...d
         },
@@ -144,7 +144,7 @@ var R = e => {
           color: "header-primary",
           children: v.default.Messages.NONE
         })]
-      }, f)).with(g.SHOP_ITEM, () => (0, a.jsxs)(N, {
+      }, f)).with(g.SHOP_ITEM, () => (0, a.jsxs)(L, {
         style: d,
         onSelect: i,
         children: [(0, a.jsx)(E.default, {
@@ -156,7 +156,7 @@ var R = e => {
         })]
       }, f)).otherwise(e => {
         let i = (null == r ? void 0 : r.id) === e.id;
-        return (0, a.jsx)(L, {
+        return (0, a.jsx)(N, {
           style: {
             ...d
           },

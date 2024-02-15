@@ -6,15 +6,15 @@ n.r(t), n.d(t, {
 });
 var s = n("37983"),
   a = n("884691"),
-  i = n("90915"),
-  r = n("266491");
-class l extends a.Component {
+  r = n("90915"),
+  l = n("266491");
+class i extends a.Component {
   render() {
     let {
       children: e,
       location: t,
       history: n,
-      staticContext: l,
+      staticContext: i,
       match: o,
       ...u
     } = this.props, d = null, c = null;
@@ -22,10 +22,10 @@ class l extends a.Component {
       if (null == d && a.isValidElement(e)) {
         let {
           component: s,
-          render: r,
+          render: l,
           ...o
         } = e.props, u = o.path || o.from;
-        null != (d = null != u ? (0, i.matchPath)(t.pathname, {
+        null != (d = null != u ? (0, r.matchPath)(t.pathname, {
           ...o,
           path: u
         }) : null) && (o = {
@@ -34,13 +34,13 @@ class l extends a.Component {
           location: t,
           match: d,
           history: n,
-          staticContext: l
-        }, null != s ? c = a.createElement(s, o) : null != r && (c = r(o)))
+          staticContext: i
+        }, null != s ? c = a.createElement(s, o) : null != l && (c = l(o)))
       }
-    }), (0, s.jsx)(r.default, {
+    }), (0, s.jsx)(l.default, {
       ...u,
       children: c
     })
   }
 }
-var o = (0, i.withRouter)(l)
+var o = (0, r.withRouter)(i)

@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   useAvatarsWithGuilds: function() {
-    return l
+    return s
   },
   setNewPendingUserBio: function() {
     return o
   },
   setNewPendingAvatar: function() {
-    return c
+    return d
   },
   setNewPendingAvatarDecoration: function() {
-    return d
+    return c
   },
   setNewPendingProfileEffectId: function() {
     return f
@@ -22,39 +22,39 @@ n.r(t), n.d(t, {
     return _
   },
   showRemoveBanner: function() {
-    return T
+    return S
   }
 }), n("424973");
 var i = n("884691"),
   r = n("152584"),
-  u = n("234251"),
-  a = n("783142"),
-  s = n("26989");
+  l = n("234251"),
+  u = n("783142"),
+  a = n("26989");
 
-function l(e) {
+function s(e) {
   return i.useMemo(() => {
-    let t = s.default.getMutableAllGuildsAndMembers(),
+    let t = a.default.getMutableAllGuildsAndMembers(),
       n = {};
     for (let r in t) {
       var i;
-      let u = t[r],
-        a = null === (i = u[e]) || void 0 === i ? void 0 : i.avatar;
-      null != a && (null == n[a] && (n[a] = []), n[a].push(r))
+      let l = t[r],
+        u = null === (i = l[e]) || void 0 === i ? void 0 : i.avatar;
+      null != u && (null == n[u] && (n[u] = []), n[u].push(r))
     }
     return null != n ? Object.entries(n).map(e => e[1][0]) : []
   }, [e])
 }
 
 function o(e, t) {
-  (0, a.setPendingBio)(e === t ? void 0 : e)
-}
-
-function c(e, t) {
-  (0, r.setPendingAvatar)(e === t ? void 0 : e)
+  (0, u.setPendingBio)(e === t ? void 0 : e)
 }
 
 function d(e, t) {
-  if ((0, u.isEqualAvatarDecoration)(e, null != t ? t : null)) {
+  (0, r.setPendingAvatar)(e === t ? void 0 : e)
+}
+
+function c(e, t) {
+  if ((0, l.isEqualAvatarDecoration)(e, null != t ? t : null)) {
     (0, r.setPendingAvatarDecoration)(void 0);
     return
   }(0, r.setPendingAvatarDecoration)(e)
@@ -89,6 +89,6 @@ function _(e, t) {
   return void 0 === e ? null != t : null != e
 }
 
-function T(e, t) {
+function S(e, t) {
   return void 0 === e ? null != t : null != e
 }
