@@ -59,18 +59,16 @@ class L extends l.PureComponent {
         value: t.id,
         label: (0, E.computeChannelName)(t, S.default, T.default, !0)
       }
-    }).value(), n = {
+    }).value();
+    return l.unshift({
       value: R,
       label: h.default.Messages.NO_INSTANT_INVITE
-    };
-    l.unshift(n);
-    let r = null != t ? t : n;
-    return (0, a.jsxs)(d.FormItem, {
+    }), (0, a.jsxs)(d.FormItem, {
       title: h.default.Messages.FORM_LABEL_INSTANT_INVITE_CHANNEL,
       children: [(0, a.jsx)(d.SingleSelect, {
         className: C.spacing,
         options: l,
-        value: r,
+        value: t,
         onChange: this.handleChannelSelect
       }), (0, a.jsx)(d.FormText, {
         type: d.FormTextTypes.DESCRIPTION,
