@@ -4,16 +4,14 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return o
+    return s
   }
 });
 var a = n("446674"),
-  i = n("95410"),
-  l = n("913144"),
-  d = n("9503");
+  i = n("913144"),
+  l = n("368694");
 let r = 360,
-  s = {
-    devToolsEnabled: !1,
+  d = {
     sidebarWidth: r,
     lastOpenTabId: null,
     displayTools: !1,
@@ -25,36 +23,33 @@ let r = 360,
   };
 class u extends a.default.DeviceSettingsStore {
   initialize(e) {
-    s = null != e ? e : s, l.default.actionLogger.persist = this.devToolsEnabled
+    d = null != e ? e : d, i.default.actionLogger.persist = l.default.isDeveloper
   }
   getUserAgnosticState() {
-    return s
-  }
-  get devToolsEnabled() {
-    return s.devToolsEnabled
+    return d
   }
   get sidebarWidth() {
-    return this.displayTools ? s.sidebarWidth : 0
+    return this.displayTools ? d.sidebarWidth : 0
   }
   get lastOpenTabId() {
     var e;
-    return null !== (e = s.lastOpenTabId) && void 0 !== e ? e : null
+    return null !== (e = d.lastOpenTabId) && void 0 !== e ? e : null
   }
   get displayTools() {
-    return this.devToolsEnabled && s.displayTools
+    return l.default.isDeveloper && d.displayTools
   }
   get showDevWidget() {
-    return this.devToolsEnabled && s.showDevWidget
+    return l.default.isDeveloper && d.showDevWidget
   }
   get devWidgetPosition() {
-    return s.devWidgetPosition
+    return d.devWidgetPosition
   }
 }
 u.displayName = "DevToolsSettingsStore", u.persistKey = "DevToolsSettingsStore";
-var o = new u(l.default, {
+var s = new u(i.default, {
   DEV_TOOLS_SETTINGS_UPDATE: function(e) {
-    (s.devToolsEnabled || e.settings.devToolsEnabled) && (null != e.settings.devToolsEnabled && (l.default.actionLogger.persist = e.settings.devToolsEnabled, i.default.set(d.STORAGE_KEY_LOG_DISPATCHES, e.settings.devToolsEnabled)), s = {
-      ...s,
+    l.default.isDeveloper && (d = {
+      ...d,
       ...e.settings
     })
   }

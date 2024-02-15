@@ -71,7 +71,7 @@ let v = e => {
     let {
       displayOptions: t,
       assetId: n
-    } = e, s = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), l = null != n ? (0, h.default)(n, o.AvatarSizes.SIZE_80, s) : void 0;
+    } = e, s = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), l = null != n ? (0, h.default)(n, o.AvatarSizes.SIZE_80, !s) : void 0;
     return (0, a.jsxs)("div", {
       className: O.shopMarketingTooltipContent,
       children: [(0, a.jsx)("div", {

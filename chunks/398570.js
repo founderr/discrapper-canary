@@ -9,7 +9,7 @@ var a = t("748820"),
   i = t("446674"),
   l = t("913144"),
   o = t("271938"),
-  s = t("584369");
+  s = t("368694");
 let c = 0,
   d = [],
   u = [],
@@ -36,7 +36,7 @@ var m = new p(l.default, {
       properties: t,
       fingerprint: a
     } = e;
-    if (s.default.devToolsEnabled) {
+    if (s.default.isDeveloper) {
       var i;
       (d = [...d, {
         key: (c++).toString(),
@@ -56,7 +56,7 @@ var m = new p(l.default, {
       location: l,
       previouslyTracked: o
     } = e;
-    if (!!s.default.devToolsEnabled) h && (u = [...u, {
+    if (!!s.default.isDeveloper) h && (u = [...u, {
       key: (0, a.v4)(),
       experimentId: r,
       descriptor: t,
