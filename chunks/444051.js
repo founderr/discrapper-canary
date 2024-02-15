@@ -317,5 +317,9 @@ e.exports = Object.freeze({
   INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE: "Contact Crisis Text Line",
   INAPPROPRIATE_CONVERSATION_VISIT_NOFILTR: "Visit NoFiltr",
   INAPPROPRIATE_CONVERSATION_NOFILTR_DESCRIPTION: "NoFiltr is a community that empowers young people to safely navigate online.",
-  INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST: "Something went wrong! Please try again later."
+  INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST: "Something went wrong! Please try again later.",
+  INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION: "They won't be able to message you. If you feel their actions could harm someone, please submit a report to Discord.",
+  INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Block",
+  INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON: "Block and report",
+  INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_CANCEL_BUTTON: "Cancel"
 })
