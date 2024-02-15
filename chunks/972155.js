@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return N
   }
 }), n("424973");
 var a = n("37983"),
@@ -11,130 +11,115 @@ var a = n("37983"),
   r = n("151426"),
   o = n("244201"),
   u = n("191225"),
-  d = n("860345"),
-  c = n("117582"),
-  f = n("943349"),
-  h = n("428958"),
-  m = n("191145"),
-  p = n("393171"),
-  E = n("242757"),
-  S = n("305961"),
-  g = n("957255"),
-  C = n("466079"),
-  _ = n("444657"),
-  I = n("679243"),
-  T = n("832897"),
-  v = n("308419"),
-  x = n("49111"),
-  N = n("842030");
+  d = n("117582"),
+  c = n("943349"),
+  f = n("428958"),
+  h = n("191145"),
+  m = n("393171"),
+  p = n("242757"),
+  E = n("305961"),
+  S = n("957255"),
+  g = n("466079"),
+  C = n("444657"),
+  _ = n("679243"),
+  I = n("832897"),
+  T = n("308419"),
+  v = n("49111"),
+  x = n("842030");
 
-function A(e) {
+function N(e) {
   let {
     participants: t,
     onClick: n,
-    onDoubleClick: A,
-    onContextMenu: M,
-    channel: R,
-    className: j,
-    inCall: L,
-    totalNumberOfParticipants: y,
-    paused: O = !1
-  } = e, P = (0, o.useAppContext)(), b = P === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(R.guild_id), [R.guild_id]), {
-    dismissedActivityEntryPointTileChannel: U
-  } = (0, T.useChannelCallVideoGridStore)(), w = (0, i.useStateFromStores)([m.default], () => m.default.getUserParticipantCount(R.id), [R]), F = l.useCallback(() => {
-    T.useChannelCallVideoGridStore.setState({
-      dismissedActivityEntryPointTileChannel: R.id
+    onDoubleClick: N,
+    onContextMenu: A,
+    channel: M,
+    className: R,
+    inCall: j,
+    totalNumberOfParticipants: L,
+    paused: y = !1
+  } = e, O = (0, o.useAppContext)(), P = O === v.AppContext.POPOUT, b = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(M.guild_id), [M.guild_id]), {
+    dismissedActivityEntryPointTileChannel: D
+  } = (0, I.useChannelCallVideoGridStore)(), U = (0, i.useStateFromStores)([h.default], () => h.default.getUserParticipantCount(M.id), [M]), w = l.useCallback(() => {
+    I.useChannelCallVideoGridStore.setState({
+      dismissedActivityEntryPointTileChannel: M.id
     })
-  }, [R.id]);
+  }, [M.id]);
   l.useEffect(() => {
-    null != U && R.id !== U && T.useChannelCallVideoGridStore.setState({
+    null != D && M.id !== D && I.useChannelCallVideoGridStore.setState({
       dismissedActivityEntryPointTileChannel: null
     })
-  }, [R.id, U]);
-  let k = (0, i.useStateFromStores)([g.default], () => R.isPrivate() || (0, E.canViewInviteModal)(g.default, D, R), [D, R]),
-    V = (null == D ? void 0 : D.afkChannelId) === R.id,
-    B = R.userLimit <= 0 || R.userLimit > 1,
+  }, [M.id, D]);
+  let F = (0, i.useStateFromStores)([S.default], () => M.isPrivate() || (0, p.canViewInviteModal)(S.default, b, M), [b, M]),
+    k = (null == b ? void 0 : b.afkChannelId) === M.id,
+    V = M.userLimit <= 0 || M.userLimit > 1,
     {
-      vcTileActivityExperimentType: H
-    } = c.VcTileActivitiesEntryPointExperiment.useExperiment({
+      vcTileActivityExperimentType: B
+    } = d.VcTileActivitiesEntryPointExperiment.useExperiment({
       location: "8711e9_1"
     }, {
       autoTrackExposure: !1
     });
-  R.isGuildVoice() && c.VcTileActivitiesEntryPointExperiment.trackExposure({
+  M.isGuildVoice() && d.VcTileActivitiesEntryPointExperiment.trackExposure({
     location: "8711e9_2"
   });
-  let G = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(R.id).length <= 0),
-    W = (0, p.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
-    Y = (0, f.useEmbeddedActivityLaunchability)(R.id),
-    z = Y !== f.EmbeddedActivityLaunchability.CAN_LAUNCH,
-    K = null != U && U === R.id,
-    {
-      enabled: Z
-    } = d.PaxVcTileActivitiesExperiment.useExperiment({
-      location: "8711e9_3"
-    }, {
-      autoTrackExposure: !1
-    }),
-    X = t.map(e => t => (0, a.jsx)(I.default, {
+  let H = (0, i.useStateFromStores)([u.default], () => u.default.getEmbeddedActivitiesForChannel(M.id).length <= 0),
+    G = (0, m.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
+    W = (0, c.useEmbeddedActivityLaunchability)(M.id),
+    Y = W !== c.EmbeddedActivityLaunchability.CAN_LAUNCH,
+    z = null != D && D === M.id,
+    K = t.map(e => t => (0, a.jsx)(_.default, {
       participant: e,
-      channel: R,
-      className: N.tile,
-      paused: O,
+      channel: M,
+      className: x.tile,
+      paused: y,
       onClick: n,
-      onDoubleClick: A,
-      onContextMenu: M,
-      inCall: L,
+      onDoubleClick: N,
+      onContextMenu: A,
+      inCall: j,
       width: t,
-      inPopout: b
+      inPopout: P
     }, e.id));
-  (0, h.default)({
+  (0, f.default)({
     type: s.ImpressionTypes.VIEW,
     name: s.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
     properties: {
-      total_participants: y,
-      can_invite: k,
-      is_afk_channel: V,
-      channel_user_limit: R.userLimit
+      total_participants: L,
+      can_invite: F,
+      is_afk_channel: k,
+      channel_user_limit: M.userLimit
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != D && !V && (Z ? X.push(e => (0, a.jsx)(_.ActivityEntryPointTile, {
-    channel: R,
-    guild: D,
+  }, []), null != b && !k && ((B !== d.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== U) && (B !== d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(U >= 2)) || !H || Y || G || z ? V && 1 === U && F && ([d.VcTileActivityExperimentType.ONE_OR_TWO_USERS, d.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(B) && H && !Y ? K.push(e => (0, a.jsx)(C.ActivityEntryPointTile, {
+    channel: M,
+    guild: b,
     width: e,
-    inPopout: b,
-    handleClose: F,
-    userParticipantCount: w
-  })) : (H !== c.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== w) && (H !== c.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(w >= 2)) || !G || z || W || K ? B && 1 === w && k && ([c.VcTileActivityExperimentType.ONE_OR_TWO_USERS, c.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(H) && G && !z ? X.push(e => (0, a.jsx)(_.ActivityEntryPointTile, {
-    channel: R,
-    guild: D,
+    inPopout: P,
+    handleClose: w,
+    userParticipantCount: U
+  })) : K.push(e => (0, a.jsx)(T.default, {
     width: e,
-    inPopout: b,
-    handleClose: F,
-    userParticipantCount: w
-  })) : X.push(e => (0, a.jsx)(v.default, {
+    channel: M,
+    guild: b,
+    inPopout: P
+  }))) : K.push(e => (0, a.jsx)(C.ActivityEntryPointTile, {
+    channel: M,
+    guild: b,
     width: e,
-    channel: R,
-    guild: D,
-    inPopout: b
-  }))) : X.push(e => (0, a.jsx)(_.ActivityEntryPointTile, {
-    channel: R,
-    guild: D,
-    width: e,
-    inPopout: b,
-    handleClose: F,
-    userParticipantCount: w
+    inPopout: P,
+    handleClose: w,
+    userParticipantCount: U
   })));
-  let Q = l.useCallback(e => {
+  let Z = l.useCallback(e => {
     var n, a;
     return null !== (a = null === (n = t[e]) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : "empty-tile"
   }, [t]);
-  return (0, a.jsx)(C.default, {
-    className: j,
-    keyExtractor: Q,
+  return (0, a.jsx)(g.default, {
+    className: R,
+    keyExtractor: Z,
     paddingTop: 64,
     paddingBottom: 64,
-    children: X
+    children: K
   })
 }
