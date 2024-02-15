@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return I
+    return g
   }
 }), l("222007");
 var a = l("37983"),
@@ -21,18 +21,17 @@ var a = l("37983"),
   h = l("810567"),
   _ = l("130037"),
   T = l("490931"),
-  x = l("536999"),
-  S = l("178406"),
-  A = l("645266"),
-  g = l("248793"),
+  x = l("178406"),
+  S = l("645266"),
+  A = l("248793"),
   p = l("843455"),
   L = l("782340"),
   H = l("791006");
 let N = n.forwardRef(function(e, t) {
   let {
     guild: s
-  } = e, o = (0, C.default)([S.default], () => S.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([m.default], () => (0, f.isThemeDark)(m.default.theme)), N = (0, x.useIsInMembersTablesAdditionalFilteringExperiment)(s.id), I = (0, C.default)([M.default], () => M.default.can(p.Permissions.KICK_MEMBERS, s)), R = n.useCallback(() => {
-    null != s && I && (0, E.openModalLazy)(async () => {
+  } = e, o = (0, C.default)([x.default], () => x.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([m.default], () => (0, f.isThemeDark)(m.default.theme)), N = (0, C.default)([M.default], () => M.default.can(p.Permissions.KICK_MEMBERS, s)), g = n.useCallback(() => {
+    null != s && N && (0, E.openModalLazy)(async () => {
       let {
         default: e
       } = await l.el("494440").then(l.bind(l, "494440"));
@@ -41,19 +40,19 @@ let N = n.forwardRef(function(e, t) {
         guild: s
       })
     })
-  }, [s, I]), v = (0, C.default)([S.default], () => S.default.getSearchStateByGuildId(s.id), [s.id], u), j = (0, _.useTrackMemberSearchUsed)(s.id), [D, b] = n.useState(v.query), O = null != v.selectedSort && v.selectedSort !== T.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC && v.selectedSort !== T.OrderBy.ORDER_BY_UNSPECIFIED, B = n.useCallback(e => {
+  }, [s, N]), I = (0, C.default)([x.default], () => x.default.getSearchStateByGuildId(s.id), [s.id], u), R = (0, _.useTrackMemberSearchUsed)(s.id), [v, j] = n.useState(I.query), D = null != I.selectedSort && I.selectedSort !== T.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC && I.selectedSort !== T.OrderBy.ORDER_BY_UNSPECIFIED, b = n.useCallback(e => {
     let t = e.trim();
-    t.length > 0 && j(), (0, A.updateSearchState)(s.id, {
+    t.length > 0 && R(), (0, S.updateSearchState)(s.id, {
       query: t
     })
-  }, [s.id, j]), V = n.useCallback(d(B, 300), [B]), y = n.useCallback(e => {
-    b(e), V(e)
-  }, [V]), F = n.useCallback(() => {
-    b(""), B("")
-  }, [B]);
+  }, [s.id, R]), O = n.useCallback(d(b, 300), [b]), B = n.useCallback(e => {
+    j(e), O(e)
+  }, [O]), V = n.useCallback(() => {
+    j(""), b("")
+  }, [b]);
   return n.useImperativeHandle(t, () => ({
     resetSearchText() {
-      b("")
+      j("")
     }
   })), (0, a.jsxs)("div", {
     className: i(H.searchHeaderContainer),
@@ -72,10 +71,10 @@ let N = n.forwardRef(function(e, t) {
         className: i(H.searchHeader),
         children: (0, a.jsx)(h.default, {
           className: H.searchBar,
-          query: D,
+          query: v,
           placeholder: L.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
-          onChange: y,
-          onClear: F,
+          onChange: B,
+          onClear: V,
           autoComplete: "off",
           inputProps: {
             autoCapitalize: "none",
@@ -84,13 +83,13 @@ let N = n.forwardRef(function(e, t) {
           }
         })
       })
-    }), N && (0, a.jsx)("div", {
+    }), (0, a.jsx)("div", {
       children: (0, a.jsx)(E.Popout, {
         animation: E.Popout.Animation.FADE,
         position: "bottom",
         spacing: 4,
         align: "left",
-        renderPopout: () => (0, a.jsx)(g.default, {
+        renderPopout: () => (0, a.jsx)(A.default, {
           guildId: s.id,
           onClose: void 0
         }),
@@ -111,10 +110,10 @@ let N = n.forwardRef(function(e, t) {
               children: [(0, a.jsx)(c.ArrowsUpDownIcon, {
                 height: 16,
                 width: 16,
-                color: O ? E.tokens.colors.INTERACTIVE_ACTIVE.css : E.tokens.colors.HEADER_SECONDARY.css
+                color: D ? E.tokens.colors.INTERACTIVE_ACTIVE.css : E.tokens.colors.HEADER_SECONDARY.css
               }), (0, a.jsx)(E.Text, {
                 variant: "text-sm/medium",
-                color: O ? "interactive-active" : "header-secondary",
+                color: D ? "interactive-active" : "header-secondary",
                 className: H.sortText,
                 children: L.default.Messages.SORT
               })]
@@ -124,9 +123,9 @@ let N = n.forwardRef(function(e, t) {
       })
     }), (0, a.jsx)("div", {
       className: i(H.tableOptions),
-      children: I && (0, a.jsx)(E.Button, {
+      children: N && (0, a.jsx)(E.Button, {
         className: i(H.pruneButton),
-        onClick: R,
+        onClick: g,
         "aria-label": L.default.Messages.PRUNE_MEMBERS,
         color: E.Button.Colors.RED,
         look: E.Button.Looks.OUTLINED,
@@ -136,4 +135,4 @@ let N = n.forwardRef(function(e, t) {
     })]
   })
 });
-var I = N
+var g = N
