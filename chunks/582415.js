@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return u
   },
   useGetStreamApplication: function() {
-    return l
+    return f
   }
 });
 var s = n("446674"),
@@ -33,6 +33,10 @@ function u(e, t) {
   }
 }
 
-function l(e) {
-  return (0, s.useStateFromStores)([r.default], () => u(e, r.default), [e], (e, t) => e === t || null != e && null != t && (0, i.default)(e, t))
+function l(e, t) {
+  return e === t || null != e && null != t && (0, i.default)(e, t)
+}
+
+function f(e) {
+  return (0, s.useStateFromStores)([r.default], () => u(e, r.default), [e], l)
 }
