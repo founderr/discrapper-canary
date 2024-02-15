@@ -1,63 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return E
   }
 });
 var s = n("37983"),
   l = n("884691"),
-  a = n("432710"),
-  i = n("446674"),
-  r = n("77078"),
-  o = n("477566"),
-  u = n("155084"),
-  d = n("29212"),
-  c = n("447435"),
-  E = n("817892"),
-  f = n("782340");
+  a = n("446674"),
+  i = n("77078"),
+  r = n("477566"),
+  o = n("29212"),
+  u = n("447435"),
+  d = n("817892"),
+  c = n("782340");
 
-function _(e) {
+function E(e) {
   let {
     messageId: t,
-    channelId: _
-  } = e, T = (0, i.useStateFromStores)([E.default], () => E.default.canSubmitFpReport(t));
-  l.useEffect(() => {
-    u.default.increment({
-      name: a.MetricEvents.EXPLICIT_MEDIA_SENDER_FP_BUTTON_VIEW
-    }), (0, c.trackMediaRedactionAction)({
-      action: c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_VIEWED,
-      messageId: t,
-      channelId: _
-    })
-  }, [t, _]);
-  let I = l.useCallback(() => {
-    if ((0, c.trackMediaRedactionAction)({
-        action: c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED,
+    channelId: E
+  } = e, f = (0, a.useStateFromStores)([d.default], () => d.default.canSubmitFpReport(t)), _ = l.useCallback(() => {
+    if ((0, u.trackMediaRedactionAction)({
+        action: u.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED,
         messageId: t,
-        channelId: _
-      }), !T) {
-      o.default.show({
-        title: f.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
-        body: f.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
-        confirmText: f.default.Messages.OKAY
-      }), d.default.disableFalsePositiveButton(_, t);
+        channelId: E
+      }), !f) {
+      r.default.show({
+        title: c.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
+        body: c.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
+        confirmText: c.default.Messages.OKAY
+      }), o.default.disableFalsePositiveButton(E, t);
       return
-    }(0, r.openModalLazy)(async () => {
+    }(0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await n("492996");
       return n => (0, s.jsx)(e, {
-        channelId: _,
+        channelId: E,
         messageId: t,
         ...n
       })
     })
-  }, [_, t, T]);
-  return (0, s.jsx)(r.Button, {
-    size: r.Button.Sizes.MEDIUM,
-    color: r.Button.Colors.PRIMARY,
-    onClick: I,
-    disabled: !T,
-    children: f.default.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE
+  }, [E, t, f]);
+  return (0, s.jsx)(i.Button, {
+    size: i.Button.Sizes.MEDIUM,
+    color: i.Button.Colors.PRIMARY,
+    onClick: _,
+    disabled: !f,
+    children: c.default.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE
   })
 }
