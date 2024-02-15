@@ -58,33 +58,37 @@ function _(e) {
     onMute: N,
     href: _,
     messageId: O,
-    channelId: R
-  } = e, [k, L] = s.useState(v), D = null != d && null == d.proxyURL, V = s.useCallback(() => L(!1), [L]), P = e => {
-    e.preventDefault(), e.stopPropagation(), null == M || M(!1), L(!0), D && (c.ComponentDispatch.dispatch(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED), c.ComponentDispatch.subscribeOnce(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, V))
+    channelId: R,
+    placeholder: V,
+    placeholderVersion: k
+  } = e, [L, D] = s.useState(v), P = null != d && null == d.proxyURL, F = s.useCallback(() => D(!1), [D]), H = e => {
+    e.preventDefault(), e.stopPropagation(), null == M || M(!1), D(!0), P && (c.ComponentDispatch.dispatch(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED), c.ComponentDispatch.subscribeOnce(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, F))
   };
   s.useEffect(() => () => {
-    D && c.ComponentDispatch.unsubscribe(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, V)
-  }, [D, V]);
+    P && c.ComponentDispatch.unsubscribe(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, F)
+  }, [P, F]);
   let {
-    width: F,
-    height: H
+    width: W,
+    height: B
   } = a;
-  null != d && (F = d.width, H = d.height);
-  let W = (0, p.fit)({
-    width: F,
-    height: H,
+  null != d && (W = d.width, B = d.height);
+  let U = (0, p.fit)({
+    width: W,
+    height: B,
     maxWidth: n,
     maxHeight: r
   });
-  F = Math.max(W.width, 150), H = Math.max(W.height, 144);
-  let B = (0, w.getBestEffortSrcUrl)(a);
+  W = Math.max(U.width, 150), B = Math.max(U.height, 144);
+  let G = (0, w.getBestEffortSrcUrl)(a);
   if (null != d && null != d.proxyURL) return (0, i.jsx)("div", {
     className: o(A.embedVideo, t),
     children: b({
-      poster: B,
+      poster: G,
       src: d.proxyURL,
-      width: F,
-      height: H,
+      placeholder: V,
+      placeholderVersion: k,
+      width: W,
+      height: B,
       responsive: h,
       autoPlay: v,
       onEnded: T,
@@ -98,19 +102,19 @@ function _(e) {
       onMute: N
     })
   });
-  if (k && null != d) {
+  if (L && null != d) {
     let e;
     let s = !0 === I || "function" == typeof I && I(),
       a = {
-        width: F,
-        height: H
+        width: W,
+        height: B
       },
       c = {
-        width: F,
-        height: H
+        width: W,
+        height: B
       };
     if (h) {
-      let t = 0 !== F ? H / F : 1;
+      let t = 0 !== W ? B / W : 1;
       a = {
         maxWidth: n,
         maxHeight: r,
@@ -118,13 +122,13 @@ function _(e) {
         height: void 0
       }, c = {
         paddingBottom: "".concat(100 * t, "%"),
-        maxWidth: F
+        maxWidth: W
       }, e = {
         position: "absolute",
         top: 0,
         left: 0,
-        maxWidth: F,
-        maxHeight: H
+        maxWidth: W,
+        maxHeight: B
       }
     }
     return (0, i.jsx)("div", {
@@ -137,8 +141,8 @@ function _(e) {
           provider: u,
           src: d.url,
           style: e,
-          width: F,
-          height: H,
+          width: W,
+          height: B,
           allowFullScreen: m,
           autoMute: s
         })
@@ -148,27 +152,29 @@ function _(e) {
   return (0, i.jsxs)("div", {
     className: o(A.embedVideo, t),
     style: h ? {
-      maxWidth: F
+      maxWidth: W
     } : {
-      width: F,
-      height: H
+      width: W,
+      height: B
     },
     children: [g({
-      src: B,
-      width: F,
-      height: H,
-      maxWidth: F,
-      maxHeight: H,
+      src: G,
+      width: W,
+      height: B,
+      maxWidth: W,
+      maxHeight: B,
       responsive: h,
       containerClassName: A.embedVideoImageComponent,
       imageClassName: A.embedVideoImageComponentInner,
-      onClick: y && null != d ? P : null
+      placeholder: V,
+      placeholderVersion: k,
+      onClick: y && null != d ? H : null
     }), (0, i.jsx)("div", {
       className: A.embedVideoActions,
       children: (0, i.jsx)("div", {
         className: A.centerContent,
         children: y ? (0, i.jsx)(E.default, {
-          onPlay: null != d ? P : null,
+          onPlay: null != d ? H : null,
           externalURL: _,
           renderLinkComponent: x,
           messageId: O,
@@ -193,7 +199,9 @@ function O(e) {
     alt: m,
     disableAltTextDisplay: h = !1,
     playable: p = !0,
-    hiddenSpoilers: g
+    hiddenSpoilers: g,
+    placeholder: f,
+    placeholderVersion: x
   } = e;
   return (0, i.jsx)(b.default, {
     className: o(A.embedVideo, t),
@@ -212,7 +220,9 @@ function O(e) {
     playable: p,
     renderImageComponent: u,
     hiddenSpoilers: g,
-    disableAltTextDisplay: h
+    disableAltTextDisplay: h,
+    placeholder: f,
+    placeholderVersion: x
   })
 }(n = class extends s.PureComponent {
   renderProvider() {
@@ -460,7 +470,9 @@ function O(e) {
         original: l.url,
         shouldLink: t,
         disableAltTextDisplay: !0,
-        hiddenSpoilers: e
+        hiddenSpoilers: e,
+        placeholder: l.placeholder,
+        placeholderVersion: l.placeholderVersion
       };
     return h in p && (f.onClick = p[h]), (0, i.jsx)(I.GIFAccessoryContext.Consumer, {
       children: t => (0, i.jsx)(C.MessagesInteractionContext.Consumer, {
@@ -519,7 +531,9 @@ function O(e) {
           renderImageComponent: d,
           playable: t,
           hiddenSpoilers: l,
-          disableAltTextDisplay: null != g
+          disableAltTextDisplay: null != g,
+          placeholder: s.placeholder,
+          placeholderVersion: s.placeholderVersion
         })
       }
     });
@@ -538,7 +552,9 @@ function O(e) {
       renderLinkComponent: u,
       playable: t && !l,
       messageId: h,
-      channelId: p
+      channelId: p,
+      placeholder: null == s ? void 0 : s.placeholder,
+      placeholderVersion: null == s ? void 0 : s.placeholderVersion
     })
   }
   renderFooter() {

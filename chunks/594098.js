@@ -60,146 +60,100 @@ function S(e) {
       src: l,
       placeholder: a,
       placeholderVersion: o,
-      showThumbhashPlaceholder: d,
-      alt: m,
-      width: p,
-      height: P,
-      maxWidth: O = p,
-      maxHeight: M = P,
-      minWidth: L,
-      minHeight: g,
-      mediaLayoutType: h,
-      limitResponsiveWidth: x = !0,
-      accessory: N,
-      zoomable: A,
-      original: v,
-      children: U,
-      renderItem: b,
-      renderAccessory: y,
-      onClick: D,
-      tabIndex: j,
-      useFullWidth: F = !1,
-      ...B
+      alt: d,
+      width: m,
+      height: p,
+      maxWidth: P = m,
+      maxHeight: O = p,
+      minWidth: M,
+      minHeight: L,
+      mediaLayoutType: g,
+      limitResponsiveWidth: h = !0,
+      accessory: x,
+      zoomable: N,
+      original: A,
+      children: v,
+      renderAccessory: U,
+      onClick: b,
+      tabIndex: D,
+      useFullWidth: y = !1,
+      ...j
     } = this.props;
-    if (1 === p && 1 === P) return null;
-    let w = (0, f.fit)({
-      width: p,
-      height: P,
-      maxWidth: O,
-      maxHeight: M,
-      minWidth: L,
-      minHeight: g
-    });
-    if (null != l && i === T.ImageReadyStates.READY && "function" == typeof U) e = null != b ? b() : U({
+    if (1 === m && 1 === p) return null;
+    let F = (0, f.fit)({
+        width: m,
+        height: p,
+        maxWidth: P,
+        maxHeight: O,
+        minWidth: M,
+        minHeight: L
+      }),
+      B = 0 !== F.width ? F.width / F.height : 1;
+    null != l && i !== T.ImageReadyStates.ERROR ? e = v({
       src: l,
-      size: w,
-      alt: m,
+      size: F,
+      alt: d,
       className: n,
-      mediaLayoutType: h
+      mediaLayoutType: g
+    }) : i !== T.ImageReadyStates.LOADING && (e = (0, r.jsx)(S, {
+      size: F,
+      mediaLayoutType: g,
+      alt: d
+    })), e = (0, r.jsx)(_.ImageLoadingOverlay, {
+      readyState: i,
+      aspectRatio: B,
+      placeholder: a,
+      placeholderVersion: o,
+      placeholderStyle: R(F, g),
+      children: e
     });
-    else if (!d) {
-      if (i === T.ImageReadyStates.LOADING) {
-        let t = 0 !== w.width ? w.height / w.width : 1;
-        e = null != l && "" !== l ? (0, r.jsxs)("div", {
-          children: [(0, r.jsx)("img", {
-            alt: null != m ? m : I.default.Messages.IMAGE,
-            title: m,
-            src: l,
-            style: R(w, h)
-          }), (0, r.jsx)("div", {
-            className: C.imagePlaceholderOverlay
-          }), (0, r.jsx)(u.Spinner, {
-            type: u.SpinnerTypes.WANDERING_CUBES,
-            className: C.placeholderLoadingSpinner
-          })]
-        }) : (0, r.jsx)(r.Fragment, {
-          children: (0, r.jsx)("div", {
-            style: {
-              paddingBottom: "".concat(100 * t, "%")
-            },
-            children: (0, r.jsx)("div", {
-              className: C.loadingWrapperInner,
-              children: (0, r.jsx)(u.Spinner, {
-                type: u.SpinnerTypes.WANDERING_CUBES,
-                className: C.loadingSpinner
-              })
-            })
-          })
-        })
-      } else e = (0, r.jsx)(S, {
-        size: w,
-        mediaLayoutType: h,
-        alt: m
-      })
-    }
-    if (d) {
-      let t = 0 !== w.width ? w.width / w.height : 1;
-      null != l && "" !== l && i !== T.ImageReadyStates.ERROR ? e = U({
-        src: l,
-        size: w,
-        alt: m,
-        className: n,
-        mediaLayoutType: h
-      }) : i !== T.ImageReadyStates.LOADING && (e = (0, r.jsx)(S, {
-        size: w,
-        mediaLayoutType: h,
-        alt: m
-      })), e = (0, r.jsx)(_.ImageLoadingOverlay, {
-        readyState: i,
-        aspectRatio: t,
-        placeholder: a,
-        placeholderVersion: o,
-        placeholderStyle: R(w, h),
-        children: e
-      })
-    }
-    let H = null != y ? y() : null;
-    return H = null != H ? H : N, (0, r.jsx)(u.FocusRing, {
+    let w = null != U ? U() : null;
+    return w = null != w ? w : x, (0, r.jsx)(u.FocusRing, {
       ringTarget: this._containerRef,
       focusTarget: this._clickableRef,
       children: (0, r.jsxs)("div", {
         className: s(C.imageWrapper, {
-          [C.imageZoom]: A,
+          [C.imageZoom]: N,
           [C.imageWrapperBackground]: i !== T.ImageReadyStates.READY,
-          [C.clickable]: null != D
+          [C.clickable]: null != b
         }, t),
-        style: function(e, t, n, i, r) {
-          return r === E.MediaLayoutType.MOSAIC ? {
+        style: function(e, t, n, i) {
+          return i === E.MediaLayoutType.MOSAIC ? {
             display: "block",
             maxHeight: "inherit",
             margin: "auto",
             width: !n && e.width <= E.MEDIA_MOSAIC_MAX_WIDTH ? e.width : "100%",
             height: "100%"
-          } : null != i || r === E.MediaLayoutType.RESPONSIVE ? {
+          } : i === E.MediaLayoutType.RESPONSIVE ? {
             maxWidth: t ? e.width : void 0,
             width: "100%",
             aspectRatio: "".concat(e.width, " / ").concat(e.height)
           } : e
-        }(w, x, F, b, h),
-        ...B,
-        children: [null != v && (0, r.jsx)("a", {
+        }(F, h, y, g),
+        ...j,
+        children: [null != A && (0, r.jsx)("a", {
           tabIndex: -1,
-          onClick: D,
+          onClick: b,
           "aria-hidden": !0,
           className: C.originalLink,
-          href: v,
+          href: A,
           ref: this._containerRef,
           "data-role": "img",
           "data-safe-src": l
-        }), null != D ? (0, r.jsx)(u.Clickable, {
+        }), null != b ? (0, r.jsx)(u.Clickable, {
           className: C.clickableWrapper,
-          tabIndex: null != j ? j : 0,
-          onClick: D,
-          "aria-label": null != m ? m : I.default.Messages.IMAGE,
+          tabIndex: null != D ? D : 0,
+          onClick: b,
+          "aria-label": null != d ? d : I.default.Messages.IMAGE,
           "aria-describedby": c.IMAGE_OPEN_DIALOG_DESCRIPTION,
           innerRef: this._clickableRef,
           focusProps: {
             enabled: !1
           },
           children: e
-        }) : e, null != H ? (0, r.jsx)("div", {
+        }) : e, null != w ? (0, r.jsx)("div", {
           className: C.imageAccessory,
-          children: H
+          children: w
         }) : null]
       })
     })

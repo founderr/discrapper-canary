@@ -131,39 +131,35 @@ let E = /\.gif($|\?|#)/i,
       minHeight: T,
       maxWidth: v,
       maxHeight: I,
-      renderItem: _,
-      onClick: N,
-      renderAccessory: A,
-      tabIndex: y,
-      limitResponsiveWidth: x,
-      useFullWidth: O,
-      placeholder: R,
-      placeholderVersion: M,
-      showThumbhashPlaceholder: L
+      onClick: _,
+      renderAccessory: N,
+      tabIndex: A,
+      limitResponsiveWidth: y,
+      useFullWidth: x,
+      placeholder: O,
+      placeholderVersion: R
     } = this.props, {
-      readyState: P,
-      hasMouseOver: b,
-      hasFocus: j
-    } = this.state, U = null != l, D = this.getRatio(), k = (0, r.clamp)(Math.round(g * D), null != C ? C : 0, null != v ? v : 1 / 0), w = (0, r.clamp)(Math.round(S * D), null != T ? T : 0, null != I ? I : 1 / 0), F = {
+      readyState: M,
+      hasMouseOver: L,
+      hasFocus: P
+    } = this.state, b = null != l, j = this.getRatio(), U = (0, r.clamp)(Math.round(g * j), null != C ? C : 0, null != v ? v : 1 / 0), D = (0, r.clamp)(Math.round(S * j), null != T ? T : 0, null != I ? I : 1 / 0), k = {
       alt: t,
-      readyState: P,
+      readyState: M,
       onContextMenu: null != s ? s : void 0,
-      zoomable: U,
+      zoomable: b,
       className: d,
       imageClassName: c,
       minWidth: C,
       minHeight: T,
       mediaLayoutType: this.getType(),
-      limitResponsiveWidth: x,
-      useFullWidth: O,
-      tabIndex: y,
-      width: k,
-      height: w,
-      renderItem: _,
+      limitResponsiveWidth: y,
+      useFullWidth: x,
+      tabIndex: A,
+      width: U,
+      height: D,
       src: "",
-      placeholder: R,
-      placeholderVersion: M,
-      showThumbhashPlaceholder: L,
+      placeholder: O,
+      placeholderVersion: R,
       children: null != f ? e => {
         let {
           src: t,
@@ -182,16 +178,16 @@ let E = /\.gif($|\?|#)/i,
       onFocus: this.onFocus,
       onBlur: this.onBlur
     };
-    if (1 === F.width && 1 === F.height) return null;
-    switch ((U || null != N) && (F.onClick = this.onClick), i && (F.original = null != u && "" !== u ? u : F.src), P) {
+    if (1 === k.width && 1 === k.height) return null;
+    switch ((b || null != _) && (k.onClick = this.onClick), i && (k.original = null != u && "" !== u ? u : k.src), M) {
       case h.ImageReadyStates.LOADING:
-        null != n && (F.src = n);
+        null != n && (k.src = n);
         break;
       case h.ImageReadyStates.READY:
         if (e.isAnimated(this.props)) {
-          F.onMouseLeave = this.onMouseLeave;
-          let t = (o || b || j) && (null == E || E) && e.visibilityObserver.isVisible(this);
-          t ? (F.src = this.getSrc(D), F.renderAccessory = A) : (F.src = this.getSrc(D, !p || !o), F.renderAccessory = this.renderAccessory), null != f && (F.children = e => {
+          k.onMouseLeave = this.onMouseLeave;
+          let t = (o || L || P) && (null == E || E) && e.visibilityObserver.isVisible(this);
+          t ? (k.src = this.getSrc(j), k.renderAccessory = N) : (k.src = this.getSrc(j, !p || !o), k.renderAccessory = this.renderAccessory), null != f && (k.children = e => {
             let {
               src: n,
               size: l,
@@ -206,10 +202,10 @@ let E = /\.gif($|\?|#)/i,
               mediaLayoutType: a
             })
           })
-        } else F.src = this.getSrc(D)
+        } else k.src = this.getSrc(j)
     }
     return (0, a.jsx)(m.default, {
-      ...F
+      ...k
     })
   }
   constructor(t) {
