@@ -15,8 +15,8 @@ var l = a("37983"),
   d = a("252744"),
   f = a("812204"),
   m = a("685665"),
-  C = a("606292"),
-  p = a("688318"),
+  p = a("606292"),
+  C = a("688318"),
   g = a("946964"),
   E = a("635956"),
   h = a("38766"),
@@ -37,13 +37,13 @@ var l = a("37983"),
   R = a("54809"),
   P = a("408381"),
   B = a("264579"),
-  F = a("177586"),
-  D = a("646718"),
+  D = a("177586"),
+  F = a("646718"),
   M = a("782340"),
   w = a("682123");
 let H = N.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar,
   U = c.AvatarSizes.SIZE_120,
-  W = (0, C.getDecorationSizeForAvatarSize)(U),
+  W = (0, p.getDecorationSizeForAvatarSize)(U),
   G = e => {
     let {
       children: t,
@@ -92,7 +92,7 @@ var V = function(e) {
     avatarDecorationSrc: Q,
     eventHandlers: ee,
     avatarPlaceholderSrc: et
-  } = (0, p.default)({
+  } = (0, C.default)({
     user: $,
     avatarDecorationOverride: (null == J ? void 0 : J.type) === i.CollectiblesItemType.AVATAR_DECORATION ? J : void 0,
     size: W,
@@ -100,7 +100,7 @@ var V = function(e) {
   }), {
     buttonColors: ea,
     backgroundColors: el
-  } = (0, F.default)(t.styles), es = (0, k.getFormattedPriceForCollectiblesProduct)(t, S), er = (0, k.isPremiumCollectiblesProduct)(t), en = (0, k.isFreeCollectiblesProduct)(t), [ei, eo, ec] = (0, o.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), eu = s.useRef(null);
+  } = (0, D.default)(t.styles), es = (0, k.getFormattedPriceForCollectiblesProduct)(t, S), er = (0, k.isPremiumCollectiblesProduct)(t), en = (0, k.isFreeCollectiblesProduct)(t), [ei, eo, ec] = (0, o.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), eu = s.useRef(null);
   s.useEffect(() => {
     let {
       current: e
@@ -116,7 +116,7 @@ var V = function(e) {
     }),
     ef = () => {
       if ((0, u.popLayer)(), ed(), (null == J ? void 0 : J.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
-        (0, C.openAvatarDecorationModal)({
+        (0, p.openAvatarDecorationModal)({
           initialSelectedDecoration: J,
           analyticsLocations: V
         });
@@ -135,8 +135,8 @@ var V = function(e) {
         returnRef: eu
       })
     },
-    eC = em(f.default.COLLECTIBLES_SHOP_CARD),
-    ep = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    ep = em(f.default.COLLECTIBLES_SHOP_CARD),
+    eC = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eg = () => (0, l.jsx)("div", {
       className: w.hoverUpsellContainer,
       children: (0, l.jsx)(E.default, {
@@ -145,7 +145,7 @@ var V = function(e) {
         disabled: ec,
         onClick: e => e.stopPropagation(),
         buttonText: M.default.Messages.UNLOCK_WITH_NITRO,
-        subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2
+        subscriptionTier: F.PremiumSubscriptionSKUs.TIER_2
       })
     });
   s.useEffect(() => {
@@ -172,7 +172,7 @@ var V = function(e) {
         color: ea.text.toHslString()
       } : void 0,
       className: w.defaultPreviewButtonColor,
-      onClick: ep
+      onClick: eC
     }) : (0, l.jsx)(A.default, {
       product: t,
       returnRef: K,
@@ -230,7 +230,7 @@ var V = function(e) {
       innerRef: K,
       className: w.shopCard,
       onBlur: () => Z(!1),
-      onClick: eC,
+      onClick: ep,
       style: eT,
       id: "shop-item-".concat(t.skuId),
       children: [er && (0, l.jsx)(c.Tooltip, {

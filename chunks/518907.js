@@ -15,8 +15,8 @@ var l = a("37983"),
   d = a("77078"),
   f = a("54239"),
   m = a("252744"),
-  C = a("812204"),
-  p = a("685665"),
+  p = a("812204"),
+  C = a("685665"),
   g = a("606292"),
   E = a("688318"),
   h = a("946964"),
@@ -37,8 +37,8 @@ var l = a("37983"),
   R = a("342676"),
   P = a("450492"),
   B = a("920580"),
-  F = a("54809"),
-  D = a("264579"),
+  D = a("54809"),
+  F = a("264579"),
   M = a("177586"),
   w = a("646718"),
   H = a("782340"),
@@ -90,7 +90,7 @@ var Y = function(e) {
     isGiftEasterEggEnabled: k
   } = e, {
     analyticsLocations: Y
-  } = (0, p.default)(C.default.COLLECTIBLES_SHOP_CARD), X = s.useRef(null), Z = (0, m.default)(X), [q, $] = s.useState(!1), J = Z || q, Q = (0, o.default)([v.default], () => v.default.getCurrentUser()), [ee] = t.items, {
+  } = (0, C.default)(p.default.COLLECTIBLES_SHOP_CARD), X = s.useRef(null), Z = (0, m.default)(X), [q, $] = s.useState(!1), J = Z || q, Q = (0, o.default)([v.default], () => v.default.getCurrentUser()), [ee] = t.items, {
     avatarDecorationSrc: et,
     eventHandlers: ea,
     avatarPlaceholderSrc: el
@@ -116,7 +116,7 @@ var Y = function(e) {
       analyticsLocations: Y
     }),
     em = s.useRef(null),
-    eC = () => {
+    ep = () => {
       if ((0, f.popLayer)(), ef(), (null == ee ? void 0 : ee.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
         (0, g.openAvatarDecorationModal)({
           initialSelectedDecoration: ee,
@@ -128,8 +128,8 @@ var Y = function(e) {
         analyticsLocations: Y
       })
     },
-    ep = e => l => {
-      em.current = l.currentTarget, (0, F.openCollectiblesShopProductDetailsModal)({
+    eC = e => l => {
+      em.current = l.currentTarget, (0, D.openCollectiblesShopProductDetailsModal)({
         product: t,
         category: a,
         analyticsLocations: Y,
@@ -137,8 +137,8 @@ var Y = function(e) {
         returnRef: em
       })
     },
-    eg = ep(C.default.COLLECTIBLES_SHOP_CARD),
-    eE = ep(C.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    eg = eC(p.default.COLLECTIBLES_SHOP_CARD),
+    eE = eC(p.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eh = () => (0, l.jsx)("div", {
       className: U.hoverUpsellContainer,
       children: (0, l.jsx)(b.default, {
@@ -183,7 +183,7 @@ var Y = function(e) {
         submittingStartedLabel: H.default.Messages.COLLECTIBLES_COLLECTING,
         submittingFinishedLabel: H.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
         onClick: async () => {
-          await (0, O.claimPremiumCollectiblesProduct)(t.skuId), (0, D.default)({
+          await (0, O.claimPremiumCollectiblesProduct)(t.skuId), (0, F.default)({
             product: t,
             analyticsLocations: Y
           })
@@ -206,7 +206,7 @@ var Y = function(e) {
           })
         }) : (0, l.jsx)(V, {
           disabled: eu,
-          onClick: eC,
+          onClick: ep,
           children: H.default.Messages.COLLECTIBLES_USE_NOW
         }), eT()]
       })

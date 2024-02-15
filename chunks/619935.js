@@ -7,9 +7,9 @@ r.r(t), r.d(t, {
     return l
   }
 });
-var n = r("862205"),
-  a = r("15733");
-let u = (0, n.createExperiment)({
+var a = r("862205"),
+  n = r("15733");
+let u = (0, a.createExperiment)({
     kind: "user",
     id: "2022-03_block_russian_purchases",
     label: "Block purchases based on country",
@@ -24,7 +24,7 @@ let u = (0, n.createExperiment)({
       }
     }]
   }),
-  i = (0, n.createExperiment)({
+  i = (0, a.createExperiment)({
     kind: "user",
     id: "2022-03_block_russian_purchases_desktop",
     label: "Block purchases based on country (desktop specific flags)",
@@ -55,7 +55,7 @@ function s() {
     autoTrackExposure: !1
   }), {
     defaultBillingCountryCode: r
-  } = (0, a.default)();
+  } = (0, n.default)();
   return e || t && "RU" === r
 }
 var l = u

@@ -15,8 +15,8 @@ var l = a("37983"),
   d = a("649844"),
   f = a("697218"),
   m = a("153769"),
-  C = a("270227"),
-  p = a("719923"),
+  p = a("270227"),
+  C = a("719923"),
   g = a("491232"),
   E = a("716120"),
   h = a("342676"),
@@ -32,7 +32,7 @@ let v = (0, g.getLogoSize)(96),
     } = e, {
       analyticsLocations: a
     } = (0, u.default)(), r = s.useRef(null), n = (0, o.default)([f.default], () => f.default.getCurrentUser());
-    return p.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
+    return C.default.canUseCollectibles(n) ? (0, l.jsx)(l.Fragment, {
       children: t.summary
     }) : (0, l.jsx)(l.Fragment, {
       children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
@@ -76,7 +76,7 @@ function N(e) {
       className: S.discordLogo,
       children: [(0, l.jsx)(m.default, {
         className: S.discordIcon
-      }), (0, l.jsx)(C.default, {
+      }), (0, l.jsx)(p.default, {
         className: S.discordWordmark
       })]
     }), (0, l.jsx)("img", {

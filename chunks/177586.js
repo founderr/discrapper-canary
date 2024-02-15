@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return p
+    return C
   }
 }), a("222007");
 var l = a("656280"),
@@ -48,7 +48,7 @@ let c = s(n.default.unsafe_rawColors.WHITE_500.resolve({
       text: d(e[0], e[1]).isLight() ? u : c
     }
   },
-  C = (e, t) => {
+  p = (e, t) => {
     let {
       h: a,
       s: l,
@@ -60,7 +60,7 @@ let c = s(n.default.unsafe_rawColors.WHITE_500.resolve({
       l: r
     })
   };
-var p = e => {
+var C = e => {
   let t = (0, r.default)([i.default], () => i.default.saturation);
   if (null == e) return {};
   let a = {
@@ -70,15 +70,15 @@ var p = e => {
   };
   return 1 === t ? a : {
     backgroundColors: null != a.backgroundColors ? {
-      primary: C(a.backgroundColors.primary, t),
-      secondary: C(a.backgroundColors.secondary, t),
-      border: C(a.backgroundColors.border, t)
+      primary: p(a.backgroundColors.primary, t),
+      secondary: p(a.backgroundColors.secondary, t),
+      border: p(a.backgroundColors.border, t)
     } : void 0,
     buttonColors: null != a.buttonColors ? {
-      primary: C(a.buttonColors.primary, t),
-      secondary: C(a.buttonColors.secondary, t),
-      text: C(a.buttonColors.text, t)
+      primary: p(a.buttonColors.primary, t),
+      secondary: p(a.buttonColors.secondary, t),
+      text: p(a.buttonColors.text, t)
     } : void 0,
-    confettiColors: a.confettiColors.map(e => C(e, t))
+    confettiColors: a.confettiColors.map(e => p(e, t))
   }
 }

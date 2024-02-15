@@ -42,7 +42,7 @@ function C(e) {
     onClose: e => {
       e && g()
     }
-  }), O = "" !== C.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
+  }), v = "" !== C.helpArticleId ? () => (0, a.jsx)(l.Anchor, {
     className: h.termsApplyAnchor,
     href: d.default.getArticleURL(C.helpArticleId),
     children: (0, a.jsx)(l.Heading, {
@@ -50,19 +50,19 @@ function C(e) {
       className: h.termsApplyBodyText,
       children: E.default.Messages.BOGO_TERMS_APPLY
     })
-  }) : void 0, v = {
+  }) : void 0, O = {
     type: "video",
     src: p ? C.heroArtVideoLinkLightTheme : C.videoLink
   };
-  return ("" !== C.heroArtImageLinkDarkTheme || "" !== C.heroArtImageLinkLightTheme) && (v = {
+  return ("" !== C.heroArtImageLinkDarkTheme || "" !== C.heroArtImageLinkLightTheme) && (O = {
     type: "image",
     src: p ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
   }), {
     renderModalProps: I,
     header: C.header,
     subHeader: C.subheader,
-    subHeaderExtra: O,
-    heroArt: v,
+    subHeaderExtra: v,
+    heroArt: O,
     featureCards: C.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,

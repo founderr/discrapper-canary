@@ -1,7 +1,7 @@
 "use strict";
 t.r(r), t.d(r, {
   default: function() {
-    return b
+    return y
   }
 }), t("222007");
 var a = t("37983"),
@@ -49,7 +49,7 @@ let f = [{
   value: "pm_card_pl"
 }];
 
-function b() {
+function y() {
   let [e, r] = n.useState("pm_card_us"), t = (0, o.default)([h.default], () => h.default.paymentSources), i = Object.values(t), u = async () => {
     let r = e;
     "" === r && (r = "pm_card_us"), await s.default.post({
@@ -58,7 +58,7 @@ function b() {
         token: r
       }
     }), await (0, d.fetchPaymentSources)()
-  }, b = async () => {
+  }, y = async () => {
     await s.default.delete("/debug/payment-source"), await (0, d.fetchPaymentSources)()
   };
   return n.useEffect(() => {
@@ -90,7 +90,7 @@ function b() {
           children: "Create Stripe Credit Card"
         }), i.length > 0 && (0, a.jsx)(c.Button, {
           size: c.Button.Sizes.SMALL,
-          onClick: b,
+          onClick: y,
           children: "Delete All Payment Sources"
         })]
       }), (0, a.jsx)(c.Text, {
@@ -100,14 +100,14 @@ function b() {
         },
         variant: "text-md/normal",
         children: "Existing Payment Sources"
-      }), i.map(e => (0, a.jsx)(y, {
+      }), i.map(e => (0, a.jsx)(b, {
         paymentSource: e
       }, e.id))]
     })
   })
 }
 
-function y(e) {
+function b(e) {
   let {
     paymentSource: r
   } = e;

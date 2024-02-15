@@ -15,8 +15,8 @@ var l = a("37983"),
   d = a("177586"),
   f = a("843455"),
   m = a("782340"),
-  C = a("691164");
-let p = {
+  p = a("691164");
+let C = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -85,11 +85,11 @@ var g = e => {
       ...e,
       buttonRef: x,
       style: v,
-      className: C.giftButton,
+      className: p.giftButton,
       color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
-      innerClassName: C.giftButtonInner,
+      innerClassName: p.giftButtonInner,
       "aria-label": m.default.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
         e.stopPropagation(), (0, c.default)({
@@ -106,7 +106,7 @@ var g = e => {
         hovered: L,
         isContentDismissed: !0,
         themeOverride: I,
-        boxColors: p
+        boxColors: C
       }) : (0, l.jsx)(u.default, {
         width: 24,
         height: 24

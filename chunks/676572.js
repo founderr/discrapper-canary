@@ -4,15 +4,15 @@ r.r(t), r.d(t, {
     return l
   }
 });
-var n = r("446674"),
-  a = r("913144");
+var a = r("446674"),
+  n = r("913144");
 let u = {
     premiumLikelihood: void 0,
     isFetching: !1,
     fetched: !1
   },
   i = u;
-class s extends n.default.Store {
+class s extends a.default.Store {
   initialize() {
     i = u
   }
@@ -24,7 +24,7 @@ class s extends n.default.Store {
   }
 }
 s.displayName = "UserPremiumLikelihoodStore";
-var l = new s(a.default, {
+var l = new s(n.default, {
   BILLING_USER_PREMIUM_LIKELIHOOD_FETCH: function() {
     i.isFetching = !0
   },

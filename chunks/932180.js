@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return r
+    return u
   }
-}), n("424973");
-var s = n("884691"),
-  a = n("599110"),
-  l = n("579033"),
-  i = n("49111");
+}), s("424973");
+var a = s("884691"),
+  l = s("599110"),
+  n = s("579033"),
+  r = s("49111");
 
-function r(e) {
-  let t = s.useRef([]);
-  s.useEffect(() => {
-    if (null != e && e.state !== l.GuildTemplateStates.RESOLVING) !t.current.includes(e.code) && (t.current.push(e.code), a.default.track(i.AnalyticEvents.CREATE_GUILD_VIEWED, {
+function u(e) {
+  let t = a.useRef([]);
+  a.useEffect(() => {
+    if (null != e && e.state !== n.GuildTemplateStates.RESOLVING) !t.current.includes(e.code) && (t.current.push(e.code), l.default.track(r.AnalyticEvents.CREATE_GUILD_VIEWED, {
       guild_template_code: e.code,
       guild_template_name: e.name,
       guild_template_description: e.description,

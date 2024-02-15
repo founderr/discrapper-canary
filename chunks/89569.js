@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   useProductDetailsLinkableRoute: function() {
-    return C
+    return p
   },
   useProductDetailsDeepLinking: function() {
     return g
@@ -18,7 +18,7 @@ var l = a("884691"),
 let d = "".concat("#").concat("itemSkuId", "="),
   f = new RegExp("^".concat(d, "(\\d+)$")),
   m = [u.Routes.COLLECTIBLES_SHOP, u.Routes.COLLECTIBLES_SHOP_FULLSCREEN],
-  C = e => {
+  p = e => {
     let t = (0, s.useLocation)();
     l.useEffect(() => {
       if (null != e && m.includes(t.pathname)) return window.location.replace("".concat(d).concat(e.skuId)), () => {
@@ -26,7 +26,7 @@ let d = "".concat("#").concat("itemSkuId", "="),
       }
     }, [])
   },
-  p = e => {
+  C = e => {
     let {
       categories: t,
       productSkuId: a,
@@ -64,12 +64,12 @@ let d = "".concat("#").concat("itemSkuId", "="),
       isFetchingCategories: a,
       isLayer: c,
       initialItemCardRef: d
-    } = e, m = l.useRef(null), C = (0, s.useLocation)(), g = C.pathname === u.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : C.pathname === u.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
+    } = e, m = l.useRef(null), p = (0, s.useLocation)(), g = p.pathname === u.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : p.pathname === u.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
       analyticsLocations: E
     } = (0, i.default)(g);
     l.useEffect(() => {
       if (c) return;
-      let e = f.exec(C.hash);
+      let e = f.exec(p.hash);
       if (null != e) {
         let t = e[1];
         m.current = t
@@ -82,7 +82,7 @@ let d = "".concat("#").concat("itemSkuId", "="),
       if (c && null != h && (e = h), !c && null != m.current && (e = m.current), null != e) {
         let a = [],
           l = setTimeout(() => {
-            let l = p({
+            let l = C({
               categories: t,
               productSkuId: e,
               analyticsLocations: E,

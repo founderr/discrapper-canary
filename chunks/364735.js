@@ -16,7 +16,7 @@ var a, n, i = t("37983"),
   m = t("745279"),
   g = t("159885"),
   f = t("782340"),
-  b = t("29419");
+  y = t("29419");
 (a = class extends l.PureComponent {
   get typeString() {
     let {
@@ -57,7 +57,7 @@ var a, n, i = t("37983"),
       descriptionClassName: r
     } = this.props;
     return (0, i.jsx)(c.Text, {
-      className: s(b.description, r),
+      className: s(y.description, r),
       variant: "text-md/semibold",
       children: this.getLabel(e)
     })
@@ -84,21 +84,21 @@ var a, n, i = t("37983"),
         type: this.typeString
       }), (0, i.jsxs)(h.default, {
         direction: h.default.Direction.VERTICAL,
-        className: b.descriptionWrapper,
+        className: y.descriptionWrapper,
         children: [(0, i.jsxs)(h.default, {
           align: h.default.Align.CENTER,
           children: [this.renderDescription(), e ? (0, i.jsx)("div", {
-            className: b.defaultIndicator,
+            className: y.defaultIndicator,
             children: f.default.Messages.DEFAULT
           }) : null, a ? (0, i.jsx)("div", {
-            className: b.premiumIndicator,
+            className: y.premiumIndicator,
             children: f.default.Messages.PAYMENT_SOURCE_SUBSCRIPTION
           }) : null, r.invalid ? (0, i.jsx)("div", {
-            className: b.invalidIndicator,
+            className: y.invalidIndicator,
             children: f.default.Messages.PAYMENT_SOURCE_INVALID
           }) : null]
         }), t && null != n ? (0, i.jsx)("div", {
-          className: b.subText,
+          className: y.subText,
           children: n
         }) : null]
       })]

@@ -21,8 +21,8 @@ var s = a("414456"),
       size: a = d.MAX_CONTENT_WIDTH,
       className: s,
       style: m,
-      children: C
-    } = e, p = (0, n.default)([o.default], () => o.default.saturation);
+      children: p
+    } = e, C = (0, n.default)([o.default], () => o.default.saturation);
     return (0, l.jsx)("div", {
       className: r(f.banner, s),
       style: (() => {
@@ -31,12 +31,12 @@ var s = a("414456"),
           size: a,
           format: "jpg"
         });
-        if (1 === p) return {
+        if (1 === C) return {
           ...m,
           backgroundImage: "url(".concat(e, ")"),
           backgroundSize: "cover"
         };
-        let l = (0, c.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - p);
+        let l = (0, c.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - C);
         return {
           ...m,
           backgroundImage: "linear-gradient(".concat(l, ", ").concat(l, "), url(").concat(e, ")"),
@@ -44,6 +44,6 @@ var s = a("414456"),
           backgroundSize: "cover"
         }
       })(),
-      children: C
+      children: p
     })
   }

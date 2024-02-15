@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildInfoCard: function() {
-    return _
+    return I
   },
   default: function() {
-    return I
+    return _
   }
 });
 var s = n("37983");
@@ -53,7 +53,7 @@ function E(e) {
   })
 }
 
-function _(e) {
+function I(e) {
   var t;
   let {
     invite: n
@@ -101,7 +101,7 @@ function _(e) {
   })
 }
 
-function I(e) {
+function _(e) {
   let {
     invite: t,
     channel: n,

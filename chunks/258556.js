@@ -15,8 +15,8 @@ var l = a("37983"),
   d = a("151426"),
   f = a("551042"),
   m = a("77078"),
-  C = a("939488"),
-  p = a("304580"),
+  p = a("939488"),
+  C = a("304580"),
   g = a("841098"),
   E = a("812204"),
   h = a("685665"),
@@ -37,8 +37,8 @@ var l = a("37983"),
   R = a("216719"),
   P = a("702953"),
   B = a("235898"),
-  F = a("296304"),
-  D = a("334820"),
+  D = a("296304"),
+  F = a("334820"),
   M = a("89569"),
   w = a("419513"),
   H = a("434393"),
@@ -74,10 +74,10 @@ function et(e) {
     className: o,
     isPremiumUser: d,
     initialItemCardRef: f,
-    isGiftEasterEggEnabled: C,
-    setIsGiftEasterEggEnabled: p,
+    isGiftEasterEggEnabled: p,
+    setIsGiftEasterEggEnabled: C,
     showEasterEggToggle: g
-  } = e, E = s.useRef(10 + 70 * Math.random()), h = (0, D.usePurchasedProductsSort)(r.products), b = (0, i.groupBy)(h, "type"), T = (0, u.default)([R.default], () => R.default.initialProductSkuId), {
+  } = e, E = s.useRef(10 + 70 * Math.random()), h = (0, F.usePurchasedProductsSort)(r.products), b = (0, i.groupBy)(h, "type"), T = (0, u.default)([R.default], () => R.default.initialProductSkuId), {
     tallerCardsEnabled: x
   } = (0, P.useCollectiblesShopTallerCardsExperiment)({
     location: "CollectiblesShop"
@@ -98,7 +98,7 @@ function et(e) {
         isPremiumUser: d,
         category: r,
         product: e,
-        isGiftEasterEggEnabled: C
+        isGiftEasterEggEnabled: p
       }, e.skuId))
     })]
   });
@@ -106,9 +106,9 @@ function et(e) {
     className: Q.categoryWrapper,
     children: [g && (0, l.jsx)(m.Clickable, {
       className: n(Q.hiddenWumpus, {
-        [Q.hiddenWumpusEnabled]: C
+        [Q.hiddenWumpusEnabled]: p
       }),
-      onClick: () => p(!0),
+      onClick: () => C(!0),
       style: {
         left: "".concat(E.current, "%")
       },
@@ -133,11 +133,11 @@ var ea = function(e) {
     analyticsLocations: o
   } = (0, h.default)([...r, E.default.COLLECTIBLES_SHOP]), L = (0, u.default)([v.default], () => v.default.getLayers().includes(X.Layers.COLLECTIBLES_SHOP)), S = (0, f.useHasAnyModalOpen)(), {
     onClose: j
-  } = (0, z.useCollectiblesShopRouting)(), D = (0, u.default)([I.default], () => I.default.getCurrentUser()), w = k.default.canUseCollectibles(D), {
+  } = (0, z.useCollectiblesShopRouting)(), F = (0, u.default)([I.default], () => I.default.getCurrentUser()), w = k.default.canUseCollectibles(F), {
     categories: H,
     isFetchingCategories: W,
     error: G
-  } = (0, B.default)(), K = (0, F.usePurchasedCategoriesSort)(H), {
+  } = (0, B.default)(), K = (0, D.usePurchasedCategoriesSort)(H), {
     tallerCardsEnabled: ea
   } = (0, P.useCollectiblesShopTallerCardsExperiment)({
     location: "CollectiblesShop"
@@ -168,7 +168,7 @@ var ea = function(e) {
       forceTrack: !0
     })
   }, []), s.useEffect(() => {
-    !t && (0, C.setHomeLink)(X.Routes.COLLECTIBLES_SHOP)
+    !t && (0, p.setHomeLink)(X.Routes.COLLECTIBLES_SHOP)
   }, [t]), s.useEffect(() => () => {
     (0, A.setCollectiblesCategoryItemsViewed)({
       categories: [...H.values()],
@@ -199,7 +199,7 @@ var ea = function(e) {
         })]
       }), t && (0, l.jsx)("div", {
         className: Q.closeWrapper,
-        children: (0, l.jsx)(p.default, {
+        children: (0, l.jsx)(C.default, {
           className: Q.close,
           closeAction: L ? A.closeCollectiblesShop : j,
           keybind: "ESC"

@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   Section: function() {
-    return n
+    return a
   },
   NONE_ITEM: function() {
     return p
@@ -13,7 +13,7 @@ r.r(t), r.d(t, {
     return S
   }
 }), r("222007"), r("808653"), r("424973");
-var n, a, u = r("884691"),
+var a, n, u = r("884691"),
   i = r("917351"),
   s = r("65597"),
   l = r("853987"),
@@ -22,7 +22,7 @@ var n, a, u = r("884691"),
   d = r("697218"),
   f = r("719923"),
   m = r("782340");
-(a = n || (n = {})).PURCHASE = "purchase", a.PREMIUM_PURCHASE = "premium_purchase", a.PREVIEW = "preview", a.PREMIUM_PREVIEW = "premium_preview";
+(n = a || (a = {})).PURCHASE = "purchase", n.PREMIUM_PURCHASE = "premium_purchase", n.PREVIEW = "preview", n.PREMIUM_PREVIEW = "premium_preview";
 let p = {
     id: "None"
   },
@@ -33,19 +33,19 @@ var S = () => {
   let e = (0, s.default)([d.default], () => d.default.getCurrentUser()),
     t = f.default.canUseCollectibles(e),
     r = (0, s.default)([o.default], () => o.default.purchases),
-    [n, a] = (0, s.useStateFromStoresArray)([l.default], () => [l.default.categories, l.default.products]);
+    [a, n] = (0, s.useStateFromStoresArray)([l.default], () => [l.default.categories, l.default.products]);
   return (0, u.useMemo)(() => {
-    let e = (0, i.uniqBy)([...(0, c.getAvatarDecorationsFromPurchases)(r), ...(0, c.getAvatarDecorationsFromCategories)(n)], "id"),
-      u = e.reduce((e, n) => {
-        let u = r.get(n.skuId),
+    let e = (0, i.uniqBy)([...(0, c.getAvatarDecorationsFromPurchases)(r), ...(0, c.getAvatarDecorationsFromCategories)(a)], "id"),
+      u = e.reduce((e, a) => {
+        let u = r.get(a.skuId),
           i = (0, c.isPremiumCollectiblesPurchase)(u);
-        if (i && 0 === e.premium_purchase.length && (e.premium_purchase = e.premium_preview, e.premium_preview = []), i) return e.premium_purchase.push(n), e;
-        if (null != u) return e.purchase.push(n), e;
-        if (!t && (0, c.isPremiumCollectiblesProduct)(a.get(n.skuId))) {
+        if (i && 0 === e.premium_purchase.length && (e.premium_purchase = e.premium_preview, e.premium_preview = []), i) return e.premium_purchase.push(a), e;
+        if (null != u) return e.purchase.push(a), e;
+        if (!t && (0, c.isPremiumCollectiblesProduct)(n.get(a.skuId))) {
           let t = e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview;
-          return t.push(n), e
+          return t.push(a), e
         }
-        return e.preview.push(n), e
+        return e.preview.push(a), e
       }, {
         purchase: [],
         premium_purchase: [],
@@ -73,5 +73,5 @@ var S = () => {
       } = e;
       return t.length > 0
     })
-  }, [n, a, r, t])
+  }, [a, n, r, t])
 }

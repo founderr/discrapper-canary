@@ -19,8 +19,8 @@ var n = t("414456"),
   m = t("162771"),
   g = t("36694"),
   f = t("945330"),
-  b = t("465305"),
-  y = t("606762"),
+  y = t("465305"),
+  b = t("606762"),
   x = t("854231"),
   k = t("699412");
 
@@ -54,8 +54,8 @@ function C() {
     g = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(t)),
     f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(n)),
     C = (0, c.default)(t, !0),
-    S = null != t ? (0, y.getChannelPermissionSpecMap)(t, !1, !0) : null,
-    j = null != n ? b.default.getGuildPermissionSpecMap(n) : null,
+    S = null != t ? (0, b.getChannelPermissionSpecMap)(t, !1, !0) : null,
+    j = null != n ? y.default.getGuildPermissionSpecMap(n) : null,
     T = Object.values(null != S ? S : {}).map(e => {
       let {
         title: r,

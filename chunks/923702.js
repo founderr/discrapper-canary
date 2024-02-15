@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var r = n("37983"),
-  o = n("884691"),
-  a = n("516555"),
+  a = n("884691"),
+  o = n("516555"),
   l = n("172858"),
   s = function(e) {
     let {
@@ -14,8 +14,8 @@ var r = n("37983"),
       confettiCanvas: n,
       sprites: s,
       colors: i
-    } = e, [c, u] = o.useState(null), d = (0, a.useConfettiCannon)(n, c), [f, C] = o.useState(!1);
-    return o.useEffect(() => {
+    } = e, [c, u] = a.useState(null), d = (0, o.useConfettiCannon)(n, c), [f, C] = a.useState(!1);
+    return a.useEffect(() => {
       let e = Array(10).fill(0);
       return null != t && d.isReady && !f && (e = e.map((n, r) => setTimeout(() => {
         var n;
@@ -51,7 +51,7 @@ var r = n("37983"),
       }, 100 * r))), () => {
         for (let t of e) clearTimeout(t)
       }
-    }, [d, t, f]), (0, r.jsx)(a.SpriteCanvas, {
+    }, [d, t, f]), (0, r.jsx)(o.SpriteCanvas, {
       ref: u,
       sprites: null != s ? s : l.COMMON_CONFETTI_SPRITES,
       colors: null != i ? i : l.COMMON_CONFETTI_COLORS,

@@ -30,7 +30,7 @@ var a = n("37983"),
     let {
       guildId: n,
       inviteCode: N
-    } = e, [R, O] = s.useState(T.WaveStates.INITIAL), v = (0, l.useStateFromStores)([h.default], () => h.default.get(n)), L = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(n)), M = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(n)), {
+    } = e, [R, v] = s.useState(T.WaveStates.INITIAL), O = (0, l.useStateFromStores)([h.default], () => h.default.get(n)), L = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(n)), M = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(n)), {
       hasFetchedRequestToJoinGuilds: P,
       guildPreviewDisabled: D
     } = (0, l.useStateFromStoresObject)([C.default], () => ({
@@ -43,7 +43,7 @@ var a = n("37983"),
       !P && f.default.fetchRequestToJoinGuilds()
     }, [P]);
     let y = s.useCallback(e => {
-        O(t => Math.max(t, e))
+        v(t => Math.max(t, e))
       }, []),
       x = (e, t) => () => {
         (0, i.openModal)(n => (0, a.jsx)(i.ConfirmModal, {
@@ -67,10 +67,10 @@ var a = n("37983"),
       }, G = x(g.default.Messages.LEAVE_SERVER_BODY.format({
         name: null == M ? void 0 : M.toString()
       }), () => {
-        O(Math.max(R, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(n), (0, r.transitionTo)(p.Routes.ME)
-      }), j = (null == v ? void 0 : null === (t = v.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
-        id: v.guild.id,
-        splash: v.guild.splash
+        v(Math.max(R, T.WaveStates.FILLING)), f.default.removeGuildJoinRequest(n), (0, r.transitionTo)(p.Routes.ME)
+      }), j = (null == O ? void 0 : null === (t = O.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
+        id: O.guild.id,
+        splash: O.guild.splash
       }) : (0, d.getArtForPath)();
     return (0, a.jsx)("div", {
       className: A.page,

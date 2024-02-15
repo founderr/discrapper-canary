@@ -1,16 +1,16 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return T
+    return p
   }
 });
-var a = s("446674"),
-  n = s("913144"),
-  l = s("599110"),
-  i = s("773336"),
-  r = s("49111");
-let u = {
-    desktopType: i.isPlatformEmbedded ? r.DesktopNotificationTypes.ALL : r.DesktopNotificationTypes.NEVER,
+var s = n("446674"),
+  a = n("913144"),
+  i = n("599110"),
+  l = n("773336"),
+  r = n("49111");
+let o = {
+    desktopType: l.isPlatformEmbedded ? r.DesktopNotificationTypes.ALL : r.DesktopNotificationTypes.NEVER,
     disableAllSounds: !1,
     disabledSounds: [],
     ttsType: r.TTSNotificationTypes.NEVER,
@@ -18,86 +18,86 @@ let u = {
     taskbarFlash: !0,
     notifyMessagesInSelectedChannel: !1
   },
-  d = u;
+  u = o;
 
-function o(e, t) {
-  !__OVERLAY__ && l.default.track(e, t)
+function d(e, t) {
+  !__OVERLAY__ && i.default.track(e, t)
 }
 
 function c(e) {
   let {
     desktopType: t
   } = e;
-  d.desktopType = t, o(r.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
+  u.desktopType = t, d(r.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
     notifications_enabled: t === r.DesktopNotificationTypes.ALL
   })
 }
-class E extends a.default.DeviceSettingsStore {
+class f extends s.default.DeviceSettingsStore {
   initialize(e) {
-    d = {
-      ...u,
+    u = {
+      ...o,
       ...e
     }
   }
   getUserAgnosticState() {
-    return d
+    return u
   }
   getDesktopType() {
-    return d.desktopType
+    return u.desktopType
   }
   getTTSType() {
-    return d.ttsType
+    return u.ttsType
   }
   getDisabledSounds() {
-    return d.disabledSounds
+    return u.disabledSounds
   }
   getDisableAllSounds() {
-    return d.disableAllSounds
+    return u.disableAllSounds
   }
   getDisableUnreadBadge() {
-    return d.disableUnreadBadge
+    return u.disableUnreadBadge
   }
   getNotifyMessagesInSelectedChannel() {
-    return d.notifyMessagesInSelectedChannel
+    return u.notifyMessagesInSelectedChannel
   }
   get taskbarFlash() {
-    return d.taskbarFlash
+    return u.taskbarFlash
   }
   isSoundDisabled(e) {
-    return d.disableAllSounds || -1 !== d.disabledSounds.indexOf(e)
+    return u.disableAllSounds || -1 !== u.disabledSounds.indexOf(e)
   }
 }
-E.displayName = "NotificationSettingsStore", E.persistKey = "notifications", E.migrations = [e => {
+f.displayName = "NotificationSettingsStore", f.persistKey = "notifications", f.migrations = [e => {
   let t = {
     ...e
   };
-  return t.disabledSounds = t.disabledSounds || [], t.disableUnreadBadge = t.disableUnreadBadge || !1, t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash, t.ttsType = t.ttsType || r.TTSNotificationTypes.NEVER, null == t.desktopType && (t.desktopType = i.isPlatformEmbedded ? r.DesktopNotificationTypes.ALL : r.DesktopNotificationTypes.NEVER), t
+  return t.disabledSounds = t.disabledSounds || [], t.disableUnreadBadge = t.disableUnreadBadge || !1, t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash, t.ttsType = t.ttsType || r.TTSNotificationTypes.NEVER, null == t.desktopType && (t.desktopType = l.isPlatformEmbedded ? r.DesktopNotificationTypes.ALL : r.DesktopNotificationTypes.NEVER), t
 }];
-var T = new E(n.default, {
+var p = new f(a.default, {
   NOTIFICATIONS_SET_DESKTOP_TYPE: c,
   NOTIFICATIONS_SET_TTS_TYPE: function(e) {
     let {
       ttsType: t
     } = e;
-    d.ttsType = t
+    u.ttsType = t
   },
   NOTIFICATIONS_SET_DISABLED_SOUNDS: function(e) {
     let {
       sounds: t
     } = e;
-    d.disabledSounds = t
+    u.disabledSounds = t
   },
   NOTIFICATIONS_TOGGLE_ALL_DISABLED: function() {
-    d.disableAllSounds = !d.disableAllSounds
+    u.disableAllSounds = !u.disableAllSounds
   },
   NOTIFICATIONS_SET_PERMISSION_STATE: function(e) {
     let {
       enabled: t,
-      source: s
+      source: n
     } = e;
-    o(r.AnalyticEvents.ENABLE_NOTIFICATIONS, {
+    d(r.AnalyticEvents.ENABLE_NOTIFICATIONS, {
       enabled: t === r.NotificationPermissionTypes.ENABLED,
-      source: s
+      source: n
     }), t === r.NotificationPermissionTypes.BLOCKED ? c({
       desktopType: r.DesktopNotificationTypes.NEVER
     }) : t === r.NotificationPermissionTypes.ENABLED && c({
@@ -108,18 +108,18 @@ var T = new E(n.default, {
     let {
       disableUnreadBadge: t
     } = e;
-    d.disableUnreadBadge = t
+    u.disableUnreadBadge = t
   },
   NOTIFICATIONS_SET_TASKBAR_FLASH: function(e) {
     let {
       taskbarFlash: t
     } = e;
-    d.taskbarFlash = t
+    u.taskbarFlash = t
   },
   NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL: function(e) {
     let {
       notify: t
     } = e;
-    d.notifyMessagesInSelectedChannel = t
+    u.notifyMessagesInSelectedChannel = t
   }
 })

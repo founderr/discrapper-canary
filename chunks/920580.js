@@ -16,8 +16,8 @@ var s = a("414456"),
   d = a("216422"),
   f = a("719923"),
   m = a("491232"),
-  C = a("791309"),
-  p = a("49111"),
+  p = a("791309"),
+  C = a("49111"),
   g = a("782340"),
   E = a("193527");
 
@@ -27,24 +27,24 @@ function h(e) {
     className: a,
     disableTooltipPointerEvents: s,
     alwaysWhiteText: h = !0
-  } = e, b = (0, n.default)([u.default], () => u.default.getCurrentUser()), T = (0, n.default)([c.default], () => (0, i.isThemeDark)(c.default.theme)), x = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  } = e, b = (0, n.default)([u.default], () => u.default.getCurrentUser()), T = (0, n.default)([c.default], () => (0, i.isThemeDark)(c.default.theme)), x = (0, m.extractPriceByPurchaseTypes)(t, C.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == x) return null;
   if (x.amount <= 0) return (0, l.jsx)("div", {
     className: r(E.priceTagsContainer, a),
-    children: (0, l.jsx)(C.default, {
+    children: (0, l.jsx)(p.default, {
       alwaysWhiteText: h,
       price: x
     })
   });
-  let L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+  let L = (0, m.extractPriceByPurchaseTypes)(t, C.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
     S = !f.default.canUseCollectibles(b);
   return (0, l.jsxs)("div", {
     className: r(E.priceTagsContainer, a),
-    children: [(0, l.jsx)(C.default, {
+    children: [(0, l.jsx)(p.default, {
       alwaysWhiteText: h,
       price: x,
       className: S ? void 0 : E.strikedPrice
-    }), null != L && (0, l.jsx)(C.default, {
+    }), null != L && (0, l.jsx)(p.default, {
       price: L,
       alwaysWhiteText: h,
       renderPrice: S ? e => g.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
