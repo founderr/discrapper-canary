@@ -39,9 +39,9 @@ var n, l = i("627445"),
   F = i("49111"),
   Y = i("782340");
 let w = {},
-  G = {};
+  B = {};
 
-function B(e) {
+function G(e) {
   var t;
   let i = (null == e ? void 0 : e.activity) != null ? !(0, M.default)(null == e ? void 0 : e.activity) : void 0,
     n = (null == e ? void 0 : e.activity) != null ? (0, b.default)(null == e ? void 0 : e.activity) : void 0,
@@ -71,9 +71,9 @@ async function H(e) {
       isPremiumActivity: E,
       isFreePeriod: I,
       releasePhase: T
-    } = B(o),
+    } = G(o),
     C = await (0, _.default)();
-  G[i] = e => {
+  B[i] = e => {
     var t, a, r;
     w[i] = e, S.default.track(F.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
       channel_id: l.id,
@@ -126,7 +126,7 @@ async function k(e) {
       isPremiumActivity: f,
       isFreePeriod: E,
       releasePhase: I
-    } = B(c),
+    } = G(c),
     T = await (0, _.default)();
   S.default.track(F.AnalyticEvents.ACTIVITY_SESSION_LEFT, {
     channel_id: u.id,
@@ -154,7 +154,7 @@ async function k(e) {
     activity_user_session_id: a.activityUserSessionId,
     raw_thermal_state: T,
     duration_ms: r
-  }), delete G[l], delete w[l]
+  }), delete B[l], delete w[l]
 }
 
 function J(e) {
@@ -172,12 +172,12 @@ function J(e) {
     } = l,
     E = (0, m.default)(l),
     C = null == f && (null == c ? void 0 : c.isVocal()) === !0;
-  null != E && !C && (null === (t = G[_]) || void 0 === t || t.call(G, {
+  null != E && !C && (null === (t = B[_]) || void 0 === t || t.call(B, {
     activitySessionId: E,
     activityUserSessionId: (0, u.v4)(),
     instanceId: l.activity_id,
     mediaSessionIds: null != f ? [f] : []
-  }), delete G[_])
+  }), delete B[_])
 }
 
 function x(e) {
@@ -194,13 +194,13 @@ function x(e) {
       r = (0, m.default)(e);
     if (null != n && null != t && null != r && null != l) {
       let e = w[n],
-        i = G[n];
+        i = B[n];
       a(null == e || null == i, "an active session and awaiting session both exist"), null == i || i({
         activitySessionId: r,
         activityUserSessionId: (0, u.v4)(),
         instanceId: l,
         mediaSessionIds: [t]
-      }), delete G[n]
+      }), delete B[n]
     }
   }
 }
@@ -290,7 +290,7 @@ n = class extends s.default {
       let s = p.default.getSelfEmbeddedActivityForChannel(a);
       if ((null == s ? void 0 : s.applicationId) === u) return;
       let f = await o.default.fetchApplication(u),
-        _ = (0, L.getIsActivitiesEnabledForCurrentPlatform)();
+        _ = (0, L.getIsActivitiesEnabledForCurrentPlatform)(d);
       if (!_) {
         this.showLaunchErrorModal(Y.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
         return

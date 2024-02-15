@@ -25,7 +25,7 @@ function d(e) {
     SelectedChannelStore: A,
     VoiceStateStore: T,
     PermissionStore: C
-  } = e, v = (0, l.getIsActivitiesEnabledForCurrentPlatform)();
+  } = e, v = f.getChannel(s), S = (0, l.getIsActivitiesEnabledForCurrentPlatform)(v);
   if (null == t) return !1;
   if (c) return (0, a.default)({
     userId: t.id,
@@ -33,7 +33,7 @@ function d(e) {
     channelId: s,
     currentUser: o,
     application: d,
-    isActivitiesEnabledForCurrentPlatform: v,
+    isActivitiesEnabledForCurrentPlatform: S,
     ChannelStore: f,
     VoiceStateStore: T,
     PermissionStore: C,

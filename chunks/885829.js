@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   maybeJoinEmbeddedActivity: function() {
-    return T
+    return C
   }
 });
 var n = i("404118"),
@@ -16,91 +16,93 @@ var n = i("404118"),
   f = i("800762"),
   _ = i("191225"),
   E = i("706508"),
-  I = i("501260"),
-  A = i("782340");
-async function T(e) {
+  I = i("126939"),
+  A = i("501260"),
+  T = i("782340");
+async function C(e) {
   var t;
   let {
     channelId: i,
-    applicationId: T,
-    instanceId: C,
-    inputApplication: v,
-    analyticsLocations: S,
-    embeddedActivitiesManager: N
-  } = e, y = _.default.getEmbeddedActivitiesForChannel(i), h = y.find(e => e.applicationId === T && (null == C || e.instanceId === C)), p = v;
-  if (null == p) {
-    let e = await l.default.fetchApplication(T);
-    p = r.default.createFromServer(e)
+    applicationId: C,
+    instanceId: v,
+    inputApplication: S,
+    analyticsLocations: N,
+    embeddedActivitiesManager: y
+  } = e, h = _.default.getEmbeddedActivitiesForChannel(i), p = h.find(e => e.applicationId === C && (null == v || e.instanceId === v)), D = S;
+  if (null == D) {
+    let e = await l.default.fetchApplication(C);
+    D = r.default.createFromServer(e)
   }
-  if (null == h || null == p) return;
-  let D = c.default.getCurrentUser(),
-    O = (0, I.default)({
-      userId: null == D ? void 0 : D.id,
-      application: p,
+  if (null == p || null == D) return;
+  let O = c.default.getCurrentUser(),
+    g = d.default.getChannel(i),
+    L = (0, A.default)({
+      userId: null == O ? void 0 : O.id,
+      application: D,
       channelId: i,
-      currentUser: D,
-      isActivitiesEnabledForCurrentPlatform: !0,
+      currentUser: O,
+      isActivitiesEnabledForCurrentPlatform: (0, I.getIsActivitiesEnabledForCurrentPlatform)(g),
       ChannelStore: d.default,
       VoiceStateStore: f.default,
       PermissionStore: o.default,
       GuildStore: s.default
     }),
-    g = _.default.getSelfEmbeddedActivityForChannel(i),
-    L = null == g ? void 0 : g.applicationId,
-    m = null != L && null !== (t = a.default.getApplication(L)) && void 0 !== t ? t : void 0;
+    m = _.default.getSelfEmbeddedActivityForChannel(i),
+    P = null == m ? void 0 : m.applicationId,
+    M = null != P && null !== (t = a.default.getApplication(P)) && void 0 !== t ? t : void 0;
   ! function(e) {
     let {
       embeddedActivityJoinability: t,
       handleCanJoin: i
     } = e;
     switch (t) {
-      case I.EmbeddedActivityJoinability.CAN_JOIN:
+      case A.EmbeddedActivityJoinability.CAN_JOIN:
         null == i || i();
         break;
-      case I.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+      case A.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
         (0, u.showActivitiesInvalidPermissionsAlert)();
         break;
-      case I.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+      case A.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
         n.default.show({
-          title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: A.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+          title: T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: T.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
           hideActionSheet: !1
         });
         break;
-      case I.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
+      case A.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
         n.default.show({
-          title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: A.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS,
+          title: T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: T.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS,
           hideActionSheet: !1
         });
         break;
-      case I.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
+      case A.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
         n.default.show({
-          title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE,
+          title: T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE,
           hideActionSheet: !1
         });
         break;
-      case I.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
-      case I.EmbeddedActivityJoinability.CHANNEL_FULL:
-      case I.EmbeddedActivityJoinability.NO_CHANNEL:
-      case I.EmbeddedActivityJoinability.NO_USER:
+      case A.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
+      case A.EmbeddedActivityJoinability.CHANNEL_FULL:
+      case A.EmbeddedActivityJoinability.NO_CHANNEL:
+      case A.EmbeddedActivityJoinability.NO_USER:
         n.default.show({
-          title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: A.default.Messages.ACTIVITIES_GENERIC_LAUNCH_FAILURE_DIALOG_BODY,
+          title: T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: T.default.Messages.ACTIVITIES_GENERIC_LAUNCH_FAILURE_DIALOG_BODY,
           hideActionSheet: !1
         })
     }
   }({
-    embeddedActivityJoinability: O,
+    embeddedActivityJoinability: L,
     handleCanJoin: async function e() {
-      null != h && await (0, E.default)({
-        applicationId: h.applicationId,
-        currentEmbeddedApplication: m,
+      null != p && await (0, E.default)({
+        applicationId: p.applicationId,
+        currentEmbeddedApplication: M,
         activityChannelId: i,
         locationObject: {},
-        embeddedActivitiesManager: N,
-        analyticsLocations: S
+        embeddedActivitiesManager: y,
+        analyticsLocations: N
       })
     }
   })

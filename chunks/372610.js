@@ -11,7 +11,7 @@ var a = n("884691"),
 let r = e => null != e && "" !== e;
 
 function o(e, t) {
-  let n = (0, s.useIsActivitiesEnabledForCurrentPlatform)(),
+  let n = (0, s.useIsActivitiesEnabledForCurrentPlatform)(null != t ? t : void 0),
     o = (0, i.default)(t),
     u = r(e) || o;
   a.useEffect(() => {

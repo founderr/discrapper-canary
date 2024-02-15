@@ -13,10 +13,10 @@ function l() {
   return !n.isMobile && !n.isTablet && !0
 }
 
-function a() {
+function a(e) {
   return l()
 }
 
-function u() {
+function u(e) {
   return l()
 }
