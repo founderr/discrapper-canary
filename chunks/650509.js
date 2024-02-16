@@ -13,7 +13,7 @@ n.r(e), n.d(e, {
     return L
   },
   useActiveSubscriptionListingForApplication: function() {
-    return O
+    return F
   },
   useUnseenEndedApplicationSubscriptionEntitlements: function() {
     return h
@@ -114,9 +114,9 @@ let N = function(t, e) {
     }, [t, e.includeSoftDeleted])
   },
   M = [],
-  F = [];
+  O = [];
 
-function O(t, e) {
+function F(t, e) {
   let n = (0, l.useStateFromStores)([E.default], () => E.default.getSubscriptions()),
     {
       subscriptionGroupListing: u,
@@ -127,7 +127,7 @@ function O(t, e) {
       return {
         subscriptionGroupListing: null != t ? p.default.getSubscriptionGroupListingForApplication(t) : null,
         guildEntitlements: null != t && null != e ? p.default.getApplicationEntitlementsForGuild(t, e) : M,
-        userEntitlements: null != t && null !== (u = null === (n = f.default.getForApplication(t)) || void 0 === n ? void 0 : n.values()) && void 0 !== u ? u : F
+        userEntitlements: null != t && null !== (u = null === (n = f.default.getForApplication(t)) || void 0 === n ? void 0 : n.values()) && void 0 !== u ? u : O
       }
     }, [t, e]),
     o = r.useMemo(() => [...i, ...a], [i, a]),
@@ -183,7 +183,7 @@ function h(t) {
         u = t.map(t => t.applicationId);
       return e.filter(t => !u.includes(t.applicationId))
     }),
-    s = (0, l.useStateFromStores)([_.default], () => _.default.getSKUs()),
+    s = (0, l.useStateFromStoresObject)([_.default], () => _.default.getSKUs()),
     c = r.useMemo(() => o.filter(t => {
       let e = s[t.skuId];
       return null != e && e.available
@@ -243,7 +243,7 @@ function G(t) {
     loggedIn: i
   }), {
     subscriptionGroupListing: s
-  } = O(e, u);
+  } = F(e, u);
   return {
     applicationSubscriptionListingsShown: null != e && null != n && (null == u || l) && (!i || a) && r && null != s && (0, C.hasPayableSubscriptionPlan)(s)
   }
