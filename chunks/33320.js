@@ -7,62 +7,64 @@ s.r(t), s.d(t, {
     return N
   }
 }), s("222007");
-var n, o, a = s("37983"),
+var n, a, o = s("37983"),
   r = s("884691"),
   i = s("77078"),
   l = s("271201"),
   u = s("330460"),
-  d = s("763332"),
-  c = s("417365");
-(o = n || (n = {}))[o.INTRO = 0] = "INTRO", o[o.SAFETY_TIPS = 1] = "SAFETY_TIPS", o[o.TAKE_ACTION = 2] = "TAKE_ACTION";
+  c = s("763332"),
+  d = s("417365");
+(a = n || (n = {}))[a.INTRO = 0] = "INTRO", a[a.SAFETY_TIPS = 1] = "SAFETY_TIPS", a[a.TAKE_ACTION = 2] = "TAKE_ACTION";
 var N = e => {
   let {
     warningId: t,
     senderId: s,
-    modalProps: n
-  } = e, [o, N] = r.useState(0), [I, E] = r.useState(!1);
+    modalProps: n,
+    channelId: a
+  } = e, [N, I] = r.useState(0), [T, E] = r.useState(!1);
 
-  function T(e) {
-    N(e)
+  function R(e) {
+    I(e)
   }
 
   function A() {
     n.onClose()
   }
-  return (0, a.jsx)(i.ModalRoot, {
+  return (0, o.jsx)(i.ModalRoot, {
     transitionState: n.transitionState,
-    children: (0, a.jsx)("div", {
-      className: c.container,
-      children: (0, a.jsxs)(i.Slides, {
+    children: (0, o.jsx)("div", {
+      className: d.container,
+      children: (0, o.jsxs)(i.Slides, {
         width: 440,
-        activeSlide: o,
+        activeSlide: N,
         centered: !1,
         overflow: "visible",
         contentDisplay: "flex",
-        children: [(0, a.jsx)(i.Slide, {
+        children: [(0, o.jsx)(i.Slide, {
           id: 0,
-          children: (0, a.jsx)(l.default, {
+          children: (0, o.jsx)(l.default, {
             warningId: t,
             senderId: s,
-            onNavigate: T,
+            onNavigate: R,
             onClose: A
           })
-        }), (0, a.jsx)(i.Slide, {
+        }), (0, o.jsx)(i.Slide, {
           id: 1,
-          children: (0, a.jsx)(u.default, {
+          children: (0, o.jsx)(u.default, {
             warningId: t,
             senderId: s,
-            onNavigate: T,
+            onNavigate: R,
             onClose: A
           })
-        }), (0, a.jsx)(i.Slide, {
+        }), (0, o.jsx)(i.Slide, {
           id: 2,
-          children: (0, a.jsx)(d.default, {
+          children: (0, o.jsx)(c.default, {
             warningId: t,
             senderId: s,
-            onNavigate: T,
+            channelId: a,
+            onNavigate: R,
             onClose: A,
-            hasReported: I,
+            hasReported: T,
             onReport: function() {
               E(!0)
             }

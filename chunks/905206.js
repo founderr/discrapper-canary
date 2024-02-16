@@ -95,7 +95,7 @@ function g(e, t) {
   return {
     poll: a,
     canTapAnswers: i && (!A || E || g),
-    canRemoveVote: !c && C && i && !u,
+    canRemoveVote: C && i && !u,
     canShowVoteCounts: g,
     canSubmitVote: !c && p && !C && i,
     expirationLabel: r,
@@ -238,7 +238,7 @@ function M(e, t, n) {
     canRemoveVote: !0
   }, () => ({
     label: p.default.Messages.POLL_REMOVE_VOTE,
-    presentation: "textButton",
+    presentation: "secondaryButton",
     enabled: !0,
     type: "remove"
   })).otherwise(() => ({
@@ -271,7 +271,17 @@ function M(e, t, n) {
     presentation: "textButton",
     enabled: !0,
     type: "showVotes"
-  }, q = h.allow_multiselect, $ = q ? p.default.Messages.POLL_SELECT_MULTIPLE_ANSWERS : p.default.Messages.POLL_SELECT_ONE_ANSWER;
+  }, q = h.allow_multiselect, $ = (0, s.match)({
+    isInteractive: F,
+    isExpired: k,
+    canSelectMultipleAnswers: q
+  }).with({
+    isInteractive: !1
+  }, () => void 0).with({
+    isExpired: !0
+  }, () => void 0).with({
+    canSelectMultipleAnswers: !0
+  }, () => p.default.Messages.POLL_SELECT_MULTIPLE_ANSWERS).otherwise(() => p.default.Messages.POLL_SELECT_ONE_ANSWER);
   return {
     question: h.question,
     promptLabel: $,
