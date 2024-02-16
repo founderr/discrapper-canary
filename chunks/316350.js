@@ -53,6 +53,7 @@ function c(e) {
           s("ACTION_BUTTON");
           break;
         case "remove":
+        case "showVotes":
           s("POLL_ANSWERS");
           break;
         default:

@@ -55,12 +55,16 @@ function R(e) {
     channelId: s,
     messageId: l
   } = O(n);
-  (0, h.updatePollState)(s, l, () => ({
-    channelId: s,
-    selectedAnswerIds: new Set,
-    submitting: !1,
-    editing: t
-  }))
+  (0, h.updatePollState)(s, l, e => {
+    var n;
+    return {
+      channelId: s,
+      selectedAnswerIds: new Set,
+      submitting: !1,
+      editing: t,
+      showResults: null !== (n = null == e ? void 0 : e.showResults) && void 0 !== n && n
+    }
+  })
 }
 
 function L(e) {
@@ -154,12 +158,16 @@ async function D(e) {
     channelId: t,
     messageId: n
   } = e;
-  return (0, h.updatePollState)(t, n, () => ({
-    channelId: t,
-    selectedAnswerIds: new Set,
-    submitting: !1,
-    editing: !1
-  })), await P({
+  return (0, h.updatePollState)(t, n, e => {
+    var n;
+    return {
+      channelId: t,
+      selectedAnswerIds: new Set,
+      submitting: !1,
+      editing: !1,
+      showResults: null !== (n = null == e ? void 0 : e.showResults) && void 0 !== n && n
+    }
+  }), await P({
     channelId: t,
     messageId: n
   })
@@ -188,6 +196,27 @@ async function x(e) {
         channelId: t,
         messageId: n,
         isEditing: !1
+      });
+      break;
+    case "showVotes":
+      ! function(e) {
+        let {
+          channelId: t,
+          messageId: n
+        } = e;
+        (0, h.updatePollState)(t, n, e => {
+          var n, s;
+          return {
+            channelId: t,
+            selectedAnswerIds: new Set,
+            submitting: null !== (n = null == e ? void 0 : e.submitting) && void 0 !== n && n,
+            editing: null !== (s = null == e ? void 0 : e.submitting) && void 0 !== s && s,
+            showResults: null == e || !e.showResults
+          }
+        })
+      }({
+        channelId: t,
+        messageId: n
       });
       break;
     default:
@@ -230,7 +259,8 @@ var y = {
         channelId: o,
         selectedAnswerIds: new Set([i]),
         submitting: !1,
-        editing: !1
+        editing: !1,
+        showResults: !1
       };
       let t = {
           ...e
