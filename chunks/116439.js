@@ -31,10 +31,10 @@ function f(e) {
       join: S
     } = e,
     h = (0, i.useAppContext)(),
-    C = r ? () => d() : () => s(!e.enabled, h);
+    _ = r ? () => d() : () => s(!e.enabled, h);
   return (0, a.jsx)(a.Fragment, {
     children: f({
-      onClick: C,
+      onClick: _,
       active: n,
       disabled: !n && (!c || E),
       iconComponent: S || n ? u.default : o.default,
@@ -56,10 +56,10 @@ function E(e) {
     className: E,
     channelLimitReached: S,
     channelLimit: h,
-    centerButton: C = !1,
-    onPopoutClick: _,
+    centerButton: _ = !1,
+    onPopoutClick: C,
     ...p
-  } = e, m = C ? d.CenterControlButton : d.default;
+  } = e, m = _ ? d.CenterControlButton : d.default;
   return (0, a.jsx)(f, {
     enabled: t,
     join: n,
@@ -82,7 +82,7 @@ function E(e) {
         className: s(E, {
           [c.fauxDisabled]: n
         }),
-        onPopoutClick: _
+        onPopoutClick: C
       })
     }
   })

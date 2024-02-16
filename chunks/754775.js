@@ -21,18 +21,18 @@ var a = n("37983"),
       src: n,
       backgroundSrc: S,
       userId: h,
-      pulseSpeakingIndicator: C = !1,
-      speaking: _ = !1,
+      pulseSpeakingIndicator: _ = !1,
+      speaking: C = !1,
       ...p
-    } = e, m = null != S ? S : n, g = (0, l.default)(m, s.default.unsafe_rawColors.PRIMARY_800.css), T = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, v = (0, c.default)(null != h ? h : ""), A = null == v ? void 0 : v.getBannerURL({
+    } = e, m = null != S ? S : n, T = (0, l.default)(m, s.default.unsafe_rawColors.PRIMARY_800.css), g = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, A = (0, c.default)(null != h ? h : ""), v = null == A ? void 0 : A.getBannerURL({
       size: 1024,
       canAnimate: f.GifAutoPlay.getSetting()
     });
     if (r.useEffect(() => {
-        null != h && T && (0, d.default)(h, void 0, {
+        null != h && g && (0, d.default)(h, void 0, {
           dispatchWait: !0
         })
-      }, [T, h]), null == n) return null;
+      }, [g, h]), null == n) return null;
     let I = (0, a.jsx)(i.Avatar, {
         className: E.avatarWrapper,
         src: n,
@@ -40,13 +40,13 @@ var a = n("37983"),
       }),
       R = {
         ...t,
-        backgroundColor: g
+        backgroundColor: T
       };
-    return null != A && _ && T && (R.backgroundImage = "url(".concat(A, ")"), R.backgroundSize = "cover"), (0, a.jsx)("div", {
+    return null != v && C && g && (R.backgroundImage = "url(".concat(v, ")"), R.backgroundSize = "cover"), (0, a.jsx)("div", {
       style: R,
       className: E.background,
-      children: C ? (0, a.jsx)(o.default, {
-        shouldAnimate: _,
+      children: _ ? (0, a.jsx)(o.default, {
+        shouldAnimate: C,
         children: I
       }) : I
     })

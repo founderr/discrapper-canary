@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return T
   }
 }), n("222007");
 var a = n("37983"),
@@ -17,8 +17,8 @@ var a = n("37983"),
   E = n("144747"),
   S = n("983782"),
   h = n("659500"),
-  C = n("452453"),
-  _ = n("49111");
+  _ = n("452453"),
+  C = n("49111");
 let p = e => {
   let {
     children: t,
@@ -28,7 +28,7 @@ let p = e => {
     position: f,
     align: E,
     impressionName: h,
-    impressionProperties: C
+    impressionProperties: _
   } = e, p = r.useRef(null);
   r.useEffect(() => {
     var e, t;
@@ -54,18 +54,18 @@ let p = e => {
   }), (0, c.default)({
     type: i.ImpressionTypes.MENU,
     name: h,
-    properties: C
+    properties: _
   });
-  let g = (0, d.useWindowDispatch)(),
-    T = r.useCallback(() => {
-      g.dispatch(_.ComponentActions.POPOUT_SHOW)
-    }, [g]),
-    v = r.useCallback(() => {
-      g.dispatch(_.ComponentActions.POPOUT_HIDE)
-    }, [g]);
+  let T = (0, d.useWindowDispatch)(),
+    g = r.useCallback(() => {
+      T.dispatch(C.ComponentActions.POPOUT_SHOW)
+    }, [T]),
+    A = r.useCallback(() => {
+      T.dispatch(C.ComponentActions.POPOUT_HIDE)
+    }, [T]);
   return (0, a.jsx)(S.AppReferencePositionLayer, {
-    onMount: T,
-    onUnmount: v,
+    onMount: g,
+    onUnmount: A,
     reference: () => o,
     position: null != f ? f : "right",
     align: null != E ? E : "top",
@@ -81,7 +81,7 @@ class m extends r.PureComponent {
       renderLazy: e,
       renderWindow: t
     } = this.props;
-    if (t.addEventListener("resize", this.closeResize, !0), h.ComponentDispatch.subscribe(_.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e) {
+    if (t.addEventListener("resize", this.closeResize, !0), h.ComponentDispatch.subscribe(C.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e) {
       let t = setTimeout(() => {
         this.setState({
           render: () => (0, a.jsx)(u.MenuSpinner, {})
@@ -107,7 +107,7 @@ class m extends r.PureComponent {
     let {
       renderWindow: e
     } = this.props;
-    e.removeEventListener("resize", this.closeResize, !0), h.ComponentDispatch.unsubscribe(_.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu)
+    e.removeEventListener("resize", this.closeResize, !0), h.ComponentDispatch.unsubscribe(C.ComponentActions.CONTEXT_MENU_CLOSE, this.props.closeContextMenu)
   }
   render() {
     var e;
@@ -132,7 +132,7 @@ class m extends r.PureComponent {
           position: r
         } = e;
         return u({
-          className: C.ContextMenuClassName,
+          className: _.ContextMenuClassName,
           position: r,
           theme: s,
           onHeightUpdate: a,
@@ -161,7 +161,7 @@ class m extends r.PureComponent {
   }
 }
 
-function g() {
+function T() {
   let {
     contextMenu: e,
     version: t,

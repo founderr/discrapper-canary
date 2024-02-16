@@ -17,36 +17,36 @@ var a = n("37983"),
   E = n("697218"),
   S = n("49111"),
   h = n("686298"),
-  C = n("353927"),
-  _ = n("782340");
+  _ = n("353927"),
+  C = n("782340");
 
 function p(e, t) {
   let {
     preset: p,
     resolution: m,
-    fps: g
-  } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), T = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), v = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), A = (0, s.useStateFromStores)([c.default], () => {
+    fps: T
+  } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), g = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), A = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), v = (0, s.useStateFromStores)([c.default], () => {
     var t;
     return null === (t = c.default.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier
   }), {
     location: I
   } = (0, u.useAnalyticsContext)(), R = r.useCallback((e, r, s, u) => {
     if (e) {
-      if (null != T) {
+      if (null != g) {
         let e = {
           qualityOptions: {
             preset: h.ApplicationStreamPresets.PRESET_CUSTOM,
             resolution: r,
             frameRate: s
           },
-          context: C.MediaEngineContextTypes.STREAM
+          context: _.MediaEngineContextTypes.STREAM
         };
-        null != T.desktopSource ? e.desktopSettings = {
-          sourceId: T.desktopSource.id,
+        null != g.desktopSource ? e.desktopSettings = {
+          sourceId: g.desktopSource.id,
           sound: !0
-        } : null != T.cameraSource && (e.cameraSettings = {
-          videoDeviceGuid: T.cameraSource.videoDeviceGuid,
-          audioDeviceGuid: T.cameraSource.audioDeviceGuid
+        } : null != g.cameraSource && (e.cameraSettings = {
+          videoDeviceGuid: g.cameraSource.videoDeviceGuid,
+          audioDeviceGuid: g.cameraSource.audioDeviceGuid
         }), l.default.setGoLiveSource(e)
       }
     } else {
@@ -67,19 +67,19 @@ function p(e, t) {
         contextKey: o === S.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
       })
     }
-  }, [t, I, T]);
+  }, [t, I, g]);
   if (null == e) return null;
-  let M = p === h.ApplicationStreamPresets.PRESET_DOCUMENTS ? h.ApplicationStreamFPS.FPS_30 : g,
+  let M = p === h.ApplicationStreamPresets.PRESET_DOCUMENTS ? h.ApplicationStreamFPS.FPS_30 : T,
     O = h.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
         label: n
-      } = e, r = (0, o.default)(h.ApplicationStreamPresets.PRESET_CUSTOM, m, t, v, A);
+      } = e, r = (0, o.default)(h.ApplicationStreamPresets.PRESET_CUSTOM, m, t, A, v);
       return (0, a.jsx)(i.MenuRadioItem, {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
         label: n,
-        checked: t === g,
+        checked: t === T,
         action: () => R(r, m, t, S.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-fps-".concat(t))
     }),
@@ -87,7 +87,7 @@ function p(e, t) {
       let {
         value: t,
         label: n
-      } = e, r = (0, o.default)(h.ApplicationStreamPresets.PRESET_CUSTOM, t, M, v, A);
+      } = e, r = (0, o.default)(h.ApplicationStreamPresets.PRESET_CUSTOM, t, M, A, v);
       return (0, a.jsx)(i.MenuRadioItem, {
         group: "stream-settings-resolution",
         id: "stream-settings-resolution-".concat(t),
@@ -98,10 +98,10 @@ function p(e, t) {
     });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(i.MenuGroup, {
-      label: _.default.Messages.SCREENSHARE_FRAME_RATE,
+      label: C.default.Messages.SCREENSHARE_FRAME_RATE,
       children: O
     }), (0, a.jsx)(i.MenuGroup, {
-      label: _.default.Messages.STREAM_RESOLUTION,
+      label: C.default.Messages.STREAM_RESOLUTION,
       children: L
     })]
   })

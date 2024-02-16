@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("49111"),
   F = n("782340"),
   k = n("559571");
-let V = U.default.getEnableHardwareAcceleration(),
-  B = 44 + S.AVATAR_DECORATION_PADDING,
+let B = U.default.getEnableHardwareAcceleration(),
+  V = 44 + S.AVATAR_DECORATION_PADDING,
   H = {
     origin: {
       x: 38,
@@ -93,7 +93,7 @@ class G extends a.Component {
         return (0, l.jsx)(S.default, {
           className: k.member,
           onContextMenu: this.renderUserContextMenu,
-          shouldAnimateStatus: V,
+          shouldAnimateStatus: B,
           user: s,
           currentUser: i,
           nick: a,
@@ -247,10 +247,10 @@ class K extends a.Component {
     let {
       offsetHeight: t,
       scrollTop: n
-    } = e.getScrollerState(), l = Math.floor(t / B);
+    } = e.getScrollerState(), l = Math.floor(t / V);
     return {
       height: t,
-      rowHeight: B,
+      rowHeight: V,
       rowsVisible: l,
       y: n
     }
@@ -294,7 +294,7 @@ class K extends a.Component {
                   }),
                   paddingTop: 0,
                   sectionHeight: 40,
-                  rowHeight: B,
+                  rowHeight: V,
                   renderSection: this.renderSection,
                   renderRow: this.renderRow,
                   sections: e.map(e => e.count),
@@ -439,7 +439,7 @@ function Z(e) {
     if (null == n) return;
     let l = parseInt(t, 10),
       [a, s] = n.getSectionRowFromIndex(l),
-      i = 0 === a && 0 === s ? B : 0;
+      i = 0 === a && 0 === s ? V : 0;
     n.scrollToIndex({
       section: a,
       row: s,

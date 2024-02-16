@@ -20,9 +20,9 @@ var a = n("37983"),
         onBackClicked: f
       } = e,
       _ = l.useRef(null),
-      h = null != n && "cancel" !== n.type,
-      E = m && (null == n ? void 0 : n.type) !== "done",
-      v = h || E;
+      E = null != n && "cancel" !== n.type,
+      h = m && (null == n ? void 0 : n.type) !== "done",
+      v = E || h;
     if (l.useEffect(() => {
         if ((null == n ? void 0 : n.type) === "submit" || (null == n ? void 0 : n.type) === "done") {
           var e;
@@ -32,12 +32,12 @@ var a = n("37983"),
     let R = i.default.Messages.DONE;
     return (null == n ? void 0 : n.type) === "submit" ? (R = i.default.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = r.Button.Colors.RED) : (null == n ? void 0 : n.type) === "next" ? R = i.default.Messages.NEXT : (null == n ? void 0 : n.type) === "cancel" && (R = i.default.Messages.CANCEL, t = r.Button.Colors.TRANSPARENT), (0, a.jsxs)(r.ModalFooter, {
       direction: s.default.Direction.HORIZONTAL,
-      children: [E && (0, a.jsx)(r.Button, {
+      children: [h && (0, a.jsx)(r.Button, {
         onClick: f,
         color: r.Button.Colors.TRANSPARENT,
         disabled: u,
         children: i.default.Messages.BACK
-      }), h && (0, a.jsx)(r.Button, {
+      }), E && (0, a.jsx)(r.Button, {
         onClick: () => {
           null != n && c(n)
         },

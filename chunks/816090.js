@@ -17,18 +17,18 @@ async function i(e, t, n, i) {
   try {
     let m, f = u ? await (0, r.getReportMenu)(e, t) : await (0, r.getUnauthenticatedReportMenu)(e, t),
       _ = [];
-    let h = e => {
+    let E = e => {
         _.push(e)
       },
-      E = e => {
+      h = e => {
         m = e, null == n || n()
       };
     (0, l.openModal)(t => (0, a.jsx)(s.default, {
       menu: f,
       reportType: e,
       modalProps: t,
-      onNavigate: h,
-      onSubmit: E,
+      onNavigate: E,
+      onSubmit: h,
       isAuthenticated: u,
       emailToken: o
     }), {

@@ -47,11 +47,11 @@ class S extends r.PureComponent {
       maxX: i,
       maxY: o,
       dockedRect: c
-    } = this.props, f = Math.round(n), E = Math.round(o - r - this._height), S = Math.round(a), h = Math.round(i - s - this._width), C = (0, u.getPlatform)(), _ = C !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+    } = this.props, f = Math.round(n), E = Math.round(o - r - this._height), S = Math.round(a), h = Math.round(i - s - this._width), _ = (0, u.getPlatform)(), C = _ !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
     if (null != c) {
       var p, m;
       return {
-        y: (null !== (p = null == c ? void 0 : c.y) && void 0 !== p ? p : 0) - _,
+        y: (null !== (p = null == c ? void 0 : c.y) && void 0 !== p ? p : 0) - C,
         x: null !== (m = null == c ? void 0 : c.x) && void 0 !== m ? m : 0
       }
     }
@@ -208,7 +208,7 @@ var h = r.memo(e => {
     dockedRect: u,
     pictureInPictureComponents: o,
     appContext: h,
-    roundCorners: C
+    roundCorners: _
   } = e;
   return (0, a.jsx)("div", {
     className: c.pictureInPicture,
@@ -221,9 +221,9 @@ var h = r.memo(e => {
             ...e.props
           }, "pipWindow-".concat(e.id))
         }),
-        _ = e.length > 1 ? c.noBoxShadow : {};
+        C = e.length > 1 ? c.noBoxShadow : {};
       return (0, a.jsx)(S, {
-        className: i(c.pictureInPictureWindowOverflow, f.elevationHigh, _),
+        className: i(c.pictureInPictureWindowOverflow, f.elevationHigh, C),
         appContext: h,
         position: t.position,
         id: t.id,
@@ -236,7 +236,7 @@ var h = r.memo(e => {
         edgeOffsetBottom: E.bottom,
         edgeOffsetLeft: E.left,
         edgeOffsetRight: E.top,
-        roundCorners: C,
+        roundCorners: _,
         children: e
       })
     })()

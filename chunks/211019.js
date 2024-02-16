@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return C
   }
 });
 var a = n("37983");
@@ -18,14 +18,14 @@ var r = n("414456"),
   E = n("607391"),
   S = n("782340"),
   h = n("100469");
-let C = n("588281");
+let _ = n("588281");
 
-function _(e) {
+function C(e) {
   let {
     participant: t,
     width: n,
     noArt: r = !1,
-    selected: _ = !1
+    selected: C = !1
   } = e, p = n < 195, m = (0, i.useStateFromStores)([o.default, d.default], () => o.default.getAllActiveStreams().some(e => {
     let {
       ownerId: t
@@ -38,12 +38,12 @@ function _(e) {
     }),
     children: (0, a.jsx)(E.default, {
       className: h.streamHiddenEmptyState,
-      artURL: C,
+      artURL: _,
       noArt: r,
-      selected: _,
+      selected: C,
       size: (0, E.getSizeForWidth)(n),
       header: p ? null : S.default.Messages.STREAM_HIDDEN,
-      description: _ ? null : (0, a.jsxs)("div", {
+      description: C ? null : (0, a.jsxs)("div", {
         className: s(h.streamHiddenCTA, {
           [h.largePaddingTop]: !p
         }),

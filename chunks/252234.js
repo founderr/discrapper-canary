@@ -52,7 +52,7 @@ function L(e) {
     location: "7152d0_2"
   }, {
     autoTrackExposure: !1
-  }), V = F && !k, B = (0, E.default)({
+  }), B = F && !k, V = (0, E.default)({
     channelId: t.id
   }), H = !P && n, G = a.useCallback(e => {
     "focus" !== e.type && U()
@@ -110,14 +110,14 @@ function L(e) {
             disabled: P,
             "aria-label": O,
             label: H ? void 0 : O,
-            isActivityActive: B || b,
+            isActivityActive: V || b,
             className: j.controlButton,
             onClick: () => {
               Z(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(R.ContentDismissActionType.UNKNOWN)
             },
             onMouseEnter: G,
             onMouseLeave: w
-          }), V ? (0, l.jsx)(I.FreeActivityIndicatorDot, {
+          }), B ? (0, l.jsx)(I.FreeActivityIndicatorDot, {
             top: 4,
             right: 10,
             size: 12,

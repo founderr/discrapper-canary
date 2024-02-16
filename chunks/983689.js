@@ -18,12 +18,12 @@ var a = n("884691"),
   S = n("49111"),
   h = n("894282");
 
-function C(e) {
+function _(e) {
   let t = e.ctrlKey || e.altKey || e.metaKey;
   e.key === h.KeyboardEventKey.Tab && !t && !__OVERLAY__ && !(0, s.hasAnyModalOpen)() && d.default.maybeShowKeyboardNavigationExplainerModal()
 }
 
-function _() {
+function C() {
   (0, u.disableKeyboardMode)()
 }
 var p = function(e, t) {
@@ -55,7 +55,7 @@ var p = function(e, t) {
       null != i && !c.default.hasExactKeybind(i) && !l.default.hasBind(null !== (a = E.codeToKey(i[0])) && void 0 !== a ? a : "") && ((0, u.enableKeyboardMode)(), r && !t && e.preventDefault())
     }(e, t)
   }, [t]);
-  return (0, a.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", _), e.addEventListener("keydown", C)) : e.addEventListener("keydown", s), () => {
-    n ? (e.removeEventListener("mousedown", _), e.removeEventListener("keydown", C)) : e.removeEventListener("keydown", s)
+  return (0, a.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", C), e.addEventListener("keydown", _)) : e.addEventListener("keydown", s), () => {
+    n ? (e.removeEventListener("mousedown", C), e.removeEventListener("keydown", _)) : e.removeEventListener("keydown", s)
   }), [e, s, n]), n
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return _
   }
 }), n("222007");
 var a = n("446674"),
@@ -67,7 +67,7 @@ class h extends a.default.Store {
   }
 }
 h.displayName = "QuestsStore";
-var C = new h(r.default, {
+var _ = new h(r.default, {
   LOGOUT: function() {
     s = !1, i = new Map, l = 0, u = new Set
   },

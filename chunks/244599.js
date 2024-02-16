@@ -24,7 +24,7 @@ function m(e) {
         is_localized: m
       }
     }
-  } = e, [f, _] = l.useState(!1), h = l.useRef(d.default.reactParserFor(d.default.defaultRules));
+  } = e, [f, _] = l.useState(!1), E = l.useRef(d.default.reactParserFor(d.default.defaultRules));
   return m ? (0, a.jsxs)("div", {
     className: c.container,
     children: [(0, a.jsx)(i.Heading, {
@@ -35,7 +35,7 @@ function m(e) {
     }), (0, a.jsx)(i.Text, {
       variant: "text-sm/normal",
       className: c.bodyText,
-      children: h.current(n)
+      children: E.current(n)
     }), (0, a.jsx)("div", {
       className: c.smsInfoContainer,
       children: (0, a.jsxs)("div", {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return A
   }
 });
 var a = n("37983"),
@@ -17,47 +17,47 @@ var a = n("37983"),
   h = n("93427"),
   C = n("700097"),
   p = n("95045"),
-  m = n("574073"),
-  E = n("909917"),
+  E = n("574073"),
+  m = n("909917"),
   g = n("380986"),
   S = n("49111"),
   _ = n("782340");
-let A = s.memo(function(e) {
-  var t, n, A;
+let T = s.memo(function(e) {
+  var t, n, T;
   let {
-    baseMessage: T,
+    baseMessage: A,
     referencedMessage: M,
     channel: N,
     compact: I = !1,
     referencedUsernameProfile: v,
     referencedAvatarProfile: L,
-    setPopout: x
-  } = e, R = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, m.useNullableMessageAuthor)(R), O = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = T.editedTimestamp) && void 0 !== t ? t : T.timestamp).valueOf()), D = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == N ? void 0 : N.guild_id) && void 0 !== n ? n : "", (null !== (A = T.editedTimestamp) && void 0 !== A ? A : T.timestamp).valueOf()), j = s.useMemo(() => {
-    if (null == R) return null;
-    if (R.type === S.MessageTypes.USER_JOIN) return (0, i.astToString)(C.default.getSystemMessageUserJoin(R.id).astFormat({
-      username: null != y ? y.nick : R.author.username,
+    setPopout: R
+  } = e, x = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, E.useNullableMessageAuthor)(x), O = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = A.editedTimestamp) && void 0 !== t ? t : A.timestamp).valueOf()), D = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == N ? void 0 : N.guild_id) && void 0 !== n ? n : "", (null !== (T = A.editedTimestamp) && void 0 !== T ? T : A.timestamp).valueOf()), P = s.useMemo(() => {
+    if (null == x) return null;
+    if (x.type === S.MessageTypes.USER_JOIN) return (0, i.astToString)(C.default.getSystemMessageUserJoin(x.id).astFormat({
+      username: null != y ? y.nick : x.author.username,
       usernameHook: e => e
     }));
-    if (R.type === S.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE) return (0, i.astToString)((0, u.getRoleSubscriptionPurchaseSystemMessageAstFormattedContent)({
-      username: null != y ? y.nick : R.author.username,
+    if (x.type === S.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE) return (0, i.astToString)((0, u.getRoleSubscriptionPurchaseSystemMessageAstFormattedContent)({
+      username: null != y ? y.nick : x.author.username,
       guildId: null == N ? void 0 : N.guild_id,
-      roleSubscriptionData: R.roleSubscriptionData
+      roleSubscriptionData: x.roleSubscriptionData
     }));
-    if (R.type === S.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.astToString)((0, r.getApplicationSubscriptionSystemMessageASTContent)({
-      application: null == R ? void 0 : R.application,
+    if (x.type === S.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.astToString)((0, r.getApplicationSubscriptionSystemMessageASTContent)({
+      application: null == x ? void 0 : x.application,
       username: null == y ? void 0 : y.nick
     }));
-    else if (R.type === S.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) return (0, i.astToString)((0, d.getPrivateChannelIntegrationAddedSystemMessageASTContent)({
-      application: null == R ? void 0 : R.application,
+    else if (x.type === S.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) return (0, i.astToString)((0, d.getPrivateChannelIntegrationAddedSystemMessageASTContent)({
+      application: null == x ? void 0 : x.application,
       username: null == y ? void 0 : y.nick
     }));
-    else if (R.type === S.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED) return (0, i.astToString)((0, d.getPrivateChannelIntegrationRemovedSystemMessageASTContent)({
-      application: null == R ? void 0 : R.application,
+    else if (x.type === S.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED) return (0, i.astToString)((0, d.getPrivateChannelIntegrationRemovedSystemMessageASTContent)({
+      application: null == x ? void 0 : x.application,
       username: null == y ? void 0 : y.nick
     }));
-    else if (R.type === S.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT) return "" !== R.content ? R.content : _.default.Messages.DEADCHAT_PROMPT_1;
-    if (null != R.content && "" !== R.content) {
-      let e = R.isFirstMessageInForumPost(N) ? {
+    else if (x.type === S.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT) return "" !== x.content ? x.content : _.default.Messages.DEADCHAT_PROMPT_1;
+    if (null != x.content && "" !== x.content) {
+      let e = x.isFirstMessageInForumPost(N) ? {
         formatInline: !0,
         noStyleAndInteraction: !0,
         allowHeading: !0,
@@ -69,25 +69,25 @@ let A = s.memo(function(e) {
         allowList: O.showListsAndHeaders || D.showListsAndHeaders,
         allowLinks: O.showMaskedLinks || D.showMaskedLinks
       };
-      return (0, p.default)(R, e).content
+      return (0, p.default)(x, e).content
     }
     return null
-  }, [R, y, N, O, D]), P = (0, l.useStateFromStores)([f.default], () => null != R && f.default.isBlocked(R.author.id), [R]), b = (0, g.useContextMenuUser)(null == R ? void 0 : R.author.id, N.id), H = (0, g.useClickReply)(T, R, P), F = (0, g.useClickReferencedMessageAuthorUsername)(R, N, v, x), U = (0, g.useClickReferencedMessageAuthorAvatar)(L, x), k = s.useCallback(() => x({
+  }, [x, y, N, O, D]), j = (0, l.useStateFromStores)([f.default], () => null != x && f.default.isBlocked(x.author.id), [x]), b = (0, g.useContextMenuUser)(null == x ? void 0 : x.author.id, N.id), H = (0, g.useClickReply)(A, x, j), F = (0, g.useClickReferencedMessageAuthorUsername)(x, N, v, R), U = (0, g.useClickReferencedMessageAuthorAvatar)(L, R), k = s.useCallback(() => R({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
-  }), [x]), G = (0, m.useNullableMessageAuthor)(T);
+  }), [R]), w = (0, E.useNullableMessageAuthor)(A);
   return (0, a.jsx)(h.default, {
     repliedAuthor: y,
-    baseMessage: T,
+    baseMessage: A,
     channel: N,
-    baseAuthor: G,
+    baseAuthor: w,
     referencedMessage: M,
-    content: j,
+    content: P,
     compact: I,
-    isReplyAuthorBlocked: P,
+    isReplyAuthorBlocked: j,
     showAvatarPopout: L,
     showUsernamePopout: v,
-    renderPopout: E.default,
+    renderPopout: m.default,
     onClickAvatar: U,
     onClickUsername: F,
     onClickReply: H,
@@ -96,7 +96,7 @@ let A = s.memo(function(e) {
   })
 });
 
-function T(e, t, n, s, l) {
+function A(e, t, n, s, l) {
   let {
     message: i,
     channel: r,
@@ -104,7 +104,7 @@ function T(e, t, n, s, l) {
   } = e, {
     referencedUsernameProfile: u,
     referencedAvatarProfile: d
-  } = n, c = i.type === S.MessageTypes.REPLY && null != s && (0, a.jsx)(A, {
+  } = n, c = i.type === S.MessageTypes.REPLY && null != s && (0, a.jsx)(T, {
     baseMessage: i,
     replyReference: s,
     referencedMessage: l,

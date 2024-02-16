@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return g
   }
 }), n("222007");
 var a = n("37983"),
@@ -17,8 +17,8 @@ var a = n("37983"),
   E = n("599110"),
   S = n("286235"),
   h = n("50885"),
-  C = n("49111"),
-  _ = n("782340"),
+  _ = n("49111"),
+  C = n("782340"),
   p = n("966585");
 
 function m() {
@@ -39,10 +39,10 @@ function m() {
     onClick: d,
     submitting: e,
     className: p.clearOverrideButton,
-    children: _.default.Messages.CLEAR_BUILD_OVERRIDE
+    children: C.default.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
-class g extends r.PureComponent {
+class T extends r.PureComponent {
   componentDidCatch(e, t) {
     this.triggerSoftCrash(e, t)
   }
@@ -55,7 +55,7 @@ class g extends r.PureComponent {
     let a = S.default.captureCrash(e, {
       extra: t
     });
-    E.default.track(C.AnalyticEvents.APP_CRASHED, {
+    E.default.track(_.AnalyticEvents.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
@@ -85,9 +85,9 @@ class g extends r.PureComponent {
     if (null !== this.state.error) {
       let e = (0, a.jsxs)("div", {
           children: [(0, a.jsx)("p", {
-            children: _.default.Messages.ERRORS_UNEXPECTED_CRASH
+            children: C.default.Messages.ERRORS_UNEXPECTED_CRASH
           }), (0, a.jsx)("p", {
-            children: _.default.Messages.ERRORS_ACTION_TO_TAKE
+            children: C.default.Messages.ERRORS_ACTION_TO_TAKE
           })]
         }),
         n = (0, a.jsxs)("div", {
@@ -95,11 +95,11 @@ class g extends r.PureComponent {
           children: [(0, a.jsx)(i.Button, {
             size: i.ButtonSizes.LARGE,
             onClick: this._handleSubmitReport,
-            children: _.default.Messages.ERRORS_RELOAD
+            children: C.default.Messages.ERRORS_RELOAD
           }), (0, a.jsx)(m, {})]
         });
       return (0, a.jsx)(f.default, {
-        title: _.default.Messages.UNSUPPORTED_BROWSER_TITLE,
+        title: C.default.Messages.UNSUPPORTED_BROWSER_TITLE,
         note: null != t ? t() : e,
         action: n,
         className: p.errorPage
@@ -114,4 +114,4 @@ class g extends r.PureComponent {
     }, this.discordErrorsSet = !1
   }
 }
-var T = g
+var g = T

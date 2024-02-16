@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return h
   },
   getGameTileAssetUrl: function() {
-    return C
+    return _
   },
   getGameLogotypeAssetUrl: function() {
-    return _
+    return C
   },
   getQuestForTargetedContent: function() {
     return p
@@ -40,10 +40,10 @@ n.r(t), n.d(t, {
     return m
   },
   calculatePercentComplete: function() {
-    return g
+    return T
   },
   getContextualEntrypointHeading: function() {
-    return T
+    return g
   }
 }), n("222007");
 var a = n("588025"),
@@ -128,8 +128,8 @@ let c = e => "".concat(s).concat(e).concat("/reward.png"),
   E = e => "".concat(s).concat(e).concat("/hero.webm"),
   S = e => "".concat(s).concat(e).concat("/quests_bar_hero.png"),
   h = e => "".concat(s).concat(e).concat("/quests_bar_hero.webm"),
-  C = e => "".concat(s).concat(e).concat("/game_tile.png"),
-  _ = (e, t) => "".concat(s).concat(e, "/").concat(t).concat("/game_logotype.png");
+  _ = e => "".concat(s).concat(e).concat("/game_tile.png"),
+  C = (e, t) => "".concat(s).concat(e, "/").concat(t).concat("/game_logotype.png");
 
 function p(e, t) {
   for (let [n, a] of e)
@@ -151,7 +151,7 @@ let m = e => {
   }
 };
 
-function g(e) {
+function T(e) {
   if (null == e.userStatus) return 0;
   let {
     streamProgressSeconds: t,
@@ -164,11 +164,11 @@ function g(e) {
   return Math.min(t / 60 / a, 1)
 }
 
-function T(e) {
+function g(e) {
   var t, n;
   if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return r.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
   if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null) {
-    let t = g(e);
+    let t = T(e);
     return t >= .75 ? r.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE : t >= .45 && t <= .55 ? r.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY : t > 0 ? r.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED : r.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED
   }
   return r.default.Messages.QUESTS_TITLE.format({

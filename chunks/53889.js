@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   TutorialIndicator: function() {
-    return A
+    return T
   },
   default: function() {
-    return T
+    return A
   }
 }), n("222007");
 var a = n("37983"),
@@ -20,12 +20,12 @@ var a = n("37983"),
   h = n("715315"),
   C = n("778588"),
   p = n("471671"),
-  m = n("808072"),
-  E = n("807061"),
+  E = n("808072"),
+  m = n("807061"),
   g = n("826431"),
   S = n("612246"),
   _ = n("587335");
-class A extends s.PureComponent {
+class T extends s.PureComponent {
   componentDidMount() {
     this.updateCache()
   }
@@ -84,7 +84,7 @@ class A extends s.PureComponent {
       autoInvert: t,
       focused: n,
       origin: s
-    } = this.props, l = (0, E.getTutorialPopoutAttributes)(e);
+    } = this.props, l = (0, m.getTutorialPopoutAttributes)(e);
     if (null == l) return null;
     let {
       media: r,
@@ -92,7 +92,7 @@ class A extends s.PureComponent {
       isLongText: u,
       highPriority: d,
       spacing: c,
-      arrowAlignment: h = m.ArrowAlignments.TOP,
+      arrowAlignment: h = E.ArrowAlignments.TOP,
       popoutPosition: C
     } = l, {
       offsetX: p,
@@ -100,7 +100,7 @@ class A extends s.PureComponent {
     } = this.state, S = {
       left: null != p ? s.x + p : void 0,
       top: null != g ? s.y + g : void 0
-    }, A = e => {
+    }, T = e => {
       let t = n && !e;
       return !0 !== d ? null : (0, a.jsxs)("div", {
         children: [(0, a.jsx)("div", {
@@ -115,7 +115,7 @@ class A extends s.PureComponent {
           })
         })]
       })
-    }, T = e => {
+    }, A = e => {
       let t = n && !e;
       return {
         [_.animating]: t,
@@ -123,7 +123,7 @@ class A extends s.PureComponent {
         [_.highPriority]: d
       }
     }, M = this.getTutorialPopoutText();
-    return (0, a.jsx)(m.default, {
+    return (0, a.jsx)(E.default, {
       position: C,
       renderMedia: r,
       textAlign: o,
@@ -144,11 +144,11 @@ class A extends s.PureComponent {
           className: _.indicator,
           style: S,
           children: (0, a.jsxs)("div", {
-            className: i(_.animationContainer, T(n)),
-            children: [A(n), (0, a.jsx)("div", {
-              className: i(_.innerCircle, T(n))
+            className: i(_.animationContainer, A(n)),
+            children: [T(n), (0, a.jsx)("div", {
+              className: i(_.innerCircle, A(n))
             }), (0, a.jsx)("div", {
-              className: i(_.outerCircle, T(n))
+              className: i(_.outerCircle, A(n))
             })]
           })
         })
@@ -164,7 +164,7 @@ class A extends s.PureComponent {
     }
   }
 }
-var T = function() {
+var A = function() {
   let {
     indicators: e,
     tutorialData: t,
@@ -179,7 +179,7 @@ var T = function() {
   return s ? (0, a.jsx)(a.Fragment, {
     children: Object.entries(e).map(e => {
       let [s, l] = e, i = t[s];
-      return o(null != i, "Missing tutorial definition for ".concat(s)), (0, a.jsx)(A, {
+      return o(null != i, "Missing tutorial definition for ".concat(s)), (0, a.jsx)(T, {
         tutorialId: s,
         tutorialDefinition: i,
         focused: n,

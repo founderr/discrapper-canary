@@ -17,13 +17,13 @@ var a = n("37983"),
   h = n("208021"),
   C = n("713135"),
   p = n("401642"),
-  m = n("982108"),
-  E = n("27618"),
+  E = n("982108"),
+  m = n("27618"),
   g = n("697218"),
   S = n("587974"),
   _ = n("315102"),
-  A = n("841397"),
-  T = n("49111"),
+  T = n("841397"),
+  A = n("49111"),
   M = n("680894"),
   N = n("590456"),
   I = n("782340"),
@@ -68,7 +68,7 @@ let L = e => {
             userId: t,
             section: N.UserProfileSections.MUTUAL_GUILDS,
             analyticsLocation: {
-              section: T.AnalyticsSections.DIRECT_MESSAGE
+              section: A.AnalyticsSections.DIRECT_MESSAGE
             }
           })
         },
@@ -82,7 +82,7 @@ let L = e => {
       })]
     })
   },
-  x = e => {
+  R = e => {
     var t;
     let {
       relationshipType: n,
@@ -92,7 +92,7 @@ let L = e => {
       o.default.addRelationship({
         userId: s,
         context: {
-          location: T.AnalyticsPages.DM_CHANNEL
+          location: A.AnalyticsPages.DM_CHANNEL
         }
       })
     }, d = (0, a.jsx)(r.Button, {
@@ -103,15 +103,15 @@ let L = e => {
         o.default.addRelationship({
           userId: s,
           context: {
-            location: T.AnalyticsPages.DM_CHANNEL
+            location: A.AnalyticsPages.DM_CHANNEL
           },
-          type: T.RelationshipTypes.BLOCKED
+          type: A.RelationshipTypes.BLOCKED
         })
       },
       children: I.default.Messages.BLOCK
     });
     switch (n) {
-      case T.RelationshipTypes.NONE:
+      case A.RelationshipTypes.NONE:
         return (0, a.jsxs)(a.Fragment, {
           children: [!i && !l && (0, a.jsx)(r.Button, {
             className: v.action,
@@ -120,33 +120,33 @@ let L = e => {
             children: I.default.Messages.ADD_FRIEND
           }), d]
         });
-      case T.RelationshipTypes.FRIEND:
+      case A.RelationshipTypes.FRIEND:
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(r.Button, {
             className: v.action,
             size: r.Button.Sizes.TINY,
             onClick: () => {
               o.default.removeFriend(s, {
-                location: T.AnalyticsPages.DM_CHANNEL
+                location: A.AnalyticsPages.DM_CHANNEL
               })
             },
             color: r.Button.Colors.PRIMARY,
             children: I.default.Messages.REMOVE_FRIEND
           }), d]
         });
-      case T.RelationshipTypes.BLOCKED:
+      case A.RelationshipTypes.BLOCKED:
         return (0, a.jsx)(r.Button, {
           className: v.action,
           size: r.Button.Sizes.TINY,
           onClick: () => {
             o.default.unblockUser(s, {
-              location: T.AnalyticsPages.DM_CHANNEL
+              location: A.AnalyticsPages.DM_CHANNEL
             })
           },
           color: r.Button.Colors.PRIMARY,
           children: I.default.Messages.UNBLOCK
         });
-      case T.RelationshipTypes.PENDING_INCOMING:
+      case A.RelationshipTypes.PENDING_INCOMING:
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(r.Text, {
             className: v.action,
@@ -164,13 +164,13 @@ let L = e => {
             color: r.Button.Colors.PRIMARY,
             onClick: () => {
               o.default.cancelFriendRequest(s, {
-                location: T.AnalyticsPages.DM_CHANNEL
+                location: A.AnalyticsPages.DM_CHANNEL
               })
             },
             children: I.default.Messages.FRIEND_REQUEST_IGNORE
           }), d]
         });
-      case T.RelationshipTypes.PENDING_OUTGOING:
+      case A.RelationshipTypes.PENDING_OUTGOING:
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(r.Button, {
             className: v.action,
@@ -183,29 +183,29 @@ let L = e => {
         return null
     }
   },
-  R = e => {
+  x = e => {
     let {
       channelId: t,
       otherUserId: n
     } = e, l = s.useCallback(() => {
       (0, r.showToast)((0, r.createToast)(I.default.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE))
     }, []), i = s.useCallback(() => {
-      h.default.closeChannelSidebar(m.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+      h.default.closeChannelSidebar(E.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
     }, []), o = s.useCallback(() => {
-      h.default.closeChannelSidebar(m.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+      h.default.closeChannelSidebar(E.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
     }, []), {
       acceptMessageRequest: u,
       rejectMessageRequest: c,
       isAcceptLoading: f,
       isRejectLoading: C,
       isOptimisticAccepted: p,
-      isOptimisticRejected: E
+      isOptimisticRejected: m
     } = (0, d.useMessageRequestActions)({
       user: g.default.getUser(n),
       onError: l,
       onAcceptSuccess: o,
       onRejectSuccess: i
-    }), S = f || C || p || E;
+    }), S = f || C || p || m;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(r.Button, {
         className: v.action,
@@ -232,7 +232,7 @@ var y = e => {
     showingBanner: s
   } = e, {
     channelId: r
-  } = (0, c.useMessageRequestSidebarState)(), o = (0, i.useStateFromStores)([u.default], () => null != r && u.default.isSpam(r), [r]), d = (0, i.useStateFromStores)([E.default], () => E.default.getRelationshipType(t), [t]), h = n.id === r;
+  } = (0, c.useMessageRequestSidebarState)(), o = (0, i.useStateFromStores)([u.default], () => null != r && u.default.isSpam(r), [r]), d = (0, i.useStateFromStores)([m.default], () => m.default.getRelationshipType(t), [t]), h = n.id === r;
   return t === M.CLYDE_AI_USER_ID ? null : o || h ? (0, a.jsxs)("div", {
     className: v.mobileContainer,
     children: [(0, a.jsx)("div", {
@@ -242,7 +242,7 @@ var y = e => {
       })
     }), (0, a.jsxs)("div", {
       className: v.mobileButtons,
-      children: [(0, a.jsx)(R, {
+      children: [(0, a.jsx)(x, {
         channelId: n.id,
         otherUserId: t
       }), (0, a.jsx)(f.default, {
@@ -258,11 +258,11 @@ var y = e => {
       })
     }), (0, a.jsxs)("div", {
       className: v.mobileButtons,
-      children: [(0, a.jsx)(x, {
+      children: [(0, a.jsx)(R, {
         relationshipType: d,
         userId: t,
         showingBanner: s
-      }), !s && (0, a.jsx)(A.default, {
+      }), !s && (0, a.jsx)(T.default, {
         otherUserId: t,
         channel: n,
         navigateAwayOnReportSuccess: !1
@@ -274,11 +274,11 @@ var y = e => {
       userId: t
     }), (0, a.jsx)("div", {
       className: v.divider
-    }), (0, a.jsx)(x, {
+    }), (0, a.jsx)(R, {
       relationshipType: d,
       userId: t,
       showingBanner: s
-    }), !s && (0, a.jsx)(A.default, {
+    }), !s && (0, a.jsx)(T.default, {
       otherUserId: t,
       channel: n
     })]

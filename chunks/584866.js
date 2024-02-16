@@ -18,21 +18,21 @@ var a = n("37983"),
     let {
       guildId: t,
       reportId: n
-    } = e, [f, _] = l.useState(!1), h = d.default.getGuild(t), E = null != h;
+    } = e, [f, _] = l.useState(!1), E = d.default.getGuild(t), h = null != E;
     l.useEffect(() => {
-      _(!E)
-    }, [E]);
+      _(!h)
+    }, [h]);
     let v = l.useCallback(() => {
       _(!0), s.default.trackWithMetadata(o.AnalyticEvents.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
         guild_id: t,
         report_id: n
       }), i.default.leaveGuild(t)
     }, [t, n]);
-    if (null == h) return null;
+    if (null == E) return null;
     let R = () => {
       (0, r.openModal)(e => (0, a.jsx)(r.ConfirmModal, {
         header: c.default.Messages.LEAVE_SERVER_TITLE.format({
-          name: h.name
+          name: E.name
         }),
         confirmText: c.default.Messages.LEAVE_SERVER,
         cancelText: c.default.Messages.CANCEL,
@@ -41,7 +41,7 @@ var a = n("37983"),
         children: (0, a.jsx)(r.Text, {
           variant: "text-md/normal",
           children: c.default.Messages.LEAVE_SERVER_BODY.format({
-            name: h.name
+            name: E.name
           })
         })
       }))
@@ -57,17 +57,17 @@ var a = n("37983"),
         children: [(0, a.jsxs)("div", {
           className: m.guildInfo,
           children: [(0, a.jsx)(u.default, {
-            guild: h,
+            guild: E,
             showBadge: !1,
             animate: !1,
             size: u.default.Sizes.SMALL,
-            "aria-label": h.name,
+            "aria-label": E.name,
             className: m.icon,
             active: !0
           }), (0, a.jsx)(r.Text, {
             className: m.guildName,
             variant: "text-sm/semibold",
-            children: h.name
+            children: E.name
           })]
         }), (0, a.jsx)(r.Button, {
           onClick: () => R(),

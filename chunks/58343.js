@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("998716"),
   F = n("834052"),
   k = n("534471"),
-  V = n("145635"),
-  B = n("277354"),
+  B = n("145635"),
+  V = n("277354"),
   H = n("100082"),
   G = n("598050"),
   W = n("977026"),
@@ -153,7 +153,7 @@ function ea(e) {
         leading: !0
       })()
     }
-  }) : (0, l.jsx)(B.default, {
+  }) : (0, l.jsx)(V.default, {
     participants: _,
     channel: n,
     hasConnectPermission: C
@@ -248,7 +248,7 @@ function es(e) {
           popoutOpen: _,
           chatOpen: T
         })
-      }), s ? (0, l.jsx)(V.default, {
+      }), s ? (0, l.jsx)(B.default, {
         channel: t,
         toggleRequestToSpeakSidebar: c,
         chatOpen: T

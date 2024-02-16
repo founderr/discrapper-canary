@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("789335"),
   F = n("274889"),
   k = n("894860"),
-  V = n("717387"),
-  B = n("861948");
+  B = n("717387"),
+  V = n("861948");
 let H = "vc-activities-".concat((0, o.v4)()),
   G = a.forwardRef(function(e, t) {
     let {
@@ -157,7 +157,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
           })]
         }), (0, l.jsx)("img", {
           className: D.freeRight,
-          src: B,
+          src: V,
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
         })]
       }) : Z ? (0, l.jsxs)(r.Link, {
@@ -178,7 +178,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
         },
         children: [(0, l.jsx)("img", {
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT,
-          src: V,
+          src: B,
           className: D.poster
         }), (0, l.jsx)("div", {
           className: D.posterDivider

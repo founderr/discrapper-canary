@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), s("222007");
 var n = s("37983"),
@@ -21,23 +21,23 @@ var n = s("37983"),
   C = s("932379"),
   R = s("921208");
 
-function f(e) {
+function _(e) {
   let {
     onNavigate: t,
     onClose: s,
-    senderId: f,
-    hasReported: _,
+    senderId: _,
+    hasReported: f,
     onReport: S
-  } = e, P = (0, u.useStateFromStores)([I.default], () => I.default.isBlocked(f)), [O, h] = o.useState(P), p = (0, N.useShouldShowHelplineLink)(), g = () => {
+  } = e, P = (0, u.useStateFromStores)([I.default], () => I.default.isBlocked(_)), [O, h] = o.useState(P), p = (0, N.useShouldShowHelplineLink)(), g = () => {
     h(!0), d.default.addRelationship({
-      userId: f,
+      userId: _,
       context: {
         location: "InappropriateConversationModal-web"
       },
       type: T.RelationshipTypes.BLOCKED
     })
   }, x = () => {
-    h(!1), d.default.unblockUser(f, {
+    h(!1), d.default.unblockUser(_, {
       location: "InappropriateConversationModal-web"
     })
   };
@@ -84,13 +84,13 @@ function f(e) {
           onClick: () => {
             S()
           },
-          disabled: _,
+          disabled: f,
           children: [(0, n.jsx)(i.FlagIcon, {
             height: 20,
             width: 20,
             color: l.tokens.colors.INTERACTIVE_ACTIVE,
             className: C.buttonIcon
-          }), _ ? A.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORTED : A.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORT]
+          }), f ? A.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORTED : A.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORT]
         }), (0, n.jsxs)(l.Button, {
           color: l.Button.Colors.PRIMARY,
           size: l.Button.Sizes.LARGE,

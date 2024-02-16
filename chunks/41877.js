@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
 var a = n("37983");
@@ -17,23 +17,23 @@ var l = n("446674"),
   m = n("93427"),
   f = n("719347"),
   _ = n("782340"),
-  h = n("767162"),
-  E = e => {
+  E = n("767162"),
+  h = e => {
     let {
       message: t
-    } = e, n = (0, s.default)(t), E = (0, l.useStateFromStores)([d.default], () => d.default.getChannel(t.channel_id)), {
+    } = e, n = (0, s.default)(t), h = (0, l.useStateFromStores)([d.default], () => d.default.getChannel(t.channel_id)), {
       content: v
     } = (0, i.default)(t, {
       hideSimpleEmbedContent: !1
     });
-    return null == E ? null : (0, a.jsxs)("div", {
-      className: h.container,
+    return null == h ? null : (0, a.jsxs)("div", {
+      className: E.container,
       children: [(0, a.jsx)(r.Heading, {
-        className: h.header,
+        className: E.header,
         variant: "heading-sm/semibold",
         children: _.default.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
       }), (0, a.jsx)(r.Scroller, {
-        className: h.messagePreviewContainer,
+        className: E.messagePreviewContainer,
         children: (0, a.jsx)(u.default, {
           childrenMessageContent: (() => {
             let e = null == v || "" === v || Array.isArray(v) && 0 === v.length;
@@ -41,7 +41,7 @@ var l = n("446674"),
               let {
                 icon: e
               } = (0, m.renderSingleLineMessage)(t, v, !1, "", {
-                iconClass: h.attachmentIcon,
+                iconClass: E.attachmentIcon,
                 iconSize: f.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
               });
               return e
@@ -54,9 +54,9 @@ var l = n("446674"),
           })(),
           childrenHeader: (0, a.jsx)(c.default, {
             message: t,
-            channel: E,
+            channel: h,
             author: n,
-            guildId: E.guild_id
+            guildId: h.guild_id
           }),
           disableInteraction: !0
         })

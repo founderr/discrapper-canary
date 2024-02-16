@@ -17,28 +17,28 @@ var a = n("884691"),
   h = n("26989"),
   C = n("88093"),
   p = n("377253"),
-  m = n("957255"),
-  E = n("306160"),
+  E = n("957255"),
+  m = n("306160"),
   g = n("659500"),
   S = n("773336"),
   _ = n("61400"),
-  A = n("913491"),
-  T = n("583022"),
+  T = n("913491"),
+  A = n("583022"),
   M = n("363396"),
   N = n("49111");
 
 function I(e) {
-  return m.default.can(N.Permissions.MANAGE_MESSAGES, e)
+  return E.default.can(N.Permissions.MANAGE_MESSAGES, e)
 }
 var v = function(e, t, n) {
   let v = a.useRef(n);
   return v.current = n, a.useCallback(n => {
-    var a, L, x, R, y;
+    var a, L, R, x, y;
     if (!v.current || n.target !== n.currentTarget) return;
     let O = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
       D = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
-      j = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
-      P = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
+      P = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
+      j = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
       b = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
       H = p.default.getMessage(t, e),
       F = c.default.getChannel(t);
@@ -50,18 +50,18 @@ var v = function(e, t, n) {
         O && (I(F) || k) && (n.preventDefault(), (0, M.deleteMessage)(F, H, n));
         break;
       case "c":
-        ((0, S.isMac)() ? P : j) && E.SUPPORTS_COPY && (n.preventDefault(), (0, E.copy)(H.content));
+        ((0, S.isMac)() ? j : P) && m.SUPPORTS_COPY && (n.preventDefault(), (0, m.copy)(H.content));
         break;
       case "e":
         if (O) {
           ;
-          if (a = U, L = F, x = H, !L.isSystemDM() && (0, _.default)(x, a)) n.preventDefault(), (0, M.editMessage)(F, H)
+          if (a = U, L = F, R = H, !L.isSystemDM() && (0, _.default)(R, a)) n.preventDefault(), (0, M.editMessage)(F, H)
         }
         break;
       case "p":
         if (O || b) {
           ;
-          if (R = F, y = H, !R.isSystemDM() && !(0, A.default)(y) && (I(R) || R.isPrivate())) n.preventDefault(), (0, M.pinMessage)(F, H, n)
+          if (x = F, y = H, !x.isSystemDM() && !(0, T.default)(y) && (I(x) || x.isPrivate())) n.preventDefault(), (0, M.pinMessage)(F, H, n)
         }
         break;
       case "+":
@@ -70,11 +70,11 @@ var v = function(e, t, n) {
             n = u.RenderReactions.getSetting(),
             {
               disableReactionCreates: a
-            } = (0, T.default)({
+            } = (0, A.default)({
               channel: e,
               canChat: t,
               renderReactions: n,
-              canAddNewReactions: t && m.default.can(N.Permissions.ADD_REACTIONS, e),
+              canAddNewReactions: t && E.default.can(N.Permissions.ADD_REACTIONS, e),
               isLurking: null != e.guild_id && l.default.isLurking(e.guild_id),
               isGuest: null != e.guild_id && h.default.isCurrentUserGuest(e.guild_id),
               isActiveChannelOrUnarchivableThread: (0, r.getIsActiveChannelOrUnarchivableThread)(e)

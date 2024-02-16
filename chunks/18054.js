@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return p
   },
   default: function() {
-    return m
+    return E
   }
 }), n("702976");
 var a = n("872717"),
@@ -70,13 +70,13 @@ function h(e) {
     defaultReactionEmoji: h,
     rtcRegion: C,
     videoQualityMode: p,
-    autoArchiveDuration: m,
-    locked: E,
+    autoArchiveDuration: E,
+    locked: m,
     invitable: g,
     availableTags: S,
     defaultSortOrder: _,
-    defaultForumLayout: A,
-    iconEmoji: T,
+    defaultForumLayout: T,
+    iconEmoji: A,
     themeColor: M
   } = e;
   s.default.dispatch({
@@ -95,13 +95,13 @@ function h(e) {
     defaultReactionEmoji: h,
     rtcRegion: C,
     videoQualityMode: p,
-    autoArchiveDuration: m,
-    locked: E,
+    autoArchiveDuration: E,
+    locked: m,
     invitable: g,
     availableTags: S,
     defaultSortOrder: _,
-    defaultForumLayout: A,
-    iconEmoji: T,
+    defaultForumLayout: T,
+    iconEmoji: A,
     themeColor: M
   })
 }
@@ -115,20 +115,20 @@ async function C(e, t) {
     userLimit: h,
     nsfw: C,
     flags: p,
-    permissionOverwrites: m,
-    rateLimitPerUser: E,
+    permissionOverwrites: E,
+    rateLimitPerUser: m,
     defaultThreadRateLimitPerUser: g,
     defaultAutoArchiveDuration: S,
     template: _,
-    defaultReactionEmoji: A,
-    rtcRegion: T,
+    defaultReactionEmoji: T,
+    rtcRegion: A,
     videoQualityMode: M,
     autoArchiveDuration: N,
     locked: I,
     invitable: v,
     availableTags: L,
-    defaultSortOrder: x,
-    defaultForumLayout: R,
+    defaultSortOrder: R,
+    defaultForumLayout: x,
     iconEmoji: y,
     themeColor: O
   } = t, D = r.default.getChannel(e);
@@ -145,20 +145,20 @@ async function C(e, t) {
       user_limit: h,
       nsfw: C,
       flags: p,
-      permission_overwrites: m,
-      rate_limit_per_user: E,
+      permission_overwrites: E,
+      rate_limit_per_user: m,
       default_thread_rate_limit_per_user: g,
       default_auto_archive_duration: S,
       template: _,
-      rtc_region: T,
+      rtc_region: A,
       video_quality_mode: M,
       auto_archive_duration: N,
       locked: I,
       invitable: v,
-      default_reaction_emoji: null != A ? {
-        emoji_id: null == A ? void 0 : A.emojiId,
-        emoji_name: null == A ? void 0 : A.emojiName
-      } : null === A ? null : void 0,
+      default_reaction_emoji: null != T ? {
+        emoji_id: null == T ? void 0 : T.emojiId,
+        emoji_name: null == T ? void 0 : T.emojiName
+      } : null === T ? null : void 0,
       available_tags: null == L ? void 0 : L.map(e => ({
         id: e.id,
         name: e.name,
@@ -166,8 +166,8 @@ async function C(e, t) {
         emoji_name: e.emojiName,
         moderated: e.moderated
       })),
-      default_sort_order: x,
-      default_forum_layout: R,
+      default_sort_order: R,
+      default_forum_layout: x,
       icon_emoji: null != y ? {
         id: y.id,
         name: y.name
@@ -198,7 +198,7 @@ function p(e) {
     null != e && !(null == t ? void 0 : t.isThread()) && l.default.checkGuildTemplateDirty(e), c()
   })
 }
-var m = {
+var E = {
   init: d,
   open: function(e, t, n) {
     d(e, t, n), (0, o.pushLayer)(u.Layers.CHANNEL_SETTINGS)

@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return _
   },
   submitReportSecondLook: function() {
-    return h
+    return E
   },
   trackCloseReportModalAnalytics: function() {
     return x
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return p
   },
   areRequiredElementsUnfilled: function() {
-    return g
+    return N
   }
 }), n("70102"), n("808653"), n("222007");
 var a = n("872717"),
@@ -53,7 +53,7 @@ async function d(e, t) {
 }
 async function u(e, t) {
   var n;
-  let l = E(e),
+  let l = h(e),
     r = await a.default.get({
       url: i.Endpoints.GET_UNAUTHENTICATED_REPORT_MENU(l),
       query: (null == t ? void 0 : t.variant) != null ? {
@@ -83,7 +83,7 @@ function c(e, t, n) {
 }
 
 function m(e, t, n, l) {
-  let r = E(t);
+  let r = h(t);
   return a.default.post({
     url: i.Endpoints.SUBMIT_UNAUTHENTICATED_REPORT_MENU(r),
     body: R(e, t, n, l)
@@ -110,7 +110,7 @@ async function _(e, t, n) {
   });
   return l.body
 }
-async function h(e) {
+async function E(e) {
   let t = await a.default.post({
     url: i.Endpoints.SUBMIT_REPORT_SECOND_LOOK,
     body: {
@@ -120,7 +120,7 @@ async function h(e) {
   return t.body
 }
 
-function E(e) {
+function h(e) {
   let t = e.name;
   if (!Object.values(s.UnauthenticatedReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
   return t
@@ -276,7 +276,7 @@ function p(e, t) {
   })
 }
 
-function g(e, t, n, a, l) {
+function N(e, t, n, a, l) {
   return e.some(e => {
     var t;
     return !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name].value) === "" || !(null == a ? void 0 : null === (t = a[e.name]) || void 0 === t ? void 0 : t.isValid))

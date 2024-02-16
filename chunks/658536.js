@@ -1,36 +1,36 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
-}), l("222007");
-var n = l("913144"),
-  a = l("689988"),
-  i = l("26989"),
-  u = l("697218"),
-  d = l("509");
-let s = null,
-  r = () => {
+}), n("222007");
+var l = n("913144"),
+  a = n("689988"),
+  i = n("26989"),
+  u = n("697218"),
+  d = n("509");
+let r = null,
+  s = () => {
     let e = i.default.getCommunicationDisabledUserMap();
     Object.keys(e).forEach(t => {
-      let l = (0, i.getGuildIdFromCommunicationDisabledUserKey)(t),
-        n = (0, i.getUserIdFromCommunicationDisabledUserKey)(t),
+      let n = (0, i.getGuildIdFromCommunicationDisabledUserKey)(t),
+        l = (0, i.getUserIdFromCommunicationDisabledUserKey)(t),
         a = e[t];
-      !(0, d.isCommunicationDisabled)(a) && o(l, n)
+      !(0, d.isCommunicationDisabled)(a) && o(n, l)
     })
   },
   o = (e, t) => {
-    var l, a, s, r, o, c;
+    var n, a, r, s, o, c;
     let f = i.default.getMember(e, t),
       E = u.default.getUser(t);
     if (null == f || null == E || (0, d.isMemberCommunicationDisabled)(f)) return;
     let C = {
       ...f,
       guildId: e,
-      nick: null !== (l = f.nick) && void 0 !== l ? l : E.username,
+      nick: null !== (n = f.nick) && void 0 !== n ? n : E.username,
       avatar: null !== (a = f.avatar) && void 0 !== a ? a : void 0,
-      premiumSince: null !== (s = f.premiumSince) && void 0 !== s ? s : void 0,
-      isPending: null !== (r = f.isPending) && void 0 !== r && r,
+      premiumSince: null !== (r = f.premiumSince) && void 0 !== r ? r : void 0,
+      isPending: null !== (s = f.isPending) && void 0 !== s && s,
       user: {
         ...E,
         email: null !== (o = E.email) && void 0 !== o ? o : void 0,
@@ -38,17 +38,17 @@ let s = null,
       },
       communicationDisabledUntil: null
     };
-    n.default.dispatch({
+    l.default.dispatch({
       type: "GUILD_MEMBER_UPDATE",
       ...C
     })
   };
 class c extends a.default {
   _initialize() {
-    s = setInterval(() => r(), 1e4)
+    r = setInterval(() => s(), 1e4)
   }
   _terminate() {
-    clearInterval(s)
+    clearInterval(r)
   }
   constructor(...e) {
     super(...e), this.clearGuildMemberTimeout = o

@@ -17,32 +17,32 @@ var a = n("37983"),
   h = n("752598"),
   C = n("267567"),
   p = n("979268"),
-  m = n("520899"),
-  E = n("166257"),
+  E = n("520899"),
+  m = n("166257"),
   g = n("432173"),
   S = n("219013"),
   _ = n("625149"),
-  A = n("300322"),
-  T = n("845579"),
+  T = n("300322"),
+  A = n("845579"),
   M = n("271938"),
   N = n("836417"),
   I = n("26989"),
   v = n("305961"),
   L = n("88093"),
-  x = n("957255"),
-  R = n("886074"),
+  R = n("957255"),
+  x = n("886074"),
   y = n("36562"),
   O = n("662255"),
   D = n("85175"),
-  j = n("83900"),
-  P = n("993477"),
+  P = n("83900"),
+  j = n("993477"),
   b = n("733160"),
   H = n("100300"),
   F = n("433487"),
   U = n("987772"),
   k = n("566998"),
-  G = n("516358"),
-  w = n("550515"),
+  w = n("516358"),
+  G = n("550515"),
   B = n("959097"),
   V = n("228220"),
   W = n("149279"),
@@ -50,8 +50,8 @@ var a = n("37983"),
   z = n("306160"),
   K = n("870190"),
   Y = n("61400"),
-  q = n("327054"),
-  X = n("583022"),
+  X = n("327054"),
+  q = n("583022"),
   J = n("363396"),
   Q = n("891405"),
   $ = n("261649"),
@@ -106,8 +106,8 @@ function ei(e) {
     disabled: h,
     dangerous: C,
     separator: p,
-    sparkle: m,
-    ...E
+    sparkle: E,
+    ...m
   } = e;
   return (0, a.jsx)(d.Tooltip, {
     text: null != s ? s : t,
@@ -131,11 +131,11 @@ function ei(e) {
           "aria-label": null != n ? n : t,
           disabled: h,
           dangerous: C,
-          ...E,
+          ...m,
           children: [(0, a.jsx)(i, {
             className: ea.icon,
             ...r
-          }), m && (0, a.jsx)(R.default, {})]
+          }), E && (0, a.jsx)(x.default, {})]
         }), p && (0, a.jsx)(W.Separator, {})]
       })
     }
@@ -152,12 +152,12 @@ function er(e) {
     canReport: o,
     canEdit: f,
     canPublish: h,
-    canReact: E,
+    canReact: m,
     canConfigureJoin: g,
     canReply: S,
     canStartThread: N,
-    canViewThread: R,
-    isExpanded: w,
+    canViewThread: x,
+    isExpanded: G,
     showMoreUtilities: W,
     showEmojiPicker: $,
     showMessageRemindersActions: ea,
@@ -177,31 +177,31 @@ function er(e) {
       isFocused: r
     } = e, {
       author: o
-    } = n, d = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([M.default], () => M.default.getId()), h = (0, A.useIsActiveChannelOrUnarchivableThread)(t), E = (0, A.useIsNonModInLockedThread)(t), g = T.RenderReactions.useSetting(), S = T.DeveloperMode.useSetting(), N = (0, u.useStateFromStores)([L.default], () => null == t.guild_id || L.default.canChatInGuild(t.guild_id), [t]), {
-      canManageMessages: R,
+    } = n, d = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([M.default], () => M.default.getId()), h = (0, T.useIsActiveChannelOrUnarchivableThread)(t), m = (0, T.useIsNonModInLockedThread)(t), g = A.RenderReactions.useSetting(), S = A.DeveloperMode.useSetting(), N = (0, u.useStateFromStores)([L.default], () => null == t.guild_id || L.default.canChatInGuild(t.guild_id), [t]), {
+      canManageMessages: x,
       canAddNewReactions: y
-    } = (0, u.useStateFromStoresObject)([x.default], () => ({
-      canAddNewReactions: N && x.default.can(et.Permissions.ADD_REACTIONS, t),
-      canManageMessages: x.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, N]), O = (0, _.useCanReplyToMessage)(t, n), D = (0, A.useCanStartPublicThread)(t, n), j = (0, A.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([I.default], () => null != t.guild_id && I.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (R || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
-    n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && R);
+    } = (0, u.useStateFromStoresObject)([R.default], () => ({
+      canAddNewReactions: N && R.default.can(et.Permissions.ADD_REACTIONS, t),
+      canManageMessages: R.default.can(et.Permissions.MANAGE_MESSAGES, t)
+    }), [t, N]), O = (0, _.useCanReplyToMessage)(t, n), D = (0, T.useCanStartPublicThread)(t, n), P = (0, T.useCanViewThreadForMessage)(n), j = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([I.default], () => null != t.guild_id && I.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (x || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
+    n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && x);
     let U = (0, K.canReportMessage)(n),
-      k = (0, q.default)(n, t, R),
-      G = !t.isSystemDM() && (0, Y.default)(n, f) && h && !E,
+      k = (0, X.default)(n, t, x),
+      w = !t.isSystemDM() && (0, Y.default)(n, f) && h && !m,
       {
-        disableReactionCreates: w
-      } = (0, X.default)({
+        disableReactionCreates: G
+      } = (0, q.default)({
         channel: t,
         canChat: N,
         renderReactions: g,
         canAddNewReactions: y,
-        isLurking: P,
+        isLurking: j,
         isGuest: b,
         isActiveChannelOrUnarchivableThread: h
       }),
-      B = t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(et.GuildFeatures.NEWS) && (H || R) && n.type === et.MessageTypes.DEFAULT,
+      B = t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(et.GuildFeatures.NEWS) && (H || x) && n.type === et.MessageTypes.DEFAULT,
       V = t.getGuildId(),
-      W = null != V && (n.type === et.MessageTypes.USER_JOIN || n.type === et.MessageTypes.GUILD_INVITE_REMINDER) && x.default.canWithPartialContext(et.Permissions.MANAGE_GUILD, {
+      W = null != V && (n.type === et.MessageTypes.USER_JOIN || n.type === et.MessageTypes.GUILD_INVITE_REMINDER) && R.default.canWithPartialContext(et.Permissions.MANAGE_GUILD, {
         guildId: V
       }),
       {
@@ -211,22 +211,22 @@ function er(e) {
       }, {
         autoTrackExposure: !1
       }),
-      J = (0, u.useStateFromStores)([m.default], () => null != m.default.getMessageReminders().find(e => e.messageId === n.id)),
+      J = (0, u.useStateFromStores)([E.default], () => null != E.default.getMessageReminders().find(e => e.messageId === n.id)),
       Q = (0, ee.default)(),
       $ = (0, u.useStateFromStores)([c.default], () => c.default.keyboardModeEnabled);
     return {
       channel: t,
       message: n,
       canPin: k,
-      canEdit: G,
+      canEdit: w,
       canDelete: F,
       canReport: U,
       canReply: O,
       canStartThread: D,
-      canViewThread: j,
+      canViewThread: P,
       canCopy: z.SUPPORTS_COPY,
       hasDeveloperMode: S,
-      canReact: !w && g,
+      canReact: !G && g,
       canPublish: B,
       canConfigureJoin: W,
       isExpanded: Q && !$ && !a && !s && !l,
@@ -250,9 +250,9 @@ function er(e) {
     er({
       emojiPicker: !$
     })
-  }, [$, er]), eC = (0, A.useIsActiveChannelOrUnarchivableThread)(t), ep = n.hasFlag(et.MessageFlags.CROSSPOSTED);
+  }, [$, er]), eC = (0, T.useIsActiveChannelOrUnarchivableThread)(t), ep = n.hasFlag(et.MessageFlags.CROSSPOSTED);
   return (0, a.jsxs)(a.Fragment, {
-    children: [w ? (0, a.jsxs)(a.Fragment, {
+    children: [G ? (0, a.jsxs)(a.Fragment, {
       children: [l && eo ? ei({
         key: "copy-id",
         channel: t,
@@ -265,7 +265,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.COPY_LINK,
-        icon: j.default,
+        icon: P.default,
         onClick: J.copyLink
       }) : null, g ? ei({
         key: "configure",
@@ -286,7 +286,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.MARK_UNREAD,
-        icon: P.default,
+        icon: j.default,
         onClick: J.markMessageUnread
       }) : null, i ? ei({
         key: "pin",
@@ -300,10 +300,10 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.MESSAGE_ACTION_REPLY,
-        icon: G.default,
+        icon: w.default,
         onClick: J.replyToMessage
       }) : null]
-    }) : null, E && !ed ? (0, a.jsx)(Q.default, {
+    }) : null, m && !ed ? (0, a.jsx)(Q.default, {
       channel: t,
       message: n,
       togglePopout: eh,
@@ -315,7 +315,7 @@ function er(e) {
       channel: t,
       message: n,
       label: en.default.Messages.MESSAGE_ACTION_REPLY,
-      icon: G.default,
+      icon: w.default,
       onClick: J.replyToMessage
     }) : null, f ? ei({
       key: "edit",
@@ -331,7 +331,7 @@ function er(e) {
       label: en.default.Messages.CREATE_THREAD,
       icon: B.default,
       onClick: J.createThread
-    }) : null, !N && R ? ei({
+    }) : null, !N && x ? ei({
       key: "view-thread",
       channel: t,
       message: n,
@@ -346,7 +346,7 @@ function er(e) {
       icon: b.default,
       onClick: J.publishMessage,
       disabled: ep
-    }) : null, r && (ed || w) ? ei({
+    }) : null, r && (ed || G) ? ei({
       key: "delete",
       channel: t,
       message: n,
@@ -354,8 +354,8 @@ function er(e) {
       icon: V.default,
       onClick: J.deleteMessage,
       dangerous: !0,
-      separator: !w
-    }) : null, w && r ? null : (0, a.jsx)(d.Popout, {
+      separator: !G
+    }) : null, G && r ? null : (0, a.jsx)(d.Popout, {
       renderPopout: e => {
         let {
           updatePosition: s,
@@ -405,7 +405,7 @@ function eo(e) {
     children: [!s && l && ei({
       key: "retry",
       label: en.default.Messages.RETRY,
-      icon: w.default,
+      icon: G.default,
       channel: t,
       message: n,
       onClick: J.retrySendMessage
@@ -437,7 +437,7 @@ function eu(e, t, n) {
     onSelectEmoji: (a, s, l) => {
       ! function(e, t, n) {
         let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        null != e && (0, E.addReaction)(t.id, n.id, (0, g.toReactionEmoji)(e), void 0, {
+        null != e && (0, m.addReaction)(t.id, n.id, (0, g.toReactionEmoji)(e), void 0, {
           burst: a
         })
       }(a, e, t, l), s && (l ? o(n, 150)() : n())

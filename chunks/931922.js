@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return j
   }
 }), n("222007");
 var a = n("37983"),
@@ -17,30 +17,30 @@ var a = n("37983"),
   h = n("18054"),
   C = n("798609"),
   p = n("679653"),
-  m = n("462430"),
-  E = n("592407"),
+  E = n("462430"),
+  m = n("592407"),
   g = n("367376"),
   S = n("305961"),
   _ = n("957255"),
-  A = n("697218"),
-  T = n("987772"),
+  T = n("697218"),
+  A = n("987772"),
   M = n("155207"),
   N = n("917686"),
   I = n("317134"),
   v = n("991170"),
   L = n("158998"),
-  x = n("938244"),
-  R = n("172554"),
+  R = n("938244"),
+  x = n("172554"),
   y = n("730859"),
   O = n("49111"),
   D = n("782340"),
-  j = n("948746");
+  P = n("948746");
 
-function P(e) {
+function j(e) {
   let {
     channel: t
-  } = e, [n, l] = s.useState(!1), r = (0, p.default)(t, !0), P = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), b = (0, c.useStateFromStores)([A.default], () => A.default.getUser(null == P ? void 0 : P.ownerId)), H = s.useMemo(() => null != P ? o(P.roles).sortBy(e => -e.position).filter(e => e.id !== P.id).value() : [], [P]), F = s.useMemo(() => o(H).filter(e => {
-    if (null == P) return !1;
+  } = e, [n, l] = s.useState(!1), r = (0, p.default)(t, !0), j = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), b = (0, c.useStateFromStores)([T.default], () => T.default.getUser(null == j ? void 0 : j.ownerId)), H = s.useMemo(() => null != j ? o(j.roles).sortBy(e => -e.position).filter(e => e.id !== j.id).value() : [], [j]), F = s.useMemo(() => o(H).filter(e => {
+    if (null == j) return !1;
     let n = v.default.computePermissionsForRoles({
       forceRoles: {
         [e.id]: e
@@ -48,11 +48,11 @@ function P(e) {
       context: t
     });
     return u.default.has(n, O.Permissions.ADMINISTRATOR) || u.default.has(n, O.Permissions.VIEW_CHANNEL)
-  }).value(), [t, P, H]), U = (0, c.useStateFromStoresArray)([A.default], () => {
+  }).value(), [t, j, H]), U = (0, c.useStateFromStoresArray)([T.default], () => {
     let e = {};
     for (let n of (null != b && (e[b.id] = b), Object.values(t.permissionOverwrites))) {
       if (n.type !== C.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
-      let t = A.default.getUser(n.id);
+      let t = T.default.getUser(n.id);
       null != t && (e[t.id] = t)
     }
     return o(e).filter(e => {
@@ -68,20 +68,20 @@ function P(e) {
     }).value()
   }, [t, b]), k = _.default.can(O.Permissions.MANAGE_CHANNELS, t) || _.default.can(O.Permissions.MANAGE_ROLES, t);
 
-  function G() {
+  function w() {
     h.default.open(t.id)
   }
-  let w = s.useCallback(() => l(!1), []);
-  return (0, a.jsxs)(R.default, {
+  let G = s.useCallback(() => l(!1), []);
+  return (0, a.jsxs)(x.default, {
     channelId: t.id,
-    children: [(0, a.jsx)(R.EmptyMessageIcon, {
+    children: [(0, a.jsx)(x.EmptyMessageIcon, {
       locked: !0,
       channelType: t.type
-    }), (0, a.jsx)(R.EmptyMessageHeader, {
+    }), (0, a.jsx)(x.EmptyMessageHeader, {
       children: D.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: r
       })
-    }), (0, a.jsx)(R.EmptyMessageBody, {
+    }), (0, a.jsx)(x.EmptyMessageBody, {
       children: D.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
         channelName: r,
         topicHook: () => g.default.parseTopic(t.topic, !0, {
@@ -89,42 +89,42 @@ function P(e) {
         })
       })
     }), k ? (0, a.jsxs)("div", {
-      className: j.channelSettingButtons,
-      children: [(0, a.jsx)(x.default, {
+      className: P.channelSettingButtons,
+      children: [(0, a.jsx)(R.default, {
         label: D.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => l(!0),
         icon: (0, a.jsx)(M.default, {
           width: 16,
           height: 16
         })
-      }), (0, a.jsx)(x.default, {
+      }), (0, a.jsx)(R.default, {
         label: D.default.Messages.EDIT_CHANNEL,
-        onClick: G,
-        icon: (0, a.jsx)(T.default, {
+        onClick: w,
+        icon: (0, a.jsx)(A.default, {
           width: 16,
           height: 16
         })
       })]
     }) : null, (0, a.jsxs)("div", {
-      className: j.members,
+      className: P.members,
       children: [function() {
         if (1 !== U.length || F.length > 0) return (0, a.jsx)(y.default, {
           guildId: t.guild_id,
-          className: j.avatars,
+          className: P.avatars,
           maxUsers: 5,
           users: U
         });
         let e = U[0],
           n = L.default.getName(e);
         return (0, a.jsxs)("div", {
-          className: j.avatars,
+          className: P.avatars,
           children: [(0, a.jsx)(f.Avatar, {
             src: e.getAvatarURL(t.guild_id, 24),
             "aria-label": n,
             size: f.AvatarSizes.SIZE_24
           }), (0, a.jsx)(f.Text, {
             tag: "span",
-            className: j.singleUserName,
+            className: P.singleUserName,
             variant: "text-md/normal",
             children: n
           }), "\xa0", (0, a.jsx)(f.Text, {
@@ -139,19 +139,19 @@ function P(e) {
         let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(O.DEFAULT_ROLE_COLOR),
           o = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== void 0;
         return k ? (0, a.jsx)(N.default, {
-          className: i(j.role, {
-            [j.last]: n === F.length - 1
+          className: i(P.role, {
+            [P.last]: n === F.length - 1
           }),
           roleName: e.name,
           roleColor: r,
           disabled: !k,
           verified: o,
           onClick: () => {
-            E.default.open(t.guild_id, O.GuildSettingsSections.MEMBERS), E.default.selectRole(e.id)
+            m.default.open(t.guild_id, O.GuildSettingsSections.MEMBERS), m.default.selectRole(e.id)
           }
         }, e.id) : (0, a.jsx)(I.default, {
-          className: i(j.role, {
-            [j.last]: n === F.length - 1
+          className: i(P.role, {
+            [P.last]: n === F.length - 1
           }),
           roleName: e.name,
           roleColor: r,
@@ -159,9 +159,9 @@ function P(e) {
         }, e.id)
       })]
     }), n ? (0, a.jsx)(f.Modal, {
-      renderModal: e => (0, a.jsx)(m.default, {
+      renderModal: e => (0, a.jsx)(E.default, {
         ...e,
-        onClose: () => (w(), e.onClose()),
+        onClose: () => (G(), e.onClose()),
         channelId: t.id
       }),
       onCloseRequest: () => l(!1)

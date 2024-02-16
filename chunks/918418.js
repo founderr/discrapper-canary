@@ -22,27 +22,27 @@ let c = e => {
       character_limit: f,
       pattern: _
     },
-    onChange: h,
-    initialText: E,
+    onChange: E,
+    initialText: h,
     isRequired: v
   } = e, R = l.useRef(s.default.reactParserFor({
     ...s.default.defaultRules,
     link: i.LinkMarkupRule
-  })), [x, p] = l.useState(""), [g, N] = l.useState("");
+  })), [x, p] = l.useState(""), [N, g] = l.useState("");
   l.useEffect(() => {
     var e;
-    p(null !== (e = null == E ? void 0 : E.value) && void 0 !== e ? e : "")
-  }, [E]);
-  let T = l.useCallback(e => {
+    p(null !== (e = null == h ? void 0 : h.value) && void 0 !== e ? e : "")
+  }, [h]);
+  let I = l.useCallback(e => {
     let t = null != _ ? new RegExp(_) : null;
-    null != t && null == t.exec(e) ? (N(d.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), h({
+    null != t && null == t.exec(e) ? (g(d.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), E({
       value: e,
       isValid: !1
-    })) : null != e && (N(""), p(e), h({
+    })) : null != e && (g(""), p(e), E({
       value: e,
       isValid: !0
     }))
-  }, [h, _]);
+  }, [E, _]);
   return (0, a.jsxs)("div", {
     className: o.marginBottom8,
     children: [null != t && (0, a.jsx)("div", {
@@ -56,9 +56,9 @@ let c = e => {
       })
     }), (0, a.jsx)(r.TextArea, {
       maxLength: f,
-      onChange: T,
+      onChange: I,
       value: x,
-      error: g,
+      error: N,
       rows: m,
       placeholder: c,
       autoFocus: !0

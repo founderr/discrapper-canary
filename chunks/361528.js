@@ -21,26 +21,26 @@ var a = n("37983"),
       buttonText: h,
       buttonColor: C,
       buttonSubmitting: p,
-      onButtonClick: m,
-      imageSrc: E,
+      onButtonClick: E,
+      imageSrc: m,
       animationSrc: g,
       secondaryButtonText: S,
       onSecondaryButtonClick: _,
-      children: A,
-      useReducedMotion: T = !1
+      children: T,
+      useReducedMotion: A = !1
     } = e, M = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
     if (l.isMobile && M) return null;
     if (null == t) return (0, a.jsx)(a.Fragment, {
-      children: s.Children.only(A)
+      children: s.Children.only(T)
     });
     let N = null;
-    return null != E ? N = (0, a.jsx)("img", {
+    return null != m ? N = (0, a.jsx)("img", {
       alt: "",
-      src: E,
+      src: m,
       className: c.image
     }) : null != g && (N = (0, a.jsx)(d.default, {
       importData: g,
-      shouldAnimate: !T,
+      shouldAnimate: !A,
       className: c.animation
     })), (0, a.jsxs)("div", {
       className: c.wrapper,
@@ -71,7 +71,7 @@ var a = n("37983"),
         }), null != h && (0, a.jsx)(r.Button, {
           className: c.button,
           size: r.Button.Sizes.SMALL,
-          onClick: m,
+          onClick: E,
           submitting: p,
           color: null != C ? C : r.Button.Colors.PRIMARY,
           children: h

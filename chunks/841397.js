@@ -23,8 +23,8 @@ function d(e) {
     navigateAwayOnReportSuccess: h = !0,
     onReportClick: C,
     onReportSubmit: p,
-    onMouseEnter: m,
-    onMouseLeave: E
+    onMouseEnter: E,
+    onMouseLeave: m
   } = e, g = (0, r.useIsRelationshipTypeSpamReportable)(t), S = (0, o.useLongestChannelMessageBeforeReply)(n.id, t);
   if (!g || null == S) return null;
   let _ = () => {
@@ -38,8 +38,8 @@ function d(e) {
     onClick: () => {
       null == C || C(), (0, i.showReportModalForFirstDM)(S, _)
     },
-    onMouseEnter: m,
-    onMouseLeave: E,
+    onMouseEnter: E,
+    onMouseLeave: m,
     children: null != f ? f : u.default.Messages.REPORT_SPAM
   })
 }

@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("293137"),
   F = n("381546"),
   k = n("293499"),
-  V = n("277174"),
-  B = n("711486"),
+  B = n("277174"),
+  V = n("711486"),
   H = n("394640"),
   G = n("343571"),
   W = n("751661"),
@@ -85,7 +85,7 @@ function eu(e) {
   return (0, l.jsx)(R.CenterControlButton, {
     isActive: i,
     label: (t = i, n = u, t ? ei.default.Messages.AUDIENCE_LOWER_HAND : n ? ei.default.Messages.AUDIENCE_RAISE_HAND_CTA : ei.default.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
-    iconComponent: () => (0, l.jsx)(B.default, {
+    iconComponent: () => (0, l.jsx)(V.default, {
       className: i ? er.raisedHandButtonIconActive : er.raisedHandButtonIcon
     }),
     onClick: o,
@@ -120,7 +120,7 @@ function ec(e) {
     onClick: t,
     children: (0, l.jsxs)("div", {
       className: er.buttonWithTextInnerContainer,
-      children: [(0, l.jsx)(V.default, {
+      children: [(0, l.jsx)(B.default, {
         height: 24,
         width: 24,
         className: er.buttonWithTextIcon
@@ -310,9 +310,9 @@ let ep = a.memo(function(e) {
   } = (0, I.default)(), C = (0, v.default)(t), {
     limit: _,
     reachedLimit: R
-  } = (0, T.default)(t), y = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, V = R && !F || null != w && w.user.id !== (null == y ? void 0 : y.id);
+  } = (0, T.default)(t), y = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, B = R && !F || null != w && w.user.id !== (null == y ? void 0 : y.id);
   if (null == y) return null;
-  let B = (0, l.jsxs)(l.Fragment, {
+  let V = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(o.Popout, {
       renderPopout: e => {
         let {
@@ -352,7 +352,7 @@ let ep = a.memo(function(e) {
       exitFullScreen: () => null,
       canGoLive: P,
       hasPermission: C,
-      disabled: V
+      disabled: B
     })]
   });
   return (0, l.jsxs)("div", {
@@ -363,7 +363,7 @@ let ep = a.memo(function(e) {
       channel: t
     }), U && !n ? (0, l.jsxs)("div", {
       className: i(er.avControls, er.buttonSpacing),
-      children: [k && _ > 0 && B, (0, l.jsx)(o.Popout, {
+      children: [k && _ > 0 && V, (0, l.jsx)(o.Popout, {
         renderPopout: e => {
           let {
             closePopout: t

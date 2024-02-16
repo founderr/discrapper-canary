@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   default: function() {
-    return g
+    return T
   }
 });
 var a = n("37983");
@@ -21,16 +21,16 @@ let f = window.matchMedia("(prefers-reduced-motion: reduce)"),
   E = window.matchMedia("(prefers-contrast: more)"),
   S = window.matchMedia("(prefers-contrast: less)"),
   h = window.matchMedia("(prefers-color-scheme: dark)"),
-  C = window.matchMedia("(prefers-color-scheme: light)"),
-  _ = window.matchMedia("(forced-colors: active)"),
+  _ = window.matchMedia("(prefers-color-scheme: light)"),
+  C = window.matchMedia("(forced-colors: active)"),
   p = 5;
 
 function m() {
   return "windows" === (0, u.getOS)()
 }
-var g = {
+var T = {
   initBasic() {
-    f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), h.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), _.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), S.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
+    f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), h.addListener(this.handleSystemColorPreferencesChanged), _.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), S.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
   },
   init() {
     this.initBasic(), s.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
@@ -63,9 +63,9 @@ var g = {
   },
   handleSystemColorPreferencesChanged() {
     let e;
-    h.matches ? e = c.ThemeTypes.DARK : C.matches && (e = c.ThemeTypes.LIGHT);
+    h.matches ? e = c.ThemeTypes.DARK : _.matches && (e = c.ThemeTypes.LIGHT);
     let t = !u.isPlatformEmbedded || m(),
-      n = t && _.matches ? "active" : "none";
+      n = t && C.matches ? "active" : "none";
     s.default.wait(() => {
       o.systemColorPreferencesChanged(e, n)
     })

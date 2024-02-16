@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return F
   },
   default: function() {
-    return V
+    return B
   }
 }), n("222007");
 var l = n("37983"),
@@ -176,7 +176,7 @@ let U = e => {
       children: t
     })
   };
-var V = e => {
+var B = e => {
   var t;
   let {
     listingId: n,
@@ -191,7 +191,7 @@ var V = e => {
   } = (0, y.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: R,
     activeSubscriptionListing: U
-  } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, V = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [B, H] = a.useState(!1), [G, W] = a.useState(!1), Y = a.useCallback(e => {
+  } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, B = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [V, H] = a.useState(!1), [G, W] = a.useState(!1), Y = a.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
   }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), Q = (0, T.default)(s, n), q = null != Z && null == R && Q, J = (0, u.default)(O.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = a.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), el = (null == p ? void 0 : p.published) === !0, ea = (null == p ? void 0 : p.soft_deleted) === !0, es = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
@@ -235,7 +235,7 @@ var V = e => {
             look: o.Button.Looks.OUTLINED,
             color: o.Button.Colors.PRIMARY,
             disabled: !0,
-            children: V ? b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
+            children: B ? b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
           }) : (0, l.jsx)(o.Tooltip, {
             text: v ? null : x,
             "aria-label": null !== (t = v && x) && void 0 !== t && t,
@@ -253,13 +253,13 @@ var V = e => {
           }), (0, l.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "text-normal",
-            className: i((!G || !B) && D.tierDescriptionTruncate),
+            className: i((!G || !V) && D.tierDescriptionTruncate),
             children: (0, l.jsx)("div", {
               ref: Y,
               children: K
             })
           }), G && (0, l.jsx)(k, {
-            isViewAll: B,
+            isViewAll: V,
             onToggle: () => H(e => !e),
             showMoreText: es
           })]

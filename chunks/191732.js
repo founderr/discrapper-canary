@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 }), n("222007");
 var a = n("37983"),
@@ -16,12 +16,12 @@ var a = n("37983"),
   m = n("49111"),
   f = n("782340"),
   _ = n("217486"),
-  h = e => {
+  E = e => {
     let {
       userId: t,
       reportId: n,
-      reportName: h
-    } = e, [E, v] = l.useState(!1), R = (0, r.useStateFromStores)([o.default], () => o.default.getUser(t), [t]), x = (0, r.useStateFromStores)([u.default], () => u.default.getRelationshipType(t), [t]) === m.RelationshipTypes.BLOCKED;
+      reportName: E
+    } = e, [h, v] = l.useState(!1), R = (0, r.useStateFromStores)([o.default], () => o.default.getUser(t), [t]), x = (0, r.useStateFromStores)([u.default], () => u.default.getRelationshipType(t), [t]) === m.RelationshipTypes.BLOCKED;
     l.useEffect(() => {
       v(x)
     }, [x]);
@@ -42,7 +42,7 @@ var a = n("37983"),
       children: [(0, a.jsx)(s.Text, {
         className: _.description,
         variant: "text-sm/normal",
-        children: h === c.ReportNames.USER ? f.default.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : f.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION
+        children: E === c.ReportNames.USER ? f.default.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : f.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION
       }), (0, a.jsxs)("div", {
         className: _.userContainer,
         children: [(0, a.jsxs)("div", {
@@ -62,10 +62,10 @@ var a = n("37983"),
           })]
         }), (0, a.jsx)(s.Button, {
           onClick: () => p(),
-          disabled: E,
+          disabled: h,
           size: s.Button.Sizes.SMALL,
           color: s.Button.Colors.RED,
-          children: E ? f.default.Messages.BLOCKED : f.default.Messages.BLOCK
+          children: h ? f.default.Messages.BLOCKED : f.default.Messages.BLOCK
         })]
       })]
     })
