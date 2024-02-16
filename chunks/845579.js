@@ -493,7 +493,7 @@ let eS = new Set([s.ChannelListLayoutTypes.COZY, s.ChannelListLayoutTypes.COMPAC
   value: e
 }));
 let eg = new Set([s.MessagePreviewTypes.ALL, s.MessagePreviewTypes.UNREADS, s.MessagePreviewTypes.NONE]);
-(0, l.defineProtoSetting)("appearance", "messagePreviews", e => null != e && eg.has(e.value) ? e.value : s.MessagePreviewTypes.ALL, e => o.StringValue.create({
+(0, l.defineProtoSetting)("appearance", "messagePreviews", e => null != e && eg.has(e.value) ? e.value : s.MessagePreviewTypes.UNREADS, e => o.StringValue.create({
   value: e
 }));
 let eh = (0, l.wrapSettingWithSelectiveSyncing)((0, l.defineProtoSetting)("appearance", "developerMode", e => null != e && e, e => e), "appearance", "developerMode"),
