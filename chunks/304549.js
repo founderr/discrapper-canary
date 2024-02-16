@@ -62,8 +62,8 @@ function d(e, t, n) {
     });
     let {
       forceUpdateOnChunkChange: H,
-      coordsMap: j,
-      gridData: Y,
+      coordsMap: Y,
+      gridData: j,
       visibleSections: W,
       totalHeight: K,
       forceUpdate: z,
@@ -125,21 +125,21 @@ function d(e, t, n) {
           ref: w,
           children: Object.keys(W).map(e => {
             let t = (0, u.getMasonryListSectionIndex)(e),
-              n = j[e],
+              n = Y[e],
               r = W[e],
-              s = j[(0, u.getMasonryListSectionHeaderKey)(t)],
+              s = Y[(0, u.getMasonryListSectionHeaderKey)(t)],
               a = null == A ? void 0 : A(t);
             return null != n && null != r ? (0, i.jsxs)("div", {
               style: n,
               ...a,
               children: [null != C && null != s && C(t, s, e), r.map(e => {
-                let [t, n, i] = e, r = j[t];
-                return null != r ? v(n, i, r, t, Y) : null
+                let [t, n, i] = e, r = Y[t];
+                return null != r ? v(n, i, r, t, j) : null
               })]
             }, e) : null
           })
         })
-      }), [W, v, C, j, K, A, Y])
+      }), [W, v, C, Y, K, A, j])
     })
   })
 }

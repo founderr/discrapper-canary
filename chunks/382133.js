@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var r = n("421898"),
-  a = n.n(r),
+var a = n("421898"),
+  r = n.n(a),
   s = n("15542"),
   l = n("134560");
 
@@ -15,7 +15,7 @@ function o(e) {
   let {
     onClick: t,
     title: n,
-    body: r,
+    body: a,
     icon: o,
     selected: u,
     disabled: c
@@ -27,7 +27,7 @@ function o(e) {
         !c && t()
       },
       disabled: c,
-      className: a(l.wrapper, {
+      className: r(l.wrapper, {
         [l.selected]: u
       }),
       children: [(0, i.jsx)("div", {
@@ -39,7 +39,7 @@ function o(e) {
           children: n
         }), (0, i.jsx)("div", {
           className: l.body,
-          children: r
+          children: a
         })]
       })]
     })

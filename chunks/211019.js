@@ -15,8 +15,8 @@ var r = n("414456"),
   d = n("271938"),
   c = n("30672"),
   f = n("100844"),
-  E = n("607391"),
-  S = n("782340"),
+  S = n("607391"),
+  E = n("782340"),
   h = n("100469");
 let _ = n("588281");
 
@@ -36,13 +36,13 @@ function C(e) {
     className: s(h.content, h.streamHidden, {
       [h.small]: p
     }),
-    children: (0, a.jsx)(E.default, {
+    children: (0, a.jsx)(S.default, {
       className: h.streamHiddenEmptyState,
       artURL: _,
       noArt: r,
       selected: C,
-      size: (0, E.getSizeForWidth)(n),
-      header: p ? null : S.default.Messages.STREAM_HIDDEN,
+      size: (0, S.getSizeForWidth)(n),
+      header: p ? null : E.default.Messages.STREAM_HIDDEN,
       description: C ? null : (0, a.jsxs)("div", {
         className: s(h.streamHiddenCTA, {
           [h.largePaddingTop]: !p
@@ -52,11 +52,11 @@ function C(e) {
           children: (0, a.jsx)(l.Text, {
             variant: p ? "text-sm/semibold" : "text-md/semibold",
             color: "none",
-            children: n < 175 ? S.default.Messages.WATCH : S.default.Messages.WATCH_STREAM
+            children: n < 175 ? E.default.Messages.WATCH : E.default.Messages.WATCH_STREAM
           })
         }), m ? (0, a.jsx)(f.CallTileCTA, {
           className: h.addCTA,
-          tooltip: S.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+          tooltip: E.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
           onClick: e => {
             e.stopPropagation(), (0, u.watchStream)(t.stream, {
               forceMultiple: !0

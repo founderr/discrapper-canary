@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return H
   },
   convertChannelOverridesToMap: function() {
-    return j
+    return Y
   },
   default: function() {
     return Z
@@ -71,7 +71,7 @@ function G(e, t) {
   var n;
   let i = I[e],
     s = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
-    a = j(t.channel_overrides),
+    a = Y(t.channel_overrides),
     o = {
       ...H(e),
       ...i,
@@ -189,12 +189,12 @@ function H(e) {
   return y[n]
 }
 
-function j() {
+function Y() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   return e instanceof Array ? r.keyBy(e, "channel_id") : e
 }
 
-function Y(e) {
+function j(e) {
   var t;
   return null !== (t = I[e]) && void 0 !== t ? t : H(e)
 }
@@ -236,41 +236,41 @@ class X extends s.default.PersistedStore {
     return A
   }
   isSuppressEveryoneEnabled(e) {
-    return Y(e).suppress_everyone
+    return j(e).suppress_everyone
   }
   isSuppressRolesEnabled(e) {
-    return Y(e).suppress_roles
+    return j(e).suppress_roles
   }
   isMuteScheduledEventsEnabled(e) {
-    return Y(e).mute_scheduled_events
+    return j(e).mute_scheduled_events
   }
   isMobilePushEnabled(e) {
-    return Y(e).mobile_push
+    return j(e).mobile_push
   }
   isMuted(e) {
-    let t = Y(e);
+    let t = j(e);
     return (0, o.computeIsMuted)(t)
   }
   isTemporarilyMuted(e) {
-    let t = Y(e);
+    let t = j(e);
     return (0, o.isTemporarilyMuted)(t)
   }
   getMuteConfig(e) {
-    let t = Y(e);
+    let t = j(e);
     return t.mute_config
   }
   getMessageNotifications(e) {
-    return Y(e).message_notifications
+    return j(e).message_notifications
   }
   getChannelOverrides(e) {
     var t;
-    return null !== (t = Y(e).channel_overrides) && void 0 !== t ? t : {}
+    return null !== (t = j(e).channel_overrides) && void 0 !== t ? t : {}
   }
   getNotifyHighlights(e) {
-    return Y(e).notify_highlights
+    return j(e).notify_highlights
   }
   getGuildFlags(e) {
-    return Y(e).flags
+    return j(e).flags
   }
   getChannelMessageNotifications(e, t) {
     let n = this.getChannelOverrides(e)[t];

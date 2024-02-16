@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("271938"),
   C = n("377253"),
   p = n("697218"),
-  m = n("599110"),
-  E = n("158998"),
+  E = n("599110"),
+  m = n("158998"),
   g = n("913491"),
   S = n("49111"),
   _ = n("782340"),
@@ -33,13 +33,13 @@ function M(e) {
   s.useEffect(() => {
     (0, d.fetchStickerPack)("847199849233514549", !0)
   }, []);
-  let I = (0, r.useStateFromStores)([C.default, h.default], () => !!i(C.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
-    N = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-    v = null !== (t = E.default.useName(N)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
+  let N = (0, r.useStateFromStores)([C.default, h.default], () => !!i(C.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
+    I = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+    v = null !== (t = m.default.useName(I)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
     L = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(A)),
     R = s.useCallback(async () => {
       if (null == l || "" === l) try {
-        await u.default.sendGreetMessage(n.id, A), m.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
+        await u.default.sendGreetMessage(n.id, A), E.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
           channel_id: n.id,
           channel_type: n.type,
           source: "Wave",
@@ -58,7 +58,7 @@ function M(e) {
       variant: "text-sm/normal",
       children: l
     }) : null;
-  return I ? (0, a.jsxs)("div", {
+  return N ? (0, a.jsxs)("div", {
     className: T.containerCompact,
     children: [(0, a.jsxs)(o.Clickable, {
       className: null != l && "" !== l ? T.compactButtonDisabled : T.compactButton,

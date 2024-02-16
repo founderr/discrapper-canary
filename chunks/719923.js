@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return H
   },
   getDisplayName: function() {
-    return j
+    return Y
   },
   getDisplayNameFromSku: function() {
-    return Y
+    return j
   },
   getTierDisplayName: function() {
     return W
@@ -364,7 +364,7 @@ function H(e) {
   }), n
 }
 
-function j(e) {
+function Y(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 ? arguments[3] : void 0;
@@ -414,7 +414,7 @@ function j(e) {
   }), r
 }
 
-function Y(e) {
+function j(e) {
   switch (e) {
     case y.PremiumSubscriptionSKUs.TIER_0:
       return L.default.Messages.PREMIUM_TIER_0;
@@ -606,7 +606,7 @@ function Q(e) {
   let {
     planId: t,
     additionalPlans: n
-  } = e, i = (0, p.isNoneSubscription)(t) ? null : j(t), r = null == n ? void 0 : n.find(e => {
+  } = e, i = (0, p.isNoneSubscription)(t) ? null : Y(t), r = null == n ? void 0 : n.find(e => {
     let {
       planId: t
     } = e;
@@ -1122,7 +1122,7 @@ var eP = Object.freeze({
   getIntervalString: V,
   getIntervalStringAsNoun: B,
   getPremiumType: H,
-  getDisplayName: j,
+  getDisplayName: Y,
   getDisplayPremiumType: K,
   getPremiumPlanOptions: Z,
   getUpgradeEligibilities: $,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return E
   }
 });
 var a = n("37983"),
@@ -15,7 +15,7 @@ var a = n("37983"),
   c = n("862013"),
   f = n("49111");
 
-function E(e) {
+function S(e) {
   var t;
   let n = e.ctrlKey || e.altKey || e.metaKey;
   if (n || e.keyCode !== f.KeyboardKeys.TAB || null == e.target) return;
@@ -29,7 +29,7 @@ function E(e) {
   })
 }
 
-function S(e) {
+function E(e) {
   let {
     children: t
   } = e, n = (0, i.useStateFromStoresObject)([d.default], () => ({
@@ -44,7 +44,7 @@ function S(e) {
     forcedColors: s,
     alwaysShowLinkDecorations: u
   }), [n, s, u]);
-  return r.useEffect(() => ((0, c.insertAccessibilityLabelElements)(), window.addEventListener("keydown", E), () => window.removeEventListener("keydown", E)), []), (0, a.jsx)(l.AccessibilityPreferencesContext.Provider, {
+  return r.useEffect(() => ((0, c.insertAccessibilityLabelElements)(), window.addEventListener("keydown", S), () => window.removeEventListener("keydown", S)), []), (0, a.jsx)(l.AccessibilityPreferencesContext.Provider, {
     value: o,
     children: t
   })

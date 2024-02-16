@@ -15,11 +15,11 @@ var r = n("77078"),
   d = n("42887"),
   c = n("697218"),
   f = n("773336"),
-  E = n("49111"),
-  S = n("686298");
+  S = n("49111"),
+  E = n("686298");
 
 function h(e, t, h) {
-  let _ = u.default.getWindowOpen(E.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? E.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
+  let _ = u.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? S.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
   if ((0, l.default)(_), f.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
     let {
       default: t
@@ -32,7 +32,7 @@ function h(e, t, h) {
   });
   else {
     var C;
-    let n = (0, i.default)(S.ApplicationStreamPresets.PRESET_CUSTOM, S.ApplicationStreamResolutions.RESOLUTION_1080, S.ApplicationStreamFPS.FPS_30, c.default.getCurrentUser(), null === (C = o.default.getGuild(e)) || void 0 === C ? void 0 : C.premiumTier) ? {
+    let n = (0, i.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, E.ApplicationStreamResolutions.RESOLUTION_1080, E.ApplicationStreamFPS.FPS_30, c.default.getCurrentUser(), null === (C = o.default.getGuild(e)) || void 0 === C ? void 0 : C.premiumTier) ? {
       width: 1920,
       height: 1080
     } : {

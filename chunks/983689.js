@@ -14,8 +14,8 @@ var a = n("884691"),
   d = n("951212"),
   c = n("227602"),
   f = n("791776"),
-  E = n("13798"),
-  S = n("49111"),
+  S = n("13798"),
+  E = n("49111"),
   h = n("894282");
 
 function _(e) {
@@ -37,22 +37,22 @@ var p = function(e, t) {
       let s = e.ctrlKey || e.altKey || e.metaKey || e.key !== h.KeyboardEventKey.Tab && e.shiftKey;
       if (s) return;
       let i = function(e) {
-        let t = E.keyToCode("shift"),
-          n = E.keyToCode("tab");
+        let t = S.keyToCode("shift"),
+          n = S.keyToCode("tab");
         if (e.key === h.KeyboardEventKey.Tab && e.shiftKey && null != t && null != n) return [
-          [S.KeyboardDeviceTypes.KEYBOARD_KEY, t],
-          [S.KeyboardDeviceTypes.KEYBOARD_KEY, n]
+          [E.KeyboardDeviceTypes.KEYBOARD_KEY, t],
+          [E.KeyboardDeviceTypes.KEYBOARD_KEY, n]
         ];
         let a = h.NavigationKeyShortcutMap.get(e.key);
         if (null != a) {
-          let e = E.keyToCode(a);
+          let e = S.keyToCode(a);
           if (null != e) return [
-            [S.KeyboardDeviceTypes.KEYBOARD_KEY, e]
+            [E.KeyboardDeviceTypes.KEYBOARD_KEY, e]
           ]
         }
         return null
       }(e);
-      null != i && !c.default.hasExactKeybind(i) && !l.default.hasBind(null !== (a = E.codeToKey(i[0])) && void 0 !== a ? a : "") && ((0, u.enableKeyboardMode)(), r && !t && e.preventDefault())
+      null != i && !c.default.hasExactKeybind(i) && !l.default.hasBind(null !== (a = S.codeToKey(i[0])) && void 0 !== a ? a : "") && ((0, u.enableKeyboardMode)(), r && !t && e.preventDefault())
     }(e, t)
   }, [t]);
   return (0, a.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", C), e.addEventListener("keydown", _)) : e.addEventListener("keydown", s), () => {

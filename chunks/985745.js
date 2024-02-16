@@ -2,8 +2,8 @@ var i = n("390493");
 n("860677"), n("854508"), ! function(e, t) {
   "use strict";
   if (!e.setImmediate) {
-    var n, r = 1,
-      a = {},
+    var n, a = 1,
+      r = {},
       s = !1,
       l = e.document,
       o = Object.getPrototypeOf && Object.getPrototypeOf(e);
@@ -55,18 +55,18 @@ n("860677"), n("854508"), ! function(e, t) {
         callback: e,
         args: t
       };
-      return a[r] = s, n(r), r++
+      return r[a] = s, n(a), a++
     }, o.clearImmediate = u
   }
 
   function u(e) {
-    delete a[e]
+    delete r[e]
   }
 
   function c(e) {
     if (s) setTimeout(c, 0, e);
     else {
-      var t = a[e];
+      var t = r[e];
       if (t) {
         s = !0;
         try {

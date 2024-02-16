@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   handleLegacyCommands: function() {
-    return E
+    return m
   }
 }), n("222007"), n("781738");
 var a = n("404828"),
@@ -98,24 +98,24 @@ let C = /\\([*?+/])/g,
     }
   };
 
-function m(e, t, n, a) {
+function E(e, t, n, a) {
   return r.default.trackWithMetadata(h.AnalyticEvents.SLASH_COMMAND_USED, {
     command: e
   }), t.action(n, a)
 }
 
-function E(e, t) {
+function m(e, t) {
   for (let a in p) {
     let s = p[a];
     if (null != s.match) {
       var n;
-      if (null === (n = s.match.regex) || void 0 === n ? void 0 : n.test(e)) return m(a, s, e, t);
+      if (null === (n = s.match.regex) || void 0 === n ? void 0 : n.test(e)) return E(a, s, e, t);
       continue
     }
     if (c.UseLegacyChatInput.getSetting() && "/" === e[0]) {
       let n = e.split(" "),
         l = n[0].slice(1);
-      if (a === l && null != s.action) return m(a, s, n.slice(1).join(" "), t)
+      if (a === l && null != s.action) return E(a, s, n.slice(1).join(" "), t)
     }
   }
 }

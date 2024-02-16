@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return f
   },
   default: function() {
-    return E
+    return S
   }
 });
 var a = n("37983");
@@ -27,8 +27,8 @@ function f(e) {
       onCameraUnavailable: d,
       hasPermission: c,
       children: f,
-      channelLimitReached: E = !1,
-      join: S
+      channelLimitReached: S = !1,
+      join: E
     } = e,
     h = (0, i.useAppContext)(),
     _ = r ? () => d() : () => s(!e.enabled, h);
@@ -36,15 +36,15 @@ function f(e) {
     children: f({
       onClick: _,
       active: n,
-      disabled: !n && (!c || E),
-      iconComponent: S || n ? u.default : o.default,
+      disabled: !n && (!c || S),
+      iconComponent: E || n ? u.default : o.default,
       label: t,
       unavailable: r
     })
   })
 }
 
-function E(e) {
+function S(e) {
   let {
     enabled: t,
     join: n,
@@ -53,8 +53,8 @@ function E(e) {
     onCameraUnavailable: l,
     cameraUnavailable: u,
     hasPermission: o,
-    className: E,
-    channelLimitReached: S,
+    className: S,
+    channelLimitReached: E,
     channelLimit: h,
     centerButton: _ = !1,
     onPopoutClick: C,
@@ -68,7 +68,7 @@ function E(e) {
     onCameraUnavailable: l,
     cameraUnavailable: u,
     hasPermission: o,
-    channelLimitReached: S,
+    channelLimitReached: E,
     channelLimit: h,
     children: e => {
       let {
@@ -79,7 +79,7 @@ function E(e) {
         ...r,
         ...p,
         isActive: t,
-        className: s(E, {
+        className: s(S, {
           [c.fauxDisabled]: n
         }),
         onPopoutClick: C

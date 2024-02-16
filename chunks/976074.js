@@ -16,8 +16,8 @@ var r = n("446674"),
 
 function c(e, t, c) {
   var f;
-  let E = (0, l.useGetStreamApplication)(e),
-    S = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
+  let S = (0, l.useGetStreamApplication)(e),
+    E = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
     h = null != e ? (0, i.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
     _ = null !== (f = o.default.getVideoStats(h)) && void 0 !== f ? f : {},
     C = {
@@ -37,8 +37,8 @@ function c(e, t, c) {
         } = await n.el("485857").then(n.bind(n, "485857"));
         return n => (0, a.jsx)(t, {
           stream: e,
-          streamApplication: E,
-          isStreamer: S === (null == e ? void 0 : e.ownerId),
+          streamApplication: S,
+          isStreamer: E === (null == e ? void 0 : e.ownerId),
           analyticsData: C,
           ...n
         })

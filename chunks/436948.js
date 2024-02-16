@@ -26,14 +26,14 @@
     let T = {},
       O = new u.Timeout,
       S = !1,
-      R = window.document.createElement("canvas");
-    R.width = 512, R.height = 288;
-    let A = R.getContext("2d");
+      A = window.document.createElement("canvas");
+    A.width = 512, A.height = 288;
+    let R = A.getContext("2d");
 
-    function v() {
+    function w() {
       O.stop(), null != s && (l.default.removeSink(s, T), s = null)
     }
-    let w = c.debounce((e, a, t, s) => {
+    let v = c.debounce((e, a, t, s) => {
       N(e, (0, _.encodeStreamKey)({
         streamType: null != a ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
         guildId: a,
@@ -102,16 +102,16 @@
             s = Math.min(a, t),
             d = e.width * s,
             n = e.height * s;
-          R.width = d, R.height = n;
+          A.width = d, A.height = n;
           let i = window.document.createElement("canvas"),
             c = i.getContext("2d");
           i.width = e.width, i.height = e.height;
           let r = new ImageData(e.data, e.width, e.height);
           return null == c || c.putImageData(r, 0, 0), new Promise(a => {
-            null == A || A.drawImage(i, 0, 0, e.width, e.height, 0, 0, d, n), a()
+            null == R || R.drawImage(i, 0, 0, e.width, e.height, 0, 0, d, n), a()
           })
         }(t);
-        let d = R.toDataURL("image/jpeg");
+        let d = A.toDataURL("image/jpeg");
         if (p.default.dispatch({
             type: "STREAM_PREVIEW_FETCH_SUCCESS",
             streamKey: a,
@@ -139,7 +139,7 @@
     }
     var C = {
       init() {
-        p.default.subscribe("CONNECTION_OPEN", v), p.default.subscribe("LOGOUT", v), p.default.subscribe("STREAM_DELETE", v), p.default.subscribe("RTC_CONNECTION_VIDEO", e => {
+        p.default.subscribe("CONNECTION_OPEN", w), p.default.subscribe("LOGOUT", w), p.default.subscribe("STREAM_DELETE", w), p.default.subscribe("RTC_CONNECTION_VIDEO", e => {
           let {
             guildId: a,
             channelId: t,
@@ -147,7 +147,7 @@
             streamId: n,
             context: i
           } = e;
-          !(null == n || i !== I.MediaEngineContextTypes.STREAM || d !== h.default.getId() || __OVERLAY__) && (v(), s = n, w(n, a, t, d))
+          !(null == n || i !== I.MediaEngineContextTypes.STREAM || d !== h.default.getId() || __OVERLAY__) && (w(), s = n, v(n, a, t, d))
         }), p.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
           let {
             videoState: a

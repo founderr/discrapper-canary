@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return N
   }
 }), n("222007");
 var a = n("37983"),
@@ -14,8 +14,8 @@ var a = n("37983"),
   d = n("446674"),
   c = n("77078"),
   f = n("960460"),
-  E = n("489740"),
-  S = n("355025"),
+  S = n("489740"),
+  E = n("355025"),
   h = n("51545"),
   _ = n("155084"),
   C = n("393414"),
@@ -28,9 +28,9 @@ var a = n("37983"),
   I = n("966585");
 
 function R() {
-  let [e, t] = r.useState(!1), n = (0, d.useStateFromStores)([E.default], () => {
+  let [e, t] = r.useState(!1), n = (0, d.useStateFromStores)([S.default], () => {
     var e;
-    return (0, S.probablyHasBuildOverride)() ? null === (e = E.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+    return (0, E.probablyHasBuildOverride)() ? null === (e = S.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
   });
   if (null == n) return null;
   let s = async () => {
@@ -128,4 +128,4 @@ class O extends r.PureComponent {
     }, this.discordErrorsSet = !1
   }
 }
-var L = O
+var N = O

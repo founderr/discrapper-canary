@@ -20,8 +20,8 @@ var a = n("446674"),
   d = n("488464"),
   c = n("567469"),
   f = n("998716"),
-  E = n("834052"),
-  S = n("274438");
+  S = n("834052"),
+  E = n("274438");
 let h = e => e / 400,
   _ = !1,
   C = (0, o.createSound)("stage_waiting", "stage_waiting", h(i.default.getOutputVolume()));
@@ -42,17 +42,17 @@ function p() {
     C.stop(), _ = !1;
     return
   }
-  let a = S.default.shouldPlay();
+  let a = E.default.shouldPlay();
   if (a) {
     C.volume = h(i.default.getOutputVolume()), C.loop(), _ = !0;
     return
   }
-  let r = E.default.isLive(e);
+  let r = S.default.isLive(e);
   if (r) {
     C.stop(), _ = !1;
     return
   }
-  let o = S.default.isMuted();
+  let o = E.default.isMuted();
   if (o) {
     C.pause(), _ = !1;
     return
@@ -65,7 +65,7 @@ function m(e) {
   let t = (0, a.useStateFromStores)([l.default], () => l.default.getVoiceChannelId() === e),
     n = (0, c.useStageParticipants)(e, f.StageChannelParticipantNamedIndex.SPEAKER),
     r = null != n.find(e => !e.voiceState.isVoiceMuted()),
-    s = (0, a.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(e));
+    s = (0, a.useStateFromStores)([S.default], () => S.default.getStageInstanceByChannel(e));
   return t && null == s && !r
 }
 
@@ -73,7 +73,7 @@ function T(e) {
   let t = l.default.getVoiceChannelId() === e,
     n = d.default.getMutableParticipants(e, f.StageChannelParticipantNamedIndex.SPEAKER),
     a = null != n.find(e => !e.voiceState.isVoiceMuted()),
-    r = E.default.getStageInstanceByChannel(e);
+    r = S.default.getStageInstanceByChannel(e);
   return t && null == r && !a
 }
 class g extends r.default {

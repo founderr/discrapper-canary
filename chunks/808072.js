@@ -17,8 +17,8 @@ var a, s, l, i, r, o, u = n("37983"),
   h = n("819855"),
   C = n("77078"),
   p = n("599110"),
-  m = n("439932"),
-  E = n("145131"),
+  E = n("439932"),
+  m = n("145131"),
   g = n("49111"),
   S = n("782340"),
   _ = n("778548");
@@ -51,9 +51,9 @@ class T extends d.PureComponent {
     } = this.props, o = "left" === t || n, d = "center" === t || !o;
     return (0, u.jsxs)(C.Dialog, {
       className: f(_.popoutRoot, l),
-      children: [null != e && (0, u.jsx)(E.default, {
+      children: [null != e && (0, u.jsx)(m.default, {
         className: _.mediaContainer,
-        justify: o ? E.default.Justify.START : E.default.Justify.CENTER,
+        justify: o ? m.default.Justify.START : m.default.Justify.CENTER,
         children: e()
       }), (0, u.jsx)(C.H, {
         className: f({
@@ -67,9 +67,9 @@ class T extends d.PureComponent {
           [_.bodyLeft]: o
         }),
         children: s
-      }), (0, u.jsxs)(E.default, {
+      }), (0, u.jsxs)(m.default, {
         className: _.buttonContainer,
-        justify: o ? E.default.Justify.BETWEEN : E.default.Justify.CENTER,
+        justify: o ? m.default.Justify.BETWEEN : m.default.Justify.CENTER,
         children: [(0, u.jsx)(C.Button, {
           size: C.ButtonSizes.SMALL,
           onClick: this.handleDismiss,
@@ -156,7 +156,7 @@ class T extends d.PureComponent {
           [_.arrowAlignmentTop]: "top" === l,
           [_.arrowAlignmentMiddle]: "middle" === l,
           "force-theme": null != a
-        }, (0, m.getThemeClass)(a)),
+        }, (0, E.getThemeClass)(a)),
         onClickComplete: () => this.onClickComplete(t),
         onClickSkipAll: () => this.onClickSkipAll(t)
       })

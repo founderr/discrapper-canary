@@ -43,8 +43,8 @@ var D = n("901946"),
   V = n("417040"),
   B = n("716380"),
   H = n("157547"),
-  j = n("88313"),
-  Y = n("531748"),
+  Y = n("88313"),
+  j = n("531748"),
   W = n("760406"),
   K = n("478696"),
   z = n("49111"),
@@ -551,7 +551,7 @@ r = class extends E.default {
   }
   getOrCreateVideoQuality() {
     if (null != this._connection && null == this._videoQuality) {
-      this._videoQuality = new Y.VideoQuality(this._connection), this._videoQuality.start();
+      this._videoQuality = new j.VideoQuality(this._connection), this._videoQuality.start();
       let {
         featureEnabled: e,
         windowLength: t,
@@ -560,8 +560,8 @@ r = class extends E.default {
         backoffTimeSec: r
       } = R.default.getConfig(!0);
       if (e) {
-        this._videoHealthManager = new j.VideoHealthManager(t, n, i, r), null != this._localMediaSinkWantsManager && (this._localMediaSinkWantsManager.videoHealthManager = this._videoHealthManager);
-        this._videoQuality.on(Y.VideoQualityEvent.FpsUpdate, (e, t, n) => {
+        this._videoHealthManager = new Y.VideoHealthManager(t, n, i, r), null != this._localMediaSinkWantsManager && (this._localMediaSinkWantsManager.videoHealthManager = this._videoHealthManager);
+        this._videoQuality.on(j.VideoQualityEvent.FpsUpdate, (e, t, n) => {
           var i, r;
           (null === (i = this._localMediaSinkWantsManager) || void 0 === i ? void 0 : i.shouldReceiveFromUser(e)) && (null === (r = this._videoHealthManager) || void 0 === r || r.updateFps(e, t, n))
         })

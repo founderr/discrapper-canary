@@ -37,8 +37,8 @@ var o, l, u, c, d = n("627445"),
   V = n("403770"),
   B = n("940146"),
   H = n("353500"),
-  j = n("103979"),
-  Y = n("665862"),
+  Y = n("103979"),
+  j = n("665862"),
   W = n("122530"),
   K = n("928609"),
   z = n("891760"),
@@ -151,8 +151,8 @@ let eC = (0, m.initializeMediaEngine)((0, m.determineMediaEngine)()),
   eV = null,
   eB = !1,
   eH = !1,
-  ej = !1,
   eY = !1,
+  ej = !1,
   eW = !1,
   eK = null,
   ez = !1,
@@ -229,7 +229,7 @@ function e7() {
         videoHookStaleFrameTimeoutMs: o
       } = B.default.getConfig(s && r, "e225cfdf5_vh1", !0), {
         graphicsCaptureStaleFrameTimeoutMs: l
-      } = Y.default.getConfig(s && te(), "e225cfdf5_wgc2", !0);
+      } = j.default.getConfig(s && te(), "e225cfdf5_wgc2", !0);
       eC.setGoLiveSource({
         desktopDescription: {
           id: a.desktopSource.id,
@@ -479,7 +479,7 @@ async function th() {
       noiseCancellation: !1
     })
   } finally {
-    eY = !1
+    ej = !1
   }
 }
 
@@ -572,7 +572,7 @@ class tT extends S.default.Store {
         e.setExperimentFlag(e_.ExperimentFlags.STREAMER_CLIP, t.clipsEnabled);
         let {
           enableViewerClipping: n
-        } = j.default.getCurrentConfig({
+        } = Y.default.getCurrentConfig({
           location: "f627ab_15"
         }, {
           autoTrackExposure: !1
@@ -783,9 +783,9 @@ class tT extends S.default.Store {
           let e = e4();
           eC.setAudioInputDevice(e.inputDeviceId), eC.setAudioOutputDevice(e.outputDeviceId), e7(), eC.setInputVolume(e.inputVolume), eC.setOutputVolume(e.outputVolume), eC.setH264Enabled(e.openH264), eC.setAv1Enabled(e.av1Enabled), eC.setAecDump(e.aecDumpEnabled)
         }()
-    }(), !(0, $.isDesktop)() || __OVERLAY__ || eY || eW ? (0, $.isWeb)() && eC.supports(e_.Features.NOISE_CANCELLATION) ? (eW = !0, i.emitChange()) : (0, $.isWeb)() && ti({
+    }(), !(0, $.isDesktop)() || __OVERLAY__ || ej || eW ? (0, $.isWeb)() && eC.supports(e_.Features.NOISE_CANCELLATION) ? (eW = !0, i.emitChange()) : (0, $.isWeb)() && ti({
       noiseCancellation: !1
-    }) : (eY = !0, th()), (0, $.isMac)() && eC.supports(e_.Features.SOUNDSHARE) ? eC.getSoundshareStatus().then(e => {
+    }) : (ej = !0, th()), (0, $.isMac)() && eC.supports(e_.Features.SOUNDSHARE) ? eC.getSoundshareStatus().then(e => {
       tS(e)
     }).catch(e => {
       em.warn("Failed to check if soundshare is enabled: ".concat(e))
@@ -1132,11 +1132,11 @@ var tg = i = new tT(I.default, {
       video: r
     } = e;
     if (i !== n && e7(r, null), null != t || null == n) {
-      ej = !1;
+      eY = !1;
       return
     }
-    if (ej) return;
-    ej = !0;
+    if (eY) return;
+    eY = !0;
     let s = e4();
     (s.mute || s.deaf) && (ti({
       deaf: !1,
@@ -1757,7 +1757,7 @@ var tg = i = new tT(I.default, {
       videoHookStaleFrameTimeoutMs: _
     } = B.default.getConfig(h && p, "e225cfdf5_vh2", !1), {
       graphicsCaptureStaleFrameTimeoutMs: S
-    } = Y.default.getConfig(h && te(), "e225cfdf5_wgc2", !1);
+    } = j.default.getConfig(h && te(), "e225cfdf5_wgc2", !1);
     eC.setClipsSource({
       desktopDescription: {
         id: a.desktopSource.id,

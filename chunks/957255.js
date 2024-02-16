@@ -145,12 +145,12 @@ function H(e) {
   }), y += 1, M(t)
 }
 
-function j(e, t, n, i) {
+function Y(e, t, n, i) {
   let r = m.default.NONE;
   if (e instanceof p.ChannelRecordBase) {
     if (p.THREAD_CHANNEL_TYPES.has(e.type)) {
       let r = T.default.getChannel(e.parent_id);
-      return null == r ? m.default.NONE : m.default.applyThreadPermissions(e, j(r, t, n, i), f.default.hasJoined(e.id))
+      return null == r ? m.default.NONE : m.default.applyThreadPermissions(e, Y(r, t, n, i), f.default.hasJoined(e.id))
     }
     r = b(e.id)
   } else e instanceof h.default && (r = P(e.id));
@@ -163,7 +163,7 @@ function j(e, t, n, i) {
     excludeGuildPermissions: i
   }) : r
 }
-class Y extends a.default.Store {
+class j extends a.default.Store {
   initialize() {
     this.waitFor(v.default, C.default, T.default, I.default, g.default, f.default, d.default, u.default)
   }
@@ -203,17 +203,17 @@ class Y extends a.default.Store {
     return "channelId" in t && "string" == typeof t.channelId ? this.can(e, T.default.getChannel(t.channelId)) : "guildId" in t && "string" == typeof t.guildId && this.can(e, C.default.getGuild(t.guildId))
   }
   can(e, t, n, i, r) {
-    let a = j(t, n, i, r);
+    let a = Y(t, n, i, r);
     return s.default.has(a, e)
   }
   canBasicChannel(e, t, n, i, r) {
-    return "basicPermissions" in t ? S.default.has(t.basicPermissions, e) : s.default.has(j(t, n, i, r), S.default.asBigFlag(e))
+    return "basicPermissions" in t ? S.default.has(t.basicPermissions, e) : s.default.has(Y(t, n, i, r), S.default.asBigFlag(e))
   }
   computePermissions(e, t, n, i) {
-    return j(e, t, n, i)
+    return Y(e, t, n, i)
   }
   computeBasicPermissions(e) {
-    return "basicPermissions" in e ? e.basicPermissions : S.default.asBasicFlag(j(e))
+    return "basicPermissions" in e ? e.basicPermissions : S.default.asBasicFlag(Y(e))
   }
   canManageUser(e, t, n) {
     let i = t instanceof _.default ? t.id : t;
@@ -251,8 +251,8 @@ class Y extends a.default.Store {
 function W() {
   O = {}, N = {}, D = {}, y = 0
 }
-Y.displayName = "PermissionStore";
-var K = new Y(o.default, {
+j.displayName = "PermissionStore";
+var K = new j(o.default, {
   BACKGROUND_SYNC: G,
   CONNECTION_OPEN: G,
   OVERLAY_INITIALIZE: G,

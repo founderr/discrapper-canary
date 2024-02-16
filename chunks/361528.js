@@ -21,8 +21,8 @@ var a = n("37983"),
       buttonText: h,
       buttonColor: C,
       buttonSubmitting: p,
-      onButtonClick: m,
-      imageSrc: E,
+      onButtonClick: E,
+      imageSrc: m,
       animationSrc: g,
       secondaryButtonText: S,
       onSecondaryButtonClick: _,
@@ -33,12 +33,12 @@ var a = n("37983"),
     if (null == t) return (0, a.jsx)(a.Fragment, {
       children: s.Children.only(T)
     });
-    let I = null;
-    return null != E ? I = (0, a.jsx)("img", {
+    let N = null;
+    return null != m ? N = (0, a.jsx)("img", {
       alt: "",
-      src: E,
+      src: m,
       className: c.image
-    }) : null != g && (I = (0, a.jsx)(d.default, {
+    }) : null != g && (N = (0, a.jsx)(d.default, {
       importData: g,
       shouldAnimate: !A,
       className: c.animation
@@ -46,7 +46,7 @@ var a = n("37983"),
       className: c.wrapper,
       children: [(0, a.jsxs)("div", {
         className: c.content,
-        children: [I, (0, a.jsxs)("div", {
+        children: [N, (0, a.jsxs)("div", {
           className: c.text,
           children: [(0, a.jsx)(r.Heading, {
             variant: "heading-md/semibold",
@@ -71,7 +71,7 @@ var a = n("37983"),
         }), null != h && (0, a.jsx)(r.Button, {
           className: c.button,
           size: r.Button.Sizes.SMALL,
-          onClick: m,
+          onClick: E,
           submitting: p,
           color: null != C ? C : r.Button.Colors.PRIMARY,
           children: h

@@ -13,8 +13,8 @@ var n = a("37983"),
   d = a("917351"),
   c = a.n(d),
   u = a("446674"),
-  m = a("411723"),
-  h = a("42203"),
+  h = a("411723"),
+  m = a("42203"),
   A = a("328620"),
   _ = a("568734"),
   g = a("994402"),
@@ -208,9 +208,9 @@ let E = Math.round((I.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
 var w = e => {
   let {
     attachments: t
-  } = e, a = t[0].message.channel_id, i = (0, u.useStateFromStores)([h.default], () => {
+  } = e, a = t[0].message.channel_id, i = (0, u.useStateFromStores)([m.default], () => {
     var e;
-    return null === (e = h.default.getBasicChannel(a)) || void 0 === e ? void 0 : e.guild_id
+    return null === (e = m.default.getBasicChannel(a)) || void 0 === e ? void 0 : e.guild_id
   }), s = l.useMemo(() => new Map(t.map(e => [e.attachment.id, (0, g.getAttachmentKind)(e.attachment, e.inlineMedia)])), [t]), r = l.useCallback(e => {
     var t;
     return null !== (t = s.get(e)) && void 0 !== t ? t : "INVALID"
@@ -248,7 +248,7 @@ var w = e => {
         children: (0, n.jsx)(y, {
           mediaAttachments: [e],
           getAttachmentKind: r,
-          footer: (0, n.jsx)(m.default, {
+          footer: (0, n.jsx)(h.default, {
             createdAt: null != l ? Date.parse(l) : void 0,
             participantIds: null !== (t = null == s ? void 0 : s.map(e => {
               let {

@@ -14,8 +14,8 @@ var a = n("37983"),
   d = n("244201"),
   c = n("428958"),
   f = n("161778"),
-  E = n("144747"),
-  S = n("983782"),
+  S = n("144747"),
+  E = n("983782"),
   h = n("659500"),
   _ = n("452453"),
   C = n("49111");
@@ -26,7 +26,7 @@ let p = e => {
     onUnmount: l,
     rect: o,
     position: f,
-    align: E,
+    align: S,
     impressionName: h,
     impressionProperties: _
   } = e, p = r.useRef(null);
@@ -63,12 +63,12 @@ let p = e => {
     A = r.useCallback(() => {
       T.dispatch(C.ComponentActions.POPOUT_HIDE)
     }, [T]);
-  return (0, a.jsx)(S.AppReferencePositionLayer, {
+  return (0, a.jsx)(E.AppReferencePositionLayer, {
     onMount: g,
     onUnmount: A,
     reference: () => o,
     position: null != f ? f : "right",
-    align: null != E ? E : "top",
+    align: null != S ? S : "top",
     autoInvert: !0,
     ref: p,
     nudgeAlignIntoViewport: !0,
@@ -166,10 +166,10 @@ function T() {
     contextMenu: e,
     version: t,
     isOpen: n
-  } = (0, l.useStateFromStoresObject)([E.default], () => ({
-    contextMenu: E.default.getContextMenu(),
-    version: E.default.version,
-    isOpen: E.default.isOpen()
+  } = (0, l.useStateFromStoresObject)([S.default], () => ({
+    contextMenu: S.default.getContextMenu(),
+    version: S.default.version,
+    isOpen: S.default.isOpen()
   })), s = (0, l.useStateFromStores)([f.default], () => f.default.theme), {
     appContext: i,
     renderWindow: u

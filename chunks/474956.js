@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   }
 }), n("222007");
-var i, r, a = n("37983"),
+var i, a, r = n("37983"),
   s = n("884691"),
   l = n("446674"),
   o = n("77078"),
@@ -26,7 +26,7 @@ function S(e) {
     onClose: t,
     transitionState: n,
     appId: i,
-    guildId: r,
+    guildId: a,
     subscriptionGroupListing: S
   } = e, [R, I] = s.useState(() => {
     let e = d.default.getApplication(i);
@@ -71,30 +71,30 @@ function S(e) {
   let T = b.default.Messages.STOREFRONT_TITLE.format({
     appName: N.name
   });
-  return (0, a.jsxs)(o.ModalRoot, {
+  return (0, r.jsxs)(o.ModalRoot, {
     transitionState: n,
     "aria-label": T,
     size: o.ModalSize.LARGE,
-    children: [(0, a.jsx)(o.ModalHeader, {
-      children: (0, a.jsxs)(m.default, {
-        children: [(0, a.jsx)(m.default.Icon, {
+    children: [(0, r.jsx)(o.ModalHeader, {
+      children: (0, r.jsxs)(m.default, {
+        children: [(0, r.jsx)(m.default.Icon, {
           icon: p.default,
           "aria-hidden": !0,
           color: f.default.INTERACTIVE_ACTIVE
-        }), (0, a.jsx)(m.default.Title, {
+        }), (0, r.jsx)(m.default.Title, {
           children: T
-        }), (0, a.jsx)(o.ModalCloseButton, {
+        }), (0, r.jsx)(o.ModalCloseButton, {
           onClick: t,
           className: E.modalCloseButton
         })]
       })
-    }), (0, a.jsx)(o.ModalContent, {
-      children: (0, a.jsx)(v.default, {
+    }), (0, r.jsx)(o.ModalContent, {
+      children: (0, r.jsx)(v.default, {
         app: N,
         subscriptionGroupListing: S,
-        guildId: r,
+        guildId: a,
         products: j
       })
     })]
   })
-}(r = i || (i = {}))[r.NONE = 0] = "NONE", r[r.FETCHING = 1] = "FETCHING", r[r.FETCHED = 2] = "FETCHED", r[r.ERROR = 3] = "ERROR"
+}(a = i || (i = {}))[a.NONE = 0] = "NONE", a[a.FETCHING = 1] = "FETCHING", a[a.FETCHED = 2] = "FETCHED", a[a.ERROR = 3] = "ERROR"

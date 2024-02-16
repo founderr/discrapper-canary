@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return N
   }
 }), n("70102"), n("222007");
 var a = n("37983"),
@@ -14,8 +14,8 @@ var a = n("37983"),
   d = n("862337"),
   c = n("77078"),
   f = n("272030"),
-  E = n("901582"),
-  S = n("373469"),
+  S = n("901582"),
+  E = n("373469"),
   h = n("697218"),
   _ = n("427302"),
   C = n("462579"),
@@ -104,7 +104,7 @@ function M(e) {
 }
 let O = [];
 
-function L(e) {
+function N(e) {
   let {
     channelId: t,
     guildId: s,
@@ -113,17 +113,17 @@ function L(e) {
     compact: C = !1,
     disableInteraction: m = !1,
     maxVisibleUsers: A = 3
-  } = e, [I, L] = r.useState(!1), N = r.useRef(new d.DelayedCall(150, () => L(!1))), y = (0, o.useStateFromStoresArray)([S.default, h.default], () => {
+  } = e, [I, N] = r.useState(!1), L = r.useRef(new d.DelayedCall(150, () => N(!1))), y = (0, o.useStateFromStoresArray)([E.default, h.default], () => {
     if (l.type === T.ParticipantTypes.STREAM) {
-      let e = S.default.getViewerIds(l.id);
+      let e = E.default.getViewerIds(l.id);
       return e.length > 0 ? e.map(e => h.default.getUser(e)).filter(p.isNotNullish) : O
     }
     return l.type === T.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => h.default.getUser(e)).filter(p.isNotNullish) : O : O
   }, [l]), x = r.useCallback(() => {
-    N.current.cancel(), L(!0)
-  }, []), P = r.useCallback(() => {
-    N.current.delay()
-  }, []), D = r.useCallback((e, t) => {
+    L.current.cancel(), N(!0)
+  }, []), D = r.useCallback(() => {
+    L.current.delay()
+  }, []), P = r.useCallback((e, t) => {
     x(), (0, f.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -133,9 +133,9 @@ function L(e) {
         user: t
       })
     }, {
-      onClose: P
+      onClose: D
     })
-  }, [P, x]);
+  }, [D, x]);
   if (0 === y.length) return null;
   if (C) return (0, a.jsx)(M, {
     maxVisibleUsers: A,
@@ -154,15 +154,15 @@ function L(e) {
   return y.length > A && (w[w.length - 1] = (0, a.jsxs)("div", {
     className: v.overflow,
     children: ["+", y.length - A + 1]
-  }, "overflow")), (0, a.jsx)(E.default, {
+  }, "overflow")), (0, a.jsx)(S.default, {
     section: g.AnalyticsSections.STREAM_VIEWER_POPOUT,
     children: (0, a.jsx)("div", {
       onMouseEnter: x,
-      onMouseLeave: P,
+      onMouseLeave: D,
       children: (0, a.jsx)(c.Popout, {
         renderPopout: () => (0, a.jsx)(R, {
           participantType: l.type,
-          handleUserContextMenu: D,
+          handleUserContextMenu: P,
           guildId: s,
           channelId: t,
           users: y,

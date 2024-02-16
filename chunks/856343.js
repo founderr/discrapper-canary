@@ -14,8 +14,8 @@ var a = n("37983"),
   d = n("268491"),
   c = n("305961"),
   f = n("42887"),
-  E = n("697218"),
-  S = n("49111"),
+  S = n("697218"),
+  E = n("49111"),
   h = n("686298"),
   _ = n("353927"),
   C = n("782340");
@@ -25,7 +25,7 @@ function p(e, t) {
     preset: p,
     resolution: m,
     fps: T
-  } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), g = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), A = (0, s.useStateFromStores)([E.default], () => E.default.getCurrentUser()), v = (0, s.useStateFromStores)([c.default], () => {
+  } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), g = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), A = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), v = (0, s.useStateFromStores)([c.default], () => {
     var t;
     return null === (t = c.default.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier
   }), {
@@ -53,7 +53,7 @@ function p(e, t) {
       var o, d;
       o = t, d = {
         ...I,
-        object: S.AnalyticsObjects.RADIO_ITEM,
+        object: E.AnalyticsObjects.RADIO_ITEM,
         objectType: u
       }, (0, i.openModalLazy)(async () => {
         let {
@@ -64,7 +64,7 @@ function p(e, t) {
           analyticsSource: d
         })
       }, {
-        contextKey: o === S.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
+        contextKey: o === E.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
       })
     }
   }, [t, I, g]);
@@ -80,10 +80,10 @@ function p(e, t) {
         id: "stream-settings-fps-".concat(t),
         label: n,
         checked: t === T,
-        action: () => R(r, m, t, S.AnalyticsObjectTypes.RESOLUTION)
+        action: () => R(r, m, t, E.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-fps-".concat(t))
     }),
-    L = h.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
+    N = h.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
         label: n
@@ -93,7 +93,7 @@ function p(e, t) {
         id: "stream-settings-resolution-".concat(t),
         label: n,
         checked: t === m,
-        action: () => R(r, t, M, S.AnalyticsObjectTypes.RESOLUTION)
+        action: () => R(r, t, M, E.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-resolution-".concat(t))
     });
   return (0, a.jsxs)(a.Fragment, {
@@ -102,7 +102,7 @@ function p(e, t) {
       children: O
     }), (0, a.jsx)(i.MenuGroup, {
       label: C.default.Messages.STREAM_RESOLUTION,
-      children: L
+      children: N
     })]
   })
 }

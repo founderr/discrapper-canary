@@ -1,31 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return g
   }
 }), n("222007"), n("506083");
 var s = n("37983"),
   a = n("884691"),
-  i = n("730290"),
-  r = n("803182"),
-  l = n("446674"),
+  r = n("730290"),
+  l = n("803182"),
+  i = n("446674"),
   o = n("437822"),
   u = n("697796"),
   d = n("524824"),
   c = n("393414"),
   f = n("271938"),
-  h = n("291850"),
-  E = n("49111"),
-  g = n("724210");
+  E = n("291850"),
+  h = n("49111"),
+  _ = n("724210");
 
-function m(e) {
+function g(e) {
   let t = a.useCallback(t => {
       if (function(e) {
           var t;
-          let n = (0, r.matchPath)(e, {
-            path: E.Routes.CHANNEL(":guildId", ":channelId")
+          let n = (0, l.matchPath)(e, {
+            path: h.Routes.CHANNEL(":guildId", ":channelId")
           });
-          return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === g.StaticChannelRoute.ROLE_SUBSCRIPTIONS || !1
+          return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === _.StaticChannelRoute.ROLE_SUBSCRIPTIONS || !1
         }(t)) c.replaceWith(t);
       else {
         var n;
@@ -34,18 +34,18 @@ function m(e) {
     }, [e.transitionTo]),
     {
       isAuthenticated: n,
-      loginStatus: m
-    } = (0, l.useStateFromStoresObject)([f.default], () => ({
+      loginStatus: g
+    } = (0, i.useStateFromStoresObject)([f.default], () => ({
       isAuthenticated: f.default.isAuthenticated(),
       loginStatus: f.default.getLoginStatus()
     })),
     {
-      location: _,
+      location: m,
       redirectTo: p
     } = e,
-    [R, S] = a.useState(n);
+    [I, T] = a.useState(n);
 
-  function A(e) {
+  function N(e) {
     let {
       handoffKey: t,
       handoffToken: n,
@@ -55,30 +55,30 @@ function m(e) {
       handoffKey: t,
       handoffToken: n,
       handoffSource: s
-    }), S(!1)
+    }), T(!1)
   }
   return (a.useEffect(() => {
-    if (null != _) {
+    if (null != m) {
       let {
         handoff_key: e,
         handoff_token: t
-      } = (0, i.parse)(_.search);
+      } = (0, r.parse)(m.search);
       if (null != e && null != t) {
         let n = null != p ? (0, d.getLoginHandoffSourceFromRedirectTo)(p) : void 0;
-        R ? o.default.logout(null).finally(() => {
-          A({
+        I ? o.default.logout(null).finally(() => {
+          N({
             handoffKey: e,
             handoffToken: t,
             handoffSource: n
           })
-        }) : A({
+        }) : N({
           handoffKey: e,
           handoffToken: t,
           handoffSource: n
         })
       }
     }
-  }, []), R || m === E.LoginStates.LOGGING_IN) ? (0, s.jsx)(h.LoginSpinner, {}) : (0, s.jsx)(h.default, {
+  }, []), I || g === h.LoginStates.LOGGING_IN) ? (0, s.jsx)(E.LoginSpinner, {}) : (0, s.jsx)(E.default, {
     ...e,
     transitionTo: t
   })

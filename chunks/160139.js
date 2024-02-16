@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return L
   }
 });
 var a = n("37983");
@@ -15,8 +15,8 @@ var r = n("414456"),
   d = n("244201"),
   c = n("191145"),
   f = n("270227"),
-  E = n("940277"),
-  S = n("386811"),
+  S = n("940277"),
+  E = n("386811"),
   h = n("964264"),
   _ = n("655804"),
   C = n("58463"),
@@ -49,7 +49,7 @@ let I = e => g.default.close(e),
         onClick: () => I(t),
         "aria-label": A.default.Messages.TITLE_BAR_CLOSE_WINDOW,
         tabIndex: -1,
-        children: (0, a.jsx)(E.default, {})
+        children: (0, a.jsx)(S.default, {})
       }), (0, a.jsx)(l.Clickable, {
         className: v.winButtonMinMax,
         onClick: e => M(t, e),
@@ -65,7 +65,7 @@ let I = e => g.default.close(e),
       })]
     })
   },
-  L = e => {
+  N = e => {
     let {
       focused: t,
       windowKey: n,
@@ -88,7 +88,7 @@ let I = e => g.default.close(e),
           onClick: () => I(n),
           "aria-label": A.default.Messages.TITLE_BAR_CLOSE_WINDOW,
           tabIndex: -1,
-          children: (0, a.jsx)(S.default, {
+          children: (0, a.jsx)(E.default, {
             color: "#4c0000"
           })
         }), (0, a.jsx)(l.Clickable, {
@@ -117,29 +117,29 @@ let I = e => g.default.close(e),
     })
   };
 
-function N(e) {
+function L(e) {
   let {
     focused: t,
     type: n,
     windowKey: r,
     macOSFrame: s = !1,
     themeOverride: l
-  } = e, o = (0, d.useAppContext)(), f = (0, i.useStateFromStores)([c.default], () => c.default.isFullscreenInContext(o)), E = (0, u.default)();
+  } = e, o = (0, d.useAppContext)(), f = (0, i.useStateFromStores)([c.default], () => c.default.isFullscreenInContext(o)), S = (0, u.default)();
   if (f) return null;
   switch (n) {
     case m.PlatformTypes.WINDOWS:
       return (0, a.jsx)(O, {
         windowKey: r,
         themeOverride: l,
-        hasOpenLayer: E
+        hasOpenLayer: S
       });
     case m.PlatformTypes.OSX:
-      return (0, a.jsx)(L, {
+      return (0, a.jsx)(N, {
         focused: t,
         windowKey: r,
         frame: s,
         themeOverride: l,
-        hasOpenLayer: E
+        hasOpenLayer: S
       });
     default:
       return null

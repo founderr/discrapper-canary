@@ -78,14 +78,14 @@ function B(e) {
 }
 let H = Date.now();
 
-function j(e, t, n, i) {
+function Y(e, t, n, i) {
   let r = A[V(e, t, n, i)];
   if (null == r) return !1;
   let s = Date.now() - r.time > 6048e5;
   return !s && r.hash === B(t)
 }
 
-function Y(e) {
+function j(e) {
   let {
     experimentId: t,
     descriptor: n,
@@ -98,7 +98,7 @@ function Y(e) {
   } = e;
   if (n.override) return !1;
   let u = l === _.ExposureTypes.AUTO_FALLBACK && !!n.triggerDebuggingEnabled,
-    c = j(t, n, i, u);
+    c = Y(t, n, i, u);
   if (c) return !1;
   if (n.type === _.ExperimentTypes.USER) {
     let e = {
@@ -508,7 +508,7 @@ class eo extends E.default {
       if (null == (p = X(t, a.populations, E))) return null;
       if (null != a.holdoutName && null != a.holdoutBucket && a.holdoutName !== n) {
         let n = e(t, a.holdoutName);
-        if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && Y({
+        if ((null == n ? void 0 : n.bucket) != null && (!0 !== n.override && j({
             experimentId: a.holdoutName,
             descriptor: n
           }), (null == n ? void 0 : n.bucket) === a.holdoutBucket)) return null
@@ -599,10 +599,10 @@ class eo extends E.default {
     }
   }
   hasExperimentTrackedExposure(e, t, n, i) {
-    return j(e, t, n, i)
+    return Y(e, t, n, i)
   }
   constructor() {
-    super(), this.trackExposure = Y, this.loadCache = () => {
+    super(), this.trackExposure = j, this.loadCache = () => {
       let e = this.readSnapshot(eo.LATEST_SNAPSHOT_VERSION);
       null != e && ("loadedUserExperiments" in e ? (D = e.loadedUserExperiments, y = Q(e.loadedGuildExperiments)) : q(e.rawUserExperiments, e.rawGuildExperiments))
     }, this.registerActionHandlers({

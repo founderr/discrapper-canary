@@ -43,10 +43,10 @@ n.r(t), n.d(t, {
     return H
   },
   BLAZIN_8S_APPLICATION_ID: function() {
-    return j
+    return Y
   },
   POKER_NIGHT_APPLICATION_ID: function() {
-    return Y
+    return j
   },
   BYS_LETTER_APP_ID: function() {
     return W
@@ -139,8 +139,8 @@ let O = 160,
   V = "947957217959759964",
   B = "832013003968348200",
   H = "832012774040141894",
-  j = "832025144389533716",
-  Y = "755827207812677713",
+  Y = "832025144389533716",
+  j = "755827207812677713",
   W = "879863686565621790",
   K = "902271654783242291",
   z = "1037680572660727838",

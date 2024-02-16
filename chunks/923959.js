@@ -184,7 +184,7 @@ function H(e, t) {
   }), I.ElevatedPermissions)
 }
 
-function j(e, t) {
+function Y(e, t) {
   var n;
   y = t;
   let i = null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : null;
@@ -192,12 +192,12 @@ function j(e, t) {
   N[i] = void 0, i === R && x(i)
 }
 
-function Y() {
+function j() {
   x(I.FAVORITES)
 }
 class W extends a.default.Store {
   initialize() {
-    this.waitFor(S.default, _.default, h.default, m.default, p.default, l.default, c.default), this.syncWith([c.default], Y)
+    this.waitFor(S.default, _.default, h.default, m.default, p.default, l.default, c.default), this.syncWith([c.default], j)
   }
   getAllGuilds() {
     return N
@@ -326,7 +326,7 @@ var K = new W(o.default, {
     let {
       channelId: t
     } = e;
-    return null == t && null != y ? j(h.default.getChannel(y), null) : j(h.default.getChannel(t), t)
+    return null == t && null != y ? Y(h.default.getChannel(y), null) : Y(h.default.getChannel(t), t)
   },
   VOICE_CHANNEL_STATUS_UPDATE: function(e) {
     let t = h.default.getBasicChannel(e.id);
@@ -341,7 +341,7 @@ var K = new W(o.default, {
         channelId: n,
         sessionId: i
       } = t;
-      return p.default.getSessionId() !== i ? e : j(h.default.getChannel(n), n) || e
+      return p.default.getSessionId() !== i ? e : Y(h.default.getChannel(n), n) || e
     }, !1)
   }
 })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return j
+    return Y
   }
 }), n("222007"), n("70102"), n("424973"), n("843762");
 var i, r, s, a, o = n("917351"),
@@ -145,7 +145,7 @@ class H extends u.default.Store {
   }
 }
 H.displayName = "DispatchManagerStore";
-var j = new H(d.default, {
+var Y = new H(d.default, {
   DISPATCH_APPLICATION_INSTALL: function(e) {
     let {
       applicationId: t,

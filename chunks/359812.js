@@ -1,12 +1,12 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return E
   }
 });
-var a = l("37983");
+var n = l("37983");
 l("884691");
-var n = l("446674"),
+var a = l("446674"),
   s = l("77078"),
   r = l("923959"),
   i = l("305961"),
@@ -17,19 +17,19 @@ var n = l("446674"),
   f = l("379385"),
   m = l("644169"),
   S = l("782340"),
-  E = l("45988");
+  C = l("45988");
 
-function C(e) {
+function E(e) {
   let {
     selectedChannelId: t,
     guildId: l,
-    onChangeSelectedChannelId: C
-  } = e, h = (0, n.useStateFromStores)([o.default], () => o.default.getCurrentUser()), g = (0, n.useStateFromStores)([i.default, r.default, u.default], () => (0, c.getStreamEligibleChannels)(r.default.getChannels(l), i.default, u.default)), _ = (0, n.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), N = g.map(e => {
+    onChangeSelectedChannelId: E
+  } = e, h = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), N = (0, a.useStateFromStores)([i.default, r.default, u.default], () => (0, c.getStreamEligibleChannels)(r.default.getChannels(l), i.default, u.default)), g = (0, a.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), _ = N.map(e => {
     var l;
     return {
-      name: (0, a.jsx)(f.default, {
+      name: (0, n.jsx)(f.default, {
         channel: e,
-        users: null === (l = _[e.id]) || void 0 === l ? void 0 : l.filter(e => {
+        users: null === (l = g[e.id]) || void 0 === l ? void 0 : l.filter(e => {
           let {
             user: t
           } = e;
@@ -45,19 +45,19 @@ function C(e) {
       value: e.id
     }
   });
-  return (0, a.jsx)(m.default, {
+  return (0, n.jsx)(m.default, {
     title: S.default.Messages.GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE,
-    scrollerInnerClassName: E.channelSelectScrollerInner,
-    children: (0, a.jsx)(s.RadioGroup, {
-      options: N,
+    scrollerInnerClassName: C.channelSelectScrollerInner,
+    children: (0, n.jsx)(s.RadioGroup, {
+      options: _,
       value: t,
-      itemInfoClassName: E.channelInfoWrapper,
-      itemTitleClassName: E.channelTitleWrapper,
+      itemInfoClassName: C.channelInfoWrapper,
+      itemTitleClassName: C.channelTitleWrapper,
       onChange: e => {
         let {
           value: t
         } = e;
-        return C(t)
+        return E(t)
       }
     })
   })

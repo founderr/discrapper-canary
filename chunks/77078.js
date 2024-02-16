@@ -223,13 +223,13 @@ n.r(t), n.d(t, {
     return H.usePrivateHeadingLevel
   },
   HiddenVisually: function() {
-    return j.HiddenVisually
+    return Y.HiddenVisually
   },
   KeyCombo: function() {
-    return Y.KeyCombo
+    return j.KeyCombo
   },
   PRETTY_KEYS: function() {
-    return Y.PRETTY_KEYS
+    return j.PRETTY_KEYS
   },
   Layer: function() {
     return W.Layer
@@ -604,10 +604,10 @@ n.r(t), n.d(t, {
     return eH.Text
   },
   TextArea: function() {
-    return ej.TextArea
+    return eY.TextArea
   },
   TextAreaAutosize: function() {
-    return eY.TextAreaAutosize
+    return ej.TextAreaAutosize
   },
   TextInput: function() {
     return eW.TextInput
@@ -749,8 +749,8 @@ var i = n("539826"),
   V = n("224763"),
   B = n("605451"),
   H = n("860226"),
-  j = n("741662"),
-  Y = n("533979"),
+  Y = n("741662"),
+  j = n("533979"),
   W = n("228256"),
   K = n("222163"),
   z = n("73643"),
@@ -803,8 +803,8 @@ var i = n("539826"),
   eV = n("980672"),
   eB = n("914907"),
   eH = n("577776"),
-  ej = n("74307"),
-  eY = n("324584"),
+  eY = n("74307"),
+  ej = n("324584"),
   eW = n("240353"),
   eK = n("161814"),
   ez = n("35672"),

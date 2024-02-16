@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getGameName: function() {
-    return S
+    return E
   },
   startBroadcastForStream: function() {
     return h
@@ -26,9 +26,9 @@ var a = n("872717"),
   d = n("568307"),
   c = n("9759"),
   f = n("194051"),
-  E = n("49111");
+  S = n("49111");
 
-function S(e) {
+function E(e) {
   var t;
   let n = null !== (t = null == e ? void 0 : e.gameName) && void 0 !== t ? t : null == e ? void 0 : e.name;
   return null != n ? n.trim() : null
@@ -50,8 +50,8 @@ function h(e, t) {
       channelId: f
     } = a;
   if (null == i || null == f) return;
-  let E = l.default.getId();
-  if (i !== E) return;
+  let S = l.default.getId();
+  if (i !== S) return;
   let h = l.default.getSessionId();
   if (null == h) return;
   let _ = u.default.getChannel(f),
@@ -60,7 +60,7 @@ function h(e, t) {
   let p = function(e) {
     var t;
     let n = d.default.getGameForPID(e),
-      a = S(n),
+      a = E(n),
       r = o.default.getGameByName(a);
     return null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "0"
   }(t);
@@ -73,7 +73,7 @@ function h(e, t) {
     })
   }({
     sessionId: h,
-    userId: E,
+    userId: S,
     applicationId: p,
     channelId: _.id,
     streamKey: e
@@ -99,7 +99,7 @@ async function p() {
   let e = f.default.getUserIdsToValidate();
   try {
     let t = await a.default.get({
-      url: E.Endpoints.USER_BROADCASTS,
+      url: S.Endpoints.USER_BROADCASTS,
       query: {
         user_ids: e
       }
@@ -123,7 +123,7 @@ async function m() {
     t = e.filter(e => null == e.viewers).map(e => e.channelId);
   if (0 !== t.length) try {
     let e = await a.default.get({
-      url: E.Endpoints.BROADCAST_CHANNELS,
+      url: S.Endpoints.BROADCAST_CHANNELS,
       query: {
         channel_ids: t
       }

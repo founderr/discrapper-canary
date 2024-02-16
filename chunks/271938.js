@@ -43,8 +43,8 @@ let R = n("551042").hasModalOpen,
   V = [],
   B = "",
   H = !1,
-  j = null,
-  Y = !1,
+  Y = null,
+  j = !1,
   W = !1,
   K = "",
   z = !1,
@@ -133,7 +133,7 @@ function el(e) {
   et("handleLogout called."), ea(), er(), !(null == e ? void 0 : e.isSwitchingAccount) && en(), u.default.PersistedStore.clearAll({
     omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-  }), C.default.clearAll(), p.clear(), g.default.clearUser(), d.default.remove(y), P = null, k = (null == e ? void 0 : e.isSwitchingAccount) ? v.LoginStates.LOGGING_IN : v.LoginStates.NONE, x = v.RegistrationStates.NONE, B = "", K = "", j = null, H = !1, z = !1, q = !1, X = {}, Q = {}
+  }), C.default.clearAll(), p.clear(), g.default.clearUser(), d.default.remove(y), P = null, k = (null == e ? void 0 : e.isSwitchingAccount) ? v.LoginStates.LOGGING_IN : v.LoginStates.NONE, x = v.RegistrationStates.NONE, B = "", K = "", Y = null, H = !1, z = !1, q = !1, X = {}, Q = {}
 }
 class eu extends u.default.Store {
   initialize() {
@@ -191,20 +191,20 @@ class eu extends u.default.Store {
     return H
   }
   getMFATotp() {
-    return Y
+    return j
   }
   getMFABackup() {
     return W
   }
   getMFAWebAuthn() {
-    return j
+    return Y
   }
   getMFAMethods() {
     let e = [];
-    return null != j && e.push({
+    return null != Y && e.push({
       type: "webauthn",
-      challenge: j
-    }), Y && e.push({
+      challenge: Y
+    }), j && e.push({
       type: "totp",
       backup_codes_allowed: W
     }), W && e.push({
@@ -239,7 +239,7 @@ class eu extends u.default.Store {
     return !F
   }
   getWebAuthnChallenge() {
-    return j
+    return Y
   }
   getSuspendedUserToken() {
     return ee
@@ -295,13 +295,13 @@ var ec = new eu(f.default, {
     let {
       token: t
     } = e;
-    k = v.LoginStates.NONE, es(t), er(), B = "", H = !1, j = null, K = ""
+    k = v.LoginStates.NONE, es(t), er(), B = "", H = !1, Y = null, K = ""
   },
   LOGIN_FAILURE: function(e) {
     let {
       error: t
     } = e;
-    B = "", H = !1, j = null, k = null != (Q = function(e) {
+    B = "", H = !1, Y = null, k = null != (Q = function(e) {
       if (Object.keys(e.fields).length > 0) return e.fields;
       let t = {
         message: e.message
@@ -317,7 +317,7 @@ var ec = new eu(f.default, {
       backup: r,
       totp: s
     } = e;
-    null != t && (B = t, H = n, K = "", j = null != i ? i : null, W = r, Y = s), Q = {}, k = v.LoginStates.MFA_STEP
+    null != t && (B = t, H = n, K = "", Y = null != i ? i : null, W = r, j = s), Q = {}, k = v.LoginStates.MFA_STEP
   },
   LOGIN_MFA: function() {
     k = v.LoginStates.LOGGING_IN_MFA
@@ -363,7 +363,7 @@ var ec = new eu(f.default, {
     let {
       isMultiAccount: t
     } = e;
-    Q = {}, k = v.LoginStates.NONE, B = "", H = !1, j = null, r = null, i = null, !t && (ea(), en(!1))
+    Q = {}, k = v.LoginStates.NONE, B = "", H = !1, Y = null, r = null, i = null, !t && (ea(), en(!1))
   },
   LOGIN_STATUS_RESET: function() {
     k = v.LoginStates.NONE

@@ -167,15 +167,15 @@ function L(e) {
     hideIcon: V = !1,
     "aria-label": B,
     "aria-labelledby": H
-  } = e, [j, Y] = r.useState(!1), {
+  } = e, [Y, j] = r.useState(!1), {
     ref: W,
     width: K,
     height: z
   } = (0, E.default)(), q = r.useCallback(e => {
-    j !== e && !o && (Y(e), e ? null == R || R() : null == A || A())
-  }, [o, A, R, j]), X = r.useCallback(e => {
-    j && !e && q(!1)
-  }, [q, j]), Q = (0, p.useIsVisible)(X), Z = r.useCallback(e => {
+    Y !== e && !o && (j(e), e ? null == R || R() : null == A || A())
+  }, [o, A, R, Y]), X = r.useCallback(e => {
+    Y && !e && q(!1)
+  }, [q, Y]), Q = (0, p.useIsVisible)(X), Z = r.useCallback(e => {
     if (w(e), G) {
       var t;
       null === (t = W.current) || void 0 === t || t.focus()
@@ -193,7 +193,7 @@ function L(e) {
   return (0, i.jsx)(c.Popout, {
     spacing: 0,
     animation: c.Popout.Animation.NONE,
-    shouldShow: j,
+    shouldShow: Y,
     onRequestOpen: () => {
       q(!0)
     },
@@ -241,7 +241,7 @@ function L(e) {
           W.current = e, Q.current = e
         },
         onClick: o ? void 0 : e => {
-          r(e), q(!j)
+          r(e), q(!Y)
         },
         onKeyDown: e => {
           "ArrowDown" === e.key ? q(!0) : "Escape" === e.key && (e.stopPropagation(), q(!1)), u(e)

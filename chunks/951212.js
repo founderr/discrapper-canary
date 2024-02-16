@@ -18,8 +18,8 @@ var r = n("77078"),
   d = n("206230"),
   c = n("49111");
 let f = window.matchMedia("(prefers-reduced-motion: reduce)"),
-  E = window.matchMedia("(prefers-contrast: more)"),
-  S = window.matchMedia("(prefers-contrast: less)"),
+  S = window.matchMedia("(prefers-contrast: more)"),
+  E = window.matchMedia("(prefers-contrast: less)"),
   h = window.matchMedia("(prefers-color-scheme: dark)"),
   _ = window.matchMedia("(prefers-color-scheme: light)"),
   C = window.matchMedia("(forced-colors: active)"),
@@ -30,7 +30,7 @@ function m() {
 }
 var T = {
   initBasic() {
-    f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), h.addListener(this.handleSystemColorPreferencesChanged), _.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), S.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
+    f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), h.addListener(this.handleSystemColorPreferencesChanged), _.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), S.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
   },
   init() {
     this.initBasic(), s.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
@@ -72,7 +72,7 @@ var T = {
   },
   handleSystemPrefersContrastChanged() {
     let e = "no-preference";
-    E.matches ? e = "more" : S.matches && (e = "less"), s.default.wait(() => {
+    S.matches ? e = "more" : E.matches && (e = "less"), s.default.wait(() => {
       o.systemPrefersContrastChanged(e)
     })
   }

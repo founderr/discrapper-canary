@@ -442,13 +442,13 @@ function O(e) {
     avatarCutoutHeight: V,
     avatarCutoutRadius: B,
     fill: H,
-    ...j
+    ...Y
   } = (0, o.useSpring)({
     immediate: !document.hasFocus(),
     config: T,
     from: G,
     to: w
-  }), Y = (0, p.getAvatarSize)(S), W = (0, p.getAvatarSpecs)(S), K = W.status * p.TYPING_WIDTH_RATIO, z = W.status * p.MOBILE_HEIGHT_RATIO, q = null != N ? (W.status * p.TYPING_WIDTH_RATIO - W.status) / 2 : 0, X = W.size - W.status - q - W.offset, Q = W.size - z - W.offset, Z = W.size + Math.ceil(q);
+  }), j = (0, p.getAvatarSize)(S), W = (0, p.getAvatarSpecs)(S), K = W.status * p.TYPING_WIDTH_RATIO, z = W.status * p.MOBILE_HEIGHT_RATIO, q = null != N ? (W.status * p.TYPING_WIDTH_RATIO - W.status) / 2 : 0, X = W.size - W.status - q - W.offset, Q = W.size - z - W.offset, Z = W.size + Math.ceil(q);
   return (0, i.jsx)(A, {
     ...e,
     ariaLabel: L,
@@ -463,12 +463,12 @@ function O(e) {
       "aria-hidden": !0,
       children: [(0, i.jsxs)("mask", {
         id: M,
-        width: Y,
-        height: Y,
+        width: j,
+        height: j,
         children: [(0, i.jsx)("circle", {
-          cx: Y / 2,
-          cy: Y / 2,
-          r: Y / 2,
+          cx: j / 2,
+          cy: j / 2,
+          r: j / 2,
           fill: "white"
         }), (0, i.jsx)(o.animated.rect, {
           color: "black",
@@ -483,8 +483,8 @@ function O(e) {
         className: m.foreignObject,
         x: 0,
         y: 0,
-        width: Y,
-        height: Y,
+        width: j,
+        height: j,
         mask: "url(#".concat(M, ")"),
         children: (0, i.jsx)(R, {
           src: I,
@@ -506,7 +506,7 @@ function O(e) {
             height: z,
             viewBox: "0 0 ".concat(K, " ").concat(z),
             className: D ? m.cursorDefault : void 0,
-            children: [(0, c.renderStatusMask)(j, W.status, U), (0, i.jsx)(o.animated.rect, {
+            children: [(0, c.renderStatusMask)(Y, W.status, U), (0, i.jsx)(o.animated.rect, {
               fill: H,
               width: K,
               height: z,

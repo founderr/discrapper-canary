@@ -15,7 +15,7 @@ var a = n("37983"),
   c = n("782340"),
   f = n("31665");
 
-function E(e) {
+function S(e) {
   let {
     className: t,
     isVertical: n
@@ -30,7 +30,7 @@ function E(e) {
   })
 }
 
-function S(e) {
+function E(e) {
   let {
     className: t,
     isVertical: n
@@ -56,10 +56,10 @@ function h(e) {
     let {
       className: t
     } = e;
-    return s ? (0, a.jsx)(S, {
+    return s ? (0, a.jsx)(E, {
       className: t,
       isVertical: u
-    }) : (0, a.jsx)(E, {
+    }) : (0, a.jsx)(S, {
       className: t,
       isVertical: u
     })

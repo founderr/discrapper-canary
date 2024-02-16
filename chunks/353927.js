@@ -37,10 +37,10 @@ n.r(t), n.d(t, {
     return H
   },
   DISABLED_DEVICE_ID: function() {
-    return j
+    return Y
   },
   DEFAULT_PRIORITY_SPEAKER_DUCKING: function() {
-    return Y
+    return j
   },
   DEFAULT_CALL_BITRATE: function() {
     return W
@@ -119,8 +119,8 @@ let x = 100,
   V = 64e3,
   B = 128e3,
   H = "default",
-  j = "disabled",
-  Y = .1,
+  Y = "disabled",
+  j = .1,
   W = 6e5,
   K = 15e4,
   z = 1e7,

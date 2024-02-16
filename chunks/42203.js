@@ -78,16 +78,16 @@ function B(e) {
 }
 
 function H(e) {
-  e.isPrivate() ? (delete U[e.id], j(e)) : e.isThread() ? Y(e) : S.GUILD_CHANNEL_TYPES.has(e.type) && function(e) {
+  e.isPrivate() ? (delete U[e.id], Y(e)) : e.isThread() ? j(e) : S.GUILD_CHANNEL_TYPES.has(e.type) && function(e) {
     W(e)
   }(e)
 }
 
-function j(e) {
+function Y(e) {
   N[e.id] = e, e.type === I.ChannelTypes.DM && (y[e.getRecipientId()] = e.id), P += 1
 }
 
-function Y(e) {
+function j(e) {
   let t = A[e.parent_id];
   D[e.id] = e.merge({
     nsfw: (null == t ? void 0 : t.nsfw) === !0,
@@ -116,7 +116,7 @@ function K(e) {
     for (let e of t.writes) W(e)
   }
   if (null != e.threads)
-    for (let t of e.threads) Y(t)
+    for (let t of e.threads) j(t)
 }
 
 function z() {
@@ -181,7 +181,7 @@ function $(e) {
   let {
     messages: t
   } = e;
-  for (let e of t) null != e.thread && !(e.thread.id in D) && S.ALL_CHANNEL_TYPES.has(e.thread.type) && Y((0, S.createChannelRecordFromServer)(e.thread))
+  for (let e of t) null != e.thread && !(e.thread.id in D) && S.ALL_CHANNEL_TYPES.has(e.thread.type) && j((0, S.createChannelRecordFromServer)(e.thread))
 }
 
 function ee(e) {
@@ -201,7 +201,7 @@ function ee(e) {
 }
 
 function et(e) {
-  null != e && !(e.id in D) && S.ALL_CHANNEL_TYPES.has(e.type) && Y((0, S.createChannelRecordFromServer)(e))
+  null != e && !(e.id in D) && S.ALL_CHANNEL_TYPES.has(e.type) && j((0, S.createChannelRecordFromServer)(e))
 }
 
 function en() {
@@ -321,11 +321,11 @@ var er = new ei(l.default, {
     let {
       lazyPrivateChannels: t
     } = e;
-    null != O && (N = {}, O.forEach(j)), t.forEach(j)
+    null != O && (N = {}, O.forEach(Y)), t.forEach(Y)
   },
   CONNECTION_OPEN: function(e) {
     let t = R;
-    for (let n of (y = {}, A = {}, R = {}, D = {}, L = {}, U = {}, M = new Set, O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(j), e.guilds)) "partial" === n.dataMode && r.forEach(t[n.id], W), K(n);
+    for (let n of (y = {}, A = {}, R = {}, D = {}, L = {}, U = {}, M = new Set, O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(Y), e.guilds)) "partial" === n.dataMode && r.forEach(t[n.id], W), K(n);
     en()
   },
   GUILD_CREATE: function(e) {
@@ -338,7 +338,7 @@ var er = new ei(l.default, {
     let {
       data: t
     } = e, n = !1, i = (0, _.getThreadsFromGuildFeedFetch)(t);
-    for (let e of i) !(e.id in D) && S.ALL_CHANNEL_TYPES.has(e.type) && (Y((0, S.createChannelRecordFromServer)(e)), n = !0);
+    for (let e of i) !(e.id in D) && S.ALL_CHANNEL_TYPES.has(e.type) && (j((0, S.createChannelRecordFromServer)(e)), n = !0);
     return n
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: Q,

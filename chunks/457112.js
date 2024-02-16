@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PictureInPictureWindow: function() {
-    return S
+    return E
   },
   default: function() {
     return h
@@ -17,12 +17,12 @@ var a = n("37983"),
   d = n("49111"),
   c = n("578549"),
   f = n("678016");
-let E = {
+let S = {
   top: 80,
   bottom: 132,
   left: 80
 };
-class S extends r.PureComponent {
+class E extends r.PureComponent {
   componentDidMount() {
     this.setPosition(this.props.position)
   }
@@ -47,7 +47,7 @@ class S extends r.PureComponent {
       maxX: i,
       maxY: o,
       dockedRect: c
-    } = this.props, f = Math.round(n), E = Math.round(o - r - this._height), S = Math.round(a), h = Math.round(i - s - this._width), _ = (0, u.getPlatform)(), C = _ !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+    } = this.props, f = Math.round(n), S = Math.round(o - r - this._height), E = Math.round(a), h = Math.round(i - s - this._width), _ = (0, u.getPlatform)(), C = _ !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
     if (null != c) {
       var p, m;
       return {
@@ -58,11 +58,11 @@ class S extends r.PureComponent {
     switch (e) {
       case d.PictureInPicturePositions.TOP_LEFT:
         return {
-          y: f, x: S
+          y: f, x: E
         };
       case d.PictureInPicturePositions.BOTTOM_LEFT:
         return {
-          y: E, x: S
+          y: S, x: E
         };
       case d.PictureInPicturePositions.TOP_RIGHT:
         return {
@@ -70,7 +70,7 @@ class S extends r.PureComponent {
         };
       default:
         return {
-          y: E, x: h
+          y: S, x: h
         }
     }
   }
@@ -194,7 +194,7 @@ class S extends r.PureComponent {
     }
   }
 }
-S.defaultProps = {
+E.defaultProps = {
   hidden: !1,
   roundCorners: !0
 };
@@ -222,7 +222,7 @@ var h = r.memo(e => {
           }, "pipWindow-".concat(e.id))
         }),
         C = e.length > 1 ? c.noBoxShadow : {};
-      return (0, a.jsx)(S, {
+      return (0, a.jsx)(E, {
         className: i(c.pictureInPictureWindowOverflow, f.elevationHigh, C),
         appContext: h,
         position: t.position,
@@ -232,10 +232,10 @@ var h = r.memo(e => {
         maxX: r,
         maxY: s,
         dockedRect: u,
-        edgeOffsetTop: E.top,
-        edgeOffsetBottom: E.bottom,
-        edgeOffsetLeft: E.left,
-        edgeOffsetRight: E.top,
+        edgeOffsetTop: S.top,
+        edgeOffsetBottom: S.bottom,
+        edgeOffsetLeft: S.left,
+        edgeOffsetRight: S.top,
         roundCorners: _,
         children: e
       })

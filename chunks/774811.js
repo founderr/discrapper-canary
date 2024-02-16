@@ -57,8 +57,8 @@ let b = r.forwardRef(function(e, t) {
       filter: V = !0,
       debounceTime: B,
       renderOptionLabel: H = L,
-      onSearchChange: j,
-      renderOptionPrefix: Y = () => null,
+      onSearchChange: Y,
+      renderOptionPrefix: j = () => null,
       renderOptionSuffix: W = () => null,
       "aria-describedby": K,
       "aria-invalid": z,
@@ -302,7 +302,7 @@ let b = r.forwardRef(function(e, t) {
             renderOptionLabel: H,
             updatePosition: r,
             popoutPosition: n,
-            renderOptionPrefix: Y,
+            renderOptionPrefix: j,
             renderOptionSuffix: W
           })
         },
@@ -357,7 +357,7 @@ let b = r.forwardRef(function(e, t) {
                     query: ef,
                     selectedOptions: eI,
                     loading: eT,
-                    renderOptionPrefix: Y,
+                    renderOptionPrefix: j,
                     renderOptionSuffix: W,
                     isDisabled: b,
                     isEditing: ep,
@@ -375,7 +375,7 @@ let b = r.forwardRef(function(e, t) {
                       null === (e = eo.current) || void 0 === e || e.setSelectionRange(0, null !== (t = null == ef ? void 0 : ef.length) && void 0 !== t ? t : 0)
                     },
                     onChange: e => {
-                      eg(e), null == j || j(e), eE(e), eD(!0), eh(!0)
+                      eg(e), null == Y || Y(e), eE(e), eD(!0), eh(!0)
                     },
                     onKeyDown: e => {
                       var t;

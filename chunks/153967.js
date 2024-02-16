@@ -1,38 +1,38 @@
 "use strict";
 n.r(t), n.d(t, {
   Banner: function() {
-    return a
+    return r
   }
 });
 var i = n("37983");
 n("884691");
-var r = n("75979");
+var a = n("75979");
 
-function a(e) {
+function r(e) {
   let {
     title: t,
     subtitle: n,
-    iconSrc: a,
+    iconSrc: r,
     backgroundSrc: s
   } = e;
   return (0, i.jsxs)("div", {
-    className: r.wrapper,
+    className: a.wrapper,
     style: null != s ? {
       backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url(".concat(s.toString(), ")")
     } : void 0,
-    children: [null != a && (0, i.jsx)("div", {
-      className: r.icon,
+    children: [null != r && (0, i.jsx)("div", {
+      className: a.icon,
       children: (0, i.jsx)("img", {
-        src: a.toString(),
+        src: r.toString(),
         alt: ""
       })
     }), (0, i.jsxs)("div", {
-      className: r.textWrapper,
+      className: a.textWrapper,
       children: [(0, i.jsx)("div", {
-        className: r.title,
+        className: a.title,
         children: t
       }), null != n && (0, i.jsx)("div", {
-        className: r.subtitle,
+        className: a.subtitle,
         children: n
       })]
     })]
