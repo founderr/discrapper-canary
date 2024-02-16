@@ -44,7 +44,11 @@ var o = new class t {
       r.default.post({
         url: l.Endpoints.METRICS,
         body: {
-          metrics: t
+          metrics: t,
+          client_info: {
+            built_at: "1708043668426",
+            build_number: "266948"
+          }
         },
         retries: 1
       }).catch(e => {

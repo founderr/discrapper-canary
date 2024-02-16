@@ -2630,7 +2630,11 @@
                         a.default.post({
                             url: R.Endpoints.METRICS,
                             body: {
-                                metrics: _
+                                metrics: _,
+                                client_info: {
+                                    built_at: "1708043668426",
+                                    build_number: "266948"
+                                }
                             },
                             retries: 1
                         }).catch(E => {
