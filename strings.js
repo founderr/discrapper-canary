@@ -16319,6 +16319,7 @@ e.exports = Object.freeze({
   SAFETY_HUB_VIOLATIONS_CONTAINER_NEW: "NEW",
   SAFETY_HUB_STANDALONE_PAGE_NAGBAR: "You lost access to Discord. Review your violations to understand for how long and why.",
   SAFETY_HUB_STANDALONE_PAGE_NAGBAR_CTA: "Learn More",
+  SAFETY_HUB_GUILD_REMOVED_DATE: "Removed on {removalDate}",
   SAFETY_POLICY_NOTICE_BUTTON: "Learn more",
   SAFETY_POLICY_NOTICE_HEADER: "You broke Discord's community guidelines",
   SAFETY_POLICY_NOTICE_BODY: "We've taken action that affects your account.",
