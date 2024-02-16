@@ -321,6 +321,11 @@ let o = {
     actions: ["VIBING_WUMPUS_PLAY_MUSIC", "VIBING_WUMPUS_STOP_MUSIC"],
     inlineRequire: () => E("874200").default,
     neverLoadBeforeConnectionOpen: !0
+  },
+  ContentInventoryManager: {
+    actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED"],
+    inlineRequire: () => E("389295").default,
+    neverLoadBeforeConnectionOpen: !0
   }
 };
 (0, t.initialize)(o)
