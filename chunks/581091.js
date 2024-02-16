@@ -36,18 +36,27 @@ function _(e) {
   let {
     since: t,
     getFormatter: n
-  } = e, s = i().diff(i(t), "s"), r = n(), l = i(t).format("LL");
-  return l = s < 60 ? r.minutes.format({
-    minutes: 1
-  }) : s < a ? r.minutes.format({
-    minutes: Math.floor(s / 60)
-  }) : s < o ? r.hours.format({
-    hours: Math.floor(s / a)
-  }) : s < d ? r.days.format({
-    days: Math.floor(s / o)
-  }) : s < u ? r.months.format({
-    months: Math.floor(s / d)
-  }) : r.years.format({
-    years: Math.floor(s / u)
+  } = e, s = i().diff(i(t), "s");
+  return function(e) {
+    let {
+      seconds: t,
+      getFormatter: n
+    } = e, s = n(), i = "";
+    return i = t < 60 ? s.minutes.format({
+      minutes: 1
+    }) : t < a ? s.minutes.format({
+      minutes: Math.floor(t / 60)
+    }) : t < o ? s.hours.format({
+      hours: Math.floor(t / a)
+    }) : t < d ? s.days.format({
+      days: Math.floor(t / o)
+    }) : t < u ? s.months.format({
+      months: Math.floor(t / d)
+    }) : s.years.format({
+      years: Math.floor(t / u)
+    })
+  }({
+    seconds: s,
+    getFormatter: n
   })
 }
