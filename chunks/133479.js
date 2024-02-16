@@ -46,8 +46,8 @@ function g() {
   }, [C]);
   let p = {
       [S.AccountStandingState.ALL_GOOD]: {
-        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
-        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
+        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE_V2,
+        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION_V2.format({
           termsOfService: T.SafetyHubLinks.TOS_LINK,
           communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
         }),
@@ -56,32 +56,29 @@ function g() {
         color: u.default.colors.STATUS_POSITIVE
       },
       [S.AccountStandingState.LIMITED]: {
-        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE,
-        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION,
+        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE_V2,
+        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION_V2,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT,
         Icon: o.CircleExclamationPointIcon,
         color: u.default.colors.STATUS_WARNING
       },
       [S.AccountStandingState.VERY_LIMITED]: {
-        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE,
-        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION,
+        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE_V2,
+        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION_V2,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT,
         Icon: o.CircleExclamationPointIcon,
         color: u.default.unsafe_rawColors.ORANGE_345
       },
       [S.AccountStandingState.AT_RISK]: {
-        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE,
+        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE_V2,
         description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_SHORT,
         Icon: o.CircleExclamationPointIcon,
         color: u.default.colors.STATUS_DANGER
       },
       [S.AccountStandingState.SUSPENDED]: {
-        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE,
-        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION.format({
-          termsOfService: T.SafetyHubLinks.TOS_LINK,
-          communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
-        }),
+        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE_V2,
+        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION_V2,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
         Icon: c.CircleXIcon,
         color: u.default.colors.ICON_MUTED

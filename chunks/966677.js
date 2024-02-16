@@ -48,15 +48,15 @@ let h = t => {
         children: [(0, n.jsx)(o.Heading, {
           variant: "heading-md/semibold",
           color: "text-normal",
-          children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE.format({
+          children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE_V2.format({
             count: s.toString()
-          }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED.format({
+          }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED_V2.format({
             count: s.toString()
           })
         }), (0, n.jsx)(o.Heading, {
           variant: "text-sm/normal",
           color: "text-muted",
-          children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED
+          children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE_V2 : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED_V2
         })]
       }), (0, n.jsx)("div", {
         className: U.caret,
@@ -108,12 +108,12 @@ let h = t => {
       children: (0, A.getClassificationRelativeIncidentTime)(e)
     })
   },
-  D = () => (0, n.jsx)(o.Text, {
+  F = () => (0, n.jsx)(o.Text, {
     variant: "text-xs/bold",
     className: U.newBadge,
     children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
   }),
-  F = t => {
+  D = t => {
     var e;
     let {
       classification: i
@@ -140,7 +140,7 @@ let h = t => {
       }),
       children: (0, n.jsxs)("div", {
         className: U.descriptionContainer,
-        children: [d ? (0, n.jsx)(D, {}) : (0, n.jsx)(O, {
+        children: [d ? (0, n.jsx)(F, {}) : (0, n.jsx)(O, {
           timestamp: c
         }), (0, n.jsx)(o.Heading, {
           variant: "heading-lg/normal",
@@ -202,7 +202,7 @@ let h = t => {
             height: "1px",
             width: "100%"
           }
-        }), E.length > 0 && E.map(t => (0, n.jsx)(F, {
+        }), E.length > 0 && E.map(t => (0, n.jsx)(D, {
           classification: t
         }, t.id)), E.length < a.length && (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsx)(o.TabBar.Separator, {

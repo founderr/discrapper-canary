@@ -50,7 +50,7 @@ var a = n("77078"),
           type: "button",
           color: a.Button.Colors.BRAND,
           onClick: T,
-          children: c.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT
+          children: c.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2
         })
       })]
     })

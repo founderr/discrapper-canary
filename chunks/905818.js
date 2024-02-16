@@ -526,8 +526,8 @@ class z extends n.PureComponent {
           }), (0, a.jsx)(E.TabBar.Item, {
             className: V.settingsTabBarItem,
             id: H.SafetyHubView.ACCOUNT_STANDING,
-            "aria-label": w.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT,
-            children: w.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT
+            "aria-label": w.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
+            children: w.default.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2
           })]
         }), (0, a.jsx)(E.TabBar.Panel, {
           id: n,

@@ -57,7 +57,7 @@ let m = e => {
       children: [(0, i.jsx)(o.Text, {
         variant: "eyebrow",
         color: "text-muted",
-        children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
+        children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER_V2
       }), (0, i.jsx)("ul", {
         className: C.classificationActionsTakenList,
         children: t.map(e => (0, i.jsx)(v, {
@@ -102,7 +102,7 @@ let m = e => {
         className: C.classificationPolicyDescriptionContainer,
         children: (0, i.jsx)(o.Text, {
           variant: "text-md/normal",
-          children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
+          children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER_V2.format({
             classificationDescription: t
           })
         })
@@ -153,11 +153,11 @@ let m = e => {
       children: [(0, i.jsx)(o.Text, {
         variant: "eyebrow",
         color: "text-muted",
-        children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
+        children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_WHAT_YOU_CAN_DO_HEADER
       }), (0, i.jsx)(o.Text, {
         className: C.guidelinesExplanation,
         variant: "text-sm/normal",
-        children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
+        children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_WHAT_YOU_CAN_DO_DESCRIPTION.format({
           tosLink: t,
           communityGuidelinesLink: n
         })
