@@ -13,6 +13,9 @@ n.r(t), n.d(t, {
     return f
   },
   fetchQuestRewardCode: function() {
+    return S
+  },
+  dismissQuestContent: function() {
     return E
   }
 });
@@ -127,7 +130,7 @@ async function f(e, t) {
     }
   }
 }
-async function E(e) {
+async function S(e) {
   let t = i.default.isFetchingRewardCode(e);
   if (!t) {
     r.default.dispatch({
@@ -149,6 +152,32 @@ async function E(e) {
         error: new s.default(t),
         questId: e
       }), t
+    }
+  }
+}
+async function E(e, t) {
+  let n = i.default.isDismissingContent(e);
+  if (!n) {
+    r.default.dispatch({
+      type: "QUESTS_DISMISS_CONTENT_BEGIN",
+      questId: e,
+      content: t
+    });
+    try {
+      let n = await a.default.post({
+        url: u.Endpoints.QUESTS_DISMISS_CONTENT(e, t),
+        body: {}
+      });
+      r.default.dispatch({
+        type: "QUESTS_DISMISS_CONTENT_SUCCESS",
+        dismissedQuestUserStatus: (0, l.questUserStatusFromServer)(n.body)
+      })
+    } catch (t) {
+      r.default.dispatch({
+        type: "QUESTS_DISMISS_CONTENT_FAILURE",
+        error: new s.default(t),
+        questId: e
+      })
     }
   }
 }

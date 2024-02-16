@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return p
   }
 }), n("222007");
 var a = n("446674"),
@@ -12,9 +12,10 @@ let s = !1,
   u = new Set,
   o = new Set,
   d = new Set,
-  c = new Map;
+  c = new Set,
+  f = new Map;
 
-function f(e, t) {
+function S(e, t) {
   i = new Map(i);
   let n = i.get(e);
   null != n && i.set(e, {
@@ -24,8 +25,8 @@ function f(e, t) {
 }
 
 function E(e, t) {
-  let n = new Map(c);
-  n.set(e, t), c = n;
+  let n = new Map(f);
+  n.set(e, t), f = n;
   let a = i.get(e),
     r = null == a ? void 0 : a.userStatus;
   if (null != r && null == r.claimedAt) {
@@ -35,15 +36,20 @@ function E(e, t) {
         claimedAt: t.claimedAt
       }
     };
-    f(e, n)
+    S(e, n)
   }
 }
 
-function S(e) {
+function h(e) {
   let t = new Set(u);
   t.delete(e), u = t
 }
-class h extends a.default.Store {
+
+function _(e) {
+  let t = new Set(c);
+  t.delete(e), c = t
+}
+class C extends a.default.Store {
   get quests() {
     return i
   }
@@ -62,12 +68,15 @@ class h extends a.default.Store {
   isFetchingRewardCode(e) {
     return d.has(e)
   }
+  isDismissingContent(e) {
+    return c.has(e)
+  }
   getRewardCode(e) {
-    return c.get(e)
+    return f.get(e)
   }
 }
-h.displayName = "QuestsStore";
-var _ = new h(r.default, {
+C.displayName = "QuestsStore";
+var p = new C(r.default, {
   LOGOUT: function() {
     s = !1, i = new Map, l = 0, u = new Set
   },
@@ -88,7 +97,7 @@ var _ = new h(r.default, {
       questId: t,
       userStatus: n
     } = e;
-    f(t, {
+    S(t, {
       userStatus: n
     })
   },
@@ -102,15 +111,15 @@ var _ = new h(r.default, {
     let {
       enrolledQuestUserStatus: t
     } = e;
-    f(t.questId, {
+    S(t.questId, {
       userStatus: t
-    }), S(t.questId)
+    }), h(t.questId)
   },
   QUESTS_ENROLL_FAILURE: function(e) {
     let {
       questId: t
     } = e;
-    S(t)
+    h(t)
   },
   QUESTS_FETCH_REWARD_CODE_BEGIN: function(e) {
     let {
@@ -149,5 +158,25 @@ var _ = new h(r.default, {
       questId: t
     } = e, n = new Set(o);
     n.delete(t), o = n
+  },
+  QUESTS_DISMISS_CONTENT_BEGIN: function(e) {
+    let {
+      questId: t
+    } = e, n = new Set(c);
+    n.add(t), c = n
+  },
+  QUESTS_DISMISS_CONTENT_SUCCESS: function(e) {
+    let {
+      dismissedQuestUserStatus: t
+    } = e;
+    S(t.questId, {
+      userStatus: t
+    }), _(t.questId)
+  },
+  QUESTS_DISMISS_CONTENT_FAILURE: function(e) {
+    let {
+      questId: t
+    } = e;
+    _(t)
   }
 })

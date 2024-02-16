@@ -1,7 +1,15 @@
 "use strict";
-var t, o;
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   QuestsExperimentLocations: function() {
-    return t
+    return r
+  },
+  DismissibleQuestContentFlags: function() {
+    return i
   }
-}), (o = t || (t = {})).ACTIVITY_PANEL = "quests_bar_activity_panel", o.QUESTS_MANAGER = "quests_manager", o.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory"
+});
+var a, r, s = n("588025");
+(a = r || (r = {})).ACTIVITY_PANEL = "quests_bar_activity_panel", a.QUESTS_MANAGER = "quests_manager", a.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory";
+let i = {
+  [s.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
+  [s.QuestContent.QUEST_BAR]: 2
+}
