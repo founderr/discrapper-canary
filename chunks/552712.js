@@ -12,12 +12,14 @@ var r = n("446674"),
   l = n("546463");
 let u = new Set,
   c = new Set,
-  d = {},
-  f = {},
-  E = {};
+  d = new Map,
+  f = new Map,
+  E = new Map;
 
 function p(e) {
-  d[e.id] = o.default.createFromServer(e)
+  d.set(e.id, o.default.createFromServer(e)), !f.has(e.application_id) && f.set(e.application_id, new Set);
+  let t = f.get(e.application_id);
+  t.add(e.id)
 }
 
 function h(e) {
@@ -43,29 +45,29 @@ function m(e) {
 }
 
 function T() {
-  u = new Set, c = new Set, d = {}, f = {}, E = {}
+  u = new Set, c = new Set, d = new Map, f = new Map, E = new Map
 }
 
 function g() {
   if (i === a.default.locale) return !1;
   i = a.default.locale, T()
 }
-class I extends r.default.Store {
+class I extends r.Store {
   initialize() {
     this.waitFor(a.default, l.default), this.syncWith([a.default], g), i = a.default.locale
   }
   get(e) {
-    return d[e]
+    return d.get(e)
   }
   getForApplication(e) {
-    let t = f[e];
-    return null == t ? [] : Array.from(t).map(e => d[e])
+    let t = f.get(e);
+    return null == t ? [] : Array.from(t).map(e => d.get(e))
   }
   isFetching(e) {
     return u.has(e)
   }
   getSKUs() {
-    return d
+    return Object.fromEntries(d)
   }
   didFetchingSkuFail(e) {
     return c.has(e)
@@ -109,11 +111,10 @@ var C = new I(s.default, {
   SKUS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
-      applicationId: n,
-      skus: i
+      skus: n
     } = e;
-    for (let e of i) h(e);
-    null != t && (E[t] = new Set(i.map(e => e.id))), null != n && (f[n] = new Set(i.map(e => e.id)))
+    for (let e of n) h(e);
+    null != t && E.set(t, new Set(n.map(e => e.id)))
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: m,
   APPLICATION_STORE_CLEAR_DATA: T,

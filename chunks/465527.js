@@ -3,7 +3,7 @@ n.r(e), n.d(e, {
   fetchSKU: function() {
     return I
   },
-  fetchSKUsForApplication: function() {
+  fetchTestSKUsForApplication: function() {
     return A
   },
   fetchPurchasePreview: function() {
@@ -71,8 +71,7 @@ async function A(t) {
     r = u.body;
   return i.default.dispatch({
     type: "SKUS_FETCH_SUCCESS",
-    skus: r,
-    applicationId: t
+    skus: r
   }), r
 }
 async function p(t, e, n, u) {

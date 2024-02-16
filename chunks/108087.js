@@ -56,7 +56,7 @@ async function h(e) {
     errorCode: f.RPCErrors.INVALID_COMMAND
   }, "No application.");
   if (o.default.inTestModeForApplication(n) || i.default.inDevModeForApplication(n)) {
-    let e = await s.fetchSKUsForApplication(n, !1),
+    let e = await s.fetchTestSKUsForApplication(n, !1),
       t = await E(n, e);
     return [...e.filter(e => null != e.price), ...t]
   }
