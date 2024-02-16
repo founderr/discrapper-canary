@@ -20,8 +20,8 @@ var a = n("37983"),
   C = n("433487"),
   I = n("58608"),
   S = n("284679"),
-  m = n("448881"),
-  p = n("374023"),
+  p = n("448881"),
+  m = n("374023"),
   T = n("2973"),
   g = n("588025"),
   A = n("227231"),
@@ -126,13 +126,13 @@ let Y = s.forwardRef(function(e, t) {
     onCtxMenuOpen: h,
     onCtxMenuClose: _,
     onCtxMenuSelect: S,
-    quest: p,
+    quest: m,
     useReducedMotion: N
-  } = e, P = (0, d.useStateFromStores)([T.default], () => T.default.isEnrolling(p.id), [p]), b = (0, d.useStateFromStores)([E.default], () => E.default.locale), U = s.useMemo(() => new Date(p.config.expiresAt).toLocaleDateString(b, {
+  } = e, P = (0, d.useStateFromStores)([T.default], () => T.default.isEnrolling(m.id), [m]), b = (0, d.useStateFromStores)([E.default], () => E.default.locale), U = s.useMemo(() => new Date(m.config.expiresAt).toLocaleDateString(b, {
     dateStyle: "long"
-  }), [p.config.expiresAt, b]), G = s.useMemo(() => p.config.videoAssets.includes(g.QuestContent.QUEST_BAR), [p]), j = s.useCallback(() => {
-    (0, m.enrollInQuest)(p.id)
-  }, [p]), w = (0, M.useHandleClaimQuestsReward)(p), k = (null === (n = p.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = p.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
+  }), [m.config.expiresAt, b]), G = s.useMemo(() => m.config.videoAssets.includes(g.QuestContent.QUEST_BAR), [m]), j = s.useCallback(() => {
+    (0, p.enrollInQuest)(m.id)
+  }, [m]), w = (0, M.useHandleClaimQuestsReward)(m), k = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, F = (null === (l = m.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
   return (0, a.jsx)(u.animated.div, {
     "aria-hidden": !o && f,
     className: i(x.content, x.contentExpanded),
@@ -150,16 +150,16 @@ let Y = s.forwardRef(function(e, t) {
         children: [(0, a.jsxs)("div", {
           className: x.questAcceptedContentHeading,
           children: [(0, a.jsx)("img", {
-            alt: p.config.messages.rewardName,
+            alt: m.config.messages.rewardName,
             className: x.questProgressRewardTile,
-            src: (0, A.getRewardAssetUrl)(p.id)
+            src: (0, A.getRewardAssetUrl)(m.id)
           }), (0, a.jsxs)("div", {
             className: x.questAcceptedContentCopy,
             children: [(0, a.jsx)(c.Heading, {
               className: x.questAcceptedContentCopyHeading,
               color: "always-white",
               variant: "heading-sm/semibold",
-              children: (0, A.getContextualEntrypointHeading)(p)
+              children: (0, A.getContextualEntrypointHeading)(m)
             }), (0, a.jsx)(c.Text, {
               className: x.questAcceptedContentCopySubheading,
               color: "always-white",
@@ -176,7 +176,8 @@ let Y = s.forwardRef(function(e, t) {
           onClose: _,
           onSelect: S,
           onHide: D.NOOP,
-          getGameLink: p.config.getGameLink,
+          questContent: g.QuestContent.QUEST_BAR,
+          questConfig: m.config,
           shouldShowDisclosure: !1,
           children: e => (0, a.jsx)(c.Clickable, {
             ...e,
@@ -198,12 +199,12 @@ let Y = s.forwardRef(function(e, t) {
         color: "always-white",
         variant: "text-xs/normal",
         children: y.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-          gameTitle: p.config.messages.gameTitle,
-          streamingDurationRequirement: p.config.streamDurationRequirementMinutes,
-          questReward: p.config.messages.rewardNameWithArticle
+          gameTitle: m.config.messages.gameTitle,
+          streamingDurationRequirement: m.config.streamDurationRequirementMinutes,
+          questReward: m.config.messages.rewardNameWithArticle
         })
       }), (0, a.jsx)(R.default, {
-        quest: p
+        quest: m
       })]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
@@ -218,7 +219,8 @@ let Y = s.forwardRef(function(e, t) {
             onClose: _,
             onSelect: S,
             onHide: D.NOOP,
-            getGameLink: p.config.getGameLink,
+            questContent: g.QuestContent.QUEST_BAR,
+            questConfig: m.config,
             shouldShowDisclosure: !0,
             children: e => (0, a.jsx)(c.Clickable, {
               ...e,
@@ -232,22 +234,22 @@ let Y = s.forwardRef(function(e, t) {
           className: x.details,
           children: [(0, a.jsx)(v.default, {
             className: x.rewardTile,
-            quest: p
+            quest: m
           }), (0, a.jsx)(c.Heading, {
             className: x.title,
             color: "always-white",
             variant: "heading-md/medium",
             children: y.default.Messages.QUESTS_TITLE.format({
-              questName: p.config.messages.questName
+              questName: m.config.messages.questName
             })
           }), (0, a.jsx)(c.Text, {
             className: x.description,
             color: "always-white",
             variant: "text-sm/normal",
             children: y.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-              gameTitle: p.config.messages.gameTitle,
-              streamingDurationRequirement: p.config.streamDurationRequirementMinutes,
-              questReward: p.config.messages.rewardNameWithArticle
+              gameTitle: m.config.messages.gameTitle,
+              streamingDurationRequirement: m.config.streamDurationRequirementMinutes,
+              questReward: m.config.messages.rewardNameWithArticle
             })
           })]
         }), (0, a.jsx)("div", {
@@ -265,7 +267,7 @@ let Y = s.forwardRef(function(e, t) {
       }), (0, a.jsx)("div", {
         className: x.heroAssetWrapper,
         style: {
-          color: p.config.colors.primary
+          color: m.config.colors.primary
         },
         children: (0, a.jsx)(I.default, {
           autoPlay: !N,
@@ -274,9 +276,9 @@ let Y = s.forwardRef(function(e, t) {
           playsInline: !0,
           className: x.heroAsset,
           controls: !1,
-          poster: (0, A.getQuestBarStaticHeroAssetUrl)(p.id),
+          poster: (0, A.getQuestBarStaticHeroAssetUrl)(m.id),
           children: N || !G ? null : (0, a.jsx)("source", {
-            src: (0, A.getQuestBarAnimatedHeroAssetUrl)(p.id),
+            src: (0, A.getQuestBarAnimatedHeroAssetUrl)(m.id),
             type: "video/webm"
           })
         }, N ? "static" : "animated")
@@ -286,7 +288,7 @@ let Y = s.forwardRef(function(e, t) {
 });
 var W = function() {
   var e, t, n;
-  let l = (0, p.useIsEligibleForQuests)({
+  let l = (0, m.useIsEligibleForQuests)({
       location: P.QuestsExperimentLocations.ACTIVITY_PANEL,
       autoTrackExposure: !0
     }),
@@ -296,7 +298,7 @@ var W = function() {
     E = !r && c,
     C = s.useRef(-1),
     I = s.useRef(!1),
-    [m, N] = s.useState(!1),
+    [p, N] = s.useState(!1),
     [R, v] = s.useState(!1),
     [O, L] = s.useState(!1),
     [M, D] = s.useState(!0),
@@ -360,10 +362,10 @@ var W = function() {
       window.clearTimeout(C.current), G.current = !0, v(!1), Q()
     }, [Q]),
     ee = s.useCallback(() => {
-      if (!F) !m && (C.current = window.setTimeout(() => {
+      if (!F) !p && (C.current = window.setTimeout(() => {
         !I.current && L(!1)
       }, 200))
-    }, [m, F]),
+    }, [p, F]),
     et = s.useCallback(() => {
       I.current = !0, $()
     }, [$]),
