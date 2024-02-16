@@ -4374,6 +4374,7 @@ e.exports = Object.freeze({
   COPY_ID_COMMAND: "Copy Command ID",
   COPY_ID_EMOJI: "Copy Emoji ID",
   COPY_ID_EVENT: "Copy Event ID",
+  COPY_ID_EVENT_RECURRENCE: "Copy Recurrence ID",
   COPY_ID_GUILD: "Copy Server ID",
   COPY_ID_MESSAGE: "Copy Message ID",
   COPY_ID_ROLE: "Copy Role ID",
