@@ -2632,8 +2632,8 @@
                             body: {
                                 metrics: _,
                                 client_info: {
-                                    built_at: "1708044910924",
-                                    build_number: "266957"
+                                    built_at: "1708045911847",
+                                    build_number: "266964"
                                 }
                             },
                             retries: 1
