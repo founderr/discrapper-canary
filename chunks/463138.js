@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return U
   }
 }), n("222007"), n("506083");
 var a = n("37983"),
@@ -16,25 +16,26 @@ var a = n("37983"),
   m = n("540227"),
   f = n("755575"),
   _ = n("552190"),
-  h = n("798016"),
-  E = n("918418"),
+  E = n("798016"),
+  h = n("918418"),
   v = n("947319"),
   R = n("420938"),
   x = n("111181"),
   p = n("677734"),
-  g = n("538418"),
-  N = n("584866"),
-  T = n("41877"),
-  S = n("71514"),
-  I = n("265104"),
+  N = n("538418"),
+  g = n("584866"),
+  I = n("41877"),
+  T = n("71514"),
+  S = n("265104"),
   M = n("345516"),
   j = n("244599"),
   C = n("291028"),
   b = n("821003"),
-  y = n("782340"),
-  L = n("260839");
+  y = n("49111"),
+  L = n("782340"),
+  D = n("260839");
 
-function D(e, t) {
+function A(e, t) {
   let {
     elements: n
   } = e;
@@ -46,7 +47,7 @@ function D(e, t) {
   })
 }
 
-function A(e, t) {
+function O(e, t) {
   let {
     elements: n
   } = e;
@@ -57,71 +58,76 @@ function A(e, t) {
     return n === t
   })
 }
-var O = e => {
+var U = e => {
   let {
     node: t,
     reportType: n,
-    history: O,
-    onSelectChild: U,
-    onModalClose: k,
-    multiSelect: B,
+    history: U,
+    onSelectChild: k,
+    onModalClose: B,
+    multiSelect: P,
     reportId: G,
-    textInput: P
-  } = e, w = D(t, "checkbox"), V = D(t, "text_line_resource"), F = A(t, "external_link"), H = A(t, "free_text"), z = A(t, "dropdown"), [Y, W] = l.useState(!1), [K, q] = l.useState(!1), [Z, X] = l.useState(() => ({})), [J, Q] = l.useState(() => ({})), [$, ee] = l.useState((0, i.areRequiredElementsUnfilled)(H, z, w, P, B)), et = function(e, t) {
+    textInput: w
+  } = e, V = A(t, "checkbox"), F = A(t, "text_line_resource"), H = O(t, "external_link"), z = O(t, "free_text"), Y = O(t, "dropdown"), [W, K] = l.useState(!1), [q, Z] = l.useState(""), [X, J] = l.useState(() => ({})), [Q, $] = l.useState(() => ({})), [ee, et] = l.useState((0, i.areRequiredElementsUnfilled)(z, Y, V, w, P)), en = function(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
       a = {
-        ...J
+        ...Q
       };
     a[e] = {
       value: t,
       isValid: n
-    }, Q(a), ee((0, i.areRequiredElementsUnfilled)(H, z, w, a, Z))
-  }, en = l.useMemo(() => e => {
-    U({
+    }, $(a), et((0, i.areRequiredElementsUnfilled)(z, Y, V, a, X))
+  }, ea = l.useMemo(() => e => {
+    k({
       nodeRef: t.id,
       destination: e,
-      textInput: null != H || null != z ? J : void 0,
-      multiSelect: null != w ? {
-        name: w.name,
-        state: Z
+      textInput: null != z || null != Y ? Q : void 0,
+      multiSelect: null != V ? {
+        name: V.name,
+        state: X
       } : void 0
     })
-  }, [t, U, w, Z, J, H, z]);
+  }, [t, k, V, X, Q, z, Y]);
   l.useEffect(() => {
-    null != B && X(B), null != P && Q(P)
-  }, [B, P]);
-  let ea = () => e.onSubmit({
-    nodeRef: t.id,
-    destination: ["", e.successNodeId]
-  }).then(() => {
-    q(!1), en(["", e.successNodeId])
-  }).catch(() => {
-    q(!0)
-  }).finally(() => {
-    W(!1)
-  });
+    null != P && J(P), null != w && $(w)
+  }, [P, w]);
+  let el = e => {
+      if (e === y.AbortCodes.INVALID_FORM_BODY) Z(L.default.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
+      else Z(L.default.Messages.MOBILE_REPORTS_SUBMIT_FAILED)
+    },
+    er = () => e.onSubmit({
+      nodeRef: t.id,
+      destination: ["", e.successNodeId]
+    }).then(() => {
+      Z(""), ea(["", e.successNodeId])
+    }).catch(e => {
+      var t;
+      el(null === (t = e.body) || void 0 === t ? void 0 : t.code)
+    }).finally(() => {
+      K(!1)
+    });
   return (0, a.jsxs)("div", {
-    className: L.container,
+    className: D.container,
     children: [(0, a.jsxs)(r.ModalHeader, {
       separator: !1,
       direction: s.default.Direction.VERTICAL,
-      className: L.header,
+      className: D.header,
       children: [(0, a.jsx)(M.default, {
-        element: D(t, "success")
+        element: A(t, "success")
       }), (0, a.jsx)(p.default, {
         node: t
-      }), (0, a.jsx)(g.default, {
+      }), (0, a.jsx)(N.default, {
         node: t
       })]
     }), (0, a.jsxs)(r.ModalContent, {
-      className: L.body,
-      children: [null != V ? (0, a.jsx)(j.default, {
-        element: V
-      }) : null, null != D(t, "breadcrumbs") && (0, a.jsx)(o.default, {
-        history: O
-      }), null != D(t, "message_preview") && ("message" === n.name || "first_dm" === n.name) && (0, a.jsx)(T.default, {
+      className: D.body,
+      children: [null != F ? (0, a.jsx)(j.default, {
+        element: F
+      }) : null, null != A(t, "breadcrumbs") && (0, a.jsx)(o.default, {
+        history: U
+      }), null != A(t, "message_preview") && ("message" === n.name || "first_dm" === n.name) && (0, a.jsx)(I.default, {
         message: n.record
-      }), null != D(t, "user_preview") && "user" === n.name ? (0, a.jsx)(C.default, {
+      }), null != A(t, "user_preview") && "user" === n.name ? (0, a.jsx)(C.default, {
         user: n.record
       }) : null, function(e) {
         let {
@@ -134,77 +140,77 @@ var O = e => {
           return b.REMEDIATION_ELEMENT_TYPES.includes(t)
         })
       }(t) && (0, a.jsx)(r.Heading, {
-        className: L.remediationElementsHeader,
+        className: D.remediationElementsHeader,
         variant: "heading-sm/semibold",
-        children: y.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
-      }), null != D(t, "block_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name) && (0, a.jsx)(u.default, {
+        children: L.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
+      }), null != A(t, "block_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name) && (0, a.jsx)(u.default, {
         userId: "user" === n.name ? n.record.id : n.record.author.id,
         reportId: G,
         reportName: n.name
-      }), null != D(t, "delete_message") && "message" === n.name && (0, a.jsx)(m.default, {
+      }), null != A(t, "delete_message") && "message" === n.name && (0, a.jsx)(m.default, {
         message: n.record,
         reportId: G
-      }), null != D(t, "leave_guild") && "guild" === n.name && (0, a.jsx)(N.default, {
+      }), null != A(t, "leave_guild") && "guild" === n.name && (0, a.jsx)(g.default, {
         guildId: n.record.id,
         reportId: G
-      }), null != D(t, "channel_preview") && "stage_channel" === n.name && (0, a.jsx)(I.default, {
+      }), null != A(t, "channel_preview") && "stage_channel" === n.name && (0, a.jsx)(S.default, {
         stageInstance: n.record
-      }), null != D(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, a.jsx)(x.default, {
+      }), null != A(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, a.jsx)(x.default, {
         event: n.record
-      }), null != D(t, "guild_directory_entry_preview") && "guild_directory_entry" === n.name && (0, a.jsx)(v.default, {
+      }), null != A(t, "guild_directory_entry_preview") && "guild_directory_entry" === n.name && (0, a.jsx)(v.default, {
         entry: n.record
-      }), null != D(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, a.jsx)(R.default, {
+      }), null != A(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, a.jsx)(R.default, {
         entry: n.record
-      }), null != w && (0, a.jsx)(S.default, {
-        element: w,
+      }), null != V && (0, a.jsx)(T.default, {
+        element: V,
         onChange: (e, t) => {
           let n = {
-            ...Z
+            ...X
           };
-          e in Z ? delete n[e] : n[e] = t, X(n), ee((0, i.areRequiredElementsUnfilled)(H, z, w, J, n))
+          e in X ? delete n[e] : n[e] = t, J(n), et((0, i.areRequiredElementsUnfilled)(z, Y, V, Q, n))
         },
-        state: Z
-      }), ("user_urf" === n.name || "message_urf" === n.name) && null != z && z.length > 0 && (0, a.jsx)(f.default, {
+        state: X
+      }), ("user_urf" === n.name || "message_urf" === n.name) && null != Y && Y.length > 0 && (0, a.jsx)(f.default, {
+        elements: Y,
+        onChange: en,
+        state: Q
+      }), ("user_urf" === n.name || "message_urf" === n.name) && null != z && z.length > 0 && (0, a.jsx)(h.default, {
         elements: z,
-        onChange: et,
-        state: J
-      }), ("user_urf" === n.name || "message_urf" === n.name) && null != H && H.length > 0 && (0, a.jsx)(E.default, {
-        elements: H,
-        onChange: et,
-        state: J
+        onChange: en,
+        state: Q
       }), (0, a.jsx)(c.default, {
         node: t,
-        onSelectChild: en
-      }), null != F && F.length > 0 ? (0, a.jsx)(h.default, {
-        elements: F
+        onSelectChild: ea
+      }), null != H && H.length > 0 ? (0, a.jsx)(E.default, {
+        elements: H
       }) : null, (0, a.jsx)(_.default, {
-        hasError: K,
+        errorMessage: q,
         onClose: () => {
-          q(!1)
+          Z("")
         }
       })]
     }), (0, a.jsx)(d.default, {
       button: t.button,
-      submitting: Y,
-      disableNext: $,
+      submitting: W,
+      disableNext: ee,
       onClick: e => {
         switch (e.type) {
           case "done":
           case "cancel":
-            k();
+            B();
             break;
           case "next":
-            en(["", e.target]);
+            ea(["", e.target]);
             break;
           case "submit":
-            W(!0), ea()
+            K(!0), er()
         }
       },
       onBackClicked: e.onNavigateBack,
-      canNavigateBack: O.length > 0
+      canNavigateBack: U.length > 0
     }), (0, a.jsx)(r.ModalCloseButton, {
-      className: L.closeButton,
-      onClick: k
+      className: D.closeButton,
+      onClick: B
     })]
   })
 }

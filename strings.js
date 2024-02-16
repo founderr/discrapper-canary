@@ -16446,6 +16446,7 @@ e.exports = Object.freeze({
   URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON: "Report a Message",
   EMAIL_ENTER_MODAL_INPUT_ERROR: "Not a well formed email address.",
   IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR: "Invalid Input",
+  IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR: "We couldn't locate the content you are trying to report. Please review the details of your submission and re-submit.",
   LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE: "Why don't I see application commands?",
   LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_TITLE: "Upgrade your chat",
   LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_MESSAGE: "Get access to slash commands and other great ways to chat by enabling our latest features.\n\nYou can always go back to legacy chat at any time by heading over to $[User Settings > Accessibility](openSettingsHook).",
