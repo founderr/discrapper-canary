@@ -30,6 +30,10 @@ let s = {
     cozy_header: "Cozy header",
     mobile_profile_effect_debug_controls: "mobile_profile_effect_debug_controls",
     enable_new_search_filters: "Enables new search filters behavior",
+    nav_experiment_server_drawer_enabled: "[NavI] Enable expandable server drawer",
+    nav_experiment_server_drawer_no_activity: "[NavI] Hide activity in server drawer",
+    nav_experiment_you_bar_grounded: "[NavI] Grounded you bar",
+    nav_experiment_you_bar_large_buttons: "[NavI] Small buttons in you bar",
     force_channel_list_v2: "Force channel list V2",
     render_native_message_previews: "Render native message previews in search"
   },

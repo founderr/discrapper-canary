@@ -286,5 +286,12 @@ e.exports = Object.freeze({
   INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION: "They won't be able to message you. If you feel their actions could harm someone, please submit a report to Discord.",
   INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Block",
   INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON: "Block and report",
-  INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_CANCEL_BUTTON: "Cancel"
+  INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_CANCEL_BUTTON: "Cancel",
+  SERVER_DRAWER_ACTIVITY_VOICE: "in **!!{channelName}!!**",
+  SERVER_DRAWER_ACTIVITY_VOICE_STATUS: "$[](statusHook) in **!!{channelName}!!**",
+  SERVER_DRAWER_ACTIVITY_EVENT_IN_UPCOMING: "in !!{relativeTime}!!",
+  SERVER_DRAWER_ACTIVITY_TOPIC: "talking **!!{topic}!!**",
+  SERVER_DRAWER_ACTIVITY_PLAYING: "playing **!!{activity}!!**",
+  SERVER_DRAWER_ACTIVITY_STREAMING: "streaming **!!{activity}!!**",
+  SERVER_DRAWER_ACTIVITY_STREAMING_SCREEN: "sharing screen"
 })
