@@ -1,135 +1,126 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return O
+    return _
   }
 }), s("222007");
 var n = s("37983"),
-  a = s("884691"),
-  o = s("733154"),
+  o = s("884691"),
+  a = s("733154"),
   r = s("505088"),
   i = s("202804"),
   l = s("77078"),
   u = s("446674"),
-  c = s("736964"),
-  d = s("545158"),
-  N = s("377114"),
-  I = s("949067"),
-  T = s("652126"),
-  E = s("27618"),
-  R = s("33320"),
-  A = s("324252"),
-  C = s("49111"),
-  f = s("782340"),
-  S = s("932379"),
-  _ = s("921208");
+  d = s("736964"),
+  c = s("545158"),
+  N = s("652126"),
+  I = s("27618"),
+  E = s("33320"),
+  T = s("49111"),
+  A = s("782340"),
+  C = s("932379"),
+  R = s("921208");
 
-function O(e) {
+function _(e) {
   let {
     onNavigate: t,
     onClose: s,
-    senderId: O,
-    channelId: P,
-    hasReported: h,
-    onReport: p
-  } = e, g = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(O)), [x, m] = a.useState(g), M = (0, T.useShouldShowHelplineLink)(), [j, v] = a.useState(!1), B = (0, I.useLongestChannelMessageBeforeReply)(P, O), L = () => {
-    m(!0), c.default.addRelationship({
-      userId: O,
+    senderId: _,
+    hasReported: f,
+    onReport: S
+  } = e, P = (0, u.useStateFromStores)([I.default], () => I.default.isBlocked(_)), [O, h] = o.useState(P), p = (0, N.useShouldShowHelplineLink)(), g = () => {
+    h(!0), d.default.addRelationship({
+      userId: _,
       context: {
         location: "InappropriateConversationModal-web"
       },
-      type: C.RelationshipTypes.BLOCKED
+      type: T.RelationshipTypes.BLOCKED
     })
-  }, b = () => {
-    m(!1), c.default.unblockUser(O, {
+  }, x = () => {
+    h(!1), d.default.unblockUser(_, {
       location: "InappropriateConversationModal-web"
     })
-  }, y = async () => {
-    null != B && (v(!0), await (0, N.submitReportForInappropriateConversationSafetyAlert)(B, () => {
-      (0, l.showToast)((0, l.createToast)(f.default.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, l.ToastType.SUCCESS)), p()
-    }, () => {
-      (0, l.showToast)((0, l.createToast)(f.default.Messages.INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST, l.ToastType.FAILURE))
-    }), v(!1))
   };
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)("img", {
-      src: _,
-      alt: f.default.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_LIGHTBULB_ALT,
-      className: S.heroImage
+      src: R,
+      alt: A.default.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_LIGHTBULB_ALT,
+      className: C.heroImage
     }), (0, n.jsxs)(l.ModalContent, {
-      className: S.body,
+      className: C.body,
       children: [(0, n.jsxs)("div", {
-        className: S.textContainer,
+        className: C.textContainer,
         children: [(0, n.jsx)(l.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
-          children: f.default.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_HEADER
+          children: A.default.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_HEADER
         }), (0, n.jsx)(l.Text, {
           variant: "text-md/medium",
           color: "header-secondary",
-          className: S.description,
-          children: f.default.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_DESCRIPTION
+          className: C.description,
+          children: A.default.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_DESCRIPTION
         })]
       }), (0, n.jsxs)("div", {
-        className: S.buttonContainer,
+        className: C.buttonContainer,
         children: [(0, n.jsxs)(l.Button, {
           color: l.Button.Colors.BRAND_NEW,
           size: l.Button.Sizes.LARGE,
-          className: S.button,
-          innerClassName: S.buttonInner,
+          className: C.button,
+          innerClassName: C.buttonInner,
           onClick: () => {
-            x ? b() : L()
+            O ? x() : g()
           },
           children: [(0, n.jsx)(r.CircleXIcon, {
             height: 20,
             width: 20,
             color: l.tokens.colors.INTERACTIVE_ACTIVE,
-            className: S.buttonIcon
-          }), x ? f.default.Messages.UNBLOCK : f.default.Messages.BLOCK]
+            className: C.buttonIcon
+          }), O ? A.default.Messages.UNBLOCK : A.default.Messages.BLOCK]
         }), (0, n.jsxs)(l.Button, {
           color: l.Button.Colors.PRIMARY,
           size: l.Button.Sizes.LARGE,
-          className: S.button,
-          innerClassName: S.buttonInner,
-          onClick: y,
-          submitting: j,
-          disabled: h,
+          className: C.button,
+          innerClassName: C.buttonInner,
+          onClick: () => {
+            S()
+          },
+          disabled: f,
           children: [(0, n.jsx)(i.FlagIcon, {
             height: 20,
             width: 20,
             color: l.tokens.colors.INTERACTIVE_ACTIVE,
-            className: S.buttonIcon
-          }), h ? f.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORTED : f.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORT]
+            className: C.buttonIcon
+          }), f ? A.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORTED : A.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORT]
         }), (0, n.jsxs)(l.Button, {
           color: l.Button.Colors.PRIMARY,
           size: l.Button.Sizes.LARGE,
-          className: S.button,
-          innerClassName: S.buttonInner,
+          className: C.button,
+          innerClassName: C.buttonInner,
           onClick: () => {
-            M ? (0, d.default)(A.CRISIS_TEXT_LINE_URL) : (0, d.default)(A.NOFILTR_URL)
+            p ? (0, c.default)("https://www.crisistextline.org/") : (0, c.default)("https://nofiltr.org")
           },
-          children: [(0, n.jsx)(o.ChatIcon, {
+          children: [(0, n.jsx)(a.ChatIcon, {
             height: 20,
             width: 20,
             color: l.tokens.colors.INTERACTIVE_ACTIVE,
-            className: S.buttonIcon
-          }), M ? f.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL : f.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_NOFILTR]
+            className: C.buttonIcon
+          }), p ? A.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL : A.default.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_NOFILTR]
         })]
       })]
     }), (0, n.jsxs)(l.ModalFooter, {
-      className: S.footer,
+      className: C.footer,
       children: [(0, n.jsx)(l.Button, {
         look: l.Button.Looks.LINK,
         color: l.Button.Colors.TRANSPARENT,
         size: l.Button.Sizes.MEDIUM,
         onClick: s,
-        children: f.default.Messages.CLOSE
+        children: A.default.Messages.CLOSE
       }), (0, n.jsx)(l.Button, {
         look: l.Button.Looks.LINK,
         color: l.Button.Colors.TRANSPARENT,
         size: l.Button.Sizes.MEDIUM,
-        onClick: () => t(R.InappropriateConversationModalSlideKeys.INTRO),
-        children: f.default.Messages.BACK
+        onClick: () => t(E.InappropriateConversationModalSlideKeys.INTRO),
+        children: A.default.Messages.BACK
       })]
     })]
   })

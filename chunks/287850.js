@@ -11,8 +11,8 @@ var l, I, r = u("866227"),
   _ = u("407846"),
   T = u("913144"),
   f = u("21121"),
-  O = u("934306"),
-  N = u("288518"),
+  N = u("934306"),
+  O = u("288518"),
   d = u("486503"),
   S = u("233069"),
   o = u("42203"),
@@ -52,14 +52,14 @@ function R(e) {
     channelId: e.id,
     lastMessageId: t,
     isFavorite: P.default.isMessagesFavorite(e.id) && (0, f.isInMainTabsExperiment)(),
-    isRequest: N.default.isMessageRequest(e.id) || d.default.isSpam(e.id)
+    isRequest: O.default.isMessageRequest(e.id) || d.default.isSpam(e.id)
   }
 }
 
 function D() {
   m.clear(), Object.values(o.default.getMutablePrivateChannels()).forEach(e => {
     m.set(e.id, R(e))
-  }), (0, f.isInMainTabsExperiment)() && (0, O.isSplitMessagesTab)() && P.default.getAddedToMessages().forEach(e => {
+  }), (0, f.isInMainTabsExperiment)() && (0, N.isSplitMessagesTab)() && P.default.getAddedToMessages().forEach(e => {
     let t = o.default.getChannel(e);
     null != t && (0, S.isGuildTextChannelType)(t.type) && m.set(t.id, R(t))
   })
@@ -86,7 +86,7 @@ let h = (n = [], s = [], a = [], () => {
 });
 class p extends E.default.Store {
   initialize() {
-    this.waitFor(o.default, M.default, A.default, N.default, P.default), this.syncWith([P.default, N.default], D)
+    this.waitFor(o.default, M.default, A.default, O.default, P.default), this.syncWith([P.default, O.default], D)
   }
   getPrivateChannelIds() {
     return h()
@@ -145,8 +145,5 @@ var v = new p(T.default, {
   GUILD_CREATE: function(e) {
     let t = e.guild.id;
     return m.delete(t)
-  },
-  LOGOUT: function() {
-    m.clear()
   }
 })
