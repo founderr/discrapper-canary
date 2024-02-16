@@ -34,6 +34,7 @@ function s(e) {
     else if (_ === i.CodedLinkType.GUILD_PRODUCT);
     else if (_ === i.CodedLinkType.SERVER_SHOP);
     else if (_ === i.CodedLinkType.CLYDE_PROFILE);
+    else if (_ === i.CodedLinkType.QUESTS_EMBED);
     else throw Error("Unknown coded link type: ".concat(_))
   })
 }

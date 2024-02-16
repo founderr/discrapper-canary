@@ -754,6 +754,7 @@ let eg = {
               else if (t === _.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
               else if (t === _.CodedLinkType.GUILD_PRODUCT);
               else if (t === _.CodedLinkType.SERVER_SHOP);
+              else if (t === _.CodedLinkType.QUESTS_EMBED);
               else throw Error("Unknown coded link type: ".concat(t))
             })
           }({

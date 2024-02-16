@@ -1,15 +1,15 @@
 "use strict";
-var a, r, s, i;
+var s, i, r, a;
 n.r(t), n.d(t, {
   QuestRewardCodePlatforms: function() {
-    return a
+    return s
   },
   QUEST_REWARD_CODE_PLATFORMS_SET: function() {
     return l
   },
   QuestContent: function() {
-    return r
+    return i
   }
-}), n("222007"), (s = a || (a = {}))[s.CROSS_PLATFORM = 0] = "CROSS_PLATFORM", s[s.XBOX = 1] = "XBOX", s[s.PLAYSTATION = 2] = "PLAYSTATION", s[s.SWITCH = 3] = "SWITCH", s[s.PC = 4] = "PC";
-let l = new Set(Object.values(a).filter(e => "number" == typeof e));
-(i = r || (r = {}))[i.GIFT_INVENTORY_SETTINGS_BADGE = 0] = "GIFT_INVENTORY_SETTINGS_BADGE", i[i.QUEST_BAR = 1] = "QUEST_BAR", i[i.QUEST_INVENTORY_CARD = 2] = "QUEST_INVENTORY_CARD"
+}), n("222007"), (r = s || (s = {}))[r.CROSS_PLATFORM = 0] = "CROSS_PLATFORM", r[r.XBOX = 1] = "XBOX", r[r.PLAYSTATION = 2] = "PLAYSTATION", r[r.SWITCH = 3] = "SWITCH", r[r.PC = 4] = "PC";
+let l = new Set(Object.values(s).filter(e => "number" == typeof e));
+(a = i || (i = {}))[a.GIFT_INVENTORY_SETTINGS_BADGE = 0] = "GIFT_INVENTORY_SETTINGS_BADGE", a[a.QUEST_BAR = 1] = "QUEST_BAR", a[a.QUEST_INVENTORY_CARD = 2] = "QUEST_INVENTORY_CARD", a[a.QUESTS_EMBED = 3] = "QUESTS_EMBED"

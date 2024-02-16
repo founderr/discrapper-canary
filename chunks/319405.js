@@ -71,7 +71,7 @@ class u extends t.default {
         questId: r.id
       })
     }, this.handlePostConnectionOpen = () => {
-      window.setTimeout(this.maybeFetchCurrentQuests, Math.floor(Math.random() * O))
+      if (0 === T.default.lastFetchedCurrentQuests) window.setTimeout(this.maybeFetchCurrentQuests, Math.floor(Math.random() * O))
     }, this.handleSendHeartbeatSuccess = e => {
       let {
         streamKey: _,

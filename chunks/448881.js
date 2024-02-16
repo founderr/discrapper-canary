@@ -10,172 +10,174 @@ n.r(t), n.d(t, {
     return c
   },
   claimQuestRewardCode: function() {
-    return f
+    return E
   },
   fetchQuestRewardCode: function() {
     return S
   },
   dismissQuestContent: function() {
-    return E
+    return f
   }
 });
-var a = n("872717"),
-  r = n("913144"),
-  s = n("599417"),
-  i = n("2973"),
+var s = n("872717"),
+  i = n("913144"),
+  r = n("599417"),
+  a = n("2973"),
   l = n("227231"),
   u = n("49111");
 async function o() {
-  r.default.dispatch({
-    type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
-  });
-  try {
-    let e = await a.default.get({
-        url: u.Endpoints.QUESTS_CURRENT_QUESTS
-      }),
-      t = e.body.quests.map(e => (0, l.questWithUserStatusFromServer)(e)),
-      n = t.filter(e => {
-        var t;
-        return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || e.config.rewardCodePlatforms.length > 0
-      });
-    r.default.dispatch({
-      type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
-      quests: n
-    })
-  } catch (e) {
-    r.default.dispatch({
-      type: "QUESTS_FETCH_CURRENT_QUESTS_FAILURE",
-      error: new s.default(e)
-    })
+  if (!a.default.isFetchingCurrentQuests) {
+    i.default.dispatch({
+      type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
+    });
+    try {
+      let e = await s.default.get({
+          url: u.Endpoints.QUESTS_CURRENT_QUESTS
+        }),
+        t = e.body.quests.map(e => (0, l.questWithUserStatusFromServer)(e)),
+        n = t.filter(e => {
+          var t;
+          return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || e.config.rewardCodePlatforms.length > 0
+        });
+      i.default.dispatch({
+        type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
+        quests: n
+      })
+    } catch (e) {
+      i.default.dispatch({
+        type: "QUESTS_FETCH_CURRENT_QUESTS_FAILURE",
+        error: new r.default(e)
+      })
+    }
   }
 }
 async function d(e) {
   let {
     questId: t,
     streamKey: n,
-    applicationId: i
+    applicationId: a
   } = e;
   try {
-    let e = await a.default.post({
+    let e = await s.default.post({
       url: u.Endpoints.QUESTS_HEARTBEAT(t),
       body: {
         stream_key: n,
-        application_id: i
+        application_id: a
       }
     });
-    r.default.dispatch({
+    i.default.dispatch({
       type: "QUESTS_SEND_HEARTBEAT_SUCCESS",
       userStatus: (0, l.questUserStatusFromServer)(e.body),
-      applicationId: i,
+      applicationId: a,
       questId: t,
       streamKey: n
     })
   } catch (e) {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "QUESTS_SEND_HEARTBEAT_FAILURE",
-      error: new s.default(e),
+      error: new r.default(e),
       questId: t,
       streamKey: n
     })
   }
 }
 async function c(e) {
-  let t = i.default.isEnrolling(e);
+  let t = a.default.isEnrolling(e);
   if (!t) {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "QUESTS_ENROLL_BEGIN",
       questId: e
     });
     try {
-      let t = await a.default.post({
+      let t = await s.default.post({
         url: u.Endpoints.QUESTS_ENROLL(e)
       });
-      r.default.dispatch({
+      i.default.dispatch({
         type: "QUESTS_ENROLL_SUCCESS",
         enrolledQuestUserStatus: (0, l.questUserStatusFromServer)(t.body)
       })
     } catch (t) {
-      r.default.dispatch({
+      i.default.dispatch({
         type: "QUESTS_ENROLL_FAILURE",
         questId: e
       })
     }
   }
 }
-async function f(e, t) {
-  let n = i.default.isClaimingRewardCode(e);
+async function E(e, t) {
+  let n = a.default.isClaimingRewardCode(e);
   if (!n) {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "QUESTS_CLAIM_REWARD_CODE_BEGIN",
       questId: e
     });
     try {
-      let n = await a.default.post({
+      let n = await s.default.post({
         url: u.Endpoints.QUESTS_REWARD_CODE(e),
         body: {
           platform: t
         }
       });
-      r.default.dispatch({
+      i.default.dispatch({
         type: "QUESTS_CLAIM_REWARD_CODE_SUCCESS",
         questId: e,
         rewardCode: (0, l.questsRewardCodeFromServer)(n.body)
       })
     } catch (t) {
-      throw r.default.dispatch({
+      throw i.default.dispatch({
         type: "QUESTS_CLAIM_REWARD_CODE_FAILURE",
-        error: new s.default(t),
+        error: new r.default(t),
         questId: e
       }), t
     }
   }
 }
 async function S(e) {
-  let t = i.default.isFetchingRewardCode(e);
+  let t = a.default.isFetchingRewardCode(e);
   if (!t) {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
       questId: e
     });
     try {
-      let t = await a.default.get({
+      let t = await s.default.get({
         url: u.Endpoints.QUESTS_REWARD_CODE(e)
       });
-      r.default.dispatch({
+      i.default.dispatch({
         type: "QUESTS_FETCH_REWARD_CODE_SUCCESS",
         questId: e,
         rewardCode: (0, l.questsRewardCodeFromServer)(t.body)
       })
     } catch (t) {
-      throw r.default.dispatch({
+      throw i.default.dispatch({
         type: "QUESTS_FETCH_REWARD_CODE_FAILURE",
-        error: new s.default(t),
+        error: new r.default(t),
         questId: e
       }), t
     }
   }
 }
-async function E(e, t) {
-  let n = i.default.isDismissingContent(e);
+async function f(e, t) {
+  let n = a.default.isDismissingContent(e);
   if (!n) {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "QUESTS_DISMISS_CONTENT_BEGIN",
       questId: e,
       content: t
     });
     try {
-      let n = await a.default.post({
+      let n = await s.default.post({
         url: u.Endpoints.QUESTS_DISMISS_CONTENT(e, t),
         body: {}
       });
-      r.default.dispatch({
+      i.default.dispatch({
         type: "QUESTS_DISMISS_CONTENT_SUCCESS",
         dismissedQuestUserStatus: (0, l.questUserStatusFromServer)(n.body)
       })
     } catch (t) {
-      r.default.dispatch({
+      i.default.dispatch({
         type: "QUESTS_DISMISS_CONTENT_FAILURE",
-        error: new s.default(t),
+        error: new r.default(t),
         questId: e
       })
     }
