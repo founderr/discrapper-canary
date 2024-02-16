@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 });
 var a = n("37983"),
@@ -22,12 +22,12 @@ let p = () => n.el("170206").then(n.t.bind(n, "170206", 19)).then(e => {
   } = e;
   return t
 });
-var E = s.memo(function(e) {
+var m = s.memo(function(e) {
   let {
     channel: t,
     isLastItem: n
-  } = e, s = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), E = (0, l.useStateFromStores)([d.default], () => d.default.can(f.Permissions.SEND_MESSAGES_IN_THREADS, t)), m = (0, o.useIsNonModInLockedThread)(t), g = (0, l.useStateFromStores)([u.default], () => u.default.getId());
-  return n ? E && !m && t.ownerId !== g ? (0, a.jsxs)("div", {
+  } = e, s = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = (0, l.useStateFromStores)([d.default], () => d.default.can(f.Permissions.SEND_MESSAGES_IN_THREADS, t)), E = (0, o.useIsNonModInLockedThread)(t), g = (0, l.useStateFromStores)([u.default], () => u.default.getId());
+  return n ? m && !E && t.ownerId !== g ? (0, a.jsxs)("div", {
     className: C.box,
     children: [(0, a.jsx)(c.default, {
       importData: p,

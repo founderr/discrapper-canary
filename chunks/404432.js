@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return N
   }
 });
 var s = n("37983"),
@@ -13,19 +13,19 @@ var s = n("37983"),
   u = n("299285"),
   d = n("210721"),
   c = n("65324"),
-  f = n("697218"),
-  E = n("10514"),
+  E = n("697218"),
+  f = n("10514"),
   h = n("552712"),
   _ = n("953109"),
   g = n("124969"),
   m = n("380186"),
   p = n("49111"),
-  I = n("646718"),
-  T = n("782340"),
-  N = n("173494"),
-  A = n("125047"),
-  S = n("890957"),
-  R = i.default.connectStores([h.default, u.default, E.default, f.default], e => {
+  T = n("646718"),
+  R = n("782340"),
+  A = n("173494"),
+  S = n("125047"),
+  I = n("890957"),
+  N = i.default.connectStores([h.default, u.default, f.default, E.default], e => {
     let {
       giftCode: t
     } = e, n = h.default.get(t.skuId), {
@@ -35,7 +35,7 @@ var s = n("37983"),
       sku: n,
       subscriptionPlan: a,
       application: u.default.getApplication(n.applicationId),
-      gifter: f.default.getUser(t.userId)
+      gifter: E.default.getUser(t.userId)
     }
   })(e => {
     let {
@@ -44,36 +44,36 @@ var s = n("37983"),
       gifter: r,
       sku: i,
       application: u,
-      subscriptionPlan: f
-    } = e, E = null == r ? T.default.Messages.GIFT_CODE_AUTH_GIFTED : T.default.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
+      subscriptionPlan: E
+    } = e, f = null == r ? R.default.Messages.GIFT_CODE_AUTH_GIFTED : R.default.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
       username: r.username
     }), h = i.name;
-    return null != f && (h = (f.interval === I.SubscriptionIntervalTypes.MONTH ? T.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : T.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
+    return null != E && (h = (E.interval === T.SubscriptionIntervalTypes.MONTH ? R.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : R.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
       skuName: i.name,
-      intervalCount: f.intervalCount
+      intervalCount: E.intervalCount
     })), (0, s.jsxs)(a.Fragment, {
       children: [null != n.giftStyle ? (0, s.jsx)(c.default, {
         defaultAnimationState: d.AnimationState.LOOP,
         giftStyle: n.giftStyle,
-        className: N.seasonalIcon
+        className: A.seasonalIcon
       }) : (0, s.jsx)(g.Avatar, {
         src: null != r ? r.getAvatarURL(void 0, 100) : null,
         size: o.AvatarSizes.DEPRECATED_SIZE_100,
-        className: S.marginBottom20
+        className: I.marginBottom20
       }), null != t ? (0, s.jsxs)(a.Fragment, {
         children: [(0, s.jsx)(g.SubTitle, {
-          children: T.default.Messages.INVITE_MODAL_ERROR_TITLE
+          children: R.default.Messages.INVITE_MODAL_ERROR_TITLE
         }), (0, s.jsx)(g.Title, {
           children: t
         })]
       }) : (0, s.jsxs)(a.Fragment, {
         children: [(0, s.jsx)(g.SubTitle, {
-          children: E
+          children: f
         }), (0, s.jsxs)(g.Title, {
-          className: l(S.marginTop8, A.flexCenter),
+          className: l(I.marginTop8, S.flexCenter),
           children: [i.productLine !== p.SKUProductLines.COLLECTIBLES && (0, s.jsx)(_.default, {
             size: _.default.Sizes.MEDIUM,
-            className: N.applicationIcon,
+            className: A.applicationIcon,
             game: u,
             skuId: i.id
           }), h]

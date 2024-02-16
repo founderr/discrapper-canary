@@ -16,10 +16,10 @@ let d = function(e) {
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     c = (0, r.default)([o.default], () => o.default.validate(e), [e]),
-    f = (0, r.default)([o.default], () => o.default.isRateLimited()),
-    E = (0, i.usePomeloDebounceDelay)(),
-    h = s.useMemo(() => (0, a.debounce)(e => l.default.attemptPomelo(e, n ? "registration" : "modal", n, d), E), [E, n, d]);
+    E = (0, r.default)([o.default], () => o.default.isRateLimited()),
+    f = (0, i.usePomeloDebounceDelay)(),
+    h = s.useMemo(() => (0, a.debounce)(e => l.default.attemptPomelo(e, n ? "registration" : "modal", n, d), f), [f, n, d]);
   return s.useEffect(() => {
-    t && !f && null == c && "" !== e && h(e)
-  }, [t, f, c, e, h]), s.useMemo(() => null != c ? (0, u.formatUsernameLiveCheckValidation)(c) : void 0, [c])
+    t && !E && null == c && "" !== e && h(e)
+  }, [t, E, c, e, h]), s.useMemo(() => null != c ? (0, u.formatUsernameLiveCheckValidation)(c) : void 0, [c])
 }

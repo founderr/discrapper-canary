@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return o
   },
   decryptEncodedCiphertext: function() {
-    return E
+    return f
   },
   decryptNonce: function() {
     return h
@@ -56,23 +56,23 @@ async function c(e) {
   return u(t)
 }
 
-function f(e, t) {
+function E(e, t) {
   return a(null != e.privateKey, "private key cannot be null"), window.crypto.subtle.decrypt({
     name: "RSA-OAEP",
     hash: "SHA-256"
   }, e.privateKey, t)
 }
-async function E(e, t) {
+async function f(e, t) {
   let n = new TextDecoder,
-    s = await f(e, d(t));
+    s = await E(e, d(t));
   return n.decode(s)
 }
 async function h(e, t) {
-  let n = await f(e, d(t));
+  let n = await E(e, d(t));
   return u(n)
 }
 async function _(e, t) {
-  t = await E(e, t);
+  t = await f(e, t);
   let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
   if (null == n) throw Error("Invalid encoded user record.");
   let [, s, a, l, i] = n;

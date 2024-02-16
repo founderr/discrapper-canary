@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return A
   }
 });
 var s = n("37983"),
@@ -13,18 +13,18 @@ var s = n("37983"),
   u = n("2021"),
   d = n("393414"),
   c = n("725484"),
-  f = n("554054"),
-  E = n("159885"),
+  E = n("554054"),
+  f = n("159885"),
   h = n("528502"),
   _ = n("49111"),
   g = n("513680");
-let m = (0, E.cssValueToNumber)(g.responsiveWidthMobile),
+let m = (0, f.cssValueToNumber)(g.responsiveWidthMobile),
   p = [_.Routes.LOGIN, _.Routes.LOGIN_HANDOFF, _.Routes.REGISTER, _.Routes.INVITE(""), _.Routes.GIFT_CODE(""), _.Routes.GUILD_TEMPLATE_LOGIN(""), _.Routes.GUILD_TEMPLATE(""), _.Routes.DISABLE_EMAIL_NOTIFICATIONS, _.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, _.Routes.BILLING_PREMIUM_SUBSCRIBE, _.Routes.BILLING_PAYMENT_SOURCES_CREATE, _.Routes.BILLING_PAYMENTS, _.Routes.BILLING_PREMIUM_SWITCH_PLAN, _.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, _.Routes.VERIFY, _.Routes.VERIFY_HUB_EMAIL, _.Routes.REJECT_IP, _.Routes.REJECT_MFA, _.Routes.AUTHORIZE_IP, _.Routes.AUTHORIZE_PAYMENT, _.Routes.RESET, _.Routes.HANDOFF, _.Routes.REPORT, _.Routes.REPORT_SECOND_LOOK];
 
-function I(e) {
+function T(e) {
   return p.some(t => e.startsWith(t))
 }
-class T extends a.Component {
+class R extends a.Component {
   componentDidMount() {
     window.addEventListener("resize", this.handleResize)
   }
@@ -32,14 +32,14 @@ class T extends a.Component {
     window.removeEventListener("resize", this.handleResize)
   }
   mobileTransitionTo(e, t) {
-    if (I(e))(0, d.transitionTo)(e, t);
+    if (T(e))(0, d.transitionTo)(e, t);
     else {
       let n = null != t && null != t.search ? t.search : null;
       window.location = null == n ? e : "".concat(e, "?").concat(n)
     }
   }
   mobileReplaceWith(e) {
-    I(e) ? (0, d.replaceWith)(e) : window.location = e
+    T(e) ? (0, d.replaceWith)(e) : window.location = e
   }
   renderDefault() {
     let {
@@ -59,7 +59,7 @@ class T extends a.Component {
           children: [(0, s.jsx)(c.default, {
             show: !0,
             className: l(g.logo)
-          }), (0, s.jsx)(f.Splash, {
+          }), (0, s.jsx)(E.Splash, {
             splash: e,
             children: t
           })]
@@ -97,4 +97,4 @@ class T extends a.Component {
     }
   }
 }
-var N = T
+var A = R

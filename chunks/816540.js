@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = n("37983");
@@ -14,7 +14,7 @@ var a = n("77078"),
   u = n("782340"),
   d = n("168500");
 let c = () => (0, r.transitionTo)(o.Routes.LOGIN);
-var f = e => {
+var E = e => {
   let {
     authBoxClassName: t,
     underageMessage: r

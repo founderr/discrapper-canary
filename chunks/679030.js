@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return U
+    return j
   }
 }), n("222007"), n("70102");
 var s, a, l = n("37983"),
@@ -13,22 +13,22 @@ var s, a, l = n("37983"),
   c = n("437822"),
   f = n("569272"),
   E = n("568131"),
-  I = n("327037"),
-  _ = n("208620"),
+  _ = n("327037"),
+  I = n("208620"),
   p = n("970366"),
   h = n("271938"),
   T = n("476108"),
   N = n("55411"),
-  g = n("686470"),
-  m = n("552712"),
+  m = n("686470"),
+  g = n("552712"),
   A = n("124969"),
   S = n("659632"),
-  v = n("701909"),
-  C = n("158998"),
+  C = n("701909"),
+  v = n("158998"),
   R = n("404432"),
   O = n("291850"),
-  x = n("860959"),
-  L = n("49111"),
+  L = n("860959"),
+  x = n("49111"),
   M = n("782340"),
   D = n("890957");
 o.default.initialize(), (a = s || (s = {})).REGISTER = "register", a.LOGIN = "login";
@@ -78,9 +78,9 @@ class P extends i.PureComponent {
     } = this.props, {
       error: s
     } = this.state, a = null != s ? s.code : null;
-    return a === L.AbortCodes.INVALID_GIFT_SELF_REDEMPTION ? M.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : a === L.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === L.SKUProductLines.COLLECTIBLES ? M.default.Messages.GIFT_ERROR_OWNED : null != t || a === L.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED ? M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({
-      libraryLink: L.Routes.APPLICATION_LIBRARY
-    }) : e.isClaimed || a === L.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED ? M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : a === L.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? M.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0
+    return a === x.AbortCodes.INVALID_GIFT_SELF_REDEMPTION ? M.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : a === x.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === x.SKUProductLines.COLLECTIBLES ? M.default.Messages.GIFT_ERROR_OWNED : null != t || a === x.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED ? M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({
+      libraryLink: x.Routes.APPLICATION_LIBRARY
+    }) : e.isClaimed || a === x.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED ? M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : a === x.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? M.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0
   }
   renderSpinner(e) {
     return (0, l.jsxs)(A.default, {
@@ -108,7 +108,7 @@ class P extends i.PureComponent {
         onClick: () => t(e),
         children: M.default.Messages.CONTINUE_TO_WEBAPP
       }), (0, l.jsx)(A.Button, {
-        onClick: () => window.open(v.default.getArticleURL(L.HelpdeskArticles.GIFTING), "_blank"),
+        onClick: () => window.open(C.default.getArticleURL(x.HelpdeskArticles.GIFTING), "_blank"),
         look: A.Button.Looks.LINK,
         color: A.Button.Colors.LINK,
         children: M.default.Messages.GIFT_CODE_AUTH_INVALID_TIP
@@ -176,7 +176,7 @@ class P extends i.PureComponent {
       }) : (0, l.jsx)(A.SubText, {
         className: D.marginTop20,
         children: M.default.Messages.GIFT_CODE_AUTH_LOGGED_IN_AS.format({
-          userTag: C.default.getUserTag(t),
+          userTag: v.default.getUserTag(t),
           onLogoutClick: this.handleLogout
         })
       })]
@@ -196,8 +196,8 @@ class P extends i.PureComponent {
       fetchingUser: o,
       continueOnWeb: d
     } = this.state;
-    if (e === L.NativeAppStates.OPEN && !d) return this.renderAppOpened();
-    if (e === L.NativeAppStates.OPENING) return this.renderSpinner(M.default.Messages.APP_OPENING);
+    if (e === x.NativeAppStates.OPEN && !d) return this.renderAppOpened();
+    if (e === x.NativeAppStates.OPENING) return this.renderSpinner(M.default.Messages.APP_OPENING);
     if (i) return this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_ACCEPTING);
     if (null == s) return a ? this.renderExpiredInvite() : this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_RESOLVING);
     if (a) {
@@ -210,7 +210,7 @@ class P extends i.PureComponent {
         giftCode: s,
         transitionTo: r,
         location: u
-      }) : (0, l.jsx)(x.default, {
+      }) : (0, l.jsx)(L.default, {
         giftCodeSKU: t,
         giftCode: s,
         transitionTo: r,
@@ -229,7 +229,7 @@ class P extends i.PureComponent {
     }, this.refreshUser = () => {
       this.setState({
         fetchingUser: !0
-      }), I.fetchCurrentUser({
+      }), _.fetchCurrentUser({
         withAnalyticsToken: !0
       }).then(e => this.setState({
         currentUser: e,
@@ -239,7 +239,7 @@ class P extends i.PureComponent {
       }))
     }, this.handleLogout = () => {
       let e = this.props.match.params.giftCode;
-      c.default.logout(L.Routes.GIFT_CODE_LOGIN(e))
+      c.default.logout(x.Routes.GIFT_CODE_LOGIN(e))
     }, this.handleResendVerification = () => {
       c.default.verifyResend(), this.setState({
         sentVerification: !0
@@ -256,7 +256,7 @@ class P extends i.PureComponent {
           error: null
         }), await f.default.redeemGiftCode({
           code: n
-        }), e(L.Routes.APP)
+        }), e(x.Routes.APP)
       } catch (e) {
         this.setState({
           error: e
@@ -267,24 +267,24 @@ class P extends i.PureComponent {
         transitionTo: e
       } = this.props, t = this.getCode();
       f.default.resolveGiftCode(t, !0, !0).then(n => {
-        null != n && null != n.giftCode.promotion && e(L.Routes.BILLING_PROMOTION_REDEMPTION(t))
+        null != n && null != n.giftCode.promotion && e(x.Routes.BILLING_PROMOTION_REDEMPTION(t))
       })
     }
   }
 }
-var U = o.default.connectStores([N.default, g.default, h.default, m.default, T.default, _.default], e => {
+var j = o.default.connectStores([N.default, m.default, h.default, g.default, T.default, I.default], e => {
   let t = e.match.params.giftCode,
     n = N.default.get(t),
-    s = null != n ? m.default.get(n.skuId) : null;
+    s = null != n ? g.default.get(n.skuId) : null;
   return {
     giftCode: n,
     sku: s,
-    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, g.default) : null,
+    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, m.default) : null,
     authenticated: h.default.isAuthenticated(),
     defaultRoute: T.default.defaultRoute,
     isResolved: N.default.getIsResolved(t),
     isAccepting: N.default.getIsAccepting(t),
-    libraryApplicationsFetched: g.default.fetched,
-    nativeAppState: _.default.getState(t)
+    libraryApplicationsFetched: m.default.fetched,
+    nativeAppState: I.default.getState(t)
   }
 })(P)

@@ -20,10 +20,10 @@ function c(e) {
     onChange: n,
     subText: a,
     muted: c,
-    marginTopStyle: f
+    marginTopStyle: E
   } = e;
   return (0, s.jsx)(i.default, {
-    className: null != f ? f : d.marginTop20,
+    className: null != E ? E : d.marginTop20,
     align: i.default.Align.CENTER,
     children: (0, s.jsx)(l.Checkbox, {
       value: t,

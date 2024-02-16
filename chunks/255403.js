@@ -13,8 +13,8 @@ var s = n("759843"),
   u = n("210898"),
   d = n("856368"),
   c = n("697543"),
-  f = n("49111"),
-  E = n("782340");
+  E = n("49111"),
+  f = n("782340");
 n("2581");
 var h = {
   resetSuggestions: () => r.default.dispatch({
@@ -29,7 +29,7 @@ var h = {
       try {
         var n;
         let s = await a.default.get({
-          url: f.Endpoints.POMELO_SUGGESTIONS_UNAUTHED,
+          url: E.Endpoints.POMELO_SUGGESTIONS_UNAUTHED,
           query: null == e ? void 0 : {
             global_name: e
           },
@@ -53,7 +53,7 @@ var h = {
         usernameSuggestionLoading: !0
       });
       let n = await a.default.get({
-        url: f.Endpoints.POMELO_SUGGESTIONS,
+        url: E.Endpoints.POMELO_SUGGESTIONS,
         timeout: e
       });
       if (n.ok && (null === (t = n.body) || void 0 === t ? void 0 : t.username) != null) return r.default.dispatch({
@@ -69,11 +69,11 @@ var h = {
     let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
       d = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       c = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    let h = (t = e, !1 === /^[A-Za-z0-9_.]*$/.test(t) ? E.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID : t.includes("..") ? E.default.Messages.POMELO_EXISTING_FLOW_ERROR_DOT_DOT : t.length < 2 || t.length > 32 ? E.default.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
+    let h = (t = e, !1 === /^[A-Za-z0-9_.]*$/.test(t) ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID : t.includes("..") ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_DOT_DOT : t.length < 2 || t.length > 32 ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
       maxNum: 32,
       minNum: 2
     }) : void 0);
-    if (null != h) return i.default.track(f.AnalyticEvents.POMELO_ERRORS, {
+    if (null != h) return i.default.track(E.AnalyticEvents.POMELO_ERRORS, {
       reason: h,
       username_error: !0,
       location: a,
@@ -85,7 +85,7 @@ var h = {
     });
     if ((0, u.getPomeloAttempt)()) try {
       let t = await o.default.post({
-        url: d ? f.Endpoints.POMELO_ATTEMPT_UNAUTHED : f.Endpoints.POMELO_ATTEMPT,
+        url: d ? E.Endpoints.POMELO_ATTEMPT_UNAUTHED : E.Endpoints.POMELO_ATTEMPT,
         body: {
           username: e
         },
@@ -96,7 +96,7 @@ var h = {
           }
         }
       });
-      t.body.taken && i.default.track(f.AnalyticEvents.POMELO_ERRORS, {
+      t.body.taken && i.default.track(E.AnalyticEvents.POMELO_ERRORS, {
         reason: "already_taken",
         username_error: !0,
         location: a,
@@ -110,7 +110,7 @@ var h = {
       ;
       let t = new l.APIError(o),
         s = null !== (n = t.getAnyErrorMessage()) && void 0 !== n ? n : void 0;
-      i.default.track(f.AnalyticEvents.POMELO_ERRORS, {
+      i.default.track(E.AnalyticEvents.POMELO_ERRORS, {
         reason: s,
         username_error: !0,
         location: a,
@@ -128,7 +128,7 @@ var h = {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = await o.default.post({
         body: e,
-        url: f.Endpoints.POMELO_CREATE,
+        url: E.Endpoints.POMELO_CREATE,
         trackedActionData: {
           event: s.NetworkActionNames.POMELO_CREATE,
           properties: {
