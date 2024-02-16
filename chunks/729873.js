@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EmojiPickerInspector: function() {
-    return x
+    return O
   }
 });
 var l = n("37983"),
@@ -19,110 +19,120 @@ var l = n("37983"),
   h = n("471671"),
   E = n("351825"),
   g = n("315102"),
-  S = n("788506"),
-  C = n("352046"),
-  T = n("917764"),
-  v = n("83017"),
-  I = n("115279"),
-  _ = n("782340"),
-  N = n("981840");
+  S = n("248474"),
+  C = n("788506"),
+  T = n("352046"),
+  v = n("917764"),
+  I = n("83017"),
+  _ = n("115279"),
+  N = n("782340"),
+  A = n("981840");
 
-function A(e) {
+function y(e) {
   return "animated" in e
 }
-let y = e => {
+let x = e => {
     let {
       inspectedEmoji: t,
       guild: n
-    } = e, l = A(t);
-    return null != n && l ? _.default.Messages.EMOJI_FROM_GUILD.format({
+    } = e, l = y(t);
+    return null != n && l ? N.default.Messages.EMOJI_FROM_GUILD.format({
       guildName: n.name
     }) : null
   },
-  x = i.memo(function(e) {
+  O = i.memo(function(e) {
     let t, {
         className: n,
-        emojiGrid: _,
-        guildId: x,
-        pickerIntention: O,
-        channel: R
+        emojiGrid: O,
+        guildId: R,
+        pickerIntention: M,
+        channel: L
       } = e,
-      M = c.EmojiPickerStore.useStore(e => e.inspectedExpressionPosition),
-      L = i.useMemo(() => {
+      {
+        enabled: P
+      } = S.default.useExperiment({
+        location: "EmojiPicker"
+      }, {
+        autoTrackExposure: !1
+      }),
+      b = c.EmojiPickerStore.useStore(e => e.inspectedExpressionPosition),
+      j = i.useMemo(() => {
         var e;
         let {
           rowIndex: t,
           columnIndex: n
-        } = M;
-        return null === (e = _[t]) || void 0 === e ? void 0 : e[n]
-      }, [_, M]),
-      P = (null == L ? void 0 : L.type) === v.EmojiGridItemTypes.EMOJI ? null == L ? void 0 : L.emoji : {
+        } = b;
+        return null === (e = O[t]) || void 0 === e ? void 0 : e[n]
+      }, [O, b]),
+      U = (null == j ? void 0 : j.type) === I.EmojiGridItemTypes.EMOJI ? null == j ? void 0 : j.emoji : {
         type: "CREATE_EMOJI",
-        guildId: null == L ? void 0 : L.guildId,
-        allNamesString: null == L ? void 0 : L.name
+        guildId: null == j ? void 0 : j.guildId,
+        allNamesString: null == j ? void 0 : j.name
       },
-      b = (0, a.useStateFromStores)([p.default], () => null !== P && P.type === o.EmojiTypes.GUILD ? p.default.getGuild(P.guildId) : null, [P]),
-      j = (0, a.useStateFromStores)([h.default], () => h.default.isFocused()),
-      U = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion, []),
-      D = m.AnimateEmoji.useSetting(),
-      k = (0, S.useIsFavoriteEmoji)(x, A(P) ? P : null),
+      D = (0, a.useStateFromStores)([p.default], () => null !== U && U.type === o.EmojiTypes.GUILD ? p.default.getGuild(U.guildId) : null, [U]),
+      k = (0, a.useStateFromStores)([h.default], () => h.default.isFocused()),
+      w = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion, []),
+      F = m.AnimateEmoji.useSetting(),
+      G = (0, C.useIsFavoriteEmoji)(R, y(U) ? U : null),
       {
-        newlyAddedEmojis: w
-      } = (0, C.default)(x, O),
-      F = P.id,
-      B = (null == L ? void 0 : L.type) === v.EmojiGridItemTypes.EMOJI ? L.subCategory : I.EmojiSubCategory.NONE;
+        newlyAddedEmojis: B
+      } = (0, T.default)(R, M),
+      H = U.id,
+      V = (null == j ? void 0 : j.type) === I.EmojiGridItemTypes.EMOJI ? j.subCategory : _.EmojiSubCategory.NONE;
     if (i.useEffect(() => {
         let e = Date.now();
         return () => {
           let t = Date.now() - e;
-          t >= 250 && A(P) && B !== I.EmojiSubCategory.NONE && (B === I.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== P && P.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(P.guildId, w[0].id), null != M.source && (0, S.trackEmojiFocus)({
-            emoji: P,
-            subCategory: B,
-            position: L.columnIndex + 1,
-            newlyAddedHighlight: B === I.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(x, F)
+          t >= 250 && y(U) && V !== _.EmojiSubCategory.NONE && (V === _.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== U && U.type === o.EmojiTypes.GUILD && (0, d.updateNewlyAddedEmojiSeenAcknowledged)(U.guildId, B[0].id), null != b.source && (0, C.trackEmojiFocus)({
+            emoji: U,
+            subCategory: V,
+            position: j.columnIndex + 1,
+            newlyAddedHighlight: V === _.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(R, H)
           }))
         }
-      }), null == P) return null;
-    if (A(P)) {
-      var G;
-      let e = null != P.id ? g.default.getEmojiURL({
-        id: P.id,
-        animated: D && P.animated,
+      }), null == U) return null;
+    if (y(U)) {
+      var K;
+      let e = null != U.id ? g.default.getEmojiURL({
+        id: U.id,
+        animated: F && U.animated,
         size: 28
-      }) : P.url;
+      }) : U.url;
       t = "" === e ? (0, l.jsx)(s.Text, {
         variant: "text-md/normal",
-        className: N.glyphEmoji,
-        children: "surrogates" in P ? P.surrogates : null
+        className: A.glyphEmoji,
+        children: "surrogates" in U ? U.surrogates : null
       }) : (0, l.jsx)("img", {
-        alt: null !== (G = P.allNamesString) && void 0 !== G ? G : "",
+        alt: null !== (K = U.allNamesString) && void 0 !== K ? K : "",
         src: e,
-        className: N.emoji
+        className: A.emoji
       })
     } else t = (0, l.jsx)(E.default, {
-      className: N.icon,
-      foreground: N.icon,
+      className: A.icon,
+      foreground: A.icon,
       width: 24,
       height: 24
     });
-    let H = null != b ? (0, l.jsx)(T.default, {
-      className: N.guildIcon,
-      guild: b,
-      shouldAnimate: !U && j
-    }) : null;
+    let W = null != D ? (0, l.jsx)(v.default, {
+        className: A.guildIcon,
+        guild: D,
+        shouldAnimate: !w && k
+      }) : null,
+      Y = P && "CREATE_EMOJI" === U.type ? N.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : U.allNamesString,
+      z = P && "CREATE_EMOJI" === U.type ? N.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE : x({
+        inspectedEmoji: U,
+        channel: L,
+        guildId: R,
+        intention: M,
+        guild: D
+      });
     return (0, l.jsx)(f.default, {
       className: n,
       graphicPrimary: t,
-      graphicSecondary: H,
-      titlePrimary: P.allNamesString,
-      titleSecondary: y({
-        inspectedEmoji: P,
-        channel: R,
-        guildId: x,
-        intention: O,
-        guild: b
-      }),
-      isFavorite: k,
-      emojiSubCategory: B
+      graphicSecondary: W,
+      titlePrimary: Y,
+      titleSecondary: z,
+      isFavorite: G,
+      emojiSubCategory: V
     })
   })
