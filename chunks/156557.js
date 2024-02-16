@@ -228,7 +228,7 @@ class O extends l.PureComponent {
             })
           }
         }
-        return c ? (l++, (0, a.jsxs)("div", {
+        return null == c ? (console.warn("No change string for", s), null) : "" === c ? null : (l++, (0, a.jsxs)("div", {
           className: R.detail,
           children: [(0, a.jsxs)("div", {
             className: R.prefix,
@@ -257,7 +257,7 @@ class O extends l.PureComponent {
               children: d
             }) : null]
           })]
-        }, n)) : (console.warn("No change string for", s), null)
+        }, n))
       });
     return (0, a.jsx)(u.Clickable, {
       onClick: s,

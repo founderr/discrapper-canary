@@ -94,7 +94,7 @@ function C(e) {
       })
     } else u = t
   }
-  return u ? (0, _.jsxs)("div", {
+  return null == u ? (console.warn("No change string for", A), null) : "" === u ? null : (0, _.jsxs)("div", {
     className: O.detail,
     style: {
       position: "relative",
@@ -126,7 +126,7 @@ function C(e) {
         children: E
       }) : null]
     })]
-  }, s) : (console.warn("No change string for", A), null)
+  }, s)
 }
 class M extends s.PureComponent {
   render() {
