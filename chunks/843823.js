@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return h
   }
 }), n("222007");
 var l = n("446674"),
@@ -10,44 +10,63 @@ var l = n("446674"),
 let s = !1,
   r = Object.freeze({
     userAffinities: [],
-    affinityUserIds: new Set,
     lastFetched: 0
   }),
-  u = {
+  u = Object.freeze({
+    userAffinitiesMap: new Map,
+    affinityUserIds: new Set
+  }),
+  o = {
     ...r
+  },
+  d = {
+    ...u
   };
 
-function o() {
-  u.affinityUserIds = new Set(u.userAffinities.map(e => e.user_id).filter(e => !a.default.isBlocked(e)))
+function c() {
+  let e = new Map(o.userAffinities.filter(e => {
+      let {
+        user_id: t
+      } = e;
+      return !a.default.isBlocked(t)
+    }).map(e => [e.user_id, e])),
+    t = new Set(e.keys());
+  d = {
+    userAffinitiesMap: e,
+    affinityUserIds: t
+  }
 }
-class d extends l.default.PersistedStore {
+class f extends l.default.PersistedStore {
   initialize(e) {
-    this.waitFor(a.default), null != e && (u.userAffinities = e.userAffinities, u.affinityUserIds = new Set(e.affinityUserIds), u.lastFetched = e.lastFetched), this.syncWith([a.default], o)
+    this.waitFor(a.default), null != e && (o.userAffinities = e.userAffinities, o.lastFetched = e.lastFetched, c()), this.syncWith([a.default], c)
   }
   needsRefresh() {
-    return Date.now() - u.lastFetched > 864e5
+    return Date.now() - o.lastFetched > 864e5
   }
   getFetching() {
     return s
   }
   getState() {
-    return u
+    return o
   }
   getUserAffinities() {
-    return u.userAffinities
+    return o.userAffinities
+  }
+  getUserAffinity(e) {
+    return d.userAffinitiesMap.get(e)
   }
   getUserAffinitiesUserIds() {
-    return u.affinityUserIds
+    return d.affinityUserIds
   }
 }
-d.displayName = "UserAffinitiesStore", d.persistKey = "UserAffinitiesStore", d.migrations = [e => null];
-var c = new d(i.default, {
+f.displayName = "UserAffinitiesStore", f.persistKey = "UserAffinitiesStore", f.migrations = [e => null];
+var h = new f(i.default, {
   LOAD_USER_AFFINITIES_SUCCESS: function(e) {
     var t;
     let {
       affinities: n
     } = e;
-    u.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : [], u.lastFetched = Date.now(), o(), s = !1
+    o.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : [], o.lastFetched = Date.now(), c(), s = !1
   },
   LOAD_USER_AFFINITIES: function() {
     s = !0
@@ -56,8 +75,10 @@ var c = new d(i.default, {
     s = !1
   },
   LOGOUT: function() {
-    u = {
+    o = {
       ...r
+    }, d = {
+      ...u
     }
   }
 })
