@@ -28,8 +28,8 @@ var s = l("37983"),
   h = l("493390"),
   v = l("217513"),
   S = l("790618"),
-  N = l("697218"),
-  y = l("46829"),
+  y = l("697218"),
+  N = l("46829"),
   x = l("216422"),
   R = l("351825"),
   b = l("599110"),
@@ -90,12 +90,12 @@ let ee = r.AvatarSizes.SIZE_152,
       analyticsLocations: f
     }), {
       buttonColors: S,
-      backgroundColors: N
-    } = (0, Y.default)(t.styles), y = null != S ? {
+      backgroundColors: y
+    } = (0, Y.default)(t.styles), N = null != S ? {
       background: (0, W.getBackgroundGradient)(S, 90),
       color: S.text.toHslString()
-    } : void 0, R = null != N ? {
-      background: (0, W.getBackgroundGradient)(N, 135)
+    } : void 0, R = null != y ? {
+      background: (0, W.getBackgroundGradient)(y, 135)
     } : void 0, b = (0, k.isPremiumCollectiblesProduct)(t), j = (0, k.extractPriceByPurchaseTypes)(t, X.PriceSetAssignmentPurchaseTypes.DEFAULT), B = (null == j ? void 0 : j.amount) === 0, [K] = t.items;
     a.useEffect(() => {
       if ((null == K ? void 0 : K.type) === o.CollectiblesItemType.AVATAR_DECORATION) return (0, u.setPendingAvatarDecoration)(K), () => (0, u.setPendingAvatarDecoration)(void 0)
@@ -217,6 +217,7 @@ let ee = r.AvatarSizes.SIZE_152,
           children: (0, s.jsxs)("div", {
             className: Q.primaryButtons,
             children: [!b || L || B ? null != A ? (0, s.jsx)(r.Button, {
+              style: N,
               className: Q.button,
               look: r.Button.Looks.FILLED,
               onClick: () => {
@@ -233,7 +234,7 @@ let ee = r.AvatarSizes.SIZE_152,
               },
               children: J.default.Messages.COLLECTIBLES_USE_NOW
             }) : b ? (0, s.jsx)(r.Button, {
-              style: y,
+              style: N,
               className: Q.button,
               look: r.Button.Looks.FILLED,
               submitting: O,
@@ -247,7 +248,7 @@ let ee = r.AvatarSizes.SIZE_152,
               },
               children: J.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION
             }) : (0, s.jsx)(r.Button, {
-              style: y,
+              style: N,
               className: Q.button,
               look: r.Button.Looks.FILLED,
               onClick: () => (0, p.default)({
@@ -333,7 +334,7 @@ let ee = r.AvatarSizes.SIZE_152,
             className: Q.mockInputButton,
             width: 24,
             height: 24
-          }), (0, s.jsx)(y.default, {
+          }), (0, s.jsx)(N.default, {
             className: Q.mockInputButton,
             width: 24,
             height: 24
@@ -351,7 +352,7 @@ var er = e => {
     returnRef: u,
     analyticsSource: E,
     analyticsLocations: I
-  } = e, m = (0, n.default)([N.default], () => N.default.getCurrentUser()), {
+  } = e, m = (0, n.default)([y.default], () => y.default.getCurrentUser()), {
     analyticsLocations: T,
     AnalyticsLocationProvider: f
   } = (0, C.default)([...I, c.default.COLLECTIBLES_SHOP_DETAILS_MODAL]);
