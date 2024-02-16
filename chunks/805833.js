@@ -7,13 +7,13 @@ E.r(_), E.d(_, {
 var t = E("811022"),
   o = E("377678");
 let n = new t.default("Flux"),
-  a = e => e();
+  r = e => e();
 var i = new class e {
   destroy() {
-    this.changedStores.clear(), this.reactChangedStores.clear(), a = e => e()
+    this.changedStores.clear(), this.reactChangedStores.clear(), r = e => e()
   }
   injectBatchEmitChanges(e) {
-    a = e
+    r = e
   }
   pause() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
@@ -34,7 +34,7 @@ var i = new class e {
     }
   }
   emit() {
-    !this.isBatchEmitting && !this.isPaused && a(() => {
+    !this.isBatchEmitting && !this.isPaused && r(() => {
       try {
         this.isBatchEmitting = !0, this.changeSentinel++;
         let e = 0;

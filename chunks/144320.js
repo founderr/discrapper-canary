@@ -1,17 +1,17 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return s
+    return T
   }
 }), E("511434"), E("313619"), E("654714"), E("287168"), E("956660"), E("222007"), E("424973");
 var t = E("689988"),
   o = E("385976"),
   n = E("42203"),
-  a = E("315102"),
+  r = E("315102"),
   i = E("402671"),
-  r = E("115279");
+  a = E("115279");
 let I = new Worker(new URL(E.p + E.u("68638"), E.b));
-class T extends t.default {
+class s extends t.default {
   handleChannelPreload(e) {
     let {
       channelId: _
@@ -22,17 +22,17 @@ class T extends t.default {
           E = e.defaultReactionEmoji;
         if ((null == E ? void 0 : E.emojiId) != null) {
           var t, n;
-          _.push(a.default.getEmojiURL({
+          _.push(r.default.getEmojiURL({
             id: E.emojiId,
             animated: null !== (n = null === (t = o.default.getUsableCustomEmojiById(E.emojiId)) || void 0 === t ? void 0 : t.animated) && void 0 !== n && n,
-            size: r.EMOJI_SIZE_MAP.reaction
+            size: a.EMOJI_SIZE_MAP.reaction
           }))
         } else(null == E ? void 0 : E.emojiName) != null && _.push(i.default.getURL(E.emojiName));
         return e.availableTags.forEach(e => {
-          null != e.emojiId ? _.push(a.default.getEmojiURL({
+          null != e.emojiId ? _.push(r.default.getEmojiURL({
             id: e.emojiId,
             animated: !1,
-            size: r.EMOJI_SIZE_MAP.reaction
+            size: a.EMOJI_SIZE_MAP.reaction
           })) : null != e.emojiName && _.push(i.default.getURL(e.emojiName))
         }), _
       }(E);
@@ -62,4 +62,4 @@ class T extends t.default {
     }
   }
 }
-var s = new T
+var T = new s

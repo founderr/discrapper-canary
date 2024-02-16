@@ -1,5 +1,5 @@
 "use strict";
-var t, o, n, a;
+var t, o, n, r;
 E.r(_), E.d(_, {
   JumpTypes: function() {
     return t
@@ -10,7 +10,7 @@ E.r(_), E.d(_, {
   DEFAULT_OVERLAY_OPTIONS: function() {
     return i
   }
-}), (n = t || (t = {})).ANIMATED = "ANIMATED", n.INSTANT = "INSTANT", (a = o || (o = {}))[a.UNKNOWN = 0] = "UNKNOWN", a[a.WINDOWED = 1] = "WINDOWED", a[a.MAXIMIZED = 2] = "MAXIMIZED", a[a.BORDERLESS_FULLSCREEN = 3] = "BORDERLESS_FULLSCREEN", a[a.FULLSCREEN = 4] = "FULLSCREEN", a[a.MINIMIZED = 5] = "MINIMIZED";
+}), (n = t || (t = {})).ANIMATED = "ANIMATED", n.INSTANT = "INSTANT", (r = o || (o = {}))[r.UNKNOWN = 0] = "UNKNOWN", r[r.WINDOWED = 1] = "WINDOWED", r[r.MAXIMIZED = 2] = "MAXIMIZED", r[r.BORDERLESS_FULLSCREEN = 3] = "BORDERLESS_FULLSCREEN", r[r.FULLSCREEN = 4] = "FULLSCREEN", r[r.MINIMIZED = 5] = "MINIMIZED";
 let i = {
   compatibilityHook: !1,
   warn: !1,

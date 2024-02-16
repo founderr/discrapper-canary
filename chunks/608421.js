@@ -1,13 +1,13 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return r
+    return a
   }
 }), E("222007");
 var t = E("913144"),
   o = E("689988"),
   n = E("101125");
-class a extends o.default {
+class r extends o.default {
   constructor(...e) {
     super(...e), this.stores = new Map().set(n.default, i)
   }
@@ -20,4 +20,4 @@ function i() {
     activities: n.default.getActivities()
   })
 }
-var r = new a
+var a = new r

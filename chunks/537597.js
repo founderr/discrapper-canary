@@ -8,10 +8,10 @@ var t = E("37983");
 E("884691");
 var o = E("77078"),
   n = E("892974"),
-  a = E("761771");
+  r = E("761771");
 
 function i(e) {
-  (0, a.isEligibleForInappropriateConversationWarning)({
+  (0, r.isEligibleForInappropriateConversationWarning)({
     location: "takeover-modal"
   }) && (0, o.openModalLazy)(async () => {
     let {

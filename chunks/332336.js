@@ -7,19 +7,19 @@ E.r(_), E.d(_, {
 var t = E("913144"),
   o = E("689988"),
   n = E("525065"),
-  a = E("299039"),
+  r = E("299039"),
   i = E("178406");
-let r = {},
+let a = {},
   I = {},
-  T = null;
-async function s(e, _) {
-  null == r[e] && (r[e] = new Set), r[e].add(_), null == I[e] && (I[e] = Date.now()), N(e) && await S(e)
+  s = null;
+async function T(e, _) {
+  null == a[e] && (a[e] = new Set), a[e].add(_), null == I[e] && (I[e] = Date.now()), N(e) && await S(e)
 }
 
 function S(e) {
-  if (null == r[e]) return;
-  let _ = Array.from(r[e]);
-  r[e] = new Set, I[e] = Date.now(), requestAnimationFrame(async () => {
+  if (null == a[e]) return;
+  let _ = Array.from(a[e]);
+  a[e] = new Set, I[e] = Date.now(), requestAnimationFrame(async () => {
     await t.default.dispatch({
       type: "MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH",
       guildId: e,
@@ -29,7 +29,7 @@ function S(e) {
 }
 
 function N(e) {
-  let _ = r[e];
+  let _ = a[e];
   if (null == _) return !1;
   let E = _.size >= function(e) {
       var _;
@@ -40,32 +40,32 @@ function N(e) {
   if (E) return !0;
   if (null == t) return !1;
   let o = Date.now() - t,
-    a = null != t && o >= function(e) {
+    r = null != t && o >= function(e) {
       var _;
       let E = null !== (_ = n.default.getMemberCount(e)) && void 0 !== _ ? _ : 0;
       return E >= 75e3 ? 5e3 : 2e3
     }(e);
-  return a
+  return r
 }
 
 function O(e) {
-  r[e] = new Set, I[e] = null
+  a[e] = new Set, I[e] = null
 }
 class A extends o.default {
   handleInitialize() {
-    null == T && null == T && (T = setInterval(() => {
-      a.default.forEachKey(r, e => {
+    null == s && null == s && (s = setInterval(() => {
+      r.default.forEachKey(a, e => {
         N(e) && S(e)
       })
     }, 1e4))
   }
   handleGuildMemberUpdate(e, _) {
     let E = i.default.isInitialized(e);
-    if (E) return s(e, _)
+    if (E) return T(e, _)
   }
   handleGuildMemberRemove(e, _) {
     let E = i.default.isInitialized(e);
-    if (E) return s(e, _)
+    if (E) return T(e, _)
   }
   handleGuildDelete(e) {
     let _ = e.guild.id,

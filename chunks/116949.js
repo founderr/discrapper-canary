@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   BINARY_READ_OPTIONS: function() {
-    return s
+    return T
   },
   b64ToProtoWithType: function() {
     return N
@@ -19,10 +19,10 @@ E.r(_), E.d(_, {
     return l
   },
   mergeTopLevelFields: function() {
-    return L
+    return u
   },
   mutateUserGuildSettingsInternal: function() {
-    return u
+    return L
   },
   mutateUserChannelSettings: function() {
     return C
@@ -40,17 +40,17 @@ E.r(_), E.d(_, {
 var t = E("849266"),
   o = E("917351"),
   n = E.n(o),
-  a = E("713349"),
+  r = E("713349"),
   i = E("151426"),
-  r = E("959714"),
+  a = E("959714"),
   I = E("397336"),
-  T = E("49111");
-let s = {
+  s = E("49111");
+let T = {
     readerFactory: e => new t.BinaryReader(e, new TextDecoder("utf-8"))
   },
   S = {
     [I.UserSettingsTypes.PRELOADED_USER_SETTINGS]: i.PreloadedUserSettings,
-    [I.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: a.FrecencyUserSettings
+    [I.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: r.FrecencyUserSettings
   };
 
 function N(e, _) {
@@ -61,7 +61,7 @@ function O(e, _) {
   if (null == _) return null;
   let E = (0, t.base64decode)(_);
   try {
-    return e.fromBinary(E, s)
+    return e.fromBinary(E, T)
   } catch (e) {
     throw Error("Settings proto failed to deserialize (potentially corrupt): ".concat(e))
   }
@@ -79,20 +79,20 @@ function l(e, _) {
   return (0, t.base64encode)(e.toBinary(_))
 }
 
-function L(e, _, E) {
+function u(e, _, E) {
   for (let e in _ = {
       ..._
     }, E) delete _[e];
   return e.mergePartial(_, E), _
 }
 
-function u(e, _, E) {
-  return (null == _ || "null" === _) && (_ = T.ZERO_STRING_GUILD_ID), !(_ in e.guilds) && (e.guilds[_] = i.GuildSettings.create()), E(e.guilds[_])
+function L(e, _, E) {
+  return (null == _ || "null" === _) && (_ = s.ZERO_STRING_GUILD_ID), !(_ in e.guilds) && (e.guilds[_] = i.GuildSettings.create()), E(e.guilds[_])
 }
 
 function C(e, _, E, t) {
-  var o, n, a;
-  return o = e, n = _, a = e => D(e, E, t), null == o.guilds && (o.guilds = i.AllGuildSettings.create()), u(o.guilds, n, a)
+  var o, n, r;
+  return o = e, n = _, r = e => D(e, E, t), null == o.guilds && (o.guilds = i.AllGuildSettings.create()), L(o.guilds, n, r)
 }
 
 function D(e, _, E) {
@@ -100,7 +100,7 @@ function D(e, _, E) {
 }
 
 function c(e, _) {
-  null == e.versions && (e.versions = r.Versions.create());
+  null == e.versions && (e.versions = a.Versions.create());
   let E = 0;
   for (let e of _) {
     if (e.version <= E) throw Error("Migrations are out of order or there is a duplicate version");
@@ -110,9 +110,9 @@ function c(e, _) {
     o = !1,
     n = [];
   for (let E of _) {
-    var a, i;
+    var r, i;
     if (E.version <= e.versions.clientVersion) {
-      t && (null === (a = E.cleanup) || void 0 === a || a.call(E));
+      t && (null === (r = E.cleanup) || void 0 === r || r.call(E));
       continue
     }
     let _ = E.run(e);
@@ -138,7 +138,7 @@ function d(e, _) {
       }).reverse(); E.length > _;) E.pop();
   let t = {};
   for (let [e, _] of E) {
-    let E = a.FrecencyItem.create();
+    let E = r.FrecencyItem.create();
     E.frecency = _.frecency, E.recentUses = _.recentUses.filter(e => null != e && e > 0).map(String), E.score = Math.round(_.score), E.totalUses = _.totalUses, t[e] = E
   }
   return t

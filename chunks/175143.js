@@ -1,18 +1,18 @@
 "use strict";
-var n = e("859514"),
-  i = e("116180"),
-  o = e("308274"),
-  u = e("969708"),
-  a = e("505713");
-n({
+var e = n("859514"),
+  i = n("116180"),
+  o = n("308274"),
+  u = n("969708"),
+  a = n("505713");
+e({
   target: "Array",
   proto: !0
 }, {
   at: function(t) {
     var r = i(this),
-      e = o(r),
-      n = u(t),
-      a = n >= 0 ? n : e + n;
-    return a < 0 || a >= e ? void 0 : r[a]
+      n = o(r),
+      e = u(t),
+      a = e >= 0 ? e : n + e;
+    return a < 0 || a >= n ? void 0 : r[a]
   }
 }), a("at")

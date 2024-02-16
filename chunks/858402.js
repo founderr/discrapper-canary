@@ -10,28 +10,28 @@ E.r(_), E.d(_, {
 var t = E("689988"),
   o = E("809810"),
   n = E("599110"),
-  a = E("533686"),
+  r = E("533686"),
   i = E("62355"),
-  r = E("49111");
+  a = E("49111");
 let I = "interaction_iframe_modal";
-async function T(e) {
+async function s(e) {
   let {
     openInteractionModal: _
   } = await E.el("394816").then(E.bind(E, "394816"));
-  _(e), n.default.track(r.AnalyticEvents.OPEN_MODAL, {
+  _(e), n.default.track(a.AnalyticEvents.OPEN_MODAL, {
     type: "interaction_modal",
     application_id: e.application.id
   })
 }
-class s extends t.default {
+class T extends t.default {
   constructor(...e) {
     super(...e), this.iframeModalOpenTimeMs = void 0, this.actions = {
       INTERACTION_MODAL_CREATE: e => {
-        T(e)
+        s(e)
       },
       INTERACTION_IFRAME_MODAL_CREATE: e => {
         var _;
-        this.iframeModalOpenTimeMs = Date.now(), _ = e, (0, i.default)(_), n.default.track(r.AnalyticEvents.OPEN_MODAL, {
+        this.iframeModalOpenTimeMs = Date.now(), _ = e, (0, i.default)(_), n.default.track(a.AnalyticEvents.OPEN_MODAL, {
           type: I,
           application_id: _.application.id
         })
@@ -39,7 +39,7 @@ class s extends t.default {
       INTERACTION_IFRAME_MODAL_CLOSE: e => {
         ! function(e, _) {
           let E = null != _ ? Date.now() - _ : void 0;
-          n.default.track(r.AnalyticEvents.MODAL_DISMISSED, {
+          n.default.track(a.AnalyticEvents.MODAL_DISMISSED, {
             type: I,
             application_id: e.applicationId,
             duration_open_ms: E
@@ -51,10 +51,10 @@ class s extends t.default {
           let {
             application: _
           } = e, E = o.default.getIFrameModalApplicationId(), t = o.default.getIFrameModalKey();
-          _.id === E && null != E && (0, a.default)(E, t)
+          _.id === E && null != E && (0, r.default)(E, t)
         }(e)
       }
     }
   }
 }
-var S = new s
+var S = new T

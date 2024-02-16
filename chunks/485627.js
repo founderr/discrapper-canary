@@ -7,19 +7,19 @@ E.r(_), E.d(_, {
 var t = E("95410"),
   o = E("689988"),
   n = E("697218"),
-  a = E("553257"),
+  r = E("553257"),
   i = E("363613"),
-  r = E("42060"),
+  a = E("42060"),
   I = E("275803"),
-  T = E("935583");
-let s = "lastSawPomelo";
+  s = E("935583");
+let T = "lastSawPomelo";
 class S extends o.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: () => this.onPostConnectionOpen()
     }, this.onPostConnectionOpen = () => {
       if (function() {
-          let e = a.experiment.getCurrentConfig({
+          let e = r.experiment.getCurrentConfig({
             location: "b9eb97_1"
           }, {
             autoTrackExposure: !1
@@ -27,8 +27,8 @@ class S extends o.default {
           if (!e) return !1;
           let _ = n.default.getCurrentUser();
           if (null == _ || _.isPomelo() || !_.hasVerifiedEmailOrPhone()) return !1;
-          let E = (0, r.getForceMigration)(),
-            o = t.default.get(E ? "lastSawPomeloMigration" : s);
+          let E = (0, a.getForceMigration)(),
+            o = t.default.get(E ? "lastSawPomeloMigration" : T);
           return !(null != o && Date.now() - o < 6048e5) && !0
         }()) {
         let e = I.UUOneClickExperiment.getCurrentConfig({
@@ -36,8 +36,8 @@ class S extends o.default {
           }, {
             autoTrackExposure: !1
           }).enabled,
-          _ = (0, i.openPomeloModal)(T.PomeloEntrypoints.APP_START, e, !1);
-        _ && t.default.set(s, Date.now())
+          _ = (0, i.openPomeloModal)(s.PomeloEntrypoints.APP_START, e, !1);
+        _ && t.default.set(T, Date.now())
       }
     }
   }

@@ -1,14 +1,14 @@
 "use strict";
 E.r(_), E.d(_, {
   sendStageRequestToSpeakEphemeralMessage: function() {
-    return a
+    return r
   }
 });
 var t = E("913144"),
   o = E("299039"),
   n = E("49111");
 
-function a(e, _, E) {
+function r(e, _, E) {
   t.default.dispatch({
     type: "MESSAGE_CREATE",
     channelId: e,

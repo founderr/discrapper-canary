@@ -8,7 +8,7 @@ var t = E("37983");
 E("884691");
 var o = E("404828"),
   n = E.n(o),
-  a = E("77078");
+  r = E("77078");
 
 function i(e) {
   return e.paragraph = {
@@ -26,7 +26,7 @@ function i(e) {
         let _ = e.context[e.target];
         _ && _.onClick ? (o.onClick = _.onClick, o.onContextMenu = _.onContextMenu) : o.onClick = _
       }
-      return null == o.onClick && (o.href = n.sanitizeUrl(e.target)), (0, t.jsx)(a.Anchor, {
+      return null == o.onClick && (o.href = n.sanitizeUrl(e.target)), (0, t.jsx)(r.Anchor, {
         title: e.title,
         ...o,
         children: _(e.content, E)

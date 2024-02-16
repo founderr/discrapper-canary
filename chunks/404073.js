@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return a
+    return r
   }
 });
 var t = E("811335"),
@@ -14,9 +14,9 @@ function n(e) {
     url: "".concat(location.protocol).concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/jobs")
   })), "font-size: 16px;")) : setTimeout(() => n(e, _ + 1), 1e3))
 }
-var a = (e, _, E) => {
+var r = (e, _, E) => {
   if (null != E && "0.0.0" === E.remoteApp.getVersion()) return;
-  let a = new t.default;
+  let r = new t.default;
   if (null != E) {
     if (null != E.window.setDevtoolsCallbacks) E.window.setDevtoolsCallbacks(() => {
       _.hideToken(), n(e)
@@ -29,7 +29,7 @@ var a = (e, _, E) => {
         _.hideToken(), n(e)
       }), t.on("devtools-closed", _.showToken)
     }
-  } else !o.isMobile && !o.isTablet && a.on("changed", E => {
+  } else !o.isMobile && !o.isTablet && r.on("changed", E => {
     let {
       open: t
     } = E;

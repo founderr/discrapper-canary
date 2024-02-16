@@ -7,9 +7,9 @@ E.r(_), E.d(_, {
 var t = E("689988"),
   o = E("42203"),
   n = E("18494"),
-  a = E("821240"),
+  r = E("821240"),
   i = E("761771"),
-  r = E("537597");
+  a = E("537597");
 
 function I(e) {
   let {
@@ -20,14 +20,14 @@ function I(e) {
     })) return !1;
   let E = o.default.getChannel(_);
   if (null == E || !E.isDM()) return !1;
-  let t = (0, a.getInappropriateConversationTakeoverForChannel)(_);
-  return null != t && ((0, r.showTakeoverModal)({
+  let t = (0, r.getInappropriateConversationTakeoverForChannel)(_);
+  return null != t && ((0, a.showTakeoverModal)({
     warningId: t.id,
     senderId: E.getRecipientId()
   }), !0)
 }
 
-function T(e) {
+function s(e) {
   let {
     channels: _
   } = e;
@@ -38,18 +38,18 @@ function T(e) {
   if (null == E) return !1;
   let t = _.find(e => e.id === E);
   if (null == t) return !1;
-  let o = (0, a.getInappropriateConversationTakeoverForChannel)(t.id);
-  return !!(null != o && t.isDM()) && ((0, r.showTakeoverModal)({
+  let o = (0, r.getInappropriateConversationTakeoverForChannel)(t.id);
+  return !!(null != o && t.isDM()) && ((0, a.showTakeoverModal)({
     warningId: o.id,
     senderId: t.getRecipientId()
   }), !0)
 }
-class s extends t.default {
+class T extends t.default {
   constructor(...e) {
     super(...e), this.actions = {
       CHANNEL_SELECT: I,
-      CHANNEL_UPDATES: T
+      CHANNEL_UPDATES: s
     }
   }
 }
-var S = new s
+var S = new T

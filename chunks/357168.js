@@ -7,23 +7,23 @@ E.r(_), E.d(_, {
 var t = E("862337"),
   o = E("819689"),
   n = E("987317"),
-  a = E("689988"),
+  r = E("689988"),
   i = E("191225"),
-  r = E("42203"),
+  a = E("42203"),
   I = E("101125"),
-  T = E("800762"),
-  s = E("316133"),
+  s = E("800762"),
+  T = E("316133"),
   S = E("782340");
 let N = 18e4;
 
 function O() {
-  let e = T.default.getCurrentClientVoiceChannelId(null);
+  let e = s.default.getCurrentClientVoiceChannelId(null);
   if (null == e) return !1;
-  let _ = r.default.getChannel(e);
+  let _ = a.default.getChannel(e);
   if (null == _ || !_.isPrivate()) return !1;
   let E = _.recipients.length;
   if (E > 1) return !1;
-  let t = s.default.countVoiceStatesForChannel(e);
+  let t = T.default.countVoiceStatesForChannel(e);
   if (t > 1) return !1;
   let o = i.default.getSelfEmbeddedActivityForChannel(e);
   if (null != o) return !1;
@@ -33,12 +33,12 @@ function O() {
 
 function A() {
   if (!O()) return;
-  let e = T.default.getCurrentClientVoiceChannelId(null);
+  let e = s.default.getCurrentClientVoiceChannelId(null);
   null != e && (o.default.sendBotMessage(e, S.default.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({
     number: 3
   })), n.default.selectVoiceChannel(null))
 }
-class R extends a.default {
+class R extends r.default {
   constructor(...e) {
     super(...e), this.idleTimeout = new t.Timeout, this.handleConnectionClosed = () => {
       this.idleTimeout.stop()

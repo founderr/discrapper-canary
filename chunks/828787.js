@@ -1,28 +1,28 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return u
+    return L
   }
 }), E("222007");
 var t = E("37983");
 E("884691");
 var o = E("77078"),
   n = E("299285"),
-  a = E("374014"),
+  r = E("374014"),
   i = E("582415"),
-  r = E("643130"),
+  a = E("643130"),
   I = E("292687"),
-  T = E("271938"),
-  s = E("42203"),
+  s = E("271938"),
+  T = E("42203"),
   S = E("824563"),
   N = E("945956"),
   O = E("205817"),
   A = E("722333"),
   R = E("200521"),
   l = E("49111");
-class L extends A.default {
+class u extends A.default {
   _initialize() {
-    r.default.init()
+    a.default.init()
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -50,23 +50,23 @@ class L extends A.default {
       var _;
       let {
         streamKey: n,
-        canShowFeedback: r
-      } = e, I = (0, a.decodeStreamKey)(n), s = (0, i.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
+        canShowFeedback: a
+      } = e, I = (0, r.decodeStreamKey)(n), T = (0, i.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
         media_session_id: O.default.getMediaSessionId(n),
         rtc_connection_id: O.default.getRtcConnectionId(n),
         stream_region: O.default.getRegion(n),
         max_viewers: O.default.getMaxViewers(n),
         ...N
       };
-      r && this.possiblyShowFeedbackModal(R.FeedbackType.STREAM, () => {
+      a && this.possiblyShowFeedbackModal(R.FeedbackType.STREAM, () => {
         (0, o.openModalLazy)(async () => {
           let {
             default: e
           } = await E.el("363787").then(E.bind(E, "363787"));
           return _ => (0, t.jsx)(e, {
             stream: I,
-            streamApplication: s,
-            isStreamer: I.ownerId === T.default.getId(),
+            streamApplication: T,
+            isStreamer: I.ownerId === s.default.getId(),
             ..._,
             analyticsData: A
           })
@@ -90,21 +90,21 @@ class L extends A.default {
     }, this.handleActivityClose = e => {
       let {
         applicationId: _,
-        channelId: a,
+        channelId: r,
         showFeedback: i
-      } = e, r = n.default.getApplication(_), T = s.default.getChannel(a), S = {
+      } = e, a = n.default.getApplication(_), s = T.default.getChannel(r), S = {
         rtc_connection_id: N.default.getRTCConnectionId(),
         media_session_id: N.default.getMediaSessionId()
       }, O = I.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT), A = O ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT;
-      null != r && null != T && i && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
+      null != a && null != s && i && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
         (0, o.openModalLazy)(async () => {
           let {
             default: e
           } = await E.el("959350").then(E.bind(E, "959350"));
           return _ => (0, t.jsx)(e, {
             ..._,
-            activityApplication: r,
-            channel: T,
+            activityApplication: a,
+            channel: s,
             analyticsData: S
           })
         }, {
@@ -131,4 +131,4 @@ class L extends A.default {
     }
   }
 }
-var u = new L
+var L = new u

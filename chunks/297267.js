@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return f
   },
   updateCreateGuildModal: function() {
-    return h
+    return _
   }
 });
 var r = n("37983");
@@ -64,7 +64,7 @@ let f = e => {
       modalKey: o.CREATE_GUILD_MODAL_KEY
     })
   },
-  h = e => {
+  _ = e => {
     let {
       slide: t,
       location: n

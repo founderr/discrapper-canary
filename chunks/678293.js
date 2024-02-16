@@ -56,7 +56,7 @@ function f(e) {
   var I = Object.assign({
     position: b
   }, w && d);
-  var R = !0 === k ? (t = {
+  var A = !0 === k ? (t = {
     x: T,
     y: Y
   }, n = (0, o.default)(h), u = t.x, l = t.y, f = n.devicePixelRatio || 1, {
@@ -66,7 +66,7 @@ function f(e) {
     x: T,
     y: Y
   };
-  return (T = R.x, Y = R.y, M) ? Object.assign({}, I, ((m = {})[j] = E ? "0" : "", m[P] = O ? "0" : "", m.transform = 1 >= (C.devicePixelRatio || 1) ? "translate(" + T + "px, " + Y + "px)" : "translate3d(" + T + "px, " + Y + "px, 0)", m)) : Object.assign({}, I, ((p = {})[j] = E ? Y + "px" : "", p[P] = O ? T + "px" : "", p.transform = "", p))
+  return (T = A.x, Y = A.y, M) ? Object.assign({}, I, ((m = {})[j] = E ? "0" : "", m[P] = O ? "0" : "", m.transform = 1 >= (C.devicePixelRatio || 1) ? "translate(" + T + "px, " + Y + "px)" : "translate3d(" + T + "px, " + Y + "px, 0)", m)) : Object.assign({}, I, ((p = {})[j] = E ? Y + "px" : "", p[P] = O ? T + "px" : "", p.transform = "", p))
 }
 var p = {
   name: "computeStyles",

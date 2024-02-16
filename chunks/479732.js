@@ -17,10 +17,10 @@ var t = E("91131"),
       var E;
       let {
         guilds: n
-      } = e, a = n.filter(e => e.unableToSyncDeletes).map(e => ({
+      } = e, r = n.filter(e => e.unableToSyncDeletes).map(e => ({
         id: e.id
       }));
-      a.length > 0 && o.default.guildsRequiringDeletedIdsSyncTransaction(_).putAll(a), null === (E = t.initialState.guildIdsRequiringDeletedIdsSync) || void 0 === E || E.forEach(e => {
+      r.length > 0 && o.default.guildsRequiringDeletedIdsSyncTransaction(_).putAll(r), null === (E = t.initialState.guildIdsRequiringDeletedIdsSync) || void 0 === E || E.forEach(e => {
         o.default.guildsRequiringDeletedIdsSyncTransaction(_).put({
           id: e
         })

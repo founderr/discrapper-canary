@@ -4,28 +4,28 @@ E.r(_), E.d(_, {
     return i
   },
   ThumbarButtonName: function() {
-    return r
+    return a
   },
   default: function() {
     return g
   }
 }), E("222007"), E("70102"), E("511434"), E("313619"), E("654714"), E("287168"), E("956660"), E("424973");
-var t, o, n, a, i, r, I, T, s = E("627445"),
-  S = E.n(s),
+var t, o, n, r, i, a, I, s, T = E("627445"),
+  S = E.n(T),
   N = E("817792"),
   O = E("872717"),
   A = E("95410"),
   R = E("115718"),
   l = E("773336"),
-  L = E("49111"),
-  u = E("446825").Buffer;
+  u = E("49111"),
+  L = E("446825").Buffer;
 let C = window.DiscordNative,
   D = ["jpg", "jpeg", "png"],
   c = null,
   d = null,
   U = null,
   M = {};
-null != C && (c = C.remoteApp.getVersion().split(".").map(e => parseInt(e)), U = null === (t = (o = C.remoteApp).getModuleVersions) || void 0 === t ? void 0 : t.call(o), d = null === (n = (a = C.remoteApp).getBuildNumber) || void 0 === n ? void 0 : n.call(a));
+null != C && (c = C.remoteApp.getVersion().split(".").map(e => parseInt(e)), U = null === (t = (o = C.remoteApp).getModuleVersions) || void 0 === t ? void 0 : t.call(o), d = null === (n = (r = C.remoteApp).getBuildNumber) || void 0 === n ? void 0 : n.call(r));
 let h = new Set(["discord_erlpack", "discord_game_utils", "discord_rpc", "discord_spellcheck", "discord_utils", "discord_voice"]),
   P = !1;
 async function m(e) {
@@ -43,7 +43,7 @@ function G(e) {
 }
 
 function p(e) {
-  var _, E, t, o, n, a, i, r;
+  var _, E, t, o, n, r, i, a;
   return {
     id: M[null !== (_ = e.id) && void 0 !== _ ? _ : ""],
     nativeProcessObserverId: parseInt(null !== (E = e.id) && void 0 !== E ? E : "", 10),
@@ -59,11 +59,11 @@ function p(e) {
     distributor: e.distributor,
     sku: e.sku,
     pid: e.pid,
-    pidPath: null !== (a = e.pidPath) && void 0 !== a ? a : [],
+    pidPath: null !== (r = e.pidPath) && void 0 !== r ? r : [],
     windowHandle: null !== (i = e.windowHandle) && void 0 !== i ? i : null,
-    fullscreenType: null !== (r = e.fullscreenType) && void 0 !== r ? r : R.RunningProcessFullscreenType.UNKNOWN
+    fullscreenType: null !== (a = e.fullscreenType) && void 0 !== a ? a : R.RunningProcessFullscreenType.UNKNOWN
   }
-}(I = i || (i = {}))[I.Camera = 0] = "Camera", I[I.Microphone = 1] = "Microphone", I[I.Photo = 2] = "Photo", I[I.InputMonitoring = 3] = "InputMonitoring", I[I.ScreenRecording = 4] = "ScreenRecording", (T = r || (r = {})).VIDEO = "VIDEO", T.MUTE = "MUTE", T.DEAFEN = "DEAFEN", T.DISCONNECT = "DISCONNECT";
+}(I = i || (i = {}))[I.Camera = 0] = "Camera", I[I.Microphone = 1] = "Microphone", I[I.Photo = 2] = "Photo", I[I.InputMonitoring = 3] = "InputMonitoring", I[I.ScreenRecording = 4] = "ScreenRecording", (s = a || (a = {})).VIDEO = "VIDEO", s.MUTE = "MUTE", s.DEAFEN = "DEAFEN", s.DISCONNECT = "DISCONNECT";
 var g = {
   requireModule: e => C.nativeModules.requireModule(e),
   ensureModule: e => l.isPlatformEmbedded ? __OVERLAY__ && h.has(e) ? Promise.resolve() : C.nativeModules.ensureModule(e) : Promise.reject(Error("not embedded")),
@@ -77,7 +77,7 @@ var g = {
     try {
       e = this.requireModule("discord_overlay2")
     } catch (e) {}
-    e && e.reset && e.reset(), e && e.disconnectAllProcesses && e.destroyHostProcess && (e.disconnectAllProcesses(), e.destroyHostProcess()), C.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== A.default.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) && this.supportsFeature(L.NativeFeatures.USER_DATA_CACHE) && C.userDataCache.cacheUserData(A.default.stringify())
+    e && e.reset && e.reset(), e && e.disconnectAllProcesses && e.destroyHostProcess && (e.disconnectAllProcesses(), e.destroyHostProcess()), C.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== A.default.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) && this.supportsFeature(u.NativeFeatures.USER_DATA_CACHE) && C.userDataCache.cacheUserData(A.default.stringify())
   },
   inputEventRegister(e, _, E, t) {
     !Array.isArray(_) && (_ = _.toJS()), this.getDiscordUtils().inputEventRegister(parseInt(e), _.map(e => {
@@ -198,7 +198,7 @@ var g = {
   async copyImage(e) {
     S(l.isPlatformEmbedded, "Copy image method called outside native app"), S("function" == typeof C.clipboard.copyImage, "Copy image not supported");
     let _ = await m(e);
-    C.clipboard.copyImage(u.from(_), e)
+    C.clipboard.copyImage(L.from(_), e)
   },
   async saveImage(e) {
     var _;
@@ -206,7 +206,7 @@ var g = {
     let E = new URL(e),
       t = null !== (_ = E.pathname.split("/").pop()) && void 0 !== _ ? _ : "unknown",
       o = await m(e),
-      n = u.from(o);
+      n = L.from(o);
     C.fileManager.saveWithDialog(n, t)
   },
   async saveFile(e, _) {
@@ -215,8 +215,8 @@ var g = {
     let t = new URL(e),
       o = null !== (E = null != _ ? _ : t.pathname.split("/").pop()) && void 0 !== E ? E : "unknown",
       n = await m(e),
-      a = u.from(n);
-    C.fileManager.saveWithDialog(a, o)
+      r = L.from(n);
+    C.fileManager.saveWithDialog(r, o)
   },
   canCopyImage() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
@@ -376,29 +376,29 @@ var g = {
     let {
       method: o,
       maxBps: n,
-      token: a,
+      token: r,
       chunkInterval: i,
-      contentType: r
+      contentType: a
     } = {
       maxBps: 8e3,
       chunkInterval: 50,
       contentType: "application/json",
       ...E
     }, I = _;
-    "application/json" === r && (I = JSON.stringify(_));
-    let T = n * (i / 1e3),
-      s = Math.ceil(I.length / T),
-      S = Array(s);
-    for (let e = 0; e < s; e++) {
-      let _ = e * T;
-      S[e] = I.substring(_, _ + T)
+    "application/json" === a && (I = JSON.stringify(_));
+    let s = n * (i / 1e3),
+      T = Math.ceil(I.length / s),
+      S = Array(T);
+    for (let e = 0; e < T; e++) {
+      let _ = e * s;
+      S[e] = I.substring(_, _ + s)
     }
     return new Promise((e, _) => {
       null != C.http && C.http.makeChunkedRequest(t, S, {
         method: o,
         chunkInterval: i,
-        contentType: r,
-        token: a
+        contentType: a,
+        token: r
       }, (E, t) => null != E ? _(E) : t.status >= 400 ? _(Error(t.body)) : void e(t))
     })
   },
@@ -457,10 +457,10 @@ var g = {
     var E, t, o;
     let n = [...null != c ? c : [0, 0, 0]];
     n.push(null !== (t = null === (E = this.moduleVersions) || void 0 === E ? void 0 : E[e]) && void 0 !== t ? t : 0);
-    let a = null !== (o = _[this.releaseChannel]) && void 0 !== o ? o : _.stable;
+    let r = null !== (o = _[this.releaseChannel]) && void 0 !== o ? o : _.stable;
     for (let [e, _] of n.entries()) {
-      if (_ > a[e]) break;
-      if (_ < a[e]) return !1
+      if (_ > r[e]) break;
+      if (_ < r[e]) return !1
     }
     return !0
   }

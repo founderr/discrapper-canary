@@ -39,7 +39,7 @@ var i = n("37983"),
       bottom: 0,
       left: 0,
       right: 0
-    }), [D, L] = r.useState(!1), [y, P] = r.useState(1), [b, U] = r.useState({
+    }), [D, L] = r.useState(!1), [y, b] = r.useState(1), [P, U] = r.useState({
       x: 0,
       y: 0
     }), [x, H] = r.useState(null), [G, B] = r.useState(!1), {
@@ -108,10 +108,10 @@ var i = n("37983"),
           y: n
         } = W.current;
         if (!D || t.clientX === e && t.clientY === n) return;
-        let i = t.clientX - b.x,
-          r = t.clientY - b.y;
+        let i = t.clientX - P.x,
+          r = t.clientY - P.y;
         X(i, r, S)
-      }, [S, D, b, X]),
+      }, [S, D, P, X]),
       K = () => {
         L(!1)
       },
@@ -221,7 +221,7 @@ var i = n("37983"),
                   x: r,
                   y: s
                 } = W.current;
-                (!(0, a.inRange)(r, i.right, i.left) || !(0, a.inRange)(s, i.top, i.bottom)) && X(r, s, i), P(t), O(i)
+                (!(0, a.inRange)(r, i.right, i.left) || !(0, a.inRange)(s, i.top, i.bottom)) && X(r, s, i), b(t), O(i)
               },
               disabled: G,
               equidistant: !0,

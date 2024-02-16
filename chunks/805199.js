@@ -7,14 +7,14 @@ E.r(_), E.d(_, {
 var t = E("446674"),
   o = E("913144"),
   n = E("697218"),
-  a = E("599110"),
+  r = E("599110"),
   i = E("719923"),
-  r = E("513196"),
+  a = E("513196"),
   I = E("49111"),
-  T = E("994428"),
-  s = E("646718");
+  s = E("994428"),
+  T = E("646718");
 let S = {
-    desktop: r.FreemiumAppIconIds.DEFAULT,
+    desktop: a.FreemiumAppIconIds.DEFAULT,
     coachmarkImpressions: 0
   },
   N = {
@@ -28,21 +28,21 @@ let S = {
   l = e => {
     if (N.client.desktop = e, !A) {
       var _;
-      a.default.track(I.AnalyticEvents.APP_ICON_UPDATED, {
+      r.default.track(I.AnalyticEvents.APP_ICON_UPDATED, {
         icon_id: e,
         user_premium_tier: null === (_ = n.default.getCurrentUser()) || void 0 === _ ? void 0 : _.premiumType,
-        icon_premium_tier: e !== r.FreemiumAppIconIds.DEFAULT ? s.PremiumTypes.TIER_2 : null
+        icon_premium_tier: e !== a.FreemiumAppIconIds.DEFAULT ? T.PremiumTypes.TIER_2 : null
       })
     }
   };
 
-function L() {
+function u() {
   A && (N.client = {
-    desktop: r.FreemiumAppIconIds.DEFAULT,
+    desktop: a.FreemiumAppIconIds.DEFAULT,
     coachmarkImpressions: 2
   }), O = !1
 }
-class u extends t.default.PersistedStore {
+class L extends t.default.PersistedStore {
   initialize(e) {
     null != e && (N = e), this.waitFor(n.default), this.syncWith([n.default], R)
   }
@@ -60,8 +60,8 @@ class u extends t.default.PersistedStore {
     return null == N ? void 0 : null === (e = N.client) || void 0 === e ? void 0 : e.desktop
   }
 }
-u.displayName = "AppIconPersistedStoreState", u.persistKey = "AppIconPersistedStoreState";
-var C = new u(o.default, {
+L.displayName = "AppIconPersistedStoreState", L.persistKey = "AppIconPersistedStoreState";
+var C = new L(o.default, {
   APP_ICON_UPDATED: function(e) {
     let {
       id: _
@@ -71,11 +71,11 @@ var C = new u(o.default, {
   APP_ICON_EDITOR_OPEN: function() {
     O = !0
   },
-  APP_ICON_EDITOR_CLOSE: L,
+  APP_ICON_EDITOR_CLOSE: u,
   APP_ICON_TRACK_IMPRESSION: function(e) {
     let {
       markAsDismissed: _
     } = e;
-    N.client.coachmarkImpressions += 1, N.client.coachmarkImpressions >= 2 && (null == _ || _(T.ContentDismissActionType.UNKNOWN), L())
+    N.client.coachmarkImpressions += 1, N.client.coachmarkImpressions >= 2 && (null == _ || _(s.ContentDismissActionType.UNKNOWN), u())
   }
 })

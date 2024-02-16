@@ -7,18 +7,18 @@ E.r(_), E.d(_, {
 var t = E("913144"),
   o = E("689988"),
   n = E("393414"),
-  a = E("718517"),
+  r = E("718517"),
   i = E("799895"),
-  r = E("979268"),
+  a = E("979268"),
   I = E("520899"),
-  T = E("49111");
-class s extends o.default {
+  s = E("49111");
+class T extends o.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
     }, this.handlePostConnectionOpen = () => {
       ! function e() {
-        r.default.getCurrentConfig({
+        a.default.getCurrentConfig({
           location: "8fe27d_1"
         }, {
           autoTrackExposure: !1
@@ -34,7 +34,7 @@ class s extends o.default {
             omitViewTracking: !0,
             tag: e.messageId,
             onClick() {
-              (0, n.transitionTo)(T.Routes.CHANNEL(e.guildId, e.channelId, e.messageId))
+              (0, n.transitionTo)(s.Routes.CHANNEL(e.guildId, e.channelId, e.messageId))
             }
           }), t.default.dispatch({
             type: "MESSAGE_REMINDER_NOTIFIED",
@@ -42,9 +42,9 @@ class s extends o.default {
           })
         }), setTimeout(() => {
           e()
-        }, 5 * a.default.Millis.MINUTE))
+        }, 5 * r.default.Millis.MINUTE))
       }()
     }
   }
 }
-var S = new s
+var S = new T

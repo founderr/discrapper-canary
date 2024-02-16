@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   Store: function() {
-    return a.default
+    return r.default
   },
   Dispatcher: function() {
     return o.Dispatcher
@@ -22,12 +22,12 @@ E.r(_), E.d(_, {
     return i.statesWillNeverBeEqual
   },
   default: function() {
-    return r
+    return a
   }
 });
 var t = E("995113"),
   o = E("893346"),
   n = E("35092"),
-  a = E("75247"),
+  r = E("75247"),
   i = E("65597"),
-  r = n.default
+  a = n.default

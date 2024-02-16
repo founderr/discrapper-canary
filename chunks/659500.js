@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return n
   },
   ComponentDispatch: function() {
-    return a
+    return r
   }
 }), E("222007"), E("424973");
 var t = E("44170");
@@ -71,4 +71,4 @@ class n {
     this.emitter = new t.EventEmitter, this._savedDispatches = {}, this.emitter.setMaxListeners(100)
   }
 }
-let a = new n
+let r = new n

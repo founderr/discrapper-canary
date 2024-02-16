@@ -7,13 +7,13 @@ E.r(_), E.d(_, {
 var t = E("487445"),
   o = E("627445"),
   n = E.n(o),
-  a = E("102053");
+  r = E("102053");
 E("704744");
 var i = E("811022"),
-  r = E("435660"),
+  a = E("435660"),
   I = E("805833"),
-  T = E("377678"),
-  s = E("120082");
+  s = E("377678"),
+  T = E("120082");
 let S = new Set(["APP_STATE_UPDATE", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_CONNECTION", "SESSION_START", "UPLOAD_FAIL"]),
   N = new i.default("Flux");
 class O {
@@ -38,7 +38,7 @@ class O {
       for (; this._waitQueue.length > 0;) {
         if (++_ > 100) {
           var e;
-          let _ = T.serialize();
+          let _ = s.serialize();
           throw N.error("LastFewActions", _), null === (e = this._sentryUtils) || void 0 === e || e.addBreadcrumb({
             message: "Dispatcher: Dispatch loop detected",
             data: {
@@ -60,7 +60,7 @@ class O {
     this._dispatchWithLogging(e)
   }
   _dispatchWithLogging(e) {
-    n(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), n(e.type, "Dispatch.dispatch(...) called without an action type"), S.has(e.type) && N.log("Dispatching ".concat(e.type)), (0, r.mark)(e.type), T.add(e.type);
+    n(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), n(e.type, "Dispatch.dispatch(...) called without an action type"), S.has(e.type) && N.log("Dispatching ".concat(e.type)), (0, a.mark)(e.type), s.add(e.type);
     let _ = this.actionLogger.log(e, _ => {
       try {
         this._currentDispatchActionType = e.type, this._dispatch(e, _)
@@ -70,7 +70,7 @@ class O {
     });
     _.totalTime > 100 && N.verbose("Slow dispatch on ".concat(e.type, ": ").concat(_.totalTime, "ms"));
     try {
-      (0, r.measure)("DISPATCH[".concat(e.type, "]"), e.type)
+      (0, a.measure)("DISPATCH[".concat(e.type, "]"), e.type)
     } catch (e) {}
   }
   _dispatch(e, _) {
@@ -81,9 +81,9 @@ class O {
       let {
         name: o,
         actionHandler: n,
-        storeDidChange: a
+        storeDidChange: r
       } = E[t];
-      !1 !== _(o, () => n(e)) && a(e)
+      !1 !== _(o, () => n(e)) && r(e)
     }
     let t = this._subscriptions[e.type];
     null != t && _("__subscriptions", () => {
@@ -114,8 +114,8 @@ class O {
     this._actionHandlers.addDependencies(e, _)
   }
   constructor(e = 0, _, E) {
-    this._interceptors = [], this._subscriptions = {}, this._waitQueue = [], this._processingWaitQueue = !1, this._currentDispatchActionType = null, this._actionHandlers = new A, this._sentryUtils = void 0, this.functionCache = {}, this._defaultBand = e, this._sentryUtils = E, null != _ ? this.actionLogger = _ : this.actionLogger = new s.ActionLogger, this.actionLogger.on("trace", (e, _, E) => {
-      a.default.isTracing && E >= 10 && a.default.mark("\uD83E\uDDA5", _, E)
+    this._interceptors = [], this._subscriptions = {}, this._waitQueue = [], this._processingWaitQueue = !1, this._currentDispatchActionType = null, this._actionHandlers = new A, this._sentryUtils = void 0, this.functionCache = {}, this._defaultBand = e, this._sentryUtils = E, null != _ ? this.actionLogger = _ : this.actionLogger = new T.ActionLogger, this.actionLogger.on("trace", (e, _, E) => {
+      r.default.isTracing && E >= 10 && r.default.mark("\uD83E\uDDA5", _, E)
     })
   }
 }
@@ -127,16 +127,16 @@ class A {
   register(e, _, E, t) {
     let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.createToken();
     n(t >= 0 && Number.isInteger(t), "band must be a non-negative integer.");
-    let a = {};
+    let r = {};
     for (let E in _) {
       let t = _[E],
         o = e => t(e);
-      R(o, "".concat(e, "_").concat(E)), a[E] = o
+      R(o, "".concat(e, "_").concat(E)), r[E] = o
     }
     return this._dependencyGraph.addNode(o, {
       name: e,
       band: t,
-      actionHandler: a,
+      actionHandler: r,
       storeDidChange: E
     }), this._addToBand(o, t), this._invalidateCaches(), o
   }
@@ -171,12 +171,12 @@ class A {
       let {
         name: o,
         actionHandler: n,
-        storeDidChange: a
+        storeDidChange: r
       } = this._dependencyGraph.getNodeData(E[_]), i = n[e];
       null != i && t.push({
         name: o,
         actionHandler: i,
-        storeDidChange: a
+        storeDidChange: r
       })
     }
     return this._orderedActionHandlers[e] = t, t

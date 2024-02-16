@@ -1,30 +1,30 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return u
+    return L
   }
 }), E("222007");
 var t = E("689988"),
   o = E("374014"),
   n = E("373469"),
-  a = E("271938"),
+  r = E("271938"),
   i = E("568307"),
-  r = E("718517"),
+  a = E("718517"),
   I = E("448881"),
-  T = E("374023"),
-  s = E("2973"),
+  s = E("374023"),
+  T = E("2973"),
   S = E("227231"),
   N = E("166604");
-let O = 5 * r.default.Millis.SECOND,
-  A = 12 * r.default.Millis.HOUR,
-  R = 1 * r.default.Millis.MINUTE,
-  l = 30 * r.default.Millis.SECOND;
-class L extends t.default {
+let O = 5 * a.default.Millis.SECOND,
+  A = 12 * a.default.Millis.HOUR,
+  R = 1 * a.default.Millis.MINUTE,
+  l = 30 * a.default.Millis.SECOND;
+class u extends t.default {
   maybeFetchCurrentQuests() {
-    (0, T.getIsEligibleForQuests)({
+    (0, s.getIsEligibleForQuests)({
       location: N.QuestsExperimentLocations.QUESTS_MANAGER,
       autoTrackExposure: !1
-    }) && !s.default.isFetchingCurrentQuests && (0, I.fetchCurrentQuests)()
+    }) && !T.default.isFetchingCurrentQuests && (0, I.fetchCurrentQuests)()
   }
   constructor(...e) {
     super(...e), this.instantiatedAt = Date.now(), this.sendHeartbeatIntervalIds = new Map, this.initiateHeartbeat = e => {
@@ -45,7 +45,7 @@ class L extends t.default {
       };
       o()
     }, this.calculateHeartbeatDurationMs = e => {
-      let _ = s.default.quests.get(e);
+      let _ = T.default.quests.get(e);
       if (null == _ || null == _.config || null == _.userStatus) return R;
       let {
         streamProgressSeconds: E
@@ -62,13 +62,13 @@ class L extends t.default {
       if (null == E || null == E.pid) return;
       let t = i.default.getGameForPID(E.pid);
       if (null == t || null == t.id) return;
-      let a = (0, S.getQuestByApplicationId)(s.default.quests, t.id);
-      if (null == a || a.id !== _) return;
-      let r = n.default.getCurrentUserActiveStream();
-      null != r && this.initiateHeartbeat({
-        streamKey: (0, o.encodeStreamKey)(r),
-        applicationId: a.config.applicationId,
-        questId: a.id
+      let r = (0, S.getQuestByApplicationId)(T.default.quests, t.id);
+      if (null == r || r.id !== _) return;
+      let a = n.default.getCurrentUserActiveStream();
+      null != a && this.initiateHeartbeat({
+        streamKey: (0, o.encodeStreamKey)(a),
+        applicationId: r.config.applicationId,
+        questId: r.id
       })
     }, this.handlePostConnectionOpen = () => {
       window.setTimeout(this.maybeFetchCurrentQuests, Math.floor(Math.random() * O))
@@ -79,23 +79,23 @@ class L extends t.default {
       } = e;
       null != E.completedAt && this.terminateHeartbeat(_)
     }, this.handleRunningGamesChange = () => {
-      !(this.instantiatedAt + A > Date.now() || s.default.lastFetchedCurrentQuests + A > Date.now()) && this.maybeFetchCurrentQuests()
+      !(this.instantiatedAt + A > Date.now() || T.default.lastFetchedCurrentQuests + A > Date.now()) && this.maybeFetchCurrentQuests()
     }, this.handleStreamStart = e => {
       var _, E;
       let {
         streamType: t,
         guildId: n,
-        channelId: r,
+        channelId: a,
         pid: I
-      } = e, T = null != I ? i.default.getGameForPID(I) : null;
-      if (null == T) return;
-      let N = null != T.id ? (0, S.getQuestByApplicationId)(s.default.quests, T.id) : null;
+      } = e, s = null != I ? i.default.getGameForPID(I) : null;
+      if (null == s) return;
+      let N = null != s.id ? (0, S.getQuestByApplicationId)(T.default.quests, s.id) : null;
       (null == N ? void 0 : null === (_ = N.userStatus) || void 0 === _ ? void 0 : _.enrolledAt) != null && (null == N ? void 0 : null === (E = N.userStatus) || void 0 === E ? void 0 : E.completedAt) == null && this.initiateHeartbeat({
         streamKey: (0, o.encodeStreamKey)({
           streamType: t,
           guildId: n,
-          channelId: r,
-          ownerId: a.default.getId()
+          channelId: a,
+          ownerId: r.default.getId()
         }),
         applicationId: N.config.applicationId,
         questId: N.id
@@ -115,4 +115,4 @@ class L extends t.default {
     }
   }
 }
-var u = new L
+var L = new u

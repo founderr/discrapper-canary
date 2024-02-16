@@ -7,13 +7,13 @@ E.r(_), E.d(_, {
     return n
   },
   setHighFiveEnabled: function() {
-    return a
+    return r
   },
   completeHighFive: function() {
     return i
   },
   clearCompletedHighFive: function() {
-    return r
+    return a
   }
 });
 var t = E("913144");
@@ -35,7 +35,7 @@ function n(e, _) {
   })
 }
 
-function a(e) {
+function r(e) {
   t.default.dispatch({
     type: "HIGH_FIVE_SET_ENABLED",
     enabled: e
@@ -52,7 +52,7 @@ function i(e, _, E, o) {
   })
 }
 
-function r(e, _, E) {
+function a(e, _, E) {
   t.default.dispatch({
     type: "HIGH_FIVE_COMPLETE_CLEAR",
     firstUserId: e,

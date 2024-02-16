@@ -287,8 +287,8 @@ var y = {
       }, r)
     }
   },
-  R = [],
-  A = function(e, t) {
+  A = [],
+  R = function(e, t) {
     var n = this;
     void 0 === t && (t = "undefined" != typeof document), this.instances = [], this.value = {
       setHelmet: function(e) {
@@ -296,14 +296,14 @@ var y = {
       },
       helmetInstances: {
         get: function() {
-          return n.canUseDOM ? R : n.instances
+          return n.canUseDOM ? A : n.instances
         },
         add: function(e) {
-          (n.canUseDOM ? R : n.instances).push(e)
+          (n.canUseDOM ? A : n.instances).push(e)
         },
         remove: function(e) {
-          var t = (n.canUseDOM ? R : n.instances).indexOf(e);
-          (n.canUseDOM ? R : n.instances).splice(t, 1)
+          var t = (n.canUseDOM ? A : n.instances).indexOf(e);
+          (n.canUseDOM ? A : n.instances).splice(t, 1)
         }
       }
     }, this.context = e, this.canUseDOM = t, t || (e.helmet = I({
@@ -332,7 +332,7 @@ var y = {
   B = function(e) {
     function t(n) {
       var r;
-      return (r = e.call(this, n) || this).helmetData = new A(r.props.context, t.canUseDOM), r
+      return (r = e.call(this, n) || this).helmetData = new R(r.props.context, t.canUseDOM), r
     }
     return m(t, e), t.prototype.render = function() {
       return a.createElement(z.Provider, {
@@ -576,7 +576,7 @@ var q = ["children"],
         n = _(e, $),
         r = p({}, n),
         o = n.helmetData;
-      return t && (r = this.mapChildrenToProps(t, r)), !o || o instanceof A || (o = new A(o.context, o.instances)), o ? a.createElement(G, p({}, r, {
+      return t && (r = this.mapChildrenToProps(t, r)), !o || o instanceof R || (o = new R(o.context, o.instances)), o ? a.createElement(G, p({}, r, {
         context: o.value,
         helmetData: void 0
       })) : a.createElement(z.Consumer, null, function(e) {

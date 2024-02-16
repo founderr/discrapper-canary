@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
     return n
   },
   setCurrentlyInteractingWindowId: function() {
-    return a
+    return r
   },
   clearCurrentlyInteractingWindowId: function() {
     return i
@@ -20,7 +20,7 @@ function n() {
   return o
 }
 
-function a(e) {
+function r(e) {
   o = e
 }
 

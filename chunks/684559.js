@@ -6,29 +6,29 @@ E.r(_), E.d(_, {
 });
 var t, o = E("327037"),
   n = E("689988"),
-  a = E("42203"),
+  r = E("42203"),
   i = E("18494"),
-  r = E("697218"),
+  a = E("697218"),
   I = E("569363"),
-  T = E("49111");
-let s = !1;
+  s = E("49111");
+let T = !1;
 
 function S(e) {
-  let _ = r.default.getCurrentUser();
+  let _ = a.default.getCurrentUser();
   if (null == _) return;
   let E = i.default.getChannelId(),
-    t = a.default.getDMFromUserId(I.SYSTEM_USER);
+    t = r.default.getDMFromUserId(I.SYSTEM_USER);
   if (!_.hasUrgentMessages() || t === E) return N({
     channelId: E
   });
-  !s && (s = !0, e())
+  !T && (T = !0, e())
 }
 
 function N(e) {
   let {
     channelId: _
-  } = e, E = r.default.getCurrentUser(), t = _ === a.default.getDMFromUserId(I.SYSTEM_USER);
-  null != E && E.hasUrgentMessages() && t && (s = !1, o.setFlag(T.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !1))
+  } = e, E = a.default.getCurrentUser(), t = _ === r.default.getDMFromUserId(I.SYSTEM_USER);
+  null != E && E.hasUrgentMessages() && t && (T = !1, o.setFlag(s.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !1))
 }
 t = class extends n.default {
   constructor(e) {

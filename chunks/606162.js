@@ -7,12 +7,12 @@ E.r(_), E.d(_, {
 var t = E("850068"),
   o = E("316718"),
   n = E("689988"),
-  a = E("697218"),
+  r = E("697218"),
   i = E("160299"),
-  r = E("521012"),
+  a = E("521012"),
   I = E("437712"),
-  T = E("568734"),
-  s = E("719923"),
+  s = E("568734"),
+  T = E("719923"),
   S = E("646718");
 class N extends n.default {
   constructor(...e) {
@@ -21,18 +21,18 @@ class N extends n.default {
         this.maybeFetchSubscriptions(), this.maybeFetchCountryCode(), this.maybeFetchMostRecentSubscription()
       }
     }, this.maybeFetchSubscriptions = async () => {
-      let e = a.default.getCurrentUser();
-      if (s.default.isPremium(e)) {
-        !r.default.hasFetchedSubscriptions() && await (0, t.fetchSubscriptions)();
-        let e = r.default.getPremiumSubscription();
+      let e = r.default.getCurrentUser();
+      if (T.default.isPremium(e)) {
+        !a.default.hasFetchedSubscriptions() && await (0, t.fetchSubscriptions)();
+        let e = a.default.getPremiumSubscription();
         (null == e ? void 0 : e.paymentSourceId) == null && !I.default.applicationIdsFetched.has(S.PREMIUM_SUBSCRIPTION_APPLICATION) && await (0, o.fetchUserEntitlementsForApplication)(S.PREMIUM_SUBSCRIPTION_APPLICATION)
       }
     }, this.maybeFetchMostRecentSubscription = () => {
-      let e = a.default.getCurrentUser();
-      null != e && !s.default.isPremium(e) && null != e.purchasedFlags && ((0, T.hasFlag)(e.purchasedFlags, S.PurchasedFlags.PREMIUM_TIER_1) || (0, T.hasFlag)(e.purchasedFlags, S.PurchasedFlags.PREMIUM_TIER_2)) && (0, t.fetchMostRecentSubscription)()
+      let e = r.default.getCurrentUser();
+      null != e && !T.default.isPremium(e) && null != e.purchasedFlags && ((0, s.hasFlag)(e.purchasedFlags, S.PurchasedFlags.PREMIUM_TIER_1) || (0, s.hasFlag)(e.purchasedFlags, S.PurchasedFlags.PREMIUM_TIER_2)) && (0, t.fetchMostRecentSubscription)()
     }, this.maybeFetchCountryCode = async () => {
-      let e = a.default.getCurrentUser();
-      s.default.isPremium(e) && !i.default.ipCountryCodeLoaded && await this.fetchCountryCode()
+      let e = r.default.getCurrentUser();
+      T.default.isPremium(e) && !i.default.ipCountryCodeLoaded && await this.fetchCountryCode()
     }, this.fetchCountryCode = async () => {
       await (0, t.fetchIpCountryCode)();
       let e = i.default.ipCountryCode;

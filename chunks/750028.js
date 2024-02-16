@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
     return I
   },
   Int32Value: function() {
-    return s
+    return T
   },
   UInt32Value: function() {
     return N
@@ -38,15 +38,15 @@ class o extends t.MessageType {
   }
   internalBinaryRead(e, _, E, o) {
     let n = null != o ? o : this.create(),
-      a = e.pos + _;
-    for (; e.pos < a;) {
+      r = e.pos + _;
+    for (; e.pos < r;) {
       let [_, o] = e.tag();
       if (1 === _) n.value = e.double();
       else {
-        let a = E.readUnknownField;
-        if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+        let r = E.readUnknownField;
+        if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
         let i = e.skip(o);
-        !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, i)
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
       }
     }
     return n
@@ -84,15 +84,15 @@ class n extends t.MessageType {
   }
   internalBinaryRead(e, _, E, o) {
     let n = null != o ? o : this.create(),
-      a = e.pos + _;
-    for (; e.pos < a;) {
+      r = e.pos + _;
+    for (; e.pos < r;) {
       let [_, o] = e.tag();
       if (1 === _) n.value = e.float();
       else {
-        let a = E.readUnknownField;
-        if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+        let r = E.readUnknownField;
+        if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
         let i = e.skip(o);
-        !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, i)
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
       }
     }
     return n
@@ -112,7 +112,7 @@ class n extends t.MessageType {
   }
 }
 new n;
-class a extends t.MessageType {
+class r extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(t.ScalarType.INT64, e.value, "value", !1, !0)
   }
@@ -130,15 +130,15 @@ class a extends t.MessageType {
   }
   internalBinaryRead(e, _, E, o) {
     let n = null != o ? o : this.create(),
-      a = e.pos + _;
-    for (; e.pos < a;) {
+      r = e.pos + _;
+    for (; e.pos < r;) {
       let [_, o] = e.tag();
       if (1 === _) n.value = e.int64().toString();
       else {
-        let a = E.readUnknownField;
-        if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+        let r = E.readUnknownField;
+        if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
         let i = e.skip(o);
-        !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, i)
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
       }
     }
     return n
@@ -157,8 +157,8 @@ class a extends t.MessageType {
     }])
   }
 }
-let i = new a;
-class r extends t.MessageType {
+let i = new r;
+class a extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(t.ScalarType.UINT64, e.value, "value", !1, !0)
   }
@@ -176,15 +176,15 @@ class r extends t.MessageType {
   }
   internalBinaryRead(e, _, E, o) {
     let n = null != o ? o : this.create(),
-      a = e.pos + _;
-    for (; e.pos < a;) {
+      r = e.pos + _;
+    for (; e.pos < r;) {
       let [_, o] = e.tag();
       if (1 === _) n.value = e.uint64().toString();
       else {
-        let a = E.readUnknownField;
-        if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+        let r = E.readUnknownField;
+        if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
         let i = e.skip(o);
-        !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, i)
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
       }
     }
     return n
@@ -203,8 +203,8 @@ class r extends t.MessageType {
     }])
   }
 }
-let I = new r;
-class T extends t.MessageType {
+let I = new a;
+class s extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(5, e.value, "value", !1, !0)
   }
@@ -222,15 +222,15 @@ class T extends t.MessageType {
   }
   internalBinaryRead(e, _, E, o) {
     let n = null != o ? o : this.create(),
-      a = e.pos + _;
-    for (; e.pos < a;) {
+      r = e.pos + _;
+    for (; e.pos < r;) {
       let [_, o] = e.tag();
       if (1 === _) n.value = e.int32();
       else {
-        let a = E.readUnknownField;
-        if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+        let r = E.readUnknownField;
+        if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
         let i = e.skip(o);
-        !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, i)
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
       }
     }
     return n
@@ -249,7 +249,7 @@ class T extends t.MessageType {
     }])
   }
 }
-let s = new T;
+let T = new s;
 class S extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(13, e.value, "value", !1, !0)
@@ -268,15 +268,15 @@ class S extends t.MessageType {
   }
   internalBinaryRead(e, _, E, o) {
     let n = null != o ? o : this.create(),
-      a = e.pos + _;
-    for (; e.pos < a;) {
+      r = e.pos + _;
+    for (; e.pos < r;) {
       let [_, o] = e.tag();
       if (1 === _) n.value = e.uint32();
       else {
-        let a = E.readUnknownField;
-        if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+        let r = E.readUnknownField;
+        if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
         let i = e.skip(o);
-        !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, i)
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
       }
     }
     return n
@@ -314,15 +314,15 @@ class O extends t.MessageType {
   }
   internalBinaryRead(e, _, E, o) {
     let n = null != o ? o : this.create(),
-      a = e.pos + _;
-    for (; e.pos < a;) {
+      r = e.pos + _;
+    for (; e.pos < r;) {
       let [_, o] = e.tag();
       if (1 === _) n.value = e.bool();
       else {
-        let a = E.readUnknownField;
-        if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+        let r = E.readUnknownField;
+        if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
         let i = e.skip(o);
-        !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, i)
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
       }
     }
     return n
@@ -360,15 +360,15 @@ class R extends t.MessageType {
   }
   internalBinaryRead(e, _, E, o) {
     let n = null != o ? o : this.create(),
-      a = e.pos + _;
-    for (; e.pos < a;) {
+      r = e.pos + _;
+    for (; e.pos < r;) {
       let [_, o] = e.tag();
       if (1 === _) n.value = e.string();
       else {
-        let a = E.readUnknownField;
-        if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+        let r = E.readUnknownField;
+        if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
         let i = e.skip(o);
-        !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, i)
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
       }
     }
     return n
@@ -388,7 +388,7 @@ class R extends t.MessageType {
   }
 }
 let l = new R;
-class L extends t.MessageType {
+class u extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(12, e.value, "value", !1, !0)
   }
@@ -406,15 +406,15 @@ class L extends t.MessageType {
   }
   internalBinaryRead(e, _, E, o) {
     let n = null != o ? o : this.create(),
-      a = e.pos + _;
-    for (; e.pos < a;) {
+      r = e.pos + _;
+    for (; e.pos < r;) {
       let [_, o] = e.tag();
       if (1 === _) n.value = e.bytes();
       else {
-        let a = E.readUnknownField;
-        if ("throw" === a) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+        let r = E.readUnknownField;
+        if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
         let i = e.skip(o);
-        !1 !== a && (!0 === a ? t.UnknownFieldHandler.onRead : a)(this.typeName, n, _, o, i)
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
       }
     }
     return n
@@ -433,4 +433,4 @@ class L extends t.MessageType {
     }])
   }
 }
-new L
+new u

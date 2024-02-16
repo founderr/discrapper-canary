@@ -2,7 +2,7 @@
 let t, o;
 E.r(_), E.d(_, {
   FormattedMessage: function() {
-    return s
+    return T
   },
   setUpdateRules: function() {
     return S
@@ -12,12 +12,12 @@ E.r(_), E.d(_, {
   }
 }), E("222007"), E("781738");
 var n = E("860347"),
-  a = E.n(n),
+  r = E.n(n),
   i = E("404828"),
-  r = E.n(i),
+  a = E.n(i),
   I = E("841206"),
-  T = E("853812");
-class s {
+  s = E("853812");
+class T {
   format(e) {
     if (!this.hasMarkdown) return this.intlMessage.format(e);
     let [_, E] = this.getContext(e);
@@ -31,7 +31,7 @@ class s {
     return this.intlMessage.format(e)
   }
   getContext(e) {
-    let _ = T.UNSAFE_RE.test(this.message),
+    let _ = s.UNSAFE_RE.test(this.message),
       E = {};
     if (_) {
       let _ = 0;
@@ -40,14 +40,14 @@ class s {
     return [e, E]
   }
   constructor(e, _, E) {
-    this.message = E ? e : e.replace(T.UNSAFE_RE_ALL, ""), this.hasMarkdown = E, this.intlMessage = new a(this.message, _)
+    this.message = E ? e : e.replace(s.UNSAFE_RE_ALL, ""), this.hasMarkdown = E, this.intlMessage = new r(this.message, _)
   }
 }
 
 function S(e) {
   t = function(e, _) {
-    let E = r.parserFor(_(e)),
-      t = r.reactFor(r.ruleOutput(e, "react"));
+    let E = a.parserFor(_(e)),
+      t = a.reactFor(a.ruleOutput(e, "react"));
     return (e, _, o) => {
       let n = !e.includes("\n\n");
       return !n && (e += "\n\n"), t(E(e, {
@@ -57,7 +57,7 @@ function S(e) {
       }))
     }
   }(I.default, e), o = function(e) {
-    let _ = r.parserFor(e);
+    let _ = a.parserFor(e);
     return (e, E, t) => _(e + "\n\n", {
       inline: !1,
       context: E,
@@ -69,7 +69,7 @@ function S(e) {
 function N(e, _) {
   if (null == e) return "";
   null == t && S(E("186372").default), e = e.replace(/^\n+|\n+$/g, "");
-  let o = T.FORMAT_RE.test(e),
-    n = T.MARKDOWN_RE.test(e);
-  return o || n ? new s(e, _, n) : e
+  let o = s.FORMAT_RE.test(e),
+    n = s.MARKDOWN_RE.test(e);
+  return o || n ? new T(e, _, n) : e
 }

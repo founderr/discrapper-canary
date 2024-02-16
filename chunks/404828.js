@@ -164,7 +164,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
     F = / *\n+$/,
     N = RegExp("^( *)(" + O + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + O + " )\\n*|\\s*\n*$)"),
     I = /(?:^|\n)( *)$/;
-  var R = (e = /^ *\| *| *\| *$/g, t = / *$/, n = /^ *-+: *$/, r = /^ *:-+: *$/, a = /^ *:-+ *$/, o = function(e) {
+  var A = (e = /^ *\| *| *\| *$/g, t = / *$/, n = /^ *-+: *$/, r = /^ *:-+: *$/, a = /^ *:-+ *$/, o = function(e) {
       if (n.test(e)) return "right";
       if (r.test(e)) return "center";
       if (a.test(e)) return "left";
@@ -201,7 +201,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       TABLE_REGEX: /^ *(\|.+)\n *\|( *[-:]+[-| :]*)\n((?: *\|.*(?:\n|$))*)\n*/,
       NPTABLE_REGEX: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/
     }),
-    A = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
+    R = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
     z = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
     W = /mailto:/i,
     B = function(e, t, n) {
@@ -265,8 +265,8 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       nptable: {
         order: K++,
-        match: h(R.NPTABLE_REGEX),
-        parse: R.parseNpTable,
+        match: h(A.NPTABLE_REGEX),
+        parse: A.parseNpTable,
         react: null,
         html: null
       },
@@ -427,8 +427,8 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       table: {
         order: K++,
-        match: h(R.TABLE_REGEX),
-        parse: R.parseTable,
+        match: h(A.TABLE_REGEX),
+        parse: A.parseTable,
         react: function(e, t, n) {
           var r = function(t) {
               return null == e.align[t] ? {} : {
@@ -599,7 +599,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       link: {
         order: K++,
         requiredFirstCharacters: ["["],
-        match: m(RegExp("^\\[(" + A + ")\\]\\(" + z + "\\)")),
+        match: m(RegExp("^\\[(" + R + ")\\]\\(" + z + "\\)")),
         parse: function(e, t, n) {
           return {
             content: t(e[1], n),
@@ -624,7 +624,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       image: {
         order: K++,
-        match: m(RegExp("^!\\[(" + A + ")\\]\\(" + z + "\\)")),
+        match: m(RegExp("^!\\[(" + R + ")\\]\\(" + z + "\\)")),
         parse: function(e, t, n) {
           return {
             alt: e[1],
@@ -649,7 +649,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       reflink: {
         order: K++,
-        match: m(RegExp("^\\[(" + A + ")\\]\\s*\\[([^\\]]*)\\]")),
+        match: m(RegExp("^\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
         parse: function(e, t, n) {
           return B(e, n, {
             type: "link",
@@ -661,7 +661,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       },
       refimage: {
         order: K++,
-        match: m(RegExp("^!\\[(" + A + ")\\]\\s*\\[([^\\]]*)\\]")),
+        match: m(RegExp("^!\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
         parse: function(e, t, n) {
           return B(e, n, {
             type: "image",
@@ -805,8 +805,8 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       return (t = t || {}).inline = !n, G(e, t)
     },
     Q = J(V, "react"),
-    Z = J(V, "html"),
-    X = function(e, t) {
+    X = J(V, "html"),
+    Z = function(e, t) {
       return Q(q(e, t), t)
     };
   return {
@@ -823,14 +823,14 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
       var a = e(t + "\n\n", n);
       return n.inline = r, a
     },
-    markdownToReact: X,
+    markdownToReact: Z,
     markdownToHtml: function(e, t) {
-      return Z(q(e, t), t)
+      return X(q(e, t), t)
     },
     ReactMarkdown: function(e) {
       var t = {};
       for (var n in e) "source" !== n && Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-      return t.children = X(e.source), g("div", null, t)
+      return t.children = Z(e.source), g("div", null, t)
     },
     defaultBlockParse: q,
     defaultInlineParse: function(e, t) {
@@ -838,7 +838,7 @@ e = n.nmd(e), n("854508"), n("781738"), n("222007"), n("424973"), n("70102"), n(
     },
     defaultImplicitParse: $,
     defaultReactOutput: Q,
-    defaultHtmlOutput: Z,
+    defaultHtmlOutput: X,
     preprocess: d,
     sanitizeText: L,
     sanitizeUrl: M,

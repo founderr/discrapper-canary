@@ -14,8 +14,8 @@ var r = n("37983"),
   c = n("599110"),
   d = n("818351"),
   f = n("21214"),
-  h = n("622210"),
-  _ = n("72405"),
+  _ = n("622210"),
+  h = n("72405"),
   p = n("110337"),
   E = n("243338"),
   I = n("49111"),
@@ -75,7 +75,7 @@ function g(e) {
             id: E.CreateGuildSlideTypes.GUILD_TEMPLATES,
             impressionName: a.ImpressionNames.GUILD_ADD_LANDING,
             impressionProperties: k,
-            children: (0, r.jsx)(_.default, {
+            children: (0, r.jsx)(h.default, {
               isNewUser: !1,
               onJoin: S ? y : void 0,
               onChooseTemplate: U,
@@ -94,7 +94,7 @@ function g(e) {
             id: E.CreateGuildSlideTypes.CUSTOMIZE_GUILD,
             impressionName: a.ImpressionNames.GUILD_ADD_CUSTOMIZE,
             impressionProperties: k,
-            children: (0, r.jsx)(h.default, {
+            children: (0, r.jsx)(_.default, {
               guildTemplate: w,
               onGuildCreated: P,
               onClose: g,

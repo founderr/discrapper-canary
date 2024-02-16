@@ -1,19 +1,19 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return T
+    return s
   }
 });
 var t = E("37983");
 E("884691");
 var o = E("414456"),
   n = E.n(o),
-  a = E("945330"),
+  r = E("945330"),
   i = E("774223"),
-  r = E("587974"),
+  a = E("587974"),
   I = E("457774");
 
-function T(e) {
+function s(e) {
   let {
     width: _ = 20,
     height: E = 20,
@@ -21,15 +21,15 @@ function T(e) {
   } = e;
   return (0, t.jsxs)("div", {
     className: n(I.icon, o),
-    children: [(0, t.jsx)(r.default, {
-      mask: r.default.Masks.STATUS_SCREENSHARE,
+    children: [(0, t.jsx)(a.default, {
+      mask: a.default.Masks.STATUS_SCREENSHARE,
       width: _,
       height: E,
       children: (0, t.jsx)(i.default, {
         width: _,
         height: E
       })
-    }), (0, t.jsx)(a.default, {
+    }), (0, t.jsx)(r.default, {
       className: I.badge
     })]
   })

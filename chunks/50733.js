@@ -1,17 +1,17 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return s
+    return T
   }
 }), E("222007");
 var t = E("819855"),
   o = E("689988"),
   n = E("642754"),
-  a = E("49111"),
+  r = E("49111"),
   i = E("782340");
 
-function r(e) {
-  e.relationship.type === a.RelationshipTypes.PENDING_INCOMING && (t.AccessibilityAnnouncer.announce(i.default.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({
+function a(e) {
+  e.relationship.type === r.RelationshipTypes.PENDING_INCOMING && (t.AccessibilityAnnouncer.announce(i.default.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({
     username: e.relationship.user.username
   })), n.showPendingNotification(e.relationship.user))
 }
@@ -24,12 +24,12 @@ function I(e) {
     username: _.username
   })), n.showAcceptedNotification(_)
 }
-class T extends o.default {
+class s extends o.default {
   constructor(...e) {
     super(...e), this.actions = {
-      RELATIONSHIP_ADD: r,
+      RELATIONSHIP_ADD: a,
       FRIEND_REQUEST_ACCEPTED: I
     }
   }
 }
-var s = new T
+var T = new s

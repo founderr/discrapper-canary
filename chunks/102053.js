@@ -80,8 +80,8 @@ var n = new class e {
     this.mark(e, "Start ".concat(_)), this.prefix += "| ";
     let o = Date.now(),
       n = E(),
-      a = Date.now() - o;
-    return this.prefix = t, this.mark(e, "Finish ".concat(_), a), n
+      r = Date.now() - o;
+    return this.prefix = t, this.mark(e, "Finish ".concat(_), r), n
   }
   async timeAsync(e, _, E) {
     if (!this.isTracing) return E();

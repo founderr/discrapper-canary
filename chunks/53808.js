@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
 var t = E("850068"),
   o = E("689988"),
   n = E("843663");
-class a extends o.default {
+class r extends o.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: () => {
@@ -23,4 +23,4 @@ class a extends o.default {
     }
   }
 }
-var i = new a
+var i = new r

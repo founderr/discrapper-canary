@@ -1,12 +1,12 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return r
+    return a
   }
 });
 var t, o, n = E("44170");
 (t = o || (o = {})).VERTICAL = "vertical", t.HORIZONTAL = "horizontal";
-let a = {
+let r = {
   open: !1,
   orientation: null
 };
@@ -15,7 +15,7 @@ class i extends n.EventEmitter {
     return Object.values(o)
   }
   get state() {
-    return a
+    return r
   }
   check() {
     let e = function() {
@@ -40,15 +40,15 @@ class i extends n.EventEmitter {
           return !1
         }
       }() || e || _)) {
-      let e = a.open;
-      a = {
+      let e = r.open;
+      r = {
         open: !0,
         orientation: E
-      }, (!e || a.orientation !== E) && this.emit("changed", a)
-    } else a.open && (a.open = !1, this.emit("changed", a))
+      }, (!e || r.orientation !== E) && this.emit("changed", r)
+    } else r.open && (r.open = !1, this.emit("changed", r))
   }
   constructor() {
     super(), setInterval(() => this.check(), 500)
   }
 }
-var r = i
+var a = i

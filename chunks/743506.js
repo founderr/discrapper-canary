@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i, r, o = n("37983"),
-  s = n("884691"),
-  u = n("77078"),
+  u = n("884691"),
+  s = n("77078"),
   a = n("851387"),
   l = n("130037"),
   c = n("772280"),
@@ -54,11 +54,11 @@ function v(e) {
     transitionState: I,
     onClose: p,
     canBulkBan: M = !1
-  } = e, [S, T] = s.useState(g), [O, N] = s.useState(""), [b, w] = s.useState(0), [R, C] = s.useState(!1), L = (0, l.useTrackModerationAction)(t, {
+  } = e, [S, T] = u.useState(g), [O, b] = u.useState(""), [N, w] = u.useState(0), [R, C] = u.useState(!1), L = (0, l.useTrackModerationAction)(t, {
     location: r,
     targetUserId: null == i ? void 0 : i.id,
     targets: f
-  }), x = s.useCallback(() => {
+  }), x = u.useCallback(() => {
     if (null != v) {
       let e = null != f && (null == f ? void 0 : f.size) > 0 && M;
       if (!e || R) return;
@@ -72,18 +72,18 @@ function v(e) {
       a.default.banUser(t, null == i ? void 0 : i.id, S, O)
     }
     L(l.ModerationActionType.BAN), p()
-  }, [v, L, p, f, M, R, O, t, S, i]), D = s.useCallback(e => {
+  }, [v, L, p, f, M, R, O, t, S, i]), D = u.useCallback(e => {
     T(e)
-  }, []), y = s.useCallback(e => {
+  }, []), y = u.useCallback(e => {
     let {
       value: t
     } = e;
-    N(t), C(!1)
-  }, []), k = s.useCallback(e => {
-    N(e), R && C(!1)
-  }, [R]), F = s.useCallback(() => {
-    N(""), w(1)
-  }, []), U = s.useCallback(() => {
+    b(t), C(!1)
+  }, []), k = u.useCallback(e => {
+    b(e), R && C(!1)
+  }, [R]), F = u.useCallback(() => {
+    b(""), w(1)
+  }, []), U = u.useCallback(() => {
     w(0)
   }, []), P = [{
     name: E.default.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT,
@@ -99,15 +99,15 @@ function v(e) {
   }) : null == i ? "" : E.default.Messages.BAN_CONFIRM_TITLE.format({
     username: "@".concat(_.default.getName(t, null, i))
   });
-  return (0, o.jsxs)(u.ModalRoot, {
+  return (0, o.jsxs)(s.ModalRoot, {
     transitionState: I,
-    children: [(0, o.jsx)(u.ModalHeader, {
+    children: [(0, o.jsx)(s.ModalHeader, {
       separator: !1,
-      children: (0, o.jsx)(u.Heading, {
+      children: (0, o.jsx)(s.Heading, {
         variant: "heading-md/semibold",
         children: B
       })
-    }), (0, o.jsxs)(u.ModalContent, {
+    }), (0, o.jsxs)(s.ModalContent, {
       className: A.modalContent,
       children: [(0, o.jsxs)(d.default, {
         autoPlay: !0,
@@ -124,28 +124,28 @@ function v(e) {
           alt: "",
           src: n("429777")
         })]
-      }), (0, o.jsxs)(u.FormItem, {
+      }), (0, o.jsxs)(s.FormItem, {
         title: E.default.Messages.FORM_LABEL_REASON_BAN,
         className: A.spacing,
-        children: [R && (0, o.jsx)(u.FormErrorBlock, {
+        children: [R && (0, o.jsx)(s.FormErrorBlock, {
           className: A.error,
           children: E.default.Messages.BAN_REASON_REQUIRED_ERROR
-        }), (0, o.jsx)(u.Sequencer, {
+        }), (0, o.jsx)(s.Sequencer, {
           steps: [0, 1],
-          step: b,
+          step: N,
           children: (e => {
-            switch (b) {
+            switch (N) {
               case 0:
                 return (0, o.jsxs)(o.Fragment, {
-                  children: [(0, o.jsx)(u.RadioGroup, {
+                  children: [(0, o.jsx)(s.RadioGroup, {
                     value: O,
                     options: e,
                     onChange: y,
                     radioItemClassName: A.radioItemStyles
-                  }), (0, o.jsxs)(u.Clickable, {
+                  }), (0, o.jsxs)(s.Clickable, {
                     onClick: F,
                     className: A.banReasonOtherClickable,
-                    children: [(0, o.jsx)(u.Text, {
+                    children: [(0, o.jsx)(s.Text, {
                       variant: "text-md/medium",
                       color: "none",
                       children: E.default.Messages.OTHER
@@ -156,7 +156,7 @@ function v(e) {
                   })]
                 });
               case 1:
-                return (0, o.jsx)(u.TextArea, {
+                return (0, o.jsx)(s.TextArea, {
                   maxLength: h.MAX_REASON_LENGTH,
                   onChange: k,
                   value: O,
@@ -166,50 +166,50 @@ function v(e) {
             }
           })(P)
         })]
-      }), (0, o.jsx)(u.FormItem, {
+      }), (0, o.jsx)(s.FormItem, {
         title: E.default.Messages.FORM_LABEL_DELETE_MESSAGE_HISTORY,
         className: A.spacing,
-        children: (0, o.jsx)(u.SingleSelect, {
+        children: (0, o.jsx)(s.SingleSelect, {
           options: m(),
           value: S,
           onChange: D
         })
       })]
     }), (() => {
-      switch (b) {
+      switch (N) {
         case 0:
-          return (0, o.jsxs)(u.ModalFooter, {
+          return (0, o.jsxs)(s.ModalFooter, {
             className: A.footer,
-            children: [(0, o.jsx)(u.Button, {
+            children: [(0, o.jsx)(s.Button, {
               type: "button",
-              look: u.Button.Looks.LINK,
-              color: u.Button.Colors.PRIMARY,
+              look: s.Button.Looks.LINK,
+              color: s.Button.Colors.PRIMARY,
               onClick: p,
               children: E.default.Messages.CANCEL
-            }), (0, o.jsx)(u.Button, {
+            }), (0, o.jsx)(s.Button, {
               type: "submit",
-              color: u.Button.Colors.RED,
-              size: u.Button.Sizes.SMALL,
+              color: s.Button.Colors.RED,
+              size: s.Button.Sizes.SMALL,
               onClick: x,
               children: E.default.Messages.BAN
             })]
           });
         case 1:
-          return (0, o.jsxs)(u.ModalFooter, {
+          return (0, o.jsxs)(s.ModalFooter, {
             className: A.footerStepped,
-            children: [(0, o.jsx)(u.Button, {
+            children: [(0, o.jsx)(s.Button, {
               className: A.cancel,
               innerClassName: A.cancel,
               type: "button",
-              look: u.Button.Looks.LINK,
-              color: u.Button.Colors.PRIMARY,
-              size: u.Button.Sizes.SMALL,
+              look: s.Button.Looks.LINK,
+              color: s.Button.Colors.PRIMARY,
+              size: s.Button.Sizes.SMALL,
               onClick: U,
               children: E.default.Messages.BACK
-            }), (0, o.jsx)(u.Button, {
+            }), (0, o.jsx)(s.Button, {
               type: "submit",
-              color: u.Button.Colors.RED,
-              size: u.Button.Sizes.SMALL,
+              color: s.Button.Colors.RED,
+              size: s.Button.Sizes.SMALL,
               onClick: x,
               children: E.default.Messages.BAN
             })]

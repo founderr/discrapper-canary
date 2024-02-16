@@ -7,22 +7,22 @@ E.r(_), E.d(_, {
 var t = E("37983"),
   o = E("884691"),
   n = E("446674"),
-  a = E("77078"),
+  r = E("77078"),
   i = E("363658"),
-  r = E("135230"),
+  a = E("135230"),
   I = E("42887"),
-  T = E("945956"),
-  s = E("568307"),
+  s = E("945956"),
+  T = E("568307"),
   S = E("701909"),
   N = E("49111"),
   O = E("782340"),
   A = () => {
-    let [e, _] = (0, n.useStateFromStoresArray)([s.default], () => [s.default.canShowAdminWarning, s.default.getVisibleGame()], []), E = (0, n.useStateFromStores)([T.default], () => T.default.isConnected(), []), A = (0, n.useStateFromStores)([I.default], () => I.default.getMode() === N.InputModes.PUSH_TO_TALK, []), R = null != _ && _.elevated && E && A && e, l = o.useRef(null);
+    let [e, _] = (0, n.useStateFromStoresArray)([T.default], () => [T.default.canShowAdminWarning, T.default.getVisibleGame()], []), E = (0, n.useStateFromStores)([s.default], () => s.default.isConnected(), []), A = (0, n.useStateFromStores)([I.default], () => I.default.getMode() === N.InputModes.PUSH_TO_TALK, []), R = null != _ && _.elevated && E && A && e, l = o.useRef(null);
 
-    function L() {
-      null !== l.current && ((0, a.closeModal)(l.current), l.current = null)
+    function u() {
+      null !== l.current && ((0, r.closeModal)(l.current), l.current = null)
     }
-    return o.useEffect(() => (R ? l.current = (0, a.openModal)(e => (0, t.jsx)(r.default, {
+    return o.useEffect(() => (R ? l.current = (0, r.openModal)(e => (0, t.jsx)(a.default, {
       title: O.default.Messages.PTT_PERMISSION_TITLE,
       body: O.default.Messages.PTT_PERMISSION_BODY.format({
         game: null == _ ? void 0 : _.name
@@ -32,7 +32,7 @@ var t = E("37983"),
       onConfirm: () => window.open(S.default.getArticleURL(N.HelpdeskArticles.PUSH_TO_TALK_ADMINISTRATOR_MODE), "_blank"),
       confirmText: O.default.Messages.HELP_DESK,
       ...e
-    })) : L(), () => {
-      L()
+    })) : u(), () => {
+      u()
     }), [_, R]), null
   }

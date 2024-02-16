@@ -1,7 +1,7 @@
 "use strict";
-var n = e("859514"),
-  i = e("868822");
-n({
+var e = n("859514"),
+  i = n("868822");
+e({
   target: "URL",
   proto: !0,
   enumerable: !0

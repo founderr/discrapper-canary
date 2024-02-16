@@ -38,9 +38,9 @@ var i = n("37983"),
       guildId: U,
       welcomeChannel: M,
       transitionState: y,
-      onSave: w,
-      onClose: G
-    } = e, b = (0, C.useUID)(), [x, F] = r.useState(null != M ? M.channel_id : null), [V, B] = r.useState(null != M ? M.description : ""), [j, H] = r.useState(null != M ? {
+      onSave: b,
+      onClose: w
+    } = e, G = (0, C.useUID)(), [x, F] = r.useState(null != M ? M.channel_id : null), [V, B] = r.useState(null != M ? M.description : ""), [j, H] = r.useState(null != M ? {
       id: M.emoji_id,
       name: M.emoji_name
     } : null), [k, W] = r.useState(!1), Y = (0, l.useStateFromStores)([_.default], () => (null == j ? void 0 : j.id) != null ? _.default.getUsableCustomEmojiById(j.id) : null), z = (0, l.useStateFromStores)([T.default], () => T.default.getChannels(U)[T.GUILD_SELECTABLE_CHANNELS_KEY], [U]), Z = (0, l.useStateFromStores)([A.default], () => A.default.get(U)), K = null !== (n = null == Z ? void 0 : null === (t = Z.welcome_channels) || void 0 === t ? void 0 : t.map(e => e.channel_id)) && void 0 !== n ? n : [], [q, X] = r.useState(!1);
@@ -58,7 +58,7 @@ var i = n("37983"),
       })
     });
     let Q = () => {
-        X(!1), G()
+        X(!1), w()
       },
       $ = r.useCallback(e => B(e), []),
       ee = e => {
@@ -82,7 +82,7 @@ var i = n("37983"),
       page: L.AnalyticsPages.CHANNEL_WELCOME_CREATE_MODAL,
       children: (0, i.jsxs)(a.ModalRoot, {
         transitionState: y,
-        "aria-labelledby": b,
+        "aria-labelledby": G,
         children: [(0, i.jsxs)("div", {
           className: D.modalContents,
           children: [(0, i.jsx)(a.ModalCloseButton, {
@@ -91,7 +91,7 @@ var i = n("37983"),
           }), (0, i.jsx)(a.Heading, {
             variant: "heading-md/semibold",
             className: D.headerText,
-            id: b,
+            id: G,
             children: O.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SELECT_A_CHANNEL
           }), (0, i.jsxs)(a.FormSection, {
             className: D.formGroup,
@@ -212,7 +212,7 @@ var i = n("37983"),
               children: O.default.Messages.CANCEL
             }), (0, i.jsx)(a.Button, {
               onClick: () => {
-                null != x && V.length > 0 && w({
+                null != x && V.length > 0 && b({
                   channel_id: x,
                   description: V,
                   emoji_id: null == j ? void 0 : j.id,
@@ -233,7 +233,7 @@ var i = n("37983"),
           })]
         }), k && (0, i.jsx)(g.default, {
           onConfirm: () => {
-            w(), Q()
+            b(), Q()
           },
           onCancel: () => W(!1),
           channelId: x

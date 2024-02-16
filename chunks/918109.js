@@ -1,33 +1,33 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return s
+    return T
   }
 });
 var t = E("37983"),
   o = E("884691"),
   n = E("446674"),
-  a = E("77078"),
+  r = E("77078"),
   i = E("629109"),
-  r = E("135230"),
+  a = E("135230"),
   I = E("42887"),
-  T = E("782340"),
-  s = () => {
+  s = E("782340"),
+  T = () => {
     let e = (0, n.useStateFromStores)([I.default], () => I.default.isInteractionRequired(), []),
       _ = o.useRef(null);
 
     function E() {
-      null !== _.current && ((0, a.closeModal)(_.current), _.current = null)
+      null !== _.current && ((0, r.closeModal)(_.current), _.current = null)
     }
 
-    function s() {
+    function T() {
       i.default.interact()
     }
-    return o.useEffect(() => (e ? _.current = (0, a.openModal)(e => (0, t.jsx)(r.default, {
-      title: T.default.Messages.INTERACTION_REQUIRED_TITLE,
-      body: T.default.Messages.INTERACTION_REQUIRED_BODY,
-      onConfirm: s,
-      confirmText: T.default.Messages.OKAY,
+    return o.useEffect(() => (e ? _.current = (0, r.openModal)(e => (0, t.jsx)(a.default, {
+      title: s.default.Messages.INTERACTION_REQUIRED_TITLE,
+      body: s.default.Messages.INTERACTION_REQUIRED_BODY,
+      onConfirm: T,
+      confirmText: s.default.Messages.OKAY,
       ...e
     })) : E(), () => {
       E()

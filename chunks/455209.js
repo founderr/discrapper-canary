@@ -3,15 +3,15 @@ E.r(_), E("313619"), E("654714"), E("287168"), E("956660"), E("222007"), E("5114
 var t = E("872717"),
   o = E("821316"),
   n = E("129966"),
-  a = E("583340"),
+  r = E("583340"),
   i = E("823348"),
-  r = E("35468");
+  a = E("35468");
 E("773336");
 var I = E("286235"),
-  T = E("900673"),
-  s = E("49111");
+  s = E("900673"),
+  T = E("49111");
 let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"],
-  N = new T.default,
+  N = new s.default,
   O = /\/api(\/v\d+)?\/science/;
 (0, t.setRequestPatch)({
   prepareRequest(e) {
@@ -20,23 +20,23 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
     } = E("271938"), {
       default: n
     } = E("313915"), {
-      default: a
+      default: r
     } = E("915639"), {
       default: i
     } = E("697218"), {
-      default: r
+      default: a
     } = E("599110"), {
-      isPlatformEmbedded: T
+      isPlatformEmbedded: s
     } = E("773336");
     if ("/" === e.url[0]) {
-      var s, A;
+      var T, A;
       e.url = t.default.getAPIBaseURL() + e.url, !("Authorization" in e.header) && !("authorization" in e.header) && e.set("Authorization", _.getToken());
-      let E = r.getSuperPropertiesBase64();
+      let E = a.getSuperPropertiesBase64();
       null != E && e.set("X-Super-Properties", E);
       let o = _.getFingerprint();
-      if (null != o && "" !== o && e.set("X-Fingerprint", o), T) {
+      if (null != o && "" !== o && e.set("X-Fingerprint", o), s) {
         let _ = [];
-        null != navigator && (_ = (s = [...navigator.languages], s));
+        null != navigator && (_ = (T = [...navigator.languages], T));
         let E = function(e) {
           let _ = 10,
             E = e.reduce((e, E) => (10 === _ ? e.push(E) : e.push("".concat(E, ";q=0.").concat(_)), _ = Math.max(_ - 1, 1), e), []);
@@ -44,7 +44,7 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
         }(_);
         e.set("Accept-Language", E)
       }
-      e.set("X-Discord-Locale", a.locale);
+      e.set("X-Discord-Locale", r.locale);
       let I = function() {
         if (null == Intl.DateTimeFormat) return null;
         let e = Intl.DateTimeFormat();
@@ -98,7 +98,7 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
     })
   },
   interceptResponse(e, _, t) {
-    var o, r, I, T, S;
+    var o, a, I, s, S;
     return 400 === e.statusCode && (null === (o = e.body) || void 0 === o ? void 0 : o.captcha_key) ? (Promise.all([E.el("417814").then(E.bind(E, "417814")), E.el("507445").then(E.bind(E, "507445"))]).then(_ => {
       let [{
         default: E
@@ -114,12 +114,12 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
         "X-Captcha-Key": E
       };
       null != t && (o["X-Captcha-Rqtoken"] = t), _(o)
-    }).catch(t), !0) : 401 === e.statusCode && (null === (r = e.body) || void 0 === r ? void 0 : r.code) === s.AbortCodes.MFA_REQUIRED && (null === (I = e.body) || void 0 === I ? void 0 : I.mfa) ? (E.el("776502").then(E.bind(E, "776502")).then(E => {
+    }).catch(t), !0) : 401 === e.statusCode && (null === (a = e.body) || void 0 === a ? void 0 : a.code) === T.AbortCodes.MFA_REQUIRED && (null === (I = e.body) || void 0 === I ? void 0 : I.mfa) ? (E.el("776502").then(E.bind(E, "776502")).then(E => {
       let {
         openMFAModal: o
       } = E;
       o(e.body.mfa, _, t)
-    }).catch(t), !0) : (0, i.isLimitedAccessErrorCode)(e.statusCode, null === (T = e.body) || void 0 === T ? void 0 : T.code) ? (E.el("258158").then(E.bind(E, "258158")).then(e => {
+    }).catch(t), !0) : (0, i.isLimitedAccessErrorCode)(e.statusCode, null === (s = e.body) || void 0 === s ? void 0 : s.code) ? (E.el("258158").then(E.bind(E, "258158")).then(e => {
       let {
         default: _
       } = e;
@@ -130,7 +130,7 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
         default: t
       } = _;
       t(null === (E = e.body) || void 0 === E ? void 0 : E.guild_id)
-    }), !1) : ((0, a.isBlockedByProxyErrorCode)(e) && E.el("499946").then(E.bind(E, "499946")).then(e => {
+    }), !1) : ((0, r.isBlockedByProxyErrorCode)(e) && E.el("499946").then(E.bind(E, "499946")).then(e => {
       let {
         handleBlockedByProxy: _
       } = e;
@@ -138,5 +138,5 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
     }), !1)
   }
 }), (0, t.setAwaitOnline)(async e => {
-  if (o.report("Network", "Request to ".concat(e, " failed, will retry.")), !r.default.isOnline()) await r.default.awaitOnline(), o.report("Network", "Network detected online, retrying ".concat(e))
+  if (o.report("Network", "Request to ".concat(e, " failed, will retry.")), !a.default.isOnline()) await a.default.awaitOnline(), o.report("Network", "Network detected online, retrying ".concat(e))
 })

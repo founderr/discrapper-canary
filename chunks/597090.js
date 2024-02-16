@@ -7,11 +7,11 @@ E.r(_), E.d(_, {
 var t = E("823411"),
   o = E("568131"),
   n = E("689988"),
-  a = E("686470"),
+  r = E("686470"),
   i = E("773336");
-class r extends n.default {
+class a extends n.default {
   handlePostConnectionOpen() {
-    (0, i.isDesktop)() && (!a.default.fetched && (0, o.fetchLibrary)(), t.default.getDetectableGames())
+    (0, i.isDesktop)() && (!r.default.fetched && (0, o.fetchLibrary)(), t.default.getDetectableGames())
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -19,4 +19,4 @@ class r extends n.default {
     }
   }
 }
-var I = new r
+var I = new a

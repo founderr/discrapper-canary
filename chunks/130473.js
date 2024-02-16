@@ -6,33 +6,33 @@ E.r(_), E.d(_, {
   }
 }), E("808653");
 var n = E("446674"),
-  a = E("95410"),
+  r = E("95410"),
   i = E("913144"),
-  r = E("42203"),
+  a = E("42203"),
   I = E("305961");
-let T = "hideSuppressWarning",
-  s = !1,
+let s = "hideSuppressWarning",
+  T = !1,
   S = !0,
   N = !1;
 class O extends n.default.Store {
   initialize() {
-    N = a.default.get(T) || N
+    N = r.default.get(s) || N
   }
   isAFKChannel() {
-    let e = r.default.getChannel(o);
+    let e = a.default.getChannel(o);
     if (null == e) return !1;
     let _ = I.default.getGuild(e.getGuildId());
     return null != _ && e.id === _.afkChannelId
   }
   shouldShowWarning() {
     var e;
-    return !(null === (e = r.default.getChannel(o)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !S
+    return !(null === (e = a.default.getChannel(o)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !S
   }
 }
 O.displayName = "PermissionSpeakStore";
 var A = new O(i.default, {
   CONNECTION_OPEN: function(e) {
-    t = e.sessionId, s = !1
+    t = e.sessionId, T = !1
   },
   CONNECTION_CLOSED: function() {
     t = null, o = null, S = !0
@@ -41,12 +41,12 @@ var A = new O(i.default, {
     let {
       voiceStates: _
     } = e;
-    return _.reduce((e, _) => t !== _.sessionId ? e : (s !== _.suppress && (S = !(s = _.suppress)), o !== _.channelId && (o = _.channelId, S = !s), (N || null == _.channelId) && (S = !0), !0), !1)
+    return _.reduce((e, _) => t !== _.sessionId ? e : (T !== _.suppress && (S = !(T = _.suppress)), o !== _.channelId && (o = _.channelId, S = !T), (N || null == _.channelId) && (S = !0), !0), !1)
   },
   PERMISSION_CLEAR_SUPPRESS_WARNING: function(e) {
     let {
       forever: _
     } = e;
-    S = !0, _ && (N = !0, a.default.set(T, N))
+    S = !0, _ && (N = !0, r.default.set(s, N))
   }
 })

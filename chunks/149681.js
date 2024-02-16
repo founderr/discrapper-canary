@@ -8,23 +8,23 @@ var t = E("689988");
 E("721698");
 var o = E("560208"),
   n = E("883069"),
-  a = E("569808");
+  r = E("569808");
 E("487946"), E("337543");
 var i = E("139514"),
-  r = E("312016");
+  a = E("312016");
 let I = new Set;
 
-function T(e) {
+function s(e) {
   let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (_ && !I.has(e.channel_id)) return;
-  let E = (0, r.default)(e.content);
+  let E = (0, a.default)(e.content);
   null != E && 0 !== E.length && E.forEach(e => {
     let {
       type: _,
       code: E
     } = e;
     if (_ === i.CodedLinkType.INVITE);
-    else if (_ === i.CodedLinkType.TEMPLATE) null == a.default.getGuildTemplate(E) && n.default.resolveGuildTemplate(E);
+    else if (_ === i.CodedLinkType.TEMPLATE) null == r.default.getGuildTemplate(E) && n.default.resolveGuildTemplate(E);
     else if (_ === i.CodedLinkType.BUILD_OVERRIDE || _ === i.CodedLinkType.MANUAL_BUILD_OVERRIDE);
     else if (_ === i.CodedLinkType.EVENT);
     else if (_ === i.CodedLinkType.CHANNEL_LINK);
@@ -37,7 +37,7 @@ function T(e) {
     else throw Error("Unknown coded link type: ".concat(_))
   })
 }
-class s extends t.default {
+class T extends t.default {
   handleConnectionOpen() {
     I.clear()
   }
@@ -51,37 +51,37 @@ class s extends t.default {
     let {
       message: _
     } = e;
-    return T(_, !0)
+    return s(_, !0)
   }
   handleLoadMessages(e) {
     let {
       channelId: _,
       messages: E
     } = e;
-    I.add(_), E.forEach(e => T(e, !0))
+    I.add(_), E.forEach(e => s(e, !0))
   }
   handleLoadRecentMentions(e) {
     let {
       messages: _
     } = e;
-    _.forEach(e => T(e))
+    _.forEach(e => s(e))
   }
   handleLoadPinnedMessages(e) {
     let {
       messages: _
     } = e;
-    _.forEach(e => T(e))
+    _.forEach(e => s(e))
   }
   handleSearchFinish(e) {
     e.messages.forEach(e => {
-      e.forEach(e => T(e))
+      e.forEach(e => s(e))
     })
   }
   handleGuildFeedFetchSuccess(e) {
     let {
       data: _
     } = e;
-    (0, o.getMessagesFromGuildFeedFetch)(_).forEach(e => T(e))
+    (0, o.getMessagesFromGuildFeedFetch)(_).forEach(e => s(e))
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -105,4 +105,4 @@ class s extends t.default {
     }
   }
 }
-var S = new s
+var S = new T

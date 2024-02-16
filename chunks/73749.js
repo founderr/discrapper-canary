@@ -8,22 +8,22 @@ var t = E("37983");
 E("884691");
 var o = E("90915"),
   n = E("759843"),
-  a = E("428958");
+  r = E("428958");
 
 function i(e) {
   var _;
   let {
     impressionName: E,
     impressionProperties: i,
-    disableTrack: r,
+    disableTrack: a,
     ...I
-  } = e, T = i;
-  return "function" == typeof T && (T = T(I)), (0, a.default)({
+  } = e, s = i;
+  return "function" == typeof s && (s = s(I)), (0, r.default)({
     type: n.ImpressionTypes.PAGE,
     name: E,
-    properties: T
+    properties: s
   }, {
-    disableTrack: r
+    disableTrack: a
   }, [null === (_ = I.location) || void 0 === _ ? void 0 : _.pathname]), (0, t.jsx)(o.Route, {
     ...I
   })

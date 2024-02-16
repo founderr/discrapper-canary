@@ -7,12 +7,12 @@ E.r(_), E.d(_, {
 var t = E("627445"),
   o = E.n(t),
   n = E("917351"),
-  a = E.n(n),
+  r = E.n(n),
   i = E("446674"),
-  r = E("713349"),
+  a = E("713349"),
   I = E("151426"),
-  T = E("801340"),
-  s = E("913144"),
+  s = E("801340"),
+  T = E("913144"),
   S = E("275877"),
   N = E("116949"),
   O = E("397336");
@@ -23,8 +23,8 @@ let A = {
     editInfo: (0, O.createEmptyEditInfo)()
   },
   R = {
-    ProtoClass: r.FrecencyUserSettings,
-    proto: r.FrecencyUserSettings.create(),
+    ProtoClass: a.FrecencyUserSettings,
+    proto: a.FrecencyUserSettings.create(),
     lazyLoaded: !0,
     editInfo: (0, O.createEmptyEditInfo)()
   },
@@ -32,9 +32,9 @@ let A = {
     [O.UserSettingsTypes.PRELOADED_USER_SETTINGS]: A,
     [O.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: R
   },
-  L = !1;
+  u = !1;
 
-function u() {
+function L() {
   C()
 }
 
@@ -59,26 +59,26 @@ function c(e) {
     },
     partial: t,
     resetEditInfo: n,
-    local: a
+    local: r
   } = e;
-  L = !a;
+  u = !r;
   let i = l[E];
   n && D(i), t ? (i.proto = (0, N.mergeTopLevelFields)(i.ProtoClass, i.proto, _), o("string" != typeof i.proto, "UserSettingsProto cannot be a string")) : (i.proto = _, o("string" != typeof i.proto, "UserSettingsProto cannot be a string"), i.editInfo.loaded = !0, i.editInfo.loading = !1)
 }
 
 function d(e) {
-  null != e && a.forEach(l, (_, E) => {
+  null != e && r.forEach(l, (_, E) => {
     var t, n;
-    let a = e[Number(E)];
-    if (null == a) return;
-    let i = null !== (t = null == a ? void 0 : a.proto) && void 0 !== t ? t : "",
-      r = (0, N.b64ToProto)(_.ProtoClass, i);
+    let r = e[Number(E)];
     if (null == r) return;
-    _.proto = r, o("string" != typeof _.proto, "UserSettingsProto cannot be a string");
-    let I = null !== (n = null == a ? void 0 : a.protoToSave) && void 0 !== n ? n : null;
-    if (null == I || null == a.offlineEditDataVersion) return;
-    let T = (0, N.b64ToProto)(_.ProtoClass, I);
-    null != T && (_.editInfo.protoToSave = T, _.editInfo.offlineEditDataVersion = a.offlineEditDataVersion)
+    let i = null !== (t = null == r ? void 0 : r.proto) && void 0 !== t ? t : "",
+      a = (0, N.b64ToProto)(_.ProtoClass, i);
+    if (null == a) return;
+    _.proto = a, o("string" != typeof _.proto, "UserSettingsProto cannot be a string");
+    let I = null !== (n = null == r ? void 0 : r.protoToSave) && void 0 !== n ? n : null;
+    if (null == I || null == r.offlineEditDataVersion) return;
+    let s = (0, N.b64ToProto)(_.ProtoClass, I);
+    null != s && (_.editInfo.protoToSave = s, _.editInfo.offlineEditDataVersion = r.offlineEditDataVersion)
   })
 }
 class U extends i.default.PersistedStore {
@@ -89,7 +89,7 @@ class U extends i.default.PersistedStore {
     return this.computeState()
   }
   computeState() {
-    return a.mapValues(l, e => {
+    return r.mapValues(l, e => {
       let _ = {
         proto: (0, N.protoToB64)(e.ProtoClass, e.proto)
       };
@@ -106,7 +106,7 @@ class U extends i.default.PersistedStore {
     return R.proto
   }
   get wasMostRecentUpdateFromServer() {
-    return L
+    return u
   }
   getFullState() {
     return l
@@ -130,7 +130,7 @@ class U extends i.default.PersistedStore {
     var _, E;
     if (null == e) return 0;
     let t = null === (E = this.settings.guilds) || void 0 === E ? void 0 : null === (_ = E.guilds[e]) || void 0 === _ ? void 0 : _.guildRecentsDismissedAt;
-    return null == t ? 0 : T.Timestamp.toDate(t).getTime()
+    return null == t ? 0 : s.Timestamp.toDate(t).getTime()
   }
   getDismissedGuildContent(e) {
     var _, E, t;
@@ -142,7 +142,7 @@ class U extends i.default.PersistedStore {
   }
 }
 U.displayName = "UserSettingsProtoStore", U.persistKey = "UserSettingsProtoStore-Cache";
-var M = new U(s.default, {
+var M = new U(T.default, {
   CACHE_LOADED: function(e) {
     let {
       userSettings: _
@@ -179,8 +179,8 @@ var M = new U(s.default, {
       e.lazyLoaded && (e.editInfo.loaded = !1, e.editInfo.loading = !1)
     }), C()
   },
-  CONNECTION_CLOSED: u,
-  CONNECTION_RESUMED: u,
+  CONNECTION_CLOSED: L,
+  CONNECTION_RESUMED: L,
   OVERLAY_INITIALIZE: function(e) {
     let {
       userSettingsProto: _

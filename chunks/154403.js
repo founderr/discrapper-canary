@@ -1,18 +1,18 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return L
+    return u
   }
 }), E("222007");
 var t = E("37983"),
   o = E("884691"),
   n = E("414456"),
-  a = E.n(n),
+  r = E.n(n),
   i = E("446674"),
-  r = E("77078"),
+  a = E("77078"),
   I = E("368694"),
-  T = E("313915"),
-  s = E("578706"),
+  s = E("313915"),
+  T = E("578706"),
   S = E("381546"),
   N = E("655804"),
   O = E("238500"),
@@ -20,39 +20,39 @@ var t = E("37983"),
   R = E("939011"),
   l = E("440296");
 
-function L() {
+function u() {
   let {
     debugTrackedData: e,
     impressions: _
   } = (0, R.useImpressionStore)(e => ({
     debugTrackedData: e.debugTrackedData,
     impressions: e.impressions
-  })), E = (0, i.useStateFromStores)([T.default], () => T.default.isAnalyticsDebuggerEnabled), n = (0, i.useStateFromStores)([I.default], () => I.default.isDeveloper), [L, u] = o.useState(!1), {
+  })), E = (0, i.useStateFromStores)([s.default], () => s.default.isAnalyticsDebuggerEnabled), n = (0, i.useStateFromStores)([I.default], () => I.default.isDeveloper), [u, L] = o.useState(!1), {
     name: C,
     ...D
   } = null != e ? e : {}, c = null != C;
   return n && E ? (0, t.jsx)(A.default, {
     children: (0, t.jsxs)("div", {
-      className: a(l.container, {
-        [l.containerMinimized]: L,
+      className: r(l.container, {
+        [l.containerMinimized]: u,
         [l.notTracked]: !c
       }),
-      children: [(0, t.jsx)(r.Clickable, {
+      children: [(0, t.jsx)(a.Clickable, {
         className: l.minimizeButton,
         onClick: () => {
-          u(!L)
+          L(!u)
         },
-        children: L ? (0, t.jsx)(N.default, {}) : (0, t.jsx)(O.default, {})
+        children: u ? (0, t.jsx)(N.default, {}) : (0, t.jsx)(O.default, {})
       }), (0, t.jsxs)("div", {
-        className: a(l.content, {
-          [l.contentMinimized]: L
+        className: r(l.content, {
+          [l.contentMinimized]: u
         }),
-        children: [(0, t.jsxs)(r.Text, {
-          className: a(l.label, {
+        children: [(0, t.jsxs)(a.Text, {
+          className: r(l.label, {
             [l.notTracked]: !c
           }),
           variant: "text-xxs/normal",
-          children: [c ? (0, t.jsx)(s.default, {
+          children: [c ? (0, t.jsx)(T.default, {
             className: l.iconTracked
           }) : (0, t.jsx)(S.default, {
             className: l.iconNotTracked
@@ -60,8 +60,8 @@ function L() {
         }), (0, t.jsx)("div", {
           className: l.current,
           children: JSON.stringify(D, void 0, 2)
-        }), (0, t.jsx)(r.Text, {
-          className: a(l.label, {
+        }), (0, t.jsx)(a.Text, {
+          className: r(l.label, {
             [l.notTracked]: !c
           }),
           variant: "text-xxs/normal",

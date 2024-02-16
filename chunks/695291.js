@@ -1,14 +1,14 @@
 "use strict";
 E.r(_), E.d(_, {
   initialize: function() {
-    return a
+    return r
   }
 }), E("222007"), E("70102"), E("424973");
 var t = E("913144");
 let o = {},
   n = !1;
 
-function a(e) {
+function r(e) {
   for (let _ in e) {
     let E = e[_];
     (function(e, _) {

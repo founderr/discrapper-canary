@@ -7,20 +7,20 @@ E.r(_), E.d(_, {
 var t = E("917351"),
   o = E.n(t),
   n = E("713349"),
-  a = E("95410"),
+  r = E("95410"),
   i = E("689988"),
-  r = E("342564"),
+  a = E("342564"),
   I = E("605393"),
-  T = E("385976"),
-  s = E("469607"),
+  s = E("385976"),
+  T = E("469607"),
   S = E("865372"),
   N = E("319781"),
   O = E("718517"),
   A = E("872173"),
   R = E("374363"),
   l = E("116949"),
-  L = E("397336");
-let u = "lastFrecencySavedTime",
+  u = E("397336");
+let L = "lastFrecencySavedTime",
   C = Math.random() * (5 * O.default.Millis.MINUTE),
   D = 1 * O.default.Millis.DAY + Math.floor(Math.random() * (1 * O.default.Millis.HOUR)),
   c = null,
@@ -33,34 +33,34 @@ class U extends i.default {
         m(!0)
       }
     }), A.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
-      hasChanges: () => S.default.hasPendingUsage() && R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
+      hasChanges: () => S.default.hasPendingUsage() && R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!S.default.hasPendingUsage()) R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.stickerFrecency = n.StickerFrecency.create(), e.stickerFrecency.stickers = (0, l.serializeUsageHistory)(S.default.stickerFrecencyWithoutFetchingLatest.usageHistory, 100))
+        if (!!S.default.hasPendingUsage()) R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.stickerFrecency = n.StickerFrecency.create(), e.stickerFrecency.stickers = (0, l.serializeUsageHistory)(S.default.stickerFrecencyWithoutFetchingLatest.usageHistory, 100))
       }
     }), A.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
-      hasChanges: () => T.default.hasPendingUsage() && R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
+      hasChanges: () => s.default.hasPendingUsage() && R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!T.default.hasPendingUsage()) R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.emojiFrecency = n.EmojiFrecency.create(), e.emojiFrecency.emojis = (0, l.serializeUsageHistory)(T.default.emojiFrecencyWithoutFetchingLatest.usageHistory, 100))
+        if (!!s.default.hasPendingUsage()) R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.emojiFrecency = n.EmojiFrecency.create(), e.emojiFrecency.emojis = (0, l.serializeUsageHistory)(s.default.emojiFrecencyWithoutFetchingLatest.usageHistory, 100))
       }
     }), A.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
-      hasChanges: () => s.default.hasPendingUsage() && R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
+      hasChanges: () => T.default.hasPendingUsage() && R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!s.default.hasPendingUsage()) R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && !o.isEmpty(s.default.playedSoundHistory) && (e.playedSoundFrecency = n.PlayedSoundFrecency.create(), e.playedSoundFrecency.playedSounds = (0, l.serializeUsageHistory)(s.default.playedSoundHistory, 100))
+        if (!!T.default.hasPendingUsage()) R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && !o.isEmpty(T.default.playedSoundHistory) && (e.playedSoundFrecency = n.PlayedSoundFrecency.create(), e.playedSoundFrecency.playedSounds = (0, l.serializeUsageHistory)(T.default.playedSoundHistory, 100))
       }
     }), A.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
-      hasChanges: () => r.default.hasPendingUsage() && R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
+      hasChanges: () => a.default.hasPendingUsage() && R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!r.default.hasPendingUsage()) R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationCommandFrecency = n.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, l.serializeUsageHistory)(r.default.getCommandFrecencyWithoutLoadingLatest().usageHistory, 500))
+        if (!!a.default.hasPendingUsage()) R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationCommandFrecency = n.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, l.serializeUsageHistory)(a.default.getCommandFrecencyWithoutLoadingLatest().usageHistory, 500))
       }
     }), A.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
-      hasChanges: () => I.default.hasPendingUsage() && R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
+      hasChanges: () => I.default.hasPendingUsage() && R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!I.default.hasPendingUsage()) R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationFrecency = n.ApplicationFrecency.create(), e.applicationFrecency.applications = (0, l.serializeUsageHistory)(I.default.getApplicationFrecencyWithoutLoadingLatest().usageHistory, I.FREQUENCY_ITEM_LIMIT))
+        if (!!I.default.hasPendingUsage()) R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationFrecency = n.ApplicationFrecency.create(), e.applicationFrecency.applications = (0, l.serializeUsageHistory)(I.default.getApplicationFrecencyWithoutLoadingLatest().usageHistory, I.FREQUENCY_ITEM_LIMIT))
       }
     }), A.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
-      hasChanges: () => N.default.hasPendingUsage() && R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
+      hasChanges: () => N.default.hasPendingUsage() && R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!N.default.hasPendingUsage()) R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.guildAndChannelFrecency = n.GuildAndChannelFrecency.create(), e.guildAndChannelFrecency.guildAndChannels = (0, l.serializeUsageHistory)(N.default.frecencyWithoutFetchingLatest.usageHistory, N.MAX_NUM_SELECTED_ITEMS))
+        if (!!N.default.hasPendingUsage()) R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.guildAndChannelFrecency = n.GuildAndChannelFrecency.create(), e.guildAndChannelFrecency.guildAndChannels = (0, l.serializeUsageHistory)(N.default.frecencyWithoutFetchingLatest.usageHistory, N.MAX_NUM_SELECTED_ITEMS))
       }
     })
   }
@@ -75,20 +75,20 @@ class U extends i.default {
 
 function M() {
   var e;
-  d = null !== (e = a.default.get(u)) && void 0 !== e ? e : Date.now(), m(!1)
+  d = null !== (e = r.default.get(L)) && void 0 !== e ? e : Date.now(), m(!1)
 }
 
 function h() {
   clearTimeout(c), c = null
 }
 async function P() {
-  d = Date.now(), m(!0), !R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (S.default.hasPendingUsage() || T.default.hasPendingUsage() || r.default.hasPendingUsage() || I.default.hasPendingUsage() || N.default.hasPendingUsage()) && await A.FrecencyUserSettingsActionCreators.loadIfNecessary(), o.forEach(A.UserSettingsActionCreatorsByType, e => {
+  d = Date.now(), m(!0), !R.default.hasLoaded(u.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (S.default.hasPendingUsage() || s.default.hasPendingUsage() || a.default.hasPendingUsage() || I.default.hasPendingUsage() || N.default.hasPendingUsage()) && await A.FrecencyUserSettingsActionCreators.loadIfNecessary(), o.forEach(A.UserSettingsActionCreatorsByType, e => {
     e.markDirtyIfHasPendingChange()
   })
 }
 
 function m(e) {
-  e && (d = Date.now(), a.default.set(u, d)), null != c && clearTimeout(c);
+  e && (d = Date.now(), r.default.set(L, d)), null != c && clearTimeout(c);
   let _ = Date.now() - d;
   c = setTimeout(P, Math.max(C, D - _))
 }

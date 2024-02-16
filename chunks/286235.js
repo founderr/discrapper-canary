@@ -10,21 +10,21 @@ E.r(_), E.d(_, {
 var t = E("303167"),
   o = E("423670"),
   n = E("773336"),
-  a = E("50885");
+  r = E("50885");
 let i = "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984";
 
-function r() {
+function a() {
   var e, _, E, t, o, i;
-  let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-  n.isPlatformEmbedded && a.default.updateCrashReporter({
-    user_id: null !== (e = r.id) && void 0 !== e ? e : "",
-    username: null !== (_ = r.username) && void 0 !== _ ? _ : "",
-    email: null !== (E = r.email) && void 0 !== E ? E : "",
+  let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+  n.isPlatformEmbedded && r.default.updateCrashReporter({
+    user_id: null !== (e = a.id) && void 0 !== e ? e : "",
+    username: null !== (_ = a.username) && void 0 !== _ ? _ : "",
+    email: null !== (E = a.email) && void 0 !== E ? E : "",
     sentry: {
       user: {
-        id: null !== (t = r.id) && void 0 !== t ? t : "",
-        username: null !== (o = r.username) && void 0 !== o ? o : "",
-        email: null !== (i = r.email) && void 0 !== i ? i : ""
+        id: null !== (t = a.id) && void 0 !== t ? t : "",
+        username: null !== (o = a.username) && void 0 !== o ? o : "",
+        email: null !== (i = a.email) && void 0 !== i ? i : ""
       }
     }
   })
@@ -39,12 +39,12 @@ var I = {
     };
     null != window.DiscordSentry && window.DiscordSentry.configureScope(e => {
       e.setUser(o)
-    }), r(o)
+    }), a(o)
   },
   clearUser() {
     null != window.DiscordSentry && window.DiscordSentry.configureScope(e => {
       e.setUser(null)
-    }), r()
+    }), a()
   },
   setTags(e) {
     null != window.DiscordSentry && window.DiscordSentry.configureScope(_ => {

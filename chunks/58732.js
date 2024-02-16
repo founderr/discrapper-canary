@@ -1,37 +1,37 @@
-function n(t) {
-  if (t) return function(t) {
-    for (var r in n.prototype) t[r] = n.prototype[r];
-    return t
-  }(t)
+function r(e) {
+  if (e) return function(e) {
+    for (var t in r.prototype) e[t] = r.prototype[t];
+    return e
+  }(e)
 }
-t = e.nmd(t), e("424973"), void 0 !== t && (t.exports = n);
-n.prototype.on = n.prototype.addEventListener = function(t, r) {
-  return this._callbacks = this._callbacks || {}, (this._callbacks["$" + t] = this._callbacks["$" + t] || []).push(r), this
-}, n.prototype.once = function(t, r) {
-  function e() {
-    this.off(t, e), r.apply(this, arguments)
+e = n.nmd(e), n("424973"), void 0 !== e && (e.exports = r);
+r.prototype.on = r.prototype.addEventListener = function(e, t) {
+  return this._callbacks = this._callbacks || {}, (this._callbacks["$" + e] = this._callbacks["$" + e] || []).push(t), this
+}, r.prototype.once = function(e, t) {
+  function n() {
+    this.off(e, n), t.apply(this, arguments)
   }
-  return e.fn = r, this.on(t, e), this
-}, n.prototype.off = n.prototype.removeListener = n.prototype.removeAllListeners = n.prototype.removeEventListener = function(t, r) {
+  return n.fn = t, this.on(e, n), this
+}, r.prototype.off = r.prototype.removeListener = r.prototype.removeAllListeners = r.prototype.removeEventListener = function(e, t) {
   if (this._callbacks = this._callbacks || {}, 0 == arguments.length) return this._callbacks = {}, this;
-  var e, n = this._callbacks["$" + t];
-  if (!n) return this;
-  if (1 == arguments.length) return delete this._callbacks["$" + t], this;
-  for (var i = 0; i < n.length; i++)
-    if ((e = n[i]) === r || e.fn === r) {
-      n.splice(i, 1);
+  var n, r = this._callbacks["$" + e];
+  if (!r) return this;
+  if (1 == arguments.length) return delete this._callbacks["$" + e], this;
+  for (var a = 0; a < r.length; a++)
+    if ((n = r[a]) === t || n.fn === t) {
+      r.splice(a, 1);
       break
-    } return 0 === n.length && delete this._callbacks["$" + t], this
-}, n.prototype.emit = function(t) {
+    } return 0 === r.length && delete this._callbacks["$" + e], this
+}, r.prototype.emit = function(e) {
   this._callbacks = this._callbacks || {};
-  for (var r = Array(arguments.length - 1), e = this._callbacks["$" + t], n = 1; n < arguments.length; n++) r[n - 1] = arguments[n];
-  if (e) {
-    e = e.slice(0);
-    for (var n = 0, i = e.length; n < i; ++n) e[n].apply(this, r)
+  for (var t = Array(arguments.length - 1), n = this._callbacks["$" + e], r = 1; r < arguments.length; r++) t[r - 1] = arguments[r];
+  if (n) {
+    n = n.slice(0);
+    for (var r = 0, a = n.length; r < a; ++r) n[r].apply(this, t)
   }
   return this
-}, n.prototype.listeners = function(t) {
-  return this._callbacks = this._callbacks || {}, this._callbacks["$" + t] || []
-}, n.prototype.hasListeners = function(t) {
-  return !!this.listeners(t).length
+}, r.prototype.listeners = function(e) {
+  return this._callbacks = this._callbacks || {}, this._callbacks["$" + e] || []
+}, r.prototype.hasListeners = function(e) {
+  return !!this.listeners(e).length
 }

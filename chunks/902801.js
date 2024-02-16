@@ -8,20 +8,20 @@ var t = E("37983");
 E("884691");
 var o = E("77078"),
   n = E("689988"),
-  a = E("38654"),
+  r = E("38654"),
   i = E("271938"),
-  r = E("42203"),
+  a = E("42203"),
   I = E("26989"),
-  T = E("162771"),
-  s = E("568734"),
+  s = E("162771"),
+  T = E("568734"),
   S = E("347895"),
   N = E("698882"),
   O = E("129092"),
   A = E("675305"),
   R = E("290886"),
   l = E("363176"),
-  L = E("657944");
-class u extends n.default {
+  u = E("657944");
+class L extends n.default {
   constructor(...e) {
     super(...e), this.onboardingCompleteGuilds = new Set, this.actions = {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
@@ -31,19 +31,19 @@ class u extends n.default {
       MESSAGE_CREATE: e => this.handleMessageSend(e),
       THREAD_CREATE: e => this.handleThreadCreate(e)
     }, this.handlePostConnectionOpen = () => {
-      let e = T.default.getGuildId();
+      let e = s.default.getGuildId();
       null != e && this._getOrLoadOnboardingMemberActions(e)
     }, this.handleGuildMemberUpdate = e => {
       let {
         flags: _,
         user: n,
-        guildId: a
+        guildId: r
       } = e;
       if (n.id === i.default.getId()) {
-        if (!this.onboardingCompleteGuilds.has(a) && (0, s.hasFlag)(null != _ ? _ : 0, L.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
-          var r, I;
-          this.onboardingCompleteGuilds.add(a);
-          let e = null !== (I = null === (r = N.default.getNewMemberActions(a)) || void 0 === r ? void 0 : r.length) && void 0 !== I ? I : 0;
+        if (!this.onboardingCompleteGuilds.has(r) && (0, T.hasFlag)(null != _ ? _ : 0, u.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
+          var a, I;
+          this.onboardingCompleteGuilds.add(r);
+          let e = null !== (I = null === (a = N.default.getNewMemberActions(r)) || void 0 === a ? void 0 : a.length) && void 0 !== I ? I : 0;
           if (0 === e) return;
           (0, o.openModalLazy)(async () => {
             let {
@@ -81,7 +81,7 @@ class u extends n.default {
         message: o
       } = e;
       if (null == E || null == t || (null === (_ = o.author) || void 0 === _ ? void 0 : _.id) !== i.default.getId()) return;
-      let n = r.default.getChannel(t);
+      let n = a.default.getChannel(t);
       (null == n ? void 0 : n.isForumPost()) && (null == n ? void 0 : n.parent_id) != null && this._completeChatAction(E, n.parent_id), this._completeChatAction(E, t)
     }, this.handleThreadCreate = e => {
       var _;
@@ -89,7 +89,7 @@ class u extends n.default {
         channel: E,
         isNewlyCreated: t
       } = e;
-      if (!!t && null != E.parent_id && !!(null === (_ = r.default.getChannel(E.parent_id)) || void 0 === _ ? void 0 : _.isForumLikeChannel())) E.ownerId === i.default.getId() && this._completeChatAction(E.guild_id, E.parent_id)
+      if (!!t && null != E.parent_id && !!(null === (_ = a.default.getChannel(E.parent_id)) || void 0 === _ ? void 0 : _.isForumLikeChannel())) E.ownerId === i.default.getId() && this._completeChatAction(E.guild_id, E.parent_id)
     }, this._completeChatAction = async (e, _) => {
       let {
         memberActions: E,
@@ -98,7 +98,7 @@ class u extends n.default {
       (null == t ? void 0 : t[_]) !== !0 && null != o && o.actionType === O.NewMemberActionTypes.CHAT && (0, S.completeNewMemberAction)(e, _)
     }, this._getOrLoadOnboardingMemberActions = async e => {
       let _ = (0, R.canSeeOnboardingHome)(e),
-        E = a.default.isFullServerPreview(e);
+        E = r.default.isFullServerPreview(e);
       if (!_ && !E) return {};
       let t = I.default.getSelfMember(e);
       if (null == t || !(0, l.getIsNewMember)(t)) return {};
@@ -121,7 +121,7 @@ class u extends n.default {
         completedActions: t,
         loading: o
       } = A.default.getState(e);
-      if (!(null == t && !o && (0, s.hasFlag)(null !== (E = _.flags) && void 0 !== E ? E : 0, L.GuildMemberFlags.STARTED_HOME_ACTIONS))) return t;
+      if (!(null == t && !o && (0, T.hasFlag)(null !== (E = _.flags) && void 0 !== E ? E : 0, u.GuildMemberFlags.STARTED_HOME_ACTIONS))) return t;
       {
         let _ = await (0, S.fetchNewMemberActions)(e);
         return _
@@ -129,4 +129,4 @@ class u extends n.default {
     }
   }
 }
-var C = new u
+var C = new L

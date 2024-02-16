@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
 var t = E("689988"),
   o = E("42203"),
   n = E("612278");
-class a extends t.default {
+class r extends t.default {
   handleChannelPreload(e) {
     let {
       channelId: _
@@ -20,4 +20,4 @@ class a extends t.default {
     }
   }
 }
-var i = new a
+var i = new r

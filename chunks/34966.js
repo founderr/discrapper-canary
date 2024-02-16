@@ -1,28 +1,28 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return u
+    return L
   }
 }), E("222007");
 var t = E("446674"),
   o = E("95410"),
   n = E("913144"),
-  a = E("915639"),
+  r = E("915639"),
   i = E("234222");
-let r = {},
+let a = {},
   I = {},
-  T = null,
   s = null,
+  T = null,
   S = null,
   N = "lastChangeLogId",
   O = "lastChangeLogDate",
   A = null,
   R = null,
   l = new Set;
-class L extends t.default.Store {
+class u extends t.default.Store {
   initialize() {
     var e;
-    this.waitFor(a.default), this.syncWith([a.default], () => !0), A = null !== (e = o.default.get(N)) && void 0 !== e ? e : null;
+    this.waitFor(r.default), this.syncWith([r.default], () => !0), A = null !== (e = o.default.get(N)) && void 0 !== e ? e : null;
     let _ = o.default.get(O);
     if (null != _) try {
       R = new Date(_)
@@ -32,10 +32,10 @@ class L extends t.default.Store {
   }
   getChangelog(e, _) {
     var E, t;
-    return null !== (t = null === (E = r[e]) || void 0 === E ? void 0 : E[_]) && void 0 !== t ? t : null
+    return null !== (t = null === (E = a[e]) || void 0 === E ? void 0 : E[_]) && void 0 !== t ? t : null
   }
   latestChangelogId() {
-    return T
+    return s
   }
   getChangelogLoadStatus(e, _) {
     var E, t;
@@ -48,7 +48,7 @@ class L extends t.default.Store {
     return S
   }
   overrideId() {
-    return s
+    return T
   }
   lastSeenChangelogId() {
     return A
@@ -68,8 +68,8 @@ class L extends t.default.Store {
     return l.size > 0
   }
 }
-L.displayName = "ChangelogStore";
-var u = new L(n.default, {
+u.displayName = "ChangelogStore";
+var L = new u(n.default, {
   CHANGE_LOG_LOCK: function(e) {
     let {
       key: _
@@ -89,14 +89,14 @@ var u = new L(n.default, {
       config: _,
       latestChangelogId: E
     } = e;
-    T = E, S = _
+    s = E, S = _
   },
   CHANGE_LOG_FETCH_SUCCESS: function(e) {
     let {
       id: _,
       changelog: E
     } = e;
-    null == r[_] && (r[_] = {}), r[_][E.locale] = {
+    null == a[_] && (a[_] = {}), a[_][E.locale] = {
       id: _,
       date: E.date,
       body: E.content,
@@ -110,14 +110,14 @@ var u = new L(n.default, {
       id: _,
       locale: E
     } = e;
-    if (null != r[_] && null != r[_][E]) return !1;
+    if (null != a[_] && null != a[_][E]) return !1;
     null == I[_] && (I[_] = {}), I[_][E] = i.ChangelogLoadState.LOADED_FAILURE
   },
   CHANGE_LOG_SET_OVERRIDE: function(e) {
     let {
       id: _
     } = e;
-    s = _
+    T = _
   },
   CHANGE_LOG_MARK_SEEN: function(e) {
     let {

@@ -7,12 +7,12 @@ E.r(_), E.d(_, {
 var t = E("771281"),
   o = E("773364"),
   n = E("689988"),
-  a = E("271938"),
+  r = E("271938"),
   i = E("50885"),
-  r = E("49111");
+  a = E("49111");
 let I = new Set;
 
-function T(e) {
+function s(e) {
   switch (e) {
     case o.MediaEngineContextTypes.DEFAULT:
       return t.StoredCrashInformation.VideoMediaSessionId;
@@ -21,20 +21,20 @@ function T(e) {
   }
 }
 
-function s(e) {
+function T(e) {
   var _;
-  i.default.setCrashInformation(T(e.context), null !== (_ = e.mediaSessionId) && void 0 !== _ ? _ : null)
+  i.default.setCrashInformation(s(e.context), null !== (_ = e.mediaSessionId) && void 0 !== _ ? _ : null)
 }
 
 function S(e) {
   var _;
   let E = (null !== (_ = e.channelId) && void 0 !== _ ? _ : "unknown") + e.context;
   switch (e.state) {
-    case r.RTCConnectionStates.RTC_CONNECTED:
+    case a.RTCConnectionStates.RTC_CONNECTED:
       I.add(E), i.default.setCrashInformation(t.StoredCrashInformation.HasRTCConnection, 1);
       break;
-    case r.RTCConnectionStates.DISCONNECTED:
-      i.default.setCrashInformation(T(e.context), null), I.delete(E), 0 === I.size && ! function() {
+    case a.RTCConnectionStates.DISCONNECTED:
+      i.default.setCrashInformation(s(e.context), null), I.delete(E), 0 === I.size && ! function() {
         let e = [t.StoredCrashInformation.HasRTCConnection, t.StoredCrashInformation.IsSendingVideo, t.StoredCrashInformation.IsSendingStream, t.StoredCrashInformation.IsReceivingVideo, t.StoredCrashInformation.IsReceivingStream];
         for (let _ of e) i.default.setCrashInformation(_, 0)
       }()
@@ -42,7 +42,7 @@ function S(e) {
 }
 
 function N(e) {
-  let _ = e.userId === a.default.getId(),
+  let _ = e.userId === r.default.getId(),
     E = null != e.streamId,
     n = null;
   switch (e.context) {
@@ -59,7 +59,7 @@ class O extends n.default {
     super(...e), this.actions = {
       RTC_CONNECTION_STATE: S,
       RTC_CONNECTION_VIDEO: N,
-      MEDIA_SESSION_JOINED: s
+      MEDIA_SESSION_JOINED: T
     }
   }
 }

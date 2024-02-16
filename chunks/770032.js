@@ -5,16 +5,16 @@ E.r(_), E.d(_, {
     return n
   },
   default: function() {
-    return L
+    return u
   }
 }), E("424973");
-var n, a, i = E("171718"),
-  r = E("446674"),
+var n, r, i = E("171718"),
+  a = E("446674"),
   I = E("913144"),
-  T = E("746574"),
-  s = E("995802"),
+  s = E("746574"),
+  T = E("995802"),
   S = E("583374");
-(a = n || (n = {}))[a.INVALID = 0] = "INVALID", a[a.VALIDATING = 1] = "VALIDATING", a[a.VALID = 2] = "VALID";
+(r = n || (n = {}))[r.INVALID = 0] = "INVALID", r[r.VALIDATING = 1] = "VALIDATING", r[r.VALID = 2] = "VALID";
 let N = [],
   O = !1;
 
@@ -37,7 +37,7 @@ function R(e, _) {
     });
   null != t && (t.tokenStatus = _, N = E)
 }
-class l extends r.default.PersistedStore {
+class l extends a.default.PersistedStore {
   initialize(e) {
     if (null != e) {
       var _;
@@ -76,7 +76,7 @@ class l extends r.default.PersistedStore {
     })
   }
   get canUseMultiAccountNotifications() {
-    return this.getCanUseMultiAccountMobile() && s.MultiAccountMobileNotificationsExperiment.getCurrentConfig({
+    return this.getCanUseMultiAccountMobile() && T.MultiAccountMobileNotificationsExperiment.getCurrentConfig({
       location: "09e468_1"
     }, {
       autoTrackExposure: !1
@@ -99,7 +99,7 @@ l.displayName = "MultiAccountStore", l.persistKey = "MultiAccountStore", l.migra
     canUseMultiAccountMobile: !1
   }
 }];
-var L = new l(I.default, {
+var u = new l(I.default, {
   CONNECTION_OPEN: function(e) {
     let {
       user: _
@@ -146,7 +146,7 @@ var L = new l(I.default, {
       from: _,
       to: E
     } = e;
-    N = (0, T.moveItemFromTo)(N, _, E)
+    N = (0, s.moveItemFromTo)(N, _, E)
   },
   CURRENT_USER_UPDATE: function(e) {
     let {

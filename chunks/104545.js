@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
 var t = E("862337"),
   o = E("913144"),
   n = E("689988");
-class a extends n.default {
+class r extends n.default {
   _terminate() {
     this.clearErrorTimeout.stop()
   }
@@ -21,4 +21,4 @@ class a extends n.default {
     }
   }
 }
-var i = new a
+var i = new r

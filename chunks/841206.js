@@ -8,19 +8,19 @@ var t = E("404828");
 let {
   newline: o,
   paragraph: n,
-  url: a,
+  url: r,
   link: i,
-  strong: r,
+  strong: a,
   u: I,
-  br: T,
-  em: s,
+  br: s,
+  em: T,
   image: S,
   text: N
 } = t.defaultRules;
 var O = {
   newline: o,
   paragraph: n,
-  url: a,
+  url: r,
   link: {
     ...i,
     parse(e, _, E) {
@@ -28,10 +28,10 @@ var O = {
       return t.context = E.context, t
     }
   },
-  strong: r,
+  strong: a,
   u: I,
-  br: T,
-  em: s,
+  br: s,
+  em: T,
   image: S,
   hook: {
     order: N.order,

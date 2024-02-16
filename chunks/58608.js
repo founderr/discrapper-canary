@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983"),
   r = n("884691"),
   o = n("118810"),
-  s = n("446674"),
-  u = n("206230"),
+  u = n("446674"),
+  s = n("206230"),
   a = n("719347");
 let l = e => {
   let {
@@ -18,7 +18,7 @@ let l = e => {
     responsive: c,
     mediaLayoutType: d,
     ...f
-  } = e, _ = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion), h = r.useRef(null);
+  } = e, _ = (0, u.useStateFromStores)([s.default], () => s.default.useReducedMotion), h = r.useRef(null);
 
   function E() {
     var e;

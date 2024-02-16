@@ -13,8 +13,8 @@ var l = n("37983"),
   c = n("970728"),
   d = n("448993"),
   f = n("393414"),
-  h = n("145131"),
-  _ = n("476765"),
+  _ = n("145131"),
+  h = n("476765"),
   p = n("883029"),
   E = n("49111"),
   I = n("782340"),
@@ -22,7 +22,7 @@ var l = n("37983"),
   g = n("529861"),
   T = n("156465");
 let S = "hTKzmak",
-  A = (0, _.uid)();
+  A = (0, h.uid)();
 let C = (r = window.GLOBAL_ENV.INVITE_HOST, i = "", null == r && (r = location.host, i = E.Routes.INVITE("")), "".concat(location.protocol, "//").concat(r).concat(i, "/")),
   N = [S, "".concat(C).concat(S), "".concat(C).concat("cool-people")],
   v = e => {
@@ -63,7 +63,7 @@ function L(e) {
     onBack: t,
     onClose: n,
     isSlideReady: r
-  } = e, [i, a] = s.useState(""), [f, _] = s.useState(!1), [E, g] = s.useState(null), T = s.useRef(null);
+  } = e, [i, a] = s.useState(""), [f, h] = s.useState(!1), [E, g] = s.useState(null), T = s.useRef(null);
   s.useEffect(() => {
     var e;
     r && (null === (e = T.current) || void 0 === e || e.focus())
@@ -75,7 +75,7 @@ function L(e) {
       g(I.default.Messages.INVALID_INVITE_LINK_ERROR);
       return
     }
-    g(null), _(!0);
+    g(null), h(!0);
     let r = t.split("/"),
       l = r[r.length - 1];
     c.default.resolveInvite(l, "Join Guild", {
@@ -84,7 +84,7 @@ function L(e) {
       let {
         invite: t
       } = e;
-      if (_(!1), null == t) {
+      if (h(!1), null == t) {
         g(I.default.Messages.INSTANT_INVITE_EXPIRED);
         return
       }
@@ -104,7 +104,7 @@ function L(e) {
         })
       }
     }, e => {
-      _(!1);
+      h(!1);
       let t = new d.V6OrEarlierAPIError(e),
         n = (0, p.getInviteError)(t.code);
       g(n)
@@ -113,7 +113,7 @@ function L(e) {
   return (0, l.jsxs)("div", {
     children: [(0, l.jsxs)(u.ModalHeader, {
       className: m.header,
-      direction: h.default.Direction.VERTICAL,
+      direction: _.default.Direction.VERTICAL,
       separator: !1,
       children: [(0, l.jsx)(u.Heading, {
         className: m.title,

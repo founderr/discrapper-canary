@@ -3,7 +3,7 @@ E.r(_);
 var t = E("759843"),
   o = E("913144"),
   n = E("271938"),
-  a = E("49111");
+  r = E("49111");
 (0, t.analyticsTrackingStoreMaker)({
   dispatcher: o.default,
   actionHandler: {
@@ -14,7 +14,7 @@ var t = E("759843"),
     FINGERPRINT: () => t.AnalyticsActionHandlers.handleFingerprint(),
     TRACK: e => t.AnalyticsActionHandlers.handleTrack(e)
   },
-  TRACKING_URL: a.Endpoints.TRACK,
+  TRACKING_URL: r.Endpoints.TRACK,
   waitFor: [n.default],
   getFingerprint: n.default.getFingerprint
 })

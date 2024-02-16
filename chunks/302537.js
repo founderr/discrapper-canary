@@ -7,20 +7,20 @@ E.r(_), E.d(_, {
 var t = E("37983"),
   o = E("884691"),
   n = E("414456"),
-  a = E.n(n),
+  r = E.n(n),
   i = E("703809"),
-  r = E("90915"),
+  a = E("90915"),
   I = E("394846"),
-  T = E("446674"),
-  s = E("825573"),
+  s = E("446674"),
+  T = E("825573"),
   S = E("77078"),
   N = E("206230"),
   O = E("338733"),
   A = E("584369"),
   R = E("915639"),
   l = E("161778"),
-  L = E("471671"),
-  u = E("439932"),
+  u = E("471671"),
+  L = E("439932"),
   C = E("779601"),
   D = E("69927"),
   c = E("983689"),
@@ -47,12 +47,12 @@ var h = o.memo(function(e) {
       let {
         locale: _,
         theme: E
-      } = (0, T.useStateFromStoresObject)([l.default, R.default], () => ({
+      } = (0, s.useStateFromStoresObject)([l.default, R.default], () => ({
         locale: R.default.locale,
         theme: l.default.theme
-      })), n = (0, T.useStateFromStores)([L.default], () => L.default.isFocused(), []), {
+      })), n = (0, s.useStateFromStores)([u.default], () => u.default.isFocused(), []), {
         reducedMotion: i,
-        alwaysShowLinkDecorations: s
+        alwaysShowLinkDecorations: T
       } = o.useContext(S.AccessibilityPreferencesContext), {
         fontScale: O,
         fontScaleClass: D,
@@ -61,7 +61,7 @@ var h = o.memo(function(e) {
         desaturateUserColors: P,
         useForcedColors: m,
         systemForcedColors: G
-      } = (0, T.useStateFromStoresObject)([N.default], () => {
+      } = (0, s.useStateFromStoresObject)([N.default], () => {
         let {
           fontScale: e,
           fontScaleClass: _,
@@ -69,7 +69,7 @@ var h = o.memo(function(e) {
           saturation: t,
           desaturateUserColors: o,
           useForcedColors: n,
-          systemForcedColors: a
+          systemForcedColors: r
         } = N.default;
         return {
           fontScale: e,
@@ -78,17 +78,17 @@ var h = o.memo(function(e) {
           saturation: t,
           desaturateUserColors: o,
           useForcedColors: n,
-          systemForcedColors: a
+          systemForcedColors: r
         }
-      }), p = (0, r.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
+      }), p = (0, a.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
       (0, c.default)(window, g);
       let y = (0, d.default)(window, __OVERLAY__ || n),
-        B = (0, T.useStateFromStores)([A.default], () => A.default.sidebarWidth),
+        B = (0, s.useStateFromStores)([A.default], () => A.default.sidebarWidth),
         f = (0, S.useRedesignIconContext)().enabled;
       return (0, t.jsx)("html", {
         lang: _,
         style: "font-size: ".concat(O, "%; --saturation-factor: ").concat(h, "; --devtools-sidebar-width: ").concat(B, "px;"),
-        className: a(e, {
+        className: r(e, {
           overlay: __OVERLAY__,
           "mouse-mode": y,
           "keyboard-mode": U,
@@ -97,17 +97,17 @@ var h = o.memo(function(e) {
           "is-mobile": I.isMobile,
           "app-focused": n,
           "low-saturation": h <= S.LOW_SATURATION_THRESHOLD,
-          "decorate-links": s,
+          "decorate-links": T,
           "desaturate-user-colors": P,
           "disable-forced-colors": !m && "active" === G,
           "enable-forced-colors": m,
           "show-redesigned-icons": f
-        }, (0, u.getThemeClass)(E), (0, C.default)(), D)
+        }, (0, L.getThemeClass)(E), (0, C.default)(), D)
       })
     }(U), function() {
       let [e, _] = o.useState([]);
       return o.useEffect(() => {
-        Promise.all(s.fontsToPreload.map(e => E("437087")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
+        Promise.all(T.fontsToPreload.map(e => E("437087")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
           let {
             default: _
           } = e;
