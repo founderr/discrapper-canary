@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return g
   }
 }), n("222007");
 var s = n("37983"),
@@ -15,8 +15,8 @@ var s = n("37983"),
   c = n("970366"),
   f = n("271938"),
   E = n("124969"),
-  _ = n("599110"),
-  I = n("49111"),
+  I = n("599110"),
+  _ = n("49111"),
   p = n("782340"),
   h = n("180688"),
   T = n("890957");
@@ -88,12 +88,12 @@ class N extends a.PureComponent {
       let {
         transitionTo: e
       } = this.props;
-      e(I.Routes.LOGIN)
+      e(_.Routes.LOGIN)
     }, this.handleOpenApp = () => {
       let {
         verifyingUserId: e
       } = this.props;
-      _.default.track(I.AnalyticEvents.VERIFY_ACCOUNT_APP_OPENED, {
+      I.default.track(_.AnalyticEvents.VERIFY_ACCOUNT_APP_OPENED, {
         verifying_user_id: e
       }), (0, d.default)("verify_email")
     }
@@ -102,7 +102,7 @@ class N extends a.PureComponent {
 N.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var m = r.default.connectStores([f.default], () => ({
+var g = r.default.connectStores([f.default], () => ({
   verifyFailed: f.default.didVerifyFail(),
   verifyErrors: f.default.getVerifyErrors(),
   verifySucceeded: f.default.didVerifySucceed(),

@@ -44,7 +44,7 @@ function M(e) {
 }
 let y = S.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
 
-function R(e) {
+function w(e) {
   let {
     channel: t
   } = e;
@@ -55,7 +55,7 @@ function R(e) {
   })
 }
 
-function w(e) {
+function R(e) {
   let {
     channel: t
   } = e, n = (0, o.useStateFromStores)([p.default], () => p.default.getUser(null == t ? void 0 : t.recipients[0])), i = (0, o.useStateFromStores)([_.default], () => !(null == n || null == t || t.isMultiUserDM()) && null != _.default.getTypingUsers(null == t ? void 0 : t.id)[null == n ? void 0 : n.id]), {
@@ -91,13 +91,13 @@ let L = [13, 11, 10, 10, 10, 10, 10],
       switch (e.type) {
         case N.ChannelTypes.DM:
           return function() {
-            return (0, l.jsx)(w, {
+            return (0, l.jsx)(R, {
               channel: e
             })
           };
         case N.ChannelTypes.GROUP_DM:
           return function() {
-            return (0, l.jsx)(R, {
+            return (0, l.jsx)(w, {
               channel: e
             })
           };
@@ -167,8 +167,8 @@ function D(e) {
     onMouseUp: T,
     onContextMenu: S,
     connectDragPreview: y,
-    className: R,
-    iconClassName: w,
+    className: w,
+    iconClassName: R,
     subtitle: L,
     subtitleColor: D,
     channel: {
@@ -184,8 +184,8 @@ function D(e) {
     mentionCount: k,
     resolvedUnreadSetting: B,
     isFavoriteSuggestion: W,
-    withGuildIcon: K
-  } = e, z = B === C.UnreadSetting.ALL_MESSAGES || null != k && k > 0, {
+    withGuildIcon: z
+  } = e, K = B === C.UnreadSetting.ALL_MESSAGES || null != k && k > 0, {
     role: Y,
     ...Z
   } = (0, r.useListItem)(n.id), q = i.useRef(null), X = i.useRef(null), Q = (0, I.default)(n), J = N.Routes.CHANNEL(Q, n.id), $ = (0, f.default)(n), ee = n.isGuildVocal(), et = (0, l.jsx)("div", {
@@ -207,12 +207,12 @@ function D(e) {
       children: [(0, l.jsxs)("div", {
         className: A.linkTop,
         children: [(0, l.jsx)(O, {
-          className: w,
+          className: R,
           channel: n,
           guild: j,
           hasActiveThreads: E,
           locked: g,
-          withGuildIcon: K
+          withGuildIcon: z
         }), (0, l.jsx)(m.default, {
           className: s(A.name),
           "aria-hidden": !0,
@@ -224,7 +224,7 @@ function D(e) {
         }) : null]
       }), null != L ? (0, l.jsx)("div", {
         className: s(A.linkBottom, {
-          [A.withGuildIcon]: K
+          [A.withGuildIcon]: z
         }),
         children: (0, l.jsx)(d.Text, {
           color: null != D ? D : "text-muted",
@@ -244,12 +244,12 @@ function D(e) {
       right: 4
     },
     children: (0, l.jsxs)("div", {
-      className: s(R, null != _ || null != T || null != p || H ? A.wrapper : A.notInteractive, (() => {
+      className: s(w, null != _ || null != T || null != p || H ? A.wrapper : A.notInteractive, (() => {
         if (o) return x.SELECTED;
         if (c) return x.CONNECTED;
         if (g) return x.LOCKED;
         if (u) return x.MUTED;
-        if (h) return z ? x.UNREAD_IMPORTANT : x.UNREAD_LESS_IMPORTANT;
+        if (h) return K ? x.UNREAD_IMPORTANT : x.UNREAD_LESS_IMPORTANT;
         return null
       })(), function(e) {
         switch (e) {
@@ -275,7 +275,7 @@ function D(e) {
       onMouseEnter: b,
       onMouseLeave: P,
       children: [u || !h || o && !ee ? null : (0, l.jsx)("div", {
-        className: s(A.unread, z ? A.unreadImportant : void 0)
+        className: s(A.unread, K ? A.unreadImportant : void 0)
       }), null !== (t = null == y ? void 0 : y(et)) && void 0 !== t ? t : et]
     })
   })

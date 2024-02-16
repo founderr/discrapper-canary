@@ -159,7 +159,7 @@ async function N(t, e, n) {
       skuId: e
     })
   });
-  let F = c.default.inTestModeForApplication(t) || o.default.inDevModeForApplication(t);
+  let O = c.default.inTestModeForApplication(t) || o.default.inDevModeForApplication(t);
   try {
     let t = {
       gift: A,
@@ -167,7 +167,7 @@ async function N(t, e, n) {
       gateway_checkout_context: await (0, S.createGatewayCheckoutContext)(a),
       load_id: N
     };
-    if (F) t.test_mode = !0;
+    if (O) t.test_mode = !0;
     else {
       if (null != a && (t.payment_source_id = a.id, t.payment_source_token = await (0, _.createPaymentSourceToken)(a), T.ADYEN_PAYMENT_SOURCES.has(a.type))) {
         let e = await (0, _.popupBridgeState)(a.type);

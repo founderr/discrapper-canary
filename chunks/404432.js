@@ -1,82 +1,82 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return I
   }
 });
 var s = n("37983"),
   a = n("884691"),
-  r = n("414456"),
-  l = n.n(r),
-  i = n("446674"),
+  i = n("414456"),
+  r = n.n(i),
+  l = n("446674"),
   o = n("77078"),
   u = n("299285"),
   d = n("210721"),
   c = n("65324"),
-  E = n("697218"),
-  f = n("10514"),
-  h = n("552712"),
-  _ = n("953109"),
-  g = n("124969"),
-  m = n("380186"),
+  f = n("697218"),
+  h = n("10514"),
+  E = n("552712"),
+  g = n("953109"),
+  m = n("124969"),
+  _ = n("380186"),
   p = n("49111"),
-  T = n("646718"),
-  R = n("782340"),
+  R = n("646718"),
+  S = n("782340"),
   A = n("173494"),
-  S = n("125047"),
-  I = n("890957"),
-  N = i.default.connectStores([h.default, u.default, f.default, E.default], e => {
+  T = n("125047"),
+  N = n("890957"),
+  I = l.default.connectStores([E.default, u.default, h.default, f.default], e => {
     let {
       giftCode: t
-    } = e, n = h.default.get(t.skuId), {
+    } = e, n = E.default.get(t.skuId), {
       subscriptionPlanId: s
-    } = t, a = null != s ? (0, m.getOrFetchSubscriptionPlan)(s) : null;
+    } = t, a = null != s ? (0, _.getOrFetchSubscriptionPlan)(s) : null;
     return {
       sku: n,
       subscriptionPlan: a,
       application: u.default.getApplication(n.applicationId),
-      gifter: E.default.getUser(t.userId)
+      gifter: f.default.getUser(t.userId)
     }
   })(e => {
     let {
       error: t,
       giftCode: n,
-      gifter: r,
-      sku: i,
+      gifter: i,
+      sku: l,
       application: u,
-      subscriptionPlan: E
-    } = e, f = null == r ? R.default.Messages.GIFT_CODE_AUTH_GIFTED : R.default.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
-      username: r.username
-    }), h = i.name;
-    return null != E && (h = (E.interval === T.SubscriptionIntervalTypes.MONTH ? R.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : R.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
-      skuName: i.name,
-      intervalCount: E.intervalCount
+      subscriptionPlan: f
+    } = e, h = null == i ? S.default.Messages.GIFT_CODE_AUTH_GIFTED : S.default.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
+      username: i.username
+    }), E = l.name;
+    return null != f && (E = (f.interval === R.SubscriptionIntervalTypes.MONTH ? S.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : S.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
+      skuName: l.name,
+      intervalCount: f.intervalCount
     })), (0, s.jsxs)(a.Fragment, {
       children: [null != n.giftStyle ? (0, s.jsx)(c.default, {
         defaultAnimationState: d.AnimationState.LOOP,
         giftStyle: n.giftStyle,
         className: A.seasonalIcon
-      }) : (0, s.jsx)(g.Avatar, {
-        src: null != r ? r.getAvatarURL(void 0, 100) : null,
+      }) : (0, s.jsx)(m.Avatar, {
+        src: null != i ? i.getAvatarURL(void 0, 100) : null,
         size: o.AvatarSizes.DEPRECATED_SIZE_100,
-        className: I.marginBottom20
+        className: N.marginBottom20
       }), null != t ? (0, s.jsxs)(a.Fragment, {
-        children: [(0, s.jsx)(g.SubTitle, {
-          children: R.default.Messages.INVITE_MODAL_ERROR_TITLE
-        }), (0, s.jsx)(g.Title, {
+        children: [(0, s.jsx)(m.SubTitle, {
+          children: S.default.Messages.INVITE_MODAL_ERROR_TITLE
+        }), (0, s.jsx)(m.Title, {
           children: t
         })]
       }) : (0, s.jsxs)(a.Fragment, {
-        children: [(0, s.jsx)(g.SubTitle, {
-          children: f
-        }), (0, s.jsxs)(g.Title, {
-          className: l(I.marginTop8, S.flexCenter),
-          children: [i.productLine !== p.SKUProductLines.COLLECTIBLES && (0, s.jsx)(_.default, {
-            size: _.default.Sizes.MEDIUM,
+        children: [(0, s.jsx)(m.SubTitle, {
+          children: h
+        }), (0, s.jsxs)(m.Title, {
+          className: r(N.marginTop8, T.flexCenter),
+          children: [l.productLine !== p.SKUProductLines.COLLECTIBLES && (0, s.jsx)(g.default, {
+            size: g.default.Sizes.MEDIUM,
             className: A.applicationIcon,
             game: u,
-            skuId: i.id
-          }), h]
+            skuId: l.id
+          }), E]
         })]
       })]
     })

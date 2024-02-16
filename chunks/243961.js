@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return _
   }
 });
 var s = n("37983");
@@ -16,7 +16,7 @@ var a = n("77078"),
   c = n("49111"),
   f = n("782340"),
   E = n("182092");
-let _ = e => {
+let I = e => {
   let {
     state: t
   } = e;
@@ -29,20 +29,20 @@ let _ = e => {
   }
 };
 
-function I(e) {
+function _(e) {
   let {
     invite: t,
     onAcceptInvite: n,
-    disableUser: I = !1
+    disableUser: _ = !1
   } = e;
   if (null == t) return null;
   let p = null != t.guild ? new r.default(t.guild) : null,
     h = null != t.channel ? (0, i.createChannelRecordFromInvite)(t.channel) : null,
     T = null != t.target_application ? new l.default(t.target_application) : null,
-    N = I || null == t.inviter ? null : new u.default(t.inviter),
-    m = null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != p && p.hasFeature(c.GuildFeatures.COMMUNITY),
-    g = !m && null != N && (0, o.isGroupInvite)(t),
-    A = _(t),
+    N = _ || null == t.inviter ? null : new u.default(t.inviter),
+    g = null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != p && p.hasFeature(c.GuildFeatures.COMMUNITY),
+    m = !g && null != N && (0, o.isGroupInvite)(t),
+    A = I(t),
     S = {
       invite: t,
       user: N,
@@ -60,13 +60,13 @@ function I(e) {
     children: [(0, s.jsx)(o.InviteDestinationIcon, {
       application: T,
       guild: p,
-      user: g || (0, o.isDirectInvite)(t) ? N : null
+      user: m || (0, o.isDirectInvite)(t) ? N : null
     }), (0, o.isDirectInvite)(t) ? null : (0, s.jsx)(o.InviteJoinContext, {
       ...S,
-      showBigUserIcon: g
+      showBigUserIcon: m
     }), (0, s.jsx)(o.InviteHeader, {
       ...S,
-      showBigUserIcon: g
+      showBigUserIcon: m
     }), (0, s.jsx)(o.InviteMemberCounts, {
       ...S
     }), (0, s.jsx)(a.Button, {

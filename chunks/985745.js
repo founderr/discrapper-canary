@@ -2,15 +2,15 @@ var i = n("390493");
 n("860677"), n("854508"), ! function(e, t) {
   "use strict";
   if (!e.setImmediate) {
-    var n, a = 1,
-      r = {},
+    var n, r = 1,
+      a = {},
       s = !1,
       l = e.document,
       o = Object.getPrototypeOf && Object.getPrototypeOf(e);
     o = o && o.setTimeout ? o : e, "[object process]" === ({}).toString.call(e.process) ? function() {
       n = function(e) {
         i.nextTick(function() {
-          u(e)
+          c(e)
         })
       }
     }() : function() {
@@ -24,7 +24,7 @@ n("860677"), n("854508"), ! function(e, t) {
     }() ? function() {
       var t = "setImmediate$" + Math.random() + "$",
         i = function(n) {
-          n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && u(+n.data.slice(t.length))
+          n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && c(+n.data.slice(t.length))
         };
       e.addEventListener ? e.addEventListener("message", i, !1) : e.attachEvent("onmessage", i), n = function(n) {
         e.postMessage(t + n, "*")
@@ -32,7 +32,7 @@ n("860677"), n("854508"), ! function(e, t) {
     }() : e.MessageChannel ? function() {
       var e = new MessageChannel;
       e.port1.onmessage = function(e) {
-        u(e.data)
+        c(e.data)
       }, n = function(t) {
         e.port2.postMessage(t)
       }
@@ -41,12 +41,12 @@ n("860677"), n("854508"), ! function(e, t) {
       n = function(t) {
         var n = l.createElement("script");
         n.onreadystatechange = function() {
-          u(t), n.onreadystatechange = null, e.removeChild(n), n = null
+          c(t), n.onreadystatechange = null, e.removeChild(n), n = null
         }, e.appendChild(n)
       }
     }() : function() {
       n = function(e) {
-        setTimeout(u, 0, e)
+        setTimeout(c, 0, e)
       }
     }(), o.setImmediate = function(e) {
       "function" != typeof e && (e = Function("" + e));
@@ -55,18 +55,18 @@ n("860677"), n("854508"), ! function(e, t) {
         callback: e,
         args: t
       };
-      return r[a] = s, n(a), a++
-    }, o.clearImmediate = c
-  }
-
-  function c(e) {
-    delete r[e]
+      return a[r] = s, n(r), r++
+    }, o.clearImmediate = u
   }
 
   function u(e) {
-    if (s) setTimeout(u, 0, e);
+    delete a[e]
+  }
+
+  function c(e) {
+    if (s) setTimeout(c, 0, e);
     else {
-      var t = r[e];
+      var t = a[e];
       if (t) {
         s = !0;
         try {
@@ -91,7 +91,7 @@ n("860677"), n("854508"), ! function(e, t) {
             }
           }(t)
         } finally {
-          c(e), s = !1
+          u(e), s = !1
         }
       }
     }

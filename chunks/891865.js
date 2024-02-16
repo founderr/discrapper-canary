@@ -24,10 +24,10 @@ var l = s("37983"),
   C = s("697218"),
   N = s("920700"),
   p = s("953109"),
-  h = s("306160"),
-  O = s("659632"),
-  P = s("719923"),
-  g = s("158998"),
+  O = s("306160"),
+  h = s("659632"),
+  g = s("719923"),
+  P = s("158998"),
   L = s("642906"),
   F = s("49111"),
   U = s("646718"),
@@ -48,27 +48,27 @@ function x(e) {
     isSendingMessage: A
   } = e, {
     productLine: R
-  } = (0, L.usePaymentContext)(), [C, x] = n.useState(N.default.Modes.DEFAULT), G = (0, d.useStateFromStores)([T.default], () => T.default.enabled), y = I || null != r && null != c, j = () => null != u ? u.skuId : null != i ? i.id : null, B = () => {
+  } = (0, L.usePaymentContext)(), [C, x] = n.useState(N.default.Modes.DEFAULT), G = (0, d.useStateFromStores)([T.default], () => T.default.enabled), j = I || null != r && null != c, y = () => null != u ? u.skuId : null != i ? i.id : null, b = () => {
     let e;
     let t = null != r && U.SeasonalGiftStyles2023.includes(r);
-    return null != _ ? m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == u ? null : (e = u.interval === U.SubscriptionIntervalTypes.MONTH ? y ? t ? m.default.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : y ? t ? m.default.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
-      skuName: (0, P.getTierDisplayName)(u.id),
+    return null != _ ? m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB : null == u ? null : (e = u.interval === U.SubscriptionIntervalTypes.MONTH ? j ? t ? m.default.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : j ? t ? m.default.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
+      skuName: (0, g.getTierDisplayName)(u.id),
       intervalCount: u.intervalCount
     })
-  }, b = (e, t) => {
-    null != i && (0, O.trackGiftCodeCopy)(new E.default({
+  }, B = (e, t) => {
+    null != i && (0, h.trackGiftCodeCopy)(new E.default({
       code: t,
       maxUses: 1
     }), i);
     try {
-      (0, h.copy)(e), x(N.default.Modes.SUCCESS)
+      (0, O.copy)(e), x(N.default.Modes.SUCCESS)
     } catch (e) {
       x(N.default.Modes.ERROR)
     }
     setTimeout(() => {
       x(N.default.Modes.DEFAULT)
     }, 1500)
-  }, D = () => {
+  }, k = () => {
     let e;
     if (null == t) return null;
     switch (C) {
@@ -87,11 +87,11 @@ function x(e) {
         children: m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_PRIVATE_LINK
       }), null != t && (0, l.jsx)(N.default, {
         hideMessage: G ? m.default.Messages.GIFT_INVENTORY_HIDDEN : null,
-        value: (0, O.getGiftCodeURL)(t),
+        value: (0, h.getGiftCodeURL)(t),
         mode: C,
         text: e,
-        onCopy: e => b(e, t),
-        supportsCopy: h.SUPPORTS_COPY,
+        onCopy: e => B(e, t),
+        supportsCopy: O.SUPPORTS_COPY,
         className: M.copyInput,
         buttonColor: N.default.ButtonColors.LINK,
         buttonLook: N.default.ButtonLooks.LINK
@@ -107,27 +107,27 @@ function x(e) {
       game: s,
       className: M.icon,
       size: p.default.Sizes.LARGE,
-      skuId: j()
+      skuId: y()
     }) : null, (0, l.jsx)(o.Spinner, {
       type: o.SpinnerTypes.PULSING_ELLIPSIS
     })]
   });
-  let k = R === F.SKUProductLines.COLLECTIBLES;
+  let D = R === F.SKUProductLines.COLLECTIBLES;
   return (0, l.jsxs)("div", {
     className: M.confirmation,
     children: [null != s ? (0, l.jsx)(p.default, {
       game: s,
       className: M.icon,
       size: p.default.Sizes.LARGE,
-      skuId: j()
+      skuId: y()
     }) : null, (0, l.jsx)(o.Heading, {
       variant: "heading-lg/semibold",
       className: a({
-        [M.header]: null == r && !k,
-        [M.headerCustomGifting]: null != r && !k
+        [M.header]: null == r && !D,
+        [M.headerCustomGifting]: null != r && !D
       }),
       children: null != c || I && null == _ ? m.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != _ ? m.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : m.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
-    }), I && null != c && null == _ || y ? (0, l.jsxs)(l.Fragment, {
+    }), I && null != c && null == _ || j ? (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(S.default, {
         user: c,
         className: M.giftRecipient,
@@ -135,24 +135,24 @@ function x(e) {
       }), (0, l.jsx)(o.Heading, {
         className: M.giftRecipientName,
         variant: "heading-md/semibold",
-        children: g.default.getName(c)
+        children: P.default.getName(c)
       }), (0, l.jsxs)("div", {
         className: M.giftRecipientTag,
-        children: [" ", g.default.getUserTag(c)]
+        children: [" ", P.default.getUserTag(c)]
       }), (0, l.jsx)("div", {
         className: M.giftSentMessage,
-        children: B()
+        children: b()
       })]
     }) : (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)("div", {
         className: M.blurb,
-        children: B()
+        children: b()
       }), null == _ && (0, l.jsx)(v, {
         giftCode: t,
         onClose: f
       }), (0, l.jsx)("div", {
         className: M.divider
-      }), D()]
+      }), k()]
     })]
   })
 }
@@ -166,11 +166,11 @@ let v = e => {
   }, []);
   let [i, a] = n.useState(), [u, E] = n.useState(!1), [T, N] = n.useState(!1), {
     userAffinities: p,
-    isLoading: h
+    isLoading: O
   } = (0, d.useStateFromStoresObject)([R.default], () => ({
     userAffinities: R.default.getUserAffinitiesUserIds(),
     isLoading: R.default.getFetching()
-  })), O = Array.from(p.values()), P = (0, d.useStateFromStores)([A.default], () => A.default.getFriendIDs()), L = r.difference(P, O), F = [...O, ...L], U = (0, d.useStateFromStores)([C.default], () => C.default.filter(e => F.includes(e.id) && !e.bot), [F]), x = null == U || 0 === U.length;
+  })), h = Array.from(p.values()), g = (0, d.useStateFromStores)([A.default], () => A.default.getFriendIDs()), L = r.difference(g, h), F = [...h, ...L], U = (0, d.useStateFromStores)([C.default], () => C.default.filter(e => F.includes(e.id) && !e.bot), [F]), x = null == U || 0 === U.length;
   if (x) return null;
   let v = r.sortBy(U, e => F.indexOf(e.id));
   return (0, l.jsxs)("div", {
@@ -187,7 +187,7 @@ let v = e => {
           user: e.value,
           size: o.AvatarSizes.SIZE_20
         }),
-        renderLeading: () => h ? (0, l.jsx)(o.Spinner, {
+        renderLeading: () => O ? (0, l.jsx)(o.Spinner, {
           type: o.SpinnerTypes.PULSING_ELLIPSIS
         }) : null,
         value: i,
@@ -196,7 +196,7 @@ let v = e => {
         },
         options: v.map(e => ({
           value: e,
-          label: "".concat(g.default.getUserTag(e))
+          label: "".concat(P.default.getUserTag(e))
         }))
       }), (0, l.jsx)(o.Button, {
         disabled: null == i,

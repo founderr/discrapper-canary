@@ -37,8 +37,8 @@ var u = n("37983"),
   U = n("241006"),
   L = n("284797"),
   M = n("383802"),
-  F = n("334702"),
-  O = n("775325"),
+  O = n("334702"),
+  F = n("775325"),
   h = n("403293"),
   m = n("523591"),
   y = n("49111"),
@@ -84,7 +84,7 @@ function H(t) {
     setStep: to,
     steps: ts,
     breadcrumbsData: tc
-  } = (0, O.default)({
+  } = (0, F.default)({
     stepConfigs: B,
     breadcrumbs: H
   }), [tS, td] = (0, L.default)(ta), {
@@ -107,7 +107,7 @@ function H(t) {
     selectedPlan: tC,
     setSelectedSkuId: tP,
     setSelectedPlanId: tN
-  } = (0, p.default)(), [tR, tU] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [tL, tM] = (0, o.useStateFromStoresArray)([m.default], () => [m.default.browserCheckoutState, m.default.loadId]), [tF, tO] = i.useState(null), [th, tm] = i.useState(null), [ty, tg] = i.useState(null), [tG, tD] = i.useState(null), [tB, tH] = i.useState(null), [tv, tK] = i.useState(void 0), [tb, tw] = i.useState([]), tY = i.useMemo(() => null == tC || (0, I.isPremiumSubscriptionPlan)(tC.id), [tC]), tW = i.useRef(null != D ? D.planId : null);
+  } = (0, p.default)(), [tR, tU] = (0, o.useStateFromStoresArray)([E.default], () => [E.default.purchaseTokenAuthState, E.default.purchaseTokenHash]), [tL, tM] = (0, o.useStateFromStoresArray)([m.default], () => [m.default.browserCheckoutState, m.default.loadId]), [tO, tF] = i.useState(null), [th, tm] = i.useState(null), [ty, tg] = i.useState(null), [tG, tD] = i.useState(null), [tB, tH] = i.useState(null), [tv, tK] = i.useState(void 0), [tb, tw] = i.useState([]), tY = i.useMemo(() => null == tC || (0, I.isPremiumSubscriptionPlan)(tC.id), [tC]), tW = i.useRef(null != D ? D.planId : null);
   i.useEffect(() => {
     null == tW.current && null != D && (tW.current = D.planId)
   }, [D]);
@@ -115,7 +115,7 @@ function H(t) {
     skusById: tV,
     hasFetchedSkus: tk,
     skuPricePreviewsById: tZ
-  } = (0, F.default)({
+  } = (0, O.default)({
     applicationId: null != W ? W : g.PREMIUM_SUBSCRIPTION_APPLICATION,
     skuIDs: v,
     currentPaymentSourceId: X,
@@ -172,8 +172,8 @@ function H(t) {
       purchaseTokenHash: tU,
       browserCheckoutState: tL,
       browserCheckoutStateLoadId: tM,
-      bodyNode: tF,
-      setBodyNode: tO,
+      bodyNode: tO,
+      setBodyNode: tF,
       footerNode: th,
       setFooterNode: tm,
       modalOverlayNode: ty,

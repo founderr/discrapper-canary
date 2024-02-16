@@ -15,18 +15,18 @@ var s = n("37983"),
   c = n("437822"),
   f = n("457108"),
   E = n("724038"),
-  _ = n("24287"),
-  I = n("970366"),
+  I = n("24287"),
+  _ = n("970366"),
   p = n("271938"),
   h = n("124969"),
   T = n("659500"),
   N = n("49111"),
-  m = n("782340"),
-  g = n("890957");
+  g = n("782340"),
+  m = n("890957");
 o.default.initialize();
 class A extends a.PureComponent {
   componentDidMount() {
-    (0, I.trackAppUIViewed)("reset_password")
+    (0, _.trackAppUIViewed)("reset_password")
   }
   renderPasswordReset() {
     let {
@@ -40,14 +40,14 @@ class A extends a.PureComponent {
       children: [(0, s.jsx)("img", {
         alt: "",
         src: null == i ? n("245288") : n("314837"),
-        className: g.marginBottom20
+        className: m.marginBottom20
       }), (0, s.jsx)(h.Title, {
-        children: m.default.Messages.RESET_PASSWORD_TITLE
+        children: g.default.Messages.RESET_PASSWORD_TITLE
       }), (0, s.jsxs)(h.Block, {
-        className: g.marginTop20,
+        className: m.marginTop20,
         children: [(0, s.jsx)(h.Input, {
-          label: m.default.Messages.FORM_LABEL_NEW_PASSWORD,
-          className: g.marginBottom20,
+          label: g.default.Messages.FORM_LABEL_NEW_PASSWORD,
+          className: m.marginBottom20,
           name: "password",
           value: e,
           onChange: e => this.setState({
@@ -58,13 +58,13 @@ class A extends a.PureComponent {
         }), (0, s.jsx)(h.Button, {
           type: "submit",
           submitting: l,
-          children: m.default.Messages.CHANGE_PASSWORD
+          children: g.default.Messages.CHANGE_PASSWORD
         }), a ? (0, s.jsx)(h.Button, {
-          className: g.marginTop8,
+          className: m.marginTop8,
           onClick: this.handleGoToLogin,
           submitting: l,
           color: h.Button.Colors.PRIMARY,
-          children: m.default.Messages.CANCEL
+          children: g.default.Messages.CANCEL
         }) : null]
       })]
     })
@@ -78,7 +78,7 @@ class A extends a.PureComponent {
       style: {
         padding: 0
       },
-      children: (0, s.jsx)(_.MFASlides, {
+      children: (0, s.jsx)(I.MFASlides, {
         mfaFinish: e => {
           let {
             mfaType: t,
@@ -101,13 +101,13 @@ class A extends a.PureComponent {
       children: [(0, s.jsx)("img", {
         alt: "",
         src: n("245288"),
-        className: i(g.marginBottom20, u.isMobile ? g.marginTop20 : "")
+        className: i(m.marginBottom20, u.isMobile ? m.marginTop20 : "")
       }), (0, s.jsx)(h.Title, {
-        className: g.marginBottom40,
-        children: m.default.Messages.RESET_PASSWORD_SUCCESS_TITLE
+        className: m.marginBottom40,
+        children: g.default.Messages.RESET_PASSWORD_SUCCESS_TITLE
       }), (0, s.jsx)(h.Button, {
         onClick: this.handleOpenApp,
-        children: m.default.Messages.VERIFICATION_OPEN_DISCORD
+        children: g.default.Messages.VERIFICATION_OPEN_DISCORD
       })]
     })
   }
@@ -128,7 +128,7 @@ class A extends a.PureComponent {
       } = this.state;
       if (null != e && e.preventDefault(), 0 === l.length) {
         this.setState({
-          error: m.default.Messages.PASSWORD_REQUIRED
+          error: g.default.Messages.PASSWORD_REQUIRED
         }), T.ComponentDispatch.dispatch(N.ComponentActions.WAVE_EMPHASIZE);
         return
       }
