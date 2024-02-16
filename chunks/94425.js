@@ -351,8 +351,8 @@ var Y = function() {
       N(!0)
     }, []),
     J = s.useCallback(() => {
-      N(!1), !I.current && L(!1)
-    }, []),
+      N(!1), !I.current && !Y && L(!1)
+    }, [Y]),
     $ = s.useCallback(() => {
       N(!1), L(!1), I.current = !1
     }, []),
