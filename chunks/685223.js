@@ -31,14 +31,14 @@ function C(e) {
     onClose: i,
     ticket: o,
     challenge: c
-  } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [C, A] = n.useState(!0), [O, x] = n.useState(h.WebAuthnScreens.INIT), [R, M] = n.useState(""), [v, D] = n.useState(null), L = async () => {
+  } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [C, A] = n.useState(!0), [O, x] = n.useState(h.WebAuthnScreens.INIT), [R, M] = n.useState(""), [D, v] = n.useState(null), L = async () => {
     let e;
     x(h.WebAuthnScreens.REGISTER);
     let t = T.isPlatformEmbedded && m.default.supportsFeature(N.NativeFeatures.WEBAUTHN) ? m.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
     try {
       e = await t
     } catch (e) {
-      f.default.captureException(e), D(I.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(h.WebAuthnScreens.INIT);
+      f.default.captureException(e), v(I.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(h.WebAuthnScreens.INIT);
       return
     }
     M(e), x(h.WebAuthnScreens.NAME)
@@ -71,10 +71,10 @@ function C(e) {
               src: s("473604")
             })
           }), (0, a.jsx)("div", {
-            children: null != v && (0, a.jsx)(r.Text, {
+            children: null != D && (0, a.jsx)(r.Text, {
               variant: "text-md/normal",
               color: "status-danger",
-              children: v
+              children: D
             })
           }), (0, a.jsx)("div", {
             children: (0, a.jsx)(r.Text, {
@@ -116,7 +116,7 @@ function C(e) {
             e.preventDefault(), (0, _.finishRegisterWebAuthnCredential)(E, o, R).then(async () => {
               await (0, d.showMFASuccessModal)(!1)
             }).then(() => i()).catch(() => {
-              D(I.default.Messages.ERROR_OCCURRED_TRY_AGAIN), x(h.WebAuthnScreens.INIT)
+              v(I.default.Messages.ERROR_OCCURRED_TRY_AGAIN), x(h.WebAuthnScreens.INIT)
             })
           },
           children: [(0, a.jsxs)(r.ModalContent, {

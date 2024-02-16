@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   PictureInPictureWindow: function() {
-    return E
+    return p
   },
   default: function() {
-    return h
+    return E
   }
 }), n("222007");
 var a = n("37983"),
@@ -17,12 +17,12 @@ var a = n("37983"),
   d = n("49111"),
   c = n("578549"),
   f = n("678016");
-let S = {
+let h = {
   top: 80,
   bottom: 132,
   left: 80
 };
-class E extends r.PureComponent {
+class p extends r.PureComponent {
   componentDidMount() {
     this.setPosition(this.props.position)
   }
@@ -47,30 +47,30 @@ class E extends r.PureComponent {
       maxX: i,
       maxY: o,
       dockedRect: c
-    } = this.props, f = Math.round(n), S = Math.round(o - r - this._height), E = Math.round(a), h = Math.round(i - s - this._width), _ = (0, u.getPlatform)(), C = _ !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+    } = this.props, f = Math.round(n), h = Math.round(o - r - this._height), p = Math.round(a), E = Math.round(i - s - this._width), C = (0, u.getPlatform)(), m = C !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
     if (null != c) {
-      var p, m;
+      var S, g;
       return {
-        y: (null !== (p = null == c ? void 0 : c.y) && void 0 !== p ? p : 0) - C,
-        x: null !== (m = null == c ? void 0 : c.x) && void 0 !== m ? m : 0
+        y: (null !== (S = null == c ? void 0 : c.y) && void 0 !== S ? S : 0) - m,
+        x: null !== (g = null == c ? void 0 : c.x) && void 0 !== g ? g : 0
       }
     }
     switch (e) {
       case d.PictureInPicturePositions.TOP_LEFT:
         return {
-          y: f, x: E
+          y: f, x: p
         };
       case d.PictureInPicturePositions.BOTTOM_LEFT:
         return {
-          y: S, x: E
+          y: h, x: p
         };
       case d.PictureInPicturePositions.TOP_RIGHT:
         return {
-          y: f, x: h
+          y: f, x: E
         };
       default:
         return {
-          y: S, x: h
+          y: h, x: E
         }
     }
   }
@@ -194,11 +194,11 @@ class E extends r.PureComponent {
     }
   }
 }
-E.defaultProps = {
+p.defaultProps = {
   hidden: !1,
   roundCorners: !0
 };
-var h = r.memo(e => {
+var E = r.memo(e => {
   let {
     selectedPIPWindow: t,
     pipWindows: n,
@@ -207,8 +207,8 @@ var h = r.memo(e => {
     onWindowMove: l,
     dockedRect: u,
     pictureInPictureComponents: o,
-    appContext: h,
-    roundCorners: _
+    appContext: E,
+    roundCorners: C
   } = e;
   return (0, a.jsx)("div", {
     className: c.pictureInPicture,
@@ -221,10 +221,10 @@ var h = r.memo(e => {
             ...e.props
           }, "pipWindow-".concat(e.id))
         }),
-        C = e.length > 1 ? c.noBoxShadow : {};
-      return (0, a.jsx)(E, {
-        className: i(c.pictureInPictureWindowOverflow, f.elevationHigh, C),
-        appContext: h,
+        m = e.length > 1 ? c.noBoxShadow : {};
+      return (0, a.jsx)(p, {
+        className: i(c.pictureInPictureWindowOverflow, f.elevationHigh, m),
+        appContext: E,
         position: t.position,
         id: t.id,
         hidden: t.hidden,
@@ -232,11 +232,11 @@ var h = r.memo(e => {
         maxX: r,
         maxY: s,
         dockedRect: u,
-        edgeOffsetTop: S.top,
-        edgeOffsetBottom: S.bottom,
-        edgeOffsetLeft: S.left,
-        edgeOffsetRight: S.top,
-        roundCorners: _,
+        edgeOffsetTop: h.top,
+        edgeOffsetBottom: h.bottom,
+        edgeOffsetLeft: h.left,
+        edgeOffsetRight: h.top,
+        roundCorners: C,
         children: e
       })
     })()

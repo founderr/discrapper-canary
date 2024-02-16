@@ -16,16 +16,16 @@ var r = n("446674"),
 
 function c(e, t, c) {
   var f;
-  let S = (0, l.useGetStreamApplication)(e),
-    E = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-    h = null != e ? (0, i.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
-    _ = null !== (f = o.default.getVideoStats(h)) && void 0 !== f ? f : {},
-    C = {
-      media_session_id: o.default.getMediaSessionId(h),
-      rtc_connection_id: o.default.getRtcConnectionId(h),
-      stream_region: o.default.getRegion(h),
-      max_viewers: o.default.getMaxViewers(h),
-      ..._
+  let h = (0, l.useGetStreamApplication)(e),
+    p = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
+    E = null != e ? (0, i.encodeStreamKey)(e) : o.default.getActiveStreamKey(),
+    C = null !== (f = o.default.getVideoStats(E)) && void 0 !== f ? f : {},
+    m = {
+      media_session_id: o.default.getMediaSessionId(E),
+      rtc_connection_id: o.default.getRtcConnectionId(E),
+      stream_region: o.default.getRegion(E),
+      max_viewers: o.default.getMaxViewers(E),
+      ...C
     };
   return null == e ? null : (0, a.jsx)(s.MenuItem, {
     id: "report-stream-problem",
@@ -37,9 +37,9 @@ function c(e, t, c) {
         } = await n.el("485857").then(n.bind(n, "485857"));
         return n => (0, a.jsx)(t, {
           stream: e,
-          streamApplication: S,
-          isStreamer: E === (null == e ? void 0 : e.ownerId),
-          analyticsData: C,
+          streamApplication: h,
+          isStreamer: p === (null == e ? void 0 : e.ownerId),
+          analyticsData: m,
           ...n
         })
       })

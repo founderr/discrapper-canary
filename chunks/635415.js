@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("668688"),
   R = s("447645"),
   M = s("632892"),
-  v = s("52704"),
-  D = s("741781"),
+  D = s("52704"),
+  v = s("741781"),
   L = s("121370"),
   P = s("49111"),
   j = s("646718"),
@@ -142,7 +142,7 @@ function y(e) {
             onThemeColorsChange: _.setTryItOutThemeColors,
             showPremiumIcon: !1,
             preventDisabled: !0
-          }), (0, a.jsx)(v.default, {
+          }), (0, a.jsx)(D.default, {
             className: B.customizationSection,
             isTryItOutFlow: !0,
             showRemoveBannerButton: null != q,
@@ -159,7 +159,7 @@ function y(e) {
             isTryItOutFlow: !0,
             className: B.customizationSection,
             user: G
-          }, "decoration"), (0, a.jsx)(D.default, {
+          }, "decoration"), (0, a.jsx)(v.default, {
             className: B.customizationSection,
             isTryItOutFlow: !0,
             initialSelectedEffectId: $,

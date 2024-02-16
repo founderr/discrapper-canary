@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("861348"),
   R = s("350522"),
   M = s("305961"),
-  v = s("26092"),
-  D = s("697218"),
+  D = s("26092"),
+  v = s("697218"),
   L = s("145131"),
   P = s("476765"),
   j = s("599110"),
@@ -623,8 +623,8 @@ class z extends n.PureComponent {
 }
 
 function Q() {
-  let e = (0, c.useStateFromStores)([D.default], () => {
-      let e = D.default.getCurrentUser();
+  let e = (0, c.useStateFromStores)([v.default], () => {
+      let e = v.default.getCurrentUser();
       return o(null != e, "ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined"), e
     }),
     t = (0, c.useStateFromStoresObject)([R.default], () => ({
@@ -634,7 +634,7 @@ function Q() {
     })),
     s = (0, A.useIsSafetyHubEnabled)(),
     n = (0, c.useStateFromStores)([O.default], () => O.default.getFetchError()),
-    l = (0, c.useStateFromStores)([v.default], () => v.default.getSubsection()),
+    l = (0, c.useStateFromStores)([D.default], () => D.default.getSubsection()),
     i = (0, g.useIsEligibleForExplicitMediaRedaction)(),
     r = (0, N.useExplicitContentSettingOrDefault)(),
     d = (0, C.default)();

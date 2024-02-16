@@ -176,19 +176,19 @@ let F = e => {
     }, [n.id, G]);
     let K = n.guild_id === a.getGuildId(),
       z = null != m,
-      Z = !1,
-      J = "Custom Sticker Popout";
-    P ? t = G ? K ? y.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : G ? (K ? t = y.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = y.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : z ? (t = y.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : (t = y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+      Q = !1,
+      Z = "Custom Sticker Popout";
+    P ? t = G ? K ? y.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : G ? (K ? t = y.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = y.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Q = !0, Z = "Custom Sticker Popout (Upsell)") : z ? (t = y.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Q = !0, Z = "Custom Sticker Popout (Upsell)") : (t = y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
       openPremiumSettings: () => {
         B(a), T()
       }
-    }), J = "Custom Sticker Popout (Soft Upsell)");
-    let Q = !Z && !G && z && P;
+    }), Z = "Custom Sticker Popout (Soft Upsell)");
+    let J = !Q && !G && z && P;
     return (l.useEffect(() => {
       I()
     }, [O, m]), l.useEffect(() => {
       g.default.track(D.AnalyticEvents.OPEN_POPOUT, {
-        type: J,
+        type: Z,
         ...W
       })
     }, []), O) ? (0, s.jsxs)(_.MessagePopoutContent, {
@@ -207,7 +207,7 @@ let F = e => {
           children: [(0, s.jsx)(k, {
             description: t,
             sticker: n
-          }), Z && (0, s.jsx)(N.default, {
+          }), Q && (0, s.jsx)(N.default, {
             className: j.ctaButton,
             subscriptionTier: x.PremiumSubscriptionSKUs.TIER_2,
             size: o.Button.Sizes.SMALL,
@@ -216,7 +216,7 @@ let F = e => {
             onSubscribeModalClose: t => t ? e() : T(),
             postSuccessGuild: G || null == m ? void 0 : m,
             premiumModalAnalyticsLocation: Y
-          }), Q && (0, s.jsx)(o.Button, {
+          }), J && (0, s.jsx)(o.Button, {
             size: o.Button.Sizes.SMALL,
             className: j.ctaButton,
             fullWidth: !0,
@@ -237,7 +237,7 @@ let F = e => {
           }), (0, s.jsx)(f.GuildDetails, {
             expressionSourceGuild: l,
             hasJoinedExpressionSourceGuild: G,
-            isDisplayingJoinGuildButtonInPopout: Q
+            isDisplayingJoinGuildButtonInPopout: J
           }), !G && (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(o.Clickable, {
               onClick: () => {

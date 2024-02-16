@@ -79,8 +79,8 @@ function C() {
       var e, t;
       return (0, f.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    [M, v] = p("playground-overrideText", null),
-    [D, L] = p("playground-defaultText", I[0].value),
+    [M, D] = p("playground-overrideText", null),
+    [v, L] = p("playground-defaultText", I[0].value),
     P = n.useCallback(e => {
       let t = I.find(t => {
         let {
@@ -88,8 +88,8 @@ function C() {
         } = t;
         return s === e
       });
-      "" === e || null == e ? (L(I[0].value), v(null)) : null != t ? L(t.value) : (L("custom"), v(e))
-    }, [v, L]);
+      "" === e || null == e ? (L(I[0].value), D(null)) : null != t ? L(t.value) : (L("custom"), D(e))
+    }, [D, L]);
   return (0, a.jsx)("div", {
     className: N.fullscreen,
     style: "" !== o ? {
@@ -122,7 +122,7 @@ function C() {
             className: N.select,
             options: I,
             onChange: e => P(e),
-            value: D
+            value: v
           })
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)("div", {
@@ -186,7 +186,7 @@ function C() {
             }) : null]
           }, e), A.map(t => {
             var s;
-            let n = null !== (s = "custom" === D ? M : D) && void 0 !== s ? s : "";
+            let n = null !== (s = "custom" === v ? M : v) && void 0 !== s ? s : "";
             return (0, a.jsx)("div", {
               children: (0, a.jsxs)("div", {
                 title: "".concat(e, "px at ").concat(t),

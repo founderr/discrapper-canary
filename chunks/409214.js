@@ -32,7 +32,7 @@ function h(e) {
     colorPickerMiddle: p,
     colorPickerFooter: C,
     showEyeDropper: A
-  } = e, O = n.useRef(null), x = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), R = d.default.colors.BACKGROUND_ACCENT.css, M = (0, f.isColorDark)(l), v = (0, o.int2hex)(l), D = v === x ? R : v, L = (0, S.getColor)(M ? m.Color.WHITE_500 : m.Color.PRIMARY_530), P = (0, c.default)(p), j = (0, c.default)(C), [b, U] = n.useState((0, r.v4)());
+  } = e, O = n.useRef(null), x = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), R = d.default.colors.BACKGROUND_ACCENT.css, M = (0, f.isColorDark)(l), D = (0, o.int2hex)(l), v = D === x ? R : D, L = (0, S.getColor)(M ? m.Color.WHITE_500 : m.Color.PRIMARY_530), P = (0, c.default)(p), j = (0, c.default)(C), [b, U] = n.useState((0, r.v4)());
   return n.useEffect(() => {
     (P !== p || j !== C) && U((0, r.v4)())
   }, [C, p, j, P]), (0, a.jsx)(u.Popout, {
@@ -62,8 +62,8 @@ function h(e) {
           tabIndex: N ? -1 : 0,
           onClick: N ? m.NOOP : t,
           style: {
-            backgroundColor: v,
-            borderColor: D
+            backgroundColor: D,
+            borderColor: v
           },
           className: g.swatch,
           "aria-label": _.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,

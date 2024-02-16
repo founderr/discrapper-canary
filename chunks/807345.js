@@ -19,8 +19,8 @@ function a() {
 let s = a(),
   o = !1,
   u = null,
-  d = !1,
-  c = null,
+  c = !1,
+  d = null,
   f = [],
   m = null;
 
@@ -48,10 +48,10 @@ class T extends i.default.PersistedStore {
     return m
   }
   get lastFetchedActivePromotions() {
-    return c
+    return d
   }
   get isFetchingActiveOutboundPromotions() {
-    return d
+    return c
   }
   get hasFetchedConsumedInboundPromotionId() {
     return s.hasFetchedConsumedInboundPromotionId
@@ -79,13 +79,13 @@ var I = new T(r.default, {
       activeOutboundPromotions: t,
       consumedInboundPromotionId: n
     } = e;
-    f = t, c = Date.now(), d = !1, !s.hasFetchedConsumedInboundPromotionId && (s.hasFetchedConsumedInboundPromotionId = !0, s.consumedInboundPromotionId = n)
+    f = t, d = Date.now(), c = !1, !s.hasFetchedConsumedInboundPromotionId && (s.hasFetchedConsumedInboundPromotionId = !0, s.consumedInboundPromotionId = n)
   },
   ACTIVE_OUTBOUND_PROMOTIONS_FETCH: function() {
-    d = !0
+    c = !0
   },
   ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: function() {
-    f = [], d = !1
+    f = [], c = !1
   },
   ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: function(e) {
     let {
@@ -110,6 +110,6 @@ var I = new T(r.default, {
     null != e && (m = e, s.lastSeenOutboundPromotionStartDate = e)
   },
   LOGOUT: function() {
-    s = a(), d = !1, c = null, o = !1, u = null, f = []
+    s = a(), c = !1, d = null, o = !1, u = null, f = []
   }
 })

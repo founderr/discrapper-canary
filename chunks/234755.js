@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 });
 var a = n("37983");
@@ -15,24 +15,24 @@ var r = n("446674"),
   d = n("773336"),
   c = n("162236"),
   f = n("49111"),
-  S = n("782340");
+  h = n("782340");
 
-function E(e) {
+function p(e) {
   let {
     onClose: t
-  } = e, n = (0, i.useAppContext)(), E = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUserActiveStream()), h = (0, l.default)(E, n);
+  } = e, n = (0, i.useAppContext)(), p = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUserActiveStream()), E = (0, l.default)(p, n);
   return (0, a.jsxs)(s.Menu, {
     onSelect: f.NOOP_NULL,
     navId: "manage-broadcast",
     onClose: t,
-    "aria-label": S.default.Messages.SETTINGS,
-    children: [d.isPlatformEmbedded && null != E ? (0, a.jsx)(s.MenuItem, {
+    "aria-label": h.default.Messages.SETTINGS,
+    children: [d.isPlatformEmbedded && null != p ? (0, a.jsx)(s.MenuItem, {
       id: "stream-settings",
-      label: S.default.Messages.SCREENSHARE_STREAM_QUALITY,
-      children: h
+      label: h.default.Messages.SCREENSHARE_STREAM_QUALITY,
+      children: E
     }) : null, (0, a.jsx)(s.MenuItem, {
       id: "broadcast-settings",
-      label: S.default.Messages.BROADCAST_SETTINGS,
+      label: h.default.Messages.BROADCAST_SETTINGS,
       icon: o.default,
       action: () => (0, c.openBroadcastingPrivacySettingsModal)()
     })]

@@ -18,8 +18,8 @@ var r = n("414456"),
   s = n("516256"),
   o = n("202664"),
   u = n("476765"),
-  d = n("109036"),
-  c = n("527382"),
+  c = n("109036"),
+  d = n("527382"),
   f = n("1065");
 
 function m(e) {
@@ -31,7 +31,7 @@ function m(e) {
     icons: m,
     fileSize: _,
     onClose: E
-  } = e, T = (0, u.useUID)(), I = null != m ? m : c.DEFAULT_FILE_UPLOAD_ICONS;
+  } = e, T = (0, u.useUID)(), I = null != m ? m : d.DEFAULT_FILE_UPLOAD_ICONS;
   return r ? (0, i.jsx)(o.default, {
     transitionState: a,
     onClose: E,
@@ -44,7 +44,7 @@ function m(e) {
       className: l(f.uploadDropModal, f.error),
       children: (0, i.jsxs)("div", {
         className: f.inner,
-        children: [(0, i.jsx)(d.default, {
+        children: [(0, i.jsx)(c.default, {
           icons: I
         }), (0, i.jsx)("div", {
           id: T,

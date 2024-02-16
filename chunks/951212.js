@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   canEnableForcedColors: function() {
-    return m
+    return g
   },
   default: function() {
-    return T
+    return _
   }
 });
 var a = n("37983");
@@ -18,19 +18,19 @@ var r = n("77078"),
   d = n("206230"),
   c = n("49111");
 let f = window.matchMedia("(prefers-reduced-motion: reduce)"),
-  S = window.matchMedia("(prefers-contrast: more)"),
-  E = window.matchMedia("(prefers-contrast: less)"),
-  h = window.matchMedia("(prefers-color-scheme: dark)"),
-  _ = window.matchMedia("(prefers-color-scheme: light)"),
-  C = window.matchMedia("(forced-colors: active)"),
-  p = 5;
+  h = window.matchMedia("(prefers-contrast: more)"),
+  p = window.matchMedia("(prefers-contrast: less)"),
+  E = window.matchMedia("(prefers-color-scheme: dark)"),
+  C = window.matchMedia("(prefers-color-scheme: light)"),
+  m = window.matchMedia("(forced-colors: active)"),
+  S = 5;
 
-function m() {
+function g() {
   return "windows" === (0, u.getOS)()
 }
-var T = {
+var _ = {
   initBasic() {
-    f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), h.addListener(this.handleSystemColorPreferencesChanged), _.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), S.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
+    f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), E.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), h.addListener(this.handleSystemPrefersContrastChanged), p.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
   },
   init() {
     this.initBasic(), s.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
@@ -44,10 +44,10 @@ var T = {
     })
   },
   maybeShowKeyboardNavigationExplainerModal() {
-    p = Math.max(p - 1, 0), ! function() {
+    S = Math.max(S - 1, 0), ! function() {
       let e = i.default.getCurrentUser();
       return null == e || Date.now() - +e.createdAt < 864e5
-    }() && !d.default.keyboardNavigationExplainerModalSeen && 0 === p && (0, r.openModalLazy)(async () => {
+    }() && !d.default.keyboardNavigationExplainerModalSeen && 0 === S && (0, r.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("856584").then(n.bind(n, "856584"));
@@ -63,16 +63,16 @@ var T = {
   },
   handleSystemColorPreferencesChanged() {
     let e;
-    h.matches ? e = c.ThemeTypes.DARK : _.matches && (e = c.ThemeTypes.LIGHT);
-    let t = !u.isPlatformEmbedded || m(),
-      n = t && C.matches ? "active" : "none";
+    E.matches ? e = c.ThemeTypes.DARK : C.matches && (e = c.ThemeTypes.LIGHT);
+    let t = !u.isPlatformEmbedded || g(),
+      n = t && m.matches ? "active" : "none";
     s.default.wait(() => {
       o.systemColorPreferencesChanged(e, n)
     })
   },
   handleSystemPrefersContrastChanged() {
     let e = "no-preference";
-    S.matches ? e = "more" : E.matches && (e = "less"), s.default.wait(() => {
+    h.matches ? e = "more" : p.matches && (e = "less"), s.default.wait(() => {
       o.systemPrefersContrastChanged(e)
     })
   }

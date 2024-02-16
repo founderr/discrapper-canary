@@ -37,8 +37,8 @@ var a = n("77078"),
   L = n("314838"),
   P = n("151200"),
   D = n("692986"),
-  F = n("806179"),
-  b = n("816106"),
+  b = n("806179"),
+  F = n("816106"),
   x = n("623879"),
   w = n("49111"),
   j = n("782340"),
@@ -52,13 +52,13 @@ var a = n("77078"),
       showChannelCallItems: w = !1,
       showModalItems: V = !0,
       targetIsUser: H = !1,
-      context: W,
-      onSelect: k,
+      context: k,
+      onSelect: W,
       onHeightUpdate: Y
-    } = e, B = (0, F.default)(t.id, null), Z = (0, M.default)(t, W), K = (0, R.default)({
+    } = e, B = (0, b.default)(t.id, null), Z = (0, M.default)(t, k), K = (0, R.default)({
       user: t,
-      context: W
-    }), z = (0, m.default)(t), q = (0, x.default)(t.id), X = (0, y.default)(n.id, s), Q = (0, L.default)(t), J = (0, o.default)(null, t), $ = (0, b.default)(t.id), ee = (0, P.default)(t.id, n.id), et = (0, v.default)(t), en = (0, D.default)(t.id), ei = (0, U.default)(t.id, n.id), ea = (0, G.default)(t), er = (0, I.default)(n), es = (0, T.default)({
+      context: k
+    }), z = (0, m.default)(t), q = (0, x.default)(t.id), X = (0, y.default)(n.id, s), Q = (0, L.default)(t), J = (0, o.default)(null, t), $ = (0, F.default)(t.id), ee = (0, P.default)(t.id, n.id), et = (0, v.default)(t), en = (0, D.default)(t.id), ei = (0, U.default)(t.id, n.id), ea = (0, G.default)(t), er = (0, I.default)(n), es = (0, T.default)({
       id: t.id,
       label: j.default.Messages.COPY_ID_USER
     }), el = (0, T.default)({
@@ -75,7 +75,7 @@ var a = n("77078"),
       navId: "user-context",
       onClose: r.closeContextMenu,
       "aria-label": j.default.Messages.USER_ACTIONS_MENU_LABEL,
-      onSelect: k,
+      onSelect: W,
       children: [(0, i.jsx)(a.MenuGroup, {
         children: !eA && eu
       }), (0, i.jsx)(a.MenuGroup, {

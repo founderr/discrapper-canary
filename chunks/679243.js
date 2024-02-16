@@ -44,8 +44,8 @@ var l = n("37983"),
   w = n("512264"),
   F = n("328275"),
   k = n("437825"),
-  B = n("142303"),
-  V = n("200639"),
+  V = n("142303"),
+  B = n("200639"),
   H = n("97347"),
   G = n("216947"),
   W = n("267675"),
@@ -77,8 +77,8 @@ let eu = a.memo(e => {
     onMouseDown: v,
     onKeyDown: U,
     className: F,
-    style: B,
-    channel: V,
+    style: V,
+    channel: B,
     width: H,
     inPopout: G,
     onVideoResize: W,
@@ -125,10 +125,10 @@ let eu = a.memo(e => {
       muted: null !== (s = t.type === ea.ParticipantTypes.USER && (null === (l = t.voiceState) || void 0 === l ? void 0 : l.isVoiceMuted())) && void 0 !== s && s,
       deafened: null !== (i = t.type === ea.ParticipantTypes.USER && (null === (a = t.voiceState) || void 0 === a ? void 0 : a.isVoiceDeafened())) && void 0 !== i && i
     }
-  }(eE, d, V.getGuildId()), eA = d.type === ea.ParticipantTypes.STREAM && eS === eE, eM = (0, r.useStateFromStores)([j.default], () => null != eS ? j.default.getEffectForUserId(eS) : null), eR = (0, r.useStateFromStores)([D.default], () => D.default.getVoicePlatformForChannel(V.id, null != eS ? eS : "")), {
+  }(eE, d, B.getGuildId()), eA = d.type === ea.ParticipantTypes.STREAM && eS === eE, eM = (0, r.useStateFromStores)([j.default], () => null != eS ? j.default.getEffectForUserId(eS) : null), eR = (0, r.useStateFromStores)([D.default], () => D.default.getVoicePlatformForChannel(B.id, null != eS ? eS : "")), {
     enableHangStatus: ej
   } = I.HangStatusExperiment.useExperiment({
-    guildId: V.guild_id,
+    guildId: B.guild_id,
     location: "VoiceUsers"
   }), {
     showGameIcon: eL
@@ -159,8 +159,8 @@ let eu = a.memo(e => {
       null == f || f(d, e)
     }, [f, d]),
     ek = null,
-    eB = null,
-    eV = "";
+    eV = null,
+    eB = "";
   switch (d.type) {
     case ea.ParticipantTypes.STREAM:
       ek = (0, l.jsx)($.default, {
@@ -172,19 +172,19 @@ let eu = a.memo(e => {
         paused: ed,
         inPopout: G,
         focused: X
-      }), eB = (0, l.jsx)($.StreamTileIndicators, {
+      }), eV = (0, l.jsx)($.StreamTileIndicators, {
         participant: d,
         selected: z,
         width: H,
         focused: X,
         idle: eh
-      }), eV = er.default.Messages.CALL_TILE_A11Y_LABEL_STREAM.format({
+      }), eB = er.default.Messages.CALL_TILE_A11Y_LABEL_STREAM.format({
         streamerName: d.user.username
       });
       break;
     case ea.ParticipantTypes.USER:
       ek = (0, l.jsx)(ee.default, {
-        channel: V,
+        channel: B,
         inCall: Y,
         participant: d,
         fit: eu,
@@ -195,7 +195,7 @@ let eu = a.memo(e => {
         blocked: et,
         noVideoRender: Z,
         pulseSpeakingIndicator: ef
-      }), eV = er.default.Messages.CALL_TILE_A11Y_LABEL_USER.format({
+      }), eB = er.default.Messages.CALL_TILE_A11Y_LABEL_USER.format({
         username: d.user.username
       });
       break;
@@ -204,9 +204,9 @@ let eu = a.memo(e => {
         interactible: X,
         participant: d,
         selected: z,
-        channel: V,
+        channel: B,
         width: H
-      }), eV = er.default.Messages.CALL_TILE_A11Y_LABEL_ACTIVITY.format({
+      }), eB = er.default.Messages.CALL_TILE_A11Y_LABEL_ACTIVITY.format({
         activityName: null == eg ? void 0 : eg.name
       });
       break;
@@ -241,10 +241,10 @@ let eu = a.memo(e => {
             [eo.idle]: eh
           }),
           noBorder: K,
-          style: B,
+          style: V,
           participantUserId: eS,
           children: (0, l.jsxs)(h.ClickableContainer, {
-            "aria-label": eV,
+            "aria-label": eB,
             className: eo.tileChild,
             onDoubleClick: ew,
             onContextMenu: eF,
@@ -262,8 +262,8 @@ let eu = a.memo(e => {
               className: eo.voiceChannelEffectsContainer,
               children: (0, l.jsx)(C.default, {
                 userId: eS,
-                channelId: V.id,
-                guildId: V.getGuildId(),
+                channelId: B.id,
+                guildId: B.getGuildId(),
                 containerDimensions: {
                   width: null !== (o = null == eH ? void 0 : null === (n = eH.current) || void 0 === n ? void 0 : n.clientWidth) && void 0 !== o ? o : 0,
                   height: null !== (u = null == eH ? void 0 : null === (s = eH.current) || void 0 === s ? void 0 : s.clientHeight) && void 0 !== u ? u : 0
@@ -271,7 +271,7 @@ let eu = a.memo(e => {
               })
             }) : null, ek, K ? null : (0, l.jsx)("div", {
               className: eo.indicators,
-              children: eB
+              children: eV
             }), z ? (0, l.jsx)("div", {
               className: eo.selectedScreen,
               children: (0, l.jsx)(k.default, {
@@ -286,7 +286,7 @@ let eu = a.memo(e => {
               ...eN,
               idle: eh,
               platform: eR,
-              title: (0, Q.default)(V, d),
+              title: (0, Q.default)(B, d),
               blocked: et,
               localVideoDisabled: e_,
               videoToggleState: eI,
@@ -299,7 +299,7 @@ let eu = a.memo(e => {
               speaking: eT
             }) : null, d.type === ea.ParticipantTypes.USER && eC ? (0, l.jsx)(N.default, {
               userId: d.id,
-              channelId: V.id
+              channelId: B.id
             }) : null, Y && !K ? (0, l.jsx)("div", {
               className: i(eo.border, {
                 [eo.voiceChannelEffect]: !X && null != eM,
@@ -396,7 +396,7 @@ let ec = a.memo(e => {
           color: o.default.colors.WHITE
         }) : null
       } else if (n || t || a) {
-        let e = n ? V.default : H.default;
+        let e = n ? B.default : H.default;
         G = (0, l.jsx)(e, {
           foreground: i({
             [eo.localMuteStrikethrough]: a && !n
@@ -421,7 +421,7 @@ let ec = a.memo(e => {
       }
     })
   }
-  return _ && P.default.supports(ei.Features.VIDEO) || !C ? _ && C && I && !J && (W = (0, l.jsx)(B.default, {
+  return _ && P.default.supports(ei.Features.VIDEO) || !C ? _ && C && I && !J && (W = (0, l.jsx)(V.default, {
     foreground: eo.localMuteStrikethrough
   })) : W = (0, l.jsx)(k.default, {}), R === ea.ParticipantTypes.STREAM && !N && C && (z = (0, l.jsx)(h.Tooltip, {
     text: er.default.Messages.OPTIONS,
@@ -475,12 +475,12 @@ let ec = a.memo(e => {
       }),
       children: J || x === el.VideoToggleState.AUTO_PROBING ? p ? (0, l.jsx)("div", {
         className: eo.status,
-        children: (0, l.jsx)(B.default, {})
+        children: (0, l.jsx)(V.default, {})
       }) : (0, l.jsxs)("div", {
         className: i(eo.overlayTitle, eo.videoDisabledTitle),
         children: [(0, l.jsx)("div", {
           className: eo.status,
-          children: (0, l.jsx)(B.default, {})
+          children: (0, l.jsx)(V.default, {})
         }), (0, l.jsx)(h.Text, {
           variant: "text-sm/normal",
           className: eo.overlayTitleText,

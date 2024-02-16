@@ -77,7 +77,7 @@ function R() {
             let s = new Set(N);
             t ? s.add(e.id_hash) : s.delete(e.id_hash), I(s)
           }
-        }, e.id_hash)), (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsx)(v, {})]
+        }, e.id_hash)), (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsx)(D, {})]
       })]
     }), s.length > 0 ? (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H5,
@@ -166,14 +166,14 @@ function M(e) {
           text: e, icon: I.default
         }
     }
-  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), A = d ? null : (0, T.formatDate)(o.approx_last_used_time), R = [g, _].filter(p.isNotNullish), M = [m, A].filter(p.isNotNullish), v = (0, u.useRedesignIconContext)().enabled, D = v ? 24 : 32;
+  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), A = d ? null : (0, T.formatDate)(o.approx_last_used_time), R = [g, _].filter(p.isNotNullish), M = [m, A].filter(p.isNotNullish), D = (0, u.useRedesignIconContext)().enabled, v = D ? 24 : 32;
   return (0, a.jsxs)("div", {
     className: i(x.session, d ? x.currentSession : null),
     children: [(0, a.jsx)("div", {
       className: x.sessionIcon,
       children: (0, a.jsx)(C, {
-        width: D,
-        height: D
+        width: v,
+        height: v
       })
     }), (0, a.jsxs)("div", {
       className: x.sessionInfo,
@@ -221,7 +221,7 @@ function M(e) {
   }, o.id_hash)
 }
 
-function v() {
+function D() {
   return (0, a.jsxs)("div", {
     className: i(x.session, x.legacySession),
     children: [(0, a.jsx)("div", {

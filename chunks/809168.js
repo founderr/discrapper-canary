@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return p
   },
   LockedThreadNotice: function() {
-    return E
+    return m
   }
 });
 var a = n("37983"),
@@ -57,7 +57,7 @@ function p(e) {
   })
 }
 
-function E(e) {
+function m(e) {
   let {
     channel: t,
     narrow: n

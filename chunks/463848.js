@@ -90,7 +90,7 @@ var b = function(e) {
   }), w = (0, r.useStateFromStores)([I.default], () => null != j ? I.default.getGuild(j.guildId) : null), F = (0, r.useStateFromStores)([f.default], () => {
     if (null != t) return null != t.application_id ? f.default.getApplication(t.application_id) : f.default.getApplicationByName(t.name);
     return null
-  }), B = (0, r.useStateFromStores)([N.default], () => N.default.getCurrentUser()), G = (0, m.default)(), H = (0, g.default)(n), V = G && null != t && H;
+  }), G = (0, r.useStateFromStores)([N.default], () => N.default.getCurrentUser()), B = (0, m.default)(), H = (0, g.default)(n), V = B && null != t && H;
   return (i.useEffect(() => {
     (null == t ? void 0 : t.type) === R.ActivityTypes.HANG_STATUS && U && x.default.track(R.AnalyticEvents.VIEW_HANG_STATUS, {
       source: "UserProfilePopout",
@@ -115,7 +115,7 @@ var b = function(e) {
       }), V && (0, l.jsx)(p.default, {
         activity: t,
         user: n,
-        filename: "".concat(null == B ? void 0 : B.globalName, "-reacting-to-").concat(t.name, ".png").toLowerCase(),
+        filename: "".concat(null == G ? void 0 : G.globalName, "-reacting-to-").concat(t.name, ".png").toLowerCase(),
         altText: (0, E.getActivityAltText)(n, t),
         showReact: !0,
         showReply: !0,

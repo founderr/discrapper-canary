@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("132755"),
   R = s("599110"),
   M = s("701909"),
-  v = s("845579"),
-  D = s("186709"),
+  D = s("845579"),
+  v = s("186709"),
   L = s("225849"),
   P = s("397336"),
   j = s("49111"),
@@ -69,7 +69,7 @@ function W(e) {
 }
 
 function K() {
-  let e = v.MessageDisplayCompact.useSetting(),
+  let e = D.MessageDisplayCompact.useSetting(),
     [t] = n.useState(() => {
       let e = (0, m.createMessageRecord)({
         ...(0, _.default)({
@@ -251,20 +251,20 @@ function X() {
 }
 
 function J() {
-  let e = v.GifAutoPlay.useSetting(),
-    t = v.AnimateEmoji.useSetting(),
+  let e = D.GifAutoPlay.useSetting(),
+    t = D.AnimateEmoji.useSetting(),
     {
       useReducedMotion: s,
       rawPrefersReducedMotion: l,
       systemPrefersReducedMotion: r,
       gifAutoPlayOverrideReason: o,
       animateEmojiOverrideReason: c
-    } = (0, d.useStateFromStoresObject)([T.default, D.default], () => ({
+    } = (0, d.useStateFromStoresObject)([T.default, v.default], () => ({
       systemPrefersReducedMotion: T.default.systemPrefersReducedMotion,
       rawPrefersReducedMotion: T.default.rawPrefersReducedMotion,
       useReducedMotion: T.default.useReducedMotion,
-      gifAutoPlayOverrideReason: D.default.getAppliedOverrideReasonKey("gifAutoPlay"),
-      animateEmojiOverrideReason: D.default.getAppliedOverrideReasonKey("animateEmoji")
+      gifAutoPlayOverrideReason: v.default.getAppliedOverrideReasonKey("gifAutoPlay"),
+      animateEmojiOverrideReason: v.default.getAppliedOverrideReasonKey("animateEmoji")
     })),
     S = n.useRef(null);
   (0, L.default)(S, P.AccessibilityScrollPositions.REDUCED_MOTION);
@@ -303,23 +303,23 @@ function J() {
       className: F.marginBottom40,
       value: e,
       note: null != o ? (0, N.default)(o) : void 0,
-      onChange: v.GifAutoPlay.updateSetting,
+      onChange: D.GifAutoPlay.updateSetting,
       children: B.default.Messages.GIF_AUTO_PLAY_LABEL
     }), (0, a.jsx)(u.FormSwitch, {
       className: i(F.marginTop8, F.marginBottom20),
       value: t,
       note: null != c ? (0, N.default)(c) : void 0,
-      onChange: v.AnimateEmoji.updateSetting,
+      onChange: D.AnimateEmoji.updateSetting,
       children: B.default.Messages.ANIMATE_EMOJI
     })]
   })
 }
 
 function $() {
-  let e = v.AnimateStickers.useSetting(),
-    t = (0, d.useStateFromStores)([D.default], () => D.default.getAppliedOverrideReasonKey("animateStickers")),
+  let e = D.AnimateStickers.useSetting(),
+    t = (0, d.useStateFromStores)([v.default], () => v.default.getAppliedOverrideReasonKey("animateStickers")),
     s = n.useCallback(e => {
-      v.AnimateStickers.updateSetting(e.value)
+      D.AnimateStickers.updateSetting(e.value)
     }, []);
   return (0, a.jsxs)(u.FormItem, {
     className: F.marginBottom40,
@@ -348,7 +348,7 @@ function $() {
 
 function ee() {
   let e = (0, d.useStateFromStores)([T.default], () => T.default.isSubmitButtonEnabled),
-    t = v.UseLegacyChatInput.useSetting(),
+    t = D.UseLegacyChatInput.useSetting(),
     s = n.useRef(null);
   return (0, L.default)(s, P.AccessibilityScrollPositions.LEGACY_CHAT_INPUT), (0, a.jsxs)(u.FormItem, {
     ref: s,
@@ -370,7 +370,7 @@ function ee() {
           location: {
             section: j.AnalyticsSections.SETTINGS_ACCESSIBILITY
           }
-        }), v.UseLegacyChatInput.updateSetting(e)
+        }), D.UseLegacyChatInput.updateSetting(e)
       },
       children: B.default.Messages.LEGACY_CHAT_INPUT
     })]
@@ -378,7 +378,7 @@ function ee() {
 }
 
 function et() {
-  let e = v.EnableTTSCommand.useSetting(),
+  let e = D.EnableTTSCommand.useSetting(),
     t = (0, d.useStateFromStores)([p.default], () => p.default.speechRate),
     [s, l] = n.useState(!1);
   return S.supported ? (0, a.jsxs)(a.Fragment, {
@@ -389,7 +389,7 @@ function et() {
       }), (0, a.jsx)(u.FormSwitch, {
         className: F.marginTop20,
         value: e,
-        onChange: v.EnableTTSCommand.updateSetting,
+        onChange: D.EnableTTSCommand.updateSetting,
         children: B.default.Messages.ALLOW_TTS_COMMAND
       })]
     }), (0, a.jsxs)(u.FormItem, {

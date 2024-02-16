@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var i = n("414456"),
-  s = n.n(i),
-  r = n("77078"),
+  r = n.n(i),
+  s = n("77078"),
   l = n("38600"),
   o = n("888400"),
   u = n("782340"),
@@ -28,13 +28,13 @@ var i = n("414456"),
       timeFormatted: A
     }) : A;
     return (0, a.jsx)("span", {
-      className: s(n, S, {
+      className: r(n, S, {
         [c.timestamp]: !0,
         [c.timestampVisibleOnHover]: m,
         [c.timestampInline]: g,
         [c.alt]: f
       }),
-      children: (0, a.jsx)(r.Tooltip, {
+      children: (0, a.jsx)(s.Tooltip, {
         text: (0, o.dateFormat)(d, "LLLL"),
         "aria-label": I,
         tooltipClassName: c.timestampTooltip,

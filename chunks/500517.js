@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("677099"),
   R = s("102985"),
   M = s("941886"),
-  v = s("931138"),
-  D = s("476263"),
+  D = s("931138"),
+  v = s("476263"),
   L = s("945330"),
   P = s("772280"),
   j = s("486952"),
@@ -77,8 +77,8 @@ let Q = e => {
     className: K.integrationWrapper,
     children: [(0, a.jsxs)("div", {
       className: K.integration,
-      children: [(0, a.jsx)(D.default, {
-        size: D.default.Sizes.SMALL,
+      children: [(0, a.jsx)(v.default, {
+        size: v.default.Sizes.SMALL,
         guild: l.guild,
         className: K.guildIcon
       }), (0, a.jsxs)("div", {
@@ -116,7 +116,7 @@ function q(e) {
     [C, A] = n.useState(T.friendSync),
     [O, x] = n.useState(T.visibility),
     [R, M] = n.useState(T.metadataVisibility),
-    [D, P] = n.useState(T.showActivity),
+    [v, P] = n.useState(T.showActivity),
     [U, y] = n.useState(null),
     [Y, z] = n.useState(null),
     [q, Z] = n.useState(!1),
@@ -195,7 +195,7 @@ function q(e) {
         r = null;
       return s.type === w.PlatformTypes.TWITTER && i && (r = (0, a.jsx)(c.Tooltip, {
         text: W.default.Messages.CONNECTION_VERIFIED_ON_TWITTER,
-        children: e => (0, a.jsx)(v.default, {
+        children: e => (0, a.jsx)(D.default, {
           ...e,
           className: K.connectionAccountLabelVerified,
           color: d.default.unsafe_rawColors.TWITTER.css,
@@ -324,7 +324,7 @@ function q(e) {
     })), w.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
-      value: D,
+      value: v,
       onChange: ei,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",

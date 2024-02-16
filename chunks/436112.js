@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("168067"),
   R = s("820974"),
   M = s("385649"),
-  v = s("101125"),
-  D = s("282109"),
+  D = s("101125"),
+  v = s("282109"),
   L = s("368121"),
   P = s("599110"),
   j = s("34676"),
@@ -421,7 +421,7 @@ function X() {
     }, {
       autoTrackExposure: !1
     }).enabled,
-    t = (0, d.useStateFromStores)([D.default], () => D.default.mentionOnAllMessages);
+    t = (0, d.useStateFromStores)([v.default], () => v.default.mentionOnAllMessages);
   return e ? (0, a.jsx)(u.FormSwitch, {
     className: W.marginBottom20,
     value: t,
@@ -443,7 +443,7 @@ function J() {
         quietMode: !t
       }, {
         quietMode: t
-      }), v.default.getStatus() === H.StatusTypes.DND && !t && c.default.show({
+      }), D.default.getStatus() === H.StatusTypes.DND && !t && c.default.show({
         title: V.default.Messages.QUIET_MODE_WHILE_DND_UPSELL_TITLE,
         body: V.default.Messages.QUIET_MODE_WHILE_DND_UPSELL_BODY,
         cancelText: V.default.Messages.NO_THANKS,
@@ -475,7 +475,7 @@ function $() {
     }, {
       autoTrackExposure: !1
     }),
-    s = (0, d.useStateFromStores)([D.default], () => D.default.useNewNotifications),
+    s = (0, d.useStateFromStores)([v.default], () => v.default.useNewNotifications),
     [l, i] = n.useState(!1);
   return e && (s || t) ? (0, a.jsxs)(a.Fragment, {
     children: [s ? (0, a.jsx)(u.FormSwitch, {

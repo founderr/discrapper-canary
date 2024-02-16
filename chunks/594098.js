@@ -10,8 +10,8 @@ var i, Image, r = n("37983"),
   s = n.n(a),
   o = n("819855"),
   u = n("77078"),
-  d = n("841098"),
-  c = n("862013"),
+  c = n("841098"),
+  d = n("862013"),
   f = n("103603"),
   m = n("547630"),
   _ = n("193513"),
@@ -27,7 +27,7 @@ function S(e) {
     size: t,
     mediaLayoutType: n,
     alt: i
-  } = e, l = (0, d.default)();
+  } = e, l = (0, c.default)();
   return (0, r.jsx)("div", {
     className: C.imageErrorWrapper,
     style: function(e, t) {
@@ -60,7 +60,7 @@ function S(e) {
       src: l,
       placeholder: a,
       placeholderVersion: o,
-      alt: d,
+      alt: c,
       width: m,
       height: p,
       maxWidth: P = m,
@@ -92,13 +92,13 @@ function S(e) {
     null != l && i !== T.ImageReadyStates.ERROR ? e = v({
       src: l,
       size: F,
-      alt: d,
+      alt: c,
       className: n,
       mediaLayoutType: g
     }) : i !== T.ImageReadyStates.LOADING && (e = (0, r.jsx)(S, {
       size: F,
       mediaLayoutType: g,
-      alt: d
+      alt: c
     })), e = (0, r.jsx)(_.ImageLoadingOverlay, {
       readyState: i,
       aspectRatio: B,
@@ -144,8 +144,8 @@ function S(e) {
           className: C.clickableWrapper,
           tabIndex: null != D ? D : 0,
           onClick: b,
-          "aria-label": null != d ? d : I.default.Messages.IMAGE,
-          "aria-describedby": c.IMAGE_OPEN_DIALOG_DESCRIPTION,
+          "aria-label": null != c ? c : I.default.Messages.IMAGE,
+          "aria-describedby": d.IMAGE_OPEN_DIALOG_DESCRIPTION,
           innerRef: this._clickableRef,
           focusProps: {
             enabled: !1

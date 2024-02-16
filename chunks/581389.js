@@ -45,8 +45,8 @@ var l, a, s = n("37983"),
   w = n("375202"),
   F = n("16916"),
   k = n("534222"),
-  B = n("147257"),
-  V = n("109526"),
+  V = n("147257"),
+  B = n("109526"),
   H = n("550410"),
   G = n("124824"),
   W = n("213943"),
@@ -263,7 +263,7 @@ let ev = i.memo(function(e) {
             channel: a
           });
         case "EVENT":
-          return (0, s.jsx)(B.default, {
+          return (0, s.jsx)(V.default, {
             channelId: a.id,
             onClick: () => {
               p.default.disconnect(), null == l || l()
@@ -401,7 +401,7 @@ var eN = function(e) {
       section: eS.AnalyticsSections.VOICE_CONTROL_TRAY,
       children: [(0, s.jsx)("div", {
         className: eC.eventPromptsContainer,
-        children: (0, s.jsx)(V.default, {
+        children: (0, s.jsx)(B.default, {
           channelId: t.id
         })
       }), (0, s.jsxs)("div", {

@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return f
   },
   canWatchStream: function() {
-    return N
+    return p
   },
   useCanWatchStream: function() {
-    return p
+    return N
   },
   getStreamEligibleChannels: function() {
     return A
@@ -50,7 +50,7 @@ function f(e) {
   }
 }
 
-function N(e, t, n, r, i) {
+function p(e, t, n, r, i) {
   let l;
   if (null == e) return [!1, 2];
   let u = t.isInChannel(e.id),
@@ -62,8 +62,8 @@ function N(e, t, n, r, i) {
   return [d, l]
 }
 
-function p(e) {
-  return (0, u.useStateFromStoresArray)([_.default, s.default, d.default, a.default], () => N(e, _.default, s.default, d.default, a.default))
+function N(e) {
+  return (0, u.useStateFromStoresArray)([_.default, s.default, d.default, a.default], () => p(e, _.default, s.default, d.default, a.default))
 }
 
 function A(e, t, n) {

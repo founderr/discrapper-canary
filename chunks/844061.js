@@ -49,9 +49,9 @@ var s = n("37983"),
   W = n("548703"),
   K = n("859316"),
   z = n("427655"),
-  Z = n("161225"),
-  J = n("41163"),
-  Q = n("830220"),
+  Q = n("161225"),
+  Z = n("41163"),
+  J = n("830220"),
   X = n("924399"),
   q = n("954060"),
   $ = n("178889"),
@@ -112,7 +112,7 @@ function eg(e) {
     compact: n,
     channel: l
   } = e, a = (0, eN.useUsernameHook)(t.author, l.id, l.guild_id);
-  return (0, s.jsx)(Z.default, {
+  return (0, s.jsx)(Q.default, {
     message: t,
     compact: n,
     usernameHook: a
@@ -312,7 +312,7 @@ let eM = Object.freeze({
       message: t,
       compact: n
     } = e, l = t.getChannelId(), i = (0, a.useStateFromStores)([y.default], () => y.default.getChannel(l), [l]), r = null != i ? i.getGuildId() : null;
-    return (0, s.jsx)(J.UIKitGuildDiscoveryDisqualified, {
+    return (0, s.jsx)(Z.UIKitGuildDiscoveryDisqualified, {
       message: t,
       compact: n,
       onClick: () => {
@@ -320,9 +320,9 @@ let eM = Object.freeze({
       }
     })
   },
-  [ep.MessageTypes.GUILD_DISCOVERY_REQUALIFIED]: J.UIKitGuildDiscoveryRequalified,
-  [ep.MessageTypes.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: J.UIKitGuildDiscoveryGracePeriodInitialWarning,
-  [ep.MessageTypes.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: J.UIKitGuildDiscoveryGracePeriodFinalWarning,
+  [ep.MessageTypes.GUILD_DISCOVERY_REQUALIFIED]: Z.UIKitGuildDiscoveryRequalified,
+  [ep.MessageTypes.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: Z.UIKitGuildDiscoveryGracePeriodInitialWarning,
+  [ep.MessageTypes.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: Z.UIKitGuildDiscoveryGracePeriodFinalWarning,
   [ep.MessageTypes.THREAD_CREATED]: function(e) {
     let {
       message: t,
@@ -418,7 +418,7 @@ let eM = Object.freeze({
       compact: n,
       channel: l
     } = e, a = (0, eN.useUsernameHook)(t.author, l.id, l.guild_id);
-    return (0, s.jsx)(Q.default, {
+    return (0, s.jsx)(J.default, {
       message: t,
       compact: n,
       channel: l,

@@ -38,9 +38,9 @@ function x() {
     x = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(null != s ? s : e[0])),
     R = (0, l.useStateFromStores)([c.default, g.default], () => c.default.showNotice() || g.default.showNotice()),
     M = null != t ? t : x,
-    v = (0, l.useStateFromStores)([h.default], () => h.default.getCurrentUser()),
+    D = (0, l.useStateFromStores)([h.default], () => h.default.getCurrentUser()),
     {
-      subsection: D,
+      subsection: v,
       setSubsection: L
     } = (0, I.default)(),
     {
@@ -48,10 +48,10 @@ function x() {
       analyticsLocations: j
     } = (0, o.default)();
   return n.useEffect(() => {
-    null != v && (0, E.default)(v.id, v.getAvatarURL(null == M ? void 0 : M.id, 80), {
+    null != D && (0, E.default)(D.id, D.getAvatarURL(null == M ? void 0 : M.id, 80), {
       guildId: null == M ? void 0 : M.id
     })
-  }, [null == M ? void 0 : M.id, v]), (0, a.jsx)(P, {
+  }, [null == M ? void 0 : M.id, D]), (0, a.jsx)(P, {
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsx)(i.Heading, {
         variant: "heading-lg/semibold",
@@ -61,9 +61,9 @@ function x() {
         className: O.tabBar,
         type: "top",
         look: "brand",
-        selectedItem: D,
+        selectedItem: v,
         onItemSelect: function(e) {
-          if (D !== e) {
+          if (v !== e) {
             if (R) {
               N.ComponentDispatch.dispatch(p.ComponentActions.SHAKE_APP, {
                 duration: 300,
@@ -83,7 +83,7 @@ function x() {
           id: C.ProfileCustomizationSubsection.GUILD,
           children: A.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
         }, C.ProfileCustomizationSubsection.GUILD)]
-      }), D === C.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
+      }), v === C.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
         selectedGuild: M
       }) : (0, a.jsx)(T.default, {})]
     })

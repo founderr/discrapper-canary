@@ -1,25 +1,25 @@
 "use strict";
-i.r(t), i.d(t, {
+r.r(t), r.d(t, {
   trackAppUIViewed: function() {
     return u
   }
-}), i("222007");
-var r = i("748820"),
-  s = i("49671"),
-  n = i("599110"),
-  l = i("49111");
+}), r("222007");
+var s = r("748820"),
+  n = r("49671"),
+  i = r("599110"),
+  l = r("49111");
 let a = new class e {
   trackEvent(e, t) {
-    let i = Date.now();
+    let r = Date.now();
     requestIdleCallback(() => {
-      n.default.track(e, {
+      i.default.track(e, {
         ... function() {
-          var e, t, i;
-          let r = "--campaign-id=",
-            n = null !== (i = null === s.default || void 0 === s.default ? void 0 : null === (t = s.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== i ? i : [];
-          for (let e of n)
-            if (e.startsWith(r)) return {
-              referrer: e.substr(r.length)
+          var e, t, r;
+          let s = "--campaign-id=",
+            i = null !== (r = null === n.default || void 0 === n.default ? void 0 : null === (t = n.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== r ? r : [];
+          for (let e of i)
+            if (e.startsWith(s)) return {
+              referrer: e.substr(s.length)
             };
           return {}
         }(),
@@ -36,16 +36,16 @@ let a = new class e {
               css_uncompressed_byte_size: 0,
               css_transfer_byte_size: 0
             };
-          return null != window.performance && null != window.performance.getEntries && window.performance.getEntries().forEach(i => {
-            let r = null != i.encodedBodySize ? i.encodedBodySize : i.decodedBodySize,
-              s = null != i.decodedBodySize ? i.decodedBodySize : i.encodedBodySize,
-              n = i.transferSize;
-            null != s && null != r && (e = !0, t.total_compressed_byte_size += r, t.total_uncompressed_byte_size += s, null != n && (t.total_uncompressed_byte_size += n), "resource" === i.entryType && ("script" === i.initiatorType && null != i.name && null != i.name.match(/\.js/) && (t.js_compressed_byte_size += r, t.js_uncompressed_byte_size += s, null != n && (t.js_uncompressed_byte_size += n)), "link" === i.initiatorType && null != i.name && null != i.name.match(/\.css/) && (t.css_compressed_byte_size += r, t.css_uncompressed_byte_size += s, null != n && (t.css_uncompressed_byte_size += n))))
+          return null != window.performance && null != window.performance.getEntries && window.performance.getEntries().forEach(r => {
+            let s = null != r.encodedBodySize ? r.encodedBodySize : r.decodedBodySize,
+              n = null != r.decodedBodySize ? r.decodedBodySize : r.encodedBodySize,
+              i = r.transferSize;
+            null != n && null != s && (e = !0, t.total_compressed_byte_size += s, t.total_uncompressed_byte_size += n, null != i && (t.total_uncompressed_byte_size += i), "resource" === r.entryType && ("script" === r.initiatorType && null != r.name && null != r.name.match(/\.js/) && (t.js_compressed_byte_size += s, t.js_uncompressed_byte_size += n, null != i && (t.js_uncompressed_byte_size += i)), "link" === r.initiatorType && null != r.name && null != r.name.match(/\.css/) && (t.css_compressed_byte_size += s, t.css_uncompressed_byte_size += n, null != i && (t.css_uncompressed_byte_size += i))))
           }), e ? t : {}
         }(),
         load_id: this.loadId,
         screen_name: t,
-        duration_ms_since_app_opened: i - window.GLOBAL_ENV.HTML_TIMESTAMP
+        duration_ms_since_app_opened: r - window.GLOBAL_ENV.HTML_TIMESTAMP
       })
     })
   }
@@ -53,7 +53,7 @@ let a = new class e {
     !this.appUIViewed && (this.trackEvent(l.AnalyticEvents.APP_UI_VIEWED, e), this.appUIViewed = !0)
   }
   constructor() {
-    this.loadId = (0, r.v4)(), this.appUIViewed = !1
+    this.loadId = (0, s.v4)(), this.appUIViewed = !1
   }
 };
 

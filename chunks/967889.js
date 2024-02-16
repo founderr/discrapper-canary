@@ -14,23 +14,23 @@ var a = n("37983"),
   d = n("446674"),
   c = n("77078"),
   f = n("960460"),
-  S = n("489740"),
-  E = n("355025"),
-  h = n("51545"),
-  _ = n("155084"),
-  C = n("393414"),
-  p = n("90404"),
-  m = n("599110"),
-  T = n("286235"),
-  g = n("50885"),
-  A = n("49111"),
-  v = n("782340"),
+  h = n("489740"),
+  p = n("355025"),
+  E = n("51545"),
+  C = n("155084"),
+  m = n("393414"),
+  S = n("90404"),
+  g = n("599110"),
+  _ = n("286235"),
+  T = n("50885"),
+  v = n("49111"),
+  A = n("782340"),
   I = n("966585");
 
-function R() {
-  let [e, t] = r.useState(!1), n = (0, d.useStateFromStores)([S.default], () => {
+function M() {
+  let [e, t] = r.useState(!1), n = (0, d.useStateFromStores)([h.default], () => {
     var e;
-    return (0, E.probablyHasBuildOverride)() ? null === (e = S.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+    return (0, p.probablyHasBuildOverride)() ? null === (e = h.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
   });
   if (null == n) return null;
   let s = async () => {
@@ -45,38 +45,38 @@ function R() {
     onClick: s,
     submitting: e,
     className: I.clearOverrideButton,
-    children: v.default.Messages.CLEAR_BUILD_OVERRIDE
+    children: A.default.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
-let M = i.throttle(() => {
-  _.default.increment({
+let x = i.throttle(() => {
+  C.default.increment({
     name: o.MetricEvents.APP_CRASHED,
     tags: ["reason:".concat(l.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
   }, !0)
 }, 100, {
   trailing: !1
 });
-class O extends r.PureComponent {
+class R extends r.PureComponent {
   componentDidCatch(e, t) {
     this.triggerSoftCrash(e, t)
   }
   triggerSoftCrash(e, t) {
-    let n = (0, C.getHistory)().location;
+    let n = (0, m.getHistory)().location;
     this.setState({
       error: e,
       info: t
     });
-    let a = T.default.captureCrash(e, {
+    let a = _.default.captureCrash(e, {
       extra: t
     });
-    m.default.track(A.AnalyticEvents.APP_CRASHED, {
+    g.default.track(v.AnalyticEvents.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
       error_stack: e.stack,
       sentry_issue_id: a,
-      uses_client_mods: (0, h.usesClientMods)()
-    }), M(), g.default.cleanupDisplaySleep()
+      uses_client_mods: (0, E.usesClientMods)()
+    }), x(), T.default.cleanupDisplaySleep()
   }
   _handleSubmitReport() {
     location.reload(!0)
@@ -99,9 +99,9 @@ class O extends r.PureComponent {
     if (null !== this.state.error) {
       let e = (0, a.jsxs)("div", {
           children: [(0, a.jsx)("p", {
-            children: v.default.Messages.ERRORS_UNEXPECTED_CRASH
+            children: A.default.Messages.ERRORS_UNEXPECTED_CRASH
           }), (0, a.jsx)("p", {
-            children: v.default.Messages.ERRORS_ACTION_TO_TAKE
+            children: A.default.Messages.ERRORS_ACTION_TO_TAKE
           })]
         }),
         n = (0, a.jsxs)("div", {
@@ -109,11 +109,11 @@ class O extends r.PureComponent {
           children: [(0, a.jsx)(c.Button, {
             size: c.ButtonSizes.LARGE,
             onClick: this._handleSubmitReport,
-            children: v.default.Messages.ERRORS_RELOAD
-          }), (0, a.jsx)(R, {})]
+            children: A.default.Messages.ERRORS_RELOAD
+          }), (0, a.jsx)(M, {})]
         });
-      return (0, a.jsx)(p.default, {
-        title: v.default.Messages.UNSUPPORTED_BROWSER_TITLE,
+      return (0, a.jsx)(S.default, {
+        title: A.default.Messages.UNSUPPORTED_BROWSER_TITLE,
         note: null != t ? t() : e,
         action: n,
         className: I.errorPage
@@ -128,4 +128,4 @@ class O extends r.PureComponent {
     }, this.discordErrorsSet = !1
   }
 }
-var N = O
+var N = R

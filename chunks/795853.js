@@ -10,8 +10,8 @@ var a = n("803182"),
   s = n("446674"),
   i = n("813006"),
   r = n("337543"),
-  u = n("745633"),
-  o = n("775755"),
+  o = n("745633"),
+  u = n("775755"),
   d = n("966270"),
   c = n("49111"),
   f = n("782340");
@@ -29,12 +29,12 @@ function h(e) {
     } = h.params;
     return null != e ? r.default.getInvite(e) : null
   }), p = (null == C ? void 0 : C.guild) != null ? new i.default(null == C ? void 0 : C.guild) : null;
-  return n ? null != p && null != C ? (0, l.jsx)(o.default, {
+  return n ? null != p && null != C ? (0, l.jsx)(u.default, {
     guild: p,
     invite: C
   }) : (0, l.jsx)(d.default, {
     tooltip: f.default.Messages.HUB_DISCORD_HUBS,
     id: "guild-hub-button",
-    icon: u.default
+    icon: o.default
   }) : null
 }

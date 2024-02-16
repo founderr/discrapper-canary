@@ -30,14 +30,14 @@ var a = s("37983"),
   x = s("872306"),
   R = s("527274"),
   M = s("185153"),
-  v = s("49111"),
-  D = s("782340");
+  D = s("49111"),
+  v = s("782340");
 
 function L() {
-  I.default.track(v.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-    location_page: v.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
-    location_object: v.AnalyticsObjects.BADGE
-  }), (0, A.closeGuildIdentitySettings)(), u.default.open(v.UserSettingsSections.PREMIUM)
+  I.default.track(D.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+    location_page: D.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
+    location_object: D.AnalyticsObjects.BADGE
+  }), (0, A.closeGuildIdentitySettings)(), u.default.open(D.UserSettingsSections.PREMIUM)
 }
 
 function P(e) {
@@ -48,7 +48,7 @@ function P(e) {
     return s => (0, a.jsx)(t, {
       source: {
         ...e,
-        page: v.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS
+        page: D.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS
       },
       ...s
     })
@@ -91,9 +91,9 @@ function j(e) {
     }
   });
   if (n.useEffect(() => () => d.default.wait(A.resetAllPending), []), n.useEffect(() => {
-      null != G && E.default.trackWithMetadata(v.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+      null != G && E.default.trackWithMetadata(D.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "guild",
-        destination_pane: v.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
+        destination_pane: D.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
         source: G
       })
     }, [G]), I) return (0, a.jsx)(c.default, {});
@@ -111,15 +111,15 @@ function j(e) {
       pendingBio: B,
       pendingPronouns: y,
       pendingNickname: b,
-      activityName: D.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
+      activityName: v.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
       activityCharacter: f.FakeActivityCharacter.PHIBI,
       openPremiumSettings: L
     };
   return (0, a.jsxs)(s, {
     children: [(0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
-      children: D.default.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
-        helpCenterLink: p.default.getArticleURL(v.HelpdeskArticles.GUILD_PROFILES)
+      children: v.default.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
+        helpCenterLink: p.default.getArticleURL(D.HelpdeskArticles.GUILD_PROFILES)
       })
     }), null != t ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(M.default, {
@@ -128,7 +128,7 @@ function j(e) {
           null != e && (0, A.setCurrentGuild)(e)
         }
       }), (0, a.jsx)(_.default, {
-        previewTitle: D.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
+        previewTitle: v.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
           guildName: null == t ? void 0 : t.name
         }),
         profilePreview: (0, a.jsx)(m.default, {

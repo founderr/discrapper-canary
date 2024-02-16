@@ -52,9 +52,9 @@ var s = n("37983"),
   W = n("55282"),
   K = n("42203"),
   z = n("305961"),
-  Z = n("42887"),
-  J = n("945956"),
-  Q = n("162771"),
+  Q = n("42887"),
+  Z = n("945956"),
+  J = n("162771"),
   X = n("697218"),
   q = n("552712"),
   $ = n("167726"),
@@ -106,7 +106,7 @@ function em(e) {
 let eN = l.memo(function() {
   var e, t, a;
   let i = (0, o.useStateFromStores)([X.default], () => X.default.getCurrentUser()),
-    _ = (0, o.useStateFromStores)([Q.default], () => Q.default.getGuildId()),
+    _ = (0, o.useStateFromStores)([J.default], () => J.default.getGuildId()),
     g = (0, o.useStateFromStores)([ee.default], () => ee.default.getNotice()),
     eo = (0, o.useStateFromStores)([z.default], () => z.default.getGuild(_)),
     {
@@ -227,7 +227,7 @@ let eN = l.memo(function() {
           noticeType: eu.NoticeTypes.VOICE_DISABLED
         }), ef.default.Messages.NOTICE_CONNECTION_CONFLICT, (0, s.jsx)(es.PrimaryCTANoticeButton, {
           onClick: () => {
-            let e = J.default.getRemoteDisconnectVoiceChannelId();
+            let e = Z.default.getRemoteDisconnectVoiceChannelId();
             if (null != e) {
               let t = K.default.getChannel(e);
               null != t && I.default.selectVoiceChannel(e)
@@ -247,7 +247,7 @@ let eN = l.memo(function() {
           noticeType: eu.NoticeTypes.VOICE_CONNECTED_LAST_SESSION
         }), ef.default.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION, (0, s.jsx)(es.PrimaryCTANoticeButton, {
           onClick: () => {
-            let e = J.default.getLastSessionVoiceChannelId();
+            let e = Z.default.getLastSessionVoiceChannelId();
             if (null != e) {
               let t = K.default.getChannel(e);
               null != t && I.default.selectVoiceChannel(e)
@@ -319,7 +319,7 @@ let eN = l.memo(function() {
         })]
       });
     case eu.NoticeTypes.NO_INPUT_DETECTED:
-      if (!Z.default.supports(eE.Features.LOOPBACK)) return (0, s.jsx)(eT, {});
+      if (!Q.default.supports(eE.Features.LOOPBACK)) return (0, s.jsx)(eT, {});
       return (0, s.jsx)(eI, {});
     case eu.NoticeTypes.HARDWARE_MUTE:
       if (null == g.metadata) return null;

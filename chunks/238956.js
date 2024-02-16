@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useCanSeeRemixBadge: function() {
-    return s
+    return r
   },
   useIsRemixANitroPerk: function() {
-    return r
+    return s
   }
 }), n("685665");
 var a = n("862205");
@@ -44,7 +44,7 @@ let i = (0, a.createExperiment)({
   }]
 });
 
-function s() {
+function r() {
   return i.useExperiment({
     location: "canSeeRemixBadge"
   }, {
@@ -52,7 +52,7 @@ function s() {
   }).canSeeRemixBadge
 }
 
-function r() {
+function s() {
   return !!i.useExperiment({
     location: "isRemixANitroPerkHook"
   }, {

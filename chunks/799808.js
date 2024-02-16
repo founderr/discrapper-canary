@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var a = n("37983");
@@ -15,24 +15,24 @@ var r = n("77078"),
   d = n("42887"),
   c = n("697218"),
   f = n("773336"),
-  S = n("49111"),
-  E = n("686298");
+  h = n("49111"),
+  p = n("686298");
 
-function h(e, t, h) {
-  let _ = u.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? S.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
-  if ((0, l.default)(_), f.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
+function E(e, t, E) {
+  let C = u.default.getWindowOpen(h.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? h.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
+  if ((0, l.default)(C), f.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("451863").then(n.bind(n, "451863"));
     return n => (0, a.jsx)(t, {
       ...n,
       guildId: e,
-      analyticsLocation: h
+      analyticsLocation: E
     })
   });
   else {
-    var C;
-    let n = (0, i.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, E.ApplicationStreamResolutions.RESOLUTION_1080, E.ApplicationStreamFPS.FPS_30, c.default.getCurrentUser(), null === (C = o.default.getGuild(e)) || void 0 === C ? void 0 : C.premiumTier) ? {
+    var m;
+    let n = (0, i.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, p.ApplicationStreamResolutions.RESOLUTION_1080, p.ApplicationStreamFPS.FPS_30, c.default.getCurrentUser(), null === (m = o.default.getGuild(e)) || void 0 === m ? void 0 : m.premiumTier) ? {
       width: 1920,
       height: 1080
     } : {

@@ -47,7 +47,7 @@ function b(e) {
   } = e, {
     analyticsLocations: B,
     AnalyticsLocationProvider: k
-  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), w = G.channel_id, H = (0, a.useStateFromStores)([T.default], () => T.default.getChannel(w), [w]), V = null == H ? void 0 : H.guild_id, Y = null != H && (H.isGuildVoice() || H.isPrivate()), W = (0, a.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(w)), K = (null == W ? void 0 : W.applicationId) === b, [z, Z] = (0, E.default)([b, null !== (n = null == W ? void 0 : W.applicationId) && void 0 !== n ? n : ""]), J = (0, R.default)(null !== (i = null == z ? void 0 : z.maxParticipants) && void 0 !== i ? i : 0), [Q] = (0, a.useStateFromStoresArray)([h.default], () => Y ? h.default.getEmbeddedActivitiesForChannel(w).filter(e => e.applicationId === b) : [], [b, w, Y]), X = Array.from(null !== (A = null == Q ? void 0 : Q.userIds) && void 0 !== A ? A : []), q = (0, a.useStateFromStoresArray)([I.default], () => X.map(e => I.default.getUser(e)).filter(S.isNotNullish), [X]), $ = (0, L.default)({
+  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), w = G.channel_id, H = (0, a.useStateFromStores)([T.default], () => T.default.getChannel(w), [w]), V = null == H ? void 0 : H.guild_id, Y = null != H && (H.isGuildVoice() || H.isPrivate()), W = (0, a.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(w)), K = (null == W ? void 0 : W.applicationId) === b, [z, Q] = (0, E.default)([b, null !== (n = null == W ? void 0 : W.applicationId) && void 0 !== n ? n : ""]), Z = (0, R.default)(null !== (i = null == z ? void 0 : z.maxParticipants) && void 0 !== i ? i : 0), [J] = (0, a.useStateFromStoresArray)([h.default], () => Y ? h.default.getEmbeddedActivitiesForChannel(w).filter(e => e.applicationId === b) : [], [b, w, Y]), X = Array.from(null !== (A = null == J ? void 0 : J.userIds) && void 0 !== A ? A : []), q = (0, a.useStateFromStoresArray)([I.default], () => X.map(e => I.default.getUser(e)).filter(S.isNotNullish), [X]), $ = (0, L.default)({
     applicationId: b,
     size: j
   }), ee = f.default.getWindowOpen(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT), et = q.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, en = async () => {
@@ -62,9 +62,9 @@ function b(e) {
         activityConfigs: e,
         applications: t
       });
-      if (null != Q && q.length > 0) await (0, M.default)({
-        applicationId: Q.applicationId,
-        currentEmbeddedApplication: Z,
+      if (null != J && q.length > 0) await (0, M.default)({
+        applicationId: J.applicationId,
+        currentEmbeddedApplication: Q,
         activityChannelId: w,
         embeddedActivitiesManager: v.default,
         locationObject: F.location,
@@ -74,7 +74,7 @@ function b(e) {
         let e = H.isPrivate() && !_.default.isCallActive(w),
           t = () => (0, O.default)({
             activityItem: n,
-            currentActivity: Z,
+            currentActivity: Q,
             channelId: w,
             guildId: V,
             embeddedActivitiesManager: v.default,
@@ -139,7 +139,7 @@ function b(e) {
               className: U.peopleIcon
             }), (0, s.jsx)(r.Text, {
               variant: "text-xs/semibold",
-              children: J
+              children: Z
             })]
           }), (0, s.jsx)("div", {
             className: U.buttonWrapper,

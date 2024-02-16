@@ -78,11 +78,11 @@ function R() {
     })),
     M = (0, o.useStateFromStores)([f.default], () => f.default.getOverlayKeybind()),
     {
-      showKeybindIndicators: v
+      showKeybindIndicators: D
     } = T.default.useExperiment({
       location: "overlay_user_settings"
     }),
-    D = (0, E.isHookModuleTooOld)();
+    v = (0, E.isHookModuleTooOld)();
   return ! function() {
     let e = O(A);
     !r.isEqual(e, A) && (h.default.track(I.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, e), A = e)
@@ -98,8 +98,8 @@ function R() {
           children: (0, a.jsx)(d.FormSwitch, {
             className: C.enableSwitch,
             value: e,
-            disabled: D,
-            note: D ? p.default.Messages.OVERLAY_DISABLED_OLD_CLIENT : null,
+            disabled: v,
+            note: v ? p.default.Messages.OVERLAY_DISABLED_OLD_CLIENT : null,
             hideBorder: !0,
             onChange: function(e) {
               c.default.setEnabled(e), h.default.track(I.AnalyticEvents.OVERLAY_TOGGLED, {
@@ -180,7 +180,7 @@ function R() {
           },
           value: n
         })
-      }), v && (0, a.jsx)(x, {
+      }), D && (0, a.jsx)(x, {
         children: (0, a.jsx)(d.FormSwitch, {
           value: R,
           onChange: e => c.default.setShowKeybindIndicators(e),

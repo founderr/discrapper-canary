@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("397336"),
   R = s("782340"),
   M = s("836937"),
-  v = s("824905"),
-  D = s("890957");
+  D = s("824905"),
+  v = s("890957");
 
 function L() {
   let e = (0, r.useStateFromStores)([f.default], () => f.default.getHardwareH264()),
@@ -127,7 +127,7 @@ function L() {
       disabled: !e,
       children: [!e && (0, a.jsx)(T.default, {
         look: T.InfoBoxLooks.WARNING,
-        className: v.formItem,
+        className: D.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
           onClick: () => u.default.open(A.UserSettingsSections.VOICE, null, {
             scrollPosition: x.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
@@ -135,12 +135,12 @@ function L() {
         })
       }), j === N.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
         look: T.InfoBoxLooks.WARNING,
-        className: v.formItem,
+        className: D.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
       }) : null, (0, a.jsx)(o.FormSwitch, {
         hideBorder: !0,
         disabled: !e,
-        className: v.formItem,
+        className: D.formItem,
         value: t,
         note: R.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
         onChange: e => I.updateClipsEnabled({
@@ -149,17 +149,17 @@ function L() {
         }),
         children: R.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
       }), e && (0, a.jsx)(T.default, {
-        className: v.formItem,
+        className: D.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
       })]
     }), U && (0, _.isWindows)() && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.FormDivider, {}), (0, a.jsx)(o.FormSection, {
-        className: D.marginTop20,
+        className: v.marginTop20,
         disabled: !e,
         children: (0, a.jsx)(o.FormSwitch, {
           hideBorder: !0,
           disabled: !e,
-          className: v.formItem,
+          className: D.formItem,
           value: l,
           note: R.default.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
           onChange: e => I.updateDecoupledClipsEnabled({
@@ -171,10 +171,10 @@ function L() {
       })]
     }), B && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.FormDivider, {}), (0, a.jsx)(o.FormSection, {
-        className: D.marginTop20,
+        className: v.marginTop20,
         children: (0, a.jsx)(o.FormSwitch, {
           hideBorder: !0,
-          className: v.formItem,
+          className: D.formItem,
           value: s,
           note: R.default.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
           onChange: e => I.updateRemindersEnabled(e),
@@ -182,16 +182,16 @@ function L() {
         })
       })]
     }), (0, a.jsx)(o.FormDivider, {}), (0, a.jsxs)(o.FormSection, {
-      className: D.marginTop20,
+      className: v.marginTop20,
       children: [(0, a.jsx)(p.SelectItem, {
-        className: v.formItem,
+        className: D.formItem,
         select: I.updateClipsLength,
         title: R.default.Messages.CLIPS_SETTINGS_LENGTH,
         note: R.default.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: L,
         options: F
       }), (0, a.jsx)(p.SelectItem, {
-        className: v.formItem,
+        className: D.formItem,
         select: e => I.updateClipsQuality({
           resolution: e,
           frameRate: P.frameRate
@@ -201,7 +201,7 @@ function L() {
         value: P.resolution,
         options: G
       }), (0, a.jsx)(p.SelectItem, {
-        className: v.formItem,
+        className: D.formItem,
         select: e => I.updateClipsQuality({
           resolution: P.resolution,
           frameRate: e
@@ -211,7 +211,7 @@ function L() {
         value: P.frameRate,
         options: k
       }), (0, a.jsx)(p.InputItem, {
-        className: v.formItem,
+        className: D.formItem,
         title: R.default.Messages.CLIPS_SETTINGS_KEYBIND,
         note: R.default.Messages.CLIPS_SETTINGS_KEYBIND_HELP,
         children: (0, a.jsx)("div", {

@@ -4,35 +4,35 @@ n.r(t), n.d(t, {
     return p
   }
 }), n("222007");
-var a = n("446674"),
-  r = n("913144");
-let s = !1,
-  i = new Map,
+var s = n("446674"),
+  i = n("913144");
+let r = !1,
+  a = new Map,
   l = 0,
   u = new Set,
   o = new Set,
   d = new Set,
   c = new Set,
-  f = new Map;
+  E = new Map;
 
 function S(e, t) {
-  i = new Map(i);
-  let n = i.get(e);
-  null != n && i.set(e, {
+  a = new Map(a);
+  let n = a.get(e);
+  null != n && a.set(e, {
     ...n,
     ...t
   })
 }
 
-function E(e, t) {
-  let n = new Map(f);
-  n.set(e, t), f = n;
-  let a = i.get(e),
-    r = null == a ? void 0 : a.userStatus;
-  if (null != r && null == r.claimedAt) {
+function f(e, t) {
+  let n = new Map(E);
+  n.set(e, t), E = n;
+  let s = a.get(e),
+    i = null == s ? void 0 : s.userStatus;
+  if (null != i && null == i.claimedAt) {
     let n = {
       userStatus: {
-        ...r,
+        ...i,
         claimedAt: t.claimedAt
       }
     };
@@ -40,21 +40,21 @@ function E(e, t) {
   }
 }
 
-function h(e) {
+function _(e) {
   let t = new Set(u);
   t.delete(e), u = t
 }
 
-function _(e) {
+function T(e) {
   let t = new Set(c);
   t.delete(e), c = t
 }
-class C extends a.default.Store {
+class C extends s.default.Store {
   get quests() {
-    return i
+    return a
   }
   get isFetchingCurrentQuests() {
-    return s
+    return r
   }
   get lastFetchedCurrentQuests() {
     return l
@@ -72,25 +72,25 @@ class C extends a.default.Store {
     return c.has(e)
   }
   getRewardCode(e) {
-    return f.get(e)
+    return E.get(e)
   }
 }
 C.displayName = "QuestsStore";
-var p = new C(r.default, {
+var p = new C(i.default, {
   LOGOUT: function() {
-    s = !1, i = new Map, l = 0, u = new Set
+    r = !1, a = new Map, l = 0, u = new Set
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
-    l = Date.now(), s = !0
+    l = Date.now(), r = !0
   },
   QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function(e) {
     let {
       quests: t
     } = e;
-    for (let e of (s = !1, i = new Map, t)) i.set(e.id, e)
+    for (let e of (r = !1, a = new Map, t)) a.set(e.id, e)
   },
   QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function() {
-    l = 0, s = !1
+    l = 0, r = !1
   },
   QUESTS_SEND_HEARTBEAT_SUCCESS: function(e) {
     let {
@@ -113,13 +113,13 @@ var p = new C(r.default, {
     } = e;
     S(t.questId, {
       userStatus: t
-    }), h(t.questId)
+    }), _(t.questId)
   },
   QUESTS_ENROLL_FAILURE: function(e) {
     let {
       questId: t
     } = e;
-    h(t)
+    _(t)
   },
   QUESTS_FETCH_REWARD_CODE_BEGIN: function(e) {
     let {
@@ -131,8 +131,8 @@ var p = new C(r.default, {
     let {
       questId: t,
       rewardCode: n
-    } = e, a = new Set(d);
-    a.delete(t), d = a, E(t, n)
+    } = e, s = new Set(d);
+    s.delete(t), d = s, f(t, n)
   },
   QUESTS_FETCH_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -150,8 +150,8 @@ var p = new C(r.default, {
     let {
       questId: t,
       rewardCode: n
-    } = e, a = new Set(o);
-    a.delete(t), o = a, E(t, n)
+    } = e, s = new Set(o);
+    s.delete(t), o = s, f(t, n)
   },
   QUESTS_CLAIM_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -171,12 +171,12 @@ var p = new C(r.default, {
     } = e;
     S(t.questId, {
       userStatus: t
-    }), _(t.questId)
+    }), T(t.questId)
   },
   QUESTS_DISMISS_CONTENT_FAILURE: function(e) {
     let {
       questId: t
     } = e;
-    _(t)
+    T(t)
   }
 })

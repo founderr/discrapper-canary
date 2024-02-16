@@ -106,9 +106,9 @@ var y = e => {
     altText: p,
     reactor: g,
     analyticsParams: y
-  } = e, [x, O] = i.useState(!1), R = (0, u.default)(), [M, L] = i.useState(!1), [P, b] = i.useState(!1), [j, U] = i.useState(), [D, k] = i.useState(""), w = i.useRef(null), F = i.useRef(null), B = (0, T.default)(n);
+  } = e, [x, O] = i.useState(!1), R = (0, u.default)(), [M, L] = i.useState(!1), [P, b] = i.useState(!1), [j, U] = i.useState(), [D, k] = i.useState(""), w = i.useRef(null), F = i.useRef(null), G = (0, T.default)(n);
 
-  function G(e) {
+  function B(e) {
     var t, n;
     null != e.target && (!(null == w ? void 0 : null === (t = w.current) || void 0 === t ? void 0 : t.contains(null == e ? void 0 : e.target)) && L(!1), !(null == F ? void 0 : null === (n = F.current) || void 0 === n ? void 0 : n.contains(null == e ? void 0 : e.target)) && b(!1))
   }
@@ -124,10 +124,10 @@ var y = e => {
     let e = e => {
       "Escape" === e.key && (b(!1), L(!1))
     };
-    return document.addEventListener("keydown", e), document.addEventListener("mousedown", G), () => {
-      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", G)
+    return document.addEventListener("keydown", e), document.addEventListener("mousedown", B), () => {
+      document.removeEventListener("keydown", e), document.removeEventListener("mousedown", B)
     }
-  }, []), B) ? (0, l.jsxs)(l.Fragment, {
+  }, []), G) ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: _.reactions,
       children: [a && (0, l.jsx)(o.Popout, {

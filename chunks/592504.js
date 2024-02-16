@@ -53,9 +53,9 @@ let g = e => {
     } = g(A), M = async () => {
       let e = await O(h.id);
       e && N()
-    }, v = o.role_benefits.benefits.filter(e => e.ref_type === f.GuildRoleSubscriptionBenefitTypes.CHANNEL), D = o.role_benefits.benefits.filter(e => e.ref_type === f.GuildRoleSubscriptionBenefitTypes.INTANGIBLE), L = i(h.currentPeriodEnd).format("MMMM Do, YYYY"), P = m.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
-      numChannels: v.length,
-      numAdditionalBenefits: D.length,
+    }, D = o.role_benefits.benefits.filter(e => e.ref_type === f.GuildRoleSubscriptionBenefitTypes.CHANNEL), v = o.role_benefits.benefits.filter(e => e.ref_type === f.GuildRoleSubscriptionBenefitTypes.INTANGIBLE), L = i(h.currentPeriodEnd).format("MMMM Do, YYYY"), P = m.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
+      numChannels: D.length,
+      numAdditionalBenefits: v.length,
       subscriptionEndDate: L
     });
     return (0, a.jsxs)(r.ModalRoot, {

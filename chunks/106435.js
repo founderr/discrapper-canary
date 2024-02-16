@@ -16,8 +16,8 @@ function o(e) {
     guildId: n,
     size: o,
     showPending: u = !1,
-    showTryItOut: d = !1,
-    animateOnHover: c = !1,
+    showTryItOut: c = !1,
+    animateOnHover: d = !1,
     avatarDecorationOverride: f,
     avatarOverride: m
   } = e, {
@@ -29,7 +29,7 @@ function o(e) {
     guildId: n,
     size: (0, r.getAvatarSize)(o),
     showPending: u,
-    animateOnHover: c,
+    animateOnHover: d,
     avatarOverride: m
   }), {
     avatarPlaceholderSrc: I,
@@ -39,9 +39,9 @@ function o(e) {
     user: t,
     size: (0, l.getDecorationSizeForAvatarSize)(o),
     showPending: u,
-    animateOnHover: c,
+    animateOnHover: d,
     avatarDecorationOverride: f,
-    showTryItOut: d
+    showTryItOut: c
   }), P = i.useCallback(() => {
     T.onMouseEnter(), p.onMouseEnter()
   }, [T, p]), S = i.useCallback(() => {

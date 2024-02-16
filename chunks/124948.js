@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return p
   }
 });
 var r = n("917351"),
@@ -62,7 +62,7 @@ class f extends l.default.Store {
   }
 }
 f.displayName = "GuildMemberRequesterStore";
-var N = new f(u.default, {
+var p = new f(u.default, {
   CONNECTION_CLOSED: E,
   CONNECTION_OPEN: E,
   CONNECTION_RESUMED: function() {

@@ -48,8 +48,8 @@ function h(e) {
     null != s && t()
   }
   i.useEffect(() => () => d.default.wait(() => u.resetError()), []);
-  let v = null != a && a === N,
-    D = v ? function() {
+  let D = null != a && a === N,
+    v = D ? function() {
       u.reset(), I(""), O(null)
     } : M;
   return (0, l.jsxs)(o.ModalRoot, {
@@ -77,7 +77,7 @@ function h(e) {
         children: n
       }), (0, l.jsx)("form", {
         onSubmit: e => {
-          e.preventDefault(), D()
+          e.preventDefault(), v()
         },
         children: (0, l.jsxs)(E.default, {
           direction: E.default.Direction.VERTICAL,
@@ -129,8 +129,8 @@ function h(e) {
             submitting: h,
             type: "submit",
             disabled: !R || 0 === N.length || "localhost" === A && 0 === p.length,
-            color: v ? o.Button.Colors.RED : o.Button.Colors.GREEN,
-            children: v ? f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+            color: D ? o.Button.Colors.RED : o.Button.Colors.GREEN,
+            children: D ? f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]
         })
       })]

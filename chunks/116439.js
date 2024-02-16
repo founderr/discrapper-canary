@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return f
   },
   default: function() {
-    return S
+    return h
   }
 });
 var a = n("37983");
@@ -27,24 +27,24 @@ function f(e) {
       onCameraUnavailable: d,
       hasPermission: c,
       children: f,
-      channelLimitReached: S = !1,
-      join: E
+      channelLimitReached: h = !1,
+      join: p
     } = e,
-    h = (0, i.useAppContext)(),
-    _ = r ? () => d() : () => s(!e.enabled, h);
+    E = (0, i.useAppContext)(),
+    C = r ? () => d() : () => s(!e.enabled, E);
   return (0, a.jsx)(a.Fragment, {
     children: f({
-      onClick: _,
+      onClick: C,
       active: n,
-      disabled: !n && (!c || S),
-      iconComponent: E || n ? u.default : o.default,
+      disabled: !n && (!c || h),
+      iconComponent: p || n ? u.default : o.default,
       label: t,
       unavailable: r
     })
   })
 }
 
-function S(e) {
+function h(e) {
   let {
     enabled: t,
     join: n,
@@ -53,13 +53,13 @@ function S(e) {
     onCameraUnavailable: l,
     cameraUnavailable: u,
     hasPermission: o,
-    className: S,
-    channelLimitReached: E,
-    channelLimit: h,
-    centerButton: _ = !1,
-    onPopoutClick: C,
-    ...p
-  } = e, m = _ ? d.CenterControlButton : d.default;
+    className: h,
+    channelLimitReached: p,
+    channelLimit: E,
+    centerButton: C = !1,
+    onPopoutClick: m,
+    ...S
+  } = e, g = C ? d.CenterControlButton : d.default;
   return (0, a.jsx)(f, {
     enabled: t,
     join: n,
@@ -68,21 +68,21 @@ function S(e) {
     onCameraUnavailable: l,
     cameraUnavailable: u,
     hasPermission: o,
-    channelLimitReached: E,
-    channelLimit: h,
+    channelLimitReached: p,
+    channelLimit: E,
     children: e => {
       let {
         unavailable: n,
         ...r
       } = e;
-      return (0, a.jsx)(m, {
+      return (0, a.jsx)(g, {
         ...r,
-        ...p,
+        ...S,
         isActive: t,
-        className: s(S, {
+        className: s(h, {
           [c.fauxDisabled]: n
         }),
-        onPopoutClick: C
+        onPopoutClick: m
       })
     }
   })

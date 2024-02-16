@@ -65,7 +65,7 @@ function R(e) {
         labelType: P
       })
     })
-  }), [l.application.name, P]), B = i.useMemo(() => (0, g.default)(l.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
+  }), [l.application.name, P]), V = i.useMemo(() => (0, g.default)(l.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
     className: N.iconOuterContainer,
     children: (0, s.jsx)("div", {
       className: o(N.iconInnerContainer, N.nitroIconContainer),
@@ -85,7 +85,7 @@ function R(e) {
         className: N.lock
       })
     })
-  }), [l.activity, F, j]), V = i.useMemo(() => {
+  }), [l.activity, F, j]), B = i.useMemo(() => {
     switch (O) {
       case C.ActivityAction.JOIN:
         return (0, s.jsx)("div", {
@@ -152,7 +152,7 @@ function R(e) {
               applicationName: l.application.name,
               imageClassName: N.activitySuggestionImage,
               imageNotFoundClassName: N.brokenImageIconWrapper
-            }), k, B, V]
+            }), k, V, B]
           })
         })
       }

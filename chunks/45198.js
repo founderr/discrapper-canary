@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var l = n("37983");
+var s = n("37983");
 n("884691");
-var a = n("414456"),
-  s = n.n(a),
+var l = n("414456"),
+  a = n.n(l),
   i = n("77078"),
   r = n("782340"),
   o = n("741162"),
@@ -15,21 +15,21 @@ var a = n("414456"),
     let {
       className: t,
       color: n = "header-primary",
-      textOpacity: a = .9,
+      textOpacity: l = .9,
       bgOpacity: u = .2
     } = e;
-    return (0, l.jsxs)(i.Text, {
+    return (0, s.jsxs)(i.Text, {
       variant: "text-xxs/medium",
       color: n,
-      className: s(o.sponsoredTag, t),
-      children: [(0, l.jsx)("span", {
+      className: a(o.sponsoredTag, t),
+      children: [(0, s.jsx)("span", {
         className: o.sponsoredTagBackground,
         style: {
           opacity: u
         }
-      }), (0, l.jsx)("span", {
+      }), (0, s.jsx)("span", {
         style: {
-          opacity: a
+          opacity: l
         },
         children: r.default.Messages.QUESTS_SPONSORED
       })]

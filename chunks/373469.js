@@ -16,8 +16,8 @@ var a = n("446674"),
   S = n("305961"),
   T = n("42887"),
   f = n("957255"),
-  N = n("945956"),
-  p = n("568307"),
+  p = n("945956"),
+  N = n("568307"),
   A = n("18494"),
   R = n("800762"),
   C = n("49111"),
@@ -73,7 +73,7 @@ function U(e) {
 }
 class M extends a.default.Store {
   initialize() {
-    this.syncWith([f.default], () => !0), this.waitFor(p.default, f.default)
+    this.syncWith([f.default], () => !0), this.waitFor(N.default, f.default)
   }
   isSelfStreamHidden(e) {
     var t;
@@ -193,7 +193,7 @@ var G = new M(o.default, {
         }).ownerId] && (i[o.ownerId] = {}), i[o.ownerId][null !== (s = o.guildId) && void 0 !== s ? s : C.NULL_STRING_GUILD_ID] = o, !0
       } {
         let t = c.default.getSessionId();
-        return n === c.default.getId() && u !== t && null != N.default.getChannelId() ? e : function(e, t) {
+        return n === c.default.getId() && u !== t && null != p.default.getChannelId() ? e : function(e, t) {
           var n;
           let r = null != t ? t : C.NULL_STRING_GUILD_ID;
           return (null === (n = i[e]) || void 0 === n ? void 0 : n[r]) != null && (delete i[e][r], !0)
@@ -222,7 +222,7 @@ var G = new M(o.default, {
       guildId: n,
       channelId: i,
       ownerId: c.default.getId()
-    }), s = null != l ? p.default.getGameForPID(l) : null;
+    }), s = null != l ? N.default.getGameForPID(l) : null;
     u[o] = {
       id: null == s ? void 0 : s.id,
       pid: l,

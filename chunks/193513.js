@@ -11,8 +11,8 @@ var i = n("37983"),
   s = n("77078"),
   o = n("504439"),
   u = n("49111"),
-  d = n("366822");
-let c = {
+  c = n("366822");
+let d = {
     from: {
       opacity: 1
     },
@@ -27,13 +27,13 @@ let c = {
     }
   },
   f = {
-    ...c,
+    ...d,
     config: {
       duration: 50
     }
   },
   m = {
-    ...c,
+    ...d,
     config: (e, t) => t ? {
       duration: 800
     } : {
@@ -69,10 +69,10 @@ function _(e) {
     }
   }, [P]);
   let M = t === u.ImageReadyStates.READY && Date.now() - p < 200,
-    L = (0, l.useTransition)(C && null != O, M ? f : c),
+    L = (0, l.useTransition)(C && null != O, M ? f : d),
     g = (0, l.useTransition)(C && S, m);
   return (0, i.jsxs)("div", {
-    className: d.loadingOverlay,
+    className: c.loadingOverlay,
     style: {
       aspectRatio: n
     },
@@ -81,15 +81,15 @@ function _(e) {
         ...T,
         ...e
       },
-      className: d.imagePlaceholder,
+      className: c.imagePlaceholder,
       src: O,
       alt: ""
     })), g((e, t) => t && (0, i.jsx)(l.animated.div, {
       style: e,
-      className: d.imageLoadingOverlay,
+      className: c.imageLoadingOverlay,
       children: (0, i.jsx)(s.Spinner, {
         type: s.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
-        className: d.cornerLoadingSpinner
+        className: c.cornerLoadingSpinner
       })
     }))]
   })

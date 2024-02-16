@@ -24,11 +24,11 @@ function T(e) {
     onClose: g,
     requirementsUpdated: h,
     noSkip: N = !1
-  } = e, [I, p] = n.useState(""), [C, A] = n.useState(""), [O, x] = n.useState(""), [R, M] = n.useState(null), [v, D] = n.useState(null), L = (0, l.useStateFromStores)([o.default], () => o.default.getErrors()), P = (0, l.useStateFromStores)([o.default], () => o.default.getFormState()), j = n.useRef(null);
+  } = e, [I, p] = n.useState(""), [C, A] = n.useState(""), [O, x] = n.useState(""), [R, M] = n.useState(null), [D, v] = n.useState(null), L = (0, l.useStateFromStores)([o.default], () => o.default.getErrors()), P = (0, l.useStateFromStores)([o.default], () => o.default.getFormState()), j = n.useRef(null);
   async function b(e) {
     e.preventDefault(), (0, r.clearErrors)();
     let t = !1;
-    if ("" === C ? (M(S.default.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : M(null), C !== O ? (D(S.default.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : D(null), t) return;
+    if ("" === C ? (M(S.default.Messages.PASSWORD_REQUIREMENTS_EMPTY), t = !0) : M(null), C !== O ? (v(S.default.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), t = !0) : v(null), t) return;
     let s = await (0, r.saveAccountChanges)({
       password: I,
       newPassword: C
@@ -88,7 +88,7 @@ function T(e) {
         }), (0, a.jsx)(i.FormItem, {
           className: E.newPassword,
           title: S.default.Messages.FORM_LABEL_CONFIRM_NEW_PASSWORD,
-          error: null != v ? v : void 0,
+          error: null != D ? D : void 0,
           children: (0, a.jsx)(i.TextInput, {
             type: "password",
             value: O,

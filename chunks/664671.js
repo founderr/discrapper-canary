@@ -115,14 +115,14 @@ var p = function(e) {
       unappliedGuildBoostSlots: s,
       numActiveGuildBoostSlots: a
     }
-  }, [t]), x = null != T ? S.default.getNumIncludedPremiumGuildSubscriptionSlots(T.planId) : 0, R = Math.max(0, x - C.length), M = O > x, v = x === t.length, D = v && R === x ? x : 1, L = n.useMemo(() => {
+  }, [t]), x = null != T ? S.default.getNumIncludedPremiumGuildSubscriptionSlots(T.planId) : 0, R = Math.max(0, x - C.length), M = O > x, D = x === t.length, v = D && R === x ? x : 1, L = n.useMemo(() => {
     let e = [];
-    for (let t = 0; t < D; t++) e.push((0, a.jsx)(E.default, {
+    for (let t = 0; t < v; t++) e.push((0, a.jsx)(E.default, {
       className: g.headerBoostGem,
       useReducedMotion: f
     }, t));
     return e
-  }, [D, f]), P = n.useMemo(() => A.find(e => e.isAvailable()), [A]);
+  }, [v, f]), P = n.useMemo(() => A.find(e => e.isAvailable()), [A]);
   if (0 === A.length) return null;
   let j = A.length;
   return (0, a.jsxs)("div", {
@@ -146,7 +146,7 @@ var p = function(e) {
           children: [(0, a.jsx)(i.Heading, {
             className: g.headerHeading,
             variant: "heading-lg/bold",
-            children: v ? _.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({
+            children: D ? _.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format({
               numUnappliedGuildBoostSlots: j
             }) : _.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2.format({
               numUnappliedGuildBoostSlots: j
@@ -195,7 +195,7 @@ var p = function(e) {
           })
         })
       })]
-    }), !v && (0, a.jsx)("ul", {
+    }), !D && (0, a.jsx)("ul", {
       className: g.unappliedBoostSlots,
       children: A.map(e => (0, a.jsx)(h, {
         guildBoostSlot: e,

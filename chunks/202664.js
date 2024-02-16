@@ -11,8 +11,8 @@ var i = n("37983"),
   s = n("446674"),
   o = n("77078"),
   u = n("109036"),
-  d = n("697218"),
-  c = n("993105"),
+  c = n("697218"),
+  d = n("993105"),
   f = n("719923"),
   m = n("552917"),
   _ = n("843647"),
@@ -39,7 +39,7 @@ function S(e) {
       location: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL
     }),
     L = !R && M === T.PremiumTypes.TIER_0,
-    g = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
+    g = (0, s.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
     h = (0, i.jsx)(u.default, {
       icons: C.DEFAULT_FILE_UPLOAD_ICONS
     });
@@ -49,7 +49,7 @@ function S(e) {
   }) : p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
   let x = r.useMemo(() => {
       let e = f.default.getUserMaxFileSize(g),
-        t = (0, c.formatSize)(e / 1024, {
+        t = (0, d.formatSize)(e / 1024, {
           useKibibytes: !0
         }),
         n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({

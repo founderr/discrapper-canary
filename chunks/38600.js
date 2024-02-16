@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return s
   }
 });
 var a = n("356296");
@@ -10,8 +10,8 @@ let i = {
     LATIN24: a.latin24CompactTimeStamp,
     ASIAN: a.asianCompactTimeStamp
   },
-  s = /(AM|PM)$/;
+  r = /(AM|PM)$/;
 
-function r(e) {
-  return null != e.match(s) ? i.LATIN24 : e.length <= 5 ? i.LATIN12 : i.ASIAN
+function s(e) {
+  return null != e.match(r) ? i.LATIN24 : e.length <= 5 ? i.LATIN12 : i.ASIAN
 }

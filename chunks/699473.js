@@ -57,9 +57,9 @@ var s = n("37983"),
       allowHeading: H || V.showListsAndHeaders || Y.showListsAndHeaders,
       allowLinks: V.showMaskedLinks || Y.showMaskedLinks,
       previewLinkTarget: V.showMaskedLinks || Y.showMaskedLinks
-    }), z = l.type === R.MessageTypes.REPLY ? l.messageReference : void 0, Z = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(z)), J = (0, r.useListItem)(l.id), Q = (0, m.default)(l), X = (0, o.useStateFromStores)([E.default], () => l.hasFlag(R.MessageFlags.HAS_THREAD) && E.default.getChannel(l.id)), q = (0, d.useRoleIcon)({
+    }), z = l.type === R.MessageTypes.REPLY ? l.messageReference : void 0, Q = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(z)), Z = (0, r.useListItem)(l.id), J = (0, m.default)(l), X = (0, o.useStateFromStores)([E.default], () => l.hasFlag(R.MessageFlags.HAS_THREAD) && E.default.getChannel(l.id)), q = (0, d.useRoleIcon)({
       guildId: U.guild_id,
-      roleId: Q.iconRoleId
+      roleId: J.iconRoleId
     }), $ = (0, o.useStateFromStores)([f.default], () => f.default.can(R.Permissions.CREATE_INSTANT_INVITE, U)), ee = (0, S.default)({
       message: l,
       channel: U,
@@ -75,12 +75,12 @@ var s = n("37983"),
         [L.disableInteraction]: x
       }),
       disableInteraction: x,
-      childrenRepliedMessage: (0, O.default)(l, U, z, Z, a),
+      childrenRepliedMessage: (0, O.default)(l, U, z, Q, a),
       childrenExecutedCommand: (0, M.default)(l, U, a),
       childrenHeader: (0, h.default)({
         ...e,
         guildId: U.guild_id,
-        author: Q,
+        author: J,
         roleIcon: q
       }),
       childrenAccessories: e.hideAccessories ? void 0 : (0, A.renderSimpleAccessories)(e, K),
@@ -96,7 +96,7 @@ var s = n("37983"),
       "aria-labelledby": et,
       "aria-describedby": en,
       messageRef: ee,
-      ...J,
+      ...Z,
       ...w
     })
   })

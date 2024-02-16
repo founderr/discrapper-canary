@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 });
 var a = n("37983"),
@@ -14,39 +14,39 @@ var a = n("37983"),
   d = n("506885"),
   c = n("217513"),
   f = n("845579"),
-  S = n("491595"),
-  E = function(e) {
+  h = n("491595"),
+  p = function(e) {
     let {
       style: t,
       src: n,
-      backgroundSrc: E,
-      userId: h,
-      pulseSpeakingIndicator: _ = !1,
-      speaking: C = !1,
-      ...p
-    } = e, m = null != E ? E : n, T = (0, l.default)(m, s.default.unsafe_rawColors.PRIMARY_800.css), g = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, A = (0, c.default)(null != h ? h : ""), v = null == A ? void 0 : A.getBannerURL({
+      backgroundSrc: p,
+      userId: E,
+      pulseSpeakingIndicator: C = !1,
+      speaking: m = !1,
+      ...S
+    } = e, g = null != p ? p : n, _ = (0, l.default)(g, s.default.unsafe_rawColors.PRIMARY_800.css), T = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, v = (0, c.default)(null != E ? E : ""), A = null == v ? void 0 : v.getBannerURL({
       size: 1024,
       canAnimate: f.GifAutoPlay.getSetting()
     });
     if (r.useEffect(() => {
-        null != h && g && (0, d.default)(h, void 0, {
+        null != E && T && (0, d.default)(E, void 0, {
           dispatchWait: !0
         })
-      }, [g, h]), null == n) return null;
+      }, [T, E]), null == n) return null;
     let I = (0, a.jsx)(i.Avatar, {
-        className: S.avatarWrapper,
+        className: h.avatarWrapper,
         src: n,
-        ...p
+        ...S
       }),
-      R = {
+      M = {
         ...t,
-        backgroundColor: T
+        backgroundColor: _
       };
-    return null != v && C && g && (R.backgroundImage = "url(".concat(v, ")"), R.backgroundSize = "cover"), (0, a.jsx)("div", {
-      style: R,
-      className: S.background,
-      children: _ ? (0, a.jsx)(o.default, {
-        shouldAnimate: C,
+    return null != A && m && T && (M.backgroundImage = "url(".concat(A, ")"), M.backgroundSize = "cover"), (0, a.jsx)("div", {
+      style: M,
+      className: h.background,
+      children: C ? (0, a.jsx)(o.default, {
+        shouldAnimate: m,
         children: I
       }) : I
     })

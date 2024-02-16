@@ -8,8 +8,8 @@ var i = n("872717"),
   r = n("819855"),
   a = n("913144"),
   l = n("679428"),
-  s = n("282109"),
-  u = n("568734"),
+  u = n("282109"),
+  s = n("568734"),
   o = n("34676"),
   c = n("299039"),
   d = n("49111"),
@@ -37,14 +37,14 @@ var i = n("872717"),
     },
     updateGuildAndChannelNotificationSettings(e, t, n, i) {
       let r = Object.keys(t.channel_overrides),
-        s = (0, o.getCurrentGuildSettings)(e),
-        u = (0, o.getManyCurrentChannelSettings)(e, r);
+        u = (0, o.getCurrentGuildSettings)(e),
+        s = (0, o.getManyCurrentChannelSettings)(e, r);
       l.default.saveUserGuildSettings(e, t), a.default.dispatch({
         type: "USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE",
         guildId: e,
         settings: t
-      }), (0, o.trackGuildNotificationSettingsUpdate)(e, t, s, n, i), Object.keys(t.channel_overrides).forEach(r => {
-        let a = u.get(r);
+      }), (0, o.trackGuildNotificationSettingsUpdate)(e, t, u, n, i), Object.keys(t.channel_overrides).forEach(r => {
+        let a = s.get(r);
         (0, o.trackChannelNotificationSettingsUpdate)(e, r, t.channel_overrides[r], a, n, i)
       })
     },
@@ -52,16 +52,16 @@ var i = n("872717"),
       let i = c.default.keys(e),
         r = (0, o.getManyCurrentGuildSettings)(i);
       l.default.saveUserGuildSettingsBulk(e), c.default.entries(e).forEach(e => {
-        let [i, l] = e, s = r.get(i);
+        let [i, l] = e, u = r.get(i);
         a.default.dispatch({
           type: "USER_GUILD_SETTINGS_GUILD_UPDATE",
           guildId: i,
           settings: l
-        }), (0, o.trackGuildNotificationSettingsUpdate)(i, l, s, t, n)
+        }), (0, o.trackGuildNotificationSettingsUpdate)(i, l, u, t, n)
       })
     },
-    updateChannelOverrideSettings(e, t, n, i, s) {
-      let u = (0, o.getCurrentChannelSettings)(e, t);
+    updateChannelOverrideSettings(e, t, n, i, u) {
+      let s = (0, o.getCurrentChannelSettings)(e, t);
       l.default.saveUserGuildSettings(e, {
         channel_overrides: {
           [t]: n
@@ -71,30 +71,30 @@ var i = n("872717"),
         guildId: e,
         channelId: t,
         settings: n
-      }), r.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED), (0, o.trackChannelNotificationSettingsUpdate)(e, t, n, u, i, s)
+      }), r.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED), (0, o.trackChannelNotificationSettingsUpdate)(e, t, n, s, i, u)
     },
     updateChannelOverrideSettingsBulk(e, t, n, i) {
       let r = Object.keys(t),
-        s = (0, o.getManyCurrentChannelSettings)(e, r);
+        u = (0, o.getManyCurrentChannelSettings)(e, r);
       l.default.saveUserGuildSettings(e, {
         channel_overrides: t
       }), a.default.dispatch({
         type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK",
         guildId: e,
         overrides: t
-      }), Object.keys(t).forEach(r => (0, o.trackChannelNotificationSettingsUpdate)(e, r, t[r], s.get(r), n, i))
+      }), Object.keys(t).forEach(r => (0, o.trackChannelNotificationSettingsUpdate)(e, r, t[r], u.get(r), n, i))
     },
     setForumThreadsCreated(e, t) {
       let n = t ? f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON : f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF,
         i = t ? f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF : f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON,
-        r = s.default.getChannelFlags(e);
+        r = u.default.getChannelFlags(e);
       this.updateChannelOverrideSettings(e.guild_id, e.id, {
         flags: r & ~i | n
       }, o.NotificationLabel.forumThreadsCreated(t))
     },
     async setAccountFlag(e, t) {
-      let n = s.default.accountNotificationSettings.flags,
-        r = (0, u.setFlag)(n, e, t);
+      let n = u.default.accountNotificationSettings.flags,
+        r = (0, s.setFlag)(n, e, t);
       await i.default.patch({
         url: d.Endpoints.ACCOUNT_NOTIFICATION_SETTINGS,
         body: {

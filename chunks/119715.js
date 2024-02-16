@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return J
+    return Z
   }
 });
 var s = n("37983"),
@@ -85,7 +85,7 @@ function Y(e) {
   let {
     compact: t
   } = e;
-  return (0, s.jsx)(Z, {
+  return (0, s.jsx)(Q, {
     compact: t,
     header: (0, s.jsxs)(l.Fragment, {
       children: [(0, s.jsx)(U.default, {
@@ -120,7 +120,7 @@ function W(e) {
     guildId: r,
     size: 12
   });
-  return (0, s.jsx)(Z, {
+  return (0, s.jsx)(Q, {
     compact: a,
     header: (0, s.jsxs)(l.Fragment, {
       children: [(0, s.jsx)(T.SettingsInfoIcon, {
@@ -205,7 +205,7 @@ function K(e) {
     let e = null == g ? void 0 : g.guild_id;
     null != e && (0, C.openRaidResolveModal)(a.id, e)
   }, [a.id, g]), j = m === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
-  return (0, s.jsx)(Z, {
+  return (0, s.jsx)(Q, {
     compact: i,
     header: (0, s.jsxs)(l.Fragment, {
       children: [(0, s.jsx)(b, {
@@ -328,7 +328,7 @@ function z(e) {
     decisionId: u,
     suspiciousMentionActivityUntil: d
   } = (0, A.extractAutomodNotificationFields)(n);
-  return (0, s.jsx)(Z, {
+  return (0, s.jsx)(Q, {
     compact: a,
     header: (0, s.jsxs)(l.Fragment, {
       children: [(0, s.jsx)(U.default, {
@@ -395,7 +395,7 @@ function z(e) {
   })
 }
 
-function Z(e) {
+function Q(e) {
   let {
     compact: t,
     header: n,
@@ -430,7 +430,7 @@ function Z(e) {
   })
 }
 
-function J(e) {
+function Z(e) {
   let {
     id: t,
     compact: n,

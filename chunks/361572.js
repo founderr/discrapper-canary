@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return f
   },
   tryParseEventDetailsPath: function() {
-    return N
+    return p
   },
   canViewChannel: function() {
-    return p
+    return N
   },
   isAccessibleChannelPath: function() {
     return A
@@ -63,7 +63,7 @@ function f(e) {
   } : null
 }
 
-function N(e) {
+function p(e) {
   if (null == e) return null;
   let t = e.match(I);
   return null != t && t.length > 1 ? {
@@ -73,7 +73,7 @@ function N(e) {
   } : null
 }
 
-function p(e) {
+function N(e) {
   return !!e.isPrivate() || l.default.can(a.Permissions.VIEW_CHANNEL, e)
 }
 
@@ -85,5 +85,5 @@ function A(e) {
   if (null == i.default.getGuild(t) && t !== a.ME) return !1;
   if (null == n) return !0;
   let l = r.default.getChannel(n);
-  return null != l && p(l)
+  return null != l && N(l)
 }

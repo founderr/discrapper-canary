@@ -45,13 +45,13 @@ function R(e) {
   })
 }
 var M = function() {
-  let [e, t] = n.useState(O.PremiumSubscriptionSKUs.TIER_2), [s, m] = n.useState(null), [_] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getGuilds()]), [M] = (0, i.useStateFromStoresArray)([C.default], () => [C.default.getPremiumSubscription()]), v = Object.values(_).map(e => ({
+  let [e, t] = n.useState(O.PremiumSubscriptionSKUs.TIER_2), [s, m] = n.useState(null), [_] = (0, i.useStateFromStoresArray)([p.default], () => [p.default.getGuilds()]), [M] = (0, i.useStateFromStoresArray)([C.default], () => [C.default.getPremiumSubscription()]), D = Object.values(_).map(e => ({
     value: e,
     label: e.name
-  })), [D, L] = n.useState(v.length > 0 ? v[0].value : null), [P, j] = n.useState(""), [b, U] = n.useState({
+  })), [v, L] = n.useState(D.length > 0 ? D[0].value : null), [P, j] = n.useState(""), [b, U] = n.useState({
     plan_id: O.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
     gift: "true"
-  }), B = "true" !== b.gift && null != M, [y, F] = n.useState(v.length > 0 ? v[0].value : null), {
+  }), B = "true" !== b.gift && null != M, [y, F] = n.useState(D.length > 0 ? D[0].value : null), {
     AnalyticsLocationProvider: G,
     analyticsLocations: k
   } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE), [H, w] = n.useState(""), [V, Y] = n.useState(""), [W, K] = n.useState(""), [z, Q] = n.useState(""), [q, Z] = n.useState("");
@@ -120,11 +120,11 @@ var M = function() {
       }), (0, a.jsxs)(r.FormItem, {
         className: x.formItem,
         children: [(0, a.jsx)(r.SingleSelect, {
-          value: D,
-          options: v,
+          value: v,
+          options: D,
           onChange: e => L(e)
-        }), null != D ? (0, a.jsx)(T.default, {
-          guild: D,
+        }), null != v ? (0, a.jsx)(T.default, {
+          guild: v,
           analyticsLocation: {}
         }) : (0, a.jsx)("div", {
           children: "No Guild to boost"
@@ -231,7 +231,7 @@ var M = function() {
           children: "Premium Server Subscription For"
         }), (0, a.jsx)(r.SingleSelect, {
           value: y,
-          options: v,
+          options: D,
           onChange: e => F(e)
         })]
       }), (0, a.jsx)(f.GroupListingsFetchContextProvider, {

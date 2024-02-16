@@ -27,8 +27,8 @@ var r = n("509043"),
   s = n("315102"),
   o = n("254490"),
   u = n("737403"),
-  d = n("453252"),
-  c = n("75015"),
+  c = n("453252"),
+  d = n("75015"),
   f = n("782340");
 
 function m(e, t, r, a) {
@@ -38,8 +38,8 @@ function m(e, t, r, a) {
     } = await n.el("420333").then(n.bind(n, "420333"));
     return n => (0, i.jsx)(l, {
       filters: a,
-      maxFileSizeBytes: d.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-      imageSpecifications: e === c.UploadTypes.BANNER && f.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
+      maxFileSizeBytes: c.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
+      imageSpecifications: e === d.UploadTypes.BANNER && f.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
       onComplete: (n, i) => (0, u.maybeOpenProfilePreviewModal)({
         imageSrc: n,
         file: i,
@@ -58,7 +58,7 @@ function _() {
   (0, a.openUploadError)({
     title: f.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
     help: f.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-      maxSize: (0, o.sizeString)(d.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+      maxSize: (0, o.sizeString)(c.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
     })
   })
 }

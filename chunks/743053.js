@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("393414"),
   R = s("102985"),
   M = s("521012"),
-  v = s("90404"),
-  D = s("41250"),
+  D = s("90404"),
+  v = s("41250"),
   L = s("599110"),
   P = s("719923"),
   j = s("182650"),
@@ -69,7 +69,7 @@ function Q() {
     }),
     children: [(0, a.jsxs)("div", {
       className: Y.tierInfo,
-      children: [(0, a.jsx)(D.default, {
+      children: [(0, a.jsx)(v.default, {
         className: i(Y.tierTitle)
       }), r ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(F.PremiumPillWithSparkles, {
@@ -215,10 +215,10 @@ var Z = function() {
       !N && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, m.fetchPremiumSubscriptionPlans)(_, null, w.RevenueSurfaces.DISCOVERY)]), c(!1)
     })
   }, [_, N, e]);
-  let [D, P] = n.useState(!1);
+  let [v, P] = n.useState(!1);
   if (N) return (0, a.jsx)(g.default, {});
   if (e) return (0, a.jsx)(O.BlockedPaymentsContentSettings, {});
-  if ((!i || null == l || !r) && !o) return (0, a.jsx)(v.default, {
+  if ((!i || null == l || !r) && !o) return (0, a.jsx)(D.default, {
     title: V.default.Messages.REDIRECTED_CALLBACK_ERROR,
     note: null
   });
@@ -238,7 +238,7 @@ var Z = function() {
         })]
       }), (0, a.jsx)(u.default, {
         onChange: e => {
-          e && !D && (L.default.track(w.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+          e && !v && (L.default.track(w.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
             location_stack: s
           }), P(!0))
         },

@@ -78,11 +78,11 @@ let g = [{
   };
 
 function I(e, t, s) {
-  e === m.RTCConnectionStates.RTC_CONNECTED ? N.connected = !0 : (e === m.RTCConnectionStates.DISCONNECTED || e === m.RTCConnectionStates.RTC_DISCONNECTED) && (N.lifecycle === f.SpeedTestLifecycles.TESTING && (N.failed = !0, D(), L()), N.connected = !1)
+  e === m.RTCConnectionStates.RTC_CONNECTED ? N.connected = !0 : (e === m.RTCConnectionStates.DISCONNECTED || e === m.RTCConnectionStates.RTC_DISCONNECTED) && (N.lifecycle === f.SpeedTestLifecycles.TESTING && (N.failed = !0, v(), L()), N.connected = !1)
 }
 
 function p() {
-  N.lifecycle === f.SpeedTestLifecycles.TESTING && (N.failed = !0, D(), L())
+  N.lifecycle === f.SpeedTestLifecycles.TESTING && (N.failed = !0, v(), L())
 }
 
 function C() {
@@ -96,7 +96,7 @@ function A(e, t) {
   if (null != N.currentTest) !0 !== N.failed && (N.currentTest = N.currentTest + 1, N.results.push({
     payload: e,
     summary: t
-  }), N.currentTest === h ? (M(f.SpeedTestLifecycles.UPLOADING), L()) : v())
+  }), N.currentTest === h ? (M(f.SpeedTestLifecycles.UPLOADING), L()) : D())
 }
 
 function O(e) {
@@ -106,7 +106,7 @@ function O(e) {
 function x() {
   if (N.lifecycle === f.SpeedTestLifecycles.PINGING && 10 === N.pings.length) {
     var e;
-    null === (e = N.connection) || void 0 === e || e.setPingInterval(5e3), N.currentTest = 0, v()
+    null === (e = N.connection) || void 0 === e || e.setPingInterval(5e3), N.currentTest = 0, D()
   }
 }
 
@@ -122,12 +122,12 @@ function M(e) {
   })
 }
 
-function v() {
+function D() {
   var e, t;
   null !== N.currentTest && (g[N.currentTest].direction === f.SpeedTestDirections.CLIENT_TO_SERVER ? null === (e = N.connection) || void 0 === e || e.startClientToServerSpeedTest(g[N.currentTest]) : g[N.currentTest].direction === f.SpeedTestDirections.SERVER_TO_CLIENT && (null === (t = N.connection) || void 0 === t || t.startServerToClientSpeedTest(g[N.currentTest])), M(f.SpeedTestLifecycles.TESTING))
 }
 
-function D() {
+function v() {
   if (N.lifecycle === f.SpeedTestLifecycles.TESTING && null != N.currentTest) {
     var e, t;
     let s = g[N.currentTest].direction;

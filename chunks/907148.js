@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return D
+    return v
   }
 });
 var a = s("37983");
@@ -31,10 +31,10 @@ var n = s("627445"),
   x = s("719923"),
   R = s("49111"),
   M = s("782340"),
-  v = s("141990");
+  D = s("141990");
 
-function D() {
-  var e, t, s, n, D, L, P, j;
+function v() {
+  var e, t, s, n, v, L, P, j;
   let b = (0, i.useStateFromStores)([O.default], () => {
       let e = O.default.getCurrentUser();
       return l(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
@@ -72,9 +72,9 @@ function D() {
   let q = (0, C.default)(b.id),
     Z = null == q ? void 0 : q.getLegacyUsername(),
     X = (null !== (s = null === (e = V.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? V.global_name : null !== (n = null == Y ? void 0 : Y.nick) && void 0 !== n ? n : [],
-    J = (null !== (D = null === (t = V.bio) || void 0 === t ? void 0 : t.length) && void 0 !== D ? D : 0) > 0 ? V.bio : null !== (L = null == Y ? void 0 : Y.bio) && void 0 !== L ? L : [];
+    J = (null !== (v = null === (t = V.bio) || void 0 === t ? void 0 : t.length) && void 0 !== v ? v : 0) > 0 ? V.bio : null !== (L = null == Y ? void 0 : Y.bio) && void 0 !== L ? L : [];
   return (0, a.jsxs)("div", {
-    className: v.sectionsContainer,
+    className: D.sectionsContainer,
     children: [(0, a.jsx)(T.default, {
       placeholder: b.username,
       errors: X,

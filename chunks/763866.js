@@ -45,8 +45,8 @@ function D(e) {
     customStatusActivity: k,
     user: w,
     displayProfile: F,
-    guild: B,
-    guildMember: G,
+    guild: G,
+    guildMember: B,
     channelId: H,
     onClose: V,
     setNote: K = !1,
@@ -57,7 +57,7 @@ function D(e) {
   } = e, J = (0, r.useStateFromStores)([c.default], () => c.default.hidePersonalInformation), q = (0, r.useStateFromStores)([p.default], () => {
     var e;
     return null === (e = p.default.getUserProfile(w.id)) || void 0 === e ? void 0 : e.application
-  }), X = (0, r.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(w.id)), Q = (0, P.useGetVoiceChannelInfoForVoiceActivitySection)(w.id, null == B ? void 0 : B.id), $ = (null == D ? void 0 : D.type) === b.ActivityTypes.HANG_STATUS, ee = !X && null != Q && !$, {
+  }), X = (0, r.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(w.id)), Q = (0, P.useGetVoiceChannelInfoForVoiceActivitySection)(w.id, null == G ? void 0 : G.id), $ = (null == D ? void 0 : D.type) === b.ActivityTypes.HANG_STATUS, ee = !X && null != Q && !$, {
     showVoiceActivityInProfile: et
   } = h.VoiceActivityProfileExperiment.useExperiment({
     location: "user popout"
@@ -87,7 +87,7 @@ function D(e) {
     className: j.usernameSection,
     lastSection: !0
   });
-  let eo = null !== (t = f.default.getNickname(null == B ? void 0 : B.id, H, w)) && void 0 !== t ? t : m.default.getName(w),
+  let eo = null !== (t = f.default.getNickname(null == G ? void 0 : G.id, H, w)) && void 0 !== t ? t : m.default.getName(w),
     eu = {
       location: {
         page: b.AnalyticsPages.USER_POPOUT,
@@ -100,7 +100,7 @@ function D(e) {
       user: w,
       nickname: eo,
       pronouns: null == F ? void 0 : F.pronouns,
-      usernameIcon: w.hasAvatarForGuild(null == B ? void 0 : B.id) && (0, l.jsx)(S.default, {
+      usernameIcon: w.hasAvatarForGuild(null == G ? void 0 : G.id) && (0, l.jsx)(S.default, {
         user: w,
         nickname: eo
       }),
@@ -119,16 +119,16 @@ function D(e) {
         ref: ei,
         children: [(0, l.jsx)(I.default, {
           user: w,
-          guildId: null == B ? void 0 : B.id
+          guildId: null == G ? void 0 : G.id
         }), (0, l.jsx)(v.default, {
           isUsingGuildBio: null !== (n = null == F ? void 0 : F.isUsingGuildMemberBio()) && void 0 !== n && n,
           bio: null == F ? void 0 : F.bio,
-          guild: B,
+          guild: G,
           hidePersonalInformation: J
         }), (0, l.jsx)(y.default, {
           userId: w.id,
-          guild: B,
-          guildMember: G
+          guild: G,
+          guildMember: B
         }), et && ee && (0, l.jsx)(P.default, {
           voiceChannel: Q.voiceChannel,
           voiceGuild: Q.voiceGuild,
@@ -137,7 +137,7 @@ function D(e) {
         }), (0, l.jsx)(C.default, {
           activity: D,
           user: w,
-          guild: B,
+          guild: G,
           channelId: H,
           onClose: V,
           analyticsParams: (null == Z ? void 0 : Z.location) != null ? Z : eu
@@ -145,20 +145,20 @@ function D(e) {
           applicationId: q.id,
           commandIds: q.popularApplicationCommandIds,
           channel: en,
-          guildId: null == B ? void 0 : B.id,
+          guildId: null == G ? void 0 : G.id,
           onClick: V
         }) : null, (0, l.jsx)(T.default, {
           user: w,
-          guildId: null == B ? void 0 : B.id
+          guildId: null == G ? void 0 : G.id
         }), (0, l.jsx)(M.default, {
           user: w,
-          guild: B,
-          guildMember: G,
+          guild: G,
+          guildMember: B,
           showBorder: null !== (a = null == F ? void 0 : F.canEditThemes) && void 0 !== a && a
         }), (0, l.jsx)(_.default, {
           userId: w.id,
           channelId: H,
-          guild: B,
+          guild: G,
           onClose: V,
           theme: el
         }), null != q && void 0 !== H && (0, l.jsx)(R.default, {

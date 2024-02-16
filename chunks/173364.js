@@ -56,7 +56,7 @@ function h() {
     R = l(A).values().first(),
     M = null != R ? R.disabled : null != t;
 
-  function v(e) {
+  function D(e) {
     let t, {
       label: l,
       value: i
@@ -78,8 +78,8 @@ function h() {
     }, i)
   }
 
-  function D(e) {
-    return v(e[0])
+  function v(e) {
+    return D(e[0])
   }
   return (0, a.jsxs)(S.default, {
     className: g.marginBottom20,
@@ -103,8 +103,8 @@ function h() {
           }
         }),
         isDisabled: x,
-        renderOptionValue: D,
-        renderOptionLabel: v
+        renderOptionValue: v,
+        renderOptionLabel: D
       }), e]
     }), (0, a.jsxs)(S.default.Child, {
       basis: "50%",
@@ -126,8 +126,8 @@ function h() {
           }
         }),
         isDisabled: M,
-        renderOptionValue: D,
-        renderOptionLabel: v
+        renderOptionValue: v,
+        renderOptionLabel: D
       }), t]
     })]
   })

@@ -35,8 +35,8 @@ function C(e) {
     showBorder: O = !1,
     isTryItOutFlow: x = !1,
     initialSelectedEffectId: R
-  } = e, M = (0, c.default)(t.id, null == s ? void 0 : s.id), v = f.default.canUsePremiumProfileCustomization(t), {
-    analyticsLocations: D
+  } = e, M = (0, c.default)(t.id, null == s ? void 0 : s.id), D = f.default.canUsePremiumProfileCustomization(t), {
+    analyticsLocations: v
   } = (0, d.default)(), {
     pendingProfileEffectId: L,
     errors: P
@@ -44,15 +44,15 @@ function C(e) {
     pendingProfileEffectId: S.default.getPendingProfileEffectId(),
     errors: S.default.getErrors().profileEffect
   })), j = n.useCallback(() => (0, u.openProfileEffectModal)({
-    analyticsLocations: D,
+    analyticsLocations: v,
     initialSelectedEffectId: R
-  }), [D, R]);
+  }), [v, R]);
   n.useEffect(() => {
-    v && T.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    D && T.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: N.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
-      location_stack: D
+      location_stack: v
     })
-  }, [v, D]);
+  }, [D, v]);
   let b = x || void 0 !== L ? null != L : (null == M ? void 0 : M.profileEffectId) != null,
     U = A ? E.default : o.Button;
   return (0, a.jsx)(_.default, {

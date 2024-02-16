@@ -19,8 +19,8 @@ var r = n("714617"),
   S = n("957255"),
   T = n("27618"),
   f = n("280168"),
-  N = n("697218"),
-  p = n("800762"),
+  p = n("697218"),
+  N = n("800762"),
   A = n("316133"),
   R = n("998716"),
   C = n("325861"),
@@ -133,7 +133,7 @@ function H(e) {
 let k = [];
 class Y extends a.default.Store {
   initialize() {
-    this.waitFor(E.default, N.default, c.default, f.default, p.default, S.default, A.default, I.default, C.default, T.default, L.default, _.default)
+    this.waitFor(E.default, p.default, c.default, f.default, N.default, S.default, A.default, I.default, C.default, T.default, L.default, _.default)
   }
   getParticipantsVersion(e) {
     var t, n;

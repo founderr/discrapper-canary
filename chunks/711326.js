@@ -32,8 +32,8 @@ function E(e) {
     canAccess: f = !1
   } = e;
   if (null == s) return null;
-  let N = (0, o.getThumbnailImage)(s.thumbnail),
-    p = !f && s.has_media_attachment,
+  let p = (0, o.getThumbnailImage)(s.thumbnail),
+    N = !f && s.has_media_attachment,
     A = f ? _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
     R = null != S ? a.default.getName(s.guild_id, s.channel_id, S) : void 0,
     C = null == S ? void 0 : S.getAvatarURL(null == E ? void 0 : E.id, 40);
@@ -50,14 +50,14 @@ function E(e) {
         width: n
       } = e;
       return null != t && null != n && t >= n
-    }(s.thumbnail) && !p,
+    }(s.thumbnail) && !N,
     O = (null === (t = s.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (r = s.thumbnail) || void 0 === r ? void 0 : null === (n = r.filename) || void 0 === n ? void 0 : n.startsWith(d.SPOILER_ATTACHMENT_PREFIX));
   return {
     title: null !== (i = s.title) && void 0 !== i ? i : "",
     subtitle: s.description,
     ctaText: A,
-    coverImage: N,
-    coverImageOverlayText: p ? _.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
+    coverImage: p,
+    coverImageOverlayText: N ? _.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
     parentChannelId: s.parent_channel_id,
     threadId: s.channel_id,
     postThread: I,
@@ -69,7 +69,7 @@ function E(e) {
     authorName: R,
     channelName: null == c ? void 0 : c.name,
     avatarUrl: C,
-    shouldShowBlurredThumbnailImage: p,
+    shouldShowBlurredThumbnailImage: N,
     shouldContainMediaWithBackground: L,
     shouldSpoiler: O,
     obscureAwaitingScan: !1,

@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("701909"),
   R = s("773336"),
   M = s("13798"),
-  v = s("161778"),
-  D = s("264278"),
+  D = s("161778"),
+  v = s("264278"),
   L = s("49111"),
   P = s("894282"),
   j = s("782340"),
@@ -46,8 +46,8 @@ function y(e) {
   return t(s)
 }
 let F = o((0, m.getDefaultLayoutContent)()).filter(e => e.description !== j.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
-  G = d.default.connectStores([v.default], () => ({
-    theme: v.default.theme
+  G = d.default.connectStores([D.default], () => ({
+    theme: D.default.theme
   }))(C.default);
 class k extends n.PureComponent {
   renderMessage() {
@@ -139,7 +139,7 @@ class k extends n.PureComponent {
     let {
       action: e
     } = this.props.keybind;
-    if (e === L.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL) return (0, a.jsx)(D.default, {
+    if (e === L.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL) return (0, a.jsx)(v.default, {
       keybind: this.props.keybind
     })
   }

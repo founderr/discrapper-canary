@@ -31,8 +31,8 @@ var n = s("759843"),
   x = s("610109"),
   R = s("368694"),
   M = s("42887"),
-  v = s("790618"),
-  D = s("860957"),
+  D = s("790618"),
+  v = s("860957"),
   L = s("893011"),
   P = s("423487"),
   j = s("956089"),
@@ -106,7 +106,7 @@ function eA(e) {
       text: eI.default.Messages.NEW
     }),
     notice: {
-      stores: [v.default, N.default],
+      stores: [D.default, N.default],
       element: A.default
     },
     onSettingsClose: () => {
@@ -292,7 +292,7 @@ function eA(e) {
     section: eN.UserSettingsSections.OVERLAY,
     label: eI.default.Messages.OVERLAY,
     element: eu.default,
-    predicate: () => D.default.isSupported() || !1
+    predicate: () => v.default.isSupported() || !1
   }, {
     section: S.SectionTypes.DIVIDER
   }, {

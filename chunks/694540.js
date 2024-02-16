@@ -17,13 +17,13 @@ var i = n("884691"),
   s = n("719923"),
   o = n("324878"),
   u = n("44678"),
-  d = n("538620"),
-  c = n("807345"),
+  c = n("538620"),
+  d = n("807345"),
   f = n("646718");
 
 function m() {
-  let e = (0, r.useStateFromStoresArray)([c.default], () => c.default.outboundPromotions),
-    t = (0, r.useStateFromStores)([c.default], () => c.default.consumedInboundPromotionId),
+  let e = (0, r.useStateFromStoresArray)([d.default], () => d.default.outboundPromotions),
+    t = (0, r.useStateFromStores)([d.default], () => d.default.consumedInboundPromotionId),
     n = i.useMemo(() => e.filter(e => {
       let {
         id: n
@@ -34,14 +34,14 @@ function m() {
 }
 
 function _() {
-  let e = (0, r.useStateFromStores)([c.default], () => c.default.lastFetchedActivePromotions),
+  let e = (0, r.useStateFromStores)([d.default], () => d.default.lastFetchedActivePromotions),
     t = m(),
     n = (0, r.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
     _ = (0, o.useHasActiveTrial)(),
     [E, T] = i.useState(!1),
     [I, C] = i.useState([]);
   i.useEffect(() => {
-    null != e && l.default.wait(() => d.default.markOutboundPromotionsSeen())
+    null != e && l.default.wait(() => c.default.markOutboundPromotionsSeen())
   }, [e]);
   let p = i.useCallback(e => {
       C(t => t.some(t => {
@@ -54,7 +54,7 @@ function _() {
     P = (0, s.isPremiumExactly)(n, f.PremiumTypes.TIER_2);
   i.useEffect(() => {
     l.default.wait(() => {
-      P && null == e && d.default.fetchActiveOutboundPromotions()
+      P && null == e && c.default.fetchActiveOutboundPromotions()
     })
   }, [e, P]), i.useEffect(() => {
     l.default.wait(() => {
@@ -94,7 +94,7 @@ function _() {
 }
 
 function E() {
-  let e = (0, r.useStateFromStores)([c.default], () => c.default.lastSeenOutboundPromotionStartDate),
+  let e = (0, r.useStateFromStores)([d.default], () => d.default.lastSeenOutboundPromotionStartDate),
     t = (0, o.useHasActiveTrial)(),
     n = m(),
     l = i.useMemo(() => {
@@ -111,7 +111,7 @@ function E() {
 }
 
 function T() {
-  let e = (0, r.useStateFromStores)([c.default], () => c.default.bogoPromotion);
+  let e = (0, r.useStateFromStores)([d.default], () => d.default.bogoPromotion);
   return {
     promotion: e
   }

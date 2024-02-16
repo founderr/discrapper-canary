@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("368694"),
   R = s("313915"),
   M = s("381684"),
-  v = s("697218"),
-  D = s("860957"),
+  D = s("697218"),
+  v = s("860957"),
   L = s("941886"),
   P = s("145131"),
   j = s("258078"),
@@ -755,7 +755,7 @@ function X() {
   let [e, t] = n.useState(!1), [s, l] = n.useState("");
   return (n.useEffect(() => {
     (async () => {
-      let e = await (0, D.getOverlayURL)();
+      let e = await (0, v.getOverlayURL)();
       l(e)
     })()
   }, []), e) ? {} : (0, a.jsxs)(a.Fragment, {
@@ -858,7 +858,7 @@ let J = u.default.connectStores([R.default], () => ({
     isAnalyticsDebuggerEnabled: d,
     isIdleStatusIndicatorEnabled: c,
     appDirectoryIncludesInactiveCollections: E
-  } = e, T = (0, u.useStateFromStores)([v.default], () => v.default.getCurrentUser());
+  } = e, T = (0, u.useStateFromStores)([D.default], () => D.default.getCurrentUser());
   return (0, a.jsxs)(S.FormSection, {
     title: "Developer Flags",
     tag: S.FormTitleTags.H1,

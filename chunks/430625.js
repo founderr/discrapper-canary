@@ -151,11 +151,11 @@ function k(e) {
   }, [w, V, W]);
   let K = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
     z = (0, N.default)([F.id])[0],
-    Z = (0, u.useStateFromStores)([f.default], () => {
+    Q = (0, u.useStateFromStores)([f.default], () => {
       var e;
       return (null == d ? void 0 : d.channel) != null && (null === (e = f.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === F.id
     }),
-    J = (0, u.useStateFromStores)([f.default], () => {
+    Z = (0, u.useStateFromStores)([f.default], () => {
       var e;
       let t = (null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? f.default.getEmbeddedActivitiesForChannel(d.channel.id) : [];
       return t.some(e => {
@@ -165,8 +165,8 @@ function k(e) {
         return F.id === t
       })
     }),
-    Q = A.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-    X = (0, u.useStateFromStores)([h.default], () => null != Q && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
+    J = A.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+    X = (0, u.useStateFromStores)([h.default], () => null != J && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
     {
       analyticsLocations: q
     } = (0, m.default)(I.default.INVITE_EMBED),
@@ -174,7 +174,7 @@ function k(e) {
       applicationId: F.id,
       size: U
     }),
-    ee = (0, u.useStateFromStoresArray)([f.default], () => null != Q ? f.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [Q, F.id]),
+    ee = (0, u.useStateFromStoresArray)([f.default], () => null != J ? f.default.getEmbeddedActivitiesForChannel(J.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [J, F.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
     en = d.state === P.InviteStates.ACCEPTING,
     es = null != K;
@@ -182,7 +182,7 @@ function k(e) {
     if (null == d.guild) return (0, s.jsx)(v.default, {});
     K = new S.default(d.guild)
   }
-  let el = es && !X || es && Z,
+  let el = es && !X || es && Q,
     ea = () => {
       E.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
@@ -190,7 +190,7 @@ function k(e) {
         analyticsLocations: q
       })
     };
-  return (es && Z && (a = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Z ? x.default.Messages.INVITE_EMBED_JOINED : J || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
+  return (es && Q && (a = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? x.default.Messages.INVITE_EMBED_JOINED : Z || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
     className: y.container,
     ref: w,
     children: [(0, s.jsx)("div", {
@@ -224,17 +224,17 @@ function k(e) {
           variant: "heading-xl/semibold",
           children: null == z ? void 0 : z.name
         }), (0, s.jsx)(B, {
-          channel: Q,
+          channel: J,
           guild: K,
           isStacked: Y,
-          hasEnded: !J
+          hasEnded: !Z
         })]
       }), (0, s.jsxs)("div", {
         className: i(y.currentState, {
           [y.large]: H,
-          [y.split]: !J && Y
+          [y.split]: !Z && Y
         }),
-        children: [!J && es ? (0, s.jsxs)("div", {
+        children: [!Z && es ? (0, s.jsxs)("div", {
           className: i(y.endedNote, {
             [y.large]: H
           }),
@@ -252,7 +252,7 @@ function k(e) {
           isStacked: Y
         }), (0, s.jsxs)("div", {
           className: y.cta,
-          children: [null != K && J ? (0, s.jsx)("div", {
+          children: [null != K && Z ? (0, s.jsx)("div", {
             className: y.avatars,
             children: (0, s.jsx)(R.default, {
               guildId: K.id,

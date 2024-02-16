@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("336804"),
   F = n("928265"),
   k = n("744568"),
-  B = n("257869"),
-  V = n("848848"),
+  V = n("257869"),
+  B = n("848848"),
   H = n("93252"),
   G = n("661455"),
   W = n("230035"),
@@ -95,8 +95,8 @@ var l = n("37983"),
   ew = n("980423"),
   eF = n("439932"),
   ek = n("679653"),
-  eB = n("176347"),
-  eV = n("665182"),
+  eV = n("176347"),
+  eB = n("665182"),
   eH = n("61918"),
   eG = n("656612"),
   eW = n("624027"),
@@ -212,7 +212,7 @@ class e0 extends a.PureComponent {
     } = this.props;
     if (o(null != e, "Missing channel in Channel.renderChat"), s) return (o(null != n, "premium channels must exist within a guild"), null == e ? void 0 : e.isRoleSubscriptionTemplatePreviewChannel()) ? (0, l.jsx)(H.default, {
       guildId: n.id
-    }) : (0, l.jsx)(B.GroupListingsFetchContextProvider, {
+    }) : (0, l.jsx)(V.GroupListingsFetchContextProvider, {
       guildId: n.id,
       children: (0, l.jsx)(G.default, {
         channelId: e.id,
@@ -239,7 +239,7 @@ class e0 extends a.PureComponent {
         sidebarState: t
       }, e.id)
     }
-    return (0, l.jsx)(eB.default, {
+    return (0, l.jsx)(eV.default, {
       channel: e,
       guild: n,
       chatInputType: j.ChatInputTypes.NORMAL
@@ -381,8 +381,8 @@ class e0 extends a.PureComponent {
     if (null == e) return null;
     let u = (null == t ? void 0 : t.type) != null && eY.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? 528 : 450,
       d = o - eY.CHANNEL_SIDEBAR_WIDTH - u;
-    return (0, l.jsx)(eV.default, {
-      sidebarType: (null == t ? void 0 : t.type) != null && eY.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? eV.ChatSidebarType.PostSidebar : eV.ChatSidebarType.ThreadSidebar,
+    return (0, l.jsx)(eB.default, {
+      sidebarType: (null == t ? void 0 : t.type) != null && eY.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? eB.ChatSidebarType.PostSidebar : eB.ChatSidebarType.ThreadSidebar,
       maxWidth: d,
       onWidthChange: this.handleThreadSidebarResize,
       children: e
@@ -708,7 +708,7 @@ var e2 = a.memo(function(e) {
     providedChannel: n
   } = e, [s, i] = a.useState(null), r = (0, f.useStateFromStores)([eP.default], () => eP.default.getChannelId()), o = (0, f.useStateFromStores)([eP.default], () => eP.default.getVoiceChannelId()), u = (0, f.useStateFromStores)([eA.default], () => null != n ? n : eA.default.getChannel(r), [r, n]), p = (0, f.useStateFromStores)([eA.default], () => eA.default.getChannel(o), [o]), E = null == u ? void 0 : u.parent_id, S = (0, f.useStateFromStores)([eA.default], () => eA.default.getChannel(E), [E]), g = (0, f.useStateFromStores)([eL.default], () => eL.default.getGuild(null == u ? void 0 : u.guild_id), [u]), {
     needSubscriptionToAccess: C
-  } = (0, V.default)(null !== (t = null == u ? void 0 : u.id) && void 0 !== t ? t : void 0), _ = (0, f.useStateFromStores)([M.default], () => {
+  } = (0, B.default)(null !== (t = null == u ? void 0 : u.id) && void 0 !== t ? t : void 0), _ = (0, f.useStateFromStores)([M.default], () => {
     let e = null != r ? M.default.getParticipants(r) : [],
       t = null != r ? M.default.getActivityParticipants(r) : [];
     return e.length - t.length > 0
@@ -718,7 +718,7 @@ var e2 = a.memo(function(e) {
   }), N = (0, f.useStateFromStores)([x.default], () => x.default.getActivityPanelMode()), R = null != I && !(0, A.default)(null == u ? void 0 : u.id) && N === ez.ActivityPanelModes.PANEL, j = (0, f.useStateFromStores)([eU.default], () => null != u && u.isVocalThread() && !d.isEmpty(eU.default.getVoiceStatesForChannel(u.id)), [u]), L = (null == u ? void 0 : u.isGuildVocal()) || R || _ || j, {
     welcomeModalChannelId: y
   } = (0, c.useLocation)(), O = (0, f.useStateFromStores)([es.default], () => null != u && es.default.isLurking(u.guild_id), [u]), P = (0, f.useStateFromStores)([ev.default], () => ev.default.hasSeen(null == u ? void 0 : u.guild_id, O), [u, O]), D = (0, f.useStateFromStores)([M.default, x.default], () => null != x.default.getConnectedActivityChannelId() && x.default.getActivityPanelMode() === ez.ActivityPanelModes.PANEL ? x.default.getFocusedLayout() === ez.FocusedActivityLayouts.NO_CHAT ? eY.ChannelLayouts.NO_CHAT : eY.ChannelLayouts.NORMAL : null != r ? M.default.getLayout(r) : eY.ChannelLayouts.NORMAL, [r]), U = (0, f.useStateFromStores)([M.default], () => null != u ? M.default.getSelectedParticipant(u.id) : null), w = (0, f.useStateFromStores)([eD.default], () => eD.default.getCurrentUser()), F = (0, el.default)(g), k = (0, ex.default)(y, null == g ? void 0 : g.id), {
-    section: B,
+    section: V,
     channelSidebarState: H
   } = (0, f.useStateFromStoresObject)([eN.default], () => ({
     section: eN.default.getSection(r, null == u ? void 0 : u.isDM()),
@@ -760,7 +760,7 @@ var e2 = a.memo(function(e) {
     needSubscriptionToAccess: C,
     isLurking: O,
     hasModalOpen: et,
-    section: B,
+    section: V,
     channelSidebarState: H,
     guildSidebarState: W,
     guild: g,

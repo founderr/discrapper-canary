@@ -1,15 +1,15 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   getIsEligibleForQuests: function() {
-    return r
+    return a
   },
   useIsEligibleForQuests: function() {
-    return i
+    return l
   }
 });
-var t = E("619935"),
-  o = E("862205");
-let n = (0, o.createExperiment)({
+var s = n("619935"),
+  i = n("862205");
+let r = (0, i.createExperiment)({
     id: "2023-12_quests",
     kind: "user",
     label: "Quests",
@@ -30,33 +30,33 @@ let n = (0, o.createExperiment)({
       }
     }]
   }),
-  r = e => {
+  a = e => {
     let {
-      location: _,
-      autoTrackExposure: E
-    } = e, o = n.getCurrentConfig({
-      location: _
+      location: t,
+      autoTrackExposure: n
+    } = e, i = r.getCurrentConfig({
+      location: t
     }, {
-      autoTrackExposure: E
-    }), r = t.default.getCurrentConfig({
-      location: _
+      autoTrackExposure: n
+    }), a = s.default.getCurrentConfig({
+      location: t
     }, {
-      autoTrackExposure: E
+      autoTrackExposure: n
     });
-    return o.enabled && !r.paymentsBlocked
+    return i.enabled && !a.paymentsBlocked
   },
-  i = e => {
+  l = e => {
     let {
-      location: _,
-      autoTrackExposure: E
-    } = e, o = n.useExperiment({
-      location: _
+      location: t,
+      autoTrackExposure: n
+    } = e, i = r.useExperiment({
+      location: t
     }, {
-      autoTrackExposure: E
-    }), r = t.default.useExperiment({
-      location: _
+      autoTrackExposure: n
+    }), a = s.default.useExperiment({
+      location: t
     }, {
-      autoTrackExposure: E
+      autoTrackExposure: n
     });
-    return o.enabled && !r.paymentsBlocked
+    return i.enabled && !a.paymentsBlocked
   }

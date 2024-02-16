@@ -103,7 +103,7 @@ function P(e) {
     focusedIndex: 0,
     setFocus: U,
     onSelect: w
-  }), k = v.default.getQuery(f), B = v.default.getSearchType(f) === L.SearchTypes.FAVORITES, V = (0, d.createASTHighlighter)(null !== (t = null == k ? void 0 : k.content) && void 0 !== t ? t : ""), H = j.map(e => {
+  }), k = v.default.getQuery(f), V = v.default.getSearchType(f) === L.SearchTypes.FAVORITES, B = (0, d.createASTHighlighter)(null !== (t = null == k ? void 0 : k.content) && void 0 !== t ? t : ""), H = j.map(e => {
     let {
       channel: t,
       results: n,
@@ -112,7 +112,7 @@ function P(e) {
     return (0, l.jsx)(b, {
       channel: t,
       results: n,
-      highlighter: V,
+      highlighter: B,
       startIndex: a,
       resultRefs: P,
       totalResults: I,
@@ -122,7 +122,7 @@ function P(e) {
       offset: _,
       jumpToMessage: M,
       listNavigator: F,
-      favoriteSearch: B
+      favoriteSearch: V
     }, "".concat(t.id, "-").concat(a))
   });
   H.push();
@@ -153,7 +153,7 @@ function P(e) {
           count: S
         })
       })]
-    }) : null, !x && !B && (0, l.jsx)(R.default, {
+    }) : null, !x && !V && (0, l.jsx)(R.default, {
       changePage: A,
       offset: _,
       totalResults: I,
@@ -182,7 +182,7 @@ function b(e) {
     if (e === x.default.getChannelId()) return;
     let t = C.default.getChannel(e);
     if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, S.transitionToChannel)(t.id)
-  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, B = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, V = null != B ? B.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != B ? (0, h.default)(B) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
+  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, B = null != V ? V.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != V ? (0, h.default)(V) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
     content: Y
   } = (0, p.default)({
     content: F,
@@ -194,7 +194,7 @@ function b(e) {
     let e = z.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth)
   }, []);
-  let X = [F, V, k].filter(e => null != e).join(", ");
+  let X = [F, B, k].filter(e => null != e).join(", ");
   return (0, l.jsx)(A.ObscuredDisplayContext.Provider, {
     value: (0, m.default)(U, W),
     children: (0, l.jsxs)("ul", {
@@ -218,10 +218,10 @@ function b(e) {
               className: O.channelNameText,
               children: [D && null !== k && "".concat(k, " : "), Y]
             })
-          }), null != B && null != V && null != G ? (0, l.jsxs)(i.Clickable, {
+          }), null != V && null != B && null != G ? (0, l.jsxs)(i.Clickable, {
             className: O.parentChannelNameClickable,
             onClick: e => {
-              e.stopPropagation(), w(B.id)
+              e.stopPropagation(), w(V.id)
             },
             children: [(0, l.jsx)(G, {
               className: O.parentChannelNameIcon,
@@ -231,7 +231,7 @@ function b(e) {
               className: O.parentChannelNameText,
               variant: "text-xs/medium",
               color: "header-secondary",
-              children: V
+              children: B
             })]
           }) : null]
         })

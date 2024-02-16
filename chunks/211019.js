@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return m
   }
 });
 var a = n("37983");
@@ -15,56 +15,56 @@ var r = n("414456"),
   d = n("271938"),
   c = n("30672"),
   f = n("100844"),
-  S = n("607391"),
-  E = n("782340"),
-  h = n("100469");
-let _ = n("588281");
+  h = n("607391"),
+  p = n("782340"),
+  E = n("100469");
+let C = n("588281");
 
-function C(e) {
+function m(e) {
   let {
     participant: t,
     width: n,
     noArt: r = !1,
-    selected: C = !1
-  } = e, p = n < 195, m = (0, i.useStateFromStores)([o.default, d.default], () => o.default.getAllActiveStreams().some(e => {
+    selected: m = !1
+  } = e, S = n < 195, g = (0, i.useStateFromStores)([o.default, d.default], () => o.default.getAllActiveStreams().some(e => {
     let {
       ownerId: t
     } = e;
     return t !== d.default.getId()
   }));
   return (0, a.jsx)("div", {
-    className: s(h.content, h.streamHidden, {
-      [h.small]: p
+    className: s(E.content, E.streamHidden, {
+      [E.small]: S
     }),
-    children: (0, a.jsx)(S.default, {
-      className: h.streamHiddenEmptyState,
-      artURL: _,
+    children: (0, a.jsx)(h.default, {
+      className: E.streamHiddenEmptyState,
+      artURL: C,
       noArt: r,
-      selected: C,
-      size: (0, S.getSizeForWidth)(n),
-      header: p ? null : E.default.Messages.STREAM_HIDDEN,
-      description: C ? null : (0, a.jsxs)("div", {
-        className: s(h.streamHiddenCTA, {
-          [h.largePaddingTop]: !p
+      selected: m,
+      size: (0, h.getSizeForWidth)(n),
+      header: S ? null : p.default.Messages.STREAM_HIDDEN,
+      description: m ? null : (0, a.jsxs)("div", {
+        className: s(E.streamHiddenCTA, {
+          [E.largePaddingTop]: !S
         }),
         children: [(0, a.jsx)(f.CallTileCTA, {
-          isSmall: p,
+          isSmall: S,
           children: (0, a.jsx)(l.Text, {
-            variant: p ? "text-sm/semibold" : "text-md/semibold",
+            variant: S ? "text-sm/semibold" : "text-md/semibold",
             color: "none",
-            children: n < 175 ? E.default.Messages.WATCH : E.default.Messages.WATCH_STREAM
+            children: n < 175 ? p.default.Messages.WATCH : p.default.Messages.WATCH_STREAM
           })
-        }), m ? (0, a.jsx)(f.CallTileCTA, {
-          className: h.addCTA,
-          tooltip: E.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+        }), g ? (0, a.jsx)(f.CallTileCTA, {
+          className: E.addCTA,
+          tooltip: p.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
           onClick: e => {
             e.stopPropagation(), (0, u.watchStream)(t.stream, {
               forceMultiple: !0
             })
           },
-          isSmall: p,
+          isSmall: S,
           children: (0, a.jsx)(c.default, {
-            className: h.addStreamIcon
+            className: E.addStreamIcon
           })
         }) : null]
       })

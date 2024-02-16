@@ -36,7 +36,7 @@ function g(e) {
   } = e, A = (0, c.default)(t.id, h), [O, x] = (0, S.default)(t, A, {
     pendingThemeColors: n,
     isPreview: !0
-  }), R = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(h, 80), v = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), D = (0, u.useAvatarColors)(M, v, !1);
+  }), R = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(h, 80), D = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), v = (0, u.useAvatarColors)(M, D, !1);
   if (null == O || null == x) return null;
   let L = e => {
     let t = r(e, null == A ? void 0 : A.themeColors);
@@ -55,7 +55,7 @@ function g(e) {
         children: (0, a.jsx)(T.default, {
           onChange: e => L([e, x]),
           color: O,
-          suggestedColors: D,
+          suggestedColors: v,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
             className: _.colorSwatchLabel,
@@ -70,7 +70,7 @@ function g(e) {
         children: (0, a.jsx)(T.default, {
           onChange: e => L([O, e]),
           color: x,
-          suggestedColors: D,
+          suggestedColors: v,
           showEyeDropper: !0,
           label: (0, a.jsx)(d.Text, {
             className: _.colorSwatchLabel,

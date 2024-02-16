@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var i = n("414456"),
-  s = n.n(i),
-  r = n("167115"),
+  r = n.n(i),
+  s = n("167115"),
   l = n("77078"),
   o = n("956089"),
   u = n("782340"),
@@ -19,11 +19,11 @@ function d(e) {
     className: t
   } = e;
   return (0, a.jsx)(o.TextBadge, {
-    className: s(t, c.badge),
+    className: r(t, c.badge),
     disableColor: !0,
     text: (0, a.jsxs)("div", {
       className: c.innerBadge,
-      children: [(0, a.jsx)(r.PollsIcon, {
+      children: [(0, a.jsx)(s.PollsIcon, {
         className: c.icon,
         color: l.tokens.colors.INTERACTIVE_ACTIVE
       }), (0, a.jsx)(l.Text, {

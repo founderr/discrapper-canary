@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("834052"),
   F = n("506466"),
   k = n("199811"),
-  B = n("96151"),
-  V = n("49111"),
+  V = n("96151"),
+  B = n("49111"),
   H = n("646718"),
   G = n("782340"),
   W = n("225243");
@@ -122,8 +122,8 @@ function z(e) {
     channel: c,
     toggleRequestToSpeakSidebar: f,
     showRequestToSpeakSidebar: h
-  } = e, p = (0, m.default)(c), E = (0, r.useStateFromStores)([w.default], () => w.default.getStageInstanceByChannel(c.id)), C = (0, P.useActualStageSpeakerCount)(c.id), _ = (0, P.useStageParticipantsCount)(c.id, b.StageChannelParticipantNamedIndex.AUDIENCE), I = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(c.guild_id), [c.guild_id]), T = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, v = (null == I ? void 0 : I.isCommunity()) ? T < V.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == I ? void 0 : I.premiumTier) !== V.BoostedGuildTiers.TIER_3 && T <= V.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, D = (0, B.default)(c), F = (0, r.useStateFromStores)([N.default], () => N.default.can(U.MODERATE_STAGE_CHANNEL_PERMISSIONS, c)), k = () => {
-    d.default.updateStageVideoLimitBoostUpsellDismissed(c.id, !0), y.default.track(V.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
+  } = e, p = (0, m.default)(c), E = (0, r.useStateFromStores)([w.default], () => w.default.getStageInstanceByChannel(c.id)), C = (0, P.useActualStageSpeakerCount)(c.id), _ = (0, P.useStageParticipantsCount)(c.id, b.StageChannelParticipantNamedIndex.AUDIENCE), I = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(c.guild_id), [c.guild_id]), T = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, v = (null == I ? void 0 : I.isCommunity()) ? T < B.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == I ? void 0 : I.premiumTier) !== B.BoostedGuildTiers.TIER_3 && T <= B.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, D = (0, V.default)(c), F = (0, r.useStateFromStores)([N.default], () => N.default.can(U.MODERATE_STAGE_CHANNEL_PERMISSIONS, c)), k = () => {
+    d.default.updateStageVideoLimitBoostUpsellDismissed(c.id, !0), y.default.track(B.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
       guild_id: c.guild_id,
       type: H.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
       is_moderator: F,
@@ -131,7 +131,7 @@ function z(e) {
     })
   };
   a.useEffect(() => {
-    D && y.default.track(V.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
+    D && y.default.track(B.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
       guild_id: c.guild_id,
       type: H.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
       is_moderator: F,
@@ -147,7 +147,7 @@ function z(e) {
     }),
     onDoubleClick: g.handleDoubleClick,
     transparent: !0,
-    className: i((0, O.getThemeClass)(V.ThemeTypes.DARK), W.participants),
+    className: i((0, O.getThemeClass)(B.ThemeTypes.DARK), W.participants),
     children: [(0, l.jsx)(L.default.Icon, {
       icon: j.default,
       disabled: !0,
@@ -213,9 +213,9 @@ function z(e) {
               (0, S.openGuildBoostingMarketingModal)({
                 guildId: c.guild_id,
                 location: {
-                  section: V.AnalyticsSections.STAGE_VIDEO_LIMIT
+                  section: B.AnalyticsSections.STAGE_VIDEO_LIMIT
                 }
-              }), y.default.track(V.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
+              }), y.default.track(B.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
                 guild_id: c.guild_id,
                 type: H.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
                 is_moderator: F,

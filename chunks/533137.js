@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("837899"),
   R = s("68238"),
   M = s("956089"),
-  v = s("898184"),
-  D = s("306073"),
+  D = s("898184"),
+  v = s("306073"),
   L = s("430780"),
   P = s("592504"),
   j = s("618976"),
@@ -128,7 +128,7 @@ var w = e => {
     expanded: T,
     handleToggleExpanded: g,
     subscriptionInfo: h
-  } = (0, v.default)(t), [I, C] = n.useState(!1), R = (0, O.useUID)(), {
+  } = (0, D.default)(t), [I, C] = n.useState(!1), R = (0, O.useUID)(), {
     analyticsLocations: w
   } = (0, f.default)(), {
     shouldHideGuildPurchaseEntryPoints: V
@@ -191,7 +191,7 @@ var w = e => {
     }) : null;
   return (0, a.jsxs)("div", {
     className: F.container,
-    children: [(0, a.jsx)(D.default, {
+    children: [(0, a.jsx)(v.default, {
       onClick: g,
       className: F.headerContainer,
       children: e => {

@@ -48,7 +48,7 @@ function B(e) {
     channel: k
   } = e, F = (0, x.useMediaPostEmbedData)(r, B), {
     setPopout: w
-  } = (0, S.default)(B.id, U.DEFAULT_POPOUTS), H = (0, p.useContextMenuMessage)(B, k, w, !0), V = h.GifAutoPlay.useSetting(), Y = (0, P.useIsWindowFocused)(), [W, K] = l.useState(!1), [z, Z] = l.useState((null == F ? void 0 : F.coverImage) == null), J = (0, c.default)([f.default], () => f.default.useReducedMotion), Q = (0, c.default)([g.default, M.default], () => {
+  } = (0, S.default)(B.id, U.DEFAULT_POPOUTS), H = (0, p.useContextMenuMessage)(B, k, w, !0), V = h.GifAutoPlay.useSetting(), Y = (0, P.useIsWindowFocused)(), [W, K] = l.useState(!1), [z, Q] = l.useState((null == F ? void 0 : F.coverImage) == null), Z = (0, c.default)([f.default], () => f.default.useReducedMotion), J = (0, c.default)([g.default, M.default], () => {
     var e;
     return g.default.isMember(null == F ? void 0 : F.guildId, null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [F]), X = (0, c.default)([g.default], () => {
@@ -65,11 +65,11 @@ function B(e) {
       media_post_id: F.threadId,
       channel_id: k.id,
       can_access: F.canAccess,
-      is_member: Q
-    }), F.canAccess ? (0, m.default)(y.Routes.CHANNEL(F.guildId, F.threadId, F.messageId)) : Q ? (0, m.default)(y.Routes.CHANNEL(F.guildId, F.parentChannelId)) : await v.startLurking(F.guildId, {}, {
+      is_member: J
+    }), F.canAccess ? (0, m.default)(y.Routes.CHANNEL(F.guildId, F.threadId, F.messageId)) : J ? (0, m.default)(y.Routes.CHANNEL(F.guildId, F.parentChannelId)) : await v.startLurking(F.guildId, {}, {
       channelId: F.parentChannelId
     }))
-  }, [F, k, Q]), el = l.useCallback(() => (o((null == F ? void 0 : F.authorId) != null, "Author Id cannot be null when loading user profile"), (0, A.default)(F.authorId, F.avatarUrl, {
+  }, [F, k, J]), el = l.useCallback(() => (o((null == F ? void 0 : F.authorId) != null, "Author Id cannot be null when loading user profile"), (0, A.default)(F.authorId, F.avatarUrl, {
     guildId: F.guildId,
     channelId: k.id
   })), [F, k]);
@@ -104,7 +104,7 @@ function B(e) {
           [b.spoiler]: F.shouldSpoiler
         }),
         onContextMenu: H,
-        onError: () => Z(!0)
+        onError: () => Q(!0)
       }) : (0, s.jsx)(I.default, {
         src: !(Y && (V || W)) && ed ? "".concat(eu, "?format=png") : eu,
         backgroundSrc: "".concat(eu, "?format=png"),
@@ -115,7 +115,7 @@ function B(e) {
         }),
         imageChildClassName: b.thumbnailImage,
         onContextMenu: H,
-        onError: () => Z(!0)
+        onError: () => Q(!0)
       })), null != F.coverImageOverlayText && (0, s.jsx)(E.Clickable, {
         onClick: es,
         children: (0, s.jsx)("div", {
@@ -208,7 +208,7 @@ function B(e) {
             children: F.ctaText
           })
         }) : (0, s.jsx)(O.default, {
-          pauseAnimation: J,
+          pauseAnimation: Z,
           onClick: es,
           className: i(b.ctaButtonContent, b.subscribeButton),
           color: E.Button.Colors.CUSTOM,

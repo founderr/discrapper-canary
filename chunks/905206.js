@@ -157,7 +157,7 @@ function M(e, t, n) {
     var t, n;
     let s = A(w, "".concat(e.answer_id));
     return null !== (n = null == s ? void 0 : null === (t = s.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
-  })), Z = L.map(e => {
+  })), Q = L.map(e => {
     var t, n, r;
     let o = "".concat(e.answer_id),
       u = A(w, o),
@@ -216,7 +216,7 @@ function M(e, t, n) {
         count: String(E)
       }))
     }
-  }), J = (0, s.match)({
+  }), Z = (0, s.match)({
     isExpired: k,
     canSubmitVote: U,
     hasVoted: G,
@@ -246,7 +246,7 @@ function M(e, t, n) {
     presentation: "button",
     enabled: U,
     type: "submit"
-  })), Q = (0, s.match)({
+  })), J = (0, s.match)({
     isInteractive: F,
     isEditingVote: B
   }).with({
@@ -275,7 +275,7 @@ function M(e, t, n) {
   return {
     question: h.question,
     promptLabel: $,
-    answers: Z,
+    answers: Q,
     answersInteraction: (0, s.match)({
       tapShouldOpenVotersModal: Y,
       canTapAnswers: D,
@@ -308,7 +308,7 @@ function M(e, t, n) {
       layoutType: v
     }),
     containerStyle: "normal",
-    primaryAction: J,
+    primaryAction: Z,
     canSubmitVote: U,
     canTapAnswers: D,
     canSelectMultipleAnswers: q,
@@ -318,7 +318,7 @@ function M(e, t, n) {
     expirationLabel: null != j ? j : p.default.Messages.POLL_EXPIRED,
     isExpired: k,
     myAvatarUrl: R,
-    secondaryAction: Q,
+    secondaryAction: J,
     tertiaryAction: X
   }
 }

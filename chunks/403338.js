@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return M
   },
   ClientThemesSidebarButton: function() {
-    return v
+    return D
   }
 });
 var a = s("37983"),
@@ -91,7 +91,7 @@ let R = () => {
       })]
     })
   },
-  v = () => {
+  D = () => {
     let e = (0, l.useStateFromStores)([S.default], () => S.default.isPreview);
     return e ? null : (0, a.jsx)(r.Button, {
       size: r.ButtonSizes.SMALL,

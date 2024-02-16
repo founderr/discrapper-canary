@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getMessageContentId: function() {
-    return r
+    return s
   },
   getMessageReplyId: function() {
     return l
@@ -27,9 +27,9 @@ n.r(t), n.d(t, {
 });
 var a = n("862013"),
   i = n("913491"),
-  s = n("49111");
+  r = n("49111");
 
-function r(e) {
+function s(e) {
   return "message-content-".concat(e.id)
 }
 
@@ -55,22 +55,22 @@ function d(e) {
 }
 
 function m(e, t, n) {
-  let c = e.type === s.MessageTypes.REPLY && null != e.messageReference,
+  let c = e.type === r.MessageTypes.REPLY && null != e.messageReference,
     m = e.embeds.length > 0,
     f = e.attachments.length > 0,
     g = e.stickerItems.length > 0,
     p = e.codedLinks.length > 0,
-    E = e.hasFlag(s.MessageFlags.HAS_THREAD),
-    A = m || f || g || p || E || e.type === s.MessageTypes.THREAD_CREATED,
-    h = m && e.content === e.embeds[0].url && e.embeds[0].type === s.MessageEmbedTypes.GIFV,
-    S = e.type !== s.MessageTypes.DEFAULT || !h && "" !== e.content,
+    E = e.hasFlag(r.MessageFlags.HAS_THREAD),
+    A = m || f || g || p || E || e.type === r.MessageTypes.THREAD_CREATED,
+    h = m && e.content === e.embeds[0].url && e.embeds[0].type === r.MessageEmbedTypes.GIFV,
+    S = e.type !== r.MessageTypes.DEFAULT || !h && "" !== e.content,
     I = (0, i.default)(e),
     T = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
     y = o(e, t),
     M = l(e),
     v = I ? "" : "".concat(c ? M : y, " ").concat(a.MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID);
   if (S) {
-    let t = r(e);
+    let t = s(e);
     v += " ".concat(t)
   }
   if (A) {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var a = n("37983"),
@@ -15,7 +15,7 @@ var a = n("37983"),
   c = n("782340"),
   f = n("31665");
 
-function S(e) {
+function h(e) {
   let {
     className: t,
     isVertical: n
@@ -30,7 +30,7 @@ function S(e) {
   })
 }
 
-function E(e) {
+function p(e) {
   let {
     className: t,
     isVertical: n
@@ -45,21 +45,21 @@ function E(e) {
   })
 }
 
-function h(e) {
+function E(e) {
   let {
     channelId: t,
     className: n,
     isParticipantsOpen: s,
     isVertical: u = !1,
     hideTooltip: o = !1
-  } = e, h = r.useCallback(e => {
+  } = e, E = r.useCallback(e => {
     let {
       className: t
     } = e;
-    return s ? (0, a.jsx)(E, {
+    return s ? (0, a.jsx)(p, {
       className: t,
       isVertical: u
-    }) : (0, a.jsx)(S, {
+    }) : (0, a.jsx)(h, {
       className: t,
       isVertical: u
     })
@@ -70,7 +70,7 @@ function h(e) {
     onClick: function() {
       l.default.toggleParticipants(t, !s)
     },
-    iconComponent: h,
+    iconComponent: E,
     shouldShowTooltip: !o
   })
 }

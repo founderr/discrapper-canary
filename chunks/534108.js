@@ -41,9 +41,9 @@ var l = n("37983"),
   k = n("569717"),
   w = n("782340"),
   F = n("851289");
-let B = [8, 0, 8, 8];
+let G = [8, 0, 8, 8];
 
-function G(e) {
+function B(e) {
   return 0 === e ? 16 : 32
 }
 
@@ -280,8 +280,8 @@ function W(e) {
       renderCategoryList: ep,
       renderHeaderAccessories: em,
       rowHeight: 48,
-      sectionHeaderHeight: G,
-      listPadding: B,
+      sectionHeaderHeight: B,
+      listPadding: G,
       itemNodeWidth: 150,
       gridNavigatorId: X,
       renderEmptySearchState: V,

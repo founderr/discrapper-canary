@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("697218"),
   R = s("433487"),
   M = s("423487"),
-  v = s("306160"),
-  D = s("158998"),
+  D = s("306160"),
+  v = s("158998"),
   L = s("50885"),
   P = s("845579"),
   j = s("760947"),
@@ -131,7 +131,7 @@ function w(e) {
   let {
     user: n,
     className: l
-  } = e, r = (0, _.useGuildAutomodProfileQuarantineErrors)(), o = null !== (s = null == r ? void 0 : null === (t = r.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, d = D.default.getGlobalName(n);
+  } = e, r = (0, _.useGuildAutomodProfileQuarantineErrors)(), o = null !== (s = null == r ? void 0 : null === (t = r.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, d = v.default.getGlobalName(n);
   return (0, a.jsxs)("div", {
     className: i(G.field, l),
     children: [(0, a.jsx)("div", {
@@ -349,7 +349,7 @@ function K(e) {
     id: t.id,
     label: F.default.Messages.COPY_ID_USER
   }), n = P.DeveloperMode.useSetting();
-  return n && v.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
+  return n && D.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
     renderPopout: e => {
       let {
         closePopout: t

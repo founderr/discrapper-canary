@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   getGameName: function() {
-    return E
-  },
-  startBroadcastForStream: function() {
-    return h
-  },
-  stopBroadcast: function() {
-    return _
-  },
-  fetchBroadcasterBuckets: function() {
     return p
   },
+  startBroadcastForStream: function() {
+    return E
+  },
+  stopBroadcast: function() {
+    return C
+  },
+  fetchBroadcasterBuckets: function() {
+    return S
+  },
   maybeFetchBroadcastChannels: function() {
-    return m
+    return g
   }
 });
 var a = n("872717"),
@@ -26,15 +26,15 @@ var a = n("872717"),
   d = n("568307"),
   c = n("9759"),
   f = n("194051"),
-  S = n("49111");
+  h = n("49111");
 
-function E(e) {
+function p(e) {
   var t;
   let n = null !== (t = null == e ? void 0 : e.gameName) && void 0 !== t ? t : null == e ? void 0 : e.name;
   return null != n ? n.trim() : null
 }
 
-function h(e, t) {
+function E(e, t) {
   if (null == t) return;
   let {
     canBroadcast: n
@@ -50,21 +50,21 @@ function h(e, t) {
       channelId: f
     } = a;
   if (null == i || null == f) return;
-  let S = l.default.getId();
-  if (i !== S) return;
-  let h = l.default.getSessionId();
-  if (null == h) return;
-  let _ = u.default.getChannel(f),
-    C = null != _ && _.isBroadcastChannel();
-  if (null == _ || i !== _.ownerId || !C) return;
-  let p = function(e) {
+  let h = l.default.getId();
+  if (i !== h) return;
+  let E = l.default.getSessionId();
+  if (null == E) return;
+  let C = u.default.getChannel(f),
+    m = null != C && C.isBroadcastChannel();
+  if (null == C || i !== C.ownerId || !m) return;
+  let S = function(e) {
     var t;
     let n = d.default.getGameForPID(e),
-      a = E(n),
+      a = p(n),
       r = o.default.getGameByName(a);
     return null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "0"
   }(t);
-  null != p && ! function(e) {
+  null != S && ! function(e) {
     let t = l.default.getId(),
       n = l.default.getSessionId();
     null != t && null != n && r.default.dispatch({
@@ -72,21 +72,21 @@ function h(e, t) {
       broadcast: e
     })
   }({
-    sessionId: h,
-    userId: S,
-    applicationId: p,
-    channelId: _.id,
+    sessionId: E,
+    userId: h,
+    applicationId: S,
+    channelId: C.id,
     streamKey: e
   })
 }
 
-function _() {
+function C() {
   r.default.dispatch({
     type: "BROADCAST_STOP"
   })
 }
 
-function C(e) {
+function m(e) {
   let t = {};
   e.forEach(e => {
     t[e] = -1
@@ -95,11 +95,11 @@ function C(e) {
     data: t
   })
 }
-async function p() {
+async function S() {
   let e = f.default.getUserIdsToValidate();
   try {
     let t = await a.default.get({
-      url: S.Endpoints.USER_BROADCASTS,
+      url: h.Endpoints.USER_BROADCASTS,
       query: {
         user_ids: e
       }
@@ -113,17 +113,17 @@ async function p() {
         type: "BROADCASTER_BUCKETS_RECEIVED",
         data: n
       })
-    } else C(e)
+    } else m(e)
   } catch (t) {
-    C(e)
+    m(e)
   }
 }
-async function m() {
+async function g() {
   let e = f.default.getBroadcastsToValidateChannels(),
     t = e.filter(e => null == e.viewers).map(e => e.channelId);
   if (0 !== t.length) try {
     let e = await a.default.get({
-      url: S.Endpoints.BROADCAST_CHANNELS,
+      url: h.Endpoints.BROADCAST_CHANNELS,
       query: {
         channel_ids: t
       }

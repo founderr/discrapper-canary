@@ -1,54 +1,54 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return _
   }
 });
-var l = n("37983"),
-  a = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
+var s = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  i = n.n(a),
   r = n("446674"),
   o = n("669491"),
   u = n("77078"),
   d = n("915639"),
   c = n("240481"),
-  f = n("227231"),
-  h = n("220350"),
-  m = function(e) {
+  E = n("227231"),
+  f = n("220350"),
+  _ = function(e) {
     let {
       className: t,
       color: n = o.default.colors.WHITE,
-      quest: s
-    } = e, m = (0, r.useStateFromStores)([d.default], () => d.default.locale), p = a.useMemo(() => (0, f.calculatePercentComplete)(s), [s]), E = 100 * p;
-    return (0, l.jsxs)("div", {
-      className: i(h.wrapper, t),
+      quest: a
+    } = e, _ = (0, r.useStateFromStores)([d.default], () => d.default.locale), T = l.useMemo(() => (0, E.calculatePercentComplete)(a), [a]), I = 100 * T;
+    return (0, s.jsxs)("div", {
+      className: i(f.wrapper, t),
       style: {
         color: n.css
       },
-      children: [(0, l.jsxs)("div", {
-        className: h.percentCompleteWrapper,
-        children: [(0, l.jsx)(u.Text, {
+      children: [(0, s.jsxs)("div", {
+        className: f.percentCompleteWrapper,
+        children: [(0, s.jsx)(u.Text, {
           variant: "text-xs/semibold",
-          className: h.percentCompleteLabel,
+          className: f.percentCompleteLabel,
           color: "none",
-          children: (0, c.formatPercent)(m, p, {
+          children: (0, c.formatPercent)(_, T, {
             roundingMode: "floor"
           })
-        }), (0, l.jsx)("div", {
-          className: h.percentCompleteLabelOffset,
+        }), (0, s.jsx)("div", {
+          className: f.percentCompleteLabelOffset,
           style: {
-            width: "".concat(100 - E, "%")
+            width: "".concat(100 - I, "%")
           }
         })]
-      }), (0, l.jsx)("div", {
-        className: h.progressBar,
+      }), (0, s.jsx)("div", {
+        className: f.progressBar,
         role: "progressbar",
-        "aria-valuenow": E,
-        children: (0, l.jsx)("div", {
-          className: h.progressBarFill,
+        "aria-valuenow": I,
+        children: (0, s.jsx)("div", {
+          className: f.progressBarFill,
           style: {
-            width: "".concat(E, "%")
+            width: "".concat(I, "%")
           }
         })
       })]

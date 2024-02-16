@@ -11,8 +11,8 @@ var i = n("37983"),
   s = n("77078"),
   o = n("812204"),
   u = n("685665"),
-  d = n("617917"),
-  c = n("599110"),
+  c = n("617917"),
+  d = n("599110"),
   f = n("719923"),
   m = n("688771"),
   _ = n("154889"),
@@ -63,13 +63,13 @@ function O(e) {
     autoTrackExposure: !1
   }), ee = Q && M === C.PremiumUpsellTypes.STREAM_QUALITY_UPSELL, et = ee && m.GradientVariants.includes($);
   r.useEffect(() => {
-    !K && (z ? c.default.track(p.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+    !K && (z ? d.default.track(p.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
       type: "".concat(M, " - Tier ").concat(L.boostedGuildTier),
       guild_id: L.guild.id,
       channel_id: L.channelId,
       location: h,
       location_stack: q
-    }) : c.default.track(p.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    }) : d.default.track(p.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: M,
       source: g,
       location: h,
@@ -145,7 +145,7 @@ function O(e) {
           children: B
         }) : null, (() => {
           let e;
-          if (z) return (0, i.jsx)(d.default, {
+          if (z) return (0, i.jsx)(c.default, {
             analyticsLocation: h,
             guild: L.guild,
             onClose: y

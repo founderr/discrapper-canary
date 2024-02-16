@@ -43,19 +43,19 @@ function R(e) {
 function M() {
   let {
     analyticsLocations: e
-  } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = R(r), N = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, D = N && null != r && null == g;
+  } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = R(r), N = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, v = N && null != r && null == g;
   n.useEffect(() => {
-    D && (0, E.trackCustomCallSoundExternallyDeleted)({
+    v && (0, E.trackCustomCallSoundExternallyDeleted)({
       location: e
     })
-  }, [D, e]), n.useEffect(() => {
+  }, [v, e]), n.useEffect(() => {
     (0, c.maybeFetchSoundboardSounds)()
   }, []);
   let L = n.useCallback((e, t) => {
     let {
       inDropdown: s
     } = t;
-    return null == e ? null : s ? (0, a.jsx)(v, {
+    return null == e ? null : s ? (0, a.jsx)(D, {
       guildId: e.value
     }) : null
   }, []);
@@ -101,7 +101,7 @@ function M() {
         onSelect: s => {
           null == s ? (0, E.removeCustomJoinSound)(t, e) : (0, E.updateCustomJoinSound)(t, s, e)
         }
-      }), D && (0, a.jsx)(m.default, {
+      }), v && (0, a.jsx)(m.default, {
         className: O.notice,
         messageType: m.HelpMessageTypes.WARNING,
         children: A.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED
@@ -110,7 +110,7 @@ function M() {
   })
 }
 
-function v(e) {
+function D(e) {
   let {
     guildId: t
   } = e, s = (0, l.useStateFromStores)([N.default], () => {

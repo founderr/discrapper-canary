@@ -8,11 +8,11 @@ var i = n("872717"),
   r = n("689988"),
   a = n("870691"),
   l = n("42203"),
-  s = n("718517"),
-  u = n("49111");
+  u = n("718517"),
+  s = n("49111");
 let o = {},
   c = 0,
-  d = 15 * s.default.Millis.SECOND;
+  d = 15 * u.default.Millis.SECOND;
 
 function f() {
   o = {
@@ -24,11 +24,11 @@ function E() {
   !__OVERLAY__ && (clearTimeout(c), c = setTimeout(() => h({}), d))
 }
 async function _(e, t) {
-  null == e || e === u.ME ? await i.default.patch({
-    url: u.Endpoints.USER_GUILD_SETTINGS(u.ME),
+  null == e || e === s.ME ? await i.default.patch({
+    url: s.Endpoints.USER_GUILD_SETTINGS(s.ME),
     body: t
   }) : await h(null != t ? {
-    [null != e ? e : u.ME]: t
+    [null != e ? e : s.ME]: t
   } : {})
 }
 async function h(e) {
@@ -51,8 +51,8 @@ async function h(e) {
   }
   return t ? (o = {
     ...n
-  }, delete e[u.FAVORITES], (await i.default.patch({
-    url: u.Endpoints.USER_GUILD_SETTINGS_BULK,
+  }, delete e[s.FAVORITES], (await i.default.patch({
+    url: s.Endpoints.USER_GUILD_SETTINGS_BULK,
     body: {
       guilds: e
     }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return Z
+    return Q
   }
 });
 var s = n("37983"),
@@ -159,7 +159,7 @@ function z(e) {
   })
 }
 
-function Z(e) {
+function Q(e) {
   let {
     id: t,
     compact: n,
@@ -178,9 +178,9 @@ function Z(e) {
     isFocused: U,
     handleFocus: j,
     handleBlur: W
-  } = (0, A.useFocusInside)(R), K = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Z = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
-    ruleName: J,
-    embedChannel: Q,
+  } = (0, A.useFocusInside)(R), K = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
+    ruleName: Z,
+    embedChannel: J,
     decisionId: X,
     keywordMatchedContent: q,
     keyword: $,
@@ -220,17 +220,17 @@ function Z(e) {
   }(a, r), eu = l.useCallback(() => {
     (0, I.openSubmitFeedback)(a.id, ee, X, r)
   }, [a.id, ee, X, r]), ed = l.useCallback(e => {
-    null != et && null != Q && (e.stopPropagation(), e.preventDefault(), (0, N.default)(G.Routes.CHANNEL(null == Q ? void 0 : Q.guild_id, null == Q ? void 0 : Q.id, et)))
-  }, [Q, et]), ec = l.useCallback(() => {
+    null != et && null != J && (e.stopPropagation(), e.preventDefault(), (0, N.default)(G.Routes.CHANNEL(null == J ? void 0 : J.guild_id, null == J ? void 0 : J.id, et)))
+  }, [J, et]), ec = l.useCallback(() => {
     (0, m.executeAlertAction)(a.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)
-  }, [r, a.id]), eE = l.useMemo(() => (0, T.getActionHeaderText)(a, Q, () => (0, s.jsx)("div", {
+  }, [r, a.id]), eE = l.useMemo(() => (0, T.getActionHeaderText)(a, J, () => (0, s.jsx)("div", {
     className: H.channelNameContainer,
     children: (0, s.jsx)(P.default, {
-      channel: Q,
+      channel: J,
       className: H.channelName,
       openChatWithoutConnecting: !0
     })
-  })), [a, Q]), ef = (0, k.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Z && null != et && (null == el || !el.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
+  })), [a, J]), ef = (0, k.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Q && null != et && (null == el || !el.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
   return (0, s.jsx)("div", {
     onMouseEnter: g,
     onMouseLeave: O,
@@ -281,7 +281,7 @@ function Z(e) {
           children: (0, s.jsx)(D.default, {
             ...v,
             message: a,
-            channel: Q,
+            channel: J,
             content: ei,
             compact: n,
             withFooter: !0,
@@ -289,7 +289,7 @@ function Z(e) {
             className: i(H.embedCard, {
               [H.compact]: n,
               [H.selected]: er || K && U,
-              [H.isClickable]: null != et && null != Q
+              [H.isClickable]: null != et && null != J
             }),
             childrenAccessories: (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsxs)("div", {
@@ -305,12 +305,12 @@ function Z(e) {
                   }), (0, s.jsx)("div", {
                     className: i(H.dot, H.dotMargin)
                   })]
-                }), null != J && (0, s.jsx)(E.Text, {
+                }), null != Z && (0, s.jsx)(E.Text, {
                   variant: "text-xs/medium",
                   color: "text-muted",
                   tag: "span",
                   children: w.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME.format({
-                    ruleName: J
+                    ruleName: Z
                   })
                 }), null != ef && (0, s.jsxs)(s.Fragment, {
                   children: [(0, s.jsx)("div", {

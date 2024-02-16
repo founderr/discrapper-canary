@@ -94,7 +94,7 @@ function A() {
     },
     R = t.map(e => o.DismissibleContent[e]),
     M = A.filter(e => e.toLowerCase().includes(f.toLowerCase())).filter(e => !R.includes(e)),
-    v = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(f.toLowerCase())).sort((e, t) => e.localeCompare(t));
+    D = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(f.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormSection, {
       title: "Dismissible Content Fatigue",
@@ -165,7 +165,7 @@ function A() {
           children: "Available Dismissible Contents"
         })
       }), (0, a.jsx)(C, {
-        items: v,
+        items: D,
         dismissedContents: p,
         handleChange: x
       })]

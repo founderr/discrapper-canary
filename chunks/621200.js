@@ -43,8 +43,8 @@ function M() {
       pendingAvatar: s,
       pendingBanner: l,
       pendingBio: M,
-      pendingPronouns: v,
-      pendingGlobalName: D,
+      pendingPronouns: D,
+      pendingGlobalName: v,
       pendingAccentColor: L,
       pendingAvatarDecoration: P,
       pendingThemeColors: j,
@@ -71,9 +71,9 @@ function M() {
       onBannerChange: N.setPendingBanner,
       pendingBanner: l,
       pendingBio: B,
-      pendingPronouns: v,
+      pendingPronouns: D,
       pendingAvatar: s,
-      pendingGlobalName: D,
+      pendingGlobalName: v,
       pendingAvatarDecoration: P,
       pendingProfileEffectId: b
     };

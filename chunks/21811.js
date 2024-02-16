@@ -30,12 +30,12 @@ var a = s("37983"),
   x = s("555066"),
   R = s("904725"),
   M = s("397336"),
-  v = s("49111"),
-  D = s("353927"),
+  D = s("49111"),
+  v = s("353927"),
   L = s("782340"),
   P = s("890957");
 let j = (0, T.uid)(),
-  b = "".concat(f.default.getArticleURL(v.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
+  b = "".concat(f.default.getArticleURL(D.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
 
 function U(e, t, s) {
   (0, o.openModal)(n => (0, a.jsx)(o.ConfirmModal, {
@@ -59,7 +59,7 @@ function B() {
     attenuateWhileSpeakingSelf: l,
     attenuateWhileSpeakingOthers: T,
     audioSubsystem: f,
-    silenceWarning: v,
+    silenceWarning: D,
     debugLoggingEnabled: B,
     legacyAudioSubsystemSupported: y,
     experimentalAudioSubsystemSupported: F,
@@ -73,11 +73,11 @@ function B() {
     attenuateWhileSpeakingOthers: S.default.getAttenuateWhileSpeakingOthers(),
     audioSubsystem: S.default.getAudioSubsystem(),
     silenceWarning: S.default.getEnableSilenceWarning(),
-    debugLoggingEnabled: S.default.supports(D.Features.DEBUG_LOGGING),
-    legacyAudioSubsystemSupported: S.default.supports(D.Features.LEGACY_AUDIO_SUBSYSTEM),
-    experimentalAudioSubsystemSupported: S.default.supports(D.Features.EXPERIMENTAL_AUDIO_SUBSYSTEM),
-    qosSupported: S.default.supports(D.Features.QOS),
-    attenuationSupported: S.default.supports(D.Features.ATTENUATION)
+    debugLoggingEnabled: S.default.supports(v.Features.DEBUG_LOGGING),
+    legacyAudioSubsystemSupported: S.default.supports(v.Features.LEGACY_AUDIO_SUBSYSTEM),
+    experimentalAudioSubsystemSupported: S.default.supports(v.Features.EXPERIMENTAL_AUDIO_SUBSYSTEM),
+    qosSupported: S.default.supports(v.Features.QOS),
+    attenuationSupported: S.default.supports(v.Features.ATTENUATION)
   })), H = (0, r.useStateFromStores)([E.default], () => E.default.getSubsection()), w = n.createRef(), V = m.isPlatformEmbedded && B && null != c.default.fileManager.readLogFiles;
   return n.useEffect(() => {
     if (H === M.SOUNDBOARD_SUBSECTION) {
@@ -95,7 +95,7 @@ function B() {
       })
     }), (0, a.jsx)(o.FormDivider, {
       className: i(P.marginBottom20)
-    }), (0, a.jsx)(I.default, {}), e === D.InputModes.VOICE_ACTIVITY && (0, a.jsx)(x.default, {}), (0, a.jsx)(o.FormDivider, {
+    }), (0, a.jsx)(I.default, {}), e === v.InputModes.VOICE_ACTIVITY && (0, a.jsx)(x.default, {}), (0, a.jsx)(o.FormDivider, {
       className: P.marginBottom40
     }), (0, a.jsx)("div", {
       style: {
@@ -153,14 +153,14 @@ function B() {
           value: f,
           options: function(e, t) {
             let s = [{
-              value: D.AudioSubsystems.STANDARD,
+              value: v.AudioSubsystems.STANDARD,
               label: "Standard"
             }];
             return e && s.push({
-              value: D.AudioSubsystems.LEGACY,
+              value: v.AudioSubsystems.LEGACY,
               label: "Legacy"
             }), t && s.push({
-              value: D.AudioSubsystems.EXPERIMENTAL,
+              value: v.AudioSubsystems.EXPERIMENTAL,
               label: "Experimental"
             }), s
           }(y, F),
@@ -175,7 +175,7 @@ function B() {
           className: P.marginBottom20,
           title: L.default.Messages.FORM_LABEL_VOICE_DIAGNOSTICS,
           children: (0, a.jsx)(o.FormSwitch, {
-            value: v,
+            value: D,
             onChange: e => d.default.setSilenceWarning(e),
             children: L.default.Messages.DISPLAY_SILENCE_WARNING
           })

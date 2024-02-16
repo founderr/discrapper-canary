@@ -30,7 +30,7 @@ var a = s("37983"),
   x = s("646718"),
   R = s("782340"),
   M = s("43965");
-class v extends n.PureComponent {
+class D extends n.PureComponent {
   componentWillUnmount() {
     this._copyModeTimeout.stop()
   }
@@ -107,7 +107,7 @@ class v extends n.PureComponent {
     }
   }
 }
-class D extends n.PureComponent {
+class v extends n.PureComponent {
   componentDidMount() {
     this._loadedAt = Date.now()
   }
@@ -204,7 +204,7 @@ class D extends n.PureComponent {
         children: r ? (0, a.jsx)(d.Spinner, {
           className: M.spinner
         }) : (0, a.jsxs)(n.Fragment, {
-          children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(v, {
+          children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(D, {
             giftCode: e,
             sku: i,
             hideCode: o
@@ -260,4 +260,4 @@ var L = r.default.connectStores([_.default, f.default, T.default, c.default, m.d
     subscriptionPlan: null != s ? (0, O.getOrFetchSubscriptionPlan)(s) : null,
     giftCodes: l
   }
-})(D)
+})(v)

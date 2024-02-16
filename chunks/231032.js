@@ -50,8 +50,8 @@ var t = E("37983"),
   j = E("773336"),
   X = E("719923"),
   Q = E("269936"),
-  q = E("302537"),
-  J = E("967889"),
+  J = E("302537"),
+  q = E("967889"),
   z = E("102999"),
   $ = E("160139"),
   Z = E("49111"),
@@ -114,10 +114,10 @@ var eo = function(e) {
   return (0, t.jsx)(H.default, {
     children: (0, t.jsx)(c.default, {
       children: (0, t.jsxs)(O.RedesignIconContextProvider, {
-        children: [(0, t.jsx)(q.default, {
+        children: [(0, t.jsx)(J.default, {
           skipsSettingDefaultPageTitle: E
         }), (0, t.jsx)(z.default, {
-          children: (0, t.jsx)(J.default, {
+          children: (0, t.jsx)(q.default, {
             children: (0, t.jsxs)(O.FocusRingScope, {
               containerRef: eA,
               children: [(0, t.jsx)(x.MaskLibrary, {}), (0, t.jsx)(Y.default, {}), (0, t.jsx)(i.FocusGuard, {}), null != N ? (0, t.jsx)(et, {

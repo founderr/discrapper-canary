@@ -96,16 +96,16 @@ let R = (0, C.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
         k = null != D && U.type === I.StickerCategoryTypes.GUILD && D.type !== I.StickerCategoryTypes.GUILD,
         w = U.type === I.StickerCategoryTypes.PACK,
         F = "",
-        B = null;
+        G = null;
       if (U.type === I.StickerCategoryTypes.GUILD || U.type === I.StickerCategoryTypes.EMPTY_GUILD_UPSELL) {
         let e = p.default.getGuild(U.id);
-        null != e && (f = e.id, F = e.name, B = (0, l.jsx)(d.default, {
+        null != e && (f = e.id, F = e.name, G = (0, l.jsx)(d.default, {
           guild: e,
           isSelected: j
         }))
       } else if (w) {
         let e = v.default.getStickerPack(U.id);
-        null != e && (F = e.name, B = (0, l.jsx)(N.default, {
+        null != e && (F = e.name, G = (0, l.jsx)(N.default, {
           disableAnimation: !j || g,
           size: M,
           sticker: (0, _.getStickerPackPreviewSticker)(e)
@@ -135,7 +135,7 @@ let R = (0, C.cssValueToNumber)(r.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
                   guild_id: f
                 }), r()
               },
-              children: B
+              children: G
             })
           })
         }), k ? (0, l.jsx)("hr", {

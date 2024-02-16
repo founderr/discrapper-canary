@@ -130,12 +130,12 @@ function x(e) {
   }(), {
     query: R,
     updateQuery: M,
-    queryResults: v
+    queryResults: D
   } = (0, o.default)({
     visible: !0,
     autocompleterResultTypes: h,
     autocompleterBeforeCreateSearchContext: N
-  }), D = function(e) {
+  }), v = function(e) {
     let t = "" !== e,
       s = (0, l.useStateFromStoresArray)([u.default, d.default, S.default], () => {
         let e = S.default.getGuildId();
@@ -167,13 +167,13 @@ function x(e) {
       row: L
     })
   }, [L]);
-  let j = null != D ? D.length : v.length,
+  let j = null != v ? v.length : D.length,
     b = (() => {
-      if (null != D) {
+      if (null != v) {
         var e;
-        return null === (e = D[L]) || void 0 === e ? void 0 : e.id
+        return null === (e = v[L]) || void 0 === e ? void 0 : e.id
       }
-      let t = v[L];
+      let t = D[L];
       if ((null == t ? void 0 : t.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
     })();
   return (0, a.jsx)("div", {
@@ -197,8 +197,8 @@ function x(e) {
                 break;
               case "enter": {
                 let e = (() => {
-                  if (null != D) return D[L];
-                  let e = v[L];
+                  if (null != v) return v[L];
+                  let e = D[L];
                   if ((null == e ? void 0 : e.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
                 })();
                 null == e ? r(void 0) : r(e.id), s();
@@ -229,8 +229,8 @@ function x(e) {
           let {
             row: t
           } = e, n = (() => {
-            if (null != D) return D[t];
-            let e = v[t];
+            if (null != v) return v[t];
+            let e = D[t];
             if ((null == e ? void 0 : e.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
           })();
           if (null == n) return null;

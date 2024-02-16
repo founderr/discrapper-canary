@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("773336"),
   R = s("161778"),
   M = s("168973"),
-  v = s("845579"),
-  D = s("403338"),
+  D = s("845579"),
+  v = s("403338"),
   L = s("449550"),
   P = s("49111"),
   j = s("994428"),
@@ -218,9 +218,9 @@ class Y extends n.Component {
         children: [(0, a.jsx)("div", {
           className: B.title,
           children: U.default.Messages.THEME
-        }), (0, a.jsx)(D.ClientThemesSidebarButton, {})]
+        }), (0, a.jsx)(v.ClientThemesSidebarButton, {})]
       }),
-      children: [(0, a.jsx)(D.UserSettingsAppearanceClientThemes, {}), (0, a.jsx)(L.UserSettingsAppearanceInAppIcon, {}), (0, a.jsx)(u.FormSwitch, {
+      children: [(0, a.jsx)(v.UserSettingsAppearanceClientThemes, {}), (0, a.jsx)(L.UserSettingsAppearanceInAppIcon, {}), (0, a.jsx)(u.FormSwitch, {
         value: s && (0, d.isThemeLight)(e) && !t,
         disabled: e !== P.ThemeTypes.LIGHT || t || null != n,
         onChange: this.handleDarkSidebarChecked,
@@ -313,16 +313,16 @@ class Y extends n.Component {
       let {
         value: t
       } = e;
-      v.MessageDisplayCompact.updateSetting(t === F.COMPACT), (0, T.setMessageGroupSpacing)()
+      D.MessageDisplayCompact.updateSetting(t === F.COMPACT), (0, T.setMessageGroupSpacing)()
     }
   }
 }
 
 function W() {
-  let e = v.MessageDisplayCompact.useSetting(),
-    t = v.InlineEmbedMedia.useSetting(),
-    s = v.RenderEmbeds.useSetting(),
-    l = v.ClientThemeSettings.useSetting();
+  let e = D.MessageDisplayCompact.useSetting(),
+    t = D.InlineEmbedMedia.useSetting(),
+    s = D.RenderEmbeds.useSetting(),
+    l = D.ClientThemeSettings.useSetting();
   n.useEffect(() => {
     (0, g.markDismissibleContentAsDismissed)(o.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE, {
       dismissAction: j.ContentDismissActionType.AUTO,

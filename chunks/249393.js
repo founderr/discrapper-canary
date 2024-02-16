@@ -47,12 +47,12 @@ function g(e) {
       rawName: t
     } = e;
     return "voice_user_ids" === t
-  })) || void 0 === L ? void 0 : L.rawValue, K = null != W ? W.split(",") : [], z = (0, i.useStateFromStoresArray)([I.default], () => K.map(e => I.default.getUser(e)).filter(Boolean)), Z = B && null != F ? C.default.Messages.WAVED_AT_USER.format({
+  })) || void 0 === L ? void 0 : L.rawValue, K = null != W ? W.split(",") : [], z = (0, i.useStateFromStoresArray)([I.default], () => K.map(e => I.default.getUser(e)).filter(Boolean)), Q = B && null != F ? C.default.Messages.WAVED_AT_USER.format({
     username: H
   }) : C.default.Messages.WAVED_AT_YOU.format({
     username: w.nick
-  }), J = null != j && null != b, Q = null;
-  Q = J ? B || Y ? C.default.Messages.YOU_ARE_IN_CHANNEL.format({
+  }), Z = null != j && null != b, J = null;
+  J = Z ? B || Y ? C.default.Messages.YOU_ARE_IN_CHANNEL.format({
     channelHook: (e, t) => (0, s.jsx)(p.default, {
       channel: null != b ? b : void 0
     }, t)
@@ -60,7 +60,7 @@ function g(e) {
     channelHook: (e, t) => (0, s.jsx)(p.default, {
       channel: null != b ? b : void 0
     }, t)
-  }) : C.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (Q = B ? C.default.Messages.HANGOUT_OVER_SENDER : C.default.Messages.HANGOUT_OVER_RECEIVER);
+  }) : C.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (J = B ? C.default.Messages.HANGOUT_OVER_SENDER : C.default.Messages.HANGOUT_OVER_RECEIVER);
   let X = B ? C.default.Messages.WAVE_AGAIN : C.default.Messages.WAVE_BACK;
   return (0, s.jsxs)("div", {
     children: [(0, s.jsxs)("div", {
@@ -68,11 +68,11 @@ function g(e) {
       children: [(0, s.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: Z
+        children: Q
       }), (0, s.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: Q
+        children: J
       }), V.length > 0 ? (0, s.jsx)("div", {
         className: h.participants,
         children: (0, s.jsx)(E.default, {
@@ -107,7 +107,7 @@ function g(e) {
         },
         className: h.button,
         innerClassName: h.buttonInner,
-        disabled: Y || !J,
+        disabled: Y || !Z,
         children: [(0, s.jsx)(N.default, {}), C.default.Messages.JOIN_HANGOUT]
       }), (0, s.jsx)(r.Button, {
         color: r.Button.Colors.PRIMARY,

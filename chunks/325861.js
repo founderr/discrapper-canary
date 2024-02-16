@@ -18,22 +18,22 @@ var r, i, l = n("917351"),
   T = n("923510"),
   f = n("808422");
 (i = r || (r = {})).SPEAKER = "speaker", i.MODERATOR = "moderator";
-let N = {},
-  p = {
+let p = {},
+  N = {
     speaker: !1,
     moderator: !1
   };
 
 function A(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  null == N[t] && (N[t] = {});
+  null == p[t] && (p[t] = {});
   let r = function(e, t) {
     var n, r, i;
     let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       u = s.default.getChannel(t),
       a = null == u ? void 0 : u.getGuildId(),
       o = E.default.getGuild(a);
-    if (null == o || null == u || !u.isGuildStageVoice()) return p;
+    if (null == o || null == u || !u.isGuildStageVoice()) return N;
     return {
       speaker: function(e, t) {
         let n = I.default.getVoiceStateForChannel(t, e);
@@ -48,14 +48,14 @@ function A(e, t) {
       })) : null
     }
   }(e, t, n);
-  return N[t][e] = r, r
+  return p[t][e] = r, r
 }
 
 function R(e, t) {
   var n;
   if (null == t) return !1;
   let r = s.default.getChannel(t);
-  return !!(null != r && r.isGuildStageVoice()) && (null === (n = N[t]) || void 0 === n || delete n[e], !0)
+  return !!(null != r && r.isGuildStageVoice()) && (null === (n = p[t]) || void 0 === n || delete n[e], !0)
 }
 
 function C(e) {
@@ -68,7 +68,7 @@ function C(e) {
   for (let {
       channel: e
     }
-    of t) delete N[e.id];
+    of t) delete p[e.id];
   return t.length > 0
 }
 
@@ -78,9 +78,9 @@ function L(e) {
     user: n
   } = e;
   return null != n && null != t && function(e, t) {
-    for (let n in N) {
+    for (let n in p) {
       let r = s.default.getBasicChannel(n);
-      if (null != r) r.guild_id === t && delete N[n][e]
+      if (null != r) r.guild_id === t && delete p[n][e]
     }
     return !0
   }(n.id, t)
@@ -90,9 +90,9 @@ function O(e) {
   let {
     guild: t
   } = e;
-  for (let e in N) {
+  for (let e in p) {
     let n = s.default.getBasicChannel(e);
-    (null == n || n.guild_id === t.id) && delete N[e]
+    (null == n || n.guild_id === t.id) && delete p[e]
   }
 }
 class h extends a.default.Store {
@@ -113,8 +113,8 @@ class h extends a.default.Store {
   getPermissionsForUser(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (null == e || null == t) return p;
-    let i = null === (n = N[t]) || void 0 === n ? void 0 : n[e];
+    if (null == e || null == t) return N;
+    let i = null === (n = p[t]) || void 0 === n ? void 0 : n[e];
     if (null != i) return r && null == i.moderator ? A(e, t, !0) : i;
     return A(e, t, r)
   }
@@ -125,10 +125,10 @@ var P = new h(o.default, {
     let {
       channels: t
     } = e;
-    for (let e of t) delete N[e.id]
+    for (let e of t) delete p[e.id]
   },
   CONNECTION_OPEN: function() {
-    N = {}
+    p = {}
   },
   GUILD_MEMBER_REMOVE: L,
   GUILD_MEMBER_UPDATE: L,
@@ -148,7 +148,7 @@ var P = new h(o.default, {
     let {
       voiceStates: t
     } = e;
-    return !u.isEmpty(N) && t.reduce((e, t) => {
+    return !u.isEmpty(p) && t.reduce((e, t) => {
       let {
         userId: n,
         channelId: r

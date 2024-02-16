@@ -41,7 +41,7 @@ var l = n("37983"),
   k = n("782340"),
   w = n("213524");
 let F = P.MIN_EXPRESSION_PICKER_WIDTH + j.EmojiSize.MEDIUM,
-  B = i.memo(function(e) {
+  G = i.memo(function(e) {
     let {
       isActive: t,
       className: n,
@@ -69,7 +69,7 @@ let F = P.MIN_EXPRESSION_PICKER_WIDTH + j.EmojiSize.MEDIUM,
       size: m.Button.Sizes.NONE
     })
   }),
-  G = e => {
+  B = e => {
     let {
       positionContainerRef: t,
       drawerRef: n,
@@ -136,7 +136,7 @@ var H = i.memo(function(e) {
   } = e, ee = i.useRef(null), et = i.useRef(!1), en = i.useRef(), el = i.useRef(null), ei = "left" === J ? E.ResizeOrientation.HORIZONTAL_RIGHT : E.ResizeOrientation.HORIZONTAL_LEFT, {
     drawerWidth: ea,
     handleDrawerResizeHandleMouseDown: es
-  } = G({
+  } = B({
     positionContainerRef: ee,
     drawerRef: el,
     orientation: ei
@@ -227,14 +227,14 @@ var H = i.memo(function(e) {
                   className: w.navList,
                   role: "tablist",
                   "aria-label": k.default.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
-                  children: [eg ? (0, l.jsx)(B, {
+                  children: [eg ? (0, l.jsx)(G, {
                     id: j.GIF_PICKER_TAB_ID,
                     "aria-controls": j.GIF_PICKER_TAB_PANEL_ID,
                     "aria-selected": er === P.ExpressionPickerViewType.GIF,
                     isActive: er === P.ExpressionPickerViewType.GIF,
                     viewType: P.ExpressionPickerViewType.GIF,
                     children: k.default.Messages.EXPRESSION_PICKER_GIF
-                  }) : null, eS ? (0, l.jsx)(B, {
+                  }) : null, eS ? (0, l.jsx)(G, {
                     id: D.STICKER_PICKER_TAB_ID,
                     "aria-controls": D.STICKER_PICKER_TAB_PANEL_ID,
                     "aria-selected": er === P.ExpressionPickerViewType.STICKER,
@@ -245,21 +245,21 @@ var H = i.memo(function(e) {
                       className: w.stickersNavItem,
                       children: k.default.Messages.EXPRESSION_PICKER_STICKER
                     })
-                  }) : null, (0, l.jsx)(B, {
+                  }) : null, (0, l.jsx)(G, {
                     id: j.EMOJI_PICKER_TAB_ID,
                     "aria-controls": j.EMOJI_PICKER_TAB_PANEL_ID,
                     "aria-selected": er === P.ExpressionPickerViewType.EMOJI,
                     isActive: er === P.ExpressionPickerViewType.EMOJI,
                     viewType: P.ExpressionPickerViewType.EMOJI,
                     children: k.default.Messages.EXPRESSION_PICKER_EMOJI
-                  }), ef && null != K && (0, l.jsx)(B, {
+                  }), ef && null != K && (0, l.jsx)(G, {
                     id: j.SOUNDBOARD_PICKER_TAB_ID,
                     "aria-controls": j.SOUNDBOARD_PICKER_TAB_PANEL_ID,
                     "aria-selected": er === P.ExpressionPickerViewType.SOUNDBOARD,
                     isActive: er === P.ExpressionPickerViewType.SOUNDBOARD,
                     viewType: P.ExpressionPickerViewType.SOUNDBOARD,
                     children: "Sounds"
-                  }), null != W && (0, l.jsx)(B, {
+                  }), null != W && (0, l.jsx)(G, {
                     id: j.CUSTOM_UPLOAD_PICKER_TAB_ID,
                     "aria-controls": j.CUSTOM_UPLOAD_PICKER_TAB_PANEL_ID,
                     "aria-selected": er === P.ExpressionPickerViewType.CUSTOM_UPLOAD,

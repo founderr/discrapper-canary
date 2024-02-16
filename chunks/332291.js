@@ -11,12 +11,12 @@ var i = n("37983"),
   s = n("446674"),
   o = n("77078"),
   u = n("106435"),
-  d = n("446488"),
-  c = n("782340"),
+  c = n("446488"),
+  d = n("782340"),
   f = n("808559");
 
 function m() {
-  let e = (0, s.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3)),
+  let e = (0, s.useStateFromStores)([c.default], () => c.default.affinities.slice(0, 3)),
     t = e[0],
     {
       avatarSrc: n,
@@ -27,9 +27,9 @@ function m() {
       animateOnHover: !0
     }),
     m = e => null != e.globalName ? e.globalName : e.username,
-    _ = r.useMemo(() => e.length >= 2 ? c.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+    _ = r.useMemo(() => e.length >= 2 ? d.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
       username: m(e[0])
-    }) : 1 === e.length ? c.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
+    }) : 1 === e.length ? d.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
       username: m(e[0])
     }) : "", [e]);
   return 0 === e.length ? null : (0, i.jsxs)("div", {

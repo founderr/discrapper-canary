@@ -30,8 +30,8 @@ var a = s("37983"),
   x = s("145131"),
   R = s("555158"),
   M = s("37785"),
-  v = s("299039"),
-  D = s("915639"),
+  D = s("299039"),
+  v = s("915639"),
   L = s("161778"),
   P = s("387225"),
   j = s("628235"),
@@ -272,7 +272,7 @@ class w extends n.PureComponent {
         currentUser: t
       } = this.props,
       s = p.default.getGuilds(),
-      n = v.default.keys(s).filter(e => s[e].ownerId === t.id);
+      n = D.default.keys(s).filter(e => s[e].ownerId === t.id);
     if (n.length > 0) {
       this.setState({
         shouldRenderOwnedGuildsModal: !0
@@ -308,7 +308,7 @@ var V = () => {
     n = (0, d.useStateFromStores)([L.default], () => L.default.theme),
     l = (0, h.useIsEligibleForPomelo)(),
     i = (0, g.useForceMigration)(),
-    r = (0, d.useStateFromStores)([D.default], () => D.default.locale);
+    r = (0, d.useStateFromStores)([v.default], () => v.default.locale);
   return (0, a.jsx)(w, {
     theme: n,
     currentUser: e,

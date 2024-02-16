@@ -92,7 +92,7 @@ var l = n("37983"),
       })
     }, [x.id, N.id, A]);
     let k = (0, E.useCanCreateOrAddGuildInDirectory)(x),
-      B = k ? () => {
+      V = k ? () => {
         (0, i.openModalLazy)(async () => {
           let {
             default: e
@@ -106,7 +106,7 @@ var l = n("37983"),
           })
         })
       } : void 0,
-      V = e => {
+      B = e => {
         0 !== D.trim().length && e.charCode === T.KeyboardKeys.ENTER && (h.searchDirectoryEntries(x.id, D), c.default.track(T.AnalyticEvents.GUILD_DIRECTORY_SEARCH, {
           directory_channel_id: x.id,
           directory_guild_id: N.id
@@ -119,9 +119,9 @@ var l = n("37983"),
       searchQuery: D,
       setSearchQuery: U,
       mostRecentQuery: O,
-      handleSearchKeyPress: V,
+      handleSearchKeyPress: B,
       handleClearSearch: H,
-      handleCreateOrAddGuild: B,
+      handleCreateOrAddGuild: V,
       searchResults: b,
       searchFetching: P
     }) : null == y && null == A ? (0, l.jsx)("div", {
@@ -133,15 +133,15 @@ var l = n("37983"),
       className: v.pageContainer,
       children: (0, l.jsx)(S.default, {
         guild: N,
-        onAddGuild: B
+        onAddGuild: V
       })
     }) : (0, l.jsx)(g.default, {
       channel: x,
       searchQuery: D,
       setSearchQuery: U,
-      handleSearchKeyPress: V,
+      handleSearchKeyPress: B,
       handleClearSearch: H,
-      handleCreateOrAddGuild: B,
+      handleCreateOrAddGuild: V,
       currentCategoryId: A,
       handleSelectCategory: e => {
         h.selectDirectoryCategory(x.id, e)
