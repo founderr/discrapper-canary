@@ -19,8 +19,8 @@ var n = a("37983"),
   d = a("963119"),
   c = a("467475"),
   u = a("651693"),
-  m = a("605160"),
-  h = a("903962"),
+  h = a("605160"),
+  m = a("903962"),
   A = a("165405"),
   _ = a("410889"),
   g = a("725962"),
@@ -46,7 +46,7 @@ function j(e, t) {
   } = e;
   if (t && null != n && n > 0 && null != l && l > 0) return (0, u.isImageFile)(a) ? "IMAGE" : (0, u.isVideoFile)(a) && null != e.proxy_url ? "VIDEO" : "INVALID";
   if (null != t && O.test(a) && null != e.url) return "AUDIO";
-  if (null != e.url && (0, h.isPlaintextPreviewableFile)(a)) return "PLAINTEXT_PREVIEW";
+  if (null != e.url && (0, m.isPlaintextPreviewableFile)(a)) return "PLAINTEXT_PREVIEW";
   return "OTHER"
 }
 let D = e => {
@@ -100,8 +100,8 @@ let D = e => {
       autoPlayGif: o,
       canRemoveAttachment: d,
       onRemoveAttachment: u,
-      onClick: m,
-      onContextMenu: h,
+      onClick: h,
+      onContextMenu: m,
       onPlay: g,
       renderImageComponent: I,
       renderVideoComponent: f,
@@ -112,11 +112,11 @@ let D = e => {
       imgClassName: w,
       focusable: b,
       hiddenSpoilers: P,
-      mediaLayoutType: B,
-      maxWidth: G,
-      maxHeight: V,
-      noBorderBottomRadius: k,
-      useFullWidth: H,
+      mediaLayoutType: G,
+      maxWidth: V,
+      maxHeight: k,
+      hasFooter: H,
+      useFullWidth: B,
       isAttachmentMediaType: R
     } = e, {
       width: K,
@@ -137,7 +137,7 @@ let D = e => {
       var a;
       t.hasFlag(y.MessageFlags.IS_VOICE_MESSAGE) && (0, A.logVoiceMessagePlaybackFailed)(t.id, null !== (a = null == e ? void 0 : e.message) && void 0 !== a ? a : null)
     }, [t]), ea = l.useCallback(() => {
-      if (B === v.MediaLayoutType.MOSAIC) {
+      if (G === v.MediaLayoutType.MOSAIC) {
         let e = !J && "VIDEO" === z || !J && "AUDIO" === z || "OTHER" === z;
         if (R) {
           if (null == K || null == W) return null;
@@ -147,7 +147,7 @@ let D = e => {
             maxWidth: v.MEDIA_MOSAIC_MAX_WIDTH,
             maxHeight: v.MEDIA_MOSAIC_MAX_HEIGHT
           });
-          if (!H && (e * K < v.MINIMUM_MEDIA_MOSAIC_DIM || e * W < v.MINIMUM_MEDIA_MOSAIC_DIM)) return null
+          if (!B && (e * K < v.MINIMUM_MEDIA_MOSAIC_DIM || e * W < v.MINIMUM_MEDIA_MOSAIC_DIM)) return null
         }
         return !Y && (0, n.jsx)(D, {
           downloadURL: e ? a.url : void 0,
@@ -170,7 +170,7 @@ let D = e => {
           height: 16
         })
       })
-    }, [B, d, U, z, R, Y, a, Q, $, K, W, H, u, J]), en = l.useCallback(() => {
+    }, [G, d, U, z, R, Y, a, Q, $, K, W, B, u, J]), en = l.useCallback(() => {
       var e;
       return (0, C.hasFlag)(null !== (e = a.flags) && void 0 !== e ? e : 0, y.MessageAttachmentFlags.IS_CLIP) ? (0, n.jsxs)(r.TooltipContainer, {
         text: T.default.Messages.CLIPS_BETA_TAG_HOVER,
@@ -194,8 +194,8 @@ let D = e => {
             width: K,
             height: W,
             autoPlay: o && !P,
-            onClick: m,
-            onContextMenu: h,
+            onClick: h,
+            onContextMenu: m,
             shouldHideMediaOptions: J,
             renderAccessory: e,
             renderAdjacentContent: ea,
@@ -205,10 +205,10 @@ let D = e => {
             shouldLink: b,
             hiddenSpoilers: P,
             responsive: !0,
-            mediaLayoutType: B,
-            maxWidth: G,
-            maxHeight: V,
-            useFullWidth: H
+            mediaLayoutType: G,
+            maxWidth: V,
+            maxHeight: k,
+            useFullWidth: B
           })
         });
       case "VIDEO":
@@ -222,25 +222,25 @@ let D = e => {
           placeholderVersion: a.placeholder_version,
           width: K,
           height: W,
-          onClick: m,
-          onContextMenu: h,
+          onClick: h,
+          onContextMenu: m,
           renderOverlayContent: en,
           renderAdjacentContent: ea,
           naturalWidth: K,
           naturalHeight: W,
           className: s(L, {
-            [N.noBorderBottomRadius]: k
+            [N.hasFooter]: H
           }),
           playable: b,
           responsive: !0,
-          mediaLayoutType: B,
-          maxWidth: G,
-          maxHeight: V,
-          useFullWidth: H,
+          mediaLayoutType: G,
+          maxWidth: V,
+          maxHeight: k,
+          useFullWidth: B,
           mimeType: Q,
           onPlay: g,
           downloadable: !J,
-          mediaPlayerClassName: k ? N.noBorderBottomRadius : void 0
+          mediaPlayerClassName: H ? N.hasFooter : void 0
         });
       case "AUDIO":
         return O({
@@ -263,8 +263,8 @@ let D = e => {
         return S({
           attachment: a,
           className: L,
-          onClick: m,
-          onContextMenu: h,
+          onClick: h,
+          onContextMenu: m,
           renderAdjacentContent: ea
         });
       case "OTHER":
@@ -272,8 +272,8 @@ let D = e => {
           url: a.url,
           filename: a.filename,
           size: a.size,
-          onClick: m,
-          onContextMenu: h,
+          onClick: h,
+          onContextMenu: m,
           className: L,
           renderAdjacentContent: ea
         });
@@ -289,7 +289,7 @@ var F = e => {
     message: r,
     inlineMedia: c,
     useFullWidth: u,
-    mediaLayoutType: h,
+    mediaLayoutType: m,
     canRemoveAttachment: A,
     isSingleMosaicItem: _,
     footer: g,
@@ -297,11 +297,11 @@ var F = e => {
   } = e, {
     width: p,
     height: E
-  } = i, f = (0, d.useShouldRedactExplicitContent)(r.channel_id, r.author.id), C = (0, m.getObscureReason)(i, f), [y, T] = l.useState(null != C), O = h === v.MediaLayoutType.MOSAIC, D = !O && (null != p && p < 200 || null != E && E < 50), F = j(i, c);
+  } = i, f = (0, d.useShouldRedactExplicitContent)(r.channel_id, r.author.id), C = (0, h.getObscureReason)(i, f), [y, T] = l.useState(null != C), O = m === v.MediaLayoutType.MOSAIC, D = !O && (null != p && p < 200 || null != E && E < 50), F = j(i, c);
   let w = "IMAGE" === (t = F) || "VIDEO" === t,
     b = S(j(i, c)),
     P = _ && null != C && (0, o.isExplicitMediaBelowConstraints)(p, E),
-    B = function() {
+    G = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
       return (0, n.jsx)(L, {
         ...M,
@@ -312,14 +312,14 @@ var F = e => {
         canRemoveAttachment: A,
         className: s(a, N.attachmentContentItem, {
           [N.obscured]: y && !D,
-          [N.hiddenSpoiler]: y && C === m.ObscureReason.SPOILER,
-          [N.hiddenExplicit]: y && null != C && [m.ObscureReason.EXPLICIT_CONTENT, m.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(C),
+          [N.hiddenSpoiler]: y && C === h.ObscureReason.SPOILER,
+          [N.hiddenExplicit]: y && null != C && [h.ObscureReason.EXPLICIT_CONTENT, h.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(C),
           [N.hiddenAttachment]: y && e,
           [N.inline]: y && D
         }),
         focusable: !e,
-        mediaLayoutType: h,
-        noBorderBottomRadius: null != g,
+        mediaLayoutType: m,
+        hasFooter: null != g,
         useFullWidth: !!P || u,
         isAttachmentMediaType: b
       })
@@ -361,13 +361,13 @@ var F = e => {
             height: "100%",
             justifySelf: "auto"
           }
-        }(i, w, h),
+        }(i, w, m),
         obscurityControlClassName: s({
           [N.obscureVideo]: "VIDEO" === F && _ && !y
         }),
         onToggleObscurity: () => T(e => !e),
-        children: e => B(e)
-      }) : B(), g]
+        children: e => G(e)
+      }) : G(), g]
     })
   })
 }
