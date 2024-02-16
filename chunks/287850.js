@@ -145,5 +145,8 @@ var j = new O(f.default, {
   GUILD_CREATE: function(e) {
     let t = e.guild.id;
     return _.delete(t)
+  },
+  LOGOUT: function() {
+    _.clear()
   }
 })
