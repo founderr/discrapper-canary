@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return I
   }
 }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
-var i, r, a = n("37983"),
+var i, a, r = n("37983"),
   s = n("884691"),
   l = n("153967"),
   o = n("382133"),
@@ -12,24 +12,27 @@ var i, r, a = n("37983"),
   c = n("333693"),
   d = n("618991"),
   f = n("77078"),
-  p = n("153335"),
-  m = n("153160"),
-  h = n("49111"),
-  g = n("646718"),
-  v = n("782340"),
-  x = n("816896");
-let b = {
+  p = n("812204"),
+  m = n("685665"),
+  h = n("153335"),
+  g = n("509167"),
+  v = n("153160"),
+  x = n("49111"),
+  b = n("646718"),
+  E = n("782340"),
+  S = n("816896");
+let R = {
   width: 20,
   height: 20,
   color: "white"
 };
 
-function E(e) {
+function I(e) {
   var t;
   let {
     app: n,
     subscriptionGroupListing: i,
-    guildId: r,
+    guildId: a,
     products: u
   } = e, [f, p] = s.useState(0), {
     subscription_listings: m = []
@@ -43,21 +46,21 @@ function E(e) {
     let e = n.getCoverImageURL(800);
     return null != e ? new URL(e) : void 0
   }, [n]);
-  return (0, a.jsxs)("div", {
-    className: x.wrapper,
-    children: [(0, a.jsx)(l.Banner, {
+  return (0, r.jsxs)("div", {
+    className: S.wrapper,
+    children: [(0, r.jsx)(l.Banner, {
       title: n.name,
       subtitle: null !== (t = n.description) && void 0 !== t ? t : void 0,
       iconSrc: h,
       backgroundSrc: g
-    }), (0, a.jsx)("br", {}), (0, a.jsxs)("div", {
-      className: x.tabs,
-      children: [(0, a.jsx)(o.default, {
-        icon: (0, a.jsx)(c.BadgeIcon, {
-          ...b
+    }), (0, r.jsx)("br", {}), (0, r.jsxs)("div", {
+      className: S.tabs,
+      children: [(0, r.jsx)(o.default, {
+        icon: (0, r.jsx)(c.BadgeIcon, {
+          ...R
         }),
-        title: v.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS,
-        body: v.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS_BODY.format({
+        title: E.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS,
+        body: E.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS_BODY.format({
           appName: n.name
         }),
         disabled: 0 === m.length,
@@ -65,12 +68,12 @@ function E(e) {
         onClick: () => {
           p(0)
         }
-      }), (0, a.jsx)(o.default, {
-        icon: (0, a.jsx)(d.TicketIcon, {
-          ...b
+      }), (0, r.jsx)(o.default, {
+        icon: (0, r.jsx)(d.TicketIcon, {
+          ...R
         }),
-        title: v.default.Messages.STOREFRONT_APP_PRODUCTS,
-        body: v.default.Messages.STOREFRONT_APP_PRODUCTS_BODY.format({
+        title: E.default.Messages.STOREFRONT_APP_PRODUCTS,
+        body: E.default.Messages.STOREFRONT_APP_PRODUCTS_BODY.format({
           appName: n.name
         }),
         disabled: 0 === u.length,
@@ -79,50 +82,51 @@ function E(e) {
           p(1)
         }
       })]
-    }), (0, a.jsx)("div", {
-      className: x.productList,
-      children: 1 === f ? u.map(e => (0, a.jsx)(R, {
-        sku: e
-      }, e.id)) : m.map(e => (0, a.jsx)(S, {
+    }), (0, r.jsx)("div", {
+      className: S.productList,
+      children: 1 === f ? u.map(e => (0, r.jsx)(j, {
+        sku: e,
+        appId: n.id
+      }, e.id)) : m.map(e => (0, r.jsx)(N, {
         sku: e,
         appId: n.id,
         groupListingId: i.id,
-        guildId: r
+        guildId: a
       }, e.id))
     })]
   })
-}(r = i || (i = {}))[r.SUBSCRIPTIONS = 0] = "SUBSCRIPTIONS", r[r.PRODUCTS = 1] = "PRODUCTS";
+}(a = i || (i = {}))[a.SUBSCRIPTIONS = 0] = "SUBSCRIPTIONS", a[a.PRODUCTS = 1] = "PRODUCTS";
 
-function S(e) {
+function N(e) {
   var t;
   let {
     sku: n,
     appId: i,
-    groupListingId: r,
+    groupListingId: a,
     guildId: s
   } = e, {
     openModal: l
-  } = (0, p.default)({
+  } = (0, h.default)({
     listing: n,
     guildId: s,
-    groupListingId: r,
+    groupListingId: a,
     showBenefitsFirst: !0,
-    analyticsLocation: h.AnalyticsLocations.BOT_PROFILE_POPOUT
+    analyticsLocation: x.AnalyticsLocations.BOT_PROFILE_POPOUT
   }), o = null === (t = n.image_asset) || void 0 === t ? void 0 : t.id, c = n.subscription_plans.length > 0 ? n.subscription_plans[0] : null;
-  return null === c ? null : (0, a.jsx)(u.ProductCard, {
+  return null === c ? null : (0, r.jsx)(u.ProductCard, {
     title: n.name,
     imgSrc: null != o ? new URL("https://cdn.discordapp.com/app-assets/".concat(i, "/store/").concat(o)) : void 0,
-    price: (0, m.formatRate)((0, m.formatPrice)(c.price, c.currency), g.SubscriptionIntervalTypes.MONTH, 1),
-    priceLabel: v.default.Messages.STOREFRONT_SUBSCRIPTION,
-    purchaseButton: (0, a.jsx)(f.Button, {
+    price: (0, v.formatRate)((0, v.formatPrice)(c.price, c.currency), b.SubscriptionIntervalTypes.MONTH, 1),
+    priceLabel: E.default.Messages.STOREFRONT_SUBSCRIPTION,
+    purchaseButton: (0, r.jsx)(f.Button, {
       onClick: l,
-      children: v.default.Messages.STOREFRONT_SUBSCRIBE
+      children: E.default.Messages.STOREFRONT_SUBSCRIBE
     }),
     benefits: {
-      title: v.default.Messages.STOREFRONT_SUBSCRIPTION_BENEFITS,
+      title: E.default.Messages.STOREFRONT_SUBSCRIPTION_BENEFITS,
       items: n.sku_benefits.benefits.map((e, t) => {
         var n, i;
-        return (0, a.jsx)(u.ProductCardBenefit, {
+        return (0, r.jsx)(u.ProductCardBenefit, {
           name: e.name,
           description: e.description,
           icon: (null === (n = e.emoji) || void 0 === n ? void 0 : n.id) != null ? new URL("https://cdn.discordapp.com/emojis/".concat(e.emoji.id)) : null === (i = e.emoji) || void 0 === i ? void 0 : i.name
@@ -132,18 +136,28 @@ function S(e) {
   })
 }
 
-function R(e) {
+function j(e) {
   let {
-    sku: t
+    sku: t,
+    appId: n
   } = e, {
-    price: n
+    analyticsLocations: i
+  } = (0, m.default)(p.default.APP_STOREFRONT), {
+    price: a
   } = t;
-  return null == n ? null : (0, a.jsx)(u.ProductCard, {
+  return null == a ? null : (0, r.jsx)(u.ProductCard, {
     title: t.name,
-    price: (0, m.formatPrice)(n.amount, n.currency),
-    priceLabel: v.default.Messages.STOREFRONT_ONE_TIME_PURCHASE,
-    purchaseButton: (0, a.jsx)(f.Button, {
-      children: v.default.Messages.STOREFRONT_PURCHASE
+    price: (0, v.formatPrice)(a.amount, a.currency),
+    priceLabel: E.default.Messages.STOREFRONT_ONE_TIME_PURCHASE,
+    purchaseButton: (0, r.jsx)(f.Button, {
+      onClick: () => {
+        (0, g.default)({
+          applicationId: n,
+          skuId: t.id,
+          analyticsLocations: i
+        })
+      },
+      children: E.default.Messages.STOREFRONT_PURCHASE
     })
   })
 }

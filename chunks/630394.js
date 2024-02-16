@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ProductCard: function() {
-    return a
+    return r
   },
   ProductCardBenefit: function() {
     return s
@@ -9,48 +9,48 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var r = n("370621");
+var a = n("370621");
 
-function a(e) {
+function r(e) {
   let {
     imgSrc: t,
     title: n,
-    description: a,
+    description: r,
     price: s,
     priceLabel: l,
     purchaseButton: o,
     benefits: u
   } = e;
   return (0, i.jsxs)("div", {
-    className: r.productCard,
+    className: a.productCard,
     children: [(0, i.jsx)("div", {
-      className: r.cardHeaderImg,
+      className: a.cardHeaderImg,
       style: null != t ? {
         backgroundImage: "url(".concat(t.toString(), ")")
       } : void 0
     }), (0, i.jsxs)("div", {
-      className: r.cardTitleWrapper,
+      className: a.cardTitleWrapper,
       children: [(0, i.jsx)("div", {
-        className: r.cardTitleName,
+        className: a.cardTitleName,
         children: n
-      }), null != a && (0, i.jsx)("div", {
-        className: r.cardTitleDesc,
-        children: a
+      }), null != r && (0, i.jsx)("div", {
+        className: a.cardTitleDesc,
+        children: r
       })]
     }), (0, i.jsxs)("div", {
-      className: r.cardPrice,
+      className: a.cardPrice,
       children: [(0, i.jsxs)("div", {
         children: [(0, i.jsx)("div", {
           children: s
         }), (0, i.jsx)("div", {
-          className: r.cardPriceLabel,
+          className: a.cardPriceLabel,
           children: l
         })]
       }), o]
-    }), null != u && (0, i.jsxs)("div", {
-      className: r.cardBenefitsWrapper,
+    }), null != u && u.items.length > 0 && (0, i.jsxs)("div", {
+      className: a.cardBenefitsWrapper,
       children: [(0, i.jsx)("div", {
-        className: r.cardBenefitTitle,
+        className: a.cardBenefitTitle,
         children: u.title
       }), u.items]
     })]
@@ -61,23 +61,23 @@ function s(e) {
   let {
     icon: t,
     name: n,
-    description: a
+    description: r
   } = e;
   return (0, i.jsxs)("div", {
-    className: r.cardBenefit,
+    className: a.cardBenefit,
     children: [null != t && (0, i.jsx)("div", {
-      className: r.cardBenefitIcon,
+      className: a.cardBenefitIcon,
       children: "string" == typeof t ? t : (0, i.jsx)("img", {
         src: t.toString(),
         alt: ""
       })
     }), (0, i.jsxs)("div", {
       children: [(0, i.jsx)("div", {
-        className: r.cardBenefitName,
+        className: a.cardBenefitName,
         children: n
       }), (0, i.jsx)("div", {
-        className: r.cardBenefitDesc,
-        children: a
+        className: a.cardBenefitDesc,
+        children: r
       })]
     })]
   })
