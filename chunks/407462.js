@@ -43,7 +43,7 @@ n.r(t), n.d(t, {
 });
 let r = 348,
   o = 88;
-(a = l || (l = {})).AssetImage = "AssetImage", a.ApplicationImage = "ApplicationImage", a.Platform = "Platform", a.StreamPreview = "StreamPreview";
+(a = l || (l = {})).AssetImage = "AssetImage", a.ApplicationImage = "ApplicationImage", a.Platform = "Platform", a.StreamPreview = "StreamPreview", a.HangStatus = "HangStatus";
 let u = 12,
   d = 12,
   c = u + d,

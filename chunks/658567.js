@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return m
   }
 }), n("222007"), n("424973");
 var l = n("884691"),
@@ -9,10 +9,11 @@ var l = n("884691"),
   a = n("304367"),
   s = n("373469"),
   r = n("550368"),
-  o = n("407462"),
-  u = n("78512"),
-  d = n("49111");
-let c = e => {
+  o = n("402671"),
+  u = n("407462"),
+  d = n("78512"),
+  c = n("49111");
+let f = e => {
   let t = l.useMemo(() => new a.AssetMap, []),
     [n, i] = l.useState(!1),
     s = l.useRef(e.length);
@@ -25,39 +26,54 @@ let c = e => {
     assetMap: t
   }
 };
-var f = (e, t) => {
-  let l;
+var m = (e, t) => {
+  var l;
+  let a;
   let {
-    theme: a
-  } = (0, u.getProfileInfo)(t, "black"), f = "dark" === a, m = (0, u.getActivityPlatform)(e), {
-    assets: p,
-    application_id: h
+    theme: m
+  } = (0, d.getProfileInfo)(t, "black"), p = "dark" === m, h = (0, d.getActivityPlatform)(e), {
+    assets: E,
+    application_id: g
   } = e;
-  l = null != e.application_id ? i.default.getApplication(e.application_id) : i.default.getApplicationByName(e.name);
-  let E = s.default.getAnyStreamForUser(t.id),
-    g = (0, r.getAssetImage)(h, null == p ? void 0 : p.large_image, 64),
-    S = null == l ? void 0 : l.getIconURL(64),
-    C = [];
-  null != m ? C.push({
-    name: o.AssetTypes.Platform,
-    url: f ? m.icon.darkPNG : m.icon.lightPNG
-  }) : e.type === d.ActivityTypes.PLAYING && C.push({
-    name: "Platform",
-    url: f ? n("944857") : n("248073")
-  }), null != g && C.push({
-    name: o.AssetTypes.AssetImage,
-    url: g
-  }), null != S && C.push({
-    name: o.AssetTypes.ApplicationImage,
-    url: S
+  a = null != e.application_id ? i.default.getApplication(e.application_id) : i.default.getApplicationByName(e.name);
+  let S = s.default.getAnyStreamForUser(t.id),
+    C = (0, r.getAssetImage)(g, null == E ? void 0 : E.large_image, 64),
+    T = null == a ? void 0 : a.getIconURL(64),
+    v = [];
+  if (null != h ? v.push({
+      name: u.AssetTypes.Platform,
+      url: p ? h.icon.darkPNG : h.icon.lightPNG
+    }) : e.type === c.ActivityTypes.PLAYING && v.push({
+      name: "Platform",
+      url: p ? n("944857") : n("248073")
+    }), null != C && (C.includes("http") ? v.push({
+      name: u.AssetTypes.AssetImage,
+      url: C
+    }) : v.push({
+      name: u.AssetTypes.AssetImage,
+      url: n(C)
+    })), e.type === c.ActivityTypes.HANG_STATUS && (null === (l = e.emoji) || void 0 === l ? void 0 : l.id) != null) {
+    let t = (0, o.getEmojiUrl)({
+      id: e.emoji.id,
+      name: e.emoji.name,
+      animated: !1
+    });
+    v.push({
+      name: u.AssetTypes.HangStatus,
+      url: t
+    })
+  }
+  null != T && v.push({
+    name: u.AssetTypes.ApplicationImage,
+    url: T
   });
   let {
-    loaded: T,
-    assetMap: v
-  } = c(C);
+    loaded: I,
+    assetMap: _
+  } = f(v);
   return {
-    loaded: T,
-    assetMap: v,
-    stream: E
+    loaded: I,
+    assetMap: _,
+    stream: S
   }
 }

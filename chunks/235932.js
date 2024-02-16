@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return C
   }
 });
 var l = n("376556"),
@@ -12,14 +12,15 @@ var l = n("376556"),
   o = n("550368"),
   u = n("407462"),
   d = n("78512"),
-  c = n("49111");
-let f = (e, t) => {
+  c = n("49111"),
+  f = n("782340");
+let m = (e, t) => {
     e.setColor("dark" === t ? "white" : "black"), e.drawPath(u.ACTIVITY_IMAGE_FALLBACK_PATH, {
       x: u.padding,
       y: u.padding
     }, !0, 2 + 2 / 3)
   },
-  m = (e, t, n) => {
+  p = (e, t, n) => {
     var l, i, a;
     let {
       canvas: s
@@ -54,7 +55,7 @@ let f = (e, t) => {
     }, {
       w: u.activitySize,
       h: u.activitySize
-    }, 8) : f(s, o);
+    }, 8) : m(s, o);
     let c = u.activitySize + u.padding + u.imagePadding;
     s.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), s.setFont({
       size: 16,
@@ -71,7 +72,7 @@ let f = (e, t) => {
       y: u.fontPadding + 2 * u.lineHeight
     }, !0))
   },
-  p = (e, t, n) => {
+  h = (e, t, n) => {
     var l, i;
     let {
       canvas: a
@@ -117,7 +118,59 @@ let f = (e, t) => {
       y: u.fontPadding + 2 * u.lineHeight
     }, !0)
   },
-  h = (e, t, n) => {
+  E = (e, t, l) => {
+    var i, a;
+    let {
+      canvas: s
+    } = e;
+    s.setSize({
+      w: u.canvasWidth,
+      h: u.canvasHeight
+    });
+    let {
+      color: r,
+      theme: o
+    } = (0, d.getProfileInfo)(l, "black");
+    s.setColor(r), s.drawRoundedRect({
+      x: 0,
+      y: 0,
+      h: u.canvasHeight,
+      w: u.canvasWidth
+    }, 8, !0), s.setColor("dark" === o ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"), s.drawRoundedRect({
+      x: 0,
+      y: 0,
+      h: u.canvasHeight,
+      w: u.canvasWidth
+    }, 8, !0), (null === (i = s.assetMap) || void 0 === i ? void 0 : i.has(u.AssetTypes.HangStatus)) ? s.drawRoundedImage(u.AssetTypes.HangStatus, {
+      x: u.padding,
+      y: u.padding
+    }, {
+      w: u.activitySize,
+      h: u.activitySize
+    }, 8) : m(s, o);
+    let c = u.activitySize + u.padding + u.imagePadding;
+    s.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), s.setFont({
+      size: 14,
+      family: '"gg sans", sans-serif',
+      weight: 700
+    }), s.drawText(f.default.Messages.STATUS_LEAD_IN_JUST, {
+      x: c,
+      y: u.fontPadding + 1 * u.lineHeight
+    }, !0, (null === (a = s.assetMap) || void 0 === a ? void 0 : a.has(u.AssetTypes.Platform)) ? u.titleMaxWidthPlatform : u.titleMaxWidthNoPlatform), s.setFont({
+      size: 14,
+      weight: 400
+    });
+    let p = "";
+    {
+      let e = n("808742").getHangStatusText;
+      p = e(t)
+    }
+    s.drawText(p, {
+      x: c,
+      y: u.fontPadding + 2 * u.lineHeight
+    }, !0)
+  },
+  g = (e, t, n) => {
     var l;
     let {
       canvas: i
@@ -175,7 +228,7 @@ let f = (e, t) => {
       y: u.fontPadding + 2 * u.lineHeight
     }, !0)
   },
-  E = (e, t, n) => {
+  S = (e, t, n) => {
     var l, i, a;
     let {
       canvas: s
@@ -210,7 +263,7 @@ let f = (e, t) => {
     }, {
       w: u.activitySize,
       h: u.activitySize
-    }, 8) : f(s, o);
+    }, 8) : m(s, o);
     let c = u.activitySize + u.padding + u.imagePadding;
     s.setColor("dark" === o ? "white" : "rgb(6, 6, 7)"), s.setFont({
       size: 16,
@@ -227,30 +280,30 @@ let f = (e, t) => {
       y: u.fontPadding + 2 * u.lineHeight
     }, !0))
   };
-var g = e => {
+var C = e => {
   var t;
   let r, {
     renderer: o,
     activity: d,
     user: f,
-    onComplete: g,
-    stream: S
+    onComplete: m,
+    stream: C
   } = e;
   {
     let e = n("800044").default;
     r = new e
   }
-  let C = new s.default(o, r),
+  let T = new s.default(o, r),
     {
-      canvas: T
-    } = C;
-  T.setFont({
+      canvas: v
+    } = T;
+  v.setFont({
     truncate: !0
-  }), null != S ? E(C, d, f) : (0, a.default)(d) ? p(C, d, f) : (0, i.default)(d) && d.name === l.default.get(c.PlatformTypes.LEAGUE_OF_LEGENDS).name ? h(C, d, f) : m(C, d, f), (null === (t = T.assetMap) || void 0 === t ? void 0 : t.has(u.AssetTypes.Platform)) && T.drawImage(u.AssetTypes.Platform, {
+  }), null != C ? S(T, d, f) : (0, a.default)(d) ? h(T, d, f) : (0, i.default)(d) && d.name === l.default.get(c.PlatformTypes.LEAGUE_OF_LEGENDS).name ? g(T, d, f) : d.type === c.ActivityTypes.HANG_STATUS ? E(T, d, f) : p(T, d, f), (null === (t = v.assetMap) || void 0 === t ? void 0 : t.has(u.AssetTypes.Platform)) && v.drawImage(u.AssetTypes.Platform, {
     x: u.canvasWidth - u.padding - u.platformSize,
     y: u.padding
   }, {
     w: u.platformSize,
     h: u.platformSize
-  }), g(C)
+  }), m(T)
 }
