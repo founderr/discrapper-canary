@@ -24,6 +24,7 @@ e.exports = {
   profilePremiumIcon: "profilePremiumIcon__942bf",
   profileUserInfo: "profileUserInfo__6cc69",
   profileUserInfoTier1: "profileUserInfoTier1__3e442",
+  spinner: "spinner__910f0",
   subtitle: "subtitle__8f159",
   textSingleLineEllipsis: "textSingleLineEllipsis__1bf9d",
   title: "title_e68b69",

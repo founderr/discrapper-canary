@@ -1324,6 +1324,7 @@
                     USER_TRIAL_OFFER_ACKNOWLEDGED: _ => "/users/@me/billing/user-trial-offer/".concat(_, "/ack"),
                     USER_OFFER: "/users/@me/billing/user-offer",
                     USER_OFFER_ACKNOWLEDGED: "/users/@me/billing/user-offer/ack",
+                    CHURN_USER_OFFER: "/users/@me/billing/churn-user-offer",
                     GUILD_DISCOVERY: "/discoverable-guilds",
                     GUILD_DISCOVERY_CATEGORIES: "/discovery/categories",
                     GUILD_DISCOVERY_VALID_TERM: "/discovery/valid-term",
