@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   PaymentModal: function() {
-    return Y
+    return D
   },
   PaymentPredicateStep: function() {
-    return j
+    return Y
   }
 }), n("222007");
 var l = n("37983"),
@@ -26,136 +26,117 @@ var l = n("37983"),
   T = n("10514"),
   M = n("437712"),
   A = n("599110"),
-  I = n("659632"),
-  N = n("719923"),
-  y = n("635357"),
-  h = n("642906"),
-  C = n("85336"),
+  I = n("719923"),
+  N = n("635357"),
+  y = n("642906"),
+  h = n("85336"),
   R = n("286350"),
-  O = n("359371"),
-  g = n("176108"),
-  v = n("254350"),
+  C = n("359371"),
+  O = n("176108"),
+  g = n("254350"),
   L = n("622271"),
-  x = n("628738"),
+  v = n("628738"),
   k = n("650484"),
-  U = n("49111"),
-  b = n("646718"),
-  D = n("782340"),
-  G = n("283750");
+  x = n("49111"),
+  U = n("646718"),
+  b = n("283750");
 
-function Y(e) {
+function D(e) {
   let {
     analyticsLocations: t,
     analyticsLocation: n,
     analyticsObject: a,
     analyticsSourceLocation: r,
-    analyticsSubscriptionType: c = U.SubscriptionTypes.PREMIUM,
+    analyticsSubscriptionType: c = x.SubscriptionTypes.PREMIUM,
     onComplete: d,
     transitionState: f,
     initialPlanId: E,
     subscriptionTier: M,
-    onClose: g,
-    trialId: v,
-    trialFooterMessageOverride: x,
-    reviewWarningMessage: Y,
-    planGroup: j = b.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-    openInvoiceId: H,
-    onSubscriptionConfirmation: B,
-    renderPurchaseConfirmation: K,
-    postSuccessGuild: w,
-    followupSKUInfo: F,
-    renderHeader: W,
-    applicationId: V,
-    guildId: z,
-    referralTrialOfferId: J,
-    skuId: X,
-    shakeWhilePurchasing: q = !1,
-    isLargeModal: Q = !1,
-    hideShadow: Z = !1,
-    returnRef: $
+    onClose: O,
+    trialId: g,
+    trialFooterMessageOverride: v,
+    reviewWarningMessage: D,
+    planGroup: Y = U.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
+    openInvoiceId: G,
+    onSubscriptionConfirmation: H,
+    renderPurchaseConfirmation: j,
+    postSuccessGuild: B,
+    followupSKUInfo: K,
+    renderHeader: w,
+    applicationId: F,
+    guildId: W,
+    referralTrialOfferId: V,
+    skuId: z,
+    shakeWhilePurchasing: X = !1,
+    isLargeModal: J = !1,
+    hideShadow: q = !1,
+    returnRef: Q
   } = e, {
-    activitySessionId: ee,
-    purchaseState: et,
-    setPurchaseState: en,
-    selectedSkuId: el,
-    setSelectedSkuId: eu,
-    selectedPlan: ea,
-    setSelectedPlanId: ei,
-    setStep: es,
-    setPurchaseError: er,
-    paymentAuthenticationState: eo,
-    step: ec,
-    contextMetadata: ed,
-    purchaseTokenAuthState: ef,
-    activeSubscription: e_,
-    priceOptions: eE,
-    hasPaymentSources: ep,
-    paymentSourceId: em,
-    paymentSources: eS,
-    purchaseType: eP
-  } = (0, h.usePaymentContext)(), eT = (0, O.default)(), eM = Q || (null == eT ? void 0 : eT.isLargeModal) ? o.ModalSize.LARGE : o.ModalSize.SMALL, {
-    isGift: eA,
-    giftRecipient: eI,
-    customGiftMessage: eN,
-    emojiConfetti: ey,
-    soundEffect: eh
-  } = (0, y.useGiftContext)(), eC = (0, p.usePremiumDiscountOffer)(), eR = null != M && !eA && (0, p.discountOfferHasTier)(eC, M), [eO, eg] = u.useState({
-    load_id: ed.loadId,
-    payment_type: U.PurchaseTypeToAnalyticsPaymentType[eP],
+    activitySessionId: Z,
+    purchaseState: $,
+    setPurchaseState: ee,
+    selectedSkuId: et,
+    setSelectedSkuId: en,
+    selectedPlan: el,
+    setSelectedPlanId: eu,
+    setStep: ea,
+    setPurchaseError: ei,
+    paymentAuthenticationState: es,
+    step: er,
+    contextMetadata: eo,
+    purchaseTokenAuthState: ec,
+    activeSubscription: ed,
+    priceOptions: ef,
+    hasPaymentSources: e_,
+    paymentSourceId: eE,
+    paymentSources: ep,
+    purchaseType: em
+  } = (0, y.usePaymentContext)(), eS = (0, C.default)(), eP = J || (null == eS ? void 0 : eS.isLargeModal) ? o.ModalSize.LARGE : o.ModalSize.SMALL, {
+    isGift: eT
+  } = (0, N.useGiftContext)(), eM = (0, p.usePremiumDiscountOffer)(), eA = null != M && !eT && (0, p.discountOfferHasTier)(eM, M), [eI, eN] = u.useState({
+    load_id: eo.loadId,
+    payment_type: x.PurchaseTypeToAnalyticsPaymentType[em],
     location: null != n ? n : a,
     source: r,
     subscription_type: c,
-    subscription_plan_id: null == ea ? void 0 : ea.id,
-    is_gift: eA,
-    eligible_for_trial: null != v,
+    subscription_plan_id: null == el ? void 0 : el.id,
+    is_gift: eT,
+    eligible_for_trial: null != g,
     location_stack: t,
-    sku_id: X,
-    application_id: V,
-    guild_id: z,
+    sku_id: z,
+    application_id: F,
+    guild_id: W,
     payment_modal_version: "v1",
-    activity_session_id: ee,
-    eligible_for_discount: eR
-  }), ev = null != em ? eS[em] : null;
+    activity_session_id: Z,
+    eligible_for_discount: eA
+  }), ey = null != eE ? ep[eE] : null;
   u.useEffect(() => {
-    eg(e => {
-      let t = null != ea ? (0, N.getPrice)(ea.id, !1, eA, eE) : void 0,
+    eN(e => {
+      let t = null != el ? (0, I.getPrice)(el.id, !1, eT, ef) : void 0,
         n = {
           ...e,
-          subscription_plan_id: null == ea ? void 0 : ea.id,
+          subscription_plan_id: null == el ? void 0 : el.id,
           price: null == t ? void 0 : t.amount,
-          regular_price: null == ea ? void 0 : ea.price,
-          currency: eE.currency,
-          sku_id: el
+          regular_price: null == el ? void 0 : el.price,
+          currency: ef.currency,
+          sku_id: et
         };
       return n
     })
-  }, [ea, el, eA, eE]), u.useEffect(() => {
-    let e = (0, I.getGiftExperience)(eI),
-      t = e === I.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD;
-    eg(e => {
-      let n = {
-        ...e,
-        is_custom_message_edited: eA && t && null != eN ? eN !== D.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : void 0,
-        is_custom_emoji_sound_available: eA && t,
-        emoji_name: eA && t ? null == ey ? void 0 : ey.surrogates : void 0,
-        sound_id: eA && t ? null == eh ? void 0 : eh.soundId : void 0
-      };
-      return n
-    })
-  }, [ey, eN, eI, eA, eh]), u.useEffect(() => {
-    A.default.track(U.AnalyticEvents.PAYMENT_FLOW_STARTED, {
-      ...eO,
-      has_saved_payment_source: ep
+  }, [el, et, eT, ef]), u.useEffect(() => {
+    A.default.track(x.AnalyticEvents.PAYMENT_FLOW_STARTED, {
+      ...eI,
+      has_saved_payment_source: e_
     })
   }, []), u.useEffect(() => {
-    if (ei(E), null != X) eu(X);
+    if (eu(E), null != z) en(z);
     else if (null != E) {
       var e;
-      eu(null === (e = T.default.get(E)) || void 0 === e ? void 0 : e.skuId)
+      en(null === (e = T.default.get(E)) || void 0 === e ? void 0 : e.skuId)
     }
-  }, [ei, eu, E, X]);
-  let eL = (0, s.useStableMemo)(() => Date.now(), [ec]),
-    ex = u.useCallback(function(e) {
+  }, [eu, en, E, z]);
+  let eh = (0, s.useStableMemo)(() => Date.now(), [er]),
+    eR = u.useCallback(function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         {
           trackedFromStep: n,
@@ -163,74 +144,74 @@ function Y(e) {
           fulfillment: u
         } = t,
         a = Date.now();
-      e === C.Step.CONFIRM && (A.default.track(U.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, {
-        ...eO,
-        duration_ms: a - ed.startTime,
-        payment_source_type: null == ev ? void 0 : ev.type
-      }), null == d || d(u)), es(e), er(null);
-      let i = null != n ? n : ec;
+      e === h.Step.CONFIRM && (A.default.track(x.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, {
+        ...eI,
+        duration_ms: a - eo.startTime,
+        payment_source_type: null == ey ? void 0 : ey.type
+      }), null == d || d(u)), ea(e), ei(null);
+      let i = null != n ? n : er;
       if (null === i) {
-        A.default.track(U.AnalyticEvents.PAYMENT_FLOW_LOADED, {
-          ...eO,
+        A.default.track(x.AnalyticEvents.PAYMENT_FLOW_LOADED, {
+          ...eI,
           initial_step: e,
-          has_saved_payment_source: ep
+          has_saved_payment_source: e_
         });
         return
       }
-      A.default.track(U.AnalyticEvents.PAYMENT_FLOW_STEP, {
-        ...eO,
+      A.default.track(x.AnalyticEvents.PAYMENT_FLOW_STEP, {
+        ...eI,
         ...l,
         from_step: i,
-        to_step: e === C.Step.ADD_PAYMENT_STEPS ? C.Step.PAYMENT_TYPE : e,
-        step_duration_ms: a - eL,
-        flow_duration_ms: a - ed.startTime
+        to_step: e === h.Step.ADD_PAYMENT_STEPS ? h.Step.PAYMENT_TYPE : e,
+        step_duration_ms: a - eh,
+        flow_duration_ms: a - eo.startTime
       })
-    }, [eO, ed.startTime, d, er, es, ec, eL, ep, ev]),
-    ek = u.useMemo(() => () => null == g ? void 0 : g(et === R.PurchaseState.COMPLETED, el), [g, et, el]);
-  (0, m.usePaymentStepForAuthentication)(ec, eo, ex), (0, C.usePurchaseStateForStep)(ec, et, en), (0, S.usePurchaseTokenAuthStep)(ec, ef, ex), (0, _.default)(ek), (0, P.useUnsupportedExternalSubscriptionModalHandler)(e_, () => g(!1), eA), (0, m.usePaymentAuthenticationPoller)(eo);
-  let eU = (0, L.PaymentModalHeader)({
-    renderHeader: W,
-    referralTrialOfferId: J,
-    handleClose: ek
+    }, [eI, eo.startTime, d, ei, ea, er, eh, e_, ey]),
+    eC = u.useMemo(() => () => null == O ? void 0 : O($ === R.PurchaseState.COMPLETED, et), [O, $, et]);
+  (0, m.usePaymentStepForAuthentication)(er, es, eR), (0, h.usePurchaseStateForStep)(er, $, ee), (0, S.usePurchaseTokenAuthStep)(er, ec, eR), (0, _.default)(eC), (0, P.useUnsupportedExternalSubscriptionModalHandler)(ed, () => O(!1), eT), (0, m.usePaymentAuthenticationPoller)(es);
+  let eO = (0, L.PaymentModalHeader)({
+    renderHeader: w,
+    referralTrialOfferId: V,
+    handleClose: eC
   });
   return (0, l.jsx)(o.Shaker, {
-    className: G.shaker,
-    isShaking: q && et === R.PurchaseState.PURCHASING,
+    className: b.shaker,
+    isShaking: X && $ === R.PurchaseState.PURCHASING,
     intensity: 2,
     children: (0, l.jsx)(o.ModalRoot, {
-      className: i(G.root, {
-        [G.withHeader]: null != eU
+      className: i(b.root, {
+        [b.withHeader]: null != eO
       }),
       transitionState: f,
-      hideShadow: Z,
-      returnRef: $,
-      size: eM,
+      hideShadow: q,
+      returnRef: Q,
+      size: eP,
       children: (0, l.jsx)(k.default, {
-        header: eU,
-        isLargeModal: Q || (null == eT ? void 0 : eT.isLargeModal),
+        header: eO,
+        isLargeModal: J || (null == eS ? void 0 : eS.isLargeModal),
         initialPlanId: E,
         subscriptionTier: M,
-        handleStepChange: ex,
-        handleClose: ek,
-        analyticsData: eO,
-        setAnalyticsData: eg,
-        trialId: v,
-        trialFooterMessageOverride: x,
-        reviewWarningMessage: Y,
-        planGroup: j,
-        openInvoiceId: H,
+        handleStepChange: eR,
+        handleClose: eC,
+        analyticsData: eI,
+        setAnalyticsData: eN,
+        trialId: g,
+        trialFooterMessageOverride: v,
+        reviewWarningMessage: D,
+        planGroup: Y,
+        openInvoiceId: G,
         analyticsLocation: n,
-        onSubscriptionConfirmation: B,
-        renderPurchaseConfirmation: K,
-        postSuccessGuild: w,
-        followupSKUInfo: F,
-        referralTrialOfferId: J
+        onSubscriptionConfirmation: H,
+        renderPurchaseConfirmation: j,
+        postSuccessGuild: B,
+        followupSKUInfo: K,
+        referralTrialOfferId: V
       })
     })
   })
 }
 
-function j(e) {
+function Y(e) {
   let {
     subscriptionTier: t,
     initialPlanId: n,
@@ -247,22 +228,22 @@ function j(e) {
     setSelectedPlanId: T,
     defaultPlanId: A,
     startedPaymentFlowWithPaymentSourcesRef: I
-  } = (0, h.usePaymentContext)(), {
-    isGift: N
-  } = (0, y.useGiftContext)(), R = I.current, O = (0, v.default)({
-    isGift: N,
+  } = (0, y.usePaymentContext)(), {
+    isGift: R
+  } = (0, N.useGiftContext)(), C = I.current, L = (0, g.default)({
+    isGift: R,
     skuId: P,
     referralTrialOfferId: i
   }), {
-    defaultToMonthlyPlan: L
+    defaultToMonthlyPlan: k
   } = E.TrialRedemptionDefaultPlanExperiment.getCurrentConfig({
     location: "055ec5_1"
   }, {
     autoTrackExposure: !1
-  }), [k, U] = u.useState(!0), D = (0, r.default)([M.default], () => M.default.applicationIdsFetched.has(b.PREMIUM_SUBSCRIPTION_APPLICATION));
+  }), [x, b] = u.useState(!0), D = (0, r.default)([M.default], () => M.default.applicationIdsFetched.has(U.PREMIUM_SUBSCRIPTION_APPLICATION));
   return (u.useEffect(() => {
-    U(!p || !m || S)
-  }, [S, m, p]), (0, d.default)("Payment Modal", k, 5, {
+    b(!p || !m || S)
+  }, [S, m, p]), (0, d.default)("Payment Modal", x, 5, {
     hasFetchedSubscriptions: p,
     hasFetchedSubscriptionPlans: m,
     currencyLoading: S
@@ -271,19 +252,19 @@ function j(e) {
       app_context: "billing"
     }
   }), u.useEffect(() => {
-    if (!D && (0, c.fetchUserEntitlementsForApplication)(b.PREMIUM_SUBSCRIPTION_APPLICATION), k || _) return;
-    let e = (0, g.inOneStepSubscriptionCheckout)({
-      isTrial: O,
-      isGift: N,
+    if (!D && (0, c.fetchUserEntitlementsForApplication)(U.PREMIUM_SUBSCRIPTION_APPLICATION), x || _) return;
+    let e = (0, O.inOneStepSubscriptionCheckout)({
+      isTrial: L,
+      isGift: R,
       selectedSkuId: P,
-      startedPaymentFlowWithPaymentSources: R
+      startedPaymentFlowWithPaymentSources: C
     });
-    if (null != n) a(C.Step.REVIEW);
+    if (null != n) a(h.Step.REVIEW);
     else if (e) {
-      let e = (0, g.getDefaultPlanOneStepCheckout)(P, o, A);
-      T(e), a(C.Step.REVIEW)
-    } else null != t ? a(C.Step.PLAN_SELECT) : a(C.Step.SKU_SELECT)
-  }, [o, _, D, n, k, a, t, P, T, L, O, A, N, R]), k) ? (0, l.jsx)(x.default, {}) : _ ? (0, l.jsx)(f.BlockedPaymentsContentModal, {
+      let e = (0, O.getDefaultPlanOneStepCheckout)(P, o, A);
+      T(e), a(h.Step.REVIEW)
+    } else null != t ? a(h.Step.PLAN_SELECT) : a(h.Step.SKU_SELECT)
+  }, [o, _, D, n, x, a, t, P, T, k, L, A, R, C]), x) ? (0, l.jsx)(v.default, {}) : _ ? (0, l.jsx)(f.BlockedPaymentsContentModal, {
     onClose: s
   }) : null
 }
