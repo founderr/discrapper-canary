@@ -30,28 +30,44 @@ var a = (0, t("237436").defineColorTokens)({
     light: "primary.230"
   },
   "polls-victor-border": {
-    dark: "yellow.300",
-    light: "yellow.300"
+    dark: "green.330",
+    light: "green.330"
   },
   "polls-victor-fill": {
-    dark: "yellow.200",
-    light: "yellow.200"
+    dark: {
+      color: "green.360",
+      opacity: .2
+    },
+    light: {
+      color: "green.400",
+      opacity: .2
+    }
   },
   "polls-victor-label": {
     dark: "primary.600",
     light: "primary.600"
   },
   "polls-voted-border": {
-    dark: "green.330",
-    light: "green.330"
+    dark: "brand.300",
+    light: "brand.300"
   },
   "polls-voted-fill": {
-    dark: "green.160",
-    light: "green.160"
+    dark: "brand.200",
+    light: "brand.200"
   },
   "polls-voted-label": {
     dark: "primary.600",
     light: "primary.600"
+  },
+  "polls-result-fill": {
+    dark: {
+      color: "brand.500",
+      opacity: .2
+    },
+    light: {
+      color: "brand.500",
+      opacity: .2
+    }
   },
   "polls-embed-border": {
     dark: "primary.660",
