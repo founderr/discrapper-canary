@@ -270,6 +270,7 @@ r = class extends E.default {
               participant_type: "sender",
               guild_region: b.default.getRegion(this.hostname),
               hostname: this.hostname,
+              hardware_enabled: P.default.getHardwareH264(),
               ...t,
               ...e.getNetworkStats(),
               ...e.getCodecUsageStats("sender", this.userId),
@@ -291,6 +292,7 @@ r = class extends E.default {
             participant_type: "receiver",
             guild_region: b.default.getRegion(this.hostname),
             hostname: this.hostname,
+            hardware_enabled: P.default.getHardwareH264(),
             ...r,
             ...e.getNetworkStats(),
             ...e.getCodecUsageStats("receiver", t)
@@ -683,6 +685,7 @@ r = class extends E.default {
         participant_type: "receiver",
         guild_region: b.default.getRegion(this.hostname),
         hostname: this.hostname,
+        hardware_enabled: P.default.getHardwareH264(),
         ...t,
         ...r.getNetworkStats(),
         ...r.getCodecUsageStats("receiver", e)
