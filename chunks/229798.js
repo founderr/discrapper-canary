@@ -1,93 +1,77 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
-}), l("222007");
-var n = l("37983"),
-  a = l("884691"),
-  s = l("249654"),
-  r = l("77078"),
-  i = l("686904"),
-  d = l("322224"),
-  u = l("397680"),
-  o = l("822516"),
-  c = l("953143"),
-  E = l("782340"),
-  _ = l("558421");
+}), n("222007");
+var l = n("37983"),
+  r = n("884691"),
+  a = n("77078"),
+  s = n("686904"),
+  u = n("27679"),
+  i = n("397680"),
+  d = n("822516"),
+  o = n("953143"),
+  c = n("782340"),
+  E = n("558421");
 
-function h(e) {
+function _(e) {
   let {
     guildEvent: t,
-    recurrenceId: l,
-    transitionState: h,
-    onClose: g
-  } = e, x = (0, u.default)(l, t.id), D = (0, o.getBaseScheduleForRecurrence)(l, t), f = (0, o.getScheduleForRecurrenceWithException)(D, x), [A, T] = a.useState(f), [m, {
-    loading: N,
-    error: I
-  }] = (0, i.default)(async () => {
-    let e = (0, o.areDatesIdentical)(D.startDate, A.startDate) ? null : A.startDate,
-      n = (0, o.areDatesIdentical)(D.endDate, A.endDate) ? null : A.endDate;
-    if (null != x)(0, o.areSchedulesIdentical)(A, D) ? await d.default.deleteGuildEventException(t.guild_id, t.id, x.event_exception_id) : await d.default.updateGuildEventException({
-      scheduled_start_time: null == e ? void 0 : e.toISOString(),
-      scheduled_end_time: null == n ? void 0 : n.toISOString(),
-      is_canceled: x.is_canceled
-    }, t.guild_id, t.id, l);
-    else {
-      let a = s.default.extractTimestamp(l);
-      await d.default.createGuildEventException({
-        original_scheduled_start_time: new Date(a).toISOString(),
-        scheduled_start_time: null == e ? void 0 : e.toISOString(),
-        scheduled_end_time: null == n ? void 0 : n.toISOString(),
-        is_canceled: !1
-      }, t.guild_id, t.id)
-    }
-    null == I && g()
+    recurrenceId: n,
+    transitionState: _,
+    onClose: h
+  } = e, g = (0, i.default)(n, t.id), f = (0, d.getBaseScheduleForRecurrence)(n, t), x = (0, d.getScheduleForRecurrenceWithException)(f, g), [D, A] = r.useState(x), [T, {
+    loading: m,
+    error: N
+  }] = (0, s.default)(() => {
+    let e = (0, u.default)(t, n, D, g);
+    return null == N && h(), e
   });
-  return (0, n.jsxs)(r.ModalRoot, {
-    transitionState: h,
-    children: [(0, n.jsx)(r.ModalHeader, {
-      children: (0, n.jsx)(r.Heading, {
+  return (0, l.jsxs)(a.ModalRoot, {
+    transitionState: _,
+    children: [(0, l.jsx)(a.ModalHeader, {
+      children: (0, l.jsx)(a.Heading, {
         variant: "heading-lg/semibold",
-        children: E.default.Messages.EDIT_THIS_EVENT
+        children: c.default.Messages.EDIT_THIS_EVENT
       })
-    }), (0, n.jsxs)(r.ModalContent, {
-      className: _.content,
-      children: [(0, n.jsx)(c.default, {
+    }), (0, l.jsxs)(a.ModalContent, {
+      className: E.content,
+      children: [(0, l.jsx)(o.default, {
         onScheduleChange: e => {
           let {
             startDate: t,
-            endDate: l
+            endDate: n
           } = e;
-          null != t && null != l && l.isBefore(t) && (l = t.clone().add(1, "hour")), T({
+          null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, "hour")), A({
             startDate: t,
-            endDate: l
+            endDate: n
           })
         },
-        schedule: A,
-        showEndDate: null != A.endDate,
-        requireEndDate: null != A.endDate,
+        schedule: D,
+        showEndDate: null != D.endDate,
+        requireEndDate: null != D.endDate,
         guildId: t.guild_id,
         recurrenceRule: t.recurrence_rule
-      }), null != I ? (0, n.jsx)(r.Text, {
+      }), null != N ? (0, l.jsx)(a.Text, {
         color: "text-danger",
         variant: "text-xs/normal",
-        className: _.warning,
-        children: I.getAnyErrorMessage()
+        className: E.warning,
+        children: N.getAnyErrorMessage()
       }) : null]
-    }), (0, n.jsxs)(r.ModalFooter, {
-      className: _.footer,
-      children: [(0, n.jsx)(r.Button, {
-        color: r.Button.Colors.BRAND,
-        onClick: m,
-        className: _.button,
-        submitting: N,
-        disabled: (0, o.areSchedulesIdentical)(A, f),
-        children: E.default.Messages.SAVE_EVENT
-      }), (0, n.jsx)(r.Button, {
-        color: r.Button.Colors.PRIMARY,
-        onClick: g,
-        children: E.default.Messages.CANCEL
+    }), (0, l.jsxs)(a.ModalFooter, {
+      className: E.footer,
+      children: [(0, l.jsx)(a.Button, {
+        color: a.Button.Colors.BRAND,
+        onClick: T,
+        className: E.button,
+        submitting: m,
+        disabled: (0, d.areSchedulesIdentical)(D, x),
+        children: c.default.Messages.SAVE_EVENT
+      }), (0, l.jsx)(a.Button, {
+        color: a.Button.Colors.PRIMARY,
+        onClick: h,
+        children: c.default.Messages.CANCEL
       })]
     })]
   })

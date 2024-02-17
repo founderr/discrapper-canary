@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return w
   }
 }), n("222007");
 var l, a, s = n("37983"),
@@ -25,22 +25,23 @@ var l, a, s = n("37983"),
   x = n("799547"),
   p = n("189443"),
   S = n("841363"),
-  A = n("558286"),
-  L = n("560309"),
-  R = n("151859"),
-  M = n("299342"),
-  y = n("499950"),
-  D = n("27754"),
-  j = n("745049"),
-  G = n("49111"),
-  V = n("782340"),
-  O = n("872994");
+  A = n("822516"),
+  L = n("558286"),
+  R = n("560309"),
+  M = n("151859"),
+  y = n("299342"),
+  D = n("499950"),
+  j = n("27754"),
+  G = n("745049"),
+  V = n("49111"),
+  O = n("782340"),
+  U = n("872994");
 let {
-  INVITE_OPTIONS_7_DAYS: U,
-  INVITE_OPTIONS_UNLIMITED: b
+  INVITE_OPTIONS_7_DAYS: b,
+  INVITE_OPTIONS_UNLIMITED: P
 } = m.default;
 
-function P(e) {
+function B(e) {
   let {
     modal: t
   } = e, {
@@ -100,7 +101,7 @@ function P(e) {
   }, [n, t]), null
 }
 
-function B(e) {
+function F(e) {
   let {
     guildId: t,
     guildEvent: n,
@@ -115,21 +116,21 @@ function B(e) {
     onSave: g,
     onClose: C,
     createdEvent: x
-  } = e, p = (0, I.useUID)(), S = i.useRef(n), D = !(0, r.isEqual)(S.current, n), j = i.useMemo(() => [{
+  } = e, p = (0, I.useUID)(), S = i.useRef(n), A = !(0, r.isEqual)(S.current, n), j = i.useMemo(() => [{
     slideId: 0,
-    label: V.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_1,
+    label: O.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_1,
     valid: null == f.entity,
     userErrorMessage: f.entity
   }, {
     slideId: 1,
-    label: V.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_2,
-    valid: null == f.schedule && null == f.topic && (!E || D),
+    label: O.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_2,
+    valid: null == f.schedule && null == f.topic && (!E || A),
     userErrorMessage: f.schedule
   }, {
     slideId: 2,
-    label: V.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_3,
+    label: O.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_3,
     valid: !0
-  }], [f, E, D]), G = Object.keys(l).length, U = (0, N.isGuildScheduledEventActive)(n), b = e => Math.max(0, Math.min(e, G - 1)), [B, F] = i.useState(U ? 1 : 0), [w, k] = i.useState(!1), H = i.useMemo(() => j.slice(0, B + 1).map(e => e.valid).every(Boolean), [j, B]), z = B >= j.length ? 3 : j[b(B)].slideId, Y = 3 === z, Z = (0, A.useGuildEventModalStore)(e => e.onUpdateCanCloseModal);
+  }], [f, E, A]), G = Object.keys(l).length, V = (0, N.isGuildScheduledEventActive)(n), b = e => Math.max(0, Math.min(e, G - 1)), [P, F] = i.useState(V ? 1 : 0), [w, k] = i.useState(!1), H = i.useMemo(() => j.slice(0, P + 1).map(e => e.valid).every(Boolean), [j, P]), z = P >= j.length ? 3 : j[b(P)].slideId, Y = 3 === z, Z = (0, L.useGuildEventModalStore)(e => e.onUpdateCanCloseModal);
   Z(Y);
   let W = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     X = i.useRef(null),
@@ -142,27 +143,27 @@ function B(e) {
   let K = () => {
       if (!H) return;
       let e = 2 === z;
-      e ? g() : Y ? C() : q(B + 1)
+      e ? g() : Y ? C() : q(P + 1)
     },
     J = () => {
-      q(B - 1)
+      q(P - 1)
     },
-    Q = V.default.Messages.NEXT;
-  return 2 === z && (Q = E ? V.default.Messages.SAVE_EVENT : V.default.Messages.SCHEDULE_EVENT), (0, s.jsx)(s.Fragment, {
+    Q = O.default.Messages.NEXT;
+  return 2 === z && (Q = E ? O.default.Messages.SAVE_EVENT : O.default.Messages.SCHEDULE_EVENT), (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)(d.ModalRoot, {
       transitionState: h,
       "aria-labelledby": p,
       size: d.ModalSize.DYNAMIC,
-      children: [!W && Y ? (0, s.jsx)(P, {
+      children: [!W && Y ? (0, s.jsx)(B, {
         modal: X.current
       }) : null, (0, s.jsxs)(d.ModalContent, {
-        className: O.content,
+        className: U.content,
         scrollerRef: X,
         children: [!Y && (0, s.jsx)(_.default, {
           steps: j.map(e => e.label),
-          stepIndex: B,
+          stepIndex: P,
           onClick: e => {
-            e < B ? J() : e > B && K()
+            e < P ? J() : e > P && K()
           }
         }), (0, s.jsxs)(d.Slides, {
           activeSlide: z,
@@ -172,7 +173,7 @@ function B(e) {
           },
           children: [(0, s.jsx)(d.Slide, {
             id: 0,
-            children: (0, s.jsx)(L.default, {
+            children: (0, s.jsx)(R.default, {
               guildId: t,
               guildEvent: n,
               validationErrorMessage: f.entity,
@@ -181,7 +182,7 @@ function B(e) {
             })
           }), (0, s.jsx)(d.Slide, {
             id: 1,
-            children: (0, s.jsx)(M.default, {
+            children: (0, s.jsx)(y.default, {
               guildEvent: n,
               guildEventId: a,
               guildId: t,
@@ -193,7 +194,7 @@ function B(e) {
             })
           }), (0, s.jsx)(d.Slide, {
             id: 2,
-            children: (0, s.jsx)(R.default, {
+            children: (0, s.jsx)(M.default, {
               guildId: t,
               guildEvent: n,
               guildEventId: a,
@@ -201,24 +202,24 @@ function B(e) {
             })
           }), (0, s.jsx)(d.Slide, {
             id: 3,
-            children: (0, s.jsx)(y.default, {
+            children: (0, s.jsx)(D.default, {
               onClose: C,
               event: x
             })
           })]
         })]
       }), !Y && (0, s.jsxs)(d.ModalFooter, {
-        className: O.footer,
+        className: U.footer,
         children: [(0, s.jsxs)("div", {
-          className: O.inline,
+          className: U.inline,
           children: [(0, s.jsx)(d.Button, {
             color: d.Button.Colors.PRIMARY,
             onClick: C,
-            children: V.default.Messages.CANCEL
+            children: O.default.Messages.CANCEL
           }), (0, s.jsx)(d.Button, {
             onClick: K,
             disabled: !H,
-            className: O.button,
+            className: U.button,
             submitting: v,
             children: Q
           })]
@@ -227,44 +228,44 @@ function B(e) {
           size: d.Button.Sizes.MIN,
           onClick: J,
           color: d.Button.Colors.LINK,
-          children: V.default.Messages.BACK
+          children: O.default.Messages.BACK
         })]
       })]
     })
   })
 }
 
-function F(e) {
+function w(e) {
   let {
     guildId: t,
     guildScheduledEventId: l,
     transitionState: a,
-    onClose: c
-  } = e, E = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t)), _ = (0, u.useStateFromStores)([N.default], () => N.default.getGuildScheduledEvent(l), [l]), I = (0, u.useStateFromStores)([h.default], () => h.default.getDefaultChannel(t), [t]), m = (0, p.getInitialGuildEventData)(_, I), [A, L] = i.useState(m), [R] = i.useState((0, p.isEditingEvent)(_)), [M, y] = i.useState(null), O = e => {
+    onClose: r
+  } = e, c = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t)), E = (0, u.useStateFromStores)([N.default], () => N.default.getGuildScheduledEvent(l), [l]), _ = (0, u.useStateFromStores)([h.default], () => h.default.getDefaultChannel(t), [t]), I = (0, p.getInitialGuildEventData)(E, _), [m, L] = i.useState(I), [R] = i.useState((0, p.isEditingEvent)(E)), [M, y] = i.useState(null), D = e => {
     var t;
     let n = (0, C.isGuildEventInvitable)(e),
-      l = null !== (t = e.channel_id) && void 0 !== t ? t : null == I ? void 0 : I.id;
+      l = null !== (t = e.channel_id) && void 0 !== t ? t : null == _ ? void 0 : _.id;
     null != l && o.default.createInvite(l, {
-      max_age: U.value,
-      max_uses: b.value
-    }, G.InstantInviteSources.GUILD_EVENTS), n ? y(e) : c()
-  }, P = (0, f.default)(E, null == _ ? void 0 : _.id, A), [F, {
+      max_age: b.value,
+      max_uses: P.value
+    }, V.InstantInviteSources.GUILD_EVENTS), n ? y(e) : r()
+  }, U = (0, f.default)(c, null == E ? void 0 : E.id, m), [B, {
     loading: w,
     error: k
   }] = (0, T.default)(async () => {
     if (null != M) return;
     let e = {
-      broadcastToDirectoryChannels: P.broadcastToDirectoryChannels
+      broadcastToDirectoryChannels: U.broadcastToDirectoryChannels
     };
-    if (R && null != l) return await g.default.saveEvent(l, A, t, e), c();
-    let n = await g.default.createGuildEvent(A, t, e);
-    return O(n.body), n
-  }), H = i.useMemo(() => (0, D.default)(A, R), [A, R]);
-  return (0, s.jsx)(B, {
+    if (R && null != l) return await g.default.saveEvent(l, m, t, e), r();
+    let n = await g.default.createGuildEvent(m, t, e);
+    return D(n.body), n
+  }), H = i.useMemo(() => (0, j.default)(m, R), [m, R]);
+  return (0, s.jsx)(F, {
     guildId: t,
-    guildEvent: A,
+    guildEvent: m,
     guildEventId: l,
-    editBroadcastInfoData: P,
+    editBroadcastInfoData: U,
     isEdit: R,
     formErrors: H,
     transitionState: a,
@@ -275,7 +276,7 @@ function F(e) {
         var n;
         let l = (0, S.getChannelTypeFromEntity)(e.entityType),
           [a] = (0, x.getEventChannelsByType)(t, l);
-        e.channelId = null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : null, e.entityType !== j.GuildScheduledEventEntityTypes.EXTERNAL && A.entityType === j.GuildScheduledEventEntityTypes.EXTERNAL && (e.entityMetadata = null)
+        e.channelId = null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : null, e.entityType !== G.GuildScheduledEventEntityTypes.EXTERNAL && m.entityType === G.GuildScheduledEventEntityTypes.EXTERNAL && (e.entityMetadata = null)
       }
       L(t => ({
         ...t,
@@ -283,28 +284,27 @@ function F(e) {
       }))
     },
     onSave: () => {
-      let e = (null == _ ? void 0 : _.scheduled_start_time) !== A.scheduledStartTime || _.scheduled_end_time !== A.scheduledEndTime || !(0, r.isEqual)(_.recurrence_rule, A.recurrenceRule);
-      null != A.recurrenceRule && R && e ? (0, d.openModalLazy)(async () => {
+      null != m.recurrenceRule && R && (0, A.hasScheduleChanges)(E, m) ? (0, d.openModalLazy)(async () => {
         let {
           ConfirmModal: e
         } = await n.el("77078").then(n.bind(n, "77078"));
         return t => (0, s.jsxs)(e, {
           ...t,
-          header: V.default.Messages.EDIT_ALL_EVENTS,
-          confirmText: V.default.Messages.SAVE_EVENT,
-          cancelText: V.default.Messages.NEVERMIND,
-          onConfirm: F,
+          header: O.default.Messages.EDIT_ALL_EVENTS,
+          confirmText: O.default.Messages.SAVE_EVENT,
+          cancelText: O.default.Messages.NEVERMIND,
+          onConfirm: B,
           children: [(0, s.jsx)(d.Text, {
             variant: "text-md/normal",
-            children: V.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM
+            children: O.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM
           }), (0, s.jsx)("br", {}), (0, s.jsx)(d.Text, {
             variant: "text-md/normal",
-            children: V.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT.format()
+            children: O.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT.format()
           })]
         })
-      }) : F()
+      }) : B()
     },
-    onClose: c,
+    onClose: r,
     createdEvent: M
   })
 }(a = l || (l = {}))[a.ENTITY = 0] = "ENTITY", a[a.SETTINGS = 1] = "SETTINGS", a[a.PREVIEW = 2] = "PREVIEW", a[a.SUCCESS = 3] = "SUCCESS"

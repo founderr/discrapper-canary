@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return m
   },
   getEventTimeData: function() {
-    return C
+    return N
   },
   getBaseScheduleForRecurrence: function() {
     return x
@@ -50,6 +50,9 @@ n.r(t), n.d(t, {
   },
   recurrenceRuleToOption: function() {
     return U
+  },
+  hasScheduleChanges: function() {
+    return B
   }
 }), n("222007"), n("424973");
 var l = n("917351"),
@@ -112,20 +115,20 @@ let m = () => {
       t = e.hour();
     return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0)
   },
-  N = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
-  T = (e, t) => {
+  T = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
+  C = (e, t) => {
     let n = e.diff(t, "days");
-    return n > 1 ? N(e, t) : e.calendar(t)
+    return n > 1 ? T(e, t) : e.calendar(t)
   };
 
-function C(e, t, n) {
+function N(e, t, n) {
   null == n && (n = r());
   let l = r(e),
     a = null != t && "" !== t ? r(t) : void 0,
     s = null != t && l.isSame(a, "day");
   return {
-    startDateTimeString: T(l, n),
-    endDateTimeString: null != a ? s ? a.format("LT") : N(a, n) : void 0,
+    startDateTimeString: C(l, n),
+    endDateTimeString: null != a ? s ? a.format("LT") : T(a, n) : void 0,
     currentOrPastEvent: l <= n,
     upcomingEvent: l <= r().add(1, "hour"),
     withinStartWindow: l <= r().add(15, "minute"),
@@ -327,4 +330,8 @@ function U(e, t) {
     default:
       return o.RecurrenceOptions.NONE
   }
+}
+
+function B(e, t) {
+  return (null == e ? void 0 : e.scheduled_start_time) !== t.scheduledStartTime || e.scheduled_end_time !== t.scheduledEndTime || !(0, l.isEqual)(e.recurrence_rule, t.recurrenceRule)
 }
