@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return c
   }
 }), n("222007");
 var l = n("913144"),
@@ -20,21 +20,21 @@ let r = null,
     })
   },
   o = (e, t) => {
-    var n, a, r, s, o, c;
-    let f = i.default.getMember(e, t),
+    var n, a, r, s, o, f;
+    let c = i.default.getMember(e, t),
       E = u.default.getUser(t);
-    if (null == f || null == E || (0, d.isMemberCommunicationDisabled)(f)) return;
+    if (null == c || null == E || (0, d.isMemberCommunicationDisabled)(c)) return;
     let C = {
-      ...f,
+      ...c,
       guildId: e,
-      nick: null !== (n = f.nick) && void 0 !== n ? n : E.username,
-      avatar: null !== (a = f.avatar) && void 0 !== a ? a : void 0,
-      premiumSince: null !== (r = f.premiumSince) && void 0 !== r ? r : void 0,
-      isPending: null !== (s = f.isPending) && void 0 !== s && s,
+      nick: null !== (n = c.nick) && void 0 !== n ? n : E.username,
+      avatar: null !== (a = c.avatar) && void 0 !== a ? a : void 0,
+      premiumSince: null !== (r = c.premiumSince) && void 0 !== r ? r : void 0,
+      isPending: null !== (s = c.isPending) && void 0 !== s && s,
       user: {
         ...E,
         email: null !== (o = E.email) && void 0 !== o ? o : void 0,
-        phone: null !== (c = E.phone) && void 0 !== c ? c : void 0
+        phone: null !== (f = E.phone) && void 0 !== f ? f : void 0
       },
       communicationDisabledUntil: null
     };
@@ -43,7 +43,7 @@ let r = null,
       ...C
     })
   };
-class c extends a.default {
+class f extends a.default {
   _initialize() {
     r = setInterval(() => s(), 1e4)
   }
@@ -54,4 +54,4 @@ class c extends a.default {
     super(...e), this.clearGuildMemberTimeout = o
   }
 }
-var f = new c
+var c = new f

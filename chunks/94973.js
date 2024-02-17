@@ -76,19 +76,19 @@ function L(e) {
     analyticsLocation: a,
     onComplete: v,
     forcesTransitionToGuild: N
-  }), w = t.subscription_plans[0], b = 0 === w.price, D = (null == P ? void 0 : P.id) === t.id, y = (0, o.default)(), U = y && !j || L, V = () => {
-    y ? O() : (0, c.redirectToLogin)({
+  }), w = t.subscription_plans[0], b = 0 === w.price, y = (null == P ? void 0 : P.id) === t.id, D = (0, o.default)(), U = D && !j || L, V = () => {
+    D ? O() : (0, c.redirectToLogin)({
       [R]: "true"
     })
   };
   return i.useEffect(() => {
     let e = new URL(location.href);
-    if (y && !U && "true" === e.searchParams.get(R)) {
+    if (D && !U && "true" === e.searchParams.get(R)) {
       e.searchParams.delete(R);
       let t = e.pathname + e.search;
       (0, f.replaceWith)(t), O()
     }
-  }, [y, O, U]), (0, s.jsxs)("div", {
+  }, [D, O, U]), (0, s.jsxs)("div", {
     className: T.container,
     children: [(0, s.jsxs)("div", {
       className: T.cardHeader,
@@ -109,7 +109,7 @@ function L(e) {
           })
         }), (() => {
           var e;
-          if (D) return (0, s.jsx)(x, {
+          if (y) return (0, s.jsx)(x, {
             children: (null == S ? void 0 : S.status) === E.SubscriptionStatusTypes.CANCELED ? g.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : g.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
           });
           if (b) return null == P ? (0, s.jsx)(x, {
@@ -117,7 +117,7 @@ function L(e) {
           }) : null;
           return (0, s.jsx)(u.Tooltip, {
             tooltipClassName: T.subscribeButtonTooltip,
-            text: j || !y ? null : M,
+            text: j || !D ? null : M,
             "aria-label": null !== (e = !j && M) && void 0 !== e && e,
             children: e => (0, s.jsx)(C.default, {
               ...e,

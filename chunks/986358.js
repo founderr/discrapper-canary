@@ -19,8 +19,8 @@ var a = n("414456"),
   m = n("271938"),
   p = n("26989"),
   E = n("305961"),
-  S = n("957255"),
-  g = n("824563"),
+  g = n("957255"),
+  S = n("824563"),
   C = n("101125"),
   _ = n("697218"),
   I = n("530346"),
@@ -43,7 +43,7 @@ function b(e) {
     backgroundColor: n,
     guildId: a,
     onClose: s
-  } = e, o = t.id, u = (0, i.default)([C.default, g.default, m.default], () => o === m.default.getId() ? C.default.getStatus() : g.default.getStatus(o, a), [o, a]);
+  } = e, o = t.id, u = (0, i.default)([C.default, S.default, m.default], () => o === m.default.getId() ? C.default.getStatus() : S.default.getStatus(o, a), [o, a]);
   return (0, l.jsxs)("div", {
     className: P.topRow,
     style: {
@@ -120,13 +120,13 @@ function U(e) {
     member: s,
     guildId: m
   } = e, p = (0, i.default)([E.default], () => E.default.getGuild(m)), {
-    canKickUser: g,
+    canKickUser: S,
     canBanUser: C,
     canModerateMembers: x
-  } = (0, i.useStateFromStoresObject)([S.default, _.default, E.default], () => ({
-    canKickUser: null != p && S.default.canManageUser(y.Permissions.KICK_MEMBERS, a, p),
-    canBanUser: null != p && S.default.canManageUser(y.Permissions.BAN_MEMBERS, a, p),
-    canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, a.id, [_.default, E.default, S.default])
+  } = (0, i.useStateFromStoresObject)([g.default, _.default, E.default], () => ({
+    canKickUser: null != p && g.default.canManageUser(y.Permissions.KICK_MEMBERS, a, p),
+    canBanUser: null != p && g.default.canManageUser(y.Permissions.BAN_MEMBERS, a, p),
+    canModerateMembers: null != p && (0, f.canToggleCommunicationDisableOnUser)(p.id, a.id, [_.default, E.default, g.default])
   }), [a, p]), R = (0, d.isMemberCommunicationDisabled)(s), {
     analyticsLocations: j,
     newestAnalyticsLocation: L
@@ -154,7 +154,7 @@ function U(e) {
         children: O.default.Messages.SEND_DM
       })]
     }), (0, l.jsxs)(D, {
-      disabled: !g,
+      disabled: !S,
       "aria-label": O.default.Messages.KICK,
       style: {
         backgroundColor: t

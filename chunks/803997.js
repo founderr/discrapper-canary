@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("378765"),
   p = n("550766"),
   E = n("191225"),
-  S = n("272505"),
-  g = n("49111"),
+  g = n("272505"),
+  S = n("49111"),
   C = n("782340"),
   _ = n("518958");
 
@@ -27,8 +27,8 @@ function I(e) {
   let {
     channelId: t,
     ...n
-  } = e, s = a.useRef(null), I = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout() === S.FocusedActivityLayouts.RESIZABLE), T = a.useCallback(() => {
-    let e = I ? S.FocusedActivityLayouts.NO_CHAT : S.FocusedActivityLayouts.RESIZABLE;
+  } = e, s = a.useRef(null), I = (0, o.useStateFromStores)([E.default], () => E.default.getFocusedLayout() === g.FocusedActivityLayouts.RESIZABLE), T = a.useCallback(() => {
+    let e = I ? g.FocusedActivityLayouts.NO_CHAT : g.FocusedActivityLayouts.RESIZABLE;
     (0, p.updateFocusedActivityLayout)(e)
   }, [I]), {
     unreadCount: v,
@@ -52,7 +52,7 @@ function I(e) {
     null === (e = s.current) || void 0 === e || e.focus()
   }, []);
   (0, m.useComponentAction)({
-    event: g.ComponentActions.FOCUS_CHAT_BUTTON,
+    event: S.ComponentActions.FOCUS_CHAT_BUTTON,
     handler: N
   });
   let A = I ? C.default.Messages.HIDE_CHAT : C.default.Messages.SHOW_CHAT,
@@ -73,7 +73,7 @@ function I(e) {
       tooltipPosition: "top",
       iconComponent: h.default,
       themeable: !0,
-      className: i(_.circularButton, R === S.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow),
+      className: i(_.circularButton, R === g.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow),
       ...n
     }), L ? (0, l.jsx)(u.default, {
       hasMentions: x > 0,

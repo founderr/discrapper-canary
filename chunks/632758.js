@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var n = s("37983");
 s("884691");
-var o = s("414456"),
-  a = s.n(o),
+var a = s("414456"),
+  o = s.n(a),
   r = s("77078"),
   i = s("968246");
 
@@ -15,16 +15,16 @@ function l(e) {
   let {
     tips: t,
     className: s,
-    headerText: o
+    headerText: a
   } = e;
   return (0, n.jsxs)("div", {
-    className: a(i.tipsSection, s),
+    className: o(i.tipsSection, s),
     children: [(0, n.jsx)("div", {
       className: i.tipsHeader,
       children: (0, n.jsx)(r.Heading, {
         variant: "heading-lg/bold",
         className: i.headerText,
-        children: o
+        children: a
       })
     }), (0, n.jsx)("ul", {
       className: i.tipsList,

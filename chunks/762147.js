@@ -25,7 +25,7 @@ var a = n("37983"),
 function _(e) {
   let {
     threadId: t
-  } = e, n = (0, i.default)([u.default], () => u.default.getChannel(t)), _ = (0, i.default)([u.default], () => u.default.getChannel(null == n ? void 0 : n.parent_id)), T = s.useCallback(() => {
+  } = e, n = (0, i.default)([u.default], () => u.default.getChannel(t)), _ = (0, i.default)([u.default], () => u.default.getChannel(null == n ? void 0 : n.parent_id)), A = s.useCallback(() => {
     null != n && null != _ && ((0, o.trackWithMetadata)(E.AnalyticEvents.MEDIA_POST_SHARE_PROMPT_CLICKED, {
       media_post_id: n.id
     }), (0, l.copy)((0, h.getChannelLinkToCopy)(n, _)))
@@ -49,7 +49,7 @@ function _(e) {
       }), (0, a.jsxs)(r.Button, {
         className: S.sharePromptCta,
         innerClassName: S.ctaContent,
-        onClick: T,
+        onClick: A,
         children: [(0, a.jsx)(f.default, {
           height: "16px",
           width: "16px"

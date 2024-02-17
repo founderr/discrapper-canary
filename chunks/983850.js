@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   MESSAGE_SCAN_TIMEOUT: function() {
-    return I
+    return S
   },
   MAX_TIMEOUT_FOR_JITTER: function() {
-    return S
+    return I
   },
   default: function() {
     return X
@@ -30,8 +30,8 @@ var s = n("345570"),
   y = n("574933"),
   T = n("49111"),
   C = n("397336");
-let I = 3e3,
-  S = 800,
+let S = 3e3,
+  I = 800,
   A = {};
 
 function D(e) {
@@ -122,14 +122,14 @@ function b(e, t) {
             })
           }
         }(e)
-      }, I)
+      }, S)
     })
   });
   let i = n || new Set(e.map(e => e.channel_id)).size > 1;
   s ? setTimeout(() => {
     let t = e.filter(e => null != A[D(e)]);
     P(t, i)
-  }, Math.random() * S) : P(e, i)
+  }, Math.random() * I) : P(e, i)
 }
 let V = e => null == e.content_scan_version || e.content_scan_version < 1,
   R = e => {

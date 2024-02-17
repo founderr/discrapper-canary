@@ -24,8 +24,8 @@ var s = n("746379"),
   y = n("337543"),
   T = n("18494"),
   C = n("162771"),
-  I = n("677099"),
-  S = n("599110"),
+  S = n("677099"),
+  I = n("599110"),
   A = n("253981");
 n("545158");
 var D = n("49111");
@@ -51,7 +51,7 @@ async function O(e) {
     await N(n, e.code);
     return
   }
-  let s = I.default.getFlattenedGuildIds(),
+  let s = S.default.getFlattenedGuildIds(),
     i = null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id,
     r = null != i && s.includes(i);
   r ? o.default.transitionToInviteSync(n) : await N(n, e.code)
@@ -74,7 +74,7 @@ function b(e) {
     let {
       code: i
     } = s, a = null !== (t = C.default.getGuildId()) && void 0 !== t ? t : void 0;
-    return S.default.track(D.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+    return I.default.track(D.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
       application_id: i,
       device_platform: r.isMobile ? "mobile_web" : "desktop_web",
       guild_id: a,
@@ -108,9 +108,9 @@ function b(e) {
   let {
     path: o,
     hostname: y = "",
-    host: I,
+    host: S,
     query: N
-  } = i.parse(e), b = A.default.isDiscordHostname(y) || A.default.isDiscordLocalhost(I, y);
+  } = i.parse(e), b = A.default.isDiscordHostname(y) || A.default.isDiscordLocalhost(S, y);
   if (b && (null == o ? void 0 : o.startsWith("/application-directory"))) {
     let [, , e, t] = o.split("/"), s = null != e && (0, u.isSnowflake)(e) ? e : void 0;
     return i => {
@@ -121,7 +121,7 @@ function b(e) {
       } = n("750947"), {
         ApplicationDirectoryViews: d
       } = n("412707"), u = null !== (a = C.default.getGuildId()) && void 0 !== a ? a : void 0, f = d.HOME;
-      return "search" === e && (f = d.SEARCH), null != s && (f = d.APPLICATION, S.default.track(D.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+      return "search" === e && (f = d.SEARCH), null != s && (f = d.APPLICATION, I.default.track(D.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
         application_id: s,
         device_platform: r.isMobile ? "mobile_web" : "desktop_web",
         guild_id: u,

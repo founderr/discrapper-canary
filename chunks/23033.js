@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("697218"),
   p = n("433487"),
   E = n("448881"),
-  S = n("2973"),
-  g = n("227231"),
+  g = n("2973"),
+  S = n("227231"),
   C = n("315130"),
   _ = n("45198"),
   I = n("686098"),
@@ -35,17 +35,17 @@ var l = n("37983"),
     } = e, M = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), {
       isCurrentUserStreamingQuestApplication: R,
       quest: j
-    } = (0, r.useStateFromStoresObject)([h.default, d.default, S.default], () => {
+    } = (0, r.useStateFromStoresObject)([h.default, d.default, g.default], () => {
       let e = d.default.getParticipants(s),
         t = function(e, t, n) {
           for (let a of e)
             if (a.type === x.ParticipantTypes.STREAM) {
               var l;
               let e = (0, c.getStreamerApplication)(a.stream, n),
-                s = (null == e ? void 0 : e.id) != null ? (0, g.getQuestByApplicationId)(t, e.id) : null;
+                s = (null == e ? void 0 : e.id) != null ? (0, S.getQuestByApplicationId)(t, e.id) : null;
               if (null != s && (null === (l = s.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null) return s
             } return null
-        }(e, S.default.quests, h.default),
+        }(e, g.default.quests, h.default),
         n = null != t && null != M && function(e, t, n, l) {
           for (let s of e) {
             var a;
@@ -57,7 +57,7 @@ var l = n("37983"),
         isCurrentUserStreamingQuestApplication: n,
         quest: t
       }
-    }, [s, M]), L = (0, r.useStateFromStores)([f.default], () => f.default.locale), y = (0, r.useStateFromStores)([S.default], () => null != j && S.default.isEnrolling(j.id), [j]), O = (0, r.useStateFromStores)([d.default], () => ((null == M ? void 0 : M.id) == null ? null : d.default.getParticipant(s, M.id)) != null, [s, M]), P = a.useMemo(() => null == j ? "" : new Date(j.config.expiresAt).toLocaleDateString(L, {
+    }, [s, M]), L = (0, r.useStateFromStores)([f.default], () => f.default.locale), y = (0, r.useStateFromStores)([g.default], () => null != j && g.default.isEnrolling(j.id), [j]), O = (0, r.useStateFromStores)([d.default], () => ((null == M ? void 0 : M.id) == null ? null : d.default.getParticipant(s, M.id)) != null, [s, M]), P = a.useMemo(() => null == j ? "" : new Date(j.config.expiresAt).toLocaleDateString(L, {
       dateStyle: "short"
     }), [j, L]), b = a.useCallback(() => {}, []), D = a.useCallback(() => {
       null != j && (0, E.enrollInQuest)(j.id)
@@ -76,7 +76,7 @@ var l = n("37983"),
         children: [(0, l.jsx)("img", {
           alt: j.config.messages.rewardName,
           className: A.rewardTile,
-          src: (0, g.getRewardAssetUrl)(j.id)
+          src: (0, S.getRewardAssetUrl)(j.id)
         }), (0, l.jsx)(_.default, {
           bgOpacity: .32,
           className: A.sponsoredTag
@@ -88,11 +88,11 @@ var l = n("37983"),
           children: [F && R ? (0, l.jsx)("img", {
             alt: j.config.messages.rewardName,
             className: A.rewardTile,
-            src: (0, g.getRewardAssetUrl)(j.id)
+            src: (0, S.getRewardAssetUrl)(j.id)
           }) : (0, l.jsx)("img", {
             className: A.gameTile,
             alt: j.config.messages.gameTitle,
-            src: (0, g.getGameTileAssetUrl)(j.id)
+            src: (0, S.getGameTileAssetUrl)(j.id)
           }), (0, l.jsxs)("div", {
             className: A.details,
             children: [(0, l.jsxs)("div", {
@@ -101,7 +101,7 @@ var l = n("37983"),
                 className: A.questTitle,
                 variant: "heading-md/semibold",
                 color: "header-primary",
-                children: R ? (0, g.getContextualEntrypointHeading)(j) : N.default.Messages.QUESTS_TITLE.format({
+                children: R ? (0, S.getContextualEntrypointHeading)(j) : N.default.Messages.QUESTS_TITLE.format({
                   questName: j.config.messages.questName
                 })
               }), (0, l.jsx)(o.Clickable, {

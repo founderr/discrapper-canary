@@ -18,8 +18,8 @@ var a = t("37983"),
   m = t("888400"),
   g = t("50625"),
   f = t("332814"),
-  y = t("928063"),
-  b = t("637171"),
+  b = t("928063"),
+  y = t("637171"),
   x = t("724209"),
   k = t("183698"),
   v = t("699412");
@@ -55,7 +55,7 @@ function j(e) {
     trace: e
   })), [r]);
   return (0, a.jsx)(c.ScrollerThin, {
-    children: (0, a.jsx)(b.default, {
+    children: (0, a.jsx)(y.default, {
       columns: S,
       data: t
     })
@@ -145,7 +145,7 @@ function w(e) {
   } = (0, x.default)({
     tabs: i
   }, [i]);
-  return (0, a.jsxs)(y.default, {
+  return (0, a.jsxs)(b.default, {
     className: k.subPanel,
     minHeight: 100,
     initialHeight: t,
@@ -205,7 +205,7 @@ function E() {
     className: l(v.panel, k.panel),
     children: [(0, a.jsx)(c.ScrollerThin, {
       className: k.tableContainer,
-      children: (0, a.jsx)(b.default, {
+      children: (0, a.jsx)(y.default, {
         columns: N,
         data: t,
         selectedRowKey: null == i ? void 0 : i.toString(),

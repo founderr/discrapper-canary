@@ -8,8 +8,8 @@ var l, r, u = n("37983");
 n("884691");
 var o = n("414456"),
   i = n.n(o),
-  s = n("75196"),
-  c = n("774889");
+  c = n("75196"),
+  s = n("774889");
 (r = l || (l = {})).LEFT = "LEFT", r.RIGHT = "RIGHT", r.UP = "UP", r.DOWN = "DOWN", r.UP_LEFT = "UP_LEFT", r.DOWN_RIGHT = "DOWN_RIGHT";
 let a = e => {
   let {
@@ -23,23 +23,23 @@ let a = e => {
     ...f
   } = e;
   return (0, u.jsxs)("svg", {
-    ...(0, s.default)(f),
+    ...(0, c.default)(f),
     width: t,
     height: n,
     className: i(a, function(e) {
       switch (e) {
         case "LEFT":
-          return c.left;
+          return s.left;
         case "RIGHT":
-          return c.right;
+          return s.right;
         case "UP":
           return null;
         case "DOWN":
-          return c.down;
+          return s.down;
         case "UP_LEFT":
-          return c.upLeft;
+          return s.upLeft;
         case "DOWN_RIGHT":
-          return c.downRight;
+          return s.downRight;
         default:
           throw Error("Invalid Direction ".concat(e))
       }

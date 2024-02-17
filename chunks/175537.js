@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return h
   }
 });
 var a = n("37983"),
@@ -15,19 +15,19 @@ var a = n("37983"),
   c = n("845579"),
   f = n("957255"),
   E = n("79945"),
-  m = n("315102"),
-  M = n("659500"),
+  M = n("315102"),
+  m = n("659500"),
   g = n("402671"),
-  p = n("49111"),
+  S = n("49111"),
   I = n("958706"),
-  S = n("782340");
+  p = n("782340");
 
-function v(e, t) {
+function h(e, t) {
   let {
     reducedMotion: n
-  } = i.useContext(s.AccessibilityPreferencesContext), v = (0, o.useIsActiveChannelOrUnarchivableThread)(t), h = (0, l.useStateFromStores)([f.default], () => (t.isPrivate() || f.default.can(p.Permissions.ADD_REACTIONS, t)) && v, [t, v]), A = (0, u.useEmojiInPriorityOrder)(t.getGuildId());
-  if (!c.RenderReactions.getSetting() || !h || e.type === p.MessageTypes.GUILD_INVITE_REMINDER) return null;
-  let _ = A.filter(e => !g.default.isEmojiFilteredOrLocked({
+  } = i.useContext(s.AccessibilityPreferencesContext), h = (0, o.useIsActiveChannelOrUnarchivableThread)(t), v = (0, l.useStateFromStores)([f.default], () => (t.isPrivate() || f.default.can(S.Permissions.ADD_REACTIONS, t)) && h, [t, h]), _ = (0, u.useEmojiInPriorityOrder)(t.getGuildId());
+  if (!c.RenderReactions.getSetting() || !v || e.type === S.MessageTypes.GUILD_INVITE_REMINDER) return null;
+  let A = _.filter(e => !g.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
     intention: I.EmojiIntention.REACTION
@@ -42,7 +42,7 @@ function v(e, t) {
         let {
           isFocused: a
         } = e;
-        return null != i.id ? m.default.getEmojiURL({
+        return null != i.id ? M.default.getEmojiURL({
           id: i.id,
           animated: i.animated && (!n.enabled || a),
           size: 18
@@ -56,21 +56,21 @@ function v(e, t) {
   });
   return (0, a.jsx)(s.MenuItem, {
     id: "add-reaction",
-    label: S.default.Messages.ADD_REACTION,
+    label: p.default.Messages.ADD_REACTION,
     action: () => {
-      M.ComponentDispatch.dispatchKeyed(p.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
+      m.ComponentDispatch.dispatchKeyed(S.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
         emojiPicker: !0
       })
     },
     color: "default",
     children: (0, a.jsxs)(a.Fragment, {
-      children: [_, (0, a.jsx)(s.MenuSeparator, {}), (0, a.jsx)(s.MenuItem, {
+      children: [A, (0, a.jsx)(s.MenuSeparator, {}), (0, a.jsx)(s.MenuItem, {
         color: "default",
         id: "other-reactions",
-        label: S.default.Messages.VIEW_MORE,
+        label: p.default.Messages.VIEW_MORE,
         icon: E.default,
         action: () => {
-          M.ComponentDispatch.dispatchKeyed(p.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
+          m.ComponentDispatch.dispatchKeyed(S.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
             emojiPicker: !0
           })
         }

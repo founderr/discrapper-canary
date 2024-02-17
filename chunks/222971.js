@@ -24,7 +24,7 @@ function f(e) {
     isRecurrenceItem: T
   } = e, {
     canManageGuildEvent: M
-  } = (0, s.useManageResourcePermissions)(null != E ? E : f), v = (0, a.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(t)), g = M(v), m = (0, o.default)(), I = (0, r.default)(_, null == v ? void 0 : v.id), N = (0, i.default)(t, _);
+  } = (0, s.useManageResourcePermissions)(null != E ? E : f), v = (0, a.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(t)), g = M(v), I = (0, o.default)(), m = (0, r.default)(_, null == v ? void 0 : v.id), N = (0, i.default)(t, _);
   if (!g || null == v) return null;
   let R = null != v.recurrence_rule && !T,
     S = e => {
@@ -37,7 +37,7 @@ function f(e) {
           guildScheduledEventId: t,
           guildId: f.id
         })
-      }, m) : null != _ && (0, u.openModalLazy)(async () => {
+      }, I) : null != _ && (0, u.openModalLazy)(async () => {
         let {
           default: e
         } = await l.el("229798").then(l.bind(l, "229798"));
@@ -46,7 +46,7 @@ function f(e) {
           guildEvent: v,
           recurrenceId: _
         })
-      }, m)
+      }, I)
     };
   return (0, n.jsx)(u.MenuItem, {
     id: c.default.Messages.EDIT_EVENT,
@@ -57,7 +57,7 @@ function f(e) {
         id: c.default.Messages.EDIT_THIS_EVENT,
         label: c.default.Messages.EDIT_THIS_EVENT,
         action: () => S(!1),
-        disabled: (null == I ? void 0 : I.is_canceled) || N.startTime.getTime() < Date.now()
+        disabled: (null == m ? void 0 : m.is_canceled) || N.startTime.getTime() < Date.now()
       }), (0, n.jsx)(u.MenuItem, {
         id: c.default.Messages.EDIT_ALL_EVENTS,
         label: c.default.Messages.EDIT_ALL_EVENTS,

@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("812204"),
   p = n("685665"),
   E = n("850391"),
-  S = n("149022"),
-  g = n("681060"),
+  g = n("149022"),
+  S = n("681060"),
   C = n("376215"),
   _ = n("172554"),
   I = n("699473"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("412861"),
   F = n("910927"),
   k = n("730498"),
-  V = n("24337"),
-  B = n("967241"),
+  B = n("24337"),
+  V = n("967241"),
   H = n("517141"),
   G = n("49111"),
   W = n("782340"),
@@ -70,7 +70,7 @@ function Z(e) {
           toolbar: (0, l.jsx)(b.default.Icon, {
             icon: y.default,
             tooltip: W.default.Messages.CLOSE,
-            onClick: () => (0, B.closeAndClearThreadSidebar)(t)
+            onClick: () => (0, V.closeAndClearThreadSidebar)(t)
           }),
           children: [(0, l.jsx)(b.default.Icon, {
             icon: P.default,
@@ -119,15 +119,15 @@ function X(e) {
       updateThreadSettings: s
     }
   }(t, n), {
-    textAreaState: g,
+    textAreaState: S,
     setTextAreaState: C
   } = function(e, t) {
-    let [n, l] = a.useState((0, S.createEmptyState)());
+    let [n, l] = a.useState((0, g.createEmptyState)());
     return a.useEffect(() => {
       function n(n) {
         var a;
         let s = A.default.getDraft(e.id, A.DraftType.FirstThreadMessage);
-        (0 === s.length || !0 === n) && l((0, S.createState)(s)), t(null !== (a = A.default.getThreadSettings(e.id)) && void 0 !== a ? a : {})
+        (0 === s.length || !0 === n) && l((0, g.createState)(s)), t(null !== (a = A.default.getThreadSettings(e.id)) && void 0 !== a ? a : {})
       }
       return n(!0), A.default.addChangeListener(n), () => {
         A.default.removeChangeListener(n)
@@ -154,7 +154,7 @@ function X(e) {
       threadSettings: l,
       privateThreadMode: s,
       location: r,
-      onThreadCreated: B.openThreadSidebarForViewing,
+      onThreadCreated: V.openThreadSidebarForViewing,
       useDefaultThreadName: !0
     }), h = a.useCallback(async (e, a, s) => {
       var r, o, d;
@@ -204,7 +204,7 @@ function X(e) {
     parentMessageId: n,
     threadSettings: m,
     privateThreadMode: I,
-    textAreaState: g,
+    textAreaState: S,
     location: s
   }), R = (0, k.getIsPrivate)(m, I) ? O.default : P.default;
   return (0, l.jsx)("div", {
@@ -251,7 +251,7 @@ function X(e) {
           className: Y.submitContainer,
           children: [(0, l.jsx)(J, {
             parentChannel: t,
-            textAreaState: g,
+            textAreaState: S,
             setTextAreaState: C,
             submit: M,
             error: N
@@ -326,11 +326,11 @@ function q(e) {
       maxLength: G.MAX_CHANNEL_NAME_LENGTH,
       onChange: e => {
         i({
-          name: (0, V.default)(e, !1)
+          name: (0, B.default)(e, !1)
         }), "" !== e ? d.default.startTyping(n.id) : d.default.stopTyping(n.id)
       },
       onBlur: () => {
-        let e = (0, V.default)(u, !0);
+        let e = (0, B.default)(u, !0);
         e !== u && i({
           name: e
         })
@@ -347,7 +347,7 @@ function J(e) {
     setTextAreaState: s,
     submit: c,
     error: f
-  } = e, [h, m] = a.useState(!0), p = a.useCallback(() => m(!0), []), E = a.useCallback(() => m(!1), []), S = a.useCallback((e, n, l) => {
+  } = e, [h, m] = a.useState(!0), p = a.useCallback(() => m(!0), []), E = a.useCallback(() => m(!1), []), g = a.useCallback((e, n, l) => {
     u.default.saveDraft(t.id, n, A.DraftType.FirstThreadMessage), s(e => ("" !== n && e.textValue !== n ? d.default.startTyping(t.id) : "" === n && d.default.stopTyping(t.id), {
       textValue: n,
       richValue: l
@@ -381,7 +381,7 @@ function J(e) {
       children: (0, l.jsx)(o.InputError, {
         error: T
       })
-    }), (0, l.jsx)(g.default, {
+    }), (0, l.jsx)(S.default, {
       type: K,
       channel: t,
       placeholder: W.default.Messages.FORM_THREAD_STARTER_MESSAGE_PLACEHOLDER,
@@ -394,7 +394,7 @@ function J(e) {
       }),
       onFocus: p,
       onBlur: E,
-      onChange: S,
+      onChange: g,
       onSubmit: _,
       promptToUpload: w.promptToUpload
     })]

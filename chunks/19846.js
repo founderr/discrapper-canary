@@ -22,8 +22,8 @@ var a = n("37983"),
   g = n("697218"),
   S = n("587974"),
   _ = n("315102"),
-  T = n("841397"),
-  A = n("49111"),
+  A = n("841397"),
+  T = n("49111"),
   M = n("680894"),
   I = n("590456"),
   N = n("782340"),
@@ -68,7 +68,7 @@ let L = e => {
             userId: t,
             section: I.UserProfileSections.MUTUAL_GUILDS,
             analyticsLocation: {
-              section: A.AnalyticsSections.DIRECT_MESSAGE
+              section: T.AnalyticsSections.DIRECT_MESSAGE
             }
           })
         },
@@ -82,7 +82,7 @@ let L = e => {
       })]
     })
   },
-  R = e => {
+  x = e => {
     var t;
     let {
       relationshipType: n,
@@ -92,7 +92,7 @@ let L = e => {
       o.default.addRelationship({
         userId: s,
         context: {
-          location: A.AnalyticsPages.DM_CHANNEL
+          location: T.AnalyticsPages.DM_CHANNEL
         }
       })
     }, d = (0, a.jsx)(r.Button, {
@@ -103,15 +103,15 @@ let L = e => {
         o.default.addRelationship({
           userId: s,
           context: {
-            location: A.AnalyticsPages.DM_CHANNEL
+            location: T.AnalyticsPages.DM_CHANNEL
           },
-          type: A.RelationshipTypes.BLOCKED
+          type: T.RelationshipTypes.BLOCKED
         })
       },
       children: N.default.Messages.BLOCK
     });
     switch (n) {
-      case A.RelationshipTypes.NONE:
+      case T.RelationshipTypes.NONE:
         return (0, a.jsxs)(a.Fragment, {
           children: [!i && !l && (0, a.jsx)(r.Button, {
             className: v.action,
@@ -120,33 +120,33 @@ let L = e => {
             children: N.default.Messages.ADD_FRIEND
           }), d]
         });
-      case A.RelationshipTypes.FRIEND:
+      case T.RelationshipTypes.FRIEND:
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(r.Button, {
             className: v.action,
             size: r.Button.Sizes.TINY,
             onClick: () => {
               o.default.removeFriend(s, {
-                location: A.AnalyticsPages.DM_CHANNEL
+                location: T.AnalyticsPages.DM_CHANNEL
               })
             },
             color: r.Button.Colors.PRIMARY,
             children: N.default.Messages.REMOVE_FRIEND
           }), d]
         });
-      case A.RelationshipTypes.BLOCKED:
+      case T.RelationshipTypes.BLOCKED:
         return (0, a.jsx)(r.Button, {
           className: v.action,
           size: r.Button.Sizes.TINY,
           onClick: () => {
             o.default.unblockUser(s, {
-              location: A.AnalyticsPages.DM_CHANNEL
+              location: T.AnalyticsPages.DM_CHANNEL
             })
           },
           color: r.Button.Colors.PRIMARY,
           children: N.default.Messages.UNBLOCK
         });
-      case A.RelationshipTypes.PENDING_INCOMING:
+      case T.RelationshipTypes.PENDING_INCOMING:
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(r.Text, {
             className: v.action,
@@ -164,13 +164,13 @@ let L = e => {
             color: r.Button.Colors.PRIMARY,
             onClick: () => {
               o.default.cancelFriendRequest(s, {
-                location: A.AnalyticsPages.DM_CHANNEL
+                location: T.AnalyticsPages.DM_CHANNEL
               })
             },
             children: N.default.Messages.FRIEND_REQUEST_IGNORE
           }), d]
         });
-      case A.RelationshipTypes.PENDING_OUTGOING:
+      case T.RelationshipTypes.PENDING_OUTGOING:
         return (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(r.Button, {
             className: v.action,
@@ -183,7 +183,7 @@ let L = e => {
         return null
     }
   },
-  x = e => {
+  R = e => {
     let {
       channelId: t,
       otherUserId: n
@@ -242,7 +242,7 @@ var y = e => {
       })
     }), (0, a.jsxs)("div", {
       className: v.mobileButtons,
-      children: [(0, a.jsx)(x, {
+      children: [(0, a.jsx)(R, {
         channelId: n.id,
         otherUserId: t
       }), (0, a.jsx)(f.default, {
@@ -258,11 +258,11 @@ var y = e => {
       })
     }), (0, a.jsxs)("div", {
       className: v.mobileButtons,
-      children: [(0, a.jsx)(R, {
+      children: [(0, a.jsx)(x, {
         relationshipType: d,
         userId: t,
         showingBanner: s
-      }), !s && (0, a.jsx)(T.default, {
+      }), !s && (0, a.jsx)(A.default, {
         otherUserId: t,
         channel: n,
         navigateAwayOnReportSuccess: !1
@@ -274,11 +274,11 @@ var y = e => {
       userId: t
     }), (0, a.jsx)("div", {
       className: v.divider
-    }), (0, a.jsx)(R, {
+    }), (0, a.jsx)(x, {
       relationshipType: d,
       userId: t,
       showingBanner: s
-    }), !s && (0, a.jsx)(T.default, {
+    }), !s && (0, a.jsx)(A.default, {
       otherUserId: t,
       channel: n
     })]

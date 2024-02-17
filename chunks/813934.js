@@ -22,9 +22,9 @@ var l = n("37983"),
   S = n("599110"),
   R = n("887143"),
   m = n("834052"),
-  N = n("151642"),
-  T = n("29846"),
-  C = n("837979"),
+  T = n("151642"),
+  C = n("29846"),
+  N = n("837979"),
   p = n("49111"),
   I = n("745049"),
   x = n("533613"),
@@ -77,7 +77,7 @@ function D(e) {
     isSlideReady: Y = !0
   } = e, F = a.useMemo(() => m.default.getStageInstanceByChannel(j.id), [j.id]), [W, Z] = a.useState(null !== (n = null !== (t = null == H ? void 0 : H.topic) && void 0 !== t ? t : null == F ? void 0 : F.topic) && void 0 !== n ? n : ""), [K, z] = a.useState(null !== (r = null == H ? void 0 : H.description) && void 0 !== r ? r : ""), [q] = a.useState(V), [X, J] = a.useState(null !== (g = null == H ? void 0 : H.schedule) && void 0 !== g ? g : {
     startDate: (0, d.getInitialEventStartDate)()
-  }), [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null), ee = (0, R.useCanSendStageStartNotification)(j), et = (0, R.useDefaultSendStartStageNotificationToggle)(j), en = null == F && ee && !q, [el, ea] = a.useState(en && et), er = (0, i.useStateFromStores)([h.default], () => h.default.hasHotspot(x.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), es = I.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (v = null !== (_ = null == H ? void 0 : H.privacyLevel) && void 0 !== _ ? _ : null == F ? void 0 : F.privacy_level) && void 0 !== v ? v : es), [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule), ec = (0, N.useStageBlockedUsersCount)(j.id), [ed, ef] = a.useState(!1), eE = (0, o.default)(j), eh = (0, c.useChannelsUserCanStartStageIn)(O), eg = null != b, e_ = eh.length > 1;
+  }), [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null), ee = (0, R.useCanSendStageStartNotification)(j), et = (0, R.useDefaultSendStartStageNotificationToggle)(j), en = null == F && ee && !q, [el, ea] = a.useState(en && et), er = (0, i.useStateFromStores)([h.default], () => h.default.hasHotspot(x.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), es = I.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (v = null !== (_ = null == H ? void 0 : H.privacyLevel) && void 0 !== _ ? _ : null == F ? void 0 : F.privacy_level) && void 0 !== v ? v : es), [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule), ec = (0, T.useStageBlockedUsersCount)(j.id), [ed, ef] = a.useState(!1), eE = (0, o.default)(j), eh = (0, c.useChannelsUserCanStartStageIn)(O), eg = null != b, e_ = eh.length > 1;
   a.useEffect(() => {
     S.default.track(p.AnalyticEvents.START_STAGE_OPENED, {
       stage_instance_id: null == F ? void 0 : F.id,
@@ -127,13 +127,13 @@ function D(e) {
     var e;
     Y && (null === (e = em.current) || void 0 === e || e.focus())
   }, [Y]);
-  let eN = Q && null != X.startDate && X.startDate >= s();
+  let eT = Q && null != X.startDate && X.startDate >= s();
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(u.ModalContent, {
       className: A.modalContent,
       children: [w, (0, l.jsx)("div", {
         className: A.blockedUsersContainer,
-        children: null == F && ec > 0 && (0, l.jsx)(T.BlockedUsersNotice, {
+        children: null == F && ec > 0 && (0, l.jsx)(C.BlockedUsersNotice, {
           channelId: j.id
         })
       }), (0, l.jsxs)("form", {
@@ -147,7 +147,7 @@ function D(e) {
             className: A.textInput,
             onChange: e => Z(e),
             placeholder: L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_PLACEHOLDER,
-            maxLength: C.MAX_STAGE_TOPIC_LENGTH,
+            maxLength: N.MAX_STAGE_TOPIC_LENGTH,
             value: W,
             autoComplete: "off",
             inputRef: em
@@ -216,7 +216,7 @@ function D(e) {
       children: [(0, l.jsx)(u.Button, {
         color: eS,
         onClick: ev,
-        disabled: "" === W || null == ei || V && !eN,
+        disabled: "" === W || null == ei || V && !eT,
         submitting: G,
         children: eR
       }), (0, l.jsx)(u.Button, {

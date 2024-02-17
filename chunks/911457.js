@@ -32,7 +32,7 @@ function _(e) {
     speakerCount: S,
     audienceCount: R,
     channelName: m
-  } = e, N = t.id;
+  } = e, T = t.id;
   return (0, r.jsx)("div", {
     className: g.contentContainer,
     children: (0, r.jsxs)("div", {
@@ -40,7 +40,7 @@ function _(e) {
       children: [(0, r.jsxs)("div", {
         className: g.guildInfoContainer,
         children: [(0, r.jsx)(o.default, {
-          guildId: N,
+          guildId: T,
           shouldShow: l,
           onRequestClose: () => a(!1),
           children: () => (0, r.jsxs)(u.Clickable, {

@@ -23,8 +23,8 @@ var s, i = n("627445"),
   y = n("718517"),
   T = n("773336"),
   C = n("286235"),
-  I = n("41642"),
-  S = n("265912"),
+  S = n("41642"),
+  I = n("265912"),
   A = n("799600"),
   D = n("705215"),
   N = n("342797"),
@@ -73,7 +73,7 @@ s = class extends P.default {
       M.info("Skipping _connect because socket is paused");
       return
     }
-    this.connectionState = I.default.CONNECTING, this.nextReconnectIsImmediate = !1;
+    this.connectionState = S.default.CONNECTING, this.nextReconnectIsImmediate = !1;
     let s = this.compressionHandler.getAlgorithm(),
       i = w.getName(),
       r = this._getGatewayUrl(),
@@ -192,7 +192,7 @@ s = class extends P.default {
     M.verbose("[HELLO] via ".concat((0, N.getConnectionPath)(e), ", ") + "heartbeat interval: ".concat(t, ", ") + "took ".concat(n, " ms")), this._startHeartbeater()
   }
   _handleReconnect() {
-    M.verbose("[RECONNECT] gateway requested I reconnect."), this._cleanup(e => e.close(4e3)), this.connectionState = I.default.WILL_RECONNECT, this._connect()
+    M.verbose("[RECONNECT] gateway requested I reconnect."), this._cleanup(e => e.close(4e3)), this.connectionState = S.default.WILL_RECONNECT, this._connect()
   }
   _handleInvalidSession(e) {
     M.info("[INVALID_SESSION]".concat(e ? " can resume)" : "")), e ? this._doResumeOrIdentify() : this._doIdentify()
@@ -203,8 +203,8 @@ s = class extends P.default {
       let t = e.session_id;
       this.sessionId = t;
       let n = (0, N.getConnectionPath)(e);
-      d.default.setServerTrace(n), M.info("[READY] took ".concat(s, "ms, as ").concat(t)), M.verbose("".concat(n)), this.connectionState = I.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.setResumeUrl(e.resume_gateway_url)
-    } else "READY_SUPPLEMENTAL" === t ? (M.info("[READY_SUPPLEMENTAL] took ".concat(s, "ms")), this.connectionState = I.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0) : "RESUMED" === t && (M.verbose((0, N.getConnectionPath)(e)), this.connectionState = I.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0);
+      d.default.setServerTrace(n), M.info("[READY] took ".concat(s, "ms, as ").concat(t)), M.verbose("".concat(n)), this.connectionState = S.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.setResumeUrl(e.resume_gateway_url)
+    } else "READY_SUPPLEMENTAL" === t ? (M.info("[READY_SUPPLEMENTAL] took ".concat(s, "ms")), this.connectionState = S.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0) : "RESUMED" === t && (M.verbose((0, N.getConnectionPath)(e)), this.connectionState = S.default.SESSION_ESTABLISHED, this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0);
     this.dispatcher.receiveDispatch(e, t, n)
   }
   handleResumeDispatched() {
@@ -221,7 +221,7 @@ s = class extends P.default {
     this.lastHeartbeatAckTime = Date.now(), this.heartbeatAck = !0, null !== this.expeditedHeartbeatTimeout && (clearTimeout(this.expeditedHeartbeatTimeout), this.expeditedHeartbeatTimeout = null, M.verbose("Expedited heartbeat succeeded"))
   }
   _handleHeartbeatTimeout() {
-    this._cleanup(e => e.close(4e3)), this.connectionState = I.default.WILL_RECONNECT;
+    this._cleanup(e => e.close(4e3)), this.connectionState = S.default.WILL_RECONNECT;
     let e = this.gatewayBackoff.fail(() => this._connect());
     M.warn("[ACK TIMEOUT] reconnecting in ".concat((e / 1e3).toFixed(2), " seconds."))
   }
@@ -229,8 +229,8 @@ s = class extends P.default {
     if (e = e || !1, this._cleanup(), this.emit("close", {
         code: t,
         reason: n
-      }), 4004 === t) return this.connectionState = I.default.CLOSED, M.warn("[WS CLOSED] because of authentication failure, marking as closed."), this._reset(e, t, n);
-    if (this._tryDetectInvalidIOSToken(t, n, e), this.connectionState = I.default.WILL_RECONNECT, this.nextReconnectIsImmediate) M.info("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying immediately.")), this._connect();
+      }), 4004 === t) return this.connectionState = S.default.CLOSED, M.warn("[WS CLOSED] because of authentication failure, marking as closed."), this._reset(e, t, n);
+    if (this._tryDetectInvalidIOSToken(t, n, e), this.connectionState = S.default.WILL_RECONNECT, this.nextReconnectIsImmediate) M.info("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying immediately.")), this._connect();
     else {
       let s = this.gatewayBackoff.fail(() => this._connect());
       M.info("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying in ").concat((s / 1e3).toFixed(2), " seconds.")), this.gatewayBackoff.fails > 4 && this._reset(e, t, n)
@@ -253,7 +253,7 @@ s = class extends P.default {
       let {
         status: t
       } = e;
-      401 === t && (this.connectionState = I.default.CLOSED, M.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), E.default.track(k.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+      401 === t && (this.connectionState = S.default.CLOSED, M.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), E.default.track(k.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
         api_status_code: t
       })
     }))
@@ -290,7 +290,7 @@ s = class extends P.default {
   }
   _doResume() {
     var e;
-    this.connectionState = I.default.RESUMING, this.dispatcher.resumeAnalytics = (0, N.createResumeAnalytics)(Date.now() - this.connectionStartTime), M.info("[RESUME] resuming session ".concat(null !== (e = this.sessionId) && void 0 !== e ? e : "", ", seq: ").concat(this.seq)), this.send(P.Opcode.RESUME, {
+    this.connectionState = S.default.RESUMING, this.dispatcher.resumeAnalytics = (0, N.createResumeAnalytics)(Date.now() - this.connectionStartTime), M.info("[RESUME] resuming session ".concat(null !== (e = this.sessionId) && void 0 !== e ? e : "", ", seq: ").concat(this.seq)), this.send(P.Opcode.RESUME, {
       token: this.token,
       session_id: this.sessionId,
       seq: this.seq
@@ -303,11 +303,11 @@ s = class extends P.default {
       this._handleClose(!0, 4004, "No connection info provided");
       return
     }
-    this.connectionState = I.default.IDENTIFYING;
+    this.connectionState = S.default.IDENTIFYING;
     let t = Date.now();
     this.identifyStartTime = t;
     let n = await c.default.getClientState();
-    if (this.connectionState !== I.default.IDENTIFYING || this.identifyStartTime !== t) {
+    if (this.connectionState !== S.default.IDENTIFYING || this.identifyStartTime !== t) {
       M.warn("Skipping identify because connectionState or identifyStartTime has changed");
       return
     }
@@ -319,7 +319,7 @@ s = class extends P.default {
     this.token = s, M.verbose("[IDENTIFY]");
     let o = {
         token: s,
-        capabilities: S.default,
+        capabilities: I.default,
         properties: i,
         presence: r,
         compress: this.compressionHandler.usesLegacyCompression(),
@@ -338,7 +338,7 @@ s = class extends P.default {
     let {
       token: t
     } = e;
-    this.token = t, this.connectionState = I.default.IDENTIFYING, this.identifyStartTime = Date.now(), this.identifyCount += 1, M.verbose("[IDENTIFY, fast-connect]"), this._updateLastHeartbeatAckTime()
+    this.token = t, this.connectionState = S.default.IDENTIFYING, this.identifyStartTime = Date.now(), this.identifyCount += 1, M.verbose("[IDENTIFY, fast-connect]"), this._updateLastHeartbeatAckTime()
   }
   _doResumeOrIdentify() {
     let e = Date.now(),
@@ -355,19 +355,19 @@ s = class extends P.default {
     return M
   }
   willReconnect() {
-    return this.connectionState === I.default.WILL_RECONNECT
+    return this.connectionState === S.default.WILL_RECONNECT
   }
   isClosed() {
-    return this.connectionState === I.default.CLOSED
+    return this.connectionState === S.default.CLOSED
   }
   isSessionEstablished() {
-    return this.connectionState === I.default.SESSION_ESTABLISHED || this.connectionState === I.default.RESUMING
+    return this.connectionState === S.default.SESSION_ESTABLISHED || this.connectionState === S.default.RESUMING
   }
   isConnected() {
-    return this.connectionState === I.default.IDENTIFYING || this.connectionState === I.default.RESUMING || this.connectionState === I.default.SESSION_ESTABLISHED
+    return this.connectionState === S.default.IDENTIFYING || this.connectionState === S.default.RESUMING || this.connectionState === S.default.SESSION_ESTABLISHED
   }
   connect() {
-    return this.isClosed() ? (M.verbose(".connect() called, new state is WILL_RECONNECT"), this.connectionState = I.default.WILL_RECONNECT, this._connect(), !0) : (M.error("Cannot start a new connection, connection state is not closed"), !1)
+    return this.isClosed() ? (M.verbose(".connect() called, new state is WILL_RECONNECT"), this.connectionState = S.default.WILL_RECONNECT, this._connect(), !0) : (M.error("Cannot start a new connection, connection state is not closed"), !1)
   }
   getIdentifyInitialGuildId() {
     var e;
@@ -391,7 +391,7 @@ s = class extends P.default {
       error_message: e.message,
       error_stack: e.stack,
       action: t
-    }), this._cleanup(e => e.close()), this._reset(!0, 1e3, "Resetting socket due to error."), this.dispatcher.clear(), this.connectionState = I.default.WILL_RECONNECT, this.dispatchExceptionBackoff.cancel(), 0 === this.dispatchExceptionBackoff._fails && n.immediate ? (M.verbose("Triggering fast reconnect"), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect(), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect()), this.didForceClearGuildHashes = !0, _.default.dispatch({
+    }), this._cleanup(e => e.close()), this._reset(!0, 1e3, "Resetting socket due to error."), this.dispatcher.clear(), this.connectionState = S.default.WILL_RECONNECT, this.dispatchExceptionBackoff.cancel(), 0 === this.dispatchExceptionBackoff._fails && n.immediate ? (M.verbose("Triggering fast reconnect"), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect(), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect()), this.didForceClearGuildHashes = !0, _.default.dispatch({
       type: "CLEAR_GUILD_CACHE"
     }), clearTimeout(this.dispatchSuccessTimer), this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * F)
   }
@@ -400,7 +400,7 @@ s = class extends P.default {
       M.verbose("close() called, but socket is already closed.");
       return
     }
-    M.info("Closing connection, current state is ".concat(this.connectionState)), this._cleanup(e => e.close()), this.connectionState = I.default.CLOSED, setImmediate(() => {
+    M.info("Closing connection, current state is ".concat(this.connectionState)), this._cleanup(e => e.close()), this.connectionState = S.default.CLOSED, setImmediate(() => {
       this._reset(!0, 1e3, "Disconnect requested by user")
     })
   }
@@ -425,7 +425,7 @@ s = class extends P.default {
   resetBackoff() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
       t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    M.verbose("Connection has reset backoff".concat(null != e && "" !== e ? " for reason: " + e : "")), this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.nextReconnectIsImmediate = !0, this.willReconnect() ? this._connect() : t && this.connectionState !== I.default.SESSION_ESTABLISHED && this._handleClose(!0, 0, e)
+    M.verbose("Connection has reset backoff".concat(null != e && "" !== e ? " for reason: " + e : "")), this.gatewayBackoff.succeed(), this.iosGoingAwayEventCount = 0, this.nextReconnectIsImmediate = !0, this.willReconnect() ? this._connect() : t && this.connectionState !== S.default.SESSION_ESTABLISHED && this._handleClose(!0, 0, e)
   }
   constructor() {
     super(), this.dispatchExceptionBackoff = new o.default(1e3, F), this.dispatchSuccessTimer = 0, this.didForceClearGuildHashes = !1, this.identifyUncompressedByteSize = 0, this.identifyCompressedByteSize = 0, this.analytics = {}, this.identifyCount = 0, this.resumeUrl = null, this.lastIdentifyClientState = null, this.iosGoingAwayEventCount = 0, this.send = (e, t, n) => {
@@ -437,6 +437,6 @@ s = class extends P.default {
       if (!n || this.isSessionEstablished()) try {
         null != this.webSocket ? this.webSocket.send(s) : M.warn("Attempted to send without a websocket that exists. Opcode: ".concat(e))
       } catch (e) {} else M.warn("Attempted to send while not being in a connected state opcode: ".concat(e))
-    }, this.dispatcher = new O.default(this), this.gatewayBackoff = new o.default(1e3, 6e4), this.connectionState_ = I.default.CLOSED, this.webSocket = null, this.seq = 0, this.sessionId = null, this.token = null, this.initialHeartbeatTimeout = null, this.expeditedHeartbeatTimeout = null, this.lastHeartbeatAckTime = null, this.helloTimeout = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.connectionStartTime = 0, this.identifyStartTime = 0, this.nextReconnectIsImmediate = !1, this.compressionHandler = new A.default(w), this.hasConnectedOnce = !1, this.isFastConnect = !1, this.identifyCount = 0, this.iosGoingAwayEventCount = 0
+    }, this.dispatcher = new O.default(this), this.gatewayBackoff = new o.default(1e3, 6e4), this.connectionState_ = S.default.CLOSED, this.webSocket = null, this.seq = 0, this.sessionId = null, this.token = null, this.initialHeartbeatTimeout = null, this.expeditedHeartbeatTimeout = null, this.lastHeartbeatAckTime = null, this.helloTimeout = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.connectionStartTime = 0, this.identifyStartTime = 0, this.nextReconnectIsImmediate = !1, this.compressionHandler = new A.default(w), this.hasConnectedOnce = !1, this.isFastConnect = !1, this.identifyCount = 0, this.iosGoingAwayEventCount = 0
   }
 }

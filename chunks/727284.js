@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return d
   }
 });
 var a = n("37983");
@@ -10,7 +10,7 @@ var l = n("77078"),
   i = n("845579"),
   u = n("49111");
 
-function s(e, t) {
+function d(e, t) {
   i.AlwaysPreviewVideo.getSetting() ? (0, l.openModalLazy)(async () => {
     let {
       default: t

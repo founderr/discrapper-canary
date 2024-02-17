@@ -22,15 +22,15 @@ var a = n("37983"),
   g = n("158998"),
   S = n("19846"),
   _ = n("172554"),
-  T = n("172643"),
-  A = n("710357"),
+  A = n("172643"),
+  T = n("710357"),
   M = n("931922"),
   I = n("582724"),
   N = n("834744"),
   v = n("372912"),
   L = n("952999"),
-  R = n("49111"),
-  x = n("782340"),
+  x = n("49111"),
+  R = n("782340"),
   y = n("890957");
 
 function O(e) {
@@ -39,7 +39,7 @@ function O(e) {
     channel: n
   } = e, s = t && (0, u.isPrivateGuildChannel)(n), i = (0, l.useStateFromStores)([p.default], () => null != n.guild_id && n === p.default.getDefaultChannel(n.guild_id), [n]), r = (0, d.default)(n.id);
   if (r) return null;
-  if (n.isForumPost()) return (0, a.jsx)(T.default, {
+  if (n.isForumPost()) return (0, a.jsx)(A.default, {
     channel: n
   });
   if (C.THREAD_CHANNEL_TYPES.has(n.type)) return (0, a.jsx)(v.default, {
@@ -63,13 +63,13 @@ function D(e) {
     showingBanner: u
   } = e, d = (0, o.default)(n), {
     type: C
-  } = n, p = (0, l.useStateFromStores)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), T = g.default.useUserTag(p), {
+  } = n, p = (0, l.useStateFromStores)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), A = g.default.useUserTag(p), {
     canManageRoles: M,
     canReadMessageHistory: N
   } = (0, l.useStateFromStoresObject)([m.default], () => ({
-    canManageRoles: m.default.can(R.Permissions.MANAGE_ROLES, n),
-    canReadMessageHistory: m.default.can(R.Permissions.READ_MESSAGE_HISTORY, n)
-  })), v = (0, l.useStateFromStores)([f.default], () => C === R.ChannelTypes.DM ? f.default.getMutualGuilds(n.getRecipientId()) : null, [n, C]), {
+    canManageRoles: m.default.can(x.Permissions.MANAGE_ROLES, n),
+    canReadMessageHistory: m.default.can(x.Permissions.READ_MESSAGE_HISTORY, n)
+  })), v = (0, l.useStateFromStores)([f.default], () => C === x.ChannelTypes.DM ? f.default.getMutualGuilds(n.getRecipientId()) : null, [n, C]), {
     systemDMRedesignEnabled: L
   } = c.default.useExperiment({
     location: "bf1a4f_1"
@@ -77,23 +77,23 @@ function D(e) {
     autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t
   });
   if (s.useEffect(() => {
-      C === R.ChannelTypes.DM && null == v && null != p && r.default.wait(() => (0, h.default)(n.getRecipientId(), p.getAvatarURL(null, 80), {
+      C === x.ChannelTypes.DM && null == v && null != p && r.default.wait(() => (0, h.default)(n.getRecipientId(), p.getAvatarURL(null, 80), {
         withMutualGuilds: !0
       }))
     }, [v, C, n, p]), n.isSystemDM()) return L ? (0, a.jsx)(I.default, {
     channel: n
-  }) : (0, a.jsx)(A.default, {
+  }) : (0, a.jsx)(T.default, {
     channel: n,
-    children: x.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
+    children: R.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
   });
-  if (C === R.ChannelTypes.DM) return (0, a.jsxs)(A.default, {
+  if (C === x.ChannelTypes.DM) return (0, a.jsxs)(T.default, {
     channel: n,
     user: p,
     children: [null != p && (0, a.jsx)(i.Heading, {
       variant: "heading-xl/medium",
       className: y.marginBottom20,
-      children: T
-    }), x.default.Messages.BEGINNING_DM.format({
+      children: A
+    }), R.default.Messages.BEGINNING_DM.format({
       username: d
     }), (0, a.jsx)(S.default, {
       userId: n.getRecipientId(),
@@ -104,15 +104,15 @@ function D(e) {
   if (n.isMultiUserDM()) return n.isManaged() ? (0, a.jsxs)(_.default, {
     channelId: n.id,
     children: [(0, a.jsx)(_.EmptyMessageHeader, {
-      children: x.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
+      children: R.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: d
       })
     }), (0, a.jsx)(_.EmptyMessageBody, {
-      children: x.default.Messages.BEGINNING_GROUP_DM_MANAGED
+      children: R.default.Messages.BEGINNING_GROUP_DM_MANAGED
     })]
-  }) : (0, a.jsx)(A.default, {
+  }) : (0, a.jsx)(T.default, {
     channel: n,
-    children: x.default.Messages.BEGINNING_GROUP_DM.format({
+    children: R.default.Messages.BEGINNING_GROUP_DM.format({
       name: d
     })
   });
@@ -122,7 +122,7 @@ function D(e) {
   }) : (0, a.jsx)(_.default, {
     channelId: n.id,
     children: (0, a.jsx)(_.EmptyMessageBody, {
-      children: x.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
+      children: R.default.Messages.BEGINNING_CHANNEL_NO_HISTORY.format({
         channelName: d
       })
     })

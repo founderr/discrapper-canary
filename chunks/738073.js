@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("222007");
 var l = n("37983"),
@@ -70,7 +70,7 @@ class E extends a.PureComponent {
     }
   }
 }
-var S = r.default.connectStores([d.default], () => {
+var g = r.default.connectStores([d.default], () => {
   var e;
   return {
     nsfwDisallowed: (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1

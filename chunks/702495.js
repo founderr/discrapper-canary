@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return v
   }
 }), n("781738");
 var a = n("37983"),
@@ -15,45 +15,45 @@ var a = n("37983"),
   c = n("867805"),
   f = n("246511"),
   E = n("467094"),
-  m = n("178207"),
-  M = n("256860"),
+  M = n("178207"),
+  m = n("256860"),
   g = n("364685"),
-  p = n("24373"),
+  S = n("24373"),
   I = n("49111"),
-  S = n("782340");
+  p = n("782340");
 
-function v(e) {
+function h(e) {
   return c.default.getByName(e.replace(/(^:|:$)/g, ""))
 }
 
-function h(e) {
+function v(e) {
   let {
     type: t,
     id: n,
-    name: h,
-    isInExpressionPicker: A = !1
+    name: v,
+    isInExpressionPicker: _ = !1
   } = e, {
-    location: _
+    location: A
   } = (0, r.useAnalyticsContext)(), T = i.useMemo(() => ({
-    ..._,
-    section: A ? I.AnalyticsSections.EXPRESSION_PICKER : I.AnalyticsSections.CONTEXT_MENU
-  }), [_, A]), C = (0, M.useFavoriteStickerIds)(), R = (0, l.useStateFromStores)([g.default], () => t === f.PickerContextMenuDataTypes.STICKER && null != n ? g.default.getStickerById(n) : null), O = null != R && C.includes(R.id), x = (0, l.useStateFromStores)([o.default], () => {
+    ...A,
+    section: _ ? I.AnalyticsSections.EXPRESSION_PICKER : I.AnalyticsSections.CONTEXT_MENU
+  }), [A, _]), C = (0, m.useFavoriteStickerIds)(), R = (0, l.useStateFromStores)([g.default], () => t === f.PickerContextMenuDataTypes.STICKER && null != n ? g.default.getStickerById(n) : null), y = null != R && C.includes(R.id), O = (0, l.useStateFromStores)([o.default], () => {
     if (t === f.PickerContextMenuDataTypes.EMOJI) {
       if (null != n) return o.default.getDisambiguatedEmojiContext().getById(n);
-      if (null != h) {
+      if (null != v) {
         var e;
-        return null !== (e = v(h)) && void 0 !== e ? e : v(c.default.convertSurrogateToName(h))
+        return null !== (e = h(v)) && void 0 !== e ? e : h(c.default.convertSurrogateToName(v))
       }
     }
-  }), y = (0, d.useIsFavoriteEmoji)(null, x);
-  if (null != R && t === f.PickerContextMenuDataTypes.STICKER) return (0, p.isGuildSticker)(R) && !(0, p.isAvailableGuildSticker)(R) ? null : O ? (0, a.jsx)(s.MenuItem, {
+  }), x = (0, d.useIsFavoriteEmoji)(null, O);
+  if (null != R && t === f.PickerContextMenuDataTypes.STICKER) return (0, S.isGuildSticker)(R) && !(0, S.isAvailableGuildSticker)(R) ? null : y ? (0, a.jsx)(s.MenuItem, {
     id: "unfavorite",
     action: () => (0, E.unfavoriteSticker)(R.id),
-    label: S.default.Messages.UNFAVORITE_ITEM
+    label: p.default.Messages.UNFAVORITE_ITEM
   }) : (0, a.jsx)(s.MenuItem, {
     id: "favorite",
     action: () => {
-      (0, m.trackStickerFavorited)({
+      (0, M.trackStickerFavorited)({
         sticker: R,
         location: {
           ...T,
@@ -61,23 +61,23 @@ function h(e) {
         }
       }), (0, E.favoriteSticker)(null == R ? void 0 : R.id)
     },
-    label: S.default.Messages.FAVORITE_ITEM
+    label: p.default.Messages.FAVORITE_ITEM
   });
-  if (null != x && t === f.PickerContextMenuDataTypes.EMOJI) return y ? (0, a.jsx)(s.MenuItem, {
+  if (null != O && t === f.PickerContextMenuDataTypes.EMOJI) return x ? (0, a.jsx)(s.MenuItem, {
     id: "unfavorite",
-    action: () => (0, u.unfavoriteEmoji)(x),
-    label: S.default.Messages.UNFAVORITE_ITEM
+    action: () => (0, u.unfavoriteEmoji)(O),
+    label: p.default.Messages.UNFAVORITE_ITEM
   }) : (0, a.jsx)(s.MenuItem, {
     id: "favorite",
     action: () => {
       (0, d.trackEmojiFavorited)({
-        emoji: x,
+        emoji: O,
         location: {
           ...T,
           object: I.AnalyticsObjects.EMOJI
         }
-      }), (0, u.favoriteEmoji)(x)
+      }), (0, u.favoriteEmoji)(O)
     },
-    label: S.default.Messages.FAVORITE_ITEM
+    label: p.default.Messages.FAVORITE_ITEM
   })
 }

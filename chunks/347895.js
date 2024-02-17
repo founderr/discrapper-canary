@@ -25,10 +25,10 @@ var l = n("872717"),
   i = n("115718"),
   a = n("38654"),
   d = n("144491"),
-  o = n("42203"),
-  s = n("599110"),
-  E = n("698882"),
-  c = n("129092"),
+  s = n("42203"),
+  o = n("599110"),
+  c = n("698882"),
+  E = n("129092"),
   f = n("675305"),
   _ = n("290886"),
   N = n("49111");
@@ -42,7 +42,7 @@ let h = async e => {
         url: N.Endpoints.GUILD_HOME_SETTINGS(e),
         oldFormErrors: !0
       }),
-      n = (0, c.settingsFromServer)(t.body);
+      n = (0, E.settingsFromServer)(t.body);
     return u.default.dispatch({
       type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS",
       guildId: e,
@@ -65,7 +65,7 @@ let h = async e => {
           url: N.Endpoints.GUILD_MEMBER_ACTIONS(e),
           oldFormErrors: !0
         }),
-        n = (0, c.actionsFromServer)(t.body);
+        n = (0, E.actionsFromServer)(t.body);
       return u.default.dispatch({
         type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS",
         guildId: e,
@@ -85,9 +85,9 @@ let h = async e => {
       guildId: e,
       channelId: t
     }), null == t) return;
-  let l = o.default.getChannel(t),
-    c = E.default.getResourceForChannel(e, t);
-  null != e && !a.default.isFullServerPreview(e) && null != l && null != c && s.default.track(N.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
+  let l = s.default.getChannel(t),
+    E = c.default.getResourceForChannel(e, t);
+  null != e && !a.default.isFullServerPreview(e) && null != l && null != E && o.default.track(N.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
     guild_id: e,
     channel_id: l.id,
     server_guide_channel_type: "resource",
@@ -104,9 +104,9 @@ let h = async e => {
     guildId: e,
     channelId: t
   });
-  let n = o.default.getChannel(t),
-    l = E.default.getActionForChannel(e, t);
-  null != e && !a.default.isFullServerPreview(e) && null != n && null != l && s.default.track(N.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
+  let n = s.default.getChannel(t),
+    l = c.default.getActionForChannel(e, t);
+  null != e && !a.default.isFullServerPreview(e) && null != n && null != l && o.default.track(N.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
     guild_id: e,
     channel_id: n.id,
     server_guide_channel_type: "member action",
@@ -118,13 +118,13 @@ let h = async e => {
       guildId: e,
       channelId: t
     }), a.default.isFullServerPreview(e)) return;
-  let n = o.default.getChannel(t),
-    r = E.default.getActionForChannel(e, t);
+  let n = s.default.getChannel(t),
+    r = c.default.getActionForChannel(e, t);
   if (null != n && null != r) {
     var i, d;
     let t = Object.keys(null !== (i = f.default.getCompletedActions(e)) && void 0 !== i ? i : {}),
-      l = null !== (d = E.default.getNewMemberActions(e)) && void 0 !== d ? d : [];
-    s.default.track(N.AnalyticEvents.SERVER_GUIDE_ACTION_COMPLETED, {
+      l = null !== (d = c.default.getNewMemberActions(e)) && void 0 !== d ? d : [];
+    o.default.track(N.AnalyticEvents.SERVER_GUIDE_ACTION_COMPLETED, {
       guild_id: n.guild_id,
       channel_id: n.id,
       channel_action_type: r.actionType,
@@ -139,6 +139,6 @@ async function v(e, t) {
   if (null == e) return !1;
   let n = (0, _.canSeeOnboardingHome)(e);
   if (!n) return !1;
-  let l = E.default.getSettings(e);
-  return l === E.NO_SETTINGS && (await h(e), l = E.default.getSettings(e)), l !== E.NO_SETTINGS && null != l && (null != l.newMemberActions && null != l.newMemberActions.find(e => e.channelId === t) ? "todo" : null != l.resourceChannels && null != l.resourceChannels.find(e => e.channelId === t) && "resource")
+  let l = c.default.getSettings(e);
+  return l === c.NO_SETTINGS && (await h(e), l = c.default.getSettings(e)), l !== c.NO_SETTINGS && null != l && (null != l.newMemberActions && null != l.newMemberActions.find(e => e.channelId === t) ? "todo" : null != l.resourceChannels && null != l.resourceChannels.find(e => e.channelId === t) && "resource")
 }

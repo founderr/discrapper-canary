@@ -22,8 +22,8 @@ var a = n("37983"),
   g = n("913491"),
   S = n("49111"),
   _ = n("782340"),
-  T = n("508477");
-let A = "749054660769218631";
+  A = n("508477");
+let T = "749054660769218631";
 
 function M(e) {
   var t;
@@ -36,10 +36,10 @@ function M(e) {
   let I = (0, r.useStateFromStores)([C.default, h.default], () => !!i(C.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
     N = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
     v = null !== (t = E.default.useName(N)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
-    L = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(A)),
-    R = s.useCallback(async () => {
+    L = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(T)),
+    x = s.useCallback(async () => {
       if (null == l || "" === l) try {
-        await u.default.sendGreetMessage(n.id, A), m.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
+        await u.default.sendGreetMessage(n.id, T), m.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
           channel_id: n.id,
           channel_type: n.type,
           source: "Wave",
@@ -49,40 +49,40 @@ function M(e) {
         !e.ok && 429 === e.status && M(_.default.Messages.RATE_LIMITED)
       }
     }, [n.id, n.type, l]),
-    x = _.default.Messages.WAVE_TO.format({
+    R = _.default.Messages.WAVE_TO.format({
       username: v
     }),
     y = null != l && "" !== l ? (0, a.jsx)(o.Text, {
-      className: T.error,
+      className: A.error,
       color: "text-danger",
       variant: "text-sm/normal",
       children: l
     }) : null;
   return I ? (0, a.jsxs)("div", {
-    className: T.containerCompact,
+    className: A.containerCompact,
     children: [(0, a.jsxs)(o.Clickable, {
-      className: null != l && "" !== l ? T.compactButtonDisabled : T.compactButton,
+      className: null != l && "" !== l ? A.compactButtonDisabled : A.compactButton,
       "aria-label": _.default.Messages.SEND_WAVE,
-      onClick: R,
+      onClick: x,
       children: [(0, a.jsx)(f.default, {
         sticker: L,
         size: 24
       }), (0, a.jsx)(o.Text, {
-        className: T.text,
+        className: A.text,
         variant: "text-md/medium",
-        children: x
+        children: R
       })]
     }), y]
   }) : (0, a.jsxs)("div", {
-    className: T.containerExpanded,
+    className: A.containerExpanded,
     children: [(0, a.jsx)(f.default, {
       sticker: L,
       size: 160
     }), (0, a.jsx)(o.Button, {
-      className: T.button,
-      onClick: R,
+      className: A.button,
+      onClick: x,
       disabled: !!l,
-      children: x
+      children: R
     }), y]
   })
 }

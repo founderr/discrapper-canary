@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   TutorialIndicator: function() {
-    return T
+    return A
   },
   default: function() {
-    return A
+    return T
   }
 }), n("222007");
 var a = n("37983"),
@@ -25,7 +25,7 @@ var a = n("37983"),
   g = n("826431"),
   S = n("612246"),
   _ = n("587335");
-class T extends s.PureComponent {
+class A extends s.PureComponent {
   componentDidMount() {
     this.updateCache()
   }
@@ -100,7 +100,7 @@ class T extends s.PureComponent {
     } = this.state, S = {
       left: null != p ? s.x + p : void 0,
       top: null != g ? s.y + g : void 0
-    }, T = e => {
+    }, A = e => {
       let t = n && !e;
       return !0 !== d ? null : (0, a.jsxs)("div", {
         children: [(0, a.jsx)("div", {
@@ -115,7 +115,7 @@ class T extends s.PureComponent {
           })
         })]
       })
-    }, A = e => {
+    }, T = e => {
       let t = n && !e;
       return {
         [_.animating]: t,
@@ -144,11 +144,11 @@ class T extends s.PureComponent {
           className: _.indicator,
           style: S,
           children: (0, a.jsxs)("div", {
-            className: i(_.animationContainer, A(n)),
-            children: [T(n), (0, a.jsx)("div", {
-              className: i(_.innerCircle, A(n))
+            className: i(_.animationContainer, T(n)),
+            children: [A(n), (0, a.jsx)("div", {
+              className: i(_.innerCircle, T(n))
             }), (0, a.jsx)("div", {
-              className: i(_.outerCircle, A(n))
+              className: i(_.outerCircle, T(n))
             })]
           })
         })
@@ -164,7 +164,7 @@ class T extends s.PureComponent {
     }
   }
 }
-var A = function() {
+var T = function() {
   let {
     indicators: e,
     tutorialData: t,
@@ -179,7 +179,7 @@ var A = function() {
   return s ? (0, a.jsx)(a.Fragment, {
     children: Object.entries(e).map(e => {
       let [s, l] = e, i = t[s];
-      return o(null != i, "Missing tutorial definition for ".concat(s)), (0, a.jsx)(T, {
+      return o(null != i, "Missing tutorial definition for ".concat(s)), (0, a.jsx)(A, {
         tutorialId: s,
         tutorialDefinition: i,
         focused: n,

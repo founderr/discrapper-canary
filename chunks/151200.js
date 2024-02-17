@@ -4,26 +4,26 @@ n.r(t), n.d(t, {
     return c
   }
 }), n("222007");
-var a = n("37983");
+var i = n("37983");
 n("884691");
-var s = n("446674"),
+var a = n("446674"),
   r = n("77078"),
-  u = n("561288"),
-  i = n("191145"),
-  l = n("271938"),
-  d = n("99795"),
-  o = n("782340");
+  l = n("561288"),
+  s = n("191145"),
+  u = n("271938"),
+  o = n("99795"),
+  d = n("782340");
 
 function c(e, t) {
-  let n = (0, s.useStateFromStores)([l.default], () => l.default.getId() === e, [e]),
-    [c, f] = (0, s.useStateFromStoresArray)([i.default], () => [i.default.getParticipants(t), i.default.getParticipant(t, e)], [t, e]);
-  return n || 0 === c.length ? null : null == f ? (0, a.jsx)(r.MenuItem, {
+  let n = (0, a.useStateFromStores)([u.default], () => u.default.getId() === e, [e]),
+    [c, f] = (0, a.useStateFromStoresArray)([s.default], () => [s.default.getParticipants(t), s.default.getParticipant(t, e)], [t, e]);
+  return n || 0 === c.length ? null : null == f ? (0, i.jsx)(r.MenuItem, {
     id: "ring",
-    label: o.default.Messages.RING,
-    action: () => u.default.ring(t, [e])
-  }) : f.type === d.ParticipantTypes.USER && f.ringing ? (0, a.jsx)(r.MenuItem, {
+    label: d.default.Messages.RING,
+    action: () => l.default.ring(t, [e])
+  }) : f.type === o.ParticipantTypes.USER && f.ringing ? (0, i.jsx)(r.MenuItem, {
     id: "stop-ringing",
-    label: o.default.Messages.STOP_RINGING,
-    action: () => u.default.stopRinging(t, [e])
+    label: d.default.Messages.STOP_RINGING,
+    action: () => l.default.stopRinging(t, [e])
   }) : null
 }

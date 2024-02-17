@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return h
   },
   useVisibleParticipants: function() {
-    return S
+    return g
   },
   default: function() {
-    return g
+    return S
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -30,7 +30,7 @@ function E(e) {
   return e.type === c.ParticipantTypes.USER && e.user.id === n && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo)
 }
 
-function S(e, t) {
+function g(e, t) {
   let [n, l] = a.useState(Date.now());
   a.useEffect(() => {
     let e = setTimeout(() => {
@@ -67,10 +67,10 @@ function S(e, t) {
         d = o.findIndex(E),
         f = null; - 1 !== d && (f = o[d], o.splice(d, 1));
       let h = null != f ? e - m - 8 : e,
-        S = Math.max(0, Math.min(Math.floor((h - 8) / 132), 12, t.length)),
-        g = Math.min((h - 8) / S - 8, m),
-        C = Math.max(0, S - a.length),
-        _ = a.slice(0, S),
+        g = Math.max(0, Math.min(Math.floor((h - 8) / 132), 12, t.length)),
+        S = Math.min((h - 8) / g - 8, m),
+        C = Math.max(0, g - a.length),
+        _ = a.slice(0, g),
         I = o.slice(0, C),
         T = Array(C);
       if (C > 0) {
@@ -92,7 +92,7 @@ function S(e, t) {
       let N = [..._, ...v];
       return null != f && N.push(f), {
         visibleParticipants: N,
-        participantTileWidth: g
+        participantTileWidth: S
       }
     }, [e, t, n]);
   return {
@@ -101,7 +101,7 @@ function S(e, t) {
   }
 }
 
-function g(e) {
+function S(e) {
   let {
     participants: t,
     participantTileWidth: n,

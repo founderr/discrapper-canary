@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return r
   }
 });
 var a = n("37983");
@@ -9,14 +9,14 @@ n("884691");
 var l = n("446674"),
   i = n("77078"),
   u = n("957255"),
-  s = n("49111"),
-  r = n("782340");
+  d = n("49111"),
+  s = n("782340");
 
-function d(e, t) {
-  let d = (0, l.useStateFromStores)([u.default], () => u.default.can(s.Permissions.MANAGE_CHANNELS, e), [e]);
-  return __OVERLAY__ || !d ? null : (0, a.jsx)(i.MenuItem, {
+function r(e, t) {
+  let r = (0, l.useStateFromStores)([u.default], () => u.default.can(d.Permissions.MANAGE_CHANNELS, e), [e]);
+  return __OVERLAY__ || !r ? null : (0, a.jsx)(i.MenuItem, {
     id: "clone-channel",
-    label: r.default.Messages.CLONE_CHANNEL,
+    label: s.default.Messages.CLONE_CHANNEL,
     action: () => (0, i.openModalLazy)(async () => {
       let {
         default: l

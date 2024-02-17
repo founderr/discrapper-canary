@@ -20,8 +20,8 @@ var a, o, d = n("917351"),
   y = n("47319"),
   T = n("603699"),
   C = n("824563"),
-  I = n("568307"),
-  S = n("280168"),
+  S = n("568307"),
+  I = n("280168"),
   A = n("800762"),
   D = n("599110"),
   N = n("550368"),
@@ -346,7 +346,7 @@ function eg(e, t) {
 }
 class em extends f.default.Store {
   initialize() {
-    this.waitFor(y.default, S.default), this.syncWith([C.default], () => (function() {
+    this.waitFor(y.default, I.default), this.syncWith([C.default], () => (function() {
       if (null == i) return !1;
       let e = ee();
       if (null == e) return !1;
@@ -607,7 +607,7 @@ let eh = new em(g.default, {
       let {
         sourceId: e,
         sound: n
-      } = null == t ? void 0 : t.desktopSettings, s = null != e && I.default.getObservedAppNameForWindow(e) === R.name;
+      } = null == t ? void 0 : t.desktopSettings, s = null != e && S.default.getObservedAppNameForWindow(e) === R.name;
       s && n ? ($ = new c.Interval).start(w, ef) : $ = null
     }
   }

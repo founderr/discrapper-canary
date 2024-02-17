@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 });
 var l = n("37983"),
@@ -19,22 +19,22 @@ var l = n("37983"),
   p = n("782340"),
   E = n("865331");
 
-function S(e) {
+function g(e) {
   let {
     userId: t,
     guildId: n
-  } = e, S = (0, s.useStateFromStores)([u.default], () => u.default.getGuildSidebarState(n), [n]), {
-    messagesCount: g,
+  } = e, g = (0, s.useStateFromStores)([u.default], () => u.default.getGuildSidebarState(n), [n]), {
+    messagesCount: S,
     linksCount: C,
     mediaCount: _
-  } = (0, f.useServerActivityCountsForUser)(t, n), I = new Intl.NumberFormat(p.default.getLocale()).format(g), T = new Intl.NumberFormat(p.default.getLocale()).format(C), v = new Intl.NumberFormat(p.default.getLocale()).format(_), x = a.useCallback(async e => {
-    if (null == S) return;
+  } = (0, f.useServerActivityCountsForUser)(t, n), I = new Intl.NumberFormat(p.default.getLocale()).format(S), T = new Intl.NumberFormat(p.default.getLocale()).format(C), v = new Intl.NumberFormat(p.default.getLocale()).format(_), x = a.useCallback(async e => {
+    if (null == g) return;
     let l = (0, f.getSearchQueryForUser)(t, e);
-    await (0, c.openGuildMemberModViewSidebar)(n, t, S.baseChannelId, {
+    await (0, c.openGuildMemberModViewSidebar)(n, t, g.baseChannelId, {
       modViewPanel: m.ModViewPanel.MESSAGE_HISTORY,
       additionalSearchQuery: l
     })
-  }, [n, S, t]);
+  }, [n, g, t]);
   return (0, l.jsx)(o.FormItem, {
     title: p.default.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
     titleClassName: E.infoTitle,
@@ -49,7 +49,7 @@ function S(e) {
           color: "text-normal",
           children: p.default.Messages.MESSAGES
         }),
-        description: g === f.HAS_NO_COUNT ? (0, l.jsx)(o.Spinner, {
+        description: S === f.HAS_NO_COUNT ? (0, l.jsx)(o.Spinner, {
           type: o.SpinnerTypes.SPINNING_CIRCLE,
           className: E.loadingSpinner
         }) : (0, l.jsx)(o.Text, {
@@ -57,7 +57,7 @@ function S(e) {
           color: "interactive-normal",
           children: I
         }),
-        onNavigate: g > 0 ? () => x(f.SearchKeyType.MESSAGES) : void 0
+        onNavigate: S > 0 ? () => x(f.SearchKeyType.MESSAGES) : void 0
       }), (0, l.jsx)(h.UserModInfoItem, {
         icon: (0, l.jsx)(r.LinkIcon, {
           width: h.USER_MOD_ICON_SIZE_PX,

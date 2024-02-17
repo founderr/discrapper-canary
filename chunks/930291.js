@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("945956"),
   p = n("697218"),
   E = n("599110"),
-  S = n("233965"),
-  g = n("699209"),
+  g = n("233965"),
+  S = n("699209"),
   C = n("808742"),
   _ = n("342845"),
   I = n("661743"),
@@ -34,7 +34,7 @@ var l = n("37983"),
       previewIsOpen: A
     } = e, {
       enableHangStatus: M
-    } = g.HangStatusExperiment.useExperiment({
+    } = S.HangStatusExperiment.useExperiment({
       guildId: N.guild_id,
       location: "HangStatusPopout"
     }), R = (0, r.default)([c.default], () => c.default.getId()), j = (0, r.default)([p.default], () => p.default.getUser(s)), L = (0, r.default)([m.default], () => m.default.getChannelId() === N.id), y = (0, r.default)([h.default], () => h.default.can(T.Permissions.CONNECT, N)), O = (0, r.default)([f.default], () => null != N.guild_id && null != j ? f.default.getMember(N.guild_id, s) : null), P = a.useMemo(() => null != j ? (0, d.getPreviewAvatar)(void 0, O, j, {
@@ -115,7 +115,7 @@ var l = n("37983"),
                 startingText: t.details,
                 startingEmoji: t.emoji
               })
-            }) : (0, S.updateHangStatus)(e, !0), E.default.track(T.AnalyticEvents.SWIPE_HANG_STATUS, {
+            }) : (0, g.updateHangStatus)(e, !0), E.default.track(T.AnalyticEvents.SWIPE_HANG_STATUS, {
               guild_id: N.guild_id,
               channel_id: N.id,
               media_session_id: m.default.getMediaSessionId()

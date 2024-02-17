@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("18494"),
   p = n("697218"),
   E = n("717018"),
-  S = n("811305"),
-  g = n("659500"),
+  g = n("811305"),
+  S = n("659500"),
   C = n("439932"),
   _ = n("550766"),
   I = n("191225"),
@@ -45,7 +45,7 @@ function O(e) {
     renderExternalHeader: b
   } = e, D = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != P ? I.default.getEmbeddedActivitiesForChannel(P) : [], [P]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), k = a.useCallback(() => {
     (0, _.updateActivityPanelMode)(M.ActivityPanelModes.PIP)
-  }, []), V = a.useRef(null), B = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), H = B !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = a.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : O), Y = a.useCallback(e => {
+  }, []), B = a.useRef(null), V = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), H = V !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = a.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : O), Y = a.useCallback(e => {
     u.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
@@ -77,8 +77,8 @@ function O(e) {
   let en = F.get(null === (n = w[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
     el = [];
   return null != en && (el = Array.from(en.embeddedActivity.userIds).map(e => p.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, l.jsxs)("div", {
-    className: i(L.wrapper, y[B], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
-    ref: V,
+    className: i(L.wrapper, y[V], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
+    ref: B,
     style: H && null != G ? {
       minHeight: 200,
       maxHeight: O,
@@ -109,7 +109,7 @@ function O(e) {
         })
       }), null != et ? (0, l.jsxs)("div", {
         className: L.footer,
-        children: [(0, l.jsx)(S.default, {
+        children: [(0, l.jsx)(g.default, {
           renderIcon: !1,
           users: el,
           size: 32,
@@ -144,14 +144,14 @@ function O(e) {
     }), H ? (0, l.jsx)(d.default, {
       minHeight: 480,
       maxHeight: O,
-      resizableNode: V,
+      resizableNode: B,
       onResize: e => {
-        g.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0
         }), W(e)
       },
       onResizeEnd: e => {
-        g.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
+        S.ComponentDispatch.dispatch(R.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !1
         }), Y(e)
       }

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983");
 n("884691");
 var a = n("118810"),
-  s = n("77078"),
-  l = n("272030"),
+  l = n("77078"),
+  s = n("272030"),
   r = n("798609"),
   d = n("861370"),
   u = n("152298"),
@@ -54,20 +54,20 @@ function f(e) {
       label: N.default.Messages.COPY_ID_MESSAGE,
       shiftId: "".concat(h.channel_id, "-").concat(h.id)
     });
-  return (0, i.jsxs)(s.Menu, {
+  return (0, i.jsxs)(l.Menu, {
     navId: "message",
-    onClose: l.closeContextMenu,
+    onClose: s.closeContextMenu,
     "aria-label": N.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
     onSelect: A,
-    children: [(0, i.jsx)(s.MenuGroup, {
+    children: [(0, i.jsx)(l.MenuGroup, {
       children: M
-    }), (0, i.jsx)(s.MenuGroup, {
+    }), (0, i.jsx)(l.MenuGroup, {
       children: R
-    }), (0, i.jsxs)(s.MenuGroup, {
+    }), (0, i.jsxs)(l.MenuGroup, {
       children: [y, g, P, x]
-    }), (0, i.jsx)(s.MenuGroup, {
+    }), (0, i.jsx)(l.MenuGroup, {
       children: H
-    }), (0, i.jsx)(s.MenuGroup, {
+    }), (0, i.jsx)(l.MenuGroup, {
       children: b
     })]
   })

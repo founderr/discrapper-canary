@@ -9,21 +9,21 @@ n("884691");
 var l = n("446674"),
   i = n("77078"),
   u = n("498139"),
-  s = n("629220"),
-  r = n("512395"),
-  d = n("282109"),
+  d = n("629220"),
+  s = n("512395"),
+  r = n("282109"),
   o = n("49111"),
   c = n("782340");
 
 function f(e) {
   let {
     isFavoritesPerk: t
-  } = (0, u.useFavoritesServerExperiment)("useChannelOptInItems"), n = (0, r.useOptInEnabledForGuild)(e.guild_id), f = (0, l.useStateFromStores)([d.default], () => d.default.isChannelOptedIn(e.guild_id, e.id)), _ = (0, l.useStateFromStores)([d.default], () => null != e.parent_id && d.default.isChannelOptedIn(e.guild_id, e.parent_id)), E = (0, l.useStateFromStores)([d.default], () => d.default.isFavorite(e.guild_id, e.id)), p = () => {
-    (0, s.setOptInChannel)(e.guild_id, e.id, !f, {
+  } = (0, u.useFavoritesServerExperiment)("useChannelOptInItems"), n = (0, s.useOptInEnabledForGuild)(e.guild_id), f = (0, l.useStateFromStores)([r.default], () => r.default.isChannelOptedIn(e.guild_id, e.id)), _ = (0, l.useStateFromStores)([r.default], () => null != e.parent_id && r.default.isChannelOptedIn(e.guild_id, e.parent_id)), E = (0, l.useStateFromStores)([r.default], () => r.default.isFavorite(e.guild_id, e.id)), C = () => {
+    (0, d.setOptInChannel)(e.guild_id, e.id, !f, {
       section: o.AnalyticsSections.CONTEXT_MENU
     })
-  }, C = () => {
-    null != e.parent_id && (0, s.setOptInChannel)(e.guild_id, e.parent_id, !1, {
+  }, I = () => {
+    null != e.parent_id && (0, d.setOptInChannel)(e.guild_id, e.parent_id, !1, {
       section: o.AnalyticsSections.CONTEXT_MENU
     })
   };
@@ -31,27 +31,27 @@ function f(e) {
   if (e.isCategory()) return (0, a.jsx)(i.MenuItem, {
     id: "opt-into-category",
     label: f ? c.default.Messages.CHANNEL_OPT_OUT : c.default.Messages.CHANNEL_OPT_IN,
-    action: () => p()
+    action: () => C()
   });
-  let h = E ? c.default.Messages.REMOVE_FAVORITE : c.default.Messages.ADD_FAVORITE,
-    T = E ? c.default.Messages.UNPIN_CHANNEL : c.default.Messages.PIN_CHANNEL_TO_TOP;
+  let T = E ? c.default.Messages.REMOVE_FAVORITE : c.default.Messages.ADD_FAVORITE,
+    p = E ? c.default.Messages.UNPIN_CHANNEL : c.default.Messages.PIN_CHANNEL_TO_TOP;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(i.MenuItem, {
       id: "opt-in-favorite-channel",
-      label: t ? T : h,
+      label: t ? p : T,
       action: () => {
-        (0, s.setIsFavorite)(e.guild_id, e.id, !E, {
+        (0, d.setIsFavorite)(e.guild_id, e.id, !E, {
           section: o.AnalyticsSections.CONTEXT_MENU
         })
       }
     }), _ ? (0, a.jsx)(i.MenuItem, {
       id: "opt-out-category",
       label: c.default.Messages.CHANNEL_OPT_OUT_PARENT_CATEGORY,
-      action: () => C()
+      action: () => I()
     }) : (0, a.jsx)(i.MenuItem, {
       id: "opt-into-channel",
       label: f ? c.default.Messages.CHANNEL_OPT_OUT : c.default.Messages.CHANNEL_OPT_IN,
-      action: () => p()
+      action: () => C()
     })]
   })
 }

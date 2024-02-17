@@ -36,7 +36,7 @@ function p(e) {
     tabs: r,
     selectedTabId: t,
     onSelectTab: i
-  } = e, l = n.useRef(null), p = n.useRef(0), m = n.useRef(new Map), [g, f] = n.useState([]), y = n.useCallback(() => {
+  } = e, l = n.useRef(null), p = n.useRef(0), m = n.useRef(new Map), [g, f] = n.useState([]), b = n.useCallback(() => {
     var e, a, n, i;
     if (null == l.current) return;
     let o = [],
@@ -45,11 +45,11 @@ function p(e) {
       for (let l of (p.current = s, s -= null !== (a = null === (e = m.current.get(t)) || void 0 === e ? void 0 : e.width) && void 0 !== a ? a : 0, r)) l.id !== t && (s -= null !== (i = null === (n = m.current.get(l.id)) || void 0 === n ? void 0 : n.width) && void 0 !== i ? i : 0) < 0 && o.push(l.id);
       f(o)
     }
-  }, [r, t]), b = n.useRef(null);
-  n.useEffect(() => (b.current = new ResizeObserver(() => y()), null != l.current && b.current.observe(l.current), () => {
+  }, [r, t]), y = n.useRef(null);
+  n.useEffect(() => (y.current = new ResizeObserver(() => b()), null != l.current && y.current.observe(l.current), () => {
     var e;
-    null === (e = b.current) || void 0 === e || e.disconnect()
-  }), [y]);
+    null === (e = y.current) || void 0 === e || e.disconnect()
+  }), [b]);
   let x = n.useCallback(e => {
     let {
       closePopout: n

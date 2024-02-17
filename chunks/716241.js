@@ -48,8 +48,8 @@ var s = n("917351"),
   y = n("162771"),
   T = n("282109"),
   C = n("800762"),
-  I = n("599110"),
-  S = n("718517"),
+  S = n("599110"),
+  I = n("718517"),
   A = n("991170"),
   D = n("761932"),
   N = n("49111"),
@@ -135,7 +135,7 @@ function M(e) {
   var t, n, s, i, r;
   let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  if (I.default.isThrottled(e)) return;
+  if (S.default.isThrottled(e)) return;
   let d = !("location" in a) || a.location !== N.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
     l = "guild_id" in a ? a.guild_id : d ? y.default.getGuildId() : null,
     f = "channel_id" in a ? a.channel_id : d ? p.default.getChannelId(l) : null,
@@ -149,7 +149,7 @@ function M(e) {
       channel_hidden: !1
     }) : R(_)
   };
-  I.default.track(e, g, {
+  S.default.track(e, g, {
     flush: o
   })
 }
@@ -159,7 +159,7 @@ function w(e) {
   if (null == t || null == t.guild_id) return {};
   let n = c.default.getGuild(t.guild_id);
   if (null == n) return {};
-  let s = E.default.getSnapshot(e, 10 * S.default.Millis.SECOND);
+  let s = E.default.getSnapshot(e, 10 * I.default.Millis.SECOND);
   return {
     channel_was_unread: s.unread,
     channel_mention_count: s.mentionCount,

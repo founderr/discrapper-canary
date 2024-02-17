@@ -23,10 +23,10 @@ function f(e) {
     channel: E
   } = e, _ = null != l, {
     canManageGuildEvent: T
-  } = (0, s.useManageResourcePermissions)(null != E ? E : f), [M, v] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), g = (0, i.default)(l, null == v ? void 0 : v.id), m = null != v && T(v), I = (null == v ? void 0 : v.recurrence_rule) != null && !_, {
+  } = (0, s.useManageResourcePermissions)(null != E ? E : f), [M, v] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), g = (0, i.default)(l, null == v ? void 0 : v.id), I = null != v && T(v), m = (null == v ? void 0 : v.recurrence_rule) != null && !_, {
     startTime: N
   } = (0, o.default)(t, l);
-  if (!m || M && !I && !_ || _ && !_ || null == v) return null;
+  if (!I || M && !m && !_ || _ && !_ || null == v) return null;
   if (M && _) {
     var R;
     if (null == N) return null;
@@ -37,13 +37,13 @@ function f(e) {
     (0, u.openModal)(a => (0, n.jsxs)(u.ConfirmModal, {
       ...a,
       header: c.default.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
-      confirmText: I || e ? c.default.Messages.DELETE_ALL_EVENTS : c.default.Messages.DELETE_EVENT,
+      confirmText: m || e ? c.default.Messages.DELETE_ALL_EVENTS : c.default.Messages.DELETE_EVENT,
       cancelText: c.default.Messages.NEVERMIND,
       onConfirm: () => _ && !e ? r.default.deleteRecurrence(f.id, t, l, g) : r.default.deleteGuildEvent(t, f.id),
       children: [(0, n.jsx)(u.Text, {
         variant: "text-md/normal",
         children: c.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY
-      }), (0, n.jsx)("br", {}), (I || e) && (0, n.jsx)(u.Text, {
+      }), (0, n.jsx)("br", {}), (m || e) && (0, n.jsx)(u.Text, {
         variant: "text-md/normal",
         children: c.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY_IS_RECURRING.format()
       })]

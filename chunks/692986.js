@@ -1,106 +1,106 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return v
+    return I
   }
 });
-var u = l("37983");
-l("884691");
-var a = l("446674"),
-  d = l("77078"),
-  n = l("404118"),
-  s = l("629109"),
-  i = l("235004"),
-  o = l("42887"),
-  r = l("945956"),
-  c = l("162771"),
-  f = l("697218"),
-  M = l("423487"),
-  E = l("599110"),
-  g = l("49111"),
-  A = l("353927"),
-  S = l("782340"),
-  _ = l("622393");
+var u = n("37983");
+n("884691");
+var a = n("446674"),
+  i = n("77078"),
+  l = n("404118"),
+  r = n("629109"),
+  d = n("235004"),
+  o = n("42887"),
+  s = n("945956"),
+  c = n("162771"),
+  f = n("697218"),
+  E = n("423487"),
+  _ = n("599110"),
+  S = n("49111"),
+  T = n("353927"),
+  A = n("782340"),
+  p = n("622393");
 
-function v(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : A.MediaEngineContextTypes.DEFAULT,
-    l = (0, a.useStateFromStores)([f.default], () => {
+function I(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T.MediaEngineContextTypes.DEFAULT,
+    n = (0, a.useStateFromStores)([f.default], () => {
       var t;
       return (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e
     }),
-    v = (0, a.useStateFromStores)([i.default], () => i.default.isLocalSoundboardMuted(e)),
+    I = (0, a.useStateFromStores)([d.default], () => d.default.isLocalSoundboardMuted(e)),
     {
-      muted: p,
-      deafened: N = !1,
-      localVideoDisabled: T = !1,
-      localVideoAutoDisabled: m = !1
-    } = (0, a.useStateFromStoresObject)([o.default], () => l ? {
+      muted: N,
+      deafened: C = !1,
+      localVideoDisabled: g = !1,
+      localVideoAutoDisabled: O = !1
+    } = (0, a.useStateFromStoresObject)([o.default], () => n ? {
       muted: o.default.isSelfMute(t),
       deafened: o.default.isSelfDeaf(t)
     } : {
       muted: o.default.isLocalMute(e, t),
       localVideoDisabled: o.default.isLocalVideoDisabled(e, t),
       localVideoAutoDisabled: o.default.isLocalVideoAutoDisabled(e, t)
-    }, [l, t, e]),
-    U = o.default.supports(A.Features.DISABLE_VIDEO) && !l ? (0, u.jsx)(d.MenuCheckboxItem, {
+    }, [n, t, e]),
+    R = o.default.supports(T.Features.DISABLE_VIDEO) && !n ? (0, u.jsx)(i.MenuCheckboxItem, {
       id: "disable-video",
-      label: S.default.Messages.DISABLE_VIDEO,
+      label: A.default.Messages.DISABLE_VIDEO,
       action: () => {
-        if (m) {
-          n.default.show({
-            title: S.default.Messages.UNSTABLE_CONNECTION,
-            body: S.default.Messages.UNSTABLE_CONNECTION_REASON_2,
-            confirmText: S.default.Messages.TURN_ON_VIDEO_ANYWAY,
-            cancelText: S.default.Messages.LEAVE_VIDEO_OFF,
-            onConfirm: () => s.default.setDisableLocalVideo(e, g.VideoToggleState.MANUAL_ENABLED)
+        if (O) {
+          l.default.show({
+            title: A.default.Messages.UNSTABLE_CONNECTION,
+            body: A.default.Messages.UNSTABLE_CONNECTION_REASON_2,
+            confirmText: A.default.Messages.TURN_ON_VIDEO_ANYWAY,
+            cancelText: A.default.Messages.LEAVE_VIDEO_OFF,
+            onConfirm: () => r.default.setDisableLocalVideo(e, S.VideoToggleState.MANUAL_ENABLED)
           });
           return
         }
-        let l = T ? g.VideoToggleState.MANUAL_ENABLED : g.VideoToggleState.DISABLED;
-        s.default.setDisableLocalVideo(e, l, t)
+        let n = g ? S.VideoToggleState.MANUAL_ENABLED : S.VideoToggleState.DISABLED;
+        r.default.setDisableLocalVideo(e, n, t)
       },
-      checked: T,
-      subtext: m ? (0, u.jsxs)("div", {
-        className: _.videoPaused,
-        children: [(0, u.jsx)(M.default, {
+      checked: g,
+      subtext: O ? (0, u.jsxs)("div", {
+        className: p.videoPaused,
+        children: [(0, u.jsx)(E.default, {
           width: 12,
-          className: _.warningCircle
-        }), S.default.Messages.UNSTABLE_CONNECTION]
+          className: p.warningCircle
+        }), A.default.Messages.UNSTABLE_CONNECTION]
       }) : null
     }, "disable-video") : null,
-    I = l ? null : (0, u.jsx)(d.MenuCheckboxItem, {
+    h = n ? null : (0, u.jsx)(i.MenuCheckboxItem, {
       id: "soundboard-sound-mute",
-      label: S.default.Messages.MUTE_SOUNDBOARD,
+      label: A.default.Messages.MUTE_SOUNDBOARD,
       action: () => {
-        let l = r.default.getRTCConnection();
-        E.default.track(g.AnalyticEvents.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
+        let n = s.default.getRTCConnection();
+        _.default.track(S.AnalyticEvents.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
           guild_id: c.default.getGuildId(),
           target_user_id: e,
-          media_session_id: null == l ? void 0 : l.getMediaSessionId(),
-          parent_media_session_id: null == l ? void 0 : l.parentMediaSessionId,
-          mute_soundboard: !v
-        }), s.default.toggleLocalSoundboardMute(e, t)
+          media_session_id: null == n ? void 0 : n.getMediaSessionId(),
+          parent_media_session_id: null == n ? void 0 : n.parentMediaSessionId,
+          mute_soundboard: !I
+        }), r.default.toggleLocalSoundboardMute(e, t)
       },
-      checked: v
+      checked: I
     }, "soundboard-sound-mute");
-  return l ? [(0, u.jsx)(d.MenuCheckboxItem, {
+  return n ? [(0, u.jsx)(i.MenuCheckboxItem, {
     id: "mute",
-    label: S.default.Messages.SOUND_MUTE,
-    action: () => s.default.toggleSelfMute({
-      context: t
-    }),
-    checked: p
-  }, "self-mute"), (0, u.jsx)(d.MenuCheckboxItem, {
-    id: "deafen",
-    label: S.default.Messages.DEAFEN,
-    action: () => s.default.toggleSelfDeaf({
+    label: A.default.Messages.SOUND_MUTE,
+    action: () => r.default.toggleSelfMute({
       context: t
     }),
     checked: N
-  }, "self-deafen"), U] : [(0, u.jsx)(d.MenuCheckboxItem, {
+  }, "self-mute"), (0, u.jsx)(i.MenuCheckboxItem, {
+    id: "deafen",
+    label: A.default.Messages.DEAFEN,
+    action: () => r.default.toggleSelfDeaf({
+      context: t
+    }),
+    checked: C
+  }, "self-deafen"), R] : [(0, u.jsx)(i.MenuCheckboxItem, {
     id: "mute",
-    label: S.default.Messages.SOUND_MUTE,
-    action: () => s.default.toggleLocalMute(e, t),
-    checked: p
-  }, "self-mute"), I, U]
+    label: A.default.Messages.SOUND_MUTE,
+    action: () => r.default.toggleLocalMute(e, t),
+    checked: N
+  }, "self-mute"), h, R]
 }

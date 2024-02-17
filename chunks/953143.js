@@ -29,9 +29,9 @@ function v(e) {
     onTimeChange: S,
     timeSelected: R = !0,
     schedule: m,
-    recurrenceRule: N,
-    showEndDate: T = !1,
-    requireEndDate: C = !1,
+    recurrenceRule: T,
+    showEndDate: C = !1,
+    requireEndDate: N = !1,
     disableStartDateTime: p = !1
   } = e, {
     analyticsLocations: I
@@ -49,7 +49,7 @@ function v(e) {
     y = r(),
     D = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
     M = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
-  null != N && (D.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"), M.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"));
+  null != T && (D.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"), M.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"));
   let j = e => {
     a({
       ...m,
@@ -59,12 +59,12 @@ function v(e) {
   return null != A && d.default.trackExposure({
     guildId: null != n ? n : h.EMPTY_STRING_GUILD_ID,
     location: I[0]
-  }), T && (L = null != m.endDate || C ? (0, l.jsxs)(l.Fragment, {
+  }), C && (L = null != m.endDate || N ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: _.doubleInput,
       children: [(0, l.jsx)(s.FormItem, {
         title: g.default.Messages.CREATE_EVENT_END_DATE_LABEL,
-        required: C,
+        required: N,
         children: (0, l.jsx)(s.DateInput, {
           value: m.endDate,
           onSelect: j,
@@ -73,13 +73,13 @@ function v(e) {
         })
       }), (0, l.jsx)(s.FormItem, {
         title: g.default.Messages.CREATE_EVENT_END_TIME_LABEL,
-        required: C,
+        required: N,
         children: (0, l.jsx)(s.TimeInput, {
           value: m.endDate,
           onChange: j
         })
       })]
-    }), C ? null : (0, l.jsx)(s.Button, {
+    }), N ? null : (0, l.jsx)(s.Button, {
       onClick: () => {
         j(void 0)
       },
@@ -151,7 +151,7 @@ function v(e) {
     }), L, x && null != A && null != v && (0, l.jsx)(E.default, {
       onRecurrenceChange: v,
       startDate: A,
-      recurrenceRule: N
+      recurrenceRule: T
     })]
   })
 }

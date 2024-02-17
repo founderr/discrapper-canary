@@ -63,8 +63,8 @@ var s = n("627445"),
   y = n("12307"),
   T = n("840707"),
   C = n("561288"),
-  I = n("450911"),
-  S = n("255397"),
+  S = n("450911"),
+  I = n("255397"),
   A = n("987317"),
   D = n("49111"),
   N = n("706530");
@@ -115,7 +115,7 @@ function V(e, t) {
     type: "STREAM_WATCH",
     streamKey: r,
     allowMultiple: a
-  }), !a && (null == t || !t.noFocus) && S.default.selectParticipant(e.channelId, r)
+  }), !a && (null == t || !t.noFocus) && I.default.selectParticipant(e.channelId, r)
 }
 
 function R(e, t) {
@@ -237,7 +237,7 @@ function B(e) {
       sourceId: s,
       sourceName: i
     }
-  }), null == t ? I.default.createBroadcastPrivateChannel() : O(null, t, {
+  }), null == t ? S.default.createBroadcastPrivateChannel() : O(null, t, {
     pid: n,
     sourceId: s,
     sourceName: i
@@ -248,7 +248,7 @@ function x(e, t) {
   let n = c.default.getId(),
     s = (0, u.decodeStreamKey)(t),
     i = h.default.getVoiceChannelId();
-  null != i && i !== e && A.default.disconnect(), I.default.addRecipient(e, n, void 0, () => {
+  null != i && i !== e && A.default.disconnect(), S.default.addRecipient(e, n, void 0, () => {
     C.default.call(e, !1, !1, null, () => {
       k(s)
     })

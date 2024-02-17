@@ -18,8 +18,8 @@ var a = t("37983"),
   m = t("228220"),
   g = t("664336"),
   f = t("888400"),
-  y = t("398570"),
-  b = t("370492"),
+  b = t("398570"),
+  y = t("370492"),
   x = t("332814"),
   k = t("928063"),
   v = t("637171"),
@@ -161,7 +161,7 @@ let L = [{
 
 function A() {
   let e = n.useRef(null),
-    r = (0, c.useStateFromStores)([y.default], () => y.default.loggedEvents),
+    r = (0, c.useStateFromStores)([b.default], () => b.default.loggedEvents),
     [t, i] = n.useState(Object.keys(_)),
     o = r.filter(e => {
       for (let r of t)
@@ -185,7 +185,7 @@ function A() {
         className: j.toolbarButton,
         look: d.Button.Looks.BLANK,
         size: d.Button.Sizes.ICON,
-        onClick: b.clearAnalyticsLog,
+        onClick: y.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
           title: S.default.Messages.CLEAR,
           children: (0, a.jsx)(m.default, {

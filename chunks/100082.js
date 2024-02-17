@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("679653"),
   p = n("76813"),
   E = n("992207"),
-  S = n("95039"),
-  g = n("539938"),
+  g = n("95039"),
+  S = n("539938"),
   C = n("311197"),
   _ = n("550410"),
   I = n("124824"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("834052"),
   F = n("506466"),
   k = n("199811"),
-  V = n("96151"),
-  B = n("49111"),
+  B = n("96151"),
+  V = n("49111"),
   H = n("646718"),
   G = n("782340"),
   W = n("225243");
@@ -53,7 +53,7 @@ function Y(e) {
     channel: n,
     toggleRequestToSpeakSidebar: s,
     showRequestToSpeakSidebar: o
-  } = e, m = (0, c.useAppContext)(), S = (0, r.useStateFromStores)([f.default], () => f.default.getChatOpen(n.id)), g = (0, D.useCanModerateRequestToSpeak)(n.id), x = (0, P.useStageParticipantsCount)(n.id, b.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
+  } = e, m = (0, c.useAppContext)(), g = (0, r.useStateFromStores)([f.default], () => f.default.getChatOpen(n.id)), S = (0, D.useCanModerateRequestToSpeak)(n.id), x = (0, P.useStageParticipantsCount)(n.id, b.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
     preventIdle: N,
     allowIdle: A
   } = (0, _.usePreventIdle)("popup");
@@ -90,18 +90,18 @@ function Y(e) {
       onOpen: N,
       onClose: A,
       className: W.button
-    }, "recents"), !o && g ? (0, l.jsx)("div", {
+    }, "recents"), !o && S ? (0, l.jsx)("div", {
       className: W.button,
       children: (0, l.jsx)(F.default, {
         toggleRequestToSpeakSidebar: () => {
-          S && d.default.updateChatOpen(n.id, !1), s()
+          g && d.default.updateChatOpen(n.id, !1), s()
         },
         showRequestToSpeakSidebar: o,
         numRequestToSpeak: x
       })
     }) : null, (0, l.jsx)(h.CallscopeChannelCallIssueMarker, {
       className: W.button
-    }), !S && (0, l.jsx)("div", {
+    }), !g && (0, l.jsx)("div", {
       className: i(W.button, {
         [W.sidebarOpen]: o
       }),
@@ -122,8 +122,8 @@ function z(e) {
     channel: c,
     toggleRequestToSpeakSidebar: f,
     showRequestToSpeakSidebar: h
-  } = e, p = (0, m.default)(c), E = (0, r.useStateFromStores)([w.default], () => w.default.getStageInstanceByChannel(c.id)), C = (0, P.useActualStageSpeakerCount)(c.id), _ = (0, P.useStageParticipantsCount)(c.id, b.StageChannelParticipantNamedIndex.AUDIENCE), I = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(c.guild_id), [c.guild_id]), T = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, v = (null == I ? void 0 : I.isCommunity()) ? T < B.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == I ? void 0 : I.premiumTier) !== B.BoostedGuildTiers.TIER_3 && T <= B.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, D = (0, V.default)(c), F = (0, r.useStateFromStores)([N.default], () => N.default.can(U.MODERATE_STAGE_CHANNEL_PERMISSIONS, c)), k = () => {
-    d.default.updateStageVideoLimitBoostUpsellDismissed(c.id, !0), y.default.track(B.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
+  } = e, p = (0, m.default)(c), E = (0, r.useStateFromStores)([w.default], () => w.default.getStageInstanceByChannel(c.id)), C = (0, P.useActualStageSpeakerCount)(c.id), _ = (0, P.useStageParticipantsCount)(c.id, b.StageChannelParticipantNamedIndex.AUDIENCE), I = (0, r.useStateFromStores)([x.default], () => x.default.getGuild(c.guild_id), [c.guild_id]), T = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, v = (null == I ? void 0 : I.isCommunity()) ? T < V.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == I ? void 0 : I.premiumTier) !== V.BoostedGuildTiers.TIER_3 && T <= V.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, D = (0, B.default)(c), F = (0, r.useStateFromStores)([N.default], () => N.default.can(U.MODERATE_STAGE_CHANNEL_PERMISSIONS, c)), k = () => {
+    d.default.updateStageVideoLimitBoostUpsellDismissed(c.id, !0), y.default.track(V.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
       guild_id: c.guild_id,
       type: H.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
       is_moderator: F,
@@ -131,7 +131,7 @@ function z(e) {
     })
   };
   a.useEffect(() => {
-    D && y.default.track(B.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
+    D && y.default.track(V.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
       guild_id: c.guild_id,
       type: H.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
       is_moderator: F,
@@ -145,9 +145,9 @@ function z(e) {
       showRequestToSpeakSidebar: h,
       channel: c
     }),
-    onDoubleClick: g.handleDoubleClick,
+    onDoubleClick: S.handleDoubleClick,
     transparent: !0,
-    className: i((0, O.getThemeClass)(B.ThemeTypes.DARK), W.participants),
+    className: i((0, O.getThemeClass)(V.ThemeTypes.DARK), W.participants),
     children: [(0, l.jsx)(L.default.Icon, {
       icon: j.default,
       disabled: !0,
@@ -210,12 +210,12 @@ function z(e) {
           }), (0, l.jsx)(A.default, {
             size: u.Button.Sizes.SMALL,
             onClick: () => {
-              (0, S.openGuildBoostingMarketingModal)({
+              (0, g.openGuildBoostingMarketingModal)({
                 guildId: c.guild_id,
                 location: {
-                  section: B.AnalyticsSections.STAGE_VIDEO_LIMIT
+                  section: V.AnalyticsSections.STAGE_VIDEO_LIMIT
                 }
-              }), y.default.track(B.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
+              }), y.default.track(V.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
                 guild_id: c.guild_id,
                 type: H.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
                 is_moderator: F,

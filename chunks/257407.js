@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("788506"),
   p = n("867805"),
   E = n("5667"),
-  S = n("697218"),
-  g = n("402671"),
+  g = n("697218"),
+  S = n("402671"),
   C = n("449008"),
   _ = n("719923"),
   I = n("229502"),
@@ -50,13 +50,13 @@ function k(e) {
     channel: n,
     closePopout: p,
     onFocus: C
-  } = e, y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), V = _.default.canUseFancyVoiceChannelReactions(k), B = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), H = a.useRef(!1), G = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...G, ...F], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
+  } = e, y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), k = (0, i.useStateFromStores)([g.default], () => g.default.getCurrentUser()), B = _.default.canUseFancyVoiceChannelReactions(k), V = (0, i.useStateFromStores)([T.default], () => T.default.getState().animationType), H = a.useRef(!1), G = (0, m.useFrequentlyUsedEmojis)(n.guild_id), W = (0, s.uniqBy)([...G, ...F], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: n,
     intention: U
   })).slice(0, L.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT), Y = null !== (t = v.default.recentlyUsedEmojis) && void 0 !== t ? t : [], z = Y.filter(e => !W.slice(0, L.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT - 1).some(t => t.name === e.name));
   z.length > 0 && W.splice(W.length - 1, 1, z[0]);
-  let K = (0, x.sampleAnimationId)(B),
+  let K = (0, x.sampleAnimationId)(V),
     Z = e => {
       u.default.dispatch({
         type: "VOICE_CHANNEL_EFFECT_RECENT_EMOJI",
@@ -65,9 +65,9 @@ function k(e) {
         channel: n,
         emoji: e,
         location: I.VoiceChannelEffectSentLocation.EMOJI_PICKER,
-        animationType: B,
+        animationType: V,
         animationId: K,
-        isPremium: V
+        isPremium: B
       })
     },
     X = () => {
@@ -96,7 +96,7 @@ function k(e) {
     })
   }, [q, J]);
   let $ = y ? [r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
-    ee = B === R.VoiceChannelEffectAnimationType.PREMIUM;
+    ee = V === R.VoiceChannelEffectAnimationType.PREMIUM;
   return (0, l.jsx)(h.default, {
     contentTypes: $,
     children: e => {
@@ -139,7 +139,7 @@ function k(e) {
               labelText: b.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: ee,
               onChange: () => {
-                if (V) return f.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
+                if (B) return f.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
                   channel_id: q,
                   guild_id: J,
                   enabled: !ee

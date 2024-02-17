@@ -21,8 +21,8 @@ var a = l("398351"),
   M = l("466148"),
   v = l("189443"),
   g = l("822516"),
-  m = l("745049"),
-  I = l("782340");
+  I = l("745049"),
+  m = l("782340");
 let N = "YYYYMMDDTHHmmss",
   R = "YYYY-MM-DDTHH:mm:ss",
   S = /RRULE:.*/;
@@ -38,10 +38,10 @@ function D(e, t, l, a) {
     L = (0, i.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(e), [e]),
     b = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]);
   if (h || null == L) return null;
-  O = L.entity_type === m.GuildScheduledEventEntityTypes.EXTERNAL ? L.entity_metadata.location : null != l && null != b ? I.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
+  O = L.entity_type === I.GuildScheduledEventEntityTypes.EXTERNAL ? L.entity_metadata.location : null != l && null != b ? m.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
     channelName: l.name,
     guildName: b.name
-  }) : I.default.Messages.NOTIFICATION_TITLE_DISCORD;
+  }) : m.default.Messages.NOTIFICATION_TITLE_DISCORD;
   let A = d(L.scheduled_start_time),
     V = null != L.scheduled_end_time ? d(L.scheduled_end_time) : A,
     j = null != L.description && "" !== L.description ? f.default.unparse(L.description, null !== (s = null == l ? void 0 : l.id) && void 0 !== s ? s : "", !0) : "",
@@ -61,12 +61,12 @@ function D(e, t, l, a) {
       }), _.isPlatformEmbedded ? c.default.fileManager.saveWithDialog(e.toString(), "discord-event.ics") : window.open(e.toURL(), "_blank")
     };
   return (0, n.jsxs)(o.MenuItem, {
-    id: I.default.Messages.ADD_TO_CALENDAR,
-    label: I.default.Messages.ADD_TO_CALENDAR,
+    id: m.default.Messages.ADD_TO_CALENDAR,
+    label: m.default.Messages.ADD_TO_CALENDAR,
     action: w,
     children: [(0, n.jsx)(o.MenuItem, {
-      id: I.default.Messages.ADD_TO_GOOGLE_CALENDAR,
-      label: I.default.Messages.ADD_TO_GOOGLE_CALENDAR,
+      id: m.default.Messages.ADD_TO_GOOGLE_CALENDAR,
+      label: m.default.Messages.ADD_TO_GOOGLE_CALENDAR,
       action: () => {
         var e;
         let t = null == P ? void 0 : P.toString(),
@@ -82,12 +82,12 @@ function D(e, t, l, a) {
         window.open(n, "_blank")
       }
     }), (0, n.jsx)(o.MenuItem, {
-      id: I.default.Messages.DOWNLOAD_ICS,
-      label: I.default.Messages.DOWNLOAD_ICS,
+      id: m.default.Messages.DOWNLOAD_ICS,
+      label: m.default.Messages.DOWNLOAD_ICS,
       action: w
     }), (0, n.jsx)(o.MenuItem, {
-      id: I.default.Messages.ADD_TO_YAHOO,
-      label: I.default.Messages.ADD_TO_YAHOO,
+      id: m.default.Messages.ADD_TO_YAHOO,
+      label: m.default.Messages.ADD_TO_YAHOO,
       action: () => {
         let e = {
             v: 60,
@@ -101,8 +101,8 @@ function D(e, t, l, a) {
         window.open(t, "_blank")
       }
     }), (0, n.jsx)(o.MenuItem, {
-      id: I.default.Messages.ADD_TO_OUTLOOK,
-      label: I.default.Messages.ADD_TO_OUTLOOK,
+      id: m.default.Messages.ADD_TO_OUTLOOK,
+      label: m.default.Messages.ADD_TO_OUTLOOK,
       action: () => {
         let e = {
             path: "/calendar/action/compose",

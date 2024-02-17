@@ -78,9 +78,9 @@ function m(e) {
     transitionState: o,
     ...d
   } = e, E = (0, u.useUID)(), v = (0, r.useStateFromStores)([i.default], () => i.default.getGuild(t.guild_id)), m = a.useMemo(() => c.default.getStageInstanceByChannel(t.id), [t.id]), {
-    loading: N,
-    error: T,
-    onSave: C
+    loading: T,
+    error: C,
+    onSave: N
   } = (0, h.default)(t, n), {
     modalStep: p,
     setModalStep: I,
@@ -92,8 +92,8 @@ function m(e) {
   } = (0, g.default)({
     stageInstance: m,
     defaultStep: _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
-    error: T,
-    onSave: C
+    error: C,
+    onSave: N
   });
   return (a.useEffect(() => {
     null == v && n()
@@ -116,8 +116,8 @@ function m(e) {
             stageInstance: m,
             headerId: E,
             onClose: n,
-            loading: N,
-            error: T,
+            loading: T,
+            error: C,
             onSave: y,
             defaultOptions: A,
             isSlideReady: x === _.StartStageSteps.STAGE_CHANNEL_SETTINGS
@@ -132,7 +132,7 @@ function m(e) {
             guild: v,
             channel: t,
             stageData: A,
-            loading: N,
+            loading: T,
             onNext: D,
             onCancel: n,
             onBack: () => I(_.StartStageSteps.STAGE_CHANNEL_SETTINGS)

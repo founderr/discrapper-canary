@@ -122,15 +122,15 @@ async function P(e) {
   });
   try {
     let e = [...s.selectedAnswerIds.values()];
-    await v({
-      channelId: t,
-      messageId: n,
-      answerIds: e
-    }), (0, h.updatePollState)(t, n, e => (l(null != e, "Must not be able to vote without existing state!"), {
+    (0, h.updatePollState)(t, n, e => (l(null != e, "Must not be able to vote without existing state!"), {
       ...e,
       submitting: !0,
       editing: !1
-    })), await C.submitPollVote({
+    })), await v({
+      channelId: t,
+      messageId: n,
+      answerIds: e
+    }), await C.submitPollVote({
       channelId: t,
       messageId: n,
       answerIds: e

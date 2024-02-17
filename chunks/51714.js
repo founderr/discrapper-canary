@@ -26,7 +26,7 @@ function d(e) {
     S = null != h ? i.default.extractTimestamp(h) : null,
     _ = null;
   return f.forEach(e => {
-    var s, T, A, M, I, N, v, L;
+    var s, A, T, M, I, N, v, L;
     if (null != p && p.length > 0) {
       ;
       let t = i.default.extractTimestamp(e.id);
@@ -45,13 +45,13 @@ function d(e) {
         }
       }
     }
-    let R = (0, l.dateFormat)(e.timestamp, "LL");
-    R !== t && null == _ && (E.push({
+    let x = (0, l.dateFormat)(e.timestamp, "LL");
+    x !== t && null == _ && (E.push({
       type: u.ChannelStreamTypes.DIVIDER,
-      content: R,
-      contentKey: R
-    }), t = R);
-    let x = E[E.length - 1],
+      content: x,
+      contentKey: x
+    }), t = x);
+    let R = E[E.length - 1],
       y = null,
       O = (0, o.isSpam)(e);
     g = g || O;
@@ -64,14 +64,14 @@ function d(e) {
     if (null !== D) {
       ;
       let t, n;
-      [y, x] = (T = E, A = e, M = D, n = I = x, null == I || I.type !== M ? (t = {
+      [y, R] = (A = E, T = e, M = D, n = I = R, null == I || I.type !== M ? (t = {
         type: M,
         content: [],
-        key: A.id
-      }, T.push(t)) : n = (t = I).content[t.content.length - 1], [t, n])
+        key: T.id
+      }, A.push(t)) : n = (t = I).content[t.content.length - 1], [t, n])
     }
     if (h === e.id && null != S) {
-      if (null != x && x.type === u.ChannelStreamTypes.DIVIDER) x.unreadId = e.id, S = null;
+      if (null != R && R.type === u.ChannelStreamTypes.DIVIDER) R.unreadId = e.id, S = null;
       else if (null !== y) {
         ;
         N = y, v = c, (L = e).isFirstMessageInForumPost(v) || N.content.push({
@@ -86,7 +86,7 @@ function d(e) {
       type: u.ChannelStreamTypes.DIVIDER,
       unreadId: e.id
     }), S = null);
-    let j = (null == x ? void 0 : x.type) === u.ChannelStreamTypes.MESSAGE ? d : x;
+    let j = (null == R ? void 0 : R.type) === u.ChannelStreamTypes.MESSAGE ? d : R;
     (0, r.isNewGroupItem)(c, j, e) && (n = e.id);
     let P = {
       type: e.type === u.MessageTypes.THREAD_STARTER_MESSAGE ? u.ChannelStreamTypes.THREAD_STARTER_MESSAGE : u.ChannelStreamTypes.MESSAGE,
@@ -96,10 +96,10 @@ function d(e) {
     n === e.id && (d = P);
     let {
       jumpSequenceId: b,
-      jumpFlash: F,
-      jumpTargetId: H
+      jumpFlash: H,
+      jumpTargetId: F
     } = f;
-    F && e.id === H && null != b && (P.flashKey = b), f.jumpTargetId === e.id && (P.jumpTarget = !0), null != m && e.id === m.startId && m.count > 1 && E.push({
+    H && e.id === F && null != b && (P.flashKey = b), f.jumpTargetId === e.id && (P.jumpTarget = !0), null != m && e.id === m.startId && m.count > 1 && E.push({
       type: u.ChannelStreamTypes.DIVIDER,
       content: m.topic,
       contentKey: m.startId,

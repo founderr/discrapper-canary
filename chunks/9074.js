@@ -18,10 +18,10 @@ var a, n = t("37983"),
   g = t("356410");
 let f = new RegExp("https?://".concat(null !== (a = window.GLOBAL_ENV.CDN_HOST) && void 0 !== a ? a : ""));
 
-function y(e) {
+function b(e) {
   return "string" == typeof e.content ? e.content : k(e.content)
 }
-let b = {
+let y = {
     ...c.defaultRules,
     heading: {
       ...c.defaultRules.heading,
@@ -67,7 +67,7 @@ let b = {
       ...c.defaultRules.blockQuote,
       react: (e, r, t) => (0, n.jsx)("blockquote", {
         className: m.blockquote,
-        children: y(e)
+        children: b(e)
       }, t.key)
     },
     image: {
@@ -89,7 +89,7 @@ let b = {
       order: 6,
       react: (e, r, t) => (0, n.jsx)("code", {
         className: m.codeInline,
-        children: y(e)
+        children: b(e)
       }, t.key)
     },
     codeBlock: {
@@ -98,7 +98,7 @@ let b = {
         let i = () => (0, n.jsx)("pre", {
           children: (0, n.jsx)("code", {
             className: o(g.scrollbarGhostHairline, "hljs"),
-            children: y(e)
+            children: b(e)
           })
         }, a.key);
         return (0, n.jsx)(d.LazyLibrary, {
@@ -123,8 +123,8 @@ let b = {
       }
     }
   },
-  x = c.parserFor(b),
-  k = c.reactFor(c.ruleOutput(b, "react"));
+  x = c.parserFor(y),
+  k = c.reactFor(c.ruleOutput(y, "react"));
 class v extends i.PureComponent {
   render() {
     let {
@@ -143,7 +143,7 @@ class v extends i.PureComponent {
     })
   }
 }
-v.rules = b, v.defaultProps = {
+v.rules = y, v.defaultProps = {
   parser: x,
   output: k
 };

@@ -23,7 +23,7 @@ var a = n("37983"),
   S = n("49111"),
   _ = n("5762");
 
-function T(e) {
+function A(e) {
   let {
     value: t,
     channel: n
@@ -37,7 +37,7 @@ function T(e) {
   })
 }
 
-function A(e) {
+function T(e) {
   let {
     channel: t,
     message: n
@@ -45,7 +45,7 @@ function A(e) {
     id: o
   } = t, {
     id: u
-  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, A = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = g && A, {
+  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, T = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = g && T, {
     editingMessage: N,
     editingTextValue: v,
     editingRichValue: L
@@ -53,14 +53,14 @@ function A(e) {
     editingMessage: c.default.getEditingMessage(o),
     editingTextValue: c.default.getEditingTextValue(o),
     editingRichValue: c.default.getEditingRichValue(o)
-  }), [o]), R = (0, l.useStateFromStores)([d.default], () => d.default.getId()), x = s.useCallback((e, n, a) => {
+  }), [o]), x = (0, l.useStateFromStores)([d.default], () => d.default.getId()), R = s.useCallback((e, n, a) => {
     let {
       content: s
-    } = a, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === R || l);
+    } = a, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === x || l);
     return u && null != N && (0, E.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, s) : i.default.editMessage(e, n, {
       content: s
     }), Promise.resolve()
-  }, [N, I, R, t]), y = s.useCallback(e => (0, s.createElement)(M, {
+  }, [N, I, x, t]), y = s.useCallback(e => (0, s.createElement)(M, {
     ...e,
     className: _.channelTextArea,
     key: u
@@ -74,8 +74,8 @@ function A(e) {
     onCancel: i.default.endEditMessage,
     onChange: i.default.updateEditMessage,
     onConfirmDelete: r.default.confirmDelete,
-    saveMessage: x,
-    validateEdit: T,
+    saveMessage: R,
+    validateEdit: A,
     children: y
   }) : null
 }
@@ -117,7 +117,7 @@ function I(e, t, n) {
     message: s,
     channel: l
   } = e;
-  return n ? (0, a.jsx)(A, {
+  return n ? (0, a.jsx)(T, {
     channel: l,
     message: s
   }) : (0, a.jsx)(C.default, {

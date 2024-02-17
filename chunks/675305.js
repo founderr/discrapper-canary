@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 }), n("222007");
 var l = n("446674"),
@@ -25,7 +25,7 @@ class d extends l.default.Store {
   }
 }
 d.displayName = "GuildOnboardingMemberActionStore";
-var o = new d(u.default, {
+var s = new d(u.default, {
   GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function(e) {
     let {
       guildId: t

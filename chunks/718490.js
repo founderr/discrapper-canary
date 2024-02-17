@@ -22,8 +22,8 @@ var a = n("37983"),
   g = n("811305"),
   S = n("117362"),
   _ = n("449008"),
-  T = n("49111"),
-  A = n("590456"),
+  A = n("49111"),
+  T = n("590456"),
   M = n("782340"),
   I = n("724539");
 class N {
@@ -74,9 +74,9 @@ class N {
     }, "more-avatars"), this.handleClick = () => {
       (0, d.openUserProfileModal)({
         userId: this.userId,
-        section: A.UserProfileSections.MUTUAL_GUILDS,
+        section: T.UserProfileSections.MUTUAL_GUILDS,
         analyticsLocation: {
-          section: T.AnalyticsSections.CHANNEL_HEADER
+          section: A.AnalyticsSections.CHANNEL_HEADER
         }
       })
     }, this.userId = e, this.user = t

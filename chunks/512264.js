@@ -27,12 +27,12 @@ let h = i.memo(function(e) {
     mirror: m = !1,
     paused: p = !1,
     streamPreviewURL: E,
-    videoSpinnerContext: S,
-    userId: g
+    videoSpinnerContext: g,
+    userId: S
   } = e, [C, _] = i.useState(!0), [I] = i.useState(() => new d.VideoSpinnerTimer("VideoStream"));
   i.useEffect(() => {
-    !p && (C ? I.onSpinnerStarted() : null != t && I.trackSpinnerDuration(S, g, t))
-  }, [C, p, t, I, S, g]);
+    !p && (C ? I.onSpinnerStarted() : null != t && I.trackSpinnerDuration(g, S, t))
+  }, [C, p, t, I, g, S]);
   let T = i.useCallback(() => {
     _(!1)
   }, []);

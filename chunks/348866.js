@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
     return o
   }
 });
-var l = n("37983");
-n("884691");
-var i = n("77078"),
-  r = n("272030"),
-  s = n("861370"),
-  a = n("970755"),
-  u = n("782340");
+var l = t("37983");
+t("884691");
+var i = t("77078"),
+  r = t("272030"),
+  a = t("861370"),
+  s = t("970755"),
+  u = t("782340");
 
 function o(e) {
   let {
-    channel: t,
-    integration: n,
+    channel: n,
+    integration: t,
     onSelect: o
-  } = e, c = (0, s.default)({
-    id: t.id,
+  } = e, c = (0, a.default)({
+    id: n.id,
     label: u.default.Messages.COPY_ID_APPLICATION
   });
   return (0, l.jsxs)(i.Menu, {
@@ -31,7 +31,7 @@ function o(e) {
         id: "remove-integration",
         label: u.default.Messages.BOT_PROFILE_REMOVE_PRIVATE_CHANNEL_INTEGRATION,
         action: () => {
-          (0, a.deletePrivateChannelIntegration)(t.id, n.application.id), null != o && o()
+          (0, s.deletePrivateChannelIntegration)(n.id, t.application.id), null != o && o()
         },
         color: "danger"
       })

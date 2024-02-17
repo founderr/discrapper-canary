@@ -10,22 +10,22 @@ var r = n("446674"),
   u = n("77078"),
   o = n("592407"),
   i = n("479756"),
-  s = n("507950"),
-  c = n("957255"),
+  c = n("507950"),
+  s = n("957255"),
   a = n("538137"),
   d = n("49111"),
   f = n("782340");
 
 function h(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.GuildSettingsSections.ROLES,
-    h = (0, r.useStateFromStores)([c.default], () => c.default.canImpersonateRole(e, t));
+    h = (0, r.useStateFromStores)([s.default], () => s.default.canImpersonateRole(e, t));
   return h ? (0, l.jsx)(u.MenuItem, {
     id: "view-as-role",
     label: f.default.Messages.VIEW_AS_ROLE,
     icon: a.default,
     action: () => {
       o.default.close(), (0, i.startImpersonating)(e.id, {
-        type: s.ImpersonateType.ROLES,
+        type: c.ImpersonateType.ROLES,
         roles: {
           [t.id]: t
         },

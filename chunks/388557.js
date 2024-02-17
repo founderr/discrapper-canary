@@ -36,7 +36,7 @@ let f = [{
     label: "Basic Yearly",
     value: "1024422698568122368"
   }],
-  y = {
+  b = {
     [p.SubscriptionStatusTypes.UNPAID]: "Unpaid",
     [p.SubscriptionStatusTypes.ACTIVE]: "Active",
     [p.SubscriptionStatusTypes.PAST_DUE]: "Past Due",
@@ -47,7 +47,7 @@ let f = [{
     [p.SubscriptionStatusTypes.PAUSED]: "Paused",
     [p.SubscriptionStatusTypes.PAUSE_PENDING]: "Pause Pending"
   },
-  b = [{
+  y = [{
     label: "Unpaid",
     value: p.SubscriptionStatusTypes.UNPAID
   }, {
@@ -138,7 +138,7 @@ function v(e) {
   let {
     subscription: r
   } = e, t = e => {
-    if (null == e && (e = r.status), e in y) return y[e];
+    if (null == e && (e = r.status), e in b) return b[e];
     throw Error("Unknown status")
   }, n = async e => {
     await s.default.patch({
@@ -180,7 +180,7 @@ function v(e) {
       }), (0, a.jsx)(c.Select, {
         serialize: e => t(e),
         isSelected: e => e === r.status,
-        options: b,
+        options: y,
         select: n,
         popoutLayerContext: h.devToolsLayerContext
       })]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return N
   }
 });
 var l = n("37983"),
@@ -87,9 +87,9 @@ class m extends a.PureComponent {
       to: v,
       badgeStrokeColor: S,
       animate: m,
-      tabIndex: N,
-      iconSrc: T,
-      "aria-hidden": C,
+      tabIndex: T,
+      iconSrc: C,
+      "aria-hidden": N,
       ...p
     } = this.props, I = R[u], x = null != g ? c.Clickable : "div";
     return (0, l.jsxs)(x, {
@@ -98,13 +98,13 @@ class m extends a.PureComponent {
         [_.iconInactive]: !i,
         [_.noIcon]: null == n.icon
       }),
-      "aria-hidden": C,
+      "aria-hidden": N,
       style: null == n.icon ? {
         fontSize: (null !== (t = I[n.acronym.length]) && void 0 !== t ? t : I[I.length - 1]) * d,
         ...o
       } : o,
       onClick: null != v || null == g ? void 0 : g,
-      tabIndex: N,
+      tabIndex: T,
       ...p,
       children: [this.renderAcronym(), this.renderBadge()]
     })
@@ -146,7 +146,7 @@ class m extends a.PureComponent {
     }) : this.renderTooltip()
   }
 }
-let N = u.default.connectStores([f.default], e => {
+let T = u.default.connectStores([f.default], e => {
   let {
     guild: t,
     animate: n,
@@ -163,14 +163,14 @@ let N = u.default.connectStores([f.default], e => {
 })((0, d.backgroundImagePreloader)(e => (0, l.jsx)(m, {
   ...e
 })));
-class T extends a.PureComponent {
+class C extends a.PureComponent {
   render() {
-    return (0, l.jsx)(N, {
+    return (0, l.jsx)(T, {
       ...this.props
     })
   }
 }
-T.Sizes = v, T.defaultProps = {
+C.Sizes = v, C.defaultProps = {
   size: v.LARGE,
   textScale: 1,
   showBadge: !1,
@@ -180,4 +180,4 @@ T.Sizes = v, T.defaultProps = {
   badgeStrokeColor: o.default.unsafe_rawColors.WHITE_500.css,
   animate: !1
 };
-var C = T
+var N = C

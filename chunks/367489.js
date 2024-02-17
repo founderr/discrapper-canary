@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("222007");
 var l = n("37983"),
@@ -18,14 +18,14 @@ var l = n("37983"),
   m = n("181114"),
   p = n("227054"),
   E = n("277842"),
-  S = n("833345");
+  g = n("833345");
 
-function g(e) {
+function S(e) {
   let {
     checked: t,
     labelText: n,
     tooltipText: s,
-    canToggle: g,
+    canToggle: S,
     iconAltText: C,
     onChange: _,
     tooltipColor: I,
@@ -34,7 +34,7 @@ function g(e) {
     collapseWhenChecked: x = !0,
     onClick: N,
     disabled: A
-  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = a.useState(!1), L = (0, c.default)(), y = (0, o.isThemeDark)(L) || t ? S : E, {
+  } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = a.useState(!1), L = (0, c.default)(), y = (0, o.isThemeDark)(L) || t ? g : E, {
     width: O = 0,
     ref: P
   } = (0, d.default)(), {
@@ -55,7 +55,7 @@ function g(e) {
       className: p.visuallyHidden,
       checked: t,
       onChange: function() {
-        if (g) {
+        if (S) {
           let e = !t;
           j(!0), null == _ || _(e)
         }
@@ -69,7 +69,7 @@ function g(e) {
       className: i(p.label, T, {
         [p.transition]: R,
         [p.labelChecked]: t,
-        [p.labelUnchecked]: !t && !g
+        [p.labelUnchecked]: !t && !S
       }),
       style: x ? {
         width: t ? O : O + b

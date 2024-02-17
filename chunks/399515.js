@@ -28,12 +28,12 @@ var a = n("37983"),
       root_node_id: p,
       success_node_id: N,
       fail_node_id: g
-    } = n, [I, T] = l.useState(p), [S, M] = l.useState(void 0), [j, C] = l.useState(void 0), [b, y] = l.useState([]), [L, D] = l.useState(void 0), A = e => {
+    } = n, [I, T] = l.useState(p), [S, M] = l.useState(void 0), [j, C] = l.useState(void 0), [b, y] = l.useState([]), [L, A] = l.useState(void 0), D = e => {
       var n;
       let {
         destination: a
       } = e, [, l] = a, r = x[l];
-      if (r.elements.some(e => "skip" === e.type) && (null === (n = r.button) || void 0 === n ? void 0 : n.type) === "next") return A({
+      if (r.elements.some(e => "skip" === e.type) && (null === (n = r.button) || void 0 === n ? void 0 : n.type) === "next") return D({
         ...e,
         destination: ["", r.button.target]
       });
@@ -52,7 +52,7 @@ var a = n("37983"),
       var a;
       let l = v ? await (0, u.submitReport)(n, t, [...b, e]) : await (0, u.submitUnauthenticatedReport)(n, t, [...b, e], h),
         r = null == l ? void 0 : null === (a = l.body) || void 0 === a ? void 0 : a.report_id;
-      null != r && D(r), null == _ || _(r)
+      null != r && A(r), null == _ || _(r)
     }, U = () => {
       var e, n;
       if (b.length < 1) return;
@@ -72,15 +72,15 @@ var a = n("37983"),
       M(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), C(null == l ? void 0 : l.textInput), T(r), y(a), null == E || E("..")
     }, k = [], B = [];
     for (let e in x) {
-      var P, G;
+      var G, P;
       let t = x[e];
       if (t.id !== N && t.id !== g && t.id !== p) {
         if (t.key.endsWith("_SUBMIT")) {
           B.push(t);
           continue
         }
-        if (k.push(t), (null === (P = t.button) || void 0 === P ? void 0 : P.type) === "next") {
-          let e = null === (G = t.button) || void 0 === G ? void 0 : G.target,
+        if (k.push(t), (null === (G = t.button) || void 0 === G ? void 0 : G.type) === "next") {
+          let e = null === (P = t.button) || void 0 === P ? void 0 : P.target,
             n = k.indexOf(x[e]); - 1 !== n && (k.splice(n, 1), k.push(x[e]))
         }
       }
@@ -102,7 +102,7 @@ var a = n("37983"),
               reportType: t,
               history: b,
               onModalClose: f.onClose,
-              onSelectChild: A,
+              onSelectChild: D,
               onNavigateBack: U,
               multiSelect: S,
               textInput: j,

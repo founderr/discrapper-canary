@@ -1,15 +1,15 @@
 "use strict";
 n.r(e), n.d(e, {
   default: function() {
-    return a
+    return r
   }
 });
 var i = n("37983");
 n("884691");
 var u = n("77078"),
-  r = n("175339"),
-  a = () => (0, i.jsx)("div", {
-    className: r.loadingWrapper,
+  a = n("175339"),
+  r = () => (0, i.jsx)("div", {
+    className: a.loadingWrapper,
     children: (0, i.jsx)(u.Dots, {
       dotRadius: 4,
       themed: !0

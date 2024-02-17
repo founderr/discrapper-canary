@@ -22,13 +22,13 @@ n.r(t), n.d(t, {
     return m
   },
   trackSearchClosed: function() {
-    return N
-  },
-  trackSearchStarted: function() {
     return T
   },
-  trackTagSearchStarted: function() {
+  trackSearchStarted: function() {
     return C
+  },
+  trackTagSearchStarted: function() {
+    return N
   },
   trackSearchResultsViewed: function() {
     return p
@@ -177,13 +177,13 @@ function m(e, t) {
   })
 }
 
-function N(e) {
+function T(e) {
   E.default.track(h.AnalyticEvents.SEARCH_CLOSED, {
     load_id: e
   })
 }
 
-function T(e, t) {
+function C(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   E.default.track(h.AnalyticEvents.SEARCH_STARTED, {
     search_type: h.SearchTypes.GUILD_DISCOVERY,
@@ -193,7 +193,7 @@ function T(e, t) {
   })
 }
 
-function C(e, t, n, l) {
+function N(e, t, n, l) {
   E.default.track(h.AnalyticEvents.SEARCH_STARTED, {
     search_type: h.SearchTypes.GUILD_DISCOVERY_TAG,
     load_id: e,

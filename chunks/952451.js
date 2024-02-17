@@ -25,14 +25,14 @@ var r = n("512395"),
   y = n("49111"),
   T = n("724210"),
   C = n("133335");
-let I = y.NULL_STRING_GUILD_ID,
-  S = {},
+let S = y.NULL_STRING_GUILD_ID,
+  I = {},
   A = new Set,
   D = 0;
 
 function N(e) {
   var t;
-  let n = S[null != e ? e : I];
+  let n = I[null != e ? e : S];
   return {
     unread: !1,
     unreadByType: {},
@@ -46,7 +46,7 @@ function N(e) {
 
 function O(e) {
   var t;
-  return S[null != e ? e : I] = null !== (t = S[null != e ? e : I]) && void 0 !== t ? t : N(e)
+  return I[null != e ? e : S] = null !== (t = I[null != e ? e : S]) && void 0 !== t ? t : N(e)
 }
 
 function P(e) {
@@ -72,7 +72,7 @@ function V(e) {
 
 function R(e) {
   switch (e) {
-    case I:
+    case S:
     case null:
     case void 0:
       return null;
@@ -103,7 +103,7 @@ function w(e) {
 function L(e, t) {}
 
 function U(e, t, n) {
-  if (w(t), t.mentionCount = i(t.mentionCounts).values().sum(), t.unread !== n.unread || t.mentionCount !== n.mentionCount) return S[null != e ? e : I] = t, null != e && (t.unread ? A.add(e) : A.delete(e)), D++, P(null != e ? e : I), !0;
+  if (w(t), t.mentionCount = i(t.mentionCounts).values().sum(), t.unread !== n.unread || t.mentionCount !== n.mentionCount) return I[null != e ? e : S] = t, null != e && (t.unread ? A.add(e) : A.delete(e)), D++, P(null != e ? e : S), !0;
   return !1
 }
 
@@ -182,7 +182,7 @@ function H(e, t) {
   }
   w(s);
   let i = O(n);
-  if (s.unread !== i.unread || s.mentionCount !== i.mentionCount) return S[null != n ? n : I] = s, null != n && (s.unread ? A.add(n) : A.delete(n)), D++, P(null != n ? n : I), !0;
+  if (s.unread !== i.unread || s.mentionCount !== i.mentionCount) return I[null != n ? n : S] = s, null != n && (s.unread ? A.add(n) : A.delete(n)), D++, P(null != n ? n : S), !0;
   return !1
 }
 
@@ -190,7 +190,7 @@ function B(e) {
   let {
     guilds: t
   } = e;
-  S = {}, D = 0, A = new Set, H(null);
+  I = {}, D = 0, A = new Set, H(null);
   let {
     length: n
   } = t;
@@ -205,7 +205,7 @@ function x(e) {
     guilds: t,
     readState: n
   } = e;
-  S = {}, D = 0, A = new Set;
+  I = {}, D = 0, A = new Set;
   let s = n.entries.length < 500,
     i = new Set;
   for (let e of (s && n.entries.forEach(e => {
@@ -219,7 +219,7 @@ function x(e) {
 }
 
 function Y() {
-  S = {}, A = new Set, H(null);
+  I = {}, A = new Set, H(null);
   let e = Object.values(c.default.getGuildIds());
   for (let t of e) H(t)
 }
@@ -235,7 +235,7 @@ function K(e) {
   let {
     guild: t
   } = e;
-  return null != S[t.id] && (delete S[t.id], A.delete(t.id), D++, !0)
+  return null != I[t.id] && (delete I[t.id], A.delete(t.id), D++, !0)
 }
 
 function W(e) {
@@ -390,14 +390,14 @@ function ef(e) {
     userGuildSettings: t
   } = e, n = new Set(t.map(e => {
     var t;
-    return null !== (t = e.guild_id) && void 0 !== t ? t : I
+    return null !== (t = e.guild_id) && void 0 !== t ? t : S
   }));
-  return l.default.keys(S).reduce((e, t) => n.has(t) && H(t) || e, !1)
+  return l.default.keys(I).reduce((e, t) => n.has(t) && H(t) || e, !1)
 }
 
 function e_() {
-  for (let e in S) {
-    let t = S[e];
+  for (let e in I) {
+    let t = I[e];
     t.ncMentionCount = 0
   }
 }
@@ -413,7 +413,7 @@ class eg extends v.default {
     return {
       version: eg.LATEST_SNAPSHOT_VERSION,
       data: {
-        guilds: S,
+        guilds: I,
         unreadGuilds: Array.from(A)
       }
     }
@@ -428,7 +428,7 @@ class eg extends v.default {
     return A
   }
   getMutableGuildStates() {
-    return S
+    return I
   }
   hasUnread(e) {
     return A.has(e)
@@ -459,28 +459,28 @@ class eg extends v.default {
   }
   getTotalMentionCount(e) {
     let t = 0;
-    for (let n in S) {
-      let s = S[n];
-      (!0 !== e || n !== I) && (t += s.mentionCount)
+    for (let n in I) {
+      let s = I[n];
+      (!0 !== e || n !== S) && (t += s.mentionCount)
     }
     return t
   }
   getTotalNotificationsMentionCount(e) {
     let t = 0;
-    for (let n in S) {
-      let s = S[n];
-      (!0 !== e || n !== I) && (t += s.ncMentionCount)
+    for (let n in I) {
+      let s = I[n];
+      (!0 !== e || n !== S) && (t += s.ncMentionCount)
     }
     return t
   }
   getPrivateChannelMentionCount() {
     var e;
-    let t = S[I];
+    let t = I[S];
     return null !== (e = null == t ? void 0 : t.mentionCount) && void 0 !== e ? e : 0
   }
   getMentionCountForChannels(e, t) {
     let n = 0,
-      s = S[e];
+      s = I[e];
     return null == s ? 0 : (t.forEach(e => {
       let t = s.mentionCounts[e];
       n += null != t ? t : 0
@@ -492,7 +492,7 @@ class eg extends v.default {
   constructor() {
     super(), this.loadCache = () => {
       let e = this.readSnapshot(eg.LATEST_SNAPSHOT_VERSION);
-      null != e && (S = e.guilds, A = new Set(e.unreadGuilds))
+      null != e && (I = e.guilds, A = new Set(e.unreadGuilds))
     }, this.registerActionHandlers({
       CONNECTION_OPEN: x,
       OVERLAY_INITIALIZE: B,

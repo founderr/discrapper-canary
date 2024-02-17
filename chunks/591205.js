@@ -28,10 +28,10 @@ u.r(t), u.d(t, {
     return f
   },
   INVITE_OPTIONS_1_HOUR: function() {
-    return N
+    return O
   },
   INVITE_OPTIONS_6_HOURS: function() {
-    return O
+    return N
   },
   INVITE_OPTIONS_12_HOURS: function() {
     return d
@@ -84,10 +84,10 @@ let a = s(0, () => n.default.Messages.MAX_USES.format({
   f = s(1800, () => n.default.Messages.DURATION_MINUTES.format({
     minutes: 30
   })),
-  N = s(3600, () => n.default.Messages.DURATION_HOURS.format({
+  O = s(3600, () => n.default.Messages.DURATION_HOURS.format({
     hours: 1
   })),
-  O = s(21600, () => n.default.Messages.DURATION_HOURS.format({
+  N = s(21600, () => n.default.Messages.DURATION_HOURS.format({
     hours: 6
   })),
   d = s(43200, () => n.default.Messages.DURATION_HOURS.format({
@@ -100,4 +100,4 @@ let a = s(0, () => n.default.Messages.MAX_USES.format({
     days: 7
   })),
   M = s(0, () => n.default.Messages.MAX_AGE_NEVER),
-  g = [f, N, O, d, S, o, M]
+  g = [f, O, N, d, S, o, M]

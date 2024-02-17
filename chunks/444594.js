@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return N
   }
 }), n("424973");
 var l = n("37983");
@@ -36,7 +36,7 @@ function m(e) {
   })
 }
 
-function N(e) {
+function T(e) {
   let {
     icon: t,
     text: n
@@ -55,7 +55,7 @@ function N(e) {
   })
 }
 
-function T(e) {
+function C(e) {
   var t;
   let {
     guild: n,
@@ -94,7 +94,7 @@ function T(e) {
   })
 }
 
-function C(e) {
+function N(e) {
   let {
     guild: t,
     channel: n,
@@ -106,7 +106,7 @@ function C(e) {
     onBack: g
   } = e;
   return null == t || null == n || null == a ? null : (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(T, {
+    children: [(0, l.jsx)(C, {
       guild: t,
       channel: n,
       stageData: a
@@ -127,22 +127,22 @@ function C(e) {
         })]
       }), (0, l.jsxs)("div", {
         className: R.list,
-        children: [(0, l.jsx)(N, {
+        children: [(0, l.jsx)(T, {
           icon: (0, l.jsx)(m, {
             icon: i.default
           }),
           text: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_ONE
-        }), (0, l.jsx)(N, {
+        }), (0, l.jsx)(T, {
           icon: (0, l.jsx)(m, {
             icon: o.default
           }),
           text: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_TWO
-        }), (0, l.jsx)(N, {
+        }), (0, l.jsx)(T, {
           icon: (0, l.jsx)(m, {
             icon: u.default
           }),
           text: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_THREE
-        }), (0, l.jsx)(N, {
+        }), (0, l.jsx)(T, {
           icon: (0, l.jsx)(c.default, {
             className: R.badgeIconBackground,
             foreground: R.badgeIconForeground,

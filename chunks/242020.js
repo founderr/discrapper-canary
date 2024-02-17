@@ -68,7 +68,6 @@ function I(e) {
     case A.AuditLogActions.INTEGRATION_CREATE:
     case A.AuditLogActions.STAGE_INSTANCE_CREATE:
     case A.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
-    case A.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
     case A.AuditLogActions.THREAD_CREATE:
     case A.AuditLogActions.AUTO_MODERATION_RULE_CREATE:
     case A.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
@@ -119,6 +118,7 @@ function I(e) {
     case A.AuditLogActions.MEMBER_MOVE:
     case A.AuditLogActions.STAGE_INSTANCE_UPDATE:
     case A.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
+    case A.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
     case A.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
     case A.AuditLogActions.THREAD_UPDATE:
     case A.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:

@@ -10,10 +10,10 @@ var l = n("37983"),
   i = n("77078"),
   a = n("679653"),
   d = n("929278"),
-  o = n("347895"),
-  s = n("848848"),
-  E = n("735251"),
-  c = n("534222"),
+  s = n("347895"),
+  o = n("848848"),
+  c = n("735251"),
+  E = n("534222"),
   f = n("592407"),
   _ = n("610730"),
   N = n("271938"),
@@ -28,9 +28,9 @@ var l = n("37983"),
       onClose: n,
       onConfirm: v,
       transitionState: R
-    } = e, g = (0, a.default)(t, !0), D = t.id, I = t.isForumPost(), M = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.getGuildId())), A = (0, c.useGuildChannelScheduledEvents)(D), {
+    } = e, g = (0, a.default)(t, !0), D = t.id, I = t.isForumPost(), M = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.getGuildId())), A = (0, E.useGuildChannelScheduledEvents)(D), {
       isSubscriptionGated: L
-    } = (0, s.default)(t.id), y = (0, E.default)(M, t), [O, p] = u.useState(null), G = (0, r.useStateFromStores)([N.default], () => t.isOwner(N.default.getId()), [t]), U = (0, r.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), w = (0, r.useStateFromStores)([_.default], () => {
+    } = (0, o.default)(t.id), y = (0, c.default)(M, t), [O, p] = u.useState(null), G = (0, r.useStateFromStores)([N.default], () => t.isOwner(N.default.getId()), [t]), U = (0, r.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), w = (0, r.useStateFromStores)([_.default], () => {
       var e;
       return null !== (e = _.default.getCount(t.id)) && void 0 !== e ? e : 0
     }, [t.id]), H = I && (U || G && w < 1), F = A.length > 0 && (t.type === S.ChannelTypes.GUILD_VOICE || t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
@@ -41,7 +41,7 @@ var l = n("37983"),
             p("default");
             return
           }
-          let n = await (0, o.getBlockForChannelDeletion)(t.getGuildId(), D);
+          let n = await (0, s.getBlockForChannelDeletion)(t.getGuildId(), D);
           if (!1 !== n) {
             p(n);
             return

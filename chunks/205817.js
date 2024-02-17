@@ -23,14 +23,14 @@ var r = n("627445"),
   y = n("42887"),
   T = n("824563"),
   C = n("945956"),
-  I = n("568307"),
-  S = n("49111"),
+  S = n("568307"),
+  I = n("49111"),
   A = n("353927");
 let D = {},
   N = {},
   O = {},
   P = {},
-  b = S.StreamLayouts.THEATRE,
+  b = I.StreamLayouts.THEATRE,
   V = {},
   R = [];
 
@@ -102,10 +102,10 @@ class L extends u.default.Store {
     }(e.rtp.inbound[t]))
   }
   getQuality() {
-    if (!(0, m.default)(y.default)) return S.RTCConnectionQuality.UNKNOWN;
+    if (!(0, m.default)(y.default)) return I.RTCConnectionQuality.UNKNOWN;
     let e = this.getActiveStreamKey(),
       t = null != e ? V[e] : null;
-    return null != t ? t.quality : S.RTCConnectionQuality.UNKNOWN
+    return null != t ? t.quality : I.RTCConnectionQuality.UNKNOWN
   }
   getMediaSessionId(e) {
     if (null == e) return null;
@@ -175,7 +175,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
         } = e;
         t.setActionContext(i)
       }), P[o] = a, O[o] = r, null != r) {
-      let e = I.default.getGameForPID(r);
+      let e = S.default.getGameForPID(r);
       null != e && (N[o] = {
         name: e.name,
         id: e.id,

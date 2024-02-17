@@ -69,13 +69,13 @@ function y(e) {
       mentionUsers: O,
       mentionRoles: P
     }),
-    attachments: I(e),
+    attachments: S(e),
     embeds: A(e),
     codedLinks: k,
     giftCodes: (0, m.isGiftCodeEmbed)(e) ? (0, m.findGiftCodes)((null == e ? void 0 : e.embeds[0]).url) : (0, m.findGiftCodes)(e.content),
     content: F,
     referralTrialOfferId: G,
-    call: S(e.call, R),
+    call: I(e.call, R),
     reactions: D(null != C ? C : e.reactions),
     interaction: L,
     interactionData: null != N ? N : e.interaction_data,
@@ -103,21 +103,21 @@ function C(e, t) {
     interactionData: e.interactionData
   });
   let n = e;
-  if (null != t.call && (n = n.set("call", S(t.call, e.timestamp))), null != t.attachments && (n = n.set("attachments", I(t))), null != t.content && "" !== t.content && (n = n.set("content", t.content)), null != t.embeds && (n = n.set("embeds", A(t))), t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)), null != n.webhookId && null != t.author && (n = n.set("author", new l.default(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)), null != t.components && (n = n.set("components", t.components)), null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)), null != t.reactions) {
+  if (null != t.call && (n = n.set("call", I(t.call, e.timestamp))), null != t.attachments && (n = n.set("attachments", S(t))), null != t.content && "" !== t.content && (n = n.set("content", t.content)), null != t.embeds && (n = n.set("embeds", A(t))), t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)), null != n.webhookId && null != t.author && (n = n.set("author", new l.default(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)), null != t.components && (n = n.set("components", t.components)), null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)), null != t.reactions) {
     var s;
     n = n.set("reactions", D(null !== (s = e.reactions) && void 0 !== s ? s : t.reactions))
   }
   return null != t.poll && (n = n.set("poll", (0, a.default)(t.poll))), n
 }
 
-function I(e) {
+function S(e) {
   return null == e.attachments ? [] : e.attachments.map(e => ({
     ...e,
     spoiler: e.filename.startsWith(v.SPOILER_ATTACHMENT_PREFIX)
   }))
 }
 
-function S(e, t) {
+function I(e, t) {
   if (null != e) {
     let n = null != e.ended_timestamp ? i(new Date(e.ended_timestamp)) : null,
       s = null != n ? i.duration(n.diff(t)) : null;
