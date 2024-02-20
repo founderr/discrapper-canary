@@ -16,12 +16,12 @@ function o(e) {
     channelId: o,
     localCreationAnswerId: u,
     image: c
-  } = e, d = null == c ? void 0 : c.emoji, E = (null == c ? void 0 : null === (t = c.mediaAttachmentState) || void 0 === t ? void 0 : t.status) === i.PollMediaUploadAttachmentStatus.PREPARING, A = (0, n.useStateFromStores)([r.default], () => r.default.getUpload(o, u, s.DraftType.Poll)), [_, m] = l.useState(), [f, L] = l.useState("");
+  } = e, d = null == c ? void 0 : c.emoji, E = (null == c ? void 0 : null === (t = c.mediaAttachmentState) || void 0 === t ? void 0 : t.status) === i.PollMediaUploadAttachmentStatus.PREPARING, A = (0, n.useStateFromStores)([r.default], () => r.default.getUpload(o, u, s.DraftType.Poll)), [_, f] = l.useState(), [m, L] = l.useState("");
   return l.useEffect(() => {
     var e;
     if ((null == A ? void 0 : null === (e = A.item) || void 0 === e ? void 0 : e.file) == null) return;
     let t = URL.createObjectURL(A.item.file);
-    return m(t), L(A.item.file.name), () => {
+    return f(t), L(A.item.file.name), () => {
       URL.revokeObjectURL(t)
     }
   }, [null == A ? void 0 : null === (a = A.item) || void 0 === a ? void 0 : a.file]), {
@@ -30,6 +30,6 @@ function o(e) {
     hasUpload: null != A,
     upload: A,
     mediaUrl: _,
-    mediaFilename: f
+    mediaFilename: m
   }
 }

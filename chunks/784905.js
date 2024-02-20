@@ -24,11 +24,11 @@ var i = s("37983"),
   _ = s("697218"),
   x = s("449008"),
   I = s("34676"),
-  p = s("47495"),
-  C = s("437756"),
+  C = s("47495"),
+  p = s("437756"),
   O = s("277796"),
-  v = s("507313"),
-  M = s("661740"),
+  M = s("507313"),
+  v = s("661740"),
   L = s("432082"),
   A = s("49111"),
   j = s("782340"),
@@ -39,14 +39,14 @@ function b(e) {
     guildId: t,
     requestScrollToBottom: s
   } = e, n = (0, r.useStateFromStoresArray)([S.default, T.default], () => {
-    let e = (0, p.filterOverrides)(T.default.getChannelOverrides(t), {
+    let e = (0, C.filterOverrides)(T.default.getChannelOverrides(t), {
       ignoreMute: !0,
       ignoreUnreadSetting: !1,
       ignoreNotificationSetting: !1
     });
     return e.map(e => S.default.getChannel(e)).filter(x.isNotNullish)
   });
-  (0, M.default)(n, () => s());
+  (0, v.default)(n, () => s());
   let l = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t)),
     a = n.map((e, t) => (0, i.jsxs)("div", {
       className: R.channelRow,
@@ -111,22 +111,22 @@ function G(e) {
   let {
     channel: t,
     categories: s
-  } = e, l = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(null == t ? void 0 : t.parent_id)), E = (0, C.useChannelPresetSettings)(t), [T, x] = n.useState(!1);
+  } = e, l = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(null == t ? void 0 : t.parent_id)), E = (0, p.useChannelPresetSettings)(t), [T, x] = n.useState(!1);
   if (null == t) return null;
   let I = j.default.Messages.NO_CATEGORY,
-    p = (0, g.getChannelIconComponent)(t);
+    C = (0, g.getChannelIconComponent)(t);
   t.type === A.ChannelTypes.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id ? I = j.default.Messages.NUM_CHANNELS.format({
     num: null != s[t.id] ? s[t.id].length : 0
   }) : null != c && (I = j.default.Messages.IN_CATEGORY.format({
     categoryName: (0, N.computeChannelName)(c, _.default, m.default)
   }));
-  let O = T ? v.Presets.CUSTOM : E.preset;
+  let O = T ? M.Presets.CUSTOM : E.preset;
   return (0, i.jsx)("div", {
     children: (0, i.jsxs)("div", {
       className: a(R.row, R.channel),
       children: [(0, i.jsxs)("div", {
         className: a(R.rowName, R.modColor),
-        children: [null != p ? (0, i.jsx)(p, {
+        children: [null != C ? (0, i.jsx)(C, {
           height: 20,
           width: 20,
           className: R.icon
@@ -148,8 +148,8 @@ function G(e) {
             color: l,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: O === v.Presets.ALL_MESSAGES,
-            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, v.Presets.ALL_MESSAGES), x(!1))
+            value: O === M.Presets.ALL_MESSAGES,
+            onChange: () => ((0, p.updateChannelPreset)(t.guild_id, t.id, M.Presets.ALL_MESSAGES), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
@@ -159,8 +159,8 @@ function G(e) {
             color: l,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: O === v.Presets.MENTIONS,
-            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, v.Presets.MENTIONS), x(!1))
+            value: O === M.Presets.MENTIONS,
+            onChange: () => ((0, p.updateChannelPreset)(t.guild_id, t.id, M.Presets.MENTIONS), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
@@ -170,8 +170,8 @@ function G(e) {
             color: l,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: O === v.Presets.NOTHING,
-            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, v.Presets.NOTHING), x(!1))
+            value: O === M.Presets.NOTHING,
+            onChange: () => ((0, p.updateChannelPreset)(t.guild_id, t.id, M.Presets.NOTHING), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
@@ -190,12 +190,12 @@ function G(e) {
             color: l,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: O === v.Presets.CUSTOM,
+            value: O === M.Presets.CUSTOM,
             onChange: () => x(!0)
           })
         })
       }), (0, i.jsx)(h.default, {
-        onClick: () => (0, C.updateChannelToGuildDefault)(t.guild_id, t.id),
+        onClick: () => (0, p.updateChannelToGuildDefault)(t.guild_id, t.id),
         className: R.removeButton
       })]
     })

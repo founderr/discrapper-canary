@@ -22,8 +22,8 @@ var r, i, l = n("316693"),
   o = n("923959"),
   s = n("305961"),
   d = n("957255"),
-  _ = n("800762"),
-  E = n("404008"),
+  E = n("800762"),
+  _ = n("404008"),
   c = n("49111"),
   I = n("782340");
 let S = (e, t) => e.isPrivate() || t.can(l.default.combine(c.Permissions.CONNECT, c.Permissions.VIEW_CHANNEL), e);
@@ -54,7 +54,7 @@ function p(e, t, n, r, i) {
   let l;
   if (null == e) return [!1, 2];
   let u = t.isInChannel(e.id),
-    a = (0, E.isChannelFull)(e, t, n),
+    a = (0, _.isChannelFull)(e, t, n),
     o = S(e, r),
     s = null != i.getAwaitingRemoteSessionInfo() || null != i.getRemoteSessionId();
   s ? l = 0 : o || u ? a && !u && (l = 1) : l = 2;
@@ -63,7 +63,7 @@ function p(e, t, n, r, i) {
 }
 
 function N(e) {
-  return (0, u.useStateFromStoresArray)([_.default, s.default, d.default, a.default], () => p(e, _.default, s.default, d.default, a.default))
+  return (0, u.useStateFromStoresArray)([E.default, s.default, d.default, a.default], () => p(e, E.default, s.default, d.default, a.default))
 }
 
 function A(e, t, n) {

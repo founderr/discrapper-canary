@@ -22,15 +22,15 @@ var a = n("37983"),
   g = n("367376"),
   S = n("305961"),
   _ = n("957255"),
-  A = n("697218"),
-  T = n("987772"),
+  T = n("697218"),
+  A = n("987772"),
   M = n("155207"),
   I = n("917686"),
   N = n("317134"),
   v = n("991170"),
   L = n("158998"),
-  x = n("938244"),
-  R = n("172554"),
+  R = n("938244"),
+  x = n("172554"),
   y = n("730859"),
   O = n("49111"),
   D = n("782340"),
@@ -39,7 +39,7 @@ var a = n("37983"),
 function P(e) {
   let {
     channel: t
-  } = e, [n, l] = s.useState(!1), r = (0, p.default)(t, !0), P = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), b = (0, c.useStateFromStores)([A.default], () => A.default.getUser(null == P ? void 0 : P.ownerId)), H = s.useMemo(() => null != P ? o(P.roles).sortBy(e => -e.position).filter(e => e.id !== P.id).value() : [], [P]), F = s.useMemo(() => o(H).filter(e => {
+  } = e, [n, l] = s.useState(!1), r = (0, p.default)(t, !0), P = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), b = (0, c.useStateFromStores)([T.default], () => T.default.getUser(null == P ? void 0 : P.ownerId)), F = s.useMemo(() => null != P ? o(P.roles).sortBy(e => -e.position).filter(e => e.id !== P.id).value() : [], [P]), H = s.useMemo(() => o(F).filter(e => {
     if (null == P) return !1;
     let n = v.default.computePermissionsForRoles({
       forceRoles: {
@@ -48,11 +48,11 @@ function P(e) {
       context: t
     });
     return u.default.has(n, O.Permissions.ADMINISTRATOR) || u.default.has(n, O.Permissions.VIEW_CHANNEL)
-  }).value(), [t, P, H]), U = (0, c.useStateFromStoresArray)([A.default], () => {
+  }).value(), [t, P, F]), U = (0, c.useStateFromStoresArray)([T.default], () => {
     let e = {};
     for (let n of (null != b && (e[b.id] = b), Object.values(t.permissionOverwrites))) {
       if (n.type !== C.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
-      let t = A.default.getUser(n.id);
+      let t = T.default.getUser(n.id);
       null != t && (e[t.id] = t)
     }
     return o(e).filter(e => {
@@ -71,17 +71,17 @@ function P(e) {
   function w() {
     h.default.open(t.id)
   }
-  let B = s.useCallback(() => l(!1), []);
-  return (0, a.jsxs)(R.default, {
+  let G = s.useCallback(() => l(!1), []);
+  return (0, a.jsxs)(x.default, {
     channelId: t.id,
-    children: [(0, a.jsx)(R.EmptyMessageIcon, {
+    children: [(0, a.jsx)(x.EmptyMessageIcon, {
       locked: !0,
       channelType: t.type
-    }), (0, a.jsx)(R.EmptyMessageHeader, {
+    }), (0, a.jsx)(x.EmptyMessageHeader, {
       children: D.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: r
       })
-    }), (0, a.jsx)(R.EmptyMessageBody, {
+    }), (0, a.jsx)(x.EmptyMessageBody, {
       children: D.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
         channelName: r,
         topicHook: () => g.default.parseTopic(t.topic, !0, {
@@ -90,17 +90,17 @@ function P(e) {
       })
     }), k ? (0, a.jsxs)("div", {
       className: j.channelSettingButtons,
-      children: [(0, a.jsx)(x.default, {
+      children: [(0, a.jsx)(R.default, {
         label: D.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => l(!0),
         icon: (0, a.jsx)(M.default, {
           width: 16,
           height: 16
         })
-      }), (0, a.jsx)(x.default, {
+      }), (0, a.jsx)(R.default, {
         label: D.default.Messages.EDIT_CHANNEL,
         onClick: w,
-        icon: (0, a.jsx)(T.default, {
+        icon: (0, a.jsx)(A.default, {
           width: 16,
           height: 16
         })
@@ -108,7 +108,7 @@ function P(e) {
     }) : null, (0, a.jsxs)("div", {
       className: j.members,
       children: [function() {
-        if (1 !== U.length || F.length > 0) return (0, a.jsx)(y.default, {
+        if (1 !== U.length || H.length > 0) return (0, a.jsx)(y.default, {
           guildId: t.guild_id,
           className: j.avatars,
           maxUsers: 5,
@@ -134,13 +134,13 @@ function P(e) {
             children: D.default.Messages.ROLE_REQUIRED_SINGLE_USER_MESSAGE
           })]
         })
-      }(), F.map((e, n) => {
+      }(), H.map((e, n) => {
         var s, l;
         let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(O.DEFAULT_ROLE_COLOR),
           o = (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) !== void 0;
         return k ? (0, a.jsx)(I.default, {
           className: i(j.role, {
-            [j.last]: n === F.length - 1
+            [j.last]: n === H.length - 1
           }),
           roleName: e.name,
           roleColor: r,
@@ -151,7 +151,7 @@ function P(e) {
           }
         }, e.id) : (0, a.jsx)(N.default, {
           className: i(j.role, {
-            [j.last]: n === F.length - 1
+            [j.last]: n === H.length - 1
           }),
           roleName: e.name,
           roleColor: r,
@@ -161,7 +161,7 @@ function P(e) {
     }), n ? (0, a.jsx)(f.Modal, {
       renderModal: e => (0, a.jsx)(m.default, {
         ...e,
-        onClose: () => (B(), e.onClose()),
+        onClose: () => (G(), e.onClose()),
         channelId: t.id
       }),
       onCloseRequest: () => l(!1)

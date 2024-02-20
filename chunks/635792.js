@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("181114"),
   p = n("978679"),
   E = n("49111"),
-  g = n("782340"),
-  S = n("455701"),
+  S = n("782340"),
+  g = n("455701"),
   C = function(e) {
     let {
       subscriptionTier: t,
@@ -40,9 +40,9 @@ var l = n("37983"),
     return (0, l.jsxs)(m.default, {
       pauseAnimation: !j || x,
       size: s,
-      className: i(S.giftButton, C),
+      className: i(g.giftButton, C),
       onlyShineOnHover: !0,
-      innerClassName: S.innerGiftButton,
+      innerClassName: g.innerGiftButton,
       color: o.Button.Colors.PRIMARY,
       onClick: e => {
         if (e.preventDefault(), null == R) {
@@ -67,16 +67,16 @@ var l = n("37983"),
       onMouseLeave: () => y(!1),
       ...M,
       children: [(0, l.jsx)("div", {
-        className: i(S.gradientBackground, {
-          [S.gradientBackgroundHover]: L
+        className: i(g.gradientBackground, {
+          [g.gradientBackgroundHover]: L
         })
       }), (0, l.jsx)(p.default, {
-        className: S.giftIcon
+        className: g.giftIcon
       }), (0, l.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "none",
-        className: i(S.buttonText, I),
-        children: null != _ ? _ : g.default.Messages.PREMIUM_GIFTING_BUTTON
+        className: i(g.buttonText, I),
+        children: null != _ ? _ : S.default.Messages.PREMIUM_GIFTING_BUTTON
       })]
     })
   }

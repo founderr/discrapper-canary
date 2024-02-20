@@ -27,8 +27,8 @@ function h(e) {
     primaryButtonText: g,
     secondaryButtonText: S,
     primaryButtonColor: _,
-    secondaryButtonColor: A,
-    onPrimaryButtonClick: T,
+    secondaryButtonColor: T,
+    onPrimaryButtonClick: A,
     onSecondaryButtonClick: M
   } = e;
   s.useEffect(() => {
@@ -70,12 +70,12 @@ function h(e) {
         size: i.Button.Sizes.SMALL,
         color: _,
         "aria-label": g,
-        onClick: T,
+        onClick: A,
         className: c.ctaButton,
         children: g
       }), (0, a.jsx)(i.Button, {
         size: i.Button.Sizes.SMALL,
-        color: A,
+        color: T,
         className: c.ctaButton,
         "aria-label": S,
         onClick: M,

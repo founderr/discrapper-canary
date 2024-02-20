@@ -26,12 +26,12 @@ function c(e) {
     closeLabel: f,
     onConfirm: g,
     iconVariant: C = "warning"
-  } = e, [h, p] = r.useState(!1), m = async () => {
-    p(!0);
+  } = e, [h, m] = r.useState(!1), p = async () => {
+    m(!0);
     try {
       await g(), A()
     } finally {
-      p(!1)
+      m(!1)
     }
   }, T = null != a ? a : d.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
   return (0, n.jsxs)(s.ModalRoot, {
@@ -73,7 +73,7 @@ function c(e) {
     }), (0, n.jsxs)(s.ModalFooter, {
       children: [(0, n.jsx)(s.Button, {
         color: s.Button.Colors.BRAND,
-        onClick: m,
+        onClick: p,
         submitting: h,
         children: c
       }), (0, n.jsx)(i.default, {

@@ -19,9 +19,9 @@ n.r(t), n.d(t, {
 var r, i, l, u, a, o, s = n("746379"),
   d = n("810793");
 n("355025");
-var _ = n("9294");
+var E = n("9294");
 n("42793");
-var E = n("337543"),
+var _ = n("337543"),
   c = n("655518"),
   I = n("253981"),
   S = n("139514"),
@@ -123,14 +123,14 @@ function H(e) {
       }))
     };
     if ((null == i ? void 0 : i.match(f)) != null) {
-      let e = (0, _.generateInviteKeyFromUrlParams)(i.substring(1), r.search);
-      E.default.getInvite(e), a(S.CodedLinkType.INVITE, e)
+      let e = (0, E.generateInviteKeyFromUrlParams)(i.substring(1), r.search);
+      _.default.getInvite(e), a(S.CodedLinkType.INVITE, e)
     }(null == l ? void 0 : l.match(f)) != null && a(S.CodedLinkType.TEMPLATE, l.substring(1));
     let o = null == u ? void 0 : u.match(N);
     if (null != o) {
       let e = o[1].toUpperCase();
       if (e === S.CodedLinkType.INVITE) {
-        let e = (0, _.generateInviteKeyFromUrlParams)(o[2], r.search);
+        let e = (0, E.generateInviteKeyFromUrlParams)(o[2], r.search);
         a(S.CodedLinkType.INVITE, e)
       } else a(e, o[2])
     }(null == u ? void 0 : u.match(p)) != null && a(S.CodedLinkType.CHANNEL_LINK, u.replace("/channels/", ""));

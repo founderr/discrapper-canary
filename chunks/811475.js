@@ -25,8 +25,8 @@ var a = n("37983"),
   g = n("884351"),
   S = n("671071"),
   _ = n("401848"),
-  A = n("718422"),
-  T = n("49111"),
+  T = n("718422"),
+  A = n("49111"),
   M = n("782340"),
   I = n("49077");
 let N = "ActivityInvite";
@@ -52,10 +52,10 @@ class v extends s.PureComponent {
       activity: e
     } = this.props;
     switch (e.type) {
-      case T.ActivityTypes.LISTENING:
+      case A.ActivityTypes.LISTENING:
         return M.default.Messages.INVITE_EMBED_LISTENING_INVITE;
-      case T.ActivityTypes.PLAYING:
-      case T.ActivityTypes.STREAMING:
+      case A.ActivityTypes.PLAYING:
+      case A.ActivityTypes.STREAMING:
       default:
         return M.default.Messages.INVITE_EMBED_GAME_INVITE
     }
@@ -167,18 +167,18 @@ class v extends s.PureComponent {
           activityActionType: a
         } = this.props, s = "";
         switch (a) {
-          case T.ActivityActionTypes.JOIN:
+          case A.ActivityActionTypes.JOIN:
             s = "Invite to Join";
             break;
-          case T.ActivityActionTypes.LISTEN:
+          case A.ActivityActionTypes.LISTEN:
             s = "Invite to Listen";
             break;
-          case T.ActivityActionTypes.WATCH:
+          case A.ActivityActionTypes.WATCH:
             s = "Invite to Watch"
         }
-        return f.default.trackWithMetadata(T.AnalyticEvents.INVITE_SENT, {
+        return f.default.trackWithMetadata(A.AnalyticEvents.INVITE_SENT, {
           location: "Channel Text Area - ".concat(s),
-          invite_type: t.type === T.ActivityTypes.LISTENING ? T.LoggingInviteTypes.SPOTIFY : T.LoggingInviteTypes.APPLICATION,
+          invite_type: t.type === A.ActivityTypes.LISTENING ? A.LoggingInviteTypes.SPOTIFY : A.LoggingInviteTypes.APPLICATION,
           application_id: t.application_id,
           guild_id: n.getGuildId(),
           channel_id: n.id,
@@ -217,7 +217,7 @@ class v extends s.PureComponent {
       }).then(e => this.trackInvite(e)), s(), Promise.resolve({
         shouldClear: !0,
         shouldRefocus: !0
-      })) : (0, A.applyChatRestrictions)({
+      })) : (0, T.applyChatRestrictions)({
         openWarningPopout: e => this.setState({
           contentWarningProps: e
         }),

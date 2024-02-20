@@ -22,8 +22,8 @@ var a = n("414456"),
   m = n("476263"),
   p = n("158998"),
   E = n("713135"),
-  g = n("49111"),
-  S = n("782340"),
+  S = n("49111"),
+  g = n("782340"),
   C = n("155502"),
   _ = n("56083");
 
@@ -50,7 +50,7 @@ function I(e) {
       guild: t,
       showBadge: !0,
       className: s(C.listAvatar, null == t.icon ? _.guildAvatarWithoutIcon : null),
-      badgeStrokeColor: (0, f.getColor)((0, r.isThemeDark)(a) ? g.Color.PRIMARY_600 : g.Color.WHITE_500),
+      badgeStrokeColor: (0, f.getColor)((0, r.isThemeDark)(a) ? S.Color.PRIMARY_600 : S.Color.WHITE_500),
       size: m.default.Sizes.MEDIUM,
       active: !0
     }), (0, l.jsxs)("div", {
@@ -100,7 +100,7 @@ function T(e) {
       className: C.emptyIconGuilds
     }), (0, l.jsx)("div", {
       className: C.emptyText,
-      children: S.default.Messages.NO_MUTUAL_GUILDS
+      children: g.default.Messages.NO_MUTUAL_GUILDS
     })]
   }) : r.map(e => {
     let {

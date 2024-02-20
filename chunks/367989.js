@@ -19,11 +19,11 @@ function c(e) {
     guildEventId: t,
     recurrenceId: l,
     guild: c,
-    channel: f
-  } = e, E = null != l, {
+    channel: E
+  } = e, f = null != l, {
     canManageGuildEvent: _
-  } = (0, s.useManageResourcePermissions)(null != f ? f : c), [T, M] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), v = (0, i.default)(l, null == M ? void 0 : M.id), g = null != M && _(M), I = E && (null == v ? void 0 : v.is_canceled) && g;
-  return I && (!T || E) ? (0, n.jsx)(u.MenuItem, {
+  } = (0, s.useManageResourcePermissions)(null != E ? E : c), [T, M] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), v = (0, i.default)(l, null == M ? void 0 : M.id), I = null != M && _(M), g = f && (null == v ? void 0 : v.is_canceled) && I;
+  return g && (!T || f) ? (0, n.jsx)(u.MenuItem, {
     id: o.default.Messages.RESTORE_EVENT,
     label: o.default.Messages.RESTORE_EVENT,
     action: () => {

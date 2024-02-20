@@ -32,11 +32,11 @@ let M = {
     scale: .95,
     opacity: 0
   },
-  A = {
+  v = {
     scale: 1,
     opacity: 1
   },
-  v = {
+  A = {
     scale: 1,
     opacity: 1
   },
@@ -94,8 +94,8 @@ function R(e) {
   } = e, [l, r] = n.useState(!1), {
     reducedMotion: d
   } = n.useContext(u.AccessibilityPreferencesContext), g = (0, i.useSpring)({
-    from: d.enabled ? A : M,
-    to: v,
+    from: d.enabled ? v : M,
+    to: A,
     config: I
   }), x = (0, o.useStateFromStores)([c.default], () => c.default.keyboardModeEnabled), _ = (0, o.useStateFromStores)([C.default], () => C.default.getUploads(t, m.ChatInputTypes.CREATE_FORUM_POST.drafts.type));
   return (0, a.jsx)(i.animated.div, {

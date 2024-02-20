@@ -19,8 +19,8 @@ var a, l, n = A("37983"),
   g = A("77078"),
   C = A("851387"),
   h = A("45299"),
-  p = A("206230"),
-  m = A("986399"),
+  m = A("206230"),
+  p = A("986399"),
   T = A("741515"),
   v = A("435032"),
   U = A("465869"),
@@ -131,7 +131,7 @@ function eA(e) {
     onClose: el
   } = e, [en, er] = r.useState(ee), es = (0, c.default)([b.default], () => null == en ? null : b.default.getGuildProduct(en), [en]), ei = (null == es ? void 0 : es.published) === !0, {
     application: eo
-  } = (0, m.default)(q, y.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), ed = S.PRODUCT_IMAGE_PRESETS[0], eu = (0, c.default)([p.default], () => p.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, j.useIsWindowFocused)(), eg = r.useCallback(() => {
+  } = (0, p.default)(q, y.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), ed = S.PRODUCT_IMAGE_PRESETS[0], eu = (0, c.default)([m.default], () => m.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, j.useIsWindowFocused)(), eg = r.useCallback(() => {
     var e;
     return (null == es ? void 0 : null === (e = es.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? ed.data : (0, P.getAssetURL)(es.image_asset.application_id, es.image_asset, 600, ef && ec ? void 0 : "webp")
   }, [ed, es, ef, ec]), {
@@ -140,7 +140,7 @@ function eA(e) {
   r.useEffect(() => {
     eC && (el(), (0, K.openErrorDialog)(H.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE, H.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY))
   }, [eC, el]);
-  let [eh, ep] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [em, eT] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [ev, eU] = r.useState(null !== (i = null == es ? void 0 : es.price_tier) && void 0 !== i ? i : void 0), [eI, eE] = r.useState(eg), [ex, eN] = r.useState(null !== (o = null == es ? void 0 : null === (t = es.image_asset) || void 0 === t ? void 0 : t.filename) && void 0 !== o ? o : ed.name), [eD, eL] = r.useState(!1), [eq, eO] = r.useState(), eR = r.useMemo(() => null != ev ? (0, R.formatPrice)(ev, Q.CurrencyCodes.USD) : void 0, [ev]), [eP, ej] = r.useState(!0), {
+  let [eh, em] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [ep, eT] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [ev, eU] = r.useState(null !== (i = null == es ? void 0 : es.price_tier) && void 0 !== i ? i : void 0), [eI, eE] = r.useState(eg), [ex, eN] = r.useState(null !== (o = null == es ? void 0 : null === (t = es.image_asset) || void 0 === t ? void 0 : t.filename) && void 0 !== o ? o : ed.name), [eD, eL] = r.useState(!1), [eq, eO] = r.useState(), eR = r.useMemo(() => null != ev ? (0, R.formatPrice)(ev, Q.CurrencyCodes.USD) : void 0, [ev]), [eP, ej] = r.useState(!0), {
     changesSaving: eV,
     saveError: eb,
     saveProductWithAttachments: eM,
@@ -168,14 +168,14 @@ function eA(e) {
       guildProductListing: es,
       name: eh,
       priceTier: ev,
-      description: em,
+      description: ep,
       image: eI,
       imageName: ex,
       isImageChanged: eD,
       newRoleParams: eX,
       hasSavedAttachments: eG,
       hasUnsavedAttachmentChanges: eS
-    }), [es, eh, ev, em, eI, ex, eD, eX, eG, eS]),
+    }), [es, eh, ev, ep, eI, ex, eD, eX, eG, eS]),
     e3 = r.useMemo(() => eJ || null == ek || "publish" === ek || null != e_ ? null : (0, n.jsx)(D.default, {
       className: k.successNotice,
       children: (0, n.jsx)(h.default, {
@@ -218,7 +218,7 @@ function eA(e) {
     if (eO(t), null != t) return;
     let A = await eM(e);
     if (eL(!1), null != A) {
-      if (null != e.name && ep(A.name), null != e.description && eT(A.description), null != eX) {
+      if (null != e.name && em(A.name), null != e.description && eT(A.description), null != eX) {
         let e = A.role_id;
         d(null != e, "Cannot update role without role ID"), await C.default.updateRole(q, e, eX)
       }
@@ -272,7 +272,7 @@ function eA(e) {
             error: null == e_ ? void 0 : e_.getFirstFieldErrorMessage("name"),
             children: (0, n.jsx)(g.TextArea, {
               value: eh,
-              onChange: ep,
+              onChange: em,
               id: Y,
               maxLength: 100,
               placeholder: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_NAME_PLACEHOLDER,
@@ -291,11 +291,11 @@ function eA(e) {
             children: (0, n.jsx)(v.default, {
               id: J,
               className: k.descriptionArea,
-              value: em,
+              value: ep,
               onChange: eT,
               maxLength: 1500,
               placeholder: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_PLACEHOLDER,
-              showCharacterCount: em.length > 0,
+              showCharacterCount: ep.length > 0,
               parentModalKey: Z.GUILD_PRODUCT_EDIT_MODAL_KEY,
               required: !0
             })
@@ -387,7 +387,7 @@ function eA(e) {
           }), (0, n.jsx)(F.default, {
             imageUrl: eI,
             name: "" === eh ? H.default.Messages.GUILD_PRODUCT_CARD_EMPTY_NAME : eh,
-            description: "" === em ? H.default.Messages.GUILD_PRODUCT_CARD_EMPTY_DESCRIPTION : em,
+            description: "" === ep ? H.default.Messages.GUILD_PRODUCT_CARD_EMPTY_DESCRIPTION : ep,
             formattedPrice: eR,
             role: eQ,
             productType: ey,

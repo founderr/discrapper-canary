@@ -1,7 +1,7 @@
 "use strict";
 A.r(t), A.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), A("222007");
 var a = A("37983"),
@@ -153,4 +153,4 @@ class h extends l.Component {
     }
   }
 }
-var p = h
+var m = h

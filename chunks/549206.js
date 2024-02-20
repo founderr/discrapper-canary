@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("70845"),
   p = n("95045"),
   E = n("393414"),
-  g = n("144491"),
-  S = n("845579"),
+  S = n("144491"),
+  g = n("845579"),
   C = n("42203"),
   _ = n("305961"),
   I = n("957255"),
@@ -43,8 +43,8 @@ function P(e) {
     renderEmbeds: h,
     scrollTo: m,
     searchResults: p,
-    blockCount: g,
-    onChangePage: S
+    blockCount: S,
+    onChangePage: g
   } = e, {
     offset: _,
     totalResults: I,
@@ -53,8 +53,8 @@ function P(e) {
   } = n, A = a.useCallback(e => {
     if (x) return;
     let t = e - 1;
-    null == S || S(t), u.changePage(f, t)
-  }, [f, x, S]), M = a.useCallback(e => {
+    null == g || g(t), u.changePage(f, t)
+  }, [f, x, g]), M = a.useCallback(e => {
     if (e.blocked) r.default.show({
       title: y.default.Messages.UNBLOCK_TO_JUMP_TITLE,
       body: y.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
@@ -103,7 +103,7 @@ function P(e) {
     focusedIndex: 0,
     setFocus: U,
     onSelect: w
-  }), k = v.default.getQuery(f), B = v.default.getSearchType(f) === L.SearchTypes.FAVORITES, V = (0, d.createASTHighlighter)(null !== (t = null == k ? void 0 : k.content) && void 0 !== t ? t : ""), H = j.map(e => {
+  }), k = v.default.getQuery(f), V = v.default.getSearchType(f) === L.SearchTypes.FAVORITES, B = (0, d.createASTHighlighter)(null !== (t = null == k ? void 0 : k.content) && void 0 !== t ? t : ""), H = j.map(e => {
     let {
       channel: t,
       results: n,
@@ -112,7 +112,7 @@ function P(e) {
     return (0, l.jsx)(b, {
       channel: t,
       results: n,
-      highlighter: V,
+      highlighter: B,
       startIndex: a,
       resultRefs: P,
       totalResults: I,
@@ -122,7 +122,7 @@ function P(e) {
       offset: _,
       jumpToMessage: M,
       listNavigator: F,
-      favoriteSearch: B
+      favoriteSearch: V
     }, "".concat(t.id, "-").concat(a))
   });
   H.push();
@@ -139,7 +139,7 @@ function P(e) {
       ...W,
       "aria-busy": x,
       children: H
-    }), g > 0 ? (0, l.jsxs)(i.Clickable, {
+    }), S > 0 ? (0, l.jsxs)(i.Clickable, {
       tag: "div",
       className: O.resultsBlocked,
       onClick: () => u.setShowBlockedResults(f, !N),
@@ -148,12 +148,12 @@ function P(e) {
       }), (0, l.jsx)("div", {
         className: O.resultsBlockedText,
         children: N ? y.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
-          count: g
+          count: S
         }) : y.default.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({
-          count: g
+          count: S
         })
       })]
-    }) : null, !x && !B && (0, l.jsx)(R.default, {
+    }) : null, !x && !V && (0, l.jsx)(R.default, {
       changePage: A,
       offset: _,
       totalResults: I,
@@ -178,11 +178,11 @@ function b(e) {
     jumpToMessage: P,
     listNavigator: b,
     favoriteSearch: D
-  } = e, U = S.RenderSpoilers.useSetting(), w = a.useCallback(e => {
+  } = e, U = g.RenderSpoilers.useSetting(), w = a.useCallback(e => {
     if (e === x.default.getChannelId()) return;
     let t = C.default.getChannel(e);
-    if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, g.transitionToChannel)(t.id)
-  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, B = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, V = null != B ? B.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != B ? (0, h.default)(B) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
+    if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, S.transitionToChannel)(t.id)
+  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, B = null != V ? V.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != V ? (0, h.default)(V) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
     content: Y
   } = (0, p.default)({
     content: F,
@@ -194,7 +194,7 @@ function b(e) {
     let e = z.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth)
   }, []);
-  let X = [F, V, k].filter(e => null != e).join(", ");
+  let X = [F, B, k].filter(e => null != e).join(", ");
   return (0, l.jsx)(A.ObscuredDisplayContext.Provider, {
     value: (0, m.default)(U, W),
     children: (0, l.jsxs)("ul", {
@@ -218,10 +218,10 @@ function b(e) {
               className: O.channelNameText,
               children: [D && null !== k && "".concat(k, " : "), Y]
             })
-          }), null != B && null != V && null != G ? (0, l.jsxs)(i.Clickable, {
+          }), null != V && null != B && null != G ? (0, l.jsxs)(i.Clickable, {
             className: O.parentChannelNameClickable,
             onClick: e => {
-              e.stopPropagation(), w(B.id)
+              e.stopPropagation(), w(V.id)
             },
             children: [(0, l.jsx)(G, {
               className: O.parentChannelNameIcon,
@@ -231,7 +231,7 @@ function b(e) {
               className: O.parentChannelNameText,
               variant: "text-xs/medium",
               color: "header-secondary",
-              children: V
+              children: B
             })]
           }) : null]
         })

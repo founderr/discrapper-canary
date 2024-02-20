@@ -27,8 +27,8 @@ var r = n("42203"),
   o = n("724210");
 let s = Array.from(o.StaticChannelRoutes).map(e => u.default.escape(e)).join("|"),
   d = new RegExp("^/channels/(\\d+|".concat(a.ME, ")(?:/)?(\\d+|").concat(s, ")?")),
-  _ = new RegExp("^/channels/(\\d+|".concat(a.ME, ")(?:/)(\\d+|").concat(s, ")(?:/)(\\d+)")),
-  E = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
+  E = new RegExp("^/channels/(\\d+|".concat(a.ME, ")(?:/)(\\d+|").concat(s, ")(?:/)(\\d+)")),
+  _ = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
   c = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
   I = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
   S = new RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+|".concat(a.ME, ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?")),
@@ -36,13 +36,13 @@ let s = Array.from(o.StaticChannelRoutes).map(e => u.default.escape(e)).join("|"
 
 function f(e) {
   if (null == e) return null;
-  let t = e.match(_);
+  let t = e.match(E);
   if (null != t && t.length > 3) return {
     guildId: t[1],
     channelId: t[2],
     messageId: t[3]
   };
-  let n = e.match(E);
+  let n = e.match(_);
   if (null != n && n.length > 4) return {
     guildId: n[1],
     channelId: n[2],

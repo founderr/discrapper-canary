@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useCanReplyToMessage: function() {
-    return M
+    return m
   },
   canReplyToMessage: function() {
-    return m
+    return M
   }
 }), n("222007");
 var a = n("637612"),
@@ -40,7 +40,7 @@ function E(e, t, n, a, i) {
   return n && s && !l && !a && u
 }
 
-function M(e, t) {
+function m(e, t) {
   var n;
   let a = (0, r.useCanUnarchiveThread)(e),
     [, s] = (0, l.useCurrentUserCommunicationDisabled)(null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : void 0),
@@ -48,7 +48,7 @@ function M(e, t) {
   return null != e && null != t && E(e, t, u, s, a)
 }
 
-function m(e, t) {
+function M(e, t) {
   var n;
   let a = (0, r.canUnarchiveThread)(e),
     i = f(e, t, d.default),

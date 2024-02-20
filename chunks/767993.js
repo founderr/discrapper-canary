@@ -26,7 +26,7 @@ function m(e) {
     channel: g,
     analyticsType: S,
     popoutText: _,
-    animation: A
+    animation: T
   } = e;
   s.useEffect(() => {
     c.default.track(f.AnalyticEvents.OPEN_POPOUT, {
@@ -34,7 +34,7 @@ function m(e) {
       ...(0, o.collectChannelAnalyticsMetadata)(g)
     })
   }, [S, g]);
-  let T = s.useCallback(() => {
+  let A = s.useCallback(() => {
       null == m || m(), t()
     }, [m, t]),
     M = s.useCallback(() => {
@@ -45,10 +45,10 @@ function m(e) {
     let e;
     let t = u.default.theme,
       a = !1;
-    return null != A && (async () => {
+    return null != T && (async () => {
       let [{
         default: s
-      }, l] = await Promise.all([n.el("865981").then(n.t.bind(n, "865981", 23)), (0, i.isThemeDark)(t) ? A.dark() : A.light()]);
+      }, l] = await Promise.all([n.el("865981").then(n.t.bind(n, "865981", 23)), (0, i.isThemeDark)(t) ? T.dark() : T.light()]);
       !a && (e = s.loadAnimation({
         container: I.current,
         renderer: "svg",
@@ -59,14 +59,14 @@ function m(e) {
     })(), () => {
       a = !0, null != e && (e.destroy(), e = void 0)
     }
-  }, [A]), (0, a.jsx)(r.Dialog, {
+  }, [T]), (0, a.jsx)(r.Dialog, {
     "aria-labelledby": "content-warning-popout-label",
     children: (0, a.jsxs)("form", {
       className: C.contentWarningPopout,
-      onSubmit: T,
+      onSubmit: A,
       children: [(0, a.jsxs)("div", {
         className: C.body,
-        children: [null != A && (0, a.jsx)("div", {
+        children: [null != T && (0, a.jsx)("div", {
           className: C.animation,
           ref: I
         }), (0, a.jsxs)("div", {
@@ -97,7 +97,7 @@ function m(e) {
               className: C.buttonContainer,
               children: [(0, a.jsx)(r.Button, {
                 className: C.button,
-                onClick: T,
+                onClick: A,
                 type: "submit",
                 autoFocus: !0,
                 children: h.default.Messages.EVERYONE_POPOUT_SEND_NOW

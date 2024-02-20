@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useOpenInPopoutExperiment: function() {
-    return i
+    return r
   }
 });
 var a = n("862205");
@@ -21,7 +21,7 @@ let l = (0, a.createExperiment)({
   }]
 });
 
-function i(e) {
+function r(e) {
   return l.useExperiment({
     location: e
   }, {

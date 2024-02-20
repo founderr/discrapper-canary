@@ -67,13 +67,13 @@ function m(e) {
             warningId: m,
             senderId: E,
             handleBlock: () => {
-              A(c.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, c.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, _)
+              T(c.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, c.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, _)
             }
           })
         }
       })
     },
-    A = (e, s, l) => {
+    T = (e, s, l) => {
       (0, i.openModalLazy)(async () => {
         let {
           default: i
@@ -115,6 +115,6 @@ function m(e) {
     },
     secondaryButtonText: p.default.Messages.STRANGER_DANGER_BANNER_BLOCK,
     secondaryButtonColor: i.Button.Colors.RED,
-    onSecondaryButtonClick: () => A(c.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM, c.CtaEventTypes.USER_BANNER_BLOCK_CANCEL)
+    onSecondaryButtonClick: () => T(c.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM, c.CtaEventTypes.USER_BANNER_BLOCK_CANCEL)
   })
 }

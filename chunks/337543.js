@@ -33,12 +33,12 @@ function d(e, t) {
   })
 }
 
-function _(e) {
+function E(e) {
   return d(e.code, t => {
     t.state = "banned" in e && e.banned ? u.InviteStates.BANNED : u.InviteStates.EXPIRED
   })
 }
-class E extends r.default.Store {
+class _ extends r.default.Store {
   getInvite(e) {
     return a[e]
   }
@@ -52,8 +52,8 @@ class E extends r.default.Store {
     return s[e]
   }
 }
-E.displayName = "InviteStore";
-var c = new E(i.default, {
+_.displayName = "InviteStore";
+var c = new _(i.default, {
   INVITE_RESOLVE: function(e) {
     let {
       code: t
@@ -72,8 +72,8 @@ var c = new E(i.default, {
       t.state = u.InviteStates.RESOLVED, t.guild = e.invite.guild, t.channel = e.invite.channel, t.inviter = e.invite.inviter, t.approximate_member_count = null !== (n = e.invite.approximate_member_count) && void 0 !== n ? n : null, t.approximate_presence_count = null !== (r = e.invite.approximate_presence_count) && void 0 !== r ? r : null, t.target_type = e.invite.target_type, t.target_user = e.invite.target_user, t.target_application = e.invite.target_application, t.expires_at = e.invite.expires_at, t.stage_instance = e.invite.stage_instance, t.friends_count = e.invite.friends_count, t.is_contact = e.invite.is_contact, t.guild_scheduled_event = e.invite.guild_scheduled_event, t.type = e.invite.type, t.flags = e.invite.flags
     })
   },
-  INVITE_RESOLVE_FAILURE: _,
-  INSTANT_INVITE_REVOKE_SUCCESS: _,
+  INVITE_RESOLVE_FAILURE: E,
+  INSTANT_INVITE_REVOKE_SUCCESS: E,
   FRIEND_INVITE_CREATE_SUCCESS: function(e) {
     return d(e.invite.code, t => {
       t.state = u.InviteStates.RESOLVED, t.inviter = e.invite.inviter

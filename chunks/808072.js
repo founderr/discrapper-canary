@@ -23,7 +23,7 @@ var a, s, l, i, r, o, u = n("37983"),
   S = n("782340"),
   _ = n("778548");
 (r = s || (s = {})).CENTER = "center", r.LEFT = "left", (o = l || (l = {})).TOP = "top", o.MIDDLE = "middle";
-class A extends d.PureComponent {
+class T extends d.PureComponent {
   componentDidMount() {
     let {
       uniqueId: e
@@ -142,7 +142,7 @@ class A extends d.PureComponent {
         arrowAlignment: l,
         renderMedia: i
       } = this.props, r = null != i;
-      return (0, u.jsx)(A, {
+      return (0, u.jsx)(T, {
         ...this.props,
         className: f({
           [_.bottom]: "bottom" === n,

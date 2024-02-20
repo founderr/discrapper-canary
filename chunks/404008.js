@@ -48,8 +48,8 @@ var r = n("316693"),
   o = n("808422"),
   s = n("233069"),
   d = n("42203"),
-  _ = n("923959"),
-  E = n("957255"),
+  E = n("923959"),
+  _ = n("957255"),
   c = n("18494"),
   I = n("316133"),
   S = n("991170"),
@@ -118,10 +118,10 @@ function m(e, t, n) {
     o = null !== (r = null == a ? void 0 : a.maxVideoChannelUsers) && void 0 !== r ? r : -1,
     s = null !== (i = null == a ? void 0 : a.maxStageVideoChannelUsers) && void 0 !== i ? i : -1,
     d = I.default.countVoiceStatesForChannel(e.id),
-    _ = I.default.getVoiceStatesForChannel(e),
-    c = E.default.can(T.Permissions.MOVE_MEMBERS, e) && E.default.can(T.Permissions.CONNECT, e),
+    E = I.default.getVoiceStatesForChannel(e),
+    c = _.default.can(T.Permissions.MOVE_MEMBERS, e) && _.default.can(T.Permissions.CONNECT, e),
     S = !1;
-  S = e.type === R ? null != l && (t.hasVideo(e.id) || (0, u.hasStream)(_)) && s > 0 && d >= s : null != l && t.hasVideo(e.id) && o > 0 && d >= o + (c ? 1 : 0);
+  S = e.type === R ? null != l && (t.hasVideo(e.id) || (0, u.hasStream)(E)) && s > 0 && d >= s : null != l && t.hasVideo(e.id) && o > 0 && d >= o + (c ? 1 : 0);
   let f = e.userLimit > 0 && d >= e.userLimit;
   return S || f && !c
 }
@@ -192,8 +192,8 @@ function v(e) {
 function U(e) {
   if (null == e) return "text";
   let t = e.isMediaChannel();
-  if (e.type === T.ChannelTypes.GUILD_VOICE) return E.default.can(T.Permissions.CONNECT, e) ? "voice" : "voice-locked";
-  if (e.type === T.ChannelTypes.GUILD_STAGE_VOICE) return E.default.can(T.Permissions.CONNECT, e) ? "stage" : "stage-locked";
+  if (e.type === T.ChannelTypes.GUILD_VOICE) return _.default.can(T.Permissions.CONNECT, e) ? "voice" : "voice-locked";
+  if (e.type === T.ChannelTypes.GUILD_STAGE_VOICE) return _.default.can(T.Permissions.CONNECT, e) ? "stage" : "stage-locked";
   if (s.THREAD_CHANNEL_TYPES.has(e.type)) return e.isForumPost() ? "post" : "thread";
   else if (e.type === T.ChannelTypes.GUILD_FORUM) return t ? "media" : "forum";
   else if (e.type === T.ChannelTypes.GUILD_MEDIA) return "media";
@@ -205,7 +205,7 @@ function M(e) {
   let n = d.default.getChannel(c.default.getLastSelectedChannelId());
   if (null != n && n.getGuildId() === e && n.type === T.ChannelTypes.GUILD_TEXT) t = n.id;
   else {
-    let n = _.default.getDefaultChannel(e);
+    let n = E.default.getDefaultChannel(e);
     t = null != n ? n.id : null
   }
   return T.Routes.CHANNEL(e, t)
@@ -220,8 +220,8 @@ function B(e, t, n, r) {
   let l = e.getGuildId(),
     u = (0, a.canUseMediaPostEmbed)(l, t);
   if (null != t && u) {
-    var o, s, d, _;
-    o = l, s = t.id, d = e.id, _ = e.id, i = null == o || null == s || null == d ? G(o, s, _) : "".concat(location.protocol, "//").concat(location.host).concat(T.Routes.CHANNEL_THREAD_VIEW(o, s, d, _))
+    var o, s, d, E;
+    o = l, s = t.id, d = e.id, E = e.id, i = null == o || null == s || null == d ? G(o, s, E) : "".concat(location.protocol, "//").concat(location.host).concat(T.Routes.CHANNEL_THREAD_VIEW(o, s, d, E))
   } else i = null != r ? r : G(l, e.id, n);
   return i
 }

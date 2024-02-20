@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return h
   },
   updateOptInChannelsImmediate: function() {
-    return O
+    return C
   },
   updateOptInChannelsBatched: function() {
     return I
@@ -70,7 +70,7 @@ function h(e, t, n, a) {
   })
 }
 
-function O(e, t, n, a) {
+function C(e, t, n, a) {
   if (null == e) return;
   if (o.default.isFullServerPreview(e)) {
     (0, r.updateImpersonatedChannels)(e, n ? [t] : [], n ? [] : [t]), (0, r.updateImpersonatedData)(e, {
@@ -107,7 +107,7 @@ function O(e, t, n, a) {
     location: a
   })
 }
-async function C(e, t) {
+async function O(e, t) {
   if (!(null == e || o.default.isFullServerPreview(e))) await u.default.saveUserGuildSettingsBulk({
     [e]: {
       channel_overrides: t
@@ -118,7 +118,7 @@ async function C(e, t) {
     updates: t
   })
 }
-let I = (0, a.debounce)((e, t) => C(e, t), 1e3);
+let I = (0, a.debounce)((e, t) => O(e, t), 1e3);
 
 function A(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],

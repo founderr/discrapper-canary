@@ -26,15 +26,15 @@ var a = s("37983"),
   E = s("594098"),
   N = s("887718"),
   M = s("95689"),
-  A = s("132755"),
-  v = s("497880"),
+  v = s("132755"),
+  A = s("497880"),
   I = s("956089"),
   j = s("680986"),
   R = s("612278"),
   O = s("791234"),
   F = s("512630"),
-  L = s("152637"),
-  b = s("363622"),
+  b = s("152637"),
+  L = s("363622"),
   P = s("855455"),
   y = s("136460"),
   D = s("601016"),
@@ -80,13 +80,13 @@ function z(e) {
     gridCoords: f,
     gridSectionBoundaries: g,
     observePostVisibilityAnalytics: C
-  } = e, E = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(s.parent_id)), N = s.id, M = n.useRef(null), A = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentSidebarChannelId(s.parent_id) === s.id), {
-    firstMessage: v,
+  } = e, E = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(s.parent_id)), N = s.id, M = n.useRef(null), v = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentSidebarChannelId(s.parent_id) === s.id), {
+    firstMessage: A,
     loaded: F
   } = (0, R.useFirstForumPostMessage)(s), {
     firstMedia: P
   } = (0, j.useForumPostFirstMessageMarkup)({
-    firstMessage: v,
+    firstMessage: A,
     formatInline: !1,
     noStyleAndInteraction: !1
   }), {
@@ -109,11 +109,11 @@ function z(e) {
     $ = _.GifAutoPlay.useSetting(),
     ee = _.RenderSpoilers.useSetting(),
     et = (0, x.default)(ee, J),
-    es = (0, O.useForumPostMediaThumbnail)(v, E, !1),
-    [ea, en] = (0, b.getFrameDimensions)(h.width - 2 * b.IMAGE_PADDING),
+    es = (0, O.useForumPostMediaThumbnail)(A, E, !1),
+    [ea, en] = (0, L.getFrameDimensions)(h.width - 2 * L.IMAGE_PADDING),
     el = (0, j.useLastActiveTimestamp)(s, i.ThreadSortOrder.CREATION_DATE, k.ForumTimestampFormats.POSTED_DURATION_AGO),
-    er = (0, L.useHighlightedChannelName)(s),
-    ei = (null == v ? void 0 : v.blocked) || null == (null != c ? c : P),
+    er = (0, b.useHighlightedChannelName)(s),
+    ei = (null == A ? void 0 : A.blocked) || null == (null != c ? c : P),
     {
       onFocus: eo,
       ...eu
@@ -131,7 +131,7 @@ function z(e) {
     onFocus: eo,
     onContextMenu: Q,
     className: r(G.container, m, {
-      [G.isOpen]: A
+      [G.isOpen]: v
     }),
     style: {
       ...h
@@ -156,7 +156,7 @@ function z(e) {
           className: G.rowGroup,
           children: [(0, a.jsx)(y.default, {
             channel: s,
-            message: v
+            message: A
           }), (0, a.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
@@ -174,7 +174,7 @@ function z(e) {
           className: G.title,
           color: K ? "header-primary" : "text-muted",
           style: {
-            width: "".concat(h.width - 2 * b.GRID_POST_CONTROLS_MARGIN, "px")
+            width: "".concat(h.width - 2 * L.GRID_POST_CONTROLS_MARGIN, "px")
           },
           children: er
         })
@@ -184,7 +184,7 @@ function z(e) {
       children: (0, a.jsx)(d.FocusBlock, {
         children: ei ? (0, a.jsx)(q, {
           channel: s,
-          firstMessage: v,
+          firstMessage: A,
           isFirstMessageLoaded: F,
           containerWidth: h.width,
           hasUnreads: K
@@ -210,7 +210,7 @@ function z(e) {
       children: (0, a.jsx)(d.FocusBlock, {
         children: (0, a.jsx)(W, {
           channel: s,
-          firstMessage: v,
+          firstMessage: A,
           facepileRef: Y
         })
       })
@@ -230,7 +230,7 @@ function W(e) {
       className: G.controlsGroup,
       children: [(0, a.jsx)("div", {
         className: G.messageCountContainer,
-        children: (0, a.jsx)(L.MessageCount, {
+        children: (0, a.jsx)(b.MessageCount, {
           channel: t,
           iconSize: 16,
           showReadState: !0
@@ -241,7 +241,7 @@ function W(e) {
           children: "•"
         }), (0, a.jsxs)("div", {
           className: G.typing,
-          children: [(0, a.jsx)(L.Facepile, {
+          children: [(0, a.jsx)(b.Facepile, {
             channel: t,
             userIds: l,
             facepileRef: s
@@ -260,10 +260,10 @@ function W(e) {
       }) : null]
     }), (0, a.jsxs)("div", {
       className: G.controlsGroup,
-      children: [r || null == n ? null : (0, a.jsx)(L.DefaultReaction, {
+      children: [r || null == n ? null : (0, a.jsx)(b.DefaultReaction, {
         firstMessage: n,
         channel: t
-      }), null == n ? null : (0, a.jsx)(L.MostUsedReaction, {
+      }), null == n ? null : (0, a.jsx)(b.MostUsedReaction, {
         firstMessage: n,
         channel: t
       })]
@@ -352,7 +352,7 @@ let K = e => e.preventDefault(),
         children: T
       }), (c || d) && (0, a.jsxs)("div", {
         className: G.mediaIconsRow,
-        children: [d && (0, a.jsx)(A.default, {
+        children: [d && (0, a.jsx)(v.default, {
           width: "22px",
           height: "22px",
           className: G.mediaIcon
@@ -396,7 +396,7 @@ function q(e) {
     isFirstMessageLoaded: l,
     containerWidth: i,
     hasUnreads: o
-  } = e, [u, c] = (0, b.getFrameDimensions)(i - 2 * b.IMAGE_PADDING), {
+  } = e, [u, c] = (0, L.getFrameDimensions)(i - 2 * L.IMAGE_PADDING), {
     content: m
   } = (0, j.useForumPostFirstMessageMarkup)({
     firstMessage: s,
@@ -421,7 +421,7 @@ function q(e) {
           variant: "text-sm/normal",
           color: o ? "header-secondary" : "text-muted",
           children: B.default.Messages.REPLY_QUOTE_MESSAGE_DELETED
-        }), l && null != s && (0, a.jsx)(v.default, {
+        }), l && null != s && (0, a.jsx)(A.default, {
           message: s,
           content: m,
           className: g

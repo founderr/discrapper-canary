@@ -9,8 +9,8 @@ var a = n("446674"),
   o = n("913144"),
   s = n("76393"),
   d = n("374014"),
-  _ = n("223913"),
-  E = n("537429"),
+  E = n("223913"),
+  _ = n("537429"),
   c = n("271938"),
   I = n("42203"),
   S = n("305961"),
@@ -69,7 +69,7 @@ function v(e, t) {
 
 function U(e) {
   let t = I.default.getChannel(e.channelId);
-  return !!v(e.streamType, e.channelId) || null != t && (0, _.canWatchStream)(t, R.default, S.default, f.default, s.default)[0]
+  return !!v(e.streamType, e.channelId) || null != t && (0, E.canWatchStream)(t, R.default, S.default, f.default, s.default)[0]
 }
 class M extends a.default.Store {
   initialize() {
@@ -81,21 +81,21 @@ class M extends a.default.Store {
   }
   getLastActiveStream() {
     var e;
-    return (0, E.default)(T.default) ? null !== (e = Array.from(r.values()).pop()) && void 0 !== e ? e : null : null
+    return (0, _.default)(T.default) ? null !== (e = Array.from(r.values()).pop()) && void 0 !== e ? e : null : null
   }
   getAllActiveStreams() {
-    return (0, E.default)(T.default) ? Array.from(r.values()) : []
+    return (0, _.default)(T.default) ? Array.from(r.values()) : []
   }
   getAllActiveStreamsForChannel(e) {
-    return (0, E.default)(T.default) ? Array.from(r.values()).filter(t => t.channelId === e) : []
+    return (0, _.default)(T.default) ? Array.from(r.values()).filter(t => t.channelId === e) : []
   }
   getActiveStreamForStreamKey(e) {
     var t;
-    return (0, E.default)(T.default) ? null !== (t = r.get(e)) && void 0 !== t ? t : null : null
+    return (0, _.default)(T.default) ? null !== (t = r.get(e)) && void 0 !== t ? t : null : null
   }
   getActiveStreamForApplicationStream(e) {
     var t;
-    if (!(0, E.default)(T.default) || null == e) return null;
+    if (!(0, _.default)(T.default) || null == e) return null;
     let n = (0, d.encodeStreamKey)(e);
     return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null
   }
@@ -119,28 +119,28 @@ class M extends a.default.Store {
   }
   getAnyStreamForUser(e) {
     var t;
-    if (!(0, E.default)(T.default)) return null;
+    if (!(0, _.default)(T.default)) return null;
     let n = i[e];
     return null == n ? null : null !== (t = Object.values(n).find(e => U(e))) && void 0 !== t ? t : null
   }
   getStreamForUser(e, t) {
     var n;
-    if (!(0, E.default)(T.default)) return null;
+    if (!(0, _.default)(T.default)) return null;
     let r = null === (n = i[e]) || void 0 === n ? void 0 : n[null != t ? t : C.NULL_STRING_GUILD_ID];
     return null != r && U(r) ? r : null
   }
   getRTCStream(e) {
     var t;
-    return (0, E.default)(T.default) ? null !== (t = l[e]) && void 0 !== t ? t : null : null
+    return (0, _.default)(T.default) ? null !== (t = l[e]) && void 0 !== t ? t : null : null
   }
   getAllApplicationStreams() {
-    return (0, E.default)(T.default) ? y().filter(e => null != e && v(e.streamType, e.channelId)) : []
+    return (0, _.default)(T.default) ? y().filter(e => null != e && v(e.streamType, e.channelId)) : []
   }
   getAllApplicationStreamsForChannel(e) {
-    return (0, E.default)(T.default) ? y().filter(t => null != t && t.channelId === e && v(t.streamType, t.channelId)) : []
+    return (0, _.default)(T.default) ? y().filter(t => null != t && t.channelId === e && v(t.streamType, t.channelId)) : []
   }
   getViewerIds(e) {
-    if (!(0, E.default)(T.default)) return [];
+    if (!(0, _.default)(T.default)) return [];
     let t = null;
     t = "string" == typeof e ? e : (0, d.encodeStreamKey)(e);
     let n = null != t ? l[t] : null;
@@ -150,7 +150,7 @@ class M extends a.default.Store {
     return P
   }
   getState() {
-    return (0, E.default)(T.default) ? {
+    return (0, _.default)(T.default) ? {
       activeStreams: Array.from(r.entries()),
       streamsByUserAndGuild: i,
       rtcStreams: l,

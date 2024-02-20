@@ -1,106 +1,106 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return _
   },
   registerFull: function() {
-    return m
+    return g
   }
 });
 var s = n("866227"),
   a = n.n(s),
-  i = n("759843"),
-  r = n("913144"),
-  l = n("599417"),
+  r = n("759843"),
+  l = n("913144"),
+  i = n("599417"),
   o = n("731109"),
   u = n("271938"),
   d = n("599110"),
   c = n("840707"),
-  f = n("395724"),
-  h = n("49111"),
-  E = n("586391");
+  E = n("395724"),
+  f = n("49111"),
+  h = n("586391");
 
-function g(e) {
+function _(e) {
   let {
     invite: t = null,
     giftCodeSKUId: n = null,
     ...s
   } = e;
-  return m({
+  return g({
     ...s,
     invite: t,
     giftCodeSKUId: n
   })
 }
 
-function m(e) {
+function g(e) {
   let {
     email: t,
     phoneToken: n,
     username: s,
-    globalName: g,
-    consent: m,
-    password: _,
+    globalName: _,
+    consent: g,
+    password: m,
     guildTemplateCode: p,
-    birthday: R,
-    invite: S = null,
+    birthday: T,
+    invite: R = null,
     giftCodeSKUId: A = null,
-    multiStep: T = !1,
-    promoEmailConsent: N = null,
-    usedUsernameSuggestion: I = null
+    multiStep: S = !1,
+    promoEmailConsent: I = null,
+    usedUsernameSuggestion: N = null
   } = e;
-  return r.default.dispatch({
+  return l.default.dispatch({
     type: "REGISTER",
-    birthday: T ? R : null
-  }), null != R && ((0, f.default)(R, h.AnalyticsSections.REGISTER), d.default.track(h.AnalyticEvents.AGE_GATE_ACTION, {
-    source: E.AgeGateSource.REGISTER,
-    action: E.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
+    birthday: S ? T : null
+  }), null != T && ((0, E.default)(T, f.AnalyticsSections.REGISTER), d.default.track(f.AnalyticEvents.AGE_GATE_ACTION, {
+    source: h.AgeGateSource.REGISTER,
+    action: h.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
   }), ! function(e) {
     let t;
     let n = a().diff(e, "years");
-    !(n < 13) && (t = n >= 13 && n <= 17 ? "13-17" : n >= 18 && n <= 22 ? "18-22" : "23+", d.default.track(h.AnalyticEvents.USER_AGE_SUBMITTED, {
+    !(n < 13) && (t = n >= 13 && n <= 17 ? "13-17" : n >= 18 && n <= 22 ? "18-22" : "23+", d.default.track(f.AnalyticEvents.USER_AGE_SUBMITTED, {
       age_bucket: t
     }))
-  }(R)), c.default.post({
-    url: h.Endpoints.REGISTER,
+  }(T)), c.default.post({
+    url: f.Endpoints.REGISTER,
     body: {
       fingerprint: u.default.getFingerprint(),
       email: t,
       username: s,
-      global_name: g,
-      password: _,
-      invite: S,
-      consent: m,
+      global_name: _,
+      password: m,
+      invite: R,
+      consent: g,
       phone_token: n,
-      date_of_birth: null == R ? void 0 : R.format("YYYY-MM-DD"),
+      date_of_birth: null == T ? void 0 : T.format("YYYY-MM-DD"),
       gift_code_sku_id: A,
       guild_template_code: p,
-      promotional_email_opt_in: null == N ? void 0 : N.checked
+      promotional_email_opt_in: null == I ? void 0 : I.checked
     },
     trackedActionData: {
-      event: i.NetworkActionNames.USER_REGISTER,
+      event: r.NetworkActionNames.USER_REGISTER,
       properties: {
-        invite_code: S,
-        used_username_suggestion: I,
-        promotional_email_opt_in: null == N ? void 0 : N.checked,
-        promotional_email_pre_checked: null == N ? void 0 : N.preChecked,
+        invite_code: R,
+        used_username_suggestion: N,
+        promotional_email_opt_in: null == I ? void 0 : I.checked,
+        promotional_email_pre_checked: null == I ? void 0 : I.preChecked,
         was_unique_username: !0
       }
     }
   }).then(e => {
-    r.default.dispatch({
+    l.default.dispatch({
       type: "REGISTER_SUCCESS",
       token: e.body.token
-    }), d.default.track(h.AnalyticEvents.AGE_GATE_ACTION, {
-      source: E.AgeGateSource.REGISTER,
-      action: E.AgeGateAnalyticAction.AGE_GATE_SUCCESS
+    }), d.default.track(f.AnalyticEvents.AGE_GATE_ACTION, {
+      source: h.AgeGateSource.REGISTER,
+      action: h.AgeGateAnalyticAction.AGE_GATE_SUCCESS
     })
   }, e => {
-    let t = new l.default(e);
-    throw r.default.dispatch({
+    let t = new i.default(e);
+    throw l.default.dispatch({
       type: "REGISTER_FAILURE",
       error: t
-    }), null != t.getFieldErrors("date_of_birth") && o.preventUnderageRegistration(E.AgeGateSource.REGISTER), d.default.track(h.AnalyticEvents.REGISTER_SUBMIT_ERRORED, {
+    }), null != t.getFieldErrors("date_of_birth") && o.preventUnderageRegistration(h.AgeGateSource.REGISTER), d.default.track(f.AnalyticEvents.REGISTER_SUBMIT_ERRORED, {
       is_unique_username_registration: !0,
       email_error_reason: t.getFirstFieldErrorMessage("email"),
       phone_error_reason: t.getFirstFieldErrorMessage("phone"),

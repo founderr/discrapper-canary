@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return f
   },
   ExpressionSuggestionsEnabled: function() {
-    return E
+    return S
   },
   IncludeStickersInAutocomplete: function() {
-    return S
+    return E
   },
   RenderSpoilers: function() {
     return g
@@ -49,10 +49,10 @@ n.r(t), n.d(t, {
     return L
   },
   InstallShortcutDesktop: function() {
-    return D
+    return y
   },
   InstallShortcutStartMenu: function() {
-    return y
+    return D
   },
   AllowActivityPartyPrivacyFriends: function() {
     return P
@@ -157,7 +157,7 @@ n.r(t), n.d(t, {
     return ef
   },
   TimezoneOffset: function() {
-    return eE
+    return eS
   },
   DeveloperMode: function() {
     return eh
@@ -190,10 +190,10 @@ n.r(t), n.d(t, {
     return eL
   },
   LegacyUsernameDisabled: function() {
-    return eD
+    return ey
   },
   ExplicitContentSettings: function() {
-    return ey
+    return eD
   }
 }), n("222007");
 var i = n("446674"),
@@ -217,13 +217,13 @@ let _ = (0, l.defineProtoSetting)("textAndImages", "useLegacyChatInput", e => {
   }, e => o.BoolValue.create({
     value: e
   })),
-  E = (0, l.defineProtoSetting)("textAndImages", "expressionSuggestionsEnabled", e => {
+  S = (0, l.defineProtoSetting)("textAndImages", "expressionSuggestionsEnabled", e => {
     var t;
     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
   }, e => o.BoolValue.create({
     value: e
   })),
-  S = (0, l.defineProtoSetting)("textAndImages", "includeStickersInAutocomplete", e => {
+  E = (0, l.defineProtoSetting)("textAndImages", "includeStickersInAutocomplete", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => o.BoolValue.create({
@@ -286,13 +286,13 @@ let m = (0, l.defineProtoSetting)("notifications", "quietMode", e => {
 }, e => o.BoolValue.create({
   value: e
 }));
-let D = (0, l.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => {
+let y = (0, l.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => o.BoolValue.create({
     value: e
   })),
-  y = (0, l.defineProtoSetting)("gameLibrary", "installShortcutStartMenu", e => {
+  D = (0, l.defineProtoSetting)("gameLibrary", "installShortcutStartMenu", e => {
     var t;
     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
   }, e => o.BoolValue.create({
@@ -481,15 +481,15 @@ let Q = (0, l.defineProtoSetting)("textAndImages", "dmSpamFilterV2", e => null !
   }, e => o.BoolValue.create({
     value: e
   })), "text", "renderReactions"),
-  eE = (0, l.defineProtoSetting)("localization", "timezoneOffset", e => {
+  eS = (0, l.defineProtoSetting)("localization", "timezoneOffset", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : null
   }, e => o.Int32Value.create({
     value: null != e ? e : 0
   }));
 (0, l.defineProtoSetting)("appearance", "mobileRedesignDisabled", e => null != e && e, e => e);
-let eS = new Set([s.ChannelListLayoutTypes.COZY, s.ChannelListLayoutTypes.COMPACT]);
-(0, l.defineProtoSetting)("appearance", "channelListLayout", e => null != e && eS.has(e.value) ? e.value : s.ChannelListLayoutTypes.COZY, e => o.StringValue.create({
+let eE = new Set([s.ChannelListLayoutTypes.COZY, s.ChannelListLayoutTypes.COMPACT]);
+(0, l.defineProtoSetting)("appearance", "channelListLayout", e => null != e && eE.has(e.value) ? e.value : s.ChannelListLayoutTypes.COZY, e => o.StringValue.create({
   value: e
 }));
 let eg = new Set([s.MessagePreviewTypes.ALL, s.MessagePreviewTypes.UNREADS, s.MessagePreviewTypes.NONE]);
@@ -557,13 +557,13 @@ let eh = (0, l.wrapSettingWithSelectiveSyncing)((0, l.defineProtoSetting)("appea
   eL = (0, l.defineProtoSetting)("privacy", "familyCenterEnabledV2", e => null == e ? void 0 : e.value, e => o.BoolValue.create({
     value: e
   })),
-  eD = (0, l.defineProtoSetting)("privacy", "hideLegacyUsername", e => {
+  ey = (0, l.defineProtoSetting)("privacy", "hideLegacyUsername", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => o.BoolValue.create({
     value: e
   })),
-  ey = (0, l.defineProtoSetting)("textAndImages", "explicitContentSettings", e => {
+  eD = (0, l.defineProtoSetting)("textAndImages", "explicitContentSettings", e => {
     let {
       explicitContentGuilds: t,
       explicitContentFriendDm: n,

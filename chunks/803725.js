@@ -40,10 +40,10 @@ n.r(t), n.d(t, {
     return K
   },
   loadClipsDirectory: function() {
-    return j
+    return J
   },
   deleteClip: function() {
-    return J
+    return j
   },
   exportClip: function() {
     return z
@@ -378,7 +378,7 @@ function K() {
     type: "CLIPS_CLEAR_NEW_CLIP_IDS"
   })
 }
-async function j(e) {
+async function J(e) {
   var t;
   if (!(0, I.isDesktop)() || (null === (t = d.default.clips) || void 0 === t ? void 0 : t.loadClipsDirectory) == null) return;
   let n = await d.default.clips.loadClipsDirectory(e),
@@ -395,7 +395,7 @@ async function j(e) {
     clips: a
   })
 }
-async function J(e) {
+async function j(e) {
   var t;
   (0, I.isDesktop)() && (null === (t = d.default.clips) || void 0 === t ? void 0 : t.deleteClip) != null && (await d.default.clips.deleteClip(e), r.default.dispatch({
     type: "CLIPS_DELETE_CLIP",

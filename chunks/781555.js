@@ -26,15 +26,15 @@ var a = s("37983"),
   E = s("945330"),
   N = s("68238"),
   M = s("758710"),
-  A = s("58608"),
-  v = s("701909"),
+  v = s("58608"),
+  A = s("701909"),
   I = s("753582"),
   j = s("49111"),
   R = s("782340"),
   O = s("559553"),
   F = s("112545"),
-  L = s("600310"),
-  b = s("129185"),
+  b = s("600310"),
+  L = s("129185"),
   P = s("338283");
 
 function y(e) {
@@ -87,7 +87,7 @@ function D(e) {
       children: s
     }), (0, a.jsx)(T.default, {
       size: 10
-    }), (0, a.jsx)(A.default, {
+    }), (0, a.jsx)(v.default, {
       className: O.video,
       src: n,
       autoPlay: !0,
@@ -132,7 +132,7 @@ var w = e => {
   var t, s;
   let {
     channel: l
-  } = e, p = (0, c.default)(), E = (0, u.isThemeDark)(p), A = (0, o.useStateFromStores)([_.default], () => _.default.getGuild(l.guild_id)), w = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion), U = (0, o.useStateFromStores)([h.default], () => h.default.hasHidden(l.id)), k = (0, x.useSubscriptionListingsForChannel)({
+  } = e, p = (0, c.default)(), E = (0, u.isThemeDark)(p), v = (0, o.useStateFromStores)([_.default], () => _.default.getGuild(l.guild_id)), w = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion), U = (0, o.useStateFromStores)([h.default], () => h.default.hasHidden(l.id)), k = (0, x.useSubscriptionListingsForChannel)({
     guildId: l.guild_id,
     channelId: l.id
   }), {
@@ -150,9 +150,9 @@ var w = e => {
     W = () => {
       C.default.open(l.guild_id, j.GuildSettingsSections.ROLE_SUBSCRIPTIONS)
     },
-    K = null !== (t = null == A ? void 0 : A.hasFeature(j.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t,
+    K = null !== (t = null == v ? void 0 : v.hasFeature(j.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t,
     Y = K ? R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA : R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA,
-    X = null !== (s = (null == A ? void 0 : A.hasFeature(j.GuildFeatures.CREATOR_MONETIZABLE)) || (null == A ? void 0 : A.hasFeature(j.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== s && s,
+    X = null !== (s = (null == v ? void 0 : v.hasFeature(j.GuildFeatures.CREATOR_MONETIZABLE)) || (null == v ? void 0 : v.hasFeature(j.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== s && s,
     Z = X ? R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_TITLE : R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_TITLE,
     q = X ? R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_SUBTITLE : R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_SUBTITLE;
   return (0, a.jsx)(a.Fragment, {
@@ -221,7 +221,7 @@ var w = e => {
             }), (0, a.jsx)(T.default, {
               size: 16
             }), (0, a.jsxs)(d.Clickable, {
-              onClick: () => open(v.default.getCreatorSupportArticleURL(j.HelpdeskArticles.MEDIA_CHANNEL)),
+              onClick: () => open(A.default.getCreatorSupportArticleURL(j.HelpdeskArticles.MEDIA_CHANNEL)),
               className: O.helpCenterLink,
               children: [(0, a.jsx)(d.Text, {
                 variant: "text-sm/medium",
@@ -252,11 +252,11 @@ var w = e => {
             children: (0, a.jsxs)("div", {
               className: O.contentImageContainer,
               children: [(0, a.jsx)("img", {
-                src: E ? b : P,
+                src: E ? L : P,
                 alt: "",
                 className: r(O.previewEmbedImage, O.secondaryImage)
               }), (0, a.jsx)("img", {
-                src: E ? F : L,
+                src: E ? F : b,
                 alt: "",
                 className: O.previewEmbedImage
               })]

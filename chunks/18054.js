@@ -75,8 +75,8 @@ function h(e) {
     invitable: g,
     availableTags: S,
     defaultSortOrder: _,
-    defaultForumLayout: A,
-    iconEmoji: T,
+    defaultForumLayout: T,
+    iconEmoji: A,
     themeColor: M
   } = e;
   s.default.dispatch({
@@ -100,8 +100,8 @@ function h(e) {
     invitable: g,
     availableTags: S,
     defaultSortOrder: _,
-    defaultForumLayout: A,
-    iconEmoji: T,
+    defaultForumLayout: T,
+    iconEmoji: A,
     themeColor: M
   })
 }
@@ -120,15 +120,15 @@ async function C(e, t) {
     defaultThreadRateLimitPerUser: g,
     defaultAutoArchiveDuration: S,
     template: _,
-    defaultReactionEmoji: A,
-    rtcRegion: T,
+    defaultReactionEmoji: T,
+    rtcRegion: A,
     videoQualityMode: M,
     autoArchiveDuration: I,
     locked: N,
     invitable: v,
     availableTags: L,
-    defaultSortOrder: x,
-    defaultForumLayout: R,
+    defaultSortOrder: R,
+    defaultForumLayout: x,
     iconEmoji: y,
     themeColor: O
   } = t, D = r.default.getChannel(e);
@@ -150,15 +150,15 @@ async function C(e, t) {
       default_thread_rate_limit_per_user: g,
       default_auto_archive_duration: S,
       template: _,
-      rtc_region: T,
+      rtc_region: A,
       video_quality_mode: M,
       auto_archive_duration: I,
       locked: N,
       invitable: v,
-      default_reaction_emoji: null != A ? {
-        emoji_id: null == A ? void 0 : A.emojiId,
-        emoji_name: null == A ? void 0 : A.emojiName
-      } : null === A ? null : void 0,
+      default_reaction_emoji: null != T ? {
+        emoji_id: null == T ? void 0 : T.emojiId,
+        emoji_name: null == T ? void 0 : T.emojiName
+      } : null === T ? null : void 0,
       available_tags: null == L ? void 0 : L.map(e => ({
         id: e.id,
         name: e.name,
@@ -166,8 +166,8 @@ async function C(e, t) {
         emoji_name: e.emojiName,
         moderated: e.moderated
       })),
-      default_sort_order: x,
-      default_forum_layout: R,
+      default_sort_order: R,
+      default_forum_layout: x,
       icon_emoji: null != y ? {
         id: y.id,
         name: y.name

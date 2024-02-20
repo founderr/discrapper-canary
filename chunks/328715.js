@@ -19,8 +19,8 @@ var a = n("414456"),
   m = n("619335"),
   p = n("534222"),
   E = n("822516"),
-  g = n("138286"),
-  S = n("539938"),
+  S = n("138286"),
+  g = n("539938"),
   C = n("557809"),
   _ = n("367376"),
   I = n("23033"),
@@ -43,7 +43,7 @@ var a = n("414456"),
   F = n("434225"),
   k = n("919163");
 
-function B(e) {
+function V(e) {
   let {
     focusedParticipant: t,
     channel: n
@@ -60,7 +60,7 @@ function B(e) {
   })
 }
 
-function V(e) {
+function B(e) {
   let {
     user: t,
     channel: n,
@@ -103,7 +103,7 @@ function H(e) {
       variant: "text-md/normal",
       color: "none",
       children: (0, d.default)(n.name)
-    }), i && (0, l.jsx)(B, {
+    }), i && (0, l.jsx)(V, {
       channel: s,
       focusedParticipant: a
     })]
@@ -114,17 +114,17 @@ function H(e) {
     t = (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(M.default.Divider, {
         className: F.divider
-      }), (0, l.jsx)(V, {
+      }), (0, l.jsx)(B, {
         user: e,
         channel: s,
         stream: n,
         color: i ? "header-primary" : "none"
-      }), i && (0, l.jsx)(B, {
+      }), i && (0, l.jsx)(V, {
         channel: s,
         focusedParticipant: a
       })]
     })
-  } else c && (t = (0, l.jsx)(g.default, {
+  } else c && (t = (0, l.jsx)(S.default, {
     guildEvent: o,
     recurrenceId: u
   }));
@@ -147,31 +147,31 @@ function G(e) {
   } = (0, i.useStateFromStoresObject)([j.default], () => ({
     focusedParticipant: j.default.getSelectedParticipant(t.id),
     participantsOpen: j.default.getParticipantsOpen(t.id)
-  }), [t.id]), g = (0, h.default)(t), T = (0, m.default)(t), [v] = (0, c.default)((null == E ? void 0 : E.type) === b.ParticipantTypes.ACTIVITY ? [E.id] : []), N = w.default.Messages.VOICE_CHANNEL;
+  }), [t.id]), S = (0, h.default)(t), T = (0, m.default)(t), [v] = (0, c.default)((null == E ? void 0 : E.type) === b.ParticipantTypes.ACTIVITY ? [E.id] : []), N = w.default.Messages.VOICE_CHANNEL;
   t.isDM() ? N = w.default.Messages.DM : t.isGroupDM() && (N = w.default.Messages.GROUP_DM);
   let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
     O = t.isGuildVoice() && u && null != L && L.length > 0,
-    B = (0, i.useStateFromStores)([x.default], () => x.default.can(D.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
-    V = O ? (0, l.jsx)(r.Tooltip, {
+    V = (0, i.useStateFromStores)([x.default], () => x.default.can(D.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
+    B = O ? (0, l.jsx)(r.Tooltip, {
       text: w.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
       position: "bottom",
-      shouldShow: B,
+      shouldShow: V,
       children: e => (0, l.jsxs)(r.Clickable, {
         ...e,
         className: s(F.channelStatusClickable, {
-          [F.hoverable]: B
+          [F.hoverable]: V
         }),
-        onClick: B ? G : void 0,
+        onClick: V ? G : void 0,
         children: [(0, l.jsx)(r.Text, {
           variant: "text-xs/normal",
           className: s(F.channelStatus, k.markup, {
-            [F.hoverable]: B
+            [F.hoverable]: V
           }),
           children: _.default.parseVoiceChannelStatus(L, !0, {
             channelId: t.id
           })
-        }), B && (0, l.jsx)(A.default, {
+        }), V && (0, l.jsx)(A.default, {
           className: s(F.pencilIcon, F.hoverable),
           width: 14,
           height: 14
@@ -195,10 +195,10 @@ function G(e) {
   return (0, l.jsxs)("div", {
     className: F.subtitleContainer,
     children: [(0, l.jsxs)(M.default, {
-      onDoubleClick: S.handleDoubleClick,
+      onDoubleClick: g.handleDoubleClick,
       transparent: !0,
       className: (0, R.getThemeClass)(U.ThemeTypes.DARK),
-      childrenBottom: V,
+      childrenBottom: B,
       toolbar: (0, l.jsx)(y.default, {
         inPopout: o === D.AppContext.POPOUT,
         channel: t,
@@ -212,7 +212,7 @@ function G(e) {
         disabled: !0,
         "aria-label": N
       }) : null, (0, l.jsx)(M.default.Title, {
-        children: g
+        children: S
       }), (0, l.jsx)(C.HeaderGuildBreadcrumb, {
         channel: t,
         guild: a

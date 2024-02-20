@@ -26,12 +26,12 @@ var a = n("37983"),
       animationSrc: g,
       secondaryButtonText: S,
       onSecondaryButtonClick: _,
-      children: A,
-      useReducedMotion: T = !1
+      children: T,
+      useReducedMotion: A = !1
     } = e, M = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
     if (l.isMobile && M) return null;
     if (null == t) return (0, a.jsx)(a.Fragment, {
-      children: s.Children.only(A)
+      children: s.Children.only(T)
     });
     let I = null;
     return null != E ? I = (0, a.jsx)("img", {
@@ -40,7 +40,7 @@ var a = n("37983"),
       className: c.image
     }) : null != g && (I = (0, a.jsx)(d.default, {
       importData: g,
-      shouldAnimate: !T,
+      shouldAnimate: !A,
       className: c.animation
     })), (0, a.jsxs)("div", {
       className: c.wrapper,

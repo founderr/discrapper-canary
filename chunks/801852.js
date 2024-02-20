@@ -18,8 +18,8 @@ var l = n("37983"),
   m = n("812204"),
   p = n("685665"),
   E = n("393414"),
-  g = n("161778"),
-  S = n("124824"),
+  S = n("161778"),
+  g = n("124824"),
   C = n("772280"),
   _ = n("82636"),
   I = n("599110"),
@@ -41,8 +41,8 @@ var l = n("37983"),
   w = n("789335"),
   F = n("274889"),
   k = n("894860"),
-  B = n("717387"),
-  V = n("861948");
+  V = n("717387"),
+  B = n("861948");
 let H = "vc-activities-".concat((0, o.v4)()),
   G = a.forwardRef(function(e, t) {
     let {
@@ -79,7 +79,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
       location: "activties_mini_shelf"
     }, {
       autoTrackExposure: !0
-    }), J = (0, u.useStateFromStores)([g.default], () => g.default.getState().theme), $ = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
+    }), J = (0, u.useStateFromStores)([S.default], () => S.default.getState().theme), $ = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
       id: ee,
       guild_id: et
     } = n;
@@ -157,7 +157,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
           })]
         }), (0, l.jsx)("img", {
           className: D.freeRight,
-          src: V,
+          src: B,
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
         })]
       }) : Z ? (0, l.jsxs)(r.Link, {
@@ -178,7 +178,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
         },
         children: [(0, l.jsx)("img", {
           alt: b.default.Messages.EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT,
-          src: B,
+          src: V,
           className: D.poster
         }), (0, l.jsx)("div", {
           className: D.posterDivider
@@ -199,7 +199,7 @@ let H = "vc-activities-".concat((0, o.v4)()),
         })]
       }) : null;
     return (0, l.jsx)(ea, {
-      children: (0, l.jsx)(S.default, {
+      children: (0, l.jsx)(g.default, {
         children: (0, l.jsxs)(d.Dialog, {
           ref: t,
           "aria-labelledby": H,

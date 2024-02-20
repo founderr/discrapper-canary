@@ -34,7 +34,7 @@ function x(e) {
         guildId: x
       })
     })
-  }, [x]), N = C.size > 0, M = T || S, A = !N && S && !p, v = n.useCallback(() => A ? E() : T ? void d.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, A, T]);
+  }, [x]), N = C.size > 0, M = T || S, v = !N && S && !p, A = n.useCallback(() => v ? E() : T ? void d.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, v, T]);
   return (0, a.jsxs)("div", {
     className: g.container,
     children: [(0, a.jsxs)("div", {
@@ -66,10 +66,10 @@ function x(e) {
       look: l.Button.Looks.BLANK,
       size: l.Button.Sizes.MIN,
       color: l.Button.Colors.GREEN,
-      onClick: v,
+      onClick: A,
       className: g.cta,
       innerClassName: g.button,
-      children: [A ? f.default.Messages.FORUM_EMPTY_STATE_CTA : f.default.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, a.jsx)(u.default, {
+      children: [v ? f.default.Messages.FORUM_EMPTY_STATE_CTA : f.default.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, a.jsx)(u.default, {
         width: 12
       })]
     })]

@@ -26,15 +26,15 @@ var a = s("37983"),
   E = s("36694"),
   N = s("945330"),
   M = s("717018"),
-  A = s("673078"),
-  v = s("68238"),
+  v = s("673078"),
+  A = s("68238"),
   I = s("904276"),
   j = s("772280"),
   R = s("423487"),
   O = s("956089"),
   F = s("659500"),
-  L = s("718517"),
-  b = s("526812"),
+  b = s("718517"),
+  L = s("526812"),
   P = s("404607"),
   y = s("713955"),
   D = s("339792"),
@@ -202,7 +202,7 @@ let q = (e, t, n) => {
     let l = n.useRef(0);
     n.useEffect(() => (s || !e || t ? clearTimeout(l.current) : l.current = setTimeout(() => {
       a()
-    }, 60 * L.default.Millis.SECOND), () => clearTimeout(l.current)), [e, t, a, s])
+    }, 60 * b.default.Millis.SECOND), () => clearTimeout(l.current)), [e, t, a, s])
   },
   er = (e, t, s) => {
     n.useEffect(() => {
@@ -293,7 +293,7 @@ let q = (e, t, n) => {
       channel: s,
       hasAnyThread: a,
       handleHide: l
-    } = e, [r, i] = n.useState(!1), o = (0, k.isOnboardingDismissed)(s.id), u = (0, h.useStateFromStores)([b.default], () => b.default.hasHidden(s.id)), d = et(t, s, a, i), c = d.isAllDone(), m = o || u || !ea(s.id);
+    } = e, [r, i] = n.useState(!1), o = (0, k.isOnboardingDismissed)(s.id), u = (0, h.useStateFromStores)([L.default], () => L.default.hasHidden(s.id)), d = et(t, s, a, i), c = d.isAllDone(), m = o || u || !ea(s.id);
     return el(c, m, r, l), {
       onboardingSteps: d,
       isHidden: u,
@@ -329,7 +329,7 @@ let q = (e, t, n) => {
       "aria-label": t ? z.default.Messages.COLLAPSE : z.default.Messages.EXPAND,
       children: t ? (0, a.jsx)(M.default, {
         className: W.closeIcon
-      }) : (0, a.jsx)(A.default, {
+      }) : (0, a.jsx)(v.default, {
         className: W.closeIcon
       })
     })
@@ -356,22 +356,22 @@ var ex = e => {
     onboardingSteps: S,
     isDismissed: N,
     isHidden: M,
-    isAllDone: A
+    isAllDone: v
   } = em({
     guild: o,
     channel: s,
     hasAnyThread: t,
     handleHide: _
-  }), F = !M && !N, L = (0, B.useForumPostComposerStoreApi)(), b = s.isMediaChannel(), P = e => L.getState().setOnboardingExpanded(e);
-  return (er(A, F, _), ei({
-    isAllDone: A,
+  }), F = !M && !N, b = (0, B.useForumPostComposerStoreApi)(), L = s.isMediaChannel(), P = e => b.getState().setOnboardingExpanded(e);
+  return (er(v, F, _), ei({
+    isAllDone: v,
     isVisible: F,
     canManageChannel: c,
     guild: o,
     channel: s
   }), en(N, M, g), n.useEffect(() => {
     (!t || !F) && P(!0)
-  }, []), null == o) ? null : F && c ? b ? t ? null : (0, a.jsx)(T.default, {
+  }, []), null == o) ? null : F && c ? L ? t ? null : (0, a.jsx)(T.default, {
     channel: s
   }) : (0, a.jsx)(a.Fragment, {
     children: m((e, t) => t ? (0, a.jsx)(u.animated.div, {
@@ -396,7 +396,7 @@ var ex = e => {
             }), (0, a.jsxs)(f.Text, {
               variant: "text-xs/normal",
               className: W.visibilityInfo,
-              children: [(0, a.jsx)(v.default, {
+              children: [(0, a.jsx)(A.default, {
                 width: 12,
                 height: 12,
                 className: W.icon

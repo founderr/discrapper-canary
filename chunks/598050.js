@@ -16,8 +16,8 @@ var l, a, s = n("37983"),
   m = n("973137"),
   p = n("661917"),
   E = n("85427"),
-  g = n("620103"),
-  S = n("297446"),
+  S = n("620103"),
+  g = n("297446"),
   C = n("782340"),
   _ = n("956630");
 let I = {
@@ -28,7 +28,7 @@ let I = {
 (a = l || (l = {}))[a.SELECTED = 0] = "SELECTED", a[a.SPEAKER = 1] = "SPEAKER", a[a.AUDIENCE = 2] = "AUDIENCE";
 let T = (e, t) => {
     let n = Math.floor(e / t - 8),
-      l = Math.floor(n / S.SPEAKER_TILE_ASPECT_RATIO);
+      l = Math.floor(n / g.SPEAKER_TILE_ASPECT_RATIO);
     return {
       speakerTileWidth: n,
       speakerTileHeight: l
@@ -55,16 +55,16 @@ var N = (0, o.default)(e => {
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: P,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
   }, U = (0, h.useThrottleDurationForChannel)(l.id), [w, F] = (0, h.useStageChannelParticipantsListThrottled)(l.id, D, U), k = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
-    speakerTileWidth: B,
-    speakerTileHeight: V
-  } = T(a, b), H = N ? a - 32 : Math.min(a - 64, 3 * B + 8), G = e => e === w.length - 1 || 0 === R && 1 === e, [W, Y] = i.useState(!1), [z, K] = i.useState(!1);
+    speakerTileWidth: V,
+    speakerTileHeight: B
+  } = T(a, b), H = N ? a - 32 : Math.min(a - 64, 3 * V + 8), G = e => e === w.length - 1 || 0 === R && 1 === e, [W, Y] = i.useState(!1), [z, K] = i.useState(!1);
   return (0, s.jsx)(p.default, {
     sections: k,
     renderSection: e => {
       let {
         section: t
       } = e;
-      if (1 === t) return 0 === M ? null : (0, s.jsx)(g.default, {
+      if (1 === t) return 0 === M ? null : (0, s.jsx)(S.default, {
         participantCount: M,
         label: C.default.Messages.SPEAKER_LABEL,
         className: _.header,
@@ -74,7 +74,7 @@ var N = (0, o.default)(e => {
         channel: l,
         isStreamLive: O
       }, "speaker-header-".concat(t));
-      if (2 === t) return 0 === R ? null : (0, s.jsx)(g.default, {
+      if (2 === t) return 0 === R ? null : (0, s.jsx)(S.default, {
         participantCount: R,
         label: C.default.Messages.AUDIENCE_LABEL,
         className: _.header,
@@ -96,7 +96,7 @@ var N = (0, o.default)(e => {
           if (0 === a.length || null == a[0]) return null;
           return (0, s.jsx)("div", {
             className: _.focusedRow,
-            children: (0, s.jsx)(S.default, {
+            children: (0, s.jsx)(g.default, {
               channel: l,
               participant: a[0],
               width: H
@@ -106,7 +106,7 @@ var N = (0, o.default)(e => {
           if (W) return null;
           return (0, s.jsx)(i.Fragment, {
             children: (0, s.jsx)(E.default, {
-              tileWidth: B,
+              tileWidth: V,
               channel: l,
               participants: a,
               selectedParticipant: j
@@ -125,7 +125,7 @@ var N = (0, o.default)(e => {
     },
     rowHeight: e => {
       let t = null == F[e][0];
-      return t ? 0 : 0 === e ? H / S.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? W ? 0 : V : z ? 0 : 98
+      return t ? 0 : 0 === e ? H / g.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? W ? 0 : B : z ? 0 : 98
     },
     renderFooter: e => {
       let {

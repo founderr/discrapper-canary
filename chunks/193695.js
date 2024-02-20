@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   DEFAULT_INCREASED_ACTIVITY_FORUM_POST_HEIGHT: function() {
-    return ev
+    return eA
   },
   default: function() {
     return eR
@@ -29,15 +29,15 @@ var a = s("37983"),
   E = s("605160"),
   N = s("875978"),
   M = s("70845"),
-  A = s("913491"),
-  v = s("95045"),
+  v = s("913491"),
+  A = s("95045"),
   I = s("574073"),
   j = s("359132"),
   R = s("836943"),
   O = s("933629"),
   F = s("592707"),
-  L = s("350134"),
-  b = s("232259"),
+  b = s("350134"),
+  L = s("232259"),
   P = s("144491"),
   y = s("208021"),
   D = s("582713"),
@@ -83,8 +83,8 @@ var a = s("37983"),
   eE = s("38050"),
   eN = s("649809"),
   eM = s("919163");
-let eA = 26,
-  ev = 162 + eA,
+let ev = 26,
+  eA = 162 + ev,
   eI = async () => {
     let {
       default: e
@@ -161,10 +161,10 @@ var eR = n.memo(function(e) {
   }), E = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(d.parent_id)), {
     ref: N,
     height: M
-  } = (0, _.default)(), A = (0, ec.useForumPostComposerStore)(e => e.setCardHeight), [v, I] = n.useState(162);
+  } = (0, _.default)(), v = (0, ec.useForumPostComposerStore)(e => e.setCardHeight), [A, I] = n.useState(162);
   n.useEffect(() => {
-    null != M && (A(s, M + eA), I(M))
-  }, [N, M, A, s, I, S]), n.useEffect(() => {
+    null != M && (v(s, M + ev), I(M))
+  }, [N, M, v, s, I, S]), n.useEffect(() => {
     null == i || i(u.current, s)
   }, [i, s, S]);
   let j = n.useRef(null),
@@ -178,13 +178,13 @@ var eR = n.memo(function(e) {
     }),
     {
       role: F,
-      onFocus: L,
-      ...b
+      onFocus: b,
+      ...L
     } = (0, c.useListItem)(s),
     {
       handleFocus: P,
       handleBlur: y
-    } = (0, eg.default)(L);
+    } = (0, eg.default)(b);
   return (0, a.jsxs)("div", {
     ref: u,
     "data-item-id": s,
@@ -206,7 +206,7 @@ var eR = n.memo(function(e) {
       className: eE.focusTarget,
       onFocus: P,
       onBlur: y,
-      ...b
+      ...L
     }), (0, a.jsxs)("div", {
       className: eE.body,
       children: [(0, a.jsx)("div", {
@@ -226,7 +226,7 @@ var eR = n.memo(function(e) {
         firstMedia: T,
         firstMessage: C,
         isEmbed: p,
-        contentHeight: v
+        contentHeight: A
       }) : (0, a.jsx)(em.ForumPostMediaPreviewPlaceholder, {})]
     })]
   })
@@ -277,7 +277,7 @@ function eO(e) {
       children: [null != n && (0, a.jsx)(eD, {
         channel: s,
         firstMessage: n
-      }), (0, a.jsx)(eL, {
+      }), (0, a.jsx)(eb, {
         parentChannel: t,
         channel: s,
         messageCount: l,
@@ -293,7 +293,7 @@ function eF(e) {
     firstMessage: t
   } = e, s = (0, f.useStateFromStores)([V.default], () => null != t && V.default.isBlocked(t.author.id)), {
     content: l
-  } = n.useMemo(() => (null == t ? void 0 : t.content) != null && "" !== t.content ? (0, v.default)(t, {
+  } = n.useMemo(() => (null == t ? void 0 : t.content) != null && "" !== t.content ? (0, A.default)(t, {
     formatInline: !0,
     noStyleAndInteraction: !0,
     allowHeading: !0,
@@ -308,7 +308,7 @@ function eF(e) {
   })
 }
 
-function eL(e) {
+function eb(e) {
   let {
     parentChannel: t,
     channel: s,
@@ -351,7 +351,7 @@ function eL(e) {
           messageCount: n,
           unreadCount: l,
           iconSize: 16
-        }), o.length > 0 ? (0, a.jsx)(eb, {
+        }), o.length > 0 ? (0, a.jsx)(eL, {
           channel: s,
           typingUserIds: o,
           facepileRef: i
@@ -374,7 +374,7 @@ function eL(e) {
   }) : d && 0 === n ? (0, a.jsx)(x.FocusBlock, {
     "aria-hidden": !0,
     className: eE.replies,
-    children: o.length > 0 ? (0, a.jsx)(eb, {
+    children: o.length > 0 ? (0, a.jsx)(eL, {
       channel: s,
       typingUserIds: o,
       facepileRef: i
@@ -384,7 +384,7 @@ function eL(e) {
   }) : null
 }
 
-function eb(e) {
+function eL(e) {
   let {
     channel: t,
     typingUserIds: s,
@@ -420,7 +420,7 @@ function eP(e) {
     let t = (0, f.useStateFromStores)([er.default], () => er.default.getHasSearchResults(e.parent_id)),
       s = (0, f.useStateFromStores)([er.default], () => er.default.getSearchQuery(e.parent_id)),
       a = n.useMemo(() => (0, S.createASTHighlighter)(t && null != s ? s : ""), [t, s]),
-      l = n.useMemo(() => (0, v.default)({
+      l = n.useMemo(() => (0, A.default)({
         content: e.name,
         embeds: []
       }, {
@@ -446,12 +446,12 @@ let ey = n.memo(function(e) {
     hasUnreads: i
   } = e, o = (0, I.useNullableMessageAuthor)(l), u = (0, f.useStateFromStores)([V.default], () => null != l && V.default.isBlocked(l.author.id)), d = (0, f.useStateFromStores)([B.default], () => B.default.can(eC.Permissions.MANAGE_MESSAGES, s)), c = U.RenderSpoilers.useSetting(), m = (0, eo.useIsRecentMessageDeleted)(s), {
     content: h
-  } = n.useMemo(() => (null == l ? void 0 : l.content) != null && "" !== l.content ? (0, v.default)(l, {
+  } = n.useMemo(() => (null == l ? void 0 : l.content) != null && "" !== l.content ? (0, A.default)(l, {
     formatInline: !0,
     noStyleAndInteraction: !0
   }) : {
     content: null
-  }, [l]), g = null != l && (0, A.default)(l), C = null;
+  }, [l]), g = null != l && (0, v.default)(l), C = null;
   if (u) C = (0, a.jsx)(x.Text, {
     className: eE.nonUserMessage,
     variant: "text-sm/medium",
@@ -490,7 +490,7 @@ let ey = n.memo(function(e) {
     }) : null
   }
   let _ = null != o ? null !== (t = o.nick) && void 0 !== t ? t : ep.default.Messages.UNKNOWN_USER : null,
-    S = (0, b.useUsernameHook)(null == l ? void 0 : l.author, s.id, s.guild_id, !0)(null != o ? o : void 0)((0, a.jsxs)(a.Fragment, {
+    S = (0, L.useUsernameHook)(null == l ? void 0 : l.author, s.id, s.guild_id, !0)(null != o ? o : void 0)((0, a.jsxs)(a.Fragment, {
       children: [null != _ ? _ : "", null != l ? ":" : ""]
     }), s.id);
   return (0, a.jsx)(X.ObscuredDisplayContext.Provider, {
@@ -531,7 +531,7 @@ function eD(e) {
       [eE.loading]: T
     }),
     ref: g,
-    children: [h && null != i ? (0, a.jsx)(L.Reaction, {
+    children: [h && null != i ? (0, a.jsx)(b.Reaction, {
       className: eE.defaultReaction,
       message: s,
       readOnly: !1,

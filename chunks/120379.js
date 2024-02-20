@@ -44,12 +44,12 @@ function _(e) {
     r = null !== (n = l[i + (Math.abs(s) > 0 ? s : 1)]) && void 0 !== n ? n : l[i - 1];
   return null != r ? r : null
 }
-let A = {
+let T = {
   scrollTop: 0,
   scrollHeight: 0,
   offsetHeight: 0
 };
-class T {
+class A {
   isReady() {
     return this.props.messages.ready
   }
@@ -289,7 +289,7 @@ class T {
   }
   getScrollerState() {
     var e, t;
-    return null !== (t = null === (e = this.ref.current) || void 0 === e ? void 0 : e.getScrollerState()) && void 0 !== t ? t : A
+    return null !== (t = null === (e = this.ref.current) || void 0 === e ? void 0 : e.getScrollerState()) && void 0 !== t ? t : T
   }
   isHeightChange(e, t) {
     return e !== this.offsetHeightCache || t !== this.scrollHeightCache
@@ -579,7 +579,7 @@ function M(e) {
     handleScrollFromBottom: c
   } = e, {
     windowId: f
-  } = a.useContext(d.default), [h] = a.useState(() => new T({
+  } = a.useContext(d.default), [h] = a.useState(() => new A({
     messages: t,
     channel: n,
     compact: s,

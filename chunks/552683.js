@@ -50,11 +50,11 @@ function C(e) {
     wrap: !0,
     scrollToStart: x,
     scrollToEnd: x
-  }), A = n.useRef(null);
+  }), v = n.useRef(null);
   return n.useEffect(() => {
     requestAnimationFrame(() => {
-      if (null != A.current) {
-        let e = A.current.querySelector(".".concat(g.tag));
+      if (null != v.current) {
+        let e = v.current.querySelector(".".concat(g.tag));
         null != e && e.focus()
       }
     })
@@ -91,7 +91,7 @@ function C(e) {
           } = e;
           return (0, a.jsx)("div", {
             ref: e => {
-              t.current = e, A.current = e
+              t.current = e, v.current = e
             },
             ...s,
             className: g.tagContainer,

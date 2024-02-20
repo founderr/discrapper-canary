@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   MediaPostThumbnail: function() {
-    return L
+    return b
   }
 });
 var a = s("37983"),
@@ -26,8 +26,8 @@ var a = s("37983"),
   E = s("987772"),
   N = s("228220"),
   M = s("58608"),
-  A = s("412861"),
-  v = s("42418"),
+  v = s("412861"),
+  A = s("42418"),
   I = s("782340"),
   j = s("632324");
 let R = [{
@@ -65,7 +65,7 @@ function F(e) {
     })
   })
 }
-let L = e => {
+let b = e => {
   var t;
   let {
     parentChannel: l
@@ -78,14 +78,14 @@ let L = e => {
     return {
       textAreaState: t
     }
-  }), C = (0, u.default)([m.default], () => m.default.keyboardModeEnabled), _ = (0, v.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => _.find(e => e.isThumbnail), [_]), L = null != _ && _.length > 0, b = n.useMemo(() => {
+  }), C = (0, u.default)([m.default], () => m.default.keyboardModeEnabled), _ = (0, A.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => _.find(e => e.isThumbnail), [_]), b = null != _ && _.length > 0, L = n.useMemo(() => {
     let e = (null == _ ? void 0 : _.length) > 1 ? 1.15 : 1;
     return {
       width: 153 * e,
       height: 86 * e
     }
   }, [_]), P = n.useCallback(e => {
-    null != M && c.default.remove(l.id, M.id, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type), (0, A.promptToUpload)(e.currentTarget.files, l, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type, {
+    null != M && c.default.remove(l.id, M.id, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type), (0, v.promptToUpload)(e.currentTarget.files, l, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type, {
       requireConfirm: !0,
       isThumbnail: !0
     }), e.currentTarget.value = null
@@ -125,12 +125,12 @@ let L = e => {
     "aria-hidden": !0,
     filters: R,
     "aria-describedby": O,
-    "aria-label": L ? I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
-    children: L ? (0, a.jsxs)(a.Fragment, {
+    "aria-label": b ? I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
+    children: b ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(F, {
         mediaAttachments: _,
-        containerWidth: b.width,
-        containerHeight: b.height
+        containerWidth: L.width,
+        containerHeight: L.height
       }), (0, a.jsxs)("div", {
         className: r(j.changeThumbnailLabelContainer, {
           [j.changeThumbnailLabelOverflow]: (null == _ ? void 0 : _.length) > 2
@@ -157,7 +157,7 @@ let L = e => {
   });
   return (0, a.jsx)("div", {
     className: j.thumbnailContainer,
-    style: b,
+    style: L,
     children: null != M ? (0, a.jsx)(g.default, {
       actions: (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(f.default, {

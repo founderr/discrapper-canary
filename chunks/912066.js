@@ -37,17 +37,17 @@ var a = s("37983"),
       return {
         guidelinesOpen: t
       }
-    }), A = (0, C.useCanManageChannel)(t), [v, I] = n.useState(!1), j = n.useCallback(e => {
+    }), v = (0, C.useCanManageChannel)(t), [A, I] = n.useState(!1), j = n.useCallback(e => {
       if (null == e) return;
       let t = e.clientHeight >= 220;
-      t !== v && I(t)
-    }, [v]);
+      t !== A && I(t)
+    }, [A]);
     n.useLayoutEffect(() => {
       setTimeout(l, 350)
     }, [M, l]);
     let R = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion),
       [O, F] = n.useState(!M),
-      L = (0, i.useSpring)({
+      b = (0, i.useSpring)({
         opacity: M ? 1 : 0,
         maxHeight: M ? 500 : 0,
         config: {
@@ -56,9 +56,9 @@ var a = s("37983"),
         immediate: R,
         onRest: () => F(!M)
       }),
-      b = null != t.topic && t.topic.length > 0;
-    return b ? (0, a.jsx)(i.animated.div, {
-      style: L,
+      L = null != t.topic && t.topic.length > 0;
+    return L ? (0, a.jsx)(i.animated.div, {
+      style: b,
       className: O ? p.hiddenVisually : void 0,
       children: (0, a.jsxs)("div", {
         className: p.container,
@@ -70,7 +70,7 @@ var a = s("37983"),
             children: [(0, a.jsx)(h.default, {
               width: 20,
               height: 20
-            }), T.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, a.jsx)(u.Clickable, {
+            }), T.default.Messages.FORUM_POST_GUIDELINES_TITLE, v && (0, a.jsx)(u.Clickable, {
               onClick: () => {
                 d.default.open(t.id, void 0, S.ChannelSettingsSubsections.TOPIC)
               },
@@ -110,7 +110,7 @@ var a = s("37983"),
                 allowList: !0
               })
             })
-          }), v && (0, a.jsxs)("div", {
+          }), A && (0, a.jsxs)("div", {
             className: p.showMore,
             children: [(0, a.jsx)("div", {
               className: p.gradient

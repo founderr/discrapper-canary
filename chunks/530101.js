@@ -17,15 +17,15 @@ var a = n("37983"),
 
 function E(e, t) {
   let E = e.guild_id,
-    M = i.useMemo(() => ({
+    m = i.useMemo(() => ({
       guildId: E,
       entity: e,
       entityType: l.GuildFeedItemTypes.FORUM_POST
     }), [E, e]),
-    m = (0, s.useStateFromStores)([r.default], () => r.default.getIsItemFeatured(M), [M]),
+    M = (0, s.useStateFromStores)([r.default], () => r.default.getIsItemFeatured(m), [m]),
     g = (0, o.useIsThreadModerator)(e),
-    S = (0, c.useCanGuildFeedFeatureChannel)(e);
-  return g && S ? m ? (0, a.jsx)(u.MenuItem, {
+    p = (0, c.useCanGuildFeedFeatureChannel)(e);
+  return g && p ? M ? (0, a.jsx)(u.MenuItem, {
     id: "guild-feed-unfeature",
     label: f.default.Messages.GUILD_FEED_UNFEATURE_FORUM_POST,
     action: () => (0, u.openModalLazy)(async () => {
@@ -33,7 +33,7 @@ function E(e, t) {
         UnfeatureItemConfirmationModal: e
       } = await n.el("969715").then(n.bind(n, "969715"));
       return t => (0, a.jsx)(e, {
-        featureableItem: M,
+        featureableItem: m,
         header: f.default.Messages.GUILD_FEED_UNFEATURE_FORUM_POST_MODAL_HEADER,
         body: f.default.Messages.GUILD_FEED_UNFEATURED_FORUM_POST_MODAL_BODY,
         ...t

@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return d
   },
   getInviteType: function() {
-    return _
+    return E
   }
 });
 var r = n("398604"),
@@ -47,7 +47,7 @@ function d(e) {
   return e.target_type === l.InviteTargetTypes.EMBEDDED_APPLICATION
 }
 
-function _(e) {
+function E(e) {
   var t, n;
   if ("number" == typeof e.type) return e.type;
   if ((t = e).type === l.InviteTypes.GROUP_DM || null != t.channel && (0, i.isMultiUserDM)(t.channel.type)) return l.InviteTypes.GROUP_DM;

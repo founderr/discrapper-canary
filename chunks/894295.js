@@ -74,10 +74,10 @@ function m(e) {
         cta: e
       })
     }, [g, t, m, E]),
-    A = s.useCallback(() => {}, []),
-    T = s.useCallback(e => {
-      _(e)(), A()
-    }, [A, _]),
+    T = s.useCallback(() => {}, []),
+    A = s.useCallback(e => {
+      _(e)(), T()
+    }, [T, _]),
     M = s.useCallback((e, s) => {
       (0, i.openModalLazy)(async () => {
         let {
@@ -91,7 +91,7 @@ function m(e) {
           return (0, a.jsx)(l, {
             transitionState: i,
             onBlock: _(e),
-            onBlockAndReport: () => T(e),
+            onBlockAndReport: () => A(e),
             onCancel: () => {
               null == r || r(), (0, c.trackCtaEvent)({
                 channelId: t,
@@ -106,7 +106,7 @@ function m(e) {
           })
         }
       })
-    }, [_, T, E, t, m]);
+    }, [_, A, E, t, m]);
   return (0, a.jsx)(f.SafetyWarningBanner, {
     channelId: t,
     warningId: m,

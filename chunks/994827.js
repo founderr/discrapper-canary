@@ -31,25 +31,25 @@ var l = n("77078"),
     let {
       channel: t,
       onSelect: n
-    } = e, u = (0, f.default)(t), r = (0, _.default)(t), p = (0, M.default)(t), O = (0, o.default)(t), U = (0, h.default)(t), v = (0, c.default)(t), L = (0, d.default)({
+    } = e, u = (0, f.default)(t), r = (0, _.default)(t), p = (0, M.default)(t), U = (0, o.default)(t), O = (0, h.default)(t), v = (0, c.default)(t), L = (0, d.default)({
       id: t.id,
       label: m.default.Messages.COPY_ID_THREAD
     }), G = (0, S.default)(t, "Context Menu"), R = (0, N.default)(t), F = (0, A.default)(t), y = (0, C.default)(t), D = (0, g.default)(t.id), b = (0, T.default)(t), H = (0, I.default)(t), P = (0, E.default)(t, {
       hoist: !0
-    }), j = (0, s.useAddToFavoritesItem)(t), x = (0, s.useRemoveFromFavoritesItem)(t);
+    }), x = (0, s.useAddToFavoritesItem)(t), j = (0, s.useRemoveFromFavoritesItem)(t);
     return (0, a.jsxs)(l.Menu, {
       navId: "thread-context",
       onClose: i.closeContextMenu,
       "aria-label": m.default.Messages.THREAD_ACTIONS_MENU_LABEL,
       onSelect: n,
       children: [(0, a.jsxs)(l.MenuGroup, {
-        children: [r, j]
+        children: [r, x]
       }, "mark-as-read-or-favorite"), (0, a.jsxs)(l.MenuGroup, {
-        children: [G, b, O, U, y, D, u]
+        children: [G, b, U, O, y, D, u]
       }, "thread-actions"), (0, a.jsxs)(l.MenuGroup, {
         children: [p, F]
       }, "notifications"), (0, a.jsx)(l.MenuGroup, {
-        children: x
+        children: j
       }), (0, a.jsxs)(l.MenuGroup, {
         children: [H, P, R, v]
       }, "admin-actions"), (0, a.jsx)(l.MenuGroup, {

@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return E
   },
   clearDirectorySearch: function() {
-    return g
+    return S
   },
   updateDirectoryEntry: function() {
-    return S
+    return g
   },
   selectDirectoryCategory: function() {
     return C
@@ -145,13 +145,13 @@ let E = a(async (e, t) => {
       })
     }
   }, 200),
-  g = e => {
+  S = e => {
     r.default.dispatch({
       type: "GUILD_DIRECTORY_SEARCH_CLEAR",
       channelId: e
     })
   },
-  S = async function(e, t, n) {
+  g = async function(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.DirectoryEntryCategories.UNCATEGORIZED,
       a = await i.default.patch({
         url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var l = n("37983"),
@@ -24,8 +24,8 @@ function E(e) {
     speaker: s,
     className: h
   } = e, E = (0, d.useAppContext)(), {
-    reducedMotion: g
-  } = a.useContext(r.AccessibilityPreferencesContext), S = (0, u.default)({
+    reducedMotion: S
+  } = a.useContext(r.AccessibilityPreferencesContext), g = (0, u.default)({
     userId: s.id
   }), C = null != s.member ? (0, m.getGuildMemberAvatarURL)(s.member) : null, _ = e => {
     (0, o.openContextMenuLazy)(e, async () => {
@@ -73,14 +73,14 @@ function E(e) {
           size: r.AvatarSizes.SIZE_24,
           className: i(p.avatar, h),
           "aria-label": s.userNick,
-          isSpeaking: S && !g.enabled
+          isSpeaking: g && !S.enabled
         })
       })
     })
   })
 }
 
-function g(e) {
+function S(e) {
   let {
     speakers: t,
     channel: n

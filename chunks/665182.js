@@ -64,22 +64,22 @@ function E(e) {
     c.default.updatedUnsyncedSettings({
       [E]: e
     })
-  }, [E]), A = (0, C.shouldChannelChatFloat)({
+  }, [E]), T = (0, C.shouldChannelChatFloat)({
     maxWidth: n
-  }), T = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = A ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
+  }), A = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = T ? A : A + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
   i.useEffect(() => {
-    null == a || a(T, A)
-  }, [T, a, A]);
+    null == a || a(A, T)
+  }, [A, a, T]);
   let I = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: o(p.chatTarget, {
-        [p.floating]: A,
-        [p.notFloating]: !A
+        [p.floating]: T,
+        [p.notFloating]: !T
       }),
       style: {
         width: M
       }
-    }), !A && (0, l.jsx)(m, {
+    }), !T && (0, l.jsx)(m, {
       maxWidth: n,
       resizableNode: f,
       onResize: S,
@@ -87,15 +87,15 @@ function E(e) {
     }), (0, l.jsx)("div", {
       ref: f,
       className: o(p.container, {
-        [p.floating]: A
+        [p.floating]: T
       }),
       style: {
-        width: T
+        width: A
       },
       children: s
     })]
   });
-  if (A) {
+  if (T) {
     let e = null != r ? r : i.Fragment;
     return (0, l.jsx)(e, {
       children: (0, l.jsx)("div", {

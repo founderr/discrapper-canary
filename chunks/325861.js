@@ -10,8 +10,8 @@ var r, i, l = n("917351"),
   o = n("913144"),
   s = n("42203"),
   d = n("923959"),
-  _ = n("26989"),
-  E = n("305961"),
+  E = n("26989"),
+  _ = n("305961"),
   c = n("697218"),
   I = n("800762"),
   S = n("991170"),
@@ -32,7 +32,7 @@ function A(e, t) {
     let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       u = s.default.getChannel(t),
       a = null == u ? void 0 : u.getGuildId(),
-      o = E.default.getGuild(a);
+      o = _.default.getGuild(a);
     if (null == o || null == u || !u.isGuildStageVoice()) return N;
     return {
       speaker: function(e, t) {
@@ -97,7 +97,7 @@ function O(e) {
 }
 class h extends a.default.Store {
   initialize() {
-    this.waitFor(_.default, s.default, E.default, c.default, I.default)
+    this.waitFor(E.default, s.default, _.default, c.default, I.default)
   }
   isSpeaker(e, t) {
     return this.getPermissionsForUser(e, t).speaker

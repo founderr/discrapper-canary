@@ -26,15 +26,15 @@ var a = s("37983"),
   E = s("236003"),
   N = s("549558"),
   M = s("884351"),
-  A = s("39331"),
-  v = s("82080"),
+  v = s("39331"),
+  A = s("82080"),
   I = s("328511"),
   j = s("467094"),
   R = s("24337"),
   O = s("967241"),
   F = s("517141"),
-  L = s("719926"),
-  b = s("474643"),
+  b = s("719926"),
+  L = s("474643"),
   P = s("957255"),
   y = s("401848"),
   D = s("585722"),
@@ -94,7 +94,7 @@ function ef(e) {
     }
   }, u.default), [g, x] = n.useState(null), C = n.useContext(Y.ComponentDispatchGroupContext), _ = n.useCallback(() => {
     C.bumpDispatchPriority()
-  }, [C]), S = (0, m.useStateFromStores)([P.default], () => P.default.can(eu.Permissions.ATTACH_FILES, t)), T = (0, m.useStateFromStoresArray)([D.default], () => D.default.getUploads(t.id, b.DraftType.FirstThreadMessage)), p = c && S && i, A = (null == t ? void 0 : t.isMediaChannel()) === !0, v = function(e, t) {
+  }, [C]), S = (0, m.useStateFromStores)([P.default], () => P.default.can(eu.Permissions.ATTACH_FILES, t)), T = (0, m.useStateFromStoresArray)([D.default], () => D.default.getUploads(t.id, L.DraftType.FirstThreadMessage)), p = c && S && i, v = (null == t ? void 0 : t.isMediaChannel()) === !0, A = function(e, t) {
     let s = (0, en.useForumPostComposerStoreApi)(),
       a = (0, $.useChannelTemplate)(e),
       l = n.useCallback(() => {
@@ -110,7 +110,7 @@ function ef(e) {
             var e, s, a, n;
             null === (s = t.current) || void 0 === s || null === (e = s._textArea) || void 0 === e || e.setSelectionRange(r.length, r.length), null === (n = t.current) || void 0 === n || null === (a = n._textArea) || void 0 === a || a.focus()
           }
-        }, 0), (o && r.length > 0 || i.textValue.trim().length > 0 && i.textValue.trim() !== a || D.default.getUploads(e.id, b.DraftType.FirstThreadMessage).length > 0) && l())
+        }, 0), (o && r.length > 0 || i.textValue.trim().length > 0 && i.textValue.trim() !== a || D.default.getUploads(e.id, L.DraftType.FirstThreadMessage).length > 0) && l())
       }, [s, e.id, a, t]);
     return l
   }(t, o), R = function(e) {
@@ -146,7 +146,7 @@ function ef(e) {
         var o;
         a = null === (o = I.default.getStickerPreview(e.id, eh.drafts.type)) || void 0 === o ? void 0 : o.map(e => e.id)
       }
-      if ((null == n || 0 === n.length) && (n = D.default.getUploads(e.id, b.DraftType.FirstThreadMessage)), null != n && n.length > 0 && e.isMediaChannel()) {
+      if ((null == n || 0 === n.length) && (n = D.default.getUploads(e.id, L.DraftType.FirstThreadMessage)), null != n && n.length > 0 && e.isMediaChannel()) {
         let e = n.findIndex(e => !0 === e.isThumbnail);
         if (e > -1) {
           let t = n[e];
@@ -230,7 +230,7 @@ function ef(e) {
       className: r(em.container, {
         [em.collapsed]: !c
       }),
-      onClick: !c && i ? v : void 0,
+      onClick: !c && i ? A : void 0,
       children: (0, a.jsxs)("form", {
         onMouseDown: _,
         onFocus: _,
@@ -258,14 +258,14 @@ function ef(e) {
               submit: R,
               disabled: !i
             }), f && (0, a.jsx)(eT, {})]
-          }), p && (A ? (0, a.jsx)(N.MediaPostThumbnail, {
+          }), p && (v ? (0, a.jsx)(N.MediaPostThumbnail, {
             parentChannel: t
           }) : (0, a.jsx)(ea.default, {
             channelId: t.id
           }))]
         }), (0, a.jsxs)("div", {
           className: em.form,
-          children: [p && A && (0, a.jsx)(E.default, {
+          children: [p && v && (0, a.jsx)(E.default, {
             parentChannel: t
           }), c && (0, a.jsx)(eE, {
             className: em.horizontalPadding,
@@ -309,11 +309,11 @@ let eg = n.memo(function(e) {
       }
     }, u.default), m = (0, en.useForumPostComposerStoreApi)(), x = (0, $.useChannelTemplate)(t), C = n.useCallback(() => {
       var e;
-      m.getState().resetFormState(), f.default.clearDraft(t.id, b.DraftType.ThreadSettings), f.default.clearDraft(t.id, b.DraftType.FirstThreadMessage), g.default.clearAll(t.id, b.DraftType.FirstThreadMessage), m.getState().setFormOpen(!1), m.getState().setBodyFocused(!1), m.getState().setTitleFocused(!1), m.getState().setHasClickedForm(!1), m.getState().setPreviewing(!1), null === (e = l.current) || void 0 === e || e.blur(), (0, et.trackForumNewPostCleared)({
+      m.getState().resetFormState(), f.default.clearDraft(t.id, L.DraftType.ThreadSettings), f.default.clearDraft(t.id, L.DraftType.FirstThreadMessage), g.default.clearAll(t.id, L.DraftType.FirstThreadMessage), m.getState().setFormOpen(!1), m.getState().setBodyFocused(!1), m.getState().setTitleFocused(!1), m.getState().setHasClickedForm(!1), m.getState().setPreviewing(!1), null === (e = l.current) || void 0 === e || e.blur(), (0, et.trackForumNewPostCleared)({
         guildId: t.guild_id,
         channelId: t.id
       })
-    }, [m, t.id, t.guild_id, l]), _ = n.useMemo(() => s && !r ? (0, a.jsx)(ev, {}) : s || r || 0 !== o.textValue.trim().length && o.textValue.trim() !== x ? !r && (i.trim().length > 0 || o.textValue.trim().length > 0 && o.textValue.trim() !== x || D.default.getUploads(t.id, b.DraftType.FirstThreadMessage).length > 0) && d ? (0, a.jsx)(z.default, {
+    }, [m, t.id, t.guild_id, l]), _ = n.useMemo(() => s && !r ? (0, a.jsx)(eA, {}) : s || r || 0 !== o.textValue.trim().length && o.textValue.trim() !== x ? !r && (i.trim().length > 0 || o.textValue.trim().length > 0 && o.textValue.trim() !== x || D.default.getUploads(t.id, L.DraftType.FirstThreadMessage).length > 0) && d ? (0, a.jsx)(z.default, {
       className: em.pencilIcon,
       width: 24,
       height: 24
@@ -385,7 +385,7 @@ let eg = n.memo(function(e) {
     });
     let p = n.useCallback(e => {
         let s = e.clipboardData.files[0];
-        null != s && s.type.startsWith("image/") && (e.preventDefault(), (0, Z.promptToUpload)([s], t, b.DraftType.FirstThreadMessage), x.getState().setFormOpenFromUserAction())
+        null != s && s.type.startsWith("image/") && (e.preventDefault(), (0, Z.promptToUpload)([s], t, L.DraftType.FirstThreadMessage), x.getState().setFormOpenFromUserAction())
       }, [t, x]),
       E = (0, q.renderError)(d, {
         content: c
@@ -488,12 +488,12 @@ let e_ = n.memo(function(e) {
     let {
       parentChannel: t,
       textValue: s
-    } = e, n = new L.default({
+    } = e, n = new b.default({
       channelId: t.id,
       content: s
     }), l = (0, x.useShowImprovedMarkdownUserExperimentConfig)(new Date().valueOf()), i = (0, x.useShowImprovedMarkdownGuildExperimentConfig)(t.guild_id, new Date().valueOf()), {
       content: o
-    } = (0, A.default)(n, {
+    } = (0, v.default)(n, {
       hideSimpleEmbedContent: !0,
       isInteracting: !1,
       formatInline: !1,
@@ -501,7 +501,7 @@ let e_ = n.memo(function(e) {
       allowHeading: !0,
       allowLinks: l.showMaskedLinks || i.showMaskedLinks,
       previewLinkTarget: l.showMaskedLinks || i.showMaskedLinks
-    }), u = (0, v.default)({
+    }), u = (0, A.default)({
       message: n,
       channel: t
     }, o, !1);
@@ -560,7 +560,7 @@ let e_ = n.memo(function(e) {
           richValue: s
         })
       }, [T]),
-      A = n.useCallback(e => {
+      v = n.useCallback(e => {
         let {
           value: t,
           uploads: a,
@@ -575,7 +575,7 @@ let e_ = n.memo(function(e) {
       event: eu.ComponentActions.TEXTAREA_BLUR,
       handler: N
     });
-    let v = (0, q.renderError)(f, {
+    let A = (0, q.renderError)(f, {
       content: x.textValue
     });
     return (0, a.jsx)("div", {
@@ -597,10 +597,10 @@ let e_ = n.memo(function(e) {
             focused: C,
             className: em.channelTextArea,
             innerClassName: r(em.channelTextAreaInner, {
-              [em.channelTextAreaInnerError]: null != v
+              [em.channelTextAreaInnerError]: null != A
             }),
             onChange: M,
-            onSubmit: A,
+            onSubmit: v,
             promptToUpload: Z.promptToUpload,
             disabled: l,
             onKeyDown: e => {
@@ -616,7 +616,7 @@ let e_ = n.memo(function(e) {
             autoCompletePosition: "bottom"
           })
         }), (0, a.jsx)(h.InputError, {
-          error: v
+          error: A
         })]
       })
     })
@@ -698,7 +698,7 @@ let eE = n.memo(function(e) {
     !S && x.getState().setPreviewing(!1)
   }, [S, x]), (0, a.jsxs)("div", {
     className: l,
-    children: [(0, a.jsx)(eA, {
+    children: [(0, a.jsx)(ev, {
       parentChannel: t
     }), (0, a.jsx)("div", {
       className: em.tagsDivider
@@ -766,7 +766,7 @@ function eN(e) {
       appliedTags: n,
       formOpen: l
     }
-  }), c = t.hasFlag(ed.ChannelFlags.REQUIRE_TAG) && 0 === u.size && o.length > 0 && i.textValue.length > 0, f = (0, m.useStateFromStoresArray)([D.default], () => D.default.getUploads(t.id, b.DraftType.FirstThreadMessage)), g = i.textValue.trim().length > 0 || f.length > 0, x = !c && g && o.trim().length > 0;
+  }), c = t.hasFlag(ed.ChannelFlags.REQUIRE_TAG) && 0 === u.size && o.length > 0 && i.textValue.length > 0, f = (0, m.useStateFromStoresArray)([D.default], () => D.default.getUploads(t.id, L.DraftType.FirstThreadMessage)), g = i.textValue.trim().length > 0 || f.length > 0, x = !c && g && o.trim().length > 0;
   if (__OVERLAY__) return null;
   let C = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -799,7 +799,7 @@ function eM() {
   return Promise.resolve()
 }
 
-function eA(e) {
+function ev(e) {
   let {
     parentChannel: t
   } = e, {
@@ -931,7 +931,7 @@ function eA(e) {
   })
 }
 
-function ev(e) {
+function eA(e) {
   let {
     style: t,
     className: s

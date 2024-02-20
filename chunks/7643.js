@@ -25,8 +25,8 @@ function E(e) {
     onAcceptSuccess: n,
     onRejectSuccess: s,
     onError: E
-  } = e, g = (0, C.default)(), [S, _] = a.useState(!1), [A, T] = a.useState(!1), [M, I] = a.useState(!1), [N, v] = a.useState(!1), [L, x] = a.useState(!1), R = S || A || M, y = a.useCallback(async e => {
-    if (!R) {
+  } = e, g = (0, C.default)(), [S, _] = a.useState(!1), [T, A] = a.useState(!1), [M, I] = a.useState(!1), [N, v] = a.useState(!1), [L, R] = a.useState(!1), x = S || T || M, y = a.useCallback(async e => {
+    if (!x) {
       _(!0);
       try {
         await (0, f.acceptMessageRequest)(e), v(!0), null == n || n()
@@ -37,33 +37,33 @@ function E(e) {
         _(!1)
       }
     }
-  }, [R, n, E]), O = a.useCallback(async e => {
-    if (!R) {
-      T(!0);
+  }, [x, n, E]), O = a.useCallback(async e => {
+    if (!x) {
+      A(!0);
       try {
-        await (0, f.rejectMessageRequest)(e), x(!0), null == s || s()
+        await (0, f.rejectMessageRequest)(e), R(!0), null == s || s()
       } catch (t) {
         let e = new i.APIError(t);
         null == E || E(e)
       } finally {
-        T(!1)
+        A(!1)
       }
     }
-  }, [R, s, E]), D = a.useCallback(async e => {
-    if (R) return;
-    T(!0);
+  }, [x, s, E]), D = a.useCallback(async e => {
+    if (x) return;
+    A(!0);
     let t = l(e, p.BATCH_REJECT_LIMIT);
     try {
       for (let e of t) await (0, f.rejectMessageRequestBatch)(e);
-      x(!0), null == s || s()
+      R(!0), null == s || s()
     } catch (t) {
       let e = new i.APIError(t);
       null == E || E(e)
     } finally {
-      T(!1)
+      A(!1)
     }
-  }, [R, s, E]), j = a.useCallback(async e => {
-    if (R) return;
+  }, [x, s, E]), j = a.useCallback(async e => {
+    if (x) return;
     if (null != t && null == o.default.getMutualGuilds(t.id)) {
       I(!0);
       try {
@@ -99,7 +99,7 @@ function E(e) {
         })
       }
     })
-  }, [y, R, t]), P = a.useCallback((e, t, n) => {
+  }, [y, x, t]), P = a.useCallback((e, t, n) => {
     let a = (a, s) => {
         s && d.NonSpamRetrainingOptIn.updateSetting(a), a && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,
@@ -126,7 +126,7 @@ function E(e) {
     rejectAll: D,
     markAsNotSpam: P,
     isAcceptLoading: S,
-    isRejectLoading: A,
+    isRejectLoading: T,
     isUserProfileLoading: M,
     isOptimisticAccepted: N,
     isOptimisticRejected: L

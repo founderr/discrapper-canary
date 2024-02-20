@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getMediaPostEmbedCommonData: function() {
-    return E
+    return _
   },
   getMediaPostEmbedChannelPath: function() {
     return c
@@ -18,13 +18,13 @@ var r = n("312016"),
   o = n("856220"),
   s = n("49111"),
   d = n("894488"),
-  _ = n("782340");
+  E = n("782340");
 
-function E(e) {
+function _(e) {
   var t, n, r, i, l;
   let {
     mediaPostEmbedData: s,
-    guild: E,
+    guild: _,
     parentChannel: c,
     postThread: I,
     user: S,
@@ -34,9 +34,9 @@ function E(e) {
   if (null == s) return null;
   let p = (0, o.getThumbnailImage)(s.thumbnail),
     N = !f && s.has_media_attachment,
-    A = f ? _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : _.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
+    A = f ? E.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : E.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
     R = null != S ? a.default.getName(s.guild_id, s.channel_id, S) : void 0,
-    C = null == S ? void 0 : S.getAvatarURL(null == E ? void 0 : E.id, 40);
+    C = null == S ? void 0 : S.getAvatarURL(null == _ ? void 0 : _.id, 40);
   (null == C || T !== s.guild_id) && (C = u.default.getGuildIconURL({
     id: s.guild_id,
     icon: s.guild_icon,
@@ -57,14 +57,14 @@ function E(e) {
     subtitle: s.description,
     ctaText: A,
     coverImage: p,
-    coverImageOverlayText: N ? _.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
+    coverImageOverlayText: N ? E.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
     parentChannelId: s.parent_channel_id,
     threadId: s.channel_id,
     postThread: I,
     messageId: s.message_id,
     canAccess: f,
     guildId: s.guild_id,
-    guildName: null !== (l = null == E ? void 0 : E.name) && void 0 !== l ? l : s.guild_name,
+    guildName: null !== (l = null == _ ? void 0 : _.name) && void 0 !== l ? l : s.guild_name,
     authorId: null == s ? void 0 : s.author_id,
     authorName: R,
     channelName: null == c ? void 0 : c.name,
