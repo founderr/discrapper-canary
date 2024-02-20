@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("93427"),
   C = n("700097"),
   p = n("95045"),
-  m = n("574073"),
-  E = n("909917"),
+  E = n("574073"),
+  m = n("909917"),
   g = n("380986"),
   S = n("49111"),
   _ = n("782340");
@@ -27,12 +27,12 @@ let T = s.memo(function(e) {
   let {
     baseMessage: A,
     referencedMessage: M,
-    channel: I,
-    compact: N = !1,
+    channel: N,
+    compact: I = !1,
     referencedUsernameProfile: v,
     referencedAvatarProfile: L,
     setPopout: R
-  } = e, x = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, m.useNullableMessageAuthor)(x), O = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = A.editedTimestamp) && void 0 !== t ? t : A.timestamp).valueOf()), D = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == I ? void 0 : I.guild_id) && void 0 !== n ? n : "", (null !== (T = A.editedTimestamp) && void 0 !== T ? T : A.timestamp).valueOf()), j = s.useMemo(() => {
+  } = e, x = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, E.useNullableMessageAuthor)(x), O = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = A.editedTimestamp) && void 0 !== t ? t : A.timestamp).valueOf()), D = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == N ? void 0 : N.guild_id) && void 0 !== n ? n : "", (null !== (T = A.editedTimestamp) && void 0 !== T ? T : A.timestamp).valueOf()), P = s.useMemo(() => {
     if (null == x) return null;
     if (x.type === S.MessageTypes.USER_JOIN) return (0, i.astToString)(C.default.getSystemMessageUserJoin(x.id).astFormat({
       username: null != y ? y.nick : x.author.username,
@@ -40,7 +40,7 @@ let T = s.memo(function(e) {
     }));
     if (x.type === S.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE) return (0, i.astToString)((0, u.getRoleSubscriptionPurchaseSystemMessageAstFormattedContent)({
       username: null != y ? y.nick : x.author.username,
-      guildId: null == I ? void 0 : I.guild_id,
+      guildId: null == N ? void 0 : N.guild_id,
       roleSubscriptionData: x.roleSubscriptionData
     }));
     if (x.type === S.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.astToString)((0, r.getApplicationSubscriptionSystemMessageASTContent)({
@@ -57,7 +57,7 @@ let T = s.memo(function(e) {
     }));
     else if (x.type === S.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT) return "" !== x.content ? x.content : _.default.Messages.DEADCHAT_PROMPT_1;
     if (null != x.content && "" !== x.content) {
-      let e = x.isFirstMessageInForumPost(I) ? {
+      let e = x.isFirstMessageInForumPost(N) ? {
         formatInline: !0,
         noStyleAndInteraction: !0,
         allowHeading: !0,
@@ -72,25 +72,25 @@ let T = s.memo(function(e) {
       return (0, p.default)(x, e).content
     }
     return null
-  }, [x, y, I, O, D]), P = (0, l.useStateFromStores)([f.default], () => null != x && f.default.isBlocked(x.author.id), [x]), b = (0, g.useContextMenuUser)(null == x ? void 0 : x.author.id, I.id), F = (0, g.useClickReply)(A, x, P), H = (0, g.useClickReferencedMessageAuthorUsername)(x, I, v, R), U = (0, g.useClickReferencedMessageAuthorAvatar)(L, R), k = s.useCallback(() => R({
+  }, [x, y, N, O, D]), j = (0, l.useStateFromStores)([f.default], () => null != x && f.default.isBlocked(x.author.id), [x]), b = (0, g.useContextMenuUser)(null == x ? void 0 : x.author.id, N.id), H = (0, g.useClickReply)(A, x, j), F = (0, g.useClickReferencedMessageAuthorUsername)(x, N, v, R), U = (0, g.useClickReferencedMessageAuthorAvatar)(L, R), k = s.useCallback(() => R({
     referencedUsernameProfile: !1,
     referencedAvatarProfile: !1
-  }), [R]), w = (0, m.useNullableMessageAuthor)(A);
+  }), [R]), w = (0, E.useNullableMessageAuthor)(A);
   return (0, a.jsx)(h.default, {
     repliedAuthor: y,
     baseMessage: A,
-    channel: I,
+    channel: N,
     baseAuthor: w,
     referencedMessage: M,
-    content: j,
-    compact: N,
-    isReplyAuthorBlocked: P,
+    content: P,
+    compact: I,
+    isReplyAuthorBlocked: j,
     showAvatarPopout: L,
     showUsernamePopout: v,
-    renderPopout: E.default,
+    renderPopout: m.default,
     onClickAvatar: U,
-    onClickUsername: H,
-    onClickReply: F,
+    onClickUsername: F,
+    onClickReply: H,
     onContextMenu: b,
     onPopoutRequestClose: k
   })

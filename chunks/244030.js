@@ -1,22 +1,22 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(e), s.d(e, {
   show: function() {
-    return o
+    return a
   },
   hide: function() {
-    return l
+    return o
   }
 });
-var i = n("913144");
+var n = s("913144");
 
-function o() {
-  i.default.dispatch({
+function a() {
+  n.default.dispatch({
     type: "SHOW_KEYBOARD_SHORTCUTS"
   })
 }
 
-function l() {
-  i.default.dispatch({
+function o() {
+  n.default.dispatch({
     type: "HIDE_KEYBOARD_SHORTCUTS"
   })
 }

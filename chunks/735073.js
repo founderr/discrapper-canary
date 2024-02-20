@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   useBreadcrumbs: function() {
-    return V
+    return _
   }
 });
 var r = n("783575"),
   a = n("239201"),
-  o = n("146664"),
-  i = n("82302"),
+  i = n("146664"),
+  o = n("82302"),
   s = n("785618"),
   c = n("991498"),
   l = n("75488"),
@@ -15,8 +15,8 @@ var r = n("783575"),
   d = n("63366"),
   p = n("477874"),
   f = n("384373"),
-  h = n("714322"),
-  m = n("808459"),
+  m = n("714322"),
+  h = n("808459"),
   v = n("960573"),
   g = n("514836"),
   y = n("766720"),
@@ -32,37 +32,37 @@ var r = n("783575"),
   T = n("907614"),
   M = n("284744"),
   R = n("904110"),
-  O = n("727020"),
-  I = n("941741"),
+  I = n("727020"),
+  O = n("941741"),
   A = n("481425"),
   L = n("906689"),
   N = n("212869"),
-  j = n("555016"),
-  F = n("240849"),
+  F = n("555016"),
+  j = n("240849"),
   K = n("564341"),
-  _ = {};
+  V = {};
 
-function V(e) {
+function _(e) {
   var t;
   let {
     "aria-label": n,
     ...r
   } = e;
-  let a = (0, K.useLocalizedStringFormatter)((t = _) && t.__esModule ? t.default : t, "@react-aria/breadcrumbs");
+  let a = (0, K.useLocalizedStringFormatter)((t = V) && t.__esModule ? t.default : t, "@react-aria/breadcrumbs");
   return {
     navProps: {
-      ...(0, F.filterDOMProps)(r, {
+      ...(0, j.filterDOMProps)(r, {
         labelable: !0
       }),
       "aria-label": n || a.format("breadcrumbs")
     }
   }
 }
-_ = {
+V = {
   "ar-AE": r.default,
   "bg-BG": a.default,
-  "cs-CZ": o.default,
-  "da-DK": i.default,
+  "cs-CZ": i.default,
+  "da-DK": o.default,
   "de-DE": s.default,
   "el-GR": c.default,
   "en-US": l.default,
@@ -70,8 +70,8 @@ _ = {
   "et-EE": d.default,
   "fi-FI": p.default,
   "fr-FR": f.default,
-  "he-IL": h.default,
-  "hr-HR": m.default,
+  "he-IL": m.default,
+  "hr-HR": h.default,
   "hu-HU": v.default,
   "it-IT": g.default,
   "ja-JP": y.default,
@@ -87,10 +87,10 @@ _ = {
   "ru-RU": T.default,
   "sk-SK": M.default,
   "sl-SI": R.default,
-  "sr-SP": O.default,
-  "sv-SE": I.default,
+  "sr-SP": I.default,
+  "sv-SE": O.default,
   "tr-TR": A.default,
   "uk-UA": L.default,
   "zh-CN": N.default,
-  "zh-TW": j.default
+  "zh-TW": F.default
 }

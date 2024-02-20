@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 });
 var r = n("884691"),
   a = n("275370"),
-  o = n.n(a),
-  i = {};
+  i = n.n(a),
+  o = {};
 
 function s(e, t) {
-  void 0 === t && (t = o);
-  var n = (0, r.useRef)(i),
+  void 0 === t && (t = i);
+  var n = (0, r.useRef)(o),
     a = n.current;
   return (0, r.useEffect)(function() {
     n.current = a
-  }), n.current !== i && t(e, n.current) || (a = e), a
+  }), n.current !== o && t(e, n.current) || (a = e), a
 }

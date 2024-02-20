@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   ResizeObserverDetail: function() {
-    return r
+    return n
   }
 });
-var r = function(e, t) {
+var n = function(e, t) {
   this.activeTargets = [], this.skippedTargets = [], this.observationTargets = [], this.observer = e, this.callback = t
 }

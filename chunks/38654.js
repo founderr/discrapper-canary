@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("222007"), n("702976"), n("808653");
 var i = n("446674"),
@@ -13,7 +13,7 @@ var i = n("446674"),
   u = n("49111"),
   c = n("397336");
 let d = {};
-class f extends i.default.Store {
+class p extends i.default.Store {
   hasViewingRoles() {
     return Object.keys(d).length > 0
   }
@@ -83,8 +83,8 @@ class f extends i.default.Store {
     }
   }
 }
-f.displayName = "ImpersonateStore";
-var E = new f(r.default, {
+p.displayName = "ImpersonateStore";
+var h = new p(r.default, {
   IMPERSONATE_UPDATE: function(e) {
     let {
       guildId: t,

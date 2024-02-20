@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return u
   }
 });
 var r = n("697309"),
@@ -24,7 +24,7 @@ function i(e) {
     return e[t] >= 0
   })
 }
-var s = {
+var u = {
   name: "hide",
   enabled: !0,
   phase: "main",
@@ -33,26 +33,26 @@ var s = {
     var t = e.state,
       n = e.name,
       r = t.rects.reference,
-      s = t.rects.popper,
-      u = t.modifiersData.preventOverflow,
+      u = t.rects.popper,
+      s = t.modifiersData.preventOverflow,
       l = (0, a.default)(t, {
         elementContext: "reference"
       }),
       c = (0, a.default)(t, {
         altBoundary: !0
       }),
-      d = o(l, r),
-      f = o(c, s, u),
-      p = i(d),
-      m = i(f);
+      f = o(l, r),
+      d = o(c, u, s),
+      p = i(f),
+      h = i(d);
     t.modifiersData[n] = {
-      referenceClippingOffsets: d,
-      popperEscapeOffsets: f,
+      referenceClippingOffsets: f,
+      popperEscapeOffsets: d,
       isReferenceHidden: p,
-      hasPopperEscaped: m
+      hasPopperEscaped: h
     }, t.attributes.popper = Object.assign({}, t.attributes.popper, {
       "data-popper-reference-hidden": p,
-      "data-popper-escaped": m
+      "data-popper-escaped": h
     })
   }
 }

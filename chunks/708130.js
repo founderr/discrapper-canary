@@ -1,40 +1,40 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return d
   }
-}), E("222007");
-var t = E("446674"),
-  o = E("913144"),
-  n = E("689988"),
-  r = E("404607"),
-  i = E("271938"),
-  a = E("42203");
-class I extends n.default {
+}), n("222007");
+var i = n("446674"),
+  a = n("913144"),
+  l = n("689988"),
+  s = n("404607"),
+  r = n("271938"),
+  o = n("42203");
+class u extends l.default {
   handleChannelDelete(e) {
     let {
-      channel: _
+      channel: t
     } = e;
-    if (null != _.guild_id) {
-      let e = a.default.getAllThreadsForParent(_.id);
-      e.length > 0 && t.default.Emitter.batched(() => {
-        for (let _ of e) o.default.dispatch({
+    if (null != t.guild_id) {
+      let e = o.default.getAllThreadsForParent(t.id);
+      e.length > 0 && i.default.Emitter.batched(() => {
+        for (let t of e) a.default.dispatch({
           type: "THREAD_DELETE",
-          channel: _
+          channel: t
         })
       })
     }
   }
   handleMessageCreate(e) {
-    var _, E, t;
+    var t, n, i;
     let {
-      channelId: o,
-      message: n
-    } = e, I = a.default.getChannel(o);
-    if ((null === (_ = n.author) || void 0 === _ ? void 0 : _.id) !== i.default.getId() || !(null == I ? void 0 : I.isActiveThread())) return;
-    let s = new Date(null !== (t = null === (E = I.threadMetadata) || void 0 === E ? void 0 : E.archiveTimestamp) && void 0 !== t ? t : 0).getTime(),
-      T = Date.now() - s;
-    T < 5e3 && r.default.resort(I.parent_id)
+      channelId: a,
+      message: l
+    } = e, u = o.default.getChannel(a);
+    if ((null === (t = l.author) || void 0 === t ? void 0 : t.id) !== r.default.getId() || !(null == u ? void 0 : u.isActiveThread())) return;
+    let d = new Date(null !== (i = null === (n = u.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== i ? i : 0).getTime(),
+      c = Date.now() - d;
+    c < 5e3 && s.default.resort(u.parent_id)
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -43,4 +43,4 @@ class I extends n.default {
     }
   }
 }
-var s = new I
+var d = new u

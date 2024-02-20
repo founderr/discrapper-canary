@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   getApplicationResolution: function() {
-    return f
+    return p
   },
   ApplicationStreamFPS: function() {
     return r
@@ -13,35 +13,35 @@ n.r(t), n.d(t, {
     return s
   },
   getApplicationFramerate: function() {
-    return E
-  },
-  ApplicationStreamPresetValues: function() {
-    return p
-  },
-  ApplicationStreamSettingRequirements: function() {
     return h
   },
-  ApplicationStreamResolutionButtons: function() {
-    return S
+  ApplicationStreamPresetValues: function() {
+    return f
   },
-  GoLiveDeviceResolutionButtons: function() {
+  ApplicationStreamSettingRequirements: function() {
+    return E
+  },
+  ApplicationStreamResolutionButtons: function() {
     return m
   },
+  GoLiveDeviceResolutionButtons: function() {
+    return S
+  },
   ApplicationStreamResolutionButtonsWithSuffixLabel: function() {
-    return g
+    return T
   },
   ApplicationStreamFPSButtons: function() {
     return I
   },
   ApplicationStreamFPSButtonsWithSuffixLabel: function() {
-    return C
+    return v
   }
 }), n("70102");
 var i, r, s, a, o, l, u = n("49111"),
   c = n("646718"),
   d = n("782340");
 
-function f(e) {
+function p(e) {
   switch (e) {
     case 480:
       return 480;
@@ -56,7 +56,7 @@ function f(e) {
   }
 }
 
-function E(e) {
+function h(e) {
   switch (e) {
     case 5:
       return 5;
@@ -70,7 +70,7 @@ function E(e) {
       throw Error("Unknown frame rate: ".concat(e))
   }
 }(a = i || (i = {}))[a.RESOLUTION_480 = 480] = "RESOLUTION_480", a[a.RESOLUTION_720 = 720] = "RESOLUTION_720", a[a.RESOLUTION_1080 = 1080] = "RESOLUTION_1080", a[a.RESOLUTION_1440 = 1440] = "RESOLUTION_1440", a[a.RESOLUTION_SOURCE = 0] = "RESOLUTION_SOURCE", (o = r || (r = {}))[o.FPS_5 = 5] = "FPS_5", o[o.FPS_15 = 15] = "FPS_15", o[o.FPS_30 = 30] = "FPS_30", o[o.FPS_60 = 60] = "FPS_60", (l = s || (s = {}))[l.PRESET_VIDEO = 1] = "PRESET_VIDEO", l[l.PRESET_DOCUMENTS = 2] = "PRESET_DOCUMENTS", l[l.PRESET_CUSTOM = 3] = "PRESET_CUSTOM";
-let p = {
+let f = {
     2: [{
       resolution: 0,
       fps: 15
@@ -93,7 +93,7 @@ let p = {
     }],
     3: []
   },
-  h = [{
+  E = [{
     resolution: 0,
     fps: 60,
     quality: c.StreamQualities.HIGH_STREAMING_QUALITY
@@ -177,12 +177,12 @@ function _(e, t) {
     }
   }
 }
-let S = [_(720), _(1080), _(1440), _(0, () => d.default.Messages.SCREENSHARE_SOURCE)],
-  m = [_(720), _(1080), _(1440)],
-  T = e => "".concat(e, "p"),
-  g = [_(480, () => T(480)), _(720, () => T(720)), _(1080, () => T(1080)), _(1440, () => T(1440)), _(0, () => d.default.Messages.SCREENSHARE_SOURCE)],
+let m = [_(720), _(1080), _(1440), _(0, () => d.default.Messages.SCREENSHARE_SOURCE)],
+  S = [_(720), _(1080), _(1440)],
+  g = e => "".concat(e, "p"),
+  T = [_(480, () => g(480)), _(720, () => g(720)), _(1080, () => g(1080)), _(1440, () => g(1440)), _(0, () => d.default.Messages.SCREENSHARE_SOURCE)],
   I = [_(15), _(30), _(60)],
-  C = [_(15, () => d.default.Messages.STREAM_FPS_OPTION.format({
+  v = [_(15, () => d.default.Messages.STREAM_FPS_OPTION.format({
     value: 15
   })), _(30, () => d.default.Messages.STREAM_FPS_OPTION.format({
     value: 30

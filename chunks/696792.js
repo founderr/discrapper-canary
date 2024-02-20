@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useButton: function() {
-    return i
+    return o
   },
   useToggleButton: function() {
     return s
@@ -9,11 +9,11 @@ n.r(t), n.d(t, {
 });
 var r = n("240849"),
   a = n("447259"),
-  o = n("388032");
+  i = n("388032");
 
-function i(e, t) {
+function o(e, t) {
   let n, {
-    elementType: i = "button",
+    elementType: o = "button",
     isDisabled: s,
     onPress: c,
     onPressStart: l,
@@ -21,30 +21,30 @@ function i(e, t) {
     onPressUp: d,
     onPressChange: p,
     preventFocusOnPress: f,
-    allowFocusWhenDisabled: h,
-    onClick: m,
+    allowFocusWhenDisabled: m,
+    onClick: h,
     href: v,
     target: g,
     rel: y,
     type: b = "button"
   } = e;
-  n = "button" === i ? {
+  n = "button" === o ? {
     type: b,
     disabled: s
   } : {
     role: "button",
     tabIndex: s ? void 0 : 0,
-    href: "a" === i && s ? void 0 : v,
-    target: "a" === i ? g : void 0,
-    type: "input" === i ? b : void 0,
-    disabled: "input" === i ? s : void 0,
-    "aria-disabled": s && "input" !== i ? s : void 0,
-    rel: "a" === i ? y : void 0
+    href: "a" === o && s ? void 0 : v,
+    target: "a" === o ? g : void 0,
+    type: "input" === o ? b : void 0,
+    disabled: "input" === o ? s : void 0,
+    "aria-disabled": s && "input" !== o ? s : void 0,
+    rel: "a" === o ? y : void 0
   };
   let {
     pressProps: x,
     isPressed: S
-  } = (0, o.usePress)({
+  } = (0, i.usePress)({
     onPressStart: l,
     onPressEnd: u,
     onPressChange: p,
@@ -56,7 +56,7 @@ function i(e, t) {
   }), {
     focusableProps: w
   } = (0, a.useFocusable)(e, t);
-  h && (w.tabIndex = s ? -1 : w.tabIndex);
+  m && (w.tabIndex = s ? -1 : w.tabIndex);
   let D = (0, r.mergeProps)(w, x, (0, r.filterDOMProps)(e, {
     labelable: !0
   }));
@@ -68,7 +68,7 @@ function i(e, t) {
       "aria-controls": e["aria-controls"],
       "aria-pressed": e["aria-pressed"],
       onClick: e => {
-        m && (m(e), console.warn("onClick is deprecated, please use onPress"))
+        h && (h(e), console.warn("onClick is deprecated, please use onPress"))
       }
     })
   }
@@ -78,14 +78,14 @@ function s(e, t, n) {
   let {
     isSelected: a
   } = t, {
-    isPressed: o,
+    isPressed: i,
     buttonProps: s
-  } = i({
+  } = o({
     ...e,
     onPress: (0, r.chain)(t.toggle, e.onPress)
   }, n);
   return {
-    isPressed: o,
+    isPressed: i,
     buttonProps: (0, r.mergeProps)(s, {
       "aria-pressed": a
     })

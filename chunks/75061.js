@@ -1,73 +1,73 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return h
+    return I
   },
   TestimonialHero: function() {
-    return I
+    return O
   }
-}), s("222007");
-var a = s("37983"),
-  i = s("884691"),
-  n = s("414456"),
-  l = s.n(n),
-  r = s("907002"),
-  o = s("446674"),
-  d = s("77078"),
-  c = s("206230"),
-  u = s("246053"),
-  m = s("782340"),
-  f = s("148143");
+}), n("222007");
+var a = n("37983"),
+  l = n("884691"),
+  s = n("414456"),
+  i = n.n(s),
+  r = n("907002"),
+  d = n("446674"),
+  o = n("77078"),
+  u = n("206230"),
+  c = n("246053"),
+  N = n("782340"),
+  _ = n("148143");
 
-function h(e) {
+function I(e) {
   let {
     message: t,
-    adminTitle: s,
-    profilePic: i,
-    emphasisColor: n = "interactive-normal",
+    adminTitle: n,
+    profilePic: l,
+    emphasisColor: s = "interactive-normal",
     arrowPosition: r,
-    className: o
+    className: d
   } = e;
   return (0, a.jsxs)("div", {
-    className: l(f.testimonialContainer, o),
-    children: [(0, a.jsx)(N, {
+    className: i(_.testimonialContainer, d),
+    children: [(0, a.jsx)(E, {
       testimonial: {
         message: t,
-        adminTitle: s,
-        profilePic: i,
-        emphasisColor: n
+        adminTitle: n,
+        profilePic: l,
+        emphasisColor: s
       }
-    }), (0, a.jsx)(d.Text, {
+    }), (0, a.jsx)(o.Text, {
       variant: "text-lg/bold",
-      className: f.quotes,
+      className: _.quotes,
       children: "“"
     }), (0, a.jsx)("div", {
-      className: l(f.arrow, {
-        [f.arrowRight]: "right" === r,
-        [f.arrowLeft]: "left" === r
+      className: i(_.arrow, {
+        [_.arrowRight]: "right" === r,
+        [_.arrowLeft]: "left" === r
       }),
-      children: (0, a.jsx)(x, {})
+      children: (0, a.jsx)(f, {})
     })]
   })
 }
 
-function N(e) {
+function E(e) {
   let {
     testimonial: t,
-    className: s
+    className: n
   } = e, {
-    message: i,
-    profilePic: n,
-    adminTitle: l,
+    message: l,
+    profilePic: s,
+    adminTitle: i,
     emphasisColor: r = "interactive-normal"
   } = t;
   return (0, a.jsxs)("div", {
-    className: s,
-    children: [(0, a.jsx)(d.Text, {
+    className: n,
+    children: [(0, a.jsx)(o.Text, {
       variant: "text-sm/medium",
       color: "header-secondary",
-      children: i.format({
-        testimonialHook: (e, t) => (0, a.jsx)(d.Text, {
+      children: l.format({
+        testimonialHook: (e, t) => (0, a.jsx)(o.Text, {
           tag: "span",
           variant: "text-sm/bold",
           color: r,
@@ -75,21 +75,21 @@ function N(e) {
         }, t)
       })
     }), (0, a.jsxs)("div", {
-      className: f.userContainer,
-      children: [(0, a.jsx)(d.Avatar, {
-        src: n,
-        size: d.AvatarSizes.SIZE_16,
+      className: _.userContainer,
+      children: [(0, a.jsx)(o.Avatar, {
+        src: s,
+        size: o.AvatarSizes.SIZE_16,
         "aria-hidden": !0
-      }), (0, a.jsx)(d.Text, {
+      }), (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: l
+        children: i
       })]
     })]
   })
 }
 
-function x() {
+function f() {
   return (0, a.jsx)("svg", {
     width: "12",
     height: "20",
@@ -103,103 +103,103 @@ function x() {
   })
 }
 
-function I(e) {
+function O(e) {
   let {
     testimonials: t
   } = e, [
-    [s, n], l
-  ] = i.useState([0, "right"]), r = i.useCallback(() => {
-    l(e => {
-      let [s] = e;
-      return 0 === s ? [t.length - 1, "left"] : [s - 1, "left"]
+    [n, s], i
+  ] = l.useState([0, "right"]), r = l.useCallback(() => {
+    i(e => {
+      let [n] = e;
+      return 0 === n ? [t.length - 1, "left"] : [n - 1, "left"]
     })
-  }, [l, t.length]), o = i.useCallback(() => {
-    l(e => {
-      let [s] = e;
-      return [(s + 1) % t.length, "right"]
+  }, [i, t.length]), d = l.useCallback(() => {
+    i(e => {
+      let [n] = e;
+      return [(n + 1) % t.length, "right"]
     })
-  }, [l, t.length]), c = t[s], h = i.useCallback((e, t, s, i) => (0, a.jsx)(D, {
+  }, [i, t.length]), u = t[n], I = l.useCallback((e, t, n, l) => (0, a.jsx)(S, {
     item: t,
-    state: s,
-    cleanup: i,
-    direction: n
-  }, e), [n]);
+    state: n,
+    cleanup: l,
+    direction: s
+  }, e), [s]);
   return (0, a.jsxs)("div", {
-    className: f.testimonialHeroContainer,
+    className: _.testimonialHeroContainer,
     children: [(0, a.jsx)("div", {
-      className: f.animatedContainer,
-      children: (0, a.jsx)(d.TransitionGroup, {
-        items: [c],
-        renderItem: h,
+      className: _.animatedContainer,
+      children: (0, a.jsx)(o.TransitionGroup, {
+        items: [u],
+        renderItem: I,
         getItemKey: e => e.adminTitle
       })
-    }), (0, a.jsx)(d.Text, {
+    }), (0, a.jsx)(o.Text, {
       variant: "text-lg/bold",
-      className: f.heroQuotes,
+      className: _.heroQuotes,
       children: "“"
     }), (0, a.jsxs)("div", {
-      className: f.testimonialsControls,
-      children: [(0, a.jsxs)(d.Button, {
-        className: f.testimonialControl,
-        innerClassName: f.testimonialControlInner,
+      className: _.testimonialsControls,
+      children: [(0, a.jsxs)(o.Button, {
+        className: _.testimonialControl,
+        innerClassName: _.testimonialControlInner,
         onClick: r,
-        size: d.Button.Sizes.MIN,
-        color: d.Button.Colors.PRIMARY,
-        children: [(0, a.jsx)(u.default, {
-          className: f.testimonialControlIcon,
-          direction: u.default.Directions.LEFT
-        }), (0, a.jsx)(d.HiddenVisually, {
-          children: m.default.Messages.BACK
+        size: o.Button.Sizes.MIN,
+        color: o.Button.Colors.PRIMARY,
+        children: [(0, a.jsx)(c.default, {
+          className: _.testimonialControlIcon,
+          direction: c.default.Directions.LEFT
+        }), (0, a.jsx)(o.HiddenVisually, {
+          children: N.default.Messages.BACK
         })]
-      }), (0, a.jsxs)(d.Button, {
-        className: f.testimonialControl,
-        innerClassName: f.testimonialControlInner,
-        onClick: o,
-        size: d.Button.Sizes.MIN,
-        color: d.Button.Colors.PRIMARY,
-        children: [(0, a.jsx)(u.default, {
-          className: f.testimonialControlIcon,
-          direction: u.default.Directions.RIGHT
-        }), (0, a.jsx)(d.HiddenVisually, {
-          children: m.default.Messages.NEXT
+      }), (0, a.jsxs)(o.Button, {
+        className: _.testimonialControl,
+        innerClassName: _.testimonialControlInner,
+        onClick: d,
+        size: o.Button.Sizes.MIN,
+        color: o.Button.Colors.PRIMARY,
+        children: [(0, a.jsx)(c.default, {
+          className: _.testimonialControlIcon,
+          direction: c.default.Directions.RIGHT
+        }), (0, a.jsx)(o.HiddenVisually, {
+          children: N.default.Messages.NEXT
         })]
       })]
     })]
   })
 }
 
-function D(e) {
+function S(e) {
   let {
     item: t,
-    state: s,
-    cleanup: i,
-    direction: n
-  } = e, l = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [u] = (0, r.useSpring)(() => {
-    switch (s) {
-      case d.TransitionStates.ENTERED:
+    state: n,
+    cleanup: l,
+    direction: s
+  } = e, i = (0, d.useStateFromStores)([u.default], () => u.default.useReducedMotion), [c] = (0, r.useSpring)(() => {
+    switch (n) {
+      case o.TransitionStates.ENTERED:
         return {
           from: {
-            transform: "right" === n ? "translateX(150%)" : "translate(-150%)"
+            transform: "right" === s ? "translateX(150%)" : "translate(-150%)"
           }, to: {
             transform: "translateX(0%)"
-          }, immediate: l
+          }, immediate: i
         };
-      case d.TransitionStates.YEETED:
+      case o.TransitionStates.YEETED:
         return {
           from: {
             transform: "translateX(0%)"
           }, to: {
-            transform: "right" === n ? "translateX(-150%)" : "translate(150%)"
-          }, immediate: l, onRest: i
+            transform: "right" === s ? "translateX(-150%)" : "translate(150%)"
+          }, immediate: i, onRest: l
         };
       default:
         return {}
     }
-  }, [s]);
+  }, [n]);
   return (0, a.jsx)(r.animated.div, {
-    style: u,
-    children: (0, a.jsx)(N, {
-      className: f.testimonial,
+    style: c,
+    children: (0, a.jsx)(E, {
+      className: _.testimonial,
       testimonial: t
     })
   })

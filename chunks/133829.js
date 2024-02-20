@@ -22,8 +22,8 @@ function h(e) {
     senderId: h,
     warningType: C,
     header: p,
-    description: m,
-    onDismiss: E,
+    description: E,
+    onDismiss: m,
     primaryButtonText: g,
     secondaryButtonText: S,
     primaryButtonColor: _,
@@ -36,15 +36,15 @@ function h(e) {
       name: l.MetricEvents.SAFETY_WARNING_VIEW
     })
   }, []);
-  let I = s.useCallback(() => {
-    null == E || E(), (0, u.trackCtaEvent)({
+  let N = s.useCallback(() => {
+    null == m || m(), (0, u.trackCtaEvent)({
       channelId: t,
       warningId: n,
       senderId: h,
       warningType: C,
       cta: u.CtaEventTypes.DISMISS
     })
-  }, [E, t, n, h, C]);
+  }, [m, t, n, h, C]);
   return (0, a.jsxs)("div", {
     className: c.strangerDangerBanner,
     children: [(0, a.jsxs)("div", {
@@ -61,7 +61,7 @@ function h(e) {
         }), (0, a.jsx)(i.Text, {
           variant: "text-sm/normal",
           color: "text-primary",
-          children: m
+          children: E
         })]
       })]
     }), (0, a.jsxs)("div", {
@@ -83,7 +83,7 @@ function h(e) {
       })]
     }), (0, a.jsx)(i.Clickable, {
       className: c.closeButton,
-      onClick: I,
+      onClick: N,
       role: "button",
       "aria-label": d.default.Messages.DISMISS,
       children: (0, a.jsx)(o.default, {

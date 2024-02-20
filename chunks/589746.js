@@ -1,19 +1,19 @@
 "use strict";
-var r = n("911718"),
-  a = n("307904"),
-  o = n("638839")(),
-  i = n("293471"),
-  s = r("%TypeError%"),
-  c = r("%Math.floor%");
-e.exports = function(e, t) {
-  if ("function" != typeof e) throw new s("`fn` is not a function");
-  if ("number" != typeof t || t < 0 || t > 4294967295 || c(t) !== t) throw new s("`length` must be a positive 32-bit integer");
-  var n = arguments.length > 2 && !!arguments[2],
-    r = !0,
-    l = !0;
-  if ("length" in e && i) {
-    var u = i(e, "length");
-    u && !u.configurable && (r = !1), u && !u.writable && (l = !1)
+var n = r("911718"),
+  o = r("307904"),
+  i = r("638839")(),
+  a = r("293471"),
+  u = n("%TypeError%"),
+  l = n("%Math.floor%");
+t.exports = function(t, e) {
+  if ("function" != typeof t) throw new u("`fn` is not a function");
+  if ("number" != typeof e || e < 0 || e > 4294967295 || l(e) !== e) throw new u("`length` must be a positive 32-bit integer");
+  var r = arguments.length > 2 && !!arguments[2],
+    n = !0,
+    s = !0;
+  if ("length" in t && a) {
+    var c = a(t, "length");
+    c && !c.configurable && (n = !1), c && !c.writable && (s = !1)
   }
-  return (r || l || !n) && (o ? a(e, "length", t, !0, !0) : a(e, "length", t)), e
+  return (n || s || !r) && (i ? o(t, "length", e, !0, !0) : o(t, "length", e)), t
 }

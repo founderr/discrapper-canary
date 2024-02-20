@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   init: function() {
-    return S
-  },
-  destroy: function() {
     return m
   },
+  destroy: function() {
+    return S
+  },
   installApplication: function() {
-    return T
+    return g
   },
   repairApplication: function() {
-    return g
+    return T
   },
   updateApplication: function() {
     return I
   },
   uninstallApplication: function() {
-    return C
+    return v
   },
   resume: function() {
-    return v
+    return C
   },
   pause: function() {
     return A
@@ -31,13 +31,13 @@ n.r(t), n.d(t, {
     return N
   },
   removeFinished: function() {
-    return O
+    return y
   },
   completeRepair: function() {
-    return D
+    return O
   },
   completeInstall: function() {
-    return y
+    return D
   }
 }), n("70102");
 var i = n("872717"),
@@ -49,14 +49,14 @@ var i = n("872717"),
   u = n("98328"),
   c = n("599110"),
   d = n("645672"),
-  f = n("269180"),
-  E = n("152723"),
-  p = n("71313"),
-  h = n("49111"),
+  p = n("269180"),
+  h = n("152723"),
+  f = n("71313"),
+  E = n("49111"),
   _ = n("782340");
 
-function S(e, t) {
-  E.default.init({
+function m(e, t) {
+  h.default.init({
     userToken: e,
     userId: t,
     installPaths: u.default.installationPaths,
@@ -76,11 +76,11 @@ function S(e, t) {
   })
 }
 
-function m() {
-  E.default.destroy()
+function S() {
+  h.default.destroy()
 }
 
-function T(e) {
+function g(e) {
   let {
     application: t,
     branchId: n,
@@ -89,7 +89,7 @@ function T(e) {
     installationPath: a,
     analyticsLocation: o
   } = e;
-  E.default.setTargetManifest({
+  h.default.setTargetManifest({
     applicationId: t.id,
     applicationName: t.name,
     applicationIcon: t.icon,
@@ -102,7 +102,7 @@ function T(e) {
     applicationId: t.id,
     branchId: n,
     installationPath: a
-  }), c.default.track(h.AnalyticEvents.LIBRARY_INSTALL_INITIATED, {
+  }), c.default.track(E.AnalyticEvents.LIBRARY_INSTALL_INITIATED, {
     application_id: t.id,
     application_name: t.name,
     sku_id: t.primarySkuId,
@@ -110,14 +110,14 @@ function T(e) {
   })
 }
 
-function g(e, t, n) {
-  (0, p.fetchLiveBuild)(e.id, t).then(() => {
+function T(e, t, n) {
+  (0, f.fetchLiveBuild)(e.id, t).then(() => {
     r.default.dispatch({
       type: "DISPATCH_APPLICATION_REPAIR",
       applicationId: e.id,
       branchId: t
     })
-  }), c.default.track(h.AnalyticEvents.LIBRARY_REPAIR_INITIATED, {
+  }), c.default.track(E.AnalyticEvents.LIBRARY_REPAIR_INITIATED, {
     application_id: e.id,
     application_name: e.name,
     sku_id: e.primarySkuId,
@@ -131,7 +131,7 @@ function I(e, t, n, i) {
     if (l.default.getRunningDiscordApplicationIds().includes(e.id)) return;
     let r = u.default.getInstallationPath(e.id, t);
     if (null == r) throw Error("Missing installation path for application: ".concat(e.id, " ").concat(t));
-    E.default.setTargetManifest({
+    h.default.setTargetManifest({
       applicationId: e.id,
       applicationName: e.name,
       applicationIcon: e.icon,
@@ -148,26 +148,26 @@ function I(e, t, n, i) {
   })
 }
 
-function C(e, t, n) {
+function v(e, t, n) {
   let i = s.default.getApplication(e);
-  null != i && (f.default.removeShortcuts(i.name), c.default.track(h.AnalyticEvents.LIBRARY_UNINSTALL_INITIATED, {
+  null != i && (p.default.removeShortcuts(i.name), c.default.track(E.AnalyticEvents.LIBRARY_UNINSTALL_INITIATED, {
     application_id: i.id,
     application_name: i.name,
     sku_id: i.primarySkuId,
     location: n
-  })), E.default.uninstall(e, t), r.default.dispatch({
+  })), h.default.uninstall(e, t), r.default.dispatch({
     type: "DISPATCH_APPLICATION_UNINSTALL",
     applicationId: e,
     branchId: t
   })
 }
 
-function v() {
-  E.default.resume()
+function C() {
+  h.default.resume()
 }
 
 function A() {
-  E.default.pause()
+  h.default.pause()
 }
 
 function R(e, t) {
@@ -179,14 +179,14 @@ function R(e, t) {
 }
 
 function N(e, t) {
-  E.default.cancel(e, t), r.default.dispatch({
+  h.default.cancel(e, t), r.default.dispatch({
     type: "DISPATCH_APPLICATION_CANCEL",
     applicationId: e,
     branchId: t
   })
 }
 
-function O(e, t) {
+function y(e, t) {
   r.default.dispatch({
     type: "DISPATCH_APPLICATION_REMOVE_FINISHED",
     applicationId: e,
@@ -194,17 +194,17 @@ function O(e, t) {
   })
 }
 
-function D(e, t) {
+function O(e, t) {
   let n = s.default.getApplication(e);
-  null != n && f.default.createShortcuts(o.InstallShortcutDesktop.getSetting(), o.InstallShortcutStartMenu.getSetting(), n.name, n.id, t.installPath)
+  null != n && p.default.createShortcuts(o.InstallShortcutDesktop.getSetting(), o.InstallShortcutStartMenu.getSetting(), n.name, n.id, t.installPath)
 }
 
-function y(e, t) {
+function D(e, t) {
   let r = s.default.getApplication(e);
   i.default.post({
-    url: h.Endpoints.LIBRARY_APPLICATION_INSTALLED(e, e),
+    url: E.Endpoints.LIBRARY_APPLICATION_INSTALLED(e, e),
     oldFormErrors: !0
-  }), null != r && (f.default.createShortcuts(o.InstallShortcutDesktop.getSetting(), o.InstallShortcutStartMenu.getSetting(), r.name, r.id, t.installPath), n.el("193990").then(n.bind(n, "193990")).then(e => {
+  }), null != r && (p.default.createShortcuts(o.InstallShortcutDesktop.getSetting(), o.InstallShortcutStartMenu.getSetting(), r.name, r.id, t.installPath), n.el("193990").then(n.bind(n, "193990")).then(e => {
     let {
       default: t
     } = e;
@@ -213,7 +213,7 @@ function y(e, t) {
     }), {
       notif_type: "Game Library Game Installed"
     }, {
-      onClick: () => (0, a.transitionTo)(h.Routes.APPLICATION_LIBRARY),
+      onClick: () => (0, a.transitionTo)(E.Routes.APPLICATION_LIBRARY),
       omitViewTracking: !0
     })
   }))

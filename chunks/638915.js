@@ -12,25 +12,25 @@ let a = {
     prefix: String(Math.round(1e10 * Math.random())),
     current: 0
   },
-  o = r.createContext(a),
-  i = r.createContext(!1),
+  i = r.createContext(a),
+  o = r.createContext(!1),
   s = !!("undefined" != typeof window && window.document && window.document.createElement),
   c = new WeakMap,
   l = "function" == typeof r.useId ? function(e) {
     let t = r.useId(),
       [n] = (0, r.useState)(f()),
-      o = n ? "react-aria" : "react-aria".concat(a.prefix);
-    return e || "".concat(o, "-").concat(t)
+      i = n ? "react-aria" : "react-aria".concat(a.prefix);
+    return e || "".concat(i, "-").concat(t)
   } : function(e) {
-    let t = (0, r.useContext)(o);
+    let t = (0, r.useContext)(i);
     t === a && !s && console.warn("When server rendering, you must wrap your application in an <SSRProvider> to ensure consistent ids are generated between the client and server.");
     let n = function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          t = (0, r.useContext)(o),
+          t = (0, r.useContext)(i),
           n = (0, r.useRef)(null);
         if (null === n.current && !e) {
-          var a, i;
-          let e = null === (i = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) || void 0 === i ? void 0 : null === (a = i.ReactCurrentOwner) || void 0 === a ? void 0 : a.current;
+          var a, o;
+          let e = null === (o = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) || void 0 === o ? void 0 : null === (a = o.ReactCurrentOwner) || void 0 === a ? void 0 : a.current;
           if (e) {
             let n = c.get(e);
             null == n ? c.set(e, {
@@ -42,8 +42,8 @@ let a = {
         }
         return n.current
       }(!!e),
-      i = "react-aria".concat(t.prefix);
-    return e || "".concat(i, "-").concat(n)
+      o = "react-aria".concat(t.prefix);
+    return e || "".concat(o, "-").concat(n)
   };
 
 function u() {
@@ -59,5 +59,5 @@ function p(e) {
 }
 
 function f() {
-  return "function" == typeof r.useSyncExternalStore ? r.useSyncExternalStore(p, u, d) : (0, r.useContext)(i)
+  return "function" == typeof r.useSyncExternalStore ? r.useSyncExternalStore(p, u, d) : (0, r.useContext)(o)
 }

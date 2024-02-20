@@ -18,16 +18,16 @@ var r = n("320959"),
         n = e.instance,
         o = e.options,
         i = o.scroll,
-        s = void 0 === i || i,
-        u = o.resize,
-        l = void 0 === u || u,
+        u = void 0 === i || i,
+        s = o.resize,
+        l = void 0 === s || s,
         c = (0, r.default)(t.elements.popper),
-        d = [].concat(t.scrollParents.reference, t.scrollParents.popper);
-      return s && d.forEach(function(e) {
+        f = [].concat(t.scrollParents.reference, t.scrollParents.popper);
+      return u && f.forEach(function(e) {
           e.addEventListener("scroll", n.update, a)
         }), l && c.addEventListener("resize", n.update, a),
         function() {
-          s && d.forEach(function(e) {
+          u && f.forEach(function(e) {
             e.removeEventListener("scroll", n.update, a)
           }), l && c.removeEventListener("resize", n.update, a)
         }

@@ -1,20 +1,20 @@
 "use strict";
-n("781738"), n("424973");
-e.exports = function(e, t, n, r) {
-  t = t || "&", n = n || "=";
-  var a = {};
-  if ("string" != typeof e || 0 === e.length) return a;
-  var o = /\+/g;
-  e = e.split(t);
-  var i = 1e3;
-  r && "number" == typeof r.maxKeys && (i = r.maxKeys);
-  var s = e.length;
-  i > 0 && s > i && (s = i);
-  for (var c = 0; c < s; ++c) {
-    var l, u, d, p, f, h, m = e[c].replace(o, "%20"),
-      v = m.indexOf(n);
-    if (v >= 0 ? (d = m.substr(0, v), p = m.substr(v + 1)) : (d = m, p = ""), f = decodeURIComponent(d), h = decodeURIComponent(p), l = a, u = f, Object.prototype.hasOwnProperty.call(l, u)) Array.isArray(a[f]) ? a[f].push(h) : a[f] = [a[f], h];
-    else a[f] = h
+r("781738"), r("424973");
+t.exports = function(t, e, r, n) {
+  e = e || "&", r = r || "=";
+  var o = {};
+  if ("string" != typeof t || 0 === t.length) return o;
+  var i = /\+/g;
+  t = t.split(e);
+  var a = 1e3;
+  n && "number" == typeof n.maxKeys && (a = n.maxKeys);
+  var u = t.length;
+  a > 0 && u > a && (u = a);
+  for (var l = 0; l < u; ++l) {
+    var s, c, p, f, y, h, d = t[l].replace(i, "%20"),
+      b = d.indexOf(r);
+    if (b >= 0 ? (p = d.substr(0, b), f = d.substr(b + 1)) : (p = d, f = ""), y = decodeURIComponent(p), h = decodeURIComponent(f), s = o, c = y, Object.prototype.hasOwnProperty.call(s, c)) Array.isArray(o[y]) ? o[y].push(h) : o[y] = [o[y], h];
+    else o[y] = h
   }
-  return a
+  return o
 }

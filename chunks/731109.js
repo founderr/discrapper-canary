@@ -4,55 +4,55 @@ n.r(t), n.d(t, {
     return u
   },
   preventUnderageRegistration: function() {
-    return d
+    return c
   },
   logoutUnderageNewUser: function() {
-    return c
+    return d
   }
 });
-var s = n("872717"),
-  a = n("913144"),
+var a = n("872717"),
+  l = n("913144"),
   r = n("395724"),
-  l = n("599110"),
-  i = n("586391"),
-  o = n("49111");
+  o = n("599110"),
+  s = n("586391"),
+  i = n("49111");
 
 function u(e, t) {
-  return (0, r.default)(e, t), l.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+  return (0, r.default)(e, t), o.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
     source: t,
-    action: i.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
-  }), s.default.patch({
-    url: o.Endpoints.ME,
+    action: s.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
+  }), a.default.patch({
+    url: i.Endpoints.ME,
     oldFormErrors: !0,
     body: {
       date_of_birth: e.format("YYYY-MM-DD")
     }
   }).then(e => {
     let n = e.body;
-    a.default.dispatch({
+    l.default.dispatch({
       type: "CURRENT_USER_UPDATE",
       user: n
-    }), l.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+    }), o.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
       source: t,
-      action: i.AgeGateAnalyticAction.AGE_GATE_SUCCESS
+      action: s.AgeGateAnalyticAction.AGE_GATE_SUCCESS
     })
   })
 }
 
-function d(e) {
-  a.default.dispatch({
+function c(e) {
+  l.default.dispatch({
     type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION"
-  }), l.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+  }), o.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
     source: e,
-    action: i.AgeGateAnalyticAction.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
+    action: s.AgeGateAnalyticAction.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
   })
 }
 
-function c(e) {
-  a.default.dispatch({
+function d(e) {
+  l.default.dispatch({
     type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER"
-  }), l.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+  }), o.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
     source: e,
-    action: i.AgeGateAnalyticAction.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
+    action: s.AgeGateAnalyticAction.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
   })
 }

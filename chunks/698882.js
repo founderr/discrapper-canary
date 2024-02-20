@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return E
+    return h
   }
 }), n("222007");
 var i = n("446674"),
@@ -30,7 +30,7 @@ function d(e) {
   } = e;
   null != n && (null == t && (o[n] = s), o[n] = t, c(n), l.delete(n))
 }
-class f extends i.default.Store {
+class p extends i.default.Store {
   getSettings(e) {
     var t;
     return null == e ? null : null !== (t = o[e]) && void 0 !== t ? t : s
@@ -75,8 +75,8 @@ class f extends i.default.Store {
     return null == e || null == t ? null : null !== (r = null === (i = o[e]) || void 0 === i ? void 0 : null === (n = i.newMemberActions) || void 0 === n ? void 0 : n.find(e => e.channelId === t)) && void 0 !== r ? r : null
   }
 }
-f.displayName = "GuildOnboardingHomeSettingsStore";
-var E = new f(r.default, {
+p.displayName = "GuildOnboardingHomeSettingsStore";
+var h = new p(r.default, {
   GUILD_HOME_SETTINGS_FETCH_START: function(e) {
     let {
       guildId: t

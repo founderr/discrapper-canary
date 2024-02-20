@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return o
   },
   serialize: function() {
-    return n
+    return I
   }
 }), E("424973");
 let t = [];
@@ -13,6 +13,6 @@ function o(e) {
   for (t.push(e); t.length > 10;) t.shift()
 }
 
-function n() {
+function I() {
   return t.join(" -> ")
 }

@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return r
   }
 });
-var i, r = n("666038");
-i = class e extends r.default {
+var r, i = n("666038");
+r = class e extends i.default {
   static createFromServer(t) {
     return new e(t)
   }

@@ -1,55 +1,55 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return l
+    return S
   }
-}), E("222007");
-var t = E("862337"),
-  o = E("819689"),
-  n = E("987317"),
-  r = E("689988"),
-  i = E("191225"),
-  a = E("42203"),
-  I = E("101125"),
-  s = E("800762"),
-  T = E("316133"),
-  S = E("782340");
-let N = 18e4;
+}), n("222007");
+var i = n("862337"),
+  a = n("819689"),
+  l = n("987317"),
+  s = n("689988"),
+  r = n("191225"),
+  o = n("42203"),
+  u = n("101125"),
+  d = n("800762"),
+  c = n("316133"),
+  f = n("782340");
+let E = 18e4;
 
-function O() {
-  let e = s.default.getCurrentClientVoiceChannelId(null);
+function h() {
+  let e = d.default.getCurrentClientVoiceChannelId(null);
   if (null == e) return !1;
-  let _ = a.default.getChannel(e);
-  if (null == _ || !_.isPrivate()) return !1;
-  let E = _.recipients.length;
-  if (E > 1) return !1;
-  let t = T.default.countVoiceStatesForChannel(e);
-  if (t > 1) return !1;
-  let o = i.default.getSelfEmbeddedActivityForChannel(e);
-  if (null != o) return !1;
-  let n = null != I.default.getBroadcast();
-  return !n && !0
+  let t = o.default.getChannel(e);
+  if (null == t || !t.isPrivate()) return !1;
+  let n = t.recipients.length;
+  if (n > 1) return !1;
+  let i = c.default.countVoiceStatesForChannel(e);
+  if (i > 1) return !1;
+  let a = r.default.getSelfEmbeddedActivityForChannel(e);
+  if (null != a) return !1;
+  let l = null != u.default.getBroadcast();
+  return !l && !0
 }
 
-function A() {
-  if (!O()) return;
-  let e = s.default.getCurrentClientVoiceChannelId(null);
-  null != e && (o.default.sendBotMessage(e, S.default.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({
+function _() {
+  if (!h()) return;
+  let e = d.default.getCurrentClientVoiceChannelId(null);
+  null != e && (a.default.sendBotMessage(e, f.default.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({
     number: 3
-  })), n.default.selectVoiceChannel(null))
+  })), l.default.selectVoiceChannel(null))
 }
-class R extends r.default {
+class C extends s.default {
   constructor(...e) {
-    super(...e), this.idleTimeout = new t.Timeout, this.handleConnectionClosed = () => {
+    super(...e), this.idleTimeout = new i.Timeout, this.handleConnectionClosed = () => {
       this.idleTimeout.stop()
     }, this.handleEmbeddedActivityDisconnect = () => {
-      O() && this.idleTimeout.start(N, A, !0)
+      h() && this.idleTimeout.start(E, _, !0)
     }, this.handleVoiceStateUpdates = () => {
-      if (!O()) {
+      if (!h()) {
         this.idleTimeout.stop();
         return
       }
-      this.idleTimeout.start(N, A, !1)
+      this.idleTimeout.start(E, _, !1)
     }, this.actions = {
       VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
       CONNECTION_CLOSED: this.handleConnectionClosed,
@@ -57,4 +57,4 @@ class R extends r.default {
     }
   }
 }
-var l = new R
+var S = new C

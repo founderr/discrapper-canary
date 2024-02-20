@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SHARE_EVENT_DETAILS_LINK: function() {
-    return l
+    return i
   }
 });
-let l = e => {
+let i = e => {
   let {
     guildId: t,
     guildEventId: n

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   getVideoPermission: function() {
-    return u
+    return o
   }
 });
 var a = n("446674"),
@@ -17,6 +17,6 @@ function l(e) {
   return t
 }
 
-function u(e) {
+function o(e) {
   return e.isPrivate() || (0, r.canStreamInChannel)(e, s.default, i.default, !1)
 }

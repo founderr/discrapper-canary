@@ -1,62 +1,62 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return L
+    return T
   }
-}), E("222007");
-var t = E("913144"),
-  o = E("689988"),
-  n = E("1405"),
-  r = E("68720"),
-  i = E("265596"),
-  a = E("709377");
-let I = a.ContentInventoryFeedKey.GLOBAL_FEED,
-  s = null,
-  T = !1,
-  S = 0;
+}), n("222007");
+var i = n("913144"),
+  a = n("689988"),
+  l = n("1405"),
+  s = n("68720"),
+  r = n("265596"),
+  o = n("709377");
+let u = o.ContentInventoryFeedKey.GLOBAL_FEED,
+  d = null,
+  c = !1,
+  f = 0;
 
-function N() {
-  R()
+function E() {
+  C()
 }
 
-function O() {
-  A()
+function h() {
+  _()
 }
 
-function A() {
-  clearTimeout(s), s = null
+function _() {
+  clearTimeout(d), d = null
 }
 
-function R() {
-  if (A(), !(0, n.isEligibleForContentInventoryV1)("ContentInventoryManager") || T) return;
-  let e = i.default.getFeed(I),
-    _ = null == e ? void 0 : e.expired_at,
-    E = null == _ ? 0 : new Date(_).getTime() - Date.now();
-  s = setTimeout(() => l(), E)
+function C() {
+  if (_(), !(0, l.isEligibleForContentInventoryV1)("ContentInventoryManager") || c) return;
+  let e = r.default.getFeed(u),
+    t = null == e ? void 0 : e.expired_at,
+    n = null == t ? 0 : new Date(t).getTime() - Date.now();
+  d = setTimeout(() => S(), n)
 }
-async function l() {
-  if (!T) try {
-    T = !0;
-    let e = await (0, r.getMyContentInventory)();
-    t.default.dispatch({
+async function S() {
+  if (!c) try {
+    c = !0;
+    let e = await (0, s.getMyContentInventory)();
+    i.default.dispatch({
       type: "CONTENT_INVENTORY_SET_FEED",
-      feedId: I,
+      feedId: u,
       feed: e
-    }), S = 0, T = !1, R()
+    }), f = 0, c = !1, C()
   } catch (e) {
-    if (S < 3) {
-      let e = 1e3 * Math.pow(5, S);
-      s = setTimeout(() => l(), e), S += 1
+    if (f < 3) {
+      let e = 1e3 * Math.pow(5, f);
+      d = setTimeout(() => S(), e), f += 1
     }
-    T = !1
+    c = !1
   }
 }
-class u extends o.default {
+class g extends a.default {
   constructor(...e) {
     super(...e), this.actions = {
-      POST_CONNECTION_OPEN: N,
-      CONNECTION_CLOSED: O
+      POST_CONNECTION_OPEN: E,
+      CONNECTION_CLOSED: h
     }
   }
 }
-var L = new u
+var T = new g

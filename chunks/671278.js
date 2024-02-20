@@ -1,45 +1,45 @@
 "use strict";
-t.r(s), t.d(s, {
+s.r(t), s.d(t, {
   QRCodeOverlaySizes: function() {
-    return o
+    return n
   },
   QRCodeWithOverlay: function() {
-    return C
+    return h
   },
   default: function() {
-    return _
+    return f
   }
 });
-var r, o, a = t("37983"),
-  l = t("884691"),
-  n = t("82697"),
-  i = t("679001");
-(r = o || (o = {})).SIZE_40 = "SIZE_40", r.SIZE_60 = "SIZE_60";
+var r, n, a = s("37983"),
+  i = s("884691"),
+  l = s("82697"),
+  o = s("679001");
+(r = n || (n = {})).SIZE_40 = "SIZE_40", r.SIZE_60 = "SIZE_60";
 let d = Object.freeze({
     SIZE_40: "size-40",
     SIZE_60: "size-60"
   }),
-  c = t("527826");
-class u extends l.PureComponent {
+  c = s("527826");
+class u extends i.PureComponent {
   render() {
     let {
       className: e,
-      text: s,
-      ...t
+      text: t,
+      ...s
     } = this.props;
     return (0, a.jsx)("div", {
       style: {
         padding: 8,
         borderRadius: 4,
-        width: t.size,
-        height: t.size,
-        backgroundColor: t.bgColor
+        width: s.size,
+        height: s.size,
+        backgroundColor: s.bgColor
       },
       className: e,
-      children: (0, a.jsx)(n.default, {
-        value: s,
+      children: (0, a.jsx)(l.default, {
+        value: t,
         level: "M",
-        ...t
+        ...s
       })
     })
   }
@@ -49,19 +49,19 @@ u.defaultProps = {
   bgColor: "#ffffff",
   fgColor: "#000000"
 };
-class C extends l.PureComponent {
+class h extends i.PureComponent {
   render() {
     let {
       overlaySize: e
-    } = this.props, s = d[null != e ? e : "SIZE_40"];
+    } = this.props, t = d[null != e ? e : "SIZE_40"];
     return (0, a.jsxs)("div", {
-      className: i.qrCodeContainer,
+      className: o.qrCodeContainer,
       children: [(0, a.jsx)(u, {
         ...this.props
       }), (0, a.jsx)("div", {
-        className: i.qrCodeOverlay,
+        className: o.qrCodeOverlay,
         children: (0, a.jsx)("img", {
-          className: i[s],
+          className: o[t],
           src: c,
           alt: ""
         })
@@ -69,9 +69,9 @@ class C extends l.PureComponent {
     })
   }
 }
-C.defaultProps = {
+h.defaultProps = {
   size: 144,
   bgColor: "#ffffff",
   fgColor: "#000000"
 };
-var _ = u
+var f = u

@@ -13,10 +13,10 @@ var i = n("872717"),
   u = n("645672"),
   c = n("718517"),
   d = n("49111");
-let f = 10 * c.default.Millis.MINUTE,
-  E = 10 * c.default.Millis.MINUTE,
-  p = 1 * c.default.Millis.MINUTE,
-  h = {};
+let p = 10 * c.default.Millis.MINUTE,
+  h = 10 * c.default.Millis.MINUTE,
+  f = 1 * c.default.Millis.MINUTE,
+  E = {};
 async function _(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     c = o.default.locale;
@@ -25,7 +25,7 @@ async function _(e, t) {
     applicationId: e,
     branchId: t,
     locale: c
-  }), n && await (0, r.sleep)(Math.random() * p), i.default.get({
+  }), n && await (0, r.sleep)(Math.random() * f), i.default.get({
     url: d.Endpoints.APPLICATION_LIVE_BUILD(e, t),
     query: {
       platform: (0, u.getBuildPlatform)(),
@@ -60,7 +60,7 @@ async function _(e, t) {
     });
     else {
       var r, o;
-      r = e, null == h[o = t] && (h[o] = new s.Timeout), h[o].start(f + Math.random() * E, () => {
+      r = e, null == E[o = t] && (E[o] = new s.Timeout), E[o].start(p + Math.random() * h, () => {
         let e = l.default.getLibraryApplication(r, o);
         null != e && _(r, o)
       })

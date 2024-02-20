@@ -1,48 +1,48 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   useResetClientThemePreview: function() {
-    return A
+    return _
   },
   useTrackClientThemePreviewEvent: function() {
-    return R
+    return C
   }
-}), E("222007");
-var t = E("884691"),
-  o = E("446674"),
-  n = E("151426"),
-  r = E("505093"),
-  i = E("168973"),
-  a = E("374363"),
-  I = E("599110"),
-  s = E("32531"),
-  T = E("714657"),
-  S = E("49111"),
-  N = E("646718"),
-  O = E("116319");
-let A = () => {
-    let e = (0, o.useStateFromStores)([T.default], () => T.default.gradientPreset),
-      _ = (0, o.useStateFromStores)([i.default], () => i.default.useSystemTheme === O.SystemThemeState.ON),
-      [E, n] = (0, t.useState)(_);
-    return (0, t.useEffect)(() => {
-      null == e && n(_)
-    }, [e, _]), (0, t.useCallback)(() => {
-      if (null != e)(0, s.resetPreviewClientTheme)(), E && (0, r.setUseSystemTheme)(O.SystemThemeState.ON)
-    }, [e, E])
+}), n("222007");
+var i = n("884691"),
+  a = n("446674"),
+  l = n("151426"),
+  s = n("505093"),
+  r = n("168973"),
+  o = n("374363"),
+  u = n("599110"),
+  d = n("32531"),
+  c = n("714657"),
+  f = n("49111"),
+  E = n("646718"),
+  h = n("116319");
+let _ = () => {
+    let e = (0, a.useStateFromStores)([c.default], () => c.default.gradientPreset),
+      t = (0, a.useStateFromStores)([r.default], () => r.default.useSystemTheme === h.SystemThemeState.ON),
+      [n, l] = (0, i.useState)(t);
+    return (0, i.useEffect)(() => {
+      null == e && l(t)
+    }, [e, t]), (0, i.useCallback)(() => {
+      if (null != e)(0, d.resetPreviewClientTheme)(), n && (0, s.setUseSystemTheme)(h.SystemThemeState.ON)
+    }, [e, n])
   },
-  R = () => {
+  C = () => {
     let {
       previewPaneVariant: e
-    } = (0, o.useStateFromStoresObject)([T.default], () => ({
-      previewPaneVariant: T.default.isPreview ? N.AnalyticsPremiumFeatureTiers.FREE : N.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
-    })), _ = (0, o.useStateFromStores)([a.default], () => {
+    } = (0, a.useStateFromStoresObject)([c.default], () => ({
+      previewPaneVariant: c.default.isPreview ? E.AnalyticsPremiumFeatureTiers.FREE : E.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
+    })), t = (0, a.useStateFromStores)([o.default], () => {
       var e;
-      let _ = null === (e = a.default.settings.appearance) || void 0 === e ? void 0 : e.theme;
-      return "default ".concat(_ === n.Theme.LIGHT ? S.ThemeTypes.LIGHT : S.ThemeTypes.DARK)
+      let t = null === (e = o.default.settings.appearance) || void 0 === e ? void 0 : e.theme;
+      return "default ".concat(t === l.Theme.LIGHT ? f.ThemeTypes.LIGHT : f.ThemeTypes.DARK)
     });
-    return (0, t.useCallback)(E => {
-      I.default.track(E, {
+    return (0, i.useCallback)(n => {
+      u.default.track(n, {
         preview_pane_variant: e,
-        original_theme: _
+        original_theme: t
       })
-    }, [e, _])
+    }, [e, t])
   }

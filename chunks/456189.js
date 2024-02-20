@@ -18,37 +18,37 @@ function o(e) {
     onClick: u,
     onDoubleClick: c,
     onContextMenu: d,
-    onKeyDown: f,
-    onFocus: E,
-    onBlur: p,
-    onMouseOver: h,
+    onKeyDown: p,
+    onFocus: h,
+    onBlur: f,
+    onMouseOver: E,
     onMouseDown: _,
-    onMouseLeave: S,
-    buttonProps: m,
-    "aria-label": T
-  } = e, g = r.useRef(null);
+    onMouseLeave: m,
+    buttonProps: S,
+    "aria-label": g
+  } = e, T = r.useRef(null);
   return (0, i.jsxs)(t, {
-    ref: g,
+    ref: T,
     className: o,
     onClick: u,
-    onMouseOver: h,
-    onMouseLeave: S,
+    onMouseOver: E,
+    onMouseLeave: m,
     onDoubleClick: c,
     onContextMenu: d,
     children: [(0, i.jsx)(s.Clickable, {
-      ...m,
+      ...S,
       focusProps: {
-        ringTarget: g,
+        ringTarget: T,
         ...l
       },
       className: a.focusTarget,
-      "aria-label": T,
+      "aria-label": g,
       onClick: e => {
         e.stopPropagation(), null == u || u(e)
       },
-      onKeyDown: f,
-      onFocus: E,
-      onBlur: p,
+      onKeyDown: p,
+      onFocus: h,
+      onBlur: f,
       onMouseDown: _
     }), n]
   })

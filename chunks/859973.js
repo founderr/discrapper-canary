@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   convertToTimeOfADay: function() {
-    return E
-  },
-  timeAtSpecificDay: function() {
     return h
   },
+  timeAtSpecificDay: function() {
+    return E
+  },
   TimeOptions: function() {
-    return S
+    return m
   }
 }), n("781738"), n("424973"), n("222007"), n("70102");
 var i = n("866227"),
@@ -19,21 +19,21 @@ let a = /^[0]+/,
   u = /(PM|ΜΜ|शाम)/i,
   c = /\s+/,
   d = e => e.replace(a, "").replace(o, "").replace(l, "").replace(c, ""),
-  f = e => e.replace(a, "").replace(u, "").replace(c, ""),
-  E = (e, t) => {
+  p = e => e.replace(a, "").replace(u, "").replace(c, ""),
+  h = (e, t) => {
     let n = t.toUpperCase().trim();
     if (n.length > 0) {
       let t = r("".concat(null == e ? void 0 : e.format("YYYY-MM-DD"), " ").concat(n), "YYYY-MM-DD LT");
       if (d(t.format("LT")) === d(n)) return t
     }
   },
-  p = r("2021-04-12T00:00:00"),
-  h = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
+  f = r("2021-04-12T00:00:00"),
+  E = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
   _ = (e, t) => e.value.unix() - t.value.unix();
-class S {
+class m {
   lookupByValue(e) {
     if (null == e) return;
-    let t = h(p, e);
+    let t = E(f, e);
     return this._index[t.unix()]
   }
   _createLabel(e) {
@@ -41,7 +41,7 @@ class S {
   }
   _generateTimeOptions() {
     this.options = [], this._index = {};
-    let e = r(p),
+    let e = r(f),
       t = r(e).add(1, "day"),
       n = r(e);
     for (; n < t;) {
@@ -50,7 +50,7 @@ class S {
     }
   }
   _createNewOption(e) {
-    let t = h(p, e),
+    let t = E(f, e),
       n = this._createLabel(t);
     return {
       label: n,
@@ -58,7 +58,7 @@ class S {
     }
   }
   _addNewOption(e) {
-    let t = h(p, e),
+    let t = E(f, e),
       n = this._createLabel(t);
     return this._index[t.unix()] = t, this.options.push({
       label: n,
@@ -68,15 +68,15 @@ class S {
   _guessOptions(e) {
     let t = [];
     if (/[:\\.]/.test(e)) {
-      let n = E(p, e);
+      let n = h(f, e);
       if (null != n) {
         t.push(n.clone());
         let i = n.add({
           hours: 12
         });
-        i.isBefore(p.clone().add({
+        i.isBefore(f.clone().add({
           hours: 24
-        })) && f(i.format("LT")) === f(e) && t.push(i)
+        })) && p(i.format("LT")) === p(e) && t.push(i)
       }
     }
     return t

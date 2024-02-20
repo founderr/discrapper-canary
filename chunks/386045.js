@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return b
   }
 }), n("222007"), n("702976");
 var i = n("446674"),
@@ -13,25 +13,25 @@ var i = n("446674"),
   u = n("568734"),
   c = n("30591"),
   d = n("80028"),
-  f = n("49111"),
-  E = n("686298");
-let p = "default",
-  h = [],
+  p = n("49111"),
+  h = n("686298");
+let f = "default",
+  E = [],
   _ = [],
-  S = [],
-  m = 0,
-  T = null,
+  m = [],
+  S = 0,
   g = null,
+  T = null,
   I = {},
-  C = null,
   v = null,
+  C = null,
   A = {},
   R = {
     clipsEnabled: !1,
-    storageLocation: p,
+    storageLocation: f,
     clipsQuality: {
-      resolution: E.ApplicationStreamResolutions.RESOLUTION_1080,
-      frameRate: E.ApplicationStreamFPS.FPS_30
+      resolution: h.ApplicationStreamResolutions.RESOLUTION_1080,
+      frameRate: h.ApplicationStreamFPS.FPS_30
     },
     clipsLength: d.ClipsLengthSettings.SECONDS_30,
     remindersEnabled: !0,
@@ -53,20 +53,20 @@ let p = "default",
       numberOfTimesDismissed: 0
     }
   };
-async function O() {
-  if (N.clipsSettings.storageLocation !== p || null == s.default || null == s.default.remoteApp) return;
+async function y() {
+  if (N.clipsSettings.storageLocation !== f || null == s.default || null == s.default.remoteApp) return;
   let e = await s.default.remoteApp.getPath("documents");
-  N.clipsSettings.storageLocation = e, y.emitChange()
+  N.clipsSettings.storageLocation = e, D.emitChange()
 }
-class D extends i.default.DeviceSettingsStore {
+class O extends i.default.DeviceSettingsStore {
   initialize(e) {
-    null != e && (N = e), O(), this.waitFor(l.default)
+    null != e && (N = e), y(), this.waitFor(l.default)
   }
   getClips() {
     return _
   }
   getPendingClips() {
-    return S
+    return m
   }
   getUserAgnosticState() {
     return N
@@ -75,17 +75,17 @@ class D extends i.default.DeviceSettingsStore {
     return N.clipsSettings
   }
   getLastClipsSession() {
-    return g
+    return T
   }
   getClipsWarningShown(e) {
-    return T === e
+    return g === e
   }
   getActiveAnimation() {
-    return v
+    return C
   }
   getStreamClipAnimations(e) {
     var t;
-    return null !== (t = A[e]) && void 0 !== t ? t : h
+    return null !== (t = A[e]) && void 0 !== t ? t : E
   }
   hasAnyClipAnimations() {
     return Object.values(A).some(e => e.length > 0)
@@ -100,10 +100,10 @@ class D extends i.default.DeviceSettingsStore {
     return N.hardwareClassificationVersion
   }
   getIsAtMaxSaveClipOperations() {
-    return m >= d.MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS
+    return S >= d.MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS
   }
   getLastClipsError() {
-    return C
+    return v
   }
   isClipsEnabledForUser(e) {
     var t, n;
@@ -127,7 +127,7 @@ class D extends i.default.DeviceSettingsStore {
     return N.newClipIds
   }
 }
-D.displayName = "ClipsStore", D.persistKey = "ClipsStore", D.migrations = [e => ({
+O.displayName = "ClipsStore", O.persistKey = "ClipsStore", O.migrations = [e => ({
   clipsSettings: null != e ? e : R,
   newClipsCount: 0
 }), e => {
@@ -212,7 +212,7 @@ D.displayName = "ClipsStore", D.persistKey = "ClipsStore", D.migrations = [e => 
     numberOfTimesDismissed: 0
   }
 })];
-let y = new D(r.default, {
+let D = new O(r.default, {
   CLIPS_SETTINGS_UPDATE: function(e) {
     let {
       settings: t
@@ -230,15 +230,15 @@ let y = new D(r.default, {
     let {
       clip: i
     } = e;
-    m = Math.max(m - 1, 0), g = {
+    S = Math.max(S - 1, 0), T = {
       applicationName: i.applicationName,
       ended: !1,
-      ...g,
-      newClipIds: [...null !== (t = null == g ? void 0 : g.newClipIds) && void 0 !== t ? t : [], i.id]
+      ...T,
+      newClipIds: [...null !== (t = null == T ? void 0 : T.newClipIds) && void 0 !== t ? t : [], i.id]
     }, N = {
       ...N,
       newClipIds: [...null !== (n = N.newClipIds) && void 0 !== n ? n : [], i.id]
-    }, S = S.filter(e => {
+    }, m = m.filter(e => {
       let {
         id: t
       } = e;
@@ -249,13 +249,13 @@ let y = new D(r.default, {
     let {
       clip: t
     } = e;
-    S = [t, ...S]
+    m = [t, ...m]
   },
   CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: function(e) {
     let {
       clipId: t
     } = e;
-    S = S.filter(e => {
+    m = m.filter(e => {
       let {
         id: n
       } = e;
@@ -268,24 +268,24 @@ let y = new D(r.default, {
       streamKey: n,
       thumbnail: i
     } = e;
-    if (m += 1, N.hasTakenDecoupledClip = N.hasTakenDecoupledClip || t === d.ClipSaveTypes.DECOUPLED, null != n && null != i) {
+    if (S += 1, N.hasTakenDecoupledClip = N.hasTakenDecoupledClip || t === d.ClipSaveTypes.DECOUPLED, null != n && null != i) {
       var r;
       let e = Date.now();
-      v = null != v ? v : e, A[n] = [...null !== (r = A[n]) && void 0 !== r ? r : [], {
+      C = null != C ? C : e, A[n] = [...null !== (r = A[n]) && void 0 !== r ? r : [], {
         timestamp: e,
         thumbnail: i
       }]
     }
   },
   CLIPS_SAVE_CLIP_ERROR: function() {
-    m = Math.max(m - 1, 0)
+    S = Math.max(S - 1, 0)
   },
   CLIPS_SAVE_ANIMATION_END: function(e) {
     let {
       streamKey: t,
       timestamp: n
     } = e;
-    v === n && (v = null), null == n ? A[t] = [] : A[t] = A[t].filter(e => e.timestamp !== n)
+    C === n && (C = null), null == n ? A[t] = [] : A[t] = A[t].filter(e => e.timestamp !== n)
   },
   STREAM_START: function(e) {
     let {
@@ -300,7 +300,7 @@ let y = new D(r.default, {
       i = null !== (r = null == e ? void 0 : e.name) && void 0 !== r ? r : i
     }
     if (null == i || "" === i) return !1;
-    g = {
+    T = {
       applicationName: i,
       newClipIds: [],
       ended: !1
@@ -310,15 +310,15 @@ let y = new D(r.default, {
     let {
       streamKey: t
     } = e;
-    if (v = null, A[t] = [], null == g || (0, a.decodeStreamKey)(t).ownerId !== o.default.getId()) return !1;
-    g = 0 === g.newClipIds.length ? null : {
-      ...g,
+    if (C = null, A[t] = [], null == T || (0, a.decodeStreamKey)(t).ownerId !== o.default.getId()) return !1;
+    T = 0 === T.newClipIds.length ? null : {
+      ...T,
       ended: !0
     }
   },
   CLIPS_CLEAR_CLIPS_SESSION: function() {
-    if (null == g) return !1;
-    g = null
+    if (null == T) return !1;
+    T = null
   },
   CLIPS_CLEAR_NEW_CLIP_IDS: function() {
     N.newClipIds = []
@@ -346,22 +346,22 @@ let y = new D(r.default, {
   },
   RTC_CONNECTION_FLAGS: function(e) {
     I[e.userId] = {
-      clipsEnabled: (0, u.hasFlag)(e.flags, f.VoiceFlags.CLIPS_ENABLED),
-      allowVoiceRecording: (0, u.hasFlag)(e.flags, f.VoiceFlags.ALLOW_VOICE_RECORDING),
-      allowAnyViewerClips: (0, u.hasFlag)(e.flags, f.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS)
+      clipsEnabled: (0, u.hasFlag)(e.flags, p.VoiceFlags.CLIPS_ENABLED),
+      allowVoiceRecording: (0, u.hasFlag)(e.flags, p.VoiceFlags.ALLOW_VOICE_RECORDING),
+      allowAnyViewerClips: (0, u.hasFlag)(e.flags, p.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS)
     }
   },
   CLIPS_SHOW_CALL_WARNING: function(e) {
     let {
       channelId: t
     } = e;
-    T = t
+    g = t
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    t !== T && (T = null)
+    t !== g && (g = null)
   },
   CLIPS_CLASSIFY_HARDWARE: function(e) {
     let {
@@ -375,8 +375,8 @@ let y = new D(r.default, {
     let {
       applicationName: t
     } = e;
-    if (C = null, !N.clipsSettings.clipsEnabled) return !1;
-    g = {
+    if (v = null, !N.clipsSettings.clipsEnabled) return !1;
+    T = {
       applicationName: t,
       newClipIds: [],
       ended: !1
@@ -386,7 +386,7 @@ let y = new D(r.default, {
     let {
       errMsg: t
     } = e;
-    C = t
+    v = t
   },
   CLIPS_DISMISS_EDUCATION: function(e) {
     let {
@@ -394,7 +394,7 @@ let y = new D(r.default, {
     } = e;
     switch (t) {
       case d.ClipsUserEducationType.Error:
-        C = null;
+        v = null;
         break;
       case d.ClipsUserEducationType.Disabled:
       case d.ClipsUserEducationType.Enabled:
@@ -408,4 +408,4 @@ let y = new D(r.default, {
     t.length > 0 && (N.clipsEducationState.numberOfGamesLaunchedSinceDismissal += 1)
   }
 });
-var P = y
+var b = D

@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return d
   },
   TableBody: function() {
-    return f
+    return p
   },
   TableHeader: function() {
-    return E
+    return h
   },
   Table: function() {
-    return p
+    return f
   }
 });
 var i = n("37983"),
@@ -56,21 +56,21 @@ function d(e) {
   })
 }
 
-function f(e) {
+function p(e) {
   return (0, i.jsx)(s.TableBody, {
     ...e,
     className: l.body
   })
 }
 
-function E(e) {
+function h(e) {
   return (0, i.jsx)(s.TableHeader, {
     ...e,
     className: l.header
   })
 }
 
-function p(e) {
+function f(e) {
   let {
     title: t,
     header: n,

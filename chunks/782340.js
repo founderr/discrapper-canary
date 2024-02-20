@@ -1,34 +1,34 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return A
+    return O
   }
 }), E("222007"), E("424973");
 var t = E("866227"),
   o = E.n(t),
-  n = E("429030"),
-  r = E("229353"),
-  i = E.n(r),
+  I = E("429030"),
+  T = E("229353"),
+  r = E.n(T),
   a = E("444051"),
-  I = E.n(a),
-  s = E("657743"),
-  T = E.n(s);
-let S = e => ({
-    ...I,
-    ...T,
+  n = E.n(a),
+  i = E("657743"),
+  A = E.n(i);
+let s = e => ({
+    ...n,
+    ...A,
     ...e
   }),
-  N = new n.default({
-    getMessages: e => "en-US" === e ? S(i) : E("795529")("./messages/".concat(e, ".jsona").replace("./messages/", "./")).then(e => {
+  R = new I.default({
+    getMessages: e => "en-US" === e ? s(r) : E("795529")("./messages/".concat(e, ".jsona").replace("./messages/", "./")).then(e => {
       let {
         default: _
       } = e;
       return _
-    }).then(S),
+    }).then(s),
     getLanguages: () => E("199005")
   });
 
-function O(e) {
+function N(e) {
   E("199038").dateFnsLocales[e]().then(_ => {
     let {
       default: t
@@ -41,7 +41,7 @@ function O(e) {
     }
   })
 }
-N.addListener("locale", e => {
+R.addListener("locale", e => {
   ! function(e, _) {
     let E = [],
       t = ("no" === e ? "nb" : e).split("-");
@@ -54,5 +54,5 @@ N.addListener("locale", e => {
   _({
     locale: e
   })
-}), N.addListener("locale", O), O(N.getLocale());
-var A = N
+}), R.addListener("locale", N), N(R.getLocale());
+var O = R

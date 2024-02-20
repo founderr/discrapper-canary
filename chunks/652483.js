@@ -9,14 +9,14 @@ n.r(t), n.d(t, {
   }
 }), n("781738"), n("70102"), n("424973"), n("808653"), n("466501");
 var a = "function" == typeof Symbol && Symbol.observable || "@@observable",
-  o = function() {
+  i = function() {
     return Math.random().toString(36).substring(7).split("").join(".")
   },
-  i = {
-    INIT: "@@redux/INIT" + o(),
-    REPLACE: "@@redux/REPLACE" + o(),
+  o = {
+    INIT: "@@redux/INIT" + i(),
+    REPLACE: "@@redux/REPLACE" + i(),
     PROBE_UNKNOWN_ACTION: function() {
-      return "@@redux/PROBE_UNKNOWN_ACTION" + o()
+      return "@@redux/PROBE_UNKNOWN_ACTION" + i()
     }
   };
 
@@ -27,7 +27,7 @@ function s(e, t, n) {
     return n(s)(e, t)
   }
   if ("function" != typeof e) throw Error(r(2));
-  var o, c = e,
+  var i, c = e,
     l = t,
     u = [],
     d = u,
@@ -37,12 +37,12 @@ function s(e, t, n) {
     d === u && (d = u.slice())
   }
 
-  function h() {
+  function m() {
     if (p) throw Error(r(3));
     return l
   }
 
-  function m(e) {
+  function h(e) {
     if ("function" != typeof e) throw Error(r(4));
     if (p) throw Error(r(5));
     var t = !0;
@@ -74,15 +74,15 @@ function s(e, t, n) {
     return e
   }
   return v({
-    type: i.INIT
-  }), (o = {
+    type: o.INIT
+  }), (i = {
     dispatch: v,
-    subscribe: m,
-    getState: h,
+    subscribe: h,
+    getState: m,
     replaceReducer: function(e) {
       if ("function" != typeof e) throw Error(r(10));
       c = e, v({
-        type: i.REPLACE
+        type: o.REPLACE
       })
     }
   })[a] = function() {
@@ -92,14 +92,14 @@ function s(e, t, n) {
         if ("object" != typeof e || null === e) throw Error(r(11));
 
         function t() {
-          e.next && e.next(h())
+          e.next && e.next(m())
         }
         return t(), {
-          unsubscribe: m(t)
+          unsubscribe: h(t)
         }
       }
     })[a] = function() {
       return this
     }, e
-  }, o
+  }, i
 }

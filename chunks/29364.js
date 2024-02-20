@@ -1,12 +1,12 @@
 "use strict";
-var r = {
+var n = {
     foo: {}
   },
-  a = Object;
-e.exports = function() {
+  o = Object;
+t.exports = function() {
   return ({
-    __proto__: r
-  }).foo === r.foo && !(({
+    __proto__: n
+  }).foo === n.foo && !(({
     __proto__: null
-  }) instanceof a)
+  }) instanceof o)
 }

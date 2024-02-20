@@ -3,10 +3,10 @@ var r = n("503486"),
   a = n("814026"),
   o = n("18563"),
   i = n("383252"),
-  s = n("664144"),
+  u = n("664144"),
   RegExp = r.RegExp,
-  u = RegExp.prototype;
-a && s(function() {
+  s = RegExp.prototype;
+a && u(function() {
   var e = !0;
   try {
     RegExp(".", "d")
@@ -31,8 +31,8 @@ a && s(function() {
       sticky: "y"
     };
   for (var i in e && (o.hasIndices = "d"), o) a(i, o[i]);
-  return Object.getOwnPropertyDescriptor(u, "flags").get.call(t) !== r || n !== r
-}) && o(u, "flags", {
+  return Object.getOwnPropertyDescriptor(s, "flags").get.call(t) !== r || n !== r
+}) && o(s, "flags", {
   configurable: !0,
   get: i
 })

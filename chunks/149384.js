@@ -1,5 +1,5 @@
 "use strict";
-var r = n("391938");
-e.exports = function() {
-  return r() && !!Symbol.toStringTag
+var n = r("391938");
+t.exports = function() {
+  return n() && !!Symbol.toStringTag
 }

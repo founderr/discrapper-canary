@@ -34,13 +34,13 @@ function O(e) {
     analyticsSource: g,
     analyticsLocation: h,
     body: x,
-    context: N,
-    glowUp: A,
-    modalClassName: v,
+    context: v,
+    glowUp: N,
+    modalClassName: A,
     artContainerClassName: U,
     bodyClassName: b,
-    transitionState: D,
-    onClose: y,
+    transitionState: y,
+    onClose: D,
     onSubscribeClick: j,
     onSecondaryClick: F,
     secondaryCTA: B,
@@ -84,9 +84,9 @@ function O(e) {
     alt: "",
     src: Z.artURL
   }) : Z.artElement, (0, i.jsxs)(s.ModalRoot, {
-    className: a(S.root, v),
+    className: a(S.root, A),
     "aria-label": O,
-    transitionState: D,
+    transitionState: y,
     children: [(0, i.jsxs)("div", {
       className: en,
       children: [ei, H ? (0, i.jsx)("img", {
@@ -95,22 +95,22 @@ function O(e) {
         src: R
       }) : null]
     }), ee ? (0, i.jsx)(s.ModalCloseButton, {
-      onClick: y,
+      onClick: D,
       className: S.closeButton
     }) : null, (0, i.jsx)(s.ModalContent, {
       className: S.content,
       children: K ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsx)(i.Fragment, {
         children: J ? (0, i.jsx)(i.Fragment, {
           children: (0, i.jsx)(T.default, {
-            onClose: y,
+            onClose: D,
             type: M,
             subscriptionTier: null !== (l = null == Y ? void 0 : null === (n = Y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : C.PremiumSubscriptionSKUs.TIER_2,
             headingText: O,
-            context: N,
+            context: v,
             analyticsLocationObject: h,
             discountOffer: X,
             trialOffer: Y,
-            children: A
+            children: N
           })
         }) : (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(s.Heading, {
@@ -148,7 +148,7 @@ function O(e) {
           if (z) return (0, i.jsx)(c.default, {
             analyticsLocation: h,
             guild: L.guild,
-            onClose: y
+            onClose: D
           });
           let t = ee ? P.default.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
           if (J) {
@@ -172,13 +172,13 @@ function O(e) {
             size: s.Button.Sizes.SMALL,
             color: et ? s.Button.Colors.CUSTOM : s.Button.Colors.GREEN,
             onClick: () => {
-              null == j || j(), y()
+              null == j || j(), D()
             },
             buttonText: null != w ? w : t
           })
         })()]
       }), !V && !ee && (0, i.jsx)(s.Button, {
-        onClick: y,
+        onClick: D,
         size: s.Button.Sizes.SMALL,
         color: s.Button.Colors.PRIMARY,
         look: s.Button.Looks.LINK,

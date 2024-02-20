@@ -1,58 +1,58 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return S
+    return f
   }
-}), E("511434"), E("313619"), E("654714"), E("287168"), E("956660"), E("222007"), E("424973");
-var t = E("689988"),
-  o = E("385976"),
-  n = E("42203"),
-  r = E("315102"),
-  i = E("402671"),
-  a = E("724210"),
-  I = E("115279");
-let s = new Worker(new URL(E.p + E.u("68638"), E.b));
-class T extends t.default {
+}), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("424973");
+var i = n("689988"),
+  a = n("385976"),
+  l = n("42203"),
+  s = n("315102"),
+  r = n("402671"),
+  o = n("724210"),
+  u = n("115279");
+let d = new Worker(new URL(n.p + n.u("68638"), n.b));
+class c extends i.default {
   handleChannelPreload(e) {
     let {
-      channelId: _
+      channelId: t
     } = e;
-    if ((0, a.isStaticChannelRoute)(_)) return;
-    let E = n.default.getChannel(_);
-    if (null != E && E.isForumLikeChannel()) {
+    if ((0, o.isStaticChannelRoute)(t)) return;
+    let n = l.default.getChannel(t);
+    if (null != n && n.isForumLikeChannel()) {
       let e = function(e) {
-        let _ = [],
-          E = e.defaultReactionEmoji;
-        if ((null == E ? void 0 : E.emojiId) != null) {
-          var t, n;
-          _.push(r.default.getEmojiURL({
-            id: E.emojiId,
-            animated: null !== (n = null === (t = o.default.getUsableCustomEmojiById(E.emojiId)) || void 0 === t ? void 0 : t.animated) && void 0 !== n && n,
-            size: I.EMOJI_SIZE_MAP.reaction
+        let t = [],
+          n = e.defaultReactionEmoji;
+        if ((null == n ? void 0 : n.emojiId) != null) {
+          var i, l;
+          t.push(s.default.getEmojiURL({
+            id: n.emojiId,
+            animated: null !== (l = null === (i = a.default.getUsableCustomEmojiById(n.emojiId)) || void 0 === i ? void 0 : i.animated) && void 0 !== l && l,
+            size: u.EMOJI_SIZE_MAP.reaction
           }))
-        } else(null == E ? void 0 : E.emojiName) != null && _.push(i.default.getURL(E.emojiName));
+        } else(null == n ? void 0 : n.emojiName) != null && t.push(r.default.getURL(n.emojiName));
         return e.availableTags.forEach(e => {
-          null != e.emojiId ? _.push(r.default.getEmojiURL({
+          null != e.emojiId ? t.push(s.default.getEmojiURL({
             id: e.emojiId,
             animated: !1,
-            size: I.EMOJI_SIZE_MAP.reaction
-          })) : null != e.emojiName && _.push(i.default.getURL(e.emojiName))
-        }), _
-      }(E);
+            size: u.EMOJI_SIZE_MAP.reaction
+          })) : null != e.emojiName && t.push(r.default.getURL(e.emojiName))
+        }), t
+      }(n);
       e.forEach(e => {
         if (null != e && 0 !== e.length) {
-          var _;
-          _ = e, new Promise(e => {
-            let E = t => {
+          var t;
+          t = e, new Promise(e => {
+            let n = i => {
               let {
                 data: {
-                  url: o
+                  url: a
                 }
-              } = t;
-              null == s || s.removeEventListener("message", E), _ === o && e()
+              } = i;
+              null == d || d.removeEventListener("message", n), t === a && e()
             };
-            null == s || s.addEventListener("message", E), null == s || s.postMessage({
-              url: _
+            null == d || d.addEventListener("message", n), null == d || d.postMessage({
+              url: t
             })
           })
         }
@@ -65,4 +65,4 @@ class T extends t.default {
     }
   }
 }
-var S = new T
+var f = new c

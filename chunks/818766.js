@@ -1,17 +1,17 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   sendVoiceChannelActivityNotification: function() {
-    return n
+    return l
   }
 });
-var t = E("872717"),
-  o = E("49111");
+var i = n("872717"),
+  a = n("49111");
 
-function n(e, _) {
-  t.default.post({
-    url: o.Endpoints.VOICE_CHANNEL_NOTIFICATIONS(e),
+function l(e, t) {
+  i.default.post({
+    url: a.Endpoints.VOICE_CHANNEL_NOTIFICATIONS(e),
     query: {
-      first_user: _
+      first_user: t
     }
   })
 }

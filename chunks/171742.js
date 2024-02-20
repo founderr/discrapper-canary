@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   binaryWriteOptions: function() {
-    return s
+    return u
   }
 }), n("424973"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102");
 var r = n("497557"),
@@ -9,13 +9,13 @@ var r = n("497557"),
   o = n("759780");
 let i = {
   writeUnknownFields: !0,
-  writerFactory: () => new u
+  writerFactory: () => new s
 };
 
-function s(e) {
+function u(e) {
   return e ? Object.assign(Object.assign({}, i), e) : i
 }
-class u {
+class s {
   finish() {
     this.chunks.push(new Uint8Array(this.buf));
     let e = 0;

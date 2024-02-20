@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return p
+    return f
   }
 });
 var i, r, s = n("37983"),
@@ -14,17 +14,17 @@ var i, r, s = n("37983"),
   u = n("907002"),
   c = n("77078"),
   d = n("84339"),
-  f = n("816452");
+  p = n("816452");
 (i = r || (r = {})).SUBTLE = "SUBTLE", i.DARK = "DARK", i.BLUR = "BLUR";
-let E = a.forwardRef(function(e, t) {
+let h = a.forwardRef(function(e, t) {
   let {
     backdropStyle: n = "SUBTLE",
     backdropInstant: i = !1,
     zIndexBoost: r = 0,
     LayerComponent: a,
     isVisible: o,
-    onClose: E
-  } = e, p = function() {
+    onClose: h
+  } = e, f = function() {
     let e = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({
         opacity: .25
       }),
@@ -34,42 +34,42 @@ let E = a.forwardRef(function(e, t) {
       DARK: t,
       BLUR: t
     }
-  }(), h = p[n], _ = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({
+  }(), E = f[n], _ = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({
     opacity: 0
-  }), S = {
+  }), m = {
     background: _,
     backdropFilter: "blur(0px)"
-  }, m = (0, d.default)(i), T = (0, u.useTransition)(o, {
+  }, S = (0, d.default)(i), g = (0, u.useTransition)(o, {
     keys: e => e ? "backdrop" : "empty",
     config: {
-      duration: i || m ? 0 : 300
+      duration: i || S ? 0 : 300
     },
-    from: S,
+    from: m,
     enter: {
-      background: h,
+      background: E,
       backdropFilter: "blur(".concat("BLUR" === n ? 8 : 0, "px)")
     },
-    leave: S
+    leave: m
   });
   if (null == a) {
     let e = {
       zIndex: 1e3 + r
     };
-    return T((t, n) => n ? (0, s.jsx)(u.animated.div, {
-      className: f.backdrop,
+    return g((t, n) => n ? (0, s.jsx)(u.animated.div, {
+      className: p.backdrop,
       style: {
         ...t,
         ...e
       },
-      onClick: E
+      onClick: h
     }) : null)
   }
   return (0, s.jsx)(a, {
-    children: T((e, t) => t ? (0, s.jsx)(u.animated.div, {
-      className: l(f.backdrop, f.withLayer),
+    children: g((e, t) => t ? (0, s.jsx)(u.animated.div, {
+      className: l(p.backdrop, p.withLayer),
       style: e,
-      onClick: E
+      onClick: h
     }) : null)
   })
 });
-var p = E
+var f = h

@@ -19,22 +19,22 @@ function c(e) {
     value: s,
     onChange: c,
     onClose: d,
-    showScrollbar: f,
-    className: E,
-    multiSelect: p,
-    ...h
+    showScrollbar: p,
+    className: h,
+    multiSelect: f,
+    ...E
   } = e, _ = r.useCallback(e => {
-    c(e), !p && (null == d || d())
-  }, [c, d, p]);
+    c(e), !f && (null == d || d())
+  }, [c, d, f]);
   return (0, i.jsx)(o.Dialog, {
-    className: a(u.container, E, {
-      [u.scroller]: f
+    className: a(u.container, h, {
+      [u.scroller]: p
     }),
     children: (0, i.jsx)(l.Combobox, {
-      ...h,
-      showScrollbar: f,
+      ...E,
+      showScrollbar: p,
       value: s,
-      multiSelect: p,
+      multiSelect: f,
       onChange: _,
       placeholder: n,
       children: t,

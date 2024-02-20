@@ -1,38 +1,38 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   fetchActiveChannels: function() {
-    return d
+    return r
   }
 });
-var l = a("872717"),
-  n = a("913144"),
-  s = a("599417"),
-  i = a("49111");
-async function d(e) {
+var i = n("872717"),
+  a = n("913144"),
+  l = n("599417"),
+  s = n("49111");
+async function r(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-  n.default.dispatch({
+  a.default.dispatch({
     type: "ACTIVE_CHANNELS_FETCH_START",
     guildId: e
   });
   try {
-    var a, d;
-    let s = await l.default.get({
-        url: i.Endpoints.ACTIVE_CHANNELS(e),
+    var n, r;
+    let l = await i.default.get({
+        url: s.Endpoints.ACTIVE_CHANNELS(e),
         query: {
           channel_limit: t
         }
       }),
-      r = null !== (d = null === (a = s.body) || void 0 === a ? void 0 : a.channels) && void 0 !== d ? d : [];
-    return n.default.dispatch({
+      o = null !== (r = null === (n = l.body) || void 0 === n ? void 0 : n.channels) && void 0 !== r ? r : [];
+    return a.default.dispatch({
       type: "ACTIVE_CHANNELS_FETCH_SUCCESS",
       guildId: e,
-      channels: r
-    }), s
+      channels: o
+    }), l
   } catch (t) {
-    throw n.default.dispatch({
+    throw a.default.dispatch({
       type: "ACTIVE_CHANNELS_FETCH_FAILURE",
       guildId: e,
-      error: new s.default(t)
+      error: new l.default(t)
     }), t
   }
 }

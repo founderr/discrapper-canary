@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return E
+    return m
   }
 }), n("222007");
 var a, s, l = n("37983"),
@@ -20,7 +20,7 @@ var a, s, l = n("37983"),
   p = n("758534");
 (s = a || (a = {}))[s.PostSidebar = 0] = "PostSidebar", s[s.ThreadSidebar = 1] = "ThreadSidebar", s[s.CallChatSidebar = 2] = "CallChatSidebar", s[s.MessageRequestSidebar = 3] = "MessageRequestSidebar", s[s.HomeSidebar = 4] = "HomeSidebar";
 
-function m(e) {
+function E(e) {
   let {
     resizableNode: t,
     onResize: n,
@@ -40,14 +40,14 @@ function m(e) {
   })
 }
 
-function E(e) {
+function m(e) {
   let {
     sidebarType: t,
     maxWidth: n,
     onWidthChange: a,
     children: s,
     floatingLayer: r
-  } = e, f = i.useRef(null), E = function(e) {
+  } = e, f = i.useRef(null), m = function(e) {
     switch (e) {
       case 0:
         return "postSidebarWidth";
@@ -60,17 +60,17 @@ function E(e) {
       case 4:
         return "homeSidebarWidth"
     }
-  }(t), [g, S] = i.useState(h.default[E]), _ = i.useCallback(e => {
+  }(t), [g, S] = i.useState(h.default[m]), _ = i.useCallback(e => {
     c.default.updatedUnsyncedSettings({
-      [E]: e
+      [m]: e
     })
-  }, [E]), T = (0, C.shouldChannelChatFloat)({
+  }, [m]), T = (0, C.shouldChannelChatFloat)({
     maxWidth: n
   }), A = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = T ? A : A + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
   i.useEffect(() => {
     null == a || a(A, T)
   }, [A, a, T]);
-  let I = (0, l.jsxs)(l.Fragment, {
+  let N = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: o(p.chatTarget, {
         [p.floating]: T,
@@ -79,7 +79,7 @@ function E(e) {
       style: {
         width: M
       }
-    }), !T && (0, l.jsx)(m, {
+    }), !T && (0, l.jsx)(E, {
       maxWidth: n,
       resizableNode: f,
       onResize: S,
@@ -100,11 +100,11 @@ function E(e) {
     return (0, l.jsx)(e, {
       children: (0, l.jsx)("div", {
         className: p.chatLayerWrapper,
-        children: I
+        children: N
       })
     })
   }
   return (0, l.jsx)(l.Fragment, {
-    children: I
+    children: N
   })
 }

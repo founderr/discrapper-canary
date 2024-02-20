@@ -7,13 +7,13 @@ E.r(_), E.d(_, {
     return o
   },
   UNSAFE_RE: function() {
-    return n
+    return I
   },
   UNSAFE_RE_ALL: function() {
-    return r
+    return T
   }
 });
 let t = /\{.+?\}/,
   o = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
-  n = /!!/,
-  r = /!!/g
+  I = /!!/,
+  T = /!!/g

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   Modals: function() {
-    return v
+    return C
   }
 }), n("222007"), n("70102"), n("700225");
 var i = n("37983"),
@@ -16,15 +16,15 @@ var i = n("37983"),
   u = n("266491"),
   c = n("244201"),
   d = n("892974"),
-  f = n("983782"),
-  E = n("668596"),
-  p = n("659500"),
-  h = n("551042"),
+  p = n("983782"),
+  h = n("668596"),
+  f = n("659500"),
+  E = n("551042"),
   _ = n("625611"),
-  S = n("49111"),
-  m = n("934583");
-let T = [f.default, E.default];
-class g extends r.PureComponent {
+  m = n("49111"),
+  S = n("934583");
+let g = [p.default, h.default];
+class T extends r.PureComponent {
   render() {
     let {
       render: e,
@@ -36,7 +36,7 @@ class g extends r.PureComponent {
     } = this.state;
     return (s === _.ModalTransitionState.ENTERING || s === _.ModalTransitionState.ENTERED) && !n && (s = _.ModalTransitionState.HIDDEN), r && (s = _.ModalTransitionState.ENTERED), (0, i.jsx)(t, {
       children: (0, i.jsx)("div", {
-        className: a(m.layer, !n && m.hidden),
+        className: a(S.layer, !n && S.hidden),
         children: e({
           transitionState: s,
           onClose: this.close
@@ -78,13 +78,13 @@ class g extends r.PureComponent {
 }
 
 function I() {
-  return (0, h.modalContextFromAppContext)((0, c.useAppContext)())
+  return (0, E.modalContextFromAppContext)((0, c.useAppContext)())
 }
-let C = [];
+let v = [];
 
-function v() {
+function C() {
   let e = I(),
-    t = (0, h.useModalsStore)(t => void 0 !== t[e] ? t[e] : C),
+    t = (0, E.useModalsStore)(t => void 0 !== t[e] ? t[e] : v),
     n = r.useRef();
   r.useLayoutEffect(() => {
     n.current = t[t.length - 1]
@@ -96,8 +96,8 @@ function v() {
       let e = n.current;
       null != e && null != e.onCloseRequest && e.onCloseRequest()
     };
-    return p.ComponentDispatch.subscribe(S.ComponentActions.MODAL_CLOSE, e), () => {
-      p.ComponentDispatch.unsubscribe(S.ComponentActions.MODAL_CLOSE, e)
+    return f.ComponentDispatch.subscribe(m.ComponentActions.MODAL_CLOSE, e), () => {
+      f.ComponentDispatch.unsubscribe(m.ComponentActions.MODAL_CLOSE, e)
     }
   }, [s]);
   let a = r.useCallback(() => {
@@ -105,14 +105,14 @@ function v() {
       null != e && null != e.onCloseRequest && e.onCloseRequest()
     }, []),
     o = r.useCallback(t => {
-      (0, h.closeModal)(t, e)
+      (0, E.closeModal)(t, e)
     }, [e]),
-    c = T.map(e => t.some(t => t.Layer === e || null == t.Layer && e === f.default));
+    c = g.map(e => t.some(t => t.Layer === e || null == t.Layer && e === p.default));
   return (0, i.jsxs)(u.default, {
     component: r.Fragment,
-    children: [T.map((e, n) => {
+    children: [g.map((e, n) => {
       var r;
-      let s = l.findLast(t, t => t.Layer === e || null == t.Layer && e === f.default);
+      let s = l.findLast(t, t => t.Layer === e || null == t.Layer && e === p.default);
       return (0, i.jsx)(d.default, {
         isVisible: c[n],
         backdropStyle: null !== (r = null == s ? void 0 : s.backdropStyle) && void 0 !== r ? r : d.BackdropStyles.DARK,
@@ -127,9 +127,9 @@ function v() {
         render: a,
         instant: l
       } = e;
-      return (0, i.jsx)(g, {
+      return (0, i.jsx)(T, {
         modalKey: r,
-        LayerComponent: null != s ? s : f.default,
+        LayerComponent: null != s ? s : p.default,
         isTopModal: n === t.length - 1,
         render: a,
         closeModal: o,

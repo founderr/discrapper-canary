@@ -17,7 +17,7 @@ function o(e) {
   let n = new Uint8Array(t),
     r = 0,
     o = 0,
-    i, s = 0;
+    i, u = 0;
   for (let t = 0; t < e.length; t++) {
     if (void 0 === (i = a[e.charCodeAt(t)])) switch (e[t]) {
       case "=":
@@ -32,16 +32,16 @@ function o(e) {
     }
     switch (o) {
       case 0:
-        s = i, o = 1;
+        u = i, o = 1;
         break;
       case 1:
-        n[r++] = s << 2 | (48 & i) >> 4, s = i, o = 2;
+        n[r++] = u << 2 | (48 & i) >> 4, u = i, o = 2;
         break;
       case 2:
-        n[r++] = (15 & s) << 4 | (60 & i) >> 2, s = i, o = 3;
+        n[r++] = (15 & u) << 4 | (60 & i) >> 2, u = i, o = 3;
         break;
       case 3:
-        n[r++] = (3 & s) << 6 | i, o = 0
+        n[r++] = (3 & u) << 6 | i, o = 0
     }
   }
   if (1 == o) throw Error("invalid base64 string.");

@@ -1,66 +1,66 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return A
+    return _
   }
-}), E("222007");
-var t = E("771281"),
-  o = E("773364"),
-  n = E("689988"),
-  r = E("271938"),
-  i = E("50885"),
-  a = E("49111");
-let I = new Set;
+}), n("222007");
+var i = n("771281"),
+  a = n("773364"),
+  l = n("689988"),
+  s = n("271938"),
+  r = n("50885"),
+  o = n("49111");
+let u = new Set;
 
-function s(e) {
+function d(e) {
   switch (e) {
-    case o.MediaEngineContextTypes.DEFAULT:
-      return t.StoredCrashInformation.VideoMediaSessionId;
-    case o.MediaEngineContextTypes.STREAM:
-      return t.StoredCrashInformation.StreamMediaSessionId
+    case a.MediaEngineContextTypes.DEFAULT:
+      return i.StoredCrashInformation.VideoMediaSessionId;
+    case a.MediaEngineContextTypes.STREAM:
+      return i.StoredCrashInformation.StreamMediaSessionId
   }
 }
 
-function T(e) {
-  var _;
-  i.default.setCrashInformation(s(e.context), null !== (_ = e.mediaSessionId) && void 0 !== _ ? _ : null)
+function c(e) {
+  var t;
+  r.default.setCrashInformation(d(e.context), null !== (t = e.mediaSessionId) && void 0 !== t ? t : null)
 }
 
-function S(e) {
-  var _;
-  let E = (null !== (_ = e.channelId) && void 0 !== _ ? _ : "unknown") + e.context;
+function f(e) {
+  var t;
+  let n = (null !== (t = e.channelId) && void 0 !== t ? t : "unknown") + e.context;
   switch (e.state) {
-    case a.RTCConnectionStates.RTC_CONNECTED:
-      I.add(E), i.default.setCrashInformation(t.StoredCrashInformation.HasRTCConnection, 1);
+    case o.RTCConnectionStates.RTC_CONNECTED:
+      u.add(n), r.default.setCrashInformation(i.StoredCrashInformation.HasRTCConnection, 1);
       break;
-    case a.RTCConnectionStates.DISCONNECTED:
-      i.default.setCrashInformation(s(e.context), null), I.delete(E), 0 === I.size && ! function() {
-        let e = [t.StoredCrashInformation.HasRTCConnection, t.StoredCrashInformation.IsSendingVideo, t.StoredCrashInformation.IsSendingStream, t.StoredCrashInformation.IsReceivingVideo, t.StoredCrashInformation.IsReceivingStream];
-        for (let _ of e) i.default.setCrashInformation(_, 0)
+    case o.RTCConnectionStates.DISCONNECTED:
+      r.default.setCrashInformation(d(e.context), null), u.delete(n), 0 === u.size && ! function() {
+        let e = [i.StoredCrashInformation.HasRTCConnection, i.StoredCrashInformation.IsSendingVideo, i.StoredCrashInformation.IsSendingStream, i.StoredCrashInformation.IsReceivingVideo, i.StoredCrashInformation.IsReceivingStream];
+        for (let t of e) r.default.setCrashInformation(t, 0)
       }()
   }
 }
 
-function N(e) {
-  let _ = e.userId === r.default.getId(),
-    E = null != e.streamId,
-    n = null;
+function E(e) {
+  let t = e.userId === s.default.getId(),
+    n = null != e.streamId,
+    l = null;
   switch (e.context) {
-    case o.MediaEngineContextTypes.DEFAULT:
-      n = _ ? t.StoredCrashInformation.IsSendingVideo : t.StoredCrashInformation.IsReceivingVideo;
+    case a.MediaEngineContextTypes.DEFAULT:
+      l = t ? i.StoredCrashInformation.IsSendingVideo : i.StoredCrashInformation.IsReceivingVideo;
       break;
-    case o.MediaEngineContextTypes.STREAM:
-      n = _ ? t.StoredCrashInformation.IsSendingStream : t.StoredCrashInformation.IsReceivingStream
+    case a.MediaEngineContextTypes.STREAM:
+      l = t ? i.StoredCrashInformation.IsSendingStream : i.StoredCrashInformation.IsReceivingStream
   }
-  i.default.setCrashInformation(n, E ? 1 : 0)
+  r.default.setCrashInformation(l, n ? 1 : 0)
 }
-class O extends n.default {
+class h extends l.default {
   constructor(...e) {
     super(...e), this.actions = {
-      RTC_CONNECTION_STATE: S,
-      RTC_CONNECTION_VIDEO: N,
-      MEDIA_SESSION_JOINED: T
+      RTC_CONNECTION_STATE: f,
+      RTC_CONNECTION_VIDEO: E,
+      MEDIA_SESSION_JOINED: c
     }
   }
 }
-var A = new O
+var _ = new h

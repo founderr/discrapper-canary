@@ -1,64 +1,64 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_AUTO_ARCHIVE_DURATION: function() {
-    return u
+    return s
   },
   MAX_THREAD_MESSAGE_COUNT_OLD: function() {
-    return c
-  },
-  MAX_THREAD_MESSAGE_COUNT: function() {
-    return d
-  },
-  MAX_THREAD_MEMBERS_PREVIEW: function() {
-    return f
-  },
-  MAX_THREAD_UNREAD_MESSAGE_COUNT: function() {
     return E
   },
+  MAX_THREAD_MESSAGE_COUNT: function() {
+    return _
+  },
+  MAX_THREAD_MEMBERS_PREVIEW: function() {
+    return c
+  },
+  MAX_THREAD_UNREAD_MESSAGE_COUNT: function() {
+    return d
+  },
   ThreadMemberFlags: function() {
-    return p
+    return T
   },
   OpenThreadAnalyticsLocations: function() {
-    return i
-  },
-  getThreadNotificationOptions: function() {
-    return h
-  },
-  ThreadSortOrderReadableForAnalytics: function() {
     return r
   },
+  getThreadNotificationOptions: function() {
+    return A
+  },
+  ThreadSortOrderReadableForAnalytics: function() {
+    return i
+  },
   FORUM_POST_CREATION_UPLOAD_ERRORS: function() {
-    return _
+    return I
   },
   FORUM_POST_CREATION_AUTOMOD_ERRORS: function() {
     return S
   }
 }), n("222007");
-var i, r, s, a, o = n("49111"),
-  l = n("782340");
-let u = 4320,
+var r, i, o, l, u = n("49111"),
+  a = n("782340");
+let s = 4320,
+  E = 50,
+  _ = 1e5,
   c = 50,
-  d = 1e5,
-  f = 50,
-  E = 25,
-  p = {
+  d = 25,
+  T = {
     HAS_INTERACTED: 1,
     ALL_MESSAGES: 2,
     ONLY_MENTIONS: 4,
     NO_MESSAGES: 8
   };
 
-function h() {
+function A() {
   return [{
-    setting: p.ALL_MESSAGES,
-    label: l.default.Messages.FORM_LABEL_ALL_MESSAGES
+    setting: T.ALL_MESSAGES,
+    label: a.default.Messages.FORM_LABEL_ALL_MESSAGES
   }, {
-    setting: p.ONLY_MENTIONS,
-    label: l.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
+    setting: T.ONLY_MENTIONS,
+    label: a.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
   }, {
-    setting: p.NO_MESSAGES,
-    label: l.default.Messages.FORM_LABEL_NOTHING
+    setting: T.NO_MESSAGES,
+    label: a.default.Messages.FORM_LABEL_NOTHING
   }]
-}(s = i || (i = {})).EMBED = "Embed", s.BROWSER = "Thread Browser", s.POPOUT = "Active Threads Popout", s.CHANNEL_LIST = "Channel List", s.GUILD_ACTIVE_THREADS_MODAL = "Guild Active Threads Modal", s.INBOX = "Inbox", s.FORUM = "Forum", s.VOICE_AUTO_OPEN = "Voice Auto Open", (a = r || (r = {})).LATEST_ACTIVITY = "Last Message", a.CREATION_DATE = "Creation";
-let _ = new Set([o.AbortCodes.TOO_MANY_ATTACHMENTS, o.AbortCodes.EXPLICIT_CONTENT, o.AbortCodes.ENTITY_TOO_LARGE]),
-  S = new Set([o.AbortCodes.AUTOMOD_MESSAGE_BLOCKED, o.AbortCodes.AUTOMOD_TITLE_BLOCKED])
+}(o = r || (r = {})).EMBED = "Embed", o.BROWSER = "Thread Browser", o.POPOUT = "Active Threads Popout", o.CHANNEL_LIST = "Channel List", o.GUILD_ACTIVE_THREADS_MODAL = "Guild Active Threads Modal", o.INBOX = "Inbox", o.FORUM = "Forum", o.VOICE_AUTO_OPEN = "Voice Auto Open", (l = i || (i = {})).LATEST_ACTIVITY = "Last Message", l.CREATION_DATE = "Creation";
+let I = new Set([u.AbortCodes.TOO_MANY_ATTACHMENTS, u.AbortCodes.EXPLICIT_CONTENT, u.AbortCodes.ENTITY_TOO_LARGE]),
+  S = new Set([u.AbortCodes.AUTOMOD_MESSAGE_BLOCKED, u.AbortCodes.AUTOMOD_TITLE_BLOCKED])

@@ -15,7 +15,7 @@ function l(e) {
     mainText: t,
     supportingText: n,
     children: l,
-    size: u
+    size: o
   } = e;
   return (0, a.jsxs)(s.default, {
     className: i.root,
@@ -25,7 +25,7 @@ function l(e) {
     children: [(0, a.jsx)(r.default, {
       header: t,
       description: n,
-      size: u
+      size: o
     }), l]
   })
 }

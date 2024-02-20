@@ -1,164 +1,164 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   NewMemberAction: function() {
-    return j
+    return R
   },
   default: function() {
-    return D
+    return x
   }
-}), a("702976");
-var l = a("37983"),
-  n = a("884691"),
-  s = a("446674"),
-  i = a("77078"),
-  d = a("679653"),
-  r = a("419830"),
-  u = a("42203"),
-  o = a("26989"),
-  c = a("305961"),
-  f = a("957255"),
-  m = a("593195"),
-  h = a("578706"),
-  E = a("904276"),
-  g = a("641892"),
-  I = a("315102"),
-  _ = a("568734"),
-  x = a("347895"),
-  v = a("698882"),
-  S = a("675305"),
-  C = a("205454"),
-  N = a("49111"),
-  p = a("657944"),
-  T = a("782340"),
-  A = a("918648");
+}), n("702976");
+var a = n("37983"),
+  l = n("884691"),
+  s = n("446674"),
+  i = n("77078"),
+  r = n("679653"),
+  d = n("419830"),
+  o = n("42203"),
+  u = n("26989"),
+  c = n("305961"),
+  N = n("957255"),
+  _ = n("593195"),
+  I = n("578706"),
+  E = n("904276"),
+  f = n("641892"),
+  O = n("315102"),
+  S = n("568734"),
+  T = n("347895"),
+  m = n("698882"),
+  D = n("675305"),
+  A = n("205454"),
+  g = n("49111"),
+  G = n("657944"),
+  h = n("782340"),
+  L = n("918648");
 
-function j(e) {
+function R(e) {
   let {
     title: t,
-    emojiId: a,
-    emojiName: n,
+    emojiId: n,
+    emojiName: l,
     icon: s,
-    completed: d,
-    Icon: r,
-    ...u
-  } = e, o = "channel" === u.variant ? u.channelId : null, c = "static" === u.variant ? u.subtitle : u.channelName, f = null != o ? I.default.getNewMemberActionIconURL({
-    channelId: o,
+    completed: r,
+    Icon: d,
+    ...o
+  } = e, u = "channel" === o.variant ? o.channelId : null, c = "static" === o.variant ? o.subtitle : o.channelName, N = null != u ? O.default.getNewMemberActionIconURL({
+    channelId: u,
     icon: s
   }) : null;
-  return (0, l.jsxs)("div", {
-    className: A.action,
-    children: [null != f ? (0, l.jsx)("img", {
-      src: f,
-      className: A.icon,
+  return (0, a.jsxs)("div", {
+    className: L.action,
+    children: [null != N ? (0, a.jsx)("img", {
+      src: N,
+      className: L.icon,
       width: 32,
       height: 32,
       alt: "",
       "aria-hidden": !0
-    }) : (0, l.jsx)(C.default, {
-      emojiId: a,
-      emojiName: n,
-      size: C.CTAEmojiSize.LARGE,
-      defaultComponent: (0, l.jsx)("div", {
-        className: A.channelIconContainer,
-        children: (0, l.jsx)(r, {
-          className: A.channelIcon
+    }) : (0, a.jsx)(A.default, {
+      emojiId: n,
+      emojiName: l,
+      size: A.CTAEmojiSize.LARGE,
+      defaultComponent: (0, a.jsx)("div", {
+        className: L.channelIconContainer,
+        children: (0, a.jsx)(d, {
+          className: L.channelIcon
         })
       })
-    }), (0, l.jsxs)("div", {
-      className: A.actionInfo,
-      children: [(0, l.jsx)(i.Text, {
+    }), (0, a.jsxs)("div", {
+      className: L.actionInfo,
+      children: [(0, a.jsx)(i.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
         children: t
-      }), null != c ? (0, l.jsx)(i.Text, {
+      }), null != c ? (0, a.jsx)(i.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: c
       }) : null]
-    }), d ? (0, l.jsx)(h.default, {
+    }), r ? (0, a.jsx)(I.default, {
       backgroundColor: "#fff",
-      className: A.checkCircleCompleted,
+      className: L.checkCircleCompleted,
       width: 24,
       height: 24
-    }) : (0, l.jsx)(E.default, {
-      className: A.checkCircle,
+    }) : (0, a.jsx)(E.default, {
+      className: L.checkCircle,
       width: 24,
       height: 24
     })]
   })
 }
 
-function M(e) {
+function p(e) {
   var t;
   let {
-    action: a,
-    completed: o
+    action: n,
+    completed: u
   } = e, {
     channelId: c,
-    title: h,
+    title: I,
     emoji: E,
-    icon: g
-  } = a, {
-    id: I,
-    name: _
-  } = null != E ? E : {}, v = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(c)), S = (0, d.default)(v, !0), C = (0, s.useStateFromStores)([f.default], () => f.default.can(N.Permissions.VIEW_CHANNEL, v)), p = n.useCallback(() => {
-    if (null == v) return null;
-    (0, x.selectNewMemberActionChannel)(v.guild_id, v.id)
-  }, [v]);
-  if (null == v || !C) return null;
-  let T = null !== (t = (0, r.getChannelIconComponent)(v)) && void 0 !== t ? t : m.default;
-  return (0, l.jsx)(i.Clickable, {
-    className: A.clickableAction,
-    onClick: p,
-    children: (0, l.jsx)(j, {
+    icon: f
+  } = n, {
+    id: O,
+    name: S
+  } = null != E ? E : {}, m = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(c)), D = (0, r.default)(m, !0), A = (0, s.useStateFromStores)([N.default], () => N.default.can(g.Permissions.VIEW_CHANNEL, m)), G = l.useCallback(() => {
+    if (null == m) return null;
+    (0, T.selectNewMemberActionChannel)(m.guild_id, m.id)
+  }, [m]);
+  if (null == m || !A) return null;
+  let h = null !== (t = (0, d.getChannelIconComponent)(m)) && void 0 !== t ? t : _.default;
+  return (0, a.jsx)(i.Clickable, {
+    className: L.clickableAction,
+    onClick: G,
+    children: (0, a.jsx)(R, {
       variant: "channel",
       channelId: c,
-      title: h,
-      channelName: S,
-      emojiId: I,
-      emojiName: _,
-      icon: g,
-      completed: o,
-      Icon: T
+      title: I,
+      channelName: D,
+      emojiId: O,
+      emojiName: S,
+      icon: f,
+      completed: u,
+      Icon: h
     })
   })
 }
 
-function D(e) {
+function x(e) {
   let {
     guildId: t
-  } = e, a = (0, s.useStateFromStores)([v.default], () => v.default.getNewMemberActions(t), [t]), d = (0, s.useStateFromStores)([S.default], () => S.default.getCompletedActions(t)), r = (0, s.useStateFromStores)([o.default], () => o.default.getSelfMember(t)), u = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t));
-  n.useEffect(() => {
+  } = e, n = (0, s.useStateFromStores)([m.default], () => m.default.getNewMemberActions(t), [t]), r = (0, s.useStateFromStores)([D.default], () => D.default.getCompletedActions(t)), d = (0, s.useStateFromStores)([u.default], () => u.default.getSelfMember(t)), o = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t));
+  l.useEffect(() => {
     var e;
-    null == d && (null == r ? void 0 : r.flags) != null && (0, _.hasFlag)(null !== (e = r.flags) && void 0 !== e ? e : 0, p.GuildMemberFlags.STARTED_HOME_ACTIONS) && (0, x.fetchNewMemberActions)(t)
-  }, [d, t, null == r ? void 0 : r.flags]);
-  let f = n.useCallback(() => {
-    null != u && null != u.rulesChannelId && (0, x.selectNewMemberActionChannel)(u.id, u.rulesChannelId)
-  }, [u]);
-  return null == r || null == a || 0 === a.length ? null : (0, l.jsxs)("div", {
-    className: A.container,
-    children: [(0, l.jsx)(i.Heading, {
+    null == r && (null == d ? void 0 : d.flags) != null && (0, S.hasFlag)(null !== (e = d.flags) && void 0 !== e ? e : 0, G.GuildMemberFlags.STARTED_HOME_ACTIONS) && (0, T.fetchNewMemberActions)(t)
+  }, [r, t, null == d ? void 0 : d.flags]);
+  let N = l.useCallback(() => {
+    null != o && null != o.rulesChannelId && (0, T.selectNewMemberActionChannel)(o.id, o.rulesChannelId)
+  }, [o]);
+  return null == d || null == n || 0 === n.length ? null : (0, a.jsxs)("div", {
+    className: L.container,
+    children: [(0, a.jsx)(i.Heading, {
       variant: "heading-lg/bold",
       color: "header-primary",
-      children: T.default.Messages.GET_STARTED
-    }), a.map(e => (0, l.jsx)(M, {
+      children: h.default.Messages.GET_STARTED
+    }), n.map(e => (0, a.jsx)(p, {
       action: e,
-      completed: (null == d ? void 0 : d[e.channelId]) === !0,
+      completed: (null == r ? void 0 : r[e.channelId]) === !0,
       guildId: t
-    }, e.channelId)), (null == u ? void 0 : u.rulesChannelId) != null && (0, l.jsxs)(i.Clickable, {
-      className: A.action,
-      onClick: f,
-      children: [(0, l.jsx)("div", {
-        className: A.rulesIconContainer,
-        children: (0, l.jsx)(g.default, {
-          className: A.rulesIcon
+    }, e.channelId)), (null == o ? void 0 : o.rulesChannelId) != null && (0, a.jsxs)(i.Clickable, {
+      className: L.action,
+      onClick: N,
+      children: [(0, a.jsx)("div", {
+        className: L.rulesIconContainer,
+        children: (0, a.jsx)(f.default, {
+          className: L.rulesIcon
         })
-      }), (0, l.jsx)("div", {
-        className: A.actionInfo,
-        children: (0, l.jsx)(i.Text, {
+      }), (0, a.jsx)("div", {
+        className: L.actionInfo,
+        children: (0, a.jsx)(i.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
-          children: T.default.Messages.GUILD_SETTINGS_ONBOARDING_RULES_ACTION
+          children: h.default.Messages.GUILD_SETTINGS_ONBOARDING_RULES_ACTION
         })
       })]
     })]

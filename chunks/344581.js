@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
 var r = n("234160"),
   a = n("579934");
 
-function o(e, t) {
+function i(e, t) {
   var n = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
     var r = Object.getOwnPropertySymbols(e);
@@ -18,10 +18,10 @@ function o(e, t) {
   return n
 }
 
-function i(e) {
+function o(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
-    t % 2 ? o(Object(n), !0).forEach(function(t) {
+    t % 2 ? i(Object(n), !0).forEach(function(t) {
       (function(e, t, n) {
         t in e ? Object.defineProperty(e, t, {
           value: n,
@@ -30,7 +30,7 @@ function i(e) {
           writable: !0
         }) : e[t] = n
       })(e, t, n[t])
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : o(Object(n)).forEach(function(t) {
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : i(Object(n)).forEach(function(t) {
       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
     })
   }
@@ -54,7 +54,7 @@ function c() {
       };
     case r.HOVER:
       if ((0, a.areCoordsEqual)(e.clientOffset, n.clientOffset)) return e;
-      return i(i({}, e), {}, {
+      return o(o({}, e), {}, {
         clientOffset: n.clientOffset
       });
     case r.END_DRAG:

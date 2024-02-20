@@ -1,36 +1,36 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return d
   }
 });
-var t = E("37983");
-E("884691");
-var o = E("414456"),
-  n = E.n(o),
-  r = E("945330"),
-  i = E("774223"),
-  a = E("587974"),
-  I = E("457774");
+var i = n("37983");
+n("884691");
+var a = n("414456"),
+  l = n.n(a),
+  s = n("945330"),
+  r = n("774223"),
+  o = n("587974"),
+  u = n("457774");
 
-function s(e) {
+function d(e) {
   let {
-    width: _ = 20,
-    height: E = 20,
-    className: o
+    width: t = 20,
+    height: n = 20,
+    className: a
   } = e;
-  return (0, t.jsxs)("div", {
-    className: n(I.icon, o),
-    children: [(0, t.jsx)(a.default, {
-      mask: a.default.Masks.STATUS_SCREENSHARE,
-      width: _,
-      height: E,
-      children: (0, t.jsx)(i.default, {
-        width: _,
-        height: E
+  return (0, i.jsxs)("div", {
+    className: l(u.icon, a),
+    children: [(0, i.jsx)(o.default, {
+      mask: o.default.Masks.STATUS_SCREENSHARE,
+      width: t,
+      height: n,
+      children: (0, i.jsx)(r.default, {
+        width: t,
+        height: n
       })
-    }), (0, t.jsx)(r.default, {
-      className: I.badge
+    }), (0, i.jsx)(s.default, {
+      className: u.badge
     })]
   })
 }

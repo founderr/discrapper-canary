@@ -1,20 +1,20 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return I
+    return u
   }
-}), E("222007");
-var t = E("689988"),
-  o = E("537325"),
-  n = E("894887"),
-  r = E("760797"),
-  i = E("49111");
-class a extends t.default {
+}), n("222007");
+var i = n("689988"),
+  a = n("537325"),
+  l = n("894887"),
+  s = n("760797"),
+  r = n("49111");
+class o extends i.default {
   async handleChannelCreate(e) {
     let {
-      channel: _
+      channel: t
     } = e;
-    (0, n.isEligibleForMidjourneyRedirect)(_) && (await (0, n.hasRedirectedToGuild)(r.MIDJOURNEY_GUILD_ID), (0, o.default)(i.Routes.CHANNEL(null, _.id)))
+    (0, l.isEligibleForMidjourneyRedirect)(t) && (await (0, l.hasRedirectedToGuild)(s.MIDJOURNEY_GUILD_ID), (0, a.default)(r.Routes.CHANNEL(null, t.id)))
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -22,4 +22,4 @@ class a extends t.default {
     }
   }
 }
-var I = new a
+var u = new o

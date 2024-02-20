@@ -8,15 +8,15 @@ var r = n("803628"),
   a = n("935070"),
   o = n("621734"),
   i = n("18719"),
-  s = n("16506"),
-  u = n("609217"),
+  u = n("16506"),
+  s = n("609217"),
   l = n("737196"),
   c = n("507721"),
-  d = n("107678"),
-  f = n("928163"),
+  f = n("107678"),
+  d = n("928163"),
   p = n("154090"),
-  m = n("171742"),
-  h = n("926481");
+  h = n("171742"),
+  m = n("926481");
 class _ {
   create(e) {
     let t = (0, l.reflectionCreate)(this);
@@ -41,25 +41,25 @@ class _ {
     (0, c.reflectionMergePartial)(this, e, t)
   }
   fromBinary(e, t) {
-    let n = (0, h.binaryReadOptions)(t);
+    let n = (0, m.binaryReadOptions)(t);
     return this.internalBinaryRead(n.readerFactory(e), e.byteLength, n)
   }
   fromJson(e, t) {
-    return this.internalJsonRead(e, (0, f.jsonReadOptions)(t))
+    return this.internalJsonRead(e, (0, d.jsonReadOptions)(t))
   }
   fromJsonString(e, t) {
     let n = JSON.parse(e);
     return this.fromJson(n, t)
   }
   toJson(e, t) {
-    return this.internalJsonWrite(e, (0, f.jsonWriteOptions)(t))
+    return this.internalJsonWrite(e, (0, d.jsonWriteOptions)(t))
   }
   toJsonString(e, t) {
     var n;
     return JSON.stringify(this.toJson(e, t), null, null !== (n = null == t ? void 0 : t.prettySpaces) && void 0 !== n ? n : 0)
   }
   toBinary(e, t) {
-    let n = (0, m.binaryWriteOptions)(t);
+    let n = (0, h.binaryWriteOptions)(t);
     return this.internalBinaryWrite(e, n.writerFactory(), n).finish()
   }
   internalJsonRead(e, t, n) {
@@ -67,7 +67,7 @@ class _ {
       let r = null != n ? n : this.create();
       return this.refJsonReader.read(e, r, t), r
     }
-    throw Error("Unable to parse message ".concat(this.typeName, " from JSON ").concat((0, d.typeofJsonValue)(e), "."))
+    throw Error("Unable to parse message ".concat(this.typeName, " from JSON ").concat((0, f.typeofJsonValue)(e), "."))
   }
   internalJsonWrite(e, t) {
     return this.refJsonWriter.write(e, t)
@@ -80,6 +80,6 @@ class _ {
     return this.refBinReader.read(e, a, n, t), a
   }
   constructor(e, t, n) {
-    this.defaultCheckDepth = 16, this.typeName = e, this.fields = t.map(r.normalizeFieldInfo), this.options = null != n ? n : {}, this.refTypeCheck = new a.ReflectionTypeCheck(this), this.refJsonReader = new o.ReflectionJsonReader(this), this.refJsonWriter = new i.ReflectionJsonWriter(this), this.refBinReader = new s.ReflectionBinaryReader(this), this.refBinWriter = new u.ReflectionBinaryWriter(this)
+    this.defaultCheckDepth = 16, this.typeName = e, this.fields = t.map(r.normalizeFieldInfo), this.options = null != n ? n : {}, this.refTypeCheck = new a.ReflectionTypeCheck(this), this.refJsonReader = new o.ReflectionJsonReader(this), this.refJsonWriter = new i.ReflectionJsonWriter(this), this.refBinReader = new u.ReflectionBinaryReader(this), this.refBinWriter = new s.ReflectionBinaryWriter(this)
   }
 }

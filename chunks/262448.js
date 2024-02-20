@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Collapsible: function() {
-    return f
+    return p
   }
 }), n("222007");
 var i = n("37983"),
@@ -14,44 +14,44 @@ var i = n("37983"),
   c = n("206230"),
   d = n("716806");
 
-function f(e) {
+function p(e) {
   let {
     children: t,
     className: n,
     collapsibleContent: s,
-    isExpanded: f
-  } = e, [E, p] = r.useState(!1), h = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), [_, S] = r.useState(!0), [m, T] = r.useState(!1), g = null != f ? f : E, {
+    isExpanded: p
+  } = e, [h, f] = r.useState(!1), E = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), [_, m] = r.useState(!0), [S, g] = r.useState(!1), T = null != p ? p : h, {
     ref: I,
-    height: C = 0
+    height: v = 0
   } = (0, u.default)(), {
-    ref: v,
+    ref: C,
     height: A = 0
   } = (0, u.default)(), R = (0, o.useSpring)({
-    height: g ? C + A : A,
-    immediate: _ || h,
+    height: T ? v + A : A,
+    immediate: _ || E,
     config: o.config.stiff,
-    onRest: () => T(!0)
+    onRest: () => g(!0)
   }), N = r.useCallback(() => {
-    p(!E)
-  }, [E, p]);
+    f(!h)
+  }, [h, f]);
   return r.useLayoutEffect(() => {
     let e = setTimeout(() => {
-      S(!1)
+      m(!1)
     }, 100);
     return () => clearTimeout(e)
   }, []), (0, i.jsx)("div", {
     className: a(d.collapseable, {
-      [d.toggled]: g
+      [d.toggled]: T
     }, n),
     children: (0, i.jsxs)(o.animated.div, {
       className: a(d.contentExpandContainer, {
-        [d.showOverflow]: g && m
+        [d.showOverflow]: T && S
       }),
       style: R,
       children: [(0, i.jsx)("div", {
-        ref: v,
+        ref: C,
         className: a(d.header, {
-          [d.toggled]: g
+          [d.toggled]: T
         }),
         children: t({
           onClick: N

@@ -1,88 +1,88 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return R
+    return C
   }
 });
-var t = E("77078"),
-  o = E("913144"),
-  n = E("373469"),
-  r = E("42887"),
-  i = E("568307"),
-  a = E("56947"),
-  I = E("111177"),
-  s = E("386045"),
-  T = E("18346"),
-  S = E("803725"),
-  N = E("80028"),
-  O = E("782340");
-class A extends I.default {
+var i = n("77078"),
+  a = n("913144"),
+  l = n("373469"),
+  s = n("42887"),
+  r = n("568307"),
+  o = n("56947"),
+  u = n("111177"),
+  d = n("386045"),
+  c = n("18346"),
+  f = n("803725"),
+  E = n("80028"),
+  h = n("782340");
+class _ extends u.default {
   showClipsToast() {
-    (0, t.showToast)({
+    (0, i.showToast)({
       id: "CLIPS_IN_CALL_WARNING",
-      message: O.default.Messages.CLIPS_IN_CALL_WARNING,
-      type: t.ToastType.CLIP,
+      message: h.default.Messages.CLIPS_IN_CALL_WARNING,
+      type: i.ToastType.CLIP,
       options: {
-        duration: N.CLIPS_TOAST_DURATION
+        duration: E.CLIPS_TOAST_DURATION
       }
     })
   }
   applyNativeClipsSettings(e) {
-    if (!(0, T.default)(r.default)) return;
-    let _ = (0, a.areClipsEnabled)(),
-      E = s.default.getSettings(),
-      t = (E.clipsEnabled || E.decoupledClipsEnabled) && _,
-      o = r.default.getMediaEngine();
-    if (o.setClipBufferLength(t ? E.clipsLength / 1e3 : 0), (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(), null == e || (null == e ? void 0 : e.settings.clipsQuality) != null) {
+    if (!(0, c.default)(s.default)) return;
+    let t = (0, o.areClipsEnabled)(),
+      n = d.default.getSettings(),
+      i = (n.clipsEnabled || n.decoupledClipsEnabled) && t,
+      a = s.default.getMediaEngine();
+    if (a.setClipBufferLength(i ? n.clipsLength / 1e3 : 0), (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(), null == e || (null == e ? void 0 : e.settings.clipsQuality) != null) {
       let {
-        frameRate: _,
-        resolution: t
-      } = E.clipsQuality;
-      !o.setClipsQualitySettings(t <= 480 ? t / 3 * 4 : t / 9 * 16, t, _) && null != e && this.fireClipsInitEvent()
+        frameRate: t,
+        resolution: i
+      } = n.clipsQuality;
+      !a.setClipsQualitySettings(i <= 480 ? i / 3 * 4 : i / 9 * 16, i, t) && null != e && this.fireClipsInitEvent()
     }
   }
   handleClipsInitOnToggleDetection(e) {
-    let _ = i.default.getVisibleGame();
-    null != _ && _.id === e.game.id && this.fireClipsInitEvent()
+    let t = r.default.getVisibleGame();
+    null != t && t.id === e.game.id && this.fireClipsInitEvent()
   }
   handleClipsInitOnGamesChange(e) {
-    let _ = i.default.getVisibleGame();
-    if (null == _) return;
-    let E = !!e.added.find(e => e.pid === _.pid);
-    E ? setTimeout(() => this.fireClipsInitEvent(), N.CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY) : this.fireClipsInitEvent()
+    let t = r.default.getVisibleGame();
+    if (null == t) return;
+    let n = !!e.added.find(e => e.pid === t.pid);
+    n ? setTimeout(() => this.fireClipsInitEvent(), E.CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY) : this.fireClipsInitEvent()
   }
   fireClipsInitEvent() {
-    if (!(0, T.default)(r.default)) return;
-    let e = (0, a.areClipsEnabled)(),
-      _ = s.default.getSettings(),
-      E = _.clipsEnabled && e;
-    if (!E || null != n.default.getCurrentUserActiveStream()) return;
-    let t = i.default.getVisibleGame();
-    (null == t ? void 0 : t.pid) != null && (null == t ? void 0 : t.windowHandle) != null && null != t.name && "" !== t.name && o.default.dispatch({
+    if (!(0, c.default)(s.default)) return;
+    let e = (0, o.areClipsEnabled)(),
+      t = d.default.getSettings(),
+      n = t.clipsEnabled && e;
+    if (!n || null != l.default.getCurrentUserActiveStream()) return;
+    let i = r.default.getVisibleGame();
+    (null == i ? void 0 : i.pid) != null && (null == i ? void 0 : i.windowHandle) != null && null != i.name && "" !== i.name && a.default.dispatch({
       type: "CLIPS_INIT",
-      sourceId: "window:".concat(null == t ? void 0 : t.windowHandle),
-      applicationName: t.name,
-      quality: _.clipsQuality
+      sourceId: "window:".concat(null == i ? void 0 : i.windowHandle),
+      applicationName: i.name,
+      quality: t.clipsQuality
     })
   }
   handleMediaEngineSetHardwareH264(e) {
     let {
-      enabled: _
+      enabled: t
     } = e;
-    if (!_) {
+    if (!t) {
       let {
         clipsEnabled: e
-      } = s.default.getSettings();
-      e && S.updateClipsEnabled({
+      } = d.default.getSettings();
+      e && f.updateClipsEnabled({
         clipsEnabled: !1
       })
     }
   }
   disableClips() {
-    S.updateClipsEnabled({
+    f.updateClipsEnabled({
       clipsEnabled: !1,
       trackAnalytics: !1
     })
   }
 }
-var R = new A
+var C = new _

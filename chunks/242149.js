@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(e), s.d(e, {
   QUICKSWITCHER_SHOW: function() {
-    return l
+    return o
   }
 });
-var i = n("104589"),
-  o = n("778588");
-let l = {
+var n = s("104589"),
+  a = s("778588");
+let o = {
   binds: ["mod+k", "mod+t"],
   comboKeysBindGlobal: !0,
-  action: () => (!o.default.hasLayers() && (0, i.show)(), !1)
+  action: () => (!a.default.hasLayers() && (0, n.show)(), !1)
 }

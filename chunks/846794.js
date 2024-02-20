@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   getItemCount: function() {
-    return m
+    return h
   },
   getChildNodes: function() {
     return c
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
 var r = n("884691");
 class a {
   build(e, t) {
-    return this.context = t, o(() => this.iterateCollection(e))
+    return this.context = t, i(() => this.iterateCollection(e))
   }* iterateCollection(e) {
     let {
       children: t,
@@ -56,8 +56,8 @@ class a {
     if ("cell" === t.type && null != t.key) return "".concat(r).concat(t.key);
     let a = t.value;
     if (null != a) {
-      var o;
-      let e = null !== (o = a.key) && void 0 !== o ? o : a.id;
+      var i;
+      let e = null !== (i = a.key) && void 0 !== i ? i : a.id;
       if (null == e) throw Error("No key found for item");
       return e
     }
@@ -83,9 +83,9 @@ class a {
         let e = "function" == typeof s.type ? s.type.name : s.type;
         throw Error("Unknown element <".concat(e, "> in collection."))
       }
-      let o = r.getCollectionNode(s.props, this.context),
+      let i = r.getCollectionNode(s.props, this.context),
         c = e.index,
-        l = o.next();
+        l = i.next();
       for (; !l.done && l.value;) {
         let r = l.value;
         e.index = c;
@@ -100,10 +100,10 @@ class a {
           }(e.wrapper, r.wrapper)
         }, this.getChildState(t, r), n ? "".concat(n).concat(s.key) : s.key, a)];
         for (let t of d) {
-          if (t.value = r.value || e.value, t.value && this.cache.set(t.value, t), e.type && t.type !== e.type) throw Error("Unsupported type <".concat(i(t.type), "> in <").concat(i(a.type), ">. Only <").concat(i(e.type), "> is supported."));
+          if (t.value = r.value || e.value, t.value && this.cache.set(t.value, t), e.type && t.type !== e.type) throw Error("Unsupported type <".concat(o(t.type), "> in <").concat(o(a.type), ">. Only <").concat(o(e.type), "> is supported."));
           c++, yield t
         }
-        l = o.next(d)
+        l = i.next(d)
       }
       return
     }
@@ -123,7 +123,7 @@ class a {
         wrapper: e.wrapper,
         shouldInvalidate: e.shouldInvalidate,
         hasChildNodes: e.hasChildNodes,
-        childNodes: o(function*() {
+        childNodes: i(function*() {
           if (!e.hasChildNodes) return;
           let n = 0;
           for (let r of e.childNodes())
@@ -137,7 +137,7 @@ class a {
   }
 }
 
-function o(e) {
+function i(e) {
   let t = [],
     n = null;
   return {
@@ -148,21 +148,21 @@ function o(e) {
   }
 }
 
-function i(e) {
+function o(e) {
   return e[0].toUpperCase() + e.slice(1)
 }
 
 function s(e, t, n) {
-  let o = (0, r.useMemo)(() => new a, []),
+  let i = (0, r.useMemo)(() => new a, []),
     {
-      children: i,
+      children: o,
       items: s,
       collection: c
     } = e;
-  return (0, r.useMemo)(() => c ? c : t(o.build({
-    children: i,
+  return (0, r.useMemo)(() => c ? c : t(i.build({
+    children: o,
     items: s
-  }, n)), [o, i, s, c, n, t])
+  }, n)), [i, o, s, c, n, t])
 }
 
 function c(e, t) {
@@ -192,8 +192,8 @@ function p(e, t, n) {
   if (t.parentKey === n.parentKey) return t.index - n.index;
   let r = [...f(e, t), t],
     a = [...f(e, n), n],
-    o = r.slice(0, a.length).findIndex((e, t) => e !== a[t]);
-  return -1 !== o ? (t = r[o], n = a[o], t.index - n.index) : r.findIndex(e => e === n) >= 0 ? 1 : (a.findIndex(e => e === t), -1)
+    i = r.slice(0, a.length).findIndex((e, t) => e !== a[t]);
+  return -1 !== i ? (t = r[i], n = a[i], t.index - n.index) : r.findIndex(e => e === n) >= 0 ? 1 : (a.findIndex(e => e === t), -1)
 }
 
 function f(e, t) {
@@ -202,14 +202,14 @@ function f(e, t) {
     (null == t ? void 0 : t.parentKey) != null;) t = e.getItem(t.parentKey), n.unshift(t);
   return n
 }
-let h = new WeakMap;
+let m = new WeakMap;
 
-function m(e) {
-  let t = h.get(e);
+function h(e) {
+  let t = m.get(e);
   if (null != t) return t;
   t = 0;
   let n = r => {
     for (let a of r) "section" === a.type ? n(c(a, e)) : t++
   };
-  return n(e), h.set(e, t), t
+  return n(e), m.set(e, t), t
 }

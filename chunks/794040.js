@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return u
   }
 });
 var r = n("195548"),
@@ -9,37 +9,37 @@ var r = n("195548"),
   o = n("774728"),
   i = n("697309");
 
-function s(e) {
+function u(e) {
   var t, n = e.reference,
-    s = e.element,
-    u = e.placement,
-    l = u ? (0, r.default)(u) : null,
-    c = u ? (0, a.default)(u) : null,
-    d = n.x + n.width / 2 - s.width / 2,
-    f = n.y + n.height / 2 - s.height / 2;
+    u = e.element,
+    s = e.placement,
+    l = s ? (0, r.default)(s) : null,
+    c = s ? (0, a.default)(s) : null,
+    f = n.x + n.width / 2 - u.width / 2,
+    d = n.y + n.height / 2 - u.height / 2;
   switch (l) {
     case i.top:
       t = {
-        x: d,
-        y: n.y - s.height
+        x: f,
+        y: n.y - u.height
       };
       break;
     case i.bottom:
       t = {
-        x: d,
+        x: f,
         y: n.y + n.height
       };
       break;
     case i.right:
       t = {
         x: n.x + n.width,
-        y: f
+        y: d
       };
       break;
     case i.left:
       t = {
-        x: n.x - s.width,
-        y: f
+        x: n.x - u.width,
+        y: d
       };
       break;
     default:
@@ -50,13 +50,13 @@ function s(e) {
   }
   var p = l ? (0, o.default)(l) : null;
   if (null != p) {
-    var m = "y" === p ? "height" : "width";
+    var h = "y" === p ? "height" : "width";
     switch (c) {
       case i.start:
-        t[p] = t[p] - (n[m] / 2 - s[m] / 2);
+        t[p] = t[p] - (n[h] / 2 - u[h] / 2);
         break;
       case i.end:
-        t[p] = t[p] + (n[m] / 2 - s[m] / 2)
+        t[p] = t[p] + (n[h] / 2 - u[h] / 2)
     }
   }
   return t

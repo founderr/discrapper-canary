@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   InappropriateConversationWarningBanner: function() {
-    return m
+    return E
   }
 });
 var a = n("37983"),
@@ -18,24 +18,24 @@ var a = n("37983"),
   C = n("49111"),
   p = n("782340");
 
-function m(e) {
+function E(e) {
   let {
     channelId: t,
-    warningId: m,
-    senderId: E
+    warningId: E,
+    senderId: m
   } = e, g = s.useCallback(() => {
-    (0, u.dismissChannelSafetyWarnings)(t, [m])
-  }, [t, m]);
+    (0, u.dismissChannelSafetyWarnings)(t, [E])
+  }, [t, E]);
   s.useEffect(() => {
     (0, c.trackViewedEvent)(C.AnalyticEvents.SAFETY_WARNING_VIEWED, {
       channelId: t,
-      warningId: m,
-      senderId: E,
+      warningId: E,
+      senderId: m,
       warningType: d.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2
     }), o.default.increment({
       name: l.MetricEvents.SAFETY_WARNING_VIEW
     })
-  }, [t, m, E]);
+  }, [t, E, m]);
   let S = s.useCallback(() => {
       (0, i.openModalLazy)(async () => {
         let {
@@ -53,27 +53,27 @@ function m(e) {
         }
       }), (0, c.trackCtaEvent)({
         channelId: t,
-        warningId: m,
-        senderId: E,
+        warningId: E,
+        senderId: m,
         warningType: d.SafetyWarningTypes.STRANGER_DANGER,
         cta: c.CtaEventTypes.OPEN_MORE_TIPS
       })
-    }, [t, E, m]),
+    }, [t, m, E]),
     _ = s.useCallback(e => () => {
       r.default.addRelationship({
-        userId: E,
+        userId: m,
         context: {
           location: h.LOCATION_CONTEXT_WEB
         },
         type: C.RelationshipTypes.BLOCKED
       }), g(), (0, i.showToast)((0, i.createToast)(p.default.Messages.STRANGER_DANGER_BLOCK_CONFIRM, i.ToastType.SUCCESS)), (0, c.trackCtaEvent)({
         channelId: t,
-        warningId: m,
-        senderId: E,
+        warningId: E,
+        senderId: m,
         warningType: d.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
         cta: e
       })
-    }, [g, t, m, E]),
+    }, [g, t, E, m]),
     T = s.useCallback(() => {}, []),
     A = s.useCallback(e => {
       _(e)(), T()
@@ -95,22 +95,22 @@ function m(e) {
             onCancel: () => {
               null == r || r(), (0, c.trackCtaEvent)({
                 channelId: t,
-                warningId: m,
-                senderId: E,
+                warningId: E,
+                senderId: m,
                 warningType: d.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
                 cta: s
               })
             },
             onClose: r,
-            userId: E
+            userId: m
           })
         }
       })
-    }, [_, A, E, t, m]);
+    }, [_, A, m, t, E]);
   return (0, a.jsx)(f.SafetyWarningBanner, {
     channelId: t,
-    warningId: m,
-    senderId: E,
+    warningId: E,
+    senderId: m,
     warningType: d.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
     header: p.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
     description: p.default.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,

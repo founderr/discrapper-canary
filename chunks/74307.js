@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   TextArea: function() {
-    return T
+    return g
   }
 }), n("424973");
 var i = n("37983"),
@@ -13,14 +13,14 @@ var i = n("37983"),
   u = n("516826"),
   c = n("741662"),
   d = n("324584"),
-  f = n("782340"),
-  E = n("430594"),
-  p = n("182893"),
-  h = n("356410");
+  p = n("782340"),
+  h = n("430594"),
+  f = n("182893"),
+  E = n("356410");
 let _ = (0, o.v4)(),
-  S = (0, o.v4)(),
-  m = (0, o.v4)();
-class T extends r.Component {
+  m = (0, o.v4)(),
+  S = (0, o.v4)();
+class g extends r.Component {
   getPaddingRight() {
     let {
       maxLength: e
@@ -57,8 +57,8 @@ class T extends r.Component {
         maxLength: n
       } = this.props;
       return (0, i.jsxs)("div", {
-        className: a(E.maxLength, {
-          [E.errorOverflow]: this.hasError()
+        className: a(h.maxLength, {
+          [h.errorOverflow]: this.hasError()
         }),
         "aria-hidden": "true",
         children: [null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0, " ", null != n && "/ ".concat(n)]
@@ -70,8 +70,8 @@ class T extends r.Component {
     if (this.props.showCharacterCount || !1 === this.props.showRemainingCharacterCount) return null;
     let e = this.getCharsLeftLength();
     return null == e ? null : (0, i.jsx)("div", {
-      className: a(E.maxLength, {
-        [E.errorOverflow]: e < 0
+      className: a(h.maxLength, {
+        [h.errorOverflow]: e < 0
       }),
       "aria-hidden": "true",
       children: e
@@ -85,9 +85,9 @@ class T extends r.Component {
       error: e,
       maxLength: t,
       minLength: n
-    } = this.props, i = this.getIsOverflowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
+    } = this.props, i = this.getIsOverflowing() ? p.default.Messages.MAXIMUM_LENGTH_ERROR.format({
       maxLength: t
-    }) : null, r = this.getIsUnderflowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
+    }) : null, r = this.getIsUnderflowing() ? p.default.Messages.MINIMUM_LENGTH_ERROR.format({
       minLength: n
     }) : null;
     return null != e && e.length < 1 || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != i ? i : r
@@ -96,7 +96,7 @@ class T extends r.Component {
     let e = this.getErrorMessage();
     return null == e ? null : (0, i.jsx)("div", {
       id: _,
-      className: E.errorMessage,
+      className: h.errorMessage,
       children: e
     })
   }
@@ -109,65 +109,65 @@ class T extends r.Component {
       autoFocus: o,
       minLength: u,
       maxLength: _,
-      allowOverflow: T,
-      spellCheck: g,
+      allowOverflow: g,
+      spellCheck: T,
       resizeable: I,
-      className: C,
-      id: v,
+      className: v,
+      id: C,
       rows: A,
       flex: R,
       autosize: N,
-      required: O,
-      onInvalid: D,
-      inputRef: y
-    } = this.props, P = N ? d.TextAreaAutosize : "textarea", L = this.hasError(), b = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, M = this.getAriaDescribedBy();
+      required: y,
+      onInvalid: O,
+      inputRef: D
+    } = this.props, b = N ? d.TextAreaAutosize : "textarea", P = this.hasError(), L = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, M = this.getAriaDescribedBy();
     return (0, i.jsxs)("div", {
-      className: a(p.inputWrapper, {
-        [E.flex]: R
+      className: a(f.inputWrapper, {
+        [h.flex]: R
       }),
       children: [(0, i.jsxs)("div", {
-        className: a(E.inputMaxLength, {
-          [E.flex]: R
+        className: a(h.inputMaxLength, {
+          [h.flex]: R
         }),
         children: [(0, i.jsx)(l.FocusRing, {
-          children: (0, i.jsx)(P, {
+          children: (0, i.jsx)(b, {
             type: "text",
-            className: a(p.inputDefault, E.textArea, h.scrollbarDefault, C, {
-              [p.error]: L,
-              [p.disabled]: n,
-              [E.resizeable]: I
+            className: a(f.inputDefault, h.textArea, E.scrollbarDefault, v, {
+              [f.error]: P,
+              [f.disabled]: n,
+              [h.resizeable]: I
             }),
-            "aria-labelledby": b,
+            "aria-labelledby": L,
             "aria-describedby": M,
-            "aria-invalid": L,
+            "aria-invalid": P,
             style: {
               paddingRight: this.getPaddingRight()
             },
-            id: v,
+            id: C,
             disabled: n,
             placeholder: s,
             value: r,
             autoFocus: o,
             minLength: u,
-            maxLength: T ? void 0 : _,
-            spellCheck: g,
-            required: O,
+            maxLength: g ? void 0 : _,
+            spellCheck: T,
+            required: y,
             onChange: this.onChange,
             onBlur: this.onBlur,
             onFocus: this.onFocus,
             onKeyDown: this.onKeyDown,
-            onInvalid: D,
+            onInvalid: O,
             rows: A,
-            ref: y
+            ref: D
           })
         }), null != u && (0, i.jsx)(c.HiddenVisually, {
-          id: S,
-          children: f.default.Messages.MINIMUM_LENGTH.format({
+          id: m,
+          children: p.default.Messages.MINIMUM_LENGTH.format({
             minLength: u
           })
         }), null != _ && (0, i.jsx)(c.HiddenVisually, {
-          id: m,
-          children: f.default.Messages.MAXIMUM_LENGTH.format({
+          id: S,
+          children: p.default.Messages.MAXIMUM_LENGTH.format({
             maxLength: _
           })
         }), this.renderCharacterCount(), this.renderMaxLength()]
@@ -183,7 +183,7 @@ class T extends r.Component {
         minLength: n,
         error: i
       } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-      return null != s && r.push(s), null != i ? r.push(i) : (null != t && r.push(m), null != n && r.push(S)), r.length > 0 ? r.join(" ") : void 0
+      return null != s && r.push(s), null != i ? r.push(i) : (null != t && r.push(S), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
     }, this.onChange = e => {
       let {
         onChange: t,
@@ -214,7 +214,7 @@ class T extends r.Component {
     }
   }
 }
-T.contextType = u.FormContext, T.defaultProps = {
+g.contextType = u.FormContext, g.defaultProps = {
   name: "",
   disabled: !1,
   placeholder: "",

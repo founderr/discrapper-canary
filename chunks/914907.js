@@ -11,16 +11,16 @@ var i, r, s = n("37983"),
   u = n("71185"),
   c = n("509043"),
   d = n("669491"),
-  f = n("227645"),
-  E = n("577776"),
-  p = n("49111"),
-  h = n("426834");
+  p = n("227645"),
+  h = n("577776"),
+  f = n("49111"),
+  E = n("426834");
 let _ = {
-    side: h.side,
-    top: h.top,
-    "top-pill": h.topPill
+    side: E.side,
+    top: E.top,
+    "top-pill": E.topPill
   },
-  S = a.forwardRef(function(e, t) {
+  m = a.forwardRef(function(e, t) {
     let {
       children: n,
       id: i,
@@ -30,22 +30,22 @@ let _ = {
       ...r,
       ref: t,
       role: "tabpanel",
-      id: m(i),
+      id: S(i),
       tabIndex: -1,
       children: n
     })
   });
 
-function m(e) {
+function S(e) {
   return "".concat(e.replace(/\s+/g, "-").toLowerCase(), "-tab")
 }
 
-function T(e, t) {
+function g(e, t) {
   if (null == e) return;
   let n = {};
   return "Selected" === t ? (n.backgroundColor = e, n.color = d.default.unsafe_rawColors.WHITE_500.css, n) : ("Hover" === t && (n.backgroundColor = (0, c.hex2rgb)(e, .1)), n.color = e, n)
 }(r = i || (i = {})).DEFAULT = "Default", r.HOVER = "Hover", r.SELECTED = "Selected";
-class g extends a.Component {
+class T extends a.Component {
   getStyle() {
     let {
       color: e,
@@ -57,7 +57,7 @@ class g extends a.Component {
       active: s
     } = this.state;
     if (null != e) {
-      if ("side" === i) return null != t && n === t || s ? T(e, "Selected") : r ? T(e, "Hover") : T(e);
+      if ("side" === i) return null != t && n === t || s ? g(e, "Selected") : r ? g(e, "Hover") : g(e);
       if ("top" === i) return n === t ? {
         borderColor: e,
         color: e
@@ -89,28 +89,28 @@ class g extends a.Component {
       clickableRef: u,
       look: c,
       disableItemStyles: d
-    } = this.props, E = this.props["aria-label"], p = i === n;
-    return (0, s.jsx)(f.Clickable, {
+    } = this.props, h = this.props["aria-label"], f = i === n;
+    return (0, s.jsx)(p.Clickable, {
       className: l(t, {
-        [h.item]: !d,
-        [h.brand]: "brand" === c,
-        [h.selected]: null == r && p,
-        [h.themed]: "grey" === c,
-        [h.disabled]: null == r && a
+        [E.item]: !d,
+        [E.brand]: "brand" === c,
+        [E.selected]: null == r && f,
+        [E.themed]: "grey" === c,
+        [E.disabled]: null == r && a
       }),
       style: this.getStyle(),
       role: "tab",
-      "aria-selected": p,
-      "aria-controls": p ? m("".concat(n)) : void 0,
+      "aria-selected": f,
+      "aria-controls": f ? S("".concat(n)) : void 0,
       "aria-disabled": a,
-      tabIndex: p ? 0 : -1,
+      tabIndex: f ? 0 : -1,
       onMouseEnter: null != r ? this.handleMouseOver : void 0,
       onClick: this.handleClick,
       onMouseLeave: null != r ? this.handleMouseOut : void 0,
       onMouseUp: null != r ? this.handleMouseUp : void 0,
       onMouseDown: this.handleMouseDown,
       onContextMenu: o,
-      "aria-label": E,
+      "aria-label": h,
       ref: u,
       children: e
     })
@@ -150,7 +150,7 @@ class g extends a.Component {
     }
   }
 }
-g.defaultProps = {
+T.defaultProps = {
   disabled: !1,
   look: "grey",
   disableItemStyles: !1
@@ -206,15 +206,15 @@ class I extends a.Component {
     }, this.getNodeForKeydownEvent = async e => {
       let {
         orientation: t = "horizontal"
-      } = this.props, n = "vertical" === t ? p.KeyboardKeys.ARROW_UP : p.KeyboardKeys.ARROW_LEFT, i = "vertical" === t ? p.KeyboardKeys.ARROW_DOWN : p.KeyboardKeys.ARROW_RIGHT;
+      } = this.props, n = "vertical" === t ? f.KeyboardKeys.ARROW_UP : f.KeyboardKeys.ARROW_LEFT, i = "vertical" === t ? f.KeyboardKeys.ARROW_DOWN : f.KeyboardKeys.ARROW_RIGHT;
       switch (e.which) {
         case n:
           return this.focusManager.getPreviousFocusableElement();
         case i:
           return this.focusManager.getNextFocusableElement();
-        case p.KeyboardKeys.HOME:
+        case f.KeyboardKeys.HOME:
           return this.focusManager.getFirstFocusableElement();
-        case p.KeyboardKeys.END:
+        case f.KeyboardKeys.END:
           return this.focusManager.getLastFocusableElement()
       }
       return null
@@ -232,9 +232,9 @@ I.Header = function(e) {
     "aria-expanded": r,
     "aria-controls": a
   } = e;
-  return (0, s.jsx)(f.Clickable, {
+  return (0, s.jsx)(p.Clickable, {
     tabIndex: null == n ? -1 : 0,
-    className: l(h.header, t),
+    className: l(E.header, t),
     onClick: n,
     "aria-expanded": r,
     "aria-controls": a,
@@ -243,19 +243,19 @@ I.Header = function(e) {
         top: -6
       }
     },
-    children: (0, s.jsx)(E.Text, {
+    children: (0, s.jsx)(h.Text, {
       variant: "eyebrow",
       color: "none",
-      className: h.headerText,
+      className: E.headerText,
       children: i
     })
   })
-}, I.Item = g, I.Separator = function(e) {
+}, I.Item = T, I.Separator = function(e) {
   let {
     style: t
   } = e;
   return (0, s.jsx)("div", {
-    className: h.separator,
+    className: E.separator,
     style: t
   })
-}, I.Panel = S
+}, I.Panel = m

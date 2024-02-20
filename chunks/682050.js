@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getNodeClientOffset: function() {
-    return o
+    return i
   },
   getEventClientOffset: function() {
-    return i
+    return o
   },
   getDragPreviewOffset: function() {
     return s
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
 var r = n("219999"),
   a = n("908834");
 
-function o(e) {
+function i(e) {
   var t = 1 === e.nodeType ? e : e.parentElement;
   if (!t) return null;
   var n = t.getBoundingClientRect(),
@@ -24,27 +24,27 @@ function o(e) {
   }
 }
 
-function i(e) {
+function o(e) {
   return {
     x: e.clientX,
     y: e.clientY
   }
 }
 
-function s(e, t, n, i, s) {
-  var c, l, u, d, p, f, h, m, v, g = "IMG" === (c = t).nodeName && ((0, r.isFirefox)() || !(null !== (l = document.documentElement) && void 0 !== l && l.contains(c))),
-    y = o(g ? e : t),
+function s(e, t, n, o, s) {
+  var c, l, u, d, p, f, m, h, v, g = "IMG" === (c = t).nodeName && ((0, r.isFirefox)() || !(null !== (l = document.documentElement) && void 0 !== l && l.contains(c))),
+    y = i(g ? e : t),
     b = {
       x: n.x - y.x,
       y: n.y - y.y
     },
     x = e.offsetWidth,
     S = e.offsetHeight,
-    w = i.anchorX,
-    D = i.anchorY;
-  var C = (u = g, d = t, p = x, f = S, h = u ? d.width : p, m = u ? d.height : f, (0, r.isSafari)() && u && (m /= window.devicePixelRatio, h /= window.devicePixelRatio), {
-      dragPreviewWidth: h,
-      dragPreviewHeight: m
+    w = o.anchorX,
+    D = o.anchorY;
+  var C = (u = g, d = t, p = x, f = S, m = u ? d.width : p, h = u ? d.height : f, (0, r.isSafari)() && u && (h /= window.devicePixelRatio, m /= window.devicePixelRatio), {
+      dragPreviewWidth: m,
+      dragPreviewHeight: h
     }),
     k = C.dragPreviewWidth,
     P = C.dragPreviewHeight,

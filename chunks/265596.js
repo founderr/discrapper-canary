@@ -1,27 +1,27 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return r
   }
-}), E("222007");
-var t = E("446674"),
-  o = E("913144");
-let n = new Map;
-class r extends t.default.Store {
+}), n("222007");
+var i = n("446674"),
+  a = n("913144");
+let l = new Map;
+class s extends i.default.Store {
   getFeed(e) {
-    return n.get(e)
+    return l.get(e)
   }
 }
-r.displayName = "ContentInventoryStore";
-var i = new r(o.default, {
+s.displayName = "ContentInventoryStore";
+var r = new s(a.default, {
   CONNECTION_OPEN: function() {
-    n.clear()
+    l.clear()
   },
   CONTENT_INVENTORY_SET_FEED: function(e) {
     let {
-      feedId: _,
-      feed: E
+      feedId: t,
+      feed: n
     } = e;
-    n.set(_, E)
+    l.set(t, n)
   }
 })

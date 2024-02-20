@@ -1,114 +1,114 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return M
+    return O
   }
-}), E("222007"), E("860677");
-var t, o = E("917351"),
-  n = E.n(o),
-  r = E("597755"),
-  i = E.n(r),
-  a = E("49671"),
-  I = E("385649"),
-  s = E("102985"),
-  T = E("599110"),
-  S = E("773336"),
-  N = E("709681"),
-  O = E("50885"),
-  A = E("49111");
-let R = S.isPlatformEmbedded && (0, S.isWindows)(),
-  l = R && 10 > parseFloat(a.default.os.release),
-  u = !0;
-if (R && !l) {
-  let [e, , _] = a.default.os.release.split(".");
-  u = parseInt(e) > 10 || parseInt(_) >= 15063
+}), n("222007"), n("860677");
+var i, a = n("917351"),
+  l = n.n(a),
+  s = n("597755"),
+  r = n.n(s),
+  o = n("49671"),
+  u = n("385649"),
+  d = n("102985"),
+  c = n("599110"),
+  f = n("773336"),
+  E = n("709681"),
+  h = n("50885"),
+  _ = n("49111");
+let C = f.isPlatformEmbedded && (0, f.isWindows)(),
+  S = C && 10 > parseFloat(o.default.os.release),
+  g = !0;
+if (C && !S) {
+  let [e, , t] = o.default.os.release.split(".");
+  g = parseInt(e) > 10 || parseInt(t) >= 15063
 }
-let L = R && u || "Chrome" === i.name && 47 > parseFloat(i.version) || "Firefox" === i.name && 52 > parseFloat(i.version),
-  C = n.throttle(N.playSound, 1e3, {
+let T = C && g || "Chrome" === r.name && 47 > parseFloat(r.version) || "Firefox" === r.name && 52 > parseFloat(r.version),
+  m = l.throttle(E.playSound, 1e3, {
     leading: !0
   });
 
-function D() {
-  O.default.flashFrame(!1)
+function p() {
+  h.default.flashFrame(!1)
 }
-R && (window.addEventListener("focus", D), O.default.on("MAIN_WINDOW_FOCUS", D));
+C && (window.addEventListener("focus", p), h.default.on("MAIN_WINDOW_FOCUS", p));
 let Notification = window.Notification;
-if (l) {
+if (S) {
   let e = {};
-  O.default.on("NOTIFICATION_CLICK", (_, E) => {
-    let t = e[E];
-    null != t && (t.onclick(), t.close())
-  }), O.default.send("NOTIFICATIONS_CLEAR"), (t = class {
+  h.default.on("NOTIFICATION_CLICK", (t, n) => {
+    let i = e[n];
+    null != i && (i.onclick(), i.close())
+  }), h.default.send("NOTIFICATIONS_CLEAR"), (i = class {
     static requestPermission(e) {
       e()
     }
     close() {
-      null != e[this.id] && (delete e[this.id], O.default.send("NOTIFICATION_CLOSE", this.id), this.onclose())
+      null != e[this.id] && (delete e[this.id], h.default.send("NOTIFICATION_CLOSE", this.id), this.onclose())
     }
-    constructor(_, {
-      body: E,
-      icon: t
+    constructor(t, {
+      body: n,
+      icon: i
     }) {
-      this.id = Notification._id++, this.onshow = function() {}, this.onclick = function() {}, this.onclose = function() {}, this.title = _, this.body = E, this.icon = t, setImmediate(() => this.onshow()), e[this.id] = this, O.default.send("NOTIFICATION_SHOW", {
+      this.id = Notification._id++, this.onshow = function() {}, this.onclick = function() {}, this.onclose = function() {}, this.title = t, this.body = n, this.icon = i, setImmediate(() => this.onshow()), e[this.id] = this, h.default.send("NOTIFICATION_SHOW", {
         id: this.id,
         title: this.title,
         body: this.body,
         icon: this.icon
       })
     }
-  }).permission = "granted", t._id = 0, Notification = t
+  }).permission = "granted", i._id = 0, Notification = i
 }
 
-function c() {
+function I() {
   return null != Notification && "granted" === Notification.permission
 }
 
-function d(e) {
-  let _ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-  e.includes("message") ? C(e, _) : (0, N.playSound)(e, _)
+function A(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+  e.includes("message") ? m(e, t) : (0, E.playSound)(e, t)
 }
 
-function U(e) {
-  return s.default.disableNotifications && null == e.overrideStreamerMode || !c() || S.isPlatformEmbedded && !O.default.shouldDisplayNotifications()
+function N(e) {
+  return d.default.disableNotifications && null == e.overrideStreamerMode || !I() || f.isPlatformEmbedded && !h.default.shouldDisplayNotifications()
 }
-var M = {
-  hasPermission: c,
+var O = {
+  hasPermission: I,
   requestPermission: function(e) {
     null != Notification && Notification.requestPermission(() => {
-      null != e && e(c())
+      null != e && e(I())
     })
   },
-  showNotification: function(e, _, E, t, o) {
-    var r, i, a, s;
-    let N;
-    if (U(o)) {
-      null != o.sound && !1 !== o.playSoundIfDisabled && d(o.sound, null !== (i = o.volume) && void 0 !== i ? i : 1);
+  showNotification: function(e, t, n, i, a) {
+    var s, r, o, d;
+    let E;
+    if (N(a)) {
+      null != a.sound && !1 !== a.playSoundIfDisabled && A(a.sound, null !== (r = a.volume) && void 0 !== r ? r : 1);
       return
     }
-    null != o.sound && d(o.sound, null !== (a = o.volume) && void 0 !== a ? a : 1);
-    let l = null !== (s = null == o ? void 0 : o.tag) && void 0 !== s ? s : null;
-    (0, S.isLinux)() && (E = n.escape(E));
-    let C = {
+    null != a.sound && A(a.sound, null !== (o = a.volume) && void 0 !== o ? o : 1);
+    let S = null !== (d = null == a ? void 0 : a.tag) && void 0 !== d ? d : null;
+    (0, f.isLinux)() && (n = l.escape(n));
+    let m = {
       icon: e,
-      body: E,
-      tag: l,
+      body: n,
+      tag: S,
       silent: !0
     };
-    R && I.default.taskbarFlash && O.default.flashFrame(!0);
+    C && u.default.taskbarFlash && h.default.flashFrame(!0);
     try {
-      N = new Notification(_, C)
+      E = new Notification(t, m)
     } catch (e) {
       return null
     }
-    return (null === (r = o.onShown) || void 0 === r || r.call(o), !o.omitViewTracking && T.default.track(A.AnalyticEvents.NOTIFICATION_VIEWED, t), N.onclick = () => {
+    return (null === (s = a.onShown) || void 0 === s || s.call(a), !a.omitViewTracking && c.default.track(_.AnalyticEvents.NOTIFICATION_VIEWED, i), E.onclick = () => {
       var e;
-      S.isPlatformEmbedded ? O.default.focus() : (window.focus(), N.close()), !o.omitClickTracking && T.default.track(A.AnalyticEvents.NOTIFICATION_CLICKED, t), null === (e = o.onClick) || void 0 === e || e.call(o)
-    }, L && setTimeout(() => N.close(), 5e3), u) ? N : {
+      f.isPlatformEmbedded ? h.default.focus() : (window.focus(), E.close()), !a.omitClickTracking && c.default.track(_.AnalyticEvents.NOTIFICATION_CLICKED, i), null === (e = a.onClick) || void 0 === e || e.call(a)
+    }, T && setTimeout(() => E.close(), 5e3), g) ? E : {
       close() {
         var e;
-        null == N || null === (e = N.onclose) || void 0 === e || e.call(N)
+        null == E || null === (e = E.onclose) || void 0 === e || e.call(E)
       }
     }
   },
-  disabled: U
+  disabled: N
 }

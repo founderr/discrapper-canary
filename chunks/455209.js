@@ -1,142 +1,142 @@
 "use strict";
-E.r(_), E("313619"), E("654714"), E("287168"), E("956660"), E("222007"), E("511434"), E("808653"), E("424973"), E("726581");
-var t = E("872717"),
-  o = E("821316"),
-  n = E("129966"),
-  r = E("583340"),
-  i = E("823348"),
-  a = E("35468");
-E("773336");
-var I = E("286235"),
-  s = E("900673"),
-  T = E("49111");
-let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"],
-  N = new s.default,
-  O = /\/api(\/v\d+)?\/science/;
-(0, t.setRequestPatch)({
+n.r(t), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("511434"), n("808653"), n("424973"), n("726581");
+var a = n("872717"),
+  r = n("821316"),
+  s = n("129966"),
+  i = n("583340"),
+  l = n("823348"),
+  o = n("35468");
+n("773336");
+var u = n("286235"),
+  d = n("900673"),
+  c = n("49111");
+let f = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"],
+  h = new d.default,
+  p = /\/api(\/v\d+)?\/science/;
+(0, a.setRequestPatch)({
   prepareRequest(e) {
     let {
-      default: _
-    } = E("271938"), {
-      default: n
-    } = E("313915"), {
-      default: r
-    } = E("915639"), {
+      default: t
+    } = n("271938"), {
+      default: s
+    } = n("313915"), {
       default: i
-    } = E("697218"), {
-      default: a
-    } = E("599110"), {
-      isPlatformEmbedded: s
-    } = E("773336");
+    } = n("915639"), {
+      default: l
+    } = n("697218"), {
+      default: o
+    } = n("599110"), {
+      isPlatformEmbedded: d
+    } = n("773336");
     if ("/" === e.url[0]) {
-      var T, A;
-      e.url = t.default.getAPIBaseURL() + e.url, !("Authorization" in e.header) && !("authorization" in e.header) && e.set("Authorization", _.getToken());
-      let E = a.getSuperPropertiesBase64();
-      null != E && e.set("X-Super-Properties", E);
-      let o = _.getFingerprint();
-      if (null != o && "" !== o && e.set("X-Fingerprint", o), s) {
-        let _ = [];
-        null != navigator && (_ = (T = [...navigator.languages], T));
-        let E = function(e) {
-          let _ = 10,
-            E = e.reduce((e, E) => (10 === _ ? e.push(E) : e.push("".concat(E, ";q=0.").concat(_)), _ = Math.max(_ - 1, 1), e), []);
-          return E.join(",")
-        }(_);
-        e.set("Accept-Language", E)
+      var c, m;
+      e.url = a.default.getAPIBaseURL() + e.url, !("Authorization" in e.header) && !("authorization" in e.header) && e.set("Authorization", t.getToken());
+      let n = o.getSuperPropertiesBase64();
+      null != n && e.set("X-Super-Properties", n);
+      let r = t.getFingerprint();
+      if (null != r && "" !== r && e.set("X-Fingerprint", r), d) {
+        let t = [];
+        null != navigator && (t = (c = [...navigator.languages], c));
+        let n = function(e) {
+          let t = 10,
+            n = e.reduce((e, n) => (10 === t ? e.push(n) : e.push("".concat(n, ";q=0.").concat(t)), t = Math.max(t - 1, 1), e), []);
+          return n.join(",")
+        }(t);
+        e.set("Accept-Language", n)
       }
-      e.set("X-Discord-Locale", r.locale);
-      let I = function() {
+      e.set("X-Discord-Locale", i.locale);
+      let u = function() {
         if (null == Intl.DateTimeFormat) return null;
         let e = Intl.DateTimeFormat();
         if (null == e.resolvedOptions) return null;
-        let _ = e.resolvedOptions();
-        return _.timeZone
+        let t = e.resolvedOptions();
+        return t.timeZone
       }();
-      null != I && e.set("X-Discord-Timezone", I);
-      let S = n.getDebugOptionsHeaderValue();
-      if (null != S && "" !== S && e.set("X-Debug-Options", S), n.isTracingRequests) {
-        let _ = i.getCurrentUser(),
-          E = N.generate(null !== (A = null == _ ? void 0 : _.id) && void 0 !== A ? A : "0");
-        e.set("x-client-trace-id", E);
+      null != u && e.set("X-Discord-Timezone", u);
+      let f = s.getDebugOptionsHeaderValue();
+      if (null != f && "" !== f && e.set("X-Debug-Options", f), s.isTracingRequests) {
+        let t = l.getCurrentUser(),
+          n = h.generate(null !== (m = null == t ? void 0 : t.id) && void 0 !== m ? m : "0");
+        e.set("x-client-trace-id", n);
         try {
-          let _ = new URL(e.url).pathname;
-          if (!O.test(_)) {
-            let t = function(e) {
-              let _ = new URLSearchParams;
-              _.append("query", '@guid.x-client-trace-id:"'.concat(e, '"')), _.append("showAllSpans", "true");
-              let E = new URL("traces?".concat(_.toString()), "https://datadog.discord.tools/apm/");
-              return E.toString()
-            }(E);
-            null !== t && console.debug("%c[tracing]%c %s %s\n%s", "font-weight: bold", "", e.method, _, t)
+          let t = new URL(e.url).pathname;
+          if (!p.test(t)) {
+            let a = function(e) {
+              let t = new URLSearchParams;
+              t.append("query", '@guid.x-client-trace-id:"'.concat(e, '"')), t.append("showAllSpans", "true");
+              let n = new URL("traces?".concat(t.toString()), "https://datadog.discord.tools/apm/");
+              return n.toString()
+            }(n);
+            null !== a && console.debug("%c[tracing]%c %s %s\n%s", "font-weight: bold", "", e.method, t, a)
           }
         } catch (e) {
           console.error("error while printing Lightstep log", e)
         }
       }
     }
-    o.report("Network", "Sending ".concat(e.method, " to ").concat(e.url)), e.on("response", _ => {
-      let E = null != _ && _.status >= 400 ? _.text : null;
-      o.report("Network", "Completed ".concat(e.method, " to ").concat(e.url, " with status: ").concat(null == _ ? void 0 : _.status, " ").concat(null == E ? "" : "and body: ".concat(E)))
-    }), e.on("error", (_, E) => {
-      if (o.report("Network", "Failed ".concat(e.method, " to ").concat(e.url, " with status ").concat(null == _ ? void 0 : _.status, " and body: ").concat(null == E ? void 0 : E.text)), null != _ && "parse" in _ && _.parse) {
-        let E = "[FILTERED]";
-        if (S.includes(e.url)) {
-          var t, n;
-          E = null === (n = e.xhr) || void 0 === n ? void 0 : null === (t = n.responseText) || void 0 === t ? void 0 : t.slice(0, 1e3)
+    r.report("Network", "Sending ".concat(e.method, " to ").concat(e.url)), e.on("response", t => {
+      let n = null != t && t.status >= 400 ? t.text : null;
+      r.report("Network", "Completed ".concat(e.method, " to ").concat(e.url, " with status: ").concat(null == t ? void 0 : t.status, " ").concat(null == n ? "" : "and body: ".concat(n)))
+    }), e.on("error", (t, n) => {
+      if (r.report("Network", "Failed ".concat(e.method, " to ").concat(e.url, " with status ").concat(null == t ? void 0 : t.status, " and body: ").concat(null == n ? void 0 : n.text)), null != t && "parse" in t && t.parse) {
+        let n = "[FILTERED]";
+        if (f.includes(e.url)) {
+          var a, s;
+          n = null === (s = e.xhr) || void 0 === s ? void 0 : null === (a = s.responseText) || void 0 === a ? void 0 : a.slice(0, 1e3)
         }
-        I.default.addBreadcrumb({
+        u.default.addBreadcrumb({
           category: "superagent",
           message: "Failed to parse HTTP response.",
           data: {
             method: e.method,
             url: e.url,
-            responseText: E,
-            status: _.status
+            responseText: n,
+            status: t.status
           }
         })
       }
     })
   },
-  interceptResponse(e, _, t) {
-    var o, a, I, s, S;
-    return 400 === e.statusCode && (null === (o = e.body) || void 0 === o ? void 0 : o.captcha_key) ? (Promise.all([E.el("417814").then(E.bind(E, "417814")), E.el("507445").then(E.bind(E, "507445"))]).then(_ => {
+  interceptResponse(e, t, a) {
+    var r, o, u, d, f;
+    return 400 === e.statusCode && (null === (r = e.body) || void 0 === r ? void 0 : r.captcha_key) ? (Promise.all([n.el("417814").then(n.bind(n, "417814")), n.el("507445").then(n.bind(n, "507445"))]).then(t => {
       let [{
-        default: E
+        default: n
       }, {
-        extractCaptchaPropsFromResponseBody: t
-      }] = _;
-      return E.showCaptchaAsync(t(e.body))
+        extractCaptchaPropsFromResponseBody: a
+      }] = t;
+      return n.showCaptchaAsync(a(e.body))
     }).then(e => {
       let {
-        captcha_key: E,
-        captcha_rqtoken: t
-      } = e, o = {
-        "X-Captcha-Key": E
+        captcha_key: n,
+        captcha_rqtoken: a
+      } = e, r = {
+        "X-Captcha-Key": n
       };
-      null != t && (o["X-Captcha-Rqtoken"] = t), _(o)
-    }).catch(t), !0) : 401 === e.statusCode && (null === (a = e.body) || void 0 === a ? void 0 : a.code) === T.AbortCodes.MFA_REQUIRED && (null === (I = e.body) || void 0 === I ? void 0 : I.mfa) ? (E.el("776502").then(E.bind(E, "776502")).then(E => {
+      null != a && (r["X-Captcha-Rqtoken"] = a), t(r)
+    }).catch(a), !0) : 401 === e.statusCode && (null === (o = e.body) || void 0 === o ? void 0 : o.code) === c.AbortCodes.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa) ? (n.el("776502").then(n.bind(n, "776502")).then(n => {
       let {
-        openMFAModal: o
-      } = E;
-      o(e.body.mfa, _, t)
-    }).catch(t), !0) : (0, i.isLimitedAccessErrorCode)(e.statusCode, null === (s = e.body) || void 0 === s ? void 0 : s.code) ? (E.el("258158").then(E.bind(E, "258158")).then(e => {
-      let {
-        default: _
-      } = e;
-      _()
-    }), !1) : (0, n.isLimitedAccessErrorCode)(e.statusCode, null === (S = e.body) || void 0 === S ? void 0 : S.code) ? (E.el("772545").then(E.bind(E, "772545")).then(_ => {
-      var E;
+        openMFAModal: r
+      } = n;
+      r(e.body.mfa, t, a)
+    }).catch(a), !0) : (0, l.isLimitedAccessErrorCode)(e.statusCode, null === (d = e.body) || void 0 === d ? void 0 : d.code) ? (n.el("258158").then(n.bind(n, "258158")).then(e => {
       let {
         default: t
-      } = _;
-      t(null === (E = e.body) || void 0 === E ? void 0 : E.guild_id)
-    }), !1) : ((0, r.isBlockedByProxyErrorCode)(e) && E.el("499946").then(E.bind(E, "499946")).then(e => {
-      let {
-        handleBlockedByProxy: _
       } = e;
-      _()
+      t()
+    }), !1) : (0, s.isLimitedAccessErrorCode)(e.statusCode, null === (f = e.body) || void 0 === f ? void 0 : f.code) ? (n.el("772545").then(n.bind(n, "772545")).then(t => {
+      var n;
+      let {
+        default: a
+      } = t;
+      a(null === (n = e.body) || void 0 === n ? void 0 : n.guild_id)
+    }), !1) : ((0, i.isBlockedByProxyErrorCode)(e) && n.el("499946").then(n.bind(n, "499946")).then(e => {
+      let {
+        handleBlockedByProxy: t
+      } = e;
+      t()
     }), !1)
   }
-}), (0, t.setAwaitOnline)(async e => {
-  if (o.report("Network", "Request to ".concat(e, " failed, will retry.")), !a.default.isOnline()) await a.default.awaitOnline(), o.report("Network", "Network detected online, retrying ".concat(e))
+}), (0, a.setAwaitOnline)(async e => {
+  if (r.report("Network", "Request to ".concat(e, " failed, will retry.")), !o.default.isOnline()) await o.default.awaitOnline(), r.report("Network", "Network detected online, retrying ".concat(e))
 })

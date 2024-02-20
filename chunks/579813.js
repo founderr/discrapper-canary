@@ -1,10 +1,10 @@
 "use strict";
-var e = n("418855"),
-  i = n("161323");
-t.exports = function(t, r, n, o) {
+var r = n("418855"),
+  a = n("161323");
+e.exports = function(e, t, n, o) {
   try {
-    return o ? r(e(n)[0], n[1]) : r(n)
-  } catch (r) {
-    i(t, "throw", r)
+    return o ? t(r(n)[0], n[1]) : t(n)
+  } catch (t) {
+    a(e, "throw", t)
   }
 }

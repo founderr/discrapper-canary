@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   addCandidateContent: function() {
-    return T
+    return g
   },
   removeCandidateContent: function() {
-    return g
+    return T
   },
   isContentShown: function() {
     return I
   },
   useIsContentShown: function() {
-    return C
+    return v
   },
   useIsAnyContentShown: function() {
-    return v
+    return C
   },
   getCurrentlyShownCounts: function() {
     return A
@@ -56,10 +56,10 @@ let a = new s.TaskRunner,
     let s = e.recentlyShown.filter(e => e !== t.content);
     return s.unshift(t.content), s.splice(5), e.recentlyShown = s, null != t.groupName && e.currentlyShownGroup.add(t.groupName), !r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(t.content) && (e.shownFatigableCandidate = t, (null === (i = e.prevFatigableCandidate) || void 0 === i ? void 0 : i.content) !== t.content && (e.prevFatigableCandidate = t, e.lastWinnerTime = new Date().getTime())), null === (n = t.onAdded) || void 0 === n || n.call(t), e
   },
-  f = (e, t) => (e.candidates.set(t.content, t), e),
-  E = (e, t) => (e.candidates.delete(t.content), e),
-  p = (e, t) => d(c(e, e.shownFatigableCandidate), t),
-  h = e => null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0,
+  p = (e, t) => (e.candidates.set(t.content, t), e),
+  h = (e, t) => (e.candidates.delete(t.content), e),
+  f = (e, t) => d(c(e, e.shownFatigableCandidate), t),
+  E = e => null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0,
   _ = e => {
     let t = [...e.candidates.keys()];
     return null !== e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCandidate.content) && e.candidates.size > 1 && (t = t.filter(t => {
@@ -67,36 +67,36 @@ let a = new s.TaskRunner,
       return t !== (null === (n = e.prevFatigableCandidate) || void 0 === n ? void 0 : n.content)
     })), e.candidates.get(t[Math.floor(Math.random() * t.length)])
   },
-  S = e => null != e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCandidate.content) && null == e.shownFatigableCandidate,
-  m = e => {
+  m = e => null != e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCandidate.content) && null == e.shownFatigableCandidate,
+  S = e => {
     if (0 === e.candidates.size) return e;
     let t = new Date().getTime() - e.lastWinnerTime > 3e5;
-    if (S(e) && !t) return a.unschedule(), p(e, h(e));
+    if (m(e) && !t) return a.unschedule(), f(e, E(e));
     if (null != e.shownFatigableCandidate && !t || a.scheduled()) return e;
     let n = new Date().getTime();
     return null == e.shownFatigableCandidate && n - e.lastWinnerTime < 36e5 ? e : (a.schedule(() => {
       l.setState(e => {
         let t = u(e);
-        return p(t, _(t))
+        return f(t, _(t))
       })
     }, 250), e)
   },
-  T = e => {
+  g = e => {
     let t = r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e.content);
     l.setState(n => {
       let i = u(n);
-      return t ? d(i, e) : m(f(i, e))
+      return t ? d(i, e) : S(p(i, e))
     })
   },
-  g = (e, t) => {
+  T = (e, t) => {
     l.setState(n => {
       let i = u(n);
-      return t ? m(c(E(i, e), e)) : c(E(i, e), e)
+      return t ? S(c(h(i, e), e)) : c(h(i, e), e)
     })
   },
   I = e => l.getState().currentlyShown.has(e),
-  C = e => l(t => t.currentlyShown.has(e)),
-  v = e => l(t => e.some(e => t.currentlyShown.has(e))),
+  v = e => l(t => t.currentlyShown.has(e)),
+  C = e => l(t => e.some(e => t.currentlyShown.has(e))),
   A = () => {
     let e = [...l.getState().currentlyShown].filter(e => !r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e)).length,
       t = l.getState().currentlyShown.size;

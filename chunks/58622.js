@@ -1,57 +1,57 @@
 "use strict";
-t.r(n), t.d(n, {
+a.r(t), a.d(t, {
   default: function() {
     return f
   }
 });
-var a = t("37983");
-t("884691");
-var u = t("446674"),
-  l = t("77078"),
-  s = t("242757"),
-  r = t("923959"),
-  i = t("957255"),
-  d = t("76539"),
-  c = t("49111"),
-  o = t("782340");
+var n = a("37983");
+a("884691");
+var l = a("446674"),
+  s = a("77078"),
+  u = a("242757"),
+  i = a("923959"),
+  r = a("957255"),
+  d = a("76539"),
+  o = a("49111"),
+  c = a("782340");
 
 function f(e) {
   let {
-    source: n,
-    guild: t,
-    channel: a,
-    stageInstance: l
-  } = e, d = (0, u.useStateFromStores)([r.default], () => r.default.getDefaultChannel(t.id, !0, c.Permissions.CREATE_INSTANT_INVITE)), o = (0, u.useStateFromStores)([i.default], () => (0, s.canViewInviteModal)(i.default, t, a, l)), f = E(n, t, o && null != a ? a : d), I = _(n);
-  return null == a && n === c.InstantInviteSources.GUILD_CONTEXT_MENU ? null : o || null != d ? f : I
+    source: t,
+    guild: a,
+    channel: n,
+    stageInstance: s
+  } = e, d = (0, l.useStateFromStores)([i.default], () => i.default.getDefaultChannel(a.id, !0, o.Permissions.CREATE_INSTANT_INVITE)), c = (0, l.useStateFromStores)([r.default], () => (0, u.canViewInviteModal)(r.default, a, n, s)), f = E(t, a, c && null != n ? n : d), h = C(t);
+  return null == n && t === o.InstantInviteSources.GUILD_CONTEXT_MENU ? null : c || null != d ? f : h
 }
-let E = (e, n, u) => (0, a.jsx)(l.MenuItem, {
+let E = (e, t, l) => (0, n.jsx)(s.MenuItem, {
     id: "invite-people",
-    label: o.default.Messages.INVITE_PEOPLE,
+    label: c.default.Messages.INVITE_PEOPLE,
     color: "brand",
-    icon: e === c.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
-    action: () => (0, l.openModalLazy)(async () => {
+    icon: e === o.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
+    action: () => (0, s.openModalLazy)(async () => {
       let {
-        default: l
-      } = await t.el("310688").then(t.bind(t, "310688"));
-      return t => (0, a.jsx)(l, {
-        ...t,
-        guild: n,
-        channel: u,
+        default: s
+      } = await a.el("310688").then(a.bind(a, "310688"));
+      return a => (0, n.jsx)(s, {
+        ...a,
+        guild: t,
+        channel: l,
         source: e
       })
     })
   }),
-  _ = e => (0, a.jsx)(l.MenuItem, {
+  C = e => (0, n.jsx)(s.MenuItem, {
     id: "invite-people",
-    label: o.default.Messages.INVITE_PEOPLE,
+    label: c.default.Messages.INVITE_PEOPLE,
     color: "brand",
-    icon: e === c.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
-    action: () => (0, l.openModalLazy)(async () => {
+    icon: e === o.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
+    action: () => (0, s.openModalLazy)(async () => {
       let {
         default: e
-      } = await t.el("973132").then(t.bind(t, "973132"));
-      return n => (0, a.jsx)(e, {
-        ...n
+      } = await a.el("973132").then(a.bind(a, "973132"));
+      return t => (0, n.jsx)(e, {
+        ...t
       })
     })
   })

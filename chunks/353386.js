@@ -1,26 +1,26 @@
 "use strict";
-t.r(r), t.d(r, {
+A.r(t), A.d(t, {
   default: function() {
-    return o
+    return s
   }
 });
-var a = t("37983");
-t("884691");
-var n = t("421898"),
-  i = t.n(n),
-  l = t("401921"),
-  o = e => {
+var a = A("37983");
+A("884691");
+var l = A("421898"),
+  n = A.n(l),
+  r = A("401921"),
+  s = e => {
     let {
-      open: r = !1,
-      className: t,
-      ...n
+      open: t = !1,
+      className: A,
+      ...l
     } = e;
     return (0, a.jsxs)("button", {
       type: "button",
-      className: i(l.btnHamburger, {
-        [l.btnHamburgerOpen]: r
-      }, t),
-      ...n,
+      className: n(r.btnHamburger, {
+        [r.btnHamburgerOpen]: t
+      }, A),
+      ...l,
       children: [(0, a.jsx)("span", {}), (0, a.jsx)("span", {}), (0, a.jsx)("span", {}), (0, a.jsx)("span", {}), (0, a.jsx)("span", {}), (0, a.jsx)("span", {})]
     })
   }

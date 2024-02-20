@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   Versions: function() {
-    return n
+    return I
   }
 }), E("222007"), E("70102");
 var t = E("849266");
@@ -18,28 +18,28 @@ class o extends t.MessageType {
     }), void 0 !== e && (0, t.reflectionMergePartial)(this, _, e), _
   }
   internalBinaryRead(e, _, E, o) {
-    let n = null != o ? o : this.create(),
-      r = e.pos + _;
-    for (; e.pos < r;) {
+    let I = null != o ? o : this.create(),
+      T = e.pos + _;
+    for (; e.pos < T;) {
       let [_, o] = e.tag();
       switch (_) {
         case 1:
-          n.clientVersion = e.uint32();
+          I.clientVersion = e.uint32();
           break;
         case 2:
-          n.serverVersion = e.uint32();
+          I.serverVersion = e.uint32();
           break;
         case 3:
-          n.dataVersion = e.uint32();
+          I.dataVersion = e.uint32();
           break;
         default:
-          let r = E.readUnknownField;
-          if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-          let i = e.skip(o);
-          !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+          let T = E.readUnknownField;
+          if ("throw" === T) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
+          let r = e.skip(o);
+          !1 !== T && (!0 === T ? t.UnknownFieldHandler.onRead : T)(this.typeName, I, _, o, r)
       }
     }
-    return n
+    return I
   }
   internalBinaryWrite(e, _, E) {
     0 !== e.clientVersion && _.tag(1, t.WireType.Varint).uint32(e.clientVersion), 0 !== e.serverVersion && _.tag(2, t.WireType.Varint).uint32(e.serverVersion), 0 !== e.dataVersion && _.tag(3, t.WireType.Varint).uint32(e.dataVersion);
@@ -65,4 +65,4 @@ class o extends t.MessageType {
     }])
   }
 }
-let n = new o
+let I = new o

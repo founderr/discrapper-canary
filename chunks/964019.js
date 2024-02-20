@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MenuCheckboxItem: function() {
-    return p
+    return f
   }
 });
 var i = n("37983"),
@@ -13,50 +13,50 @@ var i = n("37983"),
   u = n("697917"),
   c = n("36562"),
   d = n("781291"),
-  f = n("389802"),
-  E = n("639826");
+  p = n("389802"),
+  h = n("639826");
 
-function p(e) {
+function f(e) {
   let {
     color: t = "default",
     label: n,
     checked: s,
-    subtext: p,
-    disabled: h,
+    subtext: f,
+    disabled: E,
     isFocused: _,
-    menuItemProps: S,
-    action: m,
-    className: T,
-    focusedClassName: g
+    menuItemProps: m,
+    action: S,
+    className: g,
+    focusedClassName: T
   } = e, I = r.useRef(null);
   return r.useEffect(() => {
     _ && (0, u.ensureItemVisible)(I)
   }, [_]), (0, i.jsxs)(o.Clickable, {
     innerRef: I,
-    className: a(E.item, E.labelContainer, f.MENU_ITEM_COLORS[t], T, {
-      [E.disabled]: h,
-      [E.focused]: _,
-      [null != g ? g : ""]: _
+    className: a(h.item, h.labelContainer, p.MENU_ITEM_COLORS[t], g, {
+      [h.disabled]: E,
+      [h.focused]: _,
+      [null != T ? T : ""]: _
     }),
-    onClick: h ? void 0 : m,
-    ...S,
+    onClick: E ? void 0 : S,
+    ...m,
     "aria-checked": s,
-    "aria-disabled": h,
+    "aria-disabled": E,
     children: [(0, i.jsxs)("div", {
-      className: E.label,
-      children: [(0, l.renderSubnode)(n, e), null != p && (0, i.jsx)("div", {
-        className: E.subtext,
-        children: p
+      className: h.label,
+      children: [(0, l.renderSubnode)(n, e), null != f && (0, i.jsx)("div", {
+        className: h.subtext,
+        children: f
       })]
     }), (0, i.jsx)("div", {
-      className: E.iconContainer,
+      className: h.iconContainer,
       children: s ? (0, i.jsx)(d.default, {
-        className: E.icon,
-        background: E.checkbox,
-        foreground: E.check
+        className: h.icon,
+        background: h.checkbox,
+        foreground: h.check
       }) : (0, i.jsx)(c.default, {
-        className: E.icon,
-        foreground: E.checkboxEmpty
+        className: h.icon,
+        foreground: h.checkboxEmpty
       })
     })]
   })

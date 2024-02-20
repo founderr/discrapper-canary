@@ -1,13 +1,13 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   getClientVersionForChangelog: function() {
-    return o
+    return a
   }
 });
-var t = E("286235");
+var i = n("286235");
 
-function o() {
+function a() {
   var e;
-  let _ = parseInt((e = "267451", "267451"));
-  return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("267451")), _ = 0), _
+  let t = parseInt((e = "267500", "267500"));
+  return Number.isNaN(t) && (i.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("267500")), t = 0), t
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var a = n("37983"),
@@ -9,21 +9,21 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   l = n("952990"),
-  u = r.forwardRef(function(e, t) {
+  o = r.forwardRef(function(e, t) {
     let {
       children: n,
       className: r,
       style: s,
-      noBorder: u = !1,
-      participantUserId: o
+      noBorder: o = !1,
+      participantUserId: u
     } = e;
     return (0, a.jsx)("div", {
       className: i(r, l.tile, {
-        [l.noBorder]: u
+        [l.noBorder]: o
       }),
       style: s,
       ref: t,
-      "data-selenium-video-tile": o,
+      "data-selenium-video-tile": u,
       children: n
     })
   })

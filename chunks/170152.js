@@ -11,11 +11,11 @@ let s = {
   },
   i = {},
   l = {},
-  u = !1;
-class o extends a.default.DeviceSettingsStore {
+  o = !1;
+class u extends a.default.DeviceSettingsStore {
   initialize() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s;
-    u = e.enabled
+    o = e.enabled
   }
   getWaitingHighFive(e, t) {
     var n;
@@ -26,16 +26,16 @@ class o extends a.default.DeviceSettingsStore {
     return null === (n = l[e]) || void 0 === n ? void 0 : n[t]
   }
   getEnabled() {
-    return u
+    return o
   }
   getUserAgnosticState() {
     return {
-      enabled: u
+      enabled: o
     }
   }
 }
-o.persistKey = "HighFiveStore";
-var d = new o(r.default, {
+u.persistKey = "HighFiveStore";
+var d = new u(r.default, {
   HIGH_FIVE_QUEUE: function(e) {
     let {
       userId: t,
@@ -59,7 +59,7 @@ var d = new o(r.default, {
     let {
       enabled: t
     } = e;
-    u = t
+    o = t
   },
   HIGH_FIVE_COMPLETE: function(e) {
     var t;
@@ -68,12 +68,12 @@ var d = new o(r.default, {
       completingUserId: a,
       waitingUserId: r,
       channelId: s
-    } = e, u = null !== (t = i[s]) && void 0 !== t ? t : {}, o = u[r];
-    if (delete u[r], null == o) return !1;
+    } = e, o = null !== (t = i[s]) && void 0 !== t ? t : {}, u = o[r];
+    if (delete o[r], null == u) return !1;
     l[s] = {
       ...l[s],
-      [r]: [o, n],
-      [a]: [n, o]
+      [r]: [u, n],
+      [a]: [n, u]
     }
   },
   HIGH_FIVE_COMPLETE_CLEAR: function(e) {

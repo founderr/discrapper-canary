@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return d
   }
 }), n("808653"), n("70102");
-var r = n("884691"),
-  o = n.n(r);
+var a = n("884691"),
+  r = n.n(a);
 
 function i(e, t) {
   return (i = Object.setPrototypeOf || function(e, t) {
     return e.__proto__ = t, e
   })(e, t)
 }
-var a = function(e) {
+var s = function(e) {
     var t = document.createElement("script");
     t.async = !0, t.defer = !0, t.src = e, document.head && document.head.appendChild(t)
   },
   c = /(http|https):\/\/(www)?.+\/recaptcha/,
-  s = ["sitekey", "theme", "size", "badge", "tabindex", "hl", "isolated"],
-  l = function(e) {
+  o = ["sitekey", "theme", "size", "badge", "tabindex", "hl", "isolated"],
+  d = function(e) {
     function t() {
-      for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-      return (t = e.call.apply(e, [this].concat(r)) || this).container = void 0, t.timer = void 0, t.state = {
+      for (var t, n = arguments.length, a = Array(n), i = 0; i < n; i++) a[i] = arguments[i];
+      return (t = e.call.apply(e, [this].concat(a)) || this).container = void 0, t.timer = void 0, t.state = {
         instanceKey: Date.now(),
         ready: !1,
         rendered: !1,
@@ -33,16 +33,16 @@ var a = function(e) {
         var e;
         t.props.inject && (e = c, !Array.from(document.scripts).reduce(function(t, n) {
           return t || e.test(n.src)
-        }, !1)) && a("https://recaptcha.net/recaptcha/api.js?render=explicit" + (t.props.hl ? "&hl=" + t.props.hl : ""))
+        }, !1)) && s("https://recaptcha.net/recaptcha/api.js?render=explicit" + (t.props.hl ? "&hl=" + t.props.hl : ""))
       }, t._prepare = function() {
         var e = t.props,
           n = e.explicit,
-          r = e.onLoad;
+          a = e.onLoad;
         window.grecaptcha.ready(function() {
           t.setState({
             ready: !0
           }, function() {
-            n || t.renderExplicitly(), r && r()
+            n || t.renderExplicitly(), a && a()
           })
         })
       }, t._renderRecaptcha = function(e, t) {
@@ -71,7 +71,7 @@ var a = function(e) {
         return new Promise(function(e, n) {
           if (t.state.rendered) return n(Error("This recaptcha instance has been already rendered."));
           if (!t.state.ready || !t.container) return n(Error("Recaptcha is not ready for rendering yet."));
-          var r = t._renderRecaptcha(t.container, {
+          var a = t._renderRecaptcha(t.container, {
             sitekey: t.props.sitekey,
             theme: t.props.theme,
             size: t.props.size,
@@ -84,7 +84,7 @@ var a = function(e) {
             hl: t.state.invisible ? void 0 : t.props.hl
           });
           t.setState({
-            instanceId: r,
+            instanceId: a,
             rendered: !0
           }, function() {
             t.props.onRender && t.props.onRender(), e()
@@ -105,7 +105,7 @@ var a = function(e) {
           n(Error("This recaptcha instance did not render yet."))
         })
       }, t.render = function() {
-        var e = o.createElement("div", {
+        var e = r.createElement("div", {
           key: t.state.instanceKey,
           id: t.props.id,
           className: t.props.className,
@@ -129,8 +129,8 @@ var a = function(e) {
       } : null
     }, t.prototype.componentDidUpdate = function(e) {
       var t = this;
-      s.reduce(function(n, r) {
-        return t.props[r] !== e[r] ? [].concat(n, [r]) : n
+      o.reduce(function(n, a) {
+        return t.props[a] !== e[a] ? [].concat(n, [a]) : n
       }, []).length > 0 && this.setState({
         instanceKey: Date.now(),
         rendered: !1
@@ -138,8 +138,8 @@ var a = function(e) {
         t.props.explicit || t.renderExplicitly()
       })
     }, t
-  }(r.Component);
-l.defaultProps = {
+  }(a.Component);
+d.defaultProps = {
   id: "",
   className: "g-recaptcha",
   theme: "light",

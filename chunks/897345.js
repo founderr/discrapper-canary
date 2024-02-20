@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return a
   },
   PUBLISH_DRAG_SOURCE: function() {
-    return o
+    return i
   },
   HOVER: function() {
-    return i
+    return o
   },
   DROP: function() {
     return s
@@ -21,7 +21,7 @@ n.r(t), n.d(t, {
 });
 var r = "dnd-core/INIT_COORDS",
   a = "dnd-core/BEGIN_DRAG",
-  o = "dnd-core/PUBLISH_DRAG_SOURCE",
-  i = "dnd-core/HOVER",
+  i = "dnd-core/PUBLISH_DRAG_SOURCE",
+  o = "dnd-core/HOVER",
   s = "dnd-core/DROP",
   c = "dnd-core/END_DRAG"

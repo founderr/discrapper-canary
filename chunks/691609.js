@@ -12,36 +12,36 @@ var i, r = n("37983"),
   u = n("272214"),
   c = n.n(u),
   d = n("907002"),
-  f = n("748820"),
-  E = n("733724"),
-  p = n("862337"),
-  h = n("266491"),
+  p = n("748820"),
+  h = n("733724"),
+  f = n("862337"),
+  E = n("266491"),
   _ = n("328139");
-let S = {
+let m = {
     friction: 13,
     tension: 240,
     duration: 150
   },
-  m = {
+  S = {
     duration: 150,
     friction: 3
   },
-  T = {
+  g = {
     friction: 30,
     tension: 900,
     mass: 1
   },
-  g = {
+  T = {
     duration: 150,
     friction: 10,
     tension: 100,
     mass: 1
   },
   I = (null === (i = window.SVGPathElement) || void 0 === i ? void 0 : i.prototype.getTotalLength) != null,
-  C = I ? (0, l.interpolate)("M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z", "M0 24C0 16.5449 0 12.8174 1.21793 9.87706C2.84183 5.95662 5.95662 2.84183 9.87706 1.21793C12.8174 0 16.5449 0 24 0C31.4551 0 35.1826 0 38.1229 1.21793C42.0434 2.84183 45.1582 5.95662 46.7821 9.87706C48 12.8174 48 16.5449 48 24C48 31.4551 48 35.1826 46.7821 38.1229C45.1582 42.0434 42.0434 45.1582 38.1229 46.7821C35.1826 48 31.4551 48 24 48C16.5449 48 12.8174 48 9.87706 46.7821C5.95662 45.1582 2.84183 42.0434 1.21793 38.1229C0 35.1826 0 31.4551 0 24Z", {
+  v = I ? (0, l.interpolate)("M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z", "M0 24C0 16.5449 0 12.8174 1.21793 9.87706C2.84183 5.95662 5.95662 2.84183 9.87706 1.21793C12.8174 0 16.5449 0 24 0C31.4551 0 35.1826 0 38.1229 1.21793C42.0434 2.84183 45.1582 5.95662 46.7821 9.87706C48 12.8174 48 16.5449 48 24C48 31.4551 48 35.1826 46.7821 38.1229C45.1582 42.0434 42.0434 45.1582 38.1229 46.7821C35.1826 48 31.4551 48 24 48C16.5449 48 12.8174 48 9.87706 46.7821C5.95662 45.1582 2.84183 42.0434 1.21793 38.1229C0 35.1826 0 31.4551 0 24Z", {
     maxSegmentLength: 1.5
   }) : e => "".concat(e);
-class v extends s.Component {
+class C extends s.Component {
   componentDidMount() {
     this.forceUpdate()
   }
@@ -149,27 +149,27 @@ class R extends s.Component {
     t && !e.selected ? null == r || r.update({
       spring: 1,
       immediate: !1,
-      config: S
+      config: m
     }).start() : !t && e.selected && (null == r || r.update({
       spring: 0,
       immediate: !1,
-      config: m
+      config: S
     }).start()), null != n && null == e.lowerBadge ? null == s || s.update({
       spring: 1,
       immediate: !document.hasFocus(),
-      config: T
+      config: g
     }).start() : null == n && null != e.lowerBadge && (null == s || s.update({
       spring: 0,
       immediate: !document.hasFocus(),
-      config: g
+      config: T
     }).start()), null != i && null == e.upperBadge ? null == a || a.update({
       spring: 1,
       immediate: !document.hasFocus(),
-      config: T
+      config: g
     }).start() : null == i && null != e.upperBadge && (null == a || a.update({
       spring: 0,
       immediate: !document.hasFocus(),
-      config: g
+      config: T
     }).start()), !o || A(this.props) || this.timeout.isStarted() ? A(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(c(108e5, 18e6), this.handleTimeout)
   }
   getBadgePositionInterpolation(e) {
@@ -208,7 +208,7 @@ class R extends s.Component {
   }
   getPathInterpolation() {
     var e;
-    return null === (e = this.state.borderRadiusMask) || void 0 === e ? void 0 : e.springs.spring.to(C)
+    return null === (e = this.state.borderRadiusMask) || void 0 === e ? void 0 : e.springs.spring.to(v)
   }
   render() {
     let {
@@ -221,17 +221,17 @@ class R extends s.Component {
       upperBadge: u,
       highlight: c
     } = this.props, {
-      maskId: f,
-      lowerBadgeMask: p,
-      upperBadgeMask: S,
-      focused: m,
-      hasRenderedBadge: T,
-      renderComplex: g
+      maskId: p,
+      lowerBadgeMask: f,
+      upperBadgeMask: m,
+      focused: S,
+      hasRenderedBadge: g,
+      renderComplex: T
     } = this.state;
-    if (!g) return (0, r.jsx)("div", {
+    if (!T) return (0, r.jsx)("div", {
       className: o(t, {
         [_.wrapperSimple]: !0,
-        [_.simpleFocused]: m
+        [_.simpleFocused]: S
       }),
       style: l,
       onFocus: this.handleFocus,
@@ -252,11 +252,11 @@ class R extends s.Component {
         }, "foreign-object")
       }, "svg")
     }, "wrapper");
-    let I = "".concat(f, "-upper_badge_masks"),
-      C = "".concat(f, "-lower_badge_masks"),
-      A = "".concat(f, "-blob_mask"),
-      R = "".concat(f, "-stroke_mask"),
-      N = "".concat(f, "-highlight_mask");
+    let I = "".concat(p, "-upper_badge_masks"),
+      v = "".concat(p, "-lower_badge_masks"),
+      A = "".concat(p, "-blob_mask"),
+      R = "".concat(p, "-stroke_mask"),
+      N = "".concat(p, "-highlight_mask");
     return (0, r.jsxs)("div", {
       className: o(t, _.wrapper),
       style: l,
@@ -277,7 +277,7 @@ class R extends s.Component {
           }), (0, r.jsx)(d.animated.path, {
             d: this.getPathInterpolation(),
             id: A
-          }), T ? (0, r.jsx)(d.animated.rect, {
+          }), g ? (0, r.jsx)(d.animated.rect, {
             id: I,
             x: 28,
             y: -4,
@@ -285,19 +285,19 @@ class R extends s.Component {
             height: 24,
             rx: 12,
             ry: 12,
-            transform: this.getBadgePositionInterpolation(S, -1)
-          }) : null, T ? (0, r.jsx)(d.animated.rect, {
-            id: C,
+            transform: this.getBadgePositionInterpolation(m, -1)
+          }) : null, g ? (0, r.jsx)(d.animated.rect, {
+            id: v,
             x: 48 - (a + 8) + 4,
             y: 28,
             width: a + 8,
             height: 24,
             rx: 12,
             ry: 12,
-            transform: this.getBadgePositionInterpolation(p)
+            transform: this.getBadgePositionInterpolation(f)
           }) : null]
         }), (0, r.jsxs)("mask", {
-          id: f,
+          id: p,
           fill: "black",
           x: 0,
           y: 0,
@@ -312,16 +312,16 @@ class R extends s.Component {
             className: o({
               [_.isHighlighted]: c
             })
-          }), T ? (0, r.jsxs)(r.Fragment, {
+          }), g ? (0, r.jsxs)(r.Fragment, {
             children: [(0, r.jsx)("use", {
               href: "#".concat(I),
               fill: "black"
             }), (0, r.jsx)("use", {
-              href: "#".concat(C),
+              href: "#".concat(v),
               fill: "black"
             })]
           }) : null]
-        }), T ? (0, r.jsxs)("mask", {
+        }), g ? (0, r.jsxs)("mask", {
           id: R,
           children: [(0, r.jsx)("rect", {
             width: "150%",
@@ -333,10 +333,10 @@ class R extends s.Component {
             href: "#".concat(I),
             fill: "black"
           }), (0, r.jsx)("use", {
-            href: "#".concat(C),
+            href: "#".concat(v),
             fill: "black"
           })]
-        }) : null, m ? (0, r.jsxs)(s.Fragment, {
+        }) : null, S ? (0, r.jsxs)(s.Fragment, {
           children: [(0, r.jsx)("g", {
             className: _.focusStroke,
             mask: "url(#".concat(R, ")"),
@@ -348,17 +348,17 @@ class R extends s.Component {
             children: [null != u ? (0, r.jsx)("use", {
               href: "#".concat(I)
             }) : null, null != i ? (0, r.jsx)("use", {
-              href: "#".concat(C)
+              href: "#".concat(v)
             }) : null]
           })]
         }) : null, c && (0, r.jsx)(d.animated.path, {
           d: this.getPathInterpolation(),
-          stroke: E.default.BRAND_500,
+          stroke: h.default.BRAND_500,
           "stroke-width": 2,
           className: _.highlight,
           mask: "url(#".concat(R, ")")
         }), (0, r.jsx)("foreignObject", {
-          mask: "url(#".concat(f, ")"),
+          mask: "url(#".concat(p, ")"),
           x: 0,
           y: 0,
           className: n,
@@ -366,13 +366,13 @@ class R extends s.Component {
           height: 48,
           children: e
         }, "foreign-object")]
-      }, "svg"), (0, r.jsxs)(h.default, {
+      }, "svg"), (0, r.jsxs)(E.default, {
         component: s.Fragment,
-        children: [null != i ? (0, r.jsx)(v, {
+        children: [null != i ? (0, r.jsx)(C, {
           className: _.lowerBadge,
           animatedStyle: this.getLowerBadgeStyles(),
           children: i
-        }, "lower-badge") : null, null != u ? (0, r.jsx)(v, {
+        }, "lower-badge") : null, null != u ? (0, r.jsx)(C, {
           className: _.upperBadge,
           animatedStyle: this.getUpperBadgeStyles(),
           children: u
@@ -381,10 +381,10 @@ class R extends s.Component {
     }, "wrapper")
   }
   constructor(...e) {
-    super(...e), this.timeout = new p.Timeout, this.state = {
+    super(...e), this.timeout = new f.Timeout, this.state = {
       renderComplex: !1,
       hasRenderedBadge: !1,
-      maskId: (0, f.v4)(),
+      maskId: (0, p.v4)(),
       focused: !1
     }, this.handleTimeout = () => {
       this.timeout.stop(), this.setState({

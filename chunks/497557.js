@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PbULong: function() {
-    return u
+    return s
   },
   PbLong: function() {
     return l
@@ -25,7 +25,7 @@ function o(e) {
   if (!e) throw Error("BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support")
 }
 let i = /^-?[0-9]+$/;
-class s {
+class u {
   isZero() {
     return 0 == this.lo && 0 == this.hi
   }
@@ -38,7 +38,7 @@ class s {
     this.lo = 0 | e, this.hi = 0 | t
   }
 }
-class u extends s {
+class s extends u {
   static from(e) {
     if (a) switch (typeof e) {
       case "string":
@@ -52,19 +52,19 @@ class u extends s {
         if (!e) return this.ZERO;
         if (e < a.UMIN) throw Error("signed value for ulong");
         if (e > a.UMAX) throw Error("ulong too large");
-        return a.V.setBigUint64(0, e, !0), new u(a.V.getInt32(0, !0), a.V.getInt32(4, !0))
+        return a.V.setBigUint64(0, e, !0), new s(a.V.getInt32(0, !0), a.V.getInt32(4, !0))
     } else switch (typeof e) {
       case "string":
         if ("0" == e) return this.ZERO;
         if (e = e.trim(), !i.test(e)) throw Error("string is no integer");
         let [t, n, o] = (0, r.int64fromString)(e);
         if (t) throw Error("signed value");
-        return new u(n, o);
+        return new s(n, o);
       case "number":
         if (0 == e) return this.ZERO;
         if (!Number.isSafeInteger(e)) throw Error("number is no integer");
         if (e < 0) throw Error("signed value for ulong");
-        return new u(e, e / 4294967296)
+        return new s(e, e / 4294967296)
     }
     throw Error("unknown value " + typeof e)
   }
@@ -75,8 +75,8 @@ class u extends s {
     return o(a), a.V.setInt32(0, this.lo, !0), a.V.setInt32(4, this.hi, !0), a.V.getBigUint64(0, !0)
   }
 }
-u.ZERO = new u(0, 0);
-class l extends s {
+s.ZERO = new s(0, 0);
+class l extends u {
   static from(e) {
     if (a) switch (typeof e) {
       case "string":
@@ -95,8 +95,8 @@ class l extends s {
       case "string":
         if ("0" == e) return this.ZERO;
         if (e = e.trim(), !i.test(e)) throw Error("string is no integer");
-        let [t, n, o] = (0, r.int64fromString)(e), s = new l(n, o);
-        return t ? s.negate() : s;
+        let [t, n, o] = (0, r.int64fromString)(e), u = new l(n, o);
+        return t ? u.negate() : u;
       case "number":
         if (0 == e) return this.ZERO;
         if (!Number.isSafeInteger(e)) throw Error("number is no integer");

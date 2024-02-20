@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   IGNORE_ANALYTICS_BREADCRUMB_EVENTS: function() {
-    return r
+    return i
   },
   filterThrottle: function() {
-    return s
+    return o
   }
 });
-var i = n("49111");
-let r = [i.AnalyticEvents.START_SPEAKING, i.AnalyticEvents.START_LISTENING, i.AnalyticEvents.APP_OPENED, i.AnalyticEvents.NOTIFICATION_CLICKED, i.AnalyticEvents.EXPERIMENT_USER_TRIGGERED, i.AnalyticEvents.EXPERIMENT_DM_TRIGGERED, i.AnalyticEvents.EXPERIMENT_GUILD_TRIGGERED];
+var r = n("49111");
+let i = [r.AnalyticEvents.START_SPEAKING, r.AnalyticEvents.START_LISTENING, r.AnalyticEvents.APP_OPENED, r.AnalyticEvents.NOTIFICATION_CLICKED, r.AnalyticEvents.EXPERIMENT_USER_TRIGGERED, r.AnalyticEvents.EXPERIMENT_DM_TRIGGERED, r.AnalyticEvents.EXPERIMENT_GUILD_TRIGGERED];
 
-function s(e) {
+function o(e) {
   let {
     maxBudgetMinute: t,
     maxBudgetHour: n
-  } = e, i = {
+  } = e, r = {
     minute: {
       slot: 0,
       budgetUsed: 0
@@ -26,8 +26,8 @@ function s(e) {
   };
   return () => {
     let e = Date.now(),
-      r = Math.round(e / 1e3 / 60),
-      s = Math.round(e / 1e3 / 60 / 60);
-    return i.minute.slot !== r && (i.minute.slot = r, i.minute.budgetUsed = 0), i.hour.slot !== s && (i.hour.slot = s, i.hour.budgetUsed = 0), !!(i.minute.budgetUsed < t) && (i.minute.budgetUsed++, !!(i.hour.budgetUsed < n)) && (i.hour.budgetUsed++, !0)
+      i = Math.round(e / 1e3 / 60),
+      o = Math.round(e / 1e3 / 60 / 60);
+    return r.minute.slot !== i && (r.minute.slot = i, r.minute.budgetUsed = 0), r.hour.slot !== o && (r.hour.slot = o, r.hour.budgetUsed = 0), !!(r.minute.budgetUsed < t) && (r.minute.budgetUsed++, !!(r.hour.budgetUsed < n)) && (r.hour.budgetUsed++, !0)
   }
 }

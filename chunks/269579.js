@@ -1,11 +1,11 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return n
+    return l
   }
 });
-var t = E("862205");
-let o = (0, t.createExperiment)({
+var i = n("862205");
+let a = (0, i.createExperiment)({
   kind: "user",
   id: "2024-02_emoji_suggestions",
   label: "Emoji Suggestions Experiment",
@@ -29,4 +29,4 @@ let o = (0, t.createExperiment)({
     }
   }]
 });
-var n = o
+var l = a

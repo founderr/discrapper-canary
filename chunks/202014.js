@@ -1,38 +1,38 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return I
+    return u
   }
-}), E("222007");
-var t = E("689988"),
-  o = E("271938"),
-  n = E("42203"),
-  r = E("78581"),
-  i = E("49111");
-class a extends t.default {
+}), n("222007");
+var i = n("689988"),
+  a = n("271938"),
+  l = n("42203"),
+  s = n("78581"),
+  r = n("49111");
+class o extends i.default {
   constructor(...e) {
     super(...e), this.prevConnected = !1, this.tempMutedChannel = null, this.handleRTCConnectionState = e => {
       let {
-        state: _,
-        channelId: E
-      } = e, t = _ === i.RTCConnectionStates.RTC_CONNECTED, o = t && !this.prevConnected, a = n.default.getChannel(E), I = null == a ? void 0 : a.getGuildId(), s = this.tempMutedChannel === E;
-      o && null != I && (s ? this.tempMutedChannel = null : (0, r.maybePlayCustomJoinSound)(I)), this.prevConnected = t
+        state: t,
+        channelId: n
+      } = e, i = t === r.RTCConnectionStates.RTC_CONNECTED, a = i && !this.prevConnected, o = l.default.getChannel(n), u = null == o ? void 0 : o.getGuildId(), d = this.tempMutedChannel === n;
+      a && null != u && (d ? this.tempMutedChannel = null : (0, s.maybePlayCustomJoinSound)(u)), this.prevConnected = i
     }, this.handleMute = e => {
       let {
-        channelId: _
+        channelId: t
       } = e;
-      this.tempMutedChannel = _
+      this.tempMutedChannel = t
     }, this.handleVoiceStateUpdates = e => {
       let {
-        voiceStates: _
-      } = e, E = o.default.getId(), t = o.default.getSessionId();
-      _.forEach(e => {
+        voiceStates: t
+      } = e, n = a.default.getId(), i = a.default.getSessionId();
+      t.forEach(e => {
         let {
-          userId: _,
-          channelId: o,
-          sessionId: n
+          userId: t,
+          channelId: a,
+          sessionId: l
         } = e;
-        _ === E && n !== t && null != o && (this.tempMutedChannel = o)
+        t === n && l !== i && null != a && (this.tempMutedChannel = a)
       })
     }, this.actions = {
       RTC_CONNECTION_STATE: this.handleRTCConnectionState,
@@ -41,4 +41,4 @@ class a extends t.default {
     }
   }
 }
-var I = new a
+var u = new o

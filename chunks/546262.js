@@ -14,14 +14,14 @@ try {
     signDisplay: "exceptZero"
   }).resolvedOptions().signDisplay
 } catch (e) {}
-let o = !1;
+let i = !1;
 try {
-  o = "unit" === new Intl.NumberFormat("de-DE", {
+  i = "unit" === new Intl.NumberFormat("de-DE", {
     style: "unit",
     unit: "degree"
   }).resolvedOptions().style
 } catch (e) {}
-let i = {
+let o = {
   degree: {
     narrow: {
       default: "\xb0",
@@ -47,7 +47,7 @@ class s {
             return 1 != [...a].length && console.warn("@react-aria/i18n polyfill for NumberFormat signDisplay: Unsupported case"), t.replace(r, "!!!").replace(a, "+").replace("!!!", r)
           }
         }
-      }(this.numberFormatter, this.options.signDisplay, e), "unit" === this.options.style && !o) {
+      }(this.numberFormatter, this.options.signDisplay, e), "unit" === this.options.style && !i) {
       var n;
       let {
         unit: e,
@@ -55,8 +55,8 @@ class s {
         locale: a
       } = this.resolvedOptions();
       if (!e) return t;
-      let o = null === (n = i[e]) || void 0 === n ? void 0 : n[r];
-      t += o[a] || o.default
+      let i = null === (n = o[e]) || void 0 === n ? void 0 : n[r];
+      t += i[a] || i.default
     }
     return t
   }
@@ -90,7 +90,7 @@ class s {
     return !a && null != this.options.signDisplay && (e = {
       ...e,
       signDisplay: this.options.signDisplay
-    }), !o && "unit" === this.options.style && (e = {
+    }), !i && "unit" === this.options.style && (e = {
       ...e,
       style: "unit",
       unit: this.options.unit,
@@ -103,14 +103,14 @@ class s {
         {
           numberingSystem: n
         } = t;
-      if (n && e.includes("-nu-") && (!e.includes("-u-") && (e += "-u-"), e += "-nu-".concat(n)), "unit" === t.style && !o) {
+      if (n && e.includes("-nu-") && (!e.includes("-u-") && (e += "-u-"), e += "-nu-".concat(n)), "unit" === t.style && !i) {
         var a;
         let {
           unit: e,
           unitDisplay: n = "short"
         } = t;
         if (!e) throw Error('unit option must be provided with style: "unit"');
-        if (!(null === (a = i[e]) || void 0 === a ? void 0 : a[n])) throw Error("Unsupported unit ".concat(e, " with unitDisplay = ").concat(n));
+        if (!(null === (a = o[e]) || void 0 === a ? void 0 : a[n])) throw Error("Unsupported unit ".concat(e, " with unitDisplay = ").concat(n));
         t = {
           ...t,
           style: "decimal"
@@ -156,9 +156,9 @@ function p(e, t, n) {
 function f(e, t) {
   let n = e + (t ? Object.entries(t).sort((e, t) => e[0] < t[0] ? -1 : 1).join() : ""),
     r = d.get(n);
-  return !r && (r = new h(e, t), d.set(n, r)), r
+  return !r && (r = new m(e, t), d.set(n, r)), r
 }
-class h {
+class m {
   parse(e) {
     let t = this.sanitize(e);
     if (this.symbols.group && (t = g(t, this.symbols.group, "")), this.symbols.decimal && (t = t.replace(this.symbols.decimal, ".")), this.symbols.minusSign && (t = t.replace(this.symbols.minusSign, "-")), t = t.replace(this.symbols.numeral, this.symbols.index), "percent" === this.options.style) {
@@ -189,7 +189,7 @@ class h {
   constructor(e, t = {}) {
     var n, r;
     this.locale = e, this.formatter = new Intl.NumberFormat(e, t), this.options = this.formatter.resolvedOptions(), this.symbols = function(e, t, n, r) {
-      var a, o, i, s, c;
+      var a, i, o, s, c;
       let l = new Intl.NumberFormat(e, {
           ...n,
           minimumSignificantDigits: 1,
@@ -199,16 +199,16 @@ class h {
         d = l.formatToParts(10000.111),
         p = v.map(e => l.formatToParts(e)),
         f = null !== (c = null === (a = u.find(e => "minusSign" === e.type)) || void 0 === a ? void 0 : a.value) && void 0 !== c ? c : "-",
-        h = null === (o = d.find(e => "plusSign" === e.type)) || void 0 === o ? void 0 : o.value;
-      !h && ((null == r ? void 0 : r.signDisplay) === "exceptZero" || (null == r ? void 0 : r.signDisplay) === "always") && (h = "+");
-      let g = null === (i = new Intl.NumberFormat(e, {
+        m = null === (i = d.find(e => "plusSign" === e.type)) || void 0 === i ? void 0 : i.value;
+      !m && ((null == r ? void 0 : r.signDisplay) === "exceptZero" || (null == r ? void 0 : r.signDisplay) === "always") && (m = "+");
+      let g = null === (o = new Intl.NumberFormat(e, {
           ...n,
           minimumFractionDigits: 2,
           maximumFractionDigits: 2
-        }).formatToParts(.001).find(e => "decimal" === e.type)) || void 0 === i ? void 0 : i.value,
+        }).formatToParts(.001).find(e => "decimal" === e.type)) || void 0 === o ? void 0 : o.value,
         b = null === (s = u.find(e => "group" === e.type)) || void 0 === s ? void 0 : s.value,
-        x = u.filter(e => !m.has(e.type)).map(e => y(e.value)),
-        S = p.flatMap(e => e.filter(e => !m.has(e.type)).map(e => y(e.value))),
+        x = u.filter(e => !h.has(e.type)).map(e => y(e.value)),
+        S = p.flatMap(e => e.filter(e => !h.has(e.type)).map(e => y(e.value))),
         w = [...new Set([...x, ...S])].sort((e, t) => t.length - e.length),
         D = 0 === w.length ? RegExp("[\\p{White_Space}]", "gu") : RegExp("".concat(w.join("|"), "|[\\p{White_Space}]"), "gu"),
         C = [...new Intl.NumberFormat(n.locale, {
@@ -218,7 +218,7 @@ class h {
         P = RegExp("[".concat(C.join(""), "]"), "g");
       return {
         minusSign: f,
-        plusSign: h,
+        plusSign: m,
         decimal: g,
         group: b,
         literals: D,
@@ -228,7 +228,7 @@ class h {
     }(e, this.formatter, this.options, t), "percent" === this.options.style && ((null !== (n = this.options.minimumFractionDigits) && void 0 !== n ? n : 0) > 18 || (null !== (r = this.options.maximumFractionDigits) && void 0 !== r ? r : 0) > 18) && console.warn("NumberParser cannot handle percentages with greater than 18 decimal places, please reduce the number in your options.")
   }
 }
-let m = new Set(["decimal", "fraction", "integer", "minusSign", "plusSign", "group"]),
+let h = new Set(["decimal", "fraction", "integer", "minusSign", "plusSign", "group"]),
   v = [0, 4, 2, 1, 11, 20, 3, 7, 100, 21, .1, 1.1];
 
 function g(e, t, n) {

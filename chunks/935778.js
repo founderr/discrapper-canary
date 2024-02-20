@@ -1,33 +1,33 @@
 "use strict";
-n("70102");
-var r = Object.prototype.toString,
-  a = Math.max,
-  o = function(e, t) {
-    for (var n = [], r = 0; r < e.length; r += 1) n[r] = e[r];
-    for (var a = 0; a < t.length; a += 1) n[a + e.length] = t[a];
-    return n
+r("70102");
+var n = Object.prototype.toString,
+  o = Math.max,
+  i = function(t, e) {
+    for (var r = [], n = 0; n < t.length; n += 1) r[n] = t[n];
+    for (var o = 0; o < e.length; o += 1) r[o + t.length] = e[o];
+    return r
   },
-  i = function(e, t) {
-    for (var n = [], r = t || 0, a = 0; r < e.length; r += 1, a += 1) n[a] = e[r];
-    return n
+  a = function(t, e) {
+    for (var r = [], n = e || 0, o = 0; n < t.length; n += 1, o += 1) r[o] = t[n];
+    return r
   },
-  s = function(e, t) {
-    for (var n = "", r = 0; r < e.length; r += 1) n += e[r], r + 1 < e.length && (n += t);
-    return n
+  u = function(t, e) {
+    for (var r = "", n = 0; n < t.length; n += 1) r += t[n], n + 1 < t.length && (r += e);
+    return r
   };
-e.exports = function(e) {
-  var t, n = this;
-  if ("function" != typeof n || "[object Function]" !== r.apply(n)) throw TypeError("Function.prototype.bind called on incompatible " + n);
-  for (var c = i(arguments, 1), l = a(0, n.length - c.length), u = [], d = 0; d < l; d++) u[d] = "$" + d;
-  if (t = Function("binder", "return function (" + s(u, ",") + "){ return binder.apply(this,arguments); }")(function() {
-      if (this instanceof t) {
-        var r = n.apply(this, o(c, arguments));
-        return Object(r) === r ? r : this
+t.exports = function(t) {
+  var e, r = this;
+  if ("function" != typeof r || "[object Function]" !== n.apply(r)) throw TypeError("Function.prototype.bind called on incompatible " + r);
+  for (var l = a(arguments, 1), s = o(0, r.length - l.length), c = [], p = 0; p < s; p++) c[p] = "$" + p;
+  if (e = Function("binder", "return function (" + u(c, ",") + "){ return binder.apply(this,arguments); }")(function() {
+      if (this instanceof e) {
+        var n = r.apply(this, i(l, arguments));
+        return Object(n) === n ? n : this
       }
-      return n.apply(e, o(c, arguments))
-    }), n.prototype) {
-    var p = function() {};
-    p.prototype = n.prototype, t.prototype = new p, p.prototype = null
+      return r.apply(t, i(l, arguments))
+    }), r.prototype) {
+    var f = function() {};
+    f.prototype = r.prototype, e.prototype = new f, f.prototype = null
   }
-  return t
+  return e
 }

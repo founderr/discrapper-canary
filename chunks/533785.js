@@ -13,15 +13,15 @@ var i = n("37983"),
   u = n("118810"),
   c = n("862337"),
   d = n("860226"),
-  f = n("228256"),
-  E = n("222163"),
-  p = n("551042"),
-  h = n("452453"),
+  p = n("228256"),
+  h = n("222163"),
+  f = n("551042"),
+  E = n("452453"),
   _ = n("244201"),
-  S = n("983782"),
-  m = n("678904"),
-  T = n("49111");
-let g = new Set(["Spacebar", " ", "Enter"]);
+  m = n("983782"),
+  S = n("678904"),
+  g = n("49111");
+let T = new Set(["Spacebar", " ", "Enter"]);
 class I extends r.Component {
   shouldShowPopout(e, t) {
     return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout
@@ -46,12 +46,12 @@ class I extends r.Component {
   setupShowPopout() {
     var e, t, n;
     let i = this.getDomElement();
-    null === (e = i.ownerDocument) || void 0 === e || e.addEventListener("mousedown", this.handleDocumentMouseDown, !0), null === (t = i.ownerDocument) || void 0 === t || t.addEventListener("mouseup", this.handleDocumentMouseUp, !0), this.props.closeOnScroll && (null === (n = i.ownerDocument) || void 0 === n || n.addEventListener("scroll", this.close, !0)), this.context.windowDispatch.subscribe(T.ComponentActions.POPOUT_CLOSE, this.close), this.domElementRef.current = i, this.isValidClickStart = !1, this.forceUpdate()
+    null === (e = i.ownerDocument) || void 0 === e || e.addEventListener("mousedown", this.handleDocumentMouseDown, !0), null === (t = i.ownerDocument) || void 0 === t || t.addEventListener("mouseup", this.handleDocumentMouseUp, !0), this.props.closeOnScroll && (null === (n = i.ownerDocument) || void 0 === n || n.addEventListener("scroll", this.close, !0)), this.context.windowDispatch.subscribe(g.ComponentActions.POPOUT_CLOSE, this.close), this.domElementRef.current = i, this.isValidClickStart = !1, this.forceUpdate()
   }
   unsubscribe() {
     var e, t, n, i;
     let r = this.domElementRef.current;
-    null != r && (null === (t = r.ownerDocument) || void 0 === t || t.removeEventListener("mousedown", this.handleDocumentMouseDown, !0), null === (n = r.ownerDocument) || void 0 === n || n.removeEventListener("mouseup", this.handleDocumentMouseUp, !0), null === (i = r.ownerDocument) || void 0 === i || i.removeEventListener("scroll", this.close, !0)), this.context.windowDispatch.unsubscribe(T.ComponentActions.POPOUT_CLOSE, this.close), null === (e = this.resizeObserver) || void 0 === e || e.disconnect()
+    null != r && (null === (t = r.ownerDocument) || void 0 === t || t.removeEventListener("mousedown", this.handleDocumentMouseDown, !0), null === (n = r.ownerDocument) || void 0 === n || n.removeEventListener("mouseup", this.handleDocumentMouseUp, !0), null === (i = r.ownerDocument) || void 0 === i || i.removeEventListener("scroll", this.close, !0)), this.context.windowDispatch.unsubscribe(g.ComponentActions.POPOUT_CLOSE, this.close), null === (e = this.resizeObserver) || void 0 === e || e.disconnect()
   }
   componentWillUnmount() {
     this.unsubscribe(), this.domElementRef.current = null, this.loadingTimeout.stop(), this.validClickTimeout.stop()
@@ -95,11 +95,11 @@ class I extends r.Component {
     } = this.props, {
       resizeKey: c,
       isLoading: d,
-      shouldShowLoadingState: p
+      shouldShowLoadingState: f
     } = this.state;
-    return d && !p ? null : (0, i.jsx)(f.Layer, {
-      layerContext: null != u ? u : S.appLayerContext,
-      children: (0, i.jsx)(E.ReferencePositionLayer, {
+    return d && !f ? null : (0, i.jsx)(p.Layer, {
+      layerContext: null != u ? u : m.appLayerContext,
+      children: (0, i.jsx)(h.ReferencePositionLayer, {
         ref: this.layerRef,
         onMount: this.handlePopoutShow,
         onUnmount: this.handlePopoutHide,
@@ -131,9 +131,9 @@ class I extends r.Component {
       isLoading: !1,
       resizeKey: 0
     }, this.handlePopoutShow = () => {
-      this.context.windowDispatch.dispatch(T.ComponentActions.POPOUT_SHOW)
+      this.context.windowDispatch.dispatch(g.ComponentActions.POPOUT_SHOW)
     }, this.handlePopoutHide = () => {
-      this.context.windowDispatch.dispatch(T.ComponentActions.POPOUT_HIDE)
+      this.context.windowDispatch.dispatch(g.ComponentActions.POPOUT_HIDE)
     }, this.handleSetPopoutRef = e => {
       var t;
       let n = null == e ? void 0 : e.ownerDocument.defaultView;
@@ -207,13 +207,13 @@ class I extends r.Component {
         }
       }
     }, this.handleKeyboardPreload = e => {
-      g.has(e.key) && this.handlePreload()
+      T.has(e.key) && this.handlePreload()
     }, this.handleDocumentMouseDown = e => {
       let {
         ignoreModalClicks: t
       } = this.props, n = e.target, i = this.domElementRef.current;
       if (null != i) {
-        if ((0, E.referencePortalAwareContains)(i, n) || null != n.closest("." + h.ContextMenuClassName) || t && (0, p.hasAnyModalOpen)()) return;
+        if ((0, h.referencePortalAwareContains)(i, n) || null != n.closest("." + E.ContextMenuClassName) || t && (0, f.hasAnyModalOpen)()) return;
         this.isValidClickStart = !0
       }
     }, this.handleDocumentMouseUp = () => {
@@ -229,5 +229,5 @@ I.defaultProps = {
   autoInvert: !1,
   nudgeAlignIntoViewport: !1,
   spacing: 0,
-  loadingComponent: (0, i.jsx)(m.LoadingPopout, {})
+  loadingComponent: (0, i.jsx)(S.LoadingPopout, {})
 }, I.contextType = _.default

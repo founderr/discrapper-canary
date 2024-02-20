@@ -2,12 +2,12 @@
 n("781738");
 var r = String.prototype.replace,
   a = /%20/g,
-  o = {
+  i = {
     RFC1738: "RFC1738",
     RFC3986: "RFC3986"
   };
 e.exports = {
-  default: o.RFC3986,
+  default: i.RFC3986,
   formatters: {
     RFC1738: function(e) {
       return r.call(e, a, "+")
@@ -16,6 +16,6 @@ e.exports = {
       return String(e)
     }
   },
-  RFC1738: o.RFC1738,
-  RFC3986: o.RFC3986
+  RFC1738: i.RFC1738,
+  RFC3986: i.RFC3986
 }

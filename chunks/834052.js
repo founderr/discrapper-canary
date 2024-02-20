@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return p
   }
 });
 var i = n("446674"),
@@ -57,7 +57,7 @@ class d extends i.default.Store {
   }
 }
 d.displayName = "StageInstanceStore";
-var f = new d(r.default, {
+var p = new d(r.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guilds: t

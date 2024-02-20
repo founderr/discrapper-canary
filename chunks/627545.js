@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   calculateDepthForNode: function() {
-    return a
+    return i
   }
 });
-var r = n("925691"),
-  a = function(e) {
-    if ((0, r.isHidden)(e)) return 1 / 0;
-    for (var t = 0, n = e.parentNode; n;) t += 1, n = n.parentNode;
+var n = r("925691"),
+  i = function(e) {
+    if ((0, n.isHidden)(e)) return 1 / 0;
+    for (var t = 0, r = e.parentNode; r;) t += 1, r = r.parentNode;
     return t
   }

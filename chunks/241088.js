@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   getSanitizedRestrictedGuilds: function() {
-    return c
+    return S
   },
   getSanitizedMessageRequestRestrictedGuilds: function() {
-    return S
+    return o
   },
   getSanitizedActivityRestrictedGuilds: function() {
     return E
@@ -13,82 +13,82 @@ s.r(t), s.d(t, {
     return T
   },
   computeFlags: function() {
-    return f
+    return I
   },
   harvestDisabled: function() {
-    return m
+    return _
   },
   NonSpamRetrainingOptInOptions: function() {
     return n
   },
   NonSpamRetrainingOptInOptionsToValue: function() {
-    return _
+    return N
   },
   generateNonSpamRetrainingOptInSettingOptions: function() {
-    return g
+    return R
   }
 });
-var a, n, l = s("845579"),
-  i = s("341542"),
-  r = s("305961");
+var i, n, a = s("845579"),
+  d = s("341542"),
+  u = s("305961");
 s("599110");
-var o = s("49111"),
-  d = s("782340");
-let u = 864e5 * o.REQUEST_DATA_LIMIT_DAYS;
-
-function c() {
-  let e = l.RestrictedGuildIds.getSetting();
-  return 0 === i.default.totalUnavailableGuilds && (e = e.filter(e => null != r.default.getGuild(e))), e
-}
+var l = s("49111"),
+  r = s("782340");
+let c = 864e5 * l.REQUEST_DATA_LIMIT_DAYS;
 
 function S() {
-  let e = l.MessageRequestRestrictedGuildIds.getSetting();
-  return 0 === i.default.totalUnavailableGuilds && (e = e.filter(e => null != r.default.getGuild(e))), e
+  let e = a.RestrictedGuildIds.getSetting();
+  return 0 === d.default.totalUnavailableGuilds && (e = e.filter(e => null != u.default.getGuild(e))), e
+}
+
+function o() {
+  let e = a.MessageRequestRestrictedGuildIds.getSetting();
+  return 0 === d.default.totalUnavailableGuilds && (e = e.filter(e => null != u.default.getGuild(e))), e
 }
 
 function E() {
-  let e = l.ActivityRestrictedGuilds.getSetting();
-  return 0 === i.default.totalUnavailableGuilds && (e = e.filter(e => null != r.default.getGuild(e))), e
+  let e = a.ActivityRestrictedGuilds.getSetting();
+  return 0 === d.default.totalUnavailableGuilds && (e = e.filter(e => null != u.default.getGuild(e))), e
 }
 
 function T() {
-  let e = l.ActivityJoiningRestrictedGuilds.getSetting();
-  return 0 === i.default.totalUnavailableGuilds && (e = e.filter(e => null != r.default.getGuild(e))), e
+  let e = a.ActivityJoiningRestrictedGuilds.getSetting();
+  return 0 === d.default.totalUnavailableGuilds && (e = e.filter(e => null != u.default.getGuild(e))), e
 }
 
-function f(e) {
-  return (e & o.AllFriendSourceFlags) === o.AllFriendSourceFlags ? {
+function I(e) {
+  return (e & l.AllFriendSourceFlags) === l.AllFriendSourceFlags ? {
     all: !0,
     mutualFriends: !0,
     mutualGuilds: !0
   } : {
     all: !1,
-    mutualFriends: (e & o.FriendSourceFlags.MUTUAL_FRIENDS) === o.FriendSourceFlags.MUTUAL_FRIENDS,
-    mutualGuilds: (e & o.FriendSourceFlags.MUTUAL_GUILDS) === o.FriendSourceFlags.MUTUAL_GUILDS
+    mutualFriends: (e & l.FriendSourceFlags.MUTUAL_FRIENDS) === l.FriendSourceFlags.MUTUAL_FRIENDS,
+    mutualGuilds: (e & l.FriendSourceFlags.MUTUAL_GUILDS) === l.FriendSourceFlags.MUTUAL_GUILDS
   }
 }
 
-function m(e, t) {
-  return !t.verified || null != e && u > Date.now() - new Date(e.created_at).getTime()
-}(a = n || (n = {}))[a.UNDECIDED = 0] = "UNDECIDED", a[a.OPTIN = 1] = "OPTIN", a[a.OPTOUT = 2] = "OPTOUT";
-let _ = {
+function _(e, t) {
+  return !t.verified || null != e && c > Date.now() - new Date(e.created_at).getTime()
+}(i = n || (n = {}))[i.UNDECIDED = 0] = "UNDECIDED", i[i.OPTIN = 1] = "OPTIN", i[i.OPTOUT = 2] = "OPTOUT";
+let N = {
   0: void 0,
   1: !0,
   2: !1
 };
 
-function g() {
+function R() {
   return [{
-    name: d.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_IN_HEADER,
-    desc: d.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_IN_DESC,
+    name: r.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_IN_HEADER,
+    desc: r.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_IN_DESC,
     value: 1
   }, {
-    name: d.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_OUT_HEADER,
-    desc: d.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_OUT_DESC,
+    name: r.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_OUT_HEADER,
+    desc: r.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_OUT_DESC,
     value: 2
   }, {
-    name: d.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_UNSET_HEADER,
-    desc: d.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_UNSET_DESC,
+    name: r.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_UNSET_HEADER,
+    desc: r.default.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_UNSET_DESC,
     value: 0
   }]
 }

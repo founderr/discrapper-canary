@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   wrapConnectorHooks: function() {
-    return o
+    return i
   }
 }), n("70102");
 var r = n("900255"),
   a = n("884691");
 
-function o(e) {
+function i(e) {
   var t = {};
   return Object.keys(e).forEach(function(n) {
-    var o = e[n];
+    var i = e[n];
     if (n.endsWith("Ref")) t[n] = e[n];
     else {
-      var s, c = (s = o, function() {
+      var s, c = (s = i, function() {
         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
           t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, a.isValidElement)(e) ? (! function(e) {
@@ -25,7 +25,7 @@ function o(e) {
           var n = e.ref;
           return ((0, r.invariant)("string" != typeof n, "Cannot connect React DnD to an element with an existing string ref. Please convert it to use a callback ref instead, or wrap it into a <span> or <div>. Read more: https://reactjs.org/docs/refs-and-the-dom.html#callback-refs"), n) ? (0, a.cloneElement)(e, {
             ref: function(e) {
-              i(n, e), i(t, e)
+              o(n, e), o(t, e)
             }
           }) : (0, a.cloneElement)(e, {
             ref: t
@@ -41,6 +41,6 @@ function o(e) {
   }), t
 }
 
-function i(e, t) {
+function o(e, t) {
   "function" == typeof e ? e(t) : e.current = t
 }

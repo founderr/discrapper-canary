@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
-var s = n("759843"),
-  a = n("627929"),
+var a = n("759843"),
+  s = n("627929"),
   l = n("913144"),
   i = n("840707"),
   r = n("49111"),
-  u = {
+  o = {
     signup: (e, t) => i.default.post({
       url: r.Endpoints.HUB_WAITLIST_SIGNUP,
       body: {
@@ -17,16 +17,16 @@ var s = n("759843"),
         school: t
       },
       trackedActionData: {
-        event: s.NetworkActionNames.HUB_WAITLIST_SIGNUP,
+        event: a.NetworkActionNames.HUB_WAITLIST_SIGNUP,
         properties: e => {
           var t;
           let n = !1,
-            s = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.email_domain;
-          if (null != s) {
-            let e = s.split(".");
+            a = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.email_domain;
+          if (null != a) {
+            let e = a.split(".");
             n = -1 !== e.indexOf("edu")
           }
-          return (0, a.exact)({
+          return (0, s.exact)({
             is_edu_email: n
           })
         }
@@ -42,11 +42,11 @@ var s = n("759843"),
           use_verification_code: !0
         },
         trackedActionData: {
-          event: s.NetworkActionNames.HUB_EMAIL_VERIFY_SEND,
+          event: a.NetworkActionNames.HUB_EMAIL_VERIFY_SEND,
           properties: e => {
             var t;
             let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.has_matching_guild;
-            return (0, a.exact)({
+            return (0, s.exact)({
               has_matching_guild: n
             })
           }
@@ -63,13 +63,13 @@ var s = n("759843"),
               token: e
             },
             trackedActionData: {
-              event: s.NetworkActionNames.HUB_EMAIL_VERIFY
+              event: a.NetworkActionNames.HUB_EMAIL_VERIFY
             }
           }),
-          a = null === (t = n.body.guild) || void 0 === t ? void 0 : t.id;
+          s = null === (t = n.body.guild) || void 0 === t ? void 0 : t.id;
         l.default.dispatch({
           type: "HUB_VERIFY_EMAIL_SUCCESS",
-          guildId: a
+          guildId: s
         })
       } catch (e) {
         l.default.dispatch({
@@ -80,8 +80,8 @@ var s = n("759843"),
     },
     async verifyCode(e, t, n) {
       if (null != e) try {
-        var a;
-        let u = await i.default.post({
+        var s;
+        let o = await i.default.post({
             url: r.Endpoints.HUB_EMAIL_VERIFY_CODE,
             body: {
               code: e,
@@ -89,14 +89,14 @@ var s = n("759843"),
               email: n
             },
             trackedActionData: {
-              event: s.NetworkActionNames.HUB_EMAIL_VERIFY
+              event: a.NetworkActionNames.HUB_EMAIL_VERIFY
             }
           }),
-          o = null === (a = u.body.guild) || void 0 === a ? void 0 : a.id;
+          c = null === (s = o.body.guild) || void 0 === s ? void 0 : s.id;
         return l.default.dispatch({
           type: "HUB_VERIFY_EMAIL_SUCCESS",
-          guildId: o
-        }), u.body
+          guildId: c
+        }), o.body
       } catch (e) {
         throw l.default.dispatch({
           type: "HUB_VERIFY_EMAIL_FAILURE",

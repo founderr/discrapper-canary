@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var a = n("37983");
@@ -11,16 +11,16 @@ var r = n("985622"),
   i = n("981913"),
   l = n("782340");
 
-function u(e) {
+function o(e) {
   let {
     isSelfStream: t,
     centerButton: n = !1,
-    ...u
-  } = e, o = n ? i.CenterControlButton : i.default;
-  return (0, a.jsx)(o, {
+    ...o
+  } = e, u = n ? i.CenterControlButton : i.default;
+  return (0, a.jsx)(u, {
     label: t ? l.default.Messages.STOP_STREAMING : l.default.Messages.STOP_WATCHING,
     iconComponent: t ? r.default : s.default,
     isActive: !0,
-    ...u
+    ...o
   })
 }

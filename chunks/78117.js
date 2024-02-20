@@ -1,47 +1,47 @@
 "use strict";
-i("780440");
-var n = i("404446"),
-  r = i("484784"),
-  a = i("274198"),
-  s = i("664144"),
-  o = i("174669"),
-  l = i("366483"),
-  u = o("species"),
-  c = RegExp.prototype;
-t.exports = function(t, e, i, h) {
-  var f = o(t),
-    d = !s(function() {
-      var e = {};
-      return e[f] = function() {
+n("780440");
+var e = n("404446"),
+  i = n("484784"),
+  u = n("274198"),
+  o = n("664144"),
+  c = n("174669"),
+  a = n("366483"),
+  s = c("species"),
+  f = RegExp.prototype;
+t.exports = function(t, r, n, l) {
+  var p = c(t),
+    v = !o(function() {
+      var r = {};
+      return r[p] = function() {
         return 7
-      }, 7 !== "" [t](e)
+      }, 7 !== "" [t](r)
     }),
-    m = d && !s(function() {
-      var e = !1,
-        i = /a/;
-      return "split" === t && ((i = {}).constructor = {}, i.constructor[u] = function() {
-        return i
-      }, i.flags = "", i[f] = /./ [f]), i.exec = function() {
-        return e = !0, null
-      }, i[f](""), !e
+    x = v && !o(function() {
+      var r = !1,
+        n = /a/;
+      return "split" === t && ((n = {}).constructor = {}, n.constructor[s] = function() {
+        return n
+      }, n.flags = "", n[p] = /./ [p]), n.exec = function() {
+        return r = !0, null
+      }, n[p](""), !r
     });
-  if (!d || !m || i) {
-    var v = n(/./ [f]),
-      p = e(f, "" [t], function(t, e, i, r, s) {
-        var o = n(t),
-          l = e.exec;
-        if (l === a || l === c.exec) return d && !s ? {
+  if (!v || !x || n) {
+    var h = e(/./ [p]),
+      d = r(p, "" [t], function(t, r, n, i, o) {
+        var c = e(t),
+          a = r.exec;
+        if (a === u || a === f.exec) return v && !o ? {
           done: !0,
-          value: v(e, i, r)
+          value: h(r, n, i)
         } : {
           done: !0,
-          value: o(i, e, r)
+          value: c(n, r, i)
         };
         return {
           done: !1
         }
       });
-    r(String.prototype, t, p[0]), r(c, f, p[1])
+    i(String.prototype, t, d[0]), i(f, p, d[1])
   }
-  h && l(c[f], "sham", !0)
+  l && a(f[p], "sham", !0)
 }

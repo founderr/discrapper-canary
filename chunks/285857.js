@@ -1,30 +1,30 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   sendStageRequestToSpeakEphemeralMessage: function() {
-    return r
+    return s
   }
 });
-var t = E("913144"),
-  o = E("299039"),
-  n = E("49111");
+var i = n("913144"),
+  a = n("299039"),
+  l = n("49111");
 
-function r(e, _, E) {
-  t.default.dispatch({
+function s(e, t, n) {
+  i.default.dispatch({
     type: "MESSAGE_CREATE",
     channelId: e,
     message: function(e) {
       let {
-        channelId: _,
-        requesterUser: E,
-        requestToSpeakTimestamp: t
+        channelId: t,
+        requesterUser: n,
+        requestToSpeakTimestamp: i
       } = e;
       return {
-        id: o.default.fromTimestamp(Date.parse(t)),
-        type: n.MessageTypes.STAGE_RAISE_HAND,
-        flags: n.MessageFlags.EPHEMERAL,
+        id: a.default.fromTimestamp(Date.parse(i)),
+        type: l.MessageTypes.STAGE_RAISE_HAND,
+        flags: l.MessageFlags.EPHEMERAL,
         content: "",
-        channel_id: _,
-        author: E,
+        channel_id: t,
+        author: n,
         attachments: [],
         embeds: [],
         pinned: !1,
@@ -32,14 +32,14 @@ function r(e, _, E) {
         mention_channels: [],
         mention_roles: [],
         mention_everyone: !1,
-        timestamp: t,
-        state: n.MessageStates.SENT,
+        timestamp: i,
+        state: l.MessageStates.SENT,
         tts: !1
       }
     }({
       channelId: e,
-      requesterUser: _,
-      requestToSpeakTimestamp: E
+      requesterUser: t,
+      requestToSpeakTimestamp: n
     }),
     optimistic: !1,
     sendMessageOptions: {},

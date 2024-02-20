@@ -1,24 +1,24 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return r
   }
-}), E("222007");
-var t = E("862337"),
-  o = E("913144"),
-  n = E("689988");
-class r extends n.default {
+}), n("222007");
+var i = n("862337"),
+  a = n("913144"),
+  l = n("689988");
+class s extends l.default {
   _terminate() {
     this.clearErrorTimeout.stop()
   }
   constructor(...e) {
-    super(...e), this.clearErrorTimeout = new t.Timeout, this.actions = {
+    super(...e), this.clearErrorTimeout = new i.Timeout, this.actions = {
       MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: () => this.handleNoiseCancellationError()
     }, this.handleNoiseCancellationError = () => {
-      this.clearErrorTimeout.start(3e3, () => o.default.dispatch({
+      this.clearErrorTimeout.start(3e3, () => a.default.dispatch({
         type: "MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET"
       }))
     }
   }
 }
-var i = new r
+var r = new s

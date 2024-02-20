@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return d
   },
   fromSerializedGuildRecord: function() {
-    return f
+    return p
   },
   filterRoleDeletes: function() {
-    return E
+    return h
   }
 }), n("222007");
 var i = n("627929"),
@@ -28,8 +28,8 @@ var i = n("627929"),
   a = n("49111");
 
 function o(e, t) {
-  var n, o, l, u, c, d, f, E, p, h, _, S, m;
-  let T = {
+  var n, o, l, u, c, d, p, h, f, E, _, m, S;
+  let g = {
     id: e.id,
     name: null !== (n = e.properties.name) && void 0 !== n ? n : "",
     description: e.properties.description,
@@ -49,65 +49,65 @@ function o(e, t) {
     verificationLevel: null !== (u = e.properties.verification_level) && void 0 !== u ? u : a.VerificationLevels.NONE,
     explicitContentFilter: null !== (c = e.properties.explicit_content_filter) && void 0 !== c ? c : a.GuildExplicitContentFilterTypes.DISABLED,
     defaultMessageNotifications: null !== (d = e.properties.default_message_notifications) && void 0 !== d ? d : a.UserNotificationSettings.ALL_MESSAGES,
-    mfaLevel: null !== (f = e.properties.mfa_level) && void 0 !== f ? f : a.MFALevels.NONE,
+    mfaLevel: null !== (p = e.properties.mfa_level) && void 0 !== p ? p : a.MFALevels.NONE,
     vanityURLCode: e.properties.vanity_url_code,
-    premiumTier: null !== (E = e.properties.premium_tier) && void 0 !== E ? E : a.BoostedGuildTiers.NONE,
-    premiumSubscriberCount: null !== (p = e.premium_subscription_count) && void 0 !== p ? p : 0,
+    premiumTier: null !== (h = e.properties.premium_tier) && void 0 !== h ? h : a.BoostedGuildTiers.NONE,
+    premiumSubscriberCount: null !== (f = e.premium_subscription_count) && void 0 !== f ? f : 0,
     premiumProgressBarEnabled: e.properties.premium_progress_bar_enabled || !1,
     systemChannelFlags: e.properties.system_channel_flags,
     discoverySplash: e.properties.discovery_splash,
     rulesChannelId: e.properties.rules_channel_id,
     safetyAlertsChannelId: e.properties.safety_alerts_channel_id,
     publicUpdatesChannelId: e.properties.public_updates_channel_id,
-    maxStageVideoChannelUsers: null !== (h = e.properties.max_stage_video_channel_users) && void 0 !== h ? h : -1,
+    maxStageVideoChannelUsers: null !== (E = e.properties.max_stage_video_channel_users) && void 0 !== E ? E : -1,
     maxVideoChannelUsers: null !== (_ = e.properties.max_video_channel_users) && void 0 !== _ ? _ : -1,
-    maxMembers: null !== (S = e.properties.max_members) && void 0 !== S ? S : -1,
-    nsfwLevel: null !== (m = e.properties.nsfw_level) && void 0 !== m ? m : a.GuildNSFWContentLevel.DEFAULT,
+    maxMembers: null !== (m = e.properties.max_members) && void 0 !== m ? m : -1,
+    nsfwLevel: null !== (S = e.properties.nsfw_level) && void 0 !== S ? S : a.GuildNSFWContentLevel.DEFAULT,
     hubType: e.properties.hub_type,
     latestOnboardingQuestionId: e.properties.latest_onboarding_question_id
   };
-  return null == t ? (0, i.dangerouslyCast)(T, r.default) : t.merge(T)
+  return null == t ? (0, i.dangerouslyCast)(g, r.default) : t.merge(g)
 }
 
 function l(e, t) {
-  var n, i, r, o, l, u, c, f, p, h, _, S, m;
-  let T = null !== (n = e.properties) && void 0 !== n ? n : d(t),
-    g = {
+  var n, i, r, o, l, u, c, p, f, E, _, m, S;
+  let g = null !== (n = e.properties) && void 0 !== n ? n : d(t),
+    T = {
       id: e.id,
-      name: null !== (i = T.name) && void 0 !== i ? i : "",
-      description: T.description,
-      icon: T.icon,
-      splash: T.splash,
-      banner: T.banner,
-      homeHeader: T.home_header,
-      features: new Set(null !== (r = T.features) && void 0 !== r ? r : []),
-      preferredLocale: null !== (o = T.preferred_locale) && void 0 !== o ? o : "en-us",
-      ownerId: T.owner_id,
-      application_id: T.application_id,
-      roles: "partial" === e.data_mode ? E(e.id, t.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids) : (0, s.sortServerRoles)(e.id, e.roles),
-      afkChannelId: T.afk_channel_id,
-      afkTimeout: T.afk_timeout,
-      systemChannelId: T.system_channel_id,
-      verificationLevel: null !== (l = T.verification_level) && void 0 !== l ? l : a.VerificationLevels.NONE,
-      explicitContentFilter: null !== (u = T.explicit_content_filter) && void 0 !== u ? u : a.GuildExplicitContentFilterTypes.DISABLED,
-      defaultMessageNotifications: null !== (c = T.default_message_notifications) && void 0 !== c ? c : a.UserNotificationSettings.ALL_MESSAGES,
-      mfaLevel: null !== (f = T.mfa_level) && void 0 !== f ? f : a.MFALevels.NONE,
-      vanityURLCode: T.vanity_url_code,
-      premiumTier: null !== (p = T.premium_tier) && void 0 !== p ? p : a.BoostedGuildTiers.NONE,
-      premiumProgressBarEnabled: T.premium_progress_bar_enabled || !1,
-      systemChannelFlags: T.system_channel_flags,
-      discoverySplash: T.discovery_splash,
-      rulesChannelId: T.rules_channel_id,
-      safetyAlertsChannelId: T.safety_alerts_channel_id,
-      publicUpdatesChannelId: T.public_updates_channel_id,
-      maxStageVideoChannelUsers: null !== (h = T.max_stage_video_channel_users) && void 0 !== h ? h : -1,
-      maxVideoChannelUsers: null !== (_ = T.max_video_channel_users) && void 0 !== _ ? _ : -1,
-      maxMembers: null !== (S = T.max_members) && void 0 !== S ? S : -1,
-      nsfwLevel: null !== (m = T.nsfw_level) && void 0 !== m ? m : a.GuildNSFWContentLevel.DEFAULT,
-      hubType: T.hub_type,
-      latestOnboardingQuestionId: T.latest_onboarding_question_id
+      name: null !== (i = g.name) && void 0 !== i ? i : "",
+      description: g.description,
+      icon: g.icon,
+      splash: g.splash,
+      banner: g.banner,
+      homeHeader: g.home_header,
+      features: new Set(null !== (r = g.features) && void 0 !== r ? r : []),
+      preferredLocale: null !== (o = g.preferred_locale) && void 0 !== o ? o : "en-us",
+      ownerId: g.owner_id,
+      application_id: g.application_id,
+      roles: "partial" === e.data_mode ? h(e.id, t.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids) : (0, s.sortServerRoles)(e.id, e.roles),
+      afkChannelId: g.afk_channel_id,
+      afkTimeout: g.afk_timeout,
+      systemChannelId: g.system_channel_id,
+      verificationLevel: null !== (l = g.verification_level) && void 0 !== l ? l : a.VerificationLevels.NONE,
+      explicitContentFilter: null !== (u = g.explicit_content_filter) && void 0 !== u ? u : a.GuildExplicitContentFilterTypes.DISABLED,
+      defaultMessageNotifications: null !== (c = g.default_message_notifications) && void 0 !== c ? c : a.UserNotificationSettings.ALL_MESSAGES,
+      mfaLevel: null !== (p = g.mfa_level) && void 0 !== p ? p : a.MFALevels.NONE,
+      vanityURLCode: g.vanity_url_code,
+      premiumTier: null !== (f = g.premium_tier) && void 0 !== f ? f : a.BoostedGuildTiers.NONE,
+      premiumProgressBarEnabled: g.premium_progress_bar_enabled || !1,
+      systemChannelFlags: g.system_channel_flags,
+      discoverySplash: g.discovery_splash,
+      rulesChannelId: g.rules_channel_id,
+      safetyAlertsChannelId: g.safety_alerts_channel_id,
+      publicUpdatesChannelId: g.public_updates_channel_id,
+      maxStageVideoChannelUsers: null !== (E = g.max_stage_video_channel_users) && void 0 !== E ? E : -1,
+      maxVideoChannelUsers: null !== (_ = g.max_video_channel_users) && void 0 !== _ ? _ : -1,
+      maxMembers: null !== (m = g.max_members) && void 0 !== m ? m : -1,
+      nsfwLevel: null !== (S = g.nsfw_level) && void 0 !== S ? S : a.GuildNSFWContentLevel.DEFAULT,
+      hubType: g.hub_type,
+      latestOnboardingQuestionId: g.latest_onboarding_question_id
     };
-  return t.merge(g)
+  return t.merge(T)
 }
 
 function u(e, t) {
@@ -207,13 +207,13 @@ function d(e) {
   }
 }
 
-function f(e) {
+function p(e) {
   var t;
   for (let n in null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), e.features = new Set(null !== (t = e.features) && void 0 !== t ? t : []), e.roles)(0, s.fromSerializedGuildRole)(e.roles[n]);
   return (0, i.dangerouslyCast)(e, r.default)
 }
 
-function E(e, t, n, i) {
+function h(e, t, n, i) {
   let r = !1;
   if (null != i)
     for (let e of i) delete t[e], r = !0;

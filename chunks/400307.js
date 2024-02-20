@@ -44,13 +44,13 @@ var f = n("414456"),
   g = n("521012"),
   h = n("594098"),
   x = n("491614"),
-  N = n("716589"),
-  A = n("46829"),
-  v = n("118503"),
+  v = n("716589"),
+  N = n("46829"),
+  A = n("118503"),
   U = n("41250"),
   b = n("379863"),
-  D = n("216422"),
-  y = n("619911"),
+  y = n("216422"),
+  D = n("619911"),
   j = n("698015"),
   F = n("75196"),
   B = n("240481"),
@@ -391,13 +391,13 @@ function ed() {
         })
       })
     }), (0, d.jsx)(eo, {
-      Icon: A.default,
+      Icon: N.default,
       text: q.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
     }), (0, d.jsx)(eo, {
       Icon: x.default,
       text: q.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED
     }), (0, d.jsx)(eo, {
-      Icon: D.default,
+      Icon: y.default,
       text: q.default.Messages.PREMIUM_TIER_NITRO_BADGE_ITEM
     })]
   })
@@ -500,7 +500,7 @@ function em(e) {
   });
   if (1 === t) return (0, d.jsxs)(d.Fragment, {
     children: [(0, d.jsx)(eo, {
-      Icon: v.default,
+      Icon: A.default,
       text: q.default.Messages.PREMIUM_TIER_SERVER_BOOST_WITH_PERCENTAGE_ITEM.format({
         numBoosts: X.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
         percentageOff: (0, B.formatPercent)(r, X.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
@@ -513,13 +513,13 @@ function em(e) {
         })
       })
     }), (0, d.jsx)(eo, {
-      Icon: A.default,
+      Icon: N.default,
       text: q.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
     }), (0, d.jsx)(eo, {
-      Icon: y.default,
+      Icon: D.default,
       text: q.default.Messages.PREMIUM_TIER_HD_STREAMING_ITEM
     }), (0, d.jsx)(eo, {
-      Icon: N.default,
+      Icon: v.default,
       text: q.default.Messages.PREMIUM_TIER_CUSTOM_PROFILE_ITEM
     })]
   });
@@ -532,19 +532,19 @@ function em(e) {
         })
       })
     }), (0, d.jsx)(eo, {
-      Icon: A.default,
+      Icon: N.default,
       text: q.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM
     }), (0, d.jsx)(eo, {
       Icon: x.default,
       text: q.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED
     }), (0, d.jsx)(eo, {
-      Icon: y.default,
+      Icon: D.default,
       text: q.default.Messages.PREMIUM_TIER_HD_STREAMING_ITEM
     }), (0, d.jsx)(eo, {
-      Icon: v.default,
+      Icon: A.default,
       text: q.default.Messages.PREMIUM_TIER_SERVER_BOOST_ITEM
     }), (0, d.jsx)(eo, {
-      Icon: N.default,
+      Icon: v.default,
       text: q.default.Messages.PREMIUM_TIER_CUSTOM_PROFILE_ITEM
     }), a && s && (0, d.jsx)(Y.default, {})]
   })

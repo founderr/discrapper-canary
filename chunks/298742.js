@@ -15,29 +15,29 @@ let o = r.forwardRef(function(e, t) {
     disabled: u = !1,
     className: c,
     titleClassName: d,
-    tag: f = "h5",
-    required: E = !1,
-    style: p,
-    title: h,
+    tag: p = "h5",
+    required: h = !1,
+    style: f,
+    title: E,
     error: _,
-    ...S
-  } = e, m = r.useId(), T = r.useId(), g = null !== (n = S.titleId) && void 0 !== n ? n : m, I = null != _ ? null !== (o = S.errorId) && void 0 !== o ? o : T : void 0;
+    ...m
+  } = e, S = r.useId(), g = r.useId(), T = null !== (n = m.titleId) && void 0 !== n ? n : S, I = null != _ ? null !== (o = m.errorId) && void 0 !== o ? o : g : void 0;
   return (0, i.jsxs)("div", {
     ref: t,
     className: null != c ? c : void 0,
-    style: null != p ? p : void 0,
-    children: [null != h || null != _ ? (0, i.jsx)(a.FormTitle, {
-      tag: f,
+    style: null != f ? f : void 0,
+    children: [null != E || null != _ ? (0, i.jsx)(a.FormTitle, {
+      tag: p,
       disabled: u,
-      required: E,
+      required: h,
       error: _,
       className: d,
-      id: g,
+      id: T,
       errorId: I,
-      ...S,
-      children: h
+      ...m,
+      children: E
     }) : null, (0, i.jsx)(s.FormContextProvider, {
-      titleId: g,
+      titleId: T,
       errorId: I,
       error: null != _ ? _ : void 0,
       children: l

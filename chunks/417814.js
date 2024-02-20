@@ -1,66 +1,66 @@
 "use strict";
-t.r(e), t.d(e, {
+e.r(n), e.d(n, {
   default: function() {
-    return o
+    return c
   }
-}), t("70102");
-var c = t("37983");
-t("884691");
-var n = t("77078"),
-  r = t("668596"),
-  o = {
-    showCaptcha: function(a, e) {
-      let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+}), e("70102");
+var r = e("37983");
+e("884691");
+var o = e("77078"),
+  i = e("668596"),
+  c = {
+    showCaptcha: function(t, n) {
+      let c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         {
-          sitekey: i,
-          captchaService: h,
-          options: p
-        } = a;
-      (0, n.openModalLazy)(async () => {
+          sitekey: a,
+          captchaService: s,
+          options: u
+        } = t;
+      (0, o.openModalLazy)(async () => {
         let {
-          default: a
-        } = await t.el("899945").then(t.bind(t, "899945"));
-        return t => (0, c.jsx)(a, {
-          onCaptchaVerify: (a, t) => e({
-            captcha_key: a,
-            captcha_rqtoken: t
+          default: t
+        } = await e.el("899945").then(e.bind(e, "899945"));
+        return e => (0, r.jsx)(t, {
+          onCaptchaVerify: (t, e) => n({
+            captcha_key: t,
+            captcha_rqtoken: e
           }),
-          captchaService: h,
-          sitekey: i,
-          ...o,
-          ...p,
-          ...t
+          captchaService: s,
+          sitekey: a,
+          ...c,
+          ...u,
+          ...e
         })
       }, {
-        Layer: r.default
+        Layer: i.default
       })
     },
-    showCaptchaAsync: function(a) {
-      let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+    showCaptchaAsync: function(t) {
+      let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         {
-          sitekey: o,
-          captchaService: i,
-          options: h
-        } = a;
-      return new Promise((a, p) => {
-        (0, n.openModalLazy)(async () => {
+          sitekey: c,
+          captchaService: a,
+          options: s
+        } = t;
+      return new Promise((t, u) => {
+        (0, o.openModalLazy)(async () => {
           let {
-            default: n
-          } = await t.el("899945").then(t.bind(t, "899945"));
-          return t => (0, c.jsx)(n, {
-            onCaptchaVerify: (e, t) => a({
-              captcha_key: e,
-              captcha_rqtoken: t
+            default: o
+          } = await e.el("899945").then(e.bind(e, "899945"));
+          return e => (0, r.jsx)(o, {
+            onCaptchaVerify: (n, e) => t({
+              captcha_key: n,
+              captcha_rqtoken: e
             }),
-            captchaService: i,
-            sitekey: o,
-            onReject: () => p(Error("cancel captcha")),
-            ...e,
-            ...h,
-            ...t
+            captchaService: a,
+            sitekey: c,
+            onReject: () => u(Error("cancel captcha")),
+            ...n,
+            ...s,
+            ...e
           })
         }, {
-          Layer: r.default
+          Layer: i.default
         })
       })
     }

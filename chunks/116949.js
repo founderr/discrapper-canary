@@ -1,37 +1,37 @@
 "use strict";
 E.r(_), E.d(_, {
   BINARY_READ_OPTIONS: function() {
-    return T
-  },
-  b64ToProtoWithType: function() {
-    return N
-  },
-  b64ToProto: function() {
-    return O
-  },
-  b64ToPreloadedUserSettingsProto: function() {
     return A
   },
-  protoToB64WithType: function() {
+  b64ToProtoWithType: function() {
     return R
   },
+  b64ToProto: function() {
+    return N
+  },
+  b64ToPreloadedUserSettingsProto: function() {
+    return O
+  },
+  protoToB64WithType: function() {
+    return S
+  },
   protoToB64: function() {
-    return l
+    return L
   },
   mergeTopLevelFields: function() {
-    return u
+    return l
   },
   mutateUserGuildSettingsInternal: function() {
-    return L
+    return D
   },
   mutateUserChannelSettings: function() {
     return C
   },
   mutateUserChannelSettingsInternal: function() {
-    return D
+    return c
   },
   runMigrations: function() {
-    return c
+    return u
   },
   serializeUsageHistory: function() {
     return d
@@ -39,67 +39,67 @@ E.r(_), E.d(_, {
 }), E("70102"), E("222007"), E("424973");
 var t = E("849266"),
   o = E("917351"),
-  n = E.n(o),
-  r = E("713349"),
-  i = E("151426"),
+  I = E.n(o),
+  T = E("713349"),
+  r = E("151426"),
   a = E("959714"),
-  I = E("397336"),
-  s = E("49111");
-let T = {
+  n = E("397336"),
+  i = E("49111");
+let A = {
     readerFactory: e => new t.BinaryReader(e, new TextDecoder("utf-8"))
   },
-  S = {
-    [I.UserSettingsTypes.PRELOADED_USER_SETTINGS]: i.PreloadedUserSettings,
-    [I.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: r.FrecencyUserSettings
+  s = {
+    [n.UserSettingsTypes.PRELOADED_USER_SETTINGS]: r.PreloadedUserSettings,
+    [n.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: T.FrecencyUserSettings
   };
 
-function N(e, _) {
-  return null != _ && e in S ? O(S[e], _) : null
+function R(e, _) {
+  return null != _ && e in s ? N(s[e], _) : null
 }
 
-function O(e, _) {
+function N(e, _) {
   if (null == _) return null;
   let E = (0, t.base64decode)(_);
   try {
-    return e.fromBinary(E, T)
+    return e.fromBinary(E, A)
   } catch (e) {
     throw Error("Settings proto failed to deserialize (potentially corrupt): ".concat(e))
   }
 }
 
-function A(e) {
-  return O(i.PreloadedUserSettings, e)
+function O(e) {
+  return N(r.PreloadedUserSettings, e)
 }
 
-function R(e, _) {
-  return l(S[e], _)
+function S(e, _) {
+  return L(s[e], _)
 }
 
-function l(e, _) {
+function L(e, _) {
   return (0, t.base64encode)(e.toBinary(_))
 }
 
-function u(e, _, E) {
+function l(e, _, E) {
   for (let e in _ = {
       ..._
     }, E) delete _[e];
   return e.mergePartial(_, E), _
 }
 
-function L(e, _, E) {
-  return (null == _ || "null" === _) && (_ = s.ZERO_STRING_GUILD_ID), !(_ in e.guilds) && (e.guilds[_] = i.GuildSettings.create()), E(e.guilds[_])
+function D(e, _, E) {
+  return (null == _ || "null" === _) && (_ = i.ZERO_STRING_GUILD_ID), !(_ in e.guilds) && (e.guilds[_] = r.GuildSettings.create()), E(e.guilds[_])
 }
 
 function C(e, _, E, t) {
-  var o, n, r;
-  return o = e, n = _, r = e => D(e, E, t), null == o.guilds && (o.guilds = i.AllGuildSettings.create()), L(o.guilds, n, r)
+  var o, I, T;
+  return o = e, I = _, T = e => c(e, E, t), null == o.guilds && (o.guilds = r.AllGuildSettings.create()), D(o.guilds, I, T)
 }
 
-function D(e, _, E) {
-  return !(_ in e.channels) && (e.channels[_] = i.ChannelSettings.create()), E(e.channels[_])
+function c(e, _, E) {
+  return !(_ in e.channels) && (e.channels[_] = r.ChannelSettings.create()), E(e.channels[_])
 }
 
-function c(e, _) {
+function u(e, _) {
   null == e.versions && (e.versions = a.Versions.create());
   let E = 0;
   for (let e of _) {
@@ -108,37 +108,37 @@ function c(e, _) {
   }
   let t = .1 > Math.random(),
     o = !1,
-    n = [];
+    I = [];
   for (let E of _) {
-    var r, i;
+    var T, r;
     if (E.version <= e.versions.clientVersion) {
-      t && (null === (r = E.cleanup) || void 0 === r || r.call(E));
+      t && (null === (T = E.cleanup) || void 0 === T || T.call(E));
       continue
     }
     let _ = E.run(e);
     if (e.versions.clientVersion = E.version, !1 === _) {
-      null === (i = E.cleanup) || void 0 === i || i.call(E);
+      null === (r = E.cleanup) || void 0 === r || r.call(E);
       continue
     }
-    o = !0, null != E.cleanup && n.push(E.cleanup)
+    o = !0, null != E.cleanup && I.push(E.cleanup)
   }
   return {
     proto: e,
     isDirty: o,
-    cleanupFuncs: n
+    cleanupFuncs: I
   }
 }
 
 function d(e, _) {
   let E = Object.entries(e);
   if (E.length > _)
-    for (E = n.sortBy(E, e => {
+    for (E = I.sortBy(E, e => {
         let [_, E] = e;
         return E.recentUses[E.recentUses.length - 1]
       }).reverse(); E.length > _;) E.pop();
   let t = {};
   for (let [e, _] of E) {
-    let E = r.FrecencyItem.create();
+    let E = T.FrecencyItem.create();
     E.frecency = _.frecency, E.recentUses = _.recentUses.filter(e => null != e && e > 0).map(String), E.score = Math.round(_.score), E.totalUses = _.totalUses, t[e] = E
   }
   return t

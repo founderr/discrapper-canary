@@ -1,65 +1,65 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return A
+    return j
   }
 });
-var l = a("37983"),
-  n = a("884691"),
-  r = a("446674"),
-  s = a("77078"),
-  i = a("308289"),
+var s = a("37983"),
+  r = a("884691"),
+  l = a("446674"),
+  n = a("77078"),
+  d = a("308289"),
   u = a("750560"),
-  o = a("619335"),
-  d = a("95045"),
+  i = a("619335"),
+  o = a("95045"),
   c = a("574073"),
   f = a("26989"),
-  C = a("660478"),
-  h = a("27618"),
-  m = a("697218"),
-  p = a("959097"),
-  v = a("93427"),
-  g = a("299039"),
-  N = a("158998"),
-  S = a("610730"),
-  I = a("487269"),
-  E = a("719347"),
-  L = a("782340"),
-  T = a("963906");
+  h = a("660478"),
+  m = a("27618"),
+  g = a("697218"),
+  S = a("959097"),
+  T = a("93427"),
+  E = a("299039"),
+  x = a("158998"),
+  v = a("610730"),
+  _ = a("487269"),
+  N = a("719347"),
+  R = a("782340"),
+  A = a("963906");
 
-function A(e) {
-  return e.isActiveThread() ? (0, l.jsx)(x, {
+function j(e) {
+  return e.isActiveThread() ? (0, s.jsx)(M, {
     channel: e
-  }) : (0, l.jsx)(w, {
+  }) : (0, s.jsx)(I, {
     channel: e
   })
 }
 
-function x(e) {
+function M(e) {
   let {
     channel: t
-  } = e, a = (0, r.useStateFromStores)([S.default], () => S.default.getMostRecentMessage(t.id));
-  return null == a ? (0, l.jsx)(_, {
+  } = e, a = (0, l.useStateFromStores)([v.default], () => v.default.getMostRecentMessage(t.id));
+  return null == a ? (0, s.jsx)(C, {
     channel: t
-  }) : (0, l.jsx)(M, {
+  }) : (0, s.jsx)(p, {
     channel: t,
     message: a
   })
 }
 
-function _(e) {
+function C(e) {
   let {
     channel: t
-  } = e, a = (0, I.useLastMessageTimestamp)(t);
-  return (0, l.jsxs)(s.Text, {
-    className: T.subtext,
+  } = e, a = (0, _.useLastMessageTimestamp)(t);
+  return (0, s.jsxs)(n.Text, {
+    className: A.subtext,
     variant: "text-sm/normal",
     color: "header-secondary",
-    children: [L.default.Messages.THREAD_BROWSER_NO_RECENT_MESSAGES, "\xa0 • \xa0", (0, I.getTimestampString)(a)]
+    children: [R.default.Messages.THREAD_BROWSER_NO_RECENT_MESSAGES, "\xa0 • \xa0", (0, _.getTimestampString)(a)]
   })
 }
 
-function M(e) {
+function p(e) {
   let {
     channel: t,
     message: a
@@ -67,93 +67,93 @@ function M(e) {
   (0, u.useSubscribeGuildMembers)({
     [t.guild_id]: [a.author.id]
   });
-  let o = (0, r.useStateFromStores)([m.default], () => {
+  let i = (0, l.useStateFromStores)([g.default], () => {
       var e;
-      return null !== (e = m.default.getUser(a.author.id)) && void 0 !== e ? e : a.author
+      return null !== (e = g.default.getUser(a.author.id)) && void 0 !== e ? e : a.author
     }),
     {
       nick: f,
-      colorString: C
+      colorString: h
     } = (0, c.default)(a),
-    p = (0, r.useStateFromStores)([h.default], () => h.default.isBlocked(a.author.id)),
-    N = n.useMemo(() => {
-      let e = null != a.content && "" !== a.content ? (0, d.default)(a, {
+    S = (0, l.useStateFromStores)([m.default], () => m.default.isBlocked(a.author.id)),
+    x = r.useMemo(() => {
+      let e = null != a.content && "" !== a.content ? (0, o.default)(a, {
           formatInline: !0
         }).content : null,
         {
           contentPlaceholder: t,
-          renderedContent: n,
-          icon: r
-        } = (0, v.renderSingleLineMessage)(a, e, p, T.messageContent, {
-          iconClass: T.messageContentIcon,
-          iconSize: E.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+          renderedContent: r,
+          icon: l
+        } = (0, T.renderSingleLineMessage)(a, e, S, A.messageContent, {
+          iconClass: A.messageContentIcon,
+          iconSize: N.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
         });
-      return (0, l.jsxs)(l.Fragment, {
-        children: [null != n ? n : (0, l.jsx)("span", {
+      return (0, s.jsxs)(s.Fragment, {
+        children: [null != r ? r : (0, s.jsx)("span", {
           children: t
-        }), r]
+        }), l]
       })
-    }, [a, p]);
-  return (0, l.jsxs)(s.Text, {
-    className: T.subtext,
+    }, [a, S]);
+  return (0, s.jsxs)(n.Text, {
+    className: A.subtext,
     variant: "text-sm/normal",
     color: "header-secondary",
-    children: [(0, l.jsx)(i.default, {
-      className: T.avatar,
-      user: o,
-      size: s.AvatarSizes.SIZE_16
-    }), (0, l.jsx)(s.NameWithRole, {
+    children: [(0, s.jsx)(d.default, {
+      className: A.avatar,
+      user: i,
+      size: n.AvatarSizes.SIZE_16
+    }), (0, s.jsx)(n.NameWithRole, {
       name: f,
-      color: C,
-      className: T.authorName
-    }), ":\xa0", N, "\xa0 • \xa0", (0, I.getTimestampString)(g.default.extractTimestamp(a.id))]
+      color: h,
+      className: A.authorName
+    }), ":\xa0", x, "\xa0 • \xa0", (0, _.getTimestampString)(E.default.extractTimestamp(a.id))]
   })
 }
 
-function w(e) {
-  var t, a, n;
+function I(e) {
+  var t, a, r;
   let {
-    channel: d
-  } = e, c = (0, r.useStateFromStores)([C.default], () => C.default.lastMessageId(d.id)), h = null == c ? new Date(null !== (a = null === (t = d.threadMetadata) || void 0 === t ? void 0 : t.archiveTimestamp) && void 0 !== a ? a : Date.now()).getTime() : g.default.extractTimestamp(c);
+    channel: o
+  } = e, c = (0, l.useStateFromStores)([h.default], () => h.default.lastMessageId(o.id)), m = null == c ? new Date(null !== (a = null === (t = o.threadMetadata) || void 0 === t ? void 0 : t.archiveTimestamp) && void 0 !== a ? a : Date.now()).getTime() : E.default.extractTimestamp(c);
   (0, u.useSubscribeGuildMembers)({
-    [d.guild_id]: [d.ownerId]
+    [o.guild_id]: [o.ownerId]
   });
-  let v = (0, r.useStateFromStores)([m.default], () => m.default.getUser(d.ownerId)),
-    S = (0, r.useStateFromStores)([f.default], () => f.default.getMember(d.guild_id, d.ownerId)),
-    E = null !== (n = (0, o.default)(d)) && void 0 !== n ? n : p.default;
-  return (0, l.jsx)(s.Text, {
-    className: T.subtext,
+  let T = (0, l.useStateFromStores)([g.default], () => g.default.getUser(o.ownerId)),
+    v = (0, l.useStateFromStores)([f.default], () => f.default.getMember(o.guild_id, o.ownerId)),
+    N = null !== (r = (0, i.default)(o)) && void 0 !== r ? r : S.default;
+  return (0, s.jsx)(n.Text, {
+    className: A.subtext,
     variant: "text-sm/normal",
     color: "header-secondary",
-    children: null == v ? (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)("div", {
-        className: T.noAvatarIcon,
-        children: (0, l.jsx)(E, {
+    children: null == T ? (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)("div", {
+        className: A.noAvatarIcon,
+        children: (0, s.jsx)(N, {
           width: 10,
           height: 10
         })
-      }), L.default.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
-        time: (0, I.getTimestampString)(h)
+      }), R.default.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
+        time: (0, _.getTimestampString)(m)
       })]
-    }) : (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(i.default, {
-        className: T.avatar,
-        user: v,
-        size: s.AvatarSizes.SIZE_16
-      }), L.default.Messages.THREAD_BROWSER_STARTED_BY.format({
+    }) : (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(d.default, {
+        className: A.avatar,
+        user: T,
+        size: n.AvatarSizes.SIZE_16
+      }), R.default.Messages.THREAD_BROWSER_STARTED_BY.format({
         authorHook(e, t) {
-          var a, n;
-          return (0, l.jsx)(s.NameWithRole, {
-            className: T.startedByName,
-            color: null !== (a = null == S ? void 0 : S.colorString) && void 0 !== a ? a : void 0,
-            name: null !== (n = null == S ? void 0 : S.nick) && void 0 !== n ? n : N.default.getName(v)
+          var a, r;
+          return (0, s.jsx)(n.NameWithRole, {
+            className: A.startedByName,
+            color: null !== (a = null == v ? void 0 : v.colorString) && void 0 !== a ? a : void 0,
+            name: null !== (r = null == v ? void 0 : v.nick) && void 0 !== r ? r : x.default.getName(T)
           }, t)
         }
-      }), (0, l.jsx)("span", {
-        className: T.bullet,
+      }), (0, s.jsx)("span", {
+        className: A.bullet,
         children: "•"
-      }), L.default.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
-        time: (0, I.getTimestampString)(h)
+      }), R.default.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
+        time: (0, _.getTimestampString)(m)
       })]
     })
   })

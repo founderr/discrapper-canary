@@ -5,15 +5,15 @@ var r = function(e) {
   a = function(e, t, n, a) {
     if (a && !n) t[a] = r(e[1]);
     else
-      for (var o = 0; o < n.length; o += 1) null != e[o + 1] && (t[n[o]] = r(e[o + 1]))
+      for (var i = 0; i < n.length; i += 1) null != e[i + 1] && (t[n[i]] = r(e[i + 1]))
   },
-  o = function(e, t, n) {
+  i = function(e, t, n) {
     var r = e.name && e.names;
     e.push && !t[e.push] ? t[e.push] = [] : r && !t[e.name] && (t[e.name] = {});
-    var o = e.push ? {} : r ? t[e.name] : t;
-    a(n.match(e.reg), o, e.names, e.name), e.push && t[e.push].push(o)
+    var i = e.push ? {} : r ? t[e.name] : t;
+    a(n.match(e.reg), i, e.names, e.name), e.push && t[e.push].push(i)
   },
-  i = n("258169"),
+  o = n("258169"),
   s = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
 t.parse = function(e) {
   var t = {},
@@ -26,9 +26,9 @@ t.parse = function(e) {
       rtp: [],
       fmtp: []
     }), r = n[n.length - 1]);
-    for (var s = 0; s < (i[t] || []).length; s += 1) {
-      var c = i[t][s];
-      if (c.reg.test(a)) return o(c, r, a)
+    for (var s = 0; s < (o[t] || []).length; s += 1) {
+      var c = o[t][s];
+      if (c.reg.test(a)) return i(c, r, a)
     }
   }), t.media = n, t
 };

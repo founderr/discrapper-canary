@@ -1,23 +1,23 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return o
   }
-}), E("222007");
-var t = E("913144"),
-  o = E("689988"),
-  n = E("101125");
-class r extends o.default {
+}), n("222007");
+var i = n("913144"),
+  a = n("689988"),
+  l = n("101125");
+class s extends a.default {
   constructor(...e) {
-    super(...e), this.stores = new Map().set(n.default, i)
+    super(...e), this.stores = new Map().set(l.default, r)
   }
 }
 
-function i() {
-  t.default.dispatch({
+function r() {
+  i.default.dispatch({
     type: "SELF_PRESENCE_STORE_UPDATE",
-    status: n.default.getStatus(),
-    activities: n.default.getActivities()
+    status: l.default.getStatus(),
+    activities: l.default.getActivities()
   })
 }
-var a = new r
+var o = new s

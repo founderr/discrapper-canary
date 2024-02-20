@@ -1,17 +1,17 @@
 "use strict";
 E.r(_), E.d(_, {
   ComponentDispatcher: function() {
-    return n
+    return I
   },
   ComponentDispatch: function() {
-    return r
+    return T
   }
 }), E("222007"), E("424973");
 var t = E("44170");
 E("704744");
 var o = E("605250");
 E("49111");
-class n {
+class I {
   safeDispatch(e) {
     for (var _, E = arguments.length, t = Array(E > 1 ? E - 1 : 0), o = 1; o < E; o++) t[o - 1] = arguments[o];
     if (!this.hasSubscribers(e)) {
@@ -71,4 +71,4 @@ class n {
     this.emitter = new t.EventEmitter, this._savedDispatches = {}, this.emitter.setMaxListeners(100)
   }
 }
-let r = new n
+let T = new I

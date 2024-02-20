@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return N
   },
   AnimatedAvatar: function() {
-    return D
+    return O
   }
 }), n("70102"), n("222007");
 var i = n("37983"),
@@ -16,25 +16,25 @@ var i = n("37983"),
   u = n("709749"),
   c = n("391010"),
   d = n("414055"),
-  f = n("587974"),
-  E = n("158998"),
-  p = n("52904"),
-  h = n("49111"),
+  p = n("587974"),
+  h = n("158998"),
+  f = n("52904"),
+  E = n("49111"),
   _ = n("573135"),
-  S = n("782340"),
-  m = n("579910");
-let T = {
+  m = n("782340"),
+  S = n("579910");
+let g = {
   tension: 1200,
   friction: 70
 };
 
-function g(e) {
+function T(e) {
   let {
     size: t,
     isMobile: n,
     isTyping: r,
     ...s
-  } = e, a = (0, p.getAvatarSpecs)(t), o = a.status * (n && !r ? p.MOBILE_HEIGHT_RATIO : 1), l = a.status * (r ? p.TYPING_WIDTH_RATIO : 1), u = r ? (a.status * p.TYPING_WIDTH_RATIO - a.status) / 2 : 0, c = a.size - a.status - u - a.offset, d = a.size - o - a.offset;
+  } = e, a = (0, f.getAvatarSpecs)(t), o = a.status * (n && !r ? f.MOBILE_HEIGHT_RATIO : 1), l = a.status * (r ? f.TYPING_WIDTH_RATIO : 1), u = r ? (a.status * f.TYPING_WIDTH_RATIO - a.status) / 2 : 0, c = a.size - a.status - u - a.offset, d = a.size - o - a.offset;
   return (0, i.jsx)("rect", {
     x: c,
     y: d,
@@ -57,7 +57,7 @@ function I(e, t, n) {
   }
 }
 
-function C(e, t, n, r) {
+function v(e, t, n, r) {
   let s = I(n, r, t, !1),
     a = (0, c.getStatusBackdropOpacity)(r, e);
   if (!t) {
@@ -90,13 +90,13 @@ function C(e, t, n, r) {
   })
 }
 
-function v(e) {
+function C(e) {
   let {
     status: t,
     isMobile: n,
     isTyping: i,
     size: r
-  } = e, s = n && !i && t === h.StatusTypes.ONLINE, a = (0, p.getAvatarSpecs)(r);
+  } = e, s = n && !i && t === E.StatusTypes.ONLINE, a = (0, f.getAvatarSpecs)(r);
   return {
     ... function(e, t, n) {
       let {
@@ -104,13 +104,13 @@ function v(e) {
         status: r,
         stroke: s,
         offset: a
-      } = e, o = n ? r * p.TYPING_WIDTH_RATIO : r, l = t ? r * p.MOBILE_HEIGHT_RATIO : r;
+      } = e, o = n ? r * f.TYPING_WIDTH_RATIO : r, l = t ? r * f.MOBILE_HEIGHT_RATIO : r;
       return {
         avatarCutoutX: i - o + (o - r) / 2 - s - a,
         avatarCutoutY: i - l - s - a,
         avatarCutoutWidth: o + 2 * s,
         avatarCutoutHeight: l + 2 * s,
-        avatarCutoutRadius: t ? (l + 2 * s) * p.CUTOUT_BORDER_RADIUS : (r + 2 * s) / 2
+        avatarCutoutRadius: t ? (l + 2 * s) * f.CUTOUT_BORDER_RADIUS : (r + 2 * s) / 2
       }
     }(a, s, i),
     ...(0, c.getStatusValues)({
@@ -134,98 +134,98 @@ function A(e) {
     onContextMenu: u,
     onMouseEnter: c,
     onMouseLeave: d,
-    className: h,
-    tabIndex: T,
-    ariaLabel: g,
+    className: E,
+    tabIndex: g,
+    ariaLabel: T,
     ariaHidden: I,
-    status: C,
-    isMobile: v = !1,
+    status: v,
+    isMobile: C = !1,
     isTyping: A = !1,
     avatarDecoration: R,
     typingOffset: N,
-    specs: O
-  } = e, D = {
-    width: (0, p.getAvatarSize)(n),
-    height: (0, p.getAvatarSize)(n)
-  }, y = null == g || I ? void 0 : function(e, t) {
+    specs: y
+  } = e, O = {
+    width: (0, f.getAvatarSize)(n),
+    height: (0, f.getAvatarSize)(n)
+  }, D = null == T || I ? void 0 : function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return null != t ? S.default.Messages.LABEL_WITH_ONLINE_STATUS.format({
+    return null != t ? m.default.Messages.LABEL_WITH_ONLINE_STATUS.format({
       label: e,
-      status: (0, E.humanizeStatus)(t, n)
+      status: (0, h.humanizeStatus)(t, n)
     }) : e
-  }(g, C, v), P = O.size * _.DECORATION_TO_AVATAR_RATIO, L = function(e, t, n, i) {
+  }(T, v, C), b = y.size * _.DECORATION_TO_AVATAR_RATIO, P = function(e, t, n, i) {
     if (null == e) return null;
     if (i) switch (t) {
-      case p.AvatarSizes.SIZE_16:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_16;
-      case p.AvatarSizes.SIZE_20:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_20;
-      case p.AvatarSizes.SIZE_24:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_24;
-      case p.AvatarSizes.SIZE_32:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_32;
-      case p.AvatarSizes.SIZE_40:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_40;
-      case p.AvatarSizes.SIZE_56:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_56;
-      case p.AvatarSizes.SIZE_80:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_80;
-      case p.AvatarSizes.SIZE_120:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_120
+      case f.AvatarSizes.SIZE_16:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_16;
+      case f.AvatarSizes.SIZE_20:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_20;
+      case f.AvatarSizes.SIZE_24:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_24;
+      case f.AvatarSizes.SIZE_32:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_32;
+      case f.AvatarSizes.SIZE_40:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_40;
+      case f.AvatarSizes.SIZE_56:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_56;
+      case f.AvatarSizes.SIZE_80:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_80;
+      case f.AvatarSizes.SIZE_120:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_TYPING_120
     }
     if (n) switch (t) {
-      case p.AvatarSizes.SIZE_16:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_16;
-      case p.AvatarSizes.SIZE_20:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_20;
-      case p.AvatarSizes.SIZE_24:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_24;
-      case p.AvatarSizes.SIZE_32:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_32;
-      case p.AvatarSizes.SIZE_40:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_40;
-      case p.AvatarSizes.SIZE_56:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_56;
-      case p.AvatarSizes.SIZE_80:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_80;
-      case p.AvatarSizes.SIZE_120:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_120
+      case f.AvatarSizes.SIZE_16:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_16;
+      case f.AvatarSizes.SIZE_20:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_20;
+      case f.AvatarSizes.SIZE_24:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_24;
+      case f.AvatarSizes.SIZE_32:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_32;
+      case f.AvatarSizes.SIZE_40:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_40;
+      case f.AvatarSizes.SIZE_56:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_56;
+      case f.AvatarSizes.SIZE_80:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_80;
+      case f.AvatarSizes.SIZE_120:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_MOBILE_120
     }
     switch (t) {
-      case p.AvatarSizes.SIZE_16:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_16;
-      case p.AvatarSizes.SIZE_20:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_20;
-      case p.AvatarSizes.SIZE_24:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_24;
-      case p.AvatarSizes.SIZE_32:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_32;
-      case p.AvatarSizes.SIZE_40:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_40;
-      case p.AvatarSizes.SIZE_56:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_56;
-      case p.AvatarSizes.SIZE_80:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_80;
-      case p.AvatarSizes.SIZE_120:
-        return f.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_120
+      case f.AvatarSizes.SIZE_16:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_16;
+      case f.AvatarSizes.SIZE_20:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_20;
+      case f.AvatarSizes.SIZE_24:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_24;
+      case f.AvatarSizes.SIZE_32:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_32;
+      case f.AvatarSizes.SIZE_40:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_40;
+      case f.AvatarSizes.SIZE_56:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_56;
+      case f.AvatarSizes.SIZE_80:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_80;
+      case f.AvatarSizes.SIZE_120:
+        return p.MaskIDs.AVATAR_DECORATION_STATUS_ROUND_120
     }
     return null
-  }(C, n, v, A), b = null != R && (0, i.jsx)("svg", {
-    width: P + N,
-    height: P,
-    viewBox: "0 0 ".concat(P + N, " ").concat(P),
-    className: m.avatarDecoration,
+  }(v, n, C, A), L = null != R && (0, i.jsx)("svg", {
+    width: b + N,
+    height: b,
+    viewBox: "0 0 ".concat(b + N, " ").concat(b),
+    className: S.avatarDecoration,
     "aria-hidden": !0,
     children: (0, i.jsx)("foreignObject", {
       x: 0,
       y: 0,
-      width: P,
-      height: P,
-      mask: null != L ? "url(#".concat(L, ")") : void 0,
+      width: b,
+      height: b,
+      mask: null != P ? "url(#".concat(P, ")") : void 0,
       children: (0, i.jsx)("div", {
-        className: m.avatarStack,
+        className: S.avatarStack,
         children: (0, i.jsx)("img", {
-          className: m.avatar,
+          className: S.avatar,
           src: R,
           alt: " ",
           "aria-hidden": !0
@@ -234,28 +234,28 @@ function A(e) {
     })
   });
   return null != r || null != s ? (0, i.jsxs)(l.Clickable, {
-    className: a(m.wrapper, m.pointer, h),
-    style: D,
+    className: a(S.wrapper, S.pointer, E),
+    style: O,
     onClick: r,
-    tabIndex: T,
+    tabIndex: g,
     onContextMenu: u,
     onMouseDown: s,
     onKeyDown: o,
     onMouseEnter: null != c ? c : void 0,
     onMouseLeave: null != d ? d : void 0,
-    "aria-label": y,
+    "aria-label": D,
     "aria-hidden": I,
-    children: [t, b]
+    children: [t, L]
   }) : (0, i.jsxs)("div", {
-    className: a(m.wrapper, h),
-    style: D,
+    className: a(S.wrapper, E),
+    style: O,
     onContextMenu: null != u ? u : void 0,
     onMouseEnter: null != c ? c : void 0,
     onMouseLeave: null != d ? d : void 0,
     role: "img",
-    "aria-label": y,
+    "aria-label": D,
     "aria-hidden": I,
-    children: [t, b]
+    children: [t, L]
   })
 }
 
@@ -265,14 +265,14 @@ function R(e) {
     isSpeaking: n
   } = e;
   return (0, i.jsxs)("div", {
-    className: m.avatarStack,
+    className: S.avatarStack,
     children: [(0, i.jsx)("img", {
       src: null != t ? t : void 0,
       alt: " ",
-      className: m.avatar,
+      className: S.avatar,
       "aria-hidden": !0
     }), n && (0, i.jsx)("div", {
-      className: m.avatarSpeaking
+      className: S.avatarSpeaking
     })]
   })
 }
@@ -286,115 +286,115 @@ function N(e) {
     isMobile: o = !1,
     isTyping: l = !1,
     typingIndicatorRef: _,
-    isSpeaking: S = !1,
-    statusTooltip: T = !1,
-    statusBackdropColor: g,
-    "aria-hidden": v = !1,
+    isSpeaking: m = !1,
+    statusTooltip: g = !1,
+    statusBackdropColor: T,
+    "aria-hidden": C = !1,
     "aria-label": N
-  } = e, O = n !== h.StatusTypes.UNKNOWN ? n : null, D = (0, p.getAvatarSpecs)(r), y = null != O ? Math.ceil((D.status * p.TYPING_WIDTH_RATIO - D.status) / 2) : 0, P = D.size + y, L = (0, c.useStatusFillColor)(O, s);
+  } = e, y = n !== E.StatusTypes.UNKNOWN ? n : null, O = (0, f.getAvatarSpecs)(r), D = null != y ? Math.ceil((O.status * f.TYPING_WIDTH_RATIO - O.status) / 2) : 0, b = O.size + D, P = (0, c.useStatusFillColor)(y, s);
   return (0, i.jsx)(A, {
     ...e,
     ariaLabel: N,
-    ariaHidden: v,
-    status: O,
-    specs: D,
-    typingOffset: y,
+    ariaHidden: C,
+    status: y,
+    specs: O,
+    typingOffset: D,
     children: (0, i.jsxs)("svg", {
-      width: P,
-      height: P,
-      viewBox: "0 0 ".concat(P, " ").concat(P),
-      className: a(m.mask, m.svg),
+      width: b,
+      height: b,
+      viewBox: "0 0 ".concat(b, " ").concat(b),
+      className: a(S.mask, S.svg),
       "aria-hidden": !0,
       children: [(0, i.jsx)("foreignObject", {
         x: 0,
         y: 0,
-        width: D.size,
-        height: D.size,
+        width: O.size,
+        height: O.size,
         mask: "url(#".concat(function(e, t, n, i) {
-          if (null == e) return f.MaskIDs.AVATAR_DEFAULT;
+          if (null == e) return p.MaskIDs.AVATAR_DEFAULT;
           if (i) switch (t) {
-            case p.AvatarSizes.SIZE_16:
-              return f.MaskIDs.AVATAR_STATUS_TYPING_16;
-            case p.AvatarSizes.SIZE_20:
-              return f.MaskIDs.AVATAR_STATUS_TYPING_20;
-            case p.AvatarSizes.SIZE_24:
-              return f.MaskIDs.AVATAR_STATUS_TYPING_24;
-            case p.AvatarSizes.SIZE_32:
-              return f.MaskIDs.AVATAR_STATUS_TYPING_32;
-            case p.AvatarSizes.SIZE_40:
-              return f.MaskIDs.AVATAR_STATUS_TYPING_40;
-            case p.AvatarSizes.SIZE_48:
-              return f.MaskIDs.AVATAR_STATUS_TYPING_48;
-            case p.AvatarSizes.SIZE_56:
-              return f.MaskIDs.AVATAR_STATUS_TYPING_56;
-            case p.AvatarSizes.SIZE_80:
-              return f.MaskIDs.AVATAR_STATUS_TYPING_80;
-            case p.AvatarSizes.SIZE_120:
-              return f.MaskIDs.AVATAR_STATUS_TYPING_120
+            case f.AvatarSizes.SIZE_16:
+              return p.MaskIDs.AVATAR_STATUS_TYPING_16;
+            case f.AvatarSizes.SIZE_20:
+              return p.MaskIDs.AVATAR_STATUS_TYPING_20;
+            case f.AvatarSizes.SIZE_24:
+              return p.MaskIDs.AVATAR_STATUS_TYPING_24;
+            case f.AvatarSizes.SIZE_32:
+              return p.MaskIDs.AVATAR_STATUS_TYPING_32;
+            case f.AvatarSizes.SIZE_40:
+              return p.MaskIDs.AVATAR_STATUS_TYPING_40;
+            case f.AvatarSizes.SIZE_48:
+              return p.MaskIDs.AVATAR_STATUS_TYPING_48;
+            case f.AvatarSizes.SIZE_56:
+              return p.MaskIDs.AVATAR_STATUS_TYPING_56;
+            case f.AvatarSizes.SIZE_80:
+              return p.MaskIDs.AVATAR_STATUS_TYPING_80;
+            case f.AvatarSizes.SIZE_120:
+              return p.MaskIDs.AVATAR_STATUS_TYPING_120
           }
-          if (e === h.StatusTypes.ONLINE && n) switch (t) {
-            case p.AvatarSizes.SIZE_16:
-              return f.MaskIDs.AVATAR_STATUS_MOBILE_16;
-            case p.AvatarSizes.SIZE_20:
-              return f.MaskIDs.AVATAR_STATUS_MOBILE_20;
-            case p.AvatarSizes.SIZE_24:
-              return f.MaskIDs.AVATAR_STATUS_MOBILE_24;
-            case p.AvatarSizes.SIZE_32:
-              return f.MaskIDs.AVATAR_STATUS_MOBILE_32;
-            case p.AvatarSizes.SIZE_40:
-              return f.MaskIDs.AVATAR_STATUS_MOBILE_40;
-            case p.AvatarSizes.SIZE_48:
-              return f.MaskIDs.AVATAR_STATUS_MOBILE_48;
-            case p.AvatarSizes.SIZE_56:
-              return f.MaskIDs.AVATAR_STATUS_MOBILE_56;
-            case p.AvatarSizes.SIZE_80:
-              return f.MaskIDs.AVATAR_STATUS_MOBILE_80;
-            case p.AvatarSizes.SIZE_120:
-              return f.MaskIDs.AVATAR_STATUS_MOBILE_120
+          if (e === E.StatusTypes.ONLINE && n) switch (t) {
+            case f.AvatarSizes.SIZE_16:
+              return p.MaskIDs.AVATAR_STATUS_MOBILE_16;
+            case f.AvatarSizes.SIZE_20:
+              return p.MaskIDs.AVATAR_STATUS_MOBILE_20;
+            case f.AvatarSizes.SIZE_24:
+              return p.MaskIDs.AVATAR_STATUS_MOBILE_24;
+            case f.AvatarSizes.SIZE_32:
+              return p.MaskIDs.AVATAR_STATUS_MOBILE_32;
+            case f.AvatarSizes.SIZE_40:
+              return p.MaskIDs.AVATAR_STATUS_MOBILE_40;
+            case f.AvatarSizes.SIZE_48:
+              return p.MaskIDs.AVATAR_STATUS_MOBILE_48;
+            case f.AvatarSizes.SIZE_56:
+              return p.MaskIDs.AVATAR_STATUS_MOBILE_56;
+            case f.AvatarSizes.SIZE_80:
+              return p.MaskIDs.AVATAR_STATUS_MOBILE_80;
+            case f.AvatarSizes.SIZE_120:
+              return p.MaskIDs.AVATAR_STATUS_MOBILE_120
           }
           switch (t) {
-            case p.AvatarSizes.SIZE_16:
-              return f.MaskIDs.AVATAR_STATUS_ROUND_16;
-            case p.AvatarSizes.SIZE_20:
-              return f.MaskIDs.AVATAR_STATUS_ROUND_20;
-            case p.AvatarSizes.SIZE_24:
-              return f.MaskIDs.AVATAR_STATUS_ROUND_24;
-            case p.AvatarSizes.SIZE_32:
-              return f.MaskIDs.AVATAR_STATUS_ROUND_32;
-            case p.AvatarSizes.SIZE_40:
-              return f.MaskIDs.AVATAR_STATUS_ROUND_40;
-            case p.AvatarSizes.SIZE_48:
-              return f.MaskIDs.AVATAR_STATUS_ROUND_48;
-            case p.AvatarSizes.SIZE_56:
-              return f.MaskIDs.AVATAR_STATUS_ROUND_56;
-            case p.AvatarSizes.SIZE_80:
-              return f.MaskIDs.AVATAR_STATUS_ROUND_80;
-            case p.AvatarSizes.SIZE_120:
-              return f.MaskIDs.AVATAR_STATUS_ROUND_120
+            case f.AvatarSizes.SIZE_16:
+              return p.MaskIDs.AVATAR_STATUS_ROUND_16;
+            case f.AvatarSizes.SIZE_20:
+              return p.MaskIDs.AVATAR_STATUS_ROUND_20;
+            case f.AvatarSizes.SIZE_24:
+              return p.MaskIDs.AVATAR_STATUS_ROUND_24;
+            case f.AvatarSizes.SIZE_32:
+              return p.MaskIDs.AVATAR_STATUS_ROUND_32;
+            case f.AvatarSizes.SIZE_40:
+              return p.MaskIDs.AVATAR_STATUS_ROUND_40;
+            case f.AvatarSizes.SIZE_48:
+              return p.MaskIDs.AVATAR_STATUS_ROUND_48;
+            case f.AvatarSizes.SIZE_56:
+              return p.MaskIDs.AVATAR_STATUS_ROUND_56;
+            case f.AvatarSizes.SIZE_80:
+              return p.MaskIDs.AVATAR_STATUS_ROUND_80;
+            case f.AvatarSizes.SIZE_120:
+              return p.MaskIDs.AVATAR_STATUS_ROUND_120
           }
           throw Error("getMaskId(): Unsupported type, size: ".concat(t, ", status: ").concat(e, ", isMobile: ").concat(n ? "true" : "false"))
-        }(O, r, o, l), ")"),
+        }(y, r, o, l), ")"),
         children: (0, i.jsx)(R, {
           src: t,
-          isSpeaking: S
+          isSpeaking: m
         })
-      }), null != O ? (0, i.jsx)(d.Tooltip, {
-        text: T ? (0, E.humanizeStatus)(O) : null,
+      }), null != y ? (0, i.jsx)(d.Tooltip, {
+        text: g ? (0, h.humanizeStatus)(y) : null,
         "aria-label": !1,
         position: "top",
-        spacing: 5 + 1.5 * D.stroke,
+        spacing: 5 + 1.5 * O.stroke,
         children: e => (0, i.jsxs)(i.Fragment, {
-          children: [null != g && C(g, o, D, O), (0, i.jsx)("rect", {
+          children: [null != T && v(T, o, O, y), (0, i.jsx)("rect", {
             ...e,
-            ...I(D, O, o, l),
-            fill: L,
-            mask: "url(#".concat((0, c.getStatusMask)(O, o, l), ")"),
-            className: m.pointerEvents
+            ...I(O, y, o, l),
+            fill: P,
+            mask: "url(#".concat((0, c.getStatusMask)(y, o, l), ")"),
+            className: S.pointerEvents
           }), l ? (0, i.jsx)(u.Dots, {
             ref: _,
-            dotRadius: D.status / 4,
-            x: D.size - 1.375 * D.status - D.offset,
-            y: D.size - D.status / 1.333 - D.offset
+            dotRadius: O.status / 4,
+            x: O.size - 1.375 * O.status - O.offset,
+            y: O.size - O.status / 1.333 - O.offset
           }) : null]
         })
       }) : null]
@@ -402,77 +402,77 @@ function N(e) {
   })
 }
 
-function O(e) {
+function y(e) {
   let {
     fromIsMobile: t = !0,
     fromStatus: n,
     fromColor: s,
     isMobile: l = !1,
-    isTyping: f = !1,
-    typingIndicatorRef: h,
+    isTyping: p = !1,
+    typingIndicatorRef: E,
     isSpeaking: _ = !1,
-    size: S,
+    size: m,
     src: I,
     status: N,
-    statusColor: O,
-    statusTooltip: D = !1,
-    statusBackdropColor: y,
-    "aria-hidden": P = !1,
-    "aria-label": L
-  } = e, b = (0, c.useStatusFillColor)(N, O), M = r.useId(), U = r.useId(), [G] = r.useState(() => ({
+    statusColor: y,
+    statusTooltip: O = !1,
+    statusBackdropColor: D,
+    "aria-hidden": b = !1,
+    "aria-label": P
+  } = e, L = (0, c.useStatusFillColor)(N, y), M = r.useId(), U = r.useId(), [w] = r.useState(() => ({
     fill: s,
-    ...v({
-      size: S,
+    ...C({
+      size: m,
       status: n,
       isMobile: t,
       isTyping: !1
     })
-  })), w = r.useMemo(() => ({
-    fill: b,
-    ...v({
-      size: S,
+  })), k = r.useMemo(() => ({
+    fill: L,
+    ...C({
+      size: m,
       status: N,
       isMobile: l,
-      isTyping: f
+      isTyping: p
     })
-  }), [b, S, N, l, f]), {
-    avatarCutoutX: k,
+  }), [L, m, N, l, p]), {
+    avatarCutoutX: G,
     avatarCutoutY: x,
     avatarCutoutWidth: F,
     avatarCutoutHeight: V,
     avatarCutoutRadius: B,
     fill: H,
-    ...Y
+    ...j
   } = (0, o.useSpring)({
     immediate: !document.hasFocus(),
-    config: T,
-    from: G,
-    to: w
-  }), j = (0, p.getAvatarSize)(S), W = (0, p.getAvatarSpecs)(S), K = W.status * p.TYPING_WIDTH_RATIO, z = W.status * p.MOBILE_HEIGHT_RATIO, q = null != N ? (W.status * p.TYPING_WIDTH_RATIO - W.status) / 2 : 0, X = W.size - W.status - q - W.offset, Q = W.size - z - W.offset, Z = W.size + Math.ceil(q);
+    config: g,
+    from: w,
+    to: k
+  }), Y = (0, f.getAvatarSize)(m), W = (0, f.getAvatarSpecs)(m), K = W.status * f.TYPING_WIDTH_RATIO, z = W.status * f.MOBILE_HEIGHT_RATIO, q = null != N ? (W.status * f.TYPING_WIDTH_RATIO - W.status) / 2 : 0, Q = W.size - W.status - q - W.offset, X = W.size - z - W.offset, Z = W.size + Math.ceil(q);
   return (0, i.jsx)(A, {
     ...e,
-    ariaLabel: L,
-    ariaHidden: P,
+    ariaLabel: P,
+    ariaHidden: b,
     typingOffset: q,
     specs: W,
     children: (0, i.jsxs)("svg", {
       width: Z,
       height: Z,
       viewBox: "0 0 ".concat(Z, " ").concat(Z),
-      className: a(m.mask, m.svg),
+      className: a(S.mask, S.svg),
       "aria-hidden": !0,
       children: [(0, i.jsxs)("mask", {
         id: M,
-        width: j,
-        height: j,
+        width: Y,
+        height: Y,
         children: [(0, i.jsx)("circle", {
-          cx: j / 2,
-          cy: j / 2,
-          r: j / 2,
+          cx: Y / 2,
+          cy: Y / 2,
+          r: Y / 2,
           fill: "white"
         }), (0, i.jsx)(o.animated.rect, {
           color: "black",
-          x: k,
+          x: G,
           y: x,
           width: F,
           height: V,
@@ -480,49 +480,49 @@ function O(e) {
           ry: B
         })]
       }), (0, i.jsx)("foreignObject", {
-        className: m.foreignObject,
+        className: S.foreignObject,
         x: 0,
         y: 0,
-        width: j,
-        height: j,
+        width: Y,
+        height: Y,
         mask: "url(#".concat(M, ")"),
         children: (0, i.jsx)(R, {
           src: I,
           isSpeaking: _
         })
       }), (0, i.jsx)(d.Tooltip, {
-        text: D ? (0, E.humanizeStatus)(N) : null,
+        text: O ? (0, h.humanizeStatus)(N) : null,
         "aria-label": !1,
         position: "top",
         spacing: function(e, t, n) {
           let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
           return 5 - (n && !i ? 0 : .5 * e) + 1.5 * t
-        }(W.status, W.stroke, l, f),
+        }(W.status, W.stroke, l, p),
         children: e => (0, i.jsxs)(i.Fragment, {
-          children: [null != y && C(y, l, W, N), (0, i.jsxs)("svg", {
-            x: X,
-            y: Q,
+          children: [null != D && v(D, l, W, N), (0, i.jsxs)("svg", {
+            x: Q,
+            y: X,
             width: K,
             height: z,
             viewBox: "0 0 ".concat(K, " ").concat(z),
-            className: D ? m.cursorDefault : void 0,
-            children: [(0, c.renderStatusMask)(Y, W.status, U), (0, i.jsx)(o.animated.rect, {
+            className: O ? S.cursorDefault : void 0,
+            children: [(0, c.renderStatusMask)(j, W.status, U), (0, i.jsx)(o.animated.rect, {
               fill: H,
               width: K,
               height: z,
               mask: "url(#".concat(U, ")")
             }), (0, i.jsx)(u.Dots, {
-              ref: h,
+              ref: E,
               dotRadius: W.status / 4,
               x: .15 * K,
               y: .5 * z,
-              hide: !f
+              hide: !p
             })]
-          }), (0, i.jsx)(g, {
-            size: S,
+          }), (0, i.jsx)(T, {
+            size: m,
             isMobile: l,
-            isTyping: f,
-            className: m.pointerEvents,
+            isTyping: p,
+            className: S.pointerEvents,
             ...e
           })]
         })
@@ -530,29 +530,29 @@ function O(e) {
     })
   })
 }
-let D = r.memo(function(e) {
+let O = r.memo(function(e) {
   var t, n, s, a, o;
   let {
     statusColor: l,
     status: u,
     ...d
   } = e, {
-    isMobile: f = !1,
-    isTyping: E = !1
-  } = d, p = r.useRef(u), _ = r.useRef(f), S = (0, c.useStatusFillColor)(u, l), m = r.useRef(S), T = r.useRef(!1);
-  let g = T.current || (t = E, n = u, s = p.current, a = f, o = _.current, null != s && null != n && (!!t || n !== s || n === h.StatusTypes.ONLINE && a !== o || !1));
+    isMobile: p = !1,
+    isTyping: h = !1
+  } = d, f = r.useRef(u), _ = r.useRef(p), m = (0, c.useStatusFillColor)(u, l), S = r.useRef(m), g = r.useRef(!1);
+  let T = g.current || (t = h, n = u, s = f.current, a = p, o = _.current, null != s && null != n && (!!t || n !== s || n === E.StatusTypes.ONLINE && a !== o || !1));
   return r.useLayoutEffect(() => {
-    T.current = g, p.current = u, _.current = f, m.current = S
-  }, [u, f, S, g]), null != u && null != p.current && g ? (0, i.jsx)(O, {
+    g.current = T, f.current = u, _.current = p, S.current = m
+  }, [u, p, m, T]), null != u && null != f.current && T ? (0, i.jsx)(y, {
     ...d,
     status: u,
-    statusColor: S,
-    fromStatus: p.current,
+    statusColor: m,
+    fromStatus: f.current,
     fromIsMobile: _.current,
-    fromColor: m.current
+    fromColor: S.current
   }) : (0, i.jsx)(N, {
     ...d,
     status: u,
-    statusColor: S
+    statusColor: m
   })
 })

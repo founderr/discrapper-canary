@@ -1,68 +1,68 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return o
   }
 });
-var t = E("872717"),
-  o = E("913144"),
-  n = E("34966"),
-  r = E("234222");
+var i = n("872717"),
+  a = n("913144"),
+  l = n("34966"),
+  s = n("234222");
 
-function i() {
+function r() {
   let e = new Date().getMinutes();
   return "x=".concat(Math.floor(e / 5))
 }
-var a = {
+var o = {
   lockChangeLog(e) {
-    o.default.dispatch({
+    a.default.dispatch({
       type: "CHANGE_LOG_LOCK",
       key: e
     })
   },
   unlockChangeLog(e) {
-    o.default.dispatch({
+    a.default.dispatch({
       type: "CHANGE_LOG_UNLOCK",
       key: e
     })
   },
-  markChangelogAsSeen(e, _) {
-    o.default.dispatch({
+  markChangelogAsSeen(e, t) {
+    a.default.dispatch({
       type: "CHANGE_LOG_MARK_SEEN",
       changelogId: e,
-      changelogDate: _
+      changelogDate: t
     })
   },
   setChangelogOverride(e) {
-    o.default.dispatch({
+    a.default.dispatch({
       type: "CHANGE_LOG_SET_OVERRIDE",
       id: e
     })
   },
   fetchChangelogConfig() {
-    let e = r.ChangelogPlatforms.DESKTOP;
-    return t.default.get({
-      url: "https://cdn.discordapp.com/changelogs/config_".concat(e, ".json?").concat(i())
+    let e = s.ChangelogPlatforms.DESKTOP;
+    return i.default.get({
+      url: "https://cdn.discordapp.com/changelogs/config_".concat(e, ".json?").concat(r())
     })
   },
-  async fetchChangelog(e, _) {
-    if (null != n.default.getChangelog(e, _)) return null;
-    let E = r.ChangelogPlatforms.DESKTOP;
+  async fetchChangelog(e, t) {
+    if (null != l.default.getChangelog(e, t)) return null;
+    let n = s.ChangelogPlatforms.DESKTOP;
     try {
-      let n = await t.default.get({
-        url: "https://cdn.discordapp.com/changelogs/".concat(E, "/").concat(e, "/").concat(_, ".json?").concat(i())
+      let l = await i.default.get({
+        url: "https://cdn.discordapp.com/changelogs/".concat(n, "/").concat(e, "/").concat(t, ".json?").concat(r())
       });
-      return o.default.dispatch({
+      return a.default.dispatch({
         type: "CHANGE_LOG_FETCH_SUCCESS",
         id: e,
-        changelog: n.body
-      }), n.body
+        changelog: l.body
+      }), l.body
     } catch {
-      if (o.default.dispatch({
+      if (a.default.dispatch({
           type: "CHANGE_LOG_FETCH_FAILED",
           id: e,
-          locale: _
-        }), "en-US" !== _) return await this.fetchChangelog(e, "en-US");
+          locale: t
+        }), "en-US" !== t) return await this.fetchChangelog(e, "en-US");
       return null
     }
   }

@@ -1,50 +1,50 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return S
+    return f
   }
-}), E("222007"), E("424973");
-var t = E("37983");
-E("884691");
-var o = E("446674"),
-  n = E("77078"),
-  r = E("313915"),
-  i = E("603699"),
-  a = E("697218"),
-  I = E("983782"),
-  s = E("843455"),
-  T = E("619774");
+}), n("222007"), n("424973");
+var i = n("37983");
+n("884691");
+var a = n("446674"),
+  l = n("77078"),
+  s = n("313915"),
+  r = n("603699"),
+  o = n("697218"),
+  u = n("983782"),
+  d = n("843455"),
+  c = n("619774");
 
-function S() {
+function f() {
   var e;
-  let _ = (0, o.useStateFromStores)([r.default], () => r.default.isIdleStatusIndicatorEnabled),
-    E = (0, o.useStateFromStores)([a.default], () => {
-      var e, _;
-      return null !== (_ = null === (e = a.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== _ && _
+  let t = (0, a.useStateFromStores)([s.default], () => s.default.isIdleStatusIndicatorEnabled),
+    n = (0, a.useStateFromStores)([o.default], () => {
+      var e, t;
+      return null !== (t = null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
     }),
-    [S, N] = (0, o.useStateFromStoresArray)([i.default], () => [i.default.isIdle(), i.default.isAFK()]),
-    O = [];
-  return !S && !N && O.push("ACTIVE"), S && O.push("IDLE"), N && O.push("AFK"), E && _ ? (0, t.jsx)(I.default, {
-    children: (0, t.jsxs)("div", {
-      className: T.container,
-      children: [(0, t.jsxs)("div", {
-        className: T.status,
-        children: [(0, t.jsx)(n.Status, {
-          status: O.includes("ACTIVE") ? s.StatusTypes.ONLINE : s.StatusTypes.IDLE,
-          className: T.statusIndicator
-        }), (0, t.jsx)(n.Text, {
+    [f, E] = (0, a.useStateFromStoresArray)([r.default], () => [r.default.isIdle(), r.default.isAFK()]),
+    h = [];
+  return !f && !E && h.push("ACTIVE"), f && h.push("IDLE"), E && h.push("AFK"), n && t ? (0, i.jsx)(u.default, {
+    children: (0, i.jsxs)("div", {
+      className: c.container,
+      children: [(0, i.jsxs)("div", {
+        className: c.status,
+        children: [(0, i.jsx)(l.Status, {
+          status: h.includes("ACTIVE") ? d.StatusTypes.ONLINE : d.StatusTypes.IDLE,
+          className: c.statusIndicator
+        }), (0, i.jsx)(l.Text, {
           variant: "text-md/normal",
           children: "IDLE STATUS:"
-        }), (0, t.jsx)("div", {
-          className: T.statusText,
-          children: (0, t.jsx)(n.Text, {
+        }), (0, i.jsx)("div", {
+          className: c.statusText,
+          children: (0, i.jsx)(l.Text, {
             variant: "text-md/bold",
-            children: O.join(" + ")
+            children: h.join(" + ")
           })
         })]
-      }), S && (0, t.jsxs)(n.Text, {
+      }), f && (0, i.jsxs)(l.Text, {
         variant: "text-md/normal",
-        children: ["Idle since:", " ", new Date(null !== (e = i.default.getIdleSince()) && void 0 !== e ? e : 0).toLocaleDateString(void 0, {
+        children: ["Idle since:", " ", new Date(null !== (e = r.default.getIdleSince()) && void 0 !== e ? e : 0).toLocaleDateString(void 0, {
           year: "numeric",
           day: "numeric",
           month: "numeric",

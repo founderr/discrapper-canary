@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return S
   }
 });
 var i = n("917351"),
@@ -13,20 +13,20 @@ var i = n("917351"),
 let u = {},
   c = {},
   d = {},
-  f = 0,
-  E = 0,
   p = 0,
-  h = 0;
+  h = 0,
+  f = 0,
+  E = 0;
 
 function _() {
   let e = Object.values(u);
-  h = e.length;
+  E = e.length;
   let {
     [l.RelationshipTypes.PENDING_INCOMING]: t = 0, [l.RelationshipTypes.PENDING_OUTGOING]: n = 0, [l.RelationshipTypes.FRIEND]: i = 0
   } = r.countBy(Object.values(u), e => e);
-  f = t, E = n, p = i
+  p = t, h = n, f = i
 }
-class S extends s.default.Store {
+class m extends s.default.Store {
   initialize() {
     this.waitFor(o.default)
   }
@@ -37,16 +37,16 @@ class S extends s.default.Store {
     return u[e] === l.RelationshipTypes.BLOCKED
   }
   getPendingCount() {
-    return f
-  }
-  getOutgoingCount() {
-    return E
-  }
-  getFriendCount() {
     return p
   }
-  getRelationshipCount() {
+  getOutgoingCount() {
     return h
+  }
+  getFriendCount() {
+    return f
+  }
+  getRelationshipCount() {
+    return E
   }
   getRelationships() {
     return u
@@ -69,8 +69,8 @@ class S extends s.default.Store {
     return Object.keys(u).filter(e => u[e] === l.RelationshipTypes.FRIEND)
   }
 }
-S.displayName = "RelationshipStore";
-var m = new S(a.default, {
+m.displayName = "RelationshipStore";
+var S = new m(a.default, {
   CONNECTION_OPEN: function(e) {
     u = {}, c = {}, d = {}, e.relationships.forEach(e => {
       u[e.id] = e.type, null != e.nickname && (c[e.id] = e.nickname), null != e.since && (d[e.id] = e.since)

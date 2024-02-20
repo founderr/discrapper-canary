@@ -25,19 +25,19 @@ function u(e) {
     lazyCleanUpDelay: u
   } = e, c = a.useRef(-1);
   a.useLayoutEffect(() => () => clearTimeout(c.current));
-  let [, d] = a.useState(o), f = a.useRef(null), E = a.useMemo(() => {
+  let [, d] = a.useState(o), p = a.useRef(null), h = a.useMemo(() => {
     var e;
-    let r = new Set(null === (e = f.current) || void 0 === e ? void 0 : e.keys()),
-      s = new Map(f.current);
+    let r = new Set(null === (e = p.current) || void 0 === e ? void 0 : e.keys()),
+      s = new Map(p.current);
     for (let e of t) {
       let t = i(e),
         a = s.get(t);
       if (null == a) {
-        let i = null != f.current ? 1 : 0,
+        let i = null != p.current ? 1 : 0,
           r = () => {
             var e, n;
-            let i = null === (e = f.current) || void 0 === e ? void 0 : e.get(t);
-            null == i || (2 === i.state ? (null === (n = f.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(c.current), c.current = setTimeout(() => d({}), u)) : d({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)))
+            let i = null === (e = p.current) || void 0 === e ? void 0 : e.get(t);
+            null == i || (2 === i.state ? (null === (n = p.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(c.current), c.current = setTimeout(() => d({}), u)) : d({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)))
           },
           s = n(t, e, i, r);
         a = {
@@ -81,13 +81,13 @@ function u(e) {
     }
     return s
   }, [t, i, n, u]);
-  a.useInsertionEffect(() => (f.current = E, () => {
+  a.useInsertionEffect(() => (p.current = h, () => {
     var e;
-    return null === (e = f.current) || void 0 === e ? void 0 : e.clear()
-  }), [E]);
-  let p = [];
-  for (let [, e] of E) p.push(e.children);
+    return null === (e = p.current) || void 0 === e ? void 0 : e.clear()
+  }), [h]);
+  let f = [];
+  for (let [, e] of h) f.push(e.children);
   return (0, s.jsx)(s.Fragment, {
-    children: p.length > 0 ? r(p) : null
+    children: f.length > 0 ? r(f) : null
   })
 }

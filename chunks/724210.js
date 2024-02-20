@@ -20,19 +20,19 @@ n.r(t), n.d(t, {
     return d
   },
   MAX_CHANNEL_TOPIC_LENGTH: function() {
-    return f
+    return p
   },
   MAX_FORUM_CHANNEL_TOPIC_LENGTH: function() {
-    return E
+    return h
   },
   StaticChannelId: function() {
     return r
   },
   StaticChannelIds: function() {
-    return p
+    return f
   },
   FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID: function() {
-    return h
+    return E
   }
 }), n("222007"), (s = i || (i = {})).ROLE_SUBSCRIPTIONS = "role-subscriptions", s.GUILD_SHOP = "shop", s.MEMBER_APPLICATIONS = "member-applications", s.GUILD_HOME = "@home", s.CHANNEL_BROWSER = "channel-browser", s.GUILD_ONBOARDING = "onboarding", s.CUSTOMIZE_COMMUNITY = "customize-community", s.MEMBER_SAFETY = "member-safety";
 let o = new Set(Object.values(i));
@@ -63,8 +63,8 @@ let d = Object.freeze({
     IS_BROADCASTING: 16384,
     HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768
   }),
-  f = 1024,
-  E = 4096;
+  p = 1024,
+  h = 4096;
 (a = r || (r = {})).GUILD_HOME = "home", a.SERVER_GUIDE = "guide", a.CHANNEL_BROWSER = "browse", a.CUSTOMIZE_COMMUNITY = "customize";
-let p = new Set(Object.values(r)),
-  h = "131"
+let f = new Set(Object.values(r)),
+  E = "131"

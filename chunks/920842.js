@@ -1,24 +1,24 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   fetchRTCLatencyTestRegions: function() {
-    return n
+    return l
   },
   completeRTCLatencyTest: function() {
-    return r
+    return s
   }
 });
-var t = E("872717"),
-  o = E("913144");
+var i = n("872717"),
+  a = n("913144");
 
-function n() {
+function l() {
   var e;
-  return t.default.get("".concat((e = "https:", "https:")).concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT))
+  return i.default.get("".concat((e = "https:", "https:")).concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT))
 }
 
-function r(e, _) {
-  o.default.dispatch({
+function s(e, t) {
+  a.default.dispatch({
     type: "RTC_LATENCY_TEST_COMPLETE",
     latencyRankedRegions: e,
-    geoRankedRegions: _
+    geoRankedRegions: t
   })
 }

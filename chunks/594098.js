@@ -70,13 +70,13 @@ function S(e) {
       mediaLayoutType: g,
       limitResponsiveWidth: h = !0,
       accessory: x,
-      zoomable: N,
-      original: A,
-      children: v,
+      zoomable: v,
+      original: N,
+      children: A,
       renderAccessory: U,
       onClick: b,
-      tabIndex: D,
-      useFullWidth: y = !1,
+      tabIndex: y,
+      useFullWidth: D = !1,
       ...j
     } = this.props;
     if (1 === m && 1 === p) return null;
@@ -89,7 +89,7 @@ function S(e) {
         minHeight: L
       }),
       B = 0 !== F.width ? F.width / F.height : 1;
-    null != l && i !== T.ImageReadyStates.ERROR ? e = v({
+    null != l && i !== T.ImageReadyStates.ERROR ? e = A({
       src: l,
       size: F,
       alt: c,
@@ -113,7 +113,7 @@ function S(e) {
       focusTarget: this._clickableRef,
       children: (0, r.jsxs)("div", {
         className: s(C.imageWrapper, {
-          [C.imageZoom]: N,
+          [C.imageZoom]: v,
           [C.imageWrapperBackground]: i !== T.ImageReadyStates.READY,
           [C.clickable]: null != b
         }, t),
@@ -129,20 +129,20 @@ function S(e) {
             width: "100%",
             aspectRatio: "".concat(e.width, " / ").concat(e.height)
           } : e
-        }(F, h, y, g),
+        }(F, h, D, g),
         ...j,
-        children: [null != A && (0, r.jsx)("a", {
+        children: [null != N && (0, r.jsx)("a", {
           tabIndex: -1,
           onClick: b,
           "aria-hidden": !0,
           className: C.originalLink,
-          href: A,
+          href: N,
           ref: this._containerRef,
           "data-role": "img",
           "data-safe-src": l
         }), null != b ? (0, r.jsx)(u.Clickable, {
           className: C.clickableWrapper,
-          tabIndex: null != D ? D : 0,
+          tabIndex: null != y ? y : 0,
           onClick: b,
           "aria-label": null != c ? c : I.default.Messages.IMAGE,
           "aria-describedby": d.IMAGE_OPEN_DIALOG_DESCRIPTION,

@@ -1,21 +1,21 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return o
   }
-}), E("222007");
-var t = E("689988"),
-  o = E("42203"),
-  n = E("612278"),
-  r = E("724210");
-class i extends t.default {
+}), n("222007");
+var i = n("689988"),
+  a = n("42203"),
+  l = n("612278"),
+  s = n("724210");
+class r extends i.default {
   handleChannelPreload(e) {
     let {
-      channelId: _
+      channelId: t
     } = e;
-    if ((0, r.isStaticChannelRoute)(_)) return;
-    let E = o.default.getChannel(_);
-    null != E && E.isForumLikeChannel() && (0, n.preloadForumThreads)(E)
+    if ((0, s.isStaticChannelRoute)(t)) return;
+    let n = a.default.getChannel(t);
+    null != n && n.isForumLikeChannel() && (0, l.preloadForumThreads)(n)
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -23,4 +23,4 @@ class i extends t.default {
     }
   }
 }
-var a = new i
+var o = new r

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useOtherStreams: function() {
-    return v
+    return T
   },
   default: function() {
     return A
@@ -13,28 +13,28 @@ var r = n("446674"),
   s = n("77078"),
   i = n("901582"),
   l = n("191145"),
-  u = n("976074"),
-  o = n("856343"),
+  o = n("976074"),
+  u = n("856343"),
   d = n("16916"),
   c = n("373469"),
   f = n("42887"),
   h = n("697218"),
   p = n("394832"),
-  E = n("985622"),
+  m = n("985622"),
   C = n("356553"),
-  m = n("387111"),
-  S = n("773336"),
-  g = n("49111"),
-  _ = n("353927"),
-  T = n("782340");
+  E = n("387111"),
+  g = n("773336"),
+  S = n("49111"),
+  v = n("353927"),
+  _ = n("782340");
 
-function v(e, t, n) {
+function T(e, t, n) {
   let a = (0, r.useStateFromStores)([l.default], () => l.default.getSelectedParticipantId(e.id)),
     s = (0, r.useStateFromStores)([c.default], () => null != a ? c.default.getActiveStreamForStreamKey(a) : null, [a]),
     i = (0, r.useStateFromStoresArray)([h.default], () => {
       let a = n.filter(e => e.ownerId !== (null == t ? void 0 : t.id)).map(t => ({
         stream: t,
-        username: m.default.getName(e.getGuildId(), e.id, h.default.getUser(t.ownerId))
+        username: E.default.getName(e.getGuildId(), e.id, h.default.getUser(t.ownerId))
       }));
       return 1 === a.length && a[0].stream.ownerId === (null == s ? void 0 : s.ownerId) ? [] : a
     }, [e, s, n, t]);
@@ -49,55 +49,55 @@ function A(e) {
     activeStreams: l,
     hideSelfOptions: c = !1,
     showReportOption: h = !1,
-    handleGoLive: m,
+    handleGoLive: E,
     onClose: A,
     onSelect: I,
-    appContext: M = g.AppContext.APP
-  } = e, x = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), R = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, N = v(n, r, l), L = (0, o.default)(R, M), O = (0, u.default)(R, M, g.NOOP_NULL), y = null == R ? (0, a.jsx)(s.MenuItem, {
+    appContext: M = S.AppContext.APP
+  } = e, x = f.default.supports(v.Features.DESKTOP_CAPTURE_APPLICATIONS), y = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, R = T(n, r, l), L = (0, u.default)(y, M), N = (0, o.default)(y, M, S.NOOP_NULL), O = null == y ? (0, a.jsx)(s.MenuItem, {
     id: "share-your-screen",
-    label: T.default.Messages.SHARE_YOUR_SCREEN,
+    label: _.default.Messages.SHARE_YOUR_SCREEN,
     icon: p.default,
-    action: m
+    action: E
   }) : (0, a.jsxs)(a.Fragment, {
-    children: [S.isPlatformEmbedded ? (0, a.jsx)(s.MenuItem, {
+    children: [g.isPlatformEmbedded ? (0, a.jsx)(s.MenuItem, {
       id: "stream-settings",
-      label: T.default.Messages.SCREENSHARE_STREAM_QUALITY,
+      label: _.default.Messages.SCREENSHARE_STREAM_QUALITY,
       children: L
-    }) : null, h ? O : null, x ? (0, a.jsx)(s.MenuItem, {
+    }) : null, h ? N : null, x ? (0, a.jsx)(s.MenuItem, {
       id: "change-windows",
-      label: T.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
+      label: _.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
       icon: p.default,
-      action: m
+      action: E
     }) : null, (0, a.jsx)(s.MenuItem, {
       id: "stop-streaming",
-      label: T.default.Messages.STOP_STREAMING,
-      icon: E.default,
-      action: () => (0, d.default)(R)
+      label: _.default.Messages.STOP_STREAMING,
+      icon: m.default,
+      action: () => (0, d.default)(y)
     })]
   });
   return (0, a.jsx)(i.default, {
-    section: g.AnalyticsSections.CONTEXT_MENU,
+    section: S.AnalyticsSections.CONTEXT_MENU,
     children: (0, a.jsxs)(s.Menu, {
       onSelect: I,
       navId: "manage-streams",
       onClose: A,
-      "aria-label": null != R ? T.default.Messages.STOP_STREAMING : T.default.Messages.SHARE_YOUR_SCREEN,
+      "aria-label": null != y ? _.default.Messages.STOP_STREAMING : _.default.Messages.SHARE_YOUR_SCREEN,
       children: [(0, a.jsx)(s.MenuGroup, {
-        children: N.map(e => {
+        children: R.map(e => {
           let {
             stream: t,
             username: n
           } = e;
           return (0, a.jsx)(s.MenuItem, {
             id: t.ownerId,
-            label: T.default.Messages.STOP_WATCHING_USER.format({
+            label: _.default.Messages.STOP_WATCHING_USER.format({
               username: n
             }),
             icon: C.default,
             action: () => (0, d.default)(t)
           }, "manage-stream-menu".concat(t.ownerId))
         })
-      }), c ? null : y]
+      }), c ? null : O]
     })
   })
 }

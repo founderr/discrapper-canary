@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   computeChannelName: function() {
-    return f
-  },
-  escapeChannelName: function() {
-    return E
-  },
-  unescapeChannelName: function() {
     return p
   },
-  default: function() {
+  escapeChannelName: function() {
     return h
+  },
+  unescapeChannelName: function() {
+    return f
+  },
+  default: function() {
+    return E
   }
 }), n("222007"), n("781738");
 var i = n("446674"),
@@ -23,17 +23,17 @@ var i = n("446674"),
   c = n("49111"),
   d = n("782340");
 
-function f(e, t, n) {
+function p(e, t, n) {
   var i, s;
   let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
   switch (e.type) {
     case c.ChannelTypes.DM:
-      let [f] = e.recipients.map(t.getUser).filter(l.isNotNullish);
-      if (null == f) return "???";
-      let p = n.getNickname(f.id),
-        h = null !== (i = null != p ? p : u.default.getName(f)) && void 0 !== i ? i : "???";
-      return a ? "@".concat(h) : h;
+      let [p] = e.recipients.map(t.getUser).filter(l.isNotNullish);
+      if (null == p) return "???";
+      let f = n.getNickname(p.id),
+        E = null !== (i = null != f ? f : u.default.getName(p)) && void 0 !== i ? i : "???";
+      return a ? "@".concat(E) : E;
     case c.ChannelTypes.GROUP_DM:
       let _ = (0, r.getIsBroadcastingGDM)(e.id);
       if ("" !== e.name) return e.name;
@@ -44,12 +44,12 @@ function f(e, t, n) {
           name: r
         })
       }
-      let S = e.recipients.map(t.getUser).filter(l.isNotNullish),
-        m = S.map(e => {
+      let m = e.recipients.map(t.getUser).filter(l.isNotNullish),
+        S = m.map(e => {
           var t;
           return null !== (t = n.getNickname(e.id)) && void 0 !== t ? t : u.default.getName(e)
         });
-      if (m.length > 0) return m.join(", ");
+      if (S.length > 0) return S.join(", ");
       return d.default.Messages.GROUP_DM_ALONE.format({
         name: u.default.getName(t.getCurrentUser())
       });
@@ -65,7 +65,7 @@ function f(e, t, n) {
     case c.ChannelTypes.GUILD_VOICE:
     case c.ChannelTypes.GUILD_STAGE_VOICE:
     case c.ChannelTypes.GUILD_CATEGORY:
-      if (o) return '#"'.concat(E(e.name), '"');
+      if (o) return '#"'.concat(h(e.name), '"');
       if (a && e.isThread()) return '"'.concat(e.name, '"');
       return e.name;
     default:
@@ -73,15 +73,15 @@ function f(e, t, n) {
   }
 }
 
-function E(e) {
+function h(e) {
   return e.replace(/\\/g, "\\\\").replace(/"/g, '\\"')
 }
 
-function p(e) {
+function f(e) {
   return e.replace(/\\"/g, '"').replace(/\\\\/g, "\\")
 }
 
-function h(e) {
+function E(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return (0, i.useStateFromStores)([o.default, s.default, a.default], () => null == e ? null : f(e, o.default, a.default, t))
+  return (0, i.useStateFromStores)([o.default, s.default, a.default], () => null == e ? null : p(e, o.default, a.default, t))
 }

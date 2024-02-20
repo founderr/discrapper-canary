@@ -8,8 +8,8 @@ var r = n("884691"),
   a = n("817736"),
   o = n("796420"),
   i = n("153543"),
-  s = n.n(i),
-  u = n("84075"),
+  u = n.n(i),
+  s = n("84075"),
   l = [],
   c = function(e, t, n) {
     void 0 === n && (n = {});
@@ -20,7 +20,7 @@ var r = n("884691"),
         strategy: n.strategy || "absolute",
         modifiers: n.modifiers || l
       },
-      d = r.useState({
+      f = r.useState({
         styles: {
           popper: {
             position: c.strategy,
@@ -33,9 +33,9 @@ var r = n("884691"),
         },
         attributes: {}
       }),
-      f = d[0],
-      p = d[1],
-      m = r.useMemo(function() {
+      d = f[0],
+      p = f[1],
+      h = r.useMemo(function() {
         return {
           name: "updateState",
           enabled: !0,
@@ -45,10 +45,10 @@ var r = n("884691"),
               n = Object.keys(t.elements);
             a.flushSync(function() {
               p({
-                styles: (0, u.fromEntries)(n.map(function(e) {
+                styles: (0, s.fromEntries)(n.map(function(e) {
                   return [e, t.styles[e] || {}]
                 })),
-                attributes: (0, u.fromEntries)(n.map(function(e) {
+                attributes: (0, s.fromEntries)(n.map(function(e) {
                   return [e, t.attributes[e]]
                 }))
               })
@@ -57,24 +57,24 @@ var r = n("884691"),
           requires: ["computeStyles"]
         }
       }, []),
-      h = r.useMemo(function() {
+      m = r.useMemo(function() {
         var e = {
           onFirstUpdate: c.onFirstUpdate,
           placement: c.placement,
           strategy: c.strategy,
-          modifiers: [].concat(c.modifiers, [m, {
+          modifiers: [].concat(c.modifiers, [h, {
             name: "applyStyles",
             enabled: !1
           }])
         };
-        return s(i.current, e) ? i.current || e : (i.current = e, e)
-      }, [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, m]),
+        return u(i.current, e) ? i.current || e : (i.current = e, e)
+      }, [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, h]),
       _ = r.useRef();
-    return (0, u.useIsomorphicLayoutEffect)(function() {
-      _.current && _.current.setOptions(h)
-    }, [h]), (0, u.useIsomorphicLayoutEffect)(function() {
+    return (0, s.useIsomorphicLayoutEffect)(function() {
+      _.current && _.current.setOptions(m)
+    }, [m]), (0, s.useIsomorphicLayoutEffect)(function() {
       if (null != e && null != t) {
-        var r = (n.createPopper || o.createPopper)(e, t, h);
+        var r = (n.createPopper || o.createPopper)(e, t, m);
         return _.current = r,
           function() {
             r.destroy(), _.current = null
@@ -82,8 +82,8 @@ var r = n("884691"),
       }
     }, [e, t, n.createPopper]), {
       state: _.current ? _.current.state : null,
-      styles: f.styles,
-      attributes: f.attributes,
+      styles: d.styles,
+      attributes: d.attributes,
       update: _.current ? _.current.update : null,
       forceUpdate: _.current ? _.current.forceUpdate : null
     }

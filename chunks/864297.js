@@ -23,10 +23,10 @@ Node.prototype.get_child = function(e) {
   var t = new Node(void 0),
     n = t;
   n.right = this._root;
-  for (var r = null, a = null, o = 1; null !== n.get_child(o);) {
-    r = n, n = n.get_child(o);
-    var i = this._comparator(e, n.data);
-    o = i > 0, 0 === i && (a = n)
+  for (var r = null, a = null, i = 1; null !== n.get_child(i);) {
+    r = n, n = n.get_child(i);
+    var o = this._comparator(e, n.data);
+    i = o > 0, 0 === o && (a = n)
   }
   return null !== a && (a.data = n.data, r.set_child(r.right === n, n.get_child(null === n.left)), this._root = t.right, this.size--, !0)
 }, e.exports = a

@@ -1,34 +1,34 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return N
+    return E
   }
-}), E("222007");
-var t = E("689988"),
-  o = E("709681");
-let n = (0, o.createSound)("vibing_wumpus", "vibing_wumpus", 0),
+}), n("222007");
+var i = n("689988"),
+  a = n("709681");
+let l = (0, a.createSound)("vibing_wumpus", "vibing_wumpus", 0),
+  s = 0,
   r = 0,
-  i = 0,
-  a = null;
+  o = null;
 
-function I() {
-  let e = .2 * (i - r);
-  e > 0 && r >= i || e < 0 && r <= i ? (clearInterval(a), 0 === i && n.stop()) : (r += e, n.volume = r)
+function u() {
+  let e = .2 * (r - s);
+  e > 0 && s >= r || e < 0 && s <= r ? (clearInterval(o), 0 === r && l.stop()) : (s += e, l.volume = s)
 }
 
-function s() {
-  i = 0, a = setInterval(I, 100)
+function d() {
+  r = 0, o = setInterval(u, 100)
 }
 
-function T() {
-  n.loop(), i = .5, a = setInterval(I, 100)
+function c() {
+  l.loop(), r = .5, o = setInterval(u, 100)
 }
-class S extends t.default {
+class f extends i.default {
   constructor(...e) {
     super(...e), this.actions = {
-      VIBING_WUMPUS_PLAY_MUSIC: T,
-      VIBING_WUMPUS_STOP_MUSIC: s
+      VIBING_WUMPUS_PLAY_MUSIC: c,
+      VIBING_WUMPUS_STOP_MUSIC: d
     }
   }
 }
-var N = new S
+var E = new f

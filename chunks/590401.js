@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return p
   }
 });
 var i = n("917351"),
@@ -38,7 +38,7 @@ class d extends s.default.DeviceSettingsStore {
   }
 }
 d.displayName = "RTCRegionStore", d.persistKey = "RTCRegionStore";
-var f = new d(a.default, {
+var p = new d(a.default, {
   RTC_LATENCY_TEST_COMPLETE: function(e) {
     e.latencyRankedRegions.length > 0 && (u.lastGeoRankedOrder = e.geoRankedRegions, u.preferredRegion = e.latencyRankedRegions[0]), u.lastTestTimestamp = Date.now()
   }

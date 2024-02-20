@@ -1,9 +1,9 @@
 "use strict";
-var e = n("859514"),
-  i = n("503486"),
+var r = n("859514"),
+  a = n("503486"),
   o = n("89157");
-e({
+r({
   global: !0
 }, {
   Reflect: {}
-}), o(i.Reflect, "Reflect", !0)
+}), o(a.Reflect, "Reflect", !0)

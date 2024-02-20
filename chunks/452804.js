@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   saveGuildFolders: function() {
-    return E
+    return h
   },
   saveClientTheme: function() {
-    return h
+    return E
   },
   default: function() {
     return _
@@ -19,9 +19,9 @@ var i = n("151426"),
   u = n("161778"),
   c = n("845579"),
   d = n("872173"),
-  f = n("116319");
+  p = n("116319");
 
-function E(e) {
+function h(e) {
   return d.PreloadedUserSettingsActionCreators.updateAsync("guildFolders", t => {
     t.folders = e.map(e => {
       let t = i.GuildFolder.create({
@@ -38,11 +38,11 @@ function E(e) {
   }, d.UserSettingsDelay.SLOW_USER_ACTION)
 }
 
-function p(e) {
+function f(e) {
   return (0, s.isThemeLight)(e) ? i.Theme.LIGHT : i.Theme.DARK
 }
 
-function h(e) {
+function E(e) {
   let {
     backgroundGradientPresetId: t,
     theme: n
@@ -50,7 +50,7 @@ function h(e) {
   if (a.default.dispatch({
       type: "UNSYNCED_USER_SETTINGS_UPDATE",
       settings: {
-        useSystemTheme: "system" === n ? f.SystemThemeState.ON : f.SystemThemeState.OFF
+        useSystemTheme: "system" === n ? p.SystemThemeState.ON : p.SystemThemeState.OFF
       }
     }), a.default.dispatch({
       type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
@@ -66,7 +66,7 @@ function h(e) {
       }
     }), l.default.shouldSync("appearance")) return d.PreloadedUserSettingsActionCreators.updateAsync("appearance", e => {
     var i;
-    e.theme = p(n), e.clientThemeSettings = {
+    e.theme = f(n), e.clientThemeSettings = {
       backgroundGradientPresetId: null != (i = {
         backgroundGradientPresetId: t
       }).backgroundGradientPresetId ? r.UInt32Value.create({
@@ -154,7 +154,7 @@ var _ = {
         }
       }
     }), l.default.shouldSync("appearance") && d.PreloadedUserSettingsActionCreators.updateAsync("appearance", t => {
-      t.theme = p(e)
+      t.theme = f(e)
     }, d.UserSettingsDelay.INFREQUENT_USER_ACTION)
   }
 }

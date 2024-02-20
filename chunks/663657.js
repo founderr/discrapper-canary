@@ -1,11 +1,11 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   isMfaEmailVerificationEnabled: function() {
-    return l
+    return o
   }
 });
-var a = s("862205");
-let n = (0, a.createExperiment)({
+var a = n("862205");
+let i = (0, a.createExperiment)({
   kind: "user",
   id: "2023-07_mfa_email_verification",
   label: "Safety Experience Mfa Email Verification",
@@ -21,10 +21,10 @@ let n = (0, a.createExperiment)({
   }]
 });
 
-function l() {
+function o() {
   let {
     enabled: e
-  } = n.getCurrentConfig({
+  } = i.getCurrentConfig({
     location: "41ef90_2"
   }, {
     autoTrackExposure: !0

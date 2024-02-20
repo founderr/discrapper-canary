@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 }), n("222007");
 var i = n("37983"),
@@ -13,24 +13,24 @@ var i = n("37983"),
   u = n("242670"),
   c = n("945330"),
   d = n("229915"),
-  f = n("782340"),
-  E = n("706381");
-let p = Object.freeze({
-    SMALL: E.small,
-    MEDIUM: E.medium,
-    LARGE: E.large
+  p = n("782340"),
+  h = n("706381");
+let f = Object.freeze({
+    SMALL: h.small,
+    MEDIUM: h.medium,
+    LARGE: h.large
   }),
-  h = e => {
+  E = e => {
     let {
       hasContent: t,
       onClear: n,
       className: s,
       isLoading: l,
-      size: h = p.SMALL
+      size: E = f.SMALL
     } = e;
     return (0, i.jsx)(o.Clickable, {
-      className: a(s, E.iconLayout, h, {
-        [E.pointer]: t
+      className: a(s, h.iconLayout, E, {
+        [h.pointer]: t
       }),
       onClick: e => {
         e.stopPropagation(), null != n && n(e)
@@ -41,27 +41,27 @@ let p = Object.freeze({
         e.preventDefault(), e.stopPropagation()
       },
       children: (0, i.jsx)("div", {
-        className: E.iconContainer,
+        className: h.iconContainer,
         children: l ? (0, i.jsx)(u.Spinner, {
           type: u.Spinner.Type.SPINNING_CIRCLE,
-          className: a(E.icon, E.visible)
+          className: a(h.icon, h.visible)
         }) : (0, i.jsxs)(r.Fragment, {
           children: [(0, i.jsx)(d.default, {
-            className: a(E.icon, {
-              [E.visible]: !t
+            className: a(h.icon, {
+              [h.visible]: !t
             }),
-            "aria-label": f.default.Messages.SEARCH
+            "aria-label": p.default.Messages.SEARCH
           }), (0, i.jsx)(c.default, {
-            className: a(E.clear, {
-              [E.visible]: t
+            className: a(h.clear, {
+              [h.visible]: t
             }),
-            "aria-label": f.default.Messages.CLEAR
+            "aria-label": p.default.Messages.CLEAR
           })]
         })
       })
     })
   };
-h.Sizes = p;
+E.Sizes = f;
 class _ extends r.PureComponent {
   focus() {
     let {
@@ -81,56 +81,56 @@ class _ extends r.PureComponent {
       autoFocus: t,
       onClear: n,
       className: r,
-      placeholder: s = f.default.Messages.SEARCH,
+      placeholder: s = p.default.Messages.SEARCH,
       iconClassName: o,
       onKeyDown: u,
       onKeyUp: c,
       onKeyPress: d,
-      isLoading: p,
+      isLoading: f,
       size: _,
-      disabled: S,
-      onChange: m,
-      onBlur: T,
-      onFocus: g,
+      disabled: m,
+      onChange: S,
+      onBlur: g,
+      onFocus: T,
       autoComplete: I,
-      inputProps: C,
-      hideSearchIcon: v,
-      "aria-label": A = f.default.Messages.SEARCH,
+      inputProps: v,
+      hideSearchIcon: C,
+      "aria-label": A = p.default.Messages.SEARCH,
       ...R
     } = this.props;
     return (0, i.jsx)(l.FocusRing, {
       focusTarget: this.inputRef,
       ringTarget: this.containerRef,
       children: (0, i.jsx)("div", {
-        className: a(r, E.container, _, {
-          [E.disabled]: S
+        className: a(r, h.container, _, {
+          [h.disabled]: m
         }),
         ref: this.containerRef,
         ...R,
         children: (0, i.jsxs)("div", {
-          className: E.inner,
+          className: h.inner,
           children: [(0, i.jsx)("input", {
-            ...C,
-            onFocus: g,
-            onBlur: T,
-            className: E.input,
+            ...v,
+            onFocus: T,
+            onBlur: g,
+            className: h.input,
             value: e,
             onChange: this.handleOnChange,
             onKeyDown: u,
             onKeyUp: c,
             onKeyPress: d,
             placeholder: s,
-            disabled: S,
+            disabled: m,
             autoFocus: t,
             autoComplete: I,
             "aria-label": A,
             ref: this.inputRef
-          }), !v && (0, i.jsx)(h, {
+          }), !C && (0, i.jsx)(E, {
             size: _,
             hasContent: e.length > 0,
             onClear: n,
             className: o,
-            isLoading: p
+            isLoading: f
           })]
         })
       })
@@ -145,9 +145,9 @@ class _ extends r.PureComponent {
     }
   }
 }
-_.Sizes = p, _.defaultProps = {
-  size: p.SMALL,
+_.Sizes = f, _.defaultProps = {
+  size: f.SMALL,
   isLoading: !1,
   disabled: !1
 };
-var S = _
+var m = _

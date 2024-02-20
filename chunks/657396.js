@@ -16,22 +16,22 @@ var r = n("195548"),
         n = e.options,
         o = e.name,
         i = n.offset,
-        s = void 0 === i ? [0, 0] : i,
-        u = a.placements.reduce(function(e, n) {
-          var o, i, u, l, c, d, f, p;
-          return e[n] = (o = n, i = t.rects, u = s, l = (0, r.default)(o), c = [(0, a.left), (0, a.top)].indexOf(l) >= 0 ? -1 : 1, f = (d = "function" == typeof u ? u(Object.assign({}, i, {
+        u = void 0 === i ? [0, 0] : i,
+        s = a.placements.reduce(function(e, n) {
+          var o, i, s, l, c, f, d, p;
+          return e[n] = (o = n, i = t.rects, s = u, l = (0, r.default)(o), c = [(0, a.left), (0, a.top)].indexOf(l) >= 0 ? -1 : 1, d = (f = "function" == typeof s ? s(Object.assign({}, i, {
             placement: o
-          })) : u)[0], p = d[1], f = f || 0, p = (p || 0) * c, [(0, a.left), (0, a.right)].indexOf(l) >= 0 ? {
+          })) : s)[0], p = f[1], d = d || 0, p = (p || 0) * c, [(0, a.left), (0, a.right)].indexOf(l) >= 0 ? {
             x: p,
-            y: f
+            y: d
           } : {
-            x: f,
+            x: d,
             y: p
           }), e
         }, {}),
-        l = u[t.placement],
+        l = s[t.placement],
         c = l.x,
-        d = l.y;
-      null != t.modifiersData.popperOffsets && (t.modifiersData.popperOffsets.x += c, t.modifiersData.popperOffsets.y += d), t.modifiersData[o] = u
+        f = l.y;
+      null != t.modifiersData.popperOffsets && (t.modifiersData.popperOffsets.x += c, t.modifiersData.popperOffsets.y += f), t.modifiersData[o] = s
     }
   }

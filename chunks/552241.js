@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   NameWithRoleAnchor: function() {
-    return f
+    return p
   },
   NameWithRole: function() {
-    return E
+    return h
   }
 });
 var i = n("37983");
@@ -25,7 +25,7 @@ function d(e) {
     roleName: a,
     dotAlignment: o = "left",
     className: l
-  } = e, d = "username" === t, f = "dot" === t ? (0, i.jsx)(u.RoleDot, {
+  } = e, d = "username" === t, p = "dot" === t ? (0, i.jsx)(u.RoleDot, {
     color: r,
     name: a,
     className: "left" === o ? c.roleDotLeft : c.roleDotRight
@@ -37,11 +37,11 @@ function d(e) {
     className: s(l, {
       [c.username]: d
     }),
-    children: ["left" === o && f, n, "right" === o && f]
+    children: ["left" === o && p, n, "right" === o && p]
   })
 }
 
-function f(e) {
+function p(e) {
   let {
     name: t,
     color: n,
@@ -49,24 +49,24 @@ function f(e) {
     dotAlignment: s,
     className: u,
     ...c
-  } = e, f = (0, a.useStateFromStores)([l.default], () => l.default.roleStyle), E = "username" === f, p = (0, i.jsx)(d, {
-    roleStyle: f,
+  } = e, p = (0, a.useStateFromStores)([l.default], () => l.default.roleStyle), h = "username" === p, f = (0, i.jsx)(d, {
+    roleStyle: p,
     name: t,
     color: n,
     roleName: r,
     dotAlignment: s,
     className: u
-  }), h = E ? {
+  }), E = h ? {
     color: n
   } : void 0;
   return (0, i.jsx)(o.Anchor, {
     ...c,
-    children: p,
-    style: h
+    children: f,
+    style: E
   })
 }
 
-function E(e) {
+function h(e) {
   let t = (0, a.useStateFromStores)([l.default], () => l.default.roleStyle);
   return (0, i.jsx)(d, {
     ...e,

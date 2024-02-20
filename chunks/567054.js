@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return d
   },
   MAX_VISIBLE_PAGES: function() {
-    return f
+    return p
   },
   VerificationFormFieldTypes: function() {
     return i
@@ -17,12 +17,12 @@ n.r(t), n.d(t, {
     return a
   },
   isTermsFormField: function() {
-    return E
+    return h
   }
 });
 let d = 25,
-  f = 4;
+  p = 4;
 
-function E(e) {
+function h(e) {
   return null != e && "TERMS" === e.field_type
 }(o = i || (i = {})).TERMS = "TERMS", o.TEXT_INPUT = "TEXT_INPUT", o.PARAGRAPH = "PARAGRAPH", o.MULTIPLE_CHOICE = "MULTIPLE_CHOICE", o.VERIFICATION = "VERIFICATION", (l = r || (r = {})).EMAIL = "email", l.PHONE = "phone", (u = s || (s = {})).TIMESTAMP_DESC = "NEWEST", u.TIMESTAMP_ASC = "OLDEST", (c = a || (a = {})).STARTED = "STARTED", c.SUBMITTED = "SUBMITTED", c.REJECTED = "REJECTED", c.APPROVED = "APPROVED"

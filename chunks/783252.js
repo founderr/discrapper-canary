@@ -1,64 +1,64 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return A
+    return _
   }
-}), E("222007");
-var t = E("913144"),
-  o = E("689988"),
-  n = E("271938"),
-  r = E("366679"),
-  i = E("42203"),
-  a = E("18494"),
-  I = E("123647"),
-  s = E("49111");
+}), n("222007");
+var i = n("913144"),
+  a = n("689988"),
+  l = n("271938"),
+  s = n("366679"),
+  r = n("42203"),
+  o = n("18494"),
+  u = n("123647"),
+  d = n("49111");
 
-function T() {
+function c() {
   ! function() {
-    let e = a.default.getVoiceChannelId(),
-      _ = r.default.bitrate;
+    let e = o.default.getVoiceChannelId(),
+      t = s.default.bitrate;
     if (null == e) return;
-    let E = i.default.getChannel(e);
-    if (null != E) _ !== E.bitrate && t.default.dispatch({
+    let n = r.default.getChannel(e);
+    if (null != n) t !== n.bitrate && i.default.dispatch({
       type: "SET_CHANNEL_BITRATE",
-      bitrate: E.bitrate
+      bitrate: n.bitrate
     })
   }(), ! function() {
     var e;
-    let _ = a.default.getVoiceChannelId(),
-      E = I.default.mode;
-    if (null == _) return;
-    let o = i.default.getChannel(_);
-    if (null == o) return;
-    let n = null !== (e = o.videoQualityMode) && void 0 !== e ? e : s.VideoQualityMode.AUTO;
-    E !== n && t.default.dispatch({
+    let t = o.default.getVoiceChannelId(),
+      n = u.default.mode;
+    if (null == t) return;
+    let a = r.default.getChannel(t);
+    if (null == a) return;
+    let l = null !== (e = a.videoQualityMode) && void 0 !== e ? e : d.VideoQualityMode.AUTO;
+    n !== l && i.default.dispatch({
       type: "SET_CHANNEL_VIDEO_QUALITY_MODE",
-      mode: n
+      mode: l
     })
   }()
 }
 
-function S(e) {
+function f(e) {
   let {
-    channels: _
+    channels: t
   } = e;
-  for (let e of _) a.default.getVoiceChannelId() === e.id && T()
+  for (let e of t) o.default.getVoiceChannelId() === e.id && c()
 }
 
-function N(e) {
+function E(e) {
   let {
-    voiceStates: _
+    voiceStates: t
   } = e;
-  _.forEach(e => {
-    n.default.getSessionId() === e.sessionId && T()
+  t.forEach(e => {
+    l.default.getSessionId() === e.sessionId && c()
   })
 }
-class O extends o.default {
+class h extends a.default {
   constructor(...e) {
     super(...e), this.actions = {
-      CHANNEL_UPDATES: S,
-      VOICE_STATE_UPDATES: N
+      CHANNEL_UPDATES: f,
+      VOICE_STATE_UPDATES: E
     }
   }
 }
-var A = new O
+var _ = new h

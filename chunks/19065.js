@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var a = n("37983");
@@ -11,7 +11,7 @@ var r = n("77078"),
   i = n("353927"),
   l = n("782340");
 
-function u(e) {
+function o(e) {
   s.default.supports(i.Features.VIDEO) ? (0, r.openModalLazy)(async () => {
     let {
       default: t

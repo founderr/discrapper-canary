@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return E
   }
 }), n("222007");
 var a = n("37983"),
@@ -18,11 +18,11 @@ var a = n("37983"),
   C = n("609793"),
   p = n("919163");
 
-function m(e) {
+function E(e) {
   let {
     onClose: t,
-    onConfirm: m,
-    onCancel: E,
+    onConfirm: E,
+    onCancel: m,
     channel: g,
     analyticsType: S,
     popoutText: _,
@@ -35,12 +35,12 @@ function m(e) {
     })
   }, [S, g]);
   let A = s.useCallback(() => {
-      null == m || m(), t()
-    }, [m, t]),
-    M = s.useCallback(() => {
       null == E || E(), t()
     }, [E, t]),
-    I = s.useRef(null);
+    M = s.useCallback(() => {
+      null == m || m(), t()
+    }, [m, t]),
+    N = s.useRef(null);
   return s.useEffect(() => {
     let e;
     let t = u.default.theme,
@@ -50,7 +50,7 @@ function m(e) {
         default: s
       }, l] = await Promise.all([n.el("865981").then(n.t.bind(n, "865981", 23)), (0, i.isThemeDark)(t) ? T.dark() : T.light()]);
       !a && (e = s.loadAnimation({
-        container: I.current,
+        container: N.current,
         renderer: "svg",
         loop: !0,
         autoplay: !0,
@@ -68,7 +68,7 @@ function m(e) {
         className: C.body,
         children: [null != T && (0, a.jsx)("div", {
           className: C.animation,
-          ref: I
+          ref: N
         }), (0, a.jsxs)("div", {
           className: C.content,
           children: [(0, a.jsx)("div", {

@@ -16,22 +16,22 @@ let o = e => "".concat(e.toFixed(0), "%"),
       maxValue: u = 100,
       onChange: c,
       renderValue: d = o,
-      "aria-label": f
-    } = e, E = r.useRef(null);
+      "aria-label": p
+    } = e, h = r.useRef(null);
     return r.useImperativeHandle(t, () => ({
       focus: () => {
         var e;
-        return null === (e = E.current) || void 0 === e ? void 0 : e.focus()
+        return null === (e = h.current) || void 0 === e ? void 0 : e.focus()
       },
       blur: () => {
         var e;
-        return null === (e = E.current) || void 0 === e ? void 0 : e.blur()
+        return null === (e = h.current) || void 0 === e ? void 0 : e.blur()
       },
       activate: () => !1
     }), []), (0, i.jsx)("div", {
       className: a.sliderContainer,
       children: (0, i.jsx)(s.Slider, {
-        ref: E,
+        ref: h,
         mini: !0,
         handleSize: 16,
         className: a.slider,
@@ -42,7 +42,7 @@ let o = e => "".concat(e.toFixed(0), "%"),
         asValueChanges: c,
         onValueRender: d,
         orientation: "horizontal",
-        "aria-label": f
+        "aria-label": p
       })
     })
   })

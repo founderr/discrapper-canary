@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
 var i = n("446674"),
@@ -14,7 +14,7 @@ let o = a.NetworkConnectionTypes.UNKNOWN,
 
 function c(e) {
   var t;
-  o = null != e.type ? e.type : a.NetworkConnectionTypes.UNKNOWN, l = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : a.NetworkConnectionSpeeds.UNKNOWN, u = e.serviceProvider, f.emitChange()
+  o = null != e.type ? e.type : a.NetworkConnectionTypes.UNKNOWN, l = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : a.NetworkConnectionSpeeds.UNKNOWN, u = e.serviceProvider, p.emitChange()
 }
 class d extends i.default.Store {
   initialize() {
@@ -31,5 +31,5 @@ class d extends i.default.Store {
   }
 }
 d.displayName = "NetworkStore";
-let f = new d(r.default, {});
-var E = f
+let p = new d(r.default, {});
+var h = p

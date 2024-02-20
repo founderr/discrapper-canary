@@ -1,66 +1,66 @@
-n("70102"), n("222007");
-var r = Object.prototype.hasOwnProperty;
+r("70102"), r("222007");
+var n = Object.prototype.hasOwnProperty;
 
-function a(e) {
-  if (!(this instanceof a)) throw TypeError("Constructor PseudoMap requires 'new'");
-  if (this.clear(), e) {
-    if (e instanceof a || "function" == typeof Map && e instanceof Map) e.forEach(function(e, t) {
-      this.set(t, e)
+function o(t) {
+  if (!(this instanceof o)) throw TypeError("Constructor PseudoMap requires 'new'");
+  if (this.clear(), t) {
+    if (t instanceof o || "function" == typeof Map && t instanceof Map) t.forEach(function(t, e) {
+      this.set(e, t)
     }, this);
-    else if (Array.isArray(e)) e.forEach(function(e) {
-      this.set(e[0], e[1])
+    else if (Array.isArray(t)) t.forEach(function(t) {
+      this.set(t[0], t[1])
     }, this);
     else throw TypeError("invalid argument")
   }
 }
 
-function o(e, t) {
-  return e === t || e != e && t != t
+function i(t, e) {
+  return t === e || t != t && e != e
 }
 
-function i(e, t, n) {
-  this.key = e, this.value = t, this._index = n
+function a(t, e, r) {
+  this.key = t, this.value = e, this._index = r
 }
 
-function s(e, t) {
-  for (var n = 0, a = "_" + t, i = a; r.call(e, i); i = a + n++)
-    if (o(e[i].key, t)) return e[i]
+function u(t, e) {
+  for (var r = 0, o = "_" + e, a = o; n.call(t, a); a = o + r++)
+    if (i(t[a].key, e)) return t[a]
 }
-e.exports = a, a.prototype.forEach = function(e, t) {
-  t = t || this, Object.keys(this._data).forEach(function(n) {
-    "size" !== n && e.call(t, this._data[n].value, this._data[n].key)
+t.exports = o, o.prototype.forEach = function(t, e) {
+  e = e || this, Object.keys(this._data).forEach(function(r) {
+    "size" !== r && t.call(e, this._data[r].value, this._data[r].key)
   }, this)
-}, a.prototype.has = function(e) {
-  return !!s(this._data, e)
-}, a.prototype.get = function(e) {
-  var t = s(this._data, e);
-  return t && t.value
-}, a.prototype.set = function(e, t) {
-  (function(e, t, n) {
-    for (var a = 0, s = "_" + t, c = s; r.call(e, c); c = s + a++)
-      if (o(e[c].key, t)) {
-        e[c].value = n;
+}, o.prototype.has = function(t) {
+  return !!u(this._data, t)
+}, o.prototype.get = function(t) {
+  var e = u(this._data, t);
+  return e && e.value
+}, o.prototype.set = function(t, e) {
+  (function(t, e, r) {
+    for (var o = 0, u = "_" + e, l = u; n.call(t, l); l = u + o++)
+      if (i(t[l].key, e)) {
+        t[l].value = r;
         return
-      } e.size++, e[c] = new i(t, n, c)
-  })(this._data, e, t)
-}, a.prototype.delete = function(e) {
-  var t = s(this._data, e);
-  t && (delete this._data[t._index], this._data.size--)
-}, a.prototype.clear = function() {
-  var e = Object.create(null);
-  e.size = 0, Object.defineProperty(this, "_data", {
-    value: e,
+      } t.size++, t[l] = new a(e, r, l)
+  })(this._data, t, e)
+}, o.prototype.delete = function(t) {
+  var e = u(this._data, t);
+  e && (delete this._data[e._index], this._data.size--)
+}, o.prototype.clear = function() {
+  var t = Object.create(null);
+  t.size = 0, Object.defineProperty(this, "_data", {
+    value: t,
     enumerable: !1,
     configurable: !0,
     writable: !1
   })
-}, Object.defineProperty(a.prototype, "size", {
+}, Object.defineProperty(o.prototype, "size", {
   get: function() {
     return this._data.size
   },
-  set: function(e) {},
+  set: function(t) {},
   enumerable: !0,
   configurable: !0
-}), a.prototype.values = a.prototype.keys = a.prototype.entries = function() {
+}), o.prototype.values = o.prototype.keys = o.prototype.entries = function() {
   throw Error("iterators are not implemented in this version")
 }

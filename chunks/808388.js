@@ -19,13 +19,13 @@ n.r(t), n.d(t, {
     return d
   },
   useShowCreatorPortalLinkForTierTemplates: function() {
-    return f
+    return p
   },
   isUserEligibleForTierTemplates: function() {
-    return E
+    return h
   },
   useUserEligibleForTierTemplates: function() {
-    return p
+    return f
   }
 }), n("7331");
 var i = n("858560"),
@@ -98,7 +98,7 @@ function d(e) {
   return t
 }
 
-function f(e) {
+function p(e) {
   let {
     showCreatorPortalLink: t
   } = i.GuildRoleSubscriptionsTierTemplatesExperiment.useExperiment({
@@ -110,7 +110,7 @@ function f(e) {
   return t
 }
 
-function E() {
+function h() {
   let {
     enabled: e
   } = i.GuildRoleSubscriptionsTierTemplatesUserExperiment.getCurrentConfig({
@@ -121,7 +121,7 @@ function E() {
   return e
 }
 
-function p() {
+function f() {
   let {
     enabled: e
   } = i.GuildRoleSubscriptionsTierTemplatesUserExperiment.useExperiment({

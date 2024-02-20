@@ -9,22 +9,22 @@ var i, r, s, a, o = n("37983"),
   u = n("414456"),
   c = n.n(u),
   d = n("627445"),
-  f = n.n(d),
-  E = n("509043"),
-  p = n("669491"),
-  h = n("718776"),
+  p = n.n(d),
+  h = n("509043"),
+  f = n("669491"),
+  E = n("718776"),
   _ = n("36694"),
-  S = n("49111"),
-  m = n("139368");
+  m = n("49111"),
+  S = n("139368");
 (s = i || (i = {})).DEFAULT = "default", s.INVERTED = "inverted", s.GHOST = "ghost", s.ROW = "row", (a = r || (r = {})).TOP = "top", a.CENTER = "center";
-let T = {
-    BOX: m.box,
-    ROUND: m.round,
-    SMALL_BOX: m.smallBox
+let g = {
+    BOX: S.box,
+    ROUND: S.round,
+    SMALL_BOX: S.smallBox
   },
-  g = {
-    top: m.alignTop,
-    center: m.alignCenter
+  T = {
+    top: S.alignTop,
+    center: S.alignCenter
   };
 class I extends l.PureComponent {
   getInputMode() {
@@ -40,7 +40,7 @@ class I extends l.PureComponent {
     if (!1 === t) return r;
     if (r = {
         ...r
-      }, i === p.default.unsafe_rawColors.BRAND_500.css) switch (n) {
+      }, i === f.default.unsafe_rawColors.BRAND_500.css) switch (n) {
       case "default":
         r.borderColor = "var(--control-brand-foreground)";
         break;
@@ -58,7 +58,7 @@ class I extends l.PureComponent {
         if (i.startsWith("var(--")) {
           let e = "".concat(i.slice(0, -1), "-hsl)");
           r.borderColor = "rgba(".concat(e, ", 0.15)"), r.backgroundColor = "rgba(".concat(e, ", 0.15)")
-        } else f((0, E.isValidHex)(i), "Checkbox: ".concat(i, " is not a valid hex color")), r.borderColor = (0, E.hex2rgb)(i, .15), r.backgroundColor = (0, E.hex2rgb)(i, .15);
+        } else p((0, h.isValidHex)(i), "Checkbox: ".concat(i, " is not a valid hex color")), r.borderColor = (0, h.hex2rgb)(i, .15), r.backgroundColor = (0, h.hex2rgb)(i, .15);
         break;
       case "row":
       case "inverted":
@@ -72,7 +72,7 @@ class I extends l.PureComponent {
       type: t,
       color: n
     } = this.props;
-    return e ? "inverted" === t || "row" === t ? p.default.unsafe_rawColors.WHITE_500.css : n : p.default.unsafe_rawColors.TRANSPARENT.css
+    return e ? "inverted" === t || "row" === t ? f.default.unsafe_rawColors.WHITE_500.css : n : f.default.unsafe_rawColors.TRANSPARENT.css
   }
   render() {
     let {
@@ -86,28 +86,28 @@ class I extends l.PureComponent {
       children: l,
       size: u,
       reverse: d,
-      checkboxColor: f,
-      displayOnly: E,
-      type: p,
-      onClick: T
+      checkboxColor: p,
+      displayOnly: h,
+      type: f,
+      onClick: g
     } = this.props, I = null != l ? (0, o.jsx)("div", {
-      className: c(m.label, e ? m.labelDisabled : m.labelClickable, d ? m.labelReversed : m.labelForward),
+      className: c(S.label, e ? S.labelDisabled : S.labelClickable, d ? S.labelReversed : S.labelForward),
       style: {
         lineHeight: "".concat(u, "px")
       },
       children: l
-    }) : null, C = this.props.disabled ? m.inputDisabled : this.props.readOnly ? m.inputReadonly : m.inputDefault;
-    return (0, o.jsxs)(E ? "span" : "label", {
-      className: c(e ? m.checkboxWrapperDisabled : m.checkboxWrapper, g[r], s, {
-        [m.row]: "row" === p,
-        [m.checked]: n
+    }) : null, v = this.props.disabled ? S.inputDisabled : this.props.readOnly ? S.inputReadonly : S.inputDefault;
+    return (0, o.jsxs)(h ? "span" : "label", {
+      className: c(e ? S.checkboxWrapperDisabled : S.checkboxWrapper, T[r], s, {
+        [S.row]: "row" === f,
+        [S.checked]: n
       }),
-      children: [d ? I : null, !E && (0, o.jsx)(h.FocusRing, {
+      children: [d ? I : null, !h && (0, o.jsx)(E.FocusRing, {
         children: (0, o.jsx)("input", {
-          className: c(a, C),
+          className: c(a, v),
           type: "checkbox",
-          onClick: T,
-          onChange: e || t ? S.NOOP : this.handleChange,
+          onClick: g,
+          onChange: e || t ? m.NOOP : this.handleChange,
           checked: n,
           style: {
             width: u,
@@ -115,13 +115,13 @@ class I extends l.PureComponent {
           }
         })
       }), (0, o.jsx)("div", {
-        className: c(m.checkbox, i, {
-          [m.checked]: n
+        className: c(S.checkbox, i, {
+          [S.checked]: n
         }),
         style: {
           width: u,
           height: u,
-          borderColor: f,
+          borderColor: p,
           ...this.getStyle()
         },
         children: (0, o.jsx)(_.default, {
@@ -142,16 +142,16 @@ class I extends l.PureComponent {
     }
   }
 }
-I.Types = i, I.Shapes = T, I.Aligns = r, I.defaultProps = {
+I.Types = i, I.Shapes = g, I.Aligns = r, I.defaultProps = {
   size: 24,
   disabled: !1,
   readOnly: !1,
   displayOnly: !1,
   value: !1,
   type: "default",
-  color: p.default.unsafe_rawColors.BRAND_500.css,
-  shape: T.BOX,
+  color: f.default.unsafe_rawColors.BRAND_500.css,
+  shape: g.BOX,
   align: "center",
-  onChange: S.NOOP,
+  onChange: m.NOOP,
   reverse: !1
 }

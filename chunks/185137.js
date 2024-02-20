@@ -1,38 +1,38 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return A
+    return _
   }
-}), E("222007");
-var t = E("37983"),
-  o = E("884691"),
-  n = E("446674"),
-  r = E("77078"),
-  i = E("363658"),
-  a = E("135230"),
-  I = E("42887"),
-  s = E("945956"),
-  T = E("568307"),
-  S = E("701909"),
-  N = E("49111"),
-  O = E("782340"),
-  A = () => {
-    let [e, _] = (0, n.useStateFromStoresArray)([T.default], () => [T.default.canShowAdminWarning, T.default.getVisibleGame()], []), E = (0, n.useStateFromStores)([s.default], () => s.default.isConnected(), []), A = (0, n.useStateFromStores)([I.default], () => I.default.getMode() === N.InputModes.PUSH_TO_TALK, []), R = null != _ && _.elevated && E && A && e, l = o.useRef(null);
+}), n("222007");
+var i = n("37983"),
+  a = n("884691"),
+  l = n("446674"),
+  s = n("77078"),
+  r = n("363658"),
+  o = n("135230"),
+  u = n("42887"),
+  d = n("945956"),
+  c = n("568307"),
+  f = n("701909"),
+  E = n("49111"),
+  h = n("782340"),
+  _ = () => {
+    let [e, t] = (0, l.useStateFromStoresArray)([c.default], () => [c.default.canShowAdminWarning, c.default.getVisibleGame()], []), n = (0, l.useStateFromStores)([d.default], () => d.default.isConnected(), []), _ = (0, l.useStateFromStores)([u.default], () => u.default.getMode() === E.InputModes.PUSH_TO_TALK, []), C = null != t && t.elevated && n && _ && e, S = a.useRef(null);
 
-    function u() {
-      null !== l.current && ((0, r.closeModal)(l.current), l.current = null)
+    function g() {
+      null !== S.current && ((0, s.closeModal)(S.current), S.current = null)
     }
-    return o.useEffect(() => (R ? l.current = (0, r.openModal)(e => (0, t.jsx)(a.default, {
-      title: O.default.Messages.PTT_PERMISSION_TITLE,
-      body: O.default.Messages.PTT_PERMISSION_BODY.format({
-        game: null == _ ? void 0 : _.name
+    return a.useEffect(() => (C ? S.current = (0, s.openModal)(e => (0, i.jsx)(o.default, {
+      title: h.default.Messages.PTT_PERMISSION_TITLE,
+      body: h.default.Messages.PTT_PERMISSION_BODY.format({
+        game: null == t ? void 0 : t.name
       }),
-      secondaryConfirmText: O.default.Messages.DONT_SHOW_AGAIN,
-      onConfirmSecondary: () => i.default.clearPTTAdminWarning(),
-      onConfirm: () => window.open(S.default.getArticleURL(N.HelpdeskArticles.PUSH_TO_TALK_ADMINISTRATOR_MODE), "_blank"),
-      confirmText: O.default.Messages.HELP_DESK,
+      secondaryConfirmText: h.default.Messages.DONT_SHOW_AGAIN,
+      onConfirmSecondary: () => r.default.clearPTTAdminWarning(),
+      onConfirm: () => window.open(f.default.getArticleURL(E.HelpdeskArticles.PUSH_TO_TALK_ADMINISTRATOR_MODE), "_blank"),
+      confirmText: h.default.Messages.HELP_DESK,
       ...e
-    })) : u(), () => {
-      u()
-    }), [_, R]), null
+    })) : g(), () => {
+      g()
+    }), [t, C]), null
   }

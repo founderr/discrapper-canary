@@ -16,25 +16,25 @@ function l(e) {
     onChange: n,
     hideValue: l,
     disabled: u = !1
-  } = e, c = r.useRef(null), d = r.useMemo(() => new a.TimeOptions, []), [f, E] = r.useState("");
+  } = e, c = r.useRef(null), d = r.useMemo(() => new a.TimeOptions, []), [p, h] = r.useState("");
 
-  function p(e) {
+  function f(e) {
     null != t && n((0, a.timeAtSpecificDay)(t, d.selectValue(e)))
   }
   return (0, i.jsx)(s.SearchableSelect, {
     ref: c,
     className: o.select,
-    options: d.getOptions(f),
+    options: d.getOptions(p),
     value: l ? void 0 : d.lookupByValue(t),
-    onChange: p,
+    onChange: f,
     isDisabled: u,
-    onSearchChange: E,
+    onSearchChange: h,
     onKeyDown: function(e) {
       if ("Enter" === e.key) {
-        let e = (0, a.convertToTimeOfADay)(t, f);
+        let e = (0, a.convertToTimeOfADay)(t, p);
         if (null != e) {
           var n;
-          p(e), null === (n = c.current) || void 0 === n || n.close()
+          f(e), null === (n = c.current) || void 0 === n || n.close()
         }
       }
     }

@@ -1,32 +1,32 @@
 "use strict";
 n.r(t), n.d(t, {
   DISCORD_EPOCH: function() {
-    return s
+    return o
   },
   default: function() {
-    return l
+    return a
   }
 });
-var i = n("552442"),
-  r = n.n(i);
-let s = 14200704e5;
+var r = n("552442"),
+  i = n.n(r);
+let o = 14200704e5;
 
-function a(e) {
-  return Math.floor(Number(e) / 4194304) + s
+function l(e) {
+  return Math.floor(Number(e) / 4194304) + o
 }
 
-function o(e) {
-  let t = e - s;
-  return t <= 0 ? "0" : r(t).shiftLeft(22).toString()
+function u(e) {
+  let t = e - o;
+  return t <= 0 ? "0" : i(t).shiftLeft(22).toString()
 }
-var l = {
+var a = {
   age: function(e) {
-    return Date.now() - a(e)
+    return Date.now() - l(e)
   },
-  extractTimestamp: a,
-  fromTimestamp: o,
+  extractTimestamp: l,
+  fromTimestamp: u,
   atPreviousMillisecond: function(e) {
-    return o(a(e) - 1)
+    return u(l(e) - 1)
   },
   compare: function(e, t) {
     return e === t ? 0 : null == t ? 1 : null == e ? -1 : e.length > t.length ? 1 : e.length < t.length ? -1 : e > t ? 1 : -1

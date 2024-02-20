@@ -1,26 +1,26 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("77078"),
-  l = s("49111");
+var r = n("37983");
+n("884691");
+var i = n("77078"),
+  s = n("49111");
 
-function i() {
-  (0, n.openModalLazy)(async () => {
+function l() {
+  (0, i.openModalLazy)(async () => {
     let {
       default: e
-    } = await s.el("920067").then(s.bind(s, "920067"));
-    return t => (0, a.jsx)(e, {
+    } = await n.el("920067").then(n.bind(n, "920067"));
+    return t => (0, r.jsx)(e, {
       ...t,
       source: {
-        page: l.AnalyticsPages.USER_SETTINGS,
-        section: l.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
-        object: l.AnalyticsObjects.BUTTON_CTA,
-        type: l.AnalyticsObjectTypes.BUY
+        page: s.AnalyticsPages.USER_SETTINGS,
+        section: s.AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE,
+        object: s.AnalyticsObjects.BUTTON_CTA,
+        type: s.AnalyticsObjectTypes.BUY
       }
     })
   })

@@ -1,23 +1,23 @@
 "use strict";
-var r, a = Object.prototype.toString,
-  o = Function.prototype.toString,
-  i = /^\s*(?:function)?\*/,
-  s = n("149384")(),
-  c = Object.getPrototypeOf,
-  l = function() {
-    if (!s) return !1;
+var n, o = Object.prototype.toString,
+  i = Function.prototype.toString,
+  a = /^\s*(?:function)?\*/,
+  u = r("149384")(),
+  l = Object.getPrototypeOf,
+  s = function() {
+    if (!u) return !1;
     try {
       return Function("return function*() {}")()
-    } catch (e) {}
+    } catch (t) {}
   };
-e.exports = function(e) {
-  if ("function" != typeof e) return !1;
-  if (i.test(o.call(e))) return !0;
-  if (!s) return "[object GeneratorFunction]" === a.call(e);
-  if (!c) return !1;
-  if (void 0 === r) {
-    var t = l();
-    r = !!t && c(t)
+t.exports = function(t) {
+  if ("function" != typeof t) return !1;
+  if (a.test(i.call(t))) return !0;
+  if (!u) return "[object GeneratorFunction]" === o.call(t);
+  if (!l) return !1;
+  if (void 0 === n) {
+    var e = s();
+    n = !!e && l(e)
   }
-  return c(e) === r
+  return l(t) === n
 }

@@ -1,21 +1,21 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return o
   }
-}), E("222007");
-var t = E("689988"),
-  o = E("162771"),
-  n = E("630400"),
-  r = E("958706");
-class i extends t.default {
+}), n("222007");
+var i = n("689988"),
+  a = n("162771"),
+  l = n("630400"),
+  s = n("958706");
+class r extends i.default {
   handleInteraction(e) {
     let {
-      interaction: _
+      interaction: t
     } = e;
-    if ([r.EmojiInteractionPoint.EmojiButtonMouseEntered].includes(_)) {
-      let e = o.default.getGuildId();
-      (0, n.maybeFetchTopEmojisByGuild)(e)
+    if ([s.EmojiInteractionPoint.EmojiButtonMouseEntered].includes(t)) {
+      let e = a.default.getGuildId();
+      (0, l.maybeFetchTopEmojisByGuild)(e)
     }
   }
   constructor(...e) {
@@ -24,4 +24,4 @@ class i extends t.default {
     }
   }
 }
-var a = new i
+var o = new r

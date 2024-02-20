@@ -3,12 +3,12 @@ var r = n("859514"),
   a = n("503486"),
   o = n("335925").set,
   i = n("694803"),
-  s = a.setImmediate ? i(o, !1) : o;
+  u = a.setImmediate ? i(o, !1) : o;
 r({
   global: !0,
   bind: !0,
   enumerable: !0,
-  forced: a.setImmediate !== s
+  forced: a.setImmediate !== u
 }, {
-  setImmediate: s
+  setImmediate: u
 })

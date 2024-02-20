@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("446674"),
   i = n("990766"),
   l = n("374014"),
-  u = n("42203"),
-  o = n("607391"),
+  o = n("42203"),
+  u = n("607391"),
   d = n("782340");
 let c = n("729861");
 
@@ -20,14 +20,14 @@ function f(e) {
     width: n,
     noArt: f = !1,
     selected: h = !1
-  } = e, p = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(t.channelId));
+  } = e, p = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(t.channelId));
   return r.useEffect(() => {
     (null == p ? void 0 : p.isGuildStageVoice()) && (0, i.closeStream)((0, l.encodeStreamKey)(t), !1)
-  }, []), (0, a.jsx)(o.default, {
+  }, []), (0, a.jsx)(u.default, {
     artURL: c,
     noArt: f,
     selected: h,
-    size: (0, o.getSizeForWidth)(n),
+    size: (0, u.getSizeForWidth)(n),
     header: d.default.Messages.STREAM_ENDED,
     onCTAClick: () => (0, i.closeStream)((0, l.encodeStreamKey)(t)),
     callToAction: d.default.Messages.CLOSE_STREAM

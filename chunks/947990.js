@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   calculatePointerPosition: function() {
-    return o
+    return i
   }
 });
 let r = (e, t) => ({
@@ -16,14 +16,14 @@ let r = (e, t) => ({
       y: 0
     } : r(t, n)
   },
-  o = (e, t) => {
+  i = (e, t) => {
     let n = e.getClientOffset();
     if (null === n) return null;
     if (!t.current || !t.current.getBoundingClientRect) return r(n, a(e));
-    let o = t.current.getBoundingClientRect(),
-      i = {
-        x: o.width / 2,
-        y: o.height / 2
+    let i = t.current.getBoundingClientRect(),
+      o = {
+        x: i.width / 2,
+        y: i.height / 2
       };
-    return r(n, i)
+    return r(n, o)
   }

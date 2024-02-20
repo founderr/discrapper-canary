@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   activityInviteKey: function() {
-    return N
+    return I
   },
   default: function() {
     return L
@@ -20,16 +20,16 @@ var a = n("37983"),
   h = n("651057"),
   C = n("299285"),
   p = n("850391"),
-  m = n("149022"),
-  E = n("681060"),
+  E = n("149022"),
+  m = n("681060"),
   g = n("884351"),
   S = n("671071"),
   _ = n("401848"),
   T = n("718422"),
   A = n("49111"),
   M = n("782340"),
-  I = n("49077");
-let N = "ActivityInvite";
+  N = n("49077");
+let I = "ActivityInvite";
 class v extends s.PureComponent {
   componentDidMount() {
     this.fetchApplication()
@@ -73,14 +73,14 @@ class v extends s.PureComponent {
       activityActionType: f,
       cooldown: h,
       application: C,
-      transitionState: m,
+      transitionState: E,
       onClose: g
     } = this.props, S = h > 0, _ = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
       seconds: Math.round((h + 1e3) / 1e3)
     }) : null;
     return (0, a.jsxs)(o.ModalRoot, {
       size: o.ModalSize.SMALL,
-      transitionState: m,
+      transitionState: E,
       "aria-label": this.renderTitle(),
       children: [(0, a.jsx)(o.ModalHeader, {
         separator: !1,
@@ -90,18 +90,18 @@ class v extends s.PureComponent {
         })
       }), (0, a.jsxs)(o.ModalContent, {
         children: [(0, a.jsx)("div", {
-          className: I.subHeader,
+          className: N.subHeader,
           children: M.default.Messages.MESSAGE_PREVIEW
         }), (0, a.jsx)(d.default, {
           activityActionType: f,
           activity: l,
-          className: I.preview,
+          className: N.preview,
           application: C,
           partyId: null != l.party ? l.party.id : null,
           isPreview: !0,
           analyticsLocations: r
         }), (0, a.jsx)("div", {
-          className: I.subHeader,
+          className: N.subHeader,
           children: M.default.Messages.ADD_A_COMMENT_OPTIONAL
         }), (0, a.jsx)(o.Popout, {
           position: "top",
@@ -121,8 +121,8 @@ class v extends s.PureComponent {
               ...s
             })
           },
-          children: () => (0, a.jsx)(E.default, {
-            className: I.textArea,
+          children: () => (0, a.jsx)(m.default, {
+            className: N.textArea,
             textValue: e,
             richValue: t,
             focused: n,
@@ -130,7 +130,7 @@ class v extends s.PureComponent {
             onChange: this.handleTextChange,
             onSubmit: this.handleShare,
             type: p.ChatInputTypes.FORM,
-            parentModalKey: N,
+            parentModalKey: I,
             disableThemedBackground: !0
           })
         })]
@@ -156,7 +156,7 @@ class v extends s.PureComponent {
   }
   constructor(...e) {
     super(...e), this.state = {
-      ...(0, m.createEmptyState)(),
+      ...(0, E.createEmptyState)(),
       textFocused: !0,
       contentWarningProps: null
     }, this.trackInvite = e => {

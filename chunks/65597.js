@@ -1,64 +1,64 @@
 "use strict";
 E.r(_), E.d(_, {
   statesWillNeverBeEqual: function() {
-    return i
+    return r
   },
   default: function() {
     return a
   },
   useStateFromStoresObject: function() {
-    return I
+    return n
   },
   useStateFromStoresArray: function() {
-    return s
+    return i
   }
 }), E("70102"), E("222007");
 var t = E("884691"),
   o = E("233736"),
-  n = E("995113");
+  I = E("995113");
 
-function r(e, _) {
+function T(e, _) {
   return e === _
 }
 
-function i(e, _) {
+function r(e, _) {
   return !1
 }
 
 function a(e, _, E) {
-  let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r,
+  let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : T,
     {
       current: a
     } = (0, t.useRef)({
       stores: e,
-      areStatesEqual: i,
+      areStatesEqual: r,
       getStateFromStores: _,
       prevDeps: void 0,
       state: void 0
     }),
-    I = a.state;
+    n = a.state;
   if (null == E || !(0, o.areArraysShallowEqual)(E, a.prevDeps)) {
     let e = _();
-    (null == I || !i(I, e)) && (I = e)
+    (null == n || !r(n, e)) && (n = e)
   }(0, t.useLayoutEffect)(() => {
-    a.getStateFromStores = _, a.prevDeps = E, a.state = I
+    a.getStateFromStores = _, a.prevDeps = E, a.state = n
   });
-  let [, s] = (0, t.useState)(null);
+  let [, i] = (0, t.useState)(null);
   return (0, t.useLayoutEffect)(() => {
     let _ = () => {
       let e = a.getStateFromStores();
-      !i(a.state, e) && (a.state = e, s({}))
+      !r(a.state, e) && (a.state = e, i({}))
     };
     _();
-    let E = new n.default(e, _);
+    let E = new I.default(e, _);
     return E.attach("useStateFromStores"), () => E.detach()
-  }, []), I
+  }, []), n
 }
 
-function I(e, _, E) {
+function n(e, _, E) {
   return a(e, _, E, o.default)
 }
 
-function s(e, _, E) {
+function i(e, _, E) {
   return a(e, _, E, o.areArraysShallowEqual)
 }

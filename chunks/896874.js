@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   hasSkippedObservations: function() {
-    return a
+    return i
   }
 });
-var r = n("514825"),
-  a = function() {
-    return r.resizeObservers.some(function(e) {
+var n = r("514825"),
+  i = function() {
+    return n.resizeObservers.some(function(e) {
       return e.skippedTargets.length > 0
     })
   }

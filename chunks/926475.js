@@ -3,8 +3,8 @@ var r = n("884691"),
   a = "function" == typeof Object.is ? Object.is : function(e, t) {
     return e === t && (0 !== e || 1 / e == 1 / t) || e != e && t != t
   },
-  o = r.useState,
-  i = r.useEffect,
+  i = r.useState,
+  o = r.useEffect,
   s = r.useLayoutEffect,
   c = r.useDebugValue;
 
@@ -22,7 +22,7 @@ var u = "undefined" == typeof window || void 0 === window.document || void 0 ===
   return t()
 } : function(e, t) {
   var n = t(),
-    r = o({
+    r = i({
       inst: {
         value: n,
         getSnapshot: t
@@ -34,7 +34,7 @@ var u = "undefined" == typeof window || void 0 === window.document || void 0 ===
     a.value = n, a.getSnapshot = t, l(a) && u({
       inst: a
     })
-  }, [e, n, t]), i(function() {
+  }, [e, n, t]), o(function() {
     return l(a) && u({
       inst: a
     }), e(function() {

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return o
+    return u
   }
 });
 var a = n("884691"),
@@ -12,13 +12,13 @@ var a = n("884691"),
   s = n("714657");
 let i = "data-client-themes",
   l = "custom-theme-background",
-  u = () => {
+  o = () => {
     let e = (0, r.useStateFromStores)([s.default], () => s.default.getLinearGradient()),
       t = (0, a.useMemo)(() => null == e ? null : ".".concat(l, " {\n      --custom-theme-background: ").concat(e, ";\n    }"), [e]);
     return t
   };
-var o = () => {
-  let e = u();
+var u = () => {
+  let e = o();
   return null === e ? {
     clientThemesCSS: "",
     clientThemesClassName: ""

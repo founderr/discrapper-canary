@@ -1,43 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return _
   }
 });
-var i = n("446674"),
-  r = n("913144"),
-  s = n("659500"),
-  a = n("49111");
-let o = null,
-  l = 0;
+var r = n("446674"),
+  i = n("913144"),
+  o = n("659500"),
+  l = n("49111");
+let u = null,
+  a = 0;
 
-function u() {
-  o = null
+function s() {
+  u = null
 }
-class c extends i.default.Store {
+class E extends r.default.Store {
   isOpen() {
-    return null != o
+    return null != u
   }
   get version() {
-    return l
+    return a
   }
   getContextMenu() {
-    return o
+    return u
   }
   close() {
-    return !!this.isOpen() && (s.ComponentDispatch.dispatch(a.ComponentActions.CONTEXT_MENU_CLOSE), !0)
+    return !!this.isOpen() && (o.ComponentDispatch.dispatch(l.ComponentActions.CONTEXT_MENU_CLOSE), !0)
   }
 }
-c.displayName = "ContextMenuStore";
-var d = new c(r.default, {
+E.displayName = "ContextMenuStore";
+var _ = new E(i.default, {
   CONTEXT_MENU_OPEN: function(e) {
     let {
       contextMenu: t
     } = e;
-    l++, o = t
+    a++, u = t
   },
-  LAYER_PUSH: u,
-  CONTEXT_MENU_CLOSE: u,
-  OVERLAY_SET_UI_LOCKED: u,
-  OVERLAY_DEACTIVATE_ALL_REGIONS: u
+  LAYER_PUSH: s,
+  CONTEXT_MENU_CLOSE: s,
+  OVERLAY_SET_UI_LOCKED: s,
+  OVERLAY_DEACTIVATE_ALL_REGIONS: s
 })

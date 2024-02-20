@@ -4,17 +4,17 @@ E.r(_), E.d(_, {
     return o
   },
   clear: function() {
-    return n
+    return I
   },
   stringify: function() {
-    return r
+    return T
   }
 }), E("424973"), E("70102"), E("222007");
 let t = [];
 
 function o(e) {
   for (var _ = arguments.length, E = Array(_ > 1 ? _ - 1 : 0), o = 1; o < _; o++) E[o - 1] = arguments[o];
-  let n = function(e) {
+  let I = function(e) {
     let _ = "";
     for (let E of e) {
       let e = typeof E;
@@ -25,20 +25,20 @@ function o(e) {
   for ("string" == typeof e ? t.push({
       time: Date.now(),
       category: e,
-      message: n
+      message: I
     }) : t.push({
       time: Date.now(),
       category: e.name,
       timing: e.timing,
-      message: n
+      message: I
     }); t.length > 5e3;) t.shift()
 }
 
-function n() {
+function I() {
   t.length = 0
 }
 
-function r(e) {
+function T(e) {
   return t.filter(_ => null == e || e.includes(_.category)).map(e => {
     let _ = [];
     return _.push(new Date(e.time).toISOString()), null != e.timing && _.push(e.timing), _.push(e.category, e.message), _.join(" -> ")

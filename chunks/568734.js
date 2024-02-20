@@ -1,48 +1,48 @@
 "use strict";
 
-function i(e, t) {
+function r(e, t) {
   return (e & t) === t
 }
 
-function r(e, t) {
+function i(e, t) {
   return e | t
 }
 
-function s(e, t) {
+function o(e, t) {
   return e & ~t
 }
 
-function a(e) {
-  for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
+function l(e) {
+  for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
   return n.reduce((e, t) => e & ~t, e)
 }
 
-function o(e, t, n) {
+function u(e, t, n) {
   if (n) return e | t;
   return e & ~t
 }
 
-function l(e, t) {
-  if (i(e, t)) return e & ~t;
+function a(e, t) {
+  if (r(e, t)) return e & ~t;
   return e | t
 }
 n.r(t), n.d(t, {
   hasFlag: function() {
-    return i
-  },
-  addFlag: function() {
     return r
   },
+  addFlag: function() {
+    return i
+  },
   removeFlag: function() {
-    return s
-  },
-  removeFlags: function() {
-    return a
-  },
-  setFlag: function() {
     return o
   },
-  toggleFlag: function() {
+  removeFlags: function() {
     return l
+  },
+  setFlag: function() {
+    return u
+  },
+  toggleFlag: function() {
+    return a
   }
 }), n("808653")

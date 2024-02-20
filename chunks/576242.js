@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var a = n("37983");
@@ -11,15 +11,15 @@ var r = n("550766"),
   i = n("981913"),
   l = n("782340");
 
-function u(e) {
+function o(e) {
   let {
     channelId: t,
     applicationId: n,
-    centerButton: u = !1,
-    ...o
-  } = e, d = u ? i.CenterControlButton : i.default;
+    centerButton: o = !1,
+    ...u
+  } = e, d = o ? i.CenterControlButton : i.default;
   return (0, a.jsx)(d, {
-    ...o,
+    ...u,
     onClick: () => {
       (0, r.stopEmbeddedActivity)({
         channelId: t,

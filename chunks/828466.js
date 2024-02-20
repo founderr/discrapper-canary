@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 }), n("222007");
-let l = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
+let a = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
 
-function a(e) {
+function l(e) {
   let {
     allowPopups: t
-  } = e, n = l;
-  return t && (n = [...l, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ")
+  } = e, n = a;
+  return t && (n = [...a, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ")
 }

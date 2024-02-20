@@ -19,22 +19,22 @@ function d(e) {
     parentItem: n,
     isFocused: s,
     menuSubmenuProps: d,
-    renderSubmenu: f
+    renderSubmenu: p
   } = e, {
-    focusIndex: E,
-    isUsingKeyboardNavigation: p,
-    ...h
-  } = d, _ = r.useRef(null), S = r.useRef(null), m = r.useRef(null);
+    focusIndex: h,
+    isUsingKeyboardNavigation: f,
+    ...E
+  } = d, _ = r.useRef(null), m = r.useRef(null), S = r.useRef(null);
   return r.useLayoutEffect(() => {
     var e;
-    s && ((0, l.ensureItemVisible)(_), null === (e = m.current) || void 0 === e || e.focus())
+    s && ((0, l.ensureItemVisible)(_), null === (e = S.current) || void 0 === e || e.focus())
   }, [s]), (0, i.jsxs)("div", {
     ref: _,
     className: c.submenuContainer,
     children: [(0, i.jsx)("div", {
-      ref: S
+      ref: m
     }), n, s ? (0, i.jsx)(o.ReferencePositionLayer, {
-      reference: S,
+      reference: m,
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
       fixed: !0,
@@ -45,11 +45,11 @@ function d(e) {
         className: c.submenuPaddingContainer,
         children: (0, i.jsx)("div", {
           className: a(c.submenu, t),
-          ...h,
-          ref: m,
+          ...E,
+          ref: S,
           children: (0, i.jsx)(u.ScrollerThin, {
             className: c.scroller,
-            children: f()
+            children: p()
           })
         })
       })

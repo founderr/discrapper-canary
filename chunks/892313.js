@@ -1,48 +1,48 @@
 "use strict";
-n.r(t), n.d(t, {
+R.r(e), R.d(e, {
   default: function() {
-    return E
+    return a
   }
 });
-var a = n("917351"),
-  s = n.n(a),
-  l = n("49111"),
-  i = n("782340");
+var I = R("917351"),
+  i = R.n(I),
+  s = R("49111"),
+  r = R("782340");
 let {
-  CAPTCHA: r,
-  EMAIL: o,
-  PHONE: u,
-  REVERIFY_EMAIL: d,
-  REVERIFY_PHONE: c
-} = l.VerificationTypes, f = {
-  [l.UserRequiredActions.REQUIRE_VERIFIED_EMAIL]: [o],
-  [l.UserRequiredActions.REQUIRE_VERIFIED_PHONE]: [u],
-  [l.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL]: [d],
-  [l.UserRequiredActions.REQUIRE_REVERIFIED_PHONE]: [c],
-  [l.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: [o, u],
-  [l.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: [u, d],
-  [l.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [o, c],
-  [l.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [d, c],
-  [l.UserRequiredActions.REQUIRE_CAPTCHA]: [r],
-  [l.UserRequiredActions.AGREEMENTS]: []
+  CAPTCHA: _,
+  EMAIL: t,
+  PHONE: n,
+  REVERIFY_EMAIL: u,
+  REVERIFY_PHONE: A
+} = s.VerificationTypes, c = {
+  [s.UserRequiredActions.REQUIRE_VERIFIED_EMAIL]: [t],
+  [s.UserRequiredActions.REQUIRE_VERIFIED_PHONE]: [n],
+  [s.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL]: [u],
+  [s.UserRequiredActions.REQUIRE_REVERIFIED_PHONE]: [A],
+  [s.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: [t, n],
+  [s.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: [n, u],
+  [s.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [t, A],
+  [s.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [u, A],
+  [s.UserRequiredActions.REQUIRE_CAPTCHA]: [_],
+  [s.UserRequiredActions.AGREEMENTS]: []
 };
-var E = {
-  isPhoneReverification: (e, t) => void 0 !== e && e.isPhoneVerified() && (t === l.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === l.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === l.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE),
-  isEmailReverification: e => e === l.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL || e === l.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || e === l.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE,
-  getVerificationTypes: e => null == e || "symbol" == typeof e ? [] : f[e],
-  getButtonTitle(e) {
-    switch (e) {
-      case l.VerificationTypes.EMAIL:
-        return i.default.Messages.VERIFY_BY_EMAIL;
-      case l.VerificationTypes.PHONE:
-        return i.default.Messages.START_PHONE_VERIFICATION_BUTTON;
-      case l.VerificationTypes.REVERIFY_EMAIL:
-        return i.default.Messages.START_EMAIL_REVERIFICATION_BUTTON;
-      case l.VerificationTypes.REVERIFY_PHONE:
-        return i.default.Messages.START_PHONE_REVERIFICATION_BUTTON;
+var a = {
+  isPhoneReverification: (E, e) => void 0 !== E && E.isPhoneVerified() && (e === s.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || e === s.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || e === s.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE),
+  isEmailReverification: E => E === s.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL || E === s.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || E === s.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE,
+  getVerificationTypes: E => null == E || "symbol" == typeof E ? [] : c[E],
+  getButtonTitle(E) {
+    switch (E) {
+      case s.VerificationTypes.EMAIL:
+        return r.default.Messages.VERIFY_BY_EMAIL;
+      case s.VerificationTypes.PHONE:
+        return r.default.Messages.START_PHONE_VERIFICATION_BUTTON;
+      case s.VerificationTypes.REVERIFY_EMAIL:
+        return r.default.Messages.START_EMAIL_REVERIFICATION_BUTTON;
+      case s.VerificationTypes.REVERIFY_PHONE:
+        return r.default.Messages.START_PHONE_REVERIFICATION_BUTTON;
       default:
-        return i.default.Messages.START_VERIFICATION_BUTTON
+        return r.default.Messages.START_VERIFICATION_BUTTON
     }
   },
-  areVerificationTypesEqual: (e, t) => s.isEqual(e, t)
+  areVerificationTypesEqual: (E, e) => i.isEqual(E, e)
 }

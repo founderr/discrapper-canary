@@ -4,23 +4,23 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var s = n("37983"),
+var r = n("37983"),
   i = n("884691"),
-  l = n("414456"),
-  r = n.n(l),
-  a = n("546671"),
-  u = n("711603");
-let o = {
+  s = n("414456"),
+  a = n.n(s),
+  l = n("546671"),
+  o = n("711603");
+let u = {
     UP: "up",
     RIGHT: "right",
     DOWN: "down",
     LEFT: "left"
   },
   c = {
-    [o.UP]: u.up,
-    [o.RIGHT]: u.right,
-    [o.DOWN]: u.down,
-    [o.LEFT]: u.left
+    [u.UP]: o.up,
+    [u.RIGHT]: o.right,
+    [u.DOWN]: o.down,
+    [u.LEFT]: o.left
   };
 class d extends i.PureComponent {
   render() {
@@ -28,12 +28,12 @@ class d extends i.PureComponent {
       direction: e,
       className: t
     } = this.props;
-    return (0, s.jsx)(a.default, {
-      className: r(u.arrow, t, {
+    return (0, r.jsx)(l.default, {
+      className: a(o.arrow, t, {
         [c[e]]: !0
       })
     })
   }
 }
-d.Directions = o;
+d.Directions = u;
 var f = d

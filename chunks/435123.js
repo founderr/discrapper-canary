@@ -1,56 +1,56 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   shouldFetchGuildFeed: function() {
-    return d
+    return r
   },
   default: function() {
-    return r
+    return o
   }
 });
-var l = a("884691"),
-  n = a("446674"),
-  s = a("713810"),
-  i = a("185014");
+var i = n("884691"),
+  a = n("446674"),
+  l = n("713810"),
+  s = n("185014");
 
-function d(e, t) {
-  let a = i.default.getLastFetchedMillis(e);
-  if (!t && null != a && Date.now() - a < 72e5) return !1;
+function r(e, t) {
+  let n = s.default.getLastFetchedMillis(e);
+  if (!t && null != n && Date.now() - n < 72e5) return !1;
   let {
-    loading: l
-  } = i.default.getFetchStatus(e);
-  return l === i.LoadingStatus.NONE && !0
+    loading: i
+  } = s.default.getFetchStatus(e);
+  return i === s.LoadingStatus.NONE && !0
 }
 
-function r(e) {
+function o(e) {
   let {
     guildId: t,
-    highlightedItemData: a
+    highlightedItemData: n
   } = e, {
-    loading: r,
+    loading: o,
     error: u
-  } = (0, n.useStateFromStores)([i.default], () => i.default.getFetchStatus(t), [t]), o = l.useCallback(e => {
+  } = (0, a.useStateFromStores)([s.default], () => s.default.getFetchStatus(t), [t]), d = i.useCallback(e => {
     let {
-      force: l,
-      flushSeenItems: n
+      force: i,
+      flushSeenItems: a
     } = e;
-    async function i() {
+    async function s() {
       try {
-        await (0, s.fetchGuildFeed)({
+        await (0, l.fetchGuildFeed)({
           guildId: t,
-          flushSeenItems: n,
+          flushSeenItems: a,
           refresh: !0,
-          highlightedItemData: a
+          highlightedItemData: n
         })
       } catch (e) {
         console.error(e)
       }
     }
-    d(t, null != l && l) && i()
-  }, [t, a]), c = l.useCallback(() => {
-    d(t, !0) && e();
+    r(t, null != i && i) && s()
+  }, [t, n]), c = i.useCallback(() => {
+    r(t, !0) && e();
     async function e() {
       try {
-        await (0, s.fetchGuildFeed)({
+        await (0, l.fetchGuildFeed)({
           guildId: t,
           refresh: !1
         })
@@ -59,14 +59,14 @@ function r(e) {
       }
     }
   }, [t]);
-  return l.useEffect(() => {
-    o({
-      force: null != a
+  return i.useEffect(() => {
+    d({
+      force: null != n
     })
-  }, [o, a]), {
-    fetchFresh: o,
+  }, [d, n]), {
+    fetchFresh: d,
     fetchPage: c,
-    loading: r,
+    loading: o,
     error: u
   }
 }

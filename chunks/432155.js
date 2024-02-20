@@ -4,40 +4,40 @@ n.r(t), n.d(t, {
     return d
   },
   EMOJIS_EVERYWHERE: function() {
-    return f
-  },
-  STICKERS_EVERYWHERE: function() {
-    return E
-  },
-  SOUNDBOARD_EVERYWHERE: function() {
     return p
   },
-  CUSTOM_CALL_SOUNDS: function() {
+  STICKERS_EVERYWHERE: function() {
     return h
+  },
+  SOUNDBOARD_EVERYWHERE: function() {
+    return f
+  },
+  CUSTOM_CALL_SOUNDS: function() {
+    return E
   },
   ANIMATED_AVATAR: function() {
     return _
   },
   CUSTOM_DISCRIMINATOR: function() {
-    return S
-  },
-  PREMIUM_GUILD_MEMBER_PROFILE: function() {
     return m
   },
+  PREMIUM_GUILD_MEMBER_PROFILE: function() {
+    return S
+  },
   PROFILE_BADGES: function() {
-    return T
+    return g
   },
   PROFILE_PREMIUM_FEATURES: function() {
-    return g
+    return T
   },
   COLLECTIBLES: function() {
     return I
   },
   APP_ICONS: function() {
-    return C
+    return v
   },
   CLIENT_THEMES: function() {
-    return v
+    return C
   },
   BOOST_DISCOUNT: function() {
     return A
@@ -49,22 +49,22 @@ n.r(t), n.d(t, {
     return N
   },
   STREAM_MID_QUALITY: function() {
-    return O
-  },
-  STREAM_HIGH_QUALITY: function() {
-    return D
-  },
-  FANCY_VOICE_CHANNEL_REACTIONS: function() {
     return y
   },
+  STREAM_HIGH_QUALITY: function() {
+    return O
+  },
+  FANCY_VOICE_CHANNEL_REACTIONS: function() {
+    return D
+  },
   INSTALL_PREMIUM_APPLICATIONS: function() {
-    return P
+    return b
   },
   REDEEM_PREMIUM_PERKS: function() {
-    return L
+    return P
   },
   VIDEO_FILTER_ASSETS: function() {
-    return b
+    return L
   },
   INCREASED_GUILD_LIMIT: function() {
     return M
@@ -73,10 +73,10 @@ n.r(t), n.d(t, {
     return U
   },
   INCREASED_VIDEO_UPLOAD_QUALITY: function() {
-    return G
+    return w
   },
   UPLOAD_LARGE_FILES: function() {
-    return w
+    return k
   },
   canUserUse: function() {
     return x
@@ -100,7 +100,7 @@ class c extends s.default {
       try {
         let n = u[t.premiumType];
         if (null == n) return l.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let i = k[n];
+        let i = G[n];
         if (null == i) return l.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, " and premium type ").concat(t.premiumType)), !1;
         return i.skuFeatures.includes(e)
       } catch (e) {
@@ -112,36 +112,36 @@ class c extends s.default {
   }
 }
 let d = new c("animatedEmojis"),
-  f = new c("emojisEverywhere"),
-  E = new c("stickersEverywhere"),
-  p = new c("soundboardEverywhere"),
-  h = new c("customCallSounds"),
+  p = new c("emojisEverywhere"),
+  h = new c("stickersEverywhere"),
+  f = new c("soundboardEverywhere"),
+  E = new c("customCallSounds"),
   _ = new c("animatedAvatar"),
-  S = new c("customDiscriminator"),
-  m = new c("premiumGuildMemberProfile"),
-  T = new c("profileBadges"),
-  g = new c("profilePremiumFeatures", "custom banner and avatar decoration"),
+  m = new c("customDiscriminator"),
+  S = new c("premiumGuildMemberProfile"),
+  g = new c("profileBadges"),
+  T = new c("profilePremiumFeatures", "custom banner and avatar decoration"),
   I = new c("collectibles"),
-  C = new c("appIcons"),
-  v = new c("clientThemes"),
+  v = new c("appIcons"),
+  C = new c("clientThemes"),
   A = new c("boostDiscount"),
   R = new c("freeBoosts"),
   N = new c("hostPremiumActivities"),
-  O = new c("streamMidQuality"),
-  D = new c("streamHighQuality"),
-  y = new c("fancyVoiceChannelReactions"),
-  P = new c("installPremiumApplications"),
-  L = new c("redeemPremiumPerks"),
-  b = new c("videoFilterAssets");
+  y = new c("streamMidQuality"),
+  O = new c("streamHighQuality"),
+  D = new c("fancyVoiceChannelReactions"),
+  b = new c("installPremiumApplications"),
+  P = new c("redeemPremiumPerks"),
+  L = new c("videoFilterAssets");
 new s.default("increasedFileUploadSize", r.getUserMaxFileSize);
 let M = new c("increasedGuildLimit"),
   U = new c("increasedMessageLength"),
-  G = new c("increasedVideoUploadQuality"),
-  w = new c("uploadLargeFiles"),
-  k = Object.freeze({
-    [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [d, f, E, T, b, G, w, C]),
-    [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [d, f, _, S, T, A, O, y, G, w, C]),
-    [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [d, f, E, p, h, _, S, m, T, g, v, A, R, N, O, D, y, P, L, b, M, U, G, w, C, I])
+  w = new c("increasedVideoUploadQuality"),
+  k = new c("uploadLargeFiles"),
+  G = Object.freeze({
+    [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [d, p, h, g, L, w, k, v]),
+    [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [d, p, _, m, g, A, y, D, w, k, v]),
+    [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [d, p, h, f, E, _, m, S, g, T, C, A, R, N, y, O, D, b, P, L, M, U, w, k, v, I])
   });
 
 function x(e, t) {

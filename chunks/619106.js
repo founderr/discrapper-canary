@@ -1,12 +1,12 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   frameLoop: function() {
-    return n
+    return l
   }
 });
-var t = E("907002"),
-  o = E("102535");
-let n = new o.default;
-t.Globals.assign({
-  frameLoop: n
+var i = n("907002"),
+  a = n("102535");
+let l = new a.default;
+i.Globals.assign({
+  frameLoop: l
 })

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   isHookModuleTooOld: function() {
-    return S
+    return m
   },
   attachToProcess: function() {
-    return T
+    return g
   },
   cancelAttachToProcess: function() {
-    return g
+    return T
   }
 }), n("70102");
 var i, r, s = n("913144"),
@@ -17,10 +17,10 @@ var i, r, s = n("913144"),
   u = n("568307"),
   c = n("697218"),
   d = n("599110"),
-  f = n("773336"),
-  E = n("50885"),
-  p = n("688225"),
-  h = n("49111");
+  p = n("773336"),
+  h = n("50885"),
+  f = n("688225"),
+  E = n("49111");
 let _ = {
   development: [0, 0, 0, 0],
   canary: [1, 0, 30, 10],
@@ -28,19 +28,19 @@ let _ = {
   stable: [1, 0, 9001, 2]
 };
 
-function S() {
+function m() {
   var e;
-  return !(null === E.default || void 0 === E.default ? void 0 : null === (e = E.default.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(E.default, "discord_hook", _))
+  return !(null === h.default || void 0 === h.default ? void 0 : null === (e = h.default.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(h.default, "discord_hook", _))
 }
-async function m() {
-  if (!(0, f.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
-  if (S()) return Promise.reject(Error("Hook module is too old"));
-  await E.default.ensureModule("discord_hook");
-  let e = await E.default.requireModule("discord_hook");
+async function S() {
+  if (!(0, p.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
+  if (m()) return Promise.reject(Error("Hook module is too old"));
+  await h.default.ensureModule("discord_hook");
+  let e = await h.default.requireModule("discord_hook");
   return function(e) {
     if (null == e.setFlags) return;
     let t = 0,
-      n = p.default.getCurrentConfig({
+      n = f.default.getCurrentConfig({
         location: "edd7d3_1"
       }, {
         autoTrackExposure: !1
@@ -51,37 +51,37 @@ async function m() {
   }(e), e
 }(r = i || (i = {}))[r.None = 0] = "None", r[r.EnableCrashReporting = 1] = "EnableCrashReporting", r[r.EnableCrashTrigger = 2] = "EnableCrashTrigger";
 
-function T(e, t) {
-  return m().then(n => {
+function g(e, t) {
+  return S().then(n => {
     var i;
     let r = null === (i = u.default.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
       c = l.default.getGameByName(r),
-      f = null;
+      p = null;
     return new Promise(i => {
       let l = (e, n) => {
-          d.default.track(h.AnalyticEvents.HOOK_RESULT, {
+          d.default.track(E.AnalyticEvents.HOOK_RESULT, {
             game_name: r,
             game_id: null == c ? null : c.id,
             success: n,
             error: e,
             ...t
-          }), null != f && (clearTimeout(f), f = null), n ? i() : i(e = null != e ? e : "Unknown hook error")
+          }), null != p && (clearTimeout(p), p = null), n ? i() : i(e = null != e ? e : "Unknown hook error")
         },
-        E = u.default.getOverlayOptionsForPID(e),
-        p = {
+        h = u.default.getOverlayOptionsForPID(e),
+        f = {
           ...o.DEFAULT_OVERLAY_OPTIONS,
-          ...E,
+          ...h,
           elevate: u.default.shouldElevateProcessForPID(e)
         };
-      null == p.allowHook || p.allowHook ? (f = setTimeout(() => {
+      null == f.allowHook || f.allowHook ? (p = setTimeout(() => {
         n.cancelAttachToProcess(e), l("Timed out waiting for hook response", !1)
-      }, 12e4), n.attachToProcess(e, p, l), s.default.wait(() => a.default.clearElevatedProcess())) : i("Hook is disabled for this game")
+      }, 12e4), n.attachToProcess(e, f, l), s.default.wait(() => a.default.clearElevatedProcess())) : i("Hook is disabled for this game")
     })
   })
 }
 
-function g(e) {
-  return m().then(t => {
+function T(e) {
+  return S().then(t => {
     t.cancelAttachToProcess(e)
   })
 }

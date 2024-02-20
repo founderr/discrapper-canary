@@ -1,18 +1,18 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   getInappropriateConversationTakeoverForChannel: function() {
-    return o
+    return a
   }
 });
-var t = E("764828");
+var i = n("764828");
 
-function o(e) {
-  let _ = function(e) {
-      let _ = t.default.getChannelSafetyWarnings(e);
-      return _.filter(e => e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2)
+function a(e) {
+  let t = function(e) {
+      let t = i.default.getChannelSafetyWarnings(e);
+      return t.filter(e => e.type === i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2)
     }(e),
-    E = _.filter(e => e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 && null != e.dismiss_timestamp);
-  if (E.length > 0) return null;
-  let o = _.filter(e => e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 && null == e.dismiss_timestamp);
-  return 1 === o.length ? o[0] : null
+    n = t.filter(e => e.type === i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 && null != e.dismiss_timestamp);
+  if (n.length > 0) return null;
+  let a = t.filter(e => e.type === i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 && null == e.dismiss_timestamp);
+  return 1 === a.length ? a[0] : null
 }

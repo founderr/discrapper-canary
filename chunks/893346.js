@@ -1,22 +1,22 @@
 "use strict";
 E.r(_), E.d(_, {
   Dispatcher: function() {
-    return O
+    return N
   }
 }), E("222007"), E("424973"), E("70102");
 var t = E("487445"),
   o = E("627445"),
-  n = E.n(o),
-  r = E("102053");
+  I = E.n(o),
+  T = E("102053");
 E("704744");
-var i = E("811022"),
+var r = E("811022"),
   a = E("435660"),
-  I = E("805833"),
-  s = E("377678"),
-  T = E("120082");
-let S = new Set(["APP_STATE_UPDATE", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_CONNECTION", "SESSION_START", "UPLOAD_FAIL"]),
-  N = new i.default("Flux");
-class O {
+  n = E("805833"),
+  i = E("377678"),
+  A = E("120082");
+let s = new Set(["APP_STATE_UPDATE", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_CONNECTION", "SESSION_START", "UPLOAD_FAIL"]),
+  R = new r.default("Flux");
+class N {
   isDispatching() {
     return null != this._currentDispatchActionType
   }
@@ -24,7 +24,7 @@ class O {
     return new Promise((_, E) => {
       this._waitQueue.push(() => {
         try {
-          null == this.functionCache[e.type] && (this.functionCache[e.type] = e => this._dispatchWithDevtools(e), R(this.functionCache[e.type], "dispatch_" + e.type)), this.functionCache[e.type](e), _()
+          null == this.functionCache[e.type] && (this.functionCache[e.type] = e => this._dispatchWithDevtools(e), S(this.functionCache[e.type], "dispatch_" + e.type)), this.functionCache[e.type](e), _()
         } catch (e) {
           E(e)
         }
@@ -33,13 +33,13 @@ class O {
   }
   flushWaitQueue() {
     if (!this._processingWaitQueue) try {
-      this._processingWaitQueue = !0, I.default.isDispatching = !0;
+      this._processingWaitQueue = !0, n.default.isDispatching = !0;
       let _ = 0;
       for (; this._waitQueue.length > 0;) {
         if (++_ > 100) {
           var e;
-          let _ = s.serialize();
-          throw N.error("LastFewActions", _), null === (e = this._sentryUtils) || void 0 === e || e.addBreadcrumb({
+          let _ = i.serialize();
+          throw R.error("LastFewActions", _), null === (e = this._sentryUtils) || void 0 === e || e.addBreadcrumb({
             message: "Dispatcher: Dispatch loop detected",
             data: {
               lastFewActions: _
@@ -50,17 +50,17 @@ class O {
           let e = this._waitQueue.shift();
           e()
         }
-        I.default.emit()
+        n.default.emit()
       }
     } finally {
-      this._processingWaitQueue = !1, I.default.isDispatching = !1
+      this._processingWaitQueue = !1, n.default.isDispatching = !1
     }
   }
   _dispatchWithDevtools(e) {
     this._dispatchWithLogging(e)
   }
   _dispatchWithLogging(e) {
-    n(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), n(e.type, "Dispatch.dispatch(...) called without an action type"), S.has(e.type) && N.log("Dispatching ".concat(e.type)), (0, a.mark)(e.type), s.add(e.type);
+    I(null == this._currentDispatchActionType, "Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ".concat(e.type, " Already dispatching: ").concat(this._currentDispatchActionType)), I(e.type, "Dispatch.dispatch(...) called without an action type"), s.has(e.type) && R.log("Dispatching ".concat(e.type)), (0, a.mark)(e.type), i.add(e.type);
     let _ = this.actionLogger.log(e, _ => {
       try {
         this._currentDispatchActionType = e.type, this._dispatch(e, _)
@@ -68,7 +68,7 @@ class O {
         this._currentDispatchActionType = null
       }
     });
-    _.totalTime > 100 && N.verbose("Slow dispatch on ".concat(e.type, ": ").concat(_.totalTime, "ms"));
+    _.totalTime > 100 && R.verbose("Slow dispatch on ".concat(e.type, ": ").concat(_.totalTime, "ms"));
     try {
       (0, a.measure)("DISPATCH[".concat(e.type, "]"), e.type)
     } catch (e) {}
@@ -80,10 +80,10 @@ class O {
     for (let t = 0, o = E.length; t < o; t++) {
       let {
         name: o,
-        actionHandler: n,
-        storeDidChange: r
+        actionHandler: I,
+        storeDidChange: T
       } = E[t];
-      !1 !== _(o, () => n(e)) && r(e)
+      !1 !== _(o, () => I(e)) && T(e)
     }
     let t = this._subscriptions[e.type];
     null != t && _("__subscriptions", () => {
@@ -114,29 +114,29 @@ class O {
     this._actionHandlers.addDependencies(e, _)
   }
   constructor(e = 0, _, E) {
-    this._interceptors = [], this._subscriptions = {}, this._waitQueue = [], this._processingWaitQueue = !1, this._currentDispatchActionType = null, this._actionHandlers = new A, this._sentryUtils = void 0, this.functionCache = {}, this._defaultBand = e, this._sentryUtils = E, null != _ ? this.actionLogger = _ : this.actionLogger = new T.ActionLogger, this.actionLogger.on("trace", (e, _, E) => {
-      r.default.isTracing && E >= 10 && r.default.mark("\uD83E\uDDA5", _, E)
+    this._interceptors = [], this._subscriptions = {}, this._waitQueue = [], this._processingWaitQueue = !1, this._currentDispatchActionType = null, this._actionHandlers = new O, this._sentryUtils = void 0, this.functionCache = {}, this._defaultBand = e, this._sentryUtils = E, null != _ ? this.actionLogger = _ : this.actionLogger = new A.ActionLogger, this.actionLogger.on("trace", (e, _, E) => {
+      T.default.isTracing && E >= 10 && T.default.mark("\uD83E\uDDA5", _, E)
     })
   }
 }
-class A {
+class O {
   getOrderedActionHandlers(e) {
     var _;
     return null !== (_ = this._orderedActionHandlers[e.type]) && void 0 !== _ ? _ : this._computeOrderedActionHandlers(e.type)
   }
   register(e, _, E, t) {
     let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.createToken();
-    n(t >= 0 && Number.isInteger(t), "band must be a non-negative integer.");
-    let r = {};
+    I(t >= 0 && Number.isInteger(t), "band must be a non-negative integer.");
+    let T = {};
     for (let E in _) {
       let t = _[E],
         o = e => t(e);
-      R(o, "".concat(e, "_").concat(E)), r[E] = o
+      S(o, "".concat(e, "_").concat(E)), T[E] = o
     }
     return this._dependencyGraph.addNode(o, {
       name: e,
       band: t,
-      actionHandler: r,
+      actionHandler: T,
       storeDidChange: E
     }), this._addToBand(o, t), this._invalidateCaches(), o
   }
@@ -170,13 +170,13 @@ class A {
     for (let _ = 0, o = E.length; _ < o; _++) {
       let {
         name: o,
-        actionHandler: n,
-        storeDidChange: r
-      } = this._dependencyGraph.getNodeData(E[_]), i = n[e];
-      null != i && t.push({
+        actionHandler: I,
+        storeDidChange: T
+      } = this._dependencyGraph.getNodeData(E[_]), r = I[e];
+      null != r && t.push({
         name: o,
-        actionHandler: i,
-        storeDidChange: r
+        actionHandler: r,
+        storeDidChange: T
       })
     }
     return this._orderedActionHandlers[e] = t, t
@@ -198,7 +198,7 @@ class A {
   }
 }
 
-function R(e, _) {
+function S(e, _) {
   Object.defineProperty(e, "name", {
     value: _
   })

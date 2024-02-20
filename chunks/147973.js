@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   ResizeObservation: function() {
-    return i
+    return s
   }
 });
-var r = n("209488"),
-  a = n("572462"),
-  o = n("925691"),
-  i = function() {
+var n = r("209488"),
+  i = r("572462"),
+  o = r("925691"),
+  s = function() {
     function e(e, t) {
-      this.target = e, this.observedBox = t || r.ResizeObserverBoxOptions.CONTENT_BOX, this.lastReportedSize = {
+      this.target = e, this.observedBox = t || n.ResizeObserverBoxOptions.CONTENT_BOX, this.lastReportedSize = {
         inlineSize: 0,
         blockSize: 0
       }
     }
     return e.prototype.isActive = function() {
-      var e, t = (0, a.calculateBoxSize)(this.target, this.observedBox, !0);
+      var e, t = (0, i.calculateBoxSize)(this.target, this.observedBox, !0);
       if (e = this.target, !(0, o.isSVG)(e) && !(0, o.isReplacedElement)(e) && "inline" === getComputedStyle(e).display) this.lastReportedSize = t;
       return this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize || !1
     }, e

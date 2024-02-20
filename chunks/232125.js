@@ -19,40 +19,40 @@ function u(e) {
     onResize: u,
     className: c,
     ...d
-  } = e, f = r.useRef(null), E = r.useRef({
+  } = e, p = r.useRef(null), h = r.useRef({
     width: 0,
     height: 0
   });
   r.useLayoutEffect(() => {
-    let e = f.current;
+    let e = p.current;
     if (null != e) return (0, o.registerActiveSink)(t), e.srcObject = (0, l.getVideoStream)(t), () => {
       (0, o.unregisterActiveSink)(t), e.srcObject = null, e.load()
     }
   }, [t]), r.useEffect(() => {
     var e, i;
-    return n ? (null === (e = f.current) || void 0 === e || e.pause(), (0, o.unregisterActiveSink)(t)) : null === (i = f.current) || void 0 === i || i.play().catch(() => {}), () => {
+    return n ? (null === (e = p.current) || void 0 === e || e.pause(), (0, o.unregisterActiveSink)(t)) : null === (i = p.current) || void 0 === i || i.play().catch(() => {}), () => {
       n && (0, o.registerActiveSink)(t)
     }
   }, [n]);
-  let p = r.useCallback(() => {
+  let f = r.useCallback(() => {
     var e, t, n, i;
     let {
       width: r,
       height: s
-    } = E.current, a = null !== (n = null === (e = f.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0, o = null !== (i = null === (t = f.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== i ? i : 0;
+    } = h.current, a = null !== (n = null === (e = p.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0, o = null !== (i = null === (t = p.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== i ? i : 0;
     if (r !== a || s !== o) {
       let e = {
         width: a,
         height: o
       };
-      null == u || u(e), E.current = e
+      null == u || u(e), h.current = e
     }
   }, [u]);
   r.useLayoutEffect(() => {
-    let e = f.current;
-    if (null != e) return e.addEventListener("resize", p), () => e.removeEventListener("resize", p)
-  }, [p]);
-  let h = r.useCallback(() => {
+    let e = p.current;
+    if (null != e) return e.addEventListener("resize", f), () => e.removeEventListener("resize", f)
+  }, [f]);
+  let E = r.useCallback(() => {
       null == s || s()
     }, [s]),
     _ = r.useCallback(e => {
@@ -60,10 +60,10 @@ function u(e) {
     }, [n]);
   return (0, i.jsx)("video", {
     className: a("media-engine-video", c),
-    ref: f,
+    ref: p,
     autoPlay: !0,
     onPause: _,
-    onCanPlayThrough: h,
+    onCanPlayThrough: E,
     muted: !0,
     ...d
   })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
 var i = n("446674"),
@@ -29,7 +29,7 @@ let u = {
   d = {
     ...u
   };
-class f extends i.default.PersistedStore {
+class p extends i.default.PersistedStore {
   initialize(e) {
     Object.assign(c, e), this.syncWith([a.default], () => {
       var e;
@@ -69,7 +69,7 @@ class f extends i.default.PersistedStore {
     return this.enabled && d.enableContentProtection
   }
 }
-f.displayName = "StreamerModeStore", f.persistKey = "StreamerModeStore", f.migrations = [e => {
+p.displayName = "StreamerModeStore", p.persistKey = "StreamerModeStore", p.migrations = [e => {
   let t = a.default.getId();
   if (null == e || null == t) return {};
   let n = {
@@ -79,7 +79,7 @@ f.displayName = "StreamerModeStore", f.persistKey = "StreamerModeStore", f.migra
   };
   return n
 }];
-var E = new f(r.default, {
+var h = new p(r.default, {
   LOGOUT: function(e) {
     !e.isSwitchingAccount && (c = {})
   },

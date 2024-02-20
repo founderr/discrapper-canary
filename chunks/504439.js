@@ -21,33 +21,33 @@ function r(e) {
     for (let l = 0; l < n; l++)
       for (let a = l ? 0 : 1; a * n < t * (n - l); a++) r.push(((e[P + (S >> 1)] >> ((1 & S++) << 2) & 15) / 7.5 - 1) * i);
     return r
-  }, O = R(T, I, (u >> 18 & 31) / 31 / 2), M = R(3, 3, (c >> 3 & 63) / 63 * n), L = R(3, 3, (c >> 9 & 63) / 63 * n), g = _ ? R(5, 5, p) : [], h = (0, i.thumbHashToApproximateAspectRatio)(e), x = o(h > 1 ? 32 : 32 * h), N = o(h > 1 ? 32 / h : 32), A = new Uint8Array(x * N * 4), v = [], U = [];
-  for (let e = 0, n = 0; e < N; e++)
+  }, O = R(T, I, (u >> 18 & 31) / 31 / 2), M = R(3, 3, (c >> 3 & 63) / 63 * n), L = R(3, 3, (c >> 9 & 63) / 63 * n), g = _ ? R(5, 5, p) : [], h = (0, i.thumbHashToApproximateAspectRatio)(e), x = o(h > 1 ? 32 : 32 * h), v = o(h > 1 ? 32 / h : 32), N = new Uint8Array(x * v * 4), A = [], U = [];
+  for (let e = 0, n = 0; e < v; e++)
     for (let i = 0; i < x; i++, n += 4) {
       let o = d,
         u = f,
         c = m,
         E = C;
-      for (let e = 0, t = a(T, _ ? 5 : 3); e < t; e++) v[e] = s(r / x * (i + .5) * e);
-      for (let t = 0, n = a(I, _ ? 5 : 3); t < n; t++) U[t] = s(r / N * (e + .5) * t);
+      for (let e = 0, t = a(T, _ ? 5 : 3); e < t; e++) A[e] = s(r / x * (i + .5) * e);
+      for (let t = 0, n = a(I, _ ? 5 : 3); t < n; t++) U[t] = s(r / v * (e + .5) * t);
       for (let e = 0, n = 0; e < I; e++)
-        for (let i = e ? 0 : 1, r = 2 * U[e]; i * I < T * (I - e); i++, n++) !(i > t) && !(e > t) && (o += O[n] * v[i] * r);
+        for (let i = e ? 0 : 1, r = 2 * U[e]; i * I < T * (I - e); i++, n++) !(i > t) && !(e > t) && (o += O[n] * A[i] * r);
       for (let e = 0, t = 0; e < 3; e++)
         for (let n = e ? 0 : 1, i = 2 * U[e]; n < 3 - e; n++, t++) {
-          let e = v[n] * i;
+          let e = A[n] * i;
           u += M[t] * e, c += L[t] * e
         }
       if (_)
         for (let e = 0, t = 0; e < 5; e++)
-          for (let n = e ? 0 : 1, i = 2 * U[e]; n < 5 - e; n++, t++) E += g[t] * v[n] * i;
+          for (let n = e ? 0 : 1, i = 2 * U[e]; n < 5 - e; n++, t++) E += g[t] * A[n] * i;
       let p = o - 2 / 3 * u,
         P = (3 * o - p + c) / 2,
         S = P - c;
-      A[n] = a(0, 255 * l(1, P)), A[n + 1] = a(0, 255 * l(1, S)), A[n + 2] = a(0, 255 * l(1, p)), A[n + 3] = a(0, 255 * l(1, E))
+      N[n] = a(0, 255 * l(1, P)), N[n + 1] = a(0, 255 * l(1, S)), N[n + 2] = a(0, 255 * l(1, p)), N[n + 3] = a(0, 255 * l(1, E))
     }
   return {
     w: x,
-    h: N,
-    rgba: A
+    h: v,
+    rgba: N
   }
 }

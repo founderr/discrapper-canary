@@ -18,7 +18,7 @@ function s(e, t, n, s) {
   let u = {},
     c = {},
     d = [],
-    f = [];
+    p = [];
   for (let t of e.values()) switch (t.type) {
     case "candidate-pair":
       u[t.id] = t;
@@ -30,12 +30,12 @@ function s(e, t, n, s) {
       d.push(t);
       break;
     case "outbound-rtp":
-      f.push(t)
+      p.push(t)
   }
-  let E = Object.values(u).find(e => "succeeded" === e.state);
-  if (void 0 === E) return null;
-  let p = [];
-  for (let e of f) {
+  let h = Object.values(u).find(e => "succeeded" === e.state);
+  if (void 0 === h) return null;
+  let f = [];
+  for (let e of p) {
     let t = c[e.codecId];
     if (null == t) continue;
     let s = {
@@ -48,7 +48,7 @@ function s(e, t, n, s) {
       bytesSent: e.bytesSent,
       packetsSent: e.packetsSent
     };
-    if ("audio" === e.kind) p.push({
+    if ("audio" === e.kind) f.push({
       ...s,
       type: "audio"
     });
@@ -58,7 +58,7 @@ function s(e, t, n, s) {
         width: e.frameWidth,
         height: e.frameHeight
       } : void 0;
-      p.push({
+      f.push({
         ...s,
         framesEncoded: e.framesEncoded,
         keyFramesEncoded: e.keyFramesEncoded,
@@ -75,7 +75,7 @@ function s(e, t, n, s) {
       })
     }
   }
-  let h = {};
+  let E = {};
   for (let e of d) {
     let a = c[e.codecId];
     if (null == a) continue;
@@ -95,19 +95,19 @@ function s(e, t, n, s) {
     };
     if ("audio" === e.kind) {
       let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round(1e3 * e.jitterBufferDelay / e.jitterBufferEmittedCount) : 0;
-      null == h[o] && (h[o] = []), h[o].push({
+      null == E[o] && (E[o] = []), E[o].push({
         ...l,
         audioLevel: e.audioLevel,
         jitter: 1e3 * e.jitter,
         jitterBuffer: t
       })
     } else if ("video" === e.kind) {
-      null == h[o] && (h[o] = []);
+      null == E[o] && (E[o] = []);
       let t = null !== e.frameWidth ? {
         width: e.frameWidth,
         height: e.frameHeight
       } : void 0;
-      h[o].push({
+      E[o].push({
         ...l,
         resolution: t,
         framesDecoded: e.framesDecoded,
@@ -124,17 +124,17 @@ function s(e, t, n, s) {
       })
     }
   }
-  let _ = (null !== (a = E.currentRoundTripTime) && void 0 !== a ? a : 0) * 1e3;
+  let _ = (null !== (a = h.currentRoundTripTime) && void 0 !== a ? a : 0) * 1e3;
   return {
     transport: {
-      availableOutgoingBitrate: null !== (o = E.availableOutgoingBitrate) && void 0 !== o ? o : 0,
-      bytesReceived: E.bytesReceived,
-      bytesSent: E.bytesSent,
+      availableOutgoingBitrate: null !== (o = h.availableOutgoingBitrate) && void 0 !== o ? o : 0,
+      bytesReceived: h.bytesReceived,
+      bytesSent: h.bytesSent,
       ping: _
     },
     rtp: {
-      inbound: h,
-      outbound: p
+      inbound: E,
+      outbound: f
     }
   }
 }

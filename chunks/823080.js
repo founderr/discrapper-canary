@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   useSelectState: function() {
-    return i
+    return o
   }
 }), n("222007");
 var r = n("356319"),
   a = n("880523"),
-  o = n("884691");
+  i = n("884691");
 
-function i(e) {
+function o(e) {
   let t = (0, r.useMenuTriggerState)(e),
     n = (0, a.useSingleSelectListState)({
       ...e,
@@ -16,7 +16,7 @@ function i(e) {
         null != e.onSelectionChange && e.onSelectionChange(n), t.close()
       }
     }),
-    [i, s] = (0, o.useState)(!1);
+    [o, s] = (0, i.useState)(!1);
   return {
     ...n,
     ...t,
@@ -26,7 +26,7 @@ function i(e) {
     toggle(e) {
       0 !== n.collection.size && t.toggle(e)
     },
-    isFocused: i,
+    isFocused: o,
     setFocused: s
   }
 }

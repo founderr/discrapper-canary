@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   AMPMParser: function() {
-    return d
+    return f
   }
 }), n("222007"), n("70102"), n("426094"), n("854508");
 var r = n("232985"),
@@ -22,13 +22,13 @@ function i(e, t) {
   }
 }
 
-function s(e, t) {
-  return (s = Object.setPrototypeOf || function(e, t) {
+function u(e, t) {
+  return (u = Object.setPrototypeOf || function(e, t) {
     return e.__proto__ = t, e
   })(e, t)
 }
 
-function u(e) {
+function s(e) {
   if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return e
 }
@@ -47,7 +47,7 @@ function c(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var d = function(e) {
+var f = function(e) {
   ! function(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function");
     e.prototype = Object.create(t && t.prototype, {
@@ -56,9 +56,9 @@ var d = function(e) {
         writable: !0,
         configurable: !0
       }
-    }), t && s(e, t)
-  }(m, e);
-  var t, n, r, d, f, p = (t = m, n = function() {
+    }), t && u(e, t)
+  }(h, e);
+  var t, n, r, f, d, p = (t = h, n = function() {
     if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
     try {
@@ -73,19 +73,19 @@ var d = function(e) {
       e = Reflect.construct(r, arguments, a)
     } else e = r.apply(this, arguments);
     return function(e, t) {
-      return t && ("object" === o(t) || "function" == typeof t) ? t : u(e)
+      return t && ("object" === o(t) || "function" == typeof t) ? t : s(e)
     }(this, e)
   });
 
-  function m() {
+  function h() {
     var e;
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, m);
+    }(this, h);
     for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-    return c(u(e = p.call.apply(p, [this].concat(n))), "priority", 80), c(u(e), "incompatibleTokens", ["b", "B", "H", "k", "t", "T"]), e
+    return c(s(e = p.call.apply(p, [this].concat(n))), "priority", 80), c(s(e), "incompatibleTokens", ["b", "B", "H", "k", "t", "T"]), e
   }
-  return r = m, d = [{
+  return r = h, f = [{
     key: "parse",
     value: function(e, t, n) {
       switch (t) {
@@ -122,5 +122,5 @@ var d = function(e) {
     value: function(e, t, n) {
       return e.setUTCHours((0, a.dayPeriodEnumToHours)(n), 0, 0, 0), e
     }
-  }], i(r.prototype, d), f && i(r, f), m
+  }], i(r.prototype, f), d && i(r, d), h
 }(r.Parser)

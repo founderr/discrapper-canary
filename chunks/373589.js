@@ -5,11 +5,11 @@ function r(e, t, n, r) {
   if (void 0 !== a) return !!a;
   if (e === t) return !0;
   if ("object" != typeof e || !e || "object" != typeof t || !t) return !1;
-  var o = Object.keys(e),
-    i = Object.keys(t);
-  if (o.length !== i.length) return !1;
-  for (var s = Object.prototype.hasOwnProperty.bind(t), c = 0; c < o.length; c++) {
-    var l = o[c];
+  var i = Object.keys(e),
+    o = Object.keys(t);
+  if (i.length !== o.length) return !1;
+  for (var s = Object.prototype.hasOwnProperty.bind(t), c = 0; c < i.length; c++) {
+    var l = i[c];
     if (!s(l)) return !1;
     var u = e[l],
       d = t[l];

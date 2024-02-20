@@ -1,27 +1,27 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   showTakeoverModal: function() {
-    return i
+    return r
   }
 });
-var t = E("37983");
-E("884691");
-var o = E("77078"),
-  n = E("892974"),
-  r = E("761771");
+var i = n("37983");
+n("884691");
+var a = n("77078"),
+  l = n("892974"),
+  s = n("761771");
 
-function i(e) {
-  (0, r.isEligibleForInappropriateConversationWarning)({
+function r(e) {
+  (0, s.isEligibleForInappropriateConversationWarning)({
     location: "takeover-modal"
-  }) && (0, o.openModalLazy)(async () => {
+  }) && (0, a.openModalLazy)(async () => {
     let {
-      default: _
-    } = await E.el("33320").then(E.bind(E, "33320"));
-    return E => (0, t.jsx)(_, {
+      default: t
+    } = await n.el("33320").then(n.bind(n, "33320"));
+    return n => (0, i.jsx)(t, {
       ...e,
-      modalProps: E
+      modalProps: n
     })
   }, {
-    backdropStyle: n.BackdropStyles.BLUR
+    backdropStyle: l.BackdropStyles.BLUR
   })
 }

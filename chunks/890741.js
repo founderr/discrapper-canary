@@ -1,8 +1,8 @@
 "use strict";
 var r = n("911718"),
   a = n("314970"),
-  o = n("825089"),
-  i = r("%TypeError%"),
+  i = n("825089"),
+  o = r("%TypeError%"),
   s = r("%WeakMap%", !0),
   c = r("%Map%", !0),
   l = a("WeakMap.prototype.get", !0),
@@ -10,17 +10,17 @@ var r = n("911718"),
   d = a("WeakMap.prototype.has", !0),
   p = a("Map.prototype.get", !0),
   f = a("Map.prototype.set", !0),
-  h = a("Map.prototype.has", !0),
-  m = function(e, t) {
+  m = a("Map.prototype.has", !0),
+  h = function(e, t) {
     for (var n, r = e; null !== (n = r.next); r = n)
       if (n.key === t) return r.next = n.next, n.next = e.next, e.next = n, n
   },
   v = function(e, t) {
-    var n = m(e, t);
+    var n = h(e, t);
     return n && n.value
   },
   g = function(e, t, n) {
-    var r = m(e, t);
+    var r = h(e, t);
     r ? r.value = n : e.next = {
       key: t,
       next: e.next,
@@ -30,7 +30,7 @@ var r = n("911718"),
 e.exports = function() {
   var e, t, n, r = {
     assert: function(e) {
-      if (!r.has(e)) throw new i("Side channel does not contain " + o(e))
+      if (!r.has(e)) throw new o("Side channel does not contain " + i(e))
     },
     get: function(r) {
       if (s && r && ("object" == typeof r || "function" == typeof r)) {
@@ -43,8 +43,8 @@ e.exports = function() {
       if (s && r && ("object" == typeof r || "function" == typeof r)) {
         if (e) return d(e, r)
       } else if (c) {
-        if (t) return h(t, r)
-      } else if (n) return !!m(n, r);
+        if (t) return m(t, r)
+      } else if (n) return !!h(n, r);
       return !1
     },
     set: function(r, a) {

@@ -1,10 +1,10 @@
 "use strict";
-var i;
+var r;
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return r
   }
-}), n("222007"), i = class e {
+}), n("222007"), r = class e {
   toJS() {
     return {
       ...this
@@ -20,18 +20,18 @@ n.r(t), n.d(t, {
     let t = null;
     for (let n in e) {
       if (!e.hasOwnProperty(n)) continue;
-      let i = e[n];
-      this[n] !== i && (null == t && (t = {
+      let r = e[n];
+      this[n] !== r && (null == t && (t = {
         ...this
       }), t[n] = e[n])
     }
     return null != t ? new this.constructor(t) : this
   }
-  update(t, n, i) {
-    null == i && (i = n, n = void 0);
-    let r = this[t];
-    return r instanceof e || (r instanceof Array ? r = [...r] : r instanceof Object && (r = {
-      ...r
-    })), void 0 === r && (r = n), this.set(t, i(r))
+  update(t, n, r) {
+    null == r && (r = n, n = void 0);
+    let i = this[t];
+    return i instanceof e || (i instanceof Array ? i = [...i] : i instanceof Object && (i = {
+      ...i
+    })), void 0 === i && (i = n), this.set(t, r(i))
   }
 }

@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return a
   },
   isSafari: function() {
-    return o
+    return i
   }
 });
 var r = n("988641"),
   a = (0, r.memoize)(function() {
     return /firefox/i.test(navigator.userAgent)
   }),
-  o = (0, r.memoize)(function() {
+  i = (0, r.memoize)(function() {
     return !!window.safari
   })

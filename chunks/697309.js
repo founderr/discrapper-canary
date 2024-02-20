@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return i
   },
   auto: function() {
-    return s
+    return u
   },
   basePlacements: function() {
-    return u
+    return s
   },
   start: function() {
     return l
@@ -25,19 +25,19 @@ n.r(t), n.d(t, {
     return c
   },
   clippingParents: function() {
-    return d
+    return f
   },
   viewport: function() {
-    return f
+    return d
   },
   popper: function() {
     return p
   },
   reference: function() {
-    return m
+    return h
   },
   variationPlacements: function() {
-    return h
+    return m
   },
   placements: function() {
     return _
@@ -50,18 +50,18 @@ var r = "top",
   a = "bottom",
   o = "right",
   i = "left",
-  s = "auto",
-  u = [r, a, o, i],
+  u = "auto",
+  s = [r, a, o, i],
   l = "start",
   c = "end",
-  d = "clippingParents",
-  f = "viewport",
+  f = "clippingParents",
+  d = "viewport",
   p = "popper",
-  m = "reference",
-  h = u.reduce(function(e, t) {
+  h = "reference",
+  m = s.reduce(function(e, t) {
     return e.concat([t + "-" + l, t + "-" + c])
   }, []),
-  _ = [].concat(u, [s]).reduce(function(e, t) {
+  _ = [].concat(s, [u]).reduce(function(e, t) {
     return e.concat([t, t + "-" + l, t + "-" + c])
   }, []),
   y = ["beforeRead", "read", "afterRead", "beforeMain", "main", "afterMain", "beforeWrite", "write", "afterWrite"]

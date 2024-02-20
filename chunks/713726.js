@@ -4,16 +4,16 @@ n.r(t), n.d(t, {
     return p
   },
   startBroadcastForStream: function() {
-    return E
+    return m
   },
   stopBroadcast: function() {
     return C
   },
   fetchBroadcasterBuckets: function() {
-    return S
+    return g
   },
   maybeFetchBroadcastChannels: function() {
-    return g
+    return S
   }
 });
 var a = n("872717"),
@@ -21,8 +21,8 @@ var a = n("872717"),
   s = n("374014"),
   i = n("766274"),
   l = n("271938"),
-  u = n("42203"),
-  o = n("546463"),
+  o = n("42203"),
+  u = n("546463"),
   d = n("568307"),
   c = n("9759"),
   f = n("194051"),
@@ -34,7 +34,7 @@ function p(e) {
   return null != n ? n.trim() : null
 }
 
-function E(e, t) {
+function m(e, t) {
   if (null == t) return;
   let {
     canBroadcast: n
@@ -52,19 +52,19 @@ function E(e, t) {
   if (null == i || null == f) return;
   let h = l.default.getId();
   if (i !== h) return;
-  let E = l.default.getSessionId();
-  if (null == E) return;
-  let C = u.default.getChannel(f),
-    m = null != C && C.isBroadcastChannel();
-  if (null == C || i !== C.ownerId || !m) return;
-  let S = function(e) {
+  let m = l.default.getSessionId();
+  if (null == m) return;
+  let C = o.default.getChannel(f),
+    E = null != C && C.isBroadcastChannel();
+  if (null == C || i !== C.ownerId || !E) return;
+  let g = function(e) {
     var t;
     let n = d.default.getGameForPID(e),
       a = p(n),
-      r = o.default.getGameByName(a);
+      r = u.default.getGameByName(a);
     return null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "0"
   }(t);
-  null != S && ! function(e) {
+  null != g && ! function(e) {
     let t = l.default.getId(),
       n = l.default.getSessionId();
     null != t && null != n && r.default.dispatch({
@@ -72,9 +72,9 @@ function E(e, t) {
       broadcast: e
     })
   }({
-    sessionId: E,
+    sessionId: m,
     userId: h,
-    applicationId: S,
+    applicationId: g,
     channelId: C.id,
     streamKey: e
   })
@@ -86,7 +86,7 @@ function C() {
   })
 }
 
-function m(e) {
+function E(e) {
   let t = {};
   e.forEach(e => {
     t[e] = -1
@@ -95,7 +95,7 @@ function m(e) {
     data: t
   })
 }
-async function S() {
+async function g() {
   let e = f.default.getUserIdsToValidate();
   try {
     let t = await a.default.get({
@@ -113,12 +113,12 @@ async function S() {
         type: "BROADCASTER_BUCKETS_RECEIVED",
         data: n
       })
-    } else m(e)
+    } else E(e)
   } catch (t) {
-    m(e)
+    E(e)
   }
 }
-async function g() {
+async function S() {
   let e = f.default.getBroadcastsToValidateChannels(),
     t = e.filter(e => null == e.viewers).map(e => e.channelId);
   if (0 !== t.length) try {

@@ -16,15 +16,15 @@ function a(e, t, n) {
     switch (a.kind) {
       case "enum":
       case "scalar":
-        let d = "enum" == a.kind ? r.ScalarType.INT32 : a.T;
-        if (!(a.repeat ? s(d, l, c) : i(d, l, c))) return !1;
+        let f = "enum" == a.kind ? r.ScalarType.INT32 : a.T;
+        if (!(a.repeat ? u(f, l, c) : i(f, l, c))) return !1;
         break;
       case "map":
-        if (!("message" == a.V.kind ? u(a.V.T(), o(l), o(c)) : s("enum" == a.V.kind ? r.ScalarType.INT32 : a.V.T, o(l), o(c)))) return !1;
+        if (!("message" == a.V.kind ? s(a.V.T(), o(l), o(c)) : u("enum" == a.V.kind ? r.ScalarType.INT32 : a.V.T, o(l), o(c)))) return !1;
         break;
       case "message":
-        let f = a.T();
-        if (!(a.repeat ? u(f, l, c) : f.equals(l, c))) return !1
+        let d = a.T();
+        if (!(a.repeat ? s(d, l, c) : d.equals(l, c))) return !1
     }
   }
   return !0
@@ -40,14 +40,14 @@ function i(e, t, n) {
   return !0
 }
 
-function s(e, t, n) {
+function u(e, t, n) {
   if (t.length !== n.length) return !1;
   for (let r = 0; r < t.length; r++)
     if (!i(e, t[r], n[r])) return !1;
   return !0
 }
 
-function u(e, t, n) {
+function s(e, t, n) {
   if (t.length !== n.length) return !1;
   for (let r = 0; r < t.length; r++)
     if (!e.equals(t[r], n[r])) return !1;

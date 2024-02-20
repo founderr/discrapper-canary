@@ -1,6 +1,6 @@
 "use strict";
-r("918437")("Uint32", function(t) {
-  return function(n, r, e) {
-    return t(this, n, r, e)
+n("918437")("Uint32", function(t) {
+  return function(e, n, r) {
+    return t(this, e, n, r)
   }
 })

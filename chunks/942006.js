@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return f
   },
   HiddenSelect: function() {
-    return h
+    return m
   }
 }), n("222007");
 var r = n("240849"),
   a = n("884691"),
-  o = n("932165"),
-  i = n("388032"),
+  i = n("932165"),
+  o = n("388032"),
   s = n("564341"),
   c = n("113581"),
   l = n("139796"),
@@ -23,12 +23,12 @@ function f(e, t, n) {
     keyboardDelegate: u,
     isDisabled: d,
     isRequired: f,
-    name: h,
-    validationBehavior: m = "aria"
+    name: m,
+    validationBehavior: h = "aria"
   } = e, v = (0, s.useCollator)({
     usage: "search",
     sensitivity: "base"
-  }), g = (0, a.useMemo)(() => u || new o.ListKeyboardDelegate(t.collection, t.disabledKeys, null, v), [u, t.collection, t.disabledKeys, v]), {
+  }), g = (0, a.useMemo)(() => u || new i.ListKeyboardDelegate(t.collection, t.disabledKeys, null, v), [u, t.collection, t.disabledKeys, v]), {
     menuTriggerProps: y,
     menuProps: b
   } = (0, l.useMenuTrigger)({
@@ -36,7 +36,7 @@ function f(e, t, n) {
     type: "listbox"
   }, t, n), {
     typeSelectProps: x
-  } = (0, o.useTypeSelect)({
+  } = (0, i.useTypeSelect)({
     keyboardDelegate: g,
     selectionManager: t.selectionManager,
     onTypeSelect(e) {
@@ -66,13 +66,13 @@ function f(e, t, n) {
   return p.set(t, {
     isDisabled: d,
     isRequired: f,
-    name: h,
-    validationBehavior: m
+    name: m,
+    validationBehavior: h
   }), {
     labelProps: {
       ...C,
       onClick: () => {
-        !e.isDisabled && (n.current.focus(), (0, i.setInteractionModality)("keyboard"))
+        !e.isDisabled && (n.current.focus(), (0, o.setInteractionModality)("keyboard"))
       }
     },
     triggerProps: (0, r.mergeProps)(T, {
@@ -125,31 +125,31 @@ function f(e, t, n) {
   }
 }
 
-function h(e) {
+function m(e) {
   var t;
   let {
     state: n,
-    triggerRef: o,
+    triggerRef: i,
     label: s,
     name: c,
     isDisabled: l
   } = e, f = (0, a.useRef)(null), {
-    containerProps: h,
-    inputProps: m,
+    containerProps: m,
+    inputProps: h,
     selectProps: v
   } = function(e, t, n) {
     var a;
-    let o = p.get(t) || {},
+    let i = p.get(t) || {},
       {
         autoComplete: s,
-        name: c = o.name,
-        isDisabled: l = o.isDisabled
+        name: c = i.name,
+        isDisabled: l = i.isDisabled
       } = e,
       {
         validationBehavior: f,
-        isRequired: h
-      } = o,
-      m = (0, i.useInteractionModality)(),
+        isRequired: m
+      } = i,
+      h = (0, o.useInteractionModality)(),
       {
         visuallyHiddenProps: v
       } = (0, d.useVisuallyHidden)();
@@ -164,7 +164,7 @@ function h(e) {
       },
       inputProps: {
         type: "text",
-        tabIndex: null == m || t.isFocused || t.isOpen ? -1 : 0,
+        tabIndex: null == h || t.isFocused || t.isOpen ? -1 : 0,
         style: {
           fontSize: 16
         },
@@ -175,7 +175,7 @@ function h(e) {
         tabIndex: -1,
         autoComplete: s,
         disabled: l,
-        required: "native" === f && h,
+        required: "native" === f && m,
         name: c,
         value: null !== (a = t.selectedKey) && void 0 !== a ? a : "",
         onChange: e => t.setSelectedKey(e.target.value)
@@ -184,11 +184,11 @@ function h(e) {
   }({
     ...e,
     selectRef: f
-  }, n, o);
+  }, n, i);
   return n.collection.size <= 300 ? a.createElement("div", {
-    ...h,
+    ...m,
     "data-testid": "hidden-select-container"
-  }, a.createElement("input", m), a.createElement("label", null, s, a.createElement("select", {
+  }, a.createElement("input", h), a.createElement("label", null, s, a.createElement("select", {
     ...v,
     ref: f
   }, a.createElement("option", null), [...n.collection.getKeys()].map(e => {

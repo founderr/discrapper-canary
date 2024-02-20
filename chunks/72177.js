@@ -1,73 +1,73 @@
 "use strict";
-let i, r, s;
+let r, i, o;
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return p
   }
 });
-var a = n("748820"),
-  o = n("446674"),
-  l = n("95410"),
-  u = n("862337"),
-  c = n("913144"),
-  d = n("697796"),
-  f = n("766274"),
-  E = n("922932"),
-  p = n("773336"),
-  h = n("197881");
-let _ = "BrowserHandoffStore",
+var l = n("748820"),
+  u = n("446674"),
+  a = n("95410"),
+  s = n("862337"),
+  E = n("913144"),
+  _ = n("697796"),
+  c = n("766274"),
+  d = n("922932"),
+  T = n("773336"),
+  A = n("197881");
+let I = "BrowserHandoffStore",
   S = !1,
-  m = new u.Timeout;
+  f = new s.Timeout;
 
-function T() {
-  null != i && null != r && (window.open("".concat(i, "&key=").concat(r)), E.default.focus(null, !0))
+function O() {
+  null != r && null != i && (window.open("".concat(r, "&key=").concat(i)), d.default.focus(null, !0))
 }
 
-function g() {
-  r = null, m.stop(), S = !1, l.default.set(_, S)
+function R() {
+  i = null, f.stop(), S = !1, a.default.set(I, S)
 }
 
-function I() {
-  g()
+function N() {
+  R()
 }
-class C extends o.default.Store {
+class L extends u.default.Store {
   initialize() {
-    !1 !== l.default.get(_) && (S = p.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
+    !1 !== a.default.get(I) && (S = T.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
   }
   isHandoffAvailable() {
-    return !h.ProcessArgs.isDisallowPopupsSet() && S
+    return !A.ProcessArgs.isDisallowPopupsSet() && S
   }
   get user() {
-    return s
+    return o
   }
   get key() {
-    return r
+    return i
   }
 }
-C.displayName = "BrowserHandoffStore";
-var v = new C(c.default, {
+L.displayName = "BrowserHandoffStore";
+var p = new L(E.default, {
   RPC_SERVER_READY: function(e) {
-    i = "".concat(location.protocol, "//").concat(location.host, "/handoff?rpc=").concat(e.port), T()
+    r = "".concat(location.protocol, "//").concat(location.host, "/handoff?rpc=").concat(e.port), O()
   },
   BROWSER_HANDOFF_BEGIN: function(e) {
-    if (null != r) return !1;
-    r = (0, a.v4)(), m.start(e.timeout, () => (0, d.handoffEnd)()), T()
+    if (null != i) return !1;
+    i = (0, l.v4)(), f.start(e.timeout, () => (0, _.handoffEnd)()), O()
   },
   BROWSER_HANDOFF_FROM_APP: function(e) {
     let {
       handoffKey: t,
       handoffToken: n,
-      timeout: i
+      timeout: r
     } = e;
     if (null == t || null == n) return !1;
-    S = !0, m.start(i, () => (0, d.handoffEnd)())
+    S = !0, f.start(r, () => (0, _.handoffEnd)())
   },
-  BROWSER_HANDOFF_UNAVAILABLE: g,
+  BROWSER_HANDOFF_UNAVAILABLE: R,
   BROWSER_HANDOFF_SET_USER: function(e) {
-    s = new f.default(e.user)
+    o = new c.default(e.user)
   },
-  LOGIN: I,
-  LOGIN_SUCCESS: I,
-  LOGOUT: I,
-  REGISTER: I
+  LOGIN: N,
+  LOGIN_SUCCESS: N,
+  LOGOUT: N,
+  REGISTER: N
 })

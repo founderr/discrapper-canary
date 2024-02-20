@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return a
   }
 });
 var s = n("862205");
-let a = (0, s.createExperiment)({
+let r = (0, s.createExperiment)({
   kind: "user",
   id: "2023-12_2023_eoy_ringtone",
   label: "EOY Ringtone 2023",
@@ -20,4 +20,4 @@ let a = (0, s.createExperiment)({
     }
   }]
 });
-var i = a
+var a = r

@@ -1,11 +1,11 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   GamingStatsSetupExperiment: function() {
-    return o
+    return a
   }
 });
-var t = E("862205");
-let o = (0, t.createExperiment)({
+var i = n("862205");
+let a = (0, i.createExperiment)({
   kind: "guild",
   id: "2023-09_gaming_stats_setup",
   label: "Gaming stats exposure setup",

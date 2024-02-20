@@ -14,13 +14,13 @@ function a(e, t, n) {
   }, e)
 }
 
-function o(e, t) {
+function i(e, t) {
   return e.filter(function(e) {
     return e !== t
   })
 }
 
-function i(e) {
+function o(e) {
   return "object" === r(e)
 }
 
@@ -46,10 +46,10 @@ n.r(t), n.d(t, {
     return a
   },
   without: function() {
-    return o
+    return i
   },
   isObject: function() {
-    return i
+    return o
   },
   xor: function() {
     return s

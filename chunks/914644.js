@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   useToggle: function() {
-    return i
+    return o
   }
 });
 var r = n("240849"),
   a = n("447259"),
-  o = n("388032");
+  i = n("388032");
 
-function i(e, t, n) {
+function o(e, t, n) {
   let {
-    isDisabled: i = !1,
+    isDisabled: o = !1,
     isReadOnly: s = !1,
     value: c,
     name: l,
@@ -18,25 +18,25 @@ function i(e, t, n) {
     "aria-label": d,
     "aria-labelledby": p,
     validationState: f = "valid",
-    isInvalid: h
+    isInvalid: m
   } = e;
   !(null != u) && !(null != d || null != p) && console.warn("If you do not provide children, you must specify an aria-label for accessibility");
   let {
-    pressProps: m,
+    pressProps: h,
     isPressed: v
-  } = (0, o.usePress)({
-    isDisabled: i
+  } = (0, i.usePress)({
+    isDisabled: o
   }), {
     pressProps: g,
     isPressed: y
-  } = (0, o.usePress)({
-    isDisabled: i || s,
+  } = (0, i.usePress)({
+    isDisabled: o || s,
     onPress() {
       t.toggle()
     }
   }), {
     focusableProps: b
-  } = (0, a.useFocusable)(e, n), x = (0, r.mergeProps)(m, b), S = (0, r.filterDOMProps)(e, {
+  } = (0, a.useFocusable)(e, n), x = (0, r.mergeProps)(h, b), S = (0, r.filterDOMProps)(e, {
     labelable: !0
   });
   return (0, r.useFormReset)(n, t.isSelected, t.setSelected), {
@@ -44,14 +44,14 @@ function i(e, t, n) {
       onClick: e => e.preventDefault()
     }),
     inputProps: (0, r.mergeProps)(S, {
-      "aria-invalid": h || "invalid" === f || void 0,
+      "aria-invalid": m || "invalid" === f || void 0,
       "aria-errormessage": e["aria-errormessage"],
       "aria-controls": e["aria-controls"],
       "aria-readonly": s || void 0,
       onChange: e => {
         e.stopPropagation(), t.setSelected(e.target.checked)
       },
-      disabled: i,
+      disabled: o,
       ...null == c ? {} : {
         value: c
       },
@@ -61,8 +61,8 @@ function i(e, t, n) {
     }),
     isSelected: t.isSelected,
     isPressed: v || y,
-    isDisabled: i,
+    isDisabled: o,
     isReadOnly: s,
-    isInvalid: h || "invalid" === f
+    isInvalid: m || "invalid" === f
   }
 }

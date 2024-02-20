@@ -1,60 +1,60 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   INTERACTION_IFRAME_MODAL_ANALYTICS_TYPE: function() {
-    return I
+    return u
   },
   default: function() {
-    return S
+    return f
   }
-}), E("222007");
-var t = E("689988"),
-  o = E("809810"),
-  n = E("599110"),
-  r = E("533686"),
-  i = E("62355"),
-  a = E("49111");
-let I = "interaction_iframe_modal";
-async function s(e) {
+}), n("222007");
+var i = n("689988"),
+  a = n("809810"),
+  l = n("599110"),
+  s = n("533686"),
+  r = n("62355"),
+  o = n("49111");
+let u = "interaction_iframe_modal";
+async function d(e) {
   let {
-    openInteractionModal: _
-  } = await E.el("394816").then(E.bind(E, "394816"));
-  _(e), n.default.track(a.AnalyticEvents.OPEN_MODAL, {
+    openInteractionModal: t
+  } = await n.el("394816").then(n.bind(n, "394816"));
+  t(e), l.default.track(o.AnalyticEvents.OPEN_MODAL, {
     type: "interaction_modal",
     application_id: e.application.id
   })
 }
-class T extends t.default {
+class c extends i.default {
   constructor(...e) {
     super(...e), this.iframeModalOpenTimeMs = void 0, this.actions = {
       INTERACTION_MODAL_CREATE: e => {
-        s(e)
+        d(e)
       },
       INTERACTION_IFRAME_MODAL_CREATE: e => {
-        var _;
-        this.iframeModalOpenTimeMs = Date.now(), _ = e, (0, i.default)(_), n.default.track(a.AnalyticEvents.OPEN_MODAL, {
-          type: I,
-          application_id: _.application.id
+        var t;
+        this.iframeModalOpenTimeMs = Date.now(), t = e, (0, r.default)(t), l.default.track(o.AnalyticEvents.OPEN_MODAL, {
+          type: u,
+          application_id: t.application.id
         })
       },
       INTERACTION_IFRAME_MODAL_CLOSE: e => {
-        ! function(e, _) {
-          let E = null != _ ? Date.now() - _ : void 0;
-          n.default.track(a.AnalyticEvents.MODAL_DISMISSED, {
-            type: I,
+        ! function(e, t) {
+          let n = null != t ? Date.now() - t : void 0;
+          l.default.track(o.AnalyticEvents.MODAL_DISMISSED, {
+            type: u,
             application_id: e.applicationId,
-            duration_open_ms: E
+            duration_open_ms: n
           })
         }(e, this.iframeModalOpenTimeMs), this.iframeModalOpenTimeMs = void 0
       },
       RPC_APP_DISCONNECTED: e => {
         ! function(e) {
           let {
-            application: _
-          } = e, E = o.default.getIFrameModalApplicationId(), t = o.default.getIFrameModalKey();
-          _.id === E && null != E && (0, r.default)(E, t)
+            application: t
+          } = e, n = a.default.getIFrameModalApplicationId(), i = a.default.getIFrameModalKey();
+          t.id === n && null != n && (0, s.default)(n, i)
         }(e)
       }
     }
   }
 }
-var S = new T
+var f = new c

@@ -41,10 +41,10 @@ var r = n("190418"),
           Object.keys(t.elements).forEach(function(e) {
             var o = t.elements[e],
               i = t.attributes[e] || {},
-              s = Object.keys(t.styles.hasOwnProperty(e) ? t.styles[e] : n[e]).reduce(function(e, t) {
+              u = Object.keys(t.styles.hasOwnProperty(e) ? t.styles[e] : n[e]).reduce(function(e, t) {
                 return e[t] = "", e
               }, {});
-            (0, a.isHTMLElement)(o) && (0, r.default)(o) && (Object.assign(o.style, s), Object.keys(i).forEach(function(e) {
+            (0, a.isHTMLElement)(o) && (0, r.default)(o) && (Object.assign(o.style, u), Object.keys(i).forEach(function(e) {
               o.removeAttribute(e)
             }))
           })

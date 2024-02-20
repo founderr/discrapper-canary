@@ -18,22 +18,22 @@ function u(e) {
     className: u,
     titleClassName: c,
     title: d,
-    icon: f,
-    disabled: E,
-    htmlFor: p,
-    tag: h = "h5",
+    icon: p,
+    disabled: h,
+    htmlFor: f,
+    tag: E = "h5",
     ..._
-  } = e, S = r.useId(), m = null !== (t = _.titleId) && void 0 !== t ? t : S;
+  } = e, m = r.useId(), S = null !== (t = _.titleId) && void 0 !== t ? t : m;
   return null != d ? (0, i.jsx)("div", {
     className: u,
     children: (0, i.jsx)(s.HeadingLevel, {
       component: (0, i.jsxs)("div", {
         className: l.sectionTitle,
-        children: [f, null != d ? (0, i.jsx)(o.FormTitle, {
-          tag: h,
-          id: m,
-          htmlFor: p,
-          disabled: E,
+        children: [p, null != d ? (0, i.jsx)(o.FormTitle, {
+          tag: E,
+          id: S,
+          htmlFor: f,
+          disabled: h,
           className: c,
           children: d
         }) : null]
@@ -41,7 +41,7 @@ function u(e) {
       children: (0, i.jsx)("div", {
         className: l.children,
         children: (0, i.jsx)(a.FormContextProvider, {
-          titleId: m,
+          titleId: S,
           children: n
         })
       })

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useCanSeeOnboardingHome: function() {
-    return m
+    return S
   },
   canSeeOnboardingHome: function() {
-    return T
+    return g
   }
 }), n("222007");
 var i = n("917351"),
@@ -16,18 +16,18 @@ var i = n("917351"),
   u = n("26989"),
   c = n("305961"),
   d = n("698882"),
-  f = n("233706"),
-  E = n("6263"),
-  p = n("363176"),
-  h = n("49111"),
+  p = n("233706"),
+  h = n("6263"),
+  f = n("363176"),
+  E = n("49111"),
   _ = n("724210");
 
-function S(e) {
+function m(e) {
   var t;
   let n = e.id,
     {
       homeSettingsEnabled: i
-    } = f.default.getCurrentConfig({
+    } = p.default.getCurrentConfig({
       guildId: n,
       location: "61eef9_1"
     }, {
@@ -35,51 +35,51 @@ function S(e) {
     }),
     r = (null !== (t = d.default.getNewMemberActions(n)) && void 0 !== t ? t : []).length > 0,
     s = d.default.getEnabled(n);
-  return i && r && e.hasFeature(h.GuildFeatures.COMMUNITY) && !(e.hasFeature(h.GuildFeatures.GUILD_ONBOARDING) && !s)
+  return i && r && e.hasFeature(E.GuildFeatures.COMMUNITY) && !(e.hasFeature(E.GuildFeatures.GUILD_ONBOARDING) && !s)
 }
 
-function m(e) {
+function S(e) {
   let t = (0, s.default)([c.default], () => c.default.getGuild(e)),
     n = (0, s.default)([u.default], () => u.default.getSelfMember(e)),
     {
       showOnboardingHome: i
-    } = (0, E.useOnboardingHomeExperiment)(t, n),
+    } = (0, h.useOnboardingHomeExperiment)(t, n),
     {
       homeSettingsEnabled: d
-    } = f.default.useExperiment({
+    } = p.default.useExperiment({
       guildId: e,
       location: "61eef9_2"
     }, {
       autoTrackExposure: !1
     }),
-    m = (0, s.default)([o.default], () => o.default.isFullServerPreview(e)),
-    T = (0, p.default)(e),
-    g = (0, s.default)([l.default], () => l.default.getMutableGuildChannelsForGuild(e));
-  if (null == t || __OVERLAY__ || e === h.ME || e === h.FAVORITES) return !1;
-  if (m) return S(t);
-  let I = d && (0, a.isGuildOnboardingSettingsAvailable)(e) && t.hasFeature(h.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(h.GuildFeatures.GUILD_SERVER_GUIDE),
-    C = r.some(r.values(g), e => e.hasFlag(_.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL));
-  return !(!T && !C) && (i && t.hasFeature(h.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(h.GuildFeatures.GUILD_SERVER_GUIDE) || I) && t.hasFeature(h.GuildFeatures.COMMUNITY)
+    S = (0, s.default)([o.default], () => o.default.isFullServerPreview(e)),
+    g = (0, f.default)(e),
+    T = (0, s.default)([l.default], () => l.default.getMutableGuildChannelsForGuild(e));
+  if (null == t || __OVERLAY__ || e === E.ME || e === E.FAVORITES) return !1;
+  if (S) return m(t);
+  let I = d && (0, a.isGuildOnboardingSettingsAvailable)(e) && t.hasFeature(E.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(E.GuildFeatures.GUILD_SERVER_GUIDE),
+    v = r.some(r.values(T), e => e.hasFlag(_.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL));
+  return !(!g && !v) && (i && t.hasFeature(E.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(E.GuildFeatures.GUILD_SERVER_GUIDE) || I) && t.hasFeature(E.GuildFeatures.COMMUNITY)
 }
 
-function T(e) {
+function g(e) {
   let t = c.default.getGuild(e),
     {
       showOnboardingHome: n
-    } = E.default.getCurrentConfig({
+    } = h.default.getCurrentConfig({
       location: "61eef9_3"
     }, {
       autoTrackExposure: !1
     }),
     {
       homeSettingsEnabled: i
-    } = f.default.getCurrentConfig({
+    } = p.default.getCurrentConfig({
       guildId: e,
       location: "61eef9_4"
     }),
     r = o.default.isFullServerPreview(e);
-  if (null == t || __OVERLAY__ || e === h.ME || e === h.FAVORITES) return !1;
-  if (r) return S(t);
-  let s = i && (0, a.isGuildOnboardingSettingsAvailable)(e) && t.hasFeature(h.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(h.GuildFeatures.GUILD_SERVER_GUIDE);
-  return (n && t.hasFeature(h.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(h.GuildFeatures.GUILD_SERVER_GUIDE) || s) && t.hasFeature(h.GuildFeatures.COMMUNITY)
+  if (null == t || __OVERLAY__ || e === E.ME || e === E.FAVORITES) return !1;
+  if (r) return m(t);
+  let s = i && (0, a.isGuildOnboardingSettingsAvailable)(e) && t.hasFeature(E.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(E.GuildFeatures.GUILD_SERVER_GUIDE);
+  return (n && t.hasFeature(E.GuildFeatures.GUILD_ONBOARDING) && t.hasFeature(E.GuildFeatures.GUILD_SERVER_GUIDE) || s) && t.hasFeature(E.GuildFeatures.COMMUNITY)
 }

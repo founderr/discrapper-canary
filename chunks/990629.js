@@ -1,38 +1,38 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return N
+    return E
   }
-}), E("222007");
-var t = E("913144"),
-  o = E("987317"),
-  n = E("689988"),
-  r = E("393414"),
-  i = E("239380"),
-  a = E("42887"),
-  I = E("18494"),
-  s = E("162771"),
-  T = E("49111");
-class S extends n.default {
+}), n("222007");
+var i = n("913144"),
+  a = n("987317"),
+  l = n("689988"),
+  s = n("393414"),
+  r = n("239380"),
+  o = n("42887"),
+  u = n("18494"),
+  d = n("162771"),
+  c = n("49111");
+class f extends l.default {
   handleGuildCreate(e) {
     let {
-      guild: _
-    } = e, E = I.default.getChannelId(T.ME), t = I.default.getVoiceChannelId();
-    _.id === E && (0, i.transitionToGuild)(_.id);
-    let n = _.id === t;
-    n && !1 !== _.unavailable && null == t && o.default.selectVoiceChannel((0, I.findFirstVoiceChannelId)(_.id))
+      guild: t
+    } = e, n = u.default.getChannelId(c.ME), i = u.default.getVoiceChannelId();
+    t.id === n && (0, r.transitionToGuild)(t.id);
+    let l = t.id === i;
+    l && !1 !== t.unavailable && null == i && a.default.selectVoiceChannel((0, u.findFirstVoiceChannelId)(t.id))
   }
   handleChannelCreate(e) {
     let {
-      channel: _
+      channel: t
     } = e;
-    if (_.type !== T.ChannelTypes.GROUP_DM) return;
-    let E = _.originChannelId,
-      t = I.default.getChannelId(T.NULL_STRING_GUILD_ID);
-    null == s.default.getGuildId() && null != E && E === t && (0, r.transitionTo)(T.Routes.CHANNEL(T.ME, _.id)), null != E && E === I.default.getVoiceChannelId() && o.default.selectVoiceChannel(_.id, a.default.isVideoEnabled())
+    if (t.type !== c.ChannelTypes.GROUP_DM) return;
+    let n = t.originChannelId,
+      i = u.default.getChannelId(c.NULL_STRING_GUILD_ID);
+    null == d.default.getGuildId() && null != n && n === i && (0, s.transitionTo)(c.Routes.CHANNEL(c.ME, t.id)), null != n && n === u.default.getVoiceChannelId() && a.default.selectVoiceChannel(t.id, o.default.isVideoEnabled())
   }
   handleLogout() {
-    t.default.dispatch({
+    i.default.dispatch({
       type: "VOICE_CHANNEL_SELECT",
       channelId: null,
       guildId: null,
@@ -48,4 +48,4 @@ class S extends n.default {
     }
   }
 }
-var N = new S
+var E = new f

@@ -5,102 +5,102 @@ E.r(_), E.d(_, {
     return t
   },
   isPlatformEmbedded: function() {
-    return r
+    return T
   },
   isWindows: function() {
     return a
   },
   isMac: function() {
-    return I
+    return n
   },
   isLinux: function() {
-    return s
+    return i
   },
   isDesktop: function() {
-    return T
-  },
-  isWeb: function() {
-    return S
-  },
-  isAndroidChrome: function() {
-    return N
-  },
-  isAndroidWeb: function() {
-    return O
-  },
-  isAndroid: function() {
     return A
   },
-  isIOS: function() {
+  isWeb: function() {
+    return s
+  },
+  isAndroidChrome: function() {
     return R
   },
+  isAndroidWeb: function() {
+    return N
+  },
+  isAndroid: function() {
+    return O
+  },
+  isIOS: function() {
+    return S
+  },
   getPlatform: function() {
-    return l
+    return L
   },
   getPlatformName: function() {
-    return u
+    return l
   },
   getNativePlatform: function() {
-    return L
+    return D
   },
   getOS: function() {
     return C
   }
 }), (o = t || (t = {})).WINDOWS = "WINDOWS", o.OSX = "OSX", o.LINUX = "LINUX", o.WEB = "WEB";
-let n = window.DiscordNative,
-  r = null != n,
-  i = null != n ? n.process.platform : "";
+let I = window.DiscordNative,
+  T = null != I,
+  r = null != I ? I.process.platform : "";
 
 function a() {
-  return /^win/.test(i)
+  return /^win/.test(r)
 }
 
-function I() {
-  return "darwin" === i
+function n() {
+  return "darwin" === r
+}
+
+function i() {
+  return "linux" === r
+}
+
+function A() {
+  return a() || n() || i()
 }
 
 function s() {
-  return "linux" === i
+  return "WEB" === L()
 }
 
-function T() {
-  return a() || I() || s()
-}
-
-function S() {
-  return "WEB" === l()
-}
-
-function N() {
+function R() {
   return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
 }
 
-function O() {
+function N() {
   var e;
   return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null
 }
 
-function A() {
-  return "android" === i
+function O() {
+  return "android" === r
 }
 
-function R() {
-  return "ios" === i
-}
-
-function l() {
-  return a() ? "WINDOWS" : I() ? "OSX" : s() ? "LINUX" : "WEB"
-}
-
-function u() {
-  return i
+function S() {
+  return "ios" === r
 }
 
 function L() {
-  switch (i) {
+  return a() ? "WINDOWS" : n() ? "OSX" : i() ? "LINUX" : "WEB"
+}
+
+function l() {
+  return r
+}
+
+function D() {
+  switch (r) {
     case "ios":
     case "android":
-      return i;
+      return r;
     default:
       return "web"
   }

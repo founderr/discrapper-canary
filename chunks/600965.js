@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return l
   },
   moveTo: function() {
-    return u
+    return o
   },
   updateRect: function() {
-    return o
+    return u
   },
   switchPIPFocus: function() {
     return d
@@ -55,7 +55,7 @@ function l(e) {
   })
 }
 
-function u(e, t) {
+function o(e, t) {
   a.default.dispatch({
     type: "PICTURE_IN_PICTURE_MOVE",
     id: e,
@@ -63,7 +63,7 @@ function u(e, t) {
   })
 }
 
-function o(e, t) {
+function u(e, t) {
   a.default.dispatch({
     type: "PICTURE_IN_PICTURE_UPDATE_RECT",
     id: e,

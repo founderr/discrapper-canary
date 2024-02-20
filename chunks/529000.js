@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return g
   }
 }), n("222007");
 var i = n("37983"),
@@ -13,12 +13,12 @@ var i = n("37983"),
   u = n("509043"),
   c = n("669491"),
   d = n("718776"),
-  f = n("145131"),
-  E = n("36694"),
-  p = n("49111"),
-  h = n("750692"),
+  p = n("145131"),
+  h = n("36694"),
+  f = n("49111"),
+  E = n("750692"),
   _ = n("890957");
-let S = l.memoize(e => {
+let m = l.memoize(e => {
   let t = !1;
   if (null != e && (0, u.isValidHex)(e)) {
     let n = (0, u.hex2int)(e);
@@ -26,7 +26,7 @@ let S = l.memoize(e => {
   }
   return t ? c.default.unsafe_rawColors.BLACK_500.css : c.default.unsafe_rawColors.WHITE_500.css
 });
-class m extends r.PureComponent {
+class S extends r.PureComponent {
   render() {
     let e;
     let {
@@ -34,7 +34,7 @@ class m extends r.PureComponent {
       color: n,
       className: r,
       children: s
-    } = this.props, o = S(n);
+    } = this.props, o = m(n);
     return t ? e = {
       color: o,
       background: null != n ? n : c.default.unsafe_rawColors.BRAND_500.css
@@ -44,30 +44,30 @@ class m extends r.PureComponent {
       offset: {
         left: 4
       },
-      children: (0, i.jsxs)(f.default, {
-        className: a(h.selectableItem, r, {
-          [h.selected]: t
+      children: (0, i.jsxs)(p.default, {
+        className: a(E.selectableItem, r, {
+          [E.selected]: t
         }),
         onClick: this.handleClick,
         onKeyUp: this.handleKeyUp,
-        align: f.default.Align.CENTER,
+        align: p.default.Align.CENTER,
         style: {
           ...e,
           ...this.props.style
         },
         role: "button",
         tabIndex: 0,
-        children: [(0, i.jsx)(f.default, {
-          align: f.default.Align.CENTER,
-          className: h.selectableItemLabel,
+        children: [(0, i.jsx)(p.default, {
+          align: p.default.Align.CENTER,
+          className: E.selectableItemLabel,
           shrink: 1,
           children: s
-        }), t && (0, i.jsx)(f.default, {
-          wrap: f.default.Wrap.WRAP,
+        }), t && (0, i.jsx)(p.default, {
+          wrap: p.default.Wrap.WRAP,
           className: _.marginReset,
           grow: 0,
           shrink: 0,
-          children: (0, i.jsx)(E.default, {
+          children: (0, i.jsx)(h.default, {
             color: o
           })
         })]
@@ -76,9 +76,9 @@ class m extends r.PureComponent {
   }
   constructor(...e) {
     super(...e), this.state = {
-      color: S(this.props.color)
+      color: m(this.props.color)
     }, this.handleKeyUp = e => {
-      if (e.which === p.KeyboardKeys.ENTER || e.which === p.KeyboardKeys.SPACE) {
+      if (e.which === f.KeyboardKeys.ENTER || e.which === f.KeyboardKeys.SPACE) {
         let {
           onClick: e,
           ...t
@@ -94,4 +94,4 @@ class m extends r.PureComponent {
     }
   }
 }
-var T = m
+var g = S

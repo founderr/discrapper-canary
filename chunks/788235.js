@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 }), n("424973");
-var i = n("49111");
-let r = [],
-  s = !1;
+var r = n("49111");
+let i = [],
+  o = !1;
 
-function a() {
+function l() {
   let e = window.navigator.connection;
   return null == e ? {
-    type: i.NetworkConnectionTypes.UNKNOWN,
-    effectiveSpeed: i.NetworkConnectionSpeeds.UNKNOWN
+    type: r.NetworkConnectionTypes.UNKNOWN,
+    effectiveSpeed: r.NetworkConnectionSpeeds.UNKNOWN
   } : {
-    type: null != e.type ? e.type : i.NetworkConnectionTypes.UNKNOWN,
+    type: null != e.type ? e.type : r.NetworkConnectionTypes.UNKNOWN,
     effectiveSpeed: e.effectiveType
   }
 }
 
-function o() {
-  let e = a();
-  r.forEach(t => t(e))
+function u() {
+  let e = l();
+  i.forEach(t => t(e))
 }
-var l = {
+var a = {
   addOnlineCallback(e) {
     window.addEventListener("online", e)
   },
@@ -38,23 +38,23 @@ var l = {
   },
   addChangeCallback(e) {
     var t;
-    t = e, r.push(t),
+    t = e, i.push(t),
       function() {
-        if (!0 === s) return;
+        if (!0 === o) return;
         let e = window.navigator.connection;
-        null != e && (s = !0, e.addEventListener("change", o))
+        null != e && (o = !0, e.addEventListener("change", u))
       }()
   },
   removeChangeCallback(e) {
     ! function(e) {
-      let t = r.indexOf(e); - 1 !== t && (r.splice(t, 1), ! function() {
-        if (!1 === s) return;
+      let t = i.indexOf(e); - 1 !== t && (i.splice(t, 1), ! function() {
+        if (!1 === o) return;
         let e = window.navigator.connection;
-        null != e && 0 === r.length && null != e && (e.removeEventListener("change", o), s = !1)
+        null != e && 0 === i.length && null != e && (e.removeEventListener("change", u), o = !1)
       }())
     }(e)
   },
-  getNetworkInformation: () => Promise.resolve(a()),
+  getNetworkInformation: () => Promise.resolve(l()),
   isOnline() {
     let e = navigator.onLine;
     return void 0 === e || e

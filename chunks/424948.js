@@ -1,44 +1,44 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return O
+    return h
   }
 });
-var t = E("161778"),
-  o = E("599110"),
-  n = E("206230"),
-  r = E("727538");
-let i = r.AccessibilityFeatureFlags.NONE,
-  a = window.matchMedia("(prefers-color-scheme: dark)"),
-  I = window.matchMedia("(prefers-color-scheme: light)"),
-  s = window.matchMedia("(inverted-colors: inverted)"),
-  T = window.matchMedia("(prefers-contrast: more)"),
-  S = window.matchMedia("(forced-colors: active)");
+var i = n("161778"),
+  a = n("599110"),
+  l = n("206230"),
+  s = n("727538");
+let r = s.AccessibilityFeatureFlags.NONE,
+  o = window.matchMedia("(prefers-color-scheme: dark)"),
+  u = window.matchMedia("(prefers-color-scheme: light)"),
+  d = window.matchMedia("(inverted-colors: inverted)"),
+  c = window.matchMedia("(prefers-contrast: more)"),
+  f = window.matchMedia("(forced-colors: active)");
 
-function N(e, _) {
-  _ ? i |= e : i &= ~e
+function E(e, t) {
+  t ? r |= e : r &= ~e
 }
-var O = {
+var h = {
   init() {
-    n.default.addChangeListener(this.handleAccessibilityStoreChanged), t.default.addChangeListener(this.handleAccessibilityStoreChanged), a.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(a), I.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(I), T.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(T), S.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(S), s.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(s), o.default.setSystemAccessibilityFeatures(this.getActiveFeatures)
+    l.default.addChangeListener(this.handleAccessibilityStoreChanged), i.default.addChangeListener(this.handleAccessibilityStoreChanged), o.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(o), u.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(u), c.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(c), f.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(f), d.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(d), a.default.setSystemAccessibilityFeatures(this.getActiveFeatures)
   },
-  getActiveFeatures: () => i,
+  getActiveFeatures: () => r,
   handlePrefersColorSchemeDarkChanged(e) {
-    N(r.AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK, e.matches)
+    E(s.AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK, e.matches)
   },
   handlePrefersColorSchemeLightChanged(e) {
-    N(r.AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT, e.matches)
+    E(s.AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT, e.matches)
   },
   handlePrefersMoreContrastChanged(e) {
-    N(r.AccessibilityFeatureFlags.HIGH_CONTRAST, e.matches)
+    E(s.AccessibilityFeatureFlags.HIGH_CONTRAST, e.matches)
   },
   handlePrefersForcedColorsChanged(e) {
-    N(r.AccessibilityFeatureFlags.FORCED_COLORS, e.matches)
+    E(s.AccessibilityFeatureFlags.FORCED_COLORS, e.matches)
   },
   handleInvertColorsChanged(e) {
-    N(r.AccessibilityFeatureFlags.INVERT_COLORS, e.matches)
+    E(s.AccessibilityFeatureFlags.INVERT_COLORS, e.matches)
   },
   handleAccessibilityStoreChanged() {
-    N(r.AccessibilityFeatureFlags.REDUCED_MOTION, n.default.useReducedMotion), N(r.AccessibilityFeatureFlags.REDUCED_MOTION_FROM_USER_SETTINGS, "auto" !== n.default.rawPrefersReducedMotion), N(r.AccessibilityFeatureFlags.FORCED_COLORS_FROM_USER_SETTINGS, n.default.syncForcedColors), N(r.AccessibilityFeatureFlags.CHAT_FONT_SCALE_DECREASED, n.default.isFontScaledDown), N(r.AccessibilityFeatureFlags.CHAT_FONT_SCALE_INCREASED, n.default.isFontScaledUp), N(r.AccessibilityFeatureFlags.ZOOM_LEVEL_DECREASED, n.default.isZoomedOut), N(r.AccessibilityFeatureFlags.ZOOM_LEVEL_INCREASED, n.default.isZoomedIn), N(r.AccessibilityFeatureFlags.MESSAGE_GROUP_SPACING_DECREASED, n.default.isMessageGroupSpacingDecreased), N(r.AccessibilityFeatureFlags.MESSAGE_GROUP_SPACING_INCREASED, n.default.isMessageGroupSpacingIncreased), N(r.AccessibilityFeatureFlags.DARK_SIDEBAR, t.default.darkSidebar), N(r.AccessibilityFeatureFlags.SATURATION_LEVEL_DECREASED, n.default.saturation < 1), N(r.AccessibilityFeatureFlags.ROLE_STYLE_ADJUSTED, "username" !== n.default.roleStyle), N(r.AccessibilityFeatureFlags.SYNC_PROFILE_THEME_WITH_USER_THEME, n.default.syncProfileThemeWithUserTheme)
+    E(s.AccessibilityFeatureFlags.REDUCED_MOTION, l.default.useReducedMotion), E(s.AccessibilityFeatureFlags.REDUCED_MOTION_FROM_USER_SETTINGS, "auto" !== l.default.rawPrefersReducedMotion), E(s.AccessibilityFeatureFlags.FORCED_COLORS_FROM_USER_SETTINGS, l.default.syncForcedColors), E(s.AccessibilityFeatureFlags.CHAT_FONT_SCALE_DECREASED, l.default.isFontScaledDown), E(s.AccessibilityFeatureFlags.CHAT_FONT_SCALE_INCREASED, l.default.isFontScaledUp), E(s.AccessibilityFeatureFlags.ZOOM_LEVEL_DECREASED, l.default.isZoomedOut), E(s.AccessibilityFeatureFlags.ZOOM_LEVEL_INCREASED, l.default.isZoomedIn), E(s.AccessibilityFeatureFlags.MESSAGE_GROUP_SPACING_DECREASED, l.default.isMessageGroupSpacingDecreased), E(s.AccessibilityFeatureFlags.MESSAGE_GROUP_SPACING_INCREASED, l.default.isMessageGroupSpacingIncreased), E(s.AccessibilityFeatureFlags.DARK_SIDEBAR, i.default.darkSidebar), E(s.AccessibilityFeatureFlags.SATURATION_LEVEL_DECREASED, l.default.saturation < 1), E(s.AccessibilityFeatureFlags.ROLE_STYLE_ADJUSTED, "username" !== l.default.roleStyle), E(s.AccessibilityFeatureFlags.SYNC_PROFILE_THEME_WITH_USER_THEME, l.default.syncProfileThemeWithUserTheme)
   }
 }

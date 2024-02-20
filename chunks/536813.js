@@ -1,80 +1,80 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return h
+    return v
   }
-}), E("222007");
-var t = E("917351"),
-  o = E.n(t),
-  n = E("862337"),
-  r = E("689988"),
-  i = E("271938"),
-  a = E("718517"),
-  I = E("709681"),
-  s = E("636371"),
-  T = E("170152"),
-  S = E("391591");
-let N = 15 * a.default.Millis.SECOND,
-  O = 15 * a.default.Millis.SECOND,
-  A = ["\uD83C\uDDE9", "\uD83C\uDDF4", "\uD83C\uDDF9", "\uD83C\uDDE6"],
-  R = A.length,
-  l = function(e, _) {
-    let E = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return "".concat(e, ":").concat(_, ":").concat(E)
+}), n("222007");
+var i = n("917351"),
+  a = n.n(i),
+  l = n("862337"),
+  s = n("689988"),
+  r = n("271938"),
+  o = n("718517"),
+  u = n("709681"),
+  d = n("636371"),
+  c = n("170152"),
+  f = n("391591");
+let E = 15 * o.default.Millis.SECOND,
+  h = 15 * o.default.Millis.SECOND,
+  _ = ["\uD83C\uDDE9", "\uD83C\uDDF4", "\uD83C\uDDF9", "\uD83C\uDDE6"],
+  C = _.length,
+  S = function(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    return "".concat(e, ":").concat(t, ":").concat(n)
   },
-  u = new n.Timeout,
-  L = [],
-  C = {},
-  D = (0, I.createSound)("highfive_whistle", "highfive_whistle", .6),
-  c = (0, I.createSound)("highfive_clap", "highfive_clap", .6);
+  g = new l.Timeout,
+  T = [],
+  m = {},
+  p = (0, u.createSound)("highfive_whistle", "highfive_whistle", .6),
+  I = (0, u.createSound)("highfive_clap", "highfive_clap", .6);
 
-function d(e) {
+function A(e) {
   let {
-    emoji: _,
-    channelId: E,
-    userId: t
-  } = e, r = i.default.getId(), a = T.default.getEnabled();
-  if (null != _) {
-    if (a && (0, S.default)(_.name)) return function(e, _, E) {
-      var t;
-      let o = l(_, E);
-      if (null != T.default.getWaitingHighFive(E, _)) return;
-      let [r, i] = null !== (t = Object.entries(C).find(e => {
-        let [_] = e;
-        return _ !== o
-      })) && void 0 !== t ? t : [];
-      if (null != r && null != i) i.cancel(), c.play(), delete C[r], (0, s.completeHighFive)(r.split(":")[0], _, E, e);
+    emoji: t,
+    channelId: n,
+    userId: i
+  } = e, s = r.default.getId(), o = c.default.getEnabled();
+  if (null != t) {
+    if (o && (0, f.default)(t.name)) return function(e, t, n) {
+      var i;
+      let a = S(t, n);
+      if (null != c.default.getWaitingHighFive(n, t)) return;
+      let [s, r] = null !== (i = Object.entries(m).find(e => {
+        let [t] = e;
+        return t !== a
+      })) && void 0 !== i ? i : [];
+      if (null != s && null != r) r.cancel(), I.play(), delete m[s], (0, d.completeHighFive)(s.split(":")[0], t, n, e);
       else {
-        (0, s.queueHighFive)(e, _, E), D.play();
-        let t = new n.DelayedCall(O, () => {
-          delete C[_], (0, s.removeHighFive)(_, E)
+        (0, d.queueHighFive)(e, t, n), p.play();
+        let i = new l.DelayedCall(h, () => {
+          delete m[t], (0, d.removeHighFive)(t, n)
         });
-        C[_] = t, t.delay()
+        m[t] = i, i.delay()
       }
-    }(_.name, t, E);
-    t === r && (L = [...L, _.name].slice(-1 * R), o.isEqual(L, A) ? (D.play(), u.stop(), L = [], (0, s.setHighFiveEnabled)(!a)) : u.start(N, () => L = []))
+    }(t.name, i, n);
+    i === s && (T = [...T, t.name].slice(-1 * C), a.isEqual(T, _) ? (p.play(), g.stop(), T = [], (0, d.setHighFiveEnabled)(!o)) : g.start(E, () => T = []))
   }
 }
 
-function U(e) {
+function N(e) {
   let {
-    completingUserId: _,
-    waitingUserId: E,
-    channelId: t
-  } = e, o = l(_ + E, t, !0);
-  C[o] = new n.DelayedCall(550, () => {
-    delete C[o], (0, s.clearCompletedHighFive)(_, E, t)
-  }), C[o].delay()
+    completingUserId: t,
+    waitingUserId: n,
+    channelId: i
+  } = e, a = S(t + n, i, !0);
+  m[a] = new l.DelayedCall(550, () => {
+    delete m[a], (0, d.clearCompletedHighFive)(t, n, i)
+  }), m[a].delay()
 }
-class M extends r.default {
+class O extends s.default {
   _terminate() {
-    Object.values(C).forEach(e => e.cancel()), C = {}
+    Object.values(m).forEach(e => e.cancel()), m = {}
   }
   constructor(...e) {
     super(...e), this.actions = {
-      VOICE_CHANNEL_EFFECT_SEND: d,
-      HIGH_FIVE_COMPLETE: U
+      VOICE_CHANNEL_EFFECT_SEND: A,
+      HIGH_FIVE_COMPLETE: N
     }
   }
 }
-var h = new M
+var v = new O

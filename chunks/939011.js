@@ -1,58 +1,58 @@
 "use strict";
 n.r(t), n.d(t, {
   setCurrentImpression: function() {
-    return o
-  },
-  cleanupImpression: function() {
-    return l
-  },
-  setDebugTrackedData: function() {
     return u
   },
+  cleanupImpression: function() {
+    return a
+  },
+  setDebugTrackedData: function() {
+    return s
+  },
   useImpressionStore: function() {
-    return c
+    return E
   },
   getLocation: function() {
-    return d
+    return _
   },
   getImpressionStack: function() {
-    return f
+    return c
   }
 }), n("222007");
-var i = n("308503"),
-  r = n("759843");
-let s = Object.freeze({
+var r = n("308503"),
+  i = n("759843");
+let o = Object.freeze({
     debugTrackedData: null,
     impressions: []
   }),
-  a = (0, i.default)(e => s),
-  o = e => {
-    a.setState(t => ({
+  l = (0, r.default)(e => o),
+  u = e => {
+    l.setState(t => ({
       impressions: [...t.impressions, e]
     }))
   },
-  l = e => {
-    a.setState(t => ({
+  a = e => {
+    l.setState(t => ({
       impressions: t.impressions.filter(t => t.sequenceId !== e.sequenceId)
     }))
   },
-  u = (e, t) => {
-    a.setState(() => ({
+  s = (e, t) => {
+    l.setState(() => ({
       debugTrackedData: {
         name: e,
         ...t
       }
     }))
   },
-  c = a;
+  E = l;
 
-function d() {
+function _() {
   let e = {};
-  return a.getState().impressions.forEach(t => {
-    t.type === r.ImpressionTypes.PAGE ? e.page = t.name : e.section = t.name
+  return l.getState().impressions.forEach(t => {
+    t.type === i.ImpressionTypes.PAGE ? e.page = t.name : e.section = t.name
   }), e
 }
 
-function f() {
-  return a.getState().impressions
+function c() {
+  return l.getState().impressions
 }

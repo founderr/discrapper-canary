@@ -1,17 +1,17 @@
 "use strict";
 n("854508"), n("781738"), e.exports = function(e, t, n, r, a) {
   this.directMap[e + ":" + n] = t;
-  var o, i = (e = e.replace(/\s+/g, " ")).split(" ");
-  if (i.length > 1) {
-    this.bindSequence(e, i, t, n);
+  var i, o = (e = e.replace(/\s+/g, " ")).split(" ");
+  if (o.length > 1) {
+    this.bindSequence(e, o, t, n);
     return
   }
-  o = this.getKeyInfo(e, n), this.callbacks[o.key] = this.callbacks[o.key] || [], this.getMatches(o.key, o.modifiers, {
-    type: o.action
-  }, r, e, a), this.callbacks[o.key][r ? "unshift" : "push"]({
+  i = this.getKeyInfo(e, n), this.callbacks[i.key] = this.callbacks[i.key] || [], this.getMatches(i.key, i.modifiers, {
+    type: i.action
+  }, r, e, a), this.callbacks[i.key][r ? "unshift" : "push"]({
     callback: t,
-    modifiers: o.modifiers,
-    action: o.action,
+    modifiers: i.modifiers,
+    action: i.action,
     seq: r,
     level: a,
     combo: e

@@ -1,16 +1,16 @@
-"function" == typeof Object.create ? e.exports = function(e, t) {
-  t && (e.super_ = t, e.prototype = Object.create(t.prototype, {
+"function" == typeof Object.create ? t.exports = function(t, e) {
+  e && (t.super_ = e, t.prototype = Object.create(e.prototype, {
     constructor: {
-      value: e,
+      value: t,
       enumerable: !1,
       writable: !0,
       configurable: !0
     }
   }))
-} : e.exports = function(e, t) {
-  if (t) {
-    e.super_ = t;
-    var n = function() {};
-    n.prototype = t.prototype, e.prototype = new n, e.prototype.constructor = e
+} : t.exports = function(t, e) {
+  if (e) {
+    t.super_ = e;
+    var r = function() {};
+    r.prototype = e.prototype, t.prototype = new r, t.prototype.constructor = t
   }
 }

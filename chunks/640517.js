@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return i
   },
   throwProtectedError: function() {
-    return s
+    return u
   }
 }), n("70102");
 var r = ["D", "DD"],
@@ -21,7 +21,7 @@ function i(e) {
   return -1 !== a.indexOf(e)
 }
 
-function s(e, t, n) {
+function u(e, t, n) {
   if ("YYYY" === e) throw RangeError("Use `yyyy` instead of `YYYY` (in `".concat(t, "`) for formatting years to the input `").concat(n, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
   if ("YY" === e) throw RangeError("Use `yy` instead of `YY` (in `".concat(t, "`) for formatting years to the input `").concat(n, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));
   if ("D" === e) throw RangeError("Use `d` instead of `D` (in `".concat(t, "`) for formatting days of the month to the input `").concat(n, "`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md"));

@@ -1,74 +1,74 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return R
+    return C
   }
 });
-var t = E("446674"),
-  o = E("913144"),
-  n = E("271938"),
-  r = E("42203"),
-  i = E("42887"),
-  a = E("957255"),
-  I = E("945956"),
-  s = E("800762"),
-  T = E("49111");
-let S = !0,
-  N = !0;
+var i = n("446674"),
+  a = n("913144"),
+  l = n("271938"),
+  s = n("42203"),
+  r = n("42887"),
+  o = n("957255"),
+  u = n("945956"),
+  d = n("800762"),
+  c = n("49111");
+let f = !0,
+  E = !0;
 
-function O() {
+function h() {
   let e;
-  let _ = I.default.getChannelId();
-  if (null == _) e = !0;
+  let t = u.default.getChannelId();
+  if (null == t) e = !0;
   else {
-    var E;
-    let t = r.default.getChannel(_),
-      o = s.default.getVoiceState(null == t ? void 0 : t.getGuildId(), n.default.getId());
-    e = i.default.getMode() !== T.InputModes.VOICE_ACTIVITY || null == t || t.isPrivate() || t.isGuildStageVoice() || a.default.can(T.Permissions.USE_VAD, t) || null == (E = o) || !!E.suppress || null != E.requestToSpeakTimestamp || !1
+    var n;
+    let i = s.default.getChannel(t),
+      a = d.default.getVoiceState(null == i ? void 0 : i.getGuildId(), l.default.getId());
+    e = r.default.getMode() !== c.InputModes.VOICE_ACTIVITY || null == i || i.isPrivate() || i.isGuildStageVoice() || o.default.can(c.Permissions.USE_VAD, i) || null == (n = a) || !!n.suppress || null != n.requestToSpeakTimestamp || !1
   }
-  if (S === e) return !1;
-  N = e, S = e, o.default.dispatch({
+  if (f === e) return !1;
+  E = e, f = e, a.default.dispatch({
     type: "SET_VAD_PERMISSION",
-    hasPermission: S
+    hasPermission: f
   })
 }
-class A extends t.default.Store {
+class _ extends i.default.Store {
   initialize() {
-    this.waitFor(a.default, i.default, I.default, s.default)
+    this.waitFor(o.default, r.default, u.default, d.default)
   }
   shouldShowWarning() {
-    return !N
+    return !E
   }
   canUseVoiceActivity() {
-    return S
+    return f
   }
 }
-A.displayName = "PermissionVADStore";
-var R = new A(o.default, {
-  RTC_CONNECTION_STATE: O,
-  MEDIA_ENGINE_SET_AUDIO_ENABLED: O,
-  AUDIO_SET_MODE: O,
-  CHANNEL_UPDATES: O,
-  THREAD_UPDATE: O,
-  GUILD_ROLE_UPDATE: O,
-  GUILD_MEMBER_UPDATE: O,
-  IMPERSONATE_UPDATE: O,
-  IMPERSONATE_STOP: O,
+_.displayName = "PermissionVADStore";
+var C = new _(a.default, {
+  RTC_CONNECTION_STATE: h,
+  MEDIA_ENGINE_SET_AUDIO_ENABLED: h,
+  AUDIO_SET_MODE: h,
+  CHANNEL_UPDATES: h,
+  THREAD_UPDATE: h,
+  GUILD_ROLE_UPDATE: h,
+  GUILD_MEMBER_UPDATE: h,
+  IMPERSONATE_UPDATE: h,
+  IMPERSONATE_STOP: h,
   VOICE_STATE_UPDATES: function(e) {
     let {
-      voiceStates: _
+      voiceStates: t
     } = e;
-    return _.some(e => {
+    return t.some(e => {
       let {
-        userId: _
+        userId: t
       } = e;
-      return _ === n.default.getId() && O()
+      return t === l.default.getId() && h()
     })
   },
   AUDIO_TOGGLE_SELF_MUTE: function() {
-    N = S
+    E = f
   },
   PERMISSION_CLEAR_VAD_WARNING: function() {
-    N = !0
+    E = !0
   }
 })

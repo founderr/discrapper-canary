@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return n
+    return a
   }
 }), l("222007");
-var a = l("42887");
+var n = l("42887");
 
-function n() {
-  let e = a.default.getVideoDevices(),
+function a() {
+  let e = n.default.getVideoDevices(),
     t = Object.entries(e).map(e => {
       let [t, l] = e;
       return {

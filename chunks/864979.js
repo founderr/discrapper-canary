@@ -1,10 +1,10 @@
-n("781738");
-var i = n("509007"),
-  a = n("109129"),
-  l = n("787191"),
-  s = RegExp("['’]", "g");
+t("781738");
+var u = t("509007"),
+  f = t("109129"),
+  o = t("787191"),
+  r = RegExp("['’]", "g");
 e.exports = function(e) {
-  return function(t) {
-    return i(l(a(t).replace(s, "")), e, "")
+  return function(n) {
+    return u(o(f(n).replace(r, "")), e, "")
   }
 }

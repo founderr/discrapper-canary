@@ -1,8 +1,8 @@
 "use strict";
-var t, o, n;
+var t, o, I;
 E.r(_), E.d(_, {
   INVALID_FORM_BODY_ERROR_CODE: function() {
-    return r
+    return T
   },
   CaptchaTypes: function() {
     return t
@@ -11,14 +11,14 @@ E.r(_), E.d(_, {
     return o
   }
 }), E("222007");
-let r = 50035;
+let T = 50035;
 
-function i(e) {
+function r(e) {
   return e.map(e => ({
     code: "UNKNOWN",
     message: e
   }))
-}(n = t || (t = {})).HCAPTCHA = "hcaptcha", n.RECAPTCHA = "recaptcha";
+}(I = t || (t = {})).HCAPTCHA = "hcaptcha", I.RECAPTCHA = "recaptcha";
 o = class {
   hasFieldErrors() {
     return null != this.errors && Object.keys(this.errors).length > 0
@@ -53,10 +53,10 @@ o = class {
     let {
       message: t,
       code: o,
-      retryAfter: n,
+      retryAfter: I,
       errors: a,
-      status: I,
-      captchaFields: s
+      status: n,
+      captchaFields: i
     } = function(e, _) {
       if ("string" == typeof e) return {
         message: e,
@@ -73,16 +73,16 @@ o = class {
         message: E.captcha_key.length > 0 ? E.captcha_key[0] : void 0
       } : {
         status: e.status,
-        code: r,
+        code: T,
         errors: function(e) {
           let _ = {};
           for (let [E, t] of Object.entries(e)) {
             if ("_misc" === E) {
-              _._errors = i(t);
+              _._errors = r(t);
               continue
             }
             let e = {};
-            e._errors = i(t), _[E] = e
+            e._errors = r(t), _[E] = e
           }
           return _
         }(E)
@@ -94,6 +94,6 @@ o = class {
         status: e.status
       }
     }(e, _);
-    this.message = null != t ? t : E, this.code = null != o ? o : -1, this.retryAfter = n, this.errors = a, this.status = I, this.captchaFields = null != s ? s : {}
+    this.message = null != t ? t : E, this.code = null != o ? o : -1, this.retryAfter = I, this.errors = a, this.status = n, this.captchaFields = null != i ? i : {}
   }
 }

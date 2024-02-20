@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return d
   },
   FormErrorBlock: function() {
-    return f
+    return p
   }
 });
 var i = n("37983"),
@@ -20,27 +20,27 @@ let d = {
     BACKGROUND_TERTIARY: c.backgroundTertiary,
     BACKGROUND_ACCENT: c.backgroundAccent
   },
-  f = r.forwardRef(function(e, t) {
+  p = r.forwardRef(function(e, t) {
     let {
       role: n,
       children: r,
       className: s,
-      onDismiss: f,
-      backgroundColor: E = d.RED,
-      icon: p = u.default,
-      iconClassName: h
+      onDismiss: p,
+      backgroundColor: h = d.RED,
+      icon: f = u.default,
+      iconClassName: E
     } = e;
     return (0, i.jsxs)("div", {
-      className: a(c.error, s, E),
+      className: a(c.error, s, h),
       ref: t,
-      children: [(0, i.jsx)(p, {
-        className: a(c.icon, h)
+      children: [(0, i.jsx)(f, {
+        className: a(c.icon, E)
       }), (0, i.jsx)("div", {
         role: n,
         className: c.text,
         children: r
-      }), null != f ? (0, i.jsx)(o.Clickable, {
-        onClick: f,
+      }), null != p ? (0, i.jsx)(o.Clickable, {
+        onClick: p,
         className: c.errorClose,
         children: (0, i.jsx)(l.default, {
           className: c.errorCloseIcon

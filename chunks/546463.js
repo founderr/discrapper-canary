@@ -12,14 +12,14 @@ var r, s = n("446674"),
   u = n("653047"),
   c = n("773336");
 let d = "GameStoreReportedGames",
-  f = {},
-  E = {},
   p = {},
-  h = null !== (r = a.default.get(d)) && void 0 !== r ? r : {},
+  h = {},
+  f = {},
+  E = null !== (r = a.default.get(d)) && void 0 !== r ? r : {},
   _ = "";
-let S = null;
+let m = null;
 
-function m(e) {
+function S(e) {
   return {
     id: e.id,
     name: e.name,
@@ -33,36 +33,36 @@ function m(e) {
   }
 }
 
-function T(e) {
-  let t = e instanceof u.default ? m(e) : e;
-  for (let n of (f[e.id] = t, E[e.name.toLowerCase()] = t, e.aliases)) E[n.toLowerCase()] = t;
+function g(e) {
+  let t = e instanceof u.default ? S(e) : e;
+  for (let n of (p[e.id] = t, h[e.name.toLowerCase()] = t, e.aliases)) h[n.toLowerCase()] = t;
   if ((0, c.isDesktop)())
-    for (let n of e.executables) p[n.name] = t
+    for (let n of e.executables) f[n.name] = t
 }
-class g extends s.default.PersistedStore {
+class T extends s.default.PersistedStore {
   initialize(e) {
     var t;
-    null != e && (null != e.detectableGamesEtag && (_ = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => T(e)))
+    null != e && (null != e.detectableGamesEtag && (_ = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => g(e)))
   }
   getState() {
     return (0, c.isDesktop)() ? {
       detectableGamesEtag: _,
-      detectableGames: Object.values(f)
+      detectableGames: Object.values(p)
     } : {
       detectableGamesEtag: "",
       detectableGames: []
     }
   }
   get games() {
-    return Object.values(f)
+    return Object.values(p)
   }
   getDetectableGame(e) {
-    return f[e]
+    return p[e]
   }
   getGameByName(e) {
     if (null == e) return null;
     let t = e.toLowerCase();
-    return Object.prototype.hasOwnProperty.call(E, t) ? E[t] : null
+    return Object.prototype.hasOwnProperty.call(h, t) ? h[t] : null
   }
   get fetching() {
     return !0 === i
@@ -71,10 +71,10 @@ class g extends s.default.PersistedStore {
     return _
   }
   get lastFetched() {
-    return S
+    return m
   }
   getGameByExecutable(e) {
-    return p[e]
+    return f[e]
   }
   getGameByGameData(e) {
     var t, n;
@@ -92,14 +92,14 @@ class g extends s.default.PersistedStore {
   }
   shouldReport(e) {
     let t = null != this.getGameByName(e),
-      n = null != h[e];
+      n = null != E[e];
     return l.ShowCurrentGame.getSetting() && !i && !(t || n)
   }
   markGameReported(e) {
-    h[e] = !0, a.default.set(d, h)
+    E[e] = !0, a.default.set(d, E)
   }
 }
-g.displayName = "GameStore", g.persistKey = "GameStore", g.migrations = [e => {
+T.displayName = "GameStore", T.persistKey = "GameStore", T.migrations = [e => {
   var t, n;
   if (null == e) return {
     detectableGamesEtag: "",
@@ -107,18 +107,18 @@ g.displayName = "GameStore", g.persistKey = "GameStore", g.migrations = [e => {
   };
   return {
     detectableGamesEtag: e.detectableGamesEtag,
-    detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map(e => m(new u.default(e)))) && void 0 !== n ? n : []
+    detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map(e => S(new u.default(e)))) && void 0 !== n ? n : []
   }
 }, e => (0, c.isDesktop)() ? e : {
   detectableGamesEtag: "",
   detectableGames: []
 }];
-var I = new g(o.default, {
+var I = new T(o.default, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       detectableApplications: t
     } = e;
-    for (let e of t) T(e)
+    for (let e of t) g(e)
   },
   GAMES_DATABASE_FETCH: function() {
     i = !0
@@ -131,7 +131,7 @@ var I = new g(o.default, {
       games: t,
       etag: n
     } = e;
-    for (let e of (null != n && _ !== n && (_ = n), t)) T(function(e) {
+    for (let e of (null != n && _ !== n && (_ = n), t)) g(function(e) {
       var t, n, i, r, s, a;
       return {
         id: e.id,
@@ -145,6 +145,6 @@ var I = new g(o.default, {
         supportsOutOfProcessOverlay: u.default.supportsOutOfProcessOverlay(e.overlay_methods)
       }
     }(e));
-    i = void 0, S = Date.now()
+    i = void 0, m = Date.now()
   }
 })

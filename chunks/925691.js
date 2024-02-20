@@ -1,37 +1,37 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   isSVG: function() {
-    return r
+    return n
   },
   isHidden: function() {
-    return a
+    return i
   },
   isElement: function() {
     return o
   },
   isReplacedElement: function() {
-    return i
+    return s
   }
 });
-var r = function(e) {
+var n = function(e) {
     return e instanceof SVGElement && "getBBox" in e
   },
-  a = function(e) {
-    if (r(e)) {
+  i = function(e) {
+    if (n(e)) {
       var t = e.getBBox(),
-        n = t.width,
-        a = t.height;
-      return !n && !a
+        r = t.width,
+        i = t.height;
+      return !r && !i
     }
     var o = e.offsetWidth,
-      i = e.offsetHeight;
-    return !(o || i || e.getClientRects().length)
+      s = e.offsetHeight;
+    return !(o || s || e.getClientRects().length)
   },
   o = function(e) {
-    var t, n = null === (t = null == e ? void 0 : e.ownerDocument) || void 0 === t ? void 0 : t.defaultView;
-    return !!(n && e instanceof n.Element)
+    var t, r = null === (t = null == e ? void 0 : e.ownerDocument) || void 0 === t ? void 0 : t.defaultView;
+    return !!(r && e instanceof r.Element)
   },
-  i = function(e) {
+  s = function(e) {
     switch (e.tagName) {
       case "INPUT":
         if ("image" !== e.type) break;

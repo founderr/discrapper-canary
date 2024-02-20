@@ -1,12 +1,12 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   DOMRectReadOnly: function() {
     return DOMRectReadOnly
   }
-}), n("274635");
+}), r("274635");
 var DOMRectReadOnly = function() {
-  function DOMRectReadOnly(e, t, n, r) {
-    return this.x = e, this.y = t, this.width = n, this.height = r, this.top = this.y, this.left = this.x, this.bottom = this.top + this.height, this.right = this.left + this.width, Object.freeze(this)
+  function DOMRectReadOnly(e, t, r, n) {
+    return this.x = e, this.y = t, this.width = r, this.height = n, this.top = this.y, this.left = this.x, this.bottom = this.top + this.height, this.right = this.left + this.width, Object.freeze(this)
   }
   return DOMRectReadOnly.prototype.toJSON = function() {
     return {

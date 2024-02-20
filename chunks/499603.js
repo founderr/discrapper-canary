@@ -16,7 +16,7 @@ function i(e, t, n, r) {
   this.id = e, this.offset = t, this.numberFormat = n, this.string = r
 }
 
-function s(e, t) {
+function u(e, t) {
   this.id = e, this.options = t
 }
 n("70102"), n("424973"), n("781738"), t.default = r, r.prototype.compile = function(e) {
@@ -43,7 +43,7 @@ n("70102"), n("424973"), n("781738"), t.default = r, r.prototype.compile = funct
   if (!t) return new a(e.id);
   var n, r = this.formats,
     i = this.locales,
-    u = this.pluralFn;
+    s = this.pluralFn;
   switch (t.type) {
     case "numberFormat":
       return n = r.number[t.style], {
@@ -61,9 +61,9 @@ n("70102"), n("424973"), n("781738"), t.default = r, r.prototype.compile = funct
         format: new Intl.DateTimeFormat(i, n).format
       };
     case "pluralFormat":
-      return n = this.compileOptions(e), new o(e.id, t.ordinal, t.offset, n, u);
+      return n = this.compileOptions(e), new o(e.id, t.ordinal, t.offset, n, s);
     case "selectFormat":
-      return n = this.compileOptions(e), new s(e.id, n);
+      return n = this.compileOptions(e), new u(e.id, n);
     default:
       throw Error("Message element does not have a valid format type")
   }
@@ -81,7 +81,7 @@ n("70102"), n("424973"), n("781738"), t.default = r, r.prototype.compile = funct
 }, i.prototype.format = function(e) {
   var t = this.numberFormat.format(e - this.offset);
   return this.string.replace(/(^|[^\\])#/g, "$1" + t).replace(/\\#/g, "#")
-}, s.prototype.getOption = function(e) {
+}, u.prototype.getOption = function(e) {
   var t = this.options;
   return t[e] || t.other
 }

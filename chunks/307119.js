@@ -1,38 +1,38 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   ResizeObserverController: function() {
-    return l
+    return c
   }
-}), n("222007"), n("424973");
-var r = n("293293"),
-  a = n("147973"),
-  o = n("278703"),
-  i = n("514825"),
-  s = new WeakMap,
+}), r("222007"), r("424973");
+var n = r("293293"),
+  i = r("147973"),
+  o = r("278703"),
+  s = r("514825"),
+  a = new WeakMap,
   u = function(e, t) {
-    for (var n = 0; n < e.length; n += 1)
-      if (e[n].target === t) return n;
+    for (var r = 0; r < e.length; r += 1)
+      if (e[r].target === t) return r;
     return -1
   },
-  l = function() {
+  c = function() {
     function e() {}
     return e.connect = function(e, t) {
-      var n = new o.ResizeObserverDetail(e, t);
-      s.set(e, n)
-    }, e.observe = function(e, t, n) {
-      var o = s.get(e),
-        l = 0 === o.observationTargets.length;
-      0 > u(o.observationTargets, t) && (l && i.resizeObservers.push(o), o.observationTargets.push(new a.ResizeObservation(t, n && n.box)), (0, r.updateCount)(1), r.scheduler.schedule())
+      var r = new o.ResizeObserverDetail(e, t);
+      a.set(e, r)
+    }, e.observe = function(e, t, r) {
+      var o = a.get(e),
+        c = 0 === o.observationTargets.length;
+      0 > u(o.observationTargets, t) && (c && s.resizeObservers.push(o), o.observationTargets.push(new i.ResizeObservation(t, r && r.box)), (0, n.updateCount)(1), n.scheduler.schedule())
     }, e.unobserve = function(e, t) {
-      var n = s.get(e),
-        a = u(n.observationTargets, t),
-        o = 1 === n.observationTargets.length;
-      a >= 0 && (o && i.resizeObservers.splice(i.resizeObservers.indexOf(n), 1), n.observationTargets.splice(a, 1), (0, r.updateCount)(-1))
+      var r = a.get(e),
+        i = u(r.observationTargets, t),
+        o = 1 === r.observationTargets.length;
+      i >= 0 && (o && s.resizeObservers.splice(s.resizeObservers.indexOf(r), 1), r.observationTargets.splice(i, 1), (0, n.updateCount)(-1))
     }, e.disconnect = function(e) {
       var t = this,
-        n = s.get(e);
-      n.observationTargets.slice().forEach(function(n) {
-        return t.unobserve(e, n.target)
-      }), n.activeTargets.splice(0, n.activeTargets.length)
+        r = a.get(e);
+      r.observationTargets.slice().forEach(function(r) {
+        return t.unobserve(e, r.target)
+      }), r.activeTargets.splice(0, r.activeTargets.length)
     }, e
   }()

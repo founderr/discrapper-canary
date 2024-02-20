@@ -1,23 +1,23 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return t
+    return i
   }
-}), E("222007");
-var t, o = E("907002");
+}), n("222007");
+var i, a = n("907002");
 
-function n(e, _) {
-  let E = e.findIndex(_);
-  return E < 0 ? e.length : E
+function l(e, t) {
+  let n = e.findIndex(t);
+  return n < 0 ? e.length : n
 }
-t = class extends o.FrameLoop {
-  setRAF(e, _) {
-    0 !== this.id && (this._cancelAnimationFrame(this.id), this.id = 0), this._requestAnimationFrame = e, this._cancelAnimationFrame = _, this.loop()
+i = class extends a.FrameLoop {
+  setRAF(e, t) {
+    0 !== this.id && (this._cancelAnimationFrame(this.id), this.id = 0), this._requestAnimationFrame = e, this._cancelAnimationFrame = t, this.loop()
   }
   constructor(...e) {
     super(...e), this._requestAnimationFrame = e => requestAnimationFrame(e), this._cancelAnimationFrame = e => cancelAnimationFrame(e), this.writing = !1, this.id = 0, this.lastTime = 0, this.animations = [], this.priority = 0, this.startQueue = new Set, this.frameQueue = new Set, this.writeQueue = new Set, this.timeoutQueue = [], this.addAnimation = e => {
-      let _ = this.animations.indexOf(e);
-      _ < 0 && (_ = this.animations.findIndex(_ => _.priority > e.priority), this.animations.splice(0 != ~_ ? _ : this.animations.length, 0, e))
+      let t = this.animations.indexOf(e);
+      t < 0 && (t = this.animations.findIndex(t => t.priority > e.priority), this.animations.splice(0 != ~t ? t : this.animations.length, 0, e))
     }, this.loop = () => {
       if (0 !== this.lastTime) try {
         this.advance()
@@ -27,33 +27,33 @@ t = class extends o.FrameLoop {
         this.animations.length > 0 || this.startQueue.size > 0 || this.frameQueue.size > 0 || this.writeQueue.size > 0 || this.timeoutQueue.length > 0 ? this.id = this._requestAnimationFrame(this.loop) : (this.lastTime = 0, this.id = 0)
       }
     }, this.startLoop = () => {
-      !(this.lastTime > 0) && (this.lastTime = o.Globals.now(), this.id = this._requestAnimationFrame(this.loop))
+      !(this.lastTime > 0) && (this.lastTime = a.Globals.now(), this.id = this._requestAnimationFrame(this.loop))
     }, this.advance = () => {
-      let e = o.Globals.now();
-      if (this.startQueue.size > 0 && (this.startQueue.forEach(this.addAnimation), this.startQueue.clear()), this.timeoutQueue.length > 0 && o.Globals.batchedUpdates(() => {
-          let _ = n(this.timeoutQueue, _ => _.time > e);
-          this.timeoutQueue.splice(0, _).forEach(e => e.handler())
+      let e = a.Globals.now();
+      if (this.startQueue.size > 0 && (this.startQueue.forEach(this.addAnimation), this.startQueue.clear()), this.timeoutQueue.length > 0 && a.Globals.batchedUpdates(() => {
+          let t = l(this.timeoutQueue, t => t.time > e);
+          this.timeoutQueue.splice(0, t).forEach(e => e.handler())
         }), e > this.lastTime) {
-        let _ = Math.min(64, e - this.lastTime);
-        this.lastTime = e, o.Globals.batchedUpdates(() => {
-          this.animations.length > 0 && (o.Globals.willAdvance(this.animations), this.animations = this.animations.filter(e => (this.priority = e.priority, !e.idle && e.advance(_), !e.idle)), this.priority = 0), this.frameQueue.size > 0 && (this.frameQueue.forEach(_ => _(e)), this.frameQueue.clear()), this.writeQueue.size > 0 && (this.writing = !0, this.writeQueue.forEach(_ => _(e)), this.writeQueue.clear(), this.writing = !1)
+        let t = Math.min(64, e - this.lastTime);
+        this.lastTime = e, a.Globals.batchedUpdates(() => {
+          this.animations.length > 0 && (a.Globals.willAdvance(this.animations), this.animations = this.animations.filter(e => (this.priority = e.priority, !e.idle && e.advance(t), !e.idle)), this.priority = 0), this.frameQueue.size > 0 && (this.frameQueue.forEach(t => t(e)), this.frameQueue.clear()), this.writeQueue.size > 0 && (this.writing = !0, this.writeQueue.forEach(t => t(e)), this.writeQueue.clear(), this.writing = !1)
         })
       }
     }, this.start = e => {
       this.priority > e.priority ? this.startQueue.add(e) : (this.addAnimation(e), this.startLoop())
-    }, this.setTimeout = (e, _) => {
-      let E = o.Globals.now() + _,
-        t = () => {
-          let e = this.timeoutQueue.findIndex(e => e.cancel === t);
+    }, this.setTimeout = (e, t) => {
+      let n = a.Globals.now() + t,
+        i = () => {
+          let e = this.timeoutQueue.findIndex(e => e.cancel === i);
           e >= 0 && this.timeoutQueue.splice(e, 1)
         },
-        r = n(this.timeoutQueue, e => e.time > E),
-        i = {
-          time: E,
+        s = l(this.timeoutQueue, e => e.time > n),
+        r = {
+          time: n,
           handler: e,
-          cancel: t
+          cancel: i
         };
-      return this.timeoutQueue.splice(r, 0, i), this.startLoop(), i
+      return this.timeoutQueue.splice(s, 0, r), this.startLoop(), r
     }, this.onFrame = e => {
       this.frameQueue.add(e), this.startLoop()
     }, this.onWrite = e => {

@@ -1,129 +1,129 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return I
   }
-}), E("222007");
-var t = E("862337"),
-  o = E("913144"),
-  n = E("990766"),
-  r = E("373469"),
-  i = E("271938"),
-  a = E("42203"),
-  I = E("590401"),
-  s = E("18494"),
-  T = E("205817"),
-  S = E("718517"),
-  N = E("374014"),
-  O = E("49111");
-let A = new t.Timeout,
-  R = new t.Timeout,
-  l = 5 * S.default.Millis.SECOND,
-  u = 12 * S.default.Millis.SECOND,
-  L = null;
+}), n("222007");
+var i = n("862337"),
+  a = n("913144"),
+  l = n("990766"),
+  s = n("373469"),
+  r = n("271938"),
+  o = n("42203"),
+  u = n("590401"),
+  d = n("18494"),
+  c = n("205817"),
+  f = n("718517"),
+  E = n("374014"),
+  h = n("49111");
+let _ = new i.Timeout,
+  C = new i.Timeout,
+  S = 5 * f.default.Millis.SECOND,
+  g = 12 * f.default.Millis.SECOND,
+  T = null;
 
-function C(e, _) {
-  if (s.default.getVoiceChannelId() !== e) return !1;
-  let E = a.default.getChannel(e);
-  if (null == E || !E.isDM() && !E.isGuildStageVoice()) return !1;
-  let t = r.default.getActiveStreamForUser(_, E.getGuildId());
-  if (null != t) return !1;
-  let o = r.default.getStreamForUser(_, E.getGuildId());
-  if (null == o) return !1;
-  let i = (0, N.encodeStreamKey)(o);
-  return i !== L && (L = i, (0, n.watchStream)(o, {
+function m(e, t) {
+  if (d.default.getVoiceChannelId() !== e) return !1;
+  let n = o.default.getChannel(e);
+  if (null == n || !n.isDM() && !n.isGuildStageVoice()) return !1;
+  let i = s.default.getActiveStreamForUser(t, n.getGuildId());
+  if (null != i) return !1;
+  let a = s.default.getStreamForUser(t, n.getGuildId());
+  if (null == a) return !1;
+  let r = (0, E.encodeStreamKey)(a);
+  return r !== T && (T = r, (0, l.watchStream)(a, {
     noFocus: !0
   }), !0)
 }
 
-function D(e, _) {
-  let E = null != _ ? _ : I.default.getPreferredRegion();
-  null != E && E !== I.default.getRegion(T.default.getHostname(T.default.getActiveStreamKey())) && (0, n.changeStreamRegion)(e, E)
+function p(e, t) {
+  let n = null != t ? t : u.default.getPreferredRegion();
+  null != n && n !== u.default.getRegion(c.default.getHostname(c.default.getActiveStreamKey())) && (0, l.changeStreamRegion)(e, n)
 }
-var c = {
+var I = {
   init() {
-    let e = (e, _) => {
-      !T.default.getAllActiveStreamKeys().includes(e) && R.start(_ ? u : l, () => {
-        o.default.dispatch({
+    let e = (e, t) => {
+      !c.default.getAllActiveStreamKeys().includes(e) && C.start(t ? g : S, () => {
+        a.default.dispatch({
           type: "STREAM_TIMED_OUT",
           streamKey: e
         })
       })
     };
-    o.default.subscribe("STREAM_WATCH", _ => {
+    a.default.subscribe("STREAM_WATCH", t => {
       let {
-        streamKey: E
-      } = _, {
+        streamKey: n
+      } = t, {
+        channelId: i
+      } = (0, E.decodeStreamKey)(n), a = o.default.getChannel(i);
+      e(n, null == a ? void 0 : a.isGuildStageVoice())
+    }), a.default.subscribe("STREAM_START", t => {
+      let {
+        streamType: n,
+        guildId: i,
+        channelId: a
+      } = t, l = o.default.getChannel(a);
+      e((0, E.encodeStreamKey)({
+        streamType: n,
+        guildId: i,
+        channelId: a,
+        ownerId: r.default.getId()
+      }), null == l ? void 0 : l.isGuildStageVoice())
+    }), a.default.subscribe("STREAM_CREATE", () => {
+      C.stop()
+    }), a.default.subscribe("STREAM_UPDATE", () => {
+      C.stop()
+    }), a.default.subscribe("STREAM_DELETE", () => {
+      C.stop()
+    }), a.default.subscribe("STREAM_CLOSE", () => {
+      _.stop(), C.stop()
+    }), a.default.subscribe("VOICE_CHANNEL_SELECT", e => {
+      let {
         channelId: t
-      } = (0, N.decodeStreamKey)(E), o = a.default.getChannel(t);
-      e(E, null == o ? void 0 : o.isGuildStageVoice())
-    }), o.default.subscribe("STREAM_START", _ => {
-      let {
-        streamType: E,
-        guildId: t,
-        channelId: o
-      } = _, n = a.default.getChannel(o);
-      e((0, N.encodeStreamKey)({
-        streamType: E,
-        guildId: t,
-        channelId: o,
-        ownerId: i.default.getId()
-      }), null == n ? void 0 : n.isGuildStageVoice())
-    }), o.default.subscribe("STREAM_CREATE", () => {
-      R.stop()
-    }), o.default.subscribe("STREAM_UPDATE", () => {
-      R.stop()
-    }), o.default.subscribe("STREAM_DELETE", () => {
-      R.stop()
-    }), o.default.subscribe("STREAM_CLOSE", () => {
-      A.stop(), R.stop()
-    }), o.default.subscribe("VOICE_CHANNEL_SELECT", e => {
-      let {
-        channelId: _
       } = e;
-      if (null == _) return;
-      L = null;
-      let E = r.default.getAllApplicationStreamsForChannel(_).filter(e => {
+      if (null == t) return;
+      T = null;
+      let n = s.default.getAllApplicationStreamsForChannel(t).filter(e => {
         let {
-          ownerId: _
+          ownerId: t
         } = e;
-        return _ !== i.default.getId()
+        return t !== r.default.getId()
       })[0];
-      null != E && C(_, E.ownerId)
-    }), o.default.subscribe("VOICE_STATE_UPDATES", e => {
+      null != n && m(t, n.ownerId)
+    }), a.default.subscribe("VOICE_STATE_UPDATES", e => {
       let {
-        voiceStates: _
+        voiceStates: t
       } = e;
-      _.forEach(e => {
+      t.forEach(e => {
         let {
-          userId: _,
-          channelId: E,
-          guildId: t,
-          selfStream: o
+          userId: t,
+          channelId: n,
+          guildId: i,
+          selfStream: a
         } = e;
-        if (_ !== i.default.getId() && null != E) {
-          if (o && C(E, _)) return;
-          let e = r.default.getActiveStreamForUser(_, t);
-          if (null != e && e.channelId === E && (!o && e.state !== O.ApplicationStreamStates.ENDED && A.start(18e4, () => (0, n.closeStream)((0, N.encodeStreamKey)(e), !1)), o && e.state === O.ApplicationStreamStates.ENDED)) {
-            A.stop();
-            let e = r.default.getStreamForUser(_, t);
+        if (t !== r.default.getId() && null != n) {
+          if (a && m(n, t)) return;
+          let e = s.default.getActiveStreamForUser(t, i);
+          if (null != e && e.channelId === n && (!a && e.state !== h.ApplicationStreamStates.ENDED && _.start(18e4, () => (0, l.closeStream)((0, E.encodeStreamKey)(e), !1)), a && e.state === h.ApplicationStreamStates.ENDED)) {
+            _.stop();
+            let e = s.default.getStreamForUser(t, i);
             if (null == e) return;
-            (0, n.watchStream)(e)
+            (0, l.watchStream)(e)
           }
         }
       })
-    }), o.default.subscribe("CALL_UPDATE", e => {
+    }), a.default.subscribe("CALL_UPDATE", e => {
       let {
-        channelId: _,
-        region: E
-      } = e, t = r.default.getCurrentUserActiveStream();
-      (null == t ? void 0 : t.channelId) === _ && D((0, N.encodeStreamKey)(t), E)
-    }), o.default.subscribe("CHANNEL_UPDATES", e => {
+        channelId: t,
+        region: n
+      } = e, i = s.default.getCurrentUserActiveStream();
+      (null == i ? void 0 : i.channelId) === t && p((0, E.encodeStreamKey)(i), n)
+    }), a.default.subscribe("CHANNEL_UPDATES", e => {
       let {
-        channels: _
-      } = e, E = r.default.getCurrentUserActiveStream();
-      if (null != E)
-        for (let e of _) E.channelId === e.id && D((0, N.encodeStreamKey)(E), e.rtcRegion)
+        channels: t
+      } = e, n = s.default.getCurrentUserActiveStream();
+      if (null != n)
+        for (let e of t) n.channelId === e.id && p((0, E.encodeStreamKey)(n), e.rtcRegion)
     })
   }
 }

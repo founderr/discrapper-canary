@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   },
   FormNoticeImagePositions: function() {
-    return f
+    return p
   },
   FormNotice: function() {
-    return E
+    return h
   }
 });
 var i = n("37983");
@@ -20,24 +20,24 @@ var r = n("414456"),
   u = n("818810"),
   c = n("468701");
 let d = a.Card.Types,
-  f = {
+  p = {
     LEFT: "left",
     RIGHT: "right"
   };
 
-function E(e) {
+function h(e) {
   let t, n, {
       type: r = a.Card.Types.DANGER,
       imageData: d,
-      button: E,
-      className: p,
-      iconClassName: h,
+      button: h,
+      className: f,
+      iconClassName: E,
       title: _,
-      body: S,
-      style: m,
-      align: T = o.default.Align.START
+      body: m,
+      style: S,
+      align: g = o.default.Align.START
     } = e,
-    g = o.default.Direction.HORIZONTAL;
+    T = o.default.Direction.HORIZONTAL;
   if (null != d) {
     let {
       position: e,
@@ -48,19 +48,19 @@ function E(e) {
       shrink: 0,
       children: (0, i.jsx)("img", {
         alt: "",
-        className: s(c.icon, h),
+        className: s(c.icon, E),
         ...n
       })
-    }), e === f.RIGHT && (g = o.default.Direction.HORIZONTAL_REVERSE)
-  } else null != E && (n = E);
+    }), e === p.RIGHT && (T = o.default.Direction.HORIZONTAL_REVERSE)
+  } else null != h && (n = h);
   let I = !0;
   return r === a.Card.Types.PRIMARY && (I = !1), (0, i.jsx)(a.Card, {
-    className: s(c.formNotice, p),
+    className: s(c.formNotice, f),
     type: r,
-    style: m,
+    style: S,
     children: (0, i.jsxs)(o.default, {
-      direction: g,
-      align: T,
+      direction: T,
+      align: g,
       children: [t, (0, i.jsxs)(o.default.Child, {
         children: [null != _ && "" !== _ ? (0, i.jsx)(u.FormTitle, {
           tag: u.FormTitleTags.H5,
@@ -73,10 +73,10 @@ function E(e) {
           className: s(c.formNoticeBody, {
             [c.whiteText]: I
           }),
-          children: S
+          children: m
         }), n]
       })]
     })
   })
 }
-E.Types = a.Card.Types
+h.Types = a.Card.Types

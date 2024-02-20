@@ -7,22 +7,22 @@ n.r(t), n.d(t, {
     return d
   },
   getBuildOverride: function() {
-    return f
-  },
-  getBuildOverrideMeta: function() {
-    return E
-  },
-  probablyHasBuildOverride: function() {
     return p
   },
-  getBuildOverrideExperiments: function() {
+  getBuildOverrideMeta: function() {
     return h
   },
+  probablyHasBuildOverride: function() {
+    return f
+  },
+  getBuildOverrideExperiments: function() {
+    return E
+  },
   isBuildOverrideLink: function() {
-    return S
+    return m
   },
   validateURL: function() {
-    return C
+    return v
   }
 }), n("101997"), n("222007");
 var i = n("160679"),
@@ -39,7 +39,7 @@ function d(e) {
   return "".concat(location.protocol, "//").concat(location.host).concat(e)
 }
 
-function f() {
+function p() {
   let e = o.default.safeParseWithQuery(d("/__development/build_overrides"));
   return null == e ? Promise.resolve(null) : (e.search = null, c && (e.query.version = c), s.default.get({
     url: r.format(e),
@@ -47,9 +47,9 @@ function f() {
   }).then(e => e.body || null, () => null))
 }
 
-function E(e) {
-  if (T(e)) return Promise.resolve(function(e) {
-    let t = e.match(m);
+function h(e) {
+  if (g(e)) return Promise.resolve(function(e) {
+    let t = e.match(S);
     if (null == t || 2 !== t.length) return null;
     let n = (0, a.getNativePlatform)(),
       i = t[1];
@@ -71,11 +71,11 @@ function E(e) {
   }).then(e => e.body || null, () => null))
 }
 
-function p() {
+function f() {
   return -1 !== window.document.cookie.indexOf("".concat(l.BUILD_OVERRIDE_COOKIE_NAME, "="))
 }
 
-function h() {
+function E() {
   try {
     var e;
     let t = i.parse(window.document.cookie)[l.BUILD_OVERRIDE_COOKIE_NAME];
@@ -88,24 +88,24 @@ function h() {
 }
 let _ = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
 
-function S(e) {
+function m(e) {
   return null != e && _.test(e)
 }
-let m = RegExp("^dev://branch/([\\w-./]+)$", "i");
+let S = RegExp("^dev://branch/([\\w-./]+)$", "i");
 
-function T(e) {
-  return null != e && m.test(e)
+function g(e) {
+  return null != e && S.test(e)
 }
-let g = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
+let T = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
   I = new Set(["/__development/link", "/__development/link/"]);
 
-function C(e) {
-  if (T(e)) return {
+function v(e) {
+  if (g(e)) return {
     payload: null,
     url: e
   };
   let t = o.default.safeParseWithQuery(e);
-  if (null == t || !g.has(t.hostname) || !("s" in t.query) || !I.has(t.pathname)) return null;
+  if (null == t || !T.has(t.hostname) || !("s" in t.query) || !I.has(t.pathname)) return null;
   for (let e in t.query) "s" !== e && delete t.query[e];
   return {
     payload: t.query.s,

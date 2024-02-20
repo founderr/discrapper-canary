@@ -1,127 +1,127 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return h
+    return v
   }
-}), E("222007");
-var t = E("37983"),
-  o = E("884691"),
-  n = E("414456"),
-  r = E.n(n),
-  i = E("703809"),
-  a = E("90915"),
-  I = E("394846"),
-  s = E("446674"),
-  T = E("825573"),
-  S = E("77078"),
-  N = E("206230"),
-  O = E("338733"),
-  A = E("584369"),
-  R = E("915639"),
-  l = E("161778"),
-  u = E("471671"),
-  L = E("439932"),
-  C = E("779601"),
-  D = E("69927"),
-  c = E("983689"),
-  d = E("628922"),
-  U = E("49111");
-E("597323");
-let M = new Set([U.Routes.LOGIN, U.Routes.REGISTER]);
-var h = o.memo(function(e) {
+}), n("222007");
+var i = n("37983"),
+  a = n("884691"),
+  l = n("414456"),
+  s = n.n(l),
+  r = n("703809"),
+  o = n("90915"),
+  u = n("394846"),
+  d = n("446674"),
+  c = n("825573"),
+  f = n("77078"),
+  E = n("206230"),
+  h = n("338733"),
+  _ = n("584369"),
+  C = n("915639"),
+  S = n("161778"),
+  g = n("471671"),
+  T = n("439932"),
+  m = n("779601"),
+  p = n("69927"),
+  I = n("983689"),
+  A = n("628922"),
+  N = n("49111");
+n("597323");
+let O = new Set([N.Routes.LOGIN, N.Routes.REGISTER]);
+var v = a.memo(function(e) {
   let {
-    children: _,
-    skipsSettingDefaultPageTitle: n
+    children: t,
+    skipsSettingDefaultPageTitle: l
   } = e;
-  (0, D.usePageTitleManager)({
-    skipsSettingDefaultPageTitle: n
+  (0, p.usePageTitleManager)({
+    skipsSettingDefaultPageTitle: l
   });
   let {
-    clientThemesClassName: U,
-    clientThemesCSS: h
-  } = (0, O.default)(), P = o.createElement("style", {
-    [O.CLIENT_THEMES_DATA_ATTRIBUTE]: !0
-  }, h);
-  return (0, t.jsxs)(i.Helmet, {
+    clientThemesClassName: N,
+    clientThemesCSS: v
+  } = (0, h.default)(), R = a.createElement("style", {
+    [h.CLIENT_THEMES_DATA_ATTRIBUTE]: !0
+  }, v);
+  return (0, i.jsxs)(r.Helmet, {
     children: [function(e) {
       let {
-        locale: _,
-        theme: E
-      } = (0, s.useStateFromStoresObject)([l.default, R.default], () => ({
-        locale: R.default.locale,
-        theme: l.default.theme
-      })), n = (0, s.useStateFromStores)([u.default], () => u.default.isFocused(), []), {
-        reducedMotion: i,
-        alwaysShowLinkDecorations: T
-      } = o.useContext(S.AccessibilityPreferencesContext), {
-        fontScale: O,
-        fontScaleClass: D,
-        keyboardModeEnabled: U,
-        saturation: h,
-        desaturateUserColors: P,
-        useForcedColors: m,
-        systemForcedColors: G
-      } = (0, s.useStateFromStoresObject)([N.default], () => {
+        locale: t,
+        theme: n
+      } = (0, d.useStateFromStoresObject)([S.default, C.default], () => ({
+        locale: C.default.locale,
+        theme: S.default.theme
+      })), l = (0, d.useStateFromStores)([g.default], () => g.default.isFocused(), []), {
+        reducedMotion: r,
+        alwaysShowLinkDecorations: c
+      } = a.useContext(f.AccessibilityPreferencesContext), {
+        fontScale: h,
+        fontScaleClass: p,
+        keyboardModeEnabled: N,
+        saturation: v,
+        desaturateUserColors: R,
+        useForcedColors: M,
+        systemForcedColors: L
+      } = (0, d.useStateFromStoresObject)([E.default], () => {
         let {
           fontScale: e,
-          fontScaleClass: _,
-          keyboardModeEnabled: E,
-          saturation: t,
-          desaturateUserColors: o,
-          useForcedColors: n,
-          systemForcedColors: r
-        } = N.default;
+          fontScaleClass: t,
+          keyboardModeEnabled: n,
+          saturation: i,
+          desaturateUserColors: a,
+          useForcedColors: l,
+          systemForcedColors: s
+        } = E.default;
         return {
           fontScale: e,
-          fontScaleClass: _,
-          keyboardModeEnabled: E,
-          saturation: t,
-          desaturateUserColors: o,
-          useForcedColors: n,
-          systemForcedColors: r
+          fontScaleClass: t,
+          keyboardModeEnabled: n,
+          saturation: i,
+          desaturateUserColors: a,
+          useForcedColors: l,
+          systemForcedColors: s
         }
-      }), p = (0, a.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
-      (0, c.default)(window, g);
-      let y = (0, d.default)(window, __OVERLAY__ || n),
-        B = (0, s.useStateFromStores)([A.default], () => A.default.sidebarWidth),
-        f = (0, S.useRedesignIconContext)().enabled;
-      return (0, t.jsx)("html", {
-        lang: _,
-        style: "font-size: ".concat(O, "%; --saturation-factor: ").concat(h, "; --devtools-sidebar-width: ").concat(B, "px;"),
-        className: r(e, {
+      }), y = (0, o.useLocation)(), D = a.useMemo(() => O.has(y.pathname), [y.pathname]);
+      (0, I.default)(window, D);
+      let P = (0, A.default)(window, __OVERLAY__ || l),
+        w = (0, d.useStateFromStores)([_.default], () => _.default.sidebarWidth),
+        b = (0, f.useRedesignIconContext)().enabled;
+      return (0, i.jsx)("html", {
+        lang: t,
+        style: "font-size: ".concat(h, "%; --saturation-factor: ").concat(v, "; --devtools-sidebar-width: ").concat(w, "px;"),
+        className: s(e, {
           overlay: __OVERLAY__,
-          "mouse-mode": y,
-          "keyboard-mode": U,
-          "reduce-motion": i.enabled,
-          "full-motion": !i.enabled,
-          "is-mobile": I.isMobile,
-          "app-focused": n,
-          "low-saturation": h <= S.LOW_SATURATION_THRESHOLD,
-          "decorate-links": T,
-          "desaturate-user-colors": P,
-          "disable-forced-colors": !m && "active" === G,
-          "enable-forced-colors": m,
-          "show-redesigned-icons": f
-        }, (0, L.getThemeClass)(E), (0, C.default)(), D)
+          "mouse-mode": P,
+          "keyboard-mode": N,
+          "reduce-motion": r.enabled,
+          "full-motion": !r.enabled,
+          "is-mobile": u.isMobile,
+          "app-focused": l,
+          "low-saturation": v <= f.LOW_SATURATION_THRESHOLD,
+          "decorate-links": c,
+          "desaturate-user-colors": R,
+          "disable-forced-colors": !M && "active" === L,
+          "enable-forced-colors": M,
+          "show-redesigned-icons": b
+        }, (0, T.getThemeClass)(n), (0, m.default)(), p)
       })
-    }(U), function() {
-      let [e, _] = o.useState([]);
-      return o.useEffect(() => {
-        Promise.all(T.fontsToPreload.map(e => E("437087")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
+    }(N), function() {
+      let [e, t] = a.useState([]);
+      return a.useEffect(() => {
+        Promise.all(c.fontsToPreload.map(e => n("437087")("@discordapp/tokens/typography/generated/gg-sans/".concat(e, ".woff2").replace("@discordapp/tokens/typography/generated/gg-sans/", "./")).then(e => {
           let {
-            default: _
+            default: t
           } = e;
-          return _
-        }))).then(e => _(e))
-      }, []), (0, t.jsx)(t.Fragment, {
-        children: e.map((e, _) => (0, t.jsx)("link", {
+          return t
+        }))).then(e => t(e))
+      }, []), (0, i.jsx)(i.Fragment, {
+        children: e.map((e, t) => (0, i.jsx)("link", {
           rel: "preload",
           href: e,
           as: "font",
           type: "font/woff2",
           crossOrigin: "true"
-        }, _))
+        }, t))
       })
-    }(), P, _]
+    }(), R, t]
   })
 })

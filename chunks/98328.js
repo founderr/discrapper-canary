@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 }), n("222007"), n("781738");
 var r = n("446674"),
@@ -14,7 +14,7 @@ var r = n("446674"),
 let c = {},
   d = (0, o.isWindows)() ? "".concat(a.default.process.env.LOCALAPPDATA, "\\DiscordGames") : (0, o.isMac)() ? "/Applications/DiscordGames" : "/tmp";
 
-function f(e, t) {
+function p(e, t) {
   var n;
   c = {
     ...c,
@@ -25,7 +25,7 @@ function f(e, t) {
   }
 }
 
-function E(e) {
+function h(e) {
   let {
     applicationId: t,
     branchId: n,
@@ -33,13 +33,13 @@ function E(e) {
   } = e;
   null == i.installations[t] && (i.installations[t] = {}), i.installations[t][n] = {
     installationPath: r
-  }, !i.installationPaths.has(r) && h({
+  }, !i.installationPaths.has(r) && E({
     path: r,
     metadata: {}
   })
 }
 
-function p(e) {
+function f(e) {
   let {
     applicationId: t,
     branchId: n
@@ -48,9 +48,9 @@ function p(e) {
   delete i.installations[t][n], 0 === Object.keys(i.installations[t]).length && delete i.installations[t]
 }
 
-function h(e) {
+function E(e) {
   if (i.installationPaths.has(e.path)) return !1;
-  f(e.path, e.metadata);
+  p(e.path, e.metadata);
   let t = new Set(i.installationPaths);
   t.add(e.path), i.installationPaths = t
 }
@@ -97,20 +97,20 @@ class _ extends r.default.PersistedStore {
   }
 }
 _.displayName = "InstallationManagerStore", _.persistKey = "InstallationManagerStore";
-var S = new _(s.default, {
-  DISPATCH_APPLICATION_INSTALL: E,
-  DISPATCH_APPLICATION_UNINSTALL: p,
+var m = new _(s.default, {
+  DISPATCH_APPLICATION_INSTALL: h,
+  DISPATCH_APPLICATION_UNINSTALL: f,
   DISPATCH_APPLICATION_CANCEL: function(e) {
     let {
       applicationId: t,
       branchId: n
     } = e, i = l.default.getState(t, n);
-    null != i && null == i.buildId && null == i.manifestIds && p({
+    null != i && null == i.buildId && null == i.manifestIds && f({
       applicationId: t,
       branchId: n
     })
   },
-  INSTALLATION_LOCATION_ADD: h,
+  INSTALLATION_LOCATION_ADD: E,
   INSTALLATION_LOCATION_REMOVE: function(e) {
     var t;
     let {
@@ -147,7 +147,7 @@ var S = new _(s.default, {
     let {
       metadataPayload: t
     } = e;
-    for (let e in t) f(e, t[e])
+    for (let e in t) p(e, t[e])
   },
-  DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: E
+  DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: h
 })

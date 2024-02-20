@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(e), s.d(e, {
   KEYBOARD_SHORTCUT_MODAL_KEY: function() {
-    return i
+    return n
   }
 });
-let i = "KEYBOARD_SHORTCUT_MODAL_KEY"
+let n = "KEYBOARD_SHORTCUT_MODAL_KEY"

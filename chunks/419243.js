@@ -5,7 +5,7 @@ E.r(_), E.d(_, {
     return o
   },
   impl: function() {
-    return n
+    return I
   }
 });
 try {
@@ -43,7 +43,7 @@ class o {
     this.storage = {}
   }
 }
-let n = ! function() {
+let I = ! function() {
   let e = "test";
   try {
     return t.setItem(e, e), t.removeItem(e), !0

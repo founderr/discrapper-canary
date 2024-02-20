@@ -1,21 +1,21 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return I
+    return u
   }
-}), E("222007");
-var t = E("689988"),
-  o = E("697218"),
-  n = E("719923"),
-  r = E("538620"),
-  i = E("646718");
-class a extends t.default {
+}), n("222007");
+var i = n("689988"),
+  a = n("697218"),
+  l = n("719923"),
+  s = n("538620"),
+  r = n("646718");
+class o extends i.default {
   onPostConnectionOpen() {
     this.maybeFetchActiveOutboundPromotions()
   }
   maybeFetchActiveOutboundPromotions() {
-    let e = o.default.getCurrentUser();
-    null != e && n.default.isPremiumExactly(e, i.PremiumTypes.TIER_2) && (0, r.fetchActiveOutboundPromotions)()
+    let e = a.default.getCurrentUser();
+    null != e && l.default.isPremiumExactly(e, r.PremiumTypes.TIER_2) && (0, s.fetchActiveOutboundPromotions)()
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -23,4 +23,4 @@ class a extends t.default {
     }
   }
 }
-var I = new a
+var u = new o

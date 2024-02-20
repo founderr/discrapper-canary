@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   validateSourceContract: function() {
-    return o
+    return i
   },
   validateTargetContract: function() {
-    return i
+    return o
   },
   validateType: function() {
     return function e(t, n) {
@@ -27,10 +27,10 @@ function a(e) {
   })(e)
 }
 
-function o(e) {
+function i(e) {
   (0, r.invariant)("function" == typeof e.canDrag, "Expected canDrag to be a function."), (0, r.invariant)("function" == typeof e.beginDrag, "Expected beginDrag to be a function."), (0, r.invariant)("function" == typeof e.endDrag, "Expected endDrag to be a function.")
 }
 
-function i(e) {
+function o(e) {
   (0, r.invariant)("function" == typeof e.canDrop, "Expected canDrop to be a function."), (0, r.invariant)("function" == typeof e.hover, "Expected hover to be a function."), (0, r.invariant)("function" == typeof e.drop, "Expected beginDrag to be a function.")
 }

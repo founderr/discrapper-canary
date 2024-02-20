@@ -13,9 +13,9 @@ t = class {
     let {
       message: t,
       code: o,
-      retryAfter: n,
-      fields: r,
-      status: i
+      retryAfter: I,
+      fields: T,
+      status: r
     } = function(e, _) {
       if ("string" == typeof e) return {
         message: e,
@@ -40,6 +40,6 @@ t = class {
       }
       return {}
     }(e, _);
-    this.message = t || E, this.retryAfter = n, this.code = o || -1, this.fields = r || {}, this.status = i, this.error = Error(t)
+    this.message = t || E, this.retryAfter = I, this.code = o || -1, this.fields = T || {}, this.status = r, this.error = Error(t)
   }
 }

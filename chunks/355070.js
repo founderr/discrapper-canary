@@ -1,7 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   global: function() {
-    return r
+    return n
   }
 });
-var r = "undefined" != typeof window ? window : {}
+var n = "undefined" != typeof window ? window : {}

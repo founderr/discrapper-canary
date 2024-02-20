@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   InputError: function() {
-    return h
+    return E
   },
   TextInput: function() {
     return _
@@ -16,14 +16,14 @@ var i = n("37983"),
   u = n("516826"),
   c = n("577776"),
   d = n("634634"),
-  f = n("782340"),
-  E = n("182893");
-let p = {
-  DEFAULT: E.inputDefault,
-  MINI: E.inputMini
+  p = n("782340"),
+  h = n("182893");
+let f = {
+  DEFAULT: h.inputDefault,
+  MINI: h.inputMini
 };
 
-function h(e) {
+function E(e) {
   let {
     error: t
   } = e, n = (0, o.useTransition)(t, {
@@ -88,33 +88,33 @@ class _ extends r.Component {
       size: u,
       editable: c,
       inputRef: d,
-      prefixElement: f,
-      focusProps: p,
+      prefixElement: p,
+      focusProps: f,
       ..._
-    } = this.props, S = null !== (t = _["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
+    } = this.props, m = null !== (t = _["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
     return (0, i.jsxs)("div", {
-      className: a(E.inputWrapper, n),
-      children: [null != f && f, null != s ? (0, i.jsx)("span", {
-        className: E.inputPrefix,
+      className: a(h.inputWrapper, n),
+      children: [null != p && p, null != s ? (0, i.jsx)("span", {
+        className: h.inputPrefix,
         children: s
       }) : null, (0, i.jsx)(l.FocusRing, {
-        ...p,
+        ...f,
         children: (0, i.jsx)("input", {
           className: a(u, r, {
-            [E.error]: this.hasError(),
-            [E.disabled]: o,
-            [E.editable]: c
+            [h.error]: this.hasError(),
+            [h.disabled]: o,
+            [h.editable]: c
           }),
           disabled: o,
           readOnly: !1 === c || void 0,
           ..._,
-          "aria-labelledby": S,
+          "aria-labelledby": m,
           onChange: this.onChange,
           onBlur: this.onBlur,
           onFocus: this.onFocus,
           ref: d
         })
-      }), (0, i.jsx)(h, {
+      }), (0, i.jsx)(E, {
         error: this.getError()
       })]
     })
@@ -126,9 +126,9 @@ class _ extends r.Component {
         error: e,
         minLength: t,
         maxLength: n
-      } = this.props, i = this.getIsUnderFlowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
+      } = this.props, i = this.getIsUnderFlowing() ? p.default.Messages.MINIMUM_LENGTH_ERROR.format({
         minLength: t
-      }) : null, r = this.getIsOverFlowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
+      }) : null, r = this.getIsOverFlowing() ? p.default.Messages.MAXIMUM_LENGTH_ERROR.format({
         maxLength: n
       }) : null;
       return null != e && e.length < 1 || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != i ? i : r
@@ -162,9 +162,9 @@ class _ extends r.Component {
     }
   }
 }
-_.Sizes = p, _.contextType = u.FormContext, _.defaultProps = {
+_.Sizes = f, _.contextType = u.FormContext, _.defaultProps = {
   name: "",
-  size: p.DEFAULT,
+  size: f.DEFAULT,
   disabled: !1,
   type: "text",
   placeholder: "",

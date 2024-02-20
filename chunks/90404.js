@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   l = n("77078"),
-  u = n("145131"),
-  o = n("324127");
+  o = n("145131"),
+  u = n("324127");
 class d extends r.PureComponent {
   render() {
     let {
@@ -20,23 +20,23 @@ class d extends r.PureComponent {
       className: r
     } = this.props;
     return (0, a.jsx)("div", {
-      className: i(o.wrapper, r),
-      children: (0, a.jsxs)(u.default, {
-        className: o.flexWrapper,
-        direction: u.default.Direction.VERTICAL,
-        align: u.default.Align.CENTER,
-        justify: u.default.Justify.CENTER,
-        children: [(0, a.jsx)(u.default.Child, {
+      className: i(u.wrapper, r),
+      children: (0, a.jsxs)(o.default, {
+        className: u.flexWrapper,
+        direction: o.default.Direction.VERTICAL,
+        align: o.default.Align.CENTER,
+        justify: o.default.Justify.CENTER,
+        children: [(0, a.jsx)(o.default.Child, {
           grow: 0,
-          className: o.image
-        }), (0, a.jsxs)(u.default.Child, {
+          className: u.image
+        }), (0, a.jsxs)(o.default.Child, {
           grow: 0,
-          className: o.text,
+          className: u.text,
           children: [(0, a.jsx)(l.H, {
-            className: o.title,
+            className: u.title,
             children: t
           }), null != e ? (0, a.jsx)("div", {
-            className: o.note,
+            className: u.note,
             children: e
           }) : null]
         }), n]

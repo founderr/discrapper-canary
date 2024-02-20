@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("222007");
 var i = n("446674"),
@@ -16,7 +16,7 @@ let c = "production" === u.Environments.DEVELOPMENT || window.GLOBAL_ENV.RELEASE
 function d() {
   c = (0, s.isStaffEnv)(o.default.getCurrentUser())
 }
-class f extends i.default.Store {
+class p extends i.default.Store {
   initialize() {
     this.waitFor(o.default, a.default), Object.defineProperties(this, {
       isDeveloper: {
@@ -38,8 +38,8 @@ class f extends i.default.Store {
     super(...e), this.isDeveloper = !1
   }
 }
-f.displayName = "DeveloperExperimentStore";
-var E = new f(r.default, {
+p.displayName = "DeveloperExperimentStore";
+var h = new p(r.default, {
   CONNECTION_OPEN: d,
   OVERLAY_INITIALIZE: d,
   CURRENT_USER_UPDATE: d

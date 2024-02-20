@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   addGlobalTag: function() {
-    return r
+    return i
   },
   getGlobalTagsArray: function() {
-    return s
+    return o
   }
 });
-let i = {};
+let r = {};
 
-function r(e, t) {
-  i[e] = t
+function i(e, t) {
+  r[e] = t
 }
 
-function s() {
-  return Object.keys(i).map(e => "".concat(e, ":").concat(i[e]))
+function o() {
+  return Object.keys(r).map(e => "".concat(e, ":").concat(r[e]))
 }

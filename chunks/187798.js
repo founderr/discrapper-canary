@@ -1,13 +1,13 @@
 "use strict";
-var r = n("149384")(),
-  a = n("314970")("Object.prototype.toString"),
-  o = function(e) {
-    return (!r || !e || "object" != typeof e || !(Symbol.toStringTag in e)) && "[object Arguments]" === a(e)
+var n = r("149384")(),
+  o = r("314970")("Object.prototype.toString"),
+  i = function(t) {
+    return (!n || !t || "object" != typeof t || !(Symbol.toStringTag in t)) && "[object Arguments]" === o(t)
   },
-  i = function(e) {
-    return !!o(e) || null !== e && "object" == typeof e && "number" == typeof e.length && e.length >= 0 && "[object Array]" !== a(e) && "[object Function]" === a(e.callee)
+  a = function(t) {
+    return !!i(t) || null !== t && "object" == typeof t && "number" == typeof t.length && t.length >= 0 && "[object Array]" !== o(t) && "[object Function]" === o(t.callee)
   },
-  s = function() {
-    return o(arguments)
+  u = function() {
+    return i(arguments)
   }();
-o.isLegacyArguments = i, e.exports = s ? o : i
+i.isLegacyArguments = a, t.exports = u ? i : a

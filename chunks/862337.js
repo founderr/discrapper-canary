@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   Timeout: function() {
-    return i
-  },
-  DelayedCall: function() {
     return r
   },
+  DelayedCall: function() {
+    return i
+  },
   Interval: function() {
-    return s
+    return o
   },
   timeoutPromise: function() {
-    return a
+    return l
   }
 });
-class i {
+class r {
   start(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     (!this.isStarted() || n) && (this.stop(), this._ref = window.setTimeout(() => {
@@ -27,7 +27,7 @@ class i {
     return null != this._ref
   }
 }
-class r {
+class i {
   set(e) {
     return this._delay = e, this
   }
@@ -42,10 +42,10 @@ class r {
     return this._timeout.isStarted()
   }
   constructor(e, t) {
-    this._delay = e, this._handler = t, this._timeout = new i
+    this._delay = e, this._handler = t, this._timeout = new r
   }
 }
-class s {
+class o {
   start(e, t) {
     this.stop(), this._ref = window.setInterval(t, e)
   }
@@ -54,7 +54,7 @@ class s {
   }
 }
 
-function a(e) {
+function l(e) {
   return new Promise(t => {
     setTimeout(() => t(), e)
   })

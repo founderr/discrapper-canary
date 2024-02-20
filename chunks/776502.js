@@ -1,12 +1,12 @@
 "use strict";
-e.r(n), e.d(n, {
+r.r(n), r.d(n, {
   openMFAModal: function() {
-    return p
+    return e
   }
-}), e("581081");
-var o = e("310379"),
-  i = e("695501");
+}), r("581081");
+var o = r("310379"),
+  i = r("695501");
 
-function p(t, n, p) {
-  t.methods = t.methods.filter(t => Object.hasOwn(i.SELECT_NAMES, t.type)), e("24287").openMFAModal(t, t => (0, o.trySubmit)(t, n), p)
+function e(t, n, e) {
+  t.methods = t.methods.filter(t => Object.hasOwn(i.SELECT_NAMES, t.type)), r("24287").openMFAModal(t, t => (0, o.trySubmit)(t, n), e)
 }
