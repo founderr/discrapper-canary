@@ -169,7 +169,8 @@ let O = e => {
     }), D = c === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW || c === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW || c === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW;
     return (0, a.jsxs)(u.Clickable, {
       className: r(P.card, O, {
-        [P.clickable]: null != R
+        [P.clickable]: null != R,
+        [P.hideOverflow]: D
       }),
       onMouseEnter: g,
       style: {

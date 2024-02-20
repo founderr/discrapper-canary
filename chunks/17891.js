@@ -21,7 +21,7 @@ let f = 10 * o.default.Millis.SECOND,
 a = class extends s.EventEmitter {
   routeEvent(e, t, n, a) {
     if (!Array.isArray(n)) throw new u.default({
-      closeCode: c.RPCCloseCodes.CLOSE_UNSUPPORTED
+      errorCode: c.RPCErrors.INVALID_PAYLOAD
     }, "Protocol error");
     let [s, l] = n;
     switch (s) {

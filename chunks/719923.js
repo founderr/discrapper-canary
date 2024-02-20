@@ -24,119 +24,122 @@ n.r(t), n.d(t, {
   experimentalGetPrices: function() {
     return F
   },
-  getIntervalString: function() {
+  getDiscountIntervalString: function() {
     return V
   },
-  getIntervalStringAsNoun: function() {
+  getIntervalString: function() {
     return B
   },
-  getPremiumType: function() {
+  getIntervalStringAsNoun: function() {
     return H
   },
-  getDisplayName: function() {
+  getPremiumType: function() {
     return Y
   },
-  getDisplayNameFromSku: function() {
+  getDisplayName: function() {
     return j
   },
-  getTierDisplayName: function() {
+  getDisplayNameFromSku: function() {
     return W
   },
-  getDisplayPremiumType: function() {
+  getTierDisplayName: function() {
     return K
   },
-  getPremiumTypeDisplayName: function() {
+  getDisplayPremiumType: function() {
     return z
   },
-  getPlanDescriptionFromInvoice: function() {
-    return X
+  getPremiumTypeDisplayName: function() {
+    return q
   },
-  getExternalPlanDisplayName: function() {
+  getPlanDescriptionFromInvoice: function() {
     return Q
   },
-  getPremiumPlanOptions: function() {
+  getExternalPlanDisplayName: function() {
     return Z
   },
+  getPremiumPlanOptions: function() {
+    return J
+  },
   getNumPremiumGuildSubscriptions: function() {
-    return ee
+    return et
   },
   isPremiumBaseSubscriptionPlan: function() {
-    return en
-  },
-  isPremiumGuildSubscriptionPlan: function() {
     return ei
   },
-  isPremiumSubscriptionPlan: function() {
+  isPremiumGuildSubscriptionPlan: function() {
     return er
   },
-  getBillingGracePeriodDays: function() {
+  isPremiumSubscriptionPlan: function() {
     return es
   },
-  isPrepaidPaymentSource: function() {
+  getBillingGracePeriodDays: function() {
     return ea
   },
-  isPremiumGuildSubscriptionCanceled: function() {
+  isPrepaidPaymentSource: function() {
     return eo
   },
-  getPremiumGuildHeaderDescription: function() {
+  isPremiumGuildSubscriptionCanceled: function() {
     return el
   },
-  getFormattedPriceForPlan: function() {
+  getPremiumGuildHeaderDescription: function() {
     return eu
   },
-  getFormattedRateForPlan: function() {
+  getFormattedPriceForPlan: function() {
     return ec
   },
+  getFormattedRateForPlan: function() {
+    return ed
+  },
   isSubscriptionStatusFailedPayment: function() {
-    return ef
+    return eE
   },
   getBillingReviewSubheader: function() {
-    return ep
-  },
-  getIntervalForInvoice: function() {
     return eh
   },
-  formatTrialOfferIntervalDuration: function() {
+  getIntervalForInvoice: function() {
     return e_
   },
-  formatTrialCtaIntervalDuration: function() {
+  formatTrialOfferIntervalDuration: function() {
     return eS
   },
-  formatIntervalDuration: function() {
+  formatTrialCtaIntervalDuration: function() {
     return em
   },
-  getExternalSubscriptionMethodUrl: function() {
+  formatIntervalDuration: function() {
     return eT
   },
-  hasPremiumSubscriptionToDisplay: function() {
+  getExternalSubscriptionMethodUrl: function() {
     return eg
   },
-  getItemsFromNewAdditionalPlans: function() {
+  hasPremiumSubscriptionToDisplay: function() {
     return eI
   },
-  getItemsWithoutPremiumPlanItem: function() {
+  getItemsFromNewAdditionalPlans: function() {
     return eC
   },
-  getItemsWithUpsertedPlanIdForGroup: function() {
+  getItemsWithoutPremiumPlanItem: function() {
     return ev
   },
-  getItemsWithUpsertedPremiumPlanId: function() {
+  getItemsWithUpsertedPlanIdForGroup: function() {
     return eA
   },
-  getItemsWithUpsertedPremiumGuildPlan: function() {
+  getItemsWithUpsertedPremiumPlanId: function() {
     return eR
   },
-  coerceExistingItemsToNewItemInterval: function() {
+  getItemsWithUpsertedPremiumGuildPlan: function() {
     return eN
   },
-  getMaxFileSizeForPremiumType: function() {
+  coerceExistingItemsToNewItemInterval: function() {
     return eO
   },
+  getMaxFileSizeForPremiumType: function() {
+    return eD
+  },
   getPremiumSkuIdForSubscription: function() {
-    return ey
+    return eP
   },
   default: function() {
-    return eP
+    return eL
   }
 }), n("70102"), n("222007"), n("843762"), n("808653"), n("424973");
 var i, r, s, a, o = n("627445"),
@@ -311,7 +314,20 @@ function F(e) {
   return i.countryPrices.prices
 }
 
-function V(e, t, n) {
+function V(e) {
+  switch (e) {
+    case y.DiscountUserUsageLimitIntervalTypes.MONTH:
+      return L.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH;
+    case y.DiscountUserUsageLimitIntervalTypes.YEAR:
+      return L.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR;
+    case y.DiscountUserUsageLimitIntervalTypes.DAY:
+    case y.DiscountUserUsageLimitIntervalTypes.WEEK:
+    default:
+      throw Error("Unexpected interval")
+  }
+}
+
+function B(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
     r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
     s = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : y.PremiumTypes.TIER_2;
@@ -342,7 +358,7 @@ function V(e, t, n) {
   }
 }
 
-function B(e) {
+function H(e) {
   switch (e) {
     case y.SubscriptionIntervalTypes.MONTH:
       return L.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH;
@@ -353,7 +369,7 @@ function B(e) {
   }
 }
 
-function H(e) {
+function Y(e) {
   let t = y.SubscriptionPlanInfo[e];
   if (null != t) return t.premiumType;
   let n = Error("Unsupported plan");
@@ -364,7 +380,7 @@ function H(e) {
   }), n
 }
 
-function Y(e) {
+function j(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 ? arguments[3] : void 0;
@@ -414,7 +430,7 @@ function Y(e) {
   }), r
 }
 
-function j(e) {
+function W(e) {
   switch (e) {
     case y.PremiumSubscriptionSKUs.TIER_0:
       return L.default.Messages.PREMIUM_TIER_0;
@@ -431,7 +447,7 @@ function j(e) {
   }), t
 }
 
-function W(e) {
+function K(e) {
   switch (e) {
     case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
     case y.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
@@ -453,7 +469,7 @@ function W(e) {
   }), t
 }
 
-function K(e) {
+function z(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   switch (e) {
     case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
@@ -476,7 +492,7 @@ function K(e) {
   }), n
 }
 
-function z(e) {
+function q(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   switch (e) {
     case y.PremiumTypes.TIER_0:
@@ -488,7 +504,7 @@ function z(e) {
   }
 }
 
-function q(e) {
+function X(e) {
   var t, n;
   let {
     subscription: i,
@@ -496,7 +512,7 @@ function q(e) {
     price: s,
     includePremiumGuilds: a,
     hasDiscountApplied: o
-  } = e, l = R.default.formatPriceString(R.default.getDefaultPrice(y.SubscriptionPlans.PREMIUM_MONTH_TIER_2), y.SubscriptionIntervalTypes.MONTH), u = ed(i) || null == i.paymentSourceId && !i.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), c = null != s, d = i.status === O.SubscriptionStatusTypes.UNPAID && null !== i.latestInvoice && (null === (n = i.latestInvoice) || void 0 === n ? void 0 : n.status) === O.InvoiceStatusTypes.OPEN, f = u ? O.SubscriptionStatusTypes.CANCELED : d ? O.SubscriptionStatusTypes.UNPAID : i.status, E = y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (a ? ee(i.additionalPlans) : 0);
+  } = e, l = R.default.formatPriceString(R.default.getDefaultPrice(y.SubscriptionPlans.PREMIUM_MONTH_TIER_2), y.SubscriptionIntervalTypes.MONTH), u = ef(i) || null == i.paymentSourceId && !i.isPurchasedExternally && !(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium()), c = null != s, d = i.status === O.SubscriptionStatusTypes.UNPAID && null !== i.latestInvoice && (null === (n = i.latestInvoice) || void 0 === n ? void 0 : n.status) === O.InvoiceStatusTypes.OPEN, f = u ? O.SubscriptionStatusTypes.CANCELED : d ? O.SubscriptionStatusTypes.UNPAID : i.status, E = y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM + (a ? et(i.additionalPlans) : 0);
   switch (r) {
     case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
     case y.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
@@ -573,7 +589,7 @@ function q(e) {
   }
 }
 
-function X(e) {
+function Q(e) {
   let {
     renewalInvoicePreview: t,
     subscription: n,
@@ -581,7 +597,7 @@ function X(e) {
     includePremiumGuilds: r = !1,
     hasDiscountApplied: s = !1
   } = e, a = m.default.get(i);
-  return l(null != a, "Missing plan"), q({
+  return l(null != a, "Missing plan"), X({
     subscription: n,
     planId: a.id,
     price: function(e, t, n) {
@@ -602,11 +618,11 @@ function X(e) {
   })
 }
 
-function Q(e) {
+function Z(e) {
   let {
     planId: t,
     additionalPlans: n
-  } = e, i = (0, p.isNoneSubscription)(t) ? null : Y(t), r = null == n ? void 0 : n.find(e => {
+  } = e, i = (0, p.isNoneSubscription)(t) ? null : j(t), r = null == n ? void 0 : n.find(e => {
     let {
       planId: t
     } = e;
@@ -623,7 +639,7 @@ function Q(e) {
   else throw Error("Subscription without premium or premium guild subscription")
 }
 
-function Z(e) {
+function J(e) {
   let {
     skuId: t,
     isPremium: n,
@@ -671,7 +687,7 @@ function Z(e) {
   return c
 }
 
-function J(e) {
+function $(e) {
   let t = y.SubscriptionPlanInfo[e];
   if (null == t) {
     let t = Error("Unsupported plan");
@@ -684,12 +700,12 @@ function J(e) {
   return t.skuId
 }
 
-function $(e) {
+function ee(e) {
   var t;
   return null == e ? G.ALL : null !== (t = G[e]) && void 0 !== t ? t : []
 }
 
-function ee(e) {
+function et(e) {
   let t = m.default.getPlanIdsForSkus([y.PremiumSubscriptionSKUs.GUILD]);
   l(null != t, "Missing guildSubscriptionPlanIds");
   let n = e.find(e => {
@@ -700,21 +716,21 @@ function ee(e) {
   });
   return null != n ? n.quantity : 0
 }
-let et = new Set([y.SubscriptionPlans.NONE_MONTH, y.SubscriptionPlans.NONE_3_MONTH, y.SubscriptionPlans.NONE_6_MONTH, y.SubscriptionPlans.NONE_YEAR, y.SubscriptionPlans.PREMIUM_MONTH_TIER_0, y.SubscriptionPlans.PREMIUM_MONTH_TIER_1, y.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_YEAR_TIER_0, y.SubscriptionPlans.PREMIUM_YEAR_TIER_1, y.SubscriptionPlans.PREMIUM_YEAR_TIER_2, y.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2]);
-
-function en(e) {
-  return et.has(e)
-}
+let en = new Set([y.SubscriptionPlans.NONE_MONTH, y.SubscriptionPlans.NONE_3_MONTH, y.SubscriptionPlans.NONE_6_MONTH, y.SubscriptionPlans.NONE_YEAR, y.SubscriptionPlans.PREMIUM_MONTH_TIER_0, y.SubscriptionPlans.PREMIUM_MONTH_TIER_1, y.SubscriptionPlans.PREMIUM_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_YEAR_TIER_0, y.SubscriptionPlans.PREMIUM_YEAR_TIER_1, y.SubscriptionPlans.PREMIUM_YEAR_TIER_2, y.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2, y.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2]);
 
 function ei(e) {
-  return y.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(e)
+  return en.has(e)
 }
 
 function er(e) {
-  return en(e) || ei(e)
+  return y.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(e)
 }
 
 function es(e) {
+  return ei(e) || er(e)
+}
+
+function ea(e) {
   var t, n, i;
   if (e.isPurchasedViaApple && (null === (t = e.metadata) || void 0 === t ? void 0 : t.apple_grace_period_expires_date) != null) {
     let t = c(e.metadata.apple_grace_period_expires_date),
@@ -730,24 +746,24 @@ function es(e) {
   return y.PAID_SUBSCRIPTION_MAX_GRACE_PERIOD_DAYS
 }
 
-function ea(e) {
+function eo(e) {
   if (null == e) return !1;
   let t = S.default.getPaymentSource(e);
   return null != t && P.PREPAID_PAYMENT_SOURCES.has(t.type)
 }
 
-function eo(e) {
+function el(e) {
   return e.isPurchasedExternally ? e.status === O.SubscriptionStatusTypes.CANCELED : function(e) {
     let {
       renewalMutations: t,
       additionalPlans: n,
       status: i
-    } = e, r = ee(n), s = null != t ? ee(t.additionalPlans) : null;
+    } = e, r = et(n), s = null != t ? et(t.additionalPlans) : null;
     return 0 === s && 0 !== r ? O.SubscriptionStatusTypes.CANCELED : i
   }(e) === O.SubscriptionStatusTypes.CANCELED
 }
 
-function el(e) {
+function eu(e) {
   let {
     subscription: t,
     user: n,
@@ -758,15 +774,15 @@ function el(e) {
     additionalPlans: a
   } = t, o = m.default.get(s);
   l(null != o, "Missing plan");
-  let u = ee(a),
-    c = eE(t.planId, t.paymentSourceId, t.currency, n),
+  let u = et(a),
+    c = ep(t.planId, t.paymentSourceId, t.currency, n),
     d = c.amount * u;
   if (null != r) {
     let e = r.invoiceItems.find(e => y.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(e.subscriptionPlanId));
     null != e && (d = e.amount)
   }
   i = null != i ? i : (0, N.formatPrice)(d, t.currency);
-  let f = eo(t);
+  let f = el(t);
   return f ? t.isPurchasedViaGoogle ? L.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION_NO_PRICE.format({
     quantity: u
   }) : L.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION.format({
@@ -787,19 +803,19 @@ function el(e) {
   })
 }
 
-function eu(e, t, n) {
+function ec(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     r = null != t ? x(e.id, !1, i, t) : k(e.id, !1, i),
     s = (0, N.formatPrice)(r.amount, r.currency);
   return e.currency !== P.CurrencyCodes.USD && !0 === n && (s = s.concat("*")), s
 }
 
-function ec(e, t, n) {
-  let i = eu(e, t, n);
+function ed(e, t, n) {
+  let i = ec(e, t, n);
   return (0, N.formatRate)(i, e.interval, e.intervalCount)
 }
 
-function ed(e) {
+function ef(e) {
   let {
     status: t,
     renewalMutations: n
@@ -807,11 +823,11 @@ function ed(e) {
   return t === O.SubscriptionStatusTypes.CANCELED || null != n && (0, p.isNoneSubscription)(n.planId) && !e.isPurchasedExternally
 }
 
-function ef(e) {
+function eE(e) {
   return e === O.SubscriptionStatusTypes.PAST_DUE || e === O.SubscriptionStatusTypes.ACCOUNT_HOLD || e === O.SubscriptionStatusTypes.BILLING_RETRY
 }
 
-function eE(e, t, n, i) {
+function ep(e, t, n, i) {
   let r = null != t ? {
       paymentSourceId: t,
       currency: n
@@ -840,7 +856,7 @@ function eE(e, t, n, i) {
   return x(a.id, (0, A.isPremium)(i), !1, r)
 }
 
-function ep(e, t, n) {
+function eh(e, t, n) {
   let i = t.id;
   if (null != e) switch (i) {
     case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
@@ -892,7 +908,7 @@ function ep(e, t, n) {
   }), r
 }
 
-function eh(e) {
+function e_(e) {
   let t = e.invoiceItems[0].subscriptionPlanId,
     n = m.default.get(t);
   return l(null != n, "Missing subscriptionPlan"), {
@@ -901,7 +917,7 @@ function eh(e) {
   }
 }
 
-function e_(e) {
+function eS(e) {
   let {
     intervalType: t = y.SubscriptionIntervalTypes.MONTH,
     intervalCount: n = 1,
@@ -936,7 +952,7 @@ function e_(e) {
   }
 }
 
-function eS(e) {
+function em(e) {
   let {
     intervalType: t = y.SubscriptionIntervalTypes.MONTH,
     intervalCount: n = 1
@@ -962,7 +978,7 @@ function eS(e) {
   }
 }
 
-function em(e) {
+function eT(e) {
   let {
     intervalType: t = y.SubscriptionIntervalTypes.MONTH,
     intervalCount: n = 1,
@@ -997,7 +1013,7 @@ function em(e) {
   }
 }
 
-function eT(e, t) {
+function eg(e, t) {
   switch (e) {
     case O.PaymentGateways.APPLE_PARTNER:
     case O.PaymentGateways.APPLE:
@@ -1008,11 +1024,11 @@ function eT(e, t) {
   throw Error("Invalid external payment gateway ".concat(e))
 }
 
-function eg(e, t) {
-  return (0, A.isPremium)(e) || ef(null == t ? void 0 : t.status)
+function eI(e, t) {
+  return (0, A.isPremium)(e) || eE(null == t ? void 0 : t.status)
 }
 
-function eI(e, t) {
+function eC(e, t) {
   var n, i;
   let r = [],
     s = null !== (i = null === (n = e.renewalMutations) || void 0 === n ? void 0 : n.items) && void 0 !== i ? i : e.items,
@@ -1027,11 +1043,11 @@ function eI(e, t) {
   })
 }
 
-function eC(e) {
+function ev(e) {
   return e.filter(e => !y.PREMIUM_PLANS.has(e.planId))
 }
 
-function ev(e, t, n, i) {
+function eA(e, t, n, i) {
   var r, s;
   l(i.has(t), "Expected planId in group");
   let a = !1,
@@ -1052,15 +1068,15 @@ function ev(e, t, n, i) {
   return u.filter(e => 0 !== e.quantity)
 }
 
-function eA(e, t) {
-  return ev(e, t, 1, y.PREMIUM_PLANS)
+function eR(e, t) {
+  return eA(e, t, 1, y.PREMIUM_PLANS)
 }
 
-function eR(e, t, n) {
-  return ev(e, n, t, y.PREMIUM_GUILD_SUBSCRIPTION_PLANS)
+function eN(e, t, n) {
+  return eA(e, n, t, y.PREMIUM_GUILD_SUBSCRIPTION_PLANS)
 }
 
-function eN(e) {
+function eO(e) {
   var t;
   let n = null !== (t = e.find(e => !("id" in e))) && void 0 !== t ? t : e.find(e => y.PREMIUM_PLANS.has(e.planId));
   if (null != n) {
@@ -1079,7 +1095,7 @@ function eN(e) {
   return e
 }
 
-function eO(e) {
+function eD(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
       useSpace: !0
     },
@@ -1090,16 +1106,16 @@ function eO(e) {
   })
 }
 
-function eD(e) {
+function ey(e) {
   return null == e ? null : e.items.find(e => y.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(e.planId))
 }
 
-function ey(e) {
+function eP(e) {
   let t = null != e ? w(e) : null,
-    n = null != t ? J(t.planId) : null;
+    n = null != t ? $(t.planId) : null;
   return n
 }
-var eP = Object.freeze({
+var eL = Object.freeze({
   isNewUser: e => null != e && Date.now() - e.createdAt.getTime() < 2592e6,
   isPremiumAtLeast: A.isPremiumAtLeast,
   isPremium: A.isPremium,
@@ -1119,14 +1135,14 @@ var eP = Object.freeze({
       }
     }), n
   },
-  getIntervalString: V,
-  getIntervalStringAsNoun: B,
-  getPremiumType: H,
-  getDisplayName: Y,
-  getDisplayPremiumType: K,
-  getPremiumPlanOptions: Z,
-  getUpgradeEligibilities: $,
-  getPlanDescription: q,
+  getIntervalString: B,
+  getIntervalStringAsNoun: H,
+  getPremiumType: Y,
+  getDisplayName: j,
+  getDisplayPremiumType: z,
+  getPremiumPlanOptions: J,
+  getUpgradeEligibilities: ee,
+  getPlanDescription: X,
   isPremiumSku: function(e) {
     return e === y.PremiumSubscriptionSKUs.TIER_0 || e === y.PremiumSubscriptionSKUs.TIER_1 || e === y.PremiumSubscriptionSKUs.TIER_2
   },
@@ -1135,7 +1151,7 @@ var eP = Object.freeze({
     if (null == t) throw Error("Unrecognized plan.");
     let {
       interval: n
-    } = t, i = $(e);
+    } = t, i = ee(e);
     for (let e of Object.keys(y.SubscriptionPlanInfo)) {
       let {
         interval: t
@@ -1150,7 +1166,7 @@ var eP = Object.freeze({
     throw Error("".concat(e, " interval subscription period not implemented"))
   },
   getUserMaxFileSize: v.getUserMaxFileSize,
-  getSkuIdForPlan: J,
+  getSkuIdForPlan: $,
   getSkuIdForPremiumType: function(e) {
     switch (e) {
       case y.PremiumTypes.TIER_0:
@@ -1162,7 +1178,7 @@ var eP = Object.freeze({
     }
   },
   getNumIncludedPremiumGuildSubscriptionSlots: function(e) {
-    if (H(e) === y.PremiumTypes.TIER_2) return y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM;
+    if (Y(e) === y.PremiumTypes.TIER_2) return y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM;
     return 0
   },
   getBillingInformationString: function(e, t) {
@@ -1173,12 +1189,12 @@ var eP = Object.freeze({
     });
     if (e.status === O.SubscriptionStatusTypes.PAST_DUE) {
       var r, s;
-      let t = es(e),
+      let t = ea(e),
         n = c(e.currentPeriodStart).add(t, "days");
       return (e.isPurchasedViaGoogle && (null === (r = e.metadata) || void 0 === r ? void 0 : r.google_grace_period_expires_date) != null && (n = c(e.metadata.google_grace_period_expires_date)), e.isPurchasedViaApple && (null === (s = e.metadata) || void 0 === s ? void 0 : s.apple_grace_period_expires_date) != null && (n = c(e.metadata.apple_grace_period_expires_date)), e.isPurchasedExternally) ? L.default.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL.format({
         endDate: n,
         paymentGatewayName: P.PaymentGatewayToFriendlyName[e.paymentGateway],
-        paymentSourceLink: eT(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")
+        paymentSourceLink: eg(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")
       }) : L.default.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO.format({
         endDate: c(e.currentPeriodStart).add(t, "days"),
         price: i
@@ -1187,12 +1203,12 @@ var eP = Object.freeze({
     return e.status === O.SubscriptionStatusTypes.ACCOUNT_HOLD ? e.isPurchasedViaGoogle && !(0, C.isAndroid)() ? L.default.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
       endDate: c(e.currentPeriodStart).add(y.MAX_ACCOUNT_HOLD_DAYS, "days"),
       paymentGatewayName: P.PaymentGatewayToFriendlyName[e.paymentGateway],
-      paymentSourceLink: eT(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")
+      paymentSourceLink: eg(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT")
     }) : L.default.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
       endDate: c(e.currentPeriodStart).add(y.MAX_ACCOUNT_HOLD_DAYS, "days"),
       price: i
     }) : function(e) {
-      return null != e.paymentSourceId && ea(e.paymentSourceId)
+      return null != e.paymentSourceId && eo(e.paymentSourceId)
     }(e) ? L.default.Messages.PREMIUM_SETTINGS_PREPAID_THROUGH_DATE.format({
       prepaidEndDate: e.currentPeriodEnd
     }) : e.status === O.SubscriptionStatusTypes.UNPAID ? L.default.Messages.PREMIUM_SETTINGS_PAYMENT_PROCESSING.format({
@@ -1200,7 +1216,7 @@ var eP = Object.freeze({
     }) : e.isPurchasedExternally ? L.default.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_EXTERNAL.format({
       renewalDate: t.subscriptionPeriodStart,
       paymentGatewayName: P.PaymentGatewayToFriendlyName[e.paymentGateway],
-      subscriptionManagementLink: eT(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
+      subscriptionManagementLink: eg(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
     }) : n ? L.default.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_WITH_PLAN.format({
       planName: L.default.Messages.PREMIUM,
       renewalDate: t.subscriptionPeriodStart,
@@ -1221,7 +1237,7 @@ var eP = Object.freeze({
       let {
         subscriptionPlanId: t
       } = e;
-      return en(t)
+      return ei(t)
     });
     return n = null == i || (0, p.isNoneSubscription)(i.subscriptionPlanId) ? e.planId : null != e.renewalMutations && e.renewalMutations.planId !== e.planId ? e.planId : i.subscriptionPlanId
   },
@@ -1235,12 +1251,12 @@ var eP = Object.freeze({
       let {
         subscriptionPlanId: t
       } = e;
-      return en(t)
+      return ei(t)
     });
     return (null == i || (0, p.isNoneSubscription)(i.subscriptionPlanId)) && (n = O.SubscriptionStatusTypes.CANCELED), n
   },
-  isBaseSubscriptionCanceled: ed,
-  getPremiumGuildIntervalPrice: eE,
+  isBaseSubscriptionCanceled: ef,
+  getPremiumGuildIntervalPrice: ep,
   hasAccountCredit: function(e) {
     return null != e && 0 !== e.size && Array.from(e).some(e => {
       let {
@@ -1251,24 +1267,24 @@ var eP = Object.freeze({
       return null != t && null != n && !i
     })
   },
-  getBillingReviewSubheader: ep,
-  getIntervalForInvoice: eh,
+  getBillingReviewSubheader: eh,
+  getIntervalForInvoice: e_,
   getPremiumPlanItem: w,
-  getGuildBoostPlanItem: eD,
+  getGuildBoostPlanItem: ey,
   isBoostOnlySubscription: function(e) {
-    return null != e && null == w(e) && null != eD(e)
+    return null != e && null == w(e) && null != ey(e)
   },
-  getPremiumSkuIdForSubscription: ey,
+  getPremiumSkuIdForSubscription: eP,
   getPremiumTypeFromSubscription: function(e) {
     if (null != e) {
       let t = w(e);
-      if (null != t) return H(t.planId)
+      if (null != t) return Y(t.planId)
     }
   },
   getPremiumTypeFromSubscriptionRenewalMutations: function(e) {
     if (null != e && null != e.renewalMutations) {
       let t = w(e.renewalMutations);
-      if (null != t) return H(t.planId)
+      if (null != t) return Y(t.planId)
     }
   },
   getPremiumGradientColor: function(e) {
@@ -1358,7 +1374,7 @@ var eP = Object.freeze({
   },
   formatPriceString: function(e, t) {
     let n = (0, N.formatPrice)(e.amount, e.currency),
-      i = B(t);
+      i = H(t);
     return "".concat(n, "/").concat(i)
   },
   StreamQuality: r
