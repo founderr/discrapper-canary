@@ -450,10 +450,13 @@ class W extends s.PureComponent {
     return (0, a.jsxs)("div", {
       className: o(this.getTypeClass("activity"), l),
       children: [this.renderHeader(v), (0, a.jsxs)("div", {
-        className: o(m ? G.bodyAlignCenter : G.bodyNormal, s && G.wrap),
-        children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(L.default.Child, {
-          className: o((0, R.getClass)(G, "content", m ? "GameImage" : null != e ? "Images" : "NoImages", t)),
-          children: [p, h, E, g, u || f ? null : C, c ? S : null]
+        className: o(m ? G.bodyAlignCenter : G.bodyNormal, s && !u && !f && G.wrap),
+        children: [(0, a.jsxs)("div", {
+          className: G.activityDetails,
+          children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, a.jsxs)(L.default.Child, {
+            className: o((0, R.getClass)(G, "content", m ? "GameImage" : null != e ? "Images" : "NoImages", t)),
+            children: [p, h, E, g, u || f ? null : C, c ? S : null]
+          })]
         }), d ? S : null]
       }), u ? C : null, u || f ? S : null, (0, a.jsx)(K, {
         activity: r
