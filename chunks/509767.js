@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("884691"),
-  r = n("87430"),
-  o = n("644141"),
-  s = n("17182");
+  r = n("266913"),
+  o = n("330499"),
+  s = n("382336");
 let l = Object.freeze({
   coordsMap: {},
   visibleSections: {},
@@ -28,8 +28,8 @@ function a(e) {
     chunkSize: d = 250,
     getScrollerState: _,
     itemGutter: f,
-    removeEdgeItemGutters: E,
-    sectionGutter: S,
+    removeEdgeItemGutters: S,
+    sectionGutter: E,
     padding: g,
     paddingVertical: h,
     paddingHorizontal: m,
@@ -54,13 +54,13 @@ function a(e) {
     getSectionHeight: c,
     bufferWidth: N,
     itemGutter: f,
-    removeEdgeItemGutters: E,
-    sectionGutter: S,
+    removeEdgeItemGutters: S,
+    sectionGutter: E,
     padding: g,
     paddingVertical: h,
     paddingHorizontal: m,
     dir: p
-  }), v.computeVisibleSections(Math.max(0, R * d), O * d), v.getState()), [C, v, t, n, a, u, c, R, O, d, f, E, S, g, h, m, N, p]), {
+  }), v.computeVisibleSections(Math.max(0, R * d), O * d), v.getState()), [C, v, t, n, a, u, c, R, O, d, f, S, E, g, h, m, N, p]), {
     ...T.current,
     masonryComputer: v,
     forceUpdateOnChunkChange: L,

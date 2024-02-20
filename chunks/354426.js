@@ -8,9 +8,9 @@ n.r(t), n.d(t, {
   }
 }), n("70102"), n("222007");
 var i = n("884691"),
-  r = n("253233"),
-  o = n("644141"),
-  s = n("17182");
+  r = n("898497"),
+  o = n("330499"),
+  s = n("382336");
 let l = Object.freeze({
   spacerTop: 0,
   totalHeight: 0,
@@ -28,8 +28,8 @@ function a(e) {
     listHeaderHeight: d,
     chunkSize: _ = 256,
     paddingTop: f = 0,
-    paddingBottom: E = 0,
-    getScrollerState: S,
+    paddingBottom: S = 0,
+    getScrollerState: E,
     getAnchorId: g
   } = e, h = (0, o.default)(), m = (0, i.useRef)(l), [p] = (0, i.useState)(() => new r.default), {
     dirty: I,
@@ -38,13 +38,13 @@ function a(e) {
     forceUpdateOnChunkChange: A
   } = (0, s.default)({
     chunkSize: _,
-    getScrollerState: S,
+    getScrollerState: E,
     forceUpdate: h
   }), {
     items: N
   } = m.current, C = null, {
     scrollTop: R
-  } = S();
+  } = E();
   for (let e of N) {
     if (0 === R) break;
     if ("footer" === e.type || "header" === e.type || null == e.anchorId) continue;
@@ -68,11 +68,11 @@ function a(e) {
       rowHeight: a,
       footerHeight: u,
       listHeaderHeight: d,
-      paddingBottom: E,
+      paddingBottom: S,
       paddingTop: f,
       sections: t,
       getAnchorId: g
-    }), p.compute(Math.max(0, T * _), v * _)), [I, T, v, n, a, u, d, E, f, t, p, _, g]);
+    }), p.compute(Math.max(0, T * _), v * _)), [I, T, v, n, a, u, d, S, f, t, p, _, g]);
   return (0, i.useLayoutEffect)(() => void(m.current = L)), {
     ...L,
     listComputer: p,
