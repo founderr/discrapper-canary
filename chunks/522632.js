@@ -1,2 +1,2 @@
 "use strict";
-e.decode = e.parse = r("506776"), e.encode = e.stringify = r("872448")
+t.decode = t.parse = n("506776"), t.encode = t.stringify = n("872448")

@@ -1,0 +1,180 @@
+"use strict";
+n.r(t), n.d(t, {
+  default: function() {
+    return v
+  }
+}), n("222007");
+var l = n("37983"),
+  a = n("884691"),
+  s = n.n(a),
+  i = n("414456"),
+  r = n.n(i),
+  u = n("773364"),
+  o = n("77078"),
+  d = n("673777"),
+  c = n("222871"),
+  f = n("845579"),
+  h = n("42887"),
+  C = n("413709"),
+  p = n("758710"),
+  m = n("45029"),
+  E = n("599110"),
+  g = n("306160"),
+  I = n("701909"),
+  _ = n("687609"),
+  S = n("49111"),
+  N = n("353927"),
+  T = n("782340"),
+  A = n("217934");
+let L = () => {
+  h.default.getMediaEngine().once(u.MediaEngineEvent.ConnectionStats, e => {
+    let t = Object.values(N.MediaEngineContextTypes).map(t => {
+      let n = e.filter(e => {
+        let {
+          connection: n
+        } = e;
+        return n.context === t
+      }).map((e, n) => {
+        let l = e.stats;
+        return l.context = t, l.index = n, l
+      });
+      for (let e of n) {
+        var l;
+        (null == e ? void 0 : null === (l = e.transport) || void 0 === l ? void 0 : l.localAddress) != null && (e.transport.localAddress = "(redacted)")
+      }
+      return n
+    }).filter(e => e.length > 0);
+    (0, g.copy)(JSON.stringify(t, null, 2)), (0, o.showToast)((0, o.createToast)(T.default.Messages.COPIED, o.ToastType.SUCCESS))
+  })
+};
+var v = function(e) {
+  (0, a.useEffect)(() => {
+    E.default.track(S.AnalyticEvents.OPEN_POPOUT, {
+      type: "RTC Connection"
+    })
+  }, []);
+  let t = (0, a.useCallback)(() => {
+      let {
+        closePopout: t
+      } = e;
+      null != t && t(), d.open()
+    }, [e]),
+    n = (0, a.useCallback)(() => {
+      let {
+        hostname: t,
+        averagePing: n,
+        lastPing: a,
+        outboundLossRate: i
+      } = e, u = f.DeveloperMode.getSetting();
+      return (0, l.jsxs)(s.Fragment, {
+        children: [u && (0, l.jsxs)("div", {
+          children: [(0, l.jsx)("div", {
+            className: A.graphContainer,
+            children: (0, l.jsx)(c.default, {
+              dataPoints: e.pings,
+              width: 258,
+              height: 80
+            })
+          }), (0, l.jsx)("div", {
+            className: A.popoutText,
+            children: (0, l.jsx)("strong", {
+              children: _.default.getShortHostname(t)
+            })
+          })]
+        }), (0, l.jsx)("div", {
+          className: A.popoutText,
+          children: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_AVERAGE_PING.format({
+            averagePing: n.toFixed(0)
+          })
+        }), null != a ? (0, l.jsx)("div", {
+          className: A.popoutText,
+          children: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_LAST_PING.format({
+            lastPing: a.toFixed(0)
+          })
+        }) : null, null != i ? (0, l.jsx)("div", {
+          className: A.popoutText,
+          children: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_LOSS_VALUE.format({
+            outboundLossRate: i.toFixed(1)
+          })
+        }) : null, (0, l.jsxs)("div", {
+          className: r(A.popoutText, A.popoutTextDetails),
+          children: [null == i ? T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_DETAILS.format({
+            badPing: 250
+          }) : null, null != i ? T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_DETAILS_WITH_LOSS.format({
+            badPing: 250,
+            badLossRate: 10
+          }) : null]
+        })]
+      })
+    }, [e]),
+    {
+      connectionState: i
+    } = e,
+    u = f.DeveloperMode.getSetting(),
+    g = {
+      [S.RTCConnectionStates.AWAITING_ENDPOINT]: T.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
+        url: S.Links.STATUS
+      }),
+      [S.RTCConnectionStates.CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_CONNECTING,
+      [S.RTCConnectionStates.AUTHENTICATING]: T.default.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
+      [S.RTCConnectionStates.DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
+      [S.RTCConnectionStates.RTC_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
+      [S.RTCConnectionStates.ICE_CHECKING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+        url: I.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      }),
+      [S.RTCConnectionStates.DTLS_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+        url: I.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      }),
+      [S.RTCConnectionStates.RTC_CONNECTED]: n,
+      [S.RTCConnectionStates.NO_ROUTE]: T.default.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
+        url: I.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+      }),
+      [S.RTCConnectionStates.RTC_DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
+    } [i];
+  return (0, l.jsx)("div", {
+    className: A.container,
+    children: (0, l.jsxs)("section", {
+      className: A.section,
+      children: ["function" == typeof g ? g() : (0, l.jsx)("p", {
+        className: r(A.popoutText, A.popoutTextDetails),
+        children: g
+      }), (0, l.jsx)("hr", {
+        className: A.separator
+      }), (0, l.jsxs)("div", {
+        className: A.popoutBottom,
+        children: [(0, l.jsxs)("span", {
+          className: r(A.secured, A.textWithIcon),
+          children: [(0, l.jsx)(m.default, {
+            width: 12,
+            height: 12,
+            color: o.tokens.colors.TEXT_POSITIVE.css,
+            className: A.icon
+          }), T.default.Messages.SECURE_CONNECTION]
+        }), u && h.default.supports(N.Features.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
+          children: [(0, l.jsxs)(o.Anchor, {
+            className: r(A.debugButton, A.textWithIcon),
+            onClick: t,
+            children: [T.default.Messages.DEBUG, (0, l.jsx)(p.default, {
+              className: A.icon,
+              width: 12,
+              height: 12
+            })]
+          }), (0, l.jsxs)(o.Anchor, {
+            className: r(A.copyStatsButton, A.textWithIcon),
+            onClick: L,
+            title: "Copy to clipboard",
+            children: [T.default.Messages.COPY_STATS, (0, l.jsx)(C.default, {
+              className: A.icon,
+              width: 12,
+              height: 12
+            })]
+          })]
+        }), !u && !__OVERLAY__ && (0, l.jsx)(o.Anchor, {
+          className: A.debugButton,
+          href: I.default.getArticleURL(S.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
+          children: T.default.Messages.LEARN_MORE
+        })]
+      })]
+    })
+  })
+}

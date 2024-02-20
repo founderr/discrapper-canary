@@ -1,30 +1,30 @@
-"use strict";
-var r = n("727204"),
-  a = n("116180"),
-  o = n("949580"),
-  i = n("308274"),
-  u = TypeError,
-  s = function(e) {
-    return function(t, n, s, l) {
-      r(n);
-      var c = a(t),
-        f = o(c),
-        d = i(c),
-        p = e ? d - 1 : 0,
-        h = e ? -1 : 1;
-      if (s < 2)
-        for (;;) {
-          if (p in f) {
-            l = f[p], p += h;
-            break
-          }
-          if (p += h, e ? p < 0 : d <= p) throw u("Reduce of empty array with no initial value")
+    "use strict";
+    var e = r("727204"),
+      o = r("116180"),
+      u = r("949580"),
+      i = r("308274"),
+      c = TypeError,
+      f = function(t) {
+        return function(n, r, f, s) {
+          e(r);
+          var a = o(n),
+            _ = u(a),
+            E = i(a),
+            p = t ? E - 1 : 0,
+            O = t ? -1 : 1;
+          if (f < 2)
+            for (;;) {
+              if (p in _) {
+                s = _[p], p += O;
+                break
+              }
+              if (p += O, t ? p < 0 : E <= p) throw c("Reduce of empty array with no initial value")
+            }
+          for (; t ? p >= 0 : E > p; p += O) p in _ && (s = r(s, _[p], p, a));
+          return s
         }
-      for (; e ? p >= 0 : d > p; p += h) p in f && (l = n(l, f[p], p, c));
-      return l
+      };
+    t.exports = {
+      left: f(!1),
+      right: f(!0)
     }
-  };
-e.exports = {
-  left: s(!1),
-  right: s(!0)
-}

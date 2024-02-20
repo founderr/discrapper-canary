@@ -1,2 +1,2 @@
-var n = r("390493");
-r("222007"), "pseudomap" === n.env.npm_package_name && "test" === n.env.npm_lifecycle_script && (n.env.TEST_PSEUDOMAP = "true"), "function" != typeof Map || n.env.TEST_PSEUDOMAP ? t.exports = r("553363") : t.exports = Map
+var r = n("390493");
+n("222007"), "pseudomap" === r.env.npm_package_name && "test" === r.env.npm_lifecycle_script && (r.env.TEST_PSEUDOMAP = "true"), "function" != typeof Map || r.env.TEST_PSEUDOMAP ? e.exports = n("553363") : e.exports = Map
