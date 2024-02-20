@@ -34,7 +34,7 @@ function I(e) {
     appsInGDMEnabled: _,
     availableApplications: N
   } = (0, d.usePrivateChannelIntegrationState)({
-    channelId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : ""
+    channelId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : C.EMPTY_STRING_CHANNEL_ID
   });
   if (null == n || !(0, S.canInstallApplication)(n.id, n.customInstallUrl, n.installParams)) return null;
   let A = _ && null != N.find(e => e.id === (null == n ? void 0 : n.id));

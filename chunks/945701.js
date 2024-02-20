@@ -26,7 +26,7 @@ var l = n("37983"),
   I = n("782340"),
   _ = n("789215");
 let N = (0, p.createChannelRecord)({
-    id: "1",
+    id: v.ONE_STRING_CHANNEL_ID,
     type: v.ChannelTypes.DM
   }),
   A = i.forwardRef(function(e, t) {

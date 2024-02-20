@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return x
   }
 });
 var l = n("37983");
@@ -19,33 +19,34 @@ var a = n("414456"),
   m = n("290491"),
   p = n("305961"),
   E = n("18494"),
-  g = n("124969"),
-  S = n("153769"),
+  S = n("124969"),
+  g = n("153769"),
   C = n("994906"),
   _ = n("136281"),
-  I = n("782340"),
-  T = n("865331");
+  I = n("49111"),
+  T = n("782340"),
+  v = n("865331");
 
-function v(e) {
+function x(e) {
   let {
     member: t
-  } = e, n = (0, i.default)([p.default], () => p.default.getGuild(t.guildId), [t.guildId]), a = (0, h.useUserAccountVerified)(t.userId), v = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), x = (0, h.useUserAccountAgeDate)(t.userId), N = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
+  } = e, n = (0, i.default)([p.default], () => p.default.getGuild(t.guildId), [t.guildId]), a = (0, h.useUserAccountVerified)(t.userId), x = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), N = (0, h.useUserAccountAgeDate)(t.userId), A = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
   return null == n ? null : (0, l.jsx)("div", {
-    className: s(T.safetySignalsMainContainer),
+    className: s(v.safetySignalsMainContainer),
     children: (0, l.jsx)(f.FormItem, {
-      title: I.default.Messages.ACCOUNT,
-      titleClassName: T.infoTitle,
+      title: T.default.Messages.ACCOUNT,
+      titleClassName: v.infoTitle,
       children: (0, l.jsxs)(_.UserModInfoItemContainer, {
         children: [(0, l.jsx)(_.UserModInfoItem, {
           icon: (0, l.jsx)(d.ShieldUserIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
-            className: T.unusualDMLabelIcon
+            className: v.unusualDMLabelIcon
           }),
           name: (0, l.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: I.default.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
+            children: T.default.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
           }),
           description: a ? (0, l.jsx)(o.CheckmarkBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
@@ -56,18 +57,18 @@ function v(e) {
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_DANGER_FOREGROUND
           })
-        }), v !== h.UserRulesAgreementLevel.NO_GATE && (0, l.jsx)(_.UserModInfoItem, {
+        }), x !== h.UserRulesAgreementLevel.NO_GATE && (0, l.jsx)(_.UserModInfoItem, {
           icon: (0, l.jsx)(r.BookCheckIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
-            className: T.unusualDMLabelIcon
+            className: v.unusualDMLabelIcon
           }),
           name: (0, l.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
+            children: T.default.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
           }),
-          description: v === h.UserRulesAgreementLevel.AGREED ? (0, l.jsx)(o.CheckmarkBoldIcon, {
+          description: x === h.UserRulesAgreementLevel.AGREED ? (0, l.jsx)(o.CheckmarkBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_POSITIVE_FOREGROUND
@@ -77,36 +78,36 @@ function v(e) {
             color: f.tokens.colors.INFO_DANGER_FOREGROUND
           })
         }), (0, l.jsx)(_.UserModInfoItem, {
-          icon: (0, l.jsx)(S.default, {
+          icon: (0, l.jsx)(g.default, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX
           }),
           name: (0, l.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_DISCORD_JOIN_DATE
-          }),
-          description: (0, l.jsx)(f.Text, {
-            variant: "text-sm/medium",
-            color: "text-normal",
-            children: x
-          })
-        }), (0, l.jsx)(_.UserModInfoItem, {
-          icon: (0, l.jsx)(g.GuildIcon, {
-            guild: n,
-            size: g.GuildIcon.Sizes.SMOL,
-            animate: !1,
-            className: T.guildIcon
-          }),
-          name: (0, l.jsx)(f.Text, {
-            variant: "text-sm/medium",
-            color: "text-normal",
-            children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_JOIN_DATE
+            children: T.default.Messages.GUILD_MEMBER_MOD_VIEW_DISCORD_JOIN_DATE
           }),
           description: (0, l.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
             children: N
+          })
+        }), (0, l.jsx)(_.UserModInfoItem, {
+          icon: (0, l.jsx)(S.GuildIcon, {
+            guild: n,
+            size: S.GuildIcon.Sizes.SMOL,
+            animate: !1,
+            className: v.guildIcon
+          }),
+          name: (0, l.jsx)(f.Text, {
+            variant: "text-sm/medium",
+            color: "text-normal",
+            children: T.default.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_JOIN_DATE
+          }),
+          description: (0, l.jsx)(f.Text, {
+            variant: "text-sm/medium",
+            color: "text-normal",
+            children: A
           })
         }), (0, l.jsx)(_.UserModInfoItem, {
           icon: (0, l.jsx)(c.UserPlusIcon, {
@@ -116,7 +117,7 @@ function v(e) {
           name: (0, l.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_INVITE_LINK_LABEL
+            children: T.default.Messages.GUILD_MEMBER_MOD_VIEW_INVITE_LINK_LABEL
           }),
           description: (0, l.jsx)(f.Text, {
             variant: "text-sm/medium",
@@ -127,7 +128,7 @@ function v(e) {
               showInviterAsFooter: !0,
               onClickInviter: e => {
                 let n = E.default.getChannelId();
-                (0, C.openGuildMemberModViewSidebar)(t.guildId, e.id, null != n ? n : "")
+                (0, C.openGuildMemberModViewSidebar)(t.guildId, e.id, null != n ? n : I.EMPTY_STRING_CHANNEL_ID)
               }
             })
           })

@@ -18,7 +18,7 @@ var a = s("37983"),
   T = s("97236");
 let f = (0, u.uid)(),
   m = (0, d.createChannelRecord)({
-    id: "1",
+    id: S.ONE_STRING_CHANNEL_ID,
     type: S.ChannelTypes.DM
   }),
   _ = (0, u.uid)();

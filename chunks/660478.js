@@ -1257,7 +1257,7 @@ let eQ = new eX(g.default, {
   THREAD_DELETE: ex,
   WINDOW_FOCUS: function(e) {
     let t = !1;
-    for (let [n, s] of Object.entries(em)) s === e.windowId && (t = function(e, t) {
+    for (let [n, s] of F.default.entries(em)) s === e.windowId && (t = function(e, t) {
       if (null == e) return !1;
       let n = eO.get(e);
       return !t && !n.hasUnread() && (n.oldestUnreadMessageIdStale = !0), ew(e)

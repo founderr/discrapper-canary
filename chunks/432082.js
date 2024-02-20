@@ -67,7 +67,7 @@ function x(e) {
     }), (0, i.jsx)("div", {
       className: T.input,
       children: (0, i.jsx)(r.SearchableSelect, {
-        value: "",
+        value: E.EMPTY_STRING_CHANNEL_ID,
         onChange: n,
         options: I,
         renderOptionLabel: e => {

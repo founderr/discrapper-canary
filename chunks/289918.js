@@ -176,7 +176,7 @@ function J(e) {
     appsInGDMEnabled: ef,
     availableApplications: em
   } = (0, S.usePrivateChannelIntegrationState)({
-    channelId: null !== (n = null == ec ? void 0 : ec.id) && void 0 !== n ? n : ""
+    channelId: null !== (n = null == ec ? void 0 : ec.id) && void 0 !== n ? n : B.EMPTY_STRING_CHANNEL_ID
   }), ep = null == ed ? void 0 : ed.application, eh = ef && null != em.find(e => e.id === (null == ep ? void 0 : ep.id));
   (0, s.useEffect)(() => {
     if (eu && Q && 0 === W) {

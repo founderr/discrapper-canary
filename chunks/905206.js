@@ -31,7 +31,7 @@ var s = n("506838"),
   N = n("49111"),
   p = n("782340");
 let S = {
-  channelId: "",
+  channelId: N.EMPTY_STRING_CHANNEL_ID,
   selectedAnswerIds: new Set,
   submitting: !1,
   editing: !1,

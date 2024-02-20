@@ -24,7 +24,7 @@ var s = n("913144"),
 function m() {
   let e = c.default.getChannelId(),
     t = _.default.getConnectedActivityChannelId(),
-    n = _.default.getSelfEmbeddedActivityForChannel(null != t ? t : ""),
+    n = _.default.getSelfEmbeddedActivityForChannel(null != t ? t : S.EMPTY_STRING_CHANNEL_ID),
     i = o.default.getChannel(e),
     r = o.default.getChannel(t),
     u = null == t || (null == e || null == i) && (0, C.default)(t);

@@ -49,7 +49,7 @@ let U = (e, t) => {
         nonce: e.id,
         content: e.content,
         type: m.MessageTypes.DEFAULT,
-        channelId: ""
+        channelId: m.EMPTY_STRING_CHANNEL_ID
       }),
       timestamp: new Date(l.default.extractTimestamp(e.id)).toISOString(),
       attachments: n,

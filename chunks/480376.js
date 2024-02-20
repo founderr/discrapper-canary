@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return j
   }
-}), n("808653"), n("424973"), n("222007");
+}), n("222007"), n("808653"), n("424973");
 var l = n("37983"),
   a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("974667"),
-  o = n("446674"),
-  u = n("77078"),
+  u = n("446674"),
+  o = n("77078"),
   d = n("450911"),
   c = n("272030"),
   f = n("191225"),
@@ -20,72 +20,73 @@ var l = n("37983"),
   m = n("393027"),
   E = n("373469"),
   g = n("42203"),
-  S = n("18494"),
-  I = n("800762"),
-  _ = n("290581"),
+  I = n("18494"),
+  _ = n("800762"),
+  S = n("290581"),
   N = n("15738"),
   T = n("108189"),
-  A = n("379881"),
-  L = n("986373"),
-  v = n("690874"),
-  x = n("620882"),
-  R = n("686373"),
-  M = n("49111"),
-  O = n("782340"),
-  y = n("422300");
-let D = {
+  A = n("299039"),
+  L = n("379881"),
+  v = n("986373"),
+  x = n("690874"),
+  R = n("620882"),
+  M = n("686373"),
+  O = n("49111"),
+  y = n("782340"),
+  D = n("422300");
+let b = {
   analyticsSource: {
-    page: M.AnalyticsPages.GUILD_CHANNEL,
-    section: M.AnalyticsSections.CHANNEL_LIST,
-    object: M.AnalyticsObjects.CHANNEL
+    page: O.AnalyticsPages.GUILD_CHANNEL,
+    section: O.AnalyticsSections.CHANNEL_LIST,
+    object: O.AnalyticsObjects.CHANNEL
   }
 };
 
-function b() {
+function j() {
   let e = (0, r.useTreeItem)("favorites"),
     {
       favoriteAdded: t,
       clearFavoriteAdded: s
-    } = (0, L.useFavoriteAdded)(),
-    [b, j] = a.useState(!1),
+    } = (0, v.useFavoriteAdded)(),
+    [j, G] = a.useState(!1),
     {
-      favoriteServerMuted: G,
-      favoriteChannels: U
-    } = (0, o.useStateFromStoresObject)([A.default], () => ({
-      favoriteChannels: A.default.getFavoriteChannels(),
-      favoriteServerMuted: A.default.favoriteServerMuted
+      favoriteServerMuted: U,
+      favoriteChannels: P
+    } = (0, u.useStateFromStoresObject)([L.default], () => ({
+      favoriteChannels: L.default.getFavoriteChannels(),
+      favoriteServerMuted: L.default.favoriteServerMuted
     })),
-    P = (0, o.useStateFromStores)([S.default], () => S.default.getChannelId(M.FAVORITES)),
-    w = (0, o.useStateFromStores)([g.default], () => g.default.getChannel(P)),
-    F = (0, m.default)(e => e.guildId),
-    B = F === M.FAVORITES,
+    w = (0, u.useStateFromStores)([I.default], () => I.default.getChannelId(O.FAVORITES)),
+    F = (0, u.useStateFromStores)([g.default], () => g.default.getChannel(w)),
+    B = (0, m.default)(e => e.guildId),
+    V = B === O.FAVORITES,
     {
-      badge: V,
-      unread: H
-    } = (0, v.default)(U),
-    k = function(e) {
-      let t = (0, o.useStateFromStores)([S.default], () => S.default.getVoiceChannelId()),
+      badge: H,
+      unread: k
+    } = (0, x.default)(P),
+    Y = function(e) {
+      let t = (0, u.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
         n = null != t && null != e[t],
-        l = (0, o.useStateFromStores)([E.default], () => {
+        l = (0, u.useStateFromStores)([E.default], () => {
           if (!n) return !1;
           let t = E.default.getCurrentUserActiveStream();
           return null != t && null != e[t.channelId]
         }),
-        a = (0, o.useStateFromStores)([E.default], () => E.default.getAllApplicationStreams().some(t => null != e[t.channelId])),
-        s = (0, o.useStateFromStores)([I.default], () => n && null != t && I.default.hasVideo(t), [n, t]),
-        i = (0, o.useStateFromStoresArray)([f.default], () => Object.keys(e).reduce((e, t) => (e.push(...f.default.getEmbeddedActivitiesForChannel(t)), e), [])),
-        r = (0, o.useStateFromStores)([f.default], () => Array.from(f.default.getSelfEmbeddedActivities().values()).some(t => {
+        a = (0, u.useStateFromStores)([E.default], () => E.default.getAllApplicationStreams().some(t => null != e[t.channelId])),
+        s = (0, u.useStateFromStores)([_.default], () => n && null != t && _.default.hasVideo(t), [n, t]),
+        i = (0, u.useStateFromStoresArray)([f.default], () => A.default.keys(e).reduce((e, t) => (e.push(...f.default.getEmbeddedActivitiesForChannel(t)), e), [])),
+        r = (0, u.useStateFromStores)([f.default], () => Array.from(f.default.getSelfEmbeddedActivities().values()).some(t => {
           let {
             channelId: n
           } = t;
           return null != e[n]
         })),
-        u = i.length > 0,
+        o = i.length > 0,
         d = !1,
         c = !1,
         h = !1,
         p = !1;
-      return n ? (d = !s, c = s, h = l, p = r) : (h = a, p = u), (0, C.renderMediaBadge)({
+      return n ? (d = !s, c = s, h = l, p = r) : (h = a, p = o), (0, C.renderMediaBadge)({
         audio: d,
         video: c,
         screenshare: h,
@@ -93,39 +94,39 @@ function b() {
         isCurrentUserConnected: n,
         activity: p
       })
-    }(U),
-    Y = V > 0 ? (0, p.renderMentionBadge)(V) : null,
-    K = a.useCallback(() => {
+    }(P),
+    K = H > 0 ? (0, p.renderMentionBadge)(H) : null,
+    W = a.useCallback(() => {
       s()
     }, [s]);
   return (0, l.jsxs)(h.ListItem, {
     children: [(0, l.jsx)(N.default, {
-      selected: B,
-      hovered: b,
-      unread: H && !G,
-      className: y.pill
-    }), (0, l.jsx)(R.default, {
-      onShow: K,
-      children: (0, l.jsx)(x.FavoriteAddedTooltip, {
-        children: (0, l.jsx)(u.BlobMask, {
-          selected: B || b,
-          upperBadge: k,
-          lowerBadge: Y,
+      selected: V,
+      hovered: j,
+      unread: k && !U,
+      className: D.pill
+    }), (0, l.jsx)(M.default, {
+      onShow: W,
+      children: (0, l.jsx)(R.FavoriteAddedTooltip, {
+        children: (0, l.jsx)(o.BlobMask, {
+          selected: V || j,
+          upperBadge: Y,
+          lowerBadge: K,
           children: (0, l.jsx)(T.default, {
             ...e,
-            ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-              guildName: O.default.Messages.FAVORITES_GUILD_NAME,
-              mentions: V
+            ariaLabel: y.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
+              guildName: y.default.Messages.FAVORITES_GUILD_NAME,
+              mentions: H
             }),
             to: {
-              pathname: M.Routes.CHANNEL(M.FAVORITES, P),
-              state: D
+              pathname: O.Routes.CHANNEL(O.FAVORITES, w),
+              state: b
             },
-            selected: B || b,
-            onMouseEnter: () => j(!0),
-            onMouseLeave: () => j(!1),
+            selected: V || j,
+            onMouseEnter: () => G(!0),
+            onMouseLeave: () => G(!1),
             onMouseDown: function() {
-              null != w && d.default.preload(w.guild_id, w.id)
+              null != F && d.default.preload(F.guild_id, F.id)
             },
             onContextMenu: function(e) {
               (0, c.openContextMenuLazy)(e, async () => {
@@ -138,11 +139,11 @@ function b() {
               })
             },
             children: (0, l.jsx)("div", {
-              className: i(y.ring, {
-                [y.ringActive]: t
+              className: i(D.ring, {
+                [D.ringActive]: t
               }),
-              children: (0, l.jsx)(_.default, {
-                className: y.favoriteIcon,
+              children: (0, l.jsx)(S.default, {
+                className: D.favoriteIcon,
                 width: 20,
                 height: 20
               })

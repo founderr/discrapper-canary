@@ -41,7 +41,7 @@ let v = "SELECTABLE",
   L = {
     comparator: -1,
     channel: (0, f.createChannelRecord)({
-      id: "null",
+      id: I.NULL_STRING_CHANNEL_ID,
       type: I.ChannelTypes.GUILD_CATEGORY,
       name: C.default.Messages.UNCATEGORIZED
     })

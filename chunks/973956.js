@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return L
   }
 }), s("424973"), s("222007");
 var a = s("37983"),
@@ -18,14 +18,15 @@ var a = s("37983"),
   I = s("697218"),
   T = s("151185"),
   f = s("432153"),
-  S = s("782340"),
-  m = s("521180");
+  S = s("49111"),
+  m = s("782340"),
+  N = s("521180");
 
-function N(e) {
+function g(e) {
   return String(e)
 }
 
-function g(e) {
+function h(e) {
   let {
     icon: t,
     title: s,
@@ -33,93 +34,93 @@ function g(e) {
     className: n
   } = e;
   return (0, a.jsxs)("div", {
-    className: i(m.label, n),
+    className: i(N.label, n),
     children: [t, (0, a.jsxs)("div", {
-      className: m.labelText,
+      className: N.labelText,
       children: [(0, a.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "none",
-        className: m.labelTitle,
+        className: N.labelTitle,
         children: s
       }), null != l && "" !== l ? (0, a.jsx)(o.Text, {
         variant: "text-xs/semibold",
         color: "text-muted",
-        className: m.labelSubtitle,
+        className: N.labelSubtitle,
         children: l
       }) : null]
     })]
   })
 }
 
-function h() {
-  return (0, a.jsx)(g, {
+function C() {
+  return (0, a.jsx)(h, {
     icon: (0, a.jsx)(T.default, {
-      className: m.labelIcon
+      className: N.labelIcon
     }),
-    title: S.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
-    className: m.createLabel
+    title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
+    className: N.createLabel
   })
 }
 
-function C(e) {
+function R(e) {
   var t;
   let {
     channelId: s
-  } = e, l = (0, f.useChannelWithTemplateFallback)(s), n = (0, f.useChannelWithTemplateFallback)(null !== (t = null == l ? void 0 : l.parent_id) && void 0 !== t ? t : "");
+  } = e, l = (0, f.useChannelWithTemplateFallback)(s), n = (0, f.useChannelWithTemplateFallback)(null !== (t = null == l ? void 0 : l.parent_id) && void 0 !== t ? t : S.EMPTY_STRING_CHANNEL_ID);
   if (null == l) return null;
   let i = (0, u.getChannelIconComponent)(l),
     r = (0, d.computeChannelName)(l, I.default, _.default),
     o = null != n ? (0, d.computeChannelName)(n, I.default, _.default) : void 0;
-  return (0, a.jsx)(g, {
+  return (0, a.jsx)(h, {
     icon: null != i && (0, a.jsx)(i, {
-      className: m.labelIcon
+      className: N.labelIcon
     }),
     title: r,
     subtitle: o
   })
 }
 
-function R(e) {
+function x(e) {
   let {
     value: t
   } = e;
-  return null != t ? (0, a.jsx)(C, {
+  return null != t ? (0, a.jsx)(R, {
     channelId: t
-  }) : (0, a.jsx)(h, {})
+  }) : (0, a.jsx)(C, {})
 }
 
-function x(e) {
+function L(e) {
   let {
     guildId: t,
     value: n,
     initialChannelId: i,
     omitChannelIds: u,
     "aria-labelledby": T,
-    onChange: m
-  } = e, g = S.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL, h = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t), [t]), C = (0, f.useChannelWithTemplateFallback)(null != n ? n : ""), x = l.useMemo(() => {
+    onChange: N
+  } = e, h = m.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL, C = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t), [t]), R = (0, f.useChannelWithTemplateFallback)(null != n ? n : S.EMPTY_STRING_CHANNEL_ID), L = l.useMemo(() => {
     let e = [{
         value: null,
-        label: g
+        label: h
       }],
       t = !1;
-    for (let s of h._categories)
+    for (let s of C._categories)
       for (let {
           channel: a
         }
-        of h[s.channel.id]) {
+        of C[s.channel.id]) {
         if (!!(0, c.isGuildSelectableChannelType)(a.type) || !!(0, c.isGuildVocalChannelType)(a.type))(!(a.id !== n && (null == u ? void 0 : u.has(a.id))) || a.id === i && n !== i) && (n === a.id && (t = !0), e.push({
           value: a.id,
           label: (0, d.computeChannelName)(a, I.default, _.default)
         }))
       }
-    return null != n && !t && null != C && e.push({
+    return null != n && !t && null != R && e.push({
       value: n,
-      label: C.name
+      label: R.name
     }), e
-  }, [g, n, C, h, u, i]);
+  }, [h, n, R, C, u, i]);
   return (0, a.jsx)(o.Select, {
-    placeholder: S.default.Messages.CHANNEL_SELECT,
-    options: x,
+    placeholder: m.default.Messages.CHANNEL_SELECT,
+    options: L,
     select: function(e) {
       null == e ? (0, o.openModalLazy)(async () => {
         let {
@@ -128,16 +129,16 @@ function x(e) {
         return s => (0, a.jsx)(e, {
           ...s,
           guildId: t,
-          onSubmit: m
+          onSubmit: N
         })
-      }) : m(e)
+      }) : N(e)
     },
-    isSelected: e => null != n && N(e) === N(n),
-    serialize: N,
-    renderOptionLabel: R,
+    isSelected: e => null != n && g(e) === g(n),
+    serialize: g,
+    renderOptionLabel: x,
     renderOptionValue: e => {
       let [t] = e;
-      return R(t)
+      return x(t)
     },
     "aria-labelledby": T
   })

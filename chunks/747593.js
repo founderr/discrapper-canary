@@ -22,11 +22,11 @@ var i, n, l = s("37983"),
   _ = s("419830"),
   x = s("47495"),
   I = s("797226"),
-  p = s("308305"),
-  C = s("319165"),
+  C = s("308305"),
+  p = s("319165"),
   O = s("233069"),
-  v = s("42203"),
-  M = s("245997"),
+  M = s("42203"),
+  v = s("245997"),
   L = s("525065"),
   A = s("305961"),
   j = s("27618"),
@@ -150,7 +150,7 @@ class B extends a.PureComponent {
             tag: "h3",
             className: k.muteUntilTitle,
             children: y.default.Messages.MUTE_UNTIL
-          }), (0, l.jsx)(C.default, {
+          }), (0, l.jsx)(p.default, {
             className: k.muteUntilText,
             muteConfig: s
           })]
@@ -275,7 +275,7 @@ class B extends a.PureComponent {
         className: k.smallSpacing,
         children: y.default.Messages.ADD_CHANNEL_TO_OVERRIDE
       }), (0, l.jsx)(g.SearchableSelect, {
-        value: "",
+        value: w.EMPTY_STRING_CHANNEL_ID,
         placeholder: y.default.Messages.SELECT_CHANNEL_OR_CATEGORY,
         renderOptionLabel: this.renderOptionLabel,
         options: s,
@@ -299,7 +299,7 @@ class B extends a.PureComponent {
       } = s;
       if (!r.has(d.id) || null != n[d.id] && 0 === n[d.id].length) return null;
       let o = e[d.id];
-      return (0, l.jsx)(p.ChannelNotificationSettings, {
+      return (0, l.jsx)(C.ChannelNotificationSettings, {
         ref: e => {
           this._channelRefs[d.id] = e
         },
@@ -397,9 +397,9 @@ class B extends a.PureComponent {
         overrides: t
       })
     }, this.renderOptionLabel = e => {
-      let t = v.default.getChannel(e.value);
+      let t = M.default.getChannel(e.value);
       if (null == t) return e.label;
-      let s = v.default.getChannel(t.parent_id),
+      let s = M.default.getChannel(t.parent_id),
         i = null != s ? s.name : null;
       return (0, l.jsx)(U.default, {
         icon: (0, _.getChannelIconComponent)(t),
@@ -414,8 +414,8 @@ function V(e) {
   let {
     guildId: t,
     ...s
-  } = e, i = (0, N.useStateFromStoresObject)([M.default, A.default, L.default, R.default], () => {
-    let e = M.default.getCategories(t);
+  } = e, i = (0, N.useStateFromStoresObject)([v.default, A.default, L.default, R.default], () => {
+    let e = v.default.getCategories(t);
     return {
       guildId: t,
       categories: e,
