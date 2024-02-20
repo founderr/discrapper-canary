@@ -16130,6 +16130,7 @@ e.exports = Object.freeze({
   DOMAIN_VERIFICATION_USE_DNS: "Verify using DNS",
   DOMAIN_VERIFICATION_INSTRUCTIONS_HTTP: "Create a new file on your website:",
   CLIP_TAG: "Clip (Beta)",
+  CLIP_TAG_MOBILE: "CLIP",
   CLIPS: "Clips",
   CLIPS_CLIPPING: "Clipping",
   CLIPS_SETTINGS: "Clips Settings",
