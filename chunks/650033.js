@@ -10,6 +10,7 @@ let s = {
     enable_swipe_shortcuts: "Gestures shortcuts - swipe from right to left.",
     disable_alpha_voice_panel: "Disable new Voice Panel UI: Currently the new voice ui is defaulted ON for staff.  It's not feature complete so if there's something you are missing, or you find a problem, you can disable it here.",
     highlight_experimental_icons: "Highlight experimental icons",
+    happening_now_summary_card: "Enable Happening Now Card with Summary",
     enable_last_channel: "Enable launch into last channel",
     enable_recently_active: "Enable recently active channels",
     happening_main_tab: "Enable Happening tab containing summaries",

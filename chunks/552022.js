@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return b
+    return H
   }
 }), l("222007");
 var a, n, i = l("37983"),
@@ -25,18 +25,18 @@ var a, n, i = l("37983"),
   T = l("826432"),
   I = l("228220"),
   S = l("15165"),
-  A = l("58608"),
-  N = l("599110"),
+  N = l("58608"),
+  A = l("599110"),
   M = l("449008"),
   R = l("299039"),
   P = l("803725"),
-  j = l("135284"),
-  y = l("49111"),
+  y = l("135284"),
+  j = l("49111"),
   D = l("782340"),
   O = l("432261"),
-  H = l("323805");
+  b = l("323805");
 (n = a || (a = {})).DELETE = "delete", n.EDIT = "edit", n.SHARE = "share";
-var b = function(e) {
+var H = function(e) {
   var t, l, a;
   let {
     clip: n,
@@ -48,21 +48,21 @@ var b = function(e) {
     onShare: _
   } = e, x = (0, c.useStateFromStoresArray)([g.default], () => n.users.map(e => g.default.getUser(e)).filter(M.isNotNullish)), {
     AnalyticsLocationProvider: T
-  } = (0, C.default)(E.default.CLIPS_GALLERY_ITEM), [I, S] = s.useState(!1), A = s.useRef(null), P = (0, L.default)(null !== (a = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), j = s.useRef(new f.DelayedCall(500, () => {
+  } = (0, C.default)(E.default.CLIPS_GALLERY_ITEM), [I, S] = s.useState(!1), N = s.useRef(null), P = (0, L.default)(null !== (a = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), y = s.useRef(new f.DelayedCall(500, () => {
     var e;
-    let t = A.current;
-    null != t && t.paused && (t.currentTime = P.current, null === (e = A.current) || void 0 === e || e.play())
-  })), H = s.useCallback(() => {
-    let e = A.current;
+    let t = N.current;
+    null != t && t.paused && (t.currentTime = P.current, null === (e = N.current) || void 0 === e || e.play())
+  })), b = s.useCallback(() => {
+    let e = N.current;
     null != e && (e.pause(), e.src = "")
-  }, []), b = s.useCallback(() => {
+  }, []), H = s.useCallback(() => {
     var e;
-    S(!0), null === (e = j.current) || void 0 === e || e.delay()
+    S(!0), null === (e = y.current) || void 0 === e || e.delay()
   }, []), U = s.useCallback(() => {
     var e, t, l;
     S(!1);
-    let a = A.current;
-    null === (e = j.current) || void 0 === e || e.cancel(), null != a && (a.pause(), a.currentTime = null !== (l = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== l ? l : 0)
+    let a = N.current;
+    null === (e = y.current) || void 0 === e || e.cancel(), null != a && (a.pause(), a.currentTime = null !== (l = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== l ? l : 0)
   }, [null === (l = n.editMetadata) || void 0 === l ? void 0 : l.start]), V = s.useCallback(e => {
     var t, l;
     (null === (l = e.relatedTarget) || void 0 === l ? void 0 : null === (t = l.parentElement) || void 0 === t ? void 0 : t.parentElement) !== e.currentTarget.parentElement && U()
@@ -75,25 +75,25 @@ var b = function(e) {
       "aria-disabled": u,
       "aria-label": D.default.Messages.EDIT,
       onClick: u ? void 0 : () => {
-        m(n), N.default.track(y.AnalyticEvents.CLIP_GALLERY_CARD_CLICKED)
+        m(n), A.default.track(j.AnalyticEvents.CLIP_GALLERY_CARD_CLICKED)
       },
       className: o(O.clipItem, {
         [O.disabled]: u
       }),
       onBlur: V,
-      onFocus: b,
-      onMouseOver: b,
+      onFocus: H,
+      onMouseOver: H,
       onMouseLeave: U,
       children: [(0, i.jsx)(w, {
         clip: n,
         isNew: d,
-        videoRef: A
+        videoRef: N
       }), (0, i.jsxs)("div", {
         className: O.clipFooter,
         children: [(0, i.jsx)(k, {
           clip: n,
           focused: I,
-          onFocus: b
+          onFocus: H
         }), (0, i.jsx)(h.Text, {
           className: O.clipMetadata,
           color: "text-normal",
@@ -113,13 +113,13 @@ var b = function(e) {
               var t, l, a, n;
               let i = e.relatedTarget,
                 s = null === (l = e.currentTarget.parentElement) || void 0 === l ? void 0 : null === (t = l.parentElement) || void 0 === t ? void 0 : t.parentElement;
-              if ((null == i ? void 0 : i.parentElement) !== s)(null == i ? void 0 : null === (n = i.parentElement) || void 0 === n ? void 0 : null === (a = n.parentElement) || void 0 === a ? void 0 : a.parentElement) !== s && b()
+              if ((null == i ? void 0 : i.parentElement) !== s)(null == i ? void 0 : null === (n = i.parentElement) || void 0 === n ? void 0 : null === (a = n.parentElement) || void 0 === a ? void 0 : a.parentElement) !== s && H()
             }
           }), I && (0, i.jsx)(B, {
             clip: n,
             actionsDisabled: u,
             exporting: r,
-            onBeforeDelete: H,
+            onBeforeDelete: b,
             onDelete: p,
             onEdit: m,
             onShare: _,
@@ -197,7 +197,7 @@ function k(e) {
       u(l.name), C(null !== (e = l.name) && void 0 !== e ? e : "")
     }
   }, [l.name, r]), c) ? (0, i.jsx)(h.TextInput, {
-    inputClassName: o(H["heading-lg/medium"], O.clipTitleInput),
+    inputClassName: o(b["heading-lg/medium"], O.clipTitleInput),
     onClick: e => e.stopPropagation(),
     value: E,
     autoFocus: !0,
@@ -237,11 +237,11 @@ function U(e) {
   let {
     clip: t,
     videoRef: l
-  } = e, a = (0, j.useClipProtocolURL)(t);
+  } = e, a = (0, y.useClipProtocolURL)(t);
   return 0 === t.length ? (0, i.jsx)(h.Spinner, {
     type: h.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
     className: O.clipThumb
-  }) : null != a ? (0, i.jsx)(A.default, {
+  }) : null != a ? (0, i.jsx)(N.default, {
     preload: "metadata",
     muted: !0,
     poster: t.thumbnail,
@@ -267,15 +267,15 @@ function B(e) {
     onShare: u,
     onBlur: d
   } = e, c = (0, _.default)(), f = s.useCallback(e => {
-    e.stopPropagation(), e.shiftKey ? (n(), (0, P.deleteClip)(t.filepath)) : r(t, n), N.default.track(y.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+    e.stopPropagation(), e.shiftKey ? (n(), (0, P.deleteClip)(t.filepath)) : r(t, n), A.default.track(j.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
       type: "delete"
     })
   }, [r, n, t]), p = s.useCallback(e => {
-    e.stopPropagation(), o(t), N.default.track(y.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+    e.stopPropagation(), o(t), A.default.track(j.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
       type: "edit"
     })
   }, [o, t]), m = s.useCallback(e => {
-    e.stopPropagation(), u(t), N.default.track(y.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+    e.stopPropagation(), u(t), A.default.track(j.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
       type: "share"
     })
   }, [u, t]);
@@ -309,30 +309,18 @@ function B(e) {
           className: O.miniIcon
         })
       })
-    }), (0, i.jsx)(h.Tooltip, {
-      text: D.default.Messages.SHARE,
-      children: e => {
-        let {
-          onBlur: t,
-          ...n
-        } = e;
-        return (0, i.jsx)(h.Button, {
-          ...n,
-          disabled: a && !l,
-          submitting: l,
-          color: h.Button.Colors.BRAND,
-          onBlur: e => {
-            d(e), null == t || t()
-          },
-          onClick: m,
-          className: O.button,
-          size: h.Button.Sizes.NONE,
-          look: h.Button.Looks.FILLED,
-          children: (0, i.jsx)(x.default, {
-            className: O.miniIcon
-          })
-        })
-      }
+    }), (0, i.jsx)(h.Button, {
+      disabled: a && !l,
+      submitting: l,
+      color: h.Button.Colors.BRAND,
+      onBlur: d,
+      onClick: m,
+      className: O.button,
+      size: h.Button.Sizes.NONE,
+      look: h.Button.Looks.FILLED,
+      children: (0, i.jsx)(x.default, {
+        className: O.miniIcon
+      })
     })]
   })
 }

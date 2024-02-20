@@ -24,44 +24,44 @@ var s = n("866227"),
   m = n("180273"),
   N = n("579565"),
   p = n("789563"),
-  S = n("161454"),
-  A = n("619443"),
-  C = n("875037"),
-  h = n("398654"),
-  g = n("54346"),
-  M = n("681937"),
-  O = n("619259"),
-  R = n("179803"),
-  L = n("38654"),
-  v = n("267567"),
-  P = n("404931"),
-  D = n("128887"),
-  x = n("42060"),
-  y = n("167209"),
-  U = n("104032"),
-  j = n("897107"),
-  b = n("44678"),
-  G = n("807345"),
-  B = n("840895"),
-  k = n("143573"),
-  F = n("703537"),
-  w = n("662285"),
-  H = n("808422"),
-  V = n("845579"),
-  Y = n("374363"),
-  W = n("271938"),
-  K = n("250404"),
-  z = n("533222"),
-  Q = n("42203"),
-  Z = n("47319"),
-  J = n("320268"),
-  X = n("26989"),
-  q = n("305961"),
-  $ = n("42887"),
-  ee = n("385649"),
-  et = n("957255"),
-  en = n("669280"),
-  es = n("945956"),
+  S = n("619443"),
+  A = n("875037"),
+  C = n("398654"),
+  h = n("54346"),
+  g = n("681937"),
+  M = n("619259"),
+  O = n("179803"),
+  R = n("38654"),
+  L = n("267567"),
+  v = n("404931"),
+  P = n("128887"),
+  D = n("42060"),
+  x = n("167209"),
+  y = n("104032"),
+  U = n("897107"),
+  j = n("44678"),
+  b = n("807345"),
+  G = n("840895"),
+  B = n("143573"),
+  k = n("703537"),
+  F = n("662285"),
+  w = n("808422"),
+  H = n("845579"),
+  V = n("374363"),
+  Y = n("271938"),
+  W = n("250404"),
+  K = n("533222"),
+  z = n("42203"),
+  Q = n("47319"),
+  Z = n("320268"),
+  J = n("26989"),
+  X = n("305961"),
+  q = n("42887"),
+  $ = n("385649"),
+  ee = n("957255"),
+  et = n("669280"),
+  en = n("945956"),
+  es = n("568307"),
   el = n("18494"),
   ea = n("162771"),
   ei = n("168851"),
@@ -166,7 +166,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
   ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PROFILE, eh.NoticeTypes.VIEWING_ROLES, eh.NoticeTypes.INVITED_TO_SPEAK, eh.NoticeTypes.LURKING_GUILD, eh.NoticeTypes.VOICE_DISABLED, eh.NoticeTypes.NO_INPUT_DETECTED, eh.NoticeTypes.HARDWARE_MUTE, eh.NoticeTypes.H264_DISABLED, eh.NoticeTypes.DISPATCH_ERROR, eh.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS, eh.NoticeTypes.SPOTIFY_AUTO_PAUSED, eh.NoticeTypes.BLOCKED_BY_PROXY, eh.NoticeTypes.VOICE_CONNECTED_LAST_SESSION, eh.NoticeTypes.PENDING_MEMBER, eh.NoticeTypes.STREAMER_MODE, eh.NoticeTypes.SCHEDULED_MAINTENANCE],
   eF = {
     [eh.NoticeTypes.GUILD_RAID_NOTIFICATION]: {
-      predicate: () => (0, h.shouldShowRaidNotificationNagbar)().show && !eG(eh.NoticeTypes.GUILD_RAID_NOTIFICATION),
+      predicate: () => (0, C.shouldShowRaidNotificationNagbar)().show && !eG(eh.NoticeTypes.GUILD_RAID_NOTIFICATION),
       metadata: () => {
         let e = {
           dismissUntil: l().add(3, "hours").toDate()
@@ -181,8 +181,8 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
           selectedGuildId: n
         } = e;
         if (null == n) return !1;
-        let s = X.default.getMember(n, t.id);
-        return null != s && !s.isPending && (0, M.hasAutomodQuarantinedProfile)(s)
+        let s = J.default.getMember(n, t.id);
+        return null != s && !s.isPending && (0, g.hasAutomodQuarantinedProfile)(s)
       }
     },
     [eh.NoticeTypes.QUARANTINED]: {
@@ -198,7 +198,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           selectedGuildId: t
         } = e;
-        return L.default.isViewingRoles(t)
+        return R.default.isViewingRoles(t)
       }
     },
     [eh.NoticeTypes.INVITED_TO_SPEAK]: {
@@ -206,7 +206,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           voiceState: t
         } = e;
-        return (0, H.getAudienceRequestToSpeakState)(t) === H.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+        return (0, w.getAudienceRequestToSpeakState)(t) === w.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
       }
     },
     [eh.NoticeTypes.LURKING_GUILD]: {
@@ -214,38 +214,38 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           selectedGuildId: t
         } = e;
-        return null != t && v.default.isLurking(t)
+        return null != t && L.default.isLurking(t)
       }
     },
     [eh.NoticeTypes.VOICE_DISABLED]: {
-      predicate: () => null != es.default.getRemoteDisconnectVoiceChannelId()
+      predicate: () => null != en.default.getRemoteDisconnectVoiceChannelId()
     },
     [eh.NoticeTypes.VOICE_CONNECTED_LAST_SESSION]: {
-      predicate: () => null != es.default.getLastSessionVoiceChannelId()
+      predicate: () => null != en.default.getLastSessionVoiceChannelId()
     },
     [eh.NoticeTypes.NO_INPUT_DETECTED]: {
       predicate: e => {
         let {
           voiceChannelId: t,
           voiceState: n
-        } = e, s = Q.default.getChannel(t), l = (null == s ? void 0 : s.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
-        return !1 === $.default.getInputDetected() && !l
+        } = e, s = z.default.getChannel(t), l = (null == s ? void 0 : s.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
+        return !1 === q.default.getInputDetected() && !l
       }
     },
     [eh.NoticeTypes.H264_DISABLED]: {
       predicate: e => {
         let {
           voiceChannelId: t
-        } = e, n = Q.default.getChannel(t);
-        return !$.default.getOpenH264() && null != t && ec.default.hasVideo(t) && null != n && n.isGuildStageVoice()
+        } = e, n = z.default.getChannel(t);
+        return !q.default.getOpenH264() && null != t && ec.default.hasVideo(t) && null != n && n.isGuildStageVoice()
       }
     },
     [eh.NoticeTypes.HARDWARE_MUTE]: {
-      predicate: () => es.default.isConnected() && $.default.isHardwareMute(),
+      predicate: () => en.default.isConnected() && q.default.isHardwareMute(),
       metadata: () => {
-        let e = $.default.getInputDeviceId(),
-          t = z.default.getVendor(e),
-          n = z.default.getModel(e);
+        let e = q.default.getInputDeviceId(),
+          t = K.default.getVendor(e),
+          n = K.default.getModel(e);
         if (null != t && null != n) return {
           vendor: t,
           model: n
@@ -263,10 +263,10 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       metadata: () => eA.default.getLastProgress()
     },
     [eh.NoticeTypes.SPOTIFY_AUTO_PAUSED]: {
-      predicate: () => w.default.wasAutoPaused()
+      predicate: () => F.default.wasAutoPaused()
     },
     [eh.NoticeTypes.BLOCKED_BY_PROXY]: {
-      predicate: () => !eG(eh.NoticeTypes.BLOCKED_BY_PROXY) && k.default.blockedByProxy && B.default.getCurrentConfig({
+      predicate: () => !eG(eh.NoticeTypes.BLOCKED_BY_PROXY) && B.default.blockedByProxy && G.default.getCurrentConfig({
         location: "notice_store"
       }).eligibleForNotice
     },
@@ -285,11 +285,11 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
           selectedGuildId: l,
           currentUser: a
         } = e;
-        return null !== (s = null != l && null != a && !(null === (t = q.default.getGuild(l)) || void 0 === t ? void 0 : t.hasFeature(eh.GuildFeatures.GUILD_ONBOARDING)) && (null === (n = X.default.getMember(l, a.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== s && s
+        return null !== (s = null != l && null != a && !(null === (t = X.default.getGuild(l)) || void 0 === t ? void 0 : t.hasFeature(eh.GuildFeatures.GUILD_ONBOARDING)) && (null === (n = J.default.getMember(l, a.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== s && s
       }
     },
     [eh.NoticeTypes.OUTBOUND_PROMOTION]: {
-      predicate: () => (0, b.shouldShowOutboundPromotionNotice)()
+      predicate: () => (0, j.shouldShowOutboundPromotionNotice)()
     },
     [eh.NoticeTypes.CORRUPT_INSTALLATION]: {
       predicate: () => eN.isPlatformEmbedded && (!i.default.supported() || eC.default.isCorruptInstallation())
@@ -299,7 +299,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           voiceChannelId: t
         } = e;
-        return null != t && ec.default.hasVideo(t) && !$.default.supports(eL.Features.VIDEO) && !eG(eh.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER)
+        return null != t && ec.default.hasVideo(t) && !q.default.supports(eL.Features.VIDEO) && !eG(eh.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER)
       }
     },
     [eh.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK]: {
@@ -307,17 +307,17 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           currentUser: t
         } = e;
-        return ep.default.canRedeemPremiumPerks(t) && J.default.getDetectedOffPlatformPremiumPerks().length > 0
+        return ep.default.canRedeemPremiumPerks(t) && Z.default.getDetectedOffPlatformPremiumPerks().length > 0
       },
       metadata: () => {
-        let e = J.default.getDetectedOffPlatformPremiumPerks();
+        let e = Z.default.getDetectedOffPlatformPremiumPerks();
         return e[0]
       }
     },
     [eh.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL]: {
-      predicate: () => !eG(eh.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL) && J.default.getDetectedOffPlatformPremiumPerks().length > 0,
+      predicate: () => !eG(eh.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL) && Z.default.getDetectedOffPlatformPremiumPerks().length > 0,
       metadata: () => {
-        let e = J.default.getDetectedOffPlatformPremiumPerks();
+        let e = Z.default.getDetectedOffPlatformPremiumPerks();
         return e[0]
       }
     },
@@ -347,7 +347,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           selectedGuildId: t
         } = e;
-        return null != t && C.default.getCurrentConfig({
+        return null != t && A.default.getCurrentConfig({
           location: "notice_store"
         }).showSurvey && !eG(eh.NoticeTypes.SERVER_USAGE_SURVEY)
       },
@@ -379,13 +379,13 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [eh.NoticeTypes.CONNECT_SPOTIFY]: {
-      predicate: () => !w.default.hasConnectedAccount() && S.default.isObservedAppRunning(E.default.get(eh.PlatformTypes.SPOTIFY).name) && !eG(eh.NoticeTypes.CONNECT_SPOTIFY)
+      predicate: () => !F.default.hasConnectedAccount() && es.default.isObservedAppRunning(E.default.get(eh.PlatformTypes.SPOTIFY).name) && !eG(eh.NoticeTypes.CONNECT_SPOTIFY)
     },
     [eh.NoticeTypes.WIN32_DEPRECATED_MESSAGE]: {
       predicate: () => {
         let {
           enabled: e
-        } = j.default.getCurrentConfig({
+        } = U.default.getCurrentConfig({
           location: "window32_deprecation_message"
         });
         return e && (null === c.default || void 0 === c.default ? void 0 : c.default.os.arch) === "ia32" && (null === c.default || void 0 === c.default ? void 0 : c.default.process.platform) === "win32"
@@ -428,7 +428,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [eh.NoticeTypes.CONNECT_PLAYSTATION]: {
-      predicate: () => Z.default.isSuggestedAccountType(eh.PlatformTypes.PLAYSTATION) && null == Z.default.getAccount(null, eh.PlatformTypes.PLAYSTATION) && !eG(eh.NoticeTypes.CONNECT_PLAYSTATION)
+      predicate: () => Q.default.isSuggestedAccountType(eh.PlatformTypes.PLAYSTATION) && null == Q.default.getAccount(null, eh.PlatformTypes.PLAYSTATION) && !eG(eh.NoticeTypes.CONNECT_PLAYSTATION)
     },
     [eh.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]: {
       predicate: () => {
@@ -544,7 +544,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [eh.NoticeTypes.PREMIUM_REACTIVATE]: {
-      predicate: () => !eG(eh.NoticeTypes.PREMIUM_REACTIVATE) && U.default.shouldShowReactivateNotice()
+      predicate: () => !eG(eh.NoticeTypes.PREMIUM_REACTIVATE) && y.default.shouldShowReactivateNotice()
     },
     [eh.NoticeTypes.LOCALIZED_PRICING]: {
       predicate: e => {
@@ -594,7 +594,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       })
     },
     [eh.NoticeTypes.POMELO_ELIGIBLE]: {
-      predicate: () => (0, y.isEligibleForPomelo)() && !eG(eh.NoticeTypes.POMELO_ELIGIBLE) && !(0, x.getForceMigration)()
+      predicate: () => (0, x.isEligibleForPomelo)() && !eG(eh.NoticeTypes.POMELO_ELIGIBLE) && !(0, D.getForceMigration)()
     },
     [eh.NoticeTypes.DROPS_ENDED_INCOMPLETE]: {
       predicate: () => !eG(eh.NoticeTypes.DROPS_ENDED_INCOMPLETE) && (0, I.isDismissibleContentDismissed)(r.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, I.isDismissibleContentDismissed)(r.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP) && (0, N.getShowDropsEndedIncompleteBanner)(eM.PartnerGame.FORTNITE),
@@ -603,14 +603,14 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       })
     },
     [eh.NoticeTypes.UU_MIGRATION]: {
-      predicate: () => (0, y.isEligibleForPomelo)() && !eG(eh.NoticeTypes.UU_MIGRATION) && (0, x.getForceMigration)()
+      predicate: () => (0, x.isEligibleForPomelo)() && !eG(eh.NoticeTypes.UU_MIGRATION) && (0, D.getForceMigration)()
     },
     [eh.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION]: {
       predicate: e => {
         let {
           selectedGuildId: t
-        } = e, n = null != t ? q.default.getGuild(t) : null;
-        return null != t && null != O.default.getMentionRaidDetected(t) && (null == n ? void 0 : n.hasFeature(eh.GuildFeatures.COMMUNITY)) && !eG(eh.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION) || !1
+        } = e, n = null != t ? X.default.getGuild(t) : null;
+        return null != t && null != M.default.getMentionRaidDetected(t) && (null == n ? void 0 : n.hasFeature(eh.GuildFeatures.COMMUNITY)) && !eG(eh.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION) || !1
       },
       metadata: e => {
         let {
@@ -619,7 +619,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
           dismissUntil: l().add(2, "hours").toDate()
         };
         if (null != t) {
-          let e = O.default.getMentionRaidDetected(t);
+          let e = M.default.getMentionRaidDetected(t);
           null != e && (n.decisionId = e.decisionId)
         }
         return n
@@ -633,7 +633,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           selectedGuildId: t
         } = e;
-        return !eG(eh.NoticeTypes.GUILD_ONBOARDING_UPSELL_NAGBAR) && null != t && (0, R.shouldShowGuildOnboardingUpsell)(t, r.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
+        return !eG(eh.NoticeTypes.GUILD_ONBOARDING_UPSELL_NAGBAR) && null != t && (0, O.shouldShowGuildOnboardingUpsell)(t, r.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
       }
     },
     [eh.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR]: {
@@ -641,7 +641,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           currentUser: t
         } = e;
-        return F.isEligibleForNotice(t)
+        return k.isEligibleForNotice(t)
       }
     },
     [eh.NoticeTypes.ESLATAM_LANGUAGE_LAUNCH]: {
@@ -650,14 +650,14 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }).enabled && !eG(eh.NoticeTypes.ESLATAM_LANGUAGE_LAUNCH)
     },
     [eh.NoticeTypes.HABITUAL_DND]: {
-      predicate: () => P.default.showNagBar() && !V.QuietMode.getSetting() && V.StatusSetting.getSetting() === eR.StatusTypes.DND && D.QuietModeExperiment.getCurrentConfig({
+      predicate: () => v.default.showNagBar() && !H.QuietMode.getSetting() && H.StatusSetting.getSetting() === eR.StatusTypes.DND && P.QuietModeExperiment.getCurrentConfig({
         location: "notice_store"
       }).allowQuietMode
     }
   };
 
 function ew() {
-  if (!A.default.isConnected()) return !1;
+  if (!S.default.isConnected()) return !1;
   eU = null;
   let e = ed.default.getCurrentUser();
   if (null == e) return !1;
@@ -696,7 +696,7 @@ function eH() {
 }
 class eV extends a.default.Store {
   initialize() {
-    this.syncWith([eo.default, en.default, J.default, ea.default, G.default, eT.default, K.default, Z.default, Y.default, g.default, P.default], ew), this.waitFor(ed.default, ei.default, q.default, X.default, es.default, $.default, er.default, p.default, ea.default, eu.default, w.default, S.default, en.default, eS.default, eA.default, em.default, ee.default, e_.default, eC.default, J.default, ef.default, et.default, G.default, eI.default, eT.default, Z.default, v.default, m.default, T.default, k.default)
+    this.syncWith([eo.default, et.default, Z.default, ea.default, b.default, eT.default, W.default, Q.default, V.default, h.default, v.default], ew), this.waitFor(ed.default, ei.default, X.default, J.default, en.default, q.default, er.default, p.default, ea.default, eu.default, F.default, es.default, et.default, eS.default, eA.default, em.default, $.default, e_.default, eC.default, Z.default, ef.default, ee.default, b.default, eI.default, eT.default, Q.default, L.default, m.default, T.default, B.default)
   }
   hasNotice() {
     return null != eU && null != eU.type
@@ -743,7 +743,7 @@ var eY = new eV(u.default, {
   IMPERSONATE_STOP: ew,
   IMPERSONATE_UPDATE: ew,
   GUILD_MEMBER_ADD: function(e) {
-    return e.user.id === W.default.getId() && ew()
+    return e.user.id === Y.default.getId() && ew()
   },
   GUILD_MEMBER_UPDATE: ew,
   SURVEY_FETCHED: ew,
@@ -759,7 +759,7 @@ var eY = new eV(u.default, {
       let {
         userId: t
       } = e;
-      return t !== W.default.getId()
+      return t !== Y.default.getId()
     }) && ew()
   },
   STREAMER_MODE_UPDATE: eH,

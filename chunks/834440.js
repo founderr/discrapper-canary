@@ -41,7 +41,7 @@ function T(e) {
       children: [(0, a.jsx)(o.Heading, {
         variant: "heading-md/semibold",
         color: "header-primary",
-        children: u ? m.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE_ACTIVITY_PANEL : m.default.Messages.QUESTS_TITLE.format({
+        children: u ? m.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE : m.default.Messages.QUESTS_TITLE.format({
           questName: n.config.messages.questName
         })
       }), (0, a.jsx)(o.Text, {

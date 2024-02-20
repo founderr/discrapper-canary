@@ -64,10 +64,6 @@ class g extends s.default.PersistedStore {
     let t = e.toLowerCase();
     return Object.prototype.hasOwnProperty.call(E, t) ? E[t] : null
   }
-  isGameInDatabase(e) {
-    let t = this.getGameByName(e.name);
-    return null != t || void 0 !== e.nativeProcessObserverId && (2147483648 & e.nativeProcessObserverId) == 0
-  }
   get fetching() {
     return !0 === i
   }
