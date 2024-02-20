@@ -11,46 +11,46 @@ var a = s("884691"),
   r = s("853987"),
   o = s("775416");
 
-function d() {
-  var e;
-  let t = "useFetchCollectiblesCategoriesAndPurchases";
+function d(e) {
+  var t;
+  let s = "useFetchCollectiblesCategoriesAndPurchases";
   (0, l.useTriggerDebuggingAA)({
-    location: t + " auto on",
+    location: s + " auto on",
     autoTrackExposure: !0
   }), (0, l.useTriggerDebuggingAA)({
-    location: t + " auto off",
+    location: s + " auto off",
     autoTrackExposure: !1
   });
   let {
-    isFetching: s,
-    categories: d,
-    error: u
-  } = function() {
-    let e = "useMaybeFetchCollectiblesCategories";
+    isFetching: d,
+    categories: u,
+    error: c
+  } = function(e) {
+    let t = "useMaybeFetchCollectiblesCategories";
     (0, l.useTriggerDebuggingAA)({
-      location: e + " auto on",
+      location: t + " auto on",
       autoTrackExposure: !0
     }), (0, l.useTriggerDebuggingAA)({
-      location: e + " auto off",
+      location: t + " auto off",
       autoTrackExposure: !1
     });
-    let [t, s, o, d] = (0, n.useStateFromStoresArray)([r.default], () => {
+    let [s, o, d, u] = (0, n.useStateFromStoresArray)([r.default], () => {
       var e;
       return [r.default.isFetching, r.default.error, null !== (e = r.default.lastFetched) && void 0 !== e ? e : 0, r.default.categories]
     });
     return (0, a.useEffect)(() => {
-      !(t || s || Date.now() - o < 6e5) && (0, i.fetchCollectiblesCategories)()
-    }, [t, o, s]), {
-      isFetching: t,
-      categories: d,
-      error: s
+      !(s || o || Date.now() - d < 6e5) && (0, i.fetchCollectiblesCategories)(e)
+    }, [s, d, o, e]), {
+      isFetching: s,
+      categories: u,
+      error: o
     }
-  }(), {
-    isClaiming: c,
-    fetchError: S,
-    claimError: E,
-    isFetching: T,
-    purchases: f
+  }(e), {
+    isClaiming: S,
+    fetchError: E,
+    claimError: T,
+    isFetching: f,
+    purchases: m
   } = function() {
     let e = "useFetchPurchases";
     (0, l.useTriggerDebuggingAA)({
@@ -70,14 +70,14 @@ function d() {
       isFetching: t,
       purchases: u
     }
-  }(), m = null !== (e = null != u ? u : S) && void 0 !== e ? e : E;
+  }(), _ = null !== (t = null != c ? c : E) && void 0 !== t ? t : T;
   return {
-    isFetching: s || T,
-    isFetchingCategories: s,
-    isFetchingPurchases: T,
-    isClaiming: c,
-    categories: d,
-    purchases: f,
-    error: m
+    isFetching: d || f,
+    isFetchingCategories: d,
+    isFetchingPurchases: f,
+    isClaiming: S,
+    categories: u,
+    purchases: m,
+    error: _
   }
 }
