@@ -11,9 +11,9 @@ var n = e("37983"),
   i = e("884691"),
   a = e("414456"),
   u = e.n(a),
-  r = e("65597"),
-  l = e("283322"),
-  o = e("473109"),
+  o = e("65597"),
+  r = e("283322"),
+  l = e("473109"),
   c = e("77078"),
   d = e("206230"),
   f = e("491605"),
@@ -25,7 +25,7 @@ var n = e("37983"),
 function M(t) {
   let {
     onClose: s
-  } = t, [a, M] = i.useState(!1), _ = (0, r.default)([d.default], () => d.default.useReducedMotion);
+  } = t, [a, M] = i.useState(!1), _ = (0, o.default)([d.default], () => d.default.useReducedMotion);
   i.useEffect(() => ((0, I.playVibingWumpusMusic)(), () => {
     (0, I.stopVibingWumpusMusic)()
   }), []);
@@ -47,7 +47,7 @@ function M(t) {
     }), (0, n.jsxs)(c.ModalContent, {
       className: u(p.body, N.body),
       children: [(0, n.jsxs)("div", {
-        className: p.textContainer,
+        className: u(p.textContainer, N.textContainer),
         children: [(0, n.jsx)(c.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
@@ -67,16 +67,17 @@ function M(t) {
           children: h.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN
         }), (0, n.jsxs)(c.Button, {
           color: c.Button.Colors.TRANSPARENT,
+          look: c.Button.Looks.OUTLINED,
           size: c.Button.Sizes.MEDIUM,
           onClick: () => {
             a ? (0, I.playVibingWumpusMusic)() : (0, I.stopVibingWumpusMusic)(), M(!a)
           },
           fullWidth: !0,
           innerClassName: N.mute,
-          children: [a ? (0, n.jsx)(o.MusicSlashIcon, {
+          children: [a ? (0, n.jsx)(l.MusicSlashIcon, {
             width: 20,
             height: 20
-          }) : (0, n.jsx)(l.MusicIcon, {
+          }) : (0, n.jsx)(r.MusicIcon, {
             width: 20,
             height: 20
           }), a ? h.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_UNMUTE : h.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_MUTE]
