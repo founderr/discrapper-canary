@@ -109,14 +109,18 @@ let eu = a.memo(e => {
           voiceChannelId: null == s ? void 0 : s.channelId
         }
       }),
-      u = (0, r.useStateFromStoresObject)([P.default], () => e === t.id ? {
-        muted: !1,
-        deafened: !1
-      } : {
-        muted: P.default.isLocalMute(t.id, ei.MediaEngineContextTypes.DEFAULT),
-        localVideoDisabled: P.default.isLocalVideoDisabled(t.id, ei.MediaEngineContextTypes.DEFAULT),
-        localVideoAutoDisabled: P.default.isLocalVideoAutoDisabled(t.id, ei.MediaEngineContextTypes.DEFAULT)
-      }, [e, t.id]);
+      u = (0, r.useStateFromStoresObject)([P.default], () => {
+        let n = (0, g.default)(t.type),
+          l = t.type !== ea.ParticipantTypes.ACTIVITY ? t.user.id : t.id;
+        return e === l ? {
+          muted: !1,
+          deafened: !1
+        } : {
+          muted: P.default.isLocalMute(l, n),
+          localVideoDisabled: P.default.isLocalVideoDisabled(l, n),
+          localVideoAutoDisabled: P.default.isLocalVideoAutoDisabled(l, n)
+        }
+      }, [e, t]);
     return {
       serverMuted: o.muted,
       serverDeafened: o.deafened,
@@ -384,7 +388,7 @@ let ec = a.memo(e => {
           onClick: e => {
             e.stopPropagation(), null == t || t(), y()
           },
-          className: i(eo.interactive),
+          className: i(eo.interactive, eo.toggleMute),
           children: (0, l.jsx)(X.default, {})
         })
       }
