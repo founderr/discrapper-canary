@@ -1,82 +1,68 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return _
   }
 }), n("222007");
 var a = n("37983"),
   r = n("884691"),
-  s = n("917351"),
-  i = n.n(s),
-  l = n("88807"),
-  u = n("558062"),
-  o = n("432710"),
-  d = n("446674"),
-  c = n("77078"),
-  f = n("960460"),
-  h = n("489740"),
-  p = n("355025"),
-  E = n("51545"),
-  C = n("155084"),
-  m = n("393414"),
-  S = n("90404"),
-  g = n("599110"),
-  _ = n("286235"),
-  T = n("50885"),
-  v = n("49111"),
-  A = n("782340"),
-  I = n("966585");
+  s = n("446674"),
+  i = n("77078"),
+  l = n("960460"),
+  o = n("489740"),
+  u = n("355025"),
+  d = n("51545"),
+  c = n("393414"),
+  f = n("90404"),
+  h = n("599110"),
+  p = n("286235"),
+  m = n("50885"),
+  C = n("49111"),
+  E = n("782340"),
+  g = n("966585");
 
-function M() {
-  let [e, t] = r.useState(!1), n = (0, d.useStateFromStores)([h.default], () => {
+function S() {
+  let [e, t] = r.useState(!1), n = (0, s.useStateFromStores)([o.default], () => {
     var e;
-    return (0, p.probablyHasBuildOverride)() ? null === (e = h.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
+    return (0, u.probablyHasBuildOverride)() ? null === (e = o.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
   });
   if (null == n) return null;
-  let s = async () => {
+  let d = async () => {
     try {
-      t(!0), await (0, f.clearBuildOverride)(), window.location.reload(!0)
+      t(!0), await (0, l.clearBuildOverride)(), window.location.reload(!0)
     } catch (e) {
       t(!1)
     }
   };
-  return (0, a.jsx)(c.Button, {
-    size: c.ButtonSizes.LARGE,
-    onClick: s,
+  return (0, a.jsx)(i.Button, {
+    size: i.ButtonSizes.LARGE,
+    onClick: d,
     submitting: e,
-    className: I.clearOverrideButton,
-    children: A.default.Messages.CLEAR_BUILD_OVERRIDE
+    className: g.clearOverrideButton,
+    children: E.default.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
-let x = i.throttle(() => {
-  C.default.increment({
-    name: o.MetricEvents.APP_CRASHED,
-    tags: ["reason:".concat(l.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
-  }, !0)
-}, 100, {
-  trailing: !1
-});
-class R extends r.PureComponent {
+class v extends r.PureComponent {
   componentDidCatch(e, t) {
     this.triggerSoftCrash(e, t)
   }
   triggerSoftCrash(e, t) {
-    let n = (0, m.getHistory)().location;
+    let n = (0, c.getHistory)().location;
     this.setState({
       error: e,
       info: t
     });
-    let a = _.default.captureCrash(e, {
+    let a = p.default.captureCrash(e, {
       extra: t
     });
-    g.default.track(v.AnalyticEvents.APP_CRASHED, {
+    h.default.track(C.AnalyticEvents.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
       error_stack: e.stack,
       sentry_issue_id: a,
-      uses_client_mods: (0, E.usesClientMods)()
-    }), x(), T.default.cleanupDisplaySleep()
+      uses_client_mods: (0, d.usesClientMods)()
+    }), m.default.cleanupDisplaySleep()
   }
   _handleSubmitReport() {
     location.reload(!0)
@@ -99,24 +85,24 @@ class R extends r.PureComponent {
     if (null !== this.state.error) {
       let e = (0, a.jsxs)("div", {
           children: [(0, a.jsx)("p", {
-            children: A.default.Messages.ERRORS_UNEXPECTED_CRASH
+            children: E.default.Messages.ERRORS_UNEXPECTED_CRASH
           }), (0, a.jsx)("p", {
-            children: A.default.Messages.ERRORS_ACTION_TO_TAKE
+            children: E.default.Messages.ERRORS_ACTION_TO_TAKE
           })]
         }),
         n = (0, a.jsxs)("div", {
-          className: I.buttons,
-          children: [(0, a.jsx)(c.Button, {
-            size: c.ButtonSizes.LARGE,
+          className: g.buttons,
+          children: [(0, a.jsx)(i.Button, {
+            size: i.ButtonSizes.LARGE,
             onClick: this._handleSubmitReport,
-            children: A.default.Messages.ERRORS_RELOAD
-          }), (0, a.jsx)(M, {})]
+            children: E.default.Messages.ERRORS_RELOAD
+          }), (0, a.jsx)(S, {})]
         });
-      return (0, a.jsx)(S.default, {
-        title: A.default.Messages.UNSUPPORTED_BROWSER_TITLE,
+      return (0, a.jsx)(f.default, {
+        title: E.default.Messages.UNSUPPORTED_BROWSER_TITLE,
         note: null != t ? t() : e,
         action: n,
-        className: I.errorPage
+        className: g.errorPage
       })
     }
     return e
@@ -128,4 +114,4 @@ class R extends r.PureComponent {
     }, this.discordErrorsSet = !1
   }
 }
-var N = R
+var _ = v

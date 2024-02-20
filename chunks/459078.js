@@ -1,3 +1,3 @@
 "use strict";
-var r = n("935778");
-e.exports = Function.prototype.bind || r
+var n = r("935778");
+t.exports = Function.prototype.bind || n
