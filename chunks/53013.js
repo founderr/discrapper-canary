@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return m
+    return f
   }
 });
 var l = a("37983"),
@@ -17,33 +17,29 @@ var l = a("37983"),
   A = a("843455"),
   _ = a("161625");
 
-function m(e) {
+function f(e) {
   let {
     channel: t,
     parentModalKey: a,
     lastActiveInputIndex: s,
-    onEmojiSelect: m,
-    onGifSelect: f,
-    onCustomUpload: L,
-    positionTargetRef: T
+    onEmojiSelect: f,
+    onGifSelect: m,
+    positionTargetRef: L
   } = e, {
-    showPollExpressionPicker: p,
-    closePollExpressionPicker: C
-  } = (0, E.default)(), P = (0, i.useStateFromStores)([d.default], () => t.isPrivate() || d.default.can(A.Permissions.ATTACH_FILES, t)), R = n.useCallback(e => {
-    r(null != s, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && f(t.id, s, (0, c.makeTenorProxyURL)(e.gifSrc)), C()
-  }, [C, s, f, t.id]), O = n.useCallback(e => {
-    r(null != s, "Expected to have an active input"), r(null != e, "Expected to have an emoji"), m(e, s), C()
-  }, [s, m, C]), x = n.useCallback(e => {
-    r(null != s, "Expected to have an active input"), L(t.id, s, e), C()
-  }, [t.id, C, s, L]);
-  return p ? (0, l.jsx)(u.default, {
-    positionTargetRef: T,
+    showPollExpressionPicker: T,
+    closePollExpressionPicker: p
+  } = (0, E.default)(), C = (0, i.useStateFromStores)([d.default], () => t.isPrivate() || d.default.can(A.Permissions.ATTACH_FILES, t)), P = n.useCallback(e => {
+    r(null != s, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && m(t.id, s, (0, c.makeTenorProxyURL)(e.gifSrc)), p()
+  }, [p, s, m, t.id]), R = n.useCallback(e => {
+    r(null != s, "Expected to have an active input"), r(null != e, "Expected to have an emoji"), f(e, s), p()
+  }, [s, f, p]);
+  return T ? (0, l.jsx)(u.default, {
+    positionTargetRef: L,
     type: o.ChatInputTypes.CREATE_POLL,
     hideGifFavorites: !0,
     includeCreateEmojiButton: !1,
-    onSelectGIF: P ? R : void 0,
-    onSelectEmoji: O,
-    onCustomUpload: P ? x : void 0,
+    onSelectGIF: C ? P : void 0,
+    onSelectEmoji: R,
     channel: t,
     parentModalKey: a,
     closeOnModalOuterClick: !0,

@@ -37,17 +37,11 @@ n.r(t), n.d(t, {
   GIF_PICKER_TAB_ID: function() {
     return y
   },
-  CUSTOM_UPLOAD_PICKER_TAB_PANEL_ID: function() {
+  EMOJI_SIZE_MAP: function() {
     return T
   },
-  CUSTOM_UPLOAD_PICKER_TAB_ID: function() {
-    return C
-  },
-  EMOJI_SIZE_MAP: function() {
-    return S
-  },
   EMOJI_ROW_SIZE: function() {
-    return I
+    return C
   }
 }), (d = s || (s = {})).GUILD = "GUILD", d.UNICODE = "UNICODE", d.RECENT = "RECENT", d.CUSTOM = "CUSTOM", d.SEARCH_RESULTS = "SEARCH_RESULTS", d.FAVORITES = "FAVORITES", d.TOP_GUILD_EMOJI = "TOP_GUILD_EMOJI", d.PREMIUM_UPSELL = "PREMIUM_UPSELL";
 let c = "emoji-picker-grid";
@@ -60,11 +54,9 @@ let m = "emoji-picker-tab-panel",
   E = "soundboard-picker-tab",
   p = "gif-picker-tab-panel",
   y = "gif-picker-tab",
-  T = "custom-upload-picker-tab-panel",
-  C = "custom-upload-picker-tab",
-  S = {
+  T = {
     reaction: 32,
     default: 44,
     jumbo: 96
   },
-  I = 9
+  C = 9

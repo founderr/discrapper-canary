@@ -29,4 +29,4 @@ let i = "POLL_CREATION_MODAL_KEY",
   u = 300,
   d = 55;
 (l = s || (s = {}))[l.ONE_HOUR = 1] = "ONE_HOUR", l[l.ONE_DAY = 24] = "ONE_DAY", l[l.THREE_DAYS = 72] = "THREE_DAYS", l[l.SEVEN_DAYS = 168] = "SEVEN_DAYS";
-let c = new Set([a.ExpressionPickerViewType.GIF, a.ExpressionPickerViewType.EMOJI, a.ExpressionPickerViewType.CUSTOM_UPLOAD])
+let c = new Set([a.ExpressionPickerViewType.GIF, a.ExpressionPickerViewType.EMOJI])

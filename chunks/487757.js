@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return M
+    return v
   }
 }), a("222007");
 var l = a("37983"),
@@ -16,8 +16,8 @@ var l = a("37983"),
   E = a("428958"),
   A = a("773284"),
   _ = a("476765"),
-  m = a("151185"),
-  f = a("562228"),
+  f = a("151185"),
+  m = a("562228"),
   L = a("104182"),
   T = a("741138"),
   p = a("362415"),
@@ -26,13 +26,13 @@ var l = a("37983"),
   R = a("53013"),
   O = a("233365"),
   x = a("264317"),
-  h = a("186859"),
-  I = a("660516"),
+  I = a("186859"),
+  h = a("660516"),
   N = a("782340"),
   g = a("149753");
 let S = (0, _.uid)();
 
-function v(e) {
+function M(e) {
   let {
     selectedDuration: t,
     onSelect: a
@@ -69,14 +69,14 @@ function v(e) {
   })
 }
 
-function M(e) {
+function v(e) {
   let {
     channel: t,
     transitionState: a,
     onClose: s
   } = e;
   (0, E.default)({
-    type: I.ImpressionTypes.MODAL,
+    type: h.ImpressionTypes.MODAL,
     name: u.ImpressionNames.POLL_EDITOR_VIEWED
   });
   let {
@@ -85,8 +85,8 @@ function M(e) {
     setQuestion: T,
     selectedLayoutType: D,
     setSelectedLayoutType: j,
-    allowMultiSelect: k,
-    setAllowMultiSelect: y,
+    allowMultiSelect: y,
+    setAllowMultiSelect: k,
     duration: b,
     setDuration: w,
     canPost: U,
@@ -95,43 +95,42 @@ function M(e) {
     handleAnswerTextChange: F,
     handleEmojiSelect: H,
     handleGifSelect: V,
-    handleCustomUpload: W,
-    handleRemoveAnswer: Y,
-    createPoll: K,
-    createPollError: z,
-    submitting: X
+    handleRemoveAnswer: W,
+    createPoll: Y,
+    createPollError: K,
+    submitting: z
   } = (0, L.default)(t, s), {
-    trackPollCreationCancelled: Z
-  } = (0, p.useTrackPollCreationEvents)(_, i, k, D), J = n.useRef([]), {
-    togglePollExpressionPicker: Q,
-    lastActiveInputIndex: q
-  } = (0, x.useToggleExpressionPicker)(t, D), $ = n.useCallback(() => {
-    o(null != q, "Must have an active input");
-    let e = J.current[q];
+    trackPollCreationCancelled: X
+  } = (0, p.useTrackPollCreationEvents)(_, i, y, D), Z = n.useRef([]), {
+    togglePollExpressionPicker: J,
+    lastActiveInputIndex: Q
+  } = (0, x.useToggleExpressionPicker)(t, D), q = n.useCallback(() => {
+    o(null != Q, "Must have an active input");
+    let e = Z.current[Q];
     return o(null != e, "Expected a mounted answer input component"), e.getBoundingClientRect()
-  }, [q]), ee = D === c.PollLayoutTypes.DEFAULT, et = n.useCallback(() => {
-    Z(), s()
-  }, [s, Z]), ea = n.useCallback(() => {
-    let e = _.length > 0 || i.some(e => (0, f.isAnswerFilled)(e, D));
+  }, [Q]), $ = D === c.PollLayoutTypes.DEFAULT, ee = n.useCallback(() => {
+    X(), s()
+  }, [s, X]), et = n.useCallback(() => {
+    let e = _.length > 0 || i.some(e => (0, m.isAnswerFilled)(e, D));
     e ? (0, O.default)({
       title: N.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
       body: N.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY,
       cta: N.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
       closeLabel: N.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BACK_TO_EDITING,
       onConfirm: () => {
-        et()
+        ee()
       }
-    }) : et()
-  }, [et, i, _, D]);
+    }) : ee()
+  }, [ee, i, _, D]);
   n.useEffect(() => {
-    (0, d.updateModal)(h.POLL_CREATION_MODAL_KEY, e => (0, l.jsx)(M, {
+    (0, d.updateModal)(I.POLL_CREATION_MODAL_KEY, e => (0, l.jsx)(v, {
       ...e,
       channel: t
-    }), ea)
-  }, [ea, t]);
-  let el = (0, A.default)({
+    }), et)
+  }, [et, t]);
+  let ea = (0, A.default)({
     disabled: !U,
-    onSubmit: K
+    onSubmit: Y
   });
   return (0, l.jsxs)(d.ModalRoot, {
     size: d.ModalSize.MEDIUM,
@@ -148,50 +147,50 @@ function M(e) {
         id: S,
         children: N.default.Messages.CREATE_POLL_HEADING
       }), (0, l.jsx)(d.ModalCloseButton, {
-        onClick: ea
+        onClick: et
       })]
     }), (0, l.jsxs)(d.ModalContent, {
       className: g.content,
-      onKeyDown: el,
-      children: [null != z && (0, l.jsx)(d.FormErrorBlock, {
-        children: z.getAnyErrorMessage()
+      onKeyDown: ea,
+      children: [null != K && (0, l.jsx)(d.FormErrorBlock, {
+        children: K.getAnyErrorMessage()
       }), (0, l.jsx)(d.TextInput, {
         "aria-label": N.default.Messages.CREATE_POLL_QUESTION_INPUT_LABEL,
         placeholder: N.default.Messages.CREATE_POLL_QUESTION_PLACEHOLDER,
         value: _,
         inputClassName: g.questionInput,
         onChange: T,
-        maxLength: h.MAX_POLL_QUESTION_LENGTH,
+        maxLength: I.MAX_POLL_QUESTION_LENGTH,
         autoFocus: !0
       }), (0, l.jsx)(P.default, {
         selectedLayoutType: D,
         onSelectedLayoutType: j
       }), (0, l.jsxs)("div", {
-        className: r(g.answerInputsContainer, ee ? g.defaultContainer : g.imageOnlyContainer),
+        className: r(g.answerInputsContainer, $ ? g.defaultContainer : g.imageOnlyContainer),
         role: "group",
         "aria-label": N.default.Messages.POLL_OPTIONS_ARIA,
         children: [i.map((e, a) => (0, l.jsx)(C.default, {
           answer: e,
           channelId: t.id,
           index: a,
-          ref: e => J.current[a] = e,
-          handleTogglePollExpressionPicker: () => Q(a),
+          ref: e => Z.current[a] = e,
+          handleTogglePollExpressionPicker: () => J(a),
           layout: D,
           onAnswerTextChange: F,
-          onRemoveAnswer: Y
+          onRemoveAnswer: W
         }, e.localCreationAnswerId)), B && (0, l.jsxs)(d.Clickable, {
-          className: ee ? g.addAnswerButtonDefault : g.addAnswerButtonImageOnly,
+          className: $ ? g.addAnswerButtonDefault : g.addAnswerButtonImageOnly,
           onClick: B ? G : void 0,
           "aria-label": N.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON,
-          children: [(0, l.jsx)(m.default, {
-            className: ee ? g.addAnswerIconDefault : g.addAnswerIconImageOnly
-          }), ee && (0, l.jsx)(d.Text, {
+          children: [(0, l.jsx)(f.default, {
+            className: $ ? g.addAnswerIconDefault : g.addAnswerIconImageOnly
+          }), $ && (0, l.jsx)(d.Text, {
             variant: "text-md/normal",
             color: "text-muted",
             children: N.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON
           })]
         })]
-      }), (0, l.jsx)(v, {
+      }), (0, l.jsx)(M, {
         selectedDuration: b,
         onSelect: w
       })]
@@ -201,9 +200,9 @@ function M(e) {
         className: g.checkbox,
         type: d.Checkbox.Types.INVERTED,
         size: 24,
-        value: k,
+        value: y,
         checkboxColor: (0, d.useToken)(d.tokens.colors.INTERACTIVE_NORMAL).hex(),
-        onChange: (e, t) => y(t),
+        onChange: (e, t) => k(t),
         children: (0, l.jsx)(d.Text, {
           variant: "text-md/normal",
           color: "text-normal",
@@ -213,8 +212,8 @@ function M(e) {
         look: d.ButtonLooks.FILLED,
         size: d.Button.Sizes.MEDIUM,
         className: g.postButton,
-        onClick: K,
-        submitting: X,
+        onClick: Y,
+        submitting: z,
         disabled: !U,
         children: (0, l.jsx)(d.Text, {
           variant: "text-md/semibold",
@@ -224,12 +223,11 @@ function M(e) {
       })]
     }), (0, l.jsx)(R.default, {
       channel: t,
-      parentModalKey: h.POLL_CREATION_MODAL_KEY,
+      parentModalKey: I.POLL_CREATION_MODAL_KEY,
       onEmojiSelect: H,
       onGifSelect: V,
-      onCustomUpload: W,
-      positionTargetRef: $,
-      lastActiveInputIndex: q
+      positionTargetRef: q,
+      lastActiveInputIndex: Q
     })]
   })
 }
