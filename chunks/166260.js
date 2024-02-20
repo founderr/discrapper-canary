@@ -1,7 +1,7 @@
 "use strict";
 e.r(s), e.d(s, {
   VibingWumpus: function() {
-    return M
+    return A
   },
   default: function() {
     return _
@@ -11,76 +11,84 @@ var n = e("37983"),
   i = e("884691"),
   a = e("414456"),
   u = e.n(a),
-  o = e("65597"),
-  r = e("283322"),
+  r = e("65597"),
+  o = e("283322"),
   l = e("473109"),
   c = e("77078"),
   d = e("206230"),
   f = e("491605"),
   I = e("559922"),
-  h = e("782340"),
-  N = e("509728"),
-  p = e("932379");
+  N = e("782340"),
+  h = e("509728"),
+  p = e("932379"),
+  M = e("472408");
 
-function M(t) {
+function A(t) {
   let {
     onClose: s
-  } = t, [a, M] = i.useState(!1), _ = (0, o.default)([d.default], () => d.default.useReducedMotion);
+  } = t, [a, A] = i.useState(!1), _ = (0, r.default)([d.default], () => d.default.useReducedMotion);
   i.useEffect(() => ((0, I.playVibingWumpusMusic)(), () => {
     (0, I.stopVibingWumpusMusic)()
   }), []);
-  async function A() {
+  async function g() {
     let {
       default: t
     } = await e.el("926299").then(e.t.bind(e, "926299", 19));
     return t
   }
   return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(f.default, {
-      importData: A,
+    children: [(0, n.jsx)("div", {
+      className: h.ringContainer,
+      children: (0, n.jsx)("img", {
+        src: M,
+        alt: "",
+        className: h.ringArt
+      })
+    }), (0, n.jsx)(f.default, {
+      importData: g,
       shouldAnimate: !_,
-      className: N.wumpus,
+      className: h.wumpus,
       pauseAtFrame: 200
     }), (0, n.jsx)(c.ModalCloseButton, {
       onClick: s,
-      className: N.closeButton
+      className: h.closeButton
     }), (0, n.jsxs)(c.ModalContent, {
-      className: u(p.body, N.body),
+      className: u(p.body, h.body),
       children: [(0, n.jsxs)("div", {
-        className: u(p.textContainer, N.textContainer),
+        className: u(p.textContainer, h.textContainer),
         children: [(0, n.jsx)(c.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
-          children: h.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_HEADER
+          children: N.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_HEADER
         }), (0, n.jsx)(c.Text, {
           variant: "text-md/normal",
           color: "header-secondary",
-          children: h.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_DESCRIPTION
+          children: N.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_DESCRIPTION
         })]
       }), (0, n.jsxs)("div", {
-        className: N.buttonContainer,
+        className: h.buttonContainer,
         children: [(0, n.jsx)(c.Button, {
           fullWidth: !0,
           color: c.Button.Colors.BRAND,
           size: c.Button.Sizes.MEDIUM,
           onClick: s,
-          children: h.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN
+          children: N.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN
         }), (0, n.jsxs)(c.Button, {
           color: c.Button.Colors.TRANSPARENT,
           look: c.Button.Looks.OUTLINED,
           size: c.Button.Sizes.MEDIUM,
           onClick: () => {
-            a ? (0, I.playVibingWumpusMusic)() : (0, I.stopVibingWumpusMusic)(), M(!a)
+            a ? (0, I.playVibingWumpusMusic)() : (0, I.stopVibingWumpusMusic)(), A(!a)
           },
           fullWidth: !0,
-          innerClassName: N.mute,
+          innerClassName: h.mute,
           children: [a ? (0, n.jsx)(l.MusicSlashIcon, {
             width: 20,
             height: 20
-          }) : (0, n.jsx)(r.MusicIcon, {
+          }) : (0, n.jsx)(o.MusicIcon, {
             width: 20,
             height: 20
-          }), a ? h.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_UNMUTE : h.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_MUTE]
+          }), a ? N.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_UNMUTE : N.default.Messages.INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_MUTE]
         })]
       })]
     })]
@@ -93,7 +101,7 @@ var _ = t => {
   } = t;
   return (0, n.jsx)(c.ModalRoot, {
     transitionState: e,
-    children: (0, n.jsx)(M, {
+    children: (0, n.jsx)(A, {
       onClose: s
     })
   })
