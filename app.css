@@ -21824,6 +21824,14 @@ input[type=checked]:focus-visible+.label__8e2ef {
     transition: opacity.2s ease
 }
 
+.toggleMute__086d8.interactive__7ee97 {
+    pointer-events: all
+}
+
+.toggleMute__086d8.interactive__7ee97:hover {
+    background-color: hsl(var(--black-500-hsl)/.8)
+}
+
 .hidden_d7f753 {
     opacity: 0
 }
@@ -45451,8 +45459,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
