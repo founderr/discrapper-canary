@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   isDismissibleContentDismissed: function() {
-    return S
+    return m
   },
   useIsDismissibleContentDismissed: function() {
-    return g
+    return T
   },
   requestMarkDismissibleContentAsShown: function() {
-    return T
+    return g
   },
   markDismissibleContentAsDismissed: function() {
     return I
@@ -22,28 +22,28 @@ var i = n("446674"),
   u = n("674268"),
   c = n("495226"),
   d = n("585653"),
-  p = n("989691"),
-  h = n("127746"),
-  f = n("862853"),
-  E = n("846614"),
+  f = n("989691"),
+  E = n("127746"),
+  p = n("862853"),
+  h = n("846614"),
   _ = n("994428"),
-  m = n("49111");
+  S = n("49111");
 
-function S(e) {
+function m(e) {
   var t;
-  if ((0, E.disableNewUserDismissibleContent)(e)) return !0;
+  if ((0, h.disableNewUserDismissibleContent)(e)) return !0;
   let n = null === (t = o.default.settings.userContent) || void 0 === t ? void 0 : t.dismissedContents;
   return null != n && (0, u.hasBit)(n, e)
 }
 
-function g(e) {
-  return (0, i.useStateFromStores)([o.default], () => S(e))
+function T(e) {
+  return (0, i.useStateFromStores)([o.default], () => m(e))
 }
 
-function T(e, t, n) {
-  if ((0, f.isContentShown)(e) || p.default.hasUserHitDCCap(e)) return;
+function g(e, t, n) {
+  if ((0, p.isContentShown)(e) || f.default.hasUserHitDCCap(e)) return;
   let i = function(e) {
-    let t = h.CONTENT_TYPES_WITH_BYPASS_HOLDOUT.has(e),
+    let t = E.CONTENT_TYPES_WITH_BYPASS_HOLDOUT.has(e),
       {
         enabled: n
       } = s.default.getCurrentConfig({
@@ -53,13 +53,13 @@ function T(e, t, n) {
       });
     return n && !t
   }(e);
-  if (!i) !n && (0, f.addCandidateContent)({
+  if (!i) !n && (0, p.addCandidateContent)({
     content: e,
     groupName: null == t ? void 0 : t.groupName,
     onAdded: () => {
       var n;
-      let [i, s] = (0, f.getCurrentlyShownCounts)();
-      (0, d.handleDCShownToUser)(e), l.default.track(m.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
+      let [i, s] = (0, p.getCurrentlyShownCounts)();
+      (0, d.handleDCShownToUser)(e), l.default.track(S.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
         type: r.DismissibleContent[e],
         content_count: i,
         fatigable_content_count: s,
@@ -72,10 +72,10 @@ function T(e, t, n) {
 }
 async function I(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-  ((0, f.isContentShown)(e) || t.forceTrack) && function(e, t) {
+  ((0, p.isContentShown)(e) || t.forceTrack) && function(e, t) {
     var n;
-    let [i] = (0, f.getCurrentlyShownCounts)(), s = p.default.getRenderedAtTimestamp(e), a = new Date, o = null == s ? null : a.getTime() - s;
-    l.default.track(m.AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, {
+    let [i] = (0, p.getCurrentlyShownCounts)(), s = f.default.getRenderedAtTimestamp(e), a = new Date, o = null == s ? null : a.getTime() - s;
+    l.default.track(S.AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, {
       type: r.DismissibleContent[e],
       action: null !== (n = null == t ? void 0 : t.dismissAction) && void 0 !== n ? n : _.ContentDismissActionType.UNKNOWN,
       content_count: i,
@@ -85,8 +85,8 @@ async function I(e) {
       shown_duration: o
     })
   }(e, t), (0, d.handleDCDismissed)(e), await (0, a.addDismissedContent)(e);
-  let n = !p.default.hasUserHitDCCap();
-  (0, f.removeCandidateContent)({
+  let n = !f.default.hasUserHitDCCap();
+  (0, p.removeCandidateContent)({
     content: e,
     groupName: null == t ? void 0 : t.groupName
   }, n)

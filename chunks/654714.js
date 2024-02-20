@@ -1,28 +1,28 @@
 "use strict";
-var r = n("484784"),
-  a = n("64980"),
+var e = n("484784"),
+  i = n("64980"),
   o = n("998270"),
-  i = n("79807"),
-  u = URLSearchParams,
-  s = u.prototype,
-  l = a(s.append),
-  c = a(s.delete),
-  f = a(s.forEach),
-  d = a([].push),
-  p = new u("a=1&a=2&b=3");
-p.delete("a", 1), p.delete("b", void 0), p + "" != "a=2" && r(s, "delete", function(e) {
-  var t, n = arguments.length,
-    r = n < 2 ? void 0 : arguments[1];
-  if (n && void 0 === r) return c(this, e);
-  var a = [];
-  f(this, function(e, t) {
-    d(a, {
-      key: t,
-      value: e
+  u = n("79807"),
+  a = URLSearchParams,
+  f = a.prototype,
+  c = i(f.append),
+  s = i(f.delete),
+  l = i(f.forEach),
+  h = i([].push),
+  p = new a("a=1&a=2&b=3");
+p.delete("a", 1), p.delete("b", void 0), p + "" != "a=2" && e(f, "delete", function(t) {
+  var r, n = arguments.length,
+    e = n < 2 ? void 0 : arguments[1];
+  if (n && void 0 === e) return s(this, t);
+  var i = [];
+  l(this, function(t, r) {
+    h(i, {
+      key: r,
+      value: t
     })
-  }), i(n, 1);
-  for (var u = o(e), s = o(r), p = 0, h = 0, m = !1, _ = a.length; p < _;) t = a[p++], m || t.key === u ? (m = !0, c(this, t.key)) : h++;
-  for (; h < _;) !((t = a[h++]).key === u && t.value === s) && l(this, t.key, t.value)
+  }), u(n, 1);
+  for (var a = o(t), f = o(e), p = 0, v = 0, g = !1, d = i.length; p < d;) r = i[p++], g || r.key === a ? (g = !0, s(this, r.key)) : v++;
+  for (; v < d;) !((r = i[v++]).key === a && r.value === f) && c(this, r.key, r.value)
 }, {
   enumerable: !0,
   unsafe: !0

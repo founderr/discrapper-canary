@@ -1,169 +1,169 @@
 "use strict";
-r("222007"), r("311790"), r("477657"), r("811875"), r("90301"), r("652153"), r("28797"), r("817884"), r("597349"), r("667536"), r("690341"), r("70102");
-var n = r("187798"),
-  o = r("478898"),
-  i = r("48494"),
-  a = r("682086");
+n("222007"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102");
+var r = n("187798"),
+  a = n("478898"),
+  o = n("48494"),
+  i = n("682086");
 
-function u(t) {
-  return t.call.bind(t)
+function s(e) {
+  return e.call.bind(e)
 }
-var l = "undefined" != typeof BigInt,
-  s = "undefined" != typeof Symbol,
-  c = u(Object.prototype.toString),
-  p = u(Number.prototype.valueOf),
-  f = u(String.prototype.valueOf),
-  y = u(Boolean.prototype.valueOf);
-if (l) var h = u(BigInt.prototype.valueOf);
-if (s) var d = u(Symbol.prototype.valueOf);
+var c = "undefined" != typeof BigInt,
+  l = "undefined" != typeof Symbol,
+  u = s(Object.prototype.toString),
+  d = s(Number.prototype.valueOf),
+  p = s(String.prototype.valueOf),
+  f = s(Boolean.prototype.valueOf);
+if (c) var h = s(BigInt.prototype.valueOf);
+if (l) var m = s(Symbol.prototype.valueOf);
 
-function b(t, e) {
-  if ("object" != typeof t) return !1;
+function v(e, t) {
+  if ("object" != typeof e) return !1;
   try {
-    return e(t), !0
-  } catch (t) {
+    return t(e), !0
+  } catch (e) {
     return !1
   }
 }
-e.isArgumentsObject = n, e.isGeneratorFunction = o, e.isTypedArray = a;
-e.isPromise = function(t) {
-  return "undefined" != typeof Promise && t instanceof Promise || null !== t && "object" == typeof t && "function" == typeof t.then && "function" == typeof t.catch
+t.isArgumentsObject = r, t.isGeneratorFunction = a, t.isTypedArray = i;
+t.isPromise = function(e) {
+  return "undefined" != typeof Promise && e instanceof Promise || null !== e && "object" == typeof e && "function" == typeof e.then && "function" == typeof e.catch
 };
-e.isArrayBufferView = function(t) {
-  return "undefined" != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(t) : a(t) || O(t)
+t.isArrayBufferView = function(e) {
+  return "undefined" != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : i(e) || C(e)
 };
-e.isUint8Array = function(t) {
-  return "Uint8Array" === i(t)
+t.isUint8Array = function(e) {
+  return "Uint8Array" === o(e)
 };
-e.isUint8ClampedArray = function(t) {
-  return "Uint8ClampedArray" === i(t)
+t.isUint8ClampedArray = function(e) {
+  return "Uint8ClampedArray" === o(e)
 };
-e.isUint16Array = function(t) {
-  return "Uint16Array" === i(t)
+t.isUint16Array = function(e) {
+  return "Uint16Array" === o(e)
 };
-e.isUint32Array = function(t) {
-  return "Uint32Array" === i(t)
+t.isUint32Array = function(e) {
+  return "Uint32Array" === o(e)
 };
-e.isInt8Array = function(t) {
-  return "Int8Array" === i(t)
+t.isInt8Array = function(e) {
+  return "Int8Array" === o(e)
 };
-e.isInt16Array = function(t) {
-  return "Int16Array" === i(t)
+t.isInt16Array = function(e) {
+  return "Int16Array" === o(e)
 };
-e.isInt32Array = function(t) {
-  return "Int32Array" === i(t)
+t.isInt32Array = function(e) {
+  return "Int32Array" === o(e)
 };
-e.isFloat32Array = function(t) {
-  return "Float32Array" === i(t)
+t.isFloat32Array = function(e) {
+  return "Float32Array" === o(e)
 };
-e.isFloat64Array = function(t) {
-  return "Float64Array" === i(t)
+t.isFloat64Array = function(e) {
+  return "Float64Array" === o(e)
 };
-e.isBigInt64Array = function(t) {
-  return "BigInt64Array" === i(t)
+t.isBigInt64Array = function(e) {
+  return "BigInt64Array" === o(e)
 };
 
-function g(t) {
-  return "[object Map]" === c(t)
+function g(e) {
+  return "[object Map]" === u(e)
 }
-e.isBigUint64Array = function(t) {
-  return "BigUint64Array" === i(t)
+t.isBigUint64Array = function(e) {
+  return "BigUint64Array" === o(e)
 }, g.working = "undefined" != typeof Map && g(new Map);
 
-function v(t) {
-  return "[object Set]" === c(t)
+function y(e) {
+  return "[object Set]" === u(e)
 }
-e.isMap = function(t) {
-  return "undefined" != typeof Map && (g.working ? g(t) : t instanceof Map)
-}, v.working = "undefined" != typeof Set && v(new Set);
+t.isMap = function(e) {
+  return "undefined" != typeof Map && (g.working ? g(e) : e instanceof Map)
+}, y.working = "undefined" != typeof Set && y(new Set);
 
-function m(t) {
-  return "[object WeakMap]" === c(t)
+function b(e) {
+  return "[object WeakMap]" === u(e)
 }
-e.isSet = function(t) {
-  return "undefined" != typeof Set && (v.working ? v(t) : t instanceof Set)
-}, m.working = "undefined" != typeof WeakMap && m(new WeakMap);
+t.isSet = function(e) {
+  return "undefined" != typeof Set && (y.working ? y(e) : e instanceof Set)
+}, b.working = "undefined" != typeof WeakMap && b(new WeakMap);
 
-function S(t) {
-  return "[object WeakSet]" === c(t)
+function x(e) {
+  return "[object WeakSet]" === u(e)
 }
-e.isWeakMap = function(t) {
-  return "undefined" != typeof WeakMap && (m.working ? m(t) : t instanceof WeakMap)
-}, S.working = "undefined" != typeof WeakSet && S(new WeakSet);
+t.isWeakMap = function(e) {
+  return "undefined" != typeof WeakMap && (b.working ? b(e) : e instanceof WeakMap)
+}, x.working = "undefined" != typeof WeakSet && x(new WeakSet);
 
-function x(t) {
-  return "[object ArrayBuffer]" === c(t)
-}
-
-function A(t) {
-  return "undefined" != typeof ArrayBuffer && (x.working ? x(t) : t instanceof ArrayBuffer)
+function S(e) {
+  return "[object ArrayBuffer]" === u(e)
 }
 
-function w(t) {
-  return "[object DataView]" === c(t)
+function w(e) {
+  return "undefined" != typeof ArrayBuffer && (S.working ? S(e) : e instanceof ArrayBuffer)
 }
 
-function O(t) {
-  return "undefined" != typeof DataView && (w.working ? w(t) : t instanceof DataView)
-}
-e.isWeakSet = function(t) {
-  return S(t)
-}, x.working = "undefined" != typeof ArrayBuffer && x(new ArrayBuffer), e.isArrayBuffer = A, w.working = "undefined" != typeof ArrayBuffer && "undefined" != typeof DataView && w(new DataView(new ArrayBuffer(1), 0, 1)), e.isDataView = O;
-var P = "undefined" != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
-
-function j(t) {
-  return "[object SharedArrayBuffer]" === c(t)
+function D(e) {
+  return "[object DataView]" === u(e)
 }
 
-function E(t) {
-  return void 0 !== P && (void 0 === j.working && (j.working = j(new P)), j.working ? j(t) : t instanceof P)
+function C(e) {
+  return "undefined" != typeof DataView && (D.working ? D(e) : e instanceof DataView)
 }
-e.isSharedArrayBuffer = E;
-e.isAsyncFunction = function(t) {
-  return "[object AsyncFunction]" === c(t)
+t.isWeakSet = function(e) {
+  return x(e)
+}, S.working = "undefined" != typeof ArrayBuffer && S(new ArrayBuffer), t.isArrayBuffer = w, D.working = "undefined" != typeof ArrayBuffer && "undefined" != typeof DataView && D(new DataView(new ArrayBuffer(1), 0, 1)), t.isDataView = C;
+var k = "undefined" != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+
+function P(e) {
+  return "[object SharedArrayBuffer]" === u(e)
+}
+
+function E(e) {
+  return void 0 !== k && (void 0 === P.working && (P.working = P(new k)), P.working ? P(e) : e instanceof k)
+}
+t.isSharedArrayBuffer = E;
+t.isAsyncFunction = function(e) {
+  return "[object AsyncFunction]" === u(e)
 };
-e.isMapIterator = function(t) {
-  return "[object Map Iterator]" === c(t)
+t.isMapIterator = function(e) {
+  return "[object Map Iterator]" === u(e)
 };
-e.isSetIterator = function(t) {
-  return "[object Set Iterator]" === c(t)
+t.isSetIterator = function(e) {
+  return "[object Set Iterator]" === u(e)
 };
-e.isGeneratorObject = function(t) {
-  return "[object Generator]" === c(t)
+t.isGeneratorObject = function(e) {
+  return "[object Generator]" === u(e)
 };
 
-function k(t) {
-  return b(t, p)
+function T(e) {
+  return v(e, d)
 }
 
-function I(t) {
-  return b(t, f)
+function M(e) {
+  return v(e, p)
 }
 
-function M(t) {
-  return b(t, y)
+function R(e) {
+  return v(e, f)
 }
 
-function F(t) {
-  return l && b(t, h)
+function O(e) {
+  return c && v(e, h)
 }
 
-function R(t) {
-  return s && b(t, d)
+function I(e) {
+  return l && v(e, m)
 }
-e.isWebAssemblyCompiledModule = function(t) {
-  return "[object WebAssembly.Module]" === c(t)
-}, e.isNumberObject = k, e.isStringObject = I, e.isBooleanObject = M, e.isBigIntObject = F, e.isSymbolObject = R;
-e.isBoxedPrimitive = function(t) {
-  return k(t) || I(t) || M(t) || F(t) || R(t)
+t.isWebAssemblyCompiledModule = function(e) {
+  return "[object WebAssembly.Module]" === u(e)
+}, t.isNumberObject = T, t.isStringObject = M, t.isBooleanObject = R, t.isBigIntObject = O, t.isSymbolObject = I;
+t.isBoxedPrimitive = function(e) {
+  return T(e) || M(e) || R(e) || O(e) || I(e)
 };
-e.isAnyArrayBuffer = function(t) {
-  return "undefined" != typeof Uint8Array && (A(t) || E(t))
-}, ["isProxy", "isExternal", "isModuleNamespaceObject"].forEach(function(t) {
-  Object.defineProperty(e, t, {
+t.isAnyArrayBuffer = function(e) {
+  return "undefined" != typeof Uint8Array && (w(e) || E(e))
+}, ["isProxy", "isExternal", "isModuleNamespaceObject"].forEach(function(e) {
+  Object.defineProperty(t, e, {
     enumerable: !1,
     value: function() {
-      throw Error(t + " is not supported in userland")
+      throw Error(e + " is not supported in userland")
     }
   })
 })

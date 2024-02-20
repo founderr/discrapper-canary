@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var s = n("42887"),
-  i = n("568307"),
+var s = n("161454"),
+  i = n("42887"),
   r = n("703370"),
   a = n("599110"),
   o = n("716241"),
@@ -16,11 +16,11 @@ var s = n("42887"),
 
 function u() {
   let e, t, n, r, a;
-  let o = s.default.getGoLiveSource();
+  let o = i.default.getGoLiveSource();
   if (null != o && (e = o.quality.resolution, t = o.quality.frameRate, null != o.desktopSource)) {
     var d, u;
     n = o.desktopSource.soundshareSession;
-    let e = null != o.desktopSource.sourcePid ? i.default.getGameForPID(o.desktopSource.sourcePid) : null;
+    let e = null != o.desktopSource.sourcePid ? s.default.getGameForPID(o.desktopSource.sourcePid) : null;
     r = null !== (d = null == e ? void 0 : e.name) && void 0 !== d ? d : null, a = null !== (u = null == e ? void 0 : e.id) && void 0 !== u ? u : null
   }
   return {

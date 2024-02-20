@@ -1,54 +1,54 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return d
   }
 });
-var r = n("446674"),
-  i = n("913144"),
-  o = n("517001"),
-  l = n("646718");
-let u = "OverridePremiumTypeStore",
-  a = {
-    premiumTypeOverride: l.UNSELECTED_PREMIUM_TYPE_OVERRIDE,
-    premiumTypeActual: l.UNSELECTED_PREMIUM_TYPE_OVERRIDE
+var i = n("446674"),
+  r = n("913144"),
+  s = n("517001"),
+  a = n("646718");
+let o = "OverridePremiumTypeStore",
+  l = {
+    premiumTypeOverride: a.UNSELECTED_PREMIUM_TYPE_OVERRIDE,
+    premiumTypeActual: a.UNSELECTED_PREMIUM_TYPE_OVERRIDE
   };
 
-function s(e) {
+function u(e) {
   let {
     user: t
   } = e;
-  a.premiumTypeActual = (0, o.getPremiumTypeFromRawValue)(t.premium_type)
+  l.premiumTypeActual = (0, s.getPremiumTypeFromRawValue)(t.premium_type)
 }
-class E extends r.default.PersistedStore {
+class c extends i.default.PersistedStore {
   initialize(e) {
     if (null != e) {
-      a = e;
+      l = e;
       return
     }
-    a.premiumTypeOverride = l.UNSELECTED_PREMIUM_TYPE_OVERRIDE
+    l.premiumTypeOverride = a.UNSELECTED_PREMIUM_TYPE_OVERRIDE
   }
   getPremiumTypeOverride() {
-    return a.premiumTypeOverride
+    return l.premiumTypeOverride
   }
   getPremiumTypeActual() {
-    return a.premiumTypeActual
+    return l.premiumTypeActual
   }
   getState() {
-    return a
+    return l
   }
   get premiumType() {
-    return a.premiumTypeOverride
+    return l.premiumTypeOverride
   }
 }
-E.displayName = u, E.persistKey = u;
-var _ = new E(i.default, {
+c.displayName = o, c.persistKey = o;
+var d = new c(r.default, {
   SET_PREMIUM_TYPE_OVERRIDE: function(e) {
     let {
       premiumType: t
     } = e;
-    a.premiumTypeOverride = t
+    l.premiumTypeOverride = t
   },
-  CURRENT_USER_UPDATE: s,
-  CONNECTION_OPEN: s
+  CURRENT_USER_UPDATE: u,
+  CONNECTION_OPEN: u
 })

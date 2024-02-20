@@ -8,13 +8,13 @@ var a = n("917351"),
   s = n.n(a),
   l = n("233736"),
   i = n("299285"),
-  r = n("373469"),
-  o = n("42203"),
-  u = n("305961"),
-  d = n("260320"),
-  c = n("42887"),
-  f = n("945956"),
-  E = n("568307"),
+  r = n("161454"),
+  o = n("373469"),
+  u = n("42203"),
+  d = n("305961"),
+  c = n("260320"),
+  f = n("42887"),
+  E = n("945956"),
   h = n("697218"),
   _ = n("800762"),
   C = n("861309"),
@@ -36,7 +36,7 @@ function R(e) {
       channel_id: n
     },
     socket: a
-  } = e, s = o.default.getChannel(n);
+  } = e, s = u.default.getChannel(n);
   if (null == s || !(0, I.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default({
     errorCode: A.RPCErrors.INVALID_CHANNEL
   }, "Invalid channel id: ".concat(n));
@@ -57,13 +57,13 @@ function O(e) {
     }
   } = e;
   if (null != n) {
-    let e = o.default.getChannel(n);
+    let e = u.default.getChannel(n);
     if (null == e) throw new C.default({
       errorCode: A.RPCErrors.INVALID_CHANNEL
     }, "Invalid channel id: ".concat(n))
   }
   if (null != t) {
-    let e = d.default.getLobby(t);
+    let e = c.default.getLobby(t);
     if (null == e) throw new C.default({
       errorCode: A.RPCErrors.INVALID_LOBBY
     }, "Invalid lobby id: ".concat(t))
@@ -81,7 +81,7 @@ let L = {
           guild_id: t
         }
       } = e;
-      if (null == u.default.getGuild(t)) throw new C.default({
+      if (null == d.default.getGuild(t)) throw new C.default({
         errorCode: A.RPCErrors.INVALID_GUILD
       }, "Invalid guild id: ".concat(t));
       return e => {
@@ -89,7 +89,7 @@ let L = {
         let {
           prevState: a,
           dispatch: l
-        } = e, i = u.default.getGuild(t);
+        } = e, i = d.default.getGuild(t);
         if (null == i) return;
         let r = {
           guild: {
@@ -116,14 +116,14 @@ let L = {
           channel_id: t
         }
       } = e;
-      if (null == o.default.getChannel(t)) throw new C.default({
+      if (null == u.default.getChannel(t)) throw new C.default({
         errorCode: A.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel id: ".concat(t));
       return e => {
         let {
           prevState: n,
           dispatch: a
-        } = e, l = o.default.getChannel(t);
+        } = e, l = u.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
           r = Object.values(_.default.getVoiceStatesForChannel(l.id));
@@ -153,24 +153,24 @@ let L = {
           channel_id: t
         }
       } = e;
-      if (null == o.default.getChannel(t)) throw new C.default({
+      if (null == u.default.getChannel(t)) throw new C.default({
         errorCode: A.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel id: ".concat(t));
       return e => {
         let {
           prevState: n,
           dispatch: a
-        } = e, l = o.default.getChannel(t);
+        } = e, l = u.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
           r = Object.values(_.default.getVoiceStatesForChannel(l.id)),
-          u = s.differenceBy(n, r, e => {
+          o = s.differenceBy(n, r, e => {
             let {
               userId: t
             } = e;
             return t
           });
-        return u.forEach(e => a((0, I.transformVoiceState)(i, l.id, e))), r
+        return o.forEach(e => a((0, I.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
@@ -187,19 +187,19 @@ let L = {
           channel_id: t
         }
       } = e;
-      if (null == o.default.getChannel(t)) throw new C.default({
+      if (null == u.default.getChannel(t)) throw new C.default({
         errorCode: A.RPCErrors.INVALID_CHANNEL
       }, "Invalid channel id: ".concat(t));
       return e => {
         let {
           prevState: n,
           dispatch: a
-        } = e, l = o.default.getChannel(t);
+        } = e, l = u.default.getChannel(t);
         if (null == l) return;
         let i = l.getGuildId(),
           r = Object.values(_.default.getVoiceStatesForChannel(l.id)).map(e => (0, I.transformVoiceState)(i, l.id, e)),
-          u = s.differenceWith(r, n, s.isEqual);
-        return u.forEach(e => a(e)), r
+          o = s.differenceWith(r, n, s.isEqual);
+        return o.forEach(e => a(e)), r
       }
     }
   },
@@ -212,11 +212,11 @@ let L = {
         prevState: t,
         dispatch: n
       } = e, a = {
-        state: (0, I.getVoiceConnectionState)(f.default.getState()),
-        hostname: f.default.getHostname(),
-        pings: f.default.getPings(),
-        average_ping: f.default.getAveragePing(),
-        last_ping: f.default.getLastPing()
+        state: (0, I.getVoiceConnectionState)(E.default.getState()),
+        hostname: E.default.getHostname(),
+        pings: E.default.getPings(),
+        average_ping: E.default.getAveragePing(),
+        last_ping: E.default.getLastPing()
       };
       return !s.isEqual(a, t) && n(a), a
     }
@@ -407,11 +407,11 @@ let L = {
       let {
         prevState: a,
         dispatch: l
-      } = e, o = r.default.getStreamerActiveStreamMetadata(), u = (null == o ? void 0 : o.pid) != null ? E.default.getGameForPID(o.pid) : null, d = (null == u ? void 0 : u.id) != null ? i.default.getApplication(u.id) : null, c = null != d ? (0, p.default)(d) : null, f = null == o ? void 0 : o.sourceName, h = {
-        active: null != o,
-        pid: null !== (t = null == o ? void 0 : o.pid) && void 0 !== t ? t : null,
-        application: (n = null != c, n) ? {
-          name: f
+      } = e, u = o.default.getStreamerActiveStreamMetadata(), d = (null == u ? void 0 : u.pid) != null ? r.default.getGameForPID(u.pid) : null, c = (null == d ? void 0 : d.id) != null ? i.default.getApplication(d.id) : null, f = null != c ? (0, p.default)(c) : null, E = null == u ? void 0 : u.sourceName, h = {
+        active: null != u,
+        pid: null !== (t = null == u ? void 0 : u.pid) && void 0 !== t ? t : null,
+        application: (n = null != f, n) ? {
+          name: E
         } : null
       };
       return !s.isEqual(h, a) && l(h), h
@@ -426,7 +426,7 @@ let L = {
         prevState: t,
         dispatch: n
       } = e, a = {
-        active: c.default.isVideoEnabled()
+        active: f.default.isVideoEnabled()
       };
       return !s.isEqual(a, t) && n(a), a
     }

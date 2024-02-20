@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
     return o
   },
   performance: function() {
-    return I
+    return n
   }
 }), E("356305");
 try {
@@ -35,4 +35,4 @@ if (null == E.g.performance.timing) try {
 if (null == E.g.performance.timeOrigin) try {
   E.g.performance.timeOrigin = o
 } catch (e) {}
-let I = E.g.performance
+let n = E.g.performance

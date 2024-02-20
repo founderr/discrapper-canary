@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("70102"), n("222007"), n("424973");
 var r = n("884691"),
   a = n.n(r),
-  i = n("476042"),
-  o = n("688911");
+  o = n("476042"),
+  i = n("688911");
 
 function s() {
   return (s = Object.assign || function(e) {
@@ -35,14 +35,14 @@ var l = (0, r.createContext)(null),
         var n, r, a = function(e, t) {
           if (null == e) return {};
           var n, r, a = {},
-            i = Object.keys(e);
-          for (r = 0; r < i.length; r++) n = i[r], !(t.indexOf(n) >= 0) && (a[n] = e[n]);
+            o = Object.keys(e);
+          for (r = 0; r < o.length; r++) n = o[r], !(t.indexOf(n) >= 0) && (a[n] = e[n]);
           return a
         }(e, t);
         if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(e);
-          for (r = 0; r < i.length; r++) {
-            if (n = i[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n])
+          var o = Object.getOwnPropertySymbols(e);
+          for (r = 0; r < o.length; r++) {
+            if (n = o[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n])
           }
         }
         return a
@@ -54,16 +54,16 @@ var l = (0, r.createContext)(null),
           var n = [],
             r = !0,
             a = !1,
-            i = void 0;
+            o = void 0;
           try {
-            for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
+            for (var i, s = e[Symbol.iterator](); !(r = (i = s.next()).done) && (n.push(i.value), !t || n.length !== t); r = !0);
           } catch (e) {
-            a = !0, i = e
+            a = !0, o = e
           } finally {
             try {
               !r && null != s.return && s.return()
             } finally {
-              if (a) throw i
+              if (a) throw o
             }
           }
           return n
@@ -79,12 +79,12 @@ var l = (0, r.createContext)(null),
         throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()),
       f = p[0],
-      m = p[1];
+      h = p[1];
     return a.createElement(l.Provider, {
       value: null != u ? u : f
-    }, a.createElement(i.DndProvider, s({
-      backend: o.MultiBackend
+    }, a.createElement(o.DndProvider, s({
+      backend: i.MultiBackend
     }, d)), u ? null : a.createElement("div", {
-      ref: m
+      ref: h
     }))
   }

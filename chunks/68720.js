@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   getMyContentInventory: function() {
-    return s
+    return r
   }
 });
-var i = n("872717"),
-  a = n("448993"),
-  l = n("49111");
-let s = async () => {
+var t = E("872717"),
+  o = E("448993"),
+  n = E("49111");
+let r = async () => {
   try {
-    let e = await i.default.get({
-      url: l.Endpoints.MY_CONTENT_INVENTORY
+    let e = await t.default.get({
+      url: n.Endpoints.MY_CONTENT_INVENTORY
     });
     return e.body
   } catch (e) {
-    throw new a.APIError(e)
+    throw new o.APIError(e)
   }
 }

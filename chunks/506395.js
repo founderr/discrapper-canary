@@ -19,8 +19,8 @@ function c(e) {
     onClick: s,
     look: c,
     className: d,
-    selectedClassName: p
-  } = e, h = {
+    selectedClassName: f
+  } = e, E = {
     [function(e) {
       switch (e) {
         case "tab":
@@ -31,8 +31,8 @@ function c(e) {
       }
     }(c)]: n
   };
-  null != p && (h[p] = n);
-  let f = r.useCallback(e => s(t, e), [s, t]);
+  null != f && (E[f] = n);
+  let p = r.useCallback(e => s(t, e), [s, t]);
   return (0, i.jsx)(o.Clickable, {
     className: a(function(e) {
       switch (e) {
@@ -42,8 +42,8 @@ function c(e) {
         case "pill":
           return u.pillItem
       }
-    }(c), d, h),
-    onClick: f,
+    }(c), d, E),
+    onClick: p,
     children: (0, i.jsx)(l.Text, {
       variant: "text-sm/medium",
       color: "none",
@@ -60,8 +60,8 @@ function d(e) {
     look: o = "tab",
     className: l,
     optionClassName: d,
-    selectedOptionClassName: p
-  } = e, h = r.useCallback(e => {
+    selectedOptionClassName: f
+  } = e, E = r.useCallback(e => {
     var t;
     let r = n === e.value;
     return (0, i.jsx)(c, {
@@ -70,9 +70,9 @@ function d(e) {
       look: o,
       onClick: s,
       className: d,
-      selectedClassName: p
+      selectedClassName: f
     }, null !== (t = e.key) && void 0 !== t ? t : String(e.value))
-  }, [n, o, s, d, p]);
+  }, [n, o, s, d, f]);
   return (0, i.jsx)("div", {
     className: a(function(e) {
       switch (e) {
@@ -83,6 +83,6 @@ function d(e) {
           return u.pillContainer
       }
     }(o), l),
-    children: t.map(h)
+    children: t.map(E)
   })
 }

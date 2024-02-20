@@ -1,117 +1,117 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   MAX_STORED_MESSAGES: function() {
-    return d
+    return s
   },
   default: function() {
-    return T
+    return L
   }
-}), n("424973"), n("222007"), n("808653");
-var i = n("917351"),
-  a = n.n(i),
-  l = n("446674"),
-  s = n("913144"),
-  r = n("42203");
-n("162771");
-var o = n("299039"),
-  u = n("724210");
-let d = 26,
-  c = {},
-  f = {},
-  E = {},
-  h = {};
+}), E("424973"), E("222007"), E("808653");
+var t = E("917351"),
+  o = E.n(t),
+  n = E("446674"),
+  r = E("913144"),
+  i = E("42203");
+E("162771");
+var a = E("299039"),
+  I = E("724210");
+let s = 26,
+  T = {},
+  S = {},
+  N = {},
+  O = {};
 
-function _(e) {
-  let t = f[e];
-  if (null == t) return;
-  let n = o.default.fromTimestamp(Date.now() - 9e5),
-    i = a.findIndex(t, e => o.default.compare(e.id, n) > 0);
-  if (-1 === i) f[e] = [];
+function A(e) {
+  let _ = S[e];
+  if (null == _) return;
+  let E = a.default.fromTimestamp(Date.now() - 9e5),
+    t = o.findIndex(_, e => a.default.compare(e.id, E) > 0);
+  if (-1 === t) S[e] = [];
   else {
-    let n = Math.max(i, t.length - d);
-    f[e] = a.slice(t, n)
+    let E = Math.max(t, _.length - s);
+    S[e] = o.slice(_, E)
   }
-  E[e] = Date.now()
+  N[e] = Date.now()
 }
 
-function C(e, t, n, i) {
-  c[e].add(t);
-  let a = E[t];
-  (null == a || a + 3e5 > Date.now()) && _(t), null == f[t] && (f[t] = []), f[t].push({
-    id: n,
-    userId: i
+function R(e, _, E, t) {
+  T[e].add(_);
+  let o = N[_];
+  (null == o || o + 3e5 > Date.now()) && A(_), null == S[_] && (S[_] = []), S[_].push({
+    id: E,
+    userId: t
   })
 }
 
-function S(e) {
+function l(e) {
   let {
-    channel: t
+    channel: _
   } = e;
-  delete f[t.id], delete E[t.id]
+  delete S[_.id], delete N[_.id]
 }
-class g extends l.default.Store {
+class u extends n.default.Store {
   getActiveChannelsFetchStatus(e) {
-    return h[e]
+    return O[e]
   }
   getActiveChannelIds(e) {
-    return c[e]
+    return T[e]
   }
   getChannelMessageData(e) {
-    return f[e]
+    return S[e]
   }
   shouldFetch(e) {
-    var t;
-    return null == c[e] && !(null === (t = h[e]) || void 0 === t ? void 0 : t.loading)
+    var _;
+    return null == T[e] && !(null === (_ = O[e]) || void 0 === _ ? void 0 : _.loading)
   }
 }
-g.displayName = "ActiveChannelsStore";
-var T = new g(s.default, {
+u.displayName = "ActiveChannelsStore";
+var L = new u(r.default, {
   CHANNEL_SELECT: function(e) {
     let {
-      channelId: t,
-      guildId: n
+      channelId: _,
+      guildId: E
     } = e;
-    if (!(0, u.isGuildHomeChannel)(t) || null == n) return !1;
-    let i = c[n];
-    if (null == i) return !1;
-    i.forEach(e => {
-      var t;
-      _(e), (null === (t = f[e]) || void 0 === t ? void 0 : t.length) === 0 && delete f[e]
+    if (!(0, I.isGuildHomeChannel)(_) || null == E) return !1;
+    let t = T[E];
+    if (null == t) return !1;
+    t.forEach(e => {
+      var _;
+      A(e), (null === (_ = S[e]) || void 0 === _ ? void 0 : _.length) === 0 && delete S[e]
     });
-    let l = a.chain(Array.from(i)).filter(e => e in f).sortBy(e => {
-      var t, n;
-      return -(null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0)
+    let n = o.chain(Array.from(t)).filter(e => e in S).sortBy(e => {
+      var _, E;
+      return -(null !== (E = null === (_ = S[e]) || void 0 === _ ? void 0 : _.length) && void 0 !== E ? E : 0)
     }).value();
-    c[n] = new Set(l)
+    T[E] = new Set(n)
   },
   MESSAGE_CREATE: function(e) {
-    var t;
+    var _;
     let {
-      channelId: n,
-      message: i,
-      optimistic: a,
-      isPushNotification: l
+      channelId: E,
+      message: t,
+      optimistic: o,
+      isPushNotification: n
     } = e;
-    if (a || l) return !1;
-    let s = r.default.getChannel(n);
-    if (null == s) return !1;
-    let o = s.guild_id;
-    if (null == o || null == c[o]) return !1;
-    C(o, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id)
+    if (o || n) return !1;
+    let r = i.default.getChannel(E);
+    if (null == r) return !1;
+    let a = r.guild_id;
+    if (null == a || null == T[a]) return !1;
+    R(a, E, t.id, null === (_ = t.author) || void 0 === _ ? void 0 : _.id)
   },
   GUILD_DELETE: function(e) {
     let {
-      guild: t
+      guild: _
     } = e;
-    delete c[t.id]
+    delete T[_.id]
   },
-  CHANNEL_DELETE: S,
-  THREAD_DELETE: S,
+  CHANNEL_DELETE: l,
+  THREAD_DELETE: l,
   ACTIVE_CHANNELS_FETCH_START: function(e) {
     let {
-      guildId: t
+      guildId: _
     } = e;
-    h[t] = {
+    O[_] = {
       loading: !0,
       error: null,
       fetchedAt: Date.now()
@@ -119,31 +119,31 @@ var T = new g(s.default, {
   },
   ACTIVE_CHANNELS_FETCH_SUCCESS: function(e) {
     let {
-      guildId: t,
-      channels: n
+      guildId: _,
+      channels: E
     } = e;
-    h[t] = {
+    O[_] = {
       loading: !1,
       error: null,
       fetchedAt: Date.now()
-    }, c[t] = new Set, n.forEach(e => {
+    }, T[_] = new Set, E.forEach(e => {
       let {
-        channel_id: n,
-        messages: i
+        channel_id: E,
+        messages: t
       } = e;
-      i.forEach(e => {
-        C(t, n, e.message_id, e.user_id)
+      t.forEach(e => {
+        R(_, E, e.message_id, e.user_id)
       })
     })
   },
   ACTIVE_CHANNELS_FETCH_FAILURE: function(e) {
     let {
-      guildId: t,
-      error: n
+      guildId: _,
+      error: E
     } = e;
-    h[t] = {
+    O[_] = {
       loading: !1,
-      error: n,
+      error: E,
       fetchedAt: null
     }
   },

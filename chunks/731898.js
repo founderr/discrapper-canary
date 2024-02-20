@@ -17,15 +17,15 @@ function r() {
         var t, n, i, r, a, u;
         let c = e[0],
           d = null == c ? void 0 : null === (n = c.borderBoxSize) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.inlineSize,
-          p = null == c ? void 0 : null === (r = c.borderBoxSize) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.blockSize;
-        if (null == d || null == p) {
+          f = null == c ? void 0 : null === (r = c.borderBoxSize) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.blockSize;
+        if (null == d || null == f) {
           let e = l.current;
           if (null != e) {
             let t = window.getComputedStyle(e);
-            null == d && (d = parseFloat(null !== (a = t.width) && void 0 !== a ? a : "0")), null == p && (p = parseFloat(null !== (u = t.height) && void 0 !== u ? u : "0"))
+            null == d && (d = parseFloat(null !== (a = t.width) && void 0 !== a ? a : "0")), null == f && (f = parseFloat(null !== (u = t.height) && void 0 !== u ? u : "0"))
           }
         }
-        s(d), o(p)
+        s(d), o(f)
       });
       return n.observe(e), () => n.disconnect()
     }

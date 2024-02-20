@@ -17,35 +17,35 @@ function u(e, t) {
     let {
       children: c,
       className: d,
-      dir: p = "ltr",
-      orientation: h = "vertical",
-      paddingFix: f = !0,
-      fade: E = !1,
+      dir: f = "ltr",
+      orientation: E = "vertical",
+      paddingFix: p = !0,
+      fade: h = !1,
       onScroll: _,
-      style: m,
-      ...S
-    } = s, g = r.useRef(null), T = (0, l.usePaddingFixes)({
-      paddingFix: f,
-      orientation: h,
-      dir: p,
+      style: S,
+      ...m
+    } = s, T = r.useRef(null), g = (0, l.usePaddingFixes)({
+      paddingFix: p,
+      orientation: E,
+      dir: f,
       className: d,
-      scrollerRef: g,
+      scrollerRef: T,
       specs: n
     });
     return (0, i.jsx)("div", {
       ref: e => {
-        "function" == typeof u ? u(e) : null != u && (u.current = e), g.current = e
+        "function" == typeof u ? u(e) : null != u && (u.current = e), T.current = e
       },
       className: a(d, {
         [e]: !0,
-        [t]: E
+        [t]: h
       }),
-      style: (0, l.getMergedOrientationStyles)(m, h),
-      dir: p,
-      ...S,
+      style: (0, l.getMergedOrientationStyles)(S, E),
+      dir: f,
+      ...m,
       children: (0, i.jsxs)(o.FocusRingScope, {
-        containerRef: g,
-        children: [c, T]
+        containerRef: T,
+        children: [c, g]
       })
     })
   })

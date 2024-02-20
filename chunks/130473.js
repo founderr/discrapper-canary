@@ -1,52 +1,52 @@
 "use strict";
-let i, a;
-n.r(t), n.d(t, {
+let t, o;
+E.r(_), E.d(_, {
   default: function() {
-    return _
+    return A
   }
-}), n("808653");
-var l = n("446674"),
-  s = n("95410"),
-  r = n("913144"),
-  o = n("42203"),
-  u = n("305961");
-let d = "hideSuppressWarning",
-  c = !1,
-  f = !0,
-  E = !1;
-class h extends l.default.Store {
+}), E("808653");
+var n = E("446674"),
+  r = E("95410"),
+  i = E("913144"),
+  a = E("42203"),
+  I = E("305961");
+let s = "hideSuppressWarning",
+  T = !1,
+  S = !0,
+  N = !1;
+class O extends n.default.Store {
   initialize() {
-    E = s.default.get(d) || E
+    N = r.default.get(s) || N
   }
   isAFKChannel() {
-    let e = o.default.getChannel(a);
+    let e = a.default.getChannel(o);
     if (null == e) return !1;
-    let t = u.default.getGuild(e.getGuildId());
-    return null != t && e.id === t.afkChannelId
+    let _ = I.default.getGuild(e.getGuildId());
+    return null != _ && e.id === _.afkChannelId
   }
   shouldShowWarning() {
     var e;
-    return !(null === (e = o.default.getChannel(a)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !f
+    return !(null === (e = a.default.getChannel(o)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !S
   }
 }
-h.displayName = "PermissionSpeakStore";
-var _ = new h(r.default, {
+O.displayName = "PermissionSpeakStore";
+var A = new O(i.default, {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, c = !1
+    t = e.sessionId, T = !1
   },
   CONNECTION_CLOSED: function() {
-    i = null, a = null, f = !0
+    t = null, o = null, S = !0
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
-      voiceStates: t
+      voiceStates: _
     } = e;
-    return t.reduce((e, t) => i !== t.sessionId ? e : (c !== t.suppress && (f = !(c = t.suppress)), a !== t.channelId && (a = t.channelId, f = !c), (E || null == t.channelId) && (f = !0), !0), !1)
+    return _.reduce((e, _) => t !== _.sessionId ? e : (T !== _.suppress && (S = !(T = _.suppress)), o !== _.channelId && (o = _.channelId, S = !T), (N || null == _.channelId) && (S = !0), !0), !1)
   },
   PERMISSION_CLEAR_SUPPRESS_WARNING: function(e) {
     let {
-      forever: t
+      forever: _
     } = e;
-    f = !0, t && (E = !0, s.default.set(d, E))
+    S = !0, _ && (N = !0, r.default.set(s, N))
   }
 })

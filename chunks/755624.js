@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return g
   }
 }), n("222007"), n("702976");
 var i = n("917351"),
@@ -13,18 +13,18 @@ var i = n("917351"),
   u = n("271938");
 let c = {},
   d = new o.default,
-  p = new Set;
+  f = new Set;
 
-function h(e) {
+function E(e) {
   c = r(c).reject(t => t.guildId === e).keyBy("threadId").value()
 }
 
-function f(e) {
+function p(e) {
   var t;
-  null === (t = e.threads) || void 0 === t || t.forEach(E)
+  null === (t = e.threads) || void 0 === t || t.forEach(h)
 }
 
-function E(e) {
+function h(e) {
   l.ALL_CHANNEL_TYPES.has(e.type) && null != e.member && (c[e.id] = {
     threadId: e.id,
     guildId: e.guild_id,
@@ -38,15 +38,15 @@ function E(e) {
 function _(e) {
   let t = c[e];
   if (d.clearTimer(e), !0 === t.muted) {
-    (p = new Set(p)).add(e);
+    (f = new Set(f)).add(e);
     let n = d.setTimer(e, t.muteConfig, () => {
-      c[e].muted = !1, (p = new Set(p)).delete(e), g.emitChange()
+      c[e].muted = !1, (f = new Set(f)).delete(e), T.emitChange()
     });
-    n && (c[e].muted = !1, (p = new Set(p)).delete(e))
-  } else(p = new Set(p)).delete(e)
+    n && (c[e].muted = !1, (f = new Set(f)).delete(e))
+  } else(f = new Set(f)).delete(e)
 }
 
-function m(e) {
+function S(e) {
   let {
     guildId: t,
     members: n
@@ -62,7 +62,7 @@ function m(e) {
     }, _(e.id)
   })
 }
-class S extends s.default.Store {
+class m extends s.default.Store {
   hasJoined(e) {
     return e in c
   }
@@ -82,17 +82,17 @@ class S extends s.default.Store {
     return null === (t = c[e]) || void 0 === t ? void 0 : t.muteConfig
   }
   getMutedThreads() {
-    return p
+    return f
   }
   isMuted(e) {
-    return p.has(e)
+    return f.has(e)
   }
 }
-S.displayName = "JoinedThreadsStore";
-let g = new S(a.default, {
+m.displayName = "JoinedThreadsStore";
+let T = new m(a.default, {
   CONNECTION_OPEN: function(e) {
-    d.reset(), p = new Set, c = {}, e.guilds.forEach(e => {
-      f(e)
+    d.reset(), f = new Set, c = {}, e.guilds.forEach(e => {
+      p(e)
     })
   },
   OVERLAY_INITIALIZE: function(e) {
@@ -108,25 +108,25 @@ let g = new S(a.default, {
     let {
       guild: t
     } = e;
-    h(t.id), f(t)
+    E(t.id), p(t)
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    h(t.id)
+    E(t.id)
   },
   THREAD_CREATE: function(e) {
     let {
       channel: t
     } = e;
-    E(t)
+    h(t)
   },
-  THREAD_LIST_SYNC: m,
-  SEARCH_FINISH: m,
-  MOD_VIEW_SEARCH_FINISH: m,
-  LOAD_THREADS_SUCCESS: m,
-  LOAD_ARCHIVED_THREADS_SUCCESS: m,
+  THREAD_LIST_SYNC: S,
+  SEARCH_FINISH: S,
+  MOD_VIEW_SEARCH_FINISH: S,
+  LOAD_THREADS_SUCCESS: S,
+  LOAD_ARCHIVED_THREADS_SUCCESS: S,
   THREAD_DELETE: function(e) {
     let {
       channel: t
@@ -185,4 +185,4 @@ let g = new S(a.default, {
     }), i
   }
 });
-var T = g
+var g = T

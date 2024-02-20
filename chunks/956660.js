@@ -1,15 +1,15 @@
 "use strict";
-var r = n("814026"),
-  a = n("64980"),
+var e = n("814026"),
+  i = n("64980"),
   o = n("18563"),
-  i = URLSearchParams.prototype,
-  u = a(i.forEach);
-r && !("size" in i) && o(i, "size", {
+  u = URLSearchParams.prototype,
+  a = i(u.forEach);
+e && !("size" in u) && o(u, "size", {
   get: function() {
-    var e = 0;
-    return u(this, function() {
-      e++
-    }), e
+    var t = 0;
+    return a(this, function() {
+      t++
+    }), t
   },
   configurable: !0,
   enumerable: !0

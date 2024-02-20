@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getGuildDefaults: function() {
-    return j
+    return Y
   },
   convertChannelOverridesToMap: function() {
-    return Y
+    return j
   },
   default: function() {
     return J
@@ -19,88 +19,88 @@ var i = n("917351"),
   u = n("640497"),
   c = n("755624"),
   d = n("233069"),
-  p = n("568734"),
-  h = n("299039"),
-  f = n("42203"),
-  E = n("305961"),
+  f = n("568734"),
+  E = n("299039"),
+  p = n("42203"),
+  h = n("305961"),
   _ = n("697218"),
-  m = n("49111"),
-  S = n("76618"),
-  g = n("133335"),
-  T = n("397336");
+  S = n("49111"),
+  m = n("76618"),
+  T = n("133335"),
+  g = n("397336");
 let I = {},
-  v = {},
-  C = !1,
+  C = {},
+  v = !1,
   A = !1,
   R = {
     flags: 0
   },
   N = new o.default,
-  y = new o.default,
-  O = {
+  O = new o.default,
+  D = {
     suppress_everyone: !1,
     suppress_roles: !1,
     mute_scheduled_events: !1,
     mobile_push: !0,
     muted: !1,
-    message_notifications: m.UserNotificationSettings.ALL_MESSAGES,
+    message_notifications: S.UserNotificationSettings.ALL_MESSAGES,
     flags: 0,
     channel_overrides: {},
-    notify_highlights: m.HighlightSettings.NULL,
+    notify_highlights: S.HighlightSettings.NULL,
     hide_muted_channels: !1,
     version: -1,
     mute_config: null
   },
-  D = {
-    [m.UserNotificationSettings.ALL_MESSAGES]: {
-      ...O,
-      message_notifications: m.UserNotificationSettings.ALL_MESSAGES
+  y = {
+    [S.UserNotificationSettings.ALL_MESSAGES]: {
+      ...D,
+      message_notifications: S.UserNotificationSettings.ALL_MESSAGES
     },
-    [m.UserNotificationSettings.ONLY_MENTIONS]: {
-      ...O,
-      message_notifications: m.UserNotificationSettings.ONLY_MENTIONS
+    [S.UserNotificationSettings.ONLY_MENTIONS]: {
+      ...D,
+      message_notifications: S.UserNotificationSettings.ONLY_MENTIONS
     }
   },
-  b = {},
   P = {},
-  L = new Set,
+  L = {},
+  b = new Set,
   M = new Set,
   U = {},
-  w = {};
+  G = {};
 
-function k(e, t) {
+function w(e, t) {
   var n;
   let i = I[e],
     s = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
-    a = Y(t.channel_overrides),
+    a = j(t.channel_overrides),
     o = {
-      ...j(e),
+      ...Y(e),
       ...i,
       ...t,
       channel_overrides: a
     };
   N.clearTimer(e), r.forEach(s, e => {
-    y.clearTimer(e.channel_id)
-  }), G(e, o), I[e] = o, b[e] = z(I[e]);
+    O.clearTimer(e.channel_id)
+  }), k(e, o), I[e] = o, P[e] = z(I[e]);
   let l = r.filter(o.channel_overrides, e => {
     var t;
-    return p.hasFlag(null !== (t = e.flags) && void 0 !== t ? t : 0, T.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
+    return f.hasFlag(null !== (t = e.flags) && void 0 !== t ? t : 0, g.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
   });
-  P[e] = new Set(l.map(e => e.channel_id)),
+  L[e] = new Set(l.map(e => e.channel_id)),
     function(e) {
       var t;
       if (null == e) return;
-      let n = new Set(P[e]),
+      let n = new Set(L[e]),
         i = null !== (t = U[e]) && void 0 !== t ? t : {};
       for (let e in i) {
         let t = i[e];
-        p.hasFlag(t.flags, T.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) ? n.add(e) : n.delete(e)
+        f.hasFlag(t.flags, g.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) ? n.add(e) : n.delete(e)
       }
-      Object.keys(i).length > 0 ? w[e] = n : delete w[e]
-    }(e), delete v[e]
+      Object.keys(i).length > 0 ? G[e] = n : delete G[e]
+    }(e), delete C[e]
 }
 
-function G(e, t) {
+function k(e, t) {
   if (!0 === t.muted) {
     let n = N.setTimer(e, t.mute_config, () => {
       x(e, {
@@ -114,7 +114,7 @@ function G(e, t) {
   }
   r.forEach(t.channel_overrides, t => {
     if (!0 === t.muted) {
-      let n = y.setTimer(t.channel_id, t.mute_config, () => {
+      let n = O.setTimer(t.channel_id, t.mute_config, () => {
         F(e, t.channel_id, {
           muted: !1
         }), a.default.dispatch({
@@ -131,7 +131,7 @@ function G(e, t) {
 function x(e, t) {
   var n;
   let i = I[e];
-  k(e, {
+  w(e, {
     channel_overrides: null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
     ...t
   })
@@ -148,7 +148,7 @@ function V(e, t) {
   var n;
   let i = {},
     r = null !== (n = null != e ? U[e] : null) && void 0 !== n ? n : {};
-  h.default.keys(t).forEach(n => {
+  E.default.keys(t).forEach(n => {
     var s;
     let a = H(e, n, t[n]);
     i[n] = a, r[n] = {
@@ -164,7 +164,7 @@ function B(e, t) {
   var n;
   let i = I[e],
     r = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {};
-  k(e, {
+  w(e, {
     channel_overrides: null == i ? t : {
       ...r,
       ...t
@@ -184,24 +184,24 @@ function H(e, t, n) {
   }
 }
 
-function j(e) {
-  let t = E.default.getGuild(e),
-    n = null != t ? t.defaultMessageNotifications : m.UserNotificationSettings.ALL_MESSAGES;
-  return D[n]
+function Y(e) {
+  let t = h.default.getGuild(e),
+    n = null != t ? t.defaultMessageNotifications : S.UserNotificationSettings.ALL_MESSAGES;
+  return y[n]
 }
 
-function Y() {
+function j() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
   return e instanceof Array ? r.keyBy(e, "channel_id") : e
 }
 
 function W(e) {
   var t;
-  return null !== (t = I[e]) && void 0 !== t ? t : j(e)
+  return null !== (t = I[e]) && void 0 !== t ? t : Y(e)
 }
 
 function K(e) {
-  C = p.hasFlag(e.flags, S.AccountNotificationFlags.USE_NEW_NOTIFICATIONS), A = p.hasFlag(e.flags, S.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES), R = e
+  v = f.hasFlag(e.flags, m.AccountNotificationFlags.USE_NEW_NOTIFICATIONS), A = f.hasFlag(e.flags, m.AccountNotificationFlags.MENTION_ON_ALL_MESSAGES), R = e
 }
 
 function z(e) {
@@ -212,25 +212,25 @@ function q() {
   return !0
 }
 
-function Q() {
-  return C && u.NotificationsExperiment.getCurrentConfig({
+function X() {
+  return v && u.NotificationsExperiment.getCurrentConfig({
     location: "UserGuildSettingsStore"
   }, {
     autoTrackExposure: !1
   }).enabled
 }
-class X extends s.default.PersistedStore {
+class Q extends s.default.PersistedStore {
   initialize(e) {
-    if (this.waitFor(_.default, E.default, l.default, c.default), null != e) {
+    if (this.waitFor(_.default, h.default, l.default, c.default), null != e) {
       var t, n;
-      C = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (I = e.userGuildSettings, P = r.mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), r.forEach(I, (e, t) => {
-        b[t] = z(e)
+      v = null !== (t = e.useNewNotifications) && void 0 !== t && t, "userGuildSettings" in e && (I = e.userGuildSettings, L = r.mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, e => new Set(e)), r.forEach(I, (e, t) => {
+        P[t] = z(e)
       }))
     }
   }
   getState() {
     return {
-      useNewNotifications: C
+      useNewNotifications: v
     }
   }
   get mentionOnAllMessages() {
@@ -275,7 +275,7 @@ class X extends s.default.PersistedStore {
   }
   getChannelMessageNotifications(e, t) {
     let n = this.getChannelOverrides(e)[t];
-    return null == n || null == n.message_notifications ? m.UserNotificationSettings.NULL : n.message_notifications
+    return null == n || null == n.message_notifications ? S.UserNotificationSettings.NULL : n.message_notifications
   }
   getChannelMuteConfig(e, t) {
     let n = this.getChannelOverrides(e)[t];
@@ -283,47 +283,47 @@ class X extends s.default.PersistedStore {
   }
   getMutedChannels(e) {
     var t;
-    return null !== (t = b[e]) && void 0 !== t ? t : L
+    return null !== (t = P[e]) && void 0 !== t ? t : b
   }
   isChannelMuted(e, t) {
     var n;
-    let i = f.default.getChannel(t);
+    let i = p.default.getChannel(t);
     return e = null !== (n = null == i ? void 0 : i.getGuildId()) && void 0 !== n ? n : e, this.getMutedChannels(e).has(t)
   }
   isCategoryMuted(e, t) {
-    let n = f.default.getChannel(t);
+    let n = p.default.getChannel(t);
     if (null == n) return !1;
     let i = n.parent_id;
     return null != i && this.getMutedChannels(e).has(i)
   }
   resolvedMessageNotifications(e) {
     let t = this.getChannelMessageNotifications(e.guild_id, e.id);
-    if (t !== m.UserNotificationSettings.NULL) return t;
+    if (t !== S.UserNotificationSettings.NULL) return t;
     if (null != e.parent_id) {
       let t = this.getChannelMessageNotifications(e.guild_id, e.parent_id);
-      if (t !== m.UserNotificationSettings.NULL) return t
+      if (t !== S.UserNotificationSettings.NULL) return t
     }
     return this.getMessageNotifications(e.guild_id)
   }
   resolveUnreadSetting(e) {
-    if (d.THREAD_CHANNEL_TYPES.has(e.type) || (0, d.isPrivate)(e.type) || !Q()) return g.UnreadSetting.ALL_MESSAGES;
+    if (d.THREAD_CHANNEL_TYPES.has(e.type) || (0, d.isPrivate)(e.type) || !X()) return T.UnreadSetting.ALL_MESSAGES;
     let t = this.getChannelUnreadSetting(e.guild_id, e.id);
-    if (t !== g.UnreadSetting.UNSET) return t;
+    if (t !== T.UnreadSetting.UNSET) return t;
     if (null != e.parent_id) {
       let t = this.getChannelUnreadSetting(e.guild_id, e.parent_id);
-      if (t !== g.UnreadSetting.UNSET) return t
+      if (t !== T.UnreadSetting.UNSET) return t
     }
     let n = this.getGuildUnreadSetting(e.guild_id);
-    return n !== g.UnreadSetting.UNSET ? n : this.resolvedMessageNotifications(e) === m.UserNotificationSettings.ALL_MESSAGES ? g.UnreadSetting.ALL_MESSAGES : g.UnreadSetting.ONLY_MENTIONS
+    return n !== T.UnreadSetting.UNSET ? n : this.resolvedMessageNotifications(e) === S.UserNotificationSettings.ALL_MESSAGES ? T.UnreadSetting.ALL_MESSAGES : T.UnreadSetting.ONLY_MENTIONS
   }
   isGuildOrCategoryOrChannelMuted(e, t) {
     return this.isMuted(e) || this.isCategoryMuted(e, t) || this.isChannelMuted(e, t)
   }
   allowNoMessages(e) {
-    return this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) || this.resolvedMessageNotifications(e) === m.UserNotificationSettings.NO_MESSAGES || this.isOptInEnabled(e.guild_id) && !this.isChannelRecordOrParentOptedIn(e)
+    return this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) || this.resolvedMessageNotifications(e) === S.UserNotificationSettings.NO_MESSAGES || this.isOptInEnabled(e.guild_id) && !this.isChannelRecordOrParentOptedIn(e)
   }
   allowAllMessages(e) {
-    return !this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) && this.resolvedMessageNotifications(e) === m.UserNotificationSettings.ALL_MESSAGES && (!this.isOptInEnabled(e.guild_id) || this.isChannelRecordOrParentOptedIn(e))
+    return !this.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) && this.resolvedMessageNotifications(e) === S.UserNotificationSettings.ALL_MESSAGES && (!this.isOptInEnabled(e.guild_id) || this.isChannelRecordOrParentOptedIn(e))
   }
   isGuildCollapsed(e) {
     var t;
@@ -332,8 +332,8 @@ class X extends s.default.PersistedStore {
   getAllSettings() {
     return {
       userGuildSettings: I,
-      mutedChannels: b,
-      optedInChannelsByGuild: P
+      mutedChannels: P,
+      optedInChannelsByGuild: L
     }
   }
   getChannelIdFlags(e, t) {
@@ -347,49 +347,49 @@ class X extends s.default.PersistedStore {
   getNewForumThreadsCreated(e) {
     let t = this.getChannelOverrides(e.guild_id)[e.id];
     if (null != t && null != t.flags) {
-      if (p.hasFlag(t.flags, T.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON)) return !0;
-      if (p.hasFlag(t.flags, T.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF)) return !1
+      if (f.hasFlag(t.flags, g.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON)) return !0;
+      if (f.hasFlag(t.flags, g.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF)) return !1
     }
-    return this.resolvedMessageNotifications(e) === m.UserNotificationSettings.ALL_MESSAGES
+    return this.resolvedMessageNotifications(e) === S.UserNotificationSettings.ALL_MESSAGES
   }
   isOptInEnabled(e) {
-    return null != e && (l.default.isFullServerPreview(e) ? l.default.isOptInEnabled(e) : p.hasFlag(this.getGuildFlags(e), T.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON))
+    return null != e && (l.default.isFullServerPreview(e) ? l.default.isOptInEnabled(e) : f.hasFlag(this.getGuildFlags(e), g.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON))
   }
   isChannelRecordOrParentOptedIn(e, t) {
     return null != e && null != e.guild_id && (this.isChannelOptedIn(e.guild_id, e.id, t) || null != e.parent_id && this.isChannelOptedIn(e.guild_id, e.parent_id, t))
   }
   isChannelOrParentOptedIn(e, t, n) {
-    return this.isChannelRecordOrParentOptedIn(f.default.getChannel(t), n)
+    return this.isChannelRecordOrParentOptedIn(p.default.getChannel(t), n)
   }
   isChannelOptedIn(e, t) {
     var n, i;
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (null == e) return !1;
     if (l.default.isFullServerPreview(e)) return l.default.isChannelOptedIn(e, t);
-    if (r && null != w[e]) return w[e].has(t);
+    if (r && null != G[e]) return G[e].has(t);
     let s = null !== (i = null === (n = this.getChannelOverrides(e)[t]) || void 0 === n ? void 0 : n.flags) && void 0 !== i ? i : 0;
-    return p.hasFlag(s, T.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
+    return f.hasFlag(s, g.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
   }
   getOptedInChannels(e) {
     var t, n;
-    return l.default.isFullServerPreview(e) ? null !== (t = l.default.getViewingChannels(e)) && void 0 !== t ? t : M : null !== (n = P[e]) && void 0 !== n ? n : M
+    return l.default.isFullServerPreview(e) ? null !== (t = l.default.getViewingChannels(e)) && void 0 !== t ? t : M : null !== (n = L[e]) && void 0 !== n ? n : M
   }
   getOptedInChannelsWithPendingUpdates(e) {
-    return w[e]
+    return G[e]
   }
   getPendingChannelUpdates(e) {
     return U[e]
   }
   getGuildFavorites(e) {
     if (l.default.isFullServerPreview(e)) return null;
-    if (null == v[e]) {
+    if (null == C[e]) {
       let t = r.filter(this.getChannelOverrides(e), t => {
         var n, i;
-        return p.hasFlag(null !== (i = t.flags) && void 0 !== i ? i : 0, T.ChannelNotificationSettingsFlags.FAVORITED) && (null === (n = f.default.getChannel(t.channel_id)) || void 0 === n ? void 0 : n.guild_id) === e
+        return f.hasFlag(null !== (i = t.flags) && void 0 !== i ? i : 0, g.ChannelNotificationSettingsFlags.FAVORITED) && (null === (n = p.default.getChannel(t.channel_id)) || void 0 === n ? void 0 : n.guild_id) === e
       });
-      v[e] = t.map(e => e.channel_id)
+      C[e] = t.map(e => e.channel_id)
     }
-    return v[e]
+    return C[e]
   }
   isFavorite(e, t) {
     var n;
@@ -398,48 +398,48 @@ class X extends s.default.PersistedStore {
   isMessagesFavorite(e) {
     var t, n;
     let i = null !== (n = null === (t = this.getChannelOverrides(null)[e]) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0;
-    return p.hasFlag(i, T.ChannelNotificationSettingsFlags.FAVORITED)
+    return f.hasFlag(i, g.ChannelNotificationSettingsFlags.FAVORITED)
   }
   isAddedToMessages(e) {
     var t, n;
     let i = null !== (n = null === (t = this.getChannelOverrides(null)[e]) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0;
-    return p.hasFlag(i, T.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
+    return f.hasFlag(i, g.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
   }
   getAddedToMessages() {
     var e;
-    return null !== (e = P.null) && void 0 !== e ? e : M
+    return null !== (e = L.null) && void 0 !== e ? e : M
   }
   get accountNotificationSettings() {
     return R
   }
   get useNewNotifications() {
-    return C
+    return v
   }
   getGuildUnreadSetting(e) {
-    if (!Q()) return g.UnreadSetting.ALL_MESSAGES;
+    if (!X()) return T.UnreadSetting.ALL_MESSAGES;
     let t = this.getGuildFlags(e);
-    return p.hasFlag(t, T.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? g.UnreadSetting.ALL_MESSAGES : p.hasFlag(t, T.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? g.UnreadSetting.ONLY_MENTIONS : g.UnreadSetting.UNSET
+    return f.hasFlag(t, g.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? T.UnreadSetting.ALL_MESSAGES : f.hasFlag(t, g.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? T.UnreadSetting.ONLY_MENTIONS : T.UnreadSetting.UNSET
   }
   resolveGuildUnreadSetting(e) {
     let t = this.getGuildFlags(e.id);
-    return !Q() || p.hasFlag(t, T.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? g.UnreadSetting.ALL_MESSAGES : p.hasFlag(t, T.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? g.UnreadSetting.ONLY_MENTIONS : e.defaultMessageNotifications === m.UserNotificationSettings.ALL_MESSAGES ? g.UnreadSetting.ALL_MESSAGES : g.UnreadSetting.ONLY_MENTIONS
+    return !X() || f.hasFlag(t, g.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? T.UnreadSetting.ALL_MESSAGES : f.hasFlag(t, g.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? T.UnreadSetting.ONLY_MENTIONS : e.defaultMessageNotifications === S.UserNotificationSettings.ALL_MESSAGES ? T.UnreadSetting.ALL_MESSAGES : T.UnreadSetting.ONLY_MENTIONS
   }
   getChannelRecordUnreadSetting(e) {
     return this.getChannelUnreadSetting(e.guild_id, e.id)
   }
   getChannelUnreadSetting(e, t) {
     let n = this.getChannelIdFlags(e, t);
-    return p.hasFlag(n, T.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? g.UnreadSetting.ALL_MESSAGES : p.hasFlag(n, T.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? g.UnreadSetting.ONLY_MENTIONS : g.UnreadSetting.UNSET
+    return f.hasFlag(n, g.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? T.UnreadSetting.ALL_MESSAGES : f.hasFlag(n, g.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? T.UnreadSetting.ONLY_MENTIONS : T.UnreadSetting.UNSET
   }
 }
-X.displayName = "UserGuildSettingsStore", X.persistKey = "collapsedGuilds";
-let Z = new X(a.default, {
+Q.displayName = "UserGuildSettingsStore", Q.persistKey = "collapsedGuilds";
+let Z = new Q(a.default, {
   USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
     let {
       userGuildSettings: t
     } = e;
     t.forEach(e => {
-      k(e.guild_id, {
+      w(e.guild_id, {
         channel_overrides: {},
         ...e
       })
@@ -480,14 +480,14 @@ let Z = new X(a.default, {
     return !(null == t || l.default.isFullServerPreview(t)) && (V(t, n), !0)
   },
   CONNECTION_OPEN: function(e) {
-    K(e.notificationSettings), N.reset(), y.reset(), !e.userGuildSettings.partial && (I = {}, b = {}, P = {});
+    K(e.notificationSettings), N.reset(), O.reset(), !e.userGuildSettings.partial && (I = {}, P = {}, L = {});
     let t = new Set;
     for (let n in e.userGuildSettings.entries.forEach(e => {
-        !("channel_overrides" in e) && (e.channel_overrides = {}), k(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
-      }), I) !t.has(n) && G(n, I[n])
+        !("channel_overrides" in e) && (e.channel_overrides = {}), w(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
+      }), I) !t.has(n) && k(n, I[n])
   },
   CACHE_LOADED: function(e) {
-    null != e.userGuildSettings && 0 !== e.userGuildSettings.length && (I = {}, b = {}, P = {}, e.userGuildSettings.forEach(e => {
+    null != e.userGuildSettings && 0 !== e.userGuildSettings.length && (I = {}, P = {}, L = {}, e.userGuildSettings.forEach(e => {
       let t = e.guild_id;
       I[t] = e;
       let n = new Set,
@@ -495,9 +495,9 @@ let Z = new X(a.default, {
       for (let t in e.channel_overrides) {
         var r;
         let s = e.channel_overrides[t];
-        (0, o.computeIsMuted)(s) && n.add(t), p.hasFlag(null !== (r = s.flags) && void 0 !== r ? r : 0, T.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && i.add(t)
+        (0, o.computeIsMuted)(s) && n.add(t), f.hasFlag(null !== (r = s.flags) && void 0 !== r ? r : 0, g.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && i.add(t)
       }
-      b[t] = n, P[t] = i
+      P[t] = n, L[t] = i
     }))
   },
   OVERLAY_INITIALIZE: function(e) {
@@ -510,10 +510,10 @@ let Z = new X(a.default, {
     } = t;
     I = {
       ...n
-    }, b = {}, P = {}, h.default.keys(i).forEach(e => {
-      b[e] = new Set(i[e])
-    }), h.default.keys(r).forEach(e => {
-      P[e] = new Set(r[e])
+    }, P = {}, L = {}, E.default.keys(i).forEach(e => {
+      P[e] = new Set(i[e])
+    }), E.default.keys(r).forEach(e => {
+      L[e] = new Set(r[e])
     })
   },
   GUILD_CREATE: q,
@@ -521,7 +521,7 @@ let Z = new X(a.default, {
   GUILD_TOGGLE_COLLAPSE_MUTED: function(e) {
     let {
       guildId: t
-    } = e, n = null == I[t] ? j(t) : I[t];
+    } = e, n = null == I[t] ? Y(t) : I[t];
     I[t] = {
       ...n,
       guild_id: t,
@@ -545,7 +545,7 @@ let Z = new X(a.default, {
       guildId: t
     } = e;
     if (null == t) return !1;
-    delete U[t], delete w[t]
+    delete U[t], delete G[t]
   },
   NOTIFICATION_SETTINGS_UPDATE: function(e) {
     let {

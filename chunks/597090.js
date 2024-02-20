@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return u
+    return I
   }
-}), n("222007");
-var i = n("823411"),
-  a = n("568131"),
-  l = n("689988"),
-  s = n("686470"),
-  r = n("773336");
-class o extends l.default {
+}), E("222007");
+var t = E("823411"),
+  o = E("568131"),
+  n = E("689988"),
+  r = E("686470"),
+  i = E("773336");
+class a extends n.default {
   handlePostConnectionOpen() {
-    (0, r.isDesktop)() && (!s.default.fetched && (0, a.fetchLibrary)(), i.default.getDetectableGames())
+    (0, i.isDesktop)() && (!r.default.fetched && (0, o.fetchLibrary)(), t.default.getDetectableGames())
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -19,4 +19,4 @@ class o extends l.default {
     }
   }
 }
-var u = new o
+var I = new a

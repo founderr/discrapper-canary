@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   ReflectionJsonWriter: function() {
-    return u
+    return s
   }
 }), n("222007"), n("424973"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
 var r = n("537502"),
   a = n("497557"),
   o = n("803628"),
   i = n("759780");
-class u {
+class s {
   write(e, t) {
     let n = {};
     for (let r of this.fields) {
@@ -22,8 +22,8 @@ class u {
       let o = "scalar" == r.kind || "enum" == r.kind ? Object.assign(Object.assign({}, t), {
           emitDefaultValues: !0
         }) : t,
-        u = this.field(r, a[r.localName], o);
-      (0, i.assert)(void 0 !== u), n[t.useProtoFieldName ? r.name : r.jsonName] = u
+        s = this.field(r, a[r.localName], o);
+      (0, i.assert)(void 0 !== s), n[t.useProtoFieldName ? r.name : r.jsonName] = s
     }
     return n
   }
@@ -41,16 +41,16 @@ class u {
           break;
         case "message":
           let o = e.V.T();
-          for (let [r, u] of Object.entries(t)) {
-            let t = this.message(o, u, e.name, n);
+          for (let [r, s] of Object.entries(t)) {
+            let t = this.message(o, s, e.name, n);
             (0, i.assert)(void 0 !== t), a[r.toString()] = t
           }
           break;
         case "enum":
-          let u = e.V.T();
+          let s = e.V.T();
           for (let [r, o] of Object.entries(t)) {
             (0, i.assert)(void 0 === o || "number" == typeof o);
-            let t = this.enum(u, o, e.name, !1, !0, n.enumAsInteger);
+            let t = this.enum(s, o, e.name, !1, !0, n.enumAsInteger);
             (0, i.assert)(void 0 !== t), a[r.toString()] = t
           }
       }(n.emitDefaultValues || Object.keys(a).length > 0) && (r = a)
@@ -68,14 +68,14 @@ class u {
           let o = e.T();
           for (let r = 0; r < t.length; r++) {
             (0, i.assert)(void 0 === t[r] || "number" == typeof t[r]);
-            let u = this.enum(o, t[r], e.name, e.opt, !0, n.enumAsInteger);
-            (0, i.assert)(void 0 !== u), a.push(u)
+            let s = this.enum(o, t[r], e.name, e.opt, !0, n.enumAsInteger);
+            (0, i.assert)(void 0 !== s), a.push(s)
           }
           break;
         case "message":
-          let u = e.T();
+          let s = e.T();
           for (let r = 0; r < t.length; r++) {
-            let o = this.message(u, t[r], e.name, n);
+            let o = this.message(s, t[r], e.name, n);
             (0, i.assert)(void 0 !== o), a.push(o)
           }
       }(n.emitDefaultValues || a.length > 0 || n.emitDefaultValues) && (r = a)
@@ -102,12 +102,12 @@ class u {
   message(e, t, n, r) {
     return void 0 === t ? r.emitDefaultValues ? null : void 0 : e.internalJsonWrite(t, r)
   }
-  scalar(e, t, n, u, s) {
+  scalar(e, t, n, s, u) {
     if (void 0 === t) {
-      (0, i.assert)(u);
+      (0, i.assert)(s);
       return
     }
-    let l = s || u;
+    let l = u || s;
     switch (e) {
       case o.ScalarType.INT32:
       case o.ScalarType.SFIXED32:
@@ -142,9 +142,9 @@ class u {
       case o.ScalarType.SFIXED64:
       case o.ScalarType.SINT64:
         (0, i.assert)("number" == typeof t || "string" == typeof t || "bigint" == typeof t);
-        let f = a.PbLong.from(t);
-        if (f.isZero() && !l) return;
-        return f.toString();
+        let d = a.PbLong.from(t);
+        if (d.isZero() && !l) return;
+        return d.toString();
       case o.ScalarType.BYTES:
         if ((0, i.assert)(t instanceof Uint8Array), !t.byteLength) return l ? "" : void 0;
         return (0, r.base64encode)(t)

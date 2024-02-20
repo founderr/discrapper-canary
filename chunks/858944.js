@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   openStartBroadcastConfirmModal: function() {
-    return o
+    return u
   }
 });
 var a = n("37983");
@@ -29,7 +29,7 @@ function l(e) {
   }))
 }
 
-function o(e) {
+function u(e) {
   (0, r.openModal)(t => (0, a.jsx)(r.ConfirmModal, {
     header: i.default.Messages.START_STREAMING,
     confirmText: i.default.Messages.START_STREAMING,

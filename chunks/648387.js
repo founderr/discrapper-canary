@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   cleanupTempFiles: function() {
-    return r
+    return i
   }
 });
-var i = n("811022"),
-  a = n("49671"),
-  l = n("697218"),
-  s = n("147746");
+var t = E("811022"),
+  o = E("49671"),
+  n = E("697218"),
+  r = E("147746");
 
-function r() {
+function i() {
   var e;
-  (null === a.default || void 0 === a.default ? void 0 : null === (e = a.default.fileManager) || void 0 === e ? void 0 : e.cleanupTempFiles) != null && setTimeout(() => void u(), 1e4)
+  (null === o.default || void 0 === o.default ? void 0 : null === (e = o.default.fileManager) || void 0 === e ? void 0 : e.cleanupTempFiles) != null && setTimeout(() => void I(), 1e4)
 }
-let o = new i.default("tempFiles");
-async function u() {
+let a = new t.default("tempFiles");
+async function I() {
   var e;
-  if ((null === a.default || void 0 === a.default ? void 0 : null === (e = a.default.fileManager) || void 0 === e ? void 0 : e.cleanupTempFiles) != null) try {
-    let e = await a.default.fileManager.cleanupTempFiles();
+  if ((null === o.default || void 0 === o.default ? void 0 : null === (e = o.default.fileManager) || void 0 === e ? void 0 : e.cleanupTempFiles) != null) try {
+    let e = await o.default.fileManager.cleanupTempFiles();
     if ((null == e ? void 0 : e.callscopeLogFiles) != null && e.callscopeLogFiles.length > 0) {
-      let t = Math.floor(1e3 * Math.random()).toString(),
-        n = l.default.getCurrentUser();
-      (null == n ? void 0 : n.isStaff()) && (t = n.id), o.log("Uploading ".concat(e.callscopeLogFiles.length, " callscope logs as user ").concat(t)), await (0, s.uploadCallscopeLogFiles)(t, e.callscopeLogFiles)
+      let _ = Math.floor(1e3 * Math.random()).toString(),
+        E = n.default.getCurrentUser();
+      (null == E ? void 0 : E.isStaff()) && (_ = E.id), a.log("Uploading ".concat(e.callscopeLogFiles.length, " callscope logs as user ").concat(_)), await (0, r.uploadCallscopeLogFiles)(_, e.callscopeLogFiles)
     }
   } catch (e) {
-    o.error("Exception ".concat(null == e ? void 0 : e.message), e)
+    a.error("Exception ".concat(null == e ? void 0 : e.message), e)
   }
 }

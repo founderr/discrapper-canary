@@ -1,12 +1,12 @@
 function r(e, t, n, r) {
   var a = [],
     i = {};
-  return function u(s) {
-    i[s] = !0, a.push(s), e[s].forEach(function(e) {
+  return function s(u) {
+    i[u] = !0, a.push(u), e[u].forEach(function(e) {
       if (i[e]) {
         if (a.indexOf(e) >= 0 && (a.push(e), !r)) throw new o(a)
-      } else u(e)
-    }), a.pop(), (!t || 0 === e[s].length) && -1 === n.indexOf(s) && n.push(s)
+      } else s(e)
+    }), a.pop(), (!t || 0 === e[u].length) && -1 === n.indexOf(u) && n.push(u)
   }
 }
 n("424973"), n("70102"), n("854508");

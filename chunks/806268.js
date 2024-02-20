@@ -14,7 +14,7 @@ function i(e, t) {
     i = (0, r.default)(t);
   if (isNaN(i)) return new Date(NaN);
   if (!i) return n;
-  var u = n.getDate(),
-    s = new Date(n.getTime());
-  return (s.setMonth(n.getMonth() + i + 1, 0), u >= s.getDate()) ? s : (n.setFullYear(s.getFullYear(), s.getMonth(), u), n)
+  var s = n.getDate(),
+    u = new Date(n.getTime());
+  return (u.setMonth(n.getMonth() + i + 1, 0), s >= u.getDate()) ? u : (n.setFullYear(u.getFullYear(), u.getMonth(), s), n)
 }

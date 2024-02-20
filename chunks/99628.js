@@ -1,66 +1,66 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return S
+    return l
   }
-}), n("222007");
-var i = n("37983");
-n("884691");
-var a = n("151426"),
-  l = n("77078"),
-  s = n("689988"),
-  r = n("10641"),
-  o = n("18494"),
-  u = n("162771"),
-  d = n("599110"),
-  c = n("179803"),
-  f = n("49111"),
-  E = n("994428");
-let h = "GUILD_ONBOARDING_UPSELL_MODAL",
-  _ = (e, t) => {
-    if (__OVERLAY__ || null == e || null == t) return;
-    let s = (0, c.shouldShowGuildOnboardingUpsell)(e, a.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2);
-    if (!s) return;
-    (0, r.requestMarkDismissibleContentAsShown)(a.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2);
-    let o = function() {
-      let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.ContentDismissActionType.DISMISS;
-      d.default.track(f.AnalyticEvents.UPSELL_CLICKED, {
-        type: a.DismissibleContent[a.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2],
+}), E("222007");
+var t = E("37983");
+E("884691");
+var o = E("151426"),
+  n = E("77078"),
+  r = E("689988"),
+  i = E("10641"),
+  a = E("18494"),
+  I = E("162771"),
+  s = E("599110"),
+  T = E("179803"),
+  S = E("49111"),
+  N = E("994428");
+let O = "GUILD_ONBOARDING_UPSELL_MODAL",
+  A = (e, _) => {
+    if (__OVERLAY__ || null == e || null == _) return;
+    let r = (0, T.shouldShowGuildOnboardingUpsell)(e, o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2);
+    if (!r) return;
+    (0, i.requestMarkDismissibleContentAsShown)(o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2);
+    let a = function() {
+      let _ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N.ContentDismissActionType.DISMISS;
+      s.default.track(S.AnalyticEvents.UPSELL_CLICKED, {
+        type: o.DismissibleContent[o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2],
         action: "dismiss"
-      }), (0, c.dismissedGuildOnboardingUpsell)(e, a.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2), (0, r.markDismissibleContentAsDismissed)(a.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2, {
-        dismissAction: t
+      }), (0, T.dismissedGuildOnboardingUpsell)(e, o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2), (0, i.markDismissibleContentAsDismissed)(o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2, {
+        dismissAction: _
       })
     };
-    (0, l.openModalLazy)(async () => {
+    (0, n.openModalLazy)(async () => {
       let {
-        default: t
-      } = await n.el("790255").then(n.bind(n, "790255"));
-      return n => (0, i.jsx)(t, {
-        ...n,
+        default: _
+      } = await E.el("790255").then(E.bind(E, "790255"));
+      return E => (0, t.jsx)(_, {
+        ...E,
         guildId: e,
         onClose: e => {
-          o(e), n.onClose()
+          a(e), E.onClose()
         }
       })
     }, {
-      modalKey: h,
+      modalKey: O,
       onCloseRequest: () => {
-        o(), (0, l.closeModal)(h)
+        a(), (0, n.closeModal)(O)
       }
     })
   };
-class C extends s.default {
+class R extends r.default {
   handleChannelSelect(e) {
     let {
-      guildId: t,
-      channelId: n
+      guildId: _,
+      channelId: E
     } = e;
-    _(t, n)
+    A(_, E)
   }
   handlePostConnectionOpen() {
-    let e = o.default.getCurrentlySelectedChannelId(),
-      t = u.default.getGuildId();
-    _(t, e)
+    let e = a.default.getCurrentlySelectedChannelId(),
+      _ = I.default.getGuildId();
+    A(_, e)
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -69,4 +69,4 @@ class C extends s.default {
     }
   }
 }
-var S = new C
+var l = new R

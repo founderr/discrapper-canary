@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   isEligibleForContentInventoryV1: function() {
-    return l
+    return n
   }
 });
-var i = n("862205");
-let a = (0, i.createExperiment)({
+var t = E("862205");
+let o = (0, t.createExperiment)({
   kind: "user",
   id: "2024-02_v1_content_inventory_feed",
   label: "V1 Feed of the content inventory",
@@ -21,13 +21,13 @@ let a = (0, i.createExperiment)({
   }]
 });
 
-function l(e) {
+function n(e) {
   let {
-    enabled: t
-  } = a.getCurrentConfig({
+    enabled: _
+  } = o.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !0
   });
-  return t
+  return _
 }

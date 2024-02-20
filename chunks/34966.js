@@ -1,129 +1,129 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return T
+    return L
   }
-}), n("222007");
-var i = n("446674"),
-  a = n("95410"),
-  l = n("913144"),
-  s = n("915639"),
-  r = n("234222");
-let o = {},
-  u = {},
-  d = null,
-  c = null,
-  f = null,
-  E = "lastChangeLogId",
-  h = "lastChangeLogDate",
-  _ = null,
-  C = null,
-  S = new Set;
-class g extends i.default.Store {
+}), E("222007");
+var t = E("446674"),
+  o = E("95410"),
+  n = E("913144"),
+  r = E("915639"),
+  i = E("234222");
+let a = {},
+  I = {},
+  s = null,
+  T = null,
+  S = null,
+  N = "lastChangeLogId",
+  O = "lastChangeLogDate",
+  A = null,
+  R = null,
+  l = new Set;
+class u extends t.default.Store {
   initialize() {
     var e;
-    this.waitFor(s.default), this.syncWith([s.default], () => !0), _ = null !== (e = a.default.get(E)) && void 0 !== e ? e : null;
-    let t = a.default.get(h);
-    if (null != t) try {
-      C = new Date(t)
+    this.waitFor(r.default), this.syncWith([r.default], () => !0), A = null !== (e = o.default.get(N)) && void 0 !== e ? e : null;
+    let _ = o.default.get(O);
+    if (null != _) try {
+      R = new Date(_)
     } catch {
-      a.default.remove(h)
+      o.default.remove(O)
     }
   }
-  getChangelog(e, t) {
-    var n, i;
-    return null !== (i = null === (n = o[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : null
+  getChangelog(e, _) {
+    var E, t;
+    return null !== (t = null === (E = a[e]) || void 0 === E ? void 0 : E[_]) && void 0 !== t ? t : null
   }
   latestChangelogId() {
-    return d
+    return s
   }
-  getChangelogLoadStatus(e, t) {
-    var n, i;
-    return null !== (i = null === (n = u[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : r.ChangelogLoadState.NOT_LOADED
+  getChangelogLoadStatus(e, _) {
+    var E, t;
+    return null !== (t = null === (E = I[e]) || void 0 === E ? void 0 : E[_]) && void 0 !== t ? t : i.ChangelogLoadState.NOT_LOADED
   }
   hasLoadedConfig() {
-    return null != f
+    return null != S
   }
   getConfig() {
-    return f
+    return S
   }
   overrideId() {
-    return c
+    return T
   }
   lastSeenChangelogId() {
-    return _
+    return A
   }
   lastSeenChangelogDate() {
-    return C
+    return R
   }
   getStateForDebugging() {
     return {
-      changelogConfig: f,
-      loadedChangelogs: u,
-      lastSeenChangelogId: _,
-      lastSeenChangelogDate: C
+      changelogConfig: S,
+      loadedChangelogs: I,
+      lastSeenChangelogId: A,
+      lastSeenChangelogDate: R
     }
   }
   isLocked() {
-    return S.size > 0
+    return l.size > 0
   }
 }
-g.displayName = "ChangelogStore";
-var T = new g(l.default, {
+u.displayName = "ChangelogStore";
+var L = new u(n.default, {
   CHANGE_LOG_LOCK: function(e) {
     let {
-      key: t
+      key: _
     } = e;
-    if (S.has(t)) return !1;
-    (S = new Set(S)).add(t)
+    if (l.has(_)) return !1;
+    (l = new Set(l)).add(_)
   },
   CHANGE_LOG_UNLOCK: function(e) {
     let {
-      key: t
+      key: _
     } = e;
-    if (!S.has(t)) return !1;
-    (S = new Set(S)).delete(t)
+    if (!l.has(_)) return !1;
+    (l = new Set(l)).delete(_)
   },
   CHANGE_LOG_SET_CONFIG: function(e) {
     let {
-      config: t,
-      latestChangelogId: n
+      config: _,
+      latestChangelogId: E
     } = e;
-    d = n, f = t
+    s = E, S = _
   },
   CHANGE_LOG_FETCH_SUCCESS: function(e) {
     let {
-      id: t,
-      changelog: n
+      id: _,
+      changelog: E
     } = e;
-    null == o[t] && (o[t] = {}), o[t][n.locale] = {
-      id: t,
-      date: n.date,
-      body: n.content,
+    null == a[_] && (a[_] = {}), a[_][E.locale] = {
+      id: _,
+      date: E.date,
+      body: E.content,
       revision: 1,
-      locale: n.locale,
-      [n.asset_type === r.AssetType.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset
-    }, null == u[t] && (u[t] = {}), u[t][n.locale] = r.ChangelogLoadState.LOADED_SUCCESS
+      locale: E.locale,
+      [E.asset_type === i.AssetType.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: E.asset
+    }, null == I[_] && (I[_] = {}), I[_][E.locale] = i.ChangelogLoadState.LOADED_SUCCESS
   },
   CHANGE_LOG_FETCH_FAILED: function(e) {
     let {
-      id: t,
-      locale: n
+      id: _,
+      locale: E
     } = e;
-    if (null != o[t] && null != o[t][n]) return !1;
-    null == u[t] && (u[t] = {}), u[t][n] = r.ChangelogLoadState.LOADED_FAILURE
+    if (null != a[_] && null != a[_][E]) return !1;
+    null == I[_] && (I[_] = {}), I[_][E] = i.ChangelogLoadState.LOADED_FAILURE
   },
   CHANGE_LOG_SET_OVERRIDE: function(e) {
     let {
-      id: t
+      id: _
     } = e;
-    c = t
+    T = _
   },
   CHANGE_LOG_MARK_SEEN: function(e) {
     let {
-      changelogId: t,
-      changelogDate: n
+      changelogId: _,
+      changelogDate: E
     } = e;
-    _ = null != t ? t : null, C = new Date(n), a.default.set(E, t), a.default.set(h, n)
+    A = null != _ ? _ : null, R = new Date(E), o.default.set(N, _), o.default.set(O, E)
   }
 })

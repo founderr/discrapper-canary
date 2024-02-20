@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("70102"), n("424973"), n("426094"), n("854508");
 var r = n("37983"),
   a = n("884691"),
-  i = n("373589"),
-  o = n("900255"),
+  o = n("373589"),
+  i = n("900255"),
   s = n("388588"),
   c = n("635246"),
   l = n("959708"),
@@ -28,15 +28,15 @@ function f(e, t) {
   return r
 }
 
-function m(e, t) {
+function h(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
   }
 }
 
-function h(e, t) {
-  return (h = Object.setPrototypeOf || function(e, t) {
+function m(e, t) {
+  return (m = Object.setPrototypeOf || function(e, t) {
     return e.__proto__ = t, e
   })(e, t)
 }
@@ -71,7 +71,7 @@ function b(e) {
     w = e.getType,
     D = e.collect,
     C = e.options.arePropsEqual,
-    k = void 0 === C ? i.shallowEqual : C,
+    k = void 0 === C ? o.shallowEqual : C,
     P = t.displayName || t.name || "Component",
     E = function(e) {
       ! function(e, t) {
@@ -82,7 +82,7 @@ function b(e) {
             writable: !0,
             configurable: !0
           }
-        }), t && h(e, t)
+        }), t && m(e, t)
       }(R, e);
       var d, S, C, E, T, M = (d = R, S = function() {
         if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
@@ -111,7 +111,7 @@ function b(e) {
           if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
         }(this, R), y(v(t = M.call(this, e)), "decoratedRef", (0, a.createRef)()), y(v(t), "handlerId", void 0), y(v(t), "manager", void 0), y(v(t), "handlerMonitor", void 0), y(v(t), "handlerConnector", void 0), y(v(t), "handler", void 0), y(v(t), "disposable", void 0), y(v(t), "currentType", void 0), y(v(t), "handleChange", function() {
           var e = t.getCurrentState();
-          !(0, i.shallowEqual)(e, t.state) && t.setState(e)
+          !(0, o.shallowEqual)(e, t.state) && t.setState(e)
         }), t.disposable = new c.SerialDisposable, t.receiveProps(e), t.dispose(), t
       }
       return C = R, E = [{
@@ -122,12 +122,12 @@ function b(e) {
       }, {
         key: "getDecoratedComponentInstance",
         value: function() {
-          return (0, o.invariant)(this.decoratedRef.current, "In order to access an instance of the decorated component, it must either be a class component or use React.forwardRef()"), this.decoratedRef.current
+          return (0, i.invariant)(this.decoratedRef.current, "In order to access an instance of the decorated component, it must either be a class component or use React.forwardRef()"), this.decoratedRef.current
         }
       }, {
         key: "shouldComponentUpdate",
         value: function(e, t) {
-          return !k(e, this.props) || !(0, i.shallowEqual)(t, this.state)
+          return !k(e, this.props) || !(0, o.shallowEqual)(t, this.state)
         }
       }, {
         key: "componentDidMount",
@@ -160,21 +160,21 @@ function b(e) {
                 }(t = x(e, this.handler, this.manager)) || function(e, t) {
                   var n, r, a = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
                   if (null != a) {
-                    var i = [],
-                      o = !0,
+                    var o = [],
+                      i = !0,
                       s = !1;
                     try {
-                      for (a = a.call(e); !(o = (n = a.next()).done) && (i.push(n.value), !t || i.length !== t); o = !0);
+                      for (a = a.call(e); !(i = (n = a.next()).done) && (o.push(n.value), !t || o.length !== t); i = !0);
                     } catch (e) {
                       s = !0, r = e
                     } finally {
                       try {
-                        !o && null != a.return && a.return()
+                        !i && null != a.return && a.return()
                       } finally {
                         if (s) throw r
                       }
                     }
-                    return i
+                    return o
                   }
                 }(t, n) || function(e, t) {
                   if (e) {
@@ -187,12 +187,12 @@ function b(e) {
                   throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()),
                 a = r[0],
-                i = r[1];
+                o = r[1];
               this.handlerId = a, this.handlerMonitor.receiveHandlerId(a), this.handlerConnector.receiveHandlerId(a);
-              var o = this.manager.getMonitor().subscribeToStateChange(this.handleChange, {
+              var i = this.manager.getMonitor().subscribeToStateChange(this.handleChange, {
                 handlerIds: [a]
               });
-              this.disposable.setDisposable(new c.CompositeDisposable(new c.Disposable(o), new c.Disposable(i)))
+              this.disposable.setDisposable(new c.CompositeDisposable(new c.Disposable(i), new c.Disposable(o)))
             }
           }
         }
@@ -225,9 +225,9 @@ function b(e) {
       }, {
         key: "receiveDragDropManager",
         value: function(e) {
-          if (void 0 === this.manager)(0, o.invariant)(void 0 !== e, "Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context", P, P), void 0 !== e && (this.manager = e, this.handlerMonitor = u(e), this.handlerConnector = b(e.getBackend()), this.handler = n(this.handlerMonitor, this.decoratedRef))
+          if (void 0 === this.manager)(0, i.invariant)(void 0 !== e, "Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context", P, P), void 0 !== e && (this.manager = e, this.handlerMonitor = u(e), this.handlerConnector = b(e.getBackend()), this.handler = n(this.handlerMonitor, this.decoratedRef))
         }
-      }], m(C.prototype, E), T && m(C, T), R
+      }], h(C.prototype, E), T && h(C, T), R
     }(a.Component);
   return y(E, "DecoratedComponent", t), y(E, "displayName", "".concat(S, "(").concat(P, ")")), d(E, t)
 }

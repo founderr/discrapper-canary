@@ -12,9 +12,9 @@ var s = n("37983"),
   o = n("77078"),
   u = n("272030"),
   d = n("997289"),
-  c = n("860285"),
-  E = n("86878"),
-  f = n("568307"),
+  c = n("161454"),
+  E = n("860285"),
+  f = n("86878"),
   _ = n("535974"),
   T = n("181114"),
   I = n("837899"),
@@ -145,7 +145,7 @@ function h(e) {
   let {
     applicationId: t,
     libraryApplication: n
-  } = e, l = (0, d.useAnalyticsContext)(), [a, i] = (0, r.useStateFromStoresArray)([E.default, c.default, _.default], () => [E.default.isConnected(t) || c.default.isLaunchable(t) || null != n && _.default.isLaunchable(n.id, n.branchId), c.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([f.default], () => new Set(f.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([_.default], () => null != n ? _.default.getState(n.id, n.branchId) : null, [n]);
+  } = e, l = (0, d.useAnalyticsContext)(), [a, i] = (0, r.useStateFromStoresArray)([f.default, E.default, _.default], () => [f.default.isConnected(t) || E.default.isLaunchable(t) || null != n && _.default.isLaunchable(n.id, n.branchId), E.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([c.default], () => new Set(c.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([_.default], () => null != n ? _.default.getState(n.id, n.branchId) : null, [n]);
   return (0, s.jsx)(C, {
     ...e,
     analyticsContext: l,

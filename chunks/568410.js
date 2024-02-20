@@ -1,12 +1,12 @@
-var u = t("389832"),
-  f = t("488605"),
-  o = t("907193"),
-  r = t("890305");
+var i = n("389832"),
+  a = n("488605"),
+  l = n("907193"),
+  s = n("890305");
 e.exports = function(e) {
-  return function(n) {
-    var t = f(n = r(n)) ? o(n) : void 0,
-      a = t ? t[0] : n.charAt(0),
-      i = t ? u(t, 1).join("") : n.slice(1);
-    return a[e]() + i
+  return function(t) {
+    var n = a(t = s(t)) ? l(t) : void 0,
+      o = n ? n[0] : t.charAt(0),
+      r = n ? i(n, 1).join("") : t.slice(1);
+    return o[e]() + r
   }
 }

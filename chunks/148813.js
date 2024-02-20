@@ -8,8 +8,8 @@ l.r(e), l.d(e, {
 var s = l("446674"),
   o = l("913144"),
   u = l("959254"),
-  c = l("686470"),
-  r = l("568307"),
+  c = l("161454"),
+  r = l("686470"),
   d = l("964889"),
   p = l("773336"),
   f = l("149190"),
@@ -75,10 +75,10 @@ var A = new h(o.default, {
     }, a.delete(i)
   },
   RUNNING_GAMES_CHANGE: function() {
-    let t = r.default.getRunningDiscordApplicationIds(),
+    let t = c.default.getRunningDiscordApplicationIds(),
       e = i.filter(e => !t.includes(e));
     for (let t of e) {
-      let e = c.default.getActiveLibraryApplication(t);
+      let e = r.default.getActiveLibraryApplication(t);
       null != e && o.default.wait(() => {
         try {
           u.sync(e.id, e.branchId)

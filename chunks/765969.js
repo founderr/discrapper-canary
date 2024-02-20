@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   maybeGetEmojiCaptionsForUser: function() {
-    return r
+    return i
   }
 });
-var i = n("697218"),
-  a = n("558986"),
-  l = n("802461"),
-  s = n("269579");
-async function r() {
+var t = E("697218"),
+  o = E("558986"),
+  n = E("802461"),
+  r = E("269579");
+async function i() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown",
-    t = i.default.getCurrentUser();
-  if (null == t) return;
+    _ = t.default.getCurrentUser();
+  if (null == _) return;
   let {
-    isEmojiCaptionsEnabled: n
-  } = s.default.getCurrentConfig({
+    isEmojiCaptionsEnabled: E
+  } = r.default.getCurrentConfig({
     location: e
   });
-  if (!n) {
-    l.default.hasPersistedState() && l.default.clear();
+  if (!E) {
+    n.default.hasPersistedState() && n.default.clear();
     return
   }
-  if (l.default.getIsFetching()) return;
-  let r = l.default.getEmojiCaptionsTTL();
-  !(null != r && Date.now() < r) && await (0, a.getEmojiCaptionsForUser)()
+  if (n.default.getIsFetching()) return;
+  let i = n.default.getEmojiCaptionsTTL();
+  !(null != i && Date.now() < i) && await (0, o.getEmojiCaptionsForUser)()
 }

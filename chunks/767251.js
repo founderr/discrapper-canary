@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return r
+    return i
   }
 });
-var i = n("37983");
-n("884691");
-var a = n("404828"),
-  l = n.n(a),
-  s = n("77078");
+var t = E("37983");
+E("884691");
+var o = E("404828"),
+  n = E.n(o),
+  r = E("77078");
 
-function r(e) {
+function i(e) {
   return e.paragraph = {
     ...e.paragraph,
-    react: function(e, t, n) {
-      return (0, i.jsx)("p", {
-        children: t(e.content, n)
-      }, n.key)
+    react: function(e, _, E) {
+      return (0, t.jsx)("p", {
+        children: _(e.content, E)
+      }, E.key)
     }
   }, e.link = {
     ...e.link,
-    react: function(e, t, n) {
-      let a = {};
+    react: function(e, _, E) {
+      let o = {};
       if (null != e.context) {
-        let t = e.context[e.target];
-        t && t.onClick ? (a.onClick = t.onClick, a.onContextMenu = t.onContextMenu) : a.onClick = t
+        let _ = e.context[e.target];
+        _ && _.onClick ? (o.onClick = _.onClick, o.onContextMenu = _.onContextMenu) : o.onClick = _
       }
-      return null == a.onClick && (a.href = l.sanitizeUrl(e.target)), (0, i.jsx)(s.Anchor, {
+      return null == o.onClick && (o.href = n.sanitizeUrl(e.target)), (0, t.jsx)(r.Anchor, {
         title: e.title,
-        ...a,
-        children: t(e.content, n)
-      }, n.key)
+        ...o,
+        children: _(e.content, E)
+      }, E.key)
     }
   }, e
 }

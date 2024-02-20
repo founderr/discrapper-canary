@@ -124,22 +124,22 @@ function d(e) {
       uri: u,
       i: c,
       overrideFilename: d,
-      overrideType: p
+      overrideType: f
     } = e,
-    h = u.split("/"),
-    f = h[h.length - 1];
-  f = null !== (i = null === (n = f.split("?")) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== i ? i : "";
-  let E = s.find(e => e.reName.test(f));
-  if (null == E && null != d && (E = s.find(e => e.reName.test(d))), null != E && null != d) {
-    let e = E.name(c).split(".").pop(),
+    E = u.split("/"),
+    p = E[E.length - 1];
+  p = null !== (i = null === (n = p.split("?")) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== i ? i : "";
+  let h = s.find(e => e.reName.test(p));
+  if (null == h && null != d && (h = s.find(e => e.reName.test(d))), null != h && null != d) {
+    let e = h.name(c).split(".").pop(),
       t = d.lastIndexOf(".");
     l = -1 !== t ? "".concat(d.substr(0, t), ".").concat(e) : "".concat(d, ".").concat(e)
-  } else l = null != E ? E.name(c) : null != d ? d : "unknown";
+  } else l = null != h ? h.name(c) : null != d ? d : "unknown";
   return {
     uri: u,
     filename: l,
-    type: null !== (r = null != p ? p : null == E ? void 0 : E.type) && void 0 !== r ? r : "unknown",
-    isVideo: -1 !== (null !== (a = null != p ? p : null == E ? void 0 : E.name(c)) && void 0 !== a ? a : "").indexOf("video"),
-    isImage: -1 !== (null !== (o = null != p ? p : null == E ? void 0 : E.name(c)) && void 0 !== o ? o : "").indexOf("image")
+    type: null !== (r = null != f ? f : null == h ? void 0 : h.type) && void 0 !== r ? r : "unknown",
+    isVideo: -1 !== (null !== (a = null != f ? f : null == h ? void 0 : h.name(c)) && void 0 !== a ? a : "").indexOf("video"),
+    isImage: -1 !== (null !== (o = null != f ? f : null == h ? void 0 : h.name(c)) && void 0 !== o ? o : "").indexOf("image")
   }
 }

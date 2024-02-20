@@ -28,16 +28,16 @@ var a = n("37983"),
   T = n("685665"),
   I = n("9759"),
   _ = n("705565"),
-  A = n("479788"),
-  x = n("375202"),
-  R = n("831773"),
-  L = n("359477"),
-  M = n("373469"),
-  D = n("271938"),
-  j = n("42203"),
-  k = n("305961"),
-  b = n("42887"),
-  w = n("568307"),
+  A = n("161454"),
+  x = n("479788"),
+  R = n("375202"),
+  L = n("831773"),
+  M = n("359477"),
+  D = n("373469"),
+  j = n("271938"),
+  k = n("42203"),
+  b = n("305961"),
+  w = n("42887"),
   P = n("18494"),
   V = n("40597"),
   U = n("703370"),
@@ -137,7 +137,7 @@ class eh extends l.Component {
     S.default.deactivateAllRegions()
   }
   componentDidMount() {
-    S.default.startSession(), R.default.initialize(), C.default.initialize(), L.default.initialize()
+    S.default.startSession(), L.default.initialize(), C.default.initialize(), M.default.initialize()
   }
   componentDidUpdate(e) {
     let {
@@ -225,7 +225,7 @@ class eh extends l.Component {
     window.addEventListener("keydown", this.onKeyDownGlobal, !0), window.addEventListener("keyup", this.onKeyUpGlobal, !0)
   }
   componentWillUnmount() {
-    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", ed, !1), R.default.terminate(), C.default.terminate(), L.default.terminate()
+    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", ed, !1), L.default.terminate(), C.default.terminate(), M.default.terminate()
   }
   renderInvalidSizeMessage() {
     return (0, a.jsx)(H.default, {
@@ -255,7 +255,7 @@ class eh extends l.Component {
     } = d;
     if (0 === f || 0 === h || n || !l) return null;
     let p = e || s,
-      g = D.default.getId();
+      g = j.default.getId();
     return (0, a.jsxs)("div", {
       className: eo.overlay,
       children: [(0, a.jsx)(et.default, {}), s && (0, a.jsx)("header", {
@@ -321,13 +321,13 @@ function ep() {
     incompatibleApp: G.default.incompatibleApp,
     activeRegions: G.default.getActiveRegions(),
     isPreviewingInGame: G.default.isPreviewingInGame()
-  })), s = (0, p.useStateFromStores)([W.default], () => W.default.windowSize()), o = (0, p.useStateFromStores)([F.default], () => F.default.getOverlayKeybind()), r = (0, p.useStateFromStores)([P.default], () => P.default.getVoiceChannelId()), d = (0, p.useStateFromStores)([j.default], () => j.default.getChannel(r)), u = (0, p.useStateFromStores)([k.default], () => null != d ? k.default.getGuild(d.guild_id) : null), c = (0, p.useStateFromStores)([w.default, U.default], () => (0, x.default)(w.default, U.default)), f = (0, p.useStateFromStores)([b.default], () => (0, A.default)(b.default)), {
+  })), s = (0, p.useStateFromStores)([W.default], () => W.default.windowSize()), o = (0, p.useStateFromStores)([F.default], () => F.default.getOverlayKeybind()), r = (0, p.useStateFromStores)([P.default], () => P.default.getVoiceChannelId()), d = (0, p.useStateFromStores)([k.default], () => k.default.getChannel(r)), u = (0, p.useStateFromStores)([b.default], () => null != d ? b.default.getGuild(d.guild_id) : null), c = (0, p.useStateFromStores)([A.default, U.default], () => (0, R.default)(A.default, U.default)), f = (0, p.useStateFromStores)([w.default], () => (0, x.default)(w.default)), {
     canBroadcast: h
   } = I.default.useExperiment({
     location: "overlay"
   }, {
     autoTrackExposure: !1
-  }), m = (0, _.default)() && null != c, E = (0, p.useStateFromStores)([M.default], () => null != M.default.getCurrentUserActiveStream()), {
+  }), m = (0, _.default)() && null != c, E = (0, p.useStateFromStores)([D.default], () => null != D.default.getCurrentUserActiveStream()), {
     AnalyticsLocationProvider: S
   } = (0, T.default)(N.default.OVERLAY), {
     showKeybindIndicators: v,

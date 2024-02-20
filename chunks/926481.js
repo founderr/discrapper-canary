@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   binaryReadOptions: function() {
-    return u
+    return s
   },
   BinaryReader: function() {
-    return s
+    return u
   }
 }), n("70102"), n("222007");
 var r = n("764624"),
@@ -12,13 +12,13 @@ var r = n("764624"),
   o = n("481310");
 let i = {
   readUnknownField: !0,
-  readerFactory: e => new s(e)
+  readerFactory: e => new u(e)
 };
 
-function u(e) {
+function s(e) {
   return e ? Object.assign(Object.assign({}, i), e) : i
 }
-class s {
+class u {
   tag() {
     let e = this.uint32(),
       t = e >>> 3,

@@ -1,77 +1,77 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   init: function() {
-    return u
+    return I
   }
 });
-var i = n("771281"),
-  a = n("95410"),
-  l = n("599110"),
-  s = n("49111");
-let r = window.DiscordNative,
-  o = "".concat(s.AnalyticEvents.APP_NATIVE_CRASH, "Storage");
-async function u() {
+var t = E("771281"),
+  o = E("95410"),
+  n = E("599110"),
+  r = E("49111");
+let i = window.DiscordNative,
+  a = "".concat(r.AnalyticEvents.APP_NATIVE_CRASH, "Storage");
+async function I() {
   var e;
   if (__OVERLAY__) return;
-  let t = null == r ? void 0 : null === (e = r.processUtils) || void 0 === e ? void 0 : e.getLastCrash;
-  if (null == t) {
+  let _ = null == i ? void 0 : null === (e = i.processUtils) || void 0 === e ? void 0 : e.getLastCrash;
+  if (null == _) {
     console.log("AppCrashedFatalReport: getLastCrash not supported.");
     return
   }
-  let n = await t(),
-    u = a.default.get(o, {}),
-    d = function(e, t) {
-      var n, a, l, s, r, o, u, d, c, f, E, h, _, C, S, g, T, m, p;
-      let I = (null == e ? void 0 : e.lastId) !== (null == t ? void 0 : t.id) && (null == t ? void 0 : t.id) != null;
+  let E = await _(),
+    I = o.default.get(a, {}),
+    s = function(e, _) {
+      var E, o, n, r, i, a, I, s, T, S, N, O, A, R, l, u, L, C, D;
+      let c = (null == e ? void 0 : e.lastId) !== (null == _ ? void 0 : _.id) && (null == _ ? void 0 : _.id) != null;
 
-      function A(e) {
-        return (null == t ? void 0 : t.storedInformation) != null && 1 === t.storedInformation[e]
+      function d(e) {
+        return (null == _ ? void 0 : _.storedInformation) != null && 1 === _.storedInformation[e]
       }
 
-      function N(e) {
-        return (null == t ? void 0 : t.storedInformation) == null || null == t.storedInformation[e] ? null : t.storedInformation[e]
+      function U(e) {
+        return (null == _ ? void 0 : _.storedInformation) == null || null == _.storedInformation[e] ? null : _.storedInformation[e]
       }
-      let O = null !== (u = null == t ? void 0 : t.rendererCrashExitCode) && void 0 !== u ? u : null,
-        v = {
-          did_crash: I || null != O && 0 !== O,
-          renderer_crash_reason: null !== (d = null == t ? void 0 : t.rendererCrashReason) && void 0 !== d ? d : null,
-          renderer_crash_exit_code: O,
-          had_rtc_connection: A(i.StoredCrashInformation.HasRTCConnection),
-          was_sending_video: A(i.StoredCrashInformation.IsSendingVideo),
-          was_sending_stream: A(i.StoredCrashInformation.IsSendingStream),
-          was_receiving_video: A(i.StoredCrashInformation.IsReceivingVideo),
-          was_receiving_stream: A(i.StoredCrashInformation.IsReceivingStream),
-          video_media_session_id: N(i.StoredCrashInformation.VideoMediaSessionId),
-          stream_media_session_id: N(i.StoredCrashInformation.StreamMediaSessionId),
-          last_memory_usage_kb: null !== (c = null == t ? void 0 : null === (n = t.lastMemoryInformation) || void 0 === n ? void 0 : n.memoryUsageKB) && void 0 !== c ? c : null,
-          last_used_js_heap_size_kb: null !== (f = null == t ? void 0 : null === (a = t.lastMemoryInformation) || void 0 === a ? void 0 : a.usedJSHeapSizeKB) && void 0 !== f ? f : null,
-          last_memory_usage_uptime: null !== (E = null == t ? void 0 : null === (l = t.lastMemoryInformation) || void 0 === l ? void 0 : l.uptimeSeconds) && void 0 !== E ? E : null,
-          highest_memory_usage_kb: null !== (h = null == t ? void 0 : null === (s = t.highestMemoryInformation) || void 0 === s ? void 0 : s.memoryUsageKB) && void 0 !== h ? h : null,
-          highest_used_js_heap_size_kb: null !== (_ = null == t ? void 0 : null === (r = t.highestMemoryInformation) || void 0 === r ? void 0 : r.usedJSHeapSizeKB) && void 0 !== _ ? _ : null,
-          highest_memory_usage_uptime: null !== (C = null == t ? void 0 : null === (o = t.highestMemoryInformation) || void 0 === o ? void 0 : o.uptimeSeconds) && void 0 !== C ? C : null
+      let M = null !== (I = null == _ ? void 0 : _.rendererCrashExitCode) && void 0 !== I ? I : null,
+        h = {
+          did_crash: c || null != M && 0 !== M,
+          renderer_crash_reason: null !== (s = null == _ ? void 0 : _.rendererCrashReason) && void 0 !== s ? s : null,
+          renderer_crash_exit_code: M,
+          had_rtc_connection: d(t.StoredCrashInformation.HasRTCConnection),
+          was_sending_video: d(t.StoredCrashInformation.IsSendingVideo),
+          was_sending_stream: d(t.StoredCrashInformation.IsSendingStream),
+          was_receiving_video: d(t.StoredCrashInformation.IsReceivingVideo),
+          was_receiving_stream: d(t.StoredCrashInformation.IsReceivingStream),
+          video_media_session_id: U(t.StoredCrashInformation.VideoMediaSessionId),
+          stream_media_session_id: U(t.StoredCrashInformation.StreamMediaSessionId),
+          last_memory_usage_kb: null !== (T = null == _ ? void 0 : null === (E = _.lastMemoryInformation) || void 0 === E ? void 0 : E.memoryUsageKB) && void 0 !== T ? T : null,
+          last_used_js_heap_size_kb: null !== (S = null == _ ? void 0 : null === (o = _.lastMemoryInformation) || void 0 === o ? void 0 : o.usedJSHeapSizeKB) && void 0 !== S ? S : null,
+          last_memory_usage_uptime: null !== (N = null == _ ? void 0 : null === (n = _.lastMemoryInformation) || void 0 === n ? void 0 : n.uptimeSeconds) && void 0 !== N ? N : null,
+          highest_memory_usage_kb: null !== (O = null == _ ? void 0 : null === (r = _.highestMemoryInformation) || void 0 === r ? void 0 : r.memoryUsageKB) && void 0 !== O ? O : null,
+          highest_used_js_heap_size_kb: null !== (A = null == _ ? void 0 : null === (i = _.highestMemoryInformation) || void 0 === i ? void 0 : i.usedJSHeapSizeKB) && void 0 !== A ? A : null,
+          highest_memory_usage_uptime: null !== (R = null == _ ? void 0 : null === (a = _.highestMemoryInformation) || void 0 === a ? void 0 : a.uptimeSeconds) && void 0 !== R ? R : null
         };
-      if (!I || null == t) return {
+      if (!c || null == _) return {
         electron_crash_reporter_did_crash: !1,
         minidump_exception_type: null,
         minidump_exception_module_name: null,
         minidump_relative_crash_address: null,
         minidump_exception_module_version: null,
         minidump_exception_module_code_id: null,
-        ...v
+        ...h
       };
-      console.log("AppCrashedFatalReport lastCrash:", t, I);
-      let R = null == t ? void 0 : t.minidumpInformation;
+      console.log("AppCrashedFatalReport lastCrash:", _, c);
+      let P = null == _ ? void 0 : _.minidumpInformation;
       return {
-        electron_crash_reporter_did_crash: I,
-        minidump_exception_type: null !== (S = null == R ? void 0 : R.exceptionString) && void 0 !== S ? S : null,
-        minidump_exception_module_name: null !== (g = null == R ? void 0 : R.exceptionModuleName) && void 0 !== g ? g : null,
-        minidump_relative_crash_address: null !== (T = null == R ? void 0 : R.relativeCrashAddress) && void 0 !== T ? T : null,
-        minidump_exception_module_version: null !== (m = null == R ? void 0 : R.exceptionModuleVersion) && void 0 !== m ? m : null,
-        minidump_exception_module_code_id: null !== (p = null == R ? void 0 : R.exceptionModuleCodeId) && void 0 !== p ? p : null,
-        ...v
+        electron_crash_reporter_did_crash: c,
+        minidump_exception_type: null !== (l = null == P ? void 0 : P.exceptionString) && void 0 !== l ? l : null,
+        minidump_exception_module_name: null !== (u = null == P ? void 0 : P.exceptionModuleName) && void 0 !== u ? u : null,
+        minidump_relative_crash_address: null !== (L = null == P ? void 0 : P.relativeCrashAddress) && void 0 !== L ? L : null,
+        minidump_exception_module_version: null !== (C = null == P ? void 0 : P.exceptionModuleVersion) && void 0 !== C ? C : null,
+        minidump_exception_module_code_id: null !== (D = null == P ? void 0 : P.exceptionModuleCodeId) && void 0 !== D ? D : null,
+        ...h
       }
-    }(u, n);
-  l.default.track(s.AnalyticEvents.APP_NATIVE_CRASH, d), a.default.set(o, {
-    lastId: null == n ? void 0 : n.id
+    }(I, E);
+  n.default.track(r.AnalyticEvents.APP_NATIVE_CRASH, s), o.default.set(a, {
+    lastId: null == E ? void 0 : E.id
   })
 }

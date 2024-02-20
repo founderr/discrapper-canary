@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   MAX_ACCOUNTS: function() {
-    return i
+    return t
   },
   SWITCH_ACCOUNTS_MODAL_KEY: function() {
-    return a
+    return o
   },
   MULTIACCOUNT_TOOLTIP_SEEN_KEY: function() {
-    return l
+    return n
   }
 });
-let i = 5,
-  a = "switch-accounts-modal",
-  l = "multiaccount_cta_tooltip_seen"
+let t = 5,
+  o = "switch-accounts-modal",
+  n = "multiaccount_cta_tooltip_seen"

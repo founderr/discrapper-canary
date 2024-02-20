@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var r = n("240849"),
   a = n("884691"),
-  i = n("388032");
-let o = {
+  o = n("388032");
+let i = {
   border: 0,
   clip: "rect(0 0 0 0)",
   clipPath: "inset(50%)",
@@ -32,14 +32,14 @@ function s() {
     [r, s] = (0, a.useState)(!1),
     {
       focusWithinProps: c
-    } = (0, i.useFocusWithin)({
+    } = (0, o.useFocusWithin)({
       isDisabled: !n,
       onFocusWithinChange: e => s(e)
     }),
     l = (0, a.useMemo)(() => r ? t : t ? {
-      ...o,
+      ...i,
       ...t
-    } : o, [r]);
+    } : i, [r]);
   return {
     visuallyHiddenProps: {
       ...c,
@@ -53,10 +53,10 @@ function c(e) {
     children: t,
     elementType: Element = "div",
     isFocusable: n,
-    style: i,
-    ...o
+    style: o,
+    ...i
   } = e, {
     visuallyHiddenProps: c
   } = s(e);
-  return a.createElement(Element, (0, r.mergeProps)(o, c), t)
+  return a.createElement(Element, (0, r.mergeProps)(i, c), t)
 }

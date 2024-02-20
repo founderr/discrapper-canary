@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return d
+    return s
   }
-}), n("222007");
-var i = n("689988"),
-  a = n("191145"),
-  l = n("721281"),
-  s = n("42203"),
-  r = n("800762"),
-  o = n("818766");
-class u extends i.default {
+}), E("222007");
+var t = E("689988"),
+  o = E("191145"),
+  n = E("721281"),
+  r = E("42203"),
+  i = E("800762"),
+  a = E("818766");
+class I extends t.default {
   handleVoiceChannelSelect(e) {
     let {
-      channelId: t,
-      guildId: n
+      channelId: _,
+      guildId: E
     } = e;
-    if (null == t || null == n) return;
-    let i = s.default.getChannel(t);
-    if (null != i && (0, l.hasVoiceChannelActivityNotifsEnabled)(i) && i.isGuildVoice()) {
-      let e = a.default.getParticipants(t).length,
-        n = r.default.isInChannel(t),
-        i = e === (n ? 1 : 0);
-      i ? o.sendVoiceChannelActivityNotification(t, i) : e === (n ? 2 : 1) && o.sendVoiceChannelActivityNotification(t, i)
+    if (null == _ || null == E) return;
+    let t = r.default.getChannel(_);
+    if (null != t && (0, n.hasVoiceChannelActivityNotifsEnabled)(t) && t.isGuildVoice()) {
+      let e = o.default.getParticipants(_).length,
+        E = i.default.isInChannel(_),
+        t = e === (E ? 1 : 0);
+      t ? a.sendVoiceChannelActivityNotification(_, t) : e === (E ? 2 : 1) && a.sendVoiceChannelActivityNotification(_, t)
     }
   }
   constructor(...e) {
@@ -31,4 +31,4 @@ class u extends i.default {
     }
   }
 }
-var d = new u
+var s = new I

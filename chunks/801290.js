@@ -1,166 +1,166 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return L
+    return G
   }
-}), n("222007");
-var i = n("917351"),
-  a = n.n(i),
-  l = n("938850"),
-  s = n("151426"),
-  r = n("95410"),
-  o = n("689988"),
-  u = n("700507"),
-  d = n("76393"),
-  c = n("235004"),
-  f = n("271938"),
-  E = n("42887"),
-  h = n("891760"),
-  _ = n("536692"),
-  C = n("504385"),
-  S = n("872173"),
-  g = n("353927");
-let T = e => "AudioContextSettingsMigrated:".concat(e),
-  m = e => e === g.MediaEngineContextTypes.STREAM ? l.AudioSettingsDefaultVolumes.STREAM : l.AudioSettingsDefaultVolumes.USER;
+}), E("222007");
+var t = E("917351"),
+  o = E.n(t),
+  n = E("938850"),
+  r = E("151426"),
+  i = E("95410"),
+  a = E("689988"),
+  I = E("700507"),
+  s = E("76393"),
+  T = E("235004"),
+  S = E("271938"),
+  N = E("42887"),
+  O = E("891760"),
+  A = E("536692"),
+  R = E("504385"),
+  l = E("872173"),
+  u = E("353927");
+let L = e => "AudioContextSettingsMigrated:".concat(e),
+  C = e => e === u.MediaEngineContextTypes.STREAM ? n.AudioSettingsDefaultVolumes.STREAM : n.AudioSettingsDefaultVolumes.USER;
 
-function p() {
-  (0, h.shouldReadWriteAudioSettings)() && ! function() {
-    let e = r.default.get(T(f.default.getId()));
-    !e && S.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
-      let t = !1;
-      for (let [n, i] of Object.entries(E.default.getState().settingsByContext)) {
-        let a = (0, C.coerceAudioContextForProto)(n);
-        if (null == a) continue;
-        let l = e[a],
-          s = String(Date.now()),
-          r = {};
-        for (let [e, t] of Object.entries(i.localMutes)) r[e] = {
-          muted: t,
-          volume: m(n),
-          modifiedAt: s,
+function D() {
+  (0, O.shouldReadWriteAudioSettings)() && ! function() {
+    let e = i.default.get(L(S.default.getId()));
+    !e && l.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
+      let _ = !1;
+      for (let [E, t] of Object.entries(N.default.getState().settingsByContext)) {
+        let o = (0, R.coerceAudioContextForProto)(E);
+        if (null == o) continue;
+        let n = e[o],
+          r = String(Date.now()),
+          i = {};
+        for (let [e, _] of Object.entries(t.localMutes)) i[e] = {
+          muted: _,
+          volume: C(E),
+          modifiedAt: r,
           soundboardMuted: !1
         };
-        for (let [e, t] of Object.entries(i.localVolumes)) r[e] = {
+        for (let [e, _] of Object.entries(t.localVolumes)) i[e] = {
           muted: !1,
-          modifiedAt: s,
-          ...r[e],
-          volume: (0, C.snapVolumeToDefault)(t, n)
+          modifiedAt: r,
+          ...i[e],
+          volume: (0, R.snapVolumeToDefault)(_, E)
         };
-        let o = Object.keys(l).length;
-        for (let [e, [n, i]] of Object.entries(r).entries()) {
-          let a = 300 - o - (e + 1) <= 0;
-          if (a) break;
-          null == l[n] && (t = !0, l[n] = i)
+        let a = Object.keys(n).length;
+        for (let [e, [E, t]] of Object.entries(i).entries()) {
+          let o = 300 - a - (e + 1) <= 0;
+          if (o) break;
+          null == n[E] && (_ = !0, n[E] = t)
         }
       }
-      return r.default.set(T(f.default.getId()), !0), t
-    }, S.UserSettingsDelay.AUTOMATED)
+      return i.default.set(L(S.default.getId()), !0), _
+    }, l.UserSettingsDelay.AUTOMATED)
   }()
 }
-let I = a.debounce(() => {
-    N()
+let c = o.debounce(() => {
+    U()
   }, 2e3),
-  A = a.debounce(u.remoteAudioSettingsUpdate, 500, {
+  d = o.debounce(I.remoteAudioSettingsUpdate, 500, {
     maxWait: 500
   });
 
-function N() {
-  S.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
-    let t = !1;
-    return (0, _.drainPendingAudioSettings)((n, i, a) => {
-      let l = function(e, t, n, i) {
-        var a, l, r, o, u;
-        let d = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
-          c = (0, C.coerceAudioContextForProto)(n);
-        if (null == c) return !1;
-        let f = e[c];
-        if (f[t] = null !== (a = f[t]) && void 0 !== a ? a : (l = n, s.AudioContextSetting.create({
+function U() {
+  l.PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", e => {
+    let _ = !1;
+    return (0, A.drainPendingAudioSettings)((E, t, o) => {
+      let n = function(e, _, E, t) {
+        var o, n, i, a, I;
+        let s = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
+          T = (0, R.coerceAudioContextForProto)(E);
+        if (null == T) return !1;
+        let S = e[T];
+        if (S[_] = null !== (o = S[_]) && void 0 !== o ? o : (n = E, r.AudioContextSetting.create({
             muted: !1,
-            volume: m(l)
-          })), i(f[t]), f[t].modifiedAt = String(Date.now()), d) {
+            volume: C(n)
+          })), t(S[_]), S[_].modifiedAt = String(Date.now()), s) {
           ;
-          r = f, o = t, u = n, r[o].volume !== m(u) || r[o].muted || r[o].soundboardMuted || delete r[o]
+          i = S, a = _, I = E, i[a].volume !== C(I) || i[a].muted || i[a].soundboardMuted || delete i[a]
         }
         return ! function(e) {
-          let t = Object.entries(e),
-            n = t.length;
-          if (n <= 300) return;
-          let i = t.sort((e, t) => {
-              let [n, {
-                modifiedAt: i
-              }] = e, [a, {
-                modifiedAt: l
-              }] = t;
-              return Number(i) - Number(l)
+          let _ = Object.entries(e),
+            E = _.length;
+          if (E <= 300) return;
+          let t = _.sort((e, _) => {
+              let [E, {
+                modifiedAt: t
+              }] = e, [o, {
+                modifiedAt: n
+              }] = _;
+              return Number(t) - Number(n)
             }),
-            a = n - 300;
-          for (let t = 0; t < a; t++) {
-            let [n] = i[t];
-            delete e[n]
+            o = E - 300;
+          for (let _ = 0; _ < o; _++) {
+            let [E] = t[_];
+            delete e[E]
           }
-        }(f), !0
-      }(e, i, n, e => {
-        Object.assign(e, a)
+        }(S), !0
+      }(e, t, E, e => {
+        Object.assign(e, o)
       });
-      t = t || l
-    }), t
-  }, S.UserSettingsDelay.INFREQUENT_USER_ACTION)
+      _ = _ || n
+    }), _
+  }, l.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function O(e) {
-  var t, n, i;
+function M(e) {
+  var _, E, t;
   let {
-    context: a,
-    userId: l,
-    volume: s
+    context: o,
+    userId: n,
+    volume: r
   } = e;
-  if (l === f.default.getId() || !(0, h.shouldReadWriteAudioSettings)()) return;
-  let r = d.default.getRemoteSessionId();
-  null != r && A(r, l, a, {
-    muted: E.default.isLocalMute(l, a),
-    volume: s
-  }), t = a, n = l, i = s, (0, _.updatePendingSettings)(t, n, {
-    volume: i
-  }), I()
+  if (n === S.default.getId() || !(0, O.shouldReadWriteAudioSettings)()) return;
+  let i = s.default.getRemoteSessionId();
+  null != i && d(i, n, o, {
+    muted: N.default.isLocalMute(n, o),
+    volume: r
+  }), _ = o, E = n, t = r, (0, A.updatePendingSettings)(_, E, {
+    volume: t
+  }), c()
 }
 
-function v(e) {
+function h(e) {
   let {
-    context: t,
-    userId: n
+    context: _,
+    userId: E
   } = e;
-  if (n !== f.default.getId()) {
-    if ((0, h.shouldReadWriteAudioSettings)()) {
-      var i, a, l;
-      i = t, a = n, l = E.default.isLocalMute(n, t), (0, _.updatePendingSettings)(i, a, {
-        muted: l
-      }), I.cancel(), N()
+  if (E !== S.default.getId()) {
+    if ((0, O.shouldReadWriteAudioSettings)()) {
+      var t, o, n;
+      t = _, o = E, n = N.default.isLocalMute(E, _), (0, A.updatePendingSettings)(t, o, {
+        muted: n
+      }), c.cancel(), U()
     }
   }
 }
 
-function R(e) {
+function P(e) {
   let {
-    context: t,
-    userId: n
+    context: _,
+    userId: E
   } = e;
-  if (n !== f.default.getId()) {
-    if ((0, h.shouldReadWriteAudioSettings)()) {
-      var i, a, l;
-      i = t, a = n, l = c.default.isLocalSoundboardMuted(n), (0, _.updatePendingSettings)(i, a, {
-        soundboardMuted: l
-      }), I.cancel(), N()
+  if (E !== S.default.getId()) {
+    if ((0, O.shouldReadWriteAudioSettings)()) {
+      var t, o, n;
+      t = _, o = E, n = T.default.isLocalSoundboardMuted(E), (0, A.updatePendingSettings)(t, o, {
+        soundboardMuted: n
+      }), c.cancel(), U()
     }
   }
 }
-class M extends o.default {
+class m extends a.default {
   constructor(...e) {
     super(...e), this.actions = {
-      POST_CONNECTION_OPEN: p,
-      AUDIO_SET_LOCAL_VOLUME: O,
-      AUDIO_TOGGLE_LOCAL_MUTE: v,
-      AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: R
+      POST_CONNECTION_OPEN: D,
+      AUDIO_SET_LOCAL_VOLUME: M,
+      AUDIO_TOGGLE_LOCAL_MUTE: h,
+      AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: P
     }
   }
 }
-var L = new M
+var G = new m

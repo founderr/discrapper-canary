@@ -1,23 +1,23 @@
 "use strict";
-let r;
+let i;
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
-}), n("424973"), r = n("788235").default;
-let i = [],
-  o = !1;
-var l = {
-  ...r,
+}), n("424973"), i = n("788235").default;
+let r = [],
+  s = !1;
+var a = {
+  ...i,
   awaitOnline: () => new Promise(e => {
-    if (r.isOnline()) return e();
+    if (i.isOnline()) return e();
     {
-      if (i.push(e), o) return;
-      o = !0;
+      if (r.push(e), s) return;
+      s = !0;
       let t = () => {
-        i.forEach(e => e()), i.length = 0, o = !1, r.removeOnlineCallback(t)
+        r.forEach(e => e()), r.length = 0, s = !1, i.removeOnlineCallback(t)
       };
-      r.addOnlineCallback(t)
+      i.addOnlineCallback(t)
     }
   })
 }

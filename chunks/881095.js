@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var a = n("374014"),
-  i = n("373469"),
-  l = n("271938"),
-  r = n("824563"),
-  d = n("945956"),
-  u = n("568307"),
+var a = n("161454"),
+  i = n("374014"),
+  l = n("373469"),
+  r = n("271938"),
+  d = n("824563"),
+  u = n("945956"),
   s = n("800762"),
   o = n("299039"),
   c = n("80028"),
@@ -25,23 +25,23 @@ function p(e) {
     if (null != e) {
       let {
         ownerId: t
-      } = a.decodeStreamKey(e);
-      if (t !== l.default.getId()) {
-        let e = r.default.getActivities(t).find(e => e.type === f.ActivityTypes.PLAYING);
+      } = i.decodeStreamKey(e);
+      if (t !== r.default.getId()) {
+        let e = d.default.getActivities(t).find(e => e.type === f.ActivityTypes.PLAYING);
         return {
           sourceName: null == e ? void 0 : e.name,
           sourceApplicationId: null == e ? void 0 : e.application_id
         }
       }
     }
-    let d = i.default.getStreamerActiveStreamMetadata(),
-      s = null == d ? void 0 : d.pid,
-      o = null != d ? null != s ? u.default.getGameForPID(s) : null : u.default.getVisibleGame();
+    let u = l.default.getStreamerActiveStreamMetadata(),
+      s = null == u ? void 0 : u.pid,
+      o = null != u ? null != s ? a.default.getGameForPID(s) : null : a.default.getVisibleGame();
     return {
-      sourceName: null !== (t = null == d ? void 0 : d.sourceName) && void 0 !== t ? t : null == o ? void 0 : o.name,
-      sourceApplicationId: null !== (n = null == d ? void 0 : d.id) && void 0 !== n ? n : null == o ? void 0 : o.id
+      sourceName: null !== (t = null == u ? void 0 : u.sourceName) && void 0 !== t ? t : null == o ? void 0 : o.name,
+      sourceApplicationId: null !== (n = null == u ? void 0 : u.id) && void 0 !== n ? n : null == o ? void 0 : o.id
     }
-  }(e), p = d.default.getChannelId(), _ = [l.default.getId()];
+  }(e), p = u.default.getChannelId(), _ = [r.default.getId()];
   return null != p && (_ = Object.keys(s.default.getVoiceStatesForChannel(p))), {
     id: o.default.fromTimestamp(Date.now()),
     version: c.CURRENT_CLIP_METADATA_VERSION,

@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
-var s = n("37983");
-n("884691");
-var r = n("414456"),
-  a = n.n(r),
-  l = n("77078"),
-  i = n("216422"),
-  u = n("782340"),
-  c = n("321562");
+var a = s("37983");
+s("884691");
+var n = s("414456"),
+  l = s.n(n),
+  i = s("77078"),
+  r = s("216422"),
+  o = s("782340"),
+  d = s("321562");
 
-function o(e) {
+function u(e) {
   let {
-    text: t = u.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-    className: n
+    text: t = o.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+    className: s
   } = e;
-  return (0, s.jsx)(l.Tooltip, {
+  return (0, a.jsx)(i.Tooltip, {
     text: t,
-    children: e => (0, s.jsx)(l.Clickable, {
+    children: e => (0, a.jsx)(i.Clickable, {
       ...e,
-      children: (0, s.jsx)(i.default, {
-        className: a(c.nitroWheel, n)
+      children: (0, a.jsx)(r.default, {
+        className: l(d.nitroWheel, s)
       })
     })
   })

@@ -1,7 +1,7 @@
 "use strict";
-var r, i;
+var i, r;
 n.r(t), n.d(t, {
   Environments: function() {
-    return r
+    return i
   }
-}), (i = r || (r = {})).STAGING = "staging", i.DEVELOPMENT = "development", i.PRODUCTION = "production", i.TEST = "test"
+}), (r = i || (i = {})).STAGING = "staging", r.DEVELOPMENT = "development", r.PRODUCTION = "production", r.TEST = "test"

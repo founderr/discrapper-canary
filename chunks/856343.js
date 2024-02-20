@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var a = n("37983"),
@@ -9,52 +9,52 @@ var a = n("37983"),
   s = n("446674"),
   i = n("77078"),
   l = n("629109"),
-  o = n("997289"),
-  u = n("773356"),
+  u = n("997289"),
+  o = n("773356"),
   d = n("268491"),
   c = n("305961"),
   f = n("42887"),
   h = n("697218"),
   p = n("49111"),
-  m = n("686298"),
+  E = n("686298"),
   C = n("353927"),
-  E = n("782340");
+  m = n("782340");
 
-function g(e, t) {
+function S(e, t) {
   let {
-    preset: g,
-    resolution: S,
-    fps: v
-  } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), _ = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), T = (0, s.useStateFromStores)([h.default], () => h.default.getCurrentUser()), A = (0, s.useStateFromStores)([c.default], () => {
+    preset: S,
+    resolution: g,
+    fps: _
+  } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), T = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), v = (0, s.useStateFromStores)([h.default], () => h.default.getCurrentUser()), A = (0, s.useStateFromStores)([c.default], () => {
     var t;
     return null === (t = c.default.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier
   }), {
     location: I
-  } = (0, o.useAnalyticsContext)(), M = r.useCallback((e, r, s, o) => {
+  } = (0, u.useAnalyticsContext)(), M = r.useCallback((e, r, s, u) => {
     if (e) {
-      if (null != _) {
+      if (null != T) {
         let e = {
           qualityOptions: {
-            preset: m.ApplicationStreamPresets.PRESET_CUSTOM,
+            preset: E.ApplicationStreamPresets.PRESET_CUSTOM,
             resolution: r,
             frameRate: s
           },
           context: C.MediaEngineContextTypes.STREAM
         };
-        null != _.desktopSource ? e.desktopSettings = {
-          sourceId: _.desktopSource.id,
+        null != T.desktopSource ? e.desktopSettings = {
+          sourceId: T.desktopSource.id,
           sound: !0
-        } : null != _.cameraSource && (e.cameraSettings = {
-          videoDeviceGuid: _.cameraSource.videoDeviceGuid,
-          audioDeviceGuid: _.cameraSource.audioDeviceGuid
+        } : null != T.cameraSource && (e.cameraSettings = {
+          videoDeviceGuid: T.cameraSource.videoDeviceGuid,
+          audioDeviceGuid: T.cameraSource.audioDeviceGuid
         }), l.default.setGoLiveSource(e)
       }
     } else {
-      var u, d;
-      u = t, d = {
+      var o, d;
+      o = t, d = {
         ...I,
         object: p.AnalyticsObjects.RADIO_ITEM,
-        objectType: o
+        objectType: u
       }, (0, i.openModalLazy)(async () => {
         let {
           default: e
@@ -64,45 +64,45 @@ function g(e, t) {
           analyticsSource: d
         })
       }, {
-        contextKey: u === p.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
+        contextKey: o === p.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
       })
     }
-  }, [t, I, _]);
+  }, [t, I, T]);
   if (null == e) return null;
-  let x = g === m.ApplicationStreamPresets.PRESET_DOCUMENTS ? m.ApplicationStreamFPS.FPS_30 : v,
-    y = m.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
+  let x = S === E.ApplicationStreamPresets.PRESET_DOCUMENTS ? E.ApplicationStreamFPS.FPS_30 : _,
+    R = E.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
         label: n
-      } = e, r = (0, u.default)(m.ApplicationStreamPresets.PRESET_CUSTOM, S, t, T, A);
+      } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, g, t, v, A);
       return (0, a.jsx)(i.MenuRadioItem, {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
         label: n,
-        checked: t === v,
-        action: () => M(r, S, t, p.AnalyticsObjectTypes.RESOLUTION)
+        checked: t === _,
+        action: () => M(r, g, t, p.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-fps-".concat(t))
     }),
-    R = m.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
+    N = E.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
         label: n
-      } = e, r = (0, u.default)(m.ApplicationStreamPresets.PRESET_CUSTOM, t, x, T, A);
+      } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, t, x, v, A);
       return (0, a.jsx)(i.MenuRadioItem, {
         group: "stream-settings-resolution",
         id: "stream-settings-resolution-".concat(t),
         label: n,
-        checked: t === S,
+        checked: t === g,
         action: () => M(r, t, x, p.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-resolution-".concat(t))
     });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(i.MenuGroup, {
-      label: E.default.Messages.SCREENSHARE_FRAME_RATE,
-      children: y
-    }), (0, a.jsx)(i.MenuGroup, {
-      label: E.default.Messages.STREAM_RESOLUTION,
+      label: m.default.Messages.SCREENSHARE_FRAME_RATE,
       children: R
+    }), (0, a.jsx)(i.MenuGroup, {
+      label: m.default.Messages.STREAM_RESOLUTION,
+      children: N
     })]
   })
 }

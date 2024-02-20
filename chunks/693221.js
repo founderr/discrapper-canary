@@ -8,8 +8,8 @@ function o() {}
 o.resetWarningCache = a, e.exports = function() {
   function e(e, t, n, a, o, i) {
     if (i !== r) {
-      var u = Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-      throw u.name = "Invariant Violation", u
+      var s = Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+      throw s.name = "Invariant Violation", s
     }
   }
 

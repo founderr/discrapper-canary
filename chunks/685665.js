@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return f
   }
 }), n("222007");
 var i = n("37983"),
@@ -29,25 +29,25 @@ function d(e, t) {
   return [...e, ...n]
 }
 
-function p() {
+function f() {
   for (var e, t = arguments.length, n = Array(t), s = 0; s < t; s++) n[s] = arguments[s];
-  let [o, l] = r.useState(n), p = r.useContext(u), h = r.useMemo(() => d(p, o), [o, p]), f = r.useMemo(() => d(p, o.slice(0, o.length - 1)), [o, p]);
+  let [o, l] = r.useState(n), f = r.useContext(u), E = r.useMemo(() => d(f, o), [o, f]), p = r.useMemo(() => d(f, o.slice(0, o.length - 1)), [o, f]);
   r.useEffect(() => {
     !a(n, o) && l(n)
   }, [n]);
-  let E = r.useCallback(e => {
+  let h = r.useCallback(e => {
     let {
       children: t
     } = e;
     return (0, i.jsx)(c, {
-      currentContext: h,
+      currentContext: E,
       children: t
     })
-  }, [h]);
+  }, [E]);
   return {
-    AnalyticsLocationProvider: E,
-    analyticsLocations: h,
-    sourceAnalyticsLocations: f,
-    newestAnalyticsLocation: null !== (e = h[h.length - 1]) && void 0 !== e ? e : null
+    AnalyticsLocationProvider: h,
+    analyticsLocations: E,
+    sourceAnalyticsLocations: p,
+    newestAnalyticsLocation: null !== (e = E[E.length - 1]) && void 0 !== e ? e : null
   }
 }

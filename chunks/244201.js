@@ -1,98 +1,98 @@
 "use strict";
 E.r(_), E.d(_, {
   MainWindowDispatch: function() {
-    return n
+    return I
   },
   getWindowDispatchForElement: function() {
-    return s
-  },
-  getAppWindowContextValue: function() {
-    return R
-  },
-  getCurrentlyInteractingAppContext: function() {
-    return N
-  },
-  AppWindowContextProvider: function() {
-    return O
-  },
-  useAppContext: function() {
     return S
   },
+  getAppWindowContextValue: function() {
+    return N
+  },
+  getCurrentlyInteractingAppContext: function() {
+    return O
+  },
+  AppWindowContextProvider: function() {
+    return A
+  },
+  useAppContext: function() {
+    return R
+  },
   useWindowDispatch: function() {
-    return L
+    return l
   },
   default: function() {
-    return l
+    return u
   }
 }), E("222007");
 var t = E("37983"),
   o = E("884691"),
-  I = E("659500"),
-  T = E("816454"),
-  r = E("421804"),
+  n = E("659500"),
+  r = E("816454"),
+  i = E("421804"),
   a = E("49111");
-let n = new I.ComponentDispatcher,
-  i = o.createContext({
+let I = new n.ComponentDispatcher,
+  s = o.createContext({
     appContext: a.AppContext.APP,
     renderWindow: window,
-    windowDispatch: n,
-    windowId: (0, T.getMainWindowId)()
+    windowDispatch: I,
+    windowId: (0, r.getMainWindowId)()
   }),
-  A = new Map;
+  T = new Map;
 
-function s(e) {
+function S(e) {
   var _;
   let E = e.ownerDocument.defaultView;
   if (null == E) return;
-  let t = (0, T.getWindowId)(E);
-  return null === (_ = A.get(t)) || void 0 === _ ? void 0 : _.windowDispatch
+  let t = (0, r.getWindowId)(E);
+  return null === (_ = T.get(t)) || void 0 === _ ? void 0 : _.windowDispatch
 }
 
-function R(e) {
-  return A.get(e)
+function N(e) {
+  return T.get(e)
 }
 
-function N() {
+function O() {
   let e = function() {
     var e;
-    let _ = (0, r.getCurrentlyInteractingWindowId)();
-    return null == _ ? null : null !== (e = A.get(_)) && void 0 !== e ? e : null
+    let _ = (0, i.getCurrentlyInteractingWindowId)();
+    return null == _ ? null : null !== (e = T.get(_)) && void 0 !== e ? e : null
   }();
   return null != e ? e.appContext : null
 }
 
-function O(e) {
+function A(e) {
   let {
     appContext: _,
     renderWindow: E,
     children: o
-  } = e, r = function(e, _) {
-    let E = (0, T.getWindowId)(_),
-      t = A.get(E);
+  } = e, i = function(e, _) {
+    let E = (0, r.getWindowId)(_),
+      t = T.get(E);
     if (null == t) {
-      let o = new I.ComponentDispatcher;
+      let o = new n.ComponentDispatcher;
       t = {
         appContext: e,
         renderWindow: _,
         windowDispatch: o,
         windowId: E
-      }, A.set(E, t), _.addEventListener("unload", () => {
-        A.delete(E)
+      }, T.set(E, t), _.addEventListener("unload", () => {
+        T.delete(E)
       })
     }
     return t
   }(_, E);
-  return (0, t.jsx)(i.Provider, {
-    value: r,
+  return (0, t.jsx)(s.Provider, {
+    value: i,
     children: o
   })
 }
 
-function S() {
-  return o.useContext(i).appContext
+function R() {
+  return o.useContext(s).appContext
 }
 
-function L() {
-  return o.useContext(i).windowDispatch
+function l() {
+  return o.useContext(s).windowDispatch
 }
-var l = i
+var u = s

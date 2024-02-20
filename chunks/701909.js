@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return u
   },
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("872717"),
@@ -21,17 +21,17 @@ function d(e) {
   return t + e
 }
 
-function p() {
+function f() {
   return s.default.locale.toLowerCase()
 }
-var h = {
-  getArticleURL: e => d("/hc/".concat(p(), "/articles/").concat(e)),
-  getDevArticleURL: e => d("/hc/".concat(p(), "/articles/").concat(e), c),
-  getCreatorSupportArticleURL: e => d("/hc/".concat(p(), "/articles/").concat(e), "https://creator-support.discord.com"),
+var E = {
+  getArticleURL: e => d("/hc/".concat(f(), "/articles/").concat(e)),
+  getDevArticleURL: e => d("/hc/".concat(f(), "/articles/").concat(e), c),
+  getCreatorSupportArticleURL: e => d("/hc/".concat(f(), "/articles/").concat(e), "https://creator-support.discord.com"),
   getTwitterURL: () => (0, r.default)(l.LocalizedLinks.TWITTER),
-  getCommunityURL: () => d("/hc/".concat(p())),
+  getCommunityURL: () => d("/hc/".concat(f())),
   getSubmitRequestURL(e) {
-    let t = d("/hc/".concat(p(), "/requests/new?platform=").concat(encodeURIComponent((0, o.getPlatformName)())));
+    let t = d("/hc/".concat(f(), "/requests/new?platform=").concat(encodeURIComponent((0, o.getPlatformName)())));
     return null != e && (t += "&device_info=".concat(encodeURIComponent(e))), t
   },
   async getSubmitRequestURLAuthenticated(e) {
@@ -48,7 +48,7 @@ var h = {
   },
   getSearchURL(e) {
     let t = encodeURIComponent(e);
-    return d("/hc/".concat(p(), "/search?utf8=%E2%9C%93&query=").concat(t, "&commit=Search"))
+    return d("/hc/".concat(f(), "/search?utf8=%E2%9C%93&query=").concat(t, "&commit=Search"))
   },
   getFeaturedArticlesJsonURL: () => d("/api/v2/help_center/en-us/articles.json?label_names=featured")
 }

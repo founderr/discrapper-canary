@@ -1,23 +1,23 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   queueMicroTask: function() {
     return o
   }
-}), r("424973");
-var n, i = [],
+}), n("424973");
+var r, a = [],
   o = function(e) {
-    if (!n) {
+    if (!r) {
       var t = 0,
-        r = document.createTextNode("");
+        n = document.createTextNode("");
       new MutationObserver(function() {
-        return i.splice(0).forEach(function(e) {
+        return a.splice(0).forEach(function(e) {
           return e()
         })
-      }).observe(r, {
+      }).observe(n, {
         characterData: !0
-      }), n = function() {
-        r.textContent = "" + (t ? t-- : t++)
+      }), r = function() {
+        n.textContent = "" + (t ? t-- : t++)
       }
     }
-    i.push(e), n()
+    a.push(e), r()
   }

@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return d
   },
   convertToTransitionState: function() {
-    return p
+    return f
   },
   getCombinedProgress: function() {
-    return h
+    return E
   },
   isUserEntitledToLibraryApplication: function() {
-    return f
+    return p
   }
 }), n("222007"), n("808653");
 var i = n("845579"),
@@ -56,13 +56,13 @@ function d(e, t, n) {
   return !(null == t || n.enabled && t.hasFlag(a.LibraryApplicationFlags.PRIVATE)) && !t.isHidden()
 }
 
-function p(e) {
+function f(e) {
   return null == e ? null : e.type === a.LocalDispatchApplicationStates.INSTALLING || e.type === a.LocalDispatchApplicationStates.UPDATING || e.type === a.LocalDispatchApplicationStates.UNINSTALLING ? e : null
 }
 
-function h(e) {
+function E(e) {
   return e.reduce((e, t) => {
-    let n = p(t);
+    let n = f(t);
     return null == n || t.type === a.LocalDispatchApplicationStates.UP_TO_DATE ? e : {
       total: e.total + Number(n.total),
       progress: e.progress + Number(n.progress)
@@ -73,6 +73,6 @@ function h(e) {
   })
 }
 
-function f(e) {
+function p(e) {
   return !!e.isDiscordApplication() && e.isEntitled(r.default.getCurrentUser(), s.default)
 }

@@ -40,27 +40,27 @@ var l, a, s = n("37983"),
   O = n("338677"),
   P = n("76393"),
   b = n("261552"),
-  D = n("374014"),
-  U = n("479788"),
-  w = n("375202"),
-  F = n("16916"),
-  k = n("534222"),
-  V = n("147257"),
-  B = n("109526"),
-  H = n("550410"),
-  G = n("124824"),
-  W = n("213943"),
-  Y = n("742683"),
-  z = n("576242"),
-  K = n("54727"),
-  Z = n("785344"),
-  X = n("954519"),
-  Q = n("719874"),
-  q = n("116439"),
-  J = n("373469"),
-  $ = n("950104"),
-  ee = n("42887"),
-  et = n("568307"),
+  D = n("161454"),
+  U = n("374014"),
+  w = n("479788"),
+  F = n("375202"),
+  k = n("16916"),
+  V = n("534222"),
+  B = n("147257"),
+  H = n("109526"),
+  G = n("550410"),
+  W = n("124824"),
+  Y = n("213943"),
+  z = n("742683"),
+  K = n("576242"),
+  Z = n("54727"),
+  X = n("785344"),
+  Q = n("954519"),
+  q = n("719874"),
+  J = n("116439"),
+  $ = n("373469"),
+  ee = n("950104"),
+  et = n("42887"),
   en = n("18494"),
   el = n("697218"),
   ea = n("703370"),
@@ -81,7 +81,7 @@ var l, a, s = n("37983"),
   eC = n("983127");
 
 function e_(e, t) {
-  if (ee.default.isVideoEnabled() === e) return;
+  if (et.default.isVideoEnabled() === e) return;
   let n = () => m.default.setVideoEnabled(e);
   e ? (0, eE.default)(n, t) : n()
 }
@@ -94,14 +94,14 @@ function eI(e) {
     canGoLive: a,
     hasPermission: r,
     disabled: o
-  } = e, u = (0, g.useAppContext)(), d = (0, f.useStateFromStoresArray)([J.default], () => J.default.getAllActiveStreams()), c = d.find(e => e.ownerId === n.id), m = t.getGuildId(), p = i.useCallback(() => {
+  } = e, u = (0, g.useAppContext)(), d = (0, f.useStateFromStoresArray)([$.default], () => $.default.getAllActiveStreams()), c = d.find(e => e.ownerId === n.id), m = t.getGuildId(), p = i.useCallback(() => {
     if (null == l || l(), !a) return (0, em.default)();
     (0, ep.default)(m, t.id, eS.AnalyticsPages.GUILD_CHANNEL)
-  }, [m, t.id, a, l]), S = (0, f.useStateFromStores)([et.default, ea.default], () => (0, w.default)(et.default, ea.default)), C = (0, N.default)(), _ = (0, x.default)() && null != S, I = () => {
+  }, [m, t.id, a, l]), S = (0, f.useStateFromStores)([D.default, ea.default], () => (0, F.default)(D.default, ea.default)), C = (0, N.default)(), _ = (0, x.default)() && null != S, I = () => {
     _ && (null == c ? (0, E.createBroadcastChannelOrStartStream)({
       channelId: t.id,
       pid: null == S ? void 0 : S.pid
-    }) : (0, v.startBroadcastForStream)((0, D.encodeStreamKey)(c), null == S ? void 0 : S.pid))
+    }) : (0, v.startBroadcastForStream)((0, U.encodeStreamKey)(c), null == S ? void 0 : S.pid))
   }, T = () => {
     if (_) {
       (0, M.openStartBroadcastConfirmModal)(I);
@@ -113,9 +113,9 @@ function eI(e) {
     }(0, em.default)()
   }, A = () => {
     if (C) {
-      (0, M.openStopBroadcastConfirmModal)(() => (0, F.default)(c));
+      (0, M.openStopBroadcastConfirmModal)(() => (0, k.default)(c));
       return
-    }(0, F.default)(c)
+    }(0, k.default)(c)
   }, R = (e, t) => {
     let {
       onClick: n,
@@ -123,7 +123,7 @@ function eI(e) {
     } = null != e ? e : {
       onClick: void 0
     }, a = null != c && !C;
-    return null != c ? (0, s.jsx)(X.default, {
+    return null != c ? (0, s.jsx)(Q.default, {
       ...l,
       centerButton: !0,
       className: eC.controlButton,
@@ -132,7 +132,7 @@ function eI(e) {
       onPopoutClick: a ? n : null,
       popoutOpen: t,
       shouldShowTooltip: !t
-    }) : (0, s.jsx)(Q.default, {
+    }) : (0, s.jsx)(q.default, {
       ...l,
       centerButton: !0,
       className: eC.controlButton,
@@ -144,13 +144,13 @@ function eI(e) {
       disabled: o
     })
   };
-  return C ? R() : (0, s.jsx)(H.default, {
+  return C ? R() : (0, s.jsx)(G.default, {
     children: (0, s.jsx)(h.Popout, {
       renderPopout: e => {
         let {
           closePopout: l
         } = e;
-        return (0, s.jsx)(G.default, {
+        return (0, s.jsx)(W.default, {
           children: (0, s.jsx)(ef.default, {
             channel: t,
             currentUser: n,
@@ -197,12 +197,12 @@ let ev = i.memo(function(e) {
     channel: a
   } = e, r = (0, f.useStateFromStores)([R.default], () => R.default.getSelectedParticipant(a.id)), {
     reducedMotion: o
-  } = i.useContext(h.AccessibilityPreferencesContext), [u, d] = i.useState(!1), m = null == r ? void 0 : r.id, S = (0, f.useStateFromStores)([J.default], () => null != m ? J.default.getActiveStreamForStreamKey(m) : null, [m]), g = (null == r ? void 0 : r.type) === eg.ParticipantTypes.STREAM && null != S && S.ownerId !== (null == n ? void 0 : n.id), C = (0, f.useStateFromStoresArray)([J.default], () => J.default.getAllActiveStreamsForChannel(a.id).filter(e => {
+  } = i.useContext(h.AccessibilityPreferencesContext), [u, d] = i.useState(!1), m = null == r ? void 0 : r.id, S = (0, f.useStateFromStores)([$.default], () => null != m ? $.default.getActiveStreamForStreamKey(m) : null, [m]), g = (null == r ? void 0 : r.type) === eg.ParticipantTypes.STREAM && null != S && S.ownerId !== (null == n ? void 0 : n.id), C = (0, f.useStateFromStoresArray)([$.default], () => $.default.getAllActiveStreamsForChannel(a.id).filter(e => {
     let {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
-  })), _ = (0, k.useActiveEvent)(a.id), I = (0, N.useIsBroadcastingInChannel)(a.id), T = i.useCallback(() => {
+  })), _ = (0, V.useActiveEvent)(a.id), I = (0, N.useIsBroadcastingInChannel)(a.id), T = i.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eg.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
     if (g) return "STREAM";
     if (null != _) return "EVENT";
@@ -226,9 +226,9 @@ let ev = i.memo(function(e) {
     e !== v && d(!0)
   }, [v, T]);
   let j = i.useCallback(() => {
-      if (null != S)(0, E.stopStream)((0, D.encodeStreamKey)(S));
+      if (null != S)(0, E.stopStream)((0, U.encodeStreamKey)(S));
       else
-        for (let e of C)(0, E.stopStream)((0, D.encodeStreamKey)(e))
+        for (let e of C)(0, E.stopStream)((0, U.encodeStreamKey)(e))
     }, [C, S]),
     L = (e, t) => {
       let i = {
@@ -239,7 +239,7 @@ let ev = i.memo(function(e) {
       switch (v) {
         case "ACTIVITY":
           if (null == r || null == n) return;
-          return (0, s.jsx)(z.default, {
+          return (0, s.jsx)(K.default, {
             ...i,
             applicationId: r.id,
             color: "red",
@@ -247,7 +247,7 @@ let ev = i.memo(function(e) {
             onPopoutClick: C.length > 0 ? t : null
           });
         case "STREAM":
-          return (0, s.jsx)(X.default, {
+          return (0, s.jsx)(Q.default, {
             ...i,
             color: "red",
             onClick: j,
@@ -255,7 +255,7 @@ let ev = i.memo(function(e) {
             isSelfStream: !1
           });
         case "CALL":
-          return (0, s.jsx)(K.default, {
+          return (0, s.jsx)(Z.default, {
             ...i,
             color: "red",
             onClick: () => null == l ? void 0 : l(),
@@ -263,7 +263,7 @@ let ev = i.memo(function(e) {
             channel: a
           });
         case "EVENT":
-          return (0, s.jsx)(V.default, {
+          return (0, s.jsx)(B.default, {
             channelId: a.id,
             onClick: () => {
               p.default.disconnect(), null == l || l()
@@ -319,12 +319,12 @@ function ex(e) {
     p.default.selectVoiceChannel(t.id, !1)
   }, [t.id]), m = i.useCallback(() => {
     n ? (0, eh.default)() : c()
-  }, [n, c]), E = (0, f.useStateFromStores)([$.default], () => {
-    let e = $.default.getCall(t.id);
+  }, [n, c]), E = (0, f.useStateFromStores)([ee.default], () => {
+    let e = ee.default.getCall(t.id);
     return (null == e ? void 0 : e.ringing.includes(a.id)) === !0
   });
   return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(q.default, {
+    children: [(0, s.jsx)(J.default, {
       enabled: !0,
       centerButton: !0,
       join: !0,
@@ -338,13 +338,13 @@ function ex(e) {
       className: eC.controlButton,
       iconClassName: eC.joinIcon,
       onChange: c
-    }), (0, s.jsx)(Y.default, {
+    }), (0, s.jsx)(z.default, {
       centerButton: !0,
       color: "green",
       channel: t,
       className: o(eC.controlButton, eC.lastButton),
       onClick: h
-    }), E ? (0, s.jsx)(W.default, {
+    }), E ? (0, s.jsx)(Y.default, {
       color: "red",
       channel: t,
       className: eC.controlButton
@@ -369,8 +369,8 @@ var eN = function(e) {
     mute: E
   } = (0, eu.default)(t), {
     canGoLive: g
-  } = (0, f.useStateFromStoresObject)([ee.default], () => ({
-    canGoLive: (0, U.default)(ee.default)
+  } = (0, f.useStateFromStoresObject)([et.default], () => ({
+    canGoLive: (0, w.default)(et.default)
   })), _ = (0, b.default)(), v = (0, f.useStateFromStores)([P.default], () => null != P.default.getAwaitingRemoteSessionInfo()), x = null != _, N = (0, f.useStateFromStores)([en.default], () => {
     var e;
     return (null !== (e = null == _ ? void 0 : _.channelId) && void 0 !== e ? e : en.default.getVoiceChannelId()) === t.id
@@ -381,9 +381,9 @@ var eN = function(e) {
     reachedLimit: R,
     limit: D
   } = (0, er.default)(t), {
-    AnalyticsLocationProvider: w
+    AnalyticsLocationProvider: U
   } = (0, T.default)(I.default.VOICE_CONTROL_TRAY);
-  if (!N) return (0, s.jsx)(w, {
+  if (!N) return (0, s.jsx)(U, {
     children: (0, s.jsx)(ex, {
       channel: t,
       cameraUnavailable: r,
@@ -396,12 +396,12 @@ var eN = function(e) {
     user: i,
     context: t
   }) && !t.isPrivate() && !A;
-  return (0, s.jsx)(w, {
+  return (0, s.jsx)(U, {
     children: (0, s.jsxs)(S.default, {
       section: eS.AnalyticsSections.VOICE_CONTROL_TRAY,
       children: [(0, s.jsx)("div", {
         className: eC.eventPromptsContainer,
-        children: (0, s.jsx)(B.default, {
+        children: (0, s.jsx)(H.default, {
           channelId: t.id
         })
       }), (0, s.jsxs)("div", {
@@ -411,7 +411,7 @@ var eN = function(e) {
             let {
               closePopout: t
             } = e;
-            return (0, s.jsx)(G.default, {
+            return (0, s.jsx)(W.default, {
               children: (0, s.jsx)(y.default, {
                 onClose: t
               })
@@ -426,7 +426,7 @@ var eN = function(e) {
             } = e, {
               isShown: l
             } = t;
-            return (0, s.jsx)(q.default, {
+            return (0, s.jsx)(J.default, {
               centerButton: !0,
               hasPermission: c,
               className: eC.controlButton,
@@ -453,7 +453,7 @@ var eN = function(e) {
             let {
               closePopout: t
             } = e;
-            return (0, s.jsx)(G.default, {
+            return (0, s.jsx)(W.default, {
               children: (0, s.jsx)(L.default, {
                 onClose: t,
                 renderInputDevices: !0,
@@ -471,7 +471,7 @@ var eN = function(e) {
             } = e, {
               isShown: l
             } = t;
-            return (0, s.jsx)(Z.default, {
+            return (0, s.jsx)(X.default, {
               centerButton: !0,
               onPopoutClick: x ? null : n,
               className: eC.controlButton,

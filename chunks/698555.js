@@ -1,4 +1,4 @@
-var u = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;
+var i = /[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;
 e.exports = function(e) {
-  return e.match(u) || []
+  return e.match(i) || []
 }

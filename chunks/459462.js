@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Anchor: function() {
-    return h
+    return E
   }
 }), n("70102");
 var i = n("37983"),
@@ -13,48 +13,48 @@ var i = n("37983"),
   u = n("718776"),
   c = n("143435"),
   d = n("315733"),
-  p = n("744777");
+  f = n("744777");
 
-function h(e) {
+function E(e) {
   let {
     href: t,
     onClick: n,
     className: s,
-    children: h,
-    rel: f,
-    target: E,
+    children: E,
+    rel: p,
+    target: h,
     useDefaultUnderlineStyles: _ = !0,
-    title: m,
-    style: S,
-    focusProps: g,
-    ...T
+    title: S,
+    style: m,
+    focusProps: T,
+    ...g
   } = e;
   null != t && null == n && (n = c.designConfig.getDefaultLinkInterceptor(t));
   let I = r.useContext(o.BlockInteractionsContext),
-    v = {
-      className: a(p.anchor, {
-        [p.anchorUnderlineOnHover]: _
+    C = {
+      className: a(f.anchor, {
+        [f.anchorUnderlineOnHover]: _
       }, s),
       href: t,
       onClick: n,
-      rel: null != f ? f : void 0,
-      target: null != E ? E : void 0,
-      title: null != m ? m : void 0,
-      style: null != S ? S : void 0
+      rel: null != p ? p : void 0,
+      target: null != h ? h : void 0,
+      title: null != S ? S : void 0,
+      style: null != m ? m : void 0
     };
-  return (null != t && !(0, d.isSafeRedirect)(t) && (v.rel = "noreferrer noopener", v.target = "_blank"), I && delete v.href, null != n) ? (0, i.jsx)(l.Clickable, {
+  return (null != t && !(0, d.isSafeRedirect)(t) && (C.rel = "noreferrer noopener", C.target = "_blank"), I && delete C.href, null != n) ? (0, i.jsx)(l.Clickable, {
     tag: "a",
-    ...T,
-    ...v,
-    onClick: n,
-    focusProps: g,
-    children: h
-  }) : (0, i.jsx)(u.FocusRing, {
     ...g,
+    ...C,
+    onClick: n,
+    focusProps: T,
+    children: E
+  }) : (0, i.jsx)(u.FocusRing, {
+    ...T,
     children: (0, i.jsx)("a", {
-      ...T,
-      ...v,
-      children: h
+      ...g,
+      ...C,
+      children: E
     })
   })
 }

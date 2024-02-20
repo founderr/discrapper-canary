@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EnterLeaveCounter: function() {
-    return o
+    return i
   }
 }), n("70102");
 var r = n("988641");
@@ -13,7 +13,7 @@ function a(e, t) {
   }
 }
 
-function i(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,15 +21,15 @@ function i(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var o = function() {
+var i = function() {
   var e, t, n;
 
-  function o(e) {
+  function i(e) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, o), i(this, "entered", []), i(this, "isNodeInDocument", void 0), this.isNodeInDocument = e
+    }(this, i), o(this, "entered", []), o(this, "isNodeInDocument", void 0), this.isNodeInDocument = e
   }
-  return e = o, t = [{
+  return e = i, t = [{
     key: "enter",
     value: function(e) {
       var t = this,
@@ -49,5 +49,5 @@ var o = function() {
     value: function() {
       this.entered = []
     }
-  }], a(e.prototype, t), n && a(e, n), o
+  }], a(e.prototype, t), n && a(e, n), i
 }()

@@ -9,8 +9,8 @@ var r = n("914644");
 function a(e, t, n) {
   let {
     labelProps: a,
-    inputProps: i,
-    isSelected: o,
+    inputProps: o,
+    isSelected: i,
     isPressed: s,
     isDisabled: c,
     isReadOnly: l
@@ -18,11 +18,11 @@ function a(e, t, n) {
   return {
     labelProps: a,
     inputProps: {
-      ...i,
+      ...o,
       role: "switch",
-      checked: o
+      checked: i
     },
-    isSelected: o,
+    isSelected: i,
     isPressed: s,
     isDisabled: c,
     isReadOnly: l

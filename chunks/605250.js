@@ -1,22 +1,22 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return r
+    return i
   }
 }), E("222007");
 var t = E("811022"),
   o = E("821316");
-let I = Date.now(),
-  T = I;
+let n = Date.now(),
+  r = n;
 (0, t.setLogFn)(function(e, _, E) {
-  for (var t = arguments.length, r = Array(t > 3 ? t - 3 : 0), a = 3; a < t; a++) r[a - 3] = arguments[a];
-  let n = Date.now(),
-    i = ((n - I) / 1e3).toFixed(3),
-    A = ((n - T) / 1e3).toFixed(3),
-    s = "Σ:".concat(i, "s, Δ:").concat(A, "s");
-  T = n, o.report({
+  for (var t = arguments.length, i = Array(t > 3 ? t - 3 : 0), a = 3; a < t; a++) i[a - 3] = arguments[a];
+  let I = Date.now(),
+    s = ((I - n) / 1e3).toFixed(3),
+    T = ((I - r) / 1e3).toFixed(3),
+    S = "Σ:".concat(s, "s, Δ:").concat(T, "s");
+  r = I, o.report({
     name: e,
-    timing: s
-  }, E, ...r), "file-only" !== _ && console[_]("%c[".concat(e, "]"), "\nfont-weight: bold;\ncolor: purple;\n", E, ...r)
+    timing: S
+  }, E, ...i), "file-only" !== _ && console[_]("%c[".concat(e, "]"), "\nfont-weight: bold;\ncolor: purple;\n", E, ...i)
 });
-var r = t.default
+var i = t.default

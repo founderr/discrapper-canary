@@ -1,12 +1,12 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return I
+    return n
   }
 }), E("843762"), E("424973");
 let t = null == E.g.__getTotalRequireTime ? () => 0 : () => E.g.__getTotalRequireTime(),
   o = "undefined" != typeof performance;
-var I = new class e {
+var n = new class e {
   get isTracing() {
     return !!o && !!this.isTracing_ && (!(Date.now() > this.endTime_) || (this.isTracing_ = !1, !1))
   }
@@ -53,18 +53,18 @@ var I = new class e {
   markAt(e, _, E) {
     var t, o;
     if (!this.isTracing) return;
-    let I = 0;
-    for (; I < this.logs.length; I++) {
+    let n = 0;
+    for (; n < this.logs.length; n++) {
       let {
         timestamp: e
-      } = this.logs[I];
+      } = this.logs[n];
       if (null != e && e > E) break
     }
-    this.logs.splice(I, 0, {
+    this.logs.splice(n, 0, {
       emoji: e,
       log: _,
       timestamp: E,
-      prefix: null !== (o = null === (t = this.logs[I]) || void 0 === t ? void 0 : t.prefix) && void 0 !== o ? o : ""
+      prefix: null !== (o = null === (t = this.logs[n]) || void 0 === t ? void 0 : t.prefix) && void 0 !== o ? o : ""
     })
   }
   addDetail(e, _) {
@@ -79,17 +79,17 @@ var I = new class e {
     let t = this.prefix;
     this.mark(e, "Start ".concat(_)), this.prefix += "| ";
     let o = Date.now(),
-      I = E(),
-      T = Date.now() - o;
-    return this.prefix = t, this.mark(e, "Finish ".concat(_), T), I
+      n = E(),
+      r = Date.now() - o;
+    return this.prefix = t, this.mark(e, "Finish ".concat(_), r), n
   }
   async timeAsync(e, _, E) {
     if (!this.isTracing) return E();
     this.mark(e, "Start ".concat(_));
     let t = Date.now(),
       o = await E(),
-      I = Date.now() - t;
-    return this.mark(e, "Finish ".concat(_), I), o
+      n = Date.now() - t;
+    return this.mark(e, "Finish ".concat(_), n), o
   }
   setServerTrace(e) {
     this.logGroups[0].serverTrace = e

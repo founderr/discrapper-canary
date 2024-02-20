@@ -1,35 +1,35 @@
 "use strict";
 n.r(t), n.d(t, {
   shortenAndLocalizeNumber: function() {
-    return i
+    return r
   },
   parseInteger: function() {
-    return o
+    return s
   },
   formatPercent: function() {
-    return l
+    return a
   }
 });
-var r = n("782340");
+var i = n("782340");
 
-function i(e) {
-  if (e < 1e6) return r.default.Messages.NUMBER_ABBREVIATION_FULL.format({
+function r(e) {
+  if (e < 1e6) return i.default.Messages.NUMBER_ABBREVIATION_FULL.format({
     value: e
   });
   let t = (e / 1e6).toFixed(1);
-  return r.default.Messages.NUMBER_ABBREVIATION_MILLIONS.format({
+  return i.default.Messages.NUMBER_ABBREVIATION_MILLIONS.format({
     value: t
   })
 }
 
-function o(e) {
+function s(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NaN;
   if (null == e) return t;
   let n = parseInt(e);
   return Number.isNaN(n) ? t : n
 }
 
-function l(e, t) {
+function a(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   return Intl.NumberFormat(e, {
     style: "percent",

@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return c
+    return T
   }
-}), n("222007");
-var i = n("819855"),
-  a = n("689988"),
-  l = n("642754"),
-  s = n("49111"),
-  r = n("782340");
+}), E("222007");
+var t = E("819855"),
+  o = E("689988"),
+  n = E("642754"),
+  r = E("49111"),
+  i = E("782340");
 
-function o(e) {
-  e.relationship.type === s.RelationshipTypes.PENDING_INCOMING && (i.AccessibilityAnnouncer.announce(r.default.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({
+function a(e) {
+  e.relationship.type === r.RelationshipTypes.PENDING_INCOMING && (t.AccessibilityAnnouncer.announce(i.default.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({
     username: e.relationship.user.username
-  })), l.showPendingNotification(e.relationship.user))
+  })), n.showPendingNotification(e.relationship.user))
 }
 
-function u(e) {
+function I(e) {
   let {
-    user: t
+    user: _
   } = e;
-  i.AccessibilityAnnouncer.announce(r.default.Messages.FRIEND_REQUEST_ACCEPTED_A11Y_ANNOUNCEMENT.format({
-    username: t.username
-  })), l.showAcceptedNotification(t)
+  t.AccessibilityAnnouncer.announce(i.default.Messages.FRIEND_REQUEST_ACCEPTED_A11Y_ANNOUNCEMENT.format({
+    username: _.username
+  })), n.showAcceptedNotification(_)
 }
-class d extends a.default {
+class s extends o.default {
   constructor(...e) {
     super(...e), this.actions = {
-      RELATIONSHIP_ADD: o,
-      FRIEND_REQUEST_ACCEPTED: u
+      RELATIONSHIP_ADD: a,
+      FRIEND_REQUEST_ACCEPTED: I
     }
   }
 }
-var c = new d
+var T = new s

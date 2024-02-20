@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return d
   },
   getVideoInputDevices: function() {
-    return p
+    return f
   },
   getDevices: function() {
-    return h
+    return E
   }
 }), n("860677"), n("424973");
 var i = n("353927");
@@ -86,11 +86,11 @@ async function d() {
   let e = await u();
   return l(e, i.DeviceTypes.AUDIO_OUTPUT)
 }
-async function p() {
+async function f() {
   let e = await u();
   return l(e, i.DeviceTypes.VIDEO_INPUT)
 }
-async function h() {
+async function E() {
   let e = await u();
   return [l(e, i.DeviceTypes.AUDIO_INPUT), l(e, i.DeviceTypes.AUDIO_OUTPUT), l(e, i.DeviceTypes.VIDEO_INPUT)]
 }

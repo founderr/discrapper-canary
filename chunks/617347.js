@@ -4,246 +4,246 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return U
+    return V
   }
 });
-var l, a, s = n("37983"),
-  i = n("884691"),
+var l, a, i = n("37983"),
+  u = n("884691"),
   r = n("414456"),
-  u = n.n(r),
+  s = n.n(r),
   d = n("446674"),
   o = n("77078"),
   c = n("812204"),
-  E = n("685665"),
-  f = n("656038"),
-  h = n("419830"),
-  v = n("817963"),
-  _ = n("957255"),
-  I = n("476263"),
+  f = n("685665"),
+  E = n("656038"),
+  v = n("419830"),
+  g = n("817963"),
+  h = n("957255"),
+  p = n("476263"),
   m = n("718550"),
-  T = n("398604"),
-  N = n("651072"),
-  g = n("1339"),
-  C = n("613767"),
-  x = n("822516"),
-  p = n("707916"),
-  S = n("255050"),
-  A = n("400271"),
-  L = n("427554"),
-  R = n("644189"),
-  M = n("29913"),
-  y = n("745049"),
-  D = n("49111"),
-  j = n("782340"),
-  G = n("402155");
+  C = n("398604"),
+  S = n("651072"),
+  _ = n("1339"),
+  N = n("613767"),
+  I = n("822516"),
+  T = n("707916"),
+  x = n("255050"),
+  R = n("400271"),
+  M = n("427554"),
+  L = n("644189"),
+  G = n("29913"),
+  D = n("745049"),
+  j = n("49111"),
+  k = n("782340"),
+  A = n("402155");
 
-function V(e) {
+function y(e) {
   let {
     channel: t,
     onClick: n
   } = e, {
     canManageAllEvents: l
-  } = (0, v.useManageResourcePermissions)(t), a = (0, d.useStateFromStores)([_.default], () => !t.isGuildVocal() || _.default.can(D.Permissions.CONNECT, t), [t]), r = i.useMemo(() => (0, f.default)(t), [t]), c = (0, h.getChannelIconComponent)(t);
-  return (0, s.jsx)(o.Tooltip, {
-    text: j.default.Messages.GUILD_EVENT_CANNOT_CONNECT,
+  } = (0, g.useManageResourcePermissions)(t), a = (0, d.useStateFromStores)([h.default], () => !t.isGuildVocal() || h.default.can(j.Permissions.CONNECT, t), [t]), r = u.useMemo(() => (0, E.default)(t), [t]), c = (0, v.getChannelIconComponent)(t);
+  return (0, i.jsx)(o.Tooltip, {
+    text: k.default.Messages.GUILD_EVENT_CANNOT_CONNECT,
     shouldShow: !a && null != n,
-    children: e => (0, s.jsxs)(o.Clickable, {
+    children: e => (0, i.jsxs)(o.Clickable, {
       ...e,
-      className: u(G.inline, G.channelContainer, {
-        [G.channelContainerEnabled]: a && null != n,
-        [G.channelContainerDisabled]: !a && null != n
+      className: s(A.inline, A.channelContainer, {
+        [A.channelContainerEnabled]: a && null != n,
+        [A.channelContainerDisabled]: !a && null != n
       }),
       onClick: n,
-      children: [(0, s.jsx)(o.Tooltip, {
-        text: j.default.Messages.GUILD_EVENT_PRIVATE_CHANNEL_TOOLTIP,
+      children: [(0, i.jsx)(o.Tooltip, {
+        text: k.default.Messages.GUILD_EVENT_PRIVATE_CHANNEL_TOOLTIP,
         shouldShow: l && r && a && null != n,
-        children: e => null != c ? (0, s.jsx)(c, {
+        children: e => null != c ? (0, i.jsx)(c, {
           ...e,
           width: 20,
           height: 20,
-          className: G.icon
+          className: A.icon
         }) : null
-      }), (0, s.jsx)(o.Text, {
+      }), (0, i.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "none",
-        className: G.channelLocation,
+        className: A.channelLocation,
         children: t.name
       })]
     })
   })
 }
 
-function O(e) {
+function P(e) {
   let {
     guild: t,
     channel: n,
     onJoinClick: l,
     handleLocationClick: a,
-    location: i,
+    location: u,
     isExternal: r,
     isHub: d
   } = e;
-  if (d) return null == t ? (0, s.jsx)("div", {}) : (0, s.jsxs)("div", {
-    className: G.inline,
-    children: [(0, s.jsx)(I.default, {
-      className: G.guildIcon,
-      size: I.default.Sizes.MINI,
+  if (d) return null == t ? (0, i.jsx)("div", {}) : (0, i.jsxs)("div", {
+    className: A.inline,
+    children: [(0, i.jsx)(p.default, {
+      className: A.guildIcon,
+      size: p.default.Sizes.MINI,
       active: !0,
       guild: t
-    }), (0, s.jsx)(o.Text, {
+    }), (0, i.jsx)(o.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
       children: null == t ? void 0 : t.name
     })]
   });
-  return null != n ? (0, s.jsx)(V, {
+  return null != n ? (0, i.jsx)(y, {
     channel: n,
     onClick: l
-  }) : (0, s.jsxs)(o.Clickable, {
-    className: G.inline,
+  }) : (0, i.jsxs)(o.Clickable, {
+    className: A.inline,
     onClick: a,
-    children: [(0, s.jsx)(m.default, {
+    children: [(0, i.jsx)(m.default, {
       height: 20,
       width: 20,
-      className: u(G.channelContainer, G.icon)
-    }), (0, s.jsx)(o.Text, {
-      className: r ? G.externalLocation : G.channelLocation,
+      className: s(A.channelContainer, A.icon)
+    }), (0, i.jsx)(o.Text, {
+      className: r ? A.externalLocation : A.channelLocation,
       variant: "text-sm/normal",
-      children: (0, g.guildEventDetailsParser)(i, !0)
+      children: (0, _.guildEventDetailsParser)(u, !0)
     })]
   })
 }
 
-function U(e) {
+function V(e) {
   var t;
   let {
     className: n,
     guild: l,
     channel: a,
-    creator: i,
+    creator: u,
     name: r,
-    entityType: f,
-    description: h,
-    imageLocation: v = 0,
-    imageSource: _,
-    isActive: I,
+    entityType: E,
+    description: v,
+    imageLocation: g = 0,
+    imageSource: h,
+    isActive: p,
     isUserLurking: m,
-    isJoined: g = !1,
-    isMember: j = !1,
-    isHub: V = !1,
-    speakers: U,
-    speakerCount: b,
-    rsvped: P,
-    canInvite: B,
-    location: F,
+    isJoined: _ = !1,
+    isMember: k = !1,
+    isHub: y = !1,
+    speakers: V,
+    speakerCount: U,
+    rsvped: b,
+    canInvite: F,
+    location: O,
     truncate: w,
-    onContextMenu: k,
-    onJoinClick: H,
+    onContextMenu: H,
+    onJoinClick: B,
     onJoinGuildClick: z,
-    onGoToGuildClick: Y,
-    onRsvpClick: Z,
-    onStartClick: W,
-    onInviteClick: X,
-    onEndClick: q,
-    onClick: K,
-    isNew: J,
+    onGoToGuildClick: K,
+    onRsvpClick: q,
+    onStartClick: Y,
+    onInviteClick: Z,
+    onEndClick: J,
+    onClick: X,
+    isNew: W,
     guildEventId: Q,
     eventPreview: $,
     recurrenceRule: ee,
     recurrenceId: et
-  } = e, en = (0, C.isChannelPublic)(a, f), el = f === y.GuildScheduledEventEntityTypes.EXTERNAL, {
+  } = e, en = (0, N.isChannelPublic)(a, E), el = E === D.GuildScheduledEventEntityTypes.EXTERNAL, {
     analyticsLocations: ea
-  } = (0, E.default)(c.default.GUILD_EVENT_CARD), {
-    showRecurringEventsDesktop: es
-  } = N.default.useExperiment({
-    guildId: null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : D.EMPTY_STRING_GUILD_ID,
+  } = (0, f.default)(c.default.GUILD_EVENT_CARD), {
+    showRecurringEventsDesktop: ei
+  } = S.default.useExperiment({
+    guildId: null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : j.EMPTY_STRING_GUILD_ID,
     location: ea[0]
   }, {
     autoTrackExposure: !1
-  }), ei = (0, d.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(Q)), er = [];
-  if (null != ee && null != ei) {
-    let e = (0, x.getRRule)(ee);
-    er = (0, x.generateNextRecurrences)(4, e, new Date(ei.scheduled_start_time))
+  }), eu = (0, d.useStateFromStores)([C.default], () => C.default.getGuildScheduledEvent(Q)), er = [];
+  if (null != ee && null != eu) {
+    let e = (0, I.getRRule)(ee);
+    er = (0, I.generateNextRecurrences)(4, e, new Date(eu.scheduled_start_time))
   }
-  let eu = es && er.length > 0;
-  return (0, s.jsxs)(o.ClickableContainer, {
+  let es = ei && er.length > 0;
+  return (0, i.jsxs)(o.ClickableContainer, {
     "aria-label": r,
-    onClick: () => null == K ? void 0 : K(et),
-    onContextMenu: k,
-    className: u(G.card, {
-      [G.joined]: g,
-      [G.lurking]: m
+    onClick: () => null == X ? void 0 : X(et),
+    onContextMenu: H,
+    className: s(A.card, {
+      [A.joined]: _,
+      [A.lurking]: m
     }, n),
-    children: [(0, s.jsxs)("div", {
-      className: u(G.padding, {
-        [G.isRecurring]: eu
+    children: [(0, i.jsxs)("div", {
+      className: s(A.padding, {
+        [A.isRecurring]: es
       }),
-      children: [0 === v && (0, s.jsx)(S.default, {
-        source: _
-      }), (0, s.jsx)(A.default, {
-        creator: i,
+      children: [0 === g && (0, i.jsx)(x.default, {
+        source: h
+      }), (0, i.jsx)(R.default, {
+        creator: u,
         name: r,
-        description: h,
-        imageSource: 1 === v ? _ : null,
+        description: v,
+        imageSource: 1 === g ? h : null,
         truncate: w,
         guildId: null == l ? void 0 : l.id,
-        isHub: V,
-        isNew: J,
+        isHub: y,
+        isNew: W,
         guildEventId: Q,
         eventPreview: $,
         recurrenceId: et
-      }), I && null != l && null != U && b > 0 && (0, s.jsx)(M.default, {
+      }), p && null != l && null != V && U > 0 && (0, i.jsx)(G.default, {
         guild: l,
-        speakers: U,
-        speakerCount: b,
-        className: G.spacing
-      }), (0, s.jsx)("hr", {
-        className: G.divider
-      }), (0, s.jsxs)("div", {
-        className: u(G.inline, G.footer),
-        children: [(0, s.jsx)(O, {
+        speakers: V,
+        speakerCount: U,
+        className: A.spacing
+      }), (0, i.jsx)("hr", {
+        className: A.divider
+      }), (0, i.jsxs)("div", {
+        className: s(A.inline, A.footer),
+        children: [(0, i.jsx)(P, {
           guild: l,
           channel: a,
-          onJoinClick: H,
+          onJoinClick: B,
           handleLocationClick: el ? e => e.stopPropagation() : void 0,
-          location: F,
+          location: O,
           isExternal: el,
-          isHub: V
-        }), V ? (0, s.jsx)(R.default, {
-          isActive: I,
+          isHub: y
+        }), y ? (0, i.jsx)(L.default, {
+          isActive: p,
           isUserLurking: m,
-          isMember: j,
-          rsvped: P,
-          onRsvpClick: Z,
+          isMember: k,
+          rsvped: b,
+          onRsvpClick: q,
           onJoinGuildClick: z,
-          onGoToGuildClick: Y,
+          onGoToGuildClick: K,
           guildName: null == l ? void 0 : l.name,
-          canInvite: B,
+          canInvite: F,
           isChannelPublic: en,
-          onInviteClick: X
-        }) : (0, s.jsx)(p.default, {
-          entityType: f,
-          isJoined: g,
-          isActive: I,
+          onInviteClick: Z
+        }) : (0, i.jsx)(T.default, {
+          entityType: E,
+          isJoined: _,
+          isActive: p,
           isUserLurking: m,
-          rsvped: P,
-          canInvite: B,
+          rsvped: b,
+          canInvite: F,
           isChannelPublic: en,
-          onContextMenu: k,
-          onJoinClick: H,
-          onRsvpClick: Z,
-          onStartClick: W,
-          onInviteClick: X,
-          onEndClick: q
+          onContextMenu: H,
+          onJoinClick: B,
+          onRsvpClick: q,
+          onStartClick: Y,
+          onInviteClick: Z,
+          onEndClick: J
         })]
-      }), eu && (0, s.jsx)("hr", {
-        className: G.divider
+      }), es && (0, i.jsx)("hr", {
+        className: A.divider
       })]
-    }), eu && (0, s.jsx)(L.default, {
+    }), es && (0, i.jsx)(M.default, {
       guildId: null == l ? void 0 : l.id,
       recurrenceRule: ee,
       guildEventId: Q,
-      onRecurrenceClick: K
+      onRecurrenceClick: X
     })]
   })
 }(l = a || (a = {}))[l.BANNER = 0] = "BANNER", l[l.THUMBNAIL = 1] = "THUMBNAIL"

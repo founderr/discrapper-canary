@@ -10,19 +10,19 @@ n.r(t), n.d(t, {
     return a.useCheckboxGroupState
   },
   useComboBoxState: function() {
-    return i.useComboBoxState
+    return o.useComboBoxState
   },
   useDateFieldState: function() {
-    return o.useDateFieldState
+    return i.useDateFieldState
   },
   useDatePickerState: function() {
-    return o.useDatePickerState
+    return i.useDatePickerState
   },
   useDateRangePickerState: function() {
-    return o.useDateRangePickerState
+    return i.useDateRangePickerState
   },
   useTimeFieldState: function() {
-    return o.useTimeFieldState
+    return i.useTimeFieldState
   },
   useListState: function() {
     return s.useListState
@@ -46,10 +46,10 @@ n.r(t), n.d(t, {
     return f.useSliderState
   },
   useTableState: function() {
-    return m.useTableState
+    return h.useTableState
   },
   useTabListState: function() {
-    return h.useTabListState
+    return m.useTabListState
   },
   useToggleState: function() {
     return v.useToggleState
@@ -60,8 +60,8 @@ n.r(t), n.d(t, {
 });
 var r = n("821290"),
   a = n("518206"),
-  i = n("829350"),
-  o = n("796248"),
+  o = n("829350"),
+  i = n("796248"),
   s = n("789292"),
   c = n("451791"),
   l = n("811719"),
@@ -69,7 +69,7 @@ var r = n("821290"),
   d = n("391921"),
   p = n("823080"),
   f = n("617166"),
-  m = n("581555"),
-  h = n("765198"),
+  h = n("581555"),
+  m = n("765198"),
   v = n("219870"),
   g = n("864792")

@@ -1,35 +1,35 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return c
+    return T
   }
 });
-var i = n("37983"),
-  a = n("884691"),
-  l = n("446674"),
-  s = n("77078"),
-  r = n("629109"),
-  o = n("135230"),
-  u = n("42887"),
-  d = n("782340"),
-  c = () => {
-    let e = (0, l.useStateFromStores)([u.default], () => u.default.isInteractionRequired(), []),
-      t = a.useRef(null);
+var t = E("37983"),
+  o = E("884691"),
+  n = E("446674"),
+  r = E("77078"),
+  i = E("629109"),
+  a = E("135230"),
+  I = E("42887"),
+  s = E("782340"),
+  T = () => {
+    let e = (0, n.useStateFromStores)([I.default], () => I.default.isInteractionRequired(), []),
+      _ = o.useRef(null);
 
-    function n() {
-      null !== t.current && ((0, s.closeModal)(t.current), t.current = null)
+    function E() {
+      null !== _.current && ((0, r.closeModal)(_.current), _.current = null)
     }
 
-    function c() {
-      r.default.interact()
+    function T() {
+      i.default.interact()
     }
-    return a.useEffect(() => (e ? t.current = (0, s.openModal)(e => (0, i.jsx)(o.default, {
-      title: d.default.Messages.INTERACTION_REQUIRED_TITLE,
-      body: d.default.Messages.INTERACTION_REQUIRED_BODY,
-      onConfirm: c,
-      confirmText: d.default.Messages.OKAY,
+    return o.useEffect(() => (e ? _.current = (0, r.openModal)(e => (0, t.jsx)(a.default, {
+      title: s.default.Messages.INTERACTION_REQUIRED_TITLE,
+      body: s.default.Messages.INTERACTION_REQUIRED_BODY,
+      onConfirm: T,
+      confirmText: s.default.Messages.OKAY,
       ...e
-    })) : n(), () => {
-      n()
+    })) : E(), () => {
+      E()
     }), [e]), null
   }

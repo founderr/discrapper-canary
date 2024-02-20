@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   CurrencyWrapper: function() {
-    return l
+    return i
   },
   default: function() {
-    return i
+    return r
   }
 });
-var s = n("37983");
-n("884691");
-var r = n("77078"),
-  a = n("575209");
+var a = s("37983");
+s("884691");
+var n = s("77078"),
+  l = s("575209");
 
-function l(e) {
+function i(e) {
   let {
     currencies: t,
-    className: n,
-    children: r
+    className: s,
+    children: n
   } = e;
-  return t.length < 2 ? null : (0, s.jsx)("div", {
-    className: n,
-    children: r
+  return t.length < 2 ? null : (0, a.jsx)("div", {
+    className: s,
+    children: n
   })
 }
-var i = function(e) {
+var r = function(e) {
   let {
     currencies: t,
-    onChange: n,
-    selectedCurrency: l,
-    className: i,
-    disabled: u = !1
+    onChange: s,
+    selectedCurrency: i,
+    className: r,
+    disabled: o = !1
   } = e;
   if (t.length < 2) return null;
-  let c = t.map((e, t) => ({
+  let d = t.map((e, t) => ({
     key: t,
     value: e,
-    label: "".concat(e.toUpperCase(), " - ").concat((0, a.getCurrencyFullName)(e))
+    label: "".concat(e.toUpperCase(), " - ").concat((0, l.getCurrencyFullName)(e))
   }));
-  return (0, s.jsx)(r.SingleSelect, {
-    value: l,
-    options: c,
+  return (0, a.jsx)(n.SingleSelect, {
+    value: i,
+    options: d,
     onChange: e => {
-      null != e && n(e)
+      null != e && s(e)
     },
-    className: i,
-    isDisabled: u
+    className: r,
+    isDisabled: o
   })
 }

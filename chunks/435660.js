@@ -3,12 +3,12 @@ var t;
 
 function o(e) {}
 
-function I(e, _) {}
+function n(e, _) {}
 E.r(_), E.d(_, {
   mark: function() {
     return o
   },
   measure: function() {
-    return I
+    return n
   }
 }), E.g.performance

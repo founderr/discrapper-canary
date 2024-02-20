@@ -9,8 +9,8 @@ function r(e) {
       r = e.formattingValues[o] || e.formattingValues[a]
     } else {
       var i = e.defaultWidth,
-        u = null != n && n.width ? String(n.width) : e.defaultWidth;
-      r = e.values[u] || e.values[i]
+        s = null != n && n.width ? String(n.width) : e.defaultWidth;
+      r = e.values[s] || e.values[i]
     }
     return r[e.argumentCallback ? e.argumentCallback(t) : t]
   }

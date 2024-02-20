@@ -1,51 +1,51 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   Helmet: function() {
-    return J
+    return Q
   },
   HelmetProvider: function() {
-    return F
+    return B
   }
-}), r("808653"), r("781738"), r("424973"), r("70102");
-var n = r("884691"),
-  i = r.n(n),
-  o = r("416037"),
-  s = r.n(o),
-  a = r("153543"),
-  u = r.n(a),
-  c = r("627445"),
-  f = r.n(c),
-  l = r("275370"),
-  h = r.n(l);
+}), n("808653"), n("781738"), n("424973"), n("70102");
+var r = n("884691"),
+  a = n.n(r),
+  o = n("416037"),
+  i = n.n(o),
+  s = n("153543"),
+  u = n.n(s),
+  l = n("627445"),
+  c = n.n(l),
+  d = n("275370"),
+  f = n.n(d);
 
-function d() {
-  return (d = Object.assign || function(e) {
+function p() {
+  return (p = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
-      var r = arguments[t];
-      for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
+      var n = arguments[t];
+      for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
     }
     return e
   }).apply(this, arguments)
 }
 
-function p(e, t) {
-  e.prototype = Object.create(t.prototype), e.prototype.constructor = e, v(e, t)
+function m(e, t) {
+  e.prototype = Object.create(t.prototype), e.prototype.constructor = e, h(e, t)
 }
 
-function v(e, t) {
-  return (v = Object.setPrototypeOf || function(e, t) {
+function h(e, t) {
+  return (h = Object.setPrototypeOf || function(e, t) {
     return e.__proto__ = t, e
   })(e, t)
 }
 
-function g(e, t) {
+function _(e, t) {
   if (null == e) return {};
-  var r, n, i = {},
+  var n, r, a = {},
     o = Object.keys(e);
-  for (n = 0; n < o.length; n++) t.indexOf(r = o[n]) >= 0 || (i[r] = e[r]);
-  return i
+  for (r = 0; r < o.length; r++) t.indexOf(n = o[r]) >= 0 || (a[n] = e[n]);
+  return a
 }
-var b = {
+var y = {
     BASE: "base",
     BODY: "body",
     HEAD: "head",
@@ -58,21 +58,21 @@ var b = {
     TITLE: "title",
     FRAGMENT: "Symbol(react.fragment)"
   },
-  m = {
+  g = {
     rel: ["amphtml", "canonical", "alternate"]
   },
-  y = {
+  v = {
     type: ["application/ld+json"]
   },
-  T = {
+  b = {
     charset: "",
     name: ["robots", "description"],
     property: ["og:type", "og:title", "og:url", "og:image", "og:image:alt", "og:description", "twitter:url", "twitter:title", "twitter:description", "twitter:image", "twitter:image:alt", "twitter:card", "twitter:site"]
   },
-  O = Object.keys(b).map(function(e) {
-    return b[e]
+  M = Object.keys(y).map(function(e) {
+    return y[e]
   }),
-  x = {
+  w = {
     accesskey: "accessKey",
     charset: "charSet",
     class: "className",
@@ -82,78 +82,78 @@ var b = {
     itemprop: "itemProp",
     tabindex: "tabIndex"
   },
-  E = Object.keys(x).reduce(function(e, t) {
-    return e[x[t]] = t, e
+  k = Object.keys(w).reduce(function(e, t) {
+    return e[w[t]] = t, e
   }, {}),
-  w = function(e, t) {
-    for (var r = e.length - 1; r >= 0; r -= 1) {
-      var n = e[r];
-      if (Object.prototype.hasOwnProperty.call(n, t)) return n[t]
+  L = function(e, t) {
+    for (var n = e.length - 1; n >= 0; n -= 1) {
+      var r = e[n];
+      if (Object.prototype.hasOwnProperty.call(r, t)) return r[t]
     }
     return null
   },
-  C = function(e) {
-    var t = w(e, b.TITLE),
-      r = w(e, "titleTemplate");
-    if (Array.isArray(t) && (t = t.join("")), r && t) return r.replace(/%s/g, function() {
+  D = function(e) {
+    var t = L(e, y.TITLE),
+      n = L(e, "titleTemplate");
+    if (Array.isArray(t) && (t = t.join("")), n && t) return n.replace(/%s/g, function() {
       return t
     });
-    var n = w(e, "defaultTitle");
-    return t || n || void 0
+    var r = L(e, "defaultTitle");
+    return t || r || void 0
   },
-  A = function(e, t) {
+  T = function(e, t) {
     return t.filter(function(t) {
       return void 0 !== t[e]
     }).map(function(t) {
       return t[e]
     }).reduce(function(e, t) {
-      return d({}, e, t)
+      return p({}, e, t)
     }, {})
   },
-  z = function(e, t, r) {
-    var n = {};
-    return r.filter(function(t) {
+  S = function(e, t, n) {
+    var r = {};
+    return n.filter(function(t) {
       return !!Array.isArray(t[e]) || (void 0 !== t[e] && console && "function" == typeof console.warn && console.warn("Helmet: " + e + ' should be of type "Array". Instead found type "' + typeof t[e] + '"'), !1)
     }).map(function(t) {
       return t[e]
-    }).reverse().reduce(function(e, r) {
-      var i = {};
-      r.filter(function(e) {
-        for (var r, o = Object.keys(e), s = 0; s < o.length; s += 1) {
-          var a = o[s],
-            u = a.toLowerCase(); - 1 === t.indexOf(u) || "rel" === r && "canonical" === e[r].toLowerCase() || "rel" === u && "stylesheet" === e[u].toLowerCase() || (r = u), -1 === t.indexOf(a) || "innerHTML" !== a && "cssText" !== a && "itemprop" !== a || (r = a)
+    }).reverse().reduce(function(e, n) {
+      var a = {};
+      n.filter(function(e) {
+        for (var n, o = Object.keys(e), i = 0; i < o.length; i += 1) {
+          var s = o[i],
+            u = s.toLowerCase(); - 1 === t.indexOf(u) || "rel" === n && "canonical" === e[n].toLowerCase() || "rel" === u && "stylesheet" === e[u].toLowerCase() || (n = u), -1 === t.indexOf(s) || "innerHTML" !== s && "cssText" !== s && "itemprop" !== s || (n = s)
         }
-        if (!r || !e[r]) return !1;
-        var c = e[r].toLowerCase();
-        return n[r] || (n[r] = {}), i[r] || (i[r] = {}), !n[r][c] && (i[r][c] = !0, !0)
+        if (!n || !e[n]) return !1;
+        var l = e[n].toLowerCase();
+        return r[n] || (r[n] = {}), a[n] || (a[n] = {}), !r[n][l] && (a[n][l] = !0, !0)
       }).reverse().forEach(function(t) {
         return e.push(t)
       });
-      for (var o = Object.keys(i), s = 0; s < o.length; s += 1) {
-        var a = o[s],
-          u = d({}, n[a], i[a]);
-        n[a] = u
+      for (var o = Object.keys(a), i = 0; i < o.length; i += 1) {
+        var s = o[i],
+          u = p({}, r[s], a[s]);
+        r[s] = u
       }
       return e
     }, []).reverse()
   },
-  S = function(e, t) {
+  Y = function(e, t) {
     if (Array.isArray(e) && e.length) {
-      for (var r = 0; r < e.length; r += 1)
-        if (e[r][t]) return !0
+      for (var n = 0; n < e.length; n += 1)
+        if (e[n][t]) return !0
     }
     return !1
   },
-  R = function(e) {
+  x = function(e) {
     return Array.isArray(e) ? e.join("") : e
   },
-  k = function(e, t) {
-    return Array.isArray(e) ? e.reduce(function(e, r) {
+  O = function(e, t) {
+    return Array.isArray(e) ? e.reduce(function(e, n) {
       return ! function(e, t) {
-        for (var r = Object.keys(e), n = 0; n < r.length; n += 1)
-          if (t[r[n]] && t[r[n]].includes(e[r[n]])) return !0;
+        for (var n = Object.keys(e), r = 0; r < n.length; r += 1)
+          if (t[n[r]] && t[n[r]].includes(e[n[r]])) return !0;
         return !1
-      }(r, t) ? e.default.push(r) : e.priority.push(r), e
+      }(n, t) ? e.default.push(n) : e.priority.push(n), e
     }, {
       priority: [],
       default: []
@@ -161,152 +161,152 @@ var b = {
       default: e
     }
   },
-  L = function(e, t) {
-    var r;
-    return d({}, e, ((r = {})[t] = void 0, r))
+  E = function(e, t) {
+    var n;
+    return p({}, e, ((n = {})[t] = void 0, n))
   },
-  M = [b.NOSCRIPT, b.SCRIPT, b.STYLE],
-  I = function(e, t) {
+  P = [y.NOSCRIPT, y.SCRIPT, y.STYLE],
+  j = function(e, t) {
     return void 0 === t && (t = !0), !1 === t ? String(e) : String(e).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
   },
-  P = function(e) {
-    return Object.keys(e).reduce(function(t, r) {
-      var n = void 0 !== e[r] ? r + '="' + e[r] + '"' : "" + r;
-      return t ? t + " " + n : n
+  C = function(e) {
+    return Object.keys(e).reduce(function(t, n) {
+      var r = void 0 !== e[n] ? n + '="' + e[n] + '"' : "" + n;
+      return t ? t + " " + r : r
     }, "")
   },
-  B = function(e, t) {
-    return void 0 === t && (t = {}), Object.keys(e).reduce(function(t, r) {
-      return t[x[r] || r] = e[r], t
+  H = function(e, t) {
+    return void 0 === t && (t = {}), Object.keys(e).reduce(function(t, n) {
+      return t[w[n] || n] = e[n], t
     }, t)
   },
-  j = function(e, t) {
-    return t.map(function(t, r) {
-      var n, o = ((n = {
-        key: r
-      })["data-rh"] = !0, n);
+  F = function(e, t) {
+    return t.map(function(t, n) {
+      var r, o = ((r = {
+        key: n
+      })["data-rh"] = !0, r);
       return Object.keys(t).forEach(function(e) {
-        var r = x[e] || e;
-        "innerHTML" === r || "cssText" === r ? o.dangerouslySetInnerHTML = {
+        var n = w[e] || e;
+        "innerHTML" === n || "cssText" === n ? o.dangerouslySetInnerHTML = {
           __html: t.innerHTML || t.cssText
-        } : o[r] = t[e]
-      }), i.createElement(e, o)
+        } : o[n] = t[e]
+      }), a.createElement(e, o)
     })
   },
-  D = function(e, t, r) {
+  N = function(e, t, n) {
     switch (e) {
-      case b.TITLE:
+      case y.TITLE:
         return {
           toComponent: function() {
-            var e, r, n, o;
-            return r = t.titleAttributes, (n = {
+            var e, n, r, o;
+            return n = t.titleAttributes, (r = {
               key: e = t.title
-            })["data-rh"] = !0, o = B(r, n), [i.createElement(b.TITLE, o, e)]
+            })["data-rh"] = !0, o = H(n, r), [a.createElement(y.TITLE, o, e)]
           }, toString: function() {
-            var n, i, o, s, a, u;
-            return n = e, i = t.title, o = t.titleAttributes, s = r, a = P(o), u = R(i), a ? "<" + n + ' data-rh="true" ' + a + ">" + I(u, s) + "</" + n + ">" : "<" + n + ' data-rh="true">' + I(u, s) + "</" + n + ">"
+            var r, a, o, i, s, u;
+            return r = e, a = t.title, o = t.titleAttributes, i = n, s = C(o), u = x(a), s ? "<" + r + ' data-rh="true" ' + s + ">" + j(u, i) + "</" + r + ">" : "<" + r + ' data-rh="true">' + j(u, i) + "</" + r + ">"
           }
         };
       case "bodyAttributes":
       case "htmlAttributes":
         return {
           toComponent: function() {
-            return B(t)
+            return H(t)
           }, toString: function() {
-            return P(t)
+            return C(t)
           }
         };
       default:
         return {
           toComponent: function() {
-            return j(e, t)
+            return F(e, t)
           }, toString: function() {
-            var n, i, o;
-            return n = e, i = t, o = r, i.reduce(function(e, t) {
-              var r = Object.keys(t).filter(function(e) {
+            var r, a, o;
+            return r = e, a = t, o = n, a.reduce(function(e, t) {
+              var n = Object.keys(t).filter(function(e) {
                   return !("innerHTML" === e || "cssText" === e)
-                }).reduce(function(e, r) {
-                  var n = void 0 === t[r] ? r : r + '="' + I(t[r], o) + '"';
-                  return e ? e + " " + n : n
+                }).reduce(function(e, n) {
+                  var r = void 0 === t[n] ? n : n + '="' + j(t[n], o) + '"';
+                  return e ? e + " " + r : r
                 }, ""),
-                i = t.innerHTML || t.cssText || "",
-                s = -1 === M.indexOf(n);
-              return e + "<" + n + ' data-rh="true" ' + r + (s ? "/>" : ">" + i + "</" + n + ">")
+                a = t.innerHTML || t.cssText || "",
+                i = -1 === P.indexOf(r);
+              return e + "<" + r + ' data-rh="true" ' + n + (i ? "/>" : ">" + a + "</" + r + ">")
             }, "")
           }
         }
     }
   },
-  N = function(e) {
+  I = function(e) {
     var t = e.baseTag,
-      r = e.bodyAttributes,
-      n = e.encode,
-      i = e.htmlAttributes,
+      n = e.bodyAttributes,
+      r = e.encode,
+      a = e.htmlAttributes,
       o = e.noscriptTags,
-      s = e.styleTags,
-      a = e.title,
+      i = e.styleTags,
+      s = e.title,
       u = e.titleAttributes,
-      c = e.linkTags,
-      f = e.metaTags,
-      l = e.scriptTags,
-      h = {
+      l = e.linkTags,
+      c = e.metaTags,
+      d = e.scriptTags,
+      f = {
         toComponent: function() {},
         toString: function() {
           return ""
         }
       };
     if (e.prioritizeSeoTags) {
-      var d, p, v, g, O, x, E, w = (p = (d = e).linkTags, v = d.scriptTags, g = d.encode, O = k(d.metaTags, T), x = k(p, m), E = k(v, y), {
+      var p, m, h, _, M, w, k, L = (m = (p = e).linkTags, h = p.scriptTags, _ = p.encode, M = O(p.metaTags, b), w = O(m, g), k = O(h, v), {
         priorityMethods: {
           toComponent: function() {
-            return [].concat(j(b.META, O.priority), j(b.LINK, x.priority), j(b.SCRIPT, E.priority))
+            return [].concat(F(y.META, M.priority), F(y.LINK, w.priority), F(y.SCRIPT, k.priority))
           },
           toString: function() {
-            return D(b.META, O.priority, g) + " " + D(b.LINK, x.priority, g) + " " + D(b.SCRIPT, E.priority, g)
+            return N(y.META, M.priority, _) + " " + N(y.LINK, w.priority, _) + " " + N(y.SCRIPT, k.priority, _)
           }
         },
-        metaTags: O.default,
-        linkTags: x.default,
-        scriptTags: E.default
+        metaTags: M.default,
+        linkTags: w.default,
+        scriptTags: k.default
       });
-      h = w.priorityMethods, c = w.linkTags, f = w.metaTags, l = w.scriptTags
+      f = L.priorityMethods, l = L.linkTags, c = L.metaTags, d = L.scriptTags
     }
     return {
-      priority: h,
-      base: D(b.BASE, t, n),
-      bodyAttributes: D("bodyAttributes", r, n),
-      htmlAttributes: D("htmlAttributes", i, n),
-      link: D(b.LINK, c, n),
-      meta: D(b.META, f, n),
-      noscript: D(b.NOSCRIPT, o, n),
-      script: D(b.SCRIPT, l, n),
-      style: D(b.STYLE, s, n),
-      title: D(b.TITLE, {
-        title: void 0 === a ? "" : a,
+      priority: f,
+      base: N(y.BASE, t, r),
+      bodyAttributes: N("bodyAttributes", n, r),
+      htmlAttributes: N("htmlAttributes", a, r),
+      link: N(y.LINK, l, r),
+      meta: N(y.META, c, r),
+      noscript: N(y.NOSCRIPT, o, r),
+      script: N(y.SCRIPT, d, r),
+      style: N(y.STYLE, i, r),
+      title: N(y.TITLE, {
+        title: void 0 === s ? "" : s,
         titleAttributes: u
-      }, n)
+      }, r)
     }
   },
-  H = [],
-  _ = function(e, t) {
-    var r = this;
+  A = [],
+  R = function(e, t) {
+    var n = this;
     void 0 === t && (t = "undefined" != typeof document), this.instances = [], this.value = {
       setHelmet: function(e) {
-        r.context.helmet = e
+        n.context.helmet = e
       },
       helmetInstances: {
         get: function() {
-          return r.canUseDOM ? H : r.instances
+          return n.canUseDOM ? A : n.instances
         },
         add: function(e) {
-          (r.canUseDOM ? H : r.instances).push(e)
+          (n.canUseDOM ? A : n.instances).push(e)
         },
         remove: function(e) {
-          var t = (r.canUseDOM ? H : r.instances).indexOf(e);
-          (r.canUseDOM ? H : r.instances).splice(t, 1)
+          var t = (n.canUseDOM ? A : n.instances).indexOf(e);
+          (n.canUseDOM ? A : n.instances).splice(t, 1)
         }
       }
-    }, this.context = e, this.canUseDOM = t, t || (e.helmet = N({
+    }, this.context = e, this.canUseDOM = t, t || (e.helmet = I({
       baseTag: [],
       bodyAttributes: {},
       encodeSpecialCharacters: !0,
@@ -320,293 +320,293 @@ var b = {
       titleAttributes: {}
     }))
   },
-  q = i.createContext({}),
-  U = s.shape({
-    setHelmet: s.func,
-    helmetInstances: s.shape({
-      get: s.func,
-      add: s.func,
-      remove: s.func
+  z = a.createContext({}),
+  W = i.shape({
+    setHelmet: i.func,
+    helmetInstances: i.shape({
+      get: i.func,
+      add: i.func,
+      remove: i.func
     })
   }),
-  F = function(e) {
-    function t(r) {
-      var n;
-      return (n = e.call(this, r) || this).helmetData = new _(n.props.context, t.canUseDOM), n
+  B = function(e) {
+    function t(n) {
+      var r;
+      return (r = e.call(this, n) || this).helmetData = new R(r.props.context, t.canUseDOM), r
     }
-    return p(t, e), t.prototype.render = function() {
-      return i.createElement(q.Provider, {
+    return m(t, e), t.prototype.render = function() {
+      return a.createElement(z.Provider, {
         value: this.helmetData.value
       }, this.props.children)
     }, t
-  }(n.Component);
-F.canUseDOM = "undefined" != typeof document, F.propTypes = {
-  context: s.shape({
-    helmet: s.shape()
+  }(r.Component);
+B.canUseDOM = "undefined" != typeof document, B.propTypes = {
+  context: i.shape({
+    helmet: i.shape()
   }),
-  children: s.node.isRequired
-}, F.defaultProps = {
+  children: i.node.isRequired
+}, B.defaultProps = {
   context: {}
-}, F.displayName = "HelmetProvider";
-var Y = function(e, t) {
-    var r, n = document.head || document.querySelector(b.HEAD),
-      i = n.querySelectorAll(e + "[data-rh]"),
-      o = [].slice.call(i),
-      s = [];
+}, B.displayName = "HelmetProvider";
+var U = function(e, t) {
+    var n, r = document.head || document.querySelector(y.HEAD),
+      a = r.querySelectorAll(e + "[data-rh]"),
+      o = [].slice.call(a),
+      i = [];
     return t && t.length && t.forEach(function(t) {
-      var n = document.createElement(e);
-      for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && ("innerHTML" === i ? n.innerHTML = t.innerHTML : "cssText" === i ? n.styleSheet ? n.styleSheet.cssText = t.cssText : n.appendChild(document.createTextNode(t.cssText)) : n.setAttribute(i, void 0 === t[i] ? "" : t[i]));
-      n.setAttribute("data-rh", "true"), o.some(function(e, t) {
-        return r = t, n.isEqualNode(e)
-      }) ? o.splice(r, 1) : s.push(n)
+      var r = document.createElement(e);
+      for (var a in t) Object.prototype.hasOwnProperty.call(t, a) && ("innerHTML" === a ? r.innerHTML = t.innerHTML : "cssText" === a ? r.styleSheet ? r.styleSheet.cssText = t.cssText : r.appendChild(document.createTextNode(t.cssText)) : r.setAttribute(a, void 0 === t[a] ? "" : t[a]));
+      r.setAttribute("data-rh", "true"), o.some(function(e, t) {
+        return n = t, r.isEqualNode(e)
+      }) ? o.splice(n, 1) : i.push(r)
     }), o.forEach(function(e) {
       return e.parentNode.removeChild(e)
-    }), s.forEach(function(e) {
-      return n.appendChild(e)
+    }), i.forEach(function(e) {
+      return r.appendChild(e)
     }), {
       oldTags: o,
-      newTags: s
+      newTags: i
     }
   },
-  G = function(e, t) {
-    var r = document.getElementsByTagName(e)[0];
-    if (r) {
-      for (var n = r.getAttribute("data-rh"), i = n ? n.split(",") : [], o = [].concat(i), s = Object.keys(t), a = 0; a < s.length; a += 1) {
-        var u = s[a],
-          c = t[u] || "";
-        r.getAttribute(u) !== c && r.setAttribute(u, c), -1 === i.indexOf(u) && i.push(u);
-        var f = o.indexOf(u); - 1 !== f && o.splice(f, 1)
+  K = function(e, t) {
+    var n = document.getElementsByTagName(e)[0];
+    if (n) {
+      for (var r = n.getAttribute("data-rh"), a = r ? r.split(",") : [], o = [].concat(a), i = Object.keys(t), s = 0; s < i.length; s += 1) {
+        var u = i[s],
+          l = t[u] || "";
+        n.getAttribute(u) !== l && n.setAttribute(u, l), -1 === a.indexOf(u) && a.push(u);
+        var c = o.indexOf(u); - 1 !== c && o.splice(c, 1)
       }
-      for (var l = o.length - 1; l >= 0; l -= 1) r.removeAttribute(o[l]);
-      i.length === o.length ? r.removeAttribute("data-rh") : r.getAttribute("data-rh") !== s.join(",") && r.setAttribute("data-rh", s.join(","))
+      for (var d = o.length - 1; d >= 0; d -= 1) n.removeAttribute(o[d]);
+      a.length === o.length ? n.removeAttribute("data-rh") : n.getAttribute("data-rh") !== i.join(",") && n.setAttribute("data-rh", i.join(","))
     }
   },
   V = function(e, t) {
-    var r, n, i = e.baseTag,
+    var n, r, a = e.baseTag,
       o = e.htmlAttributes,
-      s = e.linkTags,
-      a = e.metaTags,
+      i = e.linkTags,
+      s = e.metaTags,
       u = e.noscriptTags,
-      c = e.onChangeClientState,
-      f = e.scriptTags,
-      l = e.styleTags,
-      h = e.title,
-      d = e.titleAttributes;
-    G(b.BODY, e.bodyAttributes), G(b.HTML, o), r = h, n = d, void 0 !== r && document.title !== r && (document.title = R(r)), G(b.TITLE, n);
-    var p = {
-        baseTag: Y(b.BASE, i),
-        linkTags: Y(b.LINK, s),
-        metaTags: Y(b.META, a),
-        noscriptTags: Y(b.NOSCRIPT, u),
-        scriptTags: Y(b.SCRIPT, f),
-        styleTags: Y(b.STYLE, l)
+      l = e.onChangeClientState,
+      c = e.scriptTags,
+      d = e.styleTags,
+      f = e.title,
+      p = e.titleAttributes;
+    K(y.BODY, e.bodyAttributes), K(y.HTML, o), n = f, r = p, void 0 !== n && document.title !== n && (document.title = x(n)), K(y.TITLE, r);
+    var m = {
+        baseTag: U(y.BASE, a),
+        linkTags: U(y.LINK, i),
+        metaTags: U(y.META, s),
+        noscriptTags: U(y.NOSCRIPT, u),
+        scriptTags: U(y.SCRIPT, c),
+        styleTags: U(y.STYLE, d)
       },
-      v = {},
-      g = {};
-    Object.keys(p).forEach(function(e) {
-      var t = p[e],
-        r = t.newTags,
-        n = t.oldTags;
-      r.length && (v[e] = r), n.length && (g[e] = p[e].oldTags)
-    }), t && t(), c(e, v, g)
+      h = {},
+      _ = {};
+    Object.keys(m).forEach(function(e) {
+      var t = m[e],
+        n = t.newTags,
+        r = t.oldTags;
+      n.length && (h[e] = n), r.length && (_[e] = m[e].oldTags)
+    }), t && t(), l(e, h, _)
   },
-  W = null,
-  X = function(e) {
+  J = null,
+  G = function(e) {
     function t() {
-      for (var t, r = arguments.length, n = Array(r), i = 0; i < r; i++) n[i] = arguments[i];
-      return (t = e.call.apply(e, [this].concat(n)) || this).rendered = !1, t
+      for (var t, n = arguments.length, r = Array(n), a = 0; a < n; a++) r[a] = arguments[a];
+      return (t = e.call.apply(e, [this].concat(r)) || this).rendered = !1, t
     }
-    p(t, e);
-    var r = t.prototype;
-    return r.shouldComponentUpdate = function(e) {
-      return !h(e, this.props)
-    }, r.componentDidUpdate = function() {
+    m(t, e);
+    var n = t.prototype;
+    return n.shouldComponentUpdate = function(e) {
+      return !f(e, this.props)
+    }, n.componentDidUpdate = function() {
       this.emitChange()
-    }, r.componentWillUnmount = function() {
+    }, n.componentWillUnmount = function() {
       this.props.context.helmetInstances.remove(this), this.emitChange()
-    }, r.emitChange = function() {
-      var e, t, r = this.props.context,
-        n = r.setHelmet,
-        i = null,
+    }, n.emitChange = function() {
+      var e, t, n = this.props.context,
+        r = n.setHelmet,
+        a = null,
         o = {
-          baseTag: (e = ["href"], (t = r.helmetInstances.get().map(function(e) {
-            var t = d({}, e.props);
+          baseTag: (e = ["href"], (t = n.helmetInstances.get().map(function(e) {
+            var t = p({}, e.props);
             return delete t.context, t
           })).filter(function(e) {
-            return void 0 !== e[b.BASE]
+            return void 0 !== e[y.BASE]
           }).map(function(e) {
-            return e[b.BASE]
-          }).reverse().reduce(function(t, r) {
+            return e[y.BASE]
+          }).reverse().reduce(function(t, n) {
             if (!t.length)
-              for (var n = Object.keys(r), i = 0; i < n.length; i += 1) {
-                var o = n[i].toLowerCase();
-                if (-1 !== e.indexOf(o) && r[o]) return t.concat(r)
+              for (var r = Object.keys(n), a = 0; a < r.length; a += 1) {
+                var o = r[a].toLowerCase();
+                if (-1 !== e.indexOf(o) && n[o]) return t.concat(n)
               }
             return t
           }, [])),
-          bodyAttributes: A("bodyAttributes", t),
-          defer: w(t, "defer"),
-          encode: w(t, "encodeSpecialCharacters"),
-          htmlAttributes: A("htmlAttributes", t),
-          linkTags: z(b.LINK, ["rel", "href"], t),
-          metaTags: z(b.META, ["name", "charset", "http-equiv", "property", "itemprop"], t),
-          noscriptTags: z(b.NOSCRIPT, ["innerHTML"], t),
-          onChangeClientState: w(t, "onChangeClientState") || function() {},
-          scriptTags: z(b.SCRIPT, ["src", "innerHTML"], t),
-          styleTags: z(b.STYLE, ["cssText"], t),
-          title: C(t),
-          titleAttributes: A("titleAttributes", t),
-          prioritizeSeoTags: S(t, "prioritizeSeoTags")
+          bodyAttributes: T("bodyAttributes", t),
+          defer: L(t, "defer"),
+          encode: L(t, "encodeSpecialCharacters"),
+          htmlAttributes: T("htmlAttributes", t),
+          linkTags: S(y.LINK, ["rel", "href"], t),
+          metaTags: S(y.META, ["name", "charset", "http-equiv", "property", "itemprop"], t),
+          noscriptTags: S(y.NOSCRIPT, ["innerHTML"], t),
+          onChangeClientState: L(t, "onChangeClientState") || function() {},
+          scriptTags: S(y.SCRIPT, ["src", "innerHTML"], t),
+          styleTags: S(y.STYLE, ["cssText"], t),
+          title: D(t),
+          titleAttributes: T("titleAttributes", t),
+          prioritizeSeoTags: Y(t, "prioritizeSeoTags")
         };
-      F.canUseDOM ? (W && cancelAnimationFrame(W), o.defer ? W = requestAnimationFrame(function() {
+      B.canUseDOM ? (J && cancelAnimationFrame(J), o.defer ? J = requestAnimationFrame(function() {
         V(o, function() {
-          W = null
+          J = null
         })
-      }) : (V(o), W = null)) : N && (i = N(o)), n(i)
-    }, r.init = function() {
+      }) : (V(o), J = null)) : I && (a = I(o)), r(a)
+    }, n.init = function() {
       this.rendered || (this.rendered = !0, this.props.context.helmetInstances.add(this), this.emitChange())
-    }, r.render = function() {
+    }, n.render = function() {
       return this.init(), null
     }, t
-  }(n.Component);
-X.propTypes = {
-  context: U.isRequired
-}, X.displayName = "HelmetDispatcher";
-var K = ["children"],
+  }(r.Component);
+G.propTypes = {
+  context: W.isRequired
+}, G.displayName = "HelmetDispatcher";
+var q = ["children"],
   $ = ["children"],
-  J = function(e) {
+  Q = function(e) {
     function t() {
       return e.apply(this, arguments) || this
     }
-    p(t, e);
-    var r = t.prototype;
-    return r.shouldComponentUpdate = function(e) {
-      return !u(L(this.props, "helmetData"), L(e, "helmetData"))
-    }, r.mapNestedChildrenToProps = function(e, t) {
+    m(t, e);
+    var n = t.prototype;
+    return n.shouldComponentUpdate = function(e) {
+      return !u(E(this.props, "helmetData"), E(e, "helmetData"))
+    }, n.mapNestedChildrenToProps = function(e, t) {
       if (!t) return null;
       switch (e.type) {
-        case b.SCRIPT:
-        case b.NOSCRIPT:
+        case y.SCRIPT:
+        case y.NOSCRIPT:
           return {
             innerHTML: t
           };
-        case b.STYLE:
+        case y.STYLE:
           return {
             cssText: t
           };
         default:
           throw Error("<" + e.type + " /> elements are self-closing and can not contain children. Refer to our API for more information.")
       }
-    }, r.flattenArrayTypeChildren = function(e) {
-      var t, r = e.child,
-        n = e.arrayTypeChildren;
-      return d({}, n, ((t = {})[r.type] = [].concat(n[r.type] || [], [d({}, e.newChildProps, this.mapNestedChildrenToProps(r, e.nestedChildren))]), t))
-    }, r.mapObjectTypeChildren = function(e) {
-      var t, r, n = e.child,
-        i = e.newProps,
+    }, n.flattenArrayTypeChildren = function(e) {
+      var t, n = e.child,
+        r = e.arrayTypeChildren;
+      return p({}, r, ((t = {})[n.type] = [].concat(r[n.type] || [], [p({}, e.newChildProps, this.mapNestedChildrenToProps(n, e.nestedChildren))]), t))
+    }, n.mapObjectTypeChildren = function(e) {
+      var t, n, r = e.child,
+        a = e.newProps,
         o = e.newChildProps,
-        s = e.nestedChildren;
-      switch (n.type) {
-        case b.TITLE:
-          return d({}, i, ((t = {})[n.type] = s, t.titleAttributes = d({}, o), t));
-        case b.BODY:
-          return d({}, i, {
-            bodyAttributes: d({}, o)
+        i = e.nestedChildren;
+      switch (r.type) {
+        case y.TITLE:
+          return p({}, a, ((t = {})[r.type] = i, t.titleAttributes = p({}, o), t));
+        case y.BODY:
+          return p({}, a, {
+            bodyAttributes: p({}, o)
           });
-        case b.HTML:
-          return d({}, i, {
-            htmlAttributes: d({}, o)
+        case y.HTML:
+          return p({}, a, {
+            htmlAttributes: p({}, o)
           });
         default:
-          return d({}, i, ((r = {})[n.type] = d({}, o), r))
+          return p({}, a, ((n = {})[r.type] = p({}, o), n))
       }
-    }, r.mapArrayTypeChildrenToProps = function(e, t) {
-      var r = d({}, t);
+    }, n.mapArrayTypeChildrenToProps = function(e, t) {
+      var n = p({}, t);
       return Object.keys(e).forEach(function(t) {
-        var n;
-        r = d({}, r, ((n = {})[t] = e[t], n))
-      }), r
-    }, r.warnOnInvalidChildren = function(e, t) {
-      return f(O.some(function(t) {
+        var r;
+        n = p({}, n, ((r = {})[t] = e[t], r))
+      }), n
+    }, n.warnOnInvalidChildren = function(e, t) {
+      return c(M.some(function(t) {
         return e.type === t
-      }), "function" == typeof e.type ? "You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information." : "Only elements types " + O.join(", ") + " are allowed. Helmet does not support rendering <" + e.type + "> elements. Refer to our API for more information."), f(!t || "string" == typeof t || Array.isArray(t) && !t.some(function(e) {
+      }), "function" == typeof e.type ? "You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information." : "Only elements types " + M.join(", ") + " are allowed. Helmet does not support rendering <" + e.type + "> elements. Refer to our API for more information."), c(!t || "string" == typeof t || Array.isArray(t) && !t.some(function(e) {
         return "string" != typeof e
       }), "Helmet expects a string as a child of <" + e.type + ">. Did you forget to wrap your children in braces? ( <" + e.type + ">{``}</" + e.type + "> ) Refer to our API for more information."), !0
-    }, r.mapChildrenToProps = function(e, t) {
-      var r = this,
-        n = {};
-      return i.Children.forEach(e, function(e) {
+    }, n.mapChildrenToProps = function(e, t) {
+      var n = this,
+        r = {};
+      return a.Children.forEach(e, function(e) {
         if (e && e.props) {
-          var i = e.props,
-            o = i.children,
-            s = g(i, K),
-            a = Object.keys(s).reduce(function(e, t) {
-              return e[E[t] || t] = s[t], e
+          var a = e.props,
+            o = a.children,
+            i = _(a, q),
+            s = Object.keys(i).reduce(function(e, t) {
+              return e[k[t] || t] = i[t], e
             }, {}),
             u = e.type;
-          switch ("symbol" == typeof u ? u = u.toString() : r.warnOnInvalidChildren(e, o), u) {
-            case b.FRAGMENT:
-              t = r.mapChildrenToProps(o, t);
+          switch ("symbol" == typeof u ? u = u.toString() : n.warnOnInvalidChildren(e, o), u) {
+            case y.FRAGMENT:
+              t = n.mapChildrenToProps(o, t);
               break;
-            case b.LINK:
-            case b.META:
-            case b.NOSCRIPT:
-            case b.SCRIPT:
-            case b.STYLE:
-              n = r.flattenArrayTypeChildren({
+            case y.LINK:
+            case y.META:
+            case y.NOSCRIPT:
+            case y.SCRIPT:
+            case y.STYLE:
+              r = n.flattenArrayTypeChildren({
                 child: e,
-                arrayTypeChildren: n,
-                newChildProps: a,
+                arrayTypeChildren: r,
+                newChildProps: s,
                 nestedChildren: o
               });
               break;
             default:
-              t = r.mapObjectTypeChildren({
+              t = n.mapObjectTypeChildren({
                 child: e,
                 newProps: t,
-                newChildProps: a,
+                newChildProps: s,
                 nestedChildren: o
               })
           }
         }
-      }), this.mapArrayTypeChildrenToProps(n, t)
-    }, r.render = function() {
+      }), this.mapArrayTypeChildrenToProps(r, t)
+    }, n.render = function() {
       var e = this.props,
         t = e.children,
-        r = g(e, $),
-        n = d({}, r),
-        o = r.helmetData;
-      return t && (n = this.mapChildrenToProps(t, n)), !o || o instanceof _ || (o = new _(o.context, o.instances)), o ? i.createElement(X, d({}, n, {
+        n = _(e, $),
+        r = p({}, n),
+        o = n.helmetData;
+      return t && (r = this.mapChildrenToProps(t, r)), !o || o instanceof R || (o = new R(o.context, o.instances)), o ? a.createElement(G, p({}, r, {
         context: o.value,
         helmetData: void 0
-      })) : i.createElement(q.Consumer, null, function(e) {
-        return i.createElement(X, d({}, n, {
+      })) : a.createElement(z.Consumer, null, function(e) {
+        return a.createElement(G, p({}, r, {
           context: e
         }))
       })
     }, t
-  }(n.Component);
-J.propTypes = {
-  base: s.object,
-  bodyAttributes: s.object,
-  children: s.oneOfType([s.arrayOf(s.node), s.node]),
-  defaultTitle: s.string,
-  defer: s.bool,
-  encodeSpecialCharacters: s.bool,
-  htmlAttributes: s.object,
-  link: s.arrayOf(s.object),
-  meta: s.arrayOf(s.object),
-  noscript: s.arrayOf(s.object),
-  onChangeClientState: s.func,
-  script: s.arrayOf(s.object),
-  style: s.arrayOf(s.object),
-  title: s.string,
-  titleAttributes: s.object,
-  titleTemplate: s.string,
-  prioritizeSeoTags: s.bool,
-  helmetData: s.object
-}, J.defaultProps = {
+  }(r.Component);
+Q.propTypes = {
+  base: i.object,
+  bodyAttributes: i.object,
+  children: i.oneOfType([i.arrayOf(i.node), i.node]),
+  defaultTitle: i.string,
+  defer: i.bool,
+  encodeSpecialCharacters: i.bool,
+  htmlAttributes: i.object,
+  link: i.arrayOf(i.object),
+  meta: i.arrayOf(i.object),
+  noscript: i.arrayOf(i.object),
+  onChangeClientState: i.func,
+  script: i.arrayOf(i.object),
+  style: i.arrayOf(i.object),
+  title: i.string,
+  titleAttributes: i.object,
+  titleTemplate: i.string,
+  prioritizeSeoTags: i.bool,
+  helmetData: i.object
+}, Q.defaultProps = {
   defer: !0,
   encodeSpecialCharacters: !0,
   prioritizeSeoTags: !1
-}, J.displayName = "Helmet"
+}, Q.displayName = "Helmet"

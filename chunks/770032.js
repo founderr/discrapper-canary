@@ -1,96 +1,96 @@
 "use strict";
-let i, a;
-n.r(t), n.d(t, {
+let t, o;
+E.r(_), E.d(_, {
   MultiAccountTokenStatus: function() {
-    return l
+    return n
   },
   default: function() {
-    return g
+    return u
   }
-}), n("424973");
-var l, s, r = n("171718"),
-  o = n("446674"),
-  u = n("913144"),
-  d = n("746574"),
-  c = n("995802"),
-  f = n("583374");
-(s = l || (l = {}))[s.INVALID = 0] = "INVALID", s[s.VALIDATING = 1] = "VALIDATING", s[s.VALID = 2] = "VALID";
-let E = [],
-  h = !1;
+}), E("424973");
+var n, r, i = E("171718"),
+  a = E("446674"),
+  I = E("913144"),
+  s = E("746574"),
+  T = E("995802"),
+  S = E("583374");
+(r = n || (n = {}))[r.INVALID = 0] = "INVALID", r[r.VALIDATING = 1] = "VALIDATING", r[r.VALID = 2] = "VALID";
+let N = [],
+  O = !1;
 
-function _(e) {
-  E = E.filter(t => {
+function A(e) {
+  N = N.filter(_ => {
     let {
-      id: n
-    } = t;
-    return n !== e
-  }), r.default.removeToken(e)
+      id: E
+    } = _;
+    return E !== e
+  }), i.default.removeToken(e)
 }
 
-function C(e, t) {
-  let n = E.slice(),
-    i = n.find(t => {
+function R(e, _) {
+  let E = N.slice(),
+    t = E.find(_ => {
       let {
-        id: n
-      } = t;
-      return n === e
+        id: E
+      } = _;
+      return E === e
     });
-  null != i && (i.tokenStatus = t, E = n)
+  null != t && (t.tokenStatus = _, N = E)
 }
-class S extends o.default.PersistedStore {
+class l extends a.default.PersistedStore {
   initialize(e) {
     if (null != e) {
-      var t;
-      E = null !== (t = e.users) && void 0 !== t ? t : [], a = e.canUseMultiAccountMobile
+      var _;
+      N = null !== (_ = e.users) && void 0 !== _ ? _ : [], o = e.canUseMultiAccountMobile
     }
   }
   getCanUseMultiAccountMobile() {
-    return a
+    return o
   }
   getState() {
     return {
-      users: E,
-      canUseMultiAccountMobile: a
+      users: N,
+      canUseMultiAccountMobile: o
     }
   }
   getUsers() {
-    return E
+    return N
   }
   getValidUsers() {
-    return E.filter(e => {
+    return N.filter(e => {
       let {
-        tokenStatus: t
+        tokenStatus: _
       } = e;
-      return 0 !== t
+      return 0 !== _
     })
   }
   getHasLoggedInAccounts() {
-    return E.length > 0
+    return N.length > 0
   }
   getIsValidatingUsers() {
-    return E.some(e => {
+    return N.some(e => {
       let {
-        tokenStatus: t
+        tokenStatus: _
       } = e;
-      return 1 === t
+      return 1 === _
     })
   }
   get canUseMultiAccountNotifications() {
-    return this.getCanUseMultiAccountMobile() && c.MultiAccountMobileNotificationsExperiment.getCurrentConfig({
+    return this.getCanUseMultiAccountMobile() && T.MultiAccountMobileNotificationsExperiment.getCurrentConfig({
       location: "09e468_1"
     }, {
       autoTrackExposure: !1
     }).isMultiAccountMobileNotificationsEnabled
   }
   get isSwitchingAccount() {
-    return h
+    return O
   }
 }
-S.displayName = "MultiAccountStore", S.persistKey = "MultiAccountStore", S.migrations = [e => {
+l.displayName = "MultiAccountStore", l.persistKey = "MultiAccountStore", l.migrations = [e => {
   if (null != e) {
-    var t;
+    var _;
     return {
-      users: null !== (t = e.users) && void 0 !== t ? t : [],
+      users: null !== (_ = e.users) && void 0 !== _ ? _ : [],
       canUseMultiAccountMobile: !1
     }
   }
@@ -99,87 +99,87 @@ S.displayName = "MultiAccountStore", S.persistKey = "MultiAccountStore", S.migra
     canUseMultiAccountMobile: !1
   }
 }];
-var g = new S(u.default, {
+var u = new l(I.default, {
   CONNECTION_OPEN: function(e) {
     let {
-      user: t
+      user: _
     } = e;
-    i = t.id, h = !1;
-    let n = E.slice(),
-      a = n.findIndex(e => {
+    t = _.id, O = !1;
+    let E = N.slice(),
+      o = E.findIndex(e => {
         let {
-          id: n
+          id: E
         } = e;
-        return n === t.id
+        return E === _.id
       });
-    if (a > -1 ? (E[a].avatar = t.avatar, E[a].username = t.username, E[a].discriminator = t.discriminator, E[a].tokenStatus = 2) : n.push({
-        id: t.id,
-        avatar: t.avatar,
-        username: t.username,
-        discriminator: t.discriminator,
+    if (o > -1 ? (N[o].avatar = _.avatar, N[o].username = _.username, N[o].discriminator = _.discriminator, N[o].tokenStatus = 2) : E.push({
+        id: _.id,
+        avatar: _.avatar,
+        username: _.username,
+        discriminator: _.discriminator,
         tokenStatus: 2,
         pushSyncToken: null
-      }), (E = n).length > f.MAX_ACCOUNTS) {
-      let e = E.splice(f.MAX_ACCOUNTS);
+      }), (N = E).length > S.MAX_ACCOUNTS) {
+      let e = N.splice(S.MAX_ACCOUNTS);
       e.forEach(e => {
         let {
-          id: t
+          id: _
         } = e;
-        _(t)
+        A(_)
       })
     }
   },
   LOGOUT: function(e) {
-    h = !!e.isSwitchingAccount, !e.isSwitchingAccount && (E = E.filter(e => {
+    O = !!e.isSwitchingAccount, !e.isSwitchingAccount && (N = N.filter(e => {
       let {
-        id: t
+        id: _
       } = e;
-      return t !== i
-    })), i = null
+      return _ !== t
+    })), t = null
   },
-  MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => C(e.userId, 1),
-  MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => C(e.userId, 2),
-  MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => C(e.userId, 0),
-  MULTI_ACCOUNT_REMOVE_ACCOUNT: e => _(e.userId),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: e => R(e.userId, 1),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: e => R(e.userId, 2),
+  MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: e => R(e.userId, 0),
+  MULTI_ACCOUNT_REMOVE_ACCOUNT: e => A(e.userId),
   MULTI_ACCOUNT_MOVE_ACCOUNT: function(e) {
     let {
-      from: t,
-      to: n
+      from: _,
+      to: E
     } = e;
-    E = (0, d.moveItemFromTo)(E, t, n)
+    N = (0, s.moveItemFromTo)(N, _, E)
   },
   CURRENT_USER_UPDATE: function(e) {
     let {
-      user: t
-    } = e, n = E.slice(), i = n.find(e => {
+      user: _
+    } = e, E = N.slice(), t = E.find(e => {
       let {
-        id: n
+        id: E
       } = e;
-      return n === t.id
+      return E === _.id
     });
-    null != i && (i.avatar = t.avatar, i.username = t.username, i.discriminator = t.discriminator, E = n)
+    null != t && (t.avatar = _.avatar, t.username = _.username, t.discriminator = _.discriminator, N = E)
   },
   MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: function(e) {
     let {
-      multiAccountMobileExperimentEnabled: t
+      multiAccountMobileExperimentEnabled: _
     } = e;
-    a = t
+    o = _
   },
   MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: function(e) {
     let {
-      userId: t,
-      pushSyncToken: n
+      userId: _,
+      pushSyncToken: E
     } = e;
-    E = E.map(e => e.id === t ? {
+    N = N.map(e => e.id === _ ? {
       ...e,
-      pushSyncToken: n
+      pushSyncToken: E
     } : e)
   },
   MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: function(e) {
     let {
-      invalidPushSyncTokens: t
+      invalidPushSyncTokens: _
     } = e;
-    E = E.map(e => null != e.pushSyncToken && t.includes(e.pushSyncToken) ? {
+    N = N.map(e => null != e.pushSyncToken && _.includes(e.pushSyncToken) ? {
       ...e,
       pushSyncToken: null
     } : e)

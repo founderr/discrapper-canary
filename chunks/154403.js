@@ -1,74 +1,74 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return g
+    return u
   }
-}), n("222007");
-var i = n("37983"),
-  a = n("884691"),
-  l = n("414456"),
-  s = n.n(l),
-  r = n("446674"),
-  o = n("77078"),
-  u = n("368694"),
-  d = n("313915"),
-  c = n("578706"),
-  f = n("381546"),
-  E = n("655804"),
-  h = n("238500"),
-  _ = n("983782"),
-  C = n("939011"),
-  S = n("440296");
+}), E("222007");
+var t = E("37983"),
+  o = E("884691"),
+  n = E("414456"),
+  r = E.n(n),
+  i = E("446674"),
+  a = E("77078"),
+  I = E("368694"),
+  s = E("313915"),
+  T = E("578706"),
+  S = E("381546"),
+  N = E("655804"),
+  O = E("238500"),
+  A = E("983782"),
+  R = E("939011"),
+  l = E("440296");
 
-function g() {
+function u() {
   let {
     debugTrackedData: e,
-    impressions: t
-  } = (0, C.useImpressionStore)(e => ({
+    impressions: _
+  } = (0, R.useImpressionStore)(e => ({
     debugTrackedData: e.debugTrackedData,
     impressions: e.impressions
-  })), n = (0, r.useStateFromStores)([d.default], () => d.default.isAnalyticsDebuggerEnabled), l = (0, r.useStateFromStores)([u.default], () => u.default.isDeveloper), [g, T] = a.useState(!1), {
-    name: m,
-    ...p
-  } = null != e ? e : {}, I = null != m;
-  return l && n ? (0, i.jsx)(_.default, {
-    children: (0, i.jsxs)("div", {
-      className: s(S.container, {
-        [S.containerMinimized]: g,
-        [S.notTracked]: !I
+  })), E = (0, i.useStateFromStores)([s.default], () => s.default.isAnalyticsDebuggerEnabled), n = (0, i.useStateFromStores)([I.default], () => I.default.isDeveloper), [u, L] = o.useState(!1), {
+    name: C,
+    ...D
+  } = null != e ? e : {}, c = null != C;
+  return n && E ? (0, t.jsx)(A.default, {
+    children: (0, t.jsxs)("div", {
+      className: r(l.container, {
+        [l.containerMinimized]: u,
+        [l.notTracked]: !c
       }),
-      children: [(0, i.jsx)(o.Clickable, {
-        className: S.minimizeButton,
+      children: [(0, t.jsx)(a.Clickable, {
+        className: l.minimizeButton,
         onClick: () => {
-          T(!g)
+          L(!u)
         },
-        children: g ? (0, i.jsx)(E.default, {}) : (0, i.jsx)(h.default, {})
-      }), (0, i.jsxs)("div", {
-        className: s(S.content, {
-          [S.contentMinimized]: g
+        children: u ? (0, t.jsx)(N.default, {}) : (0, t.jsx)(O.default, {})
+      }), (0, t.jsxs)("div", {
+        className: r(l.content, {
+          [l.contentMinimized]: u
         }),
-        children: [(0, i.jsxs)(o.Text, {
-          className: s(S.label, {
-            [S.notTracked]: !I
+        children: [(0, t.jsxs)(a.Text, {
+          className: r(l.label, {
+            [l.notTracked]: !c
           }),
           variant: "text-xxs/normal",
-          children: [I ? (0, i.jsx)(c.default, {
-            className: S.iconTracked
-          }) : (0, i.jsx)(f.default, {
-            className: S.iconNotTracked
-          }), null != m ? m : "(untracked)"]
-        }), (0, i.jsx)("div", {
-          className: S.current,
-          children: JSON.stringify(p, void 0, 2)
-        }), (0, i.jsx)(o.Text, {
-          className: s(S.label, {
-            [S.notTracked]: !I
+          children: [c ? (0, t.jsx)(T.default, {
+            className: l.iconTracked
+          }) : (0, t.jsx)(S.default, {
+            className: l.iconNotTracked
+          }), null != C ? C : "(untracked)"]
+        }), (0, t.jsx)("div", {
+          className: l.current,
+          children: JSON.stringify(D, void 0, 2)
+        }), (0, t.jsx)(a.Text, {
+          className: r(l.label, {
+            [l.notTracked]: !c
           }),
           variant: "text-xxs/normal",
           children: "impressions stack"
-        }), (0, i.jsx)("div", {
-          className: S.stack,
-          children: JSON.stringify(t, void 0, 2)
+        }), (0, t.jsx)("div", {
+          className: l.stack,
+          children: JSON.stringify(_, void 0, 2)
         })]
       })]
     })

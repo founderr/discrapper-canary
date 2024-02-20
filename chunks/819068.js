@@ -17,25 +17,25 @@ n.r(t), n.d(t, {
     return c
   },
   getPID: function() {
-    return p
-  },
-  setPID: function() {
-    return h
-  },
-  getRPCAuthToken: function() {
     return f
   },
-  validResolution: function() {
+  setPID: function() {
     return E
+  },
+  getRPCAuthToken: function() {
+    return p
+  },
+  validResolution: function() {
+    return h
   },
   setOutOfProcessSupport: function() {
     return _
   },
   supportsOutOfProcess: function() {
-    return m
+    return S
   },
   isOutOfProcess: function() {
-    return S
+    return m
   }
 }), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("121338");
 var s = n("773336");
@@ -53,7 +53,7 @@ let a = 2,
   c = -2,
   d = !1;
 
-function p() {
+function f() {
   var e;
   if (void 0 !== i) return i;
   let t = new URLSearchParams(window.location.search),
@@ -62,16 +62,16 @@ function p() {
   return isNaN(r) && (r = -1), i = r
 }
 
-function h(e) {
-  S() && (i = e)
+function E(e) {
+  m() && (i = e)
 }
 
-function f() {
+function p() {
   let e = new URLSearchParams(window.location.search);
   return e.get("rpc_auth_token")
 }
 
-function E(e) {
+function h(e) {
   return !s.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
 }
 
@@ -79,11 +79,11 @@ function _(e) {
   d = e
 }
 
-function m() {
+function S() {
   return d
 }
 
-function S() {
+function m() {
   var e;
   if (void 0 !== r) return r;
   let t = new URLSearchParams(window.location.search);

@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return a
   },
   HTML: function() {
-    return i
+    return o
   }
 });
 var r = "__NATIVE_FILE__",
   URL = "__NATIVE_URL__",
   a = "__NATIVE_TEXT__",
-  i = "__NATIVE_HTML__"
+  o = "__NATIVE_HTML__"

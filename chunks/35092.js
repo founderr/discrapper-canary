@@ -1,25 +1,25 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return r
+    return i
   }
 });
 var t = E("805833"),
   o = E("303365"),
-  I = E("75247"),
-  T = E("661496"),
-  r = {
+  n = E("75247"),
+  r = E("661496"),
+  i = {
     Emitter: t.default,
-    Store: I.default,
+    Store: n.default,
     PersistedStore: o.default,
     DeviceSettingsStore: o.DeviceSettingsStore,
     OfflineCacheStore: o.OfflineCacheStore,
-    connectStores: T.default,
+    connectStores: r.default,
     initialize() {
-      I.default.initialize()
+      n.default.initialize()
     },
     get initialized() {
-      return I.default.initialized
+      return n.default.initialized
     },
     destroy() {
       o.default.destroy()

@@ -1,123 +1,123 @@
 "use strict";
-let i, a, l;
-n.r(t), n.d(t, {
+let t, o, n;
+E.r(_), E.d(_, {
   default: function() {
-    return O
+    return M
   }
-}), n("222007");
-var s = n("450911"),
-  r = n("267363"),
-  o = n("990766"),
-  u = n("689988"),
-  d = n("374014"),
-  c = n("845579"),
-  f = n("271938"),
-  E = n("42203"),
-  h = n("546463"),
-  _ = n("568307"),
-  C = n("18494"),
-  S = n("101125"),
-  g = n("713726"),
-  T = n("9759"),
-  m = n("705565"),
-  p = n("754493"),
-  I = n("49111");
-let A = [];
-class N extends u.default {
+}), E("222007");
+var r = E("450911"),
+  i = E("267363"),
+  a = E("990766"),
+  I = E("689988"),
+  s = E("161454"),
+  T = E("374014"),
+  S = E("845579"),
+  N = E("271938"),
+  O = E("42203"),
+  A = E("546463"),
+  R = E("18494"),
+  l = E("101125"),
+  u = E("713726"),
+  L = E("9759"),
+  C = E("705565"),
+  D = E("754493"),
+  c = E("49111");
+let d = [];
+class U extends I.default {
   handleRunningGamesChange() {
-    let e = _.default.getVisibleGame();
+    let e = s.default.getVisibleGame();
     if (null == e) return;
     let {
-      canBroadcast: t
-    } = T.default.getCurrentConfig({
+      canBroadcast: _
+    } = L.default.getCurrentConfig({
       location: "handle_running_games_change"
     }, {
       autoTrackExposure: !1
-    }), n = S.default.getBroadcast(), i = (0, g.getGameName)(e), a = null != h.default.getGameByName(i), l = (0, p.getIsBroadcastingToAnyone)();
-    if (!t || null != n || !c.BroadcastAutoBroadcast.getSetting() || !a || !l) return;
-    let s = null != A.find(t => t.pid === e.pid);
-    if (s) return;
-    A = _.default.getRunningGames();
-    let r = (0, m.getCanStartBroadcast)();
-    if (!r) return;
-    let u = C.default.getVoiceChannelId();
-    (0, o.createBroadcastChannelOrStartStream)({
+    }), E = l.default.getBroadcast(), t = (0, u.getGameName)(e), o = null != A.default.getGameByName(t), n = (0, D.getIsBroadcastingToAnyone)();
+    if (!_ || null != E || !S.BroadcastAutoBroadcast.getSetting() || !o || !n) return;
+    let r = null != d.find(_ => _.pid === e.pid);
+    if (r) return;
+    d = s.default.getRunningGames();
+    let i = (0, C.getCanStartBroadcast)();
+    if (!i) return;
+    let I = R.default.getVoiceChannelId();
+    (0, a.createBroadcastChannelOrStartStream)({
       pid: e.pid,
-      channelId: u
+      channelId: I
     })
   }
   handleStreamCreate(e) {
     let {
-      streamKey: t
+      streamKey: _
     } = e;
-    (0, g.startBroadcastForStream)(t, i)
+    (0, u.startBroadcastForStream)(_, t)
   }
   handleStreamStop(e) {
     let {
-      streamKey: t
+      streamKey: _
     } = e;
-    if (null == i) return;
-    let n = (0, d.decodeStreamKey)(t),
+    if (null == t) return;
+    let E = (0, T.decodeStreamKey)(_),
       {
-        ownerId: s,
-        channelId: r
-      } = n;
-    if (null == s || null == r) return;
-    let o = f.default.getId();
-    if (s !== o) return;
-    let u = E.default.getChannel(r),
-      c = null != u && u.isBroadcastChannel();
-    null != u && s === u.ownerId && c && (i = null, a = null, l = null, (0, g.stopBroadcast)())
+        ownerId: r,
+        channelId: i
+      } = E;
+    if (null == r || null == i) return;
+    let a = N.default.getId();
+    if (r !== a) return;
+    let I = O.default.getChannel(i),
+      s = null != I && I.isBroadcastChannel();
+    null != I && r === I.ownerId && s && (t = null, o = null, n = null, (0, u.stopBroadcast)())
   }
   handleStartBroadcastStream(e) {
     let {
-      options: t
+      options: _
     } = e;
-    i = t.pid, a = t.sourceId, l = t.sourceName
+    t = _.pid, o = _.sourceId, n = _.sourceName
   }
   handleCallCreate(e) {
     let {
-      channelId: t
+      channelId: _
     } = e;
-    if (null == t || null == i && null == a && null == l) return;
-    let n = f.default.getId(),
-      s = E.default.getChannel(t);
-    null != s && n === s.ownerId && s.isBroadcastChannel() && (0, o.startStream)(null, t, {
-      pid: i,
-      sourceId: a,
-      sourceName: l
+    if (null == _ || null == t && null == o && null == n) return;
+    let E = N.default.getId(),
+      r = O.default.getChannel(_);
+    null != r && E === r.ownerId && r.isBroadcastChannel() && (0, a.startStream)(null, _, {
+      pid: t,
+      sourceId: o,
+      sourceName: n
     })
   }
   handleRTCConnectionState(e) {
     let {
-      channelId: t,
-      state: n
+      channelId: _,
+      state: E
     } = e;
-    if (n !== I.RTCConnectionStates.DISCONNECTED) return;
-    let i = C.default.getChannelId(),
-      a = E.default.getChannel(t);
-    if (null == a || !a.isBroadcastChannel()) return;
-    s.default.closePrivateChannel(t, i === t, !0);
-    let l = S.default.getBroadcast();
-    null != l && a.id === l.channelId && (0, g.stopBroadcast)()
+    if (E !== c.RTCConnectionStates.DISCONNECTED) return;
+    let t = R.default.getChannelId(),
+      o = O.default.getChannel(_);
+    if (null == o || !o.isBroadcastChannel()) return;
+    r.default.closePrivateChannel(_, t === _, !0);
+    let n = l.default.getBroadcast();
+    null != n && o.id === n.channelId && (0, u.stopBroadcast)()
   }
   handleChannelDelete(e) {
     let {
-      channel: t
-    } = e, n = S.default.getBroadcast();
-    null != n && t.id === n.channelId && (0, g.stopBroadcast)()
+      channel: _
+    } = e, E = l.default.getBroadcast();
+    null != E && _.id === E.channelId && (0, u.stopBroadcast)()
   }
   handleMessageCreate(e) {
     let {
-      channelId: t,
-      guildId: n
+      channelId: _,
+      guildId: E
     } = e;
-    if (null != n) return;
-    let i = E.default.getChannel(t);
-    if (null == i || !i.isBroadcastChannel()) return;
-    let a = C.default.getVoiceChannelId(),
-      l = a !== i.id;
-    l && (0, r.localAck)(t)
+    if (null != E) return;
+    let t = O.default.getChannel(_);
+    if (null == t || !t.isBroadcastChannel()) return;
+    let o = R.default.getVoiceChannelId(),
+      n = o !== t.id;
+    n && (0, i.localAck)(_)
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -132,4 +132,4 @@ class N extends u.default {
     }
   }
 }
-var O = new N
+var M = new U

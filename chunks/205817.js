@@ -12,18 +12,18 @@ var r = n("627445"),
   u = n("446674"),
   l = n("773364"),
   f = n("913144"),
-  _ = n("583702"),
-  c = n("374014"),
-  g = n("582415"),
-  m = n("537429"),
-  h = n("773336"),
-  v = n("373469"),
-  E = n("271938"),
-  p = n("42203"),
-  y = n("42887"),
-  T = n("824563"),
-  C = n("945956"),
-  S = n("568307"),
+  _ = n("161454"),
+  c = n("583702"),
+  g = n("374014"),
+  m = n("582415"),
+  h = n("537429"),
+  v = n("773336"),
+  E = n("373469"),
+  p = n("271938"),
+  y = n("42203"),
+  T = n("42887"),
+  C = n("824563"),
+  S = n("945956"),
   I = n("49111"),
   A = n("353927");
 let D = {},
@@ -62,7 +62,7 @@ function w() {
 }
 class L extends u.default.Store {
   getActiveStreamKey() {
-    return (0, m.default)(y.default) ? i : null
+    return (0, h.default)(T.default) ? i : null
   }
   getAllActiveStreamKeys() {
     return Object.keys(V)
@@ -71,10 +71,10 @@ class L extends u.default.Store {
     return V[e]
   }
   getStatsHistory(e, t, n) {
-    if (!(0, m.default)(y.default) || null == t) return null;
+    if (!(0, h.default)(T.default) || null == t) return null;
     if (n) {
-      let n = v.default.getActiveStreamForUser(t, e);
-      if (null == n || 0 === v.default.getViewerIds(n).length) return null
+      let n = E.default.getActiveStreamForUser(t, e);
+      if (null == n || 0 === E.default.getViewerIds(n).length) return null
     }
     return R.map(e => n ? function(e) {
       var t, n, s, i, r;
@@ -102,7 +102,7 @@ class L extends u.default.Store {
     }(e.rtp.inbound[t]))
   }
   getQuality() {
-    if (!(0, m.default)(y.default)) return I.RTCConnectionQuality.UNKNOWN;
+    if (!(0, h.default)(T.default)) return I.RTCConnectionQuality.UNKNOWN;
     let e = this.getActiveStreamKey(),
       t = null != e ? V[e] : null;
     return null != t ? t.quality : I.RTCConnectionQuality.UNKNOWN
@@ -142,7 +142,7 @@ class L extends u.default.Store {
   }
 }
 L.displayName = "StreamRTCConnectionStore";
-var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
+var U = new L(f.default, !T.default.isSupported() || __OVERLAY__ ? {} : {
   CONNECTION_OPEN: function(e) {
     s = e.sessionId, i = null, k()
   },
@@ -163,11 +163,11 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
       appContext: i,
       pid: r,
       sourceId: a
-    } = e, o = (0, c.encodeStreamKey)({
+    } = e, o = (0, g.encodeStreamKey)({
       streamType: t,
       guildId: n,
       channelId: s,
-      ownerId: E.default.getId()
+      ownerId: p.default.getId()
     });
     if (D[o] = i, d.forEach(V, e => {
         let {
@@ -175,7 +175,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
         } = e;
         t.setActionContext(i)
       }), P[o] = a, O[o] = r, null != r) {
-      let e = S.default.getGameForPID(r);
+      let e = _.default.getGameForPID(r);
       null != e && (N[o] = {
         name: e.name,
         id: e.id,
@@ -205,19 +205,19 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
     i = t;
     let d = V[t];
     if (null == d && null != n) {
-      var u, f, m;
+      var u, f, _;
       null == O[t] && (N[t] = null);
-      let e = (0, c.decodeStreamKey)(t);
-      null == N[t] && null == P[t] && (N[t] = (0, g.getStreamerApplication)(e, T.default));
-      let i = p.default.getChannel(e.channelId),
+      let e = (0, g.decodeStreamKey)(t);
+      null == N[t] && null == P[t] && (N[t] = (0, m.getStreamerApplication)(e, C.default));
+      let i = y.default.getChannel(e.channelId),
         l = null != i && i.isBroadcastChannel(),
-        v = new _.StreamRTCAnalyticsContext({
+        h = new c.StreamRTCAnalyticsContext({
           streamRegion: r,
           streamApplication: N[t],
           streamSourceType: function(e) {
             var t, n, s;
             if (null == e) return "unknown";
-            if (h.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === "Chrome") {
+            if (v.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === "Chrome") {
               if (e.startsWith("web-contents-media-stream:")) return "tab";
               if (e.startsWith("window:")) return "window";
               else if (e.startsWith("screen:")) return "screen"
@@ -229,17 +229,17 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
           numViewers: null != o ? o.length : 0,
           isBroadcast: l
         });
-      u = t, f = n, m = v, a(null != s, "Creating RTCConnection without session."), d = new _.default({
+      u = t, f = n, _ = h, a(null != s, "Creating RTCConnection without session."), d = new c.default({
         sessionId: s,
         streamKey: u,
         serverId: f,
         initialLayout: b,
-        analyticsContext: m,
+        analyticsContext: _,
         isStreamer: null != N[u],
-        parentMediaSessionId: C.default.getMediaSessionId()
+        parentMediaSessionId: S.default.getMediaSessionId()
       }), V[t] = d
     }
-    R = [], y.default.getMediaEngine().on(l.MediaEngineEvent.ConnectionStats, M)
+    R = [], T.default.getMediaEngine().on(l.MediaEngineEvent.ConnectionStats, M)
   },
   STREAM_SERVER_UPDATE: function(e) {
     let t = V[e.streamKey];
@@ -260,7 +260,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
       streamKey: t
     } = e, n = V[t];
     if (null == n) return !1;
-    t === i && (i = null, y.default.getMediaEngine().off(l.MediaEngineEvent.ConnectionStats, M)), n.destroy("stream-end"), delete V[t]
+    t === i && (i = null, T.default.getMediaEngine().off(l.MediaEngineEvent.ConnectionStats, M)), n.destroy("stream-end"), delete V[t]
   },
   STREAM_STATS_UPDATE: function(e) {
     let {

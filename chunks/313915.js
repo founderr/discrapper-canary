@@ -1,53 +1,53 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return T
   }
 }), n("702976");
-var r = n("981980"),
-  i = n("171718"),
-  o = n("446674"),
-  l = n("872717"),
-  u = n("95410"),
-  a = n("913144"),
-  s = n("527015"),
-  E = n("718517"),
-  _ = n("286235"),
-  c = n("49111");
-let d = (() => {
+var i = n("981980"),
+  r = n("171718"),
+  s = n("446674"),
+  a = n("872717"),
+  o = n("95410"),
+  l = n("913144"),
+  u = n("527015"),
+  c = n("718517"),
+  d = n("286235"),
+  f = n("49111");
+let E = (() => {
     let e = "".concat(location.protocol, "//").concat(location.host, "/__development/source_maps"),
       t = null,
-      n = new r.default(5 * E.default.Millis.SECOND, 1 * E.default.Millis.MINUTE, !0),
-      o = () => {
-        l.default.put({
+      n = new i.default(5 * c.default.Millis.SECOND, 1 * c.default.Millis.MINUTE, !0),
+      s = () => {
+        a.default.put({
           url: e,
           headers: {
-            Authorization: i.default.getToken()
+            Authorization: r.default.getToken()
           },
           oldFormErrors: !0
         }).then(e => {
-          401 === e.status || 403 === e.status ? (t = null, (0, s.setDeveloperOptionSettings)({
+          401 === e.status || 403 === e.status ? (t = null, (0, u.setDeveloperOptionSettings)({
             sourceMapsEnabled: !1
-          })) : 200 !== e.status ? t = setTimeout(o, n.fail()) : (n.succeed(), t = setTimeout(o, e.body.sourceMapCookieTTLSeconds * E.default.Millis.SECOND * .75))
+          })) : 200 !== e.status ? t = setTimeout(s, n.fail()) : (n.succeed(), t = setTimeout(s, e.body.sourceMapCookieTTLSeconds * c.default.Millis.SECOND * .75))
         }, () => {
-          t = setTimeout(o, n.fail())
+          t = setTimeout(s, n.fail())
         })
       };
     return {
       set: n => {
-        let r = null != t;
-        n !== r && (n ? t = setTimeout(o, 0) : (clearTimeout(t), t = null, l.default.delete({
+        let i = null != t;
+        n !== i && (n ? t = setTimeout(s, 0) : (clearTimeout(t), t = null, a.default.delete({
           url: e,
           headers: {
-            Authorization: i.default.getToken()
+            Authorization: r.default.getToken()
           },
           oldFormErrors: !0
         })))
       }
     }
   })(),
-  T = "DeveloperOptionsStore",
-  A = {
+  p = "DeveloperOptionsStore",
+  h = {
     trace: !1,
     canary: !1,
     logGatewayEvents: !1,
@@ -60,75 +60,75 @@ let d = (() => {
     idleStatusIndicatorEnabled: !1,
     appDirectoryIncludesInactiveCollections: !1
   },
-  I = {
-    ...A
+  _ = {
+    ...h
   };
 
 function S(e) {
-  I = {
-    ...A,
-    ...I,
+  _ = {
+    ...h,
+    ..._,
     ...e
-  }, d.set(I.sourceMapsEnabled), u.default.set(T, I)
+  }, E.set(_.sourceMapsEnabled), o.default.set(p, _)
 }
-class f extends o.default.Store {
+class m extends s.default.Store {
   initialize() {
-    let e = u.default.get(T);
-    null != e && (I = {
-      ...A,
+    let e = o.default.get(p);
+    null != e && (_ = {
+      ...h,
       ...e
     })
   }
   get isTracingRequests() {
-    return I.trace
+    return _.trace
   }
   get isForcedCanary() {
-    return I.canary
+    return _.canary
   }
   get isLoggingGatewayEvents() {
-    return I.logGatewayEvents
+    return _.logGatewayEvents
   }
   get isLoggingOverlayEvents() {
-    return I.logOverlayEvents
+    return _.logOverlayEvents
   }
   get isLoggingAnalyticsEvents() {
-    return I.logAnalyticsEvents
+    return _.logAnalyticsEvents
   }
   get isAxeEnabled() {
-    return I.axeEnabled
+    return _.axeEnabled
   }
   get sourceMapsEnabled() {
-    return I.sourceMapsEnabled
+    return _.sourceMapsEnabled
   }
   get isAnalyticsDebuggerEnabled() {
-    return I.analyticsDebuggerEnabled
+    return _.analyticsDebuggerEnabled
   }
   get isBugReporterEnabled() {
-    return I.bugReporterEnabled
+    return _.bugReporterEnabled
   }
   get isIdleStatusIndicatorEnabled() {
-    return I.idleStatusIndicatorEnabled
+    return _.idleStatusIndicatorEnabled
   }
   get appDirectoryIncludesInactiveCollections() {
-    return I.appDirectoryIncludesInactiveCollections
+    return _.appDirectoryIncludesInactiveCollections
   }
   getDebugOptionsHeaderValue() {
-    Object.keys(I).map(e => I[e]);
-    let e = Object.keys(I).filter(e => I[e]);
+    Object.keys(_).map(e => _[e]);
+    let e = Object.keys(_).filter(e => _[e]);
     return e.join(",")
   }
 }
-f.displayName = "DeveloperOptionsStore";
-var O = new f(a.default, {
+m.displayName = "DeveloperOptionsStore";
+var T = new m(l.default, {
   LOGOUT: function(e) {
-    S(A)
+    S(h)
   },
   CONNECTION_OPEN: function(e) {
     var t;
-    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & c.UserFlags.STAFF) === c.UserFlags.STAFF,
-      r = n || null != e.user.personal_connection_id;
-    n && d.set(I.sourceMapsEnabled), _.default.setTags({
-      isStaff: r.toString()
+    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & f.UserFlags.STAFF) === f.UserFlags.STAFF,
+      i = n || null != e.user.personal_connection_id;
+    n && E.set(_.sourceMapsEnabled), d.default.setTags({
+      isStaff: i.toString()
     })
   },
   DEVELOPER_OPTIONS_UPDATE_SETTINGS: function(e) {

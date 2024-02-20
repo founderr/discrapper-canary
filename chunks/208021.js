@@ -1,38 +1,38 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return E
   }
 });
 var i = n("913144"),
-  a = n("819689"),
+  o = n("819689"),
   l = n("115718"),
-  r = n("347895"),
-  u = n("341329"),
-  s = n("582713"),
-  o = n("724210"),
-  d = {
+  a = n("347895"),
+  d = n("341329"),
+  u = n("582713"),
+  s = n("724210"),
+  E = {
     openPrivateChannelAsSidebar(e) {
       let {
         channelId: t,
         messageId: n,
         baseChannelId: l,
-        hasSingleMessageRequest: r
+        hasSingleMessageRequest: a
       } = e;
       i.default.dispatch({
         type: "SIDEBAR_VIEW_CHANNEL",
-        sidebarType: s.SidebarType.VIEW_MESSAGE_REQUEST,
+        sidebarType: u.SidebarType.VIEW_MESSAGE_REQUEST,
         baseChannelId: l,
         channelId: t,
         details: {
-          type: s.SidebarOpenDetailsType.MESSAGE_REQUEST,
-          hasSingleMessageRequest: r
+          type: u.SidebarOpenDetailsType.MESSAGE_REQUEST,
+          hasSingleMessageRequest: a
         }
-      }), null != n ? a.default.jumpToMessage({
+      }), null != n ? o.default.jumpToMessage({
         channelId: t,
         messageId: n,
         flash: !0
-      }) : u.default.fetchMessages({
+      }) : d.default.fetchMessages({
         channelId: t
       })
     },
@@ -40,25 +40,25 @@ var i = n("913144"),
       let {
         guildId: t,
         channelId: n,
-        baseChannelId: r,
-        flash: o = !0,
-        details: d
+        baseChannelId: a,
+        flash: s = !0,
+        details: E
       } = e;
       i.default.dispatch({
         type: "SIDEBAR_VIEW_CHANNEL",
-        sidebarType: s.SidebarType.VIEW_CHANNEL,
+        sidebarType: u.SidebarType.VIEW_CHANNEL,
         guildId: t,
-        baseChannelId: r,
+        baseChannelId: a,
         channelId: n,
-        details: d
+        details: E
       });
-      let c = null == d ? void 0 : d.initialMessageId;
-      null != c ? a.default.jumpToMessage({
+      let r = null == E ? void 0 : E.initialMessageId;
+      null != r ? o.default.jumpToMessage({
         channelId: n,
-        messageId: c,
-        flash: o,
+        messageId: r,
+        flash: s,
         jumpType: l.JumpTypes.INSTANT
-      }) : u.default.fetchMessages({
+      }) : d.default.fetchMessages({
         guildId: t,
         channelId: n
       })
@@ -68,11 +68,11 @@ var i = n("913144"),
         guildId: t,
         channelId: n
       } = e;
-      null != t && ((0, r.selectHomeResourceChannel)(t, n, !1), i.default.dispatch({
+      null != t && ((0, a.selectHomeResourceChannel)(t, n, !1), i.default.dispatch({
         type: "SIDEBAR_VIEW_CHANNEL",
-        sidebarType: s.SidebarType.VIEW_CHANNEL,
+        sidebarType: u.SidebarType.VIEW_CHANNEL,
         guildId: t,
-        baseChannelId: o.StaticChannelRoute.GUILD_HOME,
+        baseChannelId: s.StaticChannelRoute.GUILD_HOME,
         channelId: n
       }))
     },
@@ -80,24 +80,24 @@ var i = n("913144"),
       let {
         guildId: t,
         baseChannelId: n,
-        channelId: r,
-        flash: o = !0,
-        details: d
+        channelId: a,
+        flash: s = !0,
+        details: E
       } = e;
       i.default.dispatch({
         type: "SIDEBAR_VIEW_CHANNEL",
-        sidebarType: s.SidebarType.VIEW_THREAD,
+        sidebarType: u.SidebarType.VIEW_THREAD,
         baseChannelId: n,
-        channelId: r,
-        details: d
-      }), (null == d ? void 0 : d.initialMessageId) != null ? a.default.jumpToMessage({
-        channelId: r,
-        messageId: d.initialMessageId,
-        flash: o,
+        channelId: a,
+        details: E
+      }), (null == E ? void 0 : E.initialMessageId) != null ? o.default.jumpToMessage({
+        channelId: a,
+        messageId: E.initialMessageId,
+        flash: s,
         jumpType: l.JumpTypes.INSTANT
-      }) : u.default.fetchMessages({
+      }) : d.default.fetchMessages({
         guildId: t,
-        channelId: r
+        channelId: a
       })
     },
     closeChannelSidebar(e) {
@@ -110,12 +110,12 @@ var i = n("913144"),
       let {
         guildId: t,
         baseChannelId: n,
-        sidebarType: a,
+        sidebarType: o,
         details: l
       } = e;
       return i.default.dispatch({
         type: "SIDEBAR_VIEW_GUILD",
-        sidebarType: a,
+        sidebarType: o,
         baseChannelId: n,
         guildId: t,
         details: l

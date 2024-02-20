@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return i
   },
   parseTimezonePattern: function() {
-    return u
+    return s
   },
   parseAnyDigitsSigned: function() {
-    return s
+    return u
   },
   parseNDigits: function() {
     return l
@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return c
   },
   dayPeriodEnumToHours: function() {
-    return f
+    return d
   },
   normalizeTwoDigitYear: function() {
-    return d
+    return f
   },
   isLeapYearIndex: function() {
     return p
@@ -46,7 +46,7 @@ function i(e, t) {
   } : null
 }
 
-function u(e, t) {
+function s(e, t) {
   var n = t.match(e);
   if (!n) return null;
   if ("Z" === n[0]) return {
@@ -56,14 +56,14 @@ function u(e, t) {
   var a = "+" === n[1] ? 1 : -1,
     o = n[2] ? parseInt(n[2], 10) : 0,
     i = n[3] ? parseInt(n[3], 10) : 0,
-    u = n[5] ? parseInt(n[5], 10) : 0;
+    s = n[5] ? parseInt(n[5], 10) : 0;
   return {
-    value: a * (o * r.millisecondsInHour + i * r.millisecondsInMinute + u * r.millisecondsInSecond),
+    value: a * (o * r.millisecondsInHour + i * r.millisecondsInMinute + s * r.millisecondsInSecond),
     rest: t.slice(n[0].length)
   }
 }
 
-function s(e) {
+function u(e) {
   return i(a.numericPatterns.anyDigitsSigned, e)
 }
 
@@ -97,7 +97,7 @@ function c(e, t) {
   }
 }
 
-function f(e) {
+function d(e) {
   switch (e) {
     case "morning":
       return 4;
@@ -112,7 +112,7 @@ function f(e) {
   }
 }
 
-function d(e, t) {
+function f(e, t) {
   var n, r = t > 0,
     a = r ? t : 1 - t;
   if (a <= 50) n = e || 100;

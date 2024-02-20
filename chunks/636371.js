@@ -1,62 +1,62 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   queueHighFive: function() {
-    return a
+    return o
   },
   removeHighFive: function() {
-    return l
+    return n
   },
   setHighFiveEnabled: function() {
-    return s
-  },
-  completeHighFive: function() {
     return r
   },
+  completeHighFive: function() {
+    return i
+  },
   clearCompletedHighFive: function() {
-    return o
+    return a
   }
 });
-var i = n("913144");
+var t = E("913144");
 
-function a(e, t, n) {
-  i.default.dispatch({
+function o(e, _, E) {
+  t.default.dispatch({
     type: "HIGH_FIVE_QUEUE",
-    userId: t,
-    channelId: n,
+    userId: _,
+    channelId: E,
     emoji: e
   })
 }
 
-function l(e, t) {
-  i.default.dispatch({
+function n(e, _) {
+  t.default.dispatch({
     type: "HIGH_FIVE_REMOVE",
-    channelId: t,
+    channelId: _,
     userId: e
   })
 }
 
-function s(e) {
-  i.default.dispatch({
+function r(e) {
+  t.default.dispatch({
     type: "HIGH_FIVE_SET_ENABLED",
     enabled: e
   })
 }
 
-function r(e, t, n, a) {
-  i.default.dispatch({
+function i(e, _, E, o) {
+  t.default.dispatch({
     type: "HIGH_FIVE_COMPLETE",
     waitingUserId: e,
-    completingUserId: t,
-    channelId: n,
-    completingEmoji: a
+    completingUserId: _,
+    channelId: E,
+    completingEmoji: o
   })
 }
 
-function o(e, t, n) {
-  i.default.dispatch({
+function a(e, _, E) {
+  t.default.dispatch({
     type: "HIGH_FIVE_COMPLETE_CLEAR",
     firstUserId: e,
-    secondUserId: t,
-    channelId: n
+    secondUserId: _,
+    channelId: E
   })
 }

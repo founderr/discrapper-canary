@@ -1,44 +1,44 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   showPendingNotification: function() {
-    return c
+    return T
   },
   showAcceptedNotification: function() {
-    return f
+    return S
   }
 });
-var i = n("450911"),
-  a = n("630086"),
-  l = n("193990"),
-  s = n("393414"),
-  r = n("315102"),
-  o = n("49111"),
-  u = n("782340");
+var t = E("450911"),
+  o = E("630086"),
+  n = E("193990"),
+  r = E("393414"),
+  i = E("315102"),
+  a = E("49111"),
+  I = E("782340");
 
-function d(e, t, n) {
-  l.default.showNotification(r.default.getUserAvatarURL(e), e.username, t, {}, {
+function s(e, _, E) {
+  n.default.showNotification(i.default.getUserAvatarURL(e), e.username, _, {}, {
     omitViewTracking: !0,
     omitClickTracking: !0,
     tag: e.id,
-    onClick: n
+    onClick: E
   })
 }
 
-function c(e) {
-  d(e, u.default.Messages.NOTIFICATION_PENDING_FRIEND_REQUEST, () => {
+function T(e) {
+  s(e, I.default.Messages.NOTIFICATION_PENDING_FRIEND_REQUEST, () => {
     {
       let {
-        openUserProfileModal: t
-      } = n("401642");
-      t({
+        openUserProfileModal: _
+      } = E("401642");
+      _({
         userId: e.id
       })
-    }(0, s.transitionTo)(o.Routes.FRIENDS), a.default.setSection(o.FriendsSections.PENDING)
+    }(0, r.transitionTo)(a.Routes.FRIENDS), o.default.setSection(a.FriendsSections.PENDING)
   })
 }
 
-function f(e) {
-  d(e, u.default.Messages.NOTIFICATION_ACCEPTED_FRIEND_REQUEST, () => {
-    i.default.openPrivateChannel(e.id)
+function S(e) {
+  s(e, I.default.Messages.NOTIFICATION_ACCEPTED_FRIEND_REQUEST, () => {
+    t.default.openPrivateChannel(e.id)
   })
 }

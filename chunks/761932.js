@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var s = n("568307");
+var s = n("161454");
 
 function i() {
   let e = s.default.getCurrentGameForAnalytics();

@@ -2,8 +2,8 @@
 n("781738"), n("424973"), n("70102");
 var r = n("380756"),
   a = Object.prototype.hasOwnProperty,
-  i = Array.isArray,
-  o = {
+  o = Array.isArray,
+  i = {
     allowDots: !1,
     allowPrototypes: !1,
     allowSparse: !1,
@@ -37,82 +37,82 @@ var r = n("380756"),
       for (f = 0; f < u.length; ++f) 0 === u[f].indexOf("utf8=") && ("utf8=%E2%9C%93" === u[f] ? p = "utf-8" : "utf8=%26%2310003%3B" === u[f] && (p = "iso-8859-1"), d = f, f = u.length);
     for (f = 0; f < u.length; ++f)
       if (f !== d) {
-        var f, m, h, v = u[f],
+        var f, h, m, v = u[f],
           g = v.indexOf("]="),
           y = -1 === g ? v.indexOf("=") : g + 1;
-        if (-1 === y ? (m = t.decoder(v, o.decoder, p, "key"), h = t.strictNullHandling ? null : "") : (m = t.decoder(v.slice(0, y), o.decoder, p, "key"), h = r.maybeMap(s(v.slice(y + 1), t), function(e) {
-            return t.decoder(e, o.decoder, p, "value")
-          })), h && t.interpretNumericEntities && "iso-8859-1" === p) h = h.replace(/&#(\d+);/g, function(e, t) {
+        if (-1 === y ? (h = t.decoder(v, i.decoder, p, "key"), m = t.strictNullHandling ? null : "") : (h = t.decoder(v.slice(0, y), i.decoder, p, "key"), m = r.maybeMap(s(v.slice(y + 1), t), function(e) {
+            return t.decoder(e, i.decoder, p, "value")
+          })), m && t.interpretNumericEntities && "iso-8859-1" === p) m = m.replace(/&#(\d+);/g, function(e, t) {
           return String.fromCharCode(parseInt(t, 10))
         });
-        v.indexOf("[]=") > -1 && (h = i(h) ? [h] : h), a.call(n, m) ? n[m] = r.combine(n[m], h) : n[m] = h
+        v.indexOf("[]=") > -1 && (m = o(m) ? [m] : m), a.call(n, h) ? n[h] = r.combine(n[h], m) : n[h] = m
       } return n
   },
   l = function(e, t, n, r) {
-    for (var a = r ? t : s(t, n), i = e.length - 1; i >= 0; --i) {
-      var o, c = e[i];
-      if ("[]" === c && n.parseArrays) o = [].concat(a);
+    for (var a = r ? t : s(t, n), o = e.length - 1; o >= 0; --o) {
+      var i, c = e[o];
+      if ("[]" === c && n.parseArrays) i = [].concat(a);
       else {
-        o = n.plainObjects ? Object.create(null) : {};
+        i = n.plainObjects ? Object.create(null) : {};
         var l = "[" === c.charAt(0) && "]" === c.charAt(c.length - 1) ? c.slice(1, -1) : c,
           u = parseInt(l, 10);
-        n.parseArrays || "" !== l ? !isNaN(u) && c !== l && String(u) === l && u >= 0 && n.parseArrays && u <= n.arrayLimit ? (o = [])[u] = a : "__proto__" !== l && (o[l] = a) : o = {
+        n.parseArrays || "" !== l ? !isNaN(u) && c !== l && String(u) === l && u >= 0 && n.parseArrays && u <= n.arrayLimit ? (i = [])[u] = a : "__proto__" !== l && (i[l] = a) : i = {
           0: a
         }
       }
-      a = o
+      a = i
     }
     return a
   },
   u = function(e, t, n, r) {
     if (e) {
-      var i = n.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
-        o = /(\[[^[\]]*])/g,
-        s = n.depth > 0 && /(\[[^[\]]*])/.exec(i),
-        c = s ? i.slice(0, s.index) : i,
+      var o = n.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
+        i = /(\[[^[\]]*])/g,
+        s = n.depth > 0 && /(\[[^[\]]*])/.exec(o),
+        c = s ? o.slice(0, s.index) : o,
         u = [];
       if (c) {
         if (!n.plainObjects && a.call(Object.prototype, c) && !n.allowPrototypes) return;
         u.push(c)
       }
-      for (var d = 0; n.depth > 0 && null !== (s = o.exec(i)) && d < n.depth;) {
+      for (var d = 0; n.depth > 0 && null !== (s = i.exec(o)) && d < n.depth;) {
         if (d += 1, !n.plainObjects && a.call(Object.prototype, s[1].slice(1, -1)) && !n.allowPrototypes) return;
         u.push(s[1])
       }
-      return s && u.push("[" + i.slice(s.index) + "]"), l(u, t, n, r)
+      return s && u.push("[" + o.slice(s.index) + "]"), l(u, t, n, r)
     }
   },
   d = function(e) {
-    if (!e) return o;
+    if (!e) return i;
     if (null !== e.decoder && void 0 !== e.decoder && "function" != typeof e.decoder) throw TypeError("Decoder has to be a function.");
     if (void 0 !== e.charset && "utf-8" !== e.charset && "iso-8859-1" !== e.charset) throw TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");
-    var t = void 0 === e.charset ? o.charset : e.charset;
+    var t = void 0 === e.charset ? i.charset : e.charset;
     return {
-      allowDots: void 0 === e.allowDots ? o.allowDots : !!e.allowDots,
-      allowPrototypes: "boolean" == typeof e.allowPrototypes ? e.allowPrototypes : o.allowPrototypes,
-      allowSparse: "boolean" == typeof e.allowSparse ? e.allowSparse : o.allowSparse,
-      arrayLimit: "number" == typeof e.arrayLimit ? e.arrayLimit : o.arrayLimit,
+      allowDots: void 0 === e.allowDots ? i.allowDots : !!e.allowDots,
+      allowPrototypes: "boolean" == typeof e.allowPrototypes ? e.allowPrototypes : i.allowPrototypes,
+      allowSparse: "boolean" == typeof e.allowSparse ? e.allowSparse : i.allowSparse,
+      arrayLimit: "number" == typeof e.arrayLimit ? e.arrayLimit : i.arrayLimit,
       charset: t,
-      charsetSentinel: "boolean" == typeof e.charsetSentinel ? e.charsetSentinel : o.charsetSentinel,
-      comma: "boolean" == typeof e.comma ? e.comma : o.comma,
-      decoder: "function" == typeof e.decoder ? e.decoder : o.decoder,
-      delimiter: "string" == typeof e.delimiter || r.isRegExp(e.delimiter) ? e.delimiter : o.delimiter,
-      depth: "number" == typeof e.depth || !1 === e.depth ? +e.depth : o.depth,
+      charsetSentinel: "boolean" == typeof e.charsetSentinel ? e.charsetSentinel : i.charsetSentinel,
+      comma: "boolean" == typeof e.comma ? e.comma : i.comma,
+      decoder: "function" == typeof e.decoder ? e.decoder : i.decoder,
+      delimiter: "string" == typeof e.delimiter || r.isRegExp(e.delimiter) ? e.delimiter : i.delimiter,
+      depth: "number" == typeof e.depth || !1 === e.depth ? +e.depth : i.depth,
       ignoreQueryPrefix: !0 === e.ignoreQueryPrefix,
-      interpretNumericEntities: "boolean" == typeof e.interpretNumericEntities ? e.interpretNumericEntities : o.interpretNumericEntities,
-      parameterLimit: "number" == typeof e.parameterLimit ? e.parameterLimit : o.parameterLimit,
+      interpretNumericEntities: "boolean" == typeof e.interpretNumericEntities ? e.interpretNumericEntities : i.interpretNumericEntities,
+      parameterLimit: "number" == typeof e.parameterLimit ? e.parameterLimit : i.parameterLimit,
       parseArrays: !1 !== e.parseArrays,
-      plainObjects: "boolean" == typeof e.plainObjects ? e.plainObjects : o.plainObjects,
-      strictNullHandling: "boolean" == typeof e.strictNullHandling ? e.strictNullHandling : o.strictNullHandling
+      plainObjects: "boolean" == typeof e.plainObjects ? e.plainObjects : i.plainObjects,
+      strictNullHandling: "boolean" == typeof e.strictNullHandling ? e.strictNullHandling : i.strictNullHandling
     }
   };
 e.exports = function(e, t) {
   var n = d(t);
   if ("" === e || null == e) return n.plainObjects ? Object.create(null) : {};
-  for (var a = "string" == typeof e ? c(e, n) : e, i = n.plainObjects ? Object.create(null) : {}, o = Object.keys(a), s = 0; s < o.length; ++s) {
-    var l = o[s],
+  for (var a = "string" == typeof e ? c(e, n) : e, o = n.plainObjects ? Object.create(null) : {}, i = Object.keys(a), s = 0; s < i.length; ++s) {
+    var l = i[s],
       p = u(l, a[l], n, "string" == typeof e);
-    i = r.merge(i, p, n)
+    o = r.merge(o, p, n)
   }
-  return !0 === n.allowSparse ? i : r.compact(i)
+  return !0 === n.allowSparse ? o : r.compact(o)
 }

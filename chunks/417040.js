@@ -7,20 +7,20 @@ n.r(t), n.d(t, {
     return o
   }
 }), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("222007"), n("702976");
-var i, r, s, a, o, l, u, c, d, p = n("627445"),
-  h = n.n(p),
-  f = n("981980"),
-  E = n("595275"),
+var i, r, s, a, o, l, u, c, d, f = n("627445"),
+  E = n.n(f),
+  p = n("981980"),
+  h = n("595275"),
   _ = n("605250"),
-  m = n("313915"),
-  S = n("718517"),
-  g = n("773336"),
-  T = n("353927");
+  S = n("313915"),
+  m = n("718517"),
+  T = n("773336"),
+  g = n("353927");
 
 function I() {}(l = i || (i = {}))[l.IDENTIFY = 0] = "IDENTIFY", l[l.SELECT_PROTOCOL = 1] = "SELECT_PROTOCOL", l[l.READY = 2] = "READY", l[l.HEARTBEAT = 3] = "HEARTBEAT", l[l.SELECT_PROTOCOL_ACK = 4] = "SELECT_PROTOCOL_ACK", l[l.SPEAKING = 5] = "SPEAKING", l[l.HEARTBEAT_ACK = 6] = "HEARTBEAT_ACK", l[l.RESUME = 7] = "RESUME", l[l.HELLO = 8] = "HELLO", l[l.RESUMED = 9] = "RESUMED", l[l.VIDEO = 12] = "VIDEO", l[l.CLIENT_DISCONNECT = 13] = "CLIENT_DISCONNECT", l[l.SESSION_UPDATE = 14] = "SESSION_UPDATE", l[l.MEDIA_SINK_WANTS = 15] = "MEDIA_SINK_WANTS", l[l.VOICE_BACKEND_VERSION = 16] = "VOICE_BACKEND_VERSION", l[l.CHANNEL_OPTIONS_UPDATE = 17] = "CHANNEL_OPTIONS_UPDATE", l[l.FLAGS = 18] = "FLAGS", l[l.SPEED_TEST = 19] = "SPEED_TEST", l[l.PLATFORM = 20] = "PLATFORM", l[l.SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION = 21] = "SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION", l[l.SECURE_FRAMES_EXECUTE_TRANSITION = 22] = "SECURE_FRAMES_EXECUTE_TRANSITION", l[l.SECURE_FRAMES_READY_FOR_TRANSITION = 23] = "SECURE_FRAMES_READY_FOR_TRANSITION", l[l.SECURE_FRAMES_PREPARE_EPOCH = 24] = "SECURE_FRAMES_PREPARE_EPOCH", l[l.MLS_EXTERNAL_SENDER_PACKAGE = 25] = "MLS_EXTERNAL_SENDER_PACKAGE", l[l.MLS_KEY_PACKAGE = 26] = "MLS_KEY_PACKAGE", l[l.MLS_PROPOSALS = 27] = "MLS_PROPOSALS", l[l.MLS_COMMIT_WELCOME = 28] = "MLS_COMMIT_WELCOME", l[l.MLS_PREPARE_COMMIT_TRANSITION = 29] = "MLS_PREPARE_COMMIT_TRANSITION", l[l.MLS_WELCOME = 30] = "MLS_WELCOME", (u = r || (r = {}))[u.AUTHENTICATION_FAILED = 4004] = "AUTHENTICATION_FAILED", u[u.INVALID_SESSION = 4006] = "INVALID_SESSION", u[u.SERVER_NOT_FOUND = 4011] = "SERVER_NOT_FOUND", u[u.SERVER_CRASH = 4015] = "SERVER_CRASH", u[u.CANCELED = 4016] = "CANCELED", u[u.HEARTBEAT_TIMEOUT = 4800] = "HEARTBEAT_TIMEOUT", u[u.UNRESUMABLE = 4801] = "UNRESUMABLE", u[u.RESET_BACKOFF = 4802] = "RESET_BACKOFF", (c = s || (s = {}))[c.DISCONNECTED = 0] = "DISCONNECTED", c[c.CONNECTING = 1] = "CONNECTING", c[c.IDENTIFYING = 2] = "IDENTIFYING", c[c.RESUMING = 3] = "RESUMING", c[c.CONNECTED = 4] = "CONNECTED", c[c.RECONNECTING = 5] = "RECONNECTING";
-let v = 20 * S.default.Millis.SECOND,
-  C = 1 * S.default.Millis.MINUTE,
-  A = 5 * S.default.Millis.SECOND;
+let C = 20 * m.default.Millis.SECOND,
+  v = 1 * m.default.Millis.MINUTE,
+  A = 5 * m.default.Millis.SECOND;
 
 function R(e) {
   return e.map(e => ({
@@ -52,14 +52,14 @@ function N(e) {
   }))
 }
 
-function y(e) {
+function O(e) {
   var t;
   return null !== (t = null == e ? void 0 : e.map(e => ({
     type: function(e) {
-      if ("audio" === e) return T.MediaTypes.AUDIO;
-      if ("test" === e) return T.MediaTypes.TEST;
-      if ("screen" === e) return T.MediaTypes.SCREEN;
-      else return T.MediaTypes.VIDEO
+      if ("audio" === e) return g.MediaTypes.AUDIO;
+      if ("test" === e) return g.MediaTypes.TEST;
+      if ("screen" === e) return g.MediaTypes.SCREEN;
+      else return g.MediaTypes.VIDEO
     }(e.type),
     rid: e.rid,
     ssrc: e.ssrc,
@@ -74,12 +74,12 @@ function y(e) {
       height: e.max_resolution.height
     } : void 0
   }))) && void 0 !== t ? t : []
-}(d = a || (a = {})).Connecting = "connecting", d.Connect = "connect", d.Disconnect = "disconnect", d.Resuming = "resuming", d.Ready = "ready", d.Speaking = "speaking", d.Video = "video", d.Ping = "ping", d.ClientDisconnect = "client-disconnect", d.Codecs = "codecs", d.MediaSessionId = "media-session-id", d.MediaSinkWants = "media-sink-wants", d.VoiceBackendVersion = "voice-backend-version", d.KeyframeInterval = "keyframe-interval", d.ChannelOptionsUpdateRtcLog = "channel-options-update-rtc-log", d.ChannelOptionsUpdateSecureFramesProtocol = "update-secure-frames-protocol", d.Flags = "flags", d.Platform = "platform", d.SDP = "sdp", d.Encryption = "encryption", d.SpeedTest = "speed-test", d.BandwidthEstimationExperiment = "bandwidth-estimation-experiment", d.SecureFramesInit = "secure-frames-init", d.SecureFramesPrepareTransition = "secure-frames-prepare-transition", d.SecureFramesExecuteTransition = "secure-frames-execute-transition", d.SecureFramesPrepareEpoch = "secure-frames-prepare-epoch", d.MLSExternalSenderPackage = "mls-external-sender-package", d.MLSProposals = "mls-proposals", d.MLSPrepareCommitTransition = "mls-prepare-commit-transition", d.MLSWelcome = "mls-welcome", o = class extends E.default {
+}(d = a || (a = {})).Connecting = "connecting", d.Connect = "connect", d.Disconnect = "disconnect", d.Resuming = "resuming", d.Ready = "ready", d.Speaking = "speaking", d.Video = "video", d.Ping = "ping", d.ClientDisconnect = "client-disconnect", d.Codecs = "codecs", d.MediaSessionId = "media-session-id", d.MediaSinkWants = "media-sink-wants", d.VoiceBackendVersion = "voice-backend-version", d.KeyframeInterval = "keyframe-interval", d.ChannelOptionsUpdateRtcLog = "channel-options-update-rtc-log", d.ChannelOptionsUpdateSecureFramesProtocol = "update-secure-frames-protocol", d.Flags = "flags", d.Platform = "platform", d.SDP = "sdp", d.Encryption = "encryption", d.SpeedTest = "speed-test", d.BandwidthEstimationExperiment = "bandwidth-estimation-experiment", d.SecureFramesInit = "secure-frames-init", d.SecureFramesPrepareTransition = "secure-frames-prepare-transition", d.SecureFramesExecuteTransition = "secure-frames-execute-transition", d.SecureFramesPrepareEpoch = "secure-frames-prepare-epoch", d.MLSExternalSenderPackage = "mls-external-sender-package", d.MLSProposals = "mls-proposals", d.MLSPrepareCommitTransition = "mls-prepare-commit-transition", d.MLSWelcome = "mls-welcome", o = class extends h.default {
   createWebSocket() {
     this.logger.info("[CONNECT] ".concat(this.url)), null !== this.webSocket && (this.logger.error("Connect called with already existing websocket"), this.cleanupWebSocket(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
       let e = Date.now() - this.connectionStartTime;
       this.handleClose(!1, 0, "The connection timed out after ".concat(e, " ms - did not receive OP_HELLO in time."))
-    }, v);
+    }, C);
     let e = this.webSocket = new WebSocket("".concat(this.url, "?v=").concat(7));
     e.binaryType = "arraybuffer", e.onopen = () => {
       1 === this.connectionState ? this.emit("connect") : 5 === this.connectionState && this.doResumeOrClose(), this.connectionState = 4;
@@ -90,7 +90,7 @@ function y(e) {
         op: t,
         d: n
       } = this.parseWebSocketMessage(e);
-      if (m.default.isLoggingGatewayEvents) {
+      if (S.default.isLoggingGatewayEvents) {
         if (n instanceof Uint8Array) {
           let e = [...n].map(e => e.toString(16).padStart(2, "0")).join("");
           this.logger.info("~> ".concat(t, ": 0x").concat(e))
@@ -111,7 +111,7 @@ function y(e) {
           break;
         case 5:
           let i = n.speaking;
-          "boolean" == typeof i && (i = i ? T.SpeakingFlags.VOICE : T.SpeakingFlags.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
+          "boolean" == typeof i && (i = i ? g.SpeakingFlags.VOICE : g.SpeakingFlags.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
           break;
         case 3:
           this.sendHeartbeat();
@@ -120,7 +120,7 @@ function y(e) {
           this.emit("ping", Date.now() - n), this.handleHeartbeatAck(n);
           break;
         case 12:
-          this.emit("video", n.user_id, n.audio_ssrc, n.video_ssrc, y(n.streams));
+          this.emit("video", n.user_id, n.audio_ssrc, n.video_ssrc, O(n.streams));
           break;
         case 13:
           this.emit("client-disconnect", n.user_id);
@@ -195,7 +195,7 @@ function y(e) {
       op: e,
       d: t
     });
-    m.default.isLoggingGatewayEvents && this.logger.info("<~ ".concat(i));
+    S.default.isLoggingGatewayEvents && this.logger.info("<~ ".concat(i));
     try {
       n.send(i)
     } catch (e) {}
@@ -214,7 +214,7 @@ function y(e) {
   }
   doResumeOrClose() {
     let e = Date.now(),
-      t = null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= C);
+      t = null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= v);
     t ? (this.doResume(), this.lastHeartbeatAckTime = e) : this.disconnect(!1, 4801, "Cannot resume connection.")
   }
   doResume() {
@@ -228,16 +228,16 @@ function y(e) {
   handleHello(e) {
     var t, n, i;
     if (this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : 3, this.serverVersion <= 3) {
-      let t = g.isPlatformEmbedded ? .25 : .1;
+      let t = T.isPlatformEmbedded ? .25 : .1;
       this.heartbeatInterval = e.heartbeat_interval * t
-    } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !g.isPlatformEmbedded && (this.heartbeatInterval = Math.min(A, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
+    } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !T.isPlatformEmbedded && (this.heartbeatInterval = Math.min(A, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
     let r = Date.now() - this.connectionStartTime;
     this.logger.info("[HELLO] heartbeat interval: ".concat(null !== (i = this.heartbeatInterval) && void 0 !== i ? i : "??", ", version: ").concat(this.serverVersion, ", took ").concat(r, " ms")), this.startHeartbeater()
   }
   handleReady(e) {
     this.backoff.succeed();
     let t = Date.now() - this.connectionStartTime;
-    this.logger.info("[READY] took ".concat(t, " ms")), this.serverVersion >= 6 && this.send(16, {}), this.emit("ready", e.ip, e.port, e.modes, e.ssrc, y(e.streams), e.experiments)
+    this.logger.info("[READY] took ".concat(t, " ms")), this.serverVersion >= 6 && this.send(16, {}), this.emit("ready", e.ip, e.port, e.modes, e.ssrc, O(e.streams), e.experiments)
   }
   handleResumed(e) {
     this.backoff.succeed()
@@ -286,7 +286,7 @@ function y(e) {
     this.logger.warn("[HEARTBEAT ACK TIMEOUT] reconnecting in ".concat((e / 1e3).toFixed(2), " seconds."))
   }
   startHeartbeater() {
-    h(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here."), this.logger.info("Starting heartbeat with interval: ".concat(this.heartbeatInterval)), null !== this.heartbeater && clearInterval(this.heartbeater), this.heartbeatAck = !0, this.heartbeater = setInterval(() => {
+    E(null != this.heartbeatInterval, "RTCControlSocket: Heartbeat interval should never null here."), this.logger.info("Starting heartbeat with interval: ".concat(this.heartbeatInterval)), null !== this.heartbeater && clearInterval(this.heartbeater), this.heartbeatAck = !0, this.heartbeater = setInterval(() => {
       this.heartbeatAck ? (this.heartbeatAck = !1, this.sendHeartbeat()) : null === this.expeditedHeartbeatTimeout && this.handleHeartbeatTimeout()
     }, this.heartbeatInterval)
   }
@@ -409,6 +409,6 @@ function y(e) {
     this.heartbeatIntervalModifier = e
   }
   constructor(e) {
-    super(), this.logger = new _.default("RTCControlSocket"), this.backoff = new f.default(1e3, 5e3), this.serverVersion = 0, this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
+    super(), this.logger = new _.default("RTCControlSocket"), this.backoff = new p.default(1e3, 5e3), this.serverVersion = 0, this.url = e, this.webSocket = null, this.connectionState = 0, this.helloTimeout = null, this.lastHeartbeatAckTime = null, this.heartbeatInterval = null, this.heartbeater = null, this.heartbeatAck = !0, this.expeditedHeartbeatTimeout = null, this.heartbeatIntervalModifier = 1, this.connectionStartTime = 0, this.sessionId = null, this.serverId = null, this.token = null, this.resumable = !1
   }
 }

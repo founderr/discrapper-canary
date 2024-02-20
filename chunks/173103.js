@@ -11,6 +11,6 @@ var r = n("101607"),
 function i(e, t, n) {
   (0, o.default)(2, arguments);
   var i = (0, r.default)(e, n),
-    u = (0, r.default)(t, n);
-  return Math.round((i.getTime() - (0, a.default)(i) - (u.getTime() - (0, a.default)(u))) / 6048e5)
+    s = (0, r.default)(t, n);
+  return Math.round((i.getTime() - (0, a.default)(i) - (s.getTime() - (0, a.default)(s))) / 6048e5)
 }

@@ -1,12 +1,12 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   hasActiveObservations: function() {
-    return i
+    return a
   }
 });
-var n = r("514825"),
-  i = function() {
-    return n.resizeObservers.some(function(e) {
+var r = n("514825"),
+  a = function() {
+    return r.resizeObservers.some(function(e) {
       return e.activeTargets.length > 0
     })
   }

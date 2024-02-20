@@ -1,8 +1,8 @@
 "use strict";
-var n = r("911718"),
-  o = r("214401"),
-  i = o(n("String.prototype.indexOf"));
-t.exports = function(t, e) {
-  var r = n(t, !!e);
-  return "function" == typeof r && i(t, ".prototype.") > -1 ? o(r) : r
+var r = n("911718"),
+  a = n("214401"),
+  o = a(r("String.prototype.indexOf"));
+e.exports = function(e, t) {
+  var n = r(e, !!t);
+  return "function" == typeof n && o(e, ".prototype.") > -1 ? a(n) : n
 }

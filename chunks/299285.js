@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return p
   }
 }), n("222007"), n("424973");
 var i = n("446674"),
@@ -18,7 +18,7 @@ function d(e) {
   delete c[e.id]
 }
 
-function p(e) {
+function f(e) {
   let {
     entitlements: t
   } = e, n = !1;
@@ -28,7 +28,7 @@ function p(e) {
     of t)(null == e ? void 0 : e.application) != null && (d(s.default.createFromServer(e.application)), n = !0);
   return n
 }
-class h extends i.default.Store {
+class E extends i.default.Store {
   _getAllApplications() {
     return Object.values(o)
   }
@@ -60,8 +60,8 @@ class h extends i.default.Store {
     return Object.keys(c)
   }
 }
-h.displayName = "ApplicationStore";
-var f = new h(r.default, {
+E.displayName = "ApplicationStore";
+var p = new E(r.default, {
   CONNECTION_OPEN: function() {
     o = {}, l = {}
   },
@@ -115,9 +115,9 @@ var f = new h(r.default, {
     }
     return n
   },
-  APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: p,
-  ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: p,
-  ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: p,
+  APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: f,
+  ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: f,
+  ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: f,
   GUILD_SETTINGS_LOADED_INTEGRATIONS: function(e) {
     let {
       integrations: t,

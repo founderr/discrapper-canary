@@ -1,28 +1,28 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   scheduler: function() {
-    return l
+    return d
   },
   updateCount: function() {
-    return h
+    return f
   }
 });
-var n = r("738558"),
-  i = r("355070"),
-  o = r("41551"),
-  s = 0,
-  a = {
+var r = n("738558"),
+  a = n("355070"),
+  o = n("41551"),
+  i = 0,
+  s = {
     attributes: !0,
     characterData: !0,
     childList: !0,
     subtree: !0
   },
   u = ["resize", "load", "transitionend", "animationend", "animationstart", "animationiteration", "keyup", "keydown", "mouseup", "mousedown", "mouseover", "mouseout", "blur", "focus"],
-  c = function(e) {
+  l = function(e) {
     return void 0 === e && (e = 0), Date.now() + e
   },
-  f = !1,
-  l = new(function() {
+  c = !1,
+  d = new(function() {
     function e() {
       var e = this;
       this.stopped = !0, this.listener = function() {
@@ -31,16 +31,16 @@ var n = r("738558"),
     }
     return e.prototype.run = function(e) {
       var t = this;
-      if (void 0 === e && (e = 250), !f) {
-        f = !0;
-        var r = c(e);
+      if (void 0 === e && (e = 250), !c) {
+        c = !0;
+        var n = l(e);
         (0, o.queueResizeObserver)(function() {
-          var i = !1;
+          var a = !1;
           try {
-            i = (0, n.process)()
+            a = (0, r.process)()
           } finally {
-            if (f = !1, e = r - c(), !s) return;
-            i ? t.run(1e3) : e > 0 ? t.run(e) : t.start()
+            if (c = !1, e = n - l(), !i) return;
+            a ? t.run(1e3) : e > 0 ? t.run(e) : t.start()
           }
         })
       }
@@ -49,21 +49,21 @@ var n = r("738558"),
     }, e.prototype.observe = function() {
       var e = this,
         t = function() {
-          return e.observer && e.observer.observe(document.body, a)
+          return e.observer && e.observer.observe(document.body, s)
         };
-      document.body ? t() : i.global.addEventListener("DOMContentLoaded", t)
+      document.body ? t() : a.global.addEventListener("DOMContentLoaded", t)
     }, e.prototype.start = function() {
       var e = this;
       this.stopped && (this.stopped = !1, this.observer = new MutationObserver(this.listener), this.observe(), u.forEach(function(t) {
-        return i.global.addEventListener(t, e.listener, !0)
+        return a.global.addEventListener(t, e.listener, !0)
       }))
     }, e.prototype.stop = function() {
       var e = this;
       !this.stopped && (this.observer && this.observer.disconnect(), u.forEach(function(t) {
-        return i.global.removeEventListener(t, e.listener, !0)
+        return a.global.removeEventListener(t, e.listener, !0)
       }), this.stopped = !0)
     }, e
   }()),
-  h = function(e) {
-    !s && e > 0 && l.start(), (s += e) || l.stop()
+  f = function(e) {
+    !i && e > 0 && d.start(), (i += e) || d.stop()
   }

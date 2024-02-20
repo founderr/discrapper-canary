@@ -1,56 +1,56 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return h
+    return O
   }
-}), n("222007");
-var i = n("37983"),
-  a = n("884691"),
-  l = n("446674"),
-  s = n("77078"),
-  r = n("363658"),
-  o = n("135230"),
-  u = n("723872"),
-  d = n("130473"),
-  c = n("782340");
-let f = () => {
-    r.default.clearSuppressWarning()
+}), E("222007");
+var t = E("37983"),
+  o = E("884691"),
+  n = E("446674"),
+  r = E("77078"),
+  i = E("363658"),
+  a = E("135230"),
+  I = E("723872"),
+  s = E("130473"),
+  T = E("782340");
+let S = () => {
+    i.default.clearSuppressWarning()
   },
-  E = () => {
-    r.default.clearSuppressWarning(!0)
+  N = () => {
+    i.default.clearSuppressWarning(!0)
   };
-var h = () => {
-  let e = a.useRef(null);
+var O = () => {
+  let e = o.useRef(null);
 
-  function t() {
-    null !== e.current && ((0, s.closeModal)(e.current), e.current = null)
+  function _() {
+    null !== e.current && ((0, r.closeModal)(e.current), e.current = null)
   }
-  let [r, h] = (0, l.useStateFromStoresArray)([d.default], () => [d.default.shouldShowWarning(), d.default.isAFKChannel()], []), _ = a.useCallback(() => {
-    let t = "",
-      n = "";
-    h ? (t = c.default.Messages.SUPPRESSED_AFK_TITLE, n = c.default.Messages.SUPPRESSED_AFK_BODY) : (t = c.default.Messages.SUPPRESSED, n = c.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, s.openModal)(e => (0, i.jsx)(o.default, {
-      title: t,
-      body: n,
-      onConfirm: f,
-      confirmText: c.default.Messages.OKAY,
-      secondaryConfirmText: c.default.Messages.DONT_SHOW_AGAIN,
-      onConfirmSecondary: E,
+  let [i, O] = (0, n.useStateFromStoresArray)([s.default], () => [s.default.shouldShowWarning(), s.default.isAFKChannel()], []), A = o.useCallback(() => {
+    let _ = "",
+      E = "";
+    O ? (_ = T.default.Messages.SUPPRESSED_AFK_TITLE, E = T.default.Messages.SUPPRESSED_AFK_BODY) : (_ = T.default.Messages.SUPPRESSED, E = T.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, r.openModal)(e => (0, t.jsx)(a.default, {
+      title: _,
+      body: E,
+      onConfirm: S,
+      confirmText: T.default.Messages.OKAY,
+      secondaryConfirmText: T.default.Messages.DONT_SHOW_AGAIN,
+      onConfirmSecondary: N,
       ...e
     }))
-  }, [h]), C = a.useCallback(() => {
-    (0, s.openModalLazy)(async () => {
+  }, [O]), R = o.useCallback(() => {
+    (0, r.openModalLazy)(async () => {
       let {
         default: e
-      } = await n.el("109253").then(n.bind(n, "109253"));
-      return t => (0, i.jsx)(e, {
-        ...t,
+      } = await E.el("109253").then(E.bind(E, "109253"));
+      return _ => (0, t.jsx)(e, {
+        ..._,
         showHideSuppressWarning: !0
       })
-    }).then(t => {
-      null != t && (e.current = t)
+    }).then(_ => {
+      null != _ && (e.current = _)
     })
   }, []);
-  return a.useEffect(() => (r && (0, u.isRTCConnectedInHub)() ? C() : r ? _() : t(), () => {
-    t()
-  }), [r, _, C]), null
+  return o.useEffect(() => (i && (0, I.isRTCConnectedInHub)() ? R() : i ? A() : _(), () => {
+    _()
+  }), [i, A, R]), null
 }

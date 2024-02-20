@@ -1,52 +1,52 @@
 "use strict";
 n.r(t), n.d(t, {
   OneTimePaymentPredicateStep: function() {
-    return P
+    return E
   }
 }), n("222007");
-var u = n("37983"),
-  r = n("884691"),
+var s = n("37983"),
+  i = n("884691"),
   a = n("627445"),
-  i = n.n(a),
+  r = n.n(a),
   l = n("245187"),
-  s = n("635357"),
+  u = n("635357"),
   o = n("642906"),
-  c = n("85336"),
-  d = n("628738"),
+  d = n("85336"),
+  c = n("628738"),
   f = n("49111");
 
-function P(e) {
+function E(e) {
   let {
     handleStepChange: t,
     handleClose: n
   } = e, {
     blockedPayments: a,
-    hasFetchedSkus: P,
-    paymentSources: S,
-    hasFetchedPaymentSources: p,
-    application: h,
-    skusById: m,
-    selectedSkuId: x
+    hasFetchedSkus: E,
+    paymentSources: p,
+    hasFetchedPaymentSources: S,
+    application: m,
+    skusById: _,
+    selectedSkuId: I
   } = (0, o.usePaymentContext)(), {
     isGift: C
-  } = (0, s.useGiftContext)(), [v, E] = r.useState(!0);
-  return (r.useEffect(() => {
-    let e = null != h;
-    P && p && e && E(!1)
-  }, [P, p, h]), r.useEffect(() => {
-    if (v || a) return;
-    i(null != x, "Expected selectedSkuId");
-    let e = m[x];
+  } = (0, u.useGiftContext)(), [T, x] = i.useState(!0);
+  return (i.useEffect(() => {
+    let e = null != m;
+    E && S && e && x(!1)
+  }, [E, S, m]), i.useEffect(() => {
+    if (T || a) return;
+    r(null != I, "Expected selectedSkuId");
+    let e = _[I];
     if (C && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
-      t(c.Step.GIFT_CUSTOMIZATION);
+      t(d.Step.GIFT_CUSTOMIZATION);
       return
     }
-    if (0 === Object.keys(S).length) {
-      t(c.Step.ADD_PAYMENT_STEPS);
+    if (0 === Object.keys(p).length) {
+      t(d.Step.ADD_PAYMENT_STEPS);
       return
     }
-    t(c.Step.REVIEW)
-  }, [v, a, t, S, C, m, x]), v) ? (0, u.jsx)(d.default, {}) : a ? (0, u.jsx)(l.BlockedPaymentsContentModal, {
+    t(d.Step.REVIEW)
+  }, [T, a, t, p, C, _, I]), T) ? (0, s.jsx)(c.default, {}) : a ? (0, s.jsx)(l.BlockedPaymentsContentModal, {
     onClose: n
   }) : null
 }

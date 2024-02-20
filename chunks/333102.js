@@ -26,61 +26,61 @@ function c(e, t) {
   return r.forwardRef(function(t, c) {
     let {
       children: d,
-      className: p,
-      onResize: h,
-      contentClassName: f,
-      onScroll: E,
+      className: f,
+      onResize: E,
+      contentClassName: p,
+      onScroll: h,
       dir: _ = "ltr",
-      fade: m = !1,
-      customTheme: S = !1,
-      style: g,
-      ...T
-    } = t, I = r.useRef(null), v = r.useRef(null), [C, A] = r.useState(!1), {
+      fade: S = !1,
+      customTheme: m = !1,
+      style: T,
+      ...g
+    } = t, I = r.useRef(null), C = r.useRef(null), [v, A] = r.useState(!1), {
       scrollerRef: R,
       getScrollerState: N
-    } = (0, l.useUncachedScrollerState)(), y = (0, l.useScrollSpring)(R);
+    } = (0, l.useUncachedScrollerState)(), O = (0, l.useScrollSpring)(R);
     r.useImperativeHandle(c, () => ({
       getScrollerNode: () => R.current,
       isScrolling: () => null != I.current,
       getScrollerState: N,
-      ...(0, l.getAnimatedScrollHelpers)(R, N, y)
-    }), [R, N, y]);
-    let O = r.useCallback(e => {
+      ...(0, l.getAnimatedScrollHelpers)(R, N, O)
+    }), [R, N, O]);
+    let D = r.useCallback(e => {
       null == I.current ? A(!0) : clearTimeout(I.current), I.current = setTimeout(() => {
         I.current = null, A(!1)
-      }, 200), null != E && E(e)
-    }, [E]);
+      }, 200), null != h && h(e)
+    }, [h]);
     return r.useEffect(() => () => clearTimeout(I.current), []), (0, l.useResizeObserverSubscription)({
       ref: R,
       key: "container",
-      onUpdate: h,
+      onUpdate: E,
       resizeObserver: s,
       listenerMap: n
     }), (0, l.useResizeObserverSubscription)({
-      ref: v,
+      ref: C,
       key: "content",
-      onUpdate: h,
+      onUpdate: E,
       resizeObserver: s,
       listenerMap: n
     }), (0, i.jsx)("div", {
       ref: R,
-      className: a(p, {
-        [u.fade]: m,
-        [u.customTheme]: S,
+      className: a(f, {
+        [u.fade]: S,
+        [u.customTheme]: m,
         [e]: !0,
         [u.managedReactiveScroller]: !0,
-        [u.scrolling]: C && m
+        [u.scrolling]: v && S
       }),
-      style: g,
+      style: T,
       dir: _,
-      onScroll: O,
-      ...T,
+      onScroll: D,
+      ...g,
       children: (0, i.jsx)(o.FocusRingScope, {
-        containerRef: v,
+        containerRef: C,
         children: (0, i.jsxs)("div", {
-          ref: v,
-          className: a(f, u.content),
-          children: [d, C && (0, i.jsx)("div", {
+          ref: C,
+          className: a(p, u.content),
+          children: [d, v && (0, i.jsx)("div", {
             className: u.pointerCover
           })]
         })

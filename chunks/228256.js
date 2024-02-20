@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   LayerClassName: function() {
-    return f
+    return p
   },
   LayerProvider: function() {
-    return E
+    return h
   },
   LayerContainer: function() {
     return _
   },
   getParentLayerContainer: function() {
-    return m
-  },
-  Layer: function() {
     return S
   },
+  Layer: function() {
+    return m
+  },
   createLayer: function() {
-    return g
+    return T
   }
 }), n("222007");
 var i = n("37983"),
@@ -28,10 +28,10 @@ var i = n("37983"),
   u = n("817736"),
   c = n.n(u),
   d = n("117362"),
-  p = n("411093"),
-  h = n("855265");
-let f = h.layerContainer;
-class E extends r.Component {
+  f = n("411093"),
+  E = n("855265");
+let p = E.layerContainer;
+class h extends r.Component {
   componentWillUnmount() {
     this.state.layerContainerElement = null
   }
@@ -63,16 +63,16 @@ let _ = e => {
     className: n
   } = e, [, s] = r.useContext(t);
   return (0, i.jsx)("div", {
-    className: a(f, n),
+    className: a(p, n),
     ref: s
   })
 };
 
-function m(e) {
-  let t = (0, p.default)(e, h.layerContainer);
+function S(e) {
+  let t = (0, f.default)(e, E.layerContainer);
   return l(null != t, "Unexpected missing parent container"), t
 }
-let S = e => {
+let m = e => {
   let {
     layerContext: t,
     children: n
@@ -85,10 +85,10 @@ let S = e => {
   })
 };
 
-function g(e) {
+function T(e) {
   let t = r.createContext([null, () => {}]),
     n = {
-      LayerProvider: e => (0, i.jsx)(E, {
+      LayerProvider: e => (0, i.jsx)(h, {
         layerContext: t,
         ...e
       }),
@@ -96,7 +96,7 @@ function g(e) {
         layerContext: t,
         ...e
       }),
-      Layer: e => (0, i.jsx)(S, {
+      Layer: e => (0, i.jsx)(m, {
         layerContext: t,
         ...e
       }),

@@ -22,9 +22,9 @@ function c(e) {
     faded: a,
     disabled: c,
     required: d = !1,
-    error: p,
-    errorId: h,
-    ...f
+    error: f,
+    errorId: E,
+    ...p
   } = e;
   switch (n) {
     case "legend":
@@ -39,19 +39,19 @@ function c(e) {
       [u["defaultMargin".concat(n)]]: null == r,
       [u.faded]: a,
       [u.disabled]: c,
-      [u.error]: null != p
+      [u.error]: null != f
     }),
-    ...f,
-    children: [i, d && null == p ? (0, s.jsx)("span", {
+    ...p,
+    children: [i, d && null == f ? (0, s.jsx)("span", {
       className: u.required,
       children: "*"
-    }) : null, null != p ? (0, s.jsxs)("span", {
-      id: h,
+    }) : null, null != f ? (0, s.jsxs)("span", {
+      id: E,
       className: u.errorMessage,
       children: [null != i ? (0, s.jsx)("span", {
         className: u.errorSeparator,
         children: "-"
-      }) : null, p]
+      }) : null, f]
     }) : null]
   })
 }(i = r || (r = {})).H1 = "h1", i.H2 = "h2", i.H3 = "h3", i.H4 = "h4", i.H5 = "h5", i.LABEL = "label", i.LEGEND = "legend"

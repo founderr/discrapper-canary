@@ -18,30 +18,30 @@ function u(e) {
     menuSubmenuProps: u,
     rows: c,
     rowHeight: d,
-    onScroll: p,
-    listClassName: h
-  } = e, f = r.useRef(null), E = r.useRef(null), _ = r.useRef(null), m = r.useRef(null), {
-    isUsingKeyboardNavigation: S,
-    focusIndex: g,
-    ...T
+    onScroll: f,
+    listClassName: E
+  } = e, p = r.useRef(null), h = r.useRef(null), _ = r.useRef(null), S = r.useRef(null), {
+    isUsingKeyboardNavigation: m,
+    focusIndex: T,
+    ...g
   } = u;
   r.useLayoutEffect(() => {
     var e;
-    n && ((0, a.ensureItemVisible)(f), null === (e = _.current) || void 0 === e || e.focus())
+    n && ((0, a.ensureItemVisible)(p), null === (e = _.current) || void 0 === e || e.focus())
   }, [n]), r.useEffect(() => {
-    if (n && g >= 0 && S) {
+    if (n && T >= 0 && m) {
       var e;
-      null === (e = m.current) || void 0 === e || e.scrollRowIntoView(g)
+      null === (e = S.current) || void 0 === e || e.scrollRowIntoView(T)
     }
-  }, [n, S, g]);
+  }, [n, m, T]);
   let I = r.useCallback(e => c[e], [c]);
   return (0, i.jsxs)("div", {
-    ref: f,
+    ref: p,
     className: l.submenuContainer,
     children: [(0, i.jsx)("div", {
-      ref: E
+      ref: h
     }), t, n ? (0, i.jsx)(s.ReferencePositionLayer, {
-      reference: E,
+      reference: h,
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
       fixed: !0,
@@ -52,13 +52,13 @@ function u(e) {
         className: l.submenuPaddingContainer,
         children: (0, i.jsx)("div", {
           className: l.submenu,
-          ...T,
+          ...g,
           ref: _,
           children: (0, i.jsx)(o.default, {
-            ref: m,
-            className: h,
+            ref: S,
+            className: E,
             listPadding: [6, 0, 6, 8],
-            onScroll: p,
+            onScroll: f,
             renderRow: I,
             rowCount: c.length,
             rowHeight: d

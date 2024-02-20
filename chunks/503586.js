@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   batchUpdates: function() {
-    return a
+    return o
   }
 });
-var i = n("817736");
+var t = E("817736");
 
-function a(e) {
-  (0, i.unstable_batchedUpdates)(e)
+function o(e) {
+  (0, t.unstable_batchedUpdates)(e)
 }

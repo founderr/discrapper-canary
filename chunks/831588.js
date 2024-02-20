@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   getToken: function() {
-    return i
+    return r
   },
   isAuthenticated: function() {
-    return o
+    return s
   },
   getArtForPath: function() {
-    return l
+    return a
   }
 });
-var r = n("171718");
+var i = n("171718");
 
-function i() {
-  return r.default.getToken()
+function r() {
+  return i.default.getToken()
 }
 
-function o() {
-  return null != i()
+function s() {
+  return null != r()
 }
-let l = e => null != e && /^\/developers/.test(e) ? n("501617") : null
+let a = e => null != e && /^\/developers/.test(e) ? n("501617") : null

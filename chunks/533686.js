@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return l
+    return n
   }
 });
-var i = n("77078"),
-  a = n("913144");
+var t = E("77078"),
+  o = E("913144");
 
-function l(e, t) {
-  null != t && (0, i.closeModal)(t), a.default.dispatch({
+function n(e, _) {
+  null != _ && (0, t.closeModal)(_), o.default.dispatch({
     type: "INTERACTION_IFRAME_MODAL_CLOSE",
     applicationId: e
   })

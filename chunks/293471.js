@@ -1,8 +1,8 @@
 "use strict";
-var n = r("911718")("%Object.getOwnPropertyDescriptor%", !0);
-if (n) try {
-  n([], "length")
-} catch (t) {
-  n = null
+var r = n("911718")("%Object.getOwnPropertyDescriptor%", !0);
+if (r) try {
+  r([], "length")
+} catch (e) {
+  r = null
 }
-t.exports = n
+e.exports = r

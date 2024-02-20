@@ -1,18 +1,18 @@
 "use strict";
-var i, a, l, s, r, o, u, d;
-n.r(t), n.d(t, {
+var t, o, n, r, i, a, I, s;
+E.r(_), E.d(_, {
   CHANGELOG_MODAL_KEY: function() {
-    return c
+    return T
   },
   ChangelogPlatforms: function() {
-    return i
+    return t
   },
   AssetType: function() {
-    return a
+    return o
   },
   ChangelogLoadState: function() {
-    return l
+    return n
   }
 });
-let c = "CHANGELOG_MODAL";
-(r = i || (i = {}))[r.DESKTOP = 0] = "DESKTOP", r[r.MOBILE = 1] = "MOBILE", (o = a || (a = {}))[o.YOUTUBE_VIDEO_ID = 0] = "YOUTUBE_VIDEO_ID", o[o.IMAGE = 1] = "IMAGE", (u = l || (l = {}))[u.NOT_LOADED = 0] = "NOT_LOADED", u[u.LOADED_SUCCESS = 1] = "LOADED_SUCCESS", u[u.LOADED_FAILURE = 2] = "LOADED_FAILURE", (d = s || (s = {})).SPECIAL = "special", d.STANDARD = "standard"
+let T = "CHANGELOG_MODAL";
+(i = t || (t = {}))[i.DESKTOP = 0] = "DESKTOP", i[i.MOBILE = 1] = "MOBILE", (a = o || (o = {}))[a.YOUTUBE_VIDEO_ID = 0] = "YOUTUBE_VIDEO_ID", a[a.IMAGE = 1] = "IMAGE", (I = n || (n = {}))[I.NOT_LOADED = 0] = "NOT_LOADED", I[I.LOADED_SUCCESS = 1] = "LOADED_SUCCESS", I[I.LOADED_FAILURE = 2] = "LOADED_FAILURE", (s = r || (r = {})).SPECIAL = "special", s.STANDARD = "standard"

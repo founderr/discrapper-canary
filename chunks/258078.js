@@ -43,20 +43,20 @@ let l = Object.freeze({
       tag: o = "div",
       selectable: c = !1,
       strong: d = !1,
-      children: p,
-      style: h,
-      "aria-label": f,
-      ...E
+      children: f,
+      style: E,
+      "aria-label": p,
+      ...h
     } = e;
     return (0, i.jsx)(o, {
-      "aria-label": f,
+      "aria-label": p,
       className: s(n, r, t, {
         [a.selectable]: c,
         [a.strong]: d
       }),
-      style: h,
-      ...E,
-      children: p
+      style: E,
+      ...h,
+      children: f
     })
   };
 c.Colors = l, c.Sizes = u;

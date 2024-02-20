@@ -15,17 +15,17 @@ n.r(t), n.d(t, {
 }), n("70102"), n("222007"), n("424973");
 
 function a(e, t) {
-  var n = i(e, t, "get");
+  var n = o(e, t, "get");
   return function(e, t) {
     return t.get ? t.get.call(e) : t.value
   }(e, n)
 }
 
-function i(e, t, n) {
+function o(e, t, n) {
   if (!t.has(e)) throw TypeError("attempted to " + n + " private field on non-instance");
   return t.get(e)
 }
-var o = new WeakMap;
+var i = new WeakMap;
 class s {
   constructor() {
     var e, t, n, s, c, l;
@@ -35,14 +35,14 @@ class s {
       },
       function(e, t) {
         if (t.has(e)) throw TypeError("Cannot initialize the same private elements twice on an object")
-      }(e, t = o), t.set(e, n), r(this, "register", e => {
-        a(this, o).push(e)
+      }(e, t = i), t.set(e, n), r(this, "register", e => {
+        a(this, i).push(e)
       }), r(this, "unregister", e => {
         let t;
-        for (; - 1 !== (t = a(this, o).indexOf(e));) a(this, o).splice(t, 1)
+        for (; - 1 !== (t = a(this, i).indexOf(e));) a(this, i).splice(t, 1)
       }), r(this, "backendChanged", e => {
-        for (let t of a(this, o)) t.backendChanged(e)
-      }), s = this, c = [], l = i(s, o, "set"),
+        for (let t of a(this, i)) t.backendChanged(e)
+      }), s = this, c = [], l = o(s, i, "set"),
       function(e, t, n) {
         if (t.set) t.set.call(e, n);
         else {

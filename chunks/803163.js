@@ -1,68 +1,68 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   showMFASuccessModal: function() {
-    return f
+    return E
   },
   default: function() {
-    return _
+    return T
   }
-}), n("70102"), n("222007");
-var a = n("37983"),
-  i = n("884691"),
-  o = n("627929"),
-  l = n("77078"),
-  r = n("430713"),
-  s = n("663657"),
-  d = n("49111"),
-  c = n("782340");
+}), s("70102"), s("222007");
+var a = s("37983"),
+  n = s("884691"),
+  l = s("627929"),
+  i = s("77078"),
+  r = s("430713"),
+  o = s("663657"),
+  d = s("49111"),
+  u = s("782340");
 
-function u(e) {
+function c(e) {
   let {
     onError: t,
-    onSuccess: n,
-    PasswordConfirm: l,
-    ...s
-  } = e, [u, E] = i.useState("");
-  return (0, a.jsx)(l, {
-    ...s,
+    onSuccess: s,
+    PasswordConfirm: i,
+    ...o
+  } = e, [c, S] = n.useState("");
+  return (0, a.jsx)(i, {
+    ...o,
     handleSubmit: e => r.default.enableMFAStart(e),
     onError: e => {
       var a;
-      if (("object" == typeof(a = e) && null != a && (0, o.hasOwnProperty)(a, "code") && "number" == typeof a.code ? a.code : 0) === d.AbortCodes.MFA_INVALID_SECRET) n(u), s.onClose();
+      if (("object" == typeof(a = e) && null != a && (0, l.hasOwnProperty)(a, "code") && "number" == typeof a.code ? a.code : 0) === d.AbortCodes.MFA_INVALID_SECRET) s(c), o.onClose();
       else t(e)
     },
-    onPasswordChange: E,
-    title: c.default.Messages.TWO_FA_ENABLE,
-    actionText: c.default.Messages.CONTINUE,
+    onPasswordChange: S,
+    title: u.default.Messages.TWO_FA_ENABLE,
+    actionText: u.default.Messages.CONTINUE,
     skipErrorMsgAbortCode: d.AbortCodes.MFA_INVALID_SECRET
   })
 }
 
-function E(e, t) {
-  return new Promise(i => {
-    (0, l.openModalLazy)(async () => {
+function S(e, t) {
+  return new Promise(n => {
+    (0, i.openModalLazy)(async () => {
       let {
-        default: o
-      } = await n.el("936380").then(n.bind(n, "936380"));
-      return n => (0, a.jsx)(o, {
-        ...n,
+        default: l
+      } = await s.el("936380").then(s.bind(s, "936380"));
+      return s => (0, a.jsx)(l, {
+        ...s,
         password: e,
         emailToken: t,
-        handleEnableMFASuccess: i
+        handleEnableMFASuccess: n
       })
     })
   })
 }
 
-function f() {
+function E() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
   return new Promise(t => {
-    (0, l.openModalLazy)(async () => {
+    (0, i.openModalLazy)(async () => {
       let {
         default: t
-      } = await n.el("184504").then(n.bind(n, "184504"));
-      return n => (0, a.jsx)(t, {
-        ...n,
+      } = await s.el("184504").then(s.bind(s, "184504"));
+      return s => (0, a.jsx)(t, {
+        ...s,
         isTotp: e
       })
     }, {
@@ -71,42 +71,42 @@ function f() {
     })
   })
 }
-var _ = {
+var T = {
   enableMFA: async function e() {
     let e = await new Promise((e, t) => {
-      (0, l.openModalLazy)(async () => {
+      (0, i.openModalLazy)(async () => {
         let {
-          default: i
-        } = await n.el("583227").then(n.bind(n, "583227"));
-        return n => (0, a.jsx)(u, {
-          ...n,
+          default: n
+        } = await s.el("583227").then(s.bind(s, "583227"));
+        return s => (0, a.jsx)(c, {
+          ...s,
           onSuccess: e,
           onError: t,
-          PasswordConfirm: i
+          PasswordConfirm: n
         })
       })
     });
-    if ((0, s.isMfaEmailVerificationEnabled)()) {
+    if ((0, o.isMfaEmailVerificationEnabled)()) {
       var t;
-      let i = await (t = e, new Promise(e => {
-        (0, l.openModalLazy)(async () => {
+      let n = await (t = e, new Promise(e => {
+        (0, i.openModalLazy)(async () => {
           let {
-            default: i
-          } = await n.el("644512").then(n.bind(n, "644512"));
-          return n => (0, a.jsx)(i, {
-            ...n,
+            default: n
+          } = await s.el("644512").then(s.bind(s, "644512"));
+          return s => (0, a.jsx)(n, {
+            ...s,
             onFormSubmit: async e => await r.default.verifyEmailCode(e),
             onResend: async () => {
               await r.default.resendEmailCode(t)
             },
             onSuccess: e,
-            headerText: c.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP,
-            confirmButtonText: c.default.Messages.NEXT
+            headerText: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP,
+            confirmButtonText: u.default.Messages.NEXT
           })
         })
       }));
-      await E(e, null == i ? void 0 : i.token)
-    } else await E(e);
-    await f()
+      await S(e, null == n ? void 0 : n.token)
+    } else await S(e);
+    await E()
   }
 }

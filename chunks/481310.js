@@ -49,10 +49,10 @@ n.r(t), n.d(t, {
     return i
   },
   varint32write: function() {
-    return u
+    return s
   },
   varint32read: function() {
-    return s
+    return u
   }
 }), n("70102"), n("424973");
 
@@ -77,14 +77,14 @@ function i(e, t) {
     o = n + 8147497 * r,
     i = 2 * r;
 
-  function u(e, t) {
+  function s(e, t) {
     let n = e ? String(e) : "";
     return t ? "0000000".slice(n.length) + n : n
   }
-  return a >= 1e7 && (o += Math.floor(a / 1e7), a %= 1e7), o >= 1e7 && (i += Math.floor(o / 1e7), o %= 1e7), u(i, 0) + u(o, i) + u(a, 1)
+  return a >= 1e7 && (o += Math.floor(a / 1e7), a %= 1e7), o >= 1e7 && (i += Math.floor(o / 1e7), o %= 1e7), s(i, 0) + s(o, i) + s(a, 1)
 }
 
-function u(e, t) {
+function s(e, t) {
   if (e >= 0) {
     for (; e > 127;) t.push(127 & e | 128), e >>>= 7;
     t.push(e)
@@ -94,7 +94,7 @@ function u(e, t) {
   }
 }
 
-function s() {
+function u() {
   let e = this.buf[this.pos++],
     t = 127 & e;
   if ((128 & e) == 0) return this.assertBounds(), t;

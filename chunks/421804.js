@@ -4,26 +4,26 @@ E.r(_), E.d(_, {
     return t
   },
   getCurrentlyInteractingWindowId: function() {
-    return I
+    return n
   },
   setCurrentlyInteractingWindowId: function() {
-    return T
+    return r
   },
   clearCurrentlyInteractingWindowId: function() {
-    return r
+    return i
   }
 });
 let t = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"],
   o = null;
 
-function I() {
+function n() {
   return o
 }
 
-function T(e) {
+function r(e) {
   o = e
 }
 
-function r(e) {
+function i(e) {
   o === e && (o = null)
 }

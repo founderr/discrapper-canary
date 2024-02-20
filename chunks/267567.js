@@ -13,9 +13,9 @@ var i = n("446674"),
 let u = [],
   c = {},
   d = null,
-  p = null;
+  f = null;
 
-function h(e) {
+function E(e) {
   let t = u.indexOf(e);
   if (t > -1) {
     let n = [...u];
@@ -24,10 +24,10 @@ function h(e) {
   return !1
 }
 
-function f(e) {
+function p(e) {
   return !(e === l.ME || u.includes(e)) && (u = [...u, e], !0)
 }
-class E extends i.default.Store {
+class h extends i.default.Store {
   initialize() {
     this.waitFor(a.default, o.default)
   }
@@ -50,14 +50,14 @@ class E extends i.default.Store {
     return !!(!n && i)
   }
   getLurkingSource() {
-    return p
+    return f
   }
   getLoadId(e) {
     return null != e ? c[e] : null
   }
 }
-E.displayName = "LurkingStore";
-var _ = new E(r.default, {
+h.displayName = "LurkingStore";
+var _ = new h(r.default, {
   CONNECTION_OPEN: function() {
     let e = Object.values(a.default.getGuilds()).reduce((e, t) => {
       let n = t.isLurker();
@@ -75,20 +75,20 @@ var _ = new E(r.default, {
     } = e;
     if (n) {
       var a, o;
-      switch (f(t), a = t, null != (o = s) && (c[a] = o), i) {
+      switch (p(t), a = t, null != (o = s) && (c[a] = o), i) {
         case l.JoinGuildSources.MOBILE_GUILD_DISCOVERY:
-          p = {
+          f = {
             type: l.JoinGuildSources.MOBILE_GUILD_DISCOVERY
           };
           break;
         case l.JoinGuildSources.DIRECTORY_ENTRY:
-          p = {
+          f = {
             type: l.JoinGuildSources.DIRECTORY_ENTRY,
             directoryChannelId: r
           };
           break;
         default:
-          p = null
+          f = null
       }
       return !0
     }
@@ -99,28 +99,28 @@ var _ = new E(r.default, {
       ignoredGuildIds: t
     } = e, n = function(e) {
       let t = new Set([...null != e ? e : []]);
-      return [...u].reduce((e, n) => t.has(n) ? e : h(n) || e, !1)
+      return [...u].reduce((e, n) => t.has(n) ? e : E(n) || e, !1)
     }(t);
-    return n && (d = null, p = null), n
+    return n && (d = null, f = null), n
   },
   GUILD_STOP_LURKING_FAILURE: function(e) {
     let {
       lurkingGuildId: t,
       lurkingSource: n
     } = e;
-    return f(t), p = n, !0
+    return p(t), f = n, !0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e, n = null == t.joined_at;
-    return !!(!n && u.includes(t.id)) && (h(t.id), d = null, p = null, !0)
+    return !!(!n && u.includes(t.id)) && (E(t.id), d = null, f = null, !0)
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    return !!u.includes(t.id) && (h(t.id), d = null, p = null, !0)
+    return !!u.includes(t.id) && (E(t.id), d = null, f = null, !0)
   },
   GUILD_MEMBER_ADD: function(e) {
     var t;
@@ -129,6 +129,6 @@ var _ = new E(r.default, {
       joinedAt: i,
       user: r
     } = e, s = r.id === (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
-    return !!(s && null != i && u.includes(n)) && (h(n), d = null, p = null, !0)
+    return !!(s && null != i && u.includes(n)) && (E(n), d = null, f = null, !0)
   }
 })

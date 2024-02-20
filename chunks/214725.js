@@ -1,49 +1,49 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return f
   }
 });
 var r = n("949337"),
   a = n("837052"),
   o = n("130670"),
   i = n("794040"),
-  u = n("483165"),
-  s = n("697309"),
+  s = n("483165"),
+  u = n("697309"),
   l = n("753671"),
   c = n("796752"),
-  f = n("192693");
+  d = n("192693");
 
-function d(e, t) {
+function f(e, t) {
   void 0 === t && (t = {});
   var n = t,
-    d = n.placement,
-    p = void 0 === d ? e.placement : d,
-    h = n.strategy,
-    m = void 0 === h ? e.strategy : h,
+    f = n.placement,
+    p = void 0 === f ? e.placement : f,
+    m = n.strategy,
+    h = void 0 === m ? e.strategy : m,
     _ = n.boundary,
-    y = void 0 === _ ? s.clippingParents : _,
+    y = void 0 === _ ? u.clippingParents : _,
     g = n.rootBoundary,
-    v = void 0 === g ? s.viewport : g,
+    v = void 0 === g ? u.viewport : g,
     b = n.elementContext,
-    M = void 0 === b ? s.popper : b,
+    M = void 0 === b ? u.popper : b,
     w = n.altBoundary,
     k = n.padding,
     L = void 0 === k ? 0 : k,
-    D = (0, c.default)("number" != typeof L ? L : (0, f.default)(L, s.basePlacements)),
-    S = M === s.popper ? s.reference : s.popper,
-    T = e.rects.popper,
-    Y = e.elements[void 0 !== w && w ? S : M],
-    x = (0, r.default)((0, l.isElement)(Y) ? Y : Y.contextElement || (0, a.default)(e.elements.popper), y, v, m),
-    E = (0, o.default)(e.elements.reference),
-    O = (0, i.default)({
-      reference: E,
-      element: T,
+    D = (0, c.default)("number" != typeof L ? L : (0, d.default)(L, u.basePlacements)),
+    T = M === u.popper ? u.reference : u.popper,
+    S = e.rects.popper,
+    Y = e.elements[void 0 !== w && w ? T : M],
+    x = (0, r.default)((0, l.isElement)(Y) ? Y : Y.contextElement || (0, a.default)(e.elements.popper), y, v, h),
+    O = (0, o.default)(e.elements.reference),
+    E = (0, i.default)({
+      reference: O,
+      element: S,
       strategy: "absolute",
       placement: p
     }),
-    P = (0, u.default)(Object.assign({}, T, O)),
-    j = M === s.popper ? P : E,
+    P = (0, s.default)(Object.assign({}, S, E)),
+    j = M === u.popper ? P : O,
     C = {
       top: x.top - j.top + D.top,
       bottom: j.bottom - x.bottom + D.bottom,
@@ -51,12 +51,12 @@ function d(e, t) {
       right: j.right - x.right + D.right
     },
     H = e.modifiersData.offset;
-  if (M === s.popper && H) {
-    var N = H[p];
+  if (M === u.popper && H) {
+    var F = H[p];
     Object.keys(C).forEach(function(e) {
-      var t = [(0, s.right), (0, s.bottom)].indexOf(e) >= 0 ? 1 : -1,
-        n = [(0, s.top), (0, s.bottom)].indexOf(e) >= 0 ? "y" : "x";
-      C[e] += N[n] * t
+      var t = [(0, u.right), (0, u.bottom)].indexOf(e) >= 0 ? 1 : -1,
+        n = [(0, u.top), (0, u.bottom)].indexOf(e) >= 0 ? "y" : "x";
+      C[e] += F[n] * t
     })
   }
   return C

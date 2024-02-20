@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
-    return r
+    return c
   }
 });
-var a = n("37983");
-n("884691");
-var i = n("446674"),
-  l = n("77078"),
-  u = n("18054"),
-  d = n("957255"),
-  s = n("49111"),
-  o = n("782340");
+var a = t("37983");
+t("884691");
+var u = t("446674"),
+  l = t("77078"),
+  s = t("18054"),
+  r = t("957255"),
+  i = t("49111"),
+  d = t("782340");
 
-function r(e) {
+function c(e) {
   let {
-    canManageChannels: t,
-    canManageRoles: n,
-    canManageWebhooks: r,
-    canAccessChannel: c
-  } = (0, i.useStateFromStoresObject)([d.default], () => ({
-    canManageChannels: d.default.can(s.Permissions.MANAGE_CHANNELS, e),
-    canManageRoles: d.default.can(s.Permissions.MANAGE_ROLES, e),
-    canManageWebhooks: d.default.can(s.Permissions.MANAGE_WEBHOOKS, e),
-    canAccessChannel: d.default.can(e.accessPermissions, e)
+    canManageChannels: n,
+    canManageRoles: t,
+    canManageWebhooks: c,
+    canAccessChannel: o
+  } = (0, u.useStateFromStoresObject)([r.default], () => ({
+    canManageChannels: r.default.can(i.Permissions.MANAGE_CHANNELS, e),
+    canManageRoles: r.default.can(i.Permissions.MANAGE_ROLES, e),
+    canManageWebhooks: r.default.can(i.Permissions.MANAGE_WEBHOOKS, e),
+    canAccessChannel: r.default.can(e.accessPermissions, e)
   }), [e]);
-  return !__OVERLAY__ && c && (t || n || r) ? (0, a.jsx)(l.MenuItem, {
+  return !__OVERLAY__ && o && (n || t || c) ? (0, a.jsx)(l.MenuItem, {
     id: "edit-channel",
-    label: e.type === s.ChannelTypes.GUILD_CATEGORY ? o.default.Messages.EDIT_CATEGORY : o.default.Messages.EDIT_CHANNEL,
-    action: () => u.default.open(e.id)
+    label: e.type === i.ChannelTypes.GUILD_CATEGORY ? d.default.Messages.EDIT_CATEGORY : d.default.Messages.EDIT_CHANNEL,
+    action: () => s.default.open(e.id)
   }) : null
 }

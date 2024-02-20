@@ -1,7 +1,7 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   resizeObservers: function() {
-    return n
+    return r
   }
 });
-var n = []
+var r = []

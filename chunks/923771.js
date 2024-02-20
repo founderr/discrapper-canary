@@ -1,6 +1,6 @@
 "use strict";
-var n = "undefined" != typeof Symbol && Symbol,
-  o = r("391938");
-t.exports = function() {
-  return "function" == typeof n && "function" == typeof Symbol && "symbol" == typeof n("foo") && "symbol" == typeof Symbol("bar") && o()
+var r = "undefined" != typeof Symbol && Symbol,
+  a = n("391938");
+e.exports = function() {
+  return "function" == typeof r && "function" == typeof Symbol && "symbol" == typeof r("foo") && "symbol" == typeof Symbol("bar") && a()
 }

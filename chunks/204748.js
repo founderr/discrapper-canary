@@ -18,15 +18,15 @@ function i(e) {
   var t = e.children,
     n = r.useState(null),
     i = n[0],
-    u = n[1],
-    s = r.useRef(!1);
+    s = n[1],
+    u = r.useRef(!1);
   r.useEffect(function() {
     return function() {
-      s.current = !0
+      u.current = !0
     }
   }, []);
   var l = r.useCallback(function(e) {
-    !s.current && u(e)
+    !u.current && s(e)
   }, []);
   return r.createElement(a.Provider, {
     value: i

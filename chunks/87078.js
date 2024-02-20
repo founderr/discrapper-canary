@@ -1,41 +1,41 @@
 "use strict";
-var e = n("64980"),
-  i = n("116180"),
-  u = Math.floor,
-  o = e("".charAt),
-  c = e("".replace),
-  a = e("".slice),
-  s = /\$([$&'`]|\d{1,2}|<[^>]*>)/g,
-  f = /\$([$&'`]|\d{1,2})/g;
-t.exports = function(t, r, n, e, l, p) {
-  var v = n + t.length,
-    x = e.length,
-    h = f;
-  return void 0 !== l && (l = i(l), h = s), c(p, h, function(i, c) {
-    var s;
-    switch (o(c, 0)) {
+var n = i("64980"),
+  r = i("116180"),
+  a = Math.floor,
+  s = n("".charAt),
+  o = n("".replace),
+  l = n("".slice),
+  u = /\$([$&'`]|\d{1,2}|<[^>]*>)/g,
+  c = /\$([$&'`]|\d{1,2})/g;
+t.exports = function(t, e, i, n, h, f) {
+  var d = i + t.length,
+    m = n.length,
+    v = c;
+  return void 0 !== h && (h = r(h), v = u), o(f, v, function(r, o) {
+    var u;
+    switch (s(o, 0)) {
       case "$":
         return "$";
       case "&":
         return t;
       case "`":
-        return a(r, 0, n);
+        return l(e, 0, i);
       case "'":
-        return a(r, v);
+        return l(e, d);
       case "<":
-        s = l[a(c, 1, -1)];
+        u = h[l(o, 1, -1)];
         break;
       default:
-        var f = +c;
-        if (0 === f) return i;
-        if (f > x) {
-          var p = u(f / 10);
-          if (0 === p) return i;
-          if (p <= x) return void 0 === e[p - 1] ? o(c, 1) : e[p - 1] + o(c, 1);
-          return i
+        var c = +o;
+        if (0 === c) return r;
+        if (c > m) {
+          var f = a(c / 10);
+          if (0 === f) return r;
+          if (f <= m) return void 0 === n[f - 1] ? s(o, 1) : n[f - 1] + s(o, 1);
+          return r
         }
-        s = e[f - 1]
+        u = n[c - 1]
     }
-    return void 0 === s ? "" : s
+    return void 0 === u ? "" : u
   })
 }

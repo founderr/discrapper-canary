@@ -1,43 +1,43 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return C
+    return R
   }
-}), n("222007");
-var i = n("637612"),
-  a = n("819689"),
-  l = n("689988"),
-  s = n("271938"),
-  r = n("42203"),
-  o = n("377253"),
-  u = n("957255"),
-  d = n("18494"),
-  c = n("697218"),
-  f = n("923510"),
-  E = n("285857"),
-  h = n("49111");
-class _ extends l.default {
+}), E("222007");
+var t = E("637612"),
+  o = E("819689"),
+  n = E("689988"),
+  r = E("271938"),
+  i = E("42203"),
+  a = E("377253"),
+  I = E("957255"),
+  s = E("18494"),
+  T = E("697218"),
+  S = E("923510"),
+  N = E("285857"),
+  O = E("49111");
+class A extends n.default {
   handleVoiceStateUpdates(e) {
     let {
-      voiceStates: t
+      voiceStates: _
     } = e;
-    t.forEach(e => {
+    _.forEach(e => {
       let {
-        channelId: t,
-        userId: n,
-        suppress: l,
-        requestToSpeakTimestamp: _
+        channelId: _,
+        userId: E,
+        suppress: n,
+        requestToSpeakTimestamp: A
       } = e;
-      if (d.default.getVoiceChannelId() !== t || !l || null == t || n === s.default.getId()) return;
-      let C = u.default.can(f.MODERATE_STAGE_CHANNEL_PERMISSIONS, r.default.getChannel(t));
-      if (C) {
-        if (null != _) {
-          let e = c.default.getUser(n);
-          null != e && (0, E.sendStageRequestToSpeakEphemeralMessage)(t, e, _)
+      if (s.default.getVoiceChannelId() !== _ || !n || null == _ || E === r.default.getId()) return;
+      let R = I.default.can(S.MODERATE_STAGE_CHANNEL_PERMISSIONS, i.default.getChannel(_));
+      if (R) {
+        if (null != A) {
+          let e = T.default.getUser(E);
+          null != e && (0, N.sendStageRequestToSpeakEphemeralMessage)(_, e, A)
         } else {
-          let e = o.default.getMessages(t),
-            l = e.findNewest(e => e.type === i.MessageTypes.STAGE_RAISE_HAND && e.hasFlag(h.MessageFlags.EPHEMERAL) && e.author.id === n);
-          null != l && a.default.deleteMessage(t, l.id, !0)
+          let e = a.default.getMessages(_),
+            n = e.findNewest(e => e.type === t.MessageTypes.STAGE_RAISE_HAND && e.hasFlag(O.MessageFlags.EPHEMERAL) && e.author.id === E);
+          null != n && o.default.deleteMessage(_, n.id, !0)
         }
       }
     })
@@ -48,4 +48,4 @@ class _ extends l.default {
     }
   }
 }
-var C = new _
+var R = new A

@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("669491"),
   i = n("77078"),
   l = n("462274"),
-  o = n("181832"),
-  u = n("981184"),
+  u = n("181832"),
+  o = n("981184"),
   d = n("506885"),
   c = n("217513"),
   f = n("845579"),
@@ -20,33 +20,33 @@ var a = n("37983"),
       style: t,
       src: n,
       backgroundSrc: p,
-      userId: m,
+      userId: E,
       pulseSpeakingIndicator: C = !1,
-      speaking: E = !1,
-      ...g
-    } = e, S = null != p ? p : n, v = (0, l.default)(S, s.default.unsafe_rawColors.PRIMARY_800.css), _ = (0, o.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, T = (0, c.default)(null != m ? m : ""), A = null == T ? void 0 : T.getBannerURL({
+      speaking: m = !1,
+      ...S
+    } = e, g = null != p ? p : n, _ = (0, l.default)(g, s.default.unsafe_rawColors.PRIMARY_800.css), T = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, v = (0, c.default)(null != E ? E : ""), A = null == v ? void 0 : v.getBannerURL({
       size: 1024,
       canAnimate: f.GifAutoPlay.getSetting()
     });
     if (r.useEffect(() => {
-        null != m && _ && (0, d.default)(m, void 0, {
+        null != E && T && (0, d.default)(E, void 0, {
           dispatchWait: !0
         })
-      }, [_, m]), null == n) return null;
+      }, [T, E]), null == n) return null;
     let I = (0, a.jsx)(i.Avatar, {
         className: h.avatarWrapper,
         src: n,
-        ...g
+        ...S
       }),
       M = {
         ...t,
-        backgroundColor: v
+        backgroundColor: _
       };
-    return null != A && E && _ && (M.backgroundImage = "url(".concat(A, ")"), M.backgroundSize = "cover"), (0, a.jsx)("div", {
+    return null != A && m && T && (M.backgroundImage = "url(".concat(A, ")"), M.backgroundSize = "cover"), (0, a.jsx)("div", {
       style: M,
       className: h.background,
-      children: C ? (0, a.jsx)(u.default, {
-        shouldAnimate: E,
+      children: C ? (0, a.jsx)(o.default, {
+        shouldAnimate: m,
         children: I
       }) : I
     })

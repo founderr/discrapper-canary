@@ -1,5 +1,5 @@
-var u = t("890305"),
-  f = t("191986");
+var i = n("890305"),
+  a = n("191986");
 e.exports = function(e) {
-  return f(u(e).toLowerCase())
+  return a(i(e).toLowerCase())
 }

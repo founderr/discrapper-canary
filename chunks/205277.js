@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return o
+    return a
   }
-}), n("222007");
-var i = n("689988"),
-  a = n("718517"),
-  l = n("931318"),
-  s = n("979268");
-class r extends i.default {
+}), E("222007");
+var t = E("689988"),
+  o = E("718517"),
+  n = E("931318"),
+  r = E("979268");
+class i extends t.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
     }, this.handlePostConnectionOpen = () => {
       ! function e() {
-        s.default.getCurrentConfig({
+        r.default.getCurrentConfig({
           location: "e391b1_1"
         }, {
           autoTrackExposure: !1
-        }).showReminders && (0, l.fetchAndUpdateSavedMessages)().then(() => setTimeout(e, 15 * a.default.Millis.MINUTE))
+        }).showReminders && (0, n.fetchAndUpdateSavedMessages)().then(() => setTimeout(e, 15 * o.default.Millis.MINUTE))
       }()
     }
   }
 }
-var o = new r
+var a = new i

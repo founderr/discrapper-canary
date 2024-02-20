@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(e), a.d(e, {
   getSafetyHubData: function() {
     return o
   },
@@ -7,135 +7,135 @@ n.r(t), n.d(t, {
     return c
   },
   requestReview: function() {
-    return f
+    return _
   }
 });
-var i = n("872717"),
-  a = n("913144"),
-  r = n("651693"),
-  l = n("271938"),
-  s = n("736393"),
-  u = n("49111");
+var n = a("872717"),
+  i = a("913144"),
+  s = a("651693"),
+  l = a("271938"),
+  u = a("736393"),
+  r = a("49111");
 async function o() {
-  a.default.dispatch({
+  i.default.dispatch({
     type: "SAFETY_HUB_FETCH_START"
   });
-  let e = l.default.getSuspendedUserToken(),
-    t = null != e ? u.Endpoints.SAFETY_HUB_SUSPENDED : u.Endpoints.SAFETY_HUB,
-    n = null != e ? i.default.post({
-      url: t,
-      body: {
-        token: e
-      }
-    }) : i.default.get({
-      url: t
-    });
-  await n.then(e => {
-    let {
-      body: t
-    } = e, {
-      classifications: n,
-      guild_classifications: i,
-      account_standing: r,
-      is_dsa_eligible: l
-    } = t, s = n.map(e => (d(e), e));
-    a.default.dispatch({
-      type: "SAFETY_HUB_FETCH_SUCCESS",
-      classifications: s.concat(null != i ? i : []),
-      accountStanding: r,
-      isDsaEligible: l
-    })
-  }).catch(e => {
-    var t, n;
-    a.default.dispatch({
-      type: "SAFETY_HUB_FETCH_FAILURE",
-      error: null !== (n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : "Unknown error"
-    })
-  })
-}
-async function c(e) {
-  a.default.dispatch({
-    type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
-    classificationId: e
-  });
   let t = l.default.getSuspendedUserToken(),
-    n = null != t ? u.Endpoints.SAFETY_HUB_SUSPENDED : u.Endpoints.SAFETY_HUB,
-    r = null != t ? i.default.post({
-      url: n,
+    e = null != t ? r.Endpoints.SAFETY_HUB_SUSPENDED : r.Endpoints.SAFETY_HUB,
+    a = null != t ? n.default.post({
+      url: e,
       body: {
         token: t
       }
-    }) : i.default.get({
-      url: n
+    }) : n.default.get({
+      url: e
     });
-  await r.then(t => {
+  await a.then(t => {
     let {
-      body: n
+      body: e
     } = t, {
-      classifications: i,
-      account_standing: r,
+      classifications: a,
+      guild_classifications: n,
+      account_standing: s,
       is_dsa_eligible: l
-    } = n, s = i.find(t => t.id === e);
-    null != s ? (d(s), a.default.dispatch({
-      type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
-      classification: s,
-      accountStanding: r,
+    } = e, u = a.map(t => (d(t), t));
+    i.default.dispatch({
+      type: "SAFETY_HUB_FETCH_SUCCESS",
+      classifications: u.concat(null != n ? n : []),
+      accountStanding: s,
       isDsaEligible: l
-    })) : a.default.dispatch({
-      type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
-      error: "Classification not found.",
-      classificationId: e
     })
   }).catch(t => {
-    var n, i;
-    a.default.dispatch({
+    var e, a;
+    i.default.dispatch({
+      type: "SAFETY_HUB_FETCH_FAILURE",
+      error: null !== (a = null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.message) && void 0 !== a ? a : "Unknown error"
+    })
+  })
+}
+async function c(t) {
+  i.default.dispatch({
+    type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
+    classificationId: t
+  });
+  let e = l.default.getSuspendedUserToken(),
+    a = null != e ? r.Endpoints.SAFETY_HUB_SUSPENDED : r.Endpoints.SAFETY_HUB,
+    s = null != e ? n.default.post({
+      url: a,
+      body: {
+        token: e
+      }
+    }) : n.default.get({
+      url: a
+    });
+  await s.then(e => {
+    let {
+      body: a
+    } = e, {
+      classifications: n,
+      account_standing: s,
+      is_dsa_eligible: l
+    } = a, u = n.find(e => e.id === t);
+    null != u ? (d(u), i.default.dispatch({
+      type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
+      classification: u,
+      accountStanding: s,
+      isDsaEligible: l
+    })) : i.default.dispatch({
       type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
-      error: null !== (i = null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.message) && void 0 !== i ? i : "Unknown error",
-      classificationId: e
+      error: "Classification not found.",
+      classificationId: t
+    })
+  }).catch(e => {
+    var a, n;
+    i.default.dispatch({
+      type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
+      error: null !== (n = null == e ? void 0 : null === (a = e.body) || void 0 === a ? void 0 : a.message) && void 0 !== n ? n : "Unknown error",
+      classificationId: t
     })
   })
 }
 
-function d(e) {
-  if (null != e.flagged_content && e.flagged_content.length > 0) {
-    let t = e.flagged_content[0];
-    t.attachments = t.attachments.filter(e => {
+function d(t) {
+  if (null != t.flagged_content && t.flagged_content.length > 0) {
+    let e = t.flagged_content[0];
+    e.attachments = e.attachments.filter(t => {
       let {
-        filename: t
-      } = e;
-      return (0, r.isImageFile)(t) || (0, r.isVideoFile)(t)
-    }), e.flagged_content = (0, s.isFlaggedContentEmpty)(t) ? [] : [t]
+        filename: e
+      } = t;
+      return (0, s.isImageFile)(e) || (0, s.isVideoFile)(e)
+    }), t.flagged_content = (0, u.isFlaggedContentEmpty)(e) ? [] : [e]
   }
 }
-async function f(e, t, n) {
-  let r = l.default.getSuspendedUserToken(),
-    s = null != r ? u.Endpoints.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(e) : u.Endpoints.SAFETY_HUB_REQUEST_REVIEW(e),
-    o = null != r ? i.default.put({
-      url: s,
+async function _(t, e, a) {
+  let s = l.default.getSuspendedUserToken(),
+    u = null != s ? r.Endpoints.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(t) : r.Endpoints.SAFETY_HUB_REQUEST_REVIEW(t),
+    o = null != s ? n.default.put({
+      url: u,
       body: {
-        signal: t,
-        user_input: n,
-        token: r
+        signal: e,
+        user_input: a,
+        token: s
       }
-    }) : i.default.put({
-      url: s,
+    }) : n.default.put({
+      url: u,
       body: {
-        signal: t,
-        user_input: n
+        signal: e,
+        user_input: a
       }
     });
-  a.default.dispatch({
+  i.default.dispatch({
     type: "SAFETY_HUB_REQUEST_REVIEW_START"
   }), await o.then(() => {
-    a.default.dispatch({
+    i.default.dispatch({
       type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS",
-      classificationId: e
+      classificationId: t
     })
-  }).catch(e => {
-    var t, n;
-    throw a.default.dispatch({
+  }).catch(t => {
+    var e, a;
+    throw i.default.dispatch({
       type: "SAFETY_HUB_REQUEST_REVIEW_FAILURE",
-      error: null !== (n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : "Unknown error"
-    }), e
+      error: null !== (a = null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.message) && void 0 !== a ? a : "Unknown error"
+    }), t
   })
 }

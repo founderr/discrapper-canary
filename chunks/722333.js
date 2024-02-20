@@ -1,85 +1,85 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return i
+    return t
   }
-}), n("222007");
-var i, a = n("917351"),
-  l = n.n(a),
-  s = n("95410"),
-  r = n("689988"),
-  o = n("139321"),
-  u = n("269596"),
-  d = n("945956"),
-  c = n("200521");
-let f = {
+}), E("222007");
+var t, o = E("917351"),
+  n = E.n(o),
+  r = E("95410"),
+  i = E("689988"),
+  a = E("139321"),
+  I = E("269596"),
+  s = E("945956"),
+  T = E("200521");
+let S = {
     chance: .2,
     cooldown: 864e5
   },
-  E = {
-    [c.FeedbackType.VOICE]: {
-      ...f,
-      hotspot: o.HotspotLocations.VOICE_CALL_FEEDBACK,
+  N = {
+    [T.FeedbackType.VOICE]: {
+      ...S,
+      hotspot: a.HotspotLocations.VOICE_CALL_FEEDBACK,
       storageKey: "lastVoiceFeedback",
       eligibilityChecks: [function(e) {
-        let t = d.default.getWasEverRtcConnected();
-        return !t || d.default.getWasEverMultiParticipant()
+        let _ = s.default.getWasEverRtcConnected();
+        return !_ || s.default.getWasEverMultiParticipant()
       }]
     },
-    [c.FeedbackType.STREAM]: {
-      ...f,
-      hotspot: o.HotspotLocations.REPORT_PROBLEM_POST_STREAM,
+    [T.FeedbackType.STREAM]: {
+      ...S,
+      hotspot: a.HotspotLocations.REPORT_PROBLEM_POST_STREAM,
       storageKey: "lastStreamFeedback"
     },
-    [c.FeedbackType.VIDEO_BACKGROUND]: {
-      ...f,
-      hotspot: o.HotspotLocations.VIDEO_BACKGROUND_FEEDBACK,
+    [T.FeedbackType.VIDEO_BACKGROUND]: {
+      ...S,
+      hotspot: a.HotspotLocations.VIDEO_BACKGROUND_FEEDBACK,
       storageKey: "lastVideoBackgroundFeedback"
     },
-    [c.FeedbackType.ACTIVITY]: {
+    [T.FeedbackType.ACTIVITY]: {
       cooldown: 0,
       chance: .5,
-      hotspot: o.HotspotLocations.POST_ACTIVITY_FEEDBACK,
+      hotspot: a.HotspotLocations.POST_ACTIVITY_FEEDBACK,
       storageKey: "lastActivityFeedback"
     },
-    [c.FeedbackType.IN_APP_REPORTS]: {
+    [T.FeedbackType.IN_APP_REPORTS]: {
       cooldown: 1728e5,
       chance: .5,
-      hotspot: o.HotspotLocations.IN_APP_REPORTS_FEEDBACK,
+      hotspot: a.HotspotLocations.IN_APP_REPORTS_FEEDBACK,
       storageKey: "inAppReportsFeedback"
     }
   };
 
-function h(e) {
-  return u.default.hasHotspot(e.hotspot)
+function O(e) {
+  return I.default.hasHotspot(e.hotspot)
 }
 
-function _(e) {
+function A(e) {
   return Math.random() < e.chance
 }
 
-function C(e) {
+function R(e) {
   if (null != e.storageKey) {
-    let t = s.default.get(e.storageKey);
-    if (null != t && Date.now() - t < e.cooldown) return !1
+    let _ = r.default.get(e.storageKey);
+    if (null != _ && Date.now() - _ < e.cooldown) return !1
   }
   return !0
 }
-i = class extends r.default {
-  possiblyShowFeedbackModal(e, t) {
+t = class extends i.default {
+  possiblyShowFeedbackModal(e, _) {
     (function(e) {
-      var t;
+      var _;
       if (__OVERLAY__) return !1;
-      let n = E[e],
-        i = null !== (t = n.eligibilityChecks) && void 0 !== t ? t : [];
-      return [C, _, h].every(e => e(n)) && i.every(e => e(n))
-    })(e) && (null == this.feedbackTypeToShow || !(c.FeedbackTypePrecedence[this.feedbackTypeToShow] < c.FeedbackTypePrecedence[e])) && (this.feedbackTypeToShow = e, this.showFeedbackModalDebounced(t))
+      let E = N[e],
+        t = null !== (_ = E.eligibilityChecks) && void 0 !== _ ? _ : [];
+      return [R, A, O].every(e => e(E)) && t.every(e => e(E))
+    })(e) && (null == this.feedbackTypeToShow || !(T.FeedbackTypePrecedence[this.feedbackTypeToShow] < T.FeedbackTypePrecedence[e])) && (this.feedbackTypeToShow = e, this.showFeedbackModalDebounced(_))
   }
   constructor(...e) {
-    super(...e), this.feedbackTypeToShow = null, this.showFeedbackModalDebounced = l.debounce(e => {
+    super(...e), this.feedbackTypeToShow = null, this.showFeedbackModalDebounced = n.debounce(e => {
       null != this.feedbackTypeToShow && (! function(e) {
-        let t = E[e];
-        null != t.storageKey && s.default.set(t.storageKey, Date.now())
+        let _ = N[e];
+        null != _.storageKey && r.default.set(_.storageKey, Date.now())
       }(this.feedbackTypeToShow), this.feedbackTypeToShow = null, e())
     }, 200)
   }

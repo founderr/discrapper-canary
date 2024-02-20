@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return i.BinaryReader
   },
   PbLong: function() {
-    return u.PbLong
+    return s.PbLong
   },
   MESSAGE_TYPE: function() {
-    return s.MESSAGE_TYPE
+    return u.MESSAGE_TYPE
   },
   MessageType: function() {
     return l.MessageType
@@ -34,15 +34,15 @@ n.r(t), n.d(t, {
     return c.LongType
   },
   reflectionMergePartial: function() {
-    return f.reflectionMergePartial
+    return d.reflectionMergePartial
   }
 });
 var r = n("107678"),
   a = n("537502"),
   o = n("764624"),
   i = n("926481"),
-  u = n("497557"),
-  s = n("54341"),
+  s = n("497557"),
+  u = n("54341"),
   l = n("793953"),
   c = n("803628"),
-  f = n("507721")
+  d = n("507721")

@@ -1,6 +1,6 @@
 "use strict";
-var r = TypeError;
-e.exports = function(e, t) {
-  if (e < t) throw r("Not enough arguments");
-  return e
+var e = TypeError;
+t.exports = function(t, r) {
+  if (t < r) throw e("Not enough arguments");
+  return t
 }

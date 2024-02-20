@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   FormSwitch: function() {
-    return h
+    return E
   }
 });
 var i = n("37983"),
@@ -13,63 +13,63 @@ var i = n("37983"),
   u = n("414055"),
   c = n("370373"),
   d = n("329272"),
-  p = n("37973");
+  f = n("37973");
 
-function h(e) {
+function E(e) {
   let {
     value: t,
     disabled: n = !1,
     hideBorder: s = !1,
-    tooltipNote: h,
-    onChange: f,
-    className: E,
+    tooltipNote: E,
+    onChange: p,
+    className: h,
     style: _,
-    note: m,
-    children: S
-  } = e, g = r.useRef(null), T = r.useRef(null), I = r.useId(), v = (0, i.jsx)(l.Switch, {
+    note: S,
+    children: m
+  } = e, T = r.useRef(null), g = r.useRef(null), I = r.useId(), C = (0, i.jsx)(l.Switch, {
     id: I,
     checked: t,
-    onChange: f,
+    onChange: p,
     disabled: n,
     focusProps: {
       enabled: !1
     },
-    innerRef: g
+    innerRef: T
   });
   return (0, i.jsxs)("div", {
     style: _,
-    className: a(p.container, E, {
-      [p.disabled]: n
+    className: a(f.container, h, {
+      [f.disabled]: n
     }),
     children: [(0, i.jsx)(o.FocusRing, {
       within: !0,
       offset: -4,
-      focusTarget: g,
-      ringTarget: T,
+      focusTarget: T,
+      ringTarget: g,
       children: (0, i.jsxs)("div", {
-        className: p.labelRow,
-        ref: T,
+        className: f.labelRow,
+        ref: g,
         children: [(0, i.jsx)("label", {
           htmlFor: I,
-          className: p.title,
-          children: S
+          className: f.title,
+          children: m
         }), (0, i.jsx)("div", {
-          className: p.control,
-          children: null != h ? (0, i.jsx)(u.TooltipContainer, {
-            text: h,
-            children: v
-          }) : v
+          className: f.control,
+          children: null != E ? (0, i.jsx)(u.TooltipContainer, {
+            text: E,
+            children: C
+          }) : C
         })]
       })
-    }), null != m && (0, i.jsx)("div", {
-      className: p.note,
+    }), null != S && (0, i.jsx)("div", {
+      className: f.note,
       children: (0, i.jsx)(d.FormText, {
         disabled: n,
         type: d.FormTextTypes.DESCRIPTION,
-        children: m
+        children: S
       })
     }), !s && (0, i.jsx)(c.FormDivider, {
-      className: p.dividerDefault
+      className: f.dividerDefault
     })]
   })
 }

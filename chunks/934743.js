@@ -35,24 +35,24 @@ var l = n("37983"),
   y = n("579565"),
   D = n("917973"),
   b = n("48683"),
-  j = n("374014"),
-  G = n("223913"),
-  U = n("479788"),
-  P = n("560367"),
-  w = n("293383"),
-  F = n("375202"),
-  B = n("16916"),
-  V = n("233069"),
-  H = n("373469"),
-  k = n("271938"),
-  Y = n("42203"),
-  K = n("923959"),
-  W = n("305961"),
-  z = n("42887"),
-  Z = n("957255"),
-  X = n("824563"),
-  Q = n("27618"),
-  J = n("568307"),
+  j = n("161454"),
+  G = n("374014"),
+  U = n("223913"),
+  P = n("479788"),
+  w = n("560367"),
+  F = n("293383"),
+  B = n("375202"),
+  V = n("16916"),
+  H = n("233069"),
+  k = n("373469"),
+  Y = n("271938"),
+  K = n("42203"),
+  W = n("923959"),
+  z = n("305961"),
+  Z = n("42887"),
+  X = n("957255"),
+  Q = n("824563"),
+  J = n("27618"),
   q = n("18494"),
   $ = n("101125"),
   ee = n("697218"),
@@ -114,7 +114,7 @@ class eL extends a.PureComponent {
     } = this.props;
     return (null != d || null == c) && (r || s && null != d) ? (r ? (e = !1, t = this.handleClickStopStreamingButton, n = eu.default, a = eN.default.Messages.STOP_STREAMING) : o ? (e = !1, t = this.handleClickGoLiveButton, n = eo.default, a = null != d ? eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({
       game: d.name
-    }) : eN.default.Messages.ACTIVITY_PANEL_GO_LIVE) : (e = !0, t = null, n = eo.default, a = null != u && (0, V.isVoiceChannel)(u.type) ? eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != i ? eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD), (0, l.jsx)("div", {
+    }) : eN.default.Messages.ACTIVITY_PANEL_GO_LIVE) : (e = !0, t = null, n = eo.default, a = null != u && (0, H.isVoiceChannel)(u.type) ? eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != i ? eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eN.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD), (0, l.jsx)("div", {
       className: eT.panelButtonContainer,
       children: (0, l.jsx)(ed.default, {
         tooltipText: a,
@@ -182,7 +182,7 @@ class eL extends a.PureComponent {
     let {
       channel: e
     } = this.props;
-    return null != e && (0, V.isVoiceChannel)(e.type) ? null : (0, l.jsx)(eE.default, {})
+    return null != e && (0, H.isVoiceChannel)(e.type) ? null : (0, l.jsx)(eE.default, {})
   }
   renderBroadcastSettingsButton() {
     let {
@@ -276,10 +276,10 @@ class eL extends a.PureComponent {
     } = this.props, {
       title: a,
       sanitizedTitle: s
-    } = (0, P.default)(n);
+    } = (0, w.default)(n);
     return (0, l.jsxs)("div", {
       className: eT.gameWrapper,
-      children: [e ? (0, l.jsx)(w.default, {
+      children: [e ? (0, l.jsx)(F.default, {
         title: s
       }) : (0, l.jsx)(eC.default, {
         look: eC.default.Looks.GRAY,
@@ -339,7 +339,7 @@ class eL extends a.PureComponent {
             className: eT.activityName,
             children: t.name
           })
-        }), (0, V.isTextChannel)(a.type) ? o : (0, l.jsx)(eA, {
+        }), (0, H.isTextChannel)(a.type) ? o : (0, l.jsx)(eA, {
           timestamps: r
         })]
       })]
@@ -371,17 +371,17 @@ class eL extends a.PureComponent {
         stream: e,
         channel: t,
         runningGame: n
-      } = this.props, l = null != t && (0, V.isVoiceChannel)(t.type) ? t : null;
+      } = this.props, l = null != t && (0, H.isVoiceChannel)(t.type) ? t : null;
       null != l && null != n && (null == e ? (0, m.createBroadcastChannelOrStartStream)({
         channelId: l.id,
         pid: n.pid
-      }) : (0, A.startBroadcastForStream)((0, j.encodeStreamKey)(e), n.pid))
+      }) : (0, A.startBroadcastForStream)((0, G.encodeStreamKey)(e), n.pid))
     }, this.handleClickGoLiveButton = () => {
       let {
         guildId: e,
         channel: t,
         canStartBroadcast: a
-      } = this.props, s = null != t && (0, V.isVoiceChannel)(t.type) ? t : null, i = null != s ? s.getGuildId() : e;
+      } = this.props, s = null != t && (0, H.isVoiceChannel)(t.type) ? t : null, i = null != s ? s.getGuildId() : e;
       if ((null == s ? void 0 : s.isBroadcastChannel()) && a) {
         (0, v.openStartBroadcastConfirmModal)(this.startBroadcast);
         return
@@ -403,11 +403,11 @@ class eL extends a.PureComponent {
         stream: e,
         channel: t,
         userId: n
-      } = this.props, l = null != t && (0, V.isVoiceChannel)(t.type) ? t : null;
+      } = this.props, l = null != t && (0, H.isVoiceChannel)(t.type) ? t : null;
       if ((null == l ? void 0 : l.isBroadcastChannel()) && (null == l ? void 0 : l.isOwner(n))) {
-        (0, v.openStopBroadcastConfirmModal)(() => (0, B.default)(e));
+        (0, v.openStopBroadcastConfirmModal)(() => (0, V.default)(e));
         return
-      }(0, B.default)(e)
+      }(0, V.default)(e)
     }, this.handleClickInviteButton = () => {
       let {
         activity: e,
@@ -453,7 +453,7 @@ class eL extends a.PureComponent {
         channel: t,
         embeddedActivity: n
       } = this.props;
-      u(null != t, "Channel is null during navigation click"), u(null != n, "Activity null during navigation click"), (0, V.isVoiceChannel)(t.type) && C.default.selectParticipant(t.id, n.applicationId), p.default.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : eI.ME, t.id), (0, V.isTextChannel)(t.type) && (0, _.updateActivityPanelMode)(e_.ActivityPanelModes.PANEL)
+      u(null != t, "Channel is null during navigation click"), u(null != n, "Activity null during navigation click"), (0, H.isVoiceChannel)(t.type) && C.default.selectParticipant(t.id, n.applicationId), p.default.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : eI.ME, t.id), (0, H.isTextChannel)(t.type) && (0, _.updateActivityPanelMode)(e_.ActivityPanelModes.PANEL)
     }
   }
 }
@@ -462,14 +462,14 @@ var ev = (0, g.default)(function(e) {
   let {
     guildId: n,
     ...a
-  } = e, s = (0, o.useStateFromStores)([k.default], () => k.default.getId()), i = (0, o.useStateFromStores)([J.default, et.default], () => (0, F.default)(J.default, et.default)), r = (0, o.useStateFromStores)([q.default, Y.default], () => Y.default.getChannel(q.default.getVoiceChannelId())), u = (0, o.useStateFromStores)([S.default], () => S.default.getConnectedActivityChannelId()), c = (0, o.useStateFromStores)([Y.default], () => Y.default.getChannel(u)), [f, h] = (0, o.useStateFromStoresArray)([H.default], () => [H.default.getCurrentUserActiveStream(), H.default.getStreamerActiveStreamMetadata()]), C = (0, o.useStateFromStores)([I.default], () => I.default.useReducedMotion), p = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelTooltipAction()), {
+  } = e, s = (0, o.useStateFromStores)([Y.default], () => Y.default.getId()), i = (0, o.useStateFromStores)([j.default, et.default], () => (0, B.default)(j.default, et.default)), r = (0, o.useStateFromStores)([q.default, K.default], () => K.default.getChannel(q.default.getVoiceChannelId())), u = (0, o.useStateFromStores)([S.default], () => S.default.getConnectedActivityChannelId()), c = (0, o.useStateFromStores)([K.default], () => K.default.getChannel(u)), [f, h] = (0, o.useStateFromStoresArray)([k.default], () => [k.default.getCurrentUserActiveStream(), k.default.getStreamerActiveStreamMetadata()]), C = (0, o.useStateFromStores)([I.default], () => I.default.useReducedMotion), p = (0, o.useStateFromStores)([O.default], () => O.default.getActivityPanelTooltipAction()), {
     partnerGame: m,
     dropsActivityPanelExperienceBlocked: E,
     showDropsSparkles: g
-  } = (0, M.useActivityPanelDrop)(eS.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), _ = (0, o.useStateFromStores)([S.default], () => null != c ? S.default.getSelfEmbeddedActivityForChannel(c.id) : null), N = (0, o.useStateFromStores)([W.default, Z.default, K.default], () => {
-    if (null != r) return G.canStreamInChannel(r, W.default, Z.default, !1);
+  } = (0, M.useActivityPanelDrop)(eS.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), _ = (0, o.useStateFromStores)([S.default], () => null != c ? S.default.getSelfEmbeddedActivityForChannel(c.id) : null), N = (0, o.useStateFromStores)([z.default, X.default, W.default], () => {
+    if (null != r) return U.canStreamInChannel(r, z.default, X.default, !1);
     if (null != n) {
-      let e = G.getStreamEligibleChannels(K.default.getChannels(n), W.default, Z.default);
+      let e = U.getStreamEligibleChannels(W.default.getChannels(n), z.default, X.default);
       return e.length > 0
     }
     return !1
@@ -477,7 +477,7 @@ var ev = (0, g.default)(function(e) {
     if (null != h && null != h.id) return h.id;
     if (null != i && null != i.id) return i.id;
     if (null != _) return _.applicationId
-  }()) && void 0 !== t ? t : ""]), v = (0, o.useStateFromStores)([z.default], () => (0, U.default)(z.default) && (0, em.isWindows)()), R = (0, o.useStateFromStores)([X.default], () => null != s ? X.default.findActivity(s, e => e.type === eI.ActivityTypes.PLAYING) : null), y = null != f && f.ownerId === s && f.state !== eI.ApplicationStreamStates.ENDED, D = (0, o.useStateFromStores)([$.default], () => $.default.getBroadcast()), b = (0, L.default)() && null != i, j = (0, o.useStateFromStores)([ee.default, Q.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, Q.default) : void 0), P = (0, o.useStateFromStores)([W.default], () => W.default.getGuild(n));
+  }()) && void 0 !== t ? t : ""]), v = (0, o.useStateFromStores)([Z.default], () => (0, P.default)(Z.default) && (0, em.isWindows)()), R = (0, o.useStateFromStores)([Q.default], () => null != s ? Q.default.findActivity(s, e => e.type === eI.ActivityTypes.PLAYING) : null), y = null != f && f.ownerId === s && f.state !== eI.ApplicationStreamStates.ENDED, D = (0, o.useStateFromStores)([$.default], () => $.default.getBroadcast()), b = (0, L.default)() && null != i, G = (0, o.useStateFromStores)([ee.default, J.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, J.default) : void 0), w = (0, o.useStateFromStores)([z.default], () => z.default.getGuild(n));
   return (0, l.jsx)(eL, {
     ...a,
     guildId: n,
@@ -499,7 +499,7 @@ var ev = (0, g.default)(function(e) {
     streamMetadata: h,
     broadcast: D,
     canStartBroadcast: b,
-    channelName: j,
-    guild: P
+    channelName: G,
+    guild: w
   })
 })

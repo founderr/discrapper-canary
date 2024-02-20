@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return i
   },
   fromEntries: function() {
-    return u
+    return s
   },
   useIsomorphicLayoutEffect: function() {
-    return s
+    return u
   }
 }), n("808653");
 var r = n("884691"),
@@ -30,11 +30,11 @@ var r = n("884691"),
     if ("function" == typeof e) return o(e, t);
     null != e && (e.current = t)
   },
-  u = function(e) {
+  s = function(e) {
     return e.reduce(function(e, t) {
       var n = t[0],
         r = t[1];
       return e[n] = r, e
     }, {})
   },
-  s = "undefined" != typeof window && window.document && window.document.createElement ? r.useLayoutEffect : r.useEffect
+  u = "undefined" != typeof window && window.document && window.document.createElement ? r.useLayoutEffect : r.useEffect

@@ -27,13 +27,13 @@ function i(e, t) {
   })(e, t)
 }
 
-function u(e) {
+function s(e) {
   if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return e
 }
 
-function s(e) {
-  return (s = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+function u(e) {
+  return (u = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
     return e.__proto__ || Object.getPrototypeOf(e)
   })(e)
 }
@@ -57,7 +57,7 @@ var c = function(e) {
       }
     }), t && i(e, t)
   }(p, e);
-  var t, n, r, c, f, d = (t = p, n = function() {
+  var t, n, r, c, d, f = (t = p, n = function() {
     if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
     try {
@@ -66,13 +66,13 @@ var c = function(e) {
       return !1
     }
   }(), function() {
-    var e, r = s(t);
+    var e, r = u(t);
     if (n) {
-      var o = s(this).constructor;
+      var o = u(this).constructor;
       e = Reflect.construct(r, arguments, o)
     } else e = r.apply(this, arguments);
     return function(e, t) {
-      return t && ("object" === a(t) || "function" == typeof t) ? t : u(e)
+      return t && ("object" === a(t) || "function" == typeof t) ? t : s(e)
     }(this, e)
   });
 
@@ -82,7 +82,7 @@ var c = function(e) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }(this, p);
     for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-    return l(u(e = d.call.apply(d, [this].concat(n))), "priority", 140), l(u(e), "incompatibleTokens", ["R", "u", "t", "T"]), e
+    return l(s(e = f.call.apply(f, [this].concat(n))), "priority", 140), l(s(e), "incompatibleTokens", ["R", "u", "t", "T"]), e
   }
   return r = p, c = [{
     key: "parse",
@@ -115,5 +115,5 @@ var c = function(e) {
     value: function(e, t, n) {
       return t.era = n, e.setUTCFullYear(n, 0, 1), e.setUTCHours(0, 0, 0, 0), e
     }
-  }], o(r.prototype, c), f && o(r, f), p
+  }], o(r.prototype, c), d && o(r, d), p
 }(r.Parser)

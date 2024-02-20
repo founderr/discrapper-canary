@@ -15,13 +15,13 @@ function l(e) {
   let {
     streamType: n,
     guildId: l,
-    channelId: o,
-    ownerId: u
+    channelId: u,
+    ownerId: o
   } = e, d = (0, i.encodeStreamKey)({
     streamType: n,
     guildId: l,
-    channelId: o,
-    ownerId: u
+    channelId: u,
+    ownerId: o
   });
-  u === s.default.getId() && a.default.setGoLiveSource(null), r.stopStream(d, t)
+  o === s.default.getId() && a.default.setGoLiveSource(null), r.stopStream(d, t)
 }

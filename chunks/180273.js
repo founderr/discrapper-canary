@@ -9,9 +9,9 @@ var s = n("866227"),
   a = n("446674"),
   i = n("862337"),
   r = n("913144"),
-  o = n("374014"),
-  u = n("271938"),
-  d = n("568307"),
+  o = n("161454"),
+  u = n("374014"),
+  d = n("271938"),
   c = n("718517"),
   E = n("376152"),
   f = n("579565"),
@@ -48,7 +48,7 @@ let T = null,
   };
 class M extends a.default.Store {
   initialize() {
-    this.waitFor(d.default)
+    this.waitFor(o.default)
   }
   getActivityPanelTooltipAction() {
     return p
@@ -156,14 +156,14 @@ var O = new M(r.default, {
       guildId: s,
       channelId: l,
       pid: a
-    } = e, i = (0, o.encodeStreamKey)({
+    } = e, i = (0, u.encodeStreamKey)({
       streamType: n,
       guildId: s,
       channelId: l,
-      ownerId: u.default.getId()
+      ownerId: d.default.getId()
     });
     if (null == a) return;
-    let c = d.default.getGameForPID(a);
+    let c = o.default.getGameForPID(a);
     if (null == c) return;
     let T = Object.values(_.DROPS_GAMES).find(e => e.gameSearchTerm.find(e => {
       var t;

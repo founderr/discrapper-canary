@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SubscriptionRecord: function() {
-    return p
+    return f
   },
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("627445"),
@@ -23,9 +23,9 @@ function d(e) {
     quantity: e.quantity
   }
 }
-class p extends s.default {
+class f extends s.default {
   static createFromServer(e) {
-    return new p({
+    return new f({
       id: e.id,
       type: e.type,
       createdAt: new Date(e.created_at),
@@ -101,4 +101,4 @@ class p extends s.default {
     this.planId = n, this.additionalPlans = e.items.filter(e => e.planId !== n), null != t && null != i && (t.planId = i, t.additionalPlans = t.items.filter(e => e.planId !== i))
   }
 }
-var h = p
+var E = f

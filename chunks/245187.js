@@ -1,102 +1,102 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   BlockedPaymentsContentSettings: function() {
-    return M
-  },
-  BlockedPaymentsContentModal: function() {
     return A
   },
+  BlockedPaymentsContentModal: function() {
+    return N
+  },
   BlockedPaymentsWarning: function() {
-    return I
+    return p
   }
 });
-var l = n("37983");
-n("884691");
-var u = n("414456"),
-  a = n.n(u),
-  i = n("669491"),
-  s = n("819855"),
-  r = n("77078"),
-  o = n("841098"),
-  c = n("145131"),
-  d = n("423487"),
-  f = n("701909"),
-  _ = n("619935"),
-  E = n("49111"),
-  p = n("782340"),
-  m = n("872773"),
-  S = n("584503"),
-  P = n("45656");
+var a = s("37983");
+s("884691");
+var n = s("414456"),
+  i = s.n(n),
+  r = s("669491"),
+  l = s("819855"),
+  o = s("77078"),
+  u = s("841098"),
+  d = s("145131"),
+  c = s("423487"),
+  _ = s("701909"),
+  E = s("619935"),
+  I = s("49111"),
+  T = s("782340"),
+  f = s("872773"),
+  S = s("584503"),
+  R = s("45656");
 
-function T(e) {
+function m(e) {
   let {
     className: t
-  } = e, n = (0, o.default)(), u = (0, s.isThemeDark)(n) ? S : P;
-  return (0, l.jsxs)("div", {
-    className: a(m.container, t),
-    children: [(0, l.jsx)(r.Heading, {
-      className: m.header,
+  } = e, s = (0, u.default)(), n = (0, l.isThemeDark)(s) ? S : R;
+  return (0, a.jsxs)("div", {
+    className: i(f.container, t),
+    children: [(0, a.jsx)(o.Heading, {
+      className: f.header,
       variant: "heading-xl/semibold",
-      children: p.default.Messages.REGION_BLOCKED_PAYMENTS_HEADER
-    }), (0, l.jsxs)(r.Text, {
-      className: m.description,
+      children: T.default.Messages.REGION_BLOCKED_PAYMENTS_HEADER
+    }), (0, a.jsxs)(o.Text, {
+      className: f.description,
       variant: "text-md/normal",
       color: "header-secondary",
-      children: [(0, l.jsx)("p", {
-        children: p.default.Messages.REGION_BLOCKED_PAYMENTS_BODY
-      }), (0, l.jsx)("p", {
-        children: p.default.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
-          helpdeskArticle: f.default.getArticleURL(E.HelpdeskArticles.BLOCKED_PAYMENTS)
+      children: [(0, a.jsx)("p", {
+        children: T.default.Messages.REGION_BLOCKED_PAYMENTS_BODY
+      }), (0, a.jsx)("p", {
+        children: T.default.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
+          helpdeskArticle: _.default.getArticleURL(I.HelpdeskArticles.BLOCKED_PAYMENTS)
         })
       })]
-    }), (0, l.jsx)("img", {
-      src: u,
-      className: m.splashImage,
+    }), (0, a.jsx)("img", {
+      src: n,
+      className: f.splashImage,
       alt: "Blocked Payments"
     })]
   })
 }
 
-function M() {
-  return (0, l.jsx)(T, {
-    className: m.settings
+function A() {
+  return (0, a.jsx)(m, {
+    className: f.settings
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     onClose: t
   } = e;
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(r.ModalHeader, {
-      className: m.blockedPaymentsModalHeader,
-      justify: c.default.Justify.END,
-      children: (0, l.jsx)(r.ModalCloseButton, {
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(o.ModalHeader, {
+      className: f.blockedPaymentsModalHeader,
+      justify: d.default.Justify.END,
+      children: (0, a.jsx)(o.ModalCloseButton, {
         onClick: t
       })
-    }), (0, l.jsx)(r.ModalContent, {
-      className: m.blockedPaymentsModalContent,
-      children: (0, l.jsx)(T, {
-        className: m.modal
+    }), (0, a.jsx)(o.ModalContent, {
+      className: f.blockedPaymentsModalContent,
+      children: (0, a.jsx)(m, {
+        className: f.modal
       })
     })]
   })
 }
 
-function I(e) {
+function p(e) {
   let {
     className: t
-  } = e, n = (0, _.useBlockedPaymentsConfig)();
-  return n ? (0, l.jsxs)(r.Card, {
-    className: a(m.blockedPaymentsWarning, t),
-    type: r.Card.Types.CUSTOM,
-    children: [(0, l.jsx)(d.default, {
-      className: m.blockedPaymentsWarningIcon,
-      color: i.default.unsafe_rawColors.YELLOW_300.css
-    }), (0, l.jsx)(r.Text, {
+  } = e, s = (0, E.useBlockedPaymentsConfig)();
+  return s ? (0, a.jsxs)(o.Card, {
+    className: i(f.blockedPaymentsWarning, t),
+    type: o.Card.Types.CUSTOM,
+    children: [(0, a.jsx)(c.default, {
+      className: f.blockedPaymentsWarningIcon,
+      color: r.default.unsafe_rawColors.YELLOW_300.css
+    }), (0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
-      children: p.default.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
-        helpdeskArticle: f.default.getArticleURL(E.HelpdeskArticles.BLOCKED_PAYMENTS)
+      children: T.default.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
+        helpdeskArticle: _.default.getArticleURL(I.HelpdeskArticles.BLOCKED_PAYMENTS)
       })
     })]
   }) : null

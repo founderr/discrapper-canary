@@ -1,77 +1,77 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   QRCodeOverlaySizes: function() {
-    return n
+    return a
   },
   QRCodeWithOverlay: function() {
-    return h
+    return f
   },
   default: function() {
-    return f
+    return E
   }
 });
-var r, n, a = s("37983"),
-  i = s("884691"),
-  l = s("82697"),
-  o = s("679001");
-(r = n || (n = {})).SIZE_40 = "SIZE_40", r.SIZE_60 = "SIZE_60";
-let d = Object.freeze({
+var s, a, r = n("37983"),
+  l = n("884691"),
+  i = n("82697"),
+  o = n("679001");
+(s = a || (a = {})).SIZE_40 = "SIZE_40", s.SIZE_60 = "SIZE_60";
+let u = Object.freeze({
     SIZE_40: "size-40",
     SIZE_60: "size-60"
   }),
-  c = s("527826");
-class u extends i.PureComponent {
+  d = n("527826");
+class c extends l.PureComponent {
   render() {
     let {
       className: e,
       text: t,
-      ...s
+      ...n
     } = this.props;
-    return (0, a.jsx)("div", {
+    return (0, r.jsx)("div", {
       style: {
         padding: 8,
         borderRadius: 4,
-        width: s.size,
-        height: s.size,
-        backgroundColor: s.bgColor
+        width: n.size,
+        height: n.size,
+        backgroundColor: n.bgColor
       },
       className: e,
-      children: (0, a.jsx)(l.default, {
+      children: (0, r.jsx)(i.default, {
         value: t,
         level: "M",
-        ...s
+        ...n
       })
     })
   }
 }
-u.defaultProps = {
+c.defaultProps = {
   size: 128,
   bgColor: "#ffffff",
   fgColor: "#000000"
 };
-class h extends i.PureComponent {
+class f extends l.PureComponent {
   render() {
     let {
       overlaySize: e
-    } = this.props, t = d[null != e ? e : "SIZE_40"];
-    return (0, a.jsxs)("div", {
+    } = this.props, t = u[null != e ? e : "SIZE_40"];
+    return (0, r.jsxs)("div", {
       className: o.qrCodeContainer,
-      children: [(0, a.jsx)(u, {
+      children: [(0, r.jsx)(c, {
         ...this.props
-      }), (0, a.jsx)("div", {
+      }), (0, r.jsx)("div", {
         className: o.qrCodeOverlay,
-        children: (0, a.jsx)("img", {
+        children: (0, r.jsx)("img", {
           className: o[t],
-          src: c,
+          src: d,
           alt: ""
         })
       })]
     })
   }
 }
-h.defaultProps = {
+f.defaultProps = {
   size: 144,
   bgColor: "#ffffff",
   fgColor: "#000000"
 };
-var f = u
+var E = c

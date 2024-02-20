@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   AGE_GATE_REGISTER_TIMEOUT_MS: function() {
-    return a
+    return l
   },
   NEW_USER_AGE_GATE_MODAL_KEY: function() {
-    return s
+    return u
   },
   EXISTING_USER_AGE_GATE_MODAL_KEY: function() {
-    return E
+    return c
   },
   AgeGateSource: function() {
-    return o
+    return s
   },
   AgeGateAnalyticAction: function() {
-    return l
+    return a
   }
 });
-var r, i, o, l, u = n("718517");
-let a = 2 * u.default.Millis.HOUR,
-  s = "new-user-age-gate-modal",
-  E = "existing-user-age-gate-modal";
-(r = o || (o = {})).AUTH = "Register Age Gate", r.NEW_USER_FLOW = "NUF", r.CLAIM_ACCOUNT = "Claim Age Gate", r.NSFW_CHANNEL = "NSFW Channel", r.NSFW_SERVER = "NSFW Server", r.NSFW_SERVER_INVITE = "NSFW Server Invite", r.NSFW_VOICE_CHANNEL = "NSFW Voice Channel", r.FAMILY_CENTER = "Family Center", r.REGISTER = "Register", r.DEEP_LINK_PROMPT = "Deep Link Prompt", r.UNSPECIFIED = "Unspecified", (i = l || (l = {})).AGE_GATE_OPEN = "AGE_GATE_OPEN", i.AGE_GATE_CLOSE = "AGE_GATE_CLOSE", i.AGE_GATE_SUBMITTED = "AGE_GATE_SUBMITTED", i.AGE_GATE_SUCCESS = "AGE_GATE_SUCCESS", i.AGE_GATE_FAILURE = "AGE_GATE_FAILURE", i.AGE_GATE_UNDERAGE = "AGE_GATE_UNDERAGE", i.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION = "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION", i.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER = "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER"
+var i, r, s, a, o = n("718517");
+let l = 2 * o.default.Millis.HOUR,
+  u = "new-user-age-gate-modal",
+  c = "existing-user-age-gate-modal";
+(i = s || (s = {})).AUTH = "Register Age Gate", i.NEW_USER_FLOW = "NUF", i.CLAIM_ACCOUNT = "Claim Age Gate", i.NSFW_CHANNEL = "NSFW Channel", i.NSFW_SERVER = "NSFW Server", i.NSFW_SERVER_INVITE = "NSFW Server Invite", i.NSFW_VOICE_CHANNEL = "NSFW Voice Channel", i.FAMILY_CENTER = "Family Center", i.REGISTER = "Register", i.DEEP_LINK_PROMPT = "Deep Link Prompt", i.UNSPECIFIED = "Unspecified", (r = a || (a = {})).AGE_GATE_OPEN = "AGE_GATE_OPEN", r.AGE_GATE_CLOSE = "AGE_GATE_CLOSE", r.AGE_GATE_SUBMITTED = "AGE_GATE_SUBMITTED", r.AGE_GATE_SUCCESS = "AGE_GATE_SUCCESS", r.AGE_GATE_FAILURE = "AGE_GATE_FAILURE", r.AGE_GATE_UNDERAGE = "AGE_GATE_UNDERAGE", r.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION = "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION", r.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER = "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER"

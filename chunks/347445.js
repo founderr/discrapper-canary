@@ -1,14 +1,14 @@
 "use strict";
-s.r(e), s.d(e, {
+n.r(t), n.d(t, {
   TOGGLE_HOTKEYS: function() {
-    return i
+    return a
   }
 });
-var n = s("77078"),
-  a = s("244030"),
-  o = s("386867");
-let i = {
+var i = n("77078"),
+  o = n("244030"),
+  l = n("386867");
+let a = {
   binds: ["mod+/", "mod+shift+/"],
   comboKeysBindGlobal: !0,
-  action: () => ((0, n.hasModalOpen)(o.KEYBOARD_SHORTCUT_MODAL_KEY) ? a.hide() : a.show(), !1)
+  action: () => ((0, i.hasModalOpen)(l.KEYBOARD_SHORTCUT_MODAL_KEY) ? o.hide() : o.show(), !1)
 }

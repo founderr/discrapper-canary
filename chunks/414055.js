@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return i
   },
   TooltipLayer: function() {
-    return v
+    return C
   },
   Tooltip: function() {
-    return y
+    return O
   },
   TooltipContainer: function() {
-    return O
+    return D
   }
 }), n("70102"), n("222007");
 var i, r, s = n("37983"),
@@ -20,34 +20,34 @@ var i, r, s = n("37983"),
   u = n("817736"),
   c = n.n(u),
   d = n("907002"),
-  p = n("394846"),
-  h = n("118810"),
-  f = n("862337"),
-  E = n("413197"),
+  f = n("394846"),
+  E = n("118810"),
+  p = n("862337"),
+  h = n("413197"),
   _ = n("120590"),
-  m = n("206230"),
-  S = n("983782"),
-  g = n("207758");
+  S = n("206230"),
+  m = n("983782"),
+  T = n("207758");
 (r = i || (i = {})).PRIMARY = "primary", r.BLACK = "black", r.GREY = "grey", r.BRAND = "brand", r.GREEN = "green", r.YELLOW = "yellow", r.RED = "red", r.CUSTOM = "custom", r.PREMIUM = "premium";
-let T = Object.freeze({}),
+let g = Object.freeze({}),
   I = Object.freeze({
-    top: g.tooltipTop,
-    bottom: g.tooltipBottom,
-    left: g.tooltipLeft,
-    right: g.tooltipRight,
-    center: g.tooltipCenter,
-    window_center: g.tooltipCenter,
-    primary: g.tooltipPrimary,
-    black: g.tooltipBlack,
-    grey: g.tooltipGrey,
-    brand: g.tooltipBrand,
-    green: g.tooltipGreen,
-    yellow: g.tooltipYellow,
-    red: g.tooltipRed,
+    top: T.tooltipTop,
+    bottom: T.tooltipBottom,
+    left: T.tooltipLeft,
+    right: T.tooltipRight,
+    center: T.tooltipCenter,
+    window_center: T.tooltipCenter,
+    primary: T.tooltipPrimary,
+    black: T.tooltipBlack,
+    grey: T.tooltipGrey,
+    brand: T.tooltipBrand,
+    green: T.tooltipGreen,
+    yellow: T.tooltipYellow,
+    red: T.tooltipRed,
     custom: null,
-    premium: g.tooltipPremium
+    premium: T.tooltipPremium
   }),
-  v = e => {
+  C = e => {
     let {
       targetElementRef: t,
       align: n = "center",
@@ -57,33 +57,33 @@ let T = Object.freeze({}),
       onNonAccessibleClick: o,
       tooltipClassName: u,
       tooltipContentClassName: c,
-      spacing: p = 8,
-      animationStyle: h,
-      disableTooltipPointerEvents: f = !1,
-      allowOverflow: E = !1
+      spacing: f = 8,
+      animationStyle: E,
+      disableTooltipPointerEvents: p = !1,
+      allowOverflow: h = !1
     } = e, _ = "".concat("string" == typeof a ? a : "", ":").concat(i);
-    return (0, s.jsx)(S.AppReferencePositionLayer, {
-      disablePointerEvents: f,
+    return (0, s.jsx)(m.AppReferencePositionLayer, {
+      disablePointerEvents: p,
       reference: t,
       position: i,
       autoInvert: !0,
       align: n,
       positionKey: _,
-      spacing: p,
+      spacing: f,
       nudgeAlignIntoViewport: !0,
       children: e => {
         let {
           position: t,
-          nudge: p
+          nudge: f
         } = e;
         return (0, s.jsxs)(d.animated.div, {
           onClick: o,
-          className: l(g.tooltip, I[null != t ? t : i], I[r], {
-            [g.tooltipDisablePointerEvents]: f
+          className: l(T.tooltip, I[null != t ? t : i], I[r], {
+            [T.tooltipDisablePointerEvents]: p
           }, u),
-          style: h,
+          style: E,
           children: [(0, s.jsx)("div", {
-            className: g.tooltipPointer,
+            className: T.tooltipPointer,
             style: function(e, t, n) {
               let i = "left" === e || "right" === e,
                 r = "50%",
@@ -91,10 +91,10 @@ let T = Object.freeze({}),
               return t === (i ? "top" : "left") ? (r = "0%", s += 16) : t === (i ? "bottom" : "right") && (r = "100%", s -= 20), {
                 [i ? "top" : "left"]: "calc(".concat(r, " + ").concat(s, "px)")
               }
-            }(null != t ? t : i, n, p)
+            }(null != t ? t : i, n, f)
           }), (0, s.jsx)("div", {
-            className: l(g.tooltipContent, {
-              [g.tooltipContentAllowOverflow]: E
+            className: l(T.tooltipContent, {
+              [T.tooltipContentAllowOverflow]: h
             }, c),
             children: a
           })]
@@ -102,7 +102,7 @@ let T = Object.freeze({}),
       }
     })
   },
-  C = {
+  v = {
     scale: .95,
     opacity: 0
   },
@@ -122,21 +122,21 @@ let T = Object.freeze({}),
       ...r
     } = e, {
       reducedMotion: o
-    } = a.useContext(E.AccessibilityPreferencesContext), l = (0, d.useTransition)(t, {
+    } = a.useContext(h.AccessibilityPreferencesContext), l = (0, d.useTransition)(t, {
       keys: e => e ? "tooltip" : "empty",
       config: _.TOOLTIP_SPRING_CONFIG,
-      from: o.enabled ? A : C,
+      from: o.enabled ? A : v,
       enter: R,
-      leave: o.enabled ? A : C,
+      leave: o.enabled ? A : v,
       onRest: n
     });
-    return l((e, t) => t ? (0, s.jsx)(v, {
+    return l((e, t) => t ? (0, s.jsx)(C, {
       animationStyle: e,
       targetElementRef: i,
       ...r
     }) : null)
   };
-class y extends a.Component {
+class O extends a.Component {
   static getDerivedStateFromProps(e, t) {
     return t.shouldShowTooltip && null == e.text ? {
       shouldShowTooltip: !1
@@ -151,7 +151,7 @@ class y extends a.Component {
   }
   setDomElement() {
     let e = c.findDOMNode(this);
-    if (!(0, h.isElement)(e)) throw Error("Tooltip cannot find DOM node");
+    if (!(0, E.isElement)(e)) throw Error("Tooltip cannot find DOM node");
     this.domElementRef.current = e, this.hasDomElement = !0, this.forceUpdate()
   }
   componentWillUnmount() {
@@ -164,7 +164,7 @@ class y extends a.Component {
       text: n,
       "aria-label": i
     } = this.props;
-    if (null == n) return t(T);
+    if (null == n) return t(g);
     "string" == typeof i ? e = i : "string" == typeof n && !1 !== i && (e = n);
     let r = {
       onClick: this.handleClick,
@@ -194,10 +194,10 @@ class y extends a.Component {
       onAnimationRest: u,
       allowOverflow: c,
       clickableOnMobile: d,
-      hideOnClick: h
-    } = this.props, f = (p.isMobile || p.isTablet) && !0 === d && h, E = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement, _ = null;
-    return _ = e instanceof Function ? E ? e() : null : e, (0, s.jsx)(N, {
-      disableTooltipPointerEvents: !1 !== l && !f || !0 === l,
+      hideOnClick: E
+    } = this.props, p = (f.isMobile || f.isTablet) && !0 === d && E, h = this.shouldShowTooltip(this.props, this.state) && this.hasDomElement, _ = null;
+    return _ = e instanceof Function ? h ? e() : null : e, (0, s.jsx)(N, {
+      disableTooltipPointerEvents: !1 !== l && !p || !0 === l,
       targetElementRef: this.domElementRef,
       tooltipClassName: a,
       tooltipContentClassName: o,
@@ -205,9 +205,9 @@ class y extends a.Component {
       position: n,
       color: i,
       spacing: r,
-      isVisible: E,
+      isVisible: h,
       onAnimationRest: u,
-      onNonAccessibleClick: f ? this.handleClick : void 0,
+      onNonAccessibleClick: p ? this.handleClick : void 0,
       allowOverflow: c,
       children: _
     })
@@ -219,7 +219,7 @@ class y extends a.Component {
     } = this.props;
     if (t) {
       let e = c.findDOMNode(this);
-      if (null == e || (0, h.isElement)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth) return
+      if (null == e || (0, E.isElement)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth) return
     }
     null != e ? this.showTimeout.start(e, () => this.toggleShow(!0), !1) : this.toggleShow(!0)
   }
@@ -240,25 +240,25 @@ class y extends a.Component {
     }
   }
   constructor(...e) {
-    super(...e), this.showTimeout = new f.Timeout, this.domElementRef = a.createRef(), this.hasDomElement = !1, this.state = {
+    super(...e), this.showTimeout = new p.Timeout, this.domElementRef = a.createRef(), this.hasDomElement = !1, this.state = {
       shouldShowTooltip: !1
     }, this.handleMouseEnter = () => {
-      !((p.isMobile || p.isTablet) && !0 === this.props.clickableOnMobile) && this.show()
+      !((f.isMobile || f.isTablet) && !0 === this.props.clickableOnMobile) && this.show()
     }, this.handleMouseLeave = () => {
-      !((p.isMobile || p.isTablet) && !0 === this.props.clickableOnMobile) && this.hide()
+      !((f.isMobile || f.isTablet) && !0 === this.props.clickableOnMobile) && this.hide()
     }, this.handleFocus = () => {
-      m.default.keyboardModeEnabled && this.show()
+      S.default.keyboardModeEnabled && this.show()
     }, this.handleBlur = () => {
       this.hide()
     }, this.handleClick = () => {
       let e = this.hasDomElement;
-      e && this.props.hideOnClick ? this.hide() : !e && (p.isMobile || p.isTablet) && !0 === this.props.clickableOnMobile && this.show()
+      e && this.props.hideOnClick ? this.hide() : !e && (f.isMobile || f.isTablet) && !0 === this.props.clickableOnMobile && this.show()
     }, this.handleContextMenu = () => {
       this.hide()
     }
   }
 }
-y.Colors = i, y.defaultProps = {
+O.Colors = i, O.defaultProps = {
   hideOnClick: !0,
   position: "top",
   color: "primary",
@@ -268,14 +268,14 @@ y.Colors = i, y.defaultProps = {
   allowOverflow: !1,
   overflowOnly: !1
 };
-let O = e => {
+let D = e => {
   let {
     children: t,
     className: n,
     element: i = "div",
     ...r
   } = e;
-  return (0, s.jsx)(y, {
+  return (0, s.jsx)(O, {
     ...r,
     children: e => a.createElement(i, null != n ? {
       ...e,

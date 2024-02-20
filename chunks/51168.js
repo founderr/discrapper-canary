@@ -1,42 +1,42 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return E
+    return N
   }
 });
-var i = n("37983"),
-  a = n("884691"),
-  l = n("446674"),
-  s = n("77078"),
-  r = n("629109"),
-  o = n("363658"),
-  u = n("135230"),
-  d = n("622785"),
-  c = n("49111"),
-  f = n("782340");
+var t = E("37983"),
+  o = E("884691"),
+  n = E("446674"),
+  r = E("77078"),
+  i = E("629109"),
+  a = E("363658"),
+  I = E("135230"),
+  s = E("622785"),
+  T = E("49111"),
+  S = E("782340");
 
-function E() {
-  let e = (0, l.useStateFromStores)([d.default], () => d.default.shouldShowWarning(), []),
-    t = a.useRef(null);
-
-  function n() {
-    null !== t.current && ((0, s.closeModal)(t.current), t.current = null)
-  }
+function N() {
+  let e = (0, n.useStateFromStores)([s.default], () => s.default.shouldShowWarning(), []),
+    _ = o.useRef(null);
 
   function E() {
-    o.default.clearVADWarning()
+    null !== _.current && ((0, r.closeModal)(_.current), _.current = null)
   }
-  return a.useEffect(() => (e ? t.current = (0, s.openModal)(e => (0, i.jsx)(u.default, {
-    title: f.default.Messages.VAD_PERMISSION_TITLE,
-    body: f.default.Messages.VAD_PERMISSION_BODY,
-    onCancel: E,
-    cancelText: f.default.Messages.VAD_PERMISSION_OKAY,
-    confirmText: f.default.Messages.VAD_PERMISSION_ENABLE_PTT,
+
+  function N() {
+    a.default.clearVADWarning()
+  }
+  return o.useEffect(() => (e ? _.current = (0, r.openModal)(e => (0, t.jsx)(I.default, {
+    title: S.default.Messages.VAD_PERMISSION_TITLE,
+    body: S.default.Messages.VAD_PERMISSION_BODY,
+    onCancel: N,
+    cancelText: S.default.Messages.VAD_PERMISSION_OKAY,
+    confirmText: S.default.Messages.VAD_PERMISSION_ENABLE_PTT,
     onConfirm: () => {
-      r.default.setMode(c.InputModes.PUSH_TO_TALK), E()
+      i.default.setMode(T.InputModes.PUSH_TO_TALK), N()
     },
     ...e
-  })) : n(), () => {
-    n()
+  })) : E(), () => {
+    E()
   }), [e]), null
 }

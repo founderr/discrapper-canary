@@ -49,8 +49,8 @@ var r = function(e, t) {
     P: function(e, t) {
       var n, o = e.match(/(P+)(p+)?/) || [],
         i = o[1],
-        u = o[2];
-      if (!u) return r(e, t);
+        s = o[2];
+      if (!s) return r(e, t);
       switch (i) {
         case "P":
           n = t.dateTime({
@@ -72,6 +72,6 @@ var r = function(e, t) {
             width: "full"
           })
       }
-      return n.replace("{{date}}", r(i, t)).replace("{{time}}", a(u, t))
+      return n.replace("{{date}}", r(i, t)).replace("{{time}}", a(s, t))
     }
   }

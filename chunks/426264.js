@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MenuItem: function() {
-    return E
+    return h
   }
 });
 var i = n("37983"),
@@ -13,85 +13,85 @@ var i = n("37983"),
   u = n("107728"),
   c = n("697917"),
   d = n("886074"),
-  p = n("772280"),
-  h = n("389802"),
-  f = n("639826");
+  f = n("772280"),
+  E = n("389802"),
+  p = n("639826");
 
-function E(e) {
+function h(e) {
   let {
     color: t = "default",
     label: n,
     icon: s,
-    showIconFirst: E = !1,
+    showIconFirst: h = !1,
     imageUrl: _,
-    hint: m,
-    subtext: S,
-    hasSubmenu: g,
-    disabled: T,
+    hint: S,
+    subtext: m,
+    hasSubmenu: T,
+    disabled: g,
     isFocused: I,
-    menuItemProps: v,
-    action: C,
+    menuItemProps: C,
+    action: v,
     onClose: A,
     onFocus: R,
     className: N,
-    focusedClassName: y,
-    subMenuIconClassName: O,
-    dontCloseOnActionIfHoldingShiftKey: D,
-    iconProps: b,
-    sparkle: P
-  } = e, L = r.useContext(u.OnMenuSelectContext), M = r.useRef(null), U = r.useCallback(e => {
-    if (null == C) return !1;
-    !(e.shiftKey && D) && A(), e.persist(), null == L || L(), requestAnimationFrame(() => C(e))
-  }, [C, A, L, D]);
+    focusedClassName: O,
+    subMenuIconClassName: D,
+    dontCloseOnActionIfHoldingShiftKey: y,
+    iconProps: P,
+    sparkle: L
+  } = e, b = r.useContext(u.OnMenuSelectContext), M = r.useRef(null), U = r.useCallback(e => {
+    if (null == v) return !1;
+    !(e.shiftKey && y) && A(), e.persist(), null == b || b(), requestAnimationFrame(() => v(e))
+  }, [v, A, b, y]);
   return r.useEffect(() => {
     I && ((0, c.ensureItemVisible)(M), null == R || R())
   }, [I, R]), (0, i.jsxs)(o.Clickable, {
     innerRef: M,
-    className: a(f.item, f.labelContainer, h.MENU_ITEM_COLORS[t], N, {
-      [f.disabled]: T,
-      [f.focused]: I,
-      [null != y ? y : ""]: I
+    className: a(p.item, p.labelContainer, E.MENU_ITEM_COLORS[t], N, {
+      [p.disabled]: g,
+      [p.focused]: I,
+      [null != O ? O : ""]: I
     }),
-    onClick: T ? void 0 : U,
-    "aria-disabled": T,
-    ...v,
+    onClick: g ? void 0 : U,
+    "aria-disabled": g,
+    ...C,
     "data-menu-item": "true",
-    children: [E && null != s && (0, i.jsx)("div", {
-      className: f.iconContainerLeft,
+    children: [h && null != s && (0, i.jsx)("div", {
+      className: p.iconContainerLeft,
       children: (0, i.jsx)(s, {
-        ...b,
-        className: a(f.icon, null == b ? void 0 : b.className),
+        ...P,
+        className: a(p.icon, null == P ? void 0 : P.className),
         isFocused: I
       })
     }), (0, i.jsxs)("div", {
-      className: f.label,
-      children: [(0, l.renderSubnode)(n, e), null != S && (0, i.jsx)("div", {
-        className: f.subtext,
-        children: S
+      className: p.label,
+      children: [(0, l.renderSubnode)(n, e), null != m && (0, i.jsx)("div", {
+        className: p.subtext,
+        children: m
       })]
-    }), null != m && (0, i.jsx)("div", {
-      className: f.hintContainer,
-      children: (0, l.renderSubnode)(m, e)
-    }), !E && null != s && (0, i.jsx)("div", {
-      className: f.iconContainer,
+    }), null != S && (0, i.jsx)("div", {
+      className: p.hintContainer,
+      children: (0, l.renderSubnode)(S, e)
+    }), !h && null != s && (0, i.jsx)("div", {
+      className: p.iconContainer,
       children: (0, i.jsx)(s, {
-        ...b,
-        className: a(f.icon, null == b ? void 0 : b.className),
+        ...P,
+        className: a(p.icon, null == P ? void 0 : P.className),
         isFocused: I
       })
     }), null != _ && (0, i.jsx)("div", {
-      className: f.imageContainer,
+      className: p.imageContainer,
       children: (0, i.jsx)("img", {
-        className: f.image,
+        className: p.image,
         src: (0, l.renderSubnode)(_, e),
         alt: ""
       })
-    }), g && (0, i.jsxs)("div", {
-      className: f.iconContainer,
-      children: [(0, i.jsx)(p.default, {
-        className: a(f.caret, O)
-      }), P && (0, i.jsx)(d.default, {
-        className: f.sparkles
+    }), T && (0, i.jsxs)("div", {
+      className: p.iconContainer,
+      children: [(0, i.jsx)(f.default, {
+        className: a(p.caret, D)
+      }), L && (0, i.jsx)(d.default, {
+        className: p.sparkles
       })]
     })]
   })

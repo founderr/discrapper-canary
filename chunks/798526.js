@@ -8,17 +8,17 @@ var r = n("114716"),
   a = n("31644"),
   o = n("403468"),
   i = n("986257"),
-  u = n("394442"),
-  s = n("683857"),
+  s = n("394442"),
+  u = n("683857"),
   l = n("914997"),
   c = n("753671"),
-  f = {
+  d = {
     placement: "bottom",
     modifiers: [],
     strategy: "absolute"
   };
 
-function d() {
+function f() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
   return !t.some(function(e) {
     return !(e && "function" == typeof e.getBoundingClientRect)
@@ -30,14 +30,14 @@ function p(e) {
   var t = e,
     n = t.defaultModifiers,
     p = void 0 === n ? [] : n,
-    h = t.defaultOptions,
-    m = void 0 === h ? f : h;
+    m = t.defaultOptions,
+    h = void 0 === m ? d : m;
   return function(e, t, n) {
-    void 0 === n && (n = m);
-    var h = {
+    void 0 === n && (n = h);
+    var m = {
         placement: "bottom",
         orderedModifiers: [],
-        options: Object.assign({}, f, m),
+        options: Object.assign({}, d, h),
         modifiersData: {},
         elements: {
           reference: e,
@@ -49,25 +49,25 @@ function p(e) {
       _ = [],
       y = !1,
       g = {
-        state: h,
+        state: m,
         setOptions: function(n) {
-          var r = "function" == typeof n ? n(h.options) : n;
-          v(), h.options = Object.assign({}, m, h.options, r), h.scrollParents = {
+          var r = "function" == typeof n ? n(m.options) : n;
+          v(), m.options = Object.assign({}, h, m.options, r), m.scrollParents = {
             reference: (0, c.isElement)(e) ? (0, o.default)(e) : e.contextElement ? (0, o.default)(e.contextElement) : [],
             popper: (0, o.default)(t)
           };
-          var a = (0, u.default)((0, l.default)([].concat(p, h.options.modifiers)));
-          return h.orderedModifiers = a.filter(function(e) {
+          var a = (0, s.default)((0, l.default)([].concat(p, m.options.modifiers)));
+          return m.orderedModifiers = a.filter(function(e) {
               return e.enabled
             }),
             function() {
-              h.orderedModifiers.forEach(function(e) {
+              m.orderedModifiers.forEach(function(e) {
                 var t = e.name,
                   n = e.options,
                   r = e.effect;
                 if ("function" == typeof r) {
                   var a = r({
-                    state: h,
+                    state: m,
                     name: t,
                     instance: g,
                     options: void 0 === n ? {} : n
@@ -79,46 +79,46 @@ function p(e) {
         },
         forceUpdate: function() {
           if (!y) {
-            var e = h.elements,
+            var e = m.elements,
               t = e.reference,
               n = e.popper;
-            if (d(t, n)) {
-              h.rects = {
-                reference: (0, r.default)(t, (0, i.default)(n), "fixed" === h.options.strategy),
+            if (f(t, n)) {
+              m.rects = {
+                reference: (0, r.default)(t, (0, i.default)(n), "fixed" === m.options.strategy),
                 popper: (0, a.default)(n)
-              }, h.reset = !1, h.placement = h.options.placement, h.orderedModifiers.forEach(function(e) {
-                return h.modifiersData[e.name] = Object.assign({}, e.data)
+              }, m.reset = !1, m.placement = m.options.placement, m.orderedModifiers.forEach(function(e) {
+                return m.modifiersData[e.name] = Object.assign({}, e.data)
               });
-              for (var o = 0; o < h.orderedModifiers.length; o++) {
-                if (!0 === h.reset) {
-                  h.reset = !1, o = -1;
+              for (var o = 0; o < m.orderedModifiers.length; o++) {
+                if (!0 === m.reset) {
+                  m.reset = !1, o = -1;
                   continue
                 }
-                var u = h.orderedModifiers[o],
-                  s = u.fn,
-                  l = u.options,
+                var s = m.orderedModifiers[o],
+                  u = s.fn,
+                  l = s.options,
                   c = void 0 === l ? {} : l,
-                  f = u.name;
-                "function" == typeof s && (h = s({
-                  state: h,
+                  d = s.name;
+                "function" == typeof u && (m = u({
+                  state: m,
                   options: c,
-                  name: f,
+                  name: d,
                   instance: g
-                }) || h)
+                }) || m)
               }
             }
           }
         },
-        update: (0, s.default)(function() {
+        update: (0, u.default)(function() {
           return new Promise(function(e) {
-            g.forceUpdate(), e(h)
+            g.forceUpdate(), e(m)
           })
         }),
         destroy: function() {
           v(), y = !0
         }
       };
-    if (!d(e, t)) return g;
+    if (!f(e, t)) return g;
     g.setOptions(n).then(function(e) {
       !y && n.onFirstUpdate && n.onFirstUpdate(e)
     });

@@ -1,8 +1,8 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   ResizeObserver: function() {
-    return n.ResizeObserver
+    return r.ResizeObserver
   }
 });
-var n = r("892319");
-r("261423")
+var r = n("892319");
+n("261423")

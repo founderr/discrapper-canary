@@ -13,24 +13,24 @@ var i = n("917351"),
 let u = "CertifiedDeviceStore",
   c = {},
   d = {},
-  p = 0;
+  f = 0;
 
-function h(e, t, n) {
+function E(e, t, n) {
   let i = d[e];
   return null != i ? n(i) : t
 }
 
-function f(e, t) {
+function p(e, t) {
   let n = c[e];
   null != n && n.forEach(e => delete d[e.id]), c[e] = t, t.forEach(e => d[e.id] = e)
 }
-class E extends s.default.Store {
+class h extends s.default.Store {
   initialize() {
     let e = a.default.get(u);
     null != e && r.forEach(e, (e, t) => {
       e.forEach(e => {
         "audioinput" === e.type && e.hardwareMute && (e.hardwareMute = !1)
-      }), f(t, e)
+      }), p(t, e)
     })
   }
   isCertified(e) {
@@ -47,34 +47,34 @@ class E extends s.default.Store {
     return r.find(d, t => t.type === e)
   }
   isHardwareMute(e) {
-    return h(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.hardwareMute)
+    return E(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.hardwareMute)
   }
   hasEchoCancellation(e) {
-    return h(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.echoCancellation)
+    return E(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.echoCancellation)
   }
   hasNoiseSuppression(e) {
-    return h(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.noiseSuppression)
+    return E(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.noiseSuppression)
   }
   hasAutomaticGainControl(e) {
-    return h(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.automaticGainControl)
+    return E(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.automaticGainControl)
   }
   getVendor(e) {
-    return h(e, null, e => e.vendor)
+    return E(e, null, e => e.vendor)
   }
   getModel(e) {
-    return h(e, null, e => e.model)
+    return E(e, null, e => e.model)
   }
   getRevision() {
-    return p
+    return f
   }
 }
-E.displayName = "CertifiedDeviceStore";
-var _ = new E(o.default, {
+h.displayName = "CertifiedDeviceStore";
+var _ = new h(o.default, {
   CERTIFIED_DEVICES_SET: function(e) {
     let {
       applicationId: t,
       devices: n
     } = e;
-    f(t, n), a.default.set(u, c), p++
+    p(t, n), a.default.set(u, c), f++
   }
 })

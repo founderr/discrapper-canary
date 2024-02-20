@@ -1,82 +1,82 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return C
+    return R
   }
-}), n("222007");
-var i = n("913144"),
-  a = n("689988"),
-  l = n("525065"),
-  s = n("299039"),
-  r = n("178406");
-let o = {},
-  u = {},
-  d = null;
-async function c(e, t) {
-  null == o[e] && (o[e] = new Set), o[e].add(t), null == u[e] && (u[e] = Date.now()), E(e) && await f(e)
+}), E("222007");
+var t = E("913144"),
+  o = E("689988"),
+  n = E("525065"),
+  r = E("299039"),
+  i = E("178406");
+let a = {},
+  I = {},
+  s = null;
+async function T(e, _) {
+  null == a[e] && (a[e] = new Set), a[e].add(_), null == I[e] && (I[e] = Date.now()), N(e) && await S(e)
 }
 
-function f(e) {
-  if (null == o[e]) return;
-  let t = Array.from(o[e]);
-  o[e] = new Set, u[e] = Date.now(), requestAnimationFrame(async () => {
-    await i.default.dispatch({
+function S(e) {
+  if (null == a[e]) return;
+  let _ = Array.from(a[e]);
+  a[e] = new Set, I[e] = Date.now(), requestAnimationFrame(async () => {
+    await t.default.dispatch({
       type: "MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH",
       guildId: e,
-      userIds: t
+      userIds: _
     })
   })
 }
 
-function E(e) {
-  let t = o[e];
-  if (null == t) return !1;
-  let n = t.size >= function(e) {
-      var t;
-      let n = null !== (t = l.default.getMemberCount(e)) && void 0 !== t ? t : 0;
-      return n >= 75e3 ? 10 : 2
+function N(e) {
+  let _ = a[e];
+  if (null == _) return !1;
+  let E = _.size >= function(e) {
+      var _;
+      let E = null !== (_ = n.default.getMemberCount(e)) && void 0 !== _ ? _ : 0;
+      return E >= 75e3 ? 10 : 2
     }(e),
-    i = u[e];
-  if (n) return !0;
-  if (null == i) return !1;
-  let a = Date.now() - i,
-    s = null != i && a >= function(e) {
-      var t;
-      let n = null !== (t = l.default.getMemberCount(e)) && void 0 !== t ? t : 0;
-      return n >= 75e3 ? 5e3 : 2e3
+    t = I[e];
+  if (E) return !0;
+  if (null == t) return !1;
+  let o = Date.now() - t,
+    r = null != t && o >= function(e) {
+      var _;
+      let E = null !== (_ = n.default.getMemberCount(e)) && void 0 !== _ ? _ : 0;
+      return E >= 75e3 ? 5e3 : 2e3
     }(e);
-  return s
+  return r
 }
 
-function h(e) {
-  o[e] = new Set, u[e] = null
+function O(e) {
+  a[e] = new Set, I[e] = null
 }
-class _ extends a.default {
+class A extends o.default {
   handleInitialize() {
-    null == d && null == d && (d = setInterval(() => {
-      s.default.forEachKey(o, e => {
-        E(e) && f(e)
+    null == s && null == s && (s = setInterval(() => {
+      r.default.forEachKey(a, e => {
+        N(e) && S(e)
       })
     }, 1e4))
   }
-  handleGuildMemberUpdate(e, t) {
-    let n = r.default.isInitialized(e);
-    if (n) return c(e, t)
+  handleGuildMemberUpdate(e, _) {
+    let E = i.default.isInitialized(e);
+    if (E) return T(e, _)
   }
-  handleGuildMemberRemove(e, t) {
-    let n = r.default.isInitialized(e);
-    if (n) return c(e, t)
+  handleGuildMemberRemove(e, _) {
+    let E = i.default.isInitialized(e);
+    if (E) return T(e, _)
   }
   handleGuildDelete(e) {
-    let t = e.guild.id,
-      n = r.default.isInitialized(t);
-    n && h(t)
+    let _ = e.guild.id,
+      E = i.default.isInitialized(_);
+    E && O(_)
   }
   handleGuildMemberSearchSuccess(e) {
     let {
-      guildId: t
-    } = e, n = r.default.isInitialized(t);
-    n && h(t)
+      guildId: _
+    } = e, E = i.default.isInitialized(_);
+    E && O(_)
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -88,4 +88,4 @@ class _ extends a.default {
     }
   }
 }
-var C = new _
+var R = new A

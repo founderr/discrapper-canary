@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   DISCORD_EPOCH: function() {
-    return r.DISCORD_EPOCH
+    return i.DISCORD_EPOCH
   },
   default: function() {
-    return i
+    return r
   }
 });
-var r = n("249654"),
-  i = {
-    age: r.default.age,
-    extractTimestamp: r.default.extractTimestamp,
-    fromTimestamp: r.default.fromTimestamp,
-    atPreviousMillisecond: r.default.atPreviousMillisecond,
-    compare: r.default.compare,
+var i = n("249654"),
+  r = {
+    age: i.default.age,
+    extractTimestamp: i.default.extractTimestamp,
+    fromTimestamp: i.default.fromTimestamp,
+    atPreviousMillisecond: i.default.atPreviousMillisecond,
+    compare: i.default.compare,
     keys: function(e) {
       return Object.keys(e)
     },

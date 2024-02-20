@@ -3,12 +3,12 @@ n.r(t), n.d(t, {
   default: function() {
     return function e(t, n) {
       void 0 === n && (n = []);
-      var u, s = (0, r.default)(t),
-        l = s === (null == (u = t.ownerDocument) ? void 0 : u.body),
-        c = (0, o.default)(s),
-        f = l ? [c].concat(c.visualViewport || [], (0, i.default)(s) ? s : []) : s,
-        d = n.concat(f);
-      return l ? d : d.concat(e((0, a.default)(f)))
+      var s, u = (0, r.default)(t),
+        l = u === (null == (s = t.ownerDocument) ? void 0 : s.body),
+        c = (0, o.default)(u),
+        d = l ? [c].concat(c.visualViewport || [], (0, i.default)(u) ? u : []) : u,
+        f = n.concat(d);
+      return l ? f : f.concat(e((0, a.default)(d)))
     }
   }
 });

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   graphs: function() {
-    return f
+    return p
   },
   keySection: function() {
-    return T
+    return g
   },
   parseSection: function() {
     return I
@@ -21,10 +21,10 @@ var i = n("446674"),
   l = n("697218"),
   u = n("49111"),
   c = n("353927");
-let d = T(c.MediaEngineContextTypes.DEFAULT, u.RTCDebugSections.TRANSPORT, 0),
-  p = d,
-  h = {},
-  f = {
+let d = g(c.MediaEngineContextTypes.DEFAULT, u.RTCDebugSections.TRANSPORT, 0),
+  f = d,
+  E = {},
+  p = {
     availableOutgoingBitrate: !0,
     bitrate: !0,
     bitrateTarget: !0,
@@ -45,7 +45,7 @@ let d = T(c.MediaEngineContextTypes.DEFAULT, u.RTCDebugSections.TRANSPORT, 0),
     ping: !0
   };
 
-function E(e, t, n) {
+function h(e, t, n) {
   return "".concat(e, ":").concat(t, ":").concat(n)
 }
 class _ {
@@ -57,26 +57,26 @@ class _ {
       let i = {
         ...this.state
       };
-      return delete i[E(e, t, n)], new _(i)
+      return delete i[h(e, t, n)], new _(i)
     }
     return new _({
-      [E(e, t, n)]: i,
+      [h(e, t, n)]: i,
       ...this.state
     })
   }
   get(e, t, n) {
-    let i = this.state[E(e, t, n)];
+    let i = this.state[h(e, t, n)];
     return null != i ? i : null
   }
   constructor(e) {
     this.state = e
   }
 }
-let m = _.empty(),
-  S = !1,
-  g = null;
+let S = _.empty(),
+  m = !1,
+  T = null;
 
-function T(e, t, n) {
+function g(e, t, n) {
   return "".concat(e, ":").concat(t, ":").concat(n)
 }
 
@@ -88,55 +88,55 @@ function I(e) {
   }
 }
 
-function v() {
+function C() {
   Object.values(c.MediaEngineContextTypes).forEach(e => {
-    h[e] = {}
+    E[e] = {}
   })
 }
-v();
+C();
 
-function C() {
-  null != g && (g.destroy(), g = null)
+function v() {
+  null != T && (T.destroy(), T = null)
 }
 class A extends i.default.Store {
   getSection() {
-    return p
+    return f
   }
   getStats() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
-    return h[e][0]
+    return E[e][0]
   }
   getAllStats() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.MediaEngineContextTypes.DEFAULT;
-    return Object.values(h[e])
+    return Object.values(E[e])
   }
   getVideoStreams() {
-    return m
+    return S
   }
   shouldRecordNextConnection() {
-    return S
+    return m
   }
 }
 A.displayName = "RTCDebugStore";
 var R = new A(s.default, {
   RTC_DEBUG_MODAL_OPEN: function(e) {
     var t;
-    p = null !== (t = e.section) && void 0 !== t ? t : d
+    f = null !== (t = e.section) && void 0 !== t ? t : d
   },
   RTC_DEBUG_MODAL_CLOSE: function() {
-    C()
+    v()
   },
   RTC_DEBUG_MODAL_SET_SECTION: function(e) {
-    p = e.section
+    f = e.section
   },
   RTC_DEBUG_MODAL_UPDATE: function(e) {
     let {
       context: t,
       stats: n,
       index: i
-    } = e, r = h[t];
+    } = e, r = E[t];
     if (null != n) {
-      let [e, s, a] = p.split(":");
+      let [e, s, a] = f.split(":");
       if (e === t && parseInt(a) === i) {
         let e = l.default.getUser(s);
         if (null != e) {
@@ -145,7 +145,7 @@ var R = new A(s.default, {
               inbound: e
             }
           } = n;
-          !Object.keys(e).includes(s) && (p = d)
+          !Object.keys(e).includes(s) && (f = d)
         }
       }
       r[i] = function e(t) {
@@ -167,7 +167,7 @@ var R = new A(s.default, {
           } else if ("object" == typeof a && null !== a) {
             let n = "object" == typeof t && null !== t ? t : {};
             r[s] = e(a, n, i)
-          } else if (s in f && "number" == typeof a) {
+          } else if (s in p && "number" == typeof a) {
             let e = r[s] = Array.isArray(t) ? t : [];
             e.push({
               value: a,
@@ -186,9 +186,9 @@ var R = new A(s.default, {
     let {
       path: t
     } = e, n = o.default.getMediaEngine();
-    if (C(), !n.supports(c.Features.CONNECTION_REPLAY) || 0 === t.length) return;
+    if (v(), !n.supports(c.Features.CONNECTION_REPLAY) || 0 === t.length) return;
     let i = n.createReplayConnection(c.MediaEngineContextTypes.DEFAULT, t);
-    null != i && (g = i, i.on(r.BaseConnectionEvent.Video, (e, t, n, r, a) => {
+    null != i && (T = i, i.on(r.BaseConnectionEvent.Video, (e, t, n, r, a) => {
       s.default.dispatch({
         type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
         mediaEngineConnectionId: i.mediaEngineConnectionId,
@@ -199,16 +199,16 @@ var R = new A(s.default, {
     }), s.default.wait(() => a.open()))
   },
   RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: function(e) {
-    m = m.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId)
+    S = S.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId)
   },
   RTC_DEBUG_SET_RECORDING_FLAG: function(e) {
     let {
       value: t
     } = e;
-    S = t
+    m = t
   },
   VOICE_CHANNEL_SELECT: function(e) {
-    null != e.channelId && v()
+    null != e.channelId && C()
   }
 });
 o.default.getMediaEngine().on(r.MediaEngineEvent.ConnectionStats, function(e) {

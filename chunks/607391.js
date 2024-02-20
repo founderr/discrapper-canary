@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getSizeForWidth: function() {
-    return u
+    return o
   },
   default: function() {
     return d
@@ -13,9 +13,9 @@ var r = n("414456"),
   s = n.n(r),
   i = n("77078"),
   l = n("145131"),
-  o = n("668458");
+  u = n("668458");
 
-function u(e) {
+function o(e) {
   return e < 400 ? "small" : e < 1e3 ? "medium" : "large"
 }
 
@@ -24,7 +24,7 @@ function d(e) {
     onCTAClick: t,
     callToAction: n,
     header: r,
-    description: u,
+    description: o,
     size: d,
     className: c,
     artURL: f,
@@ -40,26 +40,26 @@ function d(e) {
       padding: 4
     },
     children: [!h && null != f && (0, a.jsx)("div", {
-      className: s(o.art, o[d]),
+      className: s(u.art, u[d]),
       style: {
         backgroundImage: "url(".concat(f, ")")
       }
     }), null != r ? (0, a.jsx)(i.Text, {
       color: "none",
       variant: "text-md/semibold",
-      className: o.header,
+      className: u.header,
       children: r
-    }) : null, null != u ? (0, a.jsx)(i.Text, {
+    }) : null, null != o ? (0, a.jsx)(i.Text, {
       color: "none",
-      className: o.description,
+      className: u.description,
       variant: "text-sm/medium",
-      children: u
+      children: o
     }) : null, p || null == n ? null : (0, a.jsx)(i.Button, {
-      className: o.outerButton,
+      className: u.outerButton,
       size: i.Button.Sizes.NONE,
       color: i.Button.Colors.WHITE,
       look: i.Button.Looks.BLANK,
-      innerClassName: o.button,
+      innerClassName: u.button,
       onClick: e => {
         e.stopPropagation(), null == t || t(e)
       },

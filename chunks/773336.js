@@ -5,102 +5,102 @@ E.r(_), E.d(_, {
     return t
   },
   isPlatformEmbedded: function() {
-    return T
+    return r
   },
   isWindows: function() {
     return a
   },
   isMac: function() {
-    return n
+    return I
   },
   isLinux: function() {
-    return i
-  },
-  isDesktop: function() {
-    return A
-  },
-  isWeb: function() {
     return s
   },
-  isAndroidChrome: function() {
-    return R
+  isDesktop: function() {
+    return T
   },
-  isAndroidWeb: function() {
-    return N
-  },
-  isAndroid: function() {
-    return O
-  },
-  isIOS: function() {
+  isWeb: function() {
     return S
   },
-  getPlatform: function() {
-    return L
+  isAndroidChrome: function() {
+    return N
   },
-  getPlatformName: function() {
+  isAndroidWeb: function() {
+    return O
+  },
+  isAndroid: function() {
+    return A
+  },
+  isIOS: function() {
+    return R
+  },
+  getPlatform: function() {
     return l
   },
+  getPlatformName: function() {
+    return u
+  },
   getNativePlatform: function() {
-    return D
+    return L
   },
   getOS: function() {
     return C
   }
 }), (o = t || (t = {})).WINDOWS = "WINDOWS", o.OSX = "OSX", o.LINUX = "LINUX", o.WEB = "WEB";
-let I = window.DiscordNative,
-  T = null != I,
-  r = null != I ? I.process.platform : "";
+let n = window.DiscordNative,
+  r = null != n,
+  i = null != n ? n.process.platform : "";
 
 function a() {
-  return /^win/.test(r)
+  return /^win/.test(i)
 }
 
-function n() {
-  return "darwin" === r
-}
-
-function i() {
-  return "linux" === r
-}
-
-function A() {
-  return a() || n() || i()
+function I() {
+  return "darwin" === i
 }
 
 function s() {
-  return "WEB" === L()
+  return "linux" === i
 }
 
-function R() {
-  return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
+function T() {
+  return a() || I() || s()
+}
+
+function S() {
+  return "WEB" === l()
 }
 
 function N() {
+  return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
+}
+
+function O() {
   var e;
   return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null
 }
 
-function O() {
-  return "android" === r
+function A() {
+  return "android" === i
 }
 
-function S() {
-  return "ios" === r
-}
-
-function L() {
-  return a() ? "WINDOWS" : n() ? "OSX" : i() ? "LINUX" : "WEB"
+function R() {
+  return "ios" === i
 }
 
 function l() {
-  return r
+  return a() ? "WINDOWS" : I() ? "OSX" : s() ? "LINUX" : "WEB"
 }
 
-function D() {
-  switch (r) {
+function u() {
+  return i
+}
+
+function L() {
+  switch (i) {
     case "ios":
     case "android":
-      return r;
+      return i;
     default:
       return "web"
   }

@@ -15,11 +15,11 @@ var a = n("37983"),
   c = n("871388"),
   f = n("152311"),
   E = n("36539"),
-  h = n("860285"),
-  _ = n("47319"),
-  C = n("86878"),
-  I = n("686470"),
-  S = n("568307"),
+  h = n("161454"),
+  _ = n("860285"),
+  C = n("47319"),
+  I = n("86878"),
+  S = n("686470"),
   m = n("535974"),
   p = n("599110"),
   T = n("602043"),
@@ -34,7 +34,7 @@ function v(e) {
   } = e, n = t.length > 1, v = function(e) {
     let {
       currentActivities: t
-    } = e, n = (0, l.useStateFromStores)([_.default], () => _.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
+    } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getAccounts().some(e => e.type === d.default.get(A.PlatformTypes.XBOX).type)), s = t.some(e => {
       let {
         activity: t
       } = e;
@@ -51,25 +51,25 @@ function v(e) {
     let {
       currentActivities: t
     } = e, n = s.useContext(p.AnalyticsContext);
-    return (0, l.useStateFromStoresArray)([S.default, I.default, h.default, m.default, C.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
+    return (0, l.useStateFromStoresArray)([h.default, S.default, _.default, m.default, I.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
       let {
         activity: t,
         game: a
-      } = e, s = I.default.getActiveLibraryApplication(a.id);
+      } = e, s = S.default.getActiveLibraryApplication(a.id);
       return {
         ...e,
         libraryApplication: s,
         canJoin: null != t && (0, c.default)(t, A.ActivityFlags.JOIN) && t.type === A.ActivityTypes.PLAYING,
         canPlay: (0, T.isLaunchable)({
-          LibraryApplicationStore: I.default,
-          LaunchableGameStore: h.default,
+          LibraryApplicationStore: S.default,
+          LaunchableGameStore: _.default,
           DispatchApplicationStore: m.default,
-          ConnectedAppsStore: C.default,
+          ConnectedAppsStore: I.default,
           applicationId: a.id,
           branchId: null != s ? s.branchId : null
         }),
-        isLaunching: h.default.launchingGames.has(a.id),
-        isRunning: S.default.getRunningVerifiedApplicationIds().includes(a.id),
+        isLaunching: _.default.launchingGames.has(a.id),
+        isRunning: h.default.getRunningVerifiedApplicationIds().includes(a.id),
         location: n.location
       }
     }), [n.location, t])

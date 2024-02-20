@@ -1,14 +1,14 @@
 "use strict";
-var i, o;
-t.r(n), t.d(n, {
+var a, n;
+s.r(t), s.d(t, {
   ConsoleOAuthApplications: function() {
-    return i
+    return a
   },
   ConsoleOAuthApplicationsSets: function() {
-    return s
+    return l
   }
-}), t("222007"), (o = i || (i = {})).XBOX_APPLICATION_ID = "622174530214821906", o.PLAYSTATION_APPLICATION_ID = "1008890872156405890", o.PLAYSTATION_STAGING_APPLICATION_ID = "984193235868065795";
-let s = {
+}), s("222007"), (n = a || (a = {})).XBOX_APPLICATION_ID = "622174530214821906", n.PLAYSTATION_APPLICATION_ID = "1008890872156405890", n.PLAYSTATION_STAGING_APPLICATION_ID = "984193235868065795";
+let l = {
   PLAYSTATION_APPLICATION_IDS: new Set(["984193235868065795", "1008890872156405890"]),
   ALL: new Set(["622174530214821906", "984193235868065795", "1008890872156405890"])
 }

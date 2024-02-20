@@ -1,11 +1,11 @@
 "use strict";
-let i, r, l, u;
+let i, r, l, s;
 n.r(e), n.d(e, {
   default: function() {
     return T
   }
 });
-var s = n("748820"),
+var u = n("748820"),
   a = n("446674"),
   o = n("913144"),
   c = n("724210"),
@@ -15,7 +15,7 @@ let E = {};
 function f(t) {
   return {
     guildId: t,
-    sessionId: (0, s.v4)()
+    sessionId: (0, u.v4)()
   }
 }
 
@@ -30,7 +30,7 @@ class I extends a.default.Store {
     return null != r && r.guildId === t ? r.sessionId : null != l && l.guildId === t ? l.sessionId : void 0
   }
   getHomeSessionSource(t) {
-    return null != u && u.guildId === t ? u.source : d.GuildHomeLandingSource.ORGANIC
+    return null != s && s.guildId === t ? s.source : d.GuildHomeLandingSource.ORGANIC
   }
 }
 I.displayName = "GuildHomeStore";
@@ -57,12 +57,12 @@ var T = new I(o.default, {
       channelId: n
     } = t;
     if (null == e || null == n || !(0, c.isStaticChannelRoute)(n) || !(0, c.isGuildHomeChannel)(n)) {
-      i = void 0, r = void 0, l = void 0, u = void 0;
+      i = void 0, r = void 0, l = void 0, s = void 0;
       return
     }
-    let s = (0, c.buildGuildStaticChannelId)(n, e);
-    if (i === s || null != r && r.guildId === e) return !1;
-    _(e), i = s, null != u && u.guildId !== e && (u = void 0)
+    let u = (0, c.buildGuildStaticChannelId)(n, e);
+    if (i === u || null != r && r.guildId === e) return !1;
+    _(e), i = u, null != s && s.guildId !== e && (s = void 0)
   },
   CHANNEL_PRELOAD: function(t) {
     let {
@@ -81,7 +81,7 @@ var T = new I(o.default, {
       source: e,
       guildId: n
     } = t;
-    u = {
+    s = {
       guildId: n,
       source: e
     }
@@ -94,6 +94,6 @@ var T = new I(o.default, {
     _(e)
   },
   LOGOUT: function() {
-    r = void 0, l = void 0, u = void 0
+    r = void 0, l = void 0, s = void 0
   }
 })

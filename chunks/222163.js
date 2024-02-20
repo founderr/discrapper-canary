@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   referencePortalAwareContains: function() {
-    return S
+    return m
   },
   ReferencePositionLayer: function() {
-    return v
+    return C
   }
 }), n("222007"), n("70102");
 var i = n("37983"),
@@ -16,26 +16,26 @@ var i = n("37983"),
   u = n("718776"),
   c = n("36763"),
   d = n("659500"),
-  p = n("439932"),
-  h = n("411093"),
-  f = n("228256"),
-  E = n("49111"),
+  f = n("439932"),
+  E = n("411093"),
+  p = n("228256"),
+  h = n("49111"),
   _ = n("855265");
-let m = new WeakMap;
+let S = new WeakMap;
 
-function S(e, t) {
+function m(e, t) {
   if (e.contains(t)) return !0;
-  let n = (0, h.default)(t, _.layer);
+  let n = (0, E.default)(t, _.layer);
   for (; null != n;) {
-    let t = m.get(n);
+    let t = S.get(n);
     if (null == t) break;
     if (e.contains(t)) return !0;
-    n = (0, h.default)(t, _.layer)
+    n = (0, E.default)(t, _.layer)
   }
   return !1
 }
 
-function g(e) {
+function T(e) {
   let {
     positionKey: t,
     position: n,
@@ -44,7 +44,7 @@ function g(e) {
   return null != t ? t : "".concat(n, ":").concat(i)
 }
 
-function T(e, t, n, i) {
+function g(e, t, n, i) {
   switch (e) {
     case "top":
       return l(null != t.bottom, "Missing bottom"), i.offsetHeight - (t.bottom + n.offsetHeight);
@@ -79,7 +79,7 @@ function I(e, t, n) {
   }
   return n
 }
-class v extends r.Component {
+class C extends r.Component {
   nudgeLeftAlignment(e, t, n) {
     let {
       nudgeAlignIntoViewport: i
@@ -202,7 +202,7 @@ class v extends r.Component {
     } = this.props;
     let c = "function" == typeof(i = o) ? i() : (l(null != i.current, "Invalid ref"), i.current.getBoundingClientRect()),
       d = n.getBoundingClientRect();
-    let p = (r = c, s = d.left, a = d.top, {
+    let f = (r = c, s = d.left, a = d.top, {
       top: r.top - a,
       left: r.left - s,
       bottom: r.bottom - a,
@@ -212,27 +212,27 @@ class v extends r.Component {
     });
     switch (e) {
       case "top":
-        return this.getHorizontalAlignmentStyle(p, t, n, {
-          bottom: n.offsetHeight - p.top + u
+        return this.getHorizontalAlignmentStyle(f, t, n, {
+          bottom: n.offsetHeight - f.top + u
         });
       case "bottom":
-        return this.getHorizontalAlignmentStyle(p, t, n, {
-          top: p.bottom + u
+        return this.getHorizontalAlignmentStyle(f, t, n, {
+          top: f.bottom + u
         });
       case "left":
-        return this.getVerticalAlignmentStyle(p, t, n, {
-          right: n.offsetWidth - p.left + u
+        return this.getVerticalAlignmentStyle(f, t, n, {
+          right: n.offsetWidth - f.left + u
         });
       case "right":
-        return this.getVerticalAlignmentStyle(p, t, n, {
-          left: p.right + u
+        return this.getVerticalAlignmentStyle(f, t, n, {
+          left: f.right + u
         });
       case "center":
-        return this.getVerticalAlignmentStyle(p, t, n, {
-          left: p.left + p.width / 2 - t.offsetWidth / 2 + u
+        return this.getVerticalAlignmentStyle(f, t, n, {
+          left: f.left + f.width / 2 - t.offsetWidth / 2 + u
         });
       case "window_center":
-        return this.getVerticalAlignmentStyle(p, t, n, {
+        return this.getVerticalAlignmentStyle(f, t, n, {
           left: Math.max((window.innerWidth - t.offsetWidth) / 2, 0)
         });
       default:
@@ -245,14 +245,14 @@ class v extends r.Component {
       autoInvert: t
     } = this.props, n = this.elementRef.current;
     l(null != n, "Unexpected null element");
-    let i = (0, f.getParentLayerContainer)(n),
+    let i = (0, p.getParentLayerContainer)(n),
       {
         style: r,
         nudge: s
       } = this.calculatePositionStyle(e, n, i),
       a = null,
       o = null;
-    if (t && (a = T(e, r, n, i)) < 0) {
+    if (t && (a = g(e, r, n, i)) < 0) {
       let t = function(e) {
           switch (e) {
             case "top":
@@ -275,7 +275,7 @@ class v extends r.Component {
           style: r,
           nudge: s
         } = this.calculatePositionStyle(t, n, i);
-      if ((o = T(t, r, n, i)) > a) return I(o, n, {
+      if ((o = g(t, r, n, i)) > a) return I(o, n, {
         position: t,
         nudge: s,
         style: r
@@ -298,10 +298,10 @@ class v extends r.Component {
       ...this.calculateState()
     });
     let r = this.elementRef.current;
-    l(null != r, "Missing elementRef"), "function" != typeof n && null != n.current && m.set(r, n.current), d.ComponentDispatch.subscribe(E.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), d.ComponentDispatch.subscribe(E.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
+    l(null != r, "Missing elementRef"), "function" != typeof n && null != n.current && S.set(r, n.current), d.ComponentDispatch.subscribe(h.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), d.ComponentDispatch.subscribe(h.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
   }
   componentDidUpdate(e, t) {
-    if (g(e) !== g(this.props) ? this.updatePosition() : ! function(e, t) {
+    if (T(e) !== T(this.props) ? this.updatePosition() : ! function(e, t) {
         if ("function" == typeof e && "function" == typeof t) {
           let n = e(),
             i = t();
@@ -316,7 +316,7 @@ class v extends r.Component {
   componentWillUnmount() {
     var e, t, n, i;
     let r = this.elementRef.current;
-    l(null != r, "Missing elementRef"), m.delete(r), d.ComponentDispatch.unsubscribe(E.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), d.ComponentDispatch.unsubscribe(E.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
+    l(null != r, "Missing elementRef"), S.delete(r), d.ComponentDispatch.unsubscribe(h.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), d.ComponentDispatch.unsubscribe(h.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener("resize", this.handleLayerPopComplete), null === (n = (i = this.props).onUnmount) || void 0 === n || n.call(i)
   }
   render() {
     let {
@@ -329,16 +329,16 @@ class v extends r.Component {
       position: o,
       isPositioned: l,
       isSettingsLayerTransitioning: d,
-      nudge: h
+      nudge: E
     } = this.state;
     return (0, i.jsx)(c.UseThemeContext, {
       children: c => {
         let {
-          theme: f
+          theme: p
         } = c;
         return (0, i.jsx)("div", {
           id: e,
-          className: a(t, (0, p.getThemeClass)(f), _.layer, {
+          className: a(t, (0, f.getThemeClass)(p), _.layer, {
             [_.emptyError]: !1,
             [_.layerHidden]: d,
             [_.disabledPointerEvents]: s
@@ -352,7 +352,7 @@ class v extends r.Component {
             containerRef: this.elementRef,
             children: n({
               position: o,
-              nudge: h,
+              nudge: E,
               isPositioned: l
             }, this.updatePosition)
           })
@@ -382,7 +382,7 @@ class v extends r.Component {
     }
   }
 }
-v.defaultProps = {
+C.defaultProps = {
   nudgeAlignIntoViewport: !1,
   spacing: 0,
   autoInvert: !1,

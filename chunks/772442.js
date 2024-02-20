@@ -10,8 +10,8 @@ var r = n("990766"),
   s = n("374014"),
   i = n("701909"),
   l = n("607391"),
-  o = n("49111"),
-  u = n("782340");
+  u = n("49111"),
+  o = n("782340");
 let d = n("242412");
 
 function c(e) {
@@ -23,14 +23,14 @@ function c(e) {
   } = e;
   return (0, a.jsx)(l.default, {
     artURL: d,
-    header: u.default.Messages.STREAM_FAILED_TITLE,
+    header: o.default.Messages.STREAM_FAILED_TITLE,
     size: (0, l.getSizeForWidth)(n),
     noArt: f,
     selected: c,
-    description: u.default.Messages.STREAM_FAILED_DESCRIPTION.format({
-      helpUrl: i.default.getArticleURL(o.HelpdeskArticles.STREAM_FAILED)
+    description: o.default.Messages.STREAM_FAILED_DESCRIPTION.format({
+      helpUrl: i.default.getArticleURL(u.HelpdeskArticles.STREAM_FAILED)
     }),
     onCTAClick: () => (0, r.closeStream)((0, s.encodeStreamKey)(t)),
-    callToAction: u.default.Messages.CLOSE_STREAM
+    callToAction: o.default.Messages.CLOSE_STREAM
   })
 }

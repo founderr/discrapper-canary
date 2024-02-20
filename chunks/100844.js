@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CallTileCTA: function() {
-    return o
+    return u
   }
 });
 var a = n("37983");
@@ -11,24 +11,24 @@ var r = n("414456"),
   i = n("77078"),
   l = n("551694");
 
-function o(e) {
+function u(e) {
   let {
     children: t,
     onClick: n,
     className: r,
-    tooltip: o
+    tooltip: u
   } = e;
   return (0, a.jsx)(i.Tooltip, {
-    text: o,
+    text: u,
     children: e => {
       let {
-        onClick: o,
-        ...u
+        onClick: u,
+        ...o
       } = e;
       return (0, a.jsx)(i.Button, {
-        ...u,
+        ...o,
         onClick: e => {
-          null == n || n(e), null == o || o()
+          null == n || n(e), null == u || u()
         },
         innerClassName: l.buttonReset,
         color: s(l.cta, r),

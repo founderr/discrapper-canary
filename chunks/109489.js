@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return E
   }
 });
 var a = n("37983"),
@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   l = n("255397"),
-  o = n("256170"),
-  u = n("155207"),
+  u = n("256170"),
+  o = n("155207"),
   d = n("981913"),
   c = n("782340"),
   f = n("31665");
@@ -22,9 +22,9 @@ function h(e) {
   } = e;
   return (0, a.jsxs)("div", {
     className: f.iconContainer,
-    children: [(0, a.jsx)(o.default, {
+    children: [(0, a.jsx)(u.default, {
       className: i(n ? f.upCaret : f.leftCaret, t)
-    }), (0, a.jsx)(u.default, {
+    }), (0, a.jsx)(o.default, {
       className: i(f.members, t)
     })]
   })
@@ -37,40 +37,40 @@ function p(e) {
   } = e;
   return (0, a.jsxs)("div", {
     className: f.iconContainer,
-    children: [(0, a.jsx)(o.default, {
+    children: [(0, a.jsx)(u.default, {
       className: i(n ? f.downCaret : f.rightCaret, t)
-    }), n && (0, a.jsx)(u.default, {
+    }), n && (0, a.jsx)(o.default, {
       className: i(f.members, t)
     })]
   })
 }
 
-function m(e) {
+function E(e) {
   let {
     channelId: t,
     className: n,
     isParticipantsOpen: s,
-    isVertical: o = !1,
-    hideTooltip: u = !1
-  } = e, m = r.useCallback(e => {
+    isVertical: u = !1,
+    hideTooltip: o = !1
+  } = e, E = r.useCallback(e => {
     let {
       className: t
     } = e;
     return s ? (0, a.jsx)(p, {
       className: t,
-      isVertical: o
+      isVertical: u
     }) : (0, a.jsx)(h, {
       className: t,
-      isVertical: o
+      isVertical: u
     })
-  }, [s, o]);
+  }, [s, u]);
   return (0, a.jsx)(d.default, {
     label: s ? c.default.Messages.VIDEO_CALL_HIDE_MEMBERS : c.default.Messages.VIDEO_CALL_SHOW_MEMBERS,
     className: i(f.participantsButton, n),
     onClick: function() {
       l.default.toggleParticipants(t, !s)
     },
-    iconComponent: m,
-    shouldShowTooltip: !u
+    iconComponent: E,
+    shouldShowTooltip: !o
   })
 }

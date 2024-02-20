@@ -13,8 +13,8 @@ function i(e, t) {
   var n = (0, o.default)(t);
   n % 7 == 0 && (n -= 7);
   var i = (0, r.default)(e),
-    u = i.getUTCDay(),
-    s = n % 7,
-    l = ((s + 7) % 7 < 1 ? 7 : 0) + n - u;
+    s = i.getUTCDay(),
+    u = n % 7,
+    l = ((u + 7) % 7 < 1 ? 7 : 0) + n - s;
   return i.setUTCDate(i.getUTCDate() + l), i
 }

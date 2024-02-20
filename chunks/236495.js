@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   createNativeDragSource: function() {
-    return i
+    return o
   },
   matchNativeItemType: function() {
-    return o
+    return i
   }
 });
 var r = n("703366"),
   a = n("584561");
 
-function i(e, t) {
+function o(e, t) {
   var n = new a.NativeDragSource(r.nativeTypesConfig[e]);
   return n.loadDataTransfer(t), n
 }
 
-function o(e) {
+function i(e) {
   if (!e) return null;
   var t = Array.prototype.slice.call(e.types || []);
   return Object.keys(r.nativeTypesConfig).filter(function(e) {

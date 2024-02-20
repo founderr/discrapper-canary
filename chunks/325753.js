@@ -9,8 +9,8 @@ var a = n("37983"),
   s = n("817736"),
   i = n("458960"),
   l = n("118810"),
-  o = n("49111");
-let u = (e, t) => {
+  u = n("49111");
+let o = (e, t) => {
   let {
     x: n,
     y: a
@@ -75,7 +75,7 @@ class d extends r.PureComponent {
     } = this.state, {
       className: n,
       children: r
-    } = this.props, s = [0, 1], l = ["0px", "1px"], o = i.default.accelerate({
+    } = this.props, s = [0, 1], l = ["0px", "1px"], u = i.default.accelerate({
       pointerEvents: e ? "none" : "auto",
       transform: [{
         translateX: t.x.interpolate({
@@ -94,7 +94,7 @@ class d extends r.PureComponent {
       ref: this.handleSetRef,
       className: n,
       onMouseDown: this.handleMouseDown,
-      style: o,
+      style: u,
       children: r
     })
   }
@@ -114,7 +114,7 @@ class d extends r.PureComponent {
       let {
         position: r
       } = this.state, s = e.target;
-      if (e.button === o.MouseButtons.PRIMARY && (t || null != a && s.matches(a))) {
+      if (e.button === u.MouseButtons.PRIMARY && (t || null != a && s.matches(a))) {
         this.grabDimensions(), this._dragStart = {
           x: e.clientX,
           y: e.clientY
@@ -136,7 +136,7 @@ class d extends r.PureComponent {
         dragging: r,
         dragging: s
       } = this.state;
-      !r && u(this._dragStart, {
+      !r && o(this._dragStart, {
         x: e.clientX,
         y: e.clientY
       }) > 9 && (r = !0), r && (this.animateToPosition(e.clientX - this._offsetX, e.clientY - this._offsetY, {

@@ -14,8 +14,8 @@ var n = l("37983"),
   d = l("862337"),
   c = l("77078"),
   f = l("823411"),
-  m = l("42887"),
-  S = l("568307"),
+  m = l("161454"),
+  S = l("42887"),
   C = l("703370"),
   E = l("145131"),
   h = l("162933"),
@@ -29,8 +29,8 @@ var n = l("37983"),
   A = l("782340"),
   R = l("142716");
 async function T() {
-  let e = m.default.getVideoDevices(),
-    t = (0, o.default)(m.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {
+  let e = S.default.getVideoDevices(),
+    t = (0, o.default)(S.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {
       width: 176,
       height: 99
     }),
@@ -65,7 +65,7 @@ async function T() {
   }
 }
 async function L() {
-  let e = S.default.getRunningGames(),
+  let e = m.default.getRunningGames(),
     t = await Promise.all(e.map(async e => {
       let t;
       if (null == e.name) return null;
@@ -87,8 +87,8 @@ async function L() {
 }
 
 function M(e) {
-  let t = (0, N.isWindows)() ? (0, p.default)(S.default, C.default) : null,
-    l = S.default.getRunningGames();
+  let t = (0, N.isWindows)() ? (0, p.default)(m.default, C.default) : null,
+    l = m.default.getRunningGames();
   return null != t && (0, _.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, _.default)(e.id, t.windowHandle)) ? 1 : 0
 }
 
@@ -100,7 +100,7 @@ function j(e) {
     enableGoLiveCaptureCard: s
   } = g.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), i = m.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, C] = a.useState(null), [N, _] = a.useState(null), p = null != N && N.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [j, O] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
+  }), i = S.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [m, C] = a.useState(null), [N, _] = a.useState(null), p = null != N && N.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [j, O] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
   a.useEffect(() => {
     let e = P.current;
     return T().then(e => {
@@ -130,7 +130,7 @@ function j(e) {
     U = function(e) {
       switch (e) {
         case u.DesktopSources.WINDOW:
-          return S;
+          return m;
         case u.DesktopSources.SCREEN:
           return o;
         case u.DesktopSources.CAMERA:

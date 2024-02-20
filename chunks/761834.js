@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   UserSettingsManager: function() {
-    return s
+    return r
   },
   default: function() {
-    return r
+    return i
   }
-}), n("860677"), n("222007");
-var i = n("689988"),
-  a = n("845579");
-let l = !1;
-class s extends i.default {
+}), E("860677"), E("222007");
+var t = E("689988"),
+  o = E("845579");
+let n = !1;
+class r extends t.default {
   maybeShowChangeLanguageToast() {}
   setVerifyTimezone() {
-    l = !0
+    n = !0
   }
   ensureTimezoneUpdated() {
-    if (!l) return;
-    l = !1;
+    if (!n) return;
+    n = !1;
     let e = new Date().getTimezoneOffset();
-    a.TimezoneOffset.getSetting() !== e && setImmediate(() => a.TimezoneOffset.updateSetting(e))
+    o.TimezoneOffset.getSetting() !== e && setImmediate(() => o.TimezoneOffset.updateSetting(e))
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -31,4 +31,4 @@ class s extends i.default {
     }
   }
 }
-var r = new s
+var i = new r

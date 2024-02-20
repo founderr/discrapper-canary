@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return _
   },
   codeToKey: function() {
-    return m
-  },
-  keyToCode: function() {
     return S
   },
+  keyToCode: function() {
+    return m
+  },
   toBrowserEvents: function() {
-    return C
+    return v
   },
   toCombo: function() {
     return A
@@ -28,12 +28,12 @@ var i = n("499032"),
   u = n("773336"),
   c = n("49111");
 let d = (0, u.isLinux)() ? c.LinuxKeyToCode : (0, u.isMac)() ? c.MacosKeyToCode : (0, u.isWindows)() ? c.WindowsKeyToCode : void 0,
-  p = a.invert(c.LinuxKeyToCode);
-p["223"] = "`", Object.freeze(p);
-let h = Object.freeze(a.invert(c.MacosKeyToCode)),
-  f = a.invert(c.WindowsKeyToCode);
+  f = a.invert(c.LinuxKeyToCode);
 f["223"] = "`", Object.freeze(f);
-let E = a.invert(null != d ? d : {});
+let E = Object.freeze(a.invert(c.MacosKeyToCode)),
+  p = a.invert(c.WindowsKeyToCode);
+p["223"] = "`", Object.freeze(p);
+let h = a.invert(null != d ? d : {});
 
 function _() {
   if ((0, u.isLinux)()) return c.KeyboardEnvs.LINUX;
@@ -42,23 +42,23 @@ function _() {
   else return c.KeyboardEnvs.BROWSER
 }
 
-function m(e) {
+function S(e) {
   let [, t, n] = e;
   switch (n) {
     case c.KeyboardEnvs.LINUX:
-      return p["" + t];
-    case c.KeyboardEnvs.MACOS:
-      return h["" + t];
-    case c.KeyboardEnvs.WINDOWS:
       return f["" + t];
+    case c.KeyboardEnvs.MACOS:
+      return E["" + t];
+    case c.KeyboardEnvs.WINDOWS:
+      return p["" + t];
     case c.KeyboardEnvs.BROWSER:
       return r(t);
     default:
-      return E["" + t]
+      return h["" + t]
   }
 }
 
-function S(e) {
+function m(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _(),
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.KeyboardDeviceTypes.KEYBOARD_KEY;
   switch (n) {
@@ -83,8 +83,8 @@ function S(e) {
     default:
       throw Error("Unrecognized DeviceType ".concat(n, "."))
   }
-}!(0, u.isMac)() && (E["223"] = "`"), Object.freeze(E);
-let g = [
+}!(0, u.isMac)() && (h["223"] = "`"), Object.freeze(h);
+let T = [
     ["META", "⌘"],
     ["RIGHT META", "RIGHT ⌘"],
     ["SHIFT", "⇧"],
@@ -108,19 +108,19 @@ let g = [
     ["TAB", "⇥"],
     ["SPACE", "␣"]
   ],
-  T = e => {
-    for (let [t, n] of g)
+  g = e => {
+    for (let [t, n] of T)
       if (t === e.toUpperCase()) return n;
     return e
   },
   I = e => {
-    for (let [t, n] of g)
+    for (let [t, n] of T)
       if (n === e.toUpperCase()) return t.toLowerCase();
     return e
   },
-  v = /shift|meta|ctrl|alt$/;
+  C = /shift|meta|ctrl|alt$/;
 
-function C(e) {
+function v(e) {
   let t = {
     keyCode: 0,
     metaKey: !1,
@@ -129,7 +129,7 @@ function C(e) {
     ctrlKey: !1
   };
   return null == e ? [] : e.reduce((e, n) => {
-    let i = m(n),
+    let i = S(n),
       r = {
         ...t
       };
@@ -137,9 +137,9 @@ function C(e) {
       ...r,
       combo: n
     }), e;
-    if (v.test(i)) return t[i + "Key"] = !0, e.map(e => (e[i + "Key"] = !0, e));
+    if (C.test(i)) return t[i + "Key"] = !0, e.map(e => (e[i + "Key"] = !0, e));
     {
-      let t = S(i, c.KeyboardEnvs.BROWSER);
+      let t = m(i, c.KeyboardEnvs.BROWSER);
       return null != t && (r.keyCode = t), e.push(r), e
     }
   }, [])
@@ -151,7 +151,7 @@ function A(e) {
     i = e.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, o.default.modKey).split("+").map(e => e.trim().replace("plus", "+"));
   return i.reduce((e, i) => {
     let r = I(i),
-      s = S(r, t, n);
+      s = m(r, t, n);
     return null != s && e.push([n, s, t]), e
   }, [])
 }
@@ -162,7 +162,7 @@ function R(e) {
       let [t, n, i] = e;
       if (t === c.KeyboardDeviceTypes.KEYBOARD_KEY || t === c.KeyboardDeviceTypes.KEYBOARD_MODIFIER_KEY) {
         var r;
-        return null !== (r = m(null != i ? [t, n, i] : [t, n])) && void 0 !== r ? r : "UNK".concat(n)
+        return null !== (r = S(null != i ? [t, n, i] : [t, n])) && void 0 !== r ? r : "UNK".concat(n)
       }
       if (t === c.KeyboardDeviceTypes.MOUSE_BUTTON) return "mouse".concat(n);
       if (t === c.KeyboardDeviceTypes.GAMEPAD_BUTTON) return "gamepad".concat(n);
@@ -170,7 +170,7 @@ function R(e) {
     }).filter(l.isNotNullish);
   if (!t) return i.join("+");
   {
-    let e = -1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(T) : i;
+    let e = -1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(g) : i;
     return e.join(" + ").toUpperCase()
   }
 }

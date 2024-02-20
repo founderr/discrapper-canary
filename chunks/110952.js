@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   getDifferenceFromInitialOffset: function() {
-    return i
+    return o
   }
 });
 
@@ -17,16 +17,16 @@ function r(e, t) {
 
 function a(e) {
   var t, n, a = e.clientOffset,
-    i = e.initialClientOffset,
-    o = e.initialSourceClientOffset;
-  if (!a || !i || !o) return null;
-  return r((t = a, n = o, {
+    o = e.initialClientOffset,
+    i = e.initialSourceClientOffset;
+  if (!a || !o || !i) return null;
+  return r((t = a, n = i, {
     x: t.x + n.x,
     y: t.y + n.y
-  }), i)
+  }), o)
 }
 
-function i(e) {
+function o(e) {
   var t = e.clientOffset,
     n = e.initialClientOffset;
   return t && n ? r(t, n) : null

@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return o
+    return a
   }
 });
-var i, a, l = n("44170");
-(i = a || (a = {})).VERTICAL = "vertical", i.HORIZONTAL = "horizontal";
-let s = {
+var t, o, n = E("44170");
+(t = o || (o = {})).VERTICAL = "vertical", t.HORIZONTAL = "horizontal";
+let r = {
   open: !1,
   orientation: null
 };
-class r extends l.EventEmitter {
+class i extends n.EventEmitter {
   get orientations() {
-    return Object.values(a)
+    return Object.values(o)
   }
   get state() {
-    return s
+    return r
   }
   check() {
     let e = function() {
@@ -25,30 +25,30 @@ class r extends l.EventEmitter {
           return 0
         }
       }() > 160,
-      t = function() {
+      _ = function() {
         try {
           return window.outerHeight - window.innerHeight
         } catch (e) {
           return 0
         }
       }() > 160,
-      n = e ? "vertical" : "horizontal";
-    if (!(t && e) && (function() {
+      E = e ? "vertical" : "horizontal";
+    if (!(_ && e) && (function() {
         try {
           return window.Firebug.chrome.isInitialized
         } catch (e) {
           return !1
         }
-      }() || e || t)) {
-      let e = s.open;
-      s = {
+      }() || e || _)) {
+      let e = r.open;
+      r = {
         open: !0,
-        orientation: n
-      }, (!e || s.orientation !== n) && this.emit("changed", s)
-    } else s.open && (s.open = !1, this.emit("changed", s))
+        orientation: E
+      }, (!e || r.orientation !== E) && this.emit("changed", r)
+    } else r.open && (r.open = !1, this.emit("changed", r))
   }
   constructor() {
     super(), setInterval(() => this.check(), 500)
   }
 }
-var o = r
+var a = i

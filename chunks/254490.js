@@ -1,31 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   transformNativeFile: function() {
-    return f
+    return p
   },
   makeFile: function() {
-    return E
+    return h
   },
   classifyFile: function() {
-    return m
-  },
-  classifyFileName: function() {
     return S
   },
+  classifyFileName: function() {
+    return m
+  },
   sizeString: function() {
-    return g
+    return T
   },
   maxFileSize: function() {
-    return T
+    return g
   },
   anyFileTooLarge: function() {
     return I
   },
   uploadSumTooLarge: function() {
-    return v
+    return C
   },
   getMaxRequestSize: function() {
-    return C
+    return v
   }
 }), n("222007");
 var i = n("477850"),
@@ -37,14 +37,14 @@ var i = n("477850"),
   u = n("305961"),
   c = n("697218"),
   d = n("719923"),
-  p = n("49111"),
-  h = n("646718");
+  f = n("49111"),
+  E = n("646718");
 
-function f(e, t) {
-  return e instanceof File ? e : E(e.data, e.filename, t)
+function p(e, t) {
+  return e instanceof File ? e : h(e.data, e.filename, t)
 }
 
-function E(e, t, i) {
+function h(e, t, i) {
   let r = n("637139");
   if (null == t && (t = "unknown", "type" in e)) {
     let n = r.extension(e.type);
@@ -98,22 +98,22 @@ let _ = [{
   klass: "audio"
 }];
 
-function m(e) {
-  return S(e.name, e.type)
+function S(e) {
+  return m(e.name, e.type)
 }
 
-function S(e, t) {
+function m(e, t) {
   var n;
   e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : "";
   let i = a.find(_, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
   return null != i ? i.klass : "unknown"
 }
 
-function g(e) {
+function T(e) {
   return r.filesize(e)
 }
 
-function T(e) {
+function g(e) {
   let t = c.default.getCurrentUser();
   o.default.trackExposure({
     location: "de18ec_1"
@@ -123,24 +123,24 @@ function T(e) {
   let n = d.default.getUserMaxFileSize(t);
   if (null == e) return n;
   let i = u.default.getGuild(e),
-    r = null != i ? h.BoostedGuildFeatures[i.premiumTier].limits.fileSize : p.MAX_ATTACHMENT_SIZE;
+    r = null != i ? E.BoostedGuildFeatures[i.premiumTier].limits.fileSize : f.MAX_ATTACHMENT_SIZE;
   return Math.max(r, n)
 }
 
 function I(e, t) {
-  let n = T(t);
+  let n = g(t);
   return Array.from(e).some(e => e.size > n)
 }
 
-function v(e) {
+function C(e) {
   return function(e) {
     let t = 0;
     for (let n of e) t += n.size;
     return t
-  }(e) > C()
+  }(e) > v()
 }
 
-function C() {
+function v() {
   let e = c.default.getCurrentUser();
   return null != e && e.isStaff() ? 524288e3 : 524288e3
 }

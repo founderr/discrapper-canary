@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return o
+    return a
   }
 });
-var i = n("77078"),
-  a = n("229353"),
-  l = n("131010"),
-  s = n("583374"),
-  r = n("782340"),
-  o = new l.default({
+var t = E("77078"),
+  o = E("229353"),
+  n = E("131010"),
+  r = E("583374"),
+  i = E("782340"),
+  a = new n.default({
     onSwitchSuccess(e) {
       setTimeout(() => {
-        (0, i.showToast)((0, i.createToast)(r.default.Messages.SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS.format({
+        (0, t.showToast)((0, t.createToast)(i.default.Messages.SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS.format({
           username: e.username
-        }), i.ToastType.SUCCESS))
+        }), t.ToastType.SUCCESS))
       }, 100)
     },
     onSwitchError() {
-      (0, i.showToast)((0, i.createToast)(a.SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR, i.ToastType.FAILURE))
+      (0, t.showToast)((0, t.createToast)(o.SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR, t.ToastType.FAILURE))
     },
     onTokenSet() {
-      (0, i.closeModal)(s.SWITCH_ACCOUNTS_MODAL_KEY)
+      (0, t.closeModal)(r.SWITCH_ACCOUNTS_MODAL_KEY)
     }
   })

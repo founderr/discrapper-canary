@@ -1,48 +1,48 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return C
+    return R
   }
-}), n("222007");
-var i = n("689988"),
-  a = n("716241"),
-  l = n("651057"),
-  s = n("299285"),
-  r = n("271938"),
-  o = n("42203"),
-  u = n("18494"),
-  d = n("101125"),
-  c = n("774539"),
-  f = n("49111");
-async function E(e) {
-  await l.default.fetchApplications(e, !1)
+}), E("222007");
+var t = E("689988"),
+  o = E("716241"),
+  n = E("651057"),
+  r = E("299285"),
+  i = E("271938"),
+  a = E("42203"),
+  I = E("18494"),
+  s = E("101125"),
+  T = E("774539"),
+  S = E("49111");
+async function N(e) {
+  await n.default.fetchApplications(e, !1)
 }
-async function h(e) {
+async function O(e) {
   if (null == e) return;
-  let t = o.default.getChannel(e);
-  if (null == t || !(0, c.isVoiceUserGameActivityEnabled)("running_games_change", !1)) return;
-  let n = d.default.getActivities();
-  if (0 === n.length) return;
-  let i = [...n].filter(e => e.type === f.ActivityTypes.PLAYING && e.application_id).map(e => e.application_id);
-  await E([...i]);
-  let l = s.default.getApplication(i[0]);
-  null != l && a.default.trackWithMetadata(f.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
+  let _ = a.default.getChannel(e);
+  if (null == _ || !(0, T.isVoiceUserGameActivityEnabled)("running_games_change", !1)) return;
+  let E = s.default.getActivities();
+  if (0 === E.length) return;
+  let t = [...E].filter(e => e.type === S.ActivityTypes.PLAYING && e.application_id).map(e => e.application_id);
+  await N([...t]);
+  let n = r.default.getApplication(t[0]);
+  null != n && o.default.trackWithMetadata(S.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
     channel_id: e,
-    guild_id: t.guild_id,
-    game_name: l.name,
-    user_id: r.default.getId()
+    guild_id: _.guild_id,
+    game_name: n.name,
+    user_id: i.default.getId()
   })
 }
-class _ extends i.default {
+class A extends t.default {
   handleRunningGamesChange() {
-    let e = u.default.getVoiceChannelId();
-    h(e)
+    let e = I.default.getVoiceChannelId();
+    O(e)
   }
   handleVoiceChannelSelect(e) {
     let {
-      channelId: t
+      channelId: _
     } = e;
-    h(t)
+    O(_)
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -51,4 +51,4 @@ class _ extends i.default {
     }
   }
 }
-var C = new _
+var R = new A

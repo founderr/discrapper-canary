@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("446674"),
@@ -29,7 +29,7 @@ function d() {
     }
   }
 }
-class p extends i.default.Store {
+class f extends i.default.Store {
   initialize() {
     this.waitFor(a.default), d(), this.syncWith([a.default], d)
   }
@@ -64,5 +64,5 @@ class p extends i.default.Store {
     return null !== (t = null == n ? void 0 : n.nickname) && void 0 !== t ? t : void 0
   }
 }
-p.displayName = "FavoriteStore";
-var h = new p(s.default, {})
+f.displayName = "FavoriteStore";
+var E = new f(s.default, {})

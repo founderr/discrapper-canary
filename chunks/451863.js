@@ -16,12 +16,12 @@ var n, a, s = l("37983"),
   S = l("990766"),
   C = l("901582"),
   E = l("299285"),
-  h = l("928609"),
-  N = l("268491"),
-  g = l("42203"),
-  _ = l("305961"),
-  p = l("42887"),
-  I = l("568307"),
+  h = l("161454"),
+  N = l("928609"),
+  g = l("268491"),
+  _ = l("42203"),
+  p = l("305961"),
+  I = l("42887"),
   x = l("18494"),
   v = l("697218"),
   A = l("703370"),
@@ -58,18 +58,18 @@ function B(e) {
     resolution: Q,
     fps: q,
     soundshareEnabled: $
-  } = (0, d.useStateFromStoresObject)([N.default], () => N.default.getState()), ee = (0, d.useStateFromStores)([x.default, g.default], () => g.default.getChannel(x.default.getVoiceChannelId())), et = (0, d.useStateFromStores)([I.default, A.default], () => (0, M.isWindows)() ? (0, P.default)(I.default, A.default) : null), el = (0, d.useStateFromStores)([v.default], () => {
+  } = (0, d.useStateFromStoresObject)([g.default], () => g.default.getState()), ee = (0, d.useStateFromStores)([x.default, _.default], () => _.default.getChannel(x.default.getVoiceChannelId())), et = (0, d.useStateFromStores)([h.default, A.default], () => (0, M.isWindows)() ? (0, P.default)(h.default, A.default) : null), el = (0, d.useStateFromStores)([v.default], () => {
     let e = v.default.getCurrentUser();
     return u(null != e, "GoLiveModal: user cannot be undefined"), e
-  }), en = null !== (t = null == ee ? void 0 : ee.getGuildId()) && void 0 !== t ? t : Z, ea = (0, d.useStateFromStores)([_.default], () => {
+  }), en = null !== (t = null == ee ? void 0 : ee.getGuildId()) && void 0 !== t ? t : Z, ea = (0, d.useStateFromStores)([p.default], () => {
     var e;
-    return null != en ? null === (e = _.default.getGuild(en)) || void 0 === e ? void 0 : e.premiumTier : null
+    return null != en ? null === (e = p.default.getGuild(en)) || void 0 === e ? void 0 : e.premiumTier : null
   }), [es, er] = null !== (n = (0, D.default)(X, el, ea)) && void 0 !== n ? n : [V.ApplicationStreamResolutions.RESOLUTION_720, V.ApplicationStreamFPS.FPS_30];
   X !== V.ApplicationStreamPresets.PRESET_CUSTOM && (Q = es, q = er);
   let ei = (0, T.useUID)();
   let [eu, eo] = r.useState((i = W, B = z, i ? 0 : B ? 1 : 2)), [ed, ec] = r.useState(null), [ef, em] = r.useState(!1), [eS, eC] = r.useState(null), [eE, eh] = r.useState(null), [eN, eg] = r.useState(null), [e_, ep] = r.useState(X), [eI, ex] = r.useState(Q), [ev, eA] = r.useState(q), [eR, eT] = r.useState($), [eL, eM] = r.useState(null != Z ? Z : null), ej = null !== (a = null == ee ? void 0 : ee.id) && void 0 !== a ? a : eS;
   r.useEffect(() => {
-    let e = (0, M.isWindows)() ? (0, P.default)(I.default, A.default) : null,
+    let e = (0, M.isWindows)() ? (0, P.default)(h.default, A.default) : null,
       t = (null == e ? void 0 : e.id) != null ? E.default.getApplication(e.id) : null;
     L.default.track(w.AnalyticEvents.OPEN_MODAL, {
       type: "Go Live Modal",
@@ -86,7 +86,7 @@ function B(e) {
       u(null != et || null != eE, "got nothing to stream");
       let l = null !== (e = null == ee ? void 0 : ee.id) && void 0 !== e ? e : eS;
       u(null != l, "Received null target channel ID");
-      let n = g.default.getChannel(l),
+      let n = _.default.getChannel(l),
         a = null !== (t = null == n ? void 0 : n.getGuildId()) && void 0 !== t ? t : Z;
       null == ee && m.default.selectVoiceChannel(l);
       let s = e_,
@@ -98,7 +98,7 @@ function B(e) {
         frameRate: i,
         soundshareEnabled: eR
       });
-      let o = (0, y.default)(et, eE, I.default.getRunningGames()),
+      let o = (0, y.default)(et, eE, h.default.getRunningGames()),
         d = !(0, M.isWindows)() || null == o || (null == eE ? void 0 : eE.id.startsWith("camera:")),
         c = d || null == o ? null : o.pid;
       (0, S.startStream)(a, l, {
@@ -108,7 +108,7 @@ function B(e) {
         audioSourceId: eN,
         sound: eR
       }), (async () => {
-        let e = await h.default.hasPermission(H.NativePermissionTypes.SCREEN_RECORDING, {
+        let e = await N.default.hasPermission(H.NativePermissionTypes.SCREEN_RECORDING, {
           showAuthorizationError: !1
         });
         !e && f.default.show({
@@ -129,10 +129,10 @@ function B(e) {
   }, [el, ea, ev, eI, e_]);
   async function eP(e) {
     if (e.preventDefault(), 1 === eu) return eo(2);
-    let t = (0, y.default)(et, eE, I.default.getRunningGames()),
+    let t = (0, y.default)(et, eE, h.default.getRunningGames()),
       n = j.default.supportsFeature(w.NativeFeatures.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated);
     if ((0, M.isMac)() && null != eE) {
-      let e = await p.default.getMediaEngine().getDesktopSources(),
+      let e = await I.default.getMediaEngine().getDesktopSources(),
         t = eE.id;
       if (t.startsWith("screen") && e.length > 0 && !e.some(e => e.includes(t))) {
         var a, r;

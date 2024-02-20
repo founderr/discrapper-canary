@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return d
   },
   SET_COMMUNICATION_DISABLED_MODAL_NAME: function() {
-    return p
+    return f
   },
   CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: function() {
-    return h
+    return E
   },
   MAX_REASON_LENGTH: function() {
-    return f
+    return p
   }
 });
 var i, r, s = n("701909"),
@@ -69,6 +69,6 @@ let u = () => Object.keys(r).filter(e => isNaN(Number(e))).map(e => {
   }),
   c = s.default.getArticleURL(a.HelpdeskArticles.DISABLE_GUILD_COMMUNICATION),
   d = "GuildCommunicationDisabledDismissedGuilds",
-  p = "Set Communication Disabled Modal",
-  h = "Clear Communication Disabled Modal",
-  f = 512
+  f = "Set Communication Disabled Modal",
+  E = "Clear Communication Disabled Modal",
+  p = 512

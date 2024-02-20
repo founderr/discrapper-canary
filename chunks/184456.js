@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Progress: function() {
-    return p
+    return f
   }
 });
 var i, r, s = n("37983"),
@@ -13,47 +13,47 @@ var i, r, s = n("37983"),
 (i = r || (r = {})).XSMALL = "xsmall", i.SMALL = "small", i.LARGE = "large";
 let d = "indeterminate";
 
-function p(e) {
+function f(e) {
   let t, {
       className: n,
       percent: i,
       size: r = "small",
       foregroundColor: o = u.default.unsafe_rawColors.BRAND_500.css,
-      backgroundColor: p = "var(--background-modifier-active)",
-      foregroundGradientColor: h,
-      animate: f = !0
+      backgroundColor: f = "var(--background-modifier-active)",
+      foregroundGradientColor: E,
+      animate: p = !0
     } = e,
-    E = null != i ? i : 0;
-  return t = null != h ? {
-    background: "linear-gradient(to right, ".concat(h[0], ", ").concat(h[1], ")")
+    h = null != i ? i : 0;
+  return t = null != E ? {
+    background: "linear-gradient(to right, ".concat(E[0], ", ").concat(E[1], ")")
   } : {
     backgroundColor: o
   }, (0, s.jsx)("div", {
     className: l(n, c.progress, c[r]),
     style: {
-      backgroundColor: p
+      backgroundColor: f
     },
-    children: E !== d && "number" == typeof E ? (0, s.jsx)("div", {
+    children: h !== d && "number" == typeof h ? (0, s.jsx)("div", {
       className: l(c.progressBar, c[r], {
-        [c.animating]: f
+        [c.animating]: p
       }),
       style: {
-        transform: "translate3d(".concat(Math.min(Math.max(0, E), 100) - 100, "%, 0, 0)"),
+        transform: "translate3d(".concat(Math.min(Math.max(0, h), 100) - 100, "%, 0, 0)"),
         ...t
       }
     }) : (0, s.jsxs)(a.Fragment, {
       children: [(0, s.jsx)("div", {
         className: l(c.indeterminateBar1, c[r], {
-          [c.animating]: f
+          [c.animating]: p
         }),
         style: t
       }), (0, s.jsx)("div", {
         className: l(c.indeterminateBar2, c[r], {
-          [c.animating]: f
+          [c.animating]: p
         }),
         style: t
       })]
     })
   })
 }
-p.Sizes = r, p.INDETERMINATE = d
+f.Sizes = r, f.INDETERMINATE = d

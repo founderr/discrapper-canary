@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   ProcessArgs: function() {
-    return i
+    return r
   }
 });
-var r = n("49671");
-class i {
+var i = n("49671");
+class r {
   static get() {
-    if (null == i.cached) {
+    if (null == r.cached) {
       var e, t;
-      let n = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t);
-      null != n && n.length > 1 && n.shift(), i.cached = null != n ? n : []
+      let n = null === i.default || void 0 === i.default ? void 0 : null === (t = i.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t);
+      null != n && n.length > 1 && n.shift(), r.cached = null != n ? n : []
     }
-    return i.cached
+    return r.cached
   }
   static contains(e) {
-    return i.get().includes(e)
+    return r.get().includes(e)
   }
   static isEnvVariableTrue(e) {
     var t, n;
-    if (void 0 === r.default) return !1;
-    switch (null === r.default || void 0 === r.default ? void 0 : null === (n = r.default.process) || void 0 === n ? void 0 : null === (t = n.env) || void 0 === t ? void 0 : t[e]) {
+    if (void 0 === i.default) return !1;
+    switch (null === i.default || void 0 === i.default ? void 0 : null === (n = i.default.process) || void 0 === n ? void 0 : null === (t = n.env) || void 0 === t ? void 0 : t[e]) {
       case "1":
       case "true":
         return !0
@@ -28,10 +28,10 @@ class i {
     return !1
   }
   static isDisallowPopupsSet() {
-    return i.contains("--disallow-popups") || i.isEnvVariableTrue("DISCORD_DISALLOW_POPUPS")
+    return r.contains("--disallow-popups") || r.isEnvVariableTrue("DISCORD_DISALLOW_POPUPS")
   }
   static isDiscordTestSet() {
-    return i.isEnvVariableTrue("DISCORD_TEST")
+    return r.isEnvVariableTrue("DISCORD_TEST")
   }
   static isDiscordGatewayPlaintextSet() {
     return !1

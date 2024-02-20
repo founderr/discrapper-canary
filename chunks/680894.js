@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   CLYDE_AI_USER_ID: function() {
-    return r
+    return i
   },
   CLYDE_AI_MENTION_COLOR: function() {
-    return i
+    return r
   }
 });
-let r = "1081004946872352958",
-  i = 3000177
+let i = "1081004946872352958",
+  r = 3000177

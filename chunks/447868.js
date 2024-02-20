@@ -1,24 +1,24 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return u
+    return I
   }
-}), n("222007");
-var i = n("689988"),
-  a = n("49671"),
-  l = n("102985");
-let s = !1;
+}), E("222007");
+var t = E("689988"),
+  o = E("49671"),
+  n = E("102985");
+let r = !1;
 
-function r() {
+function i() {
   var e;
-  let t = null === a.default || void 0 === a.default ? void 0 : null === (e = a.default.window) || void 0 === e ? void 0 : e.setContentProtection;
-  if (null == t) return;
-  let n = l.default.enableContentProtection;
-  n !== s && (t(n), s = n)
+  let _ = null === o.default || void 0 === o.default ? void 0 : null === (e = o.default.window) || void 0 === e ? void 0 : e.setContentProtection;
+  if (null == _) return;
+  let E = n.default.enableContentProtection;
+  E !== r && (_(E), r = E)
 }
-class o extends i.default {
+class a extends t.default {
   constructor() {
-    r(), super(), this.stores = new Map().set(l.default, r)
+    i(), super(), this.stores = new Map().set(n.default, i)
   }
 }
-var u = new o
+var I = new a

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   Sequencer: function() {
-    return f
+    return p
   }
 }), n("222007");
 var i, r, s = n("37983"),
@@ -11,9 +11,9 @@ var i, r, s = n("37983"),
   u = n("458960"),
   c = n("266491"),
   d = n("413197"),
-  p = n("86337");
+  f = n("86337");
 (r = i || (i = {}))[r.ENTERING = 0] = "ENTERING", r[r.LEAVING = 1] = "LEAVING", r[r.APPEARING = 2] = "APPEARING", r[r.STATIC = 3] = "STATIC";
-class h extends a.PureComponent {
+class E extends a.PureComponent {
   componentDidMount() {
     if (null != this._measureRef.current) {
       let {
@@ -92,31 +92,31 @@ class h extends a.PureComponent {
       animationState: s,
       baseHeight: a,
       targetHeight: o
-    } = this.state, l = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, c = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, d = 1 === s, p = 0 === s, h = (d ? -1 : 1) * this.direction, f = {
+    } = this.state, l = null !== (e = this.props.sideMargin) && void 0 !== e ? e : 0, c = null !== (t = this.props.verticalMargin) && void 0 !== t ? t : 0, d = 1 === s, f = 0 === s, E = (d ? -1 : 1) * this.direction, p = {
       transform: [{
         translateX: r.interpolate({
           inputRange: [0, 2],
-          outputRange: ["".concat(150 * h, "%"), "0%"],
+          outputRange: ["".concat(150 * E, "%"), "0%"],
           extrapolate: "clamp",
           easing: u.default.Easing.inOut(u.default.Easing.ease)
         })
       }]
     };
     return {
-      overflow: p || d ? "hidden" : "visible",
+      overflow: f || d ? "hidden" : "visible",
       position: d ? "absolute" : void 0,
       top: d ? c : void 0,
       left: d ? l : void 0,
       right: d ? l : void 0,
       bottom: d ? c : void 0,
-      ...n.enabled ? null : f,
+      ...n.enabled ? null : p,
       opacity: r.interpolate({
         inputRange: [0, 2],
         outputRange: [0, 1],
         extrapolate: "clamp",
         easing: u.default.Easing.inOut(u.default.Easing.ease)
       }),
-      height: p ? r.interpolate({
+      height: f ? r.interpolate({
         inputRange: [0, 1],
         outputRange: [a, o],
         extrapolate: "clamp",
@@ -135,19 +135,19 @@ class h extends a.PureComponent {
     } = this.state;
     return e ? (0, s.jsx)("div", {
       ref: this._measureRef,
-      className: l(p.measurementFill, t, {
-        [l(p.measurementFillStatic, i)]: 3 === r
+      className: l(f.measurementFill, t, {
+        [l(f.measurementFillStatic, i)]: 3 === r
       }),
       children: (0, s.jsx)(u.default.div, {
-        className: l(p.animatedNode, n),
+        className: l(f.animatedNode, n),
         style: this.getAnimatedStyle(),
         children: this.props.children
       })
     }) : (0, s.jsx)("div", {
       ref: this._measureRef,
-      className: l(p.measurement, t),
+      className: l(f.measurement, t),
       children: (0, s.jsx)(u.default.div, {
-        className: l(p.animatedNode, n),
+        className: l(f.animatedNode, n),
         style: this.getAnimatedStyle(),
         children: this.props.children
       })
@@ -162,10 +162,10 @@ class h extends a.PureComponent {
     }, this.direction = this.props.getDirection(), this._measureRef = a.createRef()
   }
 }
-h.contextType = d.AccessibilityPreferencesContext, h.defaultProps = {
+E.contextType = d.AccessibilityPreferencesContext, E.defaultProps = {
   duration: 300
 };
-class f extends a.Component {
+class p extends a.Component {
   componentDidMount() {
     this.setPrevSteps()
   }
@@ -193,8 +193,8 @@ class f extends a.Component {
     } = this.props;
     return (0, s.jsx)(c.default, {
       component: "div",
-      className: l(p.transitionGroup, t),
-      children: (0, s.jsx)(h, {
+      className: l(f.transitionGroup, t),
+      children: (0, s.jsx)(E, {
         fillParent: d,
         sideMargin: a,
         verticalMargin: o,
@@ -223,6 +223,6 @@ class f extends a.Component {
     }
   }
 }
-f.defaultProps = {
+p.defaultProps = {
   fillParent: !1
 }

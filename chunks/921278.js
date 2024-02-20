@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ProcessUtils: function() {
-    return r
+    return i
   }
 });
-class r {
+class i {
   getCPUCoreCount() {
     return this.cpuCoreCount
   }

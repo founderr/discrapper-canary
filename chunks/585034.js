@@ -1,50 +1,50 @@
 "use strict";
-var n = r("886639"),
-  o = r("868822"),
-  i = r("418855"),
-  a = r("649675"),
-  u = r("763589"),
-  l = r("308274"),
-  s = r("470984"),
-  c = r("55082"),
-  p = r("579697"),
-  f = r("161323"),
-  y = TypeError,
-  h = function(t, e) {
-    this.stopped = t, this.result = e
+var r = n("886639"),
+  a = n("868822"),
+  o = n("418855"),
+  i = n("649675"),
+  s = n("763589"),
+  c = n("308274"),
+  l = n("470984"),
+  u = n("55082"),
+  d = n("579697"),
+  p = n("161323"),
+  f = TypeError,
+  h = function(e, t) {
+    this.stopped = e, this.result = t
   },
-  d = h.prototype;
-t.exports = function(t, e, r) {
-  var b, g, v, m, S, x, A, w = r && r.that,
-    O = !!(r && r.AS_ENTRIES),
-    P = !!(r && r.IS_RECORD),
-    j = !!(r && r.IS_ITERATOR),
-    E = !!(r && r.INTERRUPTED),
-    k = n(e, w),
-    I = function(t) {
-      return b && f(b, "normal", t), new h(!0, t)
+  m = h.prototype;
+e.exports = function(e, t, n) {
+  var v, g, y, b, x, S, w, D = n && n.that,
+    C = !!(n && n.AS_ENTRIES),
+    k = !!(n && n.IS_RECORD),
+    P = !!(n && n.IS_ITERATOR),
+    E = !!(n && n.INTERRUPTED),
+    T = r(t, D),
+    M = function(e) {
+      return v && p(v, "normal", e), new h(!0, e)
     },
-    M = function(t) {
-      return O ? (i(t), E ? k(t[0], t[1], I) : k(t[0], t[1])) : E ? k(t, I) : k(t)
+    R = function(e) {
+      return C ? (o(e), E ? T(e[0], e[1], M) : T(e[0], e[1])) : E ? T(e, M) : T(e)
     };
-  if (P) b = t.iterator;
-  else if (j) b = t;
+  if (k) v = e.iterator;
+  else if (P) v = e;
   else {
-    if (!(g = p(t))) throw y(a(t) + " is not iterable");
-    if (u(g)) {
-      for (v = 0, m = l(t); m > v; v++)
-        if ((S = M(t[v])) && s(d, S)) return S;
+    if (!(g = d(e))) throw f(i(e) + " is not iterable");
+    if (s(g)) {
+      for (y = 0, b = c(e); b > y; y++)
+        if ((x = R(e[y])) && l(m, x)) return x;
       return new h(!1)
     }
-    b = c(t, g)
+    v = u(e, g)
   }
-  for (x = P ? t.next : b.next; !(A = o(x, b)).done;) {
+  for (S = k ? e.next : v.next; !(w = a(S, v)).done;) {
     try {
-      S = M(A.value)
-    } catch (t) {
-      f(b, "throw", t)
+      x = R(w.value)
+    } catch (e) {
+      p(v, "throw", e)
     }
-    if ("object" == typeof S && S && s(d, S)) return S
+    if ("object" == typeof x && x && l(m, x)) return x
   }
   return new h(!1)
 }

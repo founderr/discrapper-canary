@@ -13,87 +13,87 @@ var i = n("917351"),
   u = n("38654"),
   c = n("267567"),
   d = n("834052"),
-  p = n("755624"),
-  h = n("526311"),
-  f = n("233069"),
-  E = n("813006"),
+  f = n("755624"),
+  E = n("526311"),
+  p = n("233069"),
+  h = n("813006"),
   _ = n("766274"),
-  m = n("845078"),
-  S = n("991170"),
-  g = n("42203"),
-  T = n("926787"),
+  S = n("845078"),
+  m = n("991170"),
+  T = n("42203"),
+  g = n("926787"),
   I = n("26989"),
-  v = n("305961"),
-  C = n("697218"),
+  C = n("305961"),
+  v = n("697218"),
   A = n("49111"),
   R = n("562980");
 let N = {},
-  y = {},
   O = {},
-  D = 0;
+  D = {},
+  y = 0;
 
-function b(e) {
+function P(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = N[e];
   if (null != n) return n;
-  let i = C.default.getCurrentUser();
-  if (null == i) return S.default.NONE;
-  let r = v.default.getGuild(e);
-  return null == r ? S.default.NONE : N[e] = S.default.computePermissions({
+  let i = v.default.getCurrentUser();
+  if (null == i) return m.default.NONE;
+  let r = C.default.getGuild(e);
+  return null == r ? m.default.NONE : N[e] = m.default.computePermissions({
     user: i,
     context: r,
     checkElevated: t
   })
 }
 
-function P(e) {
+function L(e) {
   var t;
   let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    i = C.default.getCurrentUser();
-  if (null == i) return S.default.NONE;
-  let s = g.default.getChannel(e);
-  if (null == s) return S.default.NONE;
+    i = v.default.getCurrentUser();
+  if (null == i) return m.default.NONE;
+  let s = T.default.getChannel(e);
+  if (null == s) return m.default.NONE;
   let a = s.getGuildId(),
     o = null != a && (c.default.isLurking(a) || (null === (t = I.default.getMember(a, i.id)) || void 0 === t ? void 0 : t.isPending));
-  return !s.isScheduledForDeletion() && !o && r.isEmpty(s.permissionOverwrites) && null != a ? b(a) : S.default.computePermissions({
+  return !s.isScheduledForDeletion() && !o && r.isEmpty(s.permissionOverwrites) && null != a ? P(a) : m.default.computePermissions({
     user: i,
     context: s,
     checkElevated: n
   })
 }
 
-function L(e) {
+function b(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    n = y[e];
-  return null != n ? n : y[e] = P(e, t)
+    n = O[e];
+  return null != n ? n : O[e] = L(e, t)
 }
 
 function M(e) {
   if (null != e) {
     var t;
-    O[e] = (null !== (t = O[e]) && void 0 !== t ? t : 0) + 1
+    D[e] = (null !== (t = D[e]) && void 0 !== t ? t : 0) + 1
   }
 }
 
 function U() {
-  for (let e in N = {}, y = {}, O) O[e] += 1;
-  D += 1
+  for (let e in N = {}, O = {}, D) D[e] += 1;
+  y += 1
+}
+
+function G() {
+  U()
 }
 
 function w() {
   U()
 }
 
-function k() {
-  U()
-}
-
-function G(e) {
+function k(e) {
   var t;
   let {
     user: n
   } = e;
-  if (n.id !== (null === (t = C.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
+  if (n.id !== (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
   U()
 }
 
@@ -114,24 +114,24 @@ function V(e) {
     guildId: t
   } = e;
   delete N[t];
-  let n = g.default.getMutableBasicGuildChannelsForGuild(t);
+  let n = T.default.getMutableBasicGuildChannelsForGuild(t);
   r.forEach(n, e => {
-    delete y[e.id]
-  }), D += 1, M(t)
+    delete O[e.id]
+  }), y += 1, M(t)
 }
 
 function B(e) {
   let {
     instance: t
-  } = e, n = g.default.getChannel(t.channel_id);
+  } = e, n = T.default.getChannel(t.channel_id);
   if (null == n) return !1;
-  let i = C.default.getCurrentUser(),
-    r = S.default.computePermissions({
+  let i = v.default.getCurrentUser(),
+    r = m.default.computePermissions({
       user: i,
       context: n
     });
-  if (r === y[n.id]) return !1;
-  y[n.id] = r, D += 1
+  if (r === O[n.id]) return !1;
+  O[n.id] = r, y += 1
 }
 
 function H(e) {
@@ -139,23 +139,23 @@ function H(e) {
     guildId: t
   } = e;
   delete N[t];
-  let n = g.default.getMutableBasicGuildChannelsForGuild(t);
+  let n = T.default.getMutableBasicGuildChannelsForGuild(t);
   r.forEach(n, e => {
-    delete y[e.id]
-  }), D += 1, M(t)
+    delete O[e.id]
+  }), y += 1, M(t)
 }
 
-function j(e, t, n, i) {
-  let r = S.default.NONE;
-  if (e instanceof f.ChannelRecordBase) {
-    if (f.THREAD_CHANNEL_TYPES.has(e.type)) {
-      let r = g.default.getChannel(e.parent_id);
-      return null == r ? S.default.NONE : S.default.applyThreadPermissions(e, j(r, t, n, i), p.default.hasJoined(e.id))
+function Y(e, t, n, i) {
+  let r = m.default.NONE;
+  if (e instanceof p.ChannelRecordBase) {
+    if (p.THREAD_CHANNEL_TYPES.has(e.type)) {
+      let r = T.default.getChannel(e.parent_id);
+      return null == r ? m.default.NONE : m.default.applyThreadPermissions(e, Y(r, t, n, i), f.default.hasJoined(e.id))
     }
-    r = L(e.id)
-  } else e instanceof E.default && (r = b(e.id));
-  return void 0 !== t || void 0 !== n || void 0 !== i ? S.default.computePermissions({
-    user: C.default.getCurrentUser(),
+    r = b(e.id)
+  } else e instanceof h.default && (r = P(e.id));
+  return void 0 !== t || void 0 !== n || void 0 !== i ? m.default.computePermissions({
+    user: v.default.getCurrentUser(),
     context: e,
     overwrites: t,
     roles: n,
@@ -163,18 +163,18 @@ function j(e, t, n, i) {
     excludeGuildPermissions: i
   }) : r
 }
-class Y extends a.default.Store {
+class j extends a.default.Store {
   initialize() {
-    this.waitFor(C.default, v.default, g.default, I.default, T.default, p.default, d.default, u.default)
+    this.waitFor(v.default, C.default, T.default, I.default, g.default, f.default, d.default, u.default)
   }
   getChannelPermissions(e) {
-    return f.THREAD_CHANNEL_TYPES.has(e.type) ? P(e.id) : L(e.id)
+    return p.THREAD_CHANNEL_TYPES.has(e.type) ? L(e.id) : b(e.id)
   }
   getGuildPermissions(e) {
-    return b(e.id)
+    return P(e.id)
   }
   getGuildPermissionProps(e) {
-    let t = C.default.getCurrentUser();
+    let t = v.default.getCurrentUser();
     return {
       canManageGuild: this.can(A.Permissions.MANAGE_GUILD, e),
       canManageChannels: this.can(A.Permissions.MANAGE_CHANNELS, e),
@@ -194,44 +194,44 @@ class Y extends a.default.Store {
     }
   }
   canAccessMemberSafetyPage(e) {
-    return s.default.hasAny(b(e.id), R.MemberSafetyPagePermissions)
+    return s.default.hasAny(P(e.id), R.MemberSafetyPagePermissions)
   }
   canAccessGuildSettings(e) {
-    return s.default.hasAny(b(e.id), S.default.VIEW_GUILD_SETTINGS)
+    return s.default.hasAny(P(e.id), m.default.VIEW_GUILD_SETTINGS)
   }
   canWithPartialContext(e, t) {
-    return "channelId" in t && "string" == typeof t.channelId ? this.can(e, g.default.getChannel(t.channelId)) : "guildId" in t && "string" == typeof t.guildId && this.can(e, v.default.getGuild(t.guildId))
+    return "channelId" in t && "string" == typeof t.channelId ? this.can(e, T.default.getChannel(t.channelId)) : "guildId" in t && "string" == typeof t.guildId && this.can(e, C.default.getGuild(t.guildId))
   }
   can(e, t, n, i, r) {
-    let a = j(t, n, i, r);
+    let a = Y(t, n, i, r);
     return s.default.has(a, e)
   }
   canBasicChannel(e, t, n, i, r) {
-    return "basicPermissions" in t ? m.default.has(t.basicPermissions, e) : s.default.has(j(t, n, i, r), m.default.asBigFlag(e))
+    return "basicPermissions" in t ? S.default.has(t.basicPermissions, e) : s.default.has(Y(t, n, i, r), S.default.asBigFlag(e))
   }
   computePermissions(e, t, n, i) {
-    return j(e, t, n, i)
+    return Y(e, t, n, i)
   }
   computeBasicPermissions(e) {
-    return "basicPermissions" in e ? e.basicPermissions : m.default.asBasicFlag(j(e))
+    return "basicPermissions" in e ? e.basicPermissions : S.default.asBasicFlag(Y(e))
   }
   canManageUser(e, t, n) {
     let i = t instanceof _.default ? t.id : t;
     if (n.isOwner(i)) return !1;
-    let r = C.default.getCurrentUser();
+    let r = v.default.getCurrentUser();
     if (!this.can(e, n)) return !1;
-    let s = null != r ? S.default.getHighestRole(n, r.id) : void 0,
-      a = S.default.getHighestRole(n, i);
-    return null != r && S.default.isRoleHigher(n, r.id, s, a)
+    let s = null != r ? m.default.getHighestRole(n, r.id) : void 0,
+      a = m.default.getHighestRole(n, i);
+    return null != r && m.default.isRoleHigher(n, r.id, s, a)
   }
   getHighestRole(e) {
-    let t = C.default.getCurrentUser();
-    return null != t ? S.default.getHighestRole(e, t.id) : null
+    let t = v.default.getCurrentUser();
+    return null != t ? m.default.getHighestRole(e, t.id) : null
   }
   isRoleHigher(e, t, n) {
-    let i = C.default.getCurrentUser(),
+    let i = v.default.getCurrentUser(),
       r = u.default.isViewingRoles(e.id);
-    return S.default.isRoleHigher(e, r ? void 0 : null == i ? void 0 : i.id, t, n)
+    return m.default.isRoleHigher(e, r ? void 0 : null == i ? void 0 : i.id, t, n)
   }
   canImpersonateRole(e, t) {
     let n = this.getHighestRole(e),
@@ -241,46 +241,46 @@ class Y extends a.default.Store {
   }
   getGuildVersion(e) {
     var t;
-    return null !== (t = O[e]) && void 0 !== t ? t : 0
+    return null !== (t = D[e]) && void 0 !== t ? t : 0
   }
   getChannelsVersion() {
-    return D
+    return y
   }
 }
 
 function W() {
-  y = {}, N = {}, O = {}, D = 0
+  O = {}, N = {}, D = {}, y = 0
 }
-Y.displayName = "PermissionStore";
-var K = new Y(o.default, {
-  BACKGROUND_SYNC: w,
-  CONNECTION_OPEN: w,
-  OVERLAY_INITIALIZE: w,
-  CACHE_LOADED: w,
-  CACHE_LOADED_LAZY: w,
+j.displayName = "PermissionStore";
+var K = new j(o.default, {
+  BACKGROUND_SYNC: G,
+  CONNECTION_OPEN: G,
+  OVERLAY_INITIALIZE: G,
+  CACHE_LOADED: G,
+  CACHE_LOADED_LAZY: G,
   CONNECTION_CLOSED: function() {
     W()
   },
-  GUILD_CREATE: k,
-  GUILD_UPDATE: k,
-  GUILD_DELETE: k,
-  GUILD_MEMBER_ADD: G,
-  GUILD_MEMBER_UPDATE: G,
-  CURRENT_USER_UPDATE: G,
+  GUILD_CREATE: w,
+  GUILD_UPDATE: w,
+  GUILD_DELETE: w,
+  GUILD_MEMBER_ADD: k,
+  GUILD_MEMBER_UPDATE: k,
+  CURRENT_USER_UPDATE: k,
   CHANNEL_CREATE: function(e) {
     let {
       channel: {
         id: t
       }
-    } = e, n = g.default.getChannel(t);
+    } = e, n = T.default.getChannel(t);
     if (null == n || n.isPrivate()) return !1;
-    let i = C.default.getCurrentUser(),
-      r = S.default.computePermissions({
+    let i = v.default.getCurrentUser(),
+      r = m.default.computePermissions({
         user: i,
         context: n
       });
-    if (y[n.id] === r) return !1;
-    y[n.id] = r, D += 1, M(n.getGuildId())
+    if (O[n.id] === r) return !1;
+    O[n.id] = r, y += 1, M(n.getGuildId())
   },
   THREAD_CREATE: x,
   THREAD_UPDATE: x,
@@ -295,16 +295,16 @@ var K = new Y(o.default, {
         id: e
       }
       of t) {
-      let t = g.default.getChannel(e);
+      let t = T.default.getChannel(e);
       if (null == t || t.isPrivate()) continue;
-      let i = C.default.getCurrentUser(),
-        r = S.default.computePermissions({
+      let i = v.default.getCurrentUser(),
+        r = m.default.computePermissions({
           user: i,
           context: t
         });
-      y[t.id] !== r && (y[t.id] = r, M(t.getGuildId()), n = !0)
+      O[t.id] !== r && (O[t.id] = r, M(t.getGuildId()), n = !0)
     }
-    return !!n && (D += 1, n)
+    return !!n && (y += 1, n)
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let {
@@ -322,16 +322,16 @@ var K = new Y(o.default, {
   },
   THREAD_MEMBER_UPDATE: function(e) {
     var t;
-    return (null === (t = C.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (M(e.guildId), !0)
+    return (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (M(e.guildId), !0)
   },
   THREAD_MEMBERS_UPDATE: function(e) {
-    return !!(0, h.doesThreadMembersActionAffectMe)(e) && (M(e.guildId), !0)
+    return !!(0, E.doesThreadMembersActionAffectMe)(e) && (M(e.guildId), !0)
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return delete y[t.id], D += 1, M(t.guild_id), !1
+    return delete O[t.id], y += 1, M(t.guild_id), !1
   },
   GUILD_ROLE_CREATE: V,
   GUILD_ROLE_UPDATE: V,

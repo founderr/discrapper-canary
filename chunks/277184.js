@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("781738");
 var r = n("105476"),
   a = n("719623"),
-  i = n("152626"),
-  o = n("572815"),
+  o = n("152626"),
+  i = n("572815"),
   s = n("703094"),
   c = n("156983"),
   l = n("851583"),
@@ -15,8 +15,8 @@ var r = n("105476"),
   d = n("426604"),
   p = n("986501"),
   f = n("195158"),
-  m = n("336267"),
-  h = n("30205"),
+  h = n("336267"),
+  m = n("30205"),
   v = n("961019"),
   g = n("756129"),
   y = n("993212"),
@@ -32,16 +32,16 @@ var r = n("105476"),
   T = n("702313"),
   M = n("369760"),
   R = n("520016"),
-  I = n("452155"),
-  O = n("636311"),
+  O = n("452155"),
+  I = n("636311"),
   A = n("244754"),
   L = n("640455"),
   N = n("436488"),
-  F = n("906362"),
-  j = n("362561"),
+  j = n("906362"),
+  F = n("362561"),
   K = n("884691"),
-  V = n("240849"),
-  _ = n("564341"),
+  _ = n("240849"),
+  V = n("564341"),
   z = {};
 
 function B(e) {
@@ -50,8 +50,8 @@ function B(e) {
     {
       value: r,
       textValue: a,
-      minValue: i,
-      maxValue: o,
+      minValue: o,
+      maxValue: i,
       isDisabled: s,
       isReadOnly: c,
       isRequired: l,
@@ -59,10 +59,10 @@ function B(e) {
       onIncrementPage: d,
       onDecrement: p,
       onDecrementPage: f,
-      onDecrementToMin: m,
-      onIncrementToMax: h
+      onDecrementToMin: h,
+      onIncrementToMax: m
     } = e;
-  let v = (0, _.useLocalizedStringFormatter)((t = z) && t.__esModule ? t.default : t, "@react-aria/spinbutton"),
+  let v = (0, V.useLocalizedStringFormatter)((t = z) && t.__esModule ? t.default : t, "@react-aria/spinbutton"),
     g = () => clearTimeout(n.current);
   (0, K.useEffect)(() => () => g(), []);
   let y = (0, K.useRef)(!1),
@@ -73,16 +73,16 @@ function B(e) {
       y.current = !1
     };
   a = "" === a ? v.format("Empty") : (a || "".concat(r)).replace("-", "−"), (0, K.useEffect)(() => {
-    y.current && ((0, j.clearAnnouncer)("assertive"), (0, j.announce)(a, "assertive"))
+    y.current && ((0, F.clearAnnouncer)("assertive"), (0, F.announce)(a, "assertive"))
   }, [a]);
-  let S = (0, V.useEffectEvent)(e => {
+  let S = (0, _.useEffectEvent)(e => {
       g(), u(), n.current = window.setTimeout(() => {
-        (isNaN(o) || isNaN(r) || r < o) && S(60)
+        (isNaN(i) || isNaN(r) || r < i) && S(60)
       }, e)
     }),
-    w = (0, V.useEffectEvent)(e => {
+    w = (0, _.useEffectEvent)(e => {
       g(), p(), n.current = window.setTimeout(() => {
-        (isNaN(i) || isNaN(r) || r > i) && w(60)
+        (isNaN(o) || isNaN(r) || r > o) && w(60)
       }, e)
     }),
     D = e => {
@@ -91,14 +91,14 @@ function B(e) {
     {
       addGlobalListener: C,
       removeAllGlobalListeners: k
-    } = (0, V.useGlobalListeners)();
+    } = (0, _.useGlobalListeners)();
   return {
     spinButtonProps: {
       role: "spinbutton",
       "aria-valuenow": isNaN(r) ? null : r,
       "aria-valuetext": a,
-      "aria-valuemin": i,
-      "aria-valuemax": o,
+      "aria-valuemin": o,
+      "aria-valuemax": i,
       "aria-disabled": s || null,
       "aria-readonly": c || null,
       "aria-required": l || null,
@@ -123,10 +123,10 @@ function B(e) {
             p && (e.preventDefault(), p());
             break;
           case "Home":
-            m && (e.preventDefault(), m());
+            h && (e.preventDefault(), h());
             break;
           case "End":
-            h && (e.preventDefault(), h())
+            m && (e.preventDefault(), m())
         }
       },
       onFocus: b,
@@ -157,8 +157,8 @@ function B(e) {
 z = {
   "ar-AE": r.default,
   "bg-BG": a.default,
-  "cs-CZ": i.default,
-  "da-DK": o.default,
+  "cs-CZ": o.default,
+  "da-DK": i.default,
   "de-DE": s.default,
   "el-GR": c.default,
   "en-US": l.default,
@@ -166,8 +166,8 @@ z = {
   "et-EE": d.default,
   "fi-FI": p.default,
   "fr-FR": f.default,
-  "he-IL": m.default,
-  "hr-HR": h.default,
+  "he-IL": h.default,
+  "hr-HR": m.default,
   "hu-HU": v.default,
   "it-IT": g.default,
   "ja-JP": y.default,
@@ -183,10 +183,10 @@ z = {
   "ru-RU": T.default,
   "sk-SK": M.default,
   "sl-SI": R.default,
-  "sr-SP": I.default,
-  "sv-SE": O.default,
+  "sr-SP": O.default,
+  "sv-SE": I.default,
   "tr-TR": A.default,
   "uk-UA": L.default,
   "zh-CN": N.default,
-  "zh-TW": F.default
+  "zh-TW": j.default
 }

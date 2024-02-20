@@ -7,14 +7,14 @@ n.r(t), n.d(t, {
 var r = n("900255"),
   a = n("959708");
 
-function i(e, t) {
+function o(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
   }
 }
 
-function o(e, t, n) {
+function i(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -29,7 +29,7 @@ var s = ["canDrop", "hover", "drop"],
     function r(e, t, n) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, r), o(this, "props", null), o(this, "spec", void 0), o(this, "monitor", void 0), o(this, "ref", void 0), this.spec = e, this.monitor = t, this.ref = n
+      }(this, r), i(this, "props", null), i(this, "spec", void 0), i(this, "monitor", void 0), i(this, "ref", void 0), this.spec = e, this.monitor = t, this.ref = n
     }
     return e = r, t = [{
       key: "receiveProps",
@@ -56,7 +56,7 @@ var s = ["canDrop", "hover", "drop"],
       value: function() {
         if (this.spec.drop) return this.spec.drop(this.props, this.monitor, this.ref.current)
       }
-    }], i(e.prototype, t), n && i(e, n), r
+    }], o(e.prototype, t), n && o(e, n), r
   }();
 
 function l(e) {

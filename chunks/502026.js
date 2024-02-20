@@ -20,18 +20,18 @@ let d = Object.fromEntries(Object.keys(l.default.colors).map(e => [o.kebabCase(e
         tag: r = "div",
         selectable: a = !1,
         className: o,
-        lineClamp: p,
-        color: h,
-        tabularNumbers: f = !1,
-        scaleFontToUserSetting: E = !1,
+        lineClamp: f,
+        color: E,
+        tabularNumbers: p = !1,
+        scaleFontToUserSetting: h = !1,
         ..._
       } = e,
-      m = "",
-      S = {};
-    if (null != p && (1 === p ? m = u.lineClamp1 : (m = u.lineClamp2Plus, S = {
-        lineClamp: p,
-        WebkitLineClamp: p
-      })), void 0 !== h) switch (h) {
+      S = "",
+      m = {};
+    if (null != f && (1 === f ? S = u.lineClamp1 : (S = u.lineClamp2Plus, m = {
+        lineClamp: f,
+        WebkitLineClamp: f
+      })), void 0 !== E) switch (E) {
       case "none":
         t = void 0;
         break;
@@ -39,23 +39,23 @@ let d = Object.fromEntries(Object.keys(l.default.colors).map(e => [o.kebabCase(e
         t = "white";
         break;
       default:
-        var g;
-        t = null === (g = l.default.colors[d[h]]) || void 0 === g ? void 0 : g.css
+        var T;
+        t = null === (T = l.default.colors[d[E]]) || void 0 === T ? void 0 : T.css
     }
-    let T = {
+    let g = {
       color: t,
-      ...S,
+      ...m,
       ..._.style
     };
     return (0, i.jsx)(r, {
       className: s({
-        [u.defaultColor]: void 0 === h,
+        [u.defaultColor]: void 0 === E,
         [u.selectable]: a,
-        [u.tabularNumbers]: f,
-        [c.fontScaling]: E
-      }, m, c[n], o),
+        [u.tabularNumbers]: p,
+        [c.fontScaling]: h
+      }, S, c[n], o),
       ..._,
-      style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
+      style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
       "data-text-variant": n
     })
   }

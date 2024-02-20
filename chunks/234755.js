@@ -10,8 +10,8 @@ var r = n("446674"),
   s = n("77078"),
   i = n("244201"),
   l = n("856343"),
-  o = n("373469"),
-  u = n("474571"),
+  u = n("373469"),
+  o = n("474571"),
   d = n("773336"),
   c = n("162236"),
   f = n("49111"),
@@ -20,7 +20,7 @@ var r = n("446674"),
 function p(e) {
   let {
     onClose: t
-  } = e, n = (0, i.useAppContext)(), p = (0, r.useStateFromStores)([o.default], () => o.default.getCurrentUserActiveStream()), m = (0, l.default)(p, n);
+  } = e, n = (0, i.useAppContext)(), p = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUserActiveStream()), E = (0, l.default)(p, n);
   return (0, a.jsxs)(s.Menu, {
     onSelect: f.NOOP_NULL,
     navId: "manage-broadcast",
@@ -29,11 +29,11 @@ function p(e) {
     children: [d.isPlatformEmbedded && null != p ? (0, a.jsx)(s.MenuItem, {
       id: "stream-settings",
       label: h.default.Messages.SCREENSHARE_STREAM_QUALITY,
-      children: m
+      children: E
     }) : null, (0, a.jsx)(s.MenuItem, {
       id: "broadcast-settings",
       label: h.default.Messages.BROADCAST_SETTINGS,
-      icon: u.default,
+      icon: o.default,
       action: () => (0, c.openBroadcastingPrivacySettingsModal)()
     })]
   })

@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchRoleConnectionsConfiguration: function() {
-    return i
+    return l
   },
   putRoleConnectionsConfigurations: function() {
-    return c
+    return r
   },
   fetchUserApplicationRoleConnections: function() {
-    return r
+    return c
   }
 });
-var l = n("872717"),
+var s = n("872717"),
   a = n("913144"),
-  o = n("895026"),
-  s = n("49111");
+  i = n("895026"),
+  o = n("49111");
 
-function i(e, t) {
-  l.default.get({
-    url: s.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t)
+function l(e, t) {
+  s.default.get({
+    url: o.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t)
   }).then(e => {
     let n = [];
     e.body.length > 0 && (n = e.body.map(e => e.map(e => ({
@@ -33,17 +33,17 @@ function i(e, t) {
     })
   }).catch(() => {})
 }
-async function c(e, t, n) {
-  let i = n.map(e => e.map(e => ({
+async function r(e, t, n) {
+  let l = n.map(e => e.map(e => ({
       connection_type: e.connectionType,
       connection_metadata_field: e.connectionMetadataField,
       application_id: e.applicationId,
       operator: e.operator,
       value: e.value
     }))),
-    c = await l.default.put({
-      url: s.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
-      body: 0 === i.length ? [] : i,
+    r = await s.default.put({
+      url: o.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
+      body: 0 === l.length ? [] : l,
       oldFormErrors: !0
     }).then(e => {
       let t = [];
@@ -55,21 +55,21 @@ async function c(e, t, n) {
         value: e.value
       })))), t
     }),
-    r = await (0, o.requestMembersForRole)(e, t, !1);
-  null != r && a.default.dispatch({
+    c = await (0, i.requestMembersForRole)(e, t, !1);
+  null != c && a.default.dispatch({
     type: "GUILD_ROLE_MEMBER_COUNT_UPDATE",
     guildId: e,
     roleId: t,
-    count: r
+    count: c
   }), a.default.dispatch({
     type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
     roleId: t,
-    roleConnectionConfigurations: c
+    roleConnectionConfigurations: r
   })
 }
-async function r() {
-  let e = await l.default.get({
-    url: s.Endpoints.APPLICATION_USER_ROLE_CONNECTIONS
+async function c() {
+  let e = await s.default.get({
+    url: o.Endpoints.APPLICATION_USER_ROLE_CONNECTIONS
   });
   return e.body
 }

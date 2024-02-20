@@ -3,17 +3,17 @@
 function t(e, _, E, t) {
   if (e === _) return !0;
   let o = Object.keys(e),
-    I = Object.keys(_);
-  if (o.length !== I.length) return null != t && t("shallowEqual: unequal key lengths ".concat(o.length, " !=== ").concat(I.length)), !1;
-  let T = [];
-  for (let I = 0; I < o.length; I++) {
-    let r = o[I];
-    if (e[r] !== _[r] && (null == E || !E.includes(r))) {
+    n = Object.keys(_);
+  if (o.length !== n.length) return null != t && t("shallowEqual: unequal key lengths ".concat(o.length, " !=== ").concat(n.length)), !1;
+  let r = [];
+  for (let n = 0; n < o.length; n++) {
+    let i = o[n];
+    if (e[i] !== _[i] && (null == E || !E.includes(i))) {
       if (null == t) return !1;
-      T.push(r)
+      r.push(i)
     }
   }
-  return null != t && T.length > 0 && t("shallowEqual: unequal keys: ".concat(T.join(", "))), 0 === T.length
+  return null != t && r.length > 0 && t("shallowEqual: unequal keys: ".concat(r.join(", "))), 0 === r.length
 }
 
 function o(e, _) {

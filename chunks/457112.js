@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return p
   },
   default: function() {
-    return m
+    return E
   }
 }), n("222007");
 var a = n("37983"),
@@ -12,8 +12,8 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   l = n("817736"),
-  o = n("773336"),
-  u = n("325753"),
+  u = n("773336"),
+  o = n("325753"),
   d = n("49111"),
   c = n("578549"),
   f = n("678016");
@@ -45,14 +45,14 @@ class p extends r.PureComponent {
       edgeOffsetBottom: r,
       edgeOffsetRight: s,
       maxX: i,
-      maxY: u,
+      maxY: o,
       dockedRect: c
-    } = this.props, f = Math.round(n), h = Math.round(u - r - this._height), p = Math.round(a), m = Math.round(i - s - this._width), C = (0, o.getPlatform)(), E = C !== o.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+    } = this.props, f = Math.round(n), h = Math.round(o - r - this._height), p = Math.round(a), E = Math.round(i - s - this._width), C = (0, u.getPlatform)(), m = C !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
     if (null != c) {
-      var g, S;
+      var S, g;
       return {
-        y: (null !== (g = null == c ? void 0 : c.y) && void 0 !== g ? g : 0) - E,
-        x: null !== (S = null == c ? void 0 : c.x) && void 0 !== S ? S : 0
+        y: (null !== (S = null == c ? void 0 : c.y) && void 0 !== S ? S : 0) - m,
+        x: null !== (g = null == c ? void 0 : c.x) && void 0 !== g ? g : 0
       }
     }
     switch (e) {
@@ -66,11 +66,11 @@ class p extends r.PureComponent {
         };
       case d.PictureInPicturePositions.TOP_RIGHT:
         return {
-          y: f, x: m
+          y: f, x: E
         };
       default:
         return {
-          y: h, x: m
+          y: h, x: E
         }
     }
   }
@@ -135,12 +135,12 @@ class p extends r.PureComponent {
       hidden: r,
       roundCorners: s,
       className: l
-    } = this.props, o = {};
-    return null != n && (o = {
+    } = this.props, u = {};
+    return null != n && (u = {
       transform: "translate3d(".concat(n.x, ", ").concat(n.y, ", 0)"),
       width: n.width,
       height: n.height
-    }), (0, a.jsx)(u.default, {
+    }), (0, a.jsx)(o.default, {
       dragAnywhere: !0,
       ref: this.handleSetDraggableRef,
       className: i(c.pictureInPictureWindow, l, {
@@ -155,7 +155,7 @@ class p extends r.PureComponent {
       onDragEnd: this.handleDragEnd,
       children: (0, a.jsx)("div", {
         ref: this.handleSetInnerDivRef,
-        style: o,
+        style: u,
         children: this.props.children
       })
     })
@@ -198,16 +198,16 @@ p.defaultProps = {
   hidden: !1,
   roundCorners: !0
 };
-var m = r.memo(e => {
+var E = r.memo(e => {
   let {
     selectedPIPWindow: t,
     pipWindows: n,
     maxX: r,
     maxY: s,
     onWindowMove: l,
-    dockedRect: o,
-    pictureInPictureComponents: u,
-    appContext: m,
+    dockedRect: u,
+    pictureInPictureComponents: o,
+    appContext: E,
     roundCorners: C
   } = e;
   return (0, a.jsx)("div", {
@@ -216,22 +216,22 @@ var m = r.memo(e => {
       if (null == t) return null;
       let e = n.map(e => {
           if (e.id !== t.id && e.component !== d.PictureInPictureComponents.EMBED_IFRAME) return null;
-          let n = "string" == typeof e.component ? u[e.component] : e.component;
+          let n = "string" == typeof e.component ? o[e.component] : e.component;
           return (0, a.jsx)(n, {
             ...e.props
           }, "pipWindow-".concat(e.id))
         }),
-        E = e.length > 1 ? c.noBoxShadow : {};
+        m = e.length > 1 ? c.noBoxShadow : {};
       return (0, a.jsx)(p, {
-        className: i(c.pictureInPictureWindowOverflow, f.elevationHigh, E),
-        appContext: m,
+        className: i(c.pictureInPictureWindowOverflow, f.elevationHigh, m),
+        appContext: E,
         position: t.position,
         id: t.id,
         hidden: t.hidden,
         onMove: l,
         maxX: r,
         maxY: s,
-        dockedRect: o,
+        dockedRect: u,
         edgeOffsetTop: h.top,
         edgeOffsetBottom: h.bottom,
         edgeOffsetLeft: h.left,

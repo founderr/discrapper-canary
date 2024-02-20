@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("70102"), n("222007"), n("424973");
 var r = n("37983"),
   a = n("884691"),
-  i = n("515769"),
-  o = n("772110"),
+  o = n("515769"),
+  i = n("772110"),
   s = ["children"];
 
 function c(e, t) {
@@ -29,7 +29,7 @@ var l = 0,
             n = arguments.length > 2 ? arguments[2] : void 0,
             r = arguments.length > 3 ? arguments[3] : void 0;
           return !t[u] && (t[u] = {
-            dragDropManager: (0, i.createDragDropManager)(e, t, n, r)
+            dragDropManager: (0, o.createDragDropManager)(e, t, n, r)
           }), t[u]
         }(e.backend, e.context, e.options, e.debugMode), !e.context]
       }(function(e, t) {
@@ -37,35 +37,35 @@ var l = 0,
         var n, r, a = function(e, t) {
           if (null == e) return {};
           var n, r, a = {},
-            i = Object.keys(e);
-          for (r = 0; r < i.length; r++) n = i[r], !(t.indexOf(n) >= 0) && (a[n] = e[n]);
+            o = Object.keys(e);
+          for (r = 0; r < o.length; r++) n = o[r], !(t.indexOf(n) >= 0) && (a[n] = e[n]);
           return a
         }(e, t);
         if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(e);
-          for (r = 0; r < i.length; r++) {
-            if (n = i[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n])
+          var o = Object.getOwnPropertySymbols(e);
+          for (r = 0; r < o.length; r++) {
+            if (n = o[r], !(t.indexOf(n) >= 0)) Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n])
           }
         }
         return a
       }(e, s))) || function(e, t) {
         var n, r, a = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
         if (null != a) {
-          var i = [],
-            o = !0,
+          var o = [],
+            i = !0,
             s = !1;
           try {
-            for (a = a.call(e); !(o = (n = a.next()).done) && (i.push(n.value), !t || i.length !== t); o = !0);
+            for (a = a.call(e); !(i = (n = a.next()).done) && (o.push(n.value), !t || o.length !== t); i = !0);
           } catch (e) {
             s = !0, r = e
           } finally {
             try {
-              !o && null != a.return && a.return()
+              !i && null != a.return && a.return()
             } finally {
               if (s) throw r
             }
           }
-          return i
+          return o
         }
       }(t, n) || function(e, t) {
         if (e) {
@@ -77,18 +77,18 @@ var l = 0,
       }(t, n) || function() {
         throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()),
-      m = f[0],
-      h = f[1];
+      h = f[0],
+      m = f[1];
     return (0, a.useEffect)(function() {
-      if (h) {
+      if (m) {
         var e = p();
         return ++l,
           function() {
             0 == --l && (e[u] = null)
           }
       }
-    }, []), (0, r.jsx)(o.DndContext.Provider, Object.assign({
-      value: m
+    }, []), (0, r.jsx)(i.DndContext.Provider, Object.assign({
+      value: h
     }, {
       children: d
     }), void 0)

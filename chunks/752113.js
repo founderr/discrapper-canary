@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var n, l, a = s("37983");
 s("884691");
 var r = s("77078"),
-  c = s("145131"),
-  o = s("917570");
+  o = s("145131"),
+  u = s("917570");
 (n = l || (l = {})).UPGRADE = "UPGRADE", n.CANCEL = "CANCEL", n.UNVERIFIED = "UNVERIFIED", n.UNCLAIMED = "UNCLAIMED", n.GRANDFATHERED = "GRANDFATHERED";
 let i = {
     UPGRADE: "imageUpgrade",
@@ -17,7 +17,7 @@ let i = {
     UNCLAIMED: "imageUnclaimed",
     GRANDFATHERED: "imageCancel"
   },
-  u = e => {
+  c = e => {
     let {
       children: t,
       ...s
@@ -27,48 +27,48 @@ let i = {
       children: t
     })
   };
-u.Header = e => {
+c.Header = e => {
   let {
     children: t,
     onClose: s
   } = e;
   return (0, a.jsxs)(r.ModalHeader, {
-    justify: c.default.Justify.BETWEEN,
+    justify: o.default.Justify.BETWEEN,
     separator: !1,
     children: [(0, a.jsx)(r.FormTitle, {
       tag: r.FormTitleTags.H4,
       children: t
     }), null != s ? (0, a.jsx)(r.ModalCloseButton, {
-      className: o.closeIcon,
+      className: u.closeIcon,
       onClick: s
     }) : null]
   })
-}, u.Content = e => {
+}, c.Content = e => {
   let {
     children: t,
     type: s
   } = e;
   return (0, a.jsxs)(r.ModalContent, {
     children: [(0, a.jsx)("div", {
-      className: o[i[s]]
+      className: u[i[s]]
     }), (0, a.jsx)("div", {
-      className: o.message,
+      className: u.message,
       children: t
     })]
   })
-}, u.Footer = e => {
+}, c.Footer = e => {
   let {
     primary: t,
     primaryRenderer: s,
     secondary: n
   } = e;
   return (0, a.jsx)(r.ModalFooter, {
-    children: (0, a.jsxs)(c.default, {
-      justify: c.default.Justify.END,
+    children: (0, a.jsxs)(o.default, {
+      justify: o.default.Justify.END,
       children: [null != n ? (0, a.jsx)(r.Button, {
         onClick: n.onClick,
         look: r.Button.Looks.LINK,
-        innerClassName: o.secondaryButton,
+        innerClassName: u.secondaryButton,
         children: n.label
       }) : null, null != t ? (0, a.jsx)(r.Button, {
         onClick: t.onClick,
@@ -77,5 +77,5 @@ u.Header = e => {
       }) : s]
     })
   })
-}, u.Types = l;
-var d = u
+}, c.Types = l;
+var d = c

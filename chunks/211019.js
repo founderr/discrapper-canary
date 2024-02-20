@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 });
 var a = n("37983");
@@ -10,61 +10,61 @@ var r = n("414456"),
   s = n.n(r),
   i = n("446674"),
   l = n("77078"),
-  o = n("990766"),
-  u = n("373469"),
+  u = n("990766"),
+  o = n("373469"),
   d = n("271938"),
   c = n("30672"),
   f = n("100844"),
   h = n("607391"),
   p = n("782340"),
-  m = n("100469");
+  E = n("100469");
 let C = n("588281");
 
-function E(e) {
+function m(e) {
   let {
     participant: t,
     width: n,
     noArt: r = !1,
-    selected: E = !1
-  } = e, g = n < 195, S = (0, i.useStateFromStores)([u.default, d.default], () => u.default.getAllActiveStreams().some(e => {
+    selected: m = !1
+  } = e, S = n < 195, g = (0, i.useStateFromStores)([o.default, d.default], () => o.default.getAllActiveStreams().some(e => {
     let {
       ownerId: t
     } = e;
     return t !== d.default.getId()
   }));
   return (0, a.jsx)("div", {
-    className: s(m.content, m.streamHidden, {
-      [m.small]: g
+    className: s(E.content, E.streamHidden, {
+      [E.small]: S
     }),
     children: (0, a.jsx)(h.default, {
-      className: m.streamHiddenEmptyState,
+      className: E.streamHiddenEmptyState,
       artURL: C,
       noArt: r,
-      selected: E,
+      selected: m,
       size: (0, h.getSizeForWidth)(n),
-      header: g ? null : p.default.Messages.STREAM_HIDDEN,
-      description: E ? null : (0, a.jsxs)("div", {
-        className: s(m.streamHiddenCTA, {
-          [m.largePaddingTop]: !g
+      header: S ? null : p.default.Messages.STREAM_HIDDEN,
+      description: m ? null : (0, a.jsxs)("div", {
+        className: s(E.streamHiddenCTA, {
+          [E.largePaddingTop]: !S
         }),
         children: [(0, a.jsx)(f.CallTileCTA, {
-          isSmall: g,
+          isSmall: S,
           children: (0, a.jsx)(l.Text, {
-            variant: g ? "text-sm/semibold" : "text-md/semibold",
+            variant: S ? "text-sm/semibold" : "text-md/semibold",
             color: "none",
             children: n < 175 ? p.default.Messages.WATCH : p.default.Messages.WATCH_STREAM
           })
-        }), S ? (0, a.jsx)(f.CallTileCTA, {
-          className: m.addCTA,
+        }), g ? (0, a.jsx)(f.CallTileCTA, {
+          className: E.addCTA,
           tooltip: p.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
           onClick: e => {
-            e.stopPropagation(), (0, o.watchStream)(t.stream, {
+            e.stopPropagation(), (0, u.watchStream)(t.stream, {
               forceMultiple: !0
             })
           },
-          isSmall: g,
+          isSmall: S,
           children: (0, a.jsx)(c.default, {
-            className: m.addStreamIcon
+            className: E.addStreamIcon
           })
         }) : null]
       })

@@ -1,110 +1,110 @@
 "use strict";
-let s, i;
+let r, s;
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return d
   }
 }), n("70102");
-var r = n("697218"),
+var o = n("697218"),
   a = n("615931");
-let o = () => {
+let l = () => {
   throw Error("updateModal has not been implemented.")
 };
 {
   let e = n("670924");
-  s = e.showModal, o = e.updateModalProps, i = n("551042").closeModal
-}
-
-function d(e) {
-  let {
-    promiseFn: t,
-    resolve: n,
-    reject: r,
-    modalProps: a = {},
-    hooks: {
-      onEarlyClose: d
-    } = {}
-  } = e;
-  if (null == s) {
-    null == d || d();
-    return
-  }
-  let l = s(g, f, a);
-
-  function f() {
-    null == d || d()
-  }
-
-  function _(e) {
-    i(l), n(e)
-  }
-
-  function c(e) {
-    i(l), r(e)
-  }
-
-  function g(e) {
-    return o(l, g, f, {
-      ...a,
-      isLoading: !0
-    }), u({
-      promiseFn: t,
-      resolve: _,
-      reject: c,
-      code: e,
-      mfaCodeHandler: m,
-      isModalOpen: !0
-    })
-  }
-
-  function m(e) {
-    let {
-      res: t
-    } = e;
-    o(l, g, f, {
-      ...a,
-      error: t.body.message
-    })
-  }
+  r = e.showModal, l = e.updateModalProps, s = n("551042").closeModal
 }
 
 function u(e) {
   let {
     promiseFn: t,
     resolve: n,
-    reject: s,
-    code: i,
-    mfaCodeHandler: r = d,
-    isModalOpen: a = !1,
-    ...o
+    reject: o,
+    modalProps: a = {},
+    hooks: {
+      onEarlyClose: u
+    } = {}
   } = e;
-  return t(null != i ? {
-    code: i
+  if (null == r) {
+    null == u || u();
+    return
+  }
+  let d = r(f, c, a);
+
+  function c() {
+    null == u || u()
+  }
+
+  function _(e) {
+    s(d), n(e)
+  }
+
+  function E(e) {
+    s(d), o(e)
+  }
+
+  function f(e) {
+    return l(d, f, c, {
+      ...a,
+      isLoading: !0
+    }), i({
+      promiseFn: t,
+      resolve: _,
+      reject: E,
+      code: e,
+      mfaCodeHandler: A,
+      isModalOpen: !0
+    })
+  }
+
+  function A(e) {
+    let {
+      res: t
+    } = e;
+    l(d, f, c, {
+      ...a,
+      error: t.body.message
+    })
+  }
+}
+
+function i(e) {
+  let {
+    promiseFn: t,
+    resolve: n,
+    reject: r,
+    code: s,
+    mfaCodeHandler: o = u,
+    isModalOpen: a = !1,
+    ...l
+  } = e;
+  return t(null != s ? {
+    code: s
   } : {}).then(n, e => {
-    var i, d;
-    if (i = e, d = a, i.body && 60008 === i.body.code || d && 429 === i.status) return r({
+    var s, u;
+    if (s = e, u = a, s.body && 60008 === s.body.code || u && 429 === s.status) return o({
       promiseFn: t,
       resolve: n,
-      reject: s,
+      reject: r,
       res: e,
-      ...o
+      ...l
     });
-    s(e)
+    r(e)
   })
 }
 
-function l(e, t) {
-  var n, s;
+function d(e, t) {
+  var n, r;
   let {
-    checkEnabled: i = null !== (s = null === (n = r.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== s && s,
-    ...o
+    checkEnabled: s = null !== (r = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== r && r,
+    ...l
   } = null != t ? t : {};
   return new Promise((t, n) => {
-    ((0, a.resolveThunk)(i) ? d : u)({
+    ((0, a.resolveThunk)(s) ? u : i)({
       promiseFn: e,
       resolve: t,
       reject: n,
-      ...o
+      ...l
     })
   })
 }

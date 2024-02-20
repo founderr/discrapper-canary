@@ -1,12 +1,12 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   queueResizeObserver: function() {
-    return i
+    return a
   }
 });
-var n = r("455369"),
-  i = function(e) {
-    (0, n.queueMicroTask)(function() {
+var r = n("455369"),
+  a = function(e) {
+    (0, r.queueMicroTask)(function() {
       requestAnimationFrame(e)
     })
   }

@@ -1,63 +1,63 @@
 "use strict";
 n.r(t), n.d(t, {
   handoffBegin: function() {
-    return i
+    return r
   },
   handoffEnd: function() {
-    return o
+    return s
   },
   handoffFromApp: function() {
-    return l
+    return a
   },
   handoffUnavailable: function() {
-    return u
+    return o
   },
   handoffSetUser: function() {
-    return a
+    return l
   }
 });
-var r = n("913144");
+var i = n("913144");
 
-function i() {
+function r() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1e4;
-  r.default.dispatch({
+  i.default.dispatch({
     type: "BROWSER_HANDOFF_BEGIN",
     timeout: e
   })
 }
 
-function o(e, t) {
-  r.default.dispatch({
+function s(e, t) {
+  i.default.dispatch({
     type: "BROWSER_HANDOFF_END",
     handoffToken: e,
     fingerprint: t
   })
 }
 
-function l(e) {
+function a(e) {
   let {
     handoffKey: t,
     handoffToken: n,
-    handoffSource: i,
-    timeout: o = 1e4
+    handoffSource: r,
+    timeout: s = 1e4
   } = e;
-  r.default.dispatch({
+  i.default.dispatch({
     type: "BROWSER_HANDOFF_FROM_APP",
     handoffKey: t,
     handoffToken: n,
-    handoffSource: i,
-    timeout: o
+    handoffSource: r,
+    timeout: s
   })
 }
 
-function u() {
-  r.default.dispatch({
+function o() {
+  i.default.dispatch({
     type: "BROWSER_HANDOFF_UNAVAILABLE"
   })
 }
 
-function a(e) {
-  r.default.dispatch({
+function l(e) {
+  i.default.dispatch({
     type: "BROWSER_HANDOFF_SET_USER",
     user: e
   })

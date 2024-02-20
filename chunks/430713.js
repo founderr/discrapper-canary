@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return s
+    return o
   }
 });
-var a = n("872717"),
-  i = n("913144"),
-  o = n("650893"),
-  l = n("49111");
+var a = s("872717"),
+  n = s("913144"),
+  l = s("650893"),
+  i = s("49111");
 
 function r(e, t) {
-  return i.default.dispatch({
+  return n.default.dispatch({
     type: "MFA_SMS_TOGGLE"
   }), a.default.post({
     url: e,
@@ -18,18 +18,18 @@ function r(e, t) {
       password: t
     },
     oldFormErrors: !0
-  }).then(e => (i.default.dispatch({
+  }).then(e => (n.default.dispatch({
     type: "MFA_SMS_TOGGLE_COMPLETE"
   }), e), e => {
-    throw i.default.dispatch({
+    throw n.default.dispatch({
       type: "MFA_SMS_TOGGLE_COMPLETE"
     }), e
   })
 }
-var s = {
+var o = {
   async enableMFAStart(e) {
     let t = await a.default.post({
-      url: l.Endpoints.MFA_TOTP_ENABLE,
+      url: i.Endpoints.MFA_TOTP_ENABLE,
       body: {
         password: e
       },
@@ -39,7 +39,7 @@ var s = {
   },
   async verifyEmailCode(e) {
     let t = await a.default.post({
-      url: l.Endpoints.MFA_TOTP_ENABLE_VERIFY,
+      url: i.Endpoints.MFA_TOTP_ENABLE_VERIFY,
       body: {
         code: e
       }
@@ -47,13 +47,13 @@ var s = {
     return t.body
   },
   resendEmailCode: e => a.default.post({
-    url: l.Endpoints.MFA_TOTP_ENABLE_RESEND,
+    url: i.Endpoints.MFA_TOTP_ENABLE_RESEND,
     body: {
       password: e
     }
   }),
   setEmailToken(e) {
-    i.default.dispatch({
+    n.default.dispatch({
       type: "MFA_ENABLE_EMAIL_TOKEN",
       token: e
     })
@@ -61,20 +61,20 @@ var s = {
   enable(e) {
     let {
       password: t,
-      code: n,
-      secret: o,
+      code: s,
+      secret: l,
       emailToken: r
     } = e;
     return a.default.post({
-      url: l.Endpoints.MFA_TOTP_ENABLE,
+      url: i.Endpoints.MFA_TOTP_ENABLE,
       body: {
-        code: n,
-        secret: o,
+        code: s,
+        secret: l,
         password: t,
         email_token: r
       },
       oldFormErrors: !0
-    }).then(e => i.default.dispatch({
+    }).then(e => n.default.dispatch({
       type: "MFA_ENABLE_SUCCESS",
       token: e.body.token,
       codes: e.body.backup_codes
@@ -82,7 +82,7 @@ var s = {
   },
   disable() {
     a.default.post({
-      url: l.Endpoints.MFA_TOTP_DISABLE,
+      url: i.Endpoints.MFA_TOTP_DISABLE,
       oldFormErrors: !0
     }).then(e => {
       let {
@@ -90,21 +90,21 @@ var s = {
           token: t
         }
       } = e;
-      return i.default.dispatch({
+      return n.default.dispatch({
         type: "MFA_DISABLE_SUCCESS",
         token: t
       })
     })
   },
-  enableSMS: e => r(l.Endpoints.MFA_SMS_ENABLE, e),
-  disableSMS: e => r(l.Endpoints.MFA_SMS_DISABLE, e),
+  enableSMS: e => r(i.Endpoints.MFA_SMS_ENABLE, e),
+  disableSMS: e => r(i.Endpoints.MFA_SMS_DISABLE, e),
   sendMFABackupCodesVerificationKeyEmail: e => a.default.post({
-    url: l.Endpoints.MFA_SEND_VERIFICATION_KEY,
+    url: i.Endpoints.MFA_SEND_VERIFICATION_KEY,
     body: {
       password: e
     },
     oldFormErrors: !0
-  }).then(e => i.default.dispatch({
+  }).then(e => n.default.dispatch({
     type: "MFA_SEND_VERIFICATION_KEY",
     nonces: {
       viewNonce: e.body.nonce,
@@ -115,18 +115,18 @@ var s = {
   }),
   confirmViewBackupCodes(e, t) {
     let {
-      viewNonce: n,
+      viewNonce: s,
       regenerateNonce: r
-    } = o.default.getNonces();
+    } = l.default.getNonces();
     return a.default.post({
-      url: l.Endpoints.MFA_CODES_VERIFICATION,
+      url: i.Endpoints.MFA_CODES_VERIFICATION,
       body: {
         key: e,
-        nonce: t ? r : n,
+        nonce: t ? r : s,
         regenerate: t
       },
       oldFormErrors: !0
-    }).then(t => i.default.dispatch({
+    }).then(t => n.default.dispatch({
       type: "MFA_VIEW_BACKUP_CODES",
       codes: t.body.backup_codes,
       key: e
@@ -135,7 +135,7 @@ var s = {
     })
   },
   clearBackupCodes() {
-    i.default.dispatch({
+    n.default.dispatch({
       type: "MFA_CLEAR_BACKUP_CODES"
     })
   }

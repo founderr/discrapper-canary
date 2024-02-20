@@ -1,49 +1,49 @@
 "use strict";
-var r = n("859514"),
-  a = n("503486"),
+var e = n("859514"),
+  i = n("503486"),
   o = n("434978"),
-  i = n("16447"),
-  u = n("541368").f,
-  s = n("59393"),
-  l = n("88052"),
-  c = n("688358"),
-  f = n("391358"),
-  d = n("60683"),
+  u = n("16447"),
+  a = n("541368").f,
+  f = n("59393"),
+  c = n("88052"),
+  s = n("688358"),
+  l = n("391358"),
+  h = n("60683"),
   p = n("350142"),
-  h = n("814026"),
-  m = n("140925"),
-  _ = "DOMException",
+  v = n("814026"),
+  g = n("140925"),
+  d = "DOMException",
   Error = o("Error"),
-  y = o(_),
-  g = function() {
-    l(this, v);
-    var e = arguments.length,
-      t = f(e < 1 ? void 0 : arguments[0]),
-      n = f(e < 2 ? void 0 : arguments[1], "Error"),
-      r = new y(t, n),
-      a = Error(t);
-    return a.name = _, u(r, "stack", i(1, p(a.stack, 1))), c(r, this, g), r
+  y = o(d),
+  b = function() {
+    c(this, m);
+    var t = arguments.length,
+      r = l(t < 1 ? void 0 : arguments[0]),
+      n = l(t < 2 ? void 0 : arguments[1], "Error"),
+      e = new y(r, n),
+      i = Error(r);
+    return i.name = d, a(e, "stack", u(1, p(i.stack, 1))), s(e, this, b), e
   },
-  v = g.prototype = y.prototype,
-  b = "stack" in Error(_),
-  M = "stack" in new y(1, 2),
-  w = y && h && Object.getOwnPropertyDescriptor(a, _),
-  k = !!w && !(w.writable && w.configurable),
-  L = b && !k && !M;
-r({
+  m = b.prototype = y.prototype,
+  _ = "stack" in Error(d),
+  w = "stack" in new y(1, 2),
+  k = y && v && Object.getOwnPropertyDescriptor(i, d),
+  E = !!k && !(k.writable && k.configurable),
+  R = _ && !E && !w;
+e({
   global: !0,
   constructor: !0,
-  forced: m || L
+  forced: g || R
 }, {
-  DOMException: L ? g : y
+  DOMException: R ? b : y
 });
-var D = o(_),
-  S = D.prototype;
-if (S.constructor !== D) {
-  for (var T in !m && u(S, "constructor", i(1, D)), d)
-    if (s(d, T)) {
-      var Y = d[T],
-        x = Y.s;
-      !s(D, x) && u(D, x, i(6, Y.c))
+var x = o(d),
+  A = x.prototype;
+if (A.constructor !== x) {
+  for (var S in !g && a(A, "constructor", u(1, x)), h)
+    if (f(h, S)) {
+      var M = h[S],
+        O = M.s;
+      !f(x, O) && a(x, O, u(6, M.c))
     }
 }

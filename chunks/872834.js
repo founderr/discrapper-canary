@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
 var r = n("884691");
 class a {
   build(e, t) {
-    return this.context = t, i(() => this.iterateCollection(e))
+    return this.context = t, o(() => this.iterateCollection(e))
   }* iterateCollection(e) {
     let {
       children: t,
@@ -44,8 +44,8 @@ class a {
     if ("cell" === t.type && null != t.key) return "".concat(r).concat(t.key);
     let a = t.value;
     if (null != a) {
-      var i;
-      let e = null !== (i = a.key) && void 0 !== i ? i : a.id;
+      var o;
+      let e = null !== (o = a.key) && void 0 !== o ? o : a.id;
       if (null == e) throw Error("No key found for item");
       return e
     }
@@ -71,9 +71,9 @@ class a {
         let e = "function" == typeof s.type ? s.type.name : s.type;
         throw Error("Unknown element <".concat(e, "> in collection."))
       }
-      let i = r.getCollectionNode(s.props, this.context),
+      let o = r.getCollectionNode(s.props, this.context),
         c = e.index,
-        l = i.next();
+        l = o.next();
       for (; !l.done && l.value;) {
         let r = l.value;
         e.index = c;
@@ -88,10 +88,10 @@ class a {
           }(e.wrapper, r.wrapper)
         }, this.getChildState(t, r), n ? "".concat(n).concat(s.key) : s.key, a)];
         for (let t of d) {
-          if (t.value = r.value || e.value, t.value && this.cache.set(t.value, t), e.type && t.type !== e.type) throw Error("Unsupported type <".concat(o(t.type), "> in <").concat(o(a.type), ">. Only <").concat(o(e.type), "> is supported."));
+          if (t.value = r.value || e.value, t.value && this.cache.set(t.value, t), e.type && t.type !== e.type) throw Error("Unsupported type <".concat(i(t.type), "> in <").concat(i(a.type), ">. Only <").concat(i(e.type), "> is supported."));
           c++, yield t
         }
-        l = i.next(d)
+        l = o.next(d)
       }
       return
     }
@@ -111,7 +111,7 @@ class a {
         wrapper: e.wrapper,
         shouldInvalidate: e.shouldInvalidate,
         hasChildNodes: e.hasChildNodes,
-        childNodes: i(function*() {
+        childNodes: o(function*() {
           if (!e.hasChildNodes) return;
           let n = 0;
           for (let r of e.childNodes())
@@ -125,7 +125,7 @@ class a {
   }
 }
 
-function i(e) {
+function o(e) {
   let t = [],
     n = null;
   return {
@@ -136,21 +136,21 @@ function i(e) {
   }
 }
 
-function o(e) {
+function i(e) {
   return e[0].toUpperCase() + e.slice(1)
 }
 
 function s(e, t, n) {
-  let i = (0, r.useMemo)(() => new a, []),
+  let o = (0, r.useMemo)(() => new a, []),
     {
-      children: o,
+      children: i,
       items: s,
       collection: c
     } = e;
-  return (0, r.useMemo)(() => c ? c : t(i.build({
-    children: o,
+  return (0, r.useMemo)(() => c ? c : t(o.build({
+    children: i,
     items: s
-  }, n)), [i, o, s, c, n, t])
+  }, n)), [o, i, s, c, n, t])
 }
 
 function c(e) {

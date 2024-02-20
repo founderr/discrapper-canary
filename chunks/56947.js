@@ -7,16 +7,16 @@ n.r(t), n.d(t, {
     return d
   },
   useEnableClips: function() {
-    return p
-  },
-  useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock: function() {
-    return h
-  },
-  useShouldSeeClipsPremiumEarlyAccessAnnouncementCoachmark: function() {
     return f
   },
-  isUserPremiumTypeForClipsEarlyAccess: function() {
+  useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock: function() {
     return E
+  },
+  useShouldSeeClipsPremiumEarlyAccessAnnouncementCoachmark: function() {
+    return p
+  },
+  isUserPremiumTypeForClipsEarlyAccess: function() {
+    return h
   }
 });
 var i = n("862205"),
@@ -112,7 +112,7 @@ function d() {
   return e || t || n
 }
 
-function p() {
+function f() {
   let e = (0, o.default)(s.default),
     {
       enableClips: t
@@ -137,7 +137,7 @@ function p() {
     });
   return (n || t || i) && e
 }
-let h = e => {
+let E = e => {
     let {
       autoTrackExposure: t
     } = e, n = (0, o.default)(s.default), {
@@ -149,7 +149,7 @@ let h = e => {
     });
     return !!n && i
   },
-  f = e => {
+  p = e => {
     let {
       autoTrackExposure: t
     } = e, n = (0, o.default)(s.default), {
@@ -162,6 +162,6 @@ let h = e => {
     return !!n && i
   };
 
-function E(e) {
+function h(e) {
   return a.default.isPremiumAtLeast(e.premiumType, l.PremiumTypes.TIER_2)
 }

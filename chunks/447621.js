@@ -7,49 +7,49 @@ n.r(t), n.d(t, {
     return d
   },
   DEFAULT_EMOJI_DISCOVERABILITY_SETTING: function() {
-    return p
-  },
-  DISCOVERY_ALL_CATEGORIES_ID: function() {
-    return h
-  },
-  DISCORD_HUB_ID: function() {
     return f
   },
-  MAX_ALGOLIA_PAGINATOR_RESULTS: function() {
+  DISCOVERY_ALL_CATEGORIES_ID: function() {
     return E
+  },
+  DISCORD_HUB_ID: function() {
+    return p
+  },
+  MAX_ALGOLIA_PAGINATOR_RESULTS: function() {
+    return h
   },
   DISCOVERY_SIDEBAR_CATEGORIES: function() {
     return _
   },
   SUGGESTED_TAGS_FOR_CATEGORIES: function() {
-    return m
+    return S
   },
   calculateLocaleOptions: function() {
-    return g
+    return T
   },
   LANGUAGE_OPTIONS: function() {
-    return T
+    return g
   },
   DISCOVERY_PARTICIPATOR_REQUIREMENT: function() {
     return I
   },
   DISCOVERY_COMMUNICATOR_REQUIREMENT: function() {
-    return v
+    return C
   },
   CategoryIcons: function() {
     return l
   },
   ALLOWED_SOCIAL_LINKS_DOMAINS: function() {
-    return C
+    return v
   }
 });
 var i, r, s, a, o, l, u = n("782340");
 let c = 0,
   d = 13,
-  p = !0,
-  h = -1,
-  f = -2,
-  E = 1e3,
+  f = !0,
+  E = -1,
+  p = -2,
+  h = 1e3,
   _ = [{
     categoryId: -1,
     icon: "Discover"
@@ -70,7 +70,7 @@ let c = 0,
     icon: "Television"
   }];
 (i = a || (a = {}))[i.GENERAL_CHATTING = 14] = "GENERAL_CHATTING", i[i.GAMING = 1] = "GAMING", i[i.MUSIC = 2] = "MUSIC", i[i.ENTERTAINMENT = 3] = "ENTERTAINMENT", i[i.CREATIVE_ARTS = 4] = "CREATIVE_ARTS", i[i.SCIENCE_AND_TECH = 5] = "SCIENCE_AND_TECH", i[i.EDUCATION = 6] = "EDUCATION", i[i.SPORTS = 7] = "SPORTS", i[i.FASHION_AND_BEAUTY = 8] = "FASHION_AND_BEAUTY", i[i.RELATIONSHIPS_AND_IDENTITY = 9] = "RELATIONSHIPS_AND_IDENTITY", i[i.TRAVEL_AND_FOOD = 10] = "TRAVEL_AND_FOOD", i[i.FITNESS_AND_HEALTH = 11] = "FITNESS_AND_HEALTH", i[i.FINANCE = 12] = "FINANCE", i[i.OTHER = 13] = "OTHER", i[i.EMOJI = 43] = "EMOJI", i[i.BOTS = 49] = "BOTS";
-let m = {
+let S = {
     14: [() => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY],
     1: [() => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ESPORTS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_VALORANT, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LEAGUEOFLEGENDS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FIVEM],
     2: [() => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EDM, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_RAP, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_KPOP, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MUSIC_PRODUCTION, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HIPHOP, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SINGING, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BTS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_METAL],
@@ -88,9 +88,9 @@ let m = {
     43: [() => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOJI, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EMOTES, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_NITRO, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_CUTE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_AESTHETIC, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ART, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES],
     49: [() => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_APPS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BOTS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_DISCORD_BOT, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GIVEAWAYS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SUPPORT, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FUN, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MEMES]
   },
-  S = ["en-GB"];
+  m = ["en-GB"];
 
-function g() {
+function T() {
   return u.default.getAvailableLocales().map(e => {
     let t;
     let {
@@ -111,17 +111,17 @@ function g() {
       label: r,
       image: t
     }
-  }).filter(e => !S.includes(e.value))
+  }).filter(e => !m.includes(e.value))
 }
-g();
-let T = u.default.getLanguages().filter(e => !S.includes(e.code)).map(e => "en-US" === e.code ? {
+T();
+let g = u.default.getLanguages().filter(e => !m.includes(e.code)).map(e => "en-US" === e.code ? {
     ...e,
     name: u.default.Messages.en
   } : e),
   I = 40,
-  v = 20;
+  C = 20;
 (r = o || (o = {})).GAME_RECOMMENDATIONS = "Game Recommendations", r.SERVER_RECOMMENDATIONS = "Server Recommendations", (s = l || (l = {}))[s.Activity = 0] = "Activity", s[s.Discover = 1] = "Discover", s[s.Education = 2] = "Education", s[s.Music = 3] = "Music", s[s.Science = 4] = "Science", s[s.Stage = 5] = "Stage", s[s.Television = 6] = "Television";
-let C = {
+let v = {
   facebook: {
     presentation: "Facebook",
     baseUrl: "https://facebook.com"

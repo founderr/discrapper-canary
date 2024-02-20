@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 }), n("222007");
 var i = n("446674"),
@@ -64,7 +64,7 @@ class c extends i.Store {
   }
   async carefullySpeculativelyOpen(e) {
     if (null != e) {
-      let t = await p(e);
+      let t = await f(e);
       null == t || this.databases.has(e) ? (u.verbose("discarding speculative database (".concat(e, " → ").concat(t, ")")), null == t || t.close()) : (u.verbose("added speculative database (".concat(e, " → ").concat(t, ")")), this.databases.set(e, t), this.emitChange())
     }
   }
@@ -81,8 +81,8 @@ class c extends i.Store {
 function d(e) {
   return "@account.".concat(e)
 }
-async function p(e) {
+async function f(e) {
   var t;
   return null
 }
-var h = new c
+var E = new c

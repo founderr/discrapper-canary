@@ -7,7 +7,7 @@ function r(e) {
   var n = String(e),
     r = a[n.toLowerCase()];
   if (r) return r;
-  var r = i[n.toLowerCase()];
+  var r = o[n.toLowerCase()];
   return r ? r : 1 === n.length ? n.charCodeAt(0) : void 0
 }
 r.isEventKey = function(e, t) {
@@ -17,7 +17,7 @@ r.isEventKey = function(e, t) {
     if ("string" == typeof t) {
       var r = a[t.toLowerCase()];
       if (r) return r === n;
-      var r = i[t.toLowerCase()];
+      var r = o[t.toLowerCase()];
       if (r) return r === n
     } else if ("number" == typeof t) return t === n;
     return !1
@@ -68,7 +68,7 @@ var a = (t = e.exports = r).code = t.codes = {
     "]": 221,
     "'": 222
   },
-  i = t.aliases = {
+  o = t.aliases = {
     windows: 91,
     "⇧": 16,
     "⌥": 18,
@@ -90,10 +90,10 @@ var a = (t = e.exports = r).code = t.codes = {
     del: 46,
     cmd: 91
   };
-for (o = 97; o < 123; o++) a[String.fromCharCode(o)] = o - 32;
-for (var o = 48; o < 58; o++) a[o - 48] = o;
-for (o = 1; o < 13; o++) a["f" + o] = o + 111;
-for (o = 0; o < 10; o++) a["numpad " + o] = o + 96;
+for (i = 97; i < 123; i++) a[String.fromCharCode(i)] = i - 32;
+for (var i = 48; i < 58; i++) a[i - 48] = i;
+for (i = 1; i < 13; i++) a["f" + i] = i + 111;
+for (i = 0; i < 10; i++) a["numpad " + i] = i + 96;
 var s = t.names = t.title = {};
-for (o in a) s[a[o]] = o;
-for (var c in i) a[c] = i[c]
+for (i in a) s[a[i]] = i;
+for (var c in o) a[c] = o[c]

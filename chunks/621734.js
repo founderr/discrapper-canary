@@ -8,8 +8,8 @@ var r = n("107678"),
   a = n("537502"),
   o = n("803628"),
   i = n("497557"),
-  u = n("759780"),
-  s = n("546749");
+  s = n("759780"),
+  u = n("546749");
 class l {
   prepare() {
     var e;
@@ -28,88 +28,88 @@ class l {
   read(e, t, n) {
     this.prepare();
     let a = [];
-    for (let [i, u] of Object.entries(e)) {
+    for (let [i, s] of Object.entries(e)) {
       let e;
-      let s = this.fMap[i];
-      if (!s) {
+      let u = this.fMap[i];
+      if (!u) {
         if (!n.ignoreUnknownFields) throw Error("Found unknown field while reading ".concat(this.info.typeName, " from JSON format. JSON key: ").concat(i));
         continue
       }
-      let l = s.localName;
-      if (s.oneof) {
-        if (a.includes(s.oneof)) throw Error('Multiple members of the oneof group "'.concat(s.oneof, '" of ').concat(this.info.typeName, " are present in JSON."));
-        a.push(s.oneof), e = t[s.oneof] = {
+      let l = u.localName;
+      if (u.oneof) {
+        if (a.includes(u.oneof)) throw Error('Multiple members of the oneof group "'.concat(u.oneof, '" of ').concat(this.info.typeName, " are present in JSON."));
+        a.push(u.oneof), e = t[u.oneof] = {
           oneofKind: l
         }
       } else e = t;
-      if ("map" == s.kind) {
-        if (null === u) continue;
-        this.assert((0, r.isJsonObject)(u), s.name, u);
+      if ("map" == u.kind) {
+        if (null === s) continue;
+        this.assert((0, r.isJsonObject)(s), u.name, s);
         let t = e[l];
-        for (let [e, r] of Object.entries(u)) {
+        for (let [e, r] of Object.entries(s)) {
           let a;
-          switch (this.assert(null !== r, s.name + " map value", null), s.V.kind) {
+          switch (this.assert(null !== r, u.name + " map value", null), u.V.kind) {
             case "message":
-              a = s.V.T().internalJsonRead(r, n);
+              a = u.V.T().internalJsonRead(r, n);
               break;
             case "enum":
-              if (!1 === (a = this.enum(s.V.T(), r, s.name, n.ignoreUnknownFields))) continue;
+              if (!1 === (a = this.enum(u.V.T(), r, u.name, n.ignoreUnknownFields))) continue;
               break;
             case "scalar":
-              a = this.scalar(r, s.V.T, s.V.L, s.name)
+              a = this.scalar(r, u.V.T, u.V.L, u.name)
           }
-          this.assert(void 0 !== a, s.name + " map value", r);
+          this.assert(void 0 !== a, u.name + " map value", r);
           let i = e;
-          s.K == o.ScalarType.BOOL && (i = "true" == i || "false" != i && i), t[i = this.scalar(i, s.K, o.LongType.STRING, s.name).toString()] = a
+          u.K == o.ScalarType.BOOL && (i = "true" == i || "false" != i && i), t[i = this.scalar(i, u.K, o.LongType.STRING, u.name).toString()] = a
         }
-      } else if (s.repeat) {
-        if (null === u) continue;
-        this.assert(Array.isArray(u), s.name, u);
+      } else if (u.repeat) {
+        if (null === s) continue;
+        this.assert(Array.isArray(s), u.name, s);
         let t = e[l];
-        for (let e of u) {
+        for (let e of s) {
           let r;
-          switch (this.assert(null !== e, s.name, null), s.kind) {
+          switch (this.assert(null !== e, u.name, null), u.kind) {
             case "message":
-              r = s.T().internalJsonRead(e, n);
+              r = u.T().internalJsonRead(e, n);
               break;
             case "enum":
-              if (!1 === (r = this.enum(s.T(), e, s.name, n.ignoreUnknownFields))) continue;
+              if (!1 === (r = this.enum(u.T(), e, u.name, n.ignoreUnknownFields))) continue;
               break;
             case "scalar":
-              r = this.scalar(e, s.T, s.L, s.name)
+              r = this.scalar(e, u.T, u.L, u.name)
           }
-          this.assert(void 0 !== r, s.name, u), t.push(r)
+          this.assert(void 0 !== r, u.name, s), t.push(r)
         }
-      } else switch (s.kind) {
+      } else switch (u.kind) {
         case "message":
-          if (null === u && "google.protobuf.Value" != s.T().typeName) {
-            this.assert(void 0 === s.oneof, s.name + " (oneof member)", null);
+          if (null === s && "google.protobuf.Value" != u.T().typeName) {
+            this.assert(void 0 === u.oneof, u.name + " (oneof member)", null);
             continue
           }
-          e[l] = s.T().internalJsonRead(u, n, e[l]);
+          e[l] = u.T().internalJsonRead(s, n, e[l]);
           break;
         case "enum":
-          let c = this.enum(s.T(), u, s.name, n.ignoreUnknownFields);
+          let c = this.enum(u.T(), s, u.name, n.ignoreUnknownFields);
           if (!1 === c) continue;
           e[l] = c;
           break;
         case "scalar":
-          e[l] = this.scalar(u, s.T, s.L, s.name)
+          e[l] = this.scalar(s, u.T, u.L, u.name)
       }
     }
   }
   enum(e, t, n, r) {
-    if ("google.protobuf.NullValue" == e[0] && (0, u.assert)(null === t, "Unable to parse field ".concat(this.info.typeName, "#").concat(n, ", enum ").concat(e[0], " only accepts null.")), null === t) return 0;
+    if ("google.protobuf.NullValue" == e[0] && (0, s.assert)(null === t, "Unable to parse field ".concat(this.info.typeName, "#").concat(n, ", enum ").concat(e[0], " only accepts null.")), null === t) return 0;
     switch (typeof t) {
       case "number":
-        return (0, u.assert)(Number.isInteger(t), "Unable to parse field ".concat(this.info.typeName, "#").concat(n, ", enum can only be integral number, got ").concat(t, ".")), t;
+        return (0, s.assert)(Number.isInteger(t), "Unable to parse field ".concat(this.info.typeName, "#").concat(n, ", enum can only be integral number, got ").concat(t, ".")), t;
       case "string":
         let a = t;
         e[2] && t.substring(0, e[2].length) === e[2] && (a = t.substring(e[2].length));
         let o = e[1][a];
         if (void 0 === o && r) return !1;
-        return (0, u.assert)("number" == typeof o, "Unable to parse field ".concat(this.info.typeName, "#").concat(n, ", enum ").concat(e[0], ' has no value for "').concat(t, '".')), o
-    }(0, u.assert)(!1, "Unable to parse field ".concat(this.info.typeName, "#").concat(n, ", cannot parse enum value from ").concat(typeof t, '".'))
+        return (0, s.assert)("number" == typeof o, "Unable to parse field ".concat(this.info.typeName, "#").concat(n, ", enum ").concat(e[0], ' has no value for "').concat(t, '".')), o
+    }(0, s.assert)(!1, "Unable to parse field ".concat(this.info.typeName, "#").concat(n, ", cannot parse enum value from ").concat(typeof t, '".'))
   }
   scalar(e, t, n, r) {
     let l;
@@ -139,7 +139,7 @@ class l {
             l = "too large or small";
             break
           }
-          return t == o.ScalarType.FLOAT && (0, u.assertFloat32)(r), r;
+          return t == o.ScalarType.FLOAT && (0, s.assertFloat32)(r), r;
         case o.ScalarType.INT32:
         case o.ScalarType.FIXED32:
         case o.ScalarType.SFIXED32:
@@ -148,18 +148,18 @@ class l {
           let c;
           if (null === e) return 0;
           if ("number" == typeof e ? c = e : "" === e ? l = "empty string" : "string" == typeof e && (e.trim().length !== e.length ? l = "extra whitespace" : c = Number(e)), void 0 === c) break;
-          return t == o.ScalarType.UINT32 ? (0, u.assertUInt32)(c) : (0, u.assertInt32)(c), c;
+          return t == o.ScalarType.UINT32 ? (0, s.assertUInt32)(c) : (0, s.assertInt32)(c), c;
         case o.ScalarType.INT64:
         case o.ScalarType.SFIXED64:
         case o.ScalarType.SINT64:
-          if (null === e) return (0, s.reflectionLongConvert)(i.PbLong.ZERO, n);
+          if (null === e) return (0, u.reflectionLongConvert)(i.PbLong.ZERO, n);
           if ("number" != typeof e && "string" != typeof e) break;
-          return (0, s.reflectionLongConvert)(i.PbLong.from(e), n);
+          return (0, u.reflectionLongConvert)(i.PbLong.from(e), n);
         case o.ScalarType.FIXED64:
         case o.ScalarType.UINT64:
-          if (null === e) return (0, s.reflectionLongConvert)(i.PbULong.ZERO, n);
+          if (null === e) return (0, u.reflectionLongConvert)(i.PbULong.ZERO, n);
           if ("number" != typeof e && "string" != typeof e) break;
-          return (0, s.reflectionLongConvert)(i.PbULong.from(e), n);
+          return (0, u.reflectionLongConvert)(i.PbULong.from(e), n);
         case o.ScalarType.BOOL:
           if (null === e) return !1;
           if ("boolean" != typeof e) break;

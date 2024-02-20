@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return d
   },
   DeclarativeConfirmModal: function() {
-    return p
+    return f
   }
 });
 var i = n("37983"),
@@ -20,52 +20,52 @@ function d(e) {
   let t, n, {
       header: s,
       children: d,
-      confirmText: p,
-      cancelText: h,
-      className: f,
-      onConfirm: E,
+      confirmText: f,
+      cancelText: E,
+      className: p,
+      onConfirm: h,
       onCancel: _,
-      onClose: m,
-      onCloseCallback: S,
-      bodyClassName: g,
-      transitionState: T,
+      onClose: S,
+      onCloseCallback: m,
+      bodyClassName: T,
+      transitionState: g,
       loading: I = !1,
-      confirmButtonColor: v = o.Button.Colors.RED,
-      focusCancel: C = !1
+      confirmButtonColor: C = o.Button.Colors.RED,
+      focusCancel: v = !1
     } = e,
     A = r.useRef(null);
   return r.useEffect(() => {
-    !C && setTimeout(() => {
+    !v && setTimeout(() => {
       var e;
       return null === (e = A.current) || void 0 === e ? void 0 : e.focus()
     }, 0)
-  }, [C]), r.useLayoutEffect(() => () => null == S ? void 0 : S()), null != h && (t = (0, i.jsx)(o.Button, {
+  }, [v]), r.useLayoutEffect(() => () => null == m ? void 0 : m()), null != E && (t = (0, i.jsx)(o.Button, {
     type: "button",
     look: o.Button.Looks.LINK,
     color: o.Button.Colors.PRIMARY,
     disabled: I,
     onClick: () => {
-      null == _ || _(), m()
+      null == _ || _(), S()
     },
-    autoFocus: C,
-    children: h
-  })), null != p && (n = (0, i.jsx)(o.Button, {
+    autoFocus: v,
+    children: E
+  })), null != f && (n = (0, i.jsx)(o.Button, {
     buttonRef: A,
     type: "submit",
-    color: v,
+    color: C,
     submitting: I,
     onClick: async () => {
       try {
-        await (null == E ? void 0 : E()), m()
+        await (null == h ? void 0 : h()), S()
       } catch (e) {
         throw e
       }
     },
-    autoFocus: !C,
-    children: p
+    autoFocus: !v,
+    children: f
   })), (0, i.jsxs)(u.ModalRoot, {
-    className: f,
-    transitionState: T,
+    className: p,
+    transitionState: g,
     children: [null != s ? (0, i.jsx)(u.ModalHeader, {
       separator: !1,
       children: (0, i.jsx)(l.Heading, {
@@ -73,7 +73,7 @@ function d(e) {
         children: s
       })
     }) : null, (0, i.jsx)(u.ModalContent, {
-      className: a(c.content, g),
+      className: a(c.content, T),
       children: d
     }), (0, i.jsxs)(u.ModalFooter, {
       children: [n, t]
@@ -81,7 +81,7 @@ function d(e) {
   })
 }
 
-function p(e) {
+function f(e) {
   return (0, i.jsx)(u.Modal, {
     onCloseRequest: e.dismissable ? e.onCancel : null,
     renderModal: t => (0, i.jsx)(d, {

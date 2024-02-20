@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return d
   },
   default: function() {
-    return f
+    return p
   }
 });
 var i = n("446674"),
@@ -32,7 +32,7 @@ function d(e) {
   }
 }
 
-function p(e) {
+function f(e) {
   let {
     guildId: t,
     request: n
@@ -43,7 +43,7 @@ function p(e) {
   if (null != r && i.userId !== r.id) return !1;
   (0, o.isApprovedAndAcked)(i) ? delete l[t]: l[t] = i
 }
-class h extends i.default.Store {
+class E extends i.default.Store {
   getRequest(e) {
     return l[e]
   }
@@ -57,8 +57,8 @@ class h extends i.default.Store {
     return u
   }
 }
-h.displayName = "UserGuildJoinRequestStore";
-var f = new h(r.default, {
+E.displayName = "UserGuildJoinRequestStore";
+var p = new E(r.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guildJoinRequests: t
@@ -70,8 +70,8 @@ var f = new h(r.default, {
       null != t && (l[t] = d(e))
     })
   },
-  GUILD_JOIN_REQUEST_UPDATE: p,
-  GUILD_JOIN_REQUEST_CREATE: p,
+  GUILD_JOIN_REQUEST_UPDATE: f,
+  GUILD_JOIN_REQUEST_CREATE: f,
   USER_GUILD_JOIN_REQUEST_UPDATE: function(e) {
     let {
       request: t,

@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   LocalizedPricingPromoManagerExperiment: function() {
-    return a
+    return o
   }
 });
-var i = n("862205");
-let a = (0, i.createExperiment)({
+var t = E("862205");
+let o = (0, t.createExperiment)({
   kind: "user",
   id: "2022-12_localized_pricing_promo_manager",
   label: "Localized Pricing Promo Manager",

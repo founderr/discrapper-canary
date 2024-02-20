@@ -1,4 +1,4 @@
     "use strict";
-    d.r(a);
-    var s = d("51545");
-    window.DiscordSentry = (0, s.initSentry)()
+    n.r(e);
+    var r = n("51545");
+    window.DiscordSentry = (0, r.initSentry)()

@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   MIN_REREQUEST_TIME: function() {
-    return E
+    return f
   },
   queryMentionables: function() {
-    return p
+    return E
   },
   queryChannels: function() {
-    return m
+    return p
   },
   getSnowflakeSelectDefaultValues: function() {
-    return T
+    return m
   }
 }), n("222007");
 var l = n("374158"),
@@ -22,16 +22,16 @@ var l = n("374158"),
   r = n("25292"),
   d = n("387111"),
   c = n("192112");
-let E = 1e3;
+let f = 1e3;
 
-function p(e, t, n) {
+function E(e, t, n) {
   let l = u.default.getChannel(n);
   if (null == l) return [];
   let i = e === a.ComponentType.USER_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
     o = e === a.ComponentType.ROLE_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
     {
       users: s,
-      roles: E
+      roles: f
     } = r.default.queryMentionResults({
       query: t,
       channel: l,
@@ -44,7 +44,7 @@ function p(e, t, n) {
       checkRecentlyTalkedOnEmptyQuery: !1,
       limit: 15
     }),
-    p = s.map(e => {
+    E = s.map(e => {
       var t;
       let a = d.default.getNickname(l.getGuildId(), n, e.user);
       return {
@@ -53,15 +53,15 @@ function p(e, t, n) {
         label: null !== (t = null != a ? a : e.user.globalName) && void 0 !== t ? t : e.user.username
       }
     }),
-    m = E.map(e => ({
+    p = f.map(e => ({
       type: c.SelectOptionType.ROLE,
       value: e.id,
       label: e.name
     }));
-  return [...p, ...m]
+  return [...E, ...p]
 }
 
-function m(e, t, n) {
+function p(e, t, n) {
   let l = u.default.getChannel(t);
   if (null == l) return [];
   let a = r.default.queryApplicationCommandChannelResults({
@@ -78,7 +78,7 @@ function m(e, t, n) {
   return i
 }
 
-function T(e, t) {
+function m(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
   if (null == e) return;
   let a = o.default.getGuild(t);
@@ -101,10 +101,10 @@ function T(e, t) {
         };
       case l.SnowflakeSelectDefaultValueTypes.CHANNEL:
         if (null == a) return null;
-        let E = u.default.getChannel(e.id);
-        if (null == E || E.guild_id !== a.id || n.length > 0 && !n.includes(E.type)) return null;
+        let f = u.default.getChannel(e.id);
+        if (null == f || f.guild_id !== a.id || n.length > 0 && !n.includes(f.type)) return null;
         return {
-          type: c.SelectOptionType.CHANNEL, value: E.id, label: E.name
+          type: c.SelectOptionType.CHANNEL, value: f.id, label: f.name
         }
     }
   }).filter(e => null !== e)

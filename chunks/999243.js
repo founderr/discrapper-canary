@@ -1,60 +1,60 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return T
+    return L
   }
-}), n("222007"), n("702976");
-var i = n("689988"),
-  a = n("393414"),
-  l = n("26989"),
-  s = n("305961"),
-  r = n("162771"),
-  o = n("718517"),
-  u = n("568734"),
-  d = n("685829"),
-  c = n("863636"),
-  f = n("937692"),
-  E = n("49111"),
-  h = n("724210"),
-  _ = n("657944");
-let C = null,
-  S = null;
-class g extends i.default {
+}), E("222007"), E("702976");
+var t = E("689988"),
+  o = E("393414"),
+  n = E("26989"),
+  r = E("305961"),
+  i = E("162771"),
+  a = E("718517"),
+  I = E("568734"),
+  s = E("685829"),
+  T = E("863636"),
+  S = E("937692"),
+  N = E("49111"),
+  O = E("724210"),
+  A = E("657944");
+let R = null,
+  l = null;
+class u extends t.default {
   constructor(...e) {
     super(...e), this.actions = {
       GUILD_DELETE: e => this.handleGuildDelete(e),
       CHANNEL_SELECT: e => this.handleChannelSelect(e),
       POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e)
     }, this.handleConnectionOpen = e => {
-      var t;
-      null != (C = null !== (t = null != C ? C : r.default.getGuildId()) && void 0 !== t ? t : null) && this._openOnboardingIfIncomplete(C)
+      var _;
+      null != (R = null !== (_ = null != R ? R : i.default.getGuildId()) && void 0 !== _ ? _ : null) && this._openOnboardingIfIncomplete(R)
     }, this.handleChannelSelect = e => {
       let {
-        guildId: t,
-        channelId: n
+        guildId: _,
+        channelId: E
       } = e;
-      if (C === t && S === n) return;
-      if (C = null != t ? t : null, S = null != n ? n : null, null == C || null == S) return;
-      let i = s.default.getGuild(t);
-      null != i && i.hasFeature(E.GuildFeatures.COMMUNITY) && c.default.shouldFetchPrompts(C, 8 * o.default.Millis.HOUR) && (0, d.loadOnboardingPrompts)(C), this._openOnboardingIfIncomplete(C, n)
+      if (R === _ && l === E) return;
+      if (R = null != _ ? _ : null, l = null != E ? E : null, null == R || null == l) return;
+      let t = r.default.getGuild(_);
+      null != t && t.hasFeature(N.GuildFeatures.COMMUNITY) && T.default.shouldFetchPrompts(R, 8 * a.default.Millis.HOUR) && (0, s.loadOnboardingPrompts)(R), this._openOnboardingIfIncomplete(R, E)
     }, this.handleGuildDelete = e => {
       let {
-        guild: t
+        guild: _
       } = e;
-      (0, f.discardOnboardingPromise)(t.id)
-    }, this._openOnboardingIfIncomplete = async (e, t) => {
-      var n, i;
-      if ((0, f.isOnboardingActiveForGuild)(e)) {
-        (0, a.transitionTo)(E.Routes.CHANNEL(e, h.StaticChannelRoute.GUILD_ONBOARDING));
+      (0, S.discardOnboardingPromise)(_.id)
+    }, this._openOnboardingIfIncomplete = async (e, _) => {
+      var E, t;
+      if ((0, S.isOnboardingActiveForGuild)(e)) {
+        (0, o.transitionTo)(N.Routes.CHANNEL(e, O.StaticChannelRoute.GUILD_ONBOARDING));
         return
       }
-      let r = s.default.getGuild(e);
-      if (null == r || !r.hasFeature(E.GuildFeatures.GUILD_ONBOARDING)) return;
-      let o = l.default.getSelfMember(e);
-      !(null == o || (0, u.hasFlag)(null !== (n = o.flags) && void 0 !== n ? n : 0, _.GuildMemberFlags.COMPLETED_ONBOARDING)) && (0, u.hasFlag)(null !== (i = o.flags) && void 0 !== i ? i : 0, _.GuildMemberFlags.STARTED_ONBOARDING) && (await (0, f.default)({
+      let i = r.default.getGuild(e);
+      if (null == i || !i.hasFeature(N.GuildFeatures.GUILD_ONBOARDING)) return;
+      let a = n.default.getSelfMember(e);
+      !(null == a || (0, I.hasFlag)(null !== (E = a.flags) && void 0 !== E ? E : 0, A.GuildMemberFlags.COMPLETED_ONBOARDING)) && (0, I.hasFlag)(null !== (t = a.flags) && void 0 !== t ? t : 0, A.GuildMemberFlags.STARTED_ONBOARDING) && (await (0, S.default)({
         guildId: e
-      }), (0, a.transitionTo)(E.Routes.CHANNEL(e, t)))
+      }), (0, o.transitionTo)(N.Routes.CHANNEL(e, _)))
     }
   }
 }
-var T = new g
+var L = new u

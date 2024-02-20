@@ -16,11 +16,11 @@ var a, o, d = n("917351"),
   h = n("376556"),
   v = n("823704"),
   E = n("605250"),
-  p = n("271938"),
-  y = n("47319"),
-  T = n("603699"),
-  C = n("824563"),
-  S = n("568307"),
+  p = n("161454"),
+  y = n("271938"),
+  T = n("47319"),
+  C = n("603699"),
+  S = n("824563"),
   I = n("280168"),
   A = n("800762"),
   D = n("599110"),
@@ -85,7 +85,7 @@ function et(e) {
 }
 
 function en(e) {
-  return C.default.findActivity(e, e => null != e.party && null != e.party.id && (0, b.isSpotifyParty)(e.party.id))
+  return S.default.findActivity(e, e => null != e.party && null != e.party.id && (0, b.isSpotifyParty)(e.party.id))
 }
 let es = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
 class ei {
@@ -232,7 +232,7 @@ function eu() {
 
 function el() {
   let e = Object.keys(X),
-    t = y.default.getAccounts().filter(e => {
+    t = T.default.getAccounts().filter(e => {
       let {
         type: t
       } = e;
@@ -267,7 +267,7 @@ function ef() {
 }
 
 function e_(e) {
-  if (e === p.default.getId()) {
+  if (e === y.default.getId()) {
     let t = A.default.isCurrentClientInVoiceChannel(),
       n = (0, m.getIsSpeaking)({
         userId: e,
@@ -346,7 +346,7 @@ function eg(e, t) {
 }
 class em extends f.default.Store {
   initialize() {
-    this.waitFor(y.default, I.default), this.syncWith([C.default], () => (function() {
+    this.waitFor(T.default, I.default), this.syncWith([S.default], () => (function() {
       if (null == i) return !1;
       let e = ee();
       if (null == e) return !1;
@@ -407,7 +407,7 @@ class em extends f.default.Store {
     return Z[e]
   }
   shouldShowActivity() {
-    return null != s && s.account.showActivity && !T.default.isIdle()
+    return null != s && s.account.showActivity && !C.default.isIdle()
   }
   getActivity() {
     let e, t, n;
@@ -432,7 +432,7 @@ class em extends f.default.Store {
     }).join("; "));
     let g = {},
       m = null != a.image ? (0, N.getAssetFromImageURL)(V.PlatformTypes.SPOTIFY, a.image.url) : null;
-    null != a.image && null != m && (g.large_image = m), "single" !== a.type && (g.large_text = a.name), null != _ && (t = _.uri), n = null != i && null != i.partyId ? i.partyId : "".concat(b.SPOTIFY_PARTY_PREFIX).concat(p.default.getId());
+    null != a.image && null != m && (g.large_image = m), "single" !== a.type && (g.large_text = a.name), null != _ && (t = _.uri), n = null != i && null != i.partyId ? i.partyId : "".concat(b.SPOTIFY_PARTY_PREFIX).concat(y.default.getId());
     let h = o.length > 128 ? o.substring(0, 125) + "..." : o,
       v = {
         name: R.name,
@@ -506,7 +506,7 @@ let eh = new em(g.default, {
       } else Q[t] = [d], f = !0
     }
     n ? null == $ || $.start(w, ef) : (a = null, null == $ || $.stop());
-    let c = y.default.getAccount(t, V.PlatformTypes.SPOTIFY);
+    let c = T.default.getAccount(t, V.PlatformTypes.SPOTIFY);
     if (null == c) return f;
     let g = Z[t],
       m = null != a ? {
@@ -524,7 +524,7 @@ let eh = new em(g.default, {
       h = null != d && null != i && 0 === o && !n;
     !h && (Z[t] = m);
     let E = s;
-    if (s = u.values(Z).find(e => null != e), e_(p.default.getId()), null == a || h ? z.stop() : z.start(a.duration - o + U, () => et(c.id)), null != i && (!n && o > 0 || null == d || null != m && i.trackId !== m.track.id) ? (Y.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(U, "ms")), q.start(U, () => {
+    if (s = u.values(Z).find(e => null != e), e_(y.default.getId()), null == a || h ? z.stop() : z.start(a.duration - o + U, () => et(c.id)), null != i && (!n && o > 0 || null == d || null != m && i.trackId !== m.track.id) ? (Y.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(U, "ms")), q.start(U, () => {
         Y.info("Stopping listening along"), (0, v.default)(), et(c.id)
       })) : q.isStarted() && (Y.info("Listen along stop cancelled as playback of track resumed"), q.stop()), E === s || null == g && null == m || null != g && null != m && g.track.id === m.track.id && g.startTime === m.startTime) return f;
     null != a && D.default.track(V.AnalyticEvents.ACTIVITY_UPDATED, {
@@ -607,7 +607,7 @@ let eh = new em(g.default, {
       let {
         sourceId: e,
         sound: n
-      } = null == t ? void 0 : t.desktopSettings, s = null != e && S.default.getObservedAppNameForWindow(e) === R.name;
+      } = null == t ? void 0 : t.desktopSettings, s = null != e && p.default.getObservedAppNameForWindow(e) === R.name;
       s && n ? ($ = new c.Interval).start(w, ef) : $ = null
     }
   }

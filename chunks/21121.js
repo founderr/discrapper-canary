@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return _
   },
   isInMainTabsExperiment: function() {
-    return m
+    return S
   },
   useInMainTabsExperiment: function() {
-    return S
+    return m
   }
 }), n("70102"), n("884691");
 var i, r, s = n("308503"),
@@ -18,10 +18,10 @@ var o = n("132522"),
   u = n("139404"),
   c = n("61796"),
   d = n("264325"),
-  p = n("18108");
+  f = n("18108");
 (r = i || (i = {}))[r.EXISTING_USERS = 0] = "EXISTING_USERS", r[r.NEW_USERS = 1] = "NEW_USERS";
-let h = "tabs-v2-experiment-key",
-  f = (0, s.default)((e, t) => ({
+let E = "tabs-v2-experiment-key",
+  p = (0, s.default)((e, t) => ({
     _experimentCacheInitialized: !1,
     _experimentEnabled: !1,
     getExperimentEnabled() {
@@ -36,43 +36,43 @@ let h = "tabs-v2-experiment-key",
     setExperimentEnabled: t => {
       e({
         _experimentEnabled: t
-      }), a.default.set(h, t)
+      }), a.default.set(E, t)
     },
     setInitialized: () => {
       e(e => e._experimentCacheInitialized ? e : {
         _experimentCacheInitialized: !0,
-        _experimentEnabled: !0 === a.default.get(h)
+        _experimentEnabled: !0 === a.default.get(E)
       })
     }
   }));
 
-function E() {
+function h() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, u.isMobileRedesignDisabled)(),
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.getState().getExperimentEnabled(),
+    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.getState().getExperimentEnabled(),
     i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, d.isTabsUIEnabledManually)(),
     r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : (0, o.isRedesignToggleIgnored)();
   if (!(0, c.isMainTabsExperimentPlatformSupported)()) return !1;
   if (!r) {
-    if (!t && e) return (0, p.updateIsInTabsUI)(!1), !1;
-    if (i) return (0, p.updateIsInTabsUI)(!0), !0
+    if (!t && e) return (0, f.updateIsInTabsUI)(!1), !1;
+    if (i) return (0, f.updateIsInTabsUI)(!0), !0
   }
-  return !t && (0, p.updateIsInTabsUI)(n), n
+  return !t && (0, f.updateIsInTabsUI)(n), n
 }
 
 function _() {
-  return m() ? (0, l.getRootNavigationRef)() : void 0
-}
-
-function m() {
-  return E()
+  return S() ? (0, l.getRootNavigationRef)() : void 0
 }
 
 function S() {
+  return h()
+}
+
+function m() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = (0, u.useMobileRedesignDisabled)(),
-    n = f(e => e.getExperimentEnabled()),
+    n = p(e => e.getExperimentEnabled()),
     i = (0, d.useIsTabsUIEnabledManually)(),
     r = (0, o.useRedesignToggleIgnored)();
-  return E(t, e, n, i, r)
+  return h(t, e, n, i, r)
 }

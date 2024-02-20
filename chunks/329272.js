@@ -36,13 +36,13 @@ function c(e) {
     disabled: r,
     selectable: c,
     children: d,
-    style: p,
-    ...h
-  } = e, f = u.DEFAULT;
-  return r ? f = u.DISABLED : c && (f = u.SELECTABLE), (0, i.jsx)(a.default, {
-    className: s(o[t], n, o[f]),
-    style: p,
-    ...h,
+    style: f,
+    ...E
+  } = e, p = u.DEFAULT;
+  return r ? p = u.DISABLED : c && (p = u.SELECTABLE), (0, i.jsx)(a.default, {
+    className: s(o[t], n, o[p]),
+    style: f,
+    ...E,
     children: d
   })
 }

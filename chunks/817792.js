@@ -1,5 +1,5 @@
 "use strict";
-var t, o, I, T;
+var t, o, n, r;
 E.r(_), E.d(_, {
   DomainMigrationEventType: function() {
     return t
@@ -8,16 +8,16 @@ E.r(_), E.d(_, {
     return o
   },
   DOMAIN_MIGRATION_SUCCESS_KEY: function() {
-    return r
+    return i
   },
   sendPostMessage: function() {
     return a
   },
   extractMessage: function() {
-    return n
+    return I
   }
-}), (I = t || (t = {}))[I.SKIP_MIGRATION = 0] = "SKIP_MIGRATION", I[I.SEND_DATA = 1] = "SEND_DATA", I[I.DATA_MIGRATED = 2] = "DATA_MIGRATED", I[I.DATA_MIGRATED_CONFIRMED = 3] = "DATA_MIGRATED_CONFIRMED", (T = o || (o = {}))[T.MIGRATION_SOURCE_DOMAIN = 0] = "MIGRATION_SOURCE_DOMAIN", T[T.MIGRATION_DESTINATION_DOMAIN = 1] = "MIGRATION_DESTINATION_DOMAIN";
-let r = "domainMigrationSuccess";
+}), (n = t || (t = {}))[n.SKIP_MIGRATION = 0] = "SKIP_MIGRATION", n[n.SEND_DATA = 1] = "SEND_DATA", n[n.DATA_MIGRATED = 2] = "DATA_MIGRATED", n[n.DATA_MIGRATED_CONFIRMED = 3] = "DATA_MIGRATED_CONFIRMED", (r = o || (o = {}))[r.MIGRATION_SOURCE_DOMAIN = 0] = "MIGRATION_SOURCE_DOMAIN", r[r.MIGRATION_DESTINATION_DOMAIN = 1] = "MIGRATION_DESTINATION_DOMAIN";
+let i = "domainMigrationSuccess";
 
 function a(e, _, E) {
   let t = 0 === E ? window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN : window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN;
@@ -26,7 +26,7 @@ function a(e, _, E) {
   }, t)
 }
 
-function n(e, _) {
+function I(e, _) {
   var E;
   return ! function(e, _) {
     let E = 0 === _ ? window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN : window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN;

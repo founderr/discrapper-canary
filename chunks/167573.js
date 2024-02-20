@@ -32,9 +32,9 @@ function S(e) {
     channelId: t,
     onClose: i,
     transitionState: r
-  } = e, [S, N] = n.useState(""), [A, M] = n.useState("descending"), [R, P] = n.useState(!0), [y, j] = n.useState(null), D = n.useDeferredValue(S), O = (0, d.useStateFromStores)([C.default], () => C.default.getClips()), b = (0, d.useStateFromStores)([C.default], () => C.default.getPendingClips()), H = (0, d.useStateFromStores)([C.default], () => C.default.getSettings().storageLocation), w = (0, d.useStateFromStoresArray)([C.default], () => C.default.getNewClipIds()), {
+  } = e, [S, A] = n.useState(""), [N, M] = n.useState("descending"), [R, P] = n.useState(!0), [j, y] = n.useState(null), D = n.useDeferredValue(S), O = (0, d.useStateFromStores)([C.default], () => C.default.getClips()), H = (0, d.useStateFromStores)([C.default], () => C.default.getPendingClips()), b = (0, d.useStateFromStores)([C.default], () => C.default.getSettings().storageLocation), w = (0, d.useStateFromStoresArray)([C.default], () => C.default.getNewClipIds()), {
     AnalyticsLocationProvider: k
-  } = (0, m.default)(p.default.CLIPS_GALLERY), U = n.useMemo(() => [...b, ...O], [O, b]);
+  } = (0, m.default)(p.default.CLIPS_GALLERY), U = n.useMemo(() => [...H, ...O], [O, H]);
   (0, h.default)({
     type: u.ImpressionTypes.MODAL,
     name: u.ImpressionNames.CLIP_GALLERY_VIEWED,
@@ -50,17 +50,17 @@ function S(e) {
     if ("" === D.trim()) return !0;
     let t = D.toLowerCase();
     return null != e.name && "" !== e.name && s(t, e.name.toLowerCase()) || s(t, e.applicationName.toLowerCase())
-  }).sort((e, t) => "ascending" === A ? E.default.compare(e.id, t.id) : "descending" === A ? E.default.compare(t.id, e.id) : 0).chunk(3).value(), [U, D, A]);
+  }).sort((e, t) => "ascending" === N ? E.default.compare(e.id, t.id) : "descending" === N ? E.default.compare(t.id, e.id) : 0).chunk(3).value(), [U, D, N]);
   n.useEffect(() => {
     (async function e() {
       P(!0);
       try {
-        await v.loadClipsDirectory(H)
+        await v.loadClipsDirectory(b)
       } finally {
         P(!1)
       }
     })()
-  }, [H]);
+  }, [b]);
   let V = n.useCallback(e => {
       (0, f.openModalLazy)(async () => {
         let {
@@ -79,7 +79,7 @@ function S(e) {
       onShareClick: z
     } = (0, _.default)({
       channelId: t,
-      setExporting: j
+      setExporting: y
     }),
     F = n.useCallback((e, t) => {
       (0, f.openModalLazy)(async () => {
@@ -103,8 +103,8 @@ function S(e) {
         children: l.map(e => {
           let t = 0 === e.length;
           return (0, a.jsx)(g.default, {
-            actionsDisabled: null != y || t,
-            exporting: y === e.id,
+            actionsDisabled: null != j || t,
+            exporting: j === e.id,
             isNew: w.includes(e.id),
             onDelete: F,
             onEdit: V,
@@ -116,7 +116,7 @@ function S(e) {
           }, e.id)
         })
       }, "clips-gallery-".concat(t))
-    }, [B, w, y, z, F, V]),
+    }, [B, w, j, z, F, V]),
     Y = R || 0 !== B.length ? R ? (0, a.jsx)("div", {
       className: I.spinnerContainer,
       children: (0, a.jsx)(f.Spinner, {})
@@ -138,8 +138,8 @@ function S(e) {
       children: [(0, a.jsx)(x.default, {
         onClose: i,
         filterQuery: S,
-        setFilterQuery: N,
-        sortOrder: A,
+        setFilterQuery: A,
+        sortOrder: N,
         setSortOrder: M
       }), Y]
     })

@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   ReflectionBinaryReader: function() {
-    return u
+    return s
   }
 }), n("222007"), n("70102"), n("424973");
 var r = n("764624"),
   a = n("803628"),
   o = n("546749"),
   i = n("804094");
-class u {
+class s {
   prepare() {
     var e;
     if (!this.fieldNoToField) {
@@ -20,50 +20,50 @@ class u {
     this.prepare();
     let i = void 0 === o ? e.len : e.pos + o;
     for (; e.pos < i;) {
-      let [o, i] = e.tag(), u = this.fieldNoToField.get(o);
-      if (!u) {
+      let [o, i] = e.tag(), s = this.fieldNoToField.get(o);
+      if (!s) {
         let a = n.readUnknownField;
         if ("throw" == a) throw Error("Unknown field ".concat(o, " (wire type ").concat(i, ") for ").concat(this.info.typeName));
-        let u = e.skip(i);
-        !1 !== a && (!0 === a ? r.UnknownFieldHandler.onRead : a)(this.info.typeName, t, o, i, u);
+        let s = e.skip(i);
+        !1 !== a && (!0 === a ? r.UnknownFieldHandler.onRead : a)(this.info.typeName, t, o, i, s);
         continue
       }
-      let s = t,
-        l = u.repeat,
-        c = u.localName;
-      switch (u.oneof && (s = s[u.oneof]).oneofKind !== c && (s = t[u.oneof] = {
+      let u = t,
+        l = s.repeat,
+        c = s.localName;
+      switch (s.oneof && (u = u[s.oneof]).oneofKind !== c && (u = t[s.oneof] = {
           oneofKind: c
-        }), u.kind) {
+        }), s.kind) {
         case "scalar":
         case "enum":
-          let f = "enum" == u.kind ? a.ScalarType.INT32 : u.T,
-            d = "scalar" == u.kind ? u.L : void 0;
+          let d = "enum" == s.kind ? a.ScalarType.INT32 : s.T,
+            f = "scalar" == s.kind ? s.L : void 0;
           if (l) {
-            let t = s[c];
-            if (i == r.WireType.LengthDelimited && f != a.ScalarType.STRING && f != a.ScalarType.BYTES) {
+            let t = u[c];
+            if (i == r.WireType.LengthDelimited && d != a.ScalarType.STRING && d != a.ScalarType.BYTES) {
               let n = e.uint32() + e.pos;
-              for (; e.pos < n;) t.push(this.scalar(e, f, d))
-            } else t.push(this.scalar(e, f, d))
-          } else s[c] = this.scalar(e, f, d);
+              for (; e.pos < n;) t.push(this.scalar(e, d, f))
+            } else t.push(this.scalar(e, d, f))
+          } else u[c] = this.scalar(e, d, f);
           break;
         case "message":
           if (l) {
-            let t = s[c],
-              r = u.T().internalBinaryRead(e, e.uint32(), n);
+            let t = u[c],
+              r = s.T().internalBinaryRead(e, e.uint32(), n);
             t.push(r)
-          } else s[c] = u.T().internalBinaryRead(e, e.uint32(), n, s[c]);
+          } else u[c] = s.T().internalBinaryRead(e, e.uint32(), n, u[c]);
           break;
         case "map":
-          let [p, h] = this.mapEntry(u, e, n);
-          s[c][p] = h
+          let [p, m] = this.mapEntry(s, e, n);
+          u[c][p] = m
       }
     }
   }
   mapEntry(e, t, n) {
-    let r, o, u = t.uint32(),
-      s = t.pos + u;
-    for (; t.pos < s;) {
-      let [i, u] = t.tag();
+    let r, o, s = t.uint32(),
+      u = t.pos + s;
+    for (; t.pos < u;) {
+      let [i, s] = t.tag();
       switch (i) {
         case 1:
           r = e.K == a.ScalarType.BOOL ? t.bool().toString() : this.scalar(t, e.K, a.LongType.STRING);
@@ -81,7 +81,7 @@ class u {
           }
           break;
         default:
-          throw Error("Unknown field ".concat(i, " (wire type ").concat(u, ") in map entry for ").concat(this.info.typeName, "#").concat(e.name))
+          throw Error("Unknown field ".concat(i, " (wire type ").concat(s, ") in map entry for ").concat(this.info.typeName, "#").concat(e.name))
       }
     }
     if (void 0 === r) {

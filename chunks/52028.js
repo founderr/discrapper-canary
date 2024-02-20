@@ -13,14 +13,14 @@ var s = n("714617"),
   u = n("191225"),
   l = n("299285"),
   f = n("225772"),
-  _ = n("32346"),
-  c = n("925880"),
-  g = n("662285"),
-  m = n("845579"),
-  h = n("374363"),
-  v = n("373469"),
-  E = n("848872"),
-  p = n("568307"),
+  _ = n("161454"),
+  c = n("32346"),
+  g = n("925880"),
+  m = n("662285"),
+  h = n("845579"),
+  v = n("374363"),
+  E = n("373469"),
+  p = n("848872"),
   y = n("49111"),
   T = n("782340");
 let C = [],
@@ -28,11 +28,11 @@ let C = [],
 
 function I() {
   let e = [],
-    t = m.CustomStatusSetting.getSetting();
+    t = h.CustomStatusSetting.getSetting();
   null != t && ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, f.default)(t));
-  let n = c.default.getActivities();
+  let n = g.default.getActivities();
   e.push(...n);
-  let s = E.default.getStream();
+  let s = p.default.getStream();
   null != s && e.push({
     type: y.ActivityTypes.STREAMING,
     ...s
@@ -55,11 +55,11 @@ function I() {
       flags: y.ActivityFlags.EMBEDDED
     })
   });
-  let d = p.default.getVisibleGame(),
-    h = null != d && null != d.name && r.has(d.name),
+  let d = _.default.getVisibleGame(),
+    v = null != d && null != d.name && r.has(d.name),
     I = null != d && d.isLauncher,
-    A = v.default.getCurrentUserActiveStream();
-  null != d && null != d.name && !(h || I && !(null != A)) && e.push({
+    A = E.default.getCurrentUserActiveStream();
+  null != d && null != d.name && !(v || I && !(null != A)) && e.push({
     type: y.ActivityTypes.PLAYING,
     name: d.name,
     application_id: d.id,
@@ -67,14 +67,14 @@ function I() {
       start: d.start
     }
   });
-  let D = g.default.getActivity();
+  let D = m.default.getActivity();
   null != D && e.push({
     type: y.ActivityTypes.LISTENING,
     ...D
   });
-  let N = _.default.getCurrentHangStatus();
+  let N = c.default.getCurrentHangStatus();
   if (null != N) {
-    let t = _.default.getCustomHangStatus();
+    let t = c.default.getCustomHangStatus();
     e.push({
       type: y.ActivityTypes.HANG_STATUS,
       name: "Hang Status",
@@ -86,7 +86,7 @@ function I() {
 }
 class A extends o.default.Store {
   initialize() {
-    this.waitFor(p.default, u.default, E.default, v.default, g.default, h.default, _.default), this.syncWith([c.default, _.default], () => I())
+    this.waitFor(_.default, u.default, p.default, E.default, m.default, v.default, c.default), this.syncWith([g.default, c.default], () => I())
   }
   getActivities() {
     return C

@@ -1,50 +1,50 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return h
+    return O
   }
-}), n("222007");
-var i = n("37983"),
-  a = n("884691"),
-  l = n("446674"),
-  s = n("318696"),
-  r = n("915639"),
-  o = n("787910"),
-  u = n("90404"),
-  d = n("782340"),
-  c = n("386161");
+}), E("222007");
+var t = E("37983"),
+  o = E("884691"),
+  n = E("446674"),
+  r = E("318696"),
+  i = E("915639"),
+  a = E("787910"),
+  I = E("90404"),
+  s = E("782340"),
+  T = E("386161");
 
-function f(e) {
+function S(e) {
   let {
-    locale: t,
-    children: n
-  } = e, [a, s] = (0, l.useStateFromStoresArray)([o.default], () => [o.default.isLoading(), o.default.getError()]);
-  return null != s ? (0, i.jsx)(u.default, {
-    title: d.default.Messages.I18N_LOCALE_LOADING_ERROR.format({
-      locale: t
+    locale: _,
+    children: E
+  } = e, [o, r] = (0, n.useStateFromStoresArray)([a.default], () => [a.default.isLoading(), a.default.getError()]);
+  return null != r ? (0, t.jsx)(I.default, {
+    title: s.default.Messages.I18N_LOCALE_LOADING_ERROR.format({
+      locale: _
     }),
-    note: (0, i.jsx)("span", {
-      children: s.message
+    note: (0, t.jsx)("span", {
+      children: r.message
     })
-  }) : a ? __OVERLAY__ ? null : (0, i.jsx)("div", {
-    className: c.loading
-  }) : n
+  }) : o ? __OVERLAY__ ? null : (0, t.jsx)("div", {
+    className: T.loading
+  }) : E
 }
-class E extends a.Component {
+class N extends o.Component {
   render() {
     let {
       locale: e,
-      children: t
+      children: _
     } = this.props;
-    return (0, i.jsx)(f, {
+    return (0, t.jsx)(S, {
       locale: e,
-      children: t
+      children: _
     })
   }
   constructor(e) {
-    super(e), s.updateLocaleLoadingStatus(e.locale, !0)
+    super(e), r.updateLocaleLoadingStatus(e.locale, !0)
   }
 }
-var h = l.default.connectStores([r.default], () => ({
-  locale: r.default.locale
-}))(E)
+var O = n.default.connectStores([i.default], () => ({
+  locale: i.default.locale
+}))(N)

@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   isLimitedAccessErrorCode: function() {
-    return r
+    return o
   }
 });
-var a = n("49111");
+var t = E("49111");
 
-function r(e, t) {
-  return 403 === e && null != t && t >= a.AbortCodes.GUILD_LIMITED_ACCESS_DEFAULT && t <= a.AbortCodes.GUILD_LIMITED_ACCESS_MAX
+function o(e, _) {
+  return 403 === e && null != _ && _ >= t.AbortCodes.GUILD_LIMITED_ACCESS_DEFAULT && _ <= t.AbortCodes.GUILD_LIMITED_ACCESS_MAX
 }

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   },
   ChannelBackNavigationSources: function() {
-    return l
+    return a
   }
 }), n("222007");
-var r, i = n("648564");
-(r || (r = {})).INVITE_ACCEPT = "invite_accept";
-var o = r;
-let l = new Set([i.OpenThreadAnalyticsLocations.EMBED, i.OpenThreadAnalyticsLocations.FORUM])
+var i, r = n("648564");
+(i || (i = {})).INVITE_ACCEPT = "invite_accept";
+var s = i;
+let a = new Set([r.OpenThreadAnalyticsLocations.EMBED, r.OpenThreadAnalyticsLocations.FORUM])

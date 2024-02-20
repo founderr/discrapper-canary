@@ -42,9 +42,9 @@ n.r(t), n.d(t, {
 });
 var s = n("866227"),
   l = n.n(s),
-  a = n("845579"),
-  i = n("546463"),
-  r = n("568307"),
+  a = n("161454"),
+  i = n("845579"),
+  r = n("546463"),
   o = n("718517"),
   u = n("931115"),
   d = n("411511"),
@@ -62,7 +62,7 @@ function f(e) {
 
 function _(e, t) {
   if (null == e) return !1;
-  let n = i.default.getGameByName(e);
+  let n = r.default.getGameByName(e);
   return !!(null != n && t.some(e => {
     var t;
     return e.toLowerCase() === (null == n ? void 0 : null === (t = n.name) || void 0 === t ? void 0 : t.toLowerCase())
@@ -87,7 +87,7 @@ function I(e, t, n) {
 }
 
 function m(e) {
-  let t = r.default.getGamesSeen(!1);
+  let t = a.default.getGamesSeen(!1);
   return I(e, t, T())
 }
 
@@ -106,7 +106,7 @@ function p(e) {
     }, {
       autoTrackExposure: !1
     }).dropsEnabled)) return !1;
-  let s = a.DropsOptedOut.getSetting(),
+  let s = i.DropsOptedOut.getSetting(),
     l = N(n, !0);
   return !s && l
 }
@@ -119,9 +119,9 @@ function S(e) {
     }, {
       autoTrackExposure: !1
     })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
-  let l = a.DropsOptedOut.getSetting(),
-    i = N(s, !1);
-  return A(s) && !l && i
+  let l = i.DropsOptedOut.getSetting(),
+    a = N(s, !1);
+  return A(s) && !l && a
 }
 
 function A(e) {

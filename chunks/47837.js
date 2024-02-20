@@ -1,28 +1,28 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   broadcastActiveObservations: function() {
-    return a
+    return s
   }
-}), r("424973");
-var n = r("514825"),
-  i = r("261423"),
-  o = r("627545"),
-  s = r("572462"),
-  a = function() {
+}), n("424973");
+var r = n("514825"),
+  a = n("261423"),
+  o = n("627545"),
+  i = n("572462"),
+  s = function() {
     var e = 1 / 0,
       t = [];
-    n.resizeObservers.forEach(function(r) {
-      if (0 !== r.activeTargets.length) {
-        var n = [];
-        r.activeTargets.forEach(function(t) {
-          var r = new i.ResizeObserverEntry(t.target),
-            a = (0, o.calculateDepthForNode)(t.target);
-          n.push(r), t.lastReportedSize = (0, s.calculateBoxSize)(t.target, t.observedBox), a < e && (e = a)
+    r.resizeObservers.forEach(function(n) {
+      if (0 !== n.activeTargets.length) {
+        var r = [];
+        n.activeTargets.forEach(function(t) {
+          var n = new a.ResizeObserverEntry(t.target),
+            s = (0, o.calculateDepthForNode)(t.target);
+          r.push(n), t.lastReportedSize = (0, i.calculateBoxSize)(t.target, t.observedBox), s < e && (e = s)
         }), t.push(function() {
-          r.callback.call(r.observer, n, r.observer)
-        }), r.activeTargets.splice(0, r.activeTargets.length)
+          n.callback.call(n.observer, r, n.observer)
+        }), n.activeTargets.splice(0, n.activeTargets.length)
       }
     });
-    for (var r = 0; r < t.length; r++)(0, t[r])();
+    for (var n = 0; n < t.length; n++)(0, t[n])();
     return e
   }

@@ -24,8 +24,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var r = n("884691"),
   a = n("638915"),
-  i = n("231420"),
-  o = n("24899"),
+  o = n("231420"),
+  i = n("24899"),
   s = n("240849"),
   c = n("546262");
 let l = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm", "Rohg", "Hebr"]),
@@ -54,10 +54,10 @@ function p() {
   }
 }
 let f = p(),
-  m = new Set;
+  h = new Set;
 
-function h() {
-  for (let e of (f = p(), m)) e(f)
+function m() {
+  for (let e of (f = p(), h)) e(f)
 }
 let v = r.createContext(null);
 
@@ -65,8 +65,8 @@ function g() {
   let e = function() {
     let e = (0, a.useIsSSR)(),
       [t, n] = (0, r.useState)(f);
-    return ((0, r.useEffect)(() => (0 === m.size && window.addEventListener("languagechange", h), m.add(n), () => {
-      m.delete(n), 0 === m.size && window.removeEventListener("languagechange", h)
+    return ((0, r.useEffect)(() => (0 === h.size && window.addEventListener("languagechange", m), h.add(n), () => {
+      h.delete(n), 0 === h.size && window.removeEventListener("languagechange", m)
     }), []), e) ? {
       locale: "en-US",
       direction: "ltr"
@@ -79,14 +79,14 @@ let y = new WeakMap;
 function b(e, t) {
   var n;
   let r;
-  return t && i.LocalizedStringDictionary.getGlobalDictionaryForPackage(t) || (n = e, !(r = y.get(n)) && (r = new i.LocalizedStringDictionary(n), y.set(n, r)), r)
+  return t && o.LocalizedStringDictionary.getGlobalDictionaryForPackage(t) || (n = e, !(r = y.get(n)) && (r = new o.LocalizedStringDictionary(n), y.set(n, r)), r)
 }
 
 function x(e, t) {
   let {
     locale: n
   } = g(), a = b(e, t);
-  return (0, r.useMemo)(() => new i.LocalizedStringFormatter(n, a), [n, a])
+  return (0, r.useMemo)(() => new o.LocalizedStringFormatter(n, a), [n, a])
 }
 
 function S(e) {
@@ -94,7 +94,7 @@ function S(e) {
   let {
     locale: t
   } = g();
-  return (0, r.useMemo)(() => new o.DateFormatter(t, e), [t, e])
+  return (0, r.useMemo)(() => new i.DateFormatter(t, e), [t, e])
 }
 
 function w(e, t) {
@@ -132,20 +132,20 @@ function P(e) {
     }),
     n = (0, r.useCallback)((e, n) => 0 === n.length || (e = e.normalize("NFC"), n = n.normalize("NFC"), 0 === t.compare(e.slice(0, n.length), n)), [t]),
     a = (0, r.useCallback)((e, n) => 0 === n.length || (e = e.normalize("NFC"), n = n.normalize("NFC"), 0 === t.compare(e.slice(-n.length), n)), [t]),
-    i = (0, r.useCallback)((e, n) => {
+    o = (0, r.useCallback)((e, n) => {
       if (0 === n.length) return !0;
       e = e.normalize("NFC"), n = n.normalize("NFC");
       let r = 0,
         a = n.length;
       for (; r + a <= e.length; r++) {
-        let i = e.slice(r, r + a);
-        if (0 === t.compare(n, i)) return !0
+        let o = e.slice(r, r + a);
+        if (0 === t.compare(n, o)) return !0
       }
       return !1
     }, [t]);
   return (0, r.useMemo)(() => ({
     startsWith: n,
     endsWith: a,
-    contains: i
-  }), [n, a, i])
+    contains: o
+  }), [n, a, o])
 }

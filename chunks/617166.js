@@ -1,40 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   useSliderState: function() {
-    return o
+    return i
   }
 }), n("222007");
 var r = n("240849"),
   a = n("679750"),
-  i = n("884691");
+  o = n("884691");
 
-function o(e) {
+function i(e) {
   var t;
   let {
     isDisabled: n = !1,
-    minValue: o = 0,
+    minValue: i = 0,
     maxValue: u = 100,
     numberFormatter: d,
     step: p = 1,
     orientation: f = "horizontal"
-  } = e, m = (0, i.useMemo)(() => {
-    let e = (u - o) / 10;
+  } = e, h = (0, o.useMemo)(() => {
+    let e = (u - i) / 10;
     return Math.max(e = (0, r.snapValueToStep)(e, 0, e + p, p), p)
-  }, [p, u, o]), h = (0, i.useMemo)(() => c(e.value), [e.value]), v = (0, i.useMemo)(() => null !== (t = c(e.defaultValue)) && void 0 !== t ? t : [o], [e.defaultValue, o]), g = l(e.value, e.defaultValue, e.onChange), y = l(e.value, e.defaultValue, e.onChangeEnd), [b, x] = (0, a.useControlledState)(h, v, g), [S, w] = (0, i.useState)(Array(b.length).fill(!1)), D = (0, i.useRef)(Array(b.length).fill(!0)), [C, k] = (0, i.useState)(void 0), P = (0, i.useRef)(b), E = (0, i.useRef)(S), T = e => {
+  }, [p, u, i]), m = (0, o.useMemo)(() => c(e.value), [e.value]), v = (0, o.useMemo)(() => null !== (t = c(e.defaultValue)) && void 0 !== t ? t : [i], [e.defaultValue, i]), g = l(e.value, e.defaultValue, e.onChange), y = l(e.value, e.defaultValue, e.onChangeEnd), [b, x] = (0, a.useControlledState)(m, v, g), [S, w] = (0, o.useState)(Array(b.length).fill(!1)), D = (0, o.useRef)(Array(b.length).fill(!0)), [C, k] = (0, o.useState)(void 0), P = (0, o.useRef)(b), E = (0, o.useRef)(S), T = e => {
     P.current = e, x(e)
   }, M = e => {
     E.current = e, w(e)
   };
 
   function R(e) {
-    return (e - o) / (u - o)
-  }
-
-  function I(e) {
-    return 0 === e ? o : b[e - 1]
+    return (e - i) / (u - i)
   }
 
   function O(e) {
+    return 0 === e ? i : b[e - 1]
+  }
+
+  function I(e) {
     return e === b.length - 1 ? u : b[e + 1]
   }
 
@@ -44,25 +44,25 @@ function o(e) {
 
   function L(e, t) {
     if (n || !A(e)) return;
-    let a = I(e),
-      i = O(e);
-    t = (0, r.snapValueToStep)(t, a, i, p), T(s(P.current, e, t))
+    let a = O(e),
+      o = I(e);
+    t = (0, r.snapValueToStep)(t, a, o, p), T(s(P.current, e, t))
   }
 
   function N(e) {
     return d.format(e)
   }
 
-  function F(e) {
-    let t = e * (u - o) + o;
-    return (0, r.clamp)(Math.round((t - o) / p) * p + o, o, u)
+  function j(e) {
+    let t = e * (u - i) + i;
+    return (0, r.clamp)(Math.round((t - i) / p) * p + i, i, u)
   }
   return {
     values: b,
     getThumbValue: e => b[e],
     setThumbValue: L,
     setThumbPercent: function(e, t) {
-      L(e, F(t))
+      L(e, j(t))
     },
     isThumbDragging: e => S[e],
     setThumbDragging: function(e, t) {
@@ -76,9 +76,9 @@ function o(e) {
     getValuePercent: R,
     getThumbValueLabel: e => N(b[e]),
     getFormattedValue: N,
-    getThumbMinValue: I,
-    getThumbMaxValue: O,
-    getPercentValue: F,
+    getThumbMinValue: O,
+    getThumbMaxValue: I,
+    getPercentValue: j,
     isThumbEditable: A,
     setThumbEditable: function(e, t) {
       D.current[e] = t
@@ -86,15 +86,15 @@ function o(e) {
     incrementThumb: function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = Math.max(t, p);
-      L(e, (0, r.snapValueToStep)(b[e] + n, o, u, p))
+      L(e, (0, r.snapValueToStep)(b[e] + n, i, u, p))
     },
     decrementThumb: function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = Math.max(t, p);
-      L(e, (0, r.snapValueToStep)(b[e] - n, o, u, p))
+      L(e, (0, r.snapValueToStep)(b[e] - n, i, u, p))
     },
     step: p,
-    pageSize: m,
+    pageSize: h,
     orientation: f,
     isDisabled: n
   }

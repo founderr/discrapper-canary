@@ -1,7 +1,7 @@
 "use strict";
-var i;
-n.r(t), n.d(t, {
+var t;
+E.r(_), E.d(_, {
   ContentInventoryFeedKey: function() {
-    return i
+    return t
   }
-}), (i || (i = {})).GLOBAL_FEED = "global feed"
+}), (t || (t = {})).GLOBAL_FEED = "global feed"

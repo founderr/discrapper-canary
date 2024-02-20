@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return f
+    return S
   }
-}), n("222007");
-var i = n("249654"),
-  a = n("913144"),
-  l = n("776156"),
-  s = n("689988"),
-  r = n("915639"),
-  o = n("34966"),
-  u = n("473006"),
-  d = n("788434");
-class c extends s.default {
+}), E("222007");
+var t = E("249654"),
+  o = E("913144"),
+  n = E("776156"),
+  r = E("689988"),
+  i = E("915639"),
+  a = E("34966"),
+  I = E("473006"),
+  s = E("788434");
+class T extends r.default {
   constructor(...e) {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e)
     }, this.handleConnectionOpen = async e => {
-      let t = await l.default.fetchChangelogConfig(),
-        n = t.body,
-        s = (0, u.getClientVersionForChangelog)(),
-        c = function(e, t) {
-          let n = 0,
-            i = null;
-          for (var [a, {
-              min_version: l
-            }] of Object.entries(e)) l <= t && l > n && (n = l, i = a);
-          return i
-        }(n, s);
-      if (a.default.dispatch({
+      let _ = await n.default.fetchChangelogConfig(),
+        E = _.body,
+        r = (0, I.getClientVersionForChangelog)(),
+        T = function(e, _) {
+          let E = 0,
+            t = null;
+          for (var [o, {
+              min_version: n
+            }] of Object.entries(e)) n <= _ && n > E && (E = n, t = o);
+          return t
+        }(E, r);
+      if (o.default.dispatch({
           type: "CHANGE_LOG_SET_CONFIG",
-          config: t.body,
-          latestChangelogId: c
-        }), null == c || !0 !== n[c].show_on_startup) return;
-      let f = o.default.lastSeenChangelogId(),
-        E = o.default.lastSeenChangelogDate();
-      if (null != f && 0 >= i.default.compare(c, f)) return;
-      let h = await l.default.fetchChangelog(c, r.default.locale);
-      if (null != h) {
-        if (null == E || null == o.default.lastSeenChangelogDate()) {
-          l.default.markChangelogAsSeen(c, h.date);
+          config: _.body,
+          latestChangelogId: T
+        }), null == T || !0 !== E[T].show_on_startup) return;
+      let S = a.default.lastSeenChangelogId(),
+        N = a.default.lastSeenChangelogDate();
+      if (null != S && 0 >= t.default.compare(T, S)) return;
+      let O = await n.default.fetchChangelog(T, i.default.locale);
+      if (null != O) {
+        if (null == N || null == a.default.lastSeenChangelogDate()) {
+          n.default.markChangelogAsSeen(T, O.date);
           return
-        }!o.default.isLocked() && new Date(h.date) > new Date(E) && (0, d.openChangelog)()
+        }!a.default.isLocked() && new Date(O.date) > new Date(N) && (0, s.openChangelog)()
       }
     }
   }
 }
-var f = new c
+var S = new T

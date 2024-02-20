@@ -1,7 +1,7 @@
 "use strict";
-var r, i;
+var i, r;
 n.r(t), n.d(t, {
   ApplicationOverlayMethodFlags: function() {
-    return r
+    return i
   }
-}), (i = r || (r = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.OUT_OF_PROCESS = 1] = "OUT_OF_PROCESS"
+}), (r = i || (i = {}))[r.DEFAULT = 0] = "DEFAULT", r[r.OUT_OF_PROCESS = 1] = "OUT_OF_PROCESS"

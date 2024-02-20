@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return s
+    return r
   }
 });
-var i = n("37983");
-n("884691");
-var a = n("605475"),
-  l = n("782340");
+var t = E("37983");
+E("884691");
+var o = E("605475"),
+  n = E("782340");
 
-function s(e) {
+function r(e) {
   let {
-    id: t,
-    width: n = a.CUSTOM_BASE_SIZE
-  } = e, s = a.ICONS_BY_ID[t];
-  return null == s ? null : (0, i.jsx)("img", {
-    src: s.iconSource,
-    width: n,
-    alt: l.default.Messages.SETTINGS_CUSTOM_APP_ICONS,
+    id: _,
+    width: E = o.CUSTOM_BASE_SIZE
+  } = e, r = o.ICONS_BY_ID[_];
+  return null == r ? null : (0, t.jsx)("img", {
+    src: r.iconSource,
+    width: E,
+    alt: n.default.Messages.SETTINGS_CUSTOM_APP_ICONS,
     draggable: !1
   })
 }

@@ -13,37 +13,37 @@ n.r(t), n.d(t, {
     return c
   },
   DEFAULT_KEYBIND: function() {
-    return h
+    return E
   },
   CLIPS_TOAST_DURATION: function() {
-    return f
+    return p
   },
   ClipsLogger: function() {
-    return E
+    return h
   },
   CLIPS_EXPORT_FILENAME: function() {
     return _
   },
   CURRENT_CLIP_METADATA_VERSION: function() {
-    return m
-  },
-  CLIPS_HARDWARE_CLASSIFICATION_VERSION: function() {
     return S
   },
+  CLIPS_HARDWARE_CLASSIFICATION_VERSION: function() {
+    return m
+  },
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: function() {
-    return g
+    return T
   },
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: function() {
-    return T
+    return g
   },
   OSX_HARDWARE_AUTO_ENABLE_GPU_REGEX: function() {
     return I
   },
   MIN_CLIP_DURATION_SECONDS: function() {
-    return v
+    return C
   },
   CLIP_PLAYING_DEBOUNCE_MS: function() {
-    return C
+    return v
   },
   CLIP_NAME_MIN_CHAR_LENGTH: function() {
     return A
@@ -55,22 +55,22 @@ n.r(t), n.d(t, {
     return N
   },
   CLIPS_GALLERY_MODAL_KEY: function() {
-    return y
-  },
-  CLIPS_THUMBNAIL_MAX_WIDTH: function() {
     return O
   },
-  CLIPS_THUMBNAIL_MAX_HEIGHT: function() {
+  CLIPS_THUMBNAIL_MAX_WIDTH: function() {
     return D
   },
-  CLIPS_MAX_PARTICIPANTS: function() {
-    return b
+  CLIPS_THUMBNAIL_MAX_HEIGHT: function() {
+    return y
   },
-  CLIP_NAME_TEMPLATE: function() {
+  CLIPS_MAX_PARTICIPANTS: function() {
     return P
   },
-  MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: function() {
+  CLIP_NAME_TEMPLATE: function() {
     return L
+  },
+  MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: function() {
+    return b
   },
   CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY: function() {
     return M
@@ -79,13 +79,13 @@ n.r(t), n.d(t, {
     return U
   },
   SEEK_SHIFT_MODIFIER: function() {
-    return w
+    return G
   },
   CLIPS_EDUCATION_COOLDOWN: function() {
-    return k
+    return w
   },
   CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD: function() {
-    return G
+    return k
   },
   CLIPS_EDUCATION_MAX_DISMISSALS_ENABLED: function() {
     return x
@@ -95,32 +95,32 @@ n.r(t), n.d(t, {
   }
 });
 var i, r, s, a, o, l, u, c, d = n("605250"),
-  p = n("718517");
-(i = o || (o = {}))[i.SECONDS_30 = 30 * p.default.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = p.default.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * p.default.Millis.MINUTE] = "MINUTES_2", (r = l || (l = {}))[r.ALL = 0] = "ALL", r[r.FRIENDS = 1] = "FRIENDS", (s = u || (u = {})).DECOUPLED = "decoupled", s.VIEWER = "viewer", s.STREAMER = "streamer", (a = c || (c = {}))[a.Error = 0] = "Error", a[a.Disabled = 1] = "Disabled", a[a.Enabled = 2] = "Enabled";
-let h = "alt+c",
-  f = 6 * p.default.Millis.SECOND,
-  E = new d.default("Clips"),
+  f = n("718517");
+(i = o || (o = {}))[i.SECONDS_30 = 30 * f.default.Millis.SECOND] = "SECONDS_30", i[i.MINUTES_1 = f.default.Millis.MINUTE] = "MINUTES_1", i[i.MINUTES_2 = 2 * f.default.Millis.MINUTE] = "MINUTES_2", (r = l || (l = {}))[r.ALL = 0] = "ALL", r[r.FRIENDS = 1] = "FRIENDS", (s = u || (u = {})).DECOUPLED = "decoupled", s.VIEWER = "viewer", s.STREAMER = "streamer", (a = c || (c = {}))[a.Error = 0] = "Error", a[a.Disabled = 1] = "Disabled", a[a.Enabled = 2] = "Enabled";
+let E = "alt+c",
+  p = 6 * f.default.Millis.SECOND,
+  h = new d.default("Clips"),
   _ = e => "Discord_Clip_".concat(e, ".mp4"),
-  m = 3,
-  S = 1,
-  g = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-  T = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+  S = 3,
+  m = 1,
+  T = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+  g = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
   I = /(Apple M[12].*)/,
-  v = .1,
-  C = 25,
+  C = .1,
+  v = 25,
   A = 0,
   R = 200,
   N = "clips-edit",
-  y = "clips-gallery",
-  O = 640,
-  D = 360,
-  b = 100,
-  P = e => "Clip - ".concat(new Date(e).toLocaleString()),
-  L = 15,
+  O = "clips-gallery",
+  D = 640,
+  y = 360,
+  P = 100,
+  L = e => "Clip - ".concat(new Date(e).toLocaleString()),
+  b = 15,
   M = 3e4,
   U = 30,
-  w = 10,
-  k = 14 * p.default.Millis.DAY,
-  G = 5,
+  G = 10,
+  w = 14 * f.default.Millis.DAY,
+  k = 5,
   x = 5,
   F = 1

@@ -1,22 +1,22 @@
 "use strict";
 E.r(_), E.d(_, {
   DSN: function() {
-    return r
+    return i
   },
   default: function() {
-    return n
+    return I
   }
 }), E("222007"), E("70102");
 var t = E("303167"),
   o = E("423670"),
-  I = E("773336"),
-  T = E("50885");
-let r = "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984";
+  n = E("773336"),
+  r = E("50885");
+let i = "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984";
 
 function a() {
-  var e, _, E, t, o, r;
+  var e, _, E, t, o, i;
   let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-  I.isPlatformEmbedded && T.default.updateCrashReporter({
+  n.isPlatformEmbedded && r.default.updateCrashReporter({
     user_id: null !== (e = a.id) && void 0 !== e ? e : "",
     username: null !== (_ = a.username) && void 0 !== _ ? _ : "",
     email: null !== (E = a.email) && void 0 !== E ? E : "",
@@ -24,12 +24,12 @@ function a() {
       user: {
         id: null !== (t = a.id) && void 0 !== t ? t : "",
         username: null !== (o = a.username) && void 0 !== o ? o : "",
-        email: null !== (r = a.email) && void 0 !== r ? r : ""
+        email: null !== (i = a.email) && void 0 !== i ? i : ""
       }
     }
   })
 }
-var n = {
+var I = {
   setUser(e, _, E, t) {
     let o = {
       id: e,

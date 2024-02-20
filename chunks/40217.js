@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("37983"),
@@ -13,21 +13,21 @@ var i = n("37983"),
   u = n("784063"),
   c = n("104240"),
   d = n("340346"),
-  p = n("625454");
+  f = n("625454");
 
-function h(e) {
+function E(e) {
   let {
     streamId: t,
     paused: n,
     onReady: s,
     onResize: o,
-    className: h,
-    ...f
-  } = e, E = r.useRef(null), {
+    className: E,
+    ...p
+  } = e, h = r.useRef(null), {
     current: _
   } = r.useRef(l.uniqueId("media-engine-video-"));
   return r.useEffect(() => {
-    let e = E.current;
+    let e = h.current;
     if (!n && null != e) {
       let n = !1,
         i = (t, i) => {
@@ -47,20 +47,20 @@ function h(e) {
           return "canary" === s || "development" === s ? (0, d.initRenderingContextWebGL)(e) : (0, c.initRenderingContext2D)(e)
         }(e);
         if (null == n) return;
-        return p.default.addSink(t, E, e => {
+        return f.default.addSink(t, h, e => {
           i(e.width, e.height), n.render(e)
         }), () => {
-          p.default.removeSink(t, E)
+          f.default.removeSink(t, h)
         }
       }
     }
   }, [t, n, o, s, _]), (0, i.jsx)("canvas", {
     id: _,
-    className: a("media-engine-video", h),
-    ref: E,
-    ...f
+    className: a("media-engine-video", E),
+    ref: h,
+    ...p
   })
 }
-h.defaultProps = {
+E.defaultProps = {
   paused: !1
 }

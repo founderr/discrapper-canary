@@ -1,102 +1,102 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return h
+    return T
   }
-}), n("222007");
-var a = n("37983"),
-  l = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
-  r = n("509043"),
-  d = n("65597"),
-  o = n("77078"),
-  u = n("851387"),
-  c = n("841098"),
-  N = n("206230"),
-  _ = n("388491"),
-  I = n("506885"),
-  E = n("217513"),
-  f = n("528438"),
-  O = n("430312"),
-  S = n("305961"),
-  T = n("697218"),
-  m = n("928201"),
-  D = n("387111"),
-  A = n("158998"),
-  g = n("590456"),
-  G = n("345696");
+}), a("222007");
+var l = a("37983"),
+  n = a("884691"),
+  s = a("414456"),
+  i = a.n(s),
+  d = a("509043"),
+  r = a("65597"),
+  u = a("77078"),
+  o = a("851387"),
+  c = a("841098"),
+  f = a("206230"),
+  m = a("388491"),
+  h = a("506885"),
+  E = a("217513"),
+  g = a("528438"),
+  I = a("430312"),
+  _ = a("305961"),
+  x = a("697218"),
+  v = a("928201"),
+  S = a("387111"),
+  C = a("158998"),
+  N = a("590456"),
+  p = a("345696");
 
-function h(e) {
+function T(e) {
   var t;
   let {
-    guildId: n,
+    guildId: a,
     welcomeMessage: s,
-    className: h
-  } = e, L = (0, c.default)(), R = (0, d.default)([S.default], () => S.default.getGuild(n)), p = (0, d.default)([N.default], () => N.default.syncProfileThemeWithUserTheme), x = (0, d.default)([N.default], () => N.default.useReducedMotion), P = (0, d.default)([T.default], () => T.default.getUser(null == s ? void 0 : s.authorIds[0])), M = (0, d.default)([T.default], () => T.default.getCurrentUser()), v = (0, E.default)(null == P ? void 0 : P.id, n), [U] = (0, f.default)(P, v), C = p ? L : null !== (t = (0, _.getProfileTheme)(U)) && void 0 !== t ? t : L, B = (0, o.useToken)(o.tokens.colors.BACKGROUND_SECONDARY, C).hex(), j = l.useMemo(() => {
+    className: T
+  } = e, A = (0, c.default)(), j = (0, r.default)([_.default], () => _.default.getGuild(a)), M = (0, r.default)([f.default], () => f.default.syncProfileThemeWithUserTheme), D = (0, r.default)([f.default], () => f.default.useReducedMotion), F = (0, r.default)([x.default], () => x.default.getUser(null == s ? void 0 : s.authorIds[0])), L = (0, r.default)([x.default], () => x.default.getCurrentUser()), R = (0, E.default)(null == F ? void 0 : F.id, a), [b] = (0, g.default)(F, R), G = M ? A : null !== (t = (0, m.getProfileTheme)(b)) && void 0 !== t ? t : A, O = (0, u.useToken)(u.tokens.colors.BACKGROUND_SECONDARY, G).hex(), y = n.useMemo(() => {
     var e;
     return null !== (e = null == s ? void 0 : s.authorIds) && void 0 !== e ? e : []
   }, [s]);
-  l.useEffect(() => {
-    u.default.requestMembersById(n, j)
-  }, [n, j]), l.useEffect(() => {
-    null != P && (0, I.default)(P.id, P.getAvatarURL(n, 48), {
-      guildId: n
+  n.useEffect(() => {
+    o.default.requestMembersById(a, y)
+  }, [a, y]), n.useEffect(() => {
+    null != F && (0, h.default)(F.id, F.getAvatarURL(a, 48), {
+      guildId: a
     })
-  }, [P, n]);
-  let b = (0, A.useName)(M);
-  if (null == P || null == M || null == s) return null;
-  let w = null != R && R.ownerId === P.id;
-  return (0, a.jsx)("div", {
-    className: i(G.welcomeMessageContainer, h),
-    children: (0, a.jsxs)(O.default, {
-      className: G.welcomeMessageProfileContainer,
-      user: P,
-      guildId: n,
-      profileType: g.UserProfileTypes.CARD,
+  }, [F, a]);
+  let H = (0, C.useName)(L);
+  if (null == F || null == L || null == s) return null;
+  let k = null != j && j.ownerId === F.id;
+  return (0, l.jsx)("div", {
+    className: i(p.welcomeMessageContainer, T),
+    children: (0, l.jsxs)(I.default, {
+      className: p.welcomeMessageProfileContainer,
+      user: F,
+      guildId: a,
+      profileType: N.UserProfileTypes.CARD,
       forceShowPremium: !0,
       useDefaultClientTheme: !0,
-      children: [(0, a.jsx)("div", {
-        className: G.avatarBackground
-      }), x ? (0, a.jsx)(o.Avatar, {
-        src: P.getAvatarURL(n, 48),
-        size: o.AvatarSizes.SIZE_48,
-        className: G.avatar,
-        "aria-label": P.username
-      }) : (0, a.jsx)(o.AnimatedAvatar, {
-        src: P.getAvatarURL(n, 48),
-        size: o.AvatarSizes.SIZE_48,
-        className: G.avatar,
-        "aria-label": P.username
-      }), (0, a.jsx)("div", {
-        className: G.avatarBorder,
+      children: [(0, l.jsx)("div", {
+        className: p.avatarBackground
+      }), D ? (0, l.jsx)(u.Avatar, {
+        src: F.getAvatarURL(a, 48),
+        size: u.AvatarSizes.SIZE_48,
+        className: p.avatar,
+        "aria-label": F.username
+      }) : (0, l.jsx)(u.AnimatedAvatar, {
+        src: F.getAvatarURL(a, 48),
+        size: u.AvatarSizes.SIZE_48,
+        className: p.avatar,
+        "aria-label": F.username
+      }), (0, l.jsx)("div", {
+        className: p.avatarBorder,
         style: {
-          backgroundColor: null != U ? (0, r.int2rgba)(U, 1) : B
+          backgroundColor: null != b ? (0, d.int2rgba)(b, 1) : O
         }
-      }), (0, a.jsxs)("div", {
-        className: G.welcomeMessageContent,
-        children: [(0, a.jsxs)("div", {
-          className: G.adminUsernameContainer,
-          children: [(0, a.jsx)(o.Text, {
+      }), (0, l.jsxs)("div", {
+        className: p.welcomeMessageContent,
+        children: [(0, l.jsxs)("div", {
+          className: p.adminUsernameContainer,
+          children: [(0, l.jsx)(u.Text, {
             variant: "text-sm/semibold",
-            children: D.default.getName(n, null, P)
-          }), w ? (0, a.jsx)(m.default, {
-            className: G.ownerIcon
+            children: S.default.getName(a, null, F)
+          }), k ? (0, l.jsx)(v.default, {
+            className: p.ownerIcon
           }) : null]
-        }), (0, a.jsx)(o.Text, {
+        }), (0, l.jsx)(u.Text, {
           variant: "text-md/medium",
           children: function(e, t) {
-            let n = e.split(/\[@username\]/g);
-            return (0, a.jsx)("span", {
-              children: n.map((e, l) => (0, a.jsxs)(a.Fragment, {
-                children: [e, l < n.length - 1 ? (0, a.jsx)(o.Text, {
+            let a = e.split(/\[@username\]/g);
+            return (0, l.jsx)("span", {
+              children: a.map((e, n) => (0, l.jsxs)(l.Fragment, {
+                children: [e, n < a.length - 1 ? (0, l.jsx)(u.Text, {
                   tag: "span",
                   variant: "text-md/semibold",
                   children: "@".concat(t)
                 }) : null]
               }))
             })
-          }(null == s ? void 0 : s.message, null != b ? b : M.username)
+          }(null == s ? void 0 : s.message, null != H ? H : L.username)
         })]
       })]
     })

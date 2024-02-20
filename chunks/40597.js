@@ -2,7 +2,7 @@
 let i, r;
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("70102");
 var s = n("446674"),
@@ -12,17 +12,17 @@ var s = n("446674"),
   u = n("49111");
 let c = null,
   d = null,
-  p = null;
+  f = null;
 (0, l.isDesktop)() && (window.popupBridge = {
   getReturnUrlPrefix: () => {
     if (null == i) throw Error("popupBridgeState is unset");
     return a.default.getAPIBaseURL() + u.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.PaymentGateways.BRAINTREE, i)
   },
   open: e => {
-    r = e, window.open(e), f.emitChange()
+    r = e, window.open(e), p.emitChange()
   }
 });
-class h extends s.default.Store {
+class E extends s.default.Store {
   getClient() {
     return c
   }
@@ -30,14 +30,14 @@ class h extends s.default.Store {
     return d
   }
   getVenmoClient() {
-    return p
+    return f
   }
   getLastURL() {
     return r
   }
 }
-h.displayName = "BraintreeStore";
-let f = new h(o.default, {
+E.displayName = "BraintreeStore";
+let p = new E(o.default, {
   BRAINTREE_CREATE_CLIENT_SUCCESS: function(e) {
     let {
       client: t
@@ -78,10 +78,10 @@ let f = new h(o.default, {
     let {
       venmoClient: t
     } = e;
-    p = t
+    f = t
   },
   BRAINTREE_TEARDOWN_VENMO_CLIENT: function() {
-    p = null
+    f = null
   }
 });
-var E = f
+var h = p

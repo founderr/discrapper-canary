@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return d.MediaEngineEvent
   },
   MediaEngineContextTypes: function() {
-    return p.MediaEngineContextTypes
+    return f.MediaEngineContextTypes
   },
   FilterTargetType: function() {
     return a
@@ -22,35 +22,35 @@ n.r(t), n.d(t, {
     return l
   },
   determineMediaEngine: function() {
-    return f
+    return p
   },
   initializeMediaEngine: function() {
-    return E
+    return h
   }
 });
 var i, r, s, a, o, l, u = n("947279"),
   c = n("571877"),
   d = n("775766"),
-  p = n("353927");
+  f = n("353927");
 
-function h(e) {
+function E(e) {
   switch (e) {
-    case p.MediaEngineImplementations.NATIVE:
+    case f.MediaEngineImplementations.NATIVE:
       return n("741397").default;
-    case p.MediaEngineImplementations.WEBRTC:
+    case f.MediaEngineImplementations.WEBRTC:
       return n("551079").default;
-    case p.MediaEngineImplementations.DUMMY:
+    case f.MediaEngineImplementations.DUMMY:
     default:
       return n("870630").default
   }
 }
 
-function f() {
+function p() {
   var e;
-  return null !== (e = [p.MediaEngineImplementations.NATIVE, p.MediaEngineImplementations.WEBRTC].find(e => h(e).supported())) && void 0 !== e ? e : p.MediaEngineImplementations.DUMMY
+  return null !== (e = [f.MediaEngineImplementations.NATIVE, f.MediaEngineImplementations.WEBRTC].find(e => E(e).supported())) && void 0 !== e ? e : f.MediaEngineImplementations.DUMMY
 }
 
-function E(e) {
-  let t = h(e);
+function h(e) {
+  let t = E(e);
   return new t
 }(i = a || (a = {})).INPUT_DEVICE = "input_device", i.STREAM = "stream", (r = o || (o = {})).NONE = "", r.BACKGROUND_BLUR = "background_blur", r.BACKGROUND_REPLACEMENT = "background_replacement", (s = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview", s.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ToastContainer: function() {
-    return f
+    return p
   }
 });
 var i = n("37983"),
@@ -13,12 +13,12 @@ var i = n("37983"),
   u = n("325236"),
   c = n("159350"),
   d = n("354149");
-let p = {
+let f = {
     duration: 300,
     friction: 24,
     tension: 280
   },
-  h = {
+  E = {
     [c.ToastPosition.TOP]: {
       styles: d.containerTop,
       transition: {
@@ -26,18 +26,18 @@ let p = {
         from: {
           transform: "translate3d(0, -100%, 0)",
           opacity: 0,
-          config: p
+          config: f
         },
         enter: {
           transform: "translate3d(0, -0px, 0)",
           opacity: 1,
-          config: p
+          config: f
         },
         leave: {
           transform: "translate3d(0, -100%, 0)",
           opacity: 0,
           config: {
-            ...p,
+            ...f,
             friction: 40,
             clamp: !0
           }
@@ -51,18 +51,18 @@ let p = {
         from: {
           transform: "translate3d(0, 100%, 0)",
           opacity: 0,
-          config: p
+          config: f
         },
         enter: {
           transform: "translate3d(0, 0px, 0)",
           opacity: 1,
-          config: p
+          config: f
         },
         leave: {
           transform: "translate3d(0, 100%, 0)",
           opacity: 0,
           config: {
-            ...p,
+            ...f,
             friction: 40,
             clamp: !0
           }
@@ -71,37 +71,37 @@ let p = {
     }
   };
 
-function f() {
+function p() {
   var e, t, n, d;
-  let p = (0, u.useToastStore)(e => e.currentToast),
-    f = r.useRef(null !== (n = null == p ? void 0 : null === (e = p.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : c.TOAST_DEFAULT_OPTIONS.position),
-    E = r.useRef(null !== (d = null == p ? void 0 : null === (t = p.options) || void 0 === t ? void 0 : t.duration) && void 0 !== d ? d : c.TOAST_DEFAULT_OPTIONS.duration),
+  let f = (0, u.useToastStore)(e => e.currentToast),
+    p = r.useRef(null !== (n = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : c.TOAST_DEFAULT_OPTIONS.position),
+    h = r.useRef(null !== (d = null == f ? void 0 : null === (t = f.options) || void 0 === t ? void 0 : t.duration) && void 0 !== d ? d : c.TOAST_DEFAULT_OPTIONS.duration),
     _ = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   r.useEffect(() => {
-    if (null != p) {
+    if (null != f) {
       var e, t, n, i;
-      f.current = null !== (n = null === (e = p.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : c.TOAST_DEFAULT_OPTIONS.position, E.current = null !== (i = null === (t = p.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : c.TOAST_DEFAULT_OPTIONS.duration
+      p.current = null !== (n = null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : c.TOAST_DEFAULT_OPTIONS.position, h.current = null !== (i = null === (t = f.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : c.TOAST_DEFAULT_OPTIONS.duration
     }
-  }, [p]);
-  let m = r.useMemo(() => {
+  }, [f]);
+  let S = r.useMemo(() => {
       var e, t;
-      return h[null !== (t = null == p ? void 0 : null === (e = p.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : f.current]
-    }, [p]),
-    S = (0, s.useTransition)(p, {
+      return E[null !== (t = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : p.current]
+    }, [f]),
+    m = (0, s.useTransition)(f, {
       keys: e => {
         var t;
         return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
       },
       immediate: _,
-      ...m.transition
+      ...S.transition
     });
   return r.useEffect(() => {
-    null != p && setTimeout(() => {
+    null != f && setTimeout(() => {
       (0, u.popToast)()
-    }, E.current)
-  }, [p]), (0, i.jsx)("div", {
-    className: m.styles,
-    children: S((e, t) => null === t ? null : (0, i.jsx)(s.animated.div, {
+    }, h.current)
+  }, [f]), (0, i.jsx)("div", {
+    className: S.styles,
+    children: m((e, t) => null === t ? null : (0, i.jsx)(s.animated.div, {
       style: e,
       children: (0, i.jsx)(l.Toast, {
         ...t

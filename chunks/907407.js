@@ -2,22 +2,22 @@
 let t, o;
 E.r(_), E.d(_, {
   FormattedMessage: function() {
-    return A
+    return T
   },
   setUpdateRules: function() {
-    return s
+    return S
   },
   getMessage: function() {
-    return R
+    return N
   }
 }), E("222007"), E("781738");
-var I = E("860347"),
-  T = E.n(I),
-  r = E("404828"),
-  a = E.n(r),
-  n = E("841206"),
-  i = E("853812");
-class A {
+var n = E("860347"),
+  r = E.n(n),
+  i = E("404828"),
+  a = E.n(i),
+  I = E("841206"),
+  s = E("853812");
+class T {
   format(e) {
     if (!this.hasMarkdown) return this.intlMessage.format(e);
     let [_, E] = this.getContext(e);
@@ -31,7 +31,7 @@ class A {
     return this.intlMessage.format(e)
   }
   getContext(e) {
-    let _ = i.UNSAFE_RE.test(this.message),
+    let _ = s.UNSAFE_RE.test(this.message),
       E = {};
     if (_) {
       let _ = 0;
@@ -40,36 +40,36 @@ class A {
     return [e, E]
   }
   constructor(e, _, E) {
-    this.message = E ? e : e.replace(i.UNSAFE_RE_ALL, ""), this.hasMarkdown = E, this.intlMessage = new T(this.message, _)
+    this.message = E ? e : e.replace(s.UNSAFE_RE_ALL, ""), this.hasMarkdown = E, this.intlMessage = new r(this.message, _)
   }
 }
 
-function s(e) {
+function S(e) {
   t = function(e, _) {
     let E = a.parserFor(_(e)),
       t = a.reactFor(a.ruleOutput(e, "react"));
     return (e, _, o) => {
-      let I = !e.includes("\n\n");
-      return !I && (e += "\n\n"), t(E(e, {
-        inline: I,
+      let n = !e.includes("\n\n");
+      return !n && (e += "\n\n"), t(E(e, {
+        inline: n,
         context: _,
         unsafeContext: o
       }))
     }
-  }(n.default, e), o = function(e) {
+  }(I.default, e), o = function(e) {
     let _ = a.parserFor(e);
     return (e, E, t) => _(e + "\n\n", {
       inline: !1,
       context: E,
       unsafeContext: t
     })
-  }(n.default)
+  }(I.default)
 }
 
-function R(e, _) {
+function N(e, _) {
   if (null == e) return "";
-  null == t && s(E("186372").default), e = e.replace(/^\n+|\n+$/g, "");
-  let o = i.FORMAT_RE.test(e),
-    I = i.MARKDOWN_RE.test(e);
-  return o || I ? new A(e, _, I) : e
+  null == t && S(E("186372").default), e = e.replace(/^\n+|\n+$/g, "");
+  let o = s.FORMAT_RE.test(e),
+    n = s.MARKDOWN_RE.test(e);
+  return o || n ? new T(e, _, n) : e
 }

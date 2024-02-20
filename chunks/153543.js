@@ -8,43 +8,43 @@ e.exports = function(e, t) {
     return function e(t, n) {
       if (t === n) return !0;
       if (t && n && "object" == typeof t && "object" == typeof n) {
-        var u, s, l, c;
+        var s, u, l, c;
         if (t.constructor !== n.constructor) return !1;
         if (Array.isArray(t)) {
-          if ((u = t.length) != n.length) return !1;
-          for (s = u; 0 != s--;)
-            if (!e(t[s], n[s])) return !1;
+          if ((s = t.length) != n.length) return !1;
+          for (u = s; 0 != u--;)
+            if (!e(t[u], n[u])) return !1;
           return !0
         }
         if (a && t instanceof Map && n instanceof Map) {
           if (t.size !== n.size) return !1;
-          for (c = t.entries(); !(s = c.next()).done;)
-            if (!n.has(s.value[0])) return !1;
-          for (c = t.entries(); !(s = c.next()).done;)
-            if (!e(s.value[1], n.get(s.value[0]))) return !1;
+          for (c = t.entries(); !(u = c.next()).done;)
+            if (!n.has(u.value[0])) return !1;
+          for (c = t.entries(); !(u = c.next()).done;)
+            if (!e(u.value[1], n.get(u.value[0]))) return !1;
           return !0
         }
         if (o && t instanceof Set && n instanceof Set) {
           if (t.size !== n.size) return !1;
-          for (c = t.entries(); !(s = c.next()).done;)
-            if (!n.has(s.value[0])) return !1;
+          for (c = t.entries(); !(u = c.next()).done;)
+            if (!n.has(u.value[0])) return !1;
           return !0
         }
         if (i && ArrayBuffer.isView(t) && ArrayBuffer.isView(n)) {
-          if ((u = t.length) != n.length) return !1;
-          for (s = u; 0 != s--;)
-            if (t[s] !== n[s]) return !1;
+          if ((s = t.length) != n.length) return !1;
+          for (u = s; 0 != u--;)
+            if (t[u] !== n[u]) return !1;
           return !0
         }
         if (t.constructor === RegExp) return t.source === n.source && t.flags === n.flags;
         if (t.valueOf !== Object.prototype.valueOf && "function" == typeof t.valueOf && "function" == typeof n.valueOf) return t.valueOf() === n.valueOf();
         if (t.toString !== Object.prototype.toString && "function" == typeof t.toString && "function" == typeof n.toString) return t.toString() === n.toString();
-        if ((u = (l = Object.keys(t)).length) !== Object.keys(n).length) return !1;
-        for (s = u; 0 != s--;)
-          if (!Object.prototype.hasOwnProperty.call(n, l[s])) return !1;
+        if ((s = (l = Object.keys(t)).length) !== Object.keys(n).length) return !1;
+        for (u = s; 0 != u--;)
+          if (!Object.prototype.hasOwnProperty.call(n, l[u])) return !1;
         if (r && t instanceof Element) return !1;
-        for (s = u; 0 != s--;)
-          if (("_owner" !== l[s] && "__v" !== l[s] && "__o" !== l[s] || !t.$$typeof) && !e(t[l[s]], n[l[s]])) return !1;
+        for (u = s; 0 != u--;)
+          if (("_owner" !== l[u] && "__v" !== l[u] && "__o" !== l[u] || !t.$$typeof) && !e(t[l[u]], n[l[u]])) return !1;
         return !0
       }
       return t != t && n != n

@@ -2,8 +2,8 @@
 n("424973"), n("808653"), n("781738");
 var r = n("280973"),
   a = Object.prototype.hasOwnProperty,
-  i = Array.isArray,
-  o = function() {
+  o = Array.isArray,
+  i = function() {
     for (var e = [], t = 0; t < 256; ++t) e.push("%" + ((t < 16 ? "0" : "") + t.toString(16)).toUpperCase());
     return e
   }(),
@@ -11,7 +11,7 @@ var r = n("280973"),
     for (; e.length > 1;) {
       var t = e.pop(),
         n = t.obj[t.prop];
-      if (i(n)) {
+      if (o(n)) {
         for (var r = [], a = 0; a < n.length; ++a) void 0 !== n[a] && r.push(n[a]);
         t.obj[t.prop] = r
       }
@@ -38,11 +38,11 @@ e.exports = {
         },
         prop: "o"
       }], n = [], r = 0; r < t.length; ++r) {
-      for (var a = t[r], i = a.obj[a.prop], o = Object.keys(i), c = 0; c < o.length; ++c) {
-        var l = o[c],
-          u = i[l];
+      for (var a = t[r], o = a.obj[a.prop], i = Object.keys(o), c = 0; c < i.length; ++c) {
+        var l = i[c],
+          u = o[l];
         "object" == typeof u && null !== u && -1 === n.indexOf(u) && (t.push({
-          obj: i,
+          obj: o,
           prop: l
         }), n.push(u))
       }
@@ -58,7 +58,7 @@ e.exports = {
       return r
     }
   },
-  encode: function(e, t, n, a, i) {
+  encode: function(e, t, n, a, o) {
     if (0 === e.length) return e;
     var s = e;
     if ("symbol" == typeof e ? s = Symbol.prototype.toString.call(e) : "string" != typeof e && (s = String(e)), "iso-8859-1" === n) return escape(s).replace(/%u[0-9a-f]{4}/gi, function(e) {
@@ -66,23 +66,23 @@ e.exports = {
     });
     for (var c = "", l = 0; l < s.length; ++l) {
       var u = s.charCodeAt(l);
-      if (45 === u || 46 === u || 95 === u || 126 === u || u >= 48 && u <= 57 || u >= 65 && u <= 90 || u >= 97 && u <= 122 || i === r.RFC1738 && (40 === u || 41 === u)) {
+      if (45 === u || 46 === u || 95 === u || 126 === u || u >= 48 && u <= 57 || u >= 65 && u <= 90 || u >= 97 && u <= 122 || o === r.RFC1738 && (40 === u || 41 === u)) {
         c += s.charAt(l);
         continue
       }
       if (u < 128) {
-        c += o[u];
+        c += i[u];
         continue
       }
       if (u < 2048) {
-        c += o[192 | u >> 6] + o[128 | 63 & u];
+        c += i[192 | u >> 6] + i[128 | 63 & u];
         continue
       }
       if (u < 55296 || u >= 57344) {
-        c += o[224 | u >> 12] + o[128 | u >> 6 & 63] + o[128 | 63 & u];
+        c += i[224 | u >> 12] + i[128 | u >> 6 & 63] + i[128 | 63 & u];
         continue
       }
-      l += 1, c += o[240 | (u = 65536 + ((1023 & u) << 10 | 1023 & s.charCodeAt(l))) >> 18] + o[128 | u >> 12 & 63] + o[128 | u >> 6 & 63] + o[128 | 63 & u]
+      l += 1, c += i[240 | (u = 65536 + ((1023 & u) << 10 | 1023 & s.charCodeAt(l))) >> 18] + i[128 | u >> 12 & 63] + i[128 | u >> 6 & 63] + i[128 | 63 & u]
     }
     return c
   },
@@ -93,7 +93,7 @@ e.exports = {
     return "[object RegExp]" === Object.prototype.toString.call(e)
   },
   maybeMap: function(e, t) {
-    if (i(e)) {
+    if (o(e)) {
       for (var n = [], r = 0; r < e.length; r += 1) n.push(t(e[r]));
       return n
     }
@@ -102,7 +102,7 @@ e.exports = {
   merge: function e(t, n, r) {
     if (!n) return t;
     if ("object" != typeof n) {
-      if (i(t)) t.push(n);
+      if (o(t)) t.push(n);
       else {
         if (!t || "object" != typeof t) return [t, n];
         (r && (r.plainObjects || r.allowPrototypes) || !a.call(Object.prototype, n)) && (t[n] = !0)
@@ -110,15 +110,15 @@ e.exports = {
       return t
     }
     if (!t || "object" != typeof t) return [t].concat(n);
-    var o = t;
-    return (i(t) && !i(n) && (o = c(t, r)), i(t) && i(n)) ? (n.forEach(function(n, i) {
-      if (a.call(t, i)) {
-        var o = t[i];
-        o && "object" == typeof o && n && "object" == typeof n ? t[i] = e(o, n, r) : t.push(n)
-      } else t[i] = n
-    }), t) : Object.keys(n).reduce(function(t, i) {
-      var o = n[i];
-      return a.call(t, i) ? t[i] = e(t[i], o, r) : t[i] = o, t
-    }, o)
+    var i = t;
+    return (o(t) && !o(n) && (i = c(t, r)), o(t) && o(n)) ? (n.forEach(function(n, o) {
+      if (a.call(t, o)) {
+        var i = t[o];
+        i && "object" == typeof i && n && "object" == typeof n ? t[o] = e(i, n, r) : t.push(n)
+      } else t[o] = n
+    }), t) : Object.keys(n).reduce(function(t, o) {
+      var i = n[o];
+      return a.call(t, o) ? t[o] = e(t[o], i, r) : t[o] = i, t
+    }, i)
   }
 }

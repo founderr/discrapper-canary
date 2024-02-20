@@ -1,43 +1,43 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   CommonConfettiCannonContextProvider: function() {
-    return u
+    return I
   }
-}), n("222007");
-var i = n("37983"),
-  a = n("884691"),
-  l = n("516555"),
-  s = n("526887"),
-  r = n("172858"),
-  o = n("879342");
+}), E("222007");
+var t = E("37983"),
+  o = E("884691"),
+  n = E("516555"),
+  r = E("526887"),
+  i = E("172858"),
+  a = E("879342");
 
-function u(e) {
+function I(e) {
   let {
-    children: t
-  } = e, [n, u] = a.useState(null), [d, c] = a.useState(null), f = a.useRef(new Set), [E, h] = a.useState(!1), _ = a.useCallback(e => {
-    f.current.delete(e), h(f.current.size > 0)
-  }, []), C = a.useCallback(e => (f.current.add(e), h(!0), () => _(e)), [_]), S = a.useCallback((e, t) => {
-    for (let n of f.current) n(e, t)
+    children: _
+  } = e, [E, I] = o.useState(null), [s, T] = o.useState(null), S = o.useRef(new Set), [N, O] = o.useState(!1), A = o.useCallback(e => {
+    S.current.delete(e), O(S.current.size > 0)
+  }, []), R = o.useCallback(e => (S.current.add(e), O(!0), () => A(e)), [A]), l = o.useCallback((e, _) => {
+    for (let E of S.current) E(e, _)
   }, []);
-  return (0, i.jsxs)(i.Fragment, {
-    children: [(0, i.jsx)(s.ConfettiCannonContextProvider, {
-      confettiCanvas: d,
-      spriteCanvas: n,
-      baseConfig: r.COMMON_CONFETTI_BASE_CONFIG,
-      addClickListener: C,
-      removeClickListener: _,
-      children: t
-    }), (0, i.jsx)(l.ConfettiCanvas, {
-      ref: c,
-      className: o.canvas,
-      environment: r.COMMON_CONFETTI_ENVIRONMENT,
-      onClick: E ? S : void 0
-    }), (0, i.jsx)(l.SpriteCanvas, {
-      ref: u,
-      colors: r.COMMON_CONFETTI_COLORS,
-      sprites: r.COMMON_CONFETTI_SPRITES,
-      spriteWidth: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-      spriteHeight: r.COMMON_CONFETTI_MAX_SPRITE_SIZE
+  return (0, t.jsxs)(t.Fragment, {
+    children: [(0, t.jsx)(r.ConfettiCannonContextProvider, {
+      confettiCanvas: s,
+      spriteCanvas: E,
+      baseConfig: i.COMMON_CONFETTI_BASE_CONFIG,
+      addClickListener: R,
+      removeClickListener: A,
+      children: _
+    }), (0, t.jsx)(n.ConfettiCanvas, {
+      ref: T,
+      className: a.canvas,
+      environment: i.COMMON_CONFETTI_ENVIRONMENT,
+      onClick: N ? l : void 0
+    }), (0, t.jsx)(n.SpriteCanvas, {
+      ref: I,
+      colors: i.COMMON_CONFETTI_COLORS,
+      sprites: i.COMMON_CONFETTI_SPRITES,
+      spriteWidth: i.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+      spriteHeight: i.COMMON_CONFETTI_MAX_SPRITE_SIZE
     })]
   })
 }

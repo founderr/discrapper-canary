@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DnDProvider: function() {
-    return p
+    return f
   }
 });
 var i = n("37983");
@@ -34,7 +34,7 @@ let u = (0, s.createTransition)("keydown", e => !!(0, l.isDragTrigger)(e) && (e.
     }]
   };
 
-function p(e) {
+function f(e) {
   let {
     children: t
   } = e;

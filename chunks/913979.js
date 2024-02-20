@@ -1,79 +1,79 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return p
   }
 });
-var s = a("37983"),
-  r = a("884691"),
-  l = a("446674"),
-  n = a("77078"),
-  d = a("272030"),
+var l = a("37983"),
+  n = a("884691"),
+  r = a("446674"),
+  s = a("77078"),
+  i = a("272030"),
   u = a("42203"),
-  i = a("124948"),
-  o = a("697218"),
+  o = a("124948"),
+  d = a("697218"),
   c = a("811305"),
   f = a("800843"),
-  h = a("442184"),
-  m = a("648564"),
-  g = a("963906"),
-  S = r.memo(function(e) {
+  C = a("442184"),
+  h = a("648564"),
+  m = a("963906"),
+  p = n.memo(function(e) {
     let {
       threadId: t,
-      goToThread: r,
-      showChannelName: i
-    } = e, o = (0, l.useStateFromStores)([u.default], () => u.default.getChannel(t)), c = (0, l.useStateFromStores)([u.default], () => u.default.getChannel(o.parent_id));
-    return (0, s.jsxs)(n.Clickable, {
-      className: g.container,
-      onClick: e => r(o, e.shiftKey),
-      onContextMenu: e => (0, d.openContextMenuLazy)(e, async () => {
+      goToThread: n,
+      showChannelName: o
+    } = e, d = (0, r.useStateFromStores)([u.default], () => u.default.getChannel(t)), c = (0, r.useStateFromStores)([u.default], () => u.default.getChannel(d.parent_id));
+    return (0, l.jsxs)(s.Clickable, {
+      className: m.container,
+      onClick: e => n(d, e.shiftKey),
+      onContextMenu: e => (0, i.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await a.el("994827").then(a.bind(a, "994827"));
-        return t => (0, s.jsx)(e, {
+        return t => (0, l.jsx)(e, {
           ...t,
-          channel: o
+          channel: d
         })
       }),
-      children: [(0, s.jsxs)("div", {
-        className: g.left,
-        children: [(0, s.jsxs)(n.Heading, {
-          className: g.threadNameLine,
+      children: [(0, l.jsxs)("div", {
+        className: m.left,
+        children: [(0, l.jsxs)(s.Heading, {
+          className: m.threadNameLine,
           variant: "heading-md/semibold",
-          children: [(0, s.jsx)("span", {
-            className: g.threadName,
-            children: o.name
-          }), i && null != c ? (0, s.jsx)("span", {
-            className: g.parentName,
+          children: [(0, l.jsx)("span", {
+            className: m.threadName,
+            children: d.name
+          }), o && null != c ? (0, l.jsx)("span", {
+            className: m.parentName,
             children: "#".concat(c.name)
           }) : null]
-        }), (0, h.default)(o)]
-      }), (0, s.jsx)(T, {
-        channel: o
+        }), (0, C.default)(d)]
+      }), (0, l.jsx)(v, {
+        channel: d
       })]
     })
   });
 
-function T(e) {
+function v(e) {
   let {
     channel: t
-  } = e, a = (0, l.useStateFromStores)([f.default], () => {
+  } = e, a = (0, r.useStateFromStores)([f.default], () => {
     var e;
     return null !== (e = f.default.getMemberIdsPreview(t.id)) && void 0 !== e ? e : []
-  }), n = (0, l.useStateFromStores)([f.default], () => {
+  }), s = (0, r.useStateFromStores)([f.default], () => {
     var e;
     return null !== (e = f.default.getMemberCount(t.id)) && void 0 !== e ? e : 0
-  }), d = (0, l.useStateFromStoresArray)([o.default], () => a.map(e => o.default.getUser(e)));
-  return (r.useEffect(() => {
-    a.filter((e, t) => null == d[t]).forEach(e => {
-      i.default.requestMember(t.guild_id, e)
+  }), i = (0, r.useStateFromStoresArray)([d.default], () => a.map(e => d.default.getUser(e)));
+  return (n.useEffect(() => {
+    a.filter((e, t) => null == i[t]).forEach(e => {
+      o.default.requestMember(t.guild_id, e)
     })
-  }, []), 0 === a.length) ? null : (0, s.jsx)(c.default, {
-    className: g.facepile,
+  }, []), 0 === a.length) ? null : (0, l.jsx)(c.default, {
+    className: m.facepile,
     showDefaultAvatarsForNullUsers: !0,
     guildId: t.guild_id,
-    users: d,
-    count: n,
-    max: m.MAX_THREAD_MEMBERS_PREVIEW
+    users: i,
+    count: s,
+    max: h.MAX_THREAD_MEMBERS_PREVIEW
   })
 }

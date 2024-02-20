@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return d
+    return s
   }
 });
-var i = n("102053"),
-  a = n("689988"),
-  l = n("718517"),
-  s = n("303217"),
-  r = n("352266");
-let o = 4 * l.default.Millis.HOUR;
-class u extends a.default {
+var t = E("102053"),
+  o = E("689988"),
+  n = E("718517"),
+  r = E("303217"),
+  i = E("352266");
+let a = 4 * n.default.Millis.HOUR;
+class I extends o.default {
   _initialize() {
-    setTimeout(() => i.default.timeAsync("\uD83D\uDCBE", "getBlockedDomainList", () => r.default.getBlockedDomainList()), 1e3), setTimeout(() => (0, s.fetchBlockedDomainList)(), 10 * l.default.Millis.SECOND), this.intervalID = setInterval(s.fetchBlockedDomainList, o)
+    setTimeout(() => t.default.timeAsync("\uD83D\uDCBE", "getBlockedDomainList", () => i.default.getBlockedDomainList()), 1e3), setTimeout(() => (0, r.fetchBlockedDomainList)(), 10 * n.default.Millis.SECOND), this.intervalID = setInterval(r.fetchBlockedDomainList, a)
   }
   _terminate() {
     clearInterval(this.intervalID)
   }
 }
-var d = new u
+var s = new I

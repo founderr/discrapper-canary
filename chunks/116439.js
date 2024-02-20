@@ -13,8 +13,8 @@ var r = n("414456"),
   s = n.n(r),
   i = n("244201"),
   l = n("289656"),
-  o = n("437825"),
-  u = n("142303"),
+  u = n("437825"),
+  o = n("142303"),
   d = n("981913"),
   c = n("423725");
 
@@ -30,14 +30,14 @@ function f(e) {
       channelLimitReached: h = !1,
       join: p
     } = e,
-    m = (0, i.useAppContext)(),
-    C = r ? () => d() : () => s(!e.enabled, m);
+    E = (0, i.useAppContext)(),
+    C = r ? () => d() : () => s(!e.enabled, E);
   return (0, a.jsx)(a.Fragment, {
     children: f({
       onClick: C,
       active: n,
       disabled: !n && (!c || h),
-      iconComponent: p || n ? o.default : u.default,
+      iconComponent: p || n ? u.default : o.default,
       label: t,
       unavailable: r
     })
@@ -51,38 +51,38 @@ function h(e) {
     channel: r,
     onChange: i,
     onCameraUnavailable: l,
-    cameraUnavailable: o,
-    hasPermission: u,
+    cameraUnavailable: u,
+    hasPermission: o,
     className: h,
     channelLimitReached: p,
-    channelLimit: m,
+    channelLimit: E,
     centerButton: C = !1,
-    onPopoutClick: E,
-    ...g
-  } = e, S = C ? d.CenterControlButton : d.default;
+    onPopoutClick: m,
+    ...S
+  } = e, g = C ? d.CenterControlButton : d.default;
   return (0, a.jsx)(f, {
     enabled: t,
     join: n,
     channel: r,
     onChange: i,
     onCameraUnavailable: l,
-    cameraUnavailable: o,
-    hasPermission: u,
+    cameraUnavailable: u,
+    hasPermission: o,
     channelLimitReached: p,
-    channelLimit: m,
+    channelLimit: E,
     children: e => {
       let {
         unavailable: n,
         ...r
       } = e;
-      return (0, a.jsx)(S, {
+      return (0, a.jsx)(g, {
         ...r,
-        ...g,
+        ...S,
         isActive: t,
         className: s(h, {
           [c.fauxDisabled]: n
         }),
-        onPopoutClick: E
+        onPopoutClick: m
       })
     }
   })

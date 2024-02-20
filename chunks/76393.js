@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("222007");
 var i = n("446674"),
@@ -13,9 +13,9 @@ let o = null,
   u = new Set,
   c = {},
   d = {},
-  p = new Set,
-  h = Object.freeze({});
-class f extends i.default.DeviceSettingsStore {
+  f = new Set,
+  E = Object.freeze({});
+class p extends i.default.DeviceSettingsStore {
   initialize(e) {
     null != e && (d = e.lastSelectedDeviceByPlatform), this.waitFor(s.default, a.default)
   }
@@ -26,7 +26,7 @@ class f extends i.default.DeviceSettingsStore {
   }
   getDevicesForPlatform(e) {
     var t;
-    return null !== (t = c[e]) && void 0 !== t ? t : h
+    return null !== (t = c[e]) && void 0 !== t ? t : E
   }
   getLastSelectedDeviceByPlatform(e) {
     return d[e]
@@ -36,7 +36,7 @@ class f extends i.default.DeviceSettingsStore {
     return null === (n = c[e]) || void 0 === n ? void 0 : n[t]
   }
   getFetchingDevices(e) {
-    return p.has(e)
+    return f.has(e)
   }
   getPendingDeviceCommands() {
     return u
@@ -48,8 +48,8 @@ class f extends i.default.DeviceSettingsStore {
     return l
   }
 }
-f.displayName = "GameConsoleStore", f.persistKey = "GameConsoleStore";
-var E = new f(r.default, {
+p.displayName = "GameConsoleStore", p.persistKey = "GameConsoleStore";
+var h = new p(r.default, {
   REMOTE_SESSION_CONNECT: function(e) {
     let {
       sessionId: t
@@ -80,14 +80,14 @@ var E = new f(r.default, {
     let {
       platform: t
     } = e;
-    p.add(t)
+    f.add(t)
   },
   GAME_CONSOLE_FETCH_DEVICES_SUCCESS: function(e) {
     let {
       platform: t,
       devices: n
     } = e;
-    p.delete(t);
+    f.delete(t);
     let i = c[t] = {},
       r = {};
     for (let e of n) i[e.id] = e, d[t] === e.id && (r[t] = e.id);
@@ -97,7 +97,7 @@ var E = new f(r.default, {
     let {
       platform: t
     } = e;
-    p.delete(t)
+    f.delete(t)
   },
   GAME_CONSOLE_SELECT_DEVICE: function(e) {
     let {

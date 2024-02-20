@@ -1,23 +1,23 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return h
+    return d
   }
 }), s("222007"), s("424973");
 var n = s("37983"),
-  a = s("884691"),
-  l = s("414456"),
-  o = s.n(l),
-  i = s("145131"),
-  r = s("454169");
-class d extends a.PureComponent {
+  o = s("884691"),
+  a = s("414456"),
+  l = s.n(a),
+  r = s("145131"),
+  i = s("454169");
+class u extends o.PureComponent {
   render() {
     let {
       className: e
     } = this.props;
     return (0, n.jsx)("input", {
       ref: this.setCodeBlockRef,
-      className: o(r.input, e),
+      className: l(i.input, e),
       maxLength: 1,
       value: null != this.props.code ? this.props.code : void 0,
       autoFocus: this.props.autoFocus,
@@ -52,20 +52,20 @@ class d extends a.PureComponent {
     }
   }
 }
-d.defaultProps = {
+u.defaultProps = {
   autoFocus: !1
 };
-class u extends a.PureComponent {
+class c extends o.PureComponent {
   render() {
     let {
       className: e,
       inputClassName: t
     } = this.props, {
       codes: s
-    } = this.state, a = [];
-    for (let e = 0; e < s.length; e++) e === s.length / 2 && a.push((0, n.jsx)("div", {
-      className: r.spacer
-    }, "spacer")), a.push((0, n.jsx)(d, {
+    } = this.state, o = [];
+    for (let e = 0; e < s.length; e++) e === s.length / 2 && o.push((0, n.jsx)("div", {
+      className: i.spacer
+    }, "spacer")), o.push((0, n.jsx)(u, {
       ref: t => this.setCodeBlockRef(e, t),
       code: s[e],
       autoFocus: 0 === e,
@@ -73,11 +73,11 @@ class u extends a.PureComponent {
       onKeyDown: t => this.handleKeyDown(e, t),
       className: t
     }, e));
-    return (0, n.jsx)(i.default, {
-      align: i.default.Align.CENTER,
-      justify: i.default.Justify.CENTER,
+    return (0, n.jsx)(r.default, {
+      align: r.default.Align.CENTER,
+      justify: r.default.Justify.CENTER,
       className: e,
-      children: a
+      children: o
     })
   }
   setCodeBlockRef(e, t) {
@@ -125,7 +125,7 @@ class u extends a.PureComponent {
     }
   }
 }
-u.defaultProps = {
+c.defaultProps = {
   count: 6
 };
-var h = u
+var d = c

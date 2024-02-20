@@ -1,76 +1,76 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(r), t.d(r, {
   default: function() {
-    return u
+    return c
   },
   renderAutomodMessageMarkup: function() {
-    return c
+    return d
   }
-}), n("222007"), n("781738"), n("355025");
-var a = n("312016"),
-  i = n("367376"),
-  r = n("240873"),
-  s = n("49111");
-let l = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.GIFV]),
-  o = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+}), t("222007"), t("781738"), t("355025");
+var a = t("312016"),
+  n = t("367376"),
+  i = t("240873"),
+  l = t("49111");
+let o = new Set([l.MessageEmbedTypes.IMAGE, l.MessageEmbedTypes.GIFV]),
+  s = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
-function u(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-    n = t.formatInline ? i.default.parseInlineReply : i.default.parse;
-  return function(e, t, n) {
-    var i, s;
+function c(e) {
+  let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+    t = r.formatInline ? n.default.parseInlineReply : n.default.parse;
+  return function(e, r, t) {
+    var n, l;
     let {
-      toAST: u = !1,
-      hideSimpleEmbedContent: c = !0,
-      formatInline: f = !1,
-      postProcessor: g
-    } = n, p = !1;
-    let E = e(t.content, !0, (i = t, s = n, {
-      allowLinks: null != i.webhookId || !!s.allowLinks,
-      allowEmojiLinks: null != i.webhookId,
-      channelId: i.channel_id,
-      messageId: i.id,
-      mentionChannels: i.mentionChannels,
-      isInteracting: !!s.isInteracting,
-      formatInline: !!s.formatInline,
-      noStyleAndInteraction: !!s.noStyleAndInteraction,
-      allowHeading: !!s.allowHeading,
-      allowList: !!s.allowList,
-      previewLinkTarget: !!s.previewLinkTarget,
-      disableAnimatedEmoji: !!s.disableAnimatedEmoji,
+      toAST: c = !1,
+      hideSimpleEmbedContent: d = !0,
+      formatInline: p = !1,
+      postProcessor: m
+    } = t, g = !1;
+    let f = e(r.content, !0, (n = r, l = t, {
+      allowLinks: null != n.webhookId || !!l.allowLinks,
+      allowEmojiLinks: null != n.webhookId,
+      channelId: n.channel_id,
+      messageId: n.id,
+      mentionChannels: n.mentionChannels,
+      isInteracting: !!l.isInteracting,
+      formatInline: !!l.formatInline,
+      noStyleAndInteraction: !!l.noStyleAndInteraction,
+      allowHeading: !!l.allowHeading,
+      allowList: !!l.allowList,
+      previewLinkTarget: !!l.previewLinkTarget,
+      disableAnimatedEmoji: !!l.disableAnimatedEmoji,
       disableAutoBlockNewlines: !0,
       muted: !1
-    }), (e, n) => (!Array.isArray(e) && (e = [e]), c && (e = function(e, t) {
-      if (1 !== e.length || 1 !== t.length) return e;
-      let n = e[0],
-        a = t[0];
-      return ("link" === n.type || "attachmentLink" === n.type) && l.has(a.type) && (0, r.isEmbedInline)(a) ? [] : e
-    }(e, t.embeds)), !f && (e = function(e, t) {
-      return t ? d(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = d(e[0].content)), e)
-    }(e, n)), p = function(e, t) {
-      return t ? m(e) : "paragraph" === e[0].type && e[0].content instanceof Array && m(e[0].content)
+    }), (e, t) => (!Array.isArray(e) && (e = [e]), d && (e = function(e, r) {
+      if (1 !== e.length || 1 !== r.length) return e;
+      let t = e[0],
+        a = r[0];
+      return ("link" === t.type || "attachmentLink" === t.type) && o.has(a.type) && (0, i.isEmbedInline)(a) ? [] : e
+    }(e, r.embeds)), !p && (e = function(e, r) {
+      return r ? u(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = u(e[0].content)), e)
+    }(e, t)), g = function(e, r) {
+      return r ? h(e) : "paragraph" === e[0].type && e[0].content instanceof Array && h(e[0].content)
     }(e = function(e) {
-      let t = e.some(e => "link" !== e.type || !1);
+      let r = e.some(e => "link" !== e.type || !1);
       return e.filter(e => {
-        let n = "link" === e.type,
-          i = (0, a.parseQuestsEmbedCode)(e.target);
-        return !(n && null != i && !t)
+        let t = "link" === e.type,
+          n = (0, a.parseQuestsEmbedCode)(e.target);
+        return !(t && null != n && !r)
       })
-    }(e), n), f && (e = function e(t) {
-      return t.forEach(t => {
-        o.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
-      }), t
-    }(e)), null != g && (e = g(e, n)), e));
+    }(e), t), p && (e = function e(r) {
+      return r.forEach(r => {
+        s.has(r.type) && null != r.content && (Array.isArray(r.content) ? e(r.content) : r.content = r.content.replace(/\n/g, " "))
+      }), r
+    }(e)), null != m && (e = m(e, t)), e));
     return {
-      hasSpoilerEmbeds: p,
-      content: E
+      hasSpoilerEmbeds: g,
+      content: f
     }
-  }(n, e, t)
+  }(t, e, r)
 }
 
-function c(e, t, n) {
+function d(e, r, t) {
   var a;
-  return a = i.default.parseAutoModerationSystemMessage, a(e, !0, {
+  return a = n.default.parseAutoModerationSystemMessage, a(e, !0, {
     allowLinks: !1,
     allowEmojiLinks: !1,
     mentionChannels: [],
@@ -80,24 +80,24 @@ function c(e, t, n) {
     allowHeading: !1,
     allowList: !1,
     disableAutoBlockNewlines: !0,
-    highlightWord: t,
+    highlightWord: r,
     disableAnimatedEmoji: !1,
-    channelId: n,
+    channelId: t,
     muted: !1
   }, e => (!Array.isArray(e) && (e = [e]), e))
 }
 
-function d(e) {
-  let t = e.some(e => "emoji" !== e.type && "customEmoji" !== e.type && "soundboard" !== e.type && ("string" != typeof e.content || "" !== e.content.trim()) && !0);
-  if (t) return e;
-  let n = 0;
+function u(e) {
+  let r = e.some(e => "emoji" !== e.type && "customEmoji" !== e.type && "soundboard" !== e.type && ("string" != typeof e.content || "" !== e.content.trim()) && !0);
+  if (r) return e;
+  let t = 0;
   return (e.forEach(e => {
-    if (("emoji" === e.type || "customEmoji" === e.type || "soundboard" === e.type) && (n += 1), n > 30) return !1
-  }), n > 30) ? e : (e.forEach(e => {
+    if (("emoji" === e.type || "customEmoji" === e.type || "soundboard" === e.type) && (t += 1), t > 30) return !1
+  }), t > 30) ? e : (e.forEach(e => {
     e.jumboable = !0
   }), e)
 }
 
-function m(e) {
+function h(e) {
   return e.some(e => "spoiler" === e.type && Array.isArray(e.content) && e.content.some(e => "link" === e.type || "attachmentLink" === e.type))
 }

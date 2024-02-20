@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return f
   }
 });
 var i = n("917351"),
@@ -46,7 +46,7 @@ class d extends s.default.Store {
   }
 }
 d.displayName = "SessionsStore";
-var p = new d(a.default, {
+var f = new d(a.default, {
   CONNECTION_OPEN: c,
   SESSIONS_REPLACE: c
 })

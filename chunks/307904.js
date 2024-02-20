@@ -1,35 +1,35 @@
 "use strict";
-var n = r("638839")(),
-  o = r("911718"),
-  i = n && o("%Object.defineProperty%", !0);
-if (i) try {
-  i({}, "a", {
+var r = n("638839")(),
+  a = n("911718"),
+  o = r && a("%Object.defineProperty%", !0);
+if (o) try {
+  o({}, "a", {
     value: 1
   })
-} catch (t) {
-  i = !1
+} catch (e) {
+  o = !1
 }
-var a = o("%SyntaxError%"),
-  u = o("%TypeError%"),
-  l = r("293471");
-t.exports = function(t, e, r) {
-  if (!t || "object" != typeof t && "function" != typeof t) throw new u("`obj` must be an object or a function`");
-  if ("string" != typeof e && "symbol" != typeof e) throw new u("`property` must be a string or a symbol`");
-  if (arguments.length > 3 && "boolean" != typeof arguments[3] && null !== arguments[3]) throw new u("`nonEnumerable`, if provided, must be a boolean or null");
-  if (arguments.length > 4 && "boolean" != typeof arguments[4] && null !== arguments[4]) throw new u("`nonWritable`, if provided, must be a boolean or null");
-  if (arguments.length > 5 && "boolean" != typeof arguments[5] && null !== arguments[5]) throw new u("`nonConfigurable`, if provided, must be a boolean or null");
-  if (arguments.length > 6 && "boolean" != typeof arguments[6]) throw new u("`loose`, if provided, must be a boolean");
-  var n = arguments.length > 3 ? arguments[3] : null,
-    o = arguments.length > 4 ? arguments[4] : null,
-    s = arguments.length > 5 ? arguments[5] : null,
-    c = arguments.length > 6 && arguments[6],
-    p = !!l && l(t, e);
-  if (i) i(t, e, {
-    configurable: null === s && p ? p.configurable : !s,
-    enumerable: null === n && p ? p.enumerable : !n,
-    value: r,
-    writable: null === o && p ? p.writable : !o
+var i = a("%SyntaxError%"),
+  s = a("%TypeError%"),
+  c = n("293471");
+e.exports = function(e, t, n) {
+  if (!e || "object" != typeof e && "function" != typeof e) throw new s("`obj` must be an object or a function`");
+  if ("string" != typeof t && "symbol" != typeof t) throw new s("`property` must be a string or a symbol`");
+  if (arguments.length > 3 && "boolean" != typeof arguments[3] && null !== arguments[3]) throw new s("`nonEnumerable`, if provided, must be a boolean or null");
+  if (arguments.length > 4 && "boolean" != typeof arguments[4] && null !== arguments[4]) throw new s("`nonWritable`, if provided, must be a boolean or null");
+  if (arguments.length > 5 && "boolean" != typeof arguments[5] && null !== arguments[5]) throw new s("`nonConfigurable`, if provided, must be a boolean or null");
+  if (arguments.length > 6 && "boolean" != typeof arguments[6]) throw new s("`loose`, if provided, must be a boolean");
+  var r = arguments.length > 3 ? arguments[3] : null,
+    a = arguments.length > 4 ? arguments[4] : null,
+    l = arguments.length > 5 ? arguments[5] : null,
+    u = arguments.length > 6 && arguments[6],
+    d = !!c && c(e, t);
+  if (o) o(e, t, {
+    configurable: null === l && d ? d.configurable : !l,
+    enumerable: null === r && d ? d.enumerable : !r,
+    value: n,
+    writable: null === a && d ? d.writable : !a
   });
-  else if (!c && (n || o || s)) throw new a("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
-  else t[e] = r
+  else if (!u && (r || a || l)) throw new i("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
+  else e[t] = n
 }

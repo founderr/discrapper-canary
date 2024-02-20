@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   makeConnection: function() {
-    return m
+    return S
   }
 });
 var i, r = n("383536"),
@@ -12,19 +12,19 @@ var i, r = n("383536"),
   u = n("8479"),
   c = n("62684"),
   d = n("760014"),
-  p = n("588446"),
-  h = n("779791"),
-  f = n("353927"),
-  E = n("53452");
+  f = n("588446"),
+  E = n("779791"),
+  p = n("353927"),
+  h = n("53452");
 
 function _(e) {
   return e.split("-")[0]
 }
 
-function m(e, t, n, r) {
+function S(e, t, n, r) {
   let o = "".concat(null != s.name && "" !== s.name ? s.name : "unknown", " ").concat(null != s.version && "" !== s.version ? s.version : "unknown"),
     l = new a.default("Connection(".concat(e, ")"));
-  return E.BROWSER_SUPPORTS_UNIFIED_PLAN ? (l.info("Using Unified Plan (".concat(o, ")")), new h.default(e, t, n, r)) : (l.info("Using Plan B (".concat(o, ")")), new i(e, t, n, r))
+  return h.BROWSER_SUPPORTS_UNIFIED_PLAN ? (l.info("Using Unified Plan (".concat(o, ")")), new E.default(e, t, n, r)) : (l.info("Using Plan B (".concat(o, ")")), new i(e, t, n, r))
 }
 i = class extends l.default {
   destroy() {
@@ -36,7 +36,7 @@ i = class extends l.default {
     (this.fpc.audioCodec !== e || this.fpc.videoCodec !== t) && (a = this.codecs.find(t => t.name === e), this.fpc.audioCodec = e, this.fpc.audioPayloadType = null !== (i = null == a ? void 0 : a.payloadType) && void 0 !== i ? i : 0, a = this.codecs.find(e => e.name === t), this.fpc.videoCodec = t, this.fpc.videoPayloadType = null !== (r = null == a ? void 0 : a.payloadType) && void 0 !== r ? r : 0, this.fpc.rtxPayloadType = null !== (s = null == a ? void 0 : a.rtxPayloadType) && void 0 !== s ? s : 0, this.pc.negotiationNeeded())
   }
   setStream(e) {
-    this.fpc.direction = null != e ? p.Directions.SENDRECV : p.Directions.SENDONLY, this.pc.setStream(null != e ? e : null)
+    this.fpc.direction = null != e ? f.Directions.SENDRECV : f.Directions.SENDONLY, this.pc.setStream(null != e ? e : null)
   }
   createUser(e, t, n) {
     var i;
@@ -67,11 +67,11 @@ i = class extends l.default {
     let r = new u.default;
     r.on("answer", e => this.pc.setRemoteDescription(e).catch(e => this.logger.error("Failed to set remote description (answer): ".concat(e)))), r.on("offer", e => {
       this.pc.setRemoteDescription(e).then(() => this.pc.createAnswer()).then(e => this.fpc.setRemoteDescription(e)).catch(e => this.logger.error("Failed to set remote description (offer): ".concat(e)))
-    }), r.direction = null != this.input.stream ? p.Directions.SENDRECV : p.Directions.SENDONLY, this.fpc = r;
+    }), r.direction = null != this.input.stream ? f.Directions.SENDRECV : f.Directions.SENDONLY, this.fpc = r;
     let s = new d.default(this.voiceBitrate);
     s.on("addtrack", (e, t) => this.createOutput(_(e), t)), s.on("removetrack", (e, t) => this.destroyOutput(_(e), t)), s.once("connected", () => {
-      this.input.reset(), this.setConnectionState(f.ConnectionStates.CONNECTED), this.on(o.BaseConnectionEvent.Stats, this.handleStats), this.input.on(c.InputEvent.VoiceActivity, this.handleVoiceActivity)
-    }), s.on("connecting", () => this.setConnectionState(f.ConnectionStates.DTLS_CONNECTING)), s.on("checking", () => this.setConnectionState(f.ConnectionStates.ICE_CHECKING)), s.on("failed", () => this.setConnectionState(f.ConnectionStates.NO_ROUTE)), s.on("disconnected", () => this.setConnectionState(f.ConnectionStates.DISCONNECTED)), s.on("closed", () => this.setConnectionState(f.ConnectionStates.DISCONNECTED)), s.on("offer", e => {
+      this.input.reset(), this.setConnectionState(p.ConnectionStates.CONNECTED), this.on(o.BaseConnectionEvent.Stats, this.handleStats), this.input.on(c.InputEvent.VoiceActivity, this.handleVoiceActivity)
+    }), s.on("connecting", () => this.setConnectionState(p.ConnectionStates.DTLS_CONNECTING)), s.on("checking", () => this.setConnectionState(p.ConnectionStates.ICE_CHECKING)), s.on("failed", () => this.setConnectionState(p.ConnectionStates.NO_ROUTE)), s.on("disconnected", () => this.setConnectionState(p.ConnectionStates.DISCONNECTED)), s.on("closed", () => this.setConnectionState(p.ConnectionStates.DISCONNECTED)), s.on("offer", e => {
       let {
         sdp: t
       } = e, {
@@ -80,15 +80,15 @@ i = class extends l.default {
         audioSSRC: s,
         videoSSRC: a,
         rtxSSRC: l
-      } = (0, p.extractSDP)(t);
+      } = (0, f.extractSDP)(t);
       this.codecs = i;
-      let u = (0, p.getExtensions)(t);
+      let u = (0, f.getExtensions)(t);
       r.outboundStreams = n, this.audioSSRC = s, r.extensions = u, (this.videoStreamParameters[0].ssrc !== a || this.videoStreamParameters[0].rtxSsrc !== l || !this.videoReady) && (this.videoStreamParameters[0].ssrc = a, this.videoStreamParameters[0].rtxSsrc = l, this.emit(o.BaseConnectionEvent.Video, this.ids.userId, this.input.getVideoStreamId(), this.audioSSRC, this.videoStreamParameters[0].ssrc, this.videoStreamParameters[0].rtxSsrc, this.videoStreamParameters), this.videoReady = !0)
     }), s.once("offer", e => {
       let {
         sdp: t
       } = e;
-      this.emit(o.BaseConnectionEvent.Connected, "webrtc", (0, p.truncateSDP)(t))
+      this.emit(o.BaseConnectionEvent.Connected, "webrtc", (0, f.truncateSDP)(t))
     }), null != this.input.stream ? s.setStream(this.input.stream) : s.negotiationNeeded(), this.pc = s
   }
 }

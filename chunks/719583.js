@@ -28,8 +28,8 @@ e = n.nmd(e), r = this, a = function(e) {
   }
 
   function o(e, t, o, i) {
-    var u = e + " ";
-    return 1 === e ? u + n(e, t, o[0], i) : t ? u + (r(e) ? a(o)[1] : a(o)[0]) : i ? u + a(o)[1] : u + (r(e) ? a(o)[1] : a(o)[2])
+    var s = e + " ";
+    return 1 === e ? s + n(e, t, o[0], i) : t ? s + (r(e) ? a(o)[1] : a(o)[0]) : i ? s + a(o)[1] : s + (r(e) ? a(o)[1] : a(o)[2])
   }
   return e.defineLocale("lt", {
     months: {

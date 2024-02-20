@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
-var l = n("37983");
-n("884691");
-var s = n("414456"),
-  a = n.n(s),
-  i = n("41543");
+var n = r("37983");
+r("884691");
+var a = r("414456"),
+  s = r.n(a),
+  i = r("41543");
 
-function r(e) {
+function l(e) {
   let {
     className: t
   } = e;
-  return (0, l.jsx)("div", {
-    className: a(i.image, t)
+  return (0, n.jsx)("div", {
+    className: s(i.image, t)
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return n.default
+    return s.default
   }
 });
-var n = i("870346")
+var s = i("870346")

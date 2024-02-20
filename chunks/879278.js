@@ -8,8 +8,8 @@ var r = n("299192"),
   a = n("195548"),
   o = n("521289"),
   i = n("214725"),
-  u = n("328679"),
-  s = n("697309"),
+  s = n("328679"),
+  u = n("697309"),
   l = n("794230"),
   c = {
     name: "flip",
@@ -20,12 +20,12 @@ var r = n("299192"),
         n = e.options,
         c = e.name;
       if (!t.modifiersData[c]._skip) {
-        for (var f = n.mainAxis, d = void 0 === f || f, p = n.altAxis, h = void 0 === p || p, m = n.fallbackPlacements, _ = n.padding, y = n.boundary, g = n.rootBoundary, v = n.altBoundary, b = n.flipVariations, M = void 0 === b || b, w = n.allowedAutoPlacements, k = t.options.placement, L = (0, a.default)(k) === k, D = m || (L || !M ? [(0, r.default)(k)] : function(e) {
-            if ((0, a.default)(e) === s.auto) return [];
+        for (var d = n.mainAxis, f = void 0 === d || d, p = n.altAxis, m = void 0 === p || p, h = n.fallbackPlacements, _ = n.padding, y = n.boundary, g = n.rootBoundary, v = n.altBoundary, b = n.flipVariations, M = void 0 === b || b, w = n.allowedAutoPlacements, k = t.options.placement, L = (0, a.default)(k) === k, D = h || (L || !M ? [(0, r.default)(k)] : function(e) {
+            if ((0, a.default)(e) === u.auto) return [];
             var t = (0, r.default)(e);
             return [(0, o.default)(e), t, (0, o.default)(t)]
-          }(k)), S = [k].concat(D).reduce(function(e, n) {
-            return e.concat((0, a.default)(n) === s.auto ? (0, u.default)(t, {
+          }(k)), T = [k].concat(D).reduce(function(e, n) {
+            return e.concat((0, a.default)(n) === u.auto ? (0, s.default)(t, {
               placement: n,
               boundary: y,
               rootBoundary: g,
@@ -33,12 +33,12 @@ var r = n("299192"),
               flipVariations: M,
               allowedAutoPlacements: w
             }) : n)
-          }, []), T = t.rects.reference, Y = t.rects.popper, x = new Map, E = !0, O = S[0], P = 0; P < S.length; P++) {
-          var j = S[P],
+          }, []), S = t.rects.reference, Y = t.rects.popper, x = new Map, O = !0, E = T[0], P = 0; P < T.length; P++) {
+          var j = T[P],
             C = (0, a.default)(j),
-            H = (0, l.default)(j) === s.start,
-            N = [(0, s.top), (0, s.bottom)].indexOf(C) >= 0,
-            F = N ? "width" : "height",
+            H = (0, l.default)(j) === u.start,
+            F = [(0, u.top), (0, u.bottom)].indexOf(C) >= 0,
+            N = F ? "width" : "height",
             I = (0, i.default)(t, {
               placement: j,
               boundary: y,
@@ -46,30 +46,30 @@ var r = n("299192"),
               altBoundary: v,
               padding: _
             }),
-            A = N ? H ? s.right : s.left : H ? s.bottom : s.top;
-          T[F] > Y[F] && (A = (0, r.default)(A));
+            A = F ? H ? u.right : u.left : H ? u.bottom : u.top;
+          S[N] > Y[N] && (A = (0, r.default)(A));
           var R = (0, r.default)(A),
-            W = [];
-          if (d && W.push(I[C] <= 0), h && W.push(I[A] <= 0, I[R] <= 0), W.every(function(e) {
+            z = [];
+          if (f && z.push(I[C] <= 0), m && z.push(I[A] <= 0, I[R] <= 0), z.every(function(e) {
               return e
             })) {
-            O = j, E = !1;
+            E = j, O = !1;
             break
           }
-          x.set(j, W)
+          x.set(j, z)
         }
-        if (E) {
-          for (var z = M ? 3 : 1, U = function(e) {
-              var t = S.find(function(t) {
+        if (O) {
+          for (var W = M ? 3 : 1, B = function(e) {
+              var t = T.find(function(t) {
                 var n = x.get(t);
                 if (n) return n.slice(0, e).every(function(e) {
                   return e
                 })
               });
-              if (t) return O = t, "break"
-            }, B = z; B > 0 && "break" !== U(B); B--);
+              if (t) return E = t, "break"
+            }, U = W; U > 0 && "break" !== B(U); U--);
         }
-        t.placement !== O && (t.modifiersData[c]._skip = !0, t.placement = O, t.reset = !0)
+        t.placement !== E && (t.modifiersData[c]._skip = !0, t.placement = E, t.reset = !0)
       }
     },
     requiresIfExists: ["offset"],

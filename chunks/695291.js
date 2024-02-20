@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   initialize: function() {
-    return s
+    return r
   }
-}), n("222007"), n("70102"), n("424973");
-var i = n("913144");
-let a = {},
-  l = !1;
-
-function s(e) {
-  for (let t in e) {
-    let n = e[t];
-    (function(e, t) {
-      var n;
-      t.actions
-    })(t, n),
-    function(e) {
-      var t;
-      let n = null !== (t = e.actions) && void 0 !== t ? t : [];
-      for (let t of ((e.hasStoreChangeListeners || e.loadAfterConnectionOpen) && (!n.includes("POST_CONNECTION_OPEN") && (n = [...n, "POST_CONNECTION_OPEN"]), !n.includes("OVERLAY_INITIALIZE") && (n = [...n, "OVERLAY_INITIALIZE"])), e.loadRightBeforeConnectionOpen && (!n.includes("CONNECTION_OPEN") && (n = [...n, "CONNECTION_OPEN"]), !n.includes("OVERLAY_INITIALIZE") && (n = [...n, "OVERLAY_INITIALIZE"])), n)) !(t in a) && (a[t] = []), a[t].push(e)
-    }(n)
-  }
-  i.default.addInterceptor(r)
-}
+}), E("222007"), E("70102"), E("424973");
+var t = E("913144");
+let o = {},
+  n = !1;
 
 function r(e) {
-  if (("CONNECTION_OPEN" === e.type || "OVERLAY_INITIALIZE" === e.type) && (l = !0), e.type in a) {
-    let t = [];
-    for (let n of a[e.type]) !l && n.neverLoadBeforeConnectionOpen ? t.push(n) : n.inlineRequire().initialize();
-    t.length > 0 ? a[e.type] = t : delete a[e.type]
+  for (let _ in e) {
+    let E = e[_];
+    (function(e, _) {
+      var E;
+      _.actions
+    })(_, E),
+    function(e) {
+      var _;
+      let E = null !== (_ = e.actions) && void 0 !== _ ? _ : [];
+      for (let _ of ((e.hasStoreChangeListeners || e.loadAfterConnectionOpen) && (!E.includes("POST_CONNECTION_OPEN") && (E = [...E, "POST_CONNECTION_OPEN"]), !E.includes("OVERLAY_INITIALIZE") && (E = [...E, "OVERLAY_INITIALIZE"])), e.loadRightBeforeConnectionOpen && (!E.includes("CONNECTION_OPEN") && (E = [...E, "CONNECTION_OPEN"]), !E.includes("OVERLAY_INITIALIZE") && (E = [...E, "OVERLAY_INITIALIZE"])), E)) !(_ in o) && (o[_] = []), o[_].push(e)
+    }(E)
+  }
+  t.default.addInterceptor(i)
+}
+
+function i(e) {
+  if (("CONNECTION_OPEN" === e.type || "OVERLAY_INITIALIZE" === e.type) && (n = !0), e.type in o) {
+    let _ = [];
+    for (let E of o[e.type]) !n && E.neverLoadBeforeConnectionOpen ? _.push(E) : E.inlineRequire().initialize();
+    _.length > 0 ? o[e.type] = _ : delete o[e.type]
   }
   return !1
 }

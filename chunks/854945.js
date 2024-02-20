@@ -9,15 +9,15 @@ var r = n("232985"),
   o = n("834779"),
   i = n("63173");
 
-function u(e) {
-  return (u = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+function s(e) {
+  return (s = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
     return typeof e
   } : function(e) {
     return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
   })(e)
 }
 
-function s(e, t) {
+function u(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
@@ -35,13 +35,13 @@ function c(e) {
   return e
 }
 
-function f(e) {
-  return (f = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+function d(e) {
+  return (d = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
     return e.__proto__ || Object.getPrototypeOf(e)
   })(e)
 }
 
-function d(e, t, n) {
+function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -60,7 +60,7 @@ var p = function(e) {
       }
     }), t && l(e, t)
   }(_, e);
-  var t, n, r, p, h, m = (t = _, n = function() {
+  var t, n, r, p, m, h = (t = _, n = function() {
     if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
     try {
@@ -69,13 +69,13 @@ var p = function(e) {
       return !1
     }
   }(), function() {
-    var e, r = f(t);
+    var e, r = d(t);
     if (n) {
-      var a = f(this).constructor;
+      var a = d(this).constructor;
       e = Reflect.construct(r, arguments, a)
     } else e = r.apply(this, arguments);
     return function(e, t) {
-      return t && ("object" === u(t) || "function" == typeof t) ? t : c(e)
+      return t && ("object" === s(t) || "function" == typeof t) ? t : c(e)
     }(this, e)
   });
 
@@ -85,7 +85,7 @@ var p = function(e) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }(this, _);
     for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-    return d(c(e = m.call.apply(m, [this].concat(n))), "priority", 130), d(c(e), "incompatibleTokens", ["y", "R", "u", "Q", "q", "M", "L", "I", "d", "D", "i", "t", "T"]), e
+    return f(c(e = h.call.apply(h, [this].concat(n))), "priority", 130), f(c(e), "incompatibleTokens", ["y", "R", "u", "Q", "q", "M", "L", "I", "d", "D", "i", "t", "T"]), e
   }
   return r = _, p = [{
     key: "parse",
@@ -115,13 +115,13 @@ var p = function(e) {
   }, {
     key: "set",
     value: function(e, t, n, r) {
-      var u = (0, o.default)(e, r);
+      var s = (0, o.default)(e, r);
       if (n.isTwoDigitYear) {
-        var s = (0, a.normalizeTwoDigitYear)(n.year, u);
-        return e.setUTCFullYear(s, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, i.default)(e, r)
+        var u = (0, a.normalizeTwoDigitYear)(n.year, s);
+        return e.setUTCFullYear(u, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, i.default)(e, r)
       }
       var l = "era" in t && 1 !== t.era ? 1 - n.year : n.year;
       return e.setUTCFullYear(l, 0, r.firstWeekContainsDate), e.setUTCHours(0, 0, 0, 0), (0, i.default)(e, r)
     }
-  }], s(r.prototype, p), h && s(r, h), _
+  }], u(r.prototype, p), m && u(r, m), _
 }(r.Parser)

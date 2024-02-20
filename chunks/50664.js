@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("781738");
 var r = n("240849"),
   a = n("932165"),
-  i = n("884691"),
-  o = n("564341");
+  o = n("884691"),
+  i = n("564341");
 let s = new WeakMap;
 
 function c(e, t, n) {
@@ -20,32 +20,32 @@ function c(e, t, n) {
 }
 
 function l(e, t, n) {
-  var i;
+  var o;
   let {
-    key: o,
+    key: i,
     isDisabled: s,
     shouldSelectOnPressUp: l
   } = e, {
     selectionManager: u,
     selectedKey: d
-  } = t, p = o === d, f = s || t.isDisabled || t.disabledKeys.has(o), {
-    itemProps: m,
-    isPressed: h
+  } = t, p = i === d, f = s || t.isDisabled || t.disabledKeys.has(i), {
+    itemProps: h,
+    isPressed: m
   } = (0, a.useSelectableItem)({
     selectionManager: u,
-    key: o,
+    key: i,
     ref: n,
     isDisabled: f,
     shouldSelectOnPressUp: l,
     linkBehavior: "selection"
-  }), v = c(t, o, "tab"), g = c(t, o, "tabpanel"), {
+  }), v = c(t, i, "tab"), g = c(t, i, "tabpanel"), {
     tabIndex: y
-  } = m, b = t.collection.getItem(o), x = (0, r.filterDOMProps)(null == b ? void 0 : b.props, {
-    isLink: !!(null == b ? void 0 : null === (i = b.props) || void 0 === i ? void 0 : i.href),
+  } = h, b = t.collection.getItem(i), x = (0, r.filterDOMProps)(null == b ? void 0 : b.props, {
+    isLink: !!(null == b ? void 0 : null === (o = b.props) || void 0 === o ? void 0 : o.href),
     labelable: !0
   });
   return delete x.id, {
-    tabProps: (0, r.mergeProps)(x, m, {
+    tabProps: (0, r.mergeProps)(x, h, {
       id: v,
       "aria-selected": p,
       "aria-disabled": f || void 0,
@@ -55,7 +55,7 @@ function l(e, t, n) {
     }),
     isSelected: p,
     isDisabled: f,
-    isPressed: h
+    isPressed: m
   }
 }
 class u {
@@ -101,13 +101,13 @@ function d(e, t, n) {
     selectionManager: p,
     disabledKeys: f
   } = t, {
-    direction: m
-  } = (0, o.useLocale)(), h = (0, i.useMemo)(() => new u(d, m, c, f), [d, f, c, m]), {
+    direction: h
+  } = (0, i.useLocale)(), m = (0, o.useMemo)(() => new u(d, h, c, f), [d, f, c, h]), {
     collectionProps: v
   } = (0, a.useSelectableCollection)({
     ref: n,
     selectionManager: p,
-    keyboardDelegate: h,
+    keyboardDelegate: m,
     selectOnFocus: "automatic" === l,
     disallowEmptySelection: !0,
     scrollRef: n,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return s
   }
 });
 var r = n("516925"),
@@ -9,6 +9,6 @@ var r = n("516925"),
   o = n("753671"),
   i = n("298720");
 
-function u(e) {
+function s(e) {
   return e !== (0, a.default)(e) && (0, o.isHTMLElement)(e) ? (0, i.default)(e) : (0, r.default)(e)
 }

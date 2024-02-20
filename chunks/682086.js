@@ -1,5 +1,5 @@
 "use strict";
-var n = r("781436");
-t.exports = function(t) {
-  return !!n(t)
+var r = n("781436");
+e.exports = function(e) {
+  return !!r(e)
 }

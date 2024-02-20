@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return T
+    return L
   }
-}), n("222007");
-var i = n("37983");
-n("884691");
-var a = n("77078"),
-  l = n("299285"),
-  s = n("374014"),
-  r = n("582415"),
-  o = n("643130"),
-  u = n("292687"),
-  d = n("271938"),
-  c = n("42203"),
-  f = n("824563"),
-  E = n("945956"),
-  h = n("205817"),
-  _ = n("722333"),
-  C = n("200521"),
-  S = n("49111");
-class g extends _.default {
+}), E("222007");
+var t = E("37983");
+E("884691");
+var o = E("77078"),
+  n = E("299285"),
+  r = E("374014"),
+  i = E("582415"),
+  a = E("643130"),
+  I = E("292687"),
+  s = E("271938"),
+  T = E("42203"),
+  S = E("824563"),
+  N = E("945956"),
+  O = E("205817"),
+  A = E("722333"),
+  R = E("200521"),
+  l = E("49111");
+class u extends A.default {
   _initialize() {
-    o.default.init()
+    a.default.init()
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -33,102 +33,102 @@ class g extends _.default {
       IN_APP_REPORTS_SHOW_FEEDBACK: e => this.handleInAppReportsFeedback(e)
     }, this.handleVoiceChannelFeedback = e => {
       let {
-        analyticsData: t
+        analyticsData: _
       } = e;
-      this.possiblyShowFeedbackModal(C.FeedbackType.VOICE, () => {
-        (0, a.openModalLazy)(async () => {
+      this.possiblyShowFeedbackModal(R.FeedbackType.VOICE, () => {
+        (0, o.openModalLazy)(async () => {
           let {
             default: e
-          } = await n.el("464667").then(n.bind(n, "464667"));
-          return n => (0, i.jsx)(e, {
-            ...n,
-            analyticsData: t
+          } = await E.el("464667").then(E.bind(E, "464667"));
+          return E => (0, t.jsx)(e, {
+            ...E,
+            analyticsData: _
           })
         })
       })
     }, this.handleStreamClose = e => {
-      var t;
+      var _;
       let {
-        streamKey: l,
-        canShowFeedback: o
-      } = e, u = (0, s.decodeStreamKey)(l), c = (0, r.getStreamerApplication)(u, f.default), E = null !== (t = h.default.getVideoStats(l)) && void 0 !== t ? t : {}, _ = {
-        media_session_id: h.default.getMediaSessionId(l),
-        rtc_connection_id: h.default.getRtcConnectionId(l),
-        stream_region: h.default.getRegion(l),
-        max_viewers: h.default.getMaxViewers(l),
-        ...E
+        streamKey: n,
+        canShowFeedback: a
+      } = e, I = (0, r.decodeStreamKey)(n), T = (0, i.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
+        media_session_id: O.default.getMediaSessionId(n),
+        rtc_connection_id: O.default.getRtcConnectionId(n),
+        stream_region: O.default.getRegion(n),
+        max_viewers: O.default.getMaxViewers(n),
+        ...N
       };
-      o && this.possiblyShowFeedbackModal(C.FeedbackType.STREAM, () => {
-        (0, a.openModalLazy)(async () => {
+      a && this.possiblyShowFeedbackModal(R.FeedbackType.STREAM, () => {
+        (0, o.openModalLazy)(async () => {
           let {
             default: e
-          } = await n.el("363787").then(n.bind(n, "363787"));
-          return t => (0, i.jsx)(e, {
-            stream: u,
-            streamApplication: c,
-            isStreamer: u.ownerId === d.default.getId(),
-            ...t,
-            analyticsData: _
+          } = await E.el("363787").then(E.bind(E, "363787"));
+          return _ => (0, t.jsx)(e, {
+            stream: I,
+            streamApplication: T,
+            isStreamer: I.ownerId === s.default.getId(),
+            ..._,
+            analyticsData: A
           })
         })
       })
     }, this.handleVideoBackgroundShowFeedback = e => {
       let {
-        analyticsData: t
+        analyticsData: _
       } = e;
-      this.possiblyShowFeedbackModal(C.FeedbackType.VIDEO_BACKGROUND, () => {
-        (0, a.openModalLazy)(async () => {
+      this.possiblyShowFeedbackModal(R.FeedbackType.VIDEO_BACKGROUND, () => {
+        (0, o.openModalLazy)(async () => {
           let {
             default: e
-          } = await n.el("496088").then(n.bind(n, "496088"));
-          return n => (0, i.jsx)(e, {
-            ...n,
-            analyticsData: t
+          } = await E.el("496088").then(E.bind(E, "496088"));
+          return E => (0, t.jsx)(e, {
+            ...E,
+            analyticsData: _
           })
         })
       })
     }, this.handleActivityClose = e => {
       let {
-        applicationId: t,
-        channelId: s,
-        showFeedback: r
-      } = e, o = l.default.getApplication(t), d = c.default.getChannel(s), f = {
-        rtc_connection_id: E.default.getRTCConnectionId(),
-        media_session_id: E.default.getMediaSessionId()
-      }, h = u.default.getWindowOpen(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT), _ = h ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
-      null != o && null != d && r && this.possiblyShowFeedbackModal(C.FeedbackType.ACTIVITY, () => {
-        (0, a.openModalLazy)(async () => {
+        applicationId: _,
+        channelId: r,
+        showFeedback: i
+      } = e, a = n.default.getApplication(_), s = T.default.getChannel(r), S = {
+        rtc_connection_id: N.default.getRTCConnectionId(),
+        media_session_id: N.default.getMediaSessionId()
+      }, O = I.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT), A = O ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT;
+      null != a && null != s && i && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
+        (0, o.openModalLazy)(async () => {
           let {
             default: e
-          } = await n.el("959350").then(n.bind(n, "959350"));
-          return t => (0, i.jsx)(e, {
-            ...t,
-            activityApplication: o,
-            channel: d,
-            analyticsData: f
+          } = await E.el("959350").then(E.bind(E, "959350"));
+          return _ => (0, t.jsx)(e, {
+            ..._,
+            activityApplication: a,
+            channel: s,
+            analyticsData: S
           })
         }, {
-          contextKey: _
+          contextKey: A
         })
       })
     }, this.handleInAppReportsFeedback = e => {
       let {
-        reportId: t,
-        reportType: l
+        reportId: _,
+        reportType: n
       } = e;
-      this.possiblyShowFeedbackModal(C.FeedbackType.IN_APP_REPORTS, () => {
-        (0, a.openModalLazy)(async () => {
+      this.possiblyShowFeedbackModal(R.FeedbackType.IN_APP_REPORTS, () => {
+        (0, o.openModalLazy)(async () => {
           let {
             default: e
-          } = await n.el("114306").then(n.bind(n, "114306"));
-          return n => (0, i.jsx)(e, {
-            ...n,
-            reportId: t,
-            reportType: l
+          } = await E.el("114306").then(E.bind(E, "114306"));
+          return E => (0, t.jsx)(e, {
+            ...E,
+            reportId: _,
+            reportType: n
           })
         })
       })
     }
   }
 }
-var T = new g
+var L = new u

@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n("222007"), n("274635");
-var i = n("464324");
-n("985745");
-var a = n("383536"),
-  l = n.n(a);
-window.platform = l, null == window.ResizeObserver && (window.ResizeObserver = i.ResizeObserver), "object" != typeof globalThis && (window.globalThis = window), Map.prototype.toJSON = function() {
+E.r(_), E("222007"), E("274635");
+var t = E("464324");
+E("985745");
+var o = E("383536"),
+  n = E.n(o);
+window.platform = n, null == window.ResizeObserver && (window.ResizeObserver = t.ResizeObserver), "object" != typeof globalThis && (window.globalThis = window), Map.prototype.toJSON = function() {
   return Array.from(this)
 }, Set.prototype.toJSON = function() {
   return Array.from(this)
@@ -25,8 +25,8 @@ window.platform = l, null == window.ResizeObserver && (window.ResizeObserver = i
         w: this.w
       }
     }
-    constructor(e = 0, t = 0, n = 0, i = 1) {
-      this.x = e, this.y = t, this.z = n, this.w = i
+    constructor(e = 0, _ = 0, E = 0, t = 1) {
+      this.x = e, this.y = _, this.z = E, this.w = t
     }
   }
   null == window.DOMPoint && (window.DOMPoint = DOMPoint)
@@ -59,10 +59,10 @@ window.platform = l, null == window.ResizeObserver && (window.ResizeObserver = i
         bottom: this.bottom
       }
     }
-    constructor(e = 0, t = 0, n = 0, i = 0) {
-      this.x = e, this.y = t, this.width = n, this.height = i
+    constructor(e = 0, _ = 0, E = 0, t = 0) {
+      this.x = e, this.y = _, this.width = E, this.height = t
     }
   }
   null == window.DOMRect && (window.DOMRect = DOMRect)
 }
-null == window.TextEncoder && n("705479")
+null == window.TextEncoder && E("705479")

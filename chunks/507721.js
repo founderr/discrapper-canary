@@ -32,8 +32,8 @@ function r(e, t, n) {
             Object.assign(a[e], r);
             break;
           case "message":
-            let u = o.V.T();
-            for (let t of Object.keys(r)) a[e][t] = u.create(r[t])
+            let s = o.V.T();
+            for (let t of Object.keys(r)) a[e][t] = s.create(r[t])
         }
     }
   }

@@ -12,8 +12,8 @@ var a = n("414456"),
   r = n("669491"),
   o = n("77078"),
   u = n("191145"),
-  d = n("373469"),
-  c = n("568307"),
+  d = n("161454"),
+  c = n("373469"),
   f = n("522049"),
   h = n("956089"),
   m = n("386045"),
@@ -24,11 +24,11 @@ var a = n("414456"),
     let {
       className: t,
       channelId: n
-    } = e, a = (0, i.useStateFromStores)([d.default, u.default, m.default, c.default], () => {
+    } = e, a = (0, i.useStateFromStores)([c.default, u.default, m.default, d.default], () => {
       var e;
       if (null == n) return !1;
-      let t = d.default.getCurrentUserActiveStream(),
-        l = null === (e = c.default.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
+      let t = c.default.getCurrentUserActiveStream(),
+        l = null === (e = d.default.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
       return null != t && !!m.default.getSettings().clipsEnabled || null != l && !!m.default.getSettings().decoupledClipsEnabled || u.default.getParticipants(n).some(e => e.type === p.ParticipantTypes.USER && m.default.isClipsEnabledForUser(e.user.id))
     });
     return a ? (0, l.jsxs)(o.TooltipContainer, {

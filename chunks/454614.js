@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var l = n("42203"),
-  i = n("945956"),
-  a = n("568307"),
+var l = n("161454"),
+  i = n("42203"),
+  a = n("945956"),
   s = n("18494"),
   r = n("599110"),
   o = n("846325"),
@@ -15,11 +15,11 @@ var l = n("42203"),
 
 function c(e, t, n, c) {
   var f, m, p;
-  let h = l.default.getChannel(s.default.getVoiceChannelId()),
+  let h = i.default.getChannel(s.default.getVoiceChannelId()),
     E = null == h ? void 0 : h.getGuildId(),
-    g = i.default.getMediaSessionId(),
-    S = i.default.getRTCConnectionId(),
-    C = null === (f = a.default.getCurrentGameForAnalytics()) || void 0 === f ? void 0 : f.name,
+    g = a.default.getMediaSessionId(),
+    S = a.default.getRTCConnectionId(),
+    C = null === (f = l.default.getCurrentGameForAnalytics()) || void 0 === f ? void 0 : f.name,
     T = E !== n.guildId && n.guildId !== o.DEFAULT_SOUND_GUILD_ID;
   let v = (m = n, p = T, m.guildId === o.DEFAULT_SOUND_GUILD_ID ? "default" : p ? "custom-external" : "custom");
   r.default.track(u.AnalyticEvents.PREMIUM_FEATURE_USAGE, {

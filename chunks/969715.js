@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   UnfeatureItemConfirmationModal: function() {
-    return I
+    return f
   },
   FeatureItemConfirmationModal: function() {
-    return f
+    return I
   },
   FeatureMessageConfirmationModal: function() {
     return _
@@ -25,13 +25,13 @@ var s = n("37983"),
   h = n("782340"),
   E = n("43229");
 
-function I(e) {
+function f(e) {
   let {
     featureableItem: t,
     header: n,
     body: a,
     ...l
-  } = e, [r, o] = i.useState(null), [E, I] = i.useState(!1);
+  } = e, [r, o] = i.useState(null), [E, f] = i.useState(!1);
   return (0, s.jsxs)(u.ConfirmModal, {
     header: n,
     confirmText: h.default.Messages.GUILD_FEED_UNFEATURE_BUTTON_TEXT,
@@ -40,9 +40,9 @@ function I(e) {
     loading: E,
     onConfirm: async () => {
       try {
-        I(!0), await (0, c.unfeatureGuildFeedItem)(t), I(!1)
+        f(!0), await (0, c.unfeatureGuildFeedItem)(t), f(!1)
       } catch (e) {
-        throw o(new d.default(e)), I(!1), e
+        throw o(new d.default(e)), f(!1), e
       }
     },
     ...l,
@@ -57,15 +57,15 @@ function I(e) {
   })
 }
 
-function f(e) {
+function I(e) {
   let {
     featureableItem: t,
     expiresSeconds: n,
     header: a,
     children: r,
     options: o,
-    ...I
-  } = e, [f, _] = i.useState(null), [m, T] = i.useState(!1);
+    ...f
+  } = e, [I, _] = i.useState(null), [m, T] = i.useState(!1);
   return (0, s.jsxs)(u.ConfirmModal, {
     header: a,
     confirmText: h.default.Messages.GUILD_FEED_FEATURE_BUTTON_TEXT,
@@ -82,12 +82,12 @@ function f(e) {
         T(!1)
       }
     },
-    ...I,
-    children: [null != f && (0, s.jsx)(u.Text, {
+    ...f,
+    children: [null != I && (0, s.jsx)(u.Text, {
       className: E.featureModalError,
       color: "text-danger",
       variant: "text-xs/normal",
-      children: f.message
+      children: I.message
     }), r]
   })
 }
@@ -102,7 +102,7 @@ function _(e) {
     options: d,
     ...c
   } = e;
-  return (0, s.jsxs)(f, {
+  return (0, s.jsxs)(I, {
     ...c,
     featureableItem: {
       guildId: n,
@@ -138,7 +138,7 @@ function m(e) {
     options: l,
     ...d
   } = e;
-  return (0, s.jsx)(f, {
+  return (0, s.jsx)(I, {
     ...d,
     featureableItem: {
       guildId: n,

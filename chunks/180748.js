@@ -7,40 +7,40 @@ n.r(t), n.d(t, {
     return d
   },
   setZoom: function() {
-    return p
-  },
-  enableKeyboardMode: function() {
-    return h
-  },
-  disableKeyboardMode: function() {
     return f
   },
-  toggleDesaturateUserColors: function() {
+  enableKeyboardMode: function() {
     return E
+  },
+  disableKeyboardMode: function() {
+    return p
+  },
+  toggleDesaturateUserColors: function() {
+    return h
   },
   toggleDarkSidebar: function() {
     return _
   },
   keyboardNavigationExplainerModalSeen: function() {
-    return m
-  },
-  systemPrefersReducedMotionChanged: function() {
     return S
   },
+  systemPrefersReducedMotionChanged: function() {
+    return m
+  },
   setSaturation: function() {
-    return g
+    return T
   },
   setPrefersReducedMotion: function() {
-    return T
+    return g
   },
   setSyncForcedColors: function() {
     return I
   },
   systemColorPreferencesChanged: function() {
-    return v
+    return C
   },
   systemPrefersContrastChanged: function() {
-    return C
+    return v
   },
   setAlwaysShowLinkDecorations: function() {
     return A
@@ -52,7 +52,7 @@ n.r(t), n.d(t, {
     return N
   },
   toggleSyncProfileThemeWithUserTheme: function() {
-    return y
+    return O
   }
 });
 var i = n("913144"),
@@ -78,14 +78,14 @@ function d() {
   })
 }
 
-function p(e) {
+function f(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_ZOOM",
     zoom: e
   })
 }
 
-function h() {
+function E() {
   i.default.dispatch({
     type: "ACCESSIBILITY_KEYBOARD_MODE_ENABLE"
   }), s.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
@@ -93,7 +93,7 @@ function h() {
   })
 }
 
-function f() {
+function p() {
   i.default.dispatch({
     type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE"
   }), s.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
@@ -101,7 +101,7 @@ function f() {
   })
 }
 
-function E() {
+function h() {
   i.default.dispatch({
     type: "ACCESSIBILITY_DESATURATE_ROLES_TOGGLE"
   })
@@ -113,27 +113,27 @@ function _() {
   })
 }
 
-function m() {
+function S() {
   i.default.dispatch({
     type: "KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN"
   })
 }
 
-function S(e) {
+function m(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED",
     systemPrefersReducedMotion: e
   })
 }
 
-function g(e) {
+function T(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_SATURATION",
     saturation: e
   })
 }
 
-function T(e) {
+function g(e) {
   let t = a.default.useReducedMotion;
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
@@ -163,7 +163,7 @@ function I(e) {
   })
 }
 
-function v(e, t) {
+function C(e, t) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED",
     systemPrefersColorScheme: e,
@@ -171,7 +171,7 @@ function v(e, t) {
   })
 }
 
-function C(e) {
+function v(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED",
     systemPrefersContrast: e
@@ -200,7 +200,7 @@ function N() {
   })
 }
 
-function y() {
+function O() {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE"
   })

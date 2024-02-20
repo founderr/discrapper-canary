@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var a = n("884691"),
@@ -9,41 +9,41 @@ var a = n("884691"),
   s = n("551042"),
   i = n("77078"),
   l = n("485328"),
-  o = n("180748"),
-  u = n("206230"),
+  u = n("180748"),
+  o = n("206230"),
   d = n("951212"),
   c = n("227602"),
   f = n("791776"),
   h = n("13798"),
   p = n("49111"),
-  m = n("894282");
+  E = n("894282");
 
 function C(e) {
   let t = e.ctrlKey || e.altKey || e.metaKey;
-  e.key === m.KeyboardEventKey.Tab && !t && !__OVERLAY__ && !(0, s.hasAnyModalOpen)() && d.default.maybeShowKeyboardNavigationExplainerModal()
+  e.key === E.KeyboardEventKey.Tab && !t && !__OVERLAY__ && !(0, s.hasAnyModalOpen)() && d.default.maybeShowKeyboardNavigationExplainerModal()
 }
 
-function E() {
-  (0, o.disableKeyboardMode)()
+function m() {
+  (0, u.disableKeyboardMode)()
 }
-var g = function(e, t) {
-  let n = (0, r.useStateFromStores)([u.default], () => u.default.keyboardModeEnabled);
+var S = function(e, t) {
+  let n = (0, r.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled);
   (0, i.useFocusJumpSectionManager)(n);
   let s = (0, a.useCallback)(e => {
     ! function(e, t) {
       var n, a;
       let r = (0, f.isInputLikeElement)(null === (n = (0, f.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement);
-      if (r && e.key !== m.KeyboardEventKey.Tab) return;
-      let s = e.ctrlKey || e.altKey || e.metaKey || e.key !== m.KeyboardEventKey.Tab && e.shiftKey;
+      if (r && e.key !== E.KeyboardEventKey.Tab) return;
+      let s = e.ctrlKey || e.altKey || e.metaKey || e.key !== E.KeyboardEventKey.Tab && e.shiftKey;
       if (s) return;
       let i = function(e) {
         let t = h.keyToCode("shift"),
           n = h.keyToCode("tab");
-        if (e.key === m.KeyboardEventKey.Tab && e.shiftKey && null != t && null != n) return [
+        if (e.key === E.KeyboardEventKey.Tab && e.shiftKey && null != t && null != n) return [
           [p.KeyboardDeviceTypes.KEYBOARD_KEY, t],
           [p.KeyboardDeviceTypes.KEYBOARD_KEY, n]
         ];
-        let a = m.NavigationKeyShortcutMap.get(e.key);
+        let a = E.NavigationKeyShortcutMap.get(e.key);
         if (null != a) {
           let e = h.keyToCode(a);
           if (null != e) return [
@@ -52,10 +52,10 @@ var g = function(e, t) {
         }
         return null
       }(e);
-      null != i && !c.default.hasExactKeybind(i) && !l.default.hasBind(null !== (a = h.codeToKey(i[0])) && void 0 !== a ? a : "") && ((0, o.enableKeyboardMode)(), r && !t && e.preventDefault())
+      null != i && !c.default.hasExactKeybind(i) && !l.default.hasBind(null !== (a = h.codeToKey(i[0])) && void 0 !== a ? a : "") && ((0, u.enableKeyboardMode)(), r && !t && e.preventDefault())
     }(e, t)
   }, [t]);
-  return (0, a.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", E), e.addEventListener("keydown", C)) : e.addEventListener("keydown", s), () => {
-    n ? (e.removeEventListener("mousedown", E), e.removeEventListener("keydown", C)) : e.removeEventListener("keydown", s)
+  return (0, a.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", C)) : e.addEventListener("keydown", s), () => {
+    n ? (e.removeEventListener("mousedown", m), e.removeEventListener("keydown", C)) : e.removeEventListener("keydown", s)
   }), [e, s, n]), n
 }

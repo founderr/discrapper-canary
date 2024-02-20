@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return o
+    return a
   }
-}), n("222007");
-var i = n("689988"),
-  a = n("765969"),
-  l = n("958706");
-let s = new Set([l.EmojiInteractionPoint.EmojiButtonMouseEntered, l.EmojiInteractionPoint.ChatInputExpressionPressed, l.EmojiInteractionPoint.ChatInputSuggestionsShown, l.EmojiInteractionPoint.SearchEmojiKeybindPressed, l.EmojiInteractionPoint.AutocompleteTyped, l.EmojiInteractionPoint.GuildLeaveModalShown, l.EmojiInteractionPoint.AddReactionPopoutMouseEntered, l.EmojiInteractionPoint.AddReactionPopoutFocused, l.EmojiInteractionPoint.MessageContextMenuMouseEntered, l.EmojiInteractionPoint.AutocompleteWrapperShown]);
-class r extends i.default {
+}), E("222007");
+var t = E("689988"),
+  o = E("765969"),
+  n = E("958706");
+let r = new Set([n.EmojiInteractionPoint.EmojiButtonMouseEntered, n.EmojiInteractionPoint.ChatInputExpressionPressed, n.EmojiInteractionPoint.ChatInputSuggestionsShown, n.EmojiInteractionPoint.SearchEmojiKeybindPressed, n.EmojiInteractionPoint.AutocompleteTyped, n.EmojiInteractionPoint.GuildLeaveModalShown, n.EmojiInteractionPoint.AddReactionPopoutMouseEntered, n.EmojiInteractionPoint.AddReactionPopoutFocused, n.EmojiInteractionPoint.MessageContextMenuMouseEntered, n.EmojiInteractionPoint.AutocompleteWrapperShown]);
+class i extends t.default {
   handleInteraction(e) {
     let {
-      interaction: t
+      interaction: _
     } = e;
-    s.has(t) && (0, a.maybeGetEmojiCaptionsForUser)(t)
+    r.has(_) && (0, o.maybeGetEmojiCaptionsForUser)(_)
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -21,4 +21,4 @@ class r extends i.default {
     }
   }
 }
-var o = new r
+var a = new i

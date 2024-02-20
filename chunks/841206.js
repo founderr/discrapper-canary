@@ -1,40 +1,40 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return N
+    return O
   }
 });
 var t = E("404828");
 let {
   newline: o,
-  paragraph: I,
-  url: T,
-  link: r,
+  paragraph: n,
+  url: r,
+  link: i,
   strong: a,
-  u: n,
-  br: i,
-  em: A,
-  image: s,
-  text: R
+  u: I,
+  br: s,
+  em: T,
+  image: S,
+  text: N
 } = t.defaultRules;
-var N = {
+var O = {
   newline: o,
-  paragraph: I,
-  url: T,
+  paragraph: n,
+  url: r,
   link: {
-    ...r,
+    ...i,
     parse(e, _, E) {
-      let t = r.parse(e, _, E);
+      let t = i.parse(e, _, E);
       return t.context = E.context, t
     }
   },
   strong: a,
-  u: n,
-  br: i,
-  em: A,
-  image: s,
+  u: I,
+  br: s,
+  em: T,
+  image: S,
   hook: {
-    order: R.order,
+    order: N.order,
     match: (0, t.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
     parse(e, _, E) {
       let {
@@ -48,7 +48,7 @@ var N = {
     react: (e, _, E) => e.render(_(e.content, E), E.key)
   },
   noparse: {
-    order: R.order,
+    order: N.order,
     match: (0, t.inlineRegex)(/^!!(\d+?)!!/),
     parse(e, _, E) {
       let {
@@ -61,5 +61,5 @@ var N = {
     },
     react: e => e.content
   },
-  text: R
+  text: N
 }

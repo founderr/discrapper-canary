@@ -10,25 +10,25 @@ n.r(t), n.d(t, {
     return a.useToggleButton
   },
   useCalendar: function() {
-    return i.useCalendar
+    return o.useCalendar
   },
   useCalendarCell: function() {
-    return i.useCalendarCell
+    return o.useCalendarCell
   },
   useCalendarGrid: function() {
-    return i.useCalendarGrid
+    return o.useCalendarGrid
   },
   useRangeCalendar: function() {
-    return i.useRangeCalendar
+    return o.useRangeCalendar
   },
   useCheckbox: function() {
-    return o.useCheckbox
+    return i.useCheckbox
   },
   useCheckboxGroup: function() {
-    return o.useCheckboxGroup
+    return i.useCheckboxGroup
   },
   useCheckboxGroupItem: function() {
-    return o.useCheckboxGroupItem
+    return i.useCheckboxGroupItem
   },
   useComboBox: function() {
     return s.useComboBox
@@ -82,16 +82,16 @@ n.r(t), n.d(t, {
     return f.useGridListSelectionCheckbox
   },
   useLink: function() {
-    return m.useLink
+    return h.useLink
   },
   useListBox: function() {
-    return h.useListBox
+    return m.useListBox
   },
   useListBoxSection: function() {
-    return h.useListBoxSection
+    return m.useListBoxSection
   },
   useOption: function() {
-    return h.useOption
+    return m.useOption
   },
   useMenu: function() {
     return v.useMenu
@@ -193,10 +193,10 @@ n.r(t), n.d(t, {
     return R.useTabList
   },
   useTextField: function() {
-    return I.useTextField
+    return O.useTextField
   },
   useTooltip: function() {
-    return O.useTooltip
+    return I.useTooltip
   },
   mergeProps: function() {
     return A.mergeProps
@@ -210,8 +210,8 @@ n.r(t), n.d(t, {
 });
 var r = n("735073"),
   a = n("696792"),
-  i = n("746111"),
-  o = n("165278"),
+  o = n("746111"),
+  i = n("165278"),
   s = n("878194"),
   c = n("507078"),
   l = n("973994"),
@@ -219,8 +219,8 @@ var r = n("735073"),
   d = n("564341"),
   p = n("388032"),
   f = n("821491"),
-  m = n("297641"),
-  h = n("932662"),
+  h = n("297641"),
+  m = n("932662"),
   v = n("139796"),
   g = n("332709"),
   y = n("424768"),
@@ -236,7 +236,7 @@ var r = n("735073"),
   T = n("729736"),
   M = n("706389"),
   R = n("50664"),
-  I = n("381084"),
-  O = n("609557"),
+  O = n("381084"),
+  I = n("609557"),
   A = n("240849"),
   L = n("828551")

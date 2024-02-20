@@ -1,69 +1,69 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return M
+    return f
   }
 });
-var a = n("917351"),
-  i = n.n(a),
-  o = n("171718"),
-  l = n("446674"),
-  r = n("913144");
-let s = !1,
+var a = s("917351"),
+  n = s.n(a),
+  l = s("171718"),
+  i = s("446674"),
+  r = s("913144");
+let o = !1,
   d = [],
-  c = "",
   u = "",
-  E = !1,
-  f = {
+  c = "",
+  S = !1,
+  E = {
     viewNonce: "",
     regenerateNonce: ""
   };
-class _ extends l.default.Store {
+class T extends i.default.Store {
   getVerificationKey() {
-    return c
+    return u
   }
   getBackupCodes() {
     return d
   }
   get togglingSMS() {
-    return s
+    return o
   }
   getNonces() {
-    return f
-  }
-  get emailToken() {
-    return u
-  }
-  get hasSeenBackupPrompt() {
     return E
   }
+  get emailToken() {
+    return c
+  }
+  get hasSeenBackupPrompt() {
+    return S
+  }
 }
-_.displayName = "MFAStore";
-var M = new _(r.default, {
+T.displayName = "MFAStore";
+var f = new T(r.default, {
   MFA_ENABLE_SUCCESS: function(e) {
     let {
       token: t,
-      codes: n
+      codes: s
     } = e;
-    void 0 !== t && o.default.setToken(t), d = n
+    void 0 !== t && l.default.setToken(t), d = s
   },
   MFA_ENABLE_EMAIL_TOKEN: function(e) {
     let {
       token: t
     } = e;
-    u = t
+    c = t
   },
   MFA_DISABLE_SUCCESS: function(e) {
     let {
       token: t
     } = e;
-    o.default.setToken(t)
+    l.default.setToken(t)
   },
   MFA_SMS_TOGGLE: function() {
-    s = !0
+    o = !0
   },
   MFA_SMS_TOGGLE_COMPLETE: function() {
-    s = !1
+    o = !1
   },
   MFA_CLEAR_BACKUP_CODES: function() {
     d = []
@@ -71,17 +71,17 @@ var M = new _(r.default, {
   MFA_VIEW_BACKUP_CODES: function(e) {
     let {
       codes: t,
-      key: n
+      key: s
     } = e;
-    d = i.sortBy(t, "code"), c = n
+    d = n.sortBy(t, "code"), u = s
   },
   MFA_SEND_VERIFICATION_KEY: function(e) {
     let {
       nonces: t
     } = e;
-    f = t
+    E = t
   },
   MFA_SEEN_BACKUP_CODE_PROMPT: function() {
-    E = !0
+    S = !0
   }
 })

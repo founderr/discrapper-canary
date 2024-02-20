@@ -2,15 +2,15 @@
 let r;
 n.r(t), n.d(t, {
   LocalizedStringDictionary: function() {
-    return o
+    return i
   },
   LocalizedStringFormatter: function() {
     return l
   }
 }), n("70102"), n("222007");
 let a = Symbol.for("react-aria.i18n.locale"),
-  i = Symbol.for("react-aria.i18n.strings");
-class o {
+  o = Symbol.for("react-aria.i18n.strings");
+class i {
   getStringForLocale(e, t) {
     let n = this.getStringsForLocale(t)[e];
     if (!n) throw Error("Could not find intl message ".concat(e, " in ").concat(t, " locale"));
@@ -34,9 +34,9 @@ class o {
     if ("undefined" == typeof window) return null;
     let t = window[a];
     if (void 0 === r) {
-      let e = window[i];
+      let e = window[o];
       if (!e) return null;
-      for (let n in r = {}, e) r[n] = new o({
+      for (let n in r = {}, e) r[n] = new i({
         [t]: e[n]
       }, t)
     }
@@ -62,10 +62,10 @@ class l {
       r = t["=" + e];
     if (r) return "function" == typeof r ? r() : r;
     let a = this.locale + ":" + n,
-      i = s.get(a);
-    return !i && (i = new Intl.PluralRules(this.locale, {
+      o = s.get(a);
+    return !o && (o = new Intl.PluralRules(this.locale, {
       type: n
-    }), s.set(a, i)), "function" == typeof(r = t[i.select(e)] || t.other) ? r() : r
+    }), s.set(a, o)), "function" == typeof(r = t[o.select(e)] || t.other) ? r() : r
   }
   number(e) {
     let t = c.get(this.locale);

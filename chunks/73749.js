@@ -1,30 +1,30 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return r
+    return i
   }
 });
-var i = n("37983");
-n("884691");
-var a = n("90915"),
-  l = n("759843"),
-  s = n("428958");
+var t = E("37983");
+E("884691");
+var o = E("90915"),
+  n = E("759843"),
+  r = E("428958");
 
-function r(e) {
-  var t;
+function i(e) {
+  var _;
   let {
-    impressionName: n,
-    impressionProperties: r,
-    disableTrack: o,
-    ...u
-  } = e, d = r;
-  return "function" == typeof d && (d = d(u)), (0, s.default)({
-    type: l.ImpressionTypes.PAGE,
-    name: n,
-    properties: d
+    impressionName: E,
+    impressionProperties: i,
+    disableTrack: a,
+    ...I
+  } = e, s = i;
+  return "function" == typeof s && (s = s(I)), (0, r.default)({
+    type: n.ImpressionTypes.PAGE,
+    name: E,
+    properties: s
   }, {
-    disableTrack: o
-  }, [null === (t = u.location) || void 0 === t ? void 0 : t.pathname]), (0, i.jsx)(a.Route, {
-    ...u
+    disableTrack: a
+  }, [null === (_ = I.location) || void 0 === _ ? void 0 : _.pathname]), (0, t.jsx)(o.Route, {
+    ...I
   })
 }

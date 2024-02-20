@@ -1,41 +1,41 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return i
+    return t
   }
 });
-var i, a = n("327037"),
-  l = n("689988"),
-  s = n("42203"),
-  r = n("18494"),
-  o = n("697218"),
-  u = n("569363"),
-  d = n("49111");
-let c = !1;
+var t, o = E("327037"),
+  n = E("689988"),
+  r = E("42203"),
+  i = E("18494"),
+  a = E("697218"),
+  I = E("569363"),
+  s = E("49111");
+let T = !1;
 
-function f(e) {
-  let t = o.default.getCurrentUser();
-  if (null == t) return;
-  let n = r.default.getChannelId(),
-    i = s.default.getDMFromUserId(u.SYSTEM_USER);
-  if (!t.hasUrgentMessages() || i === n) return E({
-    channelId: n
+function S(e) {
+  let _ = a.default.getCurrentUser();
+  if (null == _) return;
+  let E = i.default.getChannelId(),
+    t = r.default.getDMFromUserId(I.SYSTEM_USER);
+  if (!_.hasUrgentMessages() || t === E) return N({
+    channelId: E
   });
-  !c && (c = !0, e())
+  !T && (T = !0, e())
 }
 
-function E(e) {
+function N(e) {
   let {
-    channelId: t
-  } = e, n = o.default.getCurrentUser(), i = t === s.default.getDMFromUserId(u.SYSTEM_USER);
-  null != n && n.hasUrgentMessages() && i && (c = !1, a.setFlag(d.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !1))
+    channelId: _
+  } = e, E = a.default.getCurrentUser(), t = _ === r.default.getDMFromUserId(I.SYSTEM_USER);
+  null != E && E.hasUrgentMessages() && t && (T = !1, o.setFlag(s.UserFlags.HAS_UNREAD_URGENT_MESSAGES, !1))
 }
-i = class extends l.default {
+t = class extends n.default {
   constructor(e) {
     super(), this.handleShowUrgentMessageAlert = e, this.actions = {
-      POST_CONNECTION_OPEN: () => f(this.handleShowUrgentMessageAlert),
-      MESSAGE_CREATE: () => f(this.handleShowUrgentMessageAlert),
-      CHANNEL_SELECT: E
+      POST_CONNECTION_OPEN: () => S(this.handleShowUrgentMessageAlert),
+      MESSAGE_CREATE: () => S(this.handleShowUrgentMessageAlert),
+      CHANNEL_SELECT: N
     }
   }
 }

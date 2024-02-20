@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   coercePlatformTypeToConsoleType: function() {
-    return l
+    return n
   }
 });
-var i = n("171644"),
-  a = n("49111");
+var t = E("171644"),
+  o = E("49111");
 
-function l(e) {
+function n(e) {
   switch (e) {
-    case a.PlatformTypes.XBOX:
-      return i.GameConsoleTypes.XBOX;
-    case a.PlatformTypes.PLAYSTATION:
-    case a.PlatformTypes.PLAYSTATION_STAGING:
-      return i.GameConsoleTypes.PLAYSTATION;
+    case o.PlatformTypes.XBOX:
+      return t.GameConsoleTypes.XBOX;
+    case o.PlatformTypes.PLAYSTATION:
+    case o.PlatformTypes.PLAYSTATION_STAGING:
+      return t.GameConsoleTypes.PLAYSTATION;
     default:
       return null
   }

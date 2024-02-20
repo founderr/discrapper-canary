@@ -4,56 +4,56 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var r = n("414456"),
-  s = n.n(r),
+var i = n("414456"),
+  a = n.n(i),
   l = n("77078"),
-  u = n("451914"),
-  o = n("548122");
-let E = Object.freeze({
-    SIZE_10: o.size10,
-    SIZE_12: o.size12,
-    SIZE_14: o.size14,
-    SIZE_16: o.size16,
-    SIZE_20: o.size20,
-    SIZE_24: o.size24,
-    SIZE_32: o.size32
+  r = n("451914"),
+  u = n("548122");
+let d = Object.freeze({
+    SIZE_10: u.size10,
+    SIZE_12: u.size12,
+    SIZE_14: u.size14,
+    SIZE_16: u.size16,
+    SIZE_20: u.size20,
+    SIZE_24: u.size24,
+    SIZE_32: u.size32
   }),
-  i = e => {
+  o = e => {
     let {
       id: t,
       muted: n = !1,
-      className: r = u.wrapper,
-      size: o = E.SIZE_14,
-      selectable: i = !1,
+      className: i = r.wrapper,
+      size: u = d.SIZE_14,
+      selectable: o = !1,
       children: c,
-      color: T,
-      onClick: _,
+      color: h,
+      onClick: E,
       onContextMenu: f,
-      style: d,
-      title: R,
-      uppercase: S
+      style: I,
+      title: _,
+      uppercase: m
     } = e;
-    return (0, a.jsx)(l.H, {
-      role: null != _ ? "button" : void 0,
-      onClick: _,
+    return (0, s.jsx)(l.H, {
+      role: null != E ? "button" : void 0,
+      onClick: E,
       onContextMenu: f,
       id: t,
-      className: s(r, {
-        [u.base]: !0,
-        [o]: !0,
-        [u.selectable]: i,
-        [u.muted]: n,
-        [u.uppercase]: S
+      className: a(i, {
+        [r.base]: !0,
+        [u]: !0,
+        [r.selectable]: o,
+        [r.muted]: n,
+        [r.uppercase]: m
       }),
-      title: R,
-      style: null != T ? {
-        ...d,
-        color: T
-      } : d,
+      title: _,
+      style: null != h ? {
+        ...I,
+        color: h
+      } : I,
       children: c
     })
   };
-i.Sizes = E;
-var c = i
+o.Sizes = d;
+var c = o

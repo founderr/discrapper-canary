@@ -13,10 +13,10 @@ var a = s("37983"),
   d = s("77078"),
   u = s("823411"),
   c = s("133403"),
-  S = s("810549"),
-  E = s("546463"),
-  T = s("686470"),
-  f = s("568307"),
+  S = s("161454"),
+  E = s("810549"),
+  T = s("546463"),
+  f = s("686470"),
   m = s("941886"),
   _ = s("931138"),
   g = s("398288"),
@@ -45,7 +45,7 @@ let B = r.default.connectStores([M.default], () => ({
 function F(e) {
   let {
     onClose: t
-  } = e, s = (0, r.useStateFromStores)([f.default], () => f.default.getCandidateGames()), [l, o] = n.useState(null), c = s.map(e => ({
+  } = e, s = (0, r.useStateFromStores)([S.default], () => S.default.getCandidateGames()), [l, o] = n.useState(null), c = s.map(e => ({
     value: e.pid,
     label: null != e.name ? e.name : ""
   }));
@@ -85,8 +85,8 @@ function G(e) {
   let {
     rawGame: s,
     nowPlaying: l = !1,
-    isOverride: S
-  } = e, m = (0, r.useStateFromStoresObject)([E.default, f.default, T.default], () => (0, f.transformForGameSettings)(s)), [x, R] = n.useState(!1), [M, P] = n.useState(null !== (t = m.name) && void 0 !== t ? t : "???"), U = i(j.flexCenter, {
+    isOverride: E
+  } = e, m = (0, r.useStateFromStoresObject)([T.default, S.default, f.default], () => (0, S.transformForGameSettings)(s)), [x, R] = n.useState(!1), [M, P] = n.useState(null !== (t = m.name) && void 0 !== t ? t : "???"), U = i(j.flexCenter, {
     [L.game]: !l,
     [L.activeGame]: l,
     [b.card]: !l,
@@ -111,7 +111,7 @@ function G(e) {
 
   function H() {
     if (x) return;
-    let e = null != m.id ? E.default.getDetectableGame(m.id) : null;
+    let e = null != m.id ? T.default.getDetectableGame(m.id) : null;
     O.default.track(D.AnalyticEvents.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
       application_id: null == e ? void 0 : e.id,
       game_name: m.name
@@ -123,7 +123,7 @@ function G(e) {
     className: U,
     children: [(0, a.jsxs)("div", {
       className: i(L.gameNameLastPlayed, j.vertical),
-      children: [m.verified && !S ? (0, a.jsxs)("div", {
+      children: [m.verified && !E ? (0, a.jsxs)("div", {
         className: L.detectedApplication,
         children: [(0, a.jsx)("div", {
           className: L.gameName,
@@ -166,7 +166,7 @@ function G(e) {
           })
         })
       }()]
-    }), S ? null : x ? null : (0, a.jsx)("div", {
+    }), E ? null : x ? null : (0, a.jsx)("div", {
       className: i(j.flexCenter, j.noWrap, j.justifyBetween, L.toggleContainer),
       children: (0, a.jsx)(d.Tooltip, {
         text: v.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
@@ -266,7 +266,7 @@ function G(e) {
           }
         })]
       })
-    }(), !l || S ? (0, a.jsx)(c.default, {
+    }(), !l || E ? (0, a.jsx)(c.default, {
       className: L.removeGame,
       onClick: B
     }) : null]
@@ -308,22 +308,22 @@ let w = (0, x.cachedFunction)(function() {
   return new Set(t.map(e => e.exePath))
 });
 var V = function() {
-  let e = (0, r.useStateFromStoresArray)([f.default], () => f.default.getGamesSeen(!0)),
+  let e = (0, r.useStateFromStoresArray)([S.default], () => S.default.getGamesSeen(!0)),
     {
       runningGame: t,
       overrideExePaths: s
-    } = (0, r.useStateFromStoresObject)([f.default], () => ({
-      runningGame: f.default.getVisibleGame(),
-      overrideExePaths: w(...f.default.getOverrides())
+    } = (0, r.useStateFromStoresObject)([S.default], () => ({
+      runningGame: S.default.getVisibleGame(),
+      overrideExePaths: w(...S.default.getOverrides())
     }));
-  return n.useEffect(() => ((0, S.watchCandidateGames)(), S.stopWatchingCandidateGames), []), (0, a.jsxs)(d.FormSection, {
+  return n.useEffect(() => ((0, E.watchCandidateGames)(), E.stopWatchingCandidateGames), []), (0, a.jsxs)(d.FormSection, {
     tag: "h1",
     title: v.default.Messages.REGISTERED_GAMES,
     children: [null != t ? (0, a.jsx)(G, {
       rawGame: t,
       isOverride: s.has(t.exePath),
       nowPlaying: !0
-    }, (0, f.gameKey)(t)) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
+    }, (0, S.gameKey)(t)) : (0, a.jsx)(k, {}), (0, a.jsxs)("div", {
       className: i(L.nowPlayingAdd, U.marginReset, U.marginTop8, U.marginBottom20),
       children: [(0, a.jsx)("span", {
         children: v.default.Messages.SETTINGS_GAMES_NOT_SEEING_GAME
@@ -358,7 +358,7 @@ var V = function() {
       }), e.map(e => (0, a.jsx)(G, {
         rawGame: e,
         isOverride: s.has(e.exePath)
-      }, (0, f.gameKey)(e)))]
+      }, (0, S.gameKey)(e)))]
     })]
   })
 }

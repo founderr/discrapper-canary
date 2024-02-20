@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var r, a = n("726764"),
-  i = n("337675");
+  o = n("337675");
 
-function o(e, t, n) {
+function i(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,7 +15,7 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var s = (o(r = {}, a.FILE, {
+var s = (i(r = {}, a.FILE, {
   exposeProperties: {
     files: function(e) {
       return Array.prototype.slice.call(e.files)
@@ -25,24 +25,24 @@ var s = (o(r = {}, a.FILE, {
     }
   },
   matchesTypes: ["Files"]
-}), o(r, a.HTML, {
+}), i(r, a.HTML, {
   exposeProperties: {
     html: function(e, t) {
-      return (0, i.getDataFromDataTransfer)(e, t, "")
+      return (0, o.getDataFromDataTransfer)(e, t, "")
     }
   },
   matchesTypes: ["Html", "text/html"]
-}), o(r, a.URL, {
+}), i(r, a.URL, {
   exposeProperties: {
     urls: function(e, t) {
-      return (0, i.getDataFromDataTransfer)(e, t, "").split("\n")
+      return (0, o.getDataFromDataTransfer)(e, t, "").split("\n")
     }
   },
   matchesTypes: ["Url", "text/uri-list"]
-}), o(r, a.TEXT, {
+}), i(r, a.TEXT, {
   exposeProperties: {
     text: function(e, t) {
-      return (0, i.getDataFromDataTransfer)(e, t, "")
+      return (0, o.getDataFromDataTransfer)(e, t, "")
     }
   },
   matchesTypes: ["Text", "text/plain"]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var a = n("446674"),
@@ -23,7 +23,7 @@ class l extends a.default.DeviceSettingsStore {
   }
 }
 l.displayName = "StageMusicStore", l.persistKey = "StageMusicStore";
-var o = new l(r.default, {
+var u = new l(r.default, {
   STAGE_MUSIC_MUTE: function(e) {
     let {
       muted: t

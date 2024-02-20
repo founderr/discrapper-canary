@@ -1,54 +1,54 @@
 "use strict";
-s.r(t), s.d(t, {
+r.r(t), r.d(t, {
   createModeratorOverwrite: function() {
-    return f
+    return N
   },
   default: function() {
-    return g
+    return A
   }
-}), s("222007");
-var n = s("37983"),
-  a = s("884691"),
-  l = s("446674"),
-  r = s("77078"),
-  i = s("318738"),
-  d = s("448993"),
-  o = s("798609"),
-  u = s("462430"),
-  h = s("42203"),
-  c = s("305961"),
-  E = s("145131"),
-  C = s("476765"),
-  N = s("228427"),
-  p = s("991170"),
-  _ = s("923510"),
-  T = s("606762"),
-  m = s("782340"),
-  A = s("898165");
+}), r("222007");
+var n = r("37983"),
+  a = r("884691"),
+  s = r("446674"),
+  i = r("77078"),
+  l = r("318738"),
+  o = r("448993"),
+  d = r("798609"),
+  u = r("462430"),
+  c = r("42203"),
+  f = r("305961"),
+  E = r("145131"),
+  h = r("476765"),
+  S = r("228427"),
+  m = r("991170"),
+  g = r("923510"),
+  M = r("606762"),
+  p = r("782340"),
+  x = r("898165");
 
-function f(e, t) {
+function N(e, t) {
   return {
     id: e,
     type: t,
-    deny: p.default.NONE,
-    allow: _.MODERATE_STAGE_CHANNEL_PERMISSIONS
+    deny: m.default.NONE,
+    allow: g.MODERATE_STAGE_CHANNEL_PERMISSIONS
   }
 }
 
-function g(e) {
+function A(e) {
   let {
     transitionState: t,
-    onClose: s,
-    channelId: p
-  } = e, g = (0, C.useUID)(), I = (0, l.useStateFromStores)([h.default], () => h.default.getChannel(p)), M = (0, l.useStateFromStores)([c.default], () => c.default.getGuild(null == I ? void 0 : I.getGuildId())), [S, O] = a.useState({}), [L, R] = a.useState(!1), [x, v] = a.useState(null);
-  if (null == I || null == M) return null;
-  let y = async () => {
-    R(!0);
+    onClose: r,
+    channelId: m
+  } = e, A = (0, h.useUID)(), R = (0, s.useStateFromStores)([c.default], () => c.default.getChannel(m)), v = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(null == R ? void 0 : R.getGuildId())), [I, T] = a.useState({}), [C, j] = a.useState(!1), [L, O] = a.useState(null);
+  if (null == R || null == v) return null;
+  let _ = async () => {
+    j(!0);
     try {
       await
 
       function(e, t) {
-        let s = Object.values(t).filter(e => {
+        let r = Object.values(t).filter(e => {
           let {
             row: t
           } = e;
@@ -57,59 +57,59 @@ function g(e) {
           let {
             row: t
           } = e;
-          return t.rowType === T.RowType.ROLE ? f(t.id, o.PermissionOverwriteType.ROLE) : f(t.id, o.PermissionOverwriteType.MEMBER)
+          return t.rowType === M.RowType.ROLE ? N(t.id, d.PermissionOverwriteType.ROLE) : N(t.id, d.PermissionOverwriteType.MEMBER)
         });
-        return (0, i.savePermissionUpdates)(e.id, s, !0)
-      }(I, S), s()
+        return (0, l.savePermissionUpdates)(e.id, r, !0)
+      }(R, I), r()
     } catch (t) {
-      let e = new d.APIError(t);
-      R(!1), v(e)
+      let e = new o.APIError(t);
+      j(!1), O(e)
     }
   };
-  return (0, n.jsxs)(r.ModalRoot, {
+  return (0, n.jsxs)(i.ModalRoot, {
     transitionState: t,
-    "aria-labelledby": g,
-    size: r.ModalSize.SMALL,
-    className: A.modalRoot,
-    children: [(0, n.jsxs)(r.ModalHeader, {
+    "aria-labelledby": A,
+    size: i.ModalSize.SMALL,
+    className: x.modalRoot,
+    children: [(0, n.jsxs)(i.ModalHeader, {
       separator: !1,
       direction: E.default.Direction.VERTICAL,
       align: E.default.Align.CENTER,
-      className: A.header,
-      children: [(0, n.jsx)(r.Heading, {
+      className: x.header,
+      children: [(0, n.jsx)(i.Heading, {
         variant: "heading-xl/semibold",
-        children: m.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
-      }), (0, n.jsxs)(r.Text, {
+        children: p.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
+      }), (0, n.jsxs)(i.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        className: A.headerSubtitle,
-        children: [(0, n.jsx)(N.default, {
+        className: x.headerSubtitle,
+        children: [(0, n.jsx)(S.default, {
           height: 16,
           width: 16,
-          className: A.headerSubtitleIcon
-        }), I.name]
+          className: x.headerSubtitleIcon
+        }), R.name]
       })]
     }), (0, n.jsx)(u.AddMembersBody, {
-      guild: M,
-      channel: I,
-      permission: _.MODERATE_STAGE_CHANNEL_PERMISSIONS,
-      pendingAdditions: S,
-      setPendingAdditions: O
-    }), null != x ? (0, n.jsx)(r.Text, {
-      className: A.error,
+      guild: v,
+      channel: R,
+      permission: g.MODERATE_STAGE_CHANNEL_PERMISSIONS,
+      pendingAdditions: I,
+      setPendingAdditions: T
+    }), null != L ? (0, n.jsx)(i.Text, {
+      className: x.error,
       variant: "text-xs/normal",
       color: "text-danger",
-      children: x.getAnyErrorMessage()
-    }) : null, (0, n.jsxs)(r.ModalFooter, {
-      children: [(0, n.jsx)(r.Button, {
-        onClick: y,
-        submitting: L,
-        children: m.default.Messages.ADD
-      }), (0, n.jsx)(r.Button, {
-        look: r.Button.Looks.LINK,
-        color: r.Button.Colors.PRIMARY,
-        onClick: s,
-        children: m.default.Messages.CANCEL
+      children: L.getAnyErrorMessage()
+    }) : null, (0, n.jsxs)(i.ModalFooter, {
+      children: [(0, n.jsx)(i.Button, {
+        onClick: _,
+        submitting: C,
+        children: p.default.Messages.ADD
+      }), (0, n.jsx)(i.Button, {
+        look: i.Button.Looks.LINK,
+        color: i.Button.Colors.PRIMARY,
+        onClick: r,
+        children: p.default.Messages.CANCEL
       })]
     })]
   })

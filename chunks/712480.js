@@ -38,9 +38,9 @@ e = n.nmd(e), n("781738"), r = this, a = function(e) {
     },
     o = function(e) {
       return function(t, n, o, i) {
-        var u = r(t),
-          s = a[e][r(t)];
-        return 2 === u && (s = s[n ? 0 : 1]), s.replace(/%d/i, t)
+        var s = r(t),
+          u = a[e][r(t)];
+        return 2 === s && (u = u[n ? 0 : 1]), u.replace(/%d/i, t)
       }
     },
     i = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];

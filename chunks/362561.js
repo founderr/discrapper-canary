@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   clearAnnouncer: function() {
-    return i
+    return o
   }
 });
 let r = null;
@@ -12,13 +12,13 @@ let r = null;
 function a(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "assertive",
     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 7e3;
-  !r && (r = new o), r.announce(e, t, n)
+  !r && (r = new i), r.announce(e, t, n)
 }
 
-function i(e) {
+function o(e) {
   r && r.clear(e)
 }
-class o {
+class i {
   createLog(e) {
     let t = document.createElement("div");
     return t.setAttribute("role", "log"), t.setAttribute("aria-live", e), t.setAttribute("aria-relevant", "additions"), t

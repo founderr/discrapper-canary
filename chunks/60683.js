@@ -1,5 +1,5 @@
 "use strict";
-e.exports = {
+t.exports = {
   IndexSizeError: {
     s: "INDEX_SIZE_ERR",
     c: 1,

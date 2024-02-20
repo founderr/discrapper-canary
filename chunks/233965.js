@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   updateHangStatus: function() {
-    return u
+    return o
   },
   updateCustomHangStatus: function() {
     return d
@@ -15,9 +15,9 @@ var a = n("913144"),
   s = n("945956"),
   i = n("18494"),
   l = n("599110"),
-  o = n("49111");
+  u = n("49111");
 
-function u(e, t) {
+function o(e, t) {
   var n;
   if (null == e) {
     c(t);
@@ -27,7 +27,7 @@ function u(e, t) {
     type: "UPDATE_HANG_STATUS",
     status: e,
     saveAsDefault: t
-  }), l.default.track(o.AnalyticEvents.SET_HANG_STATUS, {
+  }), l.default.track(u.AnalyticEvents.SET_HANG_STATUS, {
     status_type: e,
     channel_id: i.default.getVoiceChannelId(),
     guild_id: null === (n = r.default.getChannel(i.default.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
@@ -36,7 +36,7 @@ function u(e, t) {
 }
 
 function d(e, t, n) {
-  var u;
+  var o;
   if ("" === e) {
     c(n);
     return
@@ -46,10 +46,10 @@ function d(e, t, n) {
     emoji: t,
     status: e,
     saveAsDefault: n
-  }), l.default.track(o.AnalyticEvents.SET_HANG_STATUS, {
+  }), l.default.track(u.AnalyticEvents.SET_HANG_STATUS, {
     status_type: e,
     channel_id: i.default.getVoiceChannelId(),
-    guild_id: null === (u = r.default.getChannel(i.default.getVoiceChannelId())) || void 0 === u ? void 0 : u.guild_id,
+    guild_id: null === (o = r.default.getChannel(i.default.getVoiceChannelId())) || void 0 === o ? void 0 : o.guild_id,
     media_session_id: s.default.getMediaSessionId()
   })
 }
@@ -59,7 +59,7 @@ function c(e) {
   a.default.dispatch({
     type: "CLEAR_HANG_STATUS",
     saveAsDefault: e
-  }), l.default.track(o.AnalyticEvents.CLEAR_HANG_STATUS, {
+  }), l.default.track(u.AnalyticEvents.CLEAR_HANG_STATUS, {
     channel_id: i.default.getVoiceChannelId(),
     guild_id: null === (t = r.default.getChannel(i.default.getVoiceChannelId())) || void 0 === t ? void 0 : t.guild_id,
     media_session_id: s.default.getMediaSessionId()
