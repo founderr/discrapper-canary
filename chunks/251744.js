@@ -329,7 +329,7 @@ let L = {
     handler() {}
   },
   [A.RPCEvents.RELATIONSHIP_UPDATE]: {
-    scope: g.RPC_LOCAL_SCOPE,
+    scope: A.OAuth2Scopes.RELATIONSHIPS_READ,
     handler() {}
   },
   [A.RPCEvents.CURRENT_USER_UPDATE]: {
