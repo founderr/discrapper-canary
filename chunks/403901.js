@@ -20,7 +20,7 @@ var r = n("414456"),
   S = n("101125"),
   T = n("697218"),
   I = n("155207"),
-  h = n("398604"),
+  h = n("18284"),
   v = n("745049"),
   N = n("782340"),
   C = n("519951");
@@ -183,24 +183,24 @@ function y(e) {
     guildEvent: t,
     recurrenceId: r,
     eventUsers: l,
-    loading: o,
-    error: d,
-    containerHeight: c
-  } = e, f = (0, u.useStateFromStores)([h.default], () => h.default.getUserCount(t.id, r));
-  if (o && 0 === l.length) return (0, i.jsx)(D, {
-    height: c,
+    loading: u,
+    error: o,
+    containerHeight: d
+  } = e, c = (0, h.default)(t.guild_id, t.id, r);
+  if (u && 0 === l.length) return (0, i.jsx)(D, {
+    height: d,
     children: (0, i.jsx)(a.Spinner, {
       type: a.Spinner.Type.SPINNING_CIRCLE,
       className: C.spinner
     })
   });
-  if (null != d && 0 === l.length) return (0, i.jsx)(D, {
-    height: c,
+  if (null != o && 0 === l.length) return (0, i.jsx)(D, {
+    height: d,
     children: (0, i.jsx)(A, {})
   });
-  let E = 0;
-  return l.length >= v.MAX_RSVP_USER_DISPLAY_COUNT && f > v.MAX_RSVP_USER_DISPLAY_COUNT && (E = Math.max(f - l.length, 0)), 0 === l.length ? (0, i.jsx)(D, {
-    height: c,
+  let f = 0;
+  return l.length >= v.MAX_RSVP_USER_DISPLAY_COUNT && c > v.MAX_RSVP_USER_DISPLAY_COUNT && (f = Math.max(c - l.length, 0)), 0 === l.length ? (0, i.jsx)(D, {
+    height: d,
     children: (0, i.jsx)(g, {})
   }) : (0, i.jsx)(P, {
     children: (0, i.jsx)(L, {
@@ -216,7 +216,7 @@ function y(e) {
           })
         })
       },
-      usersNotShownCount: E
+      usersNotShownCount: f
     })
   })
 }

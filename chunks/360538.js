@@ -19,9 +19,9 @@ var i = n("37983"),
   S = n("155207"),
   T = n("158998"),
   I = n("933326"),
-  h = n("398604"),
-  v = n("882550"),
-  N = n("466148"),
+  h = n("882550"),
+  v = n("466148"),
+  N = n("18284"),
   C = n("189443"),
   p = n("909151"),
   g = n("427554"),
@@ -149,9 +149,9 @@ function G(e) {
   } = e, R = (0, a.useStateFromStores)([f.default], () => null != f.default.getGuild(n.id), [n.id]), {
     startTime: L,
     endTime: G
-  } = (0, N.default)(t.id, S), O = (0, a.useStateFromStores)([h.default], () => h.default.getUserCount(t.id, S)), M = r.useCallback(e => {
+  } = (0, v.default)(t.id, S), O = (0, N.default)(t.guild_id, t.id, S), M = r.useCallback(e => {
     e.stopPropagation(), null != t && (0, o.transitionToGuildFromEventInvite)(t)
-  }, [t]), x = (0, v.default)(t);
+  }, [t]), x = (0, h.default)(t);
   r.useEffect(() => {
     I.default.getGuildEventUserCounts(n.id, t.id, null != S ? [S] : []), I.default.getGuildEventsForCurrentUser(n.id)
   }, [n.id, t.id, S]);
